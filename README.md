@@ -6,5 +6,5 @@
 
 This repository is used for collaborating on [Developer News](https://www.freecodecamp.org/news) translation to different world languages.
 
-Each language translation is available in there own directories at the root of the repository. As of now we are working on supporting chinese language first and will eventually add translations for other languages in future.
+Each language translation is available in their own directories at the root of the repository. As of now we are working on supporting chinese language first and will eventually add translations for other languages in future.
 

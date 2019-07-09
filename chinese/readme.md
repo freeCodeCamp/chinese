@@ -1,7 +1,7 @@
 一、翻译流程
 
 1、领取翻译任务
-从下列文章中选择你想翻译的，标注你的姓名或昵称（后续我们将使用你的署名在 freeCodeCamp [文章](https://chinese.freecodecamp.org/news/)、微信公众号等平台发布译文）。领取之后请直接跳到本帖下方回复部分阅读[翻译规范](https://github.com/freeCodeCamp/news-translation/wiki/%E7%BF%BB%E8%AF%91%E8%A7%84%E8%8C%83)^_^
+从下列文章中选择你想翻译的，标注你的姓名或昵称（后续我们将使用你的署名在 freeCodeCamp [文章](https://chinese.freecodecamp.org/news/)（即 News 中文版）、微信公众号等平台发布译文）。领取之后请直接跳到本帖下方回复部分阅读[翻译规范](https://github.com/freeCodeCamp/news-translation/wiki/%E7%BF%BB%E8%AF%91%E8%A7%84%E8%8C%83)^_^
 
 - 11 do’s and don’ts for your first programming job
 - Why I abandoned online data courses for project-based learning 6
@@ -29,7 +29,7 @@
 - My First Weekend of Deep Learning(译者: zhicheng)
 - How I went from programming with a Nokia feature phone to working for an MIT Startup
 - Inside Afghanistan’s friendliest coding club
-- [一千个 <文章> 标签](https://gist.github.com/scissorsneedfoodtoo/6c4c1fdc130bf540cf6a68d9d37bf3a2)
+- [News Tags](https://gist.github.com/scissorsneedfoodtoo/6c4c1fdc130bf540cf6a68d9d37bf3a2)
 
 2、发布初稿，待校对
 翻译好初稿之后，请在论坛翻译版块发帖，以文章标题的中文翻译命名主题，标注“待校对”标签。

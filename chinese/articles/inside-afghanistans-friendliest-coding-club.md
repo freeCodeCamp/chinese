@@ -3,26 +3,34 @@
 > * 译者：
 > * 校对者：
 
-When you think of Afghanistan, you may think of the ongoing 17-year war that has claimed the lives of thousands of people.
+（此处有图）
 
-But amid all the turmoil, a generation of software developers is working to redefine Kabul — Afghanistan’s capital city and home to 5 million people — as a global technology hub.
+当你想到阿富汗时，你可能会想到持续 17 年、夺取数千人生命的那场战争。
 
-Every weekend, dozens of ambitious developers meet in offices around Kabul to code together and share their knowledge with one another.
+但在混乱中，有着500万人生活的阿富汗首都喀布尔，一代软件工程师正在重新将它定义为全球技术中心。
 
-Enter CodeWeekend — a grass-roots organization that’s expanding Kabul’s tech scene
-More than 3,000 Afghan developers and developers-in-training are part of CodeWeekend.
+每周末，几十个进取的开发者都会在喀布尔附近的办公室一起写代码，并向他人分享他们的知识。
 
-CodeWeekend hosts coding events around Kabul each weekend.
+## 走进“编程周末” —— 一个改变喀布尔技术面貌的草根组织
 
-To date, they’ve hosted more than 100 events.
+超过 3000 位阿富汗的开发者、准开发者都是参与到了编程周末。
 
+编程周末每周都会在喀布尔举办编程活动。
 
-One participant helps another with their code.
-CodeWeekend absorbed the freeCodeCamp Kabul study group, and has now become its own nonprofit organization. It focuses on helping Kabul locals improve their programming skills and build their professional networks.
+截至目前，他们已举办超过 100 场活动。
 
-They achieve this by running free programming workshops, providing networking opportunities, and helping make technology more accessible.
+（此处有图）
 
-“We have 2 types of sessions. Our weekly sessions teach people who are new to programming. And our monthly events bring software developers and other tech professionals together under one roof so they can share knowledge and provide an opportunity for networking.” — Jawed Mansoor, CodeWeekend organizer
+一个参会者帮助另一个编码
+
+编程周末吸纳了 freeCodeCamp 喀布尔学习小组，它现已成为非营利组织。它专注于帮助喀布尔人改善他们的编程技能，并建立他们的专业网络。
+
+他们通过举办免费编程工作坊、提供交流机会、让技术更容易获得来实现这一点。
+
+> “我们有两种类型的活动。我们每周的活动教新人编程，而月度活动邀请在同一水平的软件工程师和其它专业技术人员，以便他们能分享知识，并提供一个交流机会。”
+>
+> —— “编程周末”组织者 Jawed Mansoor
+
 The CodeWeekend community goes to great lengths to be as inclusive as possible.
 
 It has a strictly-enforced code of conduct that would be right at home at a Silicon Valley tech conference.

@@ -459,8 +459,139 @@ function Service() {
 
 在使用框架和组件时，`class` 可以用作异常。React 就是这种情况，但在 [React Hooks](https://reactjs.org/docs/hooks-overview.html) 中就不是了。
 
-为什么工厂函数更好，可以参看 [类 vs 工程函数](https://www.freecodecamp.org/news/class-vs-factory-function-exploring-the-way-forward-73258b6a8d15/)。
+为什么工厂函数更好，可以参看 [Class vs Factory function: exploring the way forward](https://www.freecodecamp.org/news/class-vs-factory-function-exploring-the-way-forward-73258b6a8d15/)。
 
 ## 箭头函数
 
 箭头函数快速地创建匿名函数，可以用来以更精简地语法创建较小地回调函数。
+
+让我们来看一个 todo 应用的例子。一个 todo 对象有一个 `id`，一个 `title`，以及一个 `complete` 的布尔属性。现在来看下面这段只从对象中选择 `title` 属性的代码：
+
+```js
+const titles = todos.map(todo => todo.title);
+```
+
+或者下面这段只选择还未完成的待办事项的代码：
+
+```js
+const filteredTodos = todos.filter(todo => !todo.completed);
+```
+
+### this
+
+箭头函数没有自己的 `this` 和 `arguments`。因此，你也许会看见箭头函数被用来解决 `this` 产生的一些问题。我认为避免这些问题的最佳方式是根本不使用 `this`。（**译注：** 不用妖魔化 this）
+
+### 箭头函数也可能是一个不好的特性
+
+在需要用到具名函数的场景时，箭头函数可能是一个不好的特性。使用箭头函数会影响代码的可读性和可维护性。看下面这段全部使用匿名箭头函数的代码：
+
+```js
+const newTodos = todos.filter(todo => 
+       !todo.completed && todo.type === "RE")
+    .map(todo => ({
+       title : todo.title,
+       userName : users[todo.userId].name
+    }))
+    .sort((todo1, todo2) =>  
+      todo1.userName.localeCompare(todo2.userName));
+```
+
+现在来看[另一段同样逻辑的代码](https://jsfiddle.net/cristi_salcescu/pm7n2ab5/)，这段代码使用命名的纯函数进行了重构，函数的命名能帮助我们更好地理解它们：
+
+```js
+const newTodos = todos.filter(isTopPriority)
+  .map(partial(toTodoView, users))
+  .sort(ascByUserName);
+
+function isTopPriority(todo){
+  return !todo.completed && todo.type === "RE";
+}
+  
+function toTodoView(users, todo){
+  return {
+    title : todo.title,
+    userName : users[todo.userId].name
+  }
+}
+
+function ascByUserName(todo1, todo2){
+  return todo1.userName.localeCompare(todo2.userName);
+}
+```
+
+更重要的是，匿名箭头函数将匿名显示在调用堆栈中。
+
+可以参看 [How to make your code better with intention-revealing function names](https://www.freecodecamp.org/news/how-to-make-your-code-better-with-intention-revealing-function-names-6c8b5271693e/)了解为什么具名函数更好。
+
+更少的代码并不意味着更具可读性。通过[下面这个例子](https://jsfiddle.net/cristi_salcescu/wc8be2gn/)看看哪一个对你更易理解：
+
+```js
+//with arrow function
+const prop = key => obj => obj[key];
+
+//with function keyword
+function prop(key){
+   return function(obj){
+      return obj[key];
+   }
+}
+```
+
+注意返回对象的情况。下面的代码中，`getSampleTodo()` 函数返回了 `undefined`。
+
+```js
+const getSampleTodo = () => { title : "A sample todo" };
+
+getSampleTodo();
+//undefined
+```
+
+## 生成器
+
+我认为 ES6 的生成器是一个让代码更复杂的无必要的特性。（**译注：** 这一点不认可作者，只能说对上层应用开发和新手来说没有必要使用。）
+
+ES6 的生成器创建了一个包含 `next()` 方法的对象。`next()` 方法又创建了一个包含 `value` 属性的对象。ES6 的生成器改善了循环的使用。看[下面的代码](https://jsfiddle.net/cristi_salcescu/edq7vfwm/)：
+
+```js
+function* sequence(){
+  let count = 0;
+  while(true) {
+    count += 1;
+    yield count;
+  }
+}
+
+const generator = sequence();
+generator.next().value;//1
+generator.next().value;//2
+generator.next().value;//3
+```
+
+同样的生成器可以用一个闭包来简单实现。
+
+```js
+function sequence(){
+  let count = 0;
+  return function(){
+    count += 1;
+    return count;
+  }
+}
+
+const generator = sequence();
+generator();//1
+generator();//2
+generator();//3
+```
+
+更多关于函数生成器的例子可以参看 [Let’s experiment with functional generators and the pipeline operator in JavaScript](https://www.freecodecamp.org/news/lets-experiment-with-functional-generators-and-the-pipeline-operator-in-javascript-520364f97448/)
+
+## 结论
+
+`let` 和 `const` 用来声明和初始化变量。
+
+模块封装功能并仅仅暴露一小部分。
+
+展开操作符和剩余参数，以及属性简写让代码更具表现力。
+
+Promise 和尾递归完善了函数式编程的工具箱。

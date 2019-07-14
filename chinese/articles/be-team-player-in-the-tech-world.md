@@ -1,108 +1,106 @@
 > * 原文地址：[How to be a team player in the tech world](https://www.freecodecamp.org/news/how-to-be-a-team-player-in-the-tech-world-c78aa9f4e898/)
 > * 原文作者：Ofer Vugman
-> * 译者：
+> * 译者：杨辉 于晓慧 李莉
 > * 校对者：
 
-How to be a team player in the tech world
+这些技巧将提升您的人际关系和团队的工作效率
+当我作为初级开发人员获得第一份工作时，我觉得我达到了我的最终目标：通过做我最喜欢的事来获得报酬。
 
-These tips will boost your relationships and your team’s efficiency at work
-When I landed my first job as a junior developer, I felt I had reached my ultimate goal: get paid for doing what I love most.
+获得对我的技能的认可是令人振奋的，特别是在多年的理论和学术界之后。
 
-It was exhilarating to get recognition for my skillset, especially after years of theory and academia.
+我超级大肆宣传。
 
-I was super hyped.
+不久之后，我在这个新的世界里学到了我的第一堂课。事实证明，我在计算机科学学位期间所教授的内容与现实世界中的工作方式之间存在巨大差异。
 
-Shortly after, I learned my first hard lesson in this new world of mine. Turned out, there was a huge difference between what I was taught during my computer science degree, to how things work in the real world.
+这是一个令人讨厌的自由落体，“我知道很多”，“我还有很多东西要学习。”
 
-It was a nasty free fall from, “I know a lot” to “there’s so much more for me to learn.”
+从了解框架，到模式和工作流程，我离我必须在几英里之外。
 
-From understanding the frameworks, to the patterns and workflow, I was literally miles away from where I had to be.
+我意识到，如果我想加强我的编码并作为开发人员进行改进，我必须继续学习。它让我觉得学习过程实际上永远不会结束。
 
-I realized that if I wanted to strengthen my coding and improve as a developer, I had to keep on learning. It hit me that the learning process would, in effect, never end.
+十年之后快进，我每天都在学习新技术，而且很棒。
 
-Fast forward a decade later and I’m still learning new technical things every day, and it’s awesome.
+但我最大的教训是，技术技能本身并没有削减它。
 
-But my biggest lesson has been that technical skills alone just don’t cut it.
+技术技能只是故事的一半
+我们花了很多时间来提高我们的技术技能。我们学习新的语言，框架，方法和模式。我们投入了大量时间，有时会忘记我们日常工作的另一个方面：我们的人力团队成员。
 
-Technical skills are only half the story
-We spend a lot of time sharpening our technical skills. We learn new languages, frameworks, methodologies, and patterns. We invest so much time that we sometimes forget another aspect of our day to day work: our human team members.
+无论是开发人员，团队领导，QA工程师，设计师还是产品经理，我们大多数人都是团队合作。我们分享史诗版本和令人沮丧的调试会话的时刻。
 
-Whether as a developer, team leader, QA engineer, designer, or product manager, most of us work in teams. We share moments of epic releases and frustrating debugging sessions.
+对于一群拥有自己行李（经验，意见和专业知识）的人来说，有效地工作和协作并不总是那么容易。每个人都必须采用特定的技能才能成为最有价值的团队成员。
 
-For a group of individuals, coming with their own baggage (experience, opinions, and expertise), it’s not always easy to work and collaborate efficiently. Each individual must adopt specific skills to be the most valuable team member they can be.
+“团队的力量是每个成员。每个成员的力量都是团队。“ - 菲尔杰克逊
+因此，虽然技术技能至关重要，但它们只是等式的一部分。另一部分正在成为你可以成为最好的团队成员。
 
-“The strength of the team is each individual member. The strength of each member is the team.” — Phil Jackson
-So while technical skills are crucial, they’re only part of the equation. The other part is becoming the best team member you can be.
+如何成为更好的团队成员
+老实说，这需要很多。但是，让我列出你可以采用的四个最重要的要求。
 
-How to be a better team member
-Honestly, it takes a lot. But let me lay down four of the most crucial requirements you can adopt pronto.
+1.让你的自我达到门槛
+我们生活在一个竞争激烈的世界 因此，随着时间的推移，我们养成了我们相信会使我们脱颖而出并生存的习惯。
 
-1. Leave your ego at the threshold
-We live in a competitive world. As such, over time, we develop habits we believe will make us stand out and survive.
+我们希望表明我们比其他人更聪明，更强大，更好。我们希望我们的力量得到我们的队友和经理的认可。
 
-We want to show we’re smarter, stronger, and better than the rest. We want our strength to be acknowledged by our teammates and managers.
+我们的自我通常被用作生存技能来帮助我们脱颖而出，我们经常盲目相信我们解决问题的方法是最好的。我们断然拒绝其他人的意见和建议。
 
-Our ego is often used as a survival skill to help us stand out, and we often blindly believe our solution to a problem is the best one. We categorically reject everyone else’s opinions and suggestions.
+在最糟糕的情况下，我们甚至会让我们的同事觉得他们不知道他们在谈论什么。
 
-In the worst case scenarios, we even make our colleagues feel as though they don’t know what they’re talking about.
+这种行为，虽然它可以养活我们的自我，让我们感觉更好，但具有破坏性。它从每次谈话中吸取空气，并造成挫折和有毒的工作环境。
 
-This behavior, while it may feed our ego and make us feel better, is destructive. It sucks the air out of every conversation, and creates frustration and a poisonous working environment.
+“自我可以成为最大的成功抑制因素。它可以扼杀机会，它可以扼杀成功。“ - Dwayne Johnson
+为了使团队有效地工作和协作，其成员必须互相尊重，允许其他人的声音被听到并接受他们的意见，即使我们不完全同意。
 
-“The ego can be the great success inhibitor. It can kill opportunities, and it can kill success.” — Dwayne Johnson
-For a team to work and collaborate efficiently, its members must respect one another, allow other’s voices to be heard and accept their opinions, even if we don’t completely agree.
+通过这样做，我们鼓励一个安全的环境。当我们感到安全时，我们的自我变得无关紧要。
 
-By doing that, we encourage a safe environment. And when we feel safe, our ego becomes irrelevant.
+2.接受反馈
+持续的反馈，无论是积极的还是消极的，都是个人成长和团队合作的关键。没有它，我们永远不会知道我们的弱点或我们如何改进。
 
-2. Embrace feedback
-Continuous feedback, whether positive or negative, is key for personal growth, as well as for teamwork. Without it, we’ll never know our weaknesses or how we can improve.
+接受负面反馈很难。我们倾向于采取防御措施，可能会反击，试图推理我们的行为或行为。
 
-Receiving negative feedback is hard. We tend to get defensive and may push back, trying to reason our behavior or actions.
+给予负面反馈也同样困难，因为我们害怕对方会如何反应。我们担心它可能会成为光顾，所以我们经常完全避免它。
 
-Giving negative feedback is equally hard, because we’re scared of how the other side will react. We’re concerned it could come off as patronizing, and so we often avoid it altogether.
+“我们都需要有人给我们反馈意见。这就是我们改进的方式。“ - 比尔盖茨
+但反馈 - 给予和接受它 - 是我们理解我们需要什么以及如何改进的最有力工具。
 
-“We all need people who will give us feedback. That’s how we improve.” — Bill Gates
-But feedback — giving it and receiving it — is the most powerful tool we have to understand what we need and how we can improve.
+因此，虽然我们应该学习如何提供建设性的反馈，但我们也应该努力接受批评。这样，您就可以在每天实施变更，并成为更有价值的团队成员。
 
-So while we should learn how to give constructive feedback, we should also work on accepting criticism. That way, you can implement changes in your every day, and become a more valuable team member.
+3.要负责任
+当我们发布一个kick-ass功能，修复一个难以捉摸的错误，或者给予鼓舞人心的谈话时，我们期望得到我们努力的认可。对我们所做的好事负责是很容易的。
 
-3. Be accountable
-When we release a kick-ass feature, fix an elusive bug, or give an inspiring talk, we expect to get recognition for our efforts. It’s easy to be accountable for the good things we do.
+但我们是人类，我们很容易犯错误。我们可能会在生产中引入一个关键的错误，说出一些被误解的东西，或者以冒犯某人的方式行事。
 
-But we’re humans and we’re prone to make mistakes. We might introduce a critical bug in production, say something that was misunderstood, or act in a manner that offended someone.
-
-Being accountable for our mistakes is never easy. It feels like we’re walking around with a big ‘I was wrong’ sign and a lady behind us yelling ‘shame, shame, shame.’
+对我们的错误负责并非易事。感觉就像我们走来走去，身边有一个很大的'我错了'的标志，而我们身后的一位女士大喊“羞耻，羞耻，羞耻。”
 
 
-The first thing to understand is that it’s OK to make mistakes. Rather than reveling in the mistake itself, see it as an opportunity to grow.
+首先要明白的是犯错是可以的。而不是陶醉于错误本身，而不是将其视为成长的机会。
 
-So be accountable. Accountability implies maturity. It is a key factor for building trust within a team. When something you said was understood differently, or something you coded caused a bug in production — stand up to that failure and be accountable.
+所以要负责任。问责意味着成熟。这是在团队中建立信任的关键因素。当你所说的东西被理解为不同，或者你编码的东西导致了生产中的错误 - 经得起失败并承担责任。
 
-“He that is good for making excuses is seldom good for anything else.” — Benjamin Franklin
-You’ll build trust among your team members and they’ll know they can count on you to be there in even the most challenging situations.
+“ 有利于找借口的人很少有其他任何好处。“ - 本杰明富兰克林
+您将在您的团队成员之间建立信任，并且他们知道即使在最具挑战性的情况下，他们也可以指望您在那里。
 
-4. Don’t be a knowledge hoarder
-We’re in a constant process of learning. Whether reading over an answer on StackOverflow, an online course, or teaching yourself a new framework, your brain is consuming knowledge nonstop.
+4.不要成为知识囤积者
+我们处在一个不断学习的过程中。无论是阅读StackOverflow上的答案，在线课程，还是自学新框架，您的大脑都在不停地消耗知识。
 
-We acquire a lot of knowledge over the years. We become experts in our field, and if we’re really good, we become the go-to person for that topic.
+多年来，我们获得了大量的知识。我们成为我们领域的专家，如果我们真的很好，我们就会成为这个话题的首选。
 
-It can easily fool us to believe that the amount of knowledge we have makes us so valuable to the company - we’re irreplaceable. So we hoard that knowledge.
+它很容易让我们相信我们拥有的知识量使我们对公司如此宝贵 - 我们是不可替代的。所以我们囤积这些知识。
 
-But knowledge hoarders are destructive for any team.
+但知识囤积者对任何团队都具有破坏性。
 
-When we deny access to the knowledge we acquired throughout our career, we not only harm our team’s productivity and efficiency, but we create an ‘every (hu)man for himself’ culture.
+当我们拒绝获取我们在整个职业生涯中获得的知识时，我们不仅会损害我们团队的生产力和效率，而且还会为自己的文化创造一个“每个人（胡）人”。
 
-It’s toxic.
+它有毒。
 
-When you share knowledge, you empower others. You take an active part in their personal growth. You encourage conversations and creative thinking.
+当你分享知识时，你就会赋予他人权力。您积极参与个人成长。你鼓励对话和创造性思维。
 
-The best part about sharing knowledge is that it encourages reciprocity: others will be more likely to share their knowledge with you. You’ll be surprised by how much you can learn from the person sitting next to you.
+分享知识的最佳部分是鼓励互惠：其他人更有可能与您分享知识。你可以从坐在你旁边的人身上学到多少，你会感到惊讶。
 
-“If you have knowledge, let others light their candles in it.” — Margaret Fuller
-Being an expert in your field doesn’t necessarily make you a great educator; spending time teaching and learning will make you a much more valuable team member.
+“如果你有知识，就让其他人在里面点燃蜡烛。” - M argaret Fuller
+成为您所在领域的专家并不一定能让您成为一名优秀的教育工作者; 花时间教学和学习将使你成为更有价值的团队成员。
 
-Make Time for Teamwork
-While you need to hone your technical skills continuously to step up your game, make room for your teamwork skillset. There’s nothing worse than having a team member that may be good technically, but is the absolute worst when it comes to working together.
+为团队合作腾出时间
+虽然你需要不断磨练自己的技术技能来加强你的游戏，为你的团队合作技能腾出空间。没有什么比拥有一个技术上可能很好的团队成员更糟糕的了，但在合作方面却是最糟糕的。
 
-It’s not only about creating a positive environment — curating the perfect team with individual team members that embody these four requirements will bring you better technical results, and extraordinary efficiency.
+这不仅仅是创造一个积极的环境 - 通过体现这四个要求的个人团队成员策划完美的团队将为您带来更好的技术成果和非凡的效率。
 
-And that’s something that works for everyone.
+这对每个人都有用。

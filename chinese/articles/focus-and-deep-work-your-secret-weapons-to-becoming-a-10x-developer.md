@@ -7,12 +7,14 @@ Or how to become one of those highly-paid “10x Rockstar Ninja” developers co
 
 It doesn’t matter if you’re working on a side hustle or if you’re a junior developer wanting to get noticed and promoted. It doesn’t matter if you’re a lead developer looking for a change of pace, from a corporate gig to a start-up or the other way around. It doesn’t matter if you’re jobless out of college.
 
-As long as you’re a programmer, no skill is more important to your success than focused, deep work.
+只要你还是一个程序员，没有什么技能比专注和钻研对你的成功更重要。
 
 From Cal Newport’s book Deep Work:
 
-“The Deep Work Hypothesis: The ability to perform deep work is becoming increasingly rare and at the exact same time it is becoming increasingly valuable in our economy. … the few who cultivate this skill, and then make it the core of their working life, will thrive.”
-— Deep Work p.14
+> “The Deep Work Hypothesis: The ability to perform deep work is becoming increasingly rare and at the exact same time it is becoming increasingly valuable in our economy. … the few who cultivate this skill, and then make it the core of their working life, will thrive.”
+>
+> — Deep Work p.14
+
 I’m going to use some points from Deep Work to tie together my thoughts on becoming a successful, in-demand developer. I highly recommend reading it if you’re in the technology field in any capacity.
 
 From Fear of Code to Lead Developer.

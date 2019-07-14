@@ -1,4 +1,4 @@
-> * 原文地址：[How To Master Async/Await With This Real World Example](https://www.freecodecamp.org/news/how-to-master-async-await-with-this-real-world-example-19107e7558ad/)
+> * 原文地址：[How I went from newbie to Software Engineer in 9 months while working full time](https://www.freecodecamp.org/news/how-i-went-from-newbie-to-software-engineer-in-9-months-while-working-full-time-460bd8485847/)
 > * 原文作者：Austin Tackaberry
 > * 译者：
 > * 校对者：

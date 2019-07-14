@@ -4,30 +4,37 @@
 > * 校对者：
 
 Landing My First Development Job - What a Crazy Journey!
-Jonathan Sexton
-Jonathan Sexton
-Self taught developer looking to share knowledge, experience, and cute animal pictures with the world!
 
+# 我的第一份开发工作 —— 疯狂之旅开始！
 
- Tweet this to your followers
-
-Email this to a friend
-
-Share this with your friends
-Landing My First Development Job - What a Crazy Journey!
 You read the title right!  I was offered a development position with a company and after some negotiating I accepted their very generous offer!
+
+你读对了！我得到了一家公司开发岗位的录用，并且经过协商，薪资也很可观。
 
 I am beyond blown away, excited, happy, and (if I'm being 100% honest) terrified - in a good way though!  I'm still in disbelief that this is really happening but ecstatic to start working on production code!
 
+我欣喜若狂，自己都不敢相信，我即将作为一个开发者，要真的开始写代码了！
+
 I've had a lot of people ask me to distill my journey into an article to share and help others.  So, buckle in because here we go!
 
+很多人希望我将自己的学习经历分享出来，所以我写了这篇文章！
+
 Getting Started
+## 开始
+
 I've always been interested in computers, tech, etc.  Like many people my age, I got to 'cut my teeth' with development by creating a GeoCities site and later by personalizing my MySpace page with some basic CSS.
 
+我一直对计算机、科技方面的东西面感兴趣。像很多同龄人一样，一开始入门时，我创建了一个 GeoCities 网站，然后用一些基本的 CSS 来个性化我的 MySpace 页面。
+ 
 I didn't know it at the time but this was development, a crude version of it but still development nonetheless.  At that time, I didn't know that people would pay for this kind of work or I might have stuck with it.  So, I went to college and got a degree in nothing tech related - psychology.  Not a useless degree, but one I ultimately never put into professional use.
 
+那个时候我并不知道这就是所谓的开发，虽然很粗糙，但的确是。可惜那个时候我并不知道它可以赚钱，否则我会继续坚持。所以我上了大学，拿到了和技术无关的学位 —— 心理学。然而我一直都没有用到过它。
+
 Finding My Calling
+
 Fast forward to the summer time in 2016 where I found myself with an abundance of free time on my hands outside of work.  I had always wanted to teach myself to code/program and decided now was the time - no more delay.  With the amount of free and accessible resources online to teach myself how to code it was the perfect time to jump in.
+
+在2016年的夏天，工作之余，有很多空闲时间，也一直想自学编程，
 
 I started by searching for resources and came across CodeCademy where I took handwritten notes by copying the entire question, answer, and result into a notebook.  I literally wrote down everything thinking that I would need it.  I came back to these notes from time to time to review them.  It's also interesting to look back on them and compare what I considered difficult then to what I consider difficult now :)
 

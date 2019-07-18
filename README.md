@@ -17,6 +17,7 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章](https://www.free
 - 快速提高你的 Git 操作熟练度
 - 收获 GitHub 认可的 contributions
 - 受邀成为 freeCodeCamp.org 国际社区作者，文章发表在[官网](https://chinese.freecodecamp.org/news/)
+- 在社区中结识优秀的小伙伴，拥抱更多技术成长与职业发展的可能性
 
 感兴趣的小伙伴请移步到 [Wiki](https://github.com/freeCodeCamp/news-translation/wiki) 解锁翻译指南。
 

@@ -3,182 +3,395 @@
 > * 译者：[Zou Li](https://github.com/zlv2s)
 > * 校对者：
 
-Have you ever tried to write front-end apps using ES6 syntax, but then when you decided to learn back-end development with Node.js and Express, you realized that you can’t use all the modern ES6 (and beyond) features? If so, you came to the right place! This is step by step guide on how to configure your dev and prod environments, setup scripts, and as a bonus we’ll learn how to enable server auto restart when you save changes!
 
-Table of Contents / Summary of topics
-Prerequisites
-Installing express
-Setting up scripts
-Bonus
-TL;DR
-Prerequisites
-Before we begin, we need some things setup first.
+也许你已经在前端开发中使用过 ES6 语法了，但是当你转向后端开发，开始使用 Node.js 和 Express 时， 你会发现 ES6（以及上） 语法新特性不能完全被支持，如果确实是这样，那这篇文章值得你好好读一下。你会学习怎么一步步在开发和生产环境中对相关脚本进行配置，还会学到怎么监视 node.js 应用程序中的任何更改并自动重启服务。
 
-Make sure you have Node.js and npm installed. I recommend installing their latest LTS or current stable version. You can install it via Node.js Source or NVM (Node Version Manager)
-When you have Node and npm installed, next is the Express Generator cli. We need it to generate an Express app. Install it via typing this in your command-line:
+### 目录内容
+
+- [预备知识](#prerequisites)
+- [安装 Express](#installing-express)
+- [脚本配置](#setting-up-scripts)
+- [小技巧](#bonus)
+- [TL;DR](#tl-dr)
+
+<h3 id="prerequisites">预备知识</h3>
+
+在开始之前，我们需要做些准备工作。
+1. 确保你的当你安装了 Node.js 和 npm。可以通过 [ Node.js Source](https://nodejs.org/en/download/) 或者 [NVM (Node Version Manager)](https://github.com/creationix/nvm) 来安装，我推荐安装最新版或者目前稳定版。
+2. 接下来，我们需要安装 Express Generator cli，它可以快速帮我们生成 Express 应用骨架，在命令行工具中输入：
+
+```bash
 npm i -g express-generator
-3. Basic knowledge of terminal commands. Most of the commands are in the tutorial anyway so you don’t have to worry about them.
+```
 
-4. Make sure you have your terminal open and your favorite text editor installed.
+3. 了解常用的终端命令，在本教程中会涉及到大多数命令，所以即使不会也不用担心。
+4. 安装好编辑器，打开命令行终端
 
-That’s it, we’re good to go!
+<h3 id="installing-express">安装 Express</h3>
 
-Installing Express
-Using the Express generator, we will create a new project with generated code, move some files, and convert some code to ES6 syntax. We need to convert it at this early stage because we need a way to verify if our ES6 code works.
+我们使用 Express generator 来创建一个新项目，它会自动帮我们生成一些代码。并将其中一些语法转换为 ES6 语法，在这个阶段我们就可以验证 ES6 语法是否能正常使用。
 
-Project Setup
-Run this command in your terminal. You can name your-project-name with the name you like. --no-view flag means that we won’t be using any templating engine such as handlebars, ejs, or pug, for our skeleton Express app.
+#### 项目设置
 
+在命令行工具中输入下面的命令，你可以自定义你喜欢的项目名 `your-project-name`，`--no-view` 指定我们不需要在项目骨架中使用模板引擎，例如 handlebars，ejs，pug 等。
+
+```bash
 express your-project-name --no-view
-After creating your app, you need to go to your app directory. For Windows Powershell and Linux terminals, use:
+```
 
+创建项目后，我们进入项目根目录。如果你使用的是 Windows Powershell 和 Linux 终端，输入下面的命令：
+
+```bash
 cd your-project-name
-Next, open the text editor you like. For me, I just use VSCode so I just have my terminal and text editor open at the same time. But you can use any text editor you want.
+```
 
-Installing Packages and Moving and Deleting Files
-After we have the generated project ready, we need to install the dependencies and move some folders. Run this command to install Express and other packages.
+接下来打开代码编辑器，我使用的是 VSCode，你可以使用任何你喜欢的编辑器
 
+#### 安装包，移动和删除部分文件
+
+使用下面的命令为我们的项目安装依赖，并将其中某些文件夹移动位置
+
+```bash
 npm install
-While you’re waiting for the dependencies to install, follow these steps.
+```
 
-create a src/ folder
-Put bin/ , app.js , and routes/ inside the src folder.
-Rename www, found in bin to www.js
-Leave public/ folder at your project root.
-Delete routes/users.js — we don’t need this and we need to keep it simple.
-Your file structure will look like this:
+在等待安装的过程中，你可以做如下几步操作：
 
+- 创建 `src/` 目录
+- 将 `bin/`，`app.js` 和 `routes/` 移动到 `src` 目录
+- 将 `bin` 目录中的 `www` 文件重命名为 `www.js`
+- 将 `public/` 移动到项目根目录
+- 删除 `routes/users.js`，我们暂时不需要
 
-Now, because we modified the file structure, our start server script won’t work. But we’ll fix it along the way.
+整个项目结构如下：
 
-Converting to ES6 code
-Converting the generated code to ES6 is a little bit tedious, so I’ll just post the code here and feel free to copy and paste it.
+![](https://user-gold-cdn.xitu.io/2019/7/18/16c03a0b83b0c55d?w=800&h=515&f=png&s=55851)
 
-Code for bin/www.js:
+因为修改了文件结构，我们的服务器启动脚本现在就失效了，待会儿我们再解决这个问题。
 
+#### ES6 语法转换
+
+将 Express 应用生成器生成的代码转换为 ES6 语法的过程有点枯燥，所以我直接将代码贴在下面，你可以复制粘贴。
+
+- `bin/www.js` 文件：
+
+```
 // bin/www.js
+```
+
+```
 /** * Module dependencies. */
-import app from '../app';import debugLib from 'debug';import http from 'http';
+```
+
+```js
+import app from '../app';
+import debugLib from 'debug';
+import http from 'http';
+```
+
+```js
 const debug = debugLib('your-project-name:server');
+```
+
+```
 // generated code below.
-Almost all of our modifications are only at the top and bottom of the files. We are leaving other generated code as is.
+```
 
-Code for routes/index.js:
+我们几乎只需要在文件的顶部和底部进行修改，其他的代码不需要。
 
+- `routes/index.js` 文件：
+
+```
 // routes/index.js
-import express from 'express';var router = express.Router();
-/* GET home page. */router.get('/', function(req, res, next) {  res.render('index', { title: 'Express' });});
+```
+
+```js
+import express from 'express';
+var router = express.Router();
+```
+
+```js
+/* GET home page. */
+router.get('/', function(req, res, next) {  
+    res.render('index', { title: 'Express' });
+});
+```
+
+```js
 export default router;
-Code for app.js:
+```
 
+- `app.js` 文件：
+
+```
 // app.js
-import express from 'express';import path from 'path';import cookieParser from 'cookie-parser';import logger from 'morgan';
+```
+
+```js
+import express from 'express';
+import path from 'path';
+import cookieParser from 'cookie-parser';
+import logger from 'morgan';
+```
+
+```js
 import indexRouter from './routes/index';
+```
+
+```js
 const app = express();
-app.use(logger('dev'));app.use(express.json());app.use(express.urlencoded({ extended: false }));app.use(cookieParser());app.use(express.static(path.join(__dirname, '../public')));
-app.use('/', indexRouter);
-export default app;
-In app.js , because we left public/ at the project root , we need to change the Express static path. Notice that the path 'public' became '../public' .
+```
 
+```js
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
-And also, since we deleted routes/users.js , we started to remove these lines from app.js:
+```
 
+```js
+app.use('/', indexRouter);
+```
+
+```js
+export default app;
+```
+
+因为 `public/` 被移动到了项目根目录，所以我们需要在 `app.js` 中修改 Express 静态资源路径，注意，在这里我们将 `'public'` 改为 `'../public'`。
+
+```js
+app.use(express.static(path.join(__dirname, '../public')));
+```
+
+其次，我们删除了 `routes/users.js` 文件，所以还需要在 `app.js`中移除以下代码
+
+```
 // remove these lines
-var usersRouter = require('./routes/users');app.use('/users', usersRouter);
-Okay we’re done with converting the code! Let’s setup our scripts now.
+```
 
-Setting up Scripts
-In setting up scripts, we’ll do it step by step. It’s because production script is a little bit different than the development script. We will need to use a little bit of composition of script here in so we can have reusable scripts.
+```js
+var usersRouter = require('./routes/users');
+app.use('/users', usersRouter);
+```
 
-Install `npm-run-all`
-Since some terminal commands won’t work on windows cmd, we need to install a package called npm-run-all so this script will work for any environment. Run this command in your terminal project root.
+现在代码语法转换已经完成了，我们接下来开始配置脚本。
 
+<h3 id="setting-up-scripts">脚本配置</h3>
+
+在这个阶段，我们会一步步来配置，开发环境的生产环境的配置有点区别。我们会组合部门脚本方便重用。
+
+#### 安装 `npm-run-all`
+
+由于某些终端命令不能在 Windows cmd 上运行，我们需要安装 `npm-run-all` 包，这样我们的脚本就可以在任何环境下运行。 在终端中输入以下命令：
+
+```bash
 npm install --save npm-run-all
-Install babel and others
-Babel is modern JavaScript transpiler. A transpiler means your modern JavaScript code will be transformed to an older format that Node.js can understand. Run this command in your terminal project root. We will be using the latest version of babel (Babel 7).
+```
 
+#### 安装 babel 和其他包
+
+Babel 是一个 Javascript 编译器，主要用于将 ECMAScript 2015+ 版本的代码转换为向后兼容的 JavaScript 语法，以便能够运行在当前和旧版本的浏览器或其他环境中，比如 Node.js。在项目根目录打开终端命令行，输入下面命令，我们会安装最新版的 babel(Babel 7))
+
+```bash
 npm install -D @babel/core @babel/cli @babel/preset-env @babel/node
-If you notice, I keep switching from -D and --save — these flags tell npm whether to save it as a devDependency or as a dependency. When installation finishes, we are now ready to add our dev script.
+```
 
-Adding dev script
-Remember I told you earlier that the command in your package.json won’t work because we altered the files? Now it won’t really work because we changed the code to ES import statements. We need the package we installed earlier, a babel config file, and babel-node in order for the node server to work.
+也许你已经注意到了，在上面的那些命令中，我有时候使用 -D，有时使用 --save，这两种标志是在告诉 npm 我们的包是是作为 `devDependency` 还是 `dependency`，即开发依赖和生产依赖。当安装完成后，我们就可以添加 dev 脚本了。
 
-Create a file called .babelrc at the root of your project. And put this code in it:
+#### 添加 dev 脚本
 
-{  "presets": ["@babel/preset-env"]}
-Since you can use Babel to convert different kinds of JS syntaxes, we need to use a preset called preset-env (the one we installed earlier) in our configuration file to tell Babel which JS format to transpile.
+我前面说过，`package.json` 中的脚本命令现在无法运行，因为我们修改了部分文件。现在它也运行不了，因为我们使用了 ES6 import 语法。这时候我们需要利用之前安装的包，babel 配置文件，和 `babel-node` 来让 node server 运行起来。
 
-After this setup we are now ready to test if our server runs even though the code is in ES6. Adding a dev script will look like this in your package.json:
+在项目根目录创建 `.babelrc` 文件，写入以下代码：
 
-"scripts": {    "start": "node ./bin/www",    "server": "babel-node ./src/bin/www",    "dev": "NODE_ENV=development npm-run-all server"}
-Notice that we added two scripts, server , and dev . This is script composition. We used a little bit of code splitting and run all commands via npm-run-all package.
+```josn
+{ "presets": ["@babel/preset-env"] }
+```
 
-You can test the server by running this command:
+因为我们使用 Babel 来转换不同类型的 js 语法，所以需要在 `.babelrc` 中配置 `preset-env` 预设（之前安装的），它会告诉 Babel 去转换哪种类型。
 
+在这些都设置好后，我们就可以测试 node server能否在 ES6 语法环境下运行，首先，在 `package.json` 中添加 dev 脚本：
+
+```json
+"scripts": { 
+    "start": "node ./bin/www",    
+    "server": "babel-node ./src/bin/www",    
+    "dev": "NODE_ENV=development npm-run-all server"
+}
+```
+在上面的代码中我们添加了 server 和 dev 两个脚本，使用代码分隔将他们组合起来，再通过 `npm-run-all` 来运行所有命令。
+
+现在输入以下命令来测试服务器能否正常启动：
+
+```bash
 npm run dev
-Yay it worked! ✅
+```
 
-Note that the start command won’t work for now. We’ll fix it when we get to adding prod scripts, I promise!
+可以正常工作！
 
-Adding prod scripts
-Now that we have dev script, prod script is a little bit different. We need a way to convert all JavaScript files in src to a code format that Node.js can understand. A new folder called dist/ that mimics the same folder structure as src . But also, every time we run a prod script, we need to delete the dist folder to make sure that we are using the fresh converted code. Here’s what are we gonna do.
+目前，`start` 脚本命令还不能运行，我们会在后面添加 `prod` 脚本时来修复。
 
-Make a build script, that converts code in src that will produce a new folder called dist/
-Install rimraf package, and make a script called clean that will remove dist/
-Make a prod script, that will clean , build , and start the server
-Clean script
-In order to make a build script, we must first install the rimraf package that handles the folder deleting for us.
+#### 添加 prod 脚本
 
+prod 脚本 和 dev 脚本有点区别，我们需要将 `src` 目录中的所有 js 文件代码转换为 nodejs 能够识别的语法形式。运行 prod 脚本会生成一个和 `src/` 目录结构类似的 `dist/` 文件夹，但是每次在运行该脚本之前，我们需要将旧的 `dist/` 文件夹删除，确保我们运行的是最新生成的代码。下面是具体步骤：
+
+- 创建 build 脚本，它会转换 `src/` 中的文件代码并生成新的 `dist/` 文件夹。
+- 安装 rimraf 包，并新建 clean 脚本，用来删除 `dist/` 文件夹。
+- 新建 prod 脚本，将 clean，build，start server 脚本组合起来。 
+
+#### Clean 脚本
+
+在创建 build 脚本之前，我们先要安装 rimraf 包，用来删除某个文件夹
+
+```bash
 npm install rimraf --save
-After installing rimraf, we’ll use it on our build script. Add this in your scripts at package.json . Your scripts section will be like this:
+```
 
-"scripts": {    "start": "node ./bin/www",    "server": "babel-node ./src/bin/www",    "dev": "NODE_ENV=development npm-run-all server",    "clean": "rimraf dist"  },
-Build script
-Now we’ll add our build script. We’ll use babel-cli, the one we installed earlier to make this script. Your script will look like this:
+安装好后，在 `package.json` 的 scripts 字段中加入 clean 脚本，我们会在 build 脚本中使用到它，现在整个 scripts 字段结构如下：
 
-"scripts": {    "start": "node ./bin/www",    "server": "babel-node ./src/bin/www",    "dev": "NODE_ENV=development npm-run-all server",    "clean": "rimraf dist",    "build": "babel ./src --out-dir dist"  },
-Prod script
-In order to run prod, we’ll use build , clean , and start , script. We’ll just edit the start script. Your prod script will look like this:
+```json
+"scripts": { 
+    "start": "node ./bin/www", 
+    "server": "babel-node ./src/bin/www", 
+    "dev": "NODE_ENV=development npm-run-all server",  
+    "clean": "rimraf dist"
+},
+```
 
-"scripts": {    "start": "npm run prod",    "server": "babel-node ./src/bin/www",    "server:prod": "node ./dist/bin/www",    "dev": "NODE_ENV=development npm-run-all server",    "clean": "rimraf dist",    "build": "babel ./src --out-dir dist",    "prod": "NODE_ENV=production npm-run-all clean build server:prod"  },
-Notice that we added server:prod script. That will take care of running the node server to the babel generated dist/ folder. We also changed the start script to just point to prod because npm start is always used by hosting platforms like Heroku or AWS to start the server.
+#### Build 脚本
 
-There we go! Good job for getting this far. With this configuration, we are able to use modern JS syntax with Node.
+现在我们来添加 build 脚本，会用到 babel-cli（之前安装过的），如下：
 
-Bonus: adding server auto-restart on changes
-For us to enable server auto-restart on Node.js, we need a package called nodemon and a simple config file. Run this command in your terminal at the project root:
+```json
+"scripts": {   
+    "start": "node ./bin/www",
+    "server": "babel-node ./src/bin/www", 
+    "dev": "NODE_ENV=development npm-run-all server",  
+    "clean": "rimraf dist",  
+    "build": "babel ./src --out-dir dist"  
+},
+```
 
+#### Prod 脚本
+
+prod 脚本组合了 build，clean，和 start 脚本，现在我们来修改下 start 脚本：
+
+```json
+"scripts": {   
+    "start": "npm run prod", 
+    "server": "babel-node ./src/bin/www", 
+    "server:prod": "node ./dist/bin/www", 
+    "dev": "NODE_ENV=development npm-run-all server", 
+    "clean": "rimraf dist", 
+    "build": "babel ./src --out-dir dist",   
+    "prod": "NODE_ENV=production npm-run-all clean build server:prod"
+},
+```
+
+注意我们在 scripts 字段中还添加了一个 server:prod 脚本，它的作用是在生成的 `dist/` 文件夹中运行 node server。我们还将 start 脚本指向了 prod 脚本，因为托管平台(如 Heroku 或 AWS)一般都是使用 npm start 命令来启动服务。
+
+到目前为止，我们的所有配置完成了，现在就可以在 Node 中使用最新的 js 语法。
+
+<h3 id="bonus">小技巧：监视文件变化并自动重启服务</h3>
+
+使用 nodemon 我们可以在 nodejs 上自动重启服务。同样先安装 nodemon 包，并新建配置文件 `nodemon.json`，在项目根目录下的终端中运行此命令：
+
+```bash
 npm i -D nodemon
-And then make a config file called nodemon.json . This will contain our configuration file. Config looks like this:
+```
 
-{  "exec": "npm run dev",  "watch": ["src/*", "public/*"],  "ext": "js, html, css, json"}
-This means that whenever a change in src/ and public/ has been detected, your server will auto restart.
+`nodemon.json` 配置文件：
 
-After making the config file, let’s make the script called watch in our package.json . The scripts file will look like this.
+```json
+{ 
+    "exec": "npm run dev", 
+    "watch": ["src/*", "public/*"], 
+    "ext": "js, html, css, json"
+}
+```
 
-"scripts": {    "start": "npm run prod",    "server": "babel-node ./src/bin/www",    "server:prod": "node ./dist/bin/www",    "dev": "NODE_ENV=development npm-run-all server",    "clean": "rimraf dist",    "build": "babel ./src --out-dir dist",    "prod": "NODE_ENV=production npm-run-all clean build server:prod",    "watch": "nodemon"  },
-You can run the command by typing this into your terminal.
+现在，只要 `src/` 和 `public/` 文件夹中的文件有变化，服务器就会自动重启。
 
+我们将其添加到 `package.json` 的 scripts 字段中：
+
+```json
+"scripts": {  
+    "start": "npm run prod",   
+    "server": "babel-node ./src/bin/www",  
+    "server:prod": "node ./dist/bin/www",   
+    "dev": "NODE_ENV=development npm-run-all server", 
+    "clean": "rimraf dist",   
+    "build": "babel ./src --out-dir dist",  
+    "prod": "NODE_ENV=production npm-run-all clean build server:prod",  
+    "watch": "nodemon" 
+},
+```
+
+运行 watch 脚本：
+
+```bash
 npm run watch
-TL;DR
-Here are the simplified steps for how to enable ES6 in Node.js. I’ll also include the repo so you can copy and inspect the whole code.
+```
 
-Make a new project using express your-project-name terminal command.
-Move the bin/, routes/ and app into a new folder called src/ , and convert the code into ES6. Also don’t forget to rename bin/www to www.js
-Install all the dependencies and devDependencies
+<h3 id="tl-dr">TL;DR</h3>
+
+上面的教程简化为以下几个步骤，我会附上仓库地址，你可以参考学习：
+
+- 在命令行终端中使用 `express your-project-name` 新建项目。
+- 新建 `src/` 目录，将 `bin/`，`routes/` 和 `app` 移动到该目录；将部分代码转换为 ES6 语法；重命名 `bin/www` 为 `www.js`。
+- 安装开发依赖和生产依赖
+
+```bash
 npm i -D @babel/cli @babel/core @babel/node @babel/preset-env nodemon
+```
+
+```bash
 npm i --save rimraf npm-run-all
-Add these scripts to your package.json
-"scripts": {    "start": "npm run prod",    "server": "babel-node ./src/bin/www",    "server:prod": "node ./dist/bin/www",    "dev": "NODE_ENV=development npm-run-all server",    "clean": "rimraf dist",    "build": "babel ./src --out-dir dist",    "prod": "NODE_ENV=production npm-run-all clean build server:prod",    "watch": "nodemon"  },
-Make nodemon.json and .babelrc configuration files
-// nodemon.json{  "exec": "npm run dev",  "watch": ["src/*", "public/*"],  "ext": "js, html, css, json"}
-// .babelrc{  "presets": ["@babel/preset-env"]}
-Test your scripts by running npm run dev or npm run prod or npm run watch
-You’ll see the complete repo at my github
-Conclusion
-All right! I hope you learned a lot. Thank you for reading this far.
+```
+- package.json 中添加脚本
 
-Happy Coding!
+```json
+"scripts": {   
+    "start": "npm run prod", 
+    "server": "babel-node ./src/bin/www",  
+    "server:prod": "node ./dist/bin/www",   
+    "dev": "NODE_ENV=development npm-run-all server", 
+    "clean": "rimraf dist",  
+    "build": "babel ./src --out-dir dist", 
+    "prod": "NODE_ENV=production npm-run-all clean build server:prod", 
+    "watch": "nodemon" 
+},
+```
 
-Check the full repo here.
+- 新建 `nodemon.json` 和 `.babelrc`，并配置
+
+
+```json
+// nodemon.json
+
+{  
+    "exec": "npm run dev", 
+    "watch": ["src/*", "public/*"], 
+    "ext": "js, html, css, json"
+}
+```
+
+
+```json
+// .babelrc
+
+{  
+"presets": ["@babel/preset-env"]
+}
+```
+
+- 运行 `npm run dev`，`npm run prod`，`npm run watch` 测试脚本
+- 完整的[仓库代码](https://github.com/jcunanan05/express-es6-sample/tree/for-article)
+
+### 总结
+
+最后，希望你在本教程中能学到东西，感谢你的阅读!
+
+happy coding!
 

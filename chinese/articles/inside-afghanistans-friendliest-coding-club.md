@@ -27,38 +27,39 @@
 
 他们通过举办免费编程工作坊、提供交流机会、让技术更容易获得来实现这一点。
 
-> “我们有两种类型的活动。我们每周的活动教新人编程，而月度活动邀请在同一水平的软件工程师和其它专业技术人员，以便他们能分享知识，并提供一个交流机会。”
+> 我们有两种类型的活动。我们每周的活动教新人编程，而月度活动邀请在同一水平的软件工程师和其它专业技术人员，以便他们能分享知识，并提供一个交流机会。
 >
 > —— “编程周末”组织者 Jawed Mansoor
 
-The CodeWeekend community goes to great lengths to be as inclusive as possible.
+“编程周末”社区竭尽全力尽可能具有包容性，它秉持硅谷技术大会的行为准则，鼓励如下行为：
 
-It has a strictly-enforced code of conduct that would be right at home at a Silicon Valley tech conference.
+- 使用热情和包容的语言
+- 尊重不同的观点和经验
+- 优雅地接受建设性批评
+- 专注于对社区最好的事
+- 对其他社区成员有同情心
 
-The code of conduct encourages behaviors like:
+（此处有图）
 
-Using welcoming and inclusive language
-Being respectful of differing viewpoints and experiences
-Gracefully accepting constructive criticism
-Focusing on what is best for the community
-Showing empathy towards other community members
+Milad Mehraban 在喀布尔的 Kardan 大学做技术讲座
 
-Milad Mehraban gives a tech talk at Kardan university in Kabul
-CodeWeekend is broken down into neighborhood-level chapters — each with chapter leaders. These chapter leaders reach out to local companies and organizations to secure sponsors and venues for events.
+“编程周末”分为街坊级的分会，每个分会都有负责人。分会负责人们与当地的公司和组织联络，以保障赞助和活动场地。
 
-“We don’t spend a lot on our events. We need a venue and some refreshments, maybe a projector. Whenever we want to have an event, we contact a private sector organization so they can provide us with space and internet. We’re looking forward to always having at least small room where we can have a dedicated venue.” — Mustafa Ehsan, CodeWeekend mentor
-Each event is around 3 hours long. First the teachers start by giving a high-level introduction to a topic. Then everybody starts working through freeCodeCamp.org’s curriculum. 3 or 4 mentors will float around helping people when they get stuck or have a question.
+> 我们不在我们的活动上花费太多。我们需要一个场地和一些茶点，可能还要一个投影仪。每当我们想举办活动时，我们都会联系一个私营机构，以便他们为我们提供空间和互联网。我们期望至少有个小房间作为专用场地。
+>
+> —— “编程周末”导师 Mustafa Ehsan
 
-“We have people consistently coming each week, with a high level of passion. Whenever we don’t have an event, people call and ask us why not. They really want this.” — Mustafa Ehsan, CodeWeekend mentor
-And their volunteer efforts are working. People from the CodeWeekend community are getting jobs as developers.
+每期活动大概 3 小时。首先，老师以一个对主题的概括性介绍开场。然后，每个人开始做 freeCodeCamp.org 的课程。三四个导师会穿梭其间，帮助遇到困难或有问题的人。
 
-Many of the jobs that their community members are getting involve building services for the Afghanistan government and local and international startups and companies.
+> 有些人每周都来，热情高涨。每当我们没办活动时，总有人来问我们为啥不办。他们真的很期待。
+> 
+> —— “编程周末”导师 Mustafa Ehsan
 
-For example, their teams build and maintains web apps for Human Resources departments and other back office functions.
+他们的志愿工作在产生作用，来自“编程周末”社区的人逐渐找到开发者工作。他们社区成员获得的很多工作涉及为阿富汗政府、本地/国际创业公司构建服务。
 
-And in the process, they get to work with exciting new tools like Vue.js and Laravel.
+比如，他们的团队为人力资源部门和其它后台办公功能开发并维护 Web 应用，并且在此过程中，他们开始使用像 Vue.js 和 Laravel 这样令人兴奋的新工具。
 
-The people behind CodeWeekend and freeCodeCamp Kabul
+## “编程周末”和 FCC 喀布尔社区背后的人们
 
 freeCodeCamp Kabul teacher Mustafa Ehsan leads many of the CodeWeekend events.
 Jamshid Hashimi is the founder of CodeWeekend. At age 13, he started a football club in the rural village where he grew up.

@@ -4,8 +4,8 @@
 > * 校对者：
 
 
-What is a Design Pattern?
-Design patterns are design level solutions for recurring problems that we software engineers come across often. It’s not code - I repeat, ❌CODE. It is like a description on how to tackle these problems and design a solution.
+# 什么是设计模式？
+设计模式是一些设计级别的解决方案。这些解决方案是为了解决软件工程师经常遇到的反复出现的问题。它不是代码 - 我再说一遍， ❌CODE. It is like a description on how to tackle these problems and design a solution.
 
 Using these patterns is considered good practice, as the design of the solution is quite tried and tested, resulting in higher readability of the final code. Design patterns are quite often created for and used by OOP Languages, like Java, in which most of the examples from here on will be written.
 

@@ -61,28 +61,28 @@ Milad Mehraban 在喀布尔的 Kardan 大学做技术讲座
 
 ## “编程周末”和 FCC 喀布尔社区背后的人们
 
-freeCodeCamp Kabul teacher Mustafa Ehsan leads many of the CodeWeekend events.
-Jamshid Hashimi is the founder of CodeWeekend. At age 13, he started a football club in the rural village where he grew up.
+freeCodeCamp 喀布尔社区的老师 Mustafa Ehsan 主持了很多“编程周末”活动。
 
-He went on to study at Dokuz Eylul University in Turkey before working at companies like Rumie and Alidrivers.
+Jamshid Hashimi 是“编程周末”创始人，他 13 岁时，在他长大的乡村创立了一个足球俱乐部。
 
-CodeWeekend was the perfect intersection of his two passions — technology and community building — so he created the organization in 2014.
+在 Rumie 和 Alidrivers 等公司工作之前，他继续在土耳其的 Dokuz Eylul 大学学习。
 
-Shaheen Naikpay isn’t a developer by profession. He has a background in educational psychology. He works as a project manager on the military side of the industry.
+他对技术和社区营造充满激情，在 2014 年创立了 CodeWeekend，这正是两者的完美融合。
 
-But Shaheen says he likes to contribute to society, and CodeWeekend is a big part of that. He volunteers as CodeWeekend’s event management coordinator.
+Shaheen Naikpay 不是一个职业开发者，他有教育心理学背景，并作为一个军事工业的项目经理。
 
-Some of the events are sponsored by Netlinks, Mustafa’s employer. The CEO of Netlinks actively encourages CodeWeekend to host the event there in the company’s large hall.
+但 Shaheen 说他喜欢贡献社会，“编程周末”是其中很大的一块，他志愿作为“编程周末”的活动管理协调员。
 
-Jawed Mansoor completed his computer science degree in India. He works as a database engineer. He helps organize CodeWeekend events in Kabul.
+有些活动是 Mustafa 的雇主 Netlinks 赞助的，Netlinks 的 CEO 积极鼓励 CodeWeekend 在公司大堂办活动。
 
-Fazila Nazary is an experienced database developer and instructor. She is the CodeWeekend director for Mazar-i Sharif, another city in Afghanistan.
+Jawed Mansoor 在印度完成了他的计算机科学学位，并成为一名数据库工程师，在喀布尔帮助组织 CodeWeekend 活动。
 
-The organization also has a broad roster of regular event mentors, including Mustafa Ehsan, Jalal Saidi, Sediq Khan, Mohammad Ali Abbasi, and Akmal Arzhang.
+Fazila Nazary 是一名经验丰富的数据库开发者和讲师，她是阿富汗另一座城市 Mazar-i Sharif 的 CodeWeekend 理事。
 
+该组织还拥有广泛的常规活动导师名册，包括 Mustafa Ehsan、Jalal Saidi、Sediq Khan、Mohammad Ali Abbasi 和 Akmal Arzhang。
 
-If you’re traveling to Kabul, be sure to join the CodeWeekend Facebook group so you can attend one of their events.
+若你正在阿富汗旅行，加入 CodeWeekend 的 Facebook 群组确保你能参加他们的活动。
 
-And you can also support millions of people around the world who are learning to code. Make a tax-deductible donation to freeCodeCamp.org.
+并且，你也可以向 freeCodeCamp.org 做免税捐款，来支持全球数以百万计正在学编程的人们。
 
-Together, we can create more free education resources. We can support communities like CodeWeekend, and the impact they’re making on the lives of people in their community.
+我们可以一起创造更多免费的教育资源，支持 CodeWeekend 这样的社区，和他们正在建立的对他们社区人民生活的影响。

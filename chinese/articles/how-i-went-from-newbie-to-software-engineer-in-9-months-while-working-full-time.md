@@ -4,10 +4,13 @@
 > * 校对者：
 
 In this post, I’ll share how I went from zero(ish) to a six-figure software engineering job offer in nine months while working full time and being self-taught.
+在这篇博文里，我会向你展示我是如何在九个月时间里，利用业余时间自学成才， 从一个小白变成一个年薪达到六位数的软件工程师的经历。
 
 Whenever I would start reading a success story, I would immediately look to find the author’s background, hoping it would match mine. I never found someone who had the same background as I did, and most likely mine won’t match yours exactly.
+无论什么时候，当我读一篇成功故事的时候，我会立刻尝试去找出作者的背景，希望他和我有着类似的背景。但我从来就没有找到过，而且你也几乎不可能和我完全一样。
 
 Nonetheless, I hope that my story inspires others and acts as a valuable data point that can be added to your success story dataset.
+但是，我希望我的故事能激励你，并且能在未来成为你的成功故事中，导致你成功的因素之一。
 
 Full Disclosure
 I took a Visual Basic for Applications (VBA) course in high school (nine years ago). In my freshman engineering course (seven years ago), I learned some C, Python, Matlab, and Labview. I graduated from a good university with a chemical engineering degree and a good GPA (three years ago). I hadn’t done any programming outside of school, in high school or college, until I decided I wanted to learn last year.

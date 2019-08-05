@@ -1,6 +1,6 @@
 > * 原文地址：[Landing My First Development Job - What a Crazy Journey!](https://www.freecodecamp.org/news/landing-my-first-development-job-what-a-crazy-journey/)
 > * 原文作者：Jonathan Sexton
-> * 译者：
+> * 译者：[zlv2s](https://github.com/zlv2s) [lingziyb](https://github.com/lingziyb)
 > * 校对者：
 
 # 我找到了第一份开发工作 — 一段疯狂的经历

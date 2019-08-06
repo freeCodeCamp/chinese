@@ -3,69 +3,78 @@
 > * 译者：ShoneSingLone
 > * 校对者：
 
+# 设计模式是什么？
 
-# 什么是设计模式？
-设计模式是一些设计级别的解决方案。这些解决方案是为了解决软件工程师经常遇到的反复出现的问题。它不是代码 - 我再说一遍， ❌CODE. It is like a description on how to tackle these problems and design a solution.
+![](https://www.freecodecamp.org/news/content/images/size/w2000/2019/07/design-patterns-everywhere.jpg)
 
-Using these patterns is considered good practice, as the design of the solution is quite tried and tested, resulting in higher readability of the final code. Design patterns are quite often created for and used by OOP Languages, like Java, in which most of the examples from here on will be written.
+设计模式是一些设计级别的解决方案。这些解决方案是为了解决软件工程师经常遇到的问题。它不是代码，我再说一遍，它**不是代码**。 它就像一种描述，描述如何解决这些问题、如何设计解决方案。
 
-Types of design patterns
-There are about 26 Patterns currently discovered (I hardly think I will do them all…).
+使用这些模式被认为是一种很好的实践，因为解决方案的设计经过了充分的尝试和测试，从而使最终代码具有更高的可读性。设计模式经常被面向对象语言（如Java）创建和使用。（接下来的大多数例子将会以 Java 编写）
 
-These 26 can be classified into 3 types:
+# 设计模式的类型
 
-1. Creational: These patterns are designed for class instantiation. They can be either class-creation patterns or object-creational patterns.
+目前发现了大约26种模式（我几乎不认为我会完成所有这些模式……）。
 
-2. Structural: These patterns are designed with regard to a class's structure and composition. The main goal of most of these patterns is to increase the functionality of the class(es) involved, without changing much of its composition.
+这26种可分为3种类型：
 
-3. Behavioral: These patterns are designed depending on how one class communicates with others.
+1. 创建型：这些模式是为类实例化而设计的。它们可以是类创建模式或对象创建模式。
 
-In this post, we will go through one basic design pattern for each classified type.
+2. 结构型：这些模式是根据类的结构和组成设计的。大多数这些模式的主要目标是增加所涉及类的功能，而不改变其组成。
 
-Type 1: Creational - The Singleton Design Pattern
-The Singleton Design Pattern is a Creational pattern, whose objective is to create only one instance of a class and to provide only one global access point to that object. One commonly used example of such a class in Java is Calendar, where you cannot make an instance of that class. It also uses its own getInstance()method to get the object to be used.
+3. 行为型：这些模式的设计取决于一个类如何与其他类通信。
 
-A class using the singleton design pattern will include,
+在这篇文章中，我们将针对每种分类类型介绍一种基本设计模式。
 
+## 类型1：创建型 - 单例设计模式
 
-Singleton Class Diagram
-A private static variable, holding the only instance of the class.
-A private constructor, so it cannot be instantiated anywhere else.
-A public static method, to return the single instance of the class.
-There are many different implementations of singleton design. Today, I’ll be going through the implementations of;
+单例设计模式是一种创建型模式，它的目标是限制一个类只能创建一个实例对象，并且只为该实例对象提供唯一一个全局访问点。Java 中这种类的一个常用示例是 Calendar ，它使用自己的 `getInstance()` 方法来获取要使用的实例对象，你无法为 Calendar 类再创建一个实例对象。
 
-1. Eager Instantiation
+使用单例设计模式的类将包括
 
-2. Lazy Instantiation
+![单例类图](https://www.freecodecamp.org/news/content/images/2019/07/singleton-class-diagram.png)
 
-3. Thread-safe Instantiation
+1. 一个私有静态变量，保存该类的唯一实例。
+2. 私有构造函数，因此无法在该类以外实例化。
+3. 一个公共静态方法，用于返回类的唯一实例。
 
-Eager Beaver ?️
+单例设计有许多不同的实现，今天我会介绍以下几种
+
+1. 饿汉式实例化
+2. 懒汉式实例化
+3. 线程安全实例化
+
+### 雄心勃勃？
+
+```java
 public class EagerSingleton {
-	// create an instance of the class.
+	// 创建类实例
 	private static EagerSingleton instance = new EagerSingleton();
 
-	// private constructor, so it cannot be instantiated outside this class.
+	// 私有构造器，因此无法在这个类的外部实例化
 	private EagerSingleton() {  }
 
-	// get the only instance of the object created.
+	// 获取创建的唯一实例对象。
 	public static EagerSingleton getInstance() {
 		return instance;
 	}
 }
-This type of instantiation happens during class loading, as the instantiation of the variable instance happens outside any method. This poses a hefty drawback if this class is not being used at all by the client application. The contingency plan, if this class is not being used, is the Lazy Instantiation.
+```
 
-Lazy Days ?
-There isn’t much difference from the above implementation. The main differences are that the static variable is initially declared null, and is only instantiated within the getInstance() method if - and only if - the instance variable remains null at the time of the check.
+这种类型的实例化发生在类加载期间，所以变量实例的实例化发生在任何方法之外。如果客户端应用程序根本没有使用此类，就会构成一个很大的缺陷。如果没有使用这个类，应急计划就是使用**懒汉式实例化**
 
+### 懒散的日子？
+
+这里与上述实现没有太大区别。主要区别在于静态变量被声明为 `null`，当且仅当实例变量在检查时仍然为 `null` 才在 `getInstance()` 方法中实例化。
+
+```java
 public class LazySingleton {
-	// initialize the instance as null.
+	// 初始化实例置为null
 	private static LazySingleton instance = null;
 
-	// private constructor, so it cannot be instantiated outside this class.
+	// 私有构造器，因此无法在这个类的外部实例化
 	private LazySingleton() {  }
 
-	// check if the instance is null, and if so, create the object.
+	// 检查实例，若为null，则创建实例对象
 	public static LazySingleton getInstance() {
 		if (instance == null) {
 			instance = new LazySingleton();
@@ -73,19 +82,23 @@ public class LazySingleton {
 		return instance;
 	}
 }
-This fixes one problem, but another one still exists. What if two different clients access the Singleton class at the same time, right to the millisecond? Well, they will check if the instance is null at the same time, and will find it true, and so will create two instances of the class for each request by the two clients. To fix this, Thread Safe instantiation is to be implemented.
+```
 
-(Thread) Safety is Key ?
-In Java, the keyword synchronized is used on methods or objects to implement thread safety, so that only one thread will access a particular resource at one time. The class instantiation is put within a synchronized block so that the method can only be accessed by one client at a given time.
+解决了一个问题，但另一个仍然存在。如果两个不同的客户端同时访问单例类，该怎么办呢？好吧，它们将同时检查实例是否为 `null`，并且会发现它们结果都是 `true`，所以会创建两个实例，两个客户端的每个请求各一个。要解决这个问题，需要实现**线程安全实例化**。
 
+### （线程）安全是关键？
+
+在 Java 中，关键字 `synchronized` 用于方法或对象以实现线程安全，因此同时只有一个线程能访问特定资源。类实例化被放在同步块中，所以该方法能在给定时间只由一个客户端访问。
+
+```java
 public class ThreadSafeSingleton {
-	// initialize the instance as null.
+	// 初始化实例置为null
 	private static ThreadSafeSingleton instance = null;
 
-	// private constructor, so it cannot be instantiated outside this class.
+	// 私有构造器，因此无法在这个类的外部实例化
 	private ThreadSafeSingleton() {  }
 
-	// check if the instance is null, within a synchronized block. If so, create the object
+	// 检查实例，若为 null 且在同步块中，则创建实例对象
 	public static ThreadSafeSingleton getInstance() {
 		synchronized (ThreadSafeSingleton.class) {
 			if (instance == null) {
@@ -95,13 +108,16 @@ public class ThreadSafeSingleton {
 		return instance;
 	}
 }
-The overhead for the synchronized method is high, and reduces the performance of the whole operation.
+```
 
-For example, if the instance variable has already been instantiated, then each time any client accesses the getInstance() method, the synchronized method is run and the performance drops. This just happens in order to check if the instance variables’ value is null. If it finds that it is, it leaves the method.
+同步方法的开销很高，并降低了整个程序运行的性能。
 
-To reduce this overhead, double locking is used. The check is used before the synchronized method as well, and if the value is null alone, does the synchronized method run.
+举个例子，如果实例变量已经实例化，那么每次任何客户端访问 `getInstance()` 方法时，`synchronized` 方法都会运行并导致性能下降。所以 `synchronized` 方法只应该运行在检查实例变量的值为 `null` 时。如果检测结果为 `false`，就应该跳过 `synchronized` 方法。
 
-// double locking is used to reduce the overhead of the synchronized method
+为了减少此开销，使用双重锁。检查也在 `synchronized` 方法之前使用，如果值为 `null`，则运行 `synchronized` 方法。
+
+```java
+// 双重锁用于降低 synchronized 方法的开销
 public static ThreadSafeSingleton getInstanceDoubleLocking() {
 	if (instance == null) {
 		synchronized (ThreadSafeSingleton.class) {
@@ -112,57 +128,61 @@ public static ThreadSafeSingleton getInstanceDoubleLocking() {
 	}
 	return instance;
 }
-Now onto the next classification.
+```
 
-Type 2: Structural - The Decorator Design Pattern
-I’m gonna give you a small scenario to give a better context to why and where you should use the Decorator Pattern.
+现在进入下一个分类。
 
-Say you own a coffee shop, and like any newbie, you start out with just two types of plain coffee, the house blend and dark roast. In your billing system, there was one class for the different coffee blends, which inherits the beverage abstract class. People actually start to come by and have your wonderful (albeit bitter?) coffee. Then there are the coffee newbs that, God forbid, want sugar or milk. Such a travesty for coffee!! ??
+## 类型2：结构型 - 装饰器设计模式
 
-Now you need to have those two add-ons as well, both to the menu and unfortunately on the billing system. Originally, your IT person will make a subclass for both coffees, one including sugar, the other milk. Then, since customers are always right, one says these dreaded words:
+我将为你提供一个小场景，用来给出一个更好的上下文用来说明为什么以及在何处使用修饰器模式。
 
-“Can I get a milk coffee, with sugar, please?”
+话说你拥有一家咖啡店，就像所有新手一样，刚开始你只需要家常咖啡和焦炒咖啡两种普通咖啡。在你的结算系统中，有一个类用于不同的混合咖啡，它继承了饮料抽象类。人们走进店里，准备喝你美妙（虽然苦涩）的咖啡。这时，有个咖啡新人想要加糖或牛奶，（很无语）真是对咖啡的嘲弄。
 
-???
-There goes your billing system laughing in your face again. Well, back to the drawing board….
+现在你需要将这两个配料放在菜单和结算系统上，你的IT人员别出心裁地为每种咖啡分别添加两个子类，一种加糖，一种加牛奶。这时，由于客户总是对的，其中一个又说这些可怕的话：
 
-The IT person then adds milk coffee with sugar as another subclass to each parent coffee class. The rest of the month is smooth sailing, people lining up to have your coffee, you actually making money. ??
+“请来一杯加糖的牛奶咖啡。”
 
-But wait, there’s more!
+### ???
 
-The world is against you once again. A competitor opens up across the street, with not just 4 types of coffee, but more than 10 add-ons as well! ?
+望着你的结算系统，尴尬而又不失礼貌的微笑再次挂在了你的脸上。 好吧，回到绘图板……
 
-You buy all those and more, to sell better coffee yourself, and just then remember that you forgot to update that dratted billing system. You quite possibly cannot make the infinite number of subclasses for any and all combinations of all the add-ons, with the new coffee blends too. Not to mention, the size of the final system.??
+然后，IT人员将加入牛奶的咖啡加糖作为子类添加到每个父咖啡类中。本月剩下的时间一帆风顺，人们排队等候你的咖啡，你实际上赚钱了。
 
-Time to actually invest in a proper billing system. You find new IT personnel, who actually knows what they are doing and they say;
+但等等，这还不够！
 
-“Why, this will be so much easier and smaller if it used the decorator pattern.”
+整个世界又怼你，一个竞争对手在街对面开业，不仅有4种咖啡，还有超过10种配料！
 
-What on earth is that?
-The decorator design pattern falls into the structural category, that deals with the actual structure of a class, whether is by inheritance, composition or both. The goal of this design is to modify an objects’ functionality at runtime. This is one of the many other design patterns that utilize abstract classes and interfaces with composition to get its desired result.
+为了自己的咖啡卖得更好，对手有的没有的你都买了，这时候你想起了忘记更新那个讨厌的结算系统。你几乎不可能为所有的配料组合添加无穷无尽的子类，更不用说最终系统的大小。
 
-Let’s give Math a chance (shudder?) to bring this all into perspective;
+是时候接入正确的结算系统了。你找到了懂行的IT人员，他们说：“如果使用装饰器模式，这将更容易和更小。”
 
-Take 4 coffee blends and 10 add-ons. If we stuck to the generation of subclasses for each different combination of all the add-ons for one type of coffee. That’s;
+### 装饰器模式究竟是什么？
 
-(10–1)² = 9² = 81 subclasses
+装饰器设计模式属于结构型，它处理类的实际结构，无论是继承，组合或是两者结合。它设计的目标是在运行时修改对象的功能，这也是许多其他设计模式的目的之一。
 
-We subtract 1 from the 10, as you cannot combine one add-on with another of the same type, sugar with sugar sounds stupid. And that’s for just one coffee blend. Multiply that 81 by 4 and you get a whopping 324 different subclasses! Talk about all that coding…
+让我们给**数学**一个登场机会（不寒而栗？），来把这一切都带入视野：
 
-But with the decorator pattern will require only 16 classes in this scenario. Wanna bet?
+4种混合咖啡和10种配料。如果我们坚持为每一种类型的咖啡的所有配料的每一种不同组合生成子类。那是：
 
+(10–1)² = 9² = 81 个子类
 
-Decorator Design Pattern Class diagram
+我们从10中减去1，因为你不能将同一种配料混合，糖加糖听起来太蠢了，这只是一种混合咖啡。81乘以4，你会得到惊人的324个不同的子类！再想想那些涉及到的代码……
 
-Class diagram according to coffee shop scenario
-If we map out our scenario according to the class diagram above, we get 4 classes for the 4 coffee blends, 10 for each add-on and 1 for the abstract component and 1 more for the abstract decorator. See! 16! Now hand over that $100.?? (jk, but it will not be refused if given… just saying)
+但是在这种情况下，装饰器模式只需要16个类。敢打赌吗？
 
-As you can see from above, just as the concrete coffee blends are subclasses of the beverage abstract class, the AddOn abstract class also inherits its methods from it. The add-ons, that are its subclasses, in turn inherit any new methods to add functionality to the base object when needed.
+![Decorator Design Pattern Class diagram](https://www.freecodecamp.org/news/content/images/2019/07/decorator-class-diagram.png)
 
-Let’s get to coding, to see this pattern in use.
+![Class diagram according to coffee shop scenario](https://www.freecodecamp.org/news/content/images/2019/07/decorator-coffee-class-diagram.png)
 
-First to make the Abstract beverage class, that all the different coffee blends will inherit from:
+如果我们根据上面的类图绘制出我们的场景，我们得到4个混合咖啡类，10个配料类，1个抽象组件，1个抽象装饰器。看！16个！现在交出100美元。(开玩笑别当真, 当然如果你愿意给，我也不会拒绝……嘛，说说而已)
 
+从上面可以看出，正如实现混合咖啡类是饮料抽象类的子类一样，配料抽象类也从饮料抽象类继承了方法。配料类作为饮料抽象类的子类，能在需要时用自己的新方法向基础对象添加功能。
+
+让我们来编码，看看这个模式如何运用。
+
+首先制作抽象饮料类，所有不同的混合咖啡类将继承自饮料抽象类：
+
+```java
 public abstract class Beverage {
 	private String description;
     
@@ -177,8 +197,11 @@ public abstract class Beverage {
     
 	public abstract double cost();
 }
-Then to add both the concrete coffee blend classes.
+```
 
+然后添加实现混合咖啡类
+
+```java
 public class HouseBlend extends Beverage {
 	public HouseBlend() {
 		super(“House blend”);
@@ -200,8 +223,11 @@ public class DarkRoast extends Beverage {
 		return 300;
 	}
 }
-The AddOn abstract class also inherits from the Beverage abstract class (more on this below).
+```
 
+配料抽象类也继承自饮料抽象类（更多内容见下文）。
+
+```java
 public abstract class AddOn extends Beverage {
 	protected Beverage beverage;
 
@@ -212,8 +238,11 @@ public abstract class AddOn extends Beverage {
 
 	public abstract String getDescription();
 }
-And now the concrete implementations of this abstract class:
+```
 
+现在这个抽象类的具体实现类：
+
+```java
 public class Sugar extends AddOn {
 	public Sugar(Beverage bev) {
 		super(“Sugar”, bev);
@@ -244,10 +273,13 @@ public class Milk extends AddOn {
 		return beverage.cost() + 100;
 	}
 }
-As you can see above, we can pass any subclass of Beverage to any subclass of AddOn, and get the added cost as well as the updated description. And, since the AddOn class is essentially of type Beverage, we can pass an AddOn into another AddOn. This way, we can add any number of add-ons to a specific coffee blend.
+```
 
-Now to write some code to test this out.
+如你所见，我们可以将饮料抽象类的任何子类传递给配料抽象类的任何子类，并且获得增加的成本以及更新描述。由于配料抽象类继承自饮料抽象类，我们可以将配料抽象类传递给另一个配料抽象类。这样，我们就可以为特定的混合咖啡添加任意数量的配料。
 
+现在编写一些代码来测试它。
+
+```java
 public class CoffeeShop {
 	public static void main(String[] args) {
 		HouseBlend houseblend = new HouseBlend();
@@ -260,42 +292,48 @@ public class CoffeeShop {
 		System.out.println(sugarAddOn.getDescription() + “: “ + sugarAddOn.cost());
 	}
 }
-The final result is:
+```
 
+最终结果是：
 
-P.S. this is in Sri Lankan Rupees
-It works! We were able to add more than one add-on to a coffee blend and successfully update its final cost and description, without the need to make infinite subclasses for each add-on combination for all coffee blends.
+![P.S. this is in Sri Lankan Rupees](https://www.freecodecamp.org/news/content/images/2019/07/decorator-final.PNG)
 
-Finally, to the last category.
+运行成功！我们不需要为所有混合咖啡的每种配料组合添加无限多的子类，也能够在混合咖啡中添加多个配料，并成功更新其最终成本和描述。
 
-Type 3: Behavioral - The Command Design Pattern
-A behavioral design pattern focuses on how classes and objects communicate with each other. The main focus of the command pattern is to inculcate a higher degree of loose coupling between involved parties (read: classes).
+来，看看最后一类。
 
-Uhhhh… What’s that?
+## 类型3：行为型 - 命令设计模式
 
-Coupling is the way that two (or more) classes that interact with each other, well, interact. The ideal scenario when these classes interact is that they do not depend heavily on each other. That’s loose coupling. So, a better definition for loose coupling would be, classes that are interconnected, making the least use of each other.
+行为设计模式侧重于类、对象如何相互通信。命令模式的主要焦点是在所涉及的各个类之间灌输更高程度的低耦合。
 
-The need for this pattern arose when requests needed to be sent without consciously knowing what you are asking for or who the receiver is.
+呃……那是什么？
 
-In this pattern, the invoking class is decoupled from the class that actually performs an action. The invoker class only has the callable method execute, which runs the necessary command, when the client requests it.
+耦合是两个（或多个）类之间的交互方式。这些类交互时的理想情况是它们不会相互依赖，这被称为低耦合。所以，低耦合的良好定义是互相连接的类，彼此直接调用最少。
 
-Let’s take a basic real-world example, ordering a meal at a fancy restaurant. As the flow goes, you give your order (command) to the waiter (invoker), who then hands it over to the chef(receiver), so you can get food. Might sound simple… but a bit meh to code.
+当需要发送请求而不需要明确知道请求者或接收者是谁时，就需要这种模式。
 
+在这种模式中，调用类与实际执行操作的类分离。调用者类中只有在客户端请求时运行必要命令的可调用方法 `execute`。
 
-The idea is pretty simple, but the coding goes around the nose.
+我们来看一个现实世界中的基本例子——在一家高档餐厅点餐。随着流程的进行，你将订单（命令）交给服务员（调用者），然后服务员将其交给厨师（接收者），这样你就可以获得食物。可能听起来很简单，但对于代码实现就有点……
 
+![The idea is pretty simple, but the coding goes around the nose.](https://www.freecodecamp.org/news/content/images/2019/07/chain-of-command-be-like-pop-snoke-im-going-to-27790631.png)
 
-Command Design Pattern Class Diagram
-The flow of operation on the technical side is, you make a concrete command, which implements the Command interface, asking the receiver to complete an action, and send the command to the invoker. The invoker is the person that knows when to give this command. The chef is the only one who knows what to do when given the specific command/order. So, when the execute method of the invoker is run, it, in turn, causes the command objects’ execute method to run on the receiver, thus completing necessary actions.
+![Command Design Pattern Class Diagram](https://www.freecodecamp.org/news/content/images/2019/07/command-class-diagram.PNG)
 
-What we need to implement is;
-An interface Command
-A class Order that implements Command interface
-A class Waiter (invoker)
-A class Chef (receiver)
-So, the coding goes like this:
+技术方面的操作流程是，你点菜形成了一个订单（这个订单 `Order` 具体实现了命令接口要求厨师完成一道菜）。你把订单交个服务员（服务员 `Waiter` 就是调用者，他知道何时发出此命令）。服务员把订单交给厨师（收到特定订单时，厨师 `Chef` 是唯一知道具体该做什么的人，这就实现的低耦合）。如此，当调用者执行 `execute` 方法时，它调用订单对象的 `execute` 方法，而订单对象的 `execute` 方法又调用接收者对应的方法，从而完成必要的操作。
 
-Chef, the receiver
+### 我们需要实现：
+
+1. 一个接口 `Command`
+2. 一个具体实现 `Command` 接口的 `Order` 类
+3. 一个 `Waiter` 类（调用者）
+4. 一个 `Chef` 类（接收者）
+
+ 所以代码大概像这样：
+
+#### 厨师是接收者
+
+```java
 public class Chef {
 	public void cookPasta() {
 		System.out.println(“Chef is cooking Chicken Alfredo…”);
@@ -305,11 +343,19 @@ public class Chef {
 		System.out.println(“Chef is baking Chocolate Fudge Cake…”);
 	}
 }
-Command, the interface
+```
+
+#### 命令接口（ `Command Interface` ）
+
+```java
 public interface Command {
 	public abstract void execute();
 }
-Order, the concrete command
+```
+
+### 订单是命令接口具体实现类
+
+```java
 public class Order implements Command {
 	private Chef chef;
 	private String food;
@@ -328,7 +374,11 @@ public class Order implements Command {
 		}
 	}
 }
-Waiter, the invoker
+```
+
+#### 服务员是调用者
+
+```java
 public class Waiter {
 	private Order order;
 
@@ -340,7 +390,11 @@ public class Waiter {
 		this.order.execute();
 	}
 }
-You, the client
+```
+
+#### 你是客户
+
+```java
 public class Client {
 	public static void main(String[] args) {
 		Chef chef = new Chef();
@@ -354,16 +408,24 @@ public class Client {
 		waiter.execute();
 	}
 }
-As you can see above, the Client makes an Order and sets the Receiver as the Chef. The Order is sent to the Waiter, who will know when to execute the Order (i.e. when to give the chef the order to cook). When the invoker is executed, the Orders’ execute method is run on the receiver (i.e. the chef is given the command to either cook pasta ? or bake cake?).
+```
 
+如上所示，客户发出订单并将接收者设置为厨师。该订单将发送给服务员，服务员知道何时执行订单（即何时向厨师下订单进行烹饪）。当调用者执行程序时，订单的执行方法在接收者上运行（即主厨被命令要么煮意大利面要么烘烤蛋糕）。
 
-Final Client Output
-Quick recap
-In this post we went through:
+# 快速回顾一下
 
-What a design pattern really is,
-The different types of design patterns and why they are different
-One basic or common design pattern for each type
-I hope this was helpful.  
+在这篇文章中我们说明了：
 
-Find the code repo for the post, here.
+1. 真正的设计模式是什么；
+2. 不同类型的设计模式以及它们为什么不同
+3. 每种类型的一个基本或通用设计模式
+
+我希望这可以帮到你。
+
+点击[这里](https://github.com/samsam-026/Design_Patterns)跳转到这篇文章示例代码的仓库
+
+---
+
+> [深入研究单例模式](http://www.liuzhaocn.com/?p=1311)
+> [对象和实例的区别](https://www.cnblogs.com/qq641120784/p/8038880.html)
+> [命令模式](http://c.biancheng.net/view/1380.html)

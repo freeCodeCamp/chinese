@@ -429,3 +429,4 @@ public class Client {
 > [深入研究单例模式](http://www.liuzhaocn.com/?p=1311)
 > [对象和实例的区别](https://www.cnblogs.com/qq641120784/p/8038880.html)
 > [命令模式](http://c.biancheng.net/view/1380.html)
+

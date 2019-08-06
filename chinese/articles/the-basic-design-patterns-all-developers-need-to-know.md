@@ -424,6 +424,7 @@ public class Client {
 
 点击[这里](https://github.com/samsam-026/Design_Patterns)跳转到这篇文章示例代码的仓库
 
+
 ---
 
 > [深入研究单例模式](http://www.liuzhaocn.com/?p=1311)

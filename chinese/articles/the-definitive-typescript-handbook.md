@@ -1,6 +1,6 @@
 > * 原文地址：[The Definitive TypeScript Handbook](https://www.freecodecamp.org/news/the-definitive-typescript-handbook/)
 > * 作者：Gustavo Azevedo
-> * 译者：
+> * 译者：Theoda
 > * 校对者：
 
 TypeScript is the one of the tools people want to learn most, according to a  [Stack Overflow Survey][1]  of 90,000 developers.

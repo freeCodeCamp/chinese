@@ -9,7 +9,7 @@
 
 # 什么是 TypeScript？
 
-TypeScript 是具有静态类型特性的 JavaScript 的超集，旨在简化大型 JavaScript 应用程序的开发，也被称为 __JavaScript that scales__（__JavaScript 放大版__）。
+TypeScript 是 JavaScript 的超集，具有静态类型特性，旨在简化大型 JavaScript 应用程序的开发，也被称为 __JavaScript that scales__（__JavaScript 放大版__）。
 
 ## **为什么要用 TypeScript？**
 
@@ -398,9 +398,9 @@ abstract (抽象) 这个关键字可以用在类上，也可以用作抽象类�
 -   ****抽象类****  不会直接被实例化。抽象类主要用于继承，继承抽象类必须实现它所有的抽象方法。
 -   ****抽象成员****  不包含具体实现，因此不能被直接访问。这些成员必须在派生类中实现。 __(类似接口)__
 
-# **Type Assertion**
+# **类型断言**
 
-TypeScript allows you to override its inferred types in any way you want to. This is used when you have a better understanding of a variable type than the compiler on its own.
+TypeScript 允许你以任何方式覆盖其推断的类型。当你比编译器本身更好地理解变量类型时，可以使用这个方法。
 
 ```typescript
 const friend = {};
@@ -412,88 +412,88 @@ interface Person {
 
 ```
 
-Originally the syntax for type assertion was <type>
+最初，类型断言的语法是 `<type>`
 
 ```typescript
 let person = <Person> {};
 ```
 
-But this created an ambiguity when used in JSX. Therefore it is recommended to use  `as`instead.
+但这在 JSX 中使用时产生了歧义。因此建议使用 `as` 代替。
 
-Type assertion are usually used when migrating code from JavaScript and you may know a more accurate type of the variable than what is currently assigned. But assertion can be  ****considered harmful.****
+类型断言通常在从 JavaScript 迁移代码时使用，你对变量的类型了解可能比当前指定的更准确。但断言也会 **被认为是有害的。**
 
-Let’s take a look at our Person interface from the previous example. Did you notice something wrong? If you noticed the missing property  ****age****, congratulations! The compiler might help you providing autocomplete for properties of Person but it will not complain if you miss any properties.
+我们来看看上一个示例中的 Person 接口，你注意到了什么问题吗？如果你注意到丢失了 ****age**** 属性，恭喜，你对了！编译器可能会帮助你自动完成 Person 的属性，但如果您遗漏了任何属性，它也不会报错。
 
-# **Type Inference**
+# **类型推断**
 
-TypeScript infers types of variables when there is no explicit information available in the form of type annotations.
+当没有类型的可用显式信息时，TypeScript 会推断变量类型。
 
 ```typescript
 /**
 
-Variable definitinon
+变量声明
 /
 let a = "some string";
 let b = 1;
 a = b;  // Error! Type 'number' is not assignable to type 'string'.
 
-// In case of complex objects, TypeScript looks for the most common type
-// to infer the type of the object.
+// 如果时复杂的对象，TypeScript 会用最常见的类型
+// 来推断对象类型。
 const arr = [0, 1, false, true];  // (number | boolean)[]
 /**
 
 ```
 
-# **Type Compatibility**
+# **类型兼容性**
 
-Type compatibility is based on structural typing, which relates types based solely on their members.
+类型兼容性是基于结构类型的，结构类型只使用其成员来描述类型。
 
-The basic rule for structural type is that  `x`  is compatible with  `y`  if  `y`  has at least the same members as  `x`.
+结构化类型系统的基本规则是：如果 `x` 要兼容 `y`，那么 `y` 至少具有与 `x` 相同的属性。
 
 ```typescript
 interface Person {
 name: string;
 }
 
-let x: Person;  // Okay, despite not being an implementation of the Person interface
+let x: Person;  // 行吧，尽管不是Person接口的实现
 let y = { name: 'John', age: 20 };  // type { name: string; age: number }
 x = y;
 
 ```
 
-As  `y`  has a member  `name: string`, it matched the required properties for the Person interface, meaning that  `x`  is a subtype of  `y`. Thus, the assignment is allowed.
+由于 `y` 有一个成员 `name：string` 匹配 Person 接口所需的属性，这意味着 `x` 是 `y` 的子类型。因此这个赋值是合法的。
 
-## _Functions_
+## _函数_
 
-****Number of arguments****  
-In a function call you need to pass in at least enough arguments, meaning that extra arguments will not cause any errors.
+****参数数量****  
+在函数调用中，需要传入至少足够的参数，多余的参数不会导致任何错误。
 
 ```typescript
 function consoleName(person: Person) {
   console.log(person.name);
 }
-consoleName({ name: 'John' });           // Okay
-consoleName({ name: 'John', age: 20 });  // Extra argument still Okay
+consoleName({ name: 'John' });           // 正确
+consoleName({ name: 'John', age: 20 });  // 多余的参数也合法
 ```
 
-****Return type****  
-The return type must contain at least enough data.
+****返回值类型****  
+返回值类型必须包含至少足够的数据。
 
 ```typescript
 let x = () => ({name: 'John'});
 let y = () => ({name: 'John', age: 20 });
-x = y;  // OK
+x = y;  // 正确
 y = x;  /* Error! Property 'age' is missing in type '{ name: string; }'
 but required in type '{ name: string; age: number; }' */
 ```
 
-# **Type Guard**
+# **类型保护**
 
-Type Guards allow you to narrow down the type of an object within a conditional block.
+类型保护可以在条件块中缩小对象类型的范围。
 
 ## **typeof**
 
-Using typeof in a conditional block, the compiler will know the type of a variable to be different. In the following example TypeScript understand that outside the conditional block,  `x`  might be a boolean and the function  `toFixed`  cannot be called on it.
+在条件里使用 typeof，编译器会知道变量的类型会不一致。在下面的示例中，TypeScript 会知道：在条件块之外，`x` 可能是布尔值，布尔值上无法调用函数 `toFixed`。
 
 ```typescript
 function example(x: number | boolean) {
@@ -520,16 +520,16 @@ class MyError {
 function example(x: MyResponse | MyError) {
   if (x instanceof MyResponse) {
     console.log(x.message); // Error! Property 'message' does not exist on type 'MyResponse'.
-    console.log(x.result);  // Okay
+    console.log(x.result);  // 正确
   } else {
-    // TypeScript knows this must be MyError
+    // TypeScript 知道这里一定是 MyError
 <span class="token builtin" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">console</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(221, 74, 104);">log</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>x<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>message<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span> <span class="token comment" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(112, 128, 144);">// Okay</span>
 <span class="token builtin" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">console</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(221, 74, 104);">log</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>x<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>result<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>  <span class="token comment" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(112, 128, 144);">// Error! Property 'result' does not exist on type 'MyError'.</span>
 ```
 
 ## **in**
 
-The  `in`  operator checks for the existence of a property on an object.
+`in` 运算符会检查一个属性在某对象上是否存在。
 
 ```typescript
 interface Person {
@@ -543,32 +543,32 @@ const person: Person = {
 
 ```
 
-# **Literal Types**
+# **Literal Types (字面量类型)**
 
-Literals are  __exact__  values that are JavaScript primitives. They can be combined in a type union to create useful abstractions.
+字面量正是 JavaScript 原始数据类型具体的值，它们可以与联合类型搭配使用，构造一些实用的概念。
 
 ```typescript
 type Orientation = 'landscape' | 'portrait';
 function changeOrientation(x: Orientation) {
   // ...
 }
-changeOrientation('portrait'); // Okay
+changeOrientation('portrait'); // 正确
 changeOrientation('vertical'); /* Error! Argument of type '"vertical"' is not 
 assignable to parameter of type 'Orientation'. /
 ```
 
-## _**Conditional Types**_
+## _**条件类型**_
 
-_A conditional type describes a type relationship test and selects one of two possible types, depending on the outcome of that test._
+_条件类型表示类型关系的测试，并根据测试的结果选择两种可能类型中的一种。_
 
 _`type X = A extends B ? C : D;`_
 
-_This means that if type  `A`  is assignable to type  `B`, then  `X`  is the same type as  `C`. Otherwise  `X`  is the same as type  `D;`_
+_如果 `A` 类型可以赋值给 `B` 类型，那么 `X` 是 `C` 类型；否则 `X`  是 `D` 类型。_
 
-# _**Generic Types**_
+# _**泛型**_
 
-_Generic type is a type that must include or reference another type in order to be complete. It enforce meaningful constraints between various variables.  
-In the following example a function returns an array of whatever type you pass in._
+_泛型是必须包含或引用其他类型才能完成的类型。它加强了变量之间有意义的约束。
+下面例子中的函数会返回所传入的任何类型的数组。_
 
 _`function reverse<T>(items: T[]): T[] {
   return items.reverse();
@@ -578,7 +578,7 @@ reverse([0, true]); // (number | boolean)[]`_
 
 ## _**keyof**_
 
-_The  `keyof`  operator queries the set of keys for a given type._
+_`keyof` 运算符会查询给定类型的键集。_
 
 _`interface Person {
   name: string;
@@ -586,9 +586,9 @@ _`interface Person {
 }
 type PersonKeys = keyof Person; // 'name' | 'age'`_
 
-## _**Mapped Types**_
+## _**映射类型**_
 
-_Mapped Types allow you to create new types from existing ones by mapping over property types. Each property of the existing type is transformed according to a rule that you specify._
+_映射类型，通过在属性类型上建立映射，从现有类型创建新类型。具有已知类型的每个属性都会根据你指定的规则进行转换。_
 
 ## _**Partial**_
 
@@ -596,14 +596,14 @@ _`type Partial<T> = {
   [P in keyof T]?: T[P];
 }`_
 
--   _The generic Partial type is defined with a single type parameter  `T`._
--   _`keyof T` represents the union of all property names of  `T`  as string literal types._
--   _`[P in keyof T]?: T[P]`  denotes that the type of each property  `P`  of type  `T`should be optional and transformed to  `T[P]`._
--   _`T[P]`  represents the type of the property  `P`  of the type  `T`._
+-   _泛型 Partial 类型定义时只有一个类型参数 `T`。_
+-   _`keyof T` 表示 `T` 类型的所有属性的名字（字符串字面类型）的联合。_
+-   _`[P in keyof T]?: T[P]` 表示所有 `T` 类型的属性 `P` 的类型都应该是可选的，并且都会被转换为 `T[P]`。_
+-   _`T[P]`  表示 `T` 类型的属性 `P` 的类型。_
 
-## _**Readonly**_
+## _**Readonly (只读)**_
 
-_As we have covered in the Interface section, TypeScript allows you to create readonly properties. There is a  `Readonly`  type that takes a type  `T`  and sets all of its properties as readonly._
+_正如在接口部分中所介绍的，TypeScript 中可以创建只读属性。 `Readonly` 类型接受一个类型 `T`，并将其所有属性设置为只读。_
 
 _`type Readonly<T> = {
   readonly [P in keyof T]: T[P];
@@ -611,7 +611,9 @@ _`type Readonly<T> = {
 
 ## _**Exclude**_
 
-_`Exclude`  allows you to remove certain types from another type.  `Exclude`from  `T`anything that is assignable to  `T`._
+`排除`来自`T`的可分配给`T`的东西
+
+_`Exclude` 可以从其他类型中排除某些类型。排除的是可以赋值给 `T` 的属性。_
 
 _`/*`_
 
@@ -628,7 +630,7 @@ _`/*`_
 
 ## **Pick**
 
-`Pick`  allows you to pick certain types from another type.  `Pick`  from  `T`anything that is assignable to  `T`.
+`Pick` 允许您从其他类型中选取某些类型。 挑选的是可以赋值给 `T` 的属性。
 
 ```typescript
 /**
@@ -637,15 +639,15 @@ _`/*`_
 
 ## _infer_
 
-You can use the  `infer`  keyword to infer a type variable within the  `extends`clause of a conditional type. Such inferred type variable can only be used in the true branch of the conditional type.
+你可以使用 `infer` 关键字来推断条件类型的 `extends` 子句中的类型变量。这样的推断类型变量只能用于条件类型的 true 分支。
 
 ## **ReturnType**
 
-Gets the return type of a function.
+获取函数的返回类型。
 
 ```typescript
 /**
-Original TypeScript's ReturnType
+原版的 TypeScript's ReturnType
 type ReturnType<T extends (...args: any) => any> = T extends (...args: any) => infer R ? R : any;
 /
 type MyReturnType<T> = T extends (...args: any) => infer R ? R : any;
@@ -653,14 +655,14 @@ type MyReturnType<T> = T extends (...args: any) => infer R ? R : any;
 
 ```
 
-Let’s break down  `MyReturnType`:
+我们来拆解 `MyReturnType`:
 
--   The return type of  `T`  is …
--   First of all, is  `T`  a function?
--   If so, then the type resolves to the inferred return type  `R`.
--   Otherwise the type resolves to  `any`.
+-   `T` 的返回类型是 ...
+-   首先，`T` 是不是一个函数？
+-   如果是，那么类型解析为推断的返回类型 `R`。
+-   如果不是，类型解析为 `any`。
 
-# References & Useful Links
+# 参考资料与实用链接
 
 [https://basarat.gitbooks.io/typescript/][3]
 
@@ -674,11 +676,11 @@ Let’s break down  `MyReturnType`:
 
 ---
 
-In order to study and give TypeScript a try I’ve build a simple CurrencyConverter app using TS and React-Native with hooks. You can check this project  [here][8].
+为了达到学习和实践 TypeScript 的目的，我用 TS 和 React-Native（用了 hooks）构建了一个简单的 CurrencyConverter (汇率转换) 程序。你可以在 [这里][8] 查看这个项目。
 
-Thanks and congratulations for reading up to this point! If you have any thoughts on this, feel free to leave a comment.
+感谢、祝贺你阅读到这里！如果您对此有任何想法，请随时发表评论。
 
-You can find me on  [Twitter][9].
+你可以在 [Twitter][9] 上找到我。
 
 [1]: https://insights.stackoverflow.com/survey/2019#most-loved-dreaded-and-wanted
 [2]: https://github.com/facebook/jest/pull/7554#issuecomment-454358729

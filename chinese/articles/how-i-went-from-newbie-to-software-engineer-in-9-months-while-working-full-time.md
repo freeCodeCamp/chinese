@@ -61,7 +61,7 @@ Photo by Robert Baker on Unsplash
 Photo by Glenn Carstens-Peters on Unsplash
 
 
-一旦你有一个目标之后，你需要一个计划去帮你实现目标。就像许多你读过的成功故事里的那样，他们的情况都和你不同，但你能从他们那里得到一些建议。我用freeCodeCamp论坛, learnprogramming sub reddit, 以及 Medium 来开发和迭代我的计划。
+一旦你有一个目标之后，你需要一个计划去帮你实现目标。就像许多你读过的成功（别人的）故事里体会到的那样，他们的情况都和你不同，但你能从他们那里得到一些建议。我用freeCodeCamp论坛, learnprogramming sub reddit, 以及 Medium 来开发和迭代我的计划。
 
 
 On May 27, 2017 I decided I was going to make the coding plunge, and I dove in head first. That day I decided to start putting in no more than 40 hours per week at my job, so that I had time to code after work and on the weekends. Luckily for you, I did a pretty good job of documenting my progress.

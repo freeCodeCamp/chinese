@@ -3,46 +3,66 @@
 > * 译者：Akagilnc
 > * 校对者：
 
-In this post, I’ll share how I went from zero(ish) to a six-figure software engineering job offer in nine months while working full time and being self-taught.
-在这篇博文里，我会向你展示我是如何在九个月时间里，利用业余时间自学成才， 从一个小白变成一个年薪达到六位数的软件工程师的经历。
+在这篇博文里，我会向你展示我是如何在九个月时间里，利用业余时间自学成才， 从一个小白，到最终拿到一份高级软件工程师的经历。
 
-Whenever I would start reading a success story, I would immediately look to find the author’s background, hoping it would match mine. I never found someone who had the same background as I did, and most likely mine won’t match yours exactly.
-无论什么时候，当我读一篇成功故事的时候，我会立刻尝试去找出作者的背景，希望他和我有着类似的背景。但我从来就没有找到过，而且你也几乎不可能和我完全一样。
 
-Nonetheless, I hope that my story inspires others and acts as a valuable data point that can be added to your success story dataset.
-但是，我希望我的故事能激励你，并且能在未来成为你的成功故事中，导致你成功的因素之一。
+无论什么时候，当我读一篇成功故事的时候，我会立刻尝试去找出作者的背景，希望他和我有着类似的背景。但从来都没有，而且我基本上也不可能和你一样。
 
-Full Disclosure
-I took a Visual Basic for Applications (VBA) course in high school (nine years ago). In my freshman engineering course (seven years ago), I learned some C, Python, Matlab, and Labview. I graduated from a good university with a chemical engineering degree and a good GPA (three years ago). I hadn’t done any programming outside of school, in high school or college, until I decided I wanted to learn last year.
 
-After college, I got a job as a Process Engineer at a refinery. I worked there until I changed careers into Software Engineering.
+但是，我希望我的故事能激励你，并且能在未来你成功之后，成为你成功故事中的重要因素之一。
+
+
+全面披露
+
+我在高中那会上过一门 VBA(Visual Basic 应用) 课程(九年前)， 在我大学一年级时的工程课程中（7年前），我学了一点C，Python，Matlab 和 Labview，我以化学工程学位毕业于一所不错的大学，并且有着不错的平均分（3年前）。除此之外我没有任何的编程经验，知道我去年下定决心学习编程为止。 
+
+
+
+大学毕业后，我在炼油厂做流程工程师，直到我改变我的职业，成为一名软件开发工程师。
+
 
 Why I wanted to change careers
 I enjoyed solving technical problems, but I knew I wanted to get into the business/startup world at some point. I always kept the thought of an MBA in the back of my mind, but every time I looked at the price tag of the top schools, my interest waned.
+为什么我会改变我的职业呢？
+我喜欢解决技术问题，但是我知道我想要进入创业领域，我总是在想一个成为一名MBA，但是每次当我看见顶级学校的价格时，我就退缩了。
 
-On May 27th, 2017 I found myself googling about MBAs again, and somehow I stumbled upon software engineering. It seemed like a perfect fit.
 
-Software engineers are in increasing demand, salaries are great, and it’s the perfect industry from which to get into the startup world without needing a ton of initial capital. All you need is a computer, and your opportunities are limitless (kind of).
+在2017年5月27日，我发现我再次谷歌MBA的相关信息，不知怎的，我偶然发现了软件工程，这看上去似乎是一个完美的契合。
 
-In no other engineering discipline can you just have an idea, start building it, show it to users, and iterate with little capital and low barrier to entry. In chemical engineering, you essentially need a running plant or a lot of money to design a plant if you had an idea for a new product.
 
-I had heard of people quitting their jobs and attending a bootcamp, but the more I read about it online, the more I realized that you can totally learn it all on your own if you are committed and focused.
+对软件工程师的需求在增加，薪资待遇也非常好，而且这是一个无需大量资金就可以开始创业的完美行业。你只需要一台电脑，然后你就拥有几乎无限可能。
 
-You might argue that you are losing out on the networking and career advice provided by a bootcamp. This can be true, but I was fortunate in that I was living in the Bay Area which allowed me to attend several meetups, so I networked that way.
 
-Besides, the worst case was that I’d realize that I couldn’t do it on my own, and then I would quit my job to attend a bootcamp.
+没有其他的工程学科可以让你在只有一个点子的情况下，开始创建它，向用户展示它，并已少量资本开始构建迭代。在化学工程中，你需要一间工厂或者有大量的资金来设计一座工厂来检验你的有关于新产品的点子。
 
-The Goal
+
+我曾经听到过有人辞职之后参加一些训练营，但当我在网上看到的越多，我就越意识到你可以完全靠自学，如果你坚定且专注的话。
+
+
+你可能会说你会失去一个训练营带来的人脉和职业介绍，这可能确实如此，但幸运的是我住在湾区，在我参加了几次聚会之后，我就拥有了一些人脉。
+
+
+而且，最坏的结果也不过是我发现自己没办法靠自学达到目的，到那时我会辞职并且加入一个训练营。
+
+
+目标
 
 Photo by Robert Baker on Unsplash
-You need to have a goal. Especially if you are trying to learn while working full-time. It is easy to let your learning drag on and on if you don’t have any external pressure pushing you. So you need to create internal pressure. Your goal should be simple and quantitative. You should do enough research to come up with a reasonable goal. Mine was the following:
 
-Get a software engineering job within one year with the same or better salary than I am making right now.
 
-The Plan
+你需要一个目标，特别是你想在全职工作的同时学习。如果没有外部的压力推动你，很容易让你的学习进度一再拖延。所以你需要创建内部的压力，你的目标需要简单且可被度量，并且你应该做足够的研究来确保你定的目标是切实可行的。我的目标如下：
+
+
+在一年的时间内，得到一个软件工程师的工作，并且薪水和我现在的工作相当或更好
+
+
+计划
 
 Photo by Glenn Carstens-Peters on Unsplash
-Once you have a goal, you need a plan to help you get there. This is where you consume as many success stories as you can. None of them will match your exact situation, but you can take some advice from each one. I developed (and iterated on) my plan using resources such as the learnprogramming subreddit, the freeCodeCamp forum, and Medium.
+
+
+一旦你有一个目标之后，你需要一个计划去帮你实现目标。就像许多你读过的成功故事里的那样，他们的情况都和你不同，但你能从他们那里得到一些建议。我用freeCodeCamp论坛, learnprogramming sub reddit, 以及 Medium 来开发和迭代我的计划。
+
 
 On May 27, 2017 I decided I was going to make the coding plunge, and I dove in head first. That day I decided to start putting in no more than 40 hours per week at my job, so that I had time to code after work and on the weekends. Luckily for you, I did a pretty good job of documenting my progress.
 

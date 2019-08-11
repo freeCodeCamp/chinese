@@ -1,9 +1,9 @@
 > * 原文地址：[How to run GETH from a Docker container](https://www.freecodecamp.org/news/how-to-run-geth-from-a-docker-container-b6d30620ca74/)
 > * 原文作者：Vince Tabora
-> * 译者：Too @too
+> * 译者：@too
 > * 校对者：
   
-![How to run GETH from a Docker container](https://cdn-media-1.freecodecamp.org/images/1*QZk8YSNM8shw4Trn8YtvAA.png)
+![如何使用 Docker 容器来运行 GETH How to run GETH from a Docker container](https://cdn-media-1.freecodecamp.org/images/1*QZk8YSNM8shw4Trn8YtvAA.png)
 
 by Vince Tabora
 
@@ -27,7 +27,7 @@ The Docker client software must be installed on the machine you are going to run
 
 There are separate versions for Windows, Linux and the MacOS. The container can even be run on a Linux instance running on AWS, like a typical Linux installation. Once the Docker client is installed, the underlying platform doesn’t matter. The commands will be the same for all.
 
-## Getting The Image
+## Getting The Image  获取映像文件 Image
 
 Open a  ****__terminal__****  on Linux or MacOS, or  ****__PowerShell__****  command prompt from Windows. In the CLI prompt, type the following command:
 
@@ -37,7 +37,7 @@ This pulls the Docker image from the hub repository where it was uploaded by the
 
 I have already pulled the image, so the verbose may look different. When you issue the pull command it will always download the latest image available, which is good practice.
 
-## Running The Node
+## Running The Node  运行节点
 
 Now you can start the node by issuing the following command:
 
@@ -63,13 +63,13 @@ config=”{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2
 
 The Constantinople: <nil> indicates the software was not updated. There is also no line for ConstantinopleFix, which appears in the correct configuration.
 
-## Persistent Data
+## Persistent Data  持久化存储数据
 
 For persistent blockchain data, Docker data volumes should be used with the option  ****\-v****. The  `/path/on/host`  should be replaced with the location you specify. For this the following command must be used:
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-54.png)
 
-## Checking Node Status
+## Checking Node Status  检查节点状态 
 
 You can check the container’s status using the following command:
 

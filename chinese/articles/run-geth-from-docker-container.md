@@ -1,6 +1,6 @@
 > * 原文地址：[How to run GETH from a Docker container](https://www.freecodecamp.org/news/how-to-run-geth-from-a-docker-container-b6d30620ca74/)
 > * 原文作者：Vince Tabora
-> * 译者：
+> * 译者：Too @too
 > * 校对者：
   
 ![How to run GETH from a Docker container](https://cdn-media-1.freecodecamp.org/images/1*QZk8YSNM8shw4Trn8YtvAA.png)

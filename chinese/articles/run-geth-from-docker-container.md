@@ -69,29 +69,31 @@ For persistent blockchain data, Docker data volumes should be used with the opti
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-54.png)
 
-## Checking Node Status  检查节点状态 
+## 检查节点状态 
 
-You can check the container’s status using the following command:
+您可以使用以下命令检查容器的状态：
 
 ****docker ps****
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-55.png)
 
-This will display the Container ID with the image name, status and ports used.
+这将显示容器 ID，其中包含使用的映像名称，状态和使用的端口。
 
 ```
 
-#These are the commands to run from the Docker CLI to run the Ethereum Go node client
+#下面的命令是从 Docker CLI 来运行以太坊 Go 节点客户端
 
-#GETTING THE IMAGE
+#获取映像
 docker pull ethereum/client-go
-#RUNNING THE NODE
+#R运行节点
 docker run -it -p 30303:30303 ethereum/client-go
-#RUNNING NODE USING API
+#使用 API 运行节点
 docker run -it -p 8545:8545 -p 30303:30303 ethereum/client-go --rpc --rpcaddr "0.0.0.0"
-#Note, warning about using --rpcaddr "0.0.0.0" in a live environment. It is an insecure way of opening your node.
-#There are different ways to secure your ports, but this is one thing to take note of if you plan to use the API.
-#PERSISTENT DATA
+#注意，在线上环境使用 --rpcaddr "0.0.0.0" 指令要小心。这种打开节点的方式不安全
+#会有各种不同的方法可以加强你的端口安全，但是如果你打算使用 API 的话，这一点是要记住的。
+
+#持久数据
+docker run -it -p 30303:30303 -v /path/on/host:/root/.ethereum ethereum/client-go
 
 ```
 
@@ -99,11 +101,11 @@ docker run -it -p 8545:8545 -p 30303:30303 ethereum/client-go --rpc --rpcaddr "0
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-56.png)
 
-Running GETH from a Docker Container
+用 Docker 容器运行 GETH
 
-Take note that this does not automatically mine ETH. That is a different process. For getting quick access to the Ethereum blockchain, this is the purpose for running GETH.
+请注意，这不会自动挖掘 ETH。那是一个不同的过程。运行 GETH 的目的是为了快速访问以太坊的区块链。
 
-For full code source, visit:  [https://github.com/Play3rZer0/GETHDocker.git][3]
+有关完整代码源，请访问： [https://github.com/Play3rZer0/GETHDocker.git][3]
 
 [1]: https://geth.ethereum.org/
 [2]: https://medium.com/coinmonks/securing-your-ethereum-nodes-from-hackers-8b7d5bac8986

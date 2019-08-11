@@ -8,6 +8,7 @@
 by Austin Tackaberry
 
 In this post, I’ll share how I went from zero(ish) to a six-figure software engineering job offer in nine months while working full time and being self-taught.
+在这个文章里，我会分享我怎么在9个月里，一边全职工作，同时从零基础到成为一个 6 项全能的软件工程师的历程。
 
 Whenever I would start reading a success story, I would immediately look to find the author’s background, hoping it would match mine. I never found someone who had the same background as I did, and most likely mine won’t match yours exactly.
 

@@ -3,75 +3,75 @@
 > * 译者：Theoda
 > * 校对者：
 
-TypeScript is the one of the tools people want to learn most, according to a  [Stack Overflow Survey][1]  of 90,000 developers.
+根据 Stack Overflow 对 90,000 名开发人员 [展开的一项调查][1]，TypeScript 是人们最想学习的工具之一。
 
-TypeScript has exploded in popularity, community size, and adoption over the past few years. Today, even  [Facebook's Jest project from Facebook is moving to TypeScript][2].
+在过去几年中，TypeScript 的热门程度、社区规模和使用率都在不断提高。如今，甚至 [Facebook 正将 Jest 项目转移至 TypeScript][2]。
 
-# What Is TypeScript?
+# 什么是 TypeScript？
 
-TypeScript is a statically-typed superset of JavaScript which aims to ease the development of large javascript applications. It is also knows as  __JavaScript that scales__.
+TypeScript 是具有静态类型特性的 JavaScript 的超集，旨在简化大型 JavaScript 应用程序的开发，也被称为 __JavaScript that scales__（__JavaScript 放大版__）。
 
-## **Why use TypeScript?**
+## **为什么要用 TypeScript？**
 
-JavaScript has evolved a lot over the past few years. It is the most versatile cross-platform language used for both client and server side.
+过去几年中 JavaScript 产生了很大影响，成为了同时用于客户端和服务器端的最通用的跨平台语言。
 
-But JavaScript was never meant for such large-scale application development. It is a dynamic language with no type system, meaning that a variable can have any type of value, such as a string or boolean.
+但 JavaScript 本意并不用于大型应用开发。它是一种没有类型系统的动态语言，也就是说，一个变量的值可以是任何类型（例如字符串或布尔值）。
 
-Type systems increase code quality, readability and make it easier to maintain and refactor codebase. More importantly, errors can be caught at compile time rather than at run time.
+而类型系统能够提高代码质量和可读性，使代码库更易于维护或重构。更重要的是它可以在编译时就捕获错误，而不是在运行时才捕获。
 
-Without a type system, it's difficult to scale JavaScript to build complex applications with large teams working on the same code.
+JavaScript 并没有类型系统，致使同一项目下的大型开发团队很难构建复杂的应用程序。
 
-TypeScript provides guarantees between different parts of the code on compile time. A compiler error typically tells you exactly where something went wrong and what exactly went wrong whereas a runtime error is accompanied by a stack trace that may be misleading and results on significant amount of time spent on debug work.
+TypeScript 能在编译时检查不同部分代码的正确性。大多数情况下，编译时就能确切地报出错误的位置和问题。如果运行时才发现错误，往往需要跟踪复杂的堆栈，花费大量时间在调试工作上。
 
-## **TypeScript pros**
+## **TypeScript 的优点**
 
-1.  Catch potential errors earlier in the development cycle.
-2.  Manage large codebases .
-3.  Easier refactoring.
-4.  Make it easier to work in teams — When contracts in the code are stronger it is easier for different developers to move in and out of the codebase without unintentionally breaking things.
-5.  Documentation — Types inform some sort of documentation that your future self and that other developers can follow.
+1. 在开发周期中能更早地捕获潜在的错误。
+2. 管理大型代码库。
+3. 更易于重构。
+4. 更易于团队合作：代码的耦合性越强，不同开发人员访问代码库时越不容易造成无意破坏。
+5. 文档特性：类型本身就是一种文档信息，提供给未来的你和其他开发者阅读。
 
-## TypeScript cons
+## TypeScript 的缺点
 
-1.  It’s something additional to learn —  __It’s a tradeoff between short-term slowdown and long-term improvement in efficiency and maintenance.__
-2.  Type errors can be inconsistent.
-3.  Configuration drastically changes its behaviour.
+1. 需要额外的学习：__需要在短期放缓进度与长期提高效率间进行权衡。__
+2. 类型错误可能多种多样。
+3. 配置极大地影响运行。
 
-# Types
+# 类型
 
-## **Boolean**
+## **Boolean (布尔值)** 
 
 ```typescript
 const isLoading: boolean = false;
 ```
 
-## **Number**
+## **Number (数字)**
 
 ```typescript
 const decimal: number = 8;
 const binary: number = 0b110;
 ```
 
-## **String**
+## **String (字符串)**
 
 ```typescript
 const fruit: string = "orange";
 ```
 
-## **Array**
+## **Array (数组)**
 
-Array types can be written in one of the two following ways:
+数组可以写成下面两种形式：
 
 ```typescript
-// Most common
+// 最常见的方式
 let firstFivePrimes: number[] = [2, 3, 5, 7, 11];
-// Less common. Uses generic types (more on that later)
+// 不太常见的方式：使用泛型 (稍后介绍)
 let firstFivePrimes2: Array<number> = [2, 3, 5, 7, 11];
 ```
 
-## **Tuple**
+## **Tuple (元组)**
 
-Tuple types allow you to express an organised array where the type of a fixed number of elements is known. This means that you will get an error
+Tuple 类型表示一种组织好的数组，元素的类型预先知道，并且数量固定。这意味着你有可能得到错误提示：
 
 ```typescript
 let contact: [string, number] = ['John', 954683];
@@ -79,21 +79,20 @@ contact = ['Ana', 842903, 'extra argument']  /* Error!
 Type '[string, number, string]' is not assignable to type '[string, number]'. */
 ```
 
-## **Any**
+## **Any (任意值)**
 
-`any`  is compatible with any and all types in the type system, meaning that anything can be assigned to it and it can be assigned to anything. It gives you the power to opt-out of type checking.
+`any` 与类型系统中的任何和所有类型都兼容。意味着可以将任何内容赋值给它，也可以将它赋值给任何类型。它让你能够逃离类型检查。
 
 ```typescript
 let variable: any = 'a string';
 variable = 5;
 variable = false;
-variable.someRandomMethod(); /* Okay, 
-someRandomMethod might exist at runtime. */
+variable.someRandomMethod(); /* 行吧，someRandomMethod 也许在运行的时候是存在的。*/
 ```
 
-## **Void**
+## **Void (空值)**
 
-`void`  is the absence of having any type at all. It is commonly used as the return type of a function that do not return a value.
+`void` 表示没有任何类型。它通常用作没有返回值的函数的返回类型。
 
 ```typescript
 function sayMyName(name: string): void {
@@ -104,20 +103,18 @@ sayMyName('Heisenberg');
 
 ## **Never**
 
-The  `never`  type represents the type of values that never occur. For instance,  `never`  is the return type of a function which will always throw an exception or not reach its end point.
+`never` 类型表示的是那些永不存在的值的类型。 例如，`never` 类型是那些总是会抛出异常或者根本就不会有返回值的函数的返回值类型。
 
 ```typescript
-// throws an exception
+// 抛出异常
 function error(message: string): never {
   throw new Error(message);
 }
-
-
 ```
 
-## **Null**  and  **Undefined**
+## **Null 和 Undefined**
 
-Both  `undefined`  and  `null`  actually have their own types named  `undefined`and  `null`, respectively. Much like  `void`, they’re not extremely useful on their own but they become useful when used within union types  __(more on that in a bit)__
+`undefined` 和 `null` 两者各自有自己的类型分别叫做 `undefined` 和 `null`。和 `void` 相似，它们的本身的类型用处不是很大，但是在联合类型中非常有用 __（稍后介绍）__。 
 
 ```typescript
 type someProp = string | null | undefined;
@@ -125,7 +122,7 @@ type someProp = string | null | undefined;
 
 ## **Unknown**
 
-TypeScript 3.0 introduces the unknown type which is the type-safe counterpart of  `any`. Anything is assignable to  `unknown`, but  `unknown`  isn’t assignable to anything but itself and  `any.`  No operations are permitted on an  `unknown`  without first asserting or narrowing to a more specific type.
+TypeScript 3.0 引入了 unknown (未知) 类型，它是与 `any` 类型对应的安全类型。任何东西都可以赋值给 `unknown`，但是 `unknown` 不能赋值给任何东西，除了它本身和 `any`。在没有先断言或指定到更具体类型的情况下，不允许对 `unknown` 进行任何操作。
 
 ```typescript
 type I1 = unknown & null;    // null
@@ -134,25 +131,25 @@ type U1 = unknown | null;    // unknown
 type U2 = unknown | string;  // unknown
 ```
 
-## **Type Alias**
+## **类型别名**
 
-Type alias provides names for type annotations allowing you to use it in several places. They are created using the following syntax:
+类型别名为现有类型提供替代的名称，以便在某些情况下使用。创建它的语法如下：
 
 ```typescript
 type Login = string;
 ```
 
-## **Union Type**
+## **联合类型**
 
-TypeScript allows us to use more than one data type for a property. This is called union type.
+TypeScript 允许让一个属性具有多种数据类型，名为联合类型。
 
 ```typescript
 type Password = string | number;
 ```
 
-## **Intersection Type**
+## **交叉类型**
 
-Intersection types are types that combine properties of all of the member types.
+交叉类型将多个成员的类型合并为一个类型。
 
 ```typescript
 interface Person {
@@ -166,13 +163,14 @@ type Employee = Person & Worker;
 
 ```
 
-# Interface
+# Interface (接口)
 
-Interfaces are like a contract between you and the compiler in which you specify in a single named annotation exactly what properties to expect with its respective type annotations.  
-__Side-note: Interfaces have zero runtime JS impact, it is used solely for type check__ing.
+接口如同你和编译器定义契约，由你指定一个类型，预期它的属性应该是些什么类型。
 
--   You may declare  ****optional****  ****properties****  marking those with an  `?`, meaning that objects of the interface may or may not define these properties.
--   You may declare  ****read only****  ****properties****, meaning that once a property is assigned a value, it cannot be changed.
+__边注：接口不受 JavaScript 运行时的特性影响，它只在类型检查中会用到。__
+
+-   可以声明****可选属性****（带有 `?` 标记），意味着接口的对象可能会、也可能不会定义这些属性。
+-   可以声明****只读属性****，意味着一旦为属性赋值，就无法更改。
 
 ```typescript
 interface ICircle {
@@ -182,7 +180,7 @@ interface ICircle {
     y: number;
   },
   radius: number;
-  color?: string;  // Optional property
+  color?: string;  // 可选属性
 }
 const circle1: ICircle = {
   id: '001',
@@ -194,13 +192,13 @@ const circle2: ICircle = {
   id: '002',
   center: { x: 0, y: 0 },
   radius: 8,
-}  // Okay
+}  // 正确
 
 ```
 
-## **Extending Interfaces**
+## **扩展接口**
 
-Interfaces can extend one or more interfaces. This makes writing interfaces flexible and reusable.
+接口可以扩展成另一个接口，或者更多接口。这使得编写接口更具有灵活性和复用性。
 
 ```typescript
 interface ICircleWithArea extends ICircle {
@@ -209,9 +207,9 @@ interface ICircleWithArea extends ICircle {
 
 ```
 
-## Implementing an Interface
+## 实现一个接口
 
-A class implementing an interface needs to strictly conform to the structure of the interface.
+实现接口的类需要严格遵循接口的结构。
 
 ```typescript
 interface IClock {
@@ -221,9 +219,9 @@ interface IClock {
 
 ```
 
-# **Enums**
+# **枚举**
 
-An  `enum`  (or enumeration) is a way to organise a collection of related values that can be numeric or string values.
+`enum` (枚举) 用来组织一组的相关值，这些值可以是数值，也可以是字符串值。
 
 ```typescript
 enum CardSuit {
@@ -236,9 +234,9 @@ let card = CardSuit.Clubs;
 
 ```
 
-Under the hood, enums are number-based by default.  `enum`  values start from zero and increment by 1 for each member.
+默认情况下，枚举的本质就是数字。`enum` 的取值从 0 开始，以 1 递增。
 
-The JavaScript code generated by our previous example:
+上一个例子所生成的 JavaScript 代码如下：
 
 ```typescript
 var CardSuit;
@@ -252,7 +250,7 @@ var CardSuit;
 
 ```
 
-Alternatively enums can be initialised with string values which is a more readable approach.
+或者，枚举可以用字符串值来初始化，这种方法更易读。
 
 ```typescript
 enum SocialMedia {
@@ -263,19 +261,20 @@ LinkedIn = 'LINKEDIN'
 }
 ```
 
-## Reverse Mapping
+## 反向映射
 
-`enum`  supports reverse mapping which means we can access the value of a member and also a member name from its value.  
-Going back to our CardSuit example:
+`enum` 支持反向映射，也就是说，我们可以通过值来获得成员或成员名。 
+
+回顾之前 CardSuit 的例子：
 
 ```typescript
 const clubsAsNumber: number = CardSuit.Clubs; // 3
 const clubsAsString: string = CardSuit[0];    // 'Clubs'
 ```
 
-# **Functions**
+# **函数**
 
-You can add types to each of the parameters and then to the function itself to add a return type.
+您可以为每个参数指定类型，然后为函数指定一个返回类型。
 
 ```typescript
 function add(x: number, y: number): number {
@@ -283,9 +282,9 @@ return x + y;
 }
 ```
 
-## Function Overloads
+## 函数重载
 
-TypeScript allows you to declare  __function overloads__. Basically, you can have multiple functions with the same name but different parameter types and return type. Consider the following example:
+TypeScript 允许声明 __函数重载__。简单来说，你可以使用多个名称相同但参数类型和返回类型不同的函数。参考下面的例子：
 
 ```typescript
 function padding(a: number, b?: number, c?: number, d?: any) {
@@ -305,7 +304,7 @@ return {
 }
 ```
 
-The meaning of each parameter changes based on how many parameters are passed into the function. Moreover, this function only expects one, two or four parameters. To create a function overload, you just declare the function header multiple times. The last function header is the one that is actually active  __within__  the function body but is not available to the outside world.
+参数的含义根据传递给函数的参数数量而变化。此外，该函数只接受一个、两个或四个参数。要创造函数重载，只需多次声明函数头就可以了。最后一个函数头才真正实现了函数体，但函数的外界并不能直接调用它。
 
 ```typescript
 function padding(all: number);
@@ -330,9 +329,9 @@ return {
 
 ```
 
-# **Classes**
+# **类**
 
-You can add types to properties and method’s arguments
+你可以指定属性的类型和方法参数的类型。
 
 ```typescript
 class Greeter {
@@ -346,25 +345,29 @@ class Greeter {
 }
 ```
 
-## **Access Modifiers**
+## **访问修饰符**
 
-Typescript supports  `public`,  `private`,  `protected`  modifiers, which determine the accessibility of a class member.
+Typescript 支持 `public` (公有),  `private` (私有),  `protected` (保护)  修饰符，它们决定了类成员的可访问性。
 
--   A  `public`  member works the same as plain JavaScript members and is the default modifier.
--   A  `private`  member cannot be accessed from outside of its containing class.
--   A  `protected`  member differ from a private as it can also be accessed within deriving classes.
+ - “public”成员与纯JavaScript成员的工作方式相同，是默认修饰符。
+ - 无法从包含类的外部访问`private`成员。
+ - “protected”成员与私有成员不同，因为它也可以在派生类中访问。
+
+-   `public` (公有) 成员和普通的 JavaScript 成员一样，是默认的修饰符。
+-   `private` (私有) 成员对外界来说不可访问。
+-   `protected`(保护) 成员和私有成员的区别在于，它能够被继承类访问。
 
 ```markdown
-| Accessible on  | public | protected | private |
+| 具有访问权限     | public | protected | private |
 | :------------- | :----: | :-------: | :-----: |
-| class          |   yes  |    yes    |   yes   |
-| class children |   yes  |    yes    |    no   |
-| class instance |   yes  |     no    |    no   |
+| 类本身          |   yes  |    yes    |   yes   |
+| 派生类          |   yes  |    yes    |    no   |
+| 类实例          |   yes  |     no    |    no   |
 ```
 
-## **Readonly modifier**
+## **只读修饰符**
 
-A  `readonly`  property must be initialised at their declaration or in the constructor.
+`readonly` (只读) 变量必须在它声明或构造时初始化。
 
 ```typescript
 class Spider {
@@ -376,9 +379,9 @@ class Spider {
 }
 ```
 
-## **Parameter properties**
+## **参数属性**
 
-__Parameter properties__  lets you create and initialise a member in one place. They are declared by prefixing a constructor parameter with a modifier.
+__参数属性__  放我们在一个地方创建并初始化成员。它通过给构造函数参数添加一个访问限定符来声明。
 
 ```typescript
 class Spider {
@@ -388,12 +391,12 @@ class Spider {
 }
 ```
 
-## **Abstract**
+## **抽象**
 
-The abstract keyword can be used both for classes and for abstract class methods.
+abstract (抽象) 这个关键字可以用在类上，也可以用作抽象类方法。
 
--   ****Abstract classes****  cannot be directly instantiated. They are mainly for inheritance where the class which extends the abstract class must define all the abstract methods.
--   ****Abstract members****  do not contain an implementation, thus cannot be directly accessed. These members must be implemented in child classes  __(kinda like an interface)__
+-   ****抽象类****  不会直接被实例化。抽象类主要用于继承，继承抽象类必须实现它所有的抽象方法。
+-   ****抽象成员****  不包含具体实现，因此不能被直接访问。这些成员必须在派生类中实现。 __(类似接口)__
 
 # **Type Assertion**
 

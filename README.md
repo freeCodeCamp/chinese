@@ -21,3 +21,6 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章](https://www.free
 
 感兴趣的小伙伴请移步到 [Wiki](https://github.com/freeCodeCamp/news-translation/wiki) 解锁翻译指南。
 
+### 译者指南
+
+- [图文详解](./Contributing.md)

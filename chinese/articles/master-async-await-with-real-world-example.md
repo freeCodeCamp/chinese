@@ -3,12 +3,12 @@
 > * 译者：[Zou Li](https://github.com/zlv2s)
 > * 校对者：
 
-# 用现实开发中的案例教你掌握 Async/Await
+# 通过一个开发实例掌握 Async/Await
 
 ### 目录
 
 1. 介绍回调函数, promises, async/await
-2. 现实开发中的一个案例——货币转换器，它从两个 API 异步获取数据
+2. 开发实例--货币转换器，从两个 API 异步获取数据
 
 #### 在开始正文之前
 
@@ -68,7 +68,7 @@ promiseFunction 这个函数返回一个表示函数运行过程的 Promise 对�
 
 ### Async 函数
 
-Async函数为我们提供了简洁的语法，我们可以通过它实现与 Promise 相同的效果，但是代码量会减少很多。其实底层原理上，async 不过是 promises 的语法糖而已。
+Async 函数为我们提供了简洁的语法，我们可以通过它实现与 Promise 相同的效果，但是代码量会减少很多。其实底层原理上，async 不过是 promises 的语法糖而已。
 
 在普通的函数声明前加上 async 关键字，我们就创建了一个 async 函数：
 
@@ -78,7 +78,7 @@ const asyncFunction = async () => {
 }
 ```
 
-异步函数使用 **await** 表达式可以**暂停**函数的执行，**await** 关键字只能在 **async 函数中**使用，它会返回 Promise 对象的处理结果。
+异步函数使用 await 表达式可以暂停函数的执行，await 关键字只能在 async 函数中使用，它会返回 async 函数的处理结果。
 
 promises 和 async/await 的区别：
 
@@ -103,15 +103,17 @@ Async/Await 更易于我们理解，因为它看起来像同步代码。
 
 #### 项目说明和初始化
 
-在下面的教程中，我们将创建一个简单实用，而且很有学习意义的应用程序，相信会加深你对 **Async/Await** 理解
+在下面的教程中，我们将创建一个简单实用，而且很有学习意义的应用程序，相信会加深你对 **Async/Await** 理解。
 
-我们将原始货币代码和想要得到的货币代码，以及金额输入程序，然后程序会调用相关的 API，最后将正确的汇率显示出来
+这个程序会接收到我们想要把什么货币转换成什么货币，以及货币金额，然后会调用相关的 API，显示正确的汇率。
 
 在这个程序中，我们将从以下两个 API 异步获取数据：
-1. **Currency Layer** ——  https://currencylayer.com - 你需要先免费注册账号，才能获取 API Access Key。这个 API 为我们提供了 计算货币间汇率所需的数据。
-2. **Rest Countries** —— http://restcountries.eu/ - 这个 API 为我们提供了给定一种货币，返回该货币在哪些国家流通
 
-首先，创建一个新目录并运行 `npm init` 初始化项目，接下里我们选择默认值，跳过所有步骤，然后再输入 `npm i——save axios` 安装 axios。在当前文件夹内创建一个 `currency-convert .js` 的文件。
+1. **Currency Layer** ——  https://currencylayer.com - 你需要先免费注册账号，才能获取 API Access Key。这个 API 为我们提供了 计算货币间汇率所需的数据。
+
+2. **Rest Countries** —— http://restcountries.eu/ - 这个 API 为我们提供转换后的货币在哪些国家流通的信息。
+
+首先，创建一个新目录并运行 `npm init` 初始化项目，接下里我们选择默认值，跳过所有步骤，然后再输入 `npm i --save axios` 安装 axios。在当前文件夹内创建一个 `currency-convert .js` 的文件。
 
 在 `currency-convert .js` 文件中，我们先通过 `require` 语法引入 axios 
 
@@ -135,7 +137,7 @@ const getExchangeRate = async (fromCurrency, toCurrency) => {}
 
 ```js
 const getExchangeRate = async (fromCurrency, toCurrency) => {
-  const response = await axios.get('http://data.fixer.io/api/latest?    access_key=[yourAccessKey]&format=1');
+  const response = await axios.get('http://data.fixer.io/api/latest?access_key=[yourAccessKey]&format=1');
 }
 ```
 
@@ -163,7 +165,7 @@ const exchangeRate = euro * rate[toCurrency];
 
 #### 第二个函数——异步获取国家数据
 
-创建一个异步函数，接收 currencyCode 作为参数
+创建一个异步函数，接收 `currencyCode` 作为参数
 
 ```js
 const getCountries = async (currencyCode) => {}
@@ -187,7 +189,7 @@ return response.data.map(country => country.name);
 
 #### 最后一个函数——将前面的函数组合起来
 
-创建一个异步函数，接收  fromCurrency, toCurrency, amount 三个参数：
+创建一个异步函数，接收 `fromCurrency`, `toCurrency`, `amount` 三个参数：
 
 ```js
 const convert = async (fromCurrency, toCurrency, amount) => {}
@@ -273,7 +275,7 @@ convertCurrency('USD', 'HRK', 20)
 ![](https://cdn-media-1.freecodecamp.org/images/NqMrupAN1UpMWy1CRD7KpmfZdnjJ2Pexbx5A)
 
 
-### 结束
+### 成功啦
 
-很不错，你坚持到了最后！如果在学习过程中遇到了困惑的地方，你可以参考这个[仓库](https://github.com/adrianhajdin/currency-converter)里的代码。如果你有任何问题，可以在下面留言。你也可关注我的 Youtube 专栏，我会带来更多干货给大家！
+看到这里你应该写好这个程序了吧！如果你在写程序过程中有任何困惑，那么你可以参考这个[仓库](https://github.com/adrianhajdin/currency-converter)里的代码。如果你有任何问题，可以在下面留言。你也可关注我的 YouTube 频道，我会给大家分享更多干货！
 

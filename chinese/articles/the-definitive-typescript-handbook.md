@@ -1,27 +1,28 @@
 > * 原文地址：[The Definitive TypeScript Handbook](https://www.freecodecamp.org/news/the-definitive-typescript-handbook/)
+> * 标题：TypeScript 完全手册
 > * 作者：Gustavo Azevedo
 > * 译者：Theoda
-> * 校对者：
+> * 校对者：Miya
 
-根据 Stack Overflow 对 90,000 名开发人员 [展开的一项调查][1]，TypeScript 是人们最想学习的工具之一。
+Stack Overflow 在 90,000 名开发者中开展了 [一项调查][1]，结果显示 TypeScript 是人们最想学习的工具之一。
 
 在过去几年中，TypeScript 的热门程度、社区规模和使用率都在不断提高。如今，甚至 [Facebook 正将 Jest 项目转移至 TypeScript][2]。
 
-# 什么是 TypeScript？
+# **什么是 TypeScript？**
 
-TypeScript 是 JavaScript 的超集，具有静态类型特性，旨在简化大型 JavaScript 应用程序的开发，也被称为 __JavaScript that scales__（__放大的 JavaScript__）。
+TypeScript 是 JavaScript 的超集，具有静态类型特性，旨在简化大型 JavaScript 应用程序的开发，也被称为 __JavaScript that scales__（__可拓展的 JavaScript__）。
 
 ## **为什么要用 TypeScript？**
 
-过去几年中 JavaScript 产生了很大影响，成为了同时用于客户端和服务器端的最通用的跨平台语言。
+JavaScript 在过去几年中快速发展，成为客户端和服务器端最通用的跨平台语言。
 
 但 JavaScript 本意并不用于大型应用开发。它是一种没有类型系统的动态语言，也就是说，变量的值可以是任何类型（例如字符串或布尔值）。
 
 而类型系统能够提高代码质量和可读性，使代码库更易于维护或重构。更重要的是它可以在编译时就捕获错误，而不是在运行时才捕获。
 
-JavaScript 并没有类型系统，致使同一项目下的大型开发团队很难构建复杂的应用程序。
+而 JavaScript 并没有类型系统，所以一个大型开发团队难以使用 JavaScript 构建复杂的应用程序。
 
-而 TypeScript 能在编译时检查不同部分代码的正确性。大多数情况下，编译时就能确切地报出错误的位置和问题。如果运行时才发现错误，往往需要跟踪复杂的堆栈，花费大量时间在调试工作上。
+而 TypeScript 能在编译时检查不同部分代码的正确性。在编译时检查出错误，便于开发者发现错误的位置和具体问题。如果运行时才检查出错误，则需要跟踪复杂的堆栈，花费大量时间进行调试。
 
 ## **TypeScript 的优点**
 
@@ -29,15 +30,15 @@ JavaScript 并没有类型系统，致使同一项目下的大型开发团队很
 2. 管理大型代码库。
 3. 更易于重构。
 4. 更易于团队合作：代码的耦合性越强，不同开发人员访问代码库时越不容易造成无意破坏。
-5. 文档特性：类型本身就是一种文档信息，提供给未来的你和其他开发者阅读。
+5. 文档特性：类型本身就是一种文档信息，方便日后开发者本人或者其他开发者查询。
 
-## TypeScript 的缺点
+## **TypeScript 的缺点**
 
 1. 需要额外的学习：__需要在短期放缓进度与长期提高效率间进行权衡。__
 2. 类型错误可能多种多样。
 3. 配置极大地影响运行。
 
-# 类型
+# **类型**
 
 ## **Boolean (布尔值)** 
 
@@ -87,7 +88,8 @@ Type '[string, number, string]' is not assignable to type '[string, number]'. */
 let variable: any = 'a string';
 variable = 5;
 variable = false;
-variable.someRandomMethod(); /* 行吧，也许运行的时候 someRandomMethod 是存在的 */
+variable.someRandomMethod(); /* 行吧，
+也许运行的时候 someRandomMethod 是存在的 */
 ```
 
 ## **Void (空值)**
@@ -109,6 +111,13 @@ sayMyName('Heisenberg');
 // 抛出异常
 function error(message: string): never {
   throw new Error(message);
+}
+
+// 永远不能返回
+function continuousProcess(): never {
+  while (true) {
+      // ...
+  }
 }
 ```
 
@@ -149,7 +158,7 @@ type Password = string | number;
 
 ## **交叉类型**
 
-交叉类型可以将多个成员的类型合并为一个类型。
+交叉类型是将多种类型叠加到一起成为一种类型。
 
 ```typescript
 interface Person {
@@ -160,10 +169,9 @@ interface Worker {
   companyId: string;
 }
 type Employee = Person & Worker;
-
 ```
 
-# Interface (接口)
+# **Interface (接口)**
 
 接口好似你和编译器定义契约，由你指定一个类型，预期它的属性应该是些什么类型。
 
@@ -182,18 +190,19 @@ interface ICircle {
   radius: number;
   color?: string;  // 可选属性
 }
+
 const circle1: ICircle = {
   id: '001',
   center: { x: 0 },
   radius: 8,
 };  /* Error! Property 'y' is missing in type '{ x: number; }' 
 but required in type '{ x: number; y: number; }'. */
+
 const circle2: ICircle = {
   id: '002',
   center: { x: 0, y: 0 },
   radius: 8,
 }  // 正确
-
 ```
 
 ## **扩展接口**
@@ -204,10 +213,9 @@ const circle2: ICircle = {
 interface ICircleWithArea extends ICircle {
   getArea: () => number;
 }
-
 ```
 
-## 实现接口
+## **实现接口**
 
 实现接口的类需要严格遵循接口的结构。
 
@@ -216,7 +224,6 @@ interface IClock {
   currentTime: Date;
   setTime(d: Date): void;
 }
-
 ```
 
 # **枚举**
@@ -231,7 +238,6 @@ enum CardSuit {
   Spades
 }
 let card = CardSuit.Clubs;
-
 ```
 
 默认情况下，枚举的本质是数字。`enum` 的取值从 0 开始，以 1 递增。
@@ -246,22 +252,20 @@ var CardSuit;
   CardSuit[CardSuit["Hearts"] = 2] = "Hearts";
   CardSuit[CardSuit["Spades"] = 3] = "Spades";
 })(CardSuit || (CardSuit = {}));
-/**
-
 ```
 
 或者，枚举可以用字符串值来初始化，这种方法更易读。
 
 ```typescript
 enum SocialMedia {
-Facebook = 'FACEBOOK',
-Twitter = 'TWITTER',
-Instagram = 'INSTAGRAM',
-LinkedIn = 'LINKEDIN'
+  Facebook = 'FACEBOOK',
+  Twitter = 'TWITTER',
+  Instagram = 'INSTAGRAM',
+  LinkedIn = 'LINKEDIN'
 }
 ```
 
-## 反向映射
+## **反向映射**
 
 `enum` 支持反向映射，也就是说，可以通过值来获得成员、成员名。 
 
@@ -278,29 +282,29 @@ const clubsAsString: string = CardSuit[0];    // 'Clubs'
 
 ```typescript
 function add(x: number, y: number): number {
-return x + y;
+  return x + y;
 }
 ```
 
-## 函数重载
+## **函数重载**
 
 TypeScript 允许声明 __函数重载__。简单来说，可以使用多个名称相同但参数类型和返回类型不同的函数。参考下面的例子：
 
 ```typescript
 function padding(a: number, b?: number, c?: number, d?: any) {
-if (b === undefined && c === undefined && d === undefined) {
-  b = c = d = a;
-}
-else if (c === undefined && d === undefined) {
-  c = a;
-  d = b;
-}
-return {
-  top: a,
-  right: b,
-  bottom: c,
-  left: d
-};
+  if (b === undefined && c === undefined && d === undefined) {
+    b = c = d = a;
+  }
+  else if (c === undefined && d === undefined) {
+    c = a;
+    d = b;
+  }
+  return {
+    top: a,
+    right: b,
+    bottom: c,
+    left: d
+  };
 }
 ```
 
@@ -311,22 +315,20 @@ function padding(all: number);
 function padding(topAndBottom: number, leftAndRight: number);
 function padding(top: number, right: number, bottom: number, left: number);
 function padding(a: number, b?: number, c?: number, d?: number) {
-if (b === undefined && c === undefined && d === undefined) {
-  b = c = d = a;
+  if (b === undefined && c === undefined && d === undefined) {
+    b = c = d = a;
+  }
+  else if (c === undefined && d === undefined) {
+    c = a;
+    d = b;
+  }
+  return {
+    top: a,
+    right: b,
+    bottom: c,
+    left: d
+  };
 }
-else if (c === undefined && d === undefined) {
-  c = a;
-  d = b;
-}
-return {
-  top: a,
-  right: b,
-  bottom: c,
-  left: d
-};
-}
-
-
 ```
 
 # **类**
@@ -340,7 +342,7 @@ class Greeter {
     this.greeting = message;
   }
   greet(name: string) {
-    return Hi </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>name<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">, </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span><span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(0, 119, 170);">this</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>greeting<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">;
+    return `Hi ${name}, ${this.greeting}`;
   }
 }
 ```
@@ -401,11 +403,14 @@ TypeScript 允许你以任何方式覆盖其推断的类型。当你比编译器
 ```typescript
 const friend = {};
 friend.name = 'John';  // Error! Property 'name' does not exist on type '{}'
+
 interface Person {
   name: string;
   age: number;
 }
 
+const person = {} as Person;
+person.name = 'John';  // 正确
 ```
 
 最初，类型断言的语法是 `<type>`
@@ -422,15 +427,14 @@ let person = <Person> {};
 
 我们来看看上一个示例中的 Person 接口，你注意到了什么问题吗？如果你注意到丢失了 ****age**** 属性，恭喜，你对了！编译器可能会帮助你自动完成 Person 的属性，但如果您遗漏了任何属性，它也不会报错。
 
-# **类型推断**
+# **类型推论**
 
-当没有可用的显式的类型信息时，TypeScript 会推断变量类型。
+没有明确指定出类型时，TypeScript 会推断变量类型。
 
 ```typescript
 /**
-
-变量声明
-/
+ * 变量声明
+ */
 let a = "some string";
 let b = 1;
 a = b;  // Error! Type 'number' is not assignable to type 'string'.
@@ -438,8 +442,6 @@ a = b;  // Error! Type 'number' is not assignable to type 'string'.
 // 如果是复杂的对象，TypeScript 会用最常见的类型
 // 来推断对象类型。
 const arr = [0, 1, false, true];  // (number | boolean)[]
-/**
-
 ```
 
 # **类型兼容性**
@@ -456,12 +458,11 @@ name: string;
 let x: Person;  // 正确，尽管不是Person接口的实现
 let y = { name: 'John', age: 20 };  // type { name: string; age: number }
 x = y;
-
 ```
 
 由于 `y` 有一个成员 `name: string` 匹配 Person 接口所需的属性，这意味着 `x` 是 `y` 的子类型。因此这个赋值是合法的。
 
-## _函数_
+## _**函数**_
 
 ****参数数量****  
 在函数调用中，至少需要传入足够的参数，多余的参数不会导致任何错误。
@@ -521,8 +522,10 @@ function example(x: MyResponse | MyError) {
     console.log(x.result);  // 正确
   } else {
     // TypeScript 知道这里一定是 MyError
-<span class="token builtin" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">console</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(221, 74, 104);">log</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>x<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>message<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span> <span class="token comment" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(112, 128, 144);">// Okay</span>
-<span class="token builtin" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">console</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(221, 74, 104);">log</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>x<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>result<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>  <span class="token comment" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(112, 128, 144);">// Error! Property 'result' does not exist on type 'MyError'.</span>
+    console.log(x.message); // 正确
+    console.log(x.result);  // Error! Property 'result' does not exist on type 'MyError'.
+  }
+}
 ```
 
 ## **in**
@@ -539,6 +542,7 @@ const person: Person = {
   age: 28,
 };
 
+const checkForName = 'name' in person; // true
 ```
 
 # **Literal Types (字面量类型)**
@@ -559,30 +563,37 @@ assignable to parameter of type 'Orientation'. /
 
 _条件类型表示类型关系的测试，并根据测试的结果选择两种可能类型中的一种。_
 
-_`type X = A extends B ? C : D;`_
+```typescript
+type X = A extends B ? C : D;
+```
 
 _如果 `A` 类型可以赋值给 `B` 类型，那么 `X` 是 `C` 类型；否则 `X`  是 `D` 类型。_
 
 # _**泛型**_
 
-_泛型是必须包含或引用其他类型才能完成的类型。它加强了变量之间有意义的约束。
-下面例子中的函数会返回所传入的任何类型的数组。_
+_泛型是必须包含或引用其他类型才能完成的类型。它加强了变量之间有意义的约束。_
 
-_`function reverse<T>(items: T[]): T[] {
+_下面例子中的函数会返回所传入的任何类型的数组。_
+
+```typescript
+function reverse<T>(items: T[]): T[] {
   return items.reverse();
 }
 reverse([1, 2, 3]); // number[]
-reverse([0, true]); // (number | boolean)[]`_
+reverse([0, true]); // (number | boolean)[]
+```
 
 ## _**keyof**_
 
 _`keyof` 运算符会查询给定类型的键集。_
 
-_`interface Person {
+```typescript
+interface Person {
   name: string;
   age: number;
 }
-type PersonKeys = keyof Person; // 'name' | 'age'`_
+type PersonKeys = keyof Person; // 'name' | 'age'
+```
 
 ## _**映射类型**_
 
@@ -590,9 +601,11 @@ _映射类型，通过在属性类型上建立映射，从现有的类型创建�
 
 ## _**Partial**_
 
-_`type Partial<T> = {
+```typescript
+type Partial<T> = {
   [P in keyof T]?: T[P];
-}`_
+}
+```
 
 -   _泛型 Partial 类型被定义时只有一个类型参数 `T`。_
 -   _`keyof T` 表示所有 `T` 类型属性的名字（字符串字面类型）的联合。_
@@ -603,26 +616,29 @@ _`type Partial<T> = {
 
 _正如在接口部分中所介绍的，TypeScript 中可以创建只读属性。 `Readonly` 类型接受一个类型 `T`，并将其所有属性设置为只读。_
 
-_`type Readonly<T> = {
+```typescript
+type Readonly<T> = {
   readonly [P in keyof T]: T[P];
-};`_
+};
+```
 
 ## _**Exclude**_
 
 _`Exclude` 可以从其他类型中排除某些类型。排除的是可以赋值给 `T` 的属性。_
 
-_`/*`_
+```typescript
+/**
+ * type Exclude<T, U> = T extends U ? never : T;
+ */
+type User = {
+  _id: number;
+  name: string;
+  email: string;
+  created: number;
+};
 
- `-   type Exclude<T, U> = T extends U ? never : T;
--   /
-    type User = {
-    _id: number;
-    name: string;
-    email: string;
-    created: number;
-    };` 
-
-`type UserNoMeta = Exclude<keyof User, '_id' | 'created'>`
+type UserNoMeta = Exclude<keyof User, '_id' | 'created'>
+```
 
 ## **Pick**
 
@@ -630,10 +646,14 @@ _`/*`_
 
 ```typescript
 /**
-
+ * type Pick<T, K extends keyof T> = {
+ *   [P in K]: T[P];
+ *  };
+ */
+type UserNoMeta = Pick<User, 'name' | 'email'>
 ```
 
-## _infer_
+## _**infer**_
 
 你可以使用 `infer` 关键字来推断条件类型的 `extends` 子句中的类型变量。这样的推断类型变量只能用于条件类型的 true 分支。
 
@@ -643,12 +663,13 @@ _`/*`_
 
 ```typescript
 /**
-原版的 TypeScript's ReturnType
-type ReturnType<T extends (...args: any) => any> = T extends (...args: any) => infer R ? R : any;
-/
+ * 原版的 TypeScript's ReturnType
+ * type ReturnType<T extends (...args: any) => any> = T extends (...args: any) => infer R ? R : any;
+ */
 type MyReturnType<T> = T extends (...args: any) => infer R ? R : any;
 
-
+type TypeFromInfer = MyReturnType<() => number>;  // number
+type TypeFromFallback = MyReturnType<string>;     // any
 ```
 
 我们来拆解 `MyReturnType`：
@@ -658,7 +679,7 @@ type MyReturnType<T> = T extends (...args: any) => infer R ? R : any;
 -   如果是，那么类型解析为推断出的返回类型 `R`；
 -   如果不是，类型解析为 `any`。
 
-# 参考资料与实用链接
+# **参考资料与实用链接**
 
 [https://basarat.gitbooks.io/typescript/][3]
 

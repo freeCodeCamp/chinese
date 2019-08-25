@@ -1,0 +1,120 @@
+> * 原文地址：[How-to-build-a-cli-tool-in-nodejs](https://www.freecodecamp.org/news/how-to-build-a-cli-tool-in-nodejs-bc4f67d898ec/)
+> * 原文作者：Al-amin Nowshad
+> * 译者：blackcai
+> * 校对者：
+
+如何在NodeJS中构建CLI工具？
+
+作为开发人员，我们使用CLI工具。从git到云服务 - 我们无处不在的使用它们。所以，是时候制作你自己的CLI工具了。在这个过程中我们将使用Heroku上非常棒的框架oclif。
+
+什么是oclif?
+
+它是一款由知名平台Heroku提供的可以快速构建CLI工具的开源框架。
+
+我们将要构建什么？
+
+我们将要制作一个有四个功能的待办清单列表
+	• 添加一个新的任务
+	• 查看所有的任务
+	• 更新任务
+	• 删除任务
+
+初始化我们的项目
+
+Oclif 可以创建两个类型的项目
+	1.含有一个命令的项目
+	2.包含嵌套命令在内的多个命令
+
+在这篇文章中，我们需要一个多命令的项目，让我们开始创建它：
+npx oclif multi todocli
+
+运行这个命令并跟着说明操作将在当前目录初始化一个名为todocli的新项目
+
+现在，让我们进入目录并运行帮助命令：
+cd todocli && ./bin/run --help
+
+这个命令会打印出以下结果：
+> USAGE       $ todocli [COMMAND]    COMMANDS    hello       help   display help for todocli
+
+这个文件夹显示了可用的命令及其文档。
+￼
+项目结构
+
+我们可以在src目录下面找到一个名为commands的目录。这个目录包含所有命令及其相对文件名。例如，如果我们有一个命令hello，我们将在这个目录中找到一个名为hello.js的文件，该命令无需更多设置即可运行。当我们不需要它的时候可以删除它。
+
+设置数据库
+要存储我们的任务，我们需要一个存储系统。为简单起见，我们将使用lowdb这是一个非常简单的json文件存储系统。这个项目是不是很不错呢？
+
+让我们开始安装吧：
+npm install lowdb --save
+
+让我们在项目根目录中创建一个db.json文件。该文件将保存我们的数据。然后我们需要安装lowdb。现在，我们将在src目录中创建一个名为db.js的文件。这个文件将会保存我们的数据库资料。
+￼
+
+在这里，我们首先简单地加载所需的库和文件，然后将定义一个空的todos数组作为我们的基本集合（如果你把它想像成SQL数据库那这就像一个表）。
+
+添加任务
+
+oclif为我们提供了平滑的命令生成功能。让我们跟着运行以下命令：
+npx oclif command add（原文为：oclif command add ，使用中会报出错误 oclif: command not found）
+
+这个命令将在src/commands目录中创建一个名为add.js的文件。让我们用下面的代码替换该文件的内容：
+￼
+
+该文件有几个关键组件：
+	•一个执行此命令主要功能的运行函数，
+	•一个描述，这是命令的说明文档
+	•和一个标志，描述传递给命令的标志。
+
+这里，我们有一个名为task的标志，它有一个字符串类型。我们可以运行命令
+./bin/run add --task="welcome task"
+
+此命令将向数据库添加任务并打印该操作的响应内容。
+
+显示任务
+npx oclif command show
+￼
+
+在show.js中，我们以升序显示所有任务。我们用chalkjs添加了一点颜色，使我们的命令结果更好看。
+￼
+
+更新任务
+npx oclif command update
+
+
+为简单起见，我们现在只为我们的更新部分设置任务。我们只是将任务的id作为标志传递。
+./bin/run update --id=1
+
+这将为id = 1的任务设置done = true。
+
+移除任务
+npx oclif command remove
+￼
+
+删除非常简单：我们将id作为标志传递，然后从数据库中删除相关任务。
+
+差不多完成了！
+就这样，我们制作了非常简单的todocli。现在，如果我们想像任何其他普通的CLI工具一样使用它或让我们的朋友使用它，我们需要使它成为一个npm包。所以实际上是让我们在npm上发布它。
+
+构建并发布到npm
+首先，确保你有一个npm帐户。然后，您需要登录运行该命令
+npm login
+然后在项目目录内运行
+npm run prepack
+
+这将打包项目并使用描述和标志生成的自述文件使其准备就绪。
+
+现在，在npm上发布：
+npm publish
+
+如果一切顺利，那么该模块已成功发布在npm上。如果它没有发布成功，请检查项目名称和版本。
+
+npm install -g todocli
+然后任何人都可以随时随地使用这些命令？
+> todocli add --task="Great task!!!"> todocli show> todocli update --id=1> todocli remove --id=1
+
+如果你跟着整篇文章走到这一步，恭喜你？你太棒了。现在，你可以做一点任务：
+任务：
+任务的id分配不合适，你能解决吗？让我知道你如何在响应部分解决它。
+
+祝你好运，感谢阅读:)

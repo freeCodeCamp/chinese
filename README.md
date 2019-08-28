@@ -25,7 +25,7 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章](https://www.free
 - [翻译技巧](https://github.com/freeCodeCamp/news-translation/wiki/%E7%BF%BB%E8%AF%91%E6%8A%80%E5%B7%A7)
 
 ### 参与 review
-每一篇翻译好的文章，我们会有一位贡献者对其进行 review，如果你希望参与 review，请在 [Review-awaiting](https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3AReview-awaiting) 列表选取文章并留言“认领校对”，我们会邀请你成为 collaborator。
+每一篇翻译好的文章，我们会有一位贡献者对其进行 review。如果你希望参与 review，请在 [Review-awaiting](https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3AReview-awaiting) 列表选取文章并留言“认领校对”，我们会邀请你成为 collaborator。
 
 ### 发表
 

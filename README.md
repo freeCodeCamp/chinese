@@ -8,16 +8,19 @@ This repository is used for collaborating on [Developer News](https://www.freeco
 
 Each language translation is available in their own directories at the root of the repository. As of now, we are working on supporting chinese language first and will eventually add translations for other languages in future.
 
-## freeCodeCamp 社区翻译计划
+## freeCodeCamp 文章翻译计划
 
 freeCodeCamp 英文社区的成员发布了大量[优质文章](https://www.freecodecamp.org/news/)，分享前端、后端、 Android、iOS、产品、设计、区块链、人工智能等领域的内容，以及学习编程的经历和求职经验。我们一起把这些文章翻译成中文，分享给更多读者。
 
-参与翻译你会获得：
+### 参与翻译你会获得：
 - 持续提升你的英文水平和多人协作的经验
 - 快速提高你的 Git 操作熟练度
 - 收获 GitHub 认可的 contributions
-- 受邀成为 freeCodeCamp.org 国际社区作者，文章发表在[官网](https://chinese.freecodecamp.org/news/)
+- 受邀成为 freeCodeCamp 社区作者，文章发表在[官网](https://chinese.freecodecamp.org/news/)
+- 有机会入选 freeCodeCamp 社区年度 top contributor
+- 有机会受邀参与 freeCodeCamp 城市社区的线下活动
 - 在社区中结识优秀的小伙伴，拥抱更多技术成长与职业发展的可能性
+- 有的译者（比如大学生）可能需要贡献者证书，请告诉我们为你准备^_^
 
 ### 译者指南
 

@@ -1,6 +1,6 @@
 > * 原文地址：[How to build a real-time todo app with React Native](https://www.freecodecamp.org/news/how-to-build-a-real-time-todo-app-with-react-native-19a1ce15b0b3/)
 > * 原文作者：Divyanshu Maithani
-> * 译者：
+> * 译者：blackcai
 > * 校对者：
 
 

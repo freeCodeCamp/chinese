@@ -1,6 +1,6 @@
 > * 原文地址：[web-scraping-101-in-python](https://www.freecodecamp.org/news/web-scraping-101-in-python/)
 > * 原文作者：Pierre
-> * 译者：
+> * 译者：CoderSan1997
 > * 校对者：
 
 ![Web Scraping 101 in Python: an overview of the tools & the pros and cons of each](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/oNWkJnaPpRTRTQaw.jpg)

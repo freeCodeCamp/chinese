@@ -5,33 +5,33 @@
 
 ![Web Scraping 101 in Python: an overview of the tools & the pros and cons of each](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/oNWkJnaPpRTRTQaw.jpg)
 
-In this post, which is a follow up to my  [ultimate web scraping guide][1], we will cover almost all the tools Python offers you to scrape the web. We will go from more basic to the most advanced ones, and cover the pros and cons of each.
+作为我网页爬虫最终指南的后续, 我们将在这篇文章中涵盖python提供给您的几乎所有的网页爬取工具。我们将从最基本的开始讲起，并逐步涉及到当前最前沿的技术，并且对他们的利弊进行分析。
 
-Of course we won't be able to cover all aspects of every tool we discuss. But this post should be enough to give you a good idea of which tools do what, and when to use each.
+当然，我们不能涵盖我们讨论的每个工具的所有方面。但这篇文章应该足以让你很好地知道哪些工具做什么，以及何时使用每一种工具。
 
-_Note: When I talk about Python in this blog post you should assume that I'm talking about Python3._
+_注意: 本文中所涉及到的python均指Python3_
 
-### Summary:
+### 总结:
 
--   Web Fundamentals
--   Manually opening a socket and sending the HTTP request
+-   Web 基础
+-   手动创建一个socket并且发送HTTP请求
 -   urllib3 & LXML
 -   requests & BeautifulSoup
--   Scrapy
--   Selenium & Chrome —headless
--   Conclusion
+-   Scrapy（爬虫框架）
+-   Selenium（浏览器自动化测试框架） & Chrome —headless
+-   总结
 
-# Web Fundamentals
+# Web 基础
 
-The internet is  **really complex**–there are many underlying technologies and concepts involved to view a simple web page in your browser. I'm not going to explain everything, but I will show you the most important things you have to understand in order to extract data from the web.
+互联网其实是**非常复杂的**–我们通过浏览器浏览一个简单的网页时，其背后其实涉及到许多技术和概念。 我并不打算对其进行逐一讲解, 但我会告诉你如果想要从网络中爬取数据需要了解哪些最重要的知识。
 
-## HyperText Transfer Protocol
+## HyperText Transfer Protocol（超文本传输协议，简称HTTP）
 
-HTTP uses a  **client/server**  model, where an HTTP client (a browser, your Python program, curl, Requests, and so on) opens a connection and sends a message (“I want to see the /product page”) to an HTTP server (like Nginx, Apache, and others).
+HTTP 采用  **C/S模型**, 在HTTP客户机 (如 浏览器, python程序, curl（命令行工具）, Requests等等) 创建一个连接并向HTTP服务器（如 Nginx，Apache等）发送信息 (“我想浏览产品页”)。
 
-Then the server answers with a response (the HTML code, for example) and closes the connection. HTTP is called a stateless protocol, because each transaction (request/response) is independent. FTP, for example, is stateful.
+然后服务器返回一个响应 (如HTML代码)并且关闭连接.与FTP这些 有状态协议 不同，HTTP的每个事务都是独立的，因此被称为无状态协议。
 
-Basically, when you type a website address in your browser, the HTTP request looks like this:
+基本上，当您在浏览器中键入网站地址时，HTTP请求如下所示:
 
 ```python
 GET /product/ HTTP/1.1
@@ -44,23 +44,23 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit\
 /537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
 ```
 
-In the first line of this request, you can see multiples things:
+在这个请求的第一行, 你可以获得如下的信息:
 
--   The GET verb or method being used, meaning we request data from the specific path,  `/product/`. There are other HTTP verbs, and you can see the full list  [here][2].
--   The version of the HTTP protocol. In this tutorial we will focus on HTTP 1.
--   Multiple headers fields.
+-   使用Get动词或者方法, 意味着我们从指定的路径 `/product/` 请求数据。还有其他HTTP谓词，您可以在[这里][2]看到完整的列表。
+-   HTTP协议的版本。在本教程中，我们将重点讨论HTTP1。
+-   多个header字段。
 
-Here are the most important header fields:
+以下是最重要的header字段:
 
--   **Host:**  The domain name of the server. If no port number is given, it is assumed to be 80\*_._\*
--   **User-Agent:**  Contains information about the client originating the request, including the OS information. In this case, it is my web-browser (Chrome), on OSX. This header is important because it is either used for statistics (how many users visit my website on mobile vs. desktop) or to prevent any violations by bots. Because these headers are sent by the clients, it can be modified with a technique called “Header Spoofing”. This is exactly what we will do with our scrapers to make them look like a normal web browser.
--   **Accept:**  The content types that are acceptable as a response. There are lots of different content types and sub-types:  **text/plain, text/html, image/jpeg, application/json**  ...
--   **Cookie**  : name1=value1;name2=value2... This header field contains a list of name-value pairs. These are called session cookies, and are what websites use to authenticate users and store data in your browser. For example, when you fill in a login form, the server will check if the credentials you entered are correct. If so, it will redirect you and inject a session cookie in your browser. Your browser will then send this cookie with every subsequent request to that server.
--   **Referrer**: The Referrer header contains the URL from which the actual URL has been requested. This header is important because websites use this header to change their behavior based on where the user came from. For example, lots of news websites have a paying subscription and let you view only 10% of a post. But if the user came from a news aggregator like Reddit, they let you view the full content. Sites use the referrer to check this. Sometimes we will have to spoof this header to get to the content we want to extract.
+-   **Host：**  服务器的域名。如果没有给出端口号，则默认为80\*_._\*
+-   **User-Agent：**  包含有关发起请求的客户端的信息, 包括OS等信息。比如说上面的例子中,表明了我的浏览器(Chrome),在Mac OS X系统上. 这个header字段很重要，因为它要么用于统计(有多少用户访问我的移动和桌面网站)，要么用于防止机器人的任何违规行为。因为这些标头是由客户端发送的，所以可以使用一种名为“报头欺骗”的技术对其进行修改。这正是我们的爬虫程序要做的，使他们看起来像一个正常的网页浏览器。
+-   **Accept：**  表明响应可接受的内容类型. 有许多不同的内容类型和子类型:  **text/plain, text/html, image/jpeg, application/json**  ...
+-   **Cookie：**name1=value1;name2=value2... 这个header字段包含一组键值对。这些称为会话cookie,是网站用来验证用户身份和在浏览器中存储数据的工具。比如说, 当你登录时填写完账号密码并提交,服务器会检查你输入的账号密码是否正确。如果无误,它将重定向并且在你的浏览器中注入一个会话cookie，浏览器会将此cookie连同随后的每个请求一起发送给服务器。
+-   **Referrer**: 这个字段包含请求实际URL的URL。网站通过此header字段来判断用户的来源，进而调整该用户的网站权限。例如,很多新闻网站都有付费订阅，只允许你浏览10%的帖子。但是，如果用户来自像Reddit这样的新闻聚合器,你就能浏览全部内容。网站使用referrer头字段来进行检查这一点。 有时，我们不得不伪造这个header字段来获取我们想要提取的内容。
 
-And the list goes on. You can find the full header list  [here][3].
+当然header字段不仅仅是这些.你可以在[此处][3]获取更多的信息。
 
-A server will respond with something like this:
+服务器将返回类似如下的响应:
 
 ```
 HTTP/1.1 200 OK
@@ -70,17 +70,17 @@ Server: nginx/1.4.6 (Ubuntu) Content-Type: text/html; charset=utf-8 <!DOCTYPE ht
 <meta charset="utf-8" /> ...[HTML CODE]
 ```
 
-On the first line, we have a new piece of information, the HTTP code  `200 OK`. This means the request has succeeded. As for the request headers, there are lots of HTTP codes, split into four common classes: 2XX for successful requests, 3XX for redirects, 4XX for bad requests (the most famous being 404 Not found), and 5XX for server errors.
+在第一行我们能看到一个HTTP代码  `200 OK`。这意味着我们的请求成功了。至于请求头，有很多HTTP代码，分为四个常见的类：2XX用于成功请求，3XX用于重定向，4xx用于错误请求(最著名的是404未找到)，5XX用于服务器错误。
 
-If you are sending an HTTP request with your web browser, it will parse the HTML code, fetch all the eventual assets (JavaScript, CSS, and image files) and render the result into the main window.
+如果您使用Web浏览器发送HTTP请求，它将解析HTML代码，获取所有最终资源(JavaScript、CSS和图像文件)，并将结果呈现到主窗口中。
 
-In the next section we will see the different ways to perform HTTP requests with Python and extract the data we want from the responses.
+在下一节中，我们将看到使用Python执行HTTP请求的不同方法，并从响应中提取我们想要的数据。
 
-# Manually opening a socket and sending the HTTP request
+# 手动创建一个socket并且发送HTTP请求
 
-## Socket
+## Socket（套接字）
 
-The most basic way to perform an HTTP request in Python is to open a  [socket][4]  and manually send the HTTP request:
+在Python中执行HTTP请求的最基本方法是打开一个[socket][4]并手动发送HTTP请求:
 
 ```python
 import socket
@@ -101,37 +101,37 @@ while True:
 
 ```
 
-Now that we have the HTTP response, the most basic way to extract data from it is to use regular expressions.
+现在我们有了HTTP响应，从其中提取数据的最基本方法就是使用正则表达式。
 
-## Regular Expressions
+## 正则表达式
 
-A regular expression (RE, or Regex) is a search pattern for strings. With regex, you can search for a particular character or word inside a bigger body of text.
+正则表达式(RE, or Regex) 是字符串的搜索模式。使用regex,您可以在更大的文本中搜索特定的字符或单词。
 
-For example, you could identify all the phone numbers on a web page. You can also replace items easily. For example, you can replace all the uppercase tags in poorly formatted HTML with lowercase ones. You can also validate some inputs.
+例如，您可以识别网页上的所有电话号码。您也可以轻松地替换字符串。例如，可以用小写标记替换格式较差的HTML中的所有大写标记。还可以验证一些输入。
 
-You may be wondering, why it is important to know about regular expressions when doing web scraping? After all, there are all kinds of different Python modules to parse HTML, XPath, and CSS selectors.
+您可能想知道，为什么在进行Web抓取时了解正则表达式很重要？毕竟，有各种不同的Python模块来解析HTML、XPath和CSS选择器。
 
-In an ideal  [semantic world,][7]  data is easily machine-readable, and information is embedded inside relevant HTML elements with meaningful attributes.
+在一个理想的[语义世界中][7] ，数据很容易被机器读取，信息被嵌入到相关的HTML元素中，并具有意义的属性。
 
-But the real world is messy. You will often find huge amounts of text inside a p element. When you want to extract specific data inside this huge block of text like a price, date, or name, you will have to use regular expressions.
+但现实世界是混乱的。您经常会在p元素中找到大量的文本。当您想要在这个巨大的文本块(如价格、日期或名称)中提取特定数据时，您必须使用正则表达式
 
-**Note:**  [Here][8]  is a great website to test your regex, and  [one awesome blog][9]  to learn more about them. This post will only cover a small fraction of what you can do with regular expressions.
+**注意：**  [这][8]是一个很棒的用来锻炼你regex能力的网站,还有[一个很棒的博客][9]来了解学习他们。这篇文章只涉及一小部分你可以用正则表达式做的事情。
 
-Regular expressions can be useful when you have this kind of data:
+当你的数据类似于下面这种的时候，正则表达式就能发挥很大的作用:
 
 ```
 <p>Price : 19.99$</p>
 
 ```
 
-We could select this text node with an Xpath expression, and then use this kind of regex to extract the price. Remember that regex patterns are applied from left to right, and each source character is only used once.:
+我们可以使用XPath表达式选择这个文本节点，然后使用这种regex提取price。请记住，正则表达式模式是从左到右应用的，每个源字符只使用一次。:
 
 ```
 ^Price\s:\s(\d+.\d{2})$
 
 ```
 
-To extract the text inside an HTML tag, it is annoying to use a regex, but doable:
+要提取HTML标记中的文本，使用regex是很烦人的，但它是可行的:
 
 ```py
 import re
@@ -139,13 +139,13 @@ html_content = '<p>Price : 19.99$</p>'
 
 ```
 
-As you can see, manually sending the HTTP request with a socket and parsing the response with regular expressions can be done, but it's complicated. There are higher-level APIs that can make this task a lot easier.
+如您所见，通过socket手动发送HTTP请求并使用正则表达式解析响应是可以完成的，但这很复杂。所以有更高级别的API可以使这个任务变得更容易。
 
 ## urllib3 & LXML
 
-> **Disclaimer**: It is easy to get lost in the urllib universe in Python. You have urllib and urllib2 that are parts of the standard library, but there's also urllib3. urllib2 was split into multiple modules in Python 3, and urllib3 should not be a part of the standard library anytime soon. All of these confusing details will be the subject of its own blog post. In this section, I chose to only talk about urllib3 as it widely used in the Python world.
+> **免责声明**: 在学习Python中的urllib系列的库的时候很容易学懵逼。python除了有作为标准库一部分的urlib和urlib2，还有urlib3。urllib2在Python3中被分成很多模块以及urllib 3不应在短期内成为标准库的一部分。所有这些令人困惑的细节都将成为它自己的博客文章的主题。 在本节中，我选择只讨论urllib 3，因为它在Python世界中被广泛使用。
 
-urllib3 is a high-level package that allows you to do pretty much whatever you want with an HTTP request. We can do what we did with socket above with way fewer lines of code:
+urllib3是一个高级包，它允许您对HTTP请求做任何您想做的事情。我们可以用更少的代码行来完成上面的套接字操作：
 
 ```python
 import urllib3
@@ -154,10 +154,9 @@ r = http.request('GET', 'http://www.google.com')
 print(r.data)
 ```
 
-Much more concise than the socket version, isn't it? Not only that, but the API is straightforward, and you can do many things easily like adding HTTP headers, using a proxy, POSTing forms, and so on.
+比套接字版本要简洁得多，不是吗？不仅如此，API也很简单，您可以轻松地做许多事情，比如添加HTTP头、使用代理、发布表单等等。
 
-For example, if we had to set some headers to use a proxy, we would only have to do this:
-
+例如，如果我们必须设置一些header字段来使用代理，我们只需这样做：
 ```python
 import urllib3
 user_agent_header = urllib3.make_headers(user_agent="<USER AGENT>")
@@ -165,45 +164,45 @@ pool = urllib3.ProxyManager(f'<PROXY IP>', headers=user_agent_header)
 r = pool.request('GET', 'https://www.google.com/')
 ```
 
-See? Exactly the same number of lines.
+看见没?完全相同的行数
 
-However, there are some things that urllib3 does not handle very easily. If we want to add a cookie, we have to manually create the corresponding headers and add it to the request.
+然而，有些事情urllib 3并不容易处理。如果要添加cookie，则必须手动创建相应的header字段并将其添加到请求中。
 
-There are also things that urllib3 can do that requests can't, like creation and management of pool and proxy pool, and control of retry strategy.
+此外，urllib 3还可以做一些请求不能做的事情，比如池和代理池的创建和管理，以及重试策略的控制。
 
-To put it simply, urllib3 falls between requests and socket in terms of abstraction, although it's way closer to requests than socket.
+简单地说，urllib 3在抽象方面介于请求和套接字之间，尽管它比套接字更接近请求。
 
-To parse the response, we are going to use the lxml package and XPath expressions.
+为了解析响应，我们将使用lxml包和XPath表达式。
 
 ## XPath
 
-Xpath is a technology that uses path expressions to select nodes or node sets in an XML or HTML document. As with the Document Object Model, Xpath is a W3C standard since 1999. Even if Xpath is not a programming language in itself, it allows you to write expressions that can directly access a specific node or node-set without having to go through the entire XML or HTML tree.
+XPath是一种使用路径表达式在XML或HTML文档中选择节点或节点集的技术。与文档对象模型(DocumentObjectModel)一样，XPath自1999年以来一直是W3C标准。即使XPath本身不是一种编程语言，它允许您编写可以直接访问特定节点或节点集的表达式，而无需遍历整个XML或HTML树。
 
-Think of XPath as a sort of regular expression, but specifically for XML or HMTL.
+可以将XPath看作一种正则表达式，但专门用于XML或HMTL。
 
-To extract data from an HTML document with XPath we need 3 things:
+要使用XPath从HTML文档中提取数据，我们需要3件事:
 
--   an HTML document
--   some XPath expressions
--   an XPath engine that will run those expressions
+-   HTML文档
+-   一些XPath表达式
+-   运行这些表达式的XPath引擎
 
-To begin, we will use the HTML that we got thanks to urllib3. We just want to extract all the links from the Google homepage, so we will use one simple XPath expression,  `//a`, and use LXML to run it. LXML is a fast and easy to use XML and HTML processing library that supports XPATH.
+首先，我们将使用我们通过urllib 3获得的HTML。我们只想从Google主页中提取所有链接，所以我们将使用一个简单的XPath表达式 `//a`，并使用LXML来运行它。LXML是一个快速易用的XML和HTML处理库，支持XPath。
 
-_Installation_:
+_安装_:
 
 ```
 pip install lxml
 
 ```
 
-Below is the code that comes just after the previous snippet:
+下面是前面片段之后的代码:
 
 ```python
 from lxml import html
 
 ```
 
-And the output should look like this:
+输出如下:
 
 ```python
 https://books.google.fr/bkshp?hl=fr&tab=wp
@@ -216,51 +215,51 @@ https://docs.google.com/document/?usp=docs_alc
 https://www.google.fr/intl/fr/about/products?tab=wh
 ```
 
-Keep in mind that this example is really, really simple, and doesn't really show you how powerful XPath can be. (Note: this XPath expression should have been changed to  `//a/@href`  to avoid having to iterate through  `links`  to get their  `href`).
+请记住，这个示例非常简单，并没有向您展示XPath有多强大。 (注意: 这个XPath表达式应该更改为 `//a/@href`  为了避免在`links`中迭代以获得它们的 `href`)。
 
-If you want to learn more about XPath you can read  [this good introduction][12]. The LXML documentation is also  [well written and is a good starting point][13].
+如果您想了解更多关于XPath的知识，可以阅读这个[很棒的介绍文档][12]. LXML文档也编写得很[好是一个好的起点][13].
 
-XPath expresions, like regexp, are really powerful and one of the fastest ways to extract information from HTML. Though also like regexp, XPath can quickly become messy, hard to read, and hard to maintain.
+XPath表达式(如regexp)非常强大，是从HTML中提取信息的最快方法之一。虽然XPath也像regexp一样，但它很快就会变得凌乱、难以阅读和难以维护。
 
-# requests & BeautifulSoup
+# requests & BeautifulSoup（库）
 
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--HrgsYR9Q--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/requests/requests/master/docs/_static/requests-logo-small.png)
 
-[Requests][14]  is the king of Python packages–with more than 11,000,000 downloads, it is the most widely used package for Python.
+下载量已经超过11,000,000次的[Requests库][14]是Python包中的佼佼者,它是Python使用最广泛的包。
 
-Installation:
+安装:
 
 ```
 pip install requests
 
 ```
 
-Making a request with Requests (no comment) is really easy:
+使用Requests库发送一个请求是非常容易的事情:
 
 ```python
 import requests
 
 ```
 
-With Requests it is easy to do things like perform POST requests, handle cookies, and query parameters.
+使用Requests库可以很容易地执行POST请求、处理cookie和查询参数
 
-### Authentication to Hacker News
+### Hacker News认证
 
-Let's say we want to create a tool to automatically submit our blog post to Hacker News or any other forums like Buffer. We would need to authenticate to those websites before posting our link. That's what we are going to do with Requests and BeautifulSoup!
+假设我们想要创建一个工具来自动提交我们的博客文章给Hacker News或任何其他论坛如Buffer。在提交我们的链接之前，我们需要认证到这些网站。这就是我们要通过Requests和BeautifulSoup做的事情！
 
-Here is the Hacker News login form and the associated DOM:
+下面是Hacker News登录表单和相关的DOM:
 
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--Dr2y7j7F--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://ksah.in/content/images/2016/02/screenshot_hn_login_form.png)
 
-There are three  `<input>`  tags on this form. The first one has a type hidden with the name "goto", and the two others are the username and password.
+这个表单上有三个 `<input>`标签。第一个带有hidden类型的名字为“goto”输入，另外两个是用户名和密码。
 
-If you submit the form inside your Chrome browser, you will see that there is a lot going on: a redirect and a cookie is being set. This cookie will be sent by Chrome on each subsequent request in order for the server to know that you are authenticated.
+如果你在Chrome浏览器中提交表单，你会发现有很多事情发生：重定向和正在设置cookie。这个cookie将由Chrome在每个后续请求上发送，以便服务器知道您已通过身份验证。
 
-Doing this with Requests is easy–it will handle redirects automatically for us, and handling cookies can be done with the  _Session_  object.
+通过Requests来做这些工作将会变得非常简单，它将自动为我们处理重定向，而处理cookie则可以使用_Session_Object完成。
 
-The next thing we will need is BeautifulSoup, which is a Python library that will help us parse the HTML returned by the server to find out if we are logged in or not.
+接下来我们需要的是BeautifulSoup，它是一个Python库，它将帮助我们解析服务器返回的HTML，以确定我们是否登录。
 
-Installation:
+安装:
 
 ```
 pip install beautifulsoup4
@@ -268,6 +267,7 @@ pip install beautifulsoup4
 ```
 
 So all we have to do is to POST these three inputs with our credentials to the /login endpoint and check for the presence of an element that is only displayed once logged in:
+所以我们要做的就是通过POST请求将这三个带有我们登录凭证的输入发送到 /login 终端，并且检查是否存在一个只在登录
 
 ```python
 import requests

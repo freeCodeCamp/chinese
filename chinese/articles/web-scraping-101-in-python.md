@@ -266,7 +266,6 @@ pip install beautifulsoup4
 
 ```
 
-So all we have to do is to POST these three inputs with our credentials to the /login endpoint and check for the presence of an element that is only displayed once logged in:
 所以我们要做的就是通过POST请求将这三个带有我们登录凭证的输入发送到 /login 终端，并且检查是否存在一个只在登录
 
 ```python
@@ -281,20 +280,20 @@ r = s.post(f'{BASE_URL}/login', data=data)
 
 ```
 
-In order to learn more about BeautifulSoup, we could try to extract every link on the homepage.
+为了了解更多关于BeautifulSoup, 我们可以尝试提取主页上的每一个链接。
 
-_By the way, Hacker News offers a  [powerful API][17], so we're doing this as an example. You should really use the API instead of scraping it!_
+_顺便说一句，Hacker News提供了一个[功能强大的API][17], 所以我们以它为例。您真的应该使用API，而不是爬取它!_
 
-The first thing we need to do is to inspect the Hacker News home page to understand the structure and the different CSS classes that we will have to select:
+我们需要做的第一件事是观察分析Hacker News主页，以了解我们必须选择的结构和不同的CSS类：
 
-We can see that all posts are inside a  `<tr class="athing">`  , so the first thing we will need to do is to select all these tags. This can be easily done with:
+我们可以看到所有的posts都在  `<tr class="athing">`里 ,因此，我们需要做的第一件事是选择所有这些标记。通过下面这行代码我们很容易实现：
 
 ```
 links = soup.findAll('tr', class_='athing')
 
 ```
 
-Then for each link, we will extract its id, title, url and rank:
+然后，对于每个链接，我们将提取其ID、标题、url和排名：
 
 ```python
 import requests
@@ -314,45 +313,45 @@ for link in links:
 
 ```
 
-As you saw, Requests and BeautifulSoup are great libraries to extract data and automate different things like filling out forms. If you want to do large-scale web scraping projects, you could still use Requests, but you would need to handle lots of things yourself.
+正如您所看到的，Requests和BeautifulSoup是提取数据和自动化实现各种操作(如填写表单)的很好的库。如果你想做大规模的网络抓取项目，你仍然可以使用请求，但你需要自己处理很多事情。
 
-When you need to scrape a lots of webpages, there are many things you have to take care of:
+当你需要刮很多网页的时候，有很多事情你需要处理：
 
--   finding a way of parallelizing your code to make it faster
--   handling errors
--   storing results
--   filtering results
--   throttling your requests so you don't overload the server
+-   找到并行化代码的方法，使代码更高效
+-   处理错误
+-   存储爬取的数据
+-   过滤和筛选数据
+-   控制请求速度，这样就不会使服务器超载
 
-Fortunately for us, tools exist that can handle all of those things for us.
+对我们来说幸运的是，有工具可以为我们处理所有这些事情。
 
 # Scrapy
 
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--VIvNnTuY--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://secure.meetupstatic.com/photos/event/1/b/6/6/600_468367014.jpeg)
 
-Scrapy is a powerful Python web scraping framework. It provides many features to download web pages asynchronously, process, and save it. It handles multithreading, crawling (the process of going from link to link to find every URL in a website), sitemap crawling, and much more.
+scrapy是一个强大的Python Web抓取框架。它提供了许多特性来异步下载、处理和保存网页。它处理多线程、爬行(从链接到查找网站中的每个URL的过程)、站点地图爬行等等。
 
-Scrapy has also an interactive mode called the Scrapy Shell. With Scrapy Shell, you can test your things in your scraping code really quickly like XPath expression or CSS selectors.
+Scrapy还有一个名为ScrapyShell的交互模式。使用ScrapyShell，您可以在您的代码中快速测试您的东西，比如XPath表达式或CSS选择器。
 
-The downside of Scrapy is that the learning curve is steep–there is a lot to learn.
+Scrapy的缺点是学习曲线陡峭-有很多东西要学。
 
-To follow up on our example about Hacker News, we are going to write a Scrapy Spider that scrapes the first 15 pages of results and saves everything in a CSV file.
+为了跟进我们关于 Hacker News的例子，我们将编写一个ScrapySpider，它会抓取前15页的结果，并将所有内容保存在CSV文件中。
 
-You can easily install Scrapy with pip:
+pip安装Scrapy:
 
 ```
 pip install Scrapy
 
 ```
 
-Then you can use the scrapy cli to generate the boilerplate code for our project:
+然后，您可以使用scrapycli为我们的项目生成样板代码：
 
 ```
 scrapy startproject hacker_news_scraper
 
 ```
 
-Inside  `hacker_news_scraper/spider`  we will create a new Python file with our Spider's code:
+在`hacker_news_scraper/spider` 我们将使用Spider的代码创建一个新的Python文件:
 
 ```python
 from bs4 import BeautifulSoup
@@ -371,48 +370,47 @@ class HnSpider(scrapy.Spider):
             <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">'title'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> link<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>find_all<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">'td'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">[</span><span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 0, 85);">2</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">]</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>a<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>text<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span>
             <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">"url"</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> link<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>find_all<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">'td'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">[</span><span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 0, 85);">2</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">]</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>a<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">[</span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">'href'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">]</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span>
             <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">"rank"</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token builtin" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">int</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>link<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>td<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>span<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>text<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>replace<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">'.'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">''</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
-        <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></code></pre><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">There is a lot of convention in Scrapy. Here we define an Array of starting URLs. The attribute name will be used to call our Spider with the Scrapy command line.</p><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">The parse method will be called on each URL in the<span> </span><code style="box-sizing: inherit; margin: 0px; padding: 0px 5px 2px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: 1em; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 0.8em; vertical-align: baseline; background: rgb(208, 208, 213); word-break: break-all;">start_urls</code><span> </span>array</p><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">We then need to tune Scrapy a little bit in order for our Spider to behave nicely against the target website.</p><pre style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; min-width: 100%; overflow-x: auto; max-width: 100%; color: rgb(27, 27, 50); background: rgb(238, 238, 240);"><code style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: &quot;Roboto Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; background: transparent;"># Enable and configure the AutoThrottle extension (disabled by default)See https://doc.scrapy.org/en/latest/topics/autothrottle.html
+        <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></code></pre><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">Scrapy中有很多规定.这里我们定义了一个启动URL数组。属性name将用于使用Scrapy命令行调用我们的Spider。</p><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">对<span> </span><code style="box-sizing: inherit; margin: 0px; padding: 0px 5px 2px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: 1em; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 0.8em; vertical-align: baseline; background: rgb(208, 208, 213); word-break: break-all;">start_urls</code><span> </span>数组中的每个URL调用解析方法</p><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">然后，为了让我们的爬虫更好的在目标网站上爬数据，我们要对Scrapy进行微调。</p><pre style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; min-width: 100%; overflow-x: auto; max-width: 100%; color: rgb(27, 27, 50); background: rgb(238, 238, 240);"><code style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: &quot;Roboto Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; background: transparent;"># Enable and configure the AutoThrottle extension (disabled by default)See https://doc.scrapy.org/en/latest/topics/autothrottle.html
 AUTOTHROTTLE_ENABLED = True
 The initial download delay
 
 ```
 
-You should always turn this on. It will make sure the target website will not slow down because of your spiders by analyzing the response time and adapting the number of concurrent threads.
+你应该一直把这个爬虫程序一直运行着。它将通过分析响应时间和调整并发线程的数量来确保目标网站不会而负载过大。
 
-You can run this code with the Scrapy CLI and with different output format (CSV, JSON, XML, and so on):
+您可以使用ScrapyCLI运行下面的代码并且设置不同的输出格式(CSV、JSON、XML等)
 
 ```
 scrapy crawl hacker-news -o links.json
 
 ```
 
-And that's it! You will now have all your links in a nicely formatted JSON file.
+类似于这样，最终爬取的结果会按照json的格式导出到一个名为links的json文件中
 
 # Selenium & Chrome —headless
 
-Scrapy is really nice for large-scale web scraping tasks. But it is not enough if you need to scrape Single Page Applications written with JavaScript frameworks because it won't be able to render the JavaScript code.
+对于大规模的网络抓取任务来说，Scrapy是非常好的。但是，如果需要爬取用JavaScript框架编写的单页应用程序，这是不够的，因为它无法呈现JavaScript代码。
 
-It can be challenging to scrape these SPAs because there are often lots of AJAX calls and websockets connections involved. If performance is an issue, you should always try to reproduce the JavaScript code, meaning manually inspecting all the network calls with your browser inspector and replicating the AJAX calls containing the interesting data.
+爬取这些SPAs是很有挑战性的，因为经常涉及很多Ajax调用和WebSocket连接。如果性能存在问题，你将不得不逐个复制JavaScript代码，这意味着使用浏览器检查器手动检查所有网络调用，并复制和你感兴趣的数据相关的Ajax调用。
 
-In some cases, there are just too many asynchronous HTTP calls involved to get the data you want, and it can be easier to just render the page in a headless browser.
+在某些情况下，涉及到的异步HTTP调用太多，无法获取所需的数据，在headless模式的浏览器中呈现页面可能会更容易。
 
-Another great use case would be to take a screenshot of a page. This is what we are going to do with the Hacker News homepage (again !)
-
-You can install the Selenium package with pip:
+另一个很好的用例是对一个页面进行截图。这是我们将要对Hacker News主页做的事情(再次！)
+pip安装Selenium包:
 
 ```
 pip install selenium
 
 ```
 
-You will also need  [Chromedriver][21]:
+你还需要[Chromedriver][21]:
 
 ```
 brew install chromedriver
 
 ```
 
-Then we just have to import the Webdriver from the Selenium package, configure Chrome with headless=True, and set a window size (otherwise it is really small):
+然后，我们只需从Selenium包中导入Webriver，配置Chrome的Headless=True，并设置一个窗口大小(否则它非常小)：
 
 ```python
 from selenium import webdriver
@@ -420,53 +418,52 @@ from selenium.webdriver.chrome.options import Options
 
 ```
 
-You should then get a nice screenshot of the homepage:
+然后你应该得到一个很好的主页截图
 
 ![](https://landen.imgix.net/blog_pkzRugQgwaDvAtAE/assets/kfyrFQpXOyHUbqzq.png)
 
-You can do many more things with the Selenium API and Chrome like:
+您可以使用SeleniumAPI和Chrome做更多的事情，比如:
 
--   Executing JavaScript
--   Filling out forms
--   Clicking on elements
--   Extracting elements with CSS selectors or XPath expressions
+-   执行JavaScript
+-   填写表单
+-   点击元素
+-   用CSS选择器或XPath表达式提取元素
 
-Selenium and Chrome in headless mode is really the ultimate combination to scrape anything you want. You can automate anything that you could do with your regular Chrome browser.
+Selenium和headless模式下的Chrome是能爬取到任何你想要爬取的数据的最终最棒的组合. 你可以用你普通的Chrome浏览器自动完成你能做的任何事情。
 
-The big drawback is that Chrome needs lots of memory / CPU power. With some fine-tuning you can reduce the memory footprint to 300-400mb per Chrome instance, but you still need 1 CPU core per instance.
+最大的缺点是Chrome需要大量的内存/CPU能力。通过一些微调，您可以将每个Chrome实例的内存占用减少到300-400MB，但每个实例仍然需要一个CPU核心。
 
-If you want to run several Chrome instances concurrently, you will need powerful servers (the cost of which goes up quickly) and constant monitoring of resources.
+如果您想同时运行多个Chrome实例，您将需要强大的服务器(其成本迅速上升)和对资源的持续监视。
 
-## Conclusion
+## 总结
 
-Here is a quick recap table of every technology we discussed in this article. Do not hesitate to let me know in the comments if you know of some other resources that should be included here.
+下面是我们在本文中讨论的每一项技术的简要概述表。如果你想要对此表进行补充，请不要犹豫，直接在评论中回复我。
 
 | NAME | SOCKET | URLLIB3 | REQUESTS | SCRAPY | SELENIUM |
 | --- | --- | --- | --- | --- | --- |
-| Ease of use | \- - - | \+ + | \+ + + | \+ + | + |
-| Flexibility | \+ + + | \+ + + | \+ + | \+ + + | \+ + + |
-| Speed of execution | \+ + + | \+ + | \+ + | \+ + + | + |
-| Common use case | \-Writing low-level programming interface | \-High level application that needs fine control over HTTP (pip, aws client, requests, streming) | \-Calling an API  
-\-Simple application (in terms of HTTP needs) | \-Crawling a important list of website  
-\- Filter, extract and load on scrapped data | \-JS rendering  
+| 易用性 | \- - - | \+ + | \+ + + | \+ + | + |
+| 灵活性 | \+ + + | \+ + + | \+ + | \+ + + | \+ + + |
+| 执行速度 | \+ + + | \+ + | \+ + | \+ + + | + |
+| 适用范围 | \-编写底层编程接口 | \-需要对HTTP进行精细控制的高级应用程序(pip, aws client, requests, streming) | \-调用API  
+\-简单的应用程序(就HTTP需求而言) | \-爬取一个重要的网站列表  
+\- 对爬取到的数据进行过滤、提取和加载 | \-JS 渲染 
 \-Scraping SPA  
-\-Automated testing  
-\-Programmatic screenshot |
-| Learn more | \-  [Official documentation][23]  
-\-  [Great tutorial][24]  👍 | \-  [Official documentation][25]  
-\-  [PIP usage of urllib3][26], very interesting | \-  [Official documentation][27]  
-\-  [Requests usage of urllib3][28] | \-  [Official documentation][29]  \-  [Scrapy overview][30] | \-  [Official documentation][31]  
+\-自动化测试  
+\-程序截图 |
+| 更多 | \-  [官方文档][23]  
+\-  [不错的教程][24]  👍 | \-  [官方文档][25]  
+\-  [urllib 3的PIP使用][26], 很有趣 | \-  [官方文档][27]  
+\-  [Requests usage of urllib3][28] | \-  [官方文档][29]  \-  [Scrapy overview][30] | \-  [官方文档][31]  
 \-  [Scraping SPA][32] |
 
   
-I hope that this overview will help you choose your Python scraping tools and that you learned something reading this post.
+我希望这个概述将帮助您选择您的Python抓取工具，并希望您通过本文能有所收获。
 
-Everything I talked about in this post are things I used to build my new indie hacker project:  [ScrapingNinja][33], the simplest web scraping API around there 😊.
+我在这篇文章中所说的一切都是我用来建立我新的黑客项目的东西。:  [ScrapingNinja][33], 最简单的web爬虫API 😊.
 
-Every tool I talked about in this post will be the subject of a specific blog post in the future where I'll go deep into the details.
+在这篇文章所提及的每一个工具，我都会在之后单独为其写一篇博客来进行深入研究其细节
 
-Do not hesitate to let me know in the comments what else you'd like to know about scraping. I'll talk about it in my next post.
-
+不要犹豫，在评论中告诉我你还想知道关于爬虫的哪些知识。我将会在下一篇文章中进行讲解分析
 Happy Scraping!
 
   

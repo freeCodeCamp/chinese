@@ -1,6 +1,6 @@
 > * 原文地址：[The Definitive Guide to Contributing to Open Source](https://www.freecodecamp.org/news/the-definitive-guide-to-contributing-to-open-source-900d5f9f2282/)
 > * 原文作者：Piotr Gaczkowski
-> * 译者：
+> * 译者：hunterwyld
 > * 校对者：
 
 ![The Definitive Guide to Contributing to Open Source](https://cdn-media-1.freecodecamp.org/images/0*2dSjV5OCE6x2jI2W)

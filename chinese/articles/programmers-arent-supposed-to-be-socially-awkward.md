@@ -5,7 +5,7 @@
 
 ![Programmers Aren’t Supposed to Be Socially Awkward. Here Are 10 Social Skills To Improve Your Career.](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/Napoleon-Dynamite.jpg)
 
-If you work as a software developer, most of your workday is spent dealing with people.
+作为一个开发者，你在日常工作的大部分时间里都在和各种人打交道。
 
 Immediately when you start your work for the day, you probably check email, Skype, or Slack, as you are interested in seeing if your work colleagues have something important to tell you.
 

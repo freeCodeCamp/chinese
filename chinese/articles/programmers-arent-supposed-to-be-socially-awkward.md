@@ -28,15 +28,15 @@
 修炼这些软技能比开发一个实实在在的应用更简单，并且只要你照着去做，你很可能会收获颇丰。
 
 
-### **1\. 表达善意**
+### **1\. 与人为善**
 
 ![](https://cdn-images-1.medium.com/max/1600/0*-4dWGC_4RI1FCEOC)
 
 Photo by  [Austin Distel][1]  on [Unsplash][2]
 
-You can be the smartest and the hardest-working person you know, but when you do not have good manners or lack kindness, others in your workplace might hate collaborating with you. Not because you lack the skills and the ability to write clean and maintainable code, but because of your attitude.
+你可能比你认识的人们更机灵更勤奋，但是如果你的行为不讨人喜欢，或者缺乏善意，你的同伴们可能会讨厌和你协作。是的，即使你写得一手好代码，维护代码的能力也不在话下，他们仍会因为你可恶的态度而讨厌和你协作。
 
-No matter how frustrating a bug is, do not pout, whine, or yell toward your colleagues. Those bad manners will not be able to fix your bug. It can even harm your personal and professional relationships and make it very difficult to get back on track later on.
+无论一个 bug 多么令人沮丧，请不要对你的同事生气、抱怨或大喊大叫。不礼貌的行为对修复 bug 并没有积极意义，反而会伤害你和同事之间的关系，并且这种伤害是很难弥补的。
 
 When you are kind, you are more likely to make a good impression on others as a human being in general.
 

@@ -1,6 +1,6 @@
 > * 原文地址：[How to build a JSON API with Python](https://www.freecodecamp.org/news/build-a-simple-json-api-in-python/)
 > * 原文作者：Peter Gleeson
-> * 译者：
+> * 译者：fearlessfe
 > * 校对者：
 
 

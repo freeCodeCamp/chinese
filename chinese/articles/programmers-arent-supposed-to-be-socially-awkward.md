@@ -7,27 +7,28 @@
 
 作为一个开发者，你在日常工作的大部分时间里都在和各种人打交道。
 
-Immediately when you start your work for the day, you probably check email, Skype, or Slack, as you are interested in seeing if your work colleagues have something important to tell you.
+你每天的工作可能会从查看邮件、Skype 或 Slack 消息开始，因为你想确认同事们有没有给你发什么重要信息。
 
-Then, when you write a response, the destination for your words is another person, not just another computer.
+然后，你会在电脑上回复信息，这些信息的接收者不是另一台电脑，而是一个活生生的人。
 
-Your main priority at work is to solve problems, which is done while collaborating on projects and hanging out with other people as part of a software development team.
+接着，你会以解决问题为目标，与团队其他成员协作开发项目或者和相关的人们讨论。这是你的主要工作内容。
 
-You attend meetings during the day and get the implementation requirements from other people.
+白天，你还会参加各种会议，收到各种开发需求。
 
-When you are finally ready to do one of the most enjoyable activities for a software developer, which is writing code, you are supposed to write a code which is primarily readable for humans. You do not write your software projects in binary codes, but instead in a programming language that is supposed to be easier for both you and teammates to understand.
+最后，你终于可以坐下来愉快地写代码——这是一个开发者最享受的事情——你还得考虑代码的可读性。你需要用自己和队友都容易理解的编程语言（而不是二进制代码）写项目。
 
-Even if you are working at a small company, or are a freelancer, you still have to deal with the non-technical people in the project that you are working on.
+即便你是在一个小公司上班，或者是一个自由职业者，在做项目的时候你仍然需要和一些没有技术背景的人们协作。
 
-We spend a lot of our waking hours with our work colleagues. It is even possible that we spend more time with them than with our close family members.
+我们每天的大部分时间都是和同事待在一起，花在工作上的时间很可能比和家人相处的时间还多。
 
-Becoming aware of this will help you realize the importance of having good relationships with others, especially your co-workers.
+所以，如何与他人（尤其是你的同事）相处，是一个重要话题。
 
-In this article, you can read some general tips that can help you improve your relationships at work, but that can be applied elsewhere as well.
+我会在这篇文章里就职场人际关系提供一些建议，当然在职场之外它们也是适用的。
 
-They are simpler to follow than the frameworks used to develop your applications, but these tips have a huge potential for return over investment.
+修炼这些软技能比开发一个实实在在的应用更简单，并且只要你照着去做，你很可能会收获颇丰。
 
-### **1\. Be very kind**
+
+### **1\. 表达善意**
 
 ![](https://cdn-images-1.medium.com/max/1600/0*-4dWGC_4RI1FCEOC)
 

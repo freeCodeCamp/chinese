@@ -1,6 +1,6 @@
-> * 原文地址：[Programmers Aren’t Supposed to Be Socially Awkward. Here Are 10 Social Skills To Improve Your Career.](https://www.freecodecamp.org/news/programmers-arent-supposed-to-be-socially-awkward/)
+> * 原文地址：[Programmers Don't Have to be Socially Awkward. Here Are 10 Social Skills To Improve Your Career.](https://www.freecodecamp.org/news/programmers-dont-have-to-be-socially-awkward/)
 > * 原文作者：[Fatos Morina](https://www.freecodecamp.org/news/author/fatosmorina/)
-> * 译者：Miya
+> * 译者：[Miya](https://github.com/miyaliu666)
 > * 校对者：
 
 ![Programmers Aren’t Supposed to Be Socially Awkward. Here Are 10 Social Skills To Improve Your Career.](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/Napoleon-Dynamite.jpg)

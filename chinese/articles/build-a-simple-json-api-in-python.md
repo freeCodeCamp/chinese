@@ -8,13 +8,23 @@
 
 The  [JSON API specification][1]  is a powerful way for enabling communication between client and server. It specifies the structure of the requests and responses sent between the two, using the JSON format.
 
+符合JSON规范的API是一种用于客户端和和服务器之间通信的方式。它使用JSON格式来限定两者之间请求和响应的结构。
+
 As a data format, JSON has the advantages of being lightweight and readable. This makes it very easy to work with quickly and productively. The specification is designed to minimise the number of requests and the amount of data that needs sending between client and server.
+
+作为一种数据格式，JSON具有轻量和可读的优势。这使得它非常快速、高效。JSON规范旨在最大限度的减少客户端和服务端之间请求的数量及数据量。
 
 Here, you can learn how to create a basic JSON API using Python and Flask. Then, the rest of the article will show you how to try out some of the features the JSON API specification has to offer.
 
+在这里，你可以学习如何使用Python和Flask构建基本的JSON API。然后，本文剩余部分将会向你展示如何试着去实现一些符合JSON API规范的特性。
+
 [Flask is a Python library][2]  that provides a 'micro-framework' for web development. It is great for rapid development as it comes with a simple-yet-extensible core functionality.
 
+Flask是一个为web开发提供“微框架”的Python库。它非常适合快速开发，因为它具有简单但可拓展的核心功能。
+
 A really basic example of how to send a JSON-like response using Flask is shown below:
+
+下面是一个展示如何使用Flask来发送类JSON响应的基础示例:
 
 ```python
 from flask import Flask
@@ -28,16 +38,27 @@ def example():
 
 This article will use two add-ons for Flask:
 
+本文将使用两个Flask的附加组件:
+
 -   [Flask-REST-JSONAPI][3]  will help develop an API that closely follows the JSON API specification.
 -   [Flask-SQLAlchemy][4]  will use  [SQLAlchemy][5]  to make creating and interacting with a simple database very straightforward.
 
+- [Flask-REST-JSONAPI][3] 帮助开发严格遵循JSON规范的API
+- [Flask-SQLAlchemy][4] 使用 [SQLAlchemy][5] 使得创建一个简单的数据库并与之交互变得非常简单。
+
 ### The big picture
 
+### 概览
+
 The end goal is to create an API that allows client-side interaction with an underlying database. There will be a couple of layers between the database and the client - a data abstraction layer and a resource manager layer.
+
+最终目标是创建一个允许客户端与底层数据库交互的API。在客户端和数据库之间有几层——数据抽象层和资源管理器层。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/07/flow.png)
 
 Here's an overview of the steps involved:
+
+
 
 1.  Define a database using Flask-SQLAlchemy
 2.  Create a data abstraction with  [Marshmallow-JSONAPI][6]

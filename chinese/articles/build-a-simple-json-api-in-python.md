@@ -24,7 +24,7 @@ Flask是一个为web开发提供“微框架”的Python库。它非常适合快
 
 A really basic example of how to send a JSON-like response using Flask is shown below:
 
-下面是一个展示如何使用Flask来发送类JSON响应的基础示例:
+下面是一个展示如何使用Flask来发送类JSON响应的基础示例
 
 ```python
 from flask import Flask
@@ -58,20 +58,33 @@ The end goal is to create an API that allows client-side interaction with an und
 
 Here's an overview of the steps involved:
 
-
+以下是大致的步骤：
 
 1.  Define a database using Flask-SQLAlchemy
 2.  Create a data abstraction with  [Marshmallow-JSONAPI][6]
 3.  Create resource managers with Flask-REST-JSONAPI
 4.  Create URL endpoints and start the server with Flask
 
+1. 使用 Flask-SQLAlchemy 定义数据库
+2. 使用 [Marshmallow-JSONAPI][6] 创建数据抽象
+3. 使用 Flask-REST-JSONAPI 创建资源管理器
+4. 创建 URL 端口并启动 Flask 服务
+
 This example will use a simple schema describing modern artists and their relationships to different artworks.
+
+这个例子将使用简单的模式来描述现代艺术家及其不同艺术品之间的关系。
 
 ### Install everything
 
+### 安装依赖
+
 Before getting started, you'll need to set up the project. This involves creating a workspace and virtual environment, installing the modules required, and creating the main Python and database files for the project.
 
+在开始之前，你需要配置项目。这涉及创建工作空间和虚拟环境，安装依赖模块，创建Python入口文件以及数据库文件。
+
 From the command line create a new directory and navigate inside.
+
+在命令行中新建一个文件夹并进入该文件夹。
 
 ```
 $ mkdir flask-jsonapi-demo
@@ -80,6 +93,7 @@ $ cd flask-jsonapi-demo/
 
 It is good practice to  [create virtual environments][7]  for each of your Python projects. You can skip this step, but it is strongly recommended.
 
+为每个Python项目创建[创建虚拟环境][7]是一种很好的做法。你可以跳过此步骤，但是强烈建议你不跳过。
 ```
 $ python -m venv .venv
 $ source .venv/bin/activate
@@ -88,13 +102,19 @@ $ source .venv/bin/activate
 
 Once your virtual environment has been created and activated, you can install the modules needed for this project.
 
+一旦创建并激活虚拟环境后，你就可以为该项目安装所需的依赖模块。
+
 ```
 $ pip install flask-rest-jsonapi flask-sqlalchemy
 ```
 
 Everything you'll need will be installed as the requirements for these two extensions. This includes Flask itself, and SQLAlchemy.
 
+安装的这两个拓展可以满足所有的需求。这包括 Flask 和 SQLAlchemy。
+
 The next step is to create a Python file and database for the project.
+
+下一步是为项目创建Python入口文件和数据库文件。
 
 ```
 $ touch application.py artists.db
@@ -102,13 +122,23 @@ $ touch application.py artists.db
 
 ### Create the database schema
 
+### 创建数据库结构
+
 Here, you will start modifying  `application.py`  to define and create the database schema for the project.
+
+在这里，你将修改 "application.py" 文件来定义并创建项目的数据库结构。
 
 Open  `application.py`  in your preferred text editor. Begin by importing some modules. For clarity, modules will be imported as you go.
 
+用你喜欢的文本编辑器打开 "application.py" 文件。首先导入一些模块。为清楚起见，模块将随时导入。
+
 Next, create an object called  `app`  as an instance of the Flask class.
 
+接下来，创建一个名为 "app" 的Flask实例对象。
+
 After that, use SQLAlchemy to connect to the database file you created. The final step is to define and create a table called  `artists`.
+
+之后，使用SQLAlchemy连接到你创建的数据库文件。最后一步是定义并创建一个名为 "artists" 的表。
 
 ```python
 from flask import Flask
@@ -128,22 +158,33 @@ class Artist(db.Model):
 ```
 
 ### Creating an abstraction layer
+### 创建数据抽象层
 
 The next step uses the  [Marshmallow-JSONAPI][8]  module to create a logical data abstraction over the tables just defined.
+下一步使用 [Marshmallow-JSONAPI][8] 模块在刚定义的表上创建逻辑数据抽象层。
 
 The reason to create this abstraction layer is simple. It gives you more control over how your underlying data is exposed via the API. Think of this layer as a lens through which the API client can view the underlying data clearly, and only the bits they need to see.
+创建此抽象层的原因很简单。通过API可以让你更好的控制底层数据的使用。可以把这层想象成镜头，通过这个镜头，API调用者可以清楚的了解底层数据，同时他们只需要知道怎么使用API。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/07/Untitled-Diagram-Page-2.png)
 
 In the code below, the data abstraction layer is defined as a class which inherits from Marshmallow-JSONAPI's  `Schema`  class. It will provide access via the API to both single records and multiple records from the artists table.
+在下面的代码中，数据抽象层是一个继承 Marshmallow-JSONAPI 模块中 Schema 类的类。通过API，它可以提供对"artists"表中单个记录和多个记录的访问。
 
 Inside this block, the  `Meta`  class defines some metadata. Specifically, the name of the URL endpoint for interacting with single records will be  `artist_one`, where each artist will be identified by a URL parameter  `<id>`. The name of the endpoint for interacting with many records will be  `artist_many`.
+在代码块中，"Meta"类定义了一些元数据。具体来说，'artist_one'是访问单个记录的URL端口名称，其中每个艺术家由URL参数"id"标示。'artist_many'是访问多条记录的URL端口名称。
 
 The remaining attributes defined relate to the columns in the artists table. Here, you can control further how each is exposed via the API.
 
+其余的属性和artists表中的列相关联。这里，你可以进一步控制每个API的访问方式。
+
 For example, when making POST requests to add new artists to the database, you can make sure the  `name`  field is mandatory by setting  `required=True`.
 
+例如，当发出POST请求向数据库中添加新的艺术家时，你可以设置‘required=True’来确保‘name’字段时必填的。
+
 And if for any reason you didn't want the  `birth_year`  field to be returned when making GET requests, you can specify so by setting  `load_only=True`.
+
+并且如果由于任何原因你不希望在GET请求中返回‘birth_year’字段，你可以为该字段设置‘load_only=True’。
 
 ```python
 from marshmallow_jsonapi.flask import Schema
@@ -162,16 +203,25 @@ genre <span class="token operator" style="box-sizing: inherit; margin: 0px; padd
 ```
 
 ### Create resource managers and URL endpoints
+### 创建资源管理器和URL端口
 
 The final piece of the puzzle is to create a resource manager and corresponding endpoint for each of the routes /artists and /artists/id.
+最后一个难题是为每个路由(/artists, /artists/id)创建资源管理器和对应的endpoint。
 
 Each resource manager is defined as a class that inherits from the Flask-REST-JSONAPI classes  `ResourceList`  and  `ResourceDetail`.
+每个资源管理器被定义为一个继承自Flask-REST-JSONAPI中`ResourceList`和`ResourceDetail`类的类。
 
 Here they take two attributes.  `schema`  is used to indicate the data abstraction layer the resource manager uses, and  `data_layer`  indicates the session and data model that will be used for the data layer.
+这里他们有两个属性。 `schema`用于表示资源管理器使用的数据抽象层，`data_layer`表示将用于数据层的会话和数据模型。
 
 Next, define  `api`  as an instance of Flask-REST-JSONAPI's  `Api`  class, and create the routes for the API with  `api.route()`. This method takes three arguments - the data abstraction layer class, the endpoint name, and the URL path.
 
+
+接下来，将`api`定义为Flask-REST-JSONAPI的`Api`类的实例，并使用`api.route（）`创建API的路由。 此方法有三个参数 - 数据抽象层类，端点名称和URL路径。
+
 The last step is to write a main loop to launch the app in debug mode when the script is run directly. Debug mode is great for development, but it is not suitable for running in production.
+
+最后一步是编写一个主循环，以便在直接运行脚本时以调试模式启动应用程序。 调试模式非常适合开发，但它不适合在生产中运行。
 
 ```python
 # Create resource managers and endpoints
@@ -191,34 +241,43 @@ api.route(ArtistOne, 'artist_one', '/artists/<int:id>')
 ```
 
 ### Make GET and POST requests
+### 发送GET和POST请求
 
 Now you can start using the API to  [make HTTP requests][9]. This could be from a web browser, or from a command line tool like curl, or from within another program (e.g., a Python script using the Requests library).
+现在你可以开始使用API来[发送HTTP请求] [9]。 这可以来自web浏览器，或来自curl等命令行工具，或来自其他程序（例如，使用Requests库的Python脚本）。
 
 To launch the server, run the  `application.py`  script with:
-
+运行以下脚本来启动服务器：
 ```
 $ python application.py
 ```
 
 In your browser, navigate to  [http://localhost:5000/artists][10]. You will see a JSON output of all the records in the database so far. Except, there are none.
+在浏览器中，打开[http://localhost:5000/artists][10] 。你将会看到数据库中所有数据以JSON格式输出。除此之外，什么也没有。
 
 To start adding records to the database, you can make a POST request. One way of doing this is from the command line using curl. Alternatively, you could use a tool like  [Insomnia][11], or perhaps code up a simple HTML user interface that posts data using a form.
+向数据库添加记录，你可以发出POST请求。其中一种方式是在命令行中使用curl。或者，您可以使用[Insomnia] [11]之类的工具，或者编写一个使用表单发送数据的简单HTML用户界面。
+
 
 With  [curl][12], from the command line:
-
+在命令行中使用 [curl][12] ：
 ```
 curl -i -X POST -H 'Content-Type: application/json' -d '{"data":{"type":"artist", "attributes":{"name":"Salvador Dali", "birth_year":1904, "genre":"Surrealism"}}}' http://localhost:5000/artists
 ```
 
 Now if you navigate to  [http://localhost:5000/artists][14], you will see the record you just added. If you were to add more records, they would all show here as well, as this URL path calls the  `artists_many`  endpoint.
+现在，如果你导航到[http：// localhost：5000 / artists] [14]，你将看到刚刚添加的记录。如果你要添加更多记录，它们也将在这里显示，因为这个URL路径调用`artists_many`endpoint。
 
 To view just a single artist by their  `id`  number, you can navigate to the relevant URL. For example, to see the first artist, try  [http://localhost:5000/artists/1][15].
-
+通过“id”编号查看单个艺术家，您可以导航到相关的URL。 例如，要查看第一位艺术家，请尝试[http：// localhost：5000 / artists / 1] [15]。
 ### Filtering and sorting
+### 过滤和排序
 
 One of the neat features of the JSON API specification is the ability to return the response in more useful ways by defining some parameters in the URL. For instance, you can sort the results according to a chosen field, or filter based on some criteria.
+JSON API规范的一个简洁功能是能够通过在URL中定义一些参数以更有用的方式返回响应。 例如，您可以根据选定的字段对结果进行排序，也可以根据某些条件进行过滤。
 
 Flask-REST-JSONAPI comes with this built in.
+Flask-REST-JSONAPI内置了该功能。
 
 To sort artists in order of birth year, just navigate to  [http://localhost:5000/artists?sort=birth\_year][16]. In a web application, this would save you from needing to sort results on the client side, which could be costly in terms of performance and therefore impact the user experience.
 

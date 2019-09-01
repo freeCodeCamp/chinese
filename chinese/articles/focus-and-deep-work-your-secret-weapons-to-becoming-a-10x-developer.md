@@ -1,66 +1,66 @@
 > * 原文地址：[Focus and Deep Work — Your Secret Weapons to Becoming a 10X Developer](https://www.freecodecamp.org/news/focus-and-deep-work-your-secret-weapons-to-becoming-a-10x-developer-8e203a6ad291/)
 > * 原文作者：Bar Franek
-> * 译者：
+> * 译者：[lingzi](https://github.com/lingziyb)
 > * 校对者：
 
-Or how to become one of those highly-paid “10x Rockstar Ninja” developers companies love to hire.
+**换句话说，就是怎样才能成为互联网大厂公司程序员中的一员。**
 
-It doesn’t matter if you’re working on a side hustle or if you’re a junior developer wanting to get noticed and promoted. It doesn’t matter if you’re a lead developer looking for a change of pace, from a corporate gig to a start-up or the other way around. It doesn’t matter if you’re jobless out of college.
+不管你是一个正在忙着工作的职员，还是一个想要得到他人关注和技能提升的初级程序员；不管你是一个正打算变换路线，从公司离职去创业或者从事其他事情的领导者，还是一个刚毕业的没工作的大学生。这都没关系！
 
-只要你还是一个程序员，没有什么技能比专注和钻研对你的成功更重要。
+只要你是一个程序员，没有什么技能比专注和钻研对你的成功更重要。
 
-From Cal Newport’s book Deep Work:
+作者Cal Newport 的 《 Deep Work 》中写到:
 
-> “The Deep Work Hypothesis: The ability to perform deep work is becoming increasingly rare and at the exact same time it is becoming increasingly valuable in our economy. … the few who cultivate this skill, and then make it the core of their working life, will thrive.”
+> **“The Deep Work 假设：**执行深度工作的能力正变得越来越罕见，同时，它对我们的经济生活也越来越重要。...少部分拥有这种技能的人，在工作和生活中使用它，将会受益无穷。”
 >
 > — Deep Work p.14
 
-I’m going to use some points from Deep Work to tie together my thoughts on becoming a successful, in-demand developer. I highly recommend reading it if you’re in the technology field in any capacity.
+对于成为一个成功的，被市场需求的开发者，我将使用一些《Deep Work》的观点并结合我自己的思想。如果你是一个在任何技术领域的人，我强烈建议您阅读它。
 
-From Fear of Code to Lead Developer.
-I’m a self-taught programmer. But I didn’t start programming until my late 20s. I’ve always considered myself an artistic person and figured I’d end up in a creative field.
+### 从恐惧代码到技术负责人。
+编程，我是自学成才。但是，我是20岁才开始编程的。我一直觉得自己是一个最终能进入创造性领域的艺术家。
 
-And I did. After college I started a company that did graphics and web design for small, local businesses. I was a pro at Photoshop and knew enough HTML and CSS to be dangerous.
+我做到了。大学毕业后，我 创办了一家为小型本地企业提供图像和网页设计的公司。我是 Photoshop 的专家，并且知道 HTML 和 CSS 是危险的。
 
-But anything more complicated, requiring even a line of PHP, I had to outsource.
+更恼火的是，只要写一行 PHP（一种程序语言） ，我就得外包出去。
 
-I was petrified of code for a very long time and left it to the folks with Computer Science degrees.
+我被代码吓到了很长一段时间，在那期间，我都不碰它，都把相应的工作交给有计算机科学学位的人。
 
-“One wrong keystroke and the client’s business could go up in flames…” I thought. I wasn’t too far off honestly (in the days before version control, there was no turning back with FTP).
+“敲错一个代码，客户的业务将会不能运行...”，我觉得。老实说，我不太靠谱（在没有版本控制之前，FTP都不能回退代码的）。
 
-Now I’m a lead developer for a Fortune 50 company working on a product that entertains millions of people every month.
+现在我是一家财富50强的公司的技术负责人，所开发的是一个每月有数百万用户的产品。
 
-How’d I get here in a few short years? 🤔
+我是怎样在短短几年内到这的呢？🤔
 
-My “secret” is getting good at focus and deep work. There’s nothing special about me. I took the time to train myself how to focus on one specific thing, without distraction, for an extended period of time.
+我的“秘诀”就是专注和深入工作。没什么特别的。我花时间锻炼自己怎样长时间专注于一件特定的事情，不分心。
 
-Code is Art.
-Programming is very much a creative pursuit.
+### 代码是一种艺术。
 
-It may seem technical and dry to a regular person, but you are a creator. You’re creating something out of nothing. That “nothing” can be an idea in your head for an app or a feature request from a product manager.
+编程是一种创造性的追求。
 
-That thing doesn’t exist yet, but you’re going to bring it to life. Not with paint or words, but with code (OK, some words, as long as they’re not reserved words).
+对普通人来说，它是技术且枯燥的，但你是一个创造者。你正在创造世界上没有的东西。所谓“没有”，就是你脑海中对于应用程序的一个想法，又或者是产品经理的功能需求。
 
-If you have any desire to produce at a high level, then you have to practice.
+它不存在，但你要创造它。不是用绘画也不是用文字，而是用代码（好吧，有文字，只要不是保留字）。
 
-The quantity and quality of your output increases when you get better at being able to stay focused for longer, intentional periods.
+如果你有一些想法，但要高水准的实现，那么，你就必须练习。
 
-Art, music, and writing all require long periods of uninterrupted time where the myelin thickens on those synapses between your brain cells. Programming is no different.
+当你能更好的专注于某件事很长一段时间，输出的数量和质量都会提升。
 
-You get better with practice and time. And you can get a lot better, in less time, when you make your practice more effective.
+艺术，音乐和写作都需要很长一段连续的时间。科普一下，在此期间，脑细胞之间的突触上的髓鞘变稠。编程也不例外。
 
-Yes, You Can Be a 10x Developer (But 5x, 2x and 1x Are Great Too)
-Let me preface this by saying that I hate buzzwords like “rockstar” “ninja” and “10x developer.” Every developer does, but companies and recruiters love to use them.
+你会在练习和掌控时间上越来越好。当你的练习越有效时，你可以在更短的时间内，获得更好的成绩。
 
-Despite the cheesiness, there is a lot of truth behind the “10x Developer” idea.
+是的。你能成为那个10倍高效的开发者（5倍，2倍还要1倍，也很棒）。我说明一下，我讨厌这种流行语 “摇滚明星”、“忍者”、“10倍开发者”。每一个开发人员都是的，但是公司和招聘人员很喜欢这样称呼。
 
-It doesn’t mean that one person can replace ten. It means that some developers get more done, with better quality, and in less time. They do it consistently over the long run without working any harder than anyone else.
+尽管俗气，但是在 “10倍开发者” 理念背后还是有很多真理的。
 
-This ability is not a natural gift. You aren’t born with it and it’s not something you can “turn on.” It’s a skill that you can, and must, practice and train.
+它不是说一个人可以代替十个人，而是说一些开发者能在更少的时间更高质量的完成更多的事情。他们始终如一的做到了这一点，并不是比任何一个人更努力。
 
-I’ve been on the hiring side dozens of times and I will tell you any company would love to have an entire team of 10x developers. But that’s not reality.
+这种能力不是与生俱来。也不是你可以 “打开” 的东西。它是一种可以，而且必须练习和训练的技能。
 
-There are more open developer jobs than there are qualified developers to fill them. Businesses are having trouble filling positions with any qualified developers, let alone (some multiplier)x developers.
+我在招聘方面工作了几十次，我会告诉你公司都想拥有一个由10倍开发者组成的团队。但是，那是不现实的。
+
+应该提供更多开放的开发者工作机会，而不是找合格的开发者去填补公司的职位。公司连一般的合格的开发者都很难找到，更别说找（多少）倍开发者了。
 
 “Senior executives believe that the lack of quality developer talent is one of the biggest potential threats to their growth.” - The Developer Coefficient
 It’s hard to find good talent.

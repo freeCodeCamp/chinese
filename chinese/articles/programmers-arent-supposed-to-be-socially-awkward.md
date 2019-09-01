@@ -11,19 +11,19 @@
 
 然后，你会在电脑上回复信息，这些信息的接收者不是另一台电脑，而是一个活生生的人。
 
-接着，你会以解决问题为目标，与团队其他成员协作开发项目或者和相关的人们讨论。这是你的主要工作内容。
+接着，你会以解决问题为目标，与团队其他成员协作开发项目或者和相关的人们讨论。这是你作为软件开发团队的一员的首要任务。
 
 白天，你还会参加各种会议，收到各种开发需求。
 
 最后，你终于可以坐下来愉快地写代码——这是一个开发者最享受的事情——你还得考虑代码的可读性。你需要用自己和队友都容易理解的编程语言（而不是二进制代码）写项目。
 
-即便你是在一个小公司上班，或者是一个自由职业者，在做项目的时候你仍然需要和一些没有技术背景的人们协作。
+即便你是在一个小公司上班，或者是一个自由职业者，在做项目的时候你仍然需要和一些非技术人员协作。
 
-我们每天的大部分时间都是和同事待在一起，花在工作上的时间很可能比和家人相处的时间还多。
+我们每天的大部分时间都是和同事待在一起，花在工作上的时间很可能比和亲密家人相处的时间还多。
 
 所以，如何与他人（尤其是你的同事）相处，是一个重要话题。
 
-我会在这篇文章里就职场人际关系提供一些建议，当然在职场之外它们也是适用的。
+我会在这篇文章里就改善职场人际关系提供一些建议，当然在职场之外它们也是适用的。
 
 修炼这些软技能比开发一个实实在在的应用更简单，并且只要你照着去做，你很可能会收获颇丰。
 
@@ -34,29 +34,30 @@
 
 Photo by  [Austin Distel][1]  on [Unsplash][2]
 
-你可能比你认识的人们更机灵更勤奋，但是如果你的行为不讨人喜欢，或者缺乏善意，你的同伴们可能会讨厌和你协作。是的，即使你写得一手好代码，维护代码的能力也不在话下，他们仍会因为你可恶的态度而讨厌和你协作。
+你可能特别机灵特别勤奋，但是如果你的行为不讨人喜欢，或者缺乏善意，你的同伴们可能会讨厌和你协作。是的，即使你写得一手好代码，维护代码的能力也不在话下，他们仍会因为你可恶的态度而讨厌和你协作。
 
-无论一个 bug 多么令人沮丧，请不要对你的同事生气、抱怨或大喊大叫。不礼貌的行为对修复 bug 并没有积极意义，反而会伤害你和同事之间的关系，并且这种伤害是很难弥补的。
+无论一个 bug 多么令人沮丧，请不要对你的同事生气、抱怨或大喊大叫。态度粗暴对于 bug 修复并没有积极意义，反而会伤害你和同事之间的关系，并且这种伤害是很难弥补的。
 
-When you are kind, you are more likely to make a good impression on others as a human being in general.
+如果你的态度友善一点，人们对你的印象自然会更好。
 
-Simple acts of kindness, such as giving someone a ride to or from work, mentioning someone’s favor in front of others, cleaning up a colleague’s space that’s not your job to keep clean, etc., should be done repeatedly, despite knowing your colleagues for a long time.
+表达友善的方式可能很简单，比如上下班让别人搭个顺风车，在其他人面前提起某人的恩惠，帮助同事清理环境卫生（即便这并不是你的工作）等等。就算你和他们已经共事很长时间了，这些传达善意的事情也值得反复做。
 
-Your kindness will trigger, at least, a basic human decency from your colleagues as well.
+当你传达善意的时候，你的同事会感受到，然后他们至少会表现出本能的礼貌。
 
-### **2\. Always be genuinely interested in your colleagues**
+### **2\. 对同事真诚以待**
 
-Try to understand if they need your help, and do not hesitate to kindly help them. When you see that they are stressed, anxious, or going through tough times, talk to them and show readiness to brainstorm solutions about the problems they are involved in.
+试着理解他们是否需要你的帮助，并且毫不犹豫地予以帮助。当你发现他们有压力、烦躁不安或者遇到一些困难的时候，和他们聊聊天，告诉他们你可以一起头脑风暴，解决问题。
 
-Even if you cannot help them with their current task, try to encourage them with motivational phrases that can uplift them emotionally. Make them feel that they are important to the team and capable of overcoming the obstacles they’re facing and the down times they might be in.
+即使你无法帮助他们解决问题，你也可以说一些安慰的话来鼓励他们，为他们打气。让他们感觉到自己对团队来说是很重要的以及他们是可以处理好所遇到的麻烦的。
 
-Your words alone can magically improve the mood of your colleagues.
+哪怕只是几句话，你的鼓励也会帮助你的同事们舒缓情绪。
 
-### **3\. Smile often**
+### **3\. 常常微笑**
 
-Even printing a ‘Hello world’ statement takes more time and effort than smiling and sending smiley emoticons. It may seem trivial, but smiling can lighten up the tension.
+给人一个微笑或者发送一个笑脸表情比任何话语（甚至是 ”Hello World“ 这么简单的话）都更容易。微笑看似微不足道，却能缓解紧张的气氛。
 
-A  [scientific study][3]  conducted in 2011 at the Face Research Laboratory at the University of Aberdeen in Scotland found that smiling makes you feel more attractive, relaxed, sincere, and confident.
+苏格兰阿伯丁大学面部研究实验室在 2011 年的一项[科学研究][3] 表明，微笑可以让你看起来更有吸引力，更放松，更真诚和更自信。
+
 
 Moreover,  [one Swedish study][4]  published in the Scandinavian Journal of Psychology found that humans have an automatic reaction that mimics the facial expressions of those they interact with.
 

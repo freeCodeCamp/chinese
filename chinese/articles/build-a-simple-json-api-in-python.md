@@ -8,7 +8,7 @@
 
 The  [JSON API specification][1]  is a powerful way for enabling communication between client and server. It specifies the structure of the requests and responses sent between the two, using the JSON format.
 
-符合JSON规范的API是一种用于客户端和和服务器之间通信的方式。它使用JSON格式来限定两者之间请求和响应的结构。
+JSON API规范是一种用于客户端和和服务器之间通信的方式。它使用JSON格式来限定两者之间请求和响应的结构。
 
 As a data format, JSON has the advantages of being lightweight and readable. This makes it very easy to work with quickly and productively. The specification is designed to minimise the number of requests and the amount of data that needs sending between client and server.
 
@@ -20,7 +20,7 @@ Here, you can learn how to create a basic JSON API using Python and Flask. Then,
 
 [Flask is a Python library][2]  that provides a 'micro-framework' for web development. It is great for rapid development as it comes with a simple-yet-extensible core functionality.
 
-Flask是一个为web开发提供“微框架”的Python库。它非常适合快速开发，因为它具有简单但可拓展的核心功能。
+[Flask][2]是一个为web开发提供“微框架”的Python库。它非常适合快速开发，因为它具有简单但可拓展的核心功能。
 
 A really basic example of how to send a JSON-like response using Flask is shown below:
 
@@ -52,7 +52,7 @@ This article will use two add-ons for Flask:
 
 The end goal is to create an API that allows client-side interaction with an underlying database. There will be a couple of layers between the database and the client - a data abstraction layer and a resource manager layer.
 
-最终目标是创建一个允许客户端与底层数据库交互的API。在客户端和数据库之间有几层——数据抽象层和资源管理器层。
+最终目标是创建允许客户端与底层数据库交互的API。在客户端和数据库之间有几层——数据抽象层和资源管理器层。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/07/flow.png)
 
@@ -109,8 +109,7 @@ $ pip install flask-rest-jsonapi flask-sqlalchemy
 ```
 
 Everything you'll need will be installed as the requirements for these two extensions. This includes Flask itself, and SQLAlchemy.
-
-安装的这两个拓展可以满足所有的需求。这包括 Flask 和 SQLAlchemy。
+你需要安装 Flask 和 SQLAlchemy 这两个拓展。
 
 The next step is to create a Python file and database for the project.
 
@@ -164,7 +163,7 @@ The next step uses the  [Marshmallow-JSONAPI][8]  module to create a logical dat
 下一步使用 [Marshmallow-JSONAPI][8] 模块在刚定义的表上创建逻辑数据抽象层。
 
 The reason to create this abstraction layer is simple. It gives you more control over how your underlying data is exposed via the API. Think of this layer as a lens through which the API client can view the underlying data clearly, and only the bits they need to see.
-创建此抽象层的原因很简单。通过API可以让你更好的控制底层数据的使用。可以把这层想象成镜头，通过这个镜头，API调用者可以清楚的了解底层数据，同时他们只需要知道怎么使用API。
+创建此抽象层的原因很简单。通过API可以让你更好的控制底层数据的访问。可以把这层想象成一个镜头，通过这个镜头，API调用者很简单就能够了解底层数据。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/07/Untitled-Diagram-Page-2.png)
 
@@ -172,15 +171,15 @@ In the code below, the data abstraction layer is defined as a class which inheri
 在下面的代码中，数据抽象层是一个继承 Marshmallow-JSONAPI 模块中 Schema 类的类。通过API，它可以提供对"artists"表中单个记录和多个记录的访问。
 
 Inside this block, the  `Meta`  class defines some metadata. Specifically, the name of the URL endpoint for interacting with single records will be  `artist_one`, where each artist will be identified by a URL parameter  `<id>`. The name of the endpoint for interacting with many records will be  `artist_many`.
-在代码块中，"Meta"类定义了一些元数据。具体来说，'artist_one'是访问单个记录的URL端口名称，其中每个艺术家由URL参数"id"标示。'artist_many'是访问多条记录的URL端口名称。
+在代码块中，"Meta"类定义了一些元数据。具体来说，'artist_one'是访问单个记录的URL端口名称，其中每个艺术家由URL参数"id"标识。'artist_many'是访问多条记录的URL端口名称。
 
 The remaining attributes defined relate to the columns in the artists table. Here, you can control further how each is exposed via the API.
 
-其余的属性和artists表中的列相关联。这里，你可以进一步控制每个API的访问方式。
+其余的属性和artists表中的列相关联。这里，通过API你可以进一步控制每列数据的访问方式。
 
 For example, when making POST requests to add new artists to the database, you can make sure the  `name`  field is mandatory by setting  `required=True`.
 
-例如，当发出POST请求向数据库中添加新的艺术家时，你可以设置‘required=True’来确保‘name’字段时必填的。
+例如，当发出POST请求向数据库中添加新的艺术家时，你可以设置‘required=True’来确保‘name’字段为必填的。
 
 And if for any reason you didn't want the  `birth_year`  field to be returned when making GET requests, you can specify so by setting  `load_only=True`.
 
@@ -216,11 +215,11 @@ Here they take two attributes.  `schema`  is used to indicate the data abstracti
 
 Next, define  `api`  as an instance of Flask-REST-JSONAPI's  `Api`  class, and create the routes for the API with  `api.route()`. This method takes three arguments - the data abstraction layer class, the endpoint name, and the URL path.
 
-接下来，将`api`定义为Flask-REST-JSONAPI的`Api`类的实例，并使用`api.route（）`创建API的路由。 此方法有三个参数 - 数据抽象层类，端点名称和URL路径。
+接下来，将`api`定义为Flask-REST-JSONAPI的`Api`类的实例，并使用`api.route（）`创建API的路由。 该方法有三个参数 - 数据抽象层类，端点名称和URL路径。
 
 The last step is to write a main loop to launch the app in debug mode when the script is run directly. Debug mode is great for development, but it is not suitable for running in production.
 
-最后一步是编写一个主循环，以便在直接运行脚本时以调试模式启动应用程序。 调试模式非常适合开发，但它不适合在生产中运行。
+最后一步是编写主函数，并在调试，模式下启动应用。 调试模式非常适合开发，但它不适合在生产中运行。
 
 ```python
 # Create resource managers and endpoints
@@ -255,7 +254,7 @@ In your browser, navigate to  [http://localhost:5000/artists][10]. You will see 
 在浏览器中，打开[http://localhost:5000/artists][10] 。你将会看到数据库中所有数据以JSON格式输出。除此之外，什么也没有。
 
 To start adding records to the database, you can make a POST request. One way of doing this is from the command line using curl. Alternatively, you could use a tool like  [Insomnia][11], or perhaps code up a simple HTML user interface that posts data using a form.
-向数据库添加记录，你可以发出POST请求。其中一种方式是在命令行中使用curl。或者，您可以使用[Insomnia] [11]之类的工具，或者编写一个使用表单发送数据的简单HTML用户界面。
+你可以发送POST请求来向数据库添加记录。其中一种方式是在命令行中使用curl。或者，你可以使用[Insomnia] [11]之类的工具，或者编写一个使用表单发送数据的简单HTML用户界面。
 
 
 With  [curl][12], from the command line:
@@ -268,29 +267,30 @@ Now if you navigate to  [http://localhost:5000/artists][14], you will see the re
 现在，如果你导航到[http：// localhost：5000 / artists] [14]，你将看到刚刚添加的记录。如果你要添加更多记录，它们也将在这里显示，因为这个URL路径调用`artists_many`endpoint。
 
 To view just a single artist by their  `id`  number, you can navigate to the relevant URL. For example, to see the first artist, try  [http://localhost:5000/artists/1][15].
-通过“id”编号查看单个艺术家，您可以导航到相关的URL。 例如，要查看第一位艺术家，请尝试[http：// localhost：5000 / artists / 1] [15]。
+您可以导航到相关的URL来通过“id”编号查看单个艺术家。 例如，要查看第一位艺术家，请尝试[http：// localhost：5000 / artists / 1] [15]。
+
 ### Filtering and sorting
 ### 过滤和排序
 
 One of the neat features of the JSON API specification is the ability to return the response in more useful ways by defining some parameters in the URL. For instance, you can sort the results according to a chosen field, or filter based on some criteria.
-JSON API规范的一个简洁功能是能够通过在URL中定义一些参数以更有用的方式返回响应。 例如，您可以根据选定的字段对结果进行排序，也可以根据某些条件进行过滤。
+JSON API规范的一个有用功能是能够通过在URL中定义一些参数以更有用的方式返回响应结果。 例如，你可以根据选定的字段对结果进行排序，也可以根据某些条件进行过滤。
 
 Flask-REST-JSONAPI comes with this built in.
 Flask-REST-JSONAPI内置了该功能。
 
 To sort artists in order of birth year, just navigate to  [http://localhost:5000/artists?sort=birth\_year][16]. In a web application, this would save you from needing to sort results on the client side, which could be costly in terms of performance and therefore impact the user experience.
-要按出生年份排序艺术家，只需导航到[http：//localhost：5000/artists？sort=birth\year] [16]。在Web应用程序中，这将使您无需在客户端对结果进行排序，这在性能方面可能成本很高，因此会影响用户体验。
+要按出生年份排序艺术家，只需导航到[http：//localhost：5000/artists？sort=birth\year] [16]。在Web应用程序中，这将使你无需在客户端对结果进行排序，这在性能方面成本很高，因此会影响用户体验。
 
 Filtering is also easy. You append to the URL the criteria you wish to filter on, contained in square brackets. There are three pieces of information to include:
 
-过滤也很容易。您将要筛选的条件附加到URL，包含在方括号中。有三条信息包括：
+实现过滤也很容易。将筛选条件以方括号的形式添加到URL末尾。包括以下三条信息：
 
 -   "name" - the field you are filtering by (e.g.,  `birth_year`)
 -   "op" - the filter operation ("equal to", "greater than", "less than" etc.)
 -   "val" - the value to filter against (e.g., 1900)
-- "name"- 过滤的字段（比如‘birth_year’）
-- "op" - 过滤操作符（等于，大于，小于等）
-- "val" - 过滤的值（例如 1990）
+-  "name"- 过滤的字段（比如‘birth_year’）
+-  "op" - 过滤操作符（等于，大于，小于等）
+-  "val" - 过滤的值（例如 1990）
 
 For example, the URL below retrieves artists whose birth year is greater than 1900:
 
@@ -300,48 +300,48 @@ For example, the URL below retrieves artists whose birth year is greater than 19
 
 This functionality makes it much easier to retrieve only relevant information when calling the API. This is valuable for improving performance, especially when retrieving potentially large volumes of data over a slow connection.
 
-此功能使得在调用API时仅检索相关信息变得更加容易。这对于提高性能很有价值，尤其是在通过慢速连接检索潜在的大量数据时。
+此功能使得在调用API时仅检索相关信息变得更加容易。这对于提高性能很有价值，尤其是在较慢的网络环境查询大量数据时。
 ### Pagination
 ### 分页
 
 Another feature of the JSON API specification that aids performance is pagination. This is when large responses are sent over several "pages", rather than all in one go. You can control the page size and the number of the page you request in the URL.
 
-JSON API另外一个可以提升性能的特性是分页。这是通过几个“页面”发送大型响应，而不是一次性发送。您可以在URL中控制页面大小和请求的页面数。
+JSON API另外一个可以提升性能的特性是分页。这使得大量数据可以通过多个页面返回，而不是一次性发送。你可以在URL中控制请求的页数和每页数据量。
 
 So, for example, you could receive 100 results over 10 pages instead of loading all 100 in one go. The first page would contain results 1-10, the second page would contain results 11-20, and so on.
 
-因此，例如，您可以在10页上收到100个结果，而不是一次性加载所有100个结果。第一页将包含结果1-10，第二页将包含结果11-20，依此类推
+因此，例如，您可以在10页上收到100个结果，而不是一次性加载所有100个结果。第一页将包含1-10条结果，第二页将包含11-20条结果，依此类推
 
 To specify the number of results you want to receive per page, you can add the parameter ?page\[size\]=X to the URL, where X is the number of results. Flask-REST-JSONAPI uses 30 as the default page size.
 
-要指定每页要接收的结果数，可以将参数？page \ [size \] = X添加到URL，其中X是结果数。 Flask-REST-JSONAPI使用30作为默认页面大小。
+要指定每页接收的结果数，可以将参数 ?page[size]=X 添加到URL，其中X是每页结果数。 Flask-REST-JSONAPI使用30作为默认页面数量。
 
 To request a given page number, you can add the parameter ?page\[number\]=X, where is the page number. You can combine both parameters as shown below:
 
-要请求给定的页码，可以添加参数？page \ [number \] = X，其中是页码。您可以组合这两个参数，如下所示：
+要请求指定的页码，可以添加参数 ?page[number]=X，其中是页码数。您可以组合这两个参数，如下所示：
 
 [http://localhost:5000/artists?page\[size\]=2&page\[number\]=2][18]
 
 This URL sets the page size to two results per page, and asks for the second page of results. This would return the third and fourth results from the overall response.
 
-此URL将页面大小设置为每页两个结果，并请求第二页结果。这将返回整体响应的第三和第四个结果。
+此URL将请求第二页数据，每页两条结果。这将返回整体数据的第三和第四条结果。
 
 ### Relationships
 ### 关联表查询
 
 Almost always, data in one table will be related to data stored in another. For instance, if you have a table of artists, chances are you might also want a table of artworks. Each artwork is related to the artist who created it.
 
-通常，一个表中的数据将与存储在另一个表中的数据相关。例如，如果你有一张艺术家的表，你可能也想要一张艺术品表。每件艺术品都与创作它的艺术家有关。
+通常，一个表中的数据与存储在另一个表中的数据相关。例如，如果你有一张艺术家的表，你可能也需要一张艺术品表。每件艺术品都与创作它的艺术家有关。
 
 The JSON API specification allows you to work with relational data easily, and the Flask-REST-JSONAPI lets you take advantage of this. Here, this will be demonstrated by adding an artworks table to the database, and including relationships between artist and artwork.
 
-SON API规范允许您轻松处理关系数据，Flask-REST-JSONAPI允许您利用此功能。在这里，将通过向数据库添加艺术品表来演示这一点，并包括艺术家和艺术品之间的关系。
+JSON API规范允许您轻松处理关系数据，Flask-REST-JSONAPI允许你利用此功能。在这里，将通过向数据库添加艺术品表来演示这一点，并包括艺术家和艺术品之间的关系。
 
 To implement the artworks example, it will be necessary to make a few changes to the code in  `application.py`.
-要实现艺术作品示例，有必要对`application.py`中的代码进行一些更改。
+要演示艺术作品的例子，需要对`application.py`中的代码进行一些更改。
 
 First, make a couple of extra imports, then create a new table which relates each artwork to an artist:
-首先，进行一些额外的导入，然后创建一个新表格，将每个艺术作品与艺术家联系起来：
+首先，一些额外的模块，然后创建一个艺术家与艺术品向关联的表格：
 
 ```python
 from marshmallow_jsonapi.flask import Relationship
@@ -382,11 +382,11 @@ artist_id <span class="token operator" style="box-sizing: inherit; margin: 0px; 
 
 This defines an abstraction layer for the artwork table, and adds a relationship between artist and artwork to the  `ArtistSchema`  class.
 
-这为艺术作品表定义了一个抽象层，并将艺术家和艺术作品之间的关系添加到了“ArtistSchema”类。
+这为艺术品表定义了一个抽象层，并将艺术家和艺术品之间的关系添加到了“ArtistSchema”类。
 
 Next, define new resource managers for accessing artworks many at once and one at a time, and also for accessing the relationships between artist and artwork.
 
-接下来，定义新的资源管理器，一次一个地访问一些艺术品，一次访问艺术家和艺术品之间的关系。
+接下来，为一次访问多个或一次访问一个艺术品和艺术家与艺术品之间的关系定义新的资源管理器。
 
 ```python
 class ArtworkMany(ResourceList):
@@ -401,7 +401,7 @@ class ArtworkOne(ResourceDetail):
 ```
 
 Finally, add some new endpoints:
-最后，添加一些新的端点
+最后，添加一些新的端点：
 
 ```python
 api.route(ArtworkOne, 'artwork_one', '/artworks/<int:id>')
@@ -411,40 +411,53 @@ api.route(ArtistArtwork, 'artist_artworks',
 ```
 
 Run  `application.py`  and trying posting some data from the command line via curl:
+运行`application.py`并试着从命令行用curl发送一些数据：
 
 ```
 curl -i -X POST -H 'Content-Type: application/json' -d '{"data":{"type":"artwork", "attributes":{"title":"The Persistance of Memory", "artist_id":1}}}' http://localhost:5000/artworks
 ```
 
 This will create an artwork related to the artist with  `id=1`.
+这将创建一个艺术品与id为1的艺术家相关联。
 
 In the browser, navigate to  [http://localhost:5000/artists/1/relationships/artworks][20]. This should show the artworks related to the artist with  `id=1`. This saves you from writing a more complex URL with parameters to filter artworks by their  `artist_id`  field. You can quickly list all the relationships between a given artist and their artworks.
+在浏览器中打开[http://localhost:5000/artists/1/relationships/artworks][20] 。将显示id为1的艺术家的作品。这样就可以避免去写更复杂的，带‘artist_id’参数的URL。还可以快速的列出给定艺术家和其艺术品之间的所有关系。
 
 Another feature is the ability to include related results in the response to calling the  `artists_one`  endpoint:
-
+另一个特性是能够在调用`artists_one`端点的响应中包含相关结果：
 [http://localhost:5000/artists/1?include=artworks][21]
 
 This will return the usual response for the artists endpoint, and also results for each of that artist's artworks.
+这将返回艺术家端点的结果，也会返回艺术家作品的结果。
 
 ### Sparse Fields
+### 稀疏字段组
 
 One last feature worth mentioning - sparse fields. When working with large data resources with many complex relationships, the response sizes can blow up real fast. It is helpful to only retrieve the fields you are interested in.
+最后一个值得提的功能是 - 稀疏字段组。在处理具有复杂关联关系的大型数据资源时，返回结果的大小呈爆炸式增长。仅仅查询你感兴趣的字段往往很有帮助。
 
 The JSON API specification lets you do this by adding a fields parameter to the URL. For example URL below gets the response for a given artist and their related artworks. However, instead of returning all the fields for the given artwork, it returns only the title.
+JSON API规范允许你向URL中添加参数来实现该功能。以下面的URL为例，该URL返回指定艺术家及其作品。但是，它只返回作品的title字段，而不是所有的作品字段。
 
 [http://localhost:5000/artists/1?include=artworks&fields\[artwork\]=title][22]
 
 This is again very helpful for improving performance, especially over slow connections. As a general rule, you should only make requests to and from the server with the minimal amount of data required.
-
+同样，这对于提升性能特别有帮助，特别是在较慢的网络环境。作为通则，你应该只向服务器发送你所需要的最少数量的数据。
 ### Final remarks
+### 总结
 
 The JSON API specification is a very useful framework for sending data between server and client in a clean, flexible format. This article has provided an overview of what you can do with it, with a worked example in Python using the Flask-REST-JSONAPI library.
 
+JSON API规范是一个非常有用的框架，用于以干净，灵活的格式在服务器和客户端之间发送数据。本文通过在Python中使用Flask-REST-JSONAPI库的例子，向你概述了你可以用它来做什么。
+
 So what will you do next? There are many possibilities. The example in this article has been a simple proof-of-concept, with just two tables and a single relationship between them. You can develop an application as sophisticated as you like, and create a powerful API to interact with it using all the tools provided here.
 
-Thanks for reading, and keep coding in Python!
 
-  
+那么接下来你会做什么？有很多种可能性。本文中的示例只是一个简单的概念验证，只有两个表和它们之间的单一关系。你可以根据需要开发复杂的应用程序，并使用此处提供的所有工具创建功能强大的API以与其进行交互。
+
+Thanks for reading, and keep coding in Python!
+谢谢阅读，keep coding in Python!
+
 
 [1]: https://jsonapi.org/
 [2]: https://flask.palletsprojects.com/en/1.1.x/

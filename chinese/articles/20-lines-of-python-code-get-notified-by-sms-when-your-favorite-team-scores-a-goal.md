@@ -19,8 +19,8 @@
 
 -   Twitch API
 -   Twilio API
--   在Heroku发布项目
--   在Heroku上启动调度程序
+-   Heroku发布项目
+-   Heroku启动调度程序
 
 **你将要构建的东西:**
 
@@ -274,7 +274,7 @@ git push heroku master
 
 点击”Heroku Scheduler“链接去配置一个job.点击”Create Job“按钮。这里选择"10 minutes"的选项，之后执行一个命令`python &lt;name_of_your_script&gt;.py`。点击"Save job"按钮。
 
-While everything we used so far on Heroku is free, the Heroku Scheduler will run the job on the $25/month instance, but prorated to the second. 因为该脚本需要每3秒执行一次，所以每10分钟运行一次脚本，一个月下来将会花费12美分。
+虽然到目前为止我们在Heroku上使用的所有东西都是免费的，但是Heroku Scheduler将会花费25美元每个月。我们的程序是秒级执行的。 因为该脚本需要每3秒执行一次，所以每10分钟运行一次脚本，一个月下来将会花费12美分。
 
 # 改善的建议
 

@@ -31,5 +31,4 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章](https://www.free
 每一篇翻译好的文章，我们会有一位贡献者对其进行 review。如果你希望参与 review，请在 [Review-awaiting](https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3AReview-awaiting) 列表选取文章并留言“认领校对”，我们会邀请你成为 collaborator。
 
 ### 发表
-
-翻译及校对完毕的文章将以译者的署名发布在 freeCodeCamp 官网和微信公众号，在公众号发布时将在文章中注明校对者的姓名（或昵称）。此外，我们还会在其他相关社区的 freeCodeCamp 专栏发布译文，链接到官网。
+我们会和译者一同确认 review 意见，形成终稿，即校对完毕。翻译及校对完毕的文章将以译者的署名发布在 freeCodeCamp 官网（我们会邀请译者在官网注册作者账号）和微信公众号，在公众号发布时将在文章中注明校对者的姓名（或昵称）。此外，我们还会在其他相关社区的 freeCodeCamp 专栏发布译文，链接到官网。

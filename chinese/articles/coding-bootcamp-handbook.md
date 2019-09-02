@@ -7,7 +7,7 @@
 
 Before you spend thousands of dollars and several months of your life on a coding bootcamp, spend 30 minutes reading this handbook.
 
-在你将几千美元和生命中的几个月的时间里花费在代码训练营上之前，请花费30分钟阅读这篇指南。
+在你将几千美元和生命中的几个月的时间花费在代码训练营之前，请花费30分钟阅读这篇指南。
 # Who is this handbook for?
 # 这篇手册是给谁的？
 -   Anyone considering attending a bootcamp
@@ -17,22 +17,43 @@ Before you spend thousands of dollars and several months of your life on a codin
 -   Any journalist writing about bootcamps
 -   任何报道训练营的记者
 # For the people who think they're too busy to read this handbook...
+
 # 对于认为自己太忙没有时间阅读这篇指南的人……
 My advice to you boils down to this:  **Do your research**.
 
+我给你的建议归结为：**做好调查工作**。
+
 **Apply for lots of developer jobs first.**  Go through some job interviews. You may be able to get a developer job without needing to attend a bootcamp.
+
+
+**先申请足够多的开发者工作。**经历一些面试的过程。你也许不需要加入训练营就能够得到一份开发者工作。
 
 **Don't blindly trust bootcamps' testimonials or employment statistics.**  Use LinkedIn to reach out to their alumni directly.
 
+
+**不要盲目信任训练营的推荐或者就业统计数字。**用LinkedIn直接联系他们的校友。
+
 **Prepare yourself.**  Make sure you have enough money. If you're ready to enroll, make sure you have enough cash to pay tuition. And make sure you have enough cash to survive during the bootcamp, and for 6 months after while you apply for jobs.
+
+
+**做好准备。**确保你有足够的钱。如果你准备注册，确保你有足够的现金支付学费。并且确保你有足够的现金在训练营期间和在你申请工作后的6个月内生存。
 
 **Bootcamps aren't magic.**  Bootcamps can only help prepare you.  _You_  have to learn everything.  _You_  have to go through the developer job interview process.  _You_  have to put in the work.
 
+
+**训练营不是魔术。**训练营只能够帮助你准备。-你-必须学习所有的东西。-你-必须经历开发者人员面试过程。-你-必须投入工作。
+
 # A note on objectivity
+#关于客观性的说明
 
 I've designed this handbook to be as objective as possible. To this end,  **I do not mention any bootcamps or their founders by name.**  I do not link to any of their websites.
 
+
+我尽可能客观的描述这份指南。在最后，**我不会提及任何训练营或者他们创始人的名字。**不会附上任何他们网站的链接。
+
 I didn't write this handbook to help bootcamps. I wrote this handbook to help you.
+
+我写这份指南不是为了帮助训练营，而是为了帮助你。
 
 As the teacher who founded freeCodeCamp, I am in a unique position to write about bootcamps for three reasons:
 

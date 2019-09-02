@@ -182,7 +182,7 @@ if not favorite_twitcher_live and last_sent_sms is live_notification:
     send_live_is_over_notification()
 ```
 
-This way we will receive a text as soon as the stream starts, as well as when it is over. This way we won't get spammed - perfect right? Let's code it:
+使用这种方式，我们将会在直播开始和结束后都接收到短信。这样我们就不会收到重复信息了。- 完美了吧？让我们继续编码吧：
 
 ```python
 # reusing our Twilio client
@@ -192,7 +192,7 @@ last_message_data = client.messages(last_message_id).fetch()
 last_message_content = last_message_data.body
 ```
 
-Let's now put everything together again:
+现在让我们再一次将代码合起来：
 
 ```py
 import requests
@@ -221,30 +221,30 @@ else:
 
 And voilà!
 
-You now have a snippet of code, in less than 30 lines of Python, that will send you a text a soon as your favourite Twitcher goes Online / Offline and without spamming you.
+你现在拥有一段不到30行的代码，可以在你喜欢的主播上线或者离线的时候发送短信通知给你而且不会发送重复信息给你。
 
-We just now need a way to host and run this snippet every X minutes.
+我们现在需要一种方式去维持执行X分钟。
 
-# The quest for a host
+# 托管的需求
 
-To host and run this snippet we will use Heroku. Heroku is honestly one of the easiest ways to host an app on the web. The downside is that it is really expensive compared to other solutions out there. Fortunately for us, they have a generous free plan that will allow us to do what we want for almost nothing.
+我们将使用Heroku去托管、执行该代码。Heroku是一种托管app到web很简便的方式。Heroku的缺点是比起其他的解决方案，价格方面会昂贵一些。幸运的是，他们有一个慷慨的免费计划允许我们做我们所有想做的事。
 
-If you don't already, you need to create a  [Heroku account][12]. You also need to  [download and install the Heroku client][13].
+如果你没有准备好，你需要创建一个[Heroku 账户][12]. 你同时也需要 [下载并且安装Heroku客户端][13]。
 
-You now have to move your Python script to its own folder, don't forget to add a  `requirements.txt`  file in it. The content of the latter begins:
+现在你需要将你的Python脚本放到自己的文件夹内，记得加一个`requirements.txt`文件在里面。文件的内容开始如下：
 
 ```
 requests
 twilio
 ```
 
-This is to ensure that Heroku downloads the correct dependencies.
+这样可以确保Heroku下载正确的依赖。
 
-`cd`  into this folder and just do a `heroku create --app &lt;app name&gt;`.
+`cd`进入到该文件夹内同时执行`heroku create --app &lt;app name&gt;`。
 
-If you go on your  [app dashboard][14]  you'll see your new app.
+如果你进入到你的[app dashboard][14] 你将会看到你的心APP。
 
-We now need to initialize a git repo and push the code on Heroku:
+我们现在需要去初始化一个git仓库并且push代码到Heroku：
 
 ```
 git init
@@ -254,54 +254,53 @@ git commit -am 'Deploy breakthrough script'
 git push heroku master
 ```
 
-Your app is now on Heroku, but it is not doing anything. Since this little script can't accept HTTP requests, going to  `<app name>.herokuapp.com`  won't do anything. But that should not be a problem.
+如今你的app已经传到Heroku，但是它还不可以干任何事。由于这个小脚本无法接受HTTP请求，访问`<app name>.herokuapp.com`没法做任何事。但是这并不是一个问题。
 
-To have this script running 24/7 we need to use a simple Heroku add-on call "Heroku Scheduler". To install this add-on, click on the "Configure Add-ons" button on your app dashboard.
+为了让这个脚本执行一周七天，每天24小时。我们需要一个简单的Heroku附加操作"Heroku Scheduler"。为了安装这个附加操作，点击"Configure Add-ons"在你的app操作空间。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Capture-d-e-cran-2019-08-15-a--12.50.40.png)
 
-Then, on the search bar, look for Heroku Scheduler:
+之后再搜索框输入Heroku Scheduler：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Capture-d-e-cran-2019-08-15-a--12.53.12.png)
 
-Click on the result, and click on "Provision"
+点击搜索结果，并且点击"Provision"按钮
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Capture-d-e-cran-2019-08-15-a--12.50.59.png)
 
-If you go back to your App dashboard, you'll see the add-on:
+如果你回退到你的APP操作空间，你将会看到Heroku Scheduler：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Capture-d-e-cran-2019-08-15-a--12.54.16.png)
 
-Click on the "Heroku Scheduler" link to configure a job. Then click on "Create Job". Here select "10 minutes", and for run command select `python &lt;name_of_your_script&gt;.py`. Click on "Save job".
+点击”Heroku Scheduler“链接去配置一个job.点击”Create Job“按钮。这里选择"10 minutes"的选项，之后执行一个命令`python &lt;name_of_your_script&gt;.py`。点击"Save job"按钮。
 
-While everything we used so far on Heroku is free, the Heroku Scheduler will run the job on the $25/month instance, but prorated to the second. Since this script approximately takes 3 seconds to run, for this script to run every 10 minutes you should just have to spend 12 cents a month.
+While everything we used so far on Heroku is free, the Heroku Scheduler will run the job on the $25/month instance, but prorated to the second. 因为该脚本需要每3秒执行一次，所以每10分钟运行一次脚本，一个月下来将会花费12美分。
 
-# Ideas for improvements
+# 改善的建议
 
-I hope you liked this project and that you had fun putting it into place. In less than 30 lines of code, we did a lot, but this whole thing is far from perfect. Here are a few ideas to improve it:
+我希望你喜欢这个项目，并且很乐意将它部署。在不到30行代码里我们只做了一点，这整个事情达到完美级别还很远。这里有一些改善的建议：
 
--   Send yourself more information about the current streaming (game played, number of viewers ...)
--   Send yourself the duration of the last stream once the twitcher goes offline
--   Don't send you a text, but rather an email
--   Monitor multiple twitchers at the same time
+-   发送更多的关于当前直播的信息（正在打的游戏，围观者数等）
+-   当主播下线的时候，发送直播时长
+-   不去发送短信，而是发送邮件
+-   同时去监控多个主播
 
-Do not hesitate to tell me in the comments if you have more ideas.
+如果你有更好的意见，不要忘了去告诉我。
 
-# Conclusion
+# 结论
 
-I hope that you liked this post and that you learned things reading it. I truly believe that this kind of project is one of the best ways to learn new tools and concepts, I recently launched a  [web scraping API][15]  where I learned a lot while making it.
+我希望你喜欢上这篇文章并且通过这篇文章学到东西。我确切的希望这种项目是一种最好的方式去学习新的工具和概念，我最近浏览了一个网站[web scraping API][15]，通过他我学习到了很多知识。
 
-Please tell me in the comments if you liked this format and if you want to do more.
+如果你喜欢这种方式并且你想要做更多的事情，请在评论区留言。
 
-I have many other ideas, and I hope you will like them. Do not hesitate to share what other things you build with this snippet, possibilities are endless.
-
-Happy Coding.
+我有许多别的想法，并且我希望你将会喜欢上它们。不要犹豫去分享你使用这段代码构建的其他项目，可能性是无穷大的。
+编码快乐。
 
 Pierre
 
-## Don't want to miss my next post:
+## 不要去错过我下一篇文章：
 
-You can subscribe  [here][16] to my newsletter.
+你可以订阅我的[here][16]栏目。
 
 [1]: https://realpython.com/installing-python/
 [2]: https://www.freecodecamp.org/news/git-commands/

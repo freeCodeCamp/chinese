@@ -5,22 +5,22 @@
 
 ![A Python project in 30 lines of code: how to set up an SMS notification when your favorite Twitcher is streaming](https://images.unsplash.com/photo-1561736778-92e52a7769ef?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Hi everyone :) Today I am beginning a new series of posts specifically aimed at Python beginners. The concept is rather simple: I'll do a fun project, in as few lines of code as possible, and will try out as many new tools as possible.
+大家好 :) 今天我将开启一个新的针对Python初学者系列的文章。简言之，我会使用尽可能少的代码去完成一个有趣的项目，并且会试使用更多新的工具。
 
-For example, today we will learn to use the Twilio API, the Twitch API, and we'll see how to deploy the project on Heroku. I'll show you how you can have your own "Twitch Live" SMS notifier, in 30 lines of codes, and for 12 cents a month.
+例如，我们将要在今天学习使用Twilio API、Twitch API，以及如何在Heroku上发布项目。我将会教会你如何在每月只花费10美分的情况下，只是用30行代码完成你个人的“Twitch Live” SMS通知。
 
-**Prerequisite**: You only need to know how to run Python on your machine and some basic commands in git (commit & push). If you need help with these, I can recommend these 2 articles to you:
+**前提**: 你只需要了解基本的git命令行（commit & push）以及在你的机器上执行Python程序。如果你需要这些知识点的帮助，我可以建议你看如下两篇文章:
 
 [Python 3 Installation & Setup Guide][1]
 
 [The Ultimate Git Command Tutorial for Beginners][2]  from  [Adrian Hajdin][3].
 
-**What you'll learn**:
+**你将会学到的东西**:
 
 -   Twitch API
 -   Twilio API
--   Deploying on Heroku
--   Setting up a scheduler on Heroku
+-   在Heroku发布项目
+-   在Heroku上启动调度程序
 
 **What you will build:**
 

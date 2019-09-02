@@ -28,7 +28,7 @@
 修炼这些软技能比开发一个实实在在的应用更简单，并且只要你照着去做，你很可能会收获颇丰。
 
 
-### **1\. 与人为善**
+### **1\. 传达你的善意**
 
 ![](https://cdn-images-1.medium.com/max/1600/0*-4dWGC_4RI1FCEOC)
 
@@ -56,98 +56,98 @@ Photo by  [Austin Distel][1]  on [Unsplash][2]
 
 给人一个微笑或者发送一个笑脸表情比任何话语（甚至是 ”Hello World“ 这么简单的话）都更容易。微笑看似微不足道，却能缓解紧张的气氛。
 
-苏格兰阿伯丁大学面部研究实验室在 2011 年的一项[科学研究][3] 表明，微笑可以让你看起来更有吸引力，更放松，更真诚和更自信。
+苏格兰阿伯丁大学面部研究实验室在 2011 年的一项[科学研究][3]表明，微笑可以让你看起来更有吸引力，更放松，更真诚和更自信。
 
+此外，斯堪的纳维亚心理学杂志曾刊发的一项[来自瑞典的研究][4]表明：人们在互动的时候会无意识地模仿对方的面部表情。
 
-Moreover,  [one Swedish study][4]  published in the Scandinavian Journal of Psychology found that humans have an automatic reaction that mimics the facial expressions of those they interact with.
+换句话说，如果你常常微笑，有可能别人也会对你微笑，这样的互动会让你和对方都感觉更好。
 
-In other words, when you smile often, chances are that others will smile back to you as well. This will not only make you feel better, but it also helps others that you interact with.
+### **4\. 多说“谢谢”和“请”.**
 
-### **4\. Say ‘thank you’ and ‘please’ a lot.**
+不管别人只是帮了你一个多小的忙，不要吝啬对他们说一句“谢谢”。
 
-No matter how small a favor is, do not hesitate to say  _thank you_.
+人们会很欣赏你礼貌的感谢，并且意识到他们自己对你来说是有帮助的，是重要的。
 
-People appreciate when you are polite and grateful, and are aware of their contribution and significance in your life.
+这样的感谢不仅会让你的同事感觉更好，也会让你自己感觉更好，因为你知道同事们关心你、愿意帮助你。
 
-This will not only make your colleagues feel better, but it will make you feel better as well, as you will know that other colleagues care about you and are willing to help you.
+[心怀感激对你的生理健康有帮助][5]，同时能改善你的精神状态，提升自信心和睡眠质量，甚至能帮你调节压力。
 
-[Gratitude can improve your physical health][5], mental strength, self-esteem, the quality of your sleep, and can even reduce your stress levels.
+在和同事交流的时候你还应该经常使用的一个词是：请。
 
-Another word that you should frequently use in your communication with your colleagues is  _please_.
+当你对团队成员说“请”的时候，传递给他的意思是——你并不是在安排他做什么事，不过如果他帮你做的话，他会显得很善良、慷慨。
 
-When you use the word  _please_, you are reminding the other team member that he is not forced to do something, but it would be kind, generous, and helpful of him to assist with the task that you are working on.
+这些简单的表达也许听起来无足重轻，却可以产生莫大的影响。
 
-These simple words, no matter how insignificant they may sound, can make a huge difference once you start using them.
-
-### **5\. Praise other people’s efforts and stay positive**
+### **5\. 赞颂他人的努力，保持积极的态度**
 
 ![](https://cdn-images-1.medium.com/max/1600/0*gbMqAQW9_uIJYIcj)
 
 Photo by Tyler Nix on Unsplash
 
-Become aware of other people’s accomplishments and praise every improvement, large or small.
+关注他人的成就，并对他们的每个或大或小的进步表示赞美。
 
-**Praising someone isn’t complicated. Common phrases like “Great job,” “Well done,” or “You did great” can be sufficient.**
+**赞美他人并不是什么复杂的事情，像“很棒”、“做得很好”或者“你做得不错啊”这样简单的词汇就足够了。**
 
-It may have taken a lot of effort and strong willpower to get to the solution of a frustrating problem.
+解决一个难题可能需要大量的努力和坚强的意志。
 
-When you praise others on their accomplishments, you make them feel important and that they are involved in something that has grabbed your attention.
+当你对他人的成就表达赞美之情的时候，你让他们感觉自己很重要，以及你正在关注他们所做的事情。
 
-As software developers, we tend to forget about the privilege of the skills we possess.
+开发者们往往会忘记自己具备的技术优势。
 
-There are times when a small bug or an urgent task can bother you or your colleague for a few moments, but you should not let that distract you from the big picture.
+有时候你和你的同事可能会被一个小小的 bug 或者一项紧急任务搞得焦头烂额，你们得注意关注大局，不要因为小挫折而分心。
 
-You should regularly remind yourself and your colleagues about the joyful moments that you and your team have been through, and not let an occasional difficulty or a stressful situation make you feel disappointed.
+你应该经常提醒自己和同事你们已经做到了一些令人欢欣鼓舞的事情，不要因为偶然遇到的困难或者压力而泄气。
 
-Start the habit of regularly recognizing the efforts of your teammates and giving credit to them whenever the opportunity arises.
+从现在开始，经常肯定队友们的努力，一有机会就赞美他们。
 
-### **6\. Do not hesitate to apologize**
+### **6\. 勇于承认错误**
 
-Nobody is perfect, and no matter how hard you try, you will always make a mistake here and there.
+每个人都不完美。再努力的人也会不时犯错。
 
-No matter how small your mistake is, do not hesitate to apologize about it.
+即便只是一个小错误，你也应该为其道歉，不要犹豫。
 
-Even though it might threaten your ego to apologize sometimes, it is a crucial way to keep good relationships with your colleagues.
+虽然有时候道歉可能会伤害到你的自尊心，但是这是一个维护你和同事之间的良好关系的重要方式。
 
-Although you may think it will damage your reputation, by causing you to appear less confident, apologizing has the opposite effect.
+你可能会觉得道歉有损你的形象，让你看起来没那么自信，其实完全相反，人们会觉得你的道歉说明你很谦逊，愿意承认自己的不足之处。
 
-It will remind others that you are aware of your shortcomings and that you are humble enough to admit to them.
+当你和同事闹不愉快的时候，简单的一句“对不起”或者“我很抱歉”就会让你们之间的关系跟紧密，
 
-Short phrases like “I am sorry” or “I apologize” can strengthen your ties with your colleagues, even during unpleasant moments.
+### **7\. 不要批评别人**
 
-### **7\. Do not criticize**
+人们常常会认为批评是对他们私人的威胁，即便你并没有那个意思。
 
-Criticizing is often perceived as a personal threat towards an individual’s ego, though you may not have intended to do that.
+人们被批评的时候可能会变得情绪化，以及感觉被冒犯。
 
-As a result, it is likely that he or she may get emotional and feel offended.
+当你要指出同事的错误的时候，更好的方式是给他们一个礼貌的点评：关注错误本身，而不是贬低别人或者评论犯错的人。
 
-A better way of pointing out your colleague’s mistake is by giving them a  _polite critique_: Call attention to people’s mistakes without demeaning them or making it personal.
+换位思考，从他们的角度来审视问题，礼貌地指出他们的错误。
 
-Put yourself in their shoes and observe the issue from their perspective. Politely inform the other person about their mistake.
+私下告诉他们错误所在，不要当众指出。
 
-Do not point out a mistake in front of everybody; instead, do it privately.
+如果你想让别人不要犯某个错误，注意不要指向人，而是指向问题。
 
-If you want to inform everybody else about a mistake that they should not be doing, do not point fingers toward people, but toward the problem.
+试着关注解决问题的方法，而不是一味指责。
 
-Try to focus on possible ways of solving the problem rather than on blame.
+**你应该是一个帮助而非贬低他人的角色。**
 
-**Become the person who helps people, rather than someone who belittles them.**
+当你帮助他人的时候，你会感觉到自己的正面作用和重要性。并且，助人也是助己，你帮助过的同事或许将来某天也会帮助你。
 
-When you help someone, you are going to feel your own sense of contributing and your own significance as well. Moreover, you can learn for yourself, and can also open doors to receiving help in future from the same colleagues that you have helped in the past.
-
-### **8\. Avoid arguments**
+### **8\. 避免争执**
 
 ![](https://cdn-images-1.medium.com/max/1600/0*QVGYyz8F3j1Lq3kG)
 
 Photo by  [Jason Rosewell][6]  on [Unsplash][7]
 
-We tend to think of ourselves as rational human beings, but in reality, we are emotionally driven creatures that can easily get angry.
+我们总是认为自己是理性的人类，而事实上我们都是被情感驱使、容易生气的生物。
 
-Those few moments of anger can lead to some unpleasant arguments, no matter whether you are right or wrong.
+无论你是对还是错，气头上都可能和他人有些不愉快的争执。
 
-Although you may be right, and protecting your opinion sounds like a good idea, arguing furiously with others is something that can dramatically ruin your relationships.
+即便你是对的，只是想维护自己正确的观点，和他人的激烈争吵也会破坏你们的关系。
 
 As Dale Carnegie mentions in his book  [_How to Win Friends and Influence People_][8]:
+Dale Carnegie 在[《如何赢得友谊与影响他人》][8]一书中提到：
+
+
 
 > _“I have come to the conclusion that there is only one way under high heaven to get the best of an argument — and that is to avoid it. Avoid it as you would avoid rattlesnakes and earthquakes.”_
 

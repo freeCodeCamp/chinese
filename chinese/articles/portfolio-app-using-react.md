@@ -1,6 +1,6 @@
 > * 原文地址：[How to create your portfolio website using React.js](https://www.freecodecamp.org/news/portfolio-app-using-react-618814e35843/)
 > * 原文作者：Dhruv Barochiya
-> * 译者：
+> * 译者：candycats
 > * 校对者：
 
 ![How to create your portfolio website using React.js](https://cdn-media-1.freecodecamp.org/images/1*7snm7ve4mLm3kwrPl0r2ig.png)

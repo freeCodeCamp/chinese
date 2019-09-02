@@ -1,6 +1,6 @@
 > * 原文地址：[The Coding Bootcamp Handbook: How Do Bootcamps Work and Are They Right for You?](https://www.freecodecamp.org/news/coding-bootcamp-handbook/)
 > * 原文作者：[Quincy Larson](https://www.freecodecamp.org/news/author/quincylarson/)
-> * 译者：
+> * 译者：Weirdbuf
 > * 校对者：
 
 ![The Coding Bootcamp Handbook: How Do Bootcamps Work and Are They Right for You?](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/If-you-dream-it--you-can-do-it--1-.png)

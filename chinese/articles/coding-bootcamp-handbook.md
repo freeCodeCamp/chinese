@@ -21,7 +21,7 @@ Before you spend thousands of dollars and several months of your life on a codin
 # 对于认为自己太忙没有时间阅读这篇指南的人……
 My advice to you boils down to this:  **Do your research**.
 
-我给你的建议归结为：**做好调查工作 **。
+我给你的建议归结为： **做好调查工作**。
 
 **Apply for lots of developer jobs first.**  Go through some job interviews. You may be able to get a developer job without needing to attend a bootcamp.
 
@@ -33,7 +33,7 @@ My advice to you boils down to this:  **Do your research**.
 
 **不要盲目信任训练营的推荐或者就业统计数字。 **用LinkedIn直接联系他们的校友。
 
-** Prepare yourself.**  Make sure you have enough money. If you're ready to enroll, make sure you have enough cash to pay tuition. And make sure you have enough cash to survive during the bootcamp, and for 6 months after while you apply for jobs.
+**Prepare yourself.**  Make sure you have enough money. If you're ready to enroll, make sure you have enough cash to pay tuition. And make sure you have enough cash to survive during the bootcamp, and for 6 months after while you apply for jobs.
 
 
 **做好准备。 **确保你有足够的钱。如果你准备注册，确保你有足够的现金支付学费。并且确保你有足够的现金在训练营期间和在你申请工作后的6个月内生存。

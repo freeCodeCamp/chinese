@@ -24,10 +24,7 @@ My advice to you boils down to this:  **Do your research**.
 我给你的建议归结为： **做好调查工作**。
 
 **Apply for lots of developer jobs first.**  Go through some job interviews. You may be able to get a developer job without needing to attend a bootcamp.
-
-
-
- **先申请足够多的开发者工作。**经历一些面试的过程。你也许不需要加入训练营就能够得到一份开发者工作。
+**先申请足够多的开发者工作。**经历一些面试的过程。你也许不需要加入训练营就能够得到一份开发者工作。
 
 **Don't blindly trust bootcamps' testimonials or employment statistics.**  Use LinkedIn to reach out to their alumni directly.
 

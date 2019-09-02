@@ -56,9 +56,9 @@
 
 你现在就能看到在你屏幕底端，你的client-id。请保留好client-id以备后面的使用。
 
-## Is that Twitcher streaming now?
+## 主播现在正在直播么？
 
-With your API key in hand, we can now query the Twitch API to have the information we want, so let's begin to code. The following snippet just consumes the Twitch API with the correct parameters and prints the response.
+我们手上有了API key,现在就可以查询Twitch的API获取到我们想要的信息。让我们开始敲代码吧。下面的代码仅仅给Twitch的API传递了正确的参数并且打印相应信息
 
 ```python
 # requests is the go to package in python to make http request
@@ -76,7 +76,7 @@ params = {"user_login": "Solary"}
 
 ```
 
-The output should look like this:
+输出信息就像下面这样：
 
 ```json
 {
@@ -103,9 +103,9 @@ The output should look like this:
 }
 ```
 
-This data format is called JSON and is easily readable. The  `data`  object is an array that contains all the currently active streams. The key  `type`  ensures that the stream is currently  `live`. This key will be empty otherwise (in case of an error, for example).
+这个数据格式是一种易于阅读的JSON。`data`对象是一个包含所有当前直播的数组对象。`type`键表示这个直播间正在直播。否则`type`的值为空（比如，在报错的时候）。
 
-So if we want to create a boolean variable in Python that stores whether the current user is streaming, all we have to append to our code is:
+因此如果我们想要去在Python里创建一个表示当前主播是否正在直播的布尔变量，我们需要去加上如下代码：
 
 ```python
 json_response = response.json()
@@ -120,17 +120,17 @@ at_least_one_stream_active = any(streams_active)
 
 ```
 
-At this point,  `at_least_one_stream_active`  is True when your favourite Twitcher is live.
+此时，`at_least_one_stream_active`变量是True的时候表示你喜欢的主播正在直播。
 
-Let's now see how to get notified by SMS.
+让我们现在看看如何获得短信通知。
 
-# Send me a text, NOW!
+# 给我现在发一条短信！
 
-So to send a text to ourselves, we will use the Twilio API. Just go over  [there][8]  and create an account. When asked to confirm your phone number, please use the phone number you want to use in this project. This way you'll be able to use the $15 of free credit Twilio offers to new users. At around 1 cent a text, it should be enough for your bot to run for one year.
+因此为了给我们自己发送一条短信，我们将使用Twilio API。访问 [there][8] 并且创建一个账号。当需要你手机验证的时候，填入你想要在此项目中接受短信用的手机号码。这样你就可以使用Twilio为新用户提供的15美元的免费信用额度。一条短信1美分，足以支持你的机器运行一年了。
 
-If you go on the  [console][9], you'll see your  `Account SID`  and your  `Auth Token`  , save them for later. Also click on the big red button "Get My Trial Number", follow the step, and save this one for later too.
+如果你访问  [console][9]，你将会看到自己的`Account SID`和`Auth Token`，请保留好他们以备后用。同样点击红色按钮"Get My Trial Number"，向下去执行步骤，同时将trial number也保存以备后用。
 
-Sending a text with the Twilio Python API is very easy, as they provide a package that does the annoying stuff for you. Install the package with  `pip install Twilio`  and just do:
+使用Python API发送短信是一件很容易的事， 他们提供包帮你去完成发送短信的事。 使用`pip install Twilio`导入相应的包并且执行下面的代码：
 
 ```python
 from twilio.rest import Client
@@ -140,11 +140,11 @@ client.messages.create(
 
 ```
 
-And that is all you need to send yourself a text, amazing right?
+这就是你需要发送一条短信的所有代码，惊奇么？
 
-# Putting everything together
+# 把所有的代码放到一起
 
-We will now put everything together, and shorten the code a bit so we manage to say under 30 lines of Python code.
+我们将会把所有的代码放到一起，并且缩短到30行Python代码。
 
 ```python
 import requests
@@ -163,17 +163,17 @@ if at_least_one_stream_active:
     client.messages.create(body='LIVE !!!',from_=<Your Trial Number>,to=<Your Real Number>)
 ```
 
-Still have 16 lines left!
+只留下了16行代码！
 
-# Avoiding double notifications
+# 避免重复通知
 
-This snippet works great, but should that snippet run every minute on a server, as soon as our favorite Twitcher goes live we will receive an SMS every minute.
+这段代码的效果很好，但是如果让这段代码在服务器上每分钟执行一次，我们喜欢的主播一上线，我们就会每分钟都受到一条短信。
 
-We need a way to store the fact that we were already notified that our Twitcher is live and that we don't need to be notified anymore.
+我们需要一个方法去存储我们的主播已经上线的事实并且不需要再去短信通知。
 
-The good thing with the Twilio API is that it offers a way to retrieve our message history, so we just have to retrieve the last SMS we sent to see if we already sent a text notifying us that the twitcher is live.
+好的是Twilio API提供检索历史消息的方法，因此我们仅仅需要检索发送的历史消息中是否包含我们已经发送过的主播正在直播的消息。
 
-Here what we are going do to in pseudocode:
+如下是我们要做的伪代码：
 
 ```
 if favorite_twitcher_live and last_sent_sms is not live_notification:

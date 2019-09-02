@@ -7,7 +7,7 @@
 
 大家好 :) 今天我将开启一个新的针对Python初学者系列的文章。简言之，我会使用尽可能少的代码去完成一个有趣的项目，并且会试使用更多新的工具。
 
-例如，我们将要在今天学习使用Twilio API、Twitch API，以及如何在Heroku上发布项目。我将会教会你如何在每月只花费10美分的情况下，只是用30行代码完成你个人的“Twitch Live” SMS通知。
+例如，我们将要在今天学习使用Twilio API、Twitch API，以及如何在Heroku上发布项目。我将会教会你如何在每月只花费10美分的情况下，只是用30行代码完成你自己的“Twitch直播” 短信通知。
 
 **前提**: 你只需要了解基本的git命令行（commit & push）以及在你的机器上执行Python程序。如果你需要这些知识点的帮助，我可以建议你看如下两篇文章:
 
@@ -22,39 +22,39 @@
 -   在Heroku发布项目
 -   在Heroku上启动调度程序
 
-**What you will build:**
+**你将要构建的东西:**
 
-The specifications are simple: we want to receive an SMS as soon as a specific Twitcher is live streaming. We want to know when this person is going live and when they leave streaming. We want this whole thing to run by itself, all day long.
+要求很简单：我们想要在一个特定的主播正在直播的时候接收到一条消息，想知道此人何时上线以及何时退出直播，想要这个程序全天都在运行。
 
-We will split the project into 3 parts. First, we will see how to programmatically know if a particular Twitcher is online. Then we will see how to receive an SMS when this happens. We will finish by seeing how to make this piece of code run every X minutes, so we never miss another moment of our favorite streamer's life.
+我们将把项目分成3个部分。首先，我们将会了解到如何以编程的方式获悉一个特定的主播上线了。之后我们会了解如何去接收到一条上线短信。最终我们将学习到如何让这段代码执行X分钟，因此我们将不会再错过我们喜欢的主播的其他生活时刻。
 
-# Is this Twitcher live?
+# 这个主播是否正在直播？
 
-To know if a Twitcher is live, we can do two things: we can go to the Twitcher URL and try to see if the badge "Live" is there.
+如何知道一个主播正在直播，我们可以有两种方式：第一种方式，到直播间里去查找是否有“Live”徽章
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Capture-d-e-cran-2019-08-14-a--15.49.31.png)
 
-Screenshot of a Twitcher live streaming.
+主播直播时候的截图
 
-This process involves scraping and is not easily doable in Python in less than 20 or so lines of code. Twitch runs a lot of JS code and a simple request.get() won't be enough.
+这个过程涉及到网络爬虫，想要使用Python程序在少于20行代码去完成这个功能是不可行的。Twitch程序跑着许多JS脚本代码，一个简单的request.get()是不足以达到要求的
 
-For scraping to work, in this case, we would need to scrape this page inside Chrome to get the same content like what you see in the screenshot. This is doable, but it will take much more than 30 lines of code. If you'd like to learn more, don't hesitate to check my recent  [web scraping guide][4].
+对于上述这种情况，使用爬虫去爬取信息，我们想要获得到截图所示信息将会使用Chrome浏览器抓取这个网页。这种方式是可行的，但是这将会产生超过30行代码。如果你想要了解更多相关，别迟疑，可以参考我最近的  [网页抓取指南][4].
 
-So instead of trying to scrape Twitch, we will use their API. For those unfamiliar with the term, an API is a programmatic interface that allows websites to expose their features and data to anyone, mainly developers. In Twitch's case, their API is exposed through HTTP, witch means that we can have lots of information and do lots of things by just making a simple HTTP request.
+除了抓取Twitch网页外，我们将使用Twitch的API。对于不熟悉API词语的人做出解释：API是应用程序编程接口，允许网站向任何人（主要是针对开发人员）公开他们的功能和数据。对于Twitch的API而言，主要通过HTTP请求公开，我们可以仅仅发起一个HTTP请求去获取到许多的信息和做许多的事情
 
-## Get your API key
+## 获得你自己的API KEY 
 
-To do this, you have to first create a Twitch API key. Many services enforce authentication for their APIs to ensure that no one abuses them or to restrict access to certain features by certain people.
+为此，你需要去创建一个Twitch的API Key。许多API服务需要对API的访问者进行身份认证，以确保某些人不会频繁的发起访问或者限制某些人访问某些的功能。
 
-Please follow these steps to get your API key:
+请按照以下步骤获取你的API Key:
 
--   Create a Twitch account
--   Now create a Twitch  [dev account][5]  \-> "Signing up with Twitch" top right
--   Go to your "dashboard" once logged in
--   "Register your application"
--   Name -> Whatever, Oauth redirection URL -> http://localhost, Category -> Whatever
+-   创建一个Twitch账号
+-   创建一个Twitch  [开发者账号][5]  \-> 右上角"通过Twitch注册"
+-   登录后跳转到信息中心
+-   "注册你自己的应用"
+-   名称 -> 无所谓, Oauth 重定向 URL -> http://localhost, 类别 -> 无所谓
 
-You should now see, at the bottom of your screen, your client-id. Keep this for later.
+你现在就能看到在你屏幕底端，你的client-id。请保留好client-id以备后面的使用。
 
 ## Is that Twitcher streaming now?
 

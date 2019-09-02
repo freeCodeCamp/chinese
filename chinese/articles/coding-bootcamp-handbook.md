@@ -26,22 +26,23 @@ My advice to you boils down to this:  **Do your research**.
 **Apply for lots of developer jobs first.**  Go through some job interviews. You may be able to get a developer job without needing to attend a bootcamp.
 
 
-**先申请足够多的开发者工作。**经历一些面试的过程。你也许不需要加入训练营就能够得到一份开发者工作。
+
+ **先申请足够多的开发者工作。**经历一些面试的过程。你也许不需要加入训练营就能够得到一份开发者工作。
 
 **Don't blindly trust bootcamps' testimonials or employment statistics.**  Use LinkedIn to reach out to their alumni directly.
 
 
-**不要盲目信任训练营的推荐或者就业统计数字。 **用LinkedIn直接联系他们的校友。
+ **不要盲目信任训练营的推荐或者就业统计数字。 **用LinkedIn直接联系他们的校友。
 
 **Prepare yourself.**  Make sure you have enough money. If you're ready to enroll, make sure you have enough cash to pay tuition. And make sure you have enough cash to survive during the bootcamp, and for 6 months after while you apply for jobs.
 
 
-**做好准备。 **确保你有足够的钱。如果你准备注册，确保你有足够的现金支付学费。并且确保你有足够的现金在训练营期间和在你申请工作后的6个月内生存。
+ **做好准备。 **确保你有足够的钱。如果你准备注册，确保你有足够的现金支付学费。并且确保你有足够的现金在训练营期间和在你申请工作后的6个月内生存。
 
 **Bootcamps aren't magic.**  Bootcamps can only help prepare you.  _You_  have to learn everything.  _You_  have to go through the developer job interview process.  _You_  have to put in the work.
 
 
-**训练营不是魔术。**训练营只能够帮助你准备。-你-必须学习所有的东西。-你-必须经历开发者人员面试过程。-你-必须投入工作。
+ **训练营不是魔术。**训练营只能够帮助你准备。-你-必须学习所有的东西。-你-必须经历开发者人员面试过程。-你-必须投入工作。
 
 # A note on objectivity
 # 关于客观性的说明

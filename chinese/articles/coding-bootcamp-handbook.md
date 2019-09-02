@@ -6,15 +6,17 @@
 ![The Coding Bootcamp Handbook: How Do Bootcamps Work and Are They Right for You?](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/If-you-dream-it--you-can-do-it--1-.png)
 
 Before you spend thousands of dollars and several months of your life on a coding bootcamp, spend 30 minutes reading this handbook.
-
+在你将几千美元和生命中的几个月的时间里花费在代码训练营上之前，请花费30分钟阅读这篇指南。
 # Who is this handbook for?
-
+# 这篇手册是给谁的？
 -   Anyone considering attending a bootcamp
+-   任何考虑加入训练营的人
 -   Any developer considering founding a bootcamp or teaching at one
+-   任何考虑创建训练营或者在训练营里教授的开发者
 -   Any journalist writing about bootcamps
-
+-   任何报道训练营的记者
 # For the people who think they're too busy to read this handbook...
-
+# 对于认为自己太忙没有时间阅读这篇指南的人……
 My advice to you boils down to this:  **Do your research**.
 
 **Apply for lots of developer jobs first.**  Go through some job interviews. You may be able to get a developer job without needing to attend a bootcamp.

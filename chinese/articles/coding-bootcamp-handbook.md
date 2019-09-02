@@ -6,6 +6,7 @@
 ![The Coding Bootcamp Handbook: How Do Bootcamps Work and Are They Right for You?](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/If-you-dream-it--you-can-do-it--1-.png)
 
 Before you spend thousands of dollars and several months of your life on a coding bootcamp, spend 30 minutes reading this handbook.
+
 在你将几千美元和生命中的几个月的时间里花费在代码训练营上之前，请花费30分钟阅读这篇指南。
 # Who is this handbook for?
 # 这篇手册是给谁的？

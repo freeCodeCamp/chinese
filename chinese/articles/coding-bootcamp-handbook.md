@@ -7,7 +7,7 @@
 
 Before you spend thousands of dollars and several months of your life on a coding bootcamp, spend 30 minutes reading this handbook.
 
-在你将几千美元和生命中的几个月的时间花费在代码训练营之前，请花费30分钟阅读这篇指南。
+在你将几千美元和生命中的几个月的时间花费在编程训练营之前，请花费30分钟阅读这篇指南。
 # Who is this handbook for?
 # 这篇手册是给谁的？
 -   Anyone considering attending a bootcamp
@@ -56,29 +56,57 @@ I didn't write this handbook to help bootcamps. I wrote this handbook to help yo
 
 As the teacher who founded freeCodeCamp, I am in a unique position to write about bootcamps for three reasons:
 
+作为创建freeCodeCamp的教师，有三个原因使得我在写关于训练营的文章时处于一个特殊的位置：
+
 1.  A lot of bootcamps use freeCodeCamp for their curriculum and course prepwork. I've helped coach a lot of bootcamp founders on how to prepare people for developer careers.
+
+1.  很多训练营都使用freeCodeCamp来完成他们的课程和课程预备。我已经帮助指导许多训练营创始人，教他们如何让人们为开发者职业做准备。
+
 2.  I learned to code in San Francisco in the early 2010's, when bootcamps first came onto the scene. I didn't attend a bootcamp, but I hung out with many bootcamp founders and attended student "demo days."
+
+2.  我于2010年初在旧金山学会编程，那时编程训练营刚刚出现。我没有加入训练营，但和许多训练营创建者交往并且参加学生“demo days”。
+
 3.  Over the past 3 years, I've conducted significant primary research. I've published  [several datasets][1]  containing responses from thousands of bootcamp alumni.
+
+3.再过去的3年里，我对代码训练营做了重要的初步研究，发表了几个包含数千个训练营学员回答的数据集  [several datasets][1] 。
 
 freeCodeCamp's mission is to help as many people learn to code as possible. Bootcamps help a lot of people accomplish this. So they are helping freeCodeCamp in our mission.
 
+freeCodeCamp的使命是尽可能帮助更多的人学习编程。编程训练营也在帮助许多人学会编程。所以他们在帮助我们实现freeCodeCamp的使命。
+
 This said, freeCodeCamp has never received any compensation from bootcamps. Several of the big bootcamp chains have approached us about sponsorship. We have always refused.
+
+除此之外，freeCodeCamp和训练营之间没有任何资金上的往来。一些大型编程训练营曾表明要向我们提供赞助，但我们总是拒绝。
 
 # Why did I write this handbook?
 
+# 为什么我要写这篇指南？
+
 When you Google "coding bootcamp" or "coding bootcamps in \[city name\]", you find a lot of bootcamp review websites. But there are fundamental problems with these review sites.
+
+当你用Google搜索 "coding bootcamp" 或者 "coding bootcamps in \[city name\]"，你会发现许多训练营评论网站。但是这些评论网站有许多根本性的问题。
 
 First, these review sites are sponsored by the bootcamps themselves. Bootcamps pay for advertisements. They pay to rank higher in the search results. They pay for "paid placement" blog articles, op-eds, and other publicity.
 
+首先，这些评论网站被编程训练营赞助。训练营为广告付费，以便于能够在搜索结果里排名更高。除此之外，他们还为某些博客文章，专栏，和公告付费。
+
 This is a conflict of interest.
 
+这是一个利益的冲突问题。
+
 Second, many of the reviews on these sites were coerced. I've heard stories from graduates of several bootcamps who were pressured to leave positive reviews. In some cases, bootcamps made students write reviews as a mandatory in-class activity.
+其次，这些网站上许多评论都是假的。我听某些训练营的学员说，他们被迫写一些正面的评论。在某些训练营里，写评论甚至是一种强制性的班级活动。
 
 There are also a lot of fake reviews written by marketing departments.
 
+还有许多虚假的评论是由市场部门写的。
+
 It's impossible to know which bootcamps are playing by the rules and which are cheating. So all that these review sites accomplish is to help cheaters drown out the more ethical bootcamps.
 
+哪些训练营是正规的，哪些在利用上面所说的手段作弊，几乎不可能分辨得出。因此，所有这些评论网站做的就是把正规的训练营淹没在一群作弊者的海洋里。
+
 Instead of relying on websites full of dubious reviews, you should think for yourself. There are no shortcuts to making a decision this important.
+
 
 > "The #1 marker of quality of a bootcamp is how hard it is to get in. Online reviews are completely and 100% gamed. Job placement statistics are also ruthlessly gamed. The only thing that's ungameable by a bootcamp is how hard it is to get in." - one of the former bootcamp managers I talked to while researching this handbook
 

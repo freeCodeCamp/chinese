@@ -1,211 +1,148 @@
 > * 原文地址：[Programmers Don't Have to be Socially Awkward. Here Are 10 Social Skills To Improve Your Career.](https://www.freecodecamp.org/news/programmers-dont-have-to-be-socially-awkward/)
 > * 原文作者：[Fatos Morina](https://www.freecodecamp.org/news/author/fatosmorina/)
 > * 译者：[Miya](https://github.com/miyaliu666)
-> * 校对者：
+> * 校对者：[jingruzhang](https://github.com/jingruzhang)
 
 ![Programmers Aren’t Supposed to Be Socially Awkward. Here Are 10 Social Skills To Improve Your Career.](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/Napoleon-Dynamite.jpg)
 
-If you work as a software developer, most of your workday is spent dealing with people.
+标题：十项软技能助力开发者职业生涯
 
-Immediately when you start your work for the day, you probably check email, Skype, or Slack, as you are interested in seeing if your work colleagues have something important to tell you.
+作为一个开发者，你在日常工作的大部分时间里都在和各种人打交道。
 
-Then, when you write a response, the destination for your words is another person, not just another computer.
+你一上班可能会先查看邮件、Skype 或者 Slack，确认同事们有没有给你发什么重要信息。然后，你会在电脑上回复信息，而这些信息的接收者不是另一台电脑，而是一个活生生的人。
 
-Your main priority at work is to solve problems, which is done while collaborating on projects and hanging out with other people as part of a software development team.
+接着，你会以解决问题为目标，与团队其他成员协作开发项目或者和相关的人们讨论。这是你作为软件开发团队一员的首要任务。
 
-You attend meetings during the day and get the implementation requirements from other people.
+白天，你还会参加各种会议，收到各种开发需求。
 
-When you are finally ready to do one of the most enjoyable activities for a software developer, which is writing code, you are supposed to write a code which is primarily readable for humans. You do not write your software projects in binary codes, but instead in a programming language that is supposed to be easier for both you and teammates to understand.
+最后，你终于可以坐下来愉快地写代码——这是一个开发者最享受的事情——这个时候你还得考虑代码的可读性，用自己和队友都容易理解的编程语言写项目。
 
-Even if you are working at a small company, or are a freelancer, you still have to deal with the non-technical people in the project that you are working on.
+即便你是在一个小公司上班，或者是一个自由职业者，在做项目的时候你仍然需要和一些非技术人员协作。
 
-We spend a lot of our waking hours with our work colleagues. It is even possible that we spend more time with them than with our close family members.
+大部分的时间我们都是和同事待在一起，甚至可能比和亲密家人相处的时间还多。所以，如何与他人（尤其是你的同事）相处，是一个重要话题。
 
-Becoming aware of this will help you realize the importance of having good relationships with others, especially your co-workers.
+我会在这篇文章里就改善职场人际关系提供一些建议，当然在职场之外它们也是适用的。修炼这些软技能比开发一个实实在在的应用更简单，并且只要你照着去做，就会很有收获。
 
-In this article, you can read some general tips that can help you improve your relationships at work, but that can be applied elsewhere as well.
-
-They are simpler to follow than the frameworks used to develop your applications, but these tips have a huge potential for return over investment.
-
-### **1\. Be very kind**
+### **1\. 传达你的善意**
 
 ![](https://cdn-images-1.medium.com/max/1600/0*-4dWGC_4RI1FCEOC)
 
-Photo by  [Austin Distel][1]  on [Unsplash][2]
+图片来源：[Austin Distel][1]  on [Unsplash][2]
 
-You can be the smartest and the hardest-working person you know, but when you do not have good manners or lack kindness, others in your workplace might hate collaborating with you. Not because you lack the skills and the ability to write clean and maintainable code, but because of your attitude.
+你可能特别机灵特别勤奋，谁都比不上你。但是如果你的行为不讨人喜欢，或者缺乏善意，同伴们可能会讨厌和你协作。是的，即使你写得一手好代码，维护代码的能力也不在话下，他们仍会因为你可恶的态度而讨厌和你协作。
 
-No matter how frustrating a bug is, do not pout, whine, or yell toward your colleagues. Those bad manners will not be able to fix your bug. It can even harm your personal and professional relationships and make it very difficult to get back on track later on.
+无论 bug 多么令人沮丧，请不要冲着你的同事摆脸色、抱怨或大喊大叫。粗暴态度对于 bug 修复并没有积极意义，反而会伤害你和同事之间的关系，并且这种伤害是很难弥补的。
 
-When you are kind, you are more likely to make a good impression on others as a human being in general.
+如果你的态度友善一点，给人们的印象自然会更好。表达友善的方式可能很简单，比如上下班让别人搭个顺风车，在其他人面前提起某人曾经帮助过你什么，帮助同事清理环境卫生（即便这并不是你的工作）等等。就算你和他们已经共事很长时间了，这些传达善意的事情也值得反复做。
 
-Simple acts of kindness, such as giving someone a ride to or from work, mentioning someone’s favor in front of others, cleaning up a colleague’s space that’s not your job to keep clean, etc., should be done repeatedly, despite knowing your colleagues for a long time.
+当你传达善意的时候，起码的，你的同事会表现出本能的礼貌，回应你的善意。
 
-Your kindness will trigger, at least, a basic human decency from your colleagues as well.
+### **2\. 对同事真诚以待**
 
-### **2\. Always be genuinely interested in your colleagues**
+试着了解他们是否需要你的帮助，并且毫不犹豫地予以帮助。当你发现他们有压力、烦躁不安或者遇到一些困难的时候，和他们聊聊天，告诉他们你可以一起头脑风暴解决问题。
 
-Try to understand if they need your help, and do not hesitate to kindly help them. When you see that they are stressed, anxious, or going through tough times, talk to them and show readiness to brainstorm solutions about the problems they are involved in.
+即使你无法帮同事解决他们手头上的难题，你还可以用鼓励的话为他们打打气，让他们感觉到自己对团队来说是很重要的，以及他们是可以处理好所遇到的麻烦的。
 
-Even if you cannot help them with their current task, try to encourage them with motivational phrases that can uplift them emotionally. Make them feel that they are important to the team and capable of overcoming the obstacles they’re facing and the down times they might be in.
+哪怕只是几句话，你的鼓励也会帮助你的同事们舒缓情绪。
 
-Your words alone can magically improve the mood of your colleagues.
+### **3\. 经常微笑**
 
-### **3\. Smile often**
+给人一个微笑或者发送一个笑脸表情比任何话语（甚至是 ”Hello World“ 这么简单的话）都更容易。微笑这个动作看似很普通，却能缓解紧张的气氛。
 
-Even printing a ‘Hello world’ statement takes more time and effort than smiling and sending smiley emoticons. It may seem trivial, but smiling can lighten up the tension.
+苏格兰阿伯丁大学面部研究实验室在 2011 年的一项[科学研究][3]表明，微笑可以让你看起来更有吸引力，更放松，更真诚和更自信。此外，斯堪的纳维亚心理学杂志曾刊登的一项[来自瑞典的研究][4]显示：人们在互动的时候会无意识地模仿对方的面部表情。换句话说，如果你经常微笑，有可能别人也会对你微笑，这样的互动会让你和对方都感觉更好。
 
-A  [scientific study][3]  conducted in 2011 at the Face Research Laboratory at the University of Aberdeen in Scotland found that smiling makes you feel more attractive, relaxed, sincere, and confident.
+### **4\. 多说“谢谢”和“请”**
 
-Moreover,  [one Swedish study][4]  published in the Scandinavian Journal of Psychology found that humans have an automatic reaction that mimics the facial expressions of those they interact with.
+即使人家只是帮了你一个小忙，也不要吝啬对帮助你的人说一声感谢。人们会欣赏你的礼貌，以及你对他们的付出和重要性的认可。这样的感谢不仅会让你的同事感觉更好，也会让你自己感觉更好，因为你知道同事们关心你、愿意帮助你。
 
-In other words, when you smile often, chances are that others will smile back to you as well. This will not only make you feel better, but it also helps others that you interact with.
+[心怀感激对你的生理健康有帮助][5]，同时能改善你的精神状态，提升自信心和睡眠质量，甚至能帮你调节压力。
 
-### **4\. Say ‘thank you’ and ‘please’ a lot.**
+在和同事交流的时候你还应该经常使用的一个词是：请。当你对团队成员说“请”的时候，传递给他的意思是——你并不是在安排他做什么事，不过如果他帮你做的话，他会显得很善良、慷慨。
 
-No matter how small a favor is, do not hesitate to say  _thank you_.
+这些简单的表达也许听起来无足重轻，却可以产生莫大的影响。
 
-People appreciate when you are polite and grateful, and are aware of their contribution and significance in your life.
-
-This will not only make your colleagues feel better, but it will make you feel better as well, as you will know that other colleagues care about you and are willing to help you.
-
-[Gratitude can improve your physical health][5], mental strength, self-esteem, the quality of your sleep, and can even reduce your stress levels.
-
-Another word that you should frequently use in your communication with your colleagues is  _please_.
-
-When you use the word  _please_, you are reminding the other team member that he is not forced to do something, but it would be kind, generous, and helpful of him to assist with the task that you are working on.
-
-These simple words, no matter how insignificant they may sound, can make a huge difference once you start using them.
-
-### **5\. Praise other people’s efforts and stay positive**
+### **5\. 赞颂他人的努力，保持积极的态度**
 
 ![](https://cdn-images-1.medium.com/max/1600/0*gbMqAQW9_uIJYIcj)
 
-Photo by Tyler Nix on Unsplash
+图片来源：Tyler Nix on Unsplash
 
-Become aware of other people’s accomplishments and praise every improvement, large or small.
+关注他人的成就，并对他们的每个或大或小的进步表示赞美。
 
-**Praising someone isn’t complicated. Common phrases like “Great job,” “Well done,” or “You did great” can be sufficient.**
+**赞美他人并不是什么复杂的事情，像“很棒”、“做得很好”或者“你做得不错啊”这样简单的词汇就足够了。**
 
-It may have taken a lot of effort and strong willpower to get to the solution of a frustrating problem.
+解决一个难题可能需要大量的努力和坚强的意志。当你对他人的成就表达赞美之情的时候，你让他们感觉自己很重要，让他们知道你很关注他们所做的事情。
 
-When you praise others on their accomplishments, you make them feel important and that they are involved in something that has grabbed your attention.
+开发者们往往会忘记“懂技术“已经是一项优势了。有时候你和你的同事可能会被一个小小的 bug 或者一项紧急任务搞得焦头烂额，你们得注意关注大局，不要因为小挫折而分心。你应该经常提醒自己和同事你们已经做到了一些令人欢欣鼓舞的事情，不要因为偶然遇到的困难或者压力而泄气。
 
-As software developers, we tend to forget about the privilege of the skills we possess.
+从现在开始，经常肯定队友们的努力吧，一有机会就赞美他们。
 
-There are times when a small bug or an urgent task can bother you or your colleague for a few moments, but you should not let that distract you from the big picture.
+### **6\. 勇于承认错误**
 
-You should regularly remind yourself and your colleagues about the joyful moments that you and your team have been through, and not let an occasional difficulty or a stressful situation make you feel disappointed.
+每个人都不完美。再努力的人也会不时犯错。即便只是一个小错误，你也应该为其道歉，不要犹豫。虽然有时候道歉可能会伤害到你的自尊心，但是这是一个维护你和同事之间的良好关系的重要方式。
 
-Start the habit of regularly recognizing the efforts of your teammates and giving credit to them whenever the opportunity arises.
+你可能会觉得道歉有损你的形象，让你看起来没那么自信，其实完全相反——当你道歉的时候，人们会觉得你很谦逊，愿意承认自己的不足之处。当你和同事闹不愉快的时候，简单的一句“对不起”或者“我很抱歉”就会让你们之间的关系更紧密。
 
-### **6\. Do not hesitate to apologize**
+### **7\. 不要批评别人**
 
-Nobody is perfect, and no matter how hard you try, you will always make a mistake here and there.
+人们常常会认为批评是对他们私人的威胁，即便批评者并没有那个意思。被批评的人可能会变得情绪化，以及感觉被冒犯。
 
-No matter how small your mistake is, do not hesitate to apologize about it.
+当你要指出同事的错误的时候，更好的方式是给他们一个礼貌的点评——关注错误本身，而不是贬低别人或者评论犯错的人。
 
-Even though it might threaten your ego to apologize sometimes, it is a crucial way to keep good relationships with your colleagues.
+换位思考，从他们的角度来审视问题，礼貌地指出他们的错误。
 
-Although you may think it will damage your reputation, by causing you to appear less confident, apologizing has the opposite effect.
+私下告诉他们错误所在，不要当众指出。
 
-It will remind others that you are aware of your shortcomings and that you are humble enough to admit to them.
+如果你想让别人不要犯某个错误，注意不要指向人，而是指向问题。
 
-Short phrases like “I am sorry” or “I apologize” can strengthen your ties with your colleagues, even during unpleasant moments.
+试着关注解决问题的方法，而不是一味指责。
 
-### **7\. Do not criticize**
+**扮演一个帮助而非贬低他人的角色。** 当你帮助他人的时候，你会感觉到自己的正面作用和重要性。并且，助人也是助己，你帮助过的同事或许将来某天也会帮助你。
 
-Criticizing is often perceived as a personal threat towards an individual’s ego, though you may not have intended to do that.
-
-As a result, it is likely that he or she may get emotional and feel offended.
-
-A better way of pointing out your colleague’s mistake is by giving them a  _polite critique_: Call attention to people’s mistakes without demeaning them or making it personal.
-
-Put yourself in their shoes and observe the issue from their perspective. Politely inform the other person about their mistake.
-
-Do not point out a mistake in front of everybody; instead, do it privately.
-
-If you want to inform everybody else about a mistake that they should not be doing, do not point fingers toward people, but toward the problem.
-
-Try to focus on possible ways of solving the problem rather than on blame.
-
-**Become the person who helps people, rather than someone who belittles them.**
-
-When you help someone, you are going to feel your own sense of contributing and your own significance as well. Moreover, you can learn for yourself, and can also open doors to receiving help in future from the same colleagues that you have helped in the past.
-
-### **8\. Avoid arguments**
+### **8\. 避免争执**
 
 ![](https://cdn-images-1.medium.com/max/1600/0*QVGYyz8F3j1Lq3kG)
 
-Photo by  [Jason Rosewell][6]  on [Unsplash][7]
+图片来源：[Jason Rosewell][6]  on [Unsplash][7]
 
-We tend to think of ourselves as rational human beings, but in reality, we are emotionally driven creatures that can easily get angry.
+我们总是认为自己是理性的人类，而事实上我们都是被情感驱使、容易生气的生物。无论你是对还是错，气头上都可能和他人有些不愉快的争执。即便你是对的，只是想维护自己正确的观点，和他人的激烈争吵也会破坏你们的关系。
 
-Those few moments of anger can lead to some unpleasant arguments, no matter whether you are right or wrong.
+Dale Carnegie 在[《如何赢得友谊并影响他人》][8]一书中提到：
 
-Although you may be right, and protecting your opinion sounds like a good idea, arguing furiously with others is something that can dramatically ruin your relationships.
+> _“我得出一个结论，它也是一个真理：天下只有一种方法能得到争执的最大胜利，那就是像避开毒蛇和地震一样，尽量去避免争执。”_
 
-As Dale Carnegie mentions in his book  [_How to Win Friends and Influence People_][8]:
+处理争执最好的办法就是尽可能避免它，这听起来不容易，但是实践起来会慢慢变得容易的。经常提醒自己争执没啥好处，尤其是和同事争执往往会让双方得不偿失，这样可以给你心理暗示，避开争执。
 
-> _“I have come to the conclusion that there is only one way under high heaven to get the best of an argument — and that is to avoid it. Avoid it as you would avoid rattlesnakes and earthquakes.”_
+### **9\. 多提问，少发号施令**
 
-The best thing to do about arguments is to try your best to avoid them at all costs. It is not as easy as it sounds, but it can become easier with practice.
+这一点呢，跟团队负责人和老板更相关，不过也同样适用于其他人。
 
-Reminding yourself that most of the time there is almost no benefit from arguing, especially with your work colleagues, can reinforce the desire to keep yourself away from arguments.
+当人们接收挑战而不是被命令去做某件事的时候，他们会更有热情。如果你命令某人去做某事，这可能会激发他的自主意识，让他产生压力感或者感觉被威胁。与其直接下命令，不如问问同事想不想完成某件具体任务。
 
-### **9\. Ask questions instead of giving direct orders**
+假设执行某项任务的人手不足，然后你担心开发者们可能不喜欢做前端部分的工作，你可以告诉他们，如果下次会议上不能演示这个特性的话，客户对团队的印象会大打折扣。
 
-This is something that is more relevant to team leaders or managers, but it can apply to anyone else as well.
+比如你可以这样提问：
+> _“你可以加会儿班完成这部分吗？这对咱们项目特别重要。”_
 
-People tend to be more inspired to work when they are challenged to do something, rather than ordered around.
+好过用命令的口吻：
+> _“完不成这个任务你就别想回家。”_
 
-When you command someone to do something, their ego may come out and make the individual think that he is being oppressed or that his autonomy is being threatened.
+你还可以这么说：
+> _“你可以负责这项工作吗？我知道你在这块特别有经验”_
 
-Rather than giving a direct order, ask whether a colleague would like to work on a particular task.
+让他们感觉到自己是团队中的重要一员，客户会因为他们的工作对团队有好印象，之后也会有更多的项目合作。
 
-If there is no other available developer who can work on a particular task, and you are afraid that they may not like working on the front-end side, tell them you are worried that the team might look bad in front of the client if this feature is not present in the next meeting.
+### **10\. 远离消极的人**
 
-Questions like “_Would you mind working overtime and finishing off this task, knowing that this is critical for our project?”_ are better than commands like  _“You cannot go home unless you get this task done.”_
+也许软件开发是你梦想的工作，这份工作令你心情愉悦，但是你的团队中可能有一些消极的、总是传递负面情绪的人。你以为自己高中毕业之后就不会再遇到这样的人了，但是事实上你常常在各种地方遇到这种人。他们老是伺机打击别人的情绪，对各种事情持消极态度。你可以尝试用自己的善意去影响和改变他们，但是通常来说一个人是很难被改变的（影响因素很多）。如果你发现自己对他们的积极影响并不大，而且和他们交往总是给你带来麻烦，那就应该避免跟他们打交道。
 
-Mention to them that they are an important part of the team, and they can help the team prove to the client that they are reliable for future projects as well, with questions such as,  _“Could I possibly assign this task to you, knowing that you are already experienced with these types of work?”_
+不过，有可能你的上级或者一个办公室的同事就是这样的人，那你的选择就比较有限了，考虑换个部门或者换份工作吧。如果你除了直面他们之外没别的选择，那就提前给自己做好心理建设吧，不要让他们的坏情绪影响到你的情绪，毁了你的一整天。他们的态度就是那样的，你应该习惯了，尽量少跟他们交流吧。
 
-### **10\. Avoid dealing with ‘toxic’ people**
+### **总结**
 
-Even though working as a software developer might be your dream job, there may nevertheless be toxic people at your workplace.
+一个软件开发者的日常远远不止敲代码，处理人际关系也很重要。有些技能看似无足重轻，平时人们也很少强调，却对你的职业成长非常重要，社交技能就是其中之一，而理解和实践这些职场软技能比在白板上反转二叉树简单得多。我知道有些事情说起来容易做起来难，所以，把道理付诸实践，再通过实践来总结道理，很重要。
 
-You thought you left those types of people behind at your high school, but it turns out that life is filled with so many of them.
-
-These people are simply looking for opportunities to bring others down and may generally possess a negative perspective on everything in life.
-
-You can try to change them with your well-intentioned influence, but often it is very difficult for a person to change (for a lot of reasons).
-
-If you see that you are not having any positive influence, and associating with them is only causing you trouble, then you should avoid dealing with them.
-
-You might be in a situation, however, where this person is your manager or a colleague in your office.
-
-In these cases, your alternatives are very limited. You may consider changing your department, or start looking for a new job.
-
-In cases when you do not have any other alternative but to deal with them, prepare yourself mentally ahead of time regarding their bad attitude, and tell yourself that you should not let them influence your mood and ruin your whole day.
-
-Their attitude is not something that should surprise you.
-
-Try to interact with them as little as possible.
-
-### **Conclusion**
-
-There is a lot more to the life of a software developer than just writing code. Dealing with people is one of the key factors.
-
-Although they do not get mentioned or emphasized that much, social skills are among those few seemingly unimportant skills that can actually accelerate growth in your career.
-
-And they are much simpler to understand and put into practice than inverting a binary tree on a whiteboard.
-
-While I agree that some of these things are easier said than done, it is important to practice applying them in our lives.
-
-Before you leave, let me kindly remind you about one more thing:  **Do not expect to always be able to apply these things all of the time**.
-
-We are human beings and we have our own difficult times, too.
-
-However, we must not let those few moments of frustration and anger ruin our whole professional and non-professional lives.
+最后，我还想提醒你一件事：**不要期待自己可以总是把各方面都做得很好**。我们都是普通人，都免不了遇到各种坎儿，只要注意控制自己的情绪，不要因为一时的沮丧和怒气给工作和生活带来大麻烦就好了。
 
 [1]: https://unsplash.com/@austindistel?utm_source=medium&utm_medium=referral
 [2]: https://unsplash.com/?utm_source=medium&utm_medium=referral

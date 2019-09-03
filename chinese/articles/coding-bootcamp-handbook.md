@@ -68,13 +68,12 @@ As the teacher who founded freeCodeCamp, I am in a unique position to write abou
 2.  I learned to code in San Francisco in the early 2010's, when bootcamps first came onto the scene. I didn't attend a bootcamp, but I hung out with many bootcamp founders and attended student "demo days."
 
 
-
 2.  我于2010年初在旧金山学会编程，那时编程训练营刚刚出现。我没有加入训练营，但和许多训练营创建者交往并且参加学生“demo days”。
 
 3.  Over the past 3 years, I've conducted significant primary research. I've published  [several datasets][1]  containing responses from thousands of bootcamp alumni.
 
 
-3.再过去的3年里，我对编程训练营做了重要的初步研究，发表了几个包含数千个训练营学员回答的数据集。  [several datasets][1] 
+3.  再过去的3年里，我对编程训练营做了重要的初步研究，发表了几个包含数千个训练营学员回答的数据集。[数据集][1] 
 
 
 

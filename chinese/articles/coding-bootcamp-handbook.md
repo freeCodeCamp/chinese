@@ -64,6 +64,7 @@ As the teacher who founded freeCodeCamp, I am in a unique position to write abou
 
 1.  很多训练营都使用freeCodeCamp来完成他们的课程和课程预备。我已经帮助指导许多训练营创始人，教他们如何让人们为开发者职业做准备。
 
+
 2.  I learned to code in San Francisco in the early 2010's, when bootcamps first came onto the scene. I didn't attend a bootcamp, but I hung out with many bootcamp founders and attended student "demo days."
 
 
@@ -73,7 +74,7 @@ As the teacher who founded freeCodeCamp, I am in a unique position to write abou
 3.  Over the past 3 years, I've conducted significant primary research. I've published  [several datasets][1]  containing responses from thousands of bootcamp alumni.
 
 
-3.再过去的3年里，我对编程训练营做了重要的初步研究，发表了几个包含数千个训练营学员回答的数据集  [several datasets][1] 。
+3.再过去的3年里，我对编程训练营做了重要的初步研究，发表了几个包含数千个训练营学员回答的数据集。  [several datasets][1] 
 
 
 

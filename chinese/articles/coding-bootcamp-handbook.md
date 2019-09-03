@@ -60,8 +60,6 @@ As the teacher who founded freeCodeCamp, I am in a unique position to write abou
 
 1.  A lot of bootcamps use freeCodeCamp for their curriculum and course prepwork. I've helped coach a lot of bootcamp founders on how to prepare people for developer careers.
 
-
-
 1.  很多训练营都使用freeCodeCamp来完成他们的课程和课程预备。我已经帮助指导许多训练营创始人，教他们如何让人们为开发者职业做准备。
 
 

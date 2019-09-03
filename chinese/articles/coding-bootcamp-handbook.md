@@ -40,7 +40,7 @@ My advice to you boils down to this:  **Do your research**.
 **Bootcamps aren't magic.**  Bootcamps can only help prepare you.  _You_  have to learn everything.  _You_  have to go through the developer job interview process.  _You_  have to put in the work.
 
 
- **训练营不是魔术。** 训练营只能够帮助你准备。-你-必须学习所有的东西。-你-必须经历开发者人员面试过程。-你-必须投入工作。
+ **训练营不是魔术。** 训练营只能够帮助你准备。*你* 必须学习所有的东西。*你* 必须经历开发者人员面试过程。*你* 必须投入工作。
 
 # A note on objectivity
 # 关于客观性的说明

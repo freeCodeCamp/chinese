@@ -114,44 +114,82 @@ It's impossible to know which bootcamps are playing by the rules and which are c
 
 Instead of relying on websites full of dubious reviews, you should think for yourself. There are no shortcuts to making a decision this important.
 
-
+不要依赖充满虚假评论的网站，而要自己认真思考。做出如此重要的决定是没有捷径可寻的。
 > "The #1 marker of quality of a bootcamp is how hard it is to get in. Online reviews are completely and 100% gamed. Job placement statistics are also ruthlessly gamed. The only thing that's ungameable by a bootcamp is how hard it is to get in." - one of the former bootcamp managers I talked to while researching this handbook
 
+> “衡量一个训练营质量的第一标志就是进入这个训练营的难度。网上的评论完全是套路，就业统计数字也是无情的套路。唯一没有被套路的就是进入它的难度。” —— 我为这篇指南做调查时结识的一位前训练营管理者如是说
+
 This handbook will give you a framework you can use to understand how bootcamps work. It will help you research your options and plan the path to your first developer job.
+这篇指南将会给你一个用来理解训练营运转方式的框架。它会帮助你做出正确的选择，引导你走上你的第一份开发者工作之路。
 
 # What exactly is a bootcamp?
+
+# 训练营到底是什么？
 
 ![Coding together](https://images.unsplash.com/photo-1528901166007-3784c7dd3653?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
 Bootcamps are schools where you learn to code full-time - usually in person.
 
+训练营是全日制学习编程的学校 —— 通常本人要到校，而并非远程
+
 Most bootcamps are around 12 weeks long, though some are as long as a year.
+
+大多数训练营授课时间大约12周，但有些长达一年。
 
 Most bootcamps cost between US $10,000 and $20,000.
 
+大多数训练营的费用在10,000美元到20,000美元之间。
+
 Some bootcamps offer loans - either directly or through a financing company.
+
+某些训练营直接或者间接通过金融公司为学员提供贷款。
 
 Some bootcamps offer "Income Share Agreements" where instead of paying up front, you pay a percentage of your pre-tax income (usually 17%) for several years (usually 2 years). This is not "free money" - and I'll explain it in detail below.
 
+某些训练营提供“收入分成协议”。根据协议，你可以不预先支付，而是在几年之内（通常是2年）支付一定比例（通常为17%）的税前收入。这笔钱不是白白支付的，下面我会详细解释。
+
 The goal of a bootcamp is to take a classroom full of people who have never worked in tech before and help them get their first developer job.
+
+训练营的目的是帮助之前没有在科技公司工作的学员获得他们的第一份开发者工作。
 
 That's a tall order. And there's a lot of money on the line. Which leads us to the next question.
 
+这是一个很高的要求。并且在这些过程里需要花费很多钱，这就把我们引入下一个问题。
+
 # Do bootcamps actually work?
+
+# 训练营真的有用吗？
 
 In many cases, yes. Every year, thousands of bootcamp grads get their first developer jobs.
 
+从许多例子来看是这样的。每年有数千名训练营毕业学员获得他们的第一份开发者工作。
+
 > "The best bootcamps take people with raw ability and turn them into (lightly) experienced programmers. Most of what they do in some ways is selection, and then put people into pressure cookers of learning." - a former bootcamp manager I talked to
+
+> “最好的训练营把没有经验的人在微小的程度上变成有经验的程序员。他们在某些方面经常做的是严格筛选，然后把人放到充满压力的环境下学习。” —— 一位与我交流的前训练营管理者如是说
 
 But there are also bootcamp grads who fail to get a developer job and end up going back to their past careers.
 
+但是也有最终没有获得开发者工作的训练营毕业生，最后只能回到过去的工作岗位上去。
+
 Success comes down to a few factors:
 
+成功可以归结为几个因素：
+
 -   How selective the bootcamp is
+
+-   训练营对学员筛选的严格程度
+
 -   How capable the teachers are
+
+-   教师的能力
+
 -   And whether the people running the bootcamp care about their employment statistics or are just in it for short term financial gains.
 
+-   训练营的经营人是关心他们的学员就业统计数字还是仅仅想得到短期的利润。
+
 Most bootcamps don't publicly share their numbers. And the bootcamps who do may use non-standard metrics. This makes it difficult for you to make apples-to-apples comparisons.
+
 
 But there's a growing transparency movement within bootcamps. They are pressuring one another to be more accountable.
 

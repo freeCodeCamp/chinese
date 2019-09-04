@@ -1,6 +1,6 @@
 > * 原文地址：[How to stay motivated when learning to code (10 actionable tips!)](https://www.freecodecamp.org/news/how-to-stay-motivated-when-learning-to-code-10-actionable-tips-f5f208f917db/)
 > * 原文作者：[Jessica Chan](https://www.freecodecamp.org/news/author/thecodercoder/)
-> * 译者：
+> * 译者：StoneCode5
 > * 校对者：
 
 ![How to stay motivated when learning to code (10 actionable tips!)](https://cdn-media-1.freecodecamp.org/images/1*PlfP6s0sXaTpfxCx9ph9xg.jpeg)

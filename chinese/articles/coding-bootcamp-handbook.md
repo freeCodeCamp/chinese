@@ -154,7 +154,7 @@ The goal of a bootcamp is to take a classroom full of people who have never work
 
 That's a tall order. And there's a lot of money on the line. Which leads us to the next question.
 
-这是一个很高的要求。并且在这些过程里需要花费很多钱，这就把我们引入下一个问题。
+这是一个很高的要求。并且在这些过程里需要花费很多钱，这就引出了下一个问题。
 
 # Do bootcamps actually work?
 
@@ -162,7 +162,7 @@ That's a tall order. And there's a lot of money on the line. Which leads us to t
 
 In many cases, yes. Every year, thousands of bootcamp grads get their first developer jobs.
 
-从许多例子来看是这样的。每年有数千名训练营毕业学员获得他们的第一份开发者工作。
+从许多例子来看是这样的。每年有数千名训练营毕业生获得他们的第一份开发者工作。
 
 > "The best bootcamps take people with raw ability and turn them into (lightly) experienced programmers. Most of what they do in some ways is selection, and then put people into pressure cookers of learning." - a former bootcamp manager I talked to
 

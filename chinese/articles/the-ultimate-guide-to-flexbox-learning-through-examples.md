@@ -1,4 +1,4 @@
-> * 原文地址：The Ultimate Guide to Flexbox — Learning Through Examples](https://www.freecodecamp.org/news/the-ultimate-guide-to-flexbox-learning-through-examples-8c90248d4676/)
+> * 原文地址：[The Ultimate Guide to Flexbox — Learning Through Examples](https://www.freecodecamp.org/news/the-ultimate-guide-to-flexbox-learning-through-examples-8c90248d4676/)
 > * 原文作者：[Emmanuel Ohans](https://www.freecodecamp.org/news/author/emmanuel/)
 > * 译者：
 > * 校对者：

@@ -5,15 +5,13 @@
 
 ![How to stay motivated when learning to code (10 actionable tips!)](https://cdn-media-1.freecodecamp.org/images/1*PlfP6s0sXaTpfxCx9ph9xg.jpeg)
 
-_This post was originally published on  [Coder-Coder.com][1]._
+_这篇文件转载自 [Coder-Coder.com][1]._
 
-Does this story sound familiar?
+下面这个故事你熟悉吗?
 
-_You’ve decided to learn to code! Filled with excitement at finding a new career, you quickly sign up for a Udemy course and register at freeCodeCamp._
+_你终于下定决心要学习编程了！怀着无比的雄心与激情想要开启新的职业生涯，迫不及待的在Udemy的freeCodeCamp注册了账号，然后浏览着编程相关的资料直到深夜,眼神里满是对编程知识的渴望。_
 
-_Feeling optimistic and eager, you sit down and start going through the material that evening._
-
-_In the next several weeks, you fall into a pattern of studying coding till late at night, then waking up early the next morning to go to work. But you’re starting to get confused by some of the concepts, and there isn’t anyone to ask for help._
+_在接下来的几个星期, 白天忙碌工作，晚上学习编程，你一如既往的坚持着，尽管努力，但是渐渐地你发现有一些概念和定义总是不能很好的理解，而且没有人可以帮助你解答疑问。_
 
 _You’ve sacrificed your free time, and haven’t watched TV to unwind in a while. Also, having to miss nights out with friends sucks._
 
@@ -286,3 +284,4 @@ I really hope that these tips are helpful to you. Any of them strike a chord in 
 [7]: https://coder-coder.com/subscribe
 [8]: https://www.instagram.com/thecodercoder/
 [9]: https://www.youtube.com/c/codercodertv
+

@@ -9,25 +9,26 @@ _这篇文件转载自 [Coder-Coder.com][1]._
 
 下面这个故事你熟悉吗?
 
-_你终于下定决心要学习编程了！怀着无比的雄心与激情想要开启新的职业生涯，迫不及待的在Udemy的freeCodeCamp注册了账号，然后浏览着编程相关的资料直到深夜,眼神里满是对编程知识的渴望。_
+_你终于下定决心要学习编程了！怀着无比的雄心与激情想要开启新的职业生涯，迫不及待的在 Udemy 的 freeCodeCamp 注册了账号，然后浏览着编程相关的资料直到深夜,眼神里满是对编程知识的渴望。_
 
 _在接下来的几个星期, 白天忙碌工作，晚上学习编程，你一如既往的坚持着，尽管努力，但是渐渐地你发现有一些概念和定义总是不能很好的理解，而且没有人可以帮助你解答疑问。_
 
-_You’ve sacrificed your free time, and haven’t watched TV to unwind in a while. Also, having to miss nights out with friends sucks._
+_你牺牲了你的所有空闲时间来学习，电视都舍不得看一下，也没有和朋友聚会._
 
-_After a couple of months, all the late nights and lack of sleep are starting to weigh down on you. You bitterly come to the realization that you won’t be anywhere near landing a new job in 6 months. The thought is incredibly discouraging._
+_坚持了几个月以后，长期熬夜导致的睡眠不足让你十分难受，你艰难的意识到你不可能在6个月之内找一份编程的工作，这真的很打击你。_
 
-_Finally, you decide to take a break. You’re feeling burned out and frankly exhausted. That break extends out for further months._
+_最后，你决定要休息一会儿，因为你真的感觉自己没有动力继续下去，而且真的非常疲惫。_
 
-_Later that year, you realize you haven’t cracked open your tutorial for a really long time. Sighing, you shove the thought of someday having a job you love into the back of your mind._
+_年底，你发现你都没怎么认真看过编程教程了，很遗憾，你将之前的目标抛诸脑后了。_
 
-_Maybe next year._
+_或许，明年你会再次出发吧。_
 
-#### Staying motivated while coding
+#### 让编程充满兴趣
 
-Is this story similar to your own? If you’re trying to teach yourself how to code, you are probably pretty familiar with the struggles in the story.
+是否在这个故事上看到了自己的影子？
+如果你曾经自学过编程，那可能你曾经感受过这样的挣扎。
 
-Learning coding or any skill on your own is way different from being in a classroom with a teacher. You don’t have mandatory classes, tests, grades, or the fear of failing to keep yourself motivated.
+自学编程或者其他技能和在学校里上学是两回事。你没有必须要学习的课程，没有考试，没有分数，也没有对失败的害怕来促使你学习。
 
 **When you’re learning to code by yourself, you have to generate your own motivation.**
 

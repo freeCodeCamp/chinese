@@ -189,26 +189,39 @@ Success comes down to a few factors:
 -   训练营的经营人是关心他们的学员就业统计数字还是仅仅想得到短期的利润。
 
 Most bootcamps don't publicly share their numbers. And the bootcamps who do may use non-standard metrics. This makes it difficult for you to make apples-to-apples comparisons.
+大多数训练营不会公开他们的数据，即使公开也可能用的是非标准的指标。这就使得训练营之间的比较很困难。
+
 
 
 But there's a growing transparency movement within bootcamps. They are pressuring one another to be more accountable.
+但是训练营正在变的越来越透明。他们之间互相施压使彼此变得更有责任心。
+
 
 Some bootcamps want to self-regulate the industry before the government is forced to step in and regulate it for them.
+一些训练营希望可以赶在政府介入和规范这个行业之前自我规范。
 
 Bootcamps have only existed as a form of post-high school education for a few years. They aren't yet regulated like colleges and universities. That is, through accreditation.
+训练营仅以高中后教育的形式存在了几年。他们还没有像通过认证的大学那样受到监管。
 
 ## Are bootcamps accredited?
+## 训练营受到官方认证吗？
 
 The short answer is no, they aren't accredited.
+答案是否定的。他们不被官方认证。
 
 But first, what does it meant to be accredited? And why's that so important for colleges and universities?
+首先，受到认证是什么意思？为什么这对大学如此重要？
 
 In the US, most universities are regionally accredited. And some academic programs are nationally accredited, such as English preparation schools.
+在美国，大多数大学属于区域认证。一些学术课程比如英语预科学校受到国家认证。
 
 There are two major reasons for this:
+对此主要有两个原因：
 
 -   accredited schools can help students get a US visa
+-   受认证的学校能让学生获得美国签证
 -   accredited schools can help students get federal grants or federal student loans
+-   受认证的学校能让学生获得联邦资助和学生贷款
 
 In order to get accredited, schools have to undergo an audit by independent educators. These auditors dig through files and make sure the school is following all the laws. They also make sure students are getting jobs after they graduate.
 

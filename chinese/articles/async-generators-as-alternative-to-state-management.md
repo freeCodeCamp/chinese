@@ -1,11 +1,13 @@
 > * 原文地址：[Async Generators as an alternative to State Management](https://www.freecodecamp.org/news/async-generators-as-an-alternative-to-state-management/?fbclid=IwAR2Py7k7WayAE_zq4tkd99pj3oBP7scsKp9mZbPCtv_zJqvhN4eOVAef6M8)
 > * 原文作者：[Vitalii Akimov](https://www.freecodecamp.org/news/author/vitalii/)
-> * 译者：
+> * 译者：luyc
 > * 校对者：
   
 ![Async Generators as an alternative to State Management](https://www.freecodecamp.org/news/content/images/size/w2000/2019/07/async-state.png)
 
 Async Generators is a simple but powerful feature that is now a part of JavaScript. It unlocks many new tools to improve software architecture, making it more agile, simplifying extension and composition.
+
+`Async Generators` 是一个简单但功能强大的特性，它现在已经是`JavaScript`的一部分。它解锁了许多新的工具来改进软件结构，使其更加灵活，易扩展和组合。
 
 #### TL;DR
 
@@ -15,6 +17,15 @@ Async Generators is a simple but powerful feature that is now a part of JavaScri
 -   State persistence for things like time traveling, universal apps is also available.
 -   The article uses React and JavaScript, but the technique is applicable in any other framework or programming language with generators (coroutines).
 -   _I’m advertising my tool only at the end and very briefly. Most of the article is about async generators without any dependency._
+
+#### TL;DR
+
+-   使用 `Async Generators`，将不再需要组件状态，状态管理工具，生命周期方法，甚至是最近的`React Context`，`Hooks`和`Suspense APIs`。它将简化开发，管理和测试。
+-   与状态管理方法不同的是，异步生成器将异步转换变得可控且无害（它只在生成器作用域有效）。
+-   这个思路有函数式编程的背景
+-   状态持久化工具像时间旅行器，通用程序依然是可用的。
+-   这篇文章使用`React`和`JavaScript`，但是这项技术在任何其他框架或拥有生成器（协程）的编程语言都是适用的。
+-   _我只在最后简短的宣传我的工具。本文的大部分内容都是关于异步生成器的，没有其他依赖内容_
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*KlSEFFBTjyZKovSoQ0NnEw.png)
 

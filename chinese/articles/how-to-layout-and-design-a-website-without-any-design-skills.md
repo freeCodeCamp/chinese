@@ -1,6 +1,6 @@
 > * 原文地址：[How to layout and design a website (without any design skills)](https://www.freecodecamp.org/news/how-to-layout-and-design-a-website-without-any-design-skills-86d94e40b55a/)
 > * 原文作者：[Jessica Chan](https://www.freecodecamp.org/news/author/thecodercoder/)
-> * 译者：
+> * 译者：sunnysly123
 > * 校对者：
 
 ![How to layout and design a website (without any design skills)](https://cdn-media-1.freecodecamp.org/images/1*Phg_9259Vl8tNHyCh_W3sg.jpeg)

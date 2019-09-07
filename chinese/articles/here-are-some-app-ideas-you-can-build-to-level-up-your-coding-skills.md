@@ -1,40 +1,40 @@
-> * 原文地址：[Here are some app ideas you can build to level up your coding skills](https://www.freecodecamp.org/news/here-are-some-app-ideas-you-can-build-to-level-up-your-coding-skills-39618291f672/)
+> * 原文地址：[一些可以提升你编程水平的应用创意想法](https://www.freecodecamp.org/news/here-are-some-app-ideas-you-can-build-to-level-up-your-coding-skills-39618291f672/)
 > * 原文作者：[Florin Pop](https://www.freecodecamp.org/news/author/florinpop17/)
 > * 译者：MMMAY521
 > * 校对者：
 
-![Here are some app ideas you can build to level up your coding skills](https://cdn-media-1.freecodecamp.org/images/0*v3qXmKe1LTiiW_3H.png)
+![一些可以提升你编程水平的应用创意想法](https://cdn-media-1.freecodecamp.org/images/0*v3qXmKe1LTiiW_3H.png)
 
-Have you ever wanted to build something but you had no idea what to do? Just as authors sometimes have “writer's block” it’s also true for developers.
+Have you ever wanted to build something but you had no idea what to do? Just as authors sometimes have “writer's block” it’s also true for developers.你是否曾经想开发一些东西但苦于无从下手？就像文学创作者会遭遇写作瓶颈，开发人员也不例外。
 
-Together with my friend  [Jim][1]  we created a  [collection of application ideas][2]  which is intended to solve this issue once and for all! ?
+Together with my friend  [Jim][1]  we created a  [collection of application ideas][2]  which is intended to solve this issue once and for all! ?我跟我的朋友吉姆一起，创作了一个【应用创意想法集锦】，旨在一劳永逸地解决这个问题。
 
-These applications are:
+These applications are:这些应用可以：
 
--   great to improve your coding skills
--   great to experiment with new technologies
--   great to be added in your portfolio to impress your next employer/client
--   great to be used as examples in tutorials (articles or videos)
--   easy to complete and also easily extendable with new features
+-   great to improve your coding skills很好地提升你的编程技能
+-   great to experiment with new technologies很好地接触新技术
+-   great to be added in your portfolio to impress your next employer/client成为你简历里打动雇主或客户的经历
+-   great to be used as examples in tutorials (articles or videos)成为辅导材料（文章或者视频形式）里面的例子
+-   easy to complete and also easily extendable with new features很快完成，新性能扩展也十分容易
 
-This is not just a simple list of projects, but a collection that describes each project in enough detail so you can develop it from the ground up!
+This is not just a simple list of projects, but a collection that describes each project in enough detail so you can develop it from the ground up!这不仅仅是一个项目的简单罗列。这份集锦详细地描述了每个项目，足够你从零开始。
 
-Each project specification contains the following:
+Each project specification contains the following:每份项目规格包含：
 
-1.  A clear and descriptive objective
-2.  A list of  _User Stories_  which should be implemented (these stories act more as a guideline than a forced list of  _To-Do’s_. Feel free to add your own features if you want)
-3.  A list of  _bonus features_  that improve not only the base project but also your skills at the same time
-4.  All the resources and links to help you find what you need to complete the project
+1.  A clear and descriptive objective一个清晰描述对象
+2.  A list of  _User Stories_  which should be implemented (these stories act more as a guideline than a forced list of  _To-Do’s_. Feel free to add your own features if you want) 需执行的用户故事清单（这些用户故事更像是一个行为准则而非必做事项。如果你有需要的话也可以根据自己的需要添加）
+3.  A list of  _bonus features_  that improve not only the base project but also your skills at the same time追加选项清单。这个不仅可以改良基础项目，同时你的编程技巧也会有所提高
+4.  All the resources and links to help you find what you need to complete the project所有能帮你发现完成项目所需物料的资源和链接
 
-### Projects
+### Projects项目综述
 
-All of the projects are divided into three tiers based on the knowledge and experience required to complete them. These tiers are:
+All of the projects are divided into three tiers based on the knowledge and experience required to complete them. These tiers are:根据完成项目所需的知识储备和经验，所有的项目分为三个层级：
 
-1.  **Beginner**  — Developers in the early stages of their learning journey. Those who are typically focused on creating user-facing applications.
-2.  **Intermediate**  — Developers at an intermediate stage of learning and experience. They are comfortable in UI/UX, using development tools, and building apps that use API services.
-3.  **Advanced**  — Developers who have all of the above, and are learning more advanced techniques like implementing BackEnd applications and Database services.
+1.  **Beginner**  — Developers in the early stages of their learning journey. Those who are typically focused on creating user-facing applications.初级针对的是刚刚起步的开发人员，特别是专注于开发面向用户应用的人员。
+2.  **Intermediate**  — Developers at an intermediate stage of learning and experience. They are comfortable in UI/UX, using development tools, and building apps that use API services.中级针对的是已经有学习和开发经验的老学员。他们注重用户界面和用户体验，会使用开发工具，会开发使用应用编程接口服务的应用。
+3.  **Advanced**  — Developers who have all of the above, and are learning more advanced techniques like implementing BackEnd applications and Database services.高级所针对的开发人员包含初级和中级提到的所有特点。他们还会额外学习高级技术，例如执行后端应用和数据库服务。
 
-Below you’ll find  **5 projects**  for each of the tiers (**15 in total**), but there are over  **30 projects**  (at the moment) in  [this GitHub repository][3]. Make sure you check it out as we are planning to add more projects in the future. You are welcome to help! (More about this in the  _Contributing_ section below ?)
+Below you’ll find  **5 projects**  for each of the tiers (**15 in total**), but there are over  **30 projects**  (at the moment) in  [this GitHub repository][3]. Make sure you check it out as we are planning to add more projects in the future. You are welcome to help! (More about this in the  _Contributing_ section below ?)接下来，每个层级中都会包含五个项目，总共十五个项目。但在我写文章时，在Github库中共有三十个项目。一定要确保你把这些项目都烂熟于心，因为未来我们计划增加更多的项目，非常欢迎你出一份力！（更多信息请关注下文的“贡献”部分）
 
 ### 1\. Notes App
 

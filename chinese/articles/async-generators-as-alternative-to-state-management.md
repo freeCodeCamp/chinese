@@ -5,18 +5,8 @@
   
 ![Async Generators as an alternative to State Management](https://www.freecodecamp.org/news/content/images/size/w2000/2019/07/async-state.png)
 
-Async Generators is a simple but powerful feature that is now a part of JavaScript. It unlocks many new tools to improve software architecture, making it more agile, simplifying extension and composition.
-
 `Async Generators` 是一个简单但功能强大的特性，它现在已经是`JavaScript`的一部分。它解锁了许多新的工具来改进软件结构，使其更加灵活，易扩展和组合。
 
-#### TL;DR
-
--   With Async Generators there is no longer need for components state, state management tools, component lifecycle methods, and even the latest React Context, Hooks and Suspense APIs. It is much simpler to develop, maintain, and test.
--   Unlike a state management approach, async generators tame asynchronicity leaving mutations harmless (if visible only in the generator’s scope).
--   This approach has a functional programming background.
--   State persistence for things like time traveling, universal apps is also available.
--   The article uses React and JavaScript, but the technique is applicable in any other framework or programming language with generators (coroutines).
--   _I’m advertising my tool only at the end and very briefly. Most of the article is about async generators without any dependency._
 
 #### TL;DR
 
@@ -31,19 +21,19 @@ Async Generators is a simple but powerful feature that is now a part of JavaScri
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*ZrJKJqBsksWd-8uKM9OvgA.png)
 
-Let’s start with a statement from  [Redux motivation page][1]:
+让我们从[Redux动机页面][1]的声明开始:
 
-> _This complexity is difficult to handle as  ****we’re mixing two concepts****  that are very hard for the human mind to reason about:  ****mutation and asynchronicity.****  I call them  [Mentos and Coke][2]. Both can be great in separation, but together they create a mess._
+> _这种复杂性很难处理，因为****我们混淆了两个概念****，这些概念对于人类的思维来说非常难以理解：****突变和异步性。**** 我称之[曼妥思和可乐现象][2]。两者分开时各自都很好，但放在一起使用，他们就会造成混乱_
 
-Redux and other state management tools are mostly focusing on restricting or controlling data mutations. Async generators can handle asynchronicity. This makes mutation safe if it is visible only within a particular generator scope.
+Redux和其他的状态管理工具主要侧重于约束和控制数据的突变。异步生成器可以处理异步。如果变异仅在特定的生成器范围内可见，则这使得突变更安全。
 
-All the common state management techniques can be split into two big classes.
+所有常见的状态管理技术可以分为两大类。
 
-The first class maintaining data dependencies graph to propagate changes through handlers — React Component State, MobX, RxJS. Maintaining these dependencies is a complex task. The underlying libraries are taking charge of part of this complexity by managing subscriptions, optimizing the order of handlers execution, batching them, but it is still confusing to use sometimes, often requires hard fine-tuning, e.g., with  `shouldComponentUpdate`method.
+第一类是维护数据关系图，通过处理器传播改变 —React组件状态，MobX，RxJS。维护这些关系是一项复杂的任务。底层库通过管理订阅，优化处理器执行顺序，对它们进行批处理来负责部分复杂的任务，但有时使用起来仍然令人困惑，通常需要进行硬微调，例如，使用`shouldComponentUpdate`方法。
 
-Another approach limits mutation to only a single cell (storage) (e.g., Redux). This needs much smaller libraries, with less magic in them. It is more a pattern than a library. Unfortunately, the programs are more verbose, and this breaks data encapsulation. There are many patterns, wrappers to solve this though, but they make a single cell approach to be more similar to the graph based one.
+另一种方法是将突变限制为仅有单个单元（storage）（例如，Redux）。这需要更小的并且带有更少魔法的库。这是一种多库的模式。不幸运的是，这种程序会更冗长，这破坏了数据的封装。虽然有很多模式，包装器可以解决这个问题，但是它们使用单个单元的方法更类似于基于图形的方法。
 
-The technique in this story and Redux are both based on Event Sourcing pattern, and they have many similarities. It also offers encapsulated data and synchronous deterministic order of executions for operations with side effects.
+本故事的技术和Redux都是基于事件源模式，它们有许多相似之处。它也为具有副作用的操作提供封装数据和同步确定执行顺序。
 
 This approach can be abstractly viewed as a dependency graph as well, but the changes are propagated in reverse direction, from its root to towards leaves of its spanning tree. In each node we check should the propagation proceed to children or not. This makes the scheduling algorithm very lightweight and easy to control. It doesn’t require any library, basing only on JavaScript built-in features.
 
@@ -177,7 +167,7 @@ The original sample requires almost no changes, I only replaced not serializable
 The story is just a brief description of the technique. I’m using it for a couple of years already, and happy because of improvements it provides. Try it, and I’m sure you’ll enjoy it too. There are many things to describe in depth. Stay tuned!
 
 [1]: https://redux.js.org/introduction/motivation
-[2]: https://en.wikipedia.org/wiki/Diet_Coke_and_Mentos_eruption
+[2]: https://zh.wikipedia.org/zh-cn/%E5%8F%AF%E6%A8%82%E5%8A%A0%E6%9B%BC%E9%99%80%E7%8F%A0%E5%99%B4%E7%99%BC%E7%8F%BE%E8%B1%A1
 [3]: https://github.com/reduxjs/redux/blob/master/examples/counter-vanilla/index.html
 [4]: https://redux.js.org/introduction/three-principles
 [5]: https://medium.com/dailyjs/decoupling-business-logic-using-async-generators-cc257f80ab33

@@ -1,6 +1,6 @@
 > * 原文地址：[Here are some app ideas you can build to level up your coding skills](https://www.freecodecamp.org/news/here-are-some-app-ideas-you-can-build-to-level-up-your-coding-skills-39618291f672/)
 > * 原文作者：[Florin Pop](https://www.freecodecamp.org/news/author/florinpop17/)
-> * 译者：
+> * 译者：MMMAY521
 > * 校对者：
 
 ![Here are some app ideas you can build to level up your coding skills](https://cdn-media-1.freecodecamp.org/images/0*v3qXmKe1LTiiW_3H.png)

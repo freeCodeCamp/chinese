@@ -5,26 +5,18 @@
 
 ![How to layout and design a website (without any design skills)](https://cdn-media-1.freecodecamp.org/images/1*Phg_9259Vl8tNHyCh_W3sg.jpeg)
 
-If you’re trying to build freelance websites for clients, or even just trying to build up your portfolio, you may have come across this conundrum:
-
-How do you build a website if you don’t have any web design skills?
-
-Here are some options:
-
--   You could hire a web designer to create the design for you — but (good) designers aren’t cheap.
--   You could find a cheap designer on Fiverr or Upwork — but you know it can be risky.
--   Or you could download a free or premium theme or template — but sometimes they don’t do everything you want them to.
-
-One other option for you is to learn some basic skills to layout and design websites, and to build your own front end out.
-
-Now, you’re not going to become an amazing designer in the time it takes you to read this article. And for complex websites, you may end up needing to work with a professional designer.
-
-But I believe that you can learn how to plan and design simple websites that would work for most small businesses.
-
-This method involves:
-
--   Learning the basics of how websites are put together visually
--   Researching existing web designs to get inspiration and ideas for yourself.
+如果你正准备为客户建一个自由职业网站，或是打造自己的作品，那么你可能面临这样的难题：
+如果你并没有任何网站设计的技巧，如何打造一个网站呢？
+有以下方案可以选择：
+- 你可以雇一个网站设计师来为你设计-不过设计师或者说好的设计师通常并不便宜。
+- 你也可以在Fiverr或者Upwork上找一个便宜的设计师-但是你也知道这是有风险的。
+- 或者你可以直接从网上下载一个免费甚至是高级的主题模板-不过通常这不会满足你的所有要求
+还有个方法是自己学习设计和布局网站的技巧，然后打造出自己的前端展现效果。
+既然你此刻在阅读这篇文章，那就表明你短时间内并不准备成为一名出色的设计师。而对于复杂的网站，你最终也需要一名专业的设计师。
+但是我也相信你可以学会如何设计简单的网站，这可以应对大部分小企业的网站需求。
+你将可以学到以下两点：
+- 了解网站的基础是如何在视觉上呈现出来的
+- 从现有的网站设计中找到灵感和想法
 
 It’s actually the strategy that I used to build  [my own website][1]! Granted, it’s a pretty simple design, nothing overly fancy. But sometimes simple is all you need.
 

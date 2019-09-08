@@ -36,127 +36,127 @@ All of the projects are divided into three tiers based on the knowledge and expe
 
 Below you’ll find  **5 projects**  for each of the tiers (**15 in total**), but there are over  **30 projects**  (at the moment) in  [this GitHub repository][3]. Make sure you check it out as we are planning to add more projects in the future. You are welcome to help! (More about this in the  _Contributing_ section below ?)接下来，每个层级中都会包含五个项目，总共十五个项目。但在我写文章时，在Github库中共有三十个项目。一定要确保你把这些项目都烂熟于心，因为未来我们计划增加更多的项目，非常欢迎你出一份力！（更多信息请关注下文的“贡献”部分）
 
-### 1\. Notes App
+### 1\. Notes App笔记应用
 
-**Tier:**  1 — Beginner
+**Tier:**  1 — Beginner层级：1-初级
 
-**Description**: Create and store your notes for a later purpose!
+**Description**: Create and store your notes for a later purpose!任务描述：可以按照需求创建和存储笔记
 
-#### User Stories
+#### User Stories用户需求
 
--   User can create a note
--   User can edit a note
--   User can delete a note
--   When closing the browser window the notes will be stored and when the User returns, the data will be retrieved
+-   User can create a note用户可以创建笔记
+-   User can edit a note用户可以编辑笔记
+-   User can delete a note用户可以删除笔记
+-   When closing the browser window the notes will be stored and when the User returns, the data will be retrieved浏览页面关闭时笔记可以自动存储；用户返回页面是，数据可以自行修复。
 
-#### Bonus features
+#### Bonus features追加选项
 
--   User can create and edit a note in Markdown format. On save it will convert Markdown to HTML
--   User can see the date when he created the note
+-   User can create and edit a note in Markdown format. On save it will convert Markdown to HTML用户可以以Markdown格式创建和编辑笔记，存储以后会转换HTML内容。
+-   User can see the date when he created the note用户可以看见创建笔记的日期
 
-#### Useful links and resources
+#### Useful links and resources可以提供帮助的链接和资源
 
 -   [localStorage][4]
 -   [Markdown Guide][5]
 -   [Marked — A markdown parser][6]
 
-#### Example project
+#### Example project实例项目
 
-### 2\. Christmas Lights
+### 2\. Christmas Lights圣诞彩灯
 
-**Tier:**  1 — Beginner
+**Tier:**  1 — Beginner层级：1-初级
 
-**Description**: The Christmas Lights application relies on your development talents to create a mesmerizing light display. Your task is to draw seven colored circles in a row and based on a timer change the intensity of each circle. When a circle is brightened its predecessor returns to its normal intensity.
+**Description**: The Christmas Lights application relies on your development talents to create a mesmerizing light display. Your task is to draw seven colored circles in a row and based on a timer change the intensity of each circle. When a circle is brightened its predecessor returns to its normal intensity.任务描述：圣诞彩灯应用需要利用你的编程开发能力来创造一个光彩炫目的灯光秀。你的任务是连续画出七个彩色光圈，然后根据时间变化每个光圈的亮度有所变化。一个光圈变亮时，上一个变亮的光圈恢复正常亮度。
 
-This simulates the effect of a string of rippling lights, similar to the ones displayed during the Christmas Holidays.
+This simulates the effect of a string of rippling lights, similar to the ones displayed during the Christmas Holidays.在这个应用中，灯光就像涟漪一样一层一层荡漾开，好比圣诞节的灯光秀。
 
-#### User Stories
+#### User Stories用户需求
 
--   User can press a button to start and stop the display
--   User can change the interval of time controlling the change in intensity
+-   User can press a button to start and stop the display用户可以通过按钮控制灯光秀
+-   User can change the interval of time controlling the change in intensity用户可以控制灯光秀亮度变化的时间间隔
 
-#### Bonus features
+#### Bonus features追加选项
 
--   User can select the color used to fill each circle
--   User can specify the intensity value
--   User can change the size of any circle in the row
--   User can specify the number of rows to be included in the display. From one to seven rows can be chosen
+-   User can select the color used to fill each circle用户可以选择每个光圈的颜色
+-   User can specify the intensity value用户可以控制光圈亮度
+-   User can change the size of any circle in the row用户可以改变每个光圈大小
+-   User can specify the number of rows to be included in the display. From one to seven rows can be chosen用户可以设定灯光秀中的光圈个数，范围是1-7
 
-#### Useful links and resources
+#### Useful links and resources可以提供帮助的链接资源
 
 -   [Sample Image][7]
 -   [Adafruit LED Matrix][8]
 
-#### Example project
+#### Example project实例项目
 
-### 3\. FlipImage
+### 3\. FlipImage 图片移动
 
-**Tier:**  1 — Beginner
+**Tier:**  1 — Beginner层级：1-初级
 
-**Description**: It’s important for Web Developers to understand the basics of manipulating images since rich web applications rely on images to add value to the user interface and user experience (UI/UX).
+**Description**: It’s important for Web Developers to understand the basics of manipulating images since rich web applications rely on images to add value to the user interface and user experience (UI/UX).任务描述：因为大量网站应用依靠图片来呈现更丰富的用户界面、提供更棒的用户体验，因而对于网站开发人员来说，理解图片操作的基础非常重要。
 
-FlipImage explores one aspect of image manipulation — image rotation. This app displays a square panel containing a single image presented in a 2x2 matrix. Using a set of up, down, left, and right arrows adjacent to each of the images the user may flip them vertically or horizontally.
+FlipImage explores one aspect of image manipulation — image rotation. This app displays a square panel containing a single image presented in a 2x2 matrix. Using a set of up, down, left, and right arrows adjacent to each of the images the user may flip them vertically or horizontally.图片移动探索图片操作的一个方向-图片移动。应用上显示一个方框，一张图片以2*2矩阵形式呈现。用户通过控制图片周围上下左右四个箭头来垂直或水平移动图片。
 
-You must only use native HTML, CSS, and Javascript to implement this app. Image packages and libraries are not allowed.
+You must only use native HTML, CSS, and Javascript to implement this app. Image packages and libraries are not allowed.必须使用原生HTML,CSS和Javascript语言来执行此应用。图像包和图像库均不允许使用。
 
-#### User Stories
+#### User Stories用户需求
 
--   User can see a pane containing a single image repeated in a 2x2 matrix
--   User can flip any one of the images vertically or horizontally using a set of up, down, left, and right arrows next to the image
+-   User can see a pane containing a single image repeated in a 2x2 matrix用户可以看见一个窗口，里面的单个图片一直以2*2矩阵分布
+-   User can flip any one of the images vertically or horizontally using a set of up, down, left, and right arrows next to the image通过控制图片旁边的上下左右按钮，用户可以任意垂直或水平移动任意图片
 
-#### Bonus features
+#### Bonus features追加选项
 
--   User can change the default image by entering the URL of a different image in an input field
--   User can display the new image by clicking a ‘Display’ button next to the input field
--   User can see an error message if the new images URL is not found
+-   User can change the default image by entering the URL of a different image in an input field通过统一资源定位器（URL）查找别的图片，用户可以在输入栏更改默认图片
+-   User can display the new image by clicking a ‘Display’ button next to the input field用户可以点击输入栏旁边的‘秀’按钮，展示新图片
+-   User can see an error message if the new images URL is not found如果在统一资源定位器中没有找到新图片，用户可以看到错误信息提醒（error message）
 
-#### Useful links and resources
+#### Useful links and resources可以提供帮助的链接资源
 
 -   [How to Flip an Image][9]
 -   [Create a CSS Flipping Animation][10]
 
-#### Example project
+#### Example project实例项目
 
-### 4\. Quiz App
+### 4\. Quiz App问答应用
 
-**Tier:**  1 — Beginner
+**Tier:**  1 — Beginner层级：1-初级
 
-**Description**: Practice and test your knowledge by answering questions in a quiz application.
+**Description**: Practice and test your knowledge by answering questions in a quiz application.任务描述：通过在问答应用上回答问题，来训练和测试你的知识存储。
 
-As a developer, you can create a quiz application for testing coding skills of other developers. (HTML, CSS, JavaScript, Python, PHP, etc…)
+As a developer, you can create a quiz application for testing coding skills of other developers. (HTML, CSS, JavaScript, Python, PHP, etc…)作为一名开发人员，自然要开发能够测试其他开发人员编程知识的问答应用，诸如HTML, CSS, Javascript, Python, PHP知识等等。
 
-#### User Stories
+#### User Stories用户需求
 
--   User can start the quiz by pressing a  `button`
--   User can see a question with 4 possible answers
--   After selecting an answer, display the next question to the User. Do this until the quiz is finished
--   In the end, the User can see the following statistics:
+-   User can start the quiz by pressing a  `button`用户可以通过按下按钮开始答题
+-   User can see a question with 4 possible answers用户面对的问题有四个答案选项
+-   After selecting an answer, display the next question to the User. Do this until the quiz is finished用户选中一道题的答案后，自动进行到下一题，直到整个问答结束
+-   In the end, the User can see the following statistics:问答结束时，用户可以看到以下数据：
 
-1.  Time it took to finish the quiz
-2.  How many correct answers did he get
-3.  A message showing if he  `passed`  or  `failed`  the quiz
+1.  Time it took to finish the quiz完成问答所需时间
+2.  How many correct answers did he get回答正确的问题个数
+3.  A message showing if he  `passed`  or  `failed`  the quiz是否通过问答
 
-#### Bonus features
+#### Bonus features追加选项
 
--   User can share the result of a quiz on social media
--   Add multiple quizzes to the application. User can select which one to take
--   User can create an account and have all the scores saved in his dashboard. User can complete a quiz multiple times
+-   User can share the result of a quiz on social media用户可以在社交媒体分享问答结果
+-   Add multiple quizzes to the application. User can select which one to take在应用上增加多份问答，用户可以决定做哪个问答
+-   User can create an account and have all the scores saved in his dashboard. User can complete a quiz multiple times用户可以创建账户，存储所有得分结果。用户可以多次进行同一个问答
 
-#### Useful links and resources
+#### Useful links and resources可以提供帮助的链接资源
 
 -   [Open Trivia Database][11]
 
-#### Example projects
+#### Example projects实例项目
 
-[Quiz app built with React][12]  (wait for it to load as it is hosted on Heroku)
+[Quiz app built with React][12]  (wait for it to load as it is hosted on Heroku)可测反应能力的问答应用（应用已在Heroku上线，可下载）
 
-### 5\. Roman Numeral to Decimal numbers Converter
+### 5\. Roman Numeral to Decimal numbers Converter罗马-十进制数字转换器
 
-**Tier:**  1 — Beginner
+**Tier:**  1 — Beginner层级：1-初级
 
-**Description**: The numeric system represented by Roman numerals originated in ancient Rome and remained the usual way of writing numbers throughout Europe well into the Late Middle Ages. Roman numerals, as used today, employ seven symbols, each with a fixed integer value.
+**Description**: The numeric system represented by Roman numerals originated in ancient Rome and remained the usual way of writing numbers throughout Europe well into the Late Middle Ages. Roman numerals, as used today, employ seven symbols, each with a fixed integer value.任务描述：罗马数字源于古罗马。直到中世纪后期，罗马数字系统一直是数字书写的主流，至今仍在使用。罗马数字包含七个符号，每个都有确定的整数值。
 
-See the below table the  _Symbol — Value_  pairs:
+See the below table the  _Symbol — Value_  pairs:下表为罗马符号-整数值对应：
 
 -   I — 1
 -   V — 5
@@ -166,75 +166,75 @@ See the below table the  _Symbol — Value_  pairs:
 -   D — 500
 -   M — 1000
 
-#### User Stories
+#### User Stories用户需求
 
--   User should be able to enter one Roman number in an input field
--   User could see the results in a single output field containing the decimal (base 10) equivalent of the roman number that was entered by pressing a button
--   If a wrong symbol is entered, the User should see an error
+-   User should be able to enter one Roman number in an input field用户可以在输入栏里输入一个罗马数字
+-   User could see the results in a single output field containing the decimal (base 10) equivalent of the roman number that was entered by pressing a button按下按钮，用户可以在输出栏看见之前输入的罗马数字对应的十进制数字
+-   If a wrong symbol is entered, the User should see an error如果输入罗马符号错误，用户可以看见错误提示
 
-#### Bonus features
+#### Bonus features追加选项
 
--   User could see the conversion to be made automatically as I type
--   User should be able to convert from decimal to Roman (vice-versa)
+-   User could see the conversion to be made automatically as I type用户可以看见转换过程自动完成
+-   User should be able to convert from decimal to Roman (vice-versa)用户可以完成十进制-罗马数字的逆过程转换
 
-#### Useful links and resources
+#### Useful links and resources可提供帮助的链接资源
 
--   [An explanation of Roman Numbers][13]
+-   [An explanation of Roman Numbers][13]关于罗马数字的说明
 
-#### Example project
+#### Example project实例项目
 
-[Roman Number Converter][14]
+[Roman Number Converter][14]罗马数字转换
 
-### 6\. Book Finder App
+### 6\. Book Finder App寻书应用
 
-**Tier:**  2 — Intermediate
+**Tier:**  2 — Intermediate层级：2-中级
 
-**Description**: Create an application that will allow users to search for books by entering a query (Title, Author, etc). Display the resulting books in a list on the page with all the corresponding data.
+**Description**: Create an application that will allow users to search for books by entering a query (Title, Author, etc). Display the resulting books in a list on the page with all the corresponding data.任务描述：创建一个用户可以搜寻书的应用。用户在输入相关书名、作者等信息后，网页上会排列出现所有相关书籍。
 
-#### User Stories
+#### User Stories用户需求
 
--   User can enter a search query into an  `input`  field
--   User can submit the query. This will call an API that will return an array of books with the corresponding data (**Title**,  **Author**,  **Published Date**,  **Picture**, etc)
--   User can see the list of books appearing on the page
+-   User can enter a search query into an  `input`  field用户可以在输入栏输入要查询的信息
+-   User can submit the query. This will call an API that will return an array of books with the corresponding data (**Title**,  **Author**,  **Published Date**,  **Picture**, etc)用户可以提交查询信息。这就叫做应用编程接口（API），返回结果是与所有输入信息（例如名称，作者，出版日期，图像等）相关联的书籍
+-   User can see the list of books appearing on the page用户可以在页面上看到搜索出来的书籍清单
 
-#### Bonus features
+#### Bonus features追加选项
 
--   For each item in the list add a link that will send the User to an external site which has more information about the book
--   Implement a Responsive Design
--   Add loading animations
+-   For each item in the list add a link that will send the User to an external site which has more information about the book搜索清单上每个书籍条目要增加一个外部站点链接，用户可以直达，得到更多关于书的信息。
+-   Implement a Responsive Design执行一个响应设计
+-   Add loading animations增加预载动画
 
-#### Useful links and resources
+#### Useful links and resources可提供帮助的链接资源
 
-You can use the  [Google Books API][15]
+You can use the  [Google Books API][15]你可以采用[Google Books API]
 
-#### Example Project
+#### Example Project实例项目
 
-[BookSearch-React][16]
+[BookSearch-React][16]寻书重演
 
-### 7\. Card-Memory-Game
+### 7\. Card-Memory-Game卡片记忆游戏
 
-**Tier:**  2 — Intermediate
+**Tier:**  2 — Intermediate层级：2-中级
 
-**Description**: Card memory is a game where you have to click on a card to see what image is underneath it and try to find the matching image underneath the other cards.
+**Description**: Card memory is a game where you have to click on a card to see what image is underneath it and try to find the matching image underneath the other cards.任务描述：在卡片记忆游戏中，你需要点击一张卡片看是什么图形隐藏在下面，然后努力在其余卡片中发现匹配的图形。
 
-#### User Stories
+#### User Stories用户需求
 
--   User can see a grid with n x n cards (`n`  is an integer). All the cards are faced down initially (`hidden`  state)
--   User can click a button to start the game. When this button is clicked, a timer will start
--   User can click on any card to unveil the image that is underneath it (change it to  `visible`  state). The image will be displayed until the user clicks on a 2nd card
+-   User can see a grid with n x n cards (`n`  is an integer). All the cards are faced down initially (`hidden`  state)用户可以看到一个包含有n*n张卡片的格子（n是整数）。所有的卡片一开始都是图形面朝下的状态（隐藏状态）
+-   User can click a button to start the game. When this button is clicked, a timer will start用户点击按钮开始游戏，同时计时器开始计时
+-   User can click on any card to unveil the image that is underneath it (change it to  `visible`  state). The image will be displayed until the user clicks on a 2nd card用户可以点击任意一张卡片查看图形，这张卡片就处于可见状态，一直持续到用户点击第二张卡片
 
-When the User clicks on the 2nd card:
+When the User clicks on the 2nd card:用户点击第二张卡片后：
 
--   If there is a match, the 2 cards will be eliminated from the game (either hide/remove them or leave them in the  `visible`  state)
--   If there isn’t a match, the 2 cards will flip back to their original state (`hidden`state)
--   When all the matches have been found, the User can see a dialog box showing a Congratulations message with a counter displaying the time it took to finish the game
+-   If there is a match, the 2 cards will be eliminated from the game (either hide/remove them or leave them in the  `visible`  state)如果两张卡片图形匹配，这两张卡片就会消失（或是隐藏或是移除，也可以让他俩处于可见状态）
+-   If there isn’t a match, the 2 cards will flip back to their original state (`hidden`state)如果跟第一张卡片图形不匹配，两张卡片就会恢复初始状态
+-   When all the matches have been found, the User can see a dialog box showing a Congratulations message with a counter displaying the time it took to finish the game所有匹配结束以后，用户可以看见对话框显示“祝贺”信息，同时也会显示完成游戏所耗费的时间
 
-#### Bonus features
+#### Bonus features追加选项
 
--   Use can choose between multiple levels of difficulty (Easy, Medium, Hard). Increased difficulty means: decreasing the time available to complete and/or increasing the number of cards
--   User can see the game statistics (nr. of times he won / he lost, the best time for each level)
+-   Use can choose between multiple levels of difficulty (Easy, Medium, Hard). Increased difficulty means: decreasing the time available to complete and/or increasing the number of cards用户可以自己选择游戏难度等级（易中难）。难度增加意味着：完成游戏的规定时间缩短或者图片个数增加
+-   User can see the game statistics (nr. of times he won / he lost, the best time for each level)用户可以看见游戏数据（不是输赢次数，而是每个难度所对应的最好成绩）
 
-#### Useful links and resources
+#### Useful links and resources可提供帮助的链接资源
 
 -   [Wikipedia][17]
 

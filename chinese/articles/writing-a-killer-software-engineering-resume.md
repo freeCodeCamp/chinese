@@ -5,7 +5,7 @@
 
 ![How to write a killer Software Engineering résumé](https://cdn-media-1.freecodecamp.org/images/1*0yse40ucjmpdlaBqlY0fTg.png)
 
-#### An in-depth analysis of the résumé that got me interviews at Google, Facebook, Amazon, Microsoft, Apple, and more.
+#### 分析一下我的得到Google、FaceBook、Amazon、Microsoft、Apple等公司面试的简历。
 
 ![](https://cdn-media-1.freecodecamp.org/images/s67vXcDq77yLluSAmsSmalkgWV3UJPSDWi6w)
 

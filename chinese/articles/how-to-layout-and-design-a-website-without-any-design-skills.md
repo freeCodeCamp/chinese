@@ -17,69 +17,43 @@
 你将可以学到以下两点：
 - 了解网站的基础是如何在视觉上呈现出来的
 - 从现有的网站设计中找到灵感和想法
-
-It’s actually the strategy that I used to build  [my own website][1]! Granted, it’s a pretty simple design, nothing overly fancy. But sometimes simple is all you need.
-
-Once you know the basics of how to layout and design for the web, you’ll be able to build custom websites that you can use for your portfolio and freelance clients.
-
-And, of course, each website you build will give you experience. Over time, you will be able to create more and more complex designs as you continue practicing your craft.
-
-Here are the main steps of this process:
-
--   Decide the basics of your website
--   Plan the layout of your website
--   Put the design together
--   Build out the final product
-
-Each step will be fueled by research — looking at other websites to see what they do, and pulling out the parts that you want to reuse for your website.
-
-One important note: I’m not at all advocating that you steal CSS or images that aren’t yours. (For one thing, you won’t learn anything with a copy and paste job.)
-
-The idea here is to get creative ideas and concepts, and use them to create something similar.
-
-### Decide the basics of your website
-
-Before you start picking colors or fonts, let’s answer some general questions about this website:
-
-**1\. What kind of business will the website promote?**
-
-A pizza place, photographer’s studio, or bookstore? Any kind of business could benefit from a website, so you can choose anything.
-
-For our purposes here, we’ll choose a fictional coffee shop called Central Coffee. Because everyone likes coffee, right?
-
-**2\. What pages will the website have?**
-
-Some common pages would be the homepage, about page, contact page, and pages specific to the industry that the business is in.
-
-The best way to figure out the pages and other general structural aspects of the website is to do some quick online research.
-
-### Research existing websites
-
-Check out other existing websites for similar types of businesses. Look at 3–4 of these websites and see what pages they have.
-
-Try to notice how the website is designed and take notes on:
-
--   What pages the website has,
--   What the overall style is,
--   How easy it is to navigate and find things,
--   And anything else that piques your interest.
-
-One good place to find example websites is  [Theme Forest][2]. It has a ton of free and premium website templates and WordPress themes. And if you stick with the most popular themes, you know that generally they will be examples of good designs.
-
-Here is one coffee shop example from a theme I found.
+这正是我用来建立自己网站的技巧。当然，这只是一个很简单，没有太过精巧的设计。但是通常简单也正是你需要的。
+只要你掌握了设计布局网站的基础，就可以建立自己或是给自由职业者客户定制的网站。
+当然，你建立的每一个网站都会给你积累经验。随着你不断地练习技能，将会创造出越来越复杂的设计。
+以下是一些建立网站的关进步骤：
+- 确定网站的基础内容
+- 设计网站布局
+- 整合设计
+- 打造最终产品
+每一步都需要大量研究支撑-浏览其他网站看看他们是怎么做的，然后将可以用在你自己网站的部分拆分出来。
+要提醒的一点是：我并不是鼓励你去抄袭别人的样式或者图片。（首先你不能通过复制粘贴来获得技能）
+我的观点是获得创新概念，再创造出相似的设计。
+### 确定网站的基础内容
+在你选择颜色或是字体之前，我们先看看以下几个关于网站的常见问题：
+1. 这个网站是用来推广哪种商业的？
+披萨店？摄影工作室？或是书店？网站推广对于所有的商业都是有用的，因为你可以任意选择。
+我们这次将选择一个名叫Central Coffee的虚拟咖啡店。因为人们都爱咖啡，对不对？
+2. 这个网站要包含什么样的页面？
+通用的页面包括主页、关于我们、联系我们和有关公司产品的介绍。
+确定页面构造最好的方法就是先做一个简单的在线调查。
+### 调查现有网站
+选择3-4个相似行业的网站，观察网站都包含哪些页面。
+注意网站是如何设计的并做好笔记：
+- 网站包含哪些页面，
+- 网站整体样式是怎样的，
+- 导航和搜索的便捷性，
+- 还有其他你感兴趣的方面
+Theme Forest是一个寻找示例网站很好的网站，上面有大量免费和高级的网站模板以及主题。如果你有关注最流行的主题，就会知道他们通常是好设计的典范。
+下面是一个我找到的咖啡店示例：
 
 ### [The7][3]
-
 ![](https://cdn-media-1.freecodecamp.org/images/CwDQtWgEDoAuCV2QbGOwk4-2haLo6ShbjfZA)
-
-**Pages:**  
-One page website with the sections: Home, About, Location, Offers, Menu, News, Press, Blog Posts
-
-**Style:**  
-Modern and clean, with good photos
-
-**Navigation:**  
-Easy to navigate
+**页面：
+单页网站有以下模块：主页、关于我们、地点、赞助商、菜单、新闻、声明、博客
+**样式：
+现代简洁，高质图片
+**导航：
+便捷导航
 
 And here are some websites that I found from a “coffee shop in Chicago” search:
 

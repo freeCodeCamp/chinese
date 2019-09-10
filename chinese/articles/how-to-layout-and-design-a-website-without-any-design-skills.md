@@ -44,8 +44,8 @@
 - 导航和搜索的便捷性，
 - 还有其他你感兴趣的方面
 Theme Forest是一个寻找示例网站很好的网站，上面有大量免费和高级的网站模板以及主题。如果你有关注最流行的主题，就会知道他们通常是好设计的典范。
-下面是一个我找到的咖啡店示例：
 
+下面是一个我找到的咖啡店示例：
 ### [The7][3]
 ![](https://cdn-media-1.freecodecamp.org/images/CwDQtWgEDoAuCV2QbGOwk4-2haLo6ShbjfZA)
 **页面：
@@ -55,137 +55,81 @@ Theme Forest是一个寻找示例网站很好的网站，上面有大量免费�
 **导航：
 便捷导航
 
-And here are some websites that I found from a “coffee shop in Chicago” search:
-
+这些是我从“coffee shop in Chicago” 研究中找到的一些网站：
 ### [The Wormhole Coffee][4]
-
 ![](https://cdn-media-1.freecodecamp.org/images/KgKQlk0O0aC8CCXbyV8DaLxUBHfDncZ6rO6x)
-
-**Pages:**  
-Homepage, Blog, Location/Contact, Job Opportunities
-
-**Style:**  
-Sort of modern; photos of the shop are more nostalgic
-
-**Navigation:**  
-Not immediately obvious that this is a coffee shop. It’s a bit difficult to navigate the site.
-
+**页面：
+主页、博客、地址/联系方式、工作机会
+**样式：
+偏现代风，店铺照片走复古风
+**导航：
+并不很容易注意到这是一家咖啡店，网站导航有点难度
 ### [Caffe Streets][5]
-
 ![](https://cdn-media-1.freecodecamp.org/images/wJ9dMdP7xxHxtoCB2a9EYDTHUsd0WoaokzgI)
-
-**Pages:**  
-One page website, the sections are: Home, Caffe (About), Menu, Roasting, Time Machine (juices), Contact Form
-
-**Style:**  
-Simple and modern (Squarespace)
-
-**Navigation:**  
-Pretty easy to navigate. I like the sticky menu bar up top that scrolls you down to each section.
-
+**页面：
+单页网站，模块包含：主页、咖啡（关于我们）、菜单、烘焙、时间机器（果汁）以及联系表格
+**样式：
+现代简约风（方格布局）
+**导航：
+很容易导航。浏览页面下方内容时导航固定顶部的设计我很喜欢。
 ### [Build Coffee][6]
-
 ![](https://cdn-media-1.freecodecamp.org/images/HDMc3Ey2CObm46o17kvJHGWhgKjrxdoRgPn-)
-
-**Pages:**  
-One page website, the sections are: Homepage, About, Hours, Location, Shop, Catering, Events, Contact
-
-**Style:**  
-Simple, design is a combination of full-width photos between sections of white background with text.
-
-**Navigation:**  
-Pretty easy to navigate
-
+**页面：
+单页网站，模块包括：主页、关于我们、营业时间、地址、网上商城、餐饮、活动以及联系方式
+**样式：
+简约风，白底文字中间穿插全屏图片
+**导航：
+容易导航
 ### [Sawada Coffee][7]
-
 ![](https://cdn-media-1.freecodecamp.org/images/PZRfYxllDpERdb8oB8I3UuG2F-fT2BX73eMZ)
+**页面：
+主页、关于我们、食品饮料、声明、联系方式及营业时间、餐厅以及招聘信息
+**样式：
+主要为图片，文字较少
+**导航：
+导航不太容易找-我差点没注意到右边角落的汉堡菜单
 
-**Pages:**  
-Homepage, About, Food & Drink, Press, Contact & Hours, Our Restaurants, Jobs
-
-**Style:**  
-Design is mostly about the photography, and the text seems almost an afterthought
-
-**Navigation:**  
-It’s a bit difficult to navigate — I almost didn’t see the hamburger menu in the right corner.
-
-### Write down notes for your own website
-
-Now, after looking at multiple coffee shop websites, we have a much better idea of what features are common. And we have some ideas of what we think works and doesn’t work.
-
-Based on your research, you can now start writing down notes for your own site.
-
-For Central Coffee, I think we’re going to stick with a simple one page website, with the following sections:
-
--   Header
--   Home
--   About
--   Menu
--   Location/Contact
--   Footer
-
-### Plan the layout of your website
-
-Now that we’ve figured out the skeleton of the site, we’ll flesh out each page or section with the elements that we want to put in each one. The layout that we’ll end up making is also called a  **wireframe**.
-
-In the wireframe, we’re not exactly designing anything, meaning no fonts, colors, or photos yet. We’re just figuring out the kind of content that we want, and roughly where it will be on the page. It’s more like a blueprint or a diagram at this point.
-
-### Header
-
-I like the top navigation bar that’s on the Seven Coffee demo page, and the Caffe Streets website.
-
+### 记录下自己网站的要点
+了解了一些咖啡店网站之后，我们更清楚他们的相似点，心中也大致了解哪些有用哪些用处不大。
+基于以上调查，你可以记下自己网站的要点。
+对即将建立的Central Coffee，我认为可以是包含以下模块的简约风单页网站：
+- 头部导航栏
+- 主页
+- 关于我们
+- 菜单
+- 地址/联系方式
+- 页脚
+### 规划网站布局
+此刻我们已经勾画出这个网站有了的大致框架，接下来就是确定各个页面或者模块需要填充的内容。我们最终确定的布局也可以被称为“示意图”。
+现在我们还不确定这个示意图具体的设计、字体、颜色或者照片，只是需要大致清楚需要填充什么类型的内容，或是他们在页面中的位置。这更像是现阶段的结构图或是蓝图。
+### 头部导航
+我喜欢Seven Coffee和Caffe Streets的顶部导航栏
 ![](https://cdn-media-1.freecodecamp.org/images/JjSmjbTYDE5Qd9i4cH9W4rpKDxLXk92VTw-s)
-
 ![](https://cdn-media-1.freecodecamp.org/images/hszTPLF2H01n7v--G7mXhzQxyUCxK-5ARteB)
-
-However, on both those pages it’s centered, and I’d rather have it aligned to the left, with the logo first and the sections after.
-
-That’s for the desktop version. For tablet and mobile, we’ll just have the logo and hamburger menu in the header by default.
-
-Clicking the hamburger will open up an off canvas menu that will slide in from the right to display the section navigation.
-
-### Home
-
-Since it’s a one page site, the “homepage” will be what you initially see on the screen when you load the website. And I like how Seven Coffee has a little tagline under the name.
-
+不过这两个网站的logo都是居中的，我喜欢logo靠左，右边是其他部分。这是电脑的显示版本，对于平板电脑和手机，可以默认在顶部排列logo和侧边栏。
+点击侧边栏，从右边展示收缩导航菜单
+### 主页
+因为这是单页网站，“主页”就是一进入网站时在屏幕上看到的部分。我喜欢Seven Coffee上点名下的小标签设计。
 ![](https://cdn-media-1.freecodecamp.org/images/jlAIYSPgnei-1Wt4Ys51MUIBBGDqu7o1dlsU)
-
-I think here I’ll have an image in the background (like Build Coffee) with the text on top of it. It’ll be the same on both desktop and mobile.
-
-### About
-
-All the websites have a short About section, some with photos. I’ll put in a paragraph about the cafe and also include a few photos of the interior of the shop to entice users to want to come visit.
-
-### Menu
-
+这里可以是一张背景图片（像是Build Coffee）上面有文字，这样的布局同时适用于电脑和手机端。
+### 关于我们
+所有的网站的都会有简短的关于我们模块，有些是图片介绍。我准备放一些咖啡店外观以及一些店内环境的照片，这样可以吸引顾客来消费。
+### 菜单
+每家网站都有不同的菜单：
+- Seven Coffee的菜单是一个标明价格的表格
+- Caffe Streets只有商品清单
+- Build and Sawada提供的是PDF版本菜单的外部链接
 Each of the websites handles menus differently:
-
--   Seven Coffee has a grid of menu items with prices,
--   Caffe Streets just has a list of items,
--   and Build and Sawada link out to PDFs of the menu.
-
-Personally I hate when I’m browsing a website on my phone and I have to download a PDF. So I’m going to stick to a simplified menu with drink and food items, and include a few photos.
-
-### Location/Contact
-
-I want to put the location, hours, and contact information at the bottom of the website. My guess is that users will start at the top of the site and scroll their way to the bottom.
-
-Putting the call to action at the bottom will answer the question, “what now?” It will help visitors to take action, specifically by getting directions to the cafe and hopefully visiting!
-
-### Footer
-
-The footer will be pretty minimal. It will just be a small bar with copyright information.
-
-### The complete wireframe
-
-Here are complete wireframes of the desktop and the mobile version of the website. I created these using a free online tool called  [Mockflow][8]. They let you create one project for free, and they have paid plans if you want more than one project.
-
-It’s pretty easy to use, and I like the sketchy style option because it’s fun ?
-
+我个人不喜欢在手机上浏览网站的时候还需要下载个PDF文件，因此我准备提供带有图片的简易食品饮料菜单
+### 地址/联系方式
+我想把地址、营业时间和联系方式放在页面底部。用户习惯从网站顶部开始滚动到底部，这样浏览完所有内容想着接下来的行动时，这些内容可以促进他们采取行动。
+### 页脚
+页脚部分很小，只有小块版权信息
+### 完整框架
+这里是我用免费在线工具Mockflow创建的电脑和手机版本的完整网页框架。在这个网站上创建首个项目是免费的，之后如果你还需要，就需要付费。Mockflow很好上手，我也很喜欢不同风格的组合因为这个过程很有趣。
 ![](https://cdn-media-1.freecodecamp.org/images/tqWcD2VYl9l0F5NgsJ8FSnP9Cl3eqUrd1dr5)
-
 ![](https://cdn-media-1.freecodecamp.org/images/2t6gYI5AIAl1X6q0j9zIU1gn22kejMY7rYJo)
-
+### 确定基础设计规格
 ### Decide the basic design specifications
 
 Again, we’re not going to make super detailed and fancy styles. We do need to figure out some of the basics though. Things like:

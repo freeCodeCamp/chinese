@@ -30,13 +30,12 @@ _或许，明年你会再次出发吧。_
 
 自学编程或者其他技能和在学校里上学是两回事。你没有必须要学习的课程，没有考试，没有分数，也没有对失败的害怕来促使你学习。
 
-**When you’re learning to code by yourself, you have to generate your own motivation.**
+**自学编程需要保持动力**
 
-So how can you accomplish this? How can you make sure that you keep learning, and don’t give up?
+怎样才能让自己充满动力，坚持到最后呢?
+虽然这很难，但并不是不可能的，这篇就会告诉你一些实用的诀窍来帮助你
 
-It’s tough, but it is possible. This article will share some tips and strategies that you can use to stay motivated when learning to code.
-
-Here’s a quick outline of what we’ll be going over:
+先大概的看一下要点:
 
 1.  Have an end goal in mind.
 2.  Be realistic about your goals.
@@ -51,21 +50,14 @@ Here’s a quick outline of what we’ll be going over:
 
 Hope you find these tips helpful!
 
-#### #1: Have an end goal in mind.
+#### #1: 在脑海中设置一个目标.
 
-This might seem obvious, but have a concrete goal in mind when you’re starting out. Take a few minutes to really think about what your #1 goal is. What’s the most important part to you?
+在刚开始学习的时候要设置一个清晰的目标，这可能是老生常谈，但却重要。花一些时间想想你最想要达到的目标是什么？什么是对你最要的？
+你的目标可能是找一个全职的编程工作，提高你的家庭收入、又或者是找一份远程的自由的工作、亦或者是创业，也可以是其他？
+总而言之，你需要清楚你到底为什么学习编程。那样你才能在学习的过程中拒绝其他诱惑，坚持到底。
 
-It could be to find a full-time job as a web developer so you can support your family financially. Or to have a flexible career where you can live anywhere. Or to work for yourself, without having a boss.
-
-In all this, know what your “why” is. What’s the one goal that will get you out of bed in the morning, and makes you want to continue?
-
-Once you’ve figured out what it is, write it down in a place where you’ll see it often.
-
-Yeah, this sounds cheesy, I know. But it’ll help remind you of your goals and the whole reason that you’re giving up your free time.
-
-It doesn’t have to be a super nice, designed poster. It can just be a post-it note or a piece of paper. One Instagrammer, Marie on @girlknowstech,  [creates her own simple motivational posters][2]  with posterboard. She hangs them on the wall above her computer so she can always see them.
-
-What’s your end goal in learning to code?
+一旦你想清楚了自己的目标，把它写下来，不需要写的多么精致，只需要一个便利贴或者一张纸，贴在自己经常看到的地方。这虽然听起来很傻，但这真的会提醒你你的目标，让你甘愿用自己的业余时间来坚持学习。Marie 在 Instagram 上分享了她的做法，将[写好目标的海报][2]挂在她电脑背后的墙上。Marie 的instagram账号是Marie on @girlknowstech 。
+最后 你学习编程的目标是什么呢？
 
 #### #2: Be realistic about your goals.
 

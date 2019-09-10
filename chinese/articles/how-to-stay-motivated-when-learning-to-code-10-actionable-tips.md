@@ -53,32 +53,30 @@ Hope you find these tips helpful!
 #### #1: 在脑海中设置一个目标.
 
 在刚开始学习的时候要设置一个清晰的目标，这可能是老生常谈，但却重要。花一些时间想想你最想要达到的目标是什么？什么是对你最要的？
+
 你的目标可能是找一个全职的编程工作，提高你的家庭收入、又或者是找一份远程的自由的工作、亦或者是创业，也可以是其他？
+
 总而言之，你需要清楚你到底为什么学习编程。那样你才能在学习的过程中拒绝其他诱惑，坚持到底。
 
 一旦你想清楚了自己的目标，把它写下来，不需要写的多么精致，只需要一个便利贴或者一张纸，贴在自己经常看到的地方。这虽然听起来很傻，但这真的会提醒你你的目标，让你甘愿用自己的业余时间来坚持学习。Marie 在 Instagram 上分享了她的做法，将[写好目标的海报][2]挂在她电脑背后的墙上。Marie 的instagram账号是Marie on @girlknowstech 。
+
 最后 你学习编程的目标是什么呢？
 
 #### #2: Be realistic about your goals.
 
-Staying motivated essentially means not getting so discouraged that you just give up.
+让编程充满动力，反过来说，就是尽量少的感受到那些让你放弃的挫败感。
 
-One really big pitfall in getting good at anything is having unrealistic expectations. Why is this?
+无论学习什么，过高的期望值都是学习路上的绊脚石，为什么呢?
 
-Well, when you get discouraged, it’s often because your expectations don’t match up with reality.
+因为大多数时候你感受到挫败感，都是因为过高的期望值，
 
-If you’re jumping into learning to code, thinking that you will go from complete newbie to professional web developer in 6 weeks or 12 weeks, you  _may_  be setting yourself up for failure.
+就从编程这一方面来说，希望自己花6到12周就从一个新手变成专家，如果有这个目标，那可能从一开始你就失败了。
 
-I’m not saying that it’s impossible to land a job after learning for a couple months, but it’s really, really hard.
+当然我不是说只学习几周就不可能找到工作，但那真的太难太难了。（我不认同市面上很多“X周内从新手到专家”这样的书籍，基本都是为了提交销售率。）
 
-(And I’m not a huge fan of proponents of the “learn to code in X weeks!” mentality, because they’re usually trying to sell you something. But that’s a whole ‘nother story ? )
+我个人认为，要找一份编程的工作需要花费大约1-2年的业余时间，当然，这取决你有多少时间投入到编程的学习中。如果你已经有一份工作，或者有孩子，你肯定比学生或者没有工作的人投入的时间要少的多，你花费的时间会更长。还有就是你的学习能力也会有影响学习的时间，毕竟每个人学习能力都不相同。
 
-Personally, I think it may take you more like 1 - 2 years to get good enough at coding to apply and land jobs. Of course, a lot depends on your own circumstances. If you are working part or full-time, or you have children, you will have less time than someone who is in high school or doesn’t have to work at the moment.
-
-It also depends on how fast you learn, and pick up new concepts. This is simply something that varies from person to person.
-
-Ultimately, just know that everyone moves at their own pace. Try to gauge how your progress is going and don’t set up yourself for failure by having unrealistic expectations.
-
+所以，保持自己的学习节奏就好了，试着去记录自己学习的过程，不要给自己设置不切实际的目标。
 #### #3: Choose consistency over speed.
 
 On the same note, the rather cliched saying, “Slow and steady wins the race” is very true.

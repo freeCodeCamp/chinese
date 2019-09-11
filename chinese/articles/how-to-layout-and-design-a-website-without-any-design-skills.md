@@ -131,84 +131,50 @@ Each of the websites handles menus differently:
 ![](https://cdn-media-1.freecodecamp.org/images/2t6gYI5AIAl1X6q0j9zIU1gn22kejMY7rYJo)
 ### 确定基础设计规格
 ### Decide the basic design specifications
-
-Again, we’re not going to make super detailed and fancy styles. We do need to figure out some of the basics though. Things like:
-
-#### **Color scheme**
-
-The color scheme is simply the different colors you’re using on the website. Think of it like painting and decorating your house. Usually you would want to stick with neutral tones like grays and white, for most of the spaces. And one or two bright accent colors for the important elements that you want to pop out, like links and buttons.
-
-If you need some color inspiration, Canva has some  [sample color palettes][9]  that you can try out.
-
-For the Central Coffee website, I’m going to use the Fall Collection from that Canva link– it’s a warm color palette based around browns.
-
+再次声明，我们并不是要打造很细节且精彩的网站。不过我们也需要掌握基础，像是：
+### 色彩方案
+简单来说，色彩方案就是用于网站的不同颜色，就像是绘画、装修自己的家一样。通常你会大面积使用像是灰色白色的中性色调，再结合一两种明亮重点的颜色以突出重要的部分，例如链接和按钮。
+如果你需要一些色彩灵感，可以尝试sample color palettes这样的画布。
+而对于我们的网站Central Coffee，我将使用canva连接中的Fall Collection-这是个基于棕色调的暖色调
 ![](https://cdn-media-1.freecodecamp.org/images/RxiZDgixwfbfhNyCxovKQML3ven3LRzYNoSJ)
-
-I’m trying to evoke that nostalgic, cozy feel associated with coffee shops.
-
-#### **Fonts**
-
-Going back through the websites, pretty much all of them use a sans-serif font (letters that don’t have the “serif,” or the end bars on like typewriter text).
-
-I would pick a simple font for the majority of your text, and then you can go slightly more fancy with a heavier weight font for the titles and headlines.
-
-[Google Fonts][10]  is a great place to look for fonts that you can load on your website for free. Just don’t get too many, because every font family, weight, and style will add additional load to the site.
-
-#### **Images/Photography**
-
-Pick a general style or mood that fits the type of business the website is. For a coffee shop, you generally would want to go with inviting pictures with soft light, cozy or nostalgic feel for interior shots, people chatting and relaxing in the coffee shop, and images of food and drink.
-
-For illustrations and logos, there are some free online graphic design tools that come with images you can use on your website. Some examples are:
-
+我试图营造舒适怀旧的咖啡店风格
+### 字体
+回到之前说过的网站，其中大部分使用无衬线字体（这种字体没有衬线，或是像打印出来的文字）
+我会选择简单的字体用于大部分文字内容，对于标题和提要则使用粗体。
+你可以通过Google Fonts免费找到适用于你网站的字体，但是尽量不要选择太多，因为不同的字体、字重和样式都会增加网站的加载时间。
+### 图片/照片
+选择一种适合网站商业类型的样式。对于咖啡店来说，你通常会选择的照片有：体现灯光柔和、复古舒适的店内环境，人们在店内轻松交谈以及店内的食品饮料等。
+你也可以从免费的设计网站上找到适合你网站的配图和logo，例如：
 -   [Canva][11]
 -   [Vectr][12]
 -   [Snappa][13]
-
-### Build out the website
-
-Now we have wireframes to tell us generally how everything is laid out. And we have our design references, to help guide the front end styles.
-
-Since we don’t have a designer to create detailed PSDs, we will just go ahead and start building the website from the wireframes we just drew up.
-
-Here is how I usually approach building the front end of a website:
-
-1.  Set up the website files
-2.  Create and structure the folders and files.
-3.  Get the task runner up and running. (I’m using  [Gulp][14]  for this project.)
-4.  Create a separate HTML file for each template.
-
-Then go through these steps for each HTML template:
-
-1.  Create the skeleton structure with the basic HTML elements.
-2.  Build out the page elements one by one.
-3.  For each element, add in the CSS styles, first making sure each section is laid out correctly.
-4.  Check how the page looks in the browser as you work, continuing to make corrections.
-
-### Make sure your website is responsive
-
-While you’re building a site, it’s generally a good idea to check that your styles are looking seamless on desktop, tablet, and mobile.
-
-You can easily check desktop styles on your own computer, with different browsers. For mobile, you can use Chrome’s developer tools, which emulates websites on various mobile devices.
-
-Keep in mind that any emulation tool will not be 100% exactly like what the actual phone or tablet will see. So when testing your styles, you’ll eventually want to check it on a real phone when the website is on the internet.
-
-Here are some device emulators that you can use to test website display:
-
+### 建立网站
+现在我们已经有了布局网站的框架，也有指导网站字体和样式的设计参考。
+因为我们没有可以给出详细PSD的设计师，所以可以直接对照着之前建造的框架来开始编写我们的网站。
+我通常编写网站前端的步骤如下：
+1. 建立网站文件
+2. 构建文件结构
+3. 让任务跑起来（我用的是Gulp）
+4. 为每个模板建立单独的HTML文件
+接下来对于每个HTML文件进行以下步骤：
+1. 创建基础元素的框架
+2. 一个个编写页面元素
+3. 为每个元素加入css样式，首先要确保每块内容的正确布局
+4. 检查页面在浏览器中的展示，并继续修改优化
+### 确保你的网页是响应式的
+在编写网站时，应该确保你的样式在电脑、平板以及手机上展现的样式是相似的
+你可以在电脑上检查不同浏览器的显示样式，而对于手机端，你也可以使用谷歌浏览器的开发者工具来模拟不同手机设备的显示效果。
+要知道模拟工具不会百分百展示你在实际手机或是平板上看到的效果，因此最终还是要通过真实的移动设备来检查最终效果。
+有以下网站可供模拟移动设备调试：
 -   [Responsinator.com][15]  (free)
 -   [Screenfly][16]  by Quirktools (free)
 -   [Browserstack][17]  (paid) — Browserstack allows you to test virtual machines on actual devices.
-
-### The finished product!
-
-Here’s a screenshot of the finished Central Coffee website:
-
+### 作品完成!
+这是一张完成后的Central Coffee网站截图
 ![](https://cdn-media-1.freecodecamp.org/images/JycvLFxLnypcvwpARjmHo6F4U-IRSPIbr1hW)
-
-You can check out the real site for yourself  [on my Github.io page][18].
-
-And that’s how I designed and built a website, without having to hire a designer.
-
-I hope you found this post helpful! Let me know any thoughts you have in the comments below.
+你也可以自己检查下网站效果[on my Github.io page]
+以上就是我在没有聘请设计师的情况下设计建立的网站。
+希望这篇文章对你有用，有任何想法可以再下方评论区留言。
 
 #### Want more?
 

@@ -1,6 +1,6 @@
 > * 原文地址：[Learn the fundamentals of a good developer mindset in 15 minutes](https://www.freecodecamp.org/news/learn-the-fundamentals-of-a-good-developer-mindset-in-15-minutes-81321ab8a682/)
 > * 原文作者：[Huseyin Polat Yuruk](https://www.freecodecamp.org/news/author/huseyin/)
-> * 译者：
+> * 译者：MMMAY521
 > * 校对者：
 
 ![Learn the fundamentals of a good developer mindset in 15 minutes](https://cdn-media-1.freecodecamp.org/images/0*9aI9Xrj0_SpE9KbK.jpg)

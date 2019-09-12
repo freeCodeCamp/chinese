@@ -5,35 +5,53 @@
 
 ![How to Turn Your Website into a Mobile App with 7 Lines of JSON](https://cdn-media-1.freecodecamp.org/images/1*x-5_XGJJhAgiBmLe54I3xg.png)
 
-#### A New Approach for Blending Web Engine into Native Apps
+#### 一种将web引擎与应用程序融合的新方法
 
-What if I told you  **the 7 lines of JSON above, colored in orange** is all you need to turn a website into a mobile app? No need to rewrite your website using some framework API just to make it behave like a mobile app. Just bring your existing website as is, and blend it into a native app with a simple URL reference.
+如果我告诉你**上面7行橙色的JSON代码**就能将网站变成移动应用，你一定会吃惊不已吧！不需要使用框架api重写你的网站就能让它像移动应用一样呈现。就让你现有的网站保持原样，利用简单的URL引用将其打包成原生应用即可。
+<!--What if I told you  **the 7 lines of JSON above, colored in orange** is all you need to turn a website into a mobile app? No need to rewrite your website using some framework API just to make it behave like a mobile app. Just bring your existing website as is, and blend it into a native app with a simple URL reference.-->
 
-And what if, just by tweaking the JSON markup a bit, you can access all the native APIs, native UI components, as well as native view transitions out of the box?
+倘若如上，你只需略微调整JSON代码，就可以访问所有的原生API,原生UI组件以及实现原生视图转换。
+<!--And what if, just by tweaking the JSON markup a bit, you can access all the native APIs, native UI components, as well as native view transitions out of the box?-->
 
-Here’s what a minimal example looks like in action:
+下面是一个最简单的范例：
+<!--Here’s what a minimal example looks like in action:-->
 
 ![](https://cdn-media-1.freecodecamp.org/images/1kjzo4uXso3Yk08RYYUUYGK6HXrlCs42aXqG)
 
-Notice how I’ve embedded a  [github.com web page][1]  but the rest of the layout is all native UI components, such as  [the navigation header][2]  and the  [bottom tab bar][3]. And the transition is automatically native without you having to rewrite the website using any APIs.
+你可以发现我嵌入了一个[github.com网页][1]，但其余布局都是本地UI组件，就像[导航栏][2]和[底部标签栏][3]。并且原生切换效果是自动生成的，你无需使用任何API重写网站。
+<!--Notice how I’ve embedded a  [github.com web page][1]  but the rest of the layout is all native UI components, such as  [the navigation header][2]  and the  [bottom tab bar][3]. And the transition is automatically native without you having to rewrite the website using any APIs.-->
 
-Before I explain how, you may ask: “That’s cool, but can you do anything meaningful other than just displaying the web page in a native app frame?”
+你可能迫切地想问：”这很酷，但除了在原生应用框架中显示网页，你还能做其他有意义的事吗？“
+<!--Before I explain how, you may ask: “That’s cool, but can you do anything meaningful other than just displaying the web page in a native app frame?”-->
 
-Great question, because that’s the main topic of this post. All you need to do is create a seamless  **2-way communication channel between the web view and the app**, so the parent app can trigger any JavaScript functions inside the web view and the web view can reach outside to call native APIs.
+问得好！因为这就是本篇文章的主题。您只需要创建一个**在web视图和应用程序之间的双向通信信道**，这样父应用就可以触发web视图内的任何javascript函数，并且web视图可以从外部调用原生API。
+<!--Great question, because that’s the main topic of this post. All you need to do is create a seamless  **2-way communication channel between the web view and the app**, so the parent app can trigger any JavaScript functions inside the web view and the web view can reach outside to call native APIs.-->
 
-Here’s one such example:
+这有个简单的例子：
+<!--Here’s one such example:-->
 
 ![](https://cdn-media-1.freecodecamp.org/images/8AvgutqafADVJW2WYgH3o0kBVDZvVuUIoU6C)
 
-Note that this view contains:
+请注意，此视图包含：
 
-1.  Native navigation header, complete with built-in transition functionality
+1.原生导航栏，包括内置的切换功能。
+
+2.一个Web视图，其中嵌入了Web应用程序：二维码生成器。
+
+3.底部的原生聊天输入组件。
+
+这些都可以通过调整上面的JSON代码来实现。
+
+最后，请注意，二维码会随着你输入内容的不同而变化。此输入会触发二维码web应用内的JavaScript函数，从而重新生成二维码。
+<!--Note that this view contains:-->
+
+<!--1.  Native navigation header, complete with built-in transition functionality
 2.  A Web view, which embeds a QR code generator web app
-3.  A native chat input component at the bottom
+3.  A native chat input component at the bottom-->
 
-All this can be described by just tweaking some of the JSON markup attributes we saw above.
+<!--All this can be described by just tweaking some of the JSON markup attributes we saw above.-->
 
-Finally, note that the QR code changes as you enter something from the chat input. The chat input triggers a JavaScript function inside the QR code web app that re-generates the image.
+<!--Finally, note that the QR code changes as you enter something from the chat input. The chat input triggers a JavaScript function inside the QR code web app that re-generates the image.-->
 
 No app development framework has tried to fundamentally solve this problem of  **“seamless integration of web view into native apps”**  because they’re all focused on picking either 100% native or 100% HTML5 side.
 

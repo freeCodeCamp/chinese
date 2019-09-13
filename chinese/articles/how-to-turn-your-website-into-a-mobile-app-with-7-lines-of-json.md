@@ -37,47 +37,47 @@
 
 最后，请注意，二维码会随着你输入内容的不同而变化。此输入会触发二维码web应用内的JavaScript函数，从而重新生成二维码。
 
-No app development framework has tried to fundamentally solve this problem of  **“seamless integration of web view into native apps”**  because they’re all focused on picking either 100% native or 100% HTML5 side.
+目前还没有试图从根本上解决  **“将Web视图无缝集成到原生应用程序”** 这一问题的应用开发框架，因为它们都专注于完全的原生或HTML5。
 
-Whenever you hear someone talk about the future of mobile apps, you would probably hear them talk about  **“Will it be the HTML5 approach that wins out? Or will it be native?”**
+每当你听到有人谈论移动应用的未来，你都可能会听到他们谈论 **“究竟是HTML5还是原生方法会胜出呢？”** 
 
-None of them see  `native`  and  `html`  as something that could co-exist and furthermore, create synergy and achieve things that are not easily possible otherwise.
+人们觉得`原生`和`HTML`是不能共存的，更不会认为它们能相辅相成，甚至实现看似不可能的功能。
 
-In this article I’m going to explain:
+在本文中，我将阐述：
 
--   Why blending web engine and native components is often a good idea.
--   Why a seamless integration of HTML and Native is not easy, and how I implemented one.
--   Most importantly, how YOU can use it to build your own app instantly.
+-   为什么将web引擎和原生组件相融合通常是一个好主意。
+-   为什么HTML和原生的无缝融合很困难，以及如何实现。
+-   更重要的是，你如何利用它来快速构建你自己的应用程序。
 
-### Why would you use HTML in a native app?
+### 为什么要在原生应用中使用HTML？
 
-Before we go further, let’s first discuss whether this is even a good idea, and when you may want to take this approach. Here are some potential use cases:
+在进一步探讨之前，让我们首先讨论一下这个主意是好是坏，以及在何时你会想采用这种方法。这儿给出一些潜在的使用案例：
 
-#### 1\. Use Web Native Features
+#### 1\. 使用Web原生功能
 
-Some parts of your app may be better implemented using the web engine. For example,  [Websocket][4]  is a web-native feature that’s designed for the web environment. In this case it makes sense to use the built-in web engine (**WKWebView for iOS** and **WebView for Android**) instead of installing a 3rd party library that essentially  **“emulates”**  Websocket.
+你的应用的某些部分可能更适合用Web引擎实现。 例如，[Websocket][4]是一个为Web环境设计的原生Web功能。在这种情况下，安装本质上  **“模拟”** Websocket的第三方库，就不如使用内置的web引擎（ **iOS版的WKWebView** 和 **Android版的WebView**）。 
 
-No need to install additional code just to do something that you can do for free, which brings us to the next point.
+无需安装额外的代码，你就可以免费实现。这也引出了下一点。
 
-#### 2\. Avoid Large Binary Size
+#### 2\. 避免较大的二进制文件
 
-You may want to quickly incorporate features that will otherwise require a huge 3rd party library.
+你可能想快速使用一些功能，但它们需要一个庞大的第三方库。
 
-For example, to incorporate a QR code image generator natively, you will need to install some 3rd party library which will increase the binary size. But if you use the web view engine and a JavaScript library through a simple  `<script s`rc>, you get all that for free, and you don’t need to install any 3rd party native libraries.
+比如，为了以原生方式实现一个二维码生成器，你可能需要安装某些第三方库，而它们将大大增加文件的体积。但如果你使用Web视图引擎以及通过一个简单的`<script src>`来调用javascript库，你就能免费获得这些功能，且不需要安装任何第三方原生库。
 
-#### 3\. No Reliable Mobile Library Exists
+#### 3\. 缺乏可靠的移动库
 
-For some cutting edge technologies, there is no reliable and stable mobile implementation yet.
+就一些前言技术而言，还没有可靠稳定的移动端实现。
 
-Fortunately most of these technologies have web implementations, so the most efficient way to integrate them is to use their JavaScript library.
+幸运的是，它们中的大多数都有Web端实现，所以集成它们的最有效的方式就是使用JavaScrip库。
 
-#### 4\. Build part-native, part-web-based apps
+#### 4\. 构建部分原生，部分基于Web的应用
 
-Many new developers looking to port their website into a mobile app get discouraged or overwhelmed when they find out some of their existing website features are too complex to quickly rewrite from scratch for each mobile platform.
+许多开发新手希望将他们的网站移植为移动应用，但当他们发现网站的部分功能太过复杂而无法快速为每种移动平台重写时，往往会气馁或受挫。
 
-For example, you may have a single web page that’s too complex to immediately convert to a mobile app, but the rest of your website may be easily converted.
+例如，你可能有一个网页太过复杂而无法立即转换为移动应用程序，但网站的其他部分可能很容易转换。
 
-In this case, it would be nice if there was a way to build most of the app natively, but for that particular complex web page, somehow seamlessly integrate it into the app as HTML.
+在这种情况下，如果可以以原生方式构建大部分应用程序，并以HTML形式将特别复杂的页面无缝集成于应用中，那就太棒了。
 
 ### How does it work?
 

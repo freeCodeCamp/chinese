@@ -13,6 +13,16 @@ Learn all you need to know about JavaScript!
 
 Note: you can get a  [PDF, ePub, or Mobi][1]  version of this handbook for easier reference, or for reading on your Kindle or tablet.
 
+![JavaScript完全指南](https://cdn-media-1.freecodecamp.org/images/1*2YiRWfZk40lOe81wcyEVjA.png)
+
+在当下，JavaScript是世界上最受欢迎的编程语言之一，并且它的使用不仅仅局限于前端开发领域。近几年冉冉升起的Node.js为JavaSCript解锁了后端开发领域——一个曾经被Java, Ruby, Python, PHP以及一些更传统的服务器端语言主宰的领域。
+
+这篇JavaScript完全指南遵循80/20原则，既使用20%的时间来学习80%的JavaScript知识。
+
+这篇文章会带你学习你所需要知道的所有的JavaScript知识！
+
+提示: 你可以获取一份[PDF, ePub或者Mobi][1]版本用于快速翻阅或者在Kindle或平板设备上的阅读。
+
 #### Introduction
 
 JavaScript is one of the most popular programming languages in the world. Created 20 years ago, it’s gone a very long way since its humble beginnings.

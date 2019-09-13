@@ -1,6 +1,6 @@
 > * 原文地址：[The Complete JavaScript Handbook](the-complete-javascript-handbook)
 > * 原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> * 译者：
+> * 译者：dingjy94
 > * 校对者：
 
 ![The Complete JavaScript Handbook](https://cdn-media-1.freecodecamp.org/images/1*2YiRWfZk40lOe81wcyEVjA.png)

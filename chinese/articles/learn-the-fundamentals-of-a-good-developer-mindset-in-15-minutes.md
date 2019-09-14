@@ -5,29 +5,29 @@
 
 ![Learn the fundamentals of a good developer mindset in 15 minutes](https://cdn-media-1.freecodecamp.org/images/0*9aI9Xrj0_SpE9KbK.jpg)
 15分钟内搞定优秀开发人员应该有的思维基础
-_“Difficult to make even small changes”_“即使是微小改变也非常困难”
+_“Difficult to make even small changes”_“即使是小小的改变也非常困难”
 
-_“Breaking functionality of the software by making changes”_“做出可以中断软件功能的改变”
+_“Breaking functionality of the software by making changes”_“做出了一些调试，软件却不能正常工作了”
 
 _“Introducing a new bug by fixing another one”_“搞定一个bug，又来新的”
 
 _“Implementing code that is unnecessary”_“执行不必要的代码”
 
-_“Almost impossible to add a new feature because of complicated code”_“代码过于复杂，添加新特性基本无望”
+_“Almost impossible to add a new feature because of complicated code”_“代码过于复杂，添加新性能基本无望”
 
-_“The never-shipping product”_“从未坐过船的产品”
+_“The never-shipping product”_“从未出厂的产品”
 
 _“Throwing code away and rewriting it from scratch”_“把这些代码扔掉重写”
 
 Are all the above statements familiar?上面这些话觉得熟悉吗？
 
-Every minute a developer from any part of the World says (or thinks) any of the above statements and wishes to cry. Why?每时每刻，时间各地的程序员都会像上面这么说或者这么想。为什么？
+Every minute a developer from any part of the World says (or thinks) any of the above statements and wishes to cry. Why?每时每刻，世界各地的程序员都会像上面这么说或者这么想。为什么？
 
 These are common issues talked about by developers very often. These stories are experienced in every development team.这些都是程序员经常谈到的共同话题，也是每个开发团队都会经历的阶段。
 
-There are many small factors that are slowly and gradually harming the developers’ projects. They are not immediately destructive. Most of them only do long-term damage. Something you won’t see the damage for a year or more. So when somebody proposes them, often they sound harmless. Even when you start implementing them, they may seem fine. But as time goes on — and particularly as more and more of these stacks up — the complexity becomes more apparent and grows until you’re another victim of that ever-so-common horror story.很多微不足道的因素慢慢地、逐渐地威胁到开发人员的项目。他们并没有在一开始就张牙舞爪，造成毁灭性的后果，绝大多数都是长期潜伏以后造成危害，可能一年甚至几年你都不会看到危害。所以有人提到这些因素时，大部分情况下听起来都是无害的。甚至在你开始执行的时候，他们看起来也是人畜无害的。但随着时间推移，尤其是随着越来越多的因素的积累，项目的复杂性与日俱增，终有一天你会成为下一个人人皆知的“事故”的主角。
+There are many small factors that are slowly and gradually harming the developers’ projects. They are not immediately destructive. Most of them only do long-term damage. Something you won’t see the damage for a year or more. So when somebody proposes them, often they sound harmless. Even when you start implementing them, they may seem fine. But as time goes on — and particularly as more and more of these stacks up — the complexity becomes more apparent and grows until you’re another victim of that ever-so-common horror story.很多微不足道的因素慢慢地、逐渐地威胁到开发人员的项目。他们并没有在一开始就张牙舞爪，造成毁灭性的后果，绝大多数都是长期潜伏造成危害，可能一年甚至几年你都不会看到危害。所以有人提到他们时，大部分情况下听起来都是无害的。甚至在你开始执行他们的时候，他们看起来也还好。但随着时间推移，尤其是小问题越积越多，项目的复杂性与日俱增，终有一天你会成为下一个人人皆知的“事故”的主角。
 
-To avoid being one of the victims, you should embrace the fundamental laws of software. You should develop a mindset that every developer should have. This mindset will help you make better decisions in your daily programming journey. You can keep your software as simple as possible. You can protect it from being an unmanageable and complex system.为了避免事故发生，你应该深入学习软件的基础运行规则。你应该形成一种开发人员的思维基础，这可以帮助你在日常编程中做出更好的决策。你应该使你的软件尽可能保持简洁，避免其变得超出控制、无比复杂。
+To avoid being one of the victims, you should embrace the fundamental laws of software. You should develop a mindset that every developer should have. This mindset will help you make better decisions in your daily programming journey. You can keep your software as simple as possible. You can protect it from being an unmanageable and complex system.为了避免事故发生，你应该深入学习软件的基础运行规则。你应该形成一种开发人员的思维基础，这可以帮助你在日常编程中更好地决策。你应该使你的软件尽可能保持简洁，避免其超出控制、无比复杂。
 
 Here are the key points that every developer must master.以下是每个程序员必备的思维关键点
 
@@ -36,10 +36,10 @@ Here are the key points that every developer must master.以下是每个程序�
 First of all, you should understand the purpose of the software. There is, in fact, a single purpose of all software:  ****To help people****.首先，你应该理解开发软件是为了干嘛。事实上，所有的软件都只有一个功能：为了帮助人们如何如何。
 
 ****Remember: the purpose of the software is not to show off how intelligent you are. ****— [Max Kanat-Alexander, Code Simplicity][1]
-永远牢记：开发软件的目的不是为了展示你有多聪明。
-Developers who cannot conceive the purpose of the software will write bad software. What is bad software? A complex system that doesn’t help people that much.如果开发人员不认真构思软件开发的目的，他们只能写出低级软件。何为低级软件？就是无法给人们提供很多帮助的复杂的系统。
+永远牢记：开发软件的目的不是为了展示你有多聪明。---马克斯 卡纳特 亚历山大【简洁代码】[Max Kanat-Alexander, Code Simplicity][1]
+Developers who cannot conceive the purpose of the software will write bad software. What is bad software? A complex system that doesn’t help people that much.如果开发人员不认真构思软件开发的目的，他们只能写出低级软件。何为低级软件？就是既无法给人们提供很多帮助，又很复杂的系统。
 
-When you are making decisions about software, you should guide yourself by always keeping this in mind:  _How we can help?_  You can even prioritize feature requests this way.当你开发软件需要决策时，你应该把这条准则牢牢记住：我们怎样才能提供帮助？你也可以通过这个准则来区分特性要求的优先级。
+When you are making decisions about software, you should guide yourself by always keeping this in mind:  _How we can help?_  You can even prioritize feature requests this way.当你开发软件需要决策时，你应该把这条准则牢牢记住：我们怎样才能提供帮助？你也可以通过这个准则来区分性能要求的优先级。
 
 ### 2\. The Goals of Software Design软件设计的目标
 
@@ -333,67 +333,66 @@ There are many cases that you should consider to rewrite your code from scratch 
 有很多情况你需要考虑重头开始写代码，[here][7]这些你可以看看。但是，还是有个忠告给你：
 ****Refactoring should be the first option.****
 代码重构应该是第一选择。
-### 21\. Documentation and Commenting
-
+### 21\. Documentation and Commenting说明和注释
 One of the common misconceptions about commenting is that developers add comments that say  _what code is doing_. This is wrong. That should be obvious from reading the code. If it’s not obvious, it means that it is not readable and it should be made simpler.
-
+一个关于注释的误解是，开发人员补充注释是要说明代码运行的目的是什么。这是不正确的。代码应该很容易理解，如果不是这样，就说明代码不易于阅读，还可以更简洁。
 When you can’t make the code simpler then you should add the comment to explain this complexity.
-
+如果代码实在简洁不了，那就需要你加一些注释来解释为什么是这样。
 The real purpose of comments is to explain  _“WHY”_  you did something, not  _“WHAT”_ thecode is doing. If you don’t explain this, other programmers may be confused and when they go to change your code they might remove important parts of it.
-
-****Write a comment to explain “WHY”, not to explain “WHAT”.****
+注释的根本意图在于解释你为什么要这样写代码，而不是解释代码是做什么。如果你没有解释，其他的程序员可能就会迷惑不解，他们改写你的代码时，很可能就会改掉其中的重要部分。
+****Write a comment to explain “WHY”, not to explain “WHAT”.****注释是为了解释为什么这样写，而非解释写的是什么。
 
 Another thing is documenting. It is important to have documentation to explain your software’s architecture and every module and components. This is required to see the high-level picture of your software. When a new developer joined your team, it would be easier to understand the software as a whole. When developers don’t have any clue about other parts of the software, they could easily make a mistake in their own part which can affect other parts also.
-
+第二件事情是说明。做个说明来阐述软件的设计结构、每个模块、每个组成部分非常重要，而这就需要站在更高的监督来审视软件。有新开发人员加入到团队中来时，整体理解软件不在话下。但如果开发人员对软件的其他部分一无所知，他们在做自己负责部分的工作时很可能会犯错，还可能影响到其他部分。
 ### 22\. Picking Technologies (Tools, Libraries, etc.)
-
+使用技术（包括但不限于工具，资源库等等）
 First things first, always remember this rule:
-
+首先，牢记这条准则：
 ****Don’t depend on external technologies or reduce your dependency on them as much as possible.****
-
+不要依赖外界技术，或者说，尽可能减少对他们的依赖。
 Why is that? Because they are another common source of complexity. They can kill your active development and make everything even harder. When you are dependent so much on external technologies, you are not free. What if there is a major bug in that technology? You have to wait for the developers to fix that bug and if this technology is in the center of your project basically you are stuck, you can’t move forward. So that’s why it is so important to pick the right technologies for your project.
-
+为何？因为外界技术本身就会提升项目复杂度。他们会毁掉你自己积极开发的技能，把一切东西变得更为复杂。如果你如此依赖外界技术，那么你本身就是受限制的。如果技术本身就有一个大bug怎么办？你还得等别的开发人员把bug修复好才行。但如果你的项目核心就使用到了这个有bug的技术，那你可就束手无策了，可谓举步维艰。因此，为项目挑选适合的技术变得尤为重要。
 There are a few factors you should consider before you start using some technology:
-
--   Is there active development behind it?
--   Will it continue to be maintained?
--   How easy is it to switch away from?
--   What does the community say about it?
+在你开始使用某项技术时，你应该考虑如下几个因素：
+-   Is there active development behind it?技术背后的开发是否积极？
+-   Will it continue to be maintained?技术的维护工作会持续进行吗？
+-   How easy is it to switch away from?抛开这个技术转向其他技术容易吗？
+-   What does the community say about it?大众对它评价如何？
 
 If you can find the right answer these questions, you can reduce the risk of picking the wrong technology.
-
-### 23\. Self-Development
+如果你可以很好地回答这些问题，那你就降低了使用不合适技术的风险。
+### 23\. Self-Development自我发展
 
 Keep learning. Try out different programming languages and tools, read books on software development. They will give you another perspective. Every day small improvements will make a real difference in your knowledge and skills.
-
+不断学习。多尝试不同的编程语言和编程工具，阅读与软件开发相关的书籍，这些能提供给你另一种角度。每天一点小小的提升都会给你的知识和技能带啦实质性影响。
 Be open-minded. Don’t be obsessive about one technology. Use the required technology to solve a specific problem. Don’t be in the unnecessary discussion like Microsoft vs Linux:)
-
+思维开阔。不要太迷恋某个技术，要用真正需要的技术解决某个特定的问题。不要做类似于比较Microsoft和Linux的无用讨论。
 ****Know that every specific problem has its own specific solution.****
-
+要知道，每个特定问题都有特定的解决办法。
 ### 24\. Don’t be a hero
-
+及时止损。
 A lot of times it’s better to be a quitter than a hero.
-
+大多数情况下，及时止损比不撞南墙不回头好得多。
 For example, let’s say you think a task can be done in two hours. But four hours into it, you’re still only a quarter of the way done. The natural instinct is to think, “But I can’t give up now, I’ve already spent four hours on this!” So you go into hero mode. You’re determined to make it work (and slightly embarrassed that it isn’t already working). You grab your cape and shut yourself off from the world.
-
+举个例子。你觉得你可以在两个小时以内完成某个任务。但是，四个小时过去了，你还是只进行了四分之一。你的直觉反应是：我不能放弃，我都已经花了四个小时了。所以你继续发扬不撞南墙不回头的精神。你发誓要完成任务，但很尴尬的是，任务好像就是完不成。你沉浸在自己的世界里，一心想完成任务。
 ****Don’t be obsessive. Know when to quit. Don’t hesitate to ask for help.****
-
+不要太有执念。懂得及时止损。要记得及时求助。
 ### 25\. Don’t Ask Questions… Ask For Help
-
+不要问问题。要求助。
 When you have something to implement and you are not sure about the solutions, don’t ask others how to so it …at least not immediately. Instead, try anything and everything you can think of. This is more important the less comfortable you are with a concept or language.
-
+当你要执行某个任务，但你不确定解决办法是什么，不要问别人你应该怎么做，至少不要遇到问题就立马问。你要尝试你能想到的所有解决办法，这很重要，要跳出你所熟知的概念或语言的舒适圈。
 When you can’t think of anything on your own, search! Find answers and try them out. Modify those answers, see if you can understand why they work, adapt them to your code.
-
+当你自己实在想不出解决办法时，善用搜索工具！找到答案大胆尝试。完善这些答案，看看能不能理解为什么这样做就可行，并把这些加入到自己的代码库中。
 …But always seek advice.
-
+但是，要常常寻求建议。
 When you have tried everything, and preferably after you have a working solution, now is the best time to seek advice. Look to peers and senior developers to review your code.
-
+在你做出了全部尝试，已经找到了可行的解决办法之后，这时你最后去寻求一下别人的建议。让同事或者有经验的开发人员看看你的代码有没有问题。
 I tried to explain the fundamentals of a good developer mindset in this article. I used some part from  [Code Simplicity][8]  book which has a big impact on my thinking process as a developer. When I read this book, there was a lot of moment that I reacted “ohh I did this mistake, I did that too.” I mentioned some important parts of the book and combine them with my experience.
-
+在这篇文章中，我尝试解释一个优秀的开发人员应该有怎么样的思维基础。【简洁代码】这本书对我自己的思维过程有很大影响，所以我参考了书中的一些部分。我读这本书的时候，时常会有“啊我犯了这个错误，我犯了那个错误”这样的反应，所以结合我自己的经历体会，我写出了这篇文章。
 I strongly recommend you to read  [Code Simplicity][9]  from Max Kanat-Alexander.
-
+我由衷地推荐你们阅读马克斯 卡纳特 亚历山大写的这本【简洁代码】  [Code Simplicity][9]  from Max Kanat-Alexander。
 Thanks for reading! I hope this guide helped you out!
-
+感谢阅读！希望这篇文章能帮到你~
 [1]: https://www.amazon.com/Code-Simplicity-Fundamentals-Max-Kanat-Alexander-ebook/dp/B007NZU848
 [2]: https://www.amazon.com/Code-Simplicity-Fundamentals-Max-Kanat-Alexander-ebook/dp/B007NZU848
 [3]: https://www.amazon.com/Code-Simplicity-Fundamentals-Max-Kanat-Alexander-ebook/dp/B007NZU848

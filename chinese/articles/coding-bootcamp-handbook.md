@@ -271,7 +271,7 @@ In some cases, these schools qualify for federal student loans, the GI Bill, and
 
 Plainly put, most of these private for-profit universities are a scam. The US government is slowly shutting them down. But many people still fall for their marketing and end up thousands of dollars in debt with a worthless degree.
 
-遗憾地说，大多数这些私立营利性大学都很糟糕。美国政府在慢慢的关掉他们，但是很多人仍然因为他们的营销手段而受骗，最后带着数千美元的债务和一个没有价值的学位毕了业。
+遗憾地说，这些大多数私立营利性大学都很糟糕。美国政府在慢慢的关掉他们，但是很多人仍然因为他们的营销手段而受骗，最后带着数千美元的债务和一个没有价值的学位毕了业。
 
 Even so, word of these scams spreads slowly. And even when a school sounds too good to be true, people still want to believe.
 

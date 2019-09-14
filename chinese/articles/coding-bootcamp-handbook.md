@@ -236,6 +236,8 @@ There are two major reasons for this:
 -   受认证的学校能让学生获得联邦资助和学生贷款
 
 In order to get accredited, schools have to undergo an audit by independent educators. These auditors dig through files and make sure the school is following all the laws. They also make sure students are getting jobs after they graduate.
+
+
 为了获得认证，学校必须接受独立教育者的审核。这些审核者调查文件并且确保学校遵守法律规则，此外，他们还要确保学生毕业后可以找到工作。
 
 
@@ -245,7 +247,7 @@ If graduates from the school aren't able to get jobs in their field of study, th
 
 You may have heard the term "diploma mill". These are colleges and universities that have lost their accreditation (or never got accredited in the first place). They sell worthless courses and worthless diplomas.
 
-你也许听说过“文凭工厂”这个词。它是指那些失去认证或者从来就没有被认证过的大学或者学院。这些大学出售没有价值的课程或者文凭。
+你也许听说过“文凭工厂”这个词。它是指那些失去认证（或者从来就没有被认证过）的大学或者学院。这些大学出售没有价值的课程和文凭。
 
 In the US, public universities are run by the government. These are accredited. And most private universities are run by nonprofits - often by religious organizations. These are usually accredited, too.
 
@@ -277,15 +279,24 @@ Even so, word of these scams spreads slowly. And even when a school sounds too g
 
 This brings us back to coding bootcamps.
 
-
+我们继续回到编程训练营的话题。
 
 Without some form of accreditation, a few bootcamps who are focused on short term financial gains - rather than the long-term health of the bootcamp model - can ride a wave of bootcamp popularity. They can get rich while serving up sub-par results for students.
 
+没有某种形式的认证，一些专注于短期的经济回报的训练营 —— 而不是长期健康的训练营模型，可以掀起一波训练营热潮。即使他们的服务并不能让学生
+取得满意的成绩，他们仍可以获利。
+
 A bootcamp accreditation system could help prevent this.
+
+训练营认证系统可以帮助避免这种情况。
 
 As I mentioned, most bootcamps don't have the resources to get accredited. Or they haven't existed long enough to qualify. This is where self-regulation comes into play.
 
+正如我提到过的，大多数训练营不具备获得认证的资源，或者存在时间之短而不具有被认证的资质。这个时候自我评估就出现了。
+
 The Council on Integrity in Results Reporting (CIRR) is a joint effort by bootcamps to publicly share the employment statistics of their graduates in a way everyone can understand.
+
+
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Launch_Academy_Boston__H1_2018__Audited.png)
 

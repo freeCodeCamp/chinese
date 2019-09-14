@@ -236,26 +236,48 @@ There are two major reasons for this:
 -   受认证的学校能让学生获得联邦资助和学生贷款
 
 In order to get accredited, schools have to undergo an audit by independent educators. These auditors dig through files and make sure the school is following all the laws. They also make sure students are getting jobs after they graduate.
+为了获得认证，学校必须接受独立教育者的审核。这些审核者调查文件并且确保学校遵守法律规则，此外，他们还要确保学生毕业后可以找到工作。
+
 
 If graduates from the school aren't able to get jobs in their field of study, that's a red flag. The school may lose its accreditation.
 
+如果学校的毕业生不能在他们的专业领域找到工作，学校就要小心了。他们可能因此失去认证的资格。
+
 You may have heard the term "diploma mill". These are colleges and universities that have lost their accreditation (or never got accredited in the first place). They sell worthless courses and worthless diplomas.
+
+你也许听说过“文凭工厂”这个词。它是指那些失去认证或者从来就没有被认证过的大学或者学院。这些大学出售没有价值的课程或者文凭。
 
 In the US, public universities are run by the government. These are accredited. And most private universities are run by nonprofits - often by religious organizations. These are usually accredited, too.
 
+在美国，公立大学被政府管理，是被认证的。并且大多数被非营利组织——通常是宗教组织经营的私立大学也是被认证过的。
+
 But there's a third category of university: private for-profit universities. And this is where things get a little sketchy. Some of these universities are accredited, but some of them aren't.
+
+但是第三种大学：私立营利性大学，情况就不那么确定了。这些大学里一些是被认证的，但是另一些并没有。
 
 These private for-profit universities advertise heavily on late-night TV and buy lots of Facebook ads. They trick unsophisticated students into enrolling.
 
+这些私立营利性大学在晚间电视和Facebook上做许多广告，以此诱导不明真相的学生注册。
+
 > "A foole and his money is soone parted." - Dr. John Bridges, way back in 1587
+
+> “一个人和他的钱很快就分离了。” ——  Dr. John Bridges 在1587年说道
 
 In some cases, these schools qualify for federal student loans, the GI Bill, and other forms of government assistance.
 
+在某些情况下，这些学校有资格获得联邦学生贷款，GI Bill 资助，和其他形式的政府资助。
+
 Plainly put, most of these private for-profit universities are a scam. The US government is slowly shutting them down. But many people still fall for their marketing and end up thousands of dollars in debt with a worthless degree.
+
+遗憾地说，大多数这些私立营利性大学都很糟糕。美国政府在慢慢的关掉他们，但是很多人仍然因为他们的营销手段而受骗，最后带着数千美元的债务和一个没有价值的学位毕了业。
 
 Even so, word of these scams spreads slowly. And even when a school sounds too good to be true, people still want to believe.
 
+即便如此，这些学校糟糕的真相鲜为人知。当一个学校听起来太好甚至不可能为真的时候，人们仍然选择相信。
+
 This brings us back to coding bootcamps.
+
+
 
 Without some form of accreditation, a few bootcamps who are focused on short term financial gains - rather than the long-term health of the bootcamp model - can ride a wave of bootcamp popularity. They can get rich while serving up sub-par results for students.
 

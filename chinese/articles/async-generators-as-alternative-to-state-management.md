@@ -35,53 +35,53 @@ Redux和其他的状态管理工具主要侧重于约束和控制数据的突变
 
 本故事的技术和Redux都是基于事件源模式，它们有许多相似之处。它也为具有副作用的操作提供封装数据和同步确定执行顺序。
 
-This approach can be abstractly viewed as a dependency graph as well, but the changes are propagated in reverse direction, from its root to towards leaves of its spanning tree. In each node we check should the propagation proceed to children or not. This makes the scheduling algorithm very lightweight and easy to control. It doesn’t require any library, basing only on JavaScript built-in features.
+这种方法也可以抽象地视为依赖图，但是变化是反向传播的，从它的根节点朝向它生成树的叶子节点。在每一个节点，我们检查传播是否应该传给子节点。这样使调度算法非常轻量级并且易于控制。它不需要引入任何库，仅基于JavaScript内置功能。
 
-Let’s first port  [Redux VanillaJS counters][3]  example to illustrate the idea.
+让我们首先针对 [Redux VanillaJS counters][3] 的例子来说明这个想法。
 
-The original reducer is replaced with async generator function. The function calculates and stores its state in a local variable. It also yields the calculated value, the new value is stored in the singleton storage, and it is visible from event handlers. I’ll remove that singleton storage in the next steps.
+原版的reducer用异步生成器函数替代了。该函数计算并将其状态存储在一个局部变量中。它还会产生计算值，新的值被存储在单例存储中，并且它可以从事件处理器中访问。我将在下一步中删除那个单例存储。
 
-This version doesn’t look much different from Redux. The async generator there could be Redux storage middleware. This violates one of Redux  [principles][4]  though, namely storing all application state only in the storage. Even if the generator doesn’t have any local variables, it still has its execution state — the position in the code where the execution is suspended in  `yield`  or  `await`.
+这个版本与Redux中的例子没有什么不同。异步生成器可以是Redux的存储中间件。这样违反了其中一条Redux [原则][4] 思想，即仅将所有应用程序状态存储在存储器中。即使生成器没有任何的局部变量，它仍然具有执行状态 - 在`yield`或`await`中暂停执行的代码中的位置。
 
-#### Turning components inside-out
+#### 从内到外转换组件
 
-Generator functions are functions returning iterators. We can do with them everything we can do with plain functions. For example, by composing generator functions, we can split computation into a few independent stages.Each stage has own encapsulated state. Each stage receives messages which were yielded on the previous stage, handles them yielding another messaging and passing them to the next stage.
+生成器函数是返回迭代器的函数。我们可以用普通函数完成我们所能做的一切。例如，通过组合生成器函数，我们可以将计算分成几个独立的阶段。每个阶段有自己的封装状态。每个阶段接收前一阶段产生的消息，处理它们会产生另一个消息并将它们传递到下一个阶段。
 
-The payload of the messages can contain VDOM elements. Instead of having a monolithic components tree we emit parts of it and send them to the next stage, where they can be assembled or transformed. Here is the same Counters example with React.
+消息的有效负载可以包含VDOM元素。我们不是使用一个单独的组件树，而是将它的一部分发出去并且发送它们到下一个阶段，在那里它们可以被组装或转换。 这与React的计数器示例相同。
 
-There  `pipe`  function is a function composition. The functions take two arguments. The first is async iterable for messages from the former stage. And the second is to send a message into the start of the pipe. It should be called only from event handlers. This function can be replaced soon with JavaScript embedded pipeline operator.
+`pipe`函数是一个函数组合。函数接收两个参数。第一个是来自前一阶段消息的异步迭代。第二个是将消息发送到管道的起始。它应该只从事件处理器调用。 使用JavaScript嵌入式管道运算符可以很快替换此函数。
 
-When we compose plain functions the next one in chain starts executing only after the previous was finished. While for generators (and in fact any coroutines) the execution can be suspended in interleaved with other functions. This makes composing different parts easier.
+当我们编写普通函数时，链中的下一个函数仅在前一个函数完成后开始执行。对于生成器（实际上是任何协程），执行操作可以与其他函数交错暂停。这使得将不同部将组合起来会更加容易。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/07/lanes--1--1.svg)
 
-The example above briefly shows extensibility by decoupling a few menu buttons from the root component into a separate stage. Instead of abstracting menu buttons into a separate component it maintains a placeholder where it injects components it receives in messages with “MENU\_ITEM” type. It is an Inversion of Control for components. Both techniques React Components and these Inverted Components can be used together of course.
+上面的示例通过将一些菜单按钮从根组件分离到一个单独的阶段，简要地展示了可扩展性。它不是将菜单按钮抽象到一个单独的组件中，而是维护一个占位符，它会在“MENU \ _ITEM”类型的消息中注入它接收的组件。
 
-#### Extension
+#### 扩展
 
-An exciting point of this technique is nothing should be preliminary designed to make the program reusable and decoupled. Nowadays premature abstraction is probably a bigger evil than premature optimization. It almost definitely leads to an overdesigned mess impossible to use. Using abstract generators, it is easy to keep calm and implement the required features, splitting when needed, without thinking about future extensions, easy to refactor or abstract some common parts after more details are available.
+这项技术令人兴奋的一点是，应该初步设计一下，使程序可重用和解耦。如今过早抽象的害处可能远大于过早优化。差不多可以肯定的是，它会导致过度设计的混乱而无法使用。使用抽象生成器，很容易保持稳定并实现所需的功能，在需要时进行拆分，而不用考虑将来的扩展，在更多细节可用之后易于重构或抽象一些公共部分。
 
-Redux is famous for making programs simpler to extend and reuse. The approach in this story is also based on Event Sourcing, but it is much simpler to run async operations and it doesn’t have a single store bottleneck, nothing should be designed prematurely.
+Redux以使程序更易于扩展和重用而闻名。这个故事中的方法也是基于事件是的，但是运行异步操作要简单得多，而且没有单个存储的瓶颈，不应该过早设计任何东西。
 
-Many developers like single storage because it is easy to control. The control is not a free thing though. One of the widely accepted advantages of Event Sourcing pattern is an absence of a central DB. It is simpler to change one part without danger of breaking something else. There is another problem of single storage discussed in Persistence section below.
+许多开发人员喜欢单一存储，因为它易于控制。虽然控制不是免费的。事件源模式的一个被广泛接受的优被是缺少中央数据库。更换一部分更简单，没有破坏其他部分的危险。下面的“持久性”部分讨论了单个存储的另一个问题。
 
-There is  [Decouple Business Logic][5]  article with more detailed cases study. At some step there, I added a multi-select feature to drag and drop without changing anything in single element handling. With a single store, this would mean changing its model from storing a single currently dragging element to a list.
+这里有篇文章 [解耦业务逻辑][5]，有更多详细的案例研究。在某个步骤里面，我添加了一个多选功能来拖放，而不会改变单个元素处理中的任何内容。使用单一存储，这意味着将其模型从存储单个当前拖动元素更改为列表。
 
-There are similar solutions in Redux, namely applying higher order reducer. It could take a reducer working with a single element and translate into reducer working for a list. The generators solution uses higher order async generators instead, taking a function for a single element and generating the one for a list. It is similar but much less verbose, as the generator encapsulates data and implicit control state.
+在Redux里面，有相似的解决方案，叫做应用性高阶reducer。它能够让reducer与一个单独的元素工作并且转化为一个reducer工作列表。生成器解决方案使用更高阶的异步生成器替代，为单个的元素提供函数并且为列表生成一个函数。它很类似但不那么冗长，因为生成器封装了数据和隐式控制状态。
 
-As an illustration, let’s make a list of counters. This step is covered in “Decouple Business Logic” article, I’m not giving many details here. The  `fork`function is the async iterators transforming function, running its argument in threads per item. It is a not simple, but it is a generic one, works in many contexts as is. In the next section, for example, I apply it recursively to get a tree view.
+作为例子，让我们做一个计数器列表。“解耦业务逻辑”一文中介绍了此步骤，我这里将不会提供很多细节。`fork`函数是异步迭代器转换函数，在每一项线程中运行其参数。它虽然不简单，但很通用，在许多上下文中工作。在下个阶段，例如，我使用它递归获取一个树状图。
 
-#### Performance
+#### 性能
 
-Async generators overhead is much smaller than for state management libraries. But there are a lot of ways to get performance problems here too, e.g. over flooding with messages. But there are also a lot of almost effortless ways to improve performance.
+异步生成器开销比状态管理库小得多。但是也有许多方法会导致性能问题，例如，消息过度泛滥。但是也有许多毫不费力的方法来提高性能。
 
-In the former example, there are useless calls to  `ReactDom.render`. This is obviously a performance problem, and there is a simple solution. Solving it quickly by sending another message with type “FLUSH” after each dispatched event. React render runs only after it receives this message. The intermediate steps can yield whatever they need in between.
+在前一个例子中，对 `ReactDom.render` 进行了无效调用。这显然是个效率问题，并且有一个简单的解决方案。每一次调度事件之后，通过发送另一个类型为“FLUSH”的消息快速解决它。React渲染只会在它收到这条消息后运行。中间步骤可以产生他们之间需要的任何东西。
 
 Another awesome side of this approach is you may not worry about performance until it is a problem. Everything is structured in small autonomous stages. They are easy to refactor, or even without refactoring — many performance problems can be solved by adding another generic state in the pipe of steps, e.g., batching, prioritizing, saving intermediate data, etc.
 
 For example, in the demo constructed React elements are saved in local variables and React can re-use them. Changes are propagated from the root towards leaves, so optimizations like overriding`shouldComponentUpdate`  aren’t needed.
 
-#### Testing
+#### 测试
 
 Comparing to Redux reducer tests, generators fit a bit darker box testing strategy. The tests don’t have access to the current state. Though still, they are very simple to write. With Jest snapshots, the test can be a list of input messages with comparing output using snapshots.
 
@@ -102,7 +102,7 @@ test("counterControl", async () => {
 
 If you prefer unit-tests as documentation policy, there are many ways to make a self-documenting API for testing. Say, a function \`eventually\`/\`until\` as an addition to traditional BDD expressions.
 
-#### Persistent state
+#### 持久化状态
 
 There is another motivation for Redux described in  [You Might Not Need Redux][6]  article by Dan Abramov — namely providing access to the state and it can be serialized, cloned, diffed, patched, etc. This can be used for time travel, hot reloading, universal applications and more.
 
@@ -148,7 +148,7 @@ There is another generic next stage. It collects all “LAZY\_CONTROL” message
 
 Some generator can also reorder messages to give animation a bigger priority than server data updates. I’m not even sure there are needs for a server-side framework. A tiny generator could transform initial HTTP request into messages or threads depending on URL, auth session, etc.
 
-#### Functional Programming
+#### 函数式编程
 
 Commonly used state management tools have FP background. The code from the article doesn’t look like FP in JavaScript because of imperative  `for-of/switch/break`statements. It has a corresponding concept in FP too. It is so called Monads do-notation. For example one of their use in Haskell is to resolve problems like React components property drilling.
 

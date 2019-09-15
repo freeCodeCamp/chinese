@@ -27,7 +27,7 @@ Note: you can get a  [PDF, ePub, or Mobi][1]  version of this handbook for easie
 
 JavaScript is one of the most popular programming languages in the world. Created 20 years ago, it’s gone a very long way since its humble beginnings.
 
-Being the first, and the only scripting language that was supported natively by web browsers, it simply stuck.
+Being the first, and the only scripting language that was supported natively by web browsers, it simply stuck.（stuck不知道怎么翻译恰当）
 
 In the beginnings, it was not nearly as powerful as it is today, and it was mainly used for fancy animations ? and the marvel known at the time as Dynamic HTML (D[HTML)][2].
 
@@ -39,6 +39,22 @@ JavaScript is now widely also used outside the browser. The rise of Node.js in t
 
 JavaScript is now also the language powering databases and many more applications. It’s even possible to develop embedded applications, mobile apps, TV sets apps and much more. What started as a tiny language inside the browser is now the most popular language in the world.
 
+## 简介
+
+JavaScript是世界上最受欢迎的编程语言之一，在它诞生之后的这20年里，它走过了很长的一条道路。
+
+作为最早的也是唯一一个被浏览器原生支持的脚本语言，它当初有很多的问题。
+
+最初，它的功能远远不如如今这么强大，并且它最初的主要用途仅仅是用于制作有趣的动画以及用于当时被称为(DHTML)[2]的新奇事物。
+
+随着时代的发展，网络设备需要越来越多的功能。而为了满足网络这个在世界上应用广泛的生态系统的需求，的的JavaScript也有 _责任_ 去不断的成长。
+
+很多功能通过浏览器API被引入了网络设备，但是JavaScript语言本省也成长了许多。
+
+在当下，JavaScript的使用已经不仅仅局限于前端开发领域。近几年冉冉升起的Node.js为JavaSCript解锁了后端开发领域——一个曾经被Java, Ruby, Python, PHP以及一些更传统的服务器端语言主宰的领域。
+
+JavaScript如今还被用于驱动数据库系统以及许多其他的应用。我们甚至可以使用它来开发嵌入式应用，移动app，智能电视app和很多其他的应用。这个起源于浏览器脚本语言的的“小”语言如今已经是世界上最受欢迎的编程语言。
+
 #### A basic definition of JavaScript
 
 JavaScript is a programming language that is:
@@ -48,7 +64,7 @@ JavaScript is a programming language that is:
 -   **Dynamically typed**: A variable does not enforce a type. You can reassign any type to a variable, for example assigning an integer to a variable that holds a string.
 -   **Weakly typed**: As opposed to strong typing, weakly (or loosely) typed languages do not enforce the type of an object. This allows more flexibility but denies us type safety and type checking (something that TypeScript and Flow aim to improve)
 -   **Interpreted**: It’s commonly known as an interpreted language, which means that it does not need a compilation stage before a program can run, as opposed to C, Java or Go for example. In practice, browsers do compile JavaScript before executing it, for performance reasons, but this is transparent to you as there is no additional step involved.
--   **Multi-paradigm**: The language does not enforce any particular programming paradigm, unlike Java for example which forces the use of object-oriented programming, or C that forces imperative programming.  
+-   **Multi-paradigm**: The language does not enforce any particular programming paradigm, unlike Java for example which forces the use of object-oriented programming, or C that forces imperative programming.
     You can write JavaScript using an object-oriented paradigm, using prototypes and the new (as of ES6) classes syntax. You can write JavaScript in functional programming style, with its first-class functions, or even in an imperative style (C-like).
 
 In case you’re wondering,  **JavaScript has nothing to do with Java**, it’s an unfortunate name choice but we have to live with it.
@@ -903,7 +919,7 @@ This new feature extends this concept to all Unicode characters introducing  `\p
 Any unicode character has a set of properties. For example,  `Script`  determines the language family,  `ASCII`  is a boolean that's true for ASCII characters, and so on. You can put this property in the graph parentheses, and the regex will check for that to be true:
 
 ```
-/^\p{ASCII}+$/u.test('abc')   //✅/^\p{ASCII}+$/u.test('ABC@')  //✅/^\p{ASCII}+$/u.test('ABC?') //❌ 
+/^\p{ASCII}+$/u.test('abc')   //✅/^\p{ASCII}+$/u.test('ABC@')  //✅/^\p{ASCII}+$/u.test('ABC?') //❌
 ```
 
 `ASCII_Hex_Digit`  is another boolean property, that checks if the string only contains valid hexadecimal digits:
@@ -919,7 +935,7 @@ There are many other boolean properties, which you just check by adding their na
 ```
 
 ```
-/^\p{Emoji}+$/u.test('H')   //❌/^\p{Emoji}+$/u.test('??') //✅  
+/^\p{Emoji}+$/u.test('H')   //❌/^\p{Emoji}+$/u.test('??') //✅
 ```
 
 `In addition to those binary properties, you can check any of the unicode character properties to match a specific value. In this example, I check if the string is written in the Greek or Latin alphabet:`
@@ -4176,7 +4192,7 @@ delete Object.prototype(  //false
 `There is some weirder syntax that you can use to create an IIFE, but it’s very rarely used in the real world, and it relies on using  _any_  unary operator:`
 
 ```
-;-(function() {  /* */})() 
+;-(function() {  /* */})()
 ```
 
 ```

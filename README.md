@@ -32,3 +32,4 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章](https://www.free
 
 ### 发表
 我们会和译者一同确认 review 意见，形成终稿，即校对完毕。翻译及校对完毕的文章将以译者的署名发布在 freeCodeCamp 官网（我们会邀请译者在官网注册作者账号）和微信公众号，在公众号发布时将在文章中注明校对者的姓名（或昵称）。此外，我们还会在其他相关社区的 freeCodeCamp 专栏发布译文，链接到官网。
+Added another line to Readme.md

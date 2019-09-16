@@ -83,40 +83,40 @@
 
 #### A. Jasonette
 
-Jasonette is an open source, markup-based approach to building cross-platform native apps.
+Jasonette是一种开源的，基于标记的用于构建跨平台原生应用的方法。
 
-It’s like a web browser, but instead of interpreting HTML markup into web pages, it interprets JSON markup into native apps on iOS and Android.
+它就像一个Web浏览器，但它不是将HTML标记语言解释为网页，而是将JSON标记语言解释为IOS或Android端的原生应用。
 
-Just like how all web browsers have exactly the same code but can deliver you all kinds of different web apps by interpreting various HTML markup on demand, all Jasonette apps have exactly the same binary, and it interprets various JSON markup on demand to create your app. The developers never need to touch the code. Instead, you build apps by writing a markup that translates to native app in real-time.
+就像所有的web浏览器都有完全相同的代码，却可以通过按需解释各种HTML标记来为你提供各种不同的Web应用程序一样，所有Jasonette应用程序都有完全相同的二进制文件，它按需解释各种JSON标记来创建你的应用。开发人员不需要接触代码。相反，你可以通过编写标记来构建应用程序，该标记可以实时转换为原生应用程序。
 
-You can learn more about Jasonette  [here][5].
+你可以在 [这里][5]进一步学习Jasonette。 
 
-While Jasonette at its core is all about building native apps, this particular article is about integrating HTML into the core native engine, so let’s talk about that.
+虽然Jasonette的核心是构建原生应用程序，但本文旨在介绍如何将HTML集成到核心原生引擎中，接下来就让我们进一步探讨。
 
-#### B. Jasonette Web Container
+#### B. Jasonette Web 容器
 
-Native apps are great but sometimes we need to make use of web features.
+原生应用很棒，但有时我们需要使用Web功能。
 
-But integrating web views into a native app is a tricky business. A seamless integration requires:
+将Web视图集成到原生应用中是一项复杂的工作。无缝集成需要：
 
-1.  **Web view should be integrated as a part of native layout:**  The web view should blend into the app as a part of the native layout and is treated just like any other native UI components. Otherwise it will feel clunky, and it will feel exactly like what it is — a website.
-2.  **Parent app can control child web container:** The parent app should be able to freely control the child web view.
-3.  **Child web container can trigger native events on the parent app:** The child app should be able to trigger the parent app’s events to run native APIs.
+1.  **Web视图应作为原生应用布局的一部分进行集成：**  Web视图应作为原生布局的一部分融入应用，并且应当像其他任何原生UI组件一样被操作。否则会让用户感到笨拙，就像在访问一个真的网站一样。
+2.  **父应用可以控制子Web容器：** 父应用应当可以轻松地控制子Web视图。
+3.  **子Web容器可以触发父应用的原生事件：** 子应用应当可以触发父应用事件从而运行原生API。
 
-These are a lot of work, so I first worked on only the first piece of the puzzle —  **simply embedding a web container into native layout**  — and released it as version 1:
+这有许多工作要做，所以我首先介绍第一部分： ——  **简单地将Web容器嵌入原生布局中**  ——并将其作为版本1发布： 
 
-[**JSON Web Container**][6]  
-[_HTML inside JSON Turns into Native App Components_jasonette.com][7]
+[**JSON Web 容器**][6]  
+[_JSON中的HTML变成了原生应用中的组件_jasonette.com][7]
 
-This was already pretty useful, but it still had the limitation of being non-interactive**.**
+这已经非常实用了，但由于其不可交互性，仍然存在一些限制。
 
-The parent app couldn’t control the child web container, and the child couldn’t notify the parent of any event**, keeping the web container completely isolated from the outside world.**
+父应用无法控制子Web容器，子应用无法将任何事件通知父应用，这使得Web容器完全独立于外部世界。
 
-#### C. Jasonette Web Container 2.0: Make it Interactive
+#### C. Jasonette Web 容器 2.0：使其可交互
 
-After releasing version 1, I experimented with the second piece of the puzzle —  **adding interactivity to the web container.**
+在发布了版本1之后，我进行了第二部分的实验。——  **使Web容器变得可交互**
 
-The next section explains the solutions that were added to make the previously-static web containers interactive, making them significantly more powerful.
+下文将解释添加的解决方案，这些解决方案使得过去的静态Web容器变得可交互，并显著增强了它们的功能。
 
 ### Implementation: Interactive Web Container
 

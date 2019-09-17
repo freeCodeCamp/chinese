@@ -17,7 +17,6 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章](https://www.free
 - 快速提高你的 Git 操作熟练度
 - 收获 GitHub 认可的 contributions
 - 受邀成为 freeCodeCamp 社区作者，文章发表在[官网](https://chinese.freecodecamp.org/news/)
-- 有机会入选 freeCodeCamp 社区年度 top contributor
 - 有机会受邀参与 freeCodeCamp 城市社区的线下活动
 - 在社区中结识优秀的小伙伴，拥抱更多技术成长与职业发展的可能性
 - 有的译者（比如大学生）可能需要贡献者证书，请告诉我们为你准备^_^

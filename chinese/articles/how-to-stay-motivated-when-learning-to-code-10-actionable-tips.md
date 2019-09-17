@@ -97,66 +97,49 @@ But doing that every single day means the difference between having great teeth,
 
 This is why consistency is more important than trying to go as fast as you possibly can.
 
-#### #4: Build up your willpower muscle.
+#### #4: 锻炼控制意志力的肌肉
 
-Have you ever heard of the idea of willpower being an actual muscle?
+你之前听说过吗？ 有一块肌肉是专门控制意志力的。
 
-I recently learned about how to develop it, through household chores (yes, exciting, I know).
+我最近在做家务的过程中认识到了这一点。
 
-At home, my husband and I divided up the chores. In the kitchen, my husband would wash all the dishes from that day in the sink, and put them in the dishwasher rack to dry overnight.
+在家里，我和我丈夫合作做家务，他在晚上负责洗完水槽里的所有餐具，然后把它们放在洗碗机中晾干一夜。
 
-The next morning, first thing, I would put the dishes away while my morning tea was steeping. It only took a few minutes to do, but I haaaated doing it. It’s kind of a boring chore.
+我会在第二天早晨泡茶的间隙去把餐具从洗碗机中拿出来放好，这是一件很简单的事情，但是我很抵触去做这件事情，因为它太无聊了。
 
-But I just kept forcing myself to do it, because I knew that it was my responsibility.
+但我还是强迫自己去做，因为那是属于我的责任。
 
-And the interesting thing was, over time, it got easier to just start putting the dishes away!
+有趣的现象发生了，随着时间的推移，虽然这件事情仍然无聊，但我发现我做这件事情相较以前会更轻松了，因为我把它变成了一个习惯。
 
-Now, I didn’t enjoy it any more than I did at the beginning. Yeah, still boring.
+**这怎么能联系到有肌肉控制意志力呢？**
 
-But my disliked chore had become a habit.
+在锻炼肌肉的过程中，刚开始的时候是最困难的，但随着时间的推移，锻炼会强化你的肌肉，同样的锻炼就会更加轻松(这就是举重运动员为什么会不断增加举重的负荷的原因，因为他们需要持续不断的锻炼他们的肌肉) 
+当我第一次从洗碗机中拿出餐具，我这方便的意志力很薄弱，要克服很大的阻力才能强迫自己完成，慢慢做的次数多了，这方面的意志力就变强了，也形成了一个习惯。
+过一段时间，这种习惯在我的大脑中根深蒂固，然后就更容易完成那件事，而不是把它推迟到很晚
 
-**How does this relate to willpower being a muscle?**
+**要成功成为一名程序员，你必须培养关于学习编码的意志力。**
 
-Well, if you start working out a muscle that’s really out of shape, it’s obviously really difficult at the beginning to do a workout.
+即使编码真的很有趣，但有时候也需要让你坐下来编码，同时也意味着，你不能做其他更有趣的事情。你重复的越多，你做起来就更简单。
 
-But over time, working out will actually increase the size of your muscle, and you’ll get stronger. The workout will become easier to do. (This is why weightlifters continue increasing weights, to keep challenging their muscles.)
-
-When I first started with my dishes chore, my willpower to put them away was very weak. At that point I would much rather not put them away.
-
-But over time, as I kept just forcing myself to do it, I was working out that muscle for dishes and creating a new habit in my daily routine.
-
-After a while, the habit became so ingrained in my brain that it was actually easier to go ahead and complete that chore, than to put it off until later!
-
-**To successfully become a coder, you have to develop your willpower muscle to spend time learning to code.**
-
-Even though coding can be really fun, it sometimes sucks to have to make yourself sit down and code, instead of doing other, more fun things in your life.
-
-But just know that it will get easier over time, the longer you discipline yourself to do the work.
-
-If you have a realistic, concrete goal, aim for consistency in your time spent learning, and understand that your will to code will get stronger over time, you’ll be much less likely to give up midway through.
+如果你有一个合理的具体的目标，保持你自己的学习节奏，同时理解，重复越多，就越简单的道理，那么在中途放弃的可能性就大大降低了。
 
 #### #5: Avoid burnout and get rest.
 
-Overworking yourself is a pretty common temptation if you’re trying to achieve something in your nights and weekends.
+想在业余时间完成一些目标的话，过分透支你的身体和精力是很常见的现象。
 
-I’ve also noticed on Instagram, which has a vibrant community of programmers, there are many people who post about how late they stayed up, or how early they woke up to do coding.
+我在有很多活跃的程序员的 Instagram 里发现很多人都是晚上熬夜很晚敲代码,或者早上起的很早来敲代码。
 
-While this plan may work in the short term, it’s really not good for you in the long term.
+这样的行为只可能是短暂的，真的不推荐长期这样。
 
-In my own experience, I’ve been working nearly full-time hours doing freelance web development, and then working on this website in my spare time.
+以我的经验来说，我白天的上班时间一直在进行远程的 web 开发工作,空闲时间就花在 Freecode Camp 社区，经常熬夜到凌晨1点写教程或者文章。
 
-There was a point I hit where I would work a full day, then stay up until midnight or 1am working on writing a tutorial or article.
+有一个周末，我一如既往的把所有时间都投入来写教程或者文章，在周天的晚上，想到明天又要工作一整天，我感到特别的疲惫和难受。
 
-I remember one weekend where I’d spent all day and night working on the website, and by Sunday evening, I felt simply exhausted.
+我意识到我已经耗尽了自己的所有精力和热情，我真的需要休息来给自己充一充电。
 
-Knowing that I would have a full day of work the next day was discouraging.
+第二周我抽了一天的时间来放松自己，不干工作，只是躺在椅子上闲适的看了一天的书。这样度过一天以后，我感受到了前所未有的放松。
 
-I realized then that I had probably burnt myself out. And I really needed to make time to rest and rejuvenate myself.
-
-So one day that week where I didn’t have any projects due, I just lay on the couch and read a book for most of the day. It was glorious. At the end of the day I felt so wonderfully rested!
-
-In your pursuit of learning to code, make sure that you carve out time to not just work, but to rest, if possible. It’ll help you in your progress in the long term.
-
+在学习代码的过程中，确保不要把所有时间都用来学习，工作，也要在条件允许的范围里 适当的休息。从长远来看，它将帮助你取得进步。
 #### #6: Don’t let impostor syndrome get you down.
 
 Ah, the dreaded impostor syndrome. It’s something that plagues all beginners. Even more advanced programmers sometimes find it hard to shake off that feeling of not being good enough.
@@ -185,31 +168,22 @@ Now, that doesn’t mean that you will never be good at programming - it will ju
 
 If you can be patient with yourself and your progress, and focus on one or a few skills to build up, you will be more equipped to battle impostor syndrome.
 
-#### #7: Find a community of peers.
+#### #7: 找到志同道合的社区.
 
-Another common struggle of people learning web development is that you feel alone.
+自学编程的中很常见的另一个问题是孤独。在学校里上课的时候，有一起上课的同学，有可以解答疑问的老师。而在网上自学，基本上没有同学和老师，
 
-When you’re learning in a physical classroom, you have fellow students who are doing the same thing as you. And you have a teacher that you can talk with and ask questions about the material.
+找寻同学和老师或者是很困难的，但下面有一些网上的资源你可以利用起来，如果你以前从来没有加入过哪个社区，我极力推荐你看看下面的资源。
 
-If you’re learning coding online or with books, you often don’t have that luxury.
+解决孤独的一个好办法就是加入一个社区
 
-Finding peers and mentors can be very difficult, but there are some resources online that you can take advantage of. If you haven’t found any coding communities yet, I highly recommend that you take some time to look into them.
+找到其他有相似经历的人，他们可能正在努力解决与你相同的问题，可以极大地鼓励和激励你
+这是一些能够找到同路人和老师的方法:
+- **Instagram:** ,这个平台有很多各种水平的程序员,尽管这个平台不是一个适合提问的平台,但在这里你可以看到那些程序员日常生活在干什么,在想什么。我个人很喜欢这里，因为这是一个全世界范围内的程序员的社区。可以尝试一下 Instagram 上很流行的挑战 [#100DaysOfCode][3]
+- [**freeCodeCamp**][4]**:** 这不仅仅是一个全方面编程的训练营，还有着广泛有价值的文章和得到 Facebook 团队的指导
+- [**Dev.to**][5]**:** 一个你可以提问，可以讨论，可以找到很多文章的很活跃的线上程序员论坛。
 
-Being part of a community can really help with that feeling that you’re alone.
+不管你加入哪个社区，能够得到别人的帮助都是很开心的，但希望你也尝试着去帮助别人，而不仅仅只是获取他人的帮助。社区的建设需要每个人奉献自己的时间和精力去参与，当你帮助他人时，你也是在为社区做贡献。
 
-Reading about other people with similar experiences, who may be struggling with the same issues that you are, can be hugely encouraging and motivating.
-
-Here are a few suggestions for places where you can find peers and/or mentors about coding:
-
--   **Instagram:**  There are a lot of programmers on Instagram, of every skill level. While it’s not exactly the place to ask for help on coding questions, it’s an amazing place where you can see what other coders are working on or struggling with. I’ve personally really liked it because I feel like I’m part of a greater community of coders worldwide. Check out or take part in the  [#100DaysOfCode][3]challenge that is really popular there.
--   [**freeCodeCamp**][4]**:**  It’s not only an online full-stack bootcamp, but also has a very helpful message board and Facebook groups that can help out their students.
--   [**Dev.to**][5]**:**  A vibrant online message forum for programmers where you can find discussions, articles, and get support for your questions.
-
-One word of advice! If you join any of these communities, try to help others, and don’t just ask others for help.
-
-While it’s great to get support and assistance, these communities only work if there are people who are willing to donate their time and energy helping answer questions.
-
-When you help others, you’re doing your part to help these places continue to work and help people!
 
 #### #8: Get involved with local meetups.
 

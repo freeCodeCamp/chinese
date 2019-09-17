@@ -1,23 +1,23 @@
 > - 原文地址：[A crash course in TypeScript](https://www.freecodecamp.org/news/a-crash-course-in-typescript-e6bf9c10946/)
 > - 原文作者：Gabriel Tanner
-> - 译者：[Tommy-White](https://github.com/Tommy-White)
-> - 校对者：
+> - 译者：[C 君](https://github.com/lihroff)
+> - 校对者：[ZhichengChen](https://github.com/ZhichengChen)
 
 # TypeScript 速成课
 
-Typescript 是 javascript 的类型超集，旨在简化大型 JavaScript 应用程序的开发。Typescript 加入了常见的概率例如 类（classes），范型（generics），接口（interfaces）和静态类型（static types）并允许开发人员使用静态检查和代码重构等工具。
+Typescript 是 javascript 的类型超集，旨在简化大型 JavaScript 应用程序的开发。Typescript 加入了常见的概念例如 类（classes），泛型（generics），接口（interfaces）和静态类型（static types）并允许开发人员使用静态检查和代码重构等工具。
 
 ## 为什么在意 Typescript：
 
-现在问题仍然是为什么你应该  优选使用 Typescript。这有一些关于为什么 javascript 开发者应该考虑学习 Typescript 的原因。
+现在问题仍然是为什么你应该优选使用 Typescript。这有一些关于为什么 javascript 开发者应该考虑学习 Typescript 的原因。
 
 ### 静态类型：
 
-Javascript 是动态类型的，这意味着它不知道变量的类型，直到它在运行时实例化它，这可能导致项目中的问题和错误。Typescript 加入了对 Javascript 静态类型支持如果你正确的使用它处理  由变量类型的错误设定  引起的错误。您仍然可以完全控制输入代码的严格程度，或者甚至根本不使用类型。
+Javascript 是动态类型的，这意味着直到在运行时实例化时，它不知道变量的类型，这可能导致项目中的问题和错误。Typescript 加入了对 Javascript 静态类型支持如果你正确的使用它处理由变量类型的错误设定引起的错误。您仍然可以完全控制输入代码的严格程度，或者甚至根本不使用类型。
 
 ### 更好的 IDE 支持：
 
-Typescript 相比 Javascript 一个更大的优势是更好的 IED 支持包括了来自 Typescript 编译器  智能，实时的提示，调试以及更多功能。这里还有一大堆扩展进一步  提升你的 Typescript 开发体验。
+Typescript 相比 Javascript 一个更大的优势是更好的 IED 支持包括了来自 Typescript 编译器智能，实时的提示，调试以及更多功能。这里还有一大堆扩展进一步  提升你的 Typescript 开发体验。
 
 ### 应用新的 ECMAScript 特性：
 
@@ -25,7 +25,7 @@ Typescript 使您可以使用最新的 ECMAScript 功能，并将它们转换到
 
 ## 什么时候你该使用它：
 
-到目前为止，我们应该知道为什么 Typescript 是有用的以及如何改善我们的开发经验。但它并不是解决所有问题的方法，当然也不能阻止你自己编写可怕的代码。那么让我们来看看你应该在哪里使用 Typescript。
+到目前为止，我们应该知道为什么 Typescript 是有用的以及如何改善我们的开发体验。但它并不是解决所有问题的方法，当然也不能阻止你自己编写可怕的代码。那么让我们来看看你应该在哪里使用 Typescript。
 
 ### 当你拥有一个很大的代码库时：
 
@@ -51,7 +51,7 @@ npm install -g typescript
 
 ### 数值（Number）：
 
-Typescript 所有的值类型都是浮点数。所有这些都得到包括二进制和十六进制值的数字类型。
+Typescript 所有的值类型都是浮点数。所有的数字包括二进制和十六进制都是数值类型。
 
 ```typescript
 let num: number = 0.222;
@@ -67,7 +67,7 @@ let bin: number = 0b0010;
 let str: string = 'Hello World!';
 ```
 
-你可以使用多行字符串并嵌入表达式通过使用反引号``
+你还可以用反引号``来应用多行字符串并嵌入表达式。
 
 ```typescript
 let multiStr: string = `A simplemultiline string!`
@@ -155,13 +155,13 @@ if (human instanceof Human) {
 
 ## 类型断言：
 
-有时我们还需要将变量转换为特定的数据类型。这经常发生在你已经指定了一个范型类型像 any 并且你想使用它具体的类型。
+有时我们还需要将变量转换为特定的数据类型。这经常发生在你已经指定了一个泛型类型像 any 并且你想使用它具体的类型的方法。
 
 有很多选择可以解决这个问题，但在这里我只分享其中两个。
 
 ### As 关键字
 
-我们可以转换我们的变量通过使用 `as` 关键字在变量名之后并跟随具体数据类型。
+通过在变量名之后使用 `as` 关键字跟随具体的数据类型来转换变量的类型。
 
 ```typescript
 let str: any = 'I am a String';
@@ -185,7 +185,7 @@ let strLength = (<string>str).length;
 
 Typescript 中的数组是相同对象的集合，可以用两种不同的方式创建。
 
-### Creating Arrays
+### 创建数组
 
 #### 使用 []：
 
@@ -197,9 +197,9 @@ let strings: string[] = ['Hello', 'World', '!'];
 
 在这个例子中，我们创建一个字符串数组，它包含三个不同的字符串值。
 
-#### 使用范型数组:
+#### 使用泛型数组:
 
-我们还可用指定 Array<Type> 定义范型数组
+我们还可用指定 Array<Type> 定义泛型数组
 
 ```typescript
 let numbers: Array<number> = [1, 2, 3, 4, 5];
@@ -229,7 +229,7 @@ let numbersArray: number[][] = [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]];
 
 ## 元组（Tupels）
 
-元组基本类似数组但有一点不同。我们可以定义每个位子上储存数据的类型。这意味着我们可以通过在方括号内枚举它们来强制执行索引类型。
+元组基本类似数组但有一点不同。我们可以定义每个位子上储存数据的类型。这意味着我们可以通过方括号内的枚举来限制固定索引位置的类型。
 
 ```typescript
 let exampleTuple: [number, string] = [20, 'https://google.com'];
@@ -289,7 +289,7 @@ enum State {
 
 Typescript 中的对象是包含一组键值对的实例。这些值可以是变量，数组甚至函数。它也被视为表示非基本类型的数据类型。
 
-我们可以使用打括号创建一个对象：
+我们可以使用大括号创建一个对象：
 
 ```typescript
 const human = { firstName: 'Frank', age: 32, height: 185 };
@@ -312,7 +312,7 @@ const human = {
 
 ## 自定义类型
 
-Typescript 并允许我们自定义类型，以便于我们后续重用。要创建自定义类型，我们只需要使用`type`关键字并定义我们的类型。
+Typescript 还允许我们自定义类型，以便于我们后续重用。要创建自定义类型，我们只需要使用`type`关键字并定义我们的类型。
 
 ```typescript
 type Human = {
@@ -322,7 +322,7 @@ type Human = {
 };
 ```
 
-在此示例中，我们定义了一个名为 Human 和三个属性的自定义类型。现在让我们看看如何创建这种类型的对象。
+在此示例中，我们定义了一个名为 Human 包含三个属性的自定义类型。现在让我们看看如何创建这种类型的对象。
 
 ```typescript
 const human: Human = {
@@ -359,7 +359,7 @@ add(2, '5')
 
 ## 可选属性：
 
-Typescript 允许我们为方法(注：接口等同样可以定义可选属性)定义可选属性。我们通过 `？` 操作符定义。
+Typescript 允许我们为方法(注：接口等同样可以定义可选属性)定义可选属性。我们通过 `?` 操作符定义。
 
 ```typescript
 function printName(firstName: string, lastName?: string) {
@@ -387,7 +387,7 @@ function printName(firstName: string, lastName: string = 'Tanner') {
 }
 ```
 
-在此例我中我们 lastName 赋予了默认值这意味着我们不必每次调用方法是提供它。
+在此例我中我们 lastName 赋予了默认值这意味着我们不必每次调用方法时提供它。
 
 ## 接口（Interfaces）：
 
@@ -414,7 +414,7 @@ const person2: Person = {
 
 ## 可选属性
 
-在 Typescript 中，并不需要所有接口属性。也可以使用`?` 运算符在属性吗后将其设置为可选。
+在 Typescript 中，有时并不是所有接口属性都是必需的。可以使用 `?` 运算符在属性后面将其设置为可选。
 
 ```typescript
 interface Person {
@@ -432,7 +432,7 @@ const person2: Person = {
 };
 ```
 
-在这里，我们创建一个具有一个普通和一个可选属性的接口，该属性是使用?运算符。这就是我们两个人初始化都有效的原因。
+在这里，我们创建一个具有一个普通和一个可选属性的接口，该属性是使用 `?` 运算符。这就是我们两个人初始化都有效的原因。
 
 ## 只读属性
 
@@ -459,7 +459,8 @@ person.id = 200; // 不可为id赋值因为它是只读的
 
 Barrels 允许我们在一个更方便的模块中汇总多个导出模块。
 
-我们仅需要创建一个新文件，这将到处我们项目中的多个模块。
+我们仅需要创建一个新文件，它将导出我们项目中的多个模块
+(译者注：根据 ECMAScript 定义一个文件定义一个模块，此处可能表示[模块聚合](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#Aggregating_modules)(类似库等的入口文件))。
 
 ```typescript
 export * from './person';
@@ -467,13 +468,13 @@ export * from './animal';
 export * from './human';
 ```
 
-之后我们可以引入这些模块通过这个便利的单一导入语句。
+之后我们可以通过这个便利的单一导入语句引入这些模块。
 
 ```typescript
 import { Person, Animal, Human } from 'index';
 ```
 
-## 范型（Generics）：
+## 泛型（Generics）：
 
 泛型允许我们创建兼容广泛类型而不是单一类型的组件。这使得我们的组件“ 开放”和复用。
 
@@ -487,8 +488,7 @@ function dummyFun(arg: any): any {
 }
 ```
 
-然而 any 是范型，某种程度它  能接受所有类型参数但有一个很大的区别。我们丢失了我们传入的参数是什么类型以及返回值是什么类型。
-(译者注：应为定义为 any 类型表示能接受所有类型，在参数传入时为特定类型但静态类型的定义还是 any，所以返回值类型依然为 any)
+然而 any 是通用的，某种程度它能接受所有类型参数但有一个很大的区别。我们丢失了我们传入的参数是什么类型以及返回值是什么类型。
 
 所以让我们来看看，我们如何接受所有类型并知道它返回值的类型。
 
@@ -500,7 +500,7 @@ function dummyFun<T>(arg: T): T {
 
 这里我们使用泛型参数 T，因此我们可以捕获变量类型并在以后使用它。我们还使用它作为返回参数类型，它允许我们在检查代码时看到相应的类型。
 
-更多详细接受你可以查看[Charly Poly]()关于[Generics and overloads](https://medium.com/@wittydeveloper/typescript-generics-and-overloads-999679d121cf)的文章
+更多详细介绍你可以查看[Charly Poly]()关于[Generics and overloads](https://medium.com/@wittydeveloper/typescript-generics-and-overloads-999679d121cf)的文章
 
 ## 访问修饰符（Access Modifiers）：
 
@@ -516,7 +516,7 @@ function dummyFun<T>(arg: T): T {
 
 ### 受保护的：
 
- 保护成员只能在其定义的类和每一个定义的  超/子类中能访问。
+保护成员只能在其定义的类及其子类中访问。
 
 ## TSLINT：
 
@@ -556,7 +556,13 @@ TSLINT 允许使用配置我们自己的规则并自定义代码的外观。默�
 我们可以通过将它们放在 rules 对象中来添加其他规则。
 
 ```json
-"rules": { "no-unnecessary-type-assertion": true, "array-type": [true, "array"], "no-double-space": true, "no-var-keyword": true, "semicolon": [true, "always", "ignore-bound-class-methods"]},
+"rules": {
+ "no-unnecessary-type-assertion": true,
+ "array-type": [true, "array"],
+ "no-double-space": true,
+ "no-var-keyword": true,
+ "semicolon": [true, "always", "ignore-bound-class-methods"]
+},
 ```
 
 有关所有可用规则的 ​​ 概述，您可以查看[官方文档](https://palantir.github.io/tslint/rules/)。

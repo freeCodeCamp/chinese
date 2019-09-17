@@ -360,7 +360,7 @@ Bootcamps have a short-term incentive to accept you so they can get your tuition
 
 This said, not all bootcamps care about their employment statistics. Some may focus on short term cash, due to financial desperation. (A lot of high-profile bootcamps have shut down in recent years.)
 
-这也即是说，并非所有训练营在乎就业统计数字。一些由于经济上的萧条可能只会专注于获得短期利润。（最近几年很多高调的训练营都倒闭了。）
+这也即是说，并非所有训练营在乎就业统计数字。一些训练营由于经济上的萧条可能只会专注于获得短期利润。（最近几年很多高调的训练营都倒闭了。）
 
 In some cases, bootcamps may kick out students half way through their program.
 

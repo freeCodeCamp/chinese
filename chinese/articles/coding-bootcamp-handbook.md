@@ -296,43 +296,79 @@ As I mentioned, most bootcamps don't have the resources to get accredited. Or th
 
 The Council on Integrity in Results Reporting (CIRR) is a joint effort by bootcamps to publicly share the employment statistics of their graduates in a way everyone can understand.
 
+The Council on Integrity in Results Reporting (CIRR) 是训练营共同努力的结果。它以一种每个人都可以理解的方式公开分享了毕业生的统计数据。
+
 
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Launch_Academy_Boston__H1_2018__Audited.png)
 
 This is a standardized CIRR outcomes report for a bootcamp.
 
+这是一个训练营的标准CIRR结果报告
+
 Many prominent bootcamps are a part of this initiative. But some prominent bootcamps aren't participating or have stopped sharing their data.
+
+很多优秀的训练营都积极的参加了这一共享行为。但是有一些优秀的训练营没有参加或者是不再共享他们的数据。
 
 A bootcamp's membership in the CIRR isn't the same thing as getting accredited, but it's a good start.
 
+成为CIRR成员的训练营和被认证的训练营不是一回事，但是这是一个好的开始。
+
 # What kind of salaries do bootcamp graduates get?
+
+# 训练营毕业生能得到什么样的薪水？
 
 Based on public data, bootcamp graduates earn the same starting salary as other entry-level developers. This includes computer science majors and other university graduates who learned to code on their own.
 
+根据公开共享的数据，训练营毕业生的起始薪水和入门级的开发者人员是一样的。这些入门级的开发者包括计算机科学专业和其他自学编程的大学毕业生。
+
 The biggest factor in how much money you get paid as an entry-level developer is the cost of living of the city. A junior developer in San Francisco can make twice as much as a junior developer in the middle of America.
+
+影响入门级开发者薪水的最大因素是城市的生活成本。旧金山的初级开发者的薪水可以是美国中部地区初级开发者的两倍。
 
 If a bootcamp says their graduates get higher starting salaries than the graduates of other bootcamps, that means most of their graduates get jobs in more expensive cities like San Francisco.
 
+如果一个训练营说他们的毕业生的起始薪水比其他训练营毕业生的高，那就意味着他们的大多数毕业生工作在生活成本更高的城市，比如旧金山。
+
 # How long does it take bootcamp graduates to get a job?
+
+# 训练营毕业生要花多久才能找到工作？
 
 This depends on the bootcamp. Some bootcamps have extensive career coaching. Others have close ties to local industry and can help you line up job interviews. Both of these can significantly shorten the number of months you spend applying for jobs afterward.
 
+这取决于训练营本身。一些训练营有具体的职业指导。其他的和本地工厂有密切的练习，可以帮助你安排面试。这些都可以在很大程度上帮助你缩短申请工作的时间。
+
 The post-bootcamp job search takes about 6 months on average.
+
+后集营工作搜索平均需要6个月。
 
 # What is the completion rate for bootcamps?
 
+# 训练营的完成率是多少？
+
 A majority of people who start bootcamps go on to finish them.
+
+大多数参加训练营的人都会坚持完成项目。
 
 Most good bootcamps are selective. If they don't think you'll be able to get a developer job after the program, they won't accept you.
 
+大多数优秀的训练营很挑剔。如果他们认为项目结束之后你不能得到一份开发者工作，他们是不会接受你的。
+
 Bootcamps have a short-term incentive to accept you so they can get your tuition dollars. But they also have a long-term incentive not to accept you if they think you could hurt their employment statistics.
+
+
 
 This said, not all bootcamps care about their employment statistics. Some may focus on short term cash, due to financial desperation. (A lot of high-profile bootcamps have shut down in recent years.)
 
+这也即是说，并非所有训练营在乎就业统计数字。一些由于经济上的萧条可能只会专注于获得短期利润。（最近几年很多高调的训练营都倒闭了。）
+
 In some cases, bootcamps may kick out students half way through their program.
 
+在某些情况下，训练营可能会在项目实施中间将学生踢出去。
+
 If the bootcamp is a "cash up front" bootcamp, they've already reaped the short-term benefit of enrolling you. Even if you're under-performing, it may make sense to try to salvage you rather than give you a refund.
+
+
 
 These bootcamps do still want the long-term benefit of you boosting their employment statistics. But this benefit is more abstract than the cold hard cash you've handed them.
 

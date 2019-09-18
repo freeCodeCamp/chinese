@@ -1,6 +1,6 @@
 > * 原文地址：[Learn Serverless by Building your own Slack App](https://www.freecodecamp.org/news/make-a-serverless-slack-app/)
 > * 原文作者：Lekha Surasani
-> * 译者：
+> * 译者：[Zhicheng](https://github.com/ZhichengChen)
 > * 校对者：
 
 ![Learn Serverless by Building your own Slack App](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/serverless-1.jpg)

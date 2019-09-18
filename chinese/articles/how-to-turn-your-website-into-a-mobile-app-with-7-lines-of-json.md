@@ -118,100 +118,99 @@ Jasonette是一种开源的，基于标记的用于构建跨平台原生应用�
 
 下文将解释添加的解决方案，这些解决方案使得过去的静态Web容器变得可交互，并显著增强了它们的功能。
 
-### Implementation: Interactive Web Container
+### 实现：交互式Web容器
 
-#### **1\. Load by URL**
+#### **1\. 通过URL加载**
 
-#### Problem
+#### 问题
 
-Previously in version 1, to use web container as a background view component, you had to first  [set the  `$jason.body.background.type`  to  `"html"`  and then hard-code the HTML text under  `$jason.body.background.text`  attribute][8]  like this:
+先前在版本1中，想要将Web容器用作后台视图组件，你必须要首先 [将  `$jason.body.background.type`  设置为  `"html"`  然后在 `$jason.body.background.text`属性下硬编码HTML文本 ][8]，如下所示：
 
 ```
 {  "$jason": {    "head": {      ...    },    "body": {      "background": {        "type": "html",        "text": "<html><body><h1>Hello World</h1></body></html>"      }    }  }}
 ```
 
-Naturally people wanted to be able to instantiate the container using simply a web URL instead of having to hardcode the entire HTML text in a single line.
+当然，人们希望能使用一个简单的Web URL来实例化容器，而不是在一行中硬编码整个HTML文本。
 
-#### Solution
+#### 解决方法
 
-Web container 2.0 has added the  `url`  attribute. You can embed a local  `file://`  HTML like this (it loads from the local HTML file you ship with the app):
+Web容器2.0已经添加了  `url`  属性。 你可以像这样嵌入本地  `file://` HTML （它加载自应用程序附带的本地HTML文件）：
 
 ```
 {  "$jason": {    "head": {      ...    },    "body": {      "background": {        "type": "html",        "url": "file://index.html"      }    }  }}
 ```
 
-Or embed a remote  `http[s]://`  URL like this (it loads from a remote HTML):
+或像这样嵌入一个远程的  `http[s]://`  URL  （它加载自远程HTML文件）：
 
 ```
 {  "$jason": {    "head": {      ...    },    "body": {      "background": {        "type": "html",        "url": "https://news.ycombinator.com"      }    }  }}
 ```
 
-#### **2\. Parent App <=> Web Container Communi**cation
+#### **2\. 父应用 <=> Web容器双向通信**
 
-#### Problem
+#### 问题
 
-Previously, web containers were only for displaying content, and not interactive. This meant  **NONE of the following was possible:**
+此前，Web容器只用于显示内容，而非可交互的。这意味着  **以下任一项都不可能实现：**
 
-1.  **Jasonette => Web Contain**er: Call JavaScript functions inside the web container from Jasonette.
-2.  **Web Container => Jasonet**te: Call native API from web container code.
+1.  **Jasonette => Web 容器**: 从Jasonette调用Web容器内的JavaScript函数。
+2.  **Web 容器 => Jasonette**: 从Web容器代码调用原生API。
 
-All you could do was display the web container. This was similar to how you would embed an iframe in a web page, but the main web page had no access to what was inside the iframe.
+你所能做的就是显示Web容器的内容。这就像你将iframe框架嵌入了网页中，但主网页无法访问iframe框架中的内容。
 
-#### Solution
+#### 解决方法
 
-The whole point of Jasonette is to design a standard markup language to describe cross platform mobile apps. In this case, we needed a markup language that could comprehensively describe communications between the parent app and the child web container.
+Jasonette的重点是设计一种标准的标记语言来描述跨平台的移动应用程序。因此，我们需要它能够全面描述父应用与子Web容器间的通信。 
 
-To achieve this, I came up with a  `[JSON-RPC][9]`  based communication channel between the parent app and the child web container. Since everything on Jasonette is expressed in JSON objects, it made perfect sense to use the JSON-RPC standard format as the communication protocol.
+为了实现这一点，我在父应用和子Web容器之间设计了一个基于 `[JSON-RPC][9]` 的通信信道。由于Jasonette上的所有内容都是用JSON对象表示的，所以使用JSON-RPC标准格式作为通信协议是非常有意义的。
 
 ![](https://cdn-media-1.freecodecamp.org/images/dISqZspArHgei6hasHQ89nw7g1GrWSsyPG8s)
 
-To make a JavaScript function call into the web container, we declare an action called  `$agent.request`:
-
+为了对Web容器能进行JavaScript函数调用我们声明了一个名为 `$agent.request` 的操作：
 ```
 {  "type": "$agent.request",  "options": {    "id": "$webcontainer",    "method": "login",    "params": ["username", "password"]  }}
 ```
 
-`[$agent.request][10]`  is the native API that triggers a JSON-RPC request into the web container. To use it, we must pass an  `options`  object as its parameter.
+`[$agent.request][10]`  是触发JSON-RPC请求并发送到Web容器中的原生API。要使用它，我们必须传递一个 `options`  对象作为其参数。
 
-The  `options`  object is the actual  [JSON-RPC request][11]  that will be sent to the web container. Let’s look at what each attribute means:
+ `options` 对象是将被发送到Web容器的实际[JSON-RPC 请求][11] 。让我们看看各个属性的含义：
 
--   `id`: Web container is built on top of a lower level architecture called  [agent][12]. Normally you can have multiple agents for a single view, and each agent can have its unique ID. But  [Web container is a special type of agent which can only have the id of  `$webcontainer`][13], which is why we use that ID here.
--   `method`: The JavaScript function name to call
--   `params`: The array of parameters to pass to the JavaScript function.
+-   `id`: Web容器构建在一个名为 [agent][12]的底层架构之上。通常，一个视图可以有多个agent，每个agent都有其唯一的ID。但是 [Web 容器是一种特殊的agent，他只能使用 `$webcontainer`作为ID][13], 因此我们在这里使用这个ID。
+-   `method`: 要调用的JavaScript函数名
+-   `params`: 传递给JavaScript函数的参数数组。
 
-The full markup would look something like this:
+完整的标记如下所示：
 
 ```
 {  "$jason": {    "head": {      "actions": {        "$load": {          "type": "$agent.request",          "options": {            "id": "$webcontainer",            "method": "login",            "params": ["alice", "1234"]          }        }      }    },    "body": {      "header": {        "title": "Web Container 2.0"      },      "background": {        "type": "html",        "url": "file://index.html"      }    }  }}
 ```
 
-This markup is saying:
+此标记表示：
 
-When the view loads (`[$jason.head.actions.$load][14]`), make a JSON-RPC request into the web container agent (`[$agent.request][15]`) where the request is specified under  `options`.
+当视图加载 (`[$jason.head.actions.$load][14]`)时，向Web容器agent(`[$agent.request][15]`) 发送JSON-RPC请求，该请求在 `options` 下被指定。
 
-The web container is defined under  `[$jason.body.background][16]`, which in this case loads a local file called  `file://index.html`.
+Web容器在 `[$jason.body.background][16]`下被定义，在本例中将加载一个名 `file://index.html`的本地文件。
 
-It will look for a JavaScript function called  `login`  and pass the two arguments under  `params`  (  `"alice"`  and  `"1234"`)
+它将会查找一个名为 `login` 的JavaScript函数，并传递 `params`  下的两个参数（ `"alice"`  和  `"1234"`）
 
 ```
 login("alice", "1234")
 ```
 
-I’ve only explained how the parent app can trigger the child web container’s JavaScript function calls, but you can also do the opposite and  [let the web container trigger the parent app’s native API][17].
+我只解释了父应用如何触发子Web容器的JavaScript函数调用，你也可以反其道而行之，[让Web容器触发父应用的原生API][17]。
 
-To learn more, check out the  [agent documentation][18].
+详情请参阅 [agent 文档][18]。
 
-#### Example
+#### 范例 
 
-Let’s come back to the QR code example I briefly shared above:
+让我们回到前面简单分享的二维码示例：
 
 ![](https://cdn-media-1.freecodecamp.org/images/q5-enhI0kpKTs6F33sgyI0mS9sLqOXnHFeHI)
 
-1.  The  [footer input component is 100% native][19].
-2.  The QR code is generated by the web container  [as a web app][20].
-3.  When a user enters something and presses “Generate,” it calls  `$agent.request`action into the web container agent, calling the  [JavaScript function “qr”][21]
+1.  其中 [底部的输入组件是100%原生的][19]。
+2.  二维码是由 [作为Web应用][20]的Web容器产生的。
+3. 当用户输入某些内容，并按“Generate”时，它将调用Web容器agent的  `$agent.request` 操作，并进一步调用  [JavaScript 函数 “qr”][21]
 
-You can check out the example  [here][22].
+你可以在[这里][22]参阅示例。 
 
 #### **3\. Script Injection**
 

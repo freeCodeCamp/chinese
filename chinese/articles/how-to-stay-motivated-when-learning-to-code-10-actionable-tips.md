@@ -185,7 +185,7 @@ If you can be patient with yourself and your progress, and focus on one or a few
 不管你加入哪个社区，能够得到别人的帮助都是很开心的，但希望你也尝试着去帮助别人，而不仅仅只是获取他人的帮助。社区的建设需要每个人奉献自己的时间和精力去参与，当你帮助他人时，你也是在为社区做贡献。
 
 
-#### #8: Get involved with local meetups.
+#### #8: 参加线下活动.
 
 While you find coding communities online, don’t forget about networking in person!
 
@@ -197,19 +197,16 @@ In addition, many tech companies looking to hire web developers often attend or 
 
 All in all, it doesn’t hurt to get involved with communities, and it can only help you.
 
-#### #9: Don’t compare yourself to others.
+#### #9: 不要和别人做比较.
 
-As you start getting more involved in the coding community, please try to remember not to compare yourself to other coders.
+在编程社区中，记住不要和别人做比较。当然，我们不可能忽视别人正在做什么或者取得过的成就，但你真的没必要跟上其他人一样，
 
-Obviously it’s impossible to not see what other people are doing or accomplishing. But try (as much as possible) to not feel like you have to keep up with everyone else.
+看到其他人在旅程中拥有的动力并将一些能量和兴奋转移到自己的旅程中是没问题的，但当看到很厉害的人有着过人的履历，你可能会感觉沮丧或者嫉妒，这真的会打击自己的学习积极性。
 
-It’s not bad to see the drive that others have in their own journey, and to transfer some of that energy and excitement to your own. But if you start feeling down if you see someone talking about learning or doing things that you don’t have experience in, or feeling jealous if someone seems to be more ahead of you, you may end up just feeling discouraged.
+记住每个人都有不同的环境，不同的成长速度。有些人会比你有更多的时间，也可能学习速度比你更快。同样也会有一些人会比你时间更少，学习速度比你更慢。
+归根结底，别人的学习速度对你没有任何影响。
 
-Everyone has a different situation and progresses at different speeds. Some people will have more time than you, or may be faster at learning certain things than you are. Others will have less time or learn slower than you. No one is better than another person.
-
-Ultimately how fast or slow other people are (or seem to be) doesn’t have any direct effect on you.
-
-Although it may be difficult, don’t worry about someone else’s journey, just worry about your own ?
+所以，不要担心别人的旅程，只需要关心自己的旅程就好了，虽然这很难。
 
 #### #10: Stay curious and keep it fun!
 

@@ -1,6 +1,6 @@
 > * 原文地址：[How to Brand Yourself as a Freelance Developer in 2019 (and Beyond)](https://www.freecodecamp.org/news/how-to-brand-yourself-as-a-freelance-developer-in-2019-and-beyond-78a5d58ecd29/)
 > * 原文作者：[Kyle Prinsloo](https://www.freecodecamp.org/news/author/kyle/)
-> * 译者：
+> * 译者：MMMAY521
 > * 校对者：
 
 ![How to Brand Yourself as a Freelance Developer in 2019 (and Beyond)](https://cdn-media-1.freecodecamp.org/images/1*rXF0hBP3quwQ_o6TcndJvA.jpeg)

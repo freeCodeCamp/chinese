@@ -174,7 +174,7 @@ Jasonette的重点是设计一种标准的标记语言来描述跨平台的移�
 
  `options` 对象是将被发送到Web容器的实际[JSON-RPC 请求][11] 。让我们看看各个属性的含义：
 
--   `id`: Web容器构建在一个名为 [agent][12]的底层架构之上。通常，一个视图可以有多个agent，每个agent都有其唯一的ID。但是 [Web 容器是一种特殊的agent，他只能使用 `$webcontainer`作为ID][13], 因此我们在这里使用这个ID。
+-   `id`: Web容器构建在一个名为 [Agent][12]的底层架构之上。通常，一个视图可以有多个agent，每个Agent都有其唯一的ID。但是 [Web 容器是一种特殊的Agent，他只能使用 `$webcontainer`作为ID][13], 因此我们在这里使用这个ID。
 -   `method`: 要调用的JavaScript函数名
 -   `params`: 传递给JavaScript函数的参数数组。
 
@@ -186,7 +186,7 @@ Jasonette的重点是设计一种标准的标记语言来描述跨平台的移�
 
 此标记表示：
 
-当视图加载 (`[$jason.head.actions.$load][14]`)时，向Web容器agent(`[$agent.request][15]`) 发送JSON-RPC请求，该请求在 `options` 下被指定。
+当视图加载 (`[$jason.head.actions.$load][14]`)时，向Web容器Agent(`[$agent.request][15]`) 发送JSON-RPC请求，该请求在 `options` 下被指定。
 
 Web容器在 `[$jason.body.background][16]`下被定义，在本例中将加载一个名 `file://index.html`的本地文件。
 
@@ -198,7 +198,7 @@ login("alice", "1234")
 
 我只解释了父应用如何触发子Web容器的JavaScript函数调用，你也可以反其道而行之，[让Web容器触发父应用的原生API][17]。
 
-详情请参阅 [agent 文档][18]。
+详情请参阅 [Agent 文档][18]。
 
 #### 范例 
 
@@ -208,85 +208,85 @@ login("alice", "1234")
 
 1.  其中 [底部的输入组件是100%原生的][19]。
 2.  二维码是由 [作为Web应用][20]的Web容器产生的。
-3. 当用户输入某些内容，并按“Generate”时，它将调用Web容器agent的  `$agent.request` 操作，并进一步调用  [JavaScript 函数 “qr”][21]
+3. 当用户输入某些内容，并按“Generate”时，它将调用Web容器Agent的  `$agent.request` 操作，并进一步调用  [JavaScript 函数 “qr”][21]
 
 你可以在[这里][22]参阅示例。 
 
-#### **3\. Script Injection**
+#### **3\. 脚本注入**
 
-#### Problem
+#### 问题
 
-Sometimes you may want to dynamically inject JavaScript code into the web container AFTER it’s finished loading the initial HTML.
+有时候，你可能想在Web容器加载完初始HTML后，将JavaScript代码动态地注入到其中。
 
-Imagine you want to build a custom web browser app. You may want to inject your own custom JavaScript into every web view to customize the web view’s behavior, kind of like how web browser extensions work.
+假设你要构建一个自定义的Web浏览器应用程序。你可能想将自己的自定义JavaScript注入到每个Web视图中以自定义Web视图的行为，这有点像Web浏览器的扩展。
 
-Even if you’re not building a web browser, you may want to use the script injection method whenever you want a custom behavior for a URL whose content you have no control over. The only way to communicate between the native app and the web container is through the  `$agent`  API. But if you can’t change the HTML content, the only way to add the  `$agent`  interface into the web container is through dynamic injection.
+就算你不想构建Web浏览器，在想对那些内容无法控制的URL实现自定义行为时，你也需要使用脚本注入方法。在原生应用程序和Web容器之间实现通信的唯一方法就是通过`$agent`API。但若你无法更改HTML内容，则只能通过动态注入的方式将`$agent`接口添加到Web容器中。 
 
-#### Solution
+#### 解决方法
 
-As mentioned in the previous section, the  `$jason.body.background`  web container is just another  `agent`. This means you can use the same  `[$agent.inject][23]`  method available to regular agents.
+就像上文提到的， `$jason.body.background`  Web容器也是一个 `agent`。这意味着你可以使用与普通Agent相同的 `[$agent.inject][23]` 方法。
 
 ![](https://cdn-media-1.freecodecamp.org/images/kt6qG0I8AgcTy270pNSHCE2QfZpdRRMg8SZU)
 
-#### **4\. URL Click Handling**
+#### **4\. URL 点击处理**
 
-In the past, there were only two ways a web container could handle link clicks:
+在过去，Web容器处理链接点击只有两种方法：
 
-1.  **Readonly:**  Treat the web container as readonly and ignore all events such as touch or scroll. All web containers are readonly unless you tell them to behave like a regular browser, as described below.
-2.  **Regular Browser Behavior:**  Let users interact with the page by behaving like a normal browser. You declare it by setting  `"type": "$default"`  as its  `action`attribute.
+1.  **只读：** 将Web容器视为只读，并忽略触摸或滚动等所有事件。这样所有web容器都是只读的，除非你让它表现得像常规浏览器一样，正如下文所述。
+2.  **常规浏览器行为：**  像普通浏览器一样，让用户与页面交互。这需要将`“type”：“$default”`设置为`“action”`属性来进行声明。
 
-#### Problem
+#### 问题
 
-Both are  **“all or nothing” solutions**.
+二者都是  **“孤注一掷” 的方案**。
 
--   In the “Readonly” case, all your interactions are completely ignored by the web container.
--   In the “Regular Browser Behavior” case, the web container functions literally as a browser. When you click a link, it would just send you to that link by refreshing the page just like a web page. There was no way to hijack the click and call some native API.
+-   在 “只读”情况下，Web容器将忽略你所有的交互。 
+-   在 “常规浏览器行为” 的情况下，Web容器表现得像浏览器一样。当你点击一个链接，它会像网页一样将链接内容通过刷新页面展示给你。 你无法劫持该链接并调用原生API。
 
-#### Solution
+#### 解决方法
 
-With the new web container, you can now attach any  `action`  on the  `$jason.body.background`  web container to handle link click events.
+使用新的Web容器，你可以将任何  `action`  附加到  `$jason.body.background`  Web容器以处理点击事件。
 
 ![](https://cdn-media-1.freecodecamp.org/images/FhoDSEv8qQ4ZISs6syta2eU80WYBeQmFRAAS)
 
-Let’s look at an example:
+让我们看看这个例子：
 
 ```
 {  "$jason": {    "head": {      "actions": {        "displayBanner": {          "type": "$util.banner",          "options": {            "title": "Clicked",            "description": "Link {{$jason.url}} clicked!"          }        }      }    },    "body": {      "background": {        "type": "html",        "url": "file://index.html",        "action": {          "trigger": "displayBanner"        }      }    }  }}
 ```
 
-Here we have attached  `"trigger": "displayBanner"`  to the web container. This means that when a user clicks any link in the web container, it will trigger  `displayBanner`  action instead of letting the web view handle it.
+在这里我们将 `"trigger": "displayBanner"` 附加到了Web容器。这意味着当用户点击Web容器中的任何链接时，会触发 `displayBanner`  操作，而不是让Web视图处理它。
 
-Also, if you look at the  `displayBanner`  action, you’ll notice the  `$jason`  variable. In this case, the clicked link will be passed through the  `$jason`  variable. For example, if you clicked a URL named  `"https://google.com"`, the  `$jason`  will have the following value:
+此外，若你查看`displayBanner` 操作，你会发现 `$jason` 变量。在本例中，点击的链接将通过 `$jason`  变量传递。例如，如果你点击一个名为 `"https://google.com"`的URL，  `$jason`  将获得下列值：
 
 ```
 {  "url": "https://google.com"}
 ```
 
-This means you can selectively trigger different actions by  [checking the  `$jason.url`value.][24]
+这意味着你可以通过[检查 `$jason.url`值][24]来有选择地触发不同的操作。
 
-Let’s take another example where we implement a custom web browser:
+让我们再举一个实现自定义Web浏览器的例子：
 
 ```
 {  "$jason": {    "head": {      "actions": {        "handleLink": [{          "{{#if $jason.url.indexOf('signin') !== -1 }}": {            "type": "$href",            "options": {              "url": "file://key.html"            }          }        }, {          "{{#else}}": {            "type": "$default"          }        }]      }    },    "body": {      "background": {        "type": "html",        "url": "file://index.html",        "action": {          "trigger": "handleLink"        }      }    }  }}
 ```
 
-We test if the URL contains the string  `signin`  and then run two different actions depending on the result.
+我们测试URL是否包括 `signin`  字符串，然后根据结果执行不同的操作。
 
-1.  If it contains  `signin`, it opens a new view to take care of signing in natively.
-2.  If it doesn’t contain  `signin`, just run the  `"type": "$default"`  action so that it behaves like a regular browser.
+1.  若包含 `signin`，则会打开一个新视图并以原生方式处理本地登录。
+2.  若不包含 `signin`，则只会运行  `"type": "$default"`  操作，就像普通浏览器一样。
 
-### Example Usage
+### 使用示范
 
-#### Building a custom web browser
+#### 构建自定义Web浏览器
 
-We can now take advantage of the fact that the new web container can:
+我们现今可以利用新版Web容器的特性来：
 
-1.  Take a  `url`  attribute to load itself, functioning as a full-fledged browser
-2.  Selectively handle link clicks depending on the URL
+1.  通过  `url`  属性实现自我加载，当做一个成熟完备的浏览器
+2.  根据URL有选择地处理链接点击操作
 
-We can even build a custom web browser app with just a dozen lines of JSON. Since we can now hijack every link click, we can take a look at  `$jason.url`  and run whatever actions we want depending on the URL.
+我们甚至可以用十几行JSON代码来构建一个自定义的Web浏览器应用。既然我们现在可以劫持每个链接的点击，那么可以看一下 `$jason.url`  并根据URL运行任何我们想要的操作。
 
-For example, take a look at the example below:
+让我们看看下面的例子：
 
 ![](https://cdn-media-1.freecodecamp.org/images/iNRAFCyHHrGptiuenltF7rK902otq27ZMmTq)
 

@@ -292,84 +292,84 @@ login("alice", "1234")
 
 ![](https://cdn-media-1.freecodecamp.org/images/8vFiQuuuBm-KTt8LaNS-UEldKrWOCvJlI-0k)
 
-On the left side we see that clicking a link behaves like a regular browser (`"type": "$default"`)
+在左侧，我们看到点击链接的行为类似常规浏览器 （`"type": "$default"`）。
 
-On the right side we see that clicking a link does a native transition to another JASON view.
+在右侧，我们看到点击链接会以原生方式转换到另一个JASON视图。
 
-All this can be achieved by selectively triggering different actions based on  `$jason.url`.
+这些都可以通过基于`$jason.url`选择性地触发不同的动作来实现。
 
-**Step 1. Attach an action named  `visit`  to the web container like this:**
+**步骤 1.将名为`visit`的操作附加到Web容器中，如下所示：**
 
 ```
 {  ...  "body": {    "background": {      "type": "html",      "url": "https://news.ycombinator.com",      "action": {        "trigger": "visit"      }    }  }}
 ```
 
-**Step 2. Run relevant actions inside  `visit,`  based on  `$jason.url`**
+**步骤 2.根据`$jason.url`的值运行`visit`中的相关操作**
 
-In the following code, we’re checking if  `$jason.url`  matches  `newest`,  `show`,  `ask`, and so on (they’re the top menu item links). If they do, we let the web container behave like a regular browser by setting  `"type": "$default"`
+在以下代码中，我们将检查 `$jason.url`  是否与 `newest`,  `show`,  `ask`等相匹配（它们是顶部菜单选项的链接）。若匹配，我们可以通过设置 `"type": "$default"`来让Web容器像常规浏览器一样工作。
 
-If they don’t match the pattern, we make a native  `$href`  transition to a new view and pass the clicked link as a parameter.
+若模式不匹配，我们将通过原生的 `$href`  过渡到新视图，并将点击的链接作为参数进行传递。
 
 ```
 ..."actions": {  "visit": [    {      "{{#if /\\/(newest|show|ask)$/.test($jason.url) }}": {        "type": "$default"      }    },    {      "{{#else}}": {        "type": "$href",        "options": {          "url": "https://jasonette.github.io/Jasonpedia/webcontainer/agent/hijack.json",          "preload": {            "background": "#ffffff"          },          "options": {            "url": "{{$jason.url}}"          }        }      }    }  ]},
 ```
 
-Check out the full JSON markup for the web browser  [here][25]  (it’s only 48 lines!).
+在  [此处][25]  查看Web浏览器的完整JSON标记（它仅有48行！）。
 
-#### Instant “Hybrid” App
+#### 即使 “混合” 应用
 
-When people normally talk about “hybrid” apps, they mostly mean HTML web apps wrapped inside a native app frame.
+人们谈论“混合”应用时，通常是指封装在原生应用框架内的HTML Web应用程序。
 
-But that’s not what I mean here. When I say “Hybrid,” I mean a truly hybrid app, where one app can have multiple native views and multiple web-based views simultaneously. Also where one view can have multiple native UI components and a web container rendered in the same native layout.
+但在此我并不是想说这个。我说的“ 混合”，是指真正的混合应用程序，即一个应用程序可以同时具有多个原生视图和多个基于Web的视图。与此同时，一个视图可以具有多个原生UI组件以及一个以相同的原生布局渲染的Web容器。
 
-**The cross-over between web-based view and native view should be so seamless that it’s hard to tell where one starts and ends.**
+**基于Web的视图与原生视图之间的交互应是无缝的，你根本无法区分起始。**
 
 ![](https://cdn-media-1.freecodecamp.org/images/KVknGIXFeBzMxUsY1pBCddiWdEub8Jl26i0g)
 
-In this example, I’ve created an app that displays  [jasonbase.com][26]  in a web container as the home view.
+在此例中，我创建了一个应用，它将 [jasonbase.com][26] 显示在 Web容器中作为主视图。
 
-Jasonbase is a free JSON hosting service I built to easily host JSON markup for Jasonette apps.
+Jasonbase是我开发的一项免费JSON 托管服务，旨在让你轻松托管Jasonette应用程序的JSON标记。
 
-Naturally, it’s just a website, but I have embedded it in Jasonette so that when you click the link, instead of opening a web page, it makes a native  `$href`  transition to a native JASON view.
+当然，它只是一个网站，但我已将其嵌入Jasonette中，所以当你点击链接时，它不会打开一个网页，而是会通过原生的` $ href”`过渡至原生的JASON视图。
 
-**I didn’t have to touch any of Jasonbase.com’s code to build this app.**
+**我完全无需触及Jasonbase.com的代码就可以构建此应用。**
 
-**I simply embedded the website into Jasonette as a web container, and hijacked the link clicks to handle them natively, so it can do all the native stuff like triggering native APIs and making native transitions.**
+**我只是将网站作为Web容器嵌入Jasonette中，并劫持了链接点击以实现本地处理，因此它可以执行诸如触发原生API和进行原生转换等所有原生操作。**
 
-You can check out the code  [here][27].
+你可以在[此处][27]查看代码。
 
-### Conclusion
+### 总结
 
-In my opinion, what makes all this work fabulously is that  **everything is taken care of on the framework level**. All the hard work is taken care of behind the scenes.
+在我看来， **一切都在框架级别得以应对**，这使得我们的工作非常出色。所有困难的工作都是在后台完成的。
 
-Instead of putting the burden on the app developers to implement all of the following from scratch:
+不必给应用开发者施加重负，以从零开始实现以下的一切：
 
--   Embed a webview into native layout
--   Create a JavaScript bridge so the app can make function calls into the web view
--   Creating a native event handling architecture so the web view can trigger native events on the parent app
+-   将Web视图嵌入原生布局
+-   创建JavaScript桥，以便应用程序可以在Web视图中进行函数调用
+-   创建原生事件处理架构，以便Web视图可以在父应用中触发原生事件
 
-The solution was to create an abstraction made up of:
+解决方案是创建一个包含以下内容的抽象：
 
-1.  **Declarative Markup Language:**  for describing how to embed a web view into a native app
-2.  **Communication Protocol (JSON-RPC):**  to allow dead-simple interactions between the app and its child web views.
+1.  **声明式标记语言：**  用于描述如何将Web视图嵌入原生应用
+2.  **通信协议 (JSON-RPC)：**  用于应用与子Web视图间进行简单交互。
 
-I don’t claim this approach to be the ultimate solution to solve everything, but I’m happy to say that this has been a great solution for my own use case.
+我并不是说这就是解决所有问题的最终方案，但这对于我自己的用例而言是很出色的。
 
-I was trying to build an app that builds on a super edge technology which has no stable and reliable mobile implementations (and it’s not clear if there ever will be a mobile implementation due to the protocol’s nature). Thankfully it had JavaScript implementations so I could easily integrate it into the app without hassle.
+我尝试使用非常前沿的技术来构建应用程序，但该技术还没有稳定可靠的移动端实现（由于协议的本质，目前尚不清楚是否会有移动端的实现）。幸运的是，它具有JavaScript实现，因此我可以轻松地将其集成到应用程序中。
 
-Overall, it’s been great and I’m satisfied with how it turned out.  [The documentation is up to date][28]  to reflect all the new features, so feel free to dig in and play around.
+总而言之，这很棒且我对其感到满意。[文档是最新版的][28] 包含了所有新功能，欢迎你随时进行探索和体验。
 
-> Disclaimer: With great power comes great responsibility
+> 免责声明：能力越大，责任越大
 
-I would like to end with a disclaimer: as great as this newly found power is, I think you need to keep a balance to build an app with a great user experience.
+我想以免责声明结尾：尽管这种新技术功能强大，我认为你仍需要进行权衡，以构建具有出色用户体验的应用。
 
-Some may take this and build an entire app using web views only, but then you will end up with an app that’s basically just a website, which defeats the purpose of building a dedicated app.
+有些人可能会这样做并且仅使用Web视图来构建整个应用，但这样你的应用基本上就是一个网站，这违背了开发专属应用程序的本意。
 
-I emphasize that I’m not saying you should always build apps with both HTML and native. I am saying this can be very useful for many people in different situations. Just don’t go overboard with it.
+我在此强调，我并不是说你应该始终使用HTML和原生组件来构建应用。我的意思是，这对于某些情况下的许多人非常有用。只是不要太过分。
 
-> Follow Along to Learn More
+> 学习更多
 
-There are many different configurations in which the Jasonette native core and its child web container can communicate to get things done in creative and powerful ways, and this post is just scratching the surface.
+Jasonette原生核心和其子Web容器可以通过多种不同的配置进行通信，从而以强大的具有创造性的方式完成工作。这篇文章只是初步探索。
 
 [1]: https://github.com/Jasonette
 [2]: https://docs.jasonette.com/document/#bodyheader

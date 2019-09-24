@@ -372,6 +372,8 @@ If the bootcamp is a "cash up front" bootcamp, they've already reaped the short-
 
 These bootcamps do still want the long-term benefit of you boosting their employment statistics. But this benefit is more abstract than the cold hard cash you've handed them.
 
+这些编程训练营仍然想通过你提高他们的就业统计数据，以此获取长期利润。但是这种好处比起你给他们的现金来说更加抽象。
+
 On the other hand, wage-garnishing bootcamps (remember those Income Sharing Agreements) have a bigger incentive to kick you out if you're under-performing. This is because they only benefit over the longer term (17% of your salary over the next 2 years).
 
 Also, some bootcamp students decide to drop out for a variety of reasons. These may have nothing to do with the bootcamp itself, such as major life events.

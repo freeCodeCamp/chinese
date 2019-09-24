@@ -208,32 +208,31 @@ All in all, it doesn’t hurt to get involved with communities, and it can only 
 
 所以，不要担心别人的旅程，只需要关心自己的旅程就好了，虽然这很难。
 
-#### #10: Stay curious and keep it fun!
+#### #10: 保持好奇，享受编程!
 
-One of the best characteristics of us coders is that we are curious about how things work. It’s one reason that I love programming and computers!
-
+程序员最好的一个特质就是好奇，程序是怎样运转的，这是我喜欢编程和计算机的一个原因！
 While you’re learning, you may, for one reason or another, start feeling weary if you’ve been focused on one narrow area for a while.
-
+在学习时，如果你一段时间一直专注于一个狭窄区域，则可能会由于某种原因而感到疲倦。
 Feel free to change gears every so often. If you’ve been slogging away at a JavaScript tutorial and your brain is starting to feel fried, try taking a step back and working on a random side project. Or watch a video or read an article about a different area in programming from what you’re working on.
-
+如果你一段时间内一直在看 Javascript 的教程，感觉头脑有点混乱，可以尝试一下其他编程的其他领域。可以看一些和你当前学习不同领域的视频和文章。
 Mixing things up every so often can help keep things fresh.
-
+切换不同领域的知识，可以让自己对它们保持新鲜感。
 There are so many things that are possible with coding – CSS animations, fun API integrations, even just making silly mini apps for fun.
-
+编程有各种各样的知识，CSS 动画，有趣的API接口，甚至可以自己动手做一个迷你的程序来玩。
 One random app I built for fun was a “lorem ipsum” generator. It was a relatively simple tool that randomly chose words and phrases from a list that I had put together. Not the most complicated thing in the world, but it was incredibly fun to make and to show my friends!
-
-### In closing
+我当初就写了一个很简单的'lorem ipsum'的程序,它可以将我预设好的文字和短信，随机地凑在一起，组成一篇文章。它虽然不是世界上最复杂的程序，但却真正让我感受到了编程的乐趣而且也让我在朋友圈秀了一把。
+### 结语
 
 Learning to code is a really difficult thing to do, and if you’re somewhere on that path, I commend you!
-
+学习编程不是一件容易的事，如果你已经在路上，让我为你鼓掌。当你觉得你很菜，你不能成为高手的时候，你要相信自己以后一定做的到。
 Even if you feel like you are completely lost and you’ll never be good at programming, just know that it will come with time.
-
+我真心的希望这些建议能够给你一些帮助，你有什么想法呢？欢迎在下方评论。
 I really hope that these tips are helpful to you. Any of them strike a chord in your particular situation? Feel free to leave a comment below!
 
-#### Want more?
+#### 了解更多?
 
-? Read more tutorials on my blog, c[oder-coder.com.][6]  
-? Si[gn up here to get emails about new articles.][7]  
+? 在我的博客阅读更多教程, c[oder-coder.com.][6]  
+? [注册][7]  
 ? Join 25,000+ others — Follow @th[ecodercoder on Instagram.][8]  
 ? Check out coding tutorials on  [my YouTube channel][9].
 

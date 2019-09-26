@@ -1,6 +1,6 @@
 > * 原文地址：[The CSS Handbook: a handy guide to CSS for developers](https://www.freecodecamp.org/news/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11/)
 > * 原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> * 译者：
+> * 译者：ZhengRuoshan
 > * 校对者：
 
 ![The CSS Handbook: a handy guide to CSS for developers](https://cdn-media-1.freecodecamp.org/images/1*aeXtrs9UI4WniMd1miDIDw.png)

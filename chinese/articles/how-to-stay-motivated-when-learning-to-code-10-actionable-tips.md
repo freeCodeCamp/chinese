@@ -37,18 +37,18 @@ _或许，明年你会再次出发吧。_
 
 先大概的看一下要点:
 
-1.  找到目标.
-2.  设置合理的期望值.
-3.  保持稳定的节奏.
-4.  锻炼控制意志力的肌肉.
-5.  学会休息.
-6.  Don’t let impostor syndrome get you down.
-7.  Find a community of peers.
-8.  Get involved with local meetups.
-9.  Don’t compare yourself to others.
-10.  Stay curious and keep it fun!
+1.  找到目标
+2.  设置合理的期望值
+3.  保持稳定的节奏
+4.  锻炼控制意志力的肌肉
+5.  学会休息
+6.  别让冒充者综合征毒害你
+7.  找到志同道合的社区
+8.  参加线下活动
+9.  不要和别人做比较
+10. 保持好奇，享受编程！
 
-Hope you find these tips helpful!
+希望这些建议能够帮助到你！
 
 #### #1: 找到目标.
 
@@ -134,34 +134,31 @@ Hope you find these tips helpful!
 第二周我抽了一天的时间来放松自己，不干工作，只是躺在椅子上闲适的看了一天的书。这样度过一天以后，我感受到了前所未有的放松。
 
 在学习代码的过程中，确保不要把所有时间都用来学习，工作，也要在条件允许的范围里 适当的休息。从长远来看，它将帮助你取得进步。
-#### #6: Don’t let impostor syndrome get you down.
+#### #6: 别让冒充者综合征毒害你.
 
-Ah, the dreaded impostor syndrome. It’s something that plagues all beginners. Even more advanced programmers sometimes find it hard to shake off that feeling of not being good enough.
+[冒充者综合征][https://baike.baidu.com/item/%E5%86%92%E5%85%85%E8%80%85%E7%BB%BC%E5%90%88%E5%BE%81/11026373?fr=aladdin]不光是新手会遇上，连一些比较厉害的程序员都会遇上，他们永远觉得自己不够好。
 
-I’ve said this before, but when I first started working in web development, I was completely terrified of being found out as a faker. This was pretty constant in my first two years at my first job.
+我也不例外，工作的前两年，一直受此的困扰，我害怕别人发现我的是一个冒充者。我从这走出来花了5年的时间。
 
-It took almost five years before I actually started feeling more confident in my own skills. So don’t feel discouraged if you’re feeling impostor syndrome. You are most definitely not alone!
+所以，当你遇上它时，你要相信你并不孤单。
 
-One reason that I think this is such a common fear for coders is because the fields of programming and web development are just so broad. There are several programming languages, many different technology stacks, new frameworks seeming to come out every few months, and any number of tools.
+我认为这是程序员普遍会遇到的问题的原因之一是编程有太多种类，web开发也有很多不同的领域，多种多样的编程语言，技术栈。而且每隔一段时间就会出现新的框架和工具。
 
-It’s so easy to get overwhelmed by the vast number of skills that you “need” to know. It’s no wonder that so many aspiring developers struggle with impostor syndrome!
+这样大量“需要”知道的技能真的很容易把人压倒，难怪这么多充满热忱的开发者都被冒充者综合征困扰。
+  
+**战胜冒充者综合征困扰需要耐心和专注.**
 
-**Conquer impostor syndrome with patience and focus.**
+你并不需要学习你所知道的所有编程知识，诚实的说，没有人可以知道所有事情。大多数程序员都只精通一种，或者2种编程语言，熟悉或者了解其他语言。
 
-You’re never going to learn every single thing there is to know about coding. To be honest, no one knows  _every single thing_. Most programmers become experts in one programming language, maybe two, and may be moderately proficient or just familiar with others.
+学习更多的语言是没有问题的，但一定不要尝试过多，那样你的注意力就太分散了。相反的，你应该专注在一种语言上，一种技术栈上，精通它们。
 
-There’s nothing wrong with learning more than one language, but try to not jump around too much. You’ll spread yourself too thin.
+这样，随着你技术的成长，你的自信也会成长。而且这样最好的地方是你可以掌握到编程核心的原则，以后学第二门语言或者其他框架或工具都会更快。
 
-Instead, try to focus on one main language and one stack, and get good at it.
+另一方面，对自己要有耐心（和‘设置合理的期望值’相同）。认识到学习编程就像一场马拉松而不是短跑，是需要很长时间才能精通的。
 
-Over time, as your skills grow, your confidence will also grow. And the best part is, you will have picked up many of the core principles about programming, which you can then apply to learning other languages, frameworks, and tools more quickly.
+虽然需要很长时间，但总是能达到终点。
 
-Another tip is to simply be patient with yourself (this is related to being realistic about your goals). Understand that learning coding is a marathon, not a sprint. It will likely take years before you are very proficient in it.
-
-Now, that doesn’t mean that you will never be good at programming - it will just take time.
-
-If you can be patient with yourself and your progress, and focus on one or a few skills to build up, you will be more equipped to battle impostor syndrome.
-
+如果你能耐心，并且专注于学习少量的技能，你就更能战胜冒充者综合征困扰。
 #### #7: 找到志同道合的社区.
 
 自学编程的中很常见的另一个问题是孤独。在学校里上课的时候，有一起上课的同学，有可以解答疑问的老师。而在网上自学，基本上没有同学和老师，
@@ -205,23 +202,21 @@ All in all, it doesn’t hurt to get involved with communities, and it can only 
 #### #10: 保持好奇，享受编程!
 
 程序员最好的一个特质就是好奇，程序是怎样运转的，这是我喜欢编程和计算机的一个原因！
-While you’re learning, you may, for one reason or another, start feeling weary if you’ve been focused on one narrow area for a while.
+
 在学习时，如果你一段时间一直专注于一个狭窄区域，则可能会由于某种原因而感到疲倦。
-Feel free to change gears every so often. If you’ve been slogging away at a JavaScript tutorial and your brain is starting to feel fried, try taking a step back and working on a random side project. Or watch a video or read an article about a different area in programming from what you’re working on.
+
 如果你一段时间内一直在看 Javascript 的教程，感觉头脑有点混乱，可以尝试一下其他编程的其他领域。可以看一些和你当前学习不同领域的视频和文章。
-Mixing things up every so often can help keep things fresh.
+
 切换不同领域的知识，可以让自己对它们保持新鲜感。
-There are so many things that are possible with coding – CSS animations, fun API integrations, even just making silly mini apps for fun.
+
 编程有各种各样的知识，CSS 动画，有趣的API接口，甚至可以自己动手做一个迷你的程序来玩。
-One random app I built for fun was a “lorem ipsum” generator. It was a relatively simple tool that randomly chose words and phrases from a list that I had put together. Not the most complicated thing in the world, but it was incredibly fun to make and to show my friends!
+
 我当初就写了一个很简单的'lorem ipsum'的程序,它可以将我预设好的文字和短信，随机地凑在一起，组成一篇文章。它虽然不是世界上最复杂的程序，但却真正让我感受到了编程的乐趣而且也让我在朋友圈秀了一把。
 ### 结语
 
-Learning to code is a really difficult thing to do, and if you’re somewhere on that path, I commend you!
 学习编程不是一件容易的事，如果你已经在路上，让我为你鼓掌。当你觉得你很菜，你不能成为高手的时候，你要相信自己以后一定做的到。
-Even if you feel like you are completely lost and you’ll never be good at programming, just know that it will come with time.
+
 我真心的希望这些建议能够给你一些帮助，你有什么想法呢？欢迎在下方评论。
-I really hope that these tips are helpful to you. Any of them strike a chord in your particular situation? Feel free to leave a comment below!
 
 #### 了解更多?
 

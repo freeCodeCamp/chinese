@@ -69,6 +69,16 @@ JavaScript is a programming language that is:
 
 In case you’re wondering,  **JavaScript has nothing to do with Java**, it’s an unfortunate name choice but we have to live with it.
 
+#### JavaScript的基本定义
+作为一种编程语言，JavaScript有如下特性:
+- **高级语言**: 它使用了抽象化的手段，使得你不必在意它在机器的运行细节。它使用垃圾回收机制来自动管理内存，因此你可以专注于你的代码而不必花心思管理内存，同时提供了一些内置的构造器使你可以更好地使用功能强大的变量和对象。
+- **动态语言**: 与静态编程语言相反，动态语言会在运行时进行很多静态语言在编译阶段进行的操作。这既有优点也有缺点，给与了我们诸如动态类型、晚绑定、反射机制、函数式编程、可在运行时变更的对象、闭包等强大的特性。
+- **动态类型**: 变量没有固定的类型，因此你可以重新赋予一个变量任何类型，比如你可以将一个本来存储字符串的变量重新赋值为整型。
+- **弱类型**: 与强类型相反，弱类型的编程语言并不会为一个对象强制规定类型。这个特点给我们带来了更高的自由度，但是也使我们无法保证类型安全和进行类型检查(实现这些正是TypeScript和Flow的目标)。
+- **解释型语言**: 普遍意义上，JavaScript被认为是一种解释型语言，这意味着它不需要像诸如C, Java或者Go那样在程序运行之前需要一个编译阶段。实际上，为了提高性能，浏览器会在执行JavaScript程序之前进行编译，但这个过程由于并不包括其他步骤，因此对于开发者是透明的。
+- **多范式**: 这个语言本身没有强制规定任何的编程范式，这点不像诸如Java会强制使用面向对象编程或C那样规定使用命令式编程。你既可以利用原型和新的(ES6)类语法来遵循面向对象编程的规则进行编程，也可以使用函数式编程的风格，甚至可以使用像C语言那种命令式的风格。
+
+以防万一你会误会，**JavaScript和Java没有任何关系**, 这只是个不太恰当的命名选择，但我们也只能接受它。
 #### JavaScript versions
 
 Let me introduce the term  **ECMAScript**  here. We have a complete guide dedicated to ECMAScript where you can dive into it more, but to start with, you just need to know that ECMAScript (also called  **ES**) is the name of the JavaScript standard.

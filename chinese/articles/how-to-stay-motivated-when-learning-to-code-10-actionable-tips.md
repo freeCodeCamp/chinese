@@ -37,11 +37,11 @@ _或许，明年你会再次出发吧。_
 
 先大概的看一下要点:
 
-1.  Have an end goal in mind.
-2.  Be realistic about your goals.
-3.  Choose consistency over speed.
-4.  Build up your willpower muscle.
-5.  Avoid burnout and get rest.
+1.  找到目标.
+2.  设置合理的期望值.
+3.  保持稳定的节奏.
+4.  锻炼控制意志力的肌肉.
+5.  学会休息.
 6.  Don’t let impostor syndrome get you down.
 7.  Find a community of peers.
 8.  Get involved with local meetups.
@@ -50,7 +50,7 @@ _或许，明年你会再次出发吧。_
 
 Hope you find these tips helpful!
 
-#### #1: 在脑海中设置一个目标.
+#### #1: 找到目标.
 
 在刚开始学习的时候要设置一个清晰的目标，这可能是老生常谈，但却重要。花一些时间想想你最想要达到的目标是什么？什么是对你最要的？
 
@@ -77,25 +77,19 @@ Hope you find these tips helpful!
 我个人认为，要找一份编程的工作需要花费大约1-2年的业余时间，当然，这取决你有多少时间投入到编程的学习中。如果你已经有一份工作，或者有孩子，你肯定比学生或者没有工作的人投入的时间要少的多，你花费的时间会更长。还有就是你的学习能力也会有影响学习的时间，毕竟每个人学习能力都不相同。
 
 所以，保持自己的学习节奏就好了，试着去记录自己学习的过程，不要给自己设置不切实际的目标。
-#### #3: Choose consistency over speed.
+#### #3: 保持一个稳定的节奏.
 
-On the same note, the rather cliched saying, “Slow and steady wins the race” is very true.
+> 苟有恒，何必三更起五更眠；最无益，只怕一日曝十日寒。
 
-When you are just starting out, you might want to rush into things and spend hours each day dedicated to studying and practicing coding.
+刚开始学习时，你很可能完全投入进去，每天学习很长时间。然而，我上次建议已经说明，那可能是一个不现实的期望，最后可能会以自己精疲力竭而放弃。
 
-However, like I mentioned in the previous tip, that may be a somewhat unrealistic expectation, and you may well end up burning out and giving up.
+更理想的方式是你能够给自己规划一个稳定的可实现的每天或者每周学习编程的时间，就算每一天只有30分钟，一周就有3.5个小时，一个月就有14个小时，一年就有200个小时。当你计划好了自己的学习时间，就坚持它。
 
-You’ll be more likely to continue if you figure out how much time you can realistically and sustainably spend each day or each week studying coding. Once you find that out, stick to it.
+量变产生质变。
 
-Even if it’s only 30 minutes per day, if you do this for seven days a week, you’ll have studied for 3.5 hours that week. In one month that would be about 14 hours, and in one year, almost 200 hours!
+举个例子，你每天花4-5分钟来刷牙，几天看不出区别，但时间一长就有很大的区别了。
 
-Even small efforts, when combined with consistency, can lead to big accomplishments.
-
-Take brushing and flossing your teeth, for instance. You might spend 4–5 minutes per day on brushing and flossing. A tiny amount of time!
-
-But doing that every single day means the difference between having great teeth, and having no teeth.
-
-This is why consistency is more important than trying to go as fast as you possibly can.
+这就是缓慢而持久的坚持比爆发性的短暂努力更重要的原因
 
 #### #4: 锻炼控制意志力的肌肉
 
@@ -123,7 +117,7 @@ This is why consistency is more important than trying to go as fast as you possi
 
 如果你有一个合理的具体的目标，保持你自己的学习节奏，同时理解，重复越多，就越简单的道理，那么在中途放弃的可能性就大大降低了。
 
-#### #5: Avoid burnout and get rest.
+#### #5: 学会休息.
 
 想在业余时间完成一些目标的话，过分透支你的身体和精力是很常见的现象。
 

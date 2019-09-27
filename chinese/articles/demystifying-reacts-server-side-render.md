@@ -1,6 +1,6 @@
 > * 原文地址：[Demystifying server-side rendering in React](https://www.freecodecamp.org/news/demystifying-reacts-server-side-render-de335d408fe4/)
 > * 原文作者：Alex Moldovan
-> * 译者：
+> * 译者：LianZhuotao
 > * 校对者：
 
 ![Demystifying server-side rendering in React](https://cdn-media-1.freecodecamp.org/images/1*Ecd_MVlJQoZ3bNn-xclFiA.jpeg)

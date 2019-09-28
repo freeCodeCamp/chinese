@@ -1,64 +1,65 @@
+# 30 行 Python 代码实现 Twitch 主播上线实时通知
 > * 原文地址：[A Python project in 30 lines of code: how to set up an SMS notification when your favorite Twitcher is streaming](https://www.freecodecamp.org/news/20-lines-of-python-code-get-notified-by-sms-when-your-favorite-team-scores-a-goal/)
 > * 原文作者：Pierre
-> * 译者：
+> * 译者：FENGJIAJUN
 > * 校对者：
 
 ![A Python project in 30 lines of code: how to set up an SMS notification when your favorite Twitcher is streaming](https://images.unsplash.com/photo-1561736778-92e52a7769ef?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Hi everyone :) Today I am beginning a new series of posts specifically aimed at Python beginners. The concept is rather simple: I'll do a fun project, in as few lines of code as possible, and will try out as many new tools as possible.
+大家好 :) 今天我将开始写作一个新的文章系列，特别面向 Python 初学者。简言之，我将会尝试更多新的工具，编写尽可能少的代码，来完成一个有趣的项目。
 
-For example, today we will learn to use the Twilio API, the Twitch API, and we'll see how to deploy the project on Heroku. I'll show you how you can have your own "Twitch Live" SMS notifier, in 30 lines of codes, and for 12 cents a month.
+例如，我们将要在今天学习使用 Twilio API、Twitch API、在 Heroku 上发布项目。我将会教你用 30 行代码写一个“Twitch 直播”短信通知工具，而且一个月只需要花费 12 美分。
 
-**Prerequisite**: You only need to know how to run Python on your machine and some basic commands in git (commit & push). If you need help with these, I can recommend these 2 articles to you:
+**前提**: 你只需要懂得怎么运行 Python 程序，以及会操作基本的 git 命令行（commit & push）。如果你需要学习一下这些知识点，可以看看下面两篇文章：
 
-[Python 3 Installation & Setup Guide][1]
+[《Python 3 安装与设置指南》][1]
 
-[The Ultimate Git Command Tutorial for Beginners][2]  from  [Adrian Hajdin][3].
+[《Git 最佳入门教程》][2]  from  [Adrian Hajdin][3].
 
-**What you'll learn**:
+**将会学到的知识:**:
 
 -   Twitch API
 -   Twilio API
--   Deploying on Heroku
--   Setting up a scheduler on Heroku
+-   Heroku 发布项目
+-   安装 Heroku scheduler 插件
 
-**What you will build:**
+**将要构建的项目:**
 
-The specifications are simple: we want to receive an SMS as soon as a specific Twitcher is live streaming. We want to know when this person is going live and when they leave streaming. We want this whole thing to run by itself, all day long.
+要求很简单：我们想要在某个主播正在直播的时候接收到一条短信通知，我们想要知道主播何时上线以及何时退出直播，并且这个通知程序全天都在自动运行。
 
-We will split the project into 3 parts. First, we will see how to programmatically know if a particular Twitcher is online. Then we will see how to receive an SMS when this happens. We will finish by seeing how to make this piece of code run every X minutes, so we never miss another moment of our favorite streamer's life.
+我们将把整个项目分成 3 个部分。首先，我们看看如何通过程序知晓一个特定主播上线了，然后看看如何接收一条主播上线的通知短信，最后我们需要让这段代码每隔 X 分钟执行一次，这样我们就不会错过喜欢的主播的动态啦。
 
-# Is this Twitcher live?
+# 主播是否正在直播？
 
-To know if a Twitcher is live, we can do two things: we can go to the Twitcher URL and try to see if the badge "Live" is there.
+我们可以这样了解主播是否正在直播：访问主播的 URL，看看是否有 'Live' 徽章
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Capture-d-e-cran-2019-08-14-a--15.49.31.png)
 
-Screenshot of a Twitcher live streaming.
+主播直播时候的截图
 
-This process involves scraping and is not easily doable in Python in less than 20 or so lines of code. Twitch runs a lot of JS code and a simple request.get() won't be enough.
+这个过程涉及到网络爬虫，而且这个功能不是 20 行左右的 Python 代码能完成的。Twitch 使用了非常多的 JS 脚本代码，一个简单的 request.get() 是不足以达到我们要求的。
 
-For scraping to work, in this case, we would need to scrape this page inside Chrome to get the same content like what you see in the screenshot. This is doable, but it will take much more than 30 lines of code. If you'd like to learn more, don't hesitate to check my recent  [web scraping guide][4].
+对于使用爬虫去爬取直播信息，我们将会借助 Chrome 浏览器抓取这个网页的内容，如截图所示。这种方式是可行的，但是代码需要 30 行以上。如果你想要了解更多，可以参考我最近的文章[网页抓取指南][4]。
 
-So instead of trying to scrape Twitch, we will use their API. For those unfamiliar with the term, an API is a programmatic interface that allows websites to expose their features and data to anyone, mainly developers. In Twitch's case, their API is exposed through HTTP, witch means that we can have lots of information and do lots of things by just making a simple HTTP request.
+除了抓取 Twitch 网页这种方式外，我们还可以使用 Twitch 的 API。有的读者可能不了解 API 这个术语，这里我们解释一下：API 是应用程序编程接口，允许网站向任何人（主要是开发者）公开网站的特性和数据。Twitch 的 API 是通过 HTTP 协议对外开放，也就是说我们可以通过一个简单的 HTTP 请求去获取到大量信息以及做许多事情。
 
-## Get your API key
+## 获取你的 API KEY 
 
-To do this, you have to first create a Twitch API key. Many services enforce authentication for their APIs to ensure that no one abuses them or to restrict access to certain features by certain people.
+首先，你需要去创建一个 Twitch 的API Key。许多 API 服务需要对访问者进行身份认证，以避免有人滥用 API，或者以限制某些人访问某些功能。
 
-Please follow these steps to get your API key:
+请按照以下步骤获取你的 API Key:
 
--   Create a Twitch account
--   Now create a Twitch  [dev account][5]  \-> "Signing up with Twitch" top right
--   Go to your "dashboard" once logged in
--   "Register your application"
--   Name -> Whatever, Oauth redirection URL -> http://localhost, Category -> Whatever
+-   创建一个Twitch账号
+-   创建一个Twitch  [开发者账号][5]  \-> 右上角“通过Twitch注册”
+-   登录后跳转到信息中心
+-   “注册你自己的应用”
+-   名称 -> 随便填一个, Oauth 重定向 URL -> http://localhost, 类别 -> 随便选一个
 
-You should now see, at the bottom of your screen, your client-id. Keep this for later.
+在屏幕底端，你可以看到你的 client-id，将它保存好，稍后会使用。
 
-## Is that Twitcher streaming now?
+## 主播正在直播么？
 
-With your API key in hand, we can now query the Twitch API to have the information we want, so let's begin to code. The following snippet just consumes the Twitch API with the correct parameters and prints the response.
+我们手上有了 API key,我们现在就可以查询 Twitc h的 API 获取我们想要的信息，让我们开始用代码实现它吧。下面的代码给 Twitch 的 API 传递了正确的参数并且打印响应信息。
 
 ```python
 # requests is the go to package in python to make http request
@@ -76,7 +77,7 @@ params = {"user_login": "Solary"}
 
 ```
 
-The output should look like this:
+输出信息就像下面这样：
 
 ```json
 {
@@ -103,9 +104,9 @@ The output should look like this:
 }
 ```
 
-This data format is called JSON and is easily readable. The  `data`  object is an array that contains all the currently active streams. The key  `type`  ensures that the stream is currently  `live`. This key will be empty otherwise (in case of an error, for example).
+这个数据格式是一种易于阅读的 JSON 格式。`data` 是一个包含所有当前直播的数组对象。`type` 键表示这个直播间正在直播，此外 `type` 的值还可以为空。（比如，在报错的时候）
 
-So if we want to create a boolean variable in Python that stores whether the current user is streaming, all we have to append to our code is:
+因此如果我们想要在 Python 里创建一个表示当前主播是否正在直播的布尔变量，我们需要去加上如下代码：
 
 ```python
 json_response = response.json()
@@ -120,17 +121,17 @@ at_least_one_stream_active = any(streams_active)
 
 ```
 
-At this point,  `at_least_one_stream_active`  is True when your favourite Twitcher is live.
+此时，`at_least_one_stream_active` 变量是 True 的时候表示你喜欢的主播正在直播。
 
-Let's now see how to get notified by SMS.
+让我们现在看看如何获得短信通知。
 
-# Send me a text, NOW!
+# 给我现在发一条短信！
 
-So to send a text to ourselves, we will use the Twilio API. Just go over  [there][8]  and create an account. When asked to confirm your phone number, please use the phone number you want to use in this project. This way you'll be able to use the $15 of free credit Twilio offers to new users. At around 1 cent a text, it should be enough for your bot to run for one year.
+那么为了给我们自己发送一条短信，我们将使用 Twilio API。访问[there][8] 并且创建一个账号。当需要你手机验证的时候，填入你想要在此项目中接受短信的手机号码。这样你就可以使用 Twilio 为新用户提供的 15 美元的免费信用额度。一条短信1美分，足以支撑你的机器运行一年了。
 
-If you go on the  [console][9], you'll see your  `Account SID`  and your  `Auth Token`  , save them for later. Also click on the big red button "Get My Trial Number", follow the step, and save this one for later too.
+访问[console][9]，你将会看到自己的Account SID和Auth Token。请保留好它们以备后用。同时点击红色按钮"获得试用账号"，进行下一步，将试用账号也保存好以备后用。
 
-Sending a text with the Twilio Python API is very easy, as they provide a package that does the annoying stuff for you. Install the package with  `pip install Twilio`  and just do:
+使用 Python API 发送短信很简单，有软件包帮你一系列事情。使用 `pip install Twilio` 导入相应的包并且执行下面的代码：
 
 ```python
 from twilio.rest import Client
@@ -140,11 +141,11 @@ client.messages.create(
 
 ```
 
-And that is all you need to send yourself a text, amazing right?
+只需要这么点代码，你就可以给自己发一条通知短信了，是不是很棒？
 
-# Putting everything together
+# 整合所有代码
 
-We will now put everything together, and shorten the code a bit so we manage to say under 30 lines of Python code.
+现在我们来整合所有代码，压缩到不到 30 行 Python 代码。
 
 ```python
 import requests
@@ -163,17 +164,17 @@ if at_least_one_stream_active:
     client.messages.create(body='LIVE !!!',from_=<Your Trial Number>,to=<Your Real Number>)
 ```
 
-Still have 16 lines left!
+只留下了16行代码！
 
-# Avoiding double notifications
+# 避免重复通知
 
-This snippet works great, but should that snippet run every minute on a server, as soon as our favorite Twitcher goes live we will receive an SMS every minute.
+这段代码的效果很好，但是如果这段代码在服务器上每分钟执行一次，我们喜欢的主播一开启直播，我们就会每分钟都收到一条短信。
 
-We need a way to store the fact that we were already notified that our Twitcher is live and that we don't need to be notified anymore.
+我们需要让程序知道它已经给我们发了主播上线直播的短信通知，别再重复发短信了。
 
-The good thing with the Twilio API is that it offers a way to retrieve our message history, so we just have to retrieve the last SMS we sent to see if we already sent a text notifying us that the twitcher is live.
+好的消息是 Twilio API 提供检索历史消息的方法，因此我们仅仅需要检索发送的历史消息中是否包含我们已经发送过的主播正在直播的消息。
 
-Here what we are going do to in pseudocode:
+如下是我们要做的伪代码：
 
 ```
 if favorite_twitcher_live and last_sent_sms is not live_notification:
@@ -182,7 +183,7 @@ if not favorite_twitcher_live and last_sent_sms is live_notification:
     send_live_is_over_notification()
 ```
 
-This way we will receive a text as soon as the stream starts, as well as when it is over. This way we won't get spammed - perfect right? Let's code it:
+使用这种方法，我们将会在直播开始和结束后都接收到短信。这样我们就不会收到重复信息了。- 现在完美了么？让我们继续编码吧：
 
 ```python
 # reusing our Twilio client
@@ -192,7 +193,7 @@ last_message_data = client.messages(last_message_id).fetch()
 last_message_content = last_message_data.body
 ```
 
-Let's now put everything together again:
+现在让我们再一次将代码合起来：
 
 ```py
 import requests
@@ -219,32 +220,32 @@ else:
 
 ```
 
-And voilà!
+完成了！
 
-You now have a snippet of code, in less than 30 lines of Python, that will send you a text a soon as your favourite Twitcher goes Online / Offline and without spamming you.
+你现在拥有一段不到 30 行的 Python 代码，可以在你喜欢的主播上线或者离线的时候发送短信通知给你而且不会重复发送信息给你。
 
-We just now need a way to host and run this snippet every X minutes.
+我们现在需要一种方法去托管代码，并且每X分钟执行一次这个程序。
 
-# The quest for a host
+# 托管代码的需求
 
-To host and run this snippet we will use Heroku. Heroku is honestly one of the easiest ways to host an app on the web. The downside is that it is really expensive compared to other solutions out there. Fortunately for us, they have a generous free plan that will allow us to do what we want for almost nothing.
+我们将使用 Heroku 去托管、执行该代码。Heroku 是一种简便的托管 app 到 web 的方式。Heroku 的缺点是比起其他的解决方案，价格方面会昂贵一些。幸运的是，他们有一个慷慨的免费计划允许我们做我们所有想做的事。
 
-If you don't already, you need to create a  [Heroku account][12]. You also need to  [download and install the Heroku client][13].
+如果你之前没有[Heroku 账户][12]，那就创建一个吧。你同时也需要 [下载并且安装Heroku客户端][13]。
 
-You now have to move your Python script to its own folder, don't forget to add a  `requirements.txt`  file in it. The content of the latter begins:
+现在你需要将你的 Python 脚本放到自己的文件夹内，记得加一个 `requirements.txt` 文件在里面。文件内容的开头如下：
 
 ```
 requests
 twilio
 ```
 
-This is to ensure that Heroku downloads the correct dependencies.
+这样可以确保 Heroku 下载正确的依赖程序。
 
-`cd`  into this folder and just do a `heroku create --app &lt;app name&gt;`.
+`cd` 进入到该文件夹内同时执行 `heroku create --app &lt;app name&gt;`。
 
-If you go on your  [app dashboard][14]  you'll see your new app.
+如果你进入到你的[app dashboard][14] 你将会看到你的新 APP。
 
-We now need to initialize a git repo and push the code on Heroku:
+我们现在需要去初始化一个 git 仓库并且 push 代码到 Heroku：
 
 ```
 git init
@@ -254,54 +255,53 @@ git commit -am 'Deploy breakthrough script'
 git push heroku master
 ```
 
-Your app is now on Heroku, but it is not doing anything. Since this little script can't accept HTTP requests, going to  `<app name>.herokuapp.com`  won't do anything. But that should not be a problem.
+如今你的 app 已经传到 Heroku，但是它还不可以干任何事。由于这个小脚本无法接受 HTTP 请求，访问 `<app name>.herokuapp.com` 没法做任何事。但是这并不是一个问题。
 
-To have this script running 24/7 we need to use a simple Heroku add-on call "Heroku Scheduler". To install this add-on, click on the "Configure Add-ons" button on your app dashboard.
+为了让这个脚本全天候执行，我们需要使用一个简单的 Heroku 插件"Heroku Scheduler"。在你的 app 操作空间点击 "Configure Add-ons" 来安装插件。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Capture-d-e-cran-2019-08-15-a--12.50.40.png)
 
-Then, on the search bar, look for Heroku Scheduler:
+接下来在搜索框输入 Heroku Scheduler：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Capture-d-e-cran-2019-08-15-a--12.53.12.png)
 
-Click on the result, and click on "Provision"
+点击搜索结果，并且按下 'Provision' 按钮
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Capture-d-e-cran-2019-08-15-a--12.50.59.png)
 
-If you go back to your App dashboard, you'll see the add-on:
+如果你返回到你的 APP 主界面，你将会看到 Heroku Scheduler：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Capture-d-e-cran-2019-08-15-a--12.54.16.png)
 
-Click on the "Heroku Scheduler" link to configure a job. Then click on "Create Job". Here select "10 minutes", and for run command select `python &lt;name_of_your_script&gt;.py`. Click on "Save job".
+点击 'Heroku Scheduler' 链接去配置一个任务，点击 'Create Job' 按钮，在这里选择 '10 minutes' 的选项，之后选择执行命令 `python &lt;name_of_your_script&gt;.py`，最终红点击 'Save job' 按钮。
 
-While everything we used so far on Heroku is free, the Heroku Scheduler will run the job on the $25/month instance, but prorated to the second. Since this script approximately takes 3 seconds to run, for this script to run every 10 minutes you should just have to spend 12 cents a month.
+虽然到目前为止我们在 Heroku 上使用的所有东西都是免费的，但是 Heroku Scheduler 将会花费 25 美元每个月。而我们的程序是要秒级执行的。因为该脚本需要每  3 秒执行一次，所以每 10 分钟运行该项目，一个月下来将会花费 12 美分。
 
-# Ideas for improvements
+# 建议
 
-I hope you liked this project and that you had fun putting it into place. In less than 30 lines of code, we did a lot, but this whole thing is far from perfect. Here are a few ideas to improve it:
+我希望你喜欢这个项目，并且喜欢自己动手操作的过程。我们通过这不到 30 行代码实现了很多功能。不过这个项目还不够完美，这里我有一些改善的建议：
 
--   Send yourself more information about the current streaming (game played, number of viewers ...)
--   Send yourself the duration of the last stream once the twitcher goes offline
--   Don't send you a text, but rather an email
--   Monitor multiple twitchers at the same time
+-   发送更多的关于当前直播的信息（正在打的游戏，围观者数等）
+-   当主播下线的时候，发送直播时长
+-   不仅仅去发送短信，还可以发送邮件
+-   同时去监控多个主播
 
-Do not hesitate to tell me in the comments if you have more ideas.
+如果你有其他好主意，欢迎留言告诉我
 
-# Conclusion
+# 总结
 
-I hope that you liked this post and that you learned things reading it. I truly believe that this kind of project is one of the best ways to learn new tools and concepts, I recently launched a  [web scraping API][15]  where I learned a lot while making it.
+我希望你喜欢上这篇文章并且通过这篇文章学到东西。我相信这样的项目是学习新工具和新概念的最好方式。最近我做了[web scraping API][15]，在做的过程中我也学到很多。
 
-Please tell me in the comments if you liked this format and if you want to do more.
+如果你喜欢这种学习方式并且你想要做更多的事情，请在评论区留言。
 
-I have many other ideas, and I hope you will like them. Do not hesitate to share what other things you build with this snippet, possibilities are endless.
-
+我有许多别的想法，并且我希望你将会喜欢上它们。如果你使用这段代码实现了别的东西，请一定分享给我啊。我相信这段代码有很多可能性。
 Happy Coding.
 
 Pierre
 
-## Don't want to miss my next post:
+## 不要错过我下一篇文章：
 
-You can subscribe  [here][16] to my newsletter.
+你可以订阅我的[here][16]栏目。
 
 [1]: https://realpython.com/installing-python/
 [2]: https://www.freecodecamp.org/news/git-commands/

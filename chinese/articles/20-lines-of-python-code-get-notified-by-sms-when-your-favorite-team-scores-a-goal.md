@@ -6,32 +6,32 @@
 
 ![A Python project in 30 lines of code: how to set up an SMS notification when your favorite Twitcher is streaming](https://images.unsplash.com/photo-1561736778-92e52a7769ef?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-大家好 :) 今天我将开启一个新的针对 Python 初学者系列文章。简言之，我将会尝试更多新的工具、编写尽可能少的代码完成一个有趣的项目。
+大家好 :) 今天我将开始写作一个新的文章系列，特别面向 Python 初学者。简言之，我将会尝试更多新的工具，编写尽可能少的代码，来完成一个有趣的项目。
 
-例如，我们将要在今天学习使用 Twilio API、Twitch API、在 Heroku 上发布项目。我将会教会你如何在每月只花费 10 美分的情况下，用 30 行代码实现你的“Twitch直播”短信通知。
+例如，我们将要在今天学习使用 Twilio API、Twitch API、在 Heroku 上发布项目。我将会教你用 30 行代码写一个“Twitch 直播”短信通知工具，而且一个月只需要花费 12 美分。
 
-**前提**: 你至少需要具备基本的 git 命令行（commit & push）以及在机器上执行 Python 程序的能力。果你需要这些知识点的帮助，我想你推荐下面两篇文章：
+**前提**: 你只需要懂得怎么运行 Python 程序，以及会操作基本的 git 命令行（commit & push）。如果你需要学习一下这些知识点，可以看看下面两篇文章：
 
-[Python 3 Installation & Setup Guide][1]
+[《Python 3 安装与设置指南》][1]
 
-[The Ultimate Git Command Tutorial for Beginners][2]  from  [Adrian Hajdin][3].
+[《Git 最佳入门教程》][2]  from  [Adrian Hajdin][3].
 
 **将会学到的知识:**:
 
 -   Twitch API
 -   Twilio API
 -   Heroku 发布项目
--   Heroku 启动调度程序
+-   安装 Heroku scheduler 插件
 
 **将要构建的项目:**
 
 要求很简单：我们想要在某个主播正在直播的时候接收到一条短信通知，我们想要知道主播何时上线以及何时退出直播，并且这个通知程序全天都在自动运行。
 
-我们将把整个项目分成 3 个部分。首先，我们将会着手在代码层面获悉一个特定主播的上线。之后学习如何去接收到一条主播上线的短信。最终来学习如何让这段代码执行X分钟，因此我们将不会再错过我们喜欢的主播的直播时刻。
+我们将把整个项目分成 3 个部分。首先，我们看看如何通过程序知晓一个特定主播上线了，然后看看如何接收一条主播上线的通知短信，最后我们需要让这段代码每隔 X 分钟执行一次，这样我们就不会错过喜欢的主播的动态啦。
 
 # 主播是否正在直播？
 
-为了知道一个主播是否正在直播，我们可以有两种方式实现：第一种方式，到直播间里去查找是否有"Live"徽章。
+我们可以这样了解主播是否正在直播：访问主播的 URL，看看是否有 'Live' 徽章
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Capture-d-e-cran-2019-08-14-a--15.49.31.png)
 
@@ -39,7 +39,7 @@
 
 这个过程涉及到网络爬虫，而且这个功能不是 20 行左右的 Python 代码能完成的。Twitch 使用了非常多的 JS 脚本代码，一个简单的 request.get() 是不足以达到我们要求的。
 
-对于使用爬虫去爬取直播信息，我们将会借助 Chrome 浏览器抓取正如你在截图所看到的这个网页内容。这种方式是可行的，但是这将会产生超过 30 行以上代码。如果你想要了解更多相关，别迟疑，可以参考我最近的网页抓取指南文章[网页抓取指南][4]。
+对于使用爬虫去爬取直播信息，我们将会借助 Chrome 浏览器抓取这个网页的内容，如截图所示。这种方式是可行的，但是代码需要 30 行以上。如果你想要了解更多，可以参考我最近的文章[网页抓取指南][4]。
 
 除了抓取 Twitch 网页这种方式外，我们还可以使用 Twitch 的 API。有的读者可能不了解 API 这个术语，这里我们解释一下：API 是应用程序编程接口，允许网站向任何人（主要是开发者）公开网站的特性和数据。Twitch 的 API 是通过 HTTP 协议对外开放，也就是说我们可以通过一个简单的 HTTP 请求去获取到大量信息以及做许多事情。
 

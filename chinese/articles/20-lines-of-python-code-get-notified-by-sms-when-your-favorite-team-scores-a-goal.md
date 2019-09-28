@@ -1,4 +1,4 @@
-# 用 30 行 Python 代码实现短信通知 Twitch 主播上线
+# 30 行 Python 代码实现 Twitch 主播上线实时通知
 > * 原文地址：[A Python project in 30 lines of code: how to set up an SMS notification when your favorite Twitcher is streaming](https://www.freecodecamp.org/news/20-lines-of-python-code-get-notified-by-sms-when-your-favorite-team-scores-a-goal/)
 > * 原文作者：Pierre
 > * 译者：FENGJIAJUN
@@ -288,7 +288,7 @@ git push heroku master
 
 如果你有其他好主意，欢迎留言告诉我
 
-# 结论
+# 总结
 
 我希望你喜欢上这篇文章并且通过这篇文章学到东西。我相信这样的项目是学习新工具和新概念的最好方式。最近我做了[web scraping API][15]，在做的过程中我也学到很多。
 

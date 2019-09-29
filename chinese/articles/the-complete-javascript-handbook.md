@@ -53,6 +53,7 @@ JavaScript是世界上最受欢迎的编程语言之一，在它诞生之后的�
 
 在当下，JavaScript的使用已经不仅仅局限于前端开发领域。近几年冉冉升起的Node.js为JavaSCript解锁了后端开发领域——一个曾经被Java, Ruby, Python, PHP以及一些更传统的服务器端语言主宰的领域。
 
+
 JavaScript如今还被用于驱动数据库系统以及许多其他的应用。我们甚至可以使用它来开发嵌入式应用，移动app，智能电视app和很多其他的应用。这个起源于浏览器脚本语言的的“小”语言如今已经是世界上最受欢迎的编程语言。
 
 #### A basic definition of JavaScript
@@ -90,6 +91,18 @@ For a very long time, the version of JavaScript that all browsers ran was ECMASc
 Since then, the ones in charge decided to release one version per year, to avoid having too much time idle between releases, and have a faster feedback loop.
 
 Currently, the latest approved JavaScript version is ES2017.
+
+#### JavaScript的版本
+
+让我在这里介绍一下介绍一下**ECMAScript**。如果你愿意深入研究，我们有一份完整的手册帮助你了解ECMAScript，但是现在你只需要知道ECMAScript(也被称作**ES**)是JavaScript标准的名字。
+
+JavaScript是这份标准的实现。这正是你会听到ES6, ES2015, ES2016, ES2017, ES2018这些词的原因。
+
+在过去的很长一段时间，所有浏览器运行的JavaScript版本都是ECMAScript3。 第四版因为特征蔓延(他们尝试在这个版本中一次性加入过多新特征)而被废除。在ES5的时候JavaScript有过一次大的更新，ES2015(也被称作ES6)也是一次大的版本更新。
+
+从ES6之后，相关的负责人(ECMA-TC39)决定通过每年发布一个新版本来缩短版本更新的时间间隔，同时更高效的获得反馈。
+
+现在，最新通过的JavaScript版本是ES2017(译者翻译此文的时候TC39已经发布了ES2019)。
 
 ### ECMASCRIPT
 

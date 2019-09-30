@@ -9,41 +9,41 @@
 
 ![](https://cdn-media-1.freecodecamp.org/images/s67vXcDq77yLluSAmsSmalkgWV3UJPSDWi6w)
 
-This résumé got me interviews at Google, Facebook, Amazon, Microsoft, and Apple.
+这个简历让我收到了来自 Google、Facebook、Amazon、Microsoft 和 Apple 的面试。
 
 ![](https://cdn-media-1.freecodecamp.org/images/I5B6EVAqwkXnGK8lkpkdrMwoQaiYxkM1-h-D)
 
 2017 Senior Year Résumé
 
-I obtained these interviews by sending my résumé to the résumé **black hole**, also known as applying online.
+我通过发送我的简历到**black hole**（即在线申请）而获得这些面试。
 
 ![](https://cdn-media-1.freecodecamp.org/images/tXP4GgRE1N5RkXgYm4Fq8GN8DxkVzAiAns3H)
 
-Applying online is the most common way people go about applying for a job and therefore the least effective way to land an interview due to competition. Yet that is exactly how I obtained all my interviews.
+在线申请是人们求职最常见的一种方式因此同时也是由于竞争而导致最无效的方式。而然在线申请正是我获得所有面试的方式。
 
-How did I accomplish this?
+我是如何做到的？
 
-In this article, I will go through a line-by-line analysis of my résumé for the following purposes:
+在本文中，出于以下目的我将会逐行分析我的简历：
 
--   explaining the choices that I made in creating my résumé
--   why I believe this résumé worked to help me land those interviews, and
--   how you can create an even better résumé!
+-   解释我在制作简历中做出的选择
+-   为什么我相信我的尽力能帮帮助我获得到那些面试，以及
+-   你如何制作出一分更好的简历！
 
-I decided to write this article because I struggled a lot with landing interviews when I first started looking for a job. It would have been extremely helpful for me to have a real-life example résumé to look at.
+我决定写这篇文章是因为我第一次开始找工作的时候很难收到面试。拥有一个真实的示例简历对我来说将会非常有帮助。
 
-This article is organized into the following sections:
+本文分为如下几个章节：
 
-1.  [**The All Too Familiar Way of Not Landing an Interview**][1]  \- a short anecdote of my frustrations when I first started applying for jobs
-2.  [**Evaluating the Options: Moving Forward**][2]  \- a reflection on different strategies to improve the odds of landing interviews
-3.  [**Learning How to Write a Killer Résumé By Example**][3]  \- the step-by-step analysis of my résumé with each of the following sections corresponding to my résumé:
+1.  [**完全不熟悉面试的方式**][1]  \- 我第一次求职失败的趣事
+2.  [**评估选项：前进**][2]  \- 思考提高面试几率的不同策略
+3.  [**通过案例学习如何书写一份杀手级简历**][3]  \- 逐行分析下列与我简历相对应的部分：
 
--   The Essentials from a Glance
--   Who Are You
--   Contact Information
--   Education
--   Employment
--   Personal Projects
--   Skills
+-   一目了然
+-   个人简介
+-   联系信息
+-   教育
+-   工作经历
+-   个人项目
+-   掌握技能
 
 ### The All Too Familiar Way of Not Landing an Interview
 

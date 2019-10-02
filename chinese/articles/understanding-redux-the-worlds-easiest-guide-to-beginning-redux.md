@@ -6,7 +6,7 @@
 ![轻松理解 Redux ](https://cdn-media-1.freecodecamp.org/images/1*8cpJBanzu5koQqzkBirvsQ.png)
 
 This is a comprehensive (but simplified) guide for absolute Redux beginners, or any who wants to re-evaluate their understanding of the fundamental Redux concepts.
-
+这是一篇全面的 Redux 教程，对绝大多数不了解 Redux 想学习它或者想重新学习 Redux 核心概念的人来说都是很轻松的。
 For an expanded  **Table of Contents**  please  [visit this link][1], & for more  **advanced Redux**concepts check out my  [Redux books][2].
 
 ### Introduction

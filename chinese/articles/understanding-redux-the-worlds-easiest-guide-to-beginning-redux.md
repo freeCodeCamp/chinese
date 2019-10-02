@@ -1,6 +1,6 @@
 > * 原文地址：[Understanding Redux: The World’s Easiest Guide to Beginning Redux](https://www.freecodecamp.org/news/understanding-redux-the-worlds-easiest-guide-to-beginning-redux-c695f45546f6/)
 > * 原文作者：[Emmanuel Ohans](https://www.freecodecamp.org/news/author/emmanuel/)
-> * 译者：
+> * 译者：StoneCode5 
 > * 校对者：
 
 ![Understanding Redux: The World’s Easiest Guide to Beginning Redux](https://cdn-media-1.freecodecamp.org/images/1*8cpJBanzu5koQqzkBirvsQ.png)

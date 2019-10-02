@@ -3,7 +3,7 @@
 > * 译者：StoneCode5 
 > * 校对者：
 
-![Understanding Redux: The World’s Easiest Guide to Beginning Redux](https://cdn-media-1.freecodecamp.org/images/1*8cpJBanzu5koQqzkBirvsQ.png)
+![轻松理解 Redux ](https://cdn-media-1.freecodecamp.org/images/1*8cpJBanzu5koQqzkBirvsQ.png)
 
 This is a comprehensive (but simplified) guide for absolute Redux beginners, or any who wants to re-evaluate their understanding of the fundamental Redux concepts.
 

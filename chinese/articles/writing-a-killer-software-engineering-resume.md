@@ -29,7 +29,7 @@
 -   为什么我相信我的尽力能帮帮助我获得到那些面试，以及
 -   你如何制作出一分更好的简历！
 
-我决定写这篇文章是因为我第一次开始找工作的时候很难收到面试。拥有一个真实的示例简历对我来说将会非常有帮助。
+我决定写这篇文章是因为我第一次开始找工作的时候经常碰壁。拥有一个真实的示例简历对我来说将会非常有帮助。
 
 本文分为如下几个章节：
 
@@ -45,51 +45,51 @@
 -   个人项目
 -   掌握技能
 
-### The All Too Familiar Way of Not Landing an Interview
+### 完全不熟悉面试的方式
 
-#### Applying Online
+#### 在线申请
 
-You probably know the link that every company provides for online applications. It’s the classic career site that shows you a bunch of job titles which you think you are totally qualified for until you open the job description and read the minimum requirements.
+你可能知道这个所有公司提供在线申请职位的链接。直到你打开这个网站的工作描述和阅读最低要求的时候，你会发现有一堆你认为你完全有资格的职位在这个经典的求职网站中。
 
 ![](https://cdn-media-1.freecodecamp.org/images/ZkNlrY5IYpz2bv2jQW33DyeetxaqDWzZBxYG)
 
-Google Career Page
+Google 职位页面
 
-A job description with a bunch of words that you have never heard of, may have heard of, or hoped you had heard of. And it has an innocent-looking “**Apply”**  button**.**
+一份工作描述中包含一堆关键词：从未听过、可能听过、希望你听过。并且这里有一个XX的“**Apply”**按钮。
 
 ![](https://cdn-media-1.freecodecamp.org/images/M5wN8EB3bR8qnxaVb8BdNL8yEqoAsGHzcOq6)
 
-Google Job Description
+Google 工作描述
 
 ![](https://cdn-media-1.freecodecamp.org/images/0ZrZYFRkruNTX4kLJDF4BEQikiPvAnVSXds0)
 
-Despite the uncertainty you may feel about your qualifications, you apply anyway because you want a job.
+尽管你的学位可能具有不确定性，你可能还是想申请一下，因为你需要一份工作。
 
-So you fill out the application form, press submit — and wait and hope for a positive response.
+因此你填了申请表格，点击提交按钮，并且等待和期盼一个积极地答复。
 
-Your results will be varied:
+你的申请的会有多种：
 
-1.  Phone Interview ? (yay, a chance at employment!!!)
-2.  Immediate Rejection ? (darn, back to the drawing board)
-3.  No reply ? (gosh, at least give me the courtesy of having some closure)
+1.  电话面试 ？（一次就业机会！！！）
+2.  直接拒绝 ？（回到首页）
+3.  没有回复 ？（至少给我一些礼貌性的答复）
 
-#### Repeat Until Success… Right?
+#### 重复直到成功 对吗?
 
-Sadly, this is the typical process that many people go through when looking for a job/internship.
+令人难过的是，这是需要多寻找工作/实习时候经历的典型过程。
 
-Apply to a couple of companies. Get a couple of rejections or no replies. Apply to a couple more companies. Get a couple more rejections or no replies. Over, and over, and over again.
+同时申请两家公司。获得两家公司的拒绝。向更多公司申请，收到更多的拒绝回应。一直重复下去。
 
-Why do we do this to ourselves? We spend all this time doing the same repetitive task to obtain the same, disappointing results.
+我们为什么要这么对自己？我们花费所有的时光去做重复的任务，并且收到同样的令人失望的结果。
 
-Because this is what everyone does to get an interview, right? Because at least we’re working towards the right direction and have a glimmer of hope, right? How else are you supposed to get an interview?
+因为这是每一个人获得面试要去做的事，对吧？因为我们至少正在朝着正确的方向努力，并拥有一线希望，对吧？你还应该为了获得面试做些什么？
 
 ### Evaluating the Options: Moving Forward
 
-> “Discouragement and failure are two of the surest stepping stones to success.”  
+> “挫折和失败是成功的两个最可靠的踏脚石。”
 >   
-> \- Dale Carnegie, (author of “How to Win Friends and Influence People”)
+> \- Dale Carnegie, (《如何赢得朋友和影响人》一书的作者)
 
-We can think of approaching the problem of not getting interviews in two ways:
+我们可以思考两种方法区获得面试机会：
 
 1.  Putting your application/ résumé under the microscope
 2.  Questioning the process in which you go about obtaining an interview

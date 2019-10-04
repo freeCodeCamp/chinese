@@ -1,6 +1,6 @@
 > * 原文地址：[What exactly can you do with Python? Here are Python's 3 main applications.](https://www.freecodecamp.org/news/what-can-you-do-with-python-the-3-main-applications-518db9a68a78/)
 > * 原文作者：YK Sugi
-> * 译者：
+> * 译者：FENGJIAJUN
 > * 校对者：
 
 If you’re thinking of learning Python — or if you recently started learning it — you may be asking yourself:

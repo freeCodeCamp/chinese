@@ -91,58 +91,58 @@ Google 工作描述
 
 我们可以思考两种方法区获得面试机会：
 
-1.  Putting your application/ résumé under the microscope
-2.  Questioning the process in which you go about obtaining an interview
+1.  将你的申请/简历放到显微镜下
+2.  对你获得面试的过程提出质疑
 
-This article focuses on the former, because no matter what avenue you end up taking to get an interview,  **essentially every company utilizes your résumé as a basis for evaluation**. Therefore, we will examine my résumé under a microscope and focus on learning how to write a remarkable résumé.
+这篇文章专注于第一点，因为无论你最终采取什么措施获得面试，**基本上每个公司都会以你的简历作为评估的基础**。因此，我们将会在显微镜下检查我们的简历，并且专注于学习如何书写一份出色的简历。
 
-Getting an interview via online application is extremely challenging because your résumé has to pass numerous stages before it gets into the hands of the hiring manager.
+通过在线申请获得一份面试是极具挑战性的，因为你的简历必须经过很多阶段才能够交到招聘经理的手中。
 
-It has to bypass  [online keyword filters][4], stand out to a recruiter who reviews it for about 6 seconds and meet the expectations of the hiring manager who decides whether you are worth interviewing.
+你的简历必须得绕过[在线关键词过滤器][4]，在只花费6秒钟审核的招聘者中脱颖而出，并且获得决定你是否值得面试的招聘经理的期望。
 
-Yet, despite all those hurdles, I obtained all my interviews by applying online.  **How?**  _Trial and error_. I’ve applied to hundreds of different software engineering positions since my sophomore year of college.
+尽管有这些障碍，但我还是通过在线申请获得了我所有的面试。 **怎么做到的？** _尝试和犯错_。自大学二年级以来，我已经申请了数百个不同的软件工程职位。
 
-When I first started applying, I faced a staggering number of rejections, but over time I learned how to adapt. By the time I was a senior, I was extremely successful in landing interviews from almost every company I applied to.
+当我一开始在线申请的时候，我面对着惊人数量的解决，但随着时间的迁移，我学会了如何去适应它们。到大四的时候，我几乎成功收到了我申请的所有公司的面试。
 
-The résumé that landed me all those interviews is the  **exact**  one in this article.
+让我收到所有这些面试的简历在本文中是**最精确**的。
 
-It took me  **four years**  of iteration and real-life testing to get to this point. From this experience, I have come up with a list of  **résumé writing principles**  to help you write an even better software résumé. These are principles that have helped me land my dream job and are principles that can help you land yours.
+这份简历花费了我**四年**的时间和真实的测试才能达到这一点。通过这些经历，我提供了一份**书写简历原则**清单帮助你写一份更好的软件简历。这些原则可以帮助我找到理想的工作同时也可以帮助你找到理想的工作。
 
-While it took me  **four**  years of college to figure this all out, you don’t have to go through all the leaps and bounds because you can learn all of it right here, right now.
+尽管我花费了**四**年大学才明白这些，但是你不必经历所有的这些坎坷，因为你可以立即在这里学到所有的这些。 
 
-My goal is to be the one-stop hub for all your questions on how to obtain a software engineering interview. That way, you don’t have to waste countless hours cross-referencing Google search results to find the best answer on how to write a software engineering résumé that gets interviews.
+我的目标是成为解决你所有获得软件工程师面试问题的一站式中心。这样你就不必去浪费大量的时间去交叉参考谷歌搜索结果，从而找到如何编写能够获得面试的软件工程师简历的最佳答案。
 
-Your valuable time could be better spent on writing your killer résumé.
+你可以将更宝贵的时间花费在书写杀手级简历上。
 
-So start here and now with this article. Reap the benefits from my past experiences and let’s begin the step-by-step walkthrough of my résumé!
+因此从现在本文的这里开始。从我过去的经验中吸取教训并且让我们开始逐步分析我的简历！
 
-### Learning How to Write a Killer Résumé — By Example
+### 通过案例学习如何书写一份杀手级的简历
 
-> “As to methods there may be a million and then some, but principles are few. The man who grasps principles can successfully select his own methods. The man who tries methods, ignoring principles, is sure to have trouble.”
+> “方法可以有一百万种或更多许多，但原则只有几个。抓住原则的人可以有效的选择自己的方法，而尝试方法但忽略原则的人，一定会遇到问题。”
 
-> \- Ralph Waldo Emerson
+> \- 拉尔夫·沃尔多·爱默生
 
-Let’s take another look at this résumé:
+让我们再次看一下这份简历：
 
 ![](https://cdn-media-1.freecodecamp.org/images/vbkZAcOy2IDkqyI6OgaCCsIBurgUf2muRpOg)
 
-Résumé: Essential Sections Highlighted
+简历：重点部分要突出
 
-#### The Essentials from a Glance
+#### 基本要点概览
 
-#### One-page résumé
+#### 一页简历
 
-Recruiters do not have all day to read your résumé. On average they view it for less than 6 seconds. Keep it  **short**  and  **concise**.
+招聘者不会全天的时间去阅读你的简历。平均而言，他们观看简历只花费少于6秒。保持你的简历**简短**和**简洁**。
 
-#### Sections (Header, Education, Employment, Software Projects, Skills)
+#### 章节（标题、教育经历、工作经历、软件项目、技能）
 
-Place sections in  **order of importance**  from top to bottom. The ‘[Personal Projects][5]’ section is a unique, must-have for people looking for a software engineering position.
+从上到下按照“重要性顺序”放置各个部分。“[个人项目][5]”部分对于正在寻找软件工程职位的人来说是一个独特的必备部分。
 
-#### Consistent layout + font per section
+#### 一直的 布局+章节字体
 
-Make sure each section contains a uniform look. Consistent style is important as it enhances the readability.  **Readability**  is essential.
+确保每个部分包含统一的字体。一致的样式很重要，因为它可以提高可读性。**可读性**是非常重要的。
 
-So why does this résumé work? Let’s explore the numbered bullet points.
+那么为什么这种简历有效呢？让我们来探索一下编号的要点。
 
 #### Who Are You (1)
 

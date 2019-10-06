@@ -4,94 +4,155 @@
 > * 校对者：
 
 ![The CSS Handbook: a handy guide to CSS for developers](https://cdn-media-1.freecodecamp.org/images/1*aeXtrs9UI4WniMd1miDIDw.png)
+CSS 指南：计算机开发人员的便捷指南
+
 
 I wrote this article to help you quickly learn CSS and get familiar with the advanced CSS topics.
+我写这篇指南是为了帮助你们快速学习CSS技术并熟悉先进的CSS样式。
+
 
 CSS is often quickly dismissed as an easy thing to learn by developers, or one thing you just pick up when you need to quickly style a page or app. Due to this reason, it’s often learned on-the-fly, or we learn things in isolation right when we have to use them. This can be a huge source of frustration when we find that the tool does not simply do what we want.
+开发者经常对CSS技术不屑一顾，认为这项技术很容易学，或者当需要设计页面或应用时，才会去学习CSS。由于这种原因，人们学习CSS，都是匆匆忙忙，或者当我们需要用它时，才会去专门学习，因此，当发现运用CSS工具并没有得出想要的结果时，我们会感到极度失落。
 
 This article will help you get up to speed with CSS and get an overview of the main modern features you can use to style your pages and apps.
+这篇指南会帮助你快速掌握CSS技术，并初步了解你能够用来设计网页和应用的主流现代样式表。
 
 I hope to help you get comfortable with CSS and get you quickly up to speed with using this awesome tool that lets you create stunning designs on the Web.
+我希望这篇指南能够帮助你自如地应对CSS，并快速掌握CSS-这项极棒的工具，创造出令人惊叹的网站设计。
 
 [**Click here to get a PDF / ePub / Mobi version of this post to read offline**][1]
 
 CSS, a shorthand for Cascading Style Sheets, is one of the main building blocks of the Web. Its history goes back to the 90’s, and along with HTML it has changed a lot since its humble beginnings.
-
+CSS是级联样式表的缩写，是网站的主要构成元素之一。它的历史要追溯到90年代，和HTML一样，一开始它很简陋，但如今，已发生了巨大的变化。
 As I’ve been creating websites since before CSS existed, I have seen its evolution.
+我在CSS出现之前，就开始开发网站，可以说，我见证了它的发展。
 
 CSS is an amazing tool, and in the last few years it has grown a lot, introducing many fantastic features like CSS Grid, Flexbox and CSS Custom Properties.
+CSS这个工具棒极了，在过去几年里，它又逐渐发展，引进了许多极好的样式，如CSS网格，弹性盒布局，CSS自定义属性。
 
 This handbook is aimed at a vast audience.
-
+这本指南是针对不同水平的开发者。
 First, the beginner. I explain CSS from zero in a succinct but comprehensive way, so you can use this book to learn CSS from the basics.
+首先，对于初学者，我将从零开始，用简洁易懂的语言，全面地解释CSS，你可以用这本书从基础学起。
 
 Then, the professional. CSS is often considered like a secondary thing to learn, especially by JavaScript developers. They know CSS is not a real programming language, they are programmers and therefore they should not bother learning CSS the right way. I wrote this book for you, too.
-
+然后，对于专业的开发者，CSS的学习通常被认为是次要的，特别是Javascript开发者。他们知道CSS并不是真正的程序语言，作为程序员，他们并不介意系统地学习CSS技术。这本书也是为你们而写的。
 Next, the person that knows CSS from a few years but hasn’t had the opportunity to learn the new things in it. We’ll talk extensively about the new features of CSS, the ones that are going to build the web of the next decade.
 
+最后，熟知CSS技术但没有机会学习新内容的人们。我们将在本书中详细地介绍后十年用来创建网站CSS的新样式，
+
 CSS has improved a lot in the past few years and it’s evolving fast.
+CSS在过去几年已改进了很多，发展迅速。
 
 Even if you don’t write CSS for a living, knowing how CSS works can help save you some headaches when you need to understand it from time to time, for example while tweaking a web page.
-
+即使你并不以CSS为生，了解CSS如何运作，会让你在需要从头到尾理解它时，不会感到头疼。例如，当你要改进网页的时候。
 Thank you for getting this ebook. My goal with it is to give you a quick yet comprehensive overview of CSS.
+谢谢你们阅读这本电子书。我的目的就是让你们快速而全面地了解CSS。
 
 Flavio
+弗拉维奥
 
 You can reach me via email at  [flavio@flaviocopes.com][2], on Twitter  [@flaviocopes][3].
+你们可以通过邮箱 flaviocopes.com或推特@flaviocopes联系我。
 
-My website is  [flaviocopes.com][4].
-
-## Table of Contents
+## Table of Contents目录
 
 -   [INTRODUCTION TO CSS][5]
+CSS的介绍
 -   [A BRIEF HISTORY OF CSS][6]
+CSS的简要历史
 -   [ADDING CSS TO AN HTML PAGE][7]
+应用CSS于超文本网页
 -   [SELECTORS][8]
+选择器
+
 -   [CASCADE][9]
+-层叠
 -   [SPECIFICITY][10]
+特异性
 -   [INHERITANCE][11]
+继承
 -   [IMPORT][12]
+导入
 -   [ATTRIBUTE SELECTORS][13]
+属性继承
 -   [PSEUDO-CLASSES][14]
--   [PSEUDO-ELEMENTS][15]
+伪类
+-   [PSEUDO-ELEMENTS][15]/、
+伪元素
 -   [COLORS][16]
+颜色
 -   [UNITS][17]
+单元
 -   [URL][18]
+统一资源定位地址
 -   [CALC][19]
+计算器
 -   [BACKGROUNDS][20]
+背景
 -   [COMMENTS][21]
+解释
 -   [CUSTOM PROPERTIES][22]
+自定义属性
 -   [FONTS][23]
+字体
 -   [TYPOGRAPHY][24]
+版面设计
 -   [BOX MODEL][25]
+装箱式
 -   [BORDER][26]
+边界
 -   [PADDING][27]
+填充
 -   [MARGIN][28]
+页边
 -   [BOX SIZING][29]
+盒子模型
 -   [DISPLAY][30]
+显示
 -   [POSITIONING][31]
+定位
 -   [FLOATING AND CLEARING][32]
+浮动和结算
 -   [Z-INDEX][33]
+Z指数
 -   [CSS GRID][34]
+CSS网格
 -   [FLEXBOX][35]
+弹性盒布局
 -   [TABLES][36]
+表格
 -   [CENTERING][37]
+横向居中
 -   [LISTS][38]
+列表
 -   [MEDIA QUERIES AND RESPONSIVE DESIGN][39]
+媒体查询和响应式设计
 -   [FEATURE QUERIES][40]
+功能查询
 -   [FILTERS][41]
+滤波器
 -   [TRANSFORMS][42]
+变形
 -   [TRANSITIONS][43]
+变迁
 -   [ANIMATIONS][44]
+仿真
 -   [NORMALIZING CSS][45]
+规范化
 -   [ERROR HANDLING][46]
+错误处理
 -   [VENDOR PREFIXES][47]
+前缀
 -   [CSS FOR PRINT][48]
+CSS的打印样式
 -   [WRAPPING UP][49]
+总结
 
 ### INTRODUCTION TO CSS
 
 **CSS**  (an abbreviation of  **Cascading Style Sheets**) is the language that we use to style an HTML file, and tell the browser how should it render the elements on the page.
+CSS 是用来设计超文本文件的语言，通过CSS,可以让服务器修改网页上的组成部分。
 
 > _In this book I talk exclusively about styling HTML documents, although CSS can be used to style other things too._
 

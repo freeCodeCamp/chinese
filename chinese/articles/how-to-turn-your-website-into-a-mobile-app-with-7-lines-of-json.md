@@ -134,13 +134,13 @@ Jasonette 是一种开源的，基于标记的用于构建跨平台原生应用�
 
 #### 解决方法
 
-Web 容器2.0已经添加了`url`属性。 你可以像这样嵌入本地`file://`HTML （它加载自应用程序附带的本地 HTML 文件）：
+Web 容器2.0已经添加了`url`属性。 你可以像这样嵌入本地`file://`HTML（它加载自应用程序附带的本地 HTML 文件）：
 
 ```
 {  "$jason": {    "head": {      ...    },    "body": {      "background": {        "type": "html",        "url": "file://index.html"      }    }  }}
 ```
 
-或像这样嵌入一个远程的`http[s]://`URL  （它加载自远程 HTML 文件）：
+或像这样嵌入一个远程的`http[s]://`URL（它加载自远程 HTML 文件）：
 
 ```
 {  "$jason": {    "head": {      ...    },    "body": {      "background": {        "type": "html",        "url": "https://news.ycombinator.com"      }    }  }}
@@ -150,7 +150,7 @@ Web 容器2.0已经添加了`url`属性。 你可以像这样嵌入本地`file:/
 
 #### 问题
 
-此前，Web容器只用于显示内容，而非可交互的。这意味着  **以下任一项都不可能实现：**
+此前，Web容器只用于显示内容，而非可交互的。这意味着 **以下任一项都不可能实现：**
 
 1.  **Jasonette => Web 容器**: 从 Jasonette 调用 Web 容器内的 JavaScript 函数。
 2.  **Web 容器 => Jasonette**: 从 Web 容器代码调用原生 API。
@@ -174,7 +174,7 @@ Jasonette 的重点是设计一种标准的标记语言来描述跨平台的移�
 
  `options`对象是将被发送到 Web 容器的实际[ JSON-RPC 请求][11] 。让我们看看各个属性的含义：
 
--   `id`: Web 容器构建在一个名为  [Agent][12]的底层架构之上。通常，一个视图可以有多个 Agent，每个 Agent 都有其唯一的ID。但是 [ Web 容器是一种特殊的 Agent，他只能使用`$webcontainer`作为 ID][13], 因此我们在这里使用这个 ID。
+-   `id`: Web 容器构建在一个名为  [Agent][12] 的底层架构之上。通常，一个视图可以有多个 Agent，每个 Agent 都有其唯一的ID。但是 [ Web 容器是一种特殊的 Agent，他只能使用`$webcontainer`作为 ID][13], 因此我们在这里使用这个 ID。
 -   `method`: 要调用的 JavaScript 函数名
 -   `params`: 传递给 JavaScript 函数的参数数组。
 
@@ -208,7 +208,7 @@ login("alice", "1234")
 
 1.  其中 [底部的输入组件是100%原生的][19]。
 2.  二维码是由 [作为 Web 应用][20]的 Web 容器产生的。
-3. 当用户输入某些内容，并按 “Generate” 时，它将调用 Web 容器 Agent 的`$agent.request`操作，并进一步调用  [JavaScript 函数 "qr"][21]
+3. 当用户输入某些内容，并按 “Generate” 时，它将调用 Web 容器 Agent 的`$agent.request`操作，并进一步调用  [JavaScript 函数 "qr"][21]。
 
 你可以在[这里][22]参阅示例。 
 

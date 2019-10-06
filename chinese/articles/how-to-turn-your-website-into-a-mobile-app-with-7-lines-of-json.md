@@ -41,7 +41,7 @@
 
 每当你听到有人谈论移动应用的未来，你都可能会听到他们谈论 **“究竟是 HTML5 还是原生方法会胜出呢？”** 
 
-人们觉得`原生`和 `HTML` 是不能共存的，更不会认为它们能相辅相成，甚至实现看似不可能的功能。
+人们觉得`原生`和`HTML`是不能共存的，更不会认为它们能相辅相成，甚至实现看似不可能的功能。
 
 在本文中，我将阐述：
 
@@ -63,13 +63,13 @@
 
 你可能想快速使用一些功能，但它们需要一个庞大的第三方库。
 
-比如，为了以原生方式实现一个二维码生成器，你可能需要安装某些第三方库，而它们将大大增加文件的体积。但如果你使用 Web 视图引擎以及通过一个简单的 `<script src>` 来调用 javascript 库，你就能免费获得这些功能，且不需要安装任何第三方原生库。
+比如，为了以原生方式实现一个二维码生成器，你可能需要安装某些第三方库，而它们将大大增加文件的体积。但如果你使用 Web 视图引擎以及通过一个简单的`<script src>`来调用 javascript 库，你就能免费获得这些功能，且不需要安装任何第三方原生库。
 
 #### 3\. 缺乏可靠的移动库
 
 就一些前沿技术而言，还没有可靠稳定的移动端实现。
 
-幸运的是，它们中的大多数都有 Web 端实现，所以集成它们的最有效的方式就是使用 JavaScrip 库。
+幸运的是，它们中的大多数都有 Web 端实现，所以集成它们的最有效的方式就是使用 JavaScript 库。
 
 #### 4\. 构建部分原生，部分基于 Web 的应用
 
@@ -99,7 +99,7 @@ Jasonette 是一种开源的，基于标记的用于构建跨平台原生应用�
 
 将 Web 视图集成到原生应用中是一项复杂的工作。无缝集成需要：
 
-1.  **Web 视图应该被集成为原生应用布局的一部分：**  Web 视图应该像其他原生 UI 组件一样，作为原生布局的一部分融入应用，否则会让用户感到笨拙，就像在访问一个真的网站一样。
+1.  **Web 视图应该被集成为原生应用布局的一部分：** Web 视图应该像其他原生 UI 组件一样，作为原生布局的一部分融入应用，否则会让用户感到笨拙，就像在访问一个真的网站一样。
 2.  **父应用可以控制子 Web 容器：** 父应用应当可以轻松地控制子 Web 视图。
 3.  **子 Web 容器可以触发父应用的原生事件：** 子应用应当可以触发父应用事件从而运行原生 API。
 
@@ -124,7 +124,7 @@ Jasonette 是一种开源的，基于标记的用于构建跨平台原生应用�
 
 #### 问题
 
-先前在版本1中，想要将 Web 容器用作后台视图组件，你必须要首先 [将  `$jason.body.background.type`  设置为  `"html"`  然后在 `$jason.body.background.text`属性下硬编码 HTML 文本 ][8]，如下所示：
+先前在版本1中，想要将 Web 容器用作后台视图组件，你必须要首先 [将`$jason.body.background.type`设置为`"html"`然后在 `$jason.body.background.text`属性下硬编码 HTML 文本 ][8]，如下所示：
 
 ```
 {  "$jason": {    "head": {      ...    },    "body": {      "background": {        "type": "html",        "text": "<html><body><h1>Hello World</h1></body></html>"      }    }  }}
@@ -134,13 +134,13 @@ Jasonette 是一种开源的，基于标记的用于构建跨平台原生应用�
 
 #### 解决方法
 
-Web 容器2.0已经添加了  `url`  属性。 你可以像这样嵌入本地  `file://` HTML （它加载自应用程序附带的本地 HTML 文件）：
+Web 容器2.0已经添加了`url`属性。 你可以像这样嵌入本地`file://`HTML （它加载自应用程序附带的本地 HTML 文件）：
 
 ```
 {  "$jason": {    "head": {      ...    },    "body": {      "background": {        "type": "html",        "url": "file://index.html"      }    }  }}
 ```
 
-或像这样嵌入一个远程的  `http[s]://`  URL  （它加载自远程 HTML 文件）：
+或像这样嵌入一个远程的`http[s]://`URL  （它加载自远程 HTML 文件）：
 
 ```
 {  "$jason": {    "head": {      ...    },    "body": {      "background": {        "type": "html",        "url": "https://news.ycombinator.com"      }    }  }}
@@ -161,20 +161,20 @@ Web 容器2.0已经添加了  `url`  属性。 你可以像这样嵌入本地  `
 
 Jasonette 的重点是设计一种标准的标记语言来描述跨平台的移动应用程序。因此，我们需要它能够全面描述父应用与子 Web 容器间的通信。 
 
-为了实现这一点，我在父应用和子 Web 容器之间设计了一个基于 `[JSON-RPC][9]` 的通信信道。由于 Jasonette 上的所有内容都是用 JSON 对象表示的，所以使用 JSON-RPC 标准格式作为通信协议是非常有意义的。
+为了实现这一点，我在父应用和子 Web 容器之间设计了一个基于`[JSON-RPC][9]`的通信信道。由于 Jasonette 上的所有内容都是用 JSON 对象表示的，所以使用 JSON-RPC 标准格式作为通信协议是非常有意义的。
 
 ![](https://cdn-media-1.freecodecamp.org/images/dISqZspArHgei6hasHQ89nw7g1GrWSsyPG8s)
 
-为了对 Web 容器能进行 JavaScript 函数调用我们声明了一个名为 `$agent.request` 的操作：
+为了对 Web 容器能进行 JavaScript 函数调用我们声明了一个名为`$agent.request`的操作：
 ```
 {  "type": "$agent.request",  "options": {    "id": "$webcontainer",    "method": "login",    "params": ["username", "password"]  }}
 ```
 
-`[$agent.request][10]`  是触发 JSON-RPC 请求并发送到 Web 容器中的原生 API。要使用它，我们必须传递一个 `options`  对象作为其参数。
+`[$agent.request][10]`是触发 JSON-RPC 请求并发送到 Web 容器中的原生 API。要使用它，我们必须传递一个`options`对象作为其参数。
 
- `options` 对象是将被发送到 Web 容器的实际[ JSON-RPC 请求][11] 。让我们看看各个属性的含义：
+ `options`对象是将被发送到 Web 容器的实际[ JSON-RPC 请求][11] 。让我们看看各个属性的含义：
 
--   `id`: Web 容器构建在一个名为  [Agent][12]的底层架构之上。通常，一个视图可以有多个 Agent，每个 Agent 都有其唯一的ID。但是 [ Web 容器是一种特殊的 Agent，他只能使用 `$webcontainer`作为 ID][13], 因此我们在这里使用这个 ID。
+-   `id`: Web 容器构建在一个名为  [Agent][12]的底层架构之上。通常，一个视图可以有多个 Agent，每个 Agent 都有其唯一的ID。但是 [ Web 容器是一种特殊的 Agent，他只能使用`$webcontainer`作为 ID][13], 因此我们在这里使用这个 ID。
 -   `method`: 要调用的 JavaScript 函数名
 -   `params`: 传递给 JavaScript 函数的参数数组。
 
@@ -186,11 +186,11 @@ Jasonette 的重点是设计一种标准的标记语言来描述跨平台的移�
 
 此标记表示：
 
-当视图加载 (`[$jason.head.actions.$load][14]`)时，向 Web 容器 Agent(`[$agent.request][15]`) 发送 JSON-RPC 请求，该请求在 `options` 下被指定。
+当视图加载 (`[$jason.head.actions.$load][14]`)时，向 Web 容器 Agent(`[$agent.request][15]`) 发送 JSON-RPC 请求，该请求在`options`下被指定。
 
-Web 容器在 `[$jason.body.background][16]`下被定义，在本例中将加载一个名 `file://index.html`的本地文件。
+Web 容器在 `[$jason.body.background][16]`下被定义，在本例中将加载一个名为`file://index.html`的本地文件。
 
-它将会查找一个名为 `login` 的 JavaScript 函数，并传递  `params`  下的两个参数（ `"alice"`  和  `"1234"`）
+它将会查找一个名为`login`的 JavaScript 函数，并传递`params`下的两个参数（`"alice"`和`"1234"`）
 
 ```
 login("alice", "1234")
@@ -208,7 +208,7 @@ login("alice", "1234")
 
 1.  其中 [底部的输入组件是100%原生的][19]。
 2.  二维码是由 [作为 Web 应用][20]的 Web 容器产生的。
-3. 当用户输入某些内容，并按 “Generate” 时，它将调用 Web 容器 Agent 的  `$agent.request` 操作，并进一步调用  [JavaScript 函数 “qr”][21]
+3. 当用户输入某些内容，并按 “Generate” 时，它将调用 Web 容器 Agent 的`$agent.request`操作，并进一步调用  [JavaScript 函数 "qr"][21]
 
 你可以在[这里][22]参阅示例。 
 
@@ -220,11 +220,11 @@ login("alice", "1234")
 
 假设你要构建一个自定义的 Web 浏览器应用程序。你可能想将自己的自定义 JavaScript 注入到每个 Web 视图中以自定义 Web 视图的行为，这有点像 Web 浏览器的扩展。
 
-就算你不想构建 Web 浏览器，在想对那些内容无法控制的 URL 实现自定义行为时，你也需要使用脚本注入方法。在原生应用程序和 Web 容器之间实现通信的唯一方法就是通过 `$agent`API。但若你无法更改 HTML 内容，则只能通过动态注入的方式将 `$agent` 接口添加到 Web 容器中。 
+就算你不想构建 Web 浏览器，在想对那些内容无法控制的 URL 实现自定义行为时，你也需要使用脚本注入方法。在原生应用程序和 Web 容器之间实现通信的唯一方法就是通过 `$agent`API。但若你无法更改 HTML 内容，则只能通过动态注入的方式将`$agent`接口添加到 Web 容器中。 
 
 #### 解决方法
 
-就像上文提到的， `$jason.body.background`  Web 容器也是一个 `agent`。这意味着你可以使用与普通 Agent 相同的 `[$agent.inject][23]` 方法。
+就像上文提到的，`$jason.body.background`Web 容器也是一个`agent`。这意味着你可以使用与普通 Agent 相同的`[$agent.inject][23]`方法。
 
 ![](https://cdn-media-1.freecodecamp.org/images/kt6qG0I8AgcTy270pNSHCE2QfZpdRRMg8SZU)
 
@@ -233,7 +233,7 @@ login("alice", "1234")
 在过去，Web 容器处理链接点击只有两种方法：
 
 1.  **只读：** 将 Web 容器视为只读，并忽略触摸或滚动等所有事件。这样所有 Web 容器都是只读的，除非你让它表现得像常规浏览器一样，正如下文所述。
-2.  **常规浏览器行为：**  像普通浏览器一样，让用户与页面交互。这需要将 `“type”：“$default”` 设置为 `“action”` 属性来进行声明。
+2.  **常规浏览器行为：**  像普通浏览器一样，让用户与页面交互。这需要将`“type”：“$default”`设置为 `“action”`属性来进行声明。
 
 #### 问题
 
@@ -244,7 +244,7 @@ login("alice", "1234")
 
 #### 解决方法
 
-使用新的 Web 容器，你可以将任何  `action`  附加到  `$jason.body.background`  Web 容器以处理点击事件。
+使用新的 Web 容器，你可以将任何`action`附加到`$jason.body.background`Web 容器以处理点击事件。
 
 ![](https://cdn-media-1.freecodecamp.org/images/FhoDSEv8qQ4ZISs6syta2eU80WYBeQmFRAAS)
 
@@ -254,15 +254,15 @@ login("alice", "1234")
 {  "$jason": {    "head": {      "actions": {        "displayBanner": {          "type": "$util.banner",          "options": {            "title": "Clicked",            "description": "Link {{$jason.url}} clicked!"          }        }      }    },    "body": {      "background": {        "type": "html",        "url": "file://index.html",        "action": {          "trigger": "displayBanner"        }      }    }  }}
 ```
 
-在这里我们将 `"trigger": "displayBanner"` 附加到了 Web 容器。这意味着当用户点击 Web 容器中的任何链接时，会触发 `displayBanner`  操作，而不是让 Web 视图处理它。
+在这里我们将`"trigger": "displayBanner"`附加到了 Web 容器。这意味着当用户点击 Web 容器中的任何链接时，会触发`displayBanner`操作，而不是让 Web 视图处理它。
 
-此外，若你查看 `displayBanner` 操作，你会发现 `$jason` 变量。在本例中，点击的链接将通过 `$jason` 变量传递。例如，如果你点击一个名为 `"https://google.com"` 的 URL，  `$jason`  将获得下列值：
+此外，若你查看`displayBanner`操作，你会发现`$jason`变量。在本例中，点击的链接将通过`$jason`变量传递。例如，如果你点击一个名为`"https://google.com"`的 URL，`$jason`将获得下列值：
 
 ```
 {  "url": "https://google.com"}
 ```
 
-这意味着你可以通过[检查 `$jason.url`值][24]来有选择地触发不同的操作。
+这意味着你可以通过[检查`$jason.url`值][24]来有选择地触发不同的操作。
 
 让我们再举一个实现自定义 Web 浏览器的例子：
 
@@ -270,10 +270,10 @@ login("alice", "1234")
 {  "$jason": {    "head": {      "actions": {        "handleLink": [{          "{{#if $jason.url.indexOf('signin') !== -1 }}": {            "type": "$href",            "options": {              "url": "file://key.html"            }          }        }, {          "{{#else}}": {            "type": "$default"          }        }]      }    },    "body": {      "background": {        "type": "html",        "url": "file://index.html",        "action": {          "trigger": "handleLink"        }      }    }  }}
 ```
 
-我们测试URL是否包括  `signin`  字符串，然后根据结果执行不同的操作。
+我们测试URL是否包括`signin`字符串，然后根据结果执行不同的操作。
 
-1.  若包含 `signin`，则会打开一个新视图并以原生方式处理本地登录。
-2.  若不包含 `signin`，则只会运行  `"type": "$default"`  操作，就像普通浏览器一样。
+1.  若包含`signin`，则会打开一个新视图并以原生方式处理本地登录。
+2.  若不包含`signin`，则只会运行`"type": "$default"`操作，就像普通浏览器一样。
 
 ### 使用示范
 
@@ -281,10 +281,10 @@ login("alice", "1234")
 
 我们现今可以利用新版 Web 容器的特性来：
 
-1.  通过  `url`  属性实现自我加载，当做一个成熟完备的浏览器
+1.  通过`url`属性实现自我加载，当做一个成熟完备的浏览器
 2.  根据 URL 有选择地处理链接点击操作
 
-我们甚至可以用十几行 JSON 代码来构建一个自定义的 Web 浏览器应用。既然我们现在可以劫持每个链接的点击，那么可以看一下  `$jason.url`  并根据 URL 运行任何我们想要的操作。
+我们甚至可以用十几行 JSON 代码来构建一个自定义的 Web 浏览器应用。既然我们现在可以劫持每个链接的点击，那么可以看一下`$jason.url`并根据 URL 运行任何我们想要的操作。
 
 让我们看看下面的例子：
 
@@ -298,17 +298,17 @@ login("alice", "1234")
 
 这些都可以通过基于`$jason.url`选择性地触发不同的动作来实现。
 
-**步骤 1.将名为 `visit` 的操作附加到 Web 容器中，如下所示：**
+**步骤 1.将名为`visit`的操作附加到 Web 容器中，如下所示：**
 
 ```
 {  ...  "body": {    "background": {      "type": "html",      "url": "https://news.ycombinator.com",      "action": {        "trigger": "visit"      }    }  }}
 ```
 
-**步骤 2.根据 `$jason.url` 的值运行 `visit` 中的相关操作**
+**步骤 2.根据`$jason.url`的值运行`visit`中的相关操作**
 
-在以下代码中，我们将检查 `$jason.url`  是否与 `newest`,  `show`,  `ask`等相匹配（它们是顶部菜单选项的链接）。若匹配，我们可以通过设置 `"type": "$default"`来让 Web 容器像常规浏览器一样工作。
+在以下代码中，我们将检查`$jason.url`是否与 `newest`,  `show`,  `ask`等相匹配（它们是顶部菜单选项的链接）。若匹配，我们可以通过设置`"type": "$default"`来让 Web 容器像常规浏览器一样工作。
 
-若模式不匹配，我们将通过原生的 `$href` 过渡到新视图，并将点击的链接作为参数进行传递。
+若模式不匹配，我们将通过原生的`$href`过渡到新视图，并将点击的链接作为参数进行传递。
 
 ```
 ..."actions": {  "visit": [    {      "{{#if /\\/(newest|show|ask)$/.test($jason.url) }}": {        "type": "$default"      }    },    {      "{{#else}}": {        "type": "$href",        "options": {          "url": "https://jasonette.github.io/Jasonpedia/webcontainer/agent/hijack.json",          "preload": {            "background": "#ffffff"          },          "options": {            "url": "{{$jason.url}}"          }        }      }    }  ]},
@@ -320,7 +320,7 @@ login("alice", "1234")
 
 人们谈论“混合”应用时，通常是指封装在原生应用框架内的 HTML Web 应用程序。
 
-但在此我并不是想说这个。我说的“ 混合”，是指真正的混合应用程序，即一个应用程序可以同时具有多个原生视图和多个基于 Web 的视图。与此同时，一个视图可以具有多个原生 UI 组件以及一个以相同的原生布局渲染的 Web 容器。
+但在此我并不是想说这个。我说的“混合”，是指真正的混合应用程序，即一个应用程序可以同时具有多个原生视图和多个基于 Web 的视图。与此同时，一个视图可以具有多个原生 UI 组件以及一个以相同的原生布局渲染的 Web 容器。
 
 **基于 Web 的视图与原生视图之间的交互应是无缝的，你根本无法区分起始。**
 
@@ -350,8 +350,8 @@ Jasonbase 是我开发的一项免费 JSON 托管服务，旨在让你轻松托�
 
 解决方案是创建一个包含以下内容的抽象：
 
-1.  **声明式标记语言：**  用于描述如何将 Web 视图嵌入原生应用
-2.  **通信协议 (JSON-RPC)：**  用于应用与子 Web 视图间进行简单交互。
+1.  **声明式标记语言：** 用于描述如何将 Web 视图嵌入原生应用
+2.  **通信协议 (JSON-RPC)：** 用于应用与子 Web 视图间进行简单交互。
 
 我并不是说这就是解决所有问题的最终方案，但这对于我自己的用例而言是很出色的。
 

@@ -27,7 +27,7 @@ Note: you can get a  [PDF, ePub, or Mobi][1]  version of this handbook for easie
 
 JavaScript is one of the most popular programming languages in the world. Created 20 years ago, it’s gone a very long way since its humble beginnings.
 
-Being the first, and the only scripting language that was supported natively by web browsers, it simply stuck.
+Being the first, and the only scripting language that was supported natively by web browsers, it simply stuck.（stuck不知道怎么翻译恰当）
 
 In the beginnings, it was not nearly as powerful as it is today, and it was mainly used for fancy animations ? and the marvel known at the time as Dynamic HTML (D[HTML)][2].
 
@@ -39,6 +39,23 @@ JavaScript is now widely also used outside the browser. The rise of Node.js in t
 
 JavaScript is now also the language powering databases and many more applications. It’s even possible to develop embedded applications, mobile apps, TV sets apps and much more. What started as a tiny language inside the browser is now the most popular language in the world.
 
+## 简介
+
+JavaScript是世界上最受欢迎的编程语言之一，在它诞生之后的这20年里，它走过了很长的一条道路。
+
+作为最早的也是唯一一个被浏览器原生支持的脚本语言，它当初有很多的问题。
+
+最初，它的功能远远不如如今这么强大，并且它最初的主要用途仅仅是用于制作有趣的动画以及用于当时被称为(DHTML)[2]的新奇事物。
+
+随着时代的发展，网络设备需要越来越多的功能。而为了满足网络这个在世界上应用广泛的生态系统的需求，的的JavaScript也有 _责任_ 去不断的成长。
+
+很多功能通过浏览器API被引入了网络设备，但是JavaScript语言本省也成长了许多。
+
+在当下，JavaScript的使用已经不仅仅局限于前端开发领域。近几年冉冉升起的Node.js为JavaSCript解锁了后端开发领域——一个曾经被Java, Ruby, Python, PHP以及一些更传统的服务器端语言主宰的领域。
+
+
+JavaScript如今还被用于驱动数据库系统以及许多其他的应用。我们甚至可以使用它来开发嵌入式应用，移动app，智能电视app和很多其他的应用。这个起源于浏览器脚本语言的的“小”语言如今已经是世界上最受欢迎的编程语言。
+
 #### A basic definition of JavaScript
 
 JavaScript is a programming language that is:
@@ -48,11 +65,21 @@ JavaScript is a programming language that is:
 -   **Dynamically typed**: A variable does not enforce a type. You can reassign any type to a variable, for example assigning an integer to a variable that holds a string.
 -   **Weakly typed**: As opposed to strong typing, weakly (or loosely) typed languages do not enforce the type of an object. This allows more flexibility but denies us type safety and type checking (something that TypeScript and Flow aim to improve)
 -   **Interpreted**: It’s commonly known as an interpreted language, which means that it does not need a compilation stage before a program can run, as opposed to C, Java or Go for example. In practice, browsers do compile JavaScript before executing it, for performance reasons, but this is transparent to you as there is no additional step involved.
--   **Multi-paradigm**: The language does not enforce any particular programming paradigm, unlike Java for example which forces the use of object-oriented programming, or C that forces imperative programming.  
+-   **Multi-paradigm**: The language does not enforce any particular programming paradigm, unlike Java for example which forces the use of object-oriented programming, or C that forces imperative programming.
     You can write JavaScript using an object-oriented paradigm, using prototypes and the new (as of ES6) classes syntax. You can write JavaScript in functional programming style, with its first-class functions, or even in an imperative style (C-like).
 
 In case you’re wondering,  **JavaScript has nothing to do with Java**, it’s an unfortunate name choice but we have to live with it.
 
+#### JavaScript的基本定义
+作为一种编程语言，JavaScript有如下特性:
+- **高级语言**: 它使用了抽象化的手段，使得你不必在意它在机器的运行细节。它使用垃圾回收机制来自动管理内存，因此你可以专注于你的代码而不必花心思管理内存，同时提供了一些内置的构造器使你可以更好地使用功能强大的变量和对象。
+- **动态语言**: 与静态编程语言相反，动态语言会在运行时进行很多静态语言在编译阶段进行的操作。这既有优点也有缺点，给与了我们诸如动态类型、晚绑定、反射机制、函数式编程、可在运行时变更的对象、闭包等强大的特性。
+- **动态类型**: 变量没有固定的类型，因此你可以重新赋予一个变量任何类型，比如你可以将一个本来存储字符串的变量重新赋值为整型。
+- **弱类型**: 与强类型相反，弱类型的编程语言并不会为一个对象强制规定类型。这个特点给我们带来了更高的自由度，但是也使我们无法保证类型安全和进行类型检查(实现这些正是TypeScript和Flow的目标)。
+- **解释型语言**: 普遍意义上，JavaScript被认为是一种解释型语言，这意味着它不需要像诸如C, Java或者Go那样在程序运行之前需要一个编译阶段。实际上，为了提高性能，浏览器会在执行JavaScript程序之前进行编译，但这个过程由于并不包括其他步骤，因此对于开发者是透明的。
+- **多范式**: 这个语言本身没有强制规定任何的编程范式，这点不像诸如Java会强制使用面向对象编程或C那样规定使用命令式编程。你既可以利用原型和新的(ES6)类语法来遵循面向对象编程的规则进行编程，也可以使用函数式编程的风格，甚至可以使用像C语言那种命令式的风格。
+
+以防万一你会误会，**JavaScript和Java没有任何关系**, 这只是个不太恰当的命名选择，但我们也只能接受它。
 #### JavaScript versions
 
 Let me introduce the term  **ECMAScript**  here. We have a complete guide dedicated to ECMAScript where you can dive into it more, but to start with, you just need to know that ECMAScript (also called  **ES**) is the name of the JavaScript standard.
@@ -64,6 +91,18 @@ For a very long time, the version of JavaScript that all browsers ran was ECMASc
 Since then, the ones in charge decided to release one version per year, to avoid having too much time idle between releases, and have a faster feedback loop.
 
 Currently, the latest approved JavaScript version is ES2017.
+
+#### JavaScript的版本
+
+让我在这里介绍一下介绍一下**ECMAScript**。如果你愿意深入研究，我们有一份完整的手册帮助你了解ECMAScript，但是现在你只需要知道ECMAScript(也被称作**ES**)是JavaScript标准的名字。
+
+JavaScript是这份标准的实现。这正是你会听到ES6, ES2015, ES2016, ES2017, ES2018这些词的原因。
+
+在过去的很长一段时间，所有浏览器运行的JavaScript版本都是ECMAScript3。 第四版因为特征蔓延(他们尝试在这个版本中一次性加入过多新特征)而被废除。在ES5的时候JavaScript有过一次大的更新，ES2015(也被称作ES6)也是一次大的版本更新。
+
+从ES6之后，相关的负责人(ECMA-TC39)决定通过每年发布一个新版本来缩短版本更新的时间间隔，同时更高效的获得反馈。
+
+现在，最新通过的JavaScript版本是ES2017(译者翻译此文的时候TC39已经发布了ES2019)。
 
 ### ECMASCRIPT
 
@@ -903,7 +942,7 @@ This new feature extends this concept to all Unicode characters introducing  `\p
 Any unicode character has a set of properties. For example,  `Script`  determines the language family,  `ASCII`  is a boolean that's true for ASCII characters, and so on. You can put this property in the graph parentheses, and the regex will check for that to be true:
 
 ```
-/^\p{ASCII}+$/u.test('abc')   //✅/^\p{ASCII}+$/u.test('ABC@')  //✅/^\p{ASCII}+$/u.test('ABC?') //❌ 
+/^\p{ASCII}+$/u.test('abc')   //✅/^\p{ASCII}+$/u.test('ABC@')  //✅/^\p{ASCII}+$/u.test('ABC?') //❌
 ```
 
 `ASCII_Hex_Digit`  is another boolean property, that checks if the string only contains valid hexadecimal digits:
@@ -919,7 +958,7 @@ There are many other boolean properties, which you just check by adding their na
 ```
 
 ```
-/^\p{Emoji}+$/u.test('H')   //❌/^\p{Emoji}+$/u.test('??') //✅  
+/^\p{Emoji}+$/u.test('H')   //❌/^\p{Emoji}+$/u.test('??') //✅
 ```
 
 `In addition to those binary properties, you can check any of the unicode character properties to match a specific value. In this example, I check if the string is written in the Greek or Latin alphabet:`
@@ -4176,7 +4215,7 @@ delete Object.prototype(  //false
 `There is some weirder syntax that you can use to create an IIFE, but it’s very rarely used in the real world, and it relies on using  _any_  unary operator:`
 
 ```
-;-(function() {  /* */})() 
+;-(function() {  /* */})()
 ```
 
 ```

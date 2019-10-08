@@ -62,18 +62,20 @@
 
 应该提供更多开放的开发者工作机会，而不是找合格的开发者去填补公司的职位。公司连一般的合格的开发者都很难找到，更别说找（多少）倍开发者了。
 
-“Senior executives believe that the lack of quality developer talent is one of the biggest potential threats to their growth.” - The Developer Coefficient
-It’s hard to find good talent.
+> “高级管理人员认为，缺乏优秀的开发人才是他们成长的最大潜在危险之一。”  ——The Developer Coefficient
 
-Most companies will knock down the door for a 10x developer but they’re happy hiring 5x, 2x, and even 1x developers.
+找到优秀的人才真的很难。
 
-A 1x developer (yes, I made this up) is a developer who can do the job they’re hired to do. Nothing more, nothing less. Seriously. Any company will be delighted with that. Plenty has been written about the astronomical cost of a bad hire.
+大多数公司会招聘10倍开发者，但是他们也很乐意招聘5x、2x，甚至1x的开发者。
+
+1x开发者（对，我就是）是可以完成工作的，不多不少。而且，还有大量关于天文成本的不良雇佣关系的报道。
 
 The 2 Steps You Need to Multiply Your Programming Skills with Focus and Deep Work
-It’s time to step up your career. There’s so much opportunity for you to get hired and thrive in a career you love.
+是时候提升你的职业生涯了。你有大量的机会可以获得喜欢的工作并且很好的发展。
 
-If you’re the entrepreneurial type, the same lessons apply. More so because your livelihood depends on being effective with your time.
+如果你正处在创业阶段，提供的也是相同的课程。因为对你们来说，更重要的是时间的有效利用。
 
+从初级开发者到高级开发工程师；从0.5x开发者到5x开发工程师；这就是
 This is how you go from junior to senior developer. This is how you go from 0.5x developer to 5x developer. This is how you get your side project off the ground when you only have a 10 hours a week to work on it.
 
 Hell, this is how you survive.

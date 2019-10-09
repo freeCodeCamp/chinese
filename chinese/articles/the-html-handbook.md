@@ -1,47 +1,119 @@
 > * 原文地址：[The HTML Handbook](https://www.freecodecamp.org/news/the-html-handbook/)
 > * 原文作者：Flavio Copes
-> * 译者：
+> * 译者：于晓慧
 > * 校对者：
 
 Introduction
+
+介绍
+
 Welcome! I wrote this book to help you quickly learn HTML and get familiar with the advanced HTML topics.
+
+欢迎！我写这本书是为了帮助您快速学习HTML并熟悉高级HTML主题。
 
 HTML, a shorthand for Hyper Text Markup Language, is one of the most fundamental building blocks of the Web.
 
+HTML是超文本标记语言的缩写，是Web最基本的构建基块之一。
+
 HTML was officially born in 1993 and since then it evolved into its current state, moving from simple text documents to powering rich Web Applications.
+
+HTML正式诞生于1993年，从那以后它演变成现在的状态，从简单的文本文档发展为强大的Web应用程序。
 
 This handbook is aimed at a vast audience.
 
+本手册面向广大读者。
+
 First, the beginner. I explain HTML from zero in a succinct but comprehensive way, so you can use this book to learn HTML from the basics.
+
+首先是初学者。我以简洁而全面的方式从零开始解释HTML，因此您可以使用本书从基础上学习HTML。
 
 Then, the professional. HTML is often considered like a secondary thing to learn. It might be given for granted.
 
+然后，专业人士。 HTML通常被认为是次要的学习。它可能是理所当然的。
+
 Yet lots of things are obscure to many people. Me included. I wrote this handbook to help my understanding of the topic, because when I need to explain something, I better make sure I first know the thing inside out.
+
+然而，许多事情对许多人来说还是晦涩难懂的。我包括在内。我写这本手册是为了帮助我理解该主题，因为当我需要解释一些东西时，最好确保我先从内而外地知道这件事。
 
 Even if you don't write HTML in your day to day work, knowing how HTML works can help save you some headaches when you need to understand it from time to time, for example while tweaking a web page.
 
+即使您在日常工作中不编写HTML，了解HTML的工作方式也可以帮助您在需要不时了解它时（例如在调整网页时）省去一些麻烦。
+
 You can reach me on Twitter @flaviocopes.
+
+您可以通过Twitter @flaviocopes与我联系。
 
 My website is flaviocopes.com.
 
+我的网站是flaviocopes.com。
+
 Book Index
+
+图书索引
+
 Preface
+
+前言
+
 HTML Basics
+
+HTML基础
+
 The document heading
+
+文件标题
+
 The document body
+
+文件主体
+
 Tags that interact with text
+
+与文字互动的标签
+
 Links
+
+链接
+
 Container tags and page structure HTML
+
+容器标签和页面结构HTML
+
 Forms
+
+样式
+
 Tables
+
+表格
+
 Multimedia tags: audio and video
+
+多媒体标签：音频和视频
+
 iframes
+
+框架
+
 Images
+
+图片
+
 Accessibility
+
+辅助功能
+
 PREFACE
+
+前言
+
 HTML is the foundation of the marvel called the Web.
 
+HTML是称为Web的奇迹的基础。
+
 There is an incredible power underneath this rather simple and limited set of rules, which lets us -- developers, makers, designers, writers, and tinkerers -- craft documents, apps, and experiences for people all around the globe.
+
+
 
 My first HTML book came out in 1997 and was called "HTML Unleashed". A big, lots-of-pages, long tome.
 

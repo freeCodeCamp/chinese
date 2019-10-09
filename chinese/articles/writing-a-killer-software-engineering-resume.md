@@ -144,83 +144,84 @@ Google 工作描述
 
 那么为什么这种简历有效呢？让我们来探索一下编号的要点。
 
-#### Who Are You (1)
+#### 自我介绍 (1)
 
-_Target Audience: Anyone writing a_ résumé
+_目标读者：编写简历的人
 
 ![](https://cdn-media-1.freecodecamp.org/images/GsXc3z0q67DOrLEthtEv-zbeaHCsZiclXM2H)
 
-Résumé: Name Section
+简历：姓名部分
 
-Starting off real easy. Your name. Place your name at the top of your résumé in a  **large legible font.**
+从简单的地方开始。把你的名字用一种**清晰易读的大字体**放到你的简历的顶端。
 
-No need to be all fancy about it with extravagant colors or fancy fonts. Plain and simple does the trick. You want the recruiter to see this easily from a mile away because you want them to know who you are. A recruiter who has to do minimum work is a happy recruiter. A happy recruiter is one who is more likely to give you an interview.
+姓名没有必要用花哨的颜色或者字体，用朴实简单的字体就好。你想要招聘者可以容易看到你的简历，因为你想要他们了解你。
+招聘人员乐于做最小的工作量去邀请你面试。
 
-**Recap:**  Make it ridiculously easy for the recruiter to read and find your name.
+**概括:**  让招聘者更容易地去阅读并找到你的名字。
 
-#### Contact Information (2)
+#### 联系方式 (2)
 
-_Target Audience: Anyone writing a résumé_
+_目标读者：编写简历的人_
 
 ![](https://cdn-media-1.freecodecamp.org/images/8diam7KWW7-wDoFqyq5PZroeZcjNtFL6--5N)
 
-Résumé: Contact Section
+简历：联系信息部分
 
-Your contact info should be as easy as identifying your name. This is so important. Of all the things in the world,  **please do not mess this one up**  because how else on earth will the recruiter contact you?
+你的联系信息应该和识别你的名字一样简单。这很重要的。在这世间万物中，**请不要搞砸这一件事** 不然招聘者怎样才能联系到你？
 
-**Recap:**  Put in the correct contact information or you’ll never be contacted.
+**Recap:**  填写正确的联系信息，否则没有人会联系你。
 
-#### Education (3)
+#### 教育信息 (3)
 
-_Target Audience: Anyone writing a résumé with a degree_
+_目标读者：拥有学位的人编写简历
 
 ![](https://cdn-media-1.freecodecamp.org/images/4bIZG1Lqw-H3zIQXMHrOjtS1yJQYFhOnI6DD)
 
-Résumé: Education Section: Header Subsection
+简历：教育信息部分：标题小节
 
-If you are attending or attended college, this should be the first section of your résumé, because going to college is a huge accomplishment. According to the U.S. Bureau of Labor Statistics, only “66.7 percent of 2017 high school graduates age 16 to 24 enrolled in colleges or universities”. So be proud of it and include it!
+如果你正在读大学或者上过大学，教育信息因该是你简历的第一部分，因为上大学是一个巨大的成就。根据美国劳工统计局的数据，16到24岁之间的高中毕业生只有66.7%的人就读大学或者学院。因此你要以此为荣并且把教育信息加入到简历中！
 
-Right off the bat, this tells the recruiter that you are invested in education and learning, which is crucial because technology is continuously changing. Furthermore, this information serves as an indicator of your successes, so be sure to put it down.
+马上开始，教育信息告诉招聘者你在教育和学习上的投入，这是至关重要的，因为技术是持续更新的。此外，教育信息可以作为你面试成功的指标，因此确保将教育信息加入到你的简历中。
 
-**Recap:**  Put down where you got educated.
+**概括:**  填入你的教育信息
 
 ![](https://cdn-media-1.freecodecamp.org/images/4L6mOPdolMGbeEt6u4ZkdFI3NA762HMtoQfS)
 
-Résumé: Education Section: Coursework Subsection
+简历：教育信息部分：学业小节
 
-Be sure to include  **relevant**  coursework corresponding to the position that you are applying for. While a course on the  _History of Italian Gastronomy_  sounds exceptionally appetizing, it doesn’t have a place in a résumé that is trying to get you a job in computer science.
+确保简历中包含与你申请的职位**相关的**学业。尽管有关“意大利美食史”的课程听起来非常吸引人，但是它在简历中却没有办法帮助你在计算机科学领域中找到一份工作。
 
-This will significantly improve the ability of the recruiter and the hiring manager looking at your résumé in deciding whether you are a good fit for the position. And as previously mentioned, a happy recruiter is more likely to give you an interview.
+这将显著提高招聘者和招聘经理查看你的简历，以决定你是否适合这个职位。如前所述，一个开心的招聘者更愿意去给你一个面试。
 
-**Recap:**  Only include relevant coursework.
+**概括:**  仅包含相关的学业信息。
 
 ![](https://cdn-media-1.freecodecamp.org/images/JjXDrEy8HfZPFHGhUKmjJBvoNS1Jw5IY9Z4W)
 
-Résumé: Education Section: GPA Subsection
+简历：教育信息部分：GPA小节
 
-Okay. GPA. Before we talk about this, let’s remind ourselves of the main purpose of a résumé.
+好的。在我们谈论GPA之前，让我们提醒一下大家简历的主要目的。
 
-The main purpose of a résumé is to highlight your knowledge, skills, and accomplishments succinctly. You want to include things on your résumé that you are proud of, but also things that will impress. You want to paint a picture of yourself in the best light possible so that recruiters and hiring managers want to interview you.
+简历的主要目的是简洁地突出你的知识，技能和成就。你想要在简历中加入自己引以为傲的东西，而且想要给招聘者留下深刻的印象。你想要以最好的方式描述你自己的个人形象，以便让招聘者和招聘经理想要面试你。
 
-Now back to your GPA. It should be fairly obvious whether or not your GPA is impressive. If your GPA is below a 3.0, don’t put it on your résumé. There’s nothing wrong with excluding your GPA from your résumé if it only harms your chances.
+现在回到你的GPA中。你的GPA成绩是否令人深刻，这一点的效果是很显著地。如果你的GPA低于3.0，不要将GPA信息放到你的简历中。如果你的GPA会毁掉你的面试机会，那么从你的简历中剔除GPA信息是对的。
 
-If you have a GPA between 3.0–3.2, this is a judgment call. From personal experience, I have talked to some companies that require a minimum GPA of 3.2, but these were primarily financial or quantitative companies. Most software companies have little regard for your GPA. If you have anything above a 3.2, I would place it on your résumé.
+如果你的GPA在3.0-3.2之间，这是一个值得商榷的事情。根据个人经验，我曾经与一些对GPA要求低于3.2的公司交谈过，但是这些公司主要是金融公司或者测量公司。大部分软件公司很少去考虑你的GPA。如果你有高于GPA3.2分的成绩，我将会把它放入你的简历中。
 
-If you have a low GPA, fear not, as this gives you the opportunity to be creative! My overall GPA was a 3.2 due to poor grades from my freshman engineering prerequisites and humanities classes. But once I finished and started taking courses within my major, my in-major GPA (GPA calculated from courses in my major) was a 3.44, which was significantly higher. So that’s what I put down (but make sure to qualify it as a departmental GPA).
+如果你有一个低分值的GPA，请不要担心，这将会给与你一个创造性的机会！ 由于我大一的工程先修课程和人文学科的成绩不理想，我的总体GPA只为3.2。但是，一旦我完成大一学业并开始主修本专业的课程，我的专业平均GPA（根据我的专业课程计算得出的GPA）为3.44，GPA分值得到了显著提高。
 
-There are many ways of going about presenting yourself in the best light possible, even when it may seem like the odds are stacked against you. I only provided one example of accomplishing this, but there are many more ways waiting to be discovered by you. Fully embrace your failures and accomplishments because they make up who are you. Be honest and truthful, and always focus on highlighting the best parts about yourself.
+有很多种方法去让自己表现的更好，即使这样看起来对你的可能性不大。我仅仅提供了一种样例去完成简历的编写，但是还有很多方法等着你去挖掘。充分接受你的失败和成就，因为它们成就了你。让你的简历变得诚实和真实，并且始终专注于突出你自己的最佳方面。
 
-**Recap:**  Your GPA does not define you. The purpose of your résumé is to present yourself in the best light. Never forget that! Be creative when going about this and DON’T LIE.
+**概括:**  你的GPA并不能定义你。 你的简历的目的是为了展现自己的最佳状态. 永远不要忘记这一点！做到这一点要有创造力，并且不要去说谎。
 
-#### Employment (4)
+#### 工作经历 (4)
 
-_Target Audience: Students with software engineering work experience_
+_目标读者：有软件工程工作经验的学生
 
 ![](https://cdn-media-1.freecodecamp.org/images/E4nwBSH6QdNW0QEfUp1CC9Tls1PwrudxV9I1)
 
-Résumé: Employment Section
+简历：工作经历部分
 
-If you are a college student without any experience, don’t be afraid! This was my senior year résumé when I was applying for a full-time job. I was fortunate enough to have accumulated relevant work experience from summer internships, but this isn’t absolutely necessary to get an interview. If you find that you don’t have much to put in section, jump down to the ‘[Personal Projects][6]’ section.
+如果你是一个没有任何工作经验的大学生，不要去害怕！这是我大四的时候申请全职工作的简历。我很幸运能够从暑期实习中积累相关的工作经验，但是对于收到面试并不是绝对必要的。如果你发现你没有太多东西关于工作经历这部分，直接跳到“[个人项目][6]”部分
 
 ![](https://cdn-media-1.freecodecamp.org/images/8Kbx5ZwLw89g32ypd2QJWEZhOWCttMkuV7-D)
 

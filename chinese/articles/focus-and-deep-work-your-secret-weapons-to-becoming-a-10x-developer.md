@@ -113,7 +113,7 @@
 
 - **关闭无关紧要的消息**这是一个巨大的挑战，因为我有强迫症，必须清除我手机上没有阅读的消息清单。这些消息大都有噪音，所以关闭它对于我工作来说的确是一件好事。
 
--**关闭其他的应用程序** ，就是那些能通过通知来分散你注意力，比如：Outlook、微信。
+- **关闭其他的应用程序** ，就是那些能通过通知来分散你注意力，比如：Outlook、微信。
 
 
 - This is the hardest one of all — **close any browser windows** not relevant to your task. Now **block all your favorite websites**. I love the HeyFocus app ($20) but there are a bunch of free extensions out there.

@@ -70,50 +70,55 @@
 
 1x开发者（对，我就是）是可以完成工作的，不多不少。而且，还有大量关于天文成本的不良雇佣关系的报道。
 
-The 2 Steps You Need to Multiply Your Programming Skills with Focus and Deep Work
+### 将编程技能与专注深入工作相结合所需的2个步骤
 是时候提升你的职业生涯了。你有大量的机会可以获得喜欢的工作并且很好的发展。
 
 如果你正处在创业阶段，提供的也是相同的课程。因为对你们来说，更重要的是时间的有效利用。
 
-从初级开发者到高级开发工程师；从0.5x开发者到5x开发工程师；这就是
-This is how you go from junior to senior developer. This is how you go from 0.5x developer to 5x developer. This is how you get your side project off the ground when you only have a 10 hours a week to work on it.
+从初级开发者到高级开发工程师；从0.5x开发者到5x开发工程师；一周只有10个小时额外时间也要发展副业。
 
-Hell, this is how you survive.
+苦难，就是你生存的毕竟之路。
 
-“To remain valuable in our economy, therefore, you must master the art of quickly learning complicated things. This task requires deep work. If you don’t cultivate this ability, you’re likely to fall behind as technology advances.”
+> “想要经济自由，你就要掌握快速学习复杂事务的技巧。所以你需要深度工作。如果你不具备这项技能，那你很可能会随着技术的前进而落后。”
 — Deep Work p.13
-Learning to Focus is HARD.
-The first thing to realize is that learning to focus isn’t easy. You’re not going to be able to start producing novels of quality code from the start. Especially if you’ve never dealt with the reality of how easily distracted you are.
 
-Learning to focus requires practice. Anything that requires practice means its difficult. If it wasn’t, you’d be good at it by default.
+### 学习专注于事物是艰巨的。
+首先要意识到的是，学习专注不是一件容易的事情。你不能一开始就写出高质量代码的项目。特别是如果你从来没处理过容易让你分心的事情。
 
-You’re going to struggle and that’s OK. We’ll start small.
+学习专注需要练习。需要练习的任何事情都意味着困难。如果不是，那你可能是天生就擅长它。
 
-Don’t Confuse Busyness with Productivity.
-Deep work is not locking yourself in a dark room and forcing yourself to aimlessly navigate code for 14 hours at a time. Just because you’re doing something doesn’t mean it’s worth doing.
+你开始挣扎，不要紧张，我们将会从小事情着手开始。
 
-You need to figure out what’s important and what’s not. That’s beyond the scope of this post. If you’re going to spend the time learning how to focus, then do it on something that has a high return for the effort involved.
+#### 不要将忙碌与生产力混淆
+深度工作不是将你自己锁在小黑屋里，强制自己一次漫无目的的浏览代码长达14小时。仅仅因为你正在做这件事，但并不意味着它就值得做。
 
-It’s like the sun and a magnifying glass.
+你需要弄清楚哪些事情是重要的，哪些是不重要的。这超出了本文的范围。如果你打算花时间学习如何专注于事物，那你就要做一些 付出努力容易有高回报的事情。
 
-Distracted work is your energy going in every direction like the sun. You can stand outside in the sun and you’re not going to get hurt.
+它就像太阳和放大镜。
 
-Learn to concentrate that scattered energy with a magnifying glass and your ability to destroy goes from 0 to 10. We want to preserve that limited power for important things (the sun goes down eventually).
+分心的工作就像太阳一样，能量分散到各个方向。你能站在太阳下并不会受伤。
 
-Step 1 — Removing Distraction
-Multitasking is a lie. You’re fooling yourself if you think you can write quality code while checking Slack messages or reading news in another window.
+学会用放大镜集中那些分散的能量，毁坏力量就从0升到10。我们想把有限的力量留给重要的事情太阳（太阳最终会落山）。
 
-We live in a world of distraction. The technology we work on is a double-edged sword. There’s nothing like that sweet, sweet dopamine hit from a new notification.
+### 第一步——消除干扰
+多任务处理是一个谎言。如果你认为，在你看各种消息或者阅读新闻时能写高质量的代码，你是在自欺欺人。
 
-“Cool, someone liked that I saw Hamilton.” But that’s poison to your ability to focus.
+我们生活在一个注意力分散的世界。我们研究的技术是一把双刃剑。在收到一个新通知时，已经没有那种甜美的多巴胺了。
 
-Removing distraction is the foundation of focused, deep work.
+“帅，就像我看到 Hamiton。”，但是那对你关注的能力有害。
 
-Put your phone on silent or turn it off if you’re not in a position that has to be on-call. I use the Forest app to prevent me from going on my phone. Face down, somewhere out of arm’s reach is good too.
-Close Slack. This is a huge one for me because I have this OCD where I need to clear my queue of unread messages. Most of these messages are noise so its better for me to close Slack when working.
-Close any other apps that are going to distract you with notifications, like Outlook.
-This is the hardest one of all — close any browser windows not relevant to your task. Now block all your favorite websites. I love the HeyFocus app ($20) but there are a bunch of free extensions out there.
-Headphones on — This keeps people from bothering you (hopefully), but also listening to the same album over and over is a great focusing tool. It might be a priming thing (signaling to your brain that its time to work) or a flow thing (the music puts you in a good mood). Either way, a lot of developers swear by this technique.
+**消除干扰是专注和深度工作的基础。**
+
+- **将手机处于静音状态** ，或者你在一个不需要通话的地方可以关闭手机。我使用Forest APP（一款锻炼专注的软件）阻止我玩手机。面朝下，放在触手可及的地方也不错。
+
+- **关闭无关紧要的消息**这是一个巨大的挑战，因为我有强迫症，必须清除我手机上没有阅读的消息清单。这些消息大都有噪音，所以关闭它对于我工作来说的确是一件好事。
+
+-**关闭其他的应用程序** ，就是那些能通过通知来分散你注意力，比如：Outlook、微信。
+
+
+- This is the hardest one of all — **close any browser windows** not relevant to your task. Now **block all your favorite websites**. I love the HeyFocus app ($20) but there are a bunch of free extensions out there.
+- **Headphones on** — This keeps people from bothering you (hopefully), but also listening to the same album over and over is a great focusing tool. It might be a priming thing (signaling to your brain that its time to work) or a flow thing (the music puts you in a good mood). Either way, a lot of developers swear by this technique.
+
 Step 2 — Pomodoro Technique (The Secret Weapon)
 
 “A Hefty Bowl of Productivity” by Roychan Kruawan on Unsplash

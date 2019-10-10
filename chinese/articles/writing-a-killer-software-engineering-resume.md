@@ -225,53 +225,53 @@ _目标读者：有软件工程工作经验的学生
 
 ![](https://cdn-media-1.freecodecamp.org/images/8Kbx5ZwLw89g32ypd2QJWEZhOWCttMkuV7-D)
 
-Résumé: Employment Section: Header Subsection
+简历：工作经历：标头部分
 
-While it is great to have past work experience, not all work experience is treated equally when it comes to looking for a job in software engineering. Focus only on including work experience that has  _relevance_  to the job that you are applying for. For instance, if you have experience working as a cashier in retail or a waiter in the food industry, don’t include it! Unfortunately, your abilities to handle money or serve food did not provide any indication that you will succeed as a software engineer.
+拥有过去的工作经历是很棒的，但是当你在寻找一份软件工程工作的时候，并不是所有的工作经历都能够得到平等对待。仅仅专注于在简历里包含与你想要申请的工作_相关的_工作经历。例如，如果你有在零售中作为出纳员或者在食品行业作为服务员工作过的经历，不要将它们加入到简历中！不巧的是，你在处理钱或者服务于餐饮的能力并不能提供指示标明你将能够胜任成为一名软件工程师。
 
-A recruiter’s goal is to match candidates with jobs that fit the candidates’ skill sets. Therefore it is essential only to include past work experience that has some relation to the position that you are currently applying to, on your résumé.
+招聘者的目标是使应聘者与适合应聘者能力的工作相匹配。因此在你的简历中加入与你正在申请的职位相关的过去工作经历是很重要的。
 
-Part of accomplishing this means creating a collection of various résumés, each tailored specifically for the different job that you are interested in. This is analogous to the college application process, where you had to write separate essays for each university that you applied to. Each college has its own values, culture, and vision, making it nearly impossible to write a generic, one-size-fits-all college essay. Therefore, tailor your résumé to the job that you are applying for.
+完成如上工作的一部分意味着创建各种简历，每种简历都是针对你所感兴趣的不同工作量身定制的。这就像申请大学的过程，你必须为申请每一个大学书写不容的单独的论文。每所大学都有自己的价值观，文化和愿景，因此几乎不可能编写一份通用的、适合所有人的大学论文。因此，根据你申请的工作量身定做简历。
 
-Lastly, a note on dates. Order your experiences in descending order starting with your most recent experiences. For undergraduates, this means being mindful of including experiences that are both recent and relevant. Sadly, no one cares about whatever accomplishments you had in middle school or high school. If the experience is outdated, leave it out.
+最后关于日期的标注。 从最近的工作经历开始，以逆序排列你的工作经历。对于大学生而言，这意味着要包含最新并且相关的工作经历。可悲的是，没有人关心你初中或者高中取得的成就。如果工作经历已经过时，剔除它。
 
-**Recap:**  Have various versions of your résumé tailored for each job you are applying for. There is no one-size-fits-all résumé.
+**概括:**  为你要申请的每个工作量身定做各种版本的简历。没有适合所有工作的简历。
 
 ![](https://cdn-media-1.freecodecamp.org/images/bby7lJQKFQiQo86Zdz4K0w3NUO4pg9Bc1yCj)
 
-Résumé: Employment Section: Description Subsection
+简历：工作经历：描述部分
 
-The hardest part about résumé writing is having descriptions that fully encapsulate your accomplishments from past work experiences in a meaningful and impressive way.
+简历中最难的部分就是工作描述，以有意义且令人印象深刻的方式完全囊括你过去工作经历的成就。
 
-What does it mean for your descriptions to be meaningful and impressive? It means getting the recruiter to think: “This is someone that has the skill sets we are looking for. This is someone that has made a significant impact in their past jobs. This is someone we would like to interview and potentially hire.”
+让你的工作描述有意义且令人印象深刻指的是什么？指的是让招聘者人为：“这个人拥有的能力就是我们想要寻找的，这个人就是过去工作经历产生重大影响的人，这个人就是我们想要去面试和潜在雇佣的”。
 
-**The primary objective of the Employment section is to show the impact and value that you had while working at an established institution.**  Your goal is to show recruiters that you are a candidate that can get things done and do them well.
+**工作经历部分的主要目的是展示你在固定机构中工作时所带来的影响和价值。**  你的目标是向招聘人员标明，你是可以干这份工作且可以把他们干好的候选者。
 
-To best showcase my accomplishments in my résumé, I adopted the following powerful formula, created by the Former SVP of People Operations at Google, Laszlo Bock:
+为了最好地展示我的简历，我采用了如下强大的公式，该公式由Google的前运营高级副总裁Laszlo Bock创建：
 
-> “Accomplished \[X\] as measured by \[Y\] by doing \[Z\]” — Laszlo Bock
+> “通过……实现了……的效果，提高或者改善（衡量标准）……。” — Laszlo Bock
 
-You can see this very clearly in the very first bullet point of this section on my résumé.
+你可以清楚地看到这一点在我的简历的本节的第一个重点中。
 
-**Improved device’s battery lifespan by 8% by integrating a fuel gauge sensor and establishing a battery saving state**
+**通过集成油量表传感器并设置电池节电状态，将设备的电池寿命提高了 8%。**
 
-Let’s break it down:
+让我们分解一下这句话：
 
-**Accomplished \[X\]-** Improved device’s battery lifespan
+**实现了……的效果-** 将设备的电池寿命提高了
 
-**Measured by \[Y\]-**  by 8%
+**高或者改善（衡量标准）……-** 8%
 
-**By Doing \[Z\]-** integrating a fuel gauge sensor and establishing a battery saving state
+**通过……-** 集成油量表传感器并设置电池节电状态
 
-I leveraged this formula in some shape or form in almost every sentence in my résumé.
+我在简历中的几乎每个句子中都以某种形式使用了该公式。
 
-To help you along this process, below is a word bank of excellent verbs you can and should use:
+为了帮助你完成这个过程，下面是你可以并且应该使用的句式：
 
 ![](https://cdn-media-1.freecodecamp.org/images/08UNCYv26D5hz87HF-XkHIzD-G1PBj6X0PsE)
 
-Verb Wordbank
+动词词库
 
-Here are some examples of fill-in the blank sentences that I have come up with for you to get started:
+以下是一些示例，我为你入门想出的空白句子：
 
 -   Reduced \_\_\_\_\_ by \_\_\_\_\_ by \_\_\_\_\_.
 -   Redesigned \_\_\_\_\_ for \_\_\_\_\_.
@@ -282,17 +282,17 @@ Here are some examples of fill-in the blank sentences that I have come up with f
 -   Integrated \_\_\_\_\_ by \_\_\_\_\_ for \_\_\_\_\_.
 -   Incorporated \_\_\_\_\_ for \_\_\_\_\_ by \_\_\_\_\_.
 
-**Recap:** Use the “Accomplished \[X\] as measured by \[Y\] by doing \[Z\]” formula. It’s the most effective and most apparent way of showing recruiters/managers your impact.
+**概括:** 使用“通过……实现了……的效果，提高或者改善（衡量标准）……。”句式。这是向招聘人员/管理人员展示你的影响力的最有效、最明显的方式。
 
 ![](https://cdn-media-1.freecodecamp.org/images/keO-AnXoSSeCRfFynOlrnMxpqs822CWZCLBF)
 
-Résumé: Employment Section: Leveraged Knowledge Subsection
+简历：工作经历：所用技术知识部分
 
-Lastly, I end each work experience with a  **leveraged knowledge** bullet point. The utility behind this last bit is it enables the reader to really get a sense of the technology I am familiar with by explicitly stating the technologies that I used for the project.
+最终我以**掌握技能**来结束我每一个工作经历。最后一点的实用性是通过明确说明我在项目中用到的技术，使招聘者能够真正了解我熟悉的技术。
 
-This also allows me to have a concise, but clean ‘Skills’ section located at the bottom of my résumé. Recruiters can then look at the bottom to immediately obtain a sense of my capabilities by seeing which computer languages I am familiar with. If they are looking to see if I have specific knowledge in a particular tool, framework, or library, then they can find this out by looking at my projects.
+这也使得我在我简历的底部有一处简洁但是清晰的部分。招聘人员可以查看简历最底层的信息，了解我熟悉的计算机语言，从而立即了解到我的能力。如果他们希望了解我是否对特定的工具、框架、类库有了解，那么他们可以在我的个人项目中找到。
 
-**Recap:** Including technologies that you used in your descriptions will help you bypass online keyword filters when applying online. This will also give recruiters a clearer idea of your experiences and knowledge.
+**概括：** 当你线上申请工作的时候，简历中工作经历描述中包含你使用过的技术将会帮助你通过关键词过滤。这也将使招聘人员对你的经验和知识有更清晰的认识。
 
 #### Personal Projects (5)
 

@@ -294,110 +294,110 @@ _目标读者：有软件工程工作经验的学生
 
 **概括：** 当你线上申请工作的时候，简历中工作经历描述中包含你使用过的技术将会帮助你通过关键词过滤。这也将使招聘人员对你的经验和知识有更清晰的认识。
 
-#### Personal Projects (5)
+#### 个人项目部分 (5)
 
-_Target Audience: Students looking for software engineering internships/full-time positions + Unique section for software engineering applicants_
+_目标读者：正在寻找软件工程实习/全职职位的学生 + 适用于软件工程职位申请的独立部分_
 
 ![](https://cdn-media-1.freecodecamp.org/images/nCBs3pSsOJXgmHD2RlcBnC33Ubg5iv5oqO-6)
 
-Résumé: Personal Projects Section
+简历：个人项目部分
 
 ![](https://cdn-media-1.freecodecamp.org/images/Zn4RfnPXLAYJ89knNQro7XZcTVAP-MDeOuI2)
 
-Maybe if I say it enough times, you will understand the importance of this section,  **especially for those that do not have work experience**.
+或许我提到这个章节足够多次了，你将会理解这部分的重要性,  **特别是对于那些没有工作经历的人**。
 
-> Personal projects are integral to piquing recruiters and hiring managers interest as it shows you are passionate about programming.
+> 个人项目对于激发招聘者和招聘经理的兴趣至关重要，因为它展示了你对于编程充满热情。
 
-A personal project can be anything programming related, whether it be a Python script, Java program, web page, mobile application, etc. These projects show that you are genuinely interested in computer science and you have strong desires to work as a software engineer because you are willing to go beyond your schoolwork and create something on your own.
+个人项目可以使任何编程相关的项目，无论是Python脚本、JAVA程序、web页面、手机应用等。这些项目标明你对计算机科学真正感兴趣并且你强烈的希望可以成为一名软件工程师，因为你愿意去超越你的功课并且创造一些你自己的东西。
 
-Taking the initiative to build something on your own is extremely impressive. It shows that you are dedicated to expanding your knowledge of computer science and that you are not afraid of putting in the extra work to do so. Ultimately, it is a fantastic way to demonstrate self-initiative and genuine interest in this field.
+自己独自开发的项目会给人留下深刻印象。它表明你致力于去扩展计算机科学知识，并且你不害怕为此付出额外的努力。归根结底，这是一种展现主动性和真正兴趣的绝佳方式。
 
-The other benefit of doing personal projects is that you inevitably gain the skills that apply to work in the real world. Things that you don’t usually do at school, but you will do at work such as using standard frameworks/libraries, understanding full-stack web development, creating mobile applications, setting up a development environment, or programming efficiently with Vim.
+个人项目的另一个益处是你必将获得到真实工作环境中的技能。你通常不在学校中做的事情，但是在工作中将会使用到标准框架/类库，了解全栈web开发，创建移动应用，搭建开发环境或者使用VIM高效编程。
 
-> **Tip:**  Create a personal website that showcases and documents all of your personal projects. This is a little hack that ‘virtually extends’ your résumé beyond the one-page limit.
+> **技巧：**  创建一个个人网站，展示和记录你的个人项目。这是一个小技巧，可以将你的简历“虚拟化扩展”到一页纸上。
 
-To reiterate one last time, personal projects show your passion and dedication towards developing the necessary skills need for a job that you don’t yet have. This is a  **must-have**  on any software engineering resume.
+最后要重申的是，个人项目显示出你对尚未掌握的开发工作所需技能具有热情和奉献精神。这是一个**必须**展示在你软件工程简历中的部分。
 
-> “Build some iPhone apps, web apps, whatever! Honestly it doesn’t matter that much what you’re building as long as you’re building something. You can build a fairly meaty project in one weekend. This means that with about 3–4 weekends of work, you can make your résumé go from so-so to fantastic. Seriously — I’ve seen lots of people do this.”  
+> “无论如何构建一些 iPhone apps、web页面！坦白说，无论你构建什么项目都可以。你可以在一周内完成相当多的项目。这意味着大约需要3-4个周末的工作，你的简历就可以从一般般地变成奇妙的。说真的-“我已经看到很多人这样做。”
 >   
-> \- Gayle McDowell, former Google Engineer and Author of Cracking the Coding Interview
+> \- Gayle McDowell, 前谷歌工程师，《Cracking the Coding Interview》的作者
 
-If there is a specific company that you  **really**  want to work at, one of the best ways to stand out is doing a personal project that is directly related to the job that you are applying for.
+如果有一家你**确实**想要去工作的公司， 能够脱颖而出的最佳方式就是编写一个与你申请的工作直接相关的个人项目。
 
-I got my internship at Autodesk by taking a free online interactive computer graphics course on Udacity. The course taught me to use a JavaScript library called  _three.js_, and it just so happened that there was a software engineering internship opening at Autodesk looking for someone with full-stack website and knowledge in  _three.js_  (aka ME).
+我通过参加Udacity上的免费在线交互式计算机图形学课程而能够在Autodesk公司实习。这个课程教会我使用_three.js_的 JavaScript 类库，并且碰巧的是，在Autodesk开设了一个软件工程实习职位，以寻找具有全栈website和_three.js_（又名ME）知识的人员。
 
-A word of caution on this technique. This strategy is not perfect. This only really works for companies like Autodesk which do not have generalized software engineering internships like Google, Facebook, and Microsoft. When starting off early in your career, it is better to generalize and figure out the different disciplines of computer science. Nonetheless, this is an excellent method worth trying if there is a specific company you want.
+请谨慎使用该技术。这种策略并不完美。这仅对像 Autodesk 这样没有通用软件工程实习生（例如 Google、Facebook 和 Microsoft）的公司有效。当你处于职业生涯早期的时候，最好归纳学习不同学科的计算机科学只是。尽管如此，如果你想要去一个特定公司，这是一个值得尝试的出色方法。
 
-**Recap:** Personal projects are imperative. If you haven’t already, start NOW! You have nothing to lose and everything to gain.
+**概括:** 个人项目是迫切需要的。如果你还没有准备好，现在马上去准备！你不会失去什么并且会获得所有。
 
-#### Skills (6)
+#### 掌握技能 (6)
 
-_Target Audience: Anyone looking for a software engineering job_
+_目标读者: 任何正在寻找软件工程工作的人_
 
 ![](https://cdn-media-1.freecodecamp.org/images/pBtpGQVtzxV6QQO7HunfI9JIJFvwTZvVTS9B)
 
-Résumé: Skill Section
+简历：掌握技能部分
 
-The title explains it all. Keep this section dumb, simple, and clean. List all the relevant skills that you want the recruiter to know you have. The more skills you have listed here that match key technical words in the qualification section of the job description, the better your chances!
+标题说明了一切。保持本节的内容简洁、简洁和干净。列举出所有你想要招聘者知道你拥有的相关技能。你在此处列出的与职位描述的“资格”部分中的关键技术词相匹配的技能越多，获得面试的机会就越大！
 
-This will allow you to bypass the online keyword scanner easily.  **However, this is not a fool-proof method of circumventing the scanner.**  Ultimately it is a recruiter who gets their hands on your résumé that decides, but they will also be more inclined to give you an interview if they see you as a good fit for the job!
+这将使你轻松绕过在线关键字扫描器。**然而，这不是绕过关键字扫描器的简单方法。**最终是由招聘人员选拔你的简历，但如果他们认为你很适合这份工作，他们将会更愿意邀请你面试！
 
-A thing to note about the skills section is to NOT simply list all the keywords on the job description just for the sake of showing you’re a good fit. It will come back to bite you as you will be questioned on the skills you claim to know.
+关于掌握技能部分，需要注意的一点是不要仅仅为了表明自己很合适这份工作而在工作描述中列出所有的关键字。当你面试的时候，这些你声明拥有的技能都将被提问。
 
-Part of giving yourself some leeway in this is including an indication of your proficiency level. Since you are probably not practicing every language you’ve ever encountered on a day to day basis, including a proficiency level can help the recruiter know your strongest languages at a moment in time and other languages that you are familiar with.
+给自己留一下余地去标明你的熟悉程度。由于你可能每天没有练习所遇到的所有语言，因此，掌握技能部分包含熟练程度可以帮助招聘人员及时了解你最熟练的语言以及你熟悉的其他语言。
 
-I’ve opted to use two tiers:
+我选择使用两个层次：
 
-1.  **Proficient** \- Languages that I am very familiar with, feel very comfortable using, and can interview with right now.
-2.  **Familiar**  \- Languages that I have utilized in the past but may not be as knowledgeable in currently, but can pick back up given time.
+1.  **Proficient** \- 我非常熟悉，使用起来很舒服并且可以立即进行面试的语言。
+2.  **Familiar**  \- 我过去使用过的语言，但目前可能不熟悉，但是可以在一定的时间重拾学习的。
 
-Other valid options include:
+其他有效选项包括：
 
 1.  Advanced
 2.  Intermediate
 3.  Basic
 
-or
+或者
 
 1.  Expert
 2.  Advanced
 3.  Intermediate
 
-or
+或者
 
 1.  Fluent
 2.  Proficient
 3.  Familiar
 
-or
+或者
 
 1.  Working Knowledge
 2.  Basic Knowledge
 
-**Recap:**  When applying for a specific job online, cross-reference the job description and add essential technical keywords on your résumé to increase your chance of getting an interview.
+**概括:**  当在线申请特定工作时，请交叉参考工作描述，并且在简历中添加必要的技术关键字，以加大获得面试的机会。
 
-### Key Takeaways
+### 关键点
 
--   Make sure your name and contact information is correct and legible
--   Be sure to include your education. If your GPA is low, leave it out or be creative!
--   Utilize the “Accomplished \[X\] as measured by \[Y\] by doing \[Z\]” formula to effectively show the impact that you had in your past employment
--   Do personal projects — especially if you do not have past experience working in tech
+-   确保你的姓名和联系信息正确且清晰
+-   保包括你的教育信息。如果你的GPA偏低，那就别管它或变得具有创造性！
+-   利用“通过……实现了……的效果，提高或者改善（衡量标准）……”公式有效地显示你在过去的工作中所起到的影响
+-   做个人项目-特别是如果你之前没有从事过技术工作的经历时
 
-### Final Thoughts
+### 最后的思考
 
-While this résumé got me interviews at numerous software engineering companies, there is no guarantee that following all the principles and techniques I have explained here will yield the same results for you.
+尽管此简历让我在众多软件工程公司中收到了面试，但并不能保证遵循我在此说明的所有原理和技术都可以让你受到面试邀请。
 
-This was my senior year résumé in 2017. It is a showcase of my journey and interest in software engineering. Copying it will do you no good, as technology is constantly evolving and the talent search is an ever-changing process. Instead, use this as a reference.
+这是我在2017年的大四简历。这是我对软件工程的旅程和兴趣的展示。复制它对你没有一点好处，因为技术在不断发展，搜寻人才是一个日新月异的过程。反而你应该参考这些。
 
-Use my résumé and this article as a resource to become a better résumé writer and a more effective communicator. Focus on learning how to best convey your skills and achievements to others. This in itself is an invaluable, lifelong skill that you will need wherever you go.
+你可以使用我的简历和本文作为成为更好的简历编写者和更有效的沟通者的一种资源。专注于学习如何最好地向他人传达你的技能和成就。这本身就是一项无价的终身技能，无论你走到哪里，都将需要它。
 
-As you write your résumé, please remember — be yourself!
+当你编写你的简历的时候，记住-做你自己！
 
-Your résumé is a list of  **your**  own accomplishments, achievements, and interests. Your goal is to craft the most polished version of yourself. Lastly, have fun and enjoy the process!
+你的简历是列举**你自己的**成就、成绩和兴趣。你的目标是制作最优美的版本。最终享受这一过程！
 
-For anyone interested in using this resume template, I obtained it from [CareerCup][7]which was founded by Gayle Laakmann McDowell, author of  _Cracking The Coding Interview_.
+对于任何感兴趣使用这个模板的人，我从[CareerCup] [7]中获得到这个模板，该书由《Cracking The Coding Interview》的作者Gayle Laakmann McDowell创作。
 
-From personal experience, what’s  **most important**  is the content. The resume writing principles discussed above can be applied to any template!
+根据个人经验，“最重要的”是内容。上面讨论的编写简历原则可以应用于任何模板！
 
 [1]: https://medium.com/p/b11c91ef699d#9154
 [2]: https://medium.com/p/b11c91ef699d#d859

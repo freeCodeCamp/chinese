@@ -3,31 +3,33 @@
 > * 译者：[zlv2s](https://github.com/zlv2s)
 > * 校对者：
 
-Animations delight users. And you’d think, by the sheer volume of articles, that React Hooks delight developers. But for me, fatigue was starting to creep into my opinions on Hooks.
+动画总是会取悦用户。就像你认为的那样，大量的文章也表明，开发者们更喜欢使用 React Hooks 。但我发现自己开始慢慢对 Hooks 产生厌倦了。
 
-But serendipity saved me. I found an example that was a good match for React Hooks, rather than just “the new way.” As you may have guessed by this article’s title, that example was an animation.
+某个意外的发现让我对 React Hooks 有了新的认识，它不仅仅是一种新的开发方式。也许你已经从文章标题猜到是什么了，没错！就是动画。
 
-I was working on a React application with cards in a grid. When an item was removed, I wanted to animate its exit, like this.
-
-
-my goal
-Unfortunately, there are nuances to making this work. And my solution led me to a good use of React Hooks.
-
-What are We Going to Do?
-start with a baseline example application
-incrementally animate the disappearing of elements, highlighting some challenges
-once we achieve the desired animation, we’ll refactor a reusable animation component
-we’ll use this component to animate a sidebar and a navbar
-and …. (you need to read / jump to the end)
-For the impatient, here is the GitHub repo for the code in this project. There are tags for each step. (See README for links and descriptions for each tag.)
-
-Baseline
-I’ve created a simple application, using create-react-app. It has a grid of simple cards. You can hide individual cards.
+我正在开发一个基于 React 的、使用网格布局组合卡片组件的应用，当删除某个卡片组件时，为它添加动画效果，看起来像下面一样：
 
 
-no animation — items disappear to fast
-The code for this is basic and the results are uninteresting. When a user clicks the  eye icon button, we change the item’s display property.
+但是，和图中效果相比较始终还是有点细微差别。在我的接下来的解决方案中，很好地利用了 React Hooks。
 
+## 我们将要做什么？
+
+- 开始构建一个基本的项目骨架
+- 为元素的消失添加动画效果，解决一些小问题
+- 最终效果实现后，将其重构为一个可复用的动画组件
+- 在顶部导航和侧边导航中使用该动画组件
+- ...（文末需要阅读）
+
+如果你没耐心，这里有整个项目的仓库[地址](https://github.com/csepulv/animated-visibility)，每一步都有相应的标记（链接地址和描述参考 README 文件）
+
+## 骨架
+
+我使用 [create-react-app](https://facebook.github.io/create-react-app/) 创建了一个简单的应用程序，它是一个简单的卡片网格结构，每个单独卡片可以被隐藏。
+
+
+实现代码很简单，效果也很无趣。当用户点击眼睛图标时，我们改变卡片的 `display` 属性。
+
+```
 function Box({ word }) {
   const color = colors[Math.floor(Math.random() * 9)];
   const [visible, setVisible] = useState(true);
@@ -47,18 +49,29 @@ function Box({ word }) {
     </div>
   );
 }
-(Yes I am using hooks above, but this is not the interesting use of hooks.)
+```
 
-Adding Animation
-Rather than build my own animation library, I looked for an animation library like animate.css. react-animated-css is nice library that provides a wrapper around animate.css.
+（上面的代码中使用到了 React Hooks，但这不是 Hooks 最有趣的用途）
 
+## 添加动画
+
+我没有构建自己的动画库，而是使用了一个像 [animate.css](https://daneden.github.io/animate.css/) 这样的动画库。[react-animated-css](https://github.com/digital-flowers/react-animated-css) 是一个很好的库，它为 animate.css 提供了一个包装器。
+
+安装 react-animated-css
+
+```shell
 npm install --save react-animated-css
+```
 
-add animate.css to index.html
+在 `index.html` 中添加 animate.css
 
+```html
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" />
-In the Box component above, we change it’s rendering to
+```
 
+在上面的 `Box` 组件中，将渲染结果改为
+
+```
 return (
   <Animated animationIn="zoomIn" animationOut="zoomOut" isVisible={visible}>
     <div className="box" style={style}>
@@ -69,14 +82,17 @@ return (
     </div>
   </Animated>
 );
-Not quite what we want
-But animate.css animates opacity and other CSS properties; you can’t do a CSS transition on the display property. So an invisible object remains and it takes up space in the document flow.
+```
 
+## 不完全是我们想要的东西
 
-If you google a bit, you’ll find some solutions that suggest using a timer to set display: none at the end of the animation.
+animate.css 会为 `opacity` 和其他 css 属性添加动画；但不能在 `display` 属性上添加 css 过度效果，所以将卡片隐藏后，它始终在文档流中占据着位置。
 
-So we can add that,
+如果你 [Google](https://www.google.com/search?q=animate+css+display+none&oq=animate+css+display) 一下，有些解决方案是建议使用定时器在动画结束时设置 `display: none`。
 
+所以我们可以添加以下代码。
+
+```
 function Box({ word }) {
   const color = colors[Math.floor(Math.random() * 9)];
   const [visible, setVisible] = useState(true);
@@ -105,20 +121,25 @@ function Box({ word }) {
     </Animated>
   );
 }
-(Note: The default animation duration is 1000ms. I use 650ms for the timeout, to minimize a stutter/pause before setting the display property. This is a matter of preference.)
+```
 
-And that will give us the desired effect.
+(注意：默认的动画时长是 1000ms，我使用的是 650ms，为了在设置 `display` 属性之前 减少卡顿/暂停现象，这只是个人喜好)
+
+这样我们就能得到想要的效果。
 
 
-Yay!
-Creating a Reusable Component
-We could stop here, but there are two issues (for me):
+## 构建一个可复用的组件
 
-I don’t want to copy/paste the Animated block, styles and functions to recreate this effect
-The Box component is mixing different kinds of logic, i.e. violating Separation of Concerns. Specifically, the Box's essential function is to render a card with its content. But the animation details are mixed in.
-Class Component
-We can create a traditional React class component to manage the state of animation: toggle visibility and set the timeout for the display CSS property.
+现在到此为止，但目前有两个问题（对于我来说）
 
+1. 我不想复制/粘贴 `Animated` 代码块，样式，功能，来重复实现相同效果。
+2. `Box` 组件混合了不同类型的逻辑，例如：违反了 [关注点分离](https://en.wikipedia.org/wiki/Separation_of_concerns)的概念。准确的说，`Box` 的主要功能是渲染卡片内容，但是动画细节混入了。
+
+## 类组件
+
+我们可以创建一个传统的 React 类组件来管理和动画相关的状态：切换隐藏/显示，设置 `display` 属性的超时时间
+
+```
 class AnimatedVisibility extends Component {
   constructor(props) {
     super(props);
@@ -145,8 +166,11 @@ class AnimatedVisibility extends Component {
     );
   }
 }
-and then use it
+```
 
+然后使用它
+
+```
 function Box({ word }) {
   const color = colors[Math.floor(Math.random() * 9)];
   const [visible, setVisible] = useState(true);
@@ -168,13 +192,17 @@ function Box({ word }) {
     </AnimatedVisibility>
   );
 }
-This does create a reusable component, but it is a bit complicated. We can do better.
+```
 
-React Hooks and useEffect
-React Hooks are a new feature in React 16.8. They offer a simpler approach to lifecycle and state management in React components.
+这就实现了一个可复用的组件，但是还有点复杂，我们还可以优化一下。
 
-The useEffect hook provides an elegant replacement to our use of componentWillReceiveProps. The code is simpler and we can use a functional component again.
+## React Hooks and useEffect
 
+[React Hooks](https://reactjs.org/docs/hooks-intro.html) 是 React 16.8 中的新特性，它们为 React 组件的生命周期和状态管理提供了一种更简单的方法
+
+[useEffect](https://reactjs.org/docs/hooks-effect.html) 钩子为 `componentWillReceiveProps` 的使用提供了一种优雅的替代方案。它的代码更简洁，我们还可以使用函数式组件。
+
+```
 function AnimatedVisibility({ visible, children }) {
   const [noDisplay, setNoDisplay] = useState(!visible);
   useEffect(() => {
@@ -194,15 +222,19 @@ function AnimatedVisibility({ visible, children }) {
     </Animated>
   );
 }
-There are some subtleties with the useEffect hook. It’s primarily for side effects: changing state, calling asynchronous functions, etc. In our case, it sets the internal noDisplay boolean based on the previous value of visible.
+```
 
-By adding visible to the dependencies array for useEffect, our useEffect hook will only be called when the value of visible changes.
+`useEffect` 钩子还是有点不一样，它的主要目的是副作用：改变状态，调用异步函数等等。在我们的例子中，它根据之前的 `visible` 的值修改了内部的 `noDisplay` 布尔值。
 
-I think useEffect is a much better solution than the class component clutter. ?
+将 `visible` 作为依赖添加到 `useEffect` 的依赖数组中，当 `visible` 的值发生变化时， `useEffect` 钩子才会被调用。
 
-Reusing the Component: Sidebars and Navbars
-Everyone loves a sidebars and navbars. So let’s add one of each.
+和类组件的杂乱相比较，我认为 `useEffect` 是一种更好的解决方案。
 
+## 组件复用：Sidebars 和 Navbars
+
+大家都喜欢 Sidebar 和 Navbar，我们来添加一个吧。
+
+```
 function ToggleButton({ label, isOpen, onClick }) {
   const icon = isOpen ? (
     <i className="fas fa-toggle-off fa-lg" />
@@ -285,15 +317,17 @@ function App() {
     </Fragment>
   );
 }
+```
 
-reuse achieved
-But We’re Not Done…
-We could stop here. But as with my earlier comments about Separation of Concerns, I’d prefer to avoid mixing the AnimatedVisibility component in the render method of the Box, Sidebar nor Navbar. (It is also a small amount of duplication.)
+## 还没结束...
 
-We can create an HOC. (In fact, I wrote an article about animations and HOCs, How to Build Animated Microinteractions in React.) But HOCs usually involve class components, because of the state management.
+到这里我们就可以停下了，但就像我之前提到的关注点分离，我更倾向于避免在 `Box`、`Sidebar` 和 `Navbar` 的 render 方法中混合 `AnimatedVisibility` 组件（代码有点重复）。
 
-But with React Hooks, we can just compose the HOC (functional programming approach).
+我们可以创建一个高阶组件（HOC）。（实际上，我写了一篇关于动画和 HOC 的文章，[如何在React中创建动态微交互](https://medium.com/free-code-camp/how-to-build-animated-microinteractions-in-react-aab1cb9fe7c8)）由于状态管理的原因， HOCs 通常会涉及到类组件。
 
+但是使用了 React Hooks，我们只需要组合 HOC 就可以了（函数式编程概念）
+
+```js
 function AnimatedVisibility({
   visible,
   children,
@@ -339,8 +373,11 @@ export function makeAnimationSlideUpDown(Component) {
 }
 
 export default AnimatedVisibility
-and then use these function-based HOCs in App.js
+```
 
+然后在 App.js 中使用这些基于函数式的 HOCs
+
+```
 function Navbar() {
   return (
     <nav className="bar nav">
@@ -396,14 +433,12 @@ function App() {
     </Fragment>
   );
 }
-At the risk of promoting my own work, I much prefer the clean resulting code.
+```
 
-Here is a sandbox of the final result.
+## 接下来呢？
 
+对于简单的动画，可以使用我所提到的方法。如果比较复杂，我会使用像 [react-motion](https://github.com/chenglou/react-motion) 这样的库。
 
-Now What?
-For simple animations, the approach I describe works well. For more complex cases, I would use libraries like react-motion.
+不仅仅是动画，React Hooks 让我们有机会编写可读性高、更简洁的代码。但是，我们需要在思维上有个调整，像  useEffect 这样的 Hooks 不完全是 React 生命周期函数的替代品，你需要深入学习和研究。
 
-But separate from animations, React Hooks provide opportunities create readable and simple code. However, there is an adjustment in thinking. Hooks like useEffect are not a straight replacement for all lifecycle methods. You’ll need to study and experiment.
-
-I suggest looking at sites like useHooks.com and libraries like react-use, a collection of hooks for a variety of use cases.
+我建议看看像 [useHooks.com](https://usehooks.com/) 这样的网站，还有像 [react-use](https://github.com/streamich/react-use) 这样的库（不同钩子用例的集合）。

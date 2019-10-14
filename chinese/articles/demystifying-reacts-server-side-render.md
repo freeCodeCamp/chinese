@@ -1,27 +1,27 @@
 > * 原文地址：[Demystifying server-side rendering in React](https://www.freecodecamp.org/news/demystifying-reacts-server-side-render-de335d408fe4/)
 > * 原文作者：Alex Moldovan
-> * 译者：LianZhuotao
+> * 译者 Zhuotao Lian
 > * 校对者：
 
-![Demystifying server-side rendering in React](https://cdn-media-1.freecodecamp.org/images/1*Ecd_MVlJQoZ3bNn-xclFiA.jpeg)
+![揭开 React  服务端渲染的神秘面纱](https://cdn-media-1.freecodecamp.org/images/1*Ecd_MVlJQoZ3bNn-xclFiA.jpeg)
 
-Let’s have a closer look at the feature that allows you to build  **universal**  **applications**  with  **React**.
+让我们仔细研究下这个能让你用**React**构建**通用的** **应用程序**的特性吧。
 
-Server-Side Rendering — SSR from here on — is the ability of a  **front-end framework**  to render markup while running on a  **back-end system**.
+服务端渲染（此后称 SSR ）是**前端框架**在**后端系统**上运行时渲染标记的能力。
 
-Applications that have the ability to render both on the server and on the client are called  **universal apps**.
+能够在服务器和客户端上进行渲染的应用程序称为**通用应用程序**。
 
-### Why bother?
+### 为何需要 SSR 呢?
 
-In order to understand why SSR is needed, we need to understand the evolution of web applications in the past 10 years.
+我们应该先了解Web应用程序在过去10年的发展历程，这有助于我们理解这个问题。
 
-This is tightly coupled with the rise of the  [_Single Page Application_][1] _—_ SPA from here on_._ SPAs offer great advantages in speed and UX over traditional server-rendered apps.
+这与 [_单页应用_][1]（此后称 SPA ）的兴起密切相关。与传统的服务端渲染应用相比，SPA 在速度和用户体验方面具有巨大优势。
 
-But there is a catch. The initial server request is generally returning an  **empty**  **HTML**  file with a bunch of CSS and JavaScript (JS) links. Then the external files need to be fetched in order to render relevant markup.
+但问题随之而来。SPA的初始服务端请求，通常返回带有一组 CSS 和 JavaScript（JS）链接的**空** **HTML**文件。 然后需要提取外部文件以呈现相关标记。
 
-This means that the user will have to wait longer for the  **initial render**. This also means that crawlers may interpret your page as empty.
+这意味着用户将等待更长的时间才能进行**初始渲染**。这也意味着爬虫可能会将您的页面解析为空白。
 
-So the idea is to render your app on the server initially, then to leverage the capabilities of SPAs on the client.
+因此，其解决方法是首先在服务端渲染你的应用，然后在客户端使用 SPA。
 
 **SSR + SPA = Universal App\***
 

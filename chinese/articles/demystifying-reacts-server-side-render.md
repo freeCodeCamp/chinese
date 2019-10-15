@@ -5,7 +5,7 @@
 
 ![揭开 React  服务端渲染的神秘面纱](https://cdn-media-1.freecodecamp.org/images/1*Ecd_MVlJQoZ3bNn-xclFiA.jpeg)
 
-让我们仔细研究下这个能让你用**React**构建**通用的** **应用程序**的特性吧。
+让我们仔细研究下这个能让你用 **React** 构建**通用的** **应用程序**的特性吧。
 
 服务端渲染（此后称 SSR ）是**前端框架**在**后端系统**上运行时渲染标记的能力。
 
@@ -17,40 +17,40 @@
 
 这与 [_单页应用_][1]（此后称 SPA ）的兴起密切相关。与传统的服务端渲染应用相比，SPA 在速度和用户体验方面具有巨大优势。
 
-但问题随之而来。SPA的初始服务端请求，通常返回带有一组 CSS 和 JavaScript（JS）链接的**空** **HTML**文件。 然后需要提取外部文件以呈现相关标记。
+但问题随之而来。SPA的初始服务端请求，通常返回带有一组 CSS 和 JavaScript（JS）链接的**空**  **HTML** 文件。 然后需要提取外部文件以呈现相关标记。
 
 这意味着用户将等待更长的时间才能进行**初始渲染**。这也意味着爬虫可能会将您的页面解析为空白。
 
 因此，其解决方法是首先在服务端渲染你的应用，然后在客户端使用 SPA。
 
-**SSR + SPA = Universal App\***
+**SSR + SPA = 通用应用\***
 
-\*You will find the term  _isomorphic app_  in some articles — it’s the same thing.
+\*你可能会在其他文章中看到  _同构应用 ( isomorphic app )_  这个词，这跟 _通用应用 ( universal app )_是一回事。
 
-Now the user does not have to wait for your JS to load and gets a  **fully**  **rendered**  **HTML**  as soon as the initial request returns a response.
+现在，用户不必等待JS加载，并能在初始请求返回响应后，立即获得**完全** **渲染的** **HTML**。
 
-Imagine the huge improvement for users navigating on slow 3G networks. Rather than waiting for over 20s for the website to load, you get content on their screen almost instantly.
+试想一下，这能给使用3G网络的用户带来多么大的提升。你几乎可以立即在屏幕上获取内容，而不必浪费20多秒等它加载完成。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*v0wyppYBPaeqoeKRplinvQ.png)
 
-And now, all the requests that are made to your server return fully rendered HTML. Great news for your SEO department!
+现在，所有发至服务器的请求都将返回完全渲染后的 HTML。这对 SEO 部门来说是个好消息！
 
-[Crawlers][2]  will now see your website as any other static site on the web and will  **index**  all the content you render on the server.
+[爬虫] [2]会像**索引**网络上的其他静态网站那样，**索引**你在服务器上呈现的所有内容。
 
-So to recap, the two main benefits we get from SSR are:
+综上所述，SSR 有两个主要优点：
 
--   Faster times for the initial page render
--   Fully indexable HTML pages
+-   更快的初始页面渲染
+-   完全可索引的 HTML 页面
 
-## Understanding SSR — one step at a time
+## 逐步理解 SSR
 
-Let’s take an iterative approach to build our complete SSR example. We start with React’s API for server rendering and we’ll add something to the mix at each step.
+让我们采取迭代的方法来构建完整的 SSR 示例。 我们从用于服务端渲染的 React API 开始，逐步添加内容。
 
-You can follow  [this repository][3]  and the tags defined there for each step.
+您可以 follow [这个仓库] [3]并查看为每个构建步骤定义的标签。
 
-### Basic Setup
+### 基本设置
 
-First things first. In order to use SSR, we need a server! We’ll use a simple  _Express_  app that will render our React app.
+首先，为了使用 SSR，我们需要一台服务器！我们将使用一个简单的 _Express_ 应用来渲染我们的 React 应用程序。
 
 ```javascript
 import express from "express";

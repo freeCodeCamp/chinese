@@ -113,41 +113,74 @@ HTML是称为Web的奇迹的基础。
 
 There is an incredible power underneath this rather simple and limited set of rules, which lets us -- developers, makers, designers, writers, and tinkerers -- craft documents, apps, and experiences for people all around the globe.
 
-
+在这组相当简单且有限的规则之下，有着不可思议的力量，它使我们–开发人员，制作人员，设计师，作家和修补匠–为全球各地的人们制作文档，应用程序和体验。
 
 My first HTML book came out in 1997 and was called "HTML Unleashed". A big, lots-of-pages, long tome.
 
+我的第一本HTML书于1997年问世，被称为“ HTML ”。 它是一个很长，很大的页面。
+
 20+ years have passed, and HTML is still the foundation of the Web, with minimal changes from back then.
+
+20多年过去了，HTML仍然是Web的基础，并且从那时到现在变化很小。
 
 Sure, we got more semantic tags, presentational HTML is no longer a thing, and CSS has taken care of the design of things.
 
+当然，我们有了更多的语义标记，表示性HTML不再是一回事，由CSS负责了事物的设计
+
 HTML's success is based on one thing: simplicity.
+
+HTML的成功基于一件事：简单性。
 
 It resisted being hijacked into an XML dialect via XHTML, when eventually people realized that thing was way, way too complex.
 
+当最终人们意识到事情太复杂了时，它拒绝通过XHTML被劫持为XML方言。
+
 It did so because of another feature it provides us: forgiveness. There are some rules, right, but after you learn those, you have a lot of freedom.
+
+之所以这样做，是因为它为我们提供了另一个功能：宽恕。 有一些规则，对，但是学习这些规则之后，您将拥有很多自由。
 
 Browsers learned to be resilient and to always try to do their best when parsing and presenting HTML to the users.
 
+浏览器变得富有弹性，并且在解析和向用户呈现HTML时总是尽可能做得更好。
+
 And the whole Web platform did one thing right: it never broke backward compatibility. Pretty incredibly, we can go back to HTML documents written in 1991, and they look pretty much as they looked back then.
+
+整个Web平台做对了一件事情：它永远不会破坏向后兼容性。 令人难以置信的是，我们可以回溯到1991年编写的HTML文档，它们看上去和那时一样。
 
 We even know what the first web page was. It's this: http://info.cern.ch/hypertext/WWW/TheProject.html
 
+我们甚至知道第一个网页是什么。 就是这样的：http://info.cern.ch/hypertext/WWW/TheProject.html
+
 And you can see the source of the page, thanks to another big feature of the Web and HTML: we can inspect the HTML of any web page.
+
+由于Web和HTML的另一个重要功能，您可以看到页面的源代码：我们可以检查任何网页的HTML。
 
 Don't take this for granted. I don't know any other platform that gives us this ability.
 
+不要认为这是理所当然的。 我不知道有其他平台可以提供这种功能。
+
 The exceptional Developer Tools built into any browser let us inspect and take inspiration from HTML written by anyone in the world.
+
+内置在任何浏览器中的出色开发人员工具使我们能够检查世界上任何人编写的HTML并从中汲取灵感。
 
 If you are new to HTML this book aims to help you get started. If you are a seasoned Web Developer this book will improve your knowledge.
 
+如果您不熟悉HTML，那么本书旨在帮助您入门。 如果您是一位经验丰富的Web开发人员，这本书将提高您的知识。
+
 I learned so much while writing it, even though I've been working with the Web for 20+ years, and I'm sure you'll find something new, too.
+
+即使我在Web上使用了20多年，我在编写它时也学到了很多东西，而且我相信您也会发现一些新东西。
 
 Or you'll re-learn something old you forgot.
 
+或者，您将重新学习忘记的旧知识。
+
 In any case, the goal of the book is to be useful to you, and I hope it succeeds.
 
+无论如何，本书的目标是对您有用，我希望它能成功。
+
 HTML BASICS
+
 HTML is a standard defined by the WHATWG, an acronym for Web Hypertext Application Technology Working Group, an organization formed by people working on the most popular web browser. This means it's basically controlled by Google, Mozilla, Apple and Microsoft.
 
 In the past the W3C (World Wide Web Consortium) was the organization in charge of creating the HTML standard.

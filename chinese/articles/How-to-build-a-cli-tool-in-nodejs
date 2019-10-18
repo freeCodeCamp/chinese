@@ -5,6 +5,8 @@
 
 如何在 NodeJS 中搭建 CLI 工具？
 
+![如何在 NodeJS 中搭建 CLI 工具？](https://cdn-media-1.freecodecamp.org/images/0*WBakKAUjwhRyaoyu)
+
 作为开发者，CLI 工具似乎陪伴我们工作的每一天，从 git 到 cloud shell —— 我们随时都在使用 CLI。所以，是时候搭建你自己的 CLI 工具了。在这篇文章中我们将使用 Heroku 构建的非常棒的框架 oclif。
 
 什么是 oclif?
@@ -38,6 +40,8 @@ cd todocli && ./bin/run --help
 
 这个文件夹显示了可用的命令及其文档。
 ￼
+![可用命令及其文档](https://cdn-media-1.freecodecamp.org/images/7kAIGY3XeWm6MEvHGy1CzqkIaAZgNlRuaRgB)
+
 项目结构
 
 我们可以在 src 目录下面找到一个名为 commands 的目录。这个目录包含所有命令及其相对文件名。例如，如果我们有一个命令 hello，我们将在这个目录中找到一个名为 hello.js 的文件，该命令无需更多设置即可运行。当我们不需要它的时候可以删除它。
@@ -50,6 +54,7 @@ npm install lowdb --save
 
 让我们在项目根目录中创建一个 db.json 文件。该文件将保存我们的数据。然后我们需要安装lowdb。现在，我们将在 src 目录中创建一个名为 db.js 的文件。这个文件将会保存我们的数据库资料。
 ￼
+![db.js](https://cdn-media-1.freecodecamp.org/images/ZPMiJ2gQxw0dhQ8nUrNcHEgLKn6sjQZytsUF)
 
 在这里，我们首先简单地加载所需的库和文件，然后将定义一个空的 todos 数组作为我们的基本集合（如果你把它想像成 SQL 数据库那这就像一个表）。
 
@@ -59,6 +64,8 @@ oclif为我们提供了平滑的命令生成功能。让我们跟着运行以下
 npx oclif command add（原文为：oclif command add，译者实际使用中会报出错误 oclif: command not found）
 
 这个命令将在 src/commands 目录中创建一个名为 add.js 的文件。让我们用下面的代码替换该文件的内容：
+
+![add.js](https://cdn-media-1.freecodecamp.org/images/YL5ieYvGcM7hWUt7U8OVl57BYhEkTnMNOecq)
 
 该文件有几个关键组件：
 	•	一个执行此命令主要功能的运行函数，
@@ -73,14 +80,16 @@ npx oclif command add（原文为：oclif command add，译者实际使用中会
 显示任务
 npx oclif command show
 ￼
+![show.js](https://cdn-media-1.freecodecamp.org/images/kavzj2Te9vo0cKMrAqCuzq2y1NQxy9SlE-bE)
 
 在 show.js 中，我们以升序显示所有任务。我们用 chalkjs 添加了一点颜色，使我们的命令结果更好看。
 ￼
+![run command](https://cdn-media-1.freecodecamp.org/images/rLEcSp4-OGsNGwPQ5rKFfQEtGtmfmqeD5SfI)
 
 更新任务
 npx oclif command update
 ￼
-
+![update.js](https://cdn-media-1.freecodecamp.org/images/K9WR09bpADleq90pqY-xJmK-E7ssX235oqjI)
 
 为简单起见，我们现在只为我们的更新部分设置任务。我们只是将任务的 id 作为标志传递。
 ./bin/run update --id=1
@@ -90,6 +99,7 @@ npx oclif command update
 移除任务
 npx oclif command remove
 ￼
+![remove.js](https://cdn-media-1.freecodecamp.org/images/of6nVG76saJkI4VyV5mXA-AsZTPNat1Na2fU)
 
 删除非常简单：我们将 id 作为标志传递，然后从数据库中删除相关任务。
 

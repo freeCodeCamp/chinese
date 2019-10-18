@@ -96,7 +96,7 @@ npx oclif command add（原文为：oclif command add，译者实际使用中会
 ```
 npx oclif command show
 ```
-￼
+
 ![show.js](https://cdn-media-1.freecodecamp.org/images/kavzj2Te9vo0cKMrAqCuzq2y1NQxy9SlE-bE)
 
 在 show.js 中，我们以升序显示所有任务。我们用 chalkjs 添加了一点颜色，使我们的命令结果更好看。

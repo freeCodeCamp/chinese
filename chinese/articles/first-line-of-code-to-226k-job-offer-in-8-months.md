@@ -3,9 +3,12 @@
 > * 译者：MMMAY521
 > * 校对者：
 
-![How I Went from Writing My First Line of Code to a $226K Job Offer in Just 8 Months](https://www.freecodecamp.org/news/content/images/size/w2000/2019/09/Love-to-learn_tim-mossholder_unsplash.jpg)
+![How I Went from Writing My First Line of Code to a $226K Job Offer in Just 8 Months]
+八个月：从写下第一行代码到拿下226K美元的工作
+(https://www.freecodecamp.org/news/content/images/size/w2000/2019/09/Love-to-learn_tim-mossholder_unsplash.jpg)
 
 I got offers from Google, Lyft, Yelp, cloud unicorn Rubrik, IBM Artificial Intelligence, and JP Morgan Chase. My story may help you in your job search.
+我找工作时曾拿到了包括谷歌、Lyft、Yelp、云独角兽公司Rubrik、IBM人工智能部门和摩根大通集团在内的工作offer，我的求职故事可能会对你有所启发。
 
 ### Introduction
 

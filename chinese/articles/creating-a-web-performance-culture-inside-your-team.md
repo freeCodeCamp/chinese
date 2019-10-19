@@ -1,6 +1,6 @@
 > * 原文地址：[How to create a web performance culture inside your team](https://www.freecodecamp.org/news/creating-a-web-performance-culture-inside-your-team-f00c0d79765f/)
 > * 原文作者：Alex Moldovan
-> * 译者：
+> * 译者：waylen94
 > * 校对者：
 
 

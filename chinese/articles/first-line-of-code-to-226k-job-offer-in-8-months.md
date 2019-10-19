@@ -17,26 +17,26 @@ I hope my story inspires current software engineering job seekers - especially f
 You may be thinking “how likely is it that I could pull this off too?” In this article, I'll be specific about my decisions and thought processes. I'll also give links for further reading.你可能会想：你怎么可能八个月就做到？在这篇文章中，我会对我的决策过程和思考过程详细介绍，也会提供进一步的阅读资料。
 
 First, I must acknowledge that I have benefited from significant privilege: I am a white, straight, cis, male with a bachelor’s degree from a top 20 US university. I had also built up a network after three years of working in the San Francisco Bay Area.
-
+首先，我必须承认，我是个白人，直男，本科就读于美国国内排名前20的高校。在旧金山湾区工作的三年也让我积累了自己的人脉。
 Every job seeker's story will be different, but I hope yours benefits from mine.
+每个求职者的故事都不太一样，希望我的故事也能对你有所启发。
+## **Deciding to take the plunge**决定冒险
 
-## **Deciding to take the plunge**
+On July 29th, 2018, I made an irrational decision.2018年7月29日，我做了一个不理智的决定。
 
-On July 29th, 2018, I made an irrational decision.
+I was choosing between a Chief of Staff role for a hyper-growth adtech company and attending a  [coding “bootcamp.”][1]  The Chief of Staff role was lucrative and certain - seemingly an extraordinary ticket to a Silicon Valley fast track. The bootcamp seemed expensive and risky.我面临着两个选择：一是去一家快速增长广告技术公司担任办公室主任，二是参加编程训练营。办公室主任一职薪水颇丰，发展稳定，似乎还是进入硅谷工作的快速通道。编程训练营看起来代价又高、风险又大。
 
-I was choosing between a Chief of Staff role for a hyper-growth adtech company and attending a  [coding “bootcamp.”][1]  The Chief of Staff role was lucrative and certain - seemingly an extraordinary ticket to a Silicon Valley fast track. The bootcamp seemed expensive and risky.
+I had written my first line of JavaScript five weeks earlier on June 24th with no intention of becoming an engineer. I already had a degree in Economics and three years’ experience as a non-technical management consultant for nonprofits. I just wanted to make myself a more attractive candidate for roles that involved working with engineers in the Bay Area.6月24日，也就是5周前，我才用Javascript写下了我的第一行代码，但也并没有打算成为一名工程师。本科时，我读的专业是经济学，过去三年在一家非盈利机构做非技术管理咨询的工作。在湾区，有些职位要跟工程师一起工作，我只是想让自己竞争这些岗位时更有竞争力。
 
-I had written my first line of JavaScript five weeks earlier on June 24th with no intention of becoming an engineer. I already had a degree in Economics and three years’ experience as a non-technical management consultant for nonprofits. I just wanted to make myself a more attractive candidate for roles that involved working with engineers in the Bay Area.
+Actually becoming an engineer seemed like a moonshot idea. I had heard stories of people self-teaching and using bootcamps to do so in under a year. But I struggled to believe that I could do the same.事实上，成为一名工程师像是天方夜谭。尽管我之前听说过许多人用一年时间用编程训练营自学了编程，但我还是很难相信自己也可以做到同样水平。
 
-Actually becoming an engineer seemed like a moonshot idea. I had heard stories of people self-teaching and using bootcamps to do so in under a year. But I struggled to believe that I could do the same.
+Most engineers I knew had four-year computer science degrees, years of experience, and seemed to speak a foreign language. How could I learn all that in so little time? Plus, doing so would require I throw out my career-to-date in operations and strategy — a high cost for an uncertain reward.据我了解，大多数工程师本科专业就是计算机科学，他们有着多年的工作经验，还会讲一门外语，我怎么能在这么短的时间内学会这么多东西呢？另外，要是我选择学习编程，我就要舍弃掉我的职业生涯，为一个不确定的回报冒这么高的风险，值得吗？
 
-Most engineers I knew had four-year computer science degrees, years of experience, and seemed to speak a foreign language. How could I learn all that in so little time? Plus, doing so would require I throw out my career-to-date in operations and strategy — a high cost for an uncertain reward.
+The Chief of Staff role, on the other hand, looked like a dream come true. I would be the most junior member by ~10 years in “the room where it happens” as the company navigated upcoming acquisition talks. Salary negotiations went better than expected, and it seemed I would likely inherit a department of my own after a few years.办公室主任一职，则更像是梦想实现了。公司正在准备不久后的合并事宜，不超十年，我将成为一家大公司的员工。给出的薪水比预想的要好，几年后我也有希望领导自己的团队。
 
-The Chief of Staff role, on the other hand, looked like a dream come true. I would be the most junior member by ~10 years in “the room where it happens” as the company navigated upcoming acquisition talks. Salary negotiations went better than expected, and it seemed I would likely inherit a department of my own after a few years.
+But once I started coding I didn’t want to stop. I loved the technical challenge, was thrilled to make headway against something so intimidating. And I figured  [developing a second professional skillset][2]  might prepare me for an unusually impactful career.但是，开始编程后，我就不想停下来。我热爱技术挑战，喜欢迎难而上。我还发现，发展第二个职业技能[developing a second professional skillset][2]让我做足准备，开启一段不平凡、有影响的职业生涯。
 
-But once I started coding I didn’t want to stop. I loved the technical challenge, was thrilled to make headway against something so intimidating. And I figured  [developing a second professional skillset][2]  might prepare me for an unusually impactful career.
-
-An inner voice also asked if becoming an engineer would be as personally transformational as professional:  _If I succeed in learning this, what couldn’t I learn?_  This attitude, more than anything else, would become the theme of my journey.
+An inner voice also asked if becoming an engineer would be as personally transformational as professional:  _If I succeed in learning this, what couldn’t I learn?_  This attitude, more than anything else, would become the theme of my journey.我内心里也有个声音在问：成为一名工程师会不会既能提升专业度，又能完成个人转型？如果我能学会编程，有什么是我学不会的呢？正是这种学习态度，成为了我整个旅程的主题。
 
 I took an online course and, after coding ~40 hours/week for three weeks, I decided to apply to  [Hack Reactor][3], which I had heard described as “the Harvard of bootcamps,” just to see if I could get in. I passed the entrance exam by the skin of my teeth the same week I received the Chief of Staff offer.
 

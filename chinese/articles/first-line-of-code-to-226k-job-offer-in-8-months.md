@@ -36,45 +36,45 @@ The Chief of Staff role, on the other hand, looked like a dream come true. I wou
 
 But once I started coding I didn’t want to stop. I loved the technical challenge, was thrilled to make headway against something so intimidating. And I figured  [developing a second professional skillset][2]  might prepare me for an unusually impactful career.但是，开始编程后，我就不想停下来。我热爱技术挑战，喜欢迎难而上。我还发现，发展第二个职业技能[developing a second professional skillset][2]让我做足准备，开启一段不平凡、有影响的职业生涯。
 
-An inner voice also asked if becoming an engineer would be as personally transformational as professional:  _If I succeed in learning this, what couldn’t I learn?_  This attitude, more than anything else, would become the theme of my journey.我内心里也有个声音在问：成为一名工程师会不会既能提升专业度，又能完成个人转型？如果我能学会编程，有什么是我学不会的呢？正是这种学习态度，成为了我整个旅程的主题。
+An inner voice also asked if becoming an engineer would be as personally transformational as professional:  _If I succeed in learning this, what couldn’t I learn?_  This attitude, more than anything else, would become the theme of my journey.我内心里也有个声音在问：成为一名工程师会不会既能提升专业度，又能完成个人转型？如果我能学会编程，有什么是我学不会的呢？正是这种学习态度，支撑我坚持走完了整个旅程。
 
-I took an online course and, after coding ~40 hours/week for three weeks, I decided to apply to  [Hack Reactor][3], which I had heard described as “the Harvard of bootcamps,” just to see if I could get in. I passed the entrance exam by the skin of my teeth the same week I received the Chief of Staff offer.
+I took an online course and, after coding ~40 hours/week for three weeks, I decided to apply to  [Hack Reactor][3], which I had heard described as “the Harvard of bootcamps,” just to see if I could get in. I passed the entrance exam by the skin of my teeth the same week I received the Chief of Staff offer.我选择了线上的编程课，连续三周每周编程时间不低于40个小时，之后我申请了被誉为“哈佛编程训练营”的黑客反应堆[Hack Reactor][3],想试试看我是否能成为其中的一份子。侥幸通过测试后，同一周，我拿到了办公室主任的工作offer。
 
-After 72 hours of soul searching I checked my bank account one last time. I estimated I would have three months’ rent and food after Hack Reactor.  _Just enough time to find a job,_  I thought.
+After 72 hours of soul searching I checked my bank account one last time. I estimated I would have three months’ rent and food after Hack Reactor.  _Just enough time to find a job,_  I thought.72小时的自我反省后，我最后一次查看了自己的银行账户。算了算黑客反应堆项目结束后，我还有三个月的房租和相应的食物开支。我想，时间足够我找到工作了。
 
-I chose bootcamp.
+I chose bootcamp.我选择了编程训练营。
 
-I declined by phone with the adtech company, hung up, and was hit by a wave of mixed emotions. Part of me was scared:  _I’m throwing away a once-in-a-lifetime opportunity for a moonshot idea!_ Another part excited:  _The only thing that stands between me and regret is taking risks!_
+I declined by phone with the adtech company, hung up, and was hit by a wave of mixed emotions. Part of me was scared:  _I’m throwing away a once-in-a-lifetime opportunity for a moonshot idea!_ Another part excited:  _The only thing that stands between me and regret is taking risks!_我给广告技术公司打电话拒绝了他们的offer。挂断电话以后我的情绪很复杂，一方面我很害怕：我可是为一个疯狂的决定放弃了一生仅一次的工作机会！一方面我又基情满满：为了不让自己后悔，冒险前进吧！
 
-Soon my excitement won out. No turning back now – I was in for an adventure.
+Soon my excitement won out. No turning back now – I was in for an adventure.没多久我的激情就消耗殆尽了。不过再没有回头路了：我已经踏上了冒险旅程。
 
-## **Learning to code**
+## **Learning to code**学习编程
 
-> **“You don't have to be great to start, but you have to start to be great.” –Zig Ziglar**
+> **“You don't have to be great to start, but you have to start to be great.” –Zig Ziglar**不必一开始就优秀，但你要学着优秀。---齐格*齐格勒
 
-Hack Reactor and other “bootcamps” aspire to do in three months much of what traditional university CS programs do in four years: prepare students to compete for top-tier software engineering jobs.
+Hack Reactor and other “bootcamps” aspire to do in three months much of what traditional university CS programs do in four years: prepare students to compete for top-tier software engineering jobs.黑客反应堆和其他编程训练营都力求在三个月完成传统大学计算机科学专业需要四年才能完成的任务：让学生做好准备，竞争顶级软件工程工作。
 
-The goal is ambitious, and every moment counts. For 12-14 hours/day, 6 days/week over the course of 3 months, the program threw us repeatedly into overwhelming tasks against tight time constraints.
+The goal is ambitious, and every moment counts. For 12-14 hours/day, 6 days/week over the course of 3 months, the program threw us repeatedly into overwhelming tasks against tight time constraints.目标很宏大，所以得分秒必争。三个月的课程安排中，一周六天，一天上12-14小时的课，时间很紧，所以我们每天都面临大量的任务。
 
-At the start of every assignment I would get a sickening pit in my stomach and think,  _This deadline seems impossible – I don’t even know where to start_! But somehow I would (almost) always hack together a working solution just as time expired.
+At the start of every assignment I would get a sickening pit in my stomach and think,  _This deadline seems impossible – I don’t even know where to start_! But somehow I would (almost) always hack together a working solution just as time expired.每次下达任务时，我都会心里一惊：这根本不可能在截止期限完成！我连在哪儿下手都没有头绪。但很神奇，每次到截止期限时，我总是能想出来或基本想出来一个解决方案。
 
-After enough reps, I started to associate the pit in my stomach with a sense of excitement — the more impossible the challenge seemed, the more satisfying it would be to find a solution.
+After enough reps, I started to associate the pit in my stomach with a sense of excitement — the more impossible the challenge seemed, the more satisfying it would be to find a solution.经历足够的震惊之后，我开始感到一丝丝的激动：挑战看起来有多不可能，找到解决方案的时候就有多心满意足。
 
-Hack Reactor wasn’t just teaching content, it was teaching a new kind of  [grit][4]  and  [growth mindset][5], and the process was exhilarating.
+Hack Reactor wasn’t just teaching content, it was teaching a new kind of  rit[grit][4]  and  [growth mindset][5], and the process was exhilarating.黑客反应堆不仅仅教授编程知识，它还会教给我们咬紧牙关坚持的精神[grit][4]，以及成长型思维[growth mindset][5]。过程十分令人激动。
 
-Still doubting I would get a job before my savings ran out, I invested in the best learning and self-care habits I could find.
+Still doubting I would get a job before my savings ran out, I invested in the best learning and self-care habits I could find.仍然怀疑我是否能在存款用完之前烧到工作，我选择了最好的学习课程，养成了我能找到的自我关心习惯。
 
-To ensure ample  [sleep for learning][6], I kept strict bedtimes.
+To ensure ample  [sleep for learning][6], I kept strict bedtimes.充足的睡眠才能保证学习效率[sleep for learning][6]，因此我制定了严格的睡眠时间。
 
-To fight repetitive stress aches,  [boost wellbeing][7], and  [support learning][8], I worked out every other day.
+To fight repetitive stress aches,  [boost wellbeing][7], and  [support learning][8], I worked out every other day.为了缓解经常性压力，每隔一天我都会锻炼身体促进健康、支持学习。
 
-To improve retention and make each day’s learning a little better than the last, I reviewed core lessons and reflected on what went well and what did not most evenings.
+To improve retention and make each day’s learning a little better than the last, I reviewed core lessons and reflected on what went well and what did not most evenings.为了提升记忆力、让每一天的学习都比前一天有进步，几乎每天晚上我都会复习核心课程，思考哪些事情做得比较好，哪些还不够好。
 
-And most importantly, to maintain baseline wellbeing during such an intense schedule, I meditated for a full hour every morning before class, usually using a mix of vipassana (a form of  [body scanning][9]) and  [loving-kindness][10]  techniques.
+And most importantly, to maintain baseline wellbeing during such an intense schedule, I meditated for a full hour every morning before class, usually using a mix of vipassana (a form of  [body scanning][9]) and  [loving-kindness][10]  techniques.最重要的是，为了在一个如此紧张的安排中保持基本健康水平，每天早上上课之前我都会花一个小时来冥想，结合内观（一种身体审视形式[body scanning][9]）和慈爱[loving-kindness][10]冥想。
 
-This last habit may strike some as extreme, but the  [evidence behind meditation][11]  improving wellbeing is strong, especially  [loving-kindness][12]. I cannot overstate how valuable this practice was in helping me embrace the curiosity and joy of learning rather than grow anxious about the challenges of bootcamp and uncertain employment.
+This last habit may strike some as extreme, but the  [evidence behind meditation][11]  improving wellbeing is strong, especially  [loving-kindness][12]. I cannot overstate how valuable this practice was in helping me embrace the curiosity and joy of learning rather than grow anxious about the challenges of bootcamp and uncertain employment.最后一个习惯可能会震撼一些人，但是冥想能改善健康的证据[evidence behind meditation][11]十分充足,尤其是慈爱冥想 [loving-kindness][12]。它帮助我保持对编程学习的好奇和愉悦，缓解了我面对编程学习挑战和工作的不确定性时的忧虑，对我来说十分有价值，但我又不能过于夸大它的价值。
 
-I also benefited from a blessing in disguise. A travel conflict prevented me from enrolling in the in-person immersive, so despite living a 10-minute walk from the SF campus, I had to take the remote program. Between the lack of commute, easy access to food, and the quiet of my apartment, I was able to protect another ~90 minutes a day of uninterrupted  [deep work][13].
+I also benefited from a blessing in disguise. A travel conflict prevented me from enrolling in the in-person immersive, so despite living a 10-minute walk from the SF campus, I had to take the remote program. Between the lack of commute, easy access to food, and the quiet of my apartment, I was able to protect another ~90 minutes a day of uninterrupted  [deep work][13].我也确实因祸得福。因为差旅冲突我没有选择面对面授课。所以尽管我离斯坦福校园步行只需十分钟，我不得不选择了更远的项目---网课。但因为我上课无需通勤，吃饭方便，公寓环境十分安静，一天中，我又多出了90分钟不被打扰的深层学习时间。
 
 The first six weeks involved two-day pair programming sprints building on semi-completed code repositories. We raced through rewriting the JavaScript  [Underscore][14]  library, building basic data structures from scratch, learning object-oriented vs. functional programming, calculating time and space complexity, and wiring up a full stack app from client to server to database. Our smaller, 24-person cohort grew close joking with one another over video conference 10+ hours/day.
 

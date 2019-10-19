@@ -14,7 +14,7 @@ I got offers from Google, Lyft, Yelp, cloud unicorn Rubrik, IBM Artificial Intel
 
 I hope my story inspires current software engineering job seekers - especially from non-traditional backgrounds.我希望我的求职故事能激励正在找软件工程领域工作的同仁---特别是那些非专业科班背景的朋友。
 
-You may be thinking “how likely is it that I could pull this off too?” In this article, I'll be specific about my decisions and thought processes. I'll also give links for further reading.
+You may be thinking “how likely is it that I could pull this off too?” In this article, I'll be specific about my decisions and thought processes. I'll also give links for further reading.你可能会想：你怎么可能八个月就做到？在这篇文章中，我会对我的决策过程和思考过程详细介绍，也会提供进一步的阅读资料。
 
 First, I must acknowledge that I have benefited from significant privilege: I am a white, straight, cis, male with a bachelor’s degree from a top 20 US university. I had also built up a network after three years of working in the San Francisco Bay Area.
 

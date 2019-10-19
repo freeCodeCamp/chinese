@@ -10,9 +10,9 @@
 I got offers from Google, Lyft, Yelp, cloud unicorn Rubrik, IBM Artificial Intelligence, and JP Morgan Chase. My story may help you in your job search.
 我找工作时曾拿到了包括谷歌、Lyft、Yelp、云独角兽公司Rubrik、IBM人工智能部门和摩根大通集团在内的工作offer，我的求职故事可能会对你有所启发。
 
-### Introduction
+### Introduction简要概述
 
-I hope my story inspires current software engineering job seekers - especially from non-traditional backgrounds.
+I hope my story inspires current software engineering job seekers - especially from non-traditional backgrounds.我希望我的求职故事能激励正在找软件工程领域工作的同仁---特别是那些非专业科班背景的朋友。
 
 You may be thinking “how likely is it that I could pull this off too?” In this article, I'll be specific about my decisions and thought processes. I'll also give links for further reading.
 

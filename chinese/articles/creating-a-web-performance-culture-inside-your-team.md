@@ -1,14 +1,14 @@
 > * 原文地址：[How to create a web performance culture inside your team](https://www.freecodecamp.org/news/creating-a-web-performance-culture-inside-your-team-f00c0d79765f/)
 > * 原文作者：Alex Moldovan
-> * 译者：
+> * 译者：waylen94
 > * 校对者：
 
 
 ![How to create a web performance culture inside your team](https://cdn-media-1.freecodecamp.org/images/1*f-Ey0tW6O_vFHz_RPZWh_A.jpeg)
 
-Those who work with me know that I’m always obsessing about performance. Words like: critical rendering path, bundle size and frames-per-second are a common thing around the office. But it’s all for a good reason.
+和我合作的大部分人都了解，我是个追求性能优化的极客。 渲染引擎，代码打包优化，每秒帧数提升这些关键词是工作中的家常便饭。一切为了性能！
 
-Performance should be a  **first class citizen**  in software engineering.
+性能永远是软件工程领域的“一等公民”。
 
 Having a strong  **performance culture**  in your team can ensure that you mitigate — ahead of time — any risks associated with bad performance.
 
@@ -152,15 +152,16 @@ If I were to sum up the path towards a performance culture, these are the key ta
 
 ## References
 
-Since a lot of people ask for materials on web performance, here are a couple of places you can start from:
+许多人追问我有什么网络性能优化的参考材料，以下列出：
 
--   [Google Developers portal][22]  has great articles on performance optimization techniques
--   [perf-tooling.today][23]  offers a lot of great resources on web performance
--   [The Chrome DevTeam’s publication][24]  explores a lot of great ideas and case studies about improving the performance of popular websites.
--   Check out our  [performance checklist on github][25]  and contribute with ideas!
--   Also have a look at Smashing Magazine’s 2018  [front-end performance checklist][26], it is really impressive!
+-   [Google Developers portal][22]  这儿有许多性能优化技术文章
+-   [perf-tooling.today][23]  网络性能相关资源
+-   [The Chrome DevTeam’s publication][24] 发现站点性能提升创意以及学习案例
+-   关于我们的  [performance checklist on github][25]  提出你的想法！
+-   也可以看看 Smashing Magazine’s 2018  [front-end performance checklist][26],他的文章令我很有感慨！ 
 
 I’m super curious to hear your thoughts on this. Is your team embracing a performance culture? What works for you? What doesn’t? Leave a comment and share if you enjoyed this article!
+
 
   
 

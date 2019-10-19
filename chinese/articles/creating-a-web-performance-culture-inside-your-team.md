@@ -14,25 +14,26 @@ Having a strong  **performance culture**  in your team can ensure that you mitig
 
 But why is it so important? And what are those risks?
 
-## Why performance matters
+## 为什么性能优化如此重要
 
 Remember that as web developers, our goal is to create the best possible experience for our users.
 
-### Performance is about usability.
+### 性能代表了可用性
 
-There are many studies ([\[1\]][1],  [\[2\]][2],  [\[3\]][3]) that show a direct correlation between business goals and usability on the web.
+有很多研究 ([\[1\]][1],  [\[2\]][2],  [\[3\]][3]) 展示了商业目标与网站可用性之间的关联。
 
-A fast and snappy website can make the difference between success and failure when it comes to the relationship with your users.
+快速响应，优化完善是网站在满足客户需求时成败的关键。
 
-Your fancy UI framework and architecture won’t matter at all if your website is perceived as slow and laggy. Not to mention the scenario in which users leave because they are waiting behind a spinner or a white screen.
+如果网页呈现缓慢，先进的前端框架与架构必将失去光泽。更不用说我们挑剔的用户在面对白屏时会放弃浏览我们的网页。
 
-[53% of the users will close your website within 3 seconds][4]  if you don’t show any content.
+[53% 的用户预计在3秒内关闭页面][4] 如果网页内容得不到有效的呈现
 
-Furthermore, performance is also a metric in mobile page ranking,  [according to Google][5].
+另外，网页性能在手机端也是搜索排序的一大因素 [谷歌搜索][5].
 
 ### Performance is about accessibility.
 
 Let’s talk about the global market. Performance budgets are also important when it comes to the cost of data. How much does a user pay to visit your website?
+
 
 You can find out using  [this website][6]. Then you can ask yourself: “Am I willing to pay x cents to visit my website?” You might be surprised by your own answer.
 

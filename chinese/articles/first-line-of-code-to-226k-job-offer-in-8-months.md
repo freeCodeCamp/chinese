@@ -44,7 +44,7 @@ After 72 hours of soul searching I checked my bank account one last time. I esti
 
 I chose bootcamp.我选择了编程训练营。
 
-I declined by phone with the adtech company, hung up, and was hit by a wave of mixed emotions. Part of me was scared:  _I’m throwing away a once-in-a-lifetime opportunity for a moonshot idea!_ Another part excited:  _The only thing that stands between me and regret is taking risks!_我给广告技术公司打电话拒绝了他们的offer。挂断电话以后我的情绪很复杂，一方面我很害怕：我可是为一个疯狂的决定放弃了一生仅一次的工作机会！一方面我又基情满满：为了不让自己后悔，冒险前进吧！
+I declined by phone with the adtech company, hung up, and was hit by a wave of mixed emotions. Part of me was scared:  _I’m throwing away a once-in-a-lifetime opportunity for a moonshot idea!_ Another part excited:  _The only thing that stands between me and regret is taking risks!_我给广告技术公司打电话拒绝了他们的offer。挂断电话以后我的情绪很复杂，一方面我很害怕：我可是为一个疯狂的决定放弃了一生仅一次的工作机会！另一方面我又激情满满：为了不让自己后悔，冒险前进吧！
 
 Soon my excitement won out. No turning back now – I was in for an adventure.没多久我的激情就消耗殆尽了。不过再没有回头路了：我已经踏上了冒险旅程。
 
@@ -76,72 +76,72 @@ This last habit may strike some as extreme, but the  [evidence behind meditation
 
 I also benefited from a blessing in disguise. A travel conflict prevented me from enrolling in the in-person immersive, so despite living a 10-minute walk from the SF campus, I had to take the remote program. Between the lack of commute, easy access to food, and the quiet of my apartment, I was able to protect another ~90 minutes a day of uninterrupted  [deep work][13].我也确实因祸得福。因为差旅冲突我没有选择面对面授课。所以尽管我离斯坦福校园步行只需十分钟，我不得不选择了更远的项目---网课。但因为我上课无需通勤，吃饭方便，公寓环境十分安静，一天中，我又多出了90分钟不被打扰的深层学习时间。
 
-The first six weeks involved two-day pair programming sprints building on semi-completed code repositories. We raced through rewriting the JavaScript  [Underscore][14]  library, building basic data structures from scratch, learning object-oriented vs. functional programming, calculating time and space complexity, and wiring up a full stack app from client to server to database. Our smaller, 24-person cohort grew close joking with one another over video conference 10+ hours/day.刚开始的六周，有两天基于未完成代码库的结对子的编程冲刺。两天时间里，我们重写了Javascript强调[Underscore][14]图书馆，从零开始建立了基础数据结构，学习了以结构为导向的和功能编程，计算了时间和空间复杂度，接通了从客户到服务器到数据库的全栈APP应用。我们这支24人队伍，每天视频会议时间不下10小时，期间开开玩笑，关系走得日渐亲近。
+The first six weeks involved two-day pair programming sprints building on semi-completed code repositories. We raced through rewriting the JavaScript  [Underscore][14]  library, building basic data structures from scratch, learning object-oriented vs. functional programming, calculating time and space complexity, and wiring up a full stack app from client to server to database. Our smaller, 24-person cohort grew close joking with one another over video conference 10+ hours/day.刚开始的六周，有两天是在未完成代码库的基础上，进行结对子的编程冲刺。两天时间里，我们重写了Javascript强调[Underscore][14]图书馆，从零开始建立了基础数据结构，学习了结构导向编程和功能编程，计算了时间和空间复杂度，接通了从客户到服务器到数据库的全栈APP应用。我们这支24人队伍，每天视频会议时间不下10小时，期间开开玩笑，关系走得日渐亲近。
 
-Three weeks in, I was afraid I wasn’t going to pass the gating mid-course assessment, so I  [wrote a letter to myself][15]  dated in the future explaining how it came to be that I passed the assessment.学习了三周以后，我担心我可能不会通过中期考评，所以我给自己写了一封信，是在考试失败后打开，告诉自己是如何失败的。
+Three weeks in, I was afraid I wasn’t going to pass the gating mid-course assessment, so I  [wrote a letter to myself][15]  dated in the future explaining how it came to be that I passed the assessment.学习了三周以后，我担心我可能不会通过中期考评，所以我给未来的自己写了一封信，告诉自己要想通过考评需要如何做。
 
-I mentioned all my existing self-care and learning habits and added a few more, including reviewing code I didn’t fully understand until I could mentally explain the core concepts to an imaginary 8 year-old (the  [Feynman Technique][16]).我提到了我现有的自我关心和学习习惯，又增加了一些新的习惯，包括能在脑海里给一个虚构的小女孩[Feynman Technique][16]解释核心概念之前，复习这些我没有完全理解的代码。
+I mentioned all my existing self-care and learning habits and added a few more, including reviewing code I didn’t fully understand until I could mentally explain the core concepts to an imaginary 8 year-old (the  [Feynman Technique][16]).我提到了我现有的自我关心和学习习惯，又增加了一些新的习惯，比如，有能力在脑海里给一个虚构的小女孩[Feynman Technique][16]解释核心代码之前，复习这些我没有完全理解的代码。
 
-Three weeks later, I built my first full stack application from scratch in under 24 hours and passed the exam with flying colors. College was a great education. This was another level.三周以后，在24小时内，我从零建立起了自己的第一个全栈应用，出色地通过了考评。大学教育十分重要，但这里的教育是一个不同的层次。
+Three weeks later, I built my first full stack application from scratch in under 24 hours and passed the exam with flying colors. College was a great education. This was another level.三周以后，在24小时内，我从零建立起了自己的第一个全栈应用，出色地通过了考评。大学教育十分重要，但这里的教育是另一个世界。
 
-The second six weeks involved more free-form group projects. Taking inspiration from  [positive deviance][17], I tracked down and got in touch with bootcamp alumni who were especially successful in the job search. I followed their guidance to set tight personal deadlines for intimidating technical challenges, select “hot” skills on the job market (like working with Docker and microservices), and diversifying my roles across different projects. I arranged a tutoring session with one alum and successfully implemented a feature that originally took him weeks in two days.
+The second six weeks involved more free-form group projects. Taking inspiration from  [positive deviance][17], I tracked down and got in touch with bootcamp alumni who were especially successful in the job search. I followed their guidance to set tight personal deadlines for intimidating technical challenges, select “hot” skills on the job market (like working with Docker and microservices), and diversifying my roles across different projects. I arranged a tutoring session with one alum and successfully implemented a feature that originally took him weeks in two days.第二个六周里，有更多的自由形式小组项目。我从正向偏差中汲取灵感，追随着训练营营友的步伐，跟他们进行了交流。这些营友找的工作都十分成功。根据他们的指导建议，我设定了严格的deadline以应对巨大的技术挑战；在求职市场上挑选出最受欢迎的职业技能，例如能使用Docker和微服务系统工作；在不同的项目中扮演不同的角色。我还请一个营友对我进行了一次辅导，我用两天的时间成功运行一项性能，这位营友却花费了数周时间。
 
-Hack Reactor hires some of its graduates from each cohort to serve as temporary, part-time teaching assistants to support full-time staff. After graduation, I took a 6-week position working ~35 hours/week and helped roll out new curriculum, conducted independent research, lectured job-seeking alumni on my findings, and interviewed incoming Hack Reactor candidates.
+Hack Reactor hires some of its graduates from each cohort to serve as temporary, part-time teaching assistants to support full-time staff. After graduation, I took a 6-week position working ~35 hours/week and helped roll out new curriculum, conducted independent research, lectured job-seeking alumni on my findings, and interviewed incoming Hack Reactor candidates.黑客反应堆会从每支队伍的结业营员中雇佣一些作为短期兼职助教，来支持全职员工的工作。结业以后，我在这里担任了六周的助教，每周工作35个小时。工作内容包括：帮助制定课程安排，进行独立调研，基于调研结果帮助在找工作的营员，面试前来应聘黑客反应堆的候选人。
 
-I negotiated a 6-week position as opposed to the typical 12-week position to give me exposure to the new curriculum while limiting the delay in job searching and studying full-time. I was grateful to learn on the job ([teaching in particular boosted my own learning][18]) and the modest pay bought me two more months of living expenses – a big relief!
+I negotiated a 6-week position as opposed to the typical 12-week position to give me exposure to the new curriculum while limiting the delay in job searching and studying full-time. I was grateful to learn on the job ([teaching in particular boosted my own learning][18]) and the modest pay bought me two more months of living expenses – a big relief!我跟训练营负责人商量了只做六周的助教，而不是十二周。助教工作让我接触到了新的课程，同时也让我兼顾找工作和全职学习两件事，没有太多耽搁。非常感激能在助教工作中学习，助教工作确实进一步加深了我自己的学习[teaching in particular boosted my own learning][18]，开出的薪水也足够我两个多月的开支，极大地缓解了我的压力。
 
-## **Securing a job as a Software Engineer**
+## **Securing a job as a Software Engineer**找一份软件工程师的工作
 
-![Logos of companies that offered me jobs](https://lh6.googleusercontent.com/RlPOtwnw1WxpvJ2NI1Xp1csEF2uwSmBI95u4aKctmUNqcEjW9vWbbHTWyIT9M9i690llZinY_Dy7H7W55ivwx2sYu3Mk0cvo2NMRH5ZSIkp8xmBzDlTQxjAltlUQfKP9Qk4dc8Cc)
+![Logos of companies that offered me jobs]所有给我工作offer的公司logo合辑(https://lh6.googleusercontent.com/RlPOtwnw1WxpvJ2NI1Xp1csEF2uwSmBI95u4aKctmUNqcEjW9vWbbHTWyIT9M9i690llZinY_Dy7H7W55ivwx2sYu3Mk0cvo2NMRH5ZSIkp8xmBzDlTQxjAltlUQfKP9Qk4dc8Cc)
 
-Companies that made me offers
+Companies that made me offers给我工作offer的公司
 
-On December 7, 165 days after my first line of code, my employment with Hack Reactor ended, leaving me with savings to pay for four months’ rent and food. Hack Reactor warns its graduates to budget six months for job searching. The clock was ticking!
+On December 7, 165 days after my first line of code, my employment with Hack Reactor ended, leaving me with savings to pay for four months’ rent and food. Hack Reactor warns its graduates to budget six months for job searching. The clock was ticking!12月7日，距离我写下第一行代码已经过去了165天，我的黑客反应堆训练营也结束了，剩下的存款还够我承担四个月的房租和生活开支。训练营告诉营员要预留6个月的时间来找工作。倒计时开始啦！
 
-I wrote down my goals. I was ambitious and the odds were stacked against me.  I wanted:
+I wrote down my goals. I was ambitious and the odds were stacked against me.  I wanted:我想要一展宏图，即使困难重重。所以我给自己制定的目标如下：
 
--   A top 25th-percentile Hack Reactor outcome in compensation, hoping for over $120K/annual salary
--   The steepest possible learning curve; ideally in a role with both autonomy and access to experienced mentors
--   A team and company culture that was technically strong but people-first
--   Interesting and meaningful work
--   A back end role, or at least full stack, which were less common than front end roles landed by bootcamp grads
+-   A top 25th-percentile Hack Reactor outcome in compensation, hoping for over $120K/annual salary薪水排名最低也要拿到训练营的前25%，目标是年薪超过12万美金
+-   The steepest possible learning curve; ideally in a role with both autonomy and access to experienced mentors工作尽可能具备最刺激的学习体验，希望职位既能让我充分发挥主观能动性，也有机会接触到行业大牛
+-   A team and company culture that was technically strong but people-first工作团队和公司的文化以技术为重，同时要以人为本
+-   Interesting and meaningful work工作要有趣也有意义
+-   A back end role, or at least full stack, which were less common than front end roles landed by bootcamp grads后端工作，至少要是全栈开发。这要比训练营结业营员面试的前端工作更有竞争力
 
-I never imagined I would get everything I wanted and more. But the search would be a rollercoaster of ups and downs.
+I never imagined I would get everything I wanted and more. But the search would be a rollercoaster of ups and downs.我从未设想过我的目标能全部实现。但我知道找工作一定会像过山车一般起伏不定
 
-Hack Reactor left me with a terrific foundation in little time, but I was still weeks, if not months, of full-time study away from where I needed to be to interview successfully at top companies.
+Hack Reactor left me with a terrific foundation in little time, but I was still weeks, if not months, of full-time study away from where I needed to be to interview successfully at top companies.黑客训练营只留给我很少的时间，而且我还有几周---虽然不是几个月---要全职学习，这让我没办法去顶级公司面试。
 
-I would also have to face relentless, ongoing rejection with no certainty of success. Hiring from coding bootcamps is not yet mainstream, and despite  [evidence suggesting bootcamps grads perform just as well as those with four-year CS degrees in interviews][19], it would be an uphill battle to land interviews. And the vastness of topics covered in software engineering interviews meant I could never be completely prepared.
+I would also have to face relentless, ongoing rejection with no certainty of success. Hiring from coding bootcamps is not yet mainstream, and despite suggesting bootcamps grads perform just as well as those with four-year CS degrees in interviews][19], it would be an uphill battle to land  [evidence interviews. And the vastness of topics covered in software engineering interviews meant I could never be completely prepared.我也不得不面对即将到来的无休止的没有确切成功可能性的拒绝。尽管调查证据显示，在面试中，训练营营员跟四年计算机专业科班出身的学生表现一样优秀[evidence suggesting bootcamps grads perform just as well as those with four-year CS degrees in interviews][19]，雇佣编程训练营营员仍然不是主流。
 
-When it was all over, I had applied to 44 companies with 41 referrals and received 14 coding challenges or technical phone interviews, which converted to 8 on-sites and 7 offers by February 15, 2019 - 245 days after my first line of code.
+When it was all over, I had applied to 44 companies with 41 referrals and received 14 coding challenges or technical phone interviews, which converted to 8 on-sites and 7 offers by February 15, 2019 - 245 days after my first line of code.等到找工作终于尘埃落定，我总共申请了44家公司，其中41家是熟人帮忙介绍；遇见了14次或编程挑战或技术电话面试，其中有8次进入了现场面试，截止2019年2月15日，我共收到了7个offer。这距离我写下第一行代码，已经过去了245天。
 
-![Funnel of my software engineer job search results from apps to offers](https://lh3.googleusercontent.com/P_PBwWDZV2KEBRQ-jorQ1O07xNHAbVI5AirtBb58fAewAbojdvp_I_ClZQJyCJ-WPavKyTMlnxkXr03WEzkOWegThmhYmE6Kj5fs2qtnlGO2afRGAYjwBVyhP-c0BoWpqA-KgCjA)
+![Funnel of my software engineer job search results from apps to offers]找工作的过程中，工作申请和工作offer呈漏斗状分布(https://lh3.googleusercontent.com/P_PBwWDZV2KEBRQ-jorQ1O07xNHAbVI5AirtBb58fAewAbojdvp_I_ClZQJyCJ-WPavKyTMlnxkXr03WEzkOWegThmhYmE6Kj5fs2qtnlGO2afRGAYjwBVyhP-c0BoWpqA-KgCjA)
 
-16% of my applications converted to offers just over 8 months after my first line of code
+16% of my applications converted to offers just over 8 months after my first line of code我有16%的工作offer都是在距离我第一次写代码八个月后拿到的。
 
-## Beginning the search and learning from failure
+## Beginning the search and learning from failure开始找工作：从失败中汲取教训
 
-> **"Learning is not attained by chance, it must be sought for with ardor and attended to with diligence." ―Abigail Adams**
+> **"Learning is not attained by chance, it must be sought for with ardor and attended to with diligence." ―Abigail Adams** 学习不是偶然获得的，必须用热爱去追求，用勤奋去对待。---阿比盖尔*亚当斯
 
-My first weeks of job searching were the toughest. I landed only a handful of coding challenges and an interview with IBM Artificial Intelligence throughout all of December.
+My first weeks of job searching were the toughest. I landed only a handful of coding challenges and an interview with IBM Artificial Intelligence throughout all of December.最刚开始找工作的几周是最艰难的。十二月一整月，我只拿到了几个编程测试，只面试了IBM人工智能这一家。
 
-Feedback on my first two take-home coding challenges was not encouraging. I went way over time, and was told my code was “neither accurate nor performant.”
+Feedback on my first two take-home coding challenges was not encouraging. I went way over time, and was told my code was “neither accurate nor performant.”结业后在家完成的前两个编程测试反馈就不如人意。我花时间修改了一下，被告知我的代码“既不准确又不高性能”。
 
-My third coding challenge was a multi-hour, heart-thumping affair in which I passed all tests with seconds to spare but failed to click submit before time expired!
+My third coding challenge was a multi-hour, heart-thumping affair in which I passed all tests with seconds to spare but failed to click submit before time expired!第三个编程测试有几个小时的时间，但我仍然心跳加速。我在时间结束前几秒完成了测试，却没来得及点击提交！
 
-I told myself it was a numbers game, and every morning after my hour of loving-kindness meditation, I’d take a minute to remind myself of two things:
+I told myself it was a numbers game, and every morning after my hour of loving-kindness meditation, I’d take a minute to remind myself of two things:我告诉自己量变才能引起质变，现在我需要积累。每个早上一个小时的慈爱冥想结束后，我都会花一分钟提醒自己两件事：
 
--   First, while my goals gave me direction, overly focusing on goals would only leave me dissatisfied with the gap between where I was and where I wanted to be. I wanted  [habits over goals][20].
--   Second, I reflected that regardless of what job landed, the real prize of this journey was personal, not professional, transformation. I was lucky to have months dedicated full-time to learning how to learn, and I was falling in love with it!
+-   First, while my goals gave me direction, overly focusing on goals would only leave me dissatisfied with the gap between where I was and where I wanted to be. I wanted  [habits over goals][20].第一，目标确实给人方向。但如果只关注目标，在面对自己当前的水准和想要达到的目标之间的巨大差距时，我就会十分不满和沮丧。我想要超越目标的习惯[habits over goals][20]。
+-   Second, I reflected that regardless of what job landed, the real prize of this journey was personal, not professional, transformation. I was lucky to have months dedicated full-time to learning how to learn, and I was falling in love with it!第二，我认为，不管面试的是什么工作，经历的真正价值在于个人提升而非专业提升。很幸运能用几个月的时间全职学习如何学习，我现在也完全沉迷于此。
 
-I knew early failures could be seeds for later success, but they would require special care. I made sure to do a post-mortem on every failed coding challenge and interview, then redo the problem in my text editor until I solved it. One 20-minute prompt took me 9 hours over three days to solve!
+I knew early failures could be seeds for later success, but they would require special care. I made sure to do a post-mortem on every failed coding challenge and interview, then redo the problem in my text editor until I solved it. One 20-minute prompt took me 9 hours over three days to solve!我知道失败是成功之母，但前提是你认真对待失败。每次编程测试或者面试失败后，我都会进行事后反省，然后在我的文本编辑器里再次开始解决问题直到完全解决。20分钟的提示要花我3天9个小时来解决！
 
-I kept notes on new concepts and “aha” moments after I solved a problem, treating them as my invaluable collection of “[mental models][21]” I hoped would grow sufficient to pattern match to any interview prompt. I would review them on  [spaced repetition intervals][22]  to most efficiently commit to long-term memory.
+I kept notes on new concepts and “aha” moments after I solved a problem, treating them as my invaluable collection of “[mental models][21]” I hoped would grow sufficient to pattern match to any interview prompt. I would review them on  [spaced repetition intervals][22]  to most efficiently commit to long-term memory.每解决一个问题，我都会记录下新概念和惊喜时刻，把它们看做是我心智模型[mental models][21]。我希望会面对面试提示时能有足够多的模式匹配。我会按照记忆重复间隔[spaced repetition intervals][22]定期回顾它们，以便转成长期记忆。
 
-For problems involving new code syntax, I’d redo them under time pressure to ensure accurate recall in an interview setting.
+For problems involving new code syntax, I’d redo them under time pressure to ensure accurate recall in an interview setting.如果问题涉及新的编程句法结构，我会把问题按照时间紧急程度重做一遍，这样才能保证，面试再次碰到这些问题时轻松应对。
 
-These habits did more than enhance retention — they built reassuring confidence. I didn’t know if I’d land a job before money ran out, but it was satisfying that even my greatest disappointments were making me better.
+These habits did more than enhance retention — they built reassuring confidence. I didn’t know if I’d land a job before money ran out, but it was satisfying that even my greatest disappointments were making me better.这些习惯不仅仅是增强了我的记忆力，他们还建立了我的自信。我不知道在积蓄花完之前我能否找到一份工作，我知道但哪怕是最失望的经历也在帮助我变得更好，这种感觉让我知足。
 
-I settled into a steady routine, ~8 hours a day, 5+ days/week: study and/or interview, diagnose failure/success, reflect, repeat.
+I settled into a steady routine, ~8 hours a day, 5+ days/week: study and/or interview, diagnose failure/success, reflect, repeat.我的每日规划十分平稳，一周不少于五天，每天八小时：学习or面试，总结失败or成功经验，思考，重复。
 
 I curated and constantly revised my study plans by first getting a sense for what strong performance looked like in each of the different types of interviews I might encounter (data structure/algorithms, front end DOM manipulation, systems design, etc.). Then I’d estimate the probability of encountering each type in upcoming interviews and weigh that against my self-assessment of my performance to decide what to study next.
 

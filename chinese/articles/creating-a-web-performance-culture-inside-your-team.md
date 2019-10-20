@@ -18,7 +18,7 @@ But why is it so important? And what are those risks?
 
 Remember that as web developers, our goal is to create the best possible experience for our users.
 
-### 性能代表了可用性
+### 性能就是可用性
 
 有很多研究 ([\[1\]][1],  [\[2\]][2],  [\[3\]][3]) 展示了商业目标与网站可用性之间的关联。
 
@@ -30,7 +30,7 @@ Remember that as web developers, our goal is to create the best possible experie
 
 另外，网页性能在手机端也是搜索排序的一大因素 [谷歌搜索][5].
 
-### 性能代表了可接入性
+### 性能就是可接入性
 
 让我们看看全球市场，数据成本亦是性能考量一大重要因素。想一想，你的用户愿意花多少银子浏览你的网站。
 
@@ -49,7 +49,7 @@ Remember that as web developers, our goal is to create the best possible experie
 性能至上，时刻把  **不以物喜，不以己悲** **客户至上** 记在心中. 不幸的是，这些品质通常不是工作环境中的普遍存在的。
 
 
-## 为最坏的做打算
+## 为最坏做打算
 
 几周前，同事向我展示了个有趣的场景。某装修网站用内容管理系统（类似WordPress）在后台管理数据。一天，图片上传：
 
@@ -72,27 +72,27 @@ Remember that as web developers, our goal is to create the best possible experie
 
 ## 何时优化
 
-There are two approaches to performance optimizations.  [Ben Schwarz][9]  summarizes the two approaches in his deck,  [The Critical Request][10].
+通常，性能优化有两种途径.  [Ben Schwarz][9]  总结了这两种方式, 在讨论 [关键性请求] 的文章中[10].
 
 ![](https://cdn-media-1.freecodecamp.org/images/LQhLZLaEKGlTWi5btGkboK0W2JOjNv6QRxKF)
 
 ![](https://cdn-media-1.freecodecamp.org/images/fulD0TWIdNZHkuxffOBGWBmxvWBZftfMwpZc)
 
-**Reactive**  (top) vs  **Proactive**  (bottom) approach to optimizing performance
+**被动**  (上图) vs  **主动**  (下图) 的方式以优化性能
 
-On one end, we have the traditional: “Houston we have a problem!” approach. This is a highly  **reactive**  way of treating performance issues. I also like to call it the: “Oh shoot! Call in the consultant!” problem.
+其一，让我们看看传统的被动方式，“David， 这有个问题”。 当问题出现，再考虑解决之法，谓之**被动**。 我也常常看见看到这种情景“问题来了，快，快请砖家”。
 
-Not only is this costly for your business, but it can also be a great demotivator for the team. It can even lead to conflict when people are not connected with the goals of performance optimization.
+这种开发运作方式不仅降低团员协作效率，而且伤害团员协作热情。甚至可能造成各个组员在解决性能优化目标时诿过于人以造成摩擦。
 
-On the other end, we have the  **proactive**  approach. You bake performance optimization into your software development process.
+另一方面，积极拥抱**主动**。以主动地眼光把性能优化的决策纳入开发的点点滴滴。
 
-If you need to convince the business side to try the proactive approach, check out  [WPO stats][11]. This is great resource with case studies that show the benefits of performance optimizations.
+如果你想要了解具体的性能优化所带来的利处，以说服你的上司采用“主动”提高的方式，你可以看看 [网络性能优化演示报告][11]。
 
-Once the approach is in place, it’s the team and the culture that solve the problems ahead of time, rather than the consultant who comes in to save the day. And done right, this can be a great motivator for the team.
+一旦开启“主动”模式，它提高开发效率带给团队“早发现，早解决”的团队文化，而不是“出现问题，找顾问”。
 
-But performance awareness doesn’t happen over night. You have to create the right context for people to be aware of the impact of what they do.
+但性能“这座罗马皇城，不会一夜建成”。只有在适当的情景下逐一了解领悟它所带来的影响以及适当的解决方案。
 
-## Measure and Act
+## 优化的艺术 - 具体措施
 
 Do you know how many users are landing on your site from mobile devices? How often are you testing in bad network conditions? How often do you take out a mid-range device, like a  [Moto G4][12], and start playing with your application?
 

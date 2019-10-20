@@ -30,44 +30,47 @@ Remember that as web developers, our goal is to create the best possible experie
 
 另外，网页性能在手机端也是搜索排序的一大因素 [谷歌搜索][5].
 
-### Performance is about accessibility.
+### 性能代表了可接入性
 
-Let’s talk about the global market. Performance budgets are also important when it comes to the cost of data. How much does a user pay to visit your website?
+让我们看看全球市场，数据成本亦是性能考量一大重要因素。想一想，你的用户愿意花多少银子浏览你的网站。
+
+你可以发现从  [这个网站][6]. 扪心自问：“我愿意花 X 元浏览我的网站么？” 你或许很震惊你的答案。
+
+另外，这儿各国通过移动端上网时间   [移动端上网时间][7].我们真的得更多考虑移动优先的性能优化模式
+
+忽略这一点，你的产品可能被许多人拒绝！
+
+### 性能就是与用户 “通感”
+
+拿着锤子的木匠眼中只有钉子，我们不应该仅仅关注钉子，它仅仅只带给我们对房子肤浅的理解。
+
+眼界放开，关注住在房子里的人，关注他们的需求, 运用最先进的科技，最尖端的框架带满足他们。
+
+性能至上，时刻把  **不以物喜，不以己悲** **客户至上** 记在心中. 不幸的是，这些品质通常不是工作环境中的普遍存在的。
 
 
-You can find out using  [this website][6]. Then you can ask yourself: “Am I willing to pay x cents to visit my website?” You might be surprised by your own answer.
+## 为最坏的做打算
 
-Furthermore, there are countries where the vast majority of  [internet time is spent via mobile][7]. So you have to take a mobile-first approach in optimizing performance.
-
-By omitting this, you are rendering your product inaccessible for a lot of people!
-
-### Performance is about empathy
-
-We have the tendency to see our work strictly through our own eyes. This is dangerous, as it leads to a superficial understanding of our users’ needs.
-
-Not to mention our constant need to work on the cool stuff (new technology, state of the art frameworks, and so on) and ignore boring and tedious jobs.
-
-Performance matters, and you have to work on optimizing it with  **empathy** and  **selflessness** in mind. But these qualities, unfortunately, don’t come by default in all working environments.
-
-## Plan for the worst
-
-A colleague showed me an interesting scenario a few weeks ago. There’s a home decor website which is using some CMS system behind the scenes to manage data. Someone uploaded this image:
+几周前，同事向我展示了个有趣的场景。某装修网站用内容管理系统（类似WordPress）在后台管理数据。一天，图片上传：
 
 ![](https://cdn-media-1.freecodecamp.org/images/4u0XBu8dfPbS9KEEuq0Uc1ad5g9cMbqoJb3g)
 
-screenshot from Chrome Dev Tools
+截图来自 Chrome Dev Tools
 
-It’s  **9.3 MegaBytes**  of data which takes roughly  **7 seconds**  to load on an ultra fast Wi-Fi connection and on a MacBook Pro. Can you image how much time this would take on a mobile device? The answer is  **infinity**! Because the mobile browser becomes unresponsive when you open the website.
+它 **9.3 MB**  花费大约  **7 秒**  在MacBook Pro连接Wifi的情况下. 你能想象多长时间如果这个照片需要在移动端展示么？答案是
 
-[Here’s the website][8]  if you’re curious, but please proceed with care as it will potentially block your browser!
+ **无穷**! 因为一旦移动浏览器打开这个网页，直接未响应！
+ 
+[就是这个网站][8] 如果你是好奇宝宝，尝试一下，但是请注意你的浏览器很可能卡住
 
-We shouldn’t blame the user. They wanted to display a very detailed image of an assembly.
+我们不应该抱怨上传照片的用户，它只想展示拥有丰富细节的图片。
 
-Coming back to the idea of  **understanding**  our users, we should always prepare for the worst scenarios when it comes to user created content.
+退回之前的想法 “懂得，知晓” 我们的用户， 我们应该时刻为最糟糕的情况做准备。
 
-As a developer, you are  **completely responsible**  for the way in which your users interact with your software.
+作为开发者，当用户与你开发的软件交互时，你应该有考虑到**所有状况**的觉悟。
 
-## When to optimize
+
+## 何时优化
 
 There are two approaches to performance optimizations.  [Ben Schwarz][9]  summarizes the two approaches in his deck,  [The Critical Request][10].
 

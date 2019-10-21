@@ -94,11 +94,11 @@ Remember that as web developers, our goal is to create the best possible experie
 
 ## 优化的艺术 - 具体措施
 
-Do you know how many users are landing on your site from mobile devices? How often are you testing in bad network conditions? How often do you take out a mid-range device, like a  [Moto G4][12], and start playing with your application?
+你了解有多少用户通过移动端登录一的站点么？你进行站点压力测试的频率如何？你有在中档设备[例如Moto G4][12]中测试运行你的设备么？
 
-These are all relevant scenarios that your users might encounter every day!
+这就是我们维护的站点日常所要面对的情景。
 
-Know your user base, and know your device and browser usages. Good and relevant  **metrics**  are everything if you want to implement a performance culture.
+了解你的目标用户，了解你的目标场景。选择对的针对性的**指标**是实现团队性能至上文化的重中之重。
 
 Once you have the metrics, it’s time to establish the  **performance budgets**.
 

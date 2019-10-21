@@ -3,61 +3,61 @@
 > * 译者：FENGJIAJUN
 > * 校对者：
 
-If you’re thinking of learning Python — or if you recently started learning it — you may be asking yourself:
+如果你想学习 Python - 或者如果你最近开始学习 Python - 你也许会这么问你自己：
 
-> **“What exactly can I use Python for?”**
+> **“我到底可以使用 Python 做什么？”**
 
-Well that’s a tricky question to answer, because there are so many applications for Python.
+这是一个棘手的问题去回答，因为这里有许多 Python 的程序。
 
-But over time, I have observed that there are 3 main popular applications for Python:
+但是随着时间的迁移，我发现 Python 有三个主要的流行应用程序：
 
--   Web Development
--   Data Science — including machine learning, data analysis, and data visualization
--   Scripting
+-	Web开发
+-	数据科学 - 包括机器学习，数据分析和数据可视化
+-	脚本编写
 
-Let’s talk about each of them in turn.
+让我们一次讨论它们。
 
-### **Web Development**
+### **Web开发**
 
-Web frameworks that are based on Python like  **Django**  and  **Flask**  have recently become very popular for web development.
+基于 Python 的 web 框架（比如 **Django** 和 **Flask** ）最近变得非常流行。
 
-These web frameworks help you create server-side code (backend code) in Python. That’s the code that runs on your server, as opposed to on users’ devices and browsers (front-end code). If you’re not familiar with the difference between backend code and front-end code, please see my footnote below.
+这些web框架帮助你使用 Python 创建服务器端代码（后台代码），即运行在你服务器上的代码，相对于运行在用户的设备、浏览器上（前端代码）。如果你不熟悉后端代码和前端代码的区别，请参考下面的脚注。
 
-#### **But wait, why do I need a web framework?**
+#### **但是等一下，为什么我需要一个 web 框架呢？**
 
-That’s because a web framework makes it easier to build common backend logic. This includes mapping different URLs to chunks of Python code, dealing with databases, and generating HTML files users see on their browsers.
+那是因为 web 框架是的构建共同后端逻辑非常方便，包括映射不同的 URLS 到 Python 代码块，处理数据库和产生用户在浏览器中看到的 HTML 文件。
 
-#### **Which Python web framework should I use?**
+#### **我应该用哪一个 web 框架？**
 
-Django and Flask are two of the most popular Python web frameworks. I’d recommend using one of them if you’re just getting started.
+Django 和 Flask 是两个最受欢迎的 Python web 框架。如果你刚刚入门Python,我建议你使用他们其一。
 
-#### **What’s the difference between Django and Flask?**
+#### **Django 和 Flask 之间的区别是什么？**
 
-There’s an  [excellent article][1]  about this topic by Gareth Dwyer, so let me quote it here:
+这里有一篇 Gareth Dwyer 编写的关于这个问题的[出色文章][1]，所以我在这里引用它：
 
-**_<begin quo_**te>
+**_<开始引用>_**
 
-Main contrasts:
+主要对比：
 
--   Flask provides simplicity, flexibility and fine-grained control. It is unopinionated (it lets you decide how you want to implement things).
--   Django provides an all-inclusive experience: you get an admin panel, database interfaces, an  [ORM \[object-relational mapping\]][2], and directory structure for your apps and projects out of the box.
+-	Flask提供了简单性，灵活性和细粒度的控制。It is unopinionated （它让你可以决定你想要实现的东西）。
+-	Django提供全方位的体验：你可以开箱即用的获得管理面板、数据库接口、[ORM \[对象关系映射\]][2]以及目录结构。
 
-You should probably choose:
+你可能应该选择：
 
--   Flask, if you’re focused on the experience and learning opportunities, or if you want more control about which components to use (such as what databases you want to use and how you want to interact with them).
--   Django, if you’re focused on the final product. Especially if you’re working on a straight-forward application such as a news site, an e-store, or blog, and you want there to always be a single, obvious way of doing things.
+-   Flask，如果你专注于体验和学习机会，或者如果你想要去控制更多使用的组件（比如你想要使用那些数据库和你想要如何与它们交互）。
+-   Django,如果你专注于最终产品。特别是如果你正在开发一个简单易用的应用比如新闻网站、电子商店、博客，并且你想要有一种简单，显而易见的方法去搭建这个应用。
 
-**_</end quo_**te>
+**_<结束引用>_**
 
-In other words, If you’re a beginner, Flask is probably a better choice because it has fewer components to deal with. Also, Flask is a better choice if you want more customization.
+换一种说法，如果你是一个初学者，Flask 可能是更好的选择。因为它需要处理的组件更少。同时，如果你想要更多的定制化，Flask 是更好的选择。
 
-On the other hand, if you’re looking to build something straight-forward, Django will probably let you get there faster.
+在另一方面，如果你正在寻找简单易用的方式构建程序，Django 将会让你更快完成。
 
-Now, if you’re looking to learn Django, I recommend the book called Django for Beginners. You can find it  [here][3].
+现在如果你想学习 Django，我推荐你一本书《Django for Beginners》。你可以从这里找到它。[here][3]
 
-You can also find the free sample chapters of that book  [here][4].
+你也可以找到免费的章节案例在[这本书里][4]。
 
-Okay, let’s go to the next topic!
+好的，让我们开始下一个的话题。
 
 ### **Data Science — including machine learning, data analysis, and data visualization**
 

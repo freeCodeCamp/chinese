@@ -175,6 +175,76 @@ ES.Next is a name that always indicates the next version of JavaScript.
 
 At the time of writing, ES9 has been released, and  **ES.Next is ES10**
 
+### ECMASCRIPT
+
+当你阅读JavaScript相关的资料时，你会不可避免的遇到下列词汇:
+
+-   ES3
+-   ES5
+-   ES6
+-   ES7
+-   ES8
+-   ES2015
+-   ES2016
+-   ES2017
+-   ECMAScript 2017
+-   ECMAScript 2016
+-   ECMAScript 2015
+
+这些词汇代表什么意思呢？
+
+它们都是指代一个名为ECMAScript的**标准**。
+
+ECMAScript是**JavaScript所基于的标准**，我们常用它的缩写**ES**来称呼它。
+
+除了JavaScirpt以外，也有一些语言实现了ECMAScript标准，包括:
+
+- _ActrionScript_(Flash的脚本语言)，由于从2020年以后官方将不再维护Flash，这个语言已经不太流行了。
+- _JScript_(微软开发的JavaScript的方言)，在当时只有网景浏览器支持JavaScript，而且浏览器大战正处于火热状态，微软不得不为了IE浏览器开发一个自己的版本的脚本语言
+
+但是当然，JavaScript是ES的实现中**最受欢迎**和被广泛运用的语言。
+
+为什么起了这么一个奇怪的名字呢？`Ecma国际`是一个位于瑞士的负责制定国际标准的标准委员会。
+
+当JavaScript诞生时，网景公司和Sun MicroSystems将它展示给了Ecma，于是Ecma将其命名为ECMA-262，也就是**ECMAScript**。
+
+[这篇网景公司和Sum Microsystems发布的文章][3]可以帮助你明白这么命名的原因。[根据维基百科][4]所述，这其中也可能有与标准委会一员的微软的法律和商标纠纷的原因。
+
+在IE9之后，微软停止称呼IE内置的支持语言为JScript并且开始称呼它为JavaScript(至少我已经不能在IE中找到任何关于JScript的信息)。
+
+所以在201x年，JavaScript是唯一一个广受欢迎的实现了ECMAScript的语言。
+
+#### 当前的ECMAScript版本
+
+当前版本为**ECMA2018**，于2018年6月发布。(译者翻译此文时已经来到了ECMA2019版本)。
+
+#### 什么时候发布下一个版本
+
+按照惯例，JavaScript版本于夏天完成标准化，所以我们可以期待**ECMAScript 2019**将于2019夏天被发布，但这只是预测。
+
+#### 什么事TC39
+
+TC39是负责改进JavaScript的委员会。
+
+委员会成员包括使用JavaScript的公司和浏览器供应商，包括Mozilla，谷歌，脸书，苹果，微软，英特尔，PayPal，Salesforce和其他一些公司。
+
+每一个标准版本的发布都要经过说个阶段，[在这里有这方面的详细解读][5]。
+
+#### ES版本
+我发现时而用版本号时而用年份来称呼ES版本的原因非常令人困惑。
+
+在ES2015之前，人们用版本号来识别ESMAScript版本。所以ES5是用来2009年更新发布的ECMAScript标准的官方名字。
+
+所以为什么会有现在这种混乱的局面呢？在制定ES2015的过程中，新标准的官方名字从ES6变为了ES015，但是由于这个改动是后进行的，人们还是会使用ES6来称呼它，TC39委员会也没有强调过这个修改之后的名字。于是_人们仍然用版本号来称呼ES的发行版本_。
+
+这个表格可以让你不那么困惑:
+
+![](https://cdn-media-1.freecodecamp.org/images/mSPPXfnrRpiQAw8tZPsLgAqvMnzaP7HxSeKz)
+
+ES.Next代指下一个JavaScript版本。
+
+在我编写该文时，ES9已经发布，**ES.Next为ES10**。
+
 ### The ES6 improvements
 
 ECMAScript 2015, also known as ES6, is a fundamental version of the ECMAScript standard.

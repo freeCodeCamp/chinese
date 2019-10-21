@@ -104,20 +104,22 @@ Remember that as web developers, our goal is to create the best possible experie
 
 终于，动手时间！ 这里分享一些方法与实践，你可以引入你的日常工作：
 
-###  第一步： 性能测量
+###  第一步： 性能评测
 
 -   [Lighthouse][13]  这是个令人眼前一亮的项目，它同时也支持相应的谷歌浏览器开发者工具。 它能够带给你潜在性能提升视角。它也能提供搜索引擎优化，站点接入性，以及站点最佳实践的相关建议。
 -   通过 [Webpagetest][14]  进行指标跟踪调查以及比较性能优化策略部署前后的变化. 同样推荐[gtmetrix][15], 小众软件，有亲和力的交互界面。
 
-### Step 2: Automate
+### Step 2: 性能流程自动化
 
--   Add performance related build steps into your CI.  [bundlesize][16]  is a great package if you want to define some hard limits for your bundles.
--   Build automated tests that will fail if loading times or other relevant metrics exceed certain thresholds.  [Puppeteer][17]  has direct access to the Chrome API so you can leverage that in your tests.
+-   把性能的考量加入到你产品迭代的过程中。 [bundlesize][16] 这是一个非常好的工具包，在迭代过程中能够对特殊参数进行约束。
 
-### Step 3: Make it visual
+-   自动化的测试模式帮助监控相应的参数是否达标，例如页面加载时间。 [Puppeteer][17] 它有直接接入谷歌浏览器的应用接口，直接观测相关指标。
 
--   Everyone in the team should be aware of the impact of the code they write.  [Webpack bundle analyzer][18]  is a great way of visualizing what goes inside the output bundles. People might think twice before using a library which increases the overall size by 10%.
--   [import cost][19]  for VSCode will show you how much code you are adding to the project by using certain dependencies. Again, it’s all about making sure everyone is fully aware of the impact of what they do.
+### Step 3: 性能可视化 
+
+-   团队成员应当明白自己所写代码对团队的影响。   [页面打包分析器][18]  这儿是个页面打包可视化的工具，当页面依赖的响应资源大小超过10%时应该再三思考所选的决策。
+
+-   [import cost][19] 这有助于代码可视化，在代码中告诉你你所加载的依赖包的大小。重申，团队成员应当明白自己的代码可能对团队的影响。
 
 ### Step 4: Enforce and Empower
 
@@ -138,7 +140,7 @@ In our case, we make sure web performance is part of the learning path for all e
 
 [Performance cheatsheet poster][21]  in our office at Fortech
 
-## Performance as part of software quality
+## 性能就是产品质量
 
 In the end, working on performance is the same as working on UX, security, or accessibility. It is part of the  **software**  **quality**  that you offer.
 

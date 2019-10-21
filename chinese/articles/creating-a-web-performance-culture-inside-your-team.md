@@ -100,14 +100,14 @@ Remember that as web developers, our goal is to create the best possible experie
 
 了解你的目标用户，了解你的目标场景。选择对的针对性的**指标**是实现团队性能至上文化的重中之重。
 
-Once you have the metrics, it’s time to establish the  **performance budgets**.
+一旦你选择了所关注的指标，你就可以着手**性能提升计划**
 
-Finally, time to act! Here are some tools and practices you can introduce into your regular work environment:
+终于，动手时间！ 这里分享一些方法与实践，你可以引入你的日常工作：
 
-### Step 1: Measure performance indicators
+###  第一步： 性能测量
 
--   [Lighthouse][13]  is an amazing project and is available in Chrome Dev Tools. It will give you great insights into potential performance improvements. It will also give you some nice suggestions for SEO, Accessibility, and Best Practices.
--   [Webpagetest][14]  is great for keeping track of metrics and comparing waterfall charts before and after deploys. I can also recommend  [gtmetrix][15], a less known tool, with a very easy to use interface.
+-   [Lighthouse][13]  这是个令人眼前一亮的项目，它同时也支持相应的谷歌浏览器开发者工具。 它能够带给你潜在性能提升视角。它也能提供搜索引擎优化，站点接入性，以及站点最佳实践的相关建议。
+-   通过 [Webpagetest][14]  进行指标跟踪调查以及比较性能优化策略部署前后的变化. 同样推荐[gtmetrix][15], 小众软件，有亲和力的交互界面。
 
 ### Step 2: Automate
 

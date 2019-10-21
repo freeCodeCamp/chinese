@@ -121,24 +121,23 @@ Remember that as web developers, our goal is to create the best possible experie
 
 -   [import cost][19] 这有助于代码可视化，在代码中告诉你你所加载的依赖包的大小。重申，团队成员应当明白自己的代码可能对团队的影响。
 
-### Step 4: Enforce and Empower
+### Step 4: 立规矩，成方圆
 
--   You have to be ready to enforce strict rules within the organization. In our case, we created a  [performance checklist][20]  to be followed on each project.
--   Make sure  **everyone**  in the team gets to work on the performance optimization tasks. You don’t want to have a single person that does that, because you get into the consultant scenario again. By splitting the tasks, everyone gets familiar with the context and with the different ways of preventing problems.
+-   有序的组织离不开强有力的规范。我们使用 [performance checklist][20] 规范每一个项目的性能模块。
 
-Building a performance oriented  **culture**  is a step by step process. And it’s a process of  **understanding**  the problems and  **acting**  on them.
+-   确保**所有人**融入到性能优化团队文化。如果只有一人参与，你又陷入了“被动”优化的怪圈。使团队各司其职，共同确保项目各方面品质。
 
-One constant in the entire process is the need to  **educate**  people.
+构建性能至上的**团队文化**非朝夕之功。 它是一个团队**觉知**问题，**行动**改善，以及**成长**蜕变的过程。
 
-Performance optimization techniques are not complicated. But they need some technical background and a good understanding of how the web works.
+性能优化其实并不复杂。实现它需要技术背景以及相应网络知识。
 
-Building on top of a solid foundation can help your team grasp even the most advanced techniques for speeding up your application.
+扎实的基本功能够帮助你利用最先进的技术提升你的产品。
 
-In our case, we make sure web performance is part of the learning path for all engineers. We don’t just enforce a checklist. We make sure people have a good environment to learn the reasons behind the techniques.
+在我工作的地方，性能优化已成为日常学习工作的一部分。我们不是单一的做到优化性能，我们探讨体会性能优化背后的缘由。
 
 ![](https://cdn-media-1.freecodecamp.org/images/hkpZovJ1oITO9WFs3xjZzrDaUKIPzwyZ2Ig6)
 
-[Performance cheatsheet poster][21]  in our office at Fortech
+[Performance cheatsheet poster][21]  展示在我们Fortech的办公室中
 
 ## 性能就是产品质量
 

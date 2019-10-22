@@ -4,19 +4,19 @@
 > * 校对者：
 
 
-![How to create a web performance culture inside your team](https://cdn-media-1.freecodecamp.org/images/1*f-Ey0tW6O_vFHz_RPZWh_A.jpeg)
+![如何营造性能至上的团队文化](https://cdn-media-1.freecodecamp.org/images/1*f-Ey0tW6O_vFHz_RPZWh_A.jpeg)
 
 和我合作的大部分人都了解，我是个追求性能优化的极客。 渲染引擎，代码打包优化，每秒帧数提升这些关键词是工作中的家常便饭。一切为了性能！
 
 性能永远是软件工程领域的“一等公民”。
 
-Having a strong  **performance culture**  in your team can ensure that you mitigate — ahead of time — any risks associated with bad performance.
+营造**性能至上文化**在团队中能有效降低风险管控的成本。
 
-But why is it so important? And what are those risks?
+为什么性能至上如此重要？风险立于何处？
 
 ## 为什么性能优化如此重要
 
-Remember that as web developers, our goal is to create the best possible experience for our users.
+作为合格的全栈开发者，我们的目标是提供最佳的用户体验。
 
 ### 性能就是可用性
 
@@ -141,21 +141,21 @@ Remember that as web developers, our goal is to create the best possible experie
 
 ## 性能就是产品质量
 
-In the end, working on performance is the same as working on UX, security, or accessibility. It is part of the  **software**  **quality**  that you offer.
+最后，产品性能优化尤似开发前端交互体验，保障客户隐私安全，以及维护站点可接入性。它是保障**软件品质**的一部分。
 
-At times, it might seem like extra effort for something that is not requested of you. Performance might not be part of your non-functional requirements, after all.
+有时，你也许认为关注性能提升是一件画蛇添足的举动。它也许并不是你客户需求的关键。
 
-But coming back to the idea of responsibility, it is our duty to provide the best possible quality. And performance is one of the pillars of software quality.
+但作为一名合格的开发人员，提供高品质应用本是我们的天职。而应用性能则是那画龙点睛一撇。
 
-If I were to sum up the path towards a performance culture, these are the key takeaways:
+这里总结几点营造性能至上文化的几点须知：
 
--   Raise awareness, and build with empathy for the user
--   Favour the proactive approach and deal with issues ahead of time
--   Measure and act in a continuous loop
--   Spread the knowledge and involve the entire team in the process
--   Make it part of your software quality as an end goal
+-   提升你的认知，了解你的用户
+-   主动拥抱问题，解决问题
+-   保持“测评”与“行动”的习惯
+-   统一团队，知行合一
+-   牢记把关产品质量
 
-## References
+## 参考文献
 
 许多人追问我有什么网络性能优化的参考材料，以下列出：
 
@@ -165,9 +165,7 @@ If I were to sum up the path towards a performance culture, these are the key ta
 -   关于我们的  [performance checklist on github][25]  提出你的想法！
 -   也可以看看 Smashing Magazine’s 2018  [front-end performance checklist][26],他的文章令我很有感慨！ 
 
-I’m super curious to hear your thoughts on this. Is your team embracing a performance culture? What works for you? What doesn’t? Leave a comment and share if you enjoyed this article!
-
-
+同时，我很希望你能分享你的想法。例如，你的团队拥抱性能至上么？你认为哪一部分最有用？如果你认为文章对你有启发，真诚的希望你留言与我分享！
   
 
 [1]: https://www.doubleclickbygoogle.com/articles/mobile-speed-matters/

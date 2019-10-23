@@ -1,6 +1,6 @@
 > * 原文地址：[How to prepare for a technical interview - tips and tricks to help you perform your best](https://www.freecodecamp.org/news/interviewing-prep-tips-and-tricks/)
 > * 原文作者：John Mosesman
-> * 译者：
+> * 译者：waylen94
 > * 校对者：
 
 ![How to prepare for a technical interview - tips and tricks to help you perform your best](https://images.unsplash.com/photo-1515973069-1e40b62f107f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)

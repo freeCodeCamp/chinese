@@ -7,44 +7,44 @@
 
 ![](https://cdn-media-1.freecodecamp.org/images/DDLwRS3Jad5brv0RIH2r5K2YxqcvAa1vBThw)
 
-Note — this is a long read, so if you want, you can download this article and read it offline  [here][1].
+注意 — 这篇文章篇幅较长，你可以在[这里][1]下载文章后离线阅读。
 
-What’s the best way to understand  **Flexbox**? Learn the fundamentals, then build lots of stuff. And that’s exactly what we’re going to do in this article.
+理解 **Flexbox**最好的方式是什么？学好基础，再不断练习。这就是这篇文章要做的事情。
 
-### A few things to note
+### 要注意的几点
 
--   This article was written with intermediate developers in mind, and assumes you already know a bit about Flexbox. But…
--   If you know some CSS, but don’t know Flexbox at all,  [I wrote a comprehensive guide here (free article, 46 minute read)][2].
--   And if you don’t know CSS very well, I recommend taking my  [Complete (practical) Introduction to CSS (paid course with 74 lessons)][3].
--   You don’t have to follow the examples in this article in the order listed here.
--   Flexbox is only a layout technique. Real world projects require more than layouts.
--   When you see a notation such as  `div.ohans`  it refers to a div with a class name of  `ohans`
+-   这篇文章预设你是一名中级开发者，且对Flexbox有点了解。但是。。。
+-   如果你对css有些了解，但是没有接触过Flexbox，[我写了一篇通用指导（免费文章，阅读时间约为46分钟）][2].
+-   如果你对CSS掌握的不是很好，我推荐你阅读 [CSS全面（实用）指南 (74课时的付费课程)][3]。
+-   你不需要遵照这里列出的示例顺序。
+-   Flexbox只是一种布局的技巧。实际项目应用需要更多的布局样式。
+-   当你看到例如 `div.ohans` 的例子，这代表类名是  `ohans`的 div
 
-### Example 1: How to Make a Photo Gallery with Flexbox
+### 例1: 如何用 Flexbox 完成一个影片集
 
-Making photos run in rows and columns with Flexbox is easier than most persons perceive.
+使用 Flexbox 实现横向纵向排列比很多人想象的要简单。
 
-Consider a simple markup, like so:
+例如一个如下的简单标记文本：
 
 ```
 <main class="gallery">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg"></main>
 ```
 
-We have 10 images within a  `main.gallery`.
+`main.gallery` 里有十张图片。
 
-Assume the  `main.gallery`  was styled to cover the available screen.
+我们要用  `main.gallery`  排列在可见屏幕上。
 
 ```
 .gallery {   min-height: 100vh}
 ```
 
-#### A Quick Note on Images
+#### 有关图片的简单提示
 
-By default, images are  `inline-block`  elements. They have a width and height. They will remain on a line except when constrained by size such as the images being too big to fit on a line.
+图片默认是有宽高的  `inline-block`  元素。除非有限定大小，例如图片太大不能排列在一行，否则他们都会排列在一行。
 
-#### The Starting point
+#### 起始点
 
-Putting everything together, the result of all the markup and style above is this:
+所有图片放在一起的显示效果如下：
 
 ![](https://cdn-media-1.freecodecamp.org/images/s2ntfDqrLewl66sGtavdhgQybTyD2JX520r2)
 

@@ -59,144 +59,144 @@ Django 和 Flask 是两个最受欢迎的 Python web 框架。如果你刚刚入
 
 好的，让我们开始下一个的话题。
 
-### **Data Science — including machine learning, data analysis, and data visualization**
+### **数据科学 - 包括机器学习，数据分析和数据可视化**
 
-#### **First of all, let’s review what machine learning  _is_.**
+#### **首先，回顾下机器学习_是什么_。**
 
-I think the best way to explain what machine learning is would be to give you a simple example.
+我认为最好的方式解释什么是机器学习，就是给你一个简单的样例。
 
-Let’s say you want to develop a program that automatically detects what’s in a picture.
+加入你想要开发一个程序去自动检测数图片里面的内容。
 
-So, given this picture below (Picture 1), you want your program to recognize that it’s a dog.
+所以，放置一个下图（图1），你想要你的程序去识别这是一只狗。
 
 ![](https://cdn-media-1.freecodecamp.org/images/0*Mbj3L2cl0zzT2A0L)
 
-Picture 1
+图1
 
-Given this other one below (Picture 2), you want your program to recognize that it’s a table.
+再放置另一个图片（图2），你想要你的程序去识别这是一张桌子。
 
 ![](https://cdn-media-1.freecodecamp.org/images/0*gxTn_CbMyCcQ1NFV)
 
-Picture 2
+图2
 
-You might say, well, I can just write some code to do that. For example, maybe if there are a lot of light brown pixels in the picture, then we can say that it’s a dog.
+你或许会说，好的，我可以写一些代码去完成这个功能。比如，如果图片中有很多浅棕色像素，那么我们可以说这里是一只狗。
 
-Or maybe, you can figure out how to detect edges in a picture. Then, you might say, if there are many straight edges, then it’s a table.
+或者，你可以找出如何检测图片中的边缘。然后，你可能会说，如果有很多直边，那就是一张桌子。
 
-However, this kind of approach gets tricky pretty quickly. What if there’s a white dog in the picture with no brown hair? What if the picture shows only the round parts of the table?
+然而，这种方法很快就会变得棘手。如果图片里有一只白狗没有棕色毛发呢？如果图片只展示桌子的圆形部分呢？
 
-**This is where machine learning comes in.**
+**这就是机器学习的用武之地。**
 
-Machine learning typically implements an algorithm that automatically detects a pattern in the given input.
+机器学习通畅实现一种算法，可以自动检测给定的输入模型。
 
-You can give, say, 1,000 pictures of a dog and 1,000 pictures of a table to a machine learning algorithm. Then, it will learn the difference between a dog and a table. When you give it a new picture of either a dog or a table, it will be able to recognize which one it is.
+你可以传入1000张狗的图片和1000张桌子的图片到机器学习算法中。之后，算法降回去学习狗和桌子之间的差异。之后你传入一张新的狗或者桌子的突破，算法将能够识别出它属于哪一个。
 
-I think this is somewhat similar to how a baby learns new things. How does a baby learn that one thing looks like a dog and another a table? Probably from a bunch of examples.
+我认为这个机器学习算法就是某种与婴儿学习新鲜事物具有类似性。婴儿是如何学习到一个事物是狗还是桌子呢？可能是从一堆样例中。
 
-You probably don’t explicitly tell a baby, “If something is furry and has light brown hair, then it’s probably a dog.”
+你应该不会去明确告诉一个婴儿：“如果某个动物毛茸茸的并且有着浅棕色毛发，那么它就很可能是一只狗。”；
 
-You would probably just say, “That’s a dog. This is also a dog. And this one is a table. That one is also a table.”
+你可能会这么说：“这是一只狗，这也是一只狗。并且这是一张桌子，这也是一张桌子。”
 
-Machine learning algorithms work much the same way.
+机器学习算法的工作方式类似这样。
 
-You can apply the same idea to:
+你可以将相同的想方法应用于：
 
--   recommendation systems (think YouTube, Amazon, and Netflix)
--   face recognition
--   voice recognition
+-	推荐系统（例如 YouTube、Amazon、Netflix）
+-	人脸识别
+-	语音识别
 
-among other applications.
+以及其他应用程序。
 
-Popular machine learning algorithms you might have heard about include:
+你可能听过的流行的机器学习算法包括：
 
--   Neural networks
--   Deep learning
--   Support vector machines
--   Random forest
+- 	神经网络
+-	深度学习
+-	支持向量机
+-	随机森林
 
-You can use any of the above algorithms to solve the picture-labeling problem I explained earlier.
+你可以使用上门任意一种算法解决我之前解释的图片标记问题。
 
-#### **Python for machine learning**
+#### **适用于机器学习的Python**
 
-There are popular machine learning libraries and frameworks for Python.
+有很多Python预研的机器学习类库和框架。
 
-Two of the most popular ones are  **scikit-learn**  and  **TensorFlow**.
+两个最流行的框架是**scikit-learn**和**TensorFlow**。
 
--   scikit-learn comes with some of the more popular machine learning algorithms built-in. I mentioned some of them above.
--   TensorFlow is more of a low-level library that allows you to build custom machine learning algorithms.
+-	scikit-learn内置了一些更加流行的机器学习算法。我在上面提到了其中一些。
+-	TensorFlow更像是一个低级别类库，它可以让你自定义机器学习算法。
 
-If you’re just getting started with a machine learning project, I would recommend that you first start with scikit-learn. If you start running into efficiency issues, then I would start looking into TensorFlow.
+如果你刚刚开始进行机器学习的项目，我将会建议你首先使用scikit-learn。如果你开始遇到效率问题，那么我将会开始研究TensorFlow。
 
-#### **How should I learn machine learning?**
+#### **我应该如何学习机器学习？**
 
-To learn machine learning fundamentals, I would recommend either  [Stanford’s][5]  or  [Caltech’s][6]  machine learning course.
+为了学习机器学习的基础，我将会推荐[斯坦福大学的][5]或者[加州理工学院的][6]机器学习课程。
 
-Please note that you need basic knowledge of calculus and linear algebra to understand some of the materials in those courses.
+请注意，你需要微积分和线性代数的基本知识才能理解这些课程中的某些资料。
 
-Then, I would practice what you’ve learned from one of those courses with  [Kaggle][7]. It’s a website where people compete to build the best machine learning algorithm for a given problem. They have nice tutorials for beginners, too.
+之后我将使用[Kaggle][7]去训练你从其中一门课程中学习到的知识。这是一个人们可以竞赛对于一个特定问题的最好的机器学习算法的网站。他们也为初学者提供不错的课程。
 
-### **What about data analysis and data visualization?**
+### **关于数据分析和数据可视化呢?**
 
-To help you understand what these might look like, let me give you a simple example here.
+为了帮助你理解这些知识点是什么，让我给你几个简单案例。
 
-Let’s say you’re working for a company that sells some products online.
+假设你在一家在线销售某些产品的公司工作。
 
-Then, as a data analyst, you might draw a bar graph like this.
+然后，作为数据分析师，你可能回绘制一个条形图。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*62T-rtheKPehgZdPTEpKww.png)
 
-Bar Chart 1 — generated with Python
+条形图1 - Python生成的
 
-From this graph, we can tell that men bought over 400 units of this product and women bought about 350 units of this product this particular Sunday.
+从这幅图我们可以得知，在这个特定的星期日，男性购买了400多种产品，女性购买了350多种产品。
 
-As a data analyst, you might come up with a few possible explanations for this difference.
+作为数据分析师，你可能会针对这种差异提出一些可能的解释。
 
-One obvious possible explanation is that this product is more popular with men than with women. Another possible explanation might be that the sample size is too small and this difference was caused just by chance. And yet another possible explanation might be that men tend to buy this product more only on Sunday for some reason.
+一个明显的解释是这个产品对于男性更具有吸引力。另一个可能的解释是样本数量太小了，并且这种差异是具有偶然性的。还有另一个可能的解释是，由于某种原因男人倾向于只在星期日购买更多该产品。
 
-To understand which of these explanations is correct, you might draw another graph like this one.
+为了了解这些解释那些事正确的，你可能会回执另一些图标比如下面这个。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*VgNfqK5XxNfHxx6S4VFCjQ.png)
 
-Line Chart 1 — generated with Python
+线形图1 - Python生成的
 
-Instead of showing the data for Sunday only, we’re looking at the data for a full week. As you can see, from this graph, we can see that this difference is pretty consistent over different days.
+我们将查看整整一周的数据，而不是仅显示周日的数据。正如你说看到的，从这个线形图，我们可以看到这种差异在不同的日子是相当一致的。
 
-From this little analysis, you might conclude that the most convincing explanation for this difference is that this product is simply more popular with men than with women.
+从这个小分析，你也许会得出如下结论，关于这种差异的最令人信服的解释是，相较于女性，该产品更受男性欢迎。
 
-On the other hand, what if you see a graph like this one instead?
+另一方面，如果你看到如下另一个图表呢？
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*dMpu_fd-THNXRJhHIq2O3g.png)
 
-Line Chart 2 — also generated with Python
+线形图1 - 也是由Python生成的
 
-Then, what explains the difference on Sunday?
+那么，你怎么解释周日的差异？
 
-You might say, perhaps men tend to buy more of this product only on Sunday for some reason. Or, perhaps it was just a coincidence that men bought more of it on Sunday.
+你也许会说，男人可能处于某个原因倾向于在周日购买这个产品。或者，这也许只是一种巧合，男人购买更多产品在周日。
 
-So, this is a simplified example of what data analysis might look like in the real world.
+因此，这是数据分析在现实世界中的简化示例。
 
-The data analysis work I did when I was working at Google and Microsoft was very similar to this example — only more complex. I actually used Python at Google for this kind of analysis, while I used JavaScript at Microsoft.
+我在 Google 和 Microsoft 工作时所做的数据分析工作与该示例非常相似，只是更为复杂。我实际上在 Google 公司使用 Python 去处理这种分析问题，然而在 Microsoft 公司我使用 JavaScript 技术。
 
-I used SQL at both of those companies to pull data from our databases. Then, I would use either Python and Matplotlib (at Google) or JavaScript and D3.js (at Microsoft) to visualize and analyze this data.
+我在两家公司都是用SQL从数据库中抽取数据。之后，我将会使用 Python 和 Matplotlib （在 Google 公司）或者 JavaScript和D3.js（在 Microsoft 公司）去可视化和分析数据。
 
-#### **Data analysis / visualization with Python**
+#### **使用Python做数据分析和可视化**
 
-One of the most popular libraries for data visualization is  [Matplotlib][8].
+最流行的数据可视化类库是[Matplotlib][8]。
 
-It’s a good library to get started with because:
+这是一个很好的入门库，因为：
 
--   It’s easy to get started with
--   Some other libraries such as  [seaborn][9]  is based on it. So, learning Matplotlib will help you learn these other libraries later on.
+-	入门简单
+-	其他一些库，例如[seaborn] [9]也以此为基础。因此，学习Matplotlib将有助于你今后学习这些其他库。
 
-**How should I learn data analysis / visualization with Python?**
+**我应该怎么学习使用Python进行数据分析和可视化？**
 
-You should first learn the fundamentals of data analysis and visualization. When I looked for good resources for this online, I couldn’t find any. So, I ended up making a YouTube video on this topic:
+你首先应该学习数据分析和可视化的基础知识。当我在网上寻找好的资源时，找不到任何资源。因此，我最终制作了有关此话题的 YouTube 视频：
 
-I also ended up making a  [full course on this topic on Pluralsight][10], which you can take for free by signing up to their 10-day free trial.
+我还最终完成了[关于Pluralsight的主题的完整课程] [10]，你可以通过注册10天的免费试用期来免费获取。
 
-I’d recommend both of them.
+我建议这两种方式都采取。
 
-After learning the fundamentals of data analysis and visualization, learning fundamentals of statistics from websites like Coursera and Khan Academy will be helpful, as well.
+在学习了数据分析和可视化的基础知识之后，从Coursera和Khan Academy等网站学习统计基础知识也将有所帮助。
 
 ### **Scripting**
 

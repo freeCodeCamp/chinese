@@ -198,83 +198,83 @@ Django 和 Flask 是两个最受欢迎的 Python web 框架。如果你刚刚入
 
 在学习了数据分析和可视化的基础知识之后，从Coursera和Khan Academy等网站学习统计基础知识也将有所帮助。
 
-### **Scripting**
+### **脚本编写**
 
-#### **What is scripting?**
+#### **什么是脚本编写？**
 
-Scripting usually refers to writing small programs that are designed to automate simple tasks.
+脚本编写通常指的是编写自动化简单任务的小型程序。
 
-So, let me give you an example from my personal experience here.
+所以，根据我个人经验给你一个参考样例。
 
-I used to work at a small startup in Japan where we had an email support system. It was a system for us to respond to questions customers sent us via email.
+我曾经在一家日本的拥有邮件维护系统的公司工作过。我们用这个系统来回答客户通过电子邮件发送给我们的问题。
 
-When I was working there, I had the task of counting the numbers of emails containing certain keywords so we could analyze the emails we received.
+当我在那工作的时候，我的任务是计算包含某些关键词的邮件个数，以便我们可以分析我们收到的邮件。
 
-We could have done it manually, but instead, I wrote a simple program / simple script to automate this task.
+我们本来可以手动完成，但是我编写了一个简单的程序/简单的脚本去自动完成该任务。
 
-Actually, we used Ruby for this back then, but Python is also a good language for this kind of task. Python is suited for this type of task mainly because it has relatively simple syntax and is easy to write. It’s also quick to write something small with it and test it.
+实际上我们使用 Ruby 作为程序后端，但是 Python 也可以作为这个任务的不错的语言。Python 很适合这种任务，主要是因为它具有相对简单的语法并且易于编写。
 
-### **What about embedded applications?**
+### **关于嵌入式应用呢？**
 
-I’m not an expert on embedded applications, but I know that Python works with Rasberry Pi. It seems like a popular application among hardware hobbyists.
+我并不是嵌入式应用专家，但是我知道Python可与Raspberry Pi一起使用。Raspberry Pi似乎在硬件爱好者中很流行。
 
-### **What about gaming?**
+### **关于游戏编程呢？**
 
-You could use the library called PyGame to develop games, but it’s not the most popular gaming engine out there. You could use it to build a hobby project, but I personally wouldn’t choose it if you’re serious about game development.
+你可以使用PyGame的库来开发游戏，但它不是最受欢迎的游戏引擎。你可以使用它来构建一个喜好的项目，但是如果你想正式学习游戏开发，我个人不会建议选择它。
 
-Rather, I would recommend getting started with Unity with C#, which is one of the most popular gaming engines. It allows you to build a game for many platforms, including Mac, Windows, iOS, and Android.
+相反，我建议使用Unity C＃（最受欢迎的游戏引擎之一）入门。你可以使用它构建很多平台支持的游戏，包括 Mac、Windows、iOS 以及 Android。
 
-### **What about desktop applications?**
+### **关于周末应用呢？**
 
-You could make one with Python using Tkinter, but it doesn’t seem like the most popular choice either.
+你可以使用功能Python的Tkinter模块，但是它并不是最受欢迎的选择。
 
-Instead, it seems like languages like  [Java, C#, and C++][11]  are more popular for this.
+取而代之的是，似乎[Java，C＃和C ++] [11]之类的语言更受欢迎。
 
-Recently, some companies have started using JavaScript to create Desktop applications, too.
+最近一些公司也开始使用 JavaScript 来创建桌面应用。
 
-[For example, Slack’s desktop app was built with something called Electron][12]. It allows you to build desktop applications with JavaScript.
+[例如，Slack公司 的桌面应用是由 Electron 构建的][12]。Electron 允许你使用 JavaScript 构建桌面应用。
 
-Personally, if I was building a desktop application, I would go with a JavaScript option. It allows you to reuse some of the code from a web version if you have it.
+对于我个人而言，如果我正在构建一个桌面应用，我将会选择使用 JavaScript 语言。如果你使用功能 JavaScript 的话，它可以让你重用Web版本中的某些代码。
 
-However, I’m not an expert on desktop applications either, so please let me know in a comment if you disagree or agree with me on this.
+然后，我并不是一个桌面应用的专家，所以请给我留言，告诉我你支持还是反对我的观点。
 
-### **Python 3 or Python 2?**
+### **Python 3 还是 Python 2？**
 
-I would recommend Python 3 since it’s more modern and it’s a more popular option at this point.
+我建议使用Python 3，因为它是较新版本，并且是目前最受欢迎的选择。
 
-### **Footnote: A note about back-end code vs front-end code (just in case you are not familiar with the terms):**
+### **脚注：关于后端代码与前端代码的注释（以防你不熟悉这些术语）：**
 
-Let’s say you want to make something like Instagram.
+假设你想制作类似 Instagram 的产品。
 
-Then, you’d need to create front-end code for each type of device you want to support.
+之后，你需要去创建你想要支持的每一个类型设备的前端代码。
 
-You might use, for example:
+你或许会使用如下技术，比如：
 
 -   Swift for iOS
 -   Java for Android
 -   JavaScript for web browsers
 
-Each set of code will run on each type of device / browser. This will be the set of code that determines what the layout of the app will be like, what the buttons should look like when you click them, etc.
+每组代码将在各自类型的设备/浏览器上运行。这将是一组用于确定应用程序的布局、单击时的按钮样式等的代码。
 
-However, you will still need the ability to store users’ info and photos. You will want to store them on your server and not just on your users’ devices so each user’s followers can view his/her photos.
+然而，你仍然需要能够存储用户的信息和图片。你将会想要存储这些信息到你的服务器上，而不仅仅是存储到你的用户的设备上，以至于可以让每个用户的关注者可以访问到他/她的图片。
 
-This is where the backend code / server-side code comes in. You’ll need to write some backend code to do things like:
+这就是后端代码/服务器端代码出现的地方。你将会需要写一些后台代码去完成下面的事情：
 
--   Keep track of who’s following who
--   Compress photos so they don’t take up so much storage space
--   Recommend photos and new accounts to each user in the _discovery_  feature
+-   追踪谁关注了谁
+-   压缩照片以免占用太多存储空间
+-   在_discovery_功能中向每个用户推荐照片和新用户
 
-So, this is the difference between backend code and front-end code.
+所以，这就是前端和后台代码之间的差异。
 
-By the way, Python is not the only good choice for writing backend / server-side code. There are many other popular choices, including Node.js, which is based on JavaScript.
+顺便说一下，Python 并不是编写后端/服务器端代码的唯一的选择。还有很多流行的选择，包括基于 JavaScript 的 Node.js。
 
-### Liked this article? Then, you might also like my YouTube channel.
+###喜欢这篇文章吗？ 然后，你可能也喜欢我的 YouTube 频道。
 
-I have a programming education YouTube channel called  [CS Dojo][13]  with 440,000+ subscribers, where I produce more content like this article.
+我有一个名为[CS Dojo] [13]的编程教育 YouTube 频道，它有着440,000多名订阅者，在这里我可以创作更多类似本文的内容。
 
-For example, you might like these videos:
+比如，你可能会喜欢这些视频：
 
-#### Anyway, thanks a lot for reading my article!
+#### 无论如何，非常感谢你阅读我的文章！
 
 [1]: https://www.codementor.io/garethdwyer/flask-vs-django-why-flask-might-be-better-4xs7mdf8v
 [2]: https://stackoverflow.com/questions/1279613/what-is-an-orm-and-where-can-i-learn-more-about-it

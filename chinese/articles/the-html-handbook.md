@@ -49,9 +49,9 @@ HTML正式诞生于1993年，从那以后它演变成现在的状态，从简单
 
 # <a href="#iframes">框架</a>
 
-# <a href="#Images">图片</a>
+# <a href="#Images">图像</a>
 
-# <a href="#Accessibility">辅助功能</a>
+# <a href="#Accessibility">可用性</a>
 
 
 

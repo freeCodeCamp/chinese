@@ -54,7 +54,6 @@ HTML正式诞生于1993年，从那以后它演变成现在的状态，从简单
 # <a href="#Accessibility">可用性</a>
 
 
-
 # <span id="Preface">前言</span>
 
 HTML是称为Web的奇迹的基础。
@@ -345,6 +344,7 @@ of
 ```
 
 **注意**：在特殊情况下，您可以使用＆nbsp; HTML实体（首字母缩写，表示不间断空格）--有关HTML实体的更多信息。我认为这不应被滥用。始终首选使用CSS来更改视觉呈现。
+
 
 # <span id="document">文件标题</span>
 
@@ -884,6 +884,7 @@ pre {
 
 ```<a href="https://flaviocopes.com" target="_blank">open in new tab</a>```
 
+
 # <span id="structure">容器标签和页面结构HTML</span>
 
 ## 容器标签
@@ -1039,6 +1040,7 @@ main标签代表页面的主要部分：
   </footer>
 </div>
 ```
+
 
 # <span id="Forms">表单</span> 
 
@@ -1425,6 +1427,7 @@ textarea元素允许用户输入多行文本。与输入相比，它需要一个
 </select>
 ```
 
+
 # <span id="Tables">表格</span>
 
 Web表格的早期是建筑布局的重要组成部分。
@@ -1659,6 +1662,7 @@ th, td {
 </table>
 ```
 
+
 # <span id="Multimedia">多媒体标签：音频和视频</span>
 
 在本节中，我想向您展示音频和视频标签。
@@ -1875,6 +1879,7 @@ Referrerpolicy属性可让我们将引荐来源网址设置为在加载时发送
 
 + unsafe-url：即使从HTTP加载资源并且通过HTTPS加载当前页面，也将原始+路径作为引荐来源发送
 
+
 # <span id="Images">图像</span>
 
 可以使用img标签显示图像。
@@ -1985,6 +1990,7 @@ HTML还为我们提供了图片标签，该标签与srcset的功能非常相似�
 但这不是用例，因为如您所见，它更加冗长。
 
 图片标签是最新的，但除Opera Mini和IE（所有版本）外，所有主流浏览器现在都支持它。
+
 
 # <span id="Accessibility">可用性</span>
 

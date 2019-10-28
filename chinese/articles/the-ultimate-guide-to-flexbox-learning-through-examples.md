@@ -48,41 +48,41 @@
 
 ![](https://cdn-media-1.freecodecamp.org/images/s2ntfDqrLewl66sGtavdhgQybTyD2JX520r2)
 
-10 images with their width and height declarations intact. They fall unto the next line when appropriate. Obedient lads ;)
+10张宽高不变地排列在一起，合适的时候换行，顺序排放 ;)
 
-Now, get Flexbox on the scene:
+现在，看下Flexbox的效果:
 
 ```
 .gallery {    display: flex }
 ```
 
-At this point, the default behavior of the images has altered. They go from being  `inline-block`  elements to being  `flex-items.`
+在这点上，图片的默认属性已经发生改变。他们从  `inline-block`  布局变成了  `flex-items.`
 
-As a result of the Flexbox context initiated within  `.gallery`, the images will now be squashed unto a single line. Plus, they would stretch along the vertical like so:
+由于  `.gallery`  里的Flexbox布局，里面的图片会被压缩排列在一行内，而且他们会被纵向拉伸称这样：
 
 ![](https://cdn-media-1.freecodecamp.org/images/sEzCWC3d-xoorKjDGf8TMdq6-ZxtOFMQjIST)
 
-The Images now stretch along the vertical, and are squashed unto one line. Nothing’s uglier :(
+图片都被纵向拉伸挤在一行内，不能更丑 :(
 
-This is a result of the Flexbox default behavior:
+这就是Flexbox布局的默认展示方式:
 
-1.  Squash all child elements unto a single line. Do not wrap the elements.
+1.  将所有的子元素压在一行内，不换行。
 
-This is bad for a gallery, so we change this behavior like so:
+这并不适用于图片库，因此我们可以这样改变：
 
 ```
 .gallery {    flex-wrap: wrap}
 ```
 
-This will now wrap the elements and break them unto multiple lines when appropriate.
+这样所有的元素会在合适的时候换行，多行排列。
 
 ![](https://cdn-media-1.freecodecamp.org/images/JGAnqvkIeN-q8vh1beADx0XUrUE6SEZkGQFp)
 
-With the wrap value altered, the images now wrap unto the next line
+因为wrap值的改变，图片都换行排列
 
-2\. The images now wrap unto the next line. But they still  **stretch**  along the vertical. We certainly do  **not**  want that behavior as it distorts the images.
+2\. 现在图片有换行，但是仍然纵向拉伸。我们当然不想要这样扭曲的布局。
 
-The  `stretch`  behavior is due to the default  `align-items`  value on  `flex`  containers.
+  `stretch`  显示是因为  `flex`  里默认的  `align-items`  值。
 
 ```
 align-items: stretch

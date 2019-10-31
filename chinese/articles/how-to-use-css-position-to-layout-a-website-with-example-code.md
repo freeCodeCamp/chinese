@@ -1,6 +1,6 @@
 > * 原文地址：[How to use CSS position to layout a website (with example code)](https://www.freecodecamp.org/news/how-to-use-css-position-to-layout-a-website-with-example-code-38592bb9e276/)
 > * 原文作者：Jessica Chan
-> * 译者：
+> * 译者：WUSO01
 > * 校对者：
 
 ![How to use CSS position to layout a website (with example code)](https://cdn-media-1.freecodecamp.org/images/1*9cRn62IAywuaywMSJ2X6_g.png)

@@ -3,35 +3,43 @@
 > * 译者：WUSO01
 > * 校对者：
 
-![How to use CSS position to layout a website (with example code)](https://cdn-media-1.freecodecamp.org/images/1*9cRn62IAywuaywMSJ2X6_g.png)
+![如何使用CSS postion布局网站（附示例代码）](https://cdn-media-1.freecodecamp.org/images/1*9cRn62IAywuaywMSJ2X6_g.png)
 
-_This post was originally published on  [Coder-Coder.com][1]._
+_本文最初发表在[Coder-Coder.com][1]。_
 
-Using CSS position to layout elements on your website can be hard to figure out. What’s the difference between absolute, relative, fixed, and sticky? It can get confusing pretty quickly.
+使用CSS postion来布局网站上的元素可能是很困难的。absolute定位，relative定位，fixed定位和sticky定位之间有什么区别？这点很容易让人引起困惑。
 
-To help, this tutorial will guide you through all the CSS position properties. And you’ll be able to get your website layouts pixel perfect!
+为了帮助你们搞清楚它们之间的区别，本教程会指导你明白所有CSS position的属性。这样你就能让你的网站布局到精确到像素级别！
 
-### What does CSS position do?
+### CSS postion有什么作用
 
 Using CSS, you can layout all your elements on your webpage visually. For example, you can position an element at the very top of your page, or 50px below the element before it.
 
 To control just how an element will appear in the layout, you need to use the CSS  `position`  property. In addition, you can utilize some other position-related properties:  `top`,  `right`,  `bottom`,  `left`, and  `z-index`. (We’ll get more into those later on.)
 
-The  `position`  property can take five different values:  `static`,  `relative`,  `absolute`,  `fixed`, and  `sticky`.
+<!-- The  `position`  property can take five different values:  `static`,  `relative`,  `absolute`,  `fixed`, and  `sticky`. -->
+`postion`属性有5个不同的值：`static`，`relative`，`absolute`，`fixed`和`sticky`。
 
-It sounds like a lot, but don’t worry!
+<!-- It sounds like a lot, but don’t worry! -->
+看起来这么多，不过别担心！
 
-Here’s how each value for CSS  `position`  works:
+<!-- Here’s how each value for CSS  `position`  works: -->
+每个CSS position的值的工作原理如下：
 
+<!-- ### 1\. Static -->
 ### 1\. Static
 
-`Position: static`  is the default value that an element will have. This means if you don’t declare  `position`  for an element in CSS, it will automatically be set to  `static`.
+<!-- `position: static`  is the default value that an element will have. This means if you don’t declare  `position`  for an element in CSS, it will automatically be set to  `static`. -->
+`Position: static`是每个元素默认会有的值。意味着如果你不在某个元素的CSS中声明`position`，它会自动被设置为`static`。
 
-> _It’s important to note that having a static position is the same as not setting the  `position`  property at all. (This will come into play a bit later on with absolute positioning.)_
+<!-- > _It’s important to note that having a static position is the same as not setting the  `position`  property at all. (This will come into play a bit later on with absolute positioning.)_ -->
+>
 
 Elements that are statically positioned will appear on the page in what we call the normal flow. For example, if you have multiple  `<d`iv> elements one after the other, they will appear on the page directly below one another.
 
-Here’s a quick demo to illustrate static position. We are using the following HTML markup:
+<!-- Here’s a quick demo to illustrate static position. We are using the following HTML markup: -->
+<!-- 这是一个演示静态位置的快速演示。我们正在使用以下HTML标记：-->
+让我们用一个小的demo来演示static position。HTML代码如下：
 
 ```
 <div class="parent purple"></div>
@@ -41,7 +49,8 @@ Here’s a quick demo to illustrate static position. We are using the following 
 <div class="another green"></div>
 ```
 
-And here’s the CSS we’re using:
+<!-- And here’s the CSS we’re using: -->
+CSS如下：
 
 ```css
 .first { 

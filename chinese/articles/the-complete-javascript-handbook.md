@@ -276,6 +276,35 @@ The most important changes in ES2015 include:
 
 I’ll cover each of them in a dedicated section here in this guide. So let’s get started.
 
+### ES6带来的提升
+ECMAScript2016，又名ES6，是一个ECMAScript标准的基础版本。
+
+**这一版发布时候距上一个标准版本ECMAScript5.1的发布已经过去了四年**，该版本同时还标志着命名方式从版本号变为了年份。
+
+因此，**它不应该被称作ES6**(虽然每个人都这么称呼它)，而是应该被称作ES2015。
+
+> _相关人员花费了十年时间(从1999到2009)来制定ES5，因此这也是一个基础切非常重要的语言版本升级。但是这已经是过去时了，现在已经没有什么必要去讨论ES5之前的代码是如何运作得了。_
+
+鉴于从ES5.1到ES6花费了如此之久的时间，这一版本包括了大量的重要的新特性以及关于开发JavaScript程序的最佳实践的变化。如果你想知道ES2015多么重要，你只需要知道这次版本更新使得指导文档从250页变成了超过600页。
+
+ES2015的最重要的变化包括:
+- 箭头函数
+- Promises
+- 生成器
+- `let`和`const`
+- 类
+- 模块
+- 多行字符串
+- 模板字符串
+- 默认参数
+- 扩展运算符
+- 解构赋值
+- 对象字面量
+- for..of循环
+- 字典与集合
+
+我将在本文中用相应的小节来介绍它们。让我们开始吧！
+
 #### Arrow Functions
 
 Arrow functions have changed how most JavaScript code looks (and works).
@@ -311,6 +340,38 @@ This is not a breaking change, as regular functions will continue to work just a
 The  `this`  scope with arrow functions is inherited from the context.
 
 With regular functions,  `this`  always refers to the nearest function, while with arrow functions this problem is removed, and you won't need to write  `var that = this`  ever again.
+
+#### 箭头函数
+
+箭头函数改变了大部分JavaScript代码的外观(以及运作方式)。
+
+从观感上看，这是一个简洁且受人欢迎的改变，从
+
+```JavaScript
+const foo = function foo() { //... }
+```
+变为了
+```JavaScript
+const foo = () => { //... }
+```
+
+如果这个函数的主体只有一行，那么只需要
+```JavaScript
+const foo = () => doSomething()
+```
+
+如果你只有一个参数，你可以这么写
+```JavaScript
+const foo = param => doSomething(param)
+```
+
+这并不是一个破坏性的变化，常规的函数将会一如既往的运作。
+
+#### 新的`_this_`作用域
+
+箭头函数的`this`作用域将从上下文继承。
+
+在常规的函数中，`this`经常指向就近的函数，而使用箭头函数可以避免这个问题。因此，你不必再写`var that = this`了。
 
 #### Promises
 

@@ -202,7 +202,7 @@ res<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padd
 app.listen( 2048 );
 
 function htmlTemplate( reactDom, reduxState ) {
-    return `
+    return 
         /* ... */
 
 
@@ -213,10 +213,10 @@ function htmlTemplate( reactDom, reduxState ) {
     &lt;script src="./app.bundle.js"&gt;&lt;/script&gt;
 
     /* ... */
-`</span></span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
-``` ``
+</span></span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
 
-`}`
+
+}
 ```
 它看上去一点也不美观，但我们需要将完整的 JSON 状态和 HTML 一起发送。
 
@@ -343,9 +343,9 @@ Promise<span class="token punctuation" style="box-sizing: inherit; margin: 0px; 
 <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
 
 
-} );` 
+} );
 
-`/* ... */`
+/* ... */
 ```
 
 With this, we get a list of components that will be mounted when React is rendered to string on the current URL.

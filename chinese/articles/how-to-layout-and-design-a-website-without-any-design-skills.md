@@ -1,310 +1,304 @@
 > * 原文地址：[How to layout and design a website (without any design skills)](https://www.freecodecamp.org/news/how-to-layout-and-design-a-website-without-any-design-skills-86d94e40b55a/)
 > * 原文作者：[Jessica Chan](https://www.freecodecamp.org/news/author/thecodercoder/)
-> * 译者：
+> * 译者：sunnysly123
 > * 校对者：
 
 ![How to layout and design a website (without any design skills)](https://cdn-media-1.freecodecamp.org/images/1*Phg_9259Vl8tNHyCh_W3sg.jpeg)
 
-If you’re trying to build freelance websites for clients, or even just trying to build up your portfolio, you may have come across this conundrum:
+如果你想兼职为客户搭建网站，或只是建立自己的作品集，那么你可能面临这样的难题：
 
-How do you build a website if you don’t have any web design skills?
+在没有任何网站设计技巧的情况下，如何建立一个网站？
 
-Here are some options:
+有以下方案可供你选择：
+ 
+- 你可以雇一个网站设计师——不过设计师或者说好的设计师收费不低。
+- 你也可以在 Fiverr，Upwork, 猪八戒等等平台找一个收费低的设计师——但是你也知道这是有风险的。
+- 或者你可以直接从网上下载一个免费甚至是高级的主题模板——不过通常这并不能满足你的所有要求
 
--   You could hire a web designer to create the design for you — but (good) designers aren’t cheap.
--   You could find a cheap designer on Fiverr or Upwork — but you know it can be risky.
--   Or you could download a free or premium theme or template — but sometimes they don’t do everything you want them to.
+还有个方法是自己学习一些设计和布局网站的技巧，然后打造出自己的前端展现效果。
 
-One other option for you is to learn some basic skills to layout and design websites, and to build your own front end out.
+不过在你成为一名出色的设计师之前，不妨阅读一下这篇文章。当然了，如果你想制作复杂的网站，那还是得找一位专业设计师和你搭档。
 
-Now, you’re not going to become an amazing designer in the time it takes you to read this article. And for complex websites, you may end up needing to work with a professional designer.
+但是我也相信你可以学会如何设计简单的网站，这可以应对大部分小企业的网站需求。
 
-But I believe that you can learn how to plan and design simple websites that would work for most small businesses.
+这个方法包括：
 
-This method involves:
+- 了解网站视觉呈现的基础
+- 调查现有网站设计以获得灵感和想法
 
--   Learning the basics of how websites are put together visually
--   Researching existing web designs to get inspiration and ideas for yourself.
+以上两点正是我用来建立[自己网站][1]的技巧。当然，这只是一个很简单的设计，不是特别精致。但是通常简单的设计就可以满足你的需求。
 
-It’s actually the strategy that I used to build  [my own website][1]! Granted, it’s a pretty simple design, nothing overly fancy. But sometimes simple is all you need.
+只要你掌握了设计布局网站的基础，就可以建立自己的网站或是兼职给客户定制。
 
-Once you know the basics of how to layout and design for the web, you’ll be able to build custom websites that you can use for your portfolio and freelance clients.
+当然，你可以从每一次网站设计过程中积累经验。随着技能的提升，你将可以创造出越来越复杂的设计。
 
-And, of course, each website you build will give you experience. Over time, you will be able to create more and more complex designs as you continue practicing your craft.
+以下是这个过程中的关键步骤：
 
-Here are the main steps of this process:
+- 确定网站的基础内容
+- 规划网站布局
+- 整合设计
+- 完成作品
 
--   Decide the basics of your website
--   Plan the layout of your website
--   Put the design together
--   Build out the final product
+每一步都需要调查支撑——浏览其他网站看看他们是怎么做的，然后将其中好的部分复用到你自己的网站中。
 
-Each step will be fueled by research — looking at other websites to see what they do, and pulling out the parts that you want to reuse for your website.
+需要重点提醒的是：我并不是鼓励你去抄袭别人的样式或者图片。（最重要的是，简单的复制粘贴并不能提升你的技能。）
 
-One important note: I’m not at all advocating that you steal CSS or images that aren’t yours. (For one thing, you won’t learn anything with a copy and paste job.)
+我的观点是从别人优秀的作品中获得创意灵感，再创造出相似的设计。
 
-The idea here is to get creative ideas and concepts, and use them to create something similar.
+### 确定网站的基础内容
 
-### Decide the basics of your website
+在你选择颜色或是字体之前，先回答以下几个关于网站的常见问题：
 
-Before you start picking colors or fonts, let’s answer some general questions about this website:
+**1\. 这个网站是用来推广哪种业务的？**
 
-**1\. What kind of business will the website promote?**
+披萨店？摄影工作室？还是书店？网站推广对于任何商业都是有用的，因此你可以任意选择。
 
-A pizza place, photographer’s studio, or bookstore? Any kind of business could benefit from a website, so you can choose anything.
+我们这次选择推广名叫 Central Coffee 的虚拟咖啡店。因为人们都喜欢喝咖啡，对不对？
 
-For our purposes here, we’ll choose a fictional coffee shop called Central Coffee. Because everyone likes coffee, right?
+**2\. 这个网站要包含什么样的页面？**
 
-**2\. What pages will the website have?**
+网页通用页面包括主页、关于我们、联系我们和有关公司产品的介绍。
 
-Some common pages would be the homepage, about page, contact page, and pages specific to the industry that the business is in.
+确定页面构造最好的方法就是先做一个简单的在线调查。
 
-The best way to figure out the pages and other general structural aspects of the website is to do some quick online research.
+### 调查现有网站
 
-### Research existing websites
+选择3-4个相似行业的网站，观察网站都包含哪些页面。
 
-Check out other existing websites for similar types of businesses. Look at 3–4 of these websites and see what pages they have.
+注意网站是如何设计的并记录下来：
 
-Try to notice how the website is designed and take notes on:
+- 网站包含哪些页面，
+- 网站整体样式是怎样的，
+- 导航和搜索的便捷性，
+- 还有其他你感兴趣的方面。
 
--   What pages the website has,
--   What the overall style is,
--   How easy it is to navigate and find things,
--   And anything else that piques your interest.
+[Theme Forest][2]是一个寻找示例网站很好的地方，上面有大量免费和高级的网站模板以及主题。如果你有关注最流行的主题，就会知道他们通常是好设计的典范。
 
-One good place to find example websites is  [Theme Forest][2]. It has a ton of free and premium website templates and WordPress themes. And if you stick with the most popular themes, you know that generally they will be examples of good designs.
-
-Here is one coffee shop example from a theme I found.
+下面是一个我找到的咖啡店示例：
 
 ### [The7][3]
 
 ![](https://cdn-media-1.freecodecamp.org/images/CwDQtWgEDoAuCV2QbGOwk4-2haLo6ShbjfZA)
 
-**Pages:**  
-One page website with the sections: Home, About, Location, Offers, Menu, News, Press, Blog Posts
+**页面：**
+单页网站包含以下模块：主页、关于我们、地址、价格、菜单、新闻、媒体报道、博客
 
-**Style:**  
-Modern and clean, with good photos
+**样式：**
+现代简洁，高质图片
 
-**Navigation:**  
-Easy to navigate
+**导航：**
+便捷导航
 
-And here are some websites that I found from a “coffee shop in Chicago” search:
+这些是我从“芝加哥的咖啡店” 研究中找到的一些网站：
 
 ### [The Wormhole Coffee][4]
 
 ![](https://cdn-media-1.freecodecamp.org/images/KgKQlk0O0aC8CCXbyV8DaLxUBHfDncZ6rO6x)
 
-**Pages:**  
-Homepage, Blog, Location/Contact, Job Opportunities
+**页面：**
+主页、博客、地址/联系方式、工作机会
 
-**Style:**  
-Sort of modern; photos of the shop are more nostalgic
+**样式：**
+偏现代风，店铺照片走复古风
 
-**Navigation:**  
-Not immediately obvious that this is a coffee shop. It’s a bit difficult to navigate the site.
+**导航：**
+并不很容易看出这是一家咖啡店，网站导航有点难度
 
 ### [Caffe Streets][5]
 
 ![](https://cdn-media-1.freecodecamp.org/images/wJ9dMdP7xxHxtoCB2a9EYDTHUsd0WoaokzgI)
 
-**Pages:**  
-One page website, the sections are: Home, Caffe (About), Menu, Roasting, Time Machine (juices), Contact Form
+**页面：**
+单页网站，模块包含：主页、咖啡（关于我们）、菜单、烘焙、时间机器（果汁）以及联系表格
 
-**Style:**  
-Simple and modern (Squarespace)
+**样式：**
+现代简约风（方格布局）
 
-**Navigation:**  
-Pretty easy to navigate. I like the sticky menu bar up top that scrolls you down to each section.
+**导航：**
+我很喜欢固定下拉菜单的设计，点击每个菜单可以看到相应的内容。
 
 ### [Build Coffee][6]
 
 ![](https://cdn-media-1.freecodecamp.org/images/HDMc3Ey2CObm46o17kvJHGWhgKjrxdoRgPn-)
 
-**Pages:**  
-One page website, the sections are: Homepage, About, Hours, Location, Shop, Catering, Events, Contact
+**页面：**
+单页网站，模块包括：主页、关于我们、营业时间、地址、网上商城、餐饮、活动以及联系方式
 
-**Style:**  
-Simple, design is a combination of full-width photos between sections of white background with text.
+**样式：**
+简约风，白底文字中间穿插全幅图片
 
-**Navigation:**  
-Pretty easy to navigate
+**导航：**
+很容易导航
 
 ### [Sawada Coffee][7]
 
 ![](https://cdn-media-1.freecodecamp.org/images/PZRfYxllDpERdb8oB8I3UuG2F-fT2BX73eMZ)
 
-**Pages:**  
-Homepage, About, Food & Drink, Press, Contact & Hours, Our Restaurants, Jobs
+**页面：**
+主页、关于我们、食品饮料、媒体报道、联系方式及营业时间、餐厅以及招聘信息
 
-**Style:**  
-Design is mostly about the photography, and the text seems almost an afterthought
+**样式：**
+主要为图片，文字较少
 
-**Navigation:**  
-It’s a bit difficult to navigate — I almost didn’t see the hamburger menu in the right corner.
+**导航：**
+导航不太容易找-我差点没注意到右边角落的侧边栏
 
-### Write down notes for your own website
+### 记录下对自己网站有用的点
 
-Now, after looking at multiple coffee shop websites, we have a much better idea of what features are common. And we have some ideas of what we think works and doesn’t work.
+浏览了一些咖啡店网站之后，我们更清楚他们的相似点，心中也大致了解哪些对我们有用哪些用处不大。
 
-Based on your research, you can now start writing down notes for your own site.
+基于以上调查，你可以记下对自己网站有用的点。
 
-For Central Coffee, I think we’re going to stick with a simple one page website, with the following sections:
+我认为即将建立的 Central Coffee 网站，是包含以下模块的简约风单页网站：
 
--   Header
--   Home
--   About
--   Menu
--   Location/Contact
--   Footer
+- 头部导航栏
+- 主页
+- 关于我们
+- 菜单
+- 地址/联系方式
+- 页脚
 
-### Plan the layout of your website
+### 规划网站布局
+此刻我们已经勾画出这个网站有了的大致框架，接下来就是确定各个页面或者模块需要填充的内容。我们最终确定的布局也可以被称为“线框图”。
 
-Now that we’ve figured out the skeleton of the site, we’ll flesh out each page or section with the elements that we want to put in each one. The layout that we’ll end up making is also called a  **wireframe**.
+现在我们还没给这个线框图具体的设计，也就是字体、颜色或者照片都不确定。我们只需要大致清楚需要填充什么类型的内容，或是他们在页面中的位置。这更像是现阶段的结构图或是蓝图。
 
-In the wireframe, we’re not exactly designing anything, meaning no fonts, colors, or photos yet. We’re just figuring out the kind of content that we want, and roughly where it will be on the page. It’s more like a blueprint or a diagram at this point.
+### 头部导航
 
-### Header
-
-I like the top navigation bar that’s on the Seven Coffee demo page, and the Caffe Streets website.
+我喜欢 Seven Coffee 和 Caffe Streets 的顶部导航栏。
 
 ![](https://cdn-media-1.freecodecamp.org/images/JjSmjbTYDE5Qd9i4cH9W4rpKDxLXk92VTw-s)
 
 ![](https://cdn-media-1.freecodecamp.org/images/hszTPLF2H01n7v--G7mXhzQxyUCxK-5ARteB)
 
-However, on both those pages it’s centered, and I’d rather have it aligned to the left, with the logo first and the sections after.
+不过这两个网站的 logo 都是居中的，我喜欢设置为靠左，首先是 logo，然后是其他部分。
 
-That’s for the desktop version. For tablet and mobile, we’ll just have the logo and hamburger menu in the header by default.
+这是桌面版本，对于平板电脑和手机，可以默认在顶部排列 logo 和侧边栏。
 
-Clicking the hamburger will open up an off canvas menu that will slide in from the right to display the section navigation.
+点击侧边栏，从右边展示收缩导航菜单。
 
-### Home
+### 主页
 
-Since it’s a one page site, the “homepage” will be what you initially see on the screen when you load the website. And I like how Seven Coffee has a little tagline under the name.
+因为这是单页网站，“主页”就是一进入网站时在屏幕上看到的部分。我喜欢 Seven Coffee 网站店名下的小标签设计。
 
 ![](https://cdn-media-1.freecodecamp.org/images/jlAIYSPgnei-1Wt4Ys51MUIBBGDqu7o1dlsU)
 
-I think here I’ll have an image in the background (like Build Coffee) with the text on top of it. It’ll be the same on both desktop and mobile.
+这里可以是一张背景图片（像是 Build Coffee）上面有文字，这样的布局同时适用于电脑和手机端。
 
-### About
+### 关于我们
 
-All the websites have a short About section, some with photos. I’ll put in a paragraph about the cafe and also include a few photos of the interior of the shop to entice users to want to come visit.
+所有的网站的都会有简短的关于我们模块，有些是图片介绍。我准备放一段关于咖啡店的介绍文字以及一些店内环境照片，这样可以吸引用户来店里看看。
 
-### Menu
+### 菜单
 
-Each of the websites handles menus differently:
+每家网站都有不同的菜单：
 
--   Seven Coffee has a grid of menu items with prices,
--   Caffe Streets just has a list of items,
--   and Build and Sawada link out to PDFs of the menu.
+- Seven Coffee 的菜单是一个价格表
+- Caffe Streets 只有商品清单
+- Build and Sawada 提供的是 PDF 版本菜单的外部链接
 
-Personally I hate when I’m browsing a website on my phone and I have to download a PDF. So I’m going to stick to a simplified menu with drink and food items, and include a few photos.
+我个人不喜欢在手机上浏览网站的时候还需要下载个 PDF 文件，因此我准备提供带有图片的简易食品饮料菜单。
 
-### Location/Contact
+### 地址/联系方式
 
-I want to put the location, hours, and contact information at the bottom of the website. My guess is that users will start at the top of the site and scroll their way to the bottom.
+我想把地址、营业时间和联系方式放在页面底部。用户习惯从网站顶部开始滚动到底部，这样把有行动诉求的放在底部，当他们浏览完所有内容想着接下来的行动时，这些内容可以促进他们采取行动，特别是看到咖啡店的路线指引。
 
-Putting the call to action at the bottom will answer the question, “what now?” It will help visitors to take action, specifically by getting directions to the cafe and hopefully visiting!
+### 页脚
 
-### Footer
+页脚部分很小，只有小块的版权信息。
 
-The footer will be pretty minimal. It will just be a small bar with copyright information.
+### 完整框架
 
-### The complete wireframe
-
-Here are complete wireframes of the desktop and the mobile version of the website. I created these using a free online tool called  [Mockflow][8]. They let you create one project for free, and they have paid plans if you want more than one project.
-
-It’s pretty easy to use, and I like the sketchy style option because it’s fun ?
+下面是我用免费在线工具[Mockflow][8]创建的电脑和手机版本的完整网页框架。在这个网站上创建首个项目是免费的，之后如果你还需要创建模板，就需要付费。Mockflow 很好上手，我也很喜欢这种素描风格，挺有趣的。
 
 ![](https://cdn-media-1.freecodecamp.org/images/tqWcD2VYl9l0F5NgsJ8FSnP9Cl3eqUrd1dr5)
 
 ![](https://cdn-media-1.freecodecamp.org/images/2t6gYI5AIAl1X6q0j9zIU1gn22kejMY7rYJo)
 
-### Decide the basic design specifications
+### 确定基础设计规范
 
-Again, we’re not going to make super detailed and fancy styles. We do need to figure out some of the basics though. Things like:
+再提醒一下，我们不是要制作一个很详细很漂亮的网站。不过我们也需要掌握一些基础，像是：
 
-#### **Color scheme**
+### **色彩方案**
 
-The color scheme is simply the different colors you’re using on the website. Think of it like painting and decorating your house. Usually you would want to stick with neutral tones like grays and white, for most of the spaces. And one or two bright accent colors for the important elements that you want to pop out, like links and buttons.
+简单来说，色彩方案就是用于网站的不同颜色，就像是绘画、装修自己的家一样。通常你会大面积使用像是灰色白色的中性色调，再结合一两种明亮重点的颜色以突出重要的部分，例如链接和按钮。
 
-If you need some color inspiration, Canva has some  [sample color palettes][9]  that you can try out.
+如果你需要一些色彩灵感，可以尝试[sample color palettes][9]这样的画布。
 
-For the Central Coffee website, I’m going to use the Fall Collection from that Canva link– it’s a warm color palette based around browns.
+而对于我们的网站 Central Coffee，我将使用 Canva 链接中的 Fall Collection——这是个基于棕色的暖色调。
 
 ![](https://cdn-media-1.freecodecamp.org/images/RxiZDgixwfbfhNyCxovKQML3ven3LRzYNoSJ)
 
-I’m trying to evoke that nostalgic, cozy feel associated with coffee shops.
+我试图营造舒适怀旧的咖啡店风格。
 
-#### **Fonts**
+### **字体**
 
-Going back through the websites, pretty much all of them use a sans-serif font (letters that don’t have the “serif,” or the end bars on like typewriter text).
+回到之前提到的网站，其中大部分网站都使用无衬线字体（这种字体没有衬线，或是像打印出来的文字）。
 
-I would pick a simple font for the majority of your text, and then you can go slightly more fancy with a heavier weight font for the titles and headlines.
+对于大部分文字内容，我会选择简单的字体，对于标题和提要则使用好看加粗的字体。
 
-[Google Fonts][10]  is a great place to look for fonts that you can load on your website for free. Just don’t get too many, because every font family, weight, and style will add additional load to the site.
+你可以通过[Google Fonts][10]找到适用于你网站的免费字体，但是尽量不要选择太多，因为不同的字体、字重和样式都会增加网站的加载时间。
 
-#### **Images/Photography**
+### **图片/照片**
 
-Pick a general style or mood that fits the type of business the website is. For a coffee shop, you generally would want to go with inviting pictures with soft light, cozy or nostalgic feel for interior shots, people chatting and relaxing in the coffee shop, and images of food and drink.
+选择一种适合网站商业类型的样式。对于咖啡店来说，你通常会选择吸引人的照片，像是体现灯光柔和、复古舒适的店内环境以及人们在店内轻松交谈以及店内的食品饮料的图片。
 
-For illustrations and logos, there are some free online graphic design tools that come with images you can use on your website. Some examples are:
+你也可以从免费的设计网站上找到适合你网站的配图和 logo，例如：
 
 -   [Canva][11]
 -   [Vectr][12]
 -   [Snappa][13]
 
-### Build out the website
+### 建立网站
+现在我们已经有了展示各个部分布局的线框图，也有关于前端样式的设计指南。
 
-Now we have wireframes to tell us generally how everything is laid out. And we have our design references, to help guide the front end styles.
+因为我们没有可以给出详细 PSD 的设计师，所以可以直接对照着之前建造的框架来开始编写我们的网站。
 
-Since we don’t have a designer to create detailed PSDs, we will just go ahead and start building the website from the wireframes we just drew up.
+我通常编写网站前端的步骤如下：
 
-Here is how I usually approach building the front end of a website:
+1. 建立网站文件
+2. 构建文件结构
+3. 让任务跑起来（我用的是[Gulp][14]）
+4. 为每个模板建立单独的 HTML 文件
 
-1.  Set up the website files
-2.  Create and structure the folders and files.
-3.  Get the task runner up and running. (I’m using  [Gulp][14]  for this project.)
-4.  Create a separate HTML file for each template.
+接下来对于每个 HTML 文件进行以下步骤：
 
-Then go through these steps for each HTML template:
+1. 创建基础 HTML 元素的框架
+2. 一个个编写页面元素
+3. 为每个元素加入 css 样式，首先要确保每块内容的正确布局
+4. 检查页面在浏览器中的展示，并继续修改优化
 
-1.  Create the skeleton structure with the basic HTML elements.
-2.  Build out the page elements one by one.
-3.  For each element, add in the CSS styles, first making sure each section is laid out correctly.
-4.  Check how the page looks in the browser as you work, continuing to make corrections.
+### 确保你的网页是响应式的
 
-### Make sure your website is responsive
+在编写网站时，应该确保你的样式在电脑、平板以及手机上展现的样式是差不多的。
 
-While you’re building a site, it’s generally a good idea to check that your styles are looking seamless on desktop, tablet, and mobile.
+你可以在电脑上检查不同浏览器的显示样式，而对于手机端，你也可以使用谷歌浏览器的开发者工具来模拟不同手机设备的显示效果。
 
-You can easily check desktop styles on your own computer, with different browsers. For mobile, you can use Chrome’s developer tools, which emulates websites on various mobile devices.
+要知道模拟工具不会百分百模拟出你实际在手机或是平板上看到的效果，因此最终还是要在真机上检查实际显示效果。
 
-Keep in mind that any emulation tool will not be 100% exactly like what the actual phone or tablet will see. So when testing your styles, you’ll eventually want to check it on a real phone when the website is on the internet.
+有以下网站可供模拟移动设备调试：
 
-Here are some device emulators that you can use to test website display:
+-   [Responsinator.com][15]  （免费）
+-   [Screenfly][16]  by Quirktools （免费）
+-   [Browserstack][17]  （收费）——Browserstack 可以让你在真机上调试效果。
 
--   [Responsinator.com][15]  (free)
--   [Screenfly][16]  by Quirktools (free)
--   [Browserstack][17]  (paid) — Browserstack allows you to test virtual machines on actual devices.
+### 作品完成!
 
-### The finished product!
-
-Here’s a screenshot of the finished Central Coffee website:
+这张是完成后的 Central Coffee 网站截图
 
 ![](https://cdn-media-1.freecodecamp.org/images/JycvLFxLnypcvwpARjmHo6F4U-IRSPIbr1hW)
 
-You can check out the real site for yourself  [on my Github.io page][18].
+你也可以通过[on my Github.io page][18]自己检查下网站效果。
 
-And that’s how I designed and built a website, without having to hire a designer.
+以上就是我在没有聘请设计师的情况下自己设计建立的网站。
 
-I hope you found this post helpful! Let me know any thoughts you have in the comments below.
+希望这篇文章对你有用。如果你有任何想法也可以在下方评论区留言。
 
-#### Want more?
+#### 想浏览更多内容?
 
-◾️ Read more helpful posts like this on my blog:  [Coder-Coder.com.][19]  
-◾️ Follow me on  [Instagram][20]  and  [Twitter][21]!  
-◾️ Check out coding tutorials on  [my YouTube channel][22].
+◾️ 可以在我的博客[Coder-Coder.com.][19]上阅读更多类似这样的对你有帮助的文章。  
+◾️ 在 [Instagram][20]  和  [Twitter][21]上关注我!  
+◾️ 在我的Youtube频道[my YouTube channel][22]查看编码指导。
 
 [1]: https://coder-coder.com/
 [2]: https://themeforest.net/

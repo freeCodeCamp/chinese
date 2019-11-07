@@ -1,6 +1,6 @@
 > * 原文地址：[Demystifying server-side rendering in React](https://www.freecodecamp.org/news/demystifying-reacts-server-side-render-de335d408fe4/)
 > * 原文作者：Alex Moldovan
-> * 译者 Zhuotao Lian
+> * 译者：Zhuotao Lian
 > * 校对者：
 
 ![揭开 React  服务端渲染的神秘面纱](https://cdn-media-1.freecodecamp.org/images/1*Ecd_MVlJQoZ3bNn-xclFiA.jpeg)
@@ -348,23 +348,23 @@ Promise<span class="token punctuation" style="box-sizing: inherit; margin: 0px; 
 /* ... */
 ```
 
-With this, we get a list of components that will be mounted when React is rendered to string on the current URL.
+这样，我们就获得了当 React 在当前 URL 下被渲染成字符串时所需装载的组件列表。
 
-We gather the  _data requirements_  and we wait for all the API calls to return. Finally, we resume the server render, but with data already available in Redux.
+我们收集了  _data requirements_  并等待所有调用的 API 的返回值。最终，我们恢复服务端渲染，这时 Redux 中已经得到了数据。
 
-The full example can be seen on the  `fetch-data`  tag in the  [same repository][11].
+可以查看 [相同仓库][11] 的 `fetch-data` 标签来浏览完整示例。
 
-You probably notice that this comes with a performance penalty, because we’re delaying the render until the data is fetched.
+你可能会注意到，这带来了性能损失，因为直到数据被获取我们才进行渲染。
 
-This is where you start comparing metrics and do your best to understand which calls are essential and which aren’t. For example, fetching products for an e-commerce app might be crucial, but prices and sidebar filters can be lazy loaded.
+这时就需要你进行权衡了，你需要尽可能弄清楚哪些调用是必不可少的。举例来说，对于一个电商应用，获取产品列表是至关重要的，需要尽快加载，但是价格以及侧边栏选择器可以被延迟加载。
 
 #### Helmet
 
-As a bonus, let’s look at SEO. While working with React, you may want to set different values in your  `<he`ad> tag. For example, you may want to se_t the_  t_itle, met_a  _tags, key_words, and so on.
+作为 SSR 的奖励，让我们来看看 SEO。在使用 React 时，你可能想在  `<head>` 标签中设置不同的值，例如 _title_ , _meta tags_ , _key words_ 等等。  
 
-Keep in mind that the  `<he`ad> tag is normally not part of your React app!
+请注意， `<head>` 标签通常不属于 React 应用。 
 
-[react-helmet][12]  has you covered in this scenario. And it has great support for SSR.
+这种情况下，[react-helmet][12] 提供了相应的解决方案，并对 SSR 有着很好的支持。
 
 ```javascript
 import React from "react";
@@ -381,9 +381,9 @@ const Contact = () => (
 
 ```
 
-You just add your  `head`  data anywhere in your component tree. This gives you support for changing values outside the mounted React app on the client.
+你只需要将 `head` 数据添加到组件树的任意位置。这使得你可以在客户端更改已挂载的 React 应用以外的值。
 
-And now we add the support for SSR:
+现在，我们添加了对 SSR 的支持：
 
 ```javascript
 /* ... /
@@ -419,23 +419,23 @@ function htmlTemplate( reactDom, reduxState, helmetData ) {
 `</span></span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
 ```
 
-And now we have a fully functional React SSR example!
+现在，我们得到了一个功能完备的 React SSR 示例！
 
-We started from a simple render of HTML in the context of an  _Express_  app. We gradually added routing, state management, and data fetching. Finally, we handled changes outside the scope of the React application.
+我们从使用 _Express_ 应用进行简单的 HTML 渲染开始。逐步增加路由、状态管理和数据获取。最终，我们处理了 React 应用以外的更改。 
 
-The final codebase is on  `master`  on  [the same repository][13]  that was mentioned before.
+最终的代码库位于前面提到的 [相同仓库][13] 的 `master` 分支上。 
 
-#### Conclusion
+#### 总结
 
-As you’ve seen, SSR is not a big deal, but it can get complex. And it’s much easier to grasp if you build your needs step by step.
+如你所见，SSR 算不上多大的难题，但它可以变得复杂。如果你一步步构建自己的需求，那会简单很多。
 
-Is it worth adding SSR to your application? As always, it depends. It’s a must if your website is public and accessible to hundreds of thousands of users. But if you’re building a tool/dashboard-like application it might not be worth the effort.
+在应用中添加 SSR 有必要吗？ 和往常一样，这需要结合实际情况。如果你的网站是公开的，并且可以供成千上万的用户访问，那答案就是必须的。但如果你要构建一个工具/仪表板之类的应用，那就没什么必要了。
 
-However, leveraging the power of universal apps is a step forward for the front-end community.
+无论如何，利用好通用应用，是前端社区的一大进步。
 
-Do you use a similar approach for SSR? Or you think I missed something? Drop me a message below or on  [Twitter][14].
+你用过类似 SSR 的方法吗？或者你是否认为这篇文章存在纰漏？在 [Twitter][14] 上给我留言吧！
 
-If you found this article useful, help me share it with the community!
+如果你认为这篇文章对你有帮助，请在社区中分享！
 
   
 

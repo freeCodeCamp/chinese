@@ -3,64 +3,76 @@
 > * 译者：blackcai
 > * 校对者：
 
-# 未完成翻译,屏蔽了图片
+###翻译完成，英文部分由>标记方便校对，校对完毕我会删除
+<center>![How to build a real-time todo app with React Native](https://cdn-media-1.freecodecamp.org/images/1*e2uBLw946pDyqjdV5xAJpQ.png)</center>
 
-[How to build a real-time todo app with React Native](https://cdn-media-1.freecodecamp.org/images/1*e2uBLw946pDyqjdV5xAJpQ.png)
+>A todo app touches on all the important parts of building any data-driven app, including the  **C**reate,  **R**ead,  **U**pdate and  **D**elete (CRUD) operations. In this story I’ll be building a todo app with one of the  [most popular mobile frameworks][1],  **React Native**.
 
-A todo app touches on all the important parts of building any data-driven app, including the  **C**reate,  **R**ead,  **U**pdate and  **D**elete (CRUD) operations. In this story I’ll be building a todo app with one of the  [most popular mobile frameworks][1],  **React Native**.
-一个 todo app 涉及搭建任何数据驱动 app 的重要部分，包括**创建**，**读取**，**更新**和**删除**（CRUD）操作。 我将在这个案例里面使用[最流行的移动框架][1]之一 **React Native** 搭建一个 todo app。
+一个待办事项应用程序涉及搭建任何数据驱动应用程序的所有重要部分，包括**创建**，**读取**，**更新**和**删除**（CRUD）操作。 我将在这个案例里面使用[最流行的移动框架][1]之一 **React Native** 搭建一个待办事项应用程序。
 
-I’ll be using ReactiveSearch Native, an open-source library which provides React Native UI components and simplifies building data-driven apps.
-我将使用 [ReactiveSearch Native][2]，这是一个提供 React Native UI 组件并快捷搭建数据驱动 app 的开源库。
+> I’ll be using ReactiveSearch Native, an open-source library which provides React Native UI components and simplifies building data-driven apps.
 
-Here’s what I’ll be building in this story:
-这是在这个故事中我将搭建的 app：
+我将使用 [ReactiveSearch Native][2]，这是一个提供 React Native UI 组件并快捷搭建数据驱动应用程序的开源库。
 
-[图片](https://cdn-media-1.freecodecamp.org/images/1*bbDAbPL1rYl2k5fPFDtFHg.png)
+>Here’s what I’ll be building in this story:
 
-Todo App
-Check out the app on  [snack][3]  or on  [expo][4].
-你可以在 [snack][3]或者 [expo][4] 上了解这个 app.
+这是在这个故事中我将搭建的待办事项应用程序：
 
-### What is React Native?
+<center>![图片](https://cdn-media-1.freecodecamp.org/images/1*bbDAbPL1rYl2k5fPFDtFHg.png)</center>
+
+<center>Todo App</center>
+<center>待办事项应用程序</center>
+
+>Check out the app on  [snack][3]  or on  [expo][4].
+
+你可以在 [snack][3]或者 [expo][4] 上了解这个待办事项应用程序.
+
 ### 什么是 React Native？
-Here’s what the  [docs][5]  say:
+>Here’s what the  [docs][5]  say:
+
 以下是[文档][5]的描述：
 
 > React Native lets you build mobile apps using only JavaScript. It uses the same design as React, letting you compose a rich mobile UI from declarative components.
->React Native 允许您仅使用 JavaScript 搭建移动 app。它和 React 使用相同的设计，让你通过声明组件组成丰富的移动 UI。
 
-Even if you’re just getting started with React or React Native, you should be able to follow along with this story and build your very own real-time todo app.
-即使你刚开始使用 React 或 React Native，你也应该能够按照这个故事来搭建自己的实时待办事项 app。
+>React Native 允许您仅使用 JavaScript 搭建移动待办事项应用程序。它和 React 使用相同的设计，让你通过声明组件组成丰富的移动 UI。
 
-### Why use ReactiveSearch? ⚛
+>Even if you’re just getting started with React or React Native, you should be able to follow along with this story and build your very own real-time todo app.
+
+即使你刚开始使用 React 或 React Native，你也应该能够按照这个故事来搭建自己的实时待办待办事项应用程序。
+
 ### 为什么我们要使用 ReactiveSearch?⚛
 
-[ReactiveSearch][6]  is an open-source React and React Native UI components library for Elasticsearch which I’ve co-authored with  [some awesome people][7]. It provides a variety of React Native components that can  [connect to any Elasticsearch][8]  cluster.
+>[ReactiveSearch][6]  is an open-source React and React Native UI components library for Elasticsearch which I’ve co-authored with  [some awesome people][7]. It provides a variety of React Native components that can  [connect to any Elasticsearch][8]  cluster.
+
 [ReactiveSearch][6] 是一款我和[一群很棒的小伙伴][7]合作为 Elasticsearch 开发的 React 和 React Native UI 开源组件库，它提供了各种可以[连接到任何的 Elasticsearch][8] 集群的 React Native 组件。
 
-I’ve written another story on  [Building a GitHub Repo Explorer with React and Elasticsearch][9]  which you may check out for a brief overview of Elasticsearch. Even if you’ve had no experience with Elasticsearch you should be able to follow along with this story fine.
+>I’ve written another story on  [Building a GitHub Repo Explorer with React and Elasticsearch][9]  which you may check out for a brief overview of Elasticsearch. Even if you’ve had no experience with Elasticsearch you should be able to follow along with this story fine.
+
 我用 [React 和 Elasticsearch 编写了另一个关于搭建 GitHub Repo Explorer 的故事][9]，你可以查看 Elasticsearch 的简要概述。 即使你没有 Elasticsearch 的经验，你也应该能够很好地跟上这个故事。
 
-### Setting things up ⚒
 ### 先做一些设置准备。⚒
 
-We will be using the  [React Native version][10]  of the library here.
+>We will be using the  [React Native version][10]  of the library here.
+
 我们将在这里使用的 [React Native 版本][10]库。
 
-Before we start building the UI, we’ll need to create a datastore in Elasticsearch. ReactiveSearch works with any Elasticsearch index and you can easily  [use it with your own dataset][11].
-在我们开始搭建 UI 之前，我们需要在 Elasticsearch 中创建一个数据存储区。 ReactiveSearch 可以与任何 Elasticsearch 索引一起使用，您可以轻松地将它与您[自己的数据集][11]一起使用。
+>Before we start building the UI, we’ll need to create a datastore in Elasticsearch. ReactiveSearch works with any Elasticsearch index and you can easily  [use it with your own dataset][11].
+
+在我们开始搭建 UI 之前，我们需要在 Elasticsearch 中创建一个数据存储区。 ReactiveSearch 可以与任何 Elasticsearch 索引一起使用，你可以轻松地[将它与你自己的数据集一起使用][11]。
 
 
-[图片](https://cdn-media-1.freecodecamp.org/images/1*7be2L3leZOfV6hwRIcB9Mg.png)
+![图片](https://cdn-media-1.freecodecamp.org/images/1*7be2L3leZOfV6hwRIcB9Mg.png)
 
-View my app dataset  [here][12]. You can also clone this to your own app
-在[此处][12]查看我的应用数据集。 您也可以将其克隆到您自己的应用中。
+>View my app dataset  [here][12]. You can also clone this to your own app
 
-For brevity, you can use  [my dataset][13]  directly or create one for yourself using  [appbase.io][14]which lets you create a hosted Elasticsearch index (aka app).
-为了简洁起见，您可以直接使用[我的数据集][13]或者使用可以让你创建一个 Elasticsearch 索引数据集的[appbase.io][14]。
+在[此处][12]查看我的应用数据集。 您也可以将其克隆到你自己的应用中。
 
-All the todos are structured in the following format:
+>For brevity, you can use  [my dataset][13]  directly or create one for yourself using  [appbase.io][14]which lets you create a hosted Elasticsearch index (aka app).
+
+为了简洁起见，你可以直接使用[我的数据集][13]或者使用可以让你创建一个 Elasticsearch 索引数据集（也称为应用程序）的[appbase.io][14]。
+
+>All the todos are structured in the following format:
+
 所有待办事项的结构都采用以下格式：
 
 ```js
@@ -71,13 +83,14 @@ All the todos are structured in the following format:
 }
 ```
 
-### The starter project
 ### 启动项目
 
-Before we get started, I would recommend installing  [yarn][15]. On Linux it can be done simply by adding the yarn repository and running the install command via your package manager. On Mac, you should install  [Homebrew][16]  first to make things simpler.  [Here][17]  are the yarn installation docs for more detail. The next thing which you may install is  [watchman][18]. Its a file watching service which will help the react-native packager to run smoothly.
-在我们开始之前，我建议安装 [yarn][15]。 在 Linux 上，只需添加 yarn 存储库并通过包管理器运行 install 命令即可完成。 在 Mac 上，你应首先安装 [Homebrew][16] 以使事情变得更简单。 [这里][17]是 yarn 详细的安装文档。 接下来你需要安装 [watchman][18]。 它是一个文件监听服务，它将帮助 react-native packager 顺利运行。
+>Before we get started, I would recommend installing  [yarn][15]. On Linux it can be done simply by adding the yarn repository and running the install command via your package manager. On Mac, you should install  [Homebrew][16]  first to make things simpler.  [Here][17]  are the yarn installation docs for more detail. The next thing which you may install is  [watchman][18]. Its a file watching service which will help the react-native packager to run smoothly.
 
-I’ve setup the starter project with  [create-react-native-app][19]  in a GitHub branch  [here][20]. You may  [download a zip][21]  or clone the base branch by running the following command: 
+在我们开始之前，我建议安装 [yarn][15]。 在 Linux 上，只需添加 yarn 存储库并通过包管理器运行 install 命令即可完成。 在 Mac 上，你应首先安装 [Homebrew][16] 以使事情变得更简单。 [这里][17]是 yarn 详细的安装文档。 接下来你需要安装 [watchman][18]。 它是一个文件监听服务，它将帮助 react-native 包顺利运行。
+
+>I’ve setup the starter project with  [create-react-native-app][19]  in a GitHub branch  [here][20]. You may  [download a zip][21]  or clone the base branch by running the following command: 
+
 我在[这里][20]使用 GitHub 分支中的 [create-react-native-app][19] 设置了启动项目。 你可以通过运行以下命令来[下载 zip][21] 或克隆基础分支：
 
 
@@ -85,24 +98,29 @@ I’ve setup the starter project with  [create-react-native-app][19]  in a GitHu
 git clone -b base https://github.com/appbaseio-apps/todos-native
 ```
 
--   Next install the dependencies and start the packager:
--   接下来安装依赖项并启动 packager：
+>-   Next install the dependencies and start the packager:
+
+-   接下来安装依赖项并启动包：
 
 ```
 cd todos-native && yarn && yarn start
 ```
 
--   After the packager starts, you may run the app on your phone using the  [Expo][22]  app or using an Android or IOS emulator:
-打包机启动后，你可以使用 [Expo][22] app 或使用 Android 或 IOS 模拟器在手机上运行 app：
+>-   After the packager starts, you may run the app on your phone using the  [Expo][22]  app or using an Android or IOS emulator:
 
-[图片](https://cdn-media-1.freecodecamp.org/images/1*vTzfrdAPwha5GKpkzxaOeQ.png)
-Base setup with all tabs. Clone from  [here][23].
-所有选项卡的基本设置，请从[这里][23]克隆。
+- 在包启动后，你可以使用 [Expo][22] 应用程序 或使用 Android 或 IOS 模拟器在手机上运行这个应用程序：
 
-### Diving into code ?
+<center>![图片](https://cdn-media-1.freecodecamp.org/images/1*vTzfrdAPwha5GKpkzxaOeQ.png)</center>
+
+<center>Base setup with all tabs. Clone from  [here][23].</center>
+<center>所有选项卡的基本设置，请从[这里][23]克隆。</center>
+
+>### Diving into code ?
+
 ### 嵌入代码？
 
-Once you have cloned the code from the  [base branch][24], you should see a directory structure like below:
+>Once you have cloned the code from the  [base branch][24], you should see a directory structure like below:
+
 从[基础分支][24]克隆代码后，你应该看到如下目录结构：
 
 ```
@@ -123,18 +141,22 @@ types                        // Todo type to be used with prop-types
 utils                        // Streaming logic goes here
 ```
 
-Let’s breakdown what the base setup comes with:
+>Let’s breakdown what the base setup comes with:
+
 让我们来解析一下基本的设置：
 
 #### 1\. Navigation
 
--   All the necessary configurations for connecting to Elasticsearch are at  `constants/Config.js`.
+>-   All the necessary configurations for connecting to Elasticsearch are at  `constants/Config.js`.
+
 -   连接到 Elasticsearch 的所有必要配置都在 `constants / Config.js` 中。
 
--   We’re using  [TabNavigator][25]  from  [react-navigation][26]  for showing the  **All**,  **Active** and  **Completed**  todos screen. This is rendered by the  `navigation/RootComponent.js`. You’ll notice the  `RootComponent`  wraps everything inside the  `[ReactiveBase][27]`component from ReactiveSearch. This component provides all the necessary data to the child ReactiveSearch components. You can connect your own Elasticsearch index here by just updating the configurations in  `constants/Config.js`.
--   我们使用来自 [react-navigation][26] 的 [TabNavigator][25]在屏幕上显示 todos 的 **All**、**Active** 和 **Completed**。 这由 `navigation / RootComponent.js` 呈现。 您会注意到 `RootComponent` 将 `[ReactiveBase][27]` 组件中的所有内容封装在 ReactiveSearch 中。 此组件为子 ReactiveSearch 组件提供所有必需的数据。 你可以通过更新 `constants / Config.js` 中的配置来连接你自己的 Elasticsearch 索引。
+>-   We’re using  [TabNavigator][25]  from  [react-navigation][26]  for showing the  **All**,  **Active** and  **Completed**  todos screen. This is rendered by the  `navigation/RootComponent.js`. You’ll notice the  `RootComponent`  wraps everything inside the  `[ReactiveBase][27]`component from ReactiveSearch. This component provides all the necessary data to the child ReactiveSearch components. You can connect your own Elasticsearch index here by just updating the configurations in  `constants/Config.js`.
 
-The navigation logic is present in  `navigation/MainNavigator.js`. Lets go over how it works.  [Here][28]  are the docs for tab navigation if you wish to reference anything.
+-   我们使用来自 [react-navigation][26] 的 [TabNavigator][25]在屏幕上显示 todos 的 **All**、**Active** 和 **Completed**。 这由 `navigation / RootComponent.js` 呈现。 你会注意到 `RootComponent` 将 `[ReactiveBase][27]` 组件中的所有内容封装在 ReactiveSearch 中。 此组件为子 ReactiveSearch 组件提供所有必需的数据。 你可以通过更新 `constants / Config.js` 中的配置来连接你自己的 Elasticsearch 索引。
+
+>The navigation logic is present in  `navigation/MainNavigator.js`. Lets go over how it works.  [Here][28]  are the docs for tab navigation if you wish to reference anything.
+
 导航的逻辑放在 `navigation / MainNavigator.js` 中。 让我们来看看它是如何工作的。 如果想要引用任何内容，[以下][28]是选项卡导航的文档。
 
 ```js
@@ -197,34 +219,41 @@ const TabNav = TabNavigator(
 
 ```
 
--   The  `TabNavigator`  function accepts two arguments, the first being the route configurations and the second being the  `TabNavigator`  configurations. In the above snippet, we’re passing the configurations for showing a tab navigation bar at the bottom and setting different icons for each tab.
--   `TabNavigator`函数接受两个参数，第一个是路由配置，第二个是`TabNavigator`配置。 在上面的代码片段中，我们传递的配置是在底部显示选项卡导航栏并为每个选项卡设置不同的图标。
+>-   The  `TabNavigator`  function accepts two arguments, the first being the route configurations and the second being the  `TabNavigator`  configurations. In the above snippet, we’re passing the configurations for showing a tab navigation bar at the bottom and setting different icons for each tab.
 
-#### 2\. TodosScreen and TodosContainer
+-   `TabNavigator` 函数接受两个参数，第一个是路由配置，第二个是`TabNavigator` 配置。 在上面的代码片段中，我们传递的配置是在底部显示选项卡导航栏并为每个选项卡设置不同的图标。
 
-The  `TodosScreen`  component in  `screens/TodosScreen.js`  wraps our main  `TodosContainer`  component in  `components/TodosContainer.js`  where we’ll be adding various components for the app. The  `TodosContainer`  will show filtered data, based on whether we’re on the  **All**,  **Active,**  or  **Completed**  tab.
-`screens / TodosScreen.js` 中的 `TodosScreen` 组件将我们的主要 `TodosContainer` 组件包装在 `components / TodosContainer.js`中，我们将为 app 添加各种组件。 `TodosContainer` 将根据我们是否在 **All**、**Active** 或者 **Completed**选项卡上显示已过滤的数据。
+#### 2\. TodosScreen 和 TodosContainer
+
+>The  `TodosScreen`  component in  `screens/TodosScreen.js`  wraps our main  `TodosContainer`  component in  `components/TodosContainer.js`  where we’ll be adding various components for the app. The  `TodosContainer`  will show filtered data, based on whether we’re on the  **All**,  **Active,**  or  **Completed**  tab.
+
+`screens / TodosScreen.js` 中的 `TodosScreen` 组件将我们的主要 `TodosContainer` 组件包装在 `components / TodosContainer.js`中，我们将为应用程序添加各种组件。 `TodosContainer` 将根据我们是否在 **All**、**Active** 或者 **Completed** 选项卡上显示已过滤的数据。
 
 #### 3\. 用于创建，更新和删除待办事项的 API(APIs for Creating, Updating and Deleting todos)
 
-The APIs for CUD operations on Elasticsearch are present in  `api/todos.js`  . It contains three simple methods  `add`,  `update`  and  `destroy`  which work with any Elasticsearch index as specified in  `constants/Config.js`. An important point to keep in mind is that each todo item we create will have a unique  `_id`  field. We can use this  `_id`  field for updating or deleting an existing todo.
+>The APIs for CUD operations on Elasticsearch are present in  `api/todos.js`  . It contains three simple methods  `add`,  `update`  and  `destroy`  which work with any Elasticsearch index as specified in  `constants/Config.js`. An important point to keep in mind is that each todo item we create will have a unique  `_id`  field. We can use this  `_id`  field for updating or deleting an existing todo.
+
 用于 Elasticsearch 上的 CUD 操作的 API 存储在 `api / todos.js` 中。 它包含三个简单的方法 `add`，`update` 和 `destroy`，它们与 `constants / Config.js` 中指定的任何 Elasticsearch 索引一起使用。 需要记住的一点是，我们创建的每个待办事项都将具有唯一的 `_id` 字段。 我们可以使用此 `_id` 字段来更新或删除现有的待办事项。
 
-For our app, we’ll just need three methods for adding, creating or deleting todos. However, you can find a detailed explanation about the API methods at the  [docs][29].
-对于我们的 app，我们只需要三种方法来添加、创建或删除待办事项。 但是，你可以在[文档][29]中找到有关 API 方法的详细说明。
+>For our app, we’ll just need three methods for adding, creating or deleting todos. However, you can find a detailed explanation about the API methods at the  [docs][29].
 
-### Building the components and UI ?
+对于我们的 app，我们只需要添加、创建或删除待办事项这三个方法。 但是，你可以在[文档][29]中找到有关 API 方法的详细说明。
+
+>### Building the components and UI ?
+
 ### 搭建组件和 UI ？
 
-Lets start adding some components to complete the functionality of the app.
-让我们开始添加一些组件来完成 app 的功能。
+>Lets start adding some components to complete the functionality of the app.
+
+让我们开始添加一些组件来完成应用程序的功能。
 
 #### 1\. 添加 Todos(Adding Todos)
 
-We’ll use  `[Fab][30]`  from  `[native-base][31]`  to render a floating button for adding todos.
+>We’ll use  `[Fab][30]`  from  `[native-base][31]`  to render a floating button for adding todos.
+
 我们将使用来自 `[native-base][31]` 的 `[Fab][30]` 来渲染用于添加待办事项的浮动按钮。
 
-<!--![](https://cdn-media-1.freecodecamp.org/images/1*C1-bdZSvCajaJ-dtSsWcjg.png)-->
+<center>![图片](https://cdn-media-1.freecodecamp.org/images/1*C1-bdZSvCajaJ-dtSsWcjg.png)</center>
 
 ```js
 const AddTodoButton = ({ onPress }) => (
@@ -240,8 +269,9 @@ const AddTodoButton = ({ onPress }) => (
 );
 ```
 
-Now you can use this component in  `components/TodosContainer.js`.
-现在，您可以在 `components / TodosContainer.js` 中使用此组件。
+>Now you can use this component in  `components/TodosContainer.js`.
+
+现在，你可以在 `components / TodosContainer.js` 中使用此组件。
 
 ```javascript
 import AddTodoButton from './AddTodoButton';
@@ -258,13 +288,17 @@ export default class TodosContainer extends React.Component {
 }
 ```
 
-Once we’ve added the button, we’ll see something like this:
+>Once we’ve added the button, we’ll see something like this:
+
 一旦我们添加了按钮，我们就会看到如下内容：
 
-[图片](https://cdn-media-1.freecodecamp.org/images/1*vWdtqKsk0gZzMC4UO35IGg.png)
+<center>![图片](https://cdn-media-1.freecodecamp.org/images/1*vWdtqKsk0gZzMC4UO35IGg.png)
+</center>
 After adding the AddTodoButton
+<center>添加了 AddTodoButton 之后</center>
 
-Now, when someones clicks on this button, we’ll need to show the input for adding a todo. Lets add the code for this in  `components/AddTodo.js`.
+>Now, when someones clicks on this button, we’ll need to show the input for adding a todo. Lets add the code for this in  `components/AddTodo.js`.
+
 现在，当有人点击此按钮时，我们需要显示添加待办事项的输入框。 让我们在 `components / AddTodo.js` 中添加这个代码。
 
 ```js
@@ -290,11 +324,13 @@ class AddTodo extends Component {
 
 ```
 
-The main components used here are  `[TextInput][32]`,  `[Checkbox][33]`  and  `[Ionicons][34]`  with straightforward props. We’re using  `title`  and  `completed`  from the  `state`. We’ll be passing the props  `todo`,  `onAdd`,  `onCancelDelete`  and  `onBlur`  from the  `components/TodosContainer.js`. These will help us in adding new todos or resetting the view if you wish to cancel adding todos.
-这里使用的主要组件是 `[TextInput][32]`，`[Checkbox][33]` 和 `[Ionicons][34]`，它们都有简单的 props 属性。 我们使用`标题`并且通过 `stated` `完成`任务。 我们将从 `components / TodosContainer.js` 传递以下 props 属性： `todo`、`onAdd`、`onCancelDelete` 和 `onBlur`。 这些将有助于我们添加新待办事项或当你想取消添加待办事项的时候重置视图。
+>The main components used here are  `[TextInput][32]`,  `[Checkbox][33]`  and  `[Ionicons][34]`  with straightforward props. We’re using  `title`  and  `completed`  from the  `state`. We’ll be passing the props  `todo`,  `onAdd`,  `onCancelDelete`  and  `onBlur`  from the  `components/TodosContainer.js`. These will help us in adding new todos or resetting the view if you wish to cancel adding todos.
 
-Now we can update  `components/TodosContainer.js`  with the required changes for rendering  `AddTodo`  component:
-现在我们可以使用渲染 AddTodo 组件所需的更改来更新components / TodosContainer.js：
+这里的主要组件 `[TextInput][32]`，`[Checkbox][33]` 和 `[Ionicons][34]` 通过 props 直接使用。我们通过 `state` 使用 `title` 和 `completed`。 我们将从 `components / TodosContainer.js` 传递 props 属性 `todo`、`onAdd`、`onCancelDelete` 和 `onBlur`。 这些将有助于我们添加新待办事项或当你想取消添加待办事项的时候重置视图。
+
+>Now we can update  `components/TodosContainer.js`  with the required changes for rendering  `AddTodo`  component:
+
+现在我们可以使用渲染 AddTodo 组件所需的更改来更新 `components / TodosContainer.js`：
 
 ```js
 ...
@@ -314,27 +350,32 @@ export default class TodosContainer extends React.Component {
 
 ```
 
-The  `AddTodo`  component is rendered inside a  `[ScrollView][35]`  component. We also pass an  `onPress`  prop to the  `AddTodoButton`  to toggle the state and conditionally display the  `AddTodo`  component based on  `this.state.addingTodo`. The  `onAdd`  prop passed to  `AddTodo`also creates a new todo using the  `add`  API at  `api/todos.js`.
+>The  `AddTodo`  component is rendered inside a  `[ScrollView][35]`  component. We also pass an  `onPress`  prop to the  `AddTodoButton`  to toggle the state and conditionally display the  `AddTodo`  component based on  `this.state.addingTodo`. The  `onAdd`  prop passed to  `AddTodo`also creates a new todo using the  `add`  API at  `api/todos.js`.
 
-`AddTodo` 组件在 [ScrollView](https://facebook.github.io/react-native/docs/scrollview.html) 组件中呈现。 我们还将一个 `onPress` prop 传递给 `AddTodoButton` 来切换状态并有条件地显示基于 `this.state.addingTodo` 的 `AddTodo` 组件。 传递给 `AddTodo` 的 `onAdd` prop还使用 `api / todos.js` 中的 `add` API 创建了一个新的待办事项。
+`AddTodo` 组件在 [ScrollView](https://facebook.github.io/react-native/docs/scrollview.html) 组件中呈现。 我们还将一个 `onPress` 传递给 `AddTodoButton` 来切换状态并有条件地显示基于 `this.state.addingTodo` 的 `AddTodo` 组件。 传递给 `AddTodo` 的 `onAdd` 还使用 `api / todos.js` 中的 `add` API 创建了一个新的待办事项。
 
-After clicking the add button, we’ll see the input for adding a todo like this:
+>After clicking the add button, we’ll see the input for adding a todo like this:
+
 单击添加按钮后，我们将看到添加这样的待办事项的输入框：
 
-[图片](https://cdn-media-1.freecodecamp.org/images/1*VrlfuWW4tdj0TTrGjSfDSw.png)
+<center>![图片](https://cdn-media-1.freecodecamp.org/images/1*VrlfuWW4tdj0TTrGjSfDSw.png)</center>
 
-[图片](https://cdn-media-1.freecodecamp.org/images/1*VrlfuWW4tdj0TTrGjSfDSw.png)
-Adding a todo
+<center>![图片](https://cdn-media-1.freecodecamp.org/images/1*VrlfuWW4tdj0TTrGjSfDSw.png)</center>
+<center>Adding a todo</center>
+<center>添加一个待办事项</center>
 
 #### 2\. 显示待办事项(Displaying Todos)
 
-After you finish adding a todo, it’s added into Elasticsearch (which we configured in  `constants/Config.js`). All this data can be viewed in realtime by using  [ReactiveSearch Native][36]  components.
-添加待办事项后，将其添加到 Elasticsearch（我们在 `constants / Config.js` 中配置）中。 可以使用 [ReactiveSearch Native][36] 组件实时查看所有这些数据。
+>After you finish adding a todo, it’s added into Elasticsearch (which we configured in  `constants/Config.js`). All this data can be viewed in realtime by using  [ReactiveSearch Native][36]  components.
 
-There are over 10 native  [UI components][37]  that the library provides. For our todo app, we will primarily utilize the  [ReactiveList][38]  component to show the state of todos.
-仓库提供了超过10个的本地 [UI 组件][37]。 对于我们的 todo app，我们将主要使用 [ReactiveList][38] 组件来显示待办事项的状态。
+添加待办事项后，将其添加到 Elasticsearch（我们在 `constants / Config.js` 中的配置）中。 可以使用 [ReactiveSearch Native][36] 组件实时查看所有这些数据。
 
-Lets add the  `ReactiveList`  component and get our todos displaying. We’ll add this component in  `components/TodosContainer.js`  and the necessary methods for it to work. Here’s how the  `ReactiveList`  will be used:
+>There are over 10 native  [UI components][37]  that the library provides. For our todo app, we will primarily utilize the  [ReactiveList][38]  component to show the state of todos.
+
+仓库提供了超过10个的本地 [UI 组件][37]。 对于我们的待办事项应用程序，我们将主要使用 [ReactiveList][38] 组件来显示待办事项的状态。
+
+>Lets add the  `ReactiveList`  component and get our todos displaying. We’ll add this component in  `components/TodosContainer.js`  and the necessary methods for it to work. Here’s how the  `ReactiveList`  will be used:
+
 让我们添加 `ReactiveList` 组件并显示我们的待办事项。 我们将在 `components / TodosContainer.js` 中添加此组件以及它的必要工作方式。 以下是 `ReactiveList` 的使用方法：
 
 
@@ -346,18 +387,23 @@ import { ReactiveList } from '@appbaseio/reactivesearch-native';
 
 ```
 
-We haven’t added the  `onAllData`  method yet, but let’s understand a bit about the props that we have used here:
+>We haven’t added the  `onAllData`  method yet, but let’s understand a bit about the props that we have used here:
+
 我们还没有添加 `onAllData` 方法，但是让我们先了解一下这里使用的 props：
 
 
--   `componentId`  — unique identifier for the component.
+>-   `componentId`  — unique identifier for the component.
+
 -   `componentId`  - 组件的唯一标识符。
--   `defaultQuery`: the query to be applied initially for the list. We’ll use  `match_all`to show all the todos in default case.
--   defaultQuery：最初应用于列表的查询。 我们将使用 `match_all` 显示默认情况下的所有待办事项。
--   `stream`: whether to stream new result updates or just show historical results. By setting this to  `true`, we now also listen for the live Todo updates. We’ll add the streaming related logic later.
--   `stream`：是否流式传输新结果更新或仅显示历史结果。 通过将此设置为 `true`，我们现在还可以收听实时 Todo 更新。 我们稍后会添加与流相关的逻辑。
--   `onAllData`  — a callback function which receives the list of current todo items and the streaming (new todos and any updates) and returns a React component or JSX to render. Here’s how the syntax looks like:
--   `onAllData`  - 一个回调函数，它接收当前待办事项列表和流媒体（新的待办事项和任何更新），并返回一个 React 组件或 JSX 进行渲染。 这是语法的样子：
+>-   `defaultQuery`: the query to be applied initially for the list. We’ll use  `match_all`to show all the todos in default case.
+
+-   `defaultQuery`：最初应用于列表的查询。 我们将使用 `match_all` 显示默认情况下的所有待办事项。
+>-   `stream`: whether to stream new result updates or just show historical results. By setting this to  `true`, we now also listen for the live Todo updates. We’ll add the streaming related logic later.
+
+-   `stream`：是否流式传输新结果更新或仅显示历史结果。 通过将此设置为 `true`，我们现在还可以实时监听 Todo 的更新。 我们稍后会添加与流相关的逻辑。
+>-   `onAllData`  — a callback function which receives the list of current todo items and the streaming (new todos and any updates) and returns a React component or JSX to render. Here’s how the syntax looks like:
+
+-   `onAllData`  - 一个回调函数，它接收当前待办事项列表和数据流（新的待办事项和任何更新），并返回一个 React 组件或 JSX 进行渲染。 这是语法大概的样子：
 
 ```js
 <ReactiveList
@@ -368,11 +414,13 @@ We haven’t added the  `onAllData`  method yet, but let’s understand a bit ab
 />
 ```
 
-You can read more about all of these props in detail on the ReactiveList’s  [docs page][39].
-你可以在 ReactiveList 的[文档页面][39]上详细了解所有这些props。
+>You can read more about all of these props in detail on the ReactiveList’s  [docs page][39].
 
-To see something, we’ll need to return a JSX or React component from  `onAllData`callback. For this, we will use React Native’s  [FlatList][40]  which is composed of  [Text][41]components. In the next step we’ll add our custom  `TodoItem`  component.
-要查看内容，我们需要从 `onAllData` 返回 JSX 或 React 组件。 为此，我们将使用由 [Text][41] 组件组成的 React Native 的 [FlatList][40] 。 在下一步中，我们将添加自定义 `TodoItem` 组件。
+你可以在 ReactiveList 的[文档页面][39]上详细了解所有这些 props。
+
+>To see something, we’ll need to return a JSX or React component from  `onAllData`callback. For this, we will use React Native’s  [FlatList][40]  which is composed of  [Text][41]components. In the next step we’ll add our custom  `TodoItem`  component.
+
+要查看内容，我们需要从 `onAllData` 返回 JSX 或 React 组件。 为此，我们将使用由 [Text][41] 组件组成的 React Native 的 [FlatList][40] 。 在下一步中，我们将添加自定义的 `TodoItem` 组件。
 
 ```
 ...
@@ -419,14 +467,15 @@ export default class TodosContainer extends React.Component {
 }
 ```
 
-[图片](https://cdn-media-1.freecodecamp.org/images/1*kobdkvtn9oZY7qvF9pzK0Q.png)
-Integrating ReactiveList with onAllData
-将reactiveList与onalldata集成
+<center>![图片](https://cdn-media-1.freecodecamp.org/images/1*kobdkvtn9oZY7qvF9pzK0Q.png)</center>
+<center>Integrating ReactiveList with onAllData</center>
+<center>集成reactiveList与onalldata</center>
 
 #### 3\. 添加 TodoItem(s)（Adding TodoItem(s)）
 
-Next, we’ll create a separate component TodoItem for showing each todo which will contain all necessary markups for a todo item like the CheckBox, Text, and a delete Icon. This goes in components/TodoItem.js:
-接下来，我们将创建一个单独的组件 TodoItem，用于显示每个待办事项，其中包含 Todo 项目的所有必要标记，如 [CheckBox][42]、[Text][43] 和一个删除[图标][44]。 这包含在 `components / TodoItem.js` 中：
+>Next, we’ll create a separate component TodoItem for showing each todo which will contain all necessary markups for a todo item like the CheckBox, Text, and a delete Icon. This goes in components/TodoItem.js:
+
+接下来，我们将创建一个单独的组件 TodoItem，用于显示每个待办事项，其中包含 Todo 项目的所有必要标记，如 [CheckBox][42]、[Text][43] 和一个删除 [Icon][44]。 这包含在 `components / TodoItem.js` 中：
 
 ```
 class TodoItem extends Component {
@@ -499,11 +548,13 @@ class TodoItem extends Component {
 }
 ```
 
-This component gets the todo from its props along with onDelete and onUpdate which are used to update and delete the todo item respectively. We’re using these at the necessary places using the onPress prop of the components we’re using.
-该组件从其 props 获取 `todo` 以及 `onDelete` 和 `onUpdate`，它们分别用于更新和删除 todo 项。 我们在必要的地方使用组件的 `onPress` prop。
+>This component gets the todo from its props along with onDelete and onUpdate which are used to update and delete the todo item respectively. We’re using these at the necessary places using the onPress prop of the components we’re using.
 
-Next, we can import and use the TodoItem component in our onAllData in components/TodosContainer.js. We’ll pass the todo as a prop along with the API methods for update and destroy which will be used by TodoItem component.
-接下来，我们可以在 `components / TodosContainer.js` 中的 `onAllData` 中`导入`和使用 `TodoItem` 组件。 我们将传递由 `TodoItem` 使用的 `todo` 作为 prop 以及用于`更新`和`销毁`的 API 方法。
+该组件从其 props 获取 `待办事项` 以及用于更新和删除待办事项的 `onDelete` 和 `onUpdate`。 我们在必要的地方使用组件的 `onPress`。
+
+>Next, we can import and use the TodoItem component in our onAllData in components/TodosContainer.js. We’ll pass the todo as a prop along with the API methods for update and destroy which will be used by TodoItem component.
+
+接下来，我们可以在 `components / TodosContainer.js` 中的 `onAllData` 中`导入`和使用 `TodoItem` 组件。 我们将传递由 `TodoItem` 使用的 `todo` 以及用于`更新`和`销毁`的 API 方法作为 prop。
 
 ```
 class TodosContainer extends Component {
@@ -526,18 +577,21 @@ class TodosContainer extends Component {
 }
 ```
 
-<!--![](https://cdn-media-1.freecodecamp.org/images/1*46QMtTpPsof09oOBwvrELA.png)-->
+<center>![图片](https://cdn-media-1.freecodecamp.org/images/1*46QMtTpPsof09oOBwvrELA.png)</center>
 
-After adding TodoItem in TodosContainer
-在ToDoContainer中添加所有项后
+<center>After adding TodoItem in TodosContainer</center>
+<center>在ToDoContainer中添加 TodoItem 后</center>
 
 #### 4\. 流数据更新(Streaming Data Updates)
 
-You might have noticed that the todos are displaying fine, except you’re unable to view updated todos without refreshing the app. In this final step, we’re going to fit that missing part of the puzzle.
-您可能已经注意到 todos 显示正常，但您无法在不刷新 app 的情况下查看更新的待办事项。 在最后一步中，我们将适应这个难题的缺失部分。
+>You might have noticed that the todos are displaying fine, except you’re unable to view updated todos without refreshing the app. In this final step, we’re going to fit that missing part of the puzzle.
 
-In the previous section, we added an onAllData method for the ReactiveListcomponent. The second parameter of onAllData receives streaming updates which we’re going to utilize to always keep the todos updated. Here’s how the updated onAllData method will look like in components/TodosContainer.js.
-在上一节中，我们为 ReactiveListcomponent 添加了一个 `onAllData` 方法。 `onAllData` 的第二个参数接收流式更新，我们将利用这些更新来始终更新待办事项。 以下是更新的 `onAllData` 方法在 `components / TodosContainer.js` 中的外观。
+您可能已经注意到 todos 显示正常，但您无法在不刷新 app 的情况下查看更新的待办事项。 在最后一步中，我们将解决这个难题的缺失部分。
+
+>In the previous section, we added an onAllData method for the ReactiveListcomponent. The second parameter of onAllData receives streaming updates which we’re going to utilize to always keep the todos updated. Here’s how the updated onAllData method will look like in components/TodosContainer.js.
+
+在上一节中，我们为 ReactiveListcomponent 添加了一个 `onAllData` 方法。 
+我们将利用接收的第二个参数 `onAllData` 结构更新流来保持待办事项的更新。以下是更新的 `onAllData` 方法在 `components / TodosContainer.js` 中的大概的样子。
 
 ```
 import Utils from '../utils';
@@ -568,7 +622,8 @@ export default class TodosContainer extends React.Component {
 
 ```
 
-The mergeTodos method is present in utils/index.js. Here’s how it works:
+>The mergeTodos method is present in utils/index.js. Here’s how it works:
+
 `mergeTodos` 方法存在于 `utils / index.js` 中。 以下是它的工作原理：
 
 ```
@@ -595,10 +650,12 @@ class Utils {
 export default Utils;
 ```
 
-The  `streamData`  receives an array of todo objects when they’re created, deleted, or updated. If an object is updated, it contains a  `_updated`  key set to  `true`. Similarly, if an object is deleted, it contains a  `_deleted`  key set to  `true`. If an object is created, it contains neither of the two. Using these points, we’ve added the  `mergeTodos`  function.
-`streamData` 在创建、删除或更新时接收 todo 对象的数组。 如果更新了某个对象，则它包含一个设置为 `true` 的 `_updated` 键。 同样，如果删除了一个对象，则它包含一个设置为 `true` 的 `_deleted` 键。 如果创建了一个对象，则它不包含这两个对象。 利用这些点，我们添加了 `mergeTodos` 函数。
+>The  `streamData`  receives an array of todo objects when they’re created, deleted, or updated. If an object is updated, it contains a  `_updated`  key set to  `true`. Similarly, if an object is deleted, it contains a  `_deleted`  key set to  `true`. If an object is created, it contains neither of the two. Using these points, we’ve added the  `mergeTodos`  function.
 
-With this, you should be able to see the changes to todo items in realtime! If you have an additional device/emulator running the same app, both will stream new updates too. ?
+`streamData` 在创建、删除或更新时接收待办事项对象的数组。 如果更新了某个对象，则它包含一个设置为 `true` 的 `_updated` 键。 同样，如果删除了一个对象，则它包含一个设置为 `true` 的 `_deleted` 键。 如果创建了一个对象，则它不包含这两个对象。 利用这些点，我们添加了 `mergeTodos` 函数。
+
+>With this, you should be able to see the changes to todo items in realtime! If you have an additional device/emulator running the same app, both will stream new updates too. ?
+
 有了这个，你应该能够实时看到 todo 项目的变化！ 如果您有一个运行相同 app 的其他设备/模拟器，它们也将流式传输新的更新。
 
 ### Useful links

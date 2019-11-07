@@ -1,157 +1,164 @@
 ![Object Oriented Programming Concepts: How to go from Zero to One with Objects](https://images.unsplash.com/photo-1496346651079-6ca5cb67f42f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Object Oriented Programming is one of the most widely used programming paradigms. The name itself defines how it works. “Object Oriented” - the Object plays an important role. Manipulating objects and getting the results is the ultimate goal of Object Oriented Programming.
+> * 原文地址：[Object Oriented Programming Concepts: How to go from Zero to One with Objects](https://www.freecodecamp.org/news/object-oriented-concepts/)
+> * 标题：面向对象的编程概念：从0到1使用对象
+> * 作者：Parathan Thiyagalingam
+> * 译者：Theoda
+> * 校对者：
 
-The languages that use Object Oriented Programming paradigms are known as Object Oriented Programming Languages. They are mostly high level languages such as
+面向对象编程是最为广泛使用的编程范式之一。它的名字就定义了它的工作原理。“面向对象”——“对象”起着重要的作用。操作对象、并得到结果是面向对象编程的最终目标。
+
+使用面向对象编程范式的语言称为面向对象编程语言。它们大多是高级语言，例如：
 
 1.  Java
 2.  C#
-3.  Python - Python is both a Scripted/Structured & Object Oriented Language
+3.  Python — Python 既是脚本语言、结构化语言，也是面向对象语言。
 
-To program in Object Oriented Programming, concepts called “**Object Oriented Concepts**” are used. These concepts simplify & add more value to Object Oriented Programming.
+为了进行面向对象编程，我们会使用一些 **面向对象的概念**。它们简化了面向对象编程，并为其增添了更多价值。
 
-Those concepts are
+这些概念如下：
 
-1.  Encapsulation
-2.  Abstraction
-3.  Polymorphism
-4.  Inheritance
+1.  封装
+2.  抽象
+3.  多态
+4.  继承
 
-Before moving into these concepts, we need to know about Class & Objects.
+在进入这些概念之前，我们需要了解“类”和“对象”。
 
-**An Object**  is the basic run-time entity in OOP. In our day-today life we see a lot of objects like a television, mobile phone, dog, humans, cars & other living and non-living objects. These can be portrayed as objects in OOP.
+**对象** 是面向对象编程中基本的运行时实体。日常生活中我们就能看到很多对象，如电视、手机、狗、人、汽车，以及其他有生命或无生命的对象。这些都可以被描述为面向对象编程中的对象。
 
-**A Class**  is a blueprint or prototype that defines variables/properties and methods/functions common to all objects of a certain kind. It's a logical component.
+**类** 是一张蓝图或一个原型，它定义了特定一类对象共有的 变量/属性 和 方法/函数。它是一种逻辑组件。
 
-Simply said, Class is a  **user-defined**  data type. Objects are  **variables**  of a Class. Once the Class has been created we can create as many Objects as we want.
+简单来说，“类”是**用户定义的**数据类型，“对象”是类的**变量**。构造了“类”以后，我们可以根据需要创建任意数目的对象。
 
-For example, take a class named Tree. State/properties of the Tree class are:
+例如，我们构造一个名为“树” (Tree) 的类。“树”这个类的 状态/属性 就是：
 
--   Name of the tree
--   Age of the tree
--   Type of the tree
--   Height of the tree
+-  树的名称 (Name)
+-  树的年龄 (Age)
+-  树的类型 (Type)
+-  树的高度 (Height)
 
-State/properties are used to define the attributes of an object.
+状态/属性 用于定义对象的属性。
 
-That is,  **State/properties/attributes**  all represents the same thing.
+也就是说，**状态/成员/属性** 都代表相同的东西。
 
-Behaviors of the Tree can be:
+“树”的动作行为可以是：
 
--   Giving fruit
--   Falling of leaves
--   Absorbing water from roots to the upper parts
--   Creating shadows
+-  结果实
+-  落叶
+-  从根部吸收水分运往上部
+-  形成树荫
 
-Then, Mango is a variable of Class Tree. We can store and retrieve all the properties & behaviors we defined for the class Tree by creating an object of Mango.
+然后，我们可以用“树”类定义一个变量 Mango (芒果树) 。我们可以通过创建 Mango 对象来存储和访问我们之前为“树”类定义的所有属性和行为。
 
-Syntax for Creating an object of Mango from class Tree:
+用“树” (Tree) 类创建 Mango 这个对象的语法是：
 
 **Tree**  Mango;
 
-### Encapsulation
+### 封装
 
-Have you ever used a tablet/medicine which encapsulated by a colored cover?
+您食用过彩色外壳的胶囊吗？
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/pills_tablets_medicine_capsule_heal_drugs_pharmacy_nutrient_additives-859474.jpg-d.jpeg)
 
-Medicines are encapsulated & placed inside the tablet
+药物是被封装好存进胶囊里的。
 
-Inside that medicine is kept safely. We can't find anything with our naked eye. To see what's inside we need to open up that cover....
+里面的药物存放得非常安全，肉眼是看不到的。想要知道里面是什么必须得拆开外壳。
 
-Similarly, all the  **data members (variables,attributes/properties)**  &  **behaviors(functions/methods)** are gathered together and closed. Class is a best example for Encapsulation.
+相似地，所有 **数据成员 (变量/属性/成员)** 和 **行为(函数/方法)** 都被放到一起，并封装起来。“类”就是“封装”最好的例子。
 
-For an instance,
+打个比方，
 
-You are going to the pharmacy to buy prescribed medicines for you. You handover the prescription to the pharmacist and then he/she will take the medicine from the store & give you the bill.
+你正在药店买一些处方药。你把处方交给药师，TA (她/他) 会帮你在店里拿好药。
 
-In this scenario,
+在这个场景中，
 
-Medicines - act as variables or properties or attributes
+药品：充当了 变量/成员/属性
 
-Pharmacist - act as member function/method where he/she helps in giving you the medicine
+药师：作为成员函数/方法，TA 把药拿给你
 
-You - external application or another software code
+你：外部的应用程序或其他软件的代码
 
-  
 
 ![](https://docs.google.com/drawings/d/spRw5P3ZQcCXoRMBDaWoceg/image?w=431&h=300&rev=30&ac=1&parent=1co9lGXLHg9idixOA7Dssbv3whQYlkF3jd5n9wWo0Oaw)
 
-By using Encapsulation,  **data can be restricted**  from the usage of the outside world. The function defined in the class only can access the properties. This can be defined at the implementation stage. Programmers can define and specify the accessibility of the member variables while under development rather than making all the variables global like in procedural languages. This controlling of accessibility is also known as  **Information hiding**.
+通过封装，**可以限制** 外部代码访问内部的数据。比如你可以在实现代码的时候这么定义：只有在类中定义的函数才能访问类的成员。程序员是可以在开发过程中指定成员变量的可访问性的，而不是像过程化语言那样使所有变量全局化。这种可访问性的控制也称为 **信息隐藏**。
 
-Encapsulation  **allows to expose the necessary things and hiding the important things from the outside world**. So, the hidden parts of a class acts like  **Encapsulation**  & the exposed parts acts like  **Abstraction**.
+封装 **允许公开必要的东西，也能把重要的东西对外界藏起来**。因此，类隐藏的部分就像 **封装**，显露的部分像 **抽象**。
 
-### Abstraction
+### 抽象
 
-Exposing necessary features of a class **without explaining much or details** is done by Abstraction.
+通过抽象，我们 **不用解释太多** 就可以显露类的必要特性。
 
-Today morning I wanted to make a hot tea and I used a water kettle to boil the water. I just turned on the  **On**  button to start boil water. I don’t want to know the inner workflow of the kettle where it has high resistance and that resistance produces heat and boils the water. Instead, I have to fulfill my work easily. Therefore, having this On button to boil the water is known as Abstraction.
+今天早上我想泡杯热茶，要用水壶烧水。我简简单单按下 **启动** 按钮烧水，我不想知道水壶内部怎么工作的。我不想知道它有什么高电阻、电阻产热、水沸腾之类的，反正我能简单地烧好水就行了。因此，按下“启动”按钮烧水就被称为“抽象”。
 
-Similarly, we can take a remote controller which helps in manipulating TV operation using simple keys in the remote.
+类似地，通过遥控器的帮助，我们用简单的几个键就能操控电视。
 
-**Data abstraction**  is a programming technique that depends on the separation of  **interface**  and  **implementation**.
+**数据抽象** 是一种编程技巧，它取决于 **接口** 和 **具体实现** 能否分离开来。
 
-This data abstraction can be archived from using 2 different classes while coding using OOP
+在面向对象编程时，数据抽象的概念可以来自两种类型的类：
 
-1.  Abstraction class: (0-100)% abstraction
-2.  Interface class: 100% abstraction
+1.  抽象类：(0-100)% 的抽象
+2.  接口类：100% 的抽象
 
-### Inheritance
 
-The word itself describe what its functionality. Everyone has their inheritance qualities from their birth. You could have your grandparents/ your parents qualities from your birth. This is what Inheritance does in OOP.
+### 继承
+
+顾名思义。每个人从出生起都有从家庭遗传的特征。你可能会有祖父母或父母的一些特征。这也正是“继承”在面向对象编程中的作用。
 
 ![](https://docs.google.com/drawings/d/sO6CPcUTCRHxWv3ghO23f5g/image?w=424&h=268&rev=130&ac=1&parent=1co9lGXLHg9idixOA7Dssbv3whQYlkF3jd5n9wWo0Oaw)
 
-A class can have its properties & methods of its parent class. The parent class is called as base class. The class that inherits base class is called as derived class. Inheritance is the most powerful feature of OOP.
+类可以拥有它的“父类”的属性和方法。父类也被称为基类。继承基类的类称为“派生类”。继承是面向对象编程最强大的功能了。
 
-By using Inheritance effectively we could save a lot of time and reduce the errors in our program. This causes us to  **increase the quality of work**  and  **productivity**.
+有效地使用继承可以节省大量时间，还能减少程序中的错误，进而为我们 **提高工作质量** 和 **生产力**。
 
-There are different types of Inheritance
+继承有不同的类型：
 
-1.  Single Inheritance
-2.  Hierarchical Inheritance
-3.  Multiple Inheritance
-4.  Multi Level Inheritance
+1.  单继承 (Single Inheritance)
+2.  分层继承 (Hierarchical Inheritance)
+3.  多继承 (Multiple Inheritance)
+4.  多层继承 (Multi Level Inheritance)
 
-### Polymorphism
+### 多态
 
-Polymorphism is a  **Greek**  term which refers to the ability of taking more than one form / overloading.
+Polymorphism (多态) 是一个 **希腊词语**，指的是具有多种形态或超载的能力。
 
-Say for example we all know about  **functions**  in programming. They take different arguments inside parenthesis. Polymorphism is nothing but with the same function name, different arguments passed to get the result.
+比如说我们都知道的编程中的 **函数**，它们在括号内接受不同的参数。多态性也只是具有相同名字的函数，传递不同的参数来得到结果。
 
-For e.g :- function called sum can take 2 arguments or 3 arguments.
+以名为 sum 的函数为例，它可以带 2 或 3 个参数：
 
 sum(3,4) sum(10,23,56)  
-Calling these functions by providing suitable number of parameters will give the result according to how the called function has designed.
 
-**_How the program distinguish which function need to be executed at the above scenario?_**
+通过提供适当数量的参数来调用这些函数，将根据被调用函数的设计方式给出相应结果。
 
-There is a feature called  **Dynamic binding**  in OOP. This will call the actual function according to the program execution. When the program runs the function with 2 arguments compiler takes the two argument functions to execute the program similarly for 3 arguments too.
+**_程序如何区分上述情况，来决定执行哪个函数呢？_**
 
-Until the run-time, compiler won’t know exactly which function need to be invoked. It depends on the way the program calls the function name. This is also be known as  **Late binding.**
+面向对象编程中有一个名为 **动态绑定** 的功能，会根据程序的执行来调用实际的函数。当程序执行 2 个参数的函数时，编译器就会用 2 个参数的函数来执行。3 个参数的函数同理。
 
-### Uses of Object Oriented Programming
+在实际运行之前，编译器并不知道到底需要调用哪个函数，这取决于程序会如何调用函数名。这也被称为 **迟绑定。**
 
--   Data can be hidden from outside using  **Encapsulation**  (Information hiding)
--   Code can be reused by using  **Inheritance**
--   Operators/methods.functions can be overloaded by using  **Polymorphism**. I.e: same function or operator name can be used for multi-tasking
--   Data abstraction can be archived from  **Abstraction**.
--   Project migrations are easy (can be converted to larger size from smaller size)
--   Partitioning the works for same project
--   Manageable software complexity
+### 面向对象编程的用途
 
-### Areas of application of OOP
+-  使用 **封装**（信息隐藏）可以对外部隐藏数据
+-  使用 **继承** 可以重用代码
+-  使用 **多态** 可以重载操作符/方法/函数。即相同的函数名或操作符名称可用于多种任务
+-  数据抽象可以用 **抽象** 实现
+-  项目易于迁移（可以从小项目转换成大项目）
+-  同一项目分工
+-  软件复杂性可控
 
-1.  AI and expert systems
-2.  Enterprise applications
-3.  Neural Network and parallel programming
-4.  Office automation systems
+### 面向对象编程的应用领域
 
-Hope you enjoyed a brief introduction to Object Oriented Concepts by reading. I hope to write how can we program Object Oriented Programming in my upcoming posts too.
+1.  人工智能与专家系统
+2.  企业级应用
+3.  神经网络与并行编程
+4.  办公自动化系统
+
+希望你阅读后能对面向对象概念有简要的了解，也希望我能在将来的帖子中写到如何进行面向对象编程。
 
 ---
 
-Please send you feedback about my article to  parathan19@gmail.com
+任何关于我的文章的反馈，请发送至 parathan19@gmail.com
 
 [LinkedIn][1]  |  [Twitter][2]
 

@@ -7,7 +7,7 @@
 
 ![About freeCodeCamp - Frequently Asked Questions](https://www.freecodecamp.org/news/content/images/size/w2000/2019/06/freecodecamp-conference-photo.jpeg)
 
-### What is freeCodeCamp?
+### freeCodeCamp是什么?
 
 We’re a nonprofit community that helps you learn to code by building projects.
 

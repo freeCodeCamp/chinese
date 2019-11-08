@@ -1,6 +1,10 @@
 > * 原文地址：[About freeCodeCamp - Frequently Asked Questions](https://www.freecodecamp.org/news/about/)
 > * 原文作者：freeCodeCamp team
+<<<<<<< HEAD
 > * 译者：Zhuotao Lian 
+=======
+> * 译者：Zhuotao Lian
+>>>>>>> upstream/LianZhuotao-patch-3
 > * 校对者：
 
 # freeCodeCamp - 常见问题

@@ -3,7 +3,7 @@
 > * 译者：Zhuotao Lian 
 > * 校对者：
 
-# About freeCodeCamp - Frequently Asked Questions
+# freeCodeCamp - 常见问题
 
 ![About freeCodeCamp - Frequently Asked Questions](https://www.freecodecamp.org/news/content/images/size/w2000/2019/06/freecodecamp-conference-photo.jpeg)
 

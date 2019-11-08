@@ -4,11 +4,11 @@
 > * 校对者：
 
 ![How I Went from Writing My First Line of Code to a $226K Job Offer in Just 8 Months]
-八个月：从写下第一行代码到拿下226K美元的工作
+八个月：从写下第一行代码到拿下年薪226K美元的工作
 (https://www.freecodecamp.org/news/content/images/size/w2000/2019/09/Love-to-learn_tim-mossholder_unsplash.jpg)
 
 I got offers from Google, Lyft, Yelp, cloud unicorn Rubrik, IBM Artificial Intelligence, and JP Morgan Chase. My story may help you in your job search.
-我找工作时曾拿到了包括谷歌、Lyft、Yelp、云独角兽公司Rubrik、IBM人工智能部门和摩根大通集团在内的工作offer，我的求职故事可能会对你有所启发。
+找工作时我曾拿到了包括谷歌、Lyft、Yelp、云独角兽公司Rubrik、IBM人工智能部门和摩根大通集团在内的工作offer，希望我的求职故事对你有所启发。
 
 ### Introduction简要概述
 
@@ -143,28 +143,28 @@ These habits did more than enhance retention — they built reassuring confidenc
 
 I settled into a steady routine, ~8 hours a day, 5+ days/week: study and/or interview, diagnose failure/success, reflect, repeat.我的每日规划十分平稳，一周不少于五天，每天八小时：学习or面试，总结失败or成功经验，思考，重复。
 
-I curated and constantly revised my study plans by first getting a sense for what strong performance looked like in each of the different types of interviews I might encounter (data structure/algorithms, front end DOM manipulation, systems design, etc.). Then I’d estimate the probability of encountering each type in upcoming interviews and weigh that against my self-assessment of my performance to decide what to study next.
+I curated and constantly revised my study plans by first getting a sense for what strong performance looked like in each of the different types of interviews I might encounter (data structure/algorithms, front end DOM manipulation, systems design, etc.). Then I’d estimate the probability of encountering each type in upcoming interviews and weigh that against my self-assessment of my performance to decide what to study next.面试中我可能会遇到诸如数据结构、算法、前端DOM操作、系统设计等等。按照这些可能，我不断地调整自己的学习计划以便面试时呈现最佳表现。之后我会预估接下来的面试遇到各种类型考题的可能性有多大，评估自己的面试表现，决定下一步的学习任务。
 
-Wanting to ensure I only used the best resources, I kept lists of peer-recommended resources organized by topic. When it was time to study that topic, I’d supplement the list with anything new from a quick Google search and then skim each resource to determine the best one or two before diving deep into those. I’d do most prioritization the day before so I could go straight from my morning meditation into 2-3 hours of uninterrupted deep work the next day.
+Wanting to ensure I only used the best resources, I kept lists of peer-recommended resources organized by topic. When it was time to study that topic, I’d supplement the list with anything new from a quick Google search and then skim each resource to determine the best one or two before diving deep into those. I’d do most prioritization the day before so I could go straight from my morning meditation into 2-3 hours of uninterrupted deep work the next day.为了确保用到最好的学习资源，我按照主题分门别类，整理了同好们推荐的各种资源，列成清单。需要学习这个主题时，我会再去谷歌快速搜索一下，看看有没有什么新的资源可以更新到清单上，然后找出最好的一到两个资源进行深入学习。前一天我会做好各项事件优先级排序，第二天就能确保，清晨冥想之后，进行2-3个小时的不被打扰的深入学习。
 
-I spent another 2-3 hours/day building a pipeline of attractive companies, generating referrals, and submitting applications. It took more time than I liked to complete a single application and I had a limited number of top picks, so I did my best to increase app-to-interview conversation rates by
+I spent another 2-3 hours/day building a pipeline of attractive companies, generating referrals, and submitting applications. It took more time than I liked to complete a single application and I had a limited number of top picks, so I did my best to increase app-to-interview conversation rates by每天我还会花2-3个小时寻找目标公司，找出重点目标，然后投递简历。每次投递简历花费的时间比我预想的要多，而且可供我选择的顶级公司数量有限，因此，我尽我所能通过以下方式提升我从投递简历到拿到面试机会的概率：
 
--   [emphasizing results][23] over context or action in my resume,
--   studying which of my approaches and messages generated referrals fastest via email and LinkedIn,
--   tracking my entire pipeline in a spreadsheet, and
--   following up on all communications.
+-   [emphasizing results][23] over context or action in my resume,简历中强调自己工作取得的成果或者采取的行动
+-   studying which of my approaches and messages generated referrals fastest via email and LinkedIn,研究邮件和领英哪个渠道和信息流能最快给我推荐相关公司
+-   tracking my entire pipeline in a spreadsheet, and整个流程写在电子表格上随时回顾
+-   following up on all communications.跟进所有正在进行的沟通
 
-I treated most applications as experiments in improving return for time invested. Habits paid off here too — steadily putting companies in my pipeline meant that I could immediately look ahead to the next opportunity when I received a rejection.
+I treated most applications as experiments in improving return for time invested. Habits paid off here too — steadily putting companies in my pipeline meant that I could immediately look ahead to the next opportunity when I received a rejection.我几乎把所有投递简历的过程当做实验，希望投入时间带来的回报能不断提高。我的好习惯也帮了我很多---把已投递简历的公司写入表格意味着，在我被拒绝之后，我可以立即寻找下一个机会。
 
-I also did my best to time applications so I could interview first with less desirable companies while pushing along slower moving processes (like Google’s).
+I also did my best to time applications so I could interview first with less desirable companies while pushing along slower moving processes (like Google’s).我也尽可能地安排好时间，首先面试意愿度低一些的公司，缓慢推进意愿度高的公司的面试进程，比如谷歌。
 
-My interview with IBM proved to be a bright spot to my rocky start, but even still, it doubled as a lesson to persist amidst uncertainty. It consisted of a phone interview and three more interviews at the “on-site.”
+My interview with IBM proved to be a bright spot to my rocky start, but even still, it doubled as a lesson to persist amidst uncertainty. It consisted of a phone interview and three more interviews at the “on-site.”IBM的面试是我坎坷求职之路上的转折点。直到现在，这次面试也给我上了一堂课，教会我如何处理不确定性。面试包括一次电话面试和三次现场面试。
 
-At the start of every interview I experienced that now-familiar pit in my stomach and thought:  _I do not know how to do this_.
+At the start of every interview I experienced that now-familiar pit in my stomach and thought:  _I do not know how to do this_.每次面试一开始，我都会经历那种现在无比熟悉的感觉，默默对自己说：我不知道怎么做。
 
-I responded each time by taking a breath and reminding myself:  _It’s fun turning this feeling into a working solution at home, so imagine how much more fun it will be here where the stakes are higher and the job is on the line!_
+I responded each time by taking a breath and reminding myself:  _It’s fun turning this feeling into a working solution at home, so imagine how much more fun it will be here where the stakes are higher and the job is on the line!_但我每次都会深呼吸，提醒自己：在家中，从不知所措到想出解决方案都如此有趣，所以，在这里---风险更高，工作触手可及---想出解决方案的那种感觉该会有多美妙！
 
-After the first two interviews, I wondered if my excitement and learning orientation were contagious — my interviewers certainly knew I didn’t see an answer right away, but they seemed to enjoy how the energy in the conversation rose as I neared a solution.
+After the first two interviews, I wondered if my excitement and learning orientation were contagious — my interviewers certainly knew I didn’t see an answer right away, but they seemed to enjoy how the energy in the conversation rose as I neared a solution.前两次面试之后，我想知道我的激动心情和学习导向是否有感染力。面试官当然知道我并没有一开始就找到答案，但他们似乎很享受我在接近解决方案时话语间体现出的活力。
 
 I left IBM encouraged that, while I may not always crack an interview prompt, I could always enjoy sharing a growth mindset under pressure. I’m sure this mentality helped me convert seven of eight on-sites.
 

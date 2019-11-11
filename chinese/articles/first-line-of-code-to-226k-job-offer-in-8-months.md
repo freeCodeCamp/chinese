@@ -166,51 +166,51 @@ I responded each time by taking a breath and reminding myself:  _It’s fun turn
 
 After the first two interviews, I wondered if my excitement and learning orientation were contagious — my interviewers certainly knew I didn’t see an answer right away, but they seemed to enjoy how the energy in the conversation rose as I neared a solution.前两次面试之后，我想知道我的激动心情和学习导向是否有感染力。面试官当然知道我并没有一开始就找到答案，但他们似乎很享受我在接近解决方案时话语间体现出的活力。
 
-I left IBM encouraged that, while I may not always crack an interview prompt, I could always enjoy sharing a growth mindset under pressure. I’m sure this mentality helped me convert seven of eight on-sites.
+I left IBM encouraged that, while I may not always crack an interview prompt, I could always enjoy sharing a growth mindset under pressure. I’m sure this mentality helped me convert seven of eight on-sites.面试结束离开IBM的时候，我给自己加油打气：就算没有拿下这份工作，我也很享受压力下的思维提升。我坚信我这种信念会帮助我找到工作。
 
-Fortunately, seeds sown in December’s failures bloomed into January's success.
+Fortunately, seeds sown in December’s failures bloomed into January's success.幸运的是，十二月份的失败浇灌了一月份的成功之花。
 
-## Building momentum and early success
+## Building momentum and early success良好势头和早期成果
 
-> **"Your hardest times often lead to the greatest moments of your life. Keep going." ―Roy T. Bennet**
+> **"Your hardest times often lead to the greatest moments of your life. Keep going." ―Roy T. Bennet**最艰难的日子过后就是你人生的高光时刻，继续前进吧。---罗伊T*本尼特
 
-The first week of January, IBM called with an informal offer with formal details forthcoming.  _Could I use this as leverage in the meantime?_  I thought. I shared the news with a Google recruiter, who responded by accelerating me past the phone interview straight to an on-site.
+The first week of January, IBM called with an informal offer with formal details forthcoming.  _Could I use this as leverage in the meantime?_  I thought. I shared the news with a Google recruiter, who responded by accelerating me past the phone interview straight to an on-site.一月份的第一周，IBM打电话通知我被录用了，具体的正式录用细节会之后另行通知。“我可以利用一下这个offer吗？”，我问自己。随后我跟谷歌招聘人员分享了我拿到IBMoffer的消息，他回复说让我跳过电话面试直接现场面试。
 
-Suddenly, I could command recruiters’ attention. I immediately informed all companies I was speaking with that I had an offer. Doing so during the start of the new year immediately heated up my pipeline.
+Suddenly, I could command recruiters’ attention. I immediately informed all companies I was speaking with that I had an offer. Doing so during the start of the new year immediately heated up my pipeline.突然我就引起了招聘人员的关注。我立即跟所有我正在联系的公司说明了我已经拿到IBMoffer的消息。新年伊始，整个找工作的节奏就这样被调动起来了。
 
-The next week, I felt confident for the first time in all four technical interviews at a JP Morgan Chase on-site, finishing most of them with time to spare. I was overjoyed my work in December had so clearly paid off.
+The next week, I felt confident for the first time in all four technical interviews at a JP Morgan Chase on-site, finishing most of them with time to spare. I was overjoyed my work in December had so clearly paid off.第二周，去参加摩根大通的四场现场技术面试时，我第一次信心满满，甚至还提前完成了任务。十二月的辛苦付出终于有了收获，我欣喜若狂。
 
-My Google on-site was a few days later. The difference in difficulty was shocking. I performed terribly in my second interview involving asynchronous JavaScript promises.
+My Google on-site was a few days later. The difference in difficulty was shocking. I performed terribly in my second interview involving asynchronous JavaScript promises.几天以后是谷歌面试，难度令人咋舌。第二场面试涉及到异步JavaScript promise，我发挥得很差。
 
-I took a moment in the restroom at the lunch break to regroup with a micro-meditation. I figured I had almost no shot at a job offer, so the objective was now to learn as much as possible from my failure.
+I took a moment in the restroom at the lunch break to regroup with a micro-meditation. I figured I had almost no shot at a job offer, so the objective was now to learn as much as possible from my failure.午饭休息时间，我在休息室里花了一点时间，稍作休整。判断了一下形势觉得自己无望拿到offer，我决定把目标调整成尽可能地从失败中多学经验。
 
-I knew I’d do a post-mortem in the evening. In the meantime, I challenged myself to see how much gratitude and equanimity I could cultivate in such a high-stakes environment. After all, how exciting was it I was interviewing at Google?
+I knew I’d do a post-mortem in the evening. In the meantime, I challenged myself to see how much gratitude and equanimity I could cultivate in such a high-stakes environment. After all, how exciting was it I was interviewing at Google?我知道晚上回家后我要做个事后总结。但同时我也想挑战一下，看自己在如此高压环境下能保持几分镇定与平静。毕竟，面试谷歌多么令人激动。
 
-The idea seemed to help me pull out of my tail-spin and I got better throughout the afternoon. By the time I left, I even had a glimmer of hope Google might still offer me a job.
+The idea seemed to help me pull out of my tail-spin and I got better throughout the afternoon. By the time I left, I even had a glimmer of hope Google might still offer me a job.这样的想法把我从慌乱状态中解救出来，下午的表现可圈可点。离开的时候，我甚至抱有一丝希望，觉得谷歌会给我offer。
 
-Per my post-mortem habit, I went home and found online resources to help me build a JavaScript promise from scratch. The next day I took three phone screens and the ups-and-downs struck again.
+Per my post-mortem habit, I went home and found online resources to help me build a JavaScript promise from scratch. The next day I took three phone screens and the ups-and-downs struck again.根据事后总结的习惯，回到家以后我找到关于JavaScript返回对象的线上资源从零学起。第二天我又参加了三次电话面试，表现有好有坏。
 
-I performed strongly on a call with a security startup. I Embarrassed myself with a small energy startup. And I had the comeback of a lifetime on the phone with Rubrik, a cloud storage unicorn.
+I performed strongly on a call with a security startup. I Embarrassed myself with a small energy startup. And I had the comeback of a lifetime on the phone with Rubrik, a cloud storage unicorn.面试一家安全创业公司时，我表现很好；但面试一家小型能源创业公司时，我表现很差。电话面试Rubrik---一家云存储独角兽公司---又给了我极大的信心。
 
-Rubrik asked another question on promises, harder than the one from the Google interview I had failed a day before. Having done my post-mortem, I innovated on the spot and raced to the finish just as time ran out.
+Rubrik asked another question on promises, harder than the one from the Google interview I had failed a day before. Having done my post-mortem, I innovated on the spot and raced to the finish just as time ran out.Rubrik的面试问题也关于promises，比前一天谷歌面试的还要难。但因为我前一天晚上的总结，现场创新，在面试结束之前刚刚完成。
 
-The interviewer said I may have been the first bootcamp grad the company had ever interviewed — they traditionally hire only from prestigious universities — and he couldn’t believe I wrote my first line of code the summer before. I did a little dance in my room.
+The interviewer said I may have been the first bootcamp grad the company had ever interviewed — they traditionally hire only from prestigious universities — and he couldn’t believe I wrote my first line of code the summer before. I did a little dance in my room.面试官说我是他们面试的第一个编程训练营出身的人---他们之前只从名校招人---并且他们一点都不相信我从去年夏天才开始写代码。我开心地甚至在房间里跳了几步舞。
 
-The next week, JP Morgan Chase called and offered me $110K/year, with no equity or bonus. I didn’t think it was a cultural fit, and I wasn’t yet at my $120K/year target, but I was thrilled to have my first official offer. Someone was going to pay me to code!
+The next week, JP Morgan Chase called and offered me $110K/year, with no equity or bonus. I didn’t think it was a cultural fit, and I wasn’t yet at my $120K/year target, but I was thrilled to have my first official offer. Someone was going to pay me to code!过了一周，摩根大通打电话给我，说要录用我，年薪11万美金，不包含股票和奖金。但我觉得我不太适应摩根大通的企业文化，而且这个薪资距离我12万年薪的目标还有差距。但因为这是我的第一个正式offer，我还是特别激动，终于有人雇我写代码了！
 
-I started to handle several calls per day from phone interviewers, recruiters, and advisors, and the often unpredictable ups-and-downs continued. Google called and said on-site results were mixed but I’d be moving to Hiring Committee. Uber offered an on-site. I thought I performed strongly on an Amazon phone screen but didn’t get an on-site. And I thought I blew a Yelp phone screen and got an on-site.
+I started to handle several calls per day from phone interviewers, recruiters, and advisors, and the often unpredictable ups-and-downs continued. Google called and said on-site results were mixed but I’d be moving to Hiring Committee. Uber offered an on-site. I thought I performed strongly on an Amazon phone screen but didn’t get an on-site. And I thought I blew a Yelp phone screen and got an on-site.我开始一天应付来自面试官、招聘人员和各个顾问的数个电话，结果仍然是有好有坏。谷歌打电话说面试结果仍不明朗，可以去招聘委员会询问；Uber给了我面试机会；我觉得电话面试亚马逊时表现很强金，但我没有拿到面试机会；我觉得我搞砸了Yelp的电话面试，但我却拿到了面试机会。
 
-As on-sites came and went, I had to watch my words around recruiters. The security startup said they were afraid they wouldn’t be able to keep up with big companies like IBM and JP Morgan Chase and asked what salary offers I had received.
+As on-sites came and went, I had to watch my words around recruiters. The security startup said they were afraid they wouldn’t be able to keep up with big companies like IBM and JP Morgan Chase and asked what salary offers I had received.在一场场的面试中，我非常注意我面对招聘人员时的措辞。那家安全创业公司说他们担心没有办法给出像IBM和摩根大通一样的薪水，问我拿到的offer开出的薪水是多少。
 
-I almost bit the bait, but paused and  [deflected the salary question][24]  as Hack Reactor instructs.  _“_I’d actually like to go the other way – can you tell me your range and I’ll tell you if you’re in the ballpark?” I said. “Sure, we start at $125K.”
+I almost bit the bait, but paused and  [deflected the salary question][24]  as Hack Reactor instructs.  _“_I’d actually like to go the other way – can you tell me your range and I’ll tell you if you’re in the ballpark?” I said. “Sure, we start at $125K.”我几乎都要上钩了，但我停下来想了想之前黑客反应堆训练营指导过的关于薪水问题的回答方式，于是我说：“其实我觉得不如这样---您告诉我您打算开多少薪资，我看看在不在我的理想范围之内。”“当然可以，我们的薪资起薪是12.5万。”
 
-$125K. That exceeded my goal!
+$125K. That exceeded my goal!12.5万美元！这个数字超出了我的目标！
 
-I looked away hoping to disguise my excitement by making it look like I was thinking about it. I turned back and said calmly,  _“_If that’s your starting point, I think we can have a conversation.” He responded: “Oh good, I’m relieved we’re still in the running!” _Me too,_  I thought.
+I looked away hoping to disguise my excitement by making it look like I was thinking about it. I turned back and said calmly,  _“_If that’s your starting point, I think we can have a conversation.” He responded: “Oh good, I’m relieved we’re still in the running!” _Me too,_  I thought.我望向别处来掩盖我激动的心情，装作正在思考。然后我扭过头，镇定地说：“如果这样的话，我想我们可以进一步谈谈。”招聘人员说：“那好，只要还能谈我就放心了。”我也是，我在心里默默想到。
 
-The formal offer was in a few days later: $125K plus $6K/annual in stock options at current valuation. But the money was almost insignificant! It was a good cultural fit, a fascinating back end role, and mentorship opportunities looked unusually strong. The team of ~40 engineers all had at least two years’ experience and were mostly from top schools like MIT, Stanford, or Berkeley. It was everything I wanted!
+The formal offer was in a few days later: $125K plus $6K/annual in stock options at current valuation. But the money was almost insignificant! It was a good cultural fit, a fascinating back end role, and mentorship opportunities looked unusually strong. The team of ~40 engineers all had at least two years’ experience and were mostly from top schools like MIT, Stanford, or Berkeley. It was everything I wanted!几天后我拿到正式offer：年薪12.5万美元，外加每年当年市值的6000美元的股票期权。但是这些钱根本不重要。我特别中意公司的企业文化，职位也是非常有吸引力的后端开发，还有绝佳的指导机会。团队中40个工程师至少都有两年的工作经验，大部分都来自像麻省理工、斯坦福或者伯克利之类的顶尖名校。这些跟我憧憬的工作都十分契合！
 
-But the offers were just getting started.
+But the offers were just getting started.但这一切，才刚刚开始。
 
 ## Negotiating across offers and selecting a company
 

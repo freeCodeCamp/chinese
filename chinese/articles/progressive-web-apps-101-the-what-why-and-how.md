@@ -3,7 +3,7 @@
 > * 译者：
 > * 校对者：
 
-本文需要和 issue#68 同时认领喔
+
 
 ![Progressive Web Apps 101: the What, Why and How](https://cdn-media-1.freecodecamp.org/images/1*2tyNWs0uYC0q-gwyWj8BTw.jpeg)
 

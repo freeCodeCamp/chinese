@@ -7,33 +7,33 @@
 
 ![About freeCodeCamp - Frequently Asked Questions](https://www.freecodecamp.org/news/content/images/size/w2000/2019/06/freecodecamp-conference-photo.jpeg)
 
-### freeCodeCamp是什么?
+### freeCodeCamp 是什么？
 
-We’re a nonprofit community that helps you learn to code by building projects.
+我们是一个非营利性社区，在这里你可以通过构建项目的方式来学习编程。
 
-### How can you help me learn to code?
+### 它是如何帮助我学习编程的呢？
 
-You'll learn to code by completing coding challenges and building projects. You'll also earn verified certifications along the way.
+你将通过完成编程挑战和构建项目来学习编程，在此过程中你还将获得认证证书。 
 
-### Is freeCodeCamp really free?
+### freeCodeCamp 是免费的吗？
 
-Yes. Every aspect of freeCodeCamp is 100% free.
+当然，完全免费。
 
-### Can freeCodeCamp help me get a job as a software developer?
+### freeCodeCamp 能帮助我找到软件开发的工作吗？
 
-Yes. Every year, thousands of people who join the freeCodeCamp community get their first software developer job. If you're curious, you can  [**browse our alumni network on LinkedIn here**][1].
+当然可以。每年都有数千名加入 freeCodeCamp 社区的朋友找到自己的第一份软件开发工作。如果你对此感兴趣，可以 [**在 Linkedln  上浏览我们的校友网络**][1].
 
-### How big is the freeCodeCamp community?
+### freeCodeCamp 社区有多大规模？
 
-If you add up all the people who use our learning platform, read our  [**news articles**][2], watch our  [**YouTube channel**][3], and post on  [**our forum**][4], each month we help millions of people learn about coding and technology.
+如果你把所有使用我们学习平台，阅读我们[**新闻文章**][2]，观看我们 [**YouTube 频道**][3]，以及活跃在 [**我们的论坛**][4]上的朋友都加起来，我们每个月能帮助数百万人学习编程和技术。
 
-### Is freeCodeCamp a nonprofit?
+### freeCodeCamp 是非营利性社区组织吗?
 
-Yes, we are a 501(c)(3)  [**donor-supported public charity**][5]. You can  [**download our IRS Determination Letter here**][6].
+是的。我们是501(c)(3) [**捐助者支持的公共慈善组织**][5]。你可以[**在此下载我们的国税局裁定书**][6]。
 
-### Does freeCodeCamp accept donations in Bitcoin or other crypto currencies?
+### freeCodeCamp 是否接受比特币或其他加密货币的捐助？
 
-Yes. Our cryptographically signed wallet details are  **[here][7]**.
+接受。你可以在 **[此处][7]** 查看我们加密的签名钱包的详细信息。
 
 ### How long will it take me to finish each of freeCodeCamp's certifications?
 

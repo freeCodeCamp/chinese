@@ -395,6 +395,28 @@ const wait = () => new Promise((resolve, reject) => {  setTimeout(resolve, 1000)
 wait().then(() => {  console.log('I promised to run after 1s')  return wait()}).then(() => console.log('I promised to run after 2s'))
 ```
 
+#### Promises
+
+Promises使我们可以避免著名的“回调地狱”，虽然也仍然存在着引入较高复杂度的问题(这一点在ES2017中随着`async`的引入得到了解决)。
+
+在ES2015出现之前，Promises已经被JavaScript开发者们广泛地使用，但不同的类库(例如jQuery, q, deferred.js, vow...)对此有着不同的实现。新的标准通过博取众家之所长实现了这个功能。
+
+通过使用Promises，你可以将如下代码
+
+```JavaScript
+setTimeout(function() {  console.log('I promised to run after 1s')  setTimeout(function() {    console.log('I promised to run after 2s')  }, 1000)}, 1000)
+```
+
+重写为
+
+```JavaScript
+const wait = () => new Promise((resolve, reject) => {  setTimeout(resolve, 1000)})
+```
+
+```
+wait().then(() => {  console.log('I promised to run after 1s')  return wait()}).then(() => console.log('I promised to run after 2s'))
+```
+
 #### Generators
 
 Generators are a special kind of function with the ability to pause themselves, and resume later, allowing other code to run in the meantime.

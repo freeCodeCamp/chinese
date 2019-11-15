@@ -490,6 +490,79 @@ and in return we get
 
 As the iteration is done (no more  `yield`  keywords found), we just return  `(input * doubleThat * another)`  which amounts to  `10 * 14 * 100`.
 
+#### 生成器
+生成器是一种可以暂停自身的运行，并允许其他代码在这段时间运行，然后在之后继续从暂停的地方运行的特殊的函数。
+
+使用生成器的代码可以在需要等待的时候停下来进行等待，在这段时间其他的“在队列中”的代码可以运行，但是它保留当“等待的部分已经完成”时继续运行接下来的代码的权利。
+
+所有这些功能都是借助于一个简单的关键词`yield`。当一个生成器包含这个关键词时，会暂停运行代码。
+
+一个生成器函数可以包含多个`yield`关键词，这样就会多次暂停。同时生成器函数使用`*function`关键词来进行识别。请不要把这个关键词和C, C++或者Go这些底层语言中的指针弄混。
+
+生成器使得两种全新的JavaScript编程范式成为可能:
+
+- 当生成器运行时进行生成器函数与外部代码的双向交流
+- 不会冻结你的代码的超长生命周期的while循环
+
+下面是一个可以解释生成器原理的例子。
+
+```
+function *calculator(input) {    var doubleThat = 2 * (yield (input / 2))    var another = yield (doubleThat)    return (input * doubleThat * another)}
+```
+
+我们用如下代码进行初始调用:
+
+```
+const calc = calculator(10)
+```
+
+然后我们就可以开始对我们的生成器进行迭代了:
+
+```
+calc.next()
+```
+
+这段新的迭代开始运行迭代器。这段代码会返回当前的`this`对象:
+
+```
+{  done: false  value: 5}
+```
+
+实际发生的情况如下: 这段代码开始调用这个函数，并将`input = 10`传入生成器的构造函数。生成器会运行直到代码运行到`yield`，然后生成器就会返回`yield`的内容: `input / 2 = 5`。因此我们会得到5这个返回值，以及一个表示迭代器没有完成的标识(也就是说函数只是暂停了)。
+
+在第二次迭代中我们传入`7`:
+
+```
+calc.next(7)
+```
+
+然后我们就会得到:
+
+```
+{  done: false  value: 14}
+```
+
+`7`会作为`doubleThat`的参数。
+
+> _重点: 你可能会认为`input / 2`才是当前的参数，但这其实是第一个迭代的返回值。我们现在跳过这部分，然后使用新的输入值`7`，然后将它与2相乘。_
+
+然后代码就运行到了第二个yield，这里会返回`doubleThat`的值，也就是`14`。
+
+在下一个也就是最后一个迭代中，我们传入100:
+
+```
+calc.next(100)
+```
+
+我们会得到
+
+```
+{  done: true  value: 14000}
+```
+
+由于迭代已经结束了(没有更多的`yield`关键词了)，我们只需要返回 `(input * doubleThat * another)`也就是`10 * 14 * 100`的值就可以了。
+
+
 #### `let`  and  `const`
 
 `var`  is traditionally  **function scoped**.

@@ -577,6 +577,20 @@ In JavaScript moving forward, you’ll see little to no  `var`  declarations any
 
 `const`  in particular, maybe surprisingly, is  **very widely used**  nowadays with immutability being very popular.
 
+#### `let`和`const`
+
+`var`的作用域是传统的**函数作用域**。
+
+`let`是一个全新的用于声明变量的关键词，它的作用域是**模块作用域**。
+
+这意味着当你使用`let`来声明一个变量时，如果它位于一个循环，条件或者一个模块(大括号中)时，这个变量不会"逃出"这个模块，而使用`var`的话会将变量上升到整个函数的作用域中。
+
+`const`是不可更改的`let`。
+
+随着JavaScript的发展，你将逐渐看到`var`声明的变量不断减少并消失，只剩下`let`和`const`。
+
+可能会让你感到意外的是，随着不可修改性被越来越多的应用，`const`被**广泛应用**于现实的代码中。
+
 #### Classes
 
 Traditionally JavaScript was the only mainstream language with prototype-based inheritance. Programmers switching to JavaScript from class-based languages found it puzzling, but ES2015 introduced classes, which are just syntactic sugar over the inner working of JavaScript, but change how we build JavaScript programs.
@@ -603,13 +617,46 @@ The above program prints “_Hello, I am Tom Cruise. I am an actor._”
 
 Classes do not have explicit class variable declarations, but you must initialize any variable in the constructor.
 
+#### 类
+传统上，JavaScript是唯一一个使用原型链继承的主流语言。从类继承语言转过来的程序员们经常会对此感到困惑，但是ES2015引入了类。这只是一个基于JavaScript原有语法实现的语法糖，但这改变了我们构建JavaScript程序的方式。
+
+现在，JavaScript中的继承变得非常简单，而且也与其他的面向对象语言更加相似:
+
+```
+class Person {  constructor(name) {    this.name = name  }
+```
+
+```
+  hello() {    return 'Hello, I am ' + this.name + '.'  }}
+```
+
+```
+class Actor extends Person {  hello() {    return super.hello() + ' I am an actor.'  }}
+```
+
+```
+var tomCruise = new Actor('Tom Cruise')tomCruise.hello()
+```
+
+这段程序会打印出"_Hello, I am Tom Cruise. I am an actor._"。
+
+类中并没有显示的类变量声明，但你需要在构造函数中初始化所有的变量。
+
 #### Constructor
 
 Classes have a special method called  `constructor`  which is called when a class is initialized via  `new`.
 
+#### 构造器
+
+类中有一个特殊的`constructor`方法，程序在使用`new`关键词初始化类时会调用这个构造器方法。
+
 #### Super
 
 The parent class can be referenced using  `super()`.
+
+#### Super
+
+子类可以通过使用`super()`来调用父类。
 
 #### Getters and setters
 
@@ -624,6 +671,21 @@ Setters are written in the same way:
 ```
 class Person {  set age(years) {    this.theAge = years  }}
 ```
+
+#### Getters和setters
+
+我们可以用如下方法定义一个属性的getter
+```
+class Person {  get fullName() {    return `${this.firstName} ${this.lastName}`  }}
+```
+
+也可以用同样的方式定义setter
+
+
+```
+class Person {  set age(years) {    this.theAge = years  }}
+```
+
 
 #### Modules
 

@@ -88,31 +88,31 @@
 align-items: stretch
 ```
 
-Let’s change that:
+我们可以改成这样：
 
 ```
 .gallery {  ...  align-items: flex-start}
 ```
 
-This will keep the images from stretching. They’ll assume their default  `width`  and  `height` values.
+这样图片不会拉伸，而是保持他们默认的宽和高。
 
-They will also align to the start of the vertical axis as seen below:
+如下所示，他们会在纵向保持首部对齐。
 
 ![](https://cdn-media-1.freecodecamp.org/images/02VgeT3SyoxuWFwkqyD1pzEjFzUjMH160mn0)
 
-Now we have images that aren’t distorted. This is pretty much where we began before introducing Flexbox.
+现在图片都是没有扭曲展示，这也很像我们在使用Flexbox之前的效果。
 
-Now we have our Flexbox powered gallery.
+Now we have our Flexbox powered gallery.现在我们就要开始用Flexbox来强大图片集。
 
-#### The Advantage of Using Flexbox
+#### 使用Flexbox的优点
 
-At this point there’s not much advantage to using Flexbox. We have the same look we had before initiating the  **Flexbox**  model.
+此刻Flexbox似乎没展现出什么优势，图片还是像使用  **Flexbox**  之前一样。
 
-Apart from getting a responsive gallery for free, the other advantages of using Flexbox come from the alignment options it brings.
+除了能得到一个免费的响应式图片集外，使用Flexbox的另一个优势就是他带来的对齐选项。
 
-Remember that the flex container,  `.gallery`  assumes the following property values.`flex-direction: row`  `justify-content: flex-start`  and  `align-items: flex-start.`
+还记得flex容器  `.gallery`  设定的样式`flex-direction: row`  `justify-content: flex-start`  和  `align-items: flex-start.`
 
-The layout of the gallery can be switched in an instant by toying with the default values as shown below:
+如下所示，改变默认值，我们就可以立马改变图片库的布局。
 
 ```
 .gallery {   ...   justify-content:center;}
@@ -120,9 +120,9 @@ The layout of the gallery can be switched in an instant by toying with the defau
 
 ![](https://cdn-media-1.freecodecamp.org/images/etSBjIv9EwausQZC8PCe3tdHj0JovaLXkNvs)
 
-The images are now perfectly centered along the horizontal.
+图片在水平上完美居中。
 
-As seen in the image above, this will align the images to the center, along the horizontal:
+如上所示，这会让图片水平居中。
 
 ```
 .gallery {   ...   justify-content:center;   align-items: center;}
@@ -130,31 +130,31 @@ As seen in the image above, this will align the images to the center, along the 
 
 ![](https://cdn-media-1.freecodecamp.org/images/jSx35Bma2fYhAISiEg0B3TcZanxoy0hPOb8D)
 
-Taking steps further, we have the images perfectly aligned to the center (horizontally and vertically)
+再进一步，我们可以让图片完美水平对齐（无论是水平还是垂直）
 
-As seen in the image above, this align the images both horizontally and vertically to the center of  `.gallery`
+如上所示，这可以让图片在  `.gallery` 内水平和垂直都居中。
 
-With Flexbox comes a lot of alignment options. Feel free to toy with some more alignment options as you deem fit.
+你可以通过Flexbox的布局方式随意选择你想要的对齐选项。
 
-You may view the actual Flexbox gallery in this  [CodePen][4].
+你可以通过  [CodePen][4]查看Flexbox图片库的实时布局效果。
 
-### Example 2: How to Build Cards with Flexbox
+### 例2：如何通过Flexbox布局卡片 
 
-Cards have become popular on the internet. Google, Twitter, Pinterest, and it seems, everyone else is moving to cards.
+卡片在网上很流行，无论是Google, Twitter 还是 Pinterest，每个网站都在使用卡片。
 
-A Card is a UI design pattern that groups related information in a flexible-size container. It visually resembles a playing card.
+卡片是一种在大小可变容器内组合相关信息的页面设计方式，视觉上很像一种玩的卡片。
 
-There are many good uses for cards. A common one is the infamous pricing grid.
+使用卡片有很多好的地方，其中一个常用的就是臭名昭著的价格表。
 
 ![](https://cdn-media-1.freecodecamp.org/images/wjb-g2V7hV6IvRbGaDHYmAePhTjwR5ZeekkX)
 
-sample pricing grid mockup
+价格表模型
 
-Let’s build one.
+让我们来建一个。
 
-#### The Markup
+#### 标记
 
-Each card will assume a markup like below:
+我们给每个卡片设定一个如下的标记：
 
 ```
 <section class="card">  <header>  </header>

@@ -1,6 +1,6 @@
 > * 原文地址：[How I went from stay-at-home-mum to landing my first web developer job](https://www.freecodecamp.org/news/how-i-went-from-stay-at-home-mum-to-landing-my-first-web-developer-job/)
 > * 原文作者：Phoebe Voong-Fadel
-> * 译者：
+> * 译者：luyc
 > * 校对者：
 
 ![How I went from stay-at-home-mum to landing my first web developer job](https://www.freecodecamp.org/news/content/images/size/w2000/2019/10/phoebe2.jpg)

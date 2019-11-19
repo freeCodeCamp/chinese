@@ -713,6 +713,31 @@ You can write modules and export anything to other modules using the  `export`ke
 export var foo = 2export function bar() { /* ... */ }
 ```
 
+#### 模块
+
+在ES2015出现之前，至少有三种互相竞争的模块化标准，这造成了JavaScript社区的割裂:
+
+- AMD
+- RequireJS
+- CommonJS
+
+ES2015为模块化带来了标准的形式。
+
+#### 导入模块
+
+模块的导入通过`import ... from ...` 这个结构:
+
+```
+import * from 'mymodule'import React from 'react'import { React, Component } from 'react'import React as MyLibrary from 'react'
+```
+
+#### 导出模块
+
+你可以编写模块并且通过`export`关键词导出:
+```
+export var foo = 2export function bar() { /* ... */ }
+```
+
 #### Template Literals
 
 Template literals are a new syntax to create strings:
@@ -749,9 +774,53 @@ Compare how we used to do multiline strings pre-ES2015:
 var str = 'One\n' +'Two\n' +'Three'
 ```
 
+#### 模板字符串
+
+模板字符串是一种新的创建字符串的方式:
+
+```
+const aString = `A string`
+```
+
+通过使用`${a_variable}`，提供了一种把表达式嵌入字符串中，高效地在字符串中插入值得语法:
+
+```
+const var = 'test'const string = `something ${var}` //something test
+```
+
+你可以使用更加复杂的表达式:
+
+```
+const string = `something ${1 + 2 + 3}`const string2 = `something ${foo() ? 'x' : 'y' }`
+```
+
+同时字符串可以换行:
+
+```
+const string3 = `Heythis
+```
+
+```
+stringis awesome!`
+```
+
+作为比较，在ES2015之前的版本，我们需要如下方法使用多行字符串:
+
+```
+var str = 'One\n' +'Two\n' +'Three'
+```
+
 #### Default parameters
 
 Functions now support default parameters:
+
+```
+const foo = function(index = 0, testing = true) { /* ... */ }foo()
+```
+
+#### 默认参数
+
+函数现在支持默认参数:
 
 ```
 const foo = function(index = 0, testing = true) { /* ... */ }foo()

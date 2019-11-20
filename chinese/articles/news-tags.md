@@ -702,7 +702,7 @@
 | https://www.freecodecamp.org/news/tag/libraries | 库 |
 | https://www.freecodecamp.org/news/tag/sanic | sanic |
 | https://www.freecodecamp.org/news/tag/a-frame | a-frame |
-| //www.freecodecamp.org/news/tag/future                       | 未来 |
+| //www.freecodecamp.org/news/tag/future | 未来 |
 | https://www.freecodecamp.org/news/tag/computer-network | 计算机网络 |
 | https://www.freecodecamp.org/news/tag/nintendo | 任天堂 |
 | https://www.freecodecamp.org/news/tag/ionic | ionic |
@@ -1109,7 +1109,7 @@
 | https://www.freecodecamp.org/news/tag/user-experience | 用户体验 |
 | https://www.freecodecamp.org/news/tag/onboarding | 用户入职 |
 | https://www.freecodecamp.org/news/tag/trees | 树 |
-| https://www.freecodecamp.org/news/tag/lego                    | 乐高 |
+| https://www.freecodecamp.org/news/tag/lego | 乐高 |
 | https://www.freecodecamp.org/news/tag/blazor | blazor |
 | https://www.freecodecamp.org/news/tag/lessons-learned | 经验教训 |
 | https://www.freecodecamp.org/news/tag/recruiting | 招聘 |

@@ -122,7 +122,7 @@ When it was all over, I had applied to 44 companies with 41 referrals and receiv
 
 > **"Learning is not attained by chance, it must be sought for with ardor and attended to with diligence." ―Abigail Adams** 学习不是偶然获得的，必须用热爱去追求，用勤奋去对待。---阿比盖尔*亚当斯
 
-My first weeks of job searching were the toughest. I landed only a handful of coding challenges and an interview with IBM Artificial Intelligence throughout all of December.最刚开始找工作的几周是最艰难的。十二月一整月，我只拿到了几个编程测试，只面试了IBM人工智能这一家。
+My first weeks of job searching were the toughest. I landed only a handful of coding challenges and an interview with IBM Artificial Intelligence throughout all of December.最刚开始找工作的几周是最艰难的。十二月一整月，我只做了几个编程测试，只拿到了IBM人工智能的面试机会。
 
 Feedback on my first two take-home coding challenges was not encouraging. I went way over time, and was told my code was “neither accurate nor performant.”结业后在家完成的前两个编程测试反馈就不如人意。我花时间修改了一下，被告知我的代码“既不准确又不高性能”。
 
@@ -198,7 +198,7 @@ The interviewer said I may have been the first bootcamp grad the company had eve
 
 The next week, JP Morgan Chase called and offered me $110K/year, with no equity or bonus. I didn’t think it was a cultural fit, and I wasn’t yet at my $120K/year target, but I was thrilled to have my first official offer. Someone was going to pay me to code!过了一周，摩根大通打电话给我，说要录用我，年薪11万美金，不包含股票和奖金。但我觉得我不太适应摩根大通的企业文化，而且这个薪资距离我12万年薪的目标还有差距。但因为这是我的第一个正式offer，我还是特别激动，终于有人雇我写代码了！
 
-I started to handle several calls per day from phone interviewers, recruiters, and advisors, and the often unpredictable ups-and-downs continued. Google called and said on-site results were mixed but I’d be moving to Hiring Committee. Uber offered an on-site. I thought I performed strongly on an Amazon phone screen but didn’t get an on-site. And I thought I blew a Yelp phone screen and got an on-site.我开始一天应付来自面试官、招聘人员和各个顾问的数个电话，结果仍然是有好有坏。谷歌打电话说面试结果仍不明朗，可以去招聘委员会询问；Uber给了我面试机会；我觉得电话面试亚马逊时表现很强金，但我没有拿到面试机会；我觉得我搞砸了Yelp的电话面试，但我却拿到了面试机会。
+I started to handle several calls per day from phone interviewers, recruiters, and advisors, and the often unpredictable ups-and-downs continued. Google called and said on-site results were mixed but I’d be moving to Hiring Committee. Uber offered an on-site. I thought I performed strongly on an Amazon phone screen but didn’t get an on-site. And I thought I blew a Yelp phone screen and got an on-site.我开始一天应付来自面试官、招聘人员和各个顾问的数个电话，结果仍然是有好有坏。谷歌打电话说面试结果仍不明朗，可以去招聘委员会询问；Uber给了我面试机会；我觉得电话面试亚马逊时表现很强劲，但我没有拿到面试机会；我觉得我搞砸了Yelp的电话面试，但我却拿到了面试机会。
 
 As on-sites came and went, I had to watch my words around recruiters. The security startup said they were afraid they wouldn’t be able to keep up with big companies like IBM and JP Morgan Chase and asked what salary offers I had received.在一场场的面试中，我非常注意我面对招聘人员时的措辞。那家安全创业公司说他们担心没有办法给出像IBM和摩根大通一样的薪水，问我拿到的offer开出的薪水是多少。
 
@@ -212,71 +212,71 @@ The formal offer was in a few days later: $125K plus $6K/annual in stock options
 
 But the offers were just getting started.但这一切，才刚刚开始。
 
-## Negotiating across offers and selecting a company
+## Negotiating across offers and selecting a company offer三千，只取一瓢
 
-> **"Effective negotiators look past their counterparts’ stated positions and delve into their underlying motivations... they are relentlessly curious." –Chris Voss**
+> **"Effective negotiators look past their counterparts’ stated positions and delve into their underlying motivations... they are relentlessly curious." –Chris Voss**高效的谈判者会仔细比较自己收到的所有offer，细细思考自己深层次动力来源……他们拥有无穷的好奇心。-克里斯*沃斯
 
-Rubrik called two days later and shocked me. They wanted me to be their first-ever bootcamp hire too. Rubrik was already valued at $3.3B — a hot new unicorn and coveted place to work by software engineers with plenty of experience. I laughed with the recruiter, overjoyed such a competitive company wanted me, and hung up so excited I almost didn’t realize I had a missed call from Google.
+Rubrik called two days later and shocked me. They wanted me to be their first-ever bootcamp hire too. Rubrik was already valued at $3.3B — a hot new unicorn and coveted place to work by software engineers with plenty of experience. I laughed with the recruiter, overjoyed such a competitive company wanted me, and hung up so excited I almost didn’t realize I had a missed call from Google.两天后Rubrik给我回了电话，我无比惊讶。我也将会是他们雇佣第一个从编程训练营毕业的员工。Rubrik市值早已达到33亿美元，现在是一家炙手可热的新型独角兽公司，还可以和经验丰富的软件工程师一起共事，工作环境让人心动。我回复招聘人员说要考虑一下，其实心里早已乐开了花：这么有竞争力的公司也想要我！挂断电话以后我仍然十分激动，差点忘记自己漏接了Google的电话。
 
 I dialed back with bated breath. The recruiter got right to it: “I just got out of Hiring Committee and wanted to call you right away. We’d like to make you an offer — ”
-
+我深呼吸几下，把电话回拨了过去。招聘人员倒是开门见山：“根据招聘委员会的通知，很开心地通知您被Google录用了。我们开出的薪酬是---”
 I couldn’t contain myself. I yelled, jumping into my empty kitchen. Google! The gold standard of software engineering and my hardest interviewer had decided they wanted me! Then she mentioned numbers and things got surreal. $163K all-in: $120 base salary, $18K minimum bonus, and $25K annual in (liquid) equity.
+我完全控制不住自己的尖叫声，蹦蹦跳跳进了厨房！天哪！Google！那家软件工程行业的标杆公司！他们的面试官是我整个面试经历中我遇见过的最严厉的！他们决定要我了！之后招聘人员告诉了我公司开出的薪酬，事情变得更加不真实了。年薪16.3万美元，包括：基础工资12万，奖金最低1.8万，每年公司股票2.5万。
+$163K.16.3万美元。
 
-$163K.
+_Are you out of your mind?_  I thought. My last tax return declared $77K.  _That is a stupid amount of money._看着自己最近报税单上的7.7万美元，我竟然觉得这笔钱不值一提。我对自己说：你疯了吗？
 
-_Are you out of your mind?_  I thought. My last tax return declared $77K.  _That is a stupid amount of money._
+I took the afternoon off and walked around my neighborhood dancing when I thought nobody was looking and calling family members to share the unbelievable news.我给自己放了一下午的假，想着应该没人看到，便在房子周围抑制不住兴奋地跳来跳去。也给家人打了电话分享这个天大的好消息。
 
-I took the afternoon off and walked around my neighborhood dancing when I thought nobody was looking and calling family members to share the unbelievable news.
+The next morning, I was back to the grind, studying negotiation instead of algorithms. Overnight, the recruiters that had shepherded me through interviews became my counterparts in negotiations. I felt like a lone sheep amidst a pack of wolves – these were professionals and numbers could swing tens of thousands of dollars in conversations that lasted minutes.第二天上午，我又回归到辛苦学习当中。只不过这次不是学习算法，而是学习如何谈判。一夜之间，那些在面试过程中指导我的面试官成为了我在谈判中的对手。我觉得自己就像在狼群中求生存的一只羔羊---周围都是专家大佬，几分钟的谈话之间就可能决定我的薪酬能不能多几千美元。
 
-The next morning, I was back to the grind, studying negotiation instead of algorithms. Overnight, the recruiters that had shepherded me through interviews became my counterparts in negotiations. I felt like a lone sheep amidst a pack of wolves – these were professionals and numbers could swing tens of thousands of dollars in conversations that lasted minutes.
-
-Initially I feared coming across as greedy, but my Hack Reactor career coach was adamant. She said it was expected, and money aside, it demonstrates thoughtfulness, confidence in difficult conversations, and sets expectations for the first weeks on the job.
+Initially I feared coming across as greedy, but my Hack Reactor career coach was adamant. She said it was expected, and money aside, it demonstrates thoughtfulness, confidence in difficult conversations, and sets expectations for the first weeks on the job.刚开始我很害怕这样做会让自己显得比较贪婪，但黑客反应堆的教练态度特别坚定。她说这特别正常，谈判不仅仅是为了更高的薪酬。在谈判过程中，一个人有没有认真思考，是否自信都可以在谈判过程中得到显现。同时也会让老板对你刚进入公司时的工作有所期待。
 
 ![](https://lh3.googleusercontent.com/gT6Afyw5jf5cB6k4gwFw21zgiYoM6-Hq66p74auEbpE6oUZJfnXUTYT4e_WteWKoEfcWDP5Lb9snCN7yLYXcgm_O2E19TL_bXk-LA6CK8glKZ_-TfVnGebvXWmibh6M3Y9IAgR0F)
 
-I saw almost a 90% increase in compensation by waiting and passing on my first offer
+I saw almost a 90% increase in compensation by waiting and passing on my first offer我发现基本90%的工资上涨都是因为有我第一份工作开出薪酬的比较。
 
-The next few days flew by in a flurry of phone calls with recruiters and advisors, studying, preparing, and conducting post-mortems on negotiations. I wrote one-pagers anticipating every negotiation and conducted post-mortems on what went well and what did not, similar to how I reflected on failed interviews.
+The next few days flew by in a flurry of phone calls with recruiters and advisors, studying, preparing, and conducting post-mortems on negotiations. I wrote one-pagers anticipating every negotiation and conducted post-mortems on what went well and what did not, similar to how I reflected on failed interviews.接下来的几天，都在跟招聘人员和顾问电话沟通中度过，不断学习为谈判做准备，也在谈判后及时复盘吸取经验。我把希望在谈判中呈现出的内容写在了一页纸上，每次谈判过后也会反思哪部分进行得好，哪部分有待提升，就像我之前复盘面试失败教训一样。
 
-I learned to love it. Each conversation was a fascinating puzzle, with layers ranging from high-level strategy, like when and how I shared information, to moment-to-moment tactics, like my tone of voice. It was especially fun to have so many at-bats – I would sometimes talk to multiple recruiters in a single day, each phone call doubling as another opportunity to try out new skills and learn from mistakes.
+I learned to love it. Each conversation was a fascinating puzzle, with layers ranging from high-level strategy, like when and how I shared information, to moment-to-moment tactics, like my tone of voice. It was especially fun to have so many at-bats – I would sometimes talk to multiple recruiters in a single day, each phone call doubling as another opportunity to try out new skills and learn from mistakes.我学着去爱上这个过程。每次谈判中都会出现不同的令人着迷同时也令人困惑的问题，涉及层面多样，例如高水平策略方面：我分享信息的时间和方式；例如当下策略方面：我应该用什么样的语气。能解决这么多的问题非常有趣。有时我能在一天当中跟数个招聘人员聊天，每次电话沟通既能让我练习新学到的谈判技巧，同时也能让我重新积累教训。
 
-I had read Harvard Negotiation Project’s  _Getting to the Yes_ and  _Getting Past the No_  in college and was familiar with concepts like BATNA and win-win solutions. But I took most of my inspiration from Chris Voss’s  _Never Split the Difference_, which I re-read immediately after Google’s offer.
+I had read Harvard Negotiation Project’s  _Getting to the Yes_ and  _Getting Past the No_  in college and was familiar with concepts like BATNA and win-win solutions. But I took most of my inspiration from Chris Voss’s  _Never Split the Difference_, which I re-read immediately after Google’s offer.读大学时我就读完了哈佛大学谈判项目的两本书：《谋求共识》（getting to the yes）和《克服分歧》（getting past the no），对谈判协议最佳替代方案（BATNA）和双赢解决方案之类的概念非常熟悉。但我还是从克里斯*沃斯的《掌控谈话》（never split the difference）中获得的灵感最多。拿到Google的offer以后我又把这本书读了一遍。
 
-I also scoured blog posts by  [Haseeb Qureshi][25], another earn-to-give bootcamp graduate, and chatted regularly with my Hack Reactor career coach who had advised hundreds of negotiations before mine.
+I also scoured blog posts by  [Haseeb Qureshi][25], another earn-to-give bootcamp graduate, and chatted regularly with my Hack Reactor career coach who had advised hundreds of negotiations before mine.另外，我还阅读了哈西卜*库雷西写的所有博客，他也是训练营毕业，把赚来的钱都贡献了出去。我也会时常跟训练营的职业教练沟通，在我之前，她有着成百上千的谈判指导经验。
 
-Rubrik’s first offer came in at $163K, matching Google perfectly. Then Yelp called with the latest plot twist. They “leveled-up” my application to a non-entry level role and offered me $160K plus a $20K sign-on bonus for $180K all-in first-year compensation.
+Rubrik’s first offer came in at $163K, matching Google perfectly. Then Yelp called with the latest plot twist. They “leveled-up” my application to a non-entry level role and offered me $160K plus a $20K sign-on bonus for $180K all-in first-year compensation.Rubrik刚开始薪酬报价是16.3万美元，跟Google不相上下。之后，Yelp打电话过来，上演了剧情大逆转。他们把我申请的职位提升到一个非初级岗，然后给我开出了16万美元的年薪，另外还有2万美元的入职奖金---第一年总共18万美元。
 
-$180K and a non-entry level role?
+$180K and a non-entry level role?18万美元和非初级岗。怎么样？
 
-I put on my very best performance at my Yelp interview — finishing every challenge with time to spare, adapting code seamlessly to meet new constraints, and making remarks about systems architecture using back-of-the-envelope calculations that seemed to surprise my interviewer. But that didn’t change the fact I had zero experience! Google and Rubrik immediately said they’d prepare a counter offer.
+I put on my very best performance at my Yelp interview — finishing every challenge with time to spare, adapting code seamlessly to meet new constraints, and making remarks about systems architecture using back-of-the-envelope calculations that seemed to surprise my interviewer. But that didn’t change the fact I had zero experience! Google and Rubrik immediately said they’d prepare a counter offer.我在Yelp面试中表现出了自己的最好水平---在给定时间内完成了所有任务，为满足新的约束条件重新调整了代码使之无缝衔接，运用保守计算评估了系统架构。面试官甚至都因此感到吃惊。但这些并不能改变我没有任何工作经验的事实。Google和Rubrik马上就回复说他们会调整薪水。
 
-Finally the job search climaxed.
+Finally the job search climaxed.最终，找工作的最高潮部分来了。
 
-Lyft emailed asking to get on the phone. Lyft was by far my favorite interview experience, but I didn’t believe my on-site performance merited an offer. I conceptually solved one interview almost immediately, but never got my code to work. I pulled off a late comeback in another but failed to submit as time expired. Stretched thin across multiple rounds of daily negotiations, I responded with this exact email:
+Lyft emailed asking to get on the phone. Lyft was by far my favorite interview experience, but I didn’t believe my on-site performance merited an offer. I conceptually solved one interview almost immediately, but never got my code to work. I pulled off a late comeback in another but failed to submit as time expired. Stretched thin across multiple rounds of daily negotiations, I responded with this exact email:Lyft发邮件说要电话沟通。迄今为止，我的面试最好体验就来自Lyft，但我觉得我的面试表现不能让我拿到他们的offer。面试时我几乎是立马就想出了解决方案，但写的代码却始终没有运行出来。后来我又想出一个改进办法，但超时了没有提交成功。每天车轮般的协商工作让我身心俱疲，所以我回复给Lyft的邮件如下：
 
-_“I’m juggling a handful of different calls right now. Do you mind breaking the news by email? I’m guessing it’s a rejection, in which case I would love to get 1-2 sentences of feedback from each interview. Other than that, thank you for your time and shepherding me through the process!”_
+_“I’m juggling a handful of different calls right now. Do you mind breaking the news by email? I’m guessing it’s a rejection, in which case I would love to get 1-2 sentences of feedback from each interview. Other than that, thank you for your time and shepherding me through the process!”_“我现在在和好几家公司沟通。您介不介意用邮件直接通知我结果呢？我大概猜到我应该没有通过面试，但即便这样，我还是想从每次面试中获得一两句评价反馈，麻烦您了。感谢您百忙之中抽出空来对我进行指导。”
 
-She responded with one line:  _“It’s not a rejection :)”_
+She responded with one line:  _“It’s not a rejection :)”_Lyft的回复只有一行：“你通过面试了。”
 
-_What! Would no company reject me?_  I couldn’t believe my top choice was back on the table. We talked numbers the next day: $210K all-in.
+_What! Would no company reject me?_  I couldn’t believe my top choice was back on the table. We talked numbers the next day: $210K all-in.什么？我通过面试了？我简直不敢相信我以为已经没有希望的最中意选择竟然兜兜转转回来了！第二天，我们谈定了薪酬：所有七七八八加起来年薪21万美元。
 
-$210K.
+$210K.21万美元。
 
-And to think that was Lyft, where I would have loved to work, money aside! A couple of my friends at Lyft were some of my favorite people — harder to say if they were kinder than they were brilliant or vice versa — and my interviewers seemed cut from the same cloth.
+And to think that was Lyft, where I would have loved to work, money aside! A couple of my friends at Lyft were some of my favorite people — harder to say if they were kinder than they were brilliant or vice versa — and my interviewers seemed cut from the same cloth.想一想，这可是Lyft！这是我朝思暮想可以工作的公司，工资什么的一点都不重要。几个在Lyft工作的朋友是我最喜欢的其中一部分人---很难说他们的善良程度是不是比聪明程度更高---我的面试官们似乎也如出一辙。
 
-I informed everyone a last minute offer had been made and set a decision deadline for one week, encouraging everyone to make their final offers. I was getting worn down in constant negotiations, I felt a deadline would professionally bound the time everyone was investing in my candidacy, and Voss suggests deadlines can be used to your advantage.
+I informed everyone a last minute offer had been made and set a decision deadline for one week, encouraging everyone to make their final offers. I was getting worn down in constant negotiations, I felt a deadline would professionally bound the time everyone was investing in my candidacy, and Voss suggests deadlines can be used to your advantage.和Lyft确定薪酬后，我告知了每个正在沟通的公司，并且告诉他们我有最后一周的考虑时间，想鼓励他们给出最终确定薪酬。持续不断的谈判让我身心俱疲，我认为有截止期限在，可以大大减少每个公司在我身上投入的时间。沃斯也建议说，截止期限可以作为杀手锏使出。
 
-Google had prepared $189K to come in over Yelp, but said it would come back again given news about Lyft. Rubrik agreed to get on the phone. Yelp and and the security startup said they couldn’t negotiate further, and I was no longer keeping JP Morgan Chase or IBM up to speed. Uber, my only other onsite, did not make me an offer.
+Google had prepared $189K to come in over Yelp, but said it would come back again given news about Lyft. Rubrik agreed to get on the phone. Yelp and and the security startup said they couldn’t negotiate further, and  was no longer keeping JP Morgan Chase or IBM up to speed. Uber, my only other onsite, did not make me an offer.Google给出了18.9万美元的薪酬，高于Yelp的报价，并且表示会根据Lyft的报价重新作出调整。Rubrik同意电话沟通。Yelp和那家安全创业公司表示不会继续沟通。我也不打算继续跟进摩根大通和IBM。Uber，虽然给了我面试机会，却并没有给我发offer。
 
-The Lyft team had me for lunch and I swooned. Teams at Google, Yelp, and the security startup were enjoyable, but 9 people took time out of their day to lunch with me at Lyft, laughing as if I were already part of the team. They wanted to staff me on the company’s number one 2019 priority and a senior engineer told me he would happily serve as a mentor. Lyft was also months away from an IPO.
+The Lyft team had me for lunch and I swooned. Teams at Google, Yelp, and the security startup were enjoyable, but 9 people took time out of their day to lunch with me at Lyft, laughing as if I were already part of the team. They wanted to staff me on the company’s number one 2019 priority and a senior engineer told me he would happily serve as a mentor. Lyft was also months away from an IPO.Lyft团队邀我共进午餐，我受宠若惊。不管是Google、Yelp还是安全创业公司的团队都让人特别舒服，但是Lyft团队出了九个人跟我一起吃午饭，气氛十分融洽，笑声不断，好像我早就已经是团队中的一份子。他们说想找我进公司是2019年公司的头等大事。一名高级工程师表示他十分乐意做我的导师。此时距离Lyft首次公开募股的日期，已经没有几个月了。
 
-I had it all: mentorship, opportunity in a high-growth environment, a people-first culture, exciting work, and now outrageously high compensation.
+I had it all: mentorship, opportunity in a high-growth environment, a people-first culture, exciting work, and now outrageously high compensation.在Lyft，我什么都有了：导师指导、快速成长环境、以人为本的企业文化、令人激动的工作以及现在如此之高的薪酬。
 
-Rubrik didn’t counter offer in time, but Google came in at $233K, $216K before their 401(k) match and charity match programs (which I consider good as cash since I  [earn-to-give][26]  and will be donating 25% of my pre-tax income this year). The team was also a good cultural fit, and Google is world-class in developing junior engineers into top talent.
+Rubrik didn’t counter offer in time, but Google came in at $233K, $216K before their 401(k) match and charity match programs (which I consider good as cash since I  [earn-to-give][26]  and will be donating 25% of my pre-tax income this year). The team was also a good cultural fit, and Google is world-class in developing junior engineers into top talent.Rubrik没有及时给出薪酬报价。Google最后的报价是23.3万美元
 
-I grappled with the decision for days, wavering between Google and Lyft, but gradually growing confident that, compensation aside, Lyft was an opportunity I couldn’t pass up. I negotiated a final package of $226 all-in compensation: $135K base salary, $71K in equity at pre-IPO valuation, and $20K sign-on bonus. On Monday, February 25, 245 days after my first line of code, I spoke the two words that brought it all to a close: “I accept.”
+I grappled with the decision for days, wavering between Google and Lyft, but gradually growing confident that, compensation aside, Lyft was an opportunity I couldn’t pass up. I negotiated a final package of $226 all-in compensation: $135K base salary, $71K in equity at pre-IPO valuation, and $20K sign-on bonus. On Monday, February 25, 245 days after my first line of code, I spoke the two words that brought it all to a close: “I accept.”我纠结了数天，在Google和Lyft之间摇摆不定。但慢慢地我越来越相信，抛开薪酬不谈，Lyft绝对是我不能错过的机会。经过最后谈判，Lyft的薪酬定在了22.6万美元，包括13.5万美元的基本工资，IPO之前价值7.1万的股票，和2万美元的入职奖金。2月25号，是个周四。距离我写下我的第一行代码过去245天的时候，我接受了Lyft的offer，作为这一段求职旅程的结束。
 
-Six months later, I couldn’t be happier working at Lyft. And to my delight, my morning reflection was dead on. My team is supportive, my work fascinating, and my compensation strong, but the priceless reward of becoming an engineer was falling in love with learning. Now that I’m in love, I don’t intend to leave it.
+Six months later, I couldn’t be happier working at Lyft. And to my delight, my morning reflection was dead on. My team is supportive, my work fascinating, and my compensation strong, but the priceless reward of becoming an engineer was falling in love with learning. Now that I’m in love, I don’t intend to leave it.在Lyft工作的六个月，是我最开心的工作时光。让我开心的是，我的晨间冥想是一个十分正确的决定。团队互相扶持，工作内容吸引人，薪酬待遇也好。但是就成为一名工程师而言，宝贵之处在于，我爱上了学习。既然我已经为学习痴迷，我就不打算与它分离。
 
 ## [In search of software engineering roles?][27]
 

@@ -731,7 +731,7 @@
 | https://www.freecodecamp.org/news/tag/uber | Uber |
 | https://www.freecodecamp.org/news/tag/sass | SASS |
 | https://www.freecodecamp.org/news/tag/investment | 投资 |
-| https://www.freecodecamp.org/news/tag/discord | Discord |N
+| https://www.freecodecamp.org/news/tag/discord | Discord |
 | https://www.freecodecamp.org/news/tag/node | Node |
 | https://www.freecodecamp.org/news/tag/business-development | 商务拓展 |
 | https://www.freecodecamp.org/news/tag/loopback | 回环 |

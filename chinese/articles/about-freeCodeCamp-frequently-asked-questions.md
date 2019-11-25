@@ -35,17 +35,17 @@
 
 接受。你可以在 **[此处][7]** 查看我们加密的签名钱包的详细信息。
 
-### How long will it take me to finish each of freeCodeCamp's certifications?
+### 获得 freeCodeCamp 的每项认证大概需要多长时间?
 
-Each certification takes around 300 hours of dedicated learning. Some people may take longer. These certifications are completely self-paced, so take as long as you need.
+每项认证大约需要300小时的学习。有些朋友可能需要更长的时间。你完全可以自定步调，无所谓快慢。
 
-### Is freeCodeCamp a coding bootcamp?
+### freeCodeCamp 是一个编程训练营吗?
 
-No. A lot of coding bootcamps use freeCodeCamp as part of their curriculum, though.
+不是。但许多编程训练营都将 freeCodeCamp 用作其课程的一部分。
 
-### Is freeCodeCamp a replacement for a 4-year degree?
+### freeCodeCamp 能否替代四年制学位?
 
-No. Please don’t drop out of college just to pursue freeCodeCamp. You can pursue both concurrently. Even though you don’t need a 4-year degree to work as a software developer, it still helps a lot.
+不能。请不要为了追求 freeCodeCamp 而辍学。你可以同时追求两者。尽管你不需要4年制学位就可以做一个软件开发人员，但它仍然会有很大的帮助。 
 
 ### Should I complete all of the coding challenges in order?
 

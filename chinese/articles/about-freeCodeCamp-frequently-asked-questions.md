@@ -47,17 +47,17 @@
 
 不能。请不要为了追求 freeCodeCamp 而辍学。你可以同时追求两者。尽管你不需要4年制学位就可以做一个软件开发人员，但它仍然会有很大的帮助。 
 
-### Should I complete all of the coding challenges in order?
+### 我应该按顺序完成编程挑战吗？
 
-We’ve put a lot of thought into how we introduce concepts. But you’re free to jump around.
+我们对于如何引入概念作了大量思考。但你仍可以随意跳转。
 
-### Do I have to use CodePen for the front end projects?
+### 对于前端项目一定要使用 CodePen 吗？
 
-As long as your code is publicly viewable somewhere on the internet, and you have a live demo, you can use whatever tools you want.
+只要你的代码可以在网络上可以公开查看，并且可以进行实时演示，你就可以随意选择开发工具。
 
-### How did freeCodeCamp get started?
+### freeCodeCamp 是怎样创立起来的？
 
-[**Quincy**][8]  started the freeCodeCamp community in 2014. He is now just one of thousands of active contributors.
+[**Quincy**][8]  于2014年创立了 freeCodeCamp 社区。如今像他一样的积极贡献者已有数千名。
 
 ### I'm a teacher. Is freeCodeCamp an appropriate resource for my class?
 

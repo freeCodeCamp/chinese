@@ -1,274 +1,273 @@
 > * 原文地址：[The Definitive Guide to Contributing to Open Source](https://www.freecodecamp.org/news/the-definitive-guide-to-contributing-to-open-source-900d5f9f2282/)
 > * 原文作者：Piotr Gaczkowski
-> * 译者：
+> * 译者：[hunterwyld](https://github.com/hunterwyld)
 > * 校对者：
 
 ![The Definitive Guide to Contributing to Open Source](https://cdn-media-1.freecodecamp.org/images/0*2dSjV5OCE6x2jI2W)
 
-I’ll tell you all I know about Open Source. Let’s start with something simple. You know what a product is? A product is something that you can easily consume, such as a burrito at a restaurant. But to create this product, you need to take some steps. At the restaurant, you have a chef who has a recipe for this burrito. They always follow the same recipe and make it from the same ingredients to ensure appropriate quality every time.
+在这篇文章里，我想和你分享我对开源的理解！让我们先从简单的开始。你知道什么是产品吗？你日常轻松购买的某种东西就是产品，比如餐馆里的卷饼。但是要制作这款产品就需要遵循一定的步骤：在餐馆里，懂食谱的厨师熟练地使用相同的配方和相同的成分，确保每份卷饼味道可口。
 
-> Contributing to Open Source can help you get into the tech field, switch your career or improve your current one. All while helping the community!
+> 你不仅可以通过贡献开源来进入某个技术领域，实现职业转型或促进现有职业的发展，还能以此来帮助社区！
 
-At most restaurants, if you went to the chef and asked, “I’m sorry, I love your burrito; could I get the recipe?” they would refuse — this is not Open Source. Open Source is when, in addition to the product, you also have access to all the ingredients and the recipe, meaning you can replicate the whole burrito right at home.
+在大多数餐馆，如果你走进去询问厨师：“我非常喜欢您做的卷饼，可以把制作配方给我吗？”，他们通常都会拒绝——因为配方并非开源。开源就是除了产品本身，你还知晓制作产品的食谱和配方，这就意味着你在家里也可以制作出同样的卷饼。
 
-Now imagine you start making this burrito, but you come to the conclusion that you want to cut down on the meat. So you replace it with avocado. In that case, you take the recipe, exchange the meat for the avocado, follow the rest of the steps to the letter, and check what comes out.
+现在假设你开始制作卷饼了，但你不想吃那么多肉，于是用鳄梨取而代之。在这种情况下，你拿到了食谱并用鳄梨代替了肉，接着完全按照剩下的步骤进行下去，然后看看做出的卷饼是什么样子的。
 
-It may turn out that your dish tastes better than the meal at the restaurant. If the restaurant were run like an Open Source project, you could then go to the chef and say, “Hey, your burrito is great, but I’ve added avocado and now it’s even better! You can add it to your menu.”
+结果可能是你做的卷饼比餐馆里的还要好吃。如果餐馆是以开源项目的形式运作的，你就可以对厨师说："嗨，你的卷饼很好吃，但我加了一些鳄梨之后味道更棒了！可以把这个配方加入到你的食谱中哦。"
 
-The role of the chef is that of product maintainer. They may accept the modifications or they may decide  
-that the avocado is a bad idea and does not fit the concept of the restaurant. Either way, by sharing your modifications to the project, you’ve just become a contributor.
+此时厨师就扮演了产品维护者的角色。他们可能会接受你的建议，也可能认为添加鳄梨是个坏主意，不符合餐馆的理念。无论如何，通过分享对项目的修改，你成为了一名开源贡献者。
 
-Congratulations!
+恭喜你！
 
-#### What Makes a Project?
+#### 开源项目需要哪些要素？
 
 ![](https://cdn-media-1.freecodecamp.org/images/sLLZDyHDbg9D4OQ9g4b2NqF2vJbD6PajLJcZ)
 
-“Burrito” by  [samuelfernandezrivera][1]  on  [Pixabay][2]
+“卷饼” ，来自 [Pixabay][2]，作者 [samuelfernandezrivera][1]
 
-The  [Firefox][3]  browser is an example of an Open Source project. It’s made up of thousands of lines of source code and of instructions on how to turn this source code into a usable product, like a Web browser. This code is available publicly, so everybody can fetch it, read it, audit it, or build it. Each person who wants to modify the behavior of Firefox can make changes to the source code and build a customized version. Furthermore, everyone can send those changes back to the project’s maintainers.
+ [Firefox ][3] 浏览器就是开源项目的一个范例。它是由数千行源代码和如何将此源代码转换为可用产品（如 Web 浏览器）的指令组成。这些代码是公开的，每个人都能获取、阅读、评审或构建它。每个想要修改 Firefox 行为的人都可以更改源代码并构建自定义版本。不仅如此，每个人还可以将自定义的修改回馈给项目维护者。
 
-But there is more to Open Source projects than just the code. We also have a user interface and graphic design. And yes, even terminal programs such as Vim editor have graphical interfaces.
+然而，代码并不是开源项目的全部，还有用户界面和图形设计。没错，即使像Vim这样的终端程序也有自己的图形界面。
 
-> _You don’t need to code to contribute to Open Source!_
+> 你无需编写代码即可为开源做贡献！
 
-Aside from the interface, there are also user interactions, usability, and something called User Experience (UX) — all of which have been gaining popularity in recent decades. If you have a background in design, fine arts or psychology you can find your niche with UI/UX. The next thing that comprises a product is the media, including sounds, graphics, or videos. Not all projects have these, but they’re not that rare either.
+除了界面，还有用户交互、可用性和称为用户体验（UX）的东西——所有这些都在近几十年来越来越受欢迎。如果你拥有设计背景，精于艺术或心理学，你就可以在 UI/UX 领域大放异彩。产品的另一个组成部分是媒体，包括声音，图形或视频，虽然并非所有项目都有这些元素，但它们也不是那么罕见。
 
-Documentation, however, is one of the parts that is often overlooked. An easy way to make a contribution is to improve the documentation. Copywriters should feel at home with those topics. Text assets and translations also present an easy entry.
+然而，文档是项目中经常被忽视的那部分。一种向开源社区做出贡献的简单方式就是改进文档。撰稿人对这种工作肯定是手到擒来，文本编辑和翻译人员也很容易胜任。
 
-Then, there’s marketing, which is also often lacking in Open Source projects. If you can fix this, the whole community benefits. Help a project with marketing, and this will also lure more potential contributors.
+此外，在开源项目中也经常缺少市场运营人员，如果你能解决运营问题，整个社区都会随之受益，因为这会吸引更多潜在的贡献者。
 
-And finally, there’s the legal part, a rather rare component that mainly concerns huge projects. There are lawyers who deal primarily with Open Source issues, and most of them volunteer their time.
+最后还有法务工作者，在普通开源项目中相当罕见，多见于大型项目。有很多律师为开源项目处理法务问题，而他们中的大多数都是志愿者。
 
-> _If you can write prose, draw, make music, are a good marketer, or a lawyer: Open Source community needs you!_
+> 如果你可以写散文，画画，制作音乐，是一个好的营销人员，或者是律师，那么：开源社区需要你！
 
-If you feel incapable of designing, making changes, writing licenses, don’t be scared. You can make another kind of contribution. You can report an error or propose changes to behavior or appearance.
+如果你觉得无法胜任设计、修改代码、编写许可证等工作，不必害怕，你依然可以做出贡献，比如报告一个错误或提出更改行为或外观的建议。
 
-You know what’s best? If every member of the community contributes a bit of time, a bit of effort, and a bit of personal experience, the whole community gains a terrific product, often free of charge.
+最好的状态是这样的：每个成员都贡献出一点点时间、一点点努力、一点点经验，整个社区协作产出一款出色的产品，而且通常是一款免费产品！
 
-> _Don’t feel like a creator? Submit a bug report or issue a feature request!_
+> 觉得自己不是创造者？去发现bug、或者向程序猿提需求吧！
 
-#### Why is it worth my time?
+#### 为什么值得我去花时间？
 
 ![](https://cdn-media-1.freecodecamp.org/images/3OfZ84g5JkBgoyjN60Peh5BIg--bZSFzJscg)
 
-Photo by  [Kyle Glenn][4]  on  [Unsplash][5]
+图片来自 [Unsplash][5]，作者 [Kyle Glenn][4] 
 
-Why is it worth contributing to Open Source? Why should you spend your time writing some proposals or code or making translations instead of going for a walk? There are several reasons. All of them stem from the premise that contributing to Open Source is publicly visible. Everybody can see what everyone else is doing. And that’s great!
+为什么向开源社区做贡献是值得的？为什么你要在提建议、写代码或翻译文章上花费时间，而不是出去走走？有很多理由， 所有理由的前提是：对开源做出的贡献是公开可见的。每个人都能看见其他任何人所做的事情，这种感觉非常棒！
 
-#### You increase your competencies
+#### 提升竞争力
 
-If you are writing a piece of code, designing an interface, or creating graphics, you are learning. This is a great exercise for those looking for a career change. In Open Source, nobody cares whether you work as a senior developer or as a gardener. What matters is the quality of the contribution you can bring. And once you prove yourself in an Open Source project, you will have gained some valuable experience. No longer should you feel like an impostor who just finished a boot camp. You will be an established member of a community with a track record that anyone can check.
+当你在编写代码、设计界面，或者绘制原画时，你就是在学习，这对那些正在寻求改变职业的人来说是很好的锻炼机会。在开源世界，没有人会在意你是一个资深开发人员还是一个园丁，真正重要的是你所做贡献的质量。当你在开源项目中证明了自己，你将获得宝贵的经验，不用再觉得自己是刚从训练营毕业的新手，你已经是社区的正式成员，所有人都看得到你的贡献。
 
-This works even if you are stuck with one technology, but imagine your future with something completely else. Say you are a COBOL developer dreaming of landing a UX job? Just start improving UX in Firefox and send your contributions. Once they’re accepted, you can add a new position to your resume: UX designer for Firefox project. You’ve just learned something useful and improved your credentials.
+当你在某项技术中遇到困难时，这会很有帮助，因为你可以想象你的未来不拘于此。假如你是一个梦想得到一份 UX 设计工作的 COBOL 开发者，那么从现在开始尝试改进Firefox的交互体验、为开源做出贡献吧。一旦建议被社区接受，你就可以在简历中新增一项工作经历：Firefox 交互设计师。就像这样，你既能学到有用的知识，又能丰富自己的经历，一箭双雕。
 
-#### You Improve Your Visibility
+#### 提升知名度
 
-When you join a community, such as an Open Source project, you immediately gain new acquaintances, meeting others who are also involved in the project. You can learn from them, and exchange ideas with them.
+当你加入了开源社区，就会很快地认识新的小伙伴，接触一起共事的团队成员，你可以向他们学习并交流各自的想法。
 
-The second benefit from joining such a community is that all of your other channels automatically become more visible. For example, visitors to the Open Source project you contribute to, can learn of your YouTube channel or find you on LinkedIn to offer you a job.
+另一个加入开源社区的好处是你会自动地获得更多的曝光机会。举个例子，有人通过访问你所在的开源项目找到你的 YouTube 频道，或者通过 LinkedIn 为你提供工作机会。
 
-This brings us to the next point.
+这将我们带到了下一个论点。
 
-It is a common practice nowadays for IT recruiters to check out GitHub in search of new talent. By making your code public you actually create a real-life resume anyone can verify. No need to contact your former employers or clients. And if your GitHub profile links to your LinkedIn profile or your homepage you are easily approachable so the chances of you landing a job of your dreams increase.
+目前 IT 猎头们寻找人才的一个重要渠道就是 GitHub，把你的代码发布到 GitHub 就相当于编写了一份所有人都能验证的简历，而无需联系你之前的雇主或者客户。如果你的个人 GitHub 资料包含了跳转到领英或个人主页的链接，那么你找到梦想中工作的机会将大幅增加。
 
-Keep in mind, you don’t even need to have commercial experience in that particular field. For those recruiters, your Open Source contributions are just as valid!
+记住，你甚至都不必拥有特定领域的商业经历，对于猎头来说，你对开源的贡献就是对你的经验的最好凭证！
 
-#### You Find Employment or New Clients
+#### 寻找就业机会或新的客户
 
-If you are really good, you can get a paid offer to work on an Open Source project. This is reserved mostly to those projects that have some stable financial backing, either from a corporation or a nonprofit.
+如果你真的很优秀，你将会获得为开源项目工作的有偿 offer， 这主要保留给那些具有稳定财务支持的项目，无论是来自公司还是非营利组织。
 
-#### You Find New Employees
+#### 招聘新人
 
-This also works the other way — you can find potential employees. If you do something that is cool and useful to others , publish it as an Open Source project! There is a chance that someone will want to improve your project or work for you.
+不仅如此，你还可以找到一些有潜力的新人。如果你做了一些酷炫且有用的项目，请毫不犹豫地把它开源！这样就有机会让其他人帮你改进或为你的项目工作。
 
-#### You Do Something for Others
+#### 为他人做有意义的事情
 
-Another advantage to being a part of these projects is the opportunity to do something for others and gain their gratitude. All the “thank you” notes you receive will make your time seem more than worthwhile — — and you may have even contributed to an awesome project.
+另一个参加开源的好处是，你将有机会为他人做一些有意义的事情并且赢得尊敬。你收到的所有"感谢"将让你觉得你所花费的心血都是值得的，而且你也拥有了参与一些很棒项目的经历。
 
-#### You Get Access to Nice Statistics
+#### 有机会接触到很棒的统计数据
 
-Are you a fan of gamification? Then this one’s for you. Some people really like statistics, and for them  [GitHub][6]  offers something special. Each action we take in GitHub — the largest Open Source community — is marked with a green square on a huge calendar. The more things we do any given day, the brighter the square. When we contribute for several consecutive days, GitHub will count it as a streak and keep your score for future reference. This acts as a motivation to beat the best scores so far.
+你是“游戏化”的粉丝吗？很多人很喜欢统计数据，对他们而言，[GitHub][6] 就是一块宝藏。我们在 GitHub 上的每一次提交，都会在一个巨大的日历上用绿色方块做标记，每天做的提交数越多，对应方块的颜色越明亮。当我们连续几天都有提交时，GitHub 会将其视为连胜，并保留分数以供将来参考，这是不断超越当前最好成绩的动力。
 
 ![](https://cdn-media-1.freecodecamp.org/images/ht-TITobG7xebn20clZtCZ-9QNMGRoRA2DNi)
 
-[GitHub][7]  contribution statistics. No, not mine.
+[GitHub][7] 贡献数据。不，不是我的。
 
-### How Do You Find Your First Project?
+### 如何找到你的第一个项目？
 
-There are several ways. First of all, the big players like Firefox or Android have a high user base and require a lot of changes and improvements. Once you introduce a change to such a project, your change becomes visible by millions. You can visit GitHub and see what are the most popular repositories. For example, at the moment of this writing, the  [number one most starred repository][8]  is  [freeCodeCamp][9].
+有很多种方式。首先，像火狐和安卓这样的重量级项目拥有庞大的用户基数，需要大量的修改和优化。一旦你向这种项目提交了代码，你的修改将会被数百万人看到。你可以访问 GitHub 看看有哪些流行的仓库。比如，在撰写本文时，[GitHub上拥有最多star的项目][8] 是 [freeCodeCamp][9].
 
 ![](https://cdn-media-1.freecodecamp.org/images/HZV4c0DRdzgPk5XXu73SA01zudn0gyB51fPW)
 
-The  [most starred repositories][10]  on GitHub
+GitHub上拥有[最多 star 的仓库][10]
 
-I wouldn’t necessarily recommend this first approach if you are a newcomer. The huge projects’ main advantage is also their main curse. Everybody wants to contribute, but there is a limited number of maintainers who are able to respond to your requests. If you really want to make an impact, you can instead try smaller projects that are on the rise.  [GitHub Trending][11]  is a place to find such cases.
+如果你是个新手，我不会推荐上面第一种方式。一个庞大项目最大的优势往往也是它最为人诟病的。每个人都想做出贡献，但是维护人员的数量是极为有限的。如果你真的想产生影响，不如试试一些小规模的、处于上升阶段的项目。[GitHub Trending][11] 就是一个好的方法。
 
 ![](https://cdn-media-1.freecodecamp.org/images/n-mf9pvBj7kB5DnharePSMFXtNmLRS8Fwwwp)
 
-[Trending projects][12]  on GitHub
+GitHub上的[热门项目][12]
 
-Another approach is to select an  _awesome_  project as a first time contributor. Let’s call this the energy efficient approach.  _Awesome_  projects are compiled and curated lists of links. For example,  [awesome-shell][13]  lists cool CLI findings, while awesome-JavaScript deals with all the shiny new frameworks that pop up every day. There’s also an  _awesome_list of  [Mind Expanding Books][14]  and of course  [_awesome_  lists][15].
+另一种方式是选择 _awesome_ 项目作为第一次贡献者，这是比较节省精力的方法。 _awesome_ 项目是一个链接列表的大集合。比如，[awesome-shell][13] 列出了一些酷炫的命令行工具，而 awesome-JavaScript 列出了每天涌出的优秀JS框架， 当然还有 [Mind Expanding Books][14] 和 [awesome_lists][15] 等等。
 
-Why is it a good approach? The effort required to make an actual contribution is pretty low, so there is a high chance of getting a dopamine boost resulting from a job well done. This dopamine boost should trigger the next contribution and so on. Once the ball starts rolling, it’s hard to make it stop.
+为什么说这是个好办法？因为给这些项目做贡献的门槛比较低，而贡献的成就感更容易刺激产生多巴胺，多巴胺又会刺激做下个贡献。一旦皮球开始滚动，就很难让它停下来了。
 
-The final approach I recommend is piggybacking on a huge Open Source event. One such event celebrated each year in October is  [Hacktoberfest][16]. The participants are expected to make five Pull Requests on GitHub (that is, make five contributions). Everyone who fulfills this task gets nice perks from the sponsors (like t-shirts and stickers). To make it easier for the participants, some example projects are listed on the website.
+我推荐的最后一个方法是参加大型开源活动，比如每年十月举办的 [Hacktoberfest][16]，参与者需要提交5次 Pull Request（即5次贡献），每个完成任务的参与者都会从赞助方领取到精美的礼物（T恤或标签）。为了让降低参与门槛，活动网站上会列出一些入门的示例项目以供选择。
 
-Another similar event is  [Google Summer of Code][17]. You can check out a list of projects from the past. Maybe one will inspire you enough to make a contribution! Oh, and then there’s an  [Awesome First PR Opportunities][18]  list!
+另一个类似的活动是 [Google Summer of Code][17]。你可以参考往期的项目列表，也许这回给你带来灵感！哦对了，这里还有一个 [Awesome First PR Opportunities][18] 列表！
 
-If you want to sustain-ably contribute to Open Source, find something that you use regularly. This way your contributions will also benefit yourself. This is by far the best way to ensure quality work.
+如果你希望持续不断地参与开源，你需要找到自己经常使用的东西，这样的话对你自身的提高大有裨益，也是目前为止最佳的保证高质量工作的方式。
 
-### What Makes a Contribution Valuable?
+### 是什么让贡献变得有价值？
 
 ![](https://cdn-media-1.freecodecamp.org/images/I8PVJSTiJibbeYiy7wrmVeZFQMHuuXLYI-NW)
 
-Photo by  [rawpixel][19]  on  [Unsplash][20]
+图片来自 [Unsplash][20]，作者 [rawpixel][19]  
 
-We now know why to contribute, and we know where to contribute. Now let’s focus on what makes our contribution valuable? A worthless contribution will not be accepted, so it’s better to prepare!
+我们现在了解了为什么贡献开源以及在哪里参与开源。现在我们聚焦于是什么让我们的贡献变得有价值？毫无意义的贡献是不会被接受的，所以最好有所准备！
 
-#### We Should Respect the Working Conditions
+#### 我们需要尊重工作须知
 
-Above all, we should respect the working conditions of others. In many projects, you can find documents such as  `CONTRIBUTORS.md`  that present the preferred way of making contributions. If the project you wish to join doesn’t have a similar document, check other possible places, like the  `README.md`  or the project’s wiki page. Get acquainted with the rules and make sure you understand and obey them.
+首先，我们需要尊重他人制定的工作须知。在许多项目中，你可以找到像`CONTRIBUTORS.md`这样的文档，说明了做出贡献的首选方式。如果项目中没有`CONTRIBUTORS.md`，你也可以阅读`README.md`或项目wiki页面。熟悉并理解这些规则，然后按照规则参与开源。
 
-If your work doesn’t meet the conditions outlined in the contributors’ guidelines, it will probably be declined even before the review. Those guidelines and conditions serve to protect the time of maintainers. If you can’t follow them, the maintainers may assume you are just as careless with the other work you do.
+如果你没有遵循开发指南列出的规则，很可能在 review 之前就会被拒绝。那些规则就是为了节省维护者的时间的，如果不去遵守，那么维护者会认为你对待其它工作的时候也经常粗心大意。
 
-#### Consider How Valuable Your Contribution Is to Others
+#### 思考你的贡献对他人有着怎样的价值
 
-Once we know how to behave, let’s consider how valuable our contribution is to others. Imagine for a moment, a company that produces tailor-made suits. You bought a suit at its store and then went for a beer. Inspiration strikes, so you attach a bottle opener to the suit at home. This way, each time you go for a beer, there’ll be no problem opening it.
+当我们知道了怎样参与开源，下一步让我们思考一下我们的贡献究竟对他人有着怎样的价值。想象有一家生产定制西服的公司，你在门店里买了一套西服然后穿着它去了酒吧。你突发灵感，把开瓶器挂在了西服上，这样每次去酒吧喝酒的时候，你都能随时使用衣服上的开瓶器打开啤酒了。
 
-In an Open Source fashion, you go to the tailor and present your great idea of attaching the opener to the suit. Now, regardless of the ingenuity of your idea, the tailor, who acts as a project maintainer, may not see your addition as fitting to his concept. It doesn’t mean that your work is weak or worthless; it just means that some features appeal only to a small audience. And since each feature needs to be maintained and secured, adding to the cost of the project, the project maintainer has to make sure that every feature provides a worthwhile amount of benefit.
+于是你把这个“伟大的想法“告诉了裁缝，让他在制作西服时顺便挂上一个开瓶器。然而，无论你的想法多么具有独创性，裁缝都不可能同意的，就像开源项目的维护者不会接受一次与其观念不同的代码提交。这并不意味着你的工作很差或者毫无价值，仅仅意味着你提交的功能特性仅仅适用于极小部分用户，而不代表大部分用户的需求。既然每个功能都需要维护成本并确保其稳定性，项目维护者自然就需要确保每个功能点都能为大多数用户带来价值。
 
-#### Be Verbose in Communication
+#### 善于沟通
 
-If it’s not a change that you are contributing but a report, be verbose. Write down everything you know to explain the context in detail. This is particularly important when reporting errors. The more context you describe, the easier it will be for someone to fix it the way you want. Keep in mind the possible use cases and expected behavior, but leave out any details not necessarily related to the report. Saying you want an element to be green because it matches other competing products is fine. Providing a thorough historical background on the competition is a bit too much.
+如果你的提交不是功能点的修改，而是一篇报告，那么一定要善于沟通。尽可能地把问题的上下文解释清楚，这点建议当你在报告 bug 时格外有用。你描述得越详细，别人在修复问题时就会更容易直击要害。请记住，列出可能的用例和预期的行为，忽略与报告不相关的任何细节。比如，你想让某个元素变成绿色因为这能够与竞品相匹配，那么提供与竞品的竞争背景将会显得非常多余。
 
-#### Run, Test, Check, Then Double-Check Before Submitting
+#### 运行、测试、校验，提交前仔细检查
 
-Check everything and test everything before you submit your change. Make sure your changes address the currently developed version, not some historical one. Keep in mind that you only need to run the tests once. The maintainers run many of them daily, so save them time by making sure everything is top-notch. And anyway, this just shows that you care and don’t submit sloppy work.
+在提交代码之前要详细地进行检查和测试，确保你的更改针对的是当前的开发版本，而不是某个历史版本。记住你只需运行一次测试，而项目维护者需要每天运行各种各样的测试，为了节省他们时间，你需要确保一起都运行正常。无论如何，这也体现出你严谨的态度，而不是马马虎虎地提交一份半成品。
 
-### How to Avoid Getting Discouraged Online
+### 怎样避免在网络上灰心丧气
 
 ![](https://cdn-media-1.freecodecamp.org/images/p5rnB4wdDuBMkn0Cw8UKWh12BwR8l1i1Xz1p)
 
-Photo by  [Wes Hicks][21]  on  [Unsplash][22]
+图片来自 [Unsplash][22]，作者 [Wes Hicks][21]  
 
-Remember this: Each time you post something online, you open up yourself to criticism. Regardless, if it’s a comment, a photo, an article, or a code, you are now vulnerable. You should welcome some of the criticism, as it will help you grow.
+请记住这点：你每次在网上发布一些东西的时候，都是把自己暴露在攻击之下。不管你发布的是一句评论、一张照片、一篇文章，还是一份代码，你都可能收到批评，所以，要对批评的声音持开放的态度，这样会有助于你的成长。
 
-But there are also other kinds of criticism: toxic and unwarranted. It’s best to learn how to deal with different kinds of criticism before you start sharing your work with the public. This way you will be prepared for what awaits you and won’t take everything personal.
+然而，同样存在一些毫无根据的批评。因此，在开始分享你的工作之前，你需要学会处理各种各样的批评，这样你才会为那些终将到来的批评做好准备，而不是每次都默默地自己慢慢消化。
 
-#### Our Best Ideas Are Not the Best to Everyone
+#### 我们的最佳想法并非对所有人都是最佳的
 
-First of all, your best ideas may not be the best ideas according to everyone. Let’s keep this in mind. Don’t be offended if someone tells you that the bottle opener you devised isn’t compatible with their suit. If that is the will of the project maintainer, respect it. It may serve as a lesson if you would like to be involved again in this project. Or you can seek another project where they may need such a change.
+首先，你能想到的最佳想法可能并不是对所有人都是如此，请千万记住这点。当有人告诉你开瓶器跟西服根本就搭不上边的时候，不要觉得受到了冒犯。如果这是项目维护者的意愿，一定要拿出尊重，这将会是你下次参与开源项目的宝贵经验，或者你也可以寻找你认为适合你的想法的项目并参与其中。
 
-#### Our Best Work May Not Be up to Standards
+#### 我们最好的作品可能并不符合标准
 
-As difficult as it may be to hear, your best work might not be up to a project’s standard. I experienced it myself. In one project I was contributing to, I received a reasonable list of guidelines on how to write good code. I decided to do it perfectly (so I thought) the first time around. After all, I knew what to look out for. I sent my changes, and after some time I received a reply. Almost every line of code was highlighted. Interestingly, all comments were reasonable and accurate. What I considered perfect was lacking in almost every single line.
+尽管话很难听，但你的最佳作品可能并不符合标准。我亲身经历过这种事情。在一个我正在参与的项目中，我本决定在第一次就做到完美（但只是我认为的”完美“），毕竟我知道需要注意哪些事情，但是我收到了一份指导我如何写出好代码的教程。我发送了我的代码，过段时间收到了答复，几乎每一行代码都被高亮标记出来，有趣的是，所有的评论都是有理有据并且准确的。我眼中的完美在专家眼中却是满目疮痍。
 
-I corrected all the remarks and resubmitted the changes. This time I received only five remarks. Even if you are doing something right, other people may push you to work even better. That’s what reviewers are for. They should not be criticized or blamed — they want to help you, keep this in mind!
+我根据批注做出了修改然后重新提交了代码，这次我只收到了五个批注。即使你已经做得很好了，仍会有人推动你去做到更好，这就是代码 reviewer 的目的。他们并不是在批评或责怪你，而是在帮助你，请记住这点！
 
-#### We Can Get Rejected Even If We Did Everything Right
+#### 即使我们做到了能做的一切，还是可能被拒绝
 
-Sometimes you just get “no” for an answer, and there’s not much you can do to change this. You still think suits with bottle openers are a great idea? Then start producing your own! In Open Source, the act of creating a new project based upon an existing one is called “forking.”
+有时你仅仅得到一个 "no"，而你却对此无能为力。你仍然坚信把开瓶器挂在西服上是个好主意，这时该怎么办？是时候创造你自己的项目了。在开源世界里，在已存在项目的基础上创建新项目的行为叫做"新建分支"。
 
-Correspondingly, the new project is considered a “fork” of the original. For example, Ubuntu is a fork of Debian. If the project maintainers refuse to incorporate your work into their product, you can consider forking the project and becoming a maintainer yourself. This should only be practiced in extreme cases. Not only is forking a burden for both groups of maintainers, it is also confusing for the community. If you happen to hear “no,” it is worth learning the reasons behind this answer.
+相应地，新项目被称为原项目的”分支“。比如，Ubuntu 就是 Debian 的一个分支。如果维护者拒绝把你的代码合入他的项目，你可以考虑新建一个分支，自己成为项目维护者。当然只在极端情况下才应这样做，因为这不仅给两方维护者带来负担，也会给社区造成困惑。如果你不幸恰好收到了 "no"，你应该好好想想得到这个答复背后的原因。
 
-It may be a valuable lesson for the future.
+这将会成为你未来宝贵的经验。
 
-#### Trolls Are Everywhere
+#### 恶魔无处不在
 
-Now, the trolls.
+现在来谈谈那些恶魔们。
 
-As the Internet offers an illusion of anonymity, there has emerged a subculture that takes pleasure in destroying other people. This subculture is called the Internet trolls. I have not yet had the opportunity to fight someone like this. But I would recommend that you read “[The Complete Guide to Understanding and Dealing With Online Trolls][23]” by  [Ragen Chastain][24]. It will help you prepare for such an unpleasant encounter.
+互联网给人以一种匿名感，因此涌现了一种亚文化：以故意诋毁他人取乐。这种亚文化被称为“互联网恶魔”。我尚未有机会和这种人交过手，但我推荐你阅读 [Ragen Chastain][24] 写的文章 “[The Complete Guide to Understanding and Dealing With Online Trolls][23]”，它将帮助你为这种令人不适的遭遇做好准备。
 
-### Making Money on Open Source
+### 利用开源赚钱
 
 ![](https://cdn-media-1.freecodecamp.org/images/4Os4IqJlls8gmFcxxnUBzb6H5FAChlEzDmKV)
 
-Photo by  [rawpixel][25]  on  [Unsplash][26]
+图片来自 [Unsplash][26]，作者 [rawpixel][25]
 
-If you’ve read this far, you’re probably wondering if it is possible to earn some money while working on Open Source projects.
+如果你已经读到了这里，你可能会想是不是有可能在为开源项目工作的同时赚点外快。
 
-Of course, it is!
+当然可以！
 
-Even though the software itself is usually free of charge, there are other ways to make a living with Open Source. In this respect, it very much resembles art. And as with art, some methods may work for you while others might not. It’s an inexact science.
+虽然软件本身通常是免费使用的，但是会有其它方式让你利用开源项目赚钱。赚钱是一门艺术，因为一些办法只适用于你自己，在别人那里却不管用，它是门“伪科学”。
 
-#### Permanent Methods
+#### 永远适用的方法
 
-My favorite method is the Donate button. You can see it at work on one of my projects:  [Songcorder][27]. Depending on the size of the tips you expect, options worth considering include Paypal (if you plan to receive tips larger than $15) and  [Buy me a Coffee][28]  (for tips smaller than $15).
+我最喜欢的方法就是“捐赠”按钮，你可以在我的一个叫 [Songcorder][27] 的项目中看到它的工作方式。你可以根据希望收到的捐赠金额选择 Paypal（希望收到大于15美元的捐赠）或者 [Buy me a Coffee][28]（希望收到小于15美元的捐赠）。
 
 ![](https://cdn-media-1.freecodecamp.org/images/AXmQ1s5wJWjlPqB-FYd8pzriBsG1ptc8K3s3)
 
-[Songcorder tip button][29]
+[Songcorder捐赠按钮][29]
 
-A Buy me a Coffee button looks like this (you can click it if you feel I deserve it):
+下面就是一个“Buy me a Coffee”按钮（如果你认为我应得的话可以点击它）：
 
 ![](https://cdn-media-1.freecodecamp.org/images/PluelxbiFUz81gkQAsojz--HV5ALU41GQ0qC)
 
 [https://www.buymeacoffee.com/doomhammer][30]
 
-Besides general purpose buttons, there are methods dedicated to Open Source projects, like Gittip/[Liberapay][31]  (this one likes to change names quite often). Funny enough, one of the popular repositories supported by Liberapay is…  [awesome][32].
+除了通用的按钮之外，还有一些开源项目专用的方法，比如Gittip/[Liberapay][31]（后者经常换名字）。有趣的是，Liberapay 所支持的最受欢迎的仓库是 [awesome][32]...
 
-The premise is similar to that of  [Flattr][33]. You choose the monthly amount of money you want to spend on creations, and when you approve of some work, the author of the work gets a share of your budget. Say, you decided that you can afford to pay $5 each month towards Open Source projects. If you approve of four projects in a particular month (by starring them or clicking the Flattr button) each of the projects’ authors gets $1.25. Pretty simple.
+这与 [Flattr][33] 很类似。你可以选择每月要捐赠的金额，当你认可某些作品时，作品的作者将获得预算的一部分。也就是说，如果你决定每月向开源项目捐赠5美元，在某月你认可4个项目的工作（通过 star 或者点击 Flattr 按钮），那么每个项目的作者将会得到1.25美元。就是这么简单。
 
 ![](https://cdn-media-1.freecodecamp.org/images/RCgiw9zaA3vLNKLoMLxV3dZCpxsOu-MD9Mji)
 
-[Repositories linked to Liberapay][34]
+[与Liberapay关联的仓库][34]
 
-Instead of supporting entire projects, you can also make donations (almost) directly to the contributors.  [Tip4Commit][35]  operates this way. Supporters deposit some amount of Bitcoin into a project, and each contributor that commits to the project gets a share of the deposit.
+除了支持整个项目，你也可以直接（近乎直接）向开发者捐款。[Tip4Commit][35] 就是以这种方式运作的。支持者向某项目的账户存入一定数量的比特币，然后每个开发者就可以从这个账户分到一笔钱了。
 
-Another possible approach is  [Patreon][36]. Here, instead of an equally divided budget, supporters give a fixed amount of cash to any creator they choose. If you want to learn if this is the correct approach for you,  [Erika Sauter][37]  explains perfectly “[Why Patreon is Dope AF for Creators][38]”.  [Sindre Sorhus][39]  of  _awesome_  fame is one of the prominent Open Source maintainers  [there][40]. But bigger projects such as  [Homebrew][41]  or  [Linuxbrew][42]  also use Patreon for funding.
+另一个可能的方法是 [Patreon][36]。这种方式下，支持者将固定金额的现金分配给他们选择的任何开发者，而不是平均分配预算。如果你想了解这种方式是否适合你，可以阅读 [Erika Sauter][37] 写的文章 “[Why Patreon is Dope AF for Creators][38]”。享有盛誉的 [Sindre Sorhus][40] 就是最主要的开源维护者之一，而像 [Homebrew][41] 和 [Linuxbrew][42] 这种颇具规模的项目同样也使用 Patreon 筹集资金。
 
-All of the above-mentioned methods work well if you treat Open Source as a hobby or a side-hustle. If you are lucky, they could even turn your passion into a day job. But in reality, if you want to make Open Source your day job, the usual approach is to provide consulting services. This can mean selling pro features to enterprise clients or helping enterprise clients deploy and customize your products. Many businesses lack the skills necessary to adapt an Open Source project to their internal needs. And who’s better equipped for this task than the original project’s maintainer?
+如果你把开源视为业余爱好，上面提到的所有方法都会很好地工作，幸运的话，它们甚至可以将你的兴趣变成全职的工作。然而实际上，如果你想使开源项目成为你的日常工作，一个常见的方式是提供咨询服务，这可能意味着向企业客户出售专业功能或者帮助企业客户部署和定制你的产品。很多企业缺乏利用开源项目解决其内部需求的能力，而谁又能比原始项目的维护者更能胜任这项任务呢？
 
-If you can help others and get paid for doing so, go for it!
+如果你在帮助别人的同时能够获得报酬，那就这样去做吧！
 
-#### One-Time Methods
+#### 一劳永逸的方法
 
-One of the popular methods for bootstrapping funds on an Open Source project is crowdfunding. There are numerous platforms dedicated to this cause.  [Kickstarter][43], for example, helped to launch  [Mycroft Mark II][44], the Open Source voice assistant. Another big player  [Indiegogo][45]  hosted a campaign for an  [email client Geary][46]. Sadly, the project did not meet its goals.  [MediaGoblin][47]  even went as far as launching  [their own campaign][48]  without any third-party.
+为开源项目筹集资金的一种流行的方法是众筹，有很多专注于此目的的平台。比如， [Kickstarter][43] 为开源语音助手 [Mycroft Mark II][44] 筹集了启动资金。另一个大玩家 [Indiegogo][45 ]为电子邮件客户 [Geary][46] 主持了一场众筹活动，但很可惜，这个项目未能达成它的预期目标。[MediaGoblin][47] 甚至在没有任何第三方的情况下启动了自己的 [众筹系列活动][48]。
 
-If you fear you won’t find the many supporters needed for successful crowdfunding, you can try grants. I am aware of at least two foundations providing such grants. One of them is the  [Travis Foundation][49], backed by the company behind the popular  [Travis CI][50]. The other one is the  [Mozilla Foundation][51], creators of  [Firefox][52]  Web Browser.
+如果担心你无法找到众筹所需的众多支持者，可以尝试融资。在我的印象中，有至少两个提供融资的基金会。其中一个是著名的 [Travis CI][50] 公司旗下的 [Travis Foundation][49]，另一个是创办了 [Firefox][52] 浏览器的[Mozilla][51] 基金会。
 
-Most of the tools presented so far focus on Open Source maintainers. But contributors can make some dough by becoming Bounty Hunters too. Bounties are features requested by a third-party backed by a financial reward. To hunt them you need to fulfill the feature request and claim the reward. The most popular platform for Bounty Hunting at the moment seems to be  [Bountysource][53].
+目前所记述的大多数工具和方法都是适用于开源项目维护者的，而开源贡献者也可以通过成为“赏金猎人”来赚钱。赏金是第三方提供的提供经济奖励的需求点，你需要实现这些需求才能获得奖励。目前 [Bountysource][53] 似乎是最受欢迎的众包平台。
 
-But if you’d rather take Cryptocurrency as a payment,  [Gitcoin][54] operates on similar principles. Check out “[Everything You Need to Know About Gitcoin][55]” by  [Vivek Singh][56]  for details.
+如果你更喜欢将加密货币作为付款方式，[Gitcoin][54] 是一个与众包具有相似原理的平台。想做更多的了解，可以看 [Vivek Singh][56] 写的文章“[Everything You Need to Know About Gitcoin][55]”。
 
-The paid internship is another valid approach. Two popular options available are:
+带薪实习是另一个有效的方法。有两个备受欢迎的选择：
 
--   [Google Summer of Code][57]  — aimed at students
--   [Outreachy][58] — aimed at minorities in the tech field
+- [Google Summer of Code][57]  — 面向学生
+- [Outreachy][58] — 面向技术领域的少数民族
 
-Or, if you’re really passionate, why don’t you join a company dedicated to developing Open Source software? There are many to choose from. Just like with consulting, you will get paid and do something for the community at the same time.
+或者，如果你真的对开源充满激情，为什么不加入一家专注于开发开源软件的公司呢？会有很多这样的选择。就像咨询一样，你将获得报酬，并同时能够为社区做点事情。
 
-It’s a win-win situation!
+这会是一个双赢的选择！
 
-#### Further Research
+#### 更多方法
 
-If you are looking for more inspiration, check out the  [lemonade-stand][59]  project on GitHub. Or add your own idea there. With Open Source, everything is possible!
+如果你还想寻找更多赚钱的灵感，可以看看GitHub上的 [lemonade-stand][59] 项目，或者在那里留下你的看法。有了开源，一切皆有可能！
 
-### Finding Your Kin
+#### 寻找志同道合的人
 
 ![](https://cdn-media-1.freecodecamp.org/images/J11jHn8h2sT4kpAU2jYj6brNseQ3-CYj7qhB)
 
-Photo by  ["My Life Through A Lens"][60]  on  [Unsplash][61]
+图片来自 [Unsplash][61]，作者 ["My Life Through A Lens"][60]
 
-I haven’t mentioned it until now, but products, projects, and technology are only a tiny fraction of the whole Open Source movement. The first and foremost component is the fabulous community! Once you start contributing, you immediately gain lots of new acquaintances, people to learn from, people whom you can mentor, and people with whom you can exchange ideas.
+到目前为止我尚未提到的是：无论产品、项目还是技术，都是整个开源活动的一小部分，开源最重要的组成部分是丰富多彩的社区！一旦你开始为开源做出贡献，你会立即结识很多新朋友，有了这些朋友，你可以向他们学习，可以为他们提供帮助，也可以交换思想、互相交流。
 
-Each project has its own community, but there are also places where Open Source enthusiasts hang out regardless of their background.
+每个项目都有专属的社区，而且也有很多让众多拥有不同背景的开源爱好者聚集起来的地方。
 
-You can join groups on Social Media, such as the  [Linux & Open Source][62]  group on LinkedIn. There are also many interesting  [Gitter][63]  channels to check out. Gitter is an instant messaging system for Open Source communities. There are also mailing groups, forums, or platforms like GitHub that allow collaboration and communication. But if you want to meet like-minded people in person, consider visiting or joining a Hackerspace.
+你可以加入一些在线交流社群，比如领英的 [Linux & Open Source][62]。你也可以加入很多有趣的 [Gitter][63] 频道，Gitter是为开源社区打造的即时通讯软件。当然，还有一些邮件组、论坛或平台（如 GitHub）允许大家互相协作和交流。但是，如果您想亲自结识志趣相投的人，请考虑访问或加入黑客空间。
 
-Hackerspaces are places that transfer the love of experimentation beyond the software world. Software, hardware, DIY, and handicraft are equally welcome. There’s a Wiki page listing  [all the Hackerspaces][64], so find the closest one and just pay them a visit. You’ll be surprised by what’s possible when ideation meets execution!
+黑客空间是将对实践的热爱传递到软件世界之外的地方。软件、硬件、DIY和手工都会收到同样的欢迎。有一个维基百科页面专门列举出了[所有的黑客空间][64]，找到离你最近的那个然后拜访他们，你会为思想与行动碰撞时所产生的火花而感到无比惊讶！
 
 [1]: https://pixabay.com/en/users/samuelfernandezrivera-5770955/
 [2]: https://pixabay.com/
 [3]: https://www.mozilla.org/en-US/firefox/new/
-[4]: https://unsplash.com/@kylejglenn?utm_source=medium&utm_medium=referral
-[5]: https://unsplash.com/?utm_source=medium&utm_medium=referral
+[4]: https://unsplash.com/@kylejglenn?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
+[5]: https://unsplash.com/?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
 [6]: https://github.com/
 [7]: https://www.freecodecamp.org/news/the-definitive-guide-to-contributing-to-open-source-900d5f9f2282/undefined
-[8]: https://github.com/search?q=stars%3A%3E0&s=stars&type=Repositories
+[8]: https://github.com/search?q=stars%3A%3E0&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;s=stars&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;type=Repositories
 [9]: https://github.com/freeCodeCamp/freeCodeCamp
-[10]: https://github.com/search?q=stars:%3E1&s=stars&type=Repositories
+[10]: https://github.com/search?q=stars:%3E1&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;s=stars&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;type=Repositories
 [11]: https://github.com/trending
 [12]: https://github.com/trending
 [13]: https://github.com/alebcay/awesome-shell
@@ -277,14 +276,14 @@ Hackerspaces are places that transfer the love of experimentation beyond the sof
 [16]: https://hacktoberfest.digitalocean.com/
 [17]: https://summerofcode.withgoogle.com/
 [18]: https://github.com/MunGell/awesome-for-beginners
-[19]: https://unsplash.com/@rawpixel?utm_source=medium&utm_medium=referral
-[20]: https://unsplash.com/?utm_source=medium&utm_medium=referral
-[21]: https://unsplash.com/@sickhews?utm_source=medium&utm_medium=referral
-[22]: https://unsplash.com/?utm_source=medium&utm_medium=referral
+[19]: https://unsplash.com/@rawpixel?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
+[20]: https://unsplash.com/?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
+[21]: https://unsplash.com/@sickhews?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
+[22]: https://unsplash.com/?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
 [23]: https://betterhumans.coach.me/the-complete-guide-to-understanding-and-dealing-with-online-trolls-4a606ae25c2c
 [24]: https://www.freecodecamp.org/news/the-definitive-guide-to-contributing-to-open-source-900d5f9f2282/undefined
-[25]: https://unsplash.com/@rawpixel?utm_source=medium&utm_medium=referral
-[26]: https://unsplash.com/?utm_source=medium&utm_medium=referral
+[25]: https://unsplash.com/@rawpixel?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
+[26]: https://unsplash.com/?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
 [27]: https://doomhammer.github.io/songcorder/#tips-welcome
 [28]: https://www.freecodecamp.org/news/the-definitive-guide-to-contributing-to-open-source-900d5f9f2282/undefined
 [29]: https://doomhammer.github.io/songcorder/#tips-welcome
@@ -318,8 +317,8 @@ Hackerspaces are places that transfer the love of experimentation beyond the sof
 [57]: https://summerofcode.withgoogle.com/
 [58]: https://www.outreachy.org/
 [59]: https://github.com/nayafia/lemonade-stand
-[60]: https://unsplash.com/@bamagal?utm_source=medium&utm_medium=referral
-[61]: https://unsplash.com/?utm_source=medium&utm_medium=referral
+[60]: https://unsplash.com/@bamagal?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
+[61]: https://unsplash.com/?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
 [62]: https://www.linkedin.com/groups/65688/
 [63]: https://gitter.im/
 [64]: https://wiki.hackerspaces.org/List_of_ALL_Hacker_Spaces

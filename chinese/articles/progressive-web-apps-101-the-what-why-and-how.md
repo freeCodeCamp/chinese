@@ -1,6 +1,6 @@
 > * 原文地址：[Progressive Web Apps 101: the What, Why and How](https://www.freecodecamp.org/news/progressive-web-apps-101-the-what-why-and-how-4aa5e9065ac2/)
 > * 原文作者：Shruti Kapoor
-> * 译者：
+> * 译者：azzinoths0905
 > * 校对者：
 
 

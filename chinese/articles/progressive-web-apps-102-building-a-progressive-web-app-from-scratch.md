@@ -1,6 +1,6 @@
 > * 原文地址：[Progressive Web Apps 102: Building a Progressive Web App from scratch](https://www.freecodecamp.org/news/progressive-web-apps-102-building-a-progressive-web-app-from-scratch-397b72168040/)
 > * 原文作者：Shruti Kapoor
-> * 译者：
+> * 译者：azzinoths0905
 > * 校对者：
 
 ![Progressive Web Apps 102: Building a Progressive Web App from scratch](https://cdn-media-1.freecodecamp.org/images/0*q57QiIkbThi9Mqvl)

@@ -164,63 +164,61 @@ Now we have our Flexbox powered gallery.现在我们就要开始用Flexbox来强
   <ul>    <li></li>    <li></li>    <li></li>  </ul>  <button></button></section>
 ```
 
-There will be at least 3 cards. Wrap the cards in a  `div.cards`
+这里有至少3个卡片，我们把这些卡片包在  `div.cards`里
 
 ```
 <div class="cards"></div>
 ```
 
-Now we’ve got a parent element.
-
-For this example, the parent element has been set up to fill the entire viewport.
+现在已经有了一个父元素。在这个例子中，父元素充满整个视图。
 
 ```
 .cards {   min-height: 100vh}
 ```
 
-#### Set up Flexbox
+#### 建立Flexbox布局
 
-The following code block will initiate a Flexbox formatting context within  `.cards`
+下面的代码块新建了一个在  `.cards` 里面的Flexbox布局样式。
 
 ```
 .cards {  display: flex;  flex-wrap: wrap}
 ```
 
-If you remember the last example,  `flex-wrap`  will allow for the  `flex-items`  to break onto another line.
+如果你还记得上一个例子，  `flex-wrap`  可以让  `flex-items`  换行。
 
-This happens when the child elements cannot fit into the parent element. This is due to the larger computed width size of the combined child elements.
+由于子元素排列需要更大的宽度，所以子元素不能在父元素内排列时就会换行。
 
-Go ahead and give the  `.card`  an initial width.
+接下来我们给  `.card`  元素一个初始宽度。
 
-Using Flexbox:
+使用Flexbox如下布局:
 
 ```
 .card {  flex: 0 0 250px}
 ```
 
-This will set the  `flex-grow`  and  `flex-shrink`  values to  `0`. The  `flex-basis`  value will be set to  `250px`
+这个样式将  `flex-grow`  和  `flex-shrink`  的值设为0，  `flex-basis`  值为  `250px`。
 
-At this point, the cards will be aligned to the start of the page. They will also stretch along the vertical.
+这时，卡片会在页面的起始处对齐，并且垂直延伸。
 
 ![](https://cdn-media-1.freecodecamp.org/images/dkco2Y-Dru2WyMonIq51riqbYtjVr2Zn3E4T)
 
-cards aligned to the start of the page
+卡片首部对齐
 
-In some cases this may be ideal for your use case. But for most cases, it won’t.
+这有时可能满足你的使用需求，但大部分情况下，都不行。
 
-#### The Default Behavior of Flex Containers
+#### Flex容器的默认设置
 
-The result above is due to the default behavior of flex containers.
+上面的布局是由于flex容器的默认布局设置。
 
-The cards begin at the start of the page on the  `top left`  because  `justify-content`  is set to the value  `flex-start`  .
+卡片在页面内靠顶部左边对齐，因为  `justify-content`  的值默认为  `flex-start`  。
 
-Also, the cards stretch to fill the entire height of the parent element because  `align-items`  is set to  `stretch`  by default.
+同时，卡片垂直拉伸充满整个父元素的高度，因为  `align-items`  的默认值是  `stretch`  。
 
-#### Altering the default values
+#### 改变默认值
 
-We can achieve pretty impressive results by changing the default values that Flexbox offers.
+我们可以通过改变Flexbox提供的默认值来达到更好的效果。
 
-See below:
+看下面几个例子：
 
 ![](https://cdn-media-1.freecodecamp.org/images/hq7D1wJINa5-DC77TMt4e517xOAG6C46yKZ3)
 
@@ -234,9 +232,9 @@ align-items: flex-end; justify-content: center
 
 align-items: center; justify-content: center
 
-To view the final project, see this  [CodePen][5].
+你可以在[CodePen][5]看最终的效果。
 
-### Example 3: How to Build Grids with Flexbox
+### 例3：如何通过Flexbox创建网格布局
 
 Entire CSS frameworks are built on the concept to be discussed in this example. It is pretty important stuff.
 

@@ -170,7 +170,7 @@ api.route(ArtistOne, 'artist_one', '/artists/<int:id>')
 
 ### 发送 GET 和 POST 请求
 
-现在你可以开始使用 API 来[发送 HTTP 请求] [9]。 这可以来自 web 浏览器，或来自 curl 等命令行工具，或来自其他程序（例如，使用 Requests 库的 Python 脚本）。
+现在你可以开始使用 API 来[发送 HTTP 请求][9]。 这可以来自 web 浏览器，或来自 curl 等命令行工具，或来自其他程序（例如，使用 Requests 库的 Python 脚本）。
 
 运行 `application.py` 脚本来启动服务器：
 
@@ -187,7 +187,7 @@ $ python application.py
 curl -i -X POST -H 'Content-Type: application/json' -d '{"data":{"type":"artist", "attributes":{"name":"Salvador Dali", "birth_year":1904, "genre":"Surrealism"}}}' http://localhost:5000/artists
 ```
 
-现在，如果你导航到 [http://localhost:5000/artists] [14]，你将看到刚刚添加的记录。如果你要添加更多记录，它们也将在这里显示，因为这个 URL 路径调用 `artists_many` 端点。
+现在，如果你导航到 [http://localhost:5000/artists][14]，你将看到刚刚添加的记录。如果你要添加更多记录，它们也将在这里显示，因为这个 URL 路径调用 `artists_many` 端点。
 
 您可以导航到相关的 URL 来通过 `id` 编号查看单个艺术家。 例如，要查看第一位艺术家，请打开 [http://localhost:5000/artists/1][15]。
 

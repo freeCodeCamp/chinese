@@ -1,6 +1,6 @@
 > * 原文地址：[Web Development in 2020: What You Should Learn](https://www.freecodecamp.org/news/web-development-2020/)
 > * 原文作者：Quincy Larson
-> * 译者：
+> * 译者：tanjiarui15
 > * 校对者：
 
 ![Web Development in 2020: What You Should Learn](https://www.freecodecamp.org/news/content/images/size/w2000/2019/12/desktop-cropped.jpg)

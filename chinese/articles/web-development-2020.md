@@ -1,49 +1,49 @@
-> * 原文地址：[Web Development in 2020: What You Should Learn](https://www.freecodecamp.org/news/web-development-2020/)
+> * 原文地址：[2020年的Web开发：您应该学习哪些编程工具](https://www.freecodecamp.org/news/web-development-2020/)
 > * 原文作者：Quincy Larson
 > * 译者：tanjiarui15
 > * 校对者：
 
-![Web Development in 2020: What You Should Learn](https://www.freecodecamp.org/news/content/images/size/w2000/2019/12/desktop-cropped.jpg)
+![2020年的Web开发：您应该学习哪些知识](https://www.freecodecamp.org/news/content/images/size/w2000/2019/12/desktop-cropped.jpg)
 
-Today one of my favorite teachers, Brad Traversy, published an overview of what he recommends you learn to become a web developer in 2020.
+今天，我最喜欢的一位老师 Brad Traversy 发表了他向您推荐的 2020 年学习如何成为 Web 开发者的概述。
 
-Brad cuts through a lot of the hype you hear on social media. His advice is practical and realistic. And I agree with him on pretty much everything he recommends you learn.
+Brad 略去了您在社交媒体上听到的许多炒作。他的建议是切实可行的。我赞同他所建议学习的几乎所有知识。
 
-I've summarized some of his main insights below for your convenience. This said, I encourage you to watch his full video, which I've embedded below. He adds a lot of detail way beyond what these notes convey. It's a 73-minute watch.
+为了方便起见，我在下面总结了他的一些主要见解。同时，我建议您观看他的完整视频，该视频已嵌入到下面。除了这些总结所传达的内容之外，他还在视频中详述了许多细节方法。这是一个时长 73 分钟的视频。
 
-I also recommend subscribing to his Traversy Media YouTube channel. Over the past decade, Brad has been an incredibly consistent teacher, and has published nearly 800 videos about technology.
+我还建议您订阅他的 Traversy Media YouTube 频道。在过去的十年中，Brad 一直是一位非常出色的老师，他发表了近 800 部有关技术的视频。
 
-Brad is within striking distance of the 1 million subscriber mark. Let's see if we can help him hit 1 million in time for New Year's.  [You can subscribe here][1].
+Brad 的订阅者数量已经快达到一百万。让我们看看是否可以帮助他在新的一年里达到一百万。[你可以在这里订阅][1].
 
-# Web Development in 2020: An Overview
+# 2020 年的 Web 开发：概述
 
-The main goal of the video is to give you familiarity with some of the more mainstream web development tools available to web developers.
+该视频的主要目的是使您熟悉一些可供 Web 开发者使用的更主流的 Web 开发工具。
 
-"I'm not trying to overwhelm you with technologies. These are just options that you have... There are a lot of technologies out there. When you hear something like Nuxt or Gatsby I want you to know what it is. And then you can choose if you want to learn it or not."
+“我并不想用海量技术淹没你。这些只是您拥有的选择……目前存在很多技术。当您听到类似 Nuxt 或 Gatsby 的声音时，我想让您知道它是什么。然后您可以选择是否要学习。”
 
-Brad starts by encouraging people to first ask what they want to do. Do you want to work on a product company? Or work as a consultant? Do you want to freelance? Or build a product of your own?
+Brad 首先鼓励人们先问他们想做什么。您想在一家产品公司工作吗？还是担任顾问？你想做自由职业吗？还是建立自己的产品？
 
-A lot of his advice about what to learn boils down to what your goals are. And he frames a lot of his tool suggestions in this light.
+他关于学习什么的很多建议都归结为您的目标。因此，他提出了许多工具建议。
 
-As a starting point, he recommends learning what he calls "The Necessities."
+首先，他建议学习所谓的“必需品”。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/12/download--2-.png)
 
-This slide and all subsequent slides come from Brad's video. The underlines indicate the tools he personally recommends.
+该幻灯片和所有后续幻灯片均来自 Brad 的视频。下划线表示他个人推荐的工具。
 
-One counter-intuitive thing he points out: you don't need a fancy computer for web development. "It's not like game engine development or something like that, so you can use a mid-range laptop or desktop, or even in some cases a lower-end computer."
+他指出了一件反直觉的事：您不需要花哨的计算机来进行 Web 开发。“这不像游戏引擎开发之类的东西，因此您可以使用中型笔记本电脑或台式机，甚至还可以使用低端计算机。”
 
-He uses MacOS, Windows 10, and Linux for cloud servers and even for some of his media servers.
+他将 MacOS，Windows 10 和 Linux 用于云服务器，甚至用于某些媒体服务器。
 
-He is a big fan of VS Code for his editor, and uses Chrome and its built-in DevTools for browser-based debugging. This said, he thinks Firefox has come a long way as well and is a viable alternative.
+他非常喜欢 VS Code 的编辑器，并使用 Chrome 及其内置的 DevTools 进行基于浏览器的调试。这就是说，他认为 Firefox 也已经走了很长一段路，并且是可行的替代方案。
 
-He recommends starting with standard HTML and CSS, and learning newer CSS tools like Flexbox and Grid.
+他建议从标准 HTML 和 CSS 开始，并学习更新的 CSS 工具，例如 Flexbox 和 Grid。
 
-He says learning responsive web design in 2020 should be a given. "Every serious project that you create should look good and be completely usable on all devices."
+他认为在 2020 年学习响应式网页设计是理所当然的。“你创建的每一个正式项目都应该看起来协调，并且在所有设备上都可以完全使用。”
 
-Instead of relying on CSS frameworks like Bootstrap, he recommends you practice building your own modular CSS components that you can then re-use throughout your project.
+他建议您练习构建自己的模块化 CSS 组件，以便在整个项目中重用，而不是依赖于 Bootstrap 之类的 CSS 框架。
 
-This said, he says you may encounter these as you work on projects for different employers.
+话虽如此，他说您在为不同雇主从事项目时可能会遇到选择 CSS 框架的问题。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/12/download--4-.png)
 

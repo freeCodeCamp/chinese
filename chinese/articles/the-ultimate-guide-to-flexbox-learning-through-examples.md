@@ -236,86 +236,86 @@ align-items: center; justify-content: center
 
 ### 例3：如何通过Flexbox创建网格布局
 
-Entire CSS frameworks are built on the concept to be discussed in this example. It is pretty important stuff.
+在这个例子中，我们要探讨整体的CSS 框架概念，这是很重要的一点。
 
-#### What is a Grid?
+#### 什么是网格布局？
 
-A grid is a series of intersecting straight vertical and horizontal guide lines used to structure content.
+网格是用来构建内容的一系列水平垂直相交引导线。
 
 ![](https://cdn-media-1.freecodecamp.org/images/06AK1XPmRT2w0zMezFzS2W50a8-xxwmujZEb)
 
-a series of intersecting straight (vertical, horizontal) guide lines
+一系列水平垂直相交引导线
 
-If you’re familiar with CSS frameworks such as Bootstrap, then you sure have used grids before now.
+如果你对Bootstrap这样的CSS框架比较熟悉，那可以确定之前你有使用过网格布局。
 
-Your mileage may differ, but we will consider varying grid types in this example.
+你的目标可能不同，但在这个例子中我们会考虑不同的网格布局类型。
 
-Let’s start with the first one,  **basic grids**.
+我们先来看第一种，**basic grids**
 
-#### Basic Grids
+#### 基本网格布局
 
 ![](https://cdn-media-1.freecodecamp.org/images/emC8Q5HRNl1dVcCGxvvheVNZYpQ0Ce05-MMc)
 
-A set of basic grids each having equally spaced columns
+每套基础的网格都有同样大小的列
 
-These are grids with the following characteristics:
+这些网格有以下特点：
 
--   The grid cells should be spaced equally and expand to fit the entire row.
--   The grid cells should be of equal heights.
+-   网格单元格要平均布局并充满整行。
+-   单元格高度一致。
 
-It is easy to achieve this with Flexbox. Consider the markup below:
+使用Flexbox很容易实现这个效果，看下面这个标记文本：
 
 ```
 <div class="row">  <div class="row_cell">1</div></div>
 ```
 
-Each  `.row`  will be its own flex container.
+每个  `.row`  都是自己的flex容器。
 
-Each element within  `.row`  then becomes a flex item. All flex items distribute evenly across the row.
+  `.row`  里的每个元素也就是flex元素，所有的flex元素平均分布在一行中。
 
-By design, it shouldn’t matter whether we have 3 child elements
+根据设计，可能有3个子元素
 
 ```
 <div class="row">  <div class="row_cell">1/3</div>  <div class="row_cell">1/3</div>  <div class="row_cell">1/3</div></div>
 ```
 
-Or 6 child elements
+或是6个子元素。
 
 ```
 <div class="row">  <div class="row_cell">1/6</div>  <div class="row_cell">1/6</div>  <div class="row_cell">1/6</div>  <div class="row_cell">1/6</div>  <div class="row_cell">1/6</div>  <div class="row_cell">1/6</div></div>
 ```
 
-Or 12 elements
+也有可能是12个
 
 ```
 <div class="row">  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div></div>
 ```
 
-#### The Solution
+#### 解决方案
 
-There are just two steps to doing this.
+达到这个效果只需要两步：
 
-1.  Initiate a Flexbox formatting context:
+1.  设置一个初始的Flexbox布局：
 
 ```
 .row {   display: flex;}
 ```
 
-2\. Have each  `flex-item`  expand to fit the entire row in equal proportions:
+2\. 扩大每个  `flex-item`  元素，让他们以相同比例均匀的布满整行：
 
 ```
 .row_cell {   flex: 1}
 ```
 
-And that’s it.
+就是这样
 
-#### The Solution Explained.
+#### 方案解释。
 
 ```
 flex: 1
 ```
 
-`flex`  is a shorthand property name for setting three distinct Flexbox properties, the  `flex-grow`  ,  `flex-shrink`  and  `flex-basis`  properties, in the order stated.
+`flex`  是  `flex-grow`  、  `flex-shrink`  和  `flex-basis`  三个不同Flexbox属性的缩写。
 
 `flex: 1`  only has the value  `1`  set. This value is attributed to the  `flex-grow` property.
 

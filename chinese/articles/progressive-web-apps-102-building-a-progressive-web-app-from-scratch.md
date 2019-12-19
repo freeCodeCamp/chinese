@@ -196,9 +196,8 @@ window.addEventListener('load', async e => {
 
 ### 下一步
 
-如果你有兴趣自己做一个PWA应用，我强烈推荐你看看这个Google Developers做的[codelabs][3]
+如果你有兴趣自己做一个PWA应用，我强烈推荐你看看这个Google Developers做的[codelabs][3]。
 
 [1]: https://medium.freecodecamp.org/progressive-web-apps-101-the-what-why-and-how-4aa5e9065ac2
 [2]: https://app-manifest.firebaseapp.com/
 [3]: https://codelabs.developers.google.com/codelabs/your-first-pwapp/
-

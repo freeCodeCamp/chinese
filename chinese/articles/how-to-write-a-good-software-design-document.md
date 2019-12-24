@@ -1,6 +1,6 @@
 > * 原文地址：[How to write a good software design doc](https://www.freecodecamp.org/news/how-to-write-a-good-software-design-document-66fcf019569c/)
 > * 原文作者：Angela Zhang
-> * 译者：
+> * 译者：MeloGuo
 > * 校对者：
 
 ![How to write a good software design doc](https://cdn-media-1.freecodecamp.org/images/1*vy3gDPKB1kyhzIqI8DNUvQ.png)

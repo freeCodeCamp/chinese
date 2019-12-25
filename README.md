@@ -21,11 +21,15 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章](https://www.free
 - 在社区中结识优秀的小伙伴，拥抱更多技术成长与职业发展的可能性
 
 ### 译者指南
-
+请在认领翻译前阅读这两篇：
 - [图文详解](./Contributing.md)
 - [翻译技巧](https://github.com/freeCodeCamp/news-translation/wiki/%E7%BF%BB%E8%AF%91%E6%8A%80%E5%B7%A7)
+在校对了好多篇文章之后，我们发现不少文章有一些类似的小问题，在这里特别提醒一下：
+- 在翻译 you 这个单词的时候，不需要使用敬语”您“，使用”你“即可
+- 中英文之间加空格，这点在翻译技巧中有写
+- 翻译好之后可以自己读一遍，看是否流畅，是否符合中文的表达习惯
 
-### 参与 review
+### 参与 review（校对）
 每一篇翻译好的文章，我们会有一位贡献者对其进行 review。如果你希望参与 review，请在 [Review-awaiting](https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3AReview-awaiting) 列表选取文章并留言“认领校对”，我们会邀请你成为 collaborator。
 
 ### 发表

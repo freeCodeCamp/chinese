@@ -1,6 +1,6 @@
 > * 原文地址：[The Vue Handbook: a thorough introduction to Vue.js](https://www.freecodecamp.org/news/the-vue-handbook-a-thorough-introduction-to-vue-js-1e86835d8446/)
 > * 原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> * 译者：
+> * 译者：blackcai
 > * 校对者：
 
 ![The Vue Handbook: a thorough introduction to Vue.js](https://cdn-media-1.freecodecamp.org/images/1*Nzc4LiAlVXl8ic9T6v31zw.jpeg)

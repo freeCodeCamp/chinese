@@ -24,6 +24,7 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章](https://www.free
 请在认领翻译前阅读这两篇：
 - [图文详解](./Contributing.md)
 - [翻译技巧](https://github.com/freeCodeCamp/news-translation/wiki/%E7%BF%BB%E8%AF%91%E6%8A%80%E5%B7%A7)
+
 在校对了好多篇文章之后，我们发现不少文章有一些类似的小问题，在这里特别提醒一下：
 - 在翻译 you 这个单词的时候，不需要使用敬语”您“，使用”你“即可
 - 中英文之间加空格，这点在翻译技巧中有写

@@ -3,23 +3,37 @@
 > * 译者：blackcai
 > * 校对者：
 
-![The Vue Handbook: a thorough introduction to Vue.js](https://cdn-media-1.freecodecamp.org/images/1*Nzc4LiAlVXl8ic9T6v31zw.jpeg)
+[The Vue Handbook: a thorough introduction to Vue.js](https://cdn-media-1.freecodecamp.org/images/1*Nzc4LiAlVXl8ic9T6v31zw.jpeg)
 
 > Get this post in PDF/ePub/MOBI format at  [vuehandbook.com][1]
 
 Vue is a very popular JavaScript front-end framework, one that’s experiencing a huge amount of growth.
 
+Vue 是一款非常受欢迎的前端框架，它正在快速的成长。
+
 It is simple, tiny (~24KB), and very performant. It feels different from all the other JavaScript front-end frameworks and view libraries. Let’s find out why.
+
+它简单、小巧（~24kb）且有着很优秀的性能。它与其它的 JavaScript 前端框架和视图库有着不同的感觉。让我们来找出（它们）不同的原因吧。
 
 This post is pretty big!  [Get it in PDF or ePub format here!][2]
 
+这篇文章很长！[在这里以 PDF 或者 ePub 的格式获取它][2]
+
 ### First, what is a JavaScript front-end framework?
+
+### 首先，什么是 JavaScript 前端框架？
 
 If you’re unsure what a JavaScript framework is, Vue is the perfect first encounter with one.
 
+如果你不确定什么是 JavaScript 框架，Vue 将是你最好的选择。
+
 A JavaScript framework helps us to create modern applications. Modern JavaScript applications are mostly used on the Web, but also power a lot of Desktop and Mobile applications.
 
+一个 JavaScript 框架可以帮助我们创建现代应用程序。现代 JavaScript 应用程序主要用在 Web 上，但是也为许多的桌面和移动应用程序提供支持。
+
 Until the early 2000s, browsers didn’t have the capabilities they have now. They were a lot less powerful, and building complex applications inside them was not feasible performance-wise. The tooling was not even something that people thought about.
+
+直到21世纪初，浏览器才具备现在的功能。
 
 Everything changed when Google unveiled  [Google Maps][3]  and  [GMail][4], two applications that ran inside the browser.  [Ajax][5]  made asynchronous network requests possible. Over time, developers started building on top of the Web platform, while engineers worked on the platform itself — browsers, the Web standards, the browser APIs, and the JavaScript language.
 

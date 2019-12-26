@@ -1,173 +1,177 @@
-> * 原文地址：[Web Development in 2020: What You Should Learn](https://www.freecodecamp.org/news/web-development-2020/)
+> * 原文地址：[2020年的Web开发：你应该学习哪些编程工具](https://www.freecodecamp.org/news/web-development-2020/)
 > * 原文作者：Quincy Larson
-> * 译者：
+> * 译者：tanjiarui15
 > * 校对者：
 
-![Web Development in 2020: What You Should Learn](https://www.freecodecamp.org/news/content/images/size/w2000/2019/12/desktop-cropped.jpg)
+![2020 年 Web 开发者学习路线](https://www.freecodecamp.org/news/content/images/size/w2000/2019/12/desktop-cropped.jpg)
 
-Today one of my favorite teachers, Brad Traversy, published an overview of what he recommends you learn to become a web developer in 2020.
+今天，我最喜欢的老师之一，Brad Traversy，发布了一个视频，主题是：2020 年，要成为一名 Web 开发者，我推荐你学习这些知识。
 
-Brad cuts through a lot of the hype you hear on social media. His advice is practical and realistic. And I agree with him on pretty much everything he recommends you learn.
+Brad 主要强调了一点——也是我经常强调的——那就是：学习的时候不要感到畏惧或者手足无措。
 
-I've summarized some of his main insights below for your convenience. This said, I encourage you to watch his full video, which I've embedded below. He adds a lot of detail way beyond what these notes convey. It's a 73-minute watch.
+我想提醒读者：freeCodeCamp 的课程涵盖了 Brad 所介绍的大部分工具，已经帮助 40,000 多学员获得开发者工作。如果你犹疑不决，大可以专注在 freeCodeCamp 学习。
 
-I also recommend subscribing to his Traversy Media YouTube channel. Over the past decade, Brad has been an incredibly consistent teacher, and has published nearly 800 videos about technology.
+Brad 过滤掉你在社交媒体上听过的各种炒作宣传，给出实事求是的建议。他的建议是切实可行的。我赞同他所建议学习的几乎所有知识。
 
-Brad is within striking distance of the 1 million subscriber mark. Let's see if we can help him hit 1 million in time for New Year's.  [You can subscribe here][1].
+为了方便起见，我在下面总结了他的一些主要见解。同时，我建议你观看他的完整视频，链接地址：https://youtu.be/0pThnRneDjw 。除了这些总结所传达的内容之外，他还在视频中详述了许多细节方法。这是一个时长 73 分钟的视频。
 
-# Web Development in 2020: An Overview
+我还建议你订阅他的 Traversy Media YouTube 频道。在过去的十年中，Brad 一直是一位非常出色的老师，他发表了近 800 部有关技术的视频。
 
-The main goal of the video is to give you familiarity with some of the more mainstream web development tools available to web developers.
+Brad 的订阅者数量已经快达到一百万。让我们看看是否可以帮助他在新的一年里达到一百万。[你可以在这里订阅][1].
 
-"I'm not trying to overwhelm you with technologies. These are just options that you have... There are a lot of technologies out there. When you hear something like Nuxt or Gatsby I want you to know what it is. And then you can choose if you want to learn it or not."
+# 2020 年的 Web 开发：概述
 
-Brad starts by encouraging people to first ask what they want to do. Do you want to work on a product company? Or work as a consultant? Do you want to freelance? Or build a product of your own?
+该视频的主要目的是使你熟悉一些可供 Web 开发者使用的更主流的 Web 开发工具。
 
-A lot of his advice about what to learn boils down to what your goals are. And he frames a lot of his tool suggestions in this light.
+“我并不想用海量技术淹没你。这些只是你拥有的选择……目前存在很多技术。当你听到类似 Nuxt 或 Gatsby 的声音时，我想让你知道它是什么。然后你可以选择是否要学习。”
 
-As a starting point, he recommends learning what he calls "The Necessities."
+Brad 首先鼓励人们先问自己想做什么：是在一家产品公司工作，还是担任顾问，还是成为自由职业者，或者是构建自己的产品？
+
+他关于学习什么的很多建议都归结为你的目标。因此，他提出了许多工具建议。
+
+首先，他建议学习所谓的“必需品”。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/12/download--2-.png)
 
-This slide and all subsequent slides come from Brad's video. The underlines indicate the tools he personally recommends.
+该幻灯片和所有后续幻灯片均来自 Brad 的视频。下划线表示他个人推荐的工具。
 
-One counter-intuitive thing he points out: you don't need a fancy computer for web development. "It's not like game engine development or something like that, so you can use a mid-range laptop or desktop, or even in some cases a lower-end computer."
+他指出了一件反直觉的事：你不需要花哨的计算机来进行 Web 开发。“这不像游戏引擎开发之类的东西，因此你可以使用一台中档笔记本或者台式机，有些情况下甚至一台低档计算机就够用了。”
 
-He uses MacOS, Windows 10, and Linux for cloud servers and even for some of his media servers.
+Brad 使用 MacOS，Windows 10 和 Linux 配置云服务和一些媒体服务。
 
-He is a big fan of VS Code for his editor, and uses Chrome and its built-in DevTools for browser-based debugging. This said, he thinks Firefox has come a long way as well and is a viable alternative.
+他非常喜欢 VS Code 的编辑器，并使用 Chrome 及其内置的 DevTools 进行基于浏览器的调试。另外，他认为 Firefox 也已经很成熟，并且是可行的替代方案。
 
-He recommends starting with standard HTML and CSS, and learning newer CSS tools like Flexbox and Grid.
+他建议从标准 HTML 和 CSS 开始，并学习更新的 CSS 工具，例如 Flexbox 和 Grid。
 
-He says learning responsive web design in 2020 should be a given. "Every serious project that you create should look good and be completely usable on all devices."
+他认为在 2020 年学习响应式网页设计是必须的，“你创建的每一个正式项目应该在各种设备上运行良好”。
 
-Instead of relying on CSS frameworks like Bootstrap, he recommends you practice building your own modular CSS components that you can then re-use throughout your project.
+他建议你练习构建自己的模块化 CSS 组件，以便在整个项目中重用，而不是依赖于 Bootstrap 之类的 CSS 框架。
 
-This said, he says you may encounter these as you work on projects for different employers.
+说到这，他认为你在为不同雇主开发项目时可能会遇到选择 CSS 框架的问题。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/12/download--4-.png)
 
-Bootstrap is still by far the most popular CSS framework, but there are a few other widely-used ones, too.
+Bootstrap 仍然是目前最流行的 CSS 框架，但是也有一些其他的被广泛使用的框架。
 
-He specifically mentions Tailwind, which I hadn't heard of before. Tailwind is a bit different from other CSS frameworks. It's focused on "utility classes" that you can combine to accomplish what you want with the design.
+他特别提到了 Tailwind，这是我以前从未听说过的。Tailwind 与其他 CSS 框架略有不同。它着重于 "utility classes"，你可以将其组合以完成设计样式。
 
-It's no surprise that Brad recommends getting really good with JavaScript.
+意料之中的是，Brad 推荐你掌握 JavaScript。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/12/download--5-.png)
 
-Some of the fundamentals you should get good with. Brad has videos for most of these topics, and most of this is covered in the freeCodeCamp curriculum as well.
+这里是一些你应该掌握的基础知识。Brad 有这些主题的大部分视频，其中大部分内容也包含在 freeCodeCamp 课程中。
 
-## Learning at a Practical Pace
+## 在实践中学习
 
-Throughout Brad's guide, he repeatedly emphasizes the need for practicality.
+在 Brad 的整个指南中，他反复强调实用性的必要性。
 
-Yes - there are best practices for everything. But in many cases, there is a good enough way that will help you move faster and get more done, without getting mired in tools.
+是的————每件事都有最佳实践。但是在很多情况下，有一种足够好的方法可以帮助你更快地前进并完成更多的工作，而不会陷入工具的泥潭。
 
-One of the most interesting (and perhaps heretical) things he says:
+他说过的最有趣（或许也是最和主流观点唱反调的）的一句话是：
 
-"There's no need to learn DevOps and AWS and all these things for a small site. A hosting site or a managed hosting site like InMotion or Hostgator is fine. It allows you to do \[deployment\] right in the browser. There's no need to overcomplicate things."
+“无需为小型站点学习 DevOps 和 AWS 以及所有这些东西。托管站点或托管主机站点（如 InMotion 或 Hostgator）就可以了。它可以让你直接在浏览器中进行 [部署]。不需要让事情变得太复杂。”
 
-He argues that even in 2020, there's something to be said for using familiar tools.
+他认为，即便是在2020年，使用熟悉的工具也是有好处的。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/12/download--6-.png)
 
-For people new to web development, Brad recommends first getting to the point of being able to work as a basic front end web developer. This will allow you to build websites for local businesses as a freelancer.
+对于刚接触 Web 开发的人员，Brad 建议首先要能够成为基本的前端 Web 开发人员。这样你就可以作为自由职业者为本地企业建立网站。
 
-"Hipsters will say you definitely need to use a front end framework. I don't think that is true. If you want to render templates on the server without using a front end framework, I think that's absolutely fine, but there are many many jobs that are looking for something like React or Vue."
+“潮人会说你绝对需要使用前端框架。我不赞成。如果你想在不使用前端框架的情况下在服务器上渲染模板，我认为这是完全可以的，但是有很多很多的工作要求你具有使用类似 React 或 Vue 框架的技能。”
 
-But once you're ready to tackle front end frameworks, he recommends you explore React, Vue, and Angular. "Try all three and figure out which one you like the best."
+但是一旦你准备好应对前端框架，他建议你探索 React，Vue 和 Angular。“尝试所有三个，找出最喜欢的一个。”
 
-He also gives a nod to Svelte - which isn't a framework, but rather a compiler. But he says it's probably too new to try and pick up in 2020.
+他还认可了 Svelte————它不是一个框架，而是一个编译器。但他表示，这可能太新了，无法在 2020 年尝试实用。
 
-And he discusses the increasing popularity of Server Side Rendering. File system-based routing means you don't have to create a complicated routing file. Instead, you can just put the files in the directory you want them to be in.
+他讨论了服务器端渲染（SSR）的日益普及。基于文件系统的路由意味着你不必创建复杂的路由文件。相反，你可以将文件放在任何你认为合适的目录中。
 
-The two popular Server Side Rendering tools are Next.js (for React) and Nuxt.js (the Vue option).
+两种流行的服务器端渲染工具是 Next.js（用于 React）和 Nuxt.js（用于 Vue）。
 
-Another emerging trend is Static Site Renders, which he says you don't need to learn but you should be aware of. For example, Gatsby sites are extremely fast and don't need a server.
+另一个新兴的趋势是静态网站渲染，他说，你不需要学习，但你应该知道。例如，Gatsby 站点非常快，不需要服务器。
 
-## Back End Development Tools
+## 后端开发工具
 
 ![](https://www.freecodecamp.org/news/content/images/2019/12/download--7-.png)
 
-A slide from Brad's talk with the most popular frameworks for each language.
+Brad 演讲的幻灯片，其中包含每种语言最流行的框架。
 
-For server-side development, Brad prefers Node.js for its speed and because he can use the JavaScript on both front and back end.
+对于服务器端开发，Brad 更喜欢 Node.js 的速度，因为它的速度快，并且他可以在前端和后端都使用 JavaScript。
 
-For server side development frameworks, he recommends learning Express since it's the most popular and "it gives you a lot of freedom to build things how you want your own way."
+对于服务器端开发框架，他建议学习 Express，因为它是最流行的，而且“它给了你很多自由，可以按照自己的方式构建东西”。
 
-He also uses Python for some projects, and recommends it as well.
+他还在一些项目中使用Python，并推荐使用它。
 
-"Python has two awesome frameworks. Django is a large, full featured framework, where as Flask is more minimalistic. It gives you what you need but you make the rest of the decisions. I honestly can't pick one of the two, I love them both and use them for different things."
+“Python 有两个很棒的框架。Django 是一个大型的，功能齐全的框架，Flask 更加简约。它提供了你所需的内容，但你可以做出其余的决定。老实说，我对这两个框架没有偏好，我两个都喜欢，将它们用于不同需求。”
 
-And he's quick to come to the defense of PHP:
+他快速简要地为PHP辩护：
 
-"A lot of people give crap to PHP and it's unfortunate because PHP can be a great language. It's practical and it's simple to deploy just about anywhere. PHP is great for freelancers that need to get stuff out quickly. If you're planning on working for a large company, PHP may not be the best choice, but if you're freelancing and building personal projects, PHP can be great choice. It's become cool to bash PHP. PHP was the first language I learned and I still really like it... If you look at Laravel code it's very elegant."
+“很多人都讨厌 PHP，这很不幸，因为 PHP 可以是一门很棒的语言。它很实用，并且可以在任何地方轻松部署。PHP 非常适合需要快速出手的自由职业者。如果你打算在一家大公司工作，PHP 可能不是最佳选择，但是如果你要自由职业和构建个人项目，PHP 可能是个不错的选择。抨击 PHP 现在是很流行的行为。PHP 是我学到的第一门语言，我仍然非常喜欢它……如果你查看 Laravel 代码，它非常优雅。”
 
-Brad also does a quick walkthrough of databases, and recommends perennial favorite PostgreSQL.
+Brad 还快速介绍了一下数据库，并推荐了长期受欢迎的 PostgreSQL。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/12/download--8-.png)
 
-## Other Tools That are Probably Here to Stay
+## 其他可能会保留的工具
 
-GraphQL is an alternative to REST for APIs. There are several courses that cover GraphQL on both Brad's channel and on freeCodeCamp's channel. But he says, "GraphQL is not something that you have to learn these days, but it's big enough that I think it's here to stay. It's more than a trend."
+GraphQL 是 REST API 的替代品。在 Brad 的频道和 freeCodeCamp 的频道上都有一些课程介绍 GraphQL。但是他说，“GraphQL 现在还不是你必须学习的东西，但它已经足够流行了，我认为它会一直存在下去。这不仅仅是一种趋势。”
 
-Brad also talks about Content Management Systems (CMS's) and how they are evolving into new "headless" options where you just use them as a back end and code your own front end.
+Brad 还讨论了内容管理系统（CMS）以及它如何演变成新的“无头”CMS，你可以将它用作后端并编写自己的前端。
 
-"CMS's are very handy for freelancers who have clients that want to be able to log in and create their blog posts and stuff like that. A lot of people bash WordPress, but there's a huge percentage of websites on the internet that are run by WordPress and it's still very popular."
+“CMS 对于自由职业者来说非常方便，他们的客户希望能够登录并创建他们的博客和类似的东西。很多人抨击 WordPress，但在互联网上有很大比例的网站是由 WordPress 运行的，它仍然很受欢迎。”
 
-For webservers he prefers NGINX to Apache because "it seems to be less complicated." We use NGINX extensively at freeCodeCamp and I am inclined to agree.
+对于 Web 服务器，他更喜欢 NGINX 而不是 Apache，因为“它看起来没那么复杂”。我们在 freeCodeCamp 广泛使用 NGINX，我倾向于同意。
 
-Brad also explains how virtualization works, and talks about how it can simplify more complex projects by standardizing the environment across multiple computers. But he cautions against trying to virtualize everything:
+Brad 还解释了虚拟化的工作原理，并讨论了虚拟化如何通过跨多台计算机标准化环境来简化更复杂的项目。但是他告诫不要尝试虚拟化所有内容：
 
-"Docker is really good for teams. What I don't like is when people say you should always use Docker. It's just preference. If you just want to run a local LAMP server, there's nothing wrong with that. Don't feel pressure to learn something like Docker."
+“Docker 确实对团队非常有用。我不喜欢别人说你应该始终使用 Docker。这只是首选项。如果你只想运行本地 LAMP 服务器，那没有什么错。对学习类似 Docker 的东西不要感到有压力。”
 
-And he adds, to emphasize something I personally cannot emphasize enough: "I know a lot of nerdy types just want to overcomplicate things and I hate that. Just because I'm listing all of this doesn't mean I'm pushing it on you."
+他补充道，“我知道很多书呆子只想把事情复杂化，我讨厌这样。我列出了所有这些东西，并不意味着我把它强加给你”。这一点我自己没有足够地强调。
 
-He's also quick to point out that most big companies have dedicated DevOps teams (also called "Site Reliability Engineers") who can do a lot of this for you.
+他还快速简要地指出，大多数大公司都有专门的 DevOps 团队（也称为“站点可靠性工程师”），他们可以为你做很多事情。
 
-## Nice To Have Skills You Can Learn as Specialties
+## 掌握一些更彰显专业度的技能是很棒的事情
 
-If you want to test your hands at mobile app development, Brad strongly recommends the Flutter framework. It uses Dart, which is a more obscure language. He describes Dart as somewhere between Java and JavaScript, and says if you know either of those languages you should be able to pick it up.
+如果你想尝试移动应用程序的开发，Brad 强烈建议使用 Flutter 框架。它使用 Dart，这是一种比较晦涩的语言。他将 Dart 描述为介于 Java 和 JavaScript 之间的某个地方，并说如果你知道这两种语言中的任何一种，都应该可以使用它。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/12/download--9-.png)
 
-His second choice for mobile app development is React Native, which is easy to pick up if you already know React.
+他在移动应用程序开发中的第二个选择是 React Native，如果你已经知道 React，就很容易上手。
 
-Brad then does a great job of explaining what Progressive Web Apps are and some of the benefits of them. Here's the slide, but again, I strongly encourage you to watch his full video.
+然后 Brad 很好地解释了什么是渐进式 Web 应用（PWA）以及它们的一些好处。这是幻灯片，但我还是强烈建议你们看他的完整视频。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/12/download--10-.png)
 
-Then he touches on Electron, which allows you to build desktop applications using JavaScript. He was initially skeptical but says some of his favorite desktop apps - like VS Code and Discord - are now built using Electron.
+然后，他谈到了 Electron，它使你可以使用 JavaScript 构建桌面应用程序。他最初表示怀疑，但提到他最喜欢的一些桌面应用程序（例如 VS Code 和 Discord）现在使用 Electron 构建。
 
-He mentions the JAMstack (JavaScript, APIs, and Markup) and serverless architecture. These are more advanced topics, but he has some videos on this, too.
+他提到了 JAMstack（客户端 JavaScript，可重用 API 和预构建标记 Markup）和 serverless 架构。这些都是更高级的主题，他的频道和 freeCodeCamp 的 YouTube 频道都提供了视频教程。
 
-And then he gets to the big trends for 2020.
+然后他描述了2020年的大趋势。
 
-## Machine Learning and Web Assembly
+## 机器学习和 WebAssembly
 
-Just because everyone else is talking about machine learning doesn't mean you have to drop everything and learn it. That's how he prefaces this stage of his talk.
+尽管其他所有人都在谈论机器学习，但是这不意味着你应该放弃所有东西来学习它。这是他的整个视频分享的基调。
 
-And yes, you can do machine learning in JavaScript, too.
+是的，你也可以使用 JavaScript 进行机器学习。
 
-"Python is the king for Machine Learning. But even with JavaScript you have TensorFlow.js, you have Brain.js to create neural networks and do some real cool stuff."
+“Python 是机器学习的首选语言。不过，如果你也可以使用 JavaScript 里的 TensorFlow.js 和 Brain.js 来创建神经网络并做一些非常酷的事情。”
 
-It's clear from the way he talks about Web Assembly that he's pretty excited about it.
+从他谈论 WebAssembly 的方式可以明显看出，他对此感到非常兴奋。
 
-"Web Assembly is still in its early stages but I think we're going to see more of it this year. Traditionally we use JavaScript on the web page to manipulate the DOM and run calculations. JavaScript has limitations in terms of speed. A language like C or C++ is much faster than JavaScript. So Web Assembly is an efficient, low-level byte code that can be executed by a browser and it's extremely fast. It can be generated by languages like C, C++, and Rust."
+“WebAssembly 仍处于早期阶段，但我认为我们今年会看到更多。传统上，我们在网页上使用 JavaScript 来操纵 DOM 并运行计算。JavaScript 在速度方面有局限性。一种语言就像 C 或 C++ 比 JavaScript 快得多。因此，WebAssembly 是一种高效的低级字节代码，可以由浏览器执行，并且速度非常快。它可以由 C，C++ 和 Rust 等语言生成。”
 
-Rust is one of the languages you can use with WebAssembly (in addition to C and C++). It's significantly easier to learn and use than C and C++.
+Rust 是 WebAssembly 可以使用的语言之一（除了 C 和 C++）。它比 C 和 C++ 更容易学习和使用。
 
-But it's important to note that WebAssembly doesn't excuse you from having to learn JavaScript.
+但是需要特别注意的是，WebAssembly 不会让你不必学习 JavaScript。
 
-"You can almost think of JavaScript as the boss, and it can tell Web Assembly what to do. So it allows us to use really fast low-level languages like C++ in our web apps, and this gives us a lot more capabilities - like next level video games and video editing tools right in the browser - things that are unthinkable with just JavaScript."
+“你几乎可以将 JavaScript 视为老板，它可以告诉 Web Assembly 该怎么做。因此，它使我们能够在我们的 Web 应用程序中使用非常快速的低级语言（例如 C++），这为我们提供了更多功能————例如下一代视频游戏和视频编辑工具，就可以在浏览器中找到，这是 JavaScript 所无法想象的。”
 
-In closing he says, "The more you learn, the easier it is to learn more and to fit all of these technologies together. Try not to get overwhelmed. Take it one step at a time and do some research, and figure out what you want to do."
+最后他说：“学到的越多，就更容易学习更多，将所有这些技术融合在一起就越容易。请不要原地踌躇。一次迈出一步，做一些研究，弄清楚你想做什么。”
 
-Again, I want to thank Brad Traversy for putting together this comprehensive video.
+再一次，我要感谢 Brad Traversy，是他为我们提供了这段全面的视频介绍。
 
-People ask me all the time "what should I learn if I want to become a web developer?" And my answer is "just use freeCodeCamp as your core curriculum, and branch out into other learning resources as you go."
+人们总是问我“如果我想成为一名web开发人员，我应该学习什么?”我的回答是“把freeCodeCamp作为你的核心课程，然后扩展到其他学习资源。
 
-And I'm happy to say that  [Brad's Traversy Media YouTube channel][2]  is one of those resources I recommend most highly. Brad, if you're reading this, congrats on 10 years of YouTube videos. Here's to 10 more.
+我很高兴地说，[Brad 的 Traversy Media YouTube 频道][2]是我最推荐的其他资源之一。Brad，如果你正在读这篇文章，恭喜你拥有十年的YouTube视频。期待下个十年！
 
 [1]: https://www.youtube.com/user/TechGuyWeb
 [2]: https://www.youtube.com/user/TechGuyWeb

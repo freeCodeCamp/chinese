@@ -1,6 +1,6 @@
 > * 原文地址：[A Career Switcher’s Guide to Landing Your Dream Tech Job](https://www.freecodecamp.org/news/career-switchers-guide-to-your-dream-tech-job/)
 > * 原文作者：David Tian
-> * 译者：
+> * 译者：N
 > * 校对者：
 
 ![A Career Switcher’s Guide to Landing Your Dream Tech Job](https://www.freecodecamp.org/news/content/images/size/w2000/2019/11/googleplex.jpg)

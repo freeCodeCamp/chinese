@@ -33,29 +33,51 @@ A JavaScript framework helps us to create modern applications. Modern JavaScript
 
 Until the early 2000s, browsers didn’t have the capabilities they have now. They were a lot less powerful, and building complex applications inside them was not feasible performance-wise. The tooling was not even something that people thought about.
 
-直到21世纪初，浏览器才具备现在的功能。
+直到21世纪初，浏览器才具备现在的功能。它们的性能要弱得多，并且在里面构建复杂的应用程序是不可行的。这个工具甚至不是人们所想要的东西。
 
 Everything changed when Google unveiled  [Google Maps][3]  and  [GMail][4], two applications that ran inside the browser.  [Ajax][5]  made asynchronous network requests possible. Over time, developers started building on top of the Web platform, while engineers worked on the platform itself — browsers, the Web standards, the browser APIs, and the JavaScript language.
 
+当谷歌发布了 [Google Maps][3] 和 [GMail][4] 这两款运行在浏览器里面的应用之后，一切都变了。 [Ajax][5] 使异步网络请求成为可能。慢慢的，开发者们开始 =========
+
 Libraries like  [jQuery][6]  and  [Mootools][7]  were the first big projects that built upon JavaScript and were hugely popular for a while. They basically provided a nicer API to interact with the browser and provided workarounds for bugs and inconsistencies among the various browsers.
+
+像 [jQuery][6] 和 [Mootools][7] 这样的库是第一批基于 JavaScript 的大型项目，并且在一段时间内非常的受欢迎。它们基本上提供了更好的 API 来与浏览器交互，并为不同的浏览器之间的错误和不一致提供了解决方案。
 
 Frameworks like  [Backbone][8],  [Ember][9],  [Knockout][10], and  [AngularJS][11]  were the first wave of modern JavaScript frameworks.
 
+像 [Backbone][8]、[Ember][9]、[Knockout][10] 和 [AngularJS][11] 这样的框架是现代 JavaScript 框架的第一波浪潮。
+
 The second wave, which is the current one, has  [React][12],  [Angular][13], and  [Vue][14]  as its main actors.
+
+第二波浪潮则是目前的一波， 以 [React][12]、 [Angular][13]、和 [Vue][14] 作为主要的行动者。
 
 Note that jQuery, Ember and the other projects I mentioned are still being heavily used, actively maintained, and millions of websites rely on them.
 
+值得注意的是，Jquery、 Ember 和我提到的其它项目仍被大量使用、积极维护，数百万网站依赖他们。
+
 That said, techniques and tools evolve, and as a JavaScript developer, you’re now likely to be required to know React, Angular or Vue rather than those older frameworks.
+
+也就是说，技术和工具在不断发展，而作为 JavaScript 开发人员，你现在需要知道 React、Angular 或者Vue，而不是那些旧的框架。
 
 Frameworks abstract the interaction with the browser and the DOM. Instead of manipulating elements by referencing them in the DOM, we  [declaratively][15]  define and interact with them, at a higher level.
 
+框架抽象了与浏览器和 DOM 的交互。我们不是通过在 DOM 中引用元素来操作元素，而是在更高的层次 [声明性][15] 定义并与他们交互。
+
 Using a framework is like using the  [C programming language][16]  instead of using the  [Assembly language][17]  to write system programs. It’s like using a computer to write a document instead of using a typewriter. It’s like having a self-driving car instead of driving the car yourself.
+
+使用框架就像使用 [C 语言编程][16] 而不是 [汇编语言][17] 编写系统程序。这就像使用电脑写文档而不是打字机。这就像有一辆自动驾驶汽车而不是自己开车。
 
 Well, not that far, but you get the idea. Instead of using low-level APIs offered by the browser to manipulate elements, and building hugely complex systems to write an application, you use tools built by very smart people that make our life easier.
 
+好了，不说太远了，但是你知道。不要使用浏览器提供的低级 API 来操作元素，而是使用非常聪明的人构建的工具是我们的生活更轻松，这些工具可以构建非常复杂的系统。
+
 ### The popularity of Vue
 
+### 受欢迎的 Vue
+
 How popular is Vue.js?
+
+Vue.js 有多受欢迎。
 
 Vue had:
 
@@ -64,15 +86,32 @@ Vue had:
 
 and it has more than 100,000+ stars on GitHub, as of June 2018.
 
+Vue 有：
+
+-   7,600 2016年在 GitHub 上的 stars 数
+-   36,700 2017年在 GitHub 上的 stars 数
+-   82,400 2018年在 GitHub 上的 stars 数
+-   154,833 2019年在 GitHub 上的 stars 数
+
 Its  [npm][18]  download count is growing every day, and now it’s at ~350,000 downloads per week.
+
+它在 [npm][18] 的下载数量每天都在增长，现在它的下载量大约每周 790,000次
 
 I would say Vue is very popular, given those numbers.
 
+考虑到这些数据，我想说 Vue 很受欢迎。
+
 In relative terms, it has approximately the same numbers of GitHub stars as React, which was born years before.
+
+相对而言，它在 GitHub 上的 stars 数量与几年前诞生的 React 大致相同。
 
 Numbers are not everything, of course. The impression I have of Vue is that developers  **love**  it.
 
+当然，数字不是一切。我对 Vue 的印象是开发人员们**爱**它。
+
 A key point in time of the rise of Vue has been the adoption in the Laravel ecosystem, a hugely popular PHP web application framework. But since then it has become widespread among many other development communities.
+
+Vue 崛起的一个关键点就是 Laravel 生态系统的采用，这是一个非常流行的 PHPWeb 应用程序框架，但是从那以后，它在许多其他的开发社区中普遍存在。
 
 #### Why developers love Vue
 

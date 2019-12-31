@@ -115,47 +115,90 @@ Vue 崛起的一个关键点就是 Laravel 生态系统的采用，这是一个�
 
 #### Why developers love Vue
 
+#### 为什么开发者们喜欢 Vue
+
 First, Vue is called a progressive framework.
+首先，Vue 被称为渐进式框架。
 
 This means that it adapts to the needs of the developer. Other frameworks require a complete buy-in from a developer or team and often want you to rewrite an existing application because they require some specific set of conventions. Vue happily lands inside your app with a simple  `script`  tag to start with, and it can grow along with your needs, spreading from 3 lines to managing your entire view layer.
 
+这意味着它可以适应开发人员的需要。其他框架需要开发人员或团队的全面支持，并且常常想要你重写现有的应用程序，因为他们有一些特别的约定。Vue 以一个简单的 `script` 标签开始愉快的进入你的应用程序，并且它可以随着你的需求而增长，从3行扩展到你的整个视图层。
+
 You don’t need to know about  [webpack][19],  [Babel][20], npm or anything to get started with Vue. But when you’re ready, Vue makes it simple for you to rely on them.
+
+你不需要知道 [webpack][19]、 [Babel][20]、 npm 或者任何与 Vue 有关的东西。但是当你准备好了，Vue会让你更容易的依赖它们。
 
 This is one great selling point, especially in the current ecosystem of JavaScript front-end frameworks and libraries that tend to alienate newcomers and also experienced developers that feel lost in the ocean of possibilities and choices.
 
+这是一个非常好的卖点，特别是在当前的 JavaScript 前端框架和库的生态系统中，它们往往会疏远新人，并且让有经验的开发者在各种可能性和选择的海洋中感到迷茫。
+
 Vue.js is probably the most approachable front-end framework around. Some people call Vue the  **new jQuery**, because it easily gets in the application via a script tag, and gradually gains space from there. Think of it as a compliment, since jQuery dominated the Web in the past few years, and it still does its job on a huge number of sites.
+
+Vue.js 可能是最容易理解的前端框架。有些人将 Vue 称为 **new Jquery（新一代的 Jquery）**，因为它可以通过应用程序中的一个 script 标记而引用，并通过它逐渐地获得空间。可以把它看做一种恭维，因为 jQuery 在过去几年中主导了 Web，而且它仍然在大量的站点上发挥作用。
 
 Vue was built by picking the best ideas of frameworks like Angular, React and Knockout, and by cherry-picking the best choices those frameworks made. And by excluding some less brilliant ones, it kind of started as a “best-of” set and grew from there.
 
+Vue 借鉴了 Angular、React 和 Knockout 等框架的核心理念，并筛选出了最佳的选择构建而成的。并且通过排除一些不太出色的（选择），它开始成为一个“最好的”集合，并从那里开始发展。
+
 #### Where does Vue.js position itself in the frameworks landscape?
+
+#### Vue.js 在框架领域的定位是什么？
 
 The two elephants in the room, when talking about web development, are React and Angular. How does Vue position itself relative to those two big and popular frameworks?
 
+在讨论 web 开发时，房间里就像有两头名为 React 和 Angular 的大象。相遇与这两个大而流行的框架，Vue 是如何给自己定位的呢？
+
 Vue was created by Evan You when he was working at Google on AngularJS (Angular 1.0) apps. It was born out of a need to create more performant applications. Vue picked some of the Angular templating syntax, but removed the opinionated, complex stack that Angular required, and made it very performant.
+
+Vue 是尤雨溪在谷歌开发 AngularJS（Angular 1.0）应用时创建的。它是出于创建性能更高的应用程序的需要而诞生的。Vue 选择了 Angular 的一些模板语法，但去掉了 Angular 必要的固执的负责堆栈，使它变的非常高效。
 
 The new Angular (Angular 2.0) also solved many of the AngularJS issues, but in very different ways. It also requires a buy-in to  [TypeScript][21]  which not all developers enjoy using (or want to learn).
 
+新的 Angular(Angular 2.0) 也解决了很多 AngularJS 的问题，但是方式截然不同。它还需要一个对 [TypeScript][21] 的支持，不是所有的开发人员都喜欢使用（或者想要学习）。
+
 What about React? Vue took many good ideas from React, most importantly the Virtual DOM. But Vue implements it with some sort of automatic dependency management. This tracks which components are affected by a change of the state so that only those components are re-rendered when that state property changes.
+
+那么关于 React 呢？ Vue 从 React中获得了很多好理念，最重要的是 Virtual DOM（虚拟 DOM）。但是 Vue 通过某种自动的依赖关系来实现它。它跟踪哪些组件受到状态更改的影响，以便在状态属性更改的时候重新渲染那些组件。
 
 In React, on the other hand, when a part of the state that affects a component changes, the component will be re-rendered. By default all its children will be re-rendered as well. To avoid this you need to use the  `shouldComponentUpdate`  method of each component and determine if that component should be re-rendered. This gives Vue a bit of an advantage in terms of ease of use, and out of the box performance gains.
 
+另一方面，在 React 中，当影响组件的一部分状态发生变化的时候，它将被重新渲染。默认情况下，它的所有子元素都将被重新渲染。为了避免这种情况，你需要使用每个组件的 `shouleComponentUpdate` 方法，并确定是否应该重新渲染该组件。这使 Vue 在易用性和开箱即用的性能方面具有一定的优势。
+
 One big difference with React is  [JSX][22]. While you can technically use JSX in Vue, it’s not a popular approach and instead the  [templating system][23]  is used. Any HTML file is a valid Vue template. JSX is very different than HTML, and has a learning curve for people on the team that might only need to work with the HTML part of the app, like designers.
+
+与 React 最大的区别是 [JSX][22]。尽管在技术上你可以在 Vue 中使用 JSX，但它不是一种流行的写法，而是使用 [templating system][23]（[模板系统][23]）。任何 HTML 文件都是有效的 Vue 模板。JSX 与 HTML 非常的不同，对于团队中可能只需要使用应用程序的 HTML 部分的人员（比如设计人员）来说，它有一个学习曲线。
 
 Vue templates are very similar to  [Mustache][24]  and  [Handlebars][25]  (although they differ in terms of flexibility). As such, they are more familiar to developers that already used frameworks like Angular and Ember.
 
+Vue 模板与 [Mustache][24] 和 [Handlebars][25] 非常的类似（尽管他们在灵活性方便有所不同）。因此，对于已经使用过 Angular 或者 Ember 等框架的开发人员来说更加亲近友好。
+
 The official state management library,  [Vuex][26], follows the Flux architecture and is somewhat similar to  [Redux][27]  in its concepts. Again, this is part of the positive things about Vue, which saw this good pattern in React and borrowed it for its ecosystem. And while you can use Redux with Vue, Vuex is specifically tailored for Vue and its inner workings.
+
+官方的状态管理库，[Vuex][26]，遵循 Fulx 价格，在概念上有点类似 [Redux][27]。同样，这也是 Vue 中值得肯定的一面，它在 React 中看到了这种优良的模式，并借鉴了它的生态系统，虽然你可以在 Vue 中使用 Redux，但是 Vuex 是专门为 Vue 及其内部工作而特别定制的。
 
 Vue is flexible, but the fact that the core team maintains two packages that are very important for any web app (like routing and state management) makes it a lot less fragmented than React. For example:  `vue-router`  and  `vuex`  are key to the success of Vue.
 
+Vue 是灵活的，但是实际上核心团队维护两个队任何 web 应用程序（如路由和状态管理）都非常重要的包，这使得它比 React 更加分散。例如：`Vue-router` 和 `vuex` 是 Vue 成功的关键。
+
 You don't need to choose or worry if that library you chose is going to be maintained in the future and will keep up with framework updates. Since they are official, they are the canonical go-to libraries for their niche (but you can choose to use what you like, of course).
+
+你不需要选择或者担心你选择的库将来是否会被维护并且和官方保持同步更新。因为他们是官方的，它们是各自的领域内的标准的首选库（当然，你也可以选择自己喜欢的库）。
 
 One thing that puts Vue in a different bucket compared to React and Angular is that Vue is an  **indie**  project: it’s not backed by a huge corporation like Facebook or Google.
 
+Vue 与 React 和 Angular 相比有一点与众不同，那就是 Vue 是一个 `独立` 的项目：它没有像 Facebook 或者 Google 这样的大公司支持。
+
 Instead, it’s completely backed by the community, which fosters development through donations and sponsors. This makes sure the roadmap of Vue is not driven by a single company’s agenda.
+
+相反，它完全通过社区的支持，社区通过捐款和赞助来促进发展。这确保了 Vue 的技术路线不是由单个公司的议程驱动的。
 
 ### Your first Vue App
 
+### 你的第一个 Vue 应用程序
+
 If you’ve never created a Vue.js application, I am going to guide you through the task of creating one so that you understand how it works.
+
+如果你从来没有创建过一个 Vue.js 应用程序。我将指引你完成创建一个应用程序的任务，以便你了解它是如何工作的。
 
 #### First example
 

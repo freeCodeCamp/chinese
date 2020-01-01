@@ -202,9 +202,15 @@ If you’ve never created a Vue.js application, I am going to guide you through 
 
 #### First example
 
+#### 第一个示例
+
 First I’ll go through the most basic example of using Vue.
 
+首先，我将介绍 Vue 最基本的使用示例。
+
 You create an HTML file which contains:
+
+你创建一个 HTML 文件，其中包含：
 
 ```
 <html>  <body>    <div id="example">      <p>{{ hello }}</p>    </div>    <script src="https://unpkg.com/vue"></script>    <script>        new Vue({            el: '#example',            data: { hello: 'Hello World!' }        })    </script>  </body></html>
@@ -212,47 +218,87 @@ You create an HTML file which contains:
 
 and you open it in the browser. That’s your first Vue app! The page should show a “Hello World!” message.
 
+并且在浏览器中打开它。这就是你的第一个 Vue 应用！页面应该显示一个 “Hello World!” 的消息。
+
 I put the script tags at the end of the body so that they are executed in order after the DOM is loaded.
+
+我将脚本标记放在 body 的末尾，以便在DOM 加载完成之后按顺序执行它们。
 
 What this code does is instantiate a new Vue app, linked to the  `#example`  element as its template. It's defined using a CSS selector usually, but you can also pass in an  `HTMLElement`.
 
+这段代码所做的是实例化一个新的 Vue 应用程序，链接 “#example” 元素作为它的模板。它通常使用 CSS 选择器定义，但你也可以传入一个 `HTMLElement`。
+
 Then, it associates that template to the  `data`  object. That is a special object that hosts the data we want Vue to render.
+
+然后，它将该模板与 `data` 对象关联起来。这是一个特殊的对象，它承载我们希望 Vue 渲染的数据。
 
 In the template, the special  `{{ }}`  tag indicates that this is some part of the template that's dynamic, and its content should be looked up in the Vue app data.
 
+在模板当中，特殊的 `{{}}` 标记表明这是模板的某个动态部分，其内容应该在 Vue 应用程序的数据中查找。
+
 You can see this example on  [CodePen][28].
+
+你可以在 [CodePen][28] 查看这个案例。
 
 CodePen is a little different from using a plain HTML file, and you need to configure it to point to the Vue library location in the Pen settings:
 
-![](https://cdn-media-1.freecodecamp.org/images/Qa8s2ayB3DhhE3dRKv4SFowGd8xHDvEeSlL4)
+CodePen 有点不同于使用普通的 HTML 文件，并且你需要配置它指向 Pen 设置中的 Vue 库的位置：
+
+[](https://cdn-media-1.freecodecamp.org/images/Qa8s2ayB3DhhE3dRKv4SFowGd8xHDvEeSlL4)
 
 #### Second example: the Vue CLI default app
 
+#### 第二个示例：Vue Cli 的默认应用程序
+
 Let’s level up the game a little bit. The next app we’re going to build is already done, and it’s the Vue CLI default application.
+
+让我们把游戏升级升级一点。我们要构建的下一个应用程序已经完成了，它是 Vue CLI 默认应用程序。
 
 What is the Vue CLI? It’s a command line utility that helps to speed up development by scaffolding an application skeleton for you, with a sample app in place.
 
+什么是 Vue Cli？他是一个命令行实用程序，通过为你搭建一个应用程序框架，并在适当的地方提供一个示例应用程序，帮助你加速开发。
+
 There are two ways you can get this application:
+
+那里有两种方法可以得到这个应用程序：
 
 **Use the Vue CLI locally**
 
+**在本地是用 Vue CLI **
+
 The first is to install the Vue CLI on your computer and run the command:
+
+首先要在你的电脑上安装 Vue CLI 并运行以下命令：
 
 ```
 vue create <enter the app name>
 ```
 
+在一般情况下，你只需要按照提示按回车即可完成安装。
+
 **Use CodeSandbox**
+
+**使用 CodeSandbox**
 
 A simpler way, without having to install anything, is to go to  [CodeSandbox][29]. The link opens the Vue CLI default application.
 
+一个更简单的方法，不需要安装任何东西，就是去 [CodeSandbox][29]。该链接打开 Vue CLI 默认应用程序。
+
 CodeSandbox is a cool code editor that allows you build apps in the cloud. You can use any npm package, and can easily integrate with  [Zeit Now][30]  for an easy deployment and with  [GitHub][31]  to manage versioning.
+
+CodeSandbox 是一个很酷的代码编辑器，它允许你在云服务中构建应用程序。你可以使用任何的 npm 包，并且可以轻松的与 [Zeit Now][30]集成，以便轻松的部署，也可以和 [GitHub][31] 集成来管理版本。
 
 Whether you chose to use the Vue CLI locally, or go through CodeSandbox, let’s inspect that Vue app in detail.
 
+无论你是选择在本地使用 Vue CLI，还是通过 CodeSandbox，让我们详细的检查一下这个 Vue 应用程序。
+
 ### The files structure
 
+### 文件结构
+
 Beside  `package.json`, which contains the configuration, these are the files contained in the initial project structure:
+
+除了 `package.json` 这个包含配置的文件以外，这些文件是包含在出事项目中的文件。
 
 -   `index.html`
 -   `src/App.vue`
@@ -264,7 +310,11 @@ Beside  `package.json`, which contains the configuration, these are the files co
 
 The  `index.html`  file is the main app file.
 
+`index.html` 文件是主要的应用文件。
+
 In the body it includes just one simple element:  `<div id="app">`</div>. This is the element the Vue application we’ll use to attach to the DOM.
+
+在 body 中，它只包含一个简单的元素：'<div id="app"></div>'。这是我们将用于附加到 DOM 的 Vue 应用程序的元素。
 
 ```
 <!DOCTYPE html><html>
@@ -286,9 +336,15 @@ In the body it includes just one simple element:  `<div id="app">`</div>. This i
 
 This is the main JavaScript file that drives our app.
 
+这是驱动应用程序的主要 JavaScript 文件。
+
 We first import the Vue library and the App component from  `App.vue`.
 
+我们首先要从 `App.vue` 引入 Vue 库和 App 组件。
+
 We set  `productionTip`  to  `false`, to avoid Vue outputting a “you’re in development mode” tip in the console.
+
+我们将 `productionTip` 设置为 `false`，以避免 Vue 在控制台中输出 “you’re in development mode” 的提示。
 
 Next, we create the Vue instance, by assigning it to the DOM element identified by  `#app`, which we defined in  `index.html`, and we tell it to use the App component.
 

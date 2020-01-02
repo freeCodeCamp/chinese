@@ -300,7 +300,7 @@ Beside  `package.json`, which contains the configuration, these are the files co
 
 除了 `package.json` 这个包含配置的文件以外，这些文件是包含在出事项目中的文件。
 
--   `index.html`
+-   `public/index.html`
 -   `src/App.vue`
 -   `src/main.js`
 -   `src/assets/logo.png`
@@ -308,9 +308,9 @@ Beside  `package.json`, which contains the configuration, these are the files co
 
 #### `index.html`
 
-The  `index.html`  file is the main app file.
+The  `public/index.html`  file is the main app file.
 
-`index.html` 文件是主要的应用文件。
+`public/index.html` 文件是主要的应用文件。
 
 In the body it includes just one simple element:  `<div id="app">`</div>. This is the element the Vue application we’ll use to attach to the DOM.
 
@@ -348,8 +348,17 @@ We set  `productionTip`  to  `false`, to avoid Vue outputting a “you’re in d
 
 Next, we create the Vue instance, by assigning it to the DOM element identified by  `#app`, which we defined in  `index.html`, and we tell it to use the App component.
 
+接下来，我们通过将 Vue 实例分配给在 `index.html` 中定义的 `#app` 标识的 DOM 元素来创建 Vue 实例，并告诉它使用 App 组件。
+
 ```
 // The Vue build version to load with the `import` command// (runtime-only or standalone) has been set in webpack.base.conf with an alias.import Vue from 'vue'import App from './App'
+```
+
+```
+// 使用 `import` 命令加载 Vue 构建版本
+// 别名设置在 vue.config.js 中，具体参数请[参考][https://github.com/neutrinojs/webpack-chain#config-resolve-alias]
+// import Vue from 'vue'
+// import App from './App'
 ```
 
 ```
@@ -360,11 +369,17 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */new Vue({  el: '#app',  components: { App },  template: '<App/>'})
 ```
 
+译者著：请注意区分 别名设置是在根目录下的 [vue.config.js][64] 中，这个文件默认应用程序并没有建立文件，需要自行新建。而 [Vue.config.productionTip][65] 则是写在 src/main.js 中的内容。
+
 #### `src/App.vue`
 
 `App.vue`  is a Single File Component. It contains three chunks of code: HTML, CSS, and JavaScript.
 
+`App.vue` 是一个单独的文件组件。它包含三个代码模块： HTML、 CSS、 JavaScript。
+
 This might seem weird at first, but Single File Components are a great way to create self-contained components that have all they need in a single file.
+
+这第一眼看起来可能很奇怪，但是单个文件组件是创建自包含组件的好方法，这些组件的单个文件包含了它们所需要的所有内容。
 
 We have the markup, the JavaScript that is going to interact with it, and style that’s applied to it, which can be scoped or not. In this case, it’s not scoped, and it’s just outputting that CSS which is applied like regular CSS to the page.
 
@@ -2841,3 +2856,8 @@ Thank you for reading!
 [61]: https://router.vuejs.org/guide/advanced/navigation-guards.html#per-route-guard
 [62]: https://github.com/pillarjs/path-to-regexp
 [63]: https://vuehandbook.com/
+
+##### 译者补充说明
+
+[64]: https://cli.vuejs.org/zh/config/#vue-config-js
+[65]: https://vuejs.org/v2/api/#Global-Config

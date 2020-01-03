@@ -383,17 +383,27 @@ This might seem weird at first, but Single File Components are a great way to cr
 
 We have the markup, the JavaScript that is going to interact with it, and style that’s applied to it, which can be scoped or not. In this case, it’s not scoped, and it’s just outputting that CSS which is applied like regular CSS to the page.
 
+我们有标记，和它进行交互的 JavaScript，以及应用于它的样式，这些可以限定做用户，也可以不限定做用户。在这种情况下，它没有作用域，它只是像常规的 CSS 一样输出并应用到页面上。
+
 The interesting part lies in the  `script`  tag.
+
+有趣的部分在 `script` 标签上面。
 
 We import a component from the  `components/HelloWorld.vue`  file, which we'll describe later.
 
+我们从 `components/HelloWorld.vue` 文件 引入一个组件，稍后我们会介绍。
+
 This component is going to be referenced in our component. It’s a dependency. We are going to output this code
+
+这个组件将在我们的组件中被引用。这是一个依赖项。我们将从这个组件输出以下代码
 
 ```
 <div id="app">  <img width="25%" src="./assets/logo.png">  <HelloWorld/></div>
 ```
 
 from this component, which you see references the  `HelloWorld`  component. Vue will automatically insert that component inside this placeholder.
+你可以看到它引用了 `Helloworld` 组件。Vue 将自动将该组件插入这个占位符中。
+
 
 ```
 <template>  <div id="app">    <img width="25%" src="./assets/logo.png">    <HelloWorld/>  </div></template>
@@ -415,17 +425,31 @@ export default {  name: 'App',  components: {    HelloWorld  }}</script>
 
 Here’s the  `HelloWorld`  component, which is included by the App component.
 
+这是 `HelloWorld` 组件，它包含在 App 组件中。
+
 This component outputs a set of links, along with a message.
+
+该组件输出一组链接以及一条信息。
 
 Remember above we talked about CSS in App.vue, which was not scoped? The  `HelloWorld`  component has scoped CSS.
 
-You can easily determine it by looking at the  `style`  tag. If it has the  `scoped`  attribute, then it's scoped:  `<style scop`ed>
+还记得上面我们在 App.vue 中讨论的 CSS 吗？ `HelloWorld` 组件已经限定了 CSS 的作用域。
+
+You can easily determine it by looking at the  `style`  tag. If it has the  `scoped`  attribute, then it's scoped:  `<style scoped>`
+
+你可以通过查看 `style` 标签轻松的确定它。如果它有 `scoped` 属性，那么它的作用域是：`<style scoped>`
 
 This means that the generated CSS will be targeting the component uniquely, via a class that’s applied by Vue transparently. You don’t need to worry about this, and you know the CSS won’t  **leak**  to other parts of the page.
 
+这意味着生成的 CSS 将把这个组件作为唯一的目标，凭借一个 class 透过 Vue 应用（到组件上）。
+
 The message the component outputs is stored in the  `data`  property of the Vue instance, and outputted in the template as  `{{ msg }}`.
 
+组件输出的消息存储在 Vue 实例的 `data` 属性中，并在模板中作为 `{{ msg }}`输出
+
 Anything that’s stored in  `data`  is reachable directly in the template via its own name. We didn't need to say  `data.msg`, just  `msg`.
+
+任何存储在 `data` 中的内容都可以在模板中通过名称直接访问。我们不需要说 `data.msg`，而仅仅是 `msg`。
 
 ```
 <template>  <div class="hello">    <h1>{{ msg }}</h1>    <h2>Essential Links</h2>    <ul>      <li>        <a          href="https://vuejs.org"          target="_blank"        >          Core Docs        </a>      </li>      <li>        <a          href="https://forum.vuejs.org"          target="_blank"        >          Forum        </a>      </li>      <li>        <a          href="https://chat.vuejs.org"          target="_blank"        >          Community Chat        </a>      </li>      <li>        <a          href="https://twitter.com/vuejs"          target="_blank"        >          Twitter        </a>      </li>      <br>      <li>        <a          href="http://vuejs-templates.github.io/webpack/"          target="_blank"        >          Docs for This Template        </a>      </li>    </ul>    <h2>Ecosystem</h2>    <ul>      <li>        <a          href="http://router.vuejs.org/"          target="_blank"        >          vue-router        </a>      </li>      <li>        <a          href="http://vuex.vuejs.org/"          target="_blank"        >          vuex        </a>      </li>      <li>        <a          href="http://vue-loader.vuejs.org/"          target="_blank"        >          vue-loader        </a>      </li>      <li>        <a          href="https://github.com/vuejs/awesome-vue"          target="_blank"        >          awesome-vue        </a>      </li>    </ul>  </div></template>
@@ -439,23 +463,43 @@ Anything that’s stored in  `data`  is reachable directly in the template via i
 <!-- Add "scoped" attribute to limit CSS to this component only --><style scoped>h1,h2 {  font-weight: normal;}ul {  list-style-type: none;  padding: 0;}li {  display: inline-block;  margin: 0 10px;}a {  color: #42b983;}</style>
 ```
 
+```
+<!-- 添加 "scoped" 属性使 CSS 仅在组件内生效 --><style scoped>h1,h2 {  font-weight: normal;}ul {  list-style-type: none;  padding: 0;}li {  display: inline-block;  margin: 0 10px;}a {  color: #42b983;}</style>
+```
+
 #### Run the app
 
+#### 运行应用程序
+
 CodeSandbox has a cool preview functionality. You can run the app and edit anything in the source to have it immediately reflected in the preview.
+
+CodeSandbox 有一个非常酷的预览功能。你可以运行应用程序，编辑源代码中的任何内容，让它立刻显示在预览中。
 
 ![](https://cdn-media-1.freecodecamp.org/images/ZWfaVoQWEm4HzD0RNcS2osp8NpIPz-G5Vq5P)
 
 ### The Vue CLI
 
+### The Vue CLI
+
 CodeSandbox is very cool for online coding and working without having to setup Vue locally. A great way to work locally is by setting up the Vue CLI (command line interface). Let’s find out more about it.
+
+CodeSandbox 是一个非常酷的在线编码和工作（的网站），而不必在本地安装 Vue。本地工作的一个好方法是设置 Vue CLI （命令行接口）。让我们了解更多关于它（的信息）。
 
 In the previous example, I introduced an example project based on the Vue CLI. What’s the Vue CLI exactly, and how does it fit in the Vue ecosystem? Also, how do we setup a Vue CLI-based project locally? Let’s find out!
 
+在前一个案例中，我介绍了一个基于 Vue CLI 的示例项目，Vue Cli 到底是什么，他如何适应 Vue 生态系统？另外，我们如何在本地安装一个基于 Vue CLI 的项目？让我们来揭开它吧。
+
 **Note:**  There is a huge rework of the CLI going on right now, going from version 2 to 3. While not yet stable, I will describe version 3, because it’s a huge improvement over version 2, and quite different.
+
+**注：** CLI 现在在进行庞大的重构，从版本 2 到 3。虽然还不稳定，但我将描述版本 3，因为它相比版本 2 有很大的改进，而且非常的不同。
 
 #### Installation
 
+#### 安装
+
 The Vue CLI is a command line utility, and you install it globally using npm:
+
+Vue CLI 是一个命令行实用工具，你可以使用 npm 全局安装它：
 
 ```
 npm install -g @vue/cli
@@ -463,35 +507,59 @@ npm install -g @vue/cli
 
 or using Yarn:
 
+或者使用 Yarn：
+
 ```
 yarn global add @vue/cli
 ```
 
 Once you do so, you can invoke the  `vue`  command.
 
+你运行一次之后，就可以调用 `vue` 命令。
+
 ![](https://cdn-media-1.freecodecamp.org/images/F1uuQW81iw1WZNOiUn0xnLOagFi637vPDUfd)
 
 #### What does the Vue CLI provide?
 
+#### Vue CLI 提供了什么？
+
 The CLI is essential for rapid Vue.js development.
+
+CLI 对于 Vue.js 的快速开发是必不可少的。
 
 Its main goal is to make sure all the tools you need are working along, to perform what you need, and abstracts away all the nitty-gritty configuration details that using each tool in isolation would require.
 
+它的主要目标是确保你需要的所有工具都正常的工作，执行你需要的操作，并抽象出每个工具单独使用所需的所有具体配置细节。
+
 It can perform an initial project setup and scaffolding.
+
+它可以执行初始的项目设置和搭建。
 
 It’s a flexible tool. Once you create a project with the CLI, you can go and tweak the configuration, without having to  **eject** your application (like you’d do with  `create-react-app`).
 
+这是一个灵活的工具。一旦你使用 CLI 创建了项目，你就可以去调整配置，而不需要 **退出** 你的应用程序（就像你用 `create-react-app`所做的那样）。
+
 When you eject from  `create-react-app`  you can update and tweak what you want, but you can’t rely on the cool features that  `create-react-app`  provides.
+
+当你从 `create-react-app` 退出时，你可以更新并调整你想要的（配置），但是你不能依赖 `create-react-app` 提供的酷的功能。
 
 You can configure anything and still be able to upgrade with ease.
 
+你可以配置任何东西并且仍然能够轻松的升级。
+
 After you create and configure the app, it acts as a runtime dependency tool, built on top of Webpack.
 
+当你创建和配置完应用程序之后，它作为一个运行时依赖的工具，构建在了Webpack之上。
+
 The first encounter with the CLI is when creating a new Vue project.
+
+与 CLI 的第一次接触是在创建一个 Vue 项目的时候。
 
 #### How to use the CLI to create a new Vue project
 
 The first thing you’re going to do with the CLI is to create a Vue app:
+
+你要做的第一件事是用 CLI 创建一个 Vue 应用程序。
 
 ```
 vue create example
@@ -499,51 +567,77 @@ vue create example
 
 The cool thing is that it’s an interactive process. You need to pick a preset. By default, there is one preset that provides Babel and  [ESLint][32]  integration:
 
+很酷的是，这是一个互动的过程。你需要选择预设配置。默认情况下，这里有一个预设提供 Babel 和 [ESLint][32] 的集成：
+
 ![](https://cdn-media-1.freecodecamp.org/images/FL4mTLZqzhKkAYL2FB507Tx1Hkdtnl0y5cgu)
 
 I’m going to press the down arrow ⬇️ and manually choose the features I want:
+
+我要按向下箭头 ⬇️ 和手动选择我想要的功能：
 
 ![](https://cdn-media-1.freecodecamp.org/images/mkF3jMMCGluqmQ3hX3bGbCxhfXcwvWVNjWLi)
 
 Press  `space`  to enable one of the things you need, and then press  `enter`  to go on. Since I chose  `Linter / Formatter`, Vue CLI prompts me for the configuration. I chose  `ESLint + Prettier`  since that's my favorite setup:
 
+按 `空格` 键可以打开你需要的东西，然后按 `enter` 键继续。因为我选择了 `Linter / Formatter`，所以 Vue CLI 提示我进行配置。我选择了 `ESLint + Prettier`，因为这是我最喜欢的设置：
+
 ![](https://cdn-media-1.freecodecamp.org/images/bYwN2mfgTuJNxiiHBSNjnJQADZQvFR0TErhK)
 
 Next thing is choosing how to apply linting. I choose  `Lint on save`.
+
+下一件事就是选择怎样应用 linting。我选择了 `Lint on save`
 
 ![](https://cdn-media-1.freecodecamp.org/images/dcQmjoykCaJG7pevG5Yc-6A43eVYUkCbTxn7)
 
 Next up: testing. Vue CLI lets me choose between the two most popular unit testing solutions:  [Mocha + Chai][33]  and  [Jest][34].
 
+接下来：testing。Vue CLI 让我在两个最流行的单元测试解决方案之间进行选择：[Mocha + Chai][33] 和 [Jest][34]。
+
 ![](https://cdn-media-1.freecodecamp.org/images/lIdwYkOgcllnAJRVZOoKIxZ49ikNFoQjYtSV)
 
 Vue CLI asks me where to put all the configuration: in the  `package.json`  file, or in dedicated configuration files, one for each tool. I chose the latter.
+
+Vue ClI 询问我把所有的配置放在哪里：放在 `package.json` 文件中，或专用的配置文件，每个工具一个。我选择了后者。
 
 ![](https://cdn-media-1.freecodecamp.org/images/dN4W4ZALKh7Xz1D8ac7ebXpGdTPVGpzdujcc)
 
 Next, Vue CLI asks me if I want to save these presets, and allows me to pick them as a choice the next time I use Vue CLI to create a new app. It’s a very convenient feature, as having a quick setup with all my preferences is a complexity reliever:
 
+接下来，Vue CLI 问我如果我想保存这些预设，并允许我在下次使用 Vue CLI 创建一个新的应用程序的选择它们。
+
 ![](https://cdn-media-1.freecodecamp.org/images/X6rbmBloyRnQbdwrFQwtYeChdqxzQRpOJYfl)
 
 Vue CLI then asks me if I prefer using  [Yarn][35]  or NPM:
+
+Vue CLI 接下来会问我是否更喜欢用 [Yarn][35] 还是 NPM：
 
 ![](https://cdn-media-1.freecodecamp.org/images/vbEmq0oYaGFjDtjL9D2QaUZ6t5omf0fjZTJM)
 
 This is the last thing it asks me, and then it goes on to download the dependencies and create the Vue app:
 
+这是它问我的最后一件事，然后它继续下载依赖并创建 Vue 应用程序：
+
 ![](https://cdn-media-1.freecodecamp.org/images/Q52LD-RGQm9dHXMyWikiI5fMyESB7vRJqe1h)
 
 #### How to start the newly created Vue CLI application
 
+#### 如何启动新创建的 Vue CLI 应用程序
+
 Vue CLI has created the app for us, and we can go in the  `example`  folder and run  `yarn serve`  to start up our first app in development mode:
+
+Vue CLI 为我们创建了应用程序，并且我们可以进入 `example` 文件夹和运行 `yarn serve` 在开发者模式下启动我们的第一个应用程序：
 
 ![](https://cdn-media-1.freecodecamp.org/images/iegqNiWWJaunJi-KFTV93EKuODc4njdfLRuf)
 
 The starter example application source contains a few files, including  `package.json`:
 
+启动的示例应用程序源码包含几个文件，包括 `package.json`：
+
 ![](https://cdn-media-1.freecodecamp.org/images/FuI7nmJ2NAtesloTZrh3eJL-aa0ceCCr68wQ)
 
 This is where all the CLI commands are defined, including  `yarn serve`, which we used a minute ago. The other commands are
+
+这里定义了所有的 CLI 命令，包括几分钟前我们使用的 `yarn serve`，其它的几个命令是
 
 -   `yarn build`, to start a production build
 -   `yarn lint`, to run the linter
@@ -551,25 +645,39 @@ This is where all the CLI commands are defined, including  `yarn serve`, which w
 
 I will describe the sample application generated by Vue CLI in a separate tutorial.
 
+我将在单独的教程中描述 Vue CLI 生成的示例应用程序。
+
 #### Git repository
 
+#### Git 仓库
 Notice the  `master`  word in the lower-left corner of VS Code? That's because Vue CLI automatically creates a repository, and makes the first commit. So we can jump right in, change things, and we know what we changed:
+
+注意到 VS Code 左下角的 `master`一词了吗？这是因为 Vue CLI 自动创建了一个仓库，并进行第一次提交。所以我们可以跳进去，改变内容，我们知道我们改变了什么：
 
 ![](https://cdn-media-1.freecodecamp.org/images/4IHrGo6U-xkz4aeVXf3S06AYzIk0lAZJ6t6y)
 
 This is pretty cool. How many times do you dive in and change things, only to realize, when you want to commit the result, that you didn’t commit the initial state?
 
+这很酷，有多少次，你一头扎进去，改变内容，结果发现，当你想提交的时候，你并没有提交初始状态。
+
 #### Use a preset from the command line
 
+#### 从命令行中是用预设
+
 You can skip the interactive panel and instruct Vue CLI to use a particular preset:
+
+你可以跳过互动面板，并指示 Vue CLI 使用特定的预设：
 
 ```
 vue create -p favourite example-2
 ```
 
 #### Where presets are stored
+#### 预设存储在哪里
 
 Presets are stored in the  `.vuejs`  file in your home directory. Here's mine after creating the first "favorite" preset:
+
+预设存储在根目录下的 `.vuejs` 文件中。这是我在创建第一个 “favorite” 预设后的状态：
 
 ```
 {  "useTaobaoRegistry": false,  "packageManager": "yarn",  "presets": {    "favourite": {      "useConfigFiles": true,      "plugins": {        "@vue/cli-plugin-babel": {},        "@vue/cli-plugin-eslint": {          "config": "prettier",          "lintOn": [            "save"          ]        },        "@vue/cli-plugin-unit-jest": {}      },      "router": true,      "vuex": true    }  }}
@@ -577,9 +685,15 @@ Presets are stored in the  `.vuejs`  file in your home directory. Here's mine af
 
 #### Plugins
 
+#### 插件
+
 As you can see from reading the configuration, a preset is basically a collection of plugins, with some optional configuration.
 
+你可以通过阅读配置看到，预设基本上是插件的集合，有一些可选的配置。
+
 Once a project is created, you can add more plugins by using  `vue add`:
+
+当项目创建以后，你可以使用 `vue add` 添加更多的插件：
 
 ```
 vue add @vue/cli-plugin-babel
@@ -587,17 +701,27 @@ vue add @vue/cli-plugin-babel
 
 All those plugins are used in the latest version available. You can force Vue CLI to use a specific version by passing the version property:
 
+所有的这些插件都使用的最新版本。你可以通过版本属性强制 Vue CLI 使用指定的版本：
+
 ```
 "@vue/cli-plugin-eslint": {  "version": "^3.0.0"}
 ```
 
 This is useful if a new version has a breaking change or a bug, and you need to wait a little bit before using it.
 
+当一个新的版本有大的更改或者是 bug，并且你需要稍等一段时间才使用它，这是非常有用的。
+
 #### Remotely store presets
+
+#### 远程存储预设
 
 A preset can be stored in GitHub (or on other services) by creating a repository that contains a  `preset.json`  file, which contains a single preset configuration.
 
+预设可以通过创建包含一个预设配置的 `preset.json` 文件的仓库存储在 GitHub （或其他服务）中。
+
 Extracted from the above, I made a sample  [preset][36]  which contains this configuration:
+
+从上面提取，我做了一个包含如下配置的样本 [预设][36]：
 
 ```
 {  "useConfigFiles": true,  "plugins": {    "@vue/cli-plugin-babel": {},    "@vue/cli-plugin-eslint": {      "config": "prettier",      "lintOn": [        "save"      ]    },    "@vue/cli-plugin-unit-jest": {}  },  "router": true,  "vuex": true}
@@ -605,15 +729,23 @@ Extracted from the above, I made a sample  [preset][36]  which contains this con
 
 It can be used to bootstrap a new application using:
 
+它可以用来引导一个新的应用程序使用：
+
 ```
 vue create --preset flaviocopes/vue-cli-preset example3
 ```
 
 ### Another use of the Vue CLI: rapid prototyping
 
+另一个的 Vue CLI 用途是：快速原型设计
+
 Up until now, I’ve explained how to use the Vue CLI to create a new project from scratch, with all the bells and whistles. But for really quick prototyping, you can create a really simple Vue application (even one that’s self-contained in a single .vue file) and serve that, without having to download all the dependencies in the  `node_modules`  folder.
 
+到目前为止，我已经解释了如何使用 Vue CLI 从头创建一个新项目，其中包含了所有的细节。但是对于真正的快速原型开发，你可以创建一个非常简单的 Vue 应用程序（甚至是一个自身包含在其中的单个 .vue 文件的应用程序）并提供服务，而不必下载 ’node_modules‘ 文件夹中的所有依赖项。
+
 How? First install the  `cli-service-global`  global package:
+
+怎么做？首先安装全局安装 `cli-service-global` 包：
 
 ```
 npm install -g @vue/cli-service-global
@@ -629,11 +761,15 @@ yarn global add @vue/cli-service-global
 
 Create an app.vue file:
 
+创建一个 app.vue 文件：
+
 ```
 <template>    <div>        <h2>Hello world!</h2>        <marquee>Heyyy</marquee>    </div></template>
 ```
 
 and then run
+
+然后运行
 
 ```
 vue serve app.vue
@@ -643,11 +779,19 @@ vue serve app.vue
 
 The standalone app
 
+独立的应用程序
+
 You can serve more organized projects, composed by JavaScript and HTML files as well. Vue CLI by default uses  `main.js / index.js` as its entry point, and you can have a  `package.json`  and any tool configuration set up.  `vue serve`  will pick it up.
+
+你可以服务更多有组织的项目，这些项目由 JavaScript 和 HTML 文件组成。Vue CLI 默认使用 `main.js / index.js` 作为它的入口点，并且你可以设置 `package.json` 和任何工具配置。`vue serve` 将会启动它。
 
 Since this uses global dependencies, it’s not an optimal approach for anything more than a demonstration or quick testing.
 
+由于它使用全局依赖关系，因此除了用于演示或快速测试外，她不是最佳的方法。
+
 Running  `vue build`  will prepare the project for deployment in  `dist/`, and will generate all the corresponding code (also for vendor dependencies).
+
+运行 `vue build` 将为在 `dist/` 中部署项目做好准备，并将生成所有相应的代码（也针对供应商依赖关系）。
 
 #### Webpack
 

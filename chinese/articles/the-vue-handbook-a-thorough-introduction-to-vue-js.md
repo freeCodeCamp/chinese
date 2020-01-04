@@ -797,23 +797,37 @@ Running  `vue build`  will prepare the project for deployment in  `dist/`, and w
 
 Internally, Vue CLI uses Webpack, but the configuration is abstracted and we don’t even see the config file in our folder. You can still have access to it by calling  `vue inspect`:
 
+Vue CLI 可以在内部是用 Webpack，但是配置是抽象的，并且我们在文件夹中甚至看不到配置文件。你仍然可以通过调用 `vue inspect` 来访问它。
+
 ![](https://cdn-media-1.freecodecamp.org/images/dGT6I8Uq75505tD1Xj8wR-h7rO9ZvRby80cH)
 
 ### The Vue DevTools
 
 When you’re first experimenting with Vue, if you open the Browser Developer Tools, you will find this message: “Download the Vue Devtools extension for a better development experience:  [https://github.com/vuejs/vue-devtools][37]"
 
+当你第一次尝试使用 Vue 的时候，如果你打开浏览器开发者工具，你将发现以下信息：“Download the Vue Devtools extension for a better development experience:  [https://github.com/vuejs/vue-devtools][37]” 。
+
 ![](https://cdn-media-1.freecodecamp.org/images/J-LJE-u3DphYF8pOpMnkCX9KoNz3fGp4OPea)
 
 Hint to install the Vue devtools
 
+提示安装 Vue 开发工具
+
 This is a friendly reminder to install the Vue Devtools Extension. What’s that? Any popular framework has its own devtools extension, which generally adds a new panel to the browser developer tools that is much more specialized than the ones that the browser ships by default. In this case, the panel will let us inspect our Vue application and interact with it.
+
+这是一个友好的安装 Vue Devtools 扩展提示。那是什么？任何流行的框架都有自己的 devtools 扩展，它通常会为浏览器开发人员工具添加一个新的面板，这个面板比浏览器默认提供的面板更专业。在这种情况下，面板将允许我们检查 Vue 应用程序并与之交互。
 
 This tool will be an amazing help when building Vue apps. The developer tools can only inspect a Vue application when it’s in development mode. This makes sure no one can use them to interact with your production app — and will make Vue more performant, because it does not have to care about the Dev Tools.
 
+在搭建 Vue 应用程序的时候，这个工具将提供令人惊讶的帮助。开发者工具只能在 Vue 应用程序处于开发模式时检查它。这将确保没有人可以使用它们来与你的应用程序产品进行交互，并将使 Vue 具有更高的性能，因为它不必关心开发者工具。
+
 Let’s install it!
 
+让我们安装它！
+
 There are 3 ways to install the Vue Dev Tools:
+
+这里有三个方法安装 Vue Dev Tools：
 
 -   on Chrome
 -   on Firefox
@@ -821,47 +835,74 @@ There are 3 ways to install the Vue Dev Tools:
 
 Safari, Edge and other browsers are not supported with a custom extension, but using the standalone application you can debug a Vue.js app running in any browser.
 
+自定义扩展不支持 Safari，Edge 和 其它浏览器，但是使用独立的应用程序，你可以在任何浏览器里面运行调试。
+
 #### Install on Chrome
 
+#### 安装在 Chrome 中
+
 Go to this page on the Google Chrome  [Store][38]  and click  `**Add to Chrome**`.
+
+转到 Google Chrome [Store][38] 页面并点击 ``**Add to Chrome**``。
 
 ![](https://cdn-media-1.freecodecamp.org/images/uh0CFZPRsdnKFOY-OWWvQCN3UVcnh-0KXpfh)
 
 Go through the installation process:
 
+完成安装过程：
+
 ![](https://cdn-media-1.freecodecamp.org/images/hAQZpBESrlkCeLeLJpzeiPdJs12mmFHLRq9s)
 
 The Vue.js devtools icon shows up in the toolbar. If the page does not have a Vue.js instance running, it’s grayed out.
+
+Vue.js devtools 图标出现在工具栏中，如果页面没有运行 Vue.js 实例它就会变成灰色。
 
 ![](https://cdn-media-1.freecodecamp.org/images/TaZntVatyBmsqqKsMjbGKn5nIuJikKLOJJyt)
 
 If Vue.js is detected, the icon has the Vue logo’s colors.
 
+如果 Vue.js 被检测到，这个图标会显示 Vue 的 logo 的颜色。
+
 ![](https://cdn-media-1.freecodecamp.org/images/xPbOBNuLCdCE28QiFevAcqFb06Oqk8tB31Zy)
 
 The icon does nothing except show us that there  **is**  a Vue.js instance. To use the devtools, we must open the Developer Tools panel, using “View → Developer → Developer Tools”, or  `Cmd-Alt-i`
+
+这个图标只是告诉我们这 **是** 一个 Vue.js 实例。要用 devtools，我们必须打开 Developer Tools 面板，使用 “View → Developer → Developer Tools”，或者 `Cmd-Alt-i`。
 
 ![](https://cdn-media-1.freecodecamp.org/images/td1gw01JZxVxAkHLGg9FKzIHz8UFhMhvr3gG)
 
 #### Install on Firefox
 
+#### 安装在 Firefox 中
+
 You can find the Firefox dev tools extension in the Mozilla Add-ons  [store][39].
+
+你可以在 Mozilla Add-ons [store][39] 中找到 Firefox 的开发工具扩展。
 
 ![](https://cdn-media-1.freecodecamp.org/images/y-G2Zcw62ZrkjMOe6ottwLy-z6onBxnZzOXm)
 
 Click “Add to Firefox” and the extension will be installed. As with Chrome, a grayed icon shows up in the toolbar
 
+点击 “Add to Firefox”，扩展将被安装，和 Chrome 一样，工具栏上也会显示一个灰色的图标。
+
 ![](https://cdn-media-1.freecodecamp.org/images/LQCCB8c2g0OsUmJZ20fYJBPbampJudlIPocv)
 
 And when you visit a site that has a Vue instance running, it will become green, and when we open the Dev Tools we will see a “Vue” panel:
 
+并且当你访问一个运行 Vue 实例的站点，它将变成绿色并且当你打开 Dev Tools 我们将看到一个 “Vue” 面板：
+
 ![](https://cdn-media-1.freecodecamp.org/images/jFYMTGNEhrkxzzC6Grdb7zgXrnHrwuR-0AiI)
 
 #### Install the standalone app
+#### 安装独立的应用程序
 
 Alternatively, you can use the DevTools standalone app.
 
+或者，你可以使用独立的 DevTools 应用程序。
+
 Simply install it using:
+
+简单的安装它：
 
 ```
 npm install -g @vue/devtools
@@ -877,13 +918,19 @@ yarn global add @vue/devtools
 
 and run it by calling:
 
+通过调用运行它：
+
 ```
 vue-devtools
 ```
 
 This will open the standalone Electron-based application.
 
+这将打开基于 Electron 的独立的应用程序。
+
 Now, paste the script tag it shows you
+
+现在，粘贴显示给你的 script 标签
 
 ```
 <script src="http://localhost:8098"></script>
@@ -891,54 +938,91 @@ Now, paste the script tag it shows you
 
 inside the project  `index.html`  file, and wait for the app to be reloaded. It will automatically connect to the app.
 
+在项目的 `index.html` 文件中，然后等待应用程序重启，它将自动连接到应用程序。
+
 ![](https://cdn-media-1.freecodecamp.org/images/ANnfWmlscUkP0RN9Pn-hSABLCOxzMJYvtuqw)
 
 #### How to use the Developer Tools
 
+#### 如何使用 Developer Tools
+
 As mentioned, the Vue DevTools can be activated by opening the Developer Tools in the browser and moving to the Vue panel.
 
+如前所述，可以通过在浏览器打开开发者工具并移动到 Vue 面板来激活 Vue DevTools。
+
 Another option is to right-click on any element in the page, and choose “Inspect Vue component”:
+
+另一个选项是右键单击页面中的任何元素，然后选择 “Inspect Vue component”：
 
 ![](https://cdn-media-1.freecodecamp.org/images/r4URIzj-Mm92WTnnl9iXMK18f8cIwmyICQ0m)
 
 When the Vue DevTools panel is open, we can navigate the components tree. When we choose a component from the list on the left, the right panel shows the props and data it holds:
 
+当打开 Vue DevTools 面板后，我们可以浏览组件树。当我们从左侧的列表中选择一个组件时，右侧面板将显示其特有的属性和数据。
+
 ![](https://cdn-media-1.freecodecamp.org/images/h55RK1azzd7gjON36Da9HdY-tpu8cuVMBs-3)
 
 On the top there are fourbuttons:
+
+在顶部有四个按钮：
 
 -   **Components**  (the current panel), which lists all the component instances running in the current page. Vue can have multiple instances running at the same time. For example, it might manage your shopping cart widget and the slideshow, with separate, lightweight apps.
 -   **Vuex**  is where you can inspect the state managed through Vuex.
 -   **Events**  shows all the events emitted.
 -   **Refresh**  reloads the devtools panel.
 
+- **Components** (当前面板)，其中列出了当前页面中运行的实例的所有组件。Vue 可以同时运行多个实例。例如，它可以使用单独轻量级应用程序管理购物车的小部件和幻灯片。
+- **Vuex** 你可以在这里检查通过 Vuex 管理的状态
+- **Events** 显示所有发生的事件
+- **Refresh** 重新加载 devtools 面板
+
 Notice the small  `= $vm0`  text beside a component? It's a handy way to inspect a component using the Console. Pressing the "esc" key shows up the console in the bottom of the devtools, and you can type  `$vm0`  to access the Vue component:
+
+注意到组件旁边的小文本 `= $vm0`了吗？这是使用 Console 检查组件的便捷方法。按下 “esc” 键将在 devtools 底部显示控制台，你可以键入 `$vm0` 来访问 Vue 组件：
 
 ![](https://cdn-media-1.freecodecamp.org/images/9fi396qPj8ajABDLnAoB77AkjDtLEJu-2okG)
 
 It’s very cool to inspect and interact with components without having to assign them to a global variable in the code.
 
+检查和与组件交互而不必将他们分配到代码中的全局变量，这非常的酷。
+
 #### Filter components
+#### 过滤组件
 
 Start typing a component name, and the components tree will filter out the ones that don’t match.
+
+开始键入组件名称，并且组件树将过滤掉不匹配的组件。
 
 ![](https://cdn-media-1.freecodecamp.org/images/IdqSWwFMpvHVN125f7uIxue0Xp0ic-HJmBzX)
 
 #### Select a component in the page
+#### 在页面上选择一个组件
 
 Click the  `**Select component in the page**`  button.
+
+点击 `**Select component in the page**` 按钮
 
 ![](https://cdn-media-1.freecodecamp.org/images/RE969Y8eHdDn1rqHvj2OGfnEqthwHMVy37A-)
 
 Select component in the page
 
+在页面上选择组件
+
 You can hover over any component in the page with the mouse, click it, and it will be opened in the devtools.
+
+你可以用鼠标悬停在页面中的任何组件上，单机它，它将在 devtools 中打开。
 
 #### Format components names
 
+#### 格式化组件名称
+
 You can choose to show components in camelCase or use dashes.
 
+你可以选择驼峰或者破折号写法显示组件。
+
 #### Filter inspected data
+
+#### 检查过滤数据
 
 On the right panel, you can type any word to filter the properties that don’t match it.
 

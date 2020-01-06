@@ -1512,9 +1512,15 @@ All of this is possible thanks to the use of Webpack. The Vue CLI makes this ver
 
 Since Single File Components rely on Webpack, we get for free the ability to use modern Web features.
 
+由于单文件组件依赖于 Webpack,所以我们可以免费使用现代 Web 特性。
+
 Your CSS can be defined using SCSS or Stylus, the template can be built using Pug, and all you need to do to make this happen is to declare to Vue which language preprocessor you are going to use.
 
+你可以使用 SCSS 或 Stylus 定义 CSS，可以使用 Pug 构建模板，要做的就是向 Vue 声明要使用哪种语言预处理器。
+
 The list of supported preprocessors include
+
+支持的预处理器列表包括
 
 -   TypeScript
 -   SCSS
@@ -1525,15 +1531,27 @@ The list of supported preprocessors include
 
 We can use modern JavaScript (ES6–7–8) regardless of the target browser using the Babel integration, and ES Modules too, so we can use  `import/export`  statements.
 
+我们可以使用现代的 JavaScript（ES6-7-8），而不用考虑使用 Babel 集成的目标浏览器和 ES 模块,因此我们可以使用 `import/export` 语句。
+
 We can use CSS Modules to scope our CSS.
+
+我们可以使用 CSS 模块来定义 CSS 的范围。
 
 Speaking of scoping CSS, Single File Components make it absolutely easy to write CSS that won’t  **leak**  to other components, by using  `<style scop`ed> tags.
 
+说到 CSS 的作用域，通过使用 `<style scoped>` 标记，Single File Components（单文件组件）使得编写不会 **泄露** 给其他组件的 CSS 变的非常容易。
+
 If you omit  `scoped`, the CSS you define will be global. But adding the  `scoped`  tag, Vue automatically adds a specific class to the component, unique to your app, so the CSS is guaranteed to not leak out to other components.
+
+如果你省略了 `scoped`，你定义的 CSS 将是全局的。但是在添加了 `scoped` 标签后，Vue 会自动向组件添加一个特定的类，这个类对于你的应用程序是唯一的，因此可以保证 CSS不会泄露给其他组件。
 
 Maybe your JavaScript is huge because of some logic you need to take care of. What if you want to use a separate file for your JavaScript?
 
+也许你的 JavaScript 太大了，因为你需要处理一些逻辑。如果你想为你的 JavaScript 使用一个单独的文件怎么办呢？
+
 You can use the  `src`  attribute to externalize it:
+
+你可以使用 `src` 属性将其外部化：
 
 ```
 <template>  <p>{{ hello }}</p></template><script src="./hello.js"></script>
@@ -1541,11 +1559,15 @@ You can use the  `src`  attribute to externalize it:
 
 This also works for your CSS:
 
+这也适用于你的 CSS：
+
 ```
 <template>  <p>{{ hello }}</p></template><script src="./hello.js"></script><style src="./hello.css"></style>
 ```
 
 Notice how I used
+
+注意我是怎么使用的
 
 ```
 export default {  data() {    return {      hello: 'Hello World!'    }  }}
@@ -1553,7 +1575,11 @@ export default {  data() {    return {      hello: 'Hello World!'    }  }}
 
 in the component’s JavaScript to set up the data.
 
+在组件的 JavaScript 中设置数据。
+
 Other common ways you will see are:
+
+你将看到的其它常见方式是：
 
 ```
 export default {  data: function() {    return {      name: 'Flavio'    }  }}
@@ -1561,7 +1587,11 @@ export default {  data: function() {    return {      name: 'Flavio'    }  }}
 
 The above is equivalent to what we did before.
 
+以上等同于我们之前所做的工作
+
 Or:
+
+或者
 
 ```
 export default {  data: () => {    return {      name: 'Flavio'    }  }}
@@ -1569,7 +1599,11 @@ export default {  data: () => {    return {      name: 'Flavio'    }  }}
 
 This is different, because it uses an arrow function. Arrow functions are fine until we need to access a component method. This is an issue if we need to make use of  `this`, and such property is not bound to the component using arrow functions. So it's mandatory to use  **regular**  functions rather than arrow functions.
 
+这是不同的，因为它使用箭头功能，箭头函数很好，直到我们需要访问组件方法位置。如果我们需要使用 `this`，并且使用箭头函数未将此类属性绑定到组件，则这是一个问题。因此，必须使用 **常规** 函数而不是箭头函数。
+
 You might also see:
+
+你可能还会看到：
 
 ```
 module.exports = {  data: () => {    return {      name: 'Flavio'    }  }}
@@ -1577,19 +1611,29 @@ module.exports = {  data: () => {    return {      name: 'Flavio'    }  }}
 
 This is using the  [CommonJS][50]  syntax and it works as well. But I recommend using the ES Modules syntax, as that is a JavaScript standard.
 
+这是使用 [CommonJS][50] 语法，它工作的很好。但是我建议使用 ES 模块语法，因为这是一个Javascript 标准。
+
+### Vue Templates
 ### Vue Templates
 
 Vue.js uses a templating language that’s a superset of HTML.
 
+Vue.js 使用的模板语言是 HTML 的超集。
+
 Any HTML is a valid Vue.js template. In addition to that, Vue.js provides two powerful things: interpolation and directives.
 
+任何 HTML 都是有效的 Vue.js 模板。除此之外，Vue.js 还提供了两个强大的功能：插值和指令。
+
 This is a valid Vue.js template:
+
+这是一个有效的 Vue.js 模板：
 
 ```
 <span>Hello!</span>
 ```
 
 This template can be put inside a Vue component declared explicitly:
+这可以将该模板放入显式声明的 Vue 组件中：
 
 ```
 new Vue({  template: '<span>Hello!</span>'})
@@ -1597,13 +1641,19 @@ new Vue({  template: '<span>Hello!</span>'})
 
 or it can be put into a Single File Component:
 
+或者可以将其放入 Single File Component（单文件组件） 中:
+
 ```
 <template>  <span>Hello!</span></template>
 ```
 
 This first example is very basic. The next step is making it output a piece of the component state, for example, a name.
 
+第一个示例非常基础。下一步是使其输出部分组件状态，例如，名称。
+
 This can be done using interpolation. First, we add some data to our component:
+
+这可以使用插值来完成。首先，我们向组件添加一些数据：
 
 ```
 new Vue({  data: {    name: 'Flavio'  },  template: '<span>Hello!</span>'})
@@ -1611,15 +1661,23 @@ new Vue({  data: {    name: 'Flavio'  },  template: '<span>Hello!</span>'})
 
 and then we can add it to our template using the double brackets syntax:
 
+然后我们可以使用双括号语法将其添加到模板中：
+
 ```
 new Vue({  data: {    name: 'Flavio'  },  template: '<span>Hello {{name}}!</span>'})
 ```
 
 One interesting thing here. See how we just used  `name`  instead of  `this.data.name`?
 
+这是一件有趣的是。看看我们是怎么使用 `name` 代替 `this.data.name` 的？
+
 This is because Vue.js does some internal binding and lets the template use the property as if it was local. Pretty handy.
 
+这是因为 Vue.js 进行了一些内部的绑定，并让模板对象像使用本地属性一样使用该属性。很方便。
+
 In a single file component, that would be:
+
+在一个单文件组件中，这将是：
 
 ```
 <template>  <span>Hello {{name}}!</span></template>
@@ -1631,17 +1689,31 @@ In a single file component, that would be:
 
 I used a regular function in my export. Why not an arrow function?
 
+我在导出中使用了一个常规函数。为什么不是一个箭头函数？
+
 This is because in  `data`  we might need to access a method in our component instance, and we can't do that if  `this`  is not bound to the component, so we can’t use an arrow function.
+
+这是因为在 `data` 中，我们可能需要访问组件实例中的一个方法，如果 `this` 没有绑定到组件，我们就不能这样做，所以我们不能使用箭头函数。
 
 Do note that we could use an arrow function, but then I would need to remember to switch to a regular function in case I use  `this`. Better play it safe, I think.
 
+请注意，我们可以使用箭头函数，但是如果我们使用 `this`，那么我需要记住切换到常规功能。我想还是小心为好。
+
 Now, back to the interpolation.
+
+现在，回到差值表达式。
 
 `{{ name }}`  should remind you of Mustache / Handlebars template interpolation, but it's just a visual reminder.
 
+`{{ name }}` 应该会提醒你的 stache / Handlebars 模板插值，但它只是一个视觉提醒。
+
 While in those templating engines they are “dumb”, in Vue, you can do much more, and it’s more flexible.
 
+虽然在这些模板引擎中他们是 “愚蠢的”，但是在 Vue 中，你可以做更多的事情，而且它更灵活。
+
 You can use any JavaScript expression inside your interpolations, but you’re limited to just one expression:
+
+你可以在插值表达式中使用任何 JavaScript 表达式，但是你只能使用一个表达式：
 
 ```
 {{ name.reverse() }}
@@ -1653,25 +1725,43 @@ You can use any JavaScript expression inside your interpolations, but you’re l
 
 Vue provides access to some global objects inside templates, including Math and Date, so you can use them:
 
+Vue 提供了对模板中一些全局对象的访问，包括 Math 和 Date，所以你可以使用它们：
+
 ```
 {{ Math.sqrt(16) * Math.random() }}
 ```
 
 It’s best to avoid adding complex logic to templates, but the fact that Vue allows it gives us more flexibility, especially when trying things out.
 
+最好避免向模板中添加复杂逻辑，但事实上 Vue 允许这样做为我们提供了更多的灵活性，特别是在尝试时。
+
 We can first try to put an expression in the template, and then move it to a computed property or method later on.
+
+我们可以首先尝试将表达式放入模板中，稍后将其移动到计算属性或方法中。
 
 The value included in any interpolation will be updated upon a change of any of the data properties it relies on.
 
+任何插值表达式中包含的值将在其所依赖的任何数据属性发生更改时进行更新。
+
 You can avoid this reactivity by using the  `v-once`  directive.
+
+你可以通过使用 `v-once` 指令来避免这种反应。
 
 The result is always escaped, so you can’t have HTML in the output.
 
+结果总是转义的，所以输出中不能有 HTML。
+
 If you need to have an HTML snippet, you need to use the  `v-html`  directive instead.
+
+如果你需要一个 HTML 片段，你需要使用 `v-html` 指令代替。
 
 ### Styling components using CSS
 
+### 使用 CSS 样式化组件
+
 The simplest option to add CSS to a Vue.js component is to use the  `style`  tag, just like in HTML:
+
+将 CSS 添加到 Vue.js 组件的最简单选择是使用 `style` 标签，就像在 HTML 中一样：
 
 ```
 <template>  <p style="text-decoration: underline">Hi!</p></template>
@@ -1683,6 +1773,8 @@ The simplest option to add CSS to a Vue.js component is to use the  `style`  tag
 
 This is as static as you can get. What if you want  `underline`  to be defined in the component data? Here's how you can do it:
 
+这是你能得到的最静态的。如果希望在组件数据中定义 `下划线`，该怎么办？你可以这样做：
+
 ```
 <template>  <p :style="{'text-decoration': decoration}">Hi!</p></template>
 ```
@@ -1693,15 +1785,23 @@ This is as static as you can get. What if you want  `underline`  to be defined i
 
 `:style`  is a shorthand for  `v-bind:style`. I'll use this shorthand throughout this tutorial.
 
+`:style` 是 `v-bind:style` 的缩写。在本教程中，我将使用这个缩写。
+
 Notice how we had to wrap  `text-decoration`  in quotes. This is because of the dash, which is not part of a valid JavaScript identifier.
 
+注意我们是如何在引号中包装 `text-deciration` 的。这是因为破折号不是有效的 JavaScript 标志符的一部分。
+
 You can avoid the quotes by using a special camelCase syntax that Vue.js enables, and rewriting it to  `textDecoration`:
+
+你可以通过使用 Vue.js 支持的特殊 camelCase 语法来避免引号，并将其重写为 `textDecoration`：
 
 ```
 <template>  <p :style="{textDecoration: decoration}">Hi!</p></template>
 ```
 
 Instead of binding an object to  `style`, you can reference a computed property:
+
+不需要将对象绑定到 `style`，你可以引用一个计算属性：
 
 ```
 <template>  <p :style="styling">Hi!</p></template>
@@ -1713,6 +1813,8 @@ Instead of binding an object to  `style`, you can reference a computed property:
 
 Vue components generate plain HTML, so you can choose to add a class to each element, and add a corresponding CSS selector with properties that style it:
 
+Vue 组件生成纯 HTML，因此你可以选择向每个元素添加一个 class，并添加具有样式属性设置其属性的相应 CSS 选择器：
+
 ```
 <template>  <p class="underline">Hi!</p></template>
 ```
@@ -1723,6 +1825,8 @@ Vue components generate plain HTML, so you can choose to add a class to each ele
 
 You can use SCSS like this:
 
+你可以像这样使用 SCSS：
+
 ```
 <template>  <p class="underline">Hi!</p></template>
 ```
@@ -1732,6 +1836,8 @@ You can use SCSS like this:
 ```
 
 You can hard code the class like in the above example. Or you can bind the class to a component property, to make it dynamic, and only apply to that class if the data property is true:
+
+你可以想上面的示例那样对 class 进行硬编码。或者你可以将 class 绑定到组件属性，使其成为动态的，并且仅在数据属性为真时才应用于该类：
 
 ```
 <template>  <p :class="{underline: isUnderlined}">Hi!</p></template>
@@ -1747,6 +1853,8 @@ You can hard code the class like in the above example. Or you can bind the class
 
 Instead of binding an object to class, like we did with  `<p :class="{text: isText}">H`i!</p>, you can directly bind a string, and that will reference a data property:
 
+而不是绑定一个对象到 class，就像我们做的 `<p :class="{text: isText}">Hi!</p>`，你可以直接绑定一个字符串，这将引用一个数据属性：
+
 ```
 <template>  <p :class="paragraphClass">Hi!</p></template>
 ```
@@ -1760,6 +1868,8 @@ Instead of binding an object to class, like we did with  `<p :class="{text: isTe
 ```
 
 You can assign multiple classes, either by adding two classes to  `paragraphClass`  in this case or by using an array:
+
+你可以分配多个 class，在这种情况下，你可以通过在 `paragraphClass` 中添加两个 class，或者使用数组：
 
 ```
 <template>  <p :class="[decoration, weight]">Hi!</p></template>
@@ -1775,6 +1885,8 @@ You can assign multiple classes, either by adding two classes to  `paragraphClas
 
 The same can be done using an object inlined in the class binding:
 
+使用 class 绑定内联的对象可以完成相同的操作：
+
 ```
 <template>  <p :class="{underline: isUnderlined, weight: isBold}">Hi!</p></template>
 ```
@@ -1788,6 +1900,8 @@ The same can be done using an object inlined in the class binding:
 ```
 
 And you can combine the two statements:
+
+并且你可以合并一下两个语句：
 
 ```
 <template>  <p :class="[decoration, {weight: isBold}]">Hi!</p></template>
@@ -1803,6 +1917,8 @@ And you can combine the two statements:
 
 You can also use a computed property that returns an object, which works best when you have many CSS classes to add to the same element:
 
+你还可以使用返回对象的计算属性，当你将多个 CSS 的 class 添加到同一元素时，该属性最有效：
+
 ```
 <template>  <p :class="paragraphClasses">Hi!</p></template>
 ```
@@ -1817,33 +1933,58 @@ You can also use a computed property that returns an object, which works best wh
 
 Notice that in the computed property you need to reference the component data using  `this.[propertyName]`, while in the template data, properties are conveniently put as first-level properties.
 
+注意，在计算属性中，你需要使用 `this.[propertyName]` 来引用组件数据，而在模板数据中，属性可以方便的放置为第一级属性。
+
 Any CSS that’s not hard coded like in the first example is going to be processed by Vue, and Vue does the nice job of automatically prefixing the CSS for us. This allows us to write clean CSS while still targeting older browsers (which still means browsers that Vue supports, so IE9+).
+
+Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue 可以很好的为我们自动为 CSS 加上前缀。
+这使得我们可以编写干净的 CSS，同时仍可以针对较旧的浏览器（这意味着 Vue 支持的浏览器，比如 IE9+）。
 
 ### Directives
 
+### 指令
+
 We saw in Vue.js templates and interpolations how you can embed data in Vue templates.
+
+我们在 Vue.js 模板和插值中看到了如何在 Vue 模板中嵌入数据。
 
 This section explains the other technique offered by Vue.js in templates: directives.
 
+本节解释 Vue.js 在模板：指令中提供的其他技巧。
+
 Directives are basically like HTML attributes which are added inside templates. They all start with  `v-`, to indicate that's a Vue special attribute.
 
+指令基本上类似于在模板中添加的 HTML 属性。它们都是以 `v-` 开头，表示这是一个 Vue 特殊属性。
+
 Let’s see each of the Vue directives in detail.
+
+让我们详细查看每个 Vue 指令。
+
+#### `v-text`
 
 #### `v-text`
 
 Instead of using interpolation, you can use the  `v-text`  directive. It performs the same job:
+
+你可以使用 `v-text` 指令代替插值表达式。它执行想通的工作：
 
 ```
 <span v-text="name"></span>
 ```
 
 #### `v-once`
-
+#### `v-once`
 You know how  `{{ name }}`  binds to the  `name`  property of the component data.
+
+你知道 `{{ name }}` 如何绑定到组件数据的 `name` 属性。
 
 Any time  `name`  changes in your component data, Vue is going to update the value represented in the browser.
 
+每当组件数据中的 `name` 发生改变时，Vue 将更新浏览器中表示的值。
+
 Unless you use the  `v-once`  directive, which is basically like an HTML attribute:
+
+除非你使用 `v-once` 指令，它基本上就像一个 HTML 属性：
 
 ```
 <span v-once>{{ name }}</span>
@@ -1851,9 +1992,15 @@ Unless you use the  `v-once`  directive, which is basically like an HTML attribu
 
 #### `v-html`
 
+#### `v-html`
+
 When you use interpolation to print a data property, the HTML is escaped. This is a great way that Vue uses to automatically protect from XSS attacks.
 
+当使用插值表达式打印数据属性时，HTML 将被转义。这是 Vue 用来自动防御 XSS 攻击的一个很好的方法。
+
 There are cases, however, where you want to output HTML and make the browser interpret it. You can use the  `v-html`directive:
+
+但是，在某些情况下，你希望输出 HTML 并让浏览器解释他，你可以使用 `v-html` 指令：
 
 ```
 <span v-html="someHtml"></span>
@@ -1861,15 +2008,23 @@ There are cases, however, where you want to output HTML and make the browser int
 
 #### `v-bind`
 
+#### `v-bind`
+
 Interpolation only works in the tag content. You can’t use it on attributes.
 
+插值表达式只适用于标记内容。不能对属性使用它。
+
 Attributes must use  `v-bind`:
+
+属性必须使用 `v-bind`：
 
 ```
 <a v-bind:href="url">{{ linkText }}</a>
 ```
 
 `v-bind`  is so common that there is a shorthand syntax for it:
+
+`v-bind` 非常的常见，它有一个简单的语法：
 
 ```
 <a v-bind:href="url">{{ linkText }}</a><a :href="url">{{ linkText }}</a>
@@ -1878,6 +2033,8 @@ Attributes must use  `v-bind`:
 #### Two-way binding using  `v-model`
 
 `v-model`  lets us bind a form input element for example, and makes it change the Vue data property when the user changes the content of the field:
+
+例如，`v-model` 让我们绑定一个表单输入元素，并让它在用户更该字段内容时更改 Vue 数据属性。
 
 ```
 <input v-model="message" placeholder="Enter a message"><p>Message is: {{ message }}</p>
@@ -1889,7 +2046,11 @@ Attributes must use  `v-bind`:
 
 #### Using expressions
 
+#### 使用表达式
+
 You can use any JavaScript expression inside a directive:
+
+你可以在指令里面使用任何 JavaScript 表达式。
 
 ```
 <span v-text="'Hi, ' + name + '!'"></span>
@@ -1901,9 +2062,14 @@ You can use any JavaScript expression inside a directive:
 
 Any variable used in a directive references the corresponding data property.
 
+指令中使用任何变量都引用相应的数据属性。
+
 #### Conditionals
+#### 条件
 
 Inside a directive you can use the ternary operator to perform a conditional check, since that’s an expression:
+
+在指令中，你可以使用三元运算符来执行条件检查，因为这是一个表达式：
 
 ```
 <span v-text="name == Flavio ? 'Hi Flavio!' : 'Hi' + name + '!'"></span>
@@ -1911,17 +2077,26 @@ Inside a directive you can use the ternary operator to perform a conditional che
 
 There are dedicated directives that allow you to perform more organized conditionals:  `v-if`,  `v-else`  and  `v-else-if`.
 
+有一些专用指令允许你执行更有组织的条件语句： `v-if`，`v-else` 和 `v-else-if`
+
 ```
 <p v-if="shouldShowThis">Hey!</p>
 ```
 
 `shouldShowThis`  is a boolean value contained in the component's data.
 
+`shouldShowThis` 是一个包含在组件数据中的布尔值。
+
 #### Loops
+#### 循环
 
 `v-for`  allows you to render a list of items. Use it in combination with  `v-bind`  to set the properties of each item in the list.
 
+`v-for` 允许你渲染一个项目列表。将它与 `v-bind` 结合使用来设置列表中每个项目的属性。
+
 You can iterate on a simple array of values:
+
+你可以迭代一个简单的数组的值：
 
 ```
 <template>  <ul>    <li v-for="item in items">{{ item }}</li>  </ul></template>
@@ -1932,6 +2107,7 @@ You can iterate on a simple array of values:
 ```
 
 Or on an array of objects:
+或对象数组：
 
 ```
 <template>  <div>    <!-- using interpolation -->    <ul>      <li v-for="todo in todos">{{ todo.title }}</li>    </ul>    <!-- using v-text -->    <ul>      <li v-for="todo in todos" v-text="todo.title"></li>    </ul>  </div></template>
@@ -1943,13 +2119,19 @@ Or on an array of objects:
 
 `v-for`  can give you the index using:
 
+`v-for` 可以给你的索引使用：
+
 ```
 <li v-for="(todo, index) in todos"></li>
 ```
 
 #### Events
 
+#### 事件
+
 `v-on`  allows you to listen to DOM events, and trigger a method when the event happens. Here we listen for a click event:
+
+`v-on` 允许监听 DOM 事件，并在事件发生时触发一个方法。下面我们来监听一个点击事件：
 
 ```
 <template>  <a v-on:click="handleClick">Click me!</a></template>
@@ -1961,6 +2143,8 @@ Or on an array of objects:
 
 You can pass parameters to any event:
 
+你可以传递参数给任何事件：
+
 ```
 <template>  <a v-on:click="handleClick('test')">Click me!</a></template>
 ```
@@ -1970,6 +2154,8 @@ You can pass parameters to any event:
 ```
 
 Small bits of JavaScript (a single expression) can be put directly into the template:
+
+一小段 JavaScript（单个表达式）可以直接放入模板：
 
 ```
 <template>  <a v-on:click="counter = counter + 1">{{counter}}</a></template>
@@ -1981,7 +2167,11 @@ Small bits of JavaScript (a single expression) can be put directly into the temp
 
 `click`  is just one kind of event. A common event is  `submit`, which you can bind using  `v-on:submit`.
 
+`点击` 只是一种事件。一个常见的事件是 `提交`，你可以使用 `v-on:submit` 绑定它。
+
 `v-on`  is so common that there is a shorthand syntax for it,  `@`:
+
+`v-on` 非常常见，它有一个简写语法 `@`：
 
 ```
 <a v-on:click="handleClick">Click me!</a><a @click="handleClick">Click me!</a>
@@ -1989,7 +2179,11 @@ Small bits of JavaScript (a single expression) can be put directly into the temp
 
 #### Show or hide
 
+#### 显示或者隐藏
+
 You can choose to only show an element in the DOM if a particular property of the Vue instance evaluates to true, using  `v-show`:
+
+如果 Vue 实例的某个属性值为 true，可以使用 `v-show` 选择只显示 DOM 中的一个元素：
 
 ```
 <p v-show="isTrue">Something</p>
@@ -1997,13 +2191,22 @@ You can choose to only show an element in the DOM if a particular property of th
 
 The element is still inserted in the DOM, but set to  `display: none`  if the condition is not satisfied.
 
+元素任然可以插入到 DOM 中，但如果条件不满足，则设置为 `display:none`。
+
 #### Event directive modifiers
+#### 事件指示修饰符
 
 Vue offers some optional event modifiers you can use in association with  `v-on`, which automatically make the event do something without you explicitly coding it in your event handler.
 
+Vue 提供了一些可选的事件修饰符，你可以将它们与 `v-on` 一起使用，这些修饰符可以自动执行某些操作，而无需在事件处理程序中显式的对其进行编码。
+
 One good example is  `.prevent`, which automatically calls  `preventDefault()`  on the event.
 
+一个很好的例子就是 `.prevent`，它会在事件中自动调用 `preventDefault`。
+
 In this case, the form does not cause the page to be reloaded, which is the default behavior:
+
+在这种情况下，该表单不会导致页面被重新加载，这是默认行为：
 
 ```
 <form v-on:submit.prevent="formSubmitted"></form>
@@ -2011,19 +2214,35 @@ In this case, the form does not cause the page to be reloaded, which is the defa
 
 Other modifiers include  `.stop`,  `.capture`,  `.self`,  `.once`,  `.passive`  and they are  [described in detail in the official docs][51].
 
+其它的修饰符包括 `.stop`， `.capture`， `.self`， `.once`， `.passive` 并且它们 [在官方文档中有详细说明][51]。
+
 #### Custom directives
+
+#### 自定义指令
 
 The Vue default directives already let you do a lot of work, but you can always add new, custom directives if you want.
 
+Vue 默认指令已经可以完成很多工作，但如果需要，你可以随时添加新的自定义指令。
+
 Read  [here][52]  if you’re interested in learning more.
+
+如果你有兴趣了解更多，请在[这里][52]阅读。
 
 ### Methods
 
+### 方法
+
 #### What are Vue.js methods?
+
+#### 什么是 Vue.js 方法？
 
 A Vue method is a function associated with the Vue instance.
 
+Vue 方法是与 Vue 实例关联的函数。
+
 Methods are defined inside the  `methods`  property:
+
+方法在 `methods` 中定义：
 
 ```
 new Vue({  methods: {    handleClick: function() {      alert('test')    }  }})
@@ -2031,11 +2250,15 @@ new Vue({  methods: {    handleClick: function() {      alert('test')    }  }})
 
 or in the case of Single File Components:
 
+或者在 Single File Components（单文件组件）的情况下：
+
 ```
 <script>export default {  methods: {    handleClick: function() {      alert('test')    }  }}</script>
 ```
 
 Methods are especially useful when you need to perform an action and you attach a  `v-on`  directive on an element to handle events. Like this one, which calls  `handleClick`  when the element is clicked:
+
+方法在需要执行某个操作并在元素上附加 `v-on` 指令以处理事件时特别有用。比如这个，当元素被点击时，它会调用 `handleClick`。
 
 ```
 <template>  <a @click="handleClick">Click me!</a></template>
@@ -2043,9 +2266,15 @@ Methods are especially useful when you need to perform an action and you attach 
 
 #### Pass parameters to Vue.js methods
 
+#### 将参数传递给 Vue.js 方法
+
 Methods can accept parameters.
 
+方法可以接受参数。
+
 In this case, you just pass the parameter in the template:
+
+在这个示例中，你只需在模板中传递参数：
 
 ```
 <template>  <a @click="handleClick('something')">Click me!</a></template>
@@ -2057,13 +2286,19 @@ new Vue({  methods: {    handleClick: function(text) {      alert(text)    }  }}
 
 or in the case of Single File Components:
 
+或对于 Single File Components（单文件组件）：
+
 ```
 <script>export default {  methods: {    handleClick: function(text) {      alert(text)    }  }}</script>
 ```
 
 #### How to access data from a method
 
+#### 如何从方法访问数据
+
 You can access any of the data properties of the Vue component by using  `this.propertyName`:
+
+你可以通过使用 `this.propertyName` 来访问 Vue 组件的任何数据属性。
 
 ```
 <template>  <a @click="handleClick()">Click me!</a></template>
@@ -2075,13 +2310,22 @@ You can access any of the data properties of the Vue component by using  `this.p
 
 We don’t have to use  `this.data.name`, just  `this.name`. Vue does provide a transparent binding for us. Using  `this.data.name`  will raise an error.
 
+我们不需要使用 `this.data.name`，而只需使用 `this.name`。Vue 确实为我们提供了一个透明的绑定。使用 `this.data.name` 将引发错误。
+
 As you saw before in the  **events**  description, methods are closely interlinked to events, because they are used as event handlers. Every time an event occurs, that method is called.
 
+正如你在前面的 **事件** 描述中看到的，方法与事件密切相关，因为它们被用作事件处理程序。每次发生事件时，都会调用该方法。
+
 ### Watchers
+### 观察值
 
 A watcher is a special Vue.js feature that allows you to spy on one property of the component state, and run a function when that property value changes.
 
+监控程序是一个特殊的 Vue.js 特性，它允许你监视组件状态的一个属性，并在属性值改变时运行一个函数。
+
 Here’s an example. We have a component that shows a name, and allows you to change it by clicking a button:
+
+这里是一个例子。我们有一个组件，显示一个名称，并允许你通过点击按钮改变它。
 
 ```
 <template>  <p>My name is {{name}}</p>  <button @click="changeName()">Change my name!</button></template>
@@ -2093,7 +2337,11 @@ Here’s an example. We have a component that shows a name, and allows you to ch
 
 When the name changes we want to do something, like print a console log.
 
+当名称发生变化时，我们需要做一些事情，比如打印控制台日志。
+
 We can do so by adding to the  `watch`  object a property named as the data property we want to watch over:
+
+为此，我们可以向 `watch` 对象添加一个属性，该属性名为我们想要监视的 data 属性：
 
 ```
 <script>export default {  data() {    return {      name: 'Flavio'    }  },  methods: {    changeName: function() {      this.name = 'Flavius'    }  },  watch: {    name: function() {      console.log(this.name)    }  }}</script>
@@ -2101,17 +2349,26 @@ We can do so by adding to the  `watch`  object a property named as the data prop
 
 The function assigned to  `watch.name`  can optionally accept 2 parameters. The first is the new property value. The second is the old property value:
 
+分配给 `watch.name` 的函数可以选择接受两个参数。第一个是新的属性值。第二个是旧的属性值：
+
 ```
 <script>export default {  /* ... */  watch: {    name: function(newValue, oldValue) {      console.log(newValue, oldValue)    }  }}</script>
 ```
 
 Watchers cannot be looked up from a template as you can with computed properties.
 
+不能像使用计算属性那样从模板中查找观察者。
+
 ### Computed Properties
+### 计算属性
 
 #### What is a Computed Property
 
+#### 什么是计算属性
+
 In Vue.js you can output any data value using parentheses:
+
+在 Vue.js 中，你可以使用括号输出任何数据的值:
 
 ```
 <template>  <p>{{ count }}</p></template>
@@ -2123,17 +2380,27 @@ In Vue.js you can output any data value using parentheses:
 
 This property can host some small computations. For example:
 
+这个属性可以承载一些小型计算。例如：
+
 ```
 <template>  {{ count * 10 }}</template>
 ```
 
 But you’re limited to a single JavaScript  **expression**.
 
+但是你只能使用一个 Javascript **表达式**。
+
 In addition to this technical limitation, you also need to consider that templates should only be concerned with displaying data to the user, not perform logic computations.
+
+除了这个技术限制外，你还需要考虑模板应该只关注向用户显示数据，而不是执行逻辑计算。
 
 To do something more than a single expression, and to have more declarative templates, you use a computed property.
 
+要执行比单个表达式更多的操作，并拥有更多的声明性模板，可以使用 computed 属性。
+
 Computed properties are defined in the  `computed`  property of the Vue component:
+
+计算属性在 Vue 组件的 `computed` 属性中的定义。
 
 ```
 <script>export default {  computed: {
@@ -2145,12 +2412,20 @@ Computed properties are defined in the  `computed`  property of the Vue componen
 
 #### An example of a computed property
 
+#### 计算属性的一个示例
+
 Here’s an example that uses a computed property  `count`  to calculate the output.
 
+下面是一个使用 computed 属性 `count` 来计算输出的示例。
+
 Notice:
+声明：
 
 1.  I didn’t have to call  `{{ count() }}`. Vue.js automatically invokes the function
 2.  I used a regular function (not an arrow function) to define the  `count`  computed property, because I need to be able to access the component instance through  `this`.
+
+1.我不必调用 `{{ count() }}`。Vue.js 自动调用该函数。
+2.我是用了一个常规函数（不是箭头函数）来定义 `count` 计算属性，因为我需要能够通过 `this` 访问组件实例。
 
 ```
 <template>  <p>{{ count }}</p></template>
@@ -2161,10 +2436,15 @@ Notice:
 ```
 
 #### Computed properties vs. methods
+#### 计算属性与方法
 
 If you already know about Vue methods, you may wonder what’s the difference.
 
+如果你已经了解了 Vue 方法，你可能想知道他们之间的区别。
+
 First, methods must be called, not just referenced, so you’d need to do:
+
+首先，方法必须被调用，而不只是引用，所以你需要做：
 
 ```
 <template>  <p>{{ count() }}</p></template>
@@ -2176,9 +2456,15 @@ First, methods must be called, not just referenced, so you’d need to do:
 
 But the main difference is that computed properties are cached.
 
+但是主要的区别是计算属性被缓存。
+
 The result of the  `count`  computed property is internally cached until the  `items`  data property changes.
 
+`count` 计算属性的结果在内部缓存，直到 `items` 数据属性被更改。
+
 **Important:**  Computed properties are only updated when a reactive source updates. Regular JavaScript methods are not reactive, so a common example is to use  `Date.now()`:
+
+**重要：** 计算属性仅在响应源更新的时候更新。常规的 JavaScript 方法不是被动的，所以一个常见的例子是使用 `Date.now()` ：
 
 ```
 <template>  <p>{{ now }}</p></template>
@@ -2190,46 +2476,76 @@ The result of the  `count`  computed property is internally cached until the  `i
 
 It will render once, and then it will not be updated even when the component re-renders. It’s just updated on a page refresh, when the Vue component is quit and reinitialized.
 
+它将渲染一次，然后即使在组件重新渲染时也不会更新。当 Vue 组件退出并重新初始化时，它只是在页面刷新时更新。
+
 In this case, a method is better suited for your needs.
 
-### Methods vs. Watchers vs. Computed Properties
+在这种情况下，方法更适合你的需要。
 
+### Methods vs. Watchers vs. Computed Properties
+### Methods、Watchers、和 Computed Properties
 Now that you know about methods, watchers and computed properties, you might be wondering when should you use one vs the others.
+
+现在你已经了解了方法、观察者和计算属性，你可能想知道什么时候应该使用一种方法，什么时候应该使用另一种方法。
 
 Here’s a breakdown of this question.
 
+这是该问题的细分。
+
 #### When to use methods
+#### 什么时候使用 methods
 
 -   To react to some event happening in the DOM
 -   To call a function when something happens in your component.  
     You can call a method from computed properties or watchers.
 
+- 对 DOM 中发生的某些事件作出反应
+- 当组件中发生某些事情时调用函数
+  你可以从计算的属性或观察程序中调用方法
 #### When to use computed properties
-
+#### 什么时候使用计算属性
 -   You need to compose new data from existing data sources
 -   You have a variable you use in your template that’s built from one or more data properties
 -   You want to reduce a complicated, nested property name to a more readable and easy to use one (but update it when the original property changes)
 -   You need to reference a value from the template. In this case, creating a computed property is the best thing, because it’s cached.
 -   You need to listen to changes of more than one data property
 
+- 你需要从现有数据源组合新数据
+- 你在模板中使用了一个由一个货多个数据属性构建的变量
+- 你希望将复杂的、嵌套的属性名简化为更易阅读和使用的名称（但在原始属性更改时更新）
+- 你需要从模板引用一个值。在这种情况下，最好创建一个 computed 属性，因为它是缓存的
+- 你需要监听多个数据属性的更改
 #### When to use watchers
-
+#### 什么时候使用观察者
 -   You want to listen when a data property changes, and perform some action
 -   You want to listen to a prop value change
 -   You only need to listen to one specific property (you can’t watch multiple properties at the same time)
 -   You want to watch a data property until it reaches some specific value and then do something
 
+- 你希望在数据属性更改时监听，并执行一些操作
+- 你想要监听 prop 值的改变
+- 你只需要监听一个特定的属性（你不能同时监听多个属性）
+- 你希望监听一个数据属性，直到它达到某个特定值，然后再做一些事情
+
 ### Props: pass data to child components
+
+### Props： 将数据传递给子组件
 
 Props are the way components can accept data from components that include them (parent components).
 
+Props 是组件从包含它们的组件（父组件）接受数据的方式。
+
 When a component expects one or more prop, it must define them in its  `props`property:
+
+当一个组件需要一个或多个 prop 时，它必须在 `props` 属性中定义它们：
 
 ```
 Vue.component('user-name', {  props: ['name'],  template: '<p>Hi {{ name }}</p>'})
 ```
 
 or, in a Vue Single File Component:
+
+或者，在一个 Vue Single File Component(单文件组件)中：
 
 ```
 <template>  <p>{{ name }}</p></template>
@@ -2240,22 +2556,29 @@ or, in a Vue Single File Component:
 ```
 
 #### Accept multiple props
-
+#### 允许多个 props
 You can have multiple props by simply appending them to the array:
+
+你可以拥有多个 props，只需要把他们添加到数组：
 
 ```
 Vue.component('user-name', {  props: ['firstName', 'lastName'],  template: '<p>Hi {{ firstName }} {{ lastName }}</p>'})
 ```
 
 #### Set the prop type
+#### 设置 prop 类型
 
 You can specify the type of a prop very simply by using an object instead of an array, using the name of the property as the key of each property, and the type as the value:
+
+你可以很简单的指定一个 prop 的类型，使用一个对象而不是数组，使用属性的名称作为每个属性的键，类型作为值：
 
 ```
 Vue.component('user-name', {  props: {    firstName: String,    lastName: String  },  template: '<p>Hi {{ firstName }} {{ lastName }}</p>'})
 ```
 
 The valid types you can use are:
+
+你可以使用有效的类型是：
 
 -   String
 -   Number
@@ -2268,31 +2591,42 @@ The valid types you can use are:
 
 When a type mismatches, Vue alerts you (in development mode) in the console with a warning.
 
+当类型不匹配时，Vue 会在控制台中警告你（在开发模式下）。
+
 Prop types can be more articulated.
 
+Prop 类型可以更加明确。
+
 You can allow multiple different value types:
+
+你可以允许多种不同类型的值：
 
 ```
 props: {  firstName: [String, Number]}
 ```
 
 #### Set a prop to be mandatory
-
+#### 设置一个 prop 为强制性的
 You can require a prop to be mandatory:
+
+你可以要求一个 prop 是强制性的：
 
 ```
 props: {  firstName: {    type: String,    required: true  }}
 ```
 
 #### Set the default value of a prop
-
+#### 设置 prop 的默认值
 You can specify a default value:
+
+你可以指定一个默认值
 
 ```
 props: {  firstName: {    type: String,    default: 'Unknown person'  }}
 ```
 
 For objects:
+对象
 
 ```
 props: {  name: {    type: Object,    default: {      firstName: 'Unknown',      lastName: ''    }  }}
@@ -2300,23 +2634,31 @@ props: {  name: {    type: Object,    default: {      firstName: 'Unknown',     
 
 `default`  can also be a function that returns an appropriate value, rather than being the actual value.
 
+`default` 也可以是一个返回适当值的函数，而不是实际值。
+
 You can even build a custom validator, which is cool for complex data:
+
+你甚至可以建立一个自定义验证，该验证器对复杂数据很酷：
 
 ```
 props: {  name: {    validator: name => {      return name === 'Flavio' //only allow "Flavios"    }  }}
 ```
 
 #### Passing props to the component
-
+#### 将 props 传递到组件
 You pass a prop to a component using the syntax
-
+你使用语法将一个 prop 传递给组件。
 ```
 <ComponentName color="white" />
 ```
 
 if what you pass is a static value.
 
+如果传递的是一个静态值。
+
 If it’s a data property, you use
+
+如果是数据属性，则使用
 
 ```
 <template>  <ComponentName :color=color /></template>
@@ -2328,6 +2670,8 @@ If it’s a data property, you use
 
 You can use a ternary operator inside the prop value to check a truthy condition and pass a value that depends on it:
 
+你可以在 prop 的值中使用三元运算符来检查一个真实的条件，并传递一个依赖于它的值：
+
 ```
 <template>  <ComponentName :colored="color == 'white' ? true : false" /></template>
 ```
@@ -2337,12 +2681,18 @@ You can use a ternary operator inside the prop value to check a truthy condition
 ```
 
 ### Handling Events in Vue
+### 在 Vue 中处理事件
 
 #### What are Vue.js events?
+#### 什么是 Vue.js 事件？
 
 Vue.js allows us to intercept any DOM event by using the  `v-on`  directive on an element.
 
+Vue.js 允许我们通过在一个元素上使用 `v-on` 指令来拦截任何 DOM 事件。
+
 If we want to do something when a click event happens in this element:
+
+如果我们想做某事时，点击事件发生在这个元素：
 
 ```
 <template>  <a>Click me!</a></template>
@@ -2350,11 +2700,15 @@ If we want to do something when a click event happens in this element:
 
 we add a  `v-on`  directive:
 
+我们添加一个 `v-on` 指令：
+
 ```
 <template>  <a v-on:click="handleClick">Click me!</a></template>
 ```
 
 Vue also offers a very convenient alternative syntax for this:
+
+Vue 还提供了一个非常方便的替代语法：
 
 ```
 <template>  <a @click="handleClick">Click me!</a></template>
@@ -2362,7 +2716,11 @@ Vue also offers a very convenient alternative syntax for this:
 
 You can choose to use the parentheses or not.  `@click="handleClick"`  is equivalent to  `@click="handleClick()"`.
 
+你可以选择是否使用圆括号。  `@click="handleClick"` 相当于 `@click="handleClick()"`。
+
 `handleClick`  is a method attached to the component:
+
+`handleClick` 是一个附加在组件上的方法
 
 ```
 <script>export default {  methods: {    handleClick: function(event) {      console.log(event)    }  }}</script>
@@ -2370,11 +2728,18 @@ You can choose to use the parentheses or not.  `@click="handleClick"`  is equiva
 
 What you need to know here is that you can pass parameters from events:  `@click="handleClick(param)"`  and they will be received inside the method.
 
+这里需要知道的是，可以从事件传递参数  `@click="handleClick(param)"`， 并且它们将在这个方法里面呗接收。
+
 #### Access the original event object
+#### 访问原始事件对象
 
 In many cases, you will want to perform an action on the event object or look up some property in it. How can you access it?
 
+在许多情况下，你将希望对事件对象执行操作或在其中查找某些属性。如何访问它？
+
 Use the special  `$event`  directive:
+
+使用特殊的 `$event` 指令：
 
 ```
 <template>  <a @click="handleClick($event)">Click me!</a></template>
@@ -2386,6 +2751,8 @@ Use the special  `$event`  directive:
 
 and if you already pass a variable:
 
+或者你已经传递了一个变量：
+
 ```
 <template>  <a @click="handleClick('something', $event)">Click me!</a></template>
 ```
@@ -2396,9 +2763,14 @@ and if you already pass a variable:
 
 From there you could call  `event.preventDefault()`, but there's a better way: event modifiers.
 
+从这里你可以调用 `event.preventDefault()`,但是有一个更好的方法：事件修饰符。
+
 #### Event modifiers
+#### 事件修改器
 
 Instead of messing with DOM “things” in your methods, tell Vue to handle things for you:
+
+不要在你的方法中使用 DOM "事务"，而是告诉 Vue 为你处理事情
 
 -   `@click.prevent`  call  `event.preventDefault()`
 -   `@click.stop`  call  `event.stopPropagation()`
@@ -2407,13 +2779,28 @@ Instead of messing with DOM “things” in your methods, tell Vue to handle thi
 -   `@click.self`  make sure the click event was not bubbled from a child event, but directly happened on that element
 -   `@click.once`  the event will only be triggered exactly once
 
+-   `@click.prevent`  调用  `event.preventDefault()`
+-   `@click.stop`  调用  `event.stopPropagation()`
+-   `@click.passive` 使用 [addEventListener 的被动选项][53]
+-   `@click.capture` 使用事件捕获而不是事件冒泡
+-   `@click.self`  确保单击事件不是从子事件冒泡，而是直接发生在该元素上
+-   `@click.once`  事件只会被触发一次
+
 All those options can be combined by appending one modifier after the other.
+
+所有的这些选项都可以通过添加一个修饰符来组合。
 
 For more on propagation, bubbling and capturing, see my  [JavaScript events guide][54].
 
+有关 传播、冒泡和捕获的更多信息，请参见我的 [JavaScript 事件指南][54]
+
 ### Inject content using slots
 
+### 使用插槽注入内容
+
 A component can choose to define its content entirely, like in this case:
+
+组件可以选择完全定义其内容，就像在这种情况下：
 
 ```
 Vue.component('user-name', {  props: ['name'],  template: '<p>Hi {{ name }}</p>'})
@@ -2421,9 +2808,14 @@ Vue.component('user-name', {  props: ['name'],  template: '<p>Hi {{ name }}</p>'
 
 Or it can also let the parent component inject any kind of content into it, by using slots.
 
+或者，它还可以让父组件使用插槽将其任何类型的内容诸如其中。
+
 What’s a slot?
+什么是插槽？
 
 You define it by putting  `<slot>&`lt;/slot> in a component template:
+
+通过在组件模板中放入 `<slot></slot>` 来定义它：
 
 ```
 Vue.component('user-information', {  template: '<div class="user-information"><slot></slot></div>'})
@@ -2431,21 +2823,35 @@ Vue.component('user-information', {  template: '<div class="user-information"><s
 
 When using this component, any content added between the opening and closing tag will be added inside the slot placeholder:
 
+使用该组件时，在开始和结束标签之间添加的任何内容都将添加到插槽占位符中：
+
 ```
 <user-information>  <h2>Hi!</h2>  <user-name name="Flavio"></user-information>
 ```
 
 If you put any content side the  `<slot>&`lt;/slot> tags, that serves as the default content in case nothing is passed in.
 
+如果你将任何内容放在 `<slot></slot>` 标记中，这将作为默认内容，以防没有任何内容传入。
+
 A complicated component layout might require a better way to organize content.
+
+一个复杂的组件布局可能需要更好的方式来组织内容。
 
 Enter  **named slots**.
 
+输入 **命名插槽**
+
 With a named slot, you can assign parts of a slot to a specific position in your component template layout, and you use a  `slot`  attribute to any tag, to assign content to that slot.
+
+使用命名插槽，你可以将插槽的部分分配到模板布局中的特定位置，并且可以对任何标记使用 `插槽` 属性来将内容分配到该插槽。
 
 Anything outside any template tag is added to the main  `slot`.
 
+任何模板标签之外的任何东西都会被添加到主 `插槽` 中。
+
 For convenience, I use a  `page`  single file component in this example:
+
+为了方便，我在这个例子中使用了一个 `页面` 的单文件组件。
 
 ```
 <template>  <div>    <main>      <slot></slot>    </main>    <sidebar>      <slot name="sidebar"></slot>    </sidebar>  </div></template>
@@ -2461,11 +2867,19 @@ For convenience, I use a  `page`  single file component in this example:
 
 ### Filters, helpers for templates
 
+### 过滤器，模板的帮助程序
+
 Filters are a functionality provided by Vue components that let you apply formatting and transformations to any part of your template dynamic data.
+
+过滤器是 Vue 组件提供的一种功能，它允许你对模板动态数据的任何部分应用格式化和转换。
 
 They don’t change a component’s data or anything, but they only affect the output.
 
+他们不会改变组件的数据或任何东西，但他们只影响输出。
+
 Say you are printing a name:
+
+假设你正在打印一个名字：
 
 ```
 <template>  <p>Hi {{ name }}!</p></template>
@@ -2477,7 +2891,11 @@ Say you are printing a name:
 
 What if you want to check that  `name`  is actually containing a value, and if not print 'there', so that our template will print "Hi there!"?
 
+如果你想要检查 `name` 是否实际包含一个值，如果没有则打印 ’there‘，那么我们的模板将打印 “Hi there！”？
+
 Enter filters:
+
+输入过滤器：
 
 ```
 <template>  <p>Hi {{ name | fallback }}!</p></template>
@@ -2489,20 +2907,36 @@ Enter filters:
 
 Notice the syntax to apply a filter, which is  `| filterName`. If you're familiar with Unix, that's the Unix pipe operator, which is used to pass the output of an operation as an input to the next one.
 
+注意应用过滤器的语法，它是 `| filterName`。如果你熟悉 Unix，那就是 Unix 管理操作符，它用于将操作的输出做为输入传递给下一个操作。
+
 The  `filters`  property of the component is an object. A single filter is a function that accepts a value and returns another value.
+
+组件的 `过滤器` 属性是一个对象。单个过滤器是接受一个值并返回另一个值的函数。
 
 The returned value is the one that’s actually printed in the Vue.js template.
 
+返回的值实际上是在 Vue.js 模板中打印的值。
+
 The filter, of course, has access to the component data and methods.
 
+当然，过滤器可以访问组件数据的方法。
+
 What’s a good use case for filters?
+
+过滤器的良好用例是什么？
 
 -   transforming a string, for example, capitalizing or making it lowercase
 -   formatting a price
 
+- 转换字符串，例如，大写或将其小写
+- 格式化金额
 Above you saw a simple example of a filter:  `{{ name | fallback }}`.
 
+上面你看到了一个简单的过滤器示例：`{{ name | fallback }}`
+
 Filters can be chained, by repeating the pipe syntax:
+
+过滤器通过重复的管道语法链接：
 
 ```
 {{ name | fallback | capitalize }}
@@ -2510,7 +2944,11 @@ Filters can be chained, by repeating the pipe syntax:
 
 This first applies the  `fallback`  filter, then the  `capitalize`  filter (which we didn't define, but try making one!).
 
+这首先应用 `fallback` 过滤器，然后应用 `capitalize` 过滤器（我们没有定义它，但试着做一个）。
+
 Advanced filters can also accept parameters, using the normal function parameters syntax:
+
+高级过滤器也可以接受参数，使用正常的函数参数语法：
 
 ```
 <template>  <p>Hello {{ name | prepend('Dr.') }}</p></template>
@@ -2522,21 +2960,38 @@ Advanced filters can also accept parameters, using the normal function parameter
 
 If you pass parameters to a filter, the first one passed to the filter function is always the item in the template interpolation (`name`  in this case), followed by the explicit parameters you passed.
 
+如果将参数传递给过滤器，则传递给过滤器函数的第一个参数总是模板插值表达式中的项（在本例中为 `name`），然后传递显式的参数。
+
 You can use multiple parameters by separating them using a comma.
+
+你可以使用逗号分隔多个参数。
 
 Notice I used an arrow function. We avoid arrow functions in methods and computed properties, generally, because they almost always reference  `this`  to access the component data. But in this case, the filter does not need to access  `this`  but receives all the data it needs through the parameters, and we can safely use the simpler arrow function syntax.
 
+注意我用了一个箭头函数。通常，我们在方法和计算属性中避免使用箭头函数，因为他们几乎总是引用 `this` 来访问组件数据。但是在这种情况下，过滤器不需要访问 `this`，而是通过参数接收它需要的所有数据，我们可以安全的使用更简单的箭头函数语法。
+
 [This package][55]  has a lot of pre-made filters for you to use directly in templates, which include  `capitalize`,  `uppercase`,  `lowercase`,  `placeholder`,  `truncate`,  `currency`,  `pluralize`  and more.
+
+[这个包][55]有很多预先设置的过滤器，你可以直接在模板中使用，包括  `capitalize`,  `uppercase`,  `lowercase`,  `placeholder`,  `truncate`,  `currency`,  `pluralize` 等等。
 
 ### Communication among components
 
+### 组件之间的通信
+
 Components in Vue can communicate in various ways.
+
+Vue 中的组件可以以各种方式进行通信
 
 #### Using Props
 
+#### 使用 Props
 The first way is by using props.
 
+第一个方法是使用 props
+
 Parents “pass down” data by adding arguments to the component declaration:
+
+父类通过向组件声明中添加参数来 “传递” 数据：
 
 ```
 <template>  <div>    <Car color="green" />  </div></template>
@@ -2552,17 +3007,27 @@ export default {  name: 'App',  components: {    Car  }}</script>
 
 Props are one-way: from parent to child. Any time the parent changes the prop, the new value is sent to the child and re-rendered.
 
+Props 是单向的：从父母到孩子。每当父元素更改了这个 prop，新的值就会被发送给子元素并重新渲染。
+
 The reverse is not true, and you should never mutate a prop inside the child component.
+
+反之则不正确，并且你不应该在子组件中更改 prop。
 
 #### Using Events to communicate from children to parent
 
+#### 使用事件从子对象到父对象进行通信
+
 Events allow you to communicate from the children up to the parent:
+
+事件允许你从子到父的沟通：
 
 ```
 <script>export default {  name: 'Car',  methods: {    handleClick: function() {      this.$emit('clickedSomething')    }  }}</script>
 ```
 
 The parent can intercept this using the  `v-on`  directive when including the component in its template:
+
+当模板中包含组件时，父级可以使用 `v-on` 指令来拦截：
 
 ```
 <template>  <div>    <Car v-on:clickedSomething="handleClickInParent" />    <!-- or -->    <Car @clickedSomething="handleClickInParent" />  </div></template>
@@ -2574,11 +3039,14 @@ The parent can intercept this using the  `v-on`  directive when including the co
 
 You can pass parameters of course:
 
+当然你可以传递参数：
+
 ```
 <script>export default {  name: 'Car',  methods: {    handleClick: function() {      this.$emit('clickedSomething', param1, param2)    }  }}</script>
 ```
 
 and retrieve them from the parent:
+并在父级取得：
 
 ```
 <template>  <div>    <Car v-on:clickedSomething="handleClickInParent" />    <!-- or -->    <Car @clickedSomething="handleClickInParent" />  </div></template>
@@ -2590,15 +3058,27 @@ and retrieve them from the parent:
 
 #### Using an Event Bus to communicate between any components
 
+#### 使用 Event Bus 在任何组件之间通信
+
 Using events you’re not limited to child-parent relationships. You can use the so-called Event Bus.
+
+使用事件，你不局限于子-父关系。你可以使用所谓的 Event Bus。
 
 Above we used  `this.$emit`  to emit an event on the component instance.
 
+上面我们使用 `this.$emit` 来广播组件实例上的事件。
+
 What we can do instead is to emit the event on a more generally accessible component.
+
+我们可以做的是在一个更容易访问的组件上广播事件。
 
 `this.$root`, the root component, is commonly used for this.
 
+`this.$root`，即根组件，通常用于此目的。
+
 You can also create a Vue component dedicated to this job, and import it where you need.
+
+你还可以创建专用于此工作的 Vue 组件，并在需要的地方导入它。
 
 ```
 <script>export default {  name: 'Car',  methods: {    handleClick: function() {      this.$root.$emit('clickedSomething')    }  }}</script>
@@ -2606,15 +3086,23 @@ You can also create a Vue component dedicated to this job, and import it where y
 
 Any other component can listen for this event. You can do so in the  `mounted`  callback:
 
+任何其它组件都可以监听此事件。你可以 `mounted` 中这样做：
+
 ```
 <script>export default {  name: 'App',  mounted() {    this.$root.$on('clickedSomething', () => {      //...    })  }}</script>
 ```
 
 This is what Vue provides out of the box.
 
+这就是 Vue 提供的开箱即用的功能。
+
 When you outgrow this, you can look into Vuex or other 3rd part libraries.
 
+当你（的需求）超出这个范围时，你可以看看 Vuex 或其他第三方的库。
+
 ### Manage state using Vuex
+
+### 使用 Vuex 管理状态
 
 Vuex is the official state management library for Vue.js.
 

@@ -3,7 +3,7 @@
 > * 译者：blackcai
 > * 校对者：
 
-[The Vue Handbook: a thorough introduction to Vue.js](https://cdn-media-1.freecodecamp.org/images/1*Nzc4LiAlVXl8ic9T6v31zw.jpeg)
+![The Vue Handbook: a thorough introduction to Vue.js](https://cdn-media-1.freecodecamp.org/images/1*Nzc4LiAlVXl8ic9T6v31zw.jpeg)
 
 > Get this post in PDF/ePub/MOBI format at  [vuehandbook.com][1]
 
@@ -2766,7 +2766,7 @@ From there you could call  `event.preventDefault()`, but there's a better way: e
 从这里你可以调用 `event.preventDefault()`,但是有一个更好的方法：事件修饰符。
 
 #### Event modifiers
-#### 事件修改器
+#### 事件修饰符
 
 Instead of messing with DOM “things” in your methods, tell Vue to handle things for you:
 
@@ -2782,7 +2782,7 @@ Instead of messing with DOM “things” in your methods, tell Vue to handle thi
 -   `@click.prevent`  调用  `event.preventDefault()`
 -   `@click.stop`  调用  `event.stopPropagation()`
 -   `@click.passive` 使用 [addEventListener 的被动选项][53]
--   `@click.capture` 使用事件捕获而不是事件冒泡
+-   `@click.capture` 使用事件捕获而不是事件冒泡，即内部元素触发的事件先在此处理，然后才交由内部元素进行处理
 -   `@click.self`  确保单击事件不是从子事件冒泡，而是直接发生在该元素上
 -   `@click.once`  事件只会被触发一次
 
@@ -2793,6 +2793,8 @@ All those options can be combined by appending one modifier after the other.
 For more on propagation, bubbling and capturing, see my  [JavaScript events guide][54].
 
 有关 传播、冒泡和捕获的更多信息，请参见我的 [JavaScript 事件指南][54]
+
+补充说明：相关修饰符的官方文档在[这里][66]查看
 
 ### Inject content using slots
 
@@ -3106,58 +3108,111 @@ When you outgrow this, you can look into Vuex or other 3rd part libraries.
 
 Vuex is the official state management library for Vue.js.
 
+Vuex 是 Vue.js 的官方状态管理库。
+
 Its job is to share data across the components of your application.
 
+它的工作是在应用程序的各个组件之间共享数据。
+
 Components in Vue.js out of the box can communicate using
+
+开箱即用的 Vue.js 的组件可以进行通信。
 
 -   props, to pass state down to child components from a parent
 -   events, to change the state of a parent component from a child, or using the root component as an event bus
 
+- props，将状态从父组件传递到子组件
+- events，用于从子组件更改父组件的状态，或将根组件用做事件的总线
+
 Sometimes things get more complex than what these simple options allow.
+
+有时事情会比这些简单的选项所允许的更复杂。
 
 In this case, a good option is to centralize the state in a single store. This is what Vuex does.
 
+在这种情况下，一个好的选择是将状态集中在一个单元存储中。这就是 Vuex 所做的。
+
 #### Why should you use Vuex?
+
+#### 为什么你应该用 Vuex？
 
 Vuex is not the only state management option you can use in Vue (you can use  [Redux][56]too), but its main advantage is that it’s official, and its integration with Vue.js is what makes it shine.
 
+Vuex 并不是你可以在 Vue 中使用的唯一的状态管理器选项（你也可以使用 [Redux][56]），但是它主要的优势在于它是官方的，它与 Vue.js 的集成使它脱颖而出。
+
 With React you have the trouble of having to choose one of the many libraries available, as the ecosystem is huge and has no actual standard. Lately Redux was the most popular choice, with  [MobX][57]  following up in terms of popularity. With Vue I’d go as far as to say that you won’t need to look around for anything other than Vuex, especially when starting out.
+
+使用 React 的时候，你不得不从众多可用的库中选择一个，因为它的生态系统非常庞大，而且没有实际的标准。最近 Redux 是最受欢迎的选择， [Mobx][57] 紧随其后。对于 Vue，我想说的是，除了Vuex，你不需要寻找其它任何的东西，尤其是在开始的时候。
 
 Vuex borrowed many of its ideas from the React ecosystem, as this is the Flux pattern popularized by Redux.
 
+Vuex 从 React 的生态系统借鉴了很多想法，因为这是 Redux 流行的 Flux 模式。
+
 If you know Flux or Redux already, Vuex will be very familiar. If you don’t, no problem — I’ll explain every concept from the ground up.
+
+如果你已经知道 Flex 或者 Redux，Vuex 将变得非常亲切。如果你没有，没关系 - 我将从头到尾解释每一个概念。
 
 Components in a Vue application can have their own state. For example, an input box will store the data entered into it locally. This is perfectly fine, and components can have local state even when using Vuex.
 
+Vue 应用程序中的组件可以有自己的状态。例如，输入框将在局部存储输入的数据。这是完美的，组件可以有局部状态，即使使用 Vuex。
+
 You know that you need something like Vuex when you start doing a lot of work to pass a piece of state around.
+
+当你开始做很多工作来传递一个状态时，你知道你需要像 Vuex 这样的东西。
 
 In this case, Vuex provides a central repository store for the state, and you mutate the state by asking the store to do that.
 
+在这个情况下，Vuex 为状态提供了了一个集中式存储仓库，你可以通过请求 store 来对状态进行更改。
+
 Every component that depends on a particular piece of the state will access it using a getter on the store, which makes sure it’s updated as soon as that thing changes.
+
+依赖于特定状态的每个组件都将使用 store 上的 getter 来访问它，以确保一旦该状态发生变化时立即对其进行更新。
 
 Using Vuex will introduce some complexity into the application, as things need to be set up in a certain way to work correctly. But if this helps solve the unorganized props passing and event system that might grow into a spaghetti mess if too complicated, then it’s a good choice.
 
+使用 Vuex 会给应用程序带来一些复杂性，因为需要以某种方式进行设置才能正确工作。但是，如果这有助于解决复杂的 props 传递和事件方法，如果太复杂可能会变的杂乱无章，那么这是一个不错的选择。
+
 #### Let’s start
+
+#### 让我们开始吧
 
 In this example, I’m starting from a Vue CLI application. Vuex can be used also by directly loading it into a script tag. But, since Vuex is more in tune with bigger applications, it’s much more likely you will use it on a more structured application, like the ones you can start up quickly with the Vue CLI.
 
+在本例中，我从一个 Vue CLI 应用程序开始。Vuex 也可以直接加载到 script 标签中。但是，由于 Vuex 更适合大型应用程序，所以你更有可能在结构化的应用程序中使用它，比如可以使用 Vue CLI 快速启动应用程序。
+
 The examples I use will be put CodeSandbox, which is a great service that has a Vue CLI  [sample][58]  ready to go. I recommend using it to play around.
+
+我使用的示例将放在 CodeSandbox 中，它是一项很棒的服务，有准备就绪的 Vue CLI [案例][58]。我建议使用它来玩耍。
 
 ![](https://cdn-media-1.freecodecamp.org/images/hoB1Mu8Q1Py50t5Es5EKze26BsJOApMhEWVh)
 
 Once you’re there, click the Add dependency button, enter “vuex” and click it.
 
+进入后，点击添加依赖项按钮，输入 “vuex” ，然后点击它。
+
 Now Vuex will be listed in the project dependencies.
+
+现在，Vuex 将列在项目的依赖项中。
 
 To install Vuex locally you can simply run  `npm install vuex`  or  `yarn add vuex`  inside the project folder.
 
+要在本地安装 Vuex，你只需要在项目文件夹中运行 `npm install vuex` 或者 `yarn add vuex`
+
 #### Create the Vuex store
+
+#### 创建 Vuex store
 
 Now we are ready to create our Vuex store.
 
+现在我们准备差UN宫颈癌你 Vuex 商店。
+
 This file can be put anywhere. It’s generally suggested to put it in the  `src/store/store.js`  file, so we'll do that.
 
+这个文件可以放在任何地方。通常建议将它放在 `src/store/store.js` 中。所以我们会这样做。
+
 In this file we initialize Vuex and tell Vue to use it:
+
+在这个文件中，我们初始化 Vuex，并告诉 Vue 使用它：
 
 ```
 import Vue from 'vue'import Vuex from 'vuex'
@@ -3175,17 +3230,31 @@ export const store = new Vuex.Store({})
 
 We export a Vuex store object, which we create using the  `Vuex.Store()`  API.
 
+我们导出一个 Vuex.Store 对象，我们使用 `Vuex.Store()` API 创建它。
+
 #### A use case for the store
+
+#### store 的一个用例
 
 Now that we have a skeleton in place, let’s come up with an idea for a good use case for Vuex, so I can introduce its concepts.
 
+我们已经有了一个框架，让我们为 Vuex 想出一个好用的用例，这样我们就可以介绍它的概念。
+
 For example, I have two sibling components, one with an input field, and one that prints that input field content.
+
+例如，我有两个兄弟组件，一个带有输入字段，另一个打印输出字段的内容。
 
 When the input field is changed, I want to also change the content in that second component. Very simple, but this will do the job for us.
 
+当输入字段更改的时候，我希望更改第二个组件的内容。很简单，但是这个就可以了。
+
 #### Introducing the new components we need
 
+#### 介绍我们需要的新组件
+
 I delete the HelloWorld component and add a Form component, and a Display component.
+
+我删除了 HelloWorld 组件，并添加一个表单组件和一个显示组件。
 
 ```
 <template>  <div>    <label for="flavor">Favorite ice cream flavor?</label>    <input name="flavor">  </div></template>
@@ -3197,7 +3266,11 @@ I delete the HelloWorld component and add a Form component, and a Display compon
 
 #### Adding those components to the app
 
+#### 添加这些组件到应用程序
+
 We add them to the  `App.vue`  code instead of the HelloWorld component:
+
+我们将它们添加到 `App.vue` 中而不是 HelloWorld 组件：
 
 ```
 <template>  <div id="app">    <Form/>    <Display/>  </div></template>
@@ -3213,7 +3286,11 @@ export default {  name: 'App',  components: {    Form,    Display  }}</script>
 
 #### Add the state to the store
 
+#### 添加状态到 store
+
 So with this in place, we go back to the store.js file. We add a property to the store called  `state`, which is an object, that contains the  `flavor`  property. That's an empty string initially.
+
+有了这个，我们回到 store.js 文件。我们添加一个名为 `state` 的属性到 store 中，它是一个包含 `flavor` 属性的对象。一开始就是一个空字符串。
 
 ```
 import Vue from 'vue'import Vuex from 'vuex'
@@ -3229,9 +3306,14 @@ export const store = new Vuex.Store({  state: {    flavor: ''  }})
 
 We’ll update it when the user types into the input field.
 
+我们将在用户输入字段时更新它。
+
 #### Add a mutation
+#### 添加一个 mutation
 
 The state cannot be manipulated except by using mutations. We set up one mutation which will be used inside the  `Form`  component to notify the store that the state should change.
+
+state 除了通过 mutations 以外不能被控制。我们设置了一个将在 `Form` 组件内部使用的 mutation，以通知 store state 应该改变。
 
 ```
 import Vue from 'vue'import Vuex from 'vuex'
@@ -3246,8 +3328,11 @@ export const store = new Vuex.Store({  state: {    flavor: ''  },  mutations: { 
 ```
 
 #### Add a getter to reference a state property
+#### 添加一个 getter 来引用一个状态属性
 
 With that set, we need to add a way to look at the state. We do so using getters. We set up a getter for the  `flavor`property:
+
+有了这个集合，我们需要添加一种查看 state 的方法。我们是用 getters 来实现。我们为 `glavor` 属性设置了一个 getter：
 
 ```
 import Vue from 'vue'import Vuex from 'vuex'
@@ -3263,11 +3348,18 @@ export const store = new Vuex.Store({  state: {    flavor: ''  },  mutations: { 
 
 Notice how  `getters`  is an object.  `flavor`  is a property of this object, which accepts the state as the parameter, and returns the  `flavor`  property of the state.
 
+注意 `getters` 是一个对象。`flavor` 是这个对象的一个属性，它接受 state 作为参数，并返回 state 的 `flavor` 属性。
+
 #### Adding the Vuex store to the app
+#### 添加 Vuex store 到 应用程序
 
 Now the store is ready to be used. We go back to our application code, and in the main.js file, we need to import the state and make it available in our Vue app.
 
+现在 store 可以使用了。我们回到我们的应用程序代码，在 main.js 文件中，我们需要导入 state 并使其在我们的 Vue 应用程序中可用。
+
 We add
+
+我们添加
 
 ```
 import { store } from './store/store'
@@ -3275,19 +3367,31 @@ import { store } from './store/store'
 
 and we add it to the Vue application:
 
+并且在 Vue 应用程序中添加它：
+
 ```
 new Vue({  el: '#app',  store,  components: { App },  template: '<App/>'})
 ```
 
 Once we add this, since this is the main Vue component, the  `store`  variable inside every Vue component will point to the Vuex store.
 
+一旦我们添加了这个，因为这个是主要的 Vue 组件，每个 Vue 组件中的 `store` 变量将指向 Vuex 的 store。
+
 #### Update the state on a user action using commit
+
+#### 使用 commit 更新用户操作的 state
 
 Let’s update the state when the user types something.
 
+让我们在用户输入内容时更新状态。
+
 We do so by using the  `store.commit()`  API.
 
+我们通过使用 `store.commit()` API 来实现。
+
 But first, let’s create a method that is invoked when the input content changes. We use  `@input`  rather than  `@change`because the latter is only triggered when the focus is moved away from the input box, while  `@input`  is called on every keypress.
+
+但首先，让我们创建一个在输入内容更改时调用的方法。我们使用 `@input` 而不是 `@change`，因为后者只在焦点从输入框移开时触发，而 `@input` 则在每次按键响应时调用。
 
 ```
 <template>  <div>    <label for="flavor">Favorite ice cream flavor?</label>    <input @input="changed" name="flavor">  </div></template>
@@ -3299,17 +3403,27 @@ But first, let’s create a method that is invoked when the input content change
 
 Now that we have the value of the flavor, we use the Vuex API:
 
+现在我们有了 flavor 的值，我们使用 Vuex API：
+
 ```
 <script>export default {  methods: {    changed: function(event) {      this.$store.commit('change', event.target.value)    }  }}</script>
 ```
 
 See how we reference the store using  `this.$store`? This is thanks to the inclusion of the  `store`  object in the main Vue component initialization.
 
+看到我们如何使用 `this.$store` 引用 store 了吗？这要感谢主 Vue 组件初始化中包含的 `store` 对象。 
+
 The  `commit()`  method accepts a mutation name (we used  `change`  in the Vuex store) and a payload, which will be passed to the mutation as the second parameter of its callback function.
+
+`commit()` 方法接受一个 mutation 名（我们在 Vuex store 中使用 `change`）和一个 payload，它将作为回调函数的第二个参数传递给 mutation。
 
 #### Use the getter to print the state value
 
+#### 使用 getter 打印状态值
+
 Now we need to reference the getter of this value in the Display template, by using  `$store.getters.flavor`.  `this`  can be removed because we're in the template, and  `this`  is implicit.
+
+现在我们需要使用 `$store.getters.flavor` 在 Display 模板中引用这个值的 getter，可以删除 `this`，因为我们在模板中， `this` 是隐式的。
 
 ```
 <template>  <div>    <p>You chose {{ $store.getters.flavor }}</p>  </div></template>
@@ -3317,7 +3431,11 @@ Now we need to reference the getter of this value in the Display template, by us
 
 The full, working source code is available  [here][59].
 
+完整的，工作的源代码在[这里][59]是可用的
+
 There are still many concepts missing in this puzzle:
+
+在这个谜题中仍然有许多概念缺失：
 
 -   actions
 -   modules
@@ -3326,27 +3444,49 @@ There are still many concepts missing in this puzzle:
 
 But now you have the basics to go and read about them in the official docs.
 
+但是你现在有了基本的知识，可以在官方文档阅读它们。
+
 ### Handle URLs using Vue Router
+
+### 使用 Vue Router 处理 URLS
 
 In a JavaScript web application, a router is the part that syncs the currently displayed view with the browser address bar content.
 
+在 JavaScript web 应用程序中，router 是将当前显示的视图和浏览器地址栏内容同步的部分。
+
 In other words, it’s the part that makes the URL change when you click something in the page, and helps to show the correct view when you hit a specific URL.
+
+换句话说，它是你在单机页面中某个内容是进行 URL 更改的部分，并帮助你在单机特定 URL 的时候显示正确的视图。
 
 Traditionally, the Web is built around URLs. When you hit a certain URL, a specific page is displayed.
 
+传统上，web 是围绕 URLs 构建的。当你点击某个 URL 的时候，将显示一个特定的页面。
+
 With the introduction of applications that run inside the browser and change what the user sees, many applications broke this interaction, and you had to manually update the URL with the browser’s History API.
+
+随着浏览器中运行的应用程序的引入和用户所看到内容的改变，许多应用程序破坏了这种交互，你必须使用浏览器的 History API 手动更新URL。
 
 You need a router when you need to sync URLs to views in your app. It’s a very common need, and all the major modern frameworks now allow you to manage routing.
 
+当你需要将 URLS 同步到你的应用程序中的视图时，你需要一个 router。这是非常普遍的需求，现在所有主流的现代框架都允许你管理路由。
+
 The Vue Router library is the way to go for Vue.js applications. Vue does not enforce the use of this library. You can use whatever generic routing library you want, or also create your own History API integration, but the benefit of using Vue Router is that it’s official.
+
+Vue Router 库是 Vue.js 应用程序的发展方向。Vue 不强制使用这个库。你可以使用任何通用的路由库，也可以创建自己的 History API 集成，但是使用 Vue Router 的好处是它是正式的。
 
 This means it’s maintained by the same people who maintain Vue, so you get a more consistent integration in the framework, and the guarantee that it’s always going to be compatible in the future, no matter what.
 
-#### Installation
+这意味着它是维护 Vue 的相同人员维护的，因此你可以在框架中获得更一致的集成，并保证将来无论如何它都是兼容的。
 
+#### Installation
+#### 安装
 Vue Router is available via npm with the package named  `vue-router`.
 
+Vue Router 可以通过 npm 获得，包名为 `vue-router`。
+
 If you use Vue via a script tag, you can include Vue Router using
+
+如果你通过一个 script 标签使用 Vue，你可以通过使用引入使用 Vue Router
 
 ```
 <script src="https://unpkg.com/vue-router"></script>
@@ -3354,7 +3494,11 @@ If you use Vue via a script tag, you can include Vue Router using
 
 [UNPKG][60]  is a very handy tool that makes every npm package available in the browser with a simple link.
 
+[UNPKG][60] 是一个非常方便的工具，它使浏览器中的每个 npm 包都可以通过一个简单的链接获得。
+
 If you use the Vue CLI, install it using:
+
+如果你使用 Vue CLI，安装它使用：
 
 ```
 npm install vue-router
@@ -3362,7 +3506,11 @@ npm install vue-router
 
 Once you install  `vue-router`  and make it available either using a script tag or via Vue CLI, you can now import it in your app.
 
+一旦你安装了 `vue-router`，并使用 script 标签或通过 Vue CLI 让它可用，你现在就可以将它导入你的应用程序。
+
 You import it after  `vue`, and you call  `Vue.use(VueRouter)`  to  **install**  it inside the app:
+
+你在 `vue` 的后面引入它，然后你调用 `Vue.use(VueRouter)` 在应用程序中 **安装** 它：
 
 ```
 import Vue from 'vue'import VueRouter from 'vue-router'
@@ -3374,14 +3522,25 @@ Vue.use(VueRouter)
 
 After you call  `Vue.use()`  passing the router object, in any component of the app you have access to these objects:
 
+调用 `Vue.use()` 传递 router 对象后，在应用程序的任何组件中你都可以访问一下对象：
+
 -   `this.$router`  is the router object
 -   `this.$route`  is the current route object
 
+-   `this.$router`  是一个 router 对象
+-   `this.$route`  是当前 router 对象
+
 #### The router object
+
+#### router 对象
 
 The router object, accessed using  `this.$router`  from any component when the Vue Router is installed in the root Vue component, offers many nice features.
 
+当 Vue Router 安装在 根 Vue 组件中时，可以从任何组件使用 `this.$router` 访问该 router 对象，它具有很多不错的功能。
+
 We can make the app navigate to a new route using
+
+我们可以使用应用程序导航到一个新的路 route
 
 -   `this.$router.push()`
 -   `this.$router.replace()`
@@ -3389,10 +3548,17 @@ We can make the app navigate to a new route using
 
 which resemble the  `pushState`,  `replaceState`  and  `go`  methods of the History API.
 
+类似于 History API 的 `pushState`、`replaceState` 和 `go` 方法。
+
 -   `push()`  is used to go to a new route, adding a new item to the browser history
 -   `replace()`  is the same, except it does not push a new state to the history
 
+-   `push()`  是用来跳转到一个新的路由，添加一个新的项目到历史浏览器
+-   `replace()`  是一样的，它不会将新的状态推送到历史记录
+
 Usage samples:
+
+用法样本：
 
 ```
 this.$router.push('about') //named route, see laterthis.$router.push({ path: 'about' })this.$router.push({ path: 'post', query: { post_slug: 'hello-world' } }) //using query parameters (post?post_slug=hello-world)this.$router.replace({ path: 'about' })
@@ -3400,17 +3566,25 @@ this.$router.push('about') //named route, see laterthis.$router.push({ path: 'ab
 
 `go()`  goes back and forth, accepting a number that can be positive or negative to go back in the history:
 
+`go()` 返回或前进，接受一个可以为正数或负数的数字返回历史记录：
+
 ```
 this.$router.go(-1) //go back 1 stepthis.$router.go(1) //go forward 1 step
 ```
 
 #### Defining the routes
-
+#### 定义路由
 I’m using a Vue Single File Component in this example.
+
+在本例中，我是用了一个 Vue Single File Component（Vue 单文件组件）。 
 
 In the template I use a  `nav`  tag that has three  `router-link`  components, which have the labels Home, Login, and About. A URL is assigned through the  `to`  attribute.
 
+在模板中，我使用了一个 `nav` 标签，它有三个 `router-link` 组件，分别是 Home，Login 和 About 标签。URL 是通过 `to` 属性分配的。
+
 The  `router-view`  component is where the Vue Router will put the content that matches the current URL.
+
+`router-view` 组件是 Vue Router 放置与当前 URL 匹配的内容的地方。
 
 ```
 <template>  <div id="app">    <nav>      <router-link to="/">Home</router-link>      <router-link to="/login">Login</router-link>      <router-link to="/about">About</router-link>    </nav>    <router-view></router-view>  </div></template>
@@ -3418,11 +3592,19 @@ The  `router-view`  component is where the Vue Router will put the content that 
 
 A  `router-link`  component renders an  `a`  tag by default (you can change that). Every time the route changes, either by clicking a link or by changing the URL, a  `router-link-active`  class is added to the element that refers to the active route, allowing you to style it.
 
+一个 `router-link` 组件在默认情况下会呈现一个 `a` 标签（你可以更改它）。每当路由发生变化时，无论是通过单击链接还是更改 URL，都会将 `router-link-active` class 添加到活动的路由的元素中，从而可以设置其样式。
+
 In the JavaScript part, we first include and install the router, then we define three route components.
+
+在 JavaScript 部分，我们首先包含和安装 router，然后定义三个路由组件。
 
 We pass them to the initialization of the  `router`  object, and we pass this object to the Vue root instance.
 
+我们将他们传递给 `router` 对象的初始化，然后将底对象传递给 Vue 根实例。
+
 Here’s the code:
+
+这里是代码：
 
 ```
 <script>import Vue from 'vue'import VueRouter from 'vue-router'
@@ -3454,13 +3636,19 @@ new Vue({  router}).$mount('#app')</script>
 
 Usually, in a Vue app, you instantiate and mount the root app using:
 
+通常，在 Vue 应用程序中，你实例化和挂载根应用程序使用：
+
 ```
 new Vue({  render: h => h(App)}).$mount('#app')
 ```
 
 When using the Vue Router, you don’t pass a  `render`  property but instead, you use  `router`.
 
+当你使用 Vue Router 时，你不会传递 `render` 属性，而是使用 `router`。
+
 The syntax used in the above example:
+
+上面的例子中使用的语法：
 
 ```
 new Vue({  router}).$mount('#app')
@@ -3468,17 +3656,27 @@ new Vue({  router}).$mount('#app')
 
 is shorthand for:
 
+缩写：
+
 ```
 new Vue({  router: router}).$mount('#app')
 ```
 
 See in the example, we pass a  `routes`  array to the  `VueRouter`  constructor. Each route in this array has a  `path`  and  `component`  params.
 
+在本例中，我们将一个 `routers` 数组传递给 `VueRouter` 构造函数。该数组中的每个路由都有一个 `path` 和 `component` 参数。
+
 If you pass a  `name`  param too, you have a named route.
+
+如果你也传递一个 `name` 参数，你就有了一个命名路由。
 
 #### Using named routes to pass parameters to the router push and replace methods
 
+#### 使用命名路由将参数传递给 router 的 push 和 replace 方法
+
 Remember how we used the Router object to push a new state before?
+
+还记得我们之前是如何使用 Router 对象来推送新的状态的吗？
 
 ```
 this.$router.push({ path: 'about' })
@@ -3486,37 +3684,61 @@ this.$router.push({ path: 'about' })
 
 With a named route we can pass parameters to the new route:
 
+使用指定的路由，我们可以将参数传递给新路由：
+
 ```
 this.$router.push({ name: 'post', params: { post_slug: 'hello-world' } })
 ```
 
 The same goes for  `replace()`:
 
+`replace()` 也一样：
+
 ```
 this.$router.replace({ name: 'post', params: { post_slug: 'hello-world' } })
 ```
 
 #### What happens when a user clicks a  `router-link?`
+#### 当用户点击 `router-link` 时会发生什么？
 
 The application will render the route component that matches the URL passed to the link.
 
+应用程序将渲染与传递给链接的 URL 匹配的路由组件。
+
 The new route component that handles the URL is instantiated and its guards called, and the old route component will be destroyed.
 
+处理 RUL 的新路由组件将被实例化并调用其守卫，旧的路由组件将被销毁。
+
 #### Route guards
+#### 导航守卫
 
 Since we mentioned guards, let’s introduce them.
 
+既然我们提到了守卫，让我们来介绍一下。
+
 You can think of them as life cycle hooks or middleware. Those are functions called at specific times during the execution of the application. You can jump in and alter the execution of a route, redirecting or simply canceling the request.
+
+你可以将他们看作生命周期钩子或中间件。这些函数是在引用程序执行期间的特定时间调用的。你可以插入并更改路由执行，重定向或简单的取消请求。
 
 You can have global guards by adding a callback to the  `beforeEach()`  and  `afterEach()`property of the router.
 
+你可以通过给 router 的 `beforEach()` 和 `afterEach()` 属性添加回调来实现全局守卫。
+
 -   `beforeEach()`  is called before the navigation is confirmed
 -   `beforeResolve()`  is called when  `beforeEach()`  is executed and all the components  `beforeRouterEnter`  and  `beforeRouteUpdate`  guards are called, but before the navigation is confirmed. The final check.
--   `afterEach()`  is called after the navigation is confirmed
+- `afterEach()` is called after the navigation is confirmed
+
+- `beforeEach()` 是在导航确认之前调用
+- `beforeResolve()` 是当执行 `beforEach()` 并调用 `beforeRouterEnter` 和 `beforeRouteUpdate` 守卫时，但在导航被确认前调用。最后检查。
+- `afterEach()` 在导航被确认后调用
 
 What does “the navigation is confirmed” mean? We’ll see it in a second. In the meantime think of it as “the app can go to that route”.
 
+“导航已确认”的意思是什么？我们马上就会看到。与此同时，把它想成 `应用程序可以去的路由`。
+
 The usage is:
+
+用法是：
 
 ```
 this.$router.beforeEach((to, from, next) => {  // ...})
@@ -3528,17 +3750,31 @@ this.$router.afterEach((to, from) => {  // ...})
 
 `to`  and  `from`  represent the route objects that we go to and from.
 
+`to` 和 `from` 表示我们要去和来的路由对象
+
 `beforeEach`  has an additional parameter  `next`  which if we call with  `false`  as the parameter, will block the navigation and cause it to be unconfirmed.
+
+`beforeEach` 有一个额外的参数 `next`，如果我们使用 `false` 作为参数调用它，它将阻塞导航并导致未经确认。
 
 Like in Node middleware, if you're familiar,  `next()`  should always be called, otherwise execution will get stuck.
 
+就像在 Node 的中间件一样，如果你熟悉，用该总是调用 `next()`，否则执行就会陷入卡住。
+
 Single route components also have guards:
+
+单独的路由组件也有保护：
 
 -   `beforeRouteEnter(from, to, next)`  is called before the current route is confirmed
 -   `beforeRouteUpdate(from, to, next)`  is called when the route changes but the component that manages it is still the same (with dynamic routing, see  `next`)
 -   `beforeRouteLeave(from, to, next)`  is called when we move away from here
 
+- `beforeRouteEnter(from, to, next)` 在当前路由被确认之前调用
+- `beforeRouteUpdate(from, to, next)` 当路由改变但管理它的组件仍然相同时调用（对于动态路由，参见 `next`）
+- `beforeRouteLeave(from, to, next)`  当我们离开这里的时候
+
 We mentioned navigation. To determine if the navigation to a route is confirmed, Vue Router performs some checks:
+
+我们提到的导航。为了确定一个路由的导航是否被确认，Vue Router 执行了一些检查：
 
 -   it calls  `beforeRouteLeave`  guard in the current component(s)
 -   it calls the router  `beforeEach()`  guard
@@ -3549,13 +3785,30 @@ We mentioned navigation. To determine if the navigation to a route is confirmed,
 -   if all was fine, the navigation is confirmed!
 -   it calls the router  `afterEach()`  guard
 
+- 当前组件中调用 `beforeRouteLeave` 守卫
+- 调用 router的 `beforeEach()` 守卫
+- 在任何需要复用的组件（如果存在的话）中调用 `beforeRouteUpdate（）`
+- 在 route 对象上调用了 `beforeEnter()` 守卫（我没有提到它，但是你可以在[此处][61]查看）
+- 在我们应该进入的组件中调用 `beforeRouterEnter()`
+- 调用 router 的 `beforeResolve()` 守卫
+- 如果一切正常，导航确认！
+- 调用 router 的 `afterEach()` 守卫
+
 You can use the route-specific guards (`beforeRouteEnter`  and  `beforeRouteUpdate`  in case of dynamic routing) as life cycle hooks, so you can start data fetching requests for example.
+
+你可以使用特定于路由的守卫（ `beforeRouteEnter` 和 `beforeRouteUpdate` 在动态路由的情况下）作为生命周期钩子，以便例如你可以启动数据获取请求。
 
 #### Dynamic routing
 
+#### 动态路由
+
 The example above shows a different view based on the URL, handling the  `/`,  `/login`and  `/about`  routes.
 
+上面的示例显示了一个基于 URL 的不同视图，用于处理 `/`， `/login` 和 `/about` 路由。
+
 A very common need is to handle dynamic routes, like having all posts under  `/post/`, each with the slug name:
+
+一个非常常见的需求是处理动态路由，比如在 `/post` 下面有所有的帖子，每个都以段命名：
 
 -   `/post/first`
 -   `/post/another-post`
@@ -3563,7 +3816,10 @@ A very common need is to handle dynamic routes, like having all posts under  `/p
 
 You can achieve this using a dynamic segment.
 
+可以使用动态段来实现这一点。
+
 Those were static segments:
+这些是静态段：
 
 ```
 const router = new VueRouter({  routes: [    { path: '/', component: Home },    { path: '/login', component: Login },    { path: '/about', component: About }  ]})
@@ -3571,15 +3827,23 @@ const router = new VueRouter({  routes: [    { path: '/', component: Home },    
 
 We add in a dynamic segment to handle blog posts:
 
+我们添加了一个动态段来处理博客文章：
+
 ```
 const router = new VueRouter({  routes: [    { path: '/', component: Home },    { path: '/post/:post_slug', component: Post },    { path: '/login', component: Login },    { path: '/about', component: About }  ]})
 ```
 
 Notice the  `:post_slug`  syntax. This means that you can use any string, and that will be mapped to the  `post_slug`placeholder.
 
+注意 `:post_slug` 语法。这意味着你可以使用任何字符串，并将其映射到 `post_slug` 占位符。
+
 You’re not limited to this kind of syntax. Vue relies on  [this library][62]  to parse dynamic routes, and you can go wild with Regular Expressions.
 
+你不受这种语法的限制。Vue 以来 [这个库][62] 来解析动态路由，你可以随意使用正则表达式。
+
 Now inside the Post route component we can reference the route using  `$route`, and the post slug using  `$route.params.post_slug`:
+
+现在在 Post 路由组件中，我们可以使用 `$route` 引用路由，而帖子别名使用 `$route.params.post_slug`:
 
 ```
 const Post = {  template: '<div>Post: {{ $route.params.post_slug }}</div>'}
@@ -3587,27 +3851,43 @@ const Post = {  template: '<div>Post: {{ $route.params.post_slug }}</div>'}
 
 We can use this parameter to load the contents from the back-end.
 
+我们可以使用这个参数从后端加载内容。
+
 You can have as many dynamic segments as you want, in the same URL:
+你可以有许多你想要的动态段，在同一个网址：
 
 `/post/:author/:post_slug`
 
 Remember before when we talked about what happens when a user navigates to a new route?
 
+还记得我们之前讨论过用户导航到新路由时会发生什么吗？
+
 In the case of dynamic routes, what happens is a little different.
+
+对于动态路由，情况略有不同。
 
 For Vue to be more efficient, instead of destroying the current route component and re-instantiating it, it reuses the current instance.
 
+为了使 Vue 更有效，它不是销毁当前路由组件并重新实例化它，而是重用当前实例。
+
 When this happens, Vue calls the  `beforeRouteUpdate`  life cycle event.
 
+当这种情况发生时，Vue 调用 `beforeRouteUpdate` 生命周期事件。
+
 There you can perform any operation you need:
+
+在那里你可以执行任何你需要的操作
 
 ```
 const Post = {  template: '<div>Post: {{ $route.params.post_slug }}</div>'  beforeRouteUpdate(to, from, next) {    console.log(`Updating slug from ${from} to ${to}`)    next() //make sure you always call next()  }}
 ```
 
 #### Using props
+#### 使用 props
 
 In the examples, I used  `$route.params.*`  to access the route data. A component should not be so tightly coupled with the router, and instead, we can use props:
+
+在示例中，我使用了 `$route.params.*` 以取得路由数据。一个组件不应该与 router 紧密耦合，相反，我们可以使用 props：
 
 ```
 const Post = {  props: ['post_slug'],  template: '<div>Post: {{ post_slug }}</div>'}
@@ -3618,14 +3898,20 @@ const router = new VueRouter({  routes: [    { path: '/post/:post_slug', compone
 ```
 
 Notice the  `props: true`  passed to the route object to enable this functionality.
+注意 `props:true` 传递给 route 对象以启用此功能。
 
 #### Nested routes
+#### 嵌套路由
 
 Before I mentioned that you can have as many dynamic segments as you want, in the same URL, like:
+
+之前我提到过，你可以有很多你想要的动态段，在同一个 URL，像：
 
 `/post/:author/:post_slug`
 
 So, say we have an Author component taking care of the first dynamic segment:
+
+加入我们有一个负责第一个动态段的 Author 组件：
 
 ```
 <template>  <div id="app">    <router-view></router-view>  </div></template>
@@ -3653,17 +3939,22 @@ new Vue({  router}).$mount('#app')</script>
 
 We can insert a second  `router-view`  component instance inside the Author template:
 
+我们可以插入第二个 `router-view` 组件实例内的 Author 模板：
+
 ```
 const Author  = {  template: '<div>Author: {{ $route.params.author}}<router-view></router-view></div>'}
 ```
 
 We add the Post component:
 
+我们添加了 Post 组件：
+
 ```
 const Post = {  template: '<div>Post: {{ $route.params.post_slug }}</div>'}
 ```
 
 Then we’ll inject the inner dynamic route in the  `VueRouter`  configuration:
+然后我们将注入内部的动态路由在 `VueRouter` 配置：
 
 ```
 const router = new VueRouter({  routes: [{    path: '/post/:author',    component: Author,    children: [      path: ':post_slug',      component: Post    ]  }]})
@@ -3671,7 +3962,11 @@ const router = new VueRouter({  routes: [{    path: '/post/:author',    componen
 
 Thank you for reading!
 
+感谢你的阅读！
+
 > Get this post PDF/ePub/Kindle ebook at  [vuehandbook.com][63]
+
+> 在 [vuehandbook.com][63] 获得本文的 PDF/ePub/Kindle 电子书
 
 [1]: https://vuehandbook.com/
 [2]: https://vuehandbook.com/?ref=medium
@@ -3741,3 +4036,4 @@ Thank you for reading!
 
 [64]: https://cli.vuejs.org/zh/config/#vue-config-js
 [65]: https://vuejs.org/v2/api/#Global-Config
+[66]: https://cn.vuejs.org/v2/guide/events.html#%E4%BA%8B%E4%BB%B6%E4%BF%AE%E9%A5%B0%E7%AC%A6

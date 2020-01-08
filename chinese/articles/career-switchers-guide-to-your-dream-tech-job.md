@@ -5,9 +5,9 @@
 
 ![A Career Switcher’s Guide to Landing Your Dream Tech Job](https://www.freecodecamp.org/news/content/images/size/w2000/2019/11/googleplex.jpg)
 
-In this article, I'll discuss some pro tips that'll help you ace your interviews at your dream companies and get the most out of your job offers.
+在本文中，我将介绍一些专业技巧，助你进入梦寐以求的公司面试并获得工作机会。
 
-# Introduction — From Wall Street to Googleplex
+# 个人简介—从华尔街到谷歌总部
 
 On March 31, 2019, I was downsized by a startup hedge fund. Having been a quantitative software developer in the finance industry for the last 10+ years, I didn’t want another job doing more of the same. I set out to follow my passion and find my next job in Artificial Intelligence/Machine Learning/Deep Learning (AI/ML/DL).
 

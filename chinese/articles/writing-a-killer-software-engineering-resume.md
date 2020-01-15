@@ -5,45 +5,45 @@
 
 ![How to write a killer Software Engineering résumé](https://cdn-media-1.freecodecamp.org/images/1*0yse40ucjmpdlaBqlY0fTg.png)
 
-#### An in-depth analysis of the résumé that got me interviews at Google, Facebook, Amazon, Microsoft, Apple, and more.
+#### 深入分析这份简历如何为我赢得了谷歌、脸书、亚马逊、微软、苹果和其他巨头公司的面试机会
 
 ![](https://cdn-media-1.freecodecamp.org/images/s67vXcDq77yLluSAmsSmalkgWV3UJPSDWi6w)
 
-This résumé got me interviews at Google, Facebook, Amazon, Microsoft, and Apple.
+这份简历为我赢得了谷歌、脸书、亚马逊、微软、苹果的面试机会。
 
 ![](https://cdn-media-1.freecodecamp.org/images/I5B6EVAqwkXnGK8lkpkdrMwoQaiYxkM1-h-D)
 
-2017 Senior Year Résumé
+2017 本科四年级的简历
 
-I obtained these interviews by sending my résumé to the résumé **black hole**, also known as applying online.
+通过 **海投** 简历，也就是说在网上投递，我获得了这些面试机会。
 
 ![](https://cdn-media-1.freecodecamp.org/images/tXP4GgRE1N5RkXgYm4Fq8GN8DxkVzAiAns3H)
 
-Applying online is the most common way people go about applying for a job and therefore the least effective way to land an interview due to competition. Yet that is exactly how I obtained all my interviews.
+当人们寻找工作时，一般会选择在网上投递简历。但由于竞争激烈，海投也是效率最低的方法，然而我却凭借海投赢得了许多面试机会。
 
-How did I accomplish this?
+我是如何做到的？
 
-In this article, I will go through a line-by-line analysis of my résumé for the following purposes:
+在这篇文章中，我将逐行分析我的简历，目的如下：
 
--   explaining the choices that I made in creating my résumé
--   why I believe this résumé worked to help me land those interviews, and
--   how you can create an even better résumé!
+-   解释我在制作简历时所做出的一系列选择
+-   我为何相信这份简历会为我赢得诸多面试机会
+-   你如何制作出更优质的简历！
 
-I decided to write this article because I struggled a lot with landing interviews when I first started looking for a job. It would have been extremely helpful for me to have a real-life example résumé to look at.
+因为第一次找工作时，我也挣扎了许久，所以我决定写下这篇文章。如果那时有人提供这样的简历指导，对当时的我来说将大有裨益。
 
-This article is organized into the following sections:
+文章组织结构如下：
 
-1.  [**The All Too Familiar Way of Not Landing an Interview**][1]  \- a short anecdote of my frustrations when I first started applying for jobs
-2.  [**Evaluating the Options: Moving Forward**][2]  \- a reflection on different strategies to improve the odds of landing interviews
-3.  [**Learning How to Write a Killer Résumé By Example**][3]  \- the step-by-step analysis of my résumé with each of the following sections corresponding to my résumé:
+1.  [**海投失败经验**][1]  \- 刚开始申请工作时的失败经历
+2.  [**评估不同的选择：不断向前**][2]  \- 反思提高面试几率的不同策略
+3.  [**举例：如何写出秒杀公司HR的个人简历**][3]  \- 我将从以下几个部分，逐步分析自己的简历
 
--   The Essentials from a Glance
--   Who Are You
--   Contact Information
--   Education
--   Employment
--   Personal Projects
--   Skills
+-   吸睛要点
+-   个人信息
+-   联系方式
+-   教育背景
+-   求职经历
+-   个人项目
+-   个人技能
 
 ### The All Too Familiar Way of Not Landing an Interview
 

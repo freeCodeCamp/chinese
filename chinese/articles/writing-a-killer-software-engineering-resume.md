@@ -34,115 +34,116 @@
 文章组织结构如下：
 
 1.  [**海投失败经验**][1]  \- 刚开始申请工作时的失败经历
-2.  [**评估不同的选择：不断向前**][2]  \- 反思提高面试几率的不同策略
+2.  [**评估不同的选择：不断前进**][2]  \- 反思提高面试几率的不同策略
 3.  [**举例：如何写出秒杀公司HR的个人简历**][3]  \- 我将从以下几个部分，逐步分析自己的简历
 
--   吸睛要点
+-   吸睛亮点
 -   个人信息
 -   联系方式
 -   教育背景
--   求职经历
+-   工作经历
 -   个人项目
 -   个人技能
 
-### The All Too Familiar Way of Not Landing an Interview
+### 海投失败经验
 
-#### Applying Online
+#### 网上申请工作
 
-You probably know the link that every company provides for online applications. It’s the classic career site that shows you a bunch of job titles which you think you are totally qualified for until you open the job description and read the minimum requirements.
+你也许知道每家公司都会提供工作申请的链接。典型的求职网站会列举一系列的招聘信息，而直到你打开链接、阅读岗位描述和岗位最小要求时，都认为自己完全可以胜任这些工作。
 
 ![](https://cdn-media-1.freecodecamp.org/images/ZkNlrY5IYpz2bv2jQW33DyeetxaqDWzZBxYG)
 
-Google Career Page
+谷歌招聘界面
 
-A job description with a bunch of words that you have never heard of, may have heard of, or hoped you had heard of. And it has an innocent-looking “**Apply”**  button**.**
+以下是一则招聘启事，工作描述中有一大串单词，你或许从未听说过，或许可能听说过，或许希望自己曾经听说过。页面最底端还有一个可怜无辜的 **申请**键。
 
 ![](https://cdn-media-1.freecodecamp.org/images/M5wN8EB3bR8qnxaVb8BdNL8yEqoAsGHzcOq6)
 
-Google Job Description
+谷歌某招聘岗位描述
 
 ![](https://cdn-media-1.freecodecamp.org/images/0ZrZYFRkruNTX4kLJDF4BEQikiPvAnVSXds0)
 
-Despite the uncertainty you may feel about your qualifications, you apply anyway because you want a job.
+尽管不太确定，你还是觉得自己能够胜任，因为你想得到这份工作。
 
-So you fill out the application form, press submit — and wait and hope for a positive response.
+所以你填写申请表，按下**提交**按钮————期待得到面试通知。
 
-Your results will be varied:
+你可能会得到以下结果：
 
-1.  Phone Interview ? (yay, a chance at employment!!!)
-2.  Immediate Rejection ? (darn, back to the drawing board)
-3.  No reply ? (gosh, at least give me the courtesy of having some closure)
+1.  电话面试？（哇！有可能会得到这份工作！！！）
+2.  马上被拒绝？（该死, 从头再来吧）
+3.  石沉大海？(天哪，至少要礼貌性地拒绝我一下吧)
 
-#### Repeat Until Success… Right?
+#### 继续海投，等待成功......这样做对吗？
 
-Sadly, this is the typical process that many people go through when looking for a job/internship.
+遗憾的是，大部分人在找工作或实习时都会走上这样的道路。
 
-Apply to a couple of companies. Get a couple of rejections or no replies. Apply to a couple more companies. Get a couple more rejections or no replies. Over, and over, and over again.
 
-Why do we do this to ourselves? We spend all this time doing the same repetitive task to obtain the same, disappointing results.
+提交几次工作申请，被拒绝或石沉大海。继续申请工作，继续被拒绝或石沉大海。就这样一直重复又重复。
 
-Because this is what everyone does to get an interview, right? Because at least we’re working towards the right direction and have a glimmer of hope, right? How else are you supposed to get an interview?
+我们为什么要这样对自己呢？我们不断花费时间做重复性工作，却一遍又一遍得到同样的、令人失望的结果。
 
-### Evaluating the Options: Moving Forward
+因为所有人都在这样做，对吗？因为我们至少在朝着正确的方向前进，有一丁点希望，对吗？你觉得其他人是如何得到面试机会的？
 
-> “Discouragement and failure are two of the surest stepping stones to success.”  
+### 评估不同的选择: 不断前进
+
+> “毫无疑问，挫折与失败是成功路上的两大垫脚石。”
 >   
-> \- Dale Carnegie, (author of “How to Win Friends and Influence People”)
+> \- 戴尔·卡耐基, （《如何赢得朋友和影响他人》作者）
 
-We can think of approaching the problem of not getting interviews in two ways:
+我们可以用以下两种方式来解决这个问题：
 
-1.  Putting your application/ résumé under the microscope
-2.  Questioning the process in which you go about obtaining an interview
+1.  以显微镜视角观察自己的申请/简历
+2.  质疑自己寻求面试机会的过程
 
-This article focuses on the former, because no matter what avenue you end up taking to get an interview,  **essentially every company utilizes your résumé as a basis for evaluation**. Therefore, we will examine my résumé under a microscope and focus on learning how to write a remarkable résumé.
+这篇文章将聚焦于前者，因为不管你以何种方式寻求面试机会， **事实上每家公司都会以简历作为评估依据**。因此，我们将以显微镜视角来观察我的简历，从而学会如何制作出色的简历。
 
-Getting an interview via online application is extremely challenging because your résumé has to pass numerous stages before it gets into the hands of the hiring manager.
+海投简历十分具有挑战性，因为你的简历被人事经理看到之前会历经很多步骤。
 
-It has to bypass  [online keyword filters][4], stand out to a recruiter who reviews it for about 6 seconds and meet the expectations of the hiring manager who decides whether you are worth interviewing.
+简历首先会经过  [线上关键词筛选][4], 然后招聘专员会花费 6 秒查看简历，最后人事经理审阅简历，决定你是否值得他安排面试。
 
-Yet, despite all those hurdles, I obtained all my interviews by applying online.  **How?**  _Trial and error_. I’ve applied to hundreds of different software engineering positions since my sophomore year of college.
+然后，尽管困难重重，我还是通过网上申请获得了面试机会。**我是怎么做到的？**  _试错_。从大学二年级到现在，我便申请了数百个软件工程师的职位。
 
-When I first started applying, I faced a staggering number of rejections, but over time I learned how to adapt. By the time I was a senior, I was extremely successful in landing interviews from almost every company I applied to.
+当我开始申请的时候，我被拒绝了很多次，但是随着时间流逝，我学会了如何去适应。当我四年级时就已经十分成功，几乎每次都能赢得面试机会。
 
-The résumé that landed me all those interviews is the  **exact**  one in this article.
+帮助我赢得面试机会的简历  **就是**  文章开头的那份简历。
 
-It took me  **four years**  of iteration and real-life testing to get to this point. From this experience, I have come up with a list of  **résumé writing principles**  to help you write an even better software résumé. These are principles that have helped me land my dream job and are principles that can help you land yours.
+我花了  **四年时间**  不断重复，亲身测试才走到这一步。根据经验，我提出了几个 **简历创作准则**  来帮助你写出甚至更出色的软件岗求职简历。这些准则帮助我得到了心仪的工作，也能帮助你找到自己喜欢的工作。
 
-While it took me  **four**  years of college to figure this all out, you don’t have to go through all the leaps and bounds because you can learn all of it right here, right now.
+尽管这花费了我 **四年** 时间，但你们却不需要经受这样，因为你能在此时、此地学习到这些准则。
 
-My goal is to be the one-stop hub for all your questions on how to obtain a software engineering interview. That way, you don’t have to waste countless hours cross-referencing Google search results to find the best answer on how to write a software engineering résumé that gets interviews.
+我的目标是解答你们所有关于软件工程师求职的问题。这样，你们就不必为了制作出色的简历，花费大量的时间在谷歌上搜索和交叉参考。
 
-Your valuable time could be better spent on writing your killer résumé.
+你们可以利用自己的宝贵时间，更好地制作出秒杀一切公司的简历。
 
-So start here and now with this article. Reap the benefits from my past experiences and let’s begin the step-by-step walkthrough of my résumé!
+所以，现在开始阅读这篇文章吧。从我的经验中汲取精华，开始一步步探索我的简历吧！
 
-### Learning How to Write a Killer Résumé — By Example
+### 举例：如何写出秒杀公司HR的个人简历
 
-> “As to methods there may be a million and then some, but principles are few. The man who grasps principles can successfully select his own methods. The man who tries methods, ignoring principles, is sure to have trouble.”
+> “方法可以有一百万种或更多许多，但原则只有几个。抓住原则的人可以有效地选择自己的方法，而尝试方法但忽略原则的人，一定会遇到问题。”
 
-> \- Ralph Waldo Emerson
+> \- 拉尔夫·瓦尔多·爱默生
 
-Let’s take another look at this résumé:
+让我们再看一眼简历吧:
 
 ![](https://cdn-media-1.freecodecamp.org/images/vbkZAcOy2IDkqyI6OgaCCsIBurgUf2muRpOg)
 
-Résumé: Essential Sections Highlighted
+简历: 高亮重点
 
-#### The Essentials from a Glance
+#### 吸睛亮点
 
-#### One-page résumé
+#### 一页简历
 
-Recruiters do not have all day to read your résumé. On average they view it for less than 6 seconds. Keep it  **short**  and  **concise**.
+招聘专员不会花费一整天来阅读你的简历。他们平均会花费 6 秒来看简历。 要把简历写得  **简单**  和  **精确**。
 
-#### Sections (Header, Education, Employment, Software Projects, Skills)
+#### 内容 （标题, 教育背景, 工作经历, 软件项目, 个人技能）
 
-Place sections in  **order of importance**  from top to bottom. The ‘[Personal Projects][5]’ section is a unique, must-have for people looking for a software engineering position.
+按照 **优先级** 从上到下布局内容。对于求职软件工程师的人来说，一定要写明 “[个人项目][5]”。
 
-#### Consistent layout + font per section
+#### 布局内容保持一致
 
-Make sure each section contains a uniform look. Consistent style is important as it enhances the readability.  **Readability**  is essential.
+确保每部分的内容形式一致。这非常重要，因为这会增加可读性。**可读性**  非常重要。
 
-So why does this résumé work? Let’s explore the numbered bullet points.
+所以，为什么这份简历成功了呢？让我们来探索一下重点内容吧！
 
 #### Who Are You (1)
 

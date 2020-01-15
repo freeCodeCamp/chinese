@@ -1,6 +1,6 @@
 > * 原文地址：[How to write a killer Software Engineering résumé](https://www.freecodecamp.org/news/writing-a-killer-software-engineering-resume-b11c91ef699d/)
 > * 原文作者：Terrence Kuo
-> * 译者：
+> * 译者：LolaWei
 > * 校对者：
 
 ![How to write a killer Software Engineering résumé](https://cdn-media-1.freecodecamp.org/images/1*0yse40ucjmpdlaBqlY0fTg.png)

@@ -145,91 +145,91 @@
 
 所以，为什么这份简历成功了呢？让我们来探索一下重点内容吧！
 
-#### Who Are You (1)
+#### 你是谁 （1）
 
-_Target Audience: Anyone writing a_ résumé
+_目标读者: 有简历制作需求的所有人
 
 ![](https://cdn-media-1.freecodecamp.org/images/GsXc3z0q67DOrLEthtEv-zbeaHCsZiclXM2H)
 
-Résumé: Name Section
+简历: 个人信息部分
 
-Starting off real easy. Your name. Place your name at the top of your résumé in a  **large legible font.**
+刚开始非常简单————写下你的名字。使用 **清晰易读** 的字体，把你的名字写在简历开头。
 
-No need to be all fancy about it with extravagant colors or fancy fonts. Plain and simple does the trick. You want the recruiter to see this easily from a mile away because you want them to know who you are. A recruiter who has to do minimum work is a happy recruiter. A happy recruiter is one who is more likely to give you an interview.
+不需要使用夸张的颜色或字体来写名字，简简单单就好。因为你想让人事知道你是谁，所以就要让他们在一英里外能看到你的名字。人事工作就是要做得开心，开心了才更有可能给你提供面试机会。
 
-**Recap:**  Make it ridiculously easy for the recruiter to read and find your name.
+**要点:**  一定要让人事很容易就看到你的名字。
 
-#### Contact Information (2)
+#### 联系方式 （2）
 
-_Target Audience: Anyone writing a résumé_
+_目标读者：有简历制作需求的所有人
 
 ![](https://cdn-media-1.freecodecamp.org/images/8diam7KWW7-wDoFqyq5PZroeZcjNtFL6--5N)
 
-Résumé: Contact Section
+简历: 联系方式部分
 
-Your contact info should be as easy as identifying your name. This is so important. Of all the things in the world,  **please do not mess this one up**  because how else on earth will the recruiter contact you?
+你也要像写名字一样，简明扼要地写下联系方式。这非常重要，  **请千万不要搞砸**  要不然人事怎么联系你？
 
-**Recap:**  Put in the correct contact information or you’ll never be contacted.
+**要点：**  一定要写下正确的联系方式，要不然永远不会有人联系你。
 
-#### Education (3)
+#### 教育背景 （3）
 
-_Target Audience: Anyone writing a résumé with a degree_
+_目标读者: 有学历、有简历制作需求的人_
 
 ![](https://cdn-media-1.freecodecamp.org/images/4bIZG1Lqw-H3zIQXMHrOjtS1yJQYFhOnI6DD)
 
-Résumé: Education Section: Header Subsection
+简历：教育背景部分：就读/毕业院校
 
-If you are attending or attended college, this should be the first section of your résumé, because going to college is a huge accomplishment. According to the U.S. Bureau of Labor Statistics, only “66.7 percent of 2017 high school graduates age 16 to 24 enrolled in colleges or universities”. So be proud of it and include it!
+如果你正在上大学或已经大学毕业，那么一定要把教育背景放在简历正文内容的第一部分，因为完成大学学业已经是巨大的成就了。美国劳动统计局数据显示，“2017年，在16到24岁的高中毕业生中，只有66.7%的人选择继续读大学”。所以，一定要以此为荣，把大学学历写在简历里！
 
-Right off the bat, this tells the recruiter that you are invested in education and learning, which is crucial because technology is continuously changing. Furthermore, this information serves as an indicator of your successes, so be sure to put it down.
+人事一看到教育背景，就会明白你受过教育，这非常重要，因为科技在不断发展。除此之外，该部分内容也说明了你的成功，所以一定要把教育背景写进去。
 
-**Recap:**  Put down where you got educated.
+**要点：**  写明教育背景。
 
 ![](https://cdn-media-1.freecodecamp.org/images/4L6mOPdolMGbeEt6u4ZkdFI3NA762HMtoQfS)
 
-Résumé: Education Section: Coursework Subsection
+简历: 教育背景部分: 课程内容
 
-Be sure to include  **relevant**  coursework corresponding to the position that you are applying for. While a course on the  _History of Italian Gastronomy_  sounds exceptionally appetizing, it doesn’t have a place in a résumé that is trying to get you a job in computer science.
+一定要写明与申请岗位 **相关** 的课程。尽管 _意大利烹饪历史_  听起来非常开胃，但是你却不应该把它写在与计算机有关的求职简历中。
 
-This will significantly improve the ability of the recruiter and the hiring manager looking at your résumé in deciding whether you are a good fit for the position. And as previously mentioned, a happy recruiter is more likely to give you an interview.
+这样的话，人事与人事经理便更有把握，从而决定你是否适合这个职位。如上文所述，人事开心了，才会更容易给你机会。
 
-**Recap:**  Only include relevant coursework.
+**要点**  只写明与岗位相关的课程。
 
 ![](https://cdn-media-1.freecodecamp.org/images/JjXDrEy8HfZPFHGhUKmjJBvoNS1Jw5IY9Z4W)
 
-Résumé: Education Section: GPA Subsection
+简历：教育背景部分：绩点
 
-Okay. GPA. Before we talk about this, let’s remind ourselves of the main purpose of a résumé.
+在讨论绩点之前，让我们再想想写简历的主要目的是什么。
 
-The main purpose of a résumé is to highlight your knowledge, skills, and accomplishments succinctly. You want to include things on your résumé that you are proud of, but also things that will impress. You want to paint a picture of yourself in the best light possible so that recruiters and hiring managers want to interview you.
+简历的主要目的就是用简洁的方式强调你的知识、技能和成就。你想在简历中写明自己的优势、给别人留下好印象，你想尽可能地描绘自己，这样人事和人事经理才会给你面试机会。
 
-Now back to your GPA. It should be fairly obvious whether or not your GPA is impressive. If your GPA is below a 3.0, don’t put it on your résumé. There’s nothing wrong with excluding your GPA from your résumé if it only harms your chances.
+现在我们说回绩点。从绩点很容易就能看出你是否能为别人留下好印象。如果你的绩点低于 3.0 ，就不要把它写在简历上。如果绩点只会拉低你的印象分，那么这样做完全没关系。
 
-If you have a GPA between 3.0–3.2, this is a judgment call. From personal experience, I have talked to some companies that require a minimum GPA of 3.2, but these were primarily financial or quantitative companies. Most software companies have little regard for your GPA. If you have anything above a 3.2, I would place it on your résumé.
+如果你的绩点在 3.0 - 3.2 之间，那就要看人事的主观判断了。从我的个人经验来看，我曾经跟一些公司洽谈过，他们一般要求最低绩点是 3.2 ，但这些大部分都是金融或量化公司。大部分的软件公司对绩点要求不高。如果你的绩点高于 3.2 ，那么就把它写在简历上吧。
 
-If you have a low GPA, fear not, as this gives you the opportunity to be creative! My overall GPA was a 3.2 due to poor grades from my freshman engineering prerequisites and humanities classes. But once I finished and started taking courses within my major, my in-major GPA (GPA calculated from courses in my major) was a 3.44, which was significantly higher. So that’s what I put down (but make sure to qualify it as a departmental GPA).
+如果你的绩点较低，不要害怕，因为这会给你创新的机会！因为一年级的工程师预科和人文课程，我的总绩点只有 3.2 。但是当我开始学习本专业之后，专业绩点（只算本专业内的课程）提高到了 3.44 。所以我说，（确保写下自己的专业绩点）。
 
-There are many ways of going about presenting yourself in the best light possible, even when it may seem like the odds are stacked against you. I only provided one example of accomplishing this, but there are many more ways waiting to be discovered by you. Fully embrace your failures and accomplishments because they make up who are you. Be honest and truthful, and always focus on highlighting the best parts about yourself.
+其实有很多方法可以用来包装自己，即使有时候自己感觉几率不大。我只是举了一个小例子，但还有更多的方法等待着你自己去发现。请完全接纳自己的失败与成就，因为是它们造成了今日的你。保持诚实与真诚，努力展示出最优秀的自己。
 
-**Recap:**  Your GPA does not define you. The purpose of your résumé is to present yourself in the best light. Never forget that! Be creative when going about this and DON’T LIE.
+**要点：**  你的绩点不会定义你是谁。不要忘记，简历的目的就是展示出最好的你！当你面对这些问题的时候一定要学会创造性说辞，不要撒谎。
 
-#### Employment (4)
+#### 工作经历 （4）
 
-_Target Audience: Students with software engineering work experience_
+_目标读者: 有软件工程工作经验的学生_
 
 ![](https://cdn-media-1.freecodecamp.org/images/E4nwBSH6QdNW0QEfUp1CC9Tls1PwrudxV9I1)
 
-Résumé: Employment Section
+简历: 工作经历部分
 
-If you are a college student without any experience, don’t be afraid! This was my senior year résumé when I was applying for a full-time job. I was fortunate enough to have accumulated relevant work experience from summer internships, but this isn’t absolutely necessary to get an interview. If you find that you don’t have much to put in section, jump down to the ‘[Personal Projects][6]’ section.
+如果你是没有工作经验的学生，不要害怕！当我申请全职工作时也才读本科四年级。我很幸运，在暑期实践中积攒了一些工作经验，但是这并不是赢得面试机会的必要部分。如果你没有什么工作经验可写，请直接跳到‘[个人项目][6]’ 部分。
 
 ![](https://cdn-media-1.freecodecamp.org/images/8Kbx5ZwLw89g32ypd2QJWEZhOWCttMkuV7-D)
 
-Résumé: Employment Section: Header Subsection
+简历: 工作经历部分：
 
-While it is great to have past work experience, not all work experience is treated equally when it comes to looking for a job in software engineering. Focus only on including work experience that has  _relevance_  to the job that you are applying for. For instance, if you have experience working as a cashier in retail or a waiter in the food industry, don’t include it! Unfortunately, your abilities to handle money or serve food did not provide any indication that you will succeed as a software engineer.
+尽管有工作经历是件好事，但是对于软件工程师来说，不是所有的工作经历都会得到同等对待。一定要聚焦于与你所申请岗位 _相关_ 的工作经历。举个例子，如果你曾在零售业做过收银员或在食品工厂做过服务生，不要把这些写进去！不幸地是，你收钱或上菜的技能并不能说明你能做一个好的软件工程师。
 
-A recruiter’s goal is to match candidates with jobs that fit the candidates’ skill sets. Therefore it is essential only to include past work experience that has some relation to the position that you are currently applying to, on your résumé.
+人事的目标是匹配岗位申请者与其适合的岗位。因此，你一定要写明与当前申请的岗位相关的工作经历。
 
 Part of accomplishing this means creating a collection of various résumés, each tailored specifically for the different job that you are interested in. This is analogous to the college application process, where you had to write separate essays for each university that you applied to. Each college has its own values, culture, and vision, making it nearly impossible to write a generic, one-size-fits-all college essay. Therefore, tailor your résumé to the job that you are applying for.
 

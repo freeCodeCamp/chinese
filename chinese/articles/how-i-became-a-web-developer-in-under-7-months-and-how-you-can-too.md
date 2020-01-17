@@ -1,6 +1,6 @@
 > * 原文地址：[How I became a web developer in under 7 months – and how you can too](how-i-became-a-web-developer-in-under-7-months-and-how-you-can-too)
 > * 原文作者：Niamh Mcooey
-> * 译者：
+> * 译者：LolaWei
 > * 校对者：
 
 Around this time last year I started learning the basics of code in my spare time, and sure enough found myself working as a professional developer just 7 months later – with no CS degree, no bootcamp, and no clue whatsoever.

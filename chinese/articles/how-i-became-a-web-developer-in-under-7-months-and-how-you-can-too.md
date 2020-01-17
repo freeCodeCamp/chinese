@@ -3,19 +3,19 @@
 > * 译者：LolaWei
 > * 校对者：
 
-Around this time last year I started learning the basics of code in my spare time, and sure enough found myself working as a professional developer just 7 months later – with no CS degree, no bootcamp, and no clue whatsoever.
+大概去年这个时候，我开始在闲暇时间学习代码基础，7 个月后发现自己已经成为了一名专业的开发人员————没有计算机科学学位，没有参加过训练营，也完全没有思绪。
 
-So if you’re reading this you’re probably thinking: how on earth did that happen?
+所以，如果你在阅读这篇文章，或许会想：这怎么可能？
 
-Well, my thoughts exactly.
+好吧，我同你一样惊讶。
 
-In this article I’ll share what I did in those initial 7 months leading up to my first ever dev job. I’ll also include lots of resources I found helpful along the way, and bits of advice that I wish I had taken on sooner.
+在这片文章中，我会分享这 7 个月我是如何学习，从而找到了自己的第一份开发工作的。我也会分享一些自己找到的资源和建议。
 
-If you’re a fellow coding beginner aiming to make a similar career change into web development, my hope is that this article offers you some guidance…
+如果你也是编程初学者，想要转行做网站开发，那么我希望这篇文章能提供给你一些帮助......
 
-_(If you haven’t started coding yet but want to find ways to begin, you might find_ [_**my previous article**_][1] _a little more helpful, which includes lots of insights on how to take that first step towards learning to code.)_
+_（如果你还没开始学习编程，但是想入门编程，或许 [_**我之前的文章**_][1] _会对你更有帮助，因为通过这些文章，你会了解如何迈出编程第一步。）_
 
-So, lesson number 1:
+第一课：
 
 ## 🐣 Share your interest early.
 

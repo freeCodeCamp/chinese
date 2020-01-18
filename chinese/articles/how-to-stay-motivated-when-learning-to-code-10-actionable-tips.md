@@ -1,281 +1,232 @@
 > * 原文地址：[How to stay motivated when learning to code (10 actionable tips!)](https://www.freecodecamp.org/news/how-to-stay-motivated-when-learning-to-code-10-actionable-tips-f5f208f917db/)
 > * 原文作者：[Jessica Chan](https://www.freecodecamp.org/news/author/thecodercoder/)
-> * 译者：
+> * 译者：StoneCode5
 > * 校对者：
 
 ![How to stay motivated when learning to code (10 actionable tips!)](https://cdn-media-1.freecodecamp.org/images/1*PlfP6s0sXaTpfxCx9ph9xg.jpeg)
 
-_This post was originally published on  [Coder-Coder.com][1]._
+_这篇文件转载自 [Coder-Coder.com][1]._
 
-Does this story sound familiar?
+下面这个故事熟悉吗?
 
-_You’ve decided to learn to code! Filled with excitement at finding a new career, you quickly sign up for a Udemy course and register at freeCodeCamp._
+_你终于下定决心要学习编程了！怀着无比的雄心与激情想要开启新的职业生涯，迫不及待的在 Udemy 和 freeCodeCamp 注册了账号，然后浏览着编程相关的资料直到深夜,眼神里满是对编程知识的渴望。_
 
-_Feeling optimistic and eager, you sit down and start going through the material that evening._
+_在接下来的几个星期, 白天忙碌工作，晚上学习编程，你一如既往的坚持着，尽管努力，但是渐渐地你发现有一些概念和定义总是不能很好的理解，而且没有人可以帮助你解答疑问。_
 
-_In the next several weeks, you fall into a pattern of studying coding till late at night, then waking up early the next morning to go to work. But you’re starting to get confused by some of the concepts, and there isn’t anyone to ask for help._
+_你牺牲了你的所有空闲时间来学习，电视都舍不得看一下，也没有和朋友聚会._
 
-_You’ve sacrificed your free time, and haven’t watched TV to unwind in a while. Also, having to miss nights out with friends sucks._
+_坚持了几个月以后，长期熬夜导致的睡眠不足让你十分难受，你艰难的意识到你不可能在6个月之内找一份编程的工作，这真的很打击你。_
 
-_After a couple of months, all the late nights and lack of sleep are starting to weigh down on you. You bitterly come to the realization that you won’t be anywhere near landing a new job in 6 months. The thought is incredibly discouraging._
+_最后，你决定要休息一会儿，因为你真的感觉自己没有动力继续下去，而且真的非常疲惫。_
 
-_Finally, you decide to take a break. You’re feeling burned out and frankly exhausted. That break extends out for further months._
+_年底了，你发现你都没怎么认真看过编程教程了，很遗憾，你将之前的目标抛诸脑后了。_
 
-_Later that year, you realize you haven’t cracked open your tutorial for a really long time. Sighing, you shove the thought of someday having a job you love into the back of your mind._
+_或许，明年你会再次出发吧。_
 
-_Maybe next year._
+#### 保持学习编程的动力
 
-#### Staying motivated while coding
+是否在这个故事上看到了自己的影子？
+如果你曾经自学过编程，那可能你曾经感受过这样的挣扎。
 
-Is this story similar to your own? If you’re trying to teach yourself how to code, you are probably pretty familiar with the struggles in the story.
+自学编程或者其他技能和在学校里上学是两回事。你没有必须要学习的课程，没有考试，没有分数，也没有对失败的害怕来促使你学习。
 
-Learning coding or any skill on your own is way different from being in a classroom with a teacher. You don’t have mandatory classes, tests, grades, or the fear of failing to keep yourself motivated.
+**如果你正在自学编程，那么你需要给予自己源源不断的动力**
 
-**When you’re learning to code by yourself, you have to generate your own motivation.**
+怎样才能让自己充满动力，坚持到最后呢?
+虽然这很难，但并不是不可能的，这篇就会告诉你一些实用的诀窍来帮助你
 
-So how can you accomplish this? How can you make sure that you keep learning, and don’t give up?
+先大概的浏览一下要点:
 
-It’s tough, but it is possible. This article will share some tips and strategies that you can use to stay motivated when learning to code.
+1.  找到目标
+2.  设置合理的期望值
+3.  保持稳定的节奏
+4.  增强意志力
+5.  学会休息
+6.  别让冒充者综合症毒害你
+7.  找到志同道合的社区
+8.  参加线下活动
+9.  不要和别人做比较
+10. 保持好奇，享受编程！
 
-Here’s a quick outline of what we’ll be going over:
+希望这些建议能够帮助到你！
 
-1.  Have an end goal in mind.
-2.  Be realistic about your goals.
-3.  Choose consistency over speed.
-4.  Build up your willpower muscle.
-5.  Avoid burnout and get rest.
-6.  Don’t let impostor syndrome get you down.
-7.  Find a community of peers.
-8.  Get involved with local meetups.
-9.  Don’t compare yourself to others.
-10.  Stay curious and keep it fun!
+#### #1: 找到目标.
 
-Hope you find these tips helpful!
+在刚开始学习的时候要设置一个清晰的目标，这可能是老生常谈，但却重要。花一些时间想想你最想要达到的目标是什么？什么是对你最重要的？
 
-#### #1: Have an end goal in mind.
+你的目标可能是找一个全职的编程工作，提高你的家庭收入、又或者是找一份远程的自由的工作、亦或者是创业，也可以是其他？
 
-This might seem obvious, but have a concrete goal in mind when you’re starting out. Take a few minutes to really think about what your #1 goal is. What’s the most important part to you?
+总而言之，你需要清楚你到底为什么学习编程。那样你才能在学习的过程中拒绝其他诱惑，坚持到底。
 
-It could be to find a full-time job as a web developer so you can support your family financially. Or to have a flexible career where you can live anywhere. Or to work for yourself, without having a boss.
+一旦你想清楚了自己的目标，把它写下来，不需要写的多么精致，只需要一个便利贴或者一张纸，贴在自己经常看到的地方。这虽然听起来很傻，但这真的会提醒你你的目标，让你甘愿用自己的业余时间来坚持学习。Marie 在 Instagram 上分享了她的做法，将写好目标的海报挂在她电脑背后的墙上。Marie 的instagram账号是Marie on @girlknowstech 。
 
-In all this, know what your “why” is. What’s the one goal that will get you out of bed in the morning, and makes you want to continue?
+![Marie写好目标的海报](https://i.loli.net/2020/01/17/O7rfABUakwox4jn.png)
 
-Once you’ve figured out what it is, write it down in a place where you’ll see it often.
+最后 你学习编程的目标是什么呢？
 
-Yeah, this sounds cheesy, I know. But it’ll help remind you of your goals and the whole reason that you’re giving up your free time.
+#### #2: 设置合理的期望值.
 
-It doesn’t have to be a super nice, designed poster. It can just be a post-it note or a piece of paper. One Instagrammer, Marie on @girlknowstech,  [creates her own simple motivational posters][2]  with posterboard. She hangs them on the wall above her computer so she can always see them.
+让编程充满动力，反过来说，就是尽量少的感受到那些让你放弃的挫败感。
 
-What’s your end goal in learning to code?
+无论学习什么，过高的期望值都是学习路上的绊脚石，为什么呢?
 
-#### #2: Be realistic about your goals.
+因为大多数时候你感受到挫败感，都是因为过高的期望值，
 
-Staying motivated essentially means not getting so discouraged that you just give up.
+就从编程这一方面来说，希望自己花6到12周就从一个新手变成专家，如果有这个目标，那可能从一开始你就失败了。
 
-One really big pitfall in getting good at anything is having unrealistic expectations. Why is this?
+当然我不是说只学习几周就不可能找到工作，但那真的太难太难了。（我不认同市面上很多“X周内从新手到专家”这样的书籍，基本都是为了提交销售率。）
 
-Well, when you get discouraged, it’s often because your expectations don’t match up with reality.
+我个人认为，要找一份编程的工作需要花费大约1-2年的业余时间，当然，这取决你有多少时间投入到编程的学习中。如果你已经有一份工作，或者有孩子，你肯定比学生或者没有工作的人投入的时间要少的多，你花费的时间会更长。还有就是你的学习能力也会影响学习的时间，毕竟每个人学习能力都不相同。
 
-If you’re jumping into learning to code, thinking that you will go from complete newbie to professional web developer in 6 weeks or 12 weeks, you  _may_  be setting yourself up for failure.
+所以，保持自己的学习节奏就好了，试着去记录自己学习的过程，不要给自己设置不切实际的目标。
+#### #3: 保持一个稳定的节奏.
 
-I’m not saying that it’s impossible to land a job after learning for a couple months, but it’s really, really hard.
+> 苟有恒，何必三更起五更眠；最无益，只怕一日曝十日寒。
 
-(And I’m not a huge fan of proponents of the “learn to code in X weeks!” mentality, because they’re usually trying to sell you something. But that’s a whole ‘nother story ? )
+刚开始学习时，你很可能完全投入进去，每天学习很长时间。然而，我上面的建议已经说明，那可能是一个不现实的期望，最后可能会以自己精疲力竭的结束而放弃学习。
 
-Personally, I think it may take you more like 1 - 2 years to get good enough at coding to apply and land jobs. Of course, a lot depends on your own circumstances. If you are working part or full-time, or you have children, you will have less time than someone who is in high school or doesn’t have to work at the moment.
+更理想的方式是你能够给自己规划一个稳定的可实现的每天或者每周学习编程的时间，就算每一天只有30分钟，一周就有3.5个小时，一个月就有14个小时，一年就有200个小时。当你计划好了自己的学习时间，就坚持它。
 
-It also depends on how fast you learn, and pick up new concepts. This is simply something that varies from person to person.
+量变产生质变。
 
-Ultimately, just know that everyone moves at their own pace. Try to gauge how your progress is going and don’t set up yourself for failure by having unrealistic expectations.
+举个例子，你每天花4-5分钟来刷牙，几天看不出区别，但时间一长就有很大的区别了，你会拥有一口洁白的好牙或者一口蛀牙。
 
-#### #3: Choose consistency over speed.
+这就是缓慢而持久的坚持比爆发性的短暂努力更重要的原因
 
-On the same note, the rather cliched saying, “Slow and steady wins the race” is very true.
+#### #4: 增强意志力
 
-When you are just starting out, you might want to rush into things and spend hours each day dedicated to studying and practicing coding.
+你之前听说过吗？ 有一块肌肉是专门控制意志力的。
 
-However, like I mentioned in the previous tip, that may be a somewhat unrealistic expectation, and you may well end up burning out and giving up.
+我最近在做家务的过程中认识到了这一点。
 
-You’ll be more likely to continue if you figure out how much time you can realistically and sustainably spend each day or each week studying coding. Once you find that out, stick to it.
+在家里，我和我丈夫合作做家务，他在晚上负责洗完水槽里的所有餐具，然后把它们放在洗碗机中晾干一夜。
 
-Even if it’s only 30 minutes per day, if you do this for seven days a week, you’ll have studied for 3.5 hours that week. In one month that would be about 14 hours, and in one year, almost 200 hours!
+我负责第二天早晨泡茶的间隙去把餐具从洗碗机中拿出来放好，这是一件很简单的事情，但是我很抵触去做这件事情，因为它太无聊了。
 
-Even small efforts, when combined with consistency, can lead to big accomplishments.
+但我还是强迫自己去做，因为那是属于我的责任。
 
-Take brushing and flossing your teeth, for instance. You might spend 4–5 minutes per day on brushing and flossing. A tiny amount of time!
+有趣的现象发生了，随着时间的推移，虽然这件事情仍然无聊，但我发现我做这件事情相较以前会更轻松了，因为我把它变成了一个习惯。
 
-But doing that every single day means the difference between having great teeth, and having no teeth.
+**这怎么能联系到有肌肉控制意志力呢？**
 
-This is why consistency is more important than trying to go as fast as you possibly can.
+在锻炼肌肉的过程中，刚开始的时候是最困难的，但随着时间的推移，锻炼会强化你的肌肉，同样的锻炼就会更加轻松(这就是举重运动员为什么会不断增加举重的负荷的原因，因为他们需要持续不断的锻炼他们的肌肉) 
+当我第一次从洗碗机中拿出餐具，我这方面的意志力很薄弱，要克服很大的阻力才能强迫自己完成，慢慢做的次数多了，这方面的意志力就变强了，也形成了一个习惯。
+过一段时间，这种习惯在我的大脑中根深蒂固，然后就更容易完成那件事，而不是把它拖延到最后才完成。
 
-#### #4: Build up your willpower muscle.
+**要成功成为一名程序员，你必须培养关于学习编程的意志力。**
 
-Have you ever heard of the idea of willpower being an actual muscle?
+即使编程真的很有趣，但有时候也需要让你坐下来编程，同时也意味着，你不能做其他更有趣的事情。重复的越多，你做起来就更简单。
 
-I recently learned about how to develop it, through household chores (yes, exciting, I know).
+如果你有一个合理的具体的目标，保持你自己的学习节奏，同时理解"重复越多，就越简单"的道理，那么在中途放弃的可能性就大大降低了。
 
-At home, my husband and I divided up the chores. In the kitchen, my husband would wash all the dishes from that day in the sink, and put them in the dishwasher rack to dry overnight.
+#### #5: 学会休息.
 
-The next morning, first thing, I would put the dishes away while my morning tea was steeping. It only took a few minutes to do, but I haaaated doing it. It’s kind of a boring chore.
+想在业余时间完成一些目标的话，过分透支你的身体和精力是很常见的现象。
 
-But I just kept forcing myself to do it, because I knew that it was my responsibility.
+我在有很多活跃的程序员的 Instagram 里发现很多人都是晚上熬夜很晚敲代码,或者早上起的很早来敲代码。
 
-And the interesting thing was, over time, it got easier to just start putting the dishes away!
+这样的行为只可能是短暂的，真的不推荐长期这样。
 
-Now, I didn’t enjoy it any more than I did at the beginning. Yeah, still boring.
+以我的经验来说，我白天的上班时间一直在进行远程的 web 开发工作,空闲时间就花在 Freecode Camp 社区，经常熬夜到凌晨1点写教程或者文章。
 
-But my disliked chore had become a habit.
+有一个周末，我一如既往的把所有时间都投入来写教程或者文章，在周天的晚上，想到明天又要工作一整天，我感到特别的疲惫和难受。
 
-**How does this relate to willpower being a muscle?**
+我意识到我已经耗尽了自己的所有精力和热情，我真的需要休息来给自己充一充电。
 
-Well, if you start working out a muscle that’s really out of shape, it’s obviously really difficult at the beginning to do a workout.
+第二周我抽了一天的时间来彻底放松自己，不干任何工作，只是躺在椅子上闲适的看了一天的书。这样度过一天以后，我感受到了前所未有的放松。
 
-But over time, working out will actually increase the size of your muscle, and you’ll get stronger. The workout will become easier to do. (This is why weightlifters continue increasing weights, to keep challenging their muscles.)
+在学习代码的过程中，确保不要把所有时间都用来学习，工作，也要在条件允许的范围里 适当的休息。从长远来看，它将帮助你取得进步。
+#### #6: 别让冒充者综合症毒害你.
 
-When I first started with my dishes chore, my willpower to put them away was very weak. At that point I would much rather not put them away.
+[冒充者综合症](https://baike.baidu.com/item/%E5%86%92%E5%85%85%E8%80%85%E7%BB%BC%E5%90%88%E5%BE%81/11026373?fr=aladdin)不光是新手会遇上，连一些比较厉害的程序员都会遇上，他们永远觉得自己不够好。
 
-But over time, as I kept just forcing myself to do it, I was working out that muscle for dishes and creating a new habit in my daily routine.
+我也不例外，工作的前两年，一直受此的困扰，我害怕别人发现我是一个冒充者。我从这走出来花了5年的时间。
 
-After a while, the habit became so ingrained in my brain that it was actually easier to go ahead and complete that chore, than to put it off until later!
+所以，当你遇上它时，你要相信你并不孤单。
 
-**To successfully become a coder, you have to develop your willpower muscle to spend time learning to code.**
+我认为这是程序员普遍会遇到的问题，原因之一是编程有太多种类，web开发也有很多不同的领域，多种多样的编程语言，技术栈。而且每隔一段时间就会出现新的框架和工具。
 
-Even though coding can be really fun, it sometimes sucks to have to make yourself sit down and code, instead of doing other, more fun things in your life.
+这样大量“需要”知道的技能真的很容易把人压倒，难怪这么多充满热忱的开发者都被冒充者综合症困扰。
+  
+**战胜冒充者综合症困扰需要耐心和专注.**
 
-But just know that it will get easier over time, the longer you discipline yourself to do the work.
+你并不需要学习你所知道的所有编程知识，诚实地说，没有人可以知道所有事情。大多数程序员都只精通一种，或者2种编程语言，熟悉或者了解其他语言。
 
-If you have a realistic, concrete goal, aim for consistency in your time spent learning, and understand that your will to code will get stronger over time, you’ll be much less likely to give up midway through.
+学习更多的语言是没有问题的，但一定不要尝试过多，那样你的注意力就太分散了。相反的，你应该专注在一种语言上，一种技术栈上，精通它们。
 
-#### #5: Avoid burnout and get rest.
+这样，随着你技术的成长，你的自信也会成长。而且这样做的优点是你可以掌握到编程核心的原则，以后学第二门语言或者其他框架或工具都会更快更容易。
 
-Overworking yourself is a pretty common temptation if you’re trying to achieve something in your nights and weekends.
+另一方面，对自己要有耐心（和 “设置合理的期望值” 相同）。认识到学习编程就像一场马拉松而不是短跑，是需要很长时间才能精通的。
 
-I’ve also noticed on Instagram, which has a vibrant community of programmers, there are many people who post about how late they stayed up, or how early they woke up to do coding.
+虽然需要很长时间，但坚持不懈，终能抵达终点。
 
-While this plan may work in the short term, it’s really not good for you in the long term.
+如果你能耐心，并且专注于学习少量的技能，你就更能克服冒充者综合症所带来的的困扰。
+#### #7: 找到志同道合的社区.
 
-In my own experience, I’ve been working nearly full-time hours doing freelance web development, and then working on this website in my spare time.
+自学编程的中很常见的另一个问题是孤独。在学校里上课的时候，有一起上课的同学，有可以解答疑问的老师。而在网上自学，基本上没有同学和老师，
 
-There was a point I hit where I would work a full day, then stay up until midnight or 1am working on writing a tutorial or article.
+找寻同学和老师或者是很困难的，但下面有一些网上的资源你可以利用起来，如果你以前从来没有加入过哪个社区，我极力推荐你看看下面的资源。
 
-I remember one weekend where I’d spent all day and night working on the website, and by Sunday evening, I felt simply exhausted.
+解决孤独的一个好办法就是加入一个社区
 
-Knowing that I would have a full day of work the next day was discouraging.
+找到其他有相似经历的人，他们可能正在努力解决与你相同的问题，可以极大地鼓励和激励你
+下面是一些能够找到同路人和老师的方法:
+- **Instagram:** ,这个平台有很多各种水平的程序员，尽管这个平台不是一个适合提问的平台，但在这里你可以看到那些程序员日常生活在干什么，在想什么。我个人很喜欢这里，因为这是一个全世界范围内的程序员社区。建议你可以尝试一下 Instagram 上很流行的挑战 [#100DaysOfCode][3]
+- [**freeCodeCamp**][4]**:** 这不仅仅是一个全方面编程的训练营，还有着广泛有价值的文章，同时也能得到 Facebook 团队的指导
+- [**Dev.to**][5]**:** 一个你可以提问，可以讨论，可以找到很多文章的很活跃的线上程序员论坛。
+- [**Stack OverFlow**][10]**:** Stack Overflow是一个与程序相关的IT技术问答网站。用户可以在网站免费提交问题，浏览问题，你遇到的大部分问题应该都能在上面找到答案
 
-I realized then that I had probably burnt myself out. And I really needed to make time to rest and rejuvenate myself.
 
-So one day that week where I didn’t have any projects due, I just lay on the couch and read a book for most of the day. It was glorious. At the end of the day I felt so wonderfully rested!
+不管你加入哪个社区，能够得到别人的帮助都是很开心的，但希望你也尝试着去帮助别人，而不仅仅只是获取他人的帮助。社区的建设需要每个人奉献自己的时间和精力去参与，当你帮助他人时，你也是在为社区做贡献。
 
-In your pursuit of learning to code, make sure that you carve out time to not just work, but to rest, if possible. It’ll help you in your progress in the long term.
 
-#### #6: Don’t let impostor syndrome get you down.
+#### #8: 参加线下活动.
 
-Ah, the dreaded impostor syndrome. It’s something that plagues all beginners. Even more advanced programmers sometimes find it hard to shake off that feeling of not being good enough.
+当你在线上找到社区以后，同时也不要忽视线下活动
 
-I’ve said this before, but when I first started working in web development, I was completely terrified of being found out as a faker. This was pretty constant in my first two years at my first job.
+想办法去找到那些和编程相关的线下活动，经常参加线下活动有许多优点。
 
-It took almost five years before I actually started feeling more confident in my own skills. So don’t feel discouraged if you’re feeling impostor syndrome. You are most definitely not alone!
+和其他程序员见面或者可以找到一些共鸣， 可以讨论共同遇到过的问题，分享解决问题的思路。
 
-One reason that I think this is such a common fear for coders is because the fields of programming and web development are just so broad. There are several programming languages, many different technology stacks, new frameworks seeming to come out every few months, and any number of tools.
+而且，很多技术公司倾向于招聘那些经常参加或者组织线下活动的人，在活动中，你有机会接触到一些公司的技术负责人，说不定还可以通过他们获得工作机会。
 
-It’s so easy to get overwhelmed by the vast number of skills that you “need” to know. It’s no wonder that so many aspiring developers struggle with impostor syndrome!
+总之，参与线下活动绝对是对你有益无害的。
+#### #9: 不要和别人做比较.
 
-**Conquer impostor syndrome with patience and focus.**
+在编程社区中，记住不要和别人做比较。当然，我们不可能忽视别人正在做什么或者取得过的成就，但你真的没必要跟其他人节奏一致，
 
-You’re never going to learn every single thing there is to know about coding. To be honest, no one knows  _every single thing_. Most programmers become experts in one programming language, maybe two, and may be moderately proficient or just familiar with others.
+看到其他人在成长过程中拥有的动力并将一些能量和兴奋转移到自己的成长过程中是没问题的，但当看到很厉害的人有着过人的履历，你可能会感觉沮丧或者嫉妒，这真的会打击自己的学习积极性。
 
-There’s nothing wrong with learning more than one language, but try to not jump around too much. You’ll spread yourself too thin.
+记住每个人都有不同的环境，不同的成长速度。有些人会比你有更多的时间，也可能学习速度比你更快。同样也会有一些人会比你时间更少，学习速度比你更慢。
+归根结底，别人的学习速度对你没有任何影响。
 
-Instead, try to focus on one main language and one stack, and get good at it.
+所以，不要因别人的成绩而焦虑，只需要关心自己的成长过程就好了，虽然这很难。
 
-Over time, as your skills grow, your confidence will also grow. And the best part is, you will have picked up many of the core principles about programming, which you can then apply to learning other languages, frameworks, and tools more quickly.
+#### #10: 保持好奇，享受编程!
 
-Another tip is to simply be patient with yourself (this is related to being realistic about your goals). Understand that learning coding is a marathon, not a sprint. It will likely take years before you are very proficient in it.
+程序员最好的一个特质就是好奇，程序是怎样运转的，这是我喜欢编程和计算机的一个原因！
 
-Now, that doesn’t mean that you will never be good at programming - it will just take time.
+在学习时，如果你一段时间一直专注于一个狭窄区域，则可能会由于某种原因而感到疲倦。
 
-If you can be patient with yourself and your progress, and focus on one or a few skills to build up, you will be more equipped to battle impostor syndrome.
+如果你一段时间内一直在看 Javascript 的教程，感觉头脑有点混乱，可以尝试一下其他编程的其他领域。可以看一些和你当前学习不同领域的视频和文章。
 
-#### #7: Find a community of peers.
+切换不同领域的知识，可以让自己对它们保持新鲜感。
 
-Another common struggle of people learning web development is that you feel alone.
+编程有各种各样的知识，CSS 动画，有趣的API接口，甚至可以自己动手做一个迷你的程序来玩。
 
-When you’re learning in a physical classroom, you have fellow students who are doing the same thing as you. And you have a teacher that you can talk with and ask questions about the material.
+我当初就写了一个很简单的 "lorem ipsum" 的程序,它可以将我预设好的文字和短信，随机地凑在一起，组成一篇文章。它虽然不是世界上最复杂的程序，但却真正让我感受到了编程的乐趣而且也让我在朋友圈秀了一把。
+### 结语
 
-If you’re learning coding online or with books, you often don’t have that luxury.
+学习编程不是一件容易的事，如果你已经在路上，让我为你鼓掌。当你觉得你很菜，你不能成为高手的时候，你要相信自己以后一定做得到。
 
-Finding peers and mentors can be very difficult, but there are some resources online that you can take advantage of. If you haven’t found any coding communities yet, I highly recommend that you take some time to look into them.
+我真心希望这些建议能够给你一些帮助，你有什么想法呢？欢迎在下方评论。
 
-Being part of a community can really help with that feeling that you’re alone.
+#### 了解更多?
 
-Reading about other people with similar experiences, who may be struggling with the same issues that you are, can be hugely encouraging and motivating.
-
-Here are a few suggestions for places where you can find peers and/or mentors about coding:
-
--   **Instagram:**  There are a lot of programmers on Instagram, of every skill level. While it’s not exactly the place to ask for help on coding questions, it’s an amazing place where you can see what other coders are working on or struggling with. I’ve personally really liked it because I feel like I’m part of a greater community of coders worldwide. Check out or take part in the  [#100DaysOfCode][3]challenge that is really popular there.
--   [**freeCodeCamp**][4]**:**  It’s not only an online full-stack bootcamp, but also has a very helpful message board and Facebook groups that can help out their students.
--   [**Dev.to**][5]**:**  A vibrant online message forum for programmers where you can find discussions, articles, and get support for your questions.
-
-One word of advice! If you join any of these communities, try to help others, and don’t just ask others for help.
-
-While it’s great to get support and assistance, these communities only work if there are people who are willing to donate their time and energy helping answer questions.
-
-When you help others, you’re doing your part to help these places continue to work and help people!
-
-#### #8: Get involved with local meetups.
-
-While you find coding communities online, don’t forget about networking in person!
-
-Look for meetups or other networking events related to programming in your local area. There are many benefits of regularly attending events.
-
-Meeting other coders who may be in the same position as you can be really fun and also encouraging! You’ll be able to talk about common struggles and share strategies for how you are overcoming them.
-
-In addition, many tech companies looking to hire web developers often attend or even co-host meetups. If you get to talking with some of these company reps, you may be able to eventually land a job through them.
-
-All in all, it doesn’t hurt to get involved with communities, and it can only help you.
-
-#### #9: Don’t compare yourself to others.
-
-As you start getting more involved in the coding community, please try to remember not to compare yourself to other coders.
-
-Obviously it’s impossible to not see what other people are doing or accomplishing. But try (as much as possible) to not feel like you have to keep up with everyone else.
-
-It’s not bad to see the drive that others have in their own journey, and to transfer some of that energy and excitement to your own. But if you start feeling down if you see someone talking about learning or doing things that you don’t have experience in, or feeling jealous if someone seems to be more ahead of you, you may end up just feeling discouraged.
-
-Everyone has a different situation and progresses at different speeds. Some people will have more time than you, or may be faster at learning certain things than you are. Others will have less time or learn slower than you. No one is better than another person.
-
-Ultimately how fast or slow other people are (or seem to be) doesn’t have any direct effect on you.
-
-Although it may be difficult, don’t worry about someone else’s journey, just worry about your own ?
-
-#### #10: Stay curious and keep it fun!
-
-One of the best characteristics of us coders is that we are curious about how things work. It’s one reason that I love programming and computers!
-
-While you’re learning, you may, for one reason or another, start feeling weary if you’ve been focused on one narrow area for a while.
-
-Feel free to change gears every so often. If you’ve been slogging away at a JavaScript tutorial and your brain is starting to feel fried, try taking a step back and working on a random side project. Or watch a video or read an article about a different area in programming from what you’re working on.
-
-Mixing things up every so often can help keep things fresh.
-
-There are so many things that are possible with coding – CSS animations, fun API integrations, even just making silly mini apps for fun.
-
-One random app I built for fun was a “lorem ipsum” generator. It was a relatively simple tool that randomly chose words and phrases from a list that I had put together. Not the most complicated thing in the world, but it was incredibly fun to make and to show my friends!
-
-### In closing
-
-Learning to code is a really difficult thing to do, and if you’re somewhere on that path, I commend you!
-
-Even if you feel like you are completely lost and you’ll never be good at programming, just know that it will come with time.
-
-I really hope that these tips are helpful to you. Any of them strike a chord in your particular situation? Feel free to leave a comment below!
-
-#### Want more?
-
-? Read more tutorials on my blog, c[oder-coder.com.][6]  
-? Si[gn up here to get emails about new articles.][7]  
-? Join 25,000+ others — Follow @th[ecodercoder on Instagram.][8]  
-? Check out coding tutorials on  [my YouTube channel][9].
+? 在我的博客阅读更多教程, c[oder-coder.com][6]  
+? [注册以获得最新文章的邮件][7]  
+? 像 25,000+ 其他人一样关注我 — 关注 @th[ecodercoder on Instagram][8]   
+? 在[我的 YouTube 频道][9]查看更多的编程教程
 
 [1]: https://coder-coder.com/stay-motivated-learning-code/
 [2]: https://www.instagram.com/p/BhkX5uWnnuP/?taken-by=girlknowstech
@@ -286,3 +237,5 @@ I really hope that these tips are helpful to you. Any of them strike a chord in 
 [7]: https://coder-coder.com/subscribe
 [8]: https://www.instagram.com/thecodercoder/
 [9]: https://www.youtube.com/c/codercodertv
+[10]: https://stackoverflow.com/questions
+

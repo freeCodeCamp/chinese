@@ -17,131 +17,132 @@ _（如果你还没开始学习编程，但是想入门编程，或许 [_**我�
 
 第一课：
 
-## 🐣 Share your interest early.
+## 🐣 尽早分享自己的想法。
 
-When I seriously started thinking about programming, the first thing I did was  _talk about it_.
+当我认真考虑学习编程的时候，我做的第一件事就是 _说出来_ 。
 
-I asked my friends and family if anyone knew any developers who’d be willing to chat about their jobs, and ended up meeting so many smart and creative people who gave genuine, practical and (most importantly) varying insights.
+我询问家人与朋友，他们是否认识愿意讨论自己工作的工程师，结果我认识了很多既聪明又富有创造力的人，他们给予了我很多真诚、实用、丰富且 （非常重要）的观点与看法。
 
-The key here is to try and meet as many different kinds of developers as possible. If you can, speak to people with all sorts of interests and specialties at various stages in their careers. This kind of access can unveil the variety involved in programming, and you can use it to demystify the idea of coding as this big, scary thing.
+这一阶段的关键是尽可能去努力认识不同类型的工程师们。如果可以的话，与处于不同职业阶段且具有丰富爱好与特长的人交谈。这样可以揭开编程的神秘面纱，不再认为编程是件令人恐惧的大难题。
 
-Another good habit to pick up early is to constantly:
+除此之外，最好尽早：
 
-## 🙋 Ask.
+## 🙋 咨询他人。
 
-I asked developers some of the most basic things like:  
+我问过工程师们这些最基础的问题：
 
--   What the hell is GitHub?
--   Do you really not need a computer science degree?
--   Why is everyone always talking about React?
--   What kind of tech jobs do you think there’ll be in 10 years time?
+-   GitHub是什么？
+-   你真的需要计算机学位吗？
+-   为什么人人都在讨论响应式？
+-   你认为 10 年后会有什么类型的技术性工作？
 
-## 👋 And go to meetups.
+## 👋 参加交流会。
 
-If you’re lucky enough to live in a place like London where there are plenty of meetups happening – go!
+如果你很幸运住在伦敦这样的地方，那么会有很多的交流会————去吧！
 
-This is great practice early on not only because you might get to have human beings guide you through coding problems, but because it lets you meet with organisers, coaches, bootcamp students, etc. etc.
+在学习早期，这是非常好的实践机会，不仅仅会有前辈带你解决编程问题，而且你还能认识组织人、老师、训练营学员等等。
 
-By going to meetups you can also build up your network in the industry and hear about potential job opportunities suited to your skill level.
+通过参加交流会，你也可以建立自己在该行业中的社交圈，了解到适合自己水平的工作机会。
 
-Some of my favourite beginner-friendly and inclusive meetups include:  
+下面是一些我最喜欢且对新手友好的交流会：
 
--   **[Codebar][2].**  This is an amazing weekly meetup with over 20 chapters worldwide, where you can work with coaches and really get stuck into your code (they also run virtual meetups for those who can’t make it to events).
--   **[Ada’s List][3].**  This organisation runs friendly monthly meetups in London alongside a virtual community online, offering women a great way to meet other women in tech (and not just coders).
--   **[24 Pull Requests][4].**  This annual event (also in London) is a lovely place to contribute to open source projects, and includes an introduction to Github – very handy for beginners.
--   **[Node Girls][5].**  This group organises meetups a couple of times a year in multiple locations, and is a great place for newbies to learn Javascript and Node.js.
+-   **[Codebar][2].**  该交流会每周举办一次，在全世界拥有20多个分会。在这里，你可以与老师一起工作，专心致志写代码（如果你不能到场，也可以参加他们的线上交流会。）
+-   **[Ada’s List][3].**  该组织每月在伦敦举办一次交流会，且有线上社区，他们为女性提供了很好的认识其他技术类女性（不仅仅是程序员）的机会。
+-   **[24 Pull Requests][4].**  该组织致力于开源项目，每年在伦敦举办一次交流会，还会介绍Github知识————对新手来说非常方便。
+-   **[Node Girls][5].**  该组织每年举办几次交流会，地点不固定，是新手学习 Javascript 和  Node.js 的好地方。
 
-## 🏃‍♀️ Next: Play the field.
+## 🏃‍♀️ 下一步：多多尝试。
 
-For ages, I thought the first thing I had to know about code was what language I wanted to learn. But not only is it ok not to know where to start, I actually think it’s a huge advantage.
+多年以来，我都认为学编程第一件事就是决定自己想使用的语言。但是不知道不仅没关系，我甚至觉得这还是一种巨大的优势。
 
-There are so many languages and topics out there, and while this can definitely be overwhelming as a beginner, you can also make the most of your naivete and just try it all out without getting too preoccupied with all the surrounding jargon (for instance, you don’t need to know the entire history of CSS to just play around with it) – which leads me to my favourite bit of advice from those initial 7 months...
+编程圈有太多的语言与主题了，它们对于新手来说就像洪水猛兽。你可以天真无邪地尝试所有语言，不必过分深究（举个例子，学习 CSS 的时候，你不必知道 CSS 的完整历史），现在就要讲到头 7 个月中我最喜欢的建议了......
 
-## 😈 Be bad.
+## 😈 学习表现差。
 
-When I first started I was so scared of how bad I was going to be. And one of my biggest revelations since then was:  _nobody cares._
+当我开始学习的时候，特别害怕自己表现很差。但那时我就发现了一个最大的真相：_没人关心你有多差_ 。
 
-Of course you’re going to be bad at it! You’ll be terrible. But, having a beginner status gives you license to suck at everything, so use it while the stakes are low. Enjoy being terrible – it’s fun, and freeing.
+当然你会很差！你会非常糟糕！但因为你是新手，所以有理由表现差。所以在风险尚低的时候利用好这一点吧。享受糟糕————因为这很有趣，也很自由。
 
-## 👩‍💻 Do the tutorials.
+## 👩‍💻 紧跟教程
 
-When you’re trying to level up from total beginner, tutorials are great because their format eliminates the problem of having to figure out what you want to learn and how you want to learn it (while you’re actually just trying to learn it).
+当你想从新手进阶时，教程很有帮助，因为教程的形式不需要你自己去搞懂想要学习的内容和学习的方式（当你只是尝试学习时）。
 
-Some of my favourites include:  
+以下是一些我最喜欢的教程：
 
--   Any of the  [**Codebar tutorials**][6]  (great for learning different languages from scratch)
--   Rachel Andrew’s  [**video tutorials**][7]  (awesome for learning CSS grid)
--   NodeGirls  [**workshop tutorials**][8]  (nicely paced walkthroughs that introduce you to Javascript & Node.js)
+- [**Codebar tutorials**][6] 上的所有内容（非常适合从头学习不同的语言） 
+-   Rachel Andrew 的  [**video tutorials**][7]  （非常适合学习网格布局）
+-   NodeGirls  [**workshop tutorials**][8] （一步步带你学会 Javascript 和 Node.js）
 
-When it comes to tutorials though, try and understand how you learn best and don’t get bogged down in one method or approach just because it’s the most popular or it was suggested to you.
+当谈到教程的时候，试着去理解你如何能学得最好，而不要仅仅因为它是最流行的或者是别人建议的方法就不知所措。
 
-**You might not know much about coding at this stage, but what you do know is how you learn best. So trust your own judgement here.**
+**在这个阶段，您可能不太了解编程，但是你知道如何才能学得最好。所以相信自己的判断吧。**
 
-Here are some different learning methods that have worked well for me:  
+以下是一些对我来说行之有效的方法：
 
--   **[freeCodeCamp curriculum][9].**  Byte sized exercises for different languages, great for when you need a break from heavy tutorials and want to play around with something a little lighter.
--   [**CSS Diner**][10]  &  **[Flexbox Froggy][11].**  Two fun games that are great for helping you get to grips with CSS selectors and practicing flexbox layouts.
--   **[Codepen][12].**  A coding playground where you can look at people’s projects alongside their code, letting you to connect the dots between the two.
--   **[Grasshopper][13].**  A sweet, beginner-friendly mobile app that introduces you to Javascript fundamentals.
--   **[Eloquent Javascript][14].**  This digital book pairs really well with freeCodeCamp exercises, giving a thorough and foundational understanding of Javascript.
+-   **[freeCodeCamp curriculum][9].** 内含不同语言的字节量级的练习。当你需要从繁重的教程中休息一下，想要尝试一些更轻量级的东西时，这是很好的练习平台。
+-   [**CSS Diner**][10]  &  **[Flexbox Froggy][11].** 这是两个有趣的游戏，对掌握 CSS 选择器和练习 flexbox 布局大有裨益。 
+-   **[Codepen][12].**  这是一个可以练习编程的平台，你可以看到人们的项目和源代码，从而将两者连接在一起。
+-   **[Grasshopper][13].**  这是一个对初学者友好的移动应用程序，为你介绍 Javascript 基础。
+-   **[Eloquent Javascript][14].** 配合使用该电子书与  freecodecamp 效果更佳，能让你充分深入理解 Javascript。
 
-## 👀 Be a copycat.
+## 👀 做个模仿者。
 
-Soon enough, you’ll feel like it’s time to build something a bit more substantial. And a really fun way to do this without feeling overwhelmed is by trying to replicate cool stuff you’ve already seen (you can  [**browse some cool looking website here**][15]). And as you do this:
+很快，你就会觉得是时候做一些更有意义的事情了。一个真正有趣的方法是尝试复制你看到的很酷的东西，这样不会感到不知所措。 （你可以  [**在这浏览炫酷的网站**][15]）。 当你浏览时：
 
-## 🤔 Know why.
+## 🤔 搞清楚为什么
 
-If you’re building your first ever website, before you even get to writing any code remember to ask yourself  _why_. Are you doing it to:  
+如果你在创建自己的第一个网站，在写第一行代码之前，记得要问自己：_为什么_ ，你做这件事是为了：
 
--   Just fill up your portfolio?
--   Learn a particular language?
--   Try out different hacks you’ve heard about?
+-   只是为了填充作品集？
+-   学习一门特定的语言？
+-   尝试听说过的不同方法？
 
-As a beginner, your main reason for building something is probably to learn by doing so your website or app is just a means to an end. It’s the byproduct, not the goal. Remember that.
+作为新手，你做网站的主要原因可能是学习，所以你的网站或应用程序只是学习的一部分，是学习的副产品，不是最终目标。记住这一点。
 
-Knowing this distinction is crucial to learning effectively, especially if you’re teaching yourself because as you’ll quickly learn: everyone’s got their own way of doing things. For instance if you’re building a website as a way to learn flexbox, then don’t let someone talk you into using Bootstrap.
+对于高效学习来说，知道这点区别非常重要，特别对于自学者来说。因为你马上就会知道：每个人都有自己的做事方式。举个例子，如果你想通过自建网站来学习 flexbox，不要听别人的话使用 Bootstrap。
 
-If someone tells you there’s a quicker way to achieve a goal they may be right, but they might not have clarity on what the real aim is.
+如果有人告诉你，实现这个目标有更快的方式，他们可能是对的，但是他们却可能不知道你真正的目标究竟是什么。
 
-## 🗣 So articulate it.
+## 🗣 大声说出自己的目标。
 
-First to yourself, then to others, and then make your own decision about how you want to go about it. This part might seem super obvious, but in the midst of soaking up all that information, it’s all too easy to forget.
+首先告诉自己，然后告诉别人，最后决定如何实现目标。这可能听起来十分容易，但在收集信息的过程中，很容易会忘记最初的目标。
 
-## 💆 Then chill.
+## 💆 平静下来。
 
-The great thing about self-directed learning is that you decide the whats and the hows right? Well, another great thing is that your deadlines are made up by you, and if you don’t meet them, nobody cares. So give yourself a break!
+自学最好的一点是你决定自己学什么，怎么学，对吗？好吧，还有一种好处就是你决定自己的提交期限，如果你逾期，没人关心。所以，放轻松吧！
 
-## ⚡️ Stay inspired.
+## ⚡️ 时刻充满斗志。
 
-This learning process is twofold: on one hand you need to spend time figuring out the technical minutiae in your code, and on the other you need to look around every now and again and see what other people are doing.
+这个学习过程是双重的：一方面，你需要花时间弄清楚代码中的技术细节，另一方面，你需要时不时地四处看看，看看其他人在做什么。
 
-Blending these two approaches gives a great holistic perspective on your learning, and helps mitigate the stress of getting caught up in all the details. Here are some tips I found useful in my first 7 months:
+将这两种方法结合在一起，可以为你的学习提供一个整体的视角，并帮助你减轻陷入所有细节的压力。以下是我在最初的 7 个月里发现的一些有用的建议:
 
-## 🎤 Go to conferences.
 
--   **[You Got This][16].** This is a UK-based event specifically for developers in the early stages of their careers. I went to it without ever having worked as a developer, felt totally comfortable there and left ready to get stuck into some code.
--   **[New Adventures][17].**  This Nottingham-based conference provides a less technical, more meta approach to tech and where it fits into the world these days. With varied speakers and far-reaching topics, it’s super inspiring.
+## 🎤 参加会议。
 
-## 📚 Read up.
+-   **[You Got This][16].**  这是一个在英国举办的会议，专门针对那些新手编程者。我在没做过工程师的情况下参加了这个会议，感觉非常舒适，并开始准备学习代码。
+-   **[New Adventures][17].**  这个在诺丁汉举办的会议以轻技术、多渠道（不确定）方式让人理解科技，以及科技如何在当今世界发挥作用。演讲者众多，话题广泛，十分鼓舞人心。
 
--   [**freeCodeCamp**][18]  (of course)
--   [**Codebar**][19]  (they run a great series of interviews with self-taught developers)
--   [**A List Apart**][20]  (publishes a huge range of topics from design to coding to career progression)
--   [**Smashing Magazine**][21]  (features articles, books, events, jobs – you name it)
+## 📚 多阅读。
 
-## 👣 Follow people.
+-   [**freeCodeCamp**][18]  （当然了）
+-   [**Codebar**][19] （该平台会访谈自学成才的工程师们）
+-   [**A List Apart**][20] （发布一系列主题，从设计到编程到职业发展）
+-   [**Smashing Magazine**][21] （专题文章、书籍、新闻、工作——应有尽有）
 
--   [**Mandy Michael**][22]  – has a lot of seriously cool stuff on Copeden.
--   [**Rachel Andrew**][23]  – gives loads of inspiring and practical talks, many of which you can find online.
--   [**Jen Simmons**][24]  – has a rich Youtube channel full of insights on design and developing.
--   [**Saron Yitbarek**][25]  – founder & CEO of  [**CodeNewbie**][26]  – total boss.  
-    
+## 👣 紧跟大牛。
 
-And that’s essentially it. Looking back over the last year, I’ve come to realise that these core lessons were what sustained me as I went from being a copywriter who had never looked at a single line of code, to working as a full time developer.
+-   [**Mandy Michael**][22]  – 在  Copeden 上发布很多炫酷的内容。
+-   [**Rachel Andrew**][23]  – 发表很多鼓舞人心的实用谈话，你可以在网上找到。
+-   [**Jen Simmons**][24]  – 在 Youtube 有一个频道，内容丰富，视频讲解对于设计与开发的见解。
+-   [**Saron Yitbarek**][25]  – [**CodeNewbie**][26] 的创始人和执行总裁 – 大老板（不确定）。
 
-So if you’re thinking about switching careers but are worried about committing to such a big change, try breaking it down into these smaller goals and challenges.
 
-If it can work for a woman who had absolutely no clue what she was doing at the time, it can surely work for you. So please: use these lessons learned, tailor them to your own learning style, and get after it.
+基本上就是这样。回顾过去的一年，我意识到正是这些核心课程支撑着我从一个从未读过一行代码的文案变成了一个全职开发人员。
+
+所以，如果你正在考虑转行，但又担心要做出这么大的改变，试着把它分解成更小的目标和挑战。
+
+如果这个方法对一个完全不知道自己在做什么的女性有效，那么对你也一定有效。所以请：利用这些经验教训，根据你自己的学习风格进行调整，然后努力学习。
 
 ![](https://lh3.googleusercontent.com/KfVMbmrEhlwPoXAeg53mgHOLeXylklhprf77qdkNe9WJI8LdpyUheCHArRc_4xUIDQnjtiZYJOIZErtgp6TDIAXeLavMXUvPzMobLjSWhLWmLfK055ydSVYyj-9DGhjhybiMznIn)
 

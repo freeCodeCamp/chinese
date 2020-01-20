@@ -1,6 +1,6 @@
 > * 原文地址：[The Developer New Year's Resolution Guide: How to Make 2020 Your Big Breakout Year](https://www.freecodecamp.org/news/developer-new-years-resolution-guide/)
 > * 原文作者：Quincy Larson
-> * 译者：
+> * 译者：boogiefish
 > * 校对者：
 
 ![The Developer New Year's Resolution Guide: How to Make 2020 Your Big Breakout Year](https://images.unsplash.com/photo-1523374228107-6e44bd2b524e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)

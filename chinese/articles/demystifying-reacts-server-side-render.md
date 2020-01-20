@@ -3,13 +3,13 @@
 > * 译者：Zhuotao Lian
 > * 校对者：
 
-![揭开 React  服务端渲染的神秘面纱](https://cdn-media-1.freecodecamp.org/images/1*Ecd_MVlJQoZ3bNn-xclFiA.jpeg)
+![React 服务端渲染解析与实践](https://cdn-media-1.freecodecamp.org/images/1*Ecd_MVlJQoZ3bNn-xclFiA.jpeg)
 
 让我们仔细研究下这个能让你用 **React** 构建**通用应用程序**的特性吧。
 
-服务端渲染（此后称 SSR）是**前端框架**在**后端系统**上运行时渲染标记的能力。
+服务端渲染（以下简称 SSR）是**前端框架**在**后端系统**上运行时渲染。
 
-能够在服务器和客户端上进行渲染的应用程序称为**通用应用程序**。
+如果一个应用程序在服务端和客户端都可以渲染，那么它被称作**通用应用程序**。
 
 ### 为何需要 SSR 呢? 
 
@@ -89,7 +89,7 @@ function htmlTemplate( reactDom ) {
 
 我们使用  `renderToString`  （第13到14行）来将起始 JSX 转化成要插入到 HTML 模板中的  `string`  。
 
-请注意，我们在客户端和服务端代码中使用了相同的 Babel 插件。因此  _JSX_  和  _ES Modules_  得以在  `server.js` 中工作。
+请注意，我们在客户端和服务端代码中使用了相同的 Babel 插件。因此  _JSX_  和  _ES Modules_  可以在  `server.js` 中运行。
 
 客户端上相应的函数目前是  `ReactDOM.hydrate`  。该函数将使用服务端渲染的 React 应用程序，并将附加事件处理程序。
 

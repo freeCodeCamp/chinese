@@ -4,12 +4,16 @@
 > * 校对者：
 
 ![How to prepare for a technical interview - tips and tricks to help you perform your best](https://images.unsplash.com/photo-1515973069-1e40b62f107f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
+如何准备技术面试 - 几招鲜吃遍天
 
 Ah, the coding interview.
+代码面试
 
 > "Dread it. Run from it. Destiny arrives all the same." - Thanos 2018
+恐惧它，逃避它，然命运的车轮终将滚滚而来。 灭霸 2018  
 
 Ok, maybe that's a little dramatic, but I don't know anyone who is thrilled about going through the interview process. The job search/interview process is exhausting at best and many other things at worst.
+这么说， 或许有些戏剧化的韵味，但曾几何时你是否也对面试心生恐惧。找工作投递简历的流程最多让你精疲力竭，其他的流程才是真正的考验。
 
 Many people study up on tricks and tactics for an interview (and I'll give you a few of those too), but most people don't think about their  _mindset_  going in to the interview.
 

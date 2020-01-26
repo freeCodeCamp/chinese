@@ -1,6 +1,6 @@
 > * 原文地址：[Everything you need to know about CSS Variables](https://www.freecodecamp.org/news/everything-you-need-to-know-about-css-variables-c74d922ea855/)
 > * 原文作者：[Emmanuel Ohans](https://www.freecodecamp.org/news/author/emmanuel/)
-> * 译者：
+> * 译者：LolaWei
 > * 校对者：
 
 ![Everything you need to know about CSS Variables](https://cdn-media-1.freecodecamp.org/images/1*Im5WsB6Y7CubjWRx9hH7Gg.png)

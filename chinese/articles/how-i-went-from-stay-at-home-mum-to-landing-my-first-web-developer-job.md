@@ -1,15 +1,21 @@
-> * 原文地址：[How I went from stay-at-home-mum to landing my first web developer job](https://www.freecodecamp.org/news/how-i-went-from-stay-at-home-mum-to-landing-my-first-web-developer-job/)
+> * 原文地址：[我是如何从全职妈妈开始我的第一份Web开发职位的](https://www.freecodecamp.org/news/how-i-went-from-stay-at-home-mum-to-landing-my-first-web-developer-job/)
 > * 原文作者：Phoebe Voong-Fadel
 > * 译者：luyc
 > * 校对者：
 
-![How I went from stay-at-home-mum to landing my first web developer job](https://www.freecodecamp.org/news/content/images/size/w2000/2019/10/phoebe2.jpg)
+![我是如何从全职妈妈开始我的第一份Web开发职位的](https://www.freecodecamp.org/news/content/images/size/w2000/2019/10/phoebe2.jpg)
 
 Two years ago I completed my first exercise on “Say Hello to HTML Elements” on  [freeCodeCamp][1]  (FCC). After two years of self-study, aged 36, I accepted my first job offer as a JavaScript Frontend Developer. I want to share some advice and tips and tell how I managed to land my first job.
 
+两年以前，我在 [freeCodeCamp][1] (FCC) 完成了 "向 HTML 元素问好"的第一次练习。经过两年的自学， 今年36岁了，我终于获得了我作为 JavaScript 前端开发人员的第一份工作。我想分享一下我是如何获得第一份工作的一些建议和技巧。
+
 This is a continuation of my  [first article][2]. I wrote this at the end of 2018 and I started freelancing as a Front-end Developer and studying part-time.
 
+这是[第一篇文章][2]的续篇。我在2018年底写了这篇文章，然后便开始以前端开发人员的身份从事自由职业和兼职学习。     
+
 To summarise, I’m not from a Computer Science/STEM background. I didn’t go to a coding bootcamp, and I’m self-taught. I’m a stay-at-home mum who learned to code whenever I could. I used self-paced learning tools like FCC. As my children got older, I progressed to learning programming part-time.
+
+总而言之，我没有计算机科学/STEM 的背景。我并没有参加编码训练营，而是完全靠自学的。我虽然是一名全职妈妈，但是我会尽可能的学习编码。我使用了像 FCC 这样自定进度的学习工具。随着我的孩子逐渐长大，我开始兼职学习编程。
 
 The reason for this article is to inspire others from non-traditional backgrounds to learn how to code. That it is possible to transition into the tech industry. I want to share my experience and perspective. I also want to emphasise that it wasn’t all smooth sailing. There were ups and downs, doubts and dark times.
 

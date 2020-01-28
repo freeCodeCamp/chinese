@@ -16,16 +16,22 @@ Ok, maybe that's a little dramatic, but I don't know anyone who is thrilled abou
 这么说， 或许有些戏剧化的韵味，但曾几何时你是否也对面试心生恐惧。找工作投递简历的流程最多让你精疲力竭，其他的流程才是真正的考验。
 
 Many people study up on tricks and tactics for an interview (and I'll give you a few of those too), but most people don't think about their  _mindset_  going in to the interview.
+许多人致力于钻研面试策略与技巧（当然，我也会提供一些技巧与策略），但是往往只有小部分人关注他们的面试_心态_。
 
 Your mindset sets the tone of how you're going to view and shape your situation. Go in with the right mindset and you'll be able to understand and navigate anything that is thrown at you. Enter with a scattered or timid mind and you'll find yourself rocked about and battered.
+你的心态决定了你在面试中的言行举止。积极正确的心态助你在面试丛林中披荆斩棘，消极怯弱的心态使得你在面试中显得畏首畏尾。
 
 ## You are also the interviewer
+## 你是面试者，也是面试官
 
 One thing most people often forget is  _you are also the interviewer._
+许多人在面试中常常忘记，_你同样也是面试官._
 
 Yes, are you being interviewed at this company, but you are also interviewing  _the company_  to see if  _they_  are a good fit  _for you._
+当你在被一家公司面试的时候，你同样也在面试_这家公司_,考察_这家公司_是否_配的上你._
 
 What are this company's values? What is their work ethic like? What do the people value?
+这家公司拥有何种价值观？公司是何种企业文化？公司的人们看重什么？
 
 Passing the interview is important, but do you want to work at this company if you do pass?
 

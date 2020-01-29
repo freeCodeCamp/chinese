@@ -34,12 +34,16 @@ What are this company's values? What is their work ethic like? What do the peopl
 这家公司拥有何种价值观？公司是何种企业文化？公司的人们看重什么？
 
 Passing the interview is important, but do you want to work at this company if you do pass?
+通过当前的工作面试固然重要，但你如何知道这是一家适合你的公司呢。
 
 Sometimes we just need a job—any job—and so I don't want to minimize just getting the job. But if you can, take a step back and think how this job will impact your career in the long-term. Saying yes to a job is saying no to a dozen others—you're paying a large opportunity cost by saying yes.
+有些人对我说，我只想要一份工作，任何工作都可以，我为了它可以付出所有。但我想说的是，年轻人，如果你能从长远的职业发展眼光来看待这份工作。取得一份工作的同时，也意味着拒绝其他潜在的工作机会。
 
 So that's the first thing to remember: this isn't a one-way power dynamic. It may feel like it at times, but you have some control here, and you have options. This is empowering.
+至此，望你记住，当前的工作机会不是人生的单向通道。你可以有更多选择，你会遇见得更多的机会。它面试你，你选择它。
 
 ## Types of interviews
+## 面试种类
 
 Ok, so we are  _also_  evaluating the company based on the people we interact with in the interview process, so what do we do with that information?
 

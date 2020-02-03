@@ -1,56 +1,56 @@
 > * 原文地址：[Demystifying server-side rendering in React](https://www.freecodecamp.org/news/demystifying-reacts-server-side-render-de335d408fe4/)
 > * 原文作者：Alex Moldovan
-> * 译者：
+> * 译者：Zhuotao Lian
 > * 校对者：
 
-![Demystifying server-side rendering in React](https://cdn-media-1.freecodecamp.org/images/1*Ecd_MVlJQoZ3bNn-xclFiA.jpeg)
+![React 服务端渲染解析与实践](https://cdn-media-1.freecodecamp.org/images/1*Ecd_MVlJQoZ3bNn-xclFiA.jpeg)
 
-Let’s have a closer look at the feature that allows you to build  **universal**  **applications**  with  **React**.
+让我们仔细研究下这个能让你用 **React** 构建**通用应用程序**的特性吧。
 
-Server-Side Rendering — SSR from here on — is the ability of a  **front-end framework**  to render markup while running on a  **back-end system**.
+服务端渲染（以下简称 SSR）是**前端框架**在**后端系统**上运行时渲染。
 
-Applications that have the ability to render both on the server and on the client are called  **universal apps**.
+如果一个应用程序在服务端和客户端都可以渲染，那么它被称作**通用应用程序**。
 
-### Why bother?
+### 为何需要 SSR 呢? 
 
-In order to understand why SSR is needed, we need to understand the evolution of web applications in the past 10 years.
+我们应该先了解 Web 应用程序在过去10年的发展历程，这有助于我们理解这个问题。
 
-This is tightly coupled with the rise of the  [_Single Page Application_][1] _—_ SPA from here on_._ SPAs offer great advantages in speed and UX over traditional server-rendered apps.
+这与 [单页应用][1]（此后称 SPA）的兴起密切相关。与传统的服务端渲染应用相比，SPA 在速度和用户体验方面具有巨大优势。
 
-But there is a catch. The initial server request is generally returning an  **empty**  **HTML**  file with a bunch of CSS and JavaScript (JS) links. Then the external files need to be fetched in order to render relevant markup.
+但问题随之而来。SPA 的初始服务端请求，通常返回带有一组 CSS 和 JavaScript（JS）链接的**空** **HTML** 文件。 然后需要提取外部文件以呈现相关标记。
 
-This means that the user will have to wait longer for the  **initial render**. This also means that crawlers may interpret your page as empty.
+这意味着用户将等待更长的时间才能进行**初始渲染**。这也意味着爬虫可能会将您的页面解析为空白。
 
-So the idea is to render your app on the server initially, then to leverage the capabilities of SPAs on the client.
+因此，其解决方法是首先在服务端渲染你的应用，然后在客户端使用 SPA。
 
-**SSR + SPA = Universal App\***
+**SSR + SPA = 通用应用**
 
-\*You will find the term  _isomorphic app_  in some articles — it’s the same thing.
+你可能会在其他文章中看到  _同构应用 ( isomorphic app )_  这个词，这跟 _通用应用 ( universal app )_ 是一回事。
 
-Now the user does not have to wait for your JS to load and gets a  **fully**  **rendered**  **HTML**  as soon as the initial request returns a response.
+现在，用户不必等待 JS 加载，并能在初始请求返回响应后，立即获得**完全渲染的** **HTML**。
 
-Imagine the huge improvement for users navigating on slow 3G networks. Rather than waiting for over 20s for the website to load, you get content on their screen almost instantly.
+试想一下，这能给使用 3G 网络的用户带来多么大的提升。你几乎可以立即在屏幕上获取内容，而不必浪费20多秒等它加载完成。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*v0wyppYBPaeqoeKRplinvQ.png)
 
-And now, all the requests that are made to your server return fully rendered HTML. Great news for your SEO department!
+现在，所有发至服务器的请求都将返回完全渲染后的 HTML。这对 SEO 部门来说是个好消息！
 
-[Crawlers][2]  will now see your website as any other static site on the web and will  **index**  all the content you render on the server.
+[爬虫][2] 会像**索引**网络上的其他静态网站那样，**索引**你在服务器上呈现的所有内容。
 
-So to recap, the two main benefits we get from SSR are:
+综上所述，SSR 有两个主要优点：
 
--   Faster times for the initial page render
--   Fully indexable HTML pages
+-   更快的初始页面渲染
+-   完全可索引的 HTML 页面
 
-## Understanding SSR — one step at a time
+## 逐步理解 SSR
 
-Let’s take an iterative approach to build our complete SSR example. We start with React’s API for server rendering and we’ll add something to the mix at each step.
+让我们采取迭代的方法来构建完整的 SSR 示例。 我们从用于服务端渲染的 React API 开始，逐步添加内容。
 
-You can follow  [this repository][3]  and the tags defined there for each step.
+您可以 follow [这个仓库] [3]并查看为每个构建步骤定义的标签。
 
-### Basic Setup
+### 基本设置
 
-First things first. In order to use SSR, we need a server! We’ll use a simple  _Express_  app that will render our React app.
+首先，为了使用 SSR，我们需要一台服务器！我们将使用一个简单的 _Express_ 应用来渲染我们的 React 应用程序。
 
 ```javascript
 import express from "express";
@@ -83,15 +83,15 @@ function htmlTemplate( reactDom ) {
 `</span></span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
 ```
 
-We need to tell Express to serve our static files from our output folder — line 10.
+在第十行，我们指定了 Express 要服务的位于输出文件夹中的静态文件。
 
-We create a route that handles all non-static incoming requests. This route will respond with the rendered HTML.
+我们创建了一个处理所有非静态请求的路由。 该路由将返回渲染完毕的 HTML。
 
-We use  `renderToString`  — lines 13–14 — to convert our starting JSX into a  `string`  that we insert in the HTML template.
+我们使用  `renderToString`  （第13到14行）来将起始 JSX 转化成要插入到 HTML 模板中的  `string`  。
 
-As a note, we’re using the same Babel plugins for the client code and for the server code. So  _JSX_  and  _ES Modules_  work inside  `server.js`.
+请注意，我们在客户端和服务端代码中使用了相同的 Babel 插件。因此  _JSX_  和  _ES Modules_  可以在  `server.js` 中运行。
 
-The corresponding method on the client is now  `ReactDOM.hydrate`  . This function will use the server-rendered React app and will attach event handlers.
+客户端上相应的函数目前是  `ReactDOM.hydrate`  。该函数将使用服务端渲染的 React 应用程序，并将附加事件处理程序。
 
 ```javascript
 import ReactDOM from "react-dom";
@@ -99,13 +99,13 @@ import Layout from "./components/Layout";
 
 ```
 
-To see the full example, check out the  `basic`  tag in the  [repository][4].
+你可以查看 [仓库][4] 中的 `basic` 标签来浏览完整示例。
 
-That’s it! You just created your first  **server-rendered**  React app!
+搞定了！你刚刚创建了第一个 **服务端渲染的**  React 应用!
 
-#### React Router
+#### React 路由
 
-We have to be honest here, the app doesn’t do much. So let’s add a few routes and see how we handle the server part.
+坦白讲，该应用的功能还不够丰富。 所以让我们添加一些路由，来看看如何处理服务端部分。
 
 ```javascript
 import { Link, Switch, Route } from "react-router-dom";
@@ -133,9 +133,9 @@ export default class Layout extends React.Component {
 <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span>
 ```
 
-The  `Layout`  component now renders multiple routes on the client.
+现在 `Layout` 组件会在服务端渲染多个路由。 
 
-We need to mimic the Router setup on the server. Below you can see the main changes that should be done.
+我们需要模拟服务器端的路由。主要的更改如下所示。
 
 ```javascript
 /* ... /
@@ -154,31 +154,32 @@ res<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padd
 
 ```
 
-_On the server, we need to wrap our React application in the  `StaticRouter`  component and provide the  `location`._
+_在服务端，我们需要将 React 应用程序封装进 `StaticRouter` 组件中并为其提供 `location`。_
 
-_As a side note, the  `context`  is used for tracking potential redirects while rendering the React DOM. This needs to be handled with a  [3XX response][5]  from the server._
+_附带说明一下， `context` 用于在渲染 React DOM 时追踪潜在的重定向。这需要通过服务端的 [3XX 响应][5] 来处理。_
 
-_The full example can be seen on the  `router`  tag in the  [same repository][6]._
+_你可以查看 [相同仓库][6] 中的 `router` 标签来浏览有关路由的完整示例。_
 
 #### _Redux_
 
-_Now that we have routing capabilities, let’s integrate  [Redux][7]._
+_现在我们已经具备了路由功能，让我们来整合 [Redux][7]。_
 
-_In the simple scenario, we need Redux to handle state management on the client. But what if we need to render parts of the DOM based on that state? It makes sense to initialize Redux on the server._
+_在简单的情况下，我们需要 Redux 来处理客户端的状态管理。但如果我们需要基于状态来渲染部分部分 DOM 呢？这就需要在服务端初始化 Rudux 了。_
 
-_If your app is  **dispatching**  **actions**  on the  **server**, it needs to  **capture**  the state and send it over the wire together with the HTML. On the client, we feed that initial state into Redux._
+_如果你的应用在 **服务端** 上 **调度操作** ，那就需要 **捕获** 该状态并将其和 HTML 一同发送。在客户端，我们将初始状态输入 Redux。_
 
-_Let’s have a look at the server first:_
+_让我们首先来看服务端：_
 
-_`/`_ ``... _/
+```javascript
+/* ... /
 import { Provider as ReduxProvider } from "react-redux";
-/_ ... */
+/ ... */
 
 app.get( "/*", ( req, res ) => {
     const context = { };
     const store = createStore( );
 
-```
+
 store<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(221, 74, 104);">dispatch</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span> <span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(221, 74, 104);">initializeSession</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
 
 <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">const</span> jsx <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>
@@ -194,17 +195,17 @@ store<span class="token punctuation" style="box-sizing: inherit; margin: 0px; pa
 
 res<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(221, 74, 104);">writeHead</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">200</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">"Content-Type"</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">"text/html"</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
 res<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(221, 74, 104);">end</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span> <span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(221, 74, 104);">htmlTemplate</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span> reactDom<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> reduxState <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
-```
+
 
 } );
 
 app.listen( 2048 );
 
 function htmlTemplate( reactDom, reduxState ) {
-    return `
+    return 
         /* ... */
 
-```
+
     &lt;div id="app"&gt;</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span> reactDom <span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">&lt;/div&gt;
     &lt;script&gt;
         window.REDUX_DATA = </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span> <span class="token constant" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">JSON</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(221, 74, 104);">stringify</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span> reduxState <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span> <span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">
@@ -212,14 +213,14 @@ function htmlTemplate( reactDom, reduxState ) {
     &lt;script src="./app.bundle.js"&gt;&lt;/script&gt;
 
     /* ... */
-`</span></span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
-``` ``
+</span></span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
 
-`}`
 
-It looks ugly, but we need to send the full JSON state together with our HTML.
+}
+```
+它看上去一点也不美观，但我们需要将完整的 JSON 状态和 HTML 一起发送。
 
-Then we look at the client:
+接下来看看客户端：
 
 ```javascript
 import React from "react";
@@ -239,25 +240,25 @@ const jsx = (
 
 ```
 
-Notice that we call  `createStore`  twice, first on the server, then on the client. However, on the client, we initialize the state with whatever state was saved on the server. This process is similar to the DOM hydration.
+请注意，我们调用了两次 `createStore` ，首先在服务端，然后在客户端。但是，我们使用保存在服务端的任一状态来初始化客户端。这个过程就像 DOM hydration。
 
-The full example can be seen on the  `redux`  tag in the  [same repository][8].
+你可以查看 [相同仓库][8] 的 `redux` 标签来浏览完整示例。
 
-#### Fetch Data
+#### 获取数据
 
-The final piece of the puzzle is loading data. This is where it gets a bit trickier. Let’s say we have an API serving JSON data.
+最后一个难题就是数据的加载。这有点棘手。假设我们有一个提供 JSON 数据的API。T
 
-In our codebase, I fetch all the events from the 2018 Formula 1 season  [from a public API][9]. Let’s say we want to display all the events on the  **Home**  page.
+在我们的代码库中，我 [利用一个公共的 API][9] 获取了2018年 Formula 1赛季的所有事件。假设我们要在 **主页** 显示所有事件。
 
-We can call our API only from the client after the React app is mounted and everything is rendered. But this will have a bad impact on UX, potentially showing a spinner or a loader before the user sees relevant content.
+在 React 应用挂载完成并渲染完所有内容后，我们能从客户端调用 API。但这会导致糟糕的用户体验，可能需要在用户看到相关内容之前展示一个 spinner 或者 loader。
 
-We already have Redux, as a way of storing data on the server and sending it over to the client.
+我们已经有了 Redux 来在服务端存储数据以及发送数据至客户端。
 
-What if we make our API calls on the server, store the results in Redux, and then render the full HTML with the relevant data for the client?
+如果我们在服务端调用 API，将结果存在 Redux 中，然后用相关数据来渲染完整的 HTML 给客户端，会如何呢？
 
-But how can we know which calls need to be made?
+但我们怎么知道应该调用哪些呢？
 
-First, we need a different way of declaring routes. So we switch to the so-called routes config file.
+首先，我们需要以一种不同的方式来声明路由。因此我们来看所谓的路由配置文件。
 
 ```javascript
 export default [
@@ -284,7 +285,7 @@ export default [
 ];
 ```
 
-And we statically declare the data requirements on each component.
+然后我们静态声明每个组件的 data requirements。 
 
 ```javascript
 /* ... */
@@ -302,13 +303,14 @@ Home.serverFetch = fetchData; // static declaration of data requirements
 
 ```
 
-_Keep in mind that  `serverFetch`  is made up, you can use whatever sounds better for you._
+_请注意，你可以随意命名 `serverFetch` 。_
 
-_As a note here,  `fetchData`  is a  [Redux thunk action][10], returning a Promise when dispatched._
+_附带说明一下， `fetchData` 是一个 [Redux thunk action][10]，它返回一个 Promise。_
 
-_On the server, we can use a special function from  `react-router`, called  `matchRoute`._
+_在服务端，我们使用一个名为 `matchRoute` 的特别的函数，它来自 `react-router` 。_
 
-_`/`_ `... */
+```javascript
+/* ... */
 import { StaticRouter, matchPath } from "react-router-dom";
 import routes from "./routes";
 
@@ -317,7 +319,6 @@ import routes from "./routes";
 app.get( "/*", ( req, res ) => {
     /* ... */
 
-```
 <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">const</span> dataRequirements <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span>
     routes
         <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(221, 74, 104);">filter</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span> <span class="token parameter" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline;">route</span> <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(154, 110, 58);">=&gt;</span> <span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(221, 74, 104);">matchPath</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span> req<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>url<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> route <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span> <span class="token comment" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(112, 128, 144);">// filter matching paths</span>
@@ -340,29 +341,30 @@ Promise<span class="token punctuation" style="box-sizing: inherit; margin: 0px; 
     res<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(221, 74, 104);">writeHead</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">200</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">"Content-Type"</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">"text/html"</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
     res<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(221, 74, 104);">end</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span> <span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(221, 74, 104);">htmlTemplate</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span> reactDom<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> reduxState <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
 <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
+
+
+} );
+
+/* ... */
 ```
 
-} );` 
+这样，我们就获得了当 React 在当前 URL 下被渲染成字符串时所需装载的组件列表。
 
-`/* ... */`
+我们收集了  _data requirements_  并等待所有调用的 API 的返回值。最终，我们恢复服务端渲染，这时 Redux 中已经得到了数据。
 
-With this, we get a list of components that will be mounted when React is rendered to string on the current URL.
+可以查看 [相同仓库][11] 的 `fetch-data` 标签来浏览完整示例。
 
-We gather the  _data requirements_  and we wait for all the API calls to return. Finally, we resume the server render, but with data already available in Redux.
+你可能会注意到，这带来了性能损失，因为直到数据被获取我们才进行渲染。
 
-The full example can be seen on the  `fetch-data`  tag in the  [same repository][11].
-
-You probably notice that this comes with a performance penalty, because we’re delaying the render until the data is fetched.
-
-This is where you start comparing metrics and do your best to understand which calls are essential and which aren’t. For example, fetching products for an e-commerce app might be crucial, but prices and sidebar filters can be lazy loaded.
+这时就需要你进行权衡了，你需要尽可能弄清楚哪些调用是必不可少的。举例来说，对于一个电商应用，获取产品列表是至关重要的，需要尽快加载，但是价格以及侧边栏选择器可以被延迟加载。
 
 #### Helmet
 
-As a bonus, let’s look at SEO. While working with React, you may want to set different values in your  `<he`ad> tag. For example, you may want to se_t the_  t_itle, met_a  _tags, key_words, and so on.
+作为 SSR 的奖励，让我们来看看 SEO。在使用 React 时，你可能想在  `<head>` 标签中设置不同的值，例如 _title_ , _meta tags_ , _key words_ 等等。  
 
-Keep in mind that the  `<he`ad> tag is normally not part of your React app!
+请注意， `<head>` 标签通常不属于 React 应用。 
 
-[react-helmet][12]  has you covered in this scenario. And it has great support for SSR.
+这种情况下，[react-helmet][12] 提供了相应的解决方案，并对 SSR 有着很好的支持。
 
 ```javascript
 import React from "react";
@@ -379,9 +381,9 @@ const Contact = () => (
 
 ```
 
-You just add your  `head`  data anywhere in your component tree. This gives you support for changing values outside the mounted React app on the client.
+你只需要将 `head` 数据添加到组件树的任意位置。这使得你可以在客户端更改已挂载的 React 应用以外的值。
 
-And now we add the support for SSR:
+现在，我们添加了对 SSR 的支持：
 
 ```javascript
 /* ... /
@@ -417,23 +419,23 @@ function htmlTemplate( reactDom, reduxState, helmetData ) {
 `</span></span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
 ```
 
-And now we have a fully functional React SSR example!
+现在，我们得到了一个功能完备的 React SSR 示例！
 
-We started from a simple render of HTML in the context of an  _Express_  app. We gradually added routing, state management, and data fetching. Finally, we handled changes outside the scope of the React application.
+我们从使用 _Express_ 应用进行简单的 HTML 渲染开始。逐步增加路由、状态管理和数据获取。最终，我们处理了 React 应用以外的更改。 
 
-The final codebase is on  `master`  on  [the same repository][13]  that was mentioned before.
+最终的代码库位于前面提到的 [相同仓库][13] 的 `master` 分支上。 
 
-#### Conclusion
+#### 总结
 
-As you’ve seen, SSR is not a big deal, but it can get complex. And it’s much easier to grasp if you build your needs step by step.
+如你所见，SSR 算不上多大的难题，但它可以变得复杂。如果你一步步构建自己的需求，那会简单很多。
 
-Is it worth adding SSR to your application? As always, it depends. It’s a must if your website is public and accessible to hundreds of thousands of users. But if you’re building a tool/dashboard-like application it might not be worth the effort.
+在应用中添加 SSR 有必要吗？ 和往常一样，这需要结合实际情况。如果你的网站是公开的，并且可以供成千上万的用户访问，那答案就是必须的。但如果你要构建一个工具/仪表板之类的应用，那就没什么必要了。
 
-However, leveraging the power of universal apps is a step forward for the front-end community.
+无论如何，利用好通用应用，是前端社区的一大进步。
 
-Do you use a similar approach for SSR? Or you think I missed something? Drop me a message below or on  [Twitter][14].
+你用过类似 SSR 的方法吗？或者你是否认为这篇文章存在纰漏？在 [Twitter][14] 上给我留言吧！
 
-If you found this article useful, help me share it with the community!
+如果你认为这篇文章对你有帮助，请在社区中分享它！
 
   
 

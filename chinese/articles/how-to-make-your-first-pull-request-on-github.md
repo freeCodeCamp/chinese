@@ -1,4 +1,4 @@
-> * 原文地址：[How to make your first pull request on GitHub](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/)
+> * 原文地址：[How to make your first pull request on GitHub 如何在 GitHub 提交第一个 pull request](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/)
 > * 原文作者：M.V.Thanoshan
 > * 译者：
 > * 校对者：

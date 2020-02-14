@@ -18,42 +18,62 @@ To summarise, I’m not from a Computer Science/STEM background. I didn’t go t
 总而言之，我没有计算机科学/STEM 的背景。我并没有参加编码训练营，而是完全靠自学的。我虽然是一名全职妈妈，但是我会尽可能的学习编码。我使用了像 FCC 这样自定进度的学习工具。随着我的孩子逐渐长大，我开始兼职学习编程。
 
 The reason for this article is to inspire others from non-traditional backgrounds to learn how to code. That it is possible to transition into the tech industry. I want to share my experience and perspective. I also want to emphasise that it wasn’t all smooth sailing. There were ups and downs, doubts and dark times.
+本文的目的是启发那些没有专业背景的人学习编码。完全有可能进入到科技行业。我想分享一些我的经验和观点，但我想强调一点，这一路并不是一帆风顺的。跌宕起伏，有迷茫，也有黑暗时刻。
 
 I will go through my coding journey first. Then I will talk about the resources I used to learn how to code. Finally, I'll share tips on how I landed my first web developer job.
+首先我将回顾我的编程之旅，然后我将说一下我用来学习编码的资源。最后，我将分享一些关于我找到我的第一份开发者工作的技巧。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/10/undraw_feeling_blue_4b7q.png)
 
 ### January - March 2019: Doubt
+### 2019年1月至3月：迷茫
 
 As I had two young children, I thought freelancing was a great way to earn extra money while I was studying. I had already started my WordPress freelance portfolio, but I also joined freelancing platforms like Fiverr and Upwork.
+由于我有两个孩子，所以我认为自由职业是学习期间赚取额外收入的好方法。我已经在 WordPress 开始了我的自由职业，但同时我也加入了其他自由职业平台，像 Fiverr 和 Upwork。
 
 I know that these platforms are great for some freelancers, but for me this was a mistake. I couldn’t find any work despite being labelled as “Uprising talent”. I didn’t have ratings/reviews, as I was new. A lot of clients wanted freelancers with experience on their respective platforms. But I couldn’t land the work to get experience/ratings. It was a vicious circle.
+我知道这些平台队友某些自由职业者来说很棒，但对我来说，这是一个错误。尽管我被称为“起义人才”，但我找不到任何工作。由于我是新手，所以没有评分和评论。许多客户希望在平台上找到有经验的自由职业者。但是我无法获得这份工作来获得经验和评价。这是一个恶性循环。
 
 There were some clients where I “qualified” to put in a proposal. I would spend hours researching and writing them. I never heard back. In some cases, there were 50+ proposals submitted for a given project. There were also many freelancers who were willing to work for under minimum wage (by UK standards). I couldn’t compete on price.
+有些是我有“资格”提出方案的客户。我将会花几个小时研究和编写它们。但我从未收到回音。在某些情况下，针对一个项目提交了50多个提案。还有许多自由职业者愿意以最低工资工作（按照英国的标准）。我不可能在价格上竞争。
 
 I started to question my worth and lowered my hourly rate. I thought I just needed to get  _one_  rating from a client. The final straw for me was when a company invited me to assist them in some "market research" and to answer a questionnaire. It ended up being a scheme to get freelancers to write fake reviews on Amazon for a product. In exchange, I would get a five star rating.
 
+我开始质疑自己的身价，并降低了每小时工资。我以为我只需要从客户那里获得A评级就可以了。压倒我的最后一根稻草是一家公司邀请我协助他们进行一些“市场研究”并回答一份调查表。最终，这是一场阴谋，他们让自由职业者在亚马逊上为产品撰写假评论。作为交换，我将获得五星好评。
+
 I declined and shut down all my freelancing accounts. My confidence was knocked. I had serious doubts about my abilities. I started to become negative. I read in forums about how other aspiring web developers couldn’t get interviews/find jobs. Subconsciously, I sought out these stories to justify and feed my negativity.
+我灰心丧气，关掉了我所有自由职业平台的账号。我的信心被打破了。我严重怀疑自己的能力。我开始变得消极。我在论坛上阅读了其他有抱负的Web开发者无法获得面试和找到工作的帖子。在潜意识里，我寻找了这些故事来合理化和弥补我的消极情绪。
 
 Worse thing was, I stopped coding and lost sight of what I was trying to achieve.
+最糟糕的是，我停止了编码，我看不到自己想要实现的目标。  
 
 ### April - July 2019: Stepping back and reassessing my life
+### 2019年4月至7月：退一步重新评估我的生活
 
 My husband, who is also my mentor, asked me, “what would make you happy again?”
+我的丈夫，也是我的导师，问我：“什么才能让你再次开心？”
 
 My response was “learning programming and JavaScript”. So I did what I loved and continued with the FCC curriculum. I also worked on my WordPress freelance business on the side.
+我的回答是 “学习编程和 JavaScript ”。因此，我做了我喜欢的事情，并继续上 FCC 的课程。 我也在一边从事我的 WordPress 自由职业业务。
 
 In May, an old colleague wanted to hire me to work remotely for a three month part-time contract. It wasn’t tech related but I needed the income so I agreed. It was a great distraction and helped my confidence.
+今年5月，一位老同事想雇佣我为期三个月的远程工作。这与技术无关，但我需要收入，所以我同意了。这极大刺激了我，并帮助我找回了信心。
 
 The routine of studying and working lifted my spirits. It took months, but I started feeling positive and motivated again.
+日常的学习和工作使我精神振奋。花了几个月时间，但我开始感到积极向上并再次受到激励。
 
 ### August 2019: #100DaysOfCode challenge
+### 2019年8月：每天编码挑战
 
 I was looking for something to keep me focussed and consistent during my coding journey. I went on Twitter for inspiration and found the  [#100DaysOfCode challenge][3]. You commit to coding for at least one hour a day for 100 days.
+在编码过程中，我一直在寻找可以使我保持专注和持续性的东西。我在 Twitter 上寻求灵感，发现了 [#100天编程挑战][3]。你承诺每天编码至少一小时，持续100天。
 
 I committed to the challenge and I was now accountable to the Twitter community. My goal was to complete all FCC certifications and become a Full Stack Developer. I've completed five out of six certifications so far! It was one of the best decisions I’ve made during my coding journey. I started following other aspiring developers. I watched other people succeed and share their experiences, and support others who were finding it difficult. It was inspiring and kept me motivated.
 
+我发起了我的挑战，并立即在 Twitter 社区做了承诺。我的目标是完成所有 FCC 认证并成为一名全栈开发工程师。目前为止，我已经完成了六分之五的认证！这是我在编码过程中做出的最佳决定之一。 我开始关注其他有抱负的开发者。 我看到了其他人成功了并分享他们的经验，同时支持觉得挑战很难的其他人。 这非常鼓舞人心，并使我充满了动力。
+
 Instead of using online freelancing platforms, I approached local businesses instead. I got some WordPress side gigs and started getting more referrals. This was a great boost to my confidence.
+与使用在线自由职业平台不同的是，我去了本地企业。 我得到了一些 WordPress 附带的gigs(有待查证)，并开始获得了更多推荐。 这极大地增强了我的自信心。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/10/undraw_resume_1hqp.png)
 

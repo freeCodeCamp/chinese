@@ -5,28 +5,28 @@
 
 ![How to Build a Speech to Emotion Converter with the Web Speech API and Node.js](https://images.unsplash.com/photo-1542394731-170c9e6d914e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Have you ever wondered - can we make Node.js check to see if what we say is positive or negative?
+你有没有构思过用 Node.js 来检查我们发的语音内容是积极的还是消极的？
 
-I got a newsletter which discussed tone detection. The program can check what we write and then tells us if it might be seen as aggressive, confident, or a variety of other feelings.
+我之前收到一封讨论音调检测的新闻邮件，说是可以用程序检查我们写的内容是什么，然后告诉我们这个内容给人的感觉是积极进取的，自信的还是其他什么感觉。
 
-That got me wondering how could I build a simplified version using the browser and Node.js that would be initiated by speaking.
+我就想有没有可能使用浏览器和 Node.js 来构建一个简化版本呢。
 
-As a result, I ended up with a small project that detects if what was spoken has positive, neutral, or negative valence.
+所以我就开发了一个小项目来检测语音内容是积极的、中性的还是消极的。
 
-Here's how I did it.
+以下是我的方法。
 
-## The plan
+## 步骤
 
 ![](https://www.freecodecamp.org/news/content/images/2020/01/Screenshot-2020-01-27-at-16.13.10.png)
 
-Voice detection -> Voice to text -> Text scoring -> Result
+语音检测 -> 语音转文字 -> 文字测评 -> 结果输出
 
-When you're starting a project, you should sketch out - at least vaguely - your goal and how to reach it. Before starting my search I noted down that I needed:
+在你开始构建一个项目时，你应该（至少模糊地）勾勒出你的目标以及构思如何实现。在开始搜索之前，我罗列出需要做的事情：
 
--   Voice recording
--   A way to translate the recording to text
--   A way to give the text a score
--   A way to show the result to the user that just spoke
+- 记录语音
+- 将语音转换成为文字
+- 给文字内容打分
+- 将结果反馈给说话人
 
 After researching for a while, I discovered that the voice recording and translation to text parts were already done by the  [Web Speech API][1]  that's available in Google Chrome. It has exactly what we need in the  [SpeechRecognition][2]  interface.
 

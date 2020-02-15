@@ -1,6 +1,6 @@
-> * 原文地址：[How to Build a Speech to Emotion Converter with the Web Speech API and Node.js 教你用 Web Speech API 和 Node.js 将语音转换成 emoji](https://www.freecodecamp.org/news/speech-to-sentiment-with-chrome-and-nodejs/)
+> * 原文地址：[How to Build a Speech to Emotion Converter with the Web Speech API and Node.js 用 Web Speech API 和 Node.js 将语音转换成 emoji](https://www.freecodecamp.org/news/speech-to-sentiment-with-chrome-and-nodejs/)
 > * 原文作者：Diogo Spínola
-> * 译者：
+> * 译者：miyaliu666
 > * 校对者：
 
 ![How to Build a Speech to Emotion Converter with the Web Speech API and Node.js](https://images.unsplash.com/photo-1542394731-170c9e6d914e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)

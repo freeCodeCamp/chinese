@@ -1,86 +1,86 @@
 > * 原文地址：[Progressive Web Apps 101: the What, Why and How](https://www.freecodecamp.org/news/progressive-web-apps-101-the-what-why-and-how-4aa5e9065ac2/)
 > * 原文作者：Shruti Kapoor
-> * 译者：
+> * 译者：azzinoths0905
 > * 校对者：
 
 
 
 ![Progressive Web Apps 101: the What, Why and How](https://cdn-media-1.freecodecamp.org/images/1*2tyNWs0uYC0q-gwyWj8BTw.jpeg)
 
-#### What is a Progressive Web App? Why do we need one? How can we build one?
+#### 什么是渐进式Web应用(PWA)？为什么我们需要PWA？我们应该如何搭建一个PWA应用？
 
-Have you ever seen an “Add to Home Screen” banner, like above, while browsing a website? When you click the button, the “application” installs itself in the background. When you open this application that now sits in your app drawer, you can browse the same experience you were doing on your browser, but now right in your mobile phone.
+你有看到过上面第一张图的“添加到主屏幕”弹出框吗？当你按下这个按钮时，这个"APP"就会自动在后台进行安装，然后你就可以在你手机的APP列表里找到它。打开它时，你可以在里面做和之前在浏览器里一样的事，不过这次不用再打开浏览器了，这个APP现在直接运行在你的手机系统中。
 
-What you have now is a mobile app that was downloaded from a web application. All this, without even have to see the face of an app store.
+现在你拥有的是一个从Web应用上下载下来的移动APP。在这整个过程中，我们完全不需要去使用手机的应用商店。
 
-Getting the app was so easy! But that’s not even the best part. When you open this app, you will be able to browse the content even when you do not have internet. You have offline access to the app! How cool is that?
+安装这样一个APP竟然如此简单！不过更厉害的是，你甚至可以在没有网络的时候离线浏览这个APP里的内容。
 
-What you’ve come across is a Progressive Web App (PWA). A PWA lets you install the application from the browser window itself, is available on your phone like a native app, and works offline, just like a native app.
+这就是渐进式Web应用(PWA)。你可以直接通过浏览器安装PWA应用，它可以像原生APP一样在线或离线在手机上使用。
 
-But what does it really mean for a web app to be progressive? Let’s take a deeper dive into what progressive web apps are, why I think they’re better than native apps, and what makes them different from traditional web apps.
+但是，对于Web应用而言，渐进式到底意味着什么？ 让我们来更深入地研究什么是PWA，为什么我认为它们比原生APP更好，它们又是为什么与传统的Web应用不同。
 
-### What is a Progressive Web App (PWA)?
+### 什么是渐进式Web应用(PWA)？
 
-The term Progressive Web App was coined by  [Alex Russell][1]  and Frances Berriman. In Alex’s words:
+PWA这一概念是由[Alex Russell][1]和Frances Berriman创造的。引用Alex的话：
 
-> Progressive Web Apps are just websites that took all the right vitamins.
+> PWA其实就是新增了各种有用特性的网页。
 
-It isn’t a new framework or technology. It is a set of best practices to make a web application function similar to a desktop or mobile application. The dream is to have an experience so uniform and seamless that the user is unable to tell the difference between a Progressive Web App and a native mobile app.
+它不是什么新的框架或技术，而是让一个Web应用可以像桌面或移动APP一样的一些最佳实践。主要目的是让Web应用有一种更统一、更沉浸的体验，以至于用户无法分辨PWA与原生APP之间的区别。
 
-Progressive web applications deliver user experiences through progressive enhancement. It essentially means that a PWA will perform the same functions on a new iPhone 8 as it would on an older generation iPhone. Sure, some features may not be available, but the app continues to work and perform like it should.
+PWA通过渐进增强来提高用户体验。换句话说，这意味着PWA应用可以兼容几乎所有的设备。当然，某些功能可能不可用，但这个APP仍然可以正常提供应有的功能。
 
-### Why do we need a Progressive Web App?
+### 为什么我们需要PWA？
 
-Before we understand why we need a progressive web app, let’s talk about some of the challenges we are facing today with native and web apps.
+在讲为什么我们需要PWA之前，让我们先谈谈当今原生和Web应用所面临的一些问题。
 
-**Internet speed**: you may not realize this depending on where you live, but 60% of the world’s population is still using 2G internet. Even in the US, some people have to use dialup to access internet.
+**网速**：你可能并没有网速问题，这取决于你住在什么地方，但是全球60％的人口仍在使用2G互联网。 即使在美国，有些人还是不得不使用拨号上网。
 
-**Slow website load:** Do you know how long a user waits to click the “Close X” button if a website is too slow? Three seconds! 53% of users abandon a website if it is too slow.
+**网页加载速度慢：**如果网页加载太慢，你知道用户等多少时间就会点击“关闭”按钮吗？ 三秒钟！如果网页加载太慢，则有53％的用户会选择直接关掉标签页。
 
-**High friction:** People don’t want to install native apps. An average user installs 0 applications in a month.
+**抗拒安装新的APP：**用户不想安装原生APP，普通用户一个月内平均安装的APP数量不到1个。
 
-**User engagement:** Users spend most of their time in native apps, but mobile web reach is almost three times that of native apps. Hence, most of the users are not actively engaged. However, users are spending 80% of their time on only their top three native apps.
+**用户粘性：**用户将大部分时间花在原生APP上，但移动端网页的访问量几乎是原生APP的三倍。 因此，大多数用户都不会长时间去使用移动端网页，它们80％的时间都花在了前三名的原生APP上。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*o2eA_ZR6hnUVTH2EvIAYqg.png)
 
-User engagement on mobile web vs apps
+#### 用户粘性：移动端Web应用 VS 原生APP
 
-PWAs help solve these problems. There are multiple reasons for using a progressive web app, but here are some of the top capabilities it provides:
+用PWA有很多好处，这里列出它最有帮助的几项：
 
-1.  **F**ast: PWAs provide experiences that are consistently fast. From the moment a user downloads an app to the moment they start interacting with it, everything happens really fast. Because you can cache the data, it is extremely fast to start the app again even without hitting the network.
-2.  **I**ntegrated user experience: PWAs feel and behave like native apps. They sit in a user’s home screen, send push notifications like native apps, and have access to a device’s functionalities like native apps. The experience feels seamless and integrated.
-3.  **R**eliable experience: With the help of service workers, we can reliably paint a picture on a user’s screen even when network has failed.
-4.  **E**ngaging: Because we can send notifications to a user, we can really drive the engagement up by keeping the user notified and engaged with the app.
+1.  **F**ast（速度快）：PWA应用可以持续提供快速的用户体验。 从开始下载到可以使用，整个过程都非常快。由于可以缓存数据，即使没有网络也可以再次快速启动这个APP。
+2.  **I**ntegrated user experience（沉浸式的用户体验）：PWA应用用起来就像原生APP一样。 它们可以放在用户的主屏幕上，发送推送通知，并可以访问设备硬件的功能，有着沉浸式的体验。
+3.  **R**eliable experience（高可用性）: 在`service worker`的帮助下，即使网络出现问题，PWA应用也可以在用户的屏幕上正常渲染图片。
+4.  **E**ngaging（高用户粘性）: 由于PWA应用可以向用户推送通知，所以我们可以唤醒用户来真正地提高粘性。
 
-In short, it is  **FIRE.**
+PWA is on **FIRE**！
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*maLaYJoCMBNabnUdrgwPMQ.jpeg)
 
-### How to build a Progressive Web App
+### 我们应该如何搭建一个PWA应用？
 
-Google has published a  [checklist of items][2] for Progressive Web apps. I will go over four minimum requirements for an application to be a PWA:
+Google为渐进式Web应用发布了 [项目清单][2]。 想让一个Web应用成为PWA应用，至少需要以下四个要求：
 
 #### 1\. Web App Manifest
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*LhaR74lzxYyeKwNOWh9oNQ.png)
 
-A sample manifest.json file
+一个示例的`manifest.json`文件
 
-This is just a  `json`  file that gives meta information about the web app. It has information like the icon of the app (which a user sees after installing it in their app drawer), background color of the app, name of the app, short name, and so on. We can write this manifest file ourselves or we can use  [tools][3]  to generate one for us.
+这只是一个提供Web应用相关的`meta`信息的`json`文件。它有诸如APP图标（用户在将其安装到设备中后会看到的图标），APP的背景颜色，APP的名称，简称等信息。我们可以自己编写`manifest`文件，也可以使用[工具][3]为我们生成一个`manifest`文件。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*yzOwzdDG48AlJcPrSby1kw.png)
 
-You can auto-generate manifest file using Google’s tools.
+你可以用Google的工具自动生成`manifest`文件。
 
 #### 2\. Service Workers
 
-Service Workers are event-driven workers that run in the background of an application and act as a proxy between the network and application. They are able to intercept network requests and cache information for us in the background. This can be used to load data for offline use. They are a  `javascript`  script that listens to events like fetch and install, and they perform tasks.
+`Service Worker`是事件驱动的服务，它们在APP的后台运行，并充当网络和APP之间的代理。 他们能够拦截网络请求并在后台为我们缓存信息。 这可用于加载数据以供离线使用。它们是一个JavaScript脚本，用于侦听诸如获取和安装之类的事件，并执行任务。
 
-Here is a sample  `serviceworker.js`
+这里是一个`serviceworker.js`的示例：
 
 ```javascript
 self.addEventListener('fetch', event => {
-    //caching for offline viewing
+    //缓存数据以供离线使用
     const {request} = event;
     const url = new URL(request.url);
     if(url.origin === location.origin) {
@@ -95,15 +95,17 @@ async function cacheData(request) {
 }
 ```
 
-#### 3\. Icon
+#### 3\. 图标
 
-This is used to provide an app icon when a user installs the PWA in their application drawer. A jpeg image will just be fine. The manifest tool I highlighted above helps in generating icons for multiple formats, and I found it very useful.
+这是当用户在设备上安装PWA应用时显示的APP图标， 一般的jpeg图片就可以了。我在上面贴出的`manifest`文件里有列出多种尺寸的图标，我觉得这在很多时候非常有用。
 
-#### 4\. Served over HTTPS
+#### 4\. 使用HTTPS
 
-In order to be a PWA, the web application must be served over a secure network. With services like Cloudfare and LetsEncrypt, it is really easy to get an SSL certificate. Being a secure site is not only a best practice, it also establishes your web application as a trusted site for users demonstrating trust and reliability, and avoiding middle man attacks.
+为了让Web应用成为PWA应用，必须要通过安全网络为它提供服务。借助Cloudfare和LetsEncrypt之类的服务，获取SSL证书确实非常容易。 成为安全站点不仅是最佳实践，而且还将Web应用建立为值得用户信任的站点，以获得用户的信任和依赖，并避免中间人攻击。
 
-**Note: This is part 1 of 2 part series. In the next part, we will create a Progressive Web App from scratch with a skeleton index.html.  [Check out part 2 here.][4]**
+**注意：这是一个有2个部分的系列的第1部分，在下一部分中，我们会用一个编写好的`index.html`从头创建一个PWA应用。 [点击这里浏览第2部分.][4]**
+
+
 
 [1]: https://www.freecodecamp.org/news/progressive-web-apps-101-the-what-why-and-how-4aa5e9065ac2/undefined
 [2]: https://developers.google.com/web/progressive-web-apps/checklist

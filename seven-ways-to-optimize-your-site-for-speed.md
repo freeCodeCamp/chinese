@@ -3,6 +3,8 @@
 > * 译者：XuQuan-nikkkki
 > * 校对者：
 
+
+
 ## 7 种有效提升网站速度的方法
 
 网站内容显示的速度会决定网站的排名。
@@ -59,7 +61,7 @@ Google 基于网页的渲染速度来打分。它会计算你的网站需要多�
    lighthouse https://www.jarewolff.com --view
    ```
 
-   `--view` 会在你的默认浏览器中打开测试结果。以下是我的网页优化前的测试结果：
+   `--view` 会在你的默认浏览器中打开测试结果。以下是我之前使用 Lighthouse 测试的结果：
 
    ![Screenshot from Lighthouse](https://tva1.sinaimg.cn/large/006tNbRwly1gatubnx4y7j30k00fvt9a.jpg)
 
@@ -104,7 +106,7 @@ Google 基于网页的渲染速度来打分。它会计算你的网站需要多�
 
 编译时，模板组合在一起。Markdown 被转换成 HTML，并注入到模板中。结果呢？一系列“看起来动态”的页面就生成了（就像你在我的网站上看到的那样）。
 
-我的个人博客是基于 [Hugo](https://gohugo.io/) 实现的，我也而尝试过 [Middleman](https://middlemanapp.com/) 和 [Jekyll](https://jekyllrb.com/) 。无论你的需求是什么，你总能找到一款符合你要求的静态网站生成器。Netlify 上有一个根据人气排列的静态生成器列表，可以在[这里](https://www.staticgen.com/)查看。
+我的个人博客是基于 [Hugo](https://gohugo.io/) 实现的，我也尝试过 [Middleman](https://middlemanapp.com/) 和 [Jekyll](https://jekyllrb.com/) 。无论你的需求是什么，你总能找到一款符合你要求的静态网站生成器。Netlify 上有一个根据人气排列的静态生成器列表，可以在[这里](https://www.staticgen.com/)查看。
 
 
 
@@ -172,7 +174,7 @@ Google 基于网页的渲染速度来打分。它会计算你的网站需要多�
 
 ## 组织代码
 
-Javascript 和 CSS 文件的位置也会影响性能。比如，我通常将 javascript 和 CSS 放在终于位置。主要的样式文件会放在 `<head>` 中，其余的则要么放在 footer 中，要么作为 HTML 的内联样式。类似的， javascript 文件则放在页面的底部。这样一来，所有重要的内容都会优先加载。
+Javascript 和 CSS 文件的位置也会影响性能。比如，我通常将 javascript 和 CSS 放在重要位置。主要的样式文件会放在 `<head>` 中，其余的则要么放在 footer 中，要么作为 HTML 的内联样式。类似的， javascript 文件则放在页面的底部。这样一来，所有重要的内容都会优先加载。
 
 这是我组织 javascript 文件的例子：
 
@@ -340,4 +342,5 @@ gulp.task("resize", function() {
 提升活跃网站的性能这件事没有终点。尽管你已尽力而为，但你仍可以花几天时间优化图形和延迟加载。归根到底，有哪些是值得的？这是我仍在问自己的一个问题。
 
 希望这篇文章对你有用。你最大的收获是什么？有哪些优化建议是我没有提到的？请在下面的评论中留言！
+
 

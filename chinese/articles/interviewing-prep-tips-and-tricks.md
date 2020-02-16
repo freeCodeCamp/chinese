@@ -1,35 +1,49 @@
 > * 原文地址：[How to prepare for a technical interview - tips and tricks to help you perform your best](https://www.freecodecamp.org/news/interviewing-prep-tips-and-tricks/)
 > * 原文作者：John Mosesman
-> * 译者：
+> * 译者：waylen94
 > * 校对者：
 
 ![How to prepare for a technical interview - tips and tricks to help you perform your best](https://images.unsplash.com/photo-1515973069-1e40b62f107f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
+如何准备技术面试 - 几招鲜吃遍天
 
 Ah, the coding interview.
+代码面试
 
 > "Dread it. Run from it. Destiny arrives all the same." - Thanos 2018
+恐惧它，逃避它，然命运的车轮终将滚滚而来。 灭霸 2018  
 
 Ok, maybe that's a little dramatic, but I don't know anyone who is thrilled about going through the interview process. The job search/interview process is exhausting at best and many other things at worst.
+这么说， 或许有些戏剧化的韵味，但曾几何时你是否也对面试心生恐惧。找工作投递简历的流程最多让你精疲力竭，其他的流程才是真正的考验。
 
 Many people study up on tricks and tactics for an interview (and I'll give you a few of those too), but most people don't think about their  _mindset_  going in to the interview.
+许多人致力于钻研面试策略与技巧（当然，我也会提供一些技巧与策略），但是往往只有小部分人关注他们的面试_心态_。
 
 Your mindset sets the tone of how you're going to view and shape your situation. Go in with the right mindset and you'll be able to understand and navigate anything that is thrown at you. Enter with a scattered or timid mind and you'll find yourself rocked about and battered.
+你的心态决定了你在面试中的言行举止。积极正确的心态助你在面试丛林中披荆斩棘，消极怯弱的心态使得你在面试中显得畏首畏尾。
 
 ## You are also the interviewer
+## 你是面试者，也是面试官
 
 One thing most people often forget is  _you are also the interviewer._
+许多人在面试中常常忘记，_你同样也是面试官._
 
 Yes, are you being interviewed at this company, but you are also interviewing  _the company_  to see if  _they_  are a good fit  _for you._
+当你在被一家公司面试的时候，你同样也在面试_这家公司_,考察_这家公司_是否_配的上你._
 
 What are this company's values? What is their work ethic like? What do the people value?
+这家公司拥有何种价值观？公司是何种企业文化？公司的人们看重什么？
 
 Passing the interview is important, but do you want to work at this company if you do pass?
+通过当前的工作面试固然重要，但你如何知道这是一家适合你的公司呢。
 
 Sometimes we just need a job—any job—and so I don't want to minimize just getting the job. But if you can, take a step back and think how this job will impact your career in the long-term. Saying yes to a job is saying no to a dozen others—you're paying a large opportunity cost by saying yes.
+有些人对我说，我只想要一份工作，任何工作都可以，我为了它可以付出所有。但我想说的是，年轻人，如果你能从长远的职业发展眼光来看待这份工作。取得一份工作的同时，也意味着拒绝其他潜在的工作机会。
 
 So that's the first thing to remember: this isn't a one-way power dynamic. It may feel like it at times, but you have some control here, and you have options. This is empowering.
+至此，望你记住，当前的工作机会不是人生的单向通道。你可以有更多选择，你会遇见得更多的机会。它面试你，你选择它。
 
 ## Types of interviews
+## 面试种类
 
 Ok, so we are  _also_  evaluating the company based on the people we interact with in the interview process, so what do we do with that information?
 

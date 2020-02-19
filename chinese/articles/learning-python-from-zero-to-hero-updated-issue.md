@@ -1,6 +1,6 @@
 > * 原文地址：[Learning Python: From Zero to Hero](https://www.freecodecamp.org/news/learning-python-from-zero-to-hero-120ea540b567/)
 > * 原文作者：TK
-> * 译者：
+> * 译者：MMMAY521
 > * 校对者：
 
 ![Learning Python: From Zero to Hero](https://cdn-media-1.freecodecamp.org/images/1*ueWmI48uuShON-hX7LwI0w.png)

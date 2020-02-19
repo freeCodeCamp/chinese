@@ -4,39 +4,39 @@
 > * 校对者：
 
 ![Learning Python: From Zero to Hero](https://cdn-media-1.freecodecamp.org/images/1*ueWmI48uuShON-hX7LwI0w.png)
-
+Python学习：从小白到大神(https://cdn-media-1.freecodecamp.org/images/1*ueWmI48uuShON-hX7LwI0w.png)
 by TK
-
+作者：TK
 First of all, what is Python? According to its creator, Guido van Rossum, Python is a:
-
+第一个问题：Python是什么？Python创始人吉多*范苏罗姆认为，Python是一种
 > “high-level programming language, and its core design philosophy is all about code readability and a syntax which allows programmers to express concepts in a few lines of code.”
-
+>“高级编程语言，其核心设计哲学强调代码的可读性和句法，这使得开发人员能够仅仅用几行代码就表达想法。”
 For me, the first reason to learn Python was that it is, in fact, a beautiful  programming language. It was really natural to code in it and express my thoughts.
-
+为什么我要学Python呢？一个原因在于，Python是一个美丽的编程语言，用Python编程来表达我的想法非常自然流畅。
 Another reason was that we can use coding in Python in multiple ways: data science, web development, and machine learning all shine here. Quora, Pinterest and Spotify all use Python for their backend web development. So let’s learn a bit about it.
+另一个原因就是，Python编程在很多方面都大有可为，例如数据科学、网站开发、机器学习等等。Quora， Pinterest和Spotify的后端网站开发都在使用Python。因此，让我们一同来学习Python吧。
+### The Basics基础知识
 
-### The Basics
+#### 1\. Variables变量
 
-#### 1\. Variables
+You can think about variables as words that store a value. Simple as that.你可以把变量理解成储存值的代码，很简单。
 
-You can think about variables as words that store a value. Simple as that.
-
-In Python, it is really easy to define a variable and set a value to it. Imagine you want to store number 1 in a variable called “one.” Let’s do it:
+In Python, it is really easy to define a variable and set a value to it. Imagine you want to store number 1 in a variable called “one.” Let’s do it:在Python中，定义一个变量、给变量赋值十分简单。例如：给变量“one”赋值1，代码如下：
 
 ```py
 one = 1
 ```
 
-How simple was that? You just assigned the value 1 to the variable “one.”
+How simple was that? You just assigned the value 1 to the variable “one.”这样就可以把1赋值给变量“one”了，很简单吧。
 
 ```py
 two = 2
 some_number = 10000
 ```
 
-And you can assign any other  **value**  to whatever other  **variables** you want. As you see in the table above, the variable “**two**” stores the integer  **2**, and “**some\_number**” stores  **10,000**.
+And you can assign any other  **value**  to whatever other  **variables** you want. As you see in the table above, the variable “**two**” stores the integer  **2**, and “**some\_number**” stores  **10,000**.你可以把任意数值赋值给你想要的任意变量。如上述代码，变量“**two**”存储了整数2，变量“**some\_number**”存储了整数10000。
 
-Besides integers, we can also use booleans (True / False), strings, float, and so many other data types.
+Besides integers, we can also use booleans (True / False), strings, float, and so many other data types.除了整数，布尔值（True / False）、字符串、浮点数和其他数据类型也可以赋值给变量。
 
 ```py
 # booleans
@@ -48,9 +48,9 @@ my_name = "Leandro Tk"
 
 ```
 
-#### 2\. Control Flow: conditional statements
+#### 2\. Control Flow: conditional statements控制语句：条件判断
 
-“**If**” uses an expression to evaluate whether a statement is True or False. If it is True, it executes what is inside the “if” statement. For example:
+“**If**” uses an expression to evaluate whether a statement is True or False. If it is True, it executes what is inside the “if” statement. For example:“**If**”条件语句检验条件真假。如果条件为真，if后面的条件执行。举个例子：
 
 ```py
 if True:
@@ -58,9 +58,9 @@ if True:
 
 ```
 
-**2**  is greater than  **1**, so the “**print**” code is executed.
+**2**  is greater than  **1**, so the “**print**” code is executed.**2**比**1**大，所以**print**后面的程序执行。
 
-The “**else**” statement will be executed if the “**if**” expression is  **false**.
+The “**else**” statement will be executed if the “**if**” expression is  **false**.如果if后面的条件语句为假，则执行else后面的语句
 
 ```py
 if 1 > 2:
@@ -69,9 +69,9 @@ else:
   print("1 is not greater than 2")
 ```
 
-**1**  is not greater than  **2**, so the code inside the “**else**” statement will be executed.
+**1**  is not greater than  **2**, so the code inside the “**else**” statement will be executed.1小于2，所以执行else后面的语句。
 
-You can also use an “**elif**” statement:
+You can also use an “**elif**” statement:也可以使用elif语句：
 
 ```py
 if 1 > 2:
@@ -82,11 +82,11 @@ else:
   print("1 is equal to 2")
 ```
 
-#### 3\. Looping / Iterator
+#### 3\. Looping / Iterator循环/迭代
 
-In Python, we can iterate in different forms. I’ll talk about two:  **while** and  **for**.
+In Python, we can iterate in different forms. I’ll talk about two:  **while** and  **for**.Python有很多不同的迭代模式。今天说两个：while循环和for循环。
 
-**While** Looping: while the statement is True, the code inside the block will be executed. So, this code will print the number from  **1**  to  **10**.
+**While** Looping: while the statement is True, the code inside the block will be executed. So, this code will print the number from  **1**  to  **10**.while循环：当条件为真，执行while模块语句。所以，while循环可以输出
 
 ```py
 num = 1

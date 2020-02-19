@@ -86,56 +86,56 @@ else:
 
 In Python, we can iterate in different forms. I’ll talk about two:  **while** and  **for**.Python有很多不同的迭代模式。今天说两个：while循环和for循环。
 
-**While** Looping: while the statement is True, the code inside the block will be executed. So, this code will print the number from  **1**  to  **10**.while循环：当条件为真，执行while模块语句。所以，while循环可以输出
+**While** Looping: while the statement is True, the code inside the block will be executed. So, this code will print the number from  **1**  to  **10**.while循环：当条件为真，执行while模块语句。所以，while循环可以y用来输出s数字1-10。
 
 ```py
 num = 1
 
 ```
 
-The  **while**  loop needs a “**loop condition.**” If it stays True, it continues iterating. In this example, when  `num`  is  `11`  the  **loop condition**  equals  `False`.
+The  **while**  loop needs a “**loop condition.**” If it stays True, it continues iterating. In this example, when  `num`  is  `11`  the  **loop condition**  equals  `False`.while循环需要循环条件。如果循环条件为真，循环继续。上述代码表明，num值为11时，循环条件为假。
 
-Another basic bit of code to better understand it:
+Another basic bit of code to better understand it:另外一种代码形式可以更好的理解循环条件：
 
 ```py
 loop_condition = True
 
 ```
 
-The  **loop condition**  is  `True`  so it keeps iterating — until we set it to  `False`.
+The  **loop condition**  is  `True`  so it keeps iterating — until we set it to  `False`.循环条件为真，循环继续，知道循环条件为假。
 
-**For Looping**: you apply the variable “**num**” to the block, and the “**for**” statement will iterate it for you. This code will print the same as  **while**  code: from  **1**  to  **10**.
+**For Looping**: you apply the variable “**num**” to the block, and the “**for**” statement will iterate it for you. This code will print the same as  **while**  code: from  **1**  to  **10**.for循环：模块语句运用num变量时，for循环迭代变量。for循环代码可以跟while循环一样输出数字1-10。
 
 ```py
 for i in range(1, 11):
   print(i)
 ```
 
-See? It is so simple. The range starts with  `1`  and goes until the  `11`th element (`10`  is the  `10`th element).
+See? It is so simple. The range starts with  `1`  and goes until the  `11`th element (`10`  is the  `10`th element).看见了吧，就是这么简单。整数数列range()循环从1开始，直到第十一个元素停止循环（但只输出第十个元素10）。
 
-### List: Collection | Array | Data Structure
+### List: Collection | Array | Data Structure列表（List）：集合（Collection）|数组（Array）|数据结构（Data Structure）
 
-Imagine you want to store the integer 1 in a variable. But maybe now you want to store 2. And 3, 4, 5 …
+Imagine you want to store the integer 1 in a variable. But maybe now you want to store 2. And 3, 4, 5 …设想一下你需要把整数1储存在一个变量中。但现在可能你想储存2，甚至储存3,4,5……
 
-Do I have another way to store all the integers that I want, but not in  **millions of variables**? You guessed it — there is indeed another way to store them.
+Do I have another way to store all the integers that I want, but not in  **millions of variables**? You guessed it — there is indeed another way to store them.是否有一种方式可以避免将我所想要的所有的整数存在不计其数的变量当中？你已经猜到了——确实有另一种方式来储存这些整数。
 
-`List`  is a collection that can be used to store a list of values (like these integers that you want). So let’s use it:
+`List`  is a collection that can be used to store a list of values (like these integers that you want). So let’s use it:列表（List）这种集合就可以用来储存一系列的数值，例如上述你想要的整数。
 
 ```py
 my_integers = [1, 2, 3, 4, 5]
 ```
 
-It is really simple. We created an array and stored it on  **my\_integer**.
+It is really simple. We created an array and stored it on  **my\_integer**.真的很简单——我们创建了一个数组（Array），并把它存在了**my\_integer**当中。
 
-But maybe you are asking: “How can I get a value from this array?”
+But maybe you are asking: “How can I get a value from this array?”现在你可能要问了：怎样才可以从Array中取一个数值呢？
 
-Great question.  `List`  has a concept called  **index**. The first element gets the index 0 (zero). The second gets 1, and so on. You get the idea.
+Great question.  `List`  has a concept called  **index**. The first element gets the index 0 (zero). The second gets 1, and so on. You get the idea.问得好。List中有个概念，叫index。List中的第一个元素为index 0，第二个是index 1，依次类推。明白了吧。
 
-To make it clearer, we can represent the array and each element with its index. I can draw it:
+To make it clearer, we can represent the array and each element with its index. I can draw it:更简单来说，我们可以用index来指代array中的每个元素。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*ReMk6NgghLII20vPD6uNEA.jpeg)
 
-Using the Python syntax, it’s also simple to understand:
+Using the Python syntax, it’s also simple to understand:Python句法比较容易理解：
 
 ```py
 my_integers = [5, 7, 1, 3, 4]
@@ -144,7 +144,7 @@ print(my_integers[1]) # 7
 print(my_integers[4]) # 4
 ```
 
-Imagine that you don’t want to store integers. You just want to store strings, like a list of your relatives’ names. Mine would look something like this:
+Imagine that you don’t want to store integers. You just want to store strings, like a list of your relatives’ names. Mine would look something like this:如果不需要储存整数，需要储存字符串，比如要储存亲戚的名字，我家的亲戚名字如下：
 
 ```py
 relatives_names = [
@@ -157,11 +157,11 @@ relatives_names = [
 
 ```
 
-It works the same way as integers. Nice.
+It works the same way as integers. Nice.跟储存整数一样。不错吧。
 
-We just learned how  `Lists`  indices work. But I still need to show you how we can add an element to the  `List`  data structure (an item to a list).
+We just learned how  `Lists`  indices work. But I still need to show you how we can add an element to the  `List`  data structure (an item to a list).我们刚学习了list中的各个元素如何工作。但我还需要告诉你们如何向list数据结构中添加元素（向list中添加一个事项）。
 
-The most common method to add a new value to a  `List`  is  `append`. Let’s see how it works:
+The most common method to add a new value to a  `List`  is  `append`. Let’s see how it works:最常见的方法是运用append函数。我们一起来看看如何运用append函数。
 
 ```py
 bookshelf = []
@@ -171,15 +171,15 @@ print(bookshelf[0]) # The Effective Engineer
 print(bookshelf[1]) # The 4 Hour Work Week
 ```
 
-`append`  is super simple. You just need to apply the element (eg. “**The Effective Engineer**”) as the  `append`  parameter.
+`append`  is super simple. You just need to apply the element (eg. “**The Effective Engineer**”) as the  `append`  parameter.append特别简单，只需要将元素添加为append的参数（正如“**The Effective Engineer**”）。
 
-Well, enough about  `Lists`**_._**  Let’s talk about another data structure.
+Well, enough about  `Lists`**_._**  Let’s talk about another data structure.有关list的知识就说到这里。我们一起来看看另外一个数据结构。
 
-### Dictionary: Key-Value Data Structure
+### Dictionary: Key-Value Data Structure字典（Dictioary）：Key-Value（键-值）数据结构
 
-Now we know that  `Lists`  are indexed with integer numbers. But what if we don’t want to use integer numbers as indices? Some data structures that we can use are numeric, string, or other types of indices.
+Now we know that  `Lists`  are indexed with integer numbers. But what if we don’t want to use integer numbers as indices? Some data structures that we can use are numeric, string, or other types of indices.现在我们知道list用整数来索引。但是，如果我们不想用整数来索引呢？那我们可以使用其他的数据结构，例如数值，字符串等来进行索引。
 
-Let’s learn about the  `Dictionary`  data structure.  `Dictionary`  is a collection of key-value pairs. Here’s what it looks like:
+Let’s learn about the  `Dictionary`  data structure.  `Dictionary`  is a collection of key-value pairs. Here’s what it looks like:我们一起来学习一下字典（Dictionary）数据结构。Dictionary使用key-value（键-值）存储。具体使用方法如下：
 
 ```py
 dictionary_example = {
@@ -189,7 +189,7 @@ dictionary_example = {
 }
 ```
 
-The  **key**  is the index pointing to the **value**. How do we access the  `Dictionary`  **value**? You guessed it — using the  **key**. Let’s try it:
+The  **key**  is the index pointing to the **value**. How do we access the  `Dictionary`  **value**? You guessed it — using the  **key**. Let’s try it:元素key指向value。那运用key，就可以得到dictionary中的value。让我们试一下。
 
 ```py
 dictionary_tk = {
@@ -200,13 +200,13 @@ dictionary_tk = {
 
 ```
 
-I created a  `Dictionary`  about me. My name, nickname, and nationality. Those attributes are the  `Dictionary`  **keys**.
+I created a  `Dictionary`  about me. My name, nickname, and nationality. Those attributes are the  `Dictionary`  **keys**.我创建了一个关于我的Dictionary，包括我的名字、绰号和国籍。这些属性就是Dictionary中的key。
 
-As we learned how to access the  `List`  using index, we also use indices (**keys**  in the  `Dictionary`  context) to access the  **value**  stored in the  `Dictionary`.
+As we learned how to access the  `List`  using index, we also use indices (**keys**  in the  `Dictionary`  context) to access the  **value**  stored in the  `Dictionary`.我们刚已经学过了如何运用索引得到list中的值，那我们也可以运用索引（即Dictionary中的key）来得到Dictionary中value的存放位置。
 
-In the example, I printed a phrase about me using all the values stored in the  `Dictionary`. Pretty simple, right?
+In the example, I printed a phrase about me using all the values stored in the  `Dictionary`. Pretty simple, right?例子当中，我用存储在Dictionary中的value输出了一个关于我的短语。很简单吧~
 
-Another cool thing about  `Dictionary`  is that we can use anything as the value. In the  `Dictionary`  I created, I want to add the  **key**  “age” and my real integer age in it:
+Another cool thing about  `Dictionary`  is that we can use anything as the value. In the  `Dictionary`  I created, I want to add the  **key**  “age” and my real integer age in it:Dictionary还有一个很酷的属性，就是value的值可变。在我创建的Dictionary中，我想要增加我的年龄“age”作为一个key，并且输入我年龄的整数值。
 
 ```py
 dictionary_tk = {
@@ -218,9 +218,9 @@ dictionary_tk = {
 
 ```
 
-Here we have a  **key**  (age)  **value**  (24) pair using string as the  **key**  and integer as the  **value**.
+Here we have a  **key**  (age)  **value**  (24) pair using string as the  **key**  and integer as the  **value**.现在key-value值当中，key是字符串，value是整数。
 
-As we did with  `Lists`, let’s learn how to add elements to a  `Dictionary`. The  **key** pointing to a **value**  is a big part of what  `Dictionary`  is. This is also true when we are talking about adding elements to it:
+As we did with  `Lists`, let’s learn how to add elements to a  `Dictionary`. The  **key** pointing to a **value**  is a big part of what  `Dictionary`  is. This is also true when we are talking about adding elements to it:跟list一样，现在我们要学习如何向Dictionary中增加元素。key指向value是Dictionary的一大组成。向Dictionary中增加元素时也是如此。
 
 ```py
 dictionary_tk = {
@@ -232,11 +232,11 @@ dictionary_tk['age'] = 24
 
 ```
 
-We just need to assign a  **value**  to a  `Dictionary` **key**. Nothing complicated here, right?
+We just need to assign a  **value**  to a  `Dictionary` **key**. Nothing complicated here, right?我们只需要在Dictionary中设定一个value，并且对应一个key就可以了。不复杂吧。
 
-### Iteration: Looping Through Data Structures
+### Iteration: Looping Through Data Structures迭代：数据结构中的循环
 
-As we learned in the  [**Python Basics**][1], the  `List`  iteration is very simple. We  `Python`  developers commonly use  `For`  looping. Let’s do it:
+As we learned in the  [**Python Basics**][1], the  `List`  iteration is very simple. We  `Python`  developers commonly use  `For`  looping. Let’s do it:正如我们在Python基础中学到的内容，list迭代非常简单。我们些用Python来开发的程序员通常使用for循环。一起来做：
 
 ```py
 bookshelf = [
@@ -249,9 +249,9 @@ bookshelf = [
 
 ```
 
-So for each book in the bookshelf, we (**can do everything with it**) print it. Pretty simple and intuitive. That’s Python.
+So for each book in the bookshelf, we (**can do everything with it**) print it. Pretty simple and intuitive. That’s Python.所以我们输出了书架上的每一本书（但我们能做的远不止于此）。这就是Python——相当简单且足够直观。
 
-For a hash data structure, we can also use the  `for`  loop, but we apply the  `key`  :
+For a hash data structure, we can also use the  `for`  loop, but we apply the  `key`  :对于哈希数据结构而言，我们也可以使用for循环，但同时我们应该用到key：
 
 ```py
 dictionary = { "some_key": "some_value" }
@@ -260,9 +260,9 @@ for key in dictionary:
 
 ```
 
-This is an example how to use it. For each  `key`  in the  `dictionary`  , we  `print`  the  `key`  and its corresponding  `value`.
+This is an example how to use it. For each  `key`  in the  `dictionary`  , we  `print`  the  `key`  and its corresponding  `value`.这个例子就解释了如何在for循环中使用key。我们可以输出Dictionary中的每个key以及其对应的value。
 
-Another way to do it is to use the  `iteritems`  method.
+Another way to do it is to use the  `iteritems`  method.另外一个方法是使用iteritems。
 
 ```py
 dictionary = { "some_key": "some_value" }
@@ -271,7 +271,7 @@ for key, value in dictionary.items():
 
 ```
 
-We did name the two parameters as  `key`  and  `value`, but it is not necessary. We can name them anything. Let’s see it:
+We did name the two parameters as  `key`  and  `value`, but it is not necessary. We can name them anything. Let’s see it:我们将这两个参数命名为key和value，但这并不必须。我们也可以有其他命名。比如说：
 
 ```py
 dictionary_tk = {
@@ -285,38 +285,38 @@ for attribute, value in dictionary_tk.items():
 
 ```
 
-We can see we used attribute as a parameter for the  `Dictionary`  `key`, and it works properly. Great!
+We can see we used attribute as a parameter for the  `Dictionary`  `key`, and it works properly. Great!可以看到，例子中我们将参数命名为attribute，替代了key，代码同样运行流畅。真棒！
 
-### Classes & Objects
+### Classes & Objects类和对象
 
-#### A little bit of theory:
+#### A little bit of theory:一点理论知识：
 
-**Objects**  are a representation of real world objects like cars, dogs, or bikes. The objects share two main characteristics:  **data**  and  **behavior**.
+**Objects**  are a representation of real world objects like cars, dogs, or bikes. The objects share two main characteristics:  **data**  and  **behavior**.对象代表了真实世界当中的物体，例如汽车、狗狗、自行车等。这些对象有两个主要特点：数据和表现。
 
-Cars have  **data,**  like number of wheels, number of doors, and seating capacity They also exhibit  **behavior**: they can accelerate, stop, show how much fuel is left, and so many other things.
+Cars have  **data,**  like number of wheels, number of doors, and seating capacity They also exhibit  **behavior**: they can accelerate, stop, show how much fuel is left, and so many other things.汽车包含有数据，比如有几个轮子，几个车门，几个座位。汽车也有一定表现，例如他们可以加速，可以停下，可以显示还剩多少燃油，诸如此类。
 
-We identify  **data**  as  **attributes**  and  **behavior**  as  **methods**  in object-oriented programming. Again:
+We identify  **data**  as  **attributes**  and  **behavior**  as  **methods**  in object-oriented programming. Again:在面向对象的程序设计中，我们将数据看做属性，将表现看做方法。
 
-Data → Attributes and Behavior → Methods
+Data → Attributes and Behavior → Methods数据→属性&表现→方法
 
-And a  **Class**  is the blueprint from which individual objects are created. In the real world, we often find many objects with the same type. Like cars. All the same make and model (and all have an engine, wheels, doors, and so on). Each car was built from the same set of blueprints and has the same components.
+And a  **Class**  is the blueprint from which individual objects are created. In the real world, we often find many objects with the same type. Like cars. All the same make and model (and all have an engine, wheels, doors, and so on). Each car was built from the same set of blueprints and has the same components.类从对象中抽象而来。真实世界当中，一种类型下有很多物体，比如汽车。所有汽车的制作过程都一样，模型也一样，都有引擎、轮胎等等。每辆汽车都是同一批设计图纸的产物，有着相同的零部件。
 
-#### Python Object-Oriented Programming mode: ON
+#### Python Object-Oriented Programming mode: ONPython面向对象的程序设计模式：ON
 
-Python, as an Object-Oriented programming language, has these concepts:  **class**  and  **object**.
+Python, as an Object-Oriented programming language, has these concepts:  **class**  and  **object**.面向对象的程序设计语言——Python，有类和对象这两个概念。
 
-A class is a blueprint, a model for its objects.
+A class is a blueprint, a model for its objects.类就是对象的模型，是对对象的抽象。
 
-So again, a class it is just a model, or a way to define  **attributes**  and  **behavior**  (as we talked about in the theory section). As an example, a vehicle  **class**  has its own  **attributes**  that define what  **objects** are vehicles. The number of wheels, type of tank, seating capacity, and maximum velocity are all attributes of a vehicle.
+So again, a class it is just a model, or a way to define  **attributes**  and  **behavior**  (as we talked about in the theory section). As an example, a vehicle  **class**  has its own  **attributes**  that define what  **objects** are vehicles. The number of wheels, type of tank, seating capacity, and maximum velocity are all attributes of a vehicle.所以，类就是一种模型，一种定义属性和表现的方式（正如理论部分所讲）。举个例子，车辆这种类就有它自己的属性，能够定义什么对象是车辆。轮胎的数量，油箱类型，座位数量，最快速度等等，都是车辆的属性。
 
-With this in mind, let’s look at Python syntax for  **classes**:
+With this in mind, let’s look at Python syntax for  **classes**:有了这些前提，我们一起来看看Python中类的表达句法：
 
 ```py
 class Vehicle:
     pass
 ```
 
-We define classes with a  **class statement —** and that’s it. Easy, isn’t it?
+We define classes with a  **class statement —** and that’s it. Easy, isn’t it?我们用类语句
 
 **Objects**  are instances of a  **class**. We create an instance by naming the class.
 

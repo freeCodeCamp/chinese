@@ -289,25 +289,25 @@ We can see we used attribute as a parameter for the  `Dictionary`  `key`, and it
 
 ### Classes & Objects类和对象
 
-#### A little bit of theory:一点理论知识：
+#### A little bit of theory:理论先导：
 
-**Objects**  are a representation of real world objects like cars, dogs, or bikes. The objects share two main characteristics:  **data**  and  **behavior**.对象代表了真实世界当中的物体，例如汽车、狗狗、自行车等。这些对象有两个主要特点：数据和表现。
+**Objects**  are a representation of real world objects like cars, dogs, or bikes. The objects share two main characteristics:  **data**  and  **behavior**.对象代表了真实世界当中的实体，例如汽车、狗狗、自行车等。这些对象有两个主要特点：数据和行为。
 
-Cars have  **data,**  like number of wheels, number of doors, and seating capacity They also exhibit  **behavior**: they can accelerate, stop, show how much fuel is left, and so many other things.汽车包含有数据，比如有几个轮子，几个车门，几个座位。汽车也有一定表现，例如他们可以加速，可以停下，可以显示还剩多少燃油，诸如此类。
+Cars have  **data,**  like number of wheels, number of doors, and seating capacity They also exhibit  **behavior**: they can accelerate, stop, show how much fuel is left, and so many other things.汽车包含有数据，比如轮胎数量，车门数量，和座位数量。汽车也有一定行为，例如他们可以加速，可以停下，可以显示还剩多少燃油，诸如此类。
 
-We identify  **data**  as  **attributes**  and  **behavior**  as  **methods**  in object-oriented programming. Again:在面向对象的程序设计中，我们将数据看做属性，将表现看做方法。
+We identify  **data**  as  **attributes**  and  **behavior**  as  **methods**  in object-oriented programming. Again:在面向对象的程序设计中，我们将数据看做属性，将行为看做方法。
 
-Data → Attributes and Behavior → Methods数据→属性&表现→方法
+Data → Attributes and Behavior → Methods数据→属性&行为→方法
 
-And a  **Class**  is the blueprint from which individual objects are created. In the real world, we often find many objects with the same type. Like cars. All the same make and model (and all have an engine, wheels, doors, and so on). Each car was built from the same set of blueprints and has the same components.类从对象中抽象而来。真实世界当中，一种类型下有很多物体，比如汽车。所有汽车的制作过程都一样，模型也一样，都有引擎、轮胎等等。每辆汽车都是同一批设计图纸的产物，有着相同的零部件。
+And a  **Class**  is the blueprint from which individual objects are created. In the real world, we often find many objects with the same type. Like cars. All the same make and model (and all have an engine, wheels, doors, and so on). Each car was built from the same set of blueprints and has the same components.类从对象中抽象而来。真实世界当中，一种类型下有很多物体，比如汽车。所有汽车的制作过程基本一致，设计模型也相差无几，都有引擎、轮胎等等。每辆汽车都是同一批设计图纸的产物，有着相同的零部件。
 
 #### Python Object-Oriented Programming mode: ONPython面向对象的程序设计模式：ON
 
 Python, as an Object-Oriented programming language, has these concepts:  **class**  and  **object**.面向对象的程序设计语言——Python，有类和对象这两个概念。
 
-A class is a blueprint, a model for its objects.类就是对象的模型，是对对象的抽象。
+A class is a blueprint, a model for its objects.类就是对象的模板，是对对象的抽象。
 
-So again, a class it is just a model, or a way to define  **attributes**  and  **behavior**  (as we talked about in the theory section). As an example, a vehicle  **class**  has its own  **attributes**  that define what  **objects** are vehicles. The number of wheels, type of tank, seating capacity, and maximum velocity are all attributes of a vehicle.所以，类就是一种模型，一种定义属性和表现的方式（正如理论部分所讲）。举个例子，车辆这种类就有它自己的属性，能够定义什么对象是车辆。轮胎的数量，油箱类型，座位数量，最快速度等等，都是车辆的属性。
+So again, a class it is just a model, or a way to define  **attributes**  and  **behavior**  (as we talked about in the theory section). As an example, a vehicle  **class**  has its own  **attributes**  that define what  **objects** are vehicles. The number of wheels, type of tank, seating capacity, and maximum velocity are all attributes of a vehicle.所以，类就是一种模型，一种定义属性和行为的方式（正如理论部分所讲）。举个例子，车辆这种类就有它自己的属性，属性能够定义什么对象是车辆。轮胎的数量，油箱类型，座位数量，最快速度等等，都是车辆的属性。
 
 With this in mind, let’s look at Python syntax for  **classes**:有了这些前提，我们一起来看看Python中类的表达句法：
 
@@ -316,18 +316,18 @@ class Vehicle:
     pass
 ```
 
-We define classes with a  **class statement —** and that’s it. Easy, isn’t it?我们用类语句
+We define classes with a  **class statement —** and that’s it. Easy, isn’t it?我们用类语句来定义类。
 
-**Objects**  are instances of a  **class**. We create an instance by naming the class.
+**Objects**  are instances of a  **class**. We create an instance by naming the class.对象是类的实体，是类的表现形式。通过命名类，我们可以创建实体。
 
 ```py
 car = Vehicle()
 print(car) # <main.Vehicle instance at 0x7fb1de6c2638>
 ```
 
-Here  `car`  is an  **object**  (or instance) of the  **class**  `Vehicle`.
+Here  `car`  is an  **object**  (or instance) of the  **class**  `Vehicle`.这里的car就是“Vehicle”类中的一个对象。
 
-Remember that our vehicle  **class**  has four  **attributes**: number of wheels, type of tank, seating capacity, and maximum velocity. We set all these  **attributes**  when creating a vehicle  **object**. So here, we define our  **class**  to receive data when it initiates it:
+Remember that our vehicle  **class**  has four  **attributes**: number of wheels, type of tank, seating capacity, and maximum velocity. We set all these  **attributes**  when creating a vehicle  **object**. So here, we define our  **class**  to receive data when it initiates it:记住，我们的“Vehicle”类中有四个属性：车轮数量，邮箱类型，座位数量和最快速度。创建一种车辆对象时我们便设置好这些属性。所以这里，一开始我们就定义类来接收数据。
 
 ```py
 class Vehicle:
@@ -338,15 +338,15 @@ class Vehicle:
         self.maximum_velocity = maximum_velocity
 ```
 
-We use the  `init`  **method**. We call it a constructor method. So when we create the vehicle  **object**, we can define these  **attributes**. Imagine that we love the  **Tesla Model S,**  and we want to create this kind of  **object**. It has four wheels, runs on electric energy, has space for five seats, and the maximum velocity is 250km/hour (155 mph). Let’s create this  **object:**
+We use the  `init`  **method**. We call it a constructor method. So when we create the vehicle  **object**, we can define these  **attributes**. Imagine that we love the  **Tesla Model S,**  and we want to create this kind of  **object**. It has four wheels, runs on electric energy, has space for five seats, and the maximum velocity is 250km/hour (155 mph). Let’s create this  **object:**我们运用了'init'方法这种构造方法。所以创建车辆对象时，我们可以定义这些属性。设想，我们喜欢**Tesla Model S,**，自然而然我们便想创建这样一种对象。这个对象有四个车轮，用电驱动前行，有四个座位，最高时速可达250km，合每小时155英里。那我们就来创建这个对象：
 
 ```py
 tesla_model_s = Vehicle(4, 'electric', 5, 250)
 ```
 
-Four wheels + electric “tank type” + five seats + 250km/hour maximum speed.
+Four wheels + electric “tank type” + five seats + 250km/hour maximum speed.属性包括四个车轮，用电驱动，五个车座，最高时速为250km。
 
-All attributes are set. But how can we access these attributes’ values? We  **send a message to the object asking about them**. We call it a  **method**. It’s the  **object’s behavior**. Let’s implement it:
+All attributes are set. But how can we access these attributes’ values? We  **send a message to the object asking about them**. We call it a  **method**. It’s the  **object’s behavior**. Let’s implement it:所有属性都已经设置完毕。但是我们怎么获得这些属性的值呢？这就需要“向对象发送一条信息询问”，我们把这一过程称为“方法”，也就是“对象的行为”。我们来做一下：
 
 ```py
 class Vehicle:
@@ -375,10 +375,9 @@ class Vehicle:
     self<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>__number_of_wheels <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> number</code></pre><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">And we can use these methods as attributes:</p><pre class=" language-py" style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; color: rgb(27, 27, 50); background: rgb(238, 238, 240); text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none; overflow: auto; min-width: 100%; max-width: 100%;"><code class=" language-py" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; color: rgb(0, 0, 0); background: transparent; text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none;">tesla_model_s <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> Vehicle<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">4</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">'electric'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">5</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">250</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
 ```
 
-This is slightly different than defining methods. The methods work as attributes. For example, when we set the new number of wheels, we don’t apply two as a parameter, but set the value 2 to  `number_of_wheels`. This is one way to write  `pythonic`  `getter`  and  `setter`  code.
+This is slightly different than defining methods. The methods work as attributes. For example, when we set the new number of wheels, we don’t apply two as a parameter, but set the value 2 to  `number_of_wheels`. This is one way to write  `pythonic`  `getter`  and  `setter`  code.这个跟定义“方法”不太一样。这种情况下，“方法”作为参数运转。举个例子，设定车轮数量时，我们不是把“2”作为参数，而是把“2”赋值给“车轮数量”这一属性。而这也是写pythonic，getter和setter代码的一种方法。
 
-But we can also use methods for other things, like the “**make\_noise**” method. Let’s see it:
-
+But we can also use methods for other things, like the “**make\_noise**” method. Let’s see it:当然“方法”也有其他用途，以“**make\_noise**”方法为例：
 ```py
 class Vehicle:
     def init(self, number_of_wheels, type_of_tank, seating_capacity, maximum_velocity):
@@ -390,21 +389,21 @@ class Vehicle:
     <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">print</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">'VRUUUUUUUM'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span></code></pre><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">When we call this method, it just returns a string<span> </span><strong style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; color: rgb(27, 27, 50);"><em style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: italic; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; color: rgb(27, 27, 50);">“</em>VRRRRUUUUM.<em style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: italic; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; color: rgb(27, 27, 50);">”</em></strong></p><pre class=" language-py" style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; color: rgb(27, 27, 50); background: rgb(238, 238, 240); text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none; overflow: auto; min-width: 100%; max-width: 100%;"><code class=" language-py" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; color: rgb(0, 0, 0); background: transparent; text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none;">tesla_model_s <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> Vehicle<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">4</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">'electric'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">5</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">250</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
 ```
 
-### Encapsulation: Hiding Information
+### Encapsulation: Hiding Information封装：隐藏信息
 
-Encapsulation is a mechanism that restricts direct access to objects’ data and methods. But at the same time, it facilitates operation on that data (objects’ methods).
+Encapsulation is a mechanism that restricts direct access to objects’ data and methods. But at the same time, it facilitates operation on that data (objects’ methods).封装机制限制对象数据和方法的直接访问。但同时，封装有利于数据（对象的方法）层面的操作。
 
-> “Encapsulation can be used to hide data members and members function. Under this definition, encapsulation means that the internal representation of an  [object][2]  is generally hidden from view outside of the object’s definition.” — Wikipedia
+> “Encapsulation can be used to hide data members and members function. Under this definition, encapsulation means that the internal representation of an  [object][2]  is generally hidden from view outside of the object’s definition.” — Wikipedia维基百科上说：“封装可以用来隐藏数据成员和成员函数。封装意味着对象的内部实现通常被隐藏，并由定义替代。”
 
-All internal representation of an object is hidden from the outside. Only the object can interact with its internal data.
+All internal representation of an object is hidden from the outside. Only the object can interact with its internal data.对象的左右内部实现都被隐藏，只有对象本身可以和内部数据互动。
 
-First, we need to understand how  `public`  and  `non-public`  instance variables and methods work.
+First, we need to understand how  `public`  and  `non-public`  instance variables and methods work.首先，我们需要理解公共(public)和非公共(non-public)实例变量以及方法是如何工作。
 
-#### Public Instance Variables
+#### Public Instance Variables公共实例变量
 
-For a Python class, we can initialize a  `public instance variable`  within our constructor method. Let’s see this:
+For a Python class, we can initialize a  `public instance variable`  within our constructor method. Let’s see this:对于Python当中的类而言，我们在构造方法中预置一个公共实例变量，如下：
 
-Within the constructor method:
+Within the constructor method:在构造方法内部：
 
 ```py
 class Person:
@@ -412,30 +411,30 @@ class Person:
         self.first_name = first_name
 ```
 
-Here we apply the  `first_name`  value as an argument to the  `public instance variable`.
+Here we apply the  `first_name`  value as an argument to the  `public instance variable`.我们将"first_name"的值赋给公共实例变量。
 
 ```py
 tk = Person('TK')
 print(tk.first_name) # => TK
 ```
 
-Within the class:
+Within the class:在类当中，如果我们直接给first_name定义：
 
 ```py
 class Person:
     first_name = 'TK'
 ```
 
-Here, we do not need to apply the  `first_name`  as an argument, and all instance objects will have a  `class attribute`  initialized with  `TK`.
+Here, we do not need to apply the  `first_name`  as an argument, and all instance objects will have a  `class attribute`  initialized with  `TK`.那我们就不需要再给变量赋值，因为所有的实例对象都会有初始化的类属性——"TK".
 
 ```py
 tk = Person()
 print(tk.first_name) # => TK
 ```
 
-Cool. We have now learned that we can use  `public instance variables`  and  `class attributes`. Another interesting thing about the  `public`  part is that we can manage the variable value. What do I mean by that? Our  `object`  can manage its variable value:  `Get`  and  `Set`  variable values.
+Cool. We have now learned that we can use  `public instance variables`  and  `class attributes`. Another interesting thing about the  `public`  part is that we can manage the variable value. What do I mean by that? Our  `object`  can manage its variable value:  `Get`  and  `Set`  variable values.现在我们已经学过了如何使用公共实例变量和类属性。公共实例变量还有一个特点，就是可变。什么意思呢？就是我们的对象可以通过"Get"和"Set"变量值来管理自身变量值。
 
-Keeping the  `Person`  class in mind, we want to set another value to its  `first_name`  variable:
+Keeping the  `Person`  class in mind, we want to set another value to its  `first_name`  variable:脑子里想象一个"Person"类，我们想要给这个类当中的"first_name"变量设定一个值：
 
 ```py
 tk = Person('TK')
@@ -443,31 +442,31 @@ tk.first_name = 'Kaio'
 print(tk.first_name) # => Kaio
 ```
 
-There we go. We just set another value (`kaio`) to the  `first_name`  instance variable and it updated the value. Simple as that. Since it’s a  `public`  variable, we can do that.
+There we go. We just set another value (`kaio`) to the  `first_name`  instance variable and it updated the value. Simple as that. Since it’s a  `public`  variable, we can do that.我们将"Kaio"赋值给"first_name"这个实例变量，实例变量随之更新。原因就在于，这是一个公共变量。
 
-#### Non-public Instance Variable
+#### Non-public Instance Variable非公共实例变量
 
-> We don’t use the term “private” here, since no attribute is really private in Python (without a generally unnecessary amount of work). —  [PEP 8][3]
+> We don’t use the term “private” here, since no attribute is really private in Python (without a generally unnecessary amount of work). —  [PEP 8][3]因为Python（没有一大堆不必要的工作时）[3]当中没有一个变量完全私有不公开，所以我们这里使用了非公共(non-public)这个词，而没用使用私有(private)这个词。
 
-As the  `public instance variable`  , we can define the  `non-public instance variable`  both within the constructor method or within the class. The syntax difference is: for  `non-public instance variables`  , use an underscore (`_`) before the  `variable`  name.
+As the  `public instance variable`  , we can define the  `non-public instance variable`  both within the constructor method or within the class. The syntax difference is: for  `non-public instance variables`  , use an underscore (`_`) before the  `variable`  name.跟公共实例变量无异，我们也可以在构造方法和类当中定义非公共实例变量。句法差异在于：对于非公共实例变量而言，需要在变量名字前使用"_".
 
-> “‘Private’ instance variables that cannot be accessed except from inside an object don’t exist in Python. However, there is a convention that is followed by most Python code: a name prefixed with an underscore (e.g.  `_spam_`_) should be treated as a non-public part of the API (whether it is a function, a method or a data member)” —  [Python Software Foundation][4]_
+> “‘Private’ instance variables that cannot be accessed except from inside an object don’t exist in Python. However, there is a convention that is followed by most Python code: a name prefixed with an underscore (e.g.  `_spam_`_) should be treated as a non-public part of the API (whether it is a function, a method or a data member)” —  [Python Software Foundation][4]_根据Python软体基金会，“Python中不存在私有实例变量，除了在对象内部，否则不能得到私有实例变量。然而，Python中大多数代码都遵循一条惯例：无论是函数、方法或者数据成员，只有其名字前有一条下划线（例如"_spam_"_），它就可以被视为API（应用编程接口）的非公共部分。”
 
-_Here’s an example:_
+_Here’s an example:_例子如下：
 
 _`class Person:
     def __init_`_`(self, first_name, email):
         self.first_name = first_name
         self._email = email_`
 
-_Did you see the  `email`  variable? This is how we define a  `non-public variable`  :_
+_Did you see the  `email`  variable? This is how we define a  `non-public variable`  :_看见"email"变量了吧，这就是定义非公共变量的方式。
 
 _`tk = Person('TK', 'tk@mail.com')
 print(tk._email) # [tk@mail.com][5]_`_
 
 > __We can access and update it.  `Non-public variables`  are just a convention and should be treated as a non-public part of the API.__
 
-__So we use a method that allows us to do it inside our class definition. Let’s implement two methods (`email`  and  `update_email`) to understand it:__
+__So we use a method that allows us to do it inside our class definition. Let’s implement two methods (`email`  and  `update_email`) to understand it:__我们可以获得并且更新非公共变量。非公共变量只是一种约定俗成，不应被当做API的非公共部分。所以我们采用一种方法，可以让我们在类的定义中将非公共变量当做非公共部分。两个方法("email" & "update_email")可帮助理解：
 
 __`class Person:
     def __init`__`(self, first_name, email):
@@ -489,16 +488,16 @@ __`class Person:
 tk.update_email('new_tk@mail.com')
 print(tk.email()) # => [new_tk@mail.com][8]_`
 
-1.  _We initiated a new object with  `first_name`  TK and  `email`  [tk@mail.com][9]_
-2.  _Printed the email by accessing the  `non-public variable`  with a method_
-3.  _Tried to set a new  `email`  out of our class_
-4.  _We need to treat  `non-public variable`  as  `non-public`  part of the API_
-5.  _Updated the  `non-public variable`  with our instance method_
-6.  _Success! We can update it inside our class with the helper method_
+1.  _We initiated a new object with  `first_name`  TK and  `email`  [tk@mail.com][9]_我们引入了一个新对象，包括"first_name"和"email"。
+2.  _Printed the email by accessing the  `non-public variable`  with a method_我们用一种方法得到了非公共变量，输出了"email"。
+3.  _Tried to set a new  `email`  out of our class_我们试图在类之外设置一个新的"email"。
+4.  _We need to treat  `non-public variable`  as  `non-public`  part of the API_我们需要将非公共变量视作API的非公共部分。
+5.  _Updated the  `non-public variable`  with our instance method_运用实例方法更新了非公共变量。
+6.  _Success! We can update it inside our class with the helper method_大功告成！可运用助手方法(the helper method)在类中更新。
 
-#### _Public Method_
+#### _Public Method_公共方法
 
-_With  `public methods`, we can also use them out of our class:_
+_With  `public methods`, we can also use them out of our class:_公共方法也可以在类之外使用。
 
 _`class Person:
     def __init_`_`(self, first_name, age):
@@ -507,18 +506,18 @@ _`class Person:
 
 ```
 <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">def</span> <span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(221, 74, 104);">show_age</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>self<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span>
-    <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">return</span> self<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>_age</code></pre><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">Let’s test it:</p><pre class=" language-py" style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; color: rgb(27, 27, 50); background: rgb(238, 238, 240); text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none; overflow: auto; min-width: 100%; max-width: 100%;"><code class=" language-py" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; color: rgb(0, 0, 0); background: transparent; text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none;">tk <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> Person<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">'TK'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">25</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
+    <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">return</span> self<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>_age</code></pre><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">我们来测试一下：</p><pre class=" language-py" style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; color: rgb(27, 27, 50); background: rgb(238, 238, 240); text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none; overflow: auto; min-width: 100%; max-width: 100%;"><code class=" language-py" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; color: rgb(0, 0, 0); background: transparent; text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none;">tk <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> Person<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">'TK'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">25</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
 ```
 
 `
 
 `print(tk.show_age()) # => 25`
 
-Great — we can use it without any problem.
+Great — we can use it without any problem.棒极了！这样用没有任何问题。
 
-#### Non-public Method
+#### Non-public Method非公共方法
 
-But with  `non-public methods`  we aren’t able to do it. Let’s implement the same  `Person`  class, but now with a  `show_age`  `non-public method`  using an underscore (`_`).
+But with  `non-public methods`  we aren’t able to do it. Let’s implement the same  `Person`  class, but now with a  `show_age`  `non-public method`  using an underscore (`_`).非公共方法无法在类之外使用。我们要用到同一个"Person"类，用下划线表示添加非公共方法"show_age"。
 
 ```py
 class Person:
@@ -529,9 +528,9 @@ class Person:
     <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">return</span> self<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>_age</code></pre><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">And now, we’ll try to call this<span> </span><code style="box-sizing: inherit; margin: 0px; padding: 0px 5px 2px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: 1em; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 0.8em; vertical-align: baseline; background: rgb(208, 208, 213); word-break: break-all;">non-public method</code><span> </span>with our object:</p><pre class=" language-py" style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; color: rgb(27, 27, 50); background: rgb(238, 238, 240); text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none; overflow: auto; min-width: 100%; max-width: 100%;"><code class=" language-py" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; color: rgb(0, 0, 0); background: transparent; text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none;">tk <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> Person<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">'TK'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">25</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
 ```
 
-> _We can access and update it.  `Non-public methods`  are just a convention and should be treated as a non-public part of the API._
+> _We can access and update it.  `Non-public methods`  are just a convention and should be treated as a non-public part of the API._我们可以得到并且更新非公共方法。这一方法是一个惯例，应该被视为API中的非公共部分。
 
-_Here’s an example for how we can use it:_
+_Here’s an example for how we can use it:_下面的例子显示了非公共方法的使用过程：
 
 _`class Person:
     def __init_`_`(self, first_name, age):
@@ -551,23 +550,23 @@ _`class Person:
 `tk = Person('TK', 25)
 print(tk.show_age()) # => 25`
 
-Here we have a  `_get_age_` _`non-public method`  and a  `show_age`  `public method`. The  `show_age`  can be used by our object (out of our class) and the  `_get_age_` _only used inside our class definition (inside  `show_age`  method). But again: as a matter of convention.__
+Here we have a  `_get_age_` _`non-public method`  and a  `show_age`  `public method`. The  `show_age`  can be used by our object (out of our class) and the  `_get_age_` _only used inside our class definition (inside  `show_age`  method). But again: as a matter of convention.__这里我们既有非公共方法"_get_age_"，也有公共方法"show_age"。"show_age"可以在类之外由我们的对象使用，但是"_get_age_"只能在类定义（"show_age"方法之内）之内使用。需再次强调，非公共方法是一种约定俗成。
 
-#### __Encapsulation Summary__
+#### __Encapsulation Summary__封装总结
 
-__With encapsulation we can ensure that the internal representation of the object is hidden from the outside.__
+__With encapsulation we can ensure that the internal representation of the object is hidden from the outside.__封装可以确保对象的内部实现被隐藏。
 
-### __Inheritance: behaviors and characteristics__
+### __Inheritance: behaviors and characteristics__继承：行为和特点
 
-__Certain objects have some things in common: their behavior and characteristics.__
+__Certain objects have some things in common: their behavior and characteristics.__特定对象的共同点在于他们的行为和特点。
 
-__For example, I inherited some characteristics and behaviors from my father. I inherited his eyes and hair as characteristics, and his impatience and introversion as behaviors.__
+__For example, I inherited some characteristics and behaviors from my father. I inherited his eyes and hair as characteristics, and his impatience and introversion as behaviors.__比如说，我继承了我父亲的一些特点和行为。特点方面，我有跟父亲一样的大眼睛和头发；行为方面，我跟父亲一样缺乏耐心，性格内向。
 
-__In object-oriented programming, classes can inherit common characteristics (data) and behavior (methods) from another class.__
+__In object-oriented programming, classes can inherit common characteristics (data) and behavior (methods) from another class.__在面向对象的程序设计中，类可以从其他的类中继承共同的特点（即数据）和行为（即方法）。
 
-__Let’s see another example and implement it in Python.__
+__Let’s see another example and implement it in Python.__下面这个例子可以用在Python中。
 
-__Imagine a car. Number of wheels, seating capacity and maximum velocity are all attributes of a car. We can say that an  **ElectricCar** class inherits these same attributes from the regular  **Car**  class.__
+__Imagine a car. Number of wheels, seating capacity and maximum velocity are all attributes of a car. We can say that an  **ElectricCar** class inherits these same attributes from the regular  **Car**  class.__想象有一辆汽车。汽车的属性包括车轮数量、车座个数和最高时速。那“电动汽车”类就可以从常规“汽车”类继承一些相同的属性。
 
 __`class Car:
     def __init_`_`(self, number_of_wheels, seating_capacity, maximum_velocity):
@@ -575,56 +574,56 @@ __`class Car:
         self.seating_capacity = seating_capacity
         self.maximum_velocity = maximum_velocity`_
 
-_Our  **Car**  class implemented:_
+_Our  **Car**  class implemented:_我们的“汽车”类就可以直接使用这些：
 
 _`my_car = Car(4, 5, 250)
 print(my_car.number_of_wheels)
 print(my_car.seating_capacity)
 print(my_car.maximum_velocity)`_
 
-_Once initiated, we can use all  `instance variables`  created. Nice._
+_Once initiated, we can use all  `instance variables`  created. Nice._开始后，我们就可以使用所有创建好的“实例变量”。
 
-_In Python, we apply a  `parent class`  to the  `child class`  as a parameter. An  **ElectricCar**  class can inherit from our  **Car**  class._
+_In Python, we apply a  `parent class`  to the  `child class`  as a parameter. An  **ElectricCar**  class can inherit from our  **Car**  class._Python中，我们将父类作为参数应用到子类中，好比“电动汽车”类可以从“车类”继承行为和特点。
 
 _`class ElectricCar(Car):
     def **init**(self, number_of_wheels, seating_capacity, maximum_velocity):
         Car.**init**(self, number_of_wheels, seating_capacity, maximum_velocity)`_
 
-_Simple as that. We don’t need to implement any other method, because this class already has it (inherited from  **Car**  class). Let’s prove it:_
+_Simple as that. We don’t need to implement any other method, because this class already has it (inherited from  **Car**  class). Let’s prove it:_不难吧。因为从“车”类继承过来的方法，我们无需在使用其他任何方法。验证一下：
 
 _`my_electric_car = ElectricCar(4, 5, 250)
 print(my_electric_car.number_of_wheels) # => 4
 print(my_electric_car.seating_capacity) # => 5
 print(my_electric_car.maximum_velocity) # => 250`_
 
-_Beautiful._
+_Beautiful._一个字：爽！
 
-### _That’s it!_
+### _That’s it!_大概就这么多。
 
-_We learned a lot of things about Python basics:_
+_We learned a lot of things about Python basics:_总结一下我们学习的Python基础知识：
 
--   _How Python variables work_
--   _How Python conditional statements work_
--   _How Python looping (while & for) works_
--   _How to use Lists: Collection | Array_
--   _Dictionary Key-Value Collection_
--   _How we can iterate through these data structures_
--   _Objects and Classes_
--   _Attributes as objects’ data_
--   _Methods as objects’ behavior_
--   _Using Python getters and setters & property decorator_
--   _Encapsulation: hiding information_
--   _Inheritance: behaviors and characteristics_
+-   _How Python variables work_变量如何工作
+-   _How Python conditional statements work_条件语句
+-   _How Python looping (while & for) works_while & for循环
+-   _How to use Lists: Collection | Array_列表：集合|数组
+-   _Dictionary Key-Value Collection_字典键-值集合
+-   _How we can iterate through these data structures_如何在数据结构中迭代
+-   _Objects and Classes_对象和类
+-   _Attributes as objects’ data_属性作为对象数据
+-   _Methods as objects’ behavior_方法作为对象行为
+-   _Using Python getters and setters & property decorator_Python中的getters setters和property decorator
+-   _Encapsulation: hiding information_封装：隐藏信息
+-   _Inheritance: behaviors and characteristics_继承：行为和特点
 
-_Congrats! You completed this dense piece of content about Python._
+_Congrats! You completed this dense piece of content about Python._祝贺你！你已经完成这一部分的Python学习！
 
-_If you want a complete Python course, learn more real-world coding skills and build projects, try  [**_One Month Python Bootcamp_**][10]. See you there ☺_
+_If you want a complete Python course, learn more real-world coding skills and build projects, try  [**One Month Python Bootcamp_**][10]. See you there ☺_如果你想学习一套完整的Python课程，学习更多的编程技巧，搭建项目，试着点击[**One Month Python Bootcamp_**]。期待看见你的身影~
 
-_For more stories and posts about my journey learning & mastering programming, follow my publication  [**The Renaissance Developer**][11]._
+_For more stories and posts about my journey learning & mastering programming, follow my publication  [**The Renaissance Developer**][11]._想了解更多我的编程学习历程，可以关注我的网站[**The Renaissance Developer**]
 
-_Have fun, keep learning, and always keep coding._
+_Have fun, keep learning, and always keep coding._终身学习，坚持编程，笑口常开。
 
-_My  <a href="[https://twitter.com/LeandroTk][12]_" rel="noopener" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; background-color: transparent; color: rgb(10, 10, 35); text-decoration: underline; cursor: pointer; word-break: break-word;">Twitter  &  [Github][13]. ☺
+_My  <a href="[https://twitter.com/LeandroTk][12]_" rel="noopener" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; background-color: transparent; color: rgb(10, 10, 35); text-decoration: underline; cursor: pointer; word-break: break-word;">Twitter  &  [Github][13]. ☺欢迎关注我的Twitter[https://twitter.com/LeandroTk]和GitHub[https://github.com/LeandroTk]账号。
 
 [1]: https://medium.com/the-renaissance-developer/python-101-the-basics-441136fb7cc3
 [2]: https://en.wikipedia.org/wiki/Object_(computer_science)

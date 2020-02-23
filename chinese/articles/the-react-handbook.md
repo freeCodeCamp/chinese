@@ -1,6 +1,6 @@
 > * 原文地址：[The React Handbook](https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795/)
 > * 原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> * 译者：
+> * 译者：XuQuan-nikkkki
 > * 校对者：
 
 ![The React Handbook](https://cdn-media-1.freecodecamp.org/images/1*m5aPLXkrWJs7xKsfYViJEg.png)

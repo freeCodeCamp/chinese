@@ -3,22 +3,22 @@
 > * 译者：XuQuan-nikkkki
 > * 校对者：
 
-![The React Handbook](https://cdn-media-1.freecodecamp.org/images/1*m5aPLXkrWJs7xKsfYViJEg.png)
+![React 使用手册](https://cdn-media-1.freecodecamp.org/images/1*m5aPLXkrWJs7xKsfYViJEg.png)
 
-The React Handbook follows the 80/20 rule: learn in 20% of the time the 80% of a topic.
+这份 React 使用手册遵循了 80/20 法则：花 20% 的时间学习 80% 主题相关的内容。 
 
-I find this approach gives a well-rounded overview. This book does not try to cover everything under the sun related to React, but it should give you the basic building blocks to get out there and become a great React developer. If you think some specific topic should be included, tell me. You can reach me on Twitter  [@flaviocopes][1].
+在我看来，这种方法能够提供一份全面的概述。这部手册不会涵盖 React 相关的所有内容，但它会为你提供学习 React 和成为一名杰出的 React 开发者的必备基础。如果你认为这部手册还应该包含某些特定的内容，可以通过 Twitter [@flaviocopes](https://twitter.com/flaviocopes) 告诉我。
 
-I hope the contents of this book will help you achieve what you want:  **learn the basics of React**.
+希望这本书能够帮你达到目的：**学习 React 基础知识**。
 
-You can get this ebook in PDF, ePub and Mobi format at  [reacthandbook.com][2]
+你可以通过 [reacthandbook.com](https://reacthandbook.com/) 获得PDF、ePub 和 Mobi 格式的电子书。
 
-### Book Index
+### 手册索引
 
-#### Table of Contents
+#### 目录
 
-[An introduction to React][3]  
-[How to use create-react-app][4]
+[React 简介][3]  
+[如何使用 create-react-app][4]
 
 ****SECTION 1****: MODERN JAVASCRIPT CORE CONCEPTS YOU NEED TO KNOW TO USE REACT
 
@@ -94,62 +94,62 @@ You can get this ebook in PDF, ePub and Mobi format at  [reacthandbook.com][2]
 
 [Wrapping up][53]
 
-### An introduction to the React view library
+### React 视图库简介
 
-#### What is React?
+#### React 是什么?
 
-React is a JavaScript library that aims to simplify development of visual interfaces.
+React 是一个 JavaScript 库，旨在简化可视化界面的开发。
 
-Developed at Facebook and released to the world in 2013, it drives some of the most widely used apps, powering Facebook and Instagram among countless other applications.
+它由 Facebook 开发，于 2013 年发布，包括 Facebook, Instagram 在内的很多被广泛使用的应用程序都使用了 React。
 
-Its primary goal is to make it easy to reason about an interface and its state at any point in time, by dividing the UI into a collection of components.
+它的主要目标是通过将 UI 划分为组件集合，从而能够在任意时间点推断出组件界面和界面的状态。
 
-#### Why is React so popular?
+#### React 为何如此风靡？
 
-React has taken the frontend web development world by storm. Why?
+React 何以席卷了 web 前端开发领域呢？
 
-#### Less complex than the other alternatives
+#### 复杂性低于其他框架
 
-At the time when React was announced, Ember.js and Angular 1.x were the predominant choices as a framework. Both these imposed so many conventions on the code that porting an existing app was not convenient at all.
+React 发布时，Ember.js 和 Angular 1.x 是最主流的框架，但这两个框架都对代码施加了诸多约束，导致迁移现有应用并不容易。
 
-React made a choice to be very easy to integrate into an existing project, because that’s how they had to do it at Facebook in order to introduce it to the existing codebase. Also, those 2 frameworks brought too much to the table, while React only chose to implement the View layer instead of the full MVC stack.
+React 则做到了易于已有项目的迁移，因为这也是 Facebook 的需求——将已有的代码库迁移到新框架。此外，这两个框架还由于过于深入造成很多麻烦，相比之下， React 只专注于 View 层，而非整个 MVC 框架。
 
-#### Perfect timing
+#### 完美的时机
 
-At the time, Angular 2.x was announced by Google, along with the backwards incompatibility and major changes it was going to bring. Moving from Angular 1 to 2 was like moving to a different framework, so this, along with execution speed improvements that React promised, made it something developers were eager to try.
+React 发布时，正值 Google 发布 Angular 2.x 之际，由于随之而来的向后不兼容和巨大的功能变化，使项目从 Angular 1 升级到 Angular 2 如同迁移到另一个框架一般困难，同时，React 承诺会带来代码执行速度上的优化，导致许多开发者乐于尝试 React。
 
-#### Backed by Facebook
+#### Facebook 的支持
 
-Being backed by Facebook is, of course, going to benefit a project if it turns out to be successful.
+当然，如果最终成功的话，得到 Facebook 的支持将对使用 React 的项目大有裨益。
 
-Facebook currently has a strong interest in React, sees the value of it being Open Source, and this is a huge plus for all the developers using it in their own projects.
+Facebook 目前对 React 展示出了极大的兴趣，并且看到了它作为开源项目的价值，这对于所有的使用 React 的开发者来说都是一大利好消息。
 
-#### Is React simple to learn?
+#### React 容易学吗？
 
-Even though I said that React is simpler than alternative frameworks, diving into React is still complicated, but mostly because of the corollary technologies that can be integrated with React, like Redux and GraphQL.
+尽管我说过 React 比其他框架要简单，但是深入学习 React 仍然很复杂，难度主要来自于与 React 集成的技术，像是 Redux 或 GraphQL。
 
-React in itself has a very small API, and you basically need to understand 4 concepts to get started:
+React 本身是个非常小的 API，你基本上只用学习 4 个概念就能入门：
 
--   Components
+-   Components 组件
 -   JSX
--   State
--   Props
+-   State 状态
+-   Props 属性
 
-All these (and more) are explained in this handbook.
+这些内容都会在手册中展开。
 
-#### How to install React on your development computer
+#### 如何下载 React
 
-How do you install React?
+你要如何下载 React 呢？
 
-React is a library, so saying  _install_  might sound a bit weird. Maybe  _setup_  is a better word, but you get the concept.
+React 是一个库，说 _下载_ 听起来可能会有点奇怪，也许 _配置_ 这个词会更贴切一些，关键是你能理解这是要做什么。
 
-There are various ways to setup React so that it can be used on your app or site.
+配置 React 有许多不同的方法，以便在你的应用或网站上使用它。
 
-#### Load React directly in the web page
+#### 在网页中直接加载 React
 
-The simplest one is to add the React JavaScript file into the page directly. This is best when your React app will interact with the elements present on a single page, and not actually controls the whole navigation aspect.
+最简单的方法是直接在网页中添加 React 的 JavaScript 文件。当你的 React 应用只需要和单个页面上的元素进行互动，而不用管理导航问题时，这种方法比较适用。
 
-In this case, you add 2 script tags to the end of the  `body`  tag:
+在这个例子中，只需在 `body` 底部添加两个 `script` 标签。
 
 ```html
 <html>
@@ -168,11 +168,11 @@ In this case, you add 2 script tags to the end of the  `body`  tag:
 </html>
 ```
 
-> _Please change the version number to the latest version of React available._
+> _请将版本号改为最新可用的 React 版本。_
 
-Here we loaded both React and React DOM. Why 2 libraries? Because React is 100% independent from the browser and can be used outside it (for example on Mobile devices with React Native). Hence the need for React DOM, to add the wrappers for the browser.
+例子中我们加载了 React 和 React DOM。为什么需要添加两个库呢？这是因为 React 是 100% 独立于浏览器的，它可以在浏览器以外的环境里使用（比如搭配 React Native 在移动设备中使用）。因此，这里需要添加 React DOM 来操作浏览器。
 
-After those tags you can load your JavaScript files that use React, or even inline JavaScript in a  `script`  tag:
+在这些标签之后，你就可以加载其他使用 React 的 JavaScript 文件了，甚至可以通过 `script` 标签内联 JavaScript 代码。
 
 ```html
 <script src="app.js"></script>
@@ -181,19 +181,19 @@ After those tags you can load your JavaScript files that use React, or even inli
 
 ```
 
-To use JSX you need an extra step: load Babel
+使用 JSX 还需要额外的步骤：加载 Babel
 
 ```html
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 ```
 
-and load your scripts with the special  `text/babel`  MIME type:
+并且给 `script` 加上属性为 `text/babel` 的 MIME 类型：
 
 ```html
 <script src="app.js" type="text/babel"><;/script>
 ```
 
-Now you can add JSX in your app.js file:
+现在你就可以在 `app.js` 文件中添加 JSX 代码了：
 
 ```jsx
 const Button = () => {
@@ -202,23 +202,23 @@ const Button = () => {
 
 ```
 
-Check out this simple Glitch example:  [https://glitch.com/edit/#!/react-example-inline-jsx?path=script.js][55]
+可以看看这个简单的 Glitch 示例： [https://glitch.com/edit/#!/react-example-inline-jsx?path=script.js](https://glitch.com/edit/#!/react-example-inline-jsx?path=script.js)
 
-Starting in this way with script tags is good for building prototypes and enables a quick start without having to set up a complex workflow.
+通过 `script` 标签的方式非常适合搭建原型，并且无需复杂的配置流程就可以快速进入开发。
 
-### How to use create-react-app
+### 如何使用 create-react-app
 
-`create-react-app`  is a project aimed at getting you up to speed with React in no time, and any React app that needs to outgrow a single page will find that  `create-react-app`meets that need.
+`create-react-app` 是一个旨在帮你快速上手 React 的项目，它能够方便地实现多个页面的 React 应用。
 
-You start by using  `[npx][56]`, which is an easy way to download and execute Node.js commands without installing them.  `npx`  comes with  `npm`  (since version 5.2) and if you don't have npm installed already, do it now from  [https://nodejs.org][57]  (npm is installed with Node).
+你可以从使用 `npx` 开始。`npx` 是一种无需安装即可下载和执行 Node.js 命令的方法。`npx` 自带 `npm` （从 5.2 版本开始），如果你还没有下载 `npm` ，可以去 [nodejs.org](https://nodejs.org) 下载（`npm` 会和 Node 一起安装）。
 
-If you are unsure which version of npm you have, run  `npm -v`  to check if you need to update.
+如果你不确定你的 npm 版本，可以通过执行 `npm -v` 来看看是否需要更新。
 
-> _Tip: check out my  [OSX terminal tutorial][58]  if you’re unfamiliar with using the terminal, applies to Linux as well — I’m sorry but I don’t have a tutorial for Windows at the moment, but Google is your friend._
+> _提示： 如果你还不能熟练使用终端，可以看看我的[OSX 终端教程](https://flaviocopes.com/macos-terminal/)，它对于 Linux 同样适用。 - 很抱歉目前没有 Windows 教程，不过你可以向 Google 求助。_
 
-When you run  `npx create-react-app <app-name>`,  `npx`  is going to  _download_ the most recent  `create-react-app`  release, run it, and then remove it from your system. This is great because you will never have an outdated version on your system, and every time you run it, you're getting the latest and greatest code available.
+当你执行 `npx create-react-app <app-name>` 命令时， `npx` 会下载最新版本的 `create-react-app` ，运行 `create-react-app` ，然后将它从你的系统中删除。这样做的好处是，你的系统上永远不会有过时的版本，因为每次运行时，你都会获得最新版本。
 
-Let’s start then:
+让我们开始吧：
 
 ```bash
 npx create-react-app todolist
@@ -226,57 +226,57 @@ npx create-react-app todolist
 
 ![](https://cdn-media-1.freecodecamp.org/images/bZgizsJA2eDZwRUPT9KmAuqaWq2z-i5JYO49)
 
-This is when it finished running:
+这是当它运行完毕时的情形：
 
 ![](https://cdn-media-1.freecodecamp.org/images/yJPelCCT4muE3FcEci5CIDm4GEyy5rvdh6R5)
 
-`create-react-app`  created a files structure in the folder you told (`todolist`  in this case), and initialized a  [Git][59]  repository.
+`create-react-app` 会在你指定的文件夹内创建一个文件结构（这个例子中是 `todolist`），同时初始化一个 Git 仓库。
 
-It also added a few commands in the  `package.json`  file, so you can immediately start the app by going into the folder and run  `npm start`.
+此外，它还会在 `package.json` 文件中增加了一些命令，让你能够进入文件夹后，立马通过运行 `npm start` 命令来启动应用。
 
 ![](https://cdn-media-1.freecodecamp.org/images/bIcUqq3FBoasmTjSSeYJ1LA4yMndxfNF12nu)
 
 ![](https://cdn-media-1.freecodecamp.org/images/bD33lX4Yp0WYlgDNGCwr3Otftsstxvx1HvTQ)
 
-In addition to  `npm start`,  `create-react-app`  added a few other commands:
+除了 `npm start`, `create-react-app` 还预先设置了其他的命令：
 
--   `npm run build`: to build the React application files in the  `build`  folder, ready to be deployed to a server
--   `npm test`: to run the testing suite using  [Jest][60]
--   `npm eject`: to eject from  `create-react-app`
+-   `npm run build`: 在 `build` 文件夹中构建 React 应用的文件，方便随时部署到服务器上
+-   `npm test`: 通过 [Jest][60] 运行测试套件
+-   `npm eject`: 弹出 `create-react-app` 配置
 
-Ejecting is the act of deciding that  `create-react-app`  has done enough for you, but you want to do more than what it allows.
+尽管 `create-react-app` 自动完成了很多操作，但如果你还想对项目有进一步的调整，可以通过弹出项目配置来实现。
 
-Since  `create-react-app`  is a set of common denominator conventions and a limited amount of options, it's probable that at some point your needs will demand something unique that outgrows the capabilities of  `create-react-app`.
+毕竟 `create-react-app` 提供的是主流配置方案，只提供了有限的自定义选项，因此可能会出现无法满足你的项目的特有需求的情况。
 
-When you eject, you lose the ability of automatic updates but you gain more flexibility in the  [Babel][61]  and  [Webpack][62]  configuration.
+当你弹出配置后，就无法自动更新配置了，但是你可以更灵活地配置 [Babel][61] 和 [Webpack][62]。
 
-When you eject the action is irreversible. You will get 2 new folders in your application directory,  `config`  and  `scripts`. Those contain the configurations - and now you can start editing them.
+弹出配置的操作是不可逆的。当你弹出设置后，应用目录中会出现 2 个新文件夹，分别是 `config` 和 `scripts`。它们包含了配置内容，你可以在里面修改配置。
 
-> _If you already have a React app installed using an older version of React, first check the version by adding  `console.log(React.version)`  in your app, then you can update by running  `yarn add  [react@16.7][63]`, and yarn will prompt you to update (choose the latest version available). Repeat for  `yarn add  [react-dom@16.7][64]`  (change "16.7" with whatever is the newest version of React at the moment)_
+> _如果你的 React 应用使用的是老版本的 React，可以通过在应用中添加 `console.log(React.version)` 来查看 React 的版本，接着运行 `yarn add [react@16.7][63]` 更新 React 的版本，yarn 会提醒你可更新的版本（选择最新的版本）。再运行 `yarn add [react-dom@16.7][64]` 更新 `react-dom`（将 16.7 替换成当前可用的最新版本号_
 
 #### CodeSandbox
 
-An easy way to have the  `create-react-app`  structure, without installing it, is to go to  [https://codesandbox.io/s][65]  and choose "React".
+在 [https://codesandbox.io/s](https://codesandbox.io/s) 上选择 "React" ，无需安装就可以使用 `create-react-app` 。
 
 ![](https://cdn-media-1.freecodecamp.org/images/DQRfUlIow3Z-icJy6XcMwTWh7gd8ZCwac02l)
 
-CodeSandbox is a great way to start a React project without having to install it locally.
+CodeSandbox 是个无需在本地安装就能启动 React 项目的好方法。
 
 #### Codepen
 
-Another great solution is  [Codepen][66].
+另一个法法是使用 [Codepen][66]。
 
-You can use this Codepen starter project which already comes pre-configured with React, with support for Hooks:  [https://codepen.io/flaviocopes/pen/VqeaxB][67]
+你可以使用已经预先配置了 React 且支持 Hooks 的 Codepen 入门项目：[https://codepen.io/flaviocopes/pen/VqeaxB][67]
 
-Codepen “pens” are great for quick projects with one JavaScript file, while “projects” are great for projects with multiple files, like the ones we’ll use the most when building React apps.
+Codepen 里的 "pens" 适合只包含一个 JavaScript 文件的快速项目，而 "projects" 则适合包含多个文件的项目。我们在搭建 React 应用时使用的大多是 "projects"。
 
-One thing to note is that in Codepen, due to how it works internally, you don’t use the regular ES Modules  `import`  syntax, but rather to import for example  `useState`, you use
+使用 Codepen 时需要注意的是，由于 Codepen 的内部机制，在引入 ES 模块时不会使用 `import` 语法，以 `useState` 举例，引入时应这样使用：
 
 ```jsx
 const { useState } = React
 ```
 
-and not
+而不是：
 
 ```jsx
 import { useState } from 'react'

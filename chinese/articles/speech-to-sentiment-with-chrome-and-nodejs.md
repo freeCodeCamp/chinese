@@ -5,11 +5,11 @@
 
 ![How to Build a Speech to Emotion Converter with the Web Speech API and Node.js](https://images.unsplash.com/photo-1542394731-170c9e6d914e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-你有没有构思过用 Node.js 来检查我们发的语音内容是积极的还是消极的？
+你有没有构思过这样的项目啊 -- 用 Node.js 来检查我们发的语音内容是积极的还是消极的？
 
 我之前收到一封讨论音调检测的新闻邮件，说是可以用程序检查我们写的内容是什么，然后告诉我们这个内容给人的感觉是积极进取的，自信的还是其他什么感觉。
 
-我就想有没有可能使用浏览器和 Node.js 来构建一个简化版本呢。
+我就想 -- 有没有可能使用浏览器和 Node.js 来构建一个简化版本呢？
 
 所以我就开发了一个小项目来检测语音内容是积极的、中性的还是消极的。
 
@@ -25,27 +25,26 @@
 
 - 记录语音
 - 将语音转换成为文字
-- 给文字内容打分
+- 文字内容测评
 - 将结果反馈给说话人
 
-After researching for a while, I discovered that the voice recording and translation to text parts were already done by the  [Web Speech API][1]  that's available in Google Chrome. It has exactly what we need in the  [SpeechRecognition][2]  interface.
+搜索一番之后，我发现 [Web Speech API][1] 就可以录音以及将语音转换成文字，在 Google Chrome 就可以使用这个功能，[语音识别][2] 部分正是我们需要的。
 
-As for text scoring, I found  [AFINN][3]  which is a list of words that are already scored. It has a limited scope with "only" 2477 words but it's more than enough for our project.
+而文字内容测评呢，我发现在 [AFINN][3] 上面有测评词汇列表（看不到）。虽然只有 2477 个词汇，但是对我们的项目来说也够用了。
 
-Since we're already using the browser we can show a different emoji with HTML, JavaScript and CSS depending on the result. So that handles our last step.
+结果反馈这一步，我们用 HTML，JavaScript 和 CSS 编写程序来处理结果，将 emoji 展示在网页上。
 
-Now that we know what we're going to use, we can sum it up:
+现在我们知道要用到些什么了，总结一下：
+- 浏览器接收用户的语音，通过 Web Speech API 返回一些文字
+- 向 Node.js 服务器发起处理文字的请求
+- 服务依据 AFINN 的列表测评文字，返回分数（？）
+- 浏览器根据分数显示不同的 emoji
 
--   The browser listens to the user and returns some text using the Web Speech API
--   It makes a request to our Node.js server with the text
--   The server evaluates the text using AFINN's list and returns the score
--   The browser shows a different emoji depending on the score
+**注：**  如果你熟悉项目设置，那么你可以跳过以下“项目文件和设置”部分。
 
-**Note:**  If you're familiar with project setup you can mostly skip the "project files and setup" section below.
+## 项目文件和设置
 
-## Project files and setup
-
-Our project folder and files structure will be as follows:
+项目文件夹和文件结构如下：
 
 ```
 src/
@@ -60,7 +59,7 @@ src/
   server.js // our Node.js server
 ```
 
-On the front end side of things, our  _index.html_  file will include the JS and CSS:
+前端 _index.html_ 文件包括 JS 和 CSS 代码：
 
 ```html
 <html>
@@ -77,23 +76,23 @@ nothing for now
 <span class="token tag" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);"><span class="token tag" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);"><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">&lt;</span>script</span> <span class="token attr-name" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">src</span><span class="token attr-value" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);"><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">=</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">"</span>recognition.js<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">"</span></span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">&gt;</span></span><span class="token tag" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);"><span class="token tag" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);"><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">&lt;/</span>script</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">&gt;</span></span>
 ```
 
-The _recognition.js_  file will be wrapped in the  _DOMContentLoaded_  event so we make sure that the page has loaded before executing our JS:
+_recognition.js_ 文件在 _DOMContentLoaded_ 事件中，确保在执行 JS 代码前加载页面。
 
 ```js
 document.addEventListener('DOMContentLoaded', speechToEmotion, false);
 
 ```
 
-We leave our  _emojis.css_ empty  for now_._
+_emojis.css_ 文件暂时为空。
 
-On our folder, we will run  **npm run init**  which will create  _package.json_.
+在文件夹中运行 **npm run init**，创建 _package.json_。
 
-For now, we will need to install two packages to make our life easier. So just  _npm install_ both:
+接下来，我们需要用 _npm install_ 安装两个包，让事情变得简单点：
 
--   [expressjs][4]  \- to have an HTTP server quickly running
--   [nodemon][5]  \- so we don't constantly type  **node server.js**  whenever we make a change in our  _server.js file_.
+-   [expressjs][4]  \- 包含 HTTP 服务器
+-   [nodemon][5]  \- 这样我们在修改 _server.js_ 的时候就不需要不断键入 **node server.js**
 
-_package.json_  will end up looking something like this:
+_package.json_:
 
 ```json
 {
@@ -116,7 +115,7 @@ _package.json_  will end up looking something like this:
 }
 ```
 
-_server.js_ starts like this:
+_server.js_:
 
 ```js
 const express = require('express')
@@ -134,17 +133,18 @@ app.get('/emotion', function(req, res) {
 
 ```
 
-And with this, we can run  **npm run server-debug**  in the command line and open the browser on  _localhost:3000._  Then we'll see our "nothing for now" message that's in the HTML file.
+接着，在终端运行 **npm run server-debug**，在 _localhost:3000_ 打开浏览器，会看到 HTML 文件中的 “nothing for now” 信息。
+
 
 ## Web Speech API
 
-This API comes out of the box in Chrome and contains  [SpeechRecognition][6]. This is what will allow us to turn on the microphone, speak, and get the result back as text.
+在 Chrome 上使用这个 API，包含 [语音识别][6]，即可将我们的语音消息转换成文字。
 
-It works with events that can detect, for example, when audio is first and last captured.
+它可以检测事件，例如，捕捉音频的起始点。
 
-For now, we will need the  _onresult_  and  _onend_  events so we can check what the microphone captured and when it stops working, respectively.
+现在，我们需要 _onresult_ 和 _onend_ 事件来分别检测麦克风捕捉的内容和捕捉结束的点。
 
-To make our first sound to text capture we just need a dozen lines or so of code in our  _recognition.js_  file.
+_recognition.js_ 文件的代码如下：
 
 ```javascript
 const recognition = new webkitSpeechRecognition()
@@ -159,10 +159,10 @@ recognition.onend = function() {
 }
 
 ```
+如此连接麦克风几秒钟以收听音频。如果没有捕捉到什么，连接就会断开。
 
-This will connect the microphone for some seconds to listen for audio. If nothing is found it will disconnect
+语音识别引擎可识别[这份文件][7]里罗列的语言。
 
-We can find a list of available languages in the Google docs  [here][7].
 
 If we want it to stay connected for more than a few seconds (or for when we speak more than once) there is a property called  **continuous**. It can be changed the same as the  **lang**  property by just assigning it  **true**. This will make the microphone listen for audio indefinitely.
 

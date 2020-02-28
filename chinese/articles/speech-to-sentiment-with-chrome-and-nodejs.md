@@ -1,51 +1,50 @@
-> * 原文地址：[How to Build a Speech to Emotion Converter with the Web Speech API and Node.js 教你用 Web Speech API 和 Node.js 将语音转换成 emoji](https://www.freecodecamp.org/news/speech-to-sentiment-with-chrome-and-nodejs/)
+> * 原文地址：[How to Build a Speech to Emotion Converter with the Web Speech API and Node.js 用 Web Speech API 和 Node.js 将语音转换成 emoji](https://www.freecodecamp.org/news/speech-to-sentiment-with-chrome-and-nodejs/)
 > * 原文作者：Diogo Spínola
-> * 译者：
+> * 译者：miyaliu666
 > * 校对者：
 
 ![How to Build a Speech to Emotion Converter with the Web Speech API and Node.js](https://images.unsplash.com/photo-1542394731-170c9e6d914e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Have you ever wondered - can we make Node.js check to see if what we say is positive or negative?
+你有没有构思过这样的项目啊 -- 用 Node.js 来检查我们发的语音内容是积极的还是消极的？
 
-I got a newsletter which discussed tone detection. The program can check what we write and then tells us if it might be seen as aggressive, confident, or a variety of other feelings.
+我之前收到一封讨论音调检测的新闻邮件，说是可以用程序检查我们写的内容是什么，然后告诉我们这个内容给人的感觉是积极进取的，自信的还是其他什么感觉。
 
-That got me wondering how could I build a simplified version using the browser and Node.js that would be initiated by speaking.
+我就想 -- 有没有可能使用浏览器和 Node.js 来构建一个简化版本呢？
 
-As a result, I ended up with a small project that detects if what was spoken has positive, neutral, or negative valence.
+所以我就开发了一个小项目来检测语音内容是积极的、中性的还是消极的。
 
-Here's how I did it.
+以下是我的方法。
 
-## The plan
+## 步骤
 
 ![](https://www.freecodecamp.org/news/content/images/2020/01/Screenshot-2020-01-27-at-16.13.10.png)
 
-Voice detection -> Voice to text -> Text scoring -> Result
+语音检测 -> 语音转文字 -> 文字测评 -> 结果输出
 
-When you're starting a project, you should sketch out - at least vaguely - your goal and how to reach it. Before starting my search I noted down that I needed:
+在你开始构建一个项目时，你应该（至少模糊地）勾勒出你的目标以及构思如何实现。在开始搜索之前，我罗列出需要做的事情：
 
--   Voice recording
--   A way to translate the recording to text
--   A way to give the text a score
--   A way to show the result to the user that just spoke
+- 记录语音
+- 将语音转换成为文字
+- 文字内容测评
+- 将结果反馈给说话人
 
-After researching for a while, I discovered that the voice recording and translation to text parts were already done by the  [Web Speech API][1]  that's available in Google Chrome. It has exactly what we need in the  [SpeechRecognition][2]  interface.
+搜索一番之后，我发现 [Web Speech API][1] 就可以录音以及将语音转换成文字，在 Google Chrome 就可以使用这个功能，[语音识别][2] 部分正是我们需要的。
 
-As for text scoring, I found  [AFINN][3]  which is a list of words that are already scored. It has a limited scope with "only" 2477 words but it's more than enough for our project.
+而文字内容测评呢，我发现在 [AFINN][3] 上面有测评词汇列表（看不到）。虽然只有 2477 个词汇，但是对我们的项目来说也够用了。
 
-Since we're already using the browser we can show a different emoji with HTML, JavaScript and CSS depending on the result. So that handles our last step.
+结果反馈这一步，我们用 HTML，JavaScript 和 CSS 编写程序来处理结果，将 emoji 展示在网页上。
 
-Now that we know what we're going to use, we can sum it up:
+现在我们知道要用到些什么了，总结一下：
+- 浏览器接收用户的语音，通过 Web Speech API 返回一些文字
+- 向 Node.js 服务器发起处理文字的请求
+- 服务依据 AFINN 的列表测评文字，返回分数（？）
+- 浏览器根据分数显示不同的 emoji
 
--   The browser listens to the user and returns some text using the Web Speech API
--   It makes a request to our Node.js server with the text
--   The server evaluates the text using AFINN's list and returns the score
--   The browser shows a different emoji depending on the score
+**注：**  如果你熟悉项目设置，那么你可以跳过以下“项目文件和设置”部分。
 
-**Note:**  If you're familiar with project setup you can mostly skip the "project files and setup" section below.
+## 项目文件和设置
 
-## Project files and setup
-
-Our project folder and files structure will be as follows:
+项目文件夹和文件结构如下：
 
 ```
 src/
@@ -60,7 +59,7 @@ src/
   server.js // our Node.js server
 ```
 
-On the front end side of things, our  _index.html_  file will include the JS and CSS:
+前端 _index.html_ 文件包括 JS 和 CSS 代码：
 
 ```html
 <html>
@@ -77,23 +76,23 @@ nothing for now
 <span class="token tag" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);"><span class="token tag" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);"><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">&lt;</span>script</span> <span class="token attr-name" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">src</span><span class="token attr-value" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);"><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">=</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">"</span>recognition.js<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">"</span></span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">&gt;</span></span><span class="token tag" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);"><span class="token tag" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);"><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">&lt;/</span>script</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">&gt;</span></span>
 ```
 
-The _recognition.js_  file will be wrapped in the  _DOMContentLoaded_  event so we make sure that the page has loaded before executing our JS:
+_recognition.js_ 文件在 _DOMContentLoaded_ 事件中，确保在执行 JS 代码前加载页面。
 
 ```js
 document.addEventListener('DOMContentLoaded', speechToEmotion, false);
 
 ```
 
-We leave our  _emojis.css_ empty  for now_._
+_emojis.css_ 文件暂时为空。
 
-On our folder, we will run  **npm run init**  which will create  _package.json_.
+在文件夹中运行 **npm run init**，创建 _package.json_。
 
-For now, we will need to install two packages to make our life easier. So just  _npm install_ both:
+接下来，我们需要用 _npm install_ 安装两个包，让事情变得简单点：
 
--   [expressjs][4]  \- to have an HTTP server quickly running
--   [nodemon][5]  \- so we don't constantly type  **node server.js**  whenever we make a change in our  _server.js file_.
+-   [expressjs][4]  \- 包含 HTTP 服务器
+-   [nodemon][5]  \- 这样我们在修改 _server.js_ 的时候就不需要不断键入 **node server.js**
 
-_package.json_  will end up looking something like this:
+_package.json_:
 
 ```json
 {
@@ -116,7 +115,7 @@ _package.json_  will end up looking something like this:
 }
 ```
 
-_server.js_ starts like this:
+_server.js_:
 
 ```js
 const express = require('express')
@@ -134,17 +133,18 @@ app.get('/emotion', function(req, res) {
 
 ```
 
-And with this, we can run  **npm run server-debug**  in the command line and open the browser on  _localhost:3000._  Then we'll see our "nothing for now" message that's in the HTML file.
+接着，在终端运行 **npm run server-debug**，在 _localhost:3000_ 打开浏览器，会看到 HTML 文件中的 “nothing for now” 信息。
+
 
 ## Web Speech API
 
-This API comes out of the box in Chrome and contains  [SpeechRecognition][6]. This is what will allow us to turn on the microphone, speak, and get the result back as text.
+在 Chrome 上使用这个 API，包含 [语音识别][6]，即可将我们的语音消息转换成文字。
 
-It works with events that can detect, for example, when audio is first and last captured.
+它可以检测事件，例如，捕捉音频的起始点。
 
-For now, we will need the  _onresult_  and  _onend_  events so we can check what the microphone captured and when it stops working, respectively.
+现在，我们需要 _onresult_ 和 _onend_ 事件来分别检测麦克风捕捉的内容和捕捉结束的点。
 
-To make our first sound to text capture we just need a dozen lines or so of code in our  _recognition.js_  file.
+_recognition.js_ 文件的代码如下：
 
 ```javascript
 const recognition = new webkitSpeechRecognition()
@@ -159,12 +159,11 @@ recognition.onend = function() {
 }
 
 ```
+如此连接麦克风几秒钟以收听音频。如果没有捕捉到什么，连接就会断开。
 
-This will connect the microphone for some seconds to listen for audio. If nothing is found it will disconnect
+语音识别引擎可识别[这份文件][7]里罗列的语言。
 
-We can find a list of available languages in the Google docs  [here][7].
-
-If we want it to stay connected for more than a few seconds (or for when we speak more than once) there is a property called  **continuous**. It can be changed the same as the  **lang**  property by just assigning it  **true**. This will make the microphone listen for audio indefinitely.
+如果想要延长连接的时间（或者是一段话分几次说的情况），我们可以使用一个叫作 **continuous** 的属性，像给 **lang** 设置属性值一样把它的值设置为 **true**，这样就可以不间断地捕捉音频了。
 
 ```js
 const recognition = new webkitSpeechRecognition()
@@ -180,20 +179,17 @@ recognition.onend = function() {
 }
 
 ```
+我们添加了 **continuous** 属性，只获取最后一个结果，而不是所有结果。
 
-We add the continuous and change the transcript to get only the last result instead of all the results up until now
+刷新页面，首先会弹出对话框问我们是否启用麦克风，选择 yes，然后我们就可以讲话，并且在 Chrome DevTools console 查看语音信息转换成文字的结果。
 
-If we refresh our page, at first it should ask whether we want to allow the usage of the microphone. After replying yes we can speak and check on the Chrome DevTools console the result of our speech.
+**注：**截至本文发布时，Chrome 和安卓系统支持使用这个 API，可能之后 Edge 也会支持。或许可以通过一些脚本或者工具解决浏览器兼容性问题，不过我自己没有尝试。你可以在 [Can I use][8] 搜索兼容性问题。
 
-Profanity is shown censored and there doesn't seem to be a way to remove the censorship. What this means is that we can't rely on profanity for scoring even though AFINN is uncensored.
+## 发起请求
 
-**Note:**  At the moment of writing, this API can be found only in Chrome and Android with expected support for Edge in the near future. There are probably polyfills or other tools that give better browser compatibility but I didn't test them out. You can check the compatibility in  [Can I use][8].
+通过一个简单的 _fetch_ 文件发起请求，将 transcript 作为查询参数，调用（？） **text**。
 
-## Making the request
-
-For the request, a simple  _fetch_  is enough. We send the transcript as a query parameter which we will call  **text**.
-
-Our  _onresult_  function should now look like this:
+_onresult_ 函数：
 
 ```js
   recognition.onresult = function(event) {
@@ -210,15 +206,15 @@ Our  _onresult_  function should now look like this:
   <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
 ```
 
-If we were to use longer texts it would be better to switch /emotion to a POST instead of a GET. For this purpose, though, a GET should be more than enough
+对于较长的文字来说，将 /emotion 转换成 POST（而不是 GET）更好，虽然 GET 也可以
 
-## Valence of emotion
+## 情绪效价
 
-Valence can be seen as a way to measure if our emotions are positive or negative and if they create low or high arousal.
+效价用于评估情绪是正面还是负面的，以及是高唤醒情绪还是低唤醒情绪。
 
-For this project, we will use two emotions:  **happy**  on the positive side for any score above zero, and  **upset**  on the negative side for scores below zero. Scores of zero will be seen as indifferent. Any score of 0 will be treated as "**what?!**"
+在这个项目中，我们使用两种情绪：**开心**，正面情绪，分值为正；**沮丧**，负面情绪，分值为负。分值为零则表示中立的情绪，表达的意思是“额，什么情况”。
 
-The AFINN list is scored from -5 to 5 and the file contains words organised like this:
+AFINN 列表的计分从 -5 分到 5 分，以下是列表的词汇示例：
 
 ```txt
 hope 2
@@ -233,11 +229,9 @@ horrible -3
 horrific -3
 ```
 
-word <space> score
+举个例子，“我希望这个不危险”，其中“希望”是 **2** 分，“危险”是 **-3** 分，那么这句话的总分就是 **-1** 分。这个列表里没有包含的词汇我们可以忽略不计分。
 
-As an example, let's say we spoke to the microphone and said "I hope this is not horrendous". That would be  **2**  points for "hope" and  **\-3**  points for "horrendous" which would make our sentence negative with  **\-1**  points. All the other words that are not on the list we would ignore for scoring.
-
-We could parse the file and convert it into a JSON file that looks similar to this:
+将文件渲染为 JSON 文件：
 
 ```js
 {
@@ -247,15 +241,15 @@ We could parse the file and convert it into a JSON file that looks similar to th
 }
 ```
 
-And then we could check each word in the text and sum up the scores. But this is something that  [Andrew Sliwinski][9]  has already done with  [sentiment][10]. So we're going to use that instead of coding everything from scratch.
+然后我们就可以检测文字里的每个词语，计算总分。不过，[Andrew Sliwinski][9] 的 [sentiment][10] 部分已经有相应的处理，我们可以直接使用，不必什么都自己从头写代码。
 
-To install we use  **npm install sentiment** and open  _server.js_  so we can import the library with:
+键入 **npm install sentiment**，打开 _server.js_，然后引入库：
 
 ```js
 const Sentiment = require('sentiment');
 ```
 
-Followed by changing the route "/emotion" to:
+接着改变 "/emotion" 的路径：
 
 ```js
 app.get('/emotion', function(req, res) {
@@ -265,9 +259,9 @@ app.get('/emotion', function(req, res) {
 
 ```
 
-_sentiment.analyze(<our\_text\_variable>)_  does the steps described before: it checks each word of our text against AFINN's list and gives us a score at the end.
+_sentiment.analyze(<our\_text\_variable>)_  会执行上面说的步骤: 根据 AFINN 列表检查文字中每个词语，最后给我们一个总分。
 
-The variable  **score**  will have an object similar to this:
+变量 **score** 的对象：
 
 ```js
 {
@@ -281,15 +275,15 @@ The variable  **score**  will have an object similar to this:
 }
 ```
 
-What we want is the score property which in this case would lead to a positive result
+在这个例子里我们希望 socore 属性值是一个正值
 
-Now that we have the score returned, we just have to make it show in our browser.
+返回分值之后，我们需要让它在浏览器中显示。
 
-**Note:**  AFINN is in English. While we can select other languages in the Web Speech API we would have to find a scored list similar to AFINN in our desired language to make the matching work.
+**注意：** AFINN 是英文的，要在 Web Speech API 使用其他语言的话，可以搜索类似 AFINN 的分值列表，以匹配相应的语言。
 
 ## Making it smile
 
-For our last step, we will update our  _index.html_  to display an area where we can show the emoji. So we change it to the following:
+最后一步，更新 _index.html_，以展示 emoji：
 
 ```html
 <html>
@@ -310,19 +304,19 @@ For our last step, we will update our  _index.html_  to display an area where we
 </html>
 ```
 
-The emoji used in this project are free for commercial use and can be found  [here][11]. Kudos to the artist.
+本项目中使用的 emoji 允许商用，免费，可以在 [这里][11] 获得。谢谢创作 emoji 的艺术家！
 
-We download the icons we like and add them to the images folder. We will be needing emoji for:
+我们下载一些喜欢的 icon，把它们添加到 images 文件夹，稍后我们会使用这些 emoji：
 
--   **error**  \- When an error occurs
--   **idle**  \- Whenever the microphone is not active
--   **listening**  \- When the microphone is connected and waiting for input
--   **negative -** For positive scores
--   **neutral -** For when the score is zero
--   **positive -** For negative scores
--   **searching -** For when our server request is being done
-
-And in our  _emojis.css_  we simply add:
+-   **error 错误**  \- 出现错误时
+-   **idle 懒洋洋**  \- 麦克风未启用时
+-   **listening 倾听**  \- 麦克风已连接等待输入时
+-   **negative 负面** \- 分值为正时
+-   **neutral 中性** \- 分值为零时
+-   **positive 正面** \- 分值为负时
+-   **searching 搜索** \- 发起服务器请求时
+ 
+在 _emojis.css_ 中添加：
 
 ```css
 .emoji img {
@@ -350,18 +344,18 @@ And in our  _emojis.css_  we simply add:
 
 ```
 
-The first selector is to give it a consistent size, the rest is our emojis images
+第一个选择器是给 emoji 设置一个一致的尺寸，其余的是各种 emoji 图片。
 
+做完以上修改之后，我们重新加载页面，会显示懒洋洋 emoji，这是因为我们还没有根据不同场景替换 <img> 元素的 **idle** 类。
 When we reload the page after these changes it'll show the idle emoji. It never changes, though, since we haven't replaced our  **idle**  class in the <img> element depending on the scenario.
 
-To fix that we go one last time to our  _recognition.js_ file. There, we're going to add a function to change the emoji:
+我们还需要对 _recognition.js_ 文件进行一步操作，添加一个函数以更改 emoji。
 
 ```js
 /**
 
 ```
-
-On the response of our server request, we add the check for positive, negative or neutral score and call our  _setEmoji_ function  accordingly:
+在收到服务器请求的反馈之后，我们开始检测分值为正负或是零，相应地调用 _setEmoji_ 函数。
 
 ```js
 console.log(transcript) // So we know what it understood when we spoke
@@ -369,10 +363,9 @@ console.log(transcript) // So we know what it understood when we spoke
 setEmoji('searching')
 
 ```
+将 emoji 设置为 **searching**，然后发起请求。
 
-We set the emoji to searching before making the request
-
-Finally, we add the events  _onerror_  and  _onaudiostart_  and change the event  _onend_  so we have them set with the proper emoji.
+最后，添加 _onerror_ 和 _onaudiostart_ 事件，修改 _onend_ 事件，这样就设置为正确的 emoji 了。
 
 ```js
   recognition.onerror = function(event) {
@@ -384,8 +377,7 @@ Finally, we add the events  _onerror_  and  _onaudiostart_  and change the event
   }
 
 ```
-
-Our final  _recognition.js_  file should look something like this:
+最后，_recognition.js_ 文件是这样：
 
 ```js
 document.addEventListener('DOMContentLoaded', speechToEmotion, false);
@@ -429,29 +421,25 @@ console<span class="token punctuation" style="box-sizing: inherit; margin: 0px; 
   /**
 
 ```
-
-And by testing our project we can now see the final results:
+测试项目，显示结果：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/11/sentiment-to-emotion.gif)
 
-**Note:**  Instead of a  _console.log_  to check what the recognition understood, we can add an element on our html and replace the  _console.log._  That way we always have access to what it understood.
+**注意：**我们可以在 html 中添加一个元素，替换 _console.log._，来检测识别出的内容，这样可以持续检测。
 
-## Final remarks
+## 思考
 
-There are some areas where this project can be vastly improved:
+其实我们可以对这个项目的某些部分可以做很多优化：
 
--   it can't detect sarcasm
--   there is no way to check if you're enraged due to the censorship of the speech to text API
--   there's probably a way to do it with just voice without conversion to text.
+-   检测讽刺的内容
+-   由于语音转文字 API 的敏感词限制，目前没办法检测出愤怒的情绪
+-   也许可以省掉语音转文字这一步，直接根据语音显示出相应的 emoji
 
-From what I saw while researching this project, there are implementations that check if your tone and mood will lead to a sale in a call centre. And the newsletter I got was from Grammarly, which is using it to check the tone of what you write. So as you can see there are interesting applications.
+我在做这个项目的过程中发现，已经有一些类似的应用了，比如电话销售人员根据客户的语调和情绪判断是否可以成单。还有我在文章开头说的那封邮件是来自 Grammarly，他们用这个方法来检测用户发邮件中用词的语调！这些应用还挺有意思的。
 
-Hopefully, this content has helped out in some way. If anybody builds anything using this stack let me know – it's always fun to see what people build.
+希望这篇文章可以给你一些启发。如果你用我介绍的方法做了什么项目，请告诉我啊。
 
-The code can be found in my github  **[here][12]**.
-
-See you in the next one, in the meantime, go code something!
-
+你可以在我的 GitHub 仓库**[查看代码][12]**。
   
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API

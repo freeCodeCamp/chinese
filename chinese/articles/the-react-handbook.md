@@ -282,104 +282,104 @@ const { useState } = React
 import { useState } from 'react'
 ```
 
-### SECTION 1: MODERN JAVASCRIPT CORE CONCEPTS YOU NEED TO KNOW TO USE REACT
+### 第 1 部分： 使用 React 必知的 JavaScript 核心概念
 
-#### Find out if you have to learn something before diving into learning React
+#### 深入学习 React 前应该掌握的知识
 
-If you are willing to learn React, you first need to have a few things under your belt. There are some prerequisite technologies you have to be familiar with, in particular related to some of the more recent JavaScript features you’ll use over and over in React.
+想要学习 React，你必须提前掌握一些知识，尤其是在使用 React 的过程中会反复使用到的最新的 JavaScript 的特性。
 
-Sometimes people think one particular feature is provided by React, but instead it’s just modern JavaScript syntax.
+有时候，人们认为 React 提供了某种特性，但实际上，这只是最新的 JavaScript 的语法。
 
-There is no point in being an expert in those topics right away, but the more you dive into React, the more you’ll need to master those.
+尽管你不需要立马变成这方面的专家，但随着你深入学习 React，你需要更深入地掌握这些知识。
 
-I will mention a list of things to get you up to speed quickly.
+我会列举一系列帮助你快速入门的知识点。
 
-### Variables
+### 变量
 
-A variable is a literal assigned to an identifier, so you can reference and use it later in the program.
+变量是指赋值给标识符的字面量，这样你就可以在程序中通过标识符来引用和使用字面量了。
 
-Variables in JavaScript do not have any type attached. Once you assign a specific literal type to a variable, you can later reassign the variable to host any other type, without type errors or any issue.
+JavaScript 中的变量没有指定数据类型。给变量赋值为某种特定的字面量类型后，即使再重新指定这个变量为其他类型的字面量，也不会导致类型报错或其他问题。
 
-This is why JavaScript is sometimes referred to as “untyped”.
+这也是为什么 JavaScript 被认为是“无类型”语言。
 
-A variable must be declared before you can use it. There are 3 ways to do this, using  `var`,  `let`  or  `const`, and those 3 ways differ in how you can interact with the variable later on.
+变量必须在使用前先声明。声明变量有 3 种方式：`var` , `let` , `const` 。这 3 种语法的使用方式也不尽相同。
 
-#### Using  `var`
+#### 使用 `var` 声明变量
 
-Until ES2015,  `var`  was the only construct available for defining variables.
+在 ES2015 之前，`var` 是唯一用于定义变量的语法。
 
 ```jsx
 var a = 0
 ```
 
-If you forget to add  `var`  you will be assigning a value to an undeclared variable, and the results might vary.
+如果你忘记使用 `var`，则会给一个未声明的变量赋值，结果会有所不同。
 
-In modern environments, with strict mode enabled, you will get an error. In older environments (or with strict mode disabled) this will simply initialize the variable and assign it to the global object.
+如果是在严格模式下，这样的用法会报错。在早期的环境中（或禁用严格模式的情况下），这样做会初始化一个全局变量，并给它赋值。
 
-If you don’t initialize the variable when you declare it, it will have the  `undefined`  value until you assign a value to it.
+如果声明变量时不给它赋值，那么这个变量的值会一直是 `undefined`，直到给它赋值。
 
 ```jsx
 var a //typeof a === 'undefined'
 ```
 
-You can redeclare the variable many times, overriding it:
+你可以多次声明变量，并将之前的声明覆盖掉：
 
 ```jsx
 var a = 1
 var a = 2
 ```
 
-You can also declare multiple variables at once in the same statement:
+你也可以在一个语句中一次声明多个变量：
 
 ```js
 var a = 1, b = 2jsx
 ```
 
-The  **scope**  is the portion of code where the variable is visible.
+**作用域**是指代码中可以访问到变量的部分。
 
-A variable initialized with  `var`  outside of any function is assigned to the global object, has a global scope and is visible everywhere. A variable initialized with  `var`  inside a function is assigned to that function, it's local and is visible only inside it, just like a function parameter.
+在函数外使用 `var` 声明的变量被赋值给全局对象，它拥有全局作用域，代码中的任何地方都可以访问到变量。在函数中使用 `var` 声明的变量被赋值给函数，它的作用域是函数内部，和函数的参数一样，只能在函数内部使用。
 
-Any variable defined in a function with the same name as a global variable takes precedence over the global variable, shadowing it.
+函数中定义的变量如果和全局变量重名了，函数中的变量在函数中会替代全局变量。
 
-It’s important to understand that a block (identified by a pair of curly braces) does not define a new scope. A new scope is only created when a function is created, because  `var`  does not have block scope, but function scope.
+值得注意的是代码块（两个大括号之间）并不会定义新的作用域。只有定义函数的时候会创建新的作用域，因为 `var` 不会创建块作用域，只会创建函数作用域。
 
-Inside a function, any variable defined in it is visible throughout all the function code, even if the variable is declared at the end of the function it can still be referenced in the beginning, because JavaScript before executing the code actually  _moves all variables on top_  (something that is called  **hoisting**). To avoid confusion, always declare variables at the beginning of a function.
+函数中定义的变量在函数的任意位置都可以访问到，即使是在函数末尾定义的变量也可以在函数开头访问到，这是因为 JavaScript 在执行代码时会将 _所有变量移到顶部_ （这种现象叫做**变量提升**）。为了避免混淆，应该在函数开始时声明所有变量。
 
-#### Using  `let`
+#### 使用 `let` 定义变量
 
-`let`  is a new feature introduced in ES2015 and it's essentially a block scoped version of  `var`. Its scope is limited to the block, statement or expression where it's defined, and all the contained inner blocks.
+`let` 是 ES2015 引入的新特性，本质上是 `var` 的块级作用域版本。它的作用域仅限于定义它的代码块、声明语句或表达式，以及包含在它内部的代码块。
 
-Modern JavaScript developers might choose to only use  `let`  and completely discard the use of  `var`.
+现在的 JavaScript 开发者倾向于选择只使用 `let` ，完全摒弃 `var`。
 
-> _If  `let`  seems an obscure term, just read  `let color = 'red'`  as_ let the color be red_and it all makes much more sense_
+> _如果 `let` 语法有些晦涩，那么就把 `let color = 'red'` 理解成_ let the color be red（让颜色变成红的）_,这样会就好理解了_
 
-Defining  `let`  outside of any function - contrary to  `var`  \- does not create a global variable.
+不同于 `var`，在函数外使用 `let` 定义变量并不会创建全局变量。
 
-#### Using  `const`
+#### 使用 `const` 定义变量
 
-Variables declared with  `var`  or  `let`  can be changed later on in the program, and reassigned. Once a  `const`  is initialized, its value can never be changed again, and it can't be reassigned to a different value.
+使用 `var` 或 `let` 声明的变量可以再次声明，重新赋值，但是 `const` 声明的变量一旦初始化，它的值就不可以再更改了，不能再次赋值。
 
 ```jsx
 const a = 'test'
 ```
 
-We can’t assign a different literal to the  `a`  const. We can however mutate  `a`  if it's an object that provides methods that mutate its contents.
+我们无法将另一个字面量赋值给常量 `a`。但如果 `a` 是一个提供了改变内部值的方法的对象，我们可以通过这个方法来修改 `a` 的值。
 
-`const`  does not provide immutability, just makes sure that the reference can't be changed.
+`const` 并不保证变量的值不变，它只能保证变量的引用不会被修改。
 
-`const`  has block scope, same as  `let`.
+`const` 和 `let` 一样，有块级作用域。
 
-Modern JavaScript developers might choose to always use  `const`  for variables that don't need to be reassigned later in the program.
+现在的 JavaScript 开发者倾向于使用 `const` 来定义所有不会被重新赋值的变量。
 
-Why? Because we should always use the simplest construct available to avoid making errors down the road.
+为什么要这么做呢？因为我们应该使用最简单的方式来避免代码错误。
 
-### Arrow functions
+### 箭头函数
 
-Arrow functions were introduced in ES6 / ECMAScript 2015, and since their introduction they changed forever how JavaScript code looks (and works).
+箭头函数是 ES6 / ECMAScript 2015 引入的新特性，这一特性的引入彻底改变了 JavaScript 代码的写法（和用法）。
 
-In my opinion this change was so welcoming that you now rarely see the usage of the  `function`  keyword in modern codebases.
+在我看来，这一改变深得人心，你现在已经很少在代码库中看到 `function` 这一关键词的使用了。
 
-Visually, it’s a simple and welcome change, which allows you to write functions with a shorter syntax, from:
+从写法上来看，这一变化简单又受欢迎，因为它使你可以通过更简短的语法写函数，从原来的写法：
 
 ```jsx
 const myFunction = function() {
@@ -387,7 +387,7 @@ const myFunction = function() {
 }
 ```
 
-to
+变为：
 
 ```jsx
 const myFunction = () => {
@@ -395,83 +395,82 @@ const myFunction = () => {
 }
 ```
 
-If the function body contains just a single statement, you can omit the brackets and write all on a single line:
+如果函数体只包含一条语句，你可以省略大括号，将所有内容写在一行里：
 
 ```jsx
 const myFunction = () => doSomething()
 ```
 
-Parameters are passed in the parentheses:
+参数通过括号传入：
 
 ```jsx
 const myFunction = (param1, param2) => doSomething(param1, param2)
 ```
 
-If you have one (and just one) parameter, you could omit the parentheses completely:
+如果函数值只有一个参数，你可以把括号也省略掉：
 
 ```jsx
 const myFunction = param => doSomething(param)
 ```
 
-Thanks to this short syntax, arrow functions  **encourage the use of small functions**.
+得益于这种简短的语法，箭头函数**鼓励使用小函数**。
 
-### Implicit return
+### 隐式返回
 
-Arrow functions allow you to have an implicit return: values are returned without having to use the  `return`  keyword.
+箭头函数允许隐式返回：函数返回的值没有通过关键字 `return` 来返回。
 
-It works when there is a one-line statement in the function body:
+当函数体只有一行语句时，值会隐式返回。
 
 ```jsx
 const myFunction = () => 'test'
 
 ```
 
-Another example, when returning an object, remember to wrap the curly brackets in parentheses to avoid it being considered the wrapping function body brackets:
+另一个例子是，当函数返回一个对象时，需要使用圆括号把返回的对象包起来，防止对象的大括号被认为是返回的函数体的大括号。
 
 ```jsx
 const myFunction = () => ({ value: 'test' })
 
 ```
 
-### How this works in arrow functions
+### 箭头函数中的 this
 
-`this`  is a concept that can be complicated to grasp, as it varies a lot depending on the context and also varies depending on the mode of JavaScript (_strict mode_  or not).
+`this` 这个概念很难理解，因为它在不同的上下文中指向不同，在不同的 JavaScript 模式中（严格模式和非严格模式）也会有所不同。
 
-It’s important to clarify this concept because arrow functions behave very differently compared to regular functions.
+弄清这个概念非常重要，因为箭头函数和普通函数在 `this` 的处理上大有不同。
 
-When defined as a method of an object, in a regular function  `this`  refers to the object, so you can do:
+通常定义一个对象的某个方法时，普通函数中的 `this` 指向对象本身，因此你可以这样操作：
 
 ```jsx
 const car = {
   model: 'Fiesta',
   manufacturer: 'Ford',
   fullName: function() {
-    return </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span><span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(0, 119, 170);">this</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>manufacturer<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);"> </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span><span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(0, 119, 170);">this</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>model<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">
+    return `${this.manufacturer} ${this.model}`
   }
 }
 ```
 
-calling  `car.fullName()`  will return  `"Ford Fiesta"`.
+调用 `car.fullName()` 会返回 `"Ford Fiesta"`。
 
-The  `this`  scope with arrow functions is  **inherited**  from the execution context. An arrow function does not bind  `this`  at all, so its value will be looked up in the call stack, so in this code  `car.fullName()`  will not work, and will return the string  `"undefined undefined"`:
+箭头函数的 `this` 则会“继承”执行函数的上下文。箭头函数不会绑定 `this` ，因此它会顺着调用栈向上查询，因此这里的 `car.fullName()` 没有查找到 `this` ，会返回字符串 `"undefined undefined"`。
 
 ```jsx
 const car = {
   model: 'Fiesta',
   manufacturer: 'Ford',
   fullName: () => {
-    return </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span><span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(0, 119, 170);">this</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>manufacturer<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);"> </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span><span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(0, 119, 170);">this</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>model<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">
+    return `${this.manufacturer} ${this.model}`
   }
 }
 ```
+由于这一原因，箭头函数并不适用于对象的方法。
 
-Due to this, arrow functions are not suited as object methods.
+箭头函数也无法用于构造器，通过箭头函数来实例化一个对象会引发 `TypeError`。
 
-Arrow functions cannot be used as constructors either, when instantiating an object will raise a  `TypeError`.
+**当不需要使用动态上下文时**，应该使用普通函数。
 
-This is where regular functions should be used instead,  **when dynamic context is not needed**.
-
-This is also a problem when handling events. DOM Event listeners set  `this`  to be the target element, and if you rely on  `this`  in an event handler, a regular function is necessary:
+处理事件时也会有这一问题，DOM 事件监听器让 `this` 指向目标元素，如果事件处理器依赖 `this` ，那么使用普通函数更加合适：
 
 ```jsx
 const link = document.querySelector('#link')
@@ -481,42 +480,42 @@ link.addEventListener('click', () => {
 
 ```
 
-### Rest and spread
+### 剩余运算符和扩展运算符
 
-You can expand an array, an object or a string using the spread operator  `...`.
+你可以通过扩展运算符 `...` 来扩展数组、对象或是字符串。
 
-Let’s start with an array example. Given
+我们先以数组为例。如
 
 ```jsx
 const a = [1, 2, 3]
 ```
 
-you can create a new array using
+你可以这样创建一个新的数组：
 
 ```jsx
 const b = [...a, 4, 5, 6]
 ```
 
-You can also create a copy of an array using
+也可以这样复制一个数组：
 
 ```jsx
 const c = [...a]
 ```
 
-This works for objects as well. Clone an object with:
+这一方法同样适用于对象。你可以这样复制一个对象：
 
 ```jsx
 const newObj = { ...oldObj }
 ```
 
-Using strings, the spread operator creates an array with each char in the string:
+用于字符串时，扩展运算符会使用字符串的字符创建数组：
 
 ```jsx
 const hey = 'hey'
 const arrayized = [...hey] // ['h', 'e', 'y']
 ```
 
-This operator has some pretty useful applications. The most important one is the ability to use an array as function argument in a very simple way:
+扩展运算符有非常方便的应用。其中的一个应用场景是可以将数组轻松转换成函数参数：
 
 ```jsx
 const f = (foo, bar) => {}
@@ -524,16 +523,16 @@ const a = [1, 2]
 f(...a)
 ```
 
-(in the past you could do this using  `f.apply(null, a)`  but that's not as nice and readable)
+（过去你需要通过 `f.apply(null, a)` 来实现，但是写起来既不优雅，可读性也不高）
 
-The  **rest element**  is useful when working with  **array destructuring**:
+**剩余运算符**与**数组解构**一起使用时非常方便：
 
 ```jsx
 const numbers = [1, 2, 3, 4, 5]
 [first, second, ...others] = numbers
 ```
 
-and  **spread elements**:
+还有**扩展运算符**：
 
 ```jsx
 const numbers = [1, 2, 3, 4, 5]
@@ -541,9 +540,9 @@ const sum = (a, b, c, d, e) => a + b + c + d + e
 const sumOfNumbers = sum(...numbers)
 ```
 
-ES2018 introduces rest properties, which are the same but for objects.
+ES2018 引入了剩余属性，用法和剩余运算符相同，不过适用于对象。
 
-**Rest properties**:
+**剩余属性**：
 
 ```jsx
 const { first, second, ...others } = {
@@ -556,16 +555,16 @@ const { first, second, ...others } = {
 
 ```
 
-**Spread properties**  allow to create a new object by combining the properties of the object passed after the spread operator:
+**扩展属性**允许通过组合在扩展运算符之后的对象属性来创建新的对象：
 
 ```jsx
 const items = { first, second, ...others }
 items //{ first: 1, second: 2, third: 3, fourth: 4, fifth: 5 }
 ```
 
-### Object and array destructuring
+### 对象和数组的解构
 
-Given an object, using the destructuring syntax you can extract just some values and put them into named variables:
+通过解构的语法，你可以只提取给定对象的特定值，并赋值给对应的变量。
 
 ```jsx
 const person = {
@@ -577,68 +576,69 @@ const person = {
 
 ```
 
-`name`  and  `age`  contain the desired values.
+可以提取 `name` 和 `age` 的值。
 
-The syntax also works on arrays:
+解构的语法同样适用于数组：
 
 ```jsx
 const a = [1, 2, 3, 4, 5]
 const [first, second] = a
 ```
 
-This statement creates 3 new variables by getting the items with index 0, 1, 4 from the array  `a`:
+以下语句通过索引 0、1、4 从数组 `a` 中取值创建了 3 个新的变量。
 
 ```jsx
 const [first, second, , , fifth] = a
 ```
 
-### Template literals
+### 模板字符串
 
-Template Literals are a new ES2015 / ES6 feature that allows you to work with strings in a novel way compared to ES5 and below.
+模板字符串是 ES2015 / ES6 引入的新特性，相较于 ES5 和之前的语法，它允许你通过更灵活的方式使用字符串。
 
-The syntax at a first glance is very simple, just use backticks instead of single or double quotes:
+新的语法乍看之下非常简单，不过是用倒引号取代了原先的单引号或双引号：
 
 ```jsx
 const a_string = something
 ```
 
-They are unique because they provide a lot of features that normal strings built with quotes do not, in particular:
+但模板字符串提供了许多普通字符串不具备的特性，具体来说：
 
--   they offer a great syntax to define multiline strings
--   they provide an easy way to interpolate variables and expressions in strings
--   they allow you to create DSLs with template tags (DSL means domain specific language, and it’s for example used in React by Styled Components, to define CSS for a component)
+-   模板字符串的语法可以定义多行字符串
+-   能够方便地在字符串中插入变量和表达式
+-   可以在模板标签中创建 DSL（DSL指领域特定语言，比如在 React 的样式组件中使用 CSS）
 
-Let’s dive into each of these in detail.
+让我们来逐个深入了解。
 
-#### Multiline strings
+#### 多行字符串
 
-Pre-ES6, to create a string spanning over two lines you had to use the  `</code>  character at the end of a line:`
+在 ES6 之前，如果想要创建一个多于两行的字符串，你需要在一行代码的末尾加上 `\` 。
 
 ```
 const string =
-  'first part second part'
+  'first part \
+  second part'
 ```
 
-`This allows to create a string on 2 lines, but it’s rendered on just one line:`
+这样虽然是通过两行代码创建的字符串，但渲染的结果仍是一行：
 
 `` `first part second part` ``
 
-``To render the string on multiple lines as well, you explicitly need to add  `\n`  at the end of each line, like this:``
+要创建多行显示的字符串，你需要在每行末尾加上 `\n`，像这样：
 
 ```
 const string =
   'first line\n second line'
 ```
 
-`or`
+或是：
 
 ```
 const string = 'first line\n' + 'second line'
 ```
 
-`Template literals make multiline strings much simpler.`
+模板字符串让创建多行字符串变得更容易。
 
-`Once a template literal is opened with the backtick, you just press enter to create a new line, with no special characters, and it’s rendered as-is:`
+一旦使用倒引号开始创建模板字符串，在需要新的一行时，你只需要敲回车就行，不需要添加其他特殊字符，字符串会按照原样渲染：
 
 ```
 const string = Hey
@@ -647,43 +647,43 @@ string
 is awesome!
 ```
 
-`Keep in mind that space is meaningful, so doing this:`
+模板字符串中，空白符都会生效，因此这样输入字符串：
 
 ```
 const string = First
                 Second
 ```
 
-`is going to create a string like this:`
+渲染的结果会如下：
 
 ```
 First
                 Second
 ```
 
-`an easy way to fix this problem is by having an empty first line, and appending the trim() method right after the closing backtick, which will eliminate any space before the first character:`
+想要避免这个问题有个简单的方法，在模板字符串的结束倒引号后面加上 `trim()` 方法，它会消除第一个字符前的空白符：
 
 ```
 const string = First
 Second.trim()
 ```
 
-#### `Interpolation`
+#### 插入表达式
 
-`Template literals provide an easy way to interpolate variables and expressions into strings.`
+模板字符串可以方便地在字符串中插入变量和表达式。
 
-``You do so by using the  `${...}`  syntax:``
+你可以通过 `${...}` 语法来实现：
 
 ```
 const myVariable = 'test'
-const string = something </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>myVariable<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);"> //something test
+const string = `something ${myVariable}` //something test
 ```
 
-``inside the  `${}`  you can add anything, even expressions:``
+在 `${}` 中可以添加任何内容，包括表达式：
 
 ```
-const string = something </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span><span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 0, 85);">1</span> <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(154, 110, 58);">+</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 0, 85);">2</span> <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(154, 110, 58);">+</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 0, 85);">3</span><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">
-const string2 = something </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(221, 74, 104);">foo</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span> <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(154, 110, 58);">?</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">'x'</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">'y'</span><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">
+const string = `something ${1 + 2 + 3}`
+const string2 = `something ${foo() ? 'x' : 'y'}`
 ```
 
 ### `Classes`

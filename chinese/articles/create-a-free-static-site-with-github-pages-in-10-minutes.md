@@ -36,7 +36,7 @@ gem "github-pages", group: :jekyll_plugins
 
 ```
 
-当你安装 GitHub Pages gem 时，这里可能会有很多问题，有时这个 gems 对于 GitHub Pages来说已经过期的，也有可能你本地安装的 gem 太新。
+当你安装 GitHub Pages gem 时，这里可能会出现有很多问题，有时于 GitHub Pages来说这个 gems 对已经过期的，也有可能你本地安装的 gem 版本太新。
 
 我发现这会变得很难去构建和测试我本地的 Jekyll 站点。在本地测试站点并将其保存到准备部署之前，这可能是最简单的方法。然而，在这个时候，你可以写下这些代码，特别指出它的依赖的版本在你的 Gemfile，Jekyll 就可以同时在本地和 GitHub Pages上运行。
 
@@ -57,7 +57,7 @@ end
 
 ## 让我们把它放在网上
 
-打开 GitHub.com 并注册一个账号，或者你已经有一个账号，选择 new 按钮并创建一个新的仓库，这个仓库的命名很重要，之后网站的链接是由你的账号创建的。例如我的 github 用户名是 tfantina，我的博客是 [tfantina.github.io][4]，所以我的 GitHub 仓库名是: "tfantina.github.io".
+打开 GitHub.com 并注册一个账号，或者你已经有一个账号，选择 new 按钮并创建一个新的仓库，这个仓库的命名很重要，之后你的 GitHub Pages 链接就是 你的 _ 用户名 .github.io 。例如我的 github 用户名是 tfantina，我的博客是 [tfantina.github.io][4]，所以我的 GitHub 仓库名是: "tfantina.github.io".
 
 回到你的终端窗口，输入下面的命令，把你电脑的 Jekyll 网站上传到 Github 。
 
@@ -69,7 +69,7 @@ git push -u origin master
 
 ```
 
-(当替换你的用户名和项目名时，您不需要<>).
+(当替换你的用户名和项目名时，您不需要左右尖括号<>).
 
 一旦你的修改提交到你的Github仓库，你就有一个正在运行的静态页面，这是因为你正在用GitHub Pages gem，并用GitHub理解的命名方式命名仓库。
 

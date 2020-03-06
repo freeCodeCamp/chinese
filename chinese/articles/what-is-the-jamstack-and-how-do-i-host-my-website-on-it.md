@@ -1,6 +1,6 @@
 > * 原文地址：[What is the JAMstack and how do I get started? JAMstack 是什么意思以及如何应用](https://www.freecodecamp.org/news/what-is-the-jamstack-and-how-do-i-host-my-website-on-it/)
 > * 原文作者：Colby Fayock
-> * 译者：
+> * 译者：Chengjun.L
 > * 校对者：
 
 ![What is the JAMstack and how do I get started?](https://www.freecodecamp.org/news/content/images/size/w2000/2020/02/what-is-jamstack-2.jpg)

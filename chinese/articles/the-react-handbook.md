@@ -686,19 +686,19 @@ const string = `something ${1 + 2 + 3}`
 const string2 = `something ${foo() ? 'x' : 'y'}`
 ```
 
-### `Classes`
+### 类
 
-`In 2015 the ECMAScript 6 (ES6) standard introduced classes.`
+2015 年， ECMAScript 6 (ES6) 标准引入了类。
 
-`JavaScript has a quite uncommon way to implement inheritance: prototypical inheritance.  [Prototypal inheritance][68], while in my opinion great, is unlike most other popular programming language’s implementation of inheritance, which is class-based.`
+JavaScript 通过一种不常见的方式来实现继承：原型继承。在我看来，[原型继承][68]是很好的方法，但是和其他流行的基于类的编程语言实现继承的方式不太一样。
 
-`People coming from Java or Python or other languages had a hard time understanding the intricacies of prototypal inheritance, so the ECMAScript committee decided to sprinkle syntactic sugar on top of prototypical inheritance so that it resembles how class-based inheritance works in other popular implementations.`
+学习 Java 或 Python 或其他语言的人很难理解 JavaScript 原型继承的复杂性，因此 ECMAScript 委员会决定通过给原型继承加上语法糖，使其实现方式更接近其他基于类的编程语言实现原型继承的方式。
 
-`This is important: JavaScript under the hood is still the same, and you can access an object prototype in the usual way.`
+这点非常重要：本质上 JavaScript 实现继承的方式没有变，但你可以通过常见的方式来获取对象的原型了。
 
-#### `A class definition`
+#### 类的定义
 
-`This is how a class looks.`
+这是类的写法：
 
 ```
 class Person {
@@ -711,22 +711,22 @@ class Person {
 }
 ```
 
-``A class has an identifier, which we can use to create new objects using  `new ClassIdentifier()`.``
+类有一个标识符，我们可以利用这个标识符，通过 `new ClassIdentifier()` 的方法来创建一个新的对象。
 
-``When the object is initialized, the  `constructor`  method is called, with any parameters passed.``
+初始化对象将调用 `constructor` 方法，调用时会传入所有创建对象时传入的参数。
 
-``A class also has as many methods as it needs. In this case  `hello`  is a method and can be called on all objects derived from this class:``
+类还能拥有它所需的各种方法。在这个例子中， `hello` 就是其中一个方法，它可以被所有通过这个类创建的对象调用：
 
 ```
 const flavio = new Person('Flavio')
 flavio.hello()
 ```
 
-#### `Class inheritance`
+#### 类的继承
 
-`A class can extend another class, and objects initialized using that class inherit all the methods of both classes.`
+一个类可以扩展另一个类，并且使用这个类初始化的对象将继承两个类的所有方法。
 
-`If the inherited class has a method with the same name as one of the classes higher in the hierarchy, the closest method takes precedence:`
+如果继承的类与继承结构中更高级别的类拥有相同名字的方法，则级别上更接近这个类的方法生效：
 
 ```
 class Programmer extends Person {
@@ -738,17 +738,17 @@ const flavio = new Programmer('Flavio')
 flavio.hello()
 ```
 
-`(the above program prints “_Hello, I am Flavio. I am a programmer._”)`
+（上面例子输出的结果是 `"_Hello, I am Flavio. I am a programmer._"`)
 
-`Classes do not have explicit class variable declarations, but you must initialize any variable in the constructor.`
+类没有显式的类变量声明，你必须通过构造器来初始化类变量。
 
-``Inside a class, you can reference the parent class calling  `super()`.``
+在类内部，可以通过调用 `super()` 方法引用父类。
 
-#### `Static methods`
+#### 静态方法
 
-`Normally methods are defined on the instance, not on the class.`
+通常，方法定义在实例上，而非类上。
 
-`Static methods are executed on the class instead:`
+静态方法直接在类上执行：
 
 ```
 class Person {
@@ -759,15 +759,15 @@ class Person {
 Person.genericHello() //Hello
 ```
 
-#### `Private methods`
+#### 私有方法
 
-`JavaScript does not have a built-in way to define private or protected methods.`
+JavaScript 没有内置的方法定义私有方法或受保护方法。
 
-`There are workarounds, but I won’t describe them here.`
+尽管有替代方案，但我不打算在这里讨论。
 
-#### `Getters and setters`
+#### Getters 和 setters
 
-``You can add methods prefixed with  `get`  or  `set`  to create a getter and setter, which are two different pieces of code that are executed based on what you are doing: accessing the variable, or modifying its value.``
+你可以通过给方法添加 `get` 或 `set` 作为前缀来创建 getter 和 setter ，这两种方法基于你要执行的操作有所不同：获取变量值或修改变量值。
 
 ```
 class Person {
@@ -783,7 +783,7 @@ class Person {
 }
 ```
 
-`If you only have a getter, the property cannot be set, and any attempt at doing so will be ignored:`
+如果只有 getter，变量值无法修改，任何尝试修改变量值的操作都会被忽略：
 
 ```
 class Person {
@@ -796,7 +796,7 @@ class Person {
 }
 ```
 
-`If you only have a setter, you can change the value but not access it from the outside:`
+如果只有 setter，你可以修改变量值，但是无法在外部获取变量值：
 
 ```
 class Person {
@@ -809,23 +809,23 @@ class Person {
 }
 ```
 
-### `Callbacks`
+### 回调函数
 
-`Computers are asynchronous by design.`
+计算机被设计成异步的。
 
-`Asynchronous means that things can happen independently of the main program flow.`
+异步意味着事务可以独立于主程序流程发生。
 
-`In the current consumer computers, every program runs for a specific time slot, and then it stops its execution to let another program continue its execution. This thing runs in a cycle so fast that’s impossible to notice, and we think our computers run many programs simultaneously, but this is an illusion (except on multiprocessor machines).`
+在当前的消费计算机中，每个程序都运行特定的时间段，然后停止执行，以让另一个程序继续执行。由于程序与程序之间切换的速度太快，以至于我们根本无法察觉，使得我们认为我们的电脑是在同时处理多个程序，但这只是一种幻觉（除了多处理器电脑）
 
-`Programs internally use  _interrupts_, a signal that’s emitted to the processor to gain the attention of the system.`
+程序内部发送 `_interrupts_` 信号到主处理器来获取系统的注意。
 
-`I won’t go into the internals of this, but just keep in mind that it’s normal for programs to be asynchronous, and halt their execution until they need attention, and the computer can execute other things in the meantime. When a program is waiting for a response from the network, it cannot halt the processor until the request finishes.`
+我不会深入探讨过多，但是需要记住异步程序是很正常的，程序在不需要的时候会暂停执行，计算机在这段时间会执行其他事务。当计算机在等待一个网络请求的返回结果时，它在请求结束之前都不能暂停处理器。
 
-`Normally, programming languages are synchronous, and some provide a way to manage asynchronicity, in the language or through libraries. C, Java, C#, PHP, Go, Ruby, Swift, Python, they are all synchronous by default. Some of them handle async by using threads, spawning a new process.`
+通常，编程语言都是同步的，其中一些会在语言内部或通过其他库提供处理异步的方法。C、Java、C#、PHP、Go、Ruby、Swift、Python 都默认是同步的。其中一些会通过线程来处理异步，从而产生一个新的进程。
 
-`JavaScript is  **synchronous**  by default and is single threaded. This means that code cannot create new threads and run in parallel.`
+JavaScript 也默认是 **同步** 的，且是单线程。这意味着代码不能创建新的线程，并行执行。
 
-`Lines of code are executed in series, one after another, for example:`
+各行代码是逐行执行的，如：
 
 ```
 const a = 1
@@ -835,13 +835,13 @@ console.log(c)
 doSomething()
 ```
 
-``But JavaScript was born inside the browser, its main job, in the beginning, was to respond to user actions, like  `onClick`,  `onMouseOver`,  `onChange`,  `onSubmit`  and so on. How could it do this with a synchronous programming model?``
+但 JavaScript 是为浏览器而生的语言，在最开始时，它的主要功能是回应用户的行为，如 `onClick`，`onMouseOver`，`onChange`，`onSubmit` 等。如何使用同步编程模板实现这些呢？
 
-`The answer was in its environment. The  **browser**  provides a way to do it by providing a set of APIs that can handle this kind of functionality.`
+答案是在运行环境里。**浏览器**提供了一系列 API 来实现这些功能。
 
-`More recently, Node.js introduced a non-blocking I/O environment to extend this concept to file access, network calls and so on.`
+最近，Node.js 引入了非阻塞 I/O 环境，以将这一概念扩展到文件访问、网络调用等方面。
 
-`You can’t know when a user is going to click a button, so what you do is, you  **define an event handler for the click event**. This event handler accepts a function, which will be called when the event is triggered:`
+你无法知道用户何时会点击按钮，所以你要做的是**给点击事件定义一个事件处理器**，这个事件处理器接受一个函数，当事件被触发时，函数会被调用：
 
 ```
 document.getElementById('button').addEventListener('click', () => {
@@ -849,11 +849,11 @@ document.getElementById('button').addEventListener('click', () => {
 })
 ```
 
-`This is the so-called  **callback**.`
+这就是所谓的**回调函数**。
 
-`A callback is a simple function that’s passed as a value to another function, and will only be executed when the event happens. We can do this because JavaScript has first-class functions, which can be assigned to variables and passed around to other functions (called  **higher-order functions**)`
+回调函数作为一个值传给另一个函数，它只有在事件发生时被执行。我们之所以可以这样做，是因为 JavaScript 中函数是一等公民（头等函数），函数可以被赋值给变量，也可以传给其他函数（被称为**高阶函数**）。
 
-``It’s common to wrap all your client code in a  `load`  event listener on the  `window`object, which runs the callback function only when the page is ready:``
+常见做法是将客户端的代码包在 `window` 对象的 `load` 事件监听器中，当页面加载完成后执行回调函数。
 
 ```
 window.addEventListener('load', () => {
@@ -862,9 +862,9 @@ window.addEventListener('load', () => {
 })
 ```
 
-`Callbacks are used everywhere, not just in DOM events.`
+回调函数除了用在 DOM 事件中，还被用在其他各处。
 
-`One common example is by using timers:`
+其中一个常见的场景是用在定时器中：
 
 ```
 setTimeout(() => {
@@ -872,7 +872,7 @@ setTimeout(() => {
 }, 2000)
 ```
 
-`XHR requests also accept a callback, in this example by assigning a function to a property that will be called when a particular event occurs (in this case, the state of the request changes):`
+XHR 请求也接受回调函数，在下面的例子中，回调函数被赋值给一个属性，当特定事件发生时，回调函数会被执行（在这个例子中，请求状态会改变）：
 
 ```
 const xhr = new XMLHttpRequest()
@@ -885,11 +885,11 @@ xhr.open('GET', 'https://yoursite.com')
 xhr.send()
 ```
 
-#### `Handling errors in callbacks`
+#### 处理回调函数的错误
 
-`How do you handle errors with callbacks? One very common strategy is to use what Node.js adopted: the first parameter in any callback function is the error object:  **error-first callbacks**`
+如何处理回调函数的错误呢？常见的策略是使用 Node.js 所采用的方法：回调函数中的第一个参数是错误对象：**错误优先回调函数**
 
-``If there is no error, the object is  `null`. If there is an error, it contains some description of the error and other information.``
+如果没有错误产生，这个对象就是 `null`。如果有错误，那么这个对象就包含错误的一些描述和其他信息。
 
 ```
 fs.readFile('/file.json', (err, data) => {
@@ -903,11 +903,11 @@ fs.readFile('/file.json', (err, data) => {
 })
 ```
 
-#### `The problem with callbacks`
+#### 回调函数的问题
 
-`Callbacks are great for simple cases!`
+回调函数非常适用于简单的情况。
 
-`However every callback adds a level of nesting, and when you have lots of callbacks, the code starts to be complicated very quickly:`
+但是每个回调函数都会增加一层逻辑嵌套，当你有很多回调函数时，代码就会很快变得复杂起来：
 
 ```
 window.addEventListener('load', () => {
@@ -921,40 +921,40 @@ window.addEventListener('load', () => {
 })
 ```
 
-`This is just a simple 4-levels code, but I’ve seen much more levels of nesting and it’s not fun.`
+这段代码只有简单的 4 层逻辑嵌套，我见过嵌套层级远超它的代码，看起来一点都不好玩。
 
-`How do we solve this?`
+我们要如何解决这个问题呢？
 
-### `ALTERNATIVES TO CALLBACKS`
+### 回调函数的替代方案
 
-`Starting with ES6, JavaScript introduced several features that help us with asynchronous code that do not involve using callbacks:`
+从 ES6 开始，JavaScript 引入了一些新的特性，能够让我们不通过回调函数来实现异步操作：
 
--   `Promises (ES6)`
--   `Async/Await (ES8)`
+-   Promises (ES6)
+-   Async/Await (ES8)
 
-### `Promises`
+### Promises
 
-`Promises are one way to deal with asynchronous code, without writing too many callbacks in your code.`
+Promise 是一种不需要在代码中加入太多回调函数就能处理异步代码的方法。
 
-`Although they’ve been around for years, they were standardized and introduced in ES2015, and now they have been superseded in ES2017 by async functions.`
+尽管 Promises 已经存在很多年了，在 ES2015 中才标准化并引入，并在 ES2017 中被异步函数取代。
 
-`**Async functions**  use the promises API as their building block, so understanding them is fundamental even if in newer code you’ll likely use async functions instead of promises.`
+**异步函数**以 Promise API 作为基础，因此，即使你在新代码中更倾向于使用异步函数而非 Promise，理解 Promise 也非常必要。
 
-#### `How promises work, in brief`
+#### 概述 Promise 的工作原理
 
-`Once a promise has been called, it will start in  **pending state**. This means that the caller function continues the execution, while it waits for the promise to do its own processing, and give the caller function some feedback.`
+调用 Promise 时，它的初始状态是 **pending**。也就是说，调用者函数会继续执行，同时 Promise 也会自己执行，并给调用者函数一些反馈。
 
-`At this point, the caller function waits for it to either return the promise in a  **resolved state**, or in a  **rejected state**, but as you know JavaScript is asynchronous, so  _the function continues its execution while the promise does it work_.`
+此时，调用者函数会等待 Promise 以**resolved**状态或**rejected**状态返回。由于 JavaScript 是异步的，因此，_当 Promise 执行时，调用者函数也在继续执行_。
 
-#### `Which JS API use promises?`
+#### 哪些 JS API 使用 Promise?
 
-`In addition to your own code and library code, promises are used by standard modern Web APIs like  [Fetch][70]  or  [Service Workers][71].`
+除了你写的代码和代码库中的代码，一些标准的现代 Web API 也使用 Promise 来实现，如 [Fetch][70] 和 [Service Workers][71]。
 
-`It’s unlikely that in modern JavaScript you’ll find yourself  _not_  using promises, so let’s start diving right into them.`
+现在写 JavaScript 代码很难不用到 Promise，所以让我们来还好研究一下它。
 
-#### `Creating a promise`
+#### 创建一个 Promise
 
-``The Promise API exposes a Promise constructor, which you initialize using  `new Promise()`:``
+Promise API 暴露了一个构造器，你可以通过 `new Promise()` 来初始化一个 Promise。
 
 ```
 let done = true
@@ -969,15 +969,15 @@ const isItDoneYet = new Promise((resolve, reject) => {
 })
 ```
 
-``As you can see the promise checks the  `done`  global constant, and if that's true, we return a resolved promise, otherwise a rejected promise.``
+如你看到的，Promise 会查看全局变量 `done`，如果 `done` 是 `true`，就会返回一个成功解决的 Promise，否则返回一个被拒绝的 Promise。
 
-``Using  `resolve`  and  `reject`  we can communicate back a value, in the above case we just return a string, but it could be an object as well.``
+通过 `resolve` 和 `reject` ，我们可以返回一个值。在上面的例子中，我们返回了一个字符串，但也可以返回对象。
 
-#### `Consuming a promise`
+#### 使用 Promise
 
-`In the last section, we introduced how a promise is created.`
+在上一部分，我们介绍了如何创建 Promise。
 
-`Now let’s see how the promise can be  _consumed_  or used.`
+接下来我们看看如何使用 Promise。
 
 ```
 const isItDoneYet = new Promise()
@@ -993,17 +993,17 @@ const checkIfItsDone = () => {
 }
 ```
 
-``Running  `checkIfItsDone()`  will execute the  `isItDoneYet()`  promise and will wait for it to resolve, using the  `then`  callback, and if there is an error, it will handle it in the  `catch`callback.``
+调用 `checkIfItsDone()` 会执行 `isItDoneYet()` Promise，并等待它返回结果，如果执行成功，则执行 `then` 函数，如果 Promise 执行过程中抛错，则会在 `catch` 回调函数中处理错误。
 
-#### `Chaining promises`
+#### 链式调用 Promise
 
-`A promise can be returned to another promise, creating a chain of promises.`
+Promise 可以返回另一个 Promise，串成一个 Promise 链。
 
-`A great example of chaining promises is given by the  [Fetch API][72], a layer on top of the XMLHttpRequest API, which we can use to get a resource and queue a chain of promises to execute when the resource is fetched.`
+[Fetch API][72]是一个很好的链式调用 Promise 的例子，它是 XMLHttpRequest API 的顶层 API，我们可以通过它获取资源，并在资源获取成功后执行一系列链式 Promise。
 
-``The Fetch API is a promise-based mechanism, and calling  `fetch()`  is equivalent to defining our own promise using  `new Promise()`.``
+Fetch API 的实现是基于 Promise 的机制，调用 `fetch()` 相当于通过 `new Promise()` 定义自己的 Promise 。
 
-`Example:`
+示例：
 
 ```
 const status = response => {
@@ -1024,22 +1024,22 @@ fetch('/todos.json')
   })
 ```
 
-``In this example, we call  `fetch()`  to get a list of TODO items from the  `todos.json`  file found in the domain root, and we create a chain of promises.``
+在这个例子中，我们调用 `fetch()` 方法，从域根目录下的 `todos.json` 文件中获取待办事项，并创建了一个 Promise 链。
 
-``Running  `fetch()`  returns a  [response][73], which has many properties, and within those we reference:``
+运行 `fetch()` 返回一个[response][73]，它有很多属性，从中我们可以获知：
 
--   `` `status`, a numeric value representing the HTTP status code``
--   `` `statusText`, a status message, which is  `OK`  if the request succeeded``
+-   `status`, 一个代表 HTTP 请求的状态码
+-   `statusText`, 状态信息，如果请求成功，会返回 `OK`
 
-`` `response`  also has a  `json()`  method, which returns a promise that will resolve with the content of the body processed and transformed into JSON.``
+`response` 也有 `json()` 方法，它会返回一个将 response 成功返回的内容处理转换成 JSON 格式的 Promise。
 
-``So given those premises, this is what happens: the first promise in the chain is a function that we defined, called  `status()`, that checks the response status and if it's not a success response (between 200 and 299), it rejects the promise.``
+基于上述前提，会发生以下情形：链中的第一个 Promise 是我们定义的函数名为 `status()` 的函数，它会检查 response 的状态，如果返回结果不是成功（状态码不是 200 ~ 299 之间的数字），就会拒绝这个 Promise。
 
-``This operation will cause the promise chain to skip all the chained promises listed and will skip directly to the  `catch()`  statement at the bottom, logging the  `Request failed`text along with the error message.``
+这样会跳过 Promise 链中接下来的所有 Promise，直接跳到底部的 `catch()` 语句，输出日志“Request failed`text along with the error message`”。
 
-``If that succeeds instead, it calls the json() function we defined. Since the previous promise, when successful, returned the  `response`  object, we get it as an input to the second promise.``
+如果请求成功了，会执行我们定义的 `json()` 函数。由于前一个 Promise 成功后返回 `response` 对象，这个对象会传入到第二个 Promise 中。
 
-`In this case, we return the data JSON processed, so the third promise receives the JSON directly:`
+`json` 方法会返回处理过的 JSON 数据，并直接传入第三个 Promise。
 
 ```
 .then((data) => {
@@ -1047,13 +1047,13 @@ fetch('/todos.json')
 })
 ```
 
-`and we simply log it to the console.`
+接着输出了传入的数据。
 
-#### `Handling errors`
+#### 处理错误
 
-``In the above example, in the previous section, we had a  `catch`  that was appended to the chain of promises.``
+在上面的例子中，在 Promise 链的最后加入了 `catch` 方法。
 
-``When anything in the chain of promises fails and raises an error or rejects the promise, the control goes to the nearest  `catch()`  statement down the chain.``
+当 Promise 链的任何一处请求失败，并抛错或拒绝了 Promise 时，就会进入 Promise 链中最近的 `catch()` 分支中。
 
 ```
 new Promise((resolve, reject) => {
@@ -1069,9 +1069,9 @@ new Promise((resolve, reject) => {
 })
 ```
 
-#### `Cascading errors`
+#### 级联错误
 
-``If inside the  `catch()`  you raise an error, you can append a second  `catch()`  to handle it, and so on.``
+如果在 `catch()` 方法中抛错，你也可以用另一个 `catch()` 方法来处理报错，并一直这么级联下去。
 
 ```
 new Promise((resolve, reject) => {
@@ -1085,11 +1085,11 @@ new Promise((resolve, reject) => {
   })
 ```
 
-#### ``Orchestrating promises with  `Promise.all()` ``
+#### 用 `Promise.all()` 处理多个 Promise
 
-``If you need to synchronize different promises,  `Promise.all()`  helps you define a list of promises, and execute something when they are all resolved.``
+如果你需要同时处理多个 Promise ,`Promise.all()` 可以让你定义一系列 Promise ,并在它们全部成功后执行其他内容。
 
-`Example:`
+示例:
 
 ```
 const f1 = fetch('/something.json')
@@ -1103,7 +1103,7 @@ Promise.all([f1, f2])
   })
 ```
 
-`The ES2015 destructuring assignment syntax allows you to also do`
+ES2015 的解构赋值语法还可以这么做：
 
 ```
 Promise.all([f1, f2]).then(([res1, res2]) => {
@@ -1111,13 +1111,13 @@ Promise.all([f1, f2]).then(([res1, res2]) => {
 })
 ```
 
-``You are not limited to using  `fetch`  of course,  **any promise is good to go**.``
+不仅是使用 `fetch` 时可以这么做，**任何 Promise 都可以使用 `Promise.all()`**。
 
-#### ``Orchestrating promises with  `Promise.race()` ``
+#### 用 `Promise.race()` 处理多个 Promise
 
-`` `Promise.race()`  runs as soon as one of the promises you pass to it resolves, and it runs the attached callback just once with the result of the first promise resolved.``
+`Promise.race()` 在传入的多个 Promise 中有一个成功时立即运行，它只会在第一个 Promise 请求成功时运行一次回调函数。
 
-`Example:`
+示例:
 
 ```
 const promiseOne = new Promise((resolve, reject) => {
@@ -1131,27 +1131,27 @@ Promise.race([promiseOne, promiseTwo]).then(result => {
 })
 ```
 
-### `Async/Await`
+### Async/Await
 
-`JavaScript evolved in a very short time from callbacks to promises (ES2015), and since ES2017 asynchronous JavaScript is even simpler with the async/await syntax.`
+JavaScript 用很短的时间从回调函数发展到 Promise (ES2015)，并在 ES2017 中引入 async/await 语法让异步变得更为简单。
 
-`Async functions are a combination of promises and generators, and basically, they are a higher level abstraction over promises. Let me repeat:  **async/await is built on promises**.`
+Async 函数是 Promise 和 generator 的结合，基本上，它是对 Promise 的更高层次的抽象。我再强调一次：**async/await 以 Promise 为基础**。
 
-#### `Why were async/await introduced?`
+#### 为什么引入 async/await ?
 
-`They reduce the boilerplate around promises, and the “don’t break the chain” limitation of chaining promises.`
+async/await 减少了 Promise 的模板代码，消除了 Promise 链的“不可中断 Promise 链”的限制。
 
-`When Promises were introduced in ES2015, they were meant to solve a problem with asynchronous code, and they did, but over the 2 years that separated ES2015 and ES2017, it was clear that  _promises could not be the final solution_.`
+当 ES2015 引入 Promise 时，它旨在解决异步代码的问题，它也确实做到了。但是两年后拆分 ES2015 和 ES2017 时，很显然_它不是最终解决方案_。
 
-`Promises were introduced to solve the famous  _callback hell_  problem, but they introduced complexity on their own, and syntax complexity.`
+引入 Promise 是为了解决臭名昭著的_回调地狱_问题，但是它本身却增加了语法上的复杂性。
 
-`They were good primitives around which a better syntax could be exposed to developers, so when the time was right we got  **async functions**.`
+基于为开发者提供更好的语法的目的，之后推出了**异步函数**。
 
-`They make the code look like it’s synchronous, but it’s asynchronous and non-blocking behind the scenes.`
+它让异步代码看起来像是同步的，且不会阻碍后台。
 
-#### `How it works`
+#### 运行机制
 
-`An async function returns a promise, like in this example:`
+异步函数会返回一个 Promise，如下面的例子：
 
 ```
 const doSomethingAsync = () => {
@@ -1161,7 +1161,7 @@ const doSomethingAsync = () => {
 }
 ```
 
-``When you want to  **call**  this function you prepend  `await`, and  **the calling code will stop until the promise is resolved or rejected**. One caveat: the client function must be defined as  `async`. Here's an example:``
+当你想要**调用** `await` 后面的函数时，**调用的函数会暂停运行，直到 Promise 成功或被拒绝**。注意：调用函数必须用 `async` 定义。示例：
 
 ```
 const doSomething = async () => {
@@ -1169,9 +1169,9 @@ const doSomething = async () => {
 }
 ```
 
-#### `A quick example`
+#### 一个简单示例
 
-`This is a simple example of async/await used to run a function asynchronously:`
+这是一个用 async/await 运行异步函数的简单示例：
 
 ```
 const doSomethingAsync = () => {
@@ -1187,7 +1187,7 @@ doSomething()
 console.log('After')
 ```
 
-`The above code will print the following to the browser console:`
+示例中的代码会在浏览器的控制台中输出：
 
 ```
 Before
@@ -1195,13 +1195,13 @@ After
 I did something //after 3s
 ```
 
-#### `Promise all the things`
+#### 让所有的代码都变成 Promise
 
-``Prepending the  `async`  keyword to any function means that the function will return a promise.``
+给任意函数加上 `async` 关键词意味着这个函数会返回一个 Promise。
 
-`Even if it’s not doing so explicitly, it will internally make it return a promise.`
+尽管函数不一定是异步的，但它内部也会返回一个 Promise。
 
-`This is why this code is valid:`
+这也是为什么下面的代码是有效的：
 
 ```
 const aFunction = async () => {
@@ -1210,7 +1210,7 @@ const aFunction = async () => {
 aFunction().then(alert) // This will alert 'test'
 ```
 
-`and it’s the same as:`
+它和下面的代码是一样的：
 
 ```
 const aFunction = async () => {
@@ -1219,13 +1219,13 @@ const aFunction = async () => {
 aFunction().then(alert) // This will alert 'test'
 ```
 
-#### `The code is much simpler to read`
+#### 代码可读性更好
 
-`As you can see in the example above, our code looks very simple. Compare it to code using plain promises, with chaining and callback functions.`
+如你在上面的例子中所见，和使用 Promise 链和回调函数比起来，现在代码看起来更简洁。
 
-`And this is a very simple example, the major benefits will arise when the code is much more complex.`
+这是一个简单的例子，当代码变得复杂时，收益会更明显。
 
-`For example here’s how you would get a JSON resource, and parse it, using promises:`
+下面是通过 Promise 获取 JSON 资源，解析数据的示例：
 
 ```
 const getFirstUserData = () => {
@@ -1238,7 +1238,7 @@ const getFirstUserData = () => {
 getFirstUserData()
 ```
 
-`And here is the same functionality provided using await/async:`
+这是用 await/async 实现相同功能的示例：
 
 ```
 const getFirstUserData = async () => {
@@ -1252,9 +1252,9 @@ const getFirstUserData = async () => {
 getFirstUserData()
 ```
 
-#### `Multiple async functions in series`
+#### 处理多个异步函数
 
-`Async functions can be chained very easily, and the syntax is much more readable than with plain promises:`
+异步函数可以很容易地链接起来，与直接使用 Promise 相比，它的语法可读性更高。
 
 ```
 const promiseToDoSomething = () => {
@@ -1275,43 +1275,43 @@ watchOverSomeoneWatchingSomeoneDoingSomething().then(res => {
 })
 ```
 
-`Will print:`
+以上代码会输出：
 
 ```
 I did something and I watched and I watched as well
 ```
 
-#### `Easier debugging`
+#### 更易调试
 
-`Debugging promises is hard because the debugger will not step over asynchronous code.`
+调试 Promise 并不容易，因为调试时会跳过异步代码。
 
-`Async/await makes this very easy because to the compiler it’s just like synchronous code.`
+async/await 让调试更加容易，因为对于解析器来说，它就像是同步代码一样。
 
-### `ES Modules`
+### ES 模块
 
-`ES Modules is the ECMAScript standard for working with modules.`
+ES 模块是用于处理模块的 ECMAScript 标准。
 
-`While Node.js has been using the CommonJS standard for years, the browser never had a module system, as every major decision such as a module system must be first standardized by ECMAScript and then implemented by the browser.`
+尽管 Node.js 使用 CommonJS 标准多年，浏览器一直没有模块系统，因此每个主要决策（如模块系统）都要先由 ECMAScript 标准化，再由浏览器实现。
 
-`This standardization process completed with ES6 and browsers started implementing this standard trying to keep everything well aligned, working all in the same way, and now ES Modules are supported in Chrome, Safari, Edge and Firefox (since version 60).`
+这个标准化过程随着 ES6 一同实现，浏览器已经开始实施该标准，并试图让所有内容保持一致，以相同的方式实现，目前 Chrome，Sarafi，Edge和Firefox（版本60以上）都已支持 ES 模块。
 
-`Modules are very cool, because they let you encapsulate all sorts of functionality, and expose this functionality to other JavaScript files, as libraries.`
+模块非常有用，因为它允许你封装各种功能，并将这些功能像库一样暴露给其他 JavaScript 文件。
 
-#### `The ES Modules Syntax`
+#### ES 模块语法
 
-`The syntax to import a module is:`
+引入模块的语法如下：
 
 ```
 import package from 'module-name'
 ```
 
-`while CommonJS uses`
+CommonJS 的语法如下：
 
 ```
 const package = require('module-name')
 ```
 
-``A module is a JavaScript file that  **exports**  one or more values (objects, functions or variables), using the  `export`  keyword. For example, this module exports a function that returns a string uppercase:``
+模块就是一个 JavaScript 文件，它通过 `export` 关键词**输出**一个或多个值（对象、方法或变量）。比如，下面的模块就输出一个将字符串转换成大写的方法：
 
 > `_uppercase.js_`
 
@@ -1319,62 +1319,63 @@ const package = require('module-name')
 export default str => str.toUpperCase()
 ```
 
-`In this example, the module defines a single,  **default export**, so it can be an anonymous function. Otherwise it would need a name to distinguish it from other exports.`
+在这个例子中，模块只定义了一个方法，通过默认输出的方法输出**default export**，因此这个函数可以是匿名函数。否则，函数需要有名字来区分输出的值。
 
-`Now,  **any other JavaScript module**  can import the functionality offered by uppercase.js by importing it.`
+现在，**任何 JavaScript 模块**都可以引入 uppercase.js 提供的功能。
 
-``An HTML page can add a module by using a  `<scri`pt> tag with the sp`ecial type="m`odule" attribute:``
+HTML 页面可以通过给 `<script>` 标签加上类型属性 `type="module"` 来引入模块：
 
 ```
 <script type="module" src="index.js"><;/script>
 ```
 
-> ``_Note: this module import behaves like a  `defer`  script load. See  [efficiently load JavaScript with defer and async][74]_``
+> 注意：引入这个模块和 `defer` 加载脚本的方式一样。见[用延迟、异步的方法高效加载 JavaScript][74]
 
-``It’s important to note that any script loaded with  `type="module"`  is loaded in  [strict mode][75].``
+需要注意的是，任何通过 `type="module"` 加载的脚本都是在[严格模式][75]下加载的。
 
-``In this example, the  `uppercase.js`  module defines a  **default export**, so when we import it, we can assign it a name we prefer:``
+在例子中，`uppercase.js` 模块被定义为**默认输出**，因此当我们引入它时，我们可以给他指定一个我们希望的名字：
 
 ```
 import toUpperCase from './uppercase.js'
 ```
 
-`and we can use it:`
+并这样使用它：
 
 ```
 toUpperCase('test') //'TEST'
 ```
 
-`You can also use an absolute path for the module import, to reference modules defined on another domain:`
+你也可以通过绝对路径来引入另一个域上的模块：
 
 ```
 import toUpperCase from 'https://flavio-es-modules-example.glitch.me/uppercase.js'
 ```
 
-`This is also valid import syntax:`
+下面的语法也同样有效：
 
 ```
-import { foo } from '/uppercase.js'import { foo } from '../uppercase.js'
+import { foo } from '/uppercase.js'
+import { foo } from '../uppercase.js'
 ```
 
-`This is not:`
+下面的语法则无效：
 
 ```
 import { foo } from 'uppercase.js'
 import { foo } from 'utils/uppercase.js'
 ```
 
-``It’s either absolute, or has a  `./`  or  `/`  before the name.``
+引入时，要么使用绝对路径，或者在文件名前增加 `./` 或 `/`。
 
-### `Other import/export options`
+### 其他 import/export 配置
 
-`We saw this example above:`
+我们在前面看到这个示例：
 
 ```
 export default str => str.toUpperCase()
 ```
 
-`This creates one default export. In a file however you can export more than one thing, by using this syntax:`
+这个例子中只有一个默认输出的内容。实际上，在文件中可以输出多个内容，语法如下：
 
 ```
 const a = 1
@@ -1383,51 +1384,51 @@ const c = 3
 export { a, b, c }
 ```
 
-`Another module can import all those exports using`
+另一个模块可以这样引入所有内容：
 
 ```
 import * from 'module'
 ```
 
-`You can import just a few of those exports, using the destructuring assignment:`
+你可以通过解构赋值引入模块中的部分内容：
 
 ```
 import { a } from 'module'
 import { a, b } from 'module'
 ```
 
-``You can rename any import, for convenience, using  `as`:``
+引入时，可以用 `as` 给引入内容重新命名：
 
 ```
 import { a, b as two } from 'module'
 ```
 
-`You can import the default export, and any non-default export by name, like in this common React import:`
+你可以引入默认输出的内容，也可以通过名字引入非默认输出的内容，如在 React 组件中常见的那样：
 
 ```
 import React, { Component } from 'react'
 ```
 
-`You can see an ES Modules example here:  [https://glitch.com/edit/#!/flavio-es-modules-example?path=index.html][77]`
+你可以看看这个 ES 模块示例：[https://glitch.com/edit/#!/flavio-es-modules-example?path=index.html][77]
 
-#### `CORS`
+#### CORS
 
-``Modules are fetched using  [CORS][78]. This means that if you reference scripts from other domains, they must have a valid CORS header that allows cross-site loading (like  `Access-Control-Allow-Origin: *`)``
+模块通过 [CORS][78] 加载。这意味着当你从其他域加载模块时，它们必须拥有有效的 CORS 头（如 `Access-Control-Allow-Origin: *`）才能跨域加载。
 
-#### `What about browsers that do not support modules?`
+#### 不支持模块的浏览器呢？
 
-``Use a combination of  `type="module"`  and  `nomodule`:``
+结合使用 `type="module"` 和 `nomodule`：
 
 ```
 <script type="module" src="module.js"></script>
 <script nomodule src="fallback.js"></script>
 ```
 
-`ES Modules are one of the biggest features introduced in modern browsers. They are part of ES6 but the road to implement them has been long.`
+ES 模块是现代浏览器引入的最大特性。它们是 ES6 的一部分，但是完善它们还有很长的路要走。
 
-`We can now use them! But we must also remember that having more than a few modules is going to have a performance hit on our pages, as it’s one more step that the browser must perform at runtime.`
+我们现在可以使用它们，但是也需要记住，引入太多模块会引发页面的性能问题，因为浏览器在运行时需要执行额外的步骤。
 
-`Webpack is probably going to still be a huge player even if ES Modules land in the browser, but having such a feature directly built in the language is huge for a unification of how modules work client-side and on Node.js as well.`
+尽管浏览器引入了 ES 模块，但 Webpack 仍将扮演重要角色，因为尽管在语言中加入了这一特性，在客户端运行模块和 Node.js 运行模块仍然有巨大差异。
 
 ### `SECTION 2: REACT CONCEPTS`
 

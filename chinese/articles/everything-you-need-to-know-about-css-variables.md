@@ -470,117 +470,118 @@ font-size: 20px
 
 你看到不同了吗？
 
-### Project 2: Themed Sites with CSS Variables
+### 项目二: 用CSS变量定制主题网站
 
-I’m sure you’ve come across them before. Themed sites give the user the feel of customization. Like they are in control.
 
-Below is the basic example we’ll build.
+我敢说，你之前肯定浏览过类似的网站。主题网站会让用户觉得自己可以定制主题，好像自己在主管该网站一样。
+以下是一个最基础的例子。
+
 
 ![](https://cdn-media-1.freecodecamp.org/images/LsBPxBoN-bc9PZorRq39kklAE5yTiSmkgm6I)
 
-So, how easy do the CSS variables make this?
 
-We’ll have a look.
+那么，使用 CSS 变量会让创建过程变得多么容易呢？
 
-Just before that, I wanted to mention that this example is quite important. With this example, I’ll introduce the concept of updating CSS variables with JavaScript.
+我们来看看。
 
-It is fun!
+在开始之前，我想说，这个例子非常重要。在这个例子中，我会介绍如何使用 Javascript 来更新 CSS 变量。
 
-You’ll love it.
+这非常有趣！
 
-### What we really want to do.
+你会喜欢的。
 
-The beauty of CSS variables is their reactive nature . As soon as they are updated, whatever property has the value of the CSS variable gets updated as well.
+### 我们到底想做什么
 
-Conceptually, here’s an image that explains the process with regards to the example at hand.
+CSS变量的魅力在于其更新的及时性。一旦你修改了某个CSS变量，其所在的属性内容都会发生变化。
+
+现在我们用图片来解释概念，这张图片展示了整个例子的修改过程。
 
 ![](https://cdn-media-1.freecodecamp.org/images/OmRYAlINfOHcYWrLDzBJfjJkI6ejbsg5Tstc)
 
-The process
+流程图
 
-So, we need some JavaScript for the click listener.
+所以，我们需要用 JavaScript 写一个鼠标点击事件的监听器。
 
-For this simple example, the background and color of the text of the entire page is based off of CSS variables.
+在这个简单的例子中，整个页面的背景和文本颜色都是基于 CSS 变量写的。
 
-When you click any of the buttons above, they set the CSS variable to some other color. As a result of that, the background of the page is updated.
+当你点击左上方的任意一个按钮时，他们就会改变 CSS 变量的值。因此，页面的背景颜色也会发生变化。
 
-Hey, that’s all there is to it.
+该项目的原理就是这样。
 
-Uh, one more thing.
+除此之外，我们怎么改变 CSS 变量的值呢？
 
-When I say the CSS variable is set to some other value, how’s that done?
 
 ![](https://cdn-media-1.freecodecamp.org/images/UIQ3ij9Cy-iU3rO5OXkQc1uyPhMPGuHD1zXb)
 
-Set the variable inline
+在行内设置变量值
 
-CSS variables will take effect even if they are set inline. With JavaScript, we get a hold of the root document, and we set the new value for the CSS variable inline.
+即便在行内为 CSS 变量设值，CSS 变量的值也会发生改变。使用Javascript，我们可以为根元素设置行内样式。
 
-Got that?
+你明白了吗？
 
-That’s a lot of talking — let’s do the real thing.
+我说的太多了——现在让我们做点实事吧。
 
-### The initial markup
+### Html 结构
 
-The initial markup needed is this:
+以下是我们需要的 Html 代码：
 
 ```
 <div class="theme">  <button value="dark">dark</button>  <button value="calm">calm</button>  <button value="light">light</button></div><article>...</article>
 ```
 
-The markup consists of three buttons within a  `.theme`  parent element. To keep things short I have truncated the content within the  `article`  element. Within this  `article`element is the content of the page.
+这串代码中有三个按钮元素，它们都继承自类名为 `.theme` 的父元素。为了简化我没有写`article`  元素， `article`元素包含页面的主要内容。
 
-### Styling the Page
+### 为页面定制风格
 
-The success of this project begins with the styling of the page. The trick is simple.
+为了成功实现该项目，我们首先要改变页面风格。方法很简单。
 
-Instead of just setting the  `background-color`  and  `color`  of the page in stone, we will set them based on variables.
+这次，我们不再设置 `background-color`  和 `color` 属性, 而是使用变量。
 
-Here’s what I mean.
+我的意思是这样写：
 
 ```
 body {  background-color: var(--bg, white);  color: var(--bg-text, black)}
 ```
 
-The reason for this is kind of obvious. Whenever a button is clicked, we will change the value of both variables within the document.
+我这样做的原因很明显。当按钮被按下时，我们将会改变这两个 CSS 变量的值。
 
-Upon this change, the overall style of the page will be updated. Easy-peasy.
+这样的话，整个页面的风格都会发生变化。这绝对是小菜一碟。
 
 ![](https://cdn-media-1.freecodecamp.org/images/lbU62-myh4lQakl9DoOYEaetbRLhPt4NZP01)
 
-So, let’s go ahead and handle the update from JavaScript.
+现在让我们从 JavaScript开始吧。
 
-#### Getting into the JavaScript
+#### 使用 JavaScript
 
-I’ll go ahead and spit out all the JavaScript needed for this project.
+我会把该项目需要用到的JavaScript代码写在下面：
 
 ```
 const root = document.documentElement const themeBtns = document.querySelectorAll('.theme > button')themeBtns.forEach((btn) => {  btn.addEventListener('click', handleThemeUpdate)})function handleThemeUpdate(e) {  switch(e.target.value) {    case 'dark':       root.style.setProperty('--bg', 'black')      root.style.setProperty('--bg-text', 'white')      break    case 'calm':        root.style.setProperty('--bg', '#B3E5FC')       root.style.setProperty('--bg-text', '#37474F')      break    case 'light':      root.style.setProperty('--bg', 'white')      root.style.setProperty('--bg-text', 'black')      break  }}
 ```
 
-Don’t let that scare you. It’s a lot easier than you probably think.
+别让这串代码吓到了你，这比你想的容易多了。
 
-First off, keep a reference to the root element,  `const root = document.documentElement`
+首先，获取根元素， `const root = document.documentElement`
 
-The root element here is the  `HTML`  element. You’ll see why this is important in a bit. If you’re curious, it is needed to set the new values of the CSS variables.
+这里的根元素是  `HTML`  元素。你会理解这为什么重要了，如果你仍旧不理解，那么请记住，我们要在这一步里改变 CSS 变量的值。 
 
-Also, keep a reference to the buttons too,  `const themeBtns = document.querySelectorAll('.theme > butto`n')
+除此之外，我们还要获取按钮元素， `const themeBtns = document.querySelectorAll('.theme > button`)
 
-`querySelectorAll`  yields an array-like data structure we can loop over. Iterate over each of the buttons and add an event listener to them, upon click.
+`querySelectorAll`方法会获取伪数组。之后我们遍历该伪数组数组，然后添加鼠标点击的监听器。  
 
-Here’s how:
+代码如下：
 
 ```
 themeBtns.forEach((btn) => {  btn.addEventListener('click', handleThemeUpdate)})
 ```
 
-Where’s the  `handleThemeUpdate`  function? I’ll discuss that next.
+ `handleThemeUpdate` 函数在哪里呢？我接下来会继续讨论。
 
-Every button being clicked will have the  `handleThemeUpdate`  as its callback function. It becomes important to note what button was clicked and then perform the right operation.
+我们需要为每一个按钮的点击事件都绑定 `handleThemeUpdate` 函数。而且我们需要为每一个按钮的点击事件分配正确的操作，这非常重要。
 
-In the light of that, a switch  `operator`  is used, and some operations are carried out based on the value of the button being clicked.
+基于此，我们还要使用一个  `operator`  来进行转换，并基于被点击的按钮的属性值来采取相应的操作。
 
-Go ahead and take a second look at the block of JavaScript code. You’ll understand it a lot better now.
+再看一眼JavaScript的代码块吧，现在你会更加理解代码块的含义的。
 
 ### Project 3: Building the CSS Variable Booth ?
 

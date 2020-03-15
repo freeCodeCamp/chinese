@@ -583,130 +583,128 @@ themeBtns.forEach((btn) => {  btn.addEventListener('click', handleThemeUpdate)})
 
 再看一眼JavaScript的代码块吧，现在你会更加理解代码块的含义的。
 
-### Project 3: Building the CSS Variable Booth ?
+### 项目三: 创建 CSS 变量（Booth） ?
 
-In case you missed it, here’s what we’ll build:
+如果你之前没有看到过效果图，那么我再贴一次图片：
 
 ![](https://cdn-media-1.freecodecamp.org/images/IgKvTxKSenWIErNZ4Im96FCV65MJPaf4qfad)
 
-Remember that the color of the boxes are dynamically updated, and that the box container is rotated in 3d space as the range input is changed.
+请记住，盒子的颜色会动态发生变化，盒子容器会根据输入的值进行3维旋转。
 
 ![](https://cdn-media-1.freecodecamp.org/images/UZNu2ymN0vI2VH4en9NLaJ4T22l8UEWnPi2i)
 
-You can go ahead and play with it on  [Codepen][5].
+你可以在[Codepen][5]上进行尝试。
 
-This is a superb example of updating CSS variables with JavaScript and the reactivity that comes with it.
+这个例子详细解释了如何使用 Javascript 来更新 CSS 变量，以及验证其如何响应。
 
-Let’s see how to build this.
+我们来看看创建过程。
 
-#### The Markup
+#### Html结构
 
-Here are the needed components.
+我们需要以下元素：
 
-1.  A range input
-2.  A container to hold the instructions
-3.  A section to hold a list of other boxes, each containing input fields
+1.  一个用来输入范围值的输入框
+2.  一个包含指令的容器
+3.  一个包含其他盒子的section，每一个盒子中都包含一个输入框
 
 ![](https://cdn-media-1.freecodecamp.org/images/FHA6xhsFiPCoGpBB5VLcKzoggivesElFAkWQ)
 
-The markup turns out simple.
+这个Html结构非常简单。
 
-Here it is:
+如下所示：
 
 ```
 <main class="booth">  <aside class="slider">    <label>Move this ? </label>    <input class="booth-slider" type="range" min="-50" max="50" value="-50" step="5"/>  </aside>    <section class="color-boxes">    <div class="color-box" id="1"><input value="red"/></div>    <div class="color-box" id="2"><input/></div>    <div class="color-box" id="3"><input/></div>    <div class="color-box" id="4"><input/&gt;</div&gt;    <div class="color-box" id="5"><input/></div>    <div class="color-box" id="6">;<input/>&lt;/div>  </section>  <footer class="instructions">    ?? Move the slider<br/>    ?? Write any color in the red boxes   </footer></main>  
 ```
 
-Here are a few things to point your attention to.
+你需要注意以下几点：
 
-1.  The range input represents values from  `-50`  to  `50`  with a step value of  `5`  Also, the value of the range input is the minimum value,  `-50`
-2.  If you aren’t sure how the range input works, check it out on  [w3schools][6]
-3.  Note how the section with class  `.color-boxes`  contains other  `.color-box`containers. Within these containers exist input fields.
-4.  It is perhaps worth mentioning that the first input has a default value of red.
+1.  输入框中输入值的取值范围为 `-50`  到  `50` ，步长为 `5` 。除此之外，默认输入值为 `-50`
+2.  如果你不确定输入框如何工作，那么请先到 [w3schools][6]了解相关概念。
+3.  注意观察类名为 `.color-boxes` 的 section 是如何包含其他类名为 `.color-box`的容器的，在这些容器中又有新的输入框。
+4.  值得一提的是，第一个输入框的颜色默认为红色。
 
-Having understood the structure of the document, go ahead and style it like so:
+理解了Html结构后，继续为其添加如下样式：
 
 ![](https://cdn-media-1.freecodecamp.org/images/pY28lnZFx4xvar807GegIg4HIn4DNcBAG5rE)
 
-1.  Take the  `.slider`  and  `.instructions`  containers out of the document flow. Position them absolutely.
-2.  Give the  `body`  element a sunrise background color and garnish the background with a flower in the bottom left corner
-3.  Position the  `color-boxes`  container in the center
-4.  Style the  `color-boxes`  container
+1.  将类名为  `.slider`  和  `.instructions`  的容器移出文档流。设置他们的位置为绝对定位。
+2.  设置  `body`  元素的背景颜色为日出的颜色，并且在左下角放置一朵花。 
+3.  将类名为  `color-boxes`  的容器放置在页面中间。
+4.  为类名为  `color-boxes`  的容器设置样式。
 
-Let’s knock these off.
 
-The following will fix the first task.
+具体的代码如下：
 
 ```
 /* Slider */.slider,.instructions {  position: absolute;  background: rgba(0,0,0,0.4);  padding: 1rem 2rem;  border-radius: 5px}.slider {  right: 10px;  top: 10px;}.slider > * {  display: block;}/* Instructions */.instructions {  text-align: center;  bottom: 0;  background: initial;  color: black;}
 ```
 
-The code snippet isn’t as complex as you think. I hope you can read through and understand it. If not, drop a comment or tweet.
+代码块并不像你想象的那样复杂。我希望你能读完并理解。如果你还是不理解，请在文章下面留言或者在推特上 @ 我。
 
-Styling the  `body`  is a little more involved. Hopefully, you understand CSS well.
+为 `body`  元素设置样式略微复杂。幸运的是，你熟知 CSS 的用法。
 
-Since we aspire to style the element with a background color and a background image, it’s perhaps the best bet to use the  `background`  shorthand property to set multiple backgrounds.
+既然我们想要为页面设置背景颜色并添加背景图案，也许我们最好使用  `background`  属性的简便写法来设置多种样式。
 
-Here it is:
+代码如下：
 
 ```
 body {  margin: 0;  color: rgba(255,255,255,0.9);  background: url('http://bit.ly/2FiPrRA') 0 100%/340px no-repeat, var(--primary-color);  font-family: 'Shadows Into Light Two', cursive;}
 ```
 
-The  `url`  bit is the link to the sunrise flower.
+  `url`  会链接到太阳花图片。
 
-The next set of properties  `0 100%`  represent the background position of the image.
+接下来的 `0 100%`  设置了背景图片的位置。
 
-Here’s an illustration of how CSS background positioning works:
+下面的文章介绍了在 CSS 中，如何进行背景图片的定位： 
 
 ![](https://cdn-media-1.freecodecamp.org/images/4rZugtEKFeay00FsfDXFuXyiHA1Amf1iG2Jd)
 
-From:  [the advanced guide to CSS][7]
+来源:  [CSS 高级编程][7]
 
 ![](https://cdn-media-1.freecodecamp.org/images/zFcuuEu5RnrGWiG5Doqg7jS4OS-PyOh7H93v)
 
-From:  [the advanced guide to CSS][8]
+来源:  [CSS 高级编程][8]
 
-The other bit after the forward slash represents the  `background-size`  This has been set to  `340px`  If you made this smaller, the image would be smaller too.
+分隔号后面的 `340px` 代表 `background-size`。如果你把数值设置的更小，那么图片尺寸也会变小。
 
-`no-repeat`, you might figure out what that does. It prevents the background from repeating itself.
+你可能会想`no-repeat`是什么意思。该属性可以防止背景图片平铺。
 
-Finally, anything that comes after the comma is a second background declaration. This time we’ve only set the  `background-color`  to  `var(primary-color)`
+最后，逗号后面的属性值都是备选值。这里我们将  `background-color`  设置为  `var(primary-color)`
 
-Oops, that’s a variable.
+可以看出，我们使用了变量。
 
-The implication of this is that you have to define the variable. Here’s how:
+这意味着在声明之前，你必须先定义变量：
 
 ```
 :root {  --primary-color: rgba(241,196,15 ,1)}
 ```
 
-The primary color there is the sunrise yellow color. No big deal. We’ll set some more variables in there soon.
+这里的颜色值就是日出时的黄颜色。这没什么大不了的，我们一会会设置更多的变量。
 
-Now, let’s center the  `color-boxes`
+接下来，我们把类名为  `color-boxes`的容器居中设置。
 
 ```
 main.booth {  min-height: 100vh;    display: flex;  justify-content: center;  align-items: center;}
 ```
 
-The main container acts as a flex container and rightly positions the direct child in the center of the page. This happens to be our beloved  `color-box`  container
+主要容器使用了弹性布局，将下一级的子元素置于页面中央。因此，类名为 `color-box`  的容器都会居中显示。
 
-Let’s make the color-boxes container and its children elements pretty.
+接下来，我们为子元素和其下一级的子元素设置样式。
 
-First, the child elements:
+首先，这样设置子元素：
 
 ```
 .color-box {  padding: 1rem 3.5rem;  margin-bottom: 0.5rem;  border: 1px solid rgba(255,255,255,0.2);  border-radius: 0.3rem;  box-shadow: 10px 10px 30px rgba(0,0,0,0.4); }
 ```
 
-That will do it. There’s a beautiful shadow added too. That’ll get us some cool effects.
+这样设置完后，子元素会拥有一个美丽的阴影，这会让最后的效果更加酷炫。T
 
-That is not all. Let’s style the overall  `container-boxes`  container:
+这还不够，我们来设置类名为 `container-boxes` 的盒子属性。 
 
 ```
 /* Color Boxes */.color-boxes {  background: var(--secondary-color);  box-shadow: 10px 10px 30px rgba(0,0,0,0.4);  border-radius: 0.3rem;    transform: perspective(500px) rotateY( calc(var(--slider) * 1deg));  transition: transform 0.3s}
 ```
-
 Oh my!
 
 There’s a lot in there.

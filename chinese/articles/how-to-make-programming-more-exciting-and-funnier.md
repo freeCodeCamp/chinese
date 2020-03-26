@@ -1,27 +1,26 @@
-> * 原文地址：[How to Make Programming More Exciting and More Fun 掌握这些方法，编程可以更有趣](https://www.freecodecamp.org/news/how-to-make-programming-more-exciting-and-funnier/)
 > * 原文作者：Gaël Thomas
 > * 译者：sheenalu
 > * 校对者：
 
 ![How to Make Programming More Exciting and More Fun](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/how-to-make-programming-more-exciting-and-more-fun-1.png)
 
-Although the majority of developers know why programming is exciting, you might wonder about ways to make it funnier.
+尽管大多数开发人员都知道编程为什么会令人兴奋，但你可能想知道，有哪些方法可以让编程更有趣。
 
-I've recently asked on  [the Instagram][1]  of HereWeCode the following question: "What small tutorials do you want to see on the account?". One of the followers answered "How to make coding interesting?". I was surprised because I'd never asked this myself.
+我最近在HereWeCode的 [the Instagram][1] 账号上问了以下问题：“你想在这个账号上看到哪些小型教程？”一位关注者回答道：“如何让编程变得有趣？”我感到很惊讶，因为我从来不会问这样的问题。
 
-After a few hours of searching, I wanted share with you different ways to make programming more fun.
+经过几个小时的思索，我想要跟你分享让编程变得更有趣的不同方法。
 
-## Why coding is exciting
+## 编程令人兴奋的原因
 
-In my opinion, IT in general is exciting. We live in a world where computers are one of the most important things.
+在我看来，总的来说，IT令人兴奋。在我们所生活的世界里，计算机是最重要的物品之一。
 
-As we speak, programming is not a skill that everyone has. Being able to develop your own project is this world gives you a chance. Everything is possible thanks to Information Technology, and we live in a key period where there are not enough developers to satisfy the need.
+正如我们所说，编程并不是人人都具备的技能。能够开发自己的项目是这个世界给予你的机会。借助信息技术，一切皆有可能，而且我们处在一个关键时期：目前，开发人员的数量不足以满足需求。
 
-Coding is a creative skill, and it's exciting to be a part of a project. Although mobile apps and websites are everywhere, I talked with a lot of people who don't know how they work.
+编程是一种创造性技能，成为项目的一部分是令人兴奋的。虽然移动应用程序和网站无处不在，但我与许多人交谈过，他们并不知道这些东西是如何工作的。
 
-My speech so far may seem a bit over-sold and over-played, but it's the reason why coding is exciting for me.
+到目前为止，我的演讲似乎有点夸大其词，但这正是编程让我兴奋的原因。
 
-It's one of the reasons why I take so much pleasure in creating educational content.
+这就是为什么我如此热衷于创作教育内容的一个原因。
 
 ## How to make it more fun
 

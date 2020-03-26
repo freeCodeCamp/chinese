@@ -22,17 +22,17 @@
 
 这就是为什么我如此热衷于创作教育内容的一个原因。
 
-## How to make it more fun
+## 如何让编程更有趣
 
-After thinking about it, although programming is now a passion for me, I remembered that it hasn't always been fun for me.
+想了一下，虽然现在编程对我来说是一种激情，但在我的记忆中，它并不总是有趣的。
 
-Mostly when I started, I would get stuck for days on a problem. Sometimes I would completely lose hope and say: "This is not for me. I tried everything, and it still does not work. I'm not that good."
+在我开始编程时，大多数情况下，我会被一个问题困扰多日。有时我会完全失去希望，说：“编程并不适合我。我尝试过所有方案，但还是行不通。我并不那么善于编程。”
 
-If that's the case with you, I can tell you – everybody's been there.
+如果你面临这样的情况，我可以告诉你，这种情形每个人都经历过。
 
-This situation can also happen for many other reasons. For example, when you are bored with a language or a framework because you've used it too much.
+许多其它原因也会导致这种情况发生，例如，当你太过频繁使用某种语言或框架而对其产生厌烦时。
 
-Anyway, don't worry too much about it. Here, I've listed a few tips to give you a dose of fun when you need it.
+不管怎样，不要太担心。在这里，我列出了几个小贴士，可以在你需要时给你带来一定的乐趣。
 
 ## Practice
 

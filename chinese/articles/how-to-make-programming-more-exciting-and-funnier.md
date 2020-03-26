@@ -1,6 +1,6 @@
 > * 原文地址：[How to Make Programming More Exciting and More Fun 掌握这些方法，编程可以更有趣](https://www.freecodecamp.org/news/how-to-make-programming-more-exciting-and-funnier/)
 > * 原文作者：Gaël Thomas
-> * 译者：
+> * 译者：sheenalu
 > * 校对者：
 
 ![How to Make Programming More Exciting and More Fun](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/how-to-make-programming-more-exciting-and-more-fun-1.png)

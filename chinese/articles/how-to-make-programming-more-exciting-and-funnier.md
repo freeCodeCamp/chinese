@@ -34,19 +34,19 @@
 
 不管怎样，不要太担心。在这里，我列出了几个小贴士，可以在你需要时给你带来一定的乐趣。
 
-## Practice
+## 多练习
 
-Writing code is like playing golf. When you start, it's not fun. You need to learn everything: which driver to use for hitting the ball in such a way, how to position yourself, and so on. The pleasure will come as you go along, begin to understand things, and start to have fun with them.
+写代码就像打高尔夫球。开始时，它并不有趣，你需要学习所有的东西：以这种方式击球应使用哪个球杆？你应如何站立？等等。随着你进一步练习，快乐随着而来，你开始理解这些事物，并从中获得乐趣。
 
-## Don't just read code, run it
+## 别只读代码，要运行代码
 
-Following along with lessons by simply reading the code can be a significant problem when people start programming.
+在人们开始编程时，通过简单阅读代码来学习课程，可能是一个重大问题。
 
-When you are learning how to code, you should try to write and run it by yourself. Take the time to do it – you will understand it better, and you will have fun trying to modify the code to create your programs.
+在学习编码时，试着自己编写和运行代码。花点时间去做这件事吧！你会更好地理解它，并从尝试修改代码来创建程序中获得乐趣。
 
-Here's another example: when you are searching for a code on GitHub, why not try it out? It can be fun to understand someone else's work and be able to integrate it into your project.
+这里还有另一个例子：当你在GitHub上搜索一段代码时，为什么不试着自己写出来呢？理解他人的工作并把它集成到自己的项目中会很有趣。
 
-## Add a dose of fun to your projects or apprenticeships
+## 为你的项目或实习期增添几分乐趣
 
 When you are bored with one technology or if you want to increase your knowledge, you can learn a new library, framework, or language. This can be an interesting process and can help you to try new things and have fun doing them.
 

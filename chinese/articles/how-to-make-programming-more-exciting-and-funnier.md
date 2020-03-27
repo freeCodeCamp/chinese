@@ -68,49 +68,48 @@
 
 ## 总是挑战自己
 
-When you are a developer, you always need to learn new things to stay up to date. Everything is evolving quickly, and you can't be left behind. Boredom or lack of fun occurs when you no longer feel like you are growing or learning.
+当你成为一名开发者时，你总是需要学习新知识来跟上时代的步伐。一切都在快速发展，你不能被抛在后面。当你不再觉得自己在成长或学习时，就会感到无聊或缺乏乐趣。
 
-To counteract this feeling, you can try to achieve goals that you have not yet met.
+为了对抗这种感觉，你可以尝试实现你还没有达到的目标。
 
-For example, if you have never participated in an open-source project, you can search on GitHub and contribute for the first time.
+例如，如果你从未参加过开源项目，则可以在GitHub上搜索项目并首次贡献你的力量。
 
-Your sense of satisfaction will be increased when you succeed in having your work accepted within the project. Perhaps you will help dozens, even hundreds of people, by fixing a previously unresolved problem.
+当你的工作被项目接受时，你的满足感会增加。你若解决了一个以前没有解决的问题，可能会帮助数十甚至数百人。
 
-You can also participate in coding competitions or use coding websites such as  [HackerRank][3],  [CodingGame][4], or  [Project Euler][5]  to challenge yourself.
+你也可以参加编码竞赛，或使用编码网站（  [HackerRank][3],  [CodingGame][4], or  [Project Euler][5]）  挑战自己。
 
-## Create a personal project from scratch
+## 从头开始创建个人项目
 
-It can be frustrating to be a developer when you're only working on a small part of a project for your company.
+作为一名开发者，当你只为公司从事项目的一小部分时，会感到很沮丧。
 
-Maybe you have always dreamed about a project, but you've never taken the time to work on it. Why not try to code it? You will see – it's fun to start the project of your dreams. It's also a worthy goal to  [make your programming habit stick][6].
+也许你一直梦想做一个项目，但却从未花时间去做。为什么不尝试编码呢？你会发现，开始你梦想中的项目很有趣。养成良好的编程习惯也是一个值得追求的目标。  [养成良好的编程习惯][6]也是一个值得追求的目标.
 
-If you don't have any ideas, try to find a theme you like, for example:
+如果你没有任何想法，请尝试找到你喜欢的主题，例如：
 
--   If you like video games, you can try to create a game.
--   If you are into education, why not create tutorials around code?
--   If you love hardware and electronics, why not build an Arduino or a raspberry pi?
+-   如果你喜欢电子游戏，则可以试着创建一个。
+-   如果你对教育感兴趣，为什么不围绕代码创建教程呢？
+-   如果你喜欢硬件和电子产品，为什么不构建一个Arduino或“树莓派”呢？
 
-> "Programming is like writing - in the main subject matters much more than the writing itself." — [lifeisstillgood][7]
+> “编程就像写作——主题大体上比写作本身要重要得多。”—— [lifeisstillgood][7]
 
-## Define a goal
+## 定义目标
 
-This point always returns in all of my productivity articles. You must define goals.
+这一点在我所有关于提高工作效率的文章中都有提到。你必须定义目标。
 
-Without goals, it's challenging to feel comfortable and enjoy what you are doing as a developer.
+没有目标，要想舒适地当一名开发者并享受你所的工作是很有挑战性的。
 
-## Find a mentor
+## 寻找导师
 
-A mentor can be motivating if you don't find coding fun anymore.
+如果你再也找不到编程的乐趣，导师可以激励你。
 
-A mentor can give you a goal to follow and teach you the best practices. They can also help you  [improve your programming skills][8]  and stimulate your professional career.
+导师可以给你一个可以遵循的目标，并教给你最佳实践。他们还可以帮助你 [提高编程技能][8]  并推动你的职业生涯发展。
+也许你想知道如何让你心中的“大牛”成为你的导师。
 
-Perhaps you are wondering how to ask your "hero" to become your mentor.
+好吧，只要发个信息就可以了。
 
-Well, just send a message and them to be your mentor.
+是的，是的，就这么简单。也许他们会很乐于知道，你重视他们的技能，认为他们的技能足以指导你。大多数情况下，他们会很乐于陪你一起成长。
 
-Yeah yeah, it's that simple. Maybe, they will be pleased to know that you value their skills enough to mentor you. In most cases, they will be delighted to accompany you in your development.
-
-## Sleep more
+## 睡多点
 
 When you are in a downward spiral, programming becomes less fun. Sometimes it can be difficult for you to move forward and thrive in your work.
 

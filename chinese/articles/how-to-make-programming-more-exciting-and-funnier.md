@@ -46,25 +46,25 @@
 
 这里还有另一个例子：当你在GitHub上搜索一段代码时，为什么不试着自己写出来呢？理解他人的工作并把它集成到自己的项目中会很有趣。
 
-## 为你的项目或实习期增添几分乐趣
+## 为你的项目或学习生涯增添几分乐趣
 
-When you are bored with one technology or if you want to increase your knowledge, you can learn a new library, framework, or language. This can be an interesting process and can help you to try new things and have fun doing them.
+当你对某种技术感到厌烦或想增加知识时，你可以学习新库、新框架或新语言。这会是一个有趣的过程，可以帮助你尝试新事物并从中获得乐趣。
 
-However, I don't recommend that you only learn from and follow along with a course. If you do so, after a few days you will be bored. Every day or with every new chapter, create small projects to encourage yourself, and let your creativity run free.
+但是，我不建议你只学习和遵循一门课程。如果这样做，几天之后你就会感到厌烦。每天或每学新的一章都开发一些小项目吧，这样可以激励自己，并让你的想象力自由发挥。
 
-Try to find some fun projects to work on. For example, imagine you are learning the basics of JavaScript. Even if these skills are the most important, learning them won't be enjoyable. Once you know how to get user inputs and print in the console, why not trying to create a simple "chatbot" that answers user questions?
+试着找一些有趣的项目来做。例如，假设你正在学习JavaScript的基础知识。虽然这些技能最重要，但是学习它们也不是件令人愉快的事。然而，一旦你知道如何获取用户输入并在控制台打印，为什么不试着创建一个回答用户问题的简单“聊天机器人”呢？
 
 ![](https://herewecode.io/blog/content/images/2020/01/chatbot-example.png)
 
-Chatbot example
+聊天机器人示例：
 
-When I was doing my search to answer this question, I found this story from a Quora user, and I liked it. It's an excellent example of how to put fun into your apprenticeships.
+当我搜索该问题答案时，我从一个Quora用户那里找到了这个故事，我很喜欢。这是一个很好的例子，说明了如何将乐趣带入学习生涯。
 
-> "Another thing - the worst is learning a new thing - it is usually very challenging, and your progress is much slower than you wish it were. To make that fun, I typically trick my brain.
+> “此外，最糟糕的是学习新事物，这通常充满挑战，并且你的进展会比你期望的要慢得多。为了使这一过程变得有趣，我通常会欺骗我的大脑。
 
-> For example, when I was learning about assembly language, and we had a project to program a tiny hardware display - well first, it was very dull. You had to study the hardware manual, it had inputs and outputs, and all you could achieve was a few letters to appear on the screen.
+> 例如，当我学习汇编语言时，我们要编写一个微型硬件显示程序。——这非常枯燥，你必须学习硬件手册，它具有输入和输出，而你能实现的是在屏幕上显示几个字母。
 
-> But I challenged myself to master that thing, and to do that, I came up with my own "special exercise". Instead of merely writing 10101 on display, I came up with the idea to write something more stupid, more childish. Something like - ——CALL -ME - NOW -XXXX — flashing and moving over the screen - this was WAY more advanced than the actual task we had been assigned in class. I just used this stupid thing to motivate myself to learn everything I could about assembly languages, and boy, this worked out well! :)" —  [Marcus Biel][2]
+> 但我挑战自己去掌握这个东西，为了做到这一点，我想出了自己的“特殊练习”。我没有单纯在显示器上显示 10101，而是想出了一个主意：写一些更愚蠢、更幼稚的东西。比如：现在就给我打电话，某某某。这些字在屏幕上闪烁并移动。这比课堂上布置的实际任务要高级得多。我用这种愚蠢的东西来激励自己学习汇编语言有关的所有知识。男孩们，这很有用！:)” —马库斯·比尔（[Marcus Biel][2]）
 
 ## Always challenge yourself
 

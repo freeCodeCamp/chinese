@@ -66,7 +66,7 @@
 
 > 但我挑战自己去掌握这个东西，为了做到这一点，我想出了自己的“特殊练习”。我没有单纯在显示器上显示 10101，而是想出了一个主意：写一些更愚蠢、更幼稚的东西。比如：现在就给我打电话，某某某。这些字在屏幕上闪烁并移动。这比课堂上布置的实际任务要高级得多。我用这种愚蠢的东西来激励自己学习汇编语言有关的所有知识。男孩们，这很有用！:)” —马库斯·比尔（[Marcus Biel][2]）
 
-## Always challenge yourself
+## 总是挑战自己
 
 When you are a developer, you always need to learn new things to stay up to date. Everything is evolving quickly, and you can't be left behind. Boredom or lack of fun occurs when you no longer feel like you are growing or learning.
 

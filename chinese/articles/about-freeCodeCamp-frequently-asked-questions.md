@@ -59,53 +59,53 @@
 
 [**Quincy**][8]  于2014年创立了 freeCodeCamp 社区。如今像他一样的积极贡献者已有数千名。
 
-### I'm a teacher. Is freeCodeCamp an appropriate resource for my class?
+### 我是一名老师。freeCodeCamp 适合我的课堂吗？
 
-Yes. Many high school, college, and adult ed programs incorporate freeCodeCamp into their coursework. We're open source, so no license or special permission from us is necessary. We're even building special tools for teachers.
+当然。很多高中，大学以及成人教育都计划将 freeCodeCamp 纳入其课程。我们是开源的，因此你并不需要什么许可。我们甚至正在打造适合于老师的工具。
 
-### Can I live-stream myself working on freeCodeCamp challenges and projects? Can I blog about how I solved them?
+### 我可以直播自己在 freeCodeCamp 上进行的挑战和项目工作吗？我能否将解决方案写成博客呢？
 
-Yes. We welcome this. Also, don't be shy about "spoiling" projects or challenges. The solutions to all of these challenges are already all over the internet.
+是的，我们对此表示欢迎。此外，请不要羞于“搞砸”项目或挑战，因为他们的解决方案已经遍布网络。
 
-### Can I create apps or tools based around the freeCodeCamp community and platform?
+### 我可以基于 freeCodeCamp 社区和平台创建应用或工具吗？
 
-Yes. freeCodeCamp is open source (BSD-3 license), and most non-sensitive freeCodeCamp data is publicly available. But you must make it clear that you don't represent freeCodeCamp itself, and that your project is not officially endorsed by freeCodeCamp.
+可以。freeCodeCamp 是开源的（BSD-3许可），并且大多数非敏感的 freeCodeCamp 数据是公开可用的。但你必须明确声明，你不代表 freeCodeCamp，并且你的项目没有得到 freeCodeCamp 的官方认可。
 
-### Does freeCodeCamp have a mobile app?
+### freeCodeCamp 有移动端应用吗?
 
-You can learn on the go by listening to the  [**freeCodeCamp Podcast**][9]  or watching  [**freeCodeCamp's YouTube channel**][10]. And if you want a mobile app designed specifically for learning to code, we recommend Grasshopper. It's free and designed by a freeCodeCamp contributor and her team. You can download it on  [**iOS**][11]  or  [**Android**][12].
+你可以通过收听 [**freeCodeCamp 播客**][9]  或观看  [**freeCodeCamp 的 Youtube 频道**][10] 来随时随地学习。如果你想要一个专门为了学习编码而设计的移动应用，我们推荐你使用 Grasshopper。它是免费的，并是由 freeCodeCamp 贡献者和她的团队设计的。你可以在 [**iOS**][11]  或  [**Android**][12] 上下载.
 
-### Can I get a job at freeCodeCamp?
+### 我能入职 freeCodeCamp吗？
 
-We're a small donor-supported nonprofit. We've hired several prominent contributors from within the freeCodeCamp community, but you're much more likely to get a job at  [**one of the hundreds of companies**][13]  where freeCodeCamp alumni work.
+我们是一个小型的捐赠者支持的非营利组织。我们已经从 freeCodeCamp 社区中聘请了几位杰出的贡献者，但您更有可能在 freeCodeCamp 校友工作的  [**数百家公司**][13]  中找到工作。
 
-### Can my company advertise on freeCodeCamp?
+### 我的公司能在 freeCodeCamp 上打广告吗？
 
-We don’t show ads.
+我们不做广告。
 
-### How can I support the freeCodeCamp community?
+### 我能怎样支持 freeCodeCamp 社区？
 
-You can  [**set up a monthly donation to our nonprofit that you can afford**][14].
+你可以  [**在能力范围内每月向我们的非营利组织捐款**][14].
 
-### Where can I get technical support for using the freeCodeCamp.org platform?
+### 我能在哪里获得有关使用 freeCodeCamp.org 平台的技术支持？
 
-Here are  [**answers to common technical support questions**][15].
+以下是  [**常见技术支持问题的答案**][15]。
 
-## Become a supporter.
+## 成为支持者
 
-### [❤️ Set up your tax-deductible donation here. ❤️][16]
+### [❤️ 在此处设置您的免费捐赠 ❤️][16]
 
 ![](https://www.freecodecamp.org/news/content/images/2019/07/freecodecamp-hk-meeting.jpg)
 
-The freeCodeCamp Team (left to right): Miya, Mrugesh, Quincy, Kris, Ahmad. Not pictured: Abbey, Beau
+freeCodeCamp 团队（左起）：Miya, Mrugesh, Quincy, Kris, Ahmad. Not pictured: Abbey, Beau
 
-## Thank you from the freeCodeCamp.org team.
+## 来自 freeCodeCamp.org 团队的感谢。
 
 ---
 
-If this article was helpful,  tweet it  or  share it.
+如果这篇文章对你有帮助，请在社交媒体分享它。
 
-[Donate if you can][17].
+[我y想捐助][17].
 
 [1]: https://www.linkedin.com/school/4831032/alumni/
 [2]: https://www.freecodecamp.org/news

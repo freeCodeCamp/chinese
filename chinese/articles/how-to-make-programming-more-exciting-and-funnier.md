@@ -111,32 +111,32 @@
 
 ## 睡多点
 
-When you are in a downward spiral, programming becomes less fun. Sometimes it can be difficult for you to move forward and thrive in your work.
+当你处于一个恶性循环时，编程就变得不那么有趣了。有时候，你很难在工作中取得进步并茁壮成长。
 
-Go to bed earlier for a few nights or sleep later in the morning for a few days, and everything should improve dramatically.
+早睡几个晚上或晚起几天，一切都会有显著的改善。
 
-## Show your work
+## 展示你的作品
 
-What's worse than being a developer and losing all hope because you're alone in your basement? It's a bit of a cliché but, believe me, when you work alone for a long time on a project and never show it to anyone, it becomes less fun right away.
+有什么比成为一名开发者，一个人呆在地下室中而失去所有希望更糟糕的呢？虽然这有点陈词滥调，但是，相信我，当你长时间为一个项目独自工作、从未将它展示给任何人时，它立即变得没那么有趣了。
 
-This tip is close to the previous ones. Once you share your work, people will make suggestions or ask questions. It's going to be challenging for you and will help you set new goals.
+这条小贴士与之前的那几条相似。一旦分享你的作品，人们会给你建议或问你问题。这将对你具有挑战性，并帮助你设置新的目标。
 
-## Conclusion
+## 结论
 
-I tried to round up some essential tips to help you have fun while programming. If you have any other advice or suggestions to make it more fun, feel free to leave a comment or send me a message.
+我试着总结一些基本技巧，以帮助你在编程时拥有乐趣。如果你有任何其它让编程更有趣的建议，请随时发表评论或给我发送消息。
 
-**Why do you think programming is exciting? How do you make programming more fun?**
+**你为什么认为编程令人兴奋？你是怎样让编程变得更有趣的？**
 
-Feel free to share this article if you liked it.
+如果你喜欢这篇文章，欢迎分享。
 
-Don't miss my content by following me on  [Twitter][9]  and  [Instagram][10].
+在  [Twitter][9]  和 [Instagram][10]上关注我,以免错过我发布的内容。
 
-You can find other articles like this on my website:  [herewecode.io][11].
+你可以在我的网站 [herewecode.io][11]上找到其他类似的文章。
 
-### Want more?
+### 想要更多内容？
 
--   Each week get a motivational quote with some advice, a short tutorial into a few slides, and one developer's picture on  [Instagram][12].
--   [Sign-up for the newsletter][13]  and get the latest articles, courses, tutorials, tips, books, motivation, and other exclusive content.
+-   每周可以在我的[Instagram][12]上获得一句带有建议的励志名言、几张幻灯片的简短教程和一位开发者的照片。
+-   [订阅新闻邮件][13]，以获取最新的文章、课程、教程、技巧、图书、激励和其他独家内容。
 
 [1]: https://www.instagram.com/herewecode.io/
 [2]: https://www.quora.com/How-can-I-make-coding-fun-and-interesting

@@ -1,6 +1,6 @@
 > * 原文地址：[How to Create a Simple Gantt Chart Using CSS Grid 如何用 CSS 绘制甘特图](https://www.freecodecamp.org/news/create-gantt-chart-using-css-grid/)
 > * 原文作者：Alfrick Opidi
-> * 译者：
+> * 译者：sheenalu
 > * 校对者：
 
 ![How to Create a Simple Gantt Chart Using CSS Grid](https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)

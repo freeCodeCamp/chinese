@@ -1,7 +1,7 @@
 > * 原文地址：[How you can improve your workflow using the JavaScript console](https://www.freecodecamp.org/news/how-you-can-improve-your-workflow-using-the-javascript-console-bdd7823a9472/)
 > * 原文作者：Riccardo Canella
 > * 译者：Zhuotao Lian
-> * 校对者：
+> * 校对者：test
 
 ![How you can improve your workflow using the JavaScript console](https://cdn-media-1.freecodecamp.org/images/1*U62GMx7Z7U56CArkK2tfCQ.jpeg)
 

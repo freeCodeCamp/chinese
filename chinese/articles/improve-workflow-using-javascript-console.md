@@ -2,7 +2,7 @@
 > * 原文作者：Riccardo Canella
 > * 译者：Zhuotao Lian
 > * 校对者：
-
+(test)
 ![How you can improve your workflow using the JavaScript console](https://cdn-media-1.freecodecamp.org/images/1*U62GMx7Z7U56CArkK2tfCQ.jpeg)
 
 by Riccardo Canella

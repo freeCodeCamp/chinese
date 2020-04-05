@@ -1,6 +1,6 @@
 > * 原文地址：[An introduction to the JAMstack: the architecture of the modern web](https://www.freecodecamp.org/news/an-introduction-to-the-jamstack-the-architecture-of-the-modern-web-c4a0d128d9ca/)
 > * 原文作者：Bolaji Ayodeji
-> * 译者：
+> * 译者：sheenalu
 > * 校对者：
 
 ![An introduction to the JAMstack: the architecture of the modern web](https://cdn-media-1.freecodecamp.org/images/1*xYSNCnp6eh2ZDpwQtYL6qg.jpeg)

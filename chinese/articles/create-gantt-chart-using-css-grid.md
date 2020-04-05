@@ -5,25 +5,25 @@
 
 ![How to Create a Simple Gantt Chart Using CSS Grid](https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-A Gantt chart is a handy type of bar chart that is used in project management for showcasing a schedule of tasks. This chart visualizes project activities as cascading horizontal bars, with width depicting the project’s duration.
+甘特图是一种便利的条状图，用于在项目管理中显示任务进度。它以级联水平条形图显示项目活动，宽度表示项目持续时间。
 
-As a front-end web designer or developer, you can make use of Gantt charts to manage projects and enhance the productivity within your team.
+作为前端web设计人员或开发人员，你可以使用甘特图来管理项目并提高团队的工作效率。
 
-In this article, I’m going to show you how to create a simple Gantt chart using the CSS Grid Layout system—no external libraries or other fluff, just pure CSS.
+在本文中，我将向你展示如何用CSS布局绘制简单的甘特图。本文只需使用纯CSS，不需要外部库或其它杂项。
 
-You can reference  [this tutorial][1]  to understand how to use the layout system for applying CSS rules.
+你可以参考  [本教程][1] ，学习如何使用布局系统来应用CSS规则。
 
-The chart will show a typical software development life cycle process, from January to December.
+图表将显示从1月到12月的典型软件开发生命周期过程。
 
-Here is a screenshot of how the Gantt chart will look at the end of this tutorial:
+以下是本课程结束时甘特图的屏幕截图：
 
 ![](https://paper-attachments.dropbox.com/s_71DD472E9787F22210482D610A0DD84B11827762D701C2FF3CA4E87715003165_1567325886724_gantt-chart.png)
 
-Let’s get started!
+让我们开始吧！
 
-## Step 1: Create a container div
+## 步骤1: 创建类名为container的div元素
 
-Let’s start by creating a container  **div**  element for the Gantt Chart:
+首先，为甘特图创建一个类名为container的div元素：
 
 ```css
 <div class="container">
@@ -31,7 +31,7 @@ Let’s start by creating a container  **div**  element for the Gantt Chart:
 
 ```
 
-Let’s add some CSS styling to it:
+为其添加CSS样式：
 
 ```css
 .container {    max-width: 1200px; 
@@ -40,16 +40,16 @@ Let’s add some CSS styling to it:
 }
 ```
 
-## Step 2: Create a chart div
+## 创建类名为chart的div元素
 
-Let’s create a div inside the overarching container  and name it chart. This is where all the remaining actions are going to take place.
+在总容器里创建一个div元素，并将其类名设置为chart。步骤如下：
 
 ```css
 <div class="chart">
 
 ```
 
-Let’s add some CSS styling to it:
+为其添加CSS样式：
 
 ```css
 .chart { 
@@ -57,11 +57,11 @@ Let’s add some CSS styling to it:
 } 
 ```
 
-Notice that I’ve set the  **display**  property of the class to  **grid.**  Consequently, all its direct children will automatically become  _grid items_.
+注意：我已设置chart类的  **display**  属性为  **grid.**  因此，其所有直接子元素将自动成为  _网格项_.
 
-## Step 3: Create the chart’s rows
+## Step 3: 为甘特图创建行
 
-Let’s start by creating the first row, which will be the heading of the Gantt chart.
+创建第一行，即甘特图的标题行。
 
 ```css
 <div class="chart-row chart-period">
@@ -73,9 +73,9 @@ Let’s start by creating the first row, which will be the heading of the Gantt 
 </div>
 ```
 
-Notice that I’ve provided 12  **span**  elements that will transverse the entire row, showing the months of the project’s duration—from January to December.
+请注意，我已经提供了12个 **span**  元素，它们将横跨整个行，显示项目持续的月份，即从1月到12月。
 
-Here is its CSS:
+CSS样式如下：
 
 ```css
 .chart-row {    display: grid; 
@@ -91,15 +91,15 @@ Here is its CSS:
 
 ```
 
-Notice that I used the **grid-template-columns** property to specify the width and the number of columns in the grid layout.
+请注意，我使用了**grid-template-columns** 来指定网格布局中的列数及各列宽度。
 
-Let’s see how it looks in a browser, so far:
+到目前为止，它在浏览器中显示如下：
 
 ![](https://paper-attachments.dropbox.com/s_71DD472E9787F22210482D610A0DD84B11827762D701C2FF3CA4E87715003165_1567023822884_gantt1.png)
 
-Next, let’s add lines that will run throughout the chart in a box-like style, which helps showcase the duration of each project.
+接下来，添加一些纵向贯穿整个图表的线条，使其看上去像盒子一样，这有助于显示每个项目的持续时间。
 
-I also used 12  **span**  elements for creating the lines.
+我仍旧使用12个  **span**  元素来创建线条。
 
 ```css
 <div class="chart-row chart-lines"> 
@@ -109,7 +109,7 @@ I also used 12  **span**  elements for creating the lines.
     <span></span><span></span>    <span></span></div>
 ```
 
-Here is its CSS:
+CSS样式如下：
 
 ```css
 .chart-lines { 
@@ -117,15 +117,15 @@ Here is its CSS:
 
 ```
 
-Let’s see the output in a browser:
+其在浏览器中的效果如下：
 
 ![](https://paper-attachments.dropbox.com/s_71DD472E9787F22210482D610A0DD84B11827762D701C2FF3CA4E87715003165_1567024250393_gantt2.png)
 
-## Step 4: Add entry items
+## 步骤4：添加条目项
 
-Finally, let’s add the items that illustrate a year-long process of creating some software.
+最后，让我们添加条目来说明长达一年的软件开发过程。
 
-For example, here is how I added the first entry item:
+以下例子展示我如何添加条目1：
 
 ```css
 <div class="chart-row">    <div class="chart-row-item">1</div> 
@@ -134,10 +134,10 @@ For example, here is how I added the first entry item:
 </div>
 ```
 
-Let me describe what is happening in the code above:
+让我描述一下上面代码中发生了什么：
 
--   First, the encompassing  **div**  element has a class of  **chart-row**, which I illustrated earlier.
--   The  **div**  with a class of  **chart-row-item**  is used for numbering the entry items on the Gantt chart. Here is its CSS:
+-   首先，我在前面已经介绍过了，条目1中的 **div**  元素有一个  **chart-row**类。
+-   含有**chart-row-item** 类的**div** 用于对甘特图的条目进行编号。其样式如下：
 
 ```css
 .chart-row-item { 
@@ -145,9 +145,9 @@ Let me describe what is happening in the code above:
 }
 ```
 
--   To show tasks on the Gantt chart, I created an unordered list and styled it to display a horizontal bar, with its length showing the duration of the task.
+-   为了在甘特图上显示任务，我创建了一个无序列表，并将其样式设置为显示水平条形图，该条形图的长度显示了任务的持续时间。
 
-Here is the CSS styling for the  **chart-row-bars** class:
+**chart-row-bars** 的CSS样式如下：
 
 ```css
 .chart-row-bars { 
@@ -157,7 +157,7 @@ Here is the CSS styling for the  **chart-row-bars** class:
 }
 ```
 
--   The entry item is defined in the  **li**  tag. Here is its CSS styling:
+-   条目项定义在li标签里，其样式如下：
 
 ```css
 li {    font-weight: 450;    text-align: left;    font-size: 15px;  min-height: 15px;    background-color: #708090;    padding: 5px 15px;  color: #fff;    overflow: hidden;    position: relative;    cursor: pointer;    border-radius: 15px;
@@ -165,31 +165,31 @@ li {    font-weight: 450;    text-align: left;    font-size: 15px;  min-height: 
 
 ```
 
-Notice that I’ve used the  **grid-column**  property to specify the duration of the project.
+请注意，我使用了**grid-column**属性来指定项目持续时间。
 
-For example, a property of **grid-column: 3/9;**  like the “Development” entry, spans a task across the grid from March to August.
+例如，在“开发”条目中，grid-column属性为 **grid-column: 3/9;**  这使该任务从网格的3月横跨到8月。
 
-Here is how the first entry item looks in a browser:
+条目1在浏览器中的显示效果如下：
 
 ![](https://paper-attachments.dropbox.com/s_71DD472E9787F22210482D610A0DD84B11827762D701C2FF3CA4E87715003165_1567024868326_gantt3.png)
 
-I added the other entries on the chart following the same process as the first entry. Ultimately, it resulted into a nice-looking Gantt chart, just like the image I showed earlier.
+我采用与条目1一样的方法将其他条目添加到图表中。最终，它生成了一个漂亮的甘特图，正如我早前展示的一样。
 
-## Wrapping up
+## 总结
 
-That’s it! You can view the entire code for this tutorial on CodePen:  
+就是这样！你可以在CodePen上查看本教程的全部代码： 
 
-As you’ve seen, creating a Gantt chart using CSS Grid is not complicated. With this type of chart, you can manage your web development projects effectively and ensure that everyone is on track toward accomplishing the stipulated objectives.
+如你所见，用CSS绘制甘特图并不复杂。你可以使用它来高效管理web开发项目,并确保每个人都朝着规定的目标前进。
 
-Furthermore, Gantt charts can also be used in other industries to manage projects. For example, if you are selling  [composting toilets][2], you can use Gantt charts to showcase the number of sales made over a period of time.
+此外，甘特图也可于其它行业的项目管理。例如，如果你在卖  [堆肥厕所][2]，可以使用甘特图来显示一段时期的销售数量。
 
-Of course, I’ve just scratched the surface about the things you can achieve with Gantt charts.
+当然，甘特图可以用来做很多事情，我只是触及了一些皮毛。
 
-There are several other tweaks you can make to Gantt charts to suit your specific requirements and project’s goals. For example, you can use them to show the relationship between various tasks and how the completion of one relies on another, show how resources can be allocated for the success of projects, and show clear project requirements that ensure everyone is on the same page.
+你还可以对甘特图稍作调整，以满足特定需求和项目目标。例如，你可以用它们来显示各种任务之间的关系、一些任务的完成如何依赖另一个任务、如何为项目的成功分配资源以及确保每个人在同一页上从而显示清晰的项目要求。
 
-Do you have any questions or comments?
+你有什么问题或意见吗？
 
-Please get in touch via Twitter below and I’ll do my best to respond.
+请通过下面的Twitter联系我，我会尽我所能做出回复。
 
 [1]: https://www.freecodecamp.org/learn/responsive-web-design/css-grid/
 [2]: https://www.waterless-toilet.com/top-6-best-composting-toilets-to-choose/

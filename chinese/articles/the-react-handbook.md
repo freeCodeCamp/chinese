@@ -1430,76 +1430,76 @@ ES 模块是现代浏览器引入的最大特性。它们是 ES6 的一部分，
 
 尽管浏览器引入了 ES 模块，但 Webpack 仍将扮演重要角色，因为尽管在语言中加入了这一特性，在客户端运行模块和 Node.js 运行模块仍然有巨大差异。
 
-### `SECTION 2: REACT CONCEPTS`
+### 第二部分：React 概念
 
-### `Single Page Applications`
+### 单页面应用
 
-`React Applications are also called Single Page Applications. What does this mean?`
+React 应用也被称为单页面应用。这是什么意思呢？
 
-`In the past, when browsers were much less capable than today, and JavaScript performance was poor, every page was coming from a server. Every time you clicked something, a new request was made to the server and the browser subsequently loaded the new page.`
+在浏览器远没有如今功能强大的时期，JavaScript 的性能也较差，每个页面都从服务器获取。每次点击页面都会向服务器发起一次新的请求，随后浏览器会加载新的页面。
 
-`Only very innovative products worked differently, and experimented with new approaches.`
+只有极具创新性的产品才会使用不同的实现方式，并且尝试新的方法。
 
-`Today, popularized by modern frontend JavaScript frameworks like React, an app is usually built as a single page application: you only load the application code (HTML,  [CSS][79],  [JavaScript][80]) once, and when you interact with the application, what generally happens is that JavaScript intercepts the browser events and instead of making a new request to the server that then returns a new document, the client requests some JSON or performs an action on the server but the page that the user sees is never completely wiped away, and behaves more like a desktop application.`
+如今，随着诸如 React 之类的现代前端 JavaScript 框架的普及，应用通常被构建为单页面应用：你只用加载一次应用的代码（HTML、[CSS][79]、[JavaScript][80])，当你与应用程序交互时，浏览器不会向服务器发送新的请求，并从服务器返回新的页面文件，取而代之的是浏览器拦截事件，客户端会请求 JSON 文件，或是在服务器上执行操作，但用户看见的页面不会完全消失，这种行为方式更像是桌面应用。
 
-`Single page applications are built in JavaScript (or at least compiled to JavaScript) and work in the browser.`
+单页面应用程序用 JavaScript 构建（或者至少被编译成 JavaScript），且在浏览器中工作。
 
-`The technology is always the same, but the philosophy and some key components of how the application works are different.`
+技术并没有什么差异，但应用程序的工作原理和一些关键组成部分是不同的。
 
-#### `Examples of Single Page Applications`
+#### 单页面应用案例
 
-`Some notable examples:`
+一些著名的例子：
 
--   `Gmail`
--   `Google Maps`
--   `Facebook`
--   `Twitter`
--   `Google Drive`
+- Gmail
+- Google 地图
+- Facebook
+- Twitter
+- Google Drive
 
-#### `Pros and cons of SPAs`
+#### 单页面应用的优缺点
 
-`An SPA feels much faster to the user, because instead of waiting for the client-server communication to happen, and wait for the browser to re-render the page, you can now have instant feedback. This is the responsibility of the application maker, but you can have transitions and spinners and any kind of UX improvement that is certainly better than the traditional workflow.`
+用户体验上，单页面应用要快得多，因为你能立即得到反馈，而不是等待客户端与服务器直接的通信完成，浏览器重新渲染页面。这是应用程序制造者的责任，但你可以通过过渡或加载以及任何可以提升用户体验的方式来让页面优于传统的流程。
 
-`In addition to making the experience faster to the user, the server will consume less resources because you can focus on providing an efficient API instead of building the layouts server-side.`
+除了给用户提供更快捷的体验，服务器也将消耗更少的资源，因为你可以专注于提供高效的 API，而不是在服务器端构建页面。
 
-`This makes it ideal if you also build a mobile app on top of the API, as you can completely reuse your existing server-side code.`
+如果你还基于 API 构建移动端应用，那么这将是理想的选择，因为你可以完全复用服务器端已有的代码。
 
-`Single Page Applications are easy to transform into Progressive Web Apps, which in turn enables you to provide local caching and to support offline experiences for your services (or simply a better error message if your users need to be online).`
+单页面应用非常易于转变成渐进式 Web 应用，从而能够提供本地缓存，并提供脱机服务（如果需要用户在线，则可以提供更好的错误信息）。
 
-`SPAs are best used when there is no need for SEO (search engine optimization). For example for apps that work behind a login.`
+当不需要使用 SEO （搜索引擎优化）时，最好使用单页面应用。比如必须登录使用的应用程序。
 
-`Search engines, while improving every day, still have trouble indexing sites built with an SPA approach rather than the traditional server-rendered pages. This is the case for blogs. If you are going to rely on search engines, don’t even bother with creating a single page application without having a server rendered part as well.`
+尽管搜索引擎一直在优化，但仍然难以为为采用 SPA 技术而非传统的服务器渲染方式的页面建立索引。拿博客为例，如果你需要依赖搜索引擎，就不要考虑构建没有服务端渲染的单页面应用。
 
-`When coding an SPA, you are going to write a great deal of JavaScript. Since the app can be long-running, you are going to need to pay a lot more attention to possible memory leaks — if in the past your page had a lifespan that was counted in minutes, now an SPA might stay open for hours at a time and if there is any memory issue that’s going to increase the browser memory usage by a lot more and it’s going to cause an unpleasantly slow experience if you don’t take care of it.`
+为单页面应用编码时，你需要写大量的 JavaScript 代码。由于应用会长时间运行，你更加需要当心可能造成内存泄漏的地方——过去你的页面的生命周期只有几分钟，现在一个单页面应用可能一次使用数个小时，如果应用存在内存泄漏问题，那么它会导致浏览器内存占用大幅升高，如果得不到处理，会给应用带来非常缓慢的用户体验。
 
-`SPAs are great when working in teams. Backend developers can just focus on the API, and frontend developers can focus on creating the best user experience, making use of the API built in the backend.`
+单页面应用非常适合团队协作。后端工程师只用专注于 API，前端工程师则专注于在后端的 API 的基础上打造最好的用户体验。
 
-`As a con, Single Page Apps rely heavily on JavaScript. This might make using an application running on low power devices a poor experience in terms of speed. Also, some of your visitors might just have JavaScript disabled, and you also need to consider accessibility for anything you build.`
+单页面应用的缺点是重度依赖 JavaScript。这可能会导致应用在低配置设备上运行缓慢。此外，有些使用者可能会禁用 JavaScript，你需要考虑应用的可访问性。
 
-#### `Overriding the navigation`
+#### 覆盖导航
 
-`Since you get rid of the default browser navigation, URLs must be managed manually.`
+由于摆脱了默认的导航栏，你需要手动管理 URL。
 
-`This part of an application is called the router. Some frameworks already take care of them for you (like Ember), others require libraries that will do this job (like  [React Router][81]).`
+应用的这部分叫做路由。有些框架已经为你解决了这个问题（比如 Ember），还有一些则需要其他库来做这项工作（如 [React Router][81]）。
 
-`What’s the problem? In the beginning, this was an afterthought for developers building Single Page Applications. This caused the common “broken back button” issue: when navigating inside the application the URL didn’t change (since the browser default navigation was hijacked) and hitting the back button, a common operation that users do to go to the previous screen, might move to a website you visited a long time ago.`
+这有什么问题呢？早期，单页面应用的开发者们没有考虑到这个问题，从而导致了常见的“后退键失效”问题：在应用中切换页面时，URL没有变化（浏览器的默认导航被拦截了），当用户习惯性地点击后退键，企图退回到之前的页面时，应用退回到了很久之前访问的网站。
 
-`This problem can now be solved using the  [History API][82]  offered by browsers, but most of the time you’ll use a library that internally uses that API, like  **React Router**.`
+这个问题现在可以通过浏览器提供的 [History API][82] 来解决，但大多数情况下，你会使用内部使用了该 API 的库，比如 **React Router**。
 
-### `Declarative`
+### 声明式
 
-`What does it mean when you read that React is declarative? You’ll run across articles describing React as a  **declarative approach to building UIs**.`
+React 是声明式的是什么意思呢？你读到的很多文章都会提到 React 是一个**声明式的构建 UI 的方法**。
 
-`React made its “declarative approach” quite popular and upfront so it permeated the frontend world along with React.`
+React 使其“声明式方法”非常流行和超前，这一方法随着 React 渗透了前端世界。
 
-`It’s really not a new concept, but React took building UIs a lot more declaratively than with HTML templates:`
+它并不是一个新的概念，但相较于 HTML 模板，React 更加声明式地构建 UI：
 
--   `you can build Web interfaces without even touching the DOM directly`
--   `you can have an event system without having to interact with the actual DOM Events.`
+- 你可以在不直接操纵 DOM 的情况下构建 Web 接口
+- 你可以在不与真实的 DOM 事件交互的情况下构建事件系统
 
-`The opposite of declarative is  **imperative**. A common example of an imperative approach is looking up elements in the DOM using jQuery or DOM events. You tell the browser exactly what to do, instead of telling it what you need.`
+和声明式相反的是**命令式**。一个常见的例子是使用 jQuery 或 DOM 事件时查找元素，你会告诉浏览器确切的操作，而不是你需要什么。
 
-`The React declarative approach abstracts that for us. We just tell React we want a component to be rendered in a specific way, and we never have to interact with the DOM to reference it later.`
+React 声明式方法为我们抽象了这一点。我们只需要告诉 React 我们希望组件以什么方式渲染，之后引用组件时不必与 DOM 交互。
 
 ### `Immutability`
 

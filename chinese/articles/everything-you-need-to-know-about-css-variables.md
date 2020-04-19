@@ -3,7 +3,7 @@
 > * 译者：LolaWei
 > * 校对者：
 
-![Everything you need to know about CSS Variables](https://cdn-media-1.freecodecamp.org/images/1*Im5WsB6Y7CubjWRx9hH7Gg.png)
+![你需要知道的关于 CSS 变量的一切](https://cdn-media-1.freecodecamp.org/images/1*Im5WsB6Y7CubjWRx9hH7Gg.png)
 
 很多编程语言都支持变量，但很遗憾， CSS 从开发之始便不支持原生变量。
 

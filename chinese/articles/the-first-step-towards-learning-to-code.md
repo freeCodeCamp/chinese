@@ -51,7 +51,7 @@
 
 ![](https://cdn-media-1.freecodecamp.org/images/7i4inG4i9HOeaUHdXNsF5FrrmYnjFrmpSx-s)
 
-### The Intimidation Game
+### 恐惧
 
 我是一个 29 岁的女孩子，在都柏林长大，大学时学的是艺术专业，毕业后到伦敦工作，职位是经理助理，主要做一些文案工作。我现在仍然在伦敦居住和工作。虽然我从来没觉得自己是“技术派”，但是我一直都对编程感到好奇。
 
@@ -63,9 +63,10 @@
 
 ### 为什么是现在?
 
-Cut to 10 weeks ago. I’m chatting to the developer at work about all this alluring code stuff. She tells me about  [Codebar.][1]  It is a weekly meetup aiming to diversify the tech industry. Codebar organizes free coaching sessions for people underrepresented in tech.
+镜头切换到 10 周前，我和那位在职开发者聊起代码的吸引力的时候，她给我介绍了 [Codebar][1]。那个活动每周举办一次，旨在发展技术领域的多样性，会常常为非技术人群开办训练课程。
 
 Sounded like the thing — a place to learn to code that’s designed to welcome complete newbies like me. So I thought, sure why not?
+
 
 ### Great Expectations
 

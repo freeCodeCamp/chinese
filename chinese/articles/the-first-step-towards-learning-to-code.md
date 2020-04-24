@@ -13,54 +13,55 @@
 
 ![](https://cdn-media-1.freecodecamp.org/images/nfRdlv1hiH988xDoDqM7-FxSYU14fNJb6VPO)
 
-As a girl growing up in Dublin, I assumed you had to be ‘naturally good’ at computers to understand coding.
+我以为程序员都是“天生擅长”使用计算机的。
 
+但是后来我知道了**没有所谓的“天生擅长”**。
 
-But I’ve learned that there is **no such thing as ‘naturally good.’**
+### 技术迷和非技术迷的区别
 
-### The Difference Between Techies & Non-Techies
+对于不会编程的人来说，和技术有关的任何东西似乎都是陌生的、复杂的，很难理解。这样的东西太多了，就让人感觉沮丧。
 
-As a non-programmer, everything to do with tech, for the most part, seems foreign, complex and very difficult to grasp. There’s so much of it, and that becomes overwhelming.
+“技术派”和“非技术派”的差异就在于此。
 
-This is exactly where the divide between ‘techies’ and ‘non-techies’ pops up. I’ll use myself as an example here:
+以我自己为例：当我想弄清楚自己电脑上的什么问题的时候——比方说，怎么设置一个应用——我会专注在那一个问题上，然后专注在一个解决办法上，反复尝试。
 
-When I’m trying to figure something out on my computer — let’s say, how to customize a new application — I’ll try hard at first by focussing on this one problem. I’ll focus on it so much that I also end up focussing on a single solution, over and over again.
-
-Then I’ll get frustrated, then feel bad because I can’t figure it out, and then give up.
+然后如果我解决不了，我就会觉得很受挫，感觉不舒服，最后只好放弃。
 
 ![](https://cdn-media-1.freecodecamp.org/images/xMgp33dGmO0rpbL3LtnbEoXu36UZ3Wx-20I5)
 
-But when my partner tries to figure something out, he’ll do this:
+但是当我的伙伴尝试解决某件事的时候，他会这么做：
 
-1.  **Google**
-2.  **Test something out**
-3.  **Google again**
-4.  **Test something out again**
-5.  **Watch a few youtube tutorials**
-6.  **Read through some forums**
-7.  **Test something again**
+1. **在浏览器搜索**
+2. **尝试一些方法**
+3. **再搜索**
+4. **再尝试别的方法**
+5. **看一下视频教程**
+6. **在论坛阅读一些帖子**
+7. **继续尝试别的方法**
 
-And usually, he’ll solve the problem. (And when he doesn’t, he’s not as frustrated as I usually am.)
+他通常能够解决问题。即便没有解决，他也不会像我那样觉得沮丧。
 
-**I used to think he ‘got it’.**
+**我以前总是以为那是因为他“天生就这样”。**
 
-But actually he was curious (like me), and patient (not so much like me). It seems so obvious now. For a long time, I succumbed to thinking that we were two completely different types of people.
+但是实际上是因为他具有好奇心（和我一样）和耐心（超过我）。现在我能这么理解了。
 
-I was wrong.
+以前很长一段时间，我忍不住去想我们是完全不同的两类人。
+
+那个时候我理解错了。
 
 ![](https://cdn-media-1.freecodecamp.org/images/7i4inG4i9HOeaUHdXNsF5FrrmYnjFrmpSx-s)
 
 ### The Intimidation Game
 
-I’m 29, a woman, grew up in Dublin, studied art in college, moved to London to do an MA in writing, where I now live and work. And even though I never considered myself a ‘techie’ person, I’ve always been curious about programming.
+我是一个 29 岁的女孩子，在都柏林长大，大学时学的是艺术专业，毕业后到伦敦工作，职位是经理助理，主要做一些文案工作。我现在仍然在伦敦居住和工作。虽然我从来没觉得自己是“技术派”，但是我一直都对编程感到好奇。
 
-**I’ve also, always, felt too intimidated to try it.**
+**而且我一直都对它感到恐惧，不敢尝试。**
 
-All I’ve ever known about coding was what I saw in films and TV growing up in Ireland in the early 2000s. I watched nerdy archetypes in movies type at lightning speed, read nonsensical symbols in strange interfaces and hack into the system’s mainframe.
+我对编程只有这样的概念——就是在 2000 年左右，当时我在爱尔兰，看到电影和电视剧里面那些典型的木讷的程序员以闪电般的速度敲击键盘，阅读奇怪的界面上看起来似乎没有意义的符号，然后侵入系统主机。
 
-Suffice it to say, I never identified with these characters. And so, unsurprisingly,  **never thought of myself as someone who could do it.**
+肯定地说，我从不觉得自己具有那样的特质。所以，不难理解，**我从没觉得自己是可以做那样炫酷的事情的人**。
 
-### Why Now?
+### 为什么是现在?
 
 Cut to 10 weeks ago. I’m chatting to the developer at work about all this alluring code stuff. She tells me about  [Codebar.][1]  It is a weekly meetup aiming to diversify the tech industry. Codebar organizes free coaching sessions for people underrepresented in tech.
 

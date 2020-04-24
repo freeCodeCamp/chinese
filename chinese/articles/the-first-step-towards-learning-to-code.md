@@ -31,11 +31,11 @@
 
 但是当我的伙伴尝试解决某件事的时候，他会这么做：
 
-1. **在浏览器搜索**
+1. **在网络上搜索**
 2. **尝试一些方法**
 3. **再搜索**
 4. **再尝试别的方法**
-5. **看一下视频教程**
+5. **看一些视频教程**
 6. **在论坛阅读一些帖子**
 7. **继续尝试别的方法**
 
@@ -66,45 +66,40 @@
 镜头切换到 10 周前，我和那位在职开发者聊起代码的吸引力的时候，她给我介绍了 [Codebar][1]。那个活动每周举办一次，旨在发展技术领域的多样性，会常常为非技术人群开办训练课程。
 
 Sounded like the thing — a place to learn to code that’s designed to welcome complete newbies like me. So I thought, sure why not?
+听起来那是一个学习编程的好地方，对我这样的新手很友好。所以，我想，为什么不去看看呢？
 
+### 合理期望
 
-### Great Expectations
+我去参加那个活动的时候提醒自己要对自己的目标“现实”一点。你看，在发展一项新的爱好的时候，我不太会管理自己的期望。我常常热情高涨，却又没有足够的耐心等待自己的技能逐渐升级。我会因为其他事情分心，最后，整件事情就虎头蛇尾地结束了。
 
-I went along to this meetup telling myself to be ‘realistic’ about what I wanted to achieve. You see when it comes to picking up new hobbies, I often have trouble managing my expectations. Most of the time I don’t have enough patience to wait for my skill set to level up to my enthusiasm. I get distracted by something else and the whole thing often fizzles out.
+所以去的时候我告诉自己“一次只处理一个问题，现在还不能告诉别人我想成为一名开发者”。
 
-So walking in I said to myself, “Just take it one problem at a time. Don’t start telling everyone you want to become a developer.”
-
-But here’s the thing: I want to become a developer.
+但是，事实是：我想成为一名开发者。
 
 ![](https://cdn-media-1.freecodecamp.org/images/niNPueDfyi75HA71aRdjE9p7vqfqvnBEYxpe)
 
-### **I Want More**
+### **我想要更多**
 
-I’ve spent the last 10 weeks learning the most basic HTML and CSS and using it to build my  [first ever website][2]  (right now I’m experiencing the unprecedented joy of browser testing, so we’ll see how that goes later).
+在之前的 10 周，我学习了最基本的 HTML 和 CSS，用这些知识创建了[我人生中第一个网页][2]。
 
-For any other complete beginners out there, I highly recommend the  [Codebar tutorials][3]  for a basic introduction. I recommend  [Flexbox Froggy][4]  for learning some cool front end displays. I recommend  [CSS Diner][5]  for learning everything there is to know about selectors.
-
-And while it is crazy difficult and there are constantly so many new problems that I had no idea were lurking in the margins, there really is no high like figuring out why some code doesn’t work and then fixing it. My synapses go crazy every single time, and I love it.
+写代码的过程超级难，不时有新的问题在前方潜伏，而我对它们一无所知。这还不仅是“找出哪些代码有问题然后修复问题”那么简单。我感觉自己每次都要神经错乱了，但是我喜欢这种感觉。
 
 ![](https://cdn-media-1.freecodecamp.org/images/7WzzMmw7cB8gEIQbjhXchHyA94LHGIqVKVR8)
 
-For every problem I’ve come across, I try to be patient while figuring it out. Now I google, and test, and read through forums. I ask lots of questions even if I think they’re stupid because you know what? Who cares. I’m new at this.
+遇到每一个问题，我都会耐心找到解决办法。现在我也会在网络上搜索了，也会尝试不同的方法了，也会阅读论坛帖子了。我会尝试提出很多问题，也不担心别人会觉得这些问题挺愚蠢的，毕竟我是新手。
 
-### **What’s The Point?**
+### **然后呢**
 
-My goal now is to become a developer in 6 months’ time.
+我现在的目标是在 6 个月之内成为开发者。
 
-Why 6 months? Because that happens to be when my work frees up. And if other people can do it, so can I, damnit. Just because I didn’t study computer science and didn’t know what Github was until a few weeks ago (still figuring that one out in full, to be honest), doesn’t mean I can’t get there eventually.
+为什么是 6 个月呢？因为那正好是我的工作合同到期的时间。如果别人能做到，我也能。是的，我没学过计算机科学，几周前才知道 GitHub 是啥（目前还在学习更多），但这并不意味着我就做不到。
 
-If you take one small problem at a time, you can manage it. And if you have kind people around you who are willing to help, all the better (and from my experience so far, the industry doesn’t have any shortage of this ❤).
+如果你每次只定一个小目标，只处理一个小问题，你肯定能搞定。如果你身边有很多善良的人们愿意帮助你，一切都会好很多（从我的经验来看，技术行业有很多乐于帮助和分享的人）。
 
-As a complete code newbie, I’ll be documenting my journey on Medium from here on out. I will share the kinds of experiences and perspectives that I want others to share with me.
+希望这篇文章能帮助其他和我一样的编程新手理解一件事：并不是谁天生就适合编程。
 
-Hopefully, it will help other newcomers like myself realize that there are not just 2 types of people out there: those who just get it and those who don’t.
+对我来说，这是我的第一个收获。
 
-For me, this is lesson number one.
-
-  
 
 [1]: http://www.codebar.io/
 [2]: https://niamhmccoo.github.io/

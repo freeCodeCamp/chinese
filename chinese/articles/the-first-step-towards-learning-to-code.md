@@ -5,15 +5,16 @@
 
 ![How I took the first step towards learning to code](https://cdn-media-1.freecodecamp.org/images/1*CFeeiP9bD0riPqSIfCzX6A.jpeg)
 
-A couple of months ago, I was chatting to a developer at work about how I’ve always wanted to learn to code but never tried.
+几个月前，我和一位在职开发者聊天，我跟他说自己总是想学习编程，但是从来没有尝试过。
 
-Coding always seemed like one of those skills that was incredibly powerful (hence the allure). At the same time coding felt hugely complicated and foreign.
+编程似乎是一种力量特别强大的技能（也因此而具有吸引力），同时呢，给人的感觉又超级复杂而且陌生。
 
-Ever since I was an art student in college, coding, in my mind, always see-sawed between being geeky and glamorous. Glamorous because if you knew how to code that meant you were smart and successful. And geeky because, well, most depictions of programmers in popular culture look like this…
+我大学的时候是一名文科生，在我的印象里，编程这件事情有时候很呆板，有时候又很有魅力。有魅力是因为一个会编程的人给人的感觉是聪明的、成功的。至于呆板呢，好吧，社会大众对程序员的大部分描述都是这样......
 
 ![](https://cdn-media-1.freecodecamp.org/images/nfRdlv1hiH988xDoDqM7-FxSYU14fNJb6VPO)
 
 As a girl growing up in Dublin, I assumed you had to be ‘naturally good’ at computers to understand coding.
+
 
 But I’ve learned that there is **no such thing as ‘naturally good.’**
 

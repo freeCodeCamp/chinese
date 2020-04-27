@@ -1,6 +1,6 @@
 > * 原文地址：[How I Won my First Ever Hackathon – 2 Wild Days of Research, Design, and Coding 服务生跳出舒适区自学编程，成功挑战人生第一次黑客马拉松](https://www.freecodecamp.org/news/how-i-won-the-hackathon/)
 > * 原文作者：Moshe Siegel
-> * 译者：
+> * 译者：LolaWei
 > * 校对者：
 
 ![How I Won my First Ever Hackathon – 2 Wild Days of Research, Design, and Coding](https://images.unsplash.com/photo-1505855265981-d52719d1f64e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)

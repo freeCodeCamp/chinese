@@ -1,4 +1,4 @@
-> * 原文地址：[Why You Need to Understand Software Requirements as a Software Engineer ](https://www.freecodecamp.org/news/build-a-simple-json-api-in-python/)
+> * 原文地址：[Why You Need to Understand Software Requirements as a Software Engineer 你以为软件工程师就是写代码的吗？深入理解软件需求很重要！](https://www.freecodecamp.org/news/build-a-simple-json-api-in-python/)
 > * 原文作者：Greg Byrne
 > * 译者：
 > * 校对者：

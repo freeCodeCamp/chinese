@@ -1501,51 +1501,51 @@ React 使其“声明式方法”非常流行和超前，这一方法随着 Reac
 
 React 声明式方法为我们抽象了这一点。我们只需要告诉 React 我们希望组件以什么方式渲染，之后引用组件时不必与 DOM 交互。
 
-### `Immutability`
+### 不可变性
 
-`One concept you will likely meet when programming in React is immutability (and its opposite, mutability).`
+在 React 编程中会遇到的一个概念是不可变性（与之相对的是可变性）。
 
-`It’s a controversial topic, but whatever you might think about the concept of immutability, React and most of its ecosystem kind of forces this, so you need to at least have a grasp of why it’s so important and the implications of it.`
+这是个富有争议的话题，但无论你如何看待不可变性，React 和它的生态圈都强制如此，因此你至少需要知道为什么不可变性如此重要，以及它究竟是什么。
 
-`In programming, a variable is immutable when its value cannot change after it’s created.`
+编程时，如果一个变量在创建后，它的值不可以更改的，那它就是不可变的。
 
-`You are already using immutable variables without knowing it when you manipulate a string. Strings are immutable by default, when you change them in reality you create a new string and assign it to the same variable name.`
+尽管你可能没有意识到，但实际上，字符串就是不可变变量。字符串默认是不可变的，当你改变它的值时，实际上你创建了一个新的字符串，并赋予它与原来的字符串相同的变量名。
 
-`An immutable variable can never be changed. To update its value, you create a new variable.`
+不可变变量的值无法更改，想要修改它的值，只能创建一个新的变量。
 
-`The same applies to objects and arrays.`
+这一原理同样适用于对象和数组。
 
-`Instead of changing an array, to add a new item you create a new array by concatenating the old array, plus the new item.`
+当你给数组新增一个元素时，不会直接修改数组，而是通过拼接原数组和新的元素来创建一个新数组。
 
-`An object is never updated, but copied before changing it.`
+对象不会被更新，而是在修改它前创建副本。
 
-`This applies to React in many places.`
+这一原理在 React 的很多地方都有体现。
 
-``For example, you should never mutate the  `state`  property of a component directly, but only through the  `setState()`  method.``
+比如，任何时候都不应直接修改一个组件的 `state` 属性，只能通过 `setState()` 方法来修改。
 
-`In Redux, you never mutate the state directly, but only through reducers, which are functions.`
+在 Redux 中，也无法直接修改 state，而是只能通过 reducers ，也就是方法来修改。
 
-`The question is, why?`
+问题是为什么要这样呢？
 
-`There are various reasons, the most important of which are:`
+原因有很多，但是最重要的原因是：
 
--   `Mutations can be centralized, like in the case of Redux, which improves your debugging capabilities and reduces sources of errors.`
--   `Code looks cleaner and simpler to understand. You never expect a function to change some value without you knowing, which gives you  **predictability**. When a function does not mutate objects but just returns a new object, it’s called a pure function.`
--   `The library can optimize the code because for example JavaScript is faster when swapping an old object reference for an entirely new object, rather than mutating an existing object. This gives you  **performance**.`
+- 可以集中处理修改，比如在 Redux 的例子中，这样可以提高调试能力，并减少导致错误源。
+- 代码会更简洁，且容易理解。你永远不会希望某个函数在你不知道的情况下修改某些值，因此不可变性能带来**可预测性**。当函数不修改已有对象，而是返回新对象时，这类函数被称为纯函数。
+- 代码库会帮你优化代码。比如在 JavaScript 中，用新的对象取代旧的对象比修改已有对象更迅速，这会为你提升**性能**。
 
-### `Purity`
+### 纯净性
 
-`In JavaScript, when a function does not mutate objects but just returns a new object, it’s called a pure function.`
+在 JavaScript 中，当函数不修改已有对象，仅返回新对象时，被称为纯函数。
 
-`A function, or a method, in order to be called  _pure_  should not cause side effects and should return the same output when called multiple times with the same input.`
+一个_纯_函数或方法不能有副作用，且在传入的数据不变的情况下，调用多次也返回相同的结果。
 
-`A pure function takes an input and returns an output without changing the input nor anything else.`
+纯函数接收参数后，返回结果时不应修改传入的参数或其他任何值。
 
-`Its output is only determined by the arguments. You could call this function 1M times, and given the same set of arguments, the output will always be the same.`
+返回的结果仅受参数影响。在传入相同参数的情况下，即使调用 1 万次，它也始终返回同样的结果。
 
-`React applies this concept to components. A React component is a pure component when its output is only dependant on its props.`
+React 将这一概念应用在了组件上。React 组件是纯组件，且仅依赖传入的属性。
 
-`All functional components are pure components:`
+所有的函数组件都是纯组件：
 
 ```
 const Button = props => {
@@ -1553,7 +1553,7 @@ const Button = props => {
 }
 ```
 
-`Class components can be pure if their output only depends on the props:`
+如果 class 组件的输入仅依赖属性，那么也是纯组件：
 
 ```
 class Button extends React.Component {
@@ -1563,24 +1563,24 @@ class Button extends React.Component {
 }
 ```
 
-### `Composition`
+### 组合
 
-`In programming, composition allows you to build more complex functionality by combining small and focused functions.`
+编程时，你可以通过组合小的、集中的功能函数来构建更复杂的功能。
 
-``For example, think about using  `map()`  to create a new array from an initial set, and then filtering the result using  `filter()`:``
+例如，通过使用 `map()` 从初始集合创建新的数组，再通过使用 `filter()` 来过滤结果：
 
 ```
 const list = ['Apple', 'Orange', 'Egg']
 list.map(item => item[0]).filter(item => item === 'A') //'A'
 ```
 
-`In React, composition allows you to have some pretty cool advantages.`
+在 React 中，组合让你能够拥有很多很棒的优势。
 
-`You create small and lean components and use them to  _compose_  more functionality on top of them. How?`
+你可以创建小的、精简的函数，基于它们来_组合_更多功能。那么如何做到呢？
 
-#### `Create specialized version of a component`
+#### 创建组件的专用版本
 
-`Use an outer component to expand and specialize a more generic component:`
+使用外部组件来扩展和专用化更通用的组件：
 
 ```
 const Button = props => {
@@ -1594,9 +1594,9 @@ const LoginButton = () => {
 }
 ```
 
-#### `Pass methods as props`
+#### 以属性的方式传入方法
 
-`A component can focus on tracking a click event, for example, and what actually happens when the click event happens is up to the container component:`
+例如，一个组件可以专注于跟踪点击事件，当点击事件发生时，组件如何响应取决于容器组件：
 
 ```
 const Button = props => {
@@ -1613,11 +1613,11 @@ const Container = () => {
 }
 ```
 
-#### `Using children`
+#### 使用 children
 
-``The  `props.children`  property allows you to inject components inside other components.``
+`props.children` 属性让你可以在其他组件内注入组件。
 
-``The component needs to output  `props.children`  in its JSX:``
+组件需要在 JSX 代码中输出 `props.children`:
 
 ```
 const Sidebar = props => {
@@ -1625,7 +1625,7 @@ const Sidebar = props => {
 }
 ```
 
-`and you embed more components into it in a transparent way:`
+你可以用一种清晰的方式在组件中嵌入更多组件：
 
 ```
 <Sidebar>
@@ -1634,23 +1634,23 @@ const Sidebar = props => {
 </Sidebar>
 ```
 
-#### `Higher order components`
+#### 高阶组件
 
-`When a component receives a component as a prop and returns a component, it’s called higher order component.`
+当组件接收一个组件属性，并返回一个组件时，它被称为高阶组件。
 
-`We’ll see them in a little while.`
+我们在后面会提到。
 
-### `The Virtual DOM`
+### 虚拟 DOM
 
-`Many existing frameworks, before React came on the scene, were directly manipulating the DOM on every change.`
+在 React 出现之前，许多现有框架会在每次更改时直接操纵 DOM 节点。
 
-`First, what is the DOM?`
+第一个问题，什么是 DOM？
 
-``The DOM (_Document Object Model_) is a Tree representation of the page, starting from the  `<ht`ml> tag, going down into every child, which are called nodes.``
+DOM (_Document Object Model 文档对象模型_)是页面的树形表示，从 `<html>` 标签开始，一直延伸到每一个被称为节点的子节点中。
 
-`It’s kept in the browser memory, and directly linked to what you see in a page. The DOM has an API that you can use to traverse it, access every single node, filter them, modify them.`
+它被保存在浏览器内存里，并且直接链接到你在页面中看到的内容。你可以通过 DOM 的 API 来遍历它，获取每一个节点，过滤节点或者修改节点。
 
-`The API is the familiar syntax you have likely seen many times, if you were not using the abstract API provided by jQuery and friends:`
+如果你不使用如 jQuery 及其他库提供的抽象 API ，那么 DOM 的 API 就是你经常看到的熟悉语法：
 
 ```
 document.getElementById(id)
@@ -1668,52 +1668,52 @@ window.dump()
 window.scrollTo()
 ```
 
-`React keeps a copy of the DOM representation, for what concerns the React rendering: the Virtual DOM`
+React 保存了一份 DOM 的副本，出于某些考虑，React 渲染的是虚拟 DOM。
 
-#### `The Virtual DOM Explained`
+#### 虚拟 DOM 详解
 
-`Every time the DOM changes, the browser has to do two intensive operations: repaint (visual or content changes to an element that do not affect the layout and positioning relative to other elements) and reflow (recalculate the layout of a portion of the page — or the whole page layout).`
+每当 DOM 发生变化时，浏览器需要做两项操作：重绘（在不影响页面布局和元素与其他元素的相对位置关系情况下，元素在视觉和内容上的变化）和回流（重新计算页面某一部分或整个页面的布局）。
 
-`React uses a Virtual DOM to help the browser use less resources when changes need to be done on a page.`
+当页面发生变化时，React 使用虚拟 DOM 帮助浏览器使用更少的资源完成调整。
 
-``When you call  `setState()`  on a Component, specifying a state different than the previous one, React marks that Component as  **dirty**. This is key: React only updates when a Component changes the state explicitly.``
+当你在组件中调用 `setState()` ，指定一个不同于原先状态的 state 时，React 标记这个组件为 **dirty**。核心是：React 只在显式修改 state 时更新组件。
 
-`What happens next is:`
+接下来会发生：
 
--   ``React updates the Virtual DOM relative to the components marked as dirty (with some additional checks, like triggering  `shouldComponentUpdate()`)``
--   `Runs the diffing algorithm to reconcile the changes`
--   `Updates the real DOM`
+- React 会（通过额外的检查，如触发 `shouldComponentUpdate()`）更新与标记了 dirty 的组件相关的虚拟 DOM
+- 运行 Diff 算法来聚合变更
+- 更新真实的 DOM 
 
-#### `Why is the Virtual DOM helpful: batching`
+#### 为什么虚拟 DOM 有用：批处理
 
-`The key thing is that React batches much of the changes and performs a unique update to the real DOM, by changing all the elements that need to be changed at the same time, so the repaint and reflow the browser must perform to render the changes are executed just once.`
+关键点在于 React 一次性处理所有需要修改的元素，让浏览器只处理一次重绘和回流，从而只对真实的 DOM 进行一次更新。
 
-### `Unidirectional Data Flow`
+### 单向数据流
 
-`Working with React you might encounter the term Unidirectional Data Flow. What does it mean? Unidirectional Data Flow is not a concept unique to React, but as a JavaScript developer this might be the first time you hear it.`
+使用 React 时会遇到单向数据流的概念。它是什么意思呢？单向数据流并不是 React 独有的概念，但是作为 JavaScript 开发者，这可能是你第一次听到这个术语。
 
-`In general this concept means that data has one, and only one, way to be transferred to other parts of the application.`
+一般来说，这个概念表示数据只有唯一一种方式传输到应用程序的其他部分。
 
-`In React this means that:`
+在 React 中它表示：
 
--   `state is passed to the view and to child components`
--   `actions are triggered by the view`
--   `actions can update the state`
--   `the state change is passed to the view and to child components`
+- 状态传递给视图和子组件
+- 视图触发操作
+- 操作能更新状态 state
+- 状态的变化传递给视图和子组件
 
-`The view is a result of the application state. State can only change when actions happen. When actions happen, the state is updated.`
+视图是应用程序状态的结果。状态只在操作发生时变化，当操作发生时，状态被更新。
 
-`Thanks to one-way bindings, data cannot flow in the opposite way (as would happen with two-way bindings, for example), and this has some key advantages:`
+多亏了单向绑定，数据不能通过相反的方式传输（像双向绑定那样），因此有如下优势：
 
--   `it’s less error prone, as you have more control over your data`
--   `it’s easier to debug, as you know  _what_  is coming from  _where_`
--   `it’s more efficient, as the library already knows what the boundaries are of each part of the system`
+- 能更好地控制数据，从而更少出错  
+- 能知道_什么数据_从_哪里_来，因此更易于调试
+- 能够明确系统每部分的边界，从而更有效率
 
-`A state is always owned by one Component. Any data that’s affected by this state can only affect Components below it: its children.`
+状态只被一个组件拥有。任何被状态影响的数据都只能影响组件的子组件。
 
-`Changing state on a Component will never affect its parent, or its siblings, or any other Component in the application: just its children.`
+修改组件的状态绝不会影响组件的父组件，或兄弟组件，或应用程序中的任何其他组件，只会影响组件的子组件。
 
-`This is the reason that the state is often moved up in the Component tree, so that it can be shared between components that need to access it.`
+这也是状态经常在组件树中上移的原因，以便在需要访问它的组件之间共享状态。
 
 ### `SECTION 3: IN-DEPTH REACT`
 

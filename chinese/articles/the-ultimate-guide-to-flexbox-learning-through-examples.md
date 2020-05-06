@@ -13,11 +13,11 @@
 
 ### 要注意的几点
 
--   这篇文章预设你是一名中级开发者，并且对Flexbox有点了解。但是。。。
--   如果你对 CSS 有些了解，但是完全不知道Flexbox，[我写了一篇通用指导（免费文章，阅读时间约为46分钟）][2].
--   如果你对 CSS 掌握的不是很好，我推荐你阅读 [CSS全面（实用）指南 (74课时的付费课程)][3]。
+-   这篇文章预设你是一名中级开发者，并且对 Flexbox 有点了解。但是。。。
+-   如果你对 CSS 有些了解，但是完全不知道 Flexbox，[我写了一篇综合指南（免费文章，阅读时间约为 46 分钟）][2].
+-   如果你对 CSS 掌握得不是很好，我推荐你阅读 [CSS 全面（实用）指南 (74 课时的付费课程)][3]。
 -   你不需要遵照这里列出的示例顺序。
--   Flexbox 只是一种布局的技巧。实际项目应用需要更多的布局样式。
+-   Flexbox 只是一种布局的技巧。实际项目中涉及到的东西除了布局还有很多。
 -   当你看到例如 `div.ohans` 的例子，这代表类名是  `ohans`的 div
 
 ### 例1: 如何用 Flexbox 制作一个影片集
@@ -40,7 +40,7 @@
 
 #### 有关图片的快速标记
 
-图片默认是一个  `inline-block`  元素，他们有宽高。除非有限定大小，例如图片太大不能排列在一行，否则他们都会排列在一行。
+图片默认是一个 inline-block 元素，有宽高，通常排列在同一行（除了图片尺寸有限定，一行排不下的情况）。
 
 #### 起始点
 
@@ -48,7 +48,7 @@
 
 ![](https://cdn-media-1.freecodecamp.org/images/s2ntfDqrLewl66sGtavdhgQybTyD2JX520r2)
 
-10张图片按照原来的宽高排列在一起，在合适的时候换行，并按顺序排放 ;)
+10 张图片本身的宽高尺寸保持不变，在需要的时候自动换行，很好;)
 
 现在，看下 Flexbox 的效果:
 
@@ -56,9 +56,9 @@
 .gallery {    display: flex }
 ```
 
-现在，图片的默认属性已经发生改变。他们从  `inline-block`  布局变成了  `flex-items.`
+现在，图片的默认属性已经发生改变。它们从  `inline-block`  元素变成了  `flex-items.`
 
-由于  `.gallery`  里的 Flexbox 布局，里面的图片会被压缩排列在一行内，而且他们会被纵向拉伸成这样：
+由于  `.gallery`  里的 Flexbox 布局，里面的图片会被压缩排列在一行内，而且它们会被纵向拉伸成这样：
 
 ![](https://cdn-media-1.freecodecamp.org/images/sEzCWC3d-xoorKjDGf8TMdq6-ZxtOFMQjIST)
 
@@ -78,7 +78,7 @@
 
 ![](https://cdn-media-1.freecodecamp.org/images/JGAnqvkIeN-q8vh1beADx0XUrUE6SEZkGQFp)
 
-因为wrap值的改变，现在图片换行排列
+因为 wrap 值的改变，现在图片换行排列
 
 2\. 现在图片有换行，但是仍然被纵向拉伸。我们当然不想要这样变形的布局。
 
@@ -94,9 +94,9 @@ align-items: stretch
 .gallery {  ...  align-items: flex-start}
 ```
 
-这样图片不会拉伸，而是保持他们默认的宽和高。
+这样图片不会拉伸，而是保持它们默认的宽和高。
 
-如下所示，他们会在纵向保持首部对齐。
+如下所示，它们会在纵向保持首部对齐。
 
 ![](https://cdn-media-1.freecodecamp.org/images/02VgeT3SyoxuWFwkqyD1pzEjFzUjMH160mn0)
 
@@ -108,7 +108,7 @@ align-items: stretch
 
 此刻 Flexbox 似乎没展现出什么优势，图片还是像使用  **Flexbox**  之前一样。
 
-除了能得到一个免费的响应式图片集外，使用 Flexbox 的另一个优势就是他的对齐选项。
+除了能得到一个免费的响应式图片集外，使用 Flexbox 的另一个优势就是它的对齐选项。
 
 还记得 flex 容器  `.gallery`  设定的样式 `flex-direction: row`  `justify-content: flex-start`  和  `align-items: flex-start.`
 
@@ -134,17 +134,17 @@ align-items: stretch
 
 如上所示，这可以让图片在  `.gallery` 内水平和垂直都居中。
 
-你可以通过Flexbox的布局方式随意选择你想要的对齐选项。
+你可以通过 Flexbox 的布局方式随意选择你想要的对齐选项。
 
 也可以在  [CodePen][4]查看 Flexbox 图片库的实时布局效果。
 
-### 例2：如何通过Flexbox布局卡片 
+### 例 2：如何通过 Flexbox 布局卡片 
 
 卡片在网上很流行，无论是Google, Twitter 还是 Pinterest，每个网站都在使用卡片。
 
 卡片是一种在弹性容器内组合相关信息的页面设计方式，视觉上很像一种玩的卡片。
 
-使用卡片有很多好的地方，其中一个常用的就是臭名昭著的价格表。
+有很多使用卡片的优秀案例，其中一个常用的就是臭名昭著的价格表。
 
 ![](https://cdn-media-1.freecodecamp.org/images/wjb-g2V7hV6IvRbGaDHYmAePhTjwR5ZeekkX)
 
@@ -164,7 +164,7 @@ align-items: stretch
   <ul>    <li></li>    <li></li>    <li></li>  </ul>  <button></button></section>
 ```
 
-这里有至少3个卡片，我们把这些卡片包在  `div.cards`里
+这里有至少 3 个卡片，我们把这些卡片包在  `div.cards`里
 
 ```
 <div class="cards"></div>
@@ -196,7 +196,7 @@ align-items: stretch
 .card {  flex: 0 0 250px}
 ```
 
-这个样式将  `flex-grow`  和  `flex-shrink`  的值设为0，  `flex-basis`  值为  `250px`。
+这个样式将  `flex-grow`  和  `flex-shrink`  的值设为 0，  `flex-basis`  值为  `250px`。
 
 这时，卡片会在页面的起始处对齐，并且竖向排列。
 
@@ -234,7 +234,7 @@ align-items: center; justify-content: center
 
 你可以在[CodePen][5]看最终的效果。
 
-### 例3：如何使用 Flexbox 创建网格布局
+### 例 3：如何使用 Flexbox 创建网格布局
 
 在这个例子中，我们要探讨整体的 CSS 框架概念，这是很重要的一点。
 
@@ -250,7 +250,7 @@ align-items: center; justify-content: center
 
 你所掌握的内容可能不一样，但这个例子会涵盖不同的网格布局类型。
 
-我们先来看第一种，**基本网络布局**
+我们先来看第一种，**基本网格布局**
 
 #### 基本网格布局
 
@@ -263,7 +263,7 @@ align-items: center; justify-content: center
 -   网格单元格平均布局并充满整行。
 -   单元格高度一致。
 
-使用Flexbox很容易实现这个效果，看下面这个标识文本：
+使用 Flexbox 很容易实现这个效果，看下面这个标识文本：
 
 ```
 <div class="row">  <div class="row_cell">1</div></div>
@@ -273,19 +273,19 @@ align-items: center; justify-content: center
 
   `.row`  里的每个元素也就是 flex 元素，所有的 flex 元素都平均分布在一行中。
 
-根据设计，无论有3个子元素
+根据设计，无论有 3 个子元素
 
 ```
 <div class="row">  <div class="row_cell">1/3</div>  <div class="row_cell">1/3</div>  <div class="row_cell">1/3</div></div>
 ```
 
-6个子元素
+6 个子元素
 
 ```
 <div class="row">  <div class="row_cell">1/6</div>  <div class="row_cell">1/6</div>  <div class="row_cell">1/6</div>  <div class="row_cell">1/6</div>  <div class="row_cell">1/6</div>  <div class="row_cell">1/6</div></div>
 ```
 
-或是12个子元素，都是没影响的
+或是 12 个子元素，都是没影响的
 
 ```
 <div class="row">  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div></div>
@@ -301,7 +301,7 @@ align-items: center; justify-content: center
 .row {   display: flex;}
 ```
 
-2\. 扩大每个  `flex-item`  元素，让他们以相同比例均匀的布满整行：
+2\. 扩大每个  `flex-item`  元素，让它们以相同比例均匀的布满整行：
 
 ```
 .row_cell {   flex: 1}
@@ -351,7 +351,7 @@ flex: 1  === flex: 1 1 0
 
 加上  `.row__cell--2`  类名的元素会是其他默认元素的两倍大小。
 
-一个占可用空间3倍的元素：
+一个占可用空间 3 倍的元素：
 
 `.row_cell--3 {`  
 `flex: 3`  
@@ -435,21 +435,21 @@ flex: 1  === flex: 1 1 0
 
 整行的三个元素都靠底部对齐
 
-#### 巢状网格
+#### 嵌套网格
 
-没有特殊的设置，这些  `rows`  可以在内部巢状布局。
+只需要简单的设置，rows（行元素）就可以嵌套布局。
 
 ![](https://cdn-media-1.freecodecamp.org/images/2eyhYZJlDdZXJkiLuwGYSoB83KKPxnfgfjCg)
 
-一行内有两个元素，其中一个是另一个的两倍大小。在较大的元素里，一行三个元素居中巢状排列。
+一行内有两个元素，其中一个是另一个的两倍大小。一行三个元素居中嵌套排列在较大的元素里。
 
 你可以在  [created here][6]查看最终的布局效果。
 
 #### 更多网格布局
 
-当你可以用 Flexbox 垂直网格甚至更复杂的参数实现好看的网格构造时，就可以把这个很好的工具用于工作。学习，掌握然后使用  [CSS 网格布局][7]，这是CSS网格布局的最终解决方案。
+当你可以用 Flexbox 垂直网格甚至更复杂的参数实现好看的网格构造时，就可以把这个很好的工具用于工作。学习，掌握然后使用  [CSS 网格布局][7]，这是 CSS 网格布局的最终解决方案。
 
-### 例4：如何使用 Flexbox 构建网站布局
+### 例 4：如何使用 Flexbox 构建网站布局
 
 社区通常不建议整个网站布局都使用 Flexbox。
 
@@ -463,11 +463,11 @@ flex: 1  === flex: 1 1 0
 
 #### 圣杯布局
 
-比臭名昭著的 “**holy grail**”更好的网站布局方式是什么呢？
+有什么网站布局方式比“圣杯布局”更经典呢？
 
 ![](https://cdn-media-1.freecodecamp.org/images/9HvLwuqluns72rMdkVL4SMf5pyPQMxFb9mSi)
 
-圣杯布局 — 头部, 页脚和3个其他的容器。
+圣杯布局 — 头部, 页脚和 3 个其他的容器。
 
 有两种 Flexbox 方式可以实现这种布局。
 
@@ -572,7 +572,7 @@ nav {  order: -1}
 
 圣杯布局
 
-`header`  和  `footer`  可以被当做块状元素。 在没有任何干预的情况下，他们会在从顶部到底部，填满父级元素。
+`header`  和  `footer`  可以被当做块状元素。 在没有任何干预的情况下，它们会在从顶部到底部，填满父级元素。
 
 ```
 <body>  <header>Header</header>  <main>    <article>Article</article>    <nav>Nav</nav>    <aside>Aside</aside>  </main>  <footer>Footer</footer></body>
@@ -688,9 +688,9 @@ Tweet 和 Facebook 上的发帖示例
 
 这样图片就会排列在  `.media-body`  和  `media-heading` 之后。
 
-#### 巢状媒体对象
+#### 媒体对象的嵌套
 
-你甚至可以不改变已有的CSS样式来继续用巢状布局媒体对象。
+你甚至可以不改变已有的 CSS 样式来继续用嵌套布局媒体对象。
 ```
 <div class="media">  <img class="media-object" src="/pic.jpg">  <div class="media-body">    <h3 class="media-heading"> Header </h3>    <p></p>        <!--nested-->    <div class="media">    <img class="media-object" src="/pic.jpg">    <div class="media-body">        <h3 class="media-heading"> Header </h3>        <p></p>    </div>    </div><!--end nested-->  </div> </div>
 ```
@@ -735,7 +735,7 @@ html实体, ☎
 
 你可以在  [CodePen][12]查看这些例子的效果。
 
-### 例6：如何使用Flexbox建立表单元素
+### 例 6：如何使用Flexbox建立表单元素
 
 现在很难找到没有一两个表单的网站了。
 
@@ -771,7 +771,7 @@ html实体, ☎
 
 你可以在  [CodePen][13]里看到这个例子的完整效果。
 
-### 例7：如何使用 Flexbox 来创建一个手机 App 布局
+### 例 7：如何使用 Flexbox 来创建一个手机 App 布局
 
 在这个例子中，我会带你一起来打造一个如下的手机应用布局：
 
@@ -807,15 +807,15 @@ html实体, ☎
 
 ![](https://cdn-media-1.freecodecamp.org/images/C1KEFWls3---EMGS2nEiLh8pXnk6a2YOH7x0)
 
-改变3个子元素也就是  `flex-items` 的默认布局方向
+改变 3 个子元素也就是  `flex-items` 的默认布局方向
 
 #### 第四步
 
-给元素1和元素3一个固定的高度  `height: 50px.`
+给元素 1 和元素 3 一个固定的高度  `height: 50px.`
 
 #### 第五步
 
-元素2要有一个填满可用空间的高度。使用`flex-grow`  或是简写的  `flex` 写法 `flex: 1.` 。
+元素 2 要有一个填满可用空间的高度。使用`flex-grow`  或是简写的  `flex` 写法 `flex: 1.` 。
 
 #### 第六步
 
@@ -833,7 +833,7 @@ html实体, ☎
 
 ![](https://cdn-media-1.freecodecamp.org/images/Hisu3Q2Yz70DyjZSPfJ3Dr0gnZ9eB38g152g)
 
-[点击免费获得免费的CSS网格布局手册 + 两节优质的课程！][14]
+[点击免费获得免费的 CSS 网格布局手册 + 两节优质的课程！][14]
 
 [现在去领][15]
 

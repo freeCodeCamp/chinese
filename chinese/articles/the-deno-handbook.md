@@ -1,6 +1,6 @@
 > * 原文地址：[The Deno Handbook: A TypeScript Runtime Tutorial with Code Examples Deno 入门手册](https://www.freecodecamp.org/news/the-deno-handbook/)
 > * 原文作者：Flavio Copes
-> * 译者：
+> * 译者：xxx, hylerrix
 > * 校对者：
 
 ![The Deno Handbook: A TypeScript Runtime Tutorial with Code Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2020/05/Screen-Shot-2020-05-11-at-18.55.24.png)

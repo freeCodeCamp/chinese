@@ -7,16 +7,9 @@
 
 ![Deno](https://tva1.sinaimg.cn/large/007S8ZIlgy1gert1lb5f4j31be0p4my8.jpg)
 
-我每周都在探索新的项目，很少会有一个像 [Deno][1] 这样的项目让我如此着迷。
+我每周都在探索新的项目，很少会有一个像 [Deno](https://deno.land/) 这样的项目让我如此着迷。
 
 在本手册中我想要让你快速入手 Deno。我们将其与 Node.js 进行对比，然后助力你在 Deno 下搭建第一个 REST API Demo。
-
-<!--
-改动重点记录：
-  first-class 直译一流，换个角度->原生？算了
-  Deno 没有包管理器？无须包管理器？不内置？
-  本文、本指南 -> 本手册
--->
 
 ## 目录
 
@@ -32,7 +25,7 @@
 - [你的第一个 Deno 应用](#你的第一个-Deno-应用)
 - [Deno 代码示例](#Deno-代码示例)
 - [你的第一个 Deno 应用程序](#你的第一个-Deno-应用程序)
-- [Deno 安全沙盒（Sandbox）](#Deno-安全沙盒（Sandbox）)
+- [Deno 安全沙箱（Sandbox）](#Deno-安全沙箱（Sandbox）)
 - [格式化代码](#格式化代码)
 - [标准库](#标准库)
 - [另一个 Deno 示例](#另一个-Deno-示例)
@@ -127,7 +120,7 @@ Deno 基于 Rust 和 TypeScript 这两种今天正在迅速发展的语言编写
 - Node.js 有一个官方的软件包管理器，称为 NPM。Deno 不会有，而会允许你从 URL 导入任何 ES 模块。
 - Node 使用 CommonJS 模块语法导入软件包。Deno 使用 ES 标准模块导入。
 - Deno 在其所有 API 和标准库中都使用现代 ECMAScript 功能，而 Node.js 使用基于回调的标准库，并且没有计划对其进行升级。
-- Deno 通过权限控制提供了一个安全的沙盒环境，程序只能访问由用户设置为可执行标志的文件。Node.js 程序可以直接访问用户足以访问的任何内容。
+- Deno 通过权限控制提供了一个安全的沙箱环境，程序只能访问由用户设置为可执行标志的文件。Node.js 程序可以直接访问用户足以访问的任何内容。
 - Deno 长期以来一直在探索将程序编译成单个可执行文件的可能性，从而使得该可执行文件可以在没有外部依赖项（例如 Go）的情况下运行，但这并[不是一件容易的事](https://github.com/denoland/deno/issues/986)，如果做得到，将会成为更有话语权的游戏规则改变者。
 
 ## 没有包依赖管理器
@@ -405,28 +398,30 @@ ARGS:
 
 ## Deno 代码示例
 
-除了上面我们运行的，Deno网站还提供了一些其他的例子，你可以去看看：[https://deno.land/std/examples/](https://deno.land/std/examples/)。
+除了前文我们运行的 Demo 外，Deno 官网还提供了一些其他的例子，可以在这里查看：[https://deno.land/std/examples/](https://deno.land/std/examples/)。
+
+> 译者注：你可能需要配置代理来更好的访问 DenoLand。
 
 在撰写本手册时，我们可以找到：
 
 - `cat.ts` 打印的内容是作为参数提供的文件列表
 - `catj.ts` 打印的内容是作为参数提供的文件列表
-- `chat/` 聊天的实现
+- `chat/` 聊天的一种实现
 - `colors.ts` 打印一个彩色版本的 Hello world!
 - `curl.ts` 一个简单的实现，curl 它打印指定为参数的 URL 的内容
 - `echo_server.ts` TCP 回显服务器
 - `gist.ts` 一个将文件发布到 gist.github.com 的程序
 - `test.ts` 样本测试套件
 - `welcome.ts` 一个简单的 console.log 语句（我们在上面运行的第一个程序）
-- `xeval.ts` 允许你为收到的任何标准输入行运行任何 TypeScript 代码。曾经被称为 deno xeval 但自官方命令中删除。
+- `xeval.ts` 允许你为收到的任何标准输入行运行任何 TypeScript 代码。曾经被设计为 `deno xeval` 子命令但现在从官方命令中删除。
 
 ## 第一个 Deno 应用程序
 
 我们来写一些代码吧。
 
-你使用`deno run https://deno.land/std/examples/welcome.ts`运行的第一个Deno应用是别人写的一个应用，所以你没有看到任何关于Deno代码的样子。
+前文执行的 `deno run https://deno.land/std/examples/welcome.ts` 命令执行的是别人写的一个 Deno 应用，所以我们没有看到任何关于 Deno 代码的样子。
 
-我们从Deno官方网站上列出的默认示例应用开始。
+接下来让我们从 Deno 官方网站上列出的默认示例应用开始。
 
 ```typescript
 import { serve } from "https://deno.land/std/http/server.ts";
@@ -437,9 +432,9 @@ for await (const req of s) {
 }
 ```
 
-这段代码从`http/server`模块中导入服务函数。看到了吗？我们不需要先安装，而且也不会像Node模块那样存储在本地机器上。这也是Deno安装速度快的原因之一。
+这段代码从 `http/server` 模块中导入服务函数。可见我们不需要先安装这些模块，而且也不会像 Node 那样将这些模块大量存储在本地机器上。这也是 Deno 安装速度快的原因之一。
 
-从 `https://deno.land/std/http/server.ts` 导入会导入最新版本的模块。你可以使用`@VERSION`导入特定的版本，就像这样。
+从 `https://deno.land/std/http/server.ts` 中导入会导入最新版本的模块。你可以使用`@VERSION`导入特定的版本，如下所示。
 
 ```typescript
 import { serve } from "https://deno.land/std@v0.42.0/http/server.ts";
@@ -469,9 +464,9 @@ export function serve(addr: string | HTTPOptions): Server {
 }
 ```
 
-我们继续实例化一个服务器，调用`server()`函数传递一个带有端口属性的对象。
+我们接下来实例化一个服务器，调用 `server()` 函数传递一个带有端口属性的对象。
 
-然后我们运行这个循环来响应来自服务器的每一个请求。
+然后我们运行如下循环来响应来自服务器的每一个请求。
 
 ```typescript
 for await (const req of s) {
@@ -479,17 +474,17 @@ for await (const req of s) {
 }
 ```
 
-请注意，我们使用`await`关键字而不需要将其封装到异步函数中，因为Deno实现了顶层的`await`。
+请注意，我们在这里使用 `await` 关键字而不需要将其封装到异步函数中，因为 Deno 在其内部实现了顶层的 `await` 支持。
 
-让我们在本地运行这个程序。我假设你使用的是VS Code，但你可以使用任何你喜欢的编辑器。
+让我们在本地运行这个程序。假设你使用的是 VS Code（你可以使用任何你喜欢的编辑器），我建议从 `justjavac` 开发的 Deno VS Code 扩展入手（当我尝试的时候还有一个同名的扩展，但是已经被淘汰了，可能将来会消失）。
 
-我建议从`justjavac`安装Deno扩展（我试过的时候还有一个同名的扩展，但是已经被淘汰了，可能将来会消失）。
+> 译者注：justjavac 的 Deno VS Code 拓展将被官方收录，以后可以直接使用官方的拓展。
 
 ![justjavac](https://tva1.sinaimg.cn/large/007S8ZIlgy1ges104sizrj31270q4wkz.jpg)
 
-该扩展将为`VS Code`提供几个实用工具和不错的东西来帮助你编写应用程序。
+该扩展将为 `VS Code` 提供几个实用工具和不错的东西来帮助你编写应用程序。
 
-现在在一个文件夹中创建一个`app.ts`文件，然后粘贴上面的代码。
+现在在一个文件夹中创建一个` app.ts` 文件，然后粘贴上面的代码。
 
 ![app.ts](https://tva1.sinaimg.cn/large/007S8ZIlgy1ges10z15fmj30tf0kv0v0.jpg)
 
@@ -497,9 +492,9 @@ for await (const req of s) {
 
 ![app.ts](https://tva1.sinaimg.cn/large/007S8ZIlgy1ges123ubtzj30z60s6wju.jpg)
 
-Deno先下载我们导入的那个依赖，就可以下载所有需要的依赖项。
+Deno 会先下载、编译我们导入的那个依赖及其所有需要的依赖项。
 
-`https://deno.land/std/http/server.ts` 文件本身就有几个依赖关系。
+这是由于我们导入的 `https://deno.land/std/http/server.ts` 文件本身就有数个其它依赖：
 
 ```typescript
 import { encode } from "../encoding/utf8.ts";
@@ -518,25 +513,29 @@ import Conn = Deno.Conn;
 import Reader = Deno.Reader;
 ```
 
-而这些是自动导入的。
+但 Deno 都会帮我们自动导入。
 
 在最后，我们还有一个问题。
 
 ![app.ts](https://tva1.sinaimg.cn/large/007S8ZIlgy1ges14r5we3j30z60a4gp9.jpg)
 
-## Deno 安全沙盒（Sandbox）
+这是怎么回事？我们为什么会收到执行权限被拒绝的提示？
 
-我之前提到过，Deno有一个沙盒，可以防止程序做一些你不允许的事情。
+这就涉及到了 Deno 的 Sandbox 问题，我们一起来看看。
+
+## Deno 安全沙箱（Sandbox）
+
+我之前提到过，Deno 有一个安全沙箱，可以防止程序做一些你不允许的事情。
 
 这意味着什么呢？
 
-Ryan在Deno的介绍讲座中提到的一件事是，有时候你想在Web浏览器之外运行一个JavaScript程序，却不想让它在你的系统中访问任何它想要的东西。或者使用网络与外部世界对话。
+Ryan 曾在 Deno 的介绍讲座中提到的一件事是：有时候你想在 Web 浏览器之外运行一个 JavaScript 程序，却不想让它肆意在你的系统中访问任何它想要的东西，比如使用网络与外部世界对话。
 
-没有什么可以阻止Node.js程序获取你系统上的SSH密钥或其他任何东西，并将其发送到服务器上。这就是为什么我们通常只安装来自可信来源的Node包的原因。但是，如果我们使用的一个项目被黑客入侵了，反过来，其他人也会被黑客入侵，我们怎么知道呢？
+为什么我们通常只安装来自可信来源的 Node 包？这是因为没有什么可以阻止 Node.js 程序获取你系统上的 SSH 密钥或其他任何东西，并将其发送到服务器上。但是，如果我们该怎么知道自己或其他人使用的一个项目是否被黑客入侵了？
 
-Deno试图复制浏览器实现的相同权限模型。除非你明确允许，否则在浏览器中运行的任何JavaScript都不能在你的系统上做不正当的事情。
+Deno 的解决方案是试图大量借鉴浏览器实现的相同权限模型——除非你明确允许，否则在浏览器中运行的任何 JavaScript 都不能在你的系统上做不正当的事情。
 
-回到Deno，如果一个程序想要像前面的例子一样访问网络，那么我们需要给它权限。
+回到 Deno，如果一个程序想要像前面的例子一样访问网络，那么我们需要给它权限。
 
 我们可以通过在运行命令时传递一个标志来实现，本例中是 `--allow-net`。
 
@@ -546,45 +545,43 @@ deno run --allow-net app.ts
 
 ![allow-net](https://tva1.sinaimg.cn/large/007S8ZIlgy1ges1luymhsj30nm07cdhk.jpg)
 
-该应用程序现在在端口 8000 上运行 HTTP 服务器：
+该应用程序现在监听在 8000 端口上运行着 HTTP 服务器：
 
 ![allow-net](https://tva1.sinaimg.cn/large/007S8ZIlgy1ges1sh7p19j30p80dj3zi.jpg)
 
-其他标志允许 Deno 解锁其他功能：
+其他标志允许 Deno 解锁其他功能，如下所示：
 
-- `--allow-env` 允许访问环境变量
-- `--allow-hrtime` 允许高分辨率时间测量
-- `--allow-net=<allow-net>` 允许网络访问
-- `--allow-plugin` 允许加载插件
-- `--allow-read=<allow-read>` 允许文件系统读取权限
-- `--allow-run` 允许运行子进程
-- `--allow-write=<allow-write>` 允许文件系统写入访问
-- `--allow-all` 允许所有权限(与`-A`相同)
+- `--allow-env` 允许访问环境变量；
+- `--allow-hrtime` 允许高分辨率时间测量；
+- `--allow-net=<allow-net>` 允许网络访问；
+- `--allow-plugin` 允许加载插件；
+- `--allow-read=<allow-read>` 允许文件系统读取权限；
+- `--allow-run` 允许运行子进程；
+- `--allow-write=<allow-write>` 允许文件系统写入访问；
+- `--allow-all` 允许所有权限(与`-A`相同)。
 
-`net`、`read`和`write`的权限可以是细化的。例如，你可以使用 `--allow-read=/dev`，允许从特定文件夹中读取。
+其中，`net`、`read` 和 `write` 的权限可以是细化的。例如，你可以使用 `--allow-read=/dev`，允许从特定文件夹中读取。
 
 ## 格式化代码
 
-我非常喜欢Go中的一个东西是Go编译器自带的`gofmt`命令。所有的Go代码看起来都是一样的。每个人都在使用`gofmt`。
+Go 语言编译器自带的 `gofmt` 命令是我非常喜欢 Go 语言特性之一。所有的 Go 代码的格式看起来都是一样的。每个人都在使用 `gofmt`。
 
-JavaScript程序员都习惯于运行[Prettier](https://flaviocopes.com/prettier/)，而`deno fmt`实际上就是在引擎盖下运行的。
+JavaScript 程序员都习惯于运行 [Prettier](https://flaviocopes.com/prettier/) 工具，而 `deno fmt` 实际上直接内置在底层上运行。
 
-假设你有一个格式化严重的文件是这样的。
+假设你有一个格式化严重的文件如下图所示。
 
 ![deno fmt](https://tva1.sinaimg.cn/large/007S8ZIlgy1ges1z0kmprj30tf0kv0v3.jpg)
 
-你运行`deno fmt app.ts`，它就会自动正确的格式化，还可以在缺少分号的地方加上。
+你运行 `deno fmt app.ts`，它就会执行正确的代码格式化，包括自动加上缺失的分号。
 
 ## 标准库
 
-尽管该项目还很年轻，但 Deno 标准库仍然很庞大。
-
-包括：
+尽管 Deno 还很年轻，但它的标准库仍然很庞大。这包括：
 
 - `archive` tar 文件归档的实用程序
 - `async` 异步工具
 - `bytes` 帮助器来操作字节切片
-- `datetime` 日期/时间解析
+- `datetime` 日期 / 时间解析
 - `encoding` 各种格式的编码/解码
 - `flags` 解析命令行标志
 - `fmt` 格式化和打印
@@ -596,11 +593,11 @@ JavaScript程序员都习惯于运行[Prettier](https://flaviocopes.com/prettier
 - `mime` 支持多类型数据
 - `node` Node.js 兼容层
 - `path` 路径操纵
-- `ws` websockets
+- `ws` WebSockets
 
 ## 另一个 Deno 示例
 
-我们再来看看Deno APP的例子，从Deno的例子来看：`cat`。
+我们再来看看另一个 Deno APP 的例子，以如下 `cat.ts` 为例。
 
 ```typescript
 const filenames = Deno.args;
@@ -611,9 +608,9 @@ for (const filename of filenames) {
 }
 ```
 
-这就把`Deno.args`的内容分配给了文件名变量，`Deno.args`是一个包含所有发送到命令中的参数的变量。
+这就把 `Deno.args` 的值分配给了 filenames 变量，`Deno.args` 是一个包含所有发送到命令中的参数的变量。
 
-我们对这些参数进行迭代，对每一个参数，我们使用`Deno.open()`打开文件，并使用`Deno.copy()`将文件的内容打印到`Deno.stdout`。最后我们关闭该文件。
+我们对这些参数进行迭代：对每一个参数，我们使用 `Deno.open()` 打开文件，并使用 `Deno.copy()` 将文件的内容打印到 `Deno.stdout` 中，最后我们关闭该文件。
 
 如果你使用
 
@@ -629,13 +626,13 @@ deno run https://deno.land/std/examples/cat.ts
 deno run https://deno.land/std/examples/cat.ts app.ts
 ```
 
-假设你在同一个文件夹里有之前项目中的`app.ts`。
+假设你在同一个文件夹里有之前项目中的 `app.ts`。
 
-你会得到一个权限错误。
+你会得到如下权限错误。
 
 ![app.ts](https://tva1.sinaimg.cn/large/007S8ZIlgy1ges2666arzj30qv0dl42x.jpg)
 
-因为 Deno 默认情况下不允许访问文件系统。使用以下命令授予对当前文件夹的访问权限`--allow-read=./`：
+因为 Deno 默认情况下不允许访问文件系统。需要使用 `--allow-read=./` 命令授予对当前文件夹的访问权限：
 
 ```bash
 deno run --allow-read=./ https://deno.land/std/examples/cat.ts app.ts
@@ -645,6 +642,8 @@ deno run --allow-read=./ https://deno.land/std/examples/cat.ts app.ts
 
 ## Deno 是否有 Express/Hapi/Koa/\*
 
+当然有。可以看看下方这些库。
+
 - [deno-drash](https://github.com/drashland/deno-drash)
 - [deno-express](https://github.com/NMathar/deno-express)
 - [oak](https://github.com/oakserver/oak)
@@ -653,13 +652,13 @@ deno run --allow-read=./ https://deno.land/std/examples/cat.ts app.ts
 
 ## 示例：使用 Oak 构建 REST-API
 
-我想做一个简单的例子，介绍一下如何使用Oak构建`REST API`。Oak很有意思，因为它的灵感来自于Koa，也就是流行的Node.js中间件，正因为如此，如果你以前用过的话，对它很熟悉。
+我想在这里做一个简单的 Demo 实战，介绍一下如何使用 Oak 框架构建`REST API`。Oak 很有意思，因为它的灵感来自于 Koa，也就是流行的Node.js 中间件。正因为如此，如果你以前用过的话，会很快熟悉 Oak。
 
-我们要构建的API非常简单。
+我们要构建的 API 示例也非常简单。
 
 我们的服务器将在内存中存储一个带有名字和年龄的狗的列表。
 
-我们想：
+我们的需求是：
 
 - 添加狗狗
 - 列出狗狗
@@ -667,7 +666,7 @@ deno run --allow-read=./ https://deno.land/std/examples/cat.ts app.ts
 - 从名单上删除一只狗
 - 更新狗的年龄
 
-我们将使用 TypeScript 进行此操作，但是没有什么可以阻止你使用 JavaScript 编写 API-你只需删除类型。
+我们将使用 TypeScript 进行此操作，但是没有什么可以阻止你使用 JavaScript 编写 API——你只需要删除下方 TypeScript 文件中所有有关类型描述的代码并将文件名后缀改为 `.js`。
 
 创建一个 `app.ts` 文件。
 
@@ -712,13 +711,13 @@ deno run --allow-env --allow-net app.ts
 
 ![Deno](https://tva1.sinaimg.cn/large/007S8ZIlgy1ges2lcj173j30pn0v7q9h.jpg)
 
-然后在`4000`端口上监听。
+然后程序监听在 `4000` 端口上。
 
-下次运行该命令时，Deno会跳过安装部分，因为这些包已经被缓存了。
+下次运行该命令时，Deno 会跳过安装部分，因为这些包已经被缓存了。
 
 ![Deno](https://tva1.sinaimg.cn/large/007S8ZIlgy1ges2lzx6q1j30u409f761.jpg)
 
-在文件的顶部，让我们定义一个狗的接口，然后我们声明一个初始的`Dogs`数组`Dog`对象。
+在文件的顶部，让我们定义一个狗的接口，然后我们声明一个初始的 `Dogs` 数组 `Dog` 对象。
 
 ```typescript
 interface Dog {
@@ -738,9 +737,9 @@ let dogs: Array<Dog> = [
 ];
 ```
 
-现在，让我们来实际实现API。
+现在，让我们来实现具体 API。
 
-我们已经准备好了一切。在你创建了路由器之后，让我们添加一些函数，这些函数将在任何时候触发这些端点中的一个端点时被调用。
+我们已经准备好了一切。在你创建了路由器之后，让我们添加一些函数，这些函数将在任何时候触发这些路由中的一个端点时被调用。
 
 ```typescript
 const router = new Router();
@@ -753,7 +752,7 @@ router
   .delete("/dogs/:name", removeDog);
 ```
 
-看到了吗？我们的定义是
+看到了吗？我们的 API 定义是：
 
 - `GET /dogs`
 - `GET /dogs/:name`
@@ -761,7 +760,7 @@ router
 - `PUT /dogs/:name`
 - `DELETE /dogs/:name`
 
-让我们一一实现。
+让我们开始一一实现。
 
 从开始 `GET /dogs`，它将返回所有狗的列表：
 
@@ -799,7 +798,7 @@ export const getDog = ({
 
 ![getDog](https://tva1.sinaimg.cn/large/007S8ZIlgy1ges2qv3ki2j30of0hcmys.jpg)
 
-这是我们添加新狗的方法：
+这是我们添加一个新的狗的方法：
 
 ```typescript
 export const addDog = async ({
@@ -820,9 +819,7 @@ export const addDog = async ({
 
 ![addDog](https://tva1.sinaimg.cn/large/007S8ZIlgy1ges2oymgidj30of0hcgnb.jpg)
 
-
-
-注意，我现在使用 `const body = await request.body()` 来获取正文的内容，因为`name`和`age`值是以 JSON 的形式传递的。
+注意，我现在使用 `const body = await request.body()` 来获取正文的内容，因为 `name` 和 `age` 值是以 JSON 的形式传递的。
 
 这是我们更新狗的年龄的方法：
 
@@ -1019,19 +1016,21 @@ await app.listen(`${HOST}:${PORT}`);
 
 ## 更多内容
 
-Deno 官方网站为 [https://deno.land](https://deno.land)
+Deno 官方网站为 [https://deno.land](https://deno.land)。
 
-API 文档位于 [https://doc.deno.land](https://doc.deno.land) 和 [https://deno.land/typedoc/index.html](https://deno.land/typedoc/index.html)
+API 文档位于 [https://doc.deno.land](https://doc.deno.land) 和 [https://deno.land/typedoc/index.html](https://deno.land/typedoc/index.html) 中。
 
-awesome-deno [https://github.com/denolib/awesome-deno](https://github.com/denolib/awesome-deno)
+一份 Awesome Deno 资源清单 [https://github.com/denolib/awesome-deno](https://github.com/denolib/awesome-deno)。
+
+> 译者注：中文的 Awesome Deno 清单由译者持续维护中，可以访问这里：[Awesome Deno 资源全图谱](https://github.com/hylerrix/awesome-deno-cn)
 
 ## 花絮
 
-- Deno 提供了一个内置的 fetch 实现，该实现与浏览器中可用的匹配
+- Deno 提供了一个内置的 `fetch` 实现，该实现与浏览器中可用的匹配。
 - Deno 正在进行与 Node.js stdlib 的兼容层
 
-## 原文地址
+## 临别
 
-https://www.freecodecamp.org/news/the-deno-handbook/#your-first-deno-app
+我希望你喜欢这个 Deno 入门手册！
 
-[1]: https://deno.land/
+别忘了，[你可以在此处获取此 Deno 手册的 PDF / ePub / Mobi 版本。](https://flaviocopes.com/page/deno-handbook/)

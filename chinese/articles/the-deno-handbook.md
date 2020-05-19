@@ -1,147 +1,151 @@
 > * 原文地址：[The Deno Handbook: A TypeScript Runtime Tutorial with Code Examples Deno 入门手册](https://www.freecodecamp.org/news/the-deno-handbook/)
 > * 原文作者：Flavio Copes
-> * 译者：xxx, hylerrix
-> * 校对者：
+> * 译者：hylerrix, Yunkou
+> * 校对者：hylerrix
 
 ![The Deno Handbook: A TypeScript Runtime Tutorial with Code Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2020/05/Screen-Shot-2020-05-11-at-18.55.24.png)
 
-I explore new projects every week, and it’s rare that one grabs my attention as much as  [Deno][1]  did.
+我每周都在探索新的项目，很少会有一个像 [Deno](https://deno.land/) 这样的项目让我如此着迷。
 
-In this post I want to get you up to speed with Deno quickly. We'll compare it with Node.js, and build your first REST API with it.
+在本手册中我想要让你快速入手 Deno。我会将其与 Node.js 进行对比，然后助力你在 Deno 上搭建第一个 REST API Demo。
 
-## Table of contents
+## 目录
 
--   [What is Deno?][2]
--   [Why Deno? Why now?][3]
--   [Should you learn Deno?][4]
--   [Will it replace Node.js?][5]
--   [First-class TypeScript support][6]
--   [Similarities and differences with Node.js][7]
--   [No package manager][8]
--   [Install Deno][9]
--   [The Deno commands][10]
--   [Your first Deno app][11]
--   [Deno code examples][12]
--   [Your first Deno app (for real)][13]
--   [The Deno sandbox][14]
--   [Formatting code][15]
--   [The standard library][16]
--   [Another Deno example][17]
--   [Is there an Express/Hapi/Koa/\* for Deno?][18]
--   [Example: use Oak to build a REST API][19]
--   [Find out more][20]
--   [A few more random tidbits][21]
+- [什么是 Deno？](#什么是-Deno？)
+- [为什么是 Deno？为什么是现在？](#为什么是-Deno？为什么是现在？)
+- [你应该学习 Deno 吗？](#你应该学习-Deno-吗？)
+- [Deno 将取代 Node.js 吗？](#Deno-将取代-Node.js-吗？)
+- [一流的 TypeScript 支持](#一流的-TypeScript-支持)
+- [与 Node.js 的异同](#与-Node.js-的异同)
+- [不再有包管理器](#no-package-manager)
+- [安装 Deno](#安装-Deno)
+- [Deno 命令](#Deno-命令)
+- [你的第一个 Deno 应用](#你的第一个-Deno-应用)
+- [Deno 代码实例](#Deno-代码实例)
+- [你的第一个 Deno 应用（深入版）](#你的第一个-Deno-应用（深入版）)
+- [Deno 安全沙箱（Sandbox）](#Deno-安全沙箱（Sandbox）)
+- [格式化代码](#格式化代码)
+- [标准库](#标准库)
+- [另一个 Deno 示例](#另一个-Deno-示例)
+- [Deno 是否有 Express/Hapi/Koa/\*？](#Deno-是否有-Express/Hapi/Koa/*？)
+- [示例：使用 Oak 构建 REST API](#示例：使用-Oak-构建-REST-API)
+- [更多内容](#更多内容)
+- [结语](#结语)
 
-And note:  [You can get a PDF/ePub/Mobi version of this Deno Handbook here][22].
+此外，[你可以在此处获取此 Deno 手册的 PDF / ePub / Mobi 版本。](https://flaviocopes.com/page/deno-handbook/)
 
-## What is Deno?
+## 什么是 Deno？
 
-If you are familiar with Node.js, the popular server-side JavaScript ecosystem, then Deno is just like Node. Except deeply improved in many ways.
+如果你熟悉流行的服务器端 JavaScript 运行时 Node.js，那么 Deno 就像 Node.js 一样，但却在很多方面都得到了深刻改善的全新 JavaScript / TypeScript 运行时。
 
-Let’s start from a quick list of the features I like the most about Deno:
+让我们从 Deno 的功能列表快速了解：
 
--   It is based on modern features of the JavaScript language
--   It has an extensive standard library
--   It has TypeScript at its core, which brings a huge advantage in many different ways, including a first-class TypeScript support (you don’t have to separately compile TypeScript, it’s automatically done by Deno)
--   It embraces  [ES modules][23]
--   It has no package manager
--   It has a first-class  `await`
--   It has a built-in testing facility
--   It aims to be browser-compatible as much as it can, for example by providing a built-in  `fetch`  and the global  `window`  object
+- Deno 基于最新的 JavaScript 语言；
+- Deno 具有覆盖面广泛的标准库；
+- Deno 以 TypeScript 为核心，配以更多独特的方式从而带来了巨大的优势，其中包括一流的 TypeScript 支持（Deno 自动编译 TypeScript 而无需你单独编译）；
+- Deno 大力拥抱 ES 模块标准；
+- Deno 没有包管理器；
+- Deno 具有一流的 `await` 语法支持；
+- Deno 内置测试工具；
+- Deno 旨在尽可能地与浏览器兼容，例如通过提供内置对象 `fetch` 和全局 `window` 对象。
 
-We’ll explore all of those features in this guide.
+我们将在本手册中展开探索所有上述功能。
 
-After you use Deno and learn to appreciate its features, Node.js will look like something  _old_.
+在你实战完 Deno 并了解它独特的功能魅力后，Node.js 或许会看起来有些过时。
 
-Especially because the Node.js API is callback-based, as it was written way before promises and async/await. There’s no change available for that in Node, because such a change would be monumental. So we’re stuck with callbacks or with promisifying API calls.
+特别是因为 Node.js 的 API 是基于回调机制的，因为 Node.js 是在 Promise 和 Async / Await 定义在标准之前编写的。Node.js 中无法对此机制进行全新的更改，因为此类更改将产生“毁灭性”的影响。因此，在 Node.js 中我们陷入了回调大量 API 的困境。
 
-Node.js is  **awesome**  and will continue to be the de facto standard in the JavaScript world. But I think we’ll gradually see Deno get adopted more and more because of its first-class TypeScript support and modern standard library.
+Node.js 的确很棒，并在可见的未来将继续成为 JavaScript 世界中事实上的标准。但我认为我们将逐渐看到 Deno 会因其一流的 TypeScript 支持和其内置的、覆盖面广泛的现代标准库而越来越被重视和采用。
 
-Deno can afford to have everything written with modern technologies, since there’s no backward compatibility to maintain. Of course there’s no guarantee that in a decade the same will happen to Deno and a new technology will emerge, but this is the reality at the moment.
+由于没有向后兼容性的历史原因，Deno 将可以承担起所有使用现代 Web 技术编写的工程建设。但目前的现实是，我们也无法保证十年之内 Deno 不会发生像 Node.js 同样的事情，并且不会出现一项新技术代替 Deno。
 
-## Why Deno? Why now?
+## 为什么是 Deno？为什么是现在？
 
-Deno was announced almost 2 years ago by the original creator of Node.js, Ryan Dahl, at JSConf EU. Watch  [the YouTube video of the talk][24], it’s very interesting and it’s a mandatory watch if you are involved in Node.js and JavaScript in general.
+大约 2 年前，Node.js 的创建者 Ryan Dahl 在 JSConf EU 上首次介绍了 Deno。观看[当时的演讲视频](https://www.youtube.com/watch?v=M3BM9TB-8yA)会非常有趣。如果你平时在大量接触 Node.js 和 JavaScript，这个视频请不要错过。
 
-Every project manager must make decisions. Ryan regretted some early decisions in Node. Also, technology evolves, and today JavaScript is a totally different language than what it was back in 2009 when Node started. Think about the modern ES6/2016/2017 features, and so on.
+每个项目经理都必须下发决定。Ryan 回看 Node.js 中的一些早期设计依然感觉十分遗憾。此外，在 ES6/2016/2017 等持续发展中的标准加持下，如今的 JavaScript 与 2009 年 Node.js 创立时的 JavaScript 已经大不相同。
 
-So he started a new project to create some sort of second wave of JavaScript-powered server side apps.
+因此，他开启了一个全新项目，从而创建出服务器端的第二代 JavaScript 运行时。
 
-The reason I am writing this guide now and not back then is because technologies need a lot of time to mature. And we have finally reached  **Deno 1.0**  (1.0 should be released on May 13, 2020), the first release of Deno officially declared stable.
+新生的技术需要大量时间才能成熟，这正是我现在撰写本手册而不是两年前就开始撰写的原因。如今，第一个正式稳定的 Deno v1.0 版本终于指日可待（不出意外的话，v1.0 会在 2020 年 5 月 13 日发布）。
 
-That’s might seem to be just a number, but 1.0 means there will not be major breaking changes until Deno 2.0. This is a big deal when you dive into a new technology - you don’t want to learn something and then have it change too fast.
+> 译者注：翻译本手册时 Deno 1.0 已经发布。
 
-## Should you learn Deno?
+1.0 看起来仅仅是个数字，但在社区约定下，意味着直到 Deno 2.0 前 Deno 都不会有太多重大的破坏性改变——这很重要，因为你终于可以安心学习 Deno 当前的稳定版本了。
 
-That’s a big question.
+## 你应该学习 Deno 吗？
 
-Learning something new such as Deno is a big effort. My suggestion is that if you are starting out now with server-side JS and you don’t know Node yet, and have never written any TypeScript, I’d start with Node.
+这并不那么容易回答。
 
-No one was ever fired for choosing Node.js (paraphrasing a common quote).
+学习像 Deno 这样全新的知识需要不少的前期技术沉淀。我的建议是：如果你现在才开始在服务器端使用 JavaScript 编程，并且你还不了解 Node.js，更没有任何 TypeScript 应用开发经验——那么请从 Node.js 学起。
 
-But if you love TypeScript, don’t depend on a gazillion npm packages in your projects and you want to use  `await`  anywhere, hey Deno might be what you’re looking for.
+毕竟用通俗观点来说，没有人会在如今因为选择学习 Node.js 而被解雇。
 
-## Will it replace Node.js?
+但如果你喜欢 TypeScript、也不想让项目中依赖无比庞大的 NPM 软件包、还想要随时随地使用 `await` 等语法，那么你可能真的需要 Deno。
 
-No. Node.js is a giant, well established, incredibly well-supported technology that is going to stay around for decades.
+## Deno 将取代 Node.js 吗？
 
-## First-class TypeScript support
+不能。Node.js 的生态已经十分庞大和完善，获得了数以万计的优秀技术支持，将能再战数十年。
 
-Deno is written in Rust and TypeScript, two of the languages that are really growing fast today.
+## 一流的 TypeScript 支持
 
-In particular, being written in TypeScript means we get a lot of the benefits of TypeScript even if we might choose to write our code in plain JavaScript.
+Deno 基于 Rust 和 TypeScript 这两种今天正在迅速发展的语言编写。
 
-And running TypeScript code with Deno does not require a compilation step - Deno does that automatically for you.
+这意味着，即使我们可能选择编写纯 JavaScript 代码来运行在基于 TypeScript 语言编写的 Deno 上，我们也可以获得 TypeScript 的很多好处。
 
-You are not forced to write in TypeScript, but the fact the core of Deno is written in TypeScript is huge.
+使用 Deno 运行 TypeScript 代码无需任何手动编译——Deno 会自动为你执行此步骤。
 
-First, an increasingly large percentage of JavaScript programmers love TypeScript.
+你不必非得在 Deno 上编写 TypeScript 代码，但是 Deno 因其核心由 TypeScript 语言编写的相关背景是不容忽视的：
 
-Second, the tools you use can infer many information about software written in TypeScript, like Deno.
+首先，越来越多的 JavaScript 程序员开始喜欢上了 TypeScript 语言。
 
-This means that when we code in VS Code, for example (which of course has a tight integration with TypeScript since both are developed at MicroSoft), we can get benefits like type checking as we write our code, and advanced  [IntelliSense][25]  features. In other words the editor can help us in a deeply useful way.
+其次，你使用的工具可以方便地推断出许多有关用 TypeScript 语言编写的软件的信息，例如 Deno。
 
-## Similarities and differences with Node.js
+因此，当我们在 VS Code（紧密集成 TypeScript 的编辑器）上的编码环节就能及时地体会到类型检查和高级[智能感知（IntelliSense）](https://code.visualstudio.com/docs/editor/intellisense)功能带来的好处。换句话说，编辑器可以以非常有用的方式来帮助我们了解 TypeScript 项目。
 
-Since Deno is basically a Node.js replacement, it’s useful to compare the two directly.
+## 与 Node.js 的异同
 
-Similarities:
+由于 Deno 从某种角度来讲是 Node.js 的替代品，因此直接比较两者的异同对我们的理解会很有帮助。
 
--   Both are developed upon the  [V8 Chromium Engine][26]
--   Both are great for developing server-side with JavaScript
+相似之处：
 
-Differences:
+- 两者都是基于 [V8 引擎](https://flaviocopes.com/v8/)开发的；
+- 两者都非常适合在服务器端上编写 JavaScript 应用。
 
--   Node is written in C++ and JavaScript. Deno is written in Rust and TypeScript.
--   Node has an official package manager called  `npm`. Deno does not, and instead lets you import any ES Module from URLs.
--   Node uses the CommonJS syntax for importing pacakges. Deno uses ES Modules, the official way.
--   Deno uses modern ECMAScript features in all its API and standard library, while Node.js uses a callbacks-based standard library and has no plans to upgrade it.
--   Deno offers a sandbox security layer through permissions. A program can only access the permissions set to the executable as flags by the user. A Node.js program can access anything the user can access.
--   Deno has a for a long time envisioned the possibility of compiling a program into an executable that you can run without external dependencies, like Go, but  [it’s still not a thing yet][27]. That’d be a game changer.
+差异之处：
 
-## No package manager
+- Node.js 用 C++ 和 JavaScript 语言编写。Deno 用 Rust 和 TypeScript 语言编写。
+- Node.js 有一个官方的软件包管理器，称为 NPM。Deno 不会有，而会允许你从 URL 导入任何 ES 模块。
+- Node.js 使用 CommonJS 模块语法导入软件包。Deno 使用 ES 标准模块导入。
+- Deno 在其所有 API 和标准库中都使用现代 ECMAScript 功能，而 Node.js 使用基于回调的标准库，并且没有计划对其进行升级。
+- Deno 通过权限控制提供了一个安全的沙箱环境，程序只能访问由用户设置为可执行标志的文件。Node.js 程序可以直接访问用户足以访问的任何内容。
+- Deno 长期以来一直在探索将程序编译成单个可执行文件的可能性，从而使得该可执行文件可以在没有外部依赖项（例如 Go）的情况下运行，但这并[不是一件容易的事](https://github.com/denoland/deno/issues/986)，如果做得到，将会成为更有话语权的游戏规则改变者。
 
-Having no package manager and having to rely on URLs to host and import packages has pros and cons. I really like the pros: it’s very flexible, and we can create packages without publishing them on a repository like npm.
+## 没有包依赖管理器
 
-I think that some sort of package manager will emerge, but nothing official is out yet.
+没有像 NPM 一样的程序包管理器并且大量依靠 URL 来承载和导入程序包是有利有弊的。但我真的很喜欢这个特性：它将会非常灵活，我们可以直接创建软件包而无需在 NPM 这样的存储库中发布它们。
 
-The Deno website provides code hosting (and thus distribution through URLs) to 3rd party packages:  [https://deno.land/x/][28]
+虽然还没有官方的消息，但我认为 Deno 下的某种软件包管理器将会出现。
+
+与此同时，Deno 网站为第三方软件包提供代码托管服务（并帮助其通过 URL 分发）：详见 [https://deno.land/x/](https://deno.land/x/)。
 
 ## Install Deno
 
-Enough talk! Let’s install Deno.
+就闲聊到这里吧！让我们开始着手安装 Deno。
 
-The easiest way is to use  [Homebrew][29]:
+最简单的方法是使用 [Homebrew](https://flaviocopes.com/homebrew/)：
 
-```sh
+```bash
 brew install deno
 ```
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-12.04.45.jpg)
+![brew install](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-12.04.45.jpg)
 
-Once this is done, you will have access to the  `deno`  command. Here’s the help that you can get using  `deno --help`:
+输出如上命令后，你将可以访问 `deno` 命令。帮助是`deno --help`：
 
-```
+> 译者注：如果 HomeBrew 安装太慢可以尝试输入如下命令手动关闭 HomeBrew 的自动更新检测： `export HOMEBREW_NO_AUTO_UPDATE=true`
+
+```bash
 flavio@mbp~> deno --help
 deno 0.42.0
 A secure JavaScript and TypeScript runtime
@@ -188,81 +192,80 @@ OPTIONS:
 
 ```
 
-## The Deno commands
+## Deno 命令
 
-Note the  `SUBCOMMANDS`  section in the help, that lists all the commands we can run. What subcommands do we have?
+请注意上节中 `deno --help` 后 `SUBCOMMANDS` 中的部分，其中列出了我们在当前版本（0.42.0）中可以运行的所有命令，如下：
 
--   `bundle`  bundle module and dependencies of a project into single file
--   `cache`  cache the dependencies
--   `completions`  generate shell completions
--   `doc`  show documentation for a module
--   `eval`  to evaluate a piece of code, e.g.  `deno eval "console.log(1 + 2)"`
--   `fmt`  a built-in code formatter (similar to  `gofmt`  in Go)
--   `help`  prints this message or the help of the given subcommand(s)
--   `info`  show info about cache or info related to source file
--   `install`  install script as an executable
--   `repl`  Read-Eval-Print-Loop (the default)
--   `run`  run a program given a filename or url to the module
--   `test`  run tests
--   `types`  print runtime TypeScript declarations
--   `upgrade`  upgrade  `deno`  to the newest version
+- `bundle` ：将项目的模块和依赖项捆绑到单个文件中；
+- `cache` ：缓存依赖项；
+- `completions` ：generate shell completions；
+- `doc` ：显示某模块的文档；
+- `eval` ：运行一段代码，例如 `deno eval "console.log(1 + 2)`；
+- `fmt` ：内置的代码格式化程序（类似于 Go 语言中的 `gofmt`）；
+- `help` ：打印某消息或某给定子命令的帮助信息；
+- `info` ：显示有关缓存的信息或与源文件有关的信息；
+- `install` ：将脚本安装为可执行文件；
+- `repl` ：开启 REPL 环境（默认子命令）；
+- `run` ：运行给定文件名或 URL 的程序；
+- `test` ：运行测试；
+- `types` ：打印运行时的 TypeScript 声明；
+- `upgrade` ：升级 Deno 到最新版本。
 
-You can run  `deno <subcommand> help`  to get specific additional documentation for the command, for example  `deno run --help`.
+你可以运行 `deno <subcommand> help` 以获取该子命令的特定文档，例如 `deno run --help`。
 
-As the help says, we can use this command to start a REPL (Read-Execute-Print-Loop) using  `deno`  without any other option.
+如下所示，我们可以直接输入 `deno` 命令命令来默认启动 REPL（Read-Execute-Print-Loop）环境直接调试功能，这与运行 `deno repl` 效果是相同的。
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-12.07.50.png)
+![Read-Execute-Print-Loop](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-12.07.50.png)
 
-This is the same as running  `deno repl`.
+一个更常见的直接使用 `deno` 命令的场景是执行在 TypeScript 文件中写的 Deno 应用程序。
 
-A more common way you’ll use this command is to execute a Deno app contained in a TypeScript file.
+> 译者注：现在需要使用 `deno run` 命令而非 `deno` 命令来执行 TypeScript 文件。
 
-You can run both TypeScript (`.ts`) files, or JavaScript (`.js`) files.
+你可以同时运行 TypeScript（.ts）文件或 JavaScript（.js）文件。
 
-If you are unfamiliar with TypeScript, don’t worry: Deno is written in TypeScript, buf you can write your “client” applications in JavaScript.
+如果你不熟悉 TypeScript，请不要担心——Deno 是用 TypeScript 编写的，并且你可以使用纯 JavaScript 编写“客户端”应用程序。
 
-__My  [TypeScript tutorial][36]  will help you get up and running quickly with TypeScript if you want.__
+如果你想快速上手的 TypeScript 话，可以阅读我的 [TypeScript 教程](https://flaviocopes.com/typescript/)。
 
-## Your first Deno app
+## 你的第一个 Deno 应用
 
-Let’s run a Deno app for the first time.
+让我们来运行第一个 Deno 应用程序。
 
-What I find pretty amazing is that you don’t even have to write a single line - you can run a command from any URL.
+Deno 让我感到非常惊奇的特性是：你甚至不必写一行代码，便可以直接运行任何 URL 上的 Deno 应用程序。
 
-Deno downloads the program, compiles it and then runs it:
+此时 Deno 会将 URL 上的程序下载到本地并进行编译，然后运行：
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-12.22.30.jpg)
+![Deno](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-12.22.30.jpg)
 
-__Of course running arbitrary code from the Internet is not a practice_ I'd generally _recommend. In this case we are running it from the Deno official site, plus Deno has a sandbox that prevents programs to do anything you don’t want to allow. More on this later.__
+__当然，我一般不建议从 Internet 运行无法保障安全性的代码。在这种情况下，我们先运行 Deno 官方网站上提供的 Demo；另外 Deno 还有一个沙箱，可以阻止程序执行你不希望做的事情。稍后再详细介绍。__
 
-This program is very simple, just a  `console.log()`  call:
+这个程序很简单，只需要一个`console.log()`调用：
 
 ```ts
-console.log('Welcome to Deno 🦕')
-
+console.log("Welcome to Deno 🦕");
 ```
 
-If you open the  [https://deno.land/std/examples/welcome.ts][37]  URL with the browser, you’ll see this page:
+如果使用浏览器打开直接打开 [https://deno.land/std/examples/welcome.ts](https://deno.land/std/examples/welcome.ts) 这个 URL，则会看到以下页面：
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-13.50.00.png)
+![welcome.ts](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-13.50.00.png)
 
-Weird, right? You’d probably expect a TypeScript file, but instead we have a web page. The reason is the Web server of the Deno website knows you’re using a browser and serves you a more user friendly page.
+奇怪吧？你可能期待着打开 URL 后出现一个纯 TypeScript 文件以供下载，但是我们却看到了一个网页。原因是 Deno 网站的 Web 服务器知道你正在使用浏览器，并为你提供了对用户更加友好的页面。
 
-Download the same UR using  `wget`  for example, which requests the  `text/plain`  version of it instead of  `text/html`:
+为了验证这个功能，我们可以使用 `wget` 命令来测试这个 URL，`wget` 使用 `text/plain` 下载文本而不是 `text/html`：
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-13.52.25.png)
+![wget](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-13.52.25.png)
 
-If you want to run the program again, it’s now cached by Deno and it does not need to download it again:
+如果你想再运行这个程序，现在已经被 Deno 缓存了，不需要再下载和编译了。
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-12.22.47.jpg)
+![Deno](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-12.22.47.jpg)
 
-You can force a reload of the original source with the  `--reload`  flag:
+你可以用 `--reload` 参数强制重新下载和编译原始源码。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-12.28.57.jpg)
 
-`deno run`  has lots of different options that were not listed in the  `deno --help`. Instead, you need to run  `deno run --help`  to reveal them:
+在当前版本（0.42.0）中，`deno run` 有许多未在 `deno --help` 清单中列出的功能。你需要运行 `deno run --help` 以显示更多。
 
-```
+```bash
 flavio@mbp~> deno run --help
 deno-run
 Run a program given a filename or url to the module.
@@ -359,89 +362,105 @@ OPTIONS:
         Set V8 command line options. For help: --v8-flags=--help
 ```
 
-## Deno code examples
+## Deno 代码实例
 
-In addition to the one we ran above, the Deno website provides some other examples you can check out:  [https://deno.land/std/examples/][42].
+除了前文我们运行的 Demo 外，Deno 官网还提供了一些其他的例子，可以在这里查看：[https://deno.land/std/examples/](https://deno.land/std/examples/)。
 
-At the time of writing we can find:
+> 译者注：你可能需要配置代理来更好地访问 DenoLand。
 
--   `cat.ts`  prints the content a list of files provided as arguments
--   `catj.ts`  prints the content a list of files provided as arguments
--   `chat/`  an implementation of a chat
--   `colors.ts`  an example of
--   `curl.ts`  a simple implementation of  `curl`  that prints the content of the URL specified as argument
--   `echo_server.ts`  a TCP echo server
--   `gist.ts`  a program to post files to gist.github.com
--   `test.ts`  a sample test suite
--   `welcome.ts`  a simple console.log statement (the first program we ran above)
--   `xeval.ts`  allows you to run any TypeScript code for any line of standard input received.  [Once known as  `deno xeval`][43]  but since removed from the official command.
+在撰写本手册时，我们可以找到：
 
-## Your first Deno app (for real)
+- `cat.ts` ：打印的内容是作为参数提供的文件列表；
+- `catj.ts` ：打印的内容是作为参数提供的文件列表；
+- `chat/` ：聊天的一种实现；
+- `colors.ts` ：打印一个彩色版本的 Hello world!；
+- `curl.ts` ：一个简单的实现，curl 它打印指定为参数的 URL 的内容；
+- `echo_server.ts` ：TCP 回显服务器；
+- `gist.ts` ：一个将文件发布到 gist.github.com 的程序；
+- `test.ts` ：样本测试套件；
+- `welcome.ts` ：一个简单的 console.log 语句（我们在上面运行的第一个程序）；
+- `xeval.ts` ：允许你为收到的任何标准输入行运行任何 TypeScript 代码。曾经被设计为 `deno xeval` 子命令但现在从官方命令中删除。
 
-Let’s write some code.
+## 你的第一个 Deno 应用（深入版）
 
-Your first Deno app you ran using  `deno run [https://deno.land/std/examples/welcome.ts][44]`  was an app that someone else wrote, so you didn’t see anything in regards to how Deno code looks like.
+我们来写一些代码吧。
 
-We’ll start from the default example app listed on the Deno official website:
+前文执行的 `deno run https://deno.land/std/examples/welcome.ts` 命令执行的是官网提供的一个 Deno 应用，所以我们没有看到任何关于 Deno 代码具体的样子。
+
+接下来让我们从 Deno 官方网站上列出的默认示例应用开始。
 
 ```ts
-import { serve } from 'https://deno.land/std/http/server.ts'
-const s = serve({ port: 8000 })
-console.log('http://localhost:8000/')
+import { serve } from "https://deno.land/std/http/server.ts";
+const s = serve({ port: 8000 });
+console.log("http://localhost:8000/");
 for await (const req of s) {
-  req.respond({ body: 'Hello World\n' })
+  req.respond({ body: "Hello World\n" });
 }
-
 ```
 
-This code imports the  `serve`  function from the  `http/server`  module. See? We don’t have to install it first, and it’s also not stored on your local machine like it happens with Node modules. This is one reason why the Deno installation was so fast.
+这段代码从 `http/server` 模块中导入服务函数。可见我们不需要先安装这些模块，而且也不会像 Node.js 那样将这些模块大量存储在本地机器上。这也是 Deno 安装速度快的原因之一。
 
-Importing from  `[https://deno.land/std/http/server.ts][47]`  imports the latest version of the module. You can import a specific version using  `@VERSION`, like this:
+从 `https://deno.land/std/http/server.ts` 中导入会导入最新版本的模块。你可以使用`@VERSION`导入特定的版本，如下所示。
 
 ```ts
-import { serve } from 'https://deno.land/std@v0.42.0/http/server.ts'
-
+import { serve } from "https://deno.land/std@v0.42.0/http/server.ts";
 ```
 
-The  `serve`  function is defined like this in this file:
+该 serve 函数在此文件中的定义如下：
 
 ```ts
 /**
+ * Create a HTTP server
+ *
+ *     import { serve } from "https://deno.land/std/http/server.ts";
+ *     const body = "Hello World\n";
+ *     const s = serve({ port: 8000 });
+ *     for await (const req of s) {
+ *       req.respond({ body });
+ *     }
+ */
+export function serve(addr: string | HTTPOptions): Server {
+  if (typeof addr === "string") {
+    const [hostname, port] = addr.split(":");
+    addr = { hostname, port: Number(port) };
+  }
 
+  const listener = listen(addr);
+  return new Server(listener);
+}
 ```
 
-We proceed to instantiate a server calling the  `serve()`  function passing an object with the  `port`  property.
+我们接下来实例化一个服务器，调用 `server()` 函数传递一个带有端口属性的对象。
 
-Then we run this loop to respond to every request coming from the server.
+然后我们运行如下循环来响应来自服务器的每一个请求。
 
 ```ts
 for await (const req of s) {
-req.respond({ body: 'Hello World\n' })
+  req.respond({ body: "Hello World\n" });
 }
-
 ```
 
-Note that we use the  `await`  keyword without having to wrap it into an  `async`  function because Deno implements  [top-level await][50].
+请注意，我们在这里使用 `await` 关键字而不需要将其封装到异步函数中，因为 Deno 在其内部实现了顶层的 `await` 支持。
 
-Let’s run this program locally. I assume you use  [VS Code][51], but you can use any editor you like.
+让我们在本地运行这个程序。假设你使用的是 VS Code（你可以使用任何你喜欢的编辑器），我建议从 `justjavac` 开发的 Deno VS Code 扩展入手（当我尝试的时候还有一个同名的扩展，但是已经被淘汰了，可能将来会消失）。
 
-I recommend installing the Deno extension from  `justjavac`  (there was another one with the same name when I tried, but deprecated - might disappear in the future)
+> 译者注：justjavac 的 Deno VS Code 拓展将被官方收录，以后可以直接使用官方的拓展。
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-15.28.06.png)
+![justjavac](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-15.28.06.png)
 
-The extension will provide several utilities and nice thing to VS Code to help you write your apps.
+该扩展将为 `VS Code` 提供几个实用工具和不错的东西来帮助你编写应用程序。
 
-Now create an  `app.ts`  file in a folder and paste the above code:
+现在在一个文件夹中创建一个` app.ts` 文件，然后粘贴上面的代码。
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-15.40.18.png)
+![app.ts](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-15.40.18.png)
 
-Now run it using  `deno run app.ts`:
+现在用 `deno run app.ts` 运行它。
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-15.39.28.jpg)
+![app.ts](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-15.39.28.jpg)
 
-Deno downloads all the dependencies it needs, by first downloading the one we imported.
+Deno 会先下载、编译我们导入的那个依赖及其所有需要的依赖项。
 
-The  [https://deno.land/std/http/server.ts][52]  file has several dependencies on its own:
+这是由于我们导入的 `https://deno.land/std/http/server.ts` 文件本身就有数个其它依赖：
 
 ```ts
 import { encode } from '../encoding/utf8.ts'
@@ -461,484 +480,529 @@ import Reader = Deno.Reader
 
 ```
 
-and those are imported automatically.
+但 Deno 都会帮我们自动导入。
 
-At the end though we have a problem:
+在最后，我们还有一个问题。
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-15.42.05.png)
+![app.ts](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-15.42.05.png)
 
-What is happening? We have a permission denied problem.
+这是怎么回事？我们为什么会收到执行权限被拒绝的提示？
 
-Let’s talk about the sandbox.
+这就涉及到了 Deno 的 Sandbox 问题，我们一起来看看。
 
-## The Deno sandbox
+## Deno 安全沙箱（Sandbox）
 
-I mentioned previously that Deno has a sandbox that prevents programs from doing anything you don’t want to allow.
+我之前提到过，Deno 有一个安全沙箱，可以防止程序做一些你不允许的事情。
 
-What does this mean?
+这意味着什么呢？
 
-One of the things that Ryan mentions in the Deno introduction talk is that sometimes you want to run a JavaScript program outside of the Web Browser, and yet do not want allow it to access to anything it wants on your system. Or talk to the external world using a network.
+Ryan 曾在 Deno 的介绍讲座中提到的一件事是：有时候你想在 Web 浏览器之外运行一个 JavaScript 程序，却不想让它肆意在你的系统中访问任何它想要的东西，比如使用网络与外部世界对话。
 
-There’s nothing stopping a Node.js app from getting your SSH keys or any other thing on your system and sending it to a server. This is why we usually only install Node packages from trusted sources. But how can we know if one of the projects we use gets hacked and in turn everyone else does?
+为什么我们通常只安装来自可信来源的 Node.js 包？这是因为没有什么可以阻止 Node.js 程序获取你系统上的 SSH 密钥或其他任何东西，并将其发送到服务器上。但是，我们该怎么知道自己或其他人使用的一个项目是否被黑客入侵了？
 
-Deno tries to replicate the same permission model that the browser implements. No JavaScript running in the browser can do shady things on your system unless you explicitly allow it.
+Deno 的解决方案是试图大量借鉴浏览器实现相同的权限模型——除非你明确允许，否则在浏览器中运行的任何 JavaScript 都不能在你的系统上做不正当的事情。
 
-Going back to Deno, if a program want to access the network like in the previous case, then we need to give it permission.
+回到 Deno，如果一个程序想要像前面的例子一样访问网络，那么我们需要给它权限。
 
-We can do so by passing a flag when we run the command, in this case  `--allow-net`:
+我们可以通过在运行命令时传递一个标志来实现，本例中是 `--allow-net`。
 
-```sh
+```bash
 deno run --allow-net app.ts
 ```
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-15.48.41.png)
+![allow-net](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-15.48.41.png)
 
-The app is now running an HTTP server on port 8000:
+该应用程序现在监听在 8000 端口上运行着 HTTP 服务器：
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-15.49.02.png)
+![allow-net](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-15.49.02.png)
 
-Other flags allow Deno to unlock other functionality:
+其他标志允许 Deno 解锁其他功能，如下所示：
 
--   `--allow-env`  allow environment access
--   `--allow-hrtime`  allow high resolution time measurement
--   `--allow-net=<allow-net>`  allow network access
--   `--allow-plugin`  allow loading plugins
--   `--allow-read=<allow-read>`  allow file system read access
--   `--allow-run`  allow running subprocesses
--   `--allow-write=<allow-write>`  allow file system write access
--   `--allow-all`  allow all permissions (same as  `-A`)
+- `--allow-env` ：允许访问环境变量；
+- `--allow-hrtime` ：允许高分辨率时间测量；
+- `--allow-net=<allow-net>` ：允许网络访问；
+- `--allow-plugin` ：允许加载插件；
+- `--allow-read=<allow-read>` ：允许文件系统读取权限；
+- `--allow-run` ：允许运行子进程；
+- `--allow-write=<allow-write>` ：允许文件系统写入访问；
+- `--allow-all` ：允许所有权限(与`-A`相同)。
 
-Permissions for  `net`,  `read`  and  `write`  can be granular. For example, you can allow reading from a specific folder using  `--allow-read=/dev`
+其中，`net`、`read` 和 `write` 的权限可以是细化的。例如，你可以使用 `--allow-read=/dev`，允许从特定文件夹中读取。
 
-## Formatting code
+## 格式化代码
 
-One of the things I really liked from Go was the  `gofmt`  command that came with the Go compiler. All Go code looks the same. Everyone uses  `gofmt`.
+Go 语言编译器自带的 `gofmt` 命令是我非常喜欢 Go 语言特性之一。所有的 Go 代码的格式看起来都是一样的。每位 Go 程序员都在使用 `gofmt`。
 
-JavaScript programmers are used to running  [Prettier][53], and  `deno fmt`  actually runs that under the hood.
+JavaScript 程序员都习惯于运行 [Prettier](https://flaviocopes.com/prettier/) 工具，而 `deno fmt` 实际上直接内置相关库到底层上运行。
 
-Say you have a file formatted badly like this:
+假设你有一个格式化问题严重的文件如下图所示。
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-16.06.58.png)
+![deno fmt](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-16.06.58.png)
 
-You run  `deno fmt app.ts`  and it’s automatically formatted properly, also adding semicolons where missing:
+你运行 `deno fmt app.ts`，它就会执行正确的代码格式化，包括自动加上缺失的分号。
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-16.07.25.png)
+![deno fmt](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-16.07.25.png)
 
-## The standard library
+## 标准库
 
-The Deno standard library is extensive despite the project being very young.
+尽管 Deno 还很年轻，但它的标准库仍然很庞大。这包括：
 
-It includes:
+- `archive` ：tar 文件归档的实用程序
+- `async` ：异步工具
+- `bytes` ：帮助器来操作字节切片
+- `datetime` ：日期 / 时间解析
+- `encoding` ：各种格式的编码/解码
+- `flags` ：解析命令行标志
+- `fmt` ：格式化和打印
+- `fs` ：文件系统 API
+- `hash` ：加密库
+- `http` ：HTTP 服务器
+- `io` ：I/O 库
+- `log` ：日志实用程序
+- `mime` ：支持多类型数据
+- `node` ：Node.js 兼容层
+- `path` ：路径操纵
+- `ws` ：WebSockets
 
--   `archive`  tar archive utilities
--   `async`  async utilties
--   `bytes`  helpers to manipulate bytes slices
--   `datetime`  date/time parsing
--   `encoding`  encoding/decoding for various formats
--   `flags`  parse command-line flags
--   `fmt`  formatting and printing
--   `fs`  file system API
--   `hash`  crypto lib
--   `http`  HTTP server
--   `io`  I/O lib
--   `log`  logging utilities
--   `mime`  support for multipart data
--   `node`  Node.js compatibility layer
--   `path`  path manipulation
--   `ws`  websockets
+## 另一个 Deno 示例
 
-## Another Deno example
-
-Let’s see another example of a Deno app, from the Deno examples:  [`cat`][54]:
+我们再来看看另一个 Deno APP 的例子，以如下 `cat.ts` 为例。
 
 ```ts
-const filenames = Deno.args
+const filenames = Deno.args;
 for (const filename of filenames) {
-const file = await Deno.open(filename)
-await Deno.copy(file, Deno.stdout)
-file.close()
+  const file = await Deno.open(filename);
+  await Deno.copy(file, Deno.stdout);
+  file.close();
 }
-
 ```
 
-This assigns to the  `filenames`  variable the content of  `Deno.args`, which is a variable containing all the arguments sent to the command.
+这里把 `Deno.args` 的值分配给了 filenames 变量，`Deno.args` 是一个包含所有发送到命令中的参数的变量。
 
-We iterate through them, and for each we use  `Deno.open()`  to open the file and we use  `Deno.copy()`  to print the content of the file to  `Deno.stdout`. Finally we close the file.
+我们对这些参数进行迭代：对每一个参数，我们使用 `Deno.open()` 打开文件，并使用 `Deno.copy()` 将文件的内容打印到 `Deno.stdout` 中，最后我们关闭该文件。
 
-If you run this using
+如果你使用如下命令：
 
-```sh
+```bash
 deno run https://deno.land/std/examples/cat.ts
 ```
 
-The program is downloaded and compiled, and nothing happens because we didn’t specify any argument.
+程序被下载编译后，由于我们没有指定任何参数，所以没有发生任何事情。
 
-Try now
+现在试试这个：
 
-```sh
+```bash
 deno run https://deno.land/std/examples/cat.ts app.ts
 ```
 
-assuming you have  `app.ts`  from the previous project in the same folder.
+假设你在同一个文件夹里有之前项目中的 `app.ts`。
 
-You’ll get a permission error:
+你会得到如下权限错误。
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-17.06.31-1.png)
+![app.ts](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-17.06.31-1.png)
 
-Because Deno disallows access to the filesystem by default. Grant access to the current folder using  `--allow-read=./`:
+这是因为 Deno 默认情况下不允许访问文件系统。需要使用 `--allow-read=./` 命令授予对当前文件夹的访问权限：
 
-```
+```bash
 deno run --allow-read=./ https://deno.land/std/examples/cat.ts app.ts
 ```
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-17.07.54-6.png)
+![allow-read](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-17.07.54-6.png)
 
-## Is there an Express/Hapi/Koa/\* for Deno?
+## Deno 是否有 Express/Hapi/Koa/\*
 
-Yes, definitely. Check out projects like
+当然有。可以看看下方这些库。
 
--   [deno-drash][58]
--   [deno-express][59]
--   [oak][60]
--   [pogo][61]
--   [servest][62]
+- [deno-drash](https://github.com/drashland/deno-drash)
+- [deno-express](https://github.com/NMathar/deno-express)
+- [oak](https://github.com/oakserver/oak)
+- [pogo](https://github.com/sholladay/pogo)
+- [servest](https://github.com/keroxp/servest)
 
-## Example: use Oak to build a REST API
+## 示例：使用 Oak 构建 REST-API
 
-I want to make a simple example of how to build a REST API using Oak. Oak is interesting because it’s inspired by  [Koa][63], the popular Node.js middleware, and due to this it’s very familiar if you’ve used that before.
+我想在这里做一个简单的 Demo 实战，介绍一下如何使用 Oak 框架构建`REST API`。Oak 很有意思，因为它的灵感来自于 Koa，一个流行的 Node.js 中间件。正因为如此，如果你以前用过 Koa 的话，会很快熟悉 Oak。
 
-The API we’re going to build is very simple.
+我们要构建的 API 示例也非常简单。
 
-Our server will store, in memory, a list of dogs with name and age.
+我们的服务器将在内存中存储一个带有名字和年龄的旺柴的列表。
 
-We want to:
+我们的需求是：
 
--   add new dogs
--   list dogs
--   get details about a specific dog
--   remove a dog from the list
--   update a dog's age
+- 添加旺柴；
+- 列出旺柴；
+- 获取有关特定旺柴的详细信息；
+- 从名单上删除一只旺柴；
+- 更新旺柴的年龄；
 
-We’ll do this in TypeScript, but nothing stops you from writing the API in JavaScript - you simply remove the types.
+我们将使用 TypeScript 进行此操作，但是没有什么可以阻止你使用 JavaScript 编写 API——你只需要删除下方 TypeScript 文件中所有有关类型描述的代码并将文件名后缀改为 `.js`。
 
-Create a  `app.ts`  file.
+创建一个 `app.ts` 文件。
 
-Let’s start by importing the  `Application`  and  `Router`  objects from Oak:
-
-```ts
-import { Application, Router } from 'https://deno.land/x/oak/mod.ts'
-
-```
-
-then we get the environment variables PORT and HOST:
+让我们开始从 Oak 导入 `Application` 和 `Router` 对象：
 
 ```ts
-const env = Deno.env.toObject()
-const PORT = env.PORT || 4000
-const HOST = env.HOST || '127.0.0.1'
-
+import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 ```
 
-By default our app will run on localhost:4000.
-
-Now we create the Oak application and we start it:
+然后我们得到环境变量 `PORT` 和 `HOST`:
 
 ```ts
-const router = new Router()
-
-
-const app = new Application()
-app.use(router.routes())
-app.use(router.allowedMethods())
-console.log(Listening on port </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span><span class="token constant" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">PORT</span><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">...)
-
+const env = Deno.env.toObject();
+const PORT = env.PORT || 4000;
+const HOST = env.HOST || "127.0.0.1";
 ```
 
-Now the app should be compiling fine.
+默认情况下，我们的应用程序将在 `localhost：4000` 上运行。
 
-Run
+现在，我们创建 `Oak` 应用程序并启动它：
 
-```sh
+```ts
+const router = new Router();
+
+const app = new Application();
+
+app.use(router.routes());
+app.use(router.allowedMethods());
+
+console.log(`Listening on port ${PORT}...`);
+
+await app.listen(`${HOST}:${PORT}`);
+```
+
+现在，应用程序应该可以正常编译了。
+
+```bash
 deno run --allow-env --allow-net app.ts
 ```
 
-and Deno will download the dependencies:
+然后 Deno 将下载依赖项：
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-10-at-16.31.11.jpg)
+![Deno](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-10-at-16.31.11.jpg)
 
-and then listen on port 4000.
+这时程序监听在 `4000` 端口上。
 
-The next times you run the command, Deno will skip the installation part because those packages are already cached:
+下次运行该命令时，Deno 会跳过安装部分，因为这些包已经被缓存了。
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-10-at-16.32.40.png)
+![Deno](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-10-at-16.32.40.png)
 
-At the top of the file, let’s define an interface for a dog, then we declare an initial  `dogs`  array of Dog objects:
+在文件的顶部，让我们定义一个旺柴的接口，然后我们声明一个初始的 `Dogs` 数组 `Dog` 对象。
 
 ```ts
 interface Dog {
-  name: string
-  age: number
+  name: string;
+  age: number;
 }
 
-```
-
-Now let’s actually implement the API.
-
-We have everything in place. After you create the router, let’s add some functions that will be invoked any time one of those endpoints is hit:
-
-```ts
-const router = new Router()
-
-```
-
-See? We define
-
--   `GET /dogs`
--   `GET /dogs/:name`
--   `POST /dogs`
--   `PUT /dogs/:name`
--   `DELETE /dogs/:name`
-
-Let’s implement those one-by-one.
-
-Starting from  `GET /dogs`, which returns the list of all the dogs:
-
-```ts
-export const getDogs = ({ response }: { response: any }) => {
-  response.body = dogs
-}
-
-```
-
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-10-at-16.47.41.png)
-
-Next, here’s how we can retrieve a single dog by name:
-
-```ts
-export const getDog = ({
-  params,
-  response,
-}: {
-  params: {
-    name: string
-  }
-  response: any
-}) => {
-  const dog = dogs.filter((dog) => dog.name === params.name)
-  if (dog.length) {
-    response.status = 200
-    response.body = dog[0]
-    return
-  }
-
-```
-
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-10-at-16.47.53.png)
-
-Here is how we add a new dog:
-
-```ts
-export const addDog = async ({
-  request,
-  response,
-}: {
-  request: any
-  response: any
-}) => {
-  const body = await request.body()
-  const dog: Dog = body.value
-  dogs.push(dog)
-
-```
-
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-10-at-16.48.02.png)
-
-Notice that I now used  `const body = await request.body()`  to get the content of the body, since the  `name`  and  `age`  values are passed as JSON.
-
-Here’s how we update a dog’s age:
-
-```ts
-export const updateDog = async ({
-  params,
-  request,
-  response,
-}: {
-  params: {
-    name: string
-  }
-  request: any
-  response: any
-}) => {
-  const temp = dogs.filter((existingDog) => existingDog.name === params.name)
-  const body = await request.body()
-  const { age }: { age: number } = body.value
-  if (temp.length) {
-    temp[0].age = age
-    response.status = 200
-    response.body = { msg: 'OK' }
-    return
-  }
-
-```
-
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-10-at-16.48.11.png)
-
-and here is how we can remove a dog from our list:
-
-```ts
-export const removeDog = ({
-  params,
-  response,
-}: {
-  params: {
-    name: string
-  }
-  response: any
-}) => {
-  const lengthBefore = dogs.length
-  dogs = dogs.filter((dog) => dog.name !== params.name)
-  if (dogs.length === lengthBefore) {
-    response.status = 400
-    response.body = { msg: Cannot find dog </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>params<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>name<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);"> }
-    return
-  }
-
-```
-
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-10-at-16.48.32.png)
-
-Here’s the complete example code:
-
-```ts
-import { Application, Router } from 'https://deno.land/x/oak/mod.ts'
-const env = Deno.env.toObject()
-const PORT = env.PORT || 4000
-const HOST = env.HOST || '127.0.0.1'
-interface Dog {
-  name: string
-  age: number
-}
 let dogs: Array<Dog> = [
   {
-    name: 'Roger',
+    name: "Roger",
     age: 8,
   },
   {
-    name: 'Syd',
+    name: "Syd",
     age: 7,
   },
-]
+];
+```
+
+现在，让我们来实现具体 API。
+
+我们已经准备好了一切。在你创建了路由器之后，让我们添加一些函数，这些函数将在任何时候触发这些路由中的一个端点时被调用。
+
+```ts
+const router = new Router();
+
+router
+  .get("/dogs", getDogs)
+  .get("/dogs/:name", getDog)
+  .post("/dogs", addDog)
+  .put("/dogs/:name", updateDog)
+  .delete("/dogs/:name", removeDog);
+```
+
+看到了吗？我们的 API 定义是：
+
+- `GET /dogs`
+- `GET /dogs/:name`
+- `POST /dogs`
+- `PUT /dogs/:name`
+- `DELETE /dogs/:name`
+
+让我们开始一一实现。
+
+从开始 `GET /dogs`，它将返回所有旺柴的列表：
+
+```ts
 export const getDogs = ({ response }: { response: any }) => {
-  response.body = dogs
-}
+  response.body = dogs;
+};
+```
+
+![getDogs](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-10-at-16.47.41.png)
+
+接下来，我们就来看看如何通过名字来检索旺柴。
+
+```ts
 export const getDog = ({
   params,
   response,
 }: {
   params: {
-    name: string
-  }
-  response: any
+    name: string;
+  };
+  response: any;
 }) => {
-  const dog = dogs.filter((dog) => dog.name === params.name)
+  const dog = dogs.filter((dog) => dog.name === params.name);
   if (dog.length) {
-    response.status = 200
-    response.body = dog[0]
-    return
+    response.status = 200;
+    response.body = dog[0];
+    return;
   }
-  response.status = 400
-  response.body = { msg: Cannot find dog </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>params<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>name<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);"> }
-}
+
+  response.status = 400;
+  response.body = { msg: `Cannot find dog ${params.name}` };
+};
+```
+
+![getDog](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-10-at-16.47.53.png)
+
+这是我们添加一个新的旺柴的方法：
+
+```ts
 export const addDog = async ({
   request,
   response,
 }: {
-  request: any
-  response: any
+  request: any;
+  response: any;
 }) => {
-  const body = await request.body()
-  const { name, age }: { name: string; age: number } = body.value
-  dogs.push({
-    name: name,
-    age: age,
-  })
-  response.body = { msg: 'OK' }
-  response.status = 200
-}
+  const body = await request.body();
+  const dog: Dog = body.value;
+  dogs.push(dog);
+
+  response.body = { msg: "OK" };
+  response.status = 200;
+};
+```
+
+![addDog](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-10-at-16.48.02.png)
+
+注意，我现在使用 `const body = await request.body()` 来获取正文的内容，因为 `name` 和 `age` 值是以 JSON 的形式传递的。
+
+这是我们更新旺柴的年龄的方法：
+
+```ts
 export const updateDog = async ({
   params,
   request,
   response,
 }: {
   params: {
-    name: string
-  }
-  request: any
-  response: any
+    name: string;
+  };
+  request: any;
+  response: any;
 }) => {
-  const temp = dogs.filter((existingDog) => existingDog.name === params.name)
-  const body = await request.body()
-  const { age }: { age: number } = body.value
+  const temp = dogs.filter((existingDog) => existingDog.name === params.name);
+  const body = await request.body();
+  const { age }: { age: number } = body.value;
+
   if (temp.length) {
-    temp[0].age = age
-    response.status = 200
-    response.body = { msg: 'OK' }
-    return
+    temp[0].age = age;
+    response.status = 200;
+    response.body = { msg: "OK" };
+    return;
   }
-  response.status = 400
-  response.body = { msg: Cannot find dog </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>params<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>name<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);"> }
-}
+
+  response.status = 400;
+  response.body = { msg: `Cannot find dog ${params.name}` };
+};
+```
+
+![updateDog](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-10-at-16.48.11.png)
+
+这是我们如何从列表中删除旺柴的方法：
+
+```ts
 export const removeDog = ({
   params,
   response,
 }: {
   params: {
-    name: string
-  }
-  response: any
+    name: string;
+  };
+  response: any;
 }) => {
-  const lengthBefore = dogs.length
-  dogs = dogs.filter((dog) => dog.name !== params.name)
-  if (dogs.length === lengthBefore) {
-    response.status = 400
-    response.body = { msg: Cannot find dog </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>params<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>name<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);"> }
-    return
-  }
-  response.body = { msg: 'OK' }
-  response.status = 200
-}
-const router = new Router()
-router
-  .get('/dogs', getDogs)
-  .get('/dogs/:name', getDog)
-  .post('/dogs', addDog)
-  .put('/dogs/:name', updateDog)
-  .delete('/dogs/:name', removeDog)
-const app = new Application()
-app.use(router.routes())
-app.use(router.allowedMethods())
-console.log(Listening on port </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span><span class="token constant" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">PORT</span><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">...)
+  const lengthBefore = dogs.length;
+  dogs = dogs.filter((dog) => dog.name !== params.name);
 
+  if (dogs.length === lengthBefore) {
+    response.status = 400;
+    response.body = { msg: `Cannot find dog ${params.name}` };
+    return;
+  }
+
+  response.body = { msg: "OK" };
+  response.status = 200;
+};
 ```
 
-## Find out more
+![removeDog](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-10-at-16.48.32.png)
 
-The Deno official website is  [https://deno.land][66]
+这是完整的示例代码：
 
-The API documentation is available at  [https://doc.deno.land][67]  and  [https://deno.land/typedoc/index.html][68]
+```ts
+import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 
-awesome-deno  [https://github.com/denolib/awesome-deno][69]
+const env = Deno.env.toObject();
+const PORT = env.PORT || 4000;
+const HOST = env.HOST || "127.0.0.1";
 
-## A few more random tidbits
+interface Dog {
+  name: string;
+  age: number;
+}
 
--   Deno provides a built-in  `fetch`  implementation that matches the one available in the browser
--   Deno has a compatibility layer with the Node.js stdlib  [in progress][70]
+let dogs: Array<Dog> = [
+  {
+    name: "Roger",
+    age: 8,
+  },
+  {
+    name: "Syd",
+    age: 7,
+  },
+];
 
-## Final words
+export const getDogs = ({ response }: { response: any }) => {
+  response.body = dogs;
+};
 
-I hope you enjoyed this Deno tutorial!
+export const getDog = ({
+  params,
+  response,
+}: {
+  params: {
+    name: string;
+  };
+  response: any;
+}) => {
+  const dog = dogs.filter((dog) => dog.name === params.name);
+  if (dog.length) {
+    response.status = 200;
+    response.body = dog[0];
+    return;
+  }
 
-Reminder:  [You can get a PDF/ePub/Mobi version of this Deno Handbook here][71].
+  response.status = 400;
+  response.body = { msg: `Cannot find dog ${params.name}` };
+};
+
+export const addDog = async ({
+  request,
+  response,
+}: {
+  request: any;
+  response: any;
+}) => {
+  const body = await request.body();
+  const { name, age }: { name: string; age: number } = body.value;
+  dogs.push({
+    name: name,
+    age: age,
+  });
+
+  response.body = { msg: "OK" };
+  response.status = 200;
+};
+
+export const updateDog = async ({
+  params,
+  request,
+  response,
+}: {
+  params: {
+    name: string;
+  };
+  request: any;
+  response: any;
+}) => {
+  const temp = dogs.filter((existingDog) => existingDog.name === params.name);
+  const body = await request.body();
+  const { age }: { age: number } = body.value;
+
+  if (temp.length) {
+    temp[0].age = age;
+    response.status = 200;
+    response.body = { msg: "OK" };
+    return;
+  }
+
+  response.status = 400;
+  response.body = { msg: `Cannot find dog ${params.name}` };
+};
+
+export const removeDog = ({
+  params,
+  response,
+}: {
+  params: {
+    name: string;
+  };
+  response: any;
+}) => {
+  const lengthBefore = dogs.length;
+  dogs = dogs.filter((dog) => dog.name !== params.name);
+
+  if (dogs.length === lengthBefore) {
+    response.status = 400;
+    response.body = { msg: `Cannot find dog ${params.name}` };
+    return;
+  }
+
+  response.body = { msg: "OK" };
+  response.status = 200;
+};
+
+const router = new Router();
+router
+  .get("/dogs", getDogs)
+  .get("/dogs/:name", getDog)
+  .post("/dogs", addDog)
+  .put("/dogs/:name", updateDog)
+  .delete("/dogs/:name", removeDog);
+
+const app = new Application();
+
+app.use(router.routes());
+app.use(router.allowedMethods());
+
+console.log(`Listening on port ${PORT}...`);
+
+await app.listen(`${HOST}:${PORT}`);
+```
+
+## 更多内容
+
+Deno 官方网站为 [https://deno.land](https://deno.land)。
+
+API 文档位于 [https://doc.deno.land](https://doc.deno.land) 和 [https://deno.land/typedoc/index.html](https://deno.land/typedoc/index.html) 中。
+
+一份 Awesome Deno 资源清单 [https://github.com/denolib/awesome-deno](https://github.com/denolib/awesome-deno)。
+
+> 译者注：中文的 Awesome Deno 清单由译者持续维护中，可以访问这里：[Awesome Deno 资源全图谱](https://github.com/hylerrix/awesome-deno-cn)
+
+## 花絮
+
+- Deno 提供了一个内置的 `fetch` 实现，该实现与浏览器中可用的匹配。
+- Deno 正在进行与 Node.js stdlib 的兼容层
+
+## 结语
+
+我希望你喜欢这个 Deno 入门手册！
+
+别忘了，[你可以在此处获取此 Deno 手册的 PDF / ePub / Mobi 版本。](https://flaviocopes.com/page/deno-handbook/)
 
 [1]: https://deno.land/
 [2]: https://www.freecodecamp.org/news/the-deno-handbook/#what-is-deno

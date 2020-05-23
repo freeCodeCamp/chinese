@@ -1715,47 +1715,47 @@ React 保存了一份 DOM 的副本，出于某些考虑，React 渲染的是虚
 
 这也是状态经常在组件树中上移的原因，以便在需要访问它的组件之间共享状态。
 
-### `SECTION 3: IN-DEPTH REACT`
+### 第 3 部分：深入理解 React
 
 ### `JSX`
 
-`JSX is a technology that was introduced by React.`
+JSX 是 React 引入的一项技术。
 
-`Although React can work completely fine without using JSX, it’s an ideal technology to work with components, so React benefits a lot from JSX.`
+尽管不使用 JSX 的情况下，React 也能正常运行。但是 JSX 是一种处理组件的理想技术，React 从 JSX 中收益颇多。
 
-`At first, you might think that using JSX is like mixing HTML and  [JavaScript][83]  (and as you’ll see CSS).`
+刚开始，你可能会觉得 JSX 就像是 HTML 和 JavaScript 混合在一起（就像你看到的 CSS 那样）。
 
-`But this is not true, because what you are really doing when using JSX syntax is writing a declarative syntax of what a component UI should be.`
+但事实并非如此，因为使用 JSX 语法，你实际上在声明一个 UI 组件该是什么样子。
 
-`And you’re describing that UI not using strings, but instead using JavaScript, which allows you to do many nice things.`
+你并非通过字符串来描述 UI 组件，而是通过 JavaScript 来实现，这样可以优雅地实现很多功能。
 
-#### `A JSX primer`
+#### 先来看看 JSX 
 
-`Here is how you define a h1 tag containing a string:`
+当你定义一个包含字符串的 h1 标签时，你会这么写：
 
 ```
 const element = <h1>Hello, world!</h1>
 ```
 
-`It looks like a strange mix of JavaScript and HTML, but in reality it’s all JavaScript.`
+它看起来像是混合了 JavaScript 和 HTML，但实际上是纯 JavaScript。
 
-`What looks like HTML, is actually syntactic sugar for defining components and their positioning inside the markup.`
+尽管看起来像 HTML，实际上是用于定义组件及其在标记内位置的语法糖。
 
-`Inside a JSX expression, attributes can be inserted very easily:`
+JSX 表达式可以非常方便地插入属性：
 
 ```
 const myId = 'test'
 const element = <h1 id={myId}>Hello, world!</h1>
 ```
 
-``You just need to pay attention when an attribute has a dash (`-`) which is converted to camelCase syntax instead, and these 2 special cases:``
+需要注意的是，当属性中包含横线(`-`)时，会被转换成驼峰语法，一下是两个特殊例子：
 
--   `` `class`  becomes  `className` ``
--   `` `for`  becomes  `htmlFor` ``
+-   `class`  变成  `className`
+-   `for`  变成  `htmlFor`
 
-`because they are reserved words in JavaScript.`
+因为它们是 JavaScript 的保留词。
 
-``Here’s a JSX snippet that wraps two components into a  `div`  tag:``
+以下 JSX 代码段将两个组件放入到 `div` 标签中：
 
 ```
 <div>
@@ -1764,21 +1764,21 @@ const element = <h1 id={myId}>Hello, world!</h1>
 </div>
 ```
 
-`A tag always needs to be closed, because this is more XML than HTML (if you remember the XHTML days, this will be familiar, but since then the HTML5 loose syntax won). In this case a self-closing tag is used.`
+标签需要闭合，这种方式比起 HTML，更接近 XML（如果你还记得使用 XHTML 的日子，你就会对此很熟悉，只是后来 HTML5 的宽松语法占了上风）。在这个例子中使用了自动闭合的标签。
 
-``Notice how I wrapped the 2 components into a  `div`. Why? Because  **the render() function can only return a single node**, so in case you want to return 2 siblings, just add a parent. It can be any tag, not just  `div`.``
+注意我将两个组件包装到 `div` 中。为什么需要这么做呢？因为 **`render()` 方法只能返回一个节点**，因此当你需要返回两个节点时，只用增加一个父元素。它可以是 `div`，也可以是任何其他标签。
 
-#### `Transpiling JSX`
+#### 转译 JSX
 
-`A browser cannot execute JavaScript files containing JSX code. They must be first transformed to regular JS.`
+浏览器无法执行包含 JSX 代码的 JavaScript 文件，因此需要先转换成普通 JS。
 
-`How? By doing a process called  **transpiling**.`
+如何转换呢？通过一个叫作**转译**的流程。
 
-`We already said that JSX is optional, because to every JSX line, a corresponding plain JavaScript alternative is available, and that’s what JSX is transpiled to.`
+前面提到过 JSX 并非必须，因为每一行 JSX 代码都有对应的普通 JavaScript 代码可以替代，这也是 JSX 被转译后的结果。
 
-`For example the following two constructs are equivalent:`
+比如以下两种写法是一样的效果：
 
-> `_Plain JS_`
+> _普通 JS_
 
 ```
 ReactDOM.render(
@@ -1791,7 +1791,7 @@ ReactDOM.render(
 )
 ```
 
-> `_JSX_`
+> _JSX_
 
 ```
 ReactDOM.render(
@@ -1803,17 +1803,17 @@ ReactDOM.render(
 )
 ```
 
-`This very basic example is just the starting point, but you can already see how more complicated the plain JS syntax is compared to using JSX.`
+这只是非常基础的示例，但是你已经可以看到，相比 JSX，普通的 JS 语法要复杂得多。
 
-``At the time of writing the most popular way to perform the  **transpilation**  is to use  **Babel**, which is the default option when running  `create-react-app`, so if you use it you don't have to worry, everything happens under the hood for you.``
+在写代码时，最流行的**转译**方法就是使用 **Babel**，这是运行 `create-react-app` 时的默认配置，因此如果你在使用 `create-react-app`，你就不用担心转译的问题，一切都已为你配置完成。
 
-``If you don’t use  `create-react-app`  you need to setup Babel yourself.``
+如果你没有使用 `create-react-app`，你需要自己配置 Babel。
 
-#### `JS in JSX`
+#### JSX 中的 JS
 
-`JSX accepts any kind of JavaScript mixed into it.`
+JSX 接受任何混合到其中的 JavaScript。
 
-``Whenever you need to add some JS, just put it inside curly braces  `{}`. For example here's how to use a constant value defined elsewhere:``
+当你需要添加 JS 代码时，只用把代码放入大括号 `{}` 中即可。下面是使用在其他地方定义的常量的方法：
 
 ```
 const paragraph = 'A paragraph'
@@ -1826,7 +1826,7 @@ ReactDOM.render(
 )
 ```
 
-`This is a basic example. Curly braces accept  _any_  JS code:`
+这是个非常基础的示例。大括号可以接受 _任何_ JS 代码：
 
 ```
 const paragraph = 'A paragraph'
@@ -1840,49 +1840,50 @@ ReactDOM.render(
 )
 ```
 
-`As you can see  _we nested JavaScript inside JSX defined inside JavaScript nested in JSX_. You can go as deep as you need.`
+如你所见，_我们在 JSX 代码中放入了 JavaScript 代码，又在 JavaScript 代码中定义了 JSX，又在这一层 JSX 中嵌套了 JavaScript 代码_。如有需要，你可以无限嵌套。
 
-#### `HTML in JSX`
 
-`JSX resembles HTML a lot, but it’s actually XML syntax.`
+#### JSX 中的 HTML
 
-`In the end you render HTML, so you need to know a few differences between how you would define some things in HTML, and how you define them in JSX.`
+JSX 看起来非常像 HTML，但实际上是 XML 语法。
 
-#### `You need to close all tags`
+最终你会渲染 HTML，因此你需要知道在 HTML 中定义内容与在 JSX 定义它们的区别。
 
-``Just like in XHTML, if you have ever used it, you need to close all tags: no more  `<br>`  but instead use the self-closing tag:  `<br />`  (the same goes for other tags)``
+#### 所有的标签都需要闭合
 
-#### `camelCase is the new standard`
+就像使用 XHTML 一样，你需要闭合所有的标签：不要使用 `<br>`，而是使用自闭和标签： `<br />`（对于其他标签也是一样）。
 
-``In HTML you’ll find attributes without any case (e.g.  `onchange`). In JSX, they are renamed to their camelCase equivalent:``
+#### 驼峰是新标准
 
--   `` `onchange`  =>  `onChange` ``
--   `` `onclick`  =>  `onClick` ``
--   `` `onsubmit`  =>  `onSubmit` ``
+HTML 里的属性没有区分大小写（如 `onchange`)。JSX 中，这些属性被重命名为与原属性相同的驼峰写法：
 
-#### `` `class`  becomes  `className` ``
+-  `onchange`  =>  `onChange`
+-  `onclick`  =>  `onClick`
+-  `onsubmit`  =>  `onSubmit`
 
-``Due to the fact that JSX is JavaScript, and  `class`  is a reserved word, you can't write``
+#### `class` 改为 `className`
+
+由于 JSX 会转译成 JavaScript，并且 `class` 是保留字，你不能这么写：
 
 ```
 <p class="description">
 ```
 
-`but you need to use`
+你需要这么写：
 
 ```
 <p className="description">
 ```
 
-``**The same applies to  `for`**  which is translated to  `htmlFor`.``
+同样的情况还包括 `for` 需要变成 `htmlFor`。
 
-#### `CSS in React`
+#### React 中的 CSS
 
-`JSX provides a cool way to define CSS.`
+JSX 提供了一种定义 CSS 的好方法。
 
-`If you have a little experience with HTML inline styles, at first glance you’ll find yourself pushed back 10 or 15 years, to a world where inline CSS was completely normal (nowadays it’s demonized and usually just a “quick fix” go-to solution).`
+如果你很少使用 HTML 内联样式，刚开始使用 React 写 CSS 时，你可能会觉得回到了 10 到 15 年前，内联 CSS 还很普遍的年代（如今内联样式已经被妖魔化了，且常被用来做快速修复的首选方案）。
 
-``JSX style is not the same thing: first of all, instead of accepting a string containing CSS properties, the JSX  `style`  attribute only accepts an object. This means you define properties in an object:``
+JSX 样式与内联样式不一样：首先，不同于内联样式接受一个包含 CSS 属性的字符串，JSX 样式属性只接受对象。也就是说，你需要在对象中定义属性：
 
 ```
 var divStyle = {
@@ -1891,60 +1892,60 @@ var divStyle = {
 ReactDOM.render(<div style={divStyle}>Hello World!</div>, mountNode)
 ```
 
-`or`
+或者
 
 ```
 ReactDOM.render(<div style={{ color: 'white' }}>Hello World!</div>, mountNode)
 ```
 
-`The CSS values you write in JSX are slightly different from plain CSS:`
+JSX 中的 CSS 与普通的 CSS 写法略有不同：
 
--   `the keys property names are camelCased`
--   `values are just strings`
--   `you separate each tuple with a comma`
+- 属性名使用驼峰写法
+- 值只能是字符串
+- 用逗号将每个元组分开
 
-#### `Why is this preferred over plain CSS / SASS / LESS?`
+#### 为什么相比于普通 CSS / SASS / LESS ，它是首选?
 
-`CSS is an  **unsolved problem**. Since its inception, dozens of tools around it rose and then fell. The main problem with JS is that there is no scoping and it’s easy to write CSS that is not enforced in any way, thus a “quick fix” can impact elements that should not be touched.`
+CSS 是一个**没有解决的问题**。自出现之后，围绕它出现的数十种工具都蓬勃发展又没落了。主要原因是它没有作用域，很容易写出并没有被执行的 CSS 代码，且 “快速修复” 的代码很容易影响到本不该影响的元素。
 
-`JSX allows components (defined in React for example) to completely encapsulate their style.`
+JSX 允许组件（如 React 定义的组件）完全封装它的样式。
 
-#### `Is this the go-to solution?`
+#### 这是首选方案吗？
 
-`Inline styles in JSX are good until you need to`
+JSX 中的内联样式已经很好，除非你需要：
 
-1.  `write media queries`
-2.  `style animations`
-3.  ``reference pseudo classes (e.g.  `:hover`)``
-4.  ``reference pseudo elements (e.g.  `::first-letter`)``
+1. 写媒介查询
+2. 写样式动画
+3. 标记伪类（如 `:hover'`）
+4. 标记伪元素（如 `::first-letter`）
 
-`In short, they cover the basics, but it’s not the final solution.`
+简而言之，JSX 中的内联样式已经覆盖了基本用途，但并不是最终解决方案。
 
-#### `Forms in JSX`
+#### JSX 中的表单
 
-`JSX adds some changes to how HTML forms work, with the goal of making things easier for the developer.`
+为了让开发者更轻松，JSX 对 HTML 表单的工作方式进行了一些调整。
 
-#### `` `value`  and  `defaultValue` ``
+#### `value` 和 `defaultValue`
 
-``The  `value`  attribute always holds the current value of the field.``
+`value` 属性总是保存该字段的当前值。
 
-``The  `defaultValue`  attribute holds the default value that was set when the field was created.``
+`defaultValue` 属性保存创建该字段时的默认值。
 
-``_This helps solve some weird behavior of regular  [DOM][84]  interaction when inspecting  `input.value`  and  `input.getAttribute('value')`  returning one the current value and one the original default value._``
+_这个调整解决了 DOM 的一些奇怪行为，比如 `input.value` 和 `input.getAttribute('value')` 一个返回当前值，一个返回原始的默认值。_
 
-``This also applies to the  `textarea`  field, e.g.``
+`textarea` 同样做了一些调整，如：
 
 ```
 <textarea>Some text</textarea>
 ```
 
-`but instead`
+改为
 
 ```
 <textarea defaultValue={'Some text'} />
 ```
 
-``For  `select`  fields, instead of using``
+对于 `select` 元素，从原来是使用方法：
 
 ```
 <select>
@@ -1954,7 +1955,7 @@ ReactDOM.render(<div style={{ color: 'white' }}>Hello World!</div>, mountNode)
 </select>
 ```
 
-`use`
+改为
 
 ```
 <select defaultValue="x">
@@ -1962,59 +1963,59 @@ ReactDOM.render(<div style={{ color: 'white' }}>Hello World!</div>, mountNode)
 </select>
 ```
 
-#### `A more consistent onChange`
+#### 更一致的 onChange
 
-``Passing a function to the  `onChange`  attribute you can subscribe to events on form fields.``
+将函数传给 `onChange` 属性时，你就订阅了表单的事件。
 
-``It works consistently across fields, even  `radio`,  `select`  and  `checkbox`  input fields fire a  `onChange`  event.``
+它对于不同类型的输入元素都一样有效，包括 `radio`, `select` 和 `checkbox` 输入框都会触发 `onChange` 事件。
 
-`` `onChange`  also fires when typing a character into an  `input`  or  `textarea`  field.``
+在 `input` 或 `textarea` 输入框输入一个字符也会触发 `onChange` 事件。
 
-#### `JSX auto escapes`
+#### JSX 自动转义
 
-`To mitigate the ever present risk of XSS exploits, JSX forces automatic escaping in expressions.`
+为了降低 XSS 漏洞的风险，JSX 对表达式进行强制转义。
 
-`This means that you might run into issues when using an HTML entity in a string expression.`
+这意味着在字符串中使用 HTML 实体时可能会遇到问题。
 
-``You expect the following to print  `© 2017`:``
+你以为下面的表达式会输出 `© 2017`：
 
 ```
 <p>{'© 2017'}</p>
 ```
 
-``But it’s not, it’s printing  `© 2017`  because the string is escaped.``
+但实际上它输出 `© 2017` 是因为字符串被转义了。
 
-`To fix this you can either move the entities outside the expression:`
+为了解决这个问题，你可以将实体移到表达式之外：
 
 ```
 <p>© 2017</p>
 ```
 
-`or by using a constant that prints the Unicode representation corresponding to the HTML entity you need to print:`
+或者使用一个常量来输出的 HTML 实体对应的 Unicode 表达式：
 
 ```
 <p>{'\u00A9 2017'}</p>
 ```
 
-#### `White space in JSX`
+#### JSX 中的空格符
 
-`To add white space in JSX there are 2 rules:`
+在 JSX 中增加空格符有两条规则：
 
-`**Rule 1: Horizontal white space is trimmed to 1**`
+**规则 1： 横向空格符会被缩减为一个空格**
 
-`If you have white space between elements in the same line, it’s all trimmed to 1 white space.`
+如果你在一行中有多个空格符，他们会被缩减为一个空格。
 
 ```
 <p>Something       becomes               this</p>
 ```
 
-`becomes`
+会变成
 
 ```
 <p>Something becomes this</p>
 ```
 
-`**Rule 2: Vertical white space is eliminated**`
+**规则 2：纵向空格符会被清除**
 
 ```
 <p>
@@ -2024,13 +2025,13 @@ ReactDOM.render(<div style={{ color: 'white' }}>Hello World!</div>, mountNode)
 </p>
 ```
 
-`becomes`
+会变成
 
 ```
 <p>Somethingbecomesthis</p>
 ```
 
-`To fix this problem you need to explicitly add white space, by adding a space expression like this:`
+想要解决这一问题，你需要这样通过增加空格符表达式来显式地增加空白符：
 
 ```
 <p>
@@ -2040,7 +2041,7 @@ ReactDOM.render(<div style={{ color: 'white' }}>Hello World!</div>, mountNode)
 </p>
 ```
 
-`or by embedding the string in a space expression:`
+或者将字符串嵌入到空格符表达式中：
 
 ```
 <p>
@@ -2050,9 +2051,10 @@ ReactDOM.render(<div style={{ color: 'white' }}>Hello World!</div>, mountNode)
 </p>
 ```
 
-#### `Adding comments in JSX`
 
-`You can add comments to JSX by using the normal JavaScript comments inside an expression:`
+#### 在 JSX 中增加注释
+
+你可以在表达式中像使用 JavaScript 注释那样给 JSX 添加注释。
 
 ```
 <p>
@@ -2063,11 +2065,11 @@ ReactDOM.render(<div style={{ color: 'white' }}>Hello World!</div>, mountNode)
 </p>
 ```
 
-#### `Spread attributes`
+#### 扩展属性
 
-`In JSX a common operation is assigning values to attributes.`
+JSX 中的常见操作是给属性赋值。
 
-`Instead of doing it manually, e.g.`
+相较于手动添加：
 
 ```
 <div>
@@ -2075,7 +2077,7 @@ ReactDOM.render(<div style={{ color: 'white' }}>Hello World!</div>, mountNode)
 </div>
 ```
 
-`you can pass`
+你可以这么传递值：
 
 ```
 <div>
@@ -2083,11 +2085,11 @@ ReactDOM.render(<div style={{ color: 'white' }}>Hello World!</div>, mountNode)
 </div>
 ```
 
-``and the properties of the  `data`  object will be used as attributes automatically, thanks to the  _ES6 spread operator_.``
+多亏了 _ES6 的扩展运算符_，`data` 对象中的属性会被自动作为属性值使用。
 
-#### `How to loop in JSX`
+#### JSX 中的循环
 
-`If you have a set of elements you need to loop upon to generate a JSX partial, you can create a loop, and then add JSX to an array:`
+如果有一组元素需要循环生成 JSX，你可以创建一个循环，然后把 JSX 添加到数组中：
 
 ```
 const elements = [] //..some array
@@ -2097,7 +2099,7 @@ for (const [index, value] of elements.entries()) {
 }
 ```
 
-``Now when rendering the JSX you can embed the  `items`  array simply by wrapping it in curly braces:``
+在渲染 JSX 时，你可以使用大括号嵌入 `items` 数组：
 
 ```
 const elements = ['one', 'two', 'three'];
@@ -2112,7 +2114,7 @@ return (
 )
 ```
 
-``You can do the same directly in the JSX, using  `map`  instead of a for-of loop:``
+也可以在 JSX 直接使用 `map` 取代 for-of 循环：
 
 ```
 const elements = ['one', 'two', 'three'];
@@ -2125,15 +2127,16 @@ return (
 )
 ```
 
-### `Components`
 
-`A component is one isolated piece of interface. For example in a typical blog homepage you might find the Sidebar component, and the Blog Posts List component. They are in turn composed of components themselves, so you could have a list of Blog post components, each for every blog post, and each with its own peculiar properties.`
+### 组件
 
-`React makes it very simple: everything is a component.`
+组件是一个独立的接口。打个比方，在一个典型的博客主页里，你会看到边栏组件和播客的文章列表组件。它们也是由组件组成的，文章列表组件中的每篇文章也是一个组件，并且有自己的独有的属性。
 
-`Even plain HTML tags are component on their own, and they are added by default.`
+React 非常简单：一切都是组件。
 
-``The next 2 lines are equivalent, they do the same thing. One with  ****JSX****, one without, by injecting  `<h1>Hello World!</h1>`  into an element with id  `app`.``
+纯 HTML 标签自身也是组件，默认情况下会添加它们。
+
+下面两行代码实现了一样的功能。两个都将 `<h1>Hello World!</h1>` 注入一个 id 是 `app` 的元素，一个使用了 **JSX**，另一个没有。
 
 ```
 import React from 'react'
@@ -2145,17 +2148,17 @@ ReactDOM.render(
 )
 ```
 
-``See,  `React.DOM`  exposed us an  `h1`  component. Which other HTML tags are available? All of them! You can inspect what  `React.DOM`  offers by typing it in the Browser Console:``
+看到了吗，`React.DOM` 暴露了 `h1` 组件。还可以使用哪些 HTML 标签呢？所有！你可以在浏览器的控制台输入 `React.DOM` 来看有哪些标签可用：
 
-`(the list is longer)`
+（列表很长）
 
-`The built-in components are nice, but you’ll quickly outgrow them. What React excels in is letting us compose a UI by composing custom components.`
+内置组件非常有用，但是你很快就会忘了它们。React 擅长的是让我们构建自定义组件来实现 UI。
 
-#### `Custom components`
+#### 自定义组件
 
-`There are 2 ways to define a component in React.`
+React 提供了两种定义组件的方法：
 
-`A function component:`
+函数式组件：
 
 ```
 const BlogPostExcerpt = () => {
@@ -2168,7 +2171,7 @@ const BlogPostExcerpt = () => {
 }
 ```
 
-`A class component:`
+类组件：
 
 ```
 import React, { Component } from 'react'
@@ -2184,11 +2187,11 @@ class BlogPostExcerpt extends Component {
 }
 ```
 
-`Up until recently, class components were the only way to define a component that had its own state, and could access the lifecycle methods so you could do things when the component was first rendered, updated or removed.`
+直到最近，还只能通过类组件定义有自己的 state 的组件，而且你能够在类组件中通过生命周期方法在组件第一次渲染、更新或移除时实现一些功能。
 
-`React Hooks changed this, so our function components are now much more powerful than ever and I believe we’ll see fewer and fewer class components in the future, although it will still be perfectly valid way to create components.`
+React Hooks 改变了这一局面，现在函数式组件比以往的任何时候都要强大，我相信未来会越来越少看到类组件，尽管它依然是一种很有效的创建组件的方法。
 
-``There is also a third syntax which uses the  `ES5`  syntax, without the classes:``
+第三种创建组件的方法是通过 `ES5` 语法，不用创建类：
 
 ```
 import React from 'react'
@@ -2204,13 +2207,13 @@ React.createClass({
 })
 ```
 
-``You’ll rarely see this in modern,  `> ES6`  codebases.``
+但在现代 `> ES6` 的代码库中，这种写法很少见。
 
-### `State`
+### 状态
 
-#### `Setting the default state of a component`
+#### 在组件中设置默认状态
 
-``In the Component constructor, initialize  `this.state`. For example the BlogPostExcerpt component might have a  `clicked`  state:``
+在组件的构造器中初始化 `this.state`。比如 BlogPostExcerpt 组件会有 `clicked` 状态：
 
 ```
 class BlogPostExcerpt extends Component {
@@ -2229,9 +2232,9 @@ class BlogPostExcerpt extends Component {
 }
 ```
 
-#### `Accessing the state`
+#### 获取状态
 
-``The  _clicked_  state can be accessed by referencing  `this.state.clicked`:``
+_clicked_ 状态可以通过 `this.state.clicked` 获取：
 
 ```
 class BlogPostExcerpt extends Component {
@@ -2251,41 +2254,41 @@ class BlogPostExcerpt extends Component {
 }
 ```
 
-#### `Mutating the state`
+#### 修改状态
 
-`A state should never be mutated by using`
+状态不能通过直接赋值的方式修改：
 
 ```
 this.state.clicked = true
 ```
 
-``Instead, you should always use  `setState()`  instead, passing it an object:``
+你需要给 `setState()` 方法传入对象值来修改：
 
 ```
 this.setState({ clicked: true })
 ```
 
-`The object can contain a subset, or a superset, of the state. Only the properties you pass will be mutated, the ones omitted will be left in their current state.`
+传入的对象可以是状态的子集，也可以是超集。但只有传入值的属性会被修改，没有传入值的属性会保持当前状态的值。
 
-#### ``Why you should always use  `setState()` ``
+#### 为什么要使用 `setState()`
 
-`The reason is that using this method, React knows that the state has changed. It will then start the series of events that will lead to the Component being re-rendered, along with any  [DOM][85]  update.`
+使用这个方式是为了让 React 知道状态发生了变化。这会引发一系列事件让组件重新渲染，从而更新 DOM。
 
-#### `Unidirectional Data Flow`
+#### 单向数据流
 
-`A state is always owned by one Component. Any data that’s affected by this state can only affect Components below it: its children.`
+状态始终属于组件，状态引发的数据变更只会影响其下的组件：组件的子组件。
 
-`Changing the state on a Component will never affect its parent, or its siblings, or any other Component in the application: just its children.`
+修改组件的状态不会影响组件的父组件或兄弟组件，或应用内的其他组件，只会影响组件的子组件。
 
-`This is the reason the state is often moved up in the Component tree.`
+这也是常在组件树中上移状态的原因。
 
-#### `Moving the State Up in the Tree`
+#### 将状态上移
 
-`Because of the Unidirectional Data Flow rule, if two components need to share state, the state needs to be moved up to a common ancestor.`
+由于单项数据流规则，如果两个组件需要共享状态，这一状态需要向上移动到它们共同的祖先组件上。
 
-`Many times the closest ancestor is the best place to manage the state, but it’s not a mandatory rule.`
+通常最近的祖先组件是最好的管理状态的地方，但这并不是强制的规则。
 
-`The state is passed down to the components that need that value via props:`
+状态会作为属性传递给需要的组件：
 
 ```
 class Converter extends React.Component {
@@ -2304,7 +2307,7 @@ class Converter extends React.Component {
 }
 ```
 
-`The state can be mutated by a child component by passing a mutating function down as a prop:`
+将修改状态的函数作为属性传递给子组件可以让子组件能够修改状态。
 
 ```
 class Converter extends React.Component {

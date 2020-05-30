@@ -2344,7 +2344,7 @@ const Display = props => {
 
 ### `Props`
 
-``Props is how Components get their properties. Starting from the top component, every child component gets its props from the parent. In a function component, props is all it gets passed, and they are available by adding  `props`  as the function argument:``
+组件通过 Props 获取属性值。从顶部组件开始，每个子组件都从它的父组件获取属性值。函数式组件中，传给组件的所有值都是 props，在函数中可以将 `props` 作为参数使用来获取属性值：
 
 ```
 const BlogPostExcerpt = props => {
@@ -2357,7 +2357,7 @@ const BlogPostExcerpt = props => {
 }
 ```
 
-``In a class component, props are passed by default. There is no need to add anything special, and they are accessible as  `this.props`  in a Component instance.``
+类组件中，props 是默认的，传递属性值不需要额外的操作，它们可以在组件实例中通过 `this.props` 获取。
 
 ```
 import React, { Component } from 'react'
@@ -2373,16 +2373,16 @@ class BlogPostExcerpt extends Component {
 }
 ```
 
-`Passing props down to child components is a great way to pass values around in your application. A component either holds data (has state) or receives data through its props.`
+将属性值传递给子组件可以方便地在应用中传递值。组件可以有自己的数据（状态值），也可以通过 props 获取数据。
 
-`It gets complicated when:`
+遇到下列情况会复杂一些：
 
--   `you need to access the state of a component from a child that’s several levels down (all the previous children need to act as a pass-through, even if they do not need to know the state, complicating things)`
--   `you need to access the state of a component from a completely unrelated component.`
+- 当一个隔了好几个级别的子组件需要获取父组件的状态时（中间级别的所有组件都需要向下传递这一属性值，即使它们本身不需要这个值）
+- 当需要获取一个完全无关联的组件的状态值时
 
-#### `Default values for props`
+#### props 的默认值
 
-`If any value is not required we need to specify a default value for it if it’s missing when the Component is initialized.`
+如果某个值不是必传的，我们需要指定一个默认值，否则组件初始化时会有缺失的值。
 
 ```
 BlogPostExcerpt.propTypes = {
@@ -2395,11 +2395,11 @@ BlogPostExcerpt.defaultProps = {
 }
 ```
 
-`Some tooling like  [ESLint][86]  have the ability to enforce defining the defaultProps for a Component with some propTypes not explicitly required.`
+一些工具如 ESLint 会强制要求组件给 propTypes 中非必须的属性定义默认值，
 
-#### `How props are passed`
+#### props 如何传递
 
-`When initializing a component, pass the props in a way similar to HTML attributes:`
+组件初始化时，props 像 HTML 的属性那样传递：
 
 ```
 const desc = 'A description'
@@ -2407,11 +2407,11 @@ const desc = 'A description'
 <BlogPostExcerpt title="A blog post" description={desc} />
 ```
 
-`We passed the title as a plain string (something we can  _only_  do with strings!), and description as a variable.`
+我们给 title 传了一个字符串（也 _只能_ 是字符串），并给 description 传了一个变量。
 
-#### `Children`
+#### children
 
-``A special prop is  `children`. That contains the value of anything that is passed in the  `body`  of the component, for example:``
+`children` 是一个特殊的属性，它可以用来传递任何需要给组件的 `body` 传递的值，比如：
 
 ```
 <BlogPostExcerpt title="A blog post" description="{desc}">
@@ -2419,27 +2419,27 @@ const desc = 'A description'
 </BlogPostExcerpt>
 ```
 
-``In this case, inside  `BlogPostExcerpt`  we could access "Something" by looking up  `this.props.children`.``
+如这个例子， `BlogPostExcerpt` 里我们可以通过查找 `this.props.children` 来获取 `Something` 。
 
-`While Props allow a Component to receive properties from its parent, to be “instructed” to print some data for example, state allows a component to take on life itself, and be independent of the surrounding environment.`
+尽管 Props 允许组件从父组件获取属性值，如打印一些数据，但状态允许组件独立于环境，有自己的生命周期。
 
-### `Presentational vs container components`
+### 展示组件与容器组件
 
-`In React, components are often divided into 2 big buckets:  **presentational components**and  **container components**.`
+React 的组件被分为两类：**展示组件** 和 **容器组件**。
 
-`Each of those have their unique characteristics.`
+它们有自己的特性。
 
-`Presentational components are mostly concerned with generating some markup to be outputted.`
+展示组件主要用来生成展示的内容。
 
-`They don’t manage any kind of state, except for state related the the presentation`
+除了与展示内容相关的状态，它们不用管理其他的状态。
 
-`Container components are mostly concerned with the “backend” operations.`
+容器组件主要用来管理“后端”的操作。
 
-`They might handle the state of various sub-components. They might wrap several presentational components. They might interface with Redux.`
+它们会管理许多子组件的状态，包含很多展示组件，需要和 Redux 交互。
 
-`As a way to simplify the distinction, we can say  **presentational components are concerned with the look**,  **container components are concerned with making things work**.`
+简单来说两者的区别，**展示组件管理外观**，**容器组件保证运作**。
 
-`For example, this is a presentational component. It gets data from its props, and just focuses on showing an element:`
+比如，这就是一个展示组件，它通过 props 获取数据，只关注如何展示元素：
 
 ```
 const Users = props => (
@@ -2451,7 +2451,7 @@ const Users = props => (
 )
 ```
 
-`On the other hand this is a container component. It manages and stores its own data, and uses the presentational component to display it.`
+这则是一个容器组件，它管理并存储自己的数据，通过展示组件来展示内容。
 
 ```
 class UsersContainer extends React.Component {
@@ -2471,25 +2471,25 @@ class UsersContainer extends React.Component {
 }
 ```
 
-### `State vs props`
+### State VS props
 
-`In a React component,  **props**  are variables passed to it by its parent component.  **State**  on the other hand is still variables, but directly initialized and managed by the component.`
+React 组件中，父组件通过 **props** 传递变量值。**state** 也是变量值，不过由组件自己生成及管理。
 
-`The state can be initialized by props.`
+state 可以通过 props 来初始化。
 
-`For example, a parent component might include a child component by calling`
+比如，父组件可能包含如下子组件：
 
 ```
 <ChildComponent />
 ```
 
-`The parent can pass a prop by using this syntax:`
+父组件可以通过这样的语法来传递属性：
 
 ```
 <ChildComponent color=green />
 ```
 
-`Inside the ChildComponent constructor we could access the prop:`
+在 ChildComponent 的构造器内，可以获取属性值：
 
 ```
 class ChildComponent extends React.Component {
@@ -2500,9 +2500,9 @@ class ChildComponent extends React.Component {
 }
 ```
 
-``and any other method in this class can reference the props using  `this.props`.``
+这个组件中的其他的方法也可以通过 `this.props` 来获取属性值。
 
-`Props can be used to set the internal state based on a prop value in the constructor, like this:`
+组件的内部状态可以在构造器内通过 props 来设定值，像这样：
 
 ```
 class ChildComponent extends React.Component {
@@ -2513,21 +2513,21 @@ class ChildComponent extends React.Component {
 }
 ```
 
-`Of course a component can also initialize the state without looking at props.`
+当然，组件的状态也可以不根据 props，自行设定。
 
-`In this case there’s nothing useful going on, but imagine doing something different based on the prop value, probably setting a state value is best.`
+在这个例子中，这么做没有任何收益，但是想想当需要一个基于属性值的状态值时，这样设定状态值就是很好的方式了。
 
-`Props should never be changed in a child component, so if there’s something going on that alters some variable, that variable should belong to the component state.`
+子组件中不能修改属性的值，因此如果需要修改这个变量的值，这个变量只能是组件的状态值。
 
-`Props are also used to allow child components to access methods defined in the parent component. This is a good way to centralize managing the state in the parent component, and avoid children having the need to have their own state.`
+父组件中的方法也可以通过 props 传递给子组件。这样可以在父组件中集中管理状态值，避免组件为此需要新增一个自己的状态。
 
-`Most of your components will just display some kind of information based on the props they received, and stay  **stateless**.`
+大部分组件只需要展示属性值，保持 **stateless**。
 
-### `PropTypes`
+### PropTypes
 
-`Since JavaScript is a dynamically typed language, we don’t really have a way to enforce the type of a variable at compile time, and if we pass invalid types, they will fail at runtime or give weird results if the types are compatible but not what we expect.`
+JavaScript 是一种动态类型预约，我们无法在编译时强制规定变量的类型。如果传了无效的类型，可能导致运行失败；如果传的数据类型并不是我们期望的，但是又和期望的类型兼容，可能会得到奇怪的结果。
 
-`Flow and TypeScript help a lot, but React has a way to directly help with props types, and even before running the code, our tools (editors, linters) can detect when we are passing the wrong values:`
+Flow 和 TypeScript 都能规避这些问题，React 本身也有一种直接规定属性类型的方式，在运行代码之前，我们的工具（编辑器或 linter）就可以检查到传递了错误类型的值：
 
 ```
 import PropTypes from 'prop-types'
@@ -2549,19 +2549,19 @@ BlogPostExcerpt.propTypes = {
 export default BlogPostExcerpt
 ```
 
-#### `Which types can we use`
+#### 有哪些可用的类型
 
-`These are the fundamental types we can accept:`
+以下是可以使用的基本类型：
 
--   `PropTypes.array`
--   `PropTypes.bool`
--   `PropTypes.func`
--   `PropTypes.number`
--   `PropTypes.object`
--   `PropTypes.string`
--   `PropTypes.symbol`
+-   PropTypes.array
+-   PropTypes.bool
+-   PropTypes.func
+-   PropTypes.number
+-   PropTypes.object
+-   PropTypes.string
+-   PropTypes.symbol
 
-`We can accept one of two types:`
+可以使用二选一的类型：
 
 ```
 PropTypes.oneOfType([
@@ -2570,37 +2570,37 @@ PropTypes.oneOfType([
 ]),
 ```
 
-`We can accept one of many values:`
+可以使用多个值的类型：
 
 ```
 PropTypes.oneOf(['Test1', 'Test2']),
 ```
 
-`We can accept an instance of a class:`
+可以使用类的实例类型：
 
 ```
 PropTypes.instanceOf(Something)
 ```
 
-`We can accept any React node:`
+可以使用 React 节点类型：
 
 ```
 PropTypes.node
 ```
 
-`or even any type at all:`
+也可以使用 any 类型：
 
 ```
 PropTypes.any
 ```
 
-`Arrays have a special syntax that we can use to accept an array of a particular type:`
+数组有特殊的语法来接收某种特定类型的数组类型：
 
 ```
 PropTypes.arrayOf(PropTypes.string)
 ```
 
-`We can compose object properties by using`
+还可以组成对象的熟悉：
 
 ```
 PropTypes.shape({
@@ -2609,20 +2609,21 @@ PropTypes.shape({
 })
 ```
 
-#### `Requiring properties`
+#### 必有属性
 
-``Appending  `isRequired`  to any PropTypes option will cause React to return an error if that property is missing:``
+给 PropTypes 的某一项加上 `isRequired` 后，如果这个属性缺失，React 会报错：
 
 ```
 PropTypes.arrayOf(PropTypes.string).isRequired,
 PropTypes.string.isRequired,
 ```
 
-### `React Fragment`
 
-``Notice how I wrap return values in a  `div`. This is because a component can only return one single element, and if you want more than one, you need to wrap it with another container tag.``
+### React Fragment
 
-``This, however, causes an unnecessary  `div`  in the output. You can avoid this by using  `React.Fragment`:``
+注意我如何用 `div` 包裹返回值。这是因为组件只能返回一个元素，如果你需要返回多个，就需要用另一个容器标签把它们包裹起来。
+
+然而，这样会导致输入的内容里增加了一个不需要的 `div`。使用 `React.Fragment` 能够避免这一情况：
 
 ```
 import React, { Component } from 'react'
@@ -2638,7 +2639,7 @@ class BlogPostExcerpt extends Component {
 }
 ```
 
-``which also has a very nice shorthand syntax  `<></>`  that is supported only in recent releases (and Babel 7+):``
+最新的版本（和 Babel 7+)还支持还可以使用缩写的语法 `<></>`：
 
 ```
 import React, { Component } from 'react'
@@ -2654,11 +2655,11 @@ class BlogPostExcerpt extends Component {
 }
 ```
 
-### `Events`
+### 事件
 
-``React provides an easy way to manage events. Prepare to say goodbye to  `addEventListener`.``
+React 提供了一种简单的管理事件的方法，可以和 `addEventListener` 说再见。
 
-`In the previous article about the State you saw this example:`
+在前面关于状态的内容里，你见过这个示例：
 
 ```
 const CurrencySwitcher = props => {
@@ -2670,19 +2671,19 @@ const CurrencySwitcher = props => {
 }
 ```
 
-`If you’ve been using JavaScript for a while, this is just like plain old  [JavaScript event handlers][87], except that this time you’re defining everything in JavaScript, not in your HTML, and you’re passing a function, not a string.`
+如果你使用 JavaScript 有一阵子了，那这个示例就是关于 JavaScript 事件处理的老生常谈，只不过这次你是在 JavaScript 里来定义它们，而不是 HTML，此外传入的是一个函数，而不是字符串。
 
-``The actual event names are a little bit different because in React you use camelCase for everything, so  `onclick`  becomes  `onClick`,  `onsubmit`  becomes  `onSubmit`.``
+事件名也有一点不同，因为 React 里需要使用驼峰命名，因此 `onclick` 变成了 `onClick`，`onsubmit` 变成了 `onSubmit`。
 
-`For reference, this is old school HTML with JavaScript events mixed in:`
+作为对比，下面是一个传统的 HTML 代码，夹杂了 JavaScript 事件：
 
 ```
 <button onclick="handleChangeCurrency()">...<;/button>
 ```
 
-#### `Event handlers`
+#### 事件处理器
 
-`It’s a convention to have event handlers defined as methods on the Component class:`
+类组件中，通常会将事件处理器定义成方法：
 
 ```
 class Converter extends React.Component {
@@ -2692,11 +2693,11 @@ class Converter extends React.Component {
 }
 ```
 
-`All handlers receive an event object that adheres, cross-browser, to the  [W3C UI Events spec][88].`
+所有的处理器都接受一个跨浏览器遵守 W3C UI 事件规范的事件对象。
 
-#### ``Bind  `this`  in methods``
+#### 方法中绑定 `this` 
 
-``If you use class components, don’t forget to bind methods. The methods of ES6 classes by default are not bound. What this means is that  `this`  is not defined unless you define methods as arrow functions:``
+在类组件中，不要忘记绑定方法。ES6 的类默认不绑定方法，也就是说除非通过箭头函数定义方法，否则方法的 `this` 没有定义：
 
 ```
 class Converter extends React.Component {
@@ -2707,7 +2708,7 @@ class Converter extends React.Component {
 }
 ```
 
-``when using the the property initializer syntax with Babel (enabled by default in  `create-react-app`), otherwise you need to bind it manually in the constructor:``
+除非在使用 Babel 的属性初始化语法（`create-react-app` 默认开启），否则需要在构造器中手动绑定：
 
 ```
 class Converter extends React.Component {
@@ -2719,119 +2720,119 @@ class Converter extends React.Component {
 }
 ```
 
-### `The events reference`
+### 事件参考
 
-`There are lots of events supported, here’s a summary list.`
+事件有非常多种，这里是摘要列表。
 
-#### `Clipboard`
+#### 剪切板事件
 
--   `onCopy`
--   `onCut`
--   `onPaste`
+- `onCopy`
+- `onCut`
+- `onPaste`
 
-#### `Composition`
+#### 复合事件
 
--   `onCompositionEnd`
--   `onCompositionStart`
--   `onCompositionUpdate`
+- `onCompositionEnd`
+- `onCompositionStart`
+- `onCompositionUpdate`
 
-#### `Keyboard`
+#### 键盘事件
 
--   `onKeyDown`
--   `onKeyPress`
--   `onKeyUp`
+- `onKeyDown`
+- `onKeyPress`
+- `onKeyUp`
 
-#### `Focus`
+#### 焦点事件
 
--   `onFocus`
--   `onBlur`
+- `onFocus`
+- `onBlur`
 
-#### `Form`
+#### 表单事件
 
--   `onChange`
--   `onInput`
--   `onSubmit`
+- `onChange`
+- `onInput`
+- `onSubmit`
 
-#### `Mouse`
+#### 鼠标事件
 
--   `onClick`
--   `onContextMenu`
--   `onDoubleClick`
--   `onDrag`
--   `onDragEnd`
--   `onDragEnter`
--   `onDragExit`
--   `onDragLeave`
--   `onDragOver`
--   `onDragStart`
--   `onDrop`
--   `onMouseDown`
--   `onMouseEnter`
--   `onMouseLeave`
--   `onMouseMove`
--   `onMouseOut`
--   `onMouseOver`
--   `onMouseUp`
+- `onClick`
+- `onContextMenu`
+- `onDoubleClick`
+- `onDrag`
+- `onDragEnd`
+- `onDragEnter`
+- `onDragExit`
+- `onDragLeave`
+- `onDragOver`
+- `onDragStart`
+- `onDrop`
+- `onMouseDown`
+- `onMouseEnter`
+- `onMouseLeave`
+- `onMouseMove`
+- `onMouseOut`
+- `onMouseOver`
+- `onMouseUp`
 
-#### `Selection`
+#### 选择事件
 
--   `onSelect`
+- `onSelect`
 
-#### `Touch`
+#### 触摸事件
 
--   `onTouchCancel`
--   `onTouchEnd`
--   `onTouchMove`
--   `onTouchStart`
+- `onTouchCancel`
+- `onTouchEnd`
+- `onTouchMove`
+- `onTouchStart`
 
-#### `UI`
+#### UI 事件
 
--   `onScroll`
+- `onScroll`
 
-#### `Mouse Wheel`
+#### 鼠标滚轮事件
 
--   `onWheel`
+- `onWheel`
 
-#### `Media`
+#### 媒体事件
 
--   `onAbort`
--   `onCanPlay`
--   `onCanPlayThrough`
--   `onDurationChange`
--   `onEmptied`
--   `onEncrypted`
--   `onEnded`
--   `onError`
--   `onLoadedData`
--   `onLoadedMetadata`
--   `onLoadStart`
--   `onPause`
--   `onPlay`
--   `onPlaying`
--   `onProgress`
--   `onRateChange`
--   `onSeeked`
--   `onSeeking`
--   `onStalled`
--   `onSuspend`
--   `onTimeUpdate`
--   `onVolumeChange`
--   `onWaiting`
+- `onAbort`
+- `onCanPlay`
+- `onCanPlayThrough`
+- `onDurationChange`
+- `onEmptied`
+- `onEncrypted`
+- `onEnded`
+- `onError`
+- `onLoadedData`
+- `onLoadedMetadata`
+- `onLoadStart`
+- `onPause`
+- `onPlay`
+- `onPlaying`
+- `onProgress`
+- `onRateChange`
+- `onSeeked`
+- `onSeeking`
+- `onStalled`
+- `onSuspend`
+- `onTimeUpdate`
+- `onVolumeChange`
+- `onWaiting`
 
-#### `Image`
+#### 图像事件
 
--   `onLoad`
--   `onError`
+- `onLoad`
+- `onError`
 
-#### `Animation`
+#### 动画事件
 
--   `onAnimationStart`
--   `onAnimationEnd`
--   `onAnimationIteration`
+- `onAnimationStart`
+- `onAnimationEnd`
+- `onAnimationIteration`
 
-#### `Transition`
+#### Transition 事件
 
--   `onTransitionEnd`
+- `onTransitionEnd`
 
 ### `Lifecycle Events`
 

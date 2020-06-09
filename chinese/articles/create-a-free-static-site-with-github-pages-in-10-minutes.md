@@ -1,45 +1,44 @@
 > * 原文地址：[How to create a free static site with GitHub Pages in 10 minutes 使用 GitHub Pages，10 分钟搭建静态网页](https://www.freecodecamp.org/news/create-a-free-static-site-with-github-pages-in-10-minutes/)
 > * 原文作者：Travis Fantina
-> * 译者：
+> * 译者：cyan
 > * 校对者：
 
 ![How to create a free static site with GitHub Pages in 10 minutes](https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Static sites have become all the rage, and with good reason – they are blazingly fast and, with an ever growing number of supported hosting services, pretty easy to set up.
+静态网站的应用十分广泛，因为它具有明显的优势——页面响应速度快，而且随着越来越多的托管服务支持，搭建起来很容易。
 
-I'm not going to go into all the who, what, when, where or why of static sites here. I'm assuming that you have at least a vague idea of what they are  _or_ just want to create your own site and don't care about the other details. Either way this post is for you.
+我不打算在这篇文章里讨论“谁在什么时候，在哪里，选用静态网站做什么”或者“为什么选用它”。我假定你对上述问题至少有一个模糊的概念，或者只是想要搭建你自己的网站，并不在意其他细节——那么，这篇文章正是写给你这样的读者的。
 
-First, I want you to know I'm writing this for as broad an audience as possible; you don't need any programming knowledge to follow along, but some familiarity with the command line and Git will help out a lot.
+首先，我想说的是我写这篇文章是为了给尽可能多的读者看的，所以你不需要任何编程知识，但是熟悉一些命令行和Git操作会帮到你很多。
 
-## So how can you create a static site with GitHub in 10 minutes?
+## 所以怎么在10分钟内用 GitHub 创建一个静态网站？
+我们将用到两个特定工具：GitHub Pages，专门提供静态内容服务，另一个 Jekyll，用来生成静态内容。
 
-We will be working with two specific tools: GitHub Pages, which is specifically designed to serve static content, and a static content generator called Jekyll.
+Jekyll 是一个用来简单创建静态站点的 Ruby gem，所以如果你想用 Jekyll, 需要在你的电脑上安装 Ruby。如果你是 OSX 的操作系统，你很可能已经有某个版本Ruby（尽管你可能需要更新它）。如果你没有安装，或者你使用的是 windows 的电脑，你可以在这里了解更多关于安装它的信息: [Installing Ruby][1]。
 
-Jekyll is a Ruby gem for creating static sites easily, so you will need to have Ruby installed on your computer if you want to use Jekyll. If you have OSX you most likely already have a version of Ruby (although you may need to update it). If you don’t, or are on a Windows computer, you can learn more about installing it here:  [Installing Ruby][1].
+做完上述操作后，打开新的终端窗口，输入`gem install bundler jekyll`。安装 Bundler（Ruby 的包管理工具）和 Jekyll。
 
-With that out of the way, open up a new terminal widow and type  `gem install bundler jekyll`. This will install Bundler (a Ruby package management tool) and Jekyll.
+当安装完这些 gems（Ruby 包）后，输入`Jekyll new my-static-site`(随意给它命名),这个命令会运行 Jekyll 的生成器，在一个新目录里创建你的项目，在网站创建站点后，通过输入 `cd my-static-site`（或者 `cd` 你项目的名字）进入到新创建网站的目录。
 
-Once those gems (Ruby packages) have installed, type  `Jekyll new my-static-site`  (name it whatever you want) which will run Jekyll's generator to create your project in a new directory. After your site is created, hop into your newly created site directory by typing  `cd my-static-site`  (or  `cd`  whatever you called you project).
+在文本编辑器打开项目，你会看到Jekyll为你创建的几个文件和文件夹。现在你只需要关心 Gemfile (不是 Gemfile.lock)，Gemfile 是一个 Ruby 文件，它管理运行一个项目所需的所有相关Ruby包。
 
-Open your project in a text editor and you will see several files and folders Jekyll created for you. Right now you only need to concern yourself with the Gemfile (not Gemfile.lock). The Gemfile is a Ruby file that manages all associated Ruby packages needed to run a project.
-
-The file will contain a line with the Jekyll version, comment it out:
+这个文件有一行写着 Jekyll 的版本，把这行注释掉：
 
 ```ruby
 #gem "jekyll", "~> 4.0.0"
 
 ```
 
-Then add this line:
+然后加入这一行：
 
 ```ruby
 gem "github-pages", group: :jekyll_plugins
 
 ```
 
-There can be a lot of gotchas when you install the GitHub Pages gem – sometimes the gems it depends on are out of date or the gems you have locally installed are  _too_  modern for GitHub Pages.
+当你安装 GitHub Pages gem 时，可能会出现有很多问题，有时于它所依赖的 gem 已经过时了，或者你本地安装的 gem 版本太新。
 
-I have found that this can make it difficult to build and test my Jekyll site locally. It may be easiest just to test your site locally and save building it until you are ready to deploy. However, at the time of this writing you can can specify these dependency versions in your Gemfile and Jekyll will work both locally and with GitHub Pages:
+我发现这使得在本地构建和测试Jekyll站点变得很困难。一个简单的方法是，只在本地测试站点并保存其构建直到你准备部署之前。然而，通过以下代码，你可以在Gemfile中指定这些依赖项版本，Jekyll 就可以同时在本地和 GitHub Pages上运行。
 
 ```ruby
 gem "jekyll", "~> 3.8.5"
@@ -50,17 +49,17 @@ end
 
 ```
 
-Thanks to  [Alex Waibel][2]  on  [StackOverflow][3]  for that most recent configuration.
+感谢 [Alex Waibel][2]  在  [StackOverflow][3]  提供的最新配置。
+ 
+为了看到你的网站，在命令行输入 `bundle exec Jekyll serve` 这会开启一个服务器，你可以用通过在浏览器的 url 栏上输入 "localhost:4000" 看到你的网站。
 
-To see your site in action, run  `bundle exec Jekyll serve`  in your command line. This will start a server and you can see your site by typing "localhost:4000" into the URL bar of a browser.
+瞧！你已经在项目目录里通过 Jekyll 创建一个网站。你已经完成了50%。
 
-Voila! You have created a static site with Jekyll and you are in the project directory. You are about 50% done.
+## 让我们把它放到网上
 
-## Lets get this online
+打开 GitHub.com 并注册一个账号，或者你已经有一个账号，选择 new 按钮并创建一个新的仓库，这个仓库的命名很重要，之后你的 GitHub Pages 链接就是你的用户名 .github.io 。例如我的 github 用户名是 tfantina，我的博客就是 [tfantina.github.io][4]，所以我的 GitHub 仓库名是: "tfantina.github.io".
 
-Go to GitHub.com and sign up, or if you already have an account, select the “new” button and create a repository. It’s important that you name your repository after the link that your GitHub Pages account will be serving, which is your\_username.github.io. For example my GitHub username is tfantina and my blog is  [tfantina.github.io][4], so my GitHub repo is named: "tfantina.github.io".
-
-Back in your terminal window, push your Jekyll site from your computer up to GitHub by running the following commands:
+回到你的终端窗口，输入下面的命令，把你电脑的 Jekyll 网站上传到 Github 。
 
 ```shell
 git init
@@ -70,40 +69,39 @@ git push -u origin master
 
 ```
 
-(When substituting your username and project name you don't need the opening and closing <>).
+(当替换你的用户名和项目名时，你不需要左右尖括号<>).
 
-Once your changes have been pushed to your repository you should have a working static site. This is because your're using the GitHub Pages gem and named your repository in such a way that GitHub understands you want to serve it with GitHub Pages.
+一旦你的修改提交到你的Github仓库，你就有一个正在运行的静态页面，这是因为你正在用GitHub Pages gem，并用GitHub理解的命名方式命名仓库。
 
-You can confirm this either by visiting your site or by going into the settings tab on GitHub and scrolling to the pages section. You should see a green box showing where your site has been published:
+你可以通过访问你的站点或者在GitHub的仓库设置页并滑到页面部分来确认这件事，你应该会看到一个绿色的方框，显示你的站点已经被发布了。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/11/DFAC66CE-C182-4ECA-9379-87843C730645.png)
 
-You will also note that you can easily change your theme from in here as well. GitHub provides a few default themes for Jekyll, but of course you can also make your own.  
-If your site says it’s published but looks blank, you may need to do a hard refresh or try looking at your site in a private window. This may seem obvious, but it gets me almost every time I set up a new Jekyll instance.
+你也将会注意到很容易在这里就改变页面的主题，GitHub为Jekyll提供一些默认主题，当然你可以自己设计。如果你的站点已经发布但是看起来是空白页，你可能需要强制更新或者尝试在一个私隐窗口打开你的网站。这个可能看上去像是废话，但几乎每次我设置一个新的Jekyll实例都这样。
 
-If everything went according to plan your site should look something like this:
+如果一切按计划进行，你的网站应该是这样的:
 
 ![](https://www.freecodecamp.org/news/content/images/2019/11/65F58F30-3000-44E5-96CF-DCC1CFEDF953.png)
 
 ---
 
-There you go – in just a few minutes you have created and deployed a static website with GitHub pages. But you probably want to be able to put some content on your page.
+就这样，在这几分钟里你已经在 GitHub 创建并部署一个静态网站。但是，你可能想在页面放一些内容。
 
-I promised this would only take ten minutes, so I won’t dive into all the details of pages, front matter, or the Liquid templating language. That’s a post for another day. But I will share how to create your first post.
+我承诺过只会花费10分钟，因此，我不会深入到页面、front matter或 Liquid 模板语言的所有细节，我会在之后再发一篇文章。但是我会分享如何创建你的第一篇文章。
 
-Back in your text editor, open the “\_posts” folder. There is already a post welcoming you to your new blog. Create a new markdown file and save it with a name in this format: YEAR-MONTH-DAY-TITLE.markdown (see below):
+回到文本编辑器，打开 “_posts” 文件夹，这里已经有一篇欢迎你到新博客的文章。创建一个新的 markdown 文件，并且按这种格式 YEAR-MONTH-DAY-TITLE.markdown 命名并保存它。（见下文）:
 
 ![](https://www.freecodecamp.org/news/content/images/2019/11/B90755E4-B12A-4038-8DD7-AF945E73FE43.png)
 
-A Jekyll post contains two sections: front matter, and body.
+Jekyll 文章包含两个部分 front matter 和 body。
 
-The front matter gives specific instructions to Jekyll such as what the title of the post is going to be, which layout to use, and when the post was written.
+front matter 给了 Jekyll 一些具体的指示，比如文章的标题是什么，使用什么布局，以及文章是什么时候写的。
 
-Front matter is highly customizable. For example, I wanted my posts to have hero images, so I created a  `lead_image`  tag and placed some syntax in my layout to specifically check for lead images in each post’s front matter. The Liquid templating language makes it easy to pull content from front matter into your theme.
+Front matter 是高度可配置的。比如，我想我的帖子有英雄的图片，所以我创建 `lead_image` 标签，并在我的布局放一些语法，它会根据每个帖子的 front matter 来显示对应的 lead images。Liquid 模板语言能轻松地根据 front matter ，把内容放到你的主题。
 
-There's a lot more you can do with front matter, but let's start off with a generic example.
+你还可以在 front matter 配置更多，但是让我们从一个通用的示例开始。
 
-The default front matter looks like this:
+一个默认的 front matter 像这样：
 
 ```markdown
 —
@@ -115,23 +113,23 @@ categories: jekyll update
 
 ```
 
--   Layout tells Jekyll which layout you want the content to be shown on. You can have multiple layouts for different pages or post types.
--   The post title
--   The post date
--   Categories, which are essentially tags. You can add as few or as many as you want separated by spaces.
+-   布局告诉Jekyll用那种布局来显示你的内容。你可以为不同的页面或帖子类型设置多个布局。
+-   文章标题
+-   文章日期
+-   分类，本质上是标签，可以添加任意数量的标签(以空格分隔)
 
-After the front matter your post can be written in  [Markdown][5], which gives you lots of flexibility in writing your post content.
+在配置好 front matter 之后，用 [Markdown][5] 写帖子会获得很大的灵活性。
 
-Once your post is finished save it and open up your terminal window.
+当你写完并保存之后，打开终端窗口。
 
 ```shell
 git commit -am “Publishes first post
 git push
 ```
 
-After a minute (and maybe a refresh), you will be able to see your post.
+在一分钟之后(也许刷新一下)，你就可以看到你的帖子了。
 
-Hopefully, you now have a working static site on GitHub Pages created with Jekyll! If you have any problems or questions please tweet  [@tfantina][6], or you can shoot me an email at  contact@travisfantina.com.
+希望你现在已经在使用 Jekyll 创建的 GitHub Pages 上有了一个可以工作的静态站点，如果你有任何疑问，请发推特 [@tfantina][6]，或者你可以给我发邮件contact@travisfantina.com.
 
 [1]: https://www.ruby-lang.org/en/documentation/installation/
 [2]: https://stackoverflow.com/users/6885157/alex-waibel

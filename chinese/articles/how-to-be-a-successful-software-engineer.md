@@ -1,7 +1,7 @@
 > * 原文地址：[How to be a successful software engineer](https://www.freecodecamp.org/news/how-to-be-a-successful-software-engineer-6f82a5b1a82e/)
 > * 原文作者：Zhia Chong
-> * 译者：
-> * 校对者：childtong
+> * 译者：childtong
+> * 校对者：
 
 对于刚刚开启自己事业的那些年轻而又精神奋发的软件工程师们，以下是我作为软件工程师所阅读或获得到的一些最佳技巧。
 

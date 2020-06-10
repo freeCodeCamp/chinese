@@ -3,26 +3,25 @@
 > * 译者：
 > * 校对者：childtong
 
-For the young, bright-eyed software engineers who are starting out in their careers, here are some of the best tips I’ve either read or received as a software engineer.
+对于刚刚开启自己事业的那些年轻而又精神奋发的软件工程师们，以下是我作为软件工程师所阅读或获得到的一些最佳技巧。
 
-Most of the advice here caters to the software engineering crowd, but I believe there are many tips that are applicable regardless of your profession.
-
+这里的大多数建议针对于软件工程群体，但是我相信无论你的职业是什么，都有很多技巧可以适用。
 ![](https://cdn-media-1.freecodecamp.org/images/1*czBnulToEp24YNhjnTTrqQ.png)
 
-Best career and life advice I’ve received
+我得到的最佳职业和生活建议
 
-In short, my best advice is:
+简而言之，我的最佳建议是：
 
--   Underpromise, overdeliver
--   Perfect is the enemy of good
--   Stay on a path
--   Collect feedback early
--   Seek before you ask
--   Optimize for simplicity
+-   谨慎承诺，拼命交付
+-   完美是优秀的敌人
+-   保持在路上
+-   尽早收集反馈
+-   先查找再询问
+-   为了简单而优化
 
-If you prefer to watch this in a video format, I’ve made a Youtube video here:
+如果你更喜欢以视频格式观看，我在这制作了一个YouTube视频：
 
-#### Underpromise, Overdeliver
+#### 谨慎承诺，拼命交付
 
 Underestimating the amount of work needed to accomplish a feature is an  _extremely common mistake_  among new, and even experienced, engineers.
 

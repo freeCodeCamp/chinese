@@ -1,17 +1,17 @@
 > * 原文地址：[How you can improve your workflow using the JavaScript console](https://www.freecodecamp.org/news/how-you-can-improve-your-workflow-using-the-javascript-console-bdd7823a9472/)
 > * 原文作者：Riccardo Canella
 > * 译者：Zhuotao Lian
-> * 校对者：test
+> * 校对者：
 
-![How you can improve your workflow using the JavaScript console](https://cdn-media-1.freecodecamp.org/images/1*U62GMx7Z7U56CArkK2tfCQ.jpeg)
+![t如何使用 JavaScript 控制台改善工作流程](https://cdn-media-1.freecodecamp.org/images/1*U62GMx7Z7U56CArkK2tfCQ.jpeg)
 
-by Riccardo Canella
+作者：Riccardo Canella
 
-As a web developer, you know very well the need to debug your code. We often use external libraries for logs, and to format and/or display them in some cases, but the console of our browsers is much more powerful than we think.
+作为一名 web 开发者，你一定清楚调试代码的必要性。我们经常使用外部库来记录日志，并在某些情况下格式化并/或显示它们。但浏览器的控制台，远比我们想象的强大。
 
-When we think about the console, the first thing that comes to mind and the  `console.log`, right? But there are many more methods than those we imagine. Now we will see how to make the most of using the console, and I’ll give you some tips to make them these methods more readable
+当提到控制台时，我们会首先想到 `console.log`，没错吧？但它还拥有许多其他的方法。 现在，我们将了解如何充分利用控制台。我还会给你一些提示，以便你更好地理解这些方法。
 
-### What is the Console?
+### 什么是控制台？
 
 The JavaScript console is a built-in feature in modern browsers that comes with out-of-the-box development tools in a shell-like interface. It allows a developer to:
 

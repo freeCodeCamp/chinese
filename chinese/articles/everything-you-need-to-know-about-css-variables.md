@@ -1,243 +1,240 @@
 > * 原文地址：[Everything you need to know about CSS Variables](https://www.freecodecamp.org/news/everything-you-need-to-know-about-css-variables-c74d922ea855/)
 > * 原文作者：[Emmanuel Ohans](https://www.freecodecamp.org/news/author/emmanuel/)
-> * 译者：
+> * 译者：LolaWei
 > * 校对者：
 
-![Everything you need to know about CSS Variables](https://cdn-media-1.freecodecamp.org/images/1*Im5WsB6Y7CubjWRx9hH7Gg.png)
+![你需要知道的关于 CSS 变量的一切](https://cdn-media-1.freecodecamp.org/images/1*Im5WsB6Y7CubjWRx9hH7Gg.png)
 
-Most programming languages have support for variables. But sadly, CSS has lacked support for native variables from the very beginning.
+很多编程语言都支持变量，但很遗憾， CSS 从开发之始便不支持原生变量。
 
-You write CSS? Then no variables for you. Well, except if you were using a preprocessor like Sass.
+你写 CSS 代码吗？那么除非利用像 Sass 这样的预处理器，否则无法使用变量。 
 
-Preprocessors like Sass sell the use of variables as a big add-on. A reason to try them. And you know what? It’s a pretty darn good reason.
+Sass 这样的预处理器将变量使用作为其主要的销售卖点，这也是我们值得一试的理由。
 
-Well the web is moving fast. And I’m glad to report that  **CSS now finally supports variables**.
+但是网站开发发展得很快，而我可以很高兴地告诉你们： **CSS 现在也支持变量了**。
 
-While preprocessors support a lot more features, the addition of CSS variables is a good one. This moves the web even closer to the future.
+尽管预处理器支持更多功能，但是 CSS 变量也不错，而且 CSS 变量会推动网站发展。
 
-In this guide, I’ll show you how variables work natively in CSS, and how you can use them to make your life a lot easier.
+在本指南中，我将向你展示如何在 CSS 中使用原生变量，如何通过使用它让你的工作更加轻松。
 
-### What you’ll Learn
+### 你将学习到什么？
 
-I’ll first walk you through the basics of CSS Variables. I believe any decent attempt at understanding CSS Variables must begin here.
+我会首先向你介绍 CSS 变量的基础知识。这是了解 CSS 变量的第一步。
 
-Learning the fundamentals is cool. What’s even cooler is applying these fundamentals to build real-world apps.
+学习基础知识很酷，但更酷的是用基础知识构建实际应用。
 
-So I’ll wrap things up by showing you how to build 3 projects that show off CSS variables and their ease of use. Here’s a quick preview of these 3 projects.
+因此，我会教你构建 3 个项目，进而介绍 CSS 变量及其易用性。现在我们来快速浏览这 3 个项目。
 
-#### Project 1: Creating Component Variations using CSS Variables
+#### 项目 1：使用 CSS 变量创建可变组件
 
-You may already be building component variations today. Whether you use React, Angular, or Vue, CSS Variables will make this process simpler.
+目前，你可能使用 React，Angular 或 Vue 创建可变组件，但是 CSS 变量会简化创建过程。
 
 ![](https://cdn-media-1.freecodecamp.org/images/r-nxpw6nKfFcP2qKc1kazVf-I73jUwFtSEBW)
 
-Creating Component Variations using CSS variables
+使用 CSS 变量修改元素样式
 
-Check out the project on  [Codepen][1].
+在[Codepen][1]上查看项目
 
-#### Project 2: Theme Styles with CSS Variables
+#### 项目 2 ：使用 CSS 变量设置主题风格 
 
-You’ve likely see this somewhere. I’ll show how easy CSS variables make creating site-wide theme styles.
+你可能在其他地方看到过类似功能。我会教你使用 CSS 变量轻松创建全站主题风格。
 
 ![](https://cdn-media-1.freecodecamp.org/images/bgLNFnk5dAvvsgFM1nOQgu0Atr2zBGHEDwl7)
 
-Site-wide theme styles using CSS variables
+使用 CSS 变量设置全站主题风格
 
-Check out the project on  [Codepen][2].
+在[Codepen][2]上查看项目
 
-#### Project 3: Building the CSS Variable Booth ?
+#### 项目 3 ：创建 CSS 变量盒
 
-This is the final project. Don’t mind the name. I couldn’t come up with a better name.
+这是最后一个项目。不要在意项目名字，我实在想不出更好的名字了。
 
 ![](https://cdn-media-1.freecodecamp.org/images/wgeg31Oo2VNWSckH5knbYZHR3TwMk2xGbTLU)
 
-The color of the boxes are dynamically updated
+盒子颜色会动态改变。
 
-Notice how the colors of the boxes are dynamically updated, and how the box container is rotated in 3D space as the range input is changed.
+观察一下盒子颜色是如何动态改变的。调节输入值时，盒子容器会 3 维 旋转。
 
 ![](https://cdn-media-1.freecodecamp.org/images/tZSo5HlypOi0UxMK-T4Rp0QbuKpBs4nTCZqR)
 
-This project shows off the ease of updating CSS variables with JavaScript, and the reactive goodies you get with it.
+该项目展示了如何便捷地使用 JavaScript 更新 CSS 变量，并展示出一个很好的交互效果。
 
-#### This is going to be fun!
+#### 学习过程非常有趣！
 
-Spend some time having fun with it on  [Codepen][3].
+花点时间在 [Codepen][3] 上享受乐趣吧。
 
-Note: The article assumes you have a good grasp of CSS. If you don’t know CSS very well, or want to learn to create jaw-dropping UIs, I recommend taking my  [Advanced CSS Course][4]  (paid course that include 85 lessons). This article is an excerpt from the course. </Shameless plug> ?
+注意：本文假设你已熟练掌握了 CSS，如果你不太解CSS，或者想学习做出炫酷的用户界面，我建议你学习我的[高级CSS课程][4] (包括85课的付费课程)，这篇文章即摘自此课程。< /厚着脸皮做广告咯> ？
 
-### Why variables are so important
+### 为什么变量如此重要？
 
-If you’re new to variables in preprocessors or native CSS, here are a few reasons why variables are important.
+如果你尚不了解预处理器中的变量或原生 CSS 变量，那么请看以下理由。
 
-#### **Reason #1: More readable code**
+#### **理由一：增强代码可读性**
 
-Without saying much, you can quickly tell how readable and more maintainable variables make any code base.
+项目过程中，你可以很快了解变量是如何增强代码库的可读性与可维护性的。
 
-#### **Reason #2: Ease of change across large documents**
+#### **理由二：易于跨大文档修改
 
-If you have all your constants saved in a separate file, you don’t have to jump through thousands of lines of code when you want make a change to a variable.
+如果所有常量都保存在单个文件中，就不需要在几千行代码里一一修改变量了。使用变量之后，你只需改动一个地方即可实现。
 
-It becomes super-easy. Just change it in one place, and voilà.
+#### **理由三：快速定位拼写错误**
 
-#### **Reason #3: You can spot typos faster**
+在一行行的代码中寻找错误非常痛苦。如果只是一个简单的拼写错误，那就更烦人了。因为我们很难发现小错误。但合理使用变量便可以解决这个问题。
 
-It’s a pain to search through lines of codes trying to spot an error. It’s even more annoying if the error was due to a simple typo. They are difficult to spot. The good use of variables eliminates these hassles.
+为此，可读性与可维护性才是制胜法宝。
 
-To this end, readability and maintainability are the big wins.
+而 CSS 原生变量就可以提高代码可读性与可维护性。
 
-Thanks to CSS variables, now we can have these with native CSS too.
+### 定义 CSS 变量
 
-### Defining CSS variables
+先谈你熟悉的内容吧：Javascript 中的变量。
 
-Let me start with something you may already be familiar with: variables in JavaScript.
-
-A simple JavaScript variable may be declared like so:
+声明简单 Javascript 变量：
 
 ```
 var amAwesome;
 ```
 
-and then you can assign it some value like so:
+为变量赋值：
 
 ```
 amAwesome = "awesome string"
 ```
 
-In CSS, a CSS variable is any “property” whose name begins with two dashes.
+在 CSS 中，用双破折号引出 CSS 变量。
 
 ```
-/*can you spot the variable here? */.block { color: #8cacea;--color: blue}
+/*你能找到 CSS 变量吗？ */.block { color: #8cacea;--color: blue}
 ```
 
 ![](https://cdn-media-1.freecodecamp.org/images/FCjHzPCqE-7rA9iKu5aGF7rojUNRx-s0Tzm1)
 
-CSS Variables are also called “Custom Properties”
+CSS 变量又名 “自定义属性”
 
-### Scoping CSS Variables
+###  CSS 变量的作用范围
 
-There’s one more thing to point your attention to.
+注意：
 
-Remember that in JavaScript, variables have a scope. They may either have a  `global`  or  `local`  scope.
+在 Javascript 中，变量有作用范围。可能是`全局`变量或`局部`变量。
 
-The same may be said of CSS variables.
+ CSS 变量同样如此。
 
-Consider the example below:
+举例如下：
 
 ```
 :root {  --main-color: red}
 ```
 
-The  `:root`  selector allows you to target the highest-level element in the DOM, or document tree.
+使用`:root` 选择器可定位 DOM 或文档树中最高级别的元素。
 
-So, variables declared in this way are kind of scoped to the global scope.
+这种变量即为全局变量。
 
-Got that?
 
 ![](https://cdn-media-1.freecodecamp.org/images/XjRjOOsd5x9tj7-HtCx5CxhWQqfS-Ih9brdo)
 
-Local and Globally scoped variables
+局部变量与全局变量
 
-### Example 1
+### 例一
 
-Assuming you wanted to create a CSS variable that stored the primary color of a themed site.
+假设你想创建一个 CSS 变量，该变量可定义主题网站的初始颜色。
 
-How would you go about this?
+如何操作呢？
 
-1.  You create the scoped selector. Use  `:root`  for a 'global' variable
+1\.使用`:root`选择器。
 
 ```
 :root { }
 ```
 
-2\. Define the variable
+2\. 定义变量
 
 ```
 :root { --primary-color: red}
 ```
 
-Remember, a CSS variable is any “property” whose name begins with two dashes e.g  `--color`
+CSS 变量前要加双破折号，如 `--color`。
 
-That was simple.
 
-### Using CSS Variables
+### 使用 CSS 变量
 
-Once a variable has been defined and assigned a value, you can go ahead and use it within a property value.
+一旦定义了变量并为其赋值，就可以继续在其他属性中使用它。
 
-There’s a bit of a gotcha though.
+不过要注意一点。
 
-If you’re coming from the world of preprocessors, you must be used to using a variable by just referencing its name. For example:
+如果你习惯使用预处理器，那么你肯定习惯通过引用变量名使用变量。例如:
 
 ```
 $font-size: 20px.test {  font-size: $font-size}
 ```
 
-With native CSS variables, things are a little different. You reference a variable by using the  `var()`  function.
+但如果使用 CSS 原生变量，情况会稍有不同。需要使用`var()`函数指代变量。
 
-With the example above, using CSS Variables will yield this:
+还是利用上面的例子，以下是使用 CSS 原生变量的赋值方法：
 
 ```
 :root {  --font-size: 20px}.test {  font-size: var(--font-size)}
 ```
 
-Quite different.
+两者大不相同。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1AMhf-NdKdLdzxW45VtU6uwfaZjWfWcXF3wl)
 
-Remember to use the var function
+记住：使用 var()函数。
 
-Once you get that out of the way, you’ll start to love CSS variables - a lot!
+一旦解决了这个问题，你就会越来越爱 CSS 变量！
 
-Another important note is that, unlike variables in Sass (or other preprocessors) — where you can use the variables in a lot of places, and do math like you want — you need to be careful with CSS variables. You’ll mostly have them set as property values.
+另外要注意，不同于 Sass (或其他预处理器) 中的变量————你可以在很多地方使用这些变量，并做数学计算————但使用时要小心。大部分时候，CSS 变量用作属性值。
+
 
 ```
-/*this is wrong*/.margin {--side: margin-top;var(--side): 20px;}
+/*此写法错误*/.margin {--side: margin-top;var(--side): 20px;}
 ```
 
 ![](https://cdn-media-1.freecodecamp.org/images/bBkez6wqzvxDXUGNyyyLdHbN4ebWs9qcCPDB)
 
-The declaration is thrown away as a syntax error for having an invalid property name
+属性名无效，此写法语法错误。
 
-You also can’t do math. You need the CSS  `calc()`  function for that. I’ll discuss examples as we proceed.
+你也无法直接使用数学运算功能。你需要 CSS `calc()`函数做数学运算。我将在接下来的案例中讨论该函数。
 
 ```
-/*this is wrong */.margin {--space: 20px * 2;font-size:  var(--space);  //not 40px}
+/*此写法错误 */.margin {--space: 20px * 2;font-size:  var(--space);  //not 40px}
 ```
 
-If you must do math, then use the calc() function like so:
+如果你一定要做数学计算，那么可以这样使用 calc() 函数：
 
 ```
 .margin {--space: calc(20px * 2);font-size:  var(--space);  /*equals 40px*/}
 ```
 
-### Properties Worthy of Mention
+### 值得一提的属性
 
-Here are some behaviors that are worth mentioning.
+以下问题值得一提。
 
-#### 1\. Custom properties are ordinary properties, so they can be declared on any element.
+#### 1\. 由于自定义属性是普通属性，所以我们可以在任意元素中声明自定义属性。
 
-Declare them on a paragraph element, section, aside, root, or even pseudo elements. They’ll work as expected.
+在段落标签、文档区域标签、侧边栏标签、根标签甚至伪元素中声明变量即可，它们与普通属性作用相同。
 
 ![](https://cdn-media-1.freecodecamp.org/images/EOJ56i9qnkGPl1-I19u3TILcrJq8Ma-5R99s)
 
-They behave like normal properties
+自定义属性与普通属性作用相同
 
-#### 2\. CSS variables are resolved with the normal inheritance and cascade rules
+#### 2\. CSS 属性具有继承性与级联性 
 
-Consider the block of code below:
+参考下面的例子：
 
 ```
 div {  --color: red;}div.test {  color: var(--color)}div.ew {  color: var(--color)}
 ```
 
-As with normal variables, the  `--color`  value will be inherited by the divs.
+与普通变量相同，`--color` 变量的值会继承父盒子的属性值。
 
 ![](https://cdn-media-1.freecodecamp.org/images/g-kAkNulNHQGkMd9vst3XuTG5kvoJJ2IfVff)
 
-#### 3\. CSS variables can be made conditional with  `@media`  and other conditional rules
+#### 3\.  CSS 变量可添加条件规则，如媒体类型
 
-As with other properties, you can change the value of a CSS variable within a  `@media`block or other conditional rules.
+与其他属性相同，使用  `@media` 或其他条件规则可改变 CSS 变量的值。
 
-For example, the following code changes the value of the variable, gutter on larger devices.
+举个例子，在大屏幕上，以下代码会改变 gutter 的值：
 
 ```
 :root { --gutter: 10px }@media screen and (min-width: 768px) {    --gutter: 30px}
@@ -245,11 +242,11 @@ For example, the following code changes the value of the variable, gutter on lar
 
 ![](https://cdn-media-1.freecodecamp.org/images/IFwkEmf33YCyC19hjtMZwPgwA3VnwKR6bgvG)
 
-Useful bit for responsive design
+这对响应式设计大有裨益
 
-#### 4\. CSS variables can be used in HTML’s style attribute.
+#### 4\. CSS 变量用于 HTML 的样式属性。
 
-You can choose to set the value of your variables inline, and they’ll still work as expected.
+设置行内样式：
 
 ```
 <!--HTML--><html style="--color: red"><!--CSS-->;body {  color: var(--color)}
@@ -257,93 +254,92 @@ You can choose to set the value of your variables inline, and they’ll still wo
 
 ![](https://cdn-media-1.freecodecamp.org/images/bZgNRz8ZoSoLMcWPcmPnivMx8p7035cx6p5E)
 
-Set variables inline
+在行内设置变量值
 
-CSS variables are case-sensitive. Be careful with this one. I save myself the stress and write variables in the lower case. Your mileage may differ.
-
-```
-/*these are two different variables*/:root { --color: blue;--COLOR: red;}
-```
-
-### Resolving Multiple Declarations
-
-As with other properties, multiple declarations are resolved with the standard cascade.
-
-Let’s see an example:
+注意：CSS 变量区分大小写。为了方便，我都是用的小写，你可以自行选择大小写。
 
 ```
-/*define the variables*/:root { --color: blue; }div { --color: green; }#alert { --color: red; }/*use the variable */* { color: var(--color); }
+/*变量大写与小写*/:root { --color: blue;--COLOR: red;}
 ```
 
-With the variable declarations above, what will be the color of the following elements?
+### 解决重复声明
+
+与其他变量相同，标准级联规则可解决重复声明。
+
+举个例子：
+
+```
+/*定义变量*/:root { --color: blue; }div { --color: green; }#alert { --color: red; }/*u使用变量 */* { color: var(--color); }
+```
+
+多次声明以上变量后，元素的颜色如何变化呢？
 
 ```
 <;p>What's my color?</p><div>and me?</div><div id='alert'>  What's my color too?  <p>color?</p></div>
 ```
 
-Can you figure that out?
+你能猜出来吗？
 
-The first paragraph will be  `blue`. There is no direct  `--color`  definition set on a  `p`selector, so it inherits the value from  `:root`
+第一段为 `蓝色` 。因为未给 `p` 元素设置变量，所以它会继承 `:root` 中定义的颜色。
 
 ```
 :root { --color: blue; }
 ```
 
-The first  `div`  will be  `green`  . That’s pretty clear. There’s a direct variable definition set on the  `div`
+第一个 `div` 元素为  `绿色` 。这很显然。因为我们使用变量指定了`div`元素颜色为绿色。
 
 ```
 div { --color: green; }
 ```
 
-The  `div`  with the ID of  `alert`  will NOT be green. It will be  `red`
+ID 为 `alert` 的  `div` 元素不为绿色，而为 `红色`。
 
 ```
 #alert { --color: red; }
 ```
 
-The ID has a direct variable scoping. As such, the value within the definition will override the others. The selector  `#alert`  is more specific.
+ID 中的变量有直接作用域，其颜色属性会覆盖掉原来的属性。 `#alert` 选择器作用范围更加明确。
 
-Finally, the  `p`  within the  `#alert`  will be…  `red`
+最后，ID 为 `alert` 的 `p` 元素为 `红色`。
 
-There’s no variable declaration on the paragraph element. You may have expected the color to be  `blue`  owing to the declaration on the  `:root`  element.
+因为没有为段落元素声明变量，所以你可能会认为该段落会变为 `蓝色`，因为我们在 `:root`中定义了蓝色。
 
 ```
 :root { --color: blue; }
 ```
 
-As with other properties, CSS variables are inherited. The value is inherited from the parent,  `#alert`
-
+与其他属性相同，CSS 变量具有继承性，子元素会继承父元素 `#alert` 的属性值。
 ```
 #alert { --color: red; }
 ```
 
 ![](https://cdn-media-1.freecodecamp.org/images/65xpwkEjRm90CKZEWAbaX66cCHdl46xWr32C)
 
-The solution to the Quiz
+答案如图所示
 
-### Resolving Cyclic Dependencies
+### 解决循环依赖
 
-A cyclic dependency occurs in the following ways:
+循环依赖会发生在以下情境中：
 
-1.  When a variable depends on itself. That is, it uses a  `var()`  that refers to itself.
+1\.  变量需要依赖其自身值。即，定义时就使用了`var()` 引用其值。  
 
 ```
 :root {  --m: var(--m)}body {  margin: var(--m)}
 ```
 
-2\. When two or more variables refer to each other.
+2\. 两个或两个以上的变量互相引用时。
 
 ```
 :root {  --one: calc(var(--two) + 10px);  --two: calc(var(--one) - 10px);}
 ```
 
-Be careful not to create cyclic dependencies within your code.
+不要在代码中创建这样的循环引用。
 
-### What Happens with Invalid Variables?
+### 使用无效变量会怎样？
 
-Syntax errors are discarded, but invalid  `var()`  substitutions default to either the initial or inherited value of the property in question.
+语法错误会被忽略，但是无效的 `var()` 会导致错误的初始值或继承到有问题的值。
 
-Consider the following:
+举例如下：
 
 ```
 :root { --color: 20px; }p { background-color: red; }p { background-color: var(--color); }
@@ -351,519 +347,497 @@ Consider the following:
 
 ![](https://cdn-media-1.freecodecamp.org/images/ExHNombXi1ObmK5sc8WtbTSttIJ7MNGujbZP)
 
-As expected,  `--color`  is substituted into  `var()`  but the property value,  `background-color: 20px`  is invalid after the substitution. Since  `background-color`  isn’t an inheritable property, the value will default to its  `initial`  value of  `transparent`.
+变量`--color` 带入了 `var()` ， 但是属性值`background-color: 20px`在变量带入后是无效的，因为`background-color`不是继承属性，所以它的值会默认变成 `初始` 值，即`transparent`。
 
 ![](https://cdn-media-1.freecodecamp.org/images/tdeD7sLFRUvKCdXP2Y6SXuQCakTcv-hV5PNR)
 
-Note that if you had written  `background-color: 20px`  without any variable substitutes, the particular background declaration would have been invalid. The previous declaration will then be used.
+注意，如果你直接写 `background-color: 20px` ，那么这个属性声明即是无效的。该元素会使用前面元素对颜色的声明，即红色。 
 
 ![](https://cdn-media-1.freecodecamp.org/images/24FLLWAoCML1VC4G95GQ1IGLQnPuwoJ2AoGA)
 
-The case is differrent when you write the declaration yourself
+当你这样写声明时，情况就不一样了。
 
-### Be Careful While Building Single Tokens
+### 小心创建单一标记
 
-When you set the value of a property as indicated below, the  `20px`  is interpreted as a single token.
+当设置类似下面的属性值时，`20px` 会被编译为单一标记。
 
 ```
 font-size: 20px
 ```
 
-A simple way to put that is, the value  `20px`  is seen as a single ‘entity.’
+简单点说， `20px` 是一个整体。 
 
-You need to be careful when building single tokens with CSS variables.
+当用 CSS 变量创建单一标记时，需要小心点。
 
-For example, consider the following block of code:
-
+举个例子，请看如下代码：
 ```
-:root { --size: 20}div {  font-size: var(--size)px /*WRONG*/}
+:root { --size: 20}div {  font-size: var(--size)px /*提醒*/}
 ```
 
-You may have expected the value of  `font-size`  to yield  `20px`, but that is wrong.
+你可能认为 `font-size`为`20px`, 但是你错了。
 
-The browser interprets this as  `20 px`
+浏览器会把它解析为 `20 px`。
 
-Note the space after the  `20`
+注意`20`与`px`之间的空格。
 
-Thus, if you must create single tokens, have a variable represent the entire token. For example,  `--size: 20px`, or use the  `calc`  function e.g  `calc(var(--size) * 1px)`  where  `--size`  is equal to  `20`
+因此，如果你不得不创建独立标记，那么一定要用变量表示这个整体。举个例子，使用`--size: 20px`, 或者`calc` 函数，如`calc(var(--size) * 1px)`，这里的`--size`等于 `20`。
 
-Don’t worry if you don’t get this yet. I’ll explain it in more detail in a coming example.
+如果你没看懂，不要担心。我会在下个例子中仔细解释这一概念。
 
-### Let’s build stuff!
+### 实战环节！
 
-Now this is the part of the article we’ve been waiting for.
+终于到了期待已久的部分了。
 
-I’ll walk you through practical applications of the concepts discussed by building a few useful projects.
+我会带你写几个有用的项目，来看看 CSS 变量的实际用法。
 
-Let’s get started.
+开始吧。
 
-### Project 1: Creating Component Variations using CSS Variables
+### 项目1: 使用CSS变量创建可变组件。
 
-Consider the case where you need to build two different buttons. Same base styles, just a bit of difference.
+假设你需要创建两个不同的按钮。两个按钮基础样式相同，但只有一点小小的区别。
 
 ![](https://cdn-media-1.freecodecamp.org/images/Em6yJKVwIi9tjgjAw6vbF1Ci5H4ARS0A9acL)
 
-In this case, the properties that differ are the  `background-color`  and  `border-color`  of the variant.
+在这个例子中，两个按钮不同的属性为`background-color`和`border-color`。
 
-So, how would you do this?
+怎么做呢？
 
-Here’s the typical solution.
+一般来说，我们都会这么做。
 
-Create a base class, say  `.btn`  and add the variant classes. Here’s an example markup:
+创建一个基类，比如 `.btn`，然后加上不同的类，举例如下：
 
 ```
 <button class="btn">Hello</button&gt;<button class="btn red">Hello</button>
 ```
 
-`.btn`  would contain the base styles on the button. For example:
+`.btn`包含按钮的基本样式。举例如下：
 
 ```
 .btn {  padding: 2rem 4rem;  border: 2px solid black;  background: transparent;  font-size: 0.6em;  border-radius: 2px;}
 ```
 
 ```
-/*on hover */.btn:hover {  cursor: pointer;  background: black;  color: white;}
+/*悬浮状态*/.btn:hover {  cursor: pointer;  background: black;  color: white;}
 ```
 
-So, where does the variant come in?
+按钮样式如何变化呢？
 
-Here:
 
 ```
-/* variations */.btn.red {  border-color: red}.btn.red:hover {  background: red}
+/* 变化 */.btn.red {  border-color: red}.btn.red:hover {  background: red}
 ```
 
-You see how we are duplicating code here and there? This is good, but we could make it better with CSS variables.
+看到了吗，我们一直在复制代码。这样也好，但是使用 CSS 变量会更简洁。
 
-What’s the first step?
+第一步怎么做呢？
 
-Substitute the varying colors with CSS variables, and don’t forget to add default values for the variables!
+使用 CSS 变量替换变化的颜色值，不要忘记为变量设置默认值！
 
 ```
 .btn {   padding: 2rem 4rem;   border: 2px solid var(--color, black);   background: transparent;   font-size: 0.6em;   border-radius: 2px; }
 ```
 
 ```
- /*on hover*/  .btn:hover {  cursor: pointer;   background: var(--color, black);   color: white; }
+ /*悬浮状态*/  .btn:hover {  cursor: pointer;   background: var(--color, black);   color: white; }
 ```
 
-When you do this:  `background:  **var(--color, black)**`  you’re saying, set the background to the value of the variable  `--color`  . However, if the variable doesn't exist, use the default value of  `**black**`
+设置 `background:  **var(--color, black)**` 是为了让背景颜色变成 `--color`变量的值。但当变量不存在时，该元素就会自动使用替换值 `**black**`。
 
-This is how you set default variable values. Just like you do in JavaScript or any other programming language.
+这就是设置默认属性值的方法，跟在 JavaScript 或其他的编程语言中如出一辙。
 
-Here’s the good part.
+好戏才刚刚开始。
 
-With the variants, you just supply the new value of the CSS variable as under:
+有了变量，就可以像下面这样设置新的变量值了：
 
 ```
 .btn.red {   --color: red }
 ```
 
-That’s all. Now when the  `.red`  class is used, the browser notes the different  `--color`variable value, and immediately updates the appearance of the button.
+如果元素 class 使用了`.red`，浏览器会注意到不同的 `--color` 值，进而改变按钮的外观。
 
-This is really good if you spend a lot of time building reusable components.
+使用变量创建可变组件可以节约很多时间。
 
-Here’s a side by side comparison:
+对比两段代码：
 
 ![](https://cdn-media-1.freecodecamp.org/images/gmEzlvRN7KiaDVWEy2ZUE7kI5a5PpAAJs3gU)
 
-Without CSS Variables VS with CSS Variables
+使用 CSS 变量 VS 不使用 CSS 变量
 
-Oh, and if you had more variants, you just saved yourself a lot of extra typing.
+如果有更多的变量，还能剩下很多敲代码的时间。
 
 ![](https://cdn-media-1.freecodecamp.org/images/OUyVLhYwkveuuaSbIAG8QHoo0cgNtqPrqWhi)
 
-See the difference??
+看到区别了吗？
 
-### Project 2: Themed Sites with CSS Variables
+### 项目二: 使用 CSS 变量定制网站主题
 
-I’m sure you’ve come across them before. Themed sites give the user the feel of customization. Like they are in control.
 
-Below is the basic example we’ll build.
+我敢说，你之前肯定浏览过类似网站。主题网站会让用户觉得自己可以定制主题，就好像自己在主管该网站一样。
+
+以下便是我们要使用的例子。
+
 
 ![](https://cdn-media-1.freecodecamp.org/images/LsBPxBoN-bc9PZorRq39kklAE5yTiSmkgm6I)
 
-So, how easy do the CSS variables make this?
 
-We’ll have a look.
+使用 CSS 变量会让创建过程变得多么简单呢？
 
-Just before that, I wanted to mention that this example is quite important. With this example, I’ll introduce the concept of updating CSS variables with JavaScript.
 
-It is fun!
+这个例子非常重要。在这个例子中，我会介绍如何使用 Javascript 来更新 CSS 变量。
 
-You’ll love it.
+### 我们实际要做的
 
-### What we really want to do.
+CSS 变量的魅力在于其互动性。一旦你修改了某个 CSS 变量，其对应的属性都会发生变化。
 
-The beauty of CSS variables is their reactive nature . As soon as they are updated, whatever property has the value of the CSS variable gets updated as well.
-
-Conceptually, here’s an image that explains the process with regards to the example at hand.
+下图从概念上解释了整个例子的操作过程。
 
 ![](https://cdn-media-1.freecodecamp.org/images/OmRYAlINfOHcYWrLDzBJfjJkI6ejbsg5Tstc)
 
-The process
+流程图
 
-So, we need some JavaScript for the click listener.
+我们需要使用 JavaScript 监听点击事件。
 
-For this simple example, the background and color of the text of the entire page is based off of CSS variables.
+在这个简单的例子中，整个页面的背景和文本颜色全部基于 CSS 变量。
 
-When you click any of the buttons above, they set the CSS variable to some other color. As a result of that, the background of the page is updated.
+当点击左上方的任意一个按钮时， CSS 变量的值即会改变。因此，页面的背景颜色也会变化。
 
-Hey, that’s all there is to it.
+该项目的原理就是这样。
 
-Uh, one more thing.
+除此之外，我们怎么改变 CSS 变量的值呢？
 
-When I say the CSS variable is set to some other value, how’s that done?
 
 ![](https://cdn-media-1.freecodecamp.org/images/UIQ3ij9Cy-iU3rO5OXkQc1uyPhMPGuHD1zXb)
 
-Set the variable inline
+行内设置变量
 
-CSS variables will take effect even if they are set inline. With JavaScript, we get a hold of the root document, and we set the new value for the CSS variable inline.
+即便把 CSS 变量设为行内样式，它的值也会改变。和 Javascript 一起，我们可以控制整个文档，并使用 CSS 变量设置行内样式。
 
-Got that?
+明白了吗？
 
-That’s a lot of talking — let’s do the real thing.
+废话不多说，开始操作吧。
 
-### The initial markup
+### 初始代码
 
-The initial markup needed is this:
+初始代码如下：
 
 ```
 <div class="theme">  <button value="dark">dark</button>  <button value="calm">calm</button>  <button value="light">light</button></div><article>...</article>
 ```
 
-The markup consists of three buttons within a  `.theme`  parent element. To keep things short I have truncated the content within the  `article`  element. Within this  `article`element is the content of the page.
+代码中有三个按钮元素，它们都继承自类名为 `.theme` 的父元素。为了简化我没有写`article`元素，`article`元素包含页面的主要内容。
 
-### Styling the Page
+### 页面样式
 
-The success of this project begins with the styling of the page. The trick is simple.
+为了成功实现该项目，首先要改变页面风格。方法很简单。
 
-Instead of just setting the  `background-color`  and  `color`  of the page in stone, we will set them based on variables.
+没必要为每种风格都设置`background-color`和`color`属性, 只需要使用变量来设置。
 
-Here’s what I mean.
+如下所示：
 
 ```
 body {  background-color: var(--bg, white);  color: var(--bg-text, black)}
 ```
 
-The reason for this is kind of obvious. Whenever a button is clicked, we will change the value of both variables within the document.
+原因很明显。按下按钮时，两个 CSS 变量的值都会改变。
 
-Upon this change, the overall style of the page will be updated. Easy-peasy.
+如此一来，整个页面的风格都会发生变化。
 
 ![](https://cdn-media-1.freecodecamp.org/images/lbU62-myh4lQakl9DoOYEaetbRLhPt4NZP01)
 
-So, let’s go ahead and handle the update from JavaScript.
+现在轮到 JavaScript 了。
 
-#### Getting into the JavaScript
+#### 使用 JavaScript
 
-I’ll go ahead and spit out all the JavaScript needed for this project.
+以下是项目需要用到的 JavaScript 代码：
 
 ```
 const root = document.documentElement const themeBtns = document.querySelectorAll('.theme > button')themeBtns.forEach((btn) => {  btn.addEventListener('click', handleThemeUpdate)})function handleThemeUpdate(e) {  switch(e.target.value) {    case 'dark':       root.style.setProperty('--bg', 'black')      root.style.setProperty('--bg-text', 'white')      break    case 'calm':        root.style.setProperty('--bg', '#B3E5FC')       root.style.setProperty('--bg-text', '#37474F')      break    case 'light':      root.style.setProperty('--bg', 'white')      root.style.setProperty('--bg-text', 'black')      break  }}
 ```
 
-Don’t let that scare you. It’s a lot easier than you probably think.
+别害怕，代码比你想的简单的多。
 
-First off, keep a reference to the root element,  `const root = document.documentElement`
+首先，获取根元素，`const root = document.documentElement`
 
-The root element here is the  `HTML`  element. You’ll see why this is important in a bit. If you’re curious, it is needed to set the new values of the CSS variables.
+这里的根元素是`HTML`。一会你就会理解这为什么重要了，如果你很好奇，那么就先认为这是为了设置 CSS 变量使用的。
 
-Also, keep a reference to the buttons too,  `const themeBtns = document.querySelectorAll('.theme > butto`n')
+除此之外，还要获取按钮元素，`const themeBtns = document.querySelectorAll('.theme > button`)
 
-`querySelectorAll`  yields an array-like data structure we can loop over. Iterate over each of the buttons and add an event listener to them, upon click.
+`querySelectorAll`方法会获取伪数组。之后遍历该伪数组，然后添加对应的点击事件。  
 
-Here’s how:
+代码如下：
 
 ```
 themeBtns.forEach((btn) => {  btn.addEventListener('click', handleThemeUpdate)})
 ```
 
-Where’s the  `handleThemeUpdate`  function? I’ll discuss that next.
+ `handleThemeUpdate`函数在哪里呢？请继续往下看。
 
-Every button being clicked will have the  `handleThemeUpdate`  as its callback function. It becomes important to note what button was clicked and then perform the right operation.
+点击按钮会触发对应的`handleThemeUpdate`函数。需要为每一个按钮的点击事件配置对应的操作。
 
-In the light of that, a switch  `operator`  is used, and some operations are carried out based on the value of the button being clicked.
+基于此，这里用了一个 switch 的`operator`，不同按钮的点击事件不同。
 
-Go ahead and take a second look at the block of JavaScript code. You’ll understand it a lot better now.
+再看一眼前面 JavaScript 的代码块吧，现在你应该理解的更好了。
 
-### Project 3: Building the CSS Variable Booth ?
+### 项目三: 创建 CSS 变量盒?
 
-In case you missed it, here’s what we’ll build:
+如果你之前没有看到过效果图，那么我再贴一次图片：
 
 ![](https://cdn-media-1.freecodecamp.org/images/IgKvTxKSenWIErNZ4Im96FCV65MJPaf4qfad)
 
-Remember that the color of the boxes are dynamically updated, and that the box container is rotated in 3d space as the range input is changed.
+盒子的颜色会动态改变，盒子容器会根据输入值 3 维旋转。
 
 ![](https://cdn-media-1.freecodecamp.org/images/UZNu2ymN0vI2VH4en9NLaJ4T22l8UEWnPi2i)
 
-You can go ahead and play with it on  [Codepen][5].
+在[Codepen][5]上尝试。
 
-This is a superb example of updating CSS variables with JavaScript and the reactivity that comes with it.
+这是使用 CSS 变量和 JavaScript 一同创造出的一个既有交互性有很美妙的例子。
 
-Let’s see how to build this.
+来看看创建过程。
 
-#### The Markup
+#### 代码片段
 
-Here are the needed components.
+需要以下元素：
 
-1.  A range input
-2.  A container to hold the instructions
-3.  A section to hold a list of other boxes, each containing input fields
+1.  用来输入范围值的输入框
+2.  包含指令的容器
+3.  包含其他盒子的盒子容器，每一个子盒子中都包含一个输入框
 
 ![](https://cdn-media-1.freecodecamp.org/images/FHA6xhsFiPCoGpBB5VLcKzoggivesElFAkWQ)
 
-The markup turns out simple.
+代码结构非常简单。
 
-Here it is:
+如下所示：
 
 ```
 <main class="booth">  <aside class="slider">    <label>Move this ? </label>    <input class="booth-slider" type="range" min="-50" max="50" value="-50" step="5"/>  </aside>    <section class="color-boxes">    <div class="color-box" id="1"><input value="red"/></div>    <div class="color-box" id="2"><input/></div>    <div class="color-box" id="3"><input/></div>    <div class="color-box" id="4"><input/&gt;</div&gt;    <div class="color-box" id="5"><input/></div>    <div class="color-box" id="6">;<input/>&lt;/div>  </section>  <footer class="instructions">    ?? Move the slider<br/>    ?? Write any color in the red boxes   </footer></main>  
 ```
 
-Here are a few things to point your attention to.
+注意以下几点：
 
-1.  The range input represents values from  `-50`  to  `50`  with a step value of  `5`  Also, the value of the range input is the minimum value,  `-50`
-2.  If you aren’t sure how the range input works, check it out on  [w3schools][6]
-3.  Note how the section with class  `.color-boxes`  contains other  `.color-box`containers. Within these containers exist input fields.
-4.  It is perhaps worth mentioning that the first input has a default value of red.
+1.  输入框中输入值的取值范围为`-50`到`50` ，步长为`5`。除此之外，默认输入值为 `-50`。
+2.  如果你不确定输入框的原理，那么请先到 [w3schools][6]了解相关概念。
+3.  注意观察类名为 `.color-boxes` 的盒子容器是如何包含其他类名为 `.color-box`的容器的，子盒子又是如何包含输入框的。
+4.  值得一提的是，第一个输入框的颜色默认为红色。
 
-Having understood the structure of the document, go ahead and style it like so:
+理解了代码结构后，继续添加如下样式：
 
 ![](https://cdn-media-1.freecodecamp.org/images/pY28lnZFx4xvar807GegIg4HIn4DNcBAG5rE)
 
-1.  Take the  `.slider`  and  `.instructions`  containers out of the document flow. Position them absolutely.
-2.  Give the  `body`  element a sunrise background color and garnish the background with a flower in the bottom left corner
-3.  Position the  `color-boxes`  container in the center
-4.  Style the  `color-boxes`  container
+1.  将类名为`.slider`和`.instructions`的元素移出文档流，进行绝对定位。
+2.  为`body`元素添加日出的背景颜色，再用一朵花的背景图做装饰，放在页面左下角。 
+3.  居中对齐`color-boxes`元素 。
+4.  为`color-boxes`元素设置样式。
 
-Let’s knock these off.
 
-The following will fix the first task.
+具体代码如下：
 
 ```
 /* Slider */.slider,.instructions {  position: absolute;  background: rgba(0,0,0,0.4);  padding: 1rem 2rem;  border-radius: 5px}.slider {  right: 10px;  top: 10px;}.slider > * {  display: block;}/* Instructions */.instructions {  text-align: center;  bottom: 0;  background: initial;  color: black;}
 ```
 
-The code snippet isn’t as complex as you think. I hope you can read through and understand it. If not, drop a comment or tweet.
+这段代码非常简单。我希望你能读完并理解。如果你还是不理解，请在下面留言或者在推特上@我。
 
-Styling the  `body`  is a little more involved. Hopefully, you understand CSS well.
+为`body`元素设置样式略微复杂。幸运的是，你熟知 CSS 的用法。
 
-Since we aspire to style the element with a background color and a background image, it’s perhaps the best bet to use the  `background`  shorthand property to set multiple backgrounds.
+既然想要为页面设置背景颜色并添加背景图案，也许最好使用简化的`background`属性设置多种样式。
 
-Here it is:
+代码如下：
 
 ```
 body {  margin: 0;  color: rgba(255,255,255,0.9);  background: url('http://bit.ly/2FiPrRA') 0 100%/340px no-repeat, var(--primary-color);  font-family: 'Shadows Into Light Two', cursive;}
 ```
 
-The  `url`  bit is the link to the sunrise flower.
+`url`会链接到太阳花图片。
 
-The next set of properties  `0 100%`  represent the background position of the image.
+`0 100%`设置了背景图片的位置。
 
-Here’s an illustration of how CSS background positioning works:
+下面的文章介绍了在 CSS 中，如何对背景定位： 
 
 ![](https://cdn-media-1.freecodecamp.org/images/4rZugtEKFeay00FsfDXFuXyiHA1Amf1iG2Jd)
 
-From:  [the advanced guide to CSS][7]
+来源:  [CSS 高级编程][7]
 
 ![](https://cdn-media-1.freecodecamp.org/images/zFcuuEu5RnrGWiG5Doqg7jS4OS-PyOh7H93v)
 
-From:  [the advanced guide to CSS][8]
+来源:  [CSS 高级编程][8]
 
-The other bit after the forward slash represents the  `background-size`  This has been set to  `340px`  If you made this smaller, the image would be smaller too.
+分隔号后面的`340px`代表`background-size`。如果你把数值设置的更小，那么图片尺寸也会变小。
 
-`no-repeat`, you might figure out what that does. It prevents the background from repeating itself.
+你可能会想`no-repeat`是什么意思。该属性可以防止背景图片平铺。
 
-Finally, anything that comes after the comma is a second background declaration. This time we’ve only set the  `background-color`  to  `var(primary-color)`
+最后，逗号后面的属性值都是备选值。这里把`background-color`设置为`var(primary-color)`。
 
-Oops, that’s a variable.
+可以看出，我们使用了变量。
 
-The implication of this is that you have to define the variable. Here’s how:
+这意味着在声明之前，必须先定义变量：
 
 ```
 :root {  --primary-color: rgba(241,196,15 ,1)}
 ```
 
-The primary color there is the sunrise yellow color. No big deal. We’ll set some more variables in there soon.
+这里的颜色值就是日出时的黄颜色。这没什么大不了的，接下来会设置更多的变量。
 
-Now, let’s center the  `color-boxes`
+接下来，把类名为`color-boxes`的容器居中设置。
 
 ```
 main.booth {  min-height: 100vh;    display: flex;  justify-content: center;  align-items: center;}
 ```
 
-The main container acts as a flex container and rightly positions the direct child in the center of the page. This happens to be our beloved  `color-box`  container
+主要容器使用了弹性布局，将下一级的子元素置于页面中央。因此，类名为`color-box`的容器都会居中显示。
 
-Let’s make the color-boxes container and its children elements pretty.
+接下来，为子元素和其下一级的子元素设置样式。
 
-First, the child elements:
+首先是子元素：
 
 ```
 .color-box {  padding: 1rem 3.5rem;  margin-bottom: 0.5rem;  border: 1px solid rgba(255,255,255,0.2);  border-radius: 0.3rem;  box-shadow: 10px 10px 30px rgba(0,0,0,0.4); }
 ```
 
-That will do it. There’s a beautiful shadow added too. That’ll get us some cool effects.
+设置完后，子元素会拥有一个美丽的阴影，这会让最后的效果更加酷炫。
 
-That is not all. Let’s style the overall  `container-boxes`  container:
+这还不够，我们要设置类名为 `container-boxes` 的盒子属性。 
 
 ```
 /* Color Boxes */.color-boxes {  background: var(--secondary-color);  box-shadow: 10px 10px 30px rgba(0,0,0,0.4);  border-radius: 0.3rem;    transform: perspective(500px) rotateY( calc(var(--slider) * 1deg));  transition: transform 0.3s}
 ```
 
-Oh my!
+好多了！现在来细化一下。
 
-There’s a lot in there.
-
-Let me break it down.
-
-Here’s the simple bit:
+下面的代码非常简单：
 
 ```
 .color-boxes {   background: var(--secondary-color);   box-shadow: 10px 10px 30px rgba(0,0,0,0.4);   border-radius: 0.3rem;}
 ```
 
-You know what that does, huh?
-
-There’s a new variable in there. That should be taken of by adding it to the root selector.
+以上代码用了一个新变量。因此需要在 root 选择器中加上定义。 
 
 ```
 :root {  --primary-color: rgba(241,196,15 ,1);  --secondary-color: red;}
 ```
 
-The secondary color is red. This will give the container a red background.
+secondary-color 变量值为红色。因此容器背景为红色。 
 
-Now to the part that probably confused you:
+但你可能对如下代码感到困惑：
 
 ```
 /* Color Boxes */.color-boxes {  transform: perspective(500px) rotateY( calc(var(--slider) * 1deg));  transition: transform 0.3s}
 ```
 
-For a moment, we could simplify the value of the transform property above.
+可以暂时简化上面的 transform 属性。
 
 ![](https://cdn-media-1.freecodecamp.org/images/JzclULDPJ-fDazCDnHaBt2Jw72HQAY3k0AjK)
 
-For example:
+举例如下
 
 ```
 transform: perspective(500px) rotateY( 30deg);
 ```
 
-The transform shorthand applies two different functions. One, the perspective, and the other, the rotation along the Y axis.
+transform 合并了两个不同的函数。一是透视，二是以 Y 轴为标准的旋转角度。
 
-Hmmm, so what’s the deal with the  `perspective`  and  `rotateY`  functions?
+如何处理 `perspective`和 `rotateY`函数？
 
-The perspective() function is applied to an element that is being transformed in 3D space. It activates the three dimensional space and gives the element depth along the z-axis.
+透视函数可以使元素在 3D 空间内变形。它会激活三维空间，使元素增加一个 z 轴。
 
-You can read more about the perspective function on  [codrops][9].
+在 [codrops][9] 上阅读更多关于透视函数的内容。
 
-The  `rotateY`  function, what’s the deal with that?
+`rotateY`函数用途为何呢？
 
-Upon activation the 3d space, the element has the planes x, y, z. The  `rotateY`  function rotates the element along the  `Y`  plane.
+激活三维空间后，元素就有了 x ，y ，z 三个轴。`rotateY`函数会把元素以 Y 轴为中心旋转。
 
-The following diagram from  [codrops][10]  is really helpful for visualizing this.
+[codrops][10] 上这幅图可以帮助我们直观理解这一点。
 
 ![](https://cdn-media-1.freecodecamp.org/images/nlm073Uq9QmQYLaA2A78IbeDQqMuT9qvq00n)
 
 [Codrops][11]
 
-I hope that blew off some of the steam.
-
-Back to where we started.
+回到前面的话题。
 
 ![](https://cdn-media-1.freecodecamp.org/images/PnEnAMTI0LRrJ2ZKbF3cs70AkNdIcSEuAYDP)
 
-When you move the slider, do you know what function affects the rotation of the  `.container-box`?
+移动滑块的时候，你知道是哪个函数影响了`.container-box`的旋转效果吗？
 
-It’s the rotateY function being invoked. The box is rotated along the Y axis.
+是旋转函数。因此盒子绕 Y 轴旋转。
 
-Since the value passed into the rotateY function will be updated via JavaScript, the value is represented with a variable.
+由于该值可以通过 JavaScript 传给函数, 所以便用变量来表示这个值。
 
 ![](https://cdn-media-1.freecodecamp.org/images/UAI2w26oH2IgBTljbP6GgDjQEzljccawUiz4)
 
-So, why multiply by the variable by 1deg?
+为什么用这个变量乘以 1deg 呢？
 
-As a general rule of thumb, and for explicit freedom, it is advised that when building single tokens, you store values in your variables without units.
+按通常经验来说，也为了自由定义变量，当创建单个标记时，建议创建变量是不带单位。
 
-You can convert them to any unit you want by doing a multiplication via the  `calc`function.
+这样便可以在任何需要使用单位的时候通过 `calc` 函数达成目标。
 
 ![](https://cdn-media-1.freecodecamp.org/images/YmWMuiiZ8yvGpy6WHWlmquGbDGGBez4muwSN)
 
-This allows you to do ‘whatever’ you want with these values when you have them. Want to convert to  `deg`  or as a ratio of the user’s viewport  `vw`  , you can whatever you want.
+这样就可以在需要的时候任意使用这些值，既可以转化为`deg`，也可以转化为相对于用户窗口视图 `vw` 的比例。
 
-In this case, we are converting the number to have a degree by multiplying the “number” value by 1deg
+在这个例子中，我们把一个数字乘以一个 1deg的值，得到了一个有单位的数值。
 
 ![](https://cdn-media-1.freecodecamp.org/images/gXw20rbptib1kLg0FpxSEsrIKOZGlECgESrn)
 
-Since CSS doesn’t understand math, you have to pass this arithmetic into the calc function to be properly evaluated by CSS.
+由于 CSS 不理解数学运算，所以需要把数学运算转移到`calc`函数中，这样才能得到 CSS 属性需要的对应数值。
 
-Once that is done, we’re good to go. The value of this variable can be updated in JavaScript as much as we like.
+现在来到下一步。在 JavaScript 中可以任意改变变量值。
 
-Now, there’s just one bit of CSS remaining.
+还剩下一点 CSS 代码：
 
-Here it is:
 
 ```
 /* Handle colors for each color box */.color-box:nth-child(1) {  background: var(--bg-1)}.color-box:nth-child(2) {  background: var(--bg-2)}.color-box:nth-child(3) {  background: var(--bg-3)}.color-box:nth-child(4) {  background: var(--bg-4)}.color-box:nth-child(5) {  background: var(--bg-5)}.color-box:nth-child(6) {  background: var(--bg-6)}
 ```
 
-So, what’s this voodoo?
-
-First off, the nth-child selector selects each of the child boxes.
+nth-child 选择器用来选择子元素。
 
 ![](https://cdn-media-1.freecodecamp.org/images/WWzkEOGXTgxkDGkCJSYbgkPEtyHEEezhesXT)
 
+我们将更新每个框的背景色，背景色必须由变量表示，这样便可以通过 JavaScript 更新。
 There’s a bit of foresight needed here. We know we will be updating the background color of each box. We also know that this background color has to be represented by a variable so it is accessible via JavaScript. Right?
 
-We could go ahead and do this:
+我们这样设置：
 
 ```
 .color-box:nth-child(1) {  background: var(--bg-1)}
 ```
 
-Easy.
+但如果变量不存在，怎么办呢？
 
-There’s one problem though. If this variable isn’t present, what happens?
+需要默认值。
 
-We need a fallback.
-
-This works:
+如下所示：
 
 ```
 .color-box:nth-child(1) {  background: var(--bg-1, red)}
 ```
 
-In this particular case, I have chosen NOT to provide any fallbacks.
+在这个例子中，我选择不提供任何默认值。
 
-If a variable used within a property value is invalid, the property will take on its initial value.
+如果这个变量的属性值不合法，那么这个属性值就会用其初始值。
 
-Consequently, when  `--bg-1`  is invalid or NOT available, the background will default to its initial value of transparent.
+因此，如果`--bg-1`元素无效或不合法，那么背景将会自动变为初始值，即透明色。
 
-Initial values refer to the values of a property when they aren’t explicitly set. For example, if you don’t set the  `background-color`  of an element, it will default to  `transparent`
+没有明确指定时，初始值就是这个属性的默认值。例如，如果你不设置元素的`background-color`, 那么元素会默认为 `transparent`。
 
-Initial values are kind of default property values.
+初始值也是一种默认值。
 
-### Let’s write some JavaScript
+### 开始写 Javascript
 
-There’s very little we need to do on the JavaScript side of things.
+Javascript 部分内容不多。
 
-First let’s handle the slider.
+首次处理滑块。
 
-We just need 5 lines for that!
+五行代码即可。
 
 ```
 const root = document.documentElementconst range = document.querySelector('.booth-slider')//as slider range's value changes, do something range.addEventListener('input', handleSlider)function handleSlider (e) {  let value = e.target.value   root.style.setProperty('--slider', value)}
 ```
 
-That was easy, huh?
+首先，获取滑块元素， `const range = document.querySelector('.booth-slider')`
 
-Let me explain just in case I lost you.
+增加事件以处理滑块值变化， `range.addEventListener('input', handleSlider)`
 
-First off, keep a reference to the slider element,  `const range = document.querySelector('.booth-slider')`
-
-Set up an event listener for when the value of the range input changes,  `range.addEventListener('input', handleSlider)`
-
-Write the callback,  `handleSlider`
+回调事件 `handleSlider`
 
 ```
 function handleSlider (e) {  let value = e.target.value   root.style.setProperty('--slider', value)}
@@ -871,13 +845,13 @@ function handleSlider (e) {  let value = e.target.value   root.style.setProperty
 
 ![](https://cdn-media-1.freecodecamp.org/images/0PtXkLeMkuwE0mJxuJX3T0emkunPARGxRN8T)
 
-`root.style.setProperty('--slider', value)`  says, get the  `root`  element (HTML) , grab its style, and set a property on it.
+`root.style.setProperty('--slider', value)`  指把`root`元素的 style 属性设置为对应值。
 
-### Handling the color changes
+### 处理颜色变化
 
-This is just as easy as handling the slider value change.
+这跟处理滑块变化一样简单。
 
-Here’s how:
+代码如下：
 
 ```
 const inputs = document.querySelectorAll('.color-box > input')
@@ -887,15 +861,15 @@ const inputs = document.querySelectorAll('.color-box > input')
 //as the value in the input changes, do something.inputs.forEach(input => {  input.addEventListener('input', handleInputChange)})function handleInputChange (e) {  let value = e.target.value  let inputId = e.target.parentNode.id   let inputBg = `--bg-${inputId}`   root.style.setProperty(inputBg, value)}
 ```
 
-Keep a reference to all the text inputs,  `const inputs = document.querySelectorAll('.color-box > inpu`t')
+获取每一个输入值，`const inputs = document.querySelectorAll('.color-box > inpu`t')
 
-Set up an event listener on all the inputs:
+为每一个输入框增加事件：
 
 ```
 inputs.forEach(input => {   input.addEventListener('input', handleInputChange)})
 ```
 
-Write the  `handleInputChange`  function:
+写`handleInputChange`函数：
 
 ```
 function handleInputChange (e) {  let value = e.target.value  let inputId = e.target.parentNode.id   let inputBg = `--bg-${inputId}`   root.style.setProperty(inputBg, value)}
@@ -903,39 +877,35 @@ function handleInputChange (e) {  let value = e.target.value  let inputId = e.ta
 
 ![](https://cdn-media-1.freecodecamp.org/images/HX4X1oDSyXAJGMEeV2oIKX8PBbunS4i0sngB)
 
-Phew…
+完成！
 
-That’s it!
+### 我怎么能忘记这些呢？
 
-Project’s done.
+当我发现自己在任何地方都没有提到浏览器的兼容性时，我已经完成并编辑了本文的初稿。所以，现在我来修补这个烂摊子吧。
 
-### How did I miss this?
-
-I had completed and edited the initial draft of this article when I noticed I didn’t mention browser support anywhere. So, let me fix my mess.
-
-Browser support for CSS variables (aka custom properties) isn’t bad at all. It’s pretty good, with decent support across all modern browsers (over 87% at the time of this writing).
+浏览器对 CSS 变量（又称自定义属性）支持良好。几乎所有现代浏览器都能支持（在撰写本文时，这一比例已超过了 87％）。
 
 ![](https://cdn-media-1.freecodecamp.org/images/4ycpka14Kg2tCJLF6y3b0Zc-XHWCvbwOayAB)
 
 [caniuse][12]
 
-So, can you use CSS variables in production today? I’ll say yes! Be sure to check what the adoption rate is for yourself, though.
+那么，你现在会在项目中使用 CSS 变量吗？ 我会说是的！不过，请务必检查一下适用的比例。
 
-On the bright side, you can use a preprocessor like  [Myth][13]. It’ll preprocess your ‘future’ CSS into something you use today. How cool, huh?
 
-If you have some experience using  [postCSS][14], that’s equally a great way to use future CSS today. Here’s a  [postCSS module for CSS variables][15].
+往好的方面来看，你可以使用类似 [Myth][13] 的预处理器。它可以把你现在使用的 CSS 变成未来可期的 CSS，非常酷！
 
-That’s it. I’m done here.
+如果你曾经使用过 [postCSS][14], 那也是一个现在使用未来 CSS 的不错的方法。这里有一些例子：[postCSS module for CSS variables][15]。
 
-### Oops, but I’ve got Questions!
+
+### 我还有问题要问呢！
 
 ![](https://cdn-media-1.freecodecamp.org/images/ofZP6Nh0aCZOu6yWtDYs9HROStLDrUOgH97D)
 
-[Get the Ebook][16]  for offline reading, and also get a  **private**  slack invite where you can ask me anything.
+[电子书][16] 可离线阅读，还能获得**私人**邀请，这样你可以问我任何问题。
 
-That’s a fair deal, right?
+很公平不是吗？
 
-Catch you later! ?
+下次再见！
 
 [1]: https://codepen.io/ohansemmanuel/full/PQYzvv/
 [2]: https://codepen.io/ohansemmanuel/full/xYKgwE/

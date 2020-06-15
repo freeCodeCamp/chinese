@@ -13,16 +13,16 @@
 
 ### 什么是控制台？
 
-The JavaScript console is a built-in feature in modern browsers that comes with out-of-the-box development tools in a shell-like interface. It allows a developer to:
+JavaScript 控制台是现代浏览器中内置的开箱即用的开发工具，其界面类似 Shell。 它允许开发人员执行以下操作：
 
--   View a log of errors and warnings that occur on a web page.
--   Interact with the web page using JavaScript commands.
--   Debug applications and traverse the DOM directly in the browser.
--   Inspect and analyze network activity
+-   查看网页上发生的错误和警告的日志。
+-   使用 JavaScript 命令与网页进行交互。
+-   调试应用程序并直接在浏览器中遍历 DOM。
+-   检查并分析网络活动。
 
-Basically, it empowers you to write, manage, and monitor JavaScript right within your browser.
+简言之，它使你得以在浏览器中编写，管理和监视 JavaScript。
 
-#### Console.log, Console.error, Console.warn and Console.info
+#### Console.log，Console.error，Console.warn 和 Console.info
 
 These are probably the most used methods of all. You can pass more than one parameter to these methods. Each parameter is evaluated and concatenated in a string delimited by the space, but in case of objects or arrays you can navigate between their properties.
 

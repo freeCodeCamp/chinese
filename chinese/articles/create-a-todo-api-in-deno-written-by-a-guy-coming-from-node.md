@@ -3,138 +3,142 @@
 > * 译者：hylerrix
 > * 校对者：hylerrix
 
-![How to Create a Todo API in Deno and Oak](https://images.unsplash.com/photo-1590733840202-55a039bb15a1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
+![](https://cdn.nlark.com/yuque/0/2020/png/86548/1591930484981-2749cbc1-5906-4f91-ac67-03d0f5f1275c.png)
 
-I am a JavaScript/Node developer who secretly likes (actually, loves and adores) Deno. I have been a huge fan of Deno ever since it was announced and I've been wanting to play with it.
+## 序言
 
-This tutorial focuses on creating a set of REST APIs for a Todo application. Keep in mind that I did not touch on the database here – I will cover that  [in another article][1].
+我是一位 JavaScript/Node 开发者，默默地喜欢甚至爱慕着 Deno。Deno 诞生之初就深深地吸引了我，此后我成为了 Deno 的忠实粉丝，期待着有朝一日能正式玩上 Deno。
 
-At any point if you feel lost or want to check a reference, here is the entire source code of this tutorial:  **[Chapter 1: Oak][2].**
+本文专注于创造一个基于 REST API 设计的待做清单（Todo）应用。请记住本文中还不会涉及有关数据库操作的知识，其内容会在我之后的[另一篇文章](https://www.freecodecamp.org/news/how-to-use-mysql-in-deno-oak/)中进行详细介绍。
 
-![Runner in Cape Town wearing vintage running clothing.](https://images.unsplash.com/photo-1590672617573-08866973bf72?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
+如果你想能够随时回顾或参考本文的代码，可以访问我的这个仓库：[@adeelibr/deno-playground](https://github.com/adeelibr/deno-playground)，收录了该系列的所有代码。
 
-Photo by  [Bernard de Clerk][3]  /  [Unsplash][4]
+> 译者注：另一篇文章《How to Use MySQL With Deno and Oak》即将会被翻译，其相关 Demo 也会被收录在《Deno 钻研之术》中。
 
-### Things we will cover
+![](https://images.unsplash.com/photo-1590672617573-08866973bf72)
 
--   Create a basic server
--   Create 5 APIs (routes/controller)
--   Create a middleware to log API requests as they are made in the console
--   Create a not found (404) middleware when the user tries to access an unknown API
+照片来自于 [Bernard de Clerk](https://unsplash.com/@bernardtheclerk?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 
-### What will we need
+### 本文会涉及的内容
 
--   An installed version of Deno (don't worry I'll walk you through it)
--   A tiny bit of knowledge of Typescript
--   Would be awesome if you have worked with Node/Express before (don't worry if you haven't — this tutorial is very basic)
+- 创建一个最基础的服务器
+- 创建 5 个 APIs（路由 routes/控制器 controller）
+- 创建一个中间件来给 API 请求添加终端输出的日志功能
+- 创建一个 404 中间件来处理用户访问未知 API 时的情况
 
-## Let's get started
+### 本文需要的知识准备
 
-First things first let's install Deno. I am on a Mac computer so I am using brew. Simply open your terminal and type:
+- 一个已经安装好的 Deno 环境（别怕，我会告诉你怎么做）
+- 对 TypeScript 有浅要的了解
+- 如果你之前对 Node/Express 一定的了解就更好了（不了解也没关系，本文还是很通俗易懂的）
 
-```
+## 让我们开始吧
+
+首先我们要先安装 Deno。由于我使用的是 Mac 操作系统，所以在这里我将使用 brew。只需要打开终端并输入这条命令即可：
+
+```bash
 $ brew install deno
 ```
 
-But if you are using a different operating system, just head over to  [**deno.land installation**][5]**.** They have a lot of ways you can easily install it on your machine.
+但如果你用的是其它操作系统的话，这里有一个安装手册可以看看：[deno.land installation](https://deno.land/#installation)。上面有多样化的安装方式可供你根据不同的操作系统来选择。
 
-Once you have it installed, close the terminal, open a new one, and type:
+一旦你安装成功，关闭终端并打开另一个后，输入这条命令：
 
-```
+```bash
 $ deno --version
 ```
 
-It should output something like this:
+一切正常的话终端会产生如下输出：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-28-at-22.34.24.png)
 
-running command "deno --version" to see which version of deno is installed
+ `deno --version` 命令用来查看当前安装的 Deno 是哪个版本。
 
-Awesome! With this we are almost done with 10% of this tutorial.
+棒极了！通过这个介绍我们已经成功完成了本文 10% 的挑战。
 
-Let's move ahead and create the backend API for our Todo app.
+让我们继续探索，并为我们的待做清单应用创建一个后端 API 吧。
 
-### Setting up the project
+## 项目的准备工作
 
-Before you move on, here is the entire source code of this tutorial:  **[Chapter 1: Oak][6].**
+阅读下文，可以来提前来仓库里看看本文收录的所有代码：[@adeelibr/deno-playground](https://github.com/adeelibr/deno-playground)。
 
-Let's get started:
+这里我们从零做起：
 
--   Create a new folder and call it  **chapter\_1:oak**  (but you can call it anything you want)
--   Once you create a folder simply  `cd`  into your new project. Create a file called  **server.ts** and write the following code in it:
+- 创建一个名为 `chapter_1:oak` 的新文件夹（你也可以随意起名）。
+- 当你创建完毕后使用 `cd` 命令进入这个文件夹中。创建一个名为 **server.ts** 的文件并填充如下代码：
 
-```server
+```typescript
 import { Application } from "https://deno.land/x/oak/mod.ts";
 
 const app = new Application();
 const port: number = 8080;
 
-```
-
-Let's run this file. Open your terminal and in your project root folder type:
-
-```
-$ deno run --allow-net server.ts
-```
-
-I will talk about what the  `--allow-net`  flag does, but for now just bear with me 😄.
-
-You should get something like this:
-
-![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-28-at-22.33.28.png)
-
-What we have done so far is create a server which listens on port 8080. It doesn't do much right now besides being able to run on port 8080.
-
-If you have used JavaScript before, one thing you might have noticed is we are importing packages in a different way. We have to do something like:
-
-```
-import { Application } from "https://deno.land/x/oak/mod.ts";
-
-```
-
-When you run  `deno run ---allow-net <file_name>`  in your terminal, Deno will look at all your imports and install them locally in your machine if they are not there.
-
-The first time you run this it will go to this URL  `[https://deno.land/x/oak/mod.ts][8]`  and install the  `oak`  package. Oak is basically a Deno framework for writing API's. It will put it somewhere locally in your cache.
-
-In the next line we do this:
-
-```
-const app = new Application();
-
-```
-
-This creates a new instance of our application, and it will be the basis of everything as you progress further in this tutorial. You can add routes to the application instance, attach middleware like API logging, write a 404 not found, and so on.
-
-Then we write:
-
-```
-const port: number = 8080;
-// const port = 8080; // => can also be written like this
-```
-
-Both are the same and do the same thing. The only difference is writing  `const port: number = 8080`  tells Typescript that  `port`  variable is of type number.
-
-If you were to write  `const port: number = "8080"`, this would throw an error in your terminal, as port is of type  `number`. But we are trying to assign it a  `string`  of value "8080".
-
-If you want to learn more about different types of types (pun intended) check out this very easy and basic guide on  [**Basic types by Typescript**][9]. Just give it a quick glance for 2-3 minutes and head back here.
-
-And in the end we have:
-
-```
 console.log('running on port ', port);
 await app.listen({ port });
 ```
 
-We simply console here the port number and tell Deno to listen to the port, which is 8080.
+让我们先运行这个文件。打开你的终端并进入当前项目的根目录后，输入如下命令：
 
-It isn't doing much right now. Let's make it do something basic like show a  _JSON_  message in your browser when you go to http:localhost:8080_._
+```bash
+$ deno run --allow-net server.ts
+```
 
-Add the following to your  **server.ts** file:
+别急别急，我会在之后来介绍 `--allow-net` 参数到底做了什么的 😄。
 
-```server
+不出意外的话，你会得到如下结果：
+
+![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-28-at-22.33.28.png)
+
+到现在为止，我们创建了一个监听着 8080 端口的服务端应用。只有 8080 端口不被占用，这个应用才能正常执行。
+
+如果你有过使用 JavaScript 开发的经验，你可能会注意到我们导入模块的方式有些不一样。我们在这里是这样导入模块的：
+
+```
+import { Application } from "https://deno.land/x/oak/mod.ts";
+```
+
+当你在终端中执行 `deno run ---allow-net <file_name>` 命令时，Deno 会读取你的导入信息，并在本地的全局环境中没有安装该模块的情况下安装这些模块。
+
+第一次执行时 Deno 会尝试访问 `https://deno.land/x/oak/mod.ts` 模块并安装 `oak` 库。 Oak 是一个专注于编写 API 的 Deno Web 框架。
+
+接下来的一行我们是这样写的：
+
+```typescript
+const app = new Application();
+```
+
+这条语句为我们的应用创建了一个实例，这个实例是本文深入探索 Deno 的基石。你可以为这个实例增加路由，配置中间件（如日志中间件），编写 404 未知路由处理程序等等。
+
+接下来我们是这样写的：
+
+```typescript
+const port: number = 8080;
+// const port = 8080; // => 也可以写成这样
+```
+
+上面两行在功能上是等价的，唯一的区别是 `const port: number = 8080` 告诉 TypeScript： `port` 变量的类型是数值类的。
+
+如果你这样写的话：`const port: number = "8080"`，终端会产生类似这样的报错：port 变量应该是 `number` 类型的，但是这类尝试用 `string` 类型的 "8080" 来为其赋值。
+
+如果你想学习关于 Type 的更多类型现在就可以看看这个简单的文档：[TypeScript 官方 - 基础 Types 类型](https://www.typescriptlang.org/docs/handbook/basic-types.html)。仅仅 2~3 分钟就可以重新回到本文。
+
+在文件的最后我们是这样写的：
+
+```typescript
+console.log('running on port ', port);
+await app.listen({ port });
+```
+
+如上我们让 Deno 监听了 8080 端口，端口号是写死的。
+
+在你的 **server.ts** 文件中添加如下更多的代码：
+
+```typescript
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
+
 const app = new Application();
 const port: number = 8080;
+
 const router = new Router();
 router.get("/", ({ response }: { response: any }) => {
   response.body = {
@@ -144,11 +148,13 @@ router.get("/", ({ response }: { response: any }) => {
 app.use(router.routes());
 app.use(router.allowedMethods());
 
+console.log('running on port ', port);
+await app.listen({ port });
 ```
 
-The new thing added here is that we are now also importing  `Router`  along with  `Application`  from  `oak`  in line 1.
+相比之前新增的内容是从 `oak` 中同时导入了 `Application` 和 `Router` 变量。
 
-Next what we do is:
+其中关于 `Router` 的相关代码是：
 
 ```
 const router = new Router();
@@ -161,11 +167,11 @@ app.use(router.routes());
 app.use(router.allowedMethods());
 ```
 
-We create a new router instance by doing  `const router = new Router()`  and then we create a new route called  `/`  which is of type  `get`.
+我们通过 `const router = new Router()` 语句创建了新的 Router 示例，然后我们为其根目录 `/` 创建了处理 `get` 请求的执行方式。
 
-Let's break this down:
+让我们重点看看如下内容：
 
-```
+```typescript
 router.get("/", ({ response }: { response: any }) => {
   response.body = {
     message: "hello world",
@@ -173,13 +179,13 @@ router.get("/", ({ response }: { response: any }) => {
 });
 ```
 
-`router.get`  takes 2 parameters. The first is route which we have set to  `/`  and the second is function. The function itself takes an argument which is an object. What I am doing here is  [destructuring][11]  the object and getting only  `response`.
+`router.get` 函数接收两个参数。第一个参数是路由挂载的路径 `/`，第二个参数是一个函数。函数本身也接受一个对象参数，这里使用 ES6 语法将其解构，只取了其中 response 变量的值。
 
-Next I am type checking  `response`  similar to how I did  `const port: number = 8080;`. All I am doing is  `{ response }: { response: any }`  which is telling TypeScript here that the  `response`  which I have destructed can be of type  `any`.
+接下来就像之前编写 `const port: number = 8080;` 语句一样为 `response` 变量声明类型。`{ response }: { response: any }` 语句告诉 TypeScript 我们这里解构的 `response` 变量是 `any` 类型的。
 
-`any`  helps you avoid type checking in TypeScript. You can read more about it  [here][12].
+`any` 类型可以帮准你避免 TypeScript 进行严格的类型检查，你可以通过[这个文档](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)来了解更多。
 
-Then all I am doing is taking that  `response`  object and setting  `response.body.message = "hello world";`.
+接下来我所编写的就是使用 `response` 变量，并设置 `response.body.message = "hello world";`。
 
 ```
 response.body = {
@@ -187,105 +193,102 @@ response.body = {
 };
 ```
 
-Last but not least, we just add these two lines:
+最后同样重要的是，我们编写了如下两行代码：
 
 ```
 app.use(router.routes());
 app.use(router.allowedMethods());
 ```
 
-This tells Deno to include all routes by our router (currently we only have one) and the next line tells Deno to allow all methods for this route(s) like  `GET, POST, PUT, DELETE`.
+第一行告诉 Deno 要包含我们的 router 变量里设置的所有路径（目前我们只设置了根路径），第二行让 Deno 允许任意访问方法来请求我们设置的路径，比如 `GET, POST, PUT, DELETE`。
 
-And now we are done. ✅ Let's run this and see what we have:
+到这里就可以测试运行了 ✅ ，让我们执行这行语句来看看最终会发生什么：
 
-```
+```bash
 $ deno run --allow-net server.ts
 ```
 
-The  `---allow-net`  property tells Deno that this app gives the user the permission to access its content via the port opened up.
+`---allow-net` 参数告诉 Deno：用户授予了这个应用在打开的端口上访问网络的权限。
 
-Now open your favorite browser and go to  `[http://localhost:8080][13]`. You will see something like this:
+现在通过你常用的浏览器打开 `http://localhost:8080` 地址，就可以得到如下结果：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-28-at-23.11.08.png)
+浏览器打开 localhost:8080 的执行结果
 
-Result of running localhost:8080 on your browser
+最难的部分差不多搞定了，但在对概念的更多了解中我们只进行了 60% 的介绍。
 
-Honestly the hardest part is done. Conceptually we are 60% there.
+![](https://www.freecodecamp.org/news/content/images/2020/05/images.jpeg#align=left&display=inline&height=195&margin=%5Bobject%20Object%5D&originHeight=195&originWidth=258&status=done&style=none&width=258)
+来自 Yoda 大师的批准
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/images.jpeg)
+棒极了。
 
-Master Yoda approves
+在我们正式开始编写待做清单的 API 前，我们最后要做的事是将如下代码：
 
-Awesome.
-
-Just one last thing before we start with our Todo API. Let's replace:
-
-```
+```typescript
 console.log('running on port ', port);
 await app.listen({ port });
 ```
 
-with:
+替换成这样：
 
-```server
+```typescript
 app.addEventListener("listen", ({ secure, hostname, port }) => {
   const protocol = secure ? "https://" : "http://";
   const url = ${protocol}${hostname ?? "localhost"}:${port};
   console.log(Listening on: ${port});
 });
 
+await app.listen({ port });
 ```
 
-The code we had before was not very accurate, because we were simply console logging a message and then waiting for the app to start listening on a port.
+我们之前的代码是先在控制台上简单的打印一条成功日志，然后再让应用开始在端口上监听，不是很优雅（译者注：有可能会在监听失败的情况下依然打印监听成功的日志）。
 
-With the later version we wait for the app to start listening on  `port`  and we can listen by adding an event listener to our  `app`  instance with the following:  `app_.addEventListener_("listen", ({ secure, hostname, port }) => {}`.
+在替换后的版本中，我们通过 `app.addEventListener("listen", ({ secure, hostname, port }) => {}` 语句来向应用实例添加事件侦听器后，再让应用监听在端口上。
 
-The first param is the event we want to listen for (which is  `listen`  😅) and then the second param is an object which we destruct to  `{ secure, hostname, port }`. Secure is a boolean, hostname is a string, and port is a number.
+侦听器的第一个参数是我们想侦听的事件。一语双关，这里侦听（listen）的就是 `listen` 事件 😅。第二个参数是一个可以被解构的对象，这里解构出 `{ secure, hostname, port }` 三个变量。Secure 变量是布尔类型，hostname 变量是字符串类型，port 变量是数值类型。
 
-Now when we start our app, it will only console the message once the app actually starts listening on port.
+此时运行这个应用的话，只有在成功监听指定端口后才会输出监听成功的日志，
 
-We can just go one step ahead and make it more colorful. Let's add a new module to the top of the file in  `server.ts`:
+我们可以再向远方迈出一步，使其更加丰富多彩。让我们在 `server.ts` 文件的顶部添加这样一个新模块：
 
-```
+```typescript
 import { green, yellow } from "https://deno.land/std@0.53.0/fmt/colors.ts";
-
 ```
 
-And then inside our event listener method we can replace:
+接下来我们可以在之前的事件侦听器函数里将如下代码：
 
-```
+```typescript
 console.log(Listening on: ${port});
-
 ```
 
-with:
+替换为：
 
-```
+```typescript
 console.log(${yellow("Listening on:")} ${green(url)});
 ```
 
-Now when we do:
+接下来当我们执行：
 
-```
+```bash
 $ deno run --allow-net server.ts
 ```
 
-it will show this in our console:
+将会打印输出如下日志：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-28-at-23.34.29.png)
 
-Cool, now we have a colourful console.
+太酷了，我们现在有了一个色彩缤纷的控制台。
 
-If you get stuck anywhere you can simply go to the source code of this tutorial  [**here**][15].
+如果你在某处卡住了，你可以直接访问本教程的源码仓库：[@adeelibr/deno-playground](https://github.com/adeelibr/deno-playground/tree/master/chapter_1:oak)。
 
-Let's create our Todo API's routes next.
+让我们接下来创建待做清单的 API 吧。
 
--   Create a new folder in your root folder called  `routes`  and inside that folder create a file called  `todo.ts`
--   At the same time in your root folder create a new folder called  `controllers`  and inside that folder create a file called  `todo.ts`
+- 在项目的根目录创建一个 `routes` 文件夹，然后再文件夹里面创建一个 `todo.ts` 文件。
+- 与此同时在项目根目录创建一个 `controllers` 文件夹，再在文件夹里也创建一个 `todo.ts` 文件。
 
-Let's first touch the  `controllers/todo.ts`  file:
+我们先来填充 `controllers/todo.ts` 文件里的内容：
 
-```controllers
+```typescript
 export default {
   getAllTodos: () => {},
   createTodo: async () => {},
@@ -295,14 +298,14 @@ export default {
 };
 ```
 
-We are simply exporting an object here with some named functions which are empty (for now).
+我们在这里先简单地导出了一个包含很多有名字的函数的对象，这些函数目前都是空的。
 
-Next go inside your file  `routes/todo.ts`  and type this:
+接下来在 `routes/todo.ts` 文件中填充这些：
 
-```routes
+```typescript
 import { Router } from "https://deno.land/x/oak/mod.ts";
 const router = new Router();
-// controller
+// controller 控制器
 import todoController from "../controllers/todo.ts";
 router
   .get("/todos", todoController.getAllTodos)
@@ -311,24 +314,24 @@ router
   .put("/todos/:id", todoController.updateTodoById)
   .delete("/todos/:id", todoController.deleteTodoById);
 
+export default router;
 ```
 
-This might look familiar to people who have worked with Node and Express.
+对于编写过 Node 和 Express 的人来说，对如上的代码风格一定很熟悉。
 
-All we are doing here is importing  `Route`  from  `oak`  and then setting up a new instance of Router by doing  `const router = new Router();`.
+其中包括从 `oak` 中导入了 `Route` 变量并通过 `const router = new Router();` 语句将其实例化。
 
-Next we import our controllers by doing:
+接下来我们导入我们的控制器：
 
 ```
 import todoController from "../controllers/todo.ts";
-
 ```
 
-One thing to notice here in Deno is every time we import a local file in our Deno project we have to provide the file extension. This is because Deno doesn't know whether the file being imported is a  `.js`  or  `.ts`  file.
+这里需要注意的是：在 Deno 中我们每次导入一个本地文件到项目中的时候，我们都必须填写完整这个文件的后缀。否则 Deno 是不知道用户想要导入的文件后缀到底以 `.js` 还是 `.ts` 结尾。
 
-Moving forward we simply set all of our routes according to REST conventions:
+接下来我们通过如下代码为应用配置了我们需要的所有 RESTful 风格的路径。
 
-```routes
+```typescript
 router
   .get("/todos", todoController.getAllTodos)
   .post("/todos", todoController.createTodo)
@@ -337,34 +340,34 @@ router
   .delete("/todos/:id", todoController.deleteTodoById);
 ```
 
-The code above will translate to our API definition like this:
+上面的代码会将路径解析为这样：
 
-| TYPE | API ROUTE |  |  |  |
-| --- | --- | --- | --- | --- |
-| GET | /todos |  |  |  |
-| GET | /todos/:id |  |  |  |
-| POST | /todos |  |  |  |
-| PUT | /todos/:id |  |  |  |
-| DELETE | /todos/:id |  |  |  |
+| 请求方式 | API 路由 |
+| --- | --- |
+| GET | /todos |
+| GET | /todos/:id |
+| POST | /todos |
+| PUT | /todos/:id |
+| DELETE | /todos/:id |
 
-and at the end we simply export our router by doing  `_export_  _default_  router;`.
+最后我们通过 `export default router;` 语句来将配置好的路由导出。
 
-We are done with creating our routes structure. (Now, each route doesn't do anything because our controllers are empty, we will add functionality to them in a bit.)
+此时我们已经完成了创建路由的工作（但是由于我们的控制器还是空的函数，所以每个路由并都不会做任何反应，我们将向其中添加功能）。
 
-Here's the last piece of the puzzle before we start adding functionality to each route controller. We need to attach this  `router`  to our  `app`  instance.
+在我们开始向每个控制器添加功能之前的最后一个难题是，我们需要将此 `router` 挂载到我们的 `app` 实例上。
 
-So head over to  `server.ts`  file and do the following:
+因此回到 `server.ts` 文件中我们这样做：
 
--   Add this to the very top:
+- 将这行代码添加至文件顶部：
 
-```
-// routes
+```typescript
+// routes 路由
 import todoRouter from "./routes/todo.ts";
 ```
 
--   Remove this piece of code:
+- 删除这一段代码：
 
-```
+```typescript
 const router = new Router();
 router.get("/", ({ response }: { response: any }) => {
   response.body = {
@@ -375,44 +378,49 @@ app.use(router.routes());
 app.use(router.allowedMethods());
 ```
 
--   Replace it with:
+- 将其替换为：
 
 ```
 app.use(todoRouter.routes());
 app.use(todoRouter.allowedMethods());
 ```
 
-This is it – we are done. Your  `server.ts`  file should look like this now:
+终于搞定了，你的 `server.ts` 现在应该是这个样子：
 
-```server
+```typescript
 import { Application } from "https://deno.land/x/oak/mod.ts";
 import { green, yellow } from "https://deno.land/std@0.53.0/fmt/colors.ts";
+
 // routes
 import todoRouter from "./routes/todo.ts";
+
 const app = new Application();
 const port: number = 8080;
+
 app.use(todoRouter.routes());
 app.use(todoRouter.allowedMethods());
+
 app.addEventListener("listen", ({ secure, hostname, port }) => {
   const protocol = secure ? "https://" : "http://";
-  const url = ${protocol}${hostname ?? "localhost"}:${port};
+  const url = `${protocol}${hostname ?? "localhost"}:${port}`;
   console.log(
-    ${yellow("Listening on:")} ${green(url)},
+    `${yellow("Listening on:")} ${green(url)}`,
   );
 });
 
+await app.listen({ port });
 ```
 
-If you got stuck anywhere while following this, simple head over to the source code of this tutorial  **[here][19].**
+如果你在某处卡住了，你可以直接访问本教程的源码仓库：[@adeelibr/deno-playground](https://github.com/adeelibr/deno-playground/tree/master/chapter_1:oak)。
 
-Awesome, now we have our routes with no functionality at the moment. So let's add that functionality in our controllers.
+由于路由的控制器上暂时没有任何功能，现在一起来手动为我们的控制器添加功能。
 
-But before we do that we have to create 2 more (tiny) files.
+在此之前我们得先创建两个（小）文件：
 
--   In your root folder create a new folder called  `interfaces`  and inside that folder create a file called  `Todo.ts`  (make sure Todo is capitalized, as it won't give any syntax error here if you don't – these are just conventions.)
--   Also in your root folder create a new folder called  `stubs`  and inside that folder create a file called  `todos.ts`
+- 在项目的根目录上创建一个 `interfaces` 文件夹并在其中创建一个 `Todo.ts`（确保 Todo 首字母大写，因为如果不这样做，它将不会在此处给出任何语法错误——这只是一种约定）。
+- 同时在项目根目录创建一个 `stubs` 文件夹并在其中创建一个 `todos.ts` 文件。
 
-Let's create an interface in our  `interfaces/Todo.ts`  file. Simply add the following code:
+在 `interfaces/Todo.ts` 文件中编写如下接口说明：
 
 ```interfaces
 export default interface Todo {
@@ -422,37 +430,40 @@ export default interface Todo {
 }
 ```
 
-What is an interface?
+什么是 interface（接口）？
 
-One of the core things in TypeScript is checking the shape that value has. Similar to  `const port: number = 8080`  or  `{ response }: { response : any }`, we can also type check an object.
+要知道 TypeScript 的核心功能之一是检查一个变量的类型。就像前文的 `const port: number = 8080` 和 `{ response }: { response : any }` 一样，我们也可以检测一个变量是否为对象类型。
 
-In TypeScript, interfaces fill the role of naming these types, and are a powerful way of  **defining contracts within**  your code as well as  **contracts with code outside**  of your project.
+在 TypeScript 中，interface 负责命名类型，并且是**定义代码内外类型约束**的有效方法。
 
-Here is an another example of an interface:
+这里有一个有关 interface 的示例：
 
-```ts
-// We have an interface
+```typescript
+// 写了个接口
 interface LabeledValue {
   label: string;
 }
-// the arg passed to this function labeledObj is 
-// of type LabeledValue (interface)
+
+// 此函数的labeledObj 参数是符合 LabeledValue 接口类型的
 function printLabel(labeledObj: LabeledValue) {
   console.log(labeledObj.label);
 }
 
+let myObj = {label: "Size 10 Object"};
+printLabel(myObj);
 ```
 
-Hopefully this example gives you a bit more insight into interfaces. If you want more detailed information check out the docs on  [interfaces here][20].
+希望如上示例可以让你对 interface 有更多的了解。如果你想了解更多的信息可以查看：[Interfaces 官方文档](https://www.typescriptlang.org/docs/handbook/interfaces.html)。
 
-Now that our interface is ready, let's mock some data (since we don't have an actual database for this tutorial).
+现在关于 interface 的知识已经介绍够了，我们一起来模拟一些假数据（因为本文不涉及有关数据库的操作）。
 
-Let's create a mock list of todos first in our  `stubs/todos.ts`  file. Simply add the following:
+我们在 `stubs/todos.ts` 文件中来为 todos 变量填充一些模拟数据。这样即可：
 
-```stubs
+```typescript
 import { v4 } from "https://deno.land/std/uuid/mod.ts";
 // interface
 import Todo from '../interfaces/Todo.ts';
+
 let todos: Todo[] = [
   {
     id: v4.generate(),
@@ -466,26 +477,25 @@ let todos: Todo[] = [
   },
 ];
 
+export default todos;
 ```
 
--   Two things to notice here: we add a new package and use its method  `v4`  by doing  `_import_  { v4 }  _from_  "[https://deno.land/std/uuid/mod.ts"][22];`. Then every time we use  `v4.generate()`  it will create a new random string of  `id`.  
-      
-    The  `id`  can not be a  `number`, only a  `string`  because in our  `Todo`  interface we have defined  `id`  as a string.
--   The other thing to focus on here is  `let _todos_: _Todo_[]  =  []`. This basically tells Deno that our todos array is of type  `Todo`  (which is awesome, our compiler now  _automagically_  knows that each item in our array can only have  `{**id**:  _string_,  **todo**:  _string_  &  **isCompleted**:  _boolean_}`  it will not accept any other key).
+- 有两件需要注意的事项：我们这里引用了一个新的模块并且通过 `import { v4 } from "https://deno.land/std/uuid/mod.ts";` 语句解构了其中的 `v4` 变量。接下来我们每次使用 `v4.generate()` 语句都能生成一个随机的 ID 字符串。这个 `id` 不能是 `number` 类型的，而需是 `string` 类型的，因为我们之前的 `Todo` 接口已经声明了 `id` 的类型必须是字符串。
+- 另一个需要注意的是 `let todos: Todo[] = []` 语句。此语句告诉 Deno 我们的 todos 变量是一个 `Todo` 数组（此时编译器将会知道数组的每一个元素都是 `{id: _string_, todo: _string_ & isCompleted: _boolean_}` 类型的，并不允许其他任何类型）。
 
-If you want to learn more about  `interfaces`  in TypeScript check out this amazing detailed documentation on interfaces  **[here][23].**
+如果你想了解更多的信息可以查看：[Interfaces 官方文档](https://www.typescriptlang.org/docs/handbook/interfaces.html)。
 
-Awesome. If you have come this far, give yourself a pat on the back. Good job everyone.
+太棒了，你已经进行到如此之远，再接再厉。
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/download-1.jpeg)
+![](https://www.freecodecamp.org/news/content/images/2020/05/download-1.jpeg#align=left&display=inline&height=168&margin=%5Bobject%20Object%5D&originHeight=168&originWidth=300&status=done&style=none&width=300)
 
-The Rock appreciates all the effort you are doing
+巨石强森感激你所做的一切努力。
 
-## Let's work on our controllers
+## 让我们关注在控制器上
 
-In your file  `controllers/todo.ts`:
+在你的 `controllers/todo.ts` 文件中：
 
-```controllers
+```typescript
 export default {
   getAllTodos: () => {},
   createTodo: async () => {},
@@ -493,104 +503,132 @@ export default {
   updateTodoById: async () => {},
   deleteTodoById: () => {},
 };
-
 ```
 
-Let's write the controller for  `getAllTodos`:
+让我们先编写 `getAllTodos` 控制器：
 
-```controllers
+```typescript
 // stubs
 import todos from "../stubs/todos.ts";
+
 export default {
   /**
-
+   * @description 获取所有 todos
+   * @route GET /todos
+   */
+  getAllTodos: ({ response }: { response: any }) => {
+    response.status = 200;
+    response.body = {
+      success: true,
+      data: todos,
+    };
+  },
+  createTodo: async () => {},
+  getTodoById: () => {},
+  updateTodoById: async () => {},
+  deleteTodoById: () => {},
+};
 ```
 
-Before I begin on this block of code, let me explain that every controller has an argument – let's call it  `context`.
+在开始介绍这段代码前，让我解释下每个控制器都有的参数——`context`（上下文）参数。
 
-So we can deconstruct  `_getAllTodos_: (context) => {}`  to:
+因此我们才能解构 `getAllTodos: (context) => {}` 为：
 
-```
+```typescript
 getAllTodos: ({ request, response, params }) => {}
 ```
 
-And since we are using  `typescript`  we have to add type checking to all of these variables:
+并且自从哪个我们使用 `typescript` 后，我们需要为每个这样的变量添加类型声明：
 
-```
+```typescript
 getAllTodos: (
-{ request, response, params }: { 
-request: any, 
-response: any, 
-params: { id: string },
-},
+  { request, response, params }: { 
+    request: any, 
+    response: any, 
+    params: { id: string },
+  },
 ) => {}
 ```
 
-So we have added type checks to all 3  `{ request, response, params }`
+此时我们为解构的三个变量 `{ request, response, params }` 添加了类型说明。
 
--   `request`  is what the user sends us (information like headers and JSON data)
--   `response`  is what we send the user back in the API response
--   `params`  is what we define in our router routes, that is:
+- `request` 变量有关用户发来的请求（比如请求头和 JSON 类的请求体）。
+- `response` 变量有关服务器端通过 API 返回的信息。
+- `params` 变量是我们在路由配置中定义的参数，如下：
 
-```ts
+```typescript
 .get("/todos/:id", ({ params}: { params: { id: string } }) => {})
 ```
 
-So the  `:id`  in  `/todos/:id`  is the param. Params are a way to get information from the URL. In this example we know that we have an  `/:id`  . So when the user tries to access this API (that is,  `/todos/756`)  **756**  is basically the  **:id** param. Since it is in the URL we know it is of type  `string`.
+`/todos/:id` 中的 `:id` 是一个变量，用来从 URL 中获得动态的数据。因此当用户访问这个 API （比如 `/todos/756`）的时候，**756** 则是 **:id** 参数的值。并且我们知道 URL 里的这个值的类型是 `string` 类的。
 
-Now that we have our basic definitions defined let's get back to our todos controller:
+现在我们有了基本的声明后，让我们回到我们的 todos 控制器：
 
-```controllers
+```typescript
 // stubs
 import todos from "../stubs/todos.ts";
 
 export default {
   /**
-
+   * @description 获取所有 todos
+   * @route GET /todos
+   */
+  getAllTodos: ({ response }: { response: any }) => {
+    response.status = 200;
+    response.body = {
+      success: true,
+      data: todos,
+    };
+  },
+  createTodo: async () => {},
+  getTodoById: () => {},
+  updateTodoById: async () => {},
+  deleteTodoById: () => {},
+};
 ```
 
-For  `getAllTodos`  we only need  `response`  . If you remember,  `response`  is what is needed to send data back to the user.
+对于 `getAllTodos` 方法来说我们只需要简单的返回结果。如果你记得之前说的，会想起来 `response` 是用来处理服务器想要给用户返回的数据。
 
-For people coming from a Node and Express background, one big thing that is different here is that we don't need to  `return`  the response object. Deno does this for us automatically.
+对于编写过 Node 和 Express 的人来说，这里的一大不同是我们不需要 `return` 响应对象。 Deno 会自动为我们执行此操作。
 
-All we have to do is set  `response.status`  which in this case is  `200`.
+我们需要做的第一件事是通过 `response.status` 来设置此次请求的响应码是 `200`。
 
-More on response statuses  [**here**][24]**.**
+更多 HTTP 响应码可以看 [MDN 上的 HTTP 响应状态码文档](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)。
 
-The other thing we set is the  `response.body`  which in this case is an object:
+另一件事是设置 `response.body` 的值为：
 
-```ts
+```typescript
 {
-success: true,
-data: todos
+  success: true,
+  data: todos
 }
 ```
 
-I will go ahead and run my server:
+重新运行我们的服务器：
 
-```
+```bash
 $ deno run --allow-net server.ts
 ```
 
-> **Revision:**  The  `---allow-net`  property tells Deno that this app gives the user permission to access its content via the port opened up.
+> 修订：--allow-net 属性告诉 Deno，此应用程序授予用户通过打开的端口访问网络的权限。
 
-Once your server is running, you can access the  `GET /todos`  API. I am using  `postman`  which is a Google Chrome extension and can be downloaded  [here][25].
+一旦你的服务端示例跑通，挺可以通过 `GET /todos` 方式来请求这个 API。这里我使用的是 Google Chrome 浏览器下的一个插件 `postman`，[在这里下载](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop//%40)。
 
-You can use whatever rest client you like. I like using  `postman`  because I think it is very easy.
+你可以使用任意的 REST 风格的客户端，我喜欢使用 `postman` 是因为它真的很简单好用。
 
-In Postman, open up a new tab. Set the request to type  `GET`  and in the  `URL`  bar type  `[http://localhost:8080/todos][26]`. Hit  `Send`  and this is what you see:
+在 Postman 中，打开一个新的标签页。设置请求方式为 `GET` 请求并且在 `URL` 输入框中输入 `http://localhost:8080/todos` 。点击 `Send` 按钮便会得到想要的结果：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-29-at-02.01.11.png)
 
-GET /todos API response
+GET /todos API 返回结果。
 
-Cool! 1 API done, 4 more to go. 👍👍
+酷！一个 API 搞定了，还剩 4 个等着我们 👍👍。
 
-If you feel stuck anywhere just have sneak peak at the source code directly  [**here**][27]**.**
+如果你在某处卡住了，可以在[配套的源码仓库](https://github.com/adeelibr/deno-playground/tree/master/chapter_1:oak)中寻找答案。
 
-Let's move on to our next controller:
+让我们关注下一个控制器吧：
 
-```controllers
+```typescript
 import { v4 } from "https://deno.land/std/uuid/mod.ts";
 // interfaces
 import Todo from "../interfaces/Todo.ts";
@@ -600,304 +638,393 @@ import todos from "../stubs/todos.ts";
 export default {
   getAllTodos: () => {},
   /**
+   * @description Add a new todo
+   * @route POST /todos
+   */
+  createTodo: async (
+    { request, response }: { request: any; response: any },
+  ) => {
+    const body = await request.body();
+    if (!request.hasBody) {
+      response.status = 400;
+      response.body = {
+        success: false,
+        message: "No data provided",
+      };
+      return;
+    }
 
+    // 如果请求体验证通过，则返回新增后的所有 todos
+    let newTodo: Todo = {
+      id: v4.generate(),
+      todo: body.value.todo,
+      isCompleted: false,
+    };
+    let data = [...todos, newTodo];
+    response.body = {
+      success: true,
+      data,
+    };
+  },
+  getTodoById: () => {},
+  updateTodoById: async () => {},
+  deleteTodoById: () => {},
+};
 ```
 
-Since we are going to be adding a new Todo to our list, I have imported 2 modules in the controller file.
+由于我们将要添加一个新的 Todo 到列表中，因此我在 controller 文件中导入了 2 个通用模块：
 
--   ``import { v4 } from `<a href="https://deno.land/std/uuid/mod.ts" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 17.6px; vertical-align: baseline; background-color: transparent; color: var(--gray90); text-decoration: underline; cursor: pointer; word-break: break-word;">https://deno.land/std/uuid/mod.ts</a>`;``  this will be used to create a new unique one for the todo being created
--   `import Todo from "../interfaces/Todo.ts";`  this will be used to ensure that the new todo that is being created follows the same structure.
+- `import { v4 } from "https://deno.land/std/uuid/mod.ts"` 语句用来为每一个 todo 元素创建一个独一无二的标识。
+- `import Todo from "../interfaces/Todo.ts";` 语句用来保证新建的 todo 遵循 todo 元素的接口格式标准。
 
-Our  `createTodo`  controller is  `async`  meaning there are some promises used inside the controller.
+我们的 `createTodo` 控制器是 `async` 异步的代表函数中会使用到一些 Promise 技术。
 
-Let's break it into smaller parts:
+让我们来截断说明其中的小片段：
 
-```ts
+```typescript
 const body = await request.body();
 if (!request.hasBody) {
   response.status = 400;
   response.body = {
-success<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token boolean" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 0, 85);">false</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span>
-message<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">"No data provided"</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span>
+    success: false,
+    message: "No data provided",
+  };
+  return;
+}
 ```
 
-First we get the content of the JSON body that the user has sent us. Then we use  `oak's`  built-in method called  `request.hasBody`  to check if the user has even sent any content. If not then we can do  `if (!request_._hasBody) {}`  inside this  `if`  block.
+首先我们读取请求体中用户传来的的 JSON 内容。接下来我们使用 `oak` 的内置 `request.hasBody` 方法来检查用户传来的内容是否为空。如果为空，我们将进入 `if (!request.hasBody) {}` 代码块中执行相关操作。
 
-We set the status to  `400`  (400 means that the user did something they were not suppose to do) and the body is set to  `{success: false, message: "no data provided }`. Then we simple add  `return;`  to ensure that no further code below is executed.
+里面我们将响应体的状态码设置成 `400`（400 代表着用户端出现了一些本不该出现的错误），并且服务端返回的响应体为 `{success: false, message: "no data provided }`。之后程序直接执行 `return;` 语句来保证接下来的代码不会被执行。
 
-Next we do this:
+接下来我们这样编写：
 
-```
-// if everything is fine then perform
-// operation and return todos with the
-// new data added.
+```typescript
+// 如果请求体验证通过，则返回新增后的所有 todos
 let newTodo: Todo = {
-id: v4.generate(),
-todo: body.value.todo,
-isCompleted: false,
+  id: v4.generate(),
+  todo: body.value.todo,
+  isCompleted: false,
 };
 let data = [...todos, newTodo];
 response.body = {
-success: true,
-data,
+  success: true,
+  data,
 };
 ```
 
-We create a new todo by doing this:
+其中我们通过如下代码创建了一个全新的 todo 元素：
 
-```
+```typescript
 let newTodo: Todo = {
-id: v4.generate(),
-todo: body.value.todo,
-isCompleted: false,
+  id: v4.generate(),
+  todo: body.value.todo,
+  isCompleted: false,
 };
 ```
 
-`let newTodo: Todo = {}`  ensures that  `newTodo`  follows the same structure as the rest of the todos. We then assign a random id by using  `v4.generate()`, set todo to  `body.value.todo`  and  `isCompleted`  to `false`.
+`let newTodo: Todo = {}` 保证 `newTodo` 变量的值和其它 todo 元素一样都遵循相同的接口格式。然后，我们使用 `v4.generate()` 分配一个随机 ID，将 todo 的键值设置为 `body.value.todo` 并将 `isCompleted` 变量值设置为 `false`。
 
-The thing to notice here is all the data the user sends us we can access from  `body.value`  in  `oak`.
+这里需要知道的是，用户给我们发的内容我们可以通过 `oak` 中的 `body.value` 来获取。
 
-Next we do the following:
+接下来我们这样做：
 
-```
+```typescript
 let data = [...todos, newTodo];
 response.body = {
-success: true,
-data,
+  success: true,
+  data,
 };
 ```
 
-Append the  `newTodo`  to our current list of todos and simply set the body to  `{success: true & data: data`.
+这里将 `newTodo` 添加到整个 todo 列表中中，并在响应体中返回 `{success: true & data: data`。
 
-And we are done ✅ with this controller as well.
+此时这个控制器也运行成功了 ✅。
 
-Let's restart our server:
+让我们重新运行我们的服务器：
 
-```
+```bash
 $ deno run --allow-net server.ts
 ```
 
-In my postman, I open up a new tab. Set the request to  `POST`  type and in the  `URL`  bar type  `[http://localhost:8080/todos][29]`. Then hit  `Send`  and this is what you see:
+在 postman 中，我再打开一个新的标签页。设置请求的方式为 `POST` 类型，并在 `URL` 输入框中输入 `http://localhost:8080/todos` 后，点击 `Send` 便会得到如下结果：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-29-at-02.24.00.png)
 
-I send an empty request and get a 400 status error code along with an error message
+因为上面的请求体中发送了空的内容，所以得到了 400 错误响应码及其错误原因。
 
-Then I send some content in the body of the request payload and try again:
+但如果我们给请求体中加入如下 JSON 内容，并重新发送：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-29-at-02.24.15.png)
 
-Awesome, POST /todos with body content { todo: "eat a lamma" } is success & we can see content appended to our current todo list
+通过 { todo: "eat a lamma" } 来 POST /todos 后的成功结果，我们可以看到新的元素已经加入到列表中。
 
-Cool, we can see that our API is working as expected.
+酷，我买可以看到我们的 API 已经一个个以预期的方式执行成功了。
 
-Two APIs down, three more to go.
+两个 API 搞定，还剩三个要做。
 
-We are almost there. Most of the hard work is done. ☺️ 🙂 🤗 🤩
+我们快要搞定了，因为大部分难的内容已经介绍完毕。☺️ 🙂🤗🤩
 
-Let's move on to our third API:
+让我们看看第三个 API：
 
-```controllers
+```typescript
 import { v4 } from "https://deno.land/std/uuid/mod.ts";
 // interfaces
 import Todo from "../interfaces/Todo.ts";
 // stubs
 import todos from "../stubs/todos.ts";
-
 
 export default {
   getAllTodos: () => {},
   createTodo: async () => {},
   /**
+   * @description 通过 ID 获取 todo
+   * @route GET todos/:id
+   */
+  getTodoById: (
+    { params, response }: { params: { id: string }; response: any },
+  ) => {
+    const todo: Todo | undefined = todos.find((t) => {
+      return t.id === params.id;
+    });
+    if (!todo) {
+      response.status = 404;
+      response.body = {
+        success: false,
+        message: "No todo found",
+      };
+      return;
+    }
 
+    // 如果 todo 找到了
+    response.status = 200;
+    response.body = {
+      success: true,
+      data: todo,
+    };
+  },
+  updateTodoById: async () => {},
+  deleteTodoById: () => {},
+};
 ```
 
-Let's talk about our controller for  `GET todos/:id`. This will get us a todo by ID.
+我们先来聊聊 `GET todos/:id` 下的控制器，此控制器会通过 ID 来查找相应的 todo 元素。
 
-Let's break this down into smaller parts and discuss it:
+让我们继续通过截取小片段来深入分析：
 
-```
+```typescript
 const todo: Todo | undefined = todos.find((t) => t.id === params.id);
 if (!todo) {
-response.status = 404;
-response.body = {
-success: false,
-message: "No todo found",
-};
-return;
+  response.status = 404;
+  response.body = {
+    success: false,
+    message: "No todo found",
+  };
+  return;
 }
 ```
 
-In the first part we set a new  `const todo`  and set its type to either  `Todo`  or  `undefined`. So  `todo`  will either be an object with the  `Todo`  interface shape or it will be  `undefined`  – it can not be anything else.
+在第一行我们声明了一个 `const todo` 变量并将其类型设置为 `Todo` 或 `undefined` 类。因此 `todo` 元素只能是符合 `Todo` 接口规范的变量或者是一个 `undefined` 值，而不能是其它任何类型。
 
-We then  `_todos.find_((_t_)  => _t.id_ === _params.id_);`  use  [Array.find()][31]  to find the  `todo`  with the id provided in  `params.id`. If it matches we get a  `Todo`  with shape  `todo`, otherwise  `undefined`.
+我们接下来使用 `todos.find((t) => t.id === params.id);` 语句来通过 [Array.find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) 方法和 `params.id` 的值来查找指定的 `todo` 元素。如果找到了我们会得到 `Todo` 类型的 `todo` 元素，发否则得到一个 `undefined` 值。
 
-If  `todo`  is undefined, it means that this  `if`  block will run:
+如果得到的 `todo` 的值是 undefined 的，意味着如下 if 条件中的代码会执行：
 
-```
+```typescript
 if (!todo) {
-response.status = 404;
-response.body = {
-success: false,
-message: "No todo found",
-};
-return;
+  response.status = 404;
+  response.body = {
+    success: false,
+    message: "No todo found",
+  };
+  return;
 }
 ```
 
-Here we simply set the status to  `404`  which means  `not found`  along with our standard failure response or  `{ status, message }`
+这里我们设置响应的状态码为 `404`，代表着 `not found` 没有找到相关元素，并且返回体的格式也是标准的 `{ status, message }`。
 
-Cool, right? 😄
+很酷不是嘛？ 😄
 
-Next we simply do this:
+接下来我们简单地编写：
 
-```
-// If todo is found
+```typescript
+// 如果 todo 找到了
 response.status = 200;
 response.body = {
-success: true,
-data: todo,
+  success: true,
+  data: todo,
 };
 ```
 
-Set a  `200`  success response and in our response body we set  `success: true & data: todo`.
+设置一个响应状态码为 `200` 的响应体并返回 `success: true & data: todo` 内容。
 
-Let's run this in our postman.
+我们来在 postman 中测试：
 
-Let's restart our server:
+先一起重新启动服务端：
 
-```
+```bash
 $ deno run --allow-net server.ts
 ```
 
-In my postman, I open up a new tab. Set the request to  `GET`  type and in the  `URL`  bar type  `[http://localhost:8080/todos/:id][32]`, then hit  `Send`.
+在 postman 中，继续打开一个新的标签页，设置请求方式为 `GET` 请求并在 `URL` 输入框中输入 `http://localhost:8080/todos/:id` 后，点击 `Send` 来执行请求。
 
-Since we are generating ID's randomly, first get all todos by hitting theget all todos API. Then from any todo get one of its ID to test this newly created API.  
-Every time you restart this Deno application, new ID's will be generated.
+自从我们使用了随机 ID 生成器，首先我们需要调取获取所有元素的 API。并在元素列表里选取一个 ID 来测试这个新的 API。每次你重启 Deno 程序时，新的 ID 都会被重新生成。
 
-Let's go:
+我们这样输入：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-29-at-02.40.52.png)
 
-404 status, no record found case
+服务端返回 404，且告诉我们没有相关数据被找到。,
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-29-at-02.41.36.png)
 
-Provided it a known ID and it returned the todo associated with that ID along with status 200
+但如果输入一个正确的 ID，服务端会返回其 ID 和这个 ID 的一样的数据并且响应状态为 200。
 
-If you need to reference the original source code of this tutorial go  [**here**][33].
+如果你需要参考本文的源码可以访问这里：[@adeelibr/deno-playground](https://github.com/adeelibr/deno-playground)。
 
-Great, 3 APIs done, 2 more to go.
+不错，3 个 API 搞定，只剩 2 个了。
 
-```controllers
+```typescript
 import { v4 } from "https://deno.land/std/uuid/mod.ts";
 // interfaces
 import Todo from "../interfaces/Todo.ts";
 // stubs
 import todos from "../stubs/todos.ts";
-
 
 export default {
   getAllTodos: () => {},
   createTodo: async () => {},
   getTodoById: () => {},
   /**
+   * @description Update todo by id
+   * @route PUT todos/:id
+   */
+  updateTodoById: async (
+    { params, request, response }: {
+      params: { id: string },
+      request: any,
+      response: any,
+    },
+  ) => {
+    const todo: Todo | undefined = todos.find((t) => t.id === params.id);
+    if (!todo) {
+      response.status = 404;
+      response.body = {
+        success: false,
+        message: "No todo found",
+      };
+      return;
+    }
 
+    // 如果找到相应 todo 则更新它
+    const body = await request.body();
+    const updatedData: { todo?: string; isCompleted?: boolean } = body.value;
+    let newTodos = todos.map((t) => {
+      return t.id === params.id ? { ...t, ...updatedData } : t;
+    });
+    response.status = 200;
+    response.body = {
+      success: true,
+      data: newTodos,
+    };
+  },
+  deleteTodoById: () => {},
+};
 ```
 
-Let's talk about our controller for  `PUT todos/:id`. This will update a todo by ID.
+让我们来探讨下一个控制器 `PUT todos/:id`。这个控制器会更新一个元素的内容。
 
-Let's break this down into smaller bits:
+我们继续截断代码来细看：
 
-```
+```typescript
 const todo: Todo | undefined = todos.find((t) => t.id === params.id);
 if (!todo) {
-response.status = 404;
-response.body = {
-success: false,
-message: "No todo found",
-};
-return;
+  response.status = 404;
+  response.body = {
+    success: false,
+    message: "No todo found",
+  };
+  return;
 }
 ```
 
-This is something we did exactly the same with the previous controller as well, so I won't go into much detail here.
+这里做的和之前控制器做的一样，所以我就不深入介绍了。
 
-Pro tip here: You can if you want make this piece of code a generic code block and then use it in both controllers.
+高级提示：如果你想将这段代码设为通用代码块，然后在两个控制器中都使用它，完全可以。
 
-Next we do this:
+接下来我们这样做：
 
-```
-// if todo found then update todo
+```typescript
+// 如果找到相应 todo 则更新它
 const body = await request.body();
 const updatedData: { todo?: string; isCompleted?: boolean } = body.value;
 let newTodos = todos.map((t) => {
-return t.id === params.id ? { ...t, ...updatedData } : t;
+  return t.id === params.id ? { ...t, ...updatedData } : t;
 });
 response.status = 200;
 response.body = {
-success: true,
-data: newTodos,
+  success: true,
+  data: newTodos,
 };
 ```
 
-The piece of code I want to talk about here is the following:
+其中我想在这里重点讨论的代码如下：
 
-```
+```typescript
 const updatedData: { todo?: string; isCompleted?: boolean } = body.value;
 let newTodos = todos.map((t) => {
-return t.id === params.id ? { ...t, ...updatedData } : t;
+  return t.id === params.id ? { ...t, ...updatedData } : t;
 });
 ```
 
-First we do  `const updatedData = body.value`  and then add type checking to  `updatedData`  like the following:
+首先，我们执行 `const updatedData = body.value`，然后将类型检查添加到 `updatedData` 上，如下所示：
 
-```
+```typescript
 updatedData: { todo?: string; isCompleted?: boolean }
 ```
 
-This piece of code is telling TS that  `updatedData`  is an object which can  `have/not have`  _todo: string and_  also can  `have/not have`  _isCompleted: boolean._
+这一小段代码告诉 TS：`updatedData` 变量是一个有可能包含也有可能不包含 todo、isComplete 熟悉的对象。
 
-Then we simply map over all todos like this:
+接下来我们遍历每一个 todo 元素，就像这样：
 
-```
+```typescript
 let newTodos = todos.map((t) => {
-return t.id === params.id ? { ...t, ...updatedData } : t;
+  return t.id === params.id ? { ...t, ...updatedData } : t;
 });
 ```
 
-And where  `params.id`  match with  `t.id`  we simply append everything to that object we get from the user.
+其中当 `params.id` 和 `t.id` 的值一致时，我们将此时的对象的内容重新覆盖为用户传来的想要更改为的内容。
 
-We are done with this API as well.
+我们也编写成功了这个 API。
 
-Let's restart our server:
+让我们重新启动服务器：
 
-```
+```bash
 $ deno run --allow-net server.ts
 ```
 
-Open up a new tab in Postman. Set the request to  `PUT`  and in the  `URL`  bar type in  `[http://localhost:8080/todos/:id][35]`, then hit  `Send`:
+在 Postman 中打开一个标签页。将请求方式设置为 `PUT`，并在 `URL` 输入框中输入 `http://localhost:8080/todos/:id` 后，点击 `Send`：
 
-Since we are generating ID's randomly, first get all todos by hitting get all todos API. Then from any todo get one of its ID to test this newly created API.  
-Every time you restart this Deno application, new ID's will be generated.
+自从我们使用了随机 ID 生成器，首先我们需要调取获取所有元素的 API。并在元素列表里选取一个 ID 来测试这个新的 API。
+
+每次重启 Deno 程序时，新的 ID 都会被重新生成。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-29-at-02.59.39.png)
 
-404 status returned and no todo found error message given
+如上返回了 404 状态码并提示我们没有找到相关的 todo 元素。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-29-at-03.00.21.png)
 
-Provided a known ID, updated todo content in body. It returned the updated todo along with all the other todos
+提供一个已知的 ID，并且请求体中填写需要改变的内容。服务端会返回一个更改后的元素及其它所有元素。
 
-This is amazing – four APIs done and just one more to go.
+酷，四个 API 搞定我们只剩最后一个需要做。
 
-```controllers
+```typescript
 import { v4 } from "https://deno.land/std/uuid/mod.ts";
 // interfaces
 import Todo from "../interfaces/Todo.ts";
 // stubs
 import todos from "../stubs/todos.ts";
-
 
 export default {
   getAllTodos: () => {},
@@ -905,154 +1032,189 @@ export default {
   getTodoById: () => {},
   updateTodoById: async () => {},
   /**
+   * @description 通过 ID 删除指定 todo
+   * @route DELETE todos/:id
+   */
+  deleteTodoById: (
+    { params, response }: { params: { id: string }; response: any },
+  ) => {
+    const allTodos = todos.filter((t) => t.id !== params.id);
 
+    // remove the todo w.r.t id and return
+    // remaining todos
+    response.status = 200;
+    response.body = {
+      success: true,
+      data: allTodos,
+    };
+  },
+};
 ```
 
-Let's talk about our controller for  `Delete todos/:id`  this will delete a todo by ID.
+让我们最后来讨论下 `Delete todos/:id` 控制器的执行过程，此控制器会通过给定的 ID 来删除相应 todo 元素。
 
-We simply run a filter on all todos:
+我们这里只需简单地加一条过滤方法：
 
 ```
 const allTodos = todos.filter((t) => t.id !== params.id);
-
 ```
 
-Remove the  `todo.id`  that matches with  `params.id`  and return the rest.
+遍历所有元素并删除 `todo.id` 和 `params.id` 值一样的元素，并返回其余所有元素。
 
-Then we do this:
+接下来我们这样编写：
 
-```
-// remove the todo w.r.t id and return
-// remaining todos
+```typescript
+// 删除这个 todo 并返回其它所有内容
 response.status = 200;
 response.body = {
-success: true,
-data: allTodos,
+  success: true,
+  data: allTodos,
 };
 ```
 
-Simply return all the todos left which do not have the same todo.id.
+只需返回所有没有相同 todo.id 的待办事项清单即可。
 
-Let's restart our server:
+让我们重启服务器：
 
-```
+```bash
 $ deno run --allow-net server.ts
 ```
 
-Open up a new tab in Postman. This time set the request to  `DELETE`  and in the  `URL`  bar type  `[http://localhost:8080/todos/:id][37]`  and hit  `Send`.
+在 Postman 中打开一个标签页。将请求方式设置为 `PUT`，并在 `URL` 输入框中输入 `http://localhost:8080/todos/:id` 后，点击 `Send`：
 
-Since we are generating ID's randomly, first get all todos by hitting get all todos API. Then from any todo get one of its ID to test this newly created API.  
-Every time you restart this Deno application, new ID's will be generated.
+自从我们使用了随机 ID 生成器，首先我们需要调取获取所有元素的 API。并在元素列表里选取一个 ID 来测试这个新的 API。每次你重启 Deno 程序时，新的 ID 都会被重新生成。
+
+每次重启 Deno 程序时，新的 ID 都会被重新生成。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-29-at-03.07.54.png)
 
-With this we are all done with all five APIs.
+我们终于搞定了所有 5 个 API。
 
-![](https://www.freecodecamp.org/news/content/images/2020/05/75bdf06df3fd6ddd9d3311d8cb2be029.jpg)
+![](https://www.freecodecamp.org/news/content/images/2020/05/75bdf06df3fd6ddd9d3311d8cb2be029.jpg#align=left&display=inline&height=400&margin=%5Bobject%20Object%5D&originHeight=400&originWidth=400&status=done&style=none&width=400)
 
----
+现在我们只剩下两件事了：
 
-Now we only have two things remaining:
+- 增加一个 404 中间件，来让用户访问不存在的路由时得到该有的提示；
+- 增加一个日志 API 来打印所有请求的执行时间。
 
--   Add a not found route middleware so that when the user tries to access an unknown route it gives an error.
--   Add a logger API that consoles the response time it took to return data from one API endpoint.
+## 创建一个 404 路由中间件
 
-## Creating a route middleware for routes that aren't found
+在项目的根目录中创建一个名为 `middlewares` 的文件夹，并在其中创建一个名为 `notFound.ts` 的文件后，添加如下代码：
 
-In your root folder create a new folder called  `middlewares`. Inside that folder create a file called  `notFound.ts`  and inside this file add this code:
-
-```middlwares
+```typescript
 export default ({ response }: { response: any }) => {
-response.status = 404;
-response.body = {
-success: false,
-message: "404 - Not found.",
+  response.status = 404;
+  response.body = {
+    success: false,
+    message: "404 - Not found.",
+  };
 };
-};
-
 ```
 
-Here we aren't doing anything new – it is very similar to our controllers structure. Just returning a status  `404`  (which means not found) along with a JSON object for  `{ success, message }`.
+如上代码并没有引入什么新的知识点——它对于我们的控制器结构来使用了说很熟悉的风格。这里仅仅返回了 `404` 状态码（代表着相关路由没有找到）并且返回了一段 JSON 内容： `{ success, message }`。
 
-Next go in your  `server.ts`  file and add the following content:
+接下来在你的 `server.ts` 文件中增加如下内容：
 
--   Add this import somewhere at the top:
+- 在文件顶部添加相关导入语句：
 
-```server
-// not found
+```typescript
+// 没有找到
 import notFound from './middlewares/notFound.ts';
 ```
 
--   And then just below your  `app.use(todoRouter.allowedMethods())`  add this line like this:
+- 接下来在 `app.use(todoRouter.allowedMethods())` 下面增加如下内容：
 
-```server
+```typescript
 app.use(todoRouter.routes());
 app.use(todoRouter.allowedMethods());
 
-
-
+// 404 page
+app.use(notFound);
 ```
 
-The order of execution is important here: every time we try to access an API end point it will first match/check routes from our  `todoRouter`. If none are found, it will then execute  `app_.use_(notFound);`.
+执行顺序在这里很重要：每当我们尝试访问 API 路由时，它都会首先匹配/检查来自 `todoRouter` 的路由。 如果没有找到，它将执行 `app.use(notFound);` 语句。
 
-Let's see if this works.
+让我们看看是否能成功运行。
 
-Restart the server:
+重启服务器：
 
-```
+```bash
 $ deno run --allow-net server.ts
 ```
 
-Open up a new tab in Postman. Set the request to  `GET`  and in the  `URL`  bar type  `[http://localhost:8080/something-unknown][38]`, then hit  `Send`.
+在 Postman 中打开一个标签页。将请求方式设置为 `PUT`，并在 `URL` 输入框中输入 `http://localhost:8080/todos/:id` 后，点击 `Send`：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-29-at-12.28.10.png)
 
-So we now have a route middleware that we put at the end of our routes in  `server.ts`  as  `app_.use_(notFound);`. If no route matches this middleware it will execute and return a  `404`  status code (which means not found). Then we simply send a response message like always which is  `{success, message}`.
+因此，我们现在有了一个路由中间件，将 `app.use(notFound);` 放在 `server.ts` 文件中其它路由的后面。如果请求路由不存在，它将执行并返回 `404` 状态代码（表示未找到），并像往常一样简单地返回一个响应消息，即 `{success, message}`。
 
-**Pro tip:**  We have decided that  `{success, message}`  is what we return in failed scenarios and  `{success, data}`  is what we return to user in success scenarios. So we can even make these to object/shapes as interfaces and add them to our project to ensure consistency and safe type checking.
+**高级贴士**：我们已经约束 `{success, message}` 是在请求失败时返回的格式，`{success, data}` 是在请求成功时候返回给用户的格式。因此，我们甚至可以将其作为对象接口，并将其添加到项目中，以确保接口的一致性和进行安全的类型检查。
 
-Cool, now we are done with one of our middlewares – let's add the other middleware for logging our APIs in the console.
+酷，现在我们已经搞定了其中一个中间件——让我们添加另一个中间件来在终端打印日志吧。
 
-**Reminder:**  If you get stuck anywhere you can use the  [source code here][39].
+**切记**：如果你在某些地方卡住了，可以看看文章的配套源码：[@adeelibr/deno-playground](https://github.com/adeelibr/deno-playground)。
 
-## Logging APIs in console
+## 终端中打印日志的中间件
 
-In your  `middlewares`  folder create a new file called  `logger.ts`  and enter the following code:
+在你的 `middlewares` 文件夹中创建一个新的 `logger.ts` 文件并填充如下内容：
 
-```middlewares
+```typescript
 import {
   green,
   cyan,
   white,
   bgRed,
 } from "https://deno.land/std@0.53.0/fmt/colors.ts";
+
 const X_RESPONSE_TIME: string = "X-Response-Time";
 
+export default {
+  logger: async (
+    { response, request }: { response: any, request: any },
+    next: Function,
+  ) => {
+    await next();
+    const responseTime = response.headers.get(X_RESPONSE_TIME);
+    console.log(`${green(request.method)} ${cyan(request.url.pathname)}`);
+    console.log(`${bgRed(white(String(responseTime)))}`);
+  },
+  responseTime: async (
+    { response }: { response: any },
+    next: Function,
+  ) => {
+    const start = Date.now();
+    await next();
+    const ms: number = Date.now() - start;
+    response.headers.set(X_RESPONSE_TIME, `${ms}ms`)
+  },
+};
 ```
 
-In your  `server.ts`  file add this code:
+在 `server.ts` 文件中添加如下代码：
 
--   Import this somewhere at the top:
+- 文件顶部添加 import 语句来导入模块：
 
-```server
+```typescript
 // logger
 import logger from './middlewares/logger.ts';
 ```
 
--   Just above your  `todoRouter`  code add these middlewares like this:
+- 在之前提到的 `todoRouter` 代码前这样增加中间件代码：
 
-```
-// order of execution is important;
+```typescript
+// 以下代码的编写顺序很重要
 app.use(logger.logger);
 app.use(logger.responseTime);
 
+app.use(todoRouter.routes());
+app.use(todoRouter.allowedMethods());
 ```
 
-Now let's discuss what we just did.
+现在我们来讨论到底发生了什么。
 
-Let's talk about the  `logger.ts`  file and break it down into bits:
+我们先来讨论 `logger.ts` 文件，先截断看这里：
 
-```ts
+```typescript
 import {
   green,
   cyan,
@@ -1061,40 +1223,40 @@ import {
 } from "https://deno.land/std@0.53.0/fmt/colors.ts";
 ```
 
-I am importing some console colors and console background colors that I want to use in API logging.
+我在这里导入了有关终端颜色的模块，想要用在我们的日志中间件上。
 
-This is similar to what we did in our  `eventListener`  in our  `server.ts`  file. We will use colors in our console to log API requests.
+这里和我们在之前的 `server.ts` 文件中使用 `eventListener` 的方式很像。我们将使用有颜色的日志信息来记录我们的 API 请求。
 
-Next I set  `const X_RESPONSE_TIME: string = "X-Response-Time";`. This is the header we will inject in our API requests as they come into our server. I am calling this  `` `X_RESPONSE_TIME` ``  and its value is  `` `X-Response-Time` ``. I will demonstrate its usage in a bit.
+接下来我们设置了 `const X_RESPONSE_TIME: string = "X-Response-Time";`。这条语句用来在与用户请求到来时给响应头的 Header 中注入 `X_RESPONSE_TIME` 变量的值：`X-Response-Time`。我会在后面进行说明。
 
-Next we simply export an object like this:
+然后我们像这样一样导出一个对象：
 
-```middlewares
+```typescript
 export default {
-    logger: async ({ response, request }, next) {}
-    responseTime: async ({ response }, next) {}
+  logger: async ({ response, request }, next) {}
+  responseTime: async ({ response }, next) {}
 };
 ```
 
-And then we simply use it inside our  `server.ts`  file like this:
+此时我们在 `server.ts` 中这样使用：
 
-```server
-// order of execution is important;
+```typescript
+// 以下两行的编写顺序很重要
 app.use(logger.logger);
 app.use(logger.responseTime);
 ```
 
-Let's now discuss what is happening in our logger middleware code and discuss it execution style using  `next()`:
+现在我们来讨论下日志中间件到底做了什么，并且通过 `next()` 来说明其执行过程。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-29-at-12.51.36.png)
 
-Execution of order of logging middleware when GET /todos API is called.
+上图为调用 GET / todos API 时日志记录中间件的执行顺序。
 
-The only difference here and in the controllers we had before is the use of the  `next()`  function. This functions helps us jump from one controller to the other as shown in the image below.
+这里和以前的控制器唯一的区别是使用了 `next()` 函数，此函数有助于我们从一个控制器跳到另一个控制器，如上图所示。
 
-So in:
+因此有了这段：
 
-```middlewares
+```typescript
 export default {
   logger: async (
     { response, request }: { response: any, request: any },
@@ -1117,24 +1279,26 @@ export default {
 };
 ```
 
-Keep in mind that this is what we have in our  `server.ts`  file:
+请留意我们在 `server.ts` 中的编写方式：
 
-```server
-// order of execution is important;
+```typescript
+// 以下代码的编写顺序很重要
 app.use(logger.logger);
 app.use(logger.responseTime);
 
+app.use(todoRouter.routes());
+app.use(todoRouter.allowedMethods());
 ```
 
-The order of execution is as follows:
+这里的执行顺序如下：
 
--   logger.logger middleware
--   logger.responseTime middleware
--   todoRouter controller (whatever path is called by the user, for the purpose of explanation I am assuming that the user called  `GET /todos`  API to get all todos.)
+- logger.logger 中间件
+- logger.responseTime 中间件
+- todoRouter 控制器（无论用户想要访问什么路由，出于解释的目的，这里假设用户都调用 `GET /todos` 来获取所有待办事项）。
 
-So it will first execute logger.logger middleware which is this:
+因此会先执行 logger.logger 的内容：
 
-```middlewares
+```typescript
 logger: async (
     { response, request }: { response: any, request: any },
     next: Function,
@@ -1146,131 +1310,84 @@ logger: async (
   },
 ```
 
-It will come inside this function and immediately as it reads  `await next()`  it quickly jumps to the next middleware which is  `responseTime`:
+当遇到 `await next()` 时会立即跳到下一个中间件——`responseTime` 上。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-29-at-12.51.36-1.png)
 
-Sharing the image above again for revision.
+再次分享此图来回顾这个过程。
 
-Inside  `responseTime`, it only executes two lines which are (look at execution order 2 in image above):
+在 `responseTime` 中，只会先执行如下两行（参考上图的执行过程 2）：
 
-```middlewares
+```typescript
 const start = Date.now();
 await next();
 ```
 
-before jumping to the  `getAllTodos`  controller. Once it goes inside  `getAllTodos`  it will run the entire code inside that controller.
+然后跳转到 `getAllTodos` 控制器中并执行 `getAllTodos` 里的所有代码。
 
-Since in that controller we are not using  `next()`  it will simply return the flow of logic back to  `responseTime`  controller. There it will run the following:
+在这个控制器中我们不需要使用 `next()`，它会自动返回到 `responseTime` 中间件中，并执行接下来的内容：
 
-```middlewares
+```typescript
 const ms: number = Date.now() - start;
 response.headers.set(X_RESPONSE_TIME, ${ms}ms)
 ```
 
-Now keeping in perspective of the order of execution which is  `2, 3, 4`  (look at the image above).
+现在，我们便了解了 2、3、4 的执行顺序过程（参见上图）。
 
-This is what happens:
+这里是发生的具体过程：
 
--   We capture the data in  `ms`  by doing  `const` _`start`_ `=` _`Date.now`_`();`. Then we immediately call  `next()`  which goes to  `getAllTodos`  controller and runs the entire code. Then it comes back in the  `responseTime`  controller.
--   We then subtract that  `start`  date with whatever the date is at that moment by doing  `const _ms_: _number_ = _Date.now_()  - _start_;`  `ms`. Here it will return a number which is basically the difference in milliseconds that will tell us all the time it took Deno to execute our  `getAllTodos`  controller.
+- 我们通过执行 `const start = Date.now();` 来捕获以 `ms` 为单位的数据。然后，我们立即调用 `next()` 来跳转到 `getAllTodos` 控制器并运行其中的代码。然后再次返回到 `responseTime` 控制器中。
+- 然后，通过执行 `const ms: number = Date.now() - start;` 来减去请求刚来的时间。在这里，它将返回一个毫秒差的数字，将告诉 Deno 执行 getAllTodos 控制器所花费的所有时间。
 
-Sharing the image once again for review:
+再次分享这个文件来回顾这个过程：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-29-at-12.51.36-2.png)
 
--   Next we simply set headers in our  `response`  like this:
+- 接下来我们在 `response` 响应头的 Headers 中设置：
 
-```
+```typescript
 response.headers.set(X_RESPONSE_TIME, ${ms}ms)
 ```
 
-Which just sets the header value  `X-Response-Time`  to the milliseconds it took Deno to execute our API.
+将 X-Response-Time 的值设置为 Deno getAllTodos API 所花费的毫秒数。
 
--   Then from execution order  `4`  we move back to execution order  `5`  (have a look at the image above for reference).
+- 然后从执行顺序 4 返回到执行顺序 5（参考上图）。
 
-Here we simply do:
+在这里简单地编写：
 
-```middlwares
+```typescript
 const responseTime = response.headers.get(X_RESPONSE_TIME);
 console.log(${green(request.method)} ${cyan(request.url.pathname)});
 console.log(${bgRed(white(String(responseTime)))});
 ```
 
--   We get the time we passed in the  `` `X-Response-Time` ``
--   Then we take that time and simply console it colourfully in the console.
+- 打印日志时我们从 `X-Response-Time` 中获取到了执行 API 耗费的时间。
+- 接下来我们用带有颜色的字体将其打印在终端。
 
-`request.method`  tells us the method used to call our API, that is `GET, PUT etc`  while  `request.url.pathname`  will tell the API which path the user used i.e,  `/todos`
+`request.method` 返回用户请求的方式，比如 `GET, PUT 等`，同时 `request.url.pathname` 返回用户请求的路径，比如 `/todos`。
 
-Let's see if this works.
+让我们看看是否能成功运行。
 
-Restart the server:
+重启服务器：
 
-```
+```bash
 $ deno run --allow-net server.ts
 ```
 
-Open up a new tab in Postman. Set the request to  `GET`, type in  `[http://localhost:8080/todos][42]`, and hit  `Send`.
+在 Postman 中打开一个标签页。将请求方式设置为 `GET`，并在 `URL` 输入框中输入 `http://localhost:8080/todos` 后，点击 `Send`：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-29-at-13.17.13.png)
 
-Hit the API a couple of times in Postman. Then when you go back to the console, you should see something like this:
+在 Postman 中多请求几次 API，然后返回到控制台查看日志时，应该看到类似如下的内容：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screenshot-2020-05-29-at-13.21.03.png)
 
-API being logged in our console
+每个 API 请求都会被日志中间件记录在终端。
 
-This is it – we are done.
+就是这样 —— 我们搞定了这一切。
 
-If you still feel stuck, take a look at the entire source code for this tutorial here:  [github.com/adeelibr/deno-playground/tree/master/chapter\_1:oak][43]
+如果你在哪里卡住了，可以看看本文的全部源码：[github.com/adeelibr/deno-playground/tree/master/chapter_1:oak](https://github.com/adeelibr/deno-playground/tree/master/chapter_1:oak)
 
-I hope that you found this article useful and that it was able to help you learn something today.
+我希望你觉得本文会很有帮助，并且真的能帮助你学到一些新的知识。
 
-If you liked it, please do share it on social media. If you want to have a discussion about it, reach out to me on  [Twitter][44].
-
-  
-
-[1]: https://www.freecodecamp.org/news/how-to-use-mysql-in-deno-oak/
-[2]: https://github.com/adeelibr/deno-playground/tree/master/chapter_1:oak
-[3]: https://unsplash.com/@bernardtheclerk?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit
-[4]: https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit
-[5]: https://deno.land/#installation
-[6]: https://github.com/adeelibr/deno-playground/tree/master/chapter_1:oak
-[7]: https://deno.land/x/oak/mod.ts%22
-[8]: https://deno.land/x/oak/mod.ts
-[9]: https://www.typescriptlang.org/docs/handbook/basic-types.html
-[10]: https://deno.land/x/oak/mod.ts%22
-[11]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
-[12]: https://www.typescriptlang.org/docs/handbook/basic-types.html#any
-[13]: http://localhost:8080/
-[14]: https://deno.land/std@0.53.0/fmt/colors.ts%22
-[15]: https://github.com/adeelibr/deno-playground/tree/master/chapter_1:oak
-[16]: https://deno.land/x/oak/mod.ts%22
-[17]: https://deno.land/x/oak/mod.ts%22
-[18]: https://deno.land/std@0.53.0/fmt/colors.ts%22
-[19]: https://github.com/adeelibr/deno-playground/tree/master/chapter_1:oak
-[20]: https://www.typescriptlang.org/docs/handbook/interfaces.html
-[21]: https://deno.land/std/uuid/mod.ts%22
-[22]: https://deno.land/std/uuid/mod.ts%22
-[23]: https://www.typescriptlang.org/docs/handbook/interfaces.html
-[24]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
-[25]: https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop//%40
-[26]: http://localhost:8080/todos
-[27]: https://github.com/adeelibr/deno-playground/tree/master/chapter_1:oak
-[28]: https://deno.land/std/uuid/mod.ts%22
-[29]: http://localhost:8080/todos
-[30]: https://deno.land/std/uuid/mod.ts%22
-[31]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-[32]: http://localhost:8080/todos/:id
-[33]: https://github.com/adeelibr/deno-playground/tree/master/chapter_1:oak
-[34]: https://deno.land/std/uuid/mod.ts%22
-[35]: http://localhost:8080/todos/:id
-[36]: https://deno.land/std/uuid/mod.ts%22
-[37]: http://localhost:8080/todos/:id
-[38]: http://localhost:8080/something-unknown
-[39]: https://github.com/adeelibr/deno-playground/tree/master/chapter_1:oak
-[40]: https://deno.land/std@0.53.0/fmt/colors.ts%22
-[41]: https://deno.land/std@0.53.0/fmt/colors.ts%22
-[42]: http://localhost:8080/todos
-[43]: https://github.com/adeelibr/deno-playground/tree/master/chapter_1:oak
-[44]: https://twitter.com/adeelibr
+如果你喜欢，欢迎分享到社交平台上。如果你想要深入交流，可以在 [Twitter](https://twitter.com/adeelibr) 上与我联系。

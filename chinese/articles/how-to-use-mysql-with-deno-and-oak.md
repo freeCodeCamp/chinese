@@ -227,7 +227,7 @@ The  `Client`  also exposes another method besides  `connect`  (we used a "conne
 
 Next go to  `controllers/todo.ts`  add definition for  `getAllTodos`:
 
-```controllers
+```typescript
 // interfaces
 import Todo from "../interfaces/Todo.ts";
 // models

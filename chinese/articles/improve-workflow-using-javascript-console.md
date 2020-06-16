@@ -24,13 +24,12 @@ JavaScript 控制台是现代浏览器中内置的开箱即用的开发工具，
 
 #### Console.log，Console.error，Console.warn 和 Console.info
 
-These are probably the most used methods of all. You can pass more than one parameter to these methods. Each parameter is evaluated and concatenated in a string delimited by the space, but in case of objects or arrays you can navigate between their properties.
-
+这些可能是最常用的方法，它们允许你传递多个参数。每个参数都将被评估，并以空格分隔连接成字符串，但对于对象或数组，你可以查看其内在属性。
 ![](https://cdn-media-1.freecodecamp.org/images/mb28MA52eZS1oW000KV2KHJfjW93hGAkaFln)
 
 #### Console.group
 
-This method allows you to group a series of console.logs (but also error info, and so on) under a group that can be collapsed. The syntax is really very simple: just enter all the  `console.log`  we want to group before a  `console.group()`  (or  `console.groupCollapsed()`  if we want it to be closed by default). Then add a  `console.groupEnd()`  at the end to close the group.
+该方法允许你将一系列控制台日志（也包括错误信息等）归纳在可折叠的小组下。语法非常简单：只需在 `console.group()` 前输入所需的 `console.log`（或输入 `console.groupColladed()` 来让其以默认方式关闭），然后在末尾添加 `console.groupEnd()` 来结束分组。
 
 ![](https://cdn-media-1.freecodecamp.org/images/HmjCThNsjXDndqMmnXsoJfhaDvJWSe9HthWY)
 

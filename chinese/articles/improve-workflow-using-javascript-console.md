@@ -29,37 +29,37 @@ JavaScript 控制台是现代浏览器中内置的开箱即用的开发工具，
 
 #### Console.group
 
-该方法允许你将一系列控制台日志（也包括错误信息等）归纳在可折叠的小组下。语法非常简单：只需在 `console.group()` 前输入所需的 `console.log`（或输入 `console.groupColladed()` 来让其以默认方式关闭），然后在末尾添加 `console.groupEnd()` 来结束分组。
+该方法允许你将一系列控制台日志（也包括错误信息等）归纳在可折叠的小组下。语法非常简单：只需在 `console.group()` 后输入所需的 `console.log`（或输入 `console.groupColladed()` 来让其以默认方式关闭），然后在末尾添加 `console.groupEnd()` 来结束分组。
 
 ![](https://cdn-media-1.freecodecamp.org/images/HmjCThNsjXDndqMmnXsoJfhaDvJWSe9HthWY)
 
-Example of how to use the console.group
+console.group 使用示例
 
-The results will look like this:
+结果如下所示：
 
 ![](https://cdn-media-1.freecodecamp.org/images/oaS8o7IqXG2FYAlTwpMxjAoVaV94nCpjTDHw)
 
 #### Console.table
 
-Since I discovered the  `console.table`  my life has changed. Displaying JSON or very large JSON arrays inside a  `console.log`  is a terrifying experience. The  `console.table`  allows us to visualize these structures inside a beautiful table where we can name the columns and pass them as parameters.
+自从发现 `console.table`，我的生活发生了改变。在 console.log 中显示 JSON 或超大的 JSON 数组是一种令人恐惧的体验。`console.table` 使我们可以在漂亮的表格中可视化这些结构，它允许通过传递参数的方式命名列。
 
 ![](https://cdn-media-1.freecodecamp.org/images/zTSGqfZmTDJNuDtoUsC8UuRBB8PAZ5OMME87)
 
-Example of how to use the console.table
+console.table 使用示例
 
-The result is wonderful and very useful in debugging:
+结果非常令人满意，并且对于调试非常有用：
 
 ![](https://cdn-media-1.freecodecamp.org/images/nLfvcHJ1b6LuD5CzcZxk36jl9YzlUF3I41h1)
 
-#### Console.count, Console.time and Console.timeEnd
+#### Console.count，Console.time 和 Console.timeEnd
 
-These three methods are the Swiss army knife for every developer who needs to debug. The  `console.count`  counts and outputs the number of times that  `count()`  has been invoked on the same line and with the same label. The  `console.time`  starts a timer with a name specified as an input parameter, and can run up to 10,000 simultaneous timers on a given page. Once initiated, we use a call to  `console.timeEnd`  to stop the timer and print the elapsed time to the Console.
+对于每一名需要调试的开发人员，这三种方法都如同瑞士军刀。 `console.count` 能计数并输出在同一行和相同标签上调用 `count()` 的次数。`console.time` 能启动以指定输入参数为名的计时器，并且最多能在给定页面上同时运行一万个计时器。 一旦启动，我们可以通过调用 `console.timeEnd` 来停止计时器，并将经过的时间打印到控制台。
 
 ![](https://cdn-media-1.freecodecamp.org/images/2pxTmE0ZHBasKm2ZmZaj-ajMYHvhjhVDGhID)
 
-Example of how to use the console.time and console.count
+console.time 和 console.count 使用示例
 
-The output will look like this:
+输出如下所示：
 
 ![](https://cdn-media-1.freecodecamp.org/images/Tt4dNjkK0yCpYzAHD6ZEFluIQ6IHl9cjv-nl)
 

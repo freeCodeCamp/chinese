@@ -22,34 +22,48 @@ You can find the code for the website  [here][2]
 ## 你将学到什么
 
 -   Some basic concepts of React.js
+- 基础的React.js的概念
 -   Create React-app from HTML website
+- 从HTML页面创建React-app
 -   Deploy your portfolio website using ‘Github pages’
+- 通过Github pages部署你的个人作品集网页
 
 ## Some concepts you need to know before we start ..
 ## 在我们开始前你需要知道的一些概念
 
 > _Note — feel free to skip this part if you are already familiar with basic concepts of React.js and React Components._  
+> _提示1： 如果你对React.js和React组件的基础概念有一定了解可以跳过这部分。_
 >   
 > _Note — these points will provide a very basic idea of the React world. I highly recommend you to study more about React from the  [documentation][3]  and get hands-on with the help of  [freeCodeCamp][4]._
+> _提示2：这些知识点能让你对React的世界有个基础的了解。我非常建议你通过[React官方文档][3]学习更多关于React的内容，同时在[freeCodeCamp][4]中寻求帮助。_
 
 ### What is React.js >
 ### 什么是React.js >
 
-For now, it is enough to know that React.js is the JavaScript library used for building UI components. It was created by the engineers of Facebook and nowadays, it is rocking the JavaScript world..
+For now, it is enough to know that React.js is the JavaScript library used for building UI components. 
+现在，你需要了解的是React.js是一个用来构建UI组件的JavaScript库。
+It was created by the engineers of Facebook and nowadays, it is rocking the JavaScript world..
+它是由Facebook的工程师创建的项目，现在正影响着JavaScript的世界...
 
 ### What is a React Component >
 ### 什么是React组件 >
 
-React lets you define components as a class or a function. You can provide optional inputs to the components called ‘**props**’.
-
-Components let you split up the UI into  **independent**  sections like header, footer, and body. Each component will work independently so any individual component can be rendered independently into the  [ReactDOM][5]without affecting the whole page.
+React lets you define components as a class or a function. 
+你可以通过class或者function方法来定义一个React组件。
+You can provide optional inputs to the components called ‘**props**’.
+你可以向组件传入叫 `props` 的参数。
+Components let you split up the UI into  **independent**  sections like header, footer, and body. 
+页面的UI可以通过组件的形式拆分成独立的部分，比如可以分成页头header，主体body，页尾footer。
+Each component will work independently so any individual component can be rendered independently into the  [ReactDOM][5]without affecting the whole page.
+每个组件都是独立运行的，因此[ReactDOM][5]可以单独渲染每个组件而不影响整个页面。每个组件都各自渲染到[ReactDOM][5]而不会影响整个页面。
 
 It also comes with  **‘lifecycle methods**’ which let you define pieces of code you want to execute according to the state of the component like mounting, rendering, updating and un-mounting.
+React组件提供的生命周期方法让你可以将想要执行代码放到组件的mounting(挂载),rendering(渲染)，updating(更新)和un-mounting(卸载)等各个阶段。
 
 React components come with their own trade-offs. For example, we can reuse a component by exporting it to other components, but sometimes it gets confusing to handle multiple components talking and triggering renders for each other.
-
+React组件的使用需要权衡利弊。比如，我们可以通过将组件导出到别的组件中来达到复用的效果，但有时候多个组件间的通信和触发渲染的问题会让人感到困惑。
 this is how a component would look like!
-
+这是React组件的样子。
 ```jsx
 import React, { Component } from 'react'
 
@@ -321,7 +335,7 @@ I would like to take a moment to acknowledge the work of the people who gave me 
 
 Photo by  [Ruediger Theiselmann][28]  on  [Unsplash][29]
 
-[1]: https://dhruv34788.github.io/me/
+[1]: https://dbarochiya.github.io/me/
 [2]: https://github.com/Dhruv34788/me
 [3]: https://reactjs.org/docs/getting-started.html
 [4]: https://www.freecodecamp.org/

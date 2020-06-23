@@ -1,12 +1,11 @@
 > * 原文地址：[How I switched careers and got a developer job in 10 months: a true story](https://www.freecodecamp.org/news/how-i-switched-careers-and-got-a-developer-job-in-10-months-a-true-story-b8895e855a8b/)
 > * 原文作者：[Syk Houdeib](https://www.freecodecamp.org/news/author/syknapse/)
-> * 译者：
+> * 译者：richard1230
 > * 校对者：
 
-![How I switched careers and got a developer job in 10 months: a true story](https://cdn-media-1.freecodecamp.org/images/1*P9eWpGDxFMTN2ApRQteOpg.jpeg)
+![我如何在10个月以内转行成为一个开发者:一个真实的故事](https://cdn-media-1.freecodecamp.org/images/1*P9eWpGDxFMTN2ApRQteOpg.jpeg)
 
-This is how I career changed to front-end development at 40, starting with no relevant background experience or degree. I used only self-directed study while working full-time and spending next to nothing.
-
+这篇文章主要讲述的是在我40岁的时候,我如何从一个没有任何相关工作经验以及相关专业学位的情况下转行成为一个前端开发的. 需要注意的是,在全职工作的同时我仅仅依靠自学而没有花费任何其他的费用.
 > “ I’m sitting in a café in the heart of Madrid, having a cup of coffee, tapping away at my laptop while it rains outside. In a few moments I will walk into my first day as a front-end developer. 10 months ago I was an English teacher in Granada who knew nothing about programming, and now I’m here. How did this happen?”
 
 I wrote those excited words a few months ago as I was getting ready to start my first day at my new job. Come along with me as I share with you my journey of how I got here.

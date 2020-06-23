@@ -1,6 +1,6 @@
 > * 原文地址：[How I switched careers and got a developer job in 10 months: a true story](https://www.freecodecamp.org/news/how-i-switched-careers-and-got-a-developer-job-in-10-months-a-true-story-b8895e855a8b/)
 > * 原文作者：[Syk Houdeib](https://www.freecodecamp.org/news/author/syknapse/)
-> * 译者：
+> * 译者：richard1230
 > * 校对者：
 
 ![How I switched careers and got a developer job in 10 months: a true story](https://cdn-media-1.freecodecamp.org/images/1*P9eWpGDxFMTN2ApRQteOpg.jpeg)

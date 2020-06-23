@@ -74,6 +74,7 @@ import React, { Component } from 'react'
 ### 什么是[Github Pages][6] >
 
 With GitHub Pages, you can easily deploy your site using GitHub for free and without the need to set up any infrastructure. They have provided modules so that you don’t have to worry about many things. If you stick around till the end you’ll see that it works like MAGIC!
+通过Github Pages，你可以轻松的通过免费GitHub部署你的网页而无需担心配置问题。他们提供的模块使你无需担心很多事情。如果你坚持到最后，你会发现这项工作就像魔法一样神奇。
 
 ## Before you go ahead make sure to ..  
 ## 在我们开始前你需要确定...
@@ -82,55 +83,65 @@ With GitHub Pages, you can easily deploy your site using GitHub for free and wit
 ### 你需要决定哪些内容被放到你的网站上
 
 Go through your latest resume once (if you don’t have one then  [create one now][7]  and postpone this project until next weekend ?). It will help you to have a clear idea about what kind of information you want to put on your portfolio website.
+游览你最近的一份简历(如果没有就立马[创建一份][7] 或者还需要拖延项目到下星期？)。这会有助于你理清哪些信息需要被放到你的作品集网站上。
 
 ### Find inspiration
 ### 寻找设计灵感
 
 Browse through the hundreds of free portfolio website templates on the web, see how and what you can use from them — take out a pen and paper and sketch out a rough diagram to get an idea of what your website will look like. I will be using  [this][8]  template to demonstrate.
+通过网上搜寻游览免费的作品集网站，从中借鉴哪些内容适合自己的网站使用 —— 拿出纸和笔，将你对网站的想法通过草图展现出来。我会用[这个模板][8]来创作。
 
 ### Gather some amazing pictures of yourself
 ### 搜集一些你的美照
 
 It’s obvious that you don’t want to look bad on your own portfolio website. So dig into your archives of photos to find the perfect photos for your website.
+显然，你不想让自己邋遢的形象展示在你的作品集网站上。那就寻找你一张你最满意的个人照放在网站上吧。
 
 ### Tune into your favourite playlist
 ### 打开你的私人歌单
 
 Legend has it that  **good things come only with good music…** _and_ you surely don’t want to miss out any great things.
+俗话说的好 “好的作品总是伴随着好的音乐产生”，而且我确幸你也不想错过一些好的想法。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*7snm7ve4mLm3kwrPl0r2ig.png)
 
 [a glimpse of my portfolio website][9]
+[我的个人作品集网站][9]
 
 ## Let’s jump into the building part
 ## 让我们开始创建项目
 
 In the following sections, I will describe steps to building the portfolio app but you don’t have to follow the same code I use. Focus on learning the concept and show some creativity! Further reading has been divided into three sections.
+下面的内容，我会一步步展示如何去创建个人作品集网站，但是你不需要跟着我写同样的代码。专注于学习概念，并发挥你的创造力！接下来我会分三部分内容进行说明。
 
 1.  Setting up the React-app
+1. 设置React-app
 2.  Breaking down the HTML page into React components
+2. 将HTML页面分解成React组件
 3.  Deploying your app onto Github pages
+3. 在Github pages上部署你的应用
 
 ### Setting up React-app
 ### 创建React-app
 
 We will be using  `[create-react-app][10]`  — a module provided by Facebook — which helps us to create React.js apps with ease and without worrying about build tools.
-
+我们会使用 `[create-react-app][10]` —— Facebook提供的一个组件 —— 可以帮助我们轻松创建React应用而不需要担心构建工具。
 -   Go to the console and run  `npm install create-react-app`  to install this module via npm (make sure that you have installed  `npm`before using it — follow  [this][11]  link for more info).
+- 切换到控制台，通过npm 执行 `npm install create-react-app` 安装这个模块(确保在次之前安装了 `npm` —— [此处查看更多信息][11])
 -   Now run  `npm create-react-app ${project-name}`  which will fetch build scripts and create a file-structure which will look like this.
-
+- 接着运行 `npm create-react-app ${project-name}` 构建代码，创建出来的文件目录结构会像以下展示的这样
 ```
 my-portfolio-app
-├── README.md (description of the project for GitHUb)
-├── node_modules (stores all dependent modules for the project)
-├── package.json (stores all meta information of the prokect like dependencies,version,revisions etc.)
-├── .gitignore (files declared here will be ignored while uploading to GitHub like node_modules 
-├── public (here you will store all images,JS,CSS files) 
+├── README.md (description of the project for GitHUb)(Github的项目描述文件)
+├── node_modules (stores all dependent modules for the project)(存储项目所需的模块)
+├── package.json (stores all meta information of the prokect like dependencies,version,revisions etc.)(存储项目源信息，如依赖包，版本号等等)
+├── .gitignore (files declared here will be ignored while uploading to GitHub like node_modules )(这里声明 的文件和目录在提交到GitHub是会被忽略，如node_modules)
+├── public (here you will store all images,JS,CSS files) (存储图片，js，css文件)
 │   ├── favicon.ico
 │   ├── index.html
 │   └── manifest.json 
-└── src (our main code for app lies here)
-    ├── {create component folder here}
+└── src (our main code for app lies here)(应用的主要代码)
+    ├── {create component folder here}(创建的组件的文件夹)
     ├── App.css
     ├── App.js
     ├── App.test.js
@@ -141,17 +152,23 @@ my-portfolio-app
 ```
 
 Create a  `components`  folder under the  `src`  directory. This is where we will store our components in the future.
+在 `src` 目录下创建一个 `components` 目录。将来我们会在这里存放组件。
 
 -   Copy all the images, fonts, HTML and CSS files from the HTML  `template`  you decided to work with into the  `public`  folder.
+- 从HTML `template` 中拷贝所有的图片，字体，HTML和CSS到public目录
 
 Now your project directory should look like this.
+现在你的目录结构应该看起来像这样。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*IcnlLThnGN65xfgkFpnnBg.png)
 
 file-structure
+目录结构
 
 -   Run the  `npm install`  command which will install dependent modules under  `node_module`  directory.
+- 通过运行 `npm install` 安装所有的模块到 `node_module`目录中。
 -   If you’ve got it right up until now, then running the  `npm start`  command will start the React app on the  `localhost`. Go to  `[https://localhost:3000][12]`and you should be able to see the starter page of the React-app.
+- 如果你已经到了这一步了， 那么运行 `npm start`，Rect应用会被加载到 `localhost` 的3000端口，`[https://localhost:3000][12]`，现在你应该能够看到React-app的开始页面了。
 
 ### Breaking-down the HTML page into React components..
 ### 拆分HTML页面到你的React组件中

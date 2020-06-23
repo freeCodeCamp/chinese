@@ -4,28 +4,41 @@
 > * 校对者：
 
 ![How to create your portfolio website using React.js](https://cdn-media-1.freecodecamp.org/images/1*7snm7ve4mLm3kwrPl0r2ig.png)
+![如何用React.js创建你的个人作品集网页](https://cdn-media-1.freecodecamp.org/images/1*7snm7ve4mLm3kwrPl0r2ig.png)
 
 After my friends canceled our weekend plans ?, I was looking for something to kill time and finally ended up with a plan to create a portfolio website after going through my long pending list of ‘**W**ish-To-Do’ **t**hings.
+我的朋友取消了我们的周末计划后，我在寻找可以打法时间的事情做做，最终从我的“想要做的事”的清单中选择了一个创建个人作品集网站的计划。
 
-Many hours of searching for technologies and templates later, I ended up creating  [this][1]website using React.js and deploying it using Github pages. You can find the code for the website  [here][2]  (It’s called a ‘**web-app**’ technically, but for this article, I will be referring to it as a ‘website’ … I hope that’s ok ?).
+Many hours of searching for technologies and templates later,
+在花费大量时间搜索技术和模板之后，
+I ended up creating  [this][1]website using React.js and deploying it using Github pages. 
+我打算用React.js创建[这个][1]网页，并把它部署到Github pages上。
+You can find the code for the website  [here][2]  
+你可以在[这里][2]找到网页的代码。
+(It’s called a ‘**web-app**’ technically, but for this article, I will be referring to it as a ‘website’ … I hope that’s ok ?).
+(这是一项被叫做web-app的技术，但是在本文中，我想用普通网页代替该说法，这样没问题吧？)
 
 ## What you will learn
+## 你将学到什么
 
 -   Some basic concepts of React.js
 -   Create React-app from HTML website
 -   Deploy your portfolio website using ‘Github pages’
 
 ## Some concepts you need to know before we start ..
+## 在我们开始前你需要知道的一些概念
 
 > _Note — feel free to skip this part if you are already familiar with basic concepts of React.js and React Components._  
 >   
 > _Note — these points will provide a very basic idea of the React world. I highly recommend you to study more about React from the  [documentation][3]  and get hands-on with the help of  [freeCodeCamp][4]._
 
 ### What is React.js >
+### 什么是React.js >
 
 For now, it is enough to know that React.js is the JavaScript library used for building UI components. It was created by the engineers of Facebook and nowadays, it is rocking the JavaScript world..
 
 ### What is a React Component >
+### 什么是React组件 >
 
 React lets you define components as a class or a function. You can provide optional inputs to the components called ‘**props**’.
 
@@ -44,24 +57,30 @@ import React, { Component } from 'react'
 ```
 
 ### What is  [GitHub Pages][6]  \>
+### 什么是[Github Pages][6] >
 
 With GitHub Pages, you can easily deploy your site using GitHub for free and without the need to set up any infrastructure. They have provided modules so that you don’t have to worry about many things. If you stick around till the end you’ll see that it works like MAGIC!
 
 ## Before you go ahead make sure to ..  
+## 在我们开始前你需要确定...
 
 ### Decide what content you want to put up on your website
+### 你需要决定哪些内容被放到你的网站上
 
 Go through your latest resume once (if you don’t have one then  [create one now][7]  and postpone this project until next weekend ?). It will help you to have a clear idea about what kind of information you want to put on your portfolio website.
 
 ### Find inspiration
+### 寻找设计灵感
 
 Browse through the hundreds of free portfolio website templates on the web, see how and what you can use from them — take out a pen and paper and sketch out a rough diagram to get an idea of what your website will look like. I will be using  [this][8]  template to demonstrate.
 
 ### Gather some amazing pictures of yourself
+### 搜集一些你的美照
 
 It’s obvious that you don’t want to look bad on your own portfolio website. So dig into your archives of photos to find the perfect photos for your website.
 
 ### Tune into your favourite playlist
+### 打开你的私人歌单
 
 Legend has it that  **good things come only with good music…** _and_ you surely don’t want to miss out any great things.
 
@@ -70,6 +89,7 @@ Legend has it that  **good things come only with good music…** _and_ you surel
 [a glimpse of my portfolio website][9]
 
 ## Let’s jump into the building part
+## 让我们开始创建项目
 
 In the following sections, I will describe steps to building the portfolio app but you don’t have to follow the same code I use. Focus on learning the concept and show some creativity! Further reading has been divided into three sections.
 
@@ -78,6 +98,7 @@ In the following sections, I will describe steps to building the portfolio app b
 3.  Deploying your app onto Github pages
 
 ### Setting up React-app
+### 创建React-app
 
 We will be using  `[create-react-app][10]`  — a module provided by Facebook — which helps us to create React.js apps with ease and without worrying about build tools.
 
@@ -119,6 +140,7 @@ file-structure
 -   If you’ve got it right up until now, then running the  `npm start`  command will start the React app on the  `localhost`. Go to  `[https://localhost:3000][12]`and you should be able to see the starter page of the React-app.
 
 ### Breaking-down the HTML page into React components..
+### 拆分HTML页面到你的React组件中
 
 Remember the  `component`  folder which we created under  `src`  directory in the previous step, now we will break down the HTML template page into components and combine these components to make our React-app.
 
@@ -223,6 +245,7 @@ Notice in the above code that we need to first  `import`  the components in orde
 -   Play around with the HTML and CSS to change the content according to your resume and make your portfolio even cooler by changing the content, trying out different fonts, changing the colours and adding photos of your choice.
 
 ## Deploy React-app to Github pages
+## 将React-app部署到Github pages上
 
 Okay, so you survived until this point… take a moment to appreciate your hard work. But you still need to complete your deployment so that you can share your cool work with your friends who ditched those weekend plans.
 
@@ -272,6 +295,7 @@ Now go to the terminal, run  `npm run deploy`  and wait for the magic!! Your app
 **_Caution:_**  Please be careful when deploying anything onto the web. Perform safety checks like removing internal links, passwords, or anything that you don’t want to be there in the hands of smart people out there.
 
 ## Homework for you ..
+## 留给你的作业
 
 Congratulations! You have finally created and deployed your portfolio app. If you are interested, then you can add these features to your website
 
@@ -283,6 +307,7 @@ Congratulations! You have finally created and deployed your portfolio app. If yo
 If you implement any of these features, share your work with me. I would be more than happy to help ? ( if I can ?)
 
 ## Wrapping up ..
+## 热身
 
 I would like to take a moment to acknowledge the work of the people who gave me the inspiration and knowledge to complete this article.
 

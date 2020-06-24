@@ -174,11 +174,16 @@ file-structure
 ### 拆分HTML页面到你的React组件中
 
 Remember the  `component`  folder which we created under  `src`  directory in the previous step, now we will break down the HTML template page into components and combine these components to make our React-app.
+请回忆我们前面在 `src` 目录下创建的 `component` 文件夹，现在我们将要把HTML模板页面拆分成一个个组件，然后把这些组件拼接起来组成我们的React应用。
 
 -   First, you need to identify which components you can create from the monolithic HTML file — like header, footer and contact me. You need to be a little creative here!!
--   Look for tags like  _section/div_ which aren’t nested into some other  _section/div_. These should contain code about that particular section of the page which is independent of other sections. Try looking into my  [_GitHub Repo_][13]  to get a better idea about this one.  
+- 首先，你需要确定可以从单个HTML文件中创建哪些组件 —— 就像header(头部), footer(尾部) 和 contact me(联系我)。你需要在这里发挥点创造力！！
+-   Look for tags like  _section/div_ which aren’t nested into some other  _section/div_. These should contain code about that particular section of the page which is independent of other sections. Try looking into my  [_GitHub Repo_][13]  to get a better idea about this one.
+- 寻找类似 _section/div_ 这类内部没有在嵌套别的 _section/div_ 的标签。这些应包含有关页面特定部分的代码，该代码应独立于其他部分。可以通过我的[_GitHub Repo_][13]来获取灵感。
     _Hint: Use the ‘**inspect element**’ tool to play around with the code and take notice of the effect of changes within the browser._
+    _提示：使用“**inspect element(检查元素)**”工具来演示代码，并注意浏览器中对应的影响。_
 -   These pieces of HTML code will be used in the  `render()`  method of the component. The  `render()`  method will return this code whenever a component gets rendered into the ReactDOM. Take a look at the code blocks given below for reference.
+- 这些HTML代码片段会被应用到组件的 `render()` 方法中。无论组件是否渲染到ReactDOM中，`render()` 方法都会返回这些代码。下面展示的代码以供参考。
 
 ```jsx
 <section id="colorlib-hero" class="js-fullheight" data-section="home">
@@ -222,6 +227,7 @@ Remember the  `component`  folder which we created under  `src`  directory in th
 ```
 
 ‘home’ section of the HTML file
+“home” 部分的HTML文件
 
 ```jsx
 import React, { Component } from 'react'
@@ -338,9 +344,10 @@ Congratulations! You have finally created and deployed your portfolio app. If yo
 If you implement any of these features, share your work with me. I would be more than happy to help ? ( if I can ?)
 
 ## Wrapping up ..
-## 热身
+## 摘要
 
 I would like to take a moment to acknowledge the work of the people who gave me the inspiration and knowledge to complete this article.
+我想
 
 -   [**_Quincy_**][24] **_Larson,  [Sahat Yalkabov][25]  & community:_**  For creating  **_freeCodeCamp —_** the platform where you can learn and gain knowledge about almost everything related to web technologies; using hands-on tutorials  _and_  all without paying fees. ?
 -   **_Colorlib:_**  for providing state of the art templates which were a huge inspiration for my portfolio website. ?

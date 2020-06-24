@@ -235,14 +235,19 @@ import React, { Component } from 'react'
 ```
 
 React component created from the ‘home’ HTML section
+从“home” HTML部分创建的React组件
 
 Hint: If things are getting confusing on the react side — try focusing on the concept of ‘how to identify wanna be components from the HTML codebase’. After getting comfortable with React, implementation will be a piece of cake.
+提示：如果这些拆分的步骤让你对React感到困惑 —— 试着重点关注“如何从HTML代码库中辨别需要成为组件”的概念。当你渐渐的适应了React的使用，实现功能将会是小菜一碟。
 
 Did you notice that there are some changes in the HTML code?  `class`  became  `className`. These changes are required because React doesn’t support HTML ? — they have come up with their own HTML-like JS syntax which is called  [JSX][18] . So, we need to change some parts of the HTML code to make it JSX.
+HTML代码有些变动你发现了吗？ `class` 变成了 `className`。 由于React不支持HTML，所以这些变动就是必要的吗？—— 他们形成了自己的HTML —— 类似于JS语法，叫做[JSX][18]。所以，我们需要在HTML代码基础上做些改变，让它们变成JSX。
 
 I bumped into this  [HTML to JSX converter][19]  during this project, which converts HTML code into JSX for you ?. I highly recommend using this rather than changing your code manually.
+在这个项目中，我使用了[HTML to JSX转换器][19]，一个可以将HTML代码转换为JSX代码的工具。我非常建议使用这些工具而不是手动转换代码。
 
 After some time, you should come up with some different components. Now the  `EndGame`  is near!! Combine these different components under one  `App.js`  component (YES!! You can render one component from another component!) and your portfolio app will be ready.
+经过一些时间，你应该有了几个不同类型的组件。现在马上就要`游戏结束`了！在App.js组件中将这些不同类型的组件结合在一起(没错！你可以从一个组件中渲染另一个组件！)，你的个人作品集应用马上就要好了。
 
 ```jsx
 import React, { Component } from 'react';
@@ -275,26 +280,35 @@ class App extends Component {
 ```
 
 combined all components under app.js
-
-Notice in the above code that we need to first  `import`  the components in order to use them in the  `render()`  section. And we can use the components just by adding  `<component-name></component-name>`or just  `<component-name/>`  tag in the render method.
+在app.js中联合所有组件
+Notice in the above code that we need to first  `import`  the components in order to use them in the  `render()`  section. 
+注意前面的代码，为了能够在 `render()` 中使用代码，首先我们需要 `import` 组件。
+And we can use the components just by adding  `<component-name></component-name>`or just  `<component-name/>`  tag in the render method.
+然后我们可以将 `<component-name></component-name>` 或 `<component-name/>` 将标签添加到方法里。
 
 -   Run  `npm start`  from your terminal and you should be able to see the changes reflected in the website. You don’t need to run this command again if you have made more changes in the code, it will be reflected automatically when you save those changes. You can do some lightning fast development thanks to the  `[hot reload][20]` [feature][21].
+- 从你的终端运行 `npm start`，然后你应该能在网页上看到变化。当你需要对代码做出修改时，你不需要再次运行这条命令，React会自动响应这些变化更新内容。这丢多亏了`[hot reload(热加载)][20]` [优点][21] 可以让我们进行快速轻量级的部署。 
 -   Play around with the HTML and CSS to change the content according to your resume and make your portfolio even cooler by changing the content, trying out different fonts, changing the colours and adding photos of your choice.
+- 根据你简历的内容通过HTML和CSS去美化页面，使你的作品集看起来更加炫酷点，可以尝试使用添加不同的字体，颜色和图片。
 
 ## Deploy React-app to Github pages
 ## 将React-app部署到Github pages上
 
 Okay, so you survived until this point… take a moment to appreciate your hard work. But you still need to complete your deployment so that you can share your cool work with your friends who ditched those weekend plans.
+好了，恭喜你坚持到了这里... 奖励一下努力工作的自己，休息一下。但是你仍然需要完成你的部署，这样才能向你的朋友(那个周末爽约的人)炫耀一下你的劳动成果。
 
 -   First, you need to install the npm library of Github pages. To install, run this command  `_npm install gh-pages_`  on your terminal.
-
+- 首先，你需要下载Github pages的那npm包。通过在你的终端运行 `_npm install gh-pages_`
 Now, you need to make the following changes in your  `_manifest.json_`  file:
+现在，你需要修改一下 `_manifest.json_` 文件：
 
 -   Add the  `_homepage_`  field — value will be in the following format —  `[https://{github_id}.github.io/{github_repo}][22]`
+- 添加 `_homepage_` 属性 —— 值会以这样的格式呈现 —— `[https://{github_id}.github.io/{github_repo}][22]`
 -   Add  `_predeploy_`  and  `_deploy_`  fields under  `_scripts_`
+- 在 `_scripts_` 添加 `_predeploy_` 和 `_deploy_` 属性
 
 Now your manifest.json should look like this:
-
+现在你的 manifest.json应该长这样：
 ```json
 {
     "name": "portfolio-app",
@@ -326,34 +340,48 @@ Now your manifest.json should look like this:
 ```
 
 manifest.json after adding gh-pages link
+添加gh-pages链接的manifest.json
 
 Now go to the terminal, run  `npm run deploy`  and wait for the magic!! Your app will be deployed after the deployment scripts execute successfully. Verify whether your app has deployed or not by visiting the link you provided in the  `homepage`  field.
+现在转到终端界面，运行 `npm run deploy` 命令，然后等待神奇事情发生。你的应用会在脚本成功执行后部署。通过你在 `homepage` 中提供的地址，检擦你的应用是否被正确部署。
 
 **_Caution:_**  Please be careful when deploying anything onto the web. Perform safety checks like removing internal links, passwords, or anything that you don’t want to be there in the hands of smart people out there.
+**_警告：_** 将任何东西部署到网上是请务必认真仔细。进行安全检查，移除内部链接，密码或者任何你不想被出现在聪明人手中的东西。
 
 ## Homework for you ..
 ## 留给你的作业
 
 Congratulations! You have finally created and deployed your portfolio app. If you are interested, then you can add these features to your website
+厉害！你最终创建并部署了你的个人作品集应用。如果你有兴趣，可以将这些功能添加到你的网站中
 
 -   **Blog feature:** create your own blog using Node.js and a NoSQL database like MongoDB and merge it into this portfolio website.
+- **博客功能** 通过Node.js和非关系型数据库像MongoDB这样的创建你的个人博客并整合到你的网站中。
 -   **Gallery:**  add a section to the page where you can show the screenplay of the recent photos from your social media websites.
+- **橱窗展示** 在页面中添加一个可以展示来自你的自社交媒体网站最近发布照片的区域。
 -   **Twitter Feed:**  add a section showing recent tweets by you.
+- **来自Twitter的反馈** 在页面中添加一个展示你最近的推文的区域
 -   **Random Quote:**  add a section showing some random motivational quotes.
+- **随机的名人名言** 在页面中添加一个随机展示名人名言的区域。
 
 If you implement any of these features, share your work with me. I would be more than happy to help ? ( if I can ?)
-
+如果你实现了任一一个功能，请与我分享你的成果。同时我非常乐意帮助别人(如果我帮得上的话)
 ## Wrapping up ..
 ## 摘要
 
 I would like to take a moment to acknowledge the work of the people who gave me the inspiration and knowledge to complete this article.
-我想
+我想花一点时间来感谢那些给我灵感和知识以完成本文的人。
 
 -   [**_Quincy_**][24] **_Larson,  [Sahat Yalkabov][25]  & community:_**  For creating  **_freeCodeCamp —_** the platform where you can learn and gain knowledge about almost everything related to web technologies; using hands-on tutorials  _and_  all without paying fees. ?
 -   **_Colorlib:_**  for providing state of the art templates which were a huge inspiration for my portfolio website. ?
 -   [**_Daniel Lo Nigro_**][26] **_& community:_**  for creating  [**_HTML to JSX_**][27] **_Compiler,_** which turned out to be handy while converting HTML blocks into JSX code. ?
 -   **_My dearest friends:_**  who helped me in correcting my mistakes.
 -   **YOU:**  for sticking around, I hope you had a productive time. Keep exploring and building amazing things!
+
+- [**_Quincy Larson_**][24], [**_Sahat Yalkabov & community_**][25]: 创建**_freeCodeCamp_** ——一个学习和获取与Web技术相关的几乎所有知识的平台；使用自己动手代码的教学方式，并且全部无需付费。  
+- **_Colorlib_**: 提供最好设计的模板，这对我的个人网站有巨大的启发。
+- [**_Daniel Lo Nigro & community:_**][26]: 提供 [**_HTML to JSX_**][27] 的编译，事实证明，将HTML块转换为JSX代码时非常方便。
+- **_我的挚友_**: 帮助我纠正错误。
+- **_你_**:  坚持下去，我希望你度过了一个高产的时光。保持探索精神，创造更多神奇的事物。
 
 ![](https://cdn-media-1.freecodecamp.org/images/0*FgSZRsUOdqfFZJBY)
 

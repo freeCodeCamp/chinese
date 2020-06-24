@@ -14,8 +14,7 @@
 
 ### Feeling special
 
-When I first started thinking about becoming a developer, I would read articles like this one with a bit of skepticism. I kept on looking for something in the writer’s background that made them “special”. That made them suited for this job. Something that I didn’t have.
-
+当我刚开始考虑成为一个开发者的时候,我会将信将疑地阅读此类文章.我会试图找出这些文章作者所拥有的而我所没有的特殊的背景,这可能使得他们适合这种工作.
 I have since come to understand that this is not how it works. There aren’t any “special” requirements to becoming a developer. I’m not going to tell you it’s easy, because it isn’t. But the good news is that all the requirements are things that are in everyone’s reach. You have to be willing to work hard, learn a lot, and be consistent. You need to persist when things get tough. Talk yourself out of the moments of desperation when you feel like you are not cut out for this. That’s all it takes, and everyone can do these things with a bit of practice.
 
 I started with no related background study. I had no money to spend on expensive courses, no time in my already busy day, and I was already almost middle aged. Everyone’s circumstances are different, but I learned that if you put your mind to it, you can do it.

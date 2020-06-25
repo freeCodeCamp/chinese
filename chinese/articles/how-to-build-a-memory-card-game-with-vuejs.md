@@ -1,6 +1,6 @@
 > * 原文地址：[How to Build a Memory Card Game with Vue.js Vue.js 项目实践——创建记忆卡牌小游戏](https://www.freecodecamp.org/news/how-to-build-a-memory-card-game-with-vuejs/)
 > * 原文作者：Tushar Gugnani
-> * 译者：
+> * 译者：pjwok
 > * 校对者：
 
   

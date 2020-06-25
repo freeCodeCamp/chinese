@@ -1,5 +1,5 @@
 > * 原文地址：[CSS Shapes Explained: How to Draw a Circle, Triangle, and More Using Pure CSS 通过绘制图形实例详解 CSS shape](https://www.freecodecamp.org/news/css-shapes-explained-how-to-draw-a-circle-triangle-and-more-using-pure-css/)
-> * 原文作者：TK
+> * 原文作者：Thomas Weibenfalk
 > * 译者：
 > * 校对者：
 

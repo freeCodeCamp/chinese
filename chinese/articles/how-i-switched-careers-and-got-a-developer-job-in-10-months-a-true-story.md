@@ -5,17 +5,18 @@
 
 ![我如何在10个月以内转行成为一个开发者:一个真实的故事](https://cdn-media-1.freecodecamp.org/images/1*P9eWpGDxFMTN2ApRQteOpg.jpeg)
 
-这篇文章主要讲述的是在我40岁的时候,我如何从一个没有任何相关工作经验以及相关专业学位的情况下转行成为一个前端开发的. 需要注意的是,在全职工作的同时我仅仅依靠自学而没有花费任何其他的费用.
+这篇文章主要讲述的是在我40岁的时候，我如何从一个没有任何相关工作经验以及相关专业学位的情况下转行成为一个前端开发的。需要注意的是，在全职工作的同时我仅仅依靠自学而没有花费任何其他的费用。
 > “外面下着雨,我正坐在马德里市中心的一家咖啡馆里,一边喝着咖啡一边敲着键盘.不久我将以前端开发者的身份开启全新的职业生涯.就在10个月之前,我还在 Granada 当英语老师,对编程一窍不通,而现在,我即将成为一名软件开发者,这是怎么发生的呢？”
 
-就在几个月之前,当我为转行而开始做准备的时候,我写下了那些激动人心的话语.跟我来吧,我将与你们分享我是如何走到今天这一步的.
+就在几个月之前,当我为转行而开始做准备的时候，我写下了那些激动人心的话语。跟我来吧，我将与你们分享我是如何走到今天这一步的。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*Qf68OyUJggEvunHepyoRLg.jpeg)
 
 ### Feeling special
 
-当我刚开始考虑成为一个开发者的时候,我会将信将疑地阅读此类文章.我会试图找出这些文章作者所拥有的而我所没有的特殊的背景,这可能使得他们适合这种工作.
-I have since come to understand that this is not how it works. There aren’t any “special” requirements to becoming a developer. I’m not going to tell you it’s easy, because it isn’t. But the good news is that all the requirements are things that are in everyone’s reach. You have to be willing to work hard, learn a lot, and be consistent. You need to persist when things get tough. Talk yourself out of the moments of desperation when you feel like you are not cut out for this. That’s all it takes, and everyone can do these things with a bit of practice.
+当我刚开始考虑成为一个开发者的时候，我会将信将疑地阅读此类文章。我会试图找出这些文章作者所拥有的而我所没有的特殊的背景，这可能使得他们适合这种工作。
+
+从那以后,我开始明白事情不是那样的。成为一名开发人员不需要任何的 "特殊" 的背景。我不会告诉你这非常容易，因为事实并非如此，但好消息是每个人都可以达到要求。你必须非常努力工作，学习很多东西，不能半途而废。当出现困难的时候，更不能退缩。当你自己觉得不适合做这件事情的时候，说服自己不要陷入绝望。以上就是你所需要的，每个人都可以通过练习来做这些事情。
 
 I started with no related background study. I had no money to spend on expensive courses, no time in my already busy day, and I was already almost middle aged. Everyone’s circumstances are different, but I learned that if you put your mind to it, you can do it.
 

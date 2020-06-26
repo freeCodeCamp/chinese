@@ -1,6 +1,6 @@
 > * 原文地址：[How to Build a Simple Pokémon Web App with React Hooks and the Context API 去吧皮卡丘！用 React Hooks 和 Context API 创建这款小游戏](https://www.freecodecamp.org/news/building-a-simple-pokemon-web-app-with-react-hooks-and-context-api/)
 > * 原文作者：TK
-> * 译者：
+> * 译者：Zpadger
 > * 校对者：
 
 ![How to Build a Simple Pokémon Web App with React Hooks and the Context API](https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/ash.gif)

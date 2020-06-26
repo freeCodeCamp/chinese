@@ -5,15 +5,20 @@
 
 ![How to Build a Simple Pokémon Web App with React Hooks and the Context API](https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/ash.gif)
 
-After seven years of full stack development using Ruby, Python, and vanilla JavaScript, these days I mostly work with JavaScript, Typescript, React, and Redux.
+After seven years of full stack development using Ruby, Python, and vanilla JavaScript, these days I mostly work with JavaScript, Typescript, React, and Redux.  
+在使用 Ruby、Python、原生 JavaScript 进行全栈开发七年后，最近我主要使用 JavaScript、Typescript、React、Redux 从事工作。
 
-The JavaScript community is great and moves really fast. Tons of things are created "overnight", usually figuratively, but sometimes literally. All this makes it is really difficult to keep up to date.
+The JavaScript community is great and moves really fast. Tons of things are created "overnight", usually figuratively, but sometimes literally. All this makes it is really difficult to keep up to date.  
+JavaScript 社区发展日新月异。很多新鲜事物 “一夜之间” 涌现出来，。这使得紧跟时代真的很困难。
 
-I always feel like I'm late to the JavaScript party. And I want to be there, even though I don't really like parties.
+I always feel like I'm late to the JavaScript party. And I want to be there, even though I don't really like parties.  
+我总感觉我参加 JavaScript 聚会晚了。尽管我不喜欢聚会，但我还是想去参加。
 
-Just one year of working with React and Redux and I felt like I needed to learn new things like Hooks and the Context API to manage state. After reading some articles about it I wanted to try these concepts, so I created a simple project as a laboratory to experiment with those things.
+Just one year of working with React and Redux and I felt like I needed to learn new things like Hooks and the Context API to manage state. After reading some articles about it I wanted to try these concepts, so I created a simple project as a laboratory to experiment with those things.  
+仅仅使用 React 和 Redux 工作一年，我觉得我需要学习 Hooks 和 Context API 进行状态管理。在阅读了一些相关文章的概念后，我创建了一个简单的项目用于实践。
 
-Since I was a little boy, I've been passionate about Pokémon. It was always fun playing the games on the Game Boy and conquering all the Leagues. Now as a developer, I want to play around with the  [Pokémon API][1].
+Since I was a little boy, I've been passionate about Pokémon. It was always fun playing the games on the Game Boy and conquering all the Leagues. Now as a developer, I want to play around with the  [Pokémon API][1].  
+从小我就对 Pokémon 充满热情。在游戏机上打游戏并通关所有宝可梦联赛非常有趣。现在作为一名开发人员，我想玩一下 [Pokémon API][1]。
 
 I decided to build a simple web page where I could share data among different parts of the page. The page would have three main sections:
 

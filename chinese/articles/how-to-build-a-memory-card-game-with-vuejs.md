@@ -4,27 +4,40 @@
 > * 校对者：
 
   
-![How to Build a Memory Card Game with Vue.js](https://images.unsplash.com/photo-1532152734721-b08cb57943aa?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
+![Vue.js 项目实践——创建记忆卡牌小游戏](https://images.unsplash.com/photo-1532152734721-b08cb57943aa?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
 If you are new to Vue and want to refresh your basics, this fun exercise will help you build an interesting game.
+如果你是Vue的新手，并想更新你的基础知识，可以通过这个有趣的练习让你创建一个好玩的游戏同时巩固你的知识。
 
 In this post, I will take your through the step by step process of building a memory card game in VueJS.
+在这片文章中，我将逐步教你用 Vue.js 创建一个记忆卡片游戏。
 
 Here is what you can expect to learn by the end of this article:
+这里是你希望在文章结束后学到的知识：
 
 -   How to use the  _v-for_  directive to loop through Array of Objects.
+- 怎样通过使用 _v-for_ 命令循环遍历一个数组对象。
 -   Dynamic class & style binding using the  _v-bind_  directive
+- 使用 _v-bind_ 指令动态控制类名和样式。
 -   How to add  _Methods_  and  _Computed_  Properties.
+- 怎么添加 _Methods_ 和 _Computed_ 属性。
 -   How to add reactive properties to an object using Vue.set
+- 怎么通过 Vue.set 方法向一个对象添加 reactive 属性。
 -   How to use the  _setTimeout_  method to delay JavaScript execution.
+- 如何使用 _setTimeout_ 方法延迟 JavaScript 插件加载。
 -   _Shallow cloning vs Deep Cloning_  of Javascript objects.
+- JavaScript对象的_浅拷贝和深拷贝_。
 -   How to use the  _Lodash_  utility library.
+- 怎么使用 _Lodash_ 工具库。
 
 Let's dive into the steps.
+让我们深入步骤学习吧。
 
 ## Getting Ready - Including Libraries
+## 准备 - 包括项目所需的库
 
 The first step is simple: just import the libraries from the CDN into our basic HTML5 markup so that we can get started with our tiny little project.
+第一步很简单：从 CDN 导入库到我们的 HTML5 基础代码中，这样就可以开始我们的小型项目了。
 
 ```html
 <!DOCTYPE html>
@@ -43,12 +56,16 @@ The first step is simple: just import the libraries from the CDN into our basic 
 ```
 
 ## **Allow user to see the card grid**
+## **允许用户看到卡片网格**
 
 Next up, let's define the necessary HTML markup, CSS styling, and a basic Vue instance so that the user can see the card grid.
+接下来，让我们定义一些必要的 HTML 页面结构，CSS 样式，和一个基础的 Vue 实例这样用户就看的到这些卡片网格了。
 
 ### Vue Instance
+### Vue 实例
 
 Let's create a new Vue instance and define the single data property named cards which holds the list of cards.
+让我们创建一个 Vue 的实例，在 data 属性内部定义一个 cards 属性用于存放卡片列表。
 
 ```js
 let app = new Vue({
@@ -89,10 +106,12 @@ let app = new Vue({
 ```
 
 Each object in the array contains two properties: the name of the image (which will be used to perform matching) and the image of the card.
+数组内的每个对象包含两个属性：图片的名字（将用于展示的比对）和卡片上的图片。
 
 ### HTML MarkUp
 
 Since we now have the data ready in our Vue instance, we can use the v-for directive in VueJS to loop through it.
+
 
 ```html
     <div id="app">

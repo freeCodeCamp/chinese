@@ -20,29 +20,30 @@ Just one year of working with React and Redux and I felt like I needed to learn 
 Since I was a little boy, I've been passionate about Pokémon. It was always fun playing the games on the Game Boy and conquering all the Leagues. Now as a developer, I want to play around with the  [Pokémon API][1].  
 从小我就对 Pokémon 充满热情。在游戏机上打游戏并通关所有宝可梦联赛非常有趣。现在作为一名开发人员，我想玩一下 [Pokémon API][1]。
 
-I decided to build a simple web page where I could share data among different parts of the page. The page would have three main sections:
+我决定创建一个简单的网页，我可以在网页的不同部分实现数据共享。页面主要由三部分组成： 
 
--   A box with a list of all existing pokémon
--   A box with a list of all captured pokémon
--   A box with input to add new pokémon to the list
+-   一部分盒子是全部现存宝可梦的列表
+-   一部分盒子是捕捉到的所有宝可梦
+-   一部分盒子用于向列表中添加新的宝可梦
 
-And each box would have the following behavior or actions:
+并且每个盒子都遵循以下的规则：
 
--   For each pokémon in the first box, I can capture them and send to the second box
--   For each pokémon in the second box, I can release them and send to the first box
--   As a game god, I'm able to create pokémon by filling in the input and sending them to the first box
+-   对于在第一个盒子中的宝可梦，我可以捕捉它们并将其放入到第二个盒子中
+-   对于在第二个盒子中的宝可梦，我可以释放它们并放回到第一个盒子中
+-   作为游戏的主宰者，我可以输入创建宝可梦并将其放入第一个盒子中
 
-So all the features I wanted to implement were clear – lists and actions.
+So all the features I wanted to implement were clear – lists and actions.  
+所有我想实现的属性都搞清楚了——包括列表和行为。
 
-## Listing Pokémon
+## Pokémon 列表
 
-The basic feature I wanted to build first was listing pokémon. So for an array of objects, I wanted to list and show the  `name`  attribute of each object.
+我想构建第一个基本属性是 pokémon 列表。我想列出对象数组中每个对象的  `name`  属性。
 
-I started with the first box: the existing pokémon.
+我从第一个盒子开始：现存的 pokémon。
 
-At first I thought I don't need the Pokémon API – I could just mock the list and see if it works. With  `useState`, I can declare my component state and use it.
+首先，我认为不需要调用 Pokémon API 接口——我可以检查一下模拟列表是否有效。我可以通过 `useState` 来声明组件状态并进行调用。
 
-We define it with a default value of a mock pokémon list, just to test it:
+我们将其定义为模拟 pokémon 列表的默认值并进行测试：
 
 ```javascript
 const [pokemons] = useState([

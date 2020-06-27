@@ -19,9 +19,9 @@
 从那以后，我开始明白事情不是那样的。成为一名开发人员不需要任何的 "特殊" 的背景。我不会告诉你这非常容易，因为事实并非如此，但好消息是每个人都可以达到要求。你必须非常努力工作，学习很多东西，不能半途而废。当出现困难的时候，更不能退缩。当你自己觉得不适合做这件事情的时候，说服自己不要陷入绝望。以上就是你所需要的，每个人都可以通过练习来做这些事情。
 
 我起步的时候没有任何相关背景。我并没有花钱在昂贵的课程上面，在忙碌的一天工作之后我并没有太多时间去学习，同时我也已经步入中年。每个人的情况是不一样的，但是只要你用心去做，你就能做到。
-### Background
+### 背景
 
-On the day I wrote my first line of code, I had never done any programming before or had any contact with it. I had an early career in the restaurant business. Then I got a degree in Music technology, followed by a decade as an ESL teacher in Spain. I wasn’t even particularly skilled with computers. I did always feel excited by the latest tech ideas. And I considered programmers the modern day superheroes.
+在我写下第一行代码的那天之前，我从未接触过编程，也从来没做过相关工作。在我职业生涯的早期，我从事餐饮行业。然后我获得了音乐相关专业的学位，之后再西班牙当了十年的ESL老师。我甚至对电脑的基本操作也不是很熟练。我总是对最新的科技感到好奇与兴奋。我认为程序员是这个时代的超级英雄。
 
 I never contemplated doing it myself, though. Partly because I thought coding was some kind of an elite activity. Something for gifted individuals who graduate from top (and expensive) universities. While individuals like this do exist, the majority of developers aren’t that Hollywood hacker type. Development is far more accessible than I believed.
 

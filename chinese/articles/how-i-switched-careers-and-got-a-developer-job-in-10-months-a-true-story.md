@@ -24,9 +24,8 @@
 在我写下第一行代码的那天之前，我从未接触过编程，也从来没做过相关工作。在我职业生涯的早期，我从事餐饮行业。然后我获得了音乐相关专业的学位，之后再西班牙当了十年的ESL老师。我甚至对电脑的基本操作也不是很熟练。我总是对最新的科技感到好奇与兴奋。我认为程序员是这个时代的超级英雄。
 
 不过，我从未想过自己动手做。部分原因是我认为编程只有精英才能做。这种工作是为那些从名牌大学毕业的聪明人所准备的。虽然这样的人确实存在，但是大多数人并不是那种好莱坞电影里面的有天赋的天才。开发远比我想象的要容易的多。
-#### Origin story
-
-It all started with an animated conversation with my partner. She was exploring the causes behind the low numbers of women in STEM and especially in tech. She decided to do something about it by becoming a programmer herself. She wanted to be a model for younger girls in our family. And just like that she started learning about it.
+#### 故事起源
+一切源于我与我的伴侣的一次热烈地交谈。她正在探索在STEM领域尤其是科技领域导致女性人数减少的原因。她决定通过成为一名程序员来改变这一现状。她想成为我们家族中年轻女孩的榜样。就这样，她开始学习了解了。
 
 That soon excited me too, as we realized that there are plenty of resources available. This wasn’t some dark art, but a skill that we could learn and master.
 

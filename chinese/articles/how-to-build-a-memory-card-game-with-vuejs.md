@@ -6,37 +6,24 @@
   
 ![Vue.js 项目实践——创建记忆卡牌小游戏](https://images.unsplash.com/photo-1532152734721-b08cb57943aa?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-If you are new to Vue and want to refresh your basics, this fun exercise will help you build an interesting game.
-如果你是Vue的新手，并想更新你的基础知识，可以通过这个有趣的练习让你创建一个好玩的游戏同时巩固你的知识。
+如果你是 Vue 的新手，并想更新你的基础知识，可以通过这个有趣的练习让你创建一个好玩的游戏同时巩固你的知识。
 
-In this post, I will take your through the step by step process of building a memory card game in VueJS.
 在这片文章中，我将逐步教你用 Vue.js 创建一个记忆卡片游戏。
 
-Here is what you can expect to learn by the end of this article:
 这里是你希望在文章结束后学到的知识：
 
--   How to use the  _v-for_  directive to loop through Array of Objects.
 - 怎样通过使用 _v-for_ 命令循环遍历一个数组对象。
--   Dynamic class & style binding using the  _v-bind_  directive
 - 使用 _v-bind_ 指令动态控制类名和样式。
--   How to add  _Methods_  and  _Computed_  Properties.
 - 怎么添加 _Methods_ 和 _Computed_ 属性。
--   How to add reactive properties to an object using Vue.set
-- 怎么通过 Vue.set 方法向一个对象添加 reactive 属性。
--   How to use the  _setTimeout_  method to delay JavaScript execution.
+- 怎么通过 Vue.set 方法向一个对象动态添加属性。
 - 如何使用 _setTimeout_ 方法延迟 JavaScript 插件加载。
--   _Shallow cloning vs Deep Cloning_  of Javascript objects.
-- JavaScript对象的_浅拷贝和深拷贝_。
--   How to use the  _Lodash_  utility library.
+- JavaScript 对象的_浅拷贝和深拷贝_。
 - 怎么使用 _Lodash_ 工具库。
 
-Let's dive into the steps.
 让我们深入步骤学习吧。
 
-## Getting Ready - Including Libraries
 ## 准备 - 包括项目所需的库
 
-The first step is simple: just import the libraries from the CDN into our basic HTML5 markup so that we can get started with our tiny little project.
 第一步很简单：从 CDN 导入库到我们的 HTML5 基础代码中，这样就可以开始我们的小型项目了。
 
 ```html
@@ -55,16 +42,12 @@ The first step is simple: just import the libraries from the CDN into our basic 
 
 ```
 
-## **Allow user to see the card grid**
 ## **允许用户看到卡片网格**
 
-Next up, let's define the necessary HTML markup, CSS styling, and a basic Vue instance so that the user can see the card grid.
 接下来，让我们定义一些必要的 HTML 页面结构，CSS 样式，和一个基础的 Vue 实例这样用户就看的到这些卡片网格了。
 
-### Vue Instance
 ### Vue 实例
 
-Let's create a new Vue instance and define the single data property named cards which holds the list of cards.
 让我们创建一个 Vue 的实例，在 data 属性内部定义一个 cards 属性用于存放卡片列表。
 
 ```js
@@ -105,12 +88,10 @@ let app = new Vue({
 <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span>
 ```
 
-Each object in the array contains two properties: the name of the image (which will be used to perform matching) and the image of the card.
 数组内的每个对象包含两个属性：图片的名字（将用于比对数据）和卡片上的图片。
 
-### HTML MarkUp
+### HTML 标记
 
-Since we now have the data ready in our Vue instance, we can use the v-for directive in VueJS to loop through it.
 由于我们已经在 Vue 实例中准备好了数据，我们可以在 VueJS 中通过 v-for 指令循环遍历它们。
 
 
@@ -131,18 +112,13 @@ Since we now have the data ready in our Vue instance, we can use the v-for direc
     </div>
 ```
 
-We have used some basic Bootstrap markup and the v-for directive of VueJS to loop through the cards and show them in the grid format.
 我们使用了一些基础的 Bootstrap 框架内容搭配 VueJS 的 v-for 指令来循环遍历这些卡片让它们以网格的形式展示出来。
 
-Each memory-card is made up of two parts:
 每张记忆卡片由两部分组成：
 
--   front: This contains a common pattern image for all the cards (default card view)
 - 正面：这里是一张所有卡片都会用到的公共图片（默认卡片显示的样子）
--   back: This contains the actual card image (needs to be hidden by default)
 - 背面：这里包含每张卡片实际的图片（需要开始时隐藏）
 
-Let's add in some basic CSS so that we only show the front part of the card (common design pattern):
 让我们添加一些基础的 CSS 样式，这样我们就只展示卡片的正面（公共的样式）：
 
 ```css
@@ -184,24 +160,18 @@ Let's add in some basic CSS so that we only show the front part of the card (com
     }
 ```
 
-Refresh the page and you should see six cards stacked up in the grid format facing the front. The actual card image is hidden on the back.
 刷新页面，然后你应该看到6张正面的卡片以网格的形式展示。卡片真正的图片隐藏在背面。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-11-at-1.43.30-PM.png)
 
-Front side of card (Looped through v-for directive)
 正面的卡片（通过 v-for 循环指令展示）
 
-## Let's flip the cards
 ## 让我们翻转卡片
 
-Next up, let's bind an event to our cards so that when it's clicked it should flip and show the image behind it.
 接下来，在我们的卡片上绑定一个事件，这样每当我们点击时，它应该反转并显示背面的图片。
 
-Let's modify our original cards array to add another property to each card. This will determine if the card is currently flipped.
 让我们在原始的卡片数组的基础上添加另一个属性。这将确定当前卡片是否被翻转。
 
-Add the following CSS. When the flipped class is added to the class it will show the card image. It also gives us a nice turn effect.
 添加下面的 CSS 样式。当类名 flipped 添加到卡片的类名上时将展示卡片的背面。同时该样式给了我们一个好看的反转动效。
 
 ```css
@@ -221,7 +191,6 @@ Add the following CSS. When the flipped class is added to the class it will show
     }
 ```
 
-Let's use the Vue  **created**  lifecycle event to add the new property and add a flipCard method to flip the card
 让我们使用 Vue 的 **created** 生命周期函数去添加新的属性，然后添加一个 flipCard 方法去翻转卡片。
 
 ```js
@@ -237,22 +206,17 @@ methods<span class="token punctuation" style="box-sizing: inherit; margin: 0px; 
 <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></code></pre><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">First we'll bind the click event to cards to invoke the flipCard method. Then we'll also use the v-bind directive to bind the<span> </span><strong style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; color: var(--gray85);">flipped</strong><span> </span>class to the card.</p><pre class=" language-html" style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; color: var(--gray85); background: var(--gray05); text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none; overflow: auto; min-width: 100%; max-width: 100%;"><code class=" language-html" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; color: rgb(0, 0, 0); background: transparent; text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none;">...
 ```
 
-Sounds about right – let's see if the cards flip on a click.
 听上去不错 —— 让我们看看卡片通过点击是否能翻转。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/cards-no-flip-vuejs-1.gif)
 
-Card not flipping on clicking
 点击时卡片不能翻转
 
 
-It didn't work. Why not?
 不起作用。这是为什么呢？
 
-Let's go back to our created lifecycle method, where we looped through the list of cards and added a new property named isFlipped. It looks alright – but Vue didn't like it.
 让我们回到刚才在生命周期函数中，里面有一个我们创建的用于遍历卡片列表并添加 isFlipped 属性的方法。看上去是正确的 —— 但是 Vue 不喜欢这样。
 
-For the new object properties to be reactive, you have to add them to the object using the Vue.set method.
 想要让一个对象上新的属性生效，你需要使用 Vue.set 方法将它们添加到对象中。
 
 ```js
@@ -263,21 +227,16 @@ For the new object properties to be reactive, you have to add them to the object
     },
 ```
 
-Now the cards should flip on click:
 现在卡片一个在点击时会翻转了：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/card-flip-vuejs.gif)
 
-Alrighty, great job. Let's move on to the next one.
 好了，干得不错。让我们继续。
 
-## **Double it and shuffle it**
 ## **双倍和洗牌**
 
-Yep, that's right! To make a memory game out of these cards we need to have exactly one pair of each card. We also we need to shuffle the order of the cards every time the game is loaded.
 对，没错！使用这些卡片制作一个记忆游戏，我们需要每张卡片都正好一对。同时我们也需要在游戏开始时清洗卡片的排列顺序。
 
-Let's define a new property in our Vue instance named memoryCards. Here we will store the cards that will be played (that is, double the amount of actual cards and also shuffled).
 让我们在 Vue 实例中添加一个 memoryCards 的属性。这里将存放我们游戏进行中的卡片（也就是说，双倍的被打乱的卡片）
 
 ```js
@@ -286,20 +245,16 @@ memoryCards: [],
 ...
 ```
 
-### Doubling
 ### 双倍
 
-To create two copies of all the cards, let's concatenate the cards array to create and assign it to the memoryCards property.
 为了创建两份卡片，让我们将卡片数组拼接起来，并分配给 memoryCards 属性。
 
-Change the v-for directive in the HTML markup to loop over the property memoryCards instead of cards:
-改变在HTML中的 v-for 指令遍历对象，让它从原来的 cards 数组改变到 memoryCards 数组。
+改变在 HTML 中的 v-for 指令遍历对象，让它从原来的 cards 数组改变到 memoryCards 数组。
 
 ```html
 <div v-for="card in memoryCards" class="col-auto mb-3 flip-container" :class="{ 'flipped': card.isFlipped }" @click="flipCard(card)">
 ```
 
-Next, modify the lifecycle method  **created**  to assign the concatenated array into memoryCards:
 然后，修改 **created** 生命周期函数中方法，将数组拼接到 memoryCards 中：
 
 ```js
@@ -313,35 +268,26 @@ Next, modify the lifecycle method  **created**  to assign the concatenated array
 <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span></code></pre><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">Looks simple, right?</p><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">But this isn't gonna work correctly. There are two problems with this code:</p><ol style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px 1.5em 0px 1.3em; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; list-style: decimal; max-width: 100%; min-width: 100%;"><li style="box-sizing: inherit; margin: 0px 0px 0.5em; padding: 0px 0px 0px 0.3em; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.6em; font-family: inherit; font-size: 22px; vertical-align: baseline; word-break: break-word;">Direct assignment of this.cards into cards1 is not going to make another copy of cards object. cards1 is still referencing the original object.</li><li style="box-sizing: inherit; margin: 0.5em 0px; padding: 0px 0px 0px 0.3em; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.6em; font-family: inherit; font-size: 22px; vertical-align: baseline; word-break: break-word;">Since cards1 and cards2 are still referencing same object this means that we have concatenated two arrays which point to same array of objects.</li></ol><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">Changing any property of the object in the memoryCards object will change the original array as well as its own pair in the array.</p><figure class="kg-card kg-image-card" style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline;"><img src="https://www.freecodecamp.org/news/content/images/2020/06/card-double-flip-problem.gif" class="kg-image" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: middle; max-width: 100%; display: block; height: auto;"></figure><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">Well, that's a problem.</p><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">If you look around for solutions to properly copy an array or object so that it doesn't refer to the original array, you might come across solutions that do a shallow-copy of the array.</p><h3 id="what-s-a-shallow-copy" style="box-sizing: inherit; margin: 0.5em 0px 0.2em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 700; font-stretch: inherit; line-height: 1.15; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 2.8rem; vertical-align: baseline; text-rendering: optimizelegibility; min-width: 100%; color: var(--gray85);">What's a shallow copy?</h3><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">A shallow copy refers to the fact that only one level is copied. That will work fine for an array or object containing only primitive values.</p><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">One way to do shallow-copy is via the spread operator, which in our case will be something like the below code:</p><pre class=" language-js" style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; color: var(--gray85); background: var(--gray05); text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none; overflow: auto; min-width: 100%; max-width: 100%;"><code class=" language-js" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; color: rgb(0, 0, 0); background: transparent; text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none;"><span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(154, 110, 58);">...</span>
 ```
 
-But this is not the solution for us, because in our case we have an array of objects and not of any primitive values. Thus our problem can be solved if we do a deep copy of our array.
 但这不是我们的解决方法，因为在我们的例子中，我们有一个对象数组且没有原始数据。因此，我们的问题可以通过深拷贝数组来解决。
 
-### What's a deep copy?
 ### 什么是深拷贝？
 
-For objects and arrays containing other objects or arrays, copying these objects requires a deep copy. Otherwise, changes made to the nested references will change the data nested in the original object or array.
 对于对象或数组中包含其他对象和数组的情况，要想拷贝这些元素需要通过深拷贝。否则，当改变嵌套引用上的数据时，原始对象和数组中的数据也会发生改变。
 
-There are multiple ways of doing a deep copy, but we'll go with the simplest and most common way of using the  **Lodash**  library.
 进行深拷贝的方法有很多，我们将使用最简单也是最常用的方法，使用 **Lodash** 库。
 
-Now, whats  the **Lodash library?**
 那么什么是 **Lodash 库**?
 
-Lodash makes JavaScript easier by taking the hassle out of working with arrays, numbers, objects, strings, etc.
 Lodash 处理了对数组，数字，对象，字符串等类型的一些复杂操作，让 JavaScript 变得更方便使用。
 
-For our case Lodash has a method to perform deepCopy which makes it ridiculously simple.
 在我们的例子中，Lodash 有一个方法能让深拷贝的操作变得极其简单。
 
-First include Lodash in your page by either downloading or referencing it through the CDN.
 首先，通过下载源码或者使用 CDN 引用将 Lodash 包含在你的页面中。
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
 ```
 
-Next, you can use Lodash's  **cloneDeep**  method to perform the deep copy of our cards array.
 接下来，你可以使用 Lodash 的 **cloneDeep** 方法对我们的卡片数组进行深拷贝。
 
 ```js
@@ -350,10 +296,8 @@ Next, you can use Lodash's  **cloneDeep**  method to perform the deep copy of ou
  this.memoryCards = this.memoryCards.concat(cards1, cards2);
 ```
 
-### Shuffling
 ### 洗牌
 
-Now we want to shuffle the concatenated array. Lodash has a method to shuffle as well. Let's use the method and also simplify the code to concatenate and shuffle in a single line.
 现在我们将打乱组合起来的数组。Lodash 有一个可以方法同样可以打乱数组。让我们使用这个方法，然后为了简化代码，我们可以将拼合数组和打乱数组写在一行中。
 
 ```js
@@ -367,14 +311,12 @@ Vue<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padd
 Vue<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(221, 74, 104);">set</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>card<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">'isMatched'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span><span class="token boolean" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 0, 85);">false</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
 ```
 
-Create a new data property to store the flipped cards:
 创建一个新的属性用于存放翻转的卡片：
 
 ```js
 flippedCards: [],
 ```
 
-Next up, we modify the flipCard method to perform matching:
 接下来，我们定义一个 flipCard 方法去执行匹配的操作：
 
 ```js
@@ -393,21 +335,15 @@ _match(card){
 <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(0, 119, 170);">this</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>flippedCards <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">[</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">]</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
 ```
 
-The logic here is simple: we keep adding cards to the flippedCards array until there are two cards.
 这段逻辑很简单：我们持续往 flippedCards 数组中添加卡片，直到出现两张一样的为止。
 
-Once there are two cards, we perform matching.
 一旦出现两张一样的卡片，我们执行匹配的逻辑。
 
--   If the name of both the cards is the same, we mark the cards as matched by setting the isMatched property to true.
 - 如果两张卡片的名字一样，我们通过设置 isMatched 属性为 true 来标记卡片匹配。
--   Else, we set the isFlipped property back to false.
 - 否则，设置 isFlipped 属性为false。
 
-We clear out the flippedCards array after this.
 之后我们清空 flippedCards 数组。
 
-Add a new CSS property to fade out the cards that match:
 在匹配的卡片上添加新的CSS属性让其淡出。
 
 ```css
@@ -416,17 +352,14 @@ Add a new CSS property to fade out the cards that match:
 }
 ```
 
-Add a class binding to the container to add matched cards if the property is set to true:
 在组件容器 class 上绑定属性，当卡片匹配时设置值为 true：
 
 ```html
 :class="{ 'flipped': card.isFlipped, 'matched' : card.isMatched }"
 ```
 
-Here the logic works fine, but everything happens too fast for the player to understand whats going on. If the cards don't match they are flipped back even before the user can see the revealed card.
 这里运行时正常，但是逻辑判断等都发生的太快了以致于用户根本不知道发生了什么。如果卡片不匹配，它们甚至会在用户看到显示的卡片背面之前向后翻转。
 
-Let's use the setTimeout method of JavaScript to add a deliberate delay of few microseconds.
 让我们使用 JavaScript 的 setTimeout 方法来故意添加一些延迟效果。
 
 ```js
@@ -446,17 +379,12 @@ _match(card){
 },
 ```
 
-We added 400 microseconds of delay before marking them as matched, and 800 microseconds to delay before flipping them back.
 我们在卡片被标记匹配之前添加了0.4毫秒的延迟，以及卡片在翻回时添加了0.8毫秒的延迟。
 
-Also modify the flipCard method to not flip the cards when
 同时修改 flipCard 方法，当出现以下情况时不翻转
 
--   Card is already matched
 - 卡片已经匹配
--   Card is already flipped
 - 卡片已经翻转
--   User has already flipped two cards
 - 用户已经翻转两张卡片
 
 ```js
@@ -474,16 +402,12 @@ card<span class="token punctuation" style="box-sizing: inherit; margin: 0px; pad
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/flipping-cards-memory.gif)
 
-We are almost there, just few more steps.
 还差几步，项目马上就要完成了。
 
-## Finish the Game
 ## 游戏结束
 
-The game is marked as finished when all the cards are matched.
 当所有卡片都得到匹配时标志着游戏的结束。
 
-Let's quickly write the code condition for that. We introduce a new data property in our Vue instance:
 让我们快速编写结束的条件代码。我们在 Vue 实例中声明一个新的属性：
 
 ```js
@@ -491,7 +415,6 @@ Let's quickly write the code condition for that. We introduce a new data propert
 finish: false
 ```
 
-Next, we modify the match method to check if all cards are matched after every successful match.
 然后，我们修改一下 match 方法，每次匹配成功后是否所有的卡片都得到匹配。
 
 ```js
@@ -504,17 +427,13 @@ setTimeout(() => {
 <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span>
 ```
 
-We use the  **every**  method of JavaScript arrays which evaluates the given condition for truth, if not it returns false.
 我们使用 JavaScript 数组操作中的 **every** 方法，用于判断给定条件是否为真，如果不是则返回 false。
 
-## Keep Track of Total Turns and Total Time
 ## 记录翻转的次数和总耗时
 
-We have built the game, so now let's make it more interesting by giving it some finishing touches. We will add how many turns a user has taken, and also how they are doing on time taken to complete the game.
 我们创建好了游戏，现在让我们添加一些画龙点睛的方法让游戏变得更有趣。我们将添加用户用了多少次，以及花费了多少事件来完成这个游戏。
 
 
-First we'll introduce some new data properties:
 首先，我们先声明几个新的属性：
 
 ```js
@@ -526,7 +445,6 @@ totalTime: {
 },
 ```
 
-Once there are two cards flipped we will increase the count. Thus we'll modify the \_match method to increment the turns.
 一旦有两张牌翻转，我们就增加次数。因此，我们需要修改 _match 方法来增加 turns。
 
 ```js
@@ -558,7 +476,6 @@ _tick(){
  <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(0, 119, 170);">this</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>totalTime<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>seconds <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 0, 85);">0</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
 ```
 
-We use computed properties to pad up a '0' in front of minutes and seconds when they are single digits:
 当分钟和秒前面数字只有一位的时候，我们使用 computed 属性来在它们前面补充0。
 
 ```js
@@ -578,7 +495,6 @@ computed:{
 }
 ```
 
-Add the following HTML just above your HTML to display the total number of turns and total time:
 在你用来显示总共次数和时间的HTML下面，添加以下的HTML代码：
 
 ```html
@@ -588,7 +504,6 @@ Add the following HTML just above your HTML to display the total number of turns
 </div>
 ```
 
-Modify the finish game condition to stop the timer once the game is finished:
 修改游戏结束的判断条件，当游戏结束立刻停止计时：
 
 ```js
@@ -598,20 +513,16 @@ if(this.memoryCards.every(card => card.isMatched === true)){
 }
 ```
 
-## Reset
 ## 重置
 
-We are at our last step – good job if you've made it to this point.
 我们到了最后一步了 —— 如果能到达这里那就说明你很厉害了。
 
-Let's add a button to reset the game:
 让我们给游戏添加一个重置按钮：
 
 ```html
 <div class="totalTime p-3"><button class="btn btn-info" @click="reset" :disabled="!start">Restart</button></div>
 ```
 
-Bind the click event to the reset method:
 在 click 事件上绑定一个 reset 方法：
 
 ```js
@@ -635,10 +546,8 @@ reset(){
     <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 0, 85);">600</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
 ```
 
-We clear out the timer, reshuffle the cards, and reset all the fields back to their default value.
 我们重置了时间，重新洗牌，并且让所有属性等于其默认值。
 
-We also modify the created lifecycle method to call the reset method to avoid code duplication:
 我们也修改了 created 生命周期函数中的方法，通过调用 reset 方法来避免代码重复：
 
 ```js
@@ -647,12 +556,11 @@ created(){
 },
 ```
 
-There you go ! You now have a memory game in VueJS.
 完成！现在你有一个用 VueJS 写的记忆游戏了。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/memory-game-success.gif)
 
-_If you are looking to learn VueJS basics along with such fun practice exercises, you can read the VueJS Tutorial series on my personal blog  [5Balloons VueJS Course][2]._
+_如果你在寻找通过这种有趣的练习来学习 VueJS 的基础知识，你可以阅读我博客上的这份 VueJS 指南 [5Balloons VueJS Course][2]_
 
   
 

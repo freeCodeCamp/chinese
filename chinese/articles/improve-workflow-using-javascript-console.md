@@ -63,13 +63,13 @@ console.time 和 console.count 使用示例
 
 ![](https://cdn-media-1.freecodecamp.org/images/Tt4dNjkK0yCpYzAHD6ZEFluIQ6IHl9cjv-nl)
 
-#### Console.trace and Console.assert
+#### Console.trace 和 Console.assert
 
-These methods simply print a stack trace from the point where it was called. Imagine you are creating a JS library and want to inform the user where the error was generated. In that case, these methods can be very useful. The  `console.assert`  is like the  `console.trace`  but will print only if the condition passed didn’t pass.
+这些方法的功能只是从其被调用的位置打印堆栈跟踪。 假设你正在创建一个 JS 库，并且想告知用户错误发生的位置。 在这种情况下，这些方法可能会非常有用。`console.assert` 类似于 `console.trace`，但仅在条件未通过时才会打印。
 
 ![](https://cdn-media-1.freecodecamp.org/images/wXYN1gjig-dXgTSQPtf7rPPWR3uNvFrtsrGw)
 
-As we can see, the output is exactly what React (or any other library) would show us when we generate an exception.
+如你所见，输出正是产生异常时 React（或任何其他库）向我们所展示的内容。
 
 ![](https://cdn-media-1.freecodecamp.org/images/ZH4tfVHdbM-xG0R2TcTuQ58RuuozuPTGddug)
 

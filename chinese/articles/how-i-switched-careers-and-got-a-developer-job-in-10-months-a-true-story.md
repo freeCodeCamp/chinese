@@ -27,7 +27,7 @@
 #### 故事起源
 一切源于我与我的伴侣的一次热烈地交谈。她正在探索在STEM领域尤其是科技领域导致女性人数减少的原因。她决定通过成为一名程序员来改变这一现状。她想成为我们家族中年轻女孩的榜样。就这样，她开始学习了解了。
 
-That soon excited me too, as we realized that there are plenty of resources available. This wasn’t some dark art, but a skill that we could learn and master.
+这很快也让我兴奋起来，因为我们意识到有很多可用的资源。这不是什么黑魔法，而是一种我们可以学习和掌握的技能。
 
 Spoiler alert, she also managed a career change from HR and in fact  [got a developer job][1]a month before I did.
 

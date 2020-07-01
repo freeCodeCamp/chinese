@@ -29,7 +29,7 @@
 
 这很快也让我兴奋起来，因为我们意识到有很多可用的资源。这不是什么黑魔法，而是一种我们可以学习和掌握的技能。
 
-Spoiler alert, she also managed a career change from HR and in fact  [got a developer job][1]a month before I did.
+剧透一下，她成功地从人力资源方向转行，事实上比我早一个月获得了开发的工作。
 
 And so, one day we found a children’s book about programming in a science museum. We went back home, opened Notepad, wrote  `<h1>Hello Worl`d</h1> opened it in the browser and t`hen change`d color: red. We were screaming with excitement! What witchcraft was that!
 

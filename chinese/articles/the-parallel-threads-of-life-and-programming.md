@@ -1,6 +1,6 @@
 > * 原文地址：[The Parallel Threads of Life and Programming 编程与人生](https://www.freecodecamp.org/news/the-parallel-threads-of-life-and-programming-2/)
 > * 原文作者：Brandon Wozniewicz
-> * 译者：
+> * 译者：pjwok
 > * 校对者：
 
 ![The Parallel Threads of Life and Programming](https://www.freecodecamp.org/news/content/images/size/w2000/2020/02/daria-sukhorukova-I51HSIo8k-4-unsplash.jpg)

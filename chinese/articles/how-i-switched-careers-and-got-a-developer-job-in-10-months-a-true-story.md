@@ -31,7 +31,7 @@
 
 剧透一下，她成功地从人力资源方向转行，事实上比我早一个月获得了开发的工作。
 
-And so, one day we found a children’s book about programming in a science museum. We went back home, opened Notepad, wrote  `<h1>Hello Worl`d</h1> opened it in the browser and t`hen change`d color: red. We were screaming with excitement! What witchcraft was that!
+某一天我们在一个科学博物馆里面发现了一个有关儿童编程方面的书籍。一回到家我们就打开记事本写下了 "Hello world" 的代码并在浏览器里面打开，然后将页面颜色更改为红色。这是什么魔法！我们兴奋地尖叫着。
 
 I was hooked. I wanted to make stuff with code, I wanted computers to do things I said!
 

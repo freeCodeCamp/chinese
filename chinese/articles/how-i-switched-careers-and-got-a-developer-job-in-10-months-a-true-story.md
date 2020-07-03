@@ -33,7 +33,7 @@
 
 某一天我们在一个科学博物馆里面发现了一个有关儿童编程方面的书籍。一回到家我们就打开记事本写下了 "Hello world" 的代码并在浏览器里面打开，然后将页面颜色更改为红色。这是什么魔法！我们兴奋地尖叫着。
 
-I was hooked. I wanted to make stuff with code, I wanted computers to do things I said!
+我彻底迷上了编程。我想要用电脑和代码做我想做的事情。
 
 #### My previous job
 

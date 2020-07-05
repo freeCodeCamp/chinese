@@ -2834,120 +2834,120 @@ class Converter extends React.Component {
 
 - `onTransitionEnd`
 
-### `Lifecycle Events`
+### 生命周期事件
 
-`React class components can have hooks for several lifecycle events.`
+React 类组件有很多处理生命周期事件的钩子。
 
-> `_Hooks allow function components to access them too, in a different way._`
+> 函数组件也有处理生命周期事件的钩子，不过和类组件的处理方式不太一样。
 
-`During the lifetime of a component, there’s a series of events that gets called, and to each event you can hook and provide custom functionality.`
+在组件的生命中，相继触发了一系列事件，每一个事件都有对应的钩子，可以提供定制化的函数。
 
-`What hook is best for what functionality is something we’re going to see here.`
+接下来我们看看不同的功能用什么钩子最合适。
 
-`First, there are 3 phases in a React component lifecycle:`
+首先，React 组件的生命周期有 3 个阶段：
 
--   `Mounting`
--   `Updating`
--   `Unmounting`
+-   Mounting 挂载
+-   Updating 更新
+-   Unmounting 卸载
 
-`Let’s see those 3 phases in detail and the methods that get called for each.`
+我们来研究一下这 3 个阶段，以及它们对应使用的方法。
 
-#### `Mounting`
+#### Mounting 挂载
 
-``When mounting you have 4 lifecycle methods before the component is mounted in the DOM: the  `constructor`,  `getDerivedStateFromProps`,  `render`  and  `componentDidMount`.``
+挂载时，当组件在 DOM 中完成挂载之前，有 4 种生命周期方法，分别是：`constructor`、 `getDerivedStateFromProps`、 `render` 和 `componentDidMount`。
 
 #### `Constructor`
 
-`The constructor is the first method that is called when mounting a component.`
+constructor 是挂载组件时第一个被触发的方法。
 
-``You usually use the constructor to set up the initial state using  `this.state = ...`.``
+constructor 通常用来配置初始的状态，使用方法是 `this.state = ...`。
 
 #### `getDerivedStateFromProps()`
 
-``When the state depends on props,  `getDerivedStateFromProps`  can be used to update the state based on the props value.``
+当状态依赖于属性时，`getDerivedStateFromProps` 可以用来基于属性值更新状态。
 
-``It was added in React 16.3, aiming to replace the  `componentWillReceiveProps`deprecated method.``
+React 16.3 新增了这一方法，旨在替代过时的 `componentWillReceiveProps` 方法。
 
-``In this method you haven’t access to  `this`  as it's a static method.``
+它是一个静态方法，因此在这个方法中，你无法访问 `this`。
 
-`It’s a pure method, so it should not cause side effects and should return the same output when called multiple times with the same input.`
+此外，它还是个纯方法，因此使用时不会引发副作用，且在输入相同值时总是返回相同的值。
 
-`Returns an object with the updated elements of the state (or null if the state does not change)`
+状态改变时，它会返回更新后的元素组成的对象（如果状态没有改变则会返回 null）。
 
 #### `render()`
 
-`From the render() method you return the JSX that builds the component interface.`
+render() 方法会返回构建组件界面的 JSX。
 
-`It’s a pure method, so it should not cause side effects and should return the same output when called multiple times with the same input.`
+它也是个纯方法，因此使用时不会引发副作用，且在输入相同值时总是返回相同的值。
 
 #### `componentDidMount()`
 
-`This method is the one that you will use to perform API calls, or process operations on the DOM.`
+这个方法用来执行 API 调用，或 DOM 操作。
 
-#### `Updating`
+#### Updating 更新
 
-``When updating you have 5 lifecycle methods before the component is mounted in the DOM: the  `getDerivedStateFromProps`,  `shouldComponentUpdate`,  `render`,  `getSnapshotBeforeUpdate`  and  `componentDidUpdate`.``
+更新时，当组件在 DOM 中完成挂载之前，有 5 种生命周期方法，分别是：`getDerivedStateFromProps`、 `shouldComponentUpdate`、 `render`、 `getSnapshotBeforeUpdate` 和 `componentDidUpdate`。
 
 #### `getDerivedStateFromProps()`
 
-`See the above description for this method.`
+参见上一部分的描述。
 
 #### `shouldComponentUpdate()`
 
-``This method returns a boolean,  `true`  or  `false`. You use this method to tell React if it should go on with the rerendering, and defaults to  `true`. You will return  `false`  when rerendering is expensive and you want to have more control on when this happens.``
+这个方法返回一个布尔值，`true` 或者是 `false`。这个方法用于告诉 React 是否继续渲染，它的默认值是 `true`。当渲染成本过高，使用者希望控制渲染过程时，可以返回 `false`。
 
 #### `render()`
 
-`See the above description for this method.`
+参见上一部分的描述。
 
 #### `getSnapshotBeforeUpdate()`
 
-`In this method you have access to the props and state of the previous render, and of the current render.`
+这个方法可以访问上一次渲染和当前渲染的属性和状态。
 
-`Its use cases are very niche, and it’s probably the one that you will use less.`
+它的使用场景非常少，你可能很少会用到它。
 
 #### `componentDidUpdate()`
 
-`This method is called when the component has been updated in the DOM. Use this to run any 3rd party DOM API or call APIs that must be updated when the DOM changes.`
+当组件在 DOM 中更新时，这个方法会被触发。它可以用来执行任何第三方的 DOM API 或者调用任何需要在 DOM 变化时更新的 API。
 
-``It corresponds to the  `componentDidMount()`  method from the mounting phase.``
+它对应挂载阶段的 `componentDidMount()` 方法。
 
-#### `Unmounting`
+#### Unmounting 卸载
 
-``In this phase we only have one method,  `componentWillUnmount`.``
+这一阶段只有一个方法，即 `componentWillUnmount`。
 
 #### `componentWillUnmount()`
 
-`The method is called when the component is removed from the DOM. Use this to do any sort of cleanup you need to perform.`
+当组件从 DOM 中移除时，这个方法会被触发。你可以通过这个方法执行任何清理事务。
 
-#### `Legacy`
+#### 遗留问题
 
-``If you are working on an app that uses  `componentWillMount`,  `componentWillReceiveProps`  or  `componentWillUpdate`, those were deprecated in React 16.3 and you should migrate to other lifecycle methods.``
+如果你的应用还在用 `componentWillMount`、 `componentWiiReceiveProps` 或 `componentWillUpdate`这些 React 16.3 中废弃的方法，那就需要迁移到别的生命周期方法了。
 
-### `Forms in React`
+### React 中的表单
 
-`Forms are one of the few HTML elements that are interactive by default.`
+表单是为数不多的默认即为交互式的 HTML 元素。
 
-`They were designed to allow the user to interact with a page.`
+它们的设计目的就是让用户和页面交互。
 
-`Common uses of forms?`
+表单的常见应用场景？
 
--   `Search`
--   `Contact forms`
--   `Shopping carts checkout`
--   `Login and registration`
--   `and more!`
+- 搜索
+- 联络表格
+- 购物车结算
+- 登录和注册
+- 还有更多！
 
-`Using React we can make our forms much more interactive and less static.`
+React 能让表单更具交互性，减少静态性。
 
-`There are two main ways of handling forms in React, which differ on a fundamental level: how data is managed.`
+React 中处理表单有两种主要方式，它们的根本不同在于数据如何管理。
 
--   `if the data is handled by the DOM, we call them  **uncontrolled components**`
--   `if the data is handled by the components we call them  **controlled components**`
+- 如果数据通过 DOM 处理，我们称其为 **非受控组件**
+- 如果数据通过组件处理，我们称其为 **受控组件**
 
-``As you can imagine, controlled components is what you will use most of the time. The component state is the single source of truth, rather than the DOM. Some form fields are inherently uncontrolled because of their behavior, like the  `<input type="file">`field.``
+如你所想，我们大多数时候都会使用受控组件。组件状态是唯一的数据来源，而非 DOM。有些表单字段由于其行为无法受控，如 `<input type="file">`。
 
-``When an element state changes in a form field managed by a component, we track it using the  `onChange`  attribute.``
+当组件中的某个表单字段发生变化时，我们通过 `onChange` 属性来跟踪数据的变化。
 
 ```
 class Form extends React.Component {
@@ -2971,7 +2971,7 @@ class Form extends React.Component {
 }
 ```
 
-``In order to set the new state, we must bind  `this`  to the  `handleChange`  method, otherwise  `this`  is not accessible from within that method:``
+为了设置新的状态值，我们需要给 `handleChange` 方法绑定 `this`，否则方法内无法访问 `this`。
 
 ```
 class Form extends React.Component {
@@ -2997,7 +2997,7 @@ class Form extends React.Component {
 }
 ```
 
-``Similarly, we use the  `onSubmit`  attribute on the form to call the  `handleSubmit`  method when the form is submitted:``
+与之类似，我们在提交表单时通过 `onSubmit` 属性来调用 `handleSubmit` 方法。
 
 ```
 class Form extends React.Component {
@@ -3029,17 +3029,17 @@ class Form extends React.Component {
 }
 ```
 
-``Validation in a form can be handled in the  `handleChange`  method: you have access to the old value of the state, and the new one. You can check the new value and if not valid reject the updated value (and communicate it in some way to the user).``
+可以在 `handleChange` 方法中处理表单验证：访问新的状态值和旧的状态值。你可以检查新的状态值，如果是无效值，则可以拒绝提交（并告知用户）。
 
-``HTML Forms are inconsistent. They have a long history, and it shows. React however makes things more consistent for us, and you can get (and update) fields using its  `value`attribute.``
+HTML 表单由于历史原因表现不一致。React 则帮我们处理了这些不一致，让我们可以通过 `value` 属性来获取和更新表单字段的值。
 
-``Here’s a  `textarea`, for example:``
+这是 `textarea` 的例子：
 
 ```
 <textarea value={this.state.address} onChange={this.handleChange} />
 ```
 
-``The same goes for the  `select`  tag:``
+`select` 标签也可以这样操作：
 
 ```
 <select value="{this.state.age}" onChange="{this.handleChange}">
@@ -3048,9 +3048,9 @@ class Form extends React.Component {
 </select>
 ```
 
-``Previously we mentioned the  `<input type="file">`  field. That works a bit differently.``
+我们在前面提到过 `<input type="file">` 元素，它的实现方式略有不同。
 
-``In this case you need to get a reference to the field by assigning the  `ref`  attribute to a property defined in the constructor with  `React.createRef()`, and use that to get the value of it in the submit handler:``
+在下面的例子中，需要在构造器中使用 `React.createRef()` 来创建引用，并将这个引用指定给表单的 `ref` 属性，这样才能在 submit 处理器中获取表单字段的值：
 
 ```
 class FileInput extends React.Component {
@@ -3074,33 +3074,33 @@ class FileInput extends React.Component {
 }
 ```
 
-``This is the  **uncontrolled components**  way. The state is stored in the DOM rather than in the component state (notice we used  `this.curriculum`  to access the uploaded file, and have not touched the  `state`.``
+这是**非受控组件**的实现方式。字段值存在 DOM 中，而非组件状态中（注意我们通过 `this.curriculum` 来获取上传的文件，没有用到 `state`）。
 
-`I know what you’re thinking — beyond those basics, there must be a library that simplifies all this form handling stuff and automates validation, error handling and more, right? There is a great one,  [Formik][89].`
+我知道你肯定在想，基于以上这些，一定有一个能够简化表单处理，自动验证字段，自行处理错误的库，对吗？的确有，[Formik](89)。
 
-### `Reference a DOM element`
+### 引用 DOM 元素
 
-`React is great at abstracting away the DOM from you when building apps.`
+在构建应用时，React 能够帮你非常方便地抽象 DOM。
 
-`But what if you want to access the DOM element that a React component represents?`
+但是如果你希望在 React 组件中访问 DOM 元素呢？
 
-`Maybe you have to add a library that interacts directly with the DOM like a chart library, maybe you need to call some DOM API, or add focus on an element.`
+也许你会在应用中添加能够直接与 DOM 交互的代码库，或者调用一些 DOM API，或者给元素添加焦点。
 
-> `_Whatever the reason is, a good practice is making sure there’s no other way of doing so without accessing the DOM directly._`
+> 无论是什么原因，好的做法是确保没有其他方法可以直接访问 DOM。
 
-`In the JSX of your component, you can assign the reference of the DOM element to a component property using this attribute:`
+在组件的 JSX 代码中，可以通过组件的 `ref` 属性指定 DOM 元素的引用。
 
 ```
 ref={el => this.someProperty = el}
 ```
 
-``Put this into context, for example with a  `button`  element:``
+我们通过实际例子来看，比如一个 `button` 元素：
 
 ```
 <button ref={el => (this.button = el)} />
 ```
 
-`` `button`  refers to a property of the component, which can then be used by the component's lifecycle methods (or other methods) to interact with the DOM:``
+`button` 是组件的属性，通过使用 `button` 可以在组件的生命周期方法（或其他方法）中与 DOM 交互：
 
 ```
 class SomeComponent extends Component {
@@ -3110,7 +3110,7 @@ class SomeComponent extends Component {
 }
 ```
 
-``In a function component the mechanism is the same, you just avoid using  `this`  (since it does not point to the component instance) and use a property instead:``
+在函数式组件中也一样，只不过不需要使用 `this`(因为 `this` 不指向组件实例)，只使用属性即可：
 
 ```
 function SomeComponent() {
@@ -3119,24 +3119,24 @@ function SomeComponent() {
 }
 ```
 
-### `Server side rendering`
+### 服务端渲染
 
-`**Server Side Rendering**, also called  **SSR**, is the ability of a JavaScript application to render on the server rather than in the browser.`
+**服务端渲染**，也成为 **SSR**，指 JavaScript 应用在服务端而非浏览器端渲染的功能。
 
-`Why would we ever want to do so?`
+我们为什么需要这个功能呢？
 
--   `it allows your site to have a faster first page load time, which is the key to a good user experience`
--   `it is essential for SEO: search engines cannot (yet?) efficiently and correctly index applications that exclusively render client-side. Despite the latest improvements to indexing in Google, there are other search engines too, and Google is not perfect at it in any case. Also, Google favors sites with fast load times, and having to load client-side is not good for speed`
--   `it’s great when people share a page of your site on social media, as they can easily gather the metadata needed to nicely share the link (images, title, description..)`
+- 它能加快网站首页的加载时间，这是获得好的用户体验的关键
+- 它对 SEO 至关重要：搜索引擎（目前？）还无法有效且准确地索引只通过客户端渲染的应用。尽管 Google 索引有了最新的改进，但无论是其他搜索引擎还是 Google 自身都没有做到完美。此外，Google 更偏向加载速度快的页面，而客户端加载在速度上并不占优
+- 当人们在设计媒体上分享你的网站时，服务端渲染能够非常方便地收集分享链接所需的元数据（图片、标题、描述等）
 
-`Without Server Side Rendering, all your server ships is an HTML page with no body, just some script tags that are then used by the browser to render the application.`
+如果不通过服务端渲染，你的服务器传输的只是一个没有 body 的 HTML 页面，只包含一些浏览器用来渲染应用的标签。
 
-`Client-rendered apps are great at any subsequent user interaction after the first page load. Server Side Rendering allows us to get the sweet spot in the middle of client-rendered apps and backend-rendered apps: the page is generated server-side, but all interactions with the page once it’s been loaded are handled client-side.`
+客户端渲染的应用非常适合进行首页加载完成之后的其他交互。服务端渲染使我们能够在客户端渲染应用和后端渲染应用中获得最佳位置：页面由服务端生成，但是一旦页面加载完成后，所有的交互都有客户端来处理。
 
-`However Server Side Rendering has its drawback too:`
+不过服务端渲染也有其自身的问题：
 
--   `it’s fair to say that a simple SSR proof of concept is simple, but the complexity of SSR can grow with the complexity of your application`
--   `rendering a big application server-side can be quite resource-intensive, and under heavy load it could even provide a slower experience than client-side rendering, since you have a single bottleneck`
+- 简单应用的服务端渲染实现比较简单，但是随着应用的复杂性增加，服务端渲染的复杂性也随之增加
+- 渲染大型应用程序会占用大量资源，并且在繁重的加载量下，当遭遇瓶颈时，它可能提供比客户端渲染更慢的体验
 
 ### `A very simplistic example of what it takes to Server-Side render a React app`
 

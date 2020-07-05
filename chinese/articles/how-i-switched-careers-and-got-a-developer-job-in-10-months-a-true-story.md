@@ -39,7 +39,8 @@
 
 那时我已经做英语老师八年了。这不是典型的一个人在谈论他的没有前途的工作的场景。相反我非常热爱我的教学工作，喜欢工作的时候和孩子们在一起，而且我在工作场所很自在。这让我很满意。
 
-But sometimes, even when you love something, you know in your heart that it is time to move on. It was a new phase in my life and I had a new outlook and new aspirations. And above all, I wanted a new challenge. Something that would push me well out of my comfort zone.
+但是有时候，即使你爱上了某样事情，你心里也知道是时候该继续前进了。这是我人生的一个新阶段，我有了新的展望和抱负。最重要的是，我想要一个新的挑战。让我远离舒适区。
+
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*cUOknyEHrQ6wGqynmp__Eg.jpeg)
 

@@ -4,12 +4,10 @@
 > * 校对者：
 
 ![How to Build a Simple Pokémon Web App with React Hooks and the Context API](https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/ash.gif)
-
-After seven years of full stack development using Ruby, Python, and vanilla JavaScript, these days I mostly work with JavaScript, Typescript, React, and Redux.  
-在使用 Ruby、Python、原生 JavaScript 进行全栈开发七年后，最近我主要使用 JavaScript、Typescript、React、Redux 从事工作。
-
-The JavaScript community is great and moves really fast. Tons of things are created "overnight", usually figuratively, but sometimes literally. All this makes it is really difficult to keep up to date.  
-JavaScript 社区发展日新月异。很多新鲜事物 “一夜之间” 涌现出来，。这使得紧跟时代真的很困难。
+ 
+在使用 Ruby、Python、原生 JavaScript 进行全栈开发七年后，最近我从事的工作主要使用 JavaScript、Typescript、React、Redux 等。
+  
+JavaScript 社区发展日新月异。很多新鲜事物 “一夜之间” 涌现出来，这通常是一种修辞手法，但有时的确如此。所以紧跟时代潮流真的很困难。
 
 I always feel like I'm late to the JavaScript party. And I want to be there, even though I don't really like parties.  
 我总感觉我参加 JavaScript 聚会晚了。尽管我不喜欢聚会，但我还是想去参加。
@@ -18,7 +16,7 @@ Just one year of working with React and Redux and I felt like I needed to learn 
 仅仅使用 React 和 Redux 工作一年，我觉得我需要学习 Hooks 和 Context API 进行状态管理。在阅读了一些相关文章的概念后，我创建了一个简单的项目用于实践。
 
 Since I was a little boy, I've been passionate about Pokémon. It was always fun playing the games on the Game Boy and conquering all the Leagues. Now as a developer, I want to play around with the  [Pokémon API][1].  
-从小我就对 Pokémon 充满热情。在游戏机上打游戏并通关所有宝可梦联赛非常有趣。现在作为一名开发人员，我想玩一下 [Pokémon API][1]。
+我从小就对 Pokémon 充满热情。在游戏机上打游戏并通关所有宝可梦联赛非常有趣。现在作为一名开发人员，我想玩一下 [Pokémon API][1]。
 
 我决定创建一个简单的网页，我可以在网页的不同部分实现数据共享。页面主要由三部分组成： 
 
@@ -54,18 +52,22 @@ const [pokemons] = useState([
 
 ```
 
-Here we have a list of three pokémon objects. The  `useState`  hook provides a pair of items: the current state and a function to let you update this created state.
+Here we have a list of three pokémon objects. The  `useState`  hook provides a pair of items: the current state and a function to let you update this created state.  
+我们有三个 pokémon 对象的列表。`useState` 钩子函数提供了一对选项：当前状态和一个可以更新该状态的函数。
 
-Now with the pokémon's state, we can map it and render the name of each one.
+Now with the pokémon's state, we can map it and render the name of each one.  
+现在有了 pokémon 的状态，我们可以构造一个 map 函数用于给每一个 pokémon 建立对应名字的映射。
 
 ```javascript
 {pokemons.map((pokemon) => <p>{pokemon.name}</p>)}
 
 ```
 
-It is just a map returning each pokémon's name in a paragraph tag.
+It is just a map returning each pokémon's name in a paragraph tag.  
+这个 map 函数在段落标签中返回每个 pokémon 的名字。
 
-This is the whole component implemented:
+This is the whole component implemented:  
+实现整个组件的方法：
 
 ```javascript
 import React, { useState } from 'react';
@@ -89,23 +91,31 @@ const PokemonsList = () => {
 
 ```
 
-Just a little tweak here:
+Just a little tweak here:  
+此处有一点小改动：
 
 -   I added the  `key`  in a combination of the pokémon's  `id`  and  `name`
 -   And I also rendered a paragraph for the  `id`  attribute (I was just testing it. But we will remove it later.)
+-   我在 pokémon 的 `id` 和 `name` 组合中添加了 `key`  
+-   我为该 `id` 属性设置了一个段落（这么做只是用于测试，并在稍后移除）。
 
-Great! Now we have the first list up and running.
 
-I want to make this same implementation but now for the captured pokémon. But for the captured pokémon, I first want to create an empty list because when the "game" starts, I won't have any captured pokémon, right? Right!
+Great! Now we have the first list up and running.  
+非常棒！现在我们已经拥有了第一个可运行的列表。
+
+I want to make this same implementation but now for the captured pokémon. But for the captured pokémon, I first want to create an empty list because when the "game" starts, I won't have any captured pokémon, right? Right!  
+对于捕捉到的 pokémon 我想用同样方法实现。但是对于已经捕捉到的 pokémon ，我想首先创建一个空列表。因为当我们的“游戏”开始时，我没有捕捉到的 pokémon ，对吗？确实如此！
 
 ```javascript
 const [pokemons] = useState([]);
 
 ```
 
-That's it, really simple!
+That's it, really simple!  
+就是这样，非常简单！
 
-The whole component looks similar to the other:
+The whole component looks similar to the other:  
+这是完整的组件，看起来与前一个相似：
 
 ```javascript
 import React, { useState } from 'react';
@@ -124,9 +134,11 @@ const CapturedPokemons = () => {
 
 ```
 
-Here we use  `map`, but as the array is empty, it doesn't render anything.
+Here we use  `map`, but as the array is empty, it doesn't render anything.  
+这里我们使用 `map` 函数，但是因为数组是空的，里面什么值都没有。
 
-Now that I have the two main components, I can use them together in the  `App`  component:
+Now that I have the two main components, I can use them together in the  `App`  component:  
+现在我们有了两个主要组件，我可以在 `App` 组件中调用它们：
 
 ```javascript
 import React from 'react';
@@ -142,28 +154,37 @@ const App = () => (
 
 ```
 
-## Capturing and Releasing
+## Capturing and Releasing  
+## 捕捉和释放
 
-This is the second part of our app where we can capture and release pokémon. So let's go over the expected behavior.
+This is the second part of our app where we can capture and release pokémon. So let's go over the expected behavior.  
+这是我们应用程序的第二部分，我们可以捕捉和释放 pokémon 。让我们回顾一下之前的设计。
 
-For each pokémon in the list of available pokémon, I want to enable an action to capture them. The capture action will remove them from the list where they were and add them to the list of captured pokémon.
+For each pokémon in the list of available pokémon, I want to enable an action to capture them. The capture action will remove them from the list where they were and add them to the list of captured pokémon.  
+对于存活 pokémon 列表中的每一个 pokémon ，我想设计一个行为去捕捉它们。捕捉行为将会把他们从存活列表中移除并添加到已捕获 pokémon 的列表中。
 
-The release action will have similar behavior. But instead of moving from the available list to the captured list, it will be the reverse. We will move them from the captured list to the available list.
+The release action will have similar behavior. But instead of moving from the available list to the captured list, it will be the reverse. We will move them from the captured list to the available list.  
+释放行为和捕捉行为差不多。但并不是从存活列表添加到已捕获列表，反之，我们会将 pokémon 从已捕获列表移动到存活列表中去。
 
-So both boxes need to share data to be able to add pokémon to the other list. How do we do this as they are different components in the app? Let's talk about the React Context API.
+So both boxes need to share data to be able to add pokémon to the other list. How do we do this as they are different components in the app? Let's talk about the React Context API.  
+所以这两个盒子需要共享数据来实现 pokémon 在两个列表间的移动。作为该应用程序的不同组件我们该怎么办呢？让我们考虑一下 React Contex API。
 
-The Context API was designed to make global data for a defined tree of React components. As the data is global, we can share it among components in this defined tree. So let's use it to share our simple Pokemon data between the two boxes.
+The Context API was designed to make global data for a defined tree of React components. As the data is global, we can share it among components in this defined tree. So let's use it to share our simple Pokemon data between the two boxes.  
+React Contex API 被设计为一个定义好的 React 组件树生成全局数据。因为是全局数据，我们可以在定义好的树中实现数据共享。所以我们可以用它来实现宝可梦数据在两个盒子中的共享。
 
-Mental Note: "Context is primarily used when some data needs to be accessible by many components at different nesting levels." - React Docs.
+注意：“ Context 主要用于一些数据需要被不同嵌套层次的多个组件访问的情况。”——React 文档
+Mental Note: "Context is primarily used when some data needs to be accessible by many components at different nesting levels." - React Docs.  
 
-Using the API, we simply create a new context like this:
+Using the API, we simply create a new context like this:  
+使用 API，我们可以简单创建一个新的 context：
 
 ```javascript
 import { createContext } from 'react';
 
 ```
 
-Now, with the  `PokemonContext`, we can use its provider. It will work as a component wrapper of a tree of components. It provides global data to these components and enables them to subscribe to any changes related to this context. It looks like this:
+Now, with the  `PokemonContext`, we can use its provider. It will work as a component wrapper of a tree of components. It provides global data to these components and enables them to subscribe to any changes related to this context. It looks like this:  
+现在，我们可以使用 `PokemonContext` 的 provider 属性，作为组件树的组件包装器。它向这些组件提供全局数据并能够联系上下文的改变。定义方式如下所示：
 
 ```javascript
 <PokemonContext.Provider value={/* some value */}>

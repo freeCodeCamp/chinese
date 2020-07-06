@@ -44,9 +44,9 @@
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*cUOknyEHrQ6wGqynmp__Eg.jpeg)
 
-### The one true path to success
+### 通往成功的真正途径
 
-This clearly doesn’t exist. Three of us started around the same time learning to code for a career change: my partner, myself, and a good friend. All three of us are now working in the field, and there is very little in common between our approaches. Each one followed the material and methods that worked for them. If there is one thing in common between us, it is that we simply did not give up, and kept on going. We all put a lot of hard work and persistence.
+显然这是不存的。我们三个人（我的伴侣、我和我的好朋友）为了转行几乎同时开始学习编程。我们三个人现在都在该领域工作，我们每个人的方法都不一样。每个人都有适合自己风格的方法。如果说我们之间有什么共同点的话，那就是我们没有放弃，没有半途而废。我们都付出了很多努力。
 
 So instead of the one true path, I’m going to tell you a bit about my path. It’s not the only way, it is not the best way. It is what worked for me.
 

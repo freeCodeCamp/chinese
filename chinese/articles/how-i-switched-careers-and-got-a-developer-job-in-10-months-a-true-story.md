@@ -48,7 +48,7 @@
 
 显然这是不存的。我们三个人（我的伴侣、我和我的好朋友）为了转行几乎同时开始学习编程。我们三个人现在都在该领域工作，我们每个人的方法都不一样。每个人都有适合自己风格的方法。如果说我们之间有什么共同点的话，那就是我们没有放弃，没有半途而废。我们都付出了很多努力。
 
-So instead of the one true path, I’m going to tell you a bit about my path. It’s not the only way, it is not the best way. It is what worked for me.
+所以这里我要告诉你们的将不是一个通用的方法，而是我自己所特有的方法。这不是唯一的方法，可能也不是最好的方法。但是这对我很有效。
 
 #### Getting started
 

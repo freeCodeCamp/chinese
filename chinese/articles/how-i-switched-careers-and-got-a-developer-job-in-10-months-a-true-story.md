@@ -54,9 +54,9 @@
 
 首先，我在 YouTube 上观看关于编程的视频，找到切入点。然后我开始学习 HTML 和 CSS。我按照教程构建了一些基本的web网页。我开始明白这是我想要从事的工作。
 
-#### Setting an Objective
+#### 设定目标
 
-I reached out to two of my friends working in the field for tips and advice. Those early words of encouragement and guidance were vital in getting me going and in focusing my mind on a clear goal.
+我向两个在这个领域工作的朋友寻求建议。那些鼓励的话语对我在前行的路上专注于一个明确的目标至关重要。
 
 It took some time to sort through all the options and set realistic objectives that would work for me. I needed a swift career change. I had no alternative source of income, which meant maintaining my job until I could do the switch.
 

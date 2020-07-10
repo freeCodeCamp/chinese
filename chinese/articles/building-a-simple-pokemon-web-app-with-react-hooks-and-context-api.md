@@ -191,14 +191,15 @@ Now, with the  `PokemonContext`, we can use its provider. It will work as a comp
 
 ```
 
-The  `value`  prop is just a value that this context provides the wrapped components. What should we provide to the available and the captured lists?
+The  `value`  prop is just a value that this context provides the wrapped components. What should we provide to the available and the captured lists?  
+这个`value`只是上下文提供的包装组件的值，我们应该向存活列表和捕获列表传递的值有哪些？
 
--   `pokemons`: to list in the available list
--   `capturedPokemons`: to list in the captured list
--   `setPokemons`: to be able to update the available list
--   `setCapturedPokemons`: to be able to update the captured list
-
-As I mentioned before in the  `useState`  part, this hook always provides a pair: the state and a function to update this state. This function handles and updates the context state. In other words, they are the  `setPokemons`  and  `setCapturedPokemons`. How?
+-   `pokemons`: 存活列表
+-   `capturedPokemons`: 捕获列表
+-   `setPokemons`: 用于更新存活列表
+-   `setCapturedPokemons`: 更新捕获列表
+ 
+正如我在`useState`部分提到的，提供的钩子函数总是成对出现：当前状态与更新该状态的钩子函数。即`setPokemons`和`setCapturedPokemons`函数处理并更新上下文状态，如下所示：
 
 ```javascript
 const [pokemons, setPokemons] = useState([
@@ -209,16 +210,16 @@ const [pokemons, setPokemons] = useState([
 
 ```
 
-Now we have the  `setPokemons`.
+`setPokemons`设置方式如下所示：
 
 ```javascript
 const [capturedPokemons, setCapturedPokemons] = useState([]);
 
 ```
 
-And now we also have the  `setCapturedPokemons`.
+现在我们同样设置好了`setCapturedPokemons`函数。
 
-With all these values in hand, we can now pass them to the provider's  `value`  prop.
+将所有的函数值设置好之后，我们可以传值到所提供的`value`数组中。
 
 ```javascript
 import React, { createContext, useState } from 'react';
@@ -239,14 +240,17 @@ export const PokemonProvider = (props) => {
 
 ```
 
-I created a  `PokemonProvider`  to wrap all this data and the APIs to create the context and return the context provider with the defined value.
+I created a  `PokemonProvider`  to wrap all this data and the APIs to create the context and return the context provider with the defined value.  
+我创建了`PokemonProvider`函数用来打包所有的数据和 API，它可以创建上下文并返回已定义值的上下文。
 
-But how do we provide all this data and APIs to the component? We need to do two main things:
+But how do we provide all this data and APIs to the component? We need to do two main things:  
+但是我们如何给组件提供所有这些数据和 API？我们需要做两件事：
 
--   Wrap the components into this context provider
--   Use the context in each component
+-   Wrap the components into this context provider打包组件到上下文处理程序中
+-   Use the context in each component在每个组件中使用上下文
 
-Let's wrap them first:
+Let's wrap them first:  
+让我们开始打包：
 
 ```javascript
 const App = () => (

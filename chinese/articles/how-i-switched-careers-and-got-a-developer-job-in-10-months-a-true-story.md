@@ -58,7 +58,7 @@
 
 我向两个在这个领域工作的朋友寻求建议。那些鼓励的话语对我在前行的路上专注于一个明确的目标至关重要。
 
-It took some time to sort through all the options and set realistic objectives that would work for me. I needed a swift career change. I had no alternative source of income, which meant maintaining my job until I could do the switch.
+我花了些时间整理了所有的选项，并设定了对我有用的现实目标。我需要在最短的时间内转行成功。我没有其他的收入来源，这意味着我要继续做之前的工作直到我能转行为止。
 
 I decided that front-end development was the most accessible and in-demand option. I narrowed it down further by focusing on the skills needed for a job in a startup rather than the freelance route.
 

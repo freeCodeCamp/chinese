@@ -75,12 +75,12 @@ console.time 和 console.count 使用示例
 
 ### Delete all the Consoles?
 
-Using consoles often forces us to eliminate them. Or sometimes we forget about the production build (and only notice them by mistake days and days later). Of course, I do not advise anyone to abuse consoles where they are not needed (the console in the change input handle can be deleted after you see that it works). You should leave error logs or trace logs in development mode to help you debug. I use Webpack a lot, both at work and in my own projects. This tool allows you to delete all the consoles that you do not want to remain (by type) from the production build using the  [uglifyjs-webpack-plugin][1]?
+使用控制台通常会迫使我们消除它们。有时我们会忘记是生产版本（并且几天后才粗心地注意到这些控制台输出）。当然，我不建议任何人在不需要控制台的时候滥用它（在看到输入更改生效后就可以删除控制台命令）。你应该将错误日志或跟踪日志保留在开发模式下，以帮助你调试。不论是在工作中还是在我自己的项目中，我都经常使用 Webpack。它允许你使用 [uglifyjs-webpack-plugin] [1] 从生产版本中（按类型）删除所有不想保留的控制台。
 
 ```
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')var debug = process.env.NODE_ENV !== "production";.....optimization: {        minimizer: !debug ? [            new UglifyJsPlugin({                // Compression specific options                uglifyOptions: {                    // Eliminate comments                    comments: false,                    compress: {                       // remove warnings                       warnings: false,                       // Drop console statements                       drop_console: true                    },                }           })] : []}
 ```
 
-The configuration is really trivial and it simplifies the work, so have fun with the console (but do not abuse it!)
+这个配置确实很简单，且简化了工作，所以愉快地使用控制台吧（但不要滥用它！）
 
 [1]: https://github.com/webpack-contrib/uglifyjs-webpack-plugin

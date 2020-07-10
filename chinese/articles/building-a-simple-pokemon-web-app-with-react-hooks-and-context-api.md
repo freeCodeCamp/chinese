@@ -264,7 +264,8 @@ const App = () => (
 
 ```
 
-And we use the context by using the  `useContext`  and passing the created  `PokemonContext`. Like this:
+And we use the context by using the  `useContext`  and passing the created  `PokemonContext`. Like this:  
+我们通过`useContext`函数调用上下文并且传值给已创建的`PokemonContext`函数。如下所示：
 
 ```javascript
 import { useContext } from 'react';
@@ -272,20 +273,23 @@ import { PokemonContext } from './PokemonContext';
 
 ```
 
-We want to be able to catch the available pokémon, so it would be useful to have the  `setCapturedPokemons`  function API update the captured pokémon.
+We want to be able to catch the available pokémon, so it would be useful to have the  `setCapturedPokemons`  function API update the captured pokémon.  
+我们希望能够捕获存活的 pokémon，所以`setCapturedPokemons`函数 API 更新已捕捉到的 pokémon 应该是可用的。
 
-As each pokémon is captured, we need to remove it from the available list.  `setPokemons`  is also needed here. And to update each list, we need the current data. So basically we need everything from the context provider.
+As each pokémon is captured, we need to remove it from the available list.  `setPokemons`  is also needed here. And to update each list, we need the current data. So basically we need everything from the context provider.  
+当每个 pokémon 被捕获时，我们需要从存活列表中移除它。同样需要调用`setPokemons`函数。我们需要上下文提供的实时数据更新每个列表。
 
-We need to build a button with an action to capture the pokémon:
+We need to build a button with an action to capture the pokémon:  
+我们需要设置一个按钮用于捕捉 pokémon：
 
--   `<button>`  tag with an  `onClick`  calling the  `capture`  function and passing the pokémon
+-   `<button>`按钮的`onClick`方法设置为`capture`功能并传递 pokémon
 
 ```javascript
 <button onClick={capture(pokemon)}>+</button>
 
 ```
 
--   The  `capture`  function will update the  `pokemons`  and the  `capturedPokemons`  lists
+-   `capture`功能会更新`pokemons`和`capturedPokemons`列表
 
 ```javascript
 const capture = (pokemon) => (event) => {
@@ -295,21 +299,21 @@ const capture = (pokemon) => (event) => {
 
 ```
 
-To update the  `capturedPokemons`, we can just call the  `setCapturedPokemons`  function with the current  `capturedPokemons`  and the pokémon to be captured.
+为了更新`capturedPokemons`，我们在当前`capturedPokemons`函数中调用`setCapturedPokemons`函数 pokémon 设置为已捕获。
 
 ```javascript
 setCapturedPokemons([...capturedPokemons, pokemon]);
 
 ```
 
-And to update the  `pokemons`  list, just filter the pokémon that will be captured.
+并且更新`pokemons`列表，过滤已捕获的 pokémon。
 
 ```javascript
 setPokemons(removePokemonFromList(pokemon));
 
 ```
 
-`removePokemonFromList`  is just a simple function to filter the pokémon by removing the captured pokémon.
+`removePokemonFromList`是一个通过移除已捕获的宝可梦来实现过滤功能的函数。
 
 ```javascript
 const removePokemonFromList = (removedPokemon) =>
@@ -317,7 +321,8 @@ const removePokemonFromList = (removedPokemon) =>
 
 ```
 
-How does the component look now?
+How does the component look now?  
+现在组件看起来怎么样了？
 
 ```javascript
 import React, { useContext } from 'react';
@@ -349,8 +354,9 @@ export const PokemonsList = () => {
 };
 
 ```
+看起来它和已捕获宝可梦组件非常相似。区别在于它不是`capture`而是`release`功能：
+It will look very similar to the captured pokémon component. Instead of  `capture`, it will be a  `release`  function:  
 
-It will look very similar to the captured pokémon component. Instead of  `capture`, it will be a  `release`  function:
 
 ```javascript
 import React, { useContext } from 'react';
@@ -383,17 +389,24 @@ const CapturedPokemons = () => {
 
 ```
 
-## Reducing complexity
+## Reducing complexity  
+## 减少复杂度
 
-Now we use the  `useState`  hook, the Context API, and the context provider  `useContext`. And more importantly, we can share data between pokémon boxes.
+Now we use the  `useState`  hook, the Context API, and the context provider  `useContext`. And more importantly, we can share data between pokémon boxes.  
+现在我们使用`useState`钩子函数、上下文 API 、上下文提供的`useContext`。更重要的是，我们可以在两个宝可梦盒子中实现共享数据。
 
-Another way to manage the state is by using  `useReducer`  as an alternative to  `useState`.
+Another way to manage the state is by using  `useReducer`  as an alternative to  `useState`.  
+管理状态的另一种方法是使用`useReducer`替代`useState`。
 
-The reducer lifecycle works like this:  `useReducer`  provides a  `dispatch`  function. With this function, we can dispatch an  `action`  inside a component. The  `reducer`  receives the action and the state. It understands the type of action, handles the data, and return a new state. Now, the new state can be used in the component.
 
-As an exercise and to have a better understanding of this hook, I tried to replace  `useState`  with it.
+The reducer lifecycle works like this:  `useReducer`  provides a  `dispatch`  function. With this function, we can dispatch an  `action`  inside a component. The  `reducer`  receives the action and the state. It understands the type of action, handles the data, and return a new state. Now, the new state can be used in the component.  
 
-`useState`  was inside the  `PokemonProvider`. We can redefine the initial state for the available and the captured pokémon in this data structure:
+
+As an exercise and to have a better understanding of this hook, I tried to replace  `useState`  with it.  
+作为更好理解这个钩子函数的练习，我尝试用它代替`useState`。
+
+`useState`  was inside the  `PokemonProvider`. We can redefine the initial state for the available and the captured pokémon in this data structure:  
+`useState`在`PokemonProvider`中。我们可以在此数据结构中重新定义存活和已捕获的宝可梦的初始状态。
 
 ```javascript
 const defaultState = {
@@ -407,30 +420,35 @@ const defaultState = {
 
 ```
 
-And pass this value to  `useReducer`:
+And pass this value to  `useReducer`:  
+传值给`useReducer`：
 
 ```javascript
 const [state, dispatch] = useReducer(pokemonReducer, defaultState);
 
 ```
 
-`useReducer`  receives two parameters: the reducer and the initial state. Let's build the  `pokemonReducer`  now.
+`useReducer`  receives two parameters: the reducer and the initial state. Let's build the  `pokemonReducer`  now.  
+`useReducer`接收到两个参数：减少值和初始状态。现在让我们构建`pokemonReducer`。
 
-The reducer receives the current state and the action that was dispatched.
+The reducer receives the current state and the action that was dispatched.  
+减少器接收当前状态和调度动作。
 
 ```javascript
 const pokemonReducer = (state, action) => // returns the new state based on the action type
 
 ```
 
-Here we get the action type and return a new state. The action is an object. It looks like this:
+Here we get the action type and return a new state. The action is an object. It looks like this:  
+这里我们得到动作类型并返回一个新的状态。该动作是一个对象。它看起来是这样的：
 
 ```javascript
 { type: 'AN_ACTION_TYPE' }
 
 ```
 
-But could also be bigger:
+But could also be bigger:  
+但可设置的更完整：
 
 ```javascript
 {
@@ -442,11 +460,15 @@ But could also be bigger:
 
 ```
 
-In this case, we'll pass a pokémon to the action object. Let's pause for a minute and think about what we want to do inside the reducer.
+In this case, we'll pass a pokémon to the action object. Let's pause for a minute and think about what we want to do inside the reducer.  
+在这种情况想，我们向动作对象中传递一个宝可梦。让我们暂停一下好好思考我们在减速器中做什么。
 
-Here, we usually update data and handle actions. Actions are dispatched, so actions are behavior. And the behaviors from our app are  _capture_  and  _release_! These are the actions we need to handle here.
+Here, we usually update data and handle actions. Actions are dispatched, so actions are behavior. And the behaviors from our app are  _capture_  and  _release_! These are the actions we need to handle here.  
+在这里，我们通常更新数据和处理动作。被调度的动作同样也是行为。并且在我们应用中的行为是 _capture_ 和 _release_ ！这些是我们在这里要处理的行为。
 
-This is what our reducer will look like:
+
+This is what our reducer will look like:  
+减速器看起来像：
 
 ```javascript
 const pokemonReducer = (state, action) => {
@@ -462,9 +484,11 @@ const pokemonReducer = (state, action) => {
 
 ```
 
-If our action type is  `CAPTURE`, we handle it in one way. If our action type is  `RELEASE`, we handle it another way. If the action type doesn't match any of these types, just return the current state.
+If our action type is  `CAPTURE`, we handle it in one way. If our action type is  `RELEASE`, we handle it another way. If the action type doesn't match any of these types, just return the current state.  
+如果我们的动作类型是`CAPTURE`，我们换一种方式去处理它。如果我们的动作类型是`RELEASE`，我们用另一种方式处理。如果动作类型与这些类型中的任何一个都不匹配，就返回当前状态。
 
-When we capture the pokémon, we need to update both lists: remove the pokémon from the available list and add it to the captured list. This state is what we need to return from the reducer.
+When we capture the pokémon, we need to update both lists: remove the pokémon from the available list and add it to the captured list. This state is what we need to return from the reducer.  
+当我们捕获宝可梦后，我们需要更新两个列表：从存活的列表中移除宝可梦并把它添加到已捕获列表中。这种状态就是我们需要从减速器返回的状态。
 
 ```javascript
 const getPokemonsList = (pokemons, capturedPokemon) =>
@@ -472,9 +496,11 @@ const getPokemonsList = (pokemons, capturedPokemon) =>
 
 ```
 
-The  `capturePokemon`  function just returns the updated lists. The  `getPokemonsList`  removes the captured pokémon from the available list.
+The  `capturePokemon`  function just returns the updated lists. The  `getPokemonsList`  removes the captured pokémon from the available list.  
+`capturePokemon`函数返回已更新列表。`getPokemonsList`从存活列表移除已捕获的宝可梦。
 
-And we use this new function in the reducer:
+And we use this new function in the reducer:  
+在减速器中我们使用新的函数：
 
 ```javascript
 const pokemonReducer = (state, action) => {
@@ -490,7 +516,8 @@ const pokemonReducer = (state, action) => {
 
 ```
 
-Now the  `release`  function!
+Now the  `release`  function!  
+现在`release`实现了！
 
 ```javascript
 const getCapturedPokemons = (capturedPokemons, releasedPokemon) =>
@@ -498,9 +525,11 @@ const getCapturedPokemons = (capturedPokemons, releasedPokemon) =>
 
 ```
 
-The  `getCapturedPokemons`  remove the released pokémon from the captured list. The  `releasePokemon`  function returns the updated lists.
+The  `getCapturedPokemons`  remove the released pokémon from the captured list. The  `releasePokemon`  function returns the updated lists.  
+`getCapturedPokemons`函数从已捕获列表中移除释放的宝可梦。`releasePokemon`函数返回已更新的列表。
 
-Our reducer looks like this now:
+Our reducer looks like this now:  
+现在我们的减速器看起来是这样的：
 
 ```javascript
 const pokemonReducer = (state, action) => {
@@ -516,7 +545,8 @@ const pokemonReducer = (state, action) => {
 
 ```
 
-Just one minor refactor: action types! These are strings and we can extract them into a constant and provide for the dispatcher.
+Just one minor refactor: action types! These are strings and we can extract them into a constant and provide for the dispatcher.  
+只有一个小的重构：动作类型！我们可以将这些字符串提取到常量中，并提供给调度程序。
 
 ```javascript
 export const CAPTURE = 'CAPTURE';
@@ -524,7 +554,8 @@ export const RELEASE = 'RELEASE';
 
 ```
 
-And the reducer:
+And the reducer:  
+减速器如下所示：
 
 ```javascript
 const pokemonReducer = (state, action) => {
@@ -540,7 +571,8 @@ const pokemonReducer = (state, action) => {
 
 ```
 
-The entire reducer file looks like this:
+The entire reducer file looks like this:  
+整个的减速器文件看起来是这样的：
 
 ```javascript
 export const CAPTURE = 'CAPTURE';
@@ -560,18 +592,22 @@ const capturePokemon = (pokemon, state) => ({
 
 ```
 
-As the reducer is now implemented, we can import it into our provider and use it in the  `useReducer`  hook.
+As the reducer is now implemented, we can import it into our provider and use it in the  `useReducer`  hook.  
+现在实现了减速器，我们可以导入到提供者中，并在`useReducer`钩子函数使用。
 
 ```javascript
 const [state, dispatch] = useReducer(pokemonReducer, defaultState);
 
 ```
 
-As we are inside the  `PokemonProvider`, we want to provide some value to the consuming components: the capture and release actions.
+As we are inside the  `PokemonProvider`, we want to provide some value to the consuming components: the capture and release actions.  
+由于我们在`PokemonProvider`内部，我们希望为消费组件提供一些值：捕获和释放动作。
 
-These functions just need to dispatch the correct action type and pass the pokémon to the reducer.
+These functions just need to dispatch the correct action type and pass the pokémon to the reducer.  
+这些功能只需要分配正确的动作类型，并将宝可梦传递给减速器。
 
--   The  `capture`  function: it receives the pokémon and returns a new function that dispatches an action with the type  `CAPTURE`  and the captured pokémon.
+-   `capture`函数：接收宝可梦并返回一个新的函数，该函数调用一个带有`CAPTURE`和已捕获宝可梦的动作。  
+
 
 ```javascript
 const capture = (pokemon) => () => {

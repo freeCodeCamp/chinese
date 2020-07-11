@@ -60,7 +60,7 @@
 
 我花了些时间整理了所有的选项，并设定了对我有用的现实目标。我需要在最短的时间内转行成功。我没有其他的收入来源，这意味着我要继续做之前的工作直到我能转行为止。
 
-I decided that front-end development was the most accessible and in-demand option. I narrowed it down further by focusing on the skills needed for a job in a startup rather than the freelance route.
+我认为前端开发是初学者最容易进入同时是需求量最大的一个方向。我专注于初创公司所需要的技能而不是自由职业，这样我进一步缩小了范围。
 
 Then I set a deadline. I did not want this objective to end up on a to-do list I never see again. It was spring of 2017, so I promised myself that the following school course was going to be my last as a teacher. So by September 2018, a little over a year later, I had to be working in the field.
 

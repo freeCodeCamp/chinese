@@ -62,7 +62,7 @@
 
 我认为前端开发是初学者最容易进入同时是需求量最大的一个方向。我专注于初创公司所需要的技能而不是自由职业，这样我进一步缩小了范围。
 
-Then I set a deadline. I did not want this objective to end up on a to-do list I never see again. It was spring of 2017, so I promised myself that the following school course was going to be my last as a teacher. So by September 2018, a little over a year later, I had to be working in the field.
+然后我设定了最后期限。我不希望这个目标出现在一个我再也看不见的待办事项清单上面。2017年的春天，我向自己承诺接下来的教学将是我老师生涯的最后一站。就是说到2019年9月份，我将不会继续做老师相关的工作。
 
 It would be naive to pretend that at this stage I had everything crystal clear and under control. I didn’t. Certainty is not a luxury you can have while making such a risky career change. There were all kinds of doubts at that point and throughout the process. The key here was persistence. Once I made the decision, I was going to walk this path to see where it led no matter what.
 

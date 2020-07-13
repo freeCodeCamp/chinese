@@ -64,7 +64,7 @@
 
 然后我设定了最后期限。我不希望这个目标出现在一个我再也看不见的待办事项清单上面。2017年的春天，我向自己承诺接下来的教学将是我老师生涯的最后一站。就是说到2019年9月份，我将不会继续做老师相关的工作。
 
-It would be naive to pretend that at this stage I had everything crystal clear and under control. I didn’t. Certainty is not a luxury you can have while making such a risky career change. There were all kinds of doubts at that point and throughout the process. The key here was persistence. Once I made the decision, I was going to walk this path to see where it led no matter what.
+在这个阶段我能够把一切尽在掌握中么，这是不可能的。在做出如此具有冒险的职业选择时，肯定会存在不确定性。在那个阶段和整个过程中都存在各种各样的疑问。这里的关键是能否坚持不懈，不半途而废。一旦做出决定，我将沿着这条路走下去，看看未来将会发生什么。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*vuNrt3UwQSiuLiD8sw5Hcg.jpeg)
 

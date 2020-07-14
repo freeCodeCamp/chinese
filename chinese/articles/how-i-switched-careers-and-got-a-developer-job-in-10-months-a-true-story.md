@@ -68,16 +68,22 @@
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*vuNrt3UwQSiuLiD8sw5Hcg.jpeg)
 
-#### Learning
+#### 学习
 
-I knew that the only way forward was to study for it. I had full-time employment, so waiting until “I had time” was never an option. I had to do it while working, or not at all. I was lucky that my partner was learning at the same time. This helped us organize our days to maximize learning time. At first we would do what we called our “weekend boot camps” where we would dedicate the entire weekend to coding. A typical day looked like this:
+我明白不断进步的唯一途径就是学习。我有一份全职工作，所以永远都不可能等到有时间的时候。我必须一边工作一边学习，要么就干脆不做。幸运的是，我的伴侣同时也在学习。这有助于安排我们自己的时间，以最大限度地提高学习时间。首先，我们执行我们自己称呼为 "周末训练营" 的计划，就是说我们会花整个周末来编程。典型的一天是这样的：
 
-8:00 am: Wake up, breakfast.  
-8:30 am: Start coding  
-12:30 pm: Go to the gym  
-1:30 pm: Have lunch, then a break  
-3:00/4:00 pm: Continue coding  
-8:00/11:00 pm: Finish for the day
+8:00 am: 起床，吃早饭。
+
+8:30 am: 开始编程
+
+12:30 pm: 去健身房
+
+1:30 pm: 吃午饭 ，休息
+
+3:00/4:00 pm: 继续敲代码 
+
+8:00/11:00 pm: 完成一天的工作
+
 
 Then my summer holiday came and I made the most of it by turning the “weekend boot camp” into the “daily boot camp”. I stuck to that schedule assiduously despite the temptation to enjoy the summer and kick back a bit.
 

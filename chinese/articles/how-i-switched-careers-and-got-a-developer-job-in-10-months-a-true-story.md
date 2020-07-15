@@ -85,7 +85,7 @@
 8:00/11:00 pm: 完成一天的工作
 
 
-Then my summer holiday came and I made the most of it by turning the “weekend boot camp” into the “daily boot camp”. I stuck to that schedule assiduously despite the temptation to enjoy the summer and kick back a bit.
+之后我暑期来了，我将 "周末训练营" 变成了 "每日训练营"，从而充分利用了这个假期。尽管有享受夏天和放松的诱惑，我还是坚持不懈地完成了我的计划。
 
 September came and I was back to work. I had made a conscious decision to reduce my hours at work. I accepted that I would have less income in exchange for having more time to study. It was also another step to make my commitment to the career change more serious.
 

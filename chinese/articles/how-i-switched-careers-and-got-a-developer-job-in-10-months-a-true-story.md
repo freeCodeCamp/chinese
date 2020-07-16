@@ -87,7 +87,7 @@
 
 之后我暑期来了，我将 "周末训练营" 变成了 "每日训练营"，从而充分利用了这个假期。尽管有享受夏天和放松的诱惑，我还是坚持不懈地完成了我的计划。
 
-September came and I was back to work. I had made a conscious decision to reduce my hours at work. I accepted that I would have less income in exchange for having more time to study. It was also another step to make my commitment to the career change more serious.
+九月来的时候我又得回去工作了。我有意识地决定减少我的工作时间。我接受了更少的收入以此来换取更多的学习时间。这也是我在转行的路上踏上的更为坚实的一步。
 
 It is hard to convey how difficult it was to be away from my code. All I wanted to do was to be back at my computer to finish solving this problem or fixing that layout. But then real life kicks in. The start of a school year always requires a lot of time for preparation and organization. As any teacher will tell you, it also takes up a lot of one’s personal time too.
 

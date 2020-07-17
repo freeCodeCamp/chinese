@@ -89,7 +89,7 @@
 
 九月来的时候我又得回去工作了。我有意识地决定减少我的工作时间。我接受了更少的收入以此来换取更多的学习时间。这也是我在转行的路上踏上的更为坚实的一步。
 
-It is hard to convey how difficult it was to be away from my code. All I wanted to do was to be back at my computer to finish solving this problem or fixing that layout. But then real life kicks in. The start of a school year always requires a lot of time for preparation and organization. As any teacher will tell you, it also takes up a lot of one’s personal time too.
+很难表达离开代码有多难。我想要做的就是回到我的计算机面前解决某个问题或是bug。但是现实生活开始了。一学年的开始总是需要很多时间来准备和组织。正如任何老师都会告诉你的，这也占用很多个人时间。
 
 That was the moment my mission could have been derailed. Despite my best efforts, I had less and less time to code. I started losing my momentum. I tried to keep it up but there were days when I simply didn’t have time. Even with the best of intentions and good motivation, life can make things complicated.
 

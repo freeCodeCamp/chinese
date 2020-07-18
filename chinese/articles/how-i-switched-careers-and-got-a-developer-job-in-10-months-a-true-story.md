@@ -91,7 +91,7 @@
 
 很难表达离开代码有多难。我想要做的就是回到我的计算机面前解决某个问题或是bug。但是现实生活开始了。一学年的开始总是需要很多时间来准备和组织。正如任何老师都会告诉你的，这也占用很多个人时间。
 
-That was the moment my mission could have been derailed. Despite my best efforts, I had less and less time to code. I started losing my momentum. I tried to keep it up but there were days when I simply didn’t have time. Even with the best of intentions and good motivation, life can make things complicated.
+就在那个阶段，我感觉我平常的任务要偏离原有的目标了。尽管我尽力最大努力，但是我编写代码的时间越来越少了。我开始失去动力。我试着坚持下去，但是有时候就是没有时间来写。即使有最好的目标和良好的动机，生活也会使事情变得复杂。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*Ho2hNeNpx13UnERU9fI-8Q.png)
 

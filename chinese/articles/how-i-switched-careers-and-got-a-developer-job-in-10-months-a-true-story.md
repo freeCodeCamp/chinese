@@ -95,9 +95,11 @@
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*Ho2hNeNpx13UnERU9fI-8Q.png)
 
-My activity on GitHub showing the dip in October
+我的GitHub上显示了十月份活跃度下降
 
-However, as you can see from my GitHub activity image, I kept trying. I kept putting in the time, even if it was an hour, even if it was reading an article. I did everything I could not to get to the stage of losing all motivation. When you have left something for long enough, it makes it harder to get back to with every passing day.
+
+
+然而，你可以从我的github活动图片中看到，我一直在尝试。我不停地投入时间，哪怕是一小时，哪怕是读一篇文章。我做了我所能做的一切来使得我养成这个习惯。当你把一件事留得太久，可能会失去原来的习惯。
 
 Then as December approached, seeing the new year looming and my deadline closer, I rallied again and got organized. I started pushing through, putting in those hours no matter how tired I was and how little time I had. Sometimes I would get up early to code, sometimes I would stay up late.
 

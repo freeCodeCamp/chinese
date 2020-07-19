@@ -99,7 +99,7 @@
 
 
 
-然而，你可以从我的github活动图片中看到，我一直在尝试。我不停地投入时间，哪怕是一小时，哪怕是读一篇文章。我做了我所能做的一切来使得我养成这个习惯。当你把一件事留得太久，可能会失去原来的习惯。
+然而，你可以从我的github活跃度显示中看到，我一直在尝试。我不停地投入时间，哪怕是一小时，哪怕是读一篇文章。我做了我所能做的一切来使得我养成这个习惯。当你把一件事留得太久，可能会失去原来的习惯。
 
 Then as December approached, seeing the new year looming and my deadline closer, I rallied again and got organized. I started pushing through, putting in those hours no matter how tired I was and how little time I had. Sometimes I would get up early to code, sometimes I would stay up late.
 

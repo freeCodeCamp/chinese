@@ -101,7 +101,7 @@
 
 然而，你可以从我的github活跃度显示中看到，我一直在尝试。我不停地投入时间，哪怕是一小时，哪怕是读一篇文章。我做了我所能做的一切来使得我养成这个习惯。当你把一件事留得太久，可能会失去原来的习惯。
 
-Then as December approached, seeing the new year looming and my deadline closer, I rallied again and got organized. I started pushing through, putting in those hours no matter how tired I was and how little time I had. Sometimes I would get up early to code, sometimes I would stay up late.
+随着12月的临近，眼看着新年即将到来，我最后的期限也越来越近，我再次振作起来，做事变得井井有条。我开始努力工作，不管我有多累，时间有多少，我都要坚持几小时。有时我会早点起来敲代码，有时我会熬夜。
 
 This meant that my life was pretty much reduced to doing the job that was paying the rent, and studying. And little else. And I basically maintained that rhythm all the way until the day I started packing to move to Madrid. That was in the spring of 2018, several months before my deadline.
 

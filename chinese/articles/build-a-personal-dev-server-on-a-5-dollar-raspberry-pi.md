@@ -1,5 +1,5 @@
-> * 原文地址：[How to Automate Your Blog Post Publishing Process with Typescript 如何使用 Typescript 实现自动化发布文章](https://www.freecodecamp.org/news/automating-my-blog-posts-publishing-process-with-typescript/)
-> * 原文作者：TK
+> * 原文地址：[How to Build a Personal Dev Server on a $5 Raspberry Pi 如何用树莓派搭建个人服务器](https://www.freecodecamp.org/news/build-a-personal-dev-server-on-a-5-dollar-raspberry-pi/)
+> * 原文作者：Michael Yuan
 > * 译者：
 > * 校对者：
 

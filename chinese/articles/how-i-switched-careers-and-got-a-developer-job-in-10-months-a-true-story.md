@@ -103,7 +103,8 @@
 
 随着12月的临近，眼看着新年即将到来，我最后的期限也越来越近，我再次振作起来，做事变得井井有条。我开始努力工作，不管我有多累，时间有多少，我都要坚持几小时。有时我会早点起来敲代码，有时我会熬夜。
 
-This meant that my life was pretty much reduced to doing the job that was paying the rent, and studying. And little else. And I basically maintained that rhythm all the way until the day I started packing to move to Madrid. That was in the spring of 2018, several months before my deadline.
+这意味着我的生活被几乎被压缩到只能一边做一份付房租的工作一边学习。我基本上保持着这种节奏，一直到我收拾行李搬到马德里的那一天为止。那是在2018年的春天，距离我截止的日期还有几个月。
+
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*s1wGpl3ZUIh7wj1YHFDxCA.jpeg)
 

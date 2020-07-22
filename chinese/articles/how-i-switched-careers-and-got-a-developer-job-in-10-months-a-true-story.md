@@ -29,7 +29,7 @@
 
 这很快也让我兴奋起来，因为我们意识到有很多可用的资源。这不是什么黑魔法，而是一种我们可以学习和掌握的技能。
 
-剧透一下，她成功地从人力资源方向转行，事实上比我早一个月获得了开发的工作。
+剧透一下，她成功地从人力资源方向[转行][1]，事实上比我早一个月获得了开发的工作。
 
 某一天我们在一个科学博物馆里面发现了一个有关儿童编程方面的书籍。一回到家我们就打开记事本写下了 "Hello world" 的代码并在浏览器里面打开，然后将页面颜色更改为红色。这是什么魔法！我们兴奋地尖叫着。
 
@@ -108,9 +108,9 @@
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*s1wGpl3ZUIh7wj1YHFDxCA.jpeg)
 
-### Tools and resources
+### 工具和资源
 
-Over the 10 months leading to my job offer, I immersed myself in everything code related. The most frequent question I get asked on  [Twitter][2]  is about what resources I used. I’ve written  [another article][3]  that answers this question in-depth. However, here is a brief list of the most important tools and resources.
+在一边工作一边学习编程的这10个月中，我的主要精力都放在了编程上面，我在  [Twitter][2] 上面被问到最多的问题是使用了那些资源。我写了[另一篇文章][3]，深入回答了这个问题。这里，我列一个我认为是最重要的列表（包含最重要的工具和资源）。
 
 #### Courses
 

@@ -112,16 +112,16 @@
 
 在一边工作一边学习编程的这10个月中，我的主要精力都放在了编程上面，我在  [Twitter][2] 上面被问到最多的问题是使用了那些资源。我写了[另一篇文章][3]，深入回答了这个问题。这里，我列一个我认为是最重要的列表（包含最重要的工具和资源）。
 
-#### Courses
+#### 课程
 
--   freeCodeCamp.org
--   Cassidy Williams and Colt Steele’s Udemy courses
--   Wes Bos’ JavaScript 30 and other courses
--   YouTube: Traversy Media, LevelUpTuts
--   Christina Truong’s Lynda.com courses
--   Udacity Front-End Nanodegree (a paid course, but I got a scholarship from Google)
+-   freeCodeCamp相关课程
+-   Udemy 上面 Cassidy Williams 、Colt Steele 的课程
+-   Wes Bos’ JavaScript 30 以及其他的课程
+-   YouTube 上面的资源: Traversy Media, LevelUpTuts
+-   Lynda.com 上面Christina Truong 的课程
+-   Udacity 上面的前端纳米课程 (这是一个付费课程，但是我从 Google 获得了奖学金)
 
-Courses can only take you so far, so I complemented this with other tools to help me learn and get a job.
+仅仅学习这些课程是不够的，故这里我补充了其他有用的工具来帮助我学习进而找到工作。
 
 -   Twitter: a cornerstone of my experience. Especially the incredibly supportive and warm  [#100DaysOfCode][4]  community.
 -   GitHub: an important tool to learn, and where I hosted all my projects for free. It’s usually the first place employers look to see your work.

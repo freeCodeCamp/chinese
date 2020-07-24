@@ -123,9 +123,11 @@
 
 仅仅学习这些课程是不够的，故这里我补充了其他有用的工具来帮助我学习进而找到工作。
 
--   Twitter: a cornerstone of my experience. Especially the incredibly supportive and warm  [#100DaysOfCode][4]  community.
--   GitHub: an important tool to learn, and where I hosted all my projects for free. It’s usually the first place employers look to see your work.
--   Portfolio: I learned the most vital development skills by building it and other self-initiated projects.
+-   Twitter: 这是我所有知识来源的地方。尤其是  [#100DaysOfCode][4] 社区，它给了我无穷的动力和支持。
+
+-   Github: 一个非常重要的学习工具，也是我免费托管所有项目的地方。通常这是雇主重点关注的地方。
+
+-   Portfolio：通过构建开发项目和其他自发项目，我学习了最重要的开发技能。
 
 You can also check out  [My Learning Tracker][5]  GitHub repo. It has a full list of the resources and paths I used those first ten months.
 

@@ -3138,35 +3138,35 @@ function SomeComponent() {
 - 简单应用的服务端渲染实现比较简单，但是随着应用的复杂性增加，服务端渲染的复杂性也随之增加
 - 渲染大型应用程序会占用大量资源，并且在繁重的加载量下，当遭遇瓶颈时，它可能提供比客户端渲染更慢的体验
 
-### `A very simplistic example of what it takes to Server-Side render a React app`
+### 服务器渲染 React 应用的简单示例
 
-`SSR setups can grow very, very complex and most tutorials will bake in Redux, React Router and many other concepts from the start.`
+SSR 配置可以变得非常非常复杂，并且大部分教程都会从一开始就集中讨论 Redux、 React Router 和其他概念。
 
-`To understand how SSR works, let’s start from the basics to implement a proof of concept.`
+为了了解 SSR 的原理，让我们从基础知识入手，来验证一下 SSR 的概念。
 
-> `_Feel free to skip this paragraph if you just want to look into the libraries that provide SSR and not bother with the ground work_`
+> _如果你希望通过提供 SSR 的库来实现 SSR，而不想了解基础知识的话，可以跳过这一段_
 
-`To implement basic SSR we’re going to use Express.`
+我们通过 Express 来实现基础的 SSR。
 
-> `_If you are new to Express, or need some catch-up, check out my free Express Handbook here:  [https://flaviocopes.com/page/ebooks/][90]._`
+ _如果你不了解 Express，或者需要复习 express，可以看一看我的免费的 Express 手册：[https://flaviocopes.com/page/ebooks/][90]。_
 
-`Warning: the complexity of SSR can grow with the complexity of your application. This is the bare minimum setup to render a basic React app. For more complex needs you might need to do a bit more work or also check out SSR libraries for React.`
+注意：随着你的应用的复杂度的增加，SSR 的复杂度也会增加。例子中只是实现渲染基础 React 应用的最低要求。对于更复杂的需求，你需要做更多工作，也许还需要使用 React 专有的 SSR 库。
 
-``I assume you started a React app with  `create-react-app`. If you are just trying, install one now using  `npx create-react-app ssr`.``
+我猜你通过 `create-react-app` 来搭建 React 应用。如果你正在尝试，可以先通过 `npx create-react-app ssr` 下载。
 
-`Go to the main app folder with the terminal, then run:`
+进入应用的主文件夹，运行：
 
 ```
 npm install express
 ```
 
-``You have a set of folders in your app directory. Create a new folder called  `server`, then go into it and create a file named  `server.js`.``
+应用的目录中会有很多文件夹。创建一个叫做 `server` 的新文件夹，接着进入这个文件夹，并创建一个名为 `server.js` 的文件。
 
-``Following the  `create-react-app`  conventions, the app lives in the  `src/App.js`  file. We're going to load that component, and render it to a string using  [ReactDOMServer.renderToString()][91], which is provided by  `react-dom`.``
+按照 `create-react-app` 的惯例，应用位于 `src/App.js` 文件中。我们会加载组件，并通过 `react-dom` 的 `RaectDOMServer.renderToString()` 将组件渲染成字符串。
 
-```You get the contents of the  `./build/index.html`  file, and replace the  `<div id="root"></div>`placeholder, which is the tag where the application hooks by default, with  `` `<div id="root">${ReactDOMServer.renderToString(<App />)}</div>``.```
+获取到的 `./build/index.html` 文件的内容，会将应用默认的 `div id="root"></div>` 标签替换成 `<div id="root">${ReactDOMServer.renderToString(<App />)}</div>`。
 
-``All the content inside the  `build`  folder is going to be served as-is, statically by Express.``
+`build` 文件夹中的所有内容都会通过 Express 提供的数据呈现处理。
 
 ```
 import path from 'path'
@@ -3204,7 +3204,7 @@ app.listen(PORT, () => {
 })
 ```
 
-``Now, in the client application, in your  `src/index.js`, instead of calling  `ReactDOM.render()`:``
+现在客户端应用不会像从前那样调用 `src/index.js` 文件中的 `ReactDOM.render()`方法：
 
 ```
 ReactDOM.render(<App />, document.getElementById('root'))
@@ -3216,17 +3216,17 @@ ReactDOM.render(<App />, document.getElementById('root'))
 ReactDOM.hydrate(<App />, document.getElementById('root'))
 ```
 
-``All the Node.js code needs to be transpiled by Babel, as server-side Node.js code does not know anything about JSX, nor ES Modules (which we use for the  `include`statements).``
+由于服务端的 Node.js 代码不了解任何关于 JSX，或者 ES 模块的知识，因此所有的 Node.js 的代码都需要通过 Babel 编译。
 
-`Install these 3 packages:`
+下载以下 3 个包：
 
 ```
 npm install @babel/register @babel/preset-env @babel/preset-react ignore-styles express
 ```
 
-`` `[ignore-styles][93]`  is a Babel utility that will tell it to ignore CSS files imported using the  `import`  syntax.``
+`[ignore-styles][93]` 是一个 Babel 实用程序，用来告诉它忽略通过 `import` 语法导入的 CSS 文件。
 
-``Let’s create an entry point in  `server/index.js`:``
+让我们在 `server/index.js` 中创建一个入口：
 
 ```
 require('ignore-styles')
@@ -3237,52 +3237,52 @@ require('@babel/register')({
 require('./server')
 ```
 
-`Build the React application, so that the build/ folder is populated:`
+在 build 文件夹中构建 React 应用：
 
 ```
 npm run build
 ```
 
-`and let’s run this:`
+并运行：
 
 ```
 node server/index.js
 ```
 
-`I said this is a simplistic approach, and it is:`
+正如我说的，这是一个简单的示例：
 
--   `it does not handle rendering images correctly when using imports, which need Webpack in order to work (and which complicates the process a lot)`
--   `it does not handle page header metadata, which is essential for SEO and social sharing purposes (among other things)`
+- 导入的图片没有正确地渲染，需要通过 Webpack 来解决（这会使整个过程变得复杂）
+- 它没有处理页面头部的元数据，这对于 SEO 和社交分享来说是必须的（相较于其他功能）
 
-``So while this is a good example of using  `ReactDOMServer.renderToString()`  and  `ReactDOM.hydrate`  to get this basic server-side rendering, it's not enough for real world usage.``
+这个示例可以很好地阐释如何使用 `ReactDOMServer.renderToString()` 和 `ReactDOM.hydrate` 来实现基础的服务端渲染，但对于现实中的使用远远不够。
 
-#### `Server Side Rendering using libraries`
+#### 通过库实现服务端渲染
 
-`SSR is hard to do right, and React has no de-facto way to implement it.`
+做好 SSR 并不容易，React 还没有推出实现服务端渲染的业界标准做法。
 
-`It’s still very much debatable if it’s worth the trouble, complication and overhead to get the benefits, rather than using a different technology to serve those pages.  [This discussion on Reddit][94]  has lots of opinions in that regard.`
+对于是否值得大费周章地实现服务端渲染，以及它带来的复杂性和收益和其他技术相比是否有优势，仍然具有争议性。[Reddit 上的相关讨论][94]有很多这方面的意见。
 
-`When Server Side Rendering is an important matter, my suggestion is to rely on pre-made libraries and tools that have had this goal in mind since the beginning.`
+当必须实现服务端渲染时，我的建议是依赖从一开始就瞄准实现这一目标的预制库和工具。
 
-`In particular, I suggest  **Next.js**  and  **Gatsby**, two projects we’ll see later on.`
+具体来说，我意见使用 **Next.js** 和 **Gatsby**，我们将在后面讨论到这两个项目。
 
-### `The Context API`
+### Context API
 
-`The Context API is a neat way to pass state across the app without having to use props. It was introduced to allow you to pass state (and enable the state to update) across the app, without having to use props for it.`
+使用 Context API 可以优雅地不通过属性在应用中传递状态。它允许你在整个应用中传递状态（和更新状态），而不用使用属性来传递。
 
-`The React team suggests to stick to props if you have just a few levels of children to pass, because it’s still a much less complicated API than the Context API.`
+React 团队建议如果只是跨少数层级地传递状态，最好还是使用属性值传递，因为这样远没有 Context API 复杂。
 
-`In many cases, it enables us to avoid using Redux, simplifying our apps a lot, and also learning how to use React.`
+在很多情况下，它可以取代 Redux，极大程度上简化我们的应用，并且理解如何使用 React。
 
-`How does it work?`
+它是如何运作的呢？
 
-``You create a context using  `React.createContext()`, which returns a Context object:``
+通过 `React.createContext()` 方法创建上下文，这个方法会返回一个 Context 对象：
 
 ```
 const { Provider, Consumer } = React.createContext()
 ```
 
-`Then you create a wrapper component that returns a  **Provider**  component, and you add as children all the components from which you want to access the context:`
+接着通过 Context 对象返回的 **Provider** 创建一个容器组件，并将所有需要访问上下文的组件添加到容器组件中：
 
 ```
 class Container extends React.Component {
@@ -3309,9 +3309,9 @@ class HelloWorld extends React.Component {
 }
 ```
 
-`I used Container as the name of this component because this will be a global provider. You can also create smaller contexts.`
+我把容器组件成为 Container 是因为它会作为全局提供者，你也可以创建较小的上下文。
 
-`Inside a component that’s wrapped in a Provider, you use a  **Consumer**  component to make use of the context:`
+在 Provider 内的组件里，你可以通过 **Consumer** 组件来使用上下文：
 
 ```
 class Button extends React.Component {
@@ -3325,7 +3325,7 @@ class Button extends React.Component {
 }
 ```
 
-`You can also pass functions into a Provider value, and those functions will be used by the Consumer to update the context state:`
+你也可以在 Provider 中传递方法，Consumer 可以通过使用这些方法来更新上下文状态：
 
 ```
 <Provider value={{
@@ -3341,11 +3341,11 @@ class Button extends React.Component {
 </Consumer>
 ```
 
-`You can see this in action  [in this Glitch][95].`
+你可以在 [这个 Glitch][95] 中试试。
 
-`You can create multiple contexts, to make your state distributed across components, yet expose it and make it reachable by any component you want.`
+你可以创建多个上下文，让状态分布在不同的组件中，但你可以让任何你希望的组件访问这些状态。
 
-`When using multiple files, you create the content in one file, and import it in all the places you use it:`
+当使用多个文件时，你可以在一个文件中创建，然后在需要的地方引用：
 
 ```
 //context.js
@@ -3359,37 +3359,37 @@ import Context from './context'
 //... use Context.Consumer
 ```
 
-### `Higher order components`
+### 高阶组件
 
-`You might be familiar with Higher Order Functions in JavaScript. Those are functions that accept functions as arguments, and/or return functions.`
+你可能对 JavaScript 的高阶函数很熟悉，是指能够接受函数作为参数，并返回函数的函数。
 
-``Two examples of those functions are  `Array.map()`  or  `Array.filter()`.``
+`Array.map()` 和 `Array.filter()` 就是两个例子。
 
-`In React, we extend this concept to components, and so we have a  **Higher Order Component (HOC)**when the component accepts a component as input and returns a component as its output.`
+在 React 中，这一概念被扩展到组件上，**高阶组件（HOC）** 可以传入一个组件作为属性，并返回一个组件。
 
-`In general, higher order components allow you to create code that’s composable and reusable, and also more encapsulated.`
+通常情况下，高阶组件让你的代码的可组装性和可复用性更强，并且封装性更好。
 
-`We can use a HOC to add methods or properties to the state of a component, or a Redux store for example.`
+我们可以给高阶组件的状态添加方法或者属性，或者例如 Redux 的 store。
 
-`You might want to use Higher Order Components when you want to enhance an existing component, operate on the state or props, or its rendered markup.`
+你可能希望通过使用高阶组件来加强已有组件的功能，操作已有组件的状态、属性或渲染标记。
 
-``There is a convention of prepending a Higher Order Component with the  `with`  string (it's a convention, so it's not mandatory), so if you have a  `Button`  component, its HOC counterpart should be called  `withButton`.``
+高阶组件的命名惯例是在组件名前加上字符串 `with` （这是一个惯例，并非必须），如果有一个 `Button` 组件，且是一个高阶组件，它应该被命名为 `withButton`。
 
-`Let’s create one.`
+我们来创建一个高阶组件。
 
-`The simplest example ever of a HOC is one that simply returns the component unaltered:`
+最简单的高阶组件示例就是一个返回原组件的组件：
 
 ```
-const withElement = Element => () => &lt;Element />
+const withElement = Element => () => <Element />
 ```
 
-`Let’s make this a little bit more useful and add a property to that button, in addition to all the props it already came with, the color:`
+接下来让组件更有用一些，在所有的属性之外，我们给按钮增加颜色属性：
 
 ```
 const withColor = Element => props => <Element {...props} color="red" />
 ```
 
-`We use this HOC in a component JSX:`
+我们在组件 JSX 中使用 HOC：
 
 ```
 const Button = () => {
@@ -3398,7 +3398,7 @@ const Button = () => {
 const ColoredButton = withColor(Button)
 ```
 
-`and we can finally render the ColoredButton component in our app JSX:`
+最我们的应用中能够渲染出 ColoredButton 组件：
 
 ```
 function App() {
@@ -3411,13 +3411,13 @@ function App() {
 }
 ```
 
-`This is a very simple example but hopefully you can get the gist of HOCs before applying those concepts to more complex scenarios.`
+这个示例非常简单，但是希望在将这些概念应用到更复杂的场景中之前，你能从示例中理解 HOC 的要点。
 
-### `Render Props`
+### Render Props
 
-``A common pattern used to share state between components is to use the  `children`prop.``
+常见的在组件之间共享状态的方式是通过使用 `children` 属性。
 
-``Inside a component JSX you can render  `{this.props.children}`  which automatically injects any JSX passed in the parent component as a children:``
+在组件 JSX 中，你可以渲染 `this.props.children` ，它会自动将父组件传入的任意 JSX 注入为子元素。
 
 ```
 class Parent extends React.Component {
@@ -3441,9 +3441,9 @@ const App = () => (
 )
 ```
 
-`However, there is a problem here: the state of the parent component cannot be accessed from the children.`
+然而，有一个问题：子组件无法访问父组件的状态。
 
-``To be able to share the state, you need to use a render prop component, and instead of passing components as children of the parent component, you pass a function which you then execute in  `{this.props.children()}`. The function can accept arguments:``
+为了能够共享状态，你需要使用 render prop 组件，这次不是将组件作为子元素传递给父组件，而是传递一个会在 `{this.props.children()}` 中执行的函数。这个函数可以接收参数：
 
 ```
 class Parent extends React.Component {
@@ -3461,7 +3461,7 @@ const Children1 = props => {
 const App = () => <Parent>{name => <Children1 name={name} />}</Parent>
 ```
 
-``Instead of using the  `children`  prop, which has a very specific meaning, you can use any prop, and so you can use this pattern multiple times on the same component:``
+相较于使用含义明确的 `children` 属性，你可以使用任意属性，此外，还可以在同一个组件中使用多次这种方式。
 
 ```
 class Parent extends React.Component {
@@ -3494,19 +3494,19 @@ const App = () => (
 ReactDOM.render(<App />, document.getElementById('app'))
 ```
 
-### `Hooks`
+### Hooks
 
-`Hooks is a feature that will be introduced in React 16.7, and is going to change how we write React apps in the future.`
+React 16.7 将会引入 Hooks 特性，它将在未来改变我们写 React 应用的方式。
 
-`Before Hooks appeared, some key things in components were only possible using class components: having their own state, and using lifecycle events. Function components, lighter and more flexible, were limited in functionality.`
+在 Hooks 出现之前，一些组件中的关键功能只能通过类组件实现：获取组件的状态和使用生命周期事件。函数组件虽然更加轻盈灵活，但是受限于它的功能。
 
-`**Hooks allow function components to have state and to respond to lifecycle events**  too, and kind of make class components obsolete. They also allow function components to have a good way to handle events.`
+**Hooks 让函数组件也能够拥有状态，并响应生命周期事件**，使得类组件过时了。Hooks 还让函数组件能够更好地处理事件。
 
-#### `Access state`
+#### 访问状态
 
-``Using the  `useState()`  API, you can create a new state variable, and have a way to alter it.  `useState()`  accepts the initial value of the state item and returns an array containing the state variable, and the function you call to alter the state. Since it returns an array we use  [array destructuring][96]  to access each individual item, like this:  `const [count, setCount] = useState(0)` ``
+使用 `useState()` API 可以创建一个新的状态变量，和一个更新它的方法。`useState()` 接受状态的原始值作为参数，并返回一个包含状态变量和更新状态变量的方法的数组。我们使用 [数组解构][96] 来分别获取状态和方法，像这样：`const [count, setCount] = useState(0)`。
 
-`Here’s a practical example:`
+下面是一个示例：
 
 ```
 import { useState } from 'react'
@@ -3522,21 +3522,21 @@ const Counter = () => {
 ReactDOM.render(<Counter />, document.getElementById('app'))
 ```
 
-``You can add as many  `useState()`  calls you want, to create as many state variables as you want. Just make sure you call it in the top level of a component (not in an  `if`  or in any other block).``
+你可以添加无数个 `useState()`。只是需要保证在组件的顶层调用他们（而不是在 `if` 中或者其他函数块中）。
 
-`[Example on Codepen][97]`
+[Codepen 示例][97]
 
-#### `Access lifecycle hooks`
+#### 访问声明周期的 hooks
 
-`Another very important feature of Hooks is allowing function components to have access to the lifecycle hooks.`
+Hooks 的另一个非常重要的特性是让函数组件可以访问生命周期。
 
-``Using class components you can register a function on the  `componentDidMount`,  `componentWillUnmount`  and  `componentDidUpdate`  events, and those will serve many use cases, from variables initialization to API calls to cleanup.``
+使用类函数时，你可以在 `componentDidMount`、 `componentWillUnmount`、 `componentDidUpdate` 中注册函数，并且可以在很多场景中使用，无论是初始化变量、API 调用 还是清理。
 
-``Hooks provide the  `useEffect()`  API. The call accepts a function as argument.``
+Hooks 提供了 `useEffect()` API。它接受一个函数作为参数。
 
-``The function runs when the component is first rendered, and on every subsequent re-render/update. React first updates the DOM, then calls any function passed to  `useEffect()`. All without blocking the UI rendering even on blocking code, unlike the old  `componentDidMount`  and  `componentDidUpdate`, which makes our apps feel faster.``
+这个函数会在组件第一次渲染的时候以及后续的每一次重新渲染或者更新的时候执行。React 会先更新 DOM，然后调用传递给 `useEffect()` 的任意函数。它们不会像旧式的 `componentDidMount` 和 `componentDidUpdate` 那样阻塞 UI 渲染或是代码运行，因此让应用感觉变快了。
 
-`Example:`
+看例子：
 
 ```
 const { useEffect, useState } = React
@@ -3564,7 +3564,7 @@ ReactDOM.render(
 )
 ```
 
-``The same  `componentWillUnmount`  job can be achieved by optionally  **returning**  a function from our  `useEffect()`  parameter:``
+`componentWillUnmount` 的功能可以通过在 `useEffect()` 参数中**返回**一个函数来实现。
 
 ```
 useEffect(() => {
@@ -3575,9 +3575,9 @@ useEffect(() => {
 })
 ```
 
-`` `useEffect()`  can be called multiple times, which is nice to separate unrelated logic (something that plagues the class component lifecycle events).``
+`useEffect()` 可以调用多次，因此最好把不相关的逻辑分开写（这是类组件的声明周期事件中的痛点）。
 
-``Since the  `useEffect()`  functions are run on every subsequent re-render/update, we can tell React to skip a run, for performance purposes, by adding a second parameter which is an array that contains a list of state variables to watch for. React will only re-run the side effect if one of the items in this array changes.``
+由于 `useEffect()` 函数在每一次重新渲染/更新时都会执行，为了保证性能，我们可以可以通过传递第二个参数来告诉 React 跳过某次执行。第二个参数是一个包含所有需要监听的变量的数组。React 只会在数组中的某个值发生变化时执行。
 
 ```
 useEffect(
@@ -3588,7 +3588,7 @@ useEffect(
 )
 ```
 
-`Similarly you can tell React to only execute the side effect once (at mount time), by passing an empty array:`
+你可以通过只传一个空数组来让 React 只在挂载时执行一次：
 
 ```
 useEffect(() => {
@@ -3596,15 +3596,15 @@ useEffect(() => {
 }, [])
 ```
 
-`` `useEffect()`  is great for adding logs, accessing 3rd party APIs and much more.``
+`useEffect()` 非常适用于添加日志、获取第三方 API 以及其他一些场景。
 
-`[Example on Codepen][98]`
+[Codepen 示例][98]
 
-#### `Handle events in function components`
+#### 在函数组件中处理事件
 
-`Before hooks, you either used class components, or you passed an event handler using props.`
+在有 hooks 之前，你只能使用类函数，或者通过属性传递一个事件处理器。
 
-``Now we can use the  `useCallback()`  built-in API:``
+现在你可以用内置的 `useCallback()` API:
 
 ```
 const Button = () => {
@@ -3615,7 +3615,7 @@ const Button = () => {
 }
 ```
 
-``Any parameter used inside the function must be passed through a second parameter to  `useCallback()`, in an array:``
+函数中使用到的参数都需要在一个数组中传给 `useCallback()` 的第二个参数。
 
 ```
 const Button = () => {
@@ -3630,17 +3630,17 @@ const Button = () => {
 }
 ```
 
-#### `Enable cross-component communication using custom hooks`
+#### 自定义 hooks 实现跨组件通信
 
-`The ability to write your own hooks is the feature that is going to significantly alter how you write React apps in the future.`
+能够自定义 hooks 将极大程度地改变你写 React 应用的方式。
 
-`Using custom hooks you have one more way to share state and logic between components, adding a significant improvement to the patterns of render props and higher order components. Which are still great, but now with custom hooks have less relevance in many use cases.`
+自定义 hooks 是除了 render props 和高阶组件之外的另一个在组件之间共享状态的方法。尽管 render props 和高阶组件仍然是很好的方式，但在很多使用场景中被自定义 hooks 取代了。
 
-`How do you create a custom hook?`
+要如何创建自定义 hook 呢?
 
-``A hook is just a function that conventionally starts with  `use`. It can accept an arbitrary number of arguments, and return anything it wants.``
+hook 是一个开头以 `use` 命名的函数。它接受任意数量的参数，并且返回任意你希望的内容。
 
-`Examples:`
+示例：
 
 ```
 const useGetData() {
@@ -3649,7 +3649,7 @@ const useGetData() {
 }
 ```
 
-`or`
+或是：
 
 ```
 const useGetUser(username) {
@@ -3659,7 +3659,7 @@ const useGetUser(username) {
 }
 ```
 
-`In your own components, you can use the hook like this:`
+在你的组件中，你可以这样使用 hook：
 
 ```
 const MyComponent = () => {
@@ -3669,27 +3669,27 @@ const MyComponent = () => {
 }
 ```
 
-`When exactly to add hooks instead of regular functions should be determined on a use case basis, and only experience will tell.`
+何时使用 hooks 而不是常规函数需要视情况而定，因此只能靠经验积累。
 
-### `Code splitting`
+### 代码分割
 
-`Modern JavaScript applications can be quite huge in terms of bundle size. You don’t want your users to have to download a 1MB package of JavaScript (your code and the libraries you use) just to load the first page, right? But this is what happens by default when you ship a modern Web App built with Webpack bundling.`
+现代 JavaScript 应用的包大小可能会非常大。你不会希望用户加载第一个页面时需要下载 1MB 的 JavaScript 包（包括你的代码和你使用的库），对吧？但这正是你通过 Webpack 打包后，发布你的网页应用时默认发生的情况。
 
-`That bundle will contain code that might never run because the user only stops on the login page and never sees the rest of your app.`
+包里包含着一些可能永远不会被运行的代码，因为用户可能只停留在登录页面，没有使用应用的任何其他部分。
 
-`Code splitting is the practice of only loading the JavaScript you need the moment when you need it.`
+代码分割是只加载当前所需代码的一种实践。
 
-`This improves:`
+它能够提升：
 
--   `the performance of your app`
--   `the impact on memory, and so battery usage on mobile devices`
--   `the downloaded KiloBytes (or MegaBytes) size`
+- 应用的性能
+- 对内存的影响，以及移动端设备的电池使用时间
+- 下载的大小
 
-`React 16.6.0, released in October 2018, introduced a way of performing code splitting that should take the place of every previously used tool or library:  **React.lazy**  and  **Suspense**.`
+2018 年 10 月发布的 React 16.6.0 引入了一种实现代码分割的方式，它应该取代以前使用的工具或库：**React.lazy** 和 **Suspense**。
 
-`` `React.lazy`  and  `Suspense`  form the perfect way to lazily load a dependency and only load it when needed.``
+`React.lazy` 和 `Suspense` 提供了一种完美的延迟加载依赖和只加载所需的方式。
 
-``Let’s start with  `React.lazy`. You use it to import any component:``
+我们从 `React.lazy` 开始，你可以使用它来引入任意组件。
 
 ```
 import React from 'react'
@@ -3703,9 +3703,9 @@ export default () => {
 }
 ```
 
-`the TodoList component will be dynamically added to the output as soon as it’s available. Webpack will create a separate bundle for it, and will take care of loading it when necessary.`
+TodoList 组件会在需要的时候动态地显示。Webpack 会为它创建一个单独的包，并且只在需要的时候加载。
 
-`` `Suspense`  is a component that you can use to wrap any lazily loaded component:``
+`Suspense` 组件可以用来包裹任意延迟加载的组件：
 
 ```
 import React from 'react'
@@ -3721,9 +3721,9 @@ export default () => {
 }
 ```
 
-`It takes care of handling the output while the lazy loaded component is fetched and rendered.`
+它负责在获取和渲染延迟加载的组件时处理输出。
 
-``Use its  `fallback`  prop to output some JSX or a component output:``
+使用 `fallback` 属性来输出一些 JSX 或组件内容：
 
 ```
 ...
@@ -3733,7 +3733,7 @@ export default () => {
 ...
 ```
 
-`All this plays well with React Router:`
+这些也能很好地配合 React Router 使用：
 
 ```
 import React from 'react'

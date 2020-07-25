@@ -127,9 +127,9 @@
 
 -   Github: 一个非常重要的学习工具，也是我免费托管所有项目的地方。通常这是雇主重点关注的地方。
 
--   Portfolio：通过构建开发项目和其他自发项目，我学习了最重要的开发技能。
+-   Portfolio：通过构建开发项目和其他项目，我学习了最重要的开发技能。
 
-You can also check out  [My Learning Tracker][5]  GitHub repo. It has a full list of the resources and paths I used those first ten months.
+你可以在 github 上面查看 [我的学习轨迹][5]。它有我前十个月学习路径和使用资源的完整列表。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*F74hOCN3MRUfNFEe9p56uQ.jpeg)
 

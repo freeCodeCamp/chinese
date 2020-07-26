@@ -133,9 +133,9 @@
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*F74hOCN3MRUfNFEe9p56uQ.jpeg)
 
-### Getting a job
+### 获取工作
 
-Surprisingly, for me, this part was not overly complex. I didn’t send masses of CVs, or spend hours looking for jobs. Instead I opted for being selective and focused.
+对我而言，令人称奇的是这部分并不太复杂。我没有海投，也没有花数小时找工作。相反，我是有选择性并且专注的。
 
 In the end I entered five interview processes. I got rejected from one, and failed to finish the take-home challenge of another. I completed three, and got three out of three offers. One of these was completely inadequate and unattractive. The other two, arriving almost at the same time, were both very interesting offers. One of them is my current job.
 

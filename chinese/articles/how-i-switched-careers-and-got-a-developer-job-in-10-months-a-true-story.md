@@ -137,7 +137,7 @@
 
 对我而言，令人称奇的是这部分并不太复杂。我没有海投，也没有花数小时找工作。相反，我是有选择性并且专注的。
 
-In the end I entered five interview processes. I got rejected from one, and failed to finish the take-home challenge of another. I completed three, and got three out of three offers. One of these was completely inadequate and unattractive. The other two, arriving almost at the same time, were both very interesting offers. One of them is my current job.
+最后，我获得了五个面试邀请。其中一个拒绝了我，有一个未能完成，完成了其余三个并获得相应的报价。其中一个我不感兴趣，其余两个很有吸引力，其中之一就是我目前的工作。
 
 I don’t mean to sound nonchalant about this. It was an intense time. I still had no idea if my skills were anywhere near being employable or not. I entered processes not even sure if I was going to be laughed at for how little experience I had. It was a nerve-racking time, but it was an exciting and hopeful time too. And when I finally found myself with two actual good offers on the table I was elated and could hardly believe it.
 

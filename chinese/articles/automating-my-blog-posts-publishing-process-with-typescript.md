@@ -3,19 +3,19 @@
 > * 译者：tanjiarui15
 > * 校对者：
 
-![How to Automate Your Blog Post Publishing Process with Typescript](https://www.freecodecamp.org/news/content/images/size/w2000/2020/05/cover.jpg)
+![如何使用 Typescript 实现自动化发布博客](https://www.freecodecamp.org/news/content/images/size/w2000/2020/05/cover.jpg)
 
-Since I'm trying to build a writing habit, well, I'm writing more and more. Even though I use publishing blogs like  [Medium][1],  [dev.to][2], and  [Hashnode][3], I like to post my content on  [my own blog][4]  as well.
+由于我正在尝试养成写作习惯，我频繁写作。虽然我常用 [Medium][1],  [dev.to][2], 和 [Hashnode][3] 发布博客，我依然希望在 [我的个人站点][4] 也发一份。
 
-As I wanted to build a simple website, this blog is basically HTML and CSS with very little JavaScript. But the thing is, I needed to improve the publishing process.
+因为我想建立一个简单的网站，这篇博客是由基本的 HTML 和 CSS 以及少量 JavaScript 构成。但问题是，我需要改进发布过程。
 
-So how does it work now?
+那么该从何入手呢？
 
-I manage the blog roadmap on Notion. It looks like this:
+我在 Notion 上管理博客写作路线图。看起来像这样：
 
 ![](https://raw.githubusercontent.com/leandrotk/tk/master/2020/04/publisher-a-tooling-to-automate-the-process-to-publish-my-blog-posts/assets/blog-roadmap.png)
 
-It's a simple kanban type of board. I like this board because I can get all my ideas into a physical (or digital?) representation. I also use it to build a draft, polish that draft and make it better and better, and then publish it to the blog.
+这是一种简单类型的看板。我喜欢这个，因为我可以将所有想法变成物理（或数字？）形式。我还使用它来构建草稿，不断完善，然后发布。
 
 So I write my blog post using Notion. After I finish it, I copy the Notion writing and paste it into an online tool to transform markdown into HTML. And then I can use this HTML to create the actual post.
 

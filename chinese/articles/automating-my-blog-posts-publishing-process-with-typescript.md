@@ -1,6 +1,6 @@
 > * 原文地址：[How to Automate Your Blog Post Publishing Process with Typescript 如何使用 Typescript 实现自动化发布文章](https://www.freecodecamp.org/news/automating-my-blog-posts-publishing-process-with-typescript/)
 > * 原文作者：TK
-> * 译者：
+> * 译者：tanjiarui15
 > * 校对者：
 
 ![How to Automate Your Blog Post Publishing Process with Typescript](https://www.freecodecamp.org/news/content/images/size/w2000/2020/05/cover.jpg)

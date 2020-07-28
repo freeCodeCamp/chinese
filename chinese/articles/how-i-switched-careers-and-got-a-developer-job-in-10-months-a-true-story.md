@@ -139,7 +139,7 @@
 
 最后，我获得了五个面试邀请。其中一个拒绝了我，有一个未能完成，完成了其余三个并获得相应的报价。其中一个我不感兴趣，其余两个很有吸引力，其中之一就是我目前的工作。
 
-I don’t mean to sound nonchalant about this. It was an intense time. I still had no idea if my skills were anywhere near being employable or not. I entered processes not even sure if I was going to be laughed at for how little experience I had. It was a nerve-racking time, but it was an exciting and hopeful time too. And when I finally found myself with two actual good offers on the table I was elated and could hardly believe it.
+我并不是对此漠不关心，那段时间很紧张，我仍然不知道我的技能是否能够胜任开发相关工作，我会不会因为我的经验太少而被嘲笑，那一刻很紧张，但也是一个令人兴奋和充满希望的时刻。当我最终发现有两份心仪的报价的时候，我欣喜若狂，简直不敢相信。
 
 I will always be eternally grateful to the individuals who made these decisions and decided to give me a chance.
 

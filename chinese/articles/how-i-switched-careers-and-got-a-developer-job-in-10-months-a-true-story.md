@@ -12,7 +12,7 @@
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*Qf68OyUJggEvunHepyoRLg.jpeg)
 
-### Feeling special
+### 特别的感觉
 
 当我刚开始考虑成为一个开发者的时候，我会将信将疑地阅读此类文章。我会试图找出这些文章作者所拥有的而我所没有的特殊的背景，这可能使得他们适合这种工作。
 

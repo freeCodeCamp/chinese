@@ -1,4 +1,4 @@
-> * 原文地址：[How to Build a Clone of GitHub's File Search Functionality React 项目实践——开发 GitHub 的文件搜索功能](https://www.freecodecamp.org/news/how-to-create-and-publish-a-vue-component-library/)
+> * 原文地址：[How to Build a Clone of GitHub's File Search Functionality React 项目实践——开发 GitHub 的文件搜索功能](https://www.freecodecamp.org/news/build-a-clone-of-githubs-file-search-functionality/)
 > * 原文作者：Yogesh Chavan
 > * 译者：
 > * 校对者：

@@ -141,9 +141,9 @@
 
 我并不是对此漠不关心，那段时间很紧张，我仍然不知道我的技能是否能够胜任开发相关工作，我会不会因为我的经验太少而被嘲笑，那一刻很紧张，但也是一个令人兴奋和充满希望的时刻。当我最终发现有两份心仪的报价的时候，我欣喜若狂，简直不敢相信。
 
-I will always be eternally grateful to the individuals who made these decisions and decided to give me a chance.
+我将永远感谢那些做出决定给我机会的人。
 
-The interview process in the two companies was very different. One was a series of video calls to talk to various people at the company. It was a small but well-established company hoping to build a new team of front-end developers. After a few weeks of back and forth, they made me my first real offer.
+这两家公司的面试过程很不一样。其中一个是视频电话，可以与公司的每一个人交谈。这是一家规模不大但是实力雄厚的公司，希望建立一个新的前端开发团队。经过几周的折返，他们给了我一个满意的报价。
 
 The other was a young startup in the middle of great growth. After a phone interview I got sent a technical challenge to complete within few days. It involved building a component, making API calls, and showing the correct information. Then came a video chat about the code I wrote. Then I got invited to have a drink with the tech team to find out if we click. After which I got an offer to join as a junior front-end.
 

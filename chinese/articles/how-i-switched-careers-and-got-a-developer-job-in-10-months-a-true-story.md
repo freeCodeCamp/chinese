@@ -145,7 +145,8 @@
 
 这两家公司的面试过程很不一样。其中一个是视频电话，可以与公司的每一个人交谈。这是一家规模不大但是实力雄厚的公司，希望建立一个新的前端开发团队。经过几周的折返，他们给了我一个满意的报价。
 
-The other was a young startup in the middle of great growth. After a phone interview I got sent a technical challenge to complete within few days. It involved building a component, making API calls, and showing the correct information. Then came a video chat about the code I wrote. Then I got invited to have a drink with the tech team to find out if we click. After which I got an offer to join as a junior front-end.
+另外一家是处于高速成长中的年轻初创公司。在一次电话面试之后，我收到了一项技术挑战，需要在几天之内完成。它包含构建组件、进行API调用以及显示正确的信息。然后是关于我编写代码的视频聊天。然后，我受邀与技术团队一起喝酒，以了解我们是否合拍。之后，我拿到了 offer 。
+
 
 In the end I had to choose. Which was a luxury I couldn’t believe I got. But I knew what I wanted, I took the offer with the  [startup][6]  based on one main point: they seemed to be very clear on the importance of mentorship and giving me guidance to grow and learn. That was the key. And it definitely was the right choice.
 

@@ -5,23 +5,22 @@
 
 ![How to Set Up a Continuous Integration Pipeline with GitHub Actions and Puppeteer](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/7i4mnqi4x5tl0rn204ab.png)
 
-Lately I've added continuous integration to my blog using Puppeteer for end to end testing. My main goal was to allow automatic dependency updates using  [Dependabot][1]. In this guide I'll show you how to create such a pipeline yourself.
+最近，我使用Puppeteer将持续集成集成到我的博客中，以进行端到端测试。我的主要目标是允许使用[Dependabot][1]进行自动依赖项更新。在本指南中，我将向您展示如何自己创建这样的管道。
 
-As my CI platform, I chose  [Github Actions][2], as it is super easy to work with. It also integrates beautifully with any Github repository you already have. The whole thing only took roughly two days of intermittent work, and I think the results are quite awesome.
+作为我的CI平台，我选择了[Github Actions][2]，因为它非常易于使用。它还可以与您已经拥有的任何Github存储库完美集成。整个过程大约只花了两天的间歇时间，我认为结果非常棒。
+我确实要大声赞扬Nick Taylor，他发表了[有关该主题的文章][3]，并为我在这里的努力奠定了基础。我鼓励您也阅读他的文章。
 
-I do want to give a shout-out to Nick Taylor, who published  [his article on the subject][3], and laid the ground work for my efforts here. I encourage you to read his article as well.
+我的技术栈却大不相同。由于多种原因，我选择[puppeteer][4]作为我的端到端框架。首先是它是由Chrome开发者工具背后的人们编写和维护的，因此可以保证我将终身提供支持（直到Chrome淘汰，这不会在不久的将来），而且这确实很容易上手。
 
-My tech stack is quite different though. I chose  [puppeteer][4]  as my end-to-end framework for several reasons. The first is that it is written and maintained by the folks behind the Chrome dev tools, so I'm guaranteed a life-time of support (until Chrome dies out, which is not in the near future), and it is really easy to work with.
+另一个原因是在家里，我正在使用WSL的Windows笔记本电脑上工作（在该笔记本电脑上，我正在使用oh-my-zsh运行zshell）。设置Cypress要困难得多（尽管在我们这个世界上没有什么是不可能的）。这两个原因都促使我选择了Puppeteer，到目前为止，我并不后悔。
 
-Another reason is that at home I'm working on a windows laptop with WSL (on which I'm running zshell with oh-my-zsh). Setting up cypress is quite a bit more difficult (although in our world nothing is impossible). Both reasons led me to choose puppeteer, and so far I'm not regretting it.
+## 端到端测试
 
-## End to end testing
+端到端（或E2E）测试与其他类型的自动化测试不同。 E2E测试可模拟真实用户，并在屏幕上执行操作。这种测试应该有助于填补“静态”测试（例如，单元测试（通常不引导整个应用程序）和组件测试）之间的空白，组件测试通常针对单个组件（或微型服务）运行服务架构）。
 
-End to end (or E2E) tests are different from other types of automated tests. E2E tests simulate a real user, performing actions on the screen. This kind of test should help fill the blank space between "static" tests - such as unit tests, where you usually don't bootstrap the entire application - and component testing, which usually runs against a single component (or a service in a micro-service architecture).
+通过模拟用户交互，您可以测试普通用户体验应用程序或服务的体验。
 
-By simulating user interaction you get to test the experience of using your application or service in the same way a regular user would experience it.
-
-The mantra that we try to follow is that it does not matter if your code performs perfectly if the button the user should press is hidden due to some CSS quirk. The end result is that the user will never get to feel the greatness of your code.
+我们尝试遵循的口头禅是，由于某些CSS怪癖，如果用户应按下的按钮处于隐藏状态，则代码是否可以完美执行并不重要。最终结果是用户将永远不会感觉到您的代码的强大之处。
 
 ## Getting started with puppeteer
 

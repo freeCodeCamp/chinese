@@ -1,6 +1,6 @@
 > * 原文地址：[How to Set Up a Continuous Integration Pipeline with GitHub Actions and Puppeteer 如何使用 GitHub Actions 和 Puppeteer 设置持续集成管道](https://www.freecodecamp.org/news/continuous-integration-with-github-actions-and-puppeteer/)
 > * 原文作者：Dor Shinar
-> * 译者：
+> * 译者：RetownPlato
 > * 校对者：
 
 ![How to Set Up a Continuous Integration Pipeline with GitHub Actions and Puppeteer](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/7i4mnqi4x5tl0rn204ab.png)

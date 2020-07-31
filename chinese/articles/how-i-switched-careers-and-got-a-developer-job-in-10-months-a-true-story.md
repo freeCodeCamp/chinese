@@ -148,7 +148,7 @@
 另外一家是处于高速成长中的年轻初创公司。在一次电话面试之后，我收到了一项技术挑战，需要在几天之内完成。它包含构建组件、进行API调用以及显示正确的信息。然后是关于我编写代码的视频聊天。然后，我受邀与技术团队一起喝酒，以了解我们是否合拍。之后，我拿到了 offer 。
 
 
-In the end I had to choose. Which was a luxury I couldn’t believe I got. But I knew what I wanted, I took the offer with the  [startup][6]  based on one main point: they seemed to be very clear on the importance of mentorship and giving me guidance to grow and learn. That was the key. And it definitely was the right choice.
+最后我不得不从这两家之间做出选择，这是我不敢相信的。但是我知道我想要的是什么，我接受了这家[初创][6]公司的邀请，这家公司有一点比较吸引我：他们非常清楚导师的重要性，并给我提供成长和学习的指导。这点很关键，绝对是正确的选择。
 
 And so, on that rainy day in Madrid, after finishing my coffee. I walked into an office in the business area, introduced myself as the new front-end developer, and started my new career.
 

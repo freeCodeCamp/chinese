@@ -22,26 +22,25 @@
 
 我们尝试遵循的口头禅是，由于某些CSS怪癖，如果用户应按下的按钮处于隐藏状态，则代码是否可以完美执行并不重要。最终结果是用户将永远不会感觉到您的代码的强大之处。
 
-## Getting started with puppeteer
+## 入门Puppeteer
 
-Puppeteer has a few configuration options that make it really awesome to use for writing and validating tests.
+Puppeteer有几个配置选项，使编写和验证测试使用起来真的很棒。
 
-Puppeteer tests can run in a "head-full" state. This means you can open a real browser window, navigate to the site being tested, and perform actions on the given page. This way you - the developers writing the tests - can see exactly what happens in the test, what buttons are being pressed and what the resulting UI looks like.
+Puppeteer测试可以在“head-full”状态下运行。这意味着您可以打开真实的浏览器窗口，导航到要测试的站点，然后在给定页面上执行操作。这样，您（编写测试的开发人员）可以确切地看到测试中发生的情况，按下了哪些按钮以及生成的UI外观。
 
-The opposite of "head-full" would be headless, where puppeteer does not open a browser window, making it ideal for CI pipelines.
+与“ head-full”的相反将是headless的，其中Puppeteer不会打开浏览器窗口，因此非常适合CI管道。
 
-Puppeteer is quite easy to work with, but you'll be surprised with the number of actions you can perform using an automated tool.
+Puppeteer的使用非常简单，但是你会惊讶于使用自动化工具可以执行的操作数量。
 
-We'll start with a basic scraper that prints the page title when we go to  [https://dorshinar.me][5]. In order to run puppeteer tests, we must install it as a dependency:
+我们将从基本的爬虫开始，当我们转到[https://dorshinar.me](https://dorshinar.me/)时，该爬虫将打印页面标题。为了运行Puppeteer的测试，我们必须将其安装为依赖项：
 
-```bash
+```powershell
 npm i puppeteer
-
 ```
 
-Now, our basic scraper looks like this:
+现在，我们的基本爬虫如下所示：
 
-```js
+```javascript
 const puppeteer = require("puppeteer");
 
 (async () => {
@@ -50,49 +49,47 @@ const puppeteer = require("puppeteer");
   await page.goto("https://dorshinar.me");
   console.log(await page.title());
 
+  await browser.close();
+})();
 ```
 
-What we do here is very simple: we open the browser with  `puppeteer.launch()`, create a new page with  `browser.newPage()`  and navigate to this blog with  `page.goto()`, and then we print the title.
+我们在这里做的事情非常简单：我们使用`puppeteer.launch()`打开浏览器，使用`browser.newPage()`创建一个新页面，然后使用`page.goto()`导航到该博客，然后打印标题。
 
-There are a bunch of things we can do with the puppeteer API, such as:
+我们可以使用puppeteer API做很多事情，例如：
 
-Running code in the context of the page:
+在页面上下文中运行代码：
 
-```js
+```javascript
 (async () => {
   await page.evaluate(() => document.querySelector(".awesome-button").click());
 })();
-
 ```
 
-Clicking on elements in the screen using a CSS selector:
+使用CSS选择器单击屏幕上的元素：
 
 ```js
 (async () => {
   await page.click(".awesome-button");
 })();
-
 ```
 
-Making use of the  `$`  selector (jQuery style):
+利用`$`选择器（jQuery样式）：
 
 ```js
 (async () => {
   await page.$(".awesome-button");
 })();
-
 ```
 
-Taking a screenshot:
+截屏：
 
 ```js
 (async () => {
   await page.screenshot({ path: "screenshot.png" });
 })();
-
 ```
 
-There is a bunch more you can do with the puppeteer API, and I suggest you take a look at it before diving into writing tests. But the examples I've shown should give you a solid foundation to build from.
+您可以使用puppeteer API做更多的事情，我建议您在开始编写测试之前先进行了解。但是我展示的示例应该为您提供坚实的基础。
 
 ### Integrating puppeteer with Jest
 

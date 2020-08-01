@@ -1,6 +1,6 @@
 > * 原文地址：[23 Alternative Career Paths that Software Developers Can Grow Into 程序员职业发展的 23 种路径](https://www.freecodecamp.org/news/alternative-career-paths/)
 > * 原文作者：Karl Hughes
-> * 译者：
+> * 译者：MMMAY
 > * 校对者：
 
 ![23 Alternative Career Paths that Software Developers Can Grow Into](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/Alternate-Career-Pathways.png)

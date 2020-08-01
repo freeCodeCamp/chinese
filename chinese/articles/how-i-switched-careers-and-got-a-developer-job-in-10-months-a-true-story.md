@@ -154,7 +154,7 @@
 
 _I hope you enjoyed my story. If you did, you would make me happy if you give it some of those tasty claps. And you could even make my day by sharing it so more people can read it and learn they too can make it. I want to keep writing more of these articles. So if there is any particular aspect of this process you would like to know more about, I would love to hear about it. Come and say hi on  [Twitter][7]  @Syknapse_
 
-[Check out my article about all the resources I used to get this job.][8]
+[另外一篇文章讲述了我是如何利用上面提到的学习资源学习的][8]
 
 [1]: https://twitter.com/Elena_in_code/status/973319215196368896
 [2]: https://twitter.com/Syknapse

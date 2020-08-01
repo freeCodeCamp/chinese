@@ -150,7 +150,7 @@
 
 最后我不得不从这两家之间做出选择，这是我不敢相信的。但是我知道我想要的是什么，我接受了这家[初创][6]公司的邀请，这家公司有一点比较吸引我：他们非常清楚导师的重要性，并给我提供成长和学习的指导。这点很关键，绝对是正确的选择。
 
-And so, on that rainy day in Madrid, after finishing my coffee. I walked into an office in the business area, introduced myself as the new front-end developer, and started my new career.
+就这样，在马德里的一个下雨天，我喝完咖啡之后走进了商务区的办公室，介绍自己是新来的开发人员，然后开启了我的新的职业生涯。
 
 _I hope you enjoyed my story. If you did, you would make me happy if you give it some of those tasty claps. And you could even make my day by sharing it so more people can read it and learn they too can make it. I want to keep writing more of these articles. So if there is any particular aspect of this process you would like to know more about, I would love to hear about it. Come and say hi on  [Twitter][7]  @Syknapse_
 

@@ -348,15 +348,16 @@ export default class App extends React.Component {
 
 您可以在[此branch][7]找到到目前为止的代码。
 
-## Add functionality to navigate between files  
+## 添加在文件之间导航的功能
   
 
-Now, lets add the functionality to display an arrow in front of the currently selected file while navigating the list of files.
+现在，让我们添加功能以在浏览文件列表时在当前选定文件的前面显示箭头。
 
-Create a new file called  `InfoMessage.js`  inside the  `components`  folder with the following content:
+在`components`文件夹中新建名为  `InfoMessage.js` 的文件内容如下：
 
 ```js
 import React from 'react';
+
 const InfoMessage = () => {
   return (
     <div className="info-message">
@@ -368,23 +369,26 @@ const InfoMessage = () => {
   );
 };
 
+export default InfoMessage;
 ```
 
-Now, open the  `App.js`  file and import the  `InfoMessage`  component to use it:
+现在，打开`App.js`文件并导入`InfoMessage`组件以使用它：
 
 ```js
 import InfoMessage from './components/InfoMessage';
 ```
 
-Add a new state variable called  `counter`  with the initial value of  `0`. This is to keep track of the index of the arrow.
+添加一个初始值为`0`的新状态变量`counter`。这是为了跟踪箭头的索引。
 
 Inside the  `handleEvent`  handler, get the  `filesList`  and  `counter`  values from state:
+
+在`handleEvent`处理程序内部，从状态获取`filesList`和`counter`值：
 
 ```js
 const { filesList, counter } = this.state;
 ```
 
-Add two new switch cases:
+增加两个`switch`情况  :
 
 ```js
 case UP_ARROW_CODE:
@@ -399,9 +403,9 @@ case DOWN_ARROW_CODE:
   break;
 ```
 
-Here, we decrement the  `counter`  state value when we press the up arrow on the keyboard and increment when we press the down arrow.
+在这里，当我们按下键盘上的向上箭头时，`counter`值将减小，而当我们按下向下箭头时，`counter`将增大值。
 
-Also import the up and down array constants at the top of the file:
+还要在文件顶部导入up和down箭头常量：
 
 ```js
 import {
@@ -412,7 +416,7 @@ import {
 } from './utils/keyCodes';
 ```
 
-Inside the  `handleSearch`  function, reset the  `counter`  state to  `0`  at the end of the function so the arrow will always display for the first file from the list while filtering the files list.
+在handleSearch函数内部，在函数末尾将counter重置为0，以便在过滤文件列表时，箭头始终显示在列表中第一个文件前。
 
 ```js
 this.setState({
@@ -421,21 +425,41 @@ this.setState({
 });
 ```
 
-Change the render method to display the  `InfoMessage`  component and pass  `counter`  and  `isSearchView`  as props to the  `FilesList`  component:
+更改`render`方法以显示`InfoMessage`组件并传递`counter`和`isSearchView`属性给`FilesList`组件：
 
 ```js
 render() {
   const { isSearchView, counter, filesList } = this.state;
 
+  return (
+    <div className="container">
+      <Header />
+      {isSearchView ? (
+        <div className="search-view">
+          <SearchView onSearch={this.handleSearch} />
+          <InfoMessage />
+          <FilesList
+            files={filesList}
+            isSearchView={isSearchView}
+            counter={counter}
+          />
+        </div>
+      ) : (
+        <FilesList files={filesList} />
+      )}
+    </div>
+  );
+}
 ```
 
-Now, open the  `FilesList.js`  file and accept the  `isSearchView`  and  `counter`  props and pass them to the  `ListItem`  component.
+现在，打开`FilesList.js`文件并接受`isSearchView`和`counter`属性并将其传递给`ListItem`组件。
 
-Your  `FilesList.js`  file will look like this now:
+您的`FilesList.js`文件现在看起来像这样：
 
 ```js
 import React from 'react';
 import ListItem from './ListItem';
+
 const FilesList = ({ files, isSearchView, counter }) => {
   return (
     <div className="list">
@@ -460,14 +484,16 @@ const FilesList = ({ files, isSearchView, counter }) => {
   );
 };
 
+export default FilesList;
 ```
 
-Now, open  `ListItem.js`  file and replace its contents with the following content:
+现在，打开`ListItem.js`文件并将其内容替换为以下内容：
 
 ```js
 import React from 'react';
 import moment from 'moment';
 import { AiFillFolder, AiOutlineFile, AiOutlineRight } from 'react-icons/ai';
+
 const ListItem = ({
   index,
   type,
@@ -478,13 +504,14 @@ const ListItem = ({
   counter
 }) => {
   const isSelected = counter === index;
+
   return (
     <React.Fragment>
-      <div className={list-item </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>isSelected <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">?</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">'active'</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">''</span><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">}>
+      <div className={`list-item ${isSelected ? 'active' : ''}`}>
         <div className="file">
           {isSearchView && (
             <span
-              className={arrow-icon </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>isSelected <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">?</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">'visible'</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">'invisible'</span><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">}
+              className={`arrow-icon ${isSelected ? 'visible' : 'invisible'}`}
             >
               <AiOutlineRight color="#0366d6" />
             </span>
@@ -511,28 +538,29 @@ const ListItem = ({
   );
 };
 
+export default ListItem;
 ```
 
-In this file, we first accept the  `isSearchView`  and  `counter`  prop. Then we check if the index of the currently displayed file from the list matches with the  `counter`  value.
+在此文件中，我们首先接受  `isSearchView`  和  `counter`  属性。然后，我们检查列表中当前显示的文件的索引是否与该`counter`值匹配。
 
-Based on that, we display the arrow in front only for that file. Then when we use the down or up arrow to navigate through the list, we increment or decrement the counter value respectively in the  `App.js`  file.
+基于此，我们仅在满足条件的文件前面显示箭头。然后，当我们使用向下或向上箭头浏览列表时，我们分别在`App.js`文件中增加或减少`counter`值。
 
-Based on the  `isSearchView`  value we display or hide the comment and time column in the search view on the UI.
+基于 `isSearchView` 值，我们在UI的搜索视图中显示或隐藏注释和时间列。
 
-Now, restart the app by running the  `yarn start`  command again and check its functionality:
+现在，再次运行命令`yarn start`来重新启动应用程序并检查其功能：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/navigation.gif)
 
-Search and Navigate
+搜素与导航
 
-You can find the code up to this point in  [this branch][8].
+您可以在[此branch][8]中找到到目前为止的代码。
 
-## Add functionality to highlight matching text  
+## 添加功能以高亮匹配的文本  
   
 
-Now, let's add the functionality to highlight the matching text from the filename when we filter the file.
+现在，让我们添加功能，以在过滤文件时突出显示文件名中的匹配文本。
 
-Open  `App.js`  and change the  `handleSearch`  function to the following code:
+打开 `App.js` 并更改  `handleSearch` 函数为以下代码：
 
 ```js
 handleSearch = (searchTerm) => {
@@ -549,7 +577,7 @@ handleSearch = (searchTerm) => {
         return {
           ...file,
           name: file.name.replace(pattern, (match) => {
-            return &lt;mark&gt;</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>match<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">&lt;/mark&gt;;
+            return `<mark>${match}</mark>`;
           })
         };
       });
@@ -557,15 +585,20 @@ handleSearch = (searchTerm) => {
     list = files.filter((file) => file.type === 'file');
   }
 
+  this.setState({
+    filesList: list,
+    counter: 0
+  });
+};
 ```
 
-In this code, first we use the  `RegExp`  constructor to create a dynamic regular expression for global and case insensentive search:
+在这段代码中，首先我们使用`RegExp`构造函数为全局和不区分大小写的搜索创建动态正则表达式：
 
 ```js
 const pattern = new RegExp(searchTerm, 'gi');
 ```
 
-Then we filter out the files which match that search criteria:
+然后，我们筛选出符合搜索条件的文件：
 
 ```js
 files.filter(
@@ -575,17 +608,18 @@ files.filter(
 );
 ```
 
-Then we call the array map method on the result we got from above filter functionality.
+然后，根据从上述`filter`获得的结果调用数组`map`方法。
 
-In the map method, we use the string  `replace`  method.  
-The  `replace`  method accepts two parameters:
+在`map`方法中，我们使用字符串`replace`方法。
 
--   pattern to search for
--   function to execute for each matched pattern
+该`replace`方法接受两个参数：
 
-We use the  `replace`  method to find all the matches for the  `pattern`  and replace it with the string  `<mark>${match}</mark>`. Here  `match`  will contain the matched text from the file name.
+- 搜索模式
+- 为每个匹配的模式执行的函数
 
-If you check the JSON structure from the  `utils/api.js`  file, the structure of each file looks like this:
+我们使用`replace`方法查找所有匹配`pattern`的项，并将其替换为字符串`<mark>${match}</mark>`。这里`match`将包含文件名中的匹配文本。
+
+如果您检查`utils/api.js`文件中的JSON结构，则每个文件的结构如下所示：
 
 ```js
 {
@@ -597,55 +631,55 @@ If you check the JSON structure from the  `utils/api.js`  file, the structure of
 }
 ```
 
-As we want to replace the text from the name field only, we spread out the file object properties and only change the name, keeping other values as they are.
+因为我们只想替换名称字段中的文本，所以我们展开(spread syntax)文件对象属性，仅更改名称，并保持其他值不变。
 
 ```js
 {
   ...file,
   name: file.name.replace(pattern, (match) => {
-    return &lt;mark&gt;</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>match<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">&lt;/mark&gt;;
+    return `<mark>${match}</mark>`;
   })
 }
 ```
 
-Now, restart the app by running the  `yarn start`  command again and check its functionality.
+现在，再次运行命令`yarn start`来重新启动应用程序并检查其功能。
 
-You will see that the HTML is displayed as it is on the UI when you search:
+搜索时，您将看到HTML在UI上按原样显示：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/rendered_html.png)
 
-HTML not rendered correctly
+HTML无法正确渲染
 
-This is because we are displaying the file name in the  `ListItem.js`  file in the following way:
+这是因为我们在`ListItem.js`通过以下方式在文件中显示文件名：
 
 ```js
 <span className="label">{name}</span>
 ```
 
-And to prevent  `Cross-site scripting (XSS)`  attacks, React escapes all the content displayed using the JSX Expression (which is in curly brackets).
+为了防止  `Cross-site scripting (XSS)` 攻击, React会在使用JSX的表达式中转义所有显示的内容。
 
-So if we want to actually display the correct HTML, we need to use a special prop known as  `dangerouslySetInnerHTML`. It passes the  `__html`  name with the HTML to display as the value like this:
+因此，如果要实际显示正确的HTML，则需要使用特殊的属性  `dangerouslySetInnerHTML`。它传递`__html: name`以显示带有HTML的`name`。
 
 ```js
 <span className="label" dangerouslySetInnerHTML={{ __html: name }}></span>
 ```
 
-Now, restart the app by running the  `yarn start`  command again and check its functionality:
+现在，再次运行命令`yarn start`来重新启动应用程序并检查其功能：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/highlight-1.gif)
 
-Final working application
+最终成果
 
-As you can see, the search term is correctly getting highlighted in the name of the file.
+如您所见，搜索词在文件名中被正确高亮。
 
-### That's it!
+### 结束!
 
-You can find the code up to this point in  [this branch][9].
+您可以在[此branch中][9]找到到目前为止的代码。
 
-Complete GitHub Source Code:  [here][10]  
-Live Demo:  [here][11]
+完整的GitHub源代码： [此处][10]  
+在线演示：[此处][11]
 
-**Check out my other React, Node.js, and Javascript articles at  [Medium][12],  [dev.to][13]  and subscribe to get weekly updates directly in your inbox  [here][14]**.
+**在[Medium][12]，[dev.to][13]上查看我的其他关于React，Node.js和Javascript文章，并[此处][14]订阅在收件箱中获取每周更新。**.
 
 [1]: https://github-file-search-react.netlify.app/
 [2]: https://github.com/myogeshchavan97/github-file-search-react/blob/master/src/styles.scss

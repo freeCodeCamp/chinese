@@ -3,11 +3,11 @@
 > * 译者：MMMAY
 > * 校对者：
 
-![23 Alternative Career Paths that Software Developers Can Grow Into](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/Alternate-Career-Pathways.png)
+![23 Alternative Career Paths that Software Developers Can Grow Into]程序员职业发展的 23 种路径(https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/Alternate-Career-Pathways.png)
 
-Over the past five years, I've given dozens of guest lectures at many of the coding bootcamps in Chicago.
+Over the past five years, I've given dozens of guest lectures at many of the coding bootcamps in Chicago.过去5年中，我在芝加哥编程训练营举办了数十场客座演讲。
 
-A few questions never fail to come up: "[Which language should I learn next?][1]", "[How can I prepare for technical interviews?][2]", "Are you hiring?"
+A few questions never fail to come up: "[Which language should I learn next?][1]", "[How can I prepare for technical interviews?][2]", "Are you hiring?"不断有人问我同样的问题：接下来该学什么语言呢？怎么准备技术面试？您招人吗？诸如此类。
 
 But one question that threw me off was, "What if I don't want to be a software developer?"
 

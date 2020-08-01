@@ -15,7 +15,7 @@ Github文件搜索功能
 
 通过构建此应用程序，您将学到以下内容：
 
-- 如何创建类似于GitHub存储库的UI
+- 如何创建类似于GitHub仓库的UI
 - 如何在React中使用键盘事件
 - 如何使用键盘上的箭头键进行导航
 - 如何在搜索时突出显示匹配的文本
@@ -24,45 +24,44 @@ Github文件搜索功能
 
 以及更多。
 
-You can see the live demo of the application  [here][1].
+您可以在[此处][1]查看该应用程序的实时演示。
 
-### **Let’s get started**
+### **让我们开始吧**
 
-Create a new project using  `create-react-app`:
+使用  `create-react-app`创建一个新项目:
 
-```
+```shell
 create-react-app github-file-search-react
 ```
 
-Once the project is created, delete all files from the  `src`  folder and create  `index.js`,  `App.js`  and  `styles.scss`  files inside the  `src`  folder. Also create  `components`  and  `utils`  folders inside the  `src`  folder.
+创建项目后，从`src`文件夹中删除所有文件，然后在`src`文件夹中创建`index.js`，`App.js`以及`styles.scss`文件。然后在`src`文件夹内创建`components`和`utils`文件夹。
 
-Install the necessary dependencies:
+安装必要的依赖项:
 
-```js
+```bash
 yarn add moment@2.27.0 node-sass@4.14.1 prop-types@15.7.2 react-icons@3.10.0
 ```
 
-Open  `styles.scss`  and add the contents from  [here][2]  inside it.
+打开  `styles.scss`  并复制粘贴[这里的代码][2].
 
-Create a new file  `Header.js`  inside the  `components`  folder with the following content:
+在`components`文件夹中创建`Header.js`文件，其内容如下：
 
-```
+```javascript
 import React from 'react';
-
 const Header = () => <h1 className="header">GitHub File Search</h1>;
-
 ```
 
-Create a new file  `api.js`  inside the  `utils`  folder and add the content from  [here][3]  inside it.
+在`components`文件夹中创建一个文件`Header.js`并复制粘贴[这里的代码][3]。
 
-In this file, we have created static data to be displayed on the UI to keep the application simple and easy to understand.
+在此文件中，我们创建了要在UI上显示的静态数据，以使应用程序简单易懂
 
-Create a new file  `ListItem.js`  inside the  `components`  folder with the following content:
+在`components`文件夹中新建`ListItem.js`文件，其内容如下：
 
 ```javascript
 import React from 'react';
 import moment from 'moment';
 import { AiFillFolder, AiOutlineFile } from 'react-icons/ai';
+
 const ListItem = ({ type, name, comment, modified_time }) => {
   return (
     <React.Fragment>
@@ -86,19 +85,21 @@ const ListItem = ({ type, name, comment, modified_time }) => {
   );
 };
 
+export default ListItem;
 ```
 
-In this file, we are taking the data of each file we want to display and we're displaying the folder/file icon, the name of the file, the comment(s), and the last time the file was modified.
+在此文件中，我们将获取要显示的每个文件的数据，并显示文件夹/文件图标，文件名，注释和上次修改文件的时间。
 
-For displaying the icons, we'll use the  `react-icons`  npm library. It has a really nice website that lets you easily search and use the icons you need. Check it out  [here][4].
+为了显示图标，我们将使用`react-icons`npm库。它有一个非常不错的网站，可让您轻松搜索和使用所需的图标。[在这里查看更多](https://react-icons.github.io/react-icons/)。
 
-The icons component accepts the  `color`  and  `size`  props to customize the icon which we have used in the above code.
+图标组件接受`color`和`size`属性以自定义我们在以上代码中使用的图标。
 
-Create a new file called  `FilesList.js`  inside the  `components`  folder with the following content:
+在`components`文件夹中新建`FilesList.js`文件，内容如下：
 
 ```javascript
 import React from 'react';
 import ListItem from './ListItem';
+
 const FilesList = ({ files }) => {
   return (
     <div className="list">
@@ -115,50 +116,57 @@ const FilesList = ({ files }) => {
   );
 };
 
+export default FilesList;
 ```
 
-In this file, we read the static data from the  `api.js`  file and then display each element of the files array by using the array map method.
+在此文件中，我们从`api.js`文件中读取静态数据，然后使用数组`Array.proptotype.map()`方法显示文件数组的每个元素。
 
-Now open the  `src/App.js`  file and add the following code inside it:
+现在打开`src/App.js`文件，并在其中添加以下代码：
 
 ```js
 import React from 'react';
 import Header from './components/Header';
 import FilesList from './components/FilesList';
 import files from './utils/api';
+
 export default class App extends React.Component {
   state = {
     filesList: files
   };
+
   render() {
     const { counter, filesList } = this.state;
-<span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">return</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>
-  <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">&lt;</span>div className<span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">"container"</span><span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">&gt;</span>
-    <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">&lt;</span>Header <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">/</span><span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">&gt;</span>
-    <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">&lt;</span>FilesList files<span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span>filesList<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span> <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">/</span><span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">&gt;</span>
-  <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">&lt;</span><span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">/</span>div<span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">&gt;</span>
-<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
+
+    return (
+      <div className="container">
+        <Header />
+        <FilesList files={filesList} />
+      </div>
+    );
+  }
+}
 ```
 
-In this file, we have added a state to store the static files data which we can modify whenever we need to do so. Then we have passed it to the  `FilesList`  component to display on the UI.
+在此文件中，我们添加了一个状态来存储静态文件数据，可以在需要时进行修改。然后，我们将其传递给`FilesList`组件以在UI上显示。
 
-Now, open the  `index.js`  file and add the following code inside it:
+现在，打开`index.js`文件并在其中添加以下代码：
 
-```js
+```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './styles.scss';
 
+ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
-Now, start your application by running the  `yarn start`  command from the terminal or command prompt and you will see the following initial screen:
+现在，通过`yarn start`从终端或命令提示符处运行命令来启动应用程序，您将看到以下初始屏幕：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/initial_screen.png)
 
-Initial screen
+初始画面
 
-You can find the code up to this point in  [this branch][5].
+你可以在[此branch][5]中找到目前为止的代码.
 
 ## Add basic search functionality  
   

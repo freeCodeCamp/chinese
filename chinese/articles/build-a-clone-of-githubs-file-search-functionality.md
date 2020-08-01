@@ -5,24 +5,24 @@
 
 ![How to Build a Clone of GitHub's File Search Functionality](https://images.unsplash.com/photo-1457694587812-e8bf29a43845?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-In this article, we will build a project that mimics the lesser known but awesome file search functionality provided by GitHub.
+在本文中，我们将构建一个项目，该项目模仿GitHub提供的鲜为人知但功能强大的文件搜索功能。
 
-To see how it works, go to any GitHub repository and press the letter  **t**  which will land you in search view. Then you can simultaneously search and scroll through the list as shown in the below gif:
+要查看其工作原理，请转到任何GitHub存储库，然后按字母**t**，这将使您进入搜索视图。然后，您可以同时搜索并滚动列表，如以下gif所示：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/Github_Search-1.gif)
 
-Github file search functionality
+Github文件搜索功能
 
-By building this app, you will learn the following:
+通过构建此应用程序，您将学到以下内容：
 
--   How to create a UI similar to a GitHub repository
--   How to work with keyboard events in React
--   How to work with navigation using the arrow keys on your keyboard
--   How to highlight matching text while searching
--   How to add icons in React
--   How to render HTML content in a JSX expression
+- 如何创建类似于GitHub存储库的UI
+- 如何在React中使用键盘事件
+- 如何使用键盘上的箭头键进行导航
+- 如何在搜索时突出显示匹配的文本
+- 如何在React中添加图标
+- 如何在JSX表达式中渲染HTML内容
 
-And much more.
+以及更多。
 
 You can see the live demo of the application  [here][1].
 

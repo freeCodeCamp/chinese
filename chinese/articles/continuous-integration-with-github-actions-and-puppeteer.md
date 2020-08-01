@@ -91,28 +91,31 @@ const puppeteer = require("puppeteer");
 
 您可以使用puppeteer API做更多的事情，我建议您在开始编写测试之前先进行了解。但是我展示的示例应该为您提供坚实的基础。
 
-### Integrating puppeteer with Jest
+### 将Puppeteer与Jest集成
 
-[jest][7]  is an awesome test runner and assertion library. From their docs:
+[jest](https://jestjs.io/)是一个了不起的测试运行程序和断言库。从他们的文档：
 
-> Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
+> Jest是一个令人愉悦的JavaScript测试框架，其重点是简单性。
 
-Jest allows you to run tests, mock imports, and make complex assertions really easily. Jest is also bundled with create-react-app, so I use it often at work.
+Jest允许您真正轻松地运行测试，模拟导入以及进行复杂的断言。Jest还与create-react-app捆绑在一起，因此我经常在工作中使用它。
 
-#### Writing your first Jest test
+#### 编写您的第一个Jest测试
 
-Jest tests are super easy to write, and they might be familiar to those who know other testing frameworks (as Jest uses  `it`,  `test`,  `describe`  and other familiar conventions).
+Jest测试是超级容易写，他们可能对于那些知道其他的测试框架是熟悉的（如Jest使用`it`，`test`，`describe`和其他熟悉的惯例）。
 
-A basic test could look like:
+基本测试可能类似于：
 
 ```js
 function subtract(a, b) {
   return a - b;
 }
 
+it("subtracts 4 from 6 and returns 2", () => {
+  expect(subtract(6, 4)).toBe(2);
+});
 ```
 
-You can also group multiple tests under one  `describe`, so you can run different describes or use it for convenient reporting:
+您还可以将多个测试归为一类`describe`，因此您可以运行不同的describes或将其用于方便的报告：
 
 ```js
 function divide(a, b) {
@@ -122,52 +125,56 @@ function divide(a, b) {
   return a / b;
 }
 
+describe("divide", () => {
+  it("throws when dividing by zero", () => {
+    expect(() => divide(6, 0)).toThrow();
+  });
+  it("returns 3 when dividing 6 by 3", () => {
+    expect(divide(6, 3)).toBe(2);
+  });
+});
 ```
 
-You can, of course, create much more complicated tests using mocks and other type of assertions (or expectations), but for now that's enough.
+当然，您可以使用模拟和其他类型的断言（或期望）来创建更复杂的测试，但是到目前为止就足够了。
 
-Running the tests is also very simple:
+运行测试也非常简单：
 
 ```bash
 jest
-
 ```
 
-Jest will look for test files with any of the following popular naming conventions:
+Jest将使用以下任何流行的命名约定查找测试文件：
 
--   Files with  `.js`  suffix in  `**tests**`  folders.
--   Files with  `.test.js`  suffix.
--   Files with  `.spec.js`  suffix.
+- `__tests__`文件夹中带有`.js`后缀的文件。
+- 带`.test.js`后缀的文件。
+- 带`.spec.js`后缀的文件。
 
 #### jest-puppeteer
 
-Now, we need to make puppeteer play nicely with jest. This isn't a particularly hard job to do, as there is a great package named  [jest-puppeteer][8]  that comes to our aid.
+现在，我们需要使Puppeteer和jest合作愉快。这并不是一件特别困难的事情，因为有一个名为[jest-puppeteer](https://github.com/smooth-code/jest-puppeteer)的出色软件包可以帮助我们。
 
-First, we must install it as a dependency:
+首先，我们必须将其安装为依赖项：
 
 ```bash
 npm i jest-puppeteer
-
 ```
 
-And now we must extend our jest configuration. If you don't have one yet, there are a number of ways to do it. I'll go with a config file. Create a file named  `jest.config.js`  in the root of your project:
+现在，我们必须扩展我们的jest配置。如果您还没有，那么有很多方法可以做到。我将使用一个配置文件。`jest.config.js`在项目的根目录中创建一个名为：
 
 ```bash
 touch jest.config.js
-
 ```
 
-In the file we must tell jest to use  `jest-puppeteer`'s preset, so add the following code to the file:
+在此文件中，我们必须告诉jest使用`jest-puppeteer`的预设，因此将以下代码添加到文件中：
 
 ```js
 module.exports = {
   preset: "jest-puppeteer"
   // The rest of your file...
 };
-
 ```
 
-You may specify a special launch configuration in a  `jest-puppeteer.config.js`  file, and jest-puppeteer will pass this configuration to  `puppeteer.launch()`. For example:
+您可以在`jest-puppeteer.config.js`文件中指定特殊的启动配置，并且jest-puppeteer会将此配置传递给`puppeteer.launch()`。例如：
 
 ```js
 module.exports = {
@@ -178,12 +185,11 @@ module.exports = {
     executablePath: "chrome.exe"
   }
 };
-
 ```
 
-`jest-puppeteer`  will take care of opening a new browser and a new page and store them on the global scope. So in your tests you can simply use the globally available  `browser`  and  `page`  objects.
+`jest-puppeteer`将负责打开新的浏览器和新的页面，并将它们存储在全局范围内。因此，在测试中，您可以简单地使用全局可用的`browser`和`page`对象。
 
-Another great feature we can use is the ability of jest-puppeteer to run your server during your tests, and kill it afterwards, with the  `server`  key:
+我们可以使用的另一个出色功能是jest-puppeteer能够在测试期间运行服务器，然后使用以下`server`键将其杀死：
 
 ```js
 module.exports = {
@@ -194,14 +200,13 @@ module.exports = {
     launchTimeout: 180000
   }
 };
-
 ```
 
-Now jest-puppeteer will run  `npm run serve`, with a timeout of 180 seconds (3 minutes), and listen on port 9000 to see when it will be up. Once the server starts the tests will run.
+现在，jest-puppeteer将运行`npm run serve`，超时时间为180秒（3分钟），并在端口9000上监听以查看何时启动。服务器启动后，测试将运行。
 
-You can now write a full test suite using jest and puppeteer. The only thing left is creating a CI pipeline, for which we'll use GitHub actions.
+您现在可以使用jest和puppeteer编写完整的测试套件。剩下的唯一事情就是创建一个CI管道，我们将使用GitHub操作。
 
-You can add a script to your  `package.json`  file to execute your tests:
+您可以将脚本添加到`package.json`文件中以执行测试：
 
 ```json
 {
@@ -209,10 +214,9 @@ You can add a script to your  `package.json`  file to execute your tests:
     "test:e2e": "jest"
   }
 }
-
 ```
 
-## Github Actions in a gist
+## Github Actions要点
 
 Recently, Github released a big new feature called Actions. Basically, actions allow you to create workflows using plain yaml syntax, and run them on dedicated virtual machines.
 

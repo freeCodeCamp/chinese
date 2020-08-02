@@ -152,7 +152,7 @@
 
 就这样，在马德里的一个下雨天，我喝完咖啡之后走进了商务区的办公室，介绍自己是新来的开发人员，然后开启了我的新的职业生涯。
 
-_I hope you enjoyed my story. If you did, you would make me happy if you give it some of those tasty claps. And you could even make my day by sharing it so more people can read it and learn they too can make it. I want to keep writing more of these articles. So if there is any particular aspect of this process you would like to know more about, I would love to hear about it. Come and say hi on  [Twitter][7]  @Syknapse_
+希望你能喜欢我的故事，如果你能给本文点赞，我将非常高兴，你也可以将其分享从而让更多的人来阅读并从中找到动力。我想继续写更多的此类文章，如果你想要知道更多以及哪方面的细节，请到推特上与我[Twitter][7] 沟通吧。
 
 [另外一篇文章讲述了我是如何利用上面提到的学习资源学习的][8]
 

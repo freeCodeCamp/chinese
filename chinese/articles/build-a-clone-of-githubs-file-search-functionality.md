@@ -7,7 +7,7 @@
 
 在本文中，我们将构建一个项目，该项目模仿GitHub提供的鲜为人知但功能强大的文件搜索功能。
 
-要查看其工作原理，请转到任何GitHub存储库，然后按字母**t**，这将使您进入搜索视图。然后，您可以同时搜索并滚动列表，如以下gif所示：
+要查看其工作原理，请转到任何GitHub仓库，然后按字母**t**，这将使您进入搜索视图。然后，您可以同时搜索并滚动列表，如以下gif所示：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/Github_Search-1.gif)
 
@@ -34,7 +34,7 @@ Github文件搜索功能
 create-react-app github-file-search-react
 ```
 
-创建项目后，从`src`文件夹中删除所有文件，然后在`src`文件夹中创建`index.js`，`App.js`以及`styles.scss`文件。然后在`src`文件夹内创建`components`和`utils`文件夹。
+创建项目后，从`src`文件夹中删除所有文件，然后在`src`文件夹中创建`index.js`，`App.js`以及`styles.scss`文件，并创建`components`和`utils`文件夹。
 
 安装必要的依赖项:
 
@@ -90,7 +90,7 @@ export default ListItem;
 
 在此文件中，我们将获取要显示的每个文件的数据，并显示文件夹/文件图标，文件名，注释和上次修改文件的时间。
 
-为了显示图标，我们将使用`react-icons`npm库。它有一个非常不错的网站，可让您轻松搜索和使用所需的图标。[在这里查看更多](https://react-icons.github.io/react-icons/)。
+为了显示图标，我们将使用`react-icons`npm库。它有一个非常不错的[网站][4]，可让您轻松搜索和使用所需的图标。
 
 图标组件接受`color`和`size`属性以自定义我们在以上代码中使用的图标。
 
@@ -221,7 +221,7 @@ export default SearchView;
 
 我们在这里将React Hooks用于状态和生命周期方法。如果您是React Hooks的新手，请查看[本文][6]以获得简介。
 
-在此文件中，我们首先声明了一个状态来存储用户键入的输入。然后我们添加了一个`ref`使用`useRef`Hook的钩子，以便在组件mount时可以聚焦于输入字段。
+在此文件中，我们首先声明了一个状态来存储用户键入的输入。然后我们使用`useRef`钩子（Hook）添加了一个`ref`，以便在组件mount时可以聚焦于输入字段。
 
 ```js
 const inputRef = useRef();
@@ -244,7 +244,7 @@ useEffect(() => {
 
 在此代码中，通过将空数组`[]`作为第二个参数传递给`useEffect`挂钩，`useEffect`挂钩中的代码仅在组件mounted时才执行一次。这充当类组件中的生命周期方法`componentDidMount`。
 
-然后，我们将赋值`ref`给的输入字段为`ref={inputRef}`。当更改输入字段(`onChange`)时触发`onInputChange`，调用`onSearch`方法，其中`onSearch`方法是作为属性从`App.js`文件传递到该组件。
+然后，我们将`ref`赋值给输入字段为`ref={inputRef}`。当更改输入字段(`onChange`)时触发`onInputChange`，调用`onSearch`方法，其中`onSearch`方法是作为属性从`App.js`文件传递到该组件。
 
 现在，打开`App.js`并用以下代码替换其内容：
 
@@ -340,7 +340,7 @@ export default class App extends React.Component {
 - 如果用户按下t键，则我们将`isSearchView`状态设置为`true`并将`filesList`状态数组更新为仅包括文件而排除文件夹。
 - 如果用户按esc键，则将`isSearchView`状态设置为`false`并更新`filesList`状态数组以包括所有文件和文件夹。
 
-我们在单独的文件声明`HOTKEY_CODE`和`ESCAPE_CODE`的原因（`keyCodes.js`，而不是直接使用keycode`84`）是以后，如果我们想改变热键从`t`到`s`，那么我们只需要在该文件中改变keycode。它将反映使用该文件的所有文件中的更改，而无需在每个文件中都进行更改。
+我们在单独的文件声明`HOTKEY_CODE`和`ESCAPE_CODE`（`keyCodes.js`，而不是直接使用keycode---`84`）是因为，以后如果我们想改变热键从`t`到`s`，那么我们只需要在该文件中改变keycode。它将反映使用该文件的所有文件中的更改，而无需在每个文件中都进行更改。
 
 现在，让我们理解一下`handleSearch`函数。在此函数中，我们检查用户是否在搜索框中输入了某些内容，然后过滤出包含该搜索词的匹配文件名。然后，我们使用过滤后的结果更新状态。
 
@@ -405,7 +405,7 @@ case DOWN_ARROW_CODE:
 
 在这里，当我们按下键盘上的向上箭头时，`counter`值将减小，而当我们按下向下箭头时，`counter`将增大值。
 
-还要在文件顶部导入up和down箭头常量：
+还要在文件顶部导入up和down箭头keycode常量：
 
 ```js
 import {
@@ -679,7 +679,7 @@ HTML无法正确渲染
 完整的GitHub源代码： [此处][10]  
 在线演示：[此处][11]
 
-**在[Medium][12]，[dev.to][13]上查看我的其他关于React，Node.js和Javascript文章，并[此处][14]订阅在收件箱中获取每周更新。**.
+**在[Medium][12]，[dev.to][13]上查看其他我的关于React，Node.js和Javascript的文章，并[此处][14]订阅以在收件箱中获取每周更新。**.
 
 [1]: https://github-file-search-react.netlify.app/
 [2]: https://github.com/myogeshchavan97/github-file-search-react/blob/master/src/styles.scss

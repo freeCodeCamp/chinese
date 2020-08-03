@@ -1,50 +1,51 @@
 > * 原文地址：[How to Build a Todo App with React, TypeScript, NodeJS, and MongoDB 如何用 React，TypeScript，NodeJS 和 MongoDB 搭建待办事项 App](https://www.freecodecamp.org/news/how-to-build-a-todo-app-with-react-typescript-nodejs-and-mongodb/)
 > * 原文作者：Ibrahima Ndaw
-> * 译者：
+> * 译者：cyan
 > * 校对者：
 
 ![How to Build a Todo App with React, TypeScript, NodeJS, and MongoDB](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/cover-1.png)
 
-In this tutorial, we will be using TypeScript on both sides (server and client) to build a Todo App from scratch with React, NodeJS, Express, and MongoDB.
+在本教程中，我们将在两端(服务器和客户端)使用TypeScript从头开始用React、NodeJS、Express和MongoDB构建一个Todo应用程序。
 
-So, let's start by planning the API.
+那么，让我们从规划API开始。
 
--   [API with NodeJS, Express, MongoDB and TypeScript][1]
--   [Setting up][2]
--   [Create a Todo Type][3]
--   [Create a Todo Model][4]
--   [Create API controllers][5]
--   [Get, Add, Update and Delete Todos][6]
--   [Create API routes][7]
--   [Create a Server][8]
--   [Client-side with React and TypeScript][9]
--   [Setting up][10]
--   [Create a Todo Type][11]
--   [Fetch data from the API][12]
--   [Create the components][13]
--   [Add Todo Form][14]
--   [Display a Todo][15]
--   [Fetch and Display data][16]
--   [Resources][17]
 
-_Let's dive in._
+-   [API 与 NodeJS, Express, MongoDB 和 TypeScript][1]
+-   [构建][2]
+-   [创建 Todo 类型][3]
+-   [创建 Todo 模型][4]
+-   [创建API控制器][5]
+-   [获取、新增、更新和删除 Todo][6]
+-   [创建API路由][7]
+-   [创建服务器][8]
+-   [用 React 和 TypeScript 创建客户端][9]
+-   [构建][10]
+-   [创建 Todo 类型][11]
+-   [从 AP I获取数据][12]
+-   [创建组件][13]
+-   [添加 Todo 表单][14]
+-   [显示 Todo][15]
+-   [获取和显示数据][16]
+-   [资源][17]
 
-## API with NodeJS, Express, MongoDB and TypeScript
+_就让我们一探究竟吧。_
+
+## API 与 NodeJS, Express, MongoDB 和 TypeScript
 
 ### Getting set up
 
-If you're new to this, you can start with  [A Practical Guide to TypeScript][18]  or  [How to build an API from scratch with Node JS, Express, and MongoDB][19]  to get most out of this tutorial. Otherwise, let's get started.
+如果你是新手，你可以从开始[TypeScript的实用指南][18]，或者从[如何用Node JS、Express和MongoDB中从头开始构建API][19]，来充分使用本教程。否则，我们直接开始吧。
 
-To create a new NodeJS App, you need to run this command on the terminal:
+要创建一个新的NodeJS应用程序，您需要在终端上运行这个命令:
 
 ```shell
   yarn init
 
 ```
 
-It will ask for a couple of questions and then initialize the app. You can skip it by adding a  `-y`  flag to the command.
+它会询问几个问题，然后初始化应用程序。 你可以通过向命令中添加`-y`来跳过它。
 
-Next, structure the project as follows:
+接下来，按照以下目录构建项目:
 
 ```
 ├── dist
@@ -66,11 +67,11 @@ Next, structure the project as follows:
 
 ```
 
-As you can see, this file structure is relatively simple. The  `dist`  directory will serve as an output folder once the code has compiled to plain JavaScript.
+如你所见，这个文件结构相对简单。代码编译成纯JavaScript后，dist目录将用作输出文件夹。
 
-We also have an  `app.ts`  file that is the entry point of the server. The controllers, types, and routes are also in their respective folder names.
+我们还有一个`app.ts`，它是服务器的入口。控制器、类型和路由也在它们各自的文件夹名中。
 
-Now, we need to configure the  `tsconfig.json`  file to help the compiler along following our preferences.
+现在，我们需要配置`tsconfig.json`，使编译器运行我们的首选项。
 
 -   tsconfig.json
 
@@ -91,53 +92,53 @@ Now, we need to configure the  `tsconfig.json`  file to help the compiler along 
 
 ```
 
-Here we have four main properties to underline:
+这里强调四个主要属性:
 
-`outDir`: tells the compiler to put the compiled code into the  `dist/js`  folder.
+`outDir`: 告诉编译器把编译好的代码放进 `dist/js` 文件夹。
 
-`rootDir`: informs TypeScript to compile every  `.ts`  file located in the  `src`  folder.
+`rootDir`: 通知TypeScript编译src文件夹中的每个.ts文件。
 
-`include`: tells the compiler to include files that are in the  `src`  directory and sub-directory.
+`include`: 告诉编译器包含src目录和子目录中的文件。
 
-`exclude`: will exclude the files or folders passed in the array during compile-time.
+`exclude`: 在编译时会排除数组中的文件或文件夹。
 
-We can now install the dependencies to enable TypeScript in the project. Because by default, this app will use JavaScript.
+现在我们可以安装依赖项，使项目可以使用TypeScript。因为默认情况下，这个应用程序会使用JavaScript。
 
-There are two ways of using TypeScript in a NodeJS app. Either locally in the project or globally in our machine. I will go for the latter based on personal preference, but you can stick with the local way if you want too.
+在NodeJS应用程序中有两种使用TypeScript的方法。要么在项目中本地安装使用，要么在电脑中全局安装使用。基于个人喜好，我会选择后者，但如果你想，你也可以坚持使用本地安装的的方式。
 
-Now, let's execute the following command on the terminal to install TypeScript.
+现在，让我们在终端上执行以下命令来安装TypeScript。
 
 ```shell
   yarn add typescript -g
 
 ```
 
-This  `g`  flag allows installing TypeScript globally and this makes it accessible from anywhere on the computer.
+这个`g`标志允许全局安装TypeScript，这样它就能在计算机任何地方使用。
 
-Next, let's add some dependencies in order to use Express and MongoDB.
+接下来，为了使用Express和MongoDB让我们添加一些依赖项。
 
 ```shell
   yarn add express cors mongoose
 
 ```
 
-We also need to install their types as development dependencies to help the TypeScript compiler understand the packages.
+我们还需要安装它们的类型作为开发依赖项，帮助TypeScript编译器理解这些包。
 
 ```shell
   yarn add -D @types/node @types/express @types/mongoose @types/cors
 
 ```
 
-Now, TypeScript won't yell at you anymore - it will use these types to define the libraries we've just installed.
+现在，TypeScript不会再对你错误提示——它将使用这些类型来定义我们刚刚安装的库。
 
-We also need to add other dependencies to be able to compile the TypeScript code and start the server concurrently.
+我们还需要添加其他依赖项，以便能够编译TypeScript代码并同时启动服务器。
 
 ```shell
   yarn add -D concurrently nodemon
 
 ```
 
-With that in place, we can now update the  `package.json`  file with the scripts needed to start the server.
+有了这些，我们现在就可以更新 `package.json`的scripts来启动服务器。
 
 -   package.json
 
@@ -149,21 +150,25 @@ With that in place, we can now update the  `package.json`  file with the scripts
 
 ```
 
-`concurrently`  will help compile the TypeScript code, keep watching for changes, and also start the server simultaneously. That said, we can now launch the server - however, we have not created something meaningful yet in that regard. So, let's fix that in the next section.
+`concurrently`  帮助编译TypeScript代码，持续观察变化，同时启动服务器。也就是说，我们现在可以启动服务器了——但是，我们还没有创建一些有意义的东西。所以，让我们在下一节中解决这个问题。
 
-### Create a Todo Type
+### 创建 Todo 类型
 
 -   types/todo.ts
 
 ```ts
 import { Document } from "mongoose"
-
+export interface ITodo extends Document {
+  name: string
+  description: string
+  status: boolean
+}
 
 ```
 
-Here, we have a Todo interface that extends the  `Document`  type provided by  `mongoose`. We will be using it later to interact with MongoDB. That said, we can now define how a Todo model should look.
+这里，我们有了继承`mongoose`提供的`Document`类型的Todo接口。稍后我们将使用它与MongoDB交互。也就是说，我们现在可以定义Todo模型。
 
-### Create a Todo Model
+### 创建 Todo 模型
 
 -   models/todo.ts
 
@@ -176,27 +181,28 @@ const todoSchema: Schema = new Schema(
       type: String,
       required: true,
     },
-description<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span>
-  <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">type</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> String<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span>
-  required<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token boolean" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 0, 85);">true</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span>
-<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span>
+ description: {
+      type: String,
+      required: true,
+    },
 
-status<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span>
-  <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">type</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> Boolean<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span>
-  required<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token boolean" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 0, 85);">true</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span>
-<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span>  },
+    status: {
+      type: Boolean,
+      required: true,
+    },
+  },
   { timestamps: true }
 )
-
+export default model<ITodo>("Todo", todoSchema)
 ```
 
-As you can see here, we start by importing the interface  `ITodo`  and some utilities from  `mongoose`. The latter helps to define the Todo schema and also pass in  `ITodo`  as a type to the  `model`  before exporting it.
+正如你在这里看到的，我们首先导入`ITodo `接口和 一些 `mongoose`里的模块，后者是帮助定义 Todo schema 和在导出前把ITodo作为类型参数传入`model`。
 
-With that, we can now use the Todo model in other files to interact with the database.
+这样，我们现在就可以在其他文件中使用Todo模型来与数据库交互。
 
-### Create API controllers
+### 创建 API 构造器
 
-#### Get, Add, Update and Delete Todos
+#### 获取、新增、更新和删除 Todos
 
 -   controllers/todos/index.ts
 
@@ -205,39 +211,52 @@ import { Response, Request } from "express"
 import { ITodo } from "./../../types/todo"
 import Todo from "../../models/todo"
 
+const getTodos = async (req: Request, res: Response): Promise<void> => {
+  try {
+    const todos: ITodo[] = await Todo.find()
+    res.status(200).json({ todos })
+  } catch (error) {
+    throw error
+  }
+}
 ```
 
-Here, we first need to import some types from  `express`  because I want to type the values explicitly. If you want, you can let TypeScript infer it for you.
+这里，我们首先需要从`express`导入一些类型，因为我想显式地指明类型。如果你想，你可以让TypeScript帮你推断。
 
-Next, we use the function  `getTodos()`  to fetch data. It receives a  `req`  and  `res`  parameter and returns a promise.
+接下来，我们使用函数getTodos()来获取数据。它接收一个`req`和`res`参数并返回promise.
 
-And with the help of the  `Todo`  model created earlier, we can now get data from MongoDB and return a response with the array of todos.
+在前面创建的Todo模型的帮助下，我们现在可以从MongoDB获取数据并返回Todo数组。
 
 -   controllers/todos/index.ts
 
 ```ts
 const addTodo = async (req: Request, res: Response): Promise<void> => {
-  try {
+   try {
     const body = req.body as Pick<ITodo, "name" | "description" | "status">
-<span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">const</span> todo<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> ITodo <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">new</span> <span class="token class-name" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(221, 74, 104);">Todo</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span>
-  name<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> body<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>name<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span>
-  description<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> body<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>description<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span>
-  status<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> body<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>status<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span>
-<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
 
-<span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">const</span> newTodo<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> ITodo <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">await</span> todo<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(221, 74, 104);">save</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
-<span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">const</span> allTodos<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> ITodo<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">[</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">]</span> <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">await</span> Todo<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(221, 74, 104);">find</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
+    const todo: ITodo = new Todo({
+      name: body.name,
+      description: body.description,
+      status: body.status,
+    })
 
-res
-  <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(221, 74, 104);">status</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 0, 85);">201</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
-  <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(221, 74, 104);">json</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span> message<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">"Todo added"</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> todo<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> newTodo<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> todos<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> allTodos <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
+    const newTodo: ITodo = await todo.save()
+    const allTodos: ITodo[] = await Todo.find()
+
+    res
+      .status(201)
+      .json({ message: "Todo added", todo: newTodo, todos: allTodos })
+  } catch (error) {
+    throw error
+  }
+}
 ```
 
-As you can see, the function  `addTodo()`  receives the body object that contains data entered by the user.
+如你所见，函数`addTodo()`接收用户输入数据的body对象数据。
 
-Next, I use typecasting to avoid typos and restrict the  `body`  variable to match  `ITodo`  and then create a new Todo based on the model.
+接下来，我使用类型转换来避免拼写错误，并限制`body`变量与`ITodo`类型匹配，然后基于该模型创建一个新的Todo。
 
-With that in place, we can now save the Todo in the DB and return a response that contains the todo created and the updated todos array.
+有了这些，我们现在可以在DB中保存Todo并返回新增的Todo和更新的todos数组。
 
 -   controllers/todos/index.ts
 
@@ -265,7 +284,7 @@ const updateTodo = async (req: Request, res: Response): Promise<void> => {
 
 ```
 
-To update a todo, we need to extract the id and the body from the  `req`  object and then pass them to  `findByIdAndUpdate()`. This utility will find the Todo on the database and update it. And once the operation is completed, we can now return the updated data to the user.
+为了实现更新todo, 我们需要拿到id和从`req`对象中获取body，然后把他们传进 `findByIdAndUpdate()`. 这个函数将会在数据库中找到Todo并且更新它。
 
 -   controllers/todos/index.ts
 
@@ -286,11 +305,12 @@ const deleteTodo = async (req: Request, res: Response): Promise<void> => {
   }
 }
 
+export { getTodos, addTodo, updateTodo, deleteTodo }
 ```
 
-The function  `deleteTodo()`  allows you to delete a Todo from the database. Here, we pull out the id from req and pass it as an argument to  `findByIdAndRemove()`  to access the corresponding Todo and delete it from the DB.
+函数`deleteTodo()`允许你从数据库中删除Todo。在这里，我们从req中拿到id，并把它作为参数传递给findByIdAndRemove()，来获取到对应的Todo并从DB中删除它。
 
-Next, we export the functions to be able to use them in other files. That said, we can now create some routes for the API and use these methods to handle the requests.
+接下来，导出这些函数以便我们在其他文件中使用它们。也就是说，我们现在可以为API创建一些路由，并使用这些方法来处理请求。
 
 ### Create API routes
 

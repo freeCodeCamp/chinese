@@ -94,7 +94,7 @@ const { readFile } = promises;
 
 ```
 
-使用 `dirname` 参数的 `resolve` 将获得正在运行的源文件的绝对路径目录。然后转到 `examples/template.html` 文件。 `readFile` 将从模板路径异步读取并返回内容。
+使用 `dirname` 参数的 `resolve` 将获得正在运行的源文件的绝对路径目录。然后访问 `examples/template.html` 文件。 `readFile` 将从模板路径异步读取并返回内容。
 
 现在我们有了模板内容。我们需要对文章配置执行相同的操作。
 
@@ -107,10 +107,10 @@ const getArticleConfig = async (): Promise<ArticleConfig> => {
 
 ```
 
-**Two different things happen here:**
+**这里发生两件事：**
 
--   **As the  `article.config.json`  has a json format, we need to transform this json string into a JavaScript object after reading the file**
--   **The return of the article config content will be an  `ArticleConfig`  as I defined in the function return type. Let's build it.**
+-   **由于 `article.config.json` 具有 JSON 格式，因此我们需要在读取文件后将此 JSON 字符串转换为 JavaScript 对象**
+-   ** `articleConfigContent` 的返回将是我在函数返回类型中定义的 `ArticleConfig`。细节如下：**
 
 **`type ArticleConfig = {
   title: string;
@@ -125,28 +125,28 @@ const getArticleConfig = async (): Promise<ArticleConfig> => {
   keywords: string;
 };`** 
 
-**When we get this content, we also use this new type.**
+**获得相关内容后，我们还将使用这一新类型。**
 
 **`const articleConfig: ArticleConfig = await getArticleConfig();`** 
 
-**Now we can use the  `replace`  method to fill the config data in the template content. Just to illustrate the idea, it would look like this:**
+**现在，我们可以使用 `replace` 方法在模板内容中填充配置数据。示例如下：**
 
 **`templateContent.replace('title', articleConfig.title)`** 
 
-**But some variables appear more than one time in the template. Regex to the rescue. With this:**
+**但是某些变量在模板中出现了不止一次。正则表达式会有助于解决这一问题：**
 
 **`new RegExp('\{\{(?:\\s+)?(title)(?:\\s+)?\}\}', 'g');`** 
 
-**... I get all the strings that match  `{{ title }}`. So I can build a function that receives a parameter to be found and use it in the title place.**
+**...我得到所有匹配 `{{ title }}` 的字符串。因此，我可以构建一个接收目标参数的函数，并使用它替换 `title`。**
 
 **`const getPattern = (find: string): RegExp =>
   new RegExp('\{\{(?:\\s+)?(' + find + ')(?:\\s+)?\}\}', 'g');`** 
 
-**Now we can replace all matches. An example for the title variable:**
+**现在我们可以替换所有匹配项。`title`变量的示例：**
 
 **`templateContent.replace(getPattern('title'), articleConfig.title)`** 
 
-**But we don't want to replace only the title variable, but all variables from the article config. Replace all!**
+**但是我们并不想只替换 `title`变量，而是要替换文章配置中的所有变量。全部替换！**
 
 **`const buildArticle = (templateContent: string) => ({
   with: (articleConfig: ArticleAttributes) =>
@@ -163,25 +163,25 @@ const getArticleConfig = async (): Promise<ArticleConfig> => {
       .replace(getPattern('keywords'), articleConfig.keywords)
 });`** 
 
-**Now I replace all! We use it like this:**
+**现在全部替换！我们这样使用它：**
 
 **`const article: string = buildArticle(templateContent).with(articleConfig);`** 
 
-**But we are missing two parts here:**
+**但是我们在这里缺少两部分：**
 
 -   **`tags`**
 -   **`article`**
 
-**In the config json file, the  `tags`  is a list. So, for the list:**
+**在 JSON 配置文件中，`tags` 是一个列表。因此，对于列表：**
 
 **`['javascript', 'react'];`** 
 
-**The final HTML would be:**
+**最终的 HTML 将是：**
 
 **`<a class="tag-link" href="../../../tags/javascript.html">javascript</a>
 <a class="tag-link" href="../../../tags/react.html">react</a>`** 
 
-**So I created another template:  `tag_template.html`  with the  `{{ tag }}`  variable. We just need to map the  `tags`  list and create each HTML tag template.**
+**因此，我使用 `{{ tag }}` 变量创建了另一个模板： `tag_template.html`。们只需要遍历 `tags` 列表并使用模板为每一项创建 HTML Tag。 **
 
 **`const getArticleTags = async ({ tags }: { tags: string[] }): Promise<string> => {
   const tagTemplatePath = resolve(`**`dirname, '../examples/tag_template.html');
@@ -189,13 +189,13 @@ const getArticleConfig = async (): Promise<ArticleConfig> => {
   return tags.map(buildTag(tagContent)).join('');
 };` 
 
-Here we:
+在这里，我们：
 
--   get the tag template path
--   get the tag template content
--   map through the  `tags`  and build the final tag HTML based on the tag template
+-   获取标签模板路径
+-   获取标签模板的内容
+-   遍历 `tags` 并根据标签模板构建最终的 HTML Tag
 
-The  `buildTag`  is a function that returns another function.
+`buildTag` 是返回另一个函数的函数。
 
 ```typescript
 const buildTag = (tagContent: string) => (tag: string): string =>

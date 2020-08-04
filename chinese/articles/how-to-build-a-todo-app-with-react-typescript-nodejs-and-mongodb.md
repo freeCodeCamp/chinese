@@ -5,47 +5,47 @@
 
 ![How to Build a Todo App with React, TypeScript, NodeJS, and MongoDB](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/cover-1.png)
 
-在本教程中，我们将在两端(服务器和客户端)使用TypeScript从头开始用React、NodeJS、Express和MongoDB构建一个Todo应用程序。
+在本教程中，我们将在两端(服务器和客户端)使用 TypeScript、React、NodeJS、Express 和 MongoDB 从头开始构建一个 Todo 应用程序。
 
-那么，让我们从规划API开始。
+那么，让我们从设计 API 开始。
 
 
--   [API 与 NodeJS, Express, MongoDB 和 TypeScript][1]
+-   [用 NodeJS, Express, MongoDB 和 TypeScript 设计 API][1]
 -   [构建][2]
 -   [创建 Todo 类型][3]
 -   [创建 Todo 模型][4]
--   [创建API控制器][5]
+-   [创建 API 控制器][5]
 -   [获取、新增、更新和删除 Todo][6]
--   [创建API路由][7]
+-   [创建 API 路由][7]
 -   [创建服务器][8]
 -   [用 React 和 TypeScript 创建客户端][9]
 -   [构建][10]
 -   [创建 Todo 类型][11]
--   [从 AP I获取数据][12]
+-   [从 API 获取数据][12]
 -   [创建组件][13]
 -   [添加 Todo 表单][14]
--   [显示 Todo][15]
--   [获取和显示数据][16]
+-   [展示 Todo][15]
+-   [获取和展示数据][16]
 -   [资源][17]
 
 _就让我们一探究竟吧。_
 
-## API 与 NodeJS, Express, MongoDB 和 TypeScript
+## 用NodeJS, Express, MongoDB 和 TypeScript 设计 API
 
-### Getting set up
+### 构建
 
-如果你是新手，你可以从开始[TypeScript的实用指南][18]，或者从[如何用Node JS、Express和MongoDB中从头开始构建API][19]，来充分使用本教程。否则，我们直接开始吧。
+如果你是新手，你可以从[TypeScript的实用指南][18]，或者从[如何用Node JS、Express和MongoDB中从头开始构建API][19]开始，从而充分体验本教程。否则，我们可以直接开始。
 
-要创建一个新的NodeJS应用程序，您需要在终端上运行这个命令:
+为了创建一个新的 NodeJS 应用程序，你需要在终端上运行这个命令:
 
 ```shell
   yarn init
 
 ```
 
-它会询问几个问题，然后初始化应用程序。 你可以通过向命令中添加`-y`来跳过它。
+它会询问几个问题，然后初始化应用程序。你可以通过向命令中添加 `-y` 标志来跳过它。
 
-接下来，按照以下目录构建项目:
+然后，按照以下目录构建项目:
 
 ```
 ├── dist
@@ -69,9 +69,9 @@ _就让我们一探究竟吧。_
 
 如你所见，这个文件结构相对简单。代码编译成纯JavaScript后，dist目录将用作输出文件夹。
 
-我们还有一个`app.ts`，它是服务器的入口。控制器、类型和路由也在它们各自的文件夹名中。
+我们还有一个 `app.ts` ，它是服务器的入口。控制器、类型和路由也在它们各自以它们命名的的文件夹中。
 
-现在，我们需要配置`tsconfig.json`，使编译器运行我们的首选项。
+现在，我们需要配置 `tsconfig.json` ，使编译器运行我们的首选项。
 
 -   tsconfig.json
 
@@ -96,49 +96,49 @@ _就让我们一探究竟吧。_
 
 `outDir`: 告诉编译器把编译好的代码放进 `dist/js` 文件夹。
 
-`rootDir`: 通知TypeScript编译src文件夹中的每个.ts文件。
+`rootDir`: 告诉 TypeScript 编译 src 文件夹中的每个 .ts 文件。
 
-`include`: 告诉编译器包含src目录和子目录中的文件。
+`include`: 告诉编译器包含 src 目录和子目录中的文件。
 
 `exclude`: 在编译时会排除数组中的文件或文件夹。
 
-现在我们可以安装依赖项，使项目可以使用TypeScript。因为默认情况下，这个应用程序会使用JavaScript。
+现在我们安装依赖项，使项目可以使用 TypeScript 。因为默认情况下，这个应用程序会使用 JavaScript 。
 
-在NodeJS应用程序中有两种使用TypeScript的方法。要么在项目中本地安装使用，要么在电脑中全局安装使用。基于个人喜好，我会选择后者，但如果你想，你也可以坚持使用本地安装的的方式。
+在NodeJS应用程序中有两种使用 TypeScript 的方法。要么在项目中本地安装使用，要么在电脑中全局安装使用。基于个人喜好，我会选择后者，但如果你想，你也可以坚持使用本地安装使用的方式。
 
-现在，让我们在终端上执行以下命令来安装TypeScript。
+现在，让我们在终端上执行以下命令来安装 TypeScript 。
 
 ```shell
   yarn add typescript -g
 
 ```
 
-这个`g`标志允许全局安装TypeScript，这样它就能在计算机任何地方使用。
+这个 `g` 标志允许全局安装 TypeScript ，这样它就能在计算机任何地方使用。
 
-接下来，为了使用Express和MongoDB让我们添加一些依赖项。
+接下来，为了使用 Express 和 MongoDB 让我们安装一些依赖项。
 
 ```shell
   yarn add express cors mongoose
 
 ```
 
-我们还需要安装它们的类型作为开发依赖项，帮助TypeScript编译器理解这些包。
+我们还需要安装它们的类型作为开发依赖项，帮助 TypeScript 编译器理解这些包。
 
 ```shell
   yarn add -D @types/node @types/express @types/mongoose @types/cors
 
 ```
 
-现在，TypeScript不会再对你错误提示——它将使用这些类型来定义我们刚刚安装的库。
+现在，TypeScript 不会再对你提示错误——它将使用这些类型来定义我们刚刚安装的库。
 
-我们还需要添加其他依赖项，以便能够编译TypeScript代码并同时启动服务器。
+我们还需要安装其他依赖项，以便能够编译 TypeScript 代码并同时启动服务器。
 
 ```shell
   yarn add -D concurrently nodemon
 
 ```
 
-有了这些，我们现在就可以更新 `package.json`的scripts来启动服务器。
+有了这些，我们现在就可以更新 `package.json`的 scripts 来启动服务器。
 
 -   package.json
 
@@ -150,7 +150,7 @@ _就让我们一探究竟吧。_
 
 ```
 
-`concurrently`  帮助编译TypeScript代码，持续观察变化，同时启动服务器。也就是说，我们现在可以启动服务器了——但是，我们还没有创建一些有意义的东西。所以，让我们在下一节中解决这个问题。
+`concurrently`  帮助编译 TypeScript 代码，持续观察变化，同时启动服务器。也就是说，我们现在可以启动服务器了——但是，我们还没有创建一些有意义的东西。所以，让我们在下一节中解决这个问题。
 
 ### 创建 Todo 类型
 
@@ -166,7 +166,7 @@ export interface ITodo extends Document {
 
 ```
 
-这里，我们有了继承`mongoose`提供的`Document`类型的Todo接口。稍后我们将使用它与MongoDB交互。也就是说，我们现在可以定义Todo模型。
+这里，我们有了继承 `mongoose` 提供的 `Document` 类型的 Todo 接口。稍后我们将使用它与 MongoDB 交互。也就是说，我们现在可以定义 Todo 模型。
 
 ### 创建 Todo 模型
 
@@ -196,9 +196,9 @@ const todoSchema: Schema = new Schema(
 export default model<ITodo>("Todo", todoSchema)
 ```
 
-正如你在这里看到的，我们首先导入`ITodo `接口和 一些 `mongoose`里的模块，后者是帮助定义 Todo schema 和在导出前把ITodo作为类型参数传入`model`。
+如你所见，我们首先导入 `ITodo ` 接口和 一些 `mongoose` 导出的模块，后者是帮助定义 Todo schema 和在导出前把 ITodo 作为类型参数传入 `model` 。
 
-这样，我们现在就可以在其他文件中使用Todo模型来与数据库交互。
+这样，我们现在就可以在其他文件中使用 Todo 模型来与数据库交互。
 
 ### 创建 API 构造器
 
@@ -221,11 +221,11 @@ const getTodos = async (req: Request, res: Response): Promise<void> => {
 }
 ```
 
-这里，我们首先需要从`express`导入一些类型，因为我想显式地指明类型。如果你想，你可以让TypeScript帮你推断。
+这里，我们首先需要从 `express` 导入一些类型，因为我想显式指明类型。如果你想，你可以让 TypeScript 帮你推断。
 
-接下来，我们使用函数getTodos()来获取数据。它接收一个`req`和`res`参数并返回promise.
+接下来，我们使用 getTodos() 函数来获取数据。它接收 `req` 和 `res` 参数并返回 promise 。
 
-在前面创建的Todo模型的帮助下，我们现在可以从MongoDB获取数据并返回Todo数组。
+在前面创建的 Todo 模型的帮助下，我们现在可以从 MongoDB 获取数据并返回 Todo 数组。
 
 -   controllers/todos/index.ts
 
@@ -252,11 +252,11 @@ const addTodo = async (req: Request, res: Response): Promise<void> => {
 }
 ```
 
-如你所见，函数`addTodo()`接收用户输入数据的body对象数据。
+如你所见，`addTodo()` 函数接收包含用户输入数据的 body 对象。
 
-接下来，我使用类型转换来避免拼写错误，并限制`body`变量与`ITodo`类型匹配，然后基于该模型创建一个新的Todo。
+接下来，我使用类型转换来避免拼写错误，并限制 `body` 变量与 `ITodo` 类型匹配，然后基于该模型创建一个新的 Todo 。
 
-有了这些，我们现在可以在DB中保存Todo并返回新增的Todo和更新的todos数组。
+有了这些，我们现在可以在 DB 中保存 Todo 并返回新增的 Todo 和更新后的 todos 数组。
 
 -   controllers/todos/index.ts
 
@@ -284,7 +284,7 @@ const updateTodo = async (req: Request, res: Response): Promise<void> => {
 
 ```
 
-为了实现更新todo, 我们需要拿到id和从`req`对象中获取body，然后把他们传进 `findByIdAndUpdate()`. 这个函数将会在数据库中找到Todo并且更新它。
+为了实现更新 todo , 我们需要拿到 id 和从 `req` 对象中获取body，然后把他们传入 `findByIdAndUpdate()` ，这个函数将会在数据库中找到 Todo 并且更新它。
 
 -   controllers/todos/index.ts
 
@@ -308,11 +308,11 @@ const deleteTodo = async (req: Request, res: Response): Promise<void> => {
 export { getTodos, addTodo, updateTodo, deleteTodo }
 ```
 
-函数`deleteTodo()`允许你从数据库中删除Todo。在这里，我们从req中拿到id，并把它作为参数传递给findByIdAndRemove()，来获取到对应的Todo并从DB中删除它。
+`deleteTodo()` 函数允许你从数据库中删除 Todo 。在这里，我们从 req 中拿到 id ，并把它作为参数传递给 `findByIdAndRemove()` ，来获取到对应的 Todo 并从 DB 中删除它。
 
-接下来，导出这些函数以便我们在其他文件中使用它们。也就是说，我们现在可以为API创建一些路由，并使用这些方法来处理请求。
+接下来，导出这些函数以便我们在其他文件中使用它们。也就是说，我们现在可以为 API 创建一些路由，并使用这些方法来处理请求。
 
-### Create API routes
+### 创建 API 路由
 
 -   routes/index.ts
 
@@ -327,13 +327,13 @@ router.delete("/delete-todo/:id", deleteTodo)
 
 ```
 
-As you can see here, we have four routes to get, add, update, and delete todos from the database. And since we already created the functions, the only thing we have to do is import the methods and pass them as parameters to handle the requests.
+如你所见，我们创建四个路由对应从数据库中获取、新增、更新和删除 todo 。因为我们已经创建了函数，所以我们唯一要做的就是导入这些方法并将它们作为参数传递。
 
-So far, we have covered a lot. But we still don't have a server to start. So, let's fix that in the next section.
+到目前为止，我们已经谈了很多。但是我们仍然没有启动服务器。所以，让我们在下一节中解决这个问题。
 
-### Create a Server
+### 创建服务器
 
-Before creating the server, we need to first add some environment variables that will hold the MongoDB credentials in the  `nodemon.json`  file.
+在创建服务器之前，我们需要在 `nodemon.json` 加一些环境变量来保存 MongoDB 的凭据。
 
 -   nodemon.json
 
@@ -348,7 +348,7 @@ Before creating the server, we need to first add some environment variables that
 
 ```
 
-You can get the credentials by creating a new cluster on  [MongoDB Atlas][20].
+你可以在[MongoDB Atlas][20]，通过创一个新集群来得到凭据。
 
 -   app.ts
 
@@ -357,47 +357,61 @@ import express, { Express } from "express"
 import mongoose from "mongoose"
 import cors from "cors"
 import todoRoutes from "./routes"
+
 const app: Express = express()
+
 const PORT: string | number = process.env.PORT || 4000
+
 app.use(cors())
 app.use(todoRoutes)
-const uri: string = mongodb+srv://</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>process<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>env<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token constant" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 0, 85);">MONGO_USER</span><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">:</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>process<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>env<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token constant" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 0, 85);">MONGO_PASSWORD</span><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">@clustertodo.raz9g.mongodb.net/</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>process<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>env<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token constant" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 0, 85);">MONGO_DB</span><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">?retryWrites=true&amp;w=majority
+
+const uri: string = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@clustertodo.raz9g.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`
 const options = { useNewUrlParser: true, useUnifiedTopology: true }
 mongoose.set("useFindAndModify", false)
 
+mongoose
+  .connect(uri, options)
+  .then(() =>
+    app.listen(PORT, () =>
+      console.log(`Server running on http://localhost:${PORT}`)
+    )
+  )
+  .catch(error => {
+    throw error
+  })
+
 ```
 
-Here, we start by importing the  `express`  library that allows us to access the  `use()`  method that helps handle the Todos routes.
+这里，我们首先从导入 `express` 库开始，这使用我们能调用 `use()` 方法，这个方法将帮助处理 Todo 路由。
 
-Next, we use the  `mongoose`  package to connect to MongoDB by appending to the URL the credentials held on the  `nodemon.json`  file.
+然后，我们用 `mongoose`  包，通过读取 `nodemon.json` 带凭证的 url 去连接 MongoDB 。
 
-That said, now if we connect successfully to MongoDB, the server will start. If appropriate, an error will be thrown.
+就是说，现在如果我们能成功连接 MongoDB ，服务器就会启动。否则，会抛出错误。
 
-We're now done building the API with Node, Express, TypeScript, and MongoDB. Let's now start building the client-side app with React and TypeScript.
+我们现在已经通过 Node、Express、TypeScript 和 MongoDB 完成 api 的构建。现在让我们开始用 React 和 TypeScript 构建客户端。
 
 ![excited](https://media.giphy.com/media/Is1O1TWV0LEJi/giphy.gif)
 
-## Client-side with React and TypeScript
+## 用 React 和 TypeScript 创建客户端
 
-### Setting up
+### 构建
 
-To create a new React app, I will go with create-react-app - you can use other methods as well if you want.
+为了创建一个新的 React 应用，我将会使用 create-react-app ——你可以用其他你想用的方法。
 
-So, let's run in the terminal the following command:
+所以，在终端运行以下代码：
 
 ```shell
   npx create-react-app my-app --template typescript
 
 ```
 
-Next, install the Axios library to be able to fetch remote data.
+然后，为了能获取远程数据安装 Axios 库。
 
 ```shell
   yarn add axios
 
 ```
-
-Once the installation completed, let's structure our project as follows:
+安装完成后，按照以下目录构建项目：
 
 ```
 ├── node_modules
@@ -420,9 +434,9 @@ Once the installation completed, let's structure our project as follows:
 
 ```
 
-Here, we have a relatively simple file structure. The main thing to notice is that  `src/type.d.ts`  will hold the types. And since I will use them on almost every file, I added the extension  `.d.ts`  to make the types globally available. And now we don't need to import them anymore.
+这样，我们有一个相对简单的文件结构。最值得注意的是  `src/type.d.ts`  被用来存放类型。我几乎在每个文件中都使用了它们，所以我添加了扩展 `.d.ts` ，使类型全局可用。现在我们不再需要导入它们。
 
-### Create a Todo Type
+### 创建 Todo 类型
 
 -   src/type.d.ts
 
@@ -441,23 +455,35 @@ interface TodoProps {
 
 ```
 
-Here, the  `ITodo`  interface needs to mirror the shape of data from the API. And since we don't have  `mongoose`  here, we need to add additional properties to match the type defined on the API.
+这里， `ITodo`  接口需要跟 API 返回的数据类型一样。我们在这里没有  `mongoose` , 所以我们需要加一些额外的属性来匹配API定义的数据类型。
 
-Next, we use that same interface for the  `TodoProps`  which is the type annotation for the props that will be received by the component responsible for rendering the data.
+然后，我们用相同的的接口定义 `TodoProps` ，组件会接受它并渲染数据。
 
-We have now defined our types - let's now start fetching data from the API.
+现在我们已经定义了类型——现在让我们开始从 API 获取数据。
 
-### Fetch data from the API
+### 从API获取数据
 
 -   src/API.ts
 
 ```ts
 import axios, { AxiosResponse } from "axios"
+
 const baseUrl: string = "http://localhost:4000"
+
+export const getTodos = async (): Promise<AxiosResponse<ApiDataType>> => {
+  try {
+    const todos: AxiosResponse<ApiDataType> = await axios.get(
+      baseUrl + "/todos"
+    )
+    return todos
+  } catch (error) {
+    throw new Error(error)
+  }
+}
 
 ```
 
-As you can see, we need to import  `axios`  to request data from the API. Next, we use the function  `getTodos()`  to get data from the server. It will return a promise of type  `AxiosResponse`  that holds the Todos fetched that need to match the type  `ApiDataType`.
+如你所见，我们需要导入 `axios`  ，通过 api 来请求数据。然后，我们用  `getTodos()`  函数从服务端获取数据。 它将返回 `AxiosResponse` 为类型的 promise， 保存获取到的 `ApiDataType` 类型的 Todos 。
 
 -   src/API.ts
 
@@ -483,7 +509,7 @@ export const addTodo = async (
 
 ```
 
-This function receives the data entered by the user as an argument and returns a promise. Here, we need to omit the  `_id`  property because MongoDB will create it on the fly.
+这个函数接受用户输入的数据作为参数并返回 promise 。这里，我们需要去掉  `_id`  属性因为 MongoDB 会自动生成。
 
 -   src/API.ts
 
@@ -496,7 +522,7 @@ export const updateTodo = async (
       status: true,
     }
     const updatedTodo: AxiosResponse<ApiDataType> = await axios.put(
-      </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>baseUrl<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">/edit-todo/</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>todo<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>_id<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">,
+      `${baseUrl}/edit-todo/${todo._id}`,
       todoUpdate
     )
     return updatedTodo
@@ -507,7 +533,7 @@ export const updateTodo = async (
 
 ```
 
-To update a Todo, we have to pass in the updated data and the  `_id`  of the object. Here, we need to change the  `status`  of the Todo, which is why I only pick the property we need before sending the request to the server.
+为了实现更新 Todo ，我们必须传入更新后的数据和对象 id。这里，我们需要更改 Todo 的`状态`，那么在发送到服务器之前我们只需要选择所需的属性即可。
 
 -   src/API.ts
 
@@ -517,7 +543,7 @@ export const deleteTodo = async (
 ): Promise<AxiosResponse<ApiDataType>> => {
   try {
     const deletedTodo: AxiosResponse<ApiDataType> = await axios.delete(
-      </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>baseUrl<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">/delete-todo/</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>_id<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">
+      `${baseUrl}/delete-todo/${_id}`
     )
     return deletedTodo
   } catch (error) {
@@ -527,57 +553,61 @@ export const deleteTodo = async (
 
 ```
 
-Here, we also have a function that receives as a parameter the  `_id`  property and returns a promise.
+这里，我们也有一个函数接受 `_id`  属性作为参数并返回 promise。
 
-With that in place, we can now go to the  `components`  folder and add some meaningful code to its files.
+有了这些，我们现在可以转到 components 文件夹并向其文件中添加一些有意义的代码。
 
-### Create the components
+### 创建组件
 
-#### Add Todo Form
+#### 增加 Todo 表单
 
 -   components/AddTodo.tsx
 
-```js
-import React from "react"
-type Props = TodoProps & {
-  updateTodo: (todo: ITodo) => void
-  deleteTodo: (_id: string) => void
+```jsx
+import React, { useState } from 'react'
+
+type Props = { 
+  saveTodo: (e: React.FormEvent, formData: ITodo | any) => void 
 }
-const Todo: React.FC<Props> = ({ todo, updateTodo, deleteTodo }) => {
-  const checkTodo: string = todo.status ? line-through : ""
+
+const AddTodo: React.FC<Props> = ({ saveTodo }) => {
+  const [formData, setFormData] = useState<ITodo | {}>()
+
+  const handleForm = (e: React.FormEvent<HTMLInputElement>): void => {
+    setFormData({
+      ...formData,
+      [e.currentTarget.id]: e.currentTarget.value,
+    })
+  }
+
   return (
-    <div className="Card">
-      <div className="Card--text">
-        <h1 className={checkTodo}>{todo.name}</h1>
-        <span className={checkTodo}>{todo.description}</span>
+    <form className='Form' onSubmit={(e) => saveTodo(e, formData)}>
+      <div>
+        <div>
+          <label htmlFor='name'>Name</label>
+          <input onChange={handleForm} type='text' id='name' />
+        </div>
+        <div>
+          <label htmlFor='description'>Description</label>
+          <input onChange={handleForm} type='text' id='description' />
+        </div>
       </div>
-      <div className="Card--button">
-        <button
-          onClick={() => updateTodo(todo)}
-          className={todo.status ? hide-button : "Card--button__done"}
-        >
-          Complete
-        </button>
-        <button
-          onClick={() => deleteTodo(todo._id)}
-          className="Card--button__delete"
-        >
-          Delete
-        </button>
-      </div>
-    </div>
+      <button disabled={formData === undefined ? true: false} >Add Todo</button>
+    </form>
   )
 }
 
+export default AddTodo
+
 ```
 
-As you can see, here we have a functional component of type  `React.FC`  (FC stands for functional component). It receives as a prop the method  `saveTodo()`  that allows us to save data to the DB.
+如你所见，这里有一个 React 类型的函数组件。FC (FC代表函数组件)。它接收 `saveTodo()` 方法为 props ，该方法允许我们将数据保存到数据库。
 
-Next, we have a  `formData`  state that needs to match the  `ITodo`  type to satisfy the compiler. That is why we pass it to the  `useState`  hook. We also need to add an alternative type (`{}`) because the initial state will be an empty object.
+然后，我们创建 `formData` state，它需要匹配 ITodo 类型来满足编译器的要求。这就是我们将它传递给 useState hook 的原因。我们还需要添加一个替代类型({})，因为初始状态是个空对象。
 
-And with that, we can now move forward and display the data fetched.
+有了这些，我们现在可以继续下一步，展示获取的数据。
 
-### **Display a Todo**
+### **展示 Todo**
 
 -   components/TodoItem.tsx
 
@@ -615,13 +645,13 @@ const Todo: React.FC<Props> = ({ todo, updateTodo, deleteTodo }) => {
 
 ```
 
-Here, we need to extend the  `TodoProps`  type and append the functions  `updateTodo`  and  `deleteTodo`  to handle appropriately the props received by the component.
+这里，我们需要继承 `TodoProps`  类型并加入 `updateTodo`  和  `deleteTodo`  函数，作为 props 传递给组件。
 
-Now, once the Todo object passed in, we will be able to display it and add the functions needed to update or delete a Todo.
+现在，当传入 Todo 对象，我们将能够显示它并更新或删除 Todo 。
 
-Great! We can now go to the  `App.tsx`  file and add the last piece to the puzzle.
+太棒了!现在我们可以到 `App.tsx` 文件并把拼图的最后一块放进去。
 
-### Fetch and Display data
+### 获取和展示数据
 
 -   App.tsx
 
@@ -630,19 +660,27 @@ import React, { useEffect, useState } from 'react'
 import TodoItem from './components/TodoItem'
 import AddTodo from './components/AddTodo'
 import { getTodos, addTodo, updateTodo, deleteTodo } from './API'
+
 const App: React.FC = () => {
   const [todos, setTodos] = useState<ITodo[]>([])
+
   useEffect(() => {
     fetchTodos()
   }, [])
 
+  const fetchTodos = (): void => {
+    getTodos()
+    .then(({ data: { todos } }: ITodo[] | any) => setTodos(todos))
+    .catch((err: Error) => console.log(err))
+  }
+
 ```
 
-Here, we first need to import the components and utility functions held on  `API.ts`. Next, we pass to  `useState`  an array of type  `ITodo`  and initialize it with an empty array.
+这里，我们首先导入组件和 `API.ts` 导出的函数。然后，我们传递 `ITodo`  类型的数组给 `useState` 并且把它初始化为空数组。
 
-The method  `getTodos()`  returns a promise - therefore, we can access the  `then`  function and update the state with the data fetched or throw an error if any occurs.
+`getTodos()` 方法会返回 promise —— 因此，我们可以调用 then 函数并用获取到的数据更新 state ，或者在发生任何错误时抛出一个错误。
 
-With that in place, we can now call the function  `fetchTodos()`  when the component is successfully mounted.
+有了这些，我们现在可以在组件组件成功挂载之后，调用 `fetchTodos()` 函数。
 
 -   App.tsx
 
@@ -661,7 +699,7 @@ const handleSaveTodo = (e: React.FormEvent, formData: ITodo): void => {
 
 ```
 
-Once the form is submitted, we use  `addTodo()`  to send the request to the server, and then if the Todo has successfully saved, we update the data, otherwise an error will be thrown.
+当发送表单时，我们用 `addTodo()`  向服务端发送请求，如果 Todo 被成功保存，我们将更新数据，否则将会抛出错误。
 
 -   App.tsx
 
@@ -679,7 +717,7 @@ const handleUpdateTodo = (todo: ITodo): void => {
 
 ```
 
-The functions to update or delete a Todo are quite similar. They both receive a parameter, send the request, and get back a response. And then, they check if the request has been successful and handle it accordingly.
+更新和删除 Todo 函数是很类似的。他们都接受参数，发送请求并得到响应。然后他们会检查请求是否成功并作相应处理。
 
 -   App.tsx
 
@@ -702,33 +740,33 @@ The functions to update or delete a Todo are quite similar. They both receive a 
 
 ```
 
-Here, we loop through the  `todos`  array and then pass to the  `TodoItem`  the expected data.
+这里我们遍历  `todos`  数组并将所需的数据传递给 `TodoItem`。
 
-Now, if you browse on the folder that contains the server-side app (and execute the following command in the terminal):
-
-```shell
-yarn start
-
-```
-
-And also on the client-side app:
+现在，如果你打开服务器端应用程序的文件夹(并在终端中执行以下命令)：
 
 ```shell
 yarn start
 
 ```
 
-You should see that our Todo app works as expected.
+在客户端也如此:
+
+```shell
+yarn start
+
+```
+
+你应该能看到我们的Todo应用程序会按预期工作。
 
 ![app](https://drive.google.com/uc?id=1bmmN-yfXsisixCgSNDnWLNYKaulFscY1)
 
-Great! With that final touch, we have now finished building a Todo App using TypeScript, React, NodeJs, Express, and MongoDB.
+太棒了!最后，我们使用 TypeScript、React、NodeJs、Express 和 MongoDB 完成了一个 Todo 应用程序的构建。
 
-You can find the  [Source Code here][22].
+你可以在这里找到 [源代码][22]。
 
-You can find other great content like this on  [my blog][23]  or follow me  [on Twitter][24]  to get notified.
+你可以在我的 [博客][23] 上找到类似的内容，或者在[Twitter][24]上关注我以获得相关的信息。
 
-Thanks for reading.
+谢谢你的阅读。
 
 ## Resources
 

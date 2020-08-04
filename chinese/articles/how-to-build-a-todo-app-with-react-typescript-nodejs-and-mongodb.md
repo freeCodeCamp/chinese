@@ -34,7 +34,7 @@ _就让我们一探究竟吧。_
 
 ### 构建
 
-如果你是新手，你可以从[TypeScript的实用指南][18]，或者从[如何用Node JS、Express和MongoDB中从头开始构建API][19]开始，从而充分体验本教程。否则，我们可以直接开始。
+如果你是新手，你可以从 [TypeScript的实用指南][18]，或者从 [如何用Node JS、Express和MongoDB中从头开始构建API][19] 开始，从而充分体验本教程。否则，我们可以直接开始。
 
 为了创建一个新的 NodeJS 应用程序，你需要在终端上运行这个命令:
 
@@ -67,11 +67,11 @@ _就让我们一探究竟吧。_
 
 ```
 
-如你所见，这个文件结构相对简单。代码编译成纯JavaScript后，dist目录将用作输出文件夹。
+如你所见，这个文件结构相对简单。代码编译成纯 JavaScript 后，dist 目录将用作输出文件夹。
 
-我们还有一个 `app.ts` ，它是服务器的入口。控制器、类型和路由也在它们各自以它们命名的的文件夹中。
+我们还有一个 `app.ts`，它是服务器的入口。控制器、类型和路由也在它们各自以它们命名的的文件夹中。
 
-现在，我们需要配置 `tsconfig.json` ，使编译器运行我们的首选项。
+现在，我们需要配置 `tsconfig.json`，使编译器运行我们的首选项。
 
 -   tsconfig.json
 
@@ -102,18 +102,18 @@ _就让我们一探究竟吧。_
 
 `exclude`: 在编译时会排除数组中的文件或文件夹。
 
-现在我们安装依赖项，使项目可以使用 TypeScript 。因为默认情况下，这个应用程序会使用 JavaScript 。
+现在我们安装依赖项，使项目可以使用 TypeScript。因为默认情况下，这个应用程序会使用 JavaScript。
 
 在NodeJS应用程序中有两种使用 TypeScript 的方法。要么在项目中本地安装使用，要么在电脑中全局安装使用。基于个人喜好，我会选择后者，但如果你想，你也可以坚持使用本地安装使用的方式。
 
-现在，让我们在终端上执行以下命令来安装 TypeScript 。
+现在，让我们在终端上执行以下命令来安装 TypeScript。
 
 ```shell
   yarn add typescript -g
 
 ```
 
-这个 `g` 标志允许全局安装 TypeScript ，这样它就能在计算机任何地方使用。
+这个 `g` 标志允许全局安装 TypeScript，这样它就能在计算机任何地方使用。
 
 接下来，为了使用 Express 和 MongoDB 让我们安装一些依赖项。
 
@@ -196,7 +196,7 @@ const todoSchema: Schema = new Schema(
 export default model<ITodo>("Todo", todoSchema)
 ```
 
-如你所见，我们首先导入 `ITodo ` 接口和 一些 `mongoose` 导出的模块，后者是帮助定义 Todo schema 和在导出前把 ITodo 作为类型参数传入 `model` 。
+如你所见，我们首先导入 `ITodo ` 接口和 一些 `mongoose` 导出的模块，后者是帮助定义 Todo schema 和在导出前把 ITodo 作为类型参数传入 `model`。
 
 这样，我们现在就可以在其他文件中使用 Todo 模型来与数据库交互。
 
@@ -223,7 +223,7 @@ const getTodos = async (req: Request, res: Response): Promise<void> => {
 
 这里，我们首先需要从 `express` 导入一些类型，因为我想显式指明类型。如果你想，你可以让 TypeScript 帮你推断。
 
-接下来，我们使用 getTodos() 函数来获取数据。它接收 `req` 和 `res` 参数并返回 promise 。
+接下来，我们使用 getTodos() 函数来获取数据。它接收 `req` 和 `res` 参数并返回 promise。
 
 在前面创建的 Todo 模型的帮助下，我们现在可以从 MongoDB 获取数据并返回 Todo 数组。
 
@@ -254,7 +254,7 @@ const addTodo = async (req: Request, res: Response): Promise<void> => {
 
 如你所见，`addTodo()` 函数接收包含用户输入数据的 body 对象。
 
-接下来，我使用类型转换来避免拼写错误，并限制 `body` 变量与 `ITodo` 类型匹配，然后基于该模型创建一个新的 Todo 。
+接下来，我使用类型转换来避免拼写错误，并限制 `body` 变量与 `ITodo` 类型匹配，然后基于该模型创建一个新的 Todo。
 
 有了这些，我们现在可以在 DB 中保存 Todo 并返回新增的 Todo 和更新后的 todos 数组。
 
@@ -284,7 +284,7 @@ const updateTodo = async (req: Request, res: Response): Promise<void> => {
 
 ```
 
-为了实现更新 todo , 我们需要拿到 id 和从 `req` 对象中获取body，然后把他们传入 `findByIdAndUpdate()` ，这个函数将会在数据库中找到 Todo 并且更新它。
+为了实现更新 todo, 我们需要拿到 id 和从 `req` 对象中获取body，然后把他们传入 `findByIdAndUpdate()`，这个函数将会在数据库中找到 Todo 并且更新它。
 
 -   controllers/todos/index.ts
 
@@ -308,7 +308,7 @@ const deleteTodo = async (req: Request, res: Response): Promise<void> => {
 export { getTodos, addTodo, updateTodo, deleteTodo }
 ```
 
-`deleteTodo()` 函数允许你从数据库中删除 Todo 。在这里，我们从 req 中拿到 id ，并把它作为参数传递给 `findByIdAndRemove()` ，来获取到对应的 Todo 并从 DB 中删除它。
+`deleteTodo()` 函数允许你从数据库中删除 Todo 。在这里，我们从 req 中拿到 id，并把它作为参数传递给 `findByIdAndRemove()`，来获取到对应的 Todo 并从 DB 中删除它。
 
 接下来，导出这些函数以便我们在其他文件中使用它们。也就是说，我们现在可以为 API 创建一些路由，并使用这些方法来处理请求。
 
@@ -327,7 +327,7 @@ router.delete("/delete-todo/:id", deleteTodo)
 
 ```
 
-如你所见，我们创建四个路由对应从数据库中获取、新增、更新和删除 todo 。因为我们已经创建了函数，所以我们唯一要做的就是导入这些方法并将它们作为参数传递。
+如你所见，我们创建四个路由对应从数据库中获取、新增、更新和删除 todo。因为我们已经创建了函数，所以我们唯一要做的就是导入这些方法并将它们作为参数传递。
 
 到目前为止，我们已经谈了很多。但是我们仍然没有启动服务器。所以，让我们在下一节中解决这个问题。
 
@@ -348,7 +348,7 @@ router.delete("/delete-todo/:id", deleteTodo)
 
 ```
 
-你可以在[MongoDB Atlas][20]，通过创一个新集群来得到凭据。
+你可以在 [MongoDB Atlas][20]，通过创一个新集群来得到凭据。
 
 -   app.ts
 
@@ -384,9 +384,9 @@ mongoose
 
 这里，我们首先从导入 `express` 库开始，这使用我们能调用 `use()` 方法，这个方法将帮助处理 Todo 路由。
 
-然后，我们用 `mongoose`  包，通过读取 `nodemon.json` 带凭证的 url 去连接 MongoDB 。
+然后，我们用 `mongoose` 包，通过读取 `nodemon.json` 带凭证的 url 去连接 MongoDB。
 
-就是说，现在如果我们能成功连接 MongoDB ，服务器就会启动。否则，会抛出错误。
+就是说，现在如果我们能成功连接 MongoDB，服务器就会启动。否则，会抛出错误。
 
 我们现在已经通过 Node、Express、TypeScript 和 MongoDB 完成 api 的构建。现在让我们开始用 React 和 TypeScript 构建客户端。
 
@@ -457,7 +457,7 @@ interface TodoProps {
 
 这里， `ITodo`  接口需要跟 API 返回的数据类型一样。我们在这里没有  `mongoose` , 所以我们需要加一些额外的属性来匹配API定义的数据类型。
 
-然后，我们用相同的的接口定义 `TodoProps` ，组件会接受它并渲染数据。
+然后，我们用相同的的接口定义 `TodoProps`，组件会接受它并渲染数据。
 
 现在我们已经定义了类型——现在让我们开始从 API 获取数据。
 
@@ -483,7 +483,7 @@ export const getTodos = async (): Promise<AxiosResponse<ApiDataType>> => {
 
 ```
 
-如你所见，我们需要导入 `axios`  ，通过 api 来请求数据。然后，我们用  `getTodos()`  函数从服务端获取数据。 它将返回 `AxiosResponse` 为类型的 promise， 保存获取到的 `ApiDataType` 类型的 Todos 。
+如你所见，我们需要导入 `axios`，通过 api 来请求数据。然后，我们用  `getTodos()`  函数从服务端获取数据。 它将返回 `AxiosResponse` 为类型的 promise， 保存获取到的 `ApiDataType` 类型的 Todos。
 
 -   src/API.ts
 
@@ -509,7 +509,7 @@ export const addTodo = async (
 
 ```
 
-这个函数接受用户输入的数据作为参数并返回 promise 。这里，我们需要去掉  `_id`  属性因为 MongoDB 会自动生成。
+这个函数接受用户输入的数据作为参数并返回 promise。这里，我们需要去掉  `_id`  属性因为 MongoDB 会自动生成。
 
 -   src/API.ts
 
@@ -533,7 +533,7 @@ export const updateTodo = async (
 
 ```
 
-为了实现更新 Todo ，我们必须传入更新后的数据和对象 id。这里，我们需要更改 Todo 的`状态`，那么在发送到服务器之前我们只需要选择所需的属性即可。
+为了实现更新 Todo，我们必须传入更新后的数据和对象 id。这里，我们需要更改 Todo 的`状态`，那么在发送到服务器之前我们只需要选择所需的属性即可。
 
 -   src/API.ts
 
@@ -553,7 +553,7 @@ export const deleteTodo = async (
 
 ```
 
-这里，我们也有一个函数接受 `_id`  属性作为参数并返回 promise。
+这里，我们也有一个函数接受 `_id` 属性作为参数并返回 promise。
 
 有了这些，我们现在可以转到 components 文件夹并向其文件中添加一些有意义的代码。
 
@@ -601,7 +601,7 @@ export default AddTodo
 
 ```
 
-如你所见，这里有一个 React 类型的函数组件。FC (FC代表函数组件)。它接收 `saveTodo()` 方法为 props ，该方法允许我们将数据保存到数据库。
+如你所见，这里有一个 React 类型的函数组件。FC (FC代表函数组件)。它接收 `saveTodo()` 方法为 props，该方法允许我们将数据保存到数据库。
 
 然后，我们创建 `formData` state，它需要匹配 ITodo 类型来满足编译器的要求。这就是我们将它传递给 useState hook 的原因。我们还需要添加一个替代类型({})，因为初始状态是个空对象。
 
@@ -647,9 +647,9 @@ const Todo: React.FC<Props> = ({ todo, updateTodo, deleteTodo }) => {
 
 这里，我们需要继承 `TodoProps`  类型并加入 `updateTodo`  和  `deleteTodo`  函数，作为 props 传递给组件。
 
-现在，当传入 Todo 对象，我们将能够显示它并更新或删除 Todo 。
+现在，当传入 Todo 对象，我们将能够显示它并更新或删除 Todo。
 
-太棒了!现在我们可以到 `App.tsx` 文件并把拼图的最后一块放进去。
+太棒了!现在我们可以到 `App.tsx` 文件并把最后一块拼图放进去。
 
 ### 获取和展示数据
 
@@ -678,7 +678,7 @@ const App: React.FC = () => {
 
 这里，我们首先导入组件和 `API.ts` 导出的函数。然后，我们传递 `ITodo`  类型的数组给 `useState` 并且把它初始化为空数组。
 
-`getTodos()` 方法会返回 promise —— 因此，我们可以调用 then 函数并用获取到的数据更新 state ，或者在发生任何错误时抛出一个错误。
+`getTodos()` 方法会返回 promise —— 因此，我们可以调用 then 函数并用获取到的数据更新 state，或者在发生任何错误时抛出一个错误。
 
 有了这些，我们现在可以在组件组件成功挂载之后，调用 `fetchTodos()` 函数。
 
@@ -699,7 +699,7 @@ const handleSaveTodo = (e: React.FormEvent, formData: ITodo): void => {
 
 ```
 
-当发送表单时，我们用 `addTodo()`  向服务端发送请求，如果 Todo 被成功保存，我们将更新数据，否则将会抛出错误。
+当发送表单时，我们用 `addTodo()` 向服务端发送请求，如果 Todo 被成功保存，我们将更新数据，否则将会抛出错误。
 
 -   App.tsx
 
@@ -764,7 +764,7 @@ yarn start
 
 你可以在这里找到 [源代码][22]。
 
-你可以在我的 [博客][23] 上找到类似的内容，或者在[Twitter][24]上关注我以获得相关的信息。
+你可以在我的 [博客][23] 上找到类似的内容，或者在 [Twitter][24] 上关注我以获得相关的信息。
 
 谢谢你的阅读。
 

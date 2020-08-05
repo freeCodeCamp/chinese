@@ -104,7 +104,7 @@ _就让我们一探究竟吧。_
 
 现在我们安装依赖项，使项目可以使用 TypeScript。因为默认情况下，这个应用程序会使用 JavaScript。
 
-在NodeJS应用程序中有两种使用 TypeScript 的方法。要么在项目中本地安装使用，要么在电脑中全局安装使用。基于个人喜好，我会选择后者，但如果你想，你也可以坚持使用本地安装使用的方式。
+在 NodeJS 应用程序中有两种使用 TypeScript 的方法。要么在项目中本地安装使用，要么在电脑中全局安装使用。基于个人喜好，我会选择后者，但如果你想，你也可以坚持使用本地安装使用的方式。
 
 现在，让我们在终端上执行以下命令来安装 TypeScript。
 
@@ -138,7 +138,7 @@ _就让我们一探究竟吧。_
 
 ```
 
-有了这些，我们现在就可以更新 `package.json`的 scripts 来启动服务器。
+有了这些，我们现在就可以更新 `package.json` 的 scripts 来启动服务器。
 
 -   package.json
 
@@ -196,7 +196,7 @@ const todoSchema: Schema = new Schema(
 export default model<ITodo>("Todo", todoSchema)
 ```
 
-如你所见，我们首先导入 `ITodo ` 接口和 一些 `mongoose` 导出的模块，后者是帮助定义 Todo schema 和在导出前把 ITodo 作为类型参数传入 `model`。
+如你所见，我们首先导入 `ITodo ` 接口和 一些 `mongoose` 导出的模块，后者是帮助定义 Todo schema 和在导出前把 ITodo 作为类型参数传入 `model` 。
 
 这样，我们现在就可以在其他文件中使用 Todo 模型来与数据库交互。
 
@@ -284,7 +284,7 @@ const updateTodo = async (req: Request, res: Response): Promise<void> => {
 
 ```
 
-为了实现更新 todo, 我们需要拿到 id 和从 `req` 对象中获取body，然后把他们传入 `findByIdAndUpdate()`，这个函数将会在数据库中找到 Todo 并且更新它。
+为了实现更新 todo, 我们需要拿到 id 和从 `req` 对象中获取 body，然后把他们传入 `findByIdAndUpdate()`，这个函数将会在数据库中找到 Todo 并且更新它。
 
 -   controllers/todos/index.ts
 
@@ -308,7 +308,7 @@ const deleteTodo = async (req: Request, res: Response): Promise<void> => {
 export { getTodos, addTodo, updateTodo, deleteTodo }
 ```
 
-`deleteTodo()` 函数允许你从数据库中删除 Todo 。在这里，我们从 req 中拿到 id，并把它作为参数传递给 `findByIdAndRemove()`，来获取到对应的 Todo 并从 DB 中删除它。
+`deleteTodo()` 函数允许你从数据库中删除 Todo。在这里，我们从 req 中拿到 id，并把它作为参数传递给 `findByIdAndRemove()`，来获取到对应的 Todo 并从 DB 中删除它。
 
 接下来，导出这些函数以便我们在其他文件中使用它们。也就是说，我们现在可以为 API 创建一些路由，并使用这些方法来处理请求。
 
@@ -455,9 +455,9 @@ interface TodoProps {
 
 ```
 
-这里， `ITodo`  接口需要跟 API 返回的数据类型一样。我们在这里没有  `mongoose` , 所以我们需要加一些额外的属性来匹配API定义的数据类型。
+这里， `ITodo`  接口需要跟 API 返回的数据类型一样。我们在这里没有  `mongoose` , 所以我们需要加一些额外的属性来匹配 API 定义的数据类型。
 
-然后，我们用相同的的接口定义 `TodoProps`，组件会接受它并渲染数据。
+然后，我们用相同的的接口定义 `TodoProps` ，组件会接受它并渲染数据。
 
 现在我们已经定义了类型——现在让我们开始从 API 获取数据。
 
@@ -509,7 +509,7 @@ export const addTodo = async (
 
 ```
 
-这个函数接受用户输入的数据作为参数并返回 promise。这里，我们需要去掉  `_id`  属性因为 MongoDB 会自动生成。
+这个函数接受用户输入的数据作为参数并返回 promise。这里，我们需要去掉 `_id` 属性因为 MongoDB 会自动生成。
 
 -   src/API.ts
 
@@ -533,7 +533,7 @@ export const updateTodo = async (
 
 ```
 
-为了实现更新 Todo，我们必须传入更新后的数据和对象 id。这里，我们需要更改 Todo 的`状态`，那么在发送到服务器之前我们只需要选择所需的属性即可。
+为了实现更新 Todo，我们必须传入更新后的数据和对象 id。这里，我们需要更改 Todo 的 `状态` ，那么在发送到服务器之前我们只需要选择所需的属性即可。
 
 -   src/API.ts
 
@@ -601,7 +601,7 @@ export default AddTodo
 
 ```
 
-如你所见，这里有一个 React 类型的函数组件。FC (FC代表函数组件)。它接收 `saveTodo()` 方法为 props，该方法允许我们将数据保存到数据库。
+如你所见，这里有一个 React 类型的函数组件。FC (FC 代表函数组件)。它接收 `saveTodo()` 方法为 props，该方法允许我们将数据保存到数据库。
 
 然后，我们创建 `formData` state，它需要匹配 ITodo 类型来满足编译器的要求。这就是我们将它传递给 useState hook 的原因。我们还需要添加一个替代类型({})，因为初始状态是个空对象。
 

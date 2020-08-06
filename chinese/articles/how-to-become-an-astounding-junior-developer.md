@@ -1,6 +1,6 @@
 > * 原文地址：[How to Become an Outstanding Junior Developer 初级开发者如何自我提升？从转变思维方式开始！](https://www.freecodecamp.org/news/how-to-become-an-astounding-junior-developer/)
 > * 原文作者：John Mosesman
-> * 译者：
+> * 译者：Miever1
 > * 校对者：
 
   

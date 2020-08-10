@@ -1,6 +1,6 @@
 > * 原文：[Lessons Learned from My Journey as a Self-Taught Developer 我在自学编程时犯的 5 个“错误”，可能大部分程序员都会犯](https://www.freecodecamp.org/news/lessons-learned-from-my-journey-as-a-self-taught-developer/)
 > * 作者：Victor Cassone
-> * 译者：
+> * 译者：Eve-Angel
 > * 校对者：
 
 ![Lessons Learned from My Journey as a Self-Taught Developer](https://www.freecodecamp.org/news/content/images/size/w2000/2020/05/1_DAP7LzvAGemiogLG4lSnWA--1-.png)

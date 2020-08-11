@@ -1,71 +1,71 @@
 > * 原文地址：[How to Create and Publish a Vue Component Library 如何搭建、发布一个 Vue 组件库](https://www.freecodecamp.org/news/how-to-create-and-publish-a-vue-component-library/)
 > * 原文作者：Brian Barrow
-> * 译者：
+> * 译者：Humilitas
 > * 校对者：
 
 ![How to Create and Publish a Vue Component Library](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/trnava-university-BEEyeib-am8-unsplash.jpg)
 
-Component libraries are all the rage these days. They make it easy to maintain a consistent look and feel across an application.
+如今，许多组件库风靡一时，使得我们能够轻易地在一个应用中保持一致的外观和体验。
 
-I've used a variety of different libraries in my career so far, but using a library is very different than knowing exactly what goes into making one.
+我至今已经使用过许多不同的组件库，不过使用组件和深入了解构建组件的过程还是有很大不同的。
 
-I wanted a more in depth understanding of how a component library is built, and I want to show you how you can get a better understanding too.
+我想要更深入地理解组件库的构建过程，也希望能有助于你对于这一过程的理解。
 
-To create this component library, we're going to use the  `vue-sfc-rollup`  npm package. This package is a very useful utility when starting a component library.
+我们接下来会使用 `vue-sfc-rollup` 这个 npm 包来构建这个组件库，这是一个非常实用的组件库构建工具。
 
-If you have an existing library that you want to use the utility with, refer to the  [documentation][1]  they provide.
+如果想用这个工具管理现有的组件库，可以查看 [文档][1]。
 
-This package creates a set of files for the project to start out. As their documentation explains, the files it creates includes the following (SFC stands for Single File Component):
+这个工具为我们创建了项目的文件结构，如文档所说，它创建了以下文件（SFC 即 Single File Component）：
 
--   a minimal  [rollup][2]  config
--   a corresponding package.json file with build/dev scripts and dependencies
--   a minimal babel.config.js and .browserslistrc file for transpiling
--   a wrapper used by rollup when packaging your SFC
--   a sample SFC to kick-start development
--   a sample usage file which can be used to load/test your component/library during development
+-   一个最简的 [rollup][2] 配置文件
+-   一个包含 build/dev 脚本和项目依赖的 package.json 文件
+-   一个最简的用于转译的 babel.config.js 和 .browserslistrc 文件
+-   rollup 打包 SFC 时用到的包装器（wrapper）
+-   一个 SFC 示例文件
+-   组件库的使用示例
 
-The utility supports both Single File Components as well as a library of components. It is important to note this sentence from the documentation:
+这个工具同时支持单文件组件和组件库，注意文档中的这句话：
 
-> In library mode, there is also an 'index' which declares the components exposed as part of your library.
+> 在 library 模式下有一个 'index' 文件，其中声明了需要暴露哪些组件到你的库中。
 
-All this means is that there is some extra files generated in the setup process.
+也就是说，在设置过程中会额外生成一些文件。
 
-# Cool, let's build the library
+# 开始构建
 
-First you'll want to install the  `vue-sfc-rollup`  globally:
+首先，全局安装 `vue-sfc-rollup`：
 
 `npm install -g vue-sfc-rollup`
 
-Once that is installed globally, from the command line, go into the directory where you want your library project to be located. Once you are in that folder, run the following command to initialize the project.
+安装完成后，在命令行窗口进入想要在其中保存项目文件的目录，执行如下命令来初始化项目
 
 `sfc-init`
 
-Choose the following options within the prompts:
+在提示中选择如下选项：
 
 -   **Is this a single component or a library?**  Library
--   **What is the npm name of your library?**  (this will need to be unique on npm. I used  _brian-component-lib_)
--   **Will this library be written in JavaScript or TypeScript?** JavaScript (feel free to use TypeScript if you know what you're doing)
--   **Enter a location to save the library files:** This is the folder name you want your library to have. It will default to the npm name you gave it above so you can just hit enter.
+-   **What is the npm name of your library?**  （名称在 npm 中必须是唯一的，这里我使用的是 _brian-component-lib_）
+-   **Will this library be written in JavaScript or TypeScript?** JavaScript（可以放心地选择 TypeScript，只要你清楚自己的选择）
+-   **Enter a location to save the library files:** （项目的文件夹名称，默认为之前步骤设置的 npm 名称，所以可以直接按 enter 取默认值。）
 
-After the setup is complete, navigate to your folder and run an npm install.
+设置完成之后，进入项目目录并执行 npm install。
 
 ```
 cd path/to/my-component-or-lib
 
-
+npm install
 ```
 
-Once that is done, you can open the folder up in your editor of choice.
+完成之后，选择一个编辑器来打开项目目录。
 
-As stated above, there is a sample Vue component built for us. You can find it inside of the  `/src/lib-components`  folder. To see what this component looks like, you can run  `npm run serve`  and navigate to  [http://localhost:8080/][3]
+如上所述，在 `/src/lib-components` 文件夹中可以看到，一个示例 Vue 组件已经为我们构建好了。要查看效果，可以运行 `npm run serve` 命令，然后在浏览器中访问 [http://localhost:8080/][3]。
 
-Now let's add our own custom component. Create a new Vue file inside of the  `lib-components`  folder. For this example, I am going to imitate the button used in the freeCodeCamp assignment sections, so I'll name it  `FccButton.vue`
+开始添加我们的自定义组件。在这个示例中，我打算模拟 freeCodeCamp 的任务介绍部分的按钮，所以在 `lib-components` 文件夹中新建一个名为 `FccButton.vue` 的 Vue 文件。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/Screen-Shot-2020-07-22-at-10.08.05-AM.png)
 
-This is the button component we'll build
+这就是我们将要构建的按钮。
 
-You can copy and paste this code into your file:
+可以直接将下面这段代码复制到你的文件中：
 
 ```vue
 <template>
@@ -108,13 +108,13 @@ export default {
 
 src/lib-components/FccButton.vue
 
-You can see we have the basic template section at the top with the class we want it to have. It also uses the text that the user will pass in.
+可以看到，在代码段的最上方部分是页面元素的模板：一个按钮，其 class 为 "btn-cta"，其文本内容为我们传递给它的变量 text 的值。
 
-Inside the script tag we have the Component name and the props that the component will take in. In this case there is only one prop called  `text`  that has a default of "Run the Tests".
+在 script 标签中，定义了组件名称及组件将要接收的属性（props），这个示例组件只接收一个默认值为 "Run the Tests" 的名为 `text` 的属性。
 
-We also have some styling to give it the look we want it to have.
+我们还定义了一些样式，以使这个按钮呈现出我们想要的外观。
 
-To see how the component looks, we'll need to add it to the  `index.js`  file located in the  `lib-components`  folder. Your index.js file should look like this:
+为了查看这个组件的效果，需要将它添加到 `lib-components` 路径下的 `index.js` 文件中。index.js 文件内容如下：
 
 ```
 /* eslint-disable import/prefer-default-export */
@@ -123,7 +123,7 @@ export { default as FccButton } from './FccButton';
 
 src/lib-components/index.js
 
-You'll also need to import the component into the  `serve.vue`  file inside of the  `dev`  folder to look like this:
+还需要在 `dev` 路径下的 `serve.vue` 文件中导入这个组件，代码如下：
 
 ```
 <script>
@@ -141,31 +141,31 @@ export default Vue.extend({
 
 /dev/serve.vue
 
-You might need to run  `npm run serve`  again to be able to see the button, but it should be visible when you navigate to  [http://localhost:8080/][4]  in your browser.
+再次执行 `npm run serve` 命令，在浏览器中访问 [http://localhost:8080/][4] 地址即可查看这个按钮组件的最终效果。
 
-So, we've built the component we wanted. You will follow this same process for any other component you want to build. Just make sure you are exporting them in the  `/lib-components/index.js`  file in order to make them available from the npm package we are about to publish.
+现在已经构建出我们想要的组件。之后可以参照这些步骤来构建自己的组件，切记要在 `/lib-components/index.js` 文件中将其导出，以确保在我们后续发布的 npm 包中这些组件是可用的。
 
-# Publishing to NPM
+# 发布到 NPM
 
-Now that we're ready to publish the library to NPM, we need to go through the build process for it to be packaged up and ready to go.
+现在，组件库发布前的准备工作已经完成，我们需要执行构建过程来将其打包。
 
-Before we run the build command, I recommend changing the version number in the  `package.json`  file to be  `0.0.1`  since this is the very first publish event for our library. We will want more than just one component in the library before we release the official 'first' version. You can read more about semantic versioning  [here][5].
+由于这是我们组件库的第一次发布，建议在执行 build 命令之前在 `package.json` 文件中将版本号设置为 `0.0.1`。我们将会在发布第一个正式版本之前加入更多组件。想要了解更多关于语义化版本的信息，查看 [这里][5]。
 
-To do this, we run  `npm run build`.
+执行 `npm run build`。
 
-As the documentation states:
+如文档所述：
 
-> Running the build script results in 3 compiled files in the  `dist`  directory, one for each of the  `main`,  `module`, and  `unpkg`  properties listed in your package.json file. With these files are generated, you're ready to go!
+> 执行 build 脚本将会在 `dist` 路径中生成3个编译后的文件，文件名和路径由 package.json 文件中的 `main`、`module`、`unpkg` 属性指定。这些文件生成之后，可以进行下一步。
 
-With this command run, we are ready to publish to NPM. Before we do that, make sure you have an account on NPM (which you can do  [here][6]  if you need to).
+命令执行完毕之后，我们已经准备好将组件库发布到 NPM 了。在此之前，确保你有一个 NPM 账号（没有的话，可以点击 [这里][6] 进行注册）。
 
-Next we'll need to add your account to your terminal by running:
+接下来将你的 NPM 账户添加到终端（terminal）：
 
 `npm adduser`
 
-### Understanding package.json
+### 理解 package.json
 
-When we publish to npm, we use the package.json file to control what files are published. If you look at the  `package.json`  file that was created when we initially set up the project you'll see something like this:
+我们使用 package.json 文件来控制要将哪些文件发布到 npm。初始化项目时生成的 `package.json` 文件内容如下：
 
 ```json
 "main": "dist/brian-component-lib.ssr.js",
@@ -178,17 +178,17 @@ When we publish to npm, we use the package.json file to control what files are p
 ],
 ```
 
-The section under  `files`  tells npm to publish everything in our  `dist`  folder as well as any  `.vue`  files inside of our  `src`  folder. You can update this as you see fit, but we'll be leaving it as is for this tutorial.
+`files` 属性中的配置指定 npm 将 `dist` 文件夹中所有内容及 `src` 文件夹下所有 `.vue` 文件发布。你可以根据需要更新配置，在本次教程中我们让它保持原样即可。
 
-Because we aren't changing anything with the package.json file, we are ready to publish. To do that we just need to run the following command:
+由于我们没有更改 package.json 的内容，现在可以直接发布了。只需执行如下命令：
 
 `npm publish`
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/hy.gif)
 
-I'm so proud of you!
+真为你感到自豪！
 
-And that is it! Congratulations! You've now published a Vue component library. You can go to  [npmjs.com][7]  and find it in the registry.
+恭喜！你已经成功发布了一个 Vue 组件库，可以访问 [npmjs.com][7] 进行查看。
 
 [1]: https://www.npmjs.com/package/vue-sfc-rollup
 [2]: https://rollupjs.org/

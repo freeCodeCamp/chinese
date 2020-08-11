@@ -7,27 +7,39 @@
 ![How to Become an Outstanding Junior Developer](https://images.unsplash.com/photo-1470104240373-bc1812eddc9f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
 If you're reading this, you probably just got your first tech job — so congratulations! Getting the first job is one of the hardest things you'll do in tech. There's so much work and effort already behind you.
+如果你正在阅读这篇文章，你可能刚刚开始你的第一份工作，那么祝贺你！获得第一份工作是你在技术路上遇到的最为困难的事情之一。你也一定为此默默付出了很多努力。
+
 
 Or maybe you don't have your first job yet, but you want to know what you should expect.
+或许你还没有第一份工作，但是你想知道你所期待的。
 
 Either way, in this post I will address the common worries and questions about what to expect on the job, and how to succeed in a career as a developer.
-
+不管怎么样，在这篇文章中我将阐述一些常见的担忧和问题，比如在工作中应该期待什么，以及怎样在事业上成为一名成功的开发者。
 Here's what we'll cover:
+以下是我们将要讲的内容：
 
 1.  What to expect on the job (early days/weeks)
+1.在工作中可以期望什么（早期）
 2.  Your short to medium-term plan
+2.你的短期到中期计划
 3.  The mindset for success
+3.成功的心态
 4.  How to be an outstanding new developer
+4.如何成为一名杰出的初级开发者
 
 ## What to expect on the job
+## 在工作中可以期待什么
 
 The day finally arrives. You walk into the office (or join the morning team standup remotely) for the first time as a new developer. Even if you're nervous, try to remember and take in your first day. It's an exciting time!
+这一天终于到来了。你第一次作为一名新的开发者走进办公室（不太懂什么意思）。即使你很紧张，也要记住和适应你的第一天。这是非常激动人心的时刻！
 
 Your first day will likely be logistical things: setting up your computer, orientations or trainings, and HR logistics (banking information, insurance, and so on).
-
+你工作的第一天很可能做流程上的事情：配置你的电脑，适应和培训，和一些人力资源方面的事情（如银行信息，保险等）。
 However, it is becoming a common practice to have new developers do a push to production on your first day. It's usually something very small—like adding your name and photo or fixing a typo on the company website. This tests that your computer setup is good to go, and it also gives you a very quick win and lets you join the rest of the team shipping software.
+然而，让新开发人员在第一天就推向生产是一种常见的做法。通常是一些小的事情，比如在公司网页上添加自己的名字和照片或者修复网页中的一个错字。这会测试你的计算机环境是否配备良好，并且它也会给你一个快速的胜利可以让你在未来更好的参加团队开发
 
 ### Your company wants you to succeed
+### 你的公司希望你成功
 
 As a new developer, the company that hired you knows the limitations of your current knowledge and skills. They understand they'll need to invest significant time into your growth to teach and train you.
 

@@ -7,6 +7,8 @@
 
 The path of the self-taught developer is tough and filled with uncertainty. There is no straight line from newbie to career programmer. Because of this, I believe all self-taught developers have a unique story to tell.
 
+测试
+
 In this article, I’ll share my coding journey through a series of lessons I learned along the way. Hopefully reading about my experience teaching myself how to code will help you reflect on your own past, and motivate you to keep moving forward.
 
 ## Lesson #1: Focus on the Process

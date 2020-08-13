@@ -42,54 +42,78 @@ However, it is becoming a common practice to have new developers do a push to pr
 ### 你的公司希望你成功
 
 As a new developer, the company that hired you knows the limitations of your current knowledge and skills. They understand they'll need to invest significant time into your growth to teach and train you.
+作为一名新的开发人员，录用你的公司知道你目前的知识和技能的局限。他们知道为了你的成长他们需要投入大量的时间去教你和训练你。
 
 Remember, this company  _wants you to succeed!_  They're on your side. This company went through enormous effort to find, interview, and hire you. It's a costly process from both a time and money perspective for the company. They're not going to hang you out to dry—that would be a poor way to treat their investment in you.
-
+记住，公司想要你成长，他们在你这边。公司会投入大量的精力来发现、面试、录用你。对公司来讲，无论是在时间和金钱上都是一个昂贵的过程。他们不会把你晾到一边————那将是他们投资你的一种糟糕的方式。
 There are some skills that you bring to the table at the start, but there are some skills that are difficult (though not impossible) to acquire outside of a professional work environment.
+有些技能你一开始就能掌握，但是有些技能在专业环境之外获取是非常困难的（也不是不可能）。
 
 Since this is your first job, it's likely you've never collaborated with a large team using source control or maintained production applications—and that's ok! These skills are easier to pick up in a production environment.
+既然这是你的第一份工作，可能你从来没有与使用源代码管理工具或者维护生产应用程序的大团队合作过————这没有关系！这些技能在生产环境中是很容易学到的。
 
 ### Your first days/weeks
+你的第一天/周
 
 Once your computer is setup and you have access to all of the tools that you need, your first tasks will likely be small feature improvements or fixing small bugs—just things to get your wet feet across the various projects.
+一旦你的电脑设置好了你可以使用所有你所需要的工具，你的第一个任务可能是一个小功能的改进或者处理一个小bug，这些只是让你在不同的项目中试水。
 
 Outside of pure technical knowledge, in every company there is domain knowledge or "business logic" (what the company's products or services do and how they do it) that you'll need to pick up.
+除了纯技术只是之外，每个公司都有你需要掌握的领域知识或者“业务逻辑”（公司做什么产品或服务并且他们是如何做的）。
 
 If the company has multiple products, they may give you small tasks in each codebase to begin exploring those products. It's also likely that they will assign another person on the team to pair up with you—or at least be available for questions you have throughout the early weeks.
+如果公司有多种产品，他们可能会在每个代码库中给你一些小任务让你去探索这些产品。可能他们会在团队中给你分配一个来带你或者在前数周可以为你解答问题的导师。
 
 In these early days and weeks you only have one goal:  _learn, learn, learn._
+在最初的日子里，你只有一个目标：那就是学习，学习，在学习。
 
 Learn about the technology you're using, learn about the company and how it works, and learn how to work with your teammates. Your work output is not important at this point—your rate of growth is.
+学习你正在使用的技术，学习公司是如何运转的，学习怎样和你组员协作。在这一阶段你的工作产出不重要，重要的是你的成长速度。
 
 ### Diving into a production codebase
+### 深入到生产代码库中
 
 As you begin working your way through the various codebases at your company, you'll likely feel a like a fish out of water. This is totally normal—it's  _much_  easier to write code than it is to read it.
+当你开始在公司多样的代码库中工作的时候，你可能会觉得非常困难。这是非常正常的————写代码比读代码容易得多。
 
 A production codebase is very different from the tutorials you've been working through or the toy projects you've been learning with.
+生产代码相比你在学习过教程或者你学习的玩具项目有很大不同。
 
 For one, this codebase has likely existed for many years, and been worked on by many different people—each with their own style and each of them making their own mistakes.
+首先，生产代码可能存在了数年，期间由不同的人进行开发，他们有他们自己的编程风格并且犯了自己的错误。
 
 It's also likely there are many more software packages or plugins injected into this application than you have come across before. All of the convenient shortcuts or edge cases that were ignored in a tutorial (like error handling) have to be handled here—this is a real app.
+此外，嵌入到这个软件的软件包或者插件可能比你以前遇到的更多。所有的便利捷径或者可能会被教程文档忽略（比如错误处理）的边缘事例都要在这里进行处理，这是一个真正的应用程序。
 
 This can be overwhelming at first, but reading other people's code is a skill you have to develop, and it's one you'll use your entire career (and at the end of this post I'll give you some tips to help with that).
+一开始你可能会不知所措，但是阅读别人的代码是你必须提升的技能，你会在你的整个职业生涯中用到它（在文章结束的时候就此技能我会给你一些建议和帮助）
 
 In the end, don't be afraid to ask for help! Your teammates are there to support you, and at some point in the past they had to ask the same exact questions.
+最后，不要害怕寻求帮助！你的同事会支持你，在过去的某一个时候，他们可能也在问相同的问题。
 
 ### New developer expectations
+### 新开发人员期望
 
 First things first: this company is  _not_  expecting you to jump in and start knocking out features. They know you'll need time to develop skills you don't have yet, understand the codebases, and learn how to work with the team effectively.
 
+
 It's likely your boss will meet with you and create a 30/60/90 day plan. If they don't do this—ask! Any supervisor will appreciate you owning your job and job expectations.
+你的领导可能会与你碰面来制定30/60/80 天计划，如果他们不这样做，要求他这么做！任何领导都会欣赏你拥有自己的工作期望。
 
 In the first 30 days, you'll likely just be doing small feature improvements and small bug fixes—just things to get to know the company's products and codebases. At 60 days, it's likely you'll be doing slightly larger features and bug fixes. By 90 days, the scope will have grown a little more, but they still won't expect you to own and drive large features forward yourself.
+在起初30天，你可能通过写一个小需求或者处理一些小bug来熟悉公司产品和代码。60天的时候，你可能会做稍微大一点功能以及bug修复。到90天的时候，范围会扩大一点，但是他们还是不会期望你驾驭大的功能。
 
 Ultimately, the company just wants you to continue to learn and absorb the information around you. You're not going to know everything going in, or after 90 days, and that's ok! Take it a day at a time.
+从根本上，公司希望你能不断学习和吸收身边的信息。你不可能什么都知道，也不可能在90天后都知道，没关系！一天天慢慢来。
 
 ### The new developer mindset
+### 新开发者的心态
 
 Walking into a new company, there are many things you can't control, but there is one very important thing you can: your mindset.  **Your daily thoughts, practices, and how you internalize what happens around you will determine your success.**
+步入新的公司，有很多东西你没法控制，但是有一个你可以控制的非常重要的事情，那就是你的心态。 **你每天所想、实践以及你如何内化发生在你身边的事情将决定你的成功。**
 
 At times you'll be confused, at times you'll feel overwhelmed, and at times you'll even doubt if you can do this (I did). How you internalize these thoughts matters. Remember, this isn't unique to you—every new developer has faced this. Keep your mind in check and you'll push through.
+有时候你会困惑，有时候你会感到不知所措，
 
 When you run into something confusing or frustrating, re-position your mind:  _this obstacle is a learning opportunity._
 
@@ -415,16 +439,21 @@ Do one thing at a time. Get  _"hi"_  printing on the page. Next get the user inp
 Even eight years later into a development career I still take it step by step. I know I'm going to make a ton of mistakes, and I want to know  _immediately_  when and where that happens.
 
 ## Conclusion
+## 总结
 
 You've already come so far, but there's still a lot ahead of you.
+你已经走了很远，但是还有很多路需要你去走。
 
 There's much to learn, and many skills to develop, but there's also a lot of fun and rewarding work ahead as well!
+你还有很多知识得学，很多技能需要提升，但是也有很多乐趣和有益的工作在等着你。
 
 Keep your head up, and remember to take breaks. Get 1% better every day, and in a year you'll be astonished at the results!
 
 If you liked this post, I write similar things  [on my blog here][4].
+如果你喜欢这篇文章，我在我的微博上写了同样的分享。
 
 Thanks for reading!
+感谢阅读！
 
   
 

@@ -107,10 +107,10 @@ const getArticleConfig = async (): Promise<ArticleConfig> => {
 
 ```
 
-**这里发生两件事：**
+这里发生两件事：
 
--   **由于 `article.config.json` 具有 JSON 格式，因此我们需要在读取文件后将此 JSON 字符串转换为 JavaScript 对象**
--   ** `articleConfigContent` 的返回将是我在函数返回类型中定义的 `ArticleConfig`。细节如下：**
+-   由于 `article.config.json` 具有 JSON 格式，因此我们需要在读取文件后将此 JSON 字符串转换为 JavaScript 对象
+-   `articleConfigContent` 的返回将是我在函数返回类型中定义的 `ArticleConfig`。细节如下：
 
 ```typescript
 type ArticleConfig = {
@@ -130,24 +130,39 @@ type ArticleConfig = {
 
 获得相关内容后，我们还将使用这一新类型。
 
-**`const articleConfig: ArticleConfig = await getArticleConfig();`** 
+```typescript
+const articleConfig: ArticleConfig = await getArticleConfig();
+
+```
 
 现在，我们可以使用 `replace` 方法在模板内容中填充配置数据。示例如下：
 
-**`templateContent.replace('title', articleConfig.title)`** 
+```typescript
+templateContent.replace('title', articleConfig.title)
+
+```
 
 但是某些变量在模板中出现了不止一次。正则表达式会有助于解决这一问题：
 
-**`new RegExp('\{\{(?:\\s+)?(title)(?:\\s+)?\}\}', 'g');`** 
+```typescript
+new RegExp('\{\{(?:\\s+)?(title)(?:\\s+)?\}\}', 'g');
+
+```
 
 得到所有匹配 `{{ title }}` 的字符串。因此，我可以构建一个接收目标参数的函数，并使用它替换 `title`。
 
-**`const getPattern = (find: string): RegExp =>
-  new RegExp('\{\{(?:\\s+)?(' + find + ')(?:\\s+)?\}\}', 'g');`** 
+```typescript
+const getPattern = (find: string): RegExp =>
+  new RegExp('\{\{(?:\\s+)?(' + find + ')(?:\\s+)?\}\}', 'g');
+
+```
 
 现在我们可以替换所有匹配项。`title`变量的示例：
 
-**`templateContent.replace(getPattern('title'), articleConfig.title)`** 
+```typescript
+templateContent.replace(getPattern('title'), articleConfig.title)
+
+```
 
 但是我们并不想只替换 `title`变量，而是要替换文章配置中的所有变量。全部替换！
 
@@ -171,7 +186,10 @@ const buildArticle = (templateContent: string) => ({
 
 现在全部替换！我们这样使用它：
 
-**`const article: string = buildArticle(templateContent).with(articleConfig);`** 
+```typescript
+const article: string = buildArticle(templateContent).with(articleConfig);
+
+```
 
 但是我们在这里缺少两部分：
 
@@ -180,20 +198,29 @@ const buildArticle = (templateContent: string) => ({
 
 在 JSON 配置文件中，`tags` 是一个列表。因此，对于列表：
 
-**`['javascript', 'react'];`** 
+```typescript
+['javascript', 'react'];
+
+```
 
 最终的 HTML 将是：
 
-**`<a class="tag-link" href="../../../tags/javascript.html">javascript</a>
-<a class="tag-link" href="../../../tags/react.html">react</a>`** 
+```html
+<a class="tag-link" href="../../../tags/javascript.html">javascript</a>
+<a class="tag-link" href="../../../tags/react.html">react</a>
+
+```
 
 因此，我使用 `{{ tag }}` 变量创建了另一个模板： `tag_template.html`。们只需要遍历 `tags` 列表并使用模板为每一项创建 HTML Tag。
 
-**`const getArticleTags = async ({ tags }: { tags: string[] }): Promise<string> => {
+```typescript
+const getArticleTags = async ({ tags }: { tags: string[] }): Promise<string> => {
   const tagTemplatePath = resolve(`**`dirname, '../examples/tag_template.html');
   const tagContent = await readFile(tagTemplatePath, 'utf8');
   return tags.map(buildTag(tagContent)).join('');
-};` 
+};
+
+```
 
 在这里，我们：
 
@@ -396,14 +423,17 @@ const buildNewArticleFolderPath = ({ title, date }: { title: string, date: strin
 
 ```
 
-**这一函数尝试获取文章文件夹。它不会生成新文件。这就是为什么我没有在最终字符串的末尾添加 `/index.html` 的原因。**
+这一函数尝试获取文章文件夹。它不会生成新文件。这就是为什么我没有在最终字符串的末尾添加 `/index.html` 的原因。
 
-**为什么这样做呢？因为在写入新文件之前，我们始终需要创建文件夹。我使用 `mkdir` 此文件夹路径来创建它。**
+为什么这样做呢？因为在写入新文件之前，我们始终需要创建文件夹。我使用 `mkdir` 此文件夹路径来创建它。
 
-**`const newArticleFolderPath: string = buildNewArticleFolderPath(articleConfig);
-await mkdir(newArticleFolderPath, { recursive: true });`** 
+```typescript
+const newArticleFolderPath: string = buildNewArticleFolderPath(articleConfig);
+await mkdir(newArticleFolderPath, { recursive: true });
 
-**现在，我可以使用新建的文件夹在其中创建新的文章文件。**
+```
+
+现在，我可以使用新建的文件夹在其中创建新的文章文件。
 
 ```typescript
 const newArticlePath: string = `${newArticleFolderPath}/index.html`;
@@ -411,26 +441,26 @@ await writeFile(newArticlePath, article);
 
 ```
 
-**我们漏了一件事：当我将图像封面添加到文章配置文件夹中时，我需要将其复制粘贴到正确的位置。**
+我们漏了一件事：当我将图像封面添加到文章配置文件夹中时，我需要将其复制粘贴到正确的位置。
 
-**对于 `2020/04/publisher-a-tooling-to-blog-post-publishing/index.html` 示例, 图像封面位于 assets 文件夹中：**
+对于 `2020/04/publisher-a-tooling-to-blog-post-publishing/index.html` 示例, 图像封面位于 assets 文件夹中：
 
-**`2020/04/publisher-a-tooling-to-blog-post-publishing/assets/cover.png`** 
+`2020/04/publisher-a-tooling-to-blog-post-publishing/assets/cover.png`
 
-**为此，我需要做两件事：**
+为此，我需要做两件事：
 
--   **使用 `mkdir` 创建一个新的 `assets` 文件夹mkdir   folder with  **
--   **使用 `copyFile` 复制图像文件并将其粘贴到新文件夹中**
+-   使用 `mkdir` 创建一个新的 `assets` 文件夹
+-   使用 `copyFile` 复制图像文件并将其粘贴到新文件夹中
 
-**要创建新文件夹，我只需要文件夹路径。要复制和粘贴图像文件，我需要当前图像路径和文章图像路径。**
+要创建新文件夹，我只需要文件夹路径。要复制和粘贴图像文件，我需要当前图像路径和文章图像路径。
 
-**对于文件夹，因为我现有 `newArticleFolderPath`，我只需要将此路径连接到资产文件夹。**
+对于文件夹，因为我现有 `newArticleFolderPath`，我只需要将此路径连接到资产文件夹。
 
 ```typescript
 const assetsFolder: string = `${newArticleFolderPath}/assets`;
 
 ```
-**对于当前的图像路径，我具有带正确扩展名的 `imageCoverFileName`。我只需要获取图像封面路径：**
+对于当前的图像路径，我具有带正确扩展名的 `imageCoverFileName`。我只需要获取图像封面路径：
 
 ```typescript
 const imageCoverExamplePath: string = resolve(__dirname, `../examples/${imageCoverFileName}`);

@@ -203,14 +203,14 @@ const buildTag = (tagContent: string) => (tag: string): string =>
 
 ```
 
-It receives the  `tagContent`  \- it is the tag template content - and returns a function that receives a tag and builds the final tag HTML. And now we call it to get the article tags.
+它接收参数 `tagContent` - 这是标签模板的内容 - 并返回一个接收 tag 参数并构建最终标签 HTML 的函数。现在我们称它为 getArticleTags。
 
 ```typescript
 const articleTags: string = await getArticleTags(articleConfig);
 
 ```
 
-About the article now. It looks like this:
+现在关于这篇文章。看起来像这样：
 
 ```typescript
 const getArticleBody = async ({ articleFile }: { articleFile: string }): Promise<string> => {
@@ -221,16 +221,16 @@ const getArticleBody = async ({ articleFile }: { articleFile: string }): Promise
 
 ```
 
-It receives the  `articleFile`, we try to get the path, read the file, and get the markdown content. Then pass this content to  `fromMarkdownToHTML`  function to transform the markdown into HTML.
+它收到 `articleFile`，我们尝试获取路径，读取文件并获取 Markdown 内容。然后将此内容传递给 `fromMarkdownToHTML` 函数，以将 Markdown 转换为 HTML。
 
-For this part I'm using an external library called  `showdown`. It handles every little corner case to transform markdown into HTML.
+对于这一部分，我将使用一个外部库 `showdown`。它处理所有边角案例，以将 Markdown 转换为 HTML。
 
 ```typescript
 import showdown from 'showdown';
 
 ```
 
-And now I have the tags and the article HTML:
+现在，我有了 tag 和文章的 HTML：
 
 ```typescript
 const templateContent: string = await getTemplateContent();
@@ -240,7 +240,7 @@ const articleBody: string = await getArticleBody(articleConfig);
 
 ```
 
-I missed one more thing! Before, I expected that I always needed to add the image cover path into the article config file. Something like this:
+我漏掉了一件事！以前，我总是需要将图像封面路径添加到文章配置文件中。像这样：
 
 ```typescript
 {
@@ -249,20 +249,20 @@ I missed one more thing! Before, I expected that I always needed to add the imag
 
 ```
 
-But we could assume that the image name will be  `cover`. The challenge was the extension. It can be  `.png`,  `.jpg`,  `.jpeg`, or  `.gif`.
+但是我们可以假设图像名称为 `cover`。主要问题是扩展名。它可以是 `.png`，`.jpg`，`.jpeg`，或 `.gif`。
 
-So I built a function to get the right image extension. The idea is to search for the image in the folder. If it exists in the folder, return the extension.
+因此，我建立了一个函数来获取正确的图像扩展名。这个想法是在文件夹中搜索图像。如果它存在于文件夹中，则返回扩展名。
 
-I started with the "existing" part.
+我从 "existing"部分开始。
 
 ```typescript
 fs.existsSync(</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>folder<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">/</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>fileName<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">.</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>extension<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">);
 
 ```
 
-Here I'm using the  `existsSync`  function to find the file. If it exists in the folder, it returns true. Otherwise, false.
+在这里，我正在使用 `existsSync` 方法来查找文件。如果它存在于文件夹中，则返回true。否则为假。
 
-I added this code into a function:
+我将此代码添加到一个函数中：
 
 ```typescript
 const existsFile = (folder: string, fileName: string) => (extension: string): boolean =>
@@ -270,18 +270,22 @@ const existsFile = (folder: string, fileName: string) => (extension: string): bo
 
 ```
 
-Why did I do it this way?
+我为什么要这样做？
 
-Using this function, I need to pass the  `folder`, the  `filename`, and the  `extension`. The  `folder`  and the  `filename`  are always the same. The difference is the  `extension`.
+使用这个功能，我需要传递参数 `folder` ,`filename`，`extension`。 `folder` 和 `filename` 总是相同的。区别在于 `extension`。
 
-So I could build a function using curry. That way, I can build different functions for the same  `folder`  and  `filename`. Like this:
+因此，我可以构建柯里化函数。这样，我可以为相同的 `folder` 和 `filename` 建立不同的函数。像这样：
 
 ```typescript
 const hasFileWithExtension = existsFile(examplesFolder, imageName);
 
+hasFileWithExtension('jpeg'); // true or false
+hasFileWithExtension('jpg'); // true or false
+hasFileWithExtension('png'); // true or false
+hasFileWithExtension('gif'); // true or false
 ```
 
-The whole function would look like this:
+完整函数如下：
 
 ```typescript
 const getImageExtension = (): string => {
@@ -300,7 +304,7 @@ const getImageExtension = (): string => {
 
 ```
 
-But I didn't like this hardcoded string to represent the image extension.  `enum`  is really cool!
+但我不喜欢用硬编码的字符串来表示图像扩展名。`enum` 真的很酷！
 
 ```typescript
 enum ImageExtension {
@@ -312,7 +316,7 @@ enum ImageExtension {
 
 ```
 
-And the function now using our new enum  `ImageExtension`:
+现在使用我们的新的枚举类型 `ImageExtension` 的函数：
 
 ```typescript
 const getImageExtension = (): string => {
@@ -331,40 +335,40 @@ const getImageExtension = (): string => {
 
 ```
 
-Now I have all the data to fill the template. Great!
+现在，我获得了用以填充模板的所有数据。
 
-As the HTML is done, I want to create the real HTML file with this data. I basically need to get the correct path, the HTML, and use the  `writeFile`  function to create this file.
+HTML 完成后，我想使用此数据创建实际的 HTML 文件。我大致需要获取正确的路径，HTML，并使用该 `writeFile` 函数创建此文件。
 
-To get the path, I needed to understand the pattern of my blog. It organizes the folder with the year, the month, the title, and the file is named  `index.html`.
+要获取路径，我需要确定我的博客的规律。它使用年，月，标题组织文件夹，文件名为 `index.html`。
 
-An example would be:
+一个例子是：
 
 ```bash
 2020/04/publisher-a-tooling-to-blog-post-publishing/index.html
 
 ```
 
-At first, I thought about adding this data to the article config file. So every time I need to update this attribute from the article config to get the correct path.
+最初，我考虑过将这些数据添加到文章配置文件中。因此，我需要在每次更新时文章配置中的此属性以获取正确的路径。
 
-But another interesting idea was to infer the path by some data we already have in the article config file. We have the  `date`  (e.g.  `"2020-04-21"`) and the  `title`  (e.g.  `"Publisher: tooling to automate blog post publishing"`).
+但是另一个有趣的想法是根据文章配置文件中已有的一些数据来推断路径。我们有 `date`（例如 `"2020-04-21"`）和 `title`（例如 `"Publisher: tooling to automate blog post publishing"`）。
 
-From the date, I can get the year and the month. From the title, I can generate the article folder. The  `index.html`  file is always constant.
+从 `date` 中，我可以得到年和月。从标题中，我可以生成文章所在文件夹。 `index.html` 文件始终是不变的。
 
-The string would look like this:
+最终字符串如下所示：
 
 ```typescript
 </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>year<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">/</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>month<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">/</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>slugifiedTitle<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">
 
 ```
 
-For the date, it is really simple. I can split by  `-`  and destructure:
+对于日期，这真的很简单。我可以拆分 `-` 并销毁：
 
 ```typescript
 const [year, month]: string[] = date.split('-');
 
 ```
 
-For the  `slugifiedTitle`, I built a function:
+对于 `slugifiedTitle`，我构建了一个函数：
 
 ```typescript
 const slugify = (title: string): string =>
@@ -376,9 +380,9 @@ const slugify = (title: string): string =>
 
 ```
 
-It removes the white spaces from the beginning and the end of the string. Then downcase the string. Then remove all special characters (keep only word and whitespace characters). And finally, replace all whitespaces with a  `-`.
+它从字符串的开头和结尾删除空格。然后将字符串小写。然后删除所有特殊字符（仅保留单词和空格字符）。最后，将所有空白替换为 `-`。
 
-The whole function looks like this:
+整个函数如下所示：
 
 ```typescript
 const buildNewArticleFolderPath = ({ title, date }: { title: string, date: string }): string => {
@@ -387,61 +391,61 @@ const buildNewArticleFolderPath = ({ title, date }: { title: string, date: strin
 
 ```
 
-**This function tries to get the article folder. It doesn't generate the new file. This is why I didn't add the  `/index.html`  to the end of the final string.**
+**这一函数尝试获取文章文件夹。它不会生成新文件。这就是为什么我没有在最终字符串的末尾添加 `/index.html` 的原因。**
 
-**Why did it do that? Because, before writing the new file, we always need to create the folder. I used  `mkdir`  with this folder path to create it.**
+**为什么这样做呢？因为在写入新文件之前，我们始终需要创建文件夹。我使用 `mkdir` 此文件夹路径来创建它。**
 
 **`const newArticleFolderPath: string = buildNewArticleFolderPath(articleConfig);
 await mkdir(newArticleFolderPath, { recursive: true });`** 
 
-**And now I could use the folder the create the new article file in it.**
+**现在，我可以使用新建的文件夹在其中创建新的文章文件。**
 
 **``const newArticlePath: string = `</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>newArticleFolderPath<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">/index.html`;
 await writeFile(newArticlePath, article);``** 
 
-**One thing we are missing here: as I added the image cover in the article config folder, I needed to copy it and paste it into the right place.**
+**我们漏了一件事：当我将图像封面添加到文章配置文件夹中时，我需要将其复制粘贴到正确的位置。**
 
-**For the  `2020/04/publisher-a-tooling-to-blog-post-publishing/index.html`  example, the image cover would be in the assets folder:**
+**对于 `2020/04/publisher-a-tooling-to-blog-post-publishing/index.html` 示例, 图像封面位于 assets 文件夹中：**
 
 **`2020/04/publisher-a-tooling-to-blog-post-publishing/assets/cover.png`** 
 
-**To do this, I need two things:**
+**为此，我需要做两件事：**
 
--   **create a new  `assets`  folder with  `mkdir`**
--   **copy the image file and paste it into the new folder with  `copyFile`**
+-   **使用 `mkdir` 创建一个新的 `assets` 文件夹mkdir   folder with  **
+-   **使用 `copyFile` 复制图像文件并将其粘贴到新文件夹中**
 
-**To create the new folder, I just need the folder path. To copy and paste the image file, I need the current image path and the article image path.**
+**要创建新文件夹，我只需要文件夹路径。要复制和粘贴图像文件，我需要当前图像路径和文章图像路径。**
 
-**For the folder, as I have the  `newArticleFolderPath`, I just need to concatenate this path to the assets folder.**
+**对于文件夹，因为我现有 `newArticleFolderPath`，我只需要将此路径连接到资产文件夹。**
 
 **``const assetsFolder: string = `</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>newArticleFolderPath<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">/assets`;``** 
 
-**For the current image path, I have the  `imageCoverFileName`  with the correct extension. I just need to get the image cover path:**
+**对于当前的图像路径，我具有带正确扩展名的 `imageCoverFileName`。我只需要获取图像封面路径：**
 
 **`const imageCoverExamplePath: string = resolve(`**``dirname, `../examples/</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>imageCoverFileName<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">`);`` 
 
-To get the future image path, I need to concatenate the image cover path and the image file name:
+为了获得将来的图像路径，我需要将图像封面路径和图像文件名连接起来：
 
 ```typescript
 const imageCoverPath: string = </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>assetsFolder<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">/</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>imageCoverFileName<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">;
 
 ```
 
-With all these data, I can create the new folder:
+使用所有这些数据，我可以创建新文件夹：
 
 ```typescript
 await mkdir(assetsFolder, { recursive: true });
 
 ```
 
-And copy and paste the image cover file:
+并复制并粘贴图像封面文件：
 
 ```typescript
 await copyFile(imageCoverExamplePath, imageCoverPath);
 
 ```
 
-As I was implementing this  `paths`  part, I saw I could group them all into a function  `buildPaths`.
+在实现这一  `paths` 部分时，我看到可以将它们全部组合成一个函数 `buildPaths`。
 
 ```typescript
 const buildPaths = (newArticleFolderPath: string): ArticlePaths => {
@@ -454,7 +458,7 @@ const buildPaths = (newArticleFolderPath: string): ArticlePaths => {
 
 ```
 
-I also created the  `ArticlePaths`  type:
+我还创建了 `ArticlePaths` 类型：
 
 ```typescript
 type ArticlePaths = {
@@ -467,7 +471,7 @@ type ArticlePaths = {
 
 ```
 
-And I could use the function to get all the path data I needed:
+而且我可以使用该函数来获取所需的所有路径数据：
 
 ```typescript
 const {
@@ -480,42 +484,42 @@ const {
 
 ```
 
-The last part of the algorithm now! I wanted to quickly validate the created post. So what if I could open the created post in a browser tab? That would be amazing!
+现在算法的最后一部分！我想快速验证创建的帖子。那么，如果可以在浏览器选项卡中打开创建的帖子怎么样？
 
-So I did it:
+所以我做到了：
 
 ```typescript
 await open(newArticlePath);
 
 ```
 
-Here I'm using the  `open`  library to simulate the terminal open command.
+在这里，我使用 `open` 库来模拟终端打开命令。
 
-And that was it!
+就是这样！
 
-## What I learned
+## 我学到的是
 
-This project was a lot of fun! I learned some cool things through this process. I want to list them here:
+这个项目很有趣！通过这个过程，我学到了一些很酷的东西。我想在这里列出它们：
 
--   As I'm  [learning Typescript][6], I wanted to quickly validate the code I was writing. So I configured  `nodemon`  to compile and run the code on every file save. It is cool to make the development process so dynamic.
--   I tried to use the new node  `fs`'s  `promises`:  `readFile`,  `mkdir`,  `writeFile`, and  `copyFile`. It is on  `Stability: 2`.
--   I did a lot of  [currying][7]  for some functions to make them reusable.
--   Enums and  [Types][8]  are good ways to make the state consistent in Typescript, but also make a good representation and documentation of all the project's data.  [Data contracts][9]  are a really nice thing.
--   The tooling mindset. This is one of the things I really love about programming. Build toolings to automate repetitive tasks and make life easier.
+-  在[学习 Typescript ][6]时，我想快速验证我正在编写的代码。因此，我配置 nodemon 为在每次保存文件时编译并运行代码。使开发过程如此动态是很酷的。 
+-  尝试用新 nodejs 的 `fs` 的 `promises` API： `readFile`，`mkdir`，`writeFile`，和 `copyFile`。它目前在规范 `Stability: 2`。 
+-  对某些函数进行[柯里化][7]，使其可重复使用。
+-  枚举和[类型][8]是使状态在 Typescript 中保持一致的好方法，也是所有项目数据的表示和文档。[数据协定][9]确实很棒。
+-  工具化思维。这是我喜欢编程的方面。构建工具有助于自动执行重复性任务并简化工作。
 
-I hope it was good reading! Keep learning and coding!
+我希望这是一本好书！继续学习和编码！
 
-This post was originally published  [on my blog][10].
+该帖子最初发布在[我的博客][10]上。
 
-My  [Twitter][11]  and  [Github][12].
+我的[Twitter][11]和[Github][12]。
 
-## Resources
+## 资源
 
--   [Publisher Tooling: source code][13]
--   [Thinking in data contracts][14]
--   [Typescript Learnings][15]
--   [Closures, Currying, and Cool Abstractions][16]
--   [Learn React by building an App][17]
+-   [Publisher Tooling: 源码][13]
+-   [深入思考数据协定][14]
+-   [Typescript 学习][15]
+-   [闭包，柯里化和炫酷的抽象][16]
+-   [通过构建 app 学习 react ][17]
 
 [1]: https://medium.com/@leandrotk_
 [2]: https://dev.to/teekay

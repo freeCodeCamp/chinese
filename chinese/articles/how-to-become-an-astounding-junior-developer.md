@@ -113,61 +113,84 @@ Walking into a new company, there are many things you can't control, but there i
 步入新的公司，有很多东西你没法控制，但是有一个你可以控制的非常重要的事情，那就是你的心态。 **你每天所想、实践以及你如何内化发生在你身边的事情将决定你的成功。**
 
 At times you'll be confused, at times you'll feel overwhelmed, and at times you'll even doubt if you can do this (I did). How you internalize these thoughts matters. Remember, this isn't unique to you—every new developer has faced this. Keep your mind in check and you'll push through.
-有时候你会困惑，有时候你会感到不知所措，
+有时候你会困惑，有时候你会感到不知所措，有时候你甚至会怀疑你是否能做到（我做到了）。你如何消化这些想法很重要。记住，这些问题不仅只有你会遇到，所有新开发者都要面对。保持冷静，你会成功的。
 
 When you run into something confusing or frustrating, re-position your mind:  _this obstacle is a learning opportunity._
+当你遇到令你困惑或沮丧的事情时，端正你的想法：这个障碍是一个学习的机会。
 
 It's an opportunity to understand something new and grow. It sucks, it feels bad, but soon after this you will be a better developer. And this will happen a lot—that's just the reality of being new to something.
+这是一个了解新事物和成长的机会。这个过程中你可能会很痛苦，但不久之后，你会成为一名好的开发者。这就是接受新事物时的现实。
 
 Instead of internalizing:
 
 > _"I got stuck 10 times today."_
+我今天被困住了10次。
 
 Try instead:
 
 > _"I had 10 opportunities to learn today."_
+今天我有10次机会去学习。
 
 It's a powerful shift, and it will be obvious to your teammates and in your job performance.
+这是非常有力的转变，对你同事以及你的工作表现而言这会非常明显。
 
 Staying on top of your mind and not allowing the feeling of defeat to creep in will not only help you perform better in the situation, but it also increases the knowledge and skill you leave the situation with. Take a deep breath, take a break, ask for help—but keep pushing through.
+保持头脑清醒，不要让失败的感觉悄悄潜入，这不仅能帮助你在这种情况下表现得更好，而且还能增加你离开这种情况时的知识和技能。深呼吸，慢慢来，寻求帮助并坚持下去。
 
 And then at the end of the day: shrug it all off. Drop it on the ground when you leave the office or close your computer for the day. Start the next day fresh and ready for its own adventures.
+在一天结束的时候，一笑置之。在你离开办公室或者关闭电脑的时候，把它忘了。开始全新的第二天，准备迎接新挑战。
 
 Also, remember to celebrate the little wins along the way! Those small wins will stack up and become a large mountain of success over time.
+还有，记住庆祝一路走来的小的成功！随着时间的推移，这些小成功会累计成为一个巨大的成功之山。
 
 Here's another important thing to remember:  **give yourself the freedom to make mistakes.**  You're going to break production, you're going to make some bad database updates (I definitely have)—it's recoverable, it's not the end of the world or your job, and any experienced developer has done it. It's just a part of the process.
+还有一件重要的事情你要记住：**给你自己犯错误的空间。** 你会搞乱代码，你会做一些糟糕的数据库更新（我肯定有）——这些都是可以恢复的，这不是世界末日，也不是你工作的结束，任何有经验的开发人员都做犯这些错误。
 
 ### Your greatest skill as a new developer
+### 作为一名新的开发者你最好的技能
 
 You may not realize it, but your greatest skill as a new developer is that you've  **learned how to learn.**
+你可能没有意识到，作为一名新的开发人员最好的技能是**学习如何去学习**。
 
 You've learned how to take something hard, complex, obscure, and break it into pieces—work through it step by step.
+你已经学会了如何处理困难、复杂、模糊的问题并将它分成块并一步一步的解决。
 
 More than learning JavaScript, React, Ruby, or anything else, the best thing you've learned is how to teach yourself. Take this practiced skill you have and show up with it every single day.
+无论你学JavaScript、React、Ruby或者其他任何东西，你学到最好的事情是如何自学。多利用你掌握的这个技能并每以天都实践出来。
 
 ## Own your growth—no one else will.
+## 拥有你的成长
 
 This might be the most important statement for a developer at any stage of their career:  **your career is your own. You have to own it, and you have to own your growth.**
+对于一个处于职业生涯任何阶段的开发人员来说，这可能是最重要的：**你的事业是你自己的。你必须拥有它，你必须拥有你的成长。**
 
 Sometimes the your company, job position, or boss will help facilitate your growth, but in the end, it's up to you.
+有时你的公司、职位或老板会帮助你成长，但最终还是由你自己决定。
 
 Most companies have some kind of scheduled review process—possibly quarterly or yearly. If they do, great, but if they don't, own your growth! Ask your supervisor regularly for feedback, and do what they say. If someone mentions something you've never heard of, ask them about it or go do your own research it!
+大多数公司都有某种固定的审查程序——可能是季度或年度。如果他们有，那很好，如果没有，拥有自己的成长！定期征求上司的意见，并按他们说的去做。如果有人提到了你从未听说过的东西，问问他们，或者自己去研究一下!
 
 ### "The Power of Tiny Gains"
+### 微小收益的力量
 
 ![https://jamesclear.com/marginal-gains](https://www.freecodecamp.org/news/content/images/2020/05/new_developer.027.jpeg)
 
 https://jamesclear.com/marginal-gains
 
 One of my favorite books,  [_Atomic Habits_  by James Clear,][1]  has a great diagram titled "The Power of Tiny Gains." It's a simple diagram. It shows the difference between a 1%  _improvement_  and 1%  _decline_  every day.
+我最喜欢的一本书之一——《小习惯 詹姆斯·克莱尔》[1] 有一个非常棒的图表标题 “微小收益的力量”。这是一个简单的图表。它显示了每天1%的改善和1%的下降之间的差异。
 
 If you get 1% better every day, after a year you'll be almost 38 times better than you were at the start of the year! That's the power of "tiny gains," and it's just as true for becoming a great software developer.
+如果你每天都有1%的改善，一年之后，你会比年初好38倍!这就是“微小收益”的力量，对于成为一名伟大的软件开发人员来说也是如此。
 
 Every day you have an opportunity to learn something new—no matter how tiny it is. Maybe it's a new function on arrays you didn't know about, a different method for structuring CSS, a new text editor shortcut, or something new entirely like learning SQL and how data is stored at the database level.
+每天你都有机会学习新东西，不管它有多小。也许是一个您不知道的数组上的新函数，一种不同的CSS结构化方法，一个新的文本编辑器快捷方式，或者是一些全新的东西，比如学习SQL以及如何在数据库级别存储数据。
 
 Regardless, aim to be 1% better every day (most days you'll end up doing much more) and the growth from the first few years of your career will be astounding.
+无论如何，每天提高1%(大多数日子你会做得更多)，你职业生涯最初几年的成长将是惊人的。
 
 ### One page per day
+### 每天一页
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-29-at-10.10.23-AM.png)
 
@@ -180,12 +203,16 @@ Over time, he grew an extensive knowledge of Postgresql and was able to start co
 It's the perfect example of tiny gains stacking up—just one page per day. Any of us can do that, and I encourage you to take the same philosophy and apply it to whatever language or system you're working with!
 
 ### "Practice make perfect"
+### 实践出真知
 
 You've probably heard this phase before:  _"practice makes perfect."_
+你以前可能听说过这个短语:实践出真知。
 
 My piano teacher growing up used a different phrase:  _"**perfect**  practice makes perfect."_
+我的钢琴老师使用了不同的短语：**完美**的实践出真知。
 
 I think he was right. I could practice the piano in the wrong way—with bad technique, sloppy, without a steady rhythm—and that's the result I would get: sloppy piano playing.
+我认为他说的对，我可能会用错误的方式练习钢琴——糟糕的技术，马虎，没有稳定的节奏——结果就是:马虎的钢琴演奏。
 
 It's not just practice, but  _how_  you practice that matters. I could practice the first measure of a song over and over and get it down perfectly, but if I never pushed beyond the first measure I would never learn the song. I could play that first measure of the song at the level of a world-class pianist, but I wanted to  _play_  the piano, so I had to learn the whole song.
 
@@ -220,8 +247,10 @@ Having this T-shape ability will help you become a better developer as a whole. 
 In the beginning this little foray into all of the aspects of development is also useful to find what you're drawn to, and to give you the bigger picture of all of the moving pieces in the software world.
 
 Follow your interests and stay hungry to learn!
+追随你的兴趣，保持求知欲!
 
 ## Tips for being a great new developer
+## 为新开发者的一个建议
 
 Now that we've covered your expectations and how to think about them, here's some practical tips to make you a great new developer—one your teammates love to work with.
 

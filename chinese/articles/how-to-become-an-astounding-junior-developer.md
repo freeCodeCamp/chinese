@@ -195,13 +195,15 @@ Regardless, aim to be 1% better every day (most days you'll end up doing much mo
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-29-at-10.10.23-AM.png)
 
 I heard a story on a developer podcast once about the guy who maintains the  `pg`  gem for Ruby. This is the gem that is the interface between your Ruby code and the Postgresql database. It's some pretty serious stuff, and it's used by most Ruby developers every single day.
+我曾经在一个博客上听说过一个故事，讲的是一位维护Ruby的`pg` gem。这是Ruby和Postgresql之间的一个接口。这是一个相当严肃的事情，因为大多数Ruby开发人员每天都在使用它。
 
 The story of how he became the maintainer of this gem was interesting. He said that when he was first getting started, he would open up the Postgresql documentation and read one page—just one page each and every day.
+他如何成为gem的维护者的故事非常有趣。他说当他刚开始的时候，他会打开Postgresql文档并阅读一页——每天只读一页。
 
-Over time, he grew an extensive knowledge of Postgresql and was able to start contributing to the  `pg`  gem. After a little while longer, he became the maintainer of that gem.
+Over time, he grew an extensive knowledge of Postgresql and was able to start contributing to the  `pg`  gem. After a little while longer, he became the maintainer of that gem.随着时间的推移，他对Postgresql有了广泛的了解，并开始为“pg”gem做出贡献。过了一段时间，他成为了gem的维护者。
 
 It's the perfect example of tiny gains stacking up—just one page per day. Any of us can do that, and I encourage you to take the same philosophy and apply it to whatever language or system you're working with!
-
+这是积累点滴的完美例子——每天一页就够了。我们每个人都可以做到这一点，我鼓励你将同样的理念应用到你正在使用的任何语言或系统中!
 ### "Practice make perfect"
 ### 实践出真知
 
@@ -215,24 +217,33 @@ I think he was right. I could practice the piano in the wrong way—with bad tec
 我认为他说的对，我可能会用错误的方式练习钢琴——糟糕的技术，马虎，没有稳定的节奏——结果就是:马虎的钢琴演奏。
 
 It's not just practice, but  _how_  you practice that matters. I could practice the first measure of a song over and over and get it down perfectly, but if I never pushed beyond the first measure I would never learn the song. I could play that first measure of the song at the level of a world-class pianist, but I wanted to  _play_  the piano, so I had to learn the whole song.
+重要的不只是实践，而是你如何实践。我可以一遍又一遍地练习一首歌曲的第一小节，并把它写得很完美，但如果我只关注第一小节，我就永远学不会这首歌。我可以以世界级钢琴家的水平演奏这首歌的第一小节，但我想弹钢琴，所以我不得不学习整首歌。
 
 This is a perfect parallel for development. The way you "practice" development (your daily habits, methods and routines for development) determines the type of developer you will become.
+这对于开发来说是一个完美的对比。你实践开发的方式(你的日常习惯、开发方法和常规)决定了你将成为什么样的开发人员。
 
 In the beginning you'll make lots of mistakes (everyone does), but if you're conscious of your work, you'll notice areas you can improve. These are perfect practice moments: the opportunity to learn something new or do something in a better way.
+一开始你会犯很多错误(每个人都会犯)，但是如果你对你的工作上心，你就会发现你有可以改进的地方。这些都是完美的练习时刻:学习新东西或以更好的方式做某事的机会。
 
 When you look back on your career ten years from now, you will want to have had ten years of growth, practice, and learning—not one year of growth, practice, and learning ten times.
+当你从现在开始回顾十年的职业生涯时，你想要的应该是十年的成长、实践和学习，而不是一年的成长、实践和学习经历十次。
 
 So ask those dumb questions. Ask the obvious questions. When someone mentions something you don't know anything about, boldly ask, "What's that?" My hope is that they respond in a kind and teaching manner, but regardless, be ready to learn.
+所以去问那些愚蠢的问题。问那些可能显而易见的问题。当别人提到一些你不知道的事情时，大胆地问:“那是什么?”我希望他们能以一种和蔼可亲的方式回应我，无论如何，你都要做好学习的准备。
 
 It all comes back to owning your growth.
+这一切都会见证你的成长。
 
 ## T-shaped people
+## T字型的人
 
 ![A "T-shaped" person](https://www.freecodecamp.org/news/content/images/2020/05/new_developer2.001.jpeg)
 
 A "T-shaped" person
+一个T字型的人
 
 In the beginning of your development career, there are so many topics that you can benefit from knowing, so you want to spread your effort and knowledge across a wide range of subjects.
+在您的开发生涯开始时，您可以从了解许多主题中获益，因此您希望将您的努力和知识传播到广泛的主题中。
 
 If you're aiming at becoming a full-stack developer, that list might include things like HTML, CSS, JS, a backend language of your choice, SQL, Git, etc. There's so much easily attainable knowledge and benefit right on the surface of each of those topics that can be acquired by casting a wide net and taking it all in.
 

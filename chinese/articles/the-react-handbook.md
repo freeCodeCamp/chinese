@@ -3752,19 +3752,19 @@ const App = () => (
 )
 ```
 
-### `SECTION 4: PRACTICAL EXAMPLES`
+### 第 4 部分：实例
 
-`2 very simple applications to explain some of the concepts introduced so far.`
+接下来通过两个简单的应用来阐释我们已经介绍过的概念。
 
-### `A very simple example of building a counter in React`
+### 用 React 搭建一个简单的计数器
 
-`In this short example we’ll build a very simple example of a counter in React, applying many of the concepts and theory outlined before.`
+在接下来的简短示例中，我们要用 React 搭建一个非常简单的计数器，来介绍前面提到过的概念和理论。
 
-`Let’s use Codepen for this. We start by forking the  [React template pen][99].`
+我们用 Codepen 来实现。我们从复制 [React template pen][99]开始。
 
-> `_In Codepen we don’t need to import React and ReactDOM as they are already added in the scope._`
+> 使用 Codepen 可以不用引入 React 和 ReactDOM，因为它们已经添加到环境中了。
 
-`We show the count in a div, and we add a few buttons to increment this count:`
+我们在一个 div 元素中展示计数器的数，并且给它添加几个按钮来增加计数。
 
 ```
 const Button = ({ increment }) => {
@@ -3785,7 +3785,7 @@ const App = () => {
 ReactDOM.render(<App />, document.getElementById('app'))
 ```
 
-``Let’s add the functionality that lets us change the count by clicking the buttons, by adding a  `onClickFunction`  prop:``
+我们给按钮加上 `onClickFunction` 属性，这样点击按钮就能改变计数了。
 
 ```
 const Button = ({ increment, onClickFunction }) => {
@@ -3812,11 +3812,11 @@ const App = () => {
 ReactDOM.render(<App />, document.getElementById('app'))
 ```
 
-``Here, every Button element has 2 props:  `increment`  and  `onClickFunction`. We create 4 different buttons, with 4 increment values: 1, 10, 100, 1000.``
+示例中的每个按钮都有 2 个属性：`increment` 和 `onClickFunction`。我们创建了 4 个不同的按钮，点击它们增加的值分别是：1、10、100、1000。
 
-``When the button in the Button component is clicked, the  `incrementCount`  function is called.``
+点 Button 组件中的 button 元素会调用 `incrementCount` 函数。
 
-`This function must increment the local count. How can we do so? We can use hooks:`
+函数需要增加本地的计数值。我们通过 hooks 来实现：
 
 ```
 const { useState } = React
@@ -3844,27 +3844,27 @@ const App = () => {
 ReactDOM.render(<App />, document.getElementById('app'))
 ```
 
-`` `useState()`  initializes the count variable at 0 and provides us the  `setCount()`  method to update its value.``
+`useState()` 将计数的初始值设置为 0，并让我们通过 `setCount()` 方法来更新计数值。
 
-``We use both in the  `incrementCount()`  method implementation, which calls  `setCount()`updating the value to the existing value of  `count`, plus the increment passed by each Button component.``
+我们在 `incrementCount()` 方法中使用了这两个值，我们通过 `setCount()` 来更新 `count` 的当前值，更新的值为当前值加上每个 Button 组件的增加值。
 
-`The complete example code can be seen at  [https://codepen.io/flaviocopes/pen/QzEQPR][100]`
+在 这里[https://codepen.io/flaviocopes/pen/QzEQPR][100] 可以参考完整的代码。
 
-### `Fetch and display GitHub users information via API`
+### 通过 API 获取和展示 GitHub 用户的信息
 
-``Very simple example of a form that accepts a GitHub username and once it receives a  `submit`  event, it asks the GitHub API for the user information, and prints them.``
+在下面的简单示例中，表单可以接受一个 GitHub 用户名，当触发表单的 `submit` 事件时，会通过 GitHub API 询问用户信息，并打印出来。
 
-``This code creates a reusable  **Card**  component. When you enter a name in the  `input`field managed by the  **Form**  component, this name is  _bound to its state_.``
+这部分代码创建了一个可复用的 **Card** 组件。当你在 **Form** 组件下的 `input` 中输入名字时，这个名字就 _被绑定到状态_ 中。
 
-``When  _Add card_  is pressed, the input form is cleared by clearing the  `userName`  state of the  **Form** component.``
+点击 _Add card_ 会清空 **Form** 组件中的 `userName` 状态，从而清空输入栏。
 
-``The example uses, in addition to React, the  [Axios][101]  library. It’s a nice useful and lightweight library to handle network requests. Add it to the Pen settings in Codepen, or install it locally using  `npm install axios`.``
+这个示例除了 React，还是用了 [Axios][101] 库。Axios 是一个好用且轻量的用于处理网络请求的库。使用方式是将它添加到 Codepen 的设置中，或者在本地通过 `npm install axios` 下载。
 
-``We start by creating the  `Card`  component, the one that will display our image and details as gathered from GitHub. It gets its data via props, using``
+我们从创建 `Card` 组件开始，它用于展示从 GitHub 获取的图像和信息。它通过属性获取这些信息：
 
--   `` `props.avatar_url`  the user avatar``
--   `` `props.name`  the user name``
--   `` `props.blog`  the user website URL``
+- `props.avatar_url` 表示用户的头像
+- `props.name` 表示用户名
+- `props.blog` 表示用户的网站地址
 
 ```
 const Card = props => {
@@ -3880,7 +3880,7 @@ const Card = props => {
 }
 ```
 
-``We create a list of those components, which will be passed by a parent component in the  `cards`  prop to  `CardList`, which simply iterates on it using  `map()`  and outputs a list of cards:``
+我们通过 `CardList` 这个父组件来展示一系列的 Card 组件。我们给 `CardList` 传递 `cards` 属性，它通过 `map()` 方法遍历所有的 card 来输出组件：
 
 ```
 const CardList = props => (
@@ -3892,7 +3892,7 @@ const CardList = props => (
 )
 ```
 
-``The parent component is App, which stores the  `cards`  array in its own state, managed using the  `useState()`  Hook:``
+父组件是 App，它将 `cards` 数组保存在自己的状态中，并通过 `useState()` hook 来管理 cards:
 
 ```
 const App = () => {
@@ -3905,17 +3905,20 @@ const App = () => {
 }
 ```
 
-``Cool! We must have a way now to ask GitHub for the details of a single username. We’ll do so using a  `Form`  component, where we manage our own state (`username`), and we ask GitHub for information about a user using their public APIs, via Axios:``
+我们需要有一种方法向 GitHub 来询问某个用户名的详细信息。我们通过一个 `Form` 组件，管理自己的 `username` 状态，并通过 Axios 来请求 GitHub 的公共 API 获取信息：
 
 ```
 const Form = props => {
   const [username, setUsername] = useState('')
   handleSubmit = event => {
     event.preventDefault()
-axios<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(221, 74, 104);">get</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token template-string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">`https://api.github.com/users/</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>username<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">`</span></span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(221, 74, 104);">then</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token parameter" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;">resp</span> <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(154, 110, 58);">=&gt;</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span>
-  props<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(221, 74, 104);">onSubmit</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>resp<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>data<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
-  <span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(221, 74, 104);">setUsername</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">''</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
-<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>  }
+
+    axios.get(`https://api.github.com/users/${username}`).then(resp => {
+      props.onSubmit(resp.data)
+      setUsername('')
+    }) 
+  }
+  
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -3931,9 +3934,9 @@ axios<span class="token punctuation" style="box-sizing: inherit; margin: 0px; pa
 }
 ```
 
-``When the form is submitted we call the  `handleSubmit`  event, and after the network call we call  `props.onSubmit`  passing the parent (`App`) the data we got from GitHub.``
+我们出发 `handleSubmit` 事件提交表单，在请求成功后，我们调用 `props.onSubmit` 方法，把从 GitHub 获取的数据传递给父组件 `App`。
 
-``We add it to  `App`, passing a method to add a new card to the list of cards,  `addNewCard`, as its  `onSubmit`  prop:``
+我们给 `onSubmit` 属性添加 `addNewCard` 方法，添加新的 card。
 
 ```
 const App = () => {
@@ -3950,13 +3953,13 @@ const App = () => {
 }
 ```
 
-`Finally we render the app:`
+最后渲染应用：
 
 ```
 ReactDOM.render(<App />, document.getElementById('app'))
 ```
 
-`Here is the full source code of our little React app:`
+以下是这个 React 应用的完整源代码：
 
 ```
 const { useState } = React
@@ -3976,12 +3979,15 @@ const Form = props => {
   const [username, setUsername] = useState('')
   handleSubmit = event => {
     event.preventDefault()
-axios
-  <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(221, 74, 104);">get</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token template-string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">`https://api.github.com/users/</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>username<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">`</span></span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
-  <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(221, 74, 104);">then</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token parameter" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;">resp</span> <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(154, 110, 58);">=&gt;</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span>
-    props<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(221, 74, 104);">onSubmit</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>resp<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>data<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
-    <span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(221, 74, 104);">setUsername</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">''</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
-  <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>  }
+
+    axios
+      .get(`https://api.github.com/users/${username}`)
+      .then(resp => {
+        props.onSubmit(resp.data)
+        setUsername('')
+      }) 
+  }
+
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -4010,11 +4016,11 @@ const App = () => {
 ReactDOM.render(<App />, document.getElementById('app'))
 ```
 
-`This is the final result:`
+这是最终成果：
 
-`![](https://cdn-media-1.freecodecamp.org/images/cZoqPqmbwvuUaIiWJ16fTj6VOhTIquXDECnP)`
+![](https://cdn-media-1.freecodecamp.org/images/cZoqPqmbwvuUaIiWJ16fTj6VOhTIquXDECnP)
 
-`Check it out on Codepen at  [https://codepen.io/flaviocopes/pen/oJLyeY][102]`
+也可以在 Codepen 上查看[https://codepen.io/flaviocopes/pen/oJLyeY][102]
 
 ### `SECTION 5: STYLING`
 

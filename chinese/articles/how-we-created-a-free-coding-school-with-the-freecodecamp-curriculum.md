@@ -1,6 +1,6 @@
 > * 原文地址：[We Created a Local Free Coding School Using the freeCodeCamp Curriculum. Here's What We Learned. 我们是如何采用 freeCodeCamp 的课程创办一所免费编程学校的](https://www.freecodecamp.org/news/how-we-created-a-free-coding-school-with-the-freecodecamp-curriculum/)
 > * 原文作者：Gwendolyn Faraday
-> * 译者：
+> * 译者：lihkai01
 > * 校对者：
 
 ![We Created a Local Free Coding School Using the freeCodeCamp Curriculum. Here's What We Learned.](https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)

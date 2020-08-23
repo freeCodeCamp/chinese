@@ -3,20 +3,21 @@
 > * 译者：lihkai01
 > * 校对者：
 
-![We Created a Local Free Coding School Using the freeCodeCamp Curriculum. Here's What We Learned.](https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
+![我们是如何采用 freeCodeCamp 的课程创办一所免费编程学校的](https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-_While this picture shows an in-person classroom, we have moved our school fully remote as a result of the COVID-19 situation._
+_这是一张学生在课室上课的照片，由于新冠肺炎疫情我们采取了全面的远程教学。_
 
-If you want to learn how to code, there are generally three options to choose from:
+若你想学习编程，你总共有三种方法可以选择：
 
-1.  You can teach yourself and find your own curriculum.
-2.  Go to college and get a computer science/IT degree.
-3.  Or attend a coding school. Coding schools are hands-on crash courses that are designed to get you up to speed quickly so you can find your first software development job within three months to one year.
+1.  你可以自学或寻找相关的课程
+2.  到学院或者大学选修计算机学科/信息技术学位
+3.  或者参与编程学校。编程学校是动手实作的速成班，课程的设计可以让你快速寻地在3个月至1年的时间内找到自己的第一份软件开发工作。
 
-Option number one is the cheapest, but also the most frustrating and difficult. It's so easy to get stuck along the way and want to give up.
+虽然第一个选项是最便宜的，但是它也是最让人感到挫折和困难的一个选项。我们会在自学编程的一路上遇到各种障碍导致我们想要放弃。
 
-Options two and three could work out well, if you can afford to take time off work (or at least work fewer hours), pay the tuition plus living expenses while you are attending and looking for a job, and still be able to manage your family and personal life. Not everyone is able to do that.
+如果你可以有时间请假（或者每周减少工作数小时），当你在寻找新工作时支付生活开销的同时缴交编程课程的费用，同时还可以照顾家庭和个人生活的话，那第二个和第三个选项会是不错的选择。但我相信不是所有人都可以做到。
 
+这就是为什么我们创办了[freeCodeSchool Indy][1].这是一个采用 freeCodeCamp 课程的免费编程课程，我们会在3个月的业余时间指导学生完成编程学校的课程。
 This is why we created  [freeCodeSchool Indy][1]. It's a free coding program based off of the freeCodeCamp curriculum where we guide students through part-time coding school programs for three months.
 
 We have two two-hour classes per week - Monday and Wednesday from 6-8 pm, where we teach them everything from HTML basics to JavaScript and Intro to React.

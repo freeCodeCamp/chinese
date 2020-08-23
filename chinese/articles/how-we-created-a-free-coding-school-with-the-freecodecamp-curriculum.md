@@ -17,16 +17,15 @@ _这是一张学生在课室上课的照片，由于新冠肺炎疫情我们采�
 
 如果你可以有时间请假（或者每周减少工作数小时），当你在寻找新工作时支付生活开销的同时缴交编程课程的费用，同时还可以照顾家庭和个人生活的话，那第二个和第三个选项会是不错的选择。但我相信不是所有人都可以做到。
 
-这就是为什么我们创办了[freeCodeSchool Indy][1].这是一个采用 freeCodeCamp 课程的免费编程课程，我们会在3个月的业余时间指导学生完成编程学校的课程。
-This is why we created  [freeCodeSchool Indy][1]. It's a free coding program based off of the freeCodeCamp curriculum where we guide students through part-time coding school programs for three months.
+这就是为什么我们创办了 [freeCodeSchool Indy][1] 。这是一个采用 freeCodeCamp 课程的免费编程课程，我们会在3个月的业余时间指导学生完成编程学校的课程。
 
-We have two two-hour classes per week - Monday and Wednesday from 6-8 pm, where we teach them everything from HTML basics to JavaScript and Intro to React.
+我们每周有两堂两小时的课程 - 星期一和星期三的傍晚6时至晚上8时，我们会教导从基本的 HTML 到 JavaScript 的所有东西甚至还会介绍 React。
 
-The students are expected to spend at least 6 hours per week studying on their own, and can optionally attend office hours on Sundays that we hold from 1-5 pm. If they complete the first three months, then they are able to attend a second three month program, where they can learn about back-end web development in Node.js.
+每位学生需要花大约每周6个小时的时间自学，他们可以选择参与我们在星期日下午1时至5时举办的课程。若学生们在首三个月内完成第一个课程，那他们就可以参与接下来三个月的第二个课程，学习使用 Node.js 进行后端网页开发。
 
-We started working on this idea over a year ago and it's exciting to be able to say that we completed our first cohort in May. Now we can share what we have learned in this article.
+我们开始了这项计划一年多了，此时我们可以很高兴地说在今年五月份我们顺利完成了第一轮的教学。现在我们可以在这篇文章分享我们所学到的东西。
 
-## Our Goal in Building a Free Coding School
+## 我们的目标是建立一所免费的编程学校
 
 Our goal from the beginning was to provide accessible, supportive education for everyone regardless of income or life circumstances (like ability to take time off work).
 

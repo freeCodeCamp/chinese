@@ -55,21 +55,21 @@ _这是一张学生在课室上课的照片，由于新冠肺炎疫情我们采�
 
 过程中我们也鼓励学生尝试更多课程以外的作业，以便学生能够在进行或者结束课程的时候有能力领取 freeCodeCamp 的文凭认证。
 
-## How We Found a Space to Host Classes
+## 我们如何寻找开课的地点
 
-The Indianapolis Public Library generously agreed to host our classes and give us space for office hours as well. The size of the space in the computer lab was limited, so the maximum number of students we could take per class was 22.
+印第安纳公共图书馆慷慨地同意我们在那里开课，就算是工作时间也没关系。但电脑室的空间有限，所以每班我们只能收22名学生。
 
-We could have used a larger conference room in the library to accommodate a larger class, but then we wouldn't have been able to take students who didn't own a laptop – and that wouldn't have been very accessible for everyone.
+虽然我们可以使用更大的会议厅安排更大的班级，但我们并不能安排没有手提电脑的学生在这里学习，这样会让所有人非常不便。
 
-We didn't plan to be a remote program, so we had to adjust our classes to use Discord for lectures and all student communication when COVID-19 happened. More on that later.
+我们原本没有计划实行远程授课，但受到疫情的影响，我们必须调整我们的课程，使用 Discord 进行授课和联络学生。
 
-## How we Chose Technology Tools
+## 我们如何选择科技工具
 
-We prepared a Discourse forum (like the freeCodeCamp forum) before the classes started so students could log in, get announcements, ask questions, and post assignments. It also gave the admin staff some privileges to keep track of students and moderate student interactions.
+我们准备一个 Discord 论坛社群（就像 freeCodeCamp 论坛一样）让学生可以在上课之前登入，以获取通知，提问问题和分布作业。这个平台也提供管理员追踪学生学习进度和互动交流的功能
 
-## How we Administered the School
+## 我们如何管理学校
 
-### Finding Students
+### 寻找学生
 
 When we were planning this program, our worry was that we would not get enough interest and all our planning would be for nothing. The reality was that we had way too much interest and could not accommodate every student. For 22 slots, we had over 140 people who wanted to participate! And that was without doing that much marketing.
 
@@ -77,7 +77,7 @@ It was very exciting to get so much interest in our program, but we also had to 
 
 We decided to whittle down the field by requiring people to show up for three pre-screening activities where they would complete some basic challenges, like  [Code.org's Flappy Game][3]. This let us know which students were dedicated to showing up and got the number of people in line down to around 80. That was still too way too many for the space we had so had to do a random lottery to select the final students.
 
-### Teaching Students
+### 教导学生
 
 Every student learns differently and has their own personality and preferences. It's unreasonable to expect that we can just lecture the students for an hour and they will all be able to pick up all that information and build the lab without issue.
 
@@ -85,7 +85,7 @@ We decided on a format for lectures where we start off every lecture by asking i
 
 We also often leave the last 30+ minutes of the 2-hours classes for the students to be able to work on their class projects.
 
-### Collecting Assignments
+### 收集作业
 
 Some people don't turn in assignments. This could mean they are shy about sharing their code where other students can see, or that they just don't think it's necessary since it's a free coding school after all, and some of their classmates aren't doing it either.
 
@@ -99,7 +99,7 @@ Now assignments are turned in via a Discord channel on the server we have for ou
 
 Since we manage our whole program from the same Discord server – including hosting lectures, answering questions, and managing the program – we are seeing an increase in the number of assignments turned in. We are also getting more useful feedback that students are getting from staff and volunteers.
 
-### Deadlines
+### 期限
 
 Should we have deadlines for turning in projects? Our opinion right now is no, we shouldn't.
 
@@ -109,7 +109,7 @@ If someone finishes in 3 months and another student in 4 months, then they both 
 
 Someday, we will be able to have rolling admissions for our coding and help students at a more granular level. Until then, the least we can do is stay flexible to accommodate them and let them turn in the rest of the projects whenever they can.
 
-### Getting Students to Ask for Help
+### 让学生寻求帮助
 
 This has been one of our biggest problems! Some people fall behind and some students are confused but don't want to ask for help. Some students are so confused that they don't even know what kind of help to ask for.
 
@@ -119,7 +119,7 @@ If they prefer to type out the question, they can post it in the student chat or
 
 We can only do so much. If students are lost or confused and don't want to ask for help, there is no way for us to fix that. We try hard to meet them where they are, but they also have to make some effort to come to us.
 
-### Student Surveys
+### 问卷调查
 
 Performing regular student surveys is really helping us to get critical feedback for our program.
 
@@ -132,7 +132,7 @@ While we received a lot of good information, in hindsight, we should have taken 
 3.  How can we better help you achieve your goals?
 4.  Do you have any other feedback for us?
 
-### Dealing with Drop Outs
+### 关心退出的学生
 
 Life happens, things change. We have to understand that students who fully intend to participate might have to drop out due to unavoidable circumstances.
 
@@ -140,27 +140,27 @@ If they communicate with us about the situation, we offer them a spot in the nex
 
 If they simply do not show up or communicate with us, then they are free to reapply in the future, but no spot will be saved for them.
 
-## Staff and Volunteers
+## 职员与自愿者
 
-### Soliciting Volunteers
+### 征求自愿者
 
 Without volunteers, it would be quite overwhelming to run a program like this. Here are some of the different types of volunteers you will need to be successful.
 
-### Responsibilities:
+### 职责：
 
-1.  **Organizers –** Yes, we are volunteers too.  We are fortunate to have an amazing team of organizers who run the program. This includes myself, two other developers, and a computer lab supervisor from the library who also knows how to code. We chat several times per week in Discord to make sure the program is running smoothly and students are progressing. I think 3-5 is a pretty good number for an organizing team, but we might add more to do specific things, such as 'community manager' or 'volunteer coordinator.'
-2.  **Presenters –** These people give lectures during class times or special help sessions held on weekends usually. This is the hardest type of volunteering to manage. In our program, the lectures are 1.5-2 hours long and there are only 24 of them, so every single one has to be on point and flow with the rest of the curriculum. Some well-meaning volunteers might not be the right fit for giving lectures for people who are brand new to development. It is  **very**  important to be clear about what you want them to cover in the lecture, down to the individual points and expected learning outcomes. We also made sure to give volunteers a boilerplate slide deck to work off of so it matched the rest of the curriculum.
-3.  **Mentors –**  Students will not only have coding questions, but also have questions about their careers, networking, etc. Mentorship is great for answering these types of questions. We are currently working on setting up our mentorship program where volunteer mentors will check in with students at least once per week to make sure they are on track and answer any questions they have. One of the reasons for the delay is we have been working on a system for how to handle any complaints of inappropriate language or behavior that might take place when students meet one on one with volunteers.
-4.  **Lab Assistants –**  Lab assistants are there to help out synchronously during live lab sessions, usually with problems running software or debugging. We utilized lab assistants much more when we held in-person classes. With things being remote, we can't see the students' screens so we have had to just have a few people available to answer questions in the chat if people get stuck.
-5.  **General Helpers –** These people help answer students' questions in the chat and perform other tasks like reviewing projects and portfolios. They are also useful for students to rubber duck off of or for encouragement.
+1.  **发起人 –** Yes, we are volunteers too.  We are fortunate to have an amazing team of organizers who run the program. This includes myself, two other developers, and a computer lab supervisor from the library who also knows how to code. We chat several times per week in Discord to make sure the program is running smoothly and students are progressing. I think 3-5 is a pretty good number for an organizing team, but we might add more to do specific things, such as 'community manager' or 'volunteer coordinator.'
+2.  **主持人 –** These people give lectures during class times or special help sessions held on weekends usually. This is the hardest type of volunteering to manage. In our program, the lectures are 1.5-2 hours long and there are only 24 of them, so every single one has to be on point and flow with the rest of the curriculum. Some well-meaning volunteers might not be the right fit for giving lectures for people who are brand new to development. It is  **very**  important to be clear about what you want them to cover in the lecture, down to the individual points and expected learning outcomes. We also made sure to give volunteers a boilerplate slide deck to work off of so it matched the rest of the curriculum.
+3.  **导师 –**  Students will not only have coding questions, but also have questions about their careers, networking, etc. Mentorship is great for answering these types of questions. We are currently working on setting up our mentorship program where volunteer mentors will check in with students at least once per week to make sure they are on track and answer any questions they have. One of the reasons for the delay is we have been working on a system for how to handle any complaints of inappropriate language or behavior that might take place when students meet one on one with volunteers.
+4.  **助理 –**  Lab assistants are there to help out synchronously during live lab sessions, usually with problems running software or debugging. We utilized lab assistants much more when we held in-person classes. With things being remote, we can't see the students' screens so we have had to just have a few people available to answer questions in the chat if people get stuck.
+5.  **帮手 –** These people help answer students' questions in the chat and perform other tasks like reviewing projects and portfolios. They are also useful for students to rubber duck off of or for encouragement.
 
-### Volunteer Handbook
+### 自愿者手册
 
 We made a two-page handbook detailing expectations for volunteer behavior as well as requirements for participation in our program. It's pretty basic right now, but we will be building off of it as we go along I'm sure.
 
 We also give them a link to the  [freeCodeCamp code of conduct][4]  because it's short, sweet, and to the point: be kind, understanding, etc.
 
-### Making Sure Staff has the Tools to Succeed
+### 确保员工拥有成功的工具
 
 We have definitely made a few mistakes, including letting a presenter make his own slides and then having to tell him at the last minute that they needed to change. It didn't go over well. We should have been much clearer with what we wanted from him.
 
@@ -170,7 +170,7 @@ Right now, we have a volunteer handbook, lesson plans and slide decks for teachi
 
 As this program grows, we are going to need to manage more volunteers and even paid staff. We are preparing for this by documenting our processes to make onboarding a little bit smoother each time.
 
-### Community Partners
+### 社区伙伴
 
 We are currently trying to form community partnerships to get sponsors for funding as well as donations of tech equipment.
 
@@ -180,9 +180,9 @@ Also, libraries only have limited hours, and, for students who work multiple job
 
 In the future, we hope to be able to provide internet access and laptop computers for students who need them.
 
-## Organizing
+## 发起与执行
 
-### Marketing
+### 行销策略
 
 We don't have any marketing experts on our team. Our marketing efforts basically consist of making sure we keep our branding that we agreed upon - colors, verbiage, etc. - consistent and collectively sharing updates on social media.
 
@@ -192,7 +192,7 @@ The public library has also been helpful with reaching out to many different com
 
 As we grow, we might start expanding our social media reach, but with a limited budget right now, we are just gaining traction organically.
 
-### Remote Livestreams
+### 远程直播
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screen-Shot-2020-06-08-at-10.10.27-PM.png)
 
@@ -204,7 +204,7 @@ Discord has been a great option for us, because we can host livestreams inside o
 
 In addition, Discord allows us to screen share with up to 50 people at a time in the voice chat rooms. And that's all for free! We looked into Zoom and some other tools, but we are going to stick with Discord until we need - and can afford - something with more features.
 
-### Incorporating & Funding
+### 合并 & 筹款
 
 We wanted to start asking companies and people for funding so we had to incorporate as a non-profit last year. In the US, this process takes about six months. We first had to register as a company with our state and then draw up business documents and apply for non-profit status with the federal government.
 
@@ -212,9 +212,9 @@ At the beginning of this year, we finally got confirmation that we are a 501c3 n
 
 Do you have any suggestions for us in this area? Please leave a comment on this article or reach out to us at contact@freecodeschoolindy.com.
 
-## Communication Tools
+## 通讯工具
 
-### Forum
+### 论坛
 
 As previously mentioned, we started off using a Discourse forum, but found that it was hard to maintain and wasn't meeting our needs. People found it hard to use, especially on mobile. We also had trouble getting staff and students to login and check it often enough to make it worth the effort. That is why we got rid of the forum and moved our whole program over to Discord.
 
@@ -226,13 +226,13 @@ We now have a Discord server set up for the whole coding school! We use it to ho
 
 Having everything in one place has been the best decision we have ever made. Not only are our costs lower, but it makes the program administration so much easier. Everyone we need to interact with is either already on Discord, or just needs to be invited to Discord :)
 
-## Graduation
+## 毕业
 
 We had grand plans of doing our first in-person graduation for students this year. Unfortunately, due to COVID-19, those plans had to be scrapped. We had to make do with mailing out certificates to students who completed the program and giving everyone a (virtual) pat on the back for finishing.
 
 Now that our classes are virtual, we would love to be able to do something fun for the graduation of our second cohort at the end of August. Do you have any ideas? Let us know if you do.
 
-## Conclusion
+## 总结
 
 Putting this program together might have been the hardest thing I've ever done. It's a lot of work but very rewarding. It can be life-changing for students.
 
@@ -244,11 +244,11 @@ We are working on open-sourcing our curriculum we used – slides, projects, fre
 
 I'm interested in your thoughts. Do you have any ideas for things we can do better next time around? Please reach out to me and let me know.
 
-My Twitter:  [@gwen\_faraday][8]
+推特账号:  [@gwen\_faraday][8]
 
-My YouTube:  [Faraday Academy][9]
+YouTube 账号:  [Faraday Academy][9]
 
-Program Website:  [freecodeschoolindy.com][10]
+课程网址:  [freecodeschoolindy.com][10]
 
 [1]: https://freecodeschoolindy.com/
 [2]: https://github.com/freecodeschoolindy

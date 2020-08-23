@@ -71,85 +71,85 @@ _这是一张学生在课室上课的照片，由于新冠肺炎疫情我们采�
 
 ### 寻找学生
 
-When we were planning this program, our worry was that we would not get enough interest and all our planning would be for nothing. The reality was that we had way too much interest and could not accommodate every student. For 22 slots, we had over 140 people who wanted to participate! And that was without doing that much marketing.
+当我们在计划这个课程的时候，我们会担心没有人会有兴趣，那么这个计划最终会化为乌有。但现实是有兴趣的学生太多以致无法接受所有的报名。22个名额，我们接受了超过140人的报名！这是还没有推动任何的市场营销成绩。
 
-It was very exciting to get so much interest in our program, but we also had to decide which students to take and how to choose in a fair way.
+能够有那么热烈的反应，我们感到非常兴奋，但也需要决定如何公平地遴选学生。
 
-We decided to whittle down the field by requiring people to show up for three pre-screening activities where they would complete some basic challenges, like  [Code.org's Flappy Game][3]. This let us know which students were dedicated to showing up and got the number of people in line down to around 80. That was still too way too many for the space we had so had to do a random lottery to select the final students.
+我们决定进行一论的筛选活动以减少报名学生的数量，学生必须完成3个简单的编程挑战，例如[Code.org 的软盘游戏（ Flappy Game ）][3]。这个活动可以让我们知道哪些报名的学生对编程有真正有兴趣也顺利将报名人数减少至80人左右。但还是无法安排所有的学生进入我们有限的空间内，只好以抽签的方式决定最终能够参与课程的学生。
 
 ### 教导学生
 
-Every student learns differently and has their own personality and preferences. It's unreasonable to expect that we can just lecture the students for an hour and they will all be able to pick up all that information and build the lab without issue.
+每位学生都有自己的个性和喜好，学习方式各有不同。我们无法期望他们只上一个小时的课就能吸收所有资讯并毫无问题地完成他们的作业
 
-We decided on a format for lectures where we start off every lecture by asking if anyone has questions – usually we don't get many. Then, we go into the slides, and pause every ~15 minutes to give the students guided 'labs' so they can try out coding on their own with the support of having instructions and still being able to ask questions in the classroom.
+我们决定在每次上课之前先解答同学们的疑问，通常我们不会收到太多的问题。接着，就会以幻灯片的形式开始进入授课内容，每隔15分钟会暂停一下，让学生有时间尝试老师刚刚所教地东西。同时也会有指导员从旁给予协助，学生也可以在这个环节在课堂内提出问题。
 
-We also often leave the last 30+ minutes of the 2-hours classes for the students to be able to work on their class projects.
+我们也经常预留2小时课程的最后30分钟让学生做自己的作业。
 
 ### 收集作业
 
-Some people don't turn in assignments. This could mean they are shy about sharing their code where other students can see, or that they just don't think it's necessary since it's a free coding school after all, and some of their classmates aren't doing it either.
+有些学生不愿意提交作业。这意味着他们可能会因为分享自己的编码会让其他同学看见而感到害羞，或者会有人觉得这是个免费的课程所以不需要提交作业，更有一些人受班上同学的影响，同学不交那我也不要交。
 
-If it's the former, then we encourage them to share assignments with just the staff and let them know that we have all been in their shoes before.
+如果该位同学是害羞分享编码，那我们就会鼓励他分享给我们的职员看并让他知道我们也曾经和他一样不会写编码。
 
-If they aren't turning in assignments because they don't want to... well, there isn't much we can do about that. We try to discourage students from joining the class who don't want to fully participate in the program.
+如果该位同学是因为不想交作业，那我们也没什么好多说的。我们会尝试劝退那些不是真正想参与我们课程的学生。
 
-The assignments were originally being turning in on the forum, but we were getting really low engagement on there. Students weren't logging in very often and they were never asking questions there.
+所有学生的作业原本是在论坛内提交，但我们发现这样会非常没有效率。学生并没有经长登入和从不提问问题。
 
-Now assignments are turned in via a Discord channel on the server we have for our coding school.
+现在所有作业转向在我们学校的 Discord 频道里发布。
 
-Since we manage our whole program from the same Discord server – including hosting lectures, answering questions, and managing the program – we are seeing an increase in the number of assignments turned in. We are also getting more useful feedback that students are getting from staff and volunteers.
+自从我们将所有的课程搬运的 Discord 后，包括主持课程，回答问题，安排课程等，我们看到了作业缴交数量的增加。我们也从职员和自愿者那里得到了更多有建设性的回馈。
 
 ### 期限
 
-Should we have deadlines for turning in projects? Our opinion right now is no, we shouldn't.
+究竟我们需不需要为作业设下极限？我们目前的结果是不需要。
 
-Most of the first cohort got a bit behind and some of them finished the program weeks after the end. Should we punish people who finish, but just not on time? We don't think so and here is why: Everyone learns at their own pace.
+大多数第一批的学生的进度有一些慢，有的更在课程完成的数周后才完成学习。难道我们要惩罚那些有完成但不是在规定时间内完成的学生？我想我们不必这么做的原因是：大家都以自己的学习进度在学习。
 
-If someone finishes in 3 months and another student in 4 months, then they both should be rewarded the same for completing the program.
+如果有位学生在3个月内完成，另一位学生在4个月内完成课程，他们两个都同样是属于完成了这个课程。
 
-Someday, we will be able to have rolling admissions for our coding and help students at a more granular level. Until then, the least we can do is stay flexible to accommodate them and let them turn in the rest of the projects whenever they can.
+有一天，我们将会推行流动式的教学制度能够更全面地帮助学生。到了那个时候，我们能做的就是保持弹性地布置他们能够完成的作业。
 
 ### 让学生寻求帮助
 
-This has been one of our biggest problems! Some people fall behind and some students are confused but don't want to ask for help. Some students are so confused that they don't even know what kind of help to ask for.
+这是我们所面对到最大的问题！有一些学生落后于自己的同学并不清楚课程但又不寻求帮忙。有些学生对课程非常的混乱但他们并不知道要如何寻求帮助。
 
-You can't really force people to get help, but you can prompt them. The best way we have found to get them to ask questions is to do short review segments at the beginning of lectures and have scheduled study times where students can pop in and ask questions in a much smaller group setting.
+我们无法强迫别人向我们寻求帮助，但我们可以给他们提示。我们找到让学生提问的最好方法就是在课程开始之前做一个简短的评论并规划学习时间让学生可以在小组内提问问题。
 
-If they prefer to type out the question, they can post it in the student chat or send a private message to one of the organizers.
+若学生想要以文字的形式提问，他们可以在学生聊天群发布帖子或者私讯任何一位管理员。
 
-We can only do so much. If students are lost or confused and don't want to ask for help, there is no way for us to fix that. We try hard to meet them where they are, but they also have to make some effort to come to us.
+我们只能够帮助到这么多，如果学生遇到了问题但没有提出来，我们提供不了任何的解决方案的。我们尝试过去理解他们的处境，但学生们也必须要花一些精力来了解我们。
 
 ### 问卷调查
 
-Performing regular student surveys is really helping us to get critical feedback for our program.
+定期地对学生进行问卷调查为我们的课程带来了许多非常有帮助的回应。
 
-Our first time through, we collected information about student goals and background at the beginning, then took a student survey at the half-way point - around 6 weeks in – and then another survey at the end.
+我们在课程开始的阶段收集学生的目标和背景资料。然后分别在中途（大约在第6周）和结束的时候，分别进行了两次问卷调查。
 
-While we received a lot of good information, in hindsight, we should have taken more surveys and added a few more questions. This time, we will probably perform surveys to get student feedback every month. Here are some of the questions we are asking:
+过程中我们收到了许多有用的资讯，这意味这我们可以多安排几次调查和增加几道题目。现在，我们大概会每月向学生进行问卷调查。以下是我们会问的一些问题：
 
-1.  What do you think about the program so far? Is it meeting your expectations?
-2.  Do you feel like the lectures are helpful for doing the assignments?
-3.  How can we better help you achieve your goals?
-4.  Do you have any other feedback for us?
+1.  目前的课程对来说感觉如何？是否有达到你的期望？
+2.  你觉得导师们对于你的作业有没有帮助？
+3.  我们可以如何优化以协助你达成目标？
+4.  有没有任何对于我们的回馈？
 
 ### 关心退出的学生
 
-Life happens, things change. We have to understand that students who fully intend to participate might have to drop out due to unavoidable circumstances.
+天有不测之风云。我们明白那些非常积极的同学可能是因为一些无法避免的问题的被迫停止参与课程。
 
-If they communicate with us about the situation, we offer them a spot in the next cohort.
+如果他告诉我们他的处境，我们会安排下一轮的课程让他参与。
 
-If they simply do not show up or communicate with us, then they are free to reapply in the future, but no spot will be saved for them.
+如果他并没有告诉我们他的处境，但却申请下一轮的课程，那么我们将不会为他预留学位。
 
 ## 职员与自愿者
 
 ### 征求自愿者
 
-Without volunteers, it would be quite overwhelming to run a program like this. Here are some of the different types of volunteers you will need to be successful.
+如果没有自愿者的协助，执行这个课程将会非常地累人。这个活动能够成功都是靠以下不同类型自愿者的参与。
 
 ### 职责：
 
-1.  **发起人 –** Yes, we are volunteers too.  We are fortunate to have an amazing team of organizers who run the program. This includes myself, two other developers, and a computer lab supervisor from the library who also knows how to code. We chat several times per week in Discord to make sure the program is running smoothly and students are progressing. I think 3-5 is a pretty good number for an organizing team, but we might add more to do specific things, such as 'community manager' or 'volunteer coordinator.'
-2.  **主持人 –** These people give lectures during class times or special help sessions held on weekends usually. This is the hardest type of volunteering to manage. In our program, the lectures are 1.5-2 hours long and there are only 24 of them, so every single one has to be on point and flow with the rest of the curriculum. Some well-meaning volunteers might not be the right fit for giving lectures for people who are brand new to development. It is  **very**  important to be clear about what you want them to cover in the lecture, down to the individual points and expected learning outcomes. We also made sure to give volunteers a boilerplate slide deck to work off of so it matched the rest of the curriculum.
+1.  **发起人 –** 没有错我们也是发起人之一。我们非常的幸运有一个很好的团队可以去执行这个课程。当中包括我本人和另两名开发者，当然还要一位懂编程的图书馆电脑室管理员。我们每周会在 Discord 进行数次的讨论，以确保课程可以顺利地进行和了解学生的学习进度。我觉得3-5个人就可以组成一个不错的团队，但还是需要增加人手以处理一些专项的事情，例如‘社区管理员’或‘自愿者管理员’等。
+2.  **课程主持人 –** 这些人主要是进行授课或主持通常在周末进行的特别提问环节。这是最难管理的自愿者类型。在我们安排的课程当中，课程时间通常为1小时半至两小时之久，每次只有24为学生，所以所有主持人都需要掌握课程的知识点和教学的流程。一些有能力的自愿者并不是非常适合传授全新的知识给初学者明白。因此清晰的课程要求，小至每一个知识点和学习成果就变得格外**重要**了。我们也提供主持人统一的样板，因此可以衔接我们接下来的课程。
 3.  **导师 –**  Students will not only have coding questions, but also have questions about their careers, networking, etc. Mentorship is great for answering these types of questions. We are currently working on setting up our mentorship program where volunteer mentors will check in with students at least once per week to make sure they are on track and answer any questions they have. One of the reasons for the delay is we have been working on a system for how to handle any complaints of inappropriate language or behavior that might take place when students meet one on one with volunteers.
 4.  **助理 –**  Lab assistants are there to help out synchronously during live lab sessions, usually with problems running software or debugging. We utilized lab assistants much more when we held in-person classes. With things being remote, we can't see the students' screens so we have had to just have a few people available to answer questions in the chat if people get stuck.
 5.  **帮手 –** These people help answer students' questions in the chat and perform other tasks like reviewing projects and portfolios. They are also useful for students to rubber duck off of or for encouragement.

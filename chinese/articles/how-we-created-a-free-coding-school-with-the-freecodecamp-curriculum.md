@@ -27,33 +27,33 @@ _这是一张学生在课室上课的照片，由于新冠肺炎疫情我们采�
 
 ## 我们的目标是建立一所免费的编程学校
 
-Our goal from the beginning was to provide accessible, supportive education for everyone regardless of income or life circumstances (like ability to take time off work).
+起初我们的目标是希望提供所有人有效和便捷的教育，不论任何收入和生活挑战（例如需要向公司请假）。
 
-We are not trying to compete with bootcamps or regular coding schools – they also provide a valuable service for students. We are just trying to have another, more accessible option for people who need a more flexible schedule or cannot afford a paid coding school.
+我们并不是想要挑战任何的训练营或者原有的编程学校，当然他们也是提供了学生非常有价值的服务。我们只是尝试提供需要弹性安排课程时间或负担不起编程学校学费的人另外一个更合适的管道。
 
-Students will receive guidance and direction from the staff, volunteers, and members of the community throughout the program, and as alumni afterward.
+学生将会接收来自员工，自愿者，社区会员或者是已完成我们课程的校友的教导和指引。
 
-Of course, we want our students to be able to get jobs in the industry if that is their goal. But we do not have the resources to guarantee anything. We just want to provide as much support as we can for the students whether they decide to keep learning on their own, or go to a more formal program, like a coding school or college.
+当然我们希望我们的学生可以在职场上找到自己想要的工作，但我们并没有能力保证任何事情。我们只能竭尽所能提供更多的支持让学生自己决定要继续自学，或者是参与正统的课程，如编程学校或者学院。
 
-Like I mentioned before, it took us about a year to get everything set up - between finding the space and instructors, as well as deciding on the type of program and curriculum. Here is everything that went into our program preparation.
+就像我之前所说的，这一切花了我们团队一年的时间，我们必须寻找合适的地点和教师当然还要觉得课程的走向和安排活动。接下来就是我们的筹备过程。
 
-## How We Planned the Program
+## 我们如何安排课程
 
-The first things we did were choose the length of time and goals for the program. We landed on having three-month-long classes where the students would learn the basics of HTML, CSS, and JS, with some extras like Bootstrap and React Components.
+我们做的第一件事情就是决定课程的时长与目标。我们最终决定实行3个月的课程让学生学会基本的 HTML, CSS 和 JavaScript。另外还有额外知识比如说 Bootstrap 和 React 组件。 
 
-If everything went well, our goal was to take a month off and host a level two course for the students who completed the first one. Level two would be another three months where we would build off of what we taught in level one and teach more about JavaScript frameworks and introduce Node.js.
+若一切按照计划进行，我们计划是让完成第一阶段的学生放一个月的长假然后进行第二阶段的课程。第二阶段的课程同样进行3个月，这次的课程会沿用学生们在第一阶段学习到的知识，教导学生关于 JavaScript 框架和介绍 Node.js 。
 
-Starting small with just a three month part-time program helped us to be able to learn and make adjustments as we went along. It also gave the students a short, time-based goal to be able to complete the program and have a small portfolio in just a few months.
+从一个小型和仅仅3个月的业余课程开始，有助于我们学会如何安排和调整长期计划。这个课程让学生有个短期的目标，使学生可以在数个月的时间内完成自己的个人小型专案。
 
-[Here is our organization on Github][2]. We are in the process of updating and open-sourcing our material as we go along.
+[这是我们在 Github 上的社群][2]。 我们会不断地更新资源和提供开源资料。
 
-## Adopting freeCodeCamp's Curriculum
+## 融合 freeCodeCamp 的课程
 
-Curriculum development is time consuming and expensive. Fortunately, freeCodeCamp already has an awesome free curriculum that we can use and modify with no strings attached.
+开发课程将会花费非常多的时间和金钱。幸运的是 freeCodeCamp 已经有了完善的免费课程供我们没有附加条件的使用和修改。
 
-We took freeCodeCamp's curriculum and followed it as an outline for our lectures. We used the challenges as assignments for students to complete between classes. We also used freeCodeCamp's projects as individual and group assignments along the way.
+因此我们采用了 freeCodeCamp 的课程并跟从它的原有的纲要安排我们的课程。我们采用了挑战的内容当作是学生需要在课堂内完成的作业。我们也采用了 freeCodeCamp 的个人报告当作学生的小组作业。
 
-Throughout the lessons, we also encouraged students to try to do a little bit of extra work to be able to get their freeCodeCamp certifications during, or after the end of, the program.
+过程中我们也鼓励学生尝试更多课程以外的作业，以便学生能够在进行或者结束课程的时候有能力领取 freeCodeCamp 的文凭认证。
 
 ## How We Found a Space to Host Classes
 

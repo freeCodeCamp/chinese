@@ -29,11 +29,11 @@ Whether you're looking for an alternate career path because you haven't found a 
 
 While software engineers benefit from having people skills, some bootcamp graduates I've talked to aren't looking forward to sitting quietly and writing code all day. If you want a career path that provides more opportunities to interact with people, these jobs may suit you.程序员会因人际沟通技能而受益颇多，我之前沟通过的一些编程训练营毕业生也不打算整天坐在电脑面前写代码。如果你想做一份能与人更多互动的工作，下面这些选择可能会比较适合你。
 
-### 1\. Developer Relations, Advocacy, or Evangelism程序员关系、
+### 1\. Developer Relations, Advocacy, or Evangelism程序员关系、程序员布道师
 
-As more companies strive to build relationships with developers who are their customers, users, or advocates, the field of developer relations is growing quickly.
+As more companies strive to build relationships with developers who are their customers, users, or advocates, the field of developer relations is growing quickly.随着越来越多的公司与同时是消费者、用户或支持者的程序员建立关系，程序员关系领域正在快速发展。
 
-Developer relations professionals (some companies call them developer advocates, developer evangelists, community managers, or "DevRels") help establish and build a community around their company's software.
+Developer relations professionals (some companies call them developer advocates, developer evangelists, community managers, or "DevRels") help establish and build a community around their company's software.程序员关系专家（有些公司称他们为程序员布道师、社群管理或“DevRels”）协助建立了围绕公司软件的社群。
 
 They are often involved in creating demo applications, writing blog posts, speaking at conferences, and managing social media accounts for tech-focused companies. Many of the big-name tech companies (Facebook, Google, Amazon, etc.) hire teams of developer relations professionals.
 

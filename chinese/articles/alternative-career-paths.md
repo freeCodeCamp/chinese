@@ -35,95 +35,95 @@ As more companies strive to build relationships with developers who are their cu
 
 Developer relations professionals (some companies call them developer advocates, developer evangelists, community managers, or "DevRels") help establish and build a community around their company's software.程序员关系专家（有些公司称他们为程序员布道师、社群管理或“DevRels”）协助建立了围绕公司软件的社群。
 
-They are often involved in creating demo applications, writing blog posts, speaking at conferences, and managing social media accounts for tech-focused companies. Many of the big-name tech companies (Facebook, Google, Amazon, etc.) hire teams of developer relations professionals.
+They are often involved in creating demo applications, writing blog posts, speaking at conferences, and managing social media accounts for tech-focused companies. Many of the big-name tech companies (Facebook, Google, Amazon, etc.) hire teams of developer relations professionals.他们通常在技术公司中参与创建演示应用程序，发表博客，参加会议并发言，经营社交媒体账号。许多名气在外的技术公司（如脸书、谷歌、亚马逊等）都有程序员关系专家团队。
 
-If you're interested in this field, read up on what  [Mary Thengvall][4]  and  [PJ Hagerty][5]  are doing. They're two of my favorite influencers in the space, and they put out the  [Community Pulse podcast][6]  together.
+If you're interested in this field, read up on what  [Mary Thengvall][4]  and  [PJ Hagerty][5]  are doing. They're two of my favorite influencers in the space, and they put out the  [Community Pulse podcast][6]  together.如果你对这个领域感兴趣，可以看看Mary Thengvall[4]和PJ Hagerty[5]正在做的事情。他们两人是我在程序员关系领域最喜欢的影响者，他们一起推出了Community Pulse播客[6]。
 
-### 2\. Developer Marketing
+### 2\. Developer Marketing开发者营销
 
-While there's some overlap with developer relations, developer marketing is more outwardly focused.
+While there's some overlap with developer relations, developer marketing is more outwardly focused.开发者营销与开发者关系有些重叠，但开发者英雄啊更聚焦外部。
 
-Marketing to developers is especially tricky because we don't like to be sold, so many of the more aggressive marketing tactics that work for other markets are taboo here. As a person with a technical background, you'll naturally understand the way developers think, and you'll have more clout than a traditional marketer might.
+Marketing to developers is especially tricky because we don't like to be sold, so many of the more aggressive marketing tactics that work for other markets are taboo here. As a person with a technical background, you'll naturally understand the way developers think, and you'll have more clout than a traditional marketer might.因为开发者都不喜欢被卖掉，营销对开发者来讲尤其棘手，所以很多在其他市场可行的更加激进的营销策略在这个市场行不通。而开发者具备技术背景，可以顺畅地理解开发者们的思维方式，较传统营销人员具备优势。
 
-[SlashData][7]  puts out a lot of great content about Developer Marketing, including a  [book on the topic in 2018][8]. If you'd like to get started in this field, learn online marketing: SEO, social media, content marketing, influencer marketing, etc. You can practice many of these skills on your blog to demonstrate your knowledge before applying to jobs.
+[SlashData][7]  puts out a lot of great content about Developer Marketing, including a  [book on the topic in 2018][8]. If you'd like to get started in this field, learn online marketing: SEO, social media, content marketing, influencer marketing, etc. You can practice many of these skills on your blog to demonstrate your knowledge before applying to jobs.SlashData[7]发表了很多关于开发者营销的内容，如[2018主题书籍][8]。如果你想从事这一领域，学学SEO、社交媒体、内容营销、开发者营销等在线营销。在应用到具体工作之前，你可以在博客上展现学习成果，练习这些学到的技能。
 
-### 3\. Sales Engineer
+### 3\. Sales Engineer销售工程师
 
-Many engineers are turned off by any job with "sales" in the title, but that's just because we've all encountered bad salespeople.
+Many engineers are turned off by any job with "sales" in the title, but that's just because we've all encountered bad salespeople.很多工程师一开始就将任何带有“销售”字眼的工作拒之门外，但这是因为我们遇见的销售人员不合格。
 
-The truth is that  [everyone is in sales][9]. Whether you're "selling" yourself as a job candidate during the interview process or advocating for a new framework on your engineering team, sales means matching a customer's needs with the right solution.
+The truth is that  [everyone is in sales][9]. Whether you're "selling" yourself as a job candidate during the interview process or advocating for a new framework on your engineering team, sales means matching a customer's needs with the right solution.事实情况是，每一个人都身处销售之中[9]。面试找工作、给工程团队介绍新框架等都属于销售。销售意味着用合适的解决办法匹配消费者需求。
 
-Sales engineers are unique in that they have some level of technical expertise. This can be an excellent match for developers who don't want to write code all day but understand software engineering.
+Sales engineers are unique in that they have some level of technical expertise. This can be an excellent match for developers who don't want to write code all day but understand software engineering.因为具备技术背景，所以销售工程师独一无二。这对于不想整天写代码、但懂软件工程的开发者来说是个绝佳选择。
 
-The other nice part about sales is that you don't need any specialized certifications to do it.  [Hubspot offers a great introduction][10]  to some skills and resources you can start with. As more companies build software tools and services for engineers, sales engineers will likely become even more in-demand in the coming decade.
+The other nice part about sales is that you don't need any specialized certifications to do it.  [Hubspot offers a great introduction][10]  to some skills and resources you can start with. As more companies build software tools and services for engineers, sales engineers will likely become even more in-demand in the coming decade.此外，销售不需要任何专业资格，这是其另一个好处。Hubspot有一些技能和资源指导[10]供你入门。随着越来越多的公司开始为工程师开发软件工具、提供服务，未来十年对销售工程师的需求将可能日益增多。
 
-### 4\. Technical Recruiter
+### 4\. Technical Recruiter技术招聘人员
 
-Another profession that gets a bad rap among software engineers is technical recruiting.
+Another profession that gets a bad rap among software engineers is technical recruiting.受软件工程师不待见的另一种职业是技术招聘。
 
-I've met some honest, genuine tech recruiters ([Taylor Dorsett][11]  and  [Matt Hoffman][12]  from my home city of Chicago, for example), but I've also met some awful, clueless recruiters who are purely focused on churning through candidates to hit their quota.
+I've met some honest, genuine tech recruiters ([Taylor Dorsett][11]  and  [Matt Hoffman][12]  from my home city of Chicago, for example), but I've also met some awful, clueless recruiters who are purely focused on churning through candidates to hit their quota.我遇见过一些诚实的、真诚的技术招聘人员（如我们芝加哥的Taylor Dorsett和Matt Hoffman），但我也遇见过一些糟糕的、什么都不懂的招聘人员，只会乱翻简历达成业绩。
 
-The good news is that with a background in software development, you'll have more empathy and credibility than many other technical recruiters out there. Like sales, this field requires a more outgoing, relationship-focused personality, but it doesn't require specialized certifications or courses.
+The good news is that with a background in software development, you'll have more empathy and credibility than many other technical recruiters out there. Like sales, this field requires a more outgoing, relationship-focused personality, but it doesn't require specialized certifications or courses.若是有软件开发背景，那你就较很多其他技术招聘人员更具同理心和可信度。正如销售，技术招聘要求招聘人员更加外向、关注人际关系，但技术招聘并不需要专业资格或课程。
 
-Unfortunately, many of the entry-level jobs in tech recruiting are at low-quality firms, so be sure to check their  [reputations on Glassdoor][13]  before you apply.
+Unfortunately, many of the entry-level jobs in tech recruiting are at low-quality firms, so be sure to check their  [reputations on Glassdoor][13]  before you apply.但不幸的是，技术招聘的很多入门级工作是在低品质公司，所以，在申请之前，务必查看该公司在Glassdoor上面的评价[13]。
 
-## Product Roles
+## Product Roles产品工作
 
-If you want to remain on the product team, but you're not sure you want to be a software developer, there are many fields you can transition into. These roles work closely with engineers, so your coding knowledge will help you, but they also require other specialized knowledge.
+If you want to remain on the product team, but you're not sure you want to be a software developer, there are many fields you can transition into. These roles work closely with engineers, so your coding knowledge will help you, but they also require other specialized knowledge.如果你还想做产品，但不确定自己想不想成为一名程序员，你可以试试其他工作。这些工作跟程序员联系紧密，因此你的编程知识会给你提供帮助，但产品工作也需要其他的专业知识。
 
-### 5\. Quality Assurance or Test Engineer
+### 5\. Quality Assurance or Test Engineer质量保证或测试工程师
 
-While there are  [subtle differences between quality assurance and test engineers][14], both deal with testing software before it goes live.
+While there are  [subtle differences between quality assurance and test engineers][14], both deal with testing software before it goes live.尽管质量保证和测试工程师区别较小，但在软件正式使用之前，质量保证和测试工程师都需要做测试工作。
 
-If you have an eye for detail and you like coming up with creative ways to automate repetitive tasks, this could be a great career path. It will likely require some coding as well as some manual testing work.
+If you have an eye for detail and you like coming up with creative ways to automate repetitive tasks, this could be a great career path. It will likely require some coding as well as some manual testing work.如果你关注细节，想要提出一些创造性方式来自动化重复工作，这可能是一个不错的选择。除去一些手动测试工作外，可能也需要写一些代码。
 
-Smaller companies have their software engineers test each other's code, so dedicated test and QA roles are most common in large organizations. There is a lot of variance between how companies do testing, so be sure to ask about the tools they use, how automated their tests are, and how much your role will entail manual vs. automated tests.
+Smaller companies have their software engineers test each other's code, so dedicated test and QA roles are most common in large organizations. There is a lot of variance between how companies do testing, so be sure to ask about the tools they use, how automated their tests are, and how much your role will entail manual vs. automated tests.小型公司会让程序员彼此互相检查代码，大型公司才有专门的测试和质量保证岗位。公司做测试的方式不一，所以一定要确保问清楚公司使用什么工具做测试，测试自动化达到何种程度，你所应征岗位的手动和自动测试占比各为多少。
 
-### 6\. Business Analyst
+### 6\. Business Analyst商业分析师
 
-On the other end of the product development lifecycle are business analysts. They typically work as a bridge between the business and technical teams to ensure that requirements, limitations, and timelines are understood. They may also hop in and help with testing and quality assurance, depending on the team's structure, so they need to have a wide range of product knowledge.
+On the other end of the product development lifecycle are business analysts. They typically work as a bridge between the business and technical teams to ensure that requirements, limitations, and timelines are understood. They may also hop in and help with testing and quality assurance, depending on the team's structure, so they need to have a wide range of product knowledge.产品开发生命周期的另一端是商业分析师，这是商业和技术团队之间的桥梁，可以保证各方理解要求、限制和时间点。根据团队结构，商业分析师还助测试和质量保证一臂之力，所以他们还要具备广泛的产品知识。
 
-If you have a background in business, product development, or design and some coding skills, you may qualify for an entry-level business analyst role. If not, I'd recommend looking into some online courses to help you develop a basic understanding of the role and what it entails.
+If you have a background in business, product development, or design and some coding skills, you may qualify for an entry-level business analyst role. If not, I'd recommend looking into some online courses to help you develop a basic understanding of the role and what it entails.如果你有商业、产品开发、设计、编程背景知识，那么你具备了商业分析师的基础入门资格。如果没有的话，我建议你学习一些在线课程，了解一下商业分析师及其工作内容。
 
-### 7\. Project Manager
+### 7\. Project Manager项目经理
 
-Like business analysts, project managers must understand their product's business requirements and technical constraints.
+Like business analysts, project managers must understand their product's business requirements and technical constraints.正如商业分析师，项目经理必须理解产品的商业要求和技术限制。
 
 The key difference is that project managers typically go deep into a single project. They often define tasks and resources for the teams working on the project and track the project's progress as it nears release.
 
-Smaller companies may combine the business analyst, project management, scrum master, and product manager roles in various ways, but larger companies may define separate responsibilities.
+Smaller companies may combine the business analyst, project management, scrum master, and product manager roles in various ways, but larger companies may define separate responsibilities.小型公司可能会将商业分析师、项目管理、敏捷大师、产品经理的工作结合在一起，但大型公司可能会具体细分岗位职责。
 
-Excellent organization skills, understanding of the business, and people skills are critical to succeed as a project manager. This role hinges on your ability to manage expectations and motivate people who might be more senior or experienced than you, so you have to build trust quickly. This role's multifaceted nature makes it a good fit for analytical, technical people who don't want to write code anymore.
+Excellent organization skills, understanding of the business, and people skills are critical to succeed as a project manager. This role hinges on your ability to manage expectations and motivate people who might be more senior or experienced than you, so you have to build trust quickly. This role's multifaceted nature makes it a good fit for analytical, technical people who don't want to write code anymore.一名项目经理要想成功，离不开卓越的组织能力、业务理解和人际关系处理能力。这份工作需要你管理预期，激励可能比你资深或有经验的前辈，所以你得快速建立信任。这份工作需要考虑多个方面，很适合不想再写代码的分析、技术人才。
 
-### 8\. Scrum Master
+### 8\. Scrum Master敏捷大师
 
-In Agile teams, the  [Scrum Master][15]  helps make sure everyone knows and buys into Scrum theory, best practices, and rules.
+In Agile teams, the  [Scrum Master][15]  helps make sure everyone knows and buys into Scrum theory, best practices, and rules.在敏捷开发团队中，敏捷大师[15]帮助确保每一个人了解并完全相信敏捷理论、最佳实践和规则。
 
-This ends up looking a lot like project management, but with a particular emphasis on serving the other teams involved in building the product. Again, this is not always its own job, but in larger organizations, it may be.
+This ends up looking a lot like project management, but with a particular emphasis on serving the other teams involved in building the product. Again, this is not always its own job, but in larger organizations, it may be.敏捷大师很像项目管理，但特别强调服务于开发产品时另一个加入进来的团队。并且，这并不只涉及它自身的工作，但在大公司可能工作划分比较细致。
 
-The ability to manage expectations and limitations is critical to your success as a Scrum Master. You'll also need to know Agile best practices, so I'd recommend finding a suitable course or book on the topic. Agile has seen widespread adoption at organizations of all sizes, so this career path is likely to continue growing in the coming decade.
+The ability to manage expectations and limitations is critical to your success as a Scrum Master. You'll also need to know Agile best practices, so I'd recommend finding a suitable course or book on the topic. Agile has seen widespread adoption at organizations of all sizes, so this career path is likely to continue growing in the coming decade.作为一名敏捷大师，管理预期和局限的能力十分重要，同时也需要了解敏捷最佳实践，因此我建议大家看一些这方面的课程或者书籍。敏捷在各种规模的组织中均有广泛应用，所以在未来十年此职业可能继续成长。
 
-### 9\. Product Manager
+### 9\. Product Manager产品经理
 
 ![](https://i.imgur.com/hVX2gSI.png)
 
-I spent a lot of time in 2019 learning about product management to  [improve our product delivery process at The Graide Network][16].
+I spent a lot of time in 2019 learning about product management to  [improve our product delivery process at The Graide Network][16].2019年，我花了大量时间学习产品管理，以此来改善我们的产品团队在The Graide Network上的交付流程[16]。
 
-Product managers look holistically at the company's products to ensure they are desirable (customers want it), viable (makes business sense), and feasible (we can build it). The ability to think at a high level like this is rare, so if you have it and some technical background, you might do well as a product manager.
+Product managers look holistically at the company's products to ensure they are desirable (customers want it), viable (makes business sense), and feasible (we can build it). The ability to think at a high level like this is rare, so if you have it and some technical background, you might do well as a product manager.产品经理要全面审视公司产品，确保这些产品是消费者想要的、有商业意义的并且可以被设计出来。站在这种角度思考的能力并不多见，所以如果你有这种能力，还有些技术背景，你也可以成为一名产品经理。
 
-Entry-level product managers may start with smaller parts of the product or as project managers in some organizations. This can give you a taste of product development and help you build relationships with all the necessary stakeholders before you're assigned your own product to manage.
+Entry-level product managers may start with smaller parts of the product or as project managers in some organizations. This can give you a taste of product development and help you build relationships with all the necessary stakeholders before you're assigned your own product to manage.入门级产品经理可以从产品的小模块或在某些组织中担任产品经理起步。这可以让你在负责管理自己产品之前明白产品开发，帮助你和所有的相关人员建立关系。
 
-### 10\. Designer
+### 10\. Designer设计
 
-If you come from a design or artistic background, becoming a UI or UX designer with some coding chops is a great way to stand out in your field. This combination of skills will allow you to speak more effectively with engineers and create interactive mockups in HTML/CSS rather than just static image files.
+If you come from a design or artistic background, becoming a UI or UX designer with some coding chops is a great way to stand out in your field. This combination of skills will allow you to speak more effectively with engineers and create interactive mockups in HTML/CSS rather than just static image files.如果你有设计或艺术背景，一位拥有编程能力的UI或UX设计很容易在该领域内脱颖而出。这些能力结合在一起，跟工程师的沟通会更具效率，在HTML或CSS创建的模块也会具有互动性，而不仅仅是静态图像文件。
 
-If you don't have much experience in design, take a course, and start building a portfolio. Many companies will hire people without a degree if they can showcase their knowledge and skills.  [Dribbble][17]  is the most common portfolio platform I've seen, but you can also use your own website.
+If you don't have much experience in design, take a course, and start building a portfolio. Many companies will hire people without a degree if they can showcase their knowledge and skills.  [Dribbble][17]  is the most common portfolio platform I've seen, but you can also use your own website.如果你没有太多设计经验，找一个课程学习一下，开始打造作品集。哪怕你没有学历，但只要你有知识和技能，很多公司也愿意雇你。Dribbble是我看到过的唾手可得的作品集平台，当然你也可以使用其他平台。
 
-### 11\. No or Low-Code Developer
+### 11\. No or Low-Code Developer零代码或低代码开发者
 
-The explosion of  [no-code and low-code development tools][18]  in the past few years has opened up opportunities for companies that want to quickly build software without hiring a development team. These tools allow you to create a mobile or web app in hours instead of weeks, and because they are getting better every year, more companies are embracing no-code apps.
+The explosion of  [no-code and low-code development tools][18]  in the past few years has opened up opportunities for companies that want to quickly build software without hiring a development team. These tools allow you to create a mobile or web app in hours instead of weeks, and because they are getting better every year, more companies are embracing no-code apps.过去几年零代码和低代码工具[18]爆火，给没有开发团队但想要快速开发软件的公司带来了机会。这些工具无需花费数周，在数小时内便可创建一款移动或网页应用。这些工具每年都会进步，所以越来越多的公司正在接受零代码应用。
 
-[Makerpad][19]  and  [No Code Jobs][20]  are good places to start looking for these kinds of jobs. Because this is a new field, you'll find a wide range of required skills and payscales, but your background writing code will undoubtedly prove to be an asset.
+[Makerpad][19]  and  [No Code Jobs][20]  are good places to start looking for these kinds of jobs. Because this is a new field, you'll find a wide range of required skills and payscales, but your background writing code will undoubtedly prove to be an asset.Makerpad[19]和[No Code Jobs][20]这两个平台是零代码和低代码工作的不错选择。因为这是一个新兴领域，需要的技能和所给报酬变化范围较广，但本身编写代码能力无疑是一项非常重要的技能。
 
 ## Support Roles
 

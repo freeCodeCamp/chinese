@@ -7,15 +7,15 @@
 
 Over the past five years, I've given dozens of guest lectures at many of the coding bootcamps in Chicago.过去5年中，我在芝加哥编程训练营举办了数十场客座演讲。
 
-A few questions never fail to come up: "[Which language should I learn next?][1]", "[How can I prepare for technical interviews?][2]", "Are you hiring?"不断有人问我同样的问题：接下来该学什么语言呢？怎么准备技术面试？您招人吗？诸如此类。
+A few questions never fail to come up: "[Which language should I learn next?][1]", "[How can I prepare for technical interviews?][2]", "Are you hiring?"听到的问题大多千篇一律：接下来我该学什么语言呢？如何准备技术面试？您招人吗？诸如此类。
 
-But one question that threw me off was, "What if I don't want to be a software developer?"
+But one question that threw me off was, "What if I don't want to be a software developer?"但有一个问题直击我的灵魂深处：如果我不想再当程序员了，该怎么办？
 
-I've been thinking about this a lot lately. After almost a decade leading product and engineering teams, I realized I was ready for a new challenge, so this summer, I started  [freelance technical writing][3]. I didn't know it when I got my first client, but I quickly realized that  _technical writing is one of many valid career paths for former software engineers_.
+I've been thinking about this a lot lately. After almost a decade leading product and engineering teams, I realized I was ready for a new challenge, so this summer, I started  [freelance technical writing][3]. I didn't know it when I got my first client, but I quickly realized that  _technical writing is one of many valid career paths for former software engineers_.之后关于这个问题我思考了很久。我带产品和技术团队将近十年了，我意识到我遇到了新的挑战。所以今年夏天，我开始了[自由技术写作][3]。很快我便意识到，技术写作是软件工程师转型后切实职业发展道路之一，而在遇到第一个客户时我甚至还没有意识到这一点。
 
-## What Else Can Software Developers Do?
+## What Else Can Software Developers Do?软件工程师还能做些什么？
 
-This realization got me thinking: "What other jobs can software engineers do besides write software?"
+This realization got me thinking: "What other jobs can software engineers do besides write software?"“除了写程序之外，
 
 The list is surprisingly long.
 

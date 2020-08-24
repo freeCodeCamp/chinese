@@ -11,25 +11,25 @@ A few questions never fail to come up: "[Which language should I learn next?][1]
 
 But one question that threw me off was, "What if I don't want to be a software developer?"但有一个问题直击我的灵魂深处：如果我不想再当程序员了，该怎么办？
 
-I've been thinking about this a lot lately. After almost a decade leading product and engineering teams, I realized I was ready for a new challenge, so this summer, I started  [freelance technical writing][3]. I didn't know it when I got my first client, but I quickly realized that  _technical writing is one of many valid career paths for former software engineers_.之后关于这个问题我思考了很久。我带产品和技术团队将近十年了，我意识到我遇到了新的挑战。所以今年夏天，我开始了[自由技术写作][3]。很快我便意识到，技术写作是软件工程师转型后切实职业发展道路之一，而在遇到第一个客户时我甚至还没有意识到这一点。
+I've been thinking about this a lot lately. After almost a decade leading product and engineering teams, I realized I was ready for a new challenge, so this summer, I started  [freelance technical writing][3]. I didn't know it when I got my first client, but I quickly realized that  _technical writing is one of many valid career paths for former software engineers_.之后关于这个问题我思考了很久。我带产品和技术团队将近十年了，我意识到我遇到了新的挑战。所以今年夏天，我开始了[自由技术写作][3]。很快我便意识到，技术写作是程序员转型后切实职业发展道路之一，而在遇到第一个客户时我甚至还没有意识到这一点。
 
-## What Else Can Software Developers Do?软件工程师还能做些什么？
+## What Else Can Software Developers Do?程序员还能做什么工作？
 
-This realization got me thinking: "What other jobs can software engineers do besides write software?"“除了写程序之外，
+This realization got me thinking: "What other jobs can software engineers do besides write software?"“除了开发软件外，程序员还能做什么工作？”意识到技术写作是其中一个选择后，我开始思考有无其他选择。
 
-The list is surprisingly long.
+The list is surprisingly long.可选项出乎意料地多。
 
-This post will go through many of the career paths available to software developers, especially recent bootcamp graduates. I'll explain what each job does, how you can get your foot in the door, and the long-term prospects.
+This post will go through many of the career paths available to software developers, especially recent bootcamp graduates. I'll explain what each job does, how you can get your foot in the door, and the long-term prospects.这篇文章会历数程序员转型后的职业发展路径，尤其是对最近的编程训练营毕业生而言。我会介绍每份工作的内容、如何起步，以及长期规划。
 
-Whether you're looking for an alternate career path because you haven't found a job as an engineer or because you realized software development wasn't for you, this guide will help you find a career fit for your skillset.
+Whether you're looking for an alternate career path because you haven't found a job as an engineer or because you realized software development wasn't for you, this guide will help you find a career fit for your skillset.不管你是因为没有找到程序员的工作还是因为不适合软件开发而开始寻找其他工作，这篇指南会帮你根据自己的技能找到一份适合你自己的工作。
 
-![Alternative career paths for software developers](https://i.imgur.com/PFyQku1.png)
+![Alternative career paths for software developers](https://i.imgur.com/PFyQku1.png)程序员职业发展路径(https://i.imgur.com/PFyQku1.png)
 
-## Customer-Facing Roles
+## Customer-Facing Roles面向消费者工作
 
-While software engineers benefit from having people skills, some bootcamp graduates I've talked to aren't looking forward to sitting quietly and writing code all day. If you want a career path that provides more opportunities to interact with people, these jobs may suit you.
+While software engineers benefit from having people skills, some bootcamp graduates I've talked to aren't looking forward to sitting quietly and writing code all day. If you want a career path that provides more opportunities to interact with people, these jobs may suit you.程序员会因人际沟通技能而受益颇多，我之前沟通过的一些编程训练营毕业生也不打算整天坐在电脑面前写代码。如果你想做一份能与人更多互动的工作，下面这些选择可能会比较适合你。
 
-### 1\. Developer Relations, Advocacy, or Evangelism
+### 1\. Developer Relations, Advocacy, or Evangelism程序员关系、
 
 As more companies strive to build relationships with developers who are their customers, users, or advocates, the field of developer relations is growing quickly.
 

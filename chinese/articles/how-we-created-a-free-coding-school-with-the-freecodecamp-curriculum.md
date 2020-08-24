@@ -150,99 +150,99 @@ _这是一张学生在课室上课的照片，由于新冠肺炎疫情我们采�
 
 1.  **发起人 –** 没有错我们也是发起人之一。我们非常的幸运有一个很好的团队可以去执行这个课程。当中包括我本人和另两名开发者，当然还要一位懂编程的图书馆电脑室管理员。我们每周会在 Discord 进行数次的讨论，以确保课程可以顺利地进行和了解学生的学习进度。我觉得3-5个人就可以组成一个不错的团队，但还是需要增加人手以处理一些专项的事情，例如‘社区管理员’或‘自愿者管理员’等。
 2.  **课程主持人 –** 这些人主要是进行授课或主持通常在周末进行的特别提问环节。这是最难管理的自愿者类型。在我们安排的课程当中，课程时间通常为1小时半至两小时之久，每次只有24为学生，所以所有主持人都需要掌握课程的知识点和教学的流程。一些有能力的自愿者并不是非常适合传授全新的知识给初学者明白。因此清晰的课程要求，小至每一个知识点和学习成果就变得格外**重要**了。我们也提供主持人统一的样板，因此可以衔接我们接下来的课程。
-3.  **导师 –**  Students will not only have coding questions, but also have questions about their careers, networking, etc. Mentorship is great for answering these types of questions. We are currently working on setting up our mentorship program where volunteer mentors will check in with students at least once per week to make sure they are on track and answer any questions they have. One of the reasons for the delay is we have been working on a system for how to handle any complaints of inappropriate language or behavior that might take place when students meet one on one with volunteers.
-4.  **助理 –**  Lab assistants are there to help out synchronously during live lab sessions, usually with problems running software or debugging. We utilized lab assistants much more when we held in-person classes. With things being remote, we can't see the students' screens so we have had to just have a few people available to answer questions in the chat if people get stuck.
-5.  **帮手 –** These people help answer students' questions in the chat and perform other tasks like reviewing projects and portfolios. They are also useful for students to rubber duck off of or for encouragement.
+3.  **导师 –**  学生们不只是会有关于编程的问题，他们还会有关于职业与社交之类的问题。导师就是来为学生们解答这类疑惑的人。目前我们正在安排我们的自愿者导师至少每周一次与学生交流以确保学生们保持在正确的学习轨道上并回答学生们的问题。其中一个我们拖延这项安排的原因是我们正在处理在1对1的导师和学生交流环境时如何管理任何投诉和言辞不当的行为。
+4.  **助理 –**  助理的主要工作就是在直播课程的时候给予帮助，通常是处理电脑软件运行和找出代码错误的问题。当我们进行实体课的时候，我们会安排更多的助理。当我们进行远程授课的时候，我们不能直接看到学生的电脑荧幕，所以需要几位助理能够及时在聊天室回答学生们的问题。
+5.  **帮手 –**  帮手负责回答学生们的疑问和对于学生们的作业和作品集给予评论。他们能够让学生了解自己的不足和给予学生们鼓励。
 
 ### 自愿者手册
 
-We made a two-page handbook detailing expectations for volunteer behavior as well as requirements for participation in our program. It's pretty basic right now, but we will be building off of it as we go along I'm sure.
+我们制作了2页的手册专门对自愿者的期望与行为要求进行详细的说明。这个手册简单明了，我们也会不断修改与更新。
 
-We also give them a link to the  [freeCodeCamp code of conduct][4]  because it's short, sweet, and to the point: be kind, understanding, etc.
+我们也会提供 [freeCodeCamp 的教授原则][4] ，因为简短，精准和到位：例如善良，互相了解等等。
 
 ### 确保员工拥有成功的工具
 
-We have definitely made a few mistakes, including letting a presenter make his own slides and then having to tell him at the last minute that they needed to change. It didn't go over well. We should have been much clearer with what we wanted from him.
+我们当然也犯了不少错误，包括我们让课程主持人使用自己准备的教学资料并再最后一刻才要求更换。所以课程效果就没有很好。我们必须想课程主持人清楚说明他需要教导的内容。
 
-Now, everyone receives a boilerplate slide deck from us as well as a list of topics to cover. We also connect with them several times to go over the progress in their presentation to make sure it's on the right track.
+现在，每位课程主持人都会统一拿到我们准备好了的教学模板和必须教导的知识点栏目。我们也会在授课的过程中不时与他们联系以确保课程在正确的轨道上。
 
-Right now, we have a volunteer handbook, lesson plans and slide decks for teaching, guidelines for mentoring, and google drive folder where we keep all of the documentation for the program, student progress, curriculum materials, and future plans. We recently re-organized all of these materials to make them easier to locate when we need them.
+目前为止，我们有了自愿者手册，教学计划，教学模板，云端硬盘和导师的指导方针以储存所有的教学文档，学生进度，课程资源当然还有未来的计划。我们也会不是优化我们的这套系统以方便所有人寻找有需要的资料。
 
-As this program grows, we are going to need to manage more volunteers and even paid staff. We are preparing for this by documenting our processes to make onboarding a little bit smoother each time.
+如此一来，我们需要更多自愿者甚至付费员工的参与。我们不断上传和更新我们的资料以便整个课程可以进行得更顺利。
 
 ### 社区伙伴
 
-We are currently trying to form community partnerships to get sponsors for funding as well as donations of tech equipment.
+我们目前正在寻找赞助伙伴和接受捐款以便添购更多电子设备。
 
-Some of our students don't have access to good computers or a fast internet connection. The library provided those things for us when we hosted in person classes, but it's been more difficult now that we are remote.
+虽然图书馆提供了良好的环境与设备，但远程教学就会遇到不少困难。因为有些学生无法拥有非常良好的设备和稳定的网络通讯。
 
-Also, libraries only have limited hours, and, for students who work multiple jobs or have other family obligations, it can be difficult to make the time to do all of the class work during the day. This is why the sponsorship of community partners is so important to making our program accessible.
+当然，对于有工作和家庭的学生图书馆的时间限制会是他们很大的问题。这就是为什么赞助商对于我们的课程来说非常重要。
 
-In the future, we hope to be able to provide internet access and laptop computers for students who need them.
+未来，我们希望能够提供网络通讯和手提电脑给有需要的学生。
 
 ## 发起与执行
 
 ### 行销策略
 
-We don't have any marketing experts on our team. Our marketing efforts basically consist of making sure we keep our branding that we agreed upon - colors, verbiage, etc. - consistent and collectively sharing updates on social media.
+我们的团队并没有任何的行销专家。所有的市场宣传主要都是在社交媒体上定时地宣传，以确保我们的品牌是能够被大众所接受的。
 
-Fortunately, I have a small following on  [YouTube][5], LinkedIn, and other platforms where I have been able to solicit volunteers and get some community interest in our program.
+幸运的是，我们在 [YouTube][5], LinkedIn 和其他的平台上有不少的追踪者让我们可以征求更多的自愿者和增加群众对我们课程的兴趣。
 
-The public library has also been helpful with reaching out to many different communities and pulling in students that we might never have been able to reach otherwise.
+公共图书馆也帮助我们接触到更多不一样的群众尤其是那些完全没有接触过编程的学生。
 
-As we grow, we might start expanding our social media reach, but with a limited budget right now, we are just gaining traction organically.
+随着团队的成长，我们也开始在夸张我们社交媒体的宣传，但由于资金的限制我们目前还是属于被动的增加曝光率。
 
 ### 远程直播
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screen-Shot-2020-06-08-at-10.10.27-PM.png)
 
-Discord screen sharing interface.
+Discord 的直播画面。
 
-Hosting remote livestreams has been challenging. Internet connections sometimes drop, plus there is a learning curve for students to be able to use the software.
+网络的稳定性加上学生的学习周期的不同让主持远程直播教学增加了不少的挑战。
 
-Discord has been a great option for us, because we can host livestreams inside of the app where all of our chats and everything else are located. This way, we only have to explain how to use one piece of software.
+Discord 是一个不错的选择，因为我们不仅可以在同一个平台里直播授课还可以同时有聊天室和其他的一些功能。这样我们只需熟悉一款软体的操作就够了。
 
-In addition, Discord allows us to screen share with up to 50 people at a time in the voice chat rooms. And that's all for free! We looked into Zoom and some other tools, but we are going to stick with Discord until we need - and can afford - something with more features.
+不仅如此， Discord 还允许我们在同一个聊天室同时分享荧幕画面多达50个人，而且还是免费的！我们也了解过其他的实训软体，但只有 Discord 是我们负担得起又有适合我们需要的功能。
 
 ### 合并 & 筹款
 
-We wanted to start asking companies and people for funding so we had to incorporate as a non-profit last year. In the US, this process takes about six months. We first had to register as a company with our state and then draw up business documents and apply for non-profit status with the federal government.
+我们需要向一些群体和公司筹款，因此我们需要和一些非盈利团体合并。在美国，这个过程需要花大约6个月的时间。我们必须在我们所在的州属注册成为公司然后才能向中央政府申请成为非盈利组织。
 
-At the beginning of this year, we finally got confirmation that we are a 501c3 non-profit organization! Now we are trying to work out ways of getting funding and taking donations. We're going to add a 'donate' button to our website and we are also reaching out to companies to solicit larger donations. There have also been some internal discussions about whether or not crowdfunding is a good idea.
+我们终于在今年年头成功注册成为 501c3 非盈利组织！目前我们正在寻找接受筹款和捐助的方法。我们将会在我们的网站上增加“捐助”的功能，让更多的人能够有机会帮助我们。我们内部也正在讨论是否众筹是个好方法。
 
-Do you have any suggestions for us in this area? Please leave a comment on this article or reach out to us at contact@freecodeschoolindy.com.
+若你有任何的提议，欢迎留言或电邮我们 contact@freecodeschoolindy.com 。
 
 ## 通讯工具
 
 ### 论坛
 
-As previously mentioned, we started off using a Discourse forum, but found that it was hard to maintain and wasn't meeting our needs. People found it hard to use, especially on mobile. We also had trouble getting staff and students to login and check it often enough to make it worth the effort. That is why we got rid of the forum and moved our whole program over to Discord.
+就如之前所说的，我们开始了论坛，但发现非常难经营，并没有符合我们的需求。人们发现很难使用并且不方便。论坛的使用上，我们也遇到了不少的麻烦。所以我们团队才会最终选择把整个课程搬到 Discord 上。
 
 ### Discord
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screen-Shot-2020-06-04-at-12.43.36-PM.png)
 
-We now have a Discord server set up for the whole coding school! We use it to host live lectures - we can have up to 50 people in the voice chat and screen share with them at the same time, manage students, organize volunteer activities, coach speakers, answer questions, do group projects, review portfolios, and perform administrative tasks.
+现在我们有自己的 Discord 平台！！我们在这里主持直播课程 - 可以同时连线50位同学分享电脑荧幕。这个平台可以管理学生，组织自愿者活动，训练课程主持人，回答问题，完成小组报告，评论作品集等等
 
-Having everything in one place has been the best decision we have ever made. Not only are our costs lower, but it makes the program administration so much easier. Everyone we need to interact with is either already on Discord, or just needs to be invited to Discord :)
+将所有的东西集合在同一个地方是我们做出最正确的决定。不只是减少开销，也把管理工作变得更加简单。我们只需要和彼此在 Discord 上联系:)
 
 ## 毕业
 
-We had grand plans of doing our first in-person graduation for students this year. Unfortunately, due to COVID-19, those plans had to be scrapped. We had to make do with mailing out certificates to students who completed the program and giving everyone a (virtual) pat on the back for finishing.
+我们有个毕业的计划于实体的课程。不幸的是由于疫情的关系，这个计划被影响了。我们需要将毕业证书邮寄给完成课程的学生。
 
-Now that our classes are virtual, we would love to be able to do something fun for the graduation of our second cohort at the end of August. Do you have any ideas? Let us know if you do.
+我们现在进行的虚拟课程希望可以为我们第二轮即将在八月底毕业的学生增加一些有趣的环节。如果你有任何想法，欢迎告诉我们。
 
 ## 总结
 
-Putting this program together might have been the hardest thing I've ever done. It's a lot of work but very rewarding. It can be life-changing for students.
+推动这项课程是我做过最困难的项目之一。工作量非常多但非常值得，这可以改变学生的一生。
 
-It wasn't just me though: There was a team of people helping out and none of this would have happened without them.
+这不仅仅是我一个人的努力，当然还有整个团队的互相帮忙才能促成这个课程。
 
-I want to give special thanks to  [Jared Wilcurt][6], Casssandra Bautista, Marianne Mckenzie,  [The Indianapolis Public Library][7], freeCodeCamp, and all of our wonderful volunteers – all of whom were crucial in putting this program together.
+在这里我特别感谢 [Jared Wilcurt][6], Casssandra Bautista, Marianne Mckenzie,  [印第安纳公共图书馆][7], freeCodeCamp 和自愿者，有了你们的参与才有这项课程。
 
-We are working on open-sourcing our curriculum we used – slides, projects, freeCodeCamp challenges, supplementary material, and so on. It's taking a little bit of time to put everything together in a nice format, but be patient, we will get it out to anyone who is interested soon :)
+我们采用的是开放的资源，所有的教学资料，作业，freeCodeCamp的编程挑战，额外的资料等等都是需要我们花费时间和精力去搜索和整理，但只有有耐心我们一定可以拉拢有兴趣的学生:)
 
-I'm interested in your thoughts. Do you have any ideas for things we can do better next time around? Please reach out to me and let me know.
+我也对你的想法感兴趣，如果你对于我们的课程有任何的想法，欢迎告诉我们。
 
 推特账号:  [@gwen\_faraday][8]
 

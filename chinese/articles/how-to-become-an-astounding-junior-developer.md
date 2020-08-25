@@ -266,49 +266,77 @@ Follow your interests and stay hungry to learn!
 Now that we've covered your expectations and how to think about them, here's some practical tips to make you a great new developer—one your teammates love to work with.
 
 ### #1 Communicate really really really really really really well
+### #1 沟通是非常非常好的
 
 You may not have incredible development knowledge and skill walking into your first day, but you  _can_ have incredible communication skills.
+第一天上班时，你可能没有令人难以置信的开发知识和技能，但你可以有令人难以置信的沟通技巧。
 
 As a new developer, you're going to ask for help and guidance—a lot. And that's ok! Here's a tip for how to ask for help effectively.
+作为一名新开发人员，您将需要大量的帮助和指导。没关系，这里有一个如何有效地寻求帮助的小窍门。
 
 Getting stuck is frustrating (it was for me). In these moments, it's easy to let that frustration overwhelm you and fire off questions to your teammate next to you (or maybe via email or a chat app).
+被困住是令人沮丧的(对我来说就是这样)。这种挫败感很容易将你压倒，你可以向旁边的同事抛出问题(或者通过电子邮件或聊天应用)。
 
 Things like:
+类似：
 
 > "im stuck"  
+> 我困住了
 > "it errored"  
+> 显示错误
 > "the page won't load"
+> 页面不能加载
 
 Now take a step back and view this from the perspective of the person you're asking help from. A message like  _"the page won't load"_  doesn't help this person help you at all. There's no context. There's no information for them to go on. In fact, they have to  _ask for more information from you._  This is incredibly inefficient and very frustrating for the person that is trying to help you.
+现在退一步，从你请求帮助的那个人的角度来看待这个问题。像_“页面无法加载”_这样的信息对这个人毫无帮助。没有上下文。没有信息可以让他们继续。事实上，他们还得向你获取更多的信息。这样做效率非常低，而且会让试图帮助你的人非常沮丧。
 
 A better way to ask for help is to think of it like a  [Mad Lib][2]™ (if you remember those):
+寻求帮助的一个更好的方式是像[Mad Lib][2]™一样思考(如果你还记得的话):
 
 > I am working on \_\_\_\_\_,  
+> 我正在做 \_\_\_\_\_,
 > but when I try \_\_\_\_\_,  
-> \_\_\_\_\_ happens instead.  
+> 但是在我尝试\_\_\_\_\_的时候，
+> \_\_\_\_\_ happens instead. 
+>却发生了这个。
 >   
 > I've tried \_\_\_\_\_, \_\_\_\_\_, and \_\_\_\_\_.  
-> and I've looked at \_\_\_\_\_ and \_\_\_\_\_.
+> 我试着\_\_\_\_\_, \_\_\_\_\_,和\_\_\_\_\_.
+> and I've looked at \_\_\_\_\_ and \_\_\_\_\_
+> 我发现\_\_\_\_\_ 和 \_\_\_\_\_
 
 An example of this message might be something like this:
+这条信息的一个例子可能是这样的:
 
-> I am working on  **the user password reset bug**,  
+> I am working on  **the user password reset bug**, 
+> 我正在处理**用户密码重置错误的bug**，
 > but when I try  **to generate a password reset link**,  
+> 但是当我**尝试生成密码重置链接时**，
 > **the user's token is already empty**.  
+> **用户的令牌已经为空**
 >   
 > I've looked at  **where the token is set**, and  **I can see the token in the database**,  
+> 我看过**令牌是在哪设的**，我发现**令牌在数据库中**
 > but  **the token is missing on line X of File Y.**
+> 但是 **这个令牌在文件Y的X行上丢失了。**
 
 If you sent someone the message above, they can understand:
+如果你给别人发了上面的信息，他们可以理解:
 
 -   What you're working on
+- 你在做什么
 -   What the problem is
+- 问题是什么
 -   What you've  _tried already_
+- 你已经试过了什么
 -   Where the problem is
+- 问题发生在哪
 
 This is a wealth of information for the person you're asking help from. They will  **greatly**  appreciate that you gave them that information so clearly—and that you've already  _tried to fix it yourself._  This shows them that you respect their time, and you're not just looking for an easy handout.
+对于你寻求帮助的人来说，这是一个丰富的信息。他们会**非常**感谢你给了他们如此清晰的信息，并且_你已经尝试自己去解决它_.这让他们知道你尊重他们的时间，而不是简单的施舍。
 
 There's nothing wrong with getting help, but if someone just fixes the problem for you they've really robbed you of the opportunity to learn and grow yourself.
+寻求帮助并没有错，但是如果有人只是帮你解决问题，他们实际上是在剥夺你学习和成长的机会。
 
 It's not like there's ten problems you have to work through and you're done for the rest of your life—you'll face problems every single day as a developer. So the best outcome is if they give you enough help to get you unstuck but allow you to solve the problem yourself.
 
@@ -339,8 +367,10 @@ The underlying generic error
 ### #3 Use a "try timer"
 
 As a new developer you're going to get stuck a lot. There will be error messages you haven't seen before, and how you handle these situations will determine how quickly you grow as a developer.
+作为一名新开发人员，你会遇到很多困难。可能会出现以前你从未见过的错误消息，如何处理这些情况将决定您作为开发人员的成长速度。
 
 Although these can be terribly frustrating moments, these are the moments where you will learn and you will grow. You don't learn by doing the same kind of work over and over again—it's by journeying through these bumps in the road that growth takes place.
+尽管这可能是非常令人沮丧的时刻，这些是你学习和成长的时刻。
 
 When you run into one of these problems, take some time to try and figure it out yourself. Some companies will tell you this as a part of onboarding—something like  _"try for 30min before asking for help."_  In other companies it's not as clearly defined, but the message is still there: do your best and then if you're still stuck ask for help.
 
@@ -359,12 +389,16 @@ Take a deep breath, go for a quick walk, and approach each problem with a fresh 
 (This is, of course, easier said than done!)
 
 ### #4 Remember to relax and take breaks!
+### #4 记住放松和休息！
 
 Remember to take breaks when things start to feel overwhelming.
+记住，当事情开始让你感到难以承受时，要休息一下。
 
 Go for a walk. Go get a glass of water. Sleep on it if you can. Sometimes just getting up and moving for a minute can help you re-center yourself.
+去散个步。接杯水。如果可以的话，放一个晚上。有时候仅仅睡一觉或者动一动就可以帮助你重新调整自己。
 
 Remember that every developer was once in your place, and you will get through it.
+请记住，每个开发人员都曾经历过你这种情形，您会度过难关的。
 
 Development will always be frustrating to some extent—you never stop making mistakes or running into problems. But over time you just get better at dealing with them, and your confidence to fix those problems increases so it bothers you less and less.
 
@@ -425,58 +459,84 @@ This is a skill that is developed over time, and it requires intentional problem
 Here's some tips on how to build this system.
 
 ## 5 Debugging tips
+## 5 调试技巧
 
 ### #1 Don't thrash your code!
+### #1 不要盲目修改代码
 
 One of the things I did as a new developer—and something I see many other new developers do when they run into a problem—is they start wildly changing things in their code. Instead of having a systematic evaluation process, they just make a ton of quick changes trying to see if that fixes the problem.
+我看到许多新开发人员遇到问题时会开始疯狂的开始改代码（我是新开发者的时候我也这么做过）。他们没有系统的代码评估过程，只是对代码做大量的修改，看看这样是否能解决问题。
 
 This is a very bad habit. You will only create more mistakes doing this. What you should do is:
+这是一个很坏的习惯。这样做只会犯更多的错误。你应该做的是:
 
 ### #2 Read the error message!
+### #2 读错误信息
 
 This tip may seem obvious, but actually  _read_  the message. What is the error? What is the file where this error is occurring? What  _line_  is this error coming from? This is all vital information.
+这个建议似乎很明显，但实际上是在读取信息。错误是什么？发生这个错误的文件是什么?错误产生在哪一行？这些都是至关重要的信息。
 
 If you resist just changing your code rapidly, you can jump  **straight to the exact place the error is happening.**
+如果您不愿意快速更改代码的话，你可以直接**跳到错误产生的地方**
 
 This is what the experienced developer does. Read the message—go straight to the problem.
+这是有经验的开发人员所做的。读取消息然后直接找到问题所在。
 
 Doing this will save you an incredible amount of wasted time and mental effort.
+这样做会为你节省大量的时间和精力。
 
 ### #3 Don't waste time on the impossible! (Or at least the improbable)
+## #3 不要把时间浪费在不可能的事情上（或者是至少不可能的事情）
 
 ![Don't waste time on the impossible!](https://www.freecodecamp.org/news/content/images/2020/05/new_developer.059.jpeg)
 
 Don't waste time on the impossible!
+不要把时间浪费在不可能的事情上！
 
 This is something I see new developers do often. They face an error in their code, they find something that they think is the problem, and they can't believe how it's not true. As an example:
+我看到的新开发人员会经常做这样一件事。举个例子：
 
 > "I see the problem is on line 14, where it checks if the  `is_admin`  variable is  `true`, and it's not  `true`—but the user  _**is**_  an admin!!
+> "我发现问题出现在第14行，它会检查"is_admin"变量是否为真，但是它不是真，然而管理员确实是管理员！
 
 They approach this problem thinking,  _"How can this be!!!"_  instead of,  _"How can this be?"_
+他们是这么思考这个问题，“这怎么可以！”，而不是“为什么会这样？”
 
 There are times when you will encounter a core language or framework bug, but 99.9% of the time,  **you did something wrong or the situation is not as it appears.**
+有时候你会遇到核心语言或框架的bug，但99.9%的情况下， **你可能是做错了什么，或者情况并不像看上去的那样。**
 
-Instead of spending time marveling at the impossible unfolding before your eyes, question your assumptions about the situation. Something is not as it seems. Being aghast at the impossible is only a waste of time—start your problem-solving system.
+Instead of spending time marveling at the impossible unfolding before your eyes, question your assumptions about the situation. Something is not as it seems. Being aghast at the impossible is only a waste of time—start your problem-solving system.有些事并不像看上去的那样。被不可能的事情吓到只是在浪费时间，开始解决问题。
+不要再眼前不可能展开的事情上花时间，质疑你对情况的假设。
 
 ### #4 "When in doubt, print more out." - Some wise person
+### #4 “当有疑问时，打印更多的信息” ——一些明智的人
 
 I don't know who originally said this, but it's one of the most effective debugging techniques out there. When you don't know what's happening, start printing the state of your program in places where you think the problem is happening.
+我不知道最初是谁说的，但这是最有效的调试技术之一。当你不知道发生了什么情况时，开始在你认为发生问题的地方打印程序的相应信息。
 
 What is in the  `user`  variable? What is the response from the HTTP request? Did we take the  `if`  or the  `else`  branch in this situation? Did we even call this function or are we even on this page?
+' user '变量中有什么?HTTP请求的响应是什么?在这种情况下，我们使用了if或else分支吗?我们调用过这个函数吗?是否在此页面?
 
 I've seen countless developers trying to debug and fix an issue (and I've done it many times myself too) when they weren't even working in the right file! A quick  `print`  or  `console.log`  will show you that you are in fact looking at the actual code being run.
+我见过无数的开发人员尝试调试和修复一个问题的时候(我自己也做过很多次)，他们甚至没有在正确的文件中进行调试!快速“打印”或者在“控制台”中可以显示您实际上正在查看实际运行的代码。
 
 ### #5 Take it  _one_  step at a time.
+### #5 一次做一件事。
 
 A common mistake every new developer does:  **they do too much at once.**
+每个新开发人员都会犯的一个常见错误是:**他们一次做的事情太多了。**
 
 They want to write code for 30min, click run, and see it work. What they find is that they spent 30min writing bugs and errors, and it's now a nightmare to fix.
+他们想要编写30分钟的代码，单击运行，然后查看结果。他们发现，他们花了30分钟来编写bug和错误，现在修复起来简直是一场噩梦。
 
 When I go to make a new page in an app, the first thing I do is put  `<p>hi</p>`  on the page. I want to make sure that all of my internal code is setup correctly and I see that  `hi`  on the page. I take it one. step. at. a. time.
+当我在应用程序中新建一个页面时，我做的第一件事就是把`<p>hi</p>`放到页面上。我想确定我所有内部代码设置是正确的以至我可以在页面上看到`hi`。我一次只做一件事。
 
 Do one thing at a time. Get  _"hi"_  printing on the page. Next get the user input. Next validate the input. Next save the input. If you take small steps you know exactly where to fix the problem when it occurs.
+一次只做一件事。在页面上看到“hi”显示。接下来获取用户输入。接下来保存输入。如果你一步一步来，你就知道问题发生在哪里，该如何解决。
 
 Even eight years later into a development career I still take it step by step. I know I'm going to make a ton of mistakes, and I want to know  _immediately_  when and where that happens.
+即使在从事开发工作8年后，我仍然是一步一步来。我知道我将会犯很多错误，而且我想知道这些错误在何时何地发生。
 
 ## Conclusion
 ## 总结
@@ -488,6 +548,7 @@ There's much to learn, and many skills to develop, but there's also a lot of fun
 你还有很多知识得学，很多技能需要提升，但是也有很多乐趣和有益的工作在等着你。
 
 Keep your head up, and remember to take breaks. Get 1% better every day, and in a year you'll be astonished at the results!
+抬头挺胸，记得要休息。每天提高1%，一年之后你就会对结果感到惊讶!
 
 If you liked this post, I write similar things  [on my blog here][4].
 如果你喜欢这篇文章，我在我的微博上写了同样的分享。

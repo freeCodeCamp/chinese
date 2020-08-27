@@ -1,5 +1,5 @@
-> * 原文地址：[A Brief History of Responsive Web Design 响应式 Web 设计简史](https://www.freecodecamp.org/news/history-of-responsive-web-design/)
-> * 原文作者：Abhishek Chaudhary
+> * 原文地址：[How to Set Up Java Spring Boot JWT Authorization and Authentication 如何设置 Java Spring Boot JWT 授权和认证](https://www.freecodecamp.org/news/how-to-setup-jwt-authorization-and-authentication-in-spring/)
+> * 原文作者：Yiğit Kemal Erinç
 > * 译者：
 > * 校对者：
 

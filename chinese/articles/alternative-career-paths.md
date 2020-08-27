@@ -123,19 +123,19 @@ If you don't have much experience in design, take a course, and start building a
 
 The explosion of  [no-code and low-code development tools][18]  in the past few years has opened up opportunities for companies that want to quickly build software without hiring a development team. These tools allow you to create a mobile or web app in hours instead of weeks, and because they are getting better every year, more companies are embracing no-code apps.过去几年零代码和低代码工具[18]爆火，给没有开发团队但想要快速开发软件的公司带来了机会。这些工具无需花费数周，在数小时内便可创建一款移动或网页应用。这些工具每年都会进步，所以越来越多的公司正在接受零代码应用。
 
-[Makerpad][19]  and  [No Code Jobs][20]  are good places to start looking for these kinds of jobs. Because this is a new field, you'll find a wide range of required skills and payscales, but your background writing code will undoubtedly prove to be an asset.Makerpad[19]和[No Code Jobs][20]这两个平台是零代码和低代码工作的不错选择。因为这是一个新兴领域，需要的技能和所给报酬变化范围较广，但本身编写代码能力无疑是一项非常重要的技能。
+[Makerpad][19]  and  [No Code Jobs][20]  are good places to start looking for these kinds of jobs. Because this is a new field, you'll find a wide range of required skills and payscales, but your background writing code will undoubtedly prove to be an asset.Makerpad[19]和[No Code Jobs][20]这两个平台是零代码和低代码工作的不错选择。因为这是一个新兴领域，需要的技能和所给报酬变化范围较广，但编写代码能力无疑是一项非常重要的技能。
 
-## Support Roles
+## Support Roles支持工作
 
-A lot of new software engineers aren't aware of the many employees behind the scenes who help keep servers, websites, and operations running smoothly. Some of these roles require you to write automation scripts or have in-depth knowledge of server administration, but if you are looking for something outside of the traditional product development cycle, but with a technical bent, these could be a great fit.
+A lot of new software engineers aren't aware of the many employees behind the scenes who help keep servers, websites, and operations running smoothly. Some of these roles require you to write automation scripts or have in-depth knowledge of server administration, but if you are looking for something outside of the traditional product development cycle, but with a technical bent, these could be a great fit.很多软件工程师没有意识到幕后有很多员工负责维持服务器、网站和运营工作顺利开展。这其中就有些工作要求员工会写自动化脚本或对服务器管理有深度理解。如果你想在产品开发之外寻找跟技术相关的工作，技术工作也很适合。
 
-### 12\. Sysadmin or DevOps Engineer
+### 12\. Sysadmin or DevOps Engineer系统管理工程师或开发管理工程师
 
-Large software companies have hundreds or thousands of servers that need to be patched, upgraded, and rotated throughout the year. While the widespread adoption of cloud computing has changed this job from physically plugging in servers to working with software like  [Terraform][21]  and  [Kubernetes][22], there's no shortage of jobs in this field.
+Large software companies have hundreds or thousands of servers that need to be patched, upgraded, and rotated throughout the year. While the widespread adoption of cloud computing has changed this job from physically plugging in servers to working with software like  [Terraform][21]  and  [Kubernetes][22], there's no shortage of jobs in this field.大型软件公司每年都有成百甚至上千的服务器需要修补、升级、轮换。尽管当下广泛应用云计算，这项工作从实体服务器转移至Terraform[21]和Kubernetes[22]之类的软件，但对这类工作的需求一点都不少。
 
-Traditionally, System Administrators have been  [responsible for maintaining and administering servers as needed by the engineering teams][23]. As organizations have grown and moved to cloud hosting, many have adopted the title DevOps engineer to reflect the increased automation being used in this process. In practice, there's a lot of overlap between these roles.
+Traditionally, System Administrators have been  [responsible for maintaining and administering servers as needed by the engineering teams][23]. As organizations have grown and moved to cloud hosting, many have adopted the title DevOps engineer to reflect the increased automation being used in this process. In practice, there's a lot of overlap between these roles.传统来看，工程师团队需要系统管理员负责维护和管理服务器[23]。随着团队扩张并逐渐转用云主机，为反应工作过程中自动化程度日益加深，很多团队开始使用“开发管理工程师”这一称呼。实践看来，两者工作内容有很多重叠之处。
 
-Either way, you'll need a basic understanding of operating systems, hosting platforms, automation tools, bash scripting, and system architecture. It can be  [hard to find entry-level jobs in this field][24]  because it requires such a wide array of technical knowledge, but it's a great role to transition into if you like the problem-solving aspects of engineering without the UI/UX requirements that most customer-facing products require.
+Either way, you'll need a basic understanding of operating systems, hosting platforms, automation tools, bash scripting, and system architecture. It can be  [hard to find entry-level jobs in this field][24]  because it requires such a wide array of technical knowledge, but it's a great role to transition into if you like the problem-solving aspects of engineering without the UI/UX requirements that most customer-facing products require.如果想要做这类工作，你需要对操作系统、主机平台、自动化工具、Bash脚本编程和系统架构有基本了解。在这一领域找一份入门级工作有些难，因为其对技术知识要求广泛。但如果你喜欢解决问题，不想要受面向消费者产品的UI和UX要求束缚，这类工作也值得尝试。
 
 ### 13\. Database Administrator
 

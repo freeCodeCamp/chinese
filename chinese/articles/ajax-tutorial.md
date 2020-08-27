@@ -4,14 +4,14 @@
 
 ![AJAX Tutorial: What AJAX Is and How to Use it](https://images.unsplash.com/photo-1557234396-e1506d9a85b3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-## **What is AJAX?**
+## **什么是 AJAX？**
 
-****AJAX****  stands for  ****Asynchronous JavaScript And XML****. It is not a programming language. It is a technology for developing better, faster and interactive Web Applications using HTML, CSS, JavaScript and XML.
+****AJAX****  代表  ****异步 JavaScript 和 XML****。 它不是一个编程语言。它是一项使用 HTML，CSS，JavaScript 和 XML 开发更好，更快和交互式 Web 应用程序的技术。
 
-1.  HTML : Hypertext Markup Language (HTML) is used for defining the structure of a Web Application.
-2.  CSS : Cascading Style Sheet (CSS) is used to provide look and style to a Web Application.
-3.  JavaScript : JavaScript is used for making a Web Application interactive, interesting and user friendly.
-4.  XML : Extensible Markup Language (XML) is a format to store and transport data from the Web Server.
+1.  HTML : 超文本标记语言（HTML）用于定义 Web 应用程序的结构。
+2.  CSS : 级联样式表（CSS）用于为 Web 应用程序提供外观和样式。
+3.  JavaScript : JavaScript 用于使 Web 应用程序具有交互性，趣味性和用户友好性。
+4.  XML : 可扩展标记语言（XML）是一种用于存储和传输来自 Web 服务器的数据的格式。
 
 ### What's the meaning of Asynchronous in AJAX?
 

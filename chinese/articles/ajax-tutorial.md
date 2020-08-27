@@ -1,5 +1,5 @@
 > * 原文地址：[AJAX Tutorial: What AJAX Is and How to Use it 写给初学者的编程教程：ajax 是什么以及 ajax 如何使用](https://www.freecodecamp.org/news/ajax-tutorial/)
-> * 译者：
+> * 译者：AllenPlato
 > * 校对者：
 
 ![AJAX Tutorial: What AJAX Is and How to Use it](https://images.unsplash.com/photo-1557234396-e1506d9a85b3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)

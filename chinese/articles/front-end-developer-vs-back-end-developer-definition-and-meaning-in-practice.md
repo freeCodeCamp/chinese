@@ -1,6 +1,6 @@
 > * 原文：[Front End Developer vs Back End Developer – Definition and Meaning In Practice 前端和后端的区别到底是什么？非程序员也能读懂！](https://www.freecodecamp.org/news/front-end-developer-vs-back-end-developer-definition-and-meaning-in-practice/)
 > * 作者：Colby Fayock
-> * 译者：
+> * 译者：lihkai01
 > * 校对者：
 
 ![Front End Developer vs Back End Developer – Definition and Meaning In Practice](https://www.freecodecamp.org/news/content/images/size/w2000/2020/06/front-end-back-end.jpg)

@@ -1,4 +1,4 @@
-> * 原文地址：[AJAX Tutorial: What AJAX Is and How to Use it 写给初学者的编程教程：ajax 是什么以及 ajax 如何使用](https://www.freecodecamp.org/news/ajax-tutorial/)
+> * 原文地址：[Java Array Methods – How to Print an Array in Java Java 数组的打印方式](https://www.freecodecamp.org/news/java-array-methods-how-to-print-an-array-in-java/)
 > * 作者：Thanoshan MV
 > * 译者：
 > * 校对者：

@@ -1,4 +1,4 @@
-> * 原文地址：[How to Build a Bot and Automate your Everyday Work Python 基础教程：这个自动化程序让你的工作更高效](https://www.freecodecamp.org/news/javascript-under-the-hood-v8/)
+> * 原文地址：[How to Build a Bot and Automate your Everyday Work Python 基础教程：这个自动化程序让你的工作更高效](https://www.freecodecamp.org/news/building-bots/)
 > * 作者：Tim Grossmann
 > * 译者：
 > * 校对者：

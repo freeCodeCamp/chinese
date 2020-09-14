@@ -1,384 +1,384 @@
-> * 原文地址：[How I Won my First Ever Hackathon – 2 Wild Days of Research, Design, and Coding 服务生跳出舒适区自学编程，成功挑战人生第一次黑客马拉松](https://www.freecodecamp.org/news/how-i-won-the-hackathon/)
-> * 原文作者：Moshe Siegel
-> * 译者：
-> * 校对者：
+原文地址：How I Won my First Ever Hackathon – 2 Wild Days of Research, Design, and Coding 服务生跳出舒适区自学编程，成功挑战人生第一次黑客马拉松
+原文作者：Moshe Siegel
+译者：LolaWei
+校对者：
 
-![How I Won my First Ever Hackathon – 2 Wild Days of Research, Design, and Coding](https://images.unsplash.com/photo-1505855265981-d52719d1f64e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
+我如何挑战人生第一个黑客马拉松——花费 2 天时间疯狂研究、设计与编程
 
-I had no coding or engineering background. I studied biology in college, with no clue about what to do with my degree.
+我没有编程或工程背景。我在大学学习生物学，根本不知道毕业要做什么。
 
-My first jobs were making cold calls in sales, but I made almost no money and was miserable with my work.
+我的第一份工作是销售客服，但几乎赚不到什么钱，工作也非常痛苦。
 
-After failing at a few different sales gigs, I gave up and found a job preparing vegetables at a restaurant — not exactly the plant life I was expecting to work with after college.
+几次推销失败后，我辞职找到了一份在餐馆处理蔬菜的工作——我可从来没想到自己会以这种方式跟植物打交道。
 
-I needed new prospects, and I was ready to find anything better. All it took was a strong work ethic, a willingness to learn, and a few key resources to get me onto a whole new career path.
+我需要新的方向，也准备好了要接受新事物。凭借职业道德，强烈的学习意愿和关键资源，我开启了人生新篇章。
 
-This also got me involved in a coding competition that took me  _way_  outside my comfort zone.
+我也参加了一场编程比赛，这带我走出了自己的舒适区。
 
-While working at my restaurant job, I started hearing stories about people who taught themselves how to code and managed to develop that into careers. Willing to try something new, I started taking online courses with freeCodeCamp during my off-time from work.
+在餐厅工作时，我就听说过那些自学编程并成功转型程序员的故事。因为我愿意尝试新事物，所以下班后，我就开始使用在 freeCodeCamp 上参加在线课程。
 
-Hours here and there turned into a full-time commitment. I left my job and followed freeCodeCamp’s curriculum, aggressively studying full-stack JavaScript as my new full-time job.
+后来我慢慢开始全天候学习。辞职后跟着 freeCodeCamp 上的课程，把学习全栈 JavaScript 当做我的新工作。
 
-I spent a year and a half focusing on learning coding, and it paid off, too. I was accepted into a long-term contract as an entry-level coder at a New York City fashion company, which was generating over $2 billion a year in sales.
+我花了一年半的时间学习编程，当然这也有所回报。我成功入职纽约市一家时装公司做初级程序员，该公司的年销售额 20 多亿美元。
 
-Learning was my top priority. Even in this new position, I continued to practice during my off-hours, this time focusing on best practices for my specific job responsibilities, which involved writing automated tests using the NodeJS version of Selenium.
+对我来说，学习是重中之重。即使已经入职，下班后我也会继续学习，我会重点学习与我目前工作相关的知识，比如说使用 NodeJS 版本的 Selenium 编写自动化测试。
 
-I spent 10-15 hours per week doing Selenium tutorials, which helped me get my work done faster and gave me leeway to learn from my colleagues during work hours. I maximized in-between work times, talking to co-workers in the elevator or while walking to my desk. I learned what others did and what their responsibilities were for our company.
+我每周会花 10 到 15 个小时学习 ​​Selenium，这能帮助我更快地完成自己的工作，也有助于我在工作时间向同事们学习。我尽一切可能利用工作时间——在电梯中、办公室里——与同事交流经验。这样我便了解了其他人的工作和职责。
 
-It didn’t matter if they were in the same role as I was. I spoke to my engineering supervisors and to people in our business units so I could better understand the structure of our company, find out how others had made progress in their own positions, and see if I could find some big problem that I’d be able to solve.
+当然了，他们做什么工作与我无关。与工程主管和业务部门交谈，我只是想更好地了解公司结构，了解其他人在自己的职位上取得了怎样的进步，看看是否可以找到一些我能解决的难题。
 
-Around my third week of work, while talking to my senior director of engineering, I noticed a number of awards by his desk. He told me were from his past wins at our company’s annual Hackathon.
+工作第三周左右，在与我的高级工程总监交谈时，我注意到他办公桌上有很多奖牌。他告诉我，这是他过去在公司年度黑客马拉松比赛中获得的奖励。
 
-“Wow,” I said, “You've won a lot of awards.”
+我说：“哇，你赢了很多奖啊。”
 
-He responded, “Thanks. You should participate in the next Hackathon. It will be in a few months.”
+他回答说：“谢谢。你应该去参加几个月后的黑客马拉松比赛。”
 
-I was still relatively new to coding and had never participated in a Hackathon, so after a day of mulling it over, I went back to his desk.
+我当时对编程还比较陌生，从来没有参加过黑客马拉松比赛，所以考虑了一天之后，我又去找了总监。
 
-"Hey, I've seen a few other people with Hackathon awards,” I said, “but no one has nearly as many awards as you have. Plus, most of your awards say first place. How do you win so often?"
+我说：“嘿，我见过一些其他获得黑客马拉松奖的人，但是没有人能比得上你。而且，你得了很多次第一，你是如何做到的呢？”
 
-He told me, “I focus on projects that make an impact. For instance, for one of the Hackathons I built a prototype that would let our customers order off our website and pick it up in our stores. The judges realized this would be a big hit with our customers and would greatly increase revenue.”
+他告诉我：“我专注于实用项目。例如，在一次比赛中我设计了一个功能，该功能可以让我们的客户在网站上订货然后到店自提。评委们觉得这个功能非常实用，而且可以极大提高我们公司的收益。”
 
-When I asked him how to find a project that would make an impact, he explained that, during his time at our company, he’d gone ahead and learned all of the many different subsystems that powered our eCommerce business.
+我问他如何想到设计出这样一个功能，他说自己在任职期间，经常会去主动了解支持公司电子商务的多种子系统。
 
-“Knowing the whole system makes it easier to see where the opportunities are," he said. "In fact, my broad understanding of our entire platform is what differentiates me and has allowed me to reach my current position.”
+他说：“了解整个系统能帮助你找到突破点。事实上，正是由于我对公司平台有了多方位的了解，我才能与众不同，而且升到了这个职位。”
 
-## Finding a Project
+## 构思项目
 
-I realized that the Hackathon would be the ultimate test of my abilities: could I take the strategies of hard work, learning from my co-workers, and my intense study of coding to the next level?
+我意识到黑客马拉松比赛将是对我的能力的最终考验：我能不能通过勤奋工作、借鉴学习、高强度学习编码来进军职业的下一阶段呢？
 
-After years of feeling like I had been wasting my potential, I’d finally found a way to prove my worth. This wouldn’t just be about showing off, because I would need to find a project that was actually of use to the company.
+多年以来，我一直觉得自己在浪费自己的潜力，现在我终于找到了一种方法来证明自己的价值。我并不只是想要证明自己的实力，而是真的想做出对公司有实际作用的项目。
 
-I didn’t have a lot of time on my side, and my tech skills were relatively basic compared to the highly skilled senior level engineers I’d be competing against.
+我时间不够，而且与其他高水平工程师相比，我的技术能力也相对比较薄弱。
 
-Even though I felt out of my league, I had the secret sauce for a solution in my back pocket: lessons I’d learned from Neil Rackham’s sales strategies book  _SPIN Selling_, which gave me the four-step model for finding problems in large enterprises.
+即使我觉得自己落后他人，但我却有自己的一套思考秘诀，这是我从尼尔·拉克拉姆的销售策略书 _SPIN Selling_ 中学到的：通过四个步骤找到大企业内部的问题。
 
-### Step 1: Learn how something works.
+### 步骤 1: 了解运作机制
 
-Since I was advised to learn the inner workings of our eCommerce business, I started talking to employees in our planning department, conveniently located between my desk and the lunchroom (and between my desk and the bathrooms). They were responsible for deciding how much merchandise to buy and at what prices they would be sold.
+因为要学习电子商务的内部运作机制，所以我开始与策划部门的员工交谈，我们两部门之间只隔了一个餐厅。他们负责决定进货量和出售价格。
 
-I’d leave my desk and take a moment to ask questions like how they chose how much inventory to purchase in advance, how they set their prices, and if retail and eCommerce had different rules for pricing. Through my questions, I learned how planners introduced new clothing lines and calculated what to sell them at.
+我于是会偶尔离开办公桌去问他们问题，例如如何决定购买的库存量，如何设置价格，零售业和电子商务是否有不同的定价规则等。通过这些问题，我了解了策划部门如何引入新的服装线，也了解了他们如何计算出售价格。
 
-### Step 2: Ask questions to find a problem.
+### 步骤 2: 提出问题，发现问题
 
-Once I’d gotten a sense of how planning worked, I started looking for issues that might come up. Once they set an amount for inventory, does the company ever purchase the wrong amount? Do prices ever get set incorrectly?
+了解了策划的工作原理后，我开始寻找购买过程中可能出现的问题。一旦他们设定了库存数量，公司购买时会出错吗？设置价格时会出错吗？
 
-I was trying to find the sort of mistakes or frustrations that I’d be able to solve.
+我试图找到这其中自己能够解决的错误。
 
-### Step 3: Ask questions to explore the problem’s implications.
+### 步骤 3: 提出问题，探索究竟
 
-After several days of asking questions, I learned about pricing issues, where prices would be set and appear incorrectly on our website. How did this problem come about and what were the implications?
+问了几天问题后，我了解了定价方面的问题，有时候网站上的价格确实会设置错误。这个问题是如何产生的，又意味着什么呢？
 
-I asked how often pricing errors would occur and what kind of further issues they might cause.
+我询问了错误发生的频率以及它们可能导致的问题。
 
-### Step 4: Ask questions to explore the value of solving the problem.
+### 步骤 4: 提出问题，探索解决问题的价值
 
-If there were an automated computer script that found all the incorrectly priced eCommerce items, how helpful would that be?
+如果自动脚本能够发现所有定价不正确的商品，那将有多大帮助呢？
 
-I asked the planners questions that would help me figure out what sort of value I could offer them. If I was going to fix something at our company’s Hackathon, I wanted to make sure it had a noticeable impact.
+我问了策划人员一些问题，这些问题能帮助我弄清楚我可以为他们提供什么样的价值。如果我要在公司的黑客马拉松中解决盲点，那么我想确保该盲点能带来价值。
 
-After my conversations, I found that pricing mistakes would be a worthwhile project to work on. Each of our three or four assistant planners were spending 30 minutes per week manually checking for pricing errors. An automated system would save that time — an estimated 100 hours per year that would no longer be wasted.
+交谈之后，我发现该项目值得一试。3/4 的策划助理每周都会花费 30 分钟人工修改错误定价。自动化系统将为他们节省很多时间——估计每年 100 个小时。
 
-Even though I had already been told about the Hackathon, there was no official date yet. I had a solvable problem in my back pocket, and, while I didn’t know for sure that I had the coding skills, I was fairly confident in my chances. Until the announcement came, I’d focus on my work. But whenever it arrived, I’d be ready to get started.
+即使我已经知道了黑客马拉松这个比赛，但是官方还没有发布通知。我心里已经有了一个想法，尽管我不确定自己是否能够成功解决这个问题，但我却非常相信自己。发布比赛通知之前，我都专注于自己的工作。但是，一旦发布了通知，我就可以准备开始了。
 
-## Confirming with the Planners
 
-Two weeks later, I had an email in my inbox. The Hackathon event would be in one month, going for two days straight, which included a presentation on day 2, a Friday.
+## 与策划人员确认项目
 
-Project ideas would be judged on four criteria: originality of the idea, impact on the business, completeness of the prototype, and strength of the pitch. There were so many unknowns and it was impossible to predict whether one month would be enough time to prepare.
+两星期后，我收到了比赛通知。黑客马拉松比赛将在一个月后进行，比赛将持续两天，第二天（也就是星期五）进行项目展示。
 
-I went over to the planners and confirmed that the issue was still present — checking online pricing sales was still being done manually.
+项目评价标准：构想原创性，业务影响力，原型完整度、宣传力度。
 
-I was happy to learn that our company had a dedicated eCommerce merchandiser, who was responsible for reporting all incorrect website prices and resolving them. She would be able to give me far more information and could confirm whether or not it was an issue worth the effort of fixing.
+由于未知数太多，我无法预测自己来不来得及准备。
 
-I was unhappy to learn that she was on vacation, and I’d have to wait a week to speak to her. The clock was ticking, and I was stuck until then.
+我去了策划部，并确认当时的问题仍然存在——他们仍然在手工修改错误定价。
 
-With three weeks until the Hackathon and our eCommerce merchandiser back in the office, I was able to start exploring the problem in more detail. She confirmed the issues I had heard about and said that building something that could automatically scan the website and find incorrect prices would be a big help.
+我很高兴得知，我们公司有专门的电子商务销售员，她负责报告所有错误定价并加以解决。她能够向我提供更多信息，也能够确认该问题是否值得解决。
 
-In further conversations with the planners, I learned how pricing was uploaded to the website: planners would copy and paste a list of prices from an Excel spreadsheet to SAP, a software that does many things such as managing inventory for retailers. SAP would then push the prices to our eCommerce website.
+然而，她当时在度假，我等了一个星期才能和她说上话。时间越来越紧张了，我当时还毫无进展。
 
-I realized that the Excel prices could be compared to the website prices to find any issues. I would build a simple website that would let planners upload Excel pricing lists.
+离比赛还有三周的时候，她终于回到了公司。于是我了解了更多的细节。她证实了我的问题，并说如果有系统可以自动扫描网站并找到错误定价，对他们来说将大有裨益。
 
-A script would then read the Excel pricing lists and compare them in real-time to our website prices. Any and all discrepancies would then be batched into a list and sent to our planners for review.
+在与策划人员的进一步交谈中，我了解到了上传商品价格到网站上的步骤：策划人将价格清单从 Excel 电子表格复制粘贴到 SAP，该软件可以完成许多工作，例如为零售商管理库存。然后，SAP 将价格推到我们的电子商务网站。
 
-Excited that I had a way to solve the problem, I began explaining the project idea to other developers in our organization, asking if anyone wanted to join my team. However, I made it a strict requirement that any potential teammates would have to first speak to our planners in person and hear the problem from their perspective.
+我想到可以将 Excel 表与网站价格进行比较以发现问题。我会搭建一个简单的网站，使计划人员可以上传 Excel 价格清单。
 
-As part of the SPIN system, I needed teammates who were willing to understand the process and the problem before we could fully design the solution. Unfortunately, I failed to recruit any other software engineers to my project, but other engineers gave me valuable advice on how to code out my project and what technologies to learn.
+我会写一个脚本，该脚本会读取 Excel 价格清单，然后实时与网站价格进行比较。然后，所有的价格差异都会汇总到一个列表中，并发送给策划人进行审查。
 
-I was on my own, but I was excited, feeling confident in my solution.
+我很高兴想到了解决办法，于是我开始向部门其他开发人员解释该项目的想法，询问是否有人愿意加入我的团队。但是，我提出了一个严格的要求，即任何人都必须首先亲自与我们的策划人员交谈，并从他们的角度了解问题。
 
-## Needing to Pivot
+作为 SPIN 系统的一部分，在项目开始前，我需要愿意了解工作流程和目标问题的队友。然而，没有人愿意加入我的团队，但是其他工程师传授给了我如何编写项目代码以及学习哪些技术的宝贵建议。
 
-Two weeks before from the Hackathon, I revisited one of the assistant planners and explained my idea for an automated script that would compare Excel and website prices and report discrepancies. She quickly informed me that my idea would be useless, since the Excel prices and website prices would always be identical.
+于是我开始孤军奋战，但是我很兴奋，对自己的解决方案充满信心。
 
-The assistant planner continued to explain that the original Excel pricing lists were generated by a tool that took in product manufacturing costs, delivery costs, and other relevant factors, and then spit out Excel pricing lists, which our planners would then upload to the SAP software powering our website.
+## 转变思路
 
-If the planners accidentally entered incorrect manufacturing costs or delivery costs into the pricing tool, then the price would similarly be wrong on the Excel lists.
+黑客马拉松大赛召开两周前，我再次拜访了一位助理策划员，并向她解释了我的想法，即使用自动化脚本来比较 Excel 价格清单和网站价格并汇报价格差异。她很快告诉我，我的想法毫无用处，因为 Excel 的价格和网站的价格是始终相同的。
 
-“So you're saying there is no master list that is guaranteed to always contain all the correct prices?” I asked.
+助理策划员继续解释说，原始的 Excel 价格清单是由一个工具生成的，该工具会把产品成本，交付成本和其他相关因素考虑在内，然后生成 Excel 价格清单，我们的策划人员随后将其上传到 SAP 软件，从而上传到网站。
 
-“Exactly,” the assistant planner said.
+如果策划者不小心输错了制造成本或交付成本，那么 Excel 表上也是错误的价格。
 
-It was the opposite of what I needed to hear. There went weeks of planning, thinking, discussing, and waiting — gone.
+“因此，你是说没有一个包含全部正确价格的总清单吗？”我问。
 
-I was two weeks out from a Hackathon where my lack of experience was already holding me back, and I had nothing. There weren’t enough days to do this all over again.
+“是的，”助理策划员说。
 
-I had to rethink my process.
+我听到这话难过极了。数周的计划、思考、讨论、等待都功亏一篑了。
 
-Since timing was tight, I couldn’t do all the research and work I had tried the first time around. Instead, I would let the planners come up with the project requirements for me.
+距离黑客马拉松仅两周了，在其他领域我又经验不足，而我也没有足够的时间能再调研一番了。
 
-I came back to the planning department, this time with a different question: “Imagine you had a robotic script that could automatically grab numbers from anywhere, such as an Excel spreadsheet, a database, or a website, and automatically subtract, add, or compare the data. What problem could be solved with the help of such a script?”
+我不得不重新考虑这个项目。
 
-After the assistant planner I was speaking to thought about it for a few minutes, she told me it would be useful for checking sales prices. She explained that our website ran weekly mass sales every Wednesday. The sales would be listed on our homepage and would use text such as “25% Off All Men's Jackets” or “15% Off All Women's Dresses.”
+由于时间紧迫，我没法像刚开始那样耗费精力调研了。相反，我让策划员为我提出项目需求。
 
-Every Wednesday morning, our 3-4 assistant planners would spend 30 minutes to manually click through our website and confirm the correct discounts were applied. If the planners found any incorrect sales prices, they would send them over to our eCommerce merchandiser.
+我回到策划部门，提出了一个不同的问题：“想象一下，如果你有一个脚本可以自动从任何地方（例如 Excel 电子表格，数据库或网站）抓取数据，并自动做数据运算，那么使用这样的脚本，你可以解决什么问题呢？”
 
-Only IT was able to change live sales prices. To keep things simpler for IT, our eCommerce merchandiser might wait and send a list to IT in batches.
+助理策划员想了几分钟，说这个脚本可以用来检查售价。她解释说，每周三，网站都会批量销售。销售额将列在我们的主页上，并使用诸如 “所有男式外套均减25％” 或 “所有女式连衣裙均减15％” 之类的标题。
 
-That meant that even once an incorrectly priced item was found — unless it was an emergency — the pricing wouldn't get fixed immediately.
+每周三早上，我们的 3-4 名助理策划员都会花费 30 分钟手动检查网站，确认折扣份额。如果策划员发现售价错误，就会发送消息给电子商务销售商。
 
-I had a problem, and the solution wasn’t far off from what I’d originally planned: an automated script that could report all incorrectly discounted items would save time by reducing the amount of work involved for our planners, for our eCommerce merchandiser, and for IT, and it would make for a better customer experience by reducing the amount of incorrect sales prices and doing so quickly.
+只有 IT 人才能够更改实时销售价格。为了简化 IT 部门的工作，电子商务销售商可能会批量向 IT 人员发送错误列表。
 
-I’d only need a master list of all ongoing sales that could be compared to website prices, but the planners told me that no such “100% accurate” master list existed, at least not on paper.
+这意味着，即使发现了定价错误的商品（除非紧急情况），错误也不会得到及时的更正。
 
-“But a fully correct pricing list exists in our heads,” they said, “because we know our products through and through. That’s why we can click through our website and spot incorrect pricing.”
+这个问题与我最初的计划相差不多：使用自动化脚本检测错误定价，节省策划人员、销售商和 IT 人员的时间，也会迅速修正错误定价从而改善客户体验。
 
-After thinking about it for a few moments, I asked, “What if you didn’t have to click through our website? What if you could get all our live website prices in a neat list just by clicking a button?”
+我只需要一个可以与网站价格进行比较的价格主清单，但是策划人员告诉我，不存在 “100％准确” 的主清单，至少没有纸质清单。
 
-“That would dramatically speed up our price checking,” they said.
+他们说：“但是我们脑子里有这么一个清单，因为我们非常了解我们的产品。正因如此，我们才能检查网站，发现错误的价格。”
 
-We came up with a plan: I would build a simple website that would allow planners to upload dozens of item names and immediately receive an easy-to-read list of those items’ live website prices and sales discounts.
+考虑了片刻之后，我问：“如果你不必遍历网站呢？如果你只需单击一下，就可以把所有的实时网站价格都整理到一个清单中，那会怎么样呢？”
 
-The idea was concrete and doable. It had an impact — conserved manpower, faster QA, and improved customer experience — and I was confident in my own ability to build it (even if I didn’t yet know exactly how).
+“那会大大加快我们的检查速度。”
 
-I went back to my desk and typed up a document explaining the business requirements of what I planned to build, how it would be helpful, and the Hackathon date when I would build it.
+我们讨论出了一个计划：我搭建一个简单的网站，策划人员向网站上传数十个商品名称，立即就能获得一个清单，清单上记录了这些商品的实时网站价格和销售折扣。
 
-I went back to the planners and had one of the planning managers and the eCommerce merchandiser read my document. There was no time to backpedal again.
+这个想法是切实可行的。它有实用性——节省人力，加快质检，改善客户体验——我对自己的能力充满信心（即便我还不知道到底该怎么做）。
 
-They gave me the confirmation. The idea was set, and with a week left, it was time to figure out how I was going to make this a functioning, usable reality.
+我回到办公桌，打开文档写了计划书，然后交给了策划部和销售商，我没有时间可以耽搁了。
 
-I went to the engineers at my company more advanced than I was (of which there were plenty) and asked, “How would you code a script that automatically returned the website prices for items we sell?”
+他们确认了我的计划。确定想法后还剩一个星期了，该是时候弄清楚我该如何把计划付诸实践了。
 
-After speaking to several engineers, I learned that our website product pages got their prices by querying our internal eCommerce database, which in turn got its pricing info from SAP. This was a Redis database that had its own neatly written documentation showing exactly how to request any pricing info from it.
+我去找了公司里更高级的工程师（很多人都比我经验丰富），我问他们：“怎么写一个自动返回网站商品价格的脚本呢？”
 
-I found the engineer who had built the database and learned that I could retrieve the website prices and sale prices of a whole list of items using just a single database call.
+与几位工程师交谈后，我了解到网站产品页面是通过查询内部电子商务数据库来获取价格的，而内部电子商务数据库又是从 SAP 获得价格信息的。这是一个 Redis 数据库，它的文档齐全，可以找到如何获取价格信息的详细解释。
 
-Even though my plan was coming together, I was still very aware of how much work I had ahead of me. I tried to recruit other engineers, but didn’t find much interest, especially when I told them about my expectation for them to speak to the planners.
+我找到了数据库工程师，并了解到我可以只用一个数据库调用命令就可以检索整个项目清单的网站价格和销售价格。
 
-With no engineering teammates, I spent every moment I could after work studying the material on my own, experimenting with making database calls and studying how to write JavaScript code to read Excel spreadsheets.
+即使我已经制定好了计划，但是我还有很多工作要做。我曾试图招募其他工程师，但大家对这个项目都没有什么兴趣，特别是我还要求他们要与策划人员直接沟通。
 
-## Expanding to our Main Brand
+在没有工程团队的情况下，我下班后就独自研究资料，尝试调用数据库，研究如何编写 JavaScript 代码以读取 Excel 电子表格。
 
-The day before the Hackathon, out of curiosity, I asked our planners how they knew what inventory options to sell. They responded that our company’s merchandising department was responsible for those decisions, so I went to speak to our merchandisers.
+## 转战主营品牌
 
-During our conversation, they mentioned in passing something about their counterparts in our main brand.
+黑客马拉松比赛前一天，出于好奇，我问策划人员他们如何知道要出售哪些库存的。他们回答说，公司采购部门负责做这些决定，所以我又去跟采购员交谈。
 
-“Our main brand?” I asked. “Aren't  _you guys_  our main brand?”
+在我们的交谈中，他们提到了要把这个项目介绍给我们主营品牌中的一些同行。
 
-“No,” they said. “The merchandising and planning for this floor is dedicated to our smaller brand, which is 15% of our total revenue. Upstairs is our flagship apparel brand.”
+“我们的主营品牌？” 我问。“ _你们_ 不是主营品牌吗？”
 
-This couldn’t be happening. I knew we had several brands at our company, but the day before the Hackathon, I was finding out that my project was being built for the smallest brand in our organization.
+“不，”他们说。“这层的销售和策划专门针对小品牌，占我们总收入的15％。楼上才是我们的旗舰服装品牌。”
 
-With a weaker background in coding, no other engineers on my team, and the need to do something big to impress the judges, I wasn’t looking too great.
+这不可能。我知道我们公司有几个品牌，但是在黑客马拉松前一天，我发现我的项目只能用于公司最小的品牌。
 
-I walked upstairs and started asking around where I could find the planning department for our main brand. I needed to speak to them if my project was going to have a big enough impact.
+我的编程能力较弱，团队中没有其他工程师，而且我需要做一些大事来打动评委，所以现在看起来，我的项目完全没有希望了。
 
-There seemed to be at least 20-40 planners in our main brand. Who would I speak to?
+我走上楼，开始询问我在哪里可以找到我们主营品牌的策划部。如果要做成有意义的项目，那么我一定要与他们谈谈。
 
-I needed to find a planner who would understand what I had in mind, but also have the knowledge base and the creative thinking to find the areas I was missing.
+主营品牌策划部至少有 20-40 位策划人员。我该问谁呢？
 
-What if the larger brand used a different system? I needed somebody dependable, and I didn’t have the time to spread out over a few weeks.
+我需要找到一个既理解我的想法，又了解我未触及的领域的人。
 
-With the Hackathon a day away, I took a shortcut.
+如果主营品牌使用其他系统怎么办？我需要找一个可靠的人，我没有时间了。
 
-Planning had an open office space environment, which meant people were at cubicles with no walls. I began talking about my Hackathon idea to one of the planners in our main brand.
+离黑客马拉松比赛还有一天，我走了一条捷径。
 
-As I spoke, I raised my voice and began walking up and down the aisle, looking around at other planners as I did so. This allowed me to get the potential attention of up to eight planners at once.
+策划部的办公空间是开放式的，所以，当我与主营品牌的一位策划人员谈论我的黑客马拉松想法时，我故意提高嗓门，在过道上走来走去，环顾其他策划人员。这样我能一次吸引多达 8 位策划人员的注意力。
 
-One of the planners showed a ton of interest and asked a lot of questions. He was specifically interested in our Redis database and whether other information besides pricing could be found.
+其中一位兴趣极大，他问了我很多问题。他对 Redis 数据库以及是否能找到除定价之外的其他信息特别感兴趣。
 
-I showed him our database documentation and we quickly went through it all.
+我向他展示了数据库文档，我们很快就看完了。
 
-He mentioned that there was other information besides pricing that could be useful, such as whether the items were listed on our website, and what categories they belonged to. He then introduced me to eCommerce merchandisers from our main brand, who agreed that what I was building had potential beyond just pricing.
+他提到，除了定价外，还有其他一些有用的信息，例如这些物品是否列出在了网站上、商品类别。 然后，他向我介绍了主营品牌的销售商，他也认为我的项目不仅仅在定价方面有所用途。
 
-There wasn’t enough time for me to make any drastic expansions to my coding requirements, but we agreed that I could build my project in a way that was flexible enough for it to be used by planners from either our smaller brand or our main brand.
+我没有足够的时间来扩展项目需求了，但是我们同意我可以以一种足够灵活的方式来构建项目，以供小品牌或主营品牌的策划人使用。
 
-Hearing about my project’s value and viability from co-workers who were really enthusiastic about it was just the push I needed.
+同事的支持和对项目价值的认可才是我前进的动力。
 
-I had the confidence, the resources, the research, and, hopefully, the ability. Even if I didn’t, there would be no avoiding it — the Hackathon was starting the next morning, and it wasn’t going to wait for anything.
+我有信心，有资源，有研究而且有能力。即使我没有，也无计可施了——黑客马拉松比赛将于第二天早上开始，不能再等了。
 
-## Finding a Teammate
 
-The Hackathon was a two-day affair, over the course of a Thursday and Friday.
+## 寻找队友
 
-When I looked at the calendar for the date, I realized that I had a family commitment on Friday afternoon that I wouldn’t be able to avoid. The presentation and judging would both be on Friday, which meant that I absolutely  _had to_  find a teammate who would be able to present, or the project would be dead before I’d even written a line of code.
+黑客马拉松比赛将于周四周五举办。
 
-I approached the planners from our company’s smaller brand who I’d been in conversation with for several weeks already. I asked if any of them would be able to present our project to the judges. None seemed enthusiastic. A few told me they had meetings on Friday while others said they were nervous about public speaking.
+当我查看日历时，我发现自己周五下午必须要参加自己的家庭聚会。而展示和评审都将在周五进行，这意味着我绝对 _必须_ 找到一个能够做项目展示的队友，否则我还没写代码呢，项目就提前夭折了。
 
-Needing a teammate, I went straight to Oliver, the planner from our main brand who had such an active interest in my project. He was a popular guy with a kind face. His hair was greying, though he was in his mid-20s, and he had surprisingly made it to the role of senior planner within just four years out of college, when most took five to eight years to get to that point. He had a lot of awards at his desk, and plenty of snacks, too.
+我去找了公司小品牌的策划员，我与他们已经接触了几周。我问他们是否能够在周五做项目展示，但是看起来没有人感兴趣。有些人告诉我他们周五要开会，而有些人则说他们公开演讲时会紧张。
 
-Oliver immediately agreed to present the project and said he was excited to do so.
+于是我直接去找了我们主营品牌的策划员奥利弗，他对我的项目非常感兴趣。他面容慈善，受人欢迎。尽管他才 20 多岁，但头发已经变灰了。他在大学毕业后短短四年内就成为了高级策划师，而大多数人要花费五到八年才能做到这个职位。他的办公桌上摆了很多奖杯，也有很多小零食。
 
-We went downstairs to the Hackathon’s dedicated meeting space and we signed up as a team. We needed a name for our project so we called it PriceSeeker.
+奥利弗立刻同意帮我做项目展示。
 
-There were nine other teams competing, most of which were comprised of senior engineers. Some project managers and UX designers were also part of a few teams. With the exception of my planning teammate, everyone else competing belonged to our eCommerce department.
+我们下楼去了黑客马拉松专用的会议室，并作为一个团队签上了我们的名字。我们的项目名为 PriceSeeker。
 
-## Simplifying the Design
+另外还有 9 个团队参加比赛，其中大多数由高级工程师组成。 一些项目经理和 UX 设计师也是他们团队的一部分。除了我的队友外，其他竞争者都来自于电子商务部门。
 
-I had my plan in mind going into the Hackathon: I’d build a simple website that would let users upload Excel lists of items.
+## 简化设计
 
-My website would parse the Excel spreadsheet, retrieve the list of items, and request their prices from our Redis database. It would then return to the planners a new Excel spreadsheet containing items and their prices.
+我脑海里已经有了一个计划：我将搭建一个简单的网站，让用户上传 Excel 项目清单。
 
-With this, instead of manually clicking through our website to check item prices, they’d be able to immediately see all relevant website prices at the click of a button. It would make price-checking a whole lot easier and more convenient.
+我的网站将解析 Excel 电子表格，检索项目列表，并从 Redis 数据库获取价格。然后，网站将会返还策划者一个包含项目及其价格的新 Excel 电子表格。
 
-We had two days to work on our project and then present it to the judges, who were high ranking leaders within our eCommerce department. My senior director of engineering — who had introduced me to the Hackathon in the first place and taught me about making an impact — was one of the judges. He was also available throughout the Hackathon to answer any coding questions.
+这样一来，他们无需手动浏览网站来查看商品价格，只需点击一下按钮，便可以立即查看所有相关的网站价格。这使价格检查既容易又方便。
 
-Excited to begin, I sat down at my computer.
+我们有两天的时间来搭建项目，然后将其提交给评审，他们是电子商务部门的高级领导。我的直系领导是评委之一——就是他把黑客马拉松比赛介绍给我的。在比赛期间，可以向他咨询代码问题。
 
-I soon got up from my computer, because I had very quickly hit a wall: I didn’t have enough coding knowledge to figure out how to set up a basic HTML website that could easily read from an uploaded Excel sheet.
+我满怀激动地开始了。
 
-I approached my senior director of engineering for advice, and he suggested I simplify my design and just make a form with a text area. Users would copy items from Excel into the form and submit it.
+但是很快，我便遇到了难题：我代码水平薄弱，不知道如何搭建一个基本的 HTML 网站来读取上传的 Excel 工作表。
 
-Upon submission, the pricing would be requested from our database. The pricing would then be returned in a simple HTML table, which users could copy into Excel if they wanted.
+我向高级工程总监寻求建议，他建议我简化设计，只制作一个带有文本域的表格。用户可以复制 Excel 的内容到表格然后提交。
 
-No longer needing to write code to read Excel documents simplified things a lot.
+提交后，系统会从数据库请求价格，然后返回简单的含价格清单的 HTML 表单中，用户可以根据需要将其复制到 Excel 中。
 
-## Building PriceSeeker
+不通过编程来读取 Excel 文档，这简化了很多步骤。
 
-Even with the help, it was still an intense day of near-constant coding.
+## 搭建项目 PriceSeeker
 
-I took some breaks to check in with our planners and get approval on the design. I grabbed plenty of snacks from Oliver’s desk. I also spoke with other engineers whenever I needed help or got stuck on the code.
 
-I wasn’t alone, and I was grateful for the help, but it was my responsibility to keep pushing through the difficulties and put in the physical and mental effort of writing out all the code.
+即使有别人相助，日程依旧紧张。
 
-I was extremely aware of my disadvantage in the competition, but I was happy to find that by the end of the first day, I had managed to get a decent prototype working. It returned information for small lists of four or fewer items, but for larger lists it returned nothing at all.
+我花了一些时间与策划员核对并确定了设计原型。我从奥利弗的桌子上抢走了很多零食。每当需要帮助或卡在编程上时，我也会与其他工程师交谈。
 
-The day was ending and I didn’t have the time to investigate or troubleshoot, so I uploaded PriceSeeker onto Github Pages, emailed the website address to several planners, and went home. Hopefully, a good night’s sleep and some time for responses would help me along my way.
+我并不孤单，我很感谢他们对我帮助，但我有责任努力克服困难，并付出体力和精力来编写代码。
 
-When I got back to work on the second day, I found an email waiting for me from Oliver — he wasn’t able to get PriceSeeker working, but he helpfully sent me several screenshots showing what he’d tried.
+我非常清楚自己在比赛中的劣势，但是第一天结束时，我就已经成功地制作了一个不错的原型。如果表格只有4列，它会返回一些信息，但是如果表格列数太多，它就毫无反应。
 
-Seeing the screenshots, I immediately realized that I hadn’t properly explained how to copy and paste items into the form. I emailed Oliver back a screenshot showing him how to do so, and he emailed me back two minutes later, showing me that it was working.
+一天结束了，我没有时间去调查或排除故障，所以我将 PriceSeeker 上传到了Github Pages，我通过电子邮件将网站地址发送给了一些策划员，然后回家了。我希望能好好的睡一觉，也期待能收到好消息，这对我来说大有裨益。
 
-After taking some time to get into the proper headspace, I went to Oliver’s desk. There were several other planners around his desk and on his screen was PriceSeeker, which they were discussing.
+第二天我到公司时，发现奥利弗给我发了一封邮件—— PriceSeeker 无法正常工作，而且他发送给了我几张操作截图。
 
-Oliver had sent the website address to all the other planners on his team. The planners were discussing how amazing it would be to further explore collaboration between planning and engineering. I was excited by the enthusiasm, and especially by the possibility of opening new doors with this collaboration.
+看到截图后，我意识到自己没有正确解释如何将项目复制和粘贴到表单中。我给奥利弗发了一张截图，向他展示操作方法。两分钟后他回了邮件，说系统正常工作了。
 
-This especially excited Oliver, since he loved the idea of breaking through the barriers that siloed departments and closed them off from each other. Maybe we could create further opportunities for finding problems and impactful solutions by encouraging communication between departments.
+花了一些时间后，我去了奥利弗的办公桌。在他的办公桌旁还有其他几位策划员，当时他们正在讨论电脑屏幕上的 PriceSeeker。
 
-Since I knew I wasn’t going to be around for the presentation, I spoke to Oliver, and we went over his five minute pitch. He started by displaying our working PriceSeeker website and showing it in action. He copied and pasted items into the form, submitted it, and explained why it was so useful to be able to get the prices instantly.
+奥利弗已将该网站地址发给了他团队中其他策划员。他们正在讨论策划部与工程部合作真是锦上添花。我受到了鼓舞，也因为这次合作打开了新世界的大门。
 
-His demo went on to explain how “the sky's the limit,” with examples of other data that would be useful to receive. He explained the business impact of how our automation website would reduce manual effort and lead to an improved customer experience.
+奥利弗对此特别兴奋，因为他看好不同部门之间的协作。也许我们可以通过鼓励部门之间的沟通来创造更多的机会来发现问题，并提出有效的解决方案。
 
-He concluded that though PriceSeeker currently only returned pricing, there was a lot more that was possible. It was amazing hearing him speak about the website's possibilities. He focused entirely on business terms like “reduced manual effort” and “increased annual sales,” and given that he was a planner himself, Oliver was able to talk about our project with far more accuracy than I ever could have.
+由于我知道自己不会参加项目展示，所以我看奥利弗预演了展示，他展示了 5 分钟。首先，他展示了 PriceSeeker 网站，并进行了实操。他将项目复制并粘贴到表单中，然后提交，并解释了这个网站的意义。
 
-When he finished his presentation, I asked questions to both learn more about our project's value and to give him additional practice at explaining its potential impact: “How much manual effort could be reduced?”
+他继续解释了项目的不足，并举例说明了其他有用的数据。他解释了自动化网站能如何减少人工并改善客户体验。
 
-“How would automating the checking of our website data improve your abilities to order the right amount of inventory?”
+他得出结论，尽管 PriceSeeker 当前仅能返回定价，但它还有无限可能。听到他谈论该网站的可能性可真是太神奇了。他完全专注于诸如 “减少人工工作量” 和 “增加年销售额” 之类的业务术语。鉴于他本人是一名策划员，奥利弗能够比我更清楚地展示我们的项目。
 
-“In addition to planning, what other teams or departments would benefit from automated checking of website data?”
+展示后，我问了一些项目价值相关的问题，这能让他深入解释项目潜在影响力：
 
-“Why?”
+“该项目可以减少多少人工成本？”
 
-I knew to ask these questions because I learned this question-asking technique from the book  _Spin Selling_.  _Spin Selling_  acknowledges that sellers sometimes cannot present directly to buyers and need to rely on intermediaries to pass on the messages. The book advises coaching your intermediaries by asking them questions that get them to explain the product's benefits in their own words.
+“自动检查我们的网站数据将如何提高订购适量库存的能力？”
 
-That’s exactly what I did, asking lots of questions that got Oliver to further explain all the many ways our project could add value.
+“除了策划部外，自动检查网站数据还能使其他团队或部门受益吗？为什么”
 
-About an hour before the judging would begin, I had to leave. I was sorry that I wouldn’t be able to be there for our presentation, but I was comforted to know that we were in good hands.
+我能问出这些问题，是因为我从 _Spin Selling_ 一书中学到了提问技术。_Spin Selling_ 中说道，卖方有时无法直接向买方展示商品，因此他们需要依靠中介来传递消息。该书提出，要通过向中介提出问题来指导他们，让他们以自己的语言解释商品优点。
 
-I wished my teammate good luck and asked a coworker to text me if my project placed in the top three.
+这正是我所做的，我问了很多问题，让奥利弗进一步解释了我们项目的增值点。
 
-## The Results Are In
+评审开始前大约一个小时，我不得不离开公司。我很抱歉自己无法出席比赛，但我很高兴，因为我们项目进展十分顺利。
 
-After leaving, I sat on a train for two hours. On the way, I mentally prepared for what would happen once the contest was over.
+我祝队友好运，并请一位同事发短信告诉我我们的项目是否排在前三名。
 
-I'd gotten the feeling that we were the only team that had extensively started planning even before the Hackathon was officially announced. I'd also gotten the impression that we were the only team who had prepared our presentation to focus exclusively on a business impact.
+## 结果揭晓 
 
-I had some confidence because of this, but I was still nervous because there were so many uncontrollable things that could prevent us from reaching the top three places or even winning the Hackathon.
+离开后，我乘了两个小时火车。在路上，我做好了静待比赛结果的准备。
 
-I kept imagining all the things that could go wrong without me being able to do anything. Maybe it would turn out we’d done something wrong and we’d get disqualified somehow. Maybe Oliver wouldn't be able to present. Maybe another team would deliver a superb presentation that rocked the house.
+我觉得我们是唯一一支在黑客马拉松比赛正式开始之前就开始筹备的队伍，也是是唯一一支在项目展示中聚焦于商业影响力的队伍。
 
-While sitting on the train, I realized that planning to win the Hackathon was not something useful, as it wasn’t something I could control. I decided that — regardless of the results — I would continue working on my project and implement it in a way that would lead to an increase of $20,000-80,000 in profits.
+因此我有一定的信心，但我还是感到紧张，因为有太多无法控制的事情了，可能我们无法夺得前三甲或拔得头筹。
 
-I chose those numbers rather arbitrarily, but it felt like something achievable. To reach my goal, I knew there was still a lot of work that would have to be done after the Hackathon was over.
+我一直在幻想所有可能的突发事件，而我却无能为力。也许评审会认为我们的项目步骤出错了，于是我们会被取消参赛资格。也许奥利弗没能做项目展示。也许另一支团队会一鸣惊人，震惊全场。
 
-I got off the train and made it to my family event. Part of me was still somewhere else, but I knew there was nothing I could do now. I didn’t look at my phone for a bit, which is why it took some time before I saw the text. The results were in. My team had won.
+坐在火车上时，我意识到，计划赢得黑客马拉松比赛并没有什么用，因为有太多的不可控因素。我决定——不管结果如何，我都会继续搭建我的项目，并努力让它达成 20,000-80,000 美元的利润。
 
-For a brief moment, I was shocked, relieved, happy. I’d reached this point after so much work, so much waiting and struggling, and it looked like it was finally paying off.
+这个数字我也只是随口一说，但我感觉是可以实现的。为了实现这个目标，我知道比赛结束后我还有很多工作要做。
 
-Victory didn’t last long, because now I was overthinking all the negative possibilities again. To pull off this win, I’d done a lot of things at work I’d never expressly gotten permission to do.
+我下了火车，然后去参加家庭聚会。但是我却心系比赛，但是我知道现在自己也无能为力了。我没有看手机，这就是为什么我隔了一段时间才看到短信的原因。结果出来了，我们赢了。
 
-I'd given the link to our database's documentation to planners who quite clearly were not members of our eCommerce department. I'd hosted our Hackathon project in my own personal GitHub rather than in our company's code repository. I'd been constantly sneaking off during lunch breaks and at the end of the day to talk to the planners, which meant my coworkers could argue that I was neglecting my regular workload.
+看到消息后，我既震惊又开心又感到欣慰。做了大量工作，经历了这么多等待和苦苦挣扎，我终于有所收获。
 
-Even more than all of this, I was worried about the social repercussions. I was extremely far from any level of seniority in my engineering department, so what kind of reception would I get for besting the more senior engineers?
+胜利并没有持续太久，因为现在我又重新考虑了所有负面的可能性。为了赢得这场胜利，我在工作中做了很多事情，但我却从未明确得到过允许。
 
-## After the Hackathon
+我给了策划员一份指向数据库文档的链接，但很显然，这些策划员不是我们电子商务部门的成员。我把黑客马拉松项目托管在了自己的个人 GitHub 中，而不是托管在公司的代码存储库中。午休时、下班后我偷偷溜走跟策划人员谈话，这意味着我的同事们可能会争辩说我忽略了自己的日常工作。
 
-I made it to work after the weekend, concerned for the worst, only to find that no one seemed to care much.
+不仅如此，我还担心项目的社会影响。我资质尚浅，如果我击败了高级工程师，那他们以后会怎么对待我呢？
 
-When I returned, a bunch of people gave me high-fives and wished me congratulations. But my regular day-to-day workload stayed the same as it was before the Hackathon. I was told by upper engineering management that there wasn't enough engineering leeway to let me or any other engineer be given official permission to work on PriceSeeker.
+## 比赛结束后
 
-Our heads of planning said they were in the midst of a major restructuring and said they wouldn't be able to devote time to my project for at least several months. I was frustrated to find that, while I was receiving positive feedback from coworkers, all my efforts amounted to a neat side project I could be proud of, but wouldn’t be able to actually do anything with.
+周末过后我回去上班，但我担心的情况并没有发生。
 
-I had a lot of work to catch up on now that the Hackathon was over, so I went back to focusing solely on my workload, with 5-15 hours per week after work spent studying Selenium best practices. It took me about a month or two working on my skills to get to the point where I was finishing my workload in enough time to have a few hours during the day to spare here and there.
+当我到公司时，一群人击掌并祝贺我。但是我的日常工作量与黑客马拉松之前的工作量差不多。上级工程管理人员告诉我，不管是我还是其他工程师，现在都没有时间和官方许可来完成 PriceSeeker。
 
-PriceSeeker was almost done and there was just a bit more coding that had to be done to fix all the bugs. I felt I needed maybe a day or two more, but without official permission, it would have to be my own project to secretly complete on my own.
+我们的计划负责人表示，他们正在重组某个大型项目，至少几个月都无法把时间花在在我的项目上。我沮丧地发现，虽然我收到了同事的积极反馈，但我所有的努力都构成了一个让我引以为傲的的副业，但实际上却毫无用处。
 
-None of my coworkers knew I was spending time on PriceSeeker, nor did they care, since I was getting my regular work done and submitted on time.
+黑客马拉松结束后，我有很多工作要做，所以我继续回到了工作上来，下班后每天花费 5-15 个小时研究 Selenium 最佳实践。我花了大约一两个月的时间来提升技能，这样我便能在规定时间内完成自己的本职工作，白天也能有几个小时研究自己的项目。
 
-After some considerable effort and tinkering, I managed to solve all of PriceSeeker’s bugs.
+PriceSeeker 差不多完成了，只剩一点小问题了。我觉得可能还需要一两天才能完成，但是如果没有官方许可，我便不得不自己秘密完成项目。
 
-Excitedly, I headed to the planners from our minor brand to show them the working model. They told me they didn’t need it anymore. I couldn’t believe it. I was so shocked that I could barely even ask what was wrong.
+同事们都不知道我花时间在 PriceSeeker 上，他们也不在乎，因为我每次都按时完成并提交本职工作。
 
-As I found out, the issue of incorrect pricing had been a temporary one caused by a recent change in how pricing would be displayed. At some point after the Hackathon, the pricing displays had been updated in a way that would let planners find any incorrect pricing a lot quicker.
+经过大量的努力和修补，我设法解决了 PriceSeeker 的所有错误。
 
-In hindsight, I should have realized this during the lead-up to the Hackathon, but I must have been so enthusiastic about my plan that I hadn’t properly investigated all areas where it could go wrong. Regardless of why I’d missed it, this meant that PriceSeeker had been effectively useless for quite some time.
+我兴奋地跑到品牌策划部向他们展示了项目模型。但他们告诉我他们不再需要它了。我简直不敢相信。我非常震惊，以至于我连问题都问不出来。
 
-Oliver told me that PriceSeeker as it was would likewise be useless for our main brand. However, he told me that there  _was_  an issue where items on our website would occasionally “fall off.” This meant that certain items and colors that were in our inventory would accidentally get removed from our eCommerce store.
+后来我发现，错误定价的问题是暂时的，这是由于最近显示定价方式的变化而引起的。黑客马拉松比赛后，定价显示系统已经更新了，可以让策划员更快地找到任何错误定价。
 
-This happened rarely, but the planners wouldn't know about it until reviewing weekly eCommerce sales reports, noticing some items had zero sales, and then checking if they were on our website. At that point, they would mark the products to be returned to our website.
+事后看来，我本应该在黑客马拉松的准备阶段就意识到这一点，但是当时我对自己的计划非常有信息，所以没能对可能的问题进行适当的调查。不管我再怎么不情愿，PriceSeeker 在相当长的一段时间里都将毫无用处。
 
-Once again, this was more manual work and less productivity than was optimal, and Oliver advised that it would be very useful if PriceSeeker could be modified to let them know whether or not an item was on our website.
+奥利弗告诉我，对于我们的主要品牌来说，PriceSeeker 毫无用处。但是，他告诉我网站上的有些商品有时会平白无故消失。这意味着库存中的某些商品和颜色会意外地从我们的电子商务商店中删除。
 
-After going through our database documentation, I realized it would be a very simple matter to query our database to see if an item was listed on our website or not, so I quickly updated PriceSeeker to also include that check.
+这种情况很少发生，但是直到查看每周的电子商务销售报告，策划员才能注意到某些商品的销售额为零，然后他们会检查这些商品是否展示在了网站上。到那时他们才会标记要退回网站的商品。
 
-Oliver told me that our eCommerce merchandisers were the ones who were responsible for quality checks of website inventory and they would benefit most from this new feature within PriceSeeker. I approached the eCommerce merchandisers for each of our brands and found that they were very happy with what I showed them.
+这种工作方式又增加了人工成本，奥利弗建议我们可以修改 PriceSeeker，从而让它检测网站上是否有某商品。
 
-They copied and pasted hundreds of items into it at once and quickly verified that PriceSeeker was properly reporting all items that were unlisted on our eCommerce store. And just like that, they began using it several times per week.
+浏览完数据库文档后，我了解到查询数据库以查看某项是否在我们的网站上非常容易实现。于是我迅速为 PriceSeeker 更新了这一功能。
 
-Over the next several weeks, I continued to talk to planners and merchandisers, trying to find other areas where PriceSeeker could be useful.
+奥利弗告诉我，我们的电子商务销售商负责检查网站库存质量，他们将从 PriceSeeker 的这项新功能中受益颇多。我与每个品牌的电子商务销售商接洽，发现他们对我向他们展示的产品感到非常满意。
 
-I learned that our planning department had recently set up a data science team. The team was responsible for building automated scripts and dashboards to help our planners make better decisions. Reporting unlisted eCommerce inventory had actually been on their to-do list.
+他们立即将数百个项目复制并粘贴到其中，发现 PriceSeeker 能够准确找到所有未在电子商务商店中列出的所有项目。然后他们开始每周使用几次 PriceSeeker。
 
-I enjoyed speaking with the data science team and exchanging ideas, but with no official sanction to work on PriceSeeker or anything else, our conversations were mostly theoretical. Still, I was happy to know that my project had accomplished something and was finally seeing the light of day.
+在接下来的几周中，我继续与策划员和销售商接洽，试图找到 PriceSeeker 其他可能有用的功能。
 
-It wasn’t long afterward when I got an email from my consulting company’s human resources department. They wanted to schedule a meeting.
+我了解到，策划部最近成立了一个数据分析团队。该团队负责构建自动化脚本和面板，以帮助策划员更好做出决策。报告未展出的电子商务库存实际上已经在他们的待办事项列表中。
 
-I went in to talk to them and was told there were going to be layoffs. Several consultants would not have their contracts renewed. I was one of them. I had three weeks’ notice before my contract ended.
+我很喜欢与数据分析团队聊天并交换意见，但是由于没有正式批准 PriceSeeker 或其他产品的搭建工作，我们谈论的大部分都是理论内容。不过，我很高兴知道我的项目已经取得了一些成就，并且终于看到了曙光。
 
-I knew that the fashion brand had been facing a decline in sales and firing a consultant was easier than getting rid of a full-time employee. Nonetheless I was still quite surprised that I would be among those let go.
+不久之后，我收到了咨询公司人力资源部门的电子邮件。他们想安排一个会议。
 
-In my last few weeks, I tidied up my regular work and gave some extra attention to PriceSeeker. I wanted to see if I could quantify the financial impact it had made, but the value of detecting accidentally unlisted inventory would not be easy to quantify.
+我进去跟他们聊了聊，他们告诉我公司即将裁员。他们要辞掉几位顾问，我是其中之一。在劳动合同终止前，我收到了三份通知。
 
-When I went to our eCommerce merchandisers, they told me its impact would be impossible to measure. There were so many complicating factors involved, such as how many unlisted items would be detected, what brand they were from, the popularity of those items, and how much inventory remained.
+我知道时尚品牌一直面临着销量下降的问题，解雇顾问比解雇全职雇员要容易得多。尽管如此，我仍然很惊讶我竟然会被裁员。
 
-Oliver summed it up, “though we can’t give a monetary value to PriceSeeker, we are certain it has a positive impact on our bottom line.”
+最后几周里，我整理了日常工作，并特别把精力放在了 PriceSeeker 上。我想看看自己是否可以量化它所产生的财务影响，但是检测网站未列出的库存的价值并不容易量化。
 
-With my contract ended, I was left looking back at around seven months in a company where I’d had some amazing adventures, most exciting of which was our Hackathon.
+当我去拜访我们的电子商务销售商时，他们告诉我其影响是无法衡量的，因为其中涉及许多复杂因素，例如 PriceSeeker 能检测多少未列出的商品，它们来自哪个品牌，这些商品的受欢迎程度以及剩余的库存量。
 
-After our Hackathon was over, many of my colleagues told me that I won because I “focused on a business impact.” Though they meant it as a compliment, I always felt hollow when I heard that being given as the sole reason.
+奥利弗总结说：“尽管我们不能量化 PriceSeeker 带来的价值，但我们确信它一定产生了积极影响。”
 
-Personally, I credit my win to actively preparing even before the Hackathon was officially announced. By doing so, I was able to continuously get the feedback I needed to improve my proposal so that it eventually had a legitimate business impact.
+劳动合同结束后，我回顾了自己在这家公司的经历：我入职 7 个月，有了很多激动人心的体验，其中之一就是黑客马拉松比赛。
 
-I couldn’t have done it without the help of others. So much of the work felt like it was up to me, like I had to be the one to push and discover and self-teach and work.
+黑客马拉松结束后，许多同事告诉我我胜利的原因是我 “专注于业务影响”。尽管他们夸奖了我，但是我觉得这个原因听起来太过空泛。
 
-The truth is, I wasn’t alone. The ones who offered passion and enthusiasm — my senior directing of engineering and my teammate, Oliver — were the ones who pushed me to be part of a competition I wouldn’t have ever gone near two years earlier.
+就个人而言，我将自己的胜利归功于充足的准备：我在黑客马拉松正式开始之前就做好了积极的准备。这样，我能不断获得改进提案所需的反馈，以便更好地改进业务。
 
-I’m still learning. I’m still trying new things. I’m still hoping I’ll find more of that collaboration that enabled me to create something helpful for my company and meaningful to my own journey.
+如果没有别人的帮助，我不会取得比赛胜利。在项目过程中，我是主要负责人，我要不断推进、探索、自学，而且还要努力工作。
 
-Thinking back, it’s still hard for me to believe that someone like me, who had struggled so hard to land a career, would be able to enter the corporate world and turn their life around.
+事实是，我并不孤单。那些向我展示热情的人——我的工程总监和队友奥利弗——他们就是促使我参加比赛的人，而两年前我根本不会参加这种比赛。
 
-For me, the Hackathon was a second chance. And I made the most of it.
+我还在学习。我还在尝试新事物。我仍然希望能找到更多的合作人来为公司创造有价值的产品，这也会让我的生活更有意义。
 
+回想起来，我仍然很难相信，像我这样奋力挣扎才能转行的人竟然能够进入大公司并改变自己的生活。
+
+对我而言，黑客马拉松是第二次机会。而我充分利用了它。
 
 [1]: mailto:siegel.moshes@gmail.com
 [2]: https://www.4scorechat.com/

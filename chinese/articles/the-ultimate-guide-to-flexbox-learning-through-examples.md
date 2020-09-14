@@ -1,118 +1,118 @@
 > * 原文地址：[The Ultimate Guide to Flexbox — Learning Through Examples](https://www.freecodecamp.org/news/the-ultimate-guide-to-flexbox-learning-through-examples-8c90248d4676/)
 > * 原文作者：[Emmanuel Ohans](https://www.freecodecamp.org/news/author/emmanuel/)
-> * 译者：
+> * 译者：sunnysly123
 > * 校对者：
 
 ![The Ultimate Guide to Flexbox — Learning Through Examples](https://cdn-media-1.freecodecamp.org/images/1*9vcCT6S_dFJqR6yed6Vmqw.png)
 
 ![](https://cdn-media-1.freecodecamp.org/images/DDLwRS3Jad5brv0RIH2r5K2YxqcvAa1vBThw)
 
-Note — this is a long read, so if you want, you can download this article and read it offline  [here][1].
+注意 — 这篇文章篇幅较长，如果需要的话，你可以在[这里][1]下载文章后离线阅读。
 
-What’s the best way to understand  **Flexbox**? Learn the fundamentals, then build lots of stuff. And that’s exactly what we’re going to do in this article.
+理解 **Flexbox**最好的方式是什么？学好基础，再大量练习。这正是我们要在这篇文章中做的事情。
 
-### A few things to note
+### 要注意的几点
 
--   This article was written with intermediate developers in mind, and assumes you already know a bit about Flexbox. But…
--   If you know some CSS, but don’t know Flexbox at all,  [I wrote a comprehensive guide here (free article, 46 minute read)][2].
--   And if you don’t know CSS very well, I recommend taking my  [Complete (practical) Introduction to CSS (paid course with 74 lessons)][3].
--   You don’t have to follow the examples in this article in the order listed here.
--   Flexbox is only a layout technique. Real world projects require more than layouts.
--   When you see a notation such as  `div.ohans`  it refers to a div with a class name of  `ohans`
+-   这篇文章预设你是一名中级开发者，并且对 Flexbox 有点了解。但是。。。
+-   如果你对 CSS 有些了解，但是完全不知道 Flexbox，[我写了一篇综合指南（免费文章，阅读时间约为 46 分钟）][2].
+-   如果你对 CSS 掌握得不是很好，我推荐你阅读 [CSS 全面（实用）指南 (74 课时的付费课程)][3]。
+-   你不需要遵照这里列出的示例顺序。
+-   Flexbox 只是一种布局的技巧。实际项目中涉及到的东西除了布局还有很多。
+-   当你看到例如 `div.ohans` 的例子，这代表类名是  `ohans`的 div
 
-### Example 1: How to Make a Photo Gallery with Flexbox
+### 例1: 如何用 Flexbox 制作一个影片集
 
-Making photos run in rows and columns with Flexbox is easier than most persons perceive.
+使用 Flexbox 实现横向纵向排列比大多数人想象的要简单。
 
-Consider a simple markup, like so:
+例如一个如下的简单标识文本：
 
 ```
 <main class="gallery">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg"></main>
 ```
 
-We have 10 images within a  `main.gallery`.
+`main.gallery` 里有十张图片。
 
-Assume the  `main.gallery`  was styled to cover the available screen.
+假定  `main.gallery`  覆盖整个可见屏幕。
 
 ```
 .gallery {   min-height: 100vh}
 ```
 
-#### A Quick Note on Images
+#### 有关图片的快速标记
 
-By default, images are  `inline-block`  elements. They have a width and height. They will remain on a line except when constrained by size such as the images being too big to fit on a line.
+图片默认是一个 inline-block 元素，有宽高，通常排列在同一行（除了图片尺寸有限定，一行排不下的情况）。
 
-#### The Starting point
+#### 起始点
 
-Putting everything together, the result of all the markup and style above is this:
+把所有图片放在一起，上面的标识文本显示效果如下：
 
 ![](https://cdn-media-1.freecodecamp.org/images/s2ntfDqrLewl66sGtavdhgQybTyD2JX520r2)
 
-10 images with their width and height declarations intact. They fall unto the next line when appropriate. Obedient lads ;)
+10 张图片本身的宽高尺寸保持不变，在需要的时候自动换行，很好;)
 
-Now, get Flexbox on the scene:
+现在，看下 Flexbox 的效果:
 
 ```
 .gallery {    display: flex }
 ```
 
-At this point, the default behavior of the images has altered. They go from being  `inline-block`  elements to being  `flex-items.`
+现在，图片的默认属性已经发生改变。它们从  `inline-block`  元素变成了  `flex-items.`
 
-As a result of the Flexbox context initiated within  `.gallery`, the images will now be squashed unto a single line. Plus, they would stretch along the vertical like so:
+由于  `.gallery`  里的 Flexbox 布局，里面的图片会被压缩排列在一行内，而且它们会被纵向拉伸成这样：
 
 ![](https://cdn-media-1.freecodecamp.org/images/sEzCWC3d-xoorKjDGf8TMdq6-ZxtOFMQjIST)
 
-The Images now stretch along the vertical, and are squashed unto one line. Nothing’s uglier :(
+图片都被纵向拉伸，并且挤在一行内，不能更丑 :(
 
-This is a result of the Flexbox default behavior:
+这就是由于 Flexbox 布局的默认展示方式:
 
-1.  Squash all child elements unto a single line. Do not wrap the elements.
+1\.  将所有的子元素压在一行内，不换行。
 
-This is bad for a gallery, so we change this behavior like so:
+这并不适用于图片库，因此我们可以这样改变：
 
 ```
 .gallery {    flex-wrap: wrap}
 ```
 
-This will now wrap the elements and break them unto multiple lines when appropriate.
+这样所有的元素会在适当的位置换行成多行排列。
 
 ![](https://cdn-media-1.freecodecamp.org/images/JGAnqvkIeN-q8vh1beADx0XUrUE6SEZkGQFp)
 
-With the wrap value altered, the images now wrap unto the next line
+因为 wrap 值的改变，现在图片换行排列
 
-2\. The images now wrap unto the next line. But they still  **stretch**  along the vertical. We certainly do  **not**  want that behavior as it distorts the images.
+2\. 现在图片有换行，但是仍然被纵向拉伸。我们当然不想要这样变形的布局。
 
-The  `stretch`  behavior is due to the default  `align-items`  value on  `flex`  containers.
+  `stretch`  显示是因为  `flex`  里默认的  `align-items`  值。
 
 ```
 align-items: stretch
 ```
 
-Let’s change that:
+我们可以改成这样：
 
 ```
 .gallery {  ...  align-items: flex-start}
 ```
 
-This will keep the images from stretching. They’ll assume their default  `width`  and  `height` values.
+这样图片不会拉伸，而是保持它们默认的宽和高。
 
-They will also align to the start of the vertical axis as seen below:
+如下所示，它们会在纵向保持首部对齐。
 
 ![](https://cdn-media-1.freecodecamp.org/images/02VgeT3SyoxuWFwkqyD1pzEjFzUjMH160mn0)
 
-Now we have images that aren’t distorted. This is pretty much where we began before introducing Flexbox.
+现在图片都没有变形。这才是我们在使用 Flexbox 之前想要的效果。
 
-Now we have our Flexbox powered gallery.
+现在我们就有了使用 Flexbox 的强大图片集。
 
-#### The Advantage of Using Flexbox
+#### 使用 Flexbox 的优点
 
-At this point there’s not much advantage to using Flexbox. We have the same look we had before initiating the  **Flexbox**  model.
+此刻 Flexbox 似乎没展现出什么优势，图片还是像使用  **Flexbox**  之前一样。
 
-Apart from getting a responsive gallery for free, the other advantages of using Flexbox come from the alignment options it brings.
+除了能得到一个免费的响应式图片集外，使用 Flexbox 的另一个优势就是它的对齐选项。
 
-Remember that the flex container,  `.gallery`  assumes the following property values.`flex-direction: row`  `justify-content: flex-start`  and  `align-items: flex-start.`
+还记得 flex 容器  `.gallery`  设定的样式 `flex-direction: row`  `justify-content: flex-start`  和  `align-items: flex-start.`
 
-The layout of the gallery can be switched in an instant by toying with the default values as shown below:
+如下所示，改变默认值，我们就可以立马改变图片库的布局。
 
 ```
 .gallery {   ...   justify-content:center;}
@@ -120,9 +120,9 @@ The layout of the gallery can be switched in an instant by toying with the defau
 
 ![](https://cdn-media-1.freecodecamp.org/images/etSBjIv9EwausQZC8PCe3tdHj0JovaLXkNvs)
 
-The images are now perfectly centered along the horizontal.
+图片在水平方向上完美居中。
 
-As seen in the image above, this will align the images to the center, along the horizontal:
+如上所示，这会让图片水平居中。
 
 ```
 .gallery {   ...   justify-content:center;   align-items: center;}
@@ -130,31 +130,31 @@ As seen in the image above, this will align the images to the center, along the 
 
 ![](https://cdn-media-1.freecodecamp.org/images/jSx35Bma2fYhAISiEg0B3TcZanxoy0hPOb8D)
 
-Taking steps further, we have the images perfectly aligned to the center (horizontally and vertically)
+再进一步，我们可以让图片完美居中对齐（无论是水平还是垂直）
 
-As seen in the image above, this align the images both horizontally and vertically to the center of  `.gallery`
+如上所示，这可以让图片在  `.gallery` 内水平和垂直都居中。
 
-With Flexbox comes a lot of alignment options. Feel free to toy with some more alignment options as you deem fit.
+你可以通过 Flexbox 的布局方式随意选择你想要的对齐选项。
 
-You may view the actual Flexbox gallery in this  [CodePen][4].
+也可以在  [CodePen][4]查看 Flexbox 图片库的实时布局效果。
 
-### Example 2: How to Build Cards with Flexbox
+### 例 2：如何通过 Flexbox 布局卡片 
 
-Cards have become popular on the internet. Google, Twitter, Pinterest, and it seems, everyone else is moving to cards.
+卡片在网上很流行，无论是Google, Twitter 还是 Pinterest，每个网站都在使用卡片。
 
-A Card is a UI design pattern that groups related information in a flexible-size container. It visually resembles a playing card.
+卡片是一种在弹性容器内组合相关信息的页面设计方式，视觉上很像一种玩的卡片。
 
-There are many good uses for cards. A common one is the infamous pricing grid.
+有很多使用卡片的优秀案例，其中一个常用的就是臭名昭著的价格表。
 
 ![](https://cdn-media-1.freecodecamp.org/images/wjb-g2V7hV6IvRbGaDHYmAePhTjwR5ZeekkX)
 
-sample pricing grid mockup
+价格表模型
 
-Let’s build one.
+让我们来建一个。
 
-#### The Markup
+#### 标识文本
 
-Each card will assume a markup like below:
+我们给每个卡片设定一个如下的标识：
 
 ```
 <section class="card">  <header>  </header>
@@ -164,63 +164,61 @@ Each card will assume a markup like below:
   <ul>    <li></li>    <li></li>    <li></li>  </ul>  <button></button></section>
 ```
 
-There will be at least 3 cards. Wrap the cards in a  `div.cards`
+这里有至少 3 个卡片，我们把这些卡片包在  `div.cards`里
 
 ```
 <div class="cards"></div>
 ```
 
-Now we’ve got a parent element.
-
-For this example, the parent element has been set up to fill the entire viewport.
+现在已经有了一个父元素。在这个例子中，父元素充满整个视图。
 
 ```
 .cards {   min-height: 100vh}
 ```
 
-#### Set up Flexbox
+#### 建立 Flexbox 布局
 
-The following code block will initiate a Flexbox formatting context within  `.cards`
+下面的代码块新建了一个在  `.cards` 里面的 Flexbox 布局样式。
 
 ```
 .cards {  display: flex;  flex-wrap: wrap}
 ```
 
-If you remember the last example,  `flex-wrap`  will allow for the  `flex-items`  to break onto another line.
+如果你还记得上一个例子，  `flex-wrap`  可以让  `flex-items`  元素换行。
 
-This happens when the child elements cannot fit into the parent element. This is due to the larger computed width size of the combined child elements.
+由于子元素排列需要更大的宽度，所以子元素不能在父元素内排列时就会换行。
 
-Go ahead and give the  `.card`  an initial width.
+接下来我们给  `.card`  元素一个初始宽度。
 
-Using Flexbox:
+使用 Flexbox 如下布局:
 
 ```
 .card {  flex: 0 0 250px}
 ```
 
-This will set the  `flex-grow`  and  `flex-shrink`  values to  `0`. The  `flex-basis`  value will be set to  `250px`
+这个样式将  `flex-grow`  和  `flex-shrink`  的值设为 0，  `flex-basis`  值为  `250px`。
 
-At this point, the cards will be aligned to the start of the page. They will also stretch along the vertical.
+这时，卡片会在页面的起始处对齐，并且竖向排列。
 
 ![](https://cdn-media-1.freecodecamp.org/images/dkco2Y-Dru2WyMonIq51riqbYtjVr2Zn3E4T)
 
-cards aligned to the start of the page
+卡片首部对齐
 
-In some cases this may be ideal for your use case. But for most cases, it won’t.
+这有时可能满足你的使用需求，但大部分情况下，都不行。
 
-#### The Default Behavior of Flex Containers
+#### Flex 容器的默认值
 
-The result above is due to the default behavior of flex containers.
+上面的布局效果是由于 flex 容器的默认布局设置。
 
-The cards begin at the start of the page on the  `top left`  because  `justify-content`  is set to the value  `flex-start`  .
+卡片在页面内靠左上角对齐，因为  `justify-content`  的值默认为  `flex-start`  。
 
-Also, the cards stretch to fill the entire height of the parent element because  `align-items`  is set to  `stretch`  by default.
+同时，卡片垂直拉伸充满整个父元素的高度，因为  `align-items`  的默认值是  `stretch`  。
 
-#### Altering the default values
+#### 改变默认值
 
-We can achieve pretty impressive results by changing the default values that Flexbox offers.
+我们可以通过改变 Flexbox 提供的默认值来达到更好的效果。
 
-See below:
+看下面几个例子：
 
 ![](https://cdn-media-1.freecodecamp.org/images/hq7D1wJINa5-DC77TMt4e517xOAG6C46yKZ3)
 
@@ -234,154 +232,154 @@ align-items: flex-end; justify-content: center
 
 align-items: center; justify-content: center
 
-To view the final project, see this  [CodePen][5].
+你可以在[CodePen][5]看最终的效果。
 
-### Example 3: How to Build Grids with Flexbox
+### 例 3：如何使用 Flexbox 创建网格布局
 
-Entire CSS frameworks are built on the concept to be discussed in this example. It is pretty important stuff.
+在这个例子中，我们要探讨整体的 CSS 框架概念，这是很重要的一点。
 
-#### What is a Grid?
+#### 什么是网格布局？
 
-A grid is a series of intersecting straight vertical and horizontal guide lines used to structure content.
+网格是用来构建内容的一系列水平垂直相交引导线。
 
 ![](https://cdn-media-1.freecodecamp.org/images/06AK1XPmRT2w0zMezFzS2W50a8-xxwmujZEb)
 
-a series of intersecting straight (vertical, horizontal) guide lines
+一系列水平垂直相交引导线
 
-If you’re familiar with CSS frameworks such as Bootstrap, then you sure have used grids before now.
+如果你对 Bootstrap 这样的 CSS 框架比较熟悉，那你之前一定使用过网格布局。
 
-Your mileage may differ, but we will consider varying grid types in this example.
+你所掌握的内容可能不一样，但这个例子会涵盖不同的网格布局类型。
 
-Let’s start with the first one,  **basic grids**.
+我们先来看第一种，**基本网格布局**
 
-#### Basic Grids
+#### 基本网格布局
 
 ![](https://cdn-media-1.freecodecamp.org/images/emC8Q5HRNl1dVcCGxvvheVNZYpQ0Ce05-MMc)
 
-A set of basic grids each having equally spaced columns
+一组列宽度相同的基础网格
 
-These are grids with the following characteristics:
+这些网格有以下特点：
 
--   The grid cells should be spaced equally and expand to fit the entire row.
--   The grid cells should be of equal heights.
+-   网格单元格平均布局并充满整行。
+-   单元格高度一致。
 
-It is easy to achieve this with Flexbox. Consider the markup below:
+使用 Flexbox 很容易实现这个效果，看下面这个标识文本：
 
 ```
 <div class="row">  <div class="row_cell">1</div></div>
 ```
 
-Each  `.row`  will be its own flex container.
+每个  `.row`  都是自己的 flex 容器。
 
-Each element within  `.row`  then becomes a flex item. All flex items distribute evenly across the row.
+  `.row`  里的每个元素也就是 flex 元素，所有的 flex 元素都平均分布在一行中。
 
-By design, it shouldn’t matter whether we have 3 child elements
+根据设计，无论有 3 个子元素
 
 ```
 <div class="row">  <div class="row_cell">1/3</div>  <div class="row_cell">1/3</div>  <div class="row_cell">1/3</div></div>
 ```
 
-Or 6 child elements
+6 个子元素
 
 ```
 <div class="row">  <div class="row_cell">1/6</div>  <div class="row_cell">1/6</div>  <div class="row_cell">1/6</div>  <div class="row_cell">1/6</div>  <div class="row_cell">1/6</div>  <div class="row_cell">1/6</div></div>
 ```
 
-Or 12 elements
+或是 12 个子元素，都是没影响的
 
 ```
 <div class="row">  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div></div>
 ```
 
-#### The Solution
+#### 解决方案
 
-There are just two steps to doing this.
+达到这个效果只需要两步：
 
-1.  Initiate a Flexbox formatting context:
+1.  新建一个 Flexbox 布局文本：
 
 ```
 .row {   display: flex;}
 ```
 
-2\. Have each  `flex-item`  expand to fit the entire row in equal proportions:
+2\. 扩大每个  `flex-item`  元素，让它们以相同比例均匀的布满整行：
 
 ```
 .row_cell {   flex: 1}
 ```
 
-And that’s it.
+就是这样
 
-#### The Solution Explained.
+#### 方案解释。
 
 ```
 flex: 1
 ```
 
-`flex`  is a shorthand property name for setting three distinct Flexbox properties, the  `flex-grow`  ,  `flex-shrink`  and  `flex-basis`  properties, in the order stated.
+`flex`  是  `flex-grow`  、  `flex-shrink`  和  `flex-basis`  三个不同 Flexbox 属性的缩写。
 
-`flex: 1`  only has the value  `1`  set. This value is attributed to the  `flex-grow` property.
+`flex: 1`  只有  `1`  的值，这个值代表的是`flex-grow` 属性。
 
-The  `flex-shrink`  and  `flex-basis`  properties will be set to  `1`  and  `0`.
+而  `flex-shrink`  和  `flex-basis`  则分别设置为 `1`  和  `0`。
 
 ```
 flex: 1  === flex: 1 1 0
 ```
 
-#### Grid Cells with Specific Sizes
+#### 有确定大小的网格元素
 
-Sometimes what you want isn’t a grid row of equal cells.
+有时候你需要的效果并不是同样大小的水平网格布局。
 
-You may want cells that are double the other cells, or any fraction for that matter.
+你可能想要一个元素是其他的两倍，或者几分之一。
 
 ![](https://cdn-media-1.freecodecamp.org/images/CKD3-ZUoxNAOJ-bp-cUZ0XcxnnMB1OvvA2yX)
 
-grid of row cells that are 2x or 3x the other cells.
+水平网格布局中的元素是其他的两倍或3倍。
 
-The solution is pretty simple.
+实现方式很简单。
 
-To these specific grid cells, add a modifier class like so:
+对于这些有确定大小的网格元素，只需要加一个这样的修饰符类：
 
 ```
 .row_cell--2 {   flex: 2}
 ```
 
-Have the class included in the markup. See the first child  `div`  in the markup below:
+加上这个类，可以看到第一个  `div`  子元素代码如下：
 
 ```
 <div class="row">  <div class="row_cell row_cell--2">2x</div>  <div class="row_cell">1/3</div>  <div class="row_cell">1/3</div></div>
 ```
 
-The cell with the class  `.row__cell--2`  will be 2 times the default cells.
+加上  `.row__cell--2`  类名的元素会是其他默认元素的两倍大小。
 
-For a cell that takes up 3 times the available space:
+一个占可用空间 3 倍的元素：
 
 `.row_cell--3 {`  
 `flex: 3`  
 `}`
 
-#### Grid Cells with Specific Alignments
+#### 有确定对齐方式的网格元素
 
-Thanks to Flexbox, each cell doesn’t have to tied to a certain alignment value. You may specify the specific alignment for any cell.
+多亏了 Flexbox 布局，我们不需要给每个元素设置特定的对齐值。你可以给任何一个元素设定不同的对齐方式。
 
-To do so, use modifier classes like this:
+通过下面的修饰符类，可以达到这样的效果：
 
 ```
 .row_cell--top {  align-self: flex-start}
 ```
 
-This will align the specific cell to the top of the  `row`.
+这可以让特定的元素在  `row` 内靠顶部对齐。
 
 ![](https://cdn-media-1.freecodecamp.org/images/rSpBVp7JoobnRoc0-Vsb6CjfzyKxO9c5pUwq)
 
-applying the .row\_cell — top class will align the specific cell to the top of the  `row`
+应用.row\_cell — top 类可以让特定的元素在  `row`  内靠顶部对齐。
 
-You must have also added the class to the specific cell in the markup. See the first child  `div`  in the markup below:
+你一定有在标识文本中给特定元素加上这个类。看文本中第一个  `div`  子元素：
 
 ```
 <div class="row">  <div class="row_cell row_cell--top"></div>  <div class="row_cell"></div>  <div class="row_cell"></div></div>
 ```
 
-Below are the other alignment options available:
+下面是其他可选的对齐方式：
 
 ```
 .row_cell--bottom {  align-self: flex-end}
@@ -389,7 +387,7 @@ Below are the other alignment options available:
 
 ![](https://cdn-media-1.freecodecamp.org/images/V76ETVyzFX4E7HLQ3MLr03LSH6GkYnvjEzNa)
 
-applying the .row\_cell — bottom class will align the specific cell to the bottom of the  `row`
+给特定的元素加上.row\_cell — bottom 类会让它在  `row`  内靠底部对齐。
 
 ```
 .row_cell--center {  align-self: center}
@@ -397,13 +395,13 @@ applying the .row\_cell — bottom class will align the specific cell to the bot
 
 ![](https://cdn-media-1.freecodecamp.org/images/N-KfRijROiUyGtSj6RTAZmZjNZZ5A3Djf2NA)
 
-applying the .row\_cell — center class will align the specific cell to the center of the  `row`
+给特定的元素加上.row\_cell — center 类会让它在  `row`  内居中对齐。
 
-#### Overall Alignment within the Rows
+#### 行内对齐
 
-As specific cells can be aligned, so can the  **entire**  child elements within the row.
+像特定的元素可以对齐一样，行内子元素也可以整体对齐。
 
-To do this, use a modifier class like so:
+可以使用下面的修饰符类达到这样的效果：
 
 ```
 .row--top {   align-items: flex-start}
@@ -411,15 +409,15 @@ To do this, use a modifier class like so:
 
 ![](https://cdn-media-1.freecodecamp.org/images/le3bablkysAG-j-JEQQdHyBvvjiCbIfZP2Bs)
 
-a row with all three cells aligned to the top of the row.
+一行上的三个元素都靠顶部对齐。
 
-It is important to note that the modifier class,  `.row--top`  must be added to the  `row`  or the parent  `flex-container`
+需要注意的一个重点是，修饰符类  `.row--top`  一定要被加在  `row`  或是父元素  `flex-container`  上。
 
 ```
 <div class="row row--top">  <div class="row_cell"></div>  <div class="row_cell"></div>  <div class="row_cell"></div></div>
 ```
 
-The other alignment options may be seen below:
+其他的对齐选项见下：
 
 ```
 .row--center {   align-items: center}
@@ -427,7 +425,7 @@ The other alignment options may be seen below:
 
 ![](https://cdn-media-1.freecodecamp.org/images/NVv3xZxxaIbyPHDJTxp5LdcG-Be0wolyXiCb)
 
-a row with all three cells aligned to the center of the row.
+整行的三个元素都居中对齐。
 
 ```
 .row--bottom {   align-items: flex-end}
@@ -435,109 +433,109 @@ a row with all three cells aligned to the center of the row.
 
 ![](https://cdn-media-1.freecodecamp.org/images/OsI1AJj-F4BMIJQAMN82bY6MXqTxvwmZkw3J)
 
-a row with all three cells aligned to the center of the row.
+整行的三个元素都靠底部对齐
 
-#### Nested Grids
+#### 嵌套网格
 
-Without doing anything in particular, these  `rows`  can be nested within themselves.
+只需要简单的设置，rows（行元素）就可以嵌套布局。
 
 ![](https://cdn-media-1.freecodecamp.org/images/2eyhYZJlDdZXJkiLuwGYSoB83KKPxnfgfjCg)
 
-A row with two cells, one 2x the other. Within the larger cell, a row of three centered cells has been nested.
+一行内有两个元素，其中一个是另一个的两倍大小。一行三个元素居中嵌套排列在较大的元素里。
 
-You may view the final grids  [created here][6].
+你可以在  [created here][6]查看最终的布局效果。
 
-#### Even More Grids
+#### 更多网格布局
 
-While you can get fancy building grids with Flexbox vertical grids and even more complex configurations, use the best tool for the job. Learn, master and use the  [CSS Grid Layout][7]. It is the ultimate CSS solution to Grids.
+当你可以用 Flexbox 垂直网格甚至更复杂的参数实现好看的网格构造时，就可以把这个很好的工具用于工作。学习，掌握然后使用  [CSS 网格布局][7]，这是 CSS 网格布局的最终解决方案。
 
-### Example 4: How to Build Website Layouts with Flexbox
+### 例 4：如何使用 Flexbox 构建网站布局
 
-The community generally frowns upon using Flexbox for full blown web layouts.
+社区通常不建议整个网站布局都使用 Flexbox。
 
-While I agree with this, I also think in certain cases you can get away with it.
+虽然我赞同这个观点，但是我也认为在特定的情况下你可以不用考虑这么多。
 
-The single most important advice I can give here would be:
+我能给到最重要的一点建议是：
 
-> **_Use Flexbox where it makes sense_**
+> **_在你需要的时候使用Flexbox布局_**
 
-I’ll explain that statement in the following example.
+我会在下面的例子中解释这点。
 
-#### The Holy Grail Layout
+#### 圣杯布局
 
-What better website layout to build than the infamous “**holy grail**”?
+有什么网站布局方式比“圣杯布局”更经典呢？
 
 ![](https://cdn-media-1.freecodecamp.org/images/9HvLwuqluns72rMdkVL4SMf5pyPQMxFb9mSi)
 
-The holy grail layout — header, footer and 3 other content containers.
+圣杯布局 — 头部, 页脚和 3 个其他的容器。
 
-There are 2 ways to attempt building this layout with Flexbox.
+有两种 Flexbox 方式可以实现这种布局。
 
-The first is to have the layout built with Flexbox. Place the  `header`,  `footer`,  `nav`,  `article`  and  `aside`  all in one  `flex-container`.
+第一种是用 Flexbox 来实现布局。把  `header`,  `footer`,  `nav`,  `article`  和  `aside`  都放在一个  `flex-container` 容器里。
 
-Let’s begin with that.
+我们开始。
 
-#### The Markup
+#### 标识语言
 
-Consider the basic markup below:
+看下下面这个基本的标识语言：
 
 ```
 <body>  <header>Header</header>  <main>    <article>Article</article>    <nav>Nav</nav>    <aside>Aside</aside>  </main>  <footer>Footer</footer></body>
 ```
 
-Among others, there is a particular rule the holy grail adheres to. This rule has inspired the markup above:
+其中，圣杯布局遵循了一个特殊的规则，这个规则启发了上面的标识语言：
 
-The center column,  `article`  should appear first in the markup, before the two sidebars,  `nav`  and  `aside`.
+中间的那列  `article`  应该在 `nav`  和  `aside` 两个侧边栏之前显示出来。
 
 ![](https://cdn-media-1.freecodecamp.org/images/YDZbT2gN-JVcBRbvAkXYasm3Hqo-Q7VtxbU9)
 
-“<article></article>” appears first in the markup, but is centered in the layout.
+“<article></article>” 居中布局且先显示在页面上。
 
-#### Initiate the Flexbox Formatting Context
+#### 建立一个 Flexbox 格式文本
 
 ```
 body {   display: flex}
 ```
 
-Because the child elements should stack from top to bottom, the default direction of the Flexbox must be changed.
+因为子元素应该从顶部到底部布局，所以我们要改变 Flexbox 的默认方向。
 
 ```
 body { ... flex-direction: column}
 ```
 
-**1**. `header`  and  `footer`  should have a fixed width.
+**1**. `header`  和  `footer`  要有固定的宽度
 
 ```
-header,footer {  width: 20vh /*you can use pixels e.g. 200px*/}
+header,footer {  width: 20vh /*可以使用像素单位，例如200px*/}
 ```
 
-**2.**`main`  must be made to fill the available remaining space within the  `flex-container`
+**2.**`main`  要填满  `flex-container`  中剩下的部分。
 
 ```
 main {   flex: 1}
 ```
 
-Assuming you didn’t forget,  `flex: 1`  is equivalent to  `flex-grow: 1`  ,  `flex-shrink: 1`and  `flex-basis: 0`
+你一定没忘记，  `flex: 1`  代表  `flex-grow: 1`  ,  `flex-shrink: 1`和  `flex-basis: 0`。
 
 ![](https://cdn-media-1.freecodecamp.org/images/eBj3j7v59T5PYdH8sBCadGevCVyOlPfuMIqR)
 
-This will cause  `main`  to “grow” and contain the available remaining space.
+这可以让  `main`  “变大” 填满剩下的可用空间。
 
-At this point, we need to take care of the contents within  `main`  which are  `article`,  `nav`and  `aside`.
+此刻，我们要开始考虑  `main`  中的  `article`,  `nav`和  `aside` 三个部分。
 
-Set up  `main`  as a  `flex-container`  :
+把  `main`  设成一个  `flex-container`  ：
 
 ```
 main {  display: flex}
 ```
 
-Have the  `nav`  and  `aside`  take up fixed widths:
+给  `nav`  和  `aside`  以固定的宽度：
 
 ```
 nav,aside {  width: 20vw}
 ```
 
-Ensure that  `article`  takes up the remaining available space:
+然后确保  `article`  填满剩下的可用空间：
 
 ```
 article {   flex: 1}
@@ -545,11 +543,11 @@ article {   flex: 1}
 
 ![](https://cdn-media-1.freecodecamp.org/images/3--f-KqkBdvx8jv6n9mhmA354cP7OvgS4Ayz)
 
-`"article"`  now takes up the remaining available space
+现在 `"article"`  填满剩下的可用空间
 
-There’s just one more thing to do now.
+现在还需要做一件事。
 
-Re-order the  `flex-items`  so  `nav`  is displayed first:
+把  `flex-items`  重新排序这样  `nav`  会展示在第一位：
 
 ```
 nav {  order: -1}
@@ -557,103 +555,102 @@ nav {  order: -1}
 
 ![](https://cdn-media-1.freecodecamp.org/images/rN1l8s8aO44ecL8RBUIG824WpUNHBIyl5iLo)
 
-The final result.  [https://codepen.io/ohansemmanuel/full/brzJZz/][8]
+最终效果  [https://codepen.io/ohansemmanuel/full/brzJZz/][8]
 
-The  `order`  property is used to re-order the position of  `flex-items`.
+  `order`  属性用来重新排序  `flex-items` 的位置。
 
-All  `flex-items`  within a container will be displayed in  **increasing** `order`  values. The  `flex-item`  with the lowest  `order`  values appear first.
+容器中所有  `flex-items`  都会以  **增大的** `order`  值排列， `flex-item`  中 `order`  值最小的会排列在最前面。
+所有的  `flex-items`  元素默认  `order`  值都是  `0`。
 
-All  `flex-items`  have a default  `order`  value of  `0`.
+#### 圣杯布局 (另一种布局方式)
 
-#### The Holy Grail Layout (another solution)
+之前的方式是把  `flex-container`  作为一个整体的容器。这个布局非常依赖 Flexbox。
 
-The previous solution used a  `flex-container`  as the overall container. The layout is heavily dependent on Flexbox.
-
-Let’s see a more “sane” approach. Take a look at the supposed final result again:
+我们来了解一种更为“理智”的方法。首先再来看下最终要达到的效果：
 
 ![](https://cdn-media-1.freecodecamp.org/images/UIy61i1OzIjdddu2W5i9NvL74JXjY5sclt8i)
 
-The holy grail layout
+圣杯布局
 
-`header`  and  `footer`  could be treated as block elements. Without any intervention, they will fill up the width of their containing element, and stack from top to bottom.
+`header`  和  `footer`  可以被当做块状元素。 在没有任何干预的情况下，它们会在从顶部到底部，填满父级元素。
 
 ```
 <body>  <header>Header</header>  <main>    <article>Article</article>    <nav>Nav</nav>    <aside>Aside</aside>  </main>  <footer>Footer</footer></body>
 ```
 
-With this approach, the only  `flex-container`  needed would be  `main`.
+使用这种方法，唯一需要作为  `flex-container`  的就是  `main` 元素。
 
-The singular challenge with this approach is that you have to compute the height of  `main`  yourself.  `main`  should fill the available space besides the space taken up by the  `header`and  `footer.`
+使用这个方法有个缺点就是你要自己计算  `main`  的高度。  `main`  应该填满除  `header` 和  `footer.`外的空间。
 
 ```
 main {  height: calc(100vh - 40vh);}
 ```
 
-Consider the code block above. It uses the CSS  `calc`  function to compute the height of  `main.`
+上面的代码块使用 CSS 中的  `calc`  来计算  `main.`的高度。
 
-Whatever your mileage, the height of  `main`  must be equal to  `calc(100vh — height of header — height of footer ).`
+不管怎样，  `main`  的高度都要等于  `calc(100vh — 头部的高度 — 页脚的高度 ).`
 
-As in the previous solution, you must have given  `header`  and  `footer`  a fixed height. Then go ahead and treat  `main`  the same way as in the previous solution.
+在之前的解决方案中， `header`  和  `footer`  都有一个固定的高度，接下来再通过同样的方法计算  `main`  的高度。
 
-You may view the  [actual results here][9].
+你可以在  [actual results here][9] 中查看最终效果。
 
-#### 2 column website layouts
+#### 两列网页布局
 
-Two column layouts are pretty common. They are also easily achieved using Flexbox.
+两列布局很常见，这也可以用 Flexbox 轻松实现。
 
 ![](https://cdn-media-1.freecodecamp.org/images/Mk-G8NgfEsSoMlzbafucKr5IUHOiSAcr4cEp)
 
-2 column layout with a sidebar and main content area.
+包含边栏和主内容的两列布局。
 
-Consider the markup below:
+看下以下标识文本：
 
 ```
 <body>  <aside>sidebar</aside>  <main>main</main></body>
 ```
 
-Initiate the Flexbox formatting context:
+先建一个 Flexbox 格式文本：
 
 ```
 body {  display: flex;}
 ```
 
-Give  `aside`  a fixed width:
+给  `aside`  一个固定的宽度：
 
 ```
 aside {   width: 20vw}
 ```
 
-Finally, ensure that  `main`  fills up the remaining available space:
+最后，确保  `main`  填满剩下的可用空间：
 
 ```
 main {  flex: 1}
 ```
 
-That’s pretty much all there is to it.
+这样就差不多可以了。
 
-### Example 5: Media Objects with Flexbox
+### 例5：使用 Flexbox 布局媒体对象
 
-Media Objects are everywhere. From tweets to Facebook posts, they seem to be the go to choice for most UI designs.
+媒体对象随处可见。从 tweets 到 Facebook 上的发贴, 大部分页面设计似乎都会选择媒体对象。
 
 ![](https://cdn-media-1.freecodecamp.org/images/hoOVQQcGFJ-EivoJRCqOTXynRzq88ye3zzE6)
 
-Sample Tweet and Facebook post
+Tweet 和 Facebook 上的发帖示例
 
-Consider the markup below:
+看下下面这个标识文本：
 
 ```
 <div class="media">  <img class="media-object" src="/pic.jpg">  <div class="media-body">    <h3 class="media-heading"> Header </h3>    <p></p>  </div></div>
 ```
 
-As you have guessed,  `.media`  will establish the Flexbox formatting context:
+你应该已经猜到了，  `.media`  会使用 Flexbox 布局：
 
 ```
 .media {   display: flex}
 ```
 
-By default, the  `flex-items`  of a  `container`  are stretched along the vertical to fill the available height within the  `flex-container`.
+`container`  中的  `flex-items` 默认是在  `flex-container` 中垂直拉伸，填满可用高度。
 
-Make sure the  `.media-body`  takes up all the remaining available space:
+确保  `.media-body`  填满剩下的可用空间：
 
 ```
 .media-body {   flex: 1}
@@ -661,9 +658,9 @@ Make sure the  `.media-body`  takes up all the remaining available space:
 
 ![](https://cdn-media-1.freecodecamp.org/images/zJRJJ8NeVDHI1FNdnsKF5mpeRXjabOb-zVk9)
 
-The box on the left stretches to fit the available screen. The media body takes up the remaining horizontal space within the media object (white)
+左边的盒子拉伸填满可见屏幕。媒体主体在媒体对象（白色部分）内横向填满剩下的空间。
 
-Let’s fix the stretched box.
+我们来调整下拉伸的盒子模型。
 
 ```
 .media {  ...  align-items: flex-start}
@@ -671,175 +668,174 @@ Let’s fix the stretched box.
 
 ![](https://cdn-media-1.freecodecamp.org/images/hkcBJNNimRRArL6iPiDoFN3UdSJSHdRazWlw)
 
-The flex items are now aligned to the start of the media object. The image now takes it default’s size. No weird stretching :)
+弹性项目在媒体对象中从起点对齐。现在图片保持默认大小，没有变形拉伸 :)
 
-And that’s it.
+就是这样。
 
-#### A flipped Media Object
+#### 画报媒体对象
 
 ![](https://cdn-media-1.freecodecamp.org/images/GL7OTu019Ov2HtElcXKhObmhreC86yEDpKK0)
 
-A flipped media object has the image on the other side (right) of the media object
+画报媒体对象是图片在媒体对象的另一边（右边）。
 
-You do not have the change the  `html`  source order to create a flipped media object.
+创建画报媒体对象不需要改变  `html`  元素的顺序。
 
-Just re-order the  `flex-item`s like so:
+只需要让弹性项目像这样重新排序：
 
 ```
 .media-object {   order: 1}
 ```
 
-This will have the image displayed after the  `.media-body`  and  `media-heading`
+这样图片就会排列在  `.media-body`  和  `media-heading` 之后。
 
-#### A Nested Media Object
+#### 媒体对象的嵌套
 
-You may even go on to nest the Media object. Without changing any of the CSS styles we have written.
-
+你甚至可以不改变已有的 CSS 样式来继续用嵌套布局媒体对象。
 ```
 <div class="media">  <img class="media-object" src="/pic.jpg">  <div class="media-body">    <h3 class="media-heading"> Header </h3>    <p></p>        <!--nested-->    <div class="media">    <img class="media-object" src="/pic.jpg">    <div class="media-body">        <h3 class="media-heading"> Header </h3>        <p></p>    </div>    </div><!--end nested-->  </div> </div>
 ```
 
-It works!
+可以了！
 
 ![](https://cdn-media-1.freecodecamp.org/images/cH3o4d2UTkqB1qWCqymnvLjyGpmJ3mmEq-Ro)
 
-Media objects nested within media objects.
+媒体对象在其中巢状布局。
 
-#### A Unicode Media Object
+#### 字符码媒体对象
 
-It appears we are not restricted to just images.
+我们不用只拘泥于图片。
 
-Without changing any of the CSS styles written, you can have a unicode represent the image.
+在不改变已经写好的 CSS 样式情况下，你可以用字符码来代替图片。
 
 ```
 <div class="media">  <div class="media-object">?</div>  <div class="media-body">    <h3 class="media-heading"> Header </h3>    <p></p>  </div></div>
 ```
 
-I have snugged in an emoji there.
+我在那里放了一个 emoji 表情。
 
 ![](https://cdn-media-1.freecodecamp.org/images/i5nrdZwTbOz3vGgZZUAwyqaG9GZEzWJSmh8i)
 
-Media object with emoji support.
+带有 emoji 表情的媒体对象
 
-Taking away the  `img`  and replacing it with a  `div`  containing the desired unicode yields the output above.You may grab some more emoji unicodes  [here][10].
+上面用一个包含适当表情的编码来代替  `img`  。你可以在[这里][10]获取更多的emoji表情。
 
-#### An HTML Entity Media Object
+#### HTML实体媒体对象
 
-You may have also use  [html entities][11]  as seen below.
+你也可以使用如下的  [html实体][11] 。
 
 ```
 <div class="media">  <div class="media-object">☎</div>  <div class="media-body">    <h3 class="media-heading"> Header </h3>    <p></p>  </div></div>
 ```
 
-The html entity used in this example is  `☎`  and you may see the result below.
+这里使用的html实体是  `☎`  ，效果如下：
 
 ![](https://cdn-media-1.freecodecamp.org/images/ssilgIfm3znqoCXzkmUXSnOuvziC5MauRQ0h)
 
-html entity, ☎
+html实体, ☎
 
-You can view the result of these examples in this  [CodePen][12].
+你可以在  [CodePen][12]查看这些例子的效果。
 
-### Example 6: How to Build Form Elements with Flexbox
+### 例 6：如何使用Flexbox建立表单元素
 
-It is difficult to find any website that does not have a form or two these days.
+现在很难找到没有一两个表单的网站了。
 
 ![](https://cdn-media-1.freecodecamp.org/images/h8nCEyfprhm-MuBBUjW-vpd7W2LY6L2tdmYg)
 
-form inputs appended and prepended with other elements
+表格输入框，前后加其他元素
 
-Consider the markup below:
+看下面这段标识文本：
 
 ```
 <form class="form">  <input class="form__field">  <button class="form__item">…</button></form><form class="form">  <span class="form__item">…</span>  <input class="form__field"></form><form class="form">  <span class="form__item">…</span>  <input class="form__field">  <button class="form__item">…</button></form>
 ```
 
-This example shows the combination of aligning input fields with buttons or spans of text. The solution again is quite easy with Flexbox.
+这个例子展示了输入框与按钮或是文字的结合，我们仍可以用 Flexbox 轻松解决。
 
-Initiate the Flexbox formatting context:
+新建一个 Flexbox 格式文本：
 
 ```
 .form {  display: flex}
 ```
 
-Ensure the input field takes up the available space:
+确保输入框填满可用空间：
 
 ```
 .form__field {   flex: 1}
 ```
 
-Finally, you may style the appended or prepended texts and buttons whichever way you seem fit.
+最后，你可以按照你喜欢的方式在前后放入文字或者按钮。
 
 ```
 .form__item {  ... }
 ```
 
-You may view the complete result of this example in this  [CodePen][13].
+你可以在  [CodePen][13]里看到这个例子的完整效果。
 
-### Example 7: How to Build a Mobile App Layout with Flexbox
+### 例 7：如何使用 Flexbox 来创建一个手机 App 布局
 
-In this example, I will walk you the process the mobile app layout below:
+在这个例子中，我会带你一起来打造一个如下的手机应用布局：
 
 ![](https://cdn-media-1.freecodecamp.org/images/FDxWh9vQBhjQ2L6pSyb2w4QuqJvIjjuXElFF)
 
-The mobile app layout we will build with Flexbox
+我们将通过 Flexbox 建立的手机应用布局
 
-However, this example is different.
+不过这个例子有点不同。
 
-I will explain the process of building the mobile layout in pseudo code, and you’ll go ahead to build it.
+我会解释用代码建立手机布局的过程，你可以尝试完成。
 
-This will be a form of practice to get your hands  **wet**.
+这是一个让你 **熟练** 的方式。
 
-#### Step 1
+#### 第一步
 
-Strip the layout off the iPhone, and we have this:
+剥离出 iPhone 的页面布局，我们得到下面这个：
 
 ![](https://cdn-media-1.freecodecamp.org/images/cH4ifH1HxdWH9M7IpSEphw9dz7op6WJ7KM8v)
 
-The barebones layout
+骨架屏布局
 
-#### Step 2
+#### 第二步
 
-Define the containing body as a  `flex-container`
+将主体部分定义成一个  `flex-container`
 
 ![](https://cdn-media-1.freecodecamp.org/images/gGlfDGRg8mSHNpD-PqZGNI9JnIzTCQiSOWrb)
 
-Initiate the Flexbox formatting context as a flex container.
+将格式化文本建立成一个弹性容器。
 
-#### Step 3
+#### 第三步
 
-By default, the  `flex-direction`  of a  `flex-container`  is set to  `row`. In this case, change it to  `column`  .
+`flex-container`  默认的  `flex-direction`  属性是  `row`。在这个例子中，我们要把它变成  `column`  。
 
 ![](https://cdn-media-1.freecodecamp.org/images/C1KEFWls3---EMGS2nEiLh8pXnk6a2YOH7x0)
 
-Change the default flex direction to have 3 child elements aka  `flex-items`
+改变 3 个子元素也就是  `flex-items` 的默认布局方向
 
-#### Step 4
+#### 第四步
 
-Give Item 1 and 3 fixed heights such as  `height: 50px.`
+给元素 1 和元素 3 一个固定的高度  `height: 50px.`
 
-#### Step 5
+#### 第五步
 
-Item 2 must have a height that fills up the available space. Use  `flex-grow`  or the  `flex`shorthand  `flex: 1.`
+元素 2 要有一个填满可用空间的高度。使用`flex-grow`  或是简写的  `flex` 写法 `flex: 1.` 。
 
-#### Step 6
+#### 第六步
 
-Finally, treat each block of content as a Media Object as seen in an earlier example.
+最后，像之前的例子一样，把每个块状元素当成一个媒体对象。
 
 ![](https://cdn-media-1.freecodecamp.org/images/ZD4lqIbYDidmyyCu-lGXi9QXpKjaX7eOUScN)
 
-Treat the blocks of content as media objects.
+把内容块当成媒体对象。
 
-Follow the six steps above to successfully build the mobile app layout successfully.
+按照上面的六个步骤可以成功建立一个手机应用布局。
 
-### Want to become Pro?
+### 想要更专业？
 
-Download my free CSS Grid cheat sheet, and also get two quality interactive Flexbox courses for free!
+免费下载我的 CSS 网格布局参考手册，还可以免费获得两节优质的响应式 Flexbox 课程！
 
 ![](https://cdn-media-1.freecodecamp.org/images/Hisu3Q2Yz70DyjZSPfJ3Dr0gnZ9eB38g152g)
 
-[Get the Free CSS Grid Cheat sheet + Two Quality Flexbox Courses for free!][14]
+[点击免费获得免费的 CSS 网格布局手册 + 两节优质的课程！][14]
 
-[Get them now][15]
+[现在去领][15]
 
   
 

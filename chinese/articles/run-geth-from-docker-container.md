@@ -1,97 +1,99 @@
 > * 原文地址：[How to run GETH from a Docker container](https://www.freecodecamp.org/news/how-to-run-geth-from-a-docker-container-b6d30620ca74/)
 > * 原文作者：Vince Tabora
-> * 译者：
+> * 译者：@too
 > * 校对者：
   
-![How to run GETH from a Docker container](https://cdn-media-1.freecodecamp.org/images/1*QZk8YSNM8shw4Trn8YtvAA.png)
+![如何使用 Docker 容器来运行 GETH How to run GETH from a Docker container](https://cdn-media-1.freecodecamp.org/images/1*QZk8YSNM8shw4Trn8YtvAA.png)
 
 by Vince Tabora
 
-Installing the Ethereum node client on a machine can be a tedious process. There is a simpler way this can be done using a Docker client. This is a guide for running the  ****GETH****(Ethereum-Go) node client from inside a Docker container. GETH is the GoLang implementation of the Ethereum protocol. There is an image available to pull from the Docker hub repository that can run the environment.
+在计算机上安装以太坊节点客户端可能是一个繁琐的过程。使用 Docker 客户端可以更简单地完成此操作。这是从 Docker 容器内运行 ****GETH****（Ethereum-Go）节点客户端的指南。GETH 是以太坊协议的 GoLang 实现。可以从 Docker 中心存储库中获取运行环境的映像。
 
-The  [****GoEthereum****][1]  website  lists the following available images with descriptions.
+[****GoEthereum****][1]  网站上介绍有以下的映像是可供使用的：
 
--   `ethereum/client-go:latest`  is the latest develop version of Geth
--   `ethereum/client-go:stable`  is the latest stable version of Geth
--   `ethereum/client-go:{version}`  is the stable version of Geth at a specific version number
--   `ethereum/client-go:release-{version}`  is the latest stable version of Geth at a specific version family
+-   `ethereum/client-go:latest`  是 Geth 的最新开发版本
+-   `ethereum/client-go:stable`  是 Geth 的最新稳定版本
+-   `ethereum/client-go:{version}`  是指定版本号的 Geth 的稳定版本
+-   `ethereum/client-go:release-{version}`  是指定的版本系列中 Geth 的最新稳定版本
 
-The following ports are opened by default when running from the container.
+在容器运行的时候，默认会打开以下端口
 
--   `8545`  TCP, used by the HTTP based JSON RPC API
--   `8546`  TCP, used by the WebSocket based JSON RPC API
--   `30303`  TCP and UDP, used by the P2P protocol running the network
--   `30304`  UDP, used by the P2P protocol's new peer discovery overlay
+-   `8545`  TCP，用作基于 HTTP 的 JSON RPC API
+-   `8546`  TCP，用作基于 WebSocket 的 JSON RPC API
+-   `30303`  TCP 和  UDP，用作运行 P2P 协议的网络
+-   `30304`  UDP，用作 P2P 协议的新 Peer 发现覆盖（new peer discovery overlay）
 
-The Docker client software must be installed on the machine you are going to run the container from. Containers can only run if you have the Docker client installed. Depending on your operating system, the correct version of the client will be needed.
+必须在要运行容器的计算机上安装 Docker 客户端软件。只有安装了 Docker 客户端才能运行容器。根据您的操作系统，需要安装对应版本的客户端。
 
-There are separate versions for Windows, Linux and the MacOS. The container can even be run on a Linux instance running on AWS, like a typical Linux installation. Once the Docker client is installed, the underlying platform doesn’t matter. The commands will be the same for all.
+Windows，Linux 和 MacOS 有单独的版本。该容器甚至可以在 AWS 上提供的Linux实例上运行，就像一般装好的 Linux 一样。安装 Docker 客户端后，底层平台无关紧要。这些命令对所有人来说都是一样的（是在 Docker 里运行的）
 
-## Getting The Image
+## 获取映像文件
 
-Open a  ****__terminal__****  on Linux or MacOS, or  ****__PowerShell__****  command prompt from Windows. In the CLI prompt, type the following command:
+在 Linux 或 MacOS 上打开****终端****，或从 Windows 打开 ****PowerShell**** 命令提示符。在 CLI 提示符下，键入以下命令：
 
 ****docker pull ethereum/client-go****
 
-This pulls the Docker image from the hub repository where it was uploaded by the Ethereum developers. Once you have issued this command, the following verbose or similar should be displayed:
+这将 Docker 映像从以太坊开发人员上传的中心存储库中获取下载回来。执行此命令后，应显示以下或类似的信息：（缺图？译注）
 
-I have already pulled the image, so the verbose may look different. When you issue the pull command it will always download the latest image available, which is good practice.
+我已经拉取了映像，所以可能看起来和你的情况不同。当您执行 pull 命令时，它将始终下载最新的可用映像，这是一种很好的做法。
 
-## Running The Node
+## 运行节点
 
-Now you can start the node by issuing the following command:
+现在，您可以通过发出以下命令来启动节点：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-49.png)
 
-We want to run the node with the flag options  ****\-i**** and  ****\-t**** to display information from our container. The  ****\-p**** indicates the use of a port number, in this case 30303. Likewise, the command can be run without the flags and it will simply use the default ports and settings from inside the container.
+我们会使用标志选项 ****\-i**** 和 ****\-t**** 来运行节点以显示来自容器的信息。该 ****\-p**** 表示使用的端口号，在这里就是 30303。同样，该命令可以不带标志运行，它会使用容器内的默认端口和设置。
 
-The following information should appear from the terminal.
+终端应显示以下信息。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-51.png)
 
-The INFO line that shows the config reveals what the node client software has installed. The node client is running the latest (as of this posting) version of the Ethereum software which is Constantinople that is a user activated hard fork at block height 7280000.
+INFO 开头的行里的配置信息显示了哪些节点客户端软件是已安装的。节点客户端正在运行以太坊软件的最新版本（在此发布时），该版本是 Constantinople，是块高度为 7280000 的用户激活硬分叉。
 
-When running in JSON-RPC API:
+在 JSON-RPC API 中运行时：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-52.png)
 
-Take note that running the option rpcaddr “0.0.0.0” is not secure, since you are opening up your node to all traffic. If your ETH wallet were unlocked, a hacker can get to your node in this way and take your coins. I don’t cover security in this article, but you can read more about that  [here][2]  (securing your GETH node’s RPC ports). Always abide to safe and best practices.
+请注意，运行选项 rpcaddr “0.0.0.0”并不安全，因为会向所有的通讯流量打开你的节点。如果您的 ETH 钱包已解锁，黑客可以通过这种方式到达您的节点并拿走您的电子货币。我本文中对安全性不详细叙述，但您可以在[此处][2]阅读更多相关信息（保护 GETH 节点的RPC端口）。请始终遵守安全和最佳实践。
 
-If the node displays the following in the INFO line, there will be a problem:
+如果节点在 INFO 行中显示以下内容，那就是遇到问题了：
 
 config=”{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000 Byzantium: 4370000 Constantinople: <nil> Engine: ethash}”
 
-The Constantinople: <nil> indicates the software was not updated. There is also no line for ConstantinopleFix, which appears in the correct configuration.
+`Constantinople: <nil>` 表示软件未更新。也没有出现 `ConstantinopleFix` 的信息，它应该在正确的配置中出现。
 
-## Persistent Data
+## Persistent Data  持久化存储数据
 
-For persistent blockchain data, Docker data volumes should be used with the option  ****\-v****. The  `/path/on/host`  should be replaced with the location you specify. For this the following command must be used:
+对于持久化区块链数据，Docker 数据卷应与 ****\-v**** 选项一起使用。`path/on/host` 需要替换成你对应的位置。为此，必须使用以下命令：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-54.png)
 
-## Checking Node Status
+## 检查节点状态 
 
-You can check the container’s status using the following command:
+您可以使用以下命令检查容器的状态：
 
 ****docker ps****
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-55.png)
 
-This will display the Container ID with the image name, status and ports used.
+这将显示容器 ID，其中包含使用的映像名称，状态和使用的端口。
 
 ```
 
-#These are the commands to run from the Docker CLI to run the Ethereum Go node client
+#下面的命令是从 Docker CLI 来运行以太坊 Go 节点客户端
 
-#GETTING THE IMAGE
+#获取映像
 docker pull ethereum/client-go
-#RUNNING THE NODE
+#运行节点
 docker run -it -p 30303:30303 ethereum/client-go
-#RUNNING NODE USING API
+#使用 API 运行节点
 docker run -it -p 8545:8545 -p 30303:30303 ethereum/client-go --rpc --rpcaddr "0.0.0.0"
-#Note, warning about using --rpcaddr "0.0.0.0" in a live environment. It is an insecure way of opening your node.
-#There are different ways to secure your ports, but this is one thing to take note of if you plan to use the API.
-#PERSISTENT DATA
+#注意，在线上环境使用 --rpcaddr "0.0.0.0" 指令要小心。这种打开节点的方式不安全
+#会有各种不同的方法可以加强你的端口安全，但是如果你打算使用 API 的话，这一点是要记住的。
+
+#持久数据
+docker run -it -p 30303:30303 -v /path/on/host:/root/.ethereum ethereum/client-go
 
 ```
 
@@ -99,11 +101,11 @@ docker run -it -p 8545:8545 -p 30303:30303 ethereum/client-go --rpc --rpcaddr "0
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-56.png)
 
-Running GETH from a Docker Container
+用 Docker 容器运行 GETH
 
-Take note that this does not automatically mine ETH. That is a different process. For getting quick access to the Ethereum blockchain, this is the purpose for running GETH.
+请注意，这不会自动挖掘 ETH。那是一个不同的过程。运行 GETH 的目的是为了快速访问以太坊的区块链。
 
-For full code source, visit:  [https://github.com/Play3rZer0/GETHDocker.git][3]
+有关完整代码源，请访问： [https://github.com/Play3rZer0/GETHDocker.git][3]
 
 [1]: https://geth.ethereum.org/
 [2]: https://medium.com/coinmonks/securing-your-ethereum-nodes-from-hackers-8b7d5bac8986

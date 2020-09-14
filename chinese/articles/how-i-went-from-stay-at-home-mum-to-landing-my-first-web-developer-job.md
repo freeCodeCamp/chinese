@@ -1,169 +1,169 @@
-> * 原文地址：[How I went from stay-at-home-mum to landing my first web developer job](https://www.freecodecamp.org/news/how-i-went-from-stay-at-home-mum-to-landing-my-first-web-developer-job/)
+> * 原文地址：[我是如何从全职妈妈开始我的第一份Web开发职位的](https://www.freecodecamp.org/news/how-i-went-from-stay-at-home-mum-to-landing-my-first-web-developer-job/)
 > * 原文作者：Phoebe Voong-Fadel
-> * 译者：
+> * 译者：luyc
 > * 校对者：
 
-![How I went from stay-at-home-mum to landing my first web developer job](https://www.freecodecamp.org/news/content/images/size/w2000/2019/10/phoebe2.jpg)
+![我是如何从全职妈妈开始我的第一份Web开发职位的](https://www.freecodecamp.org/news/content/images/size/w2000/2019/10/phoebe2.jpg)
 
-Two years ago I completed my first exercise on “Say Hello to HTML Elements” on  [freeCodeCamp][1]  (FCC). After two years of self-study, aged 36, I accepted my first job offer as a JavaScript Frontend Developer. I want to share some advice and tips and tell how I managed to land my first job.
+两年以前，我在 [freeCodeCamp][1] (FCC) 完成了 "对 HTML 元素说你好"的第一次练习。经过两年的自学， 我今年36岁了，终于获得了我作为 JavaScript 前端开发者的第一份工作。我想分享一些建议和技巧，并说说我是如何找到第一份工作的。
 
-This is a continuation of my  [first article][2]. I wrote this at the end of 2018 and I started freelancing as a Front-end Developer and studying part-time.
+这是我的 [第一篇文章][2] 的续篇。我在2018年年底写了这篇文章，然后便开始以前端开发者的身份从事自由职业并兼职学习。
 
-To summarise, I’m not from a Computer Science/STEM background. I didn’t go to a coding bootcamp, and I’m self-taught. I’m a stay-at-home mum who learned to code whenever I could. I used self-paced learning tools like FCC. As my children got older, I progressed to learning programming part-time.
+总而言之，我没有计算机科学/STEM 的背景，也没有参加编码训练营，而是完全靠自学的。我虽然是一名全职妈妈，但是我会尽可能的学习编码。我使用了像 FCC 这样自定进度的学习工具。随着我的孩子逐渐长大，我逐步兼职学习编程。
 
-The reason for this article is to inspire others from non-traditional backgrounds to learn how to code. That it is possible to transition into the tech industry. I want to share my experience and perspective. I also want to emphasise that it wasn’t all smooth sailing. There were ups and downs, doubts and dark times.
+本文的目的是启发那些没有专业背景的人学习编码。任何人都完全有可能进入到科技行业。我想分享一些我的经验和观点，但我想强调一点，这一路并非一帆风顺的。有跌宕起伏，有迷茫，也有黑暗时刻。
 
-I will go through my coding journey first. Then I will talk about the resources I used to learn how to code. Finally, I'll share tips on how I landed my first web developer job.
+首先我将回顾我的编程之旅，然后我将说一下我用来学习编码的资源。最后，我将分享一些关于我是如何我的第一份开发者工作的技巧。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/10/undraw_feeling_blue_4b7q.png)
 
-### January - March 2019: Doubt
+### 2019年1月至3月：迷茫
 
-As I had two young children, I thought freelancing was a great way to earn extra money while I was studying. I had already started my WordPress freelance portfolio, but I also joined freelancing platforms like Fiverr and Upwork.
+由于我有两个孩子，所以我认为自由职业是学习期间赚取额外收入的好方法。我已经在 WordPress 开始了我的自由职业，但同时我也加入了其他自由职业平台，像 Fiverr 和 Upwork。
 
-I know that these platforms are great for some freelancers, but for me this was a mistake. I couldn’t find any work despite being labelled as “Uprising talent”. I didn’t have ratings/reviews, as I was new. A lot of clients wanted freelancers with experience on their respective platforms. But I couldn’t land the work to get experience/ratings. It was a vicious circle.
+我知道这些平台对于某些自由职业者来说很棒，但对我来说，这是一个错误。尽管我被称为“起义人才”，但我找不到任何工作。由于我是新手，所以没有评分和评论。许多客户希望在平台上找到有经验的自由职业者。但是我无法获得这份工作来获得经验和评价。这是一个恶性循环。
 
-There were some clients where I “qualified” to put in a proposal. I would spend hours researching and writing them. I never heard back. In some cases, there were 50+ proposals submitted for a given project. There were also many freelancers who were willing to work for under minimum wage (by UK standards). I couldn’t compete on price.
+有些是我有“资格”提出方案的客户项目。我将会花几个小时研究并编写方案。但我从未收到回音。在某些情况下，甚至针对一个项目提交了50多个方案。还有许多自由职业者愿意以最低工资工作（按照英国的标准）。我不可能在价格上去竞争。
 
-I started to question my worth and lowered my hourly rate. I thought I just needed to get  _one_  rating from a client. The final straw for me was when a company invited me to assist them in some "market research" and to answer a questionnaire. It ended up being a scheme to get freelancers to write fake reviews on Amazon for a product. In exchange, I would get a five star rating.
+我开始质疑自己的身价，并降低了时薪。我以为我只需要从客户那里获得A评级就可以了。压倒我的最后一根稻草是一家公司邀请我协助他们进行一些“市场研究”并回答一份调查表。最终，这是一场阴谋，他们让自由职业者在亚马逊上为产品撰写假评论。作为交换，我将可以获得五星好评。
 
-I declined and shut down all my freelancing accounts. My confidence was knocked. I had serious doubts about my abilities. I started to become negative. I read in forums about how other aspiring web developers couldn’t get interviews/find jobs. Subconsciously, I sought out these stories to justify and feed my negativity.
+我灰心丧气，关掉了我所有自由职业平台的账号。我的信心被打破了。我严重怀疑自己的能力。我开始变得消极。我在论坛上阅读了其他有抱负的Web开发者无法获得面试和找到工作的帖子。在潜意识里，我寻找了这些故事来合理化和弥补我的消极情绪。
 
-Worse thing was, I stopped coding and lost sight of what I was trying to achieve.
+最糟糕的是，我停止了编码，我看不到自己想要实现的目标。  
 
-### April - July 2019: Stepping back and reassessing my life
+### 2019年4月至7月：退一步重新评估我的生活
 
-My husband, who is also my mentor, asked me, “what would make you happy again?”
+我的丈夫，也是我的导师，问我：“什么事才能让你再次开心呢？”
 
-My response was “learning programming and JavaScript”. So I did what I loved and continued with the FCC curriculum. I also worked on my WordPress freelance business on the side.
+我的回答是 “学习编程和 JavaScript”。因此，我做了我喜欢的事情，并继续上 FCC 的课程。 同时我也在一边从事我在 WordPress 的自由职业者工作。
 
-In May, an old colleague wanted to hire me to work remotely for a three month part-time contract. It wasn’t tech related but I needed the income so I agreed. It was a great distraction and helped my confidence.
+今年5月，一位老同事想雇佣我为期三个月的远程工作。这虽然与技术无关，但我需要收入，所以我同意了。这极大刺激了我，并帮助我找回了信心。
 
-The routine of studying and working lifted my spirits. It took months, but I started feeling positive and motivated again.
+日常的学习和工作使我精神振奋。花了几个月时间，我开始感到积极向上并再次受到激励。
 
-### August 2019: #100DaysOfCode challenge
+### 2019年8月：每天编码挑战
 
-I was looking for something to keep me focussed and consistent during my coding journey. I went on Twitter for inspiration and found the  [#100DaysOfCode challenge][3]. You commit to coding for at least one hour a day for 100 days.
+在编码过程中，我一直在寻找可以使我保持专注和持续性的东西。我在 Twitter 上寻求灵感，发现了 [#100天编程挑战][3]。承诺每天编码至少一小时，持续100天。
 
-I committed to the challenge and I was now accountable to the Twitter community. My goal was to complete all FCC certifications and become a Full Stack Developer. I've completed five out of six certifications so far! It was one of the best decisions I’ve made during my coding journey. I started following other aspiring developers. I watched other people succeed and share their experiences, and support others who were finding it difficult. It was inspiring and kept me motivated.
+我发起了挑战，并立即在 Twitter 社区做出了承诺。我的目标是完成所有 FCC 认证并成为一名全栈开发工程师。目前为止，我已经完成了六分之五的认证！这是我在编码过程中做出的最佳决定之一。 我开始关注其他有抱负的开发者。 我看到了其他人成功了并分享他们的经验，同时支持挑战遇到困难的其他人。 这非常鼓舞人心，并使我充满了动力。
 
-Instead of using online freelancing platforms, I approached local businesses instead. I got some WordPress side gigs and started getting more referrals. This was a great boost to my confidence.
+与使用在线自由职业平台不同的是，我去了本地企业。 我得到了一些 WordPress 附带的展示(原文为gigs)，并开始获得了更多推荐。 这极大地增强了我的自信心。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/10/undraw_resume_1hqp.png)
 
-### September - October 2019: The job hunt
+### 2019年9月至10月：找工作
 
-My husband said that I was ready to start applying for jobs. In fact, that I’d been ready for months. But I was dragging my feet.
+我丈夫说我已经准备好开始求职了。实际上，我已经准备了好几个月，只是我一直在拖拉。
 
-I was in a safe and familiar environment of learning and working on WordPress sites. I knew the job hunt would be arduous and there could be repeated rejections. I was also worried about how the process could affect my mental health. I reached out to others in the community and they all reiterated what husband said to me. “You are ready to start applying for jobs”.
+我在 WordPress 网站上的学习和工作让我处于一个安全，熟悉的环境中。我知道求职将会很艰巨，而且可能会一再被拒绝。我也担心这个过程会影响到我的心理健康。我接触了社区中的其他人，他们都重申了我丈夫对我说过的话。“你已经准备好开始求职了”。
 
-When my son started in Primary School in September, I knew it was the right time to start the job hunt. I took some time to mentally prepare myself and updated my CV. I applied for Frontend Developer roles. I kept a spreadsheet and tracked all my applications.
+当我的儿子于9月开始上小学时，我知道现在是时候开始找工作了。我花了一些时间进行思想上的准备，并更新了我的简历，我申请了前端开发者的职位，我用了一个电子表格，记录了我所有的应用程序。
 
-I applied for four jobs. One directly with a company, three others through an agency. I was prepared to apply for more, but two companies responded. I managed to get a couple of interviews.
+我申请了四份工作。一个是直接与公司联系，另外三个是通过第三方平台联系的。我准备申请更多，但是有两家公司都已经做出了回应。我获得了两次面试的机会。
 
-I didn’t expect such an immediate response and I took it as a positive sign.
+我没想到会这么快得到回音，我认为这是一个积极的信号。
 
-I started preparing for possible interview questions. I split up my preparation into sections: HTML, CSS, JavaScript, accessibility, UI and UX, non tech questions and general questions. I also researched the companies I was being interviewed by.
+我开始准备可能的面试问题。我将准备工作分为以下几个部分：HTML，CSS，JavaScript，无障碍，UI 和 UX，非技术问题和常规问题。我还研究了我要去面试的几家公司。
 
-### My interview experience
+### 我的面试经验
 
-There was no white-boarding, no solving difficult algorithms on the spot and no trick questions.
+没有脑袋空白的时候，没有现场解决困难的算法，也没有技巧性问题。
 
-The first interview was to get to know me. Employers were actually very intrigued by my non-traditional background. I always thought it would be a hindrance, but in fact it was a talking point.
+第一轮面试时要做自我介绍。我的非传统背景实际上让雇主很感兴趣。我一直认为这是一个障碍，但实际上这是一个话题。
 
-I got through to the second stage on one job I applied for which was a take home coding exercise. The other interview I was offered the job on the spot.
+我进入了这个职位的第二阶段面试，这是一项带回家的编码练习。另一场面试是当场给我发的 offer。
 
-I decided to accept the role and I'm now a JavaScript Frontend Developer.
+我决定接受这个职位，现在我是一名 JavaScript 前端开发者了。
 
-I'm surprised by how short the application and interview process was for me. I think it was a combination of the following:
+我对申请和面试的过程这么短感到惊讶。我认为这是以下因素综合影响的：
 
-1.  My experience in my previous career: transferable soft skills I acquired, such as good communication, time management, project management, evidence of completing projects etc.
-2.  Other activities I was pursuing outside of learning: freelancing as a WordPress Developer, going to conferences, having a portfolio, blogging and writing articles.
-3.  Being interview ready.
+1. 我之前的职业经历：我获得了许多有用的软技能，例如良好的沟通、时间管理、项目管理、完成项目的凭据等。
+2. 我参加了除了学习之外的其他活动，以 WordPress 开发者的身份从事自由职业、参加会议、有作品集、博客和写文章。
+3. 面试的充分准备。
 
-### The resources I used to learn how to code
+### 我用来学习编码的资源
 
-I've been asked by many in the community what I used to learn to code. Due to my circumstances of being a stay-at-home-mum, I chose to learn from self-paced online platforms. I needed something remote where I could learn at odd hours of the day. Here are a list of some of the resources I’ve used to learn how to code.  
+社区中的许多人都问过我学习编码的内容。由于我是全职妈妈，因此我选择用自定进度的在线平台学习。我需要在远距离的地方，可以在一天中的几小时学习。以下是我用来学习编码的一些资源清单。
 
 1.  [freeCodeCamp][4]  (FCC)
 
-I've used FCC from the beginning to the end of my coding journey. It formed the basis of my learning and I always return to it after I branch off to learn a new skill in depth.
+从编码过程的开始到结束，我一直在使用 FCC。它打牢了我学习的基础，在我深入学习新技能之后，我总是回过头来学习基础。
 
-Personally, FCC taught me to be independent and learn how to find the answers. The answers aren’t spoon fed and you are required to do your own research to complete the projects. A crucial skill to master. Learning how to search gets easier with time. You'll become very familiar with  [Stack Overflow][5].
+就我个人而言，FCC 教会了我保持独立并学习如何找到解决方法。答案并非一蹴而就，你需要做深入的探索才能完成项目。一项关键技能的掌握，随着时间的推移，要学会如何通过搜索来高效的获得解决方法。你将需要非常熟悉 [Stack Overflow][5]。
 
 2.  [Udemy][6]
 
-For WordPress I followed a course by  [Rob Percival and Gregg Davis][7]  and one by  [Brad Schiff][8]. For React and Node JS I used courses by  [Maximillian Schwarzmuller][9], who’s also part of the Academind team on YouTube.
+对于 WordPress，我学习了[罗伯·珀西瓦尔和格雷格·戴维斯][7]和[布拉德·希夫][8]的课程。对于 React 和 Node JS，我学习了[马克西米利安·施瓦兹米勒][9]的课程，他是 YouTube Academind团队中的一员。
 
-One thing to bear in mind about follow along project tutorials, is that you must implement what you’re learning throughout the course. Try and apply what you learn to your own projects. This will consolidate what you have learnt.
+跟着项目教程学习时需要牢记的一件事是，你必须在整个课程中亲手实践所学的内容。尝试将所学到的知识应用到自己的项目中。这将巩固你所学到的知识。
 
-3\. YouTube
+3. YouTube
 
-Here’s some of the channels I’ve tried and tested:
+这是我用过和检验过的一些频道：
 
-[FCC][10]: I’ve watched a lot of Beau Carnes' videos on JavaScript. But there’s a wide range of videos which covers pretty much anything tech related. From learning Python to GraphQL. The FCC curriculum doesn’t incorporate video tutorials, so this is a good resource to go to.
+[FCC][10]：我已经看了很多博·卡恩斯的 JavaScript 视频。但是这里有更多视频，涵盖了几乎所有与技术相关的内容，从学习 Python 到 GraphQL。FCC 课程未包含视频课程，因此这是一个很好的资源。
 
-[The Coding Train][11]: I used this to understand fundamental JavaScript concepts such as Promises, Async/Await, Prototypes and Higher Order Functions. There’s also some useful videos on regular expressions.
+[编码训练][11]：我用它来理解基本的 JavaScript 概念，例如 Promises、Async / Await、Prototypes 和高阶函数。还有一些关于正则表达式的有用视频。
 
-[Academind][12]  and  [LevelUpTuts][13]: Very in depth videos on a wide range of technologies, frameworks and libraries. From the basics progressing to advance tutorials.
+[学术思想][12] 和 [LevelUpTuts][13]： 各种技术，框架和库深入研究的视频。从基础过渡到高级的教程。
 
-[Curran Kelleher][14]: I used this channel for learning D3.js.
+[柯兰·凯勒赫][14]: 我使用这个频道来学习 D3.js。
 
-4.  [freeCodeCamp Developer News][15]
+4.  [freeCodeCamp 开发者新闻][15]
 
-I could be biased but these articles have good content and are checked by the FCC team before publication. Not just useful for programming related subjects, but also some great motivating and career related articles.
+我可能有点偏心，但这些文章内容确实不错，并在发布前经过 FCC 小组的检查。不仅与编程相关的主题很有用，而且与激励和职业相关的一些文章也很有用。
 
-5.  [MongoDB University][16]
+5.  [MongoDB 学院][16]
 
-I went on a big tangent over the summer and completed a lot of the free courses with MongoDB University. They take place over three weeks and you must complete the assignments within a timeframe. You are graded and awarded a certification of completion if you pass.
+整个夏天，我一边找工作，一边在 MongoDB 学院完成了许多免费课程。培训时间为三周，你必须在一定时间内完成作业。如果你通过了考试，你将获得成绩并获得结业证书。
 
-6\. Technical Documentation
+6. 技术文档
 
-I always try to refer to the official documentation for any API, framework, library, language I’m using. Such as,  [MDN][17]  for JavaScript and  [W3C][18] for HTML.
+我经常参考我使用的API，框架，库和语言的官方文档。例如，JavaScript 的 [MDN][17] 和 HTML 的 [W3C][18]。
 
-6.  [egghead.io][19]
+7.  [egghead.io][19]
 
-This is a subscription based video tutorial service covering a breadth of frameworks, libraries, tools and languages.
+这是一个基于视频教程服务的订阅网站，涵盖了各类框架、库、工具和语言。
 
-7.  [Khan Academy][20]
+8.  [可汗学院][20]
 
-You are required to know some basic mathematics when learning JavaScript. I found Khan Academy was useful for this. I took the basic Algebra course. All courses are free and cover a range of subjects.
+学习 JavaScript 时，你需要了解一些基本的数学知识。我发现可汗学院对此很有用。我学习了基础代数课程。所有课程都是免费的，涵盖了一系列学科。
 
-There are many resources (paid and free) online. Do some research and find the resources that suits your learning style.
+在线有许多资源（收费和免费）。多做一些研究，找到适合你学习风格的资源。
 
-### Here are my top 15 tips for approaching the job hunt
+### 这是我找工作的15个最佳秘诀
 
-1.  **The minimum:** I would strongly suggest having a portfolio, CV/Resume,  [LinkedIn][21]  account, covering letter, projects/repositories on  [GitHub][22], showcasing side projects on  [CodePen][23]  or  [Glitch][24].
-2.  **Feedback on your CV/Resume:** get someone to review your CV. It always helps to have a fresh pair of eyes.
-3.  **One page CV/Resume:** Some feedback I got about my CV was changing it from two pages to one page. Recruiters get hundreds of CVs, so you want to get their attention immediately. Long CVs are a definite no. List your technical skills, any relevant experience/side projects you worked on first. If recruiters are interested, they’ll go to your LinkedIn profile for more details.
-4.  **Let everyone know you’re looking for a job:**  Put yourself out there. Sign up and submit your CV to recruitment agencies and job platforms such as  [Reed][25]  and  [Glassdoor][26]. Put in your LinkedIn profile that you’re looking for new opportunities.
-5.  **Go to recruitment fairs:**  There are specialist tech recruitment fairs. An opportunity to bypass the recruitment agencies and speak to the employers directly.
-6.  **Apply directly to companies:** A tip I got from an insider. A lot of companies don’t advertise their junior developer roles. They are usually inundated with prospective candidates, so approach the companies yourself. This might not yield immediate results, but they’ll have your details on file. Touch base with them once in a while to see if they have any positions opening up.
-7.  **The commercial experience barrier:** Having “commercial experience” in web development is usually a barrier. Especially for recruitment agencies. I see a requirement for commercial experience even for junior web development roles. But commercial experience doesn’t necessarily mean working for a company. The way I overcame this was to talk about my freelancing work with recruiters. Working with clients for my WordPress sideline business is valid “commercial experience”. I’m usually asked how I landed my first client. The first website I built was for a family member’s business. I did a pay-what-you-want model and they took a chance on me. So utilise your contacts.
-8.  **Network:**  Go to conferences and meetups. Networking is great. I haven’t managed to go to meetups as I have family responsibilities. There’s a great article by  [Jackson Bates][27] about thriving at your first tech meetup. But I’ve been to a few conferences. At some conferences, there might be companies present. Often they’re hoping to recruit developers. Another opportunity to bypass the recruitment agencies and actually talk to the tech companies recruiting. I always go to conferences alone. I do get some anxiety about this, but it encourages me to network and meet new people.
-9.  **Have a positive online presence:** The feedback I got from one employer was that they were impressed by my positive online presence. A lot of potential employers will try and find you online before they interview you. They want to have some idea of what you’re about. Have a blog and write about things you’re passionate about.
-10.  **Do the #100DaysOfCode challenge:** Document your journey on Twitter. It’s a good way to see how much you’ve progressed. Also it’s a great way to expand your network. I have “met” so many motivated aspiring developers on Twitter. I get to see how others are doing in their coding journeys and share advice. Also, more experienced developers often comment and offer advice, which is fantastic from a learning perspective.
-11.  **Have a mentor:**  My husband is my main mentor. But I often seek the help of others in the community to get a different perspective. Don’t be afraid to ask. Often people will be happy to give you advice and feedback.
-12.  **Prepare for technical questions:**  There are a lot of articles online and videos on YouTube to help you with the technical questions.
-13.  **General interview preparation:** Don’t forget to prepare for more general interview questions like “tell me about yourself?”.
-14.  **Mock interviews:**  I know from experience that mock interviews are crucial. Preparing on paper is completely different from actually answering questions in person. Practice and practice some more!
-15.  **Don’t underestimate/undervalue yourself.** For me this is the most important advice I can give someone. I battle with this on a daily basis. My biggest barrier isn’t my skills, it’s my lack of confidence. Remember, you know more than you think. Don’t talk yourself down, be positive about what you can do and what you have achieved.
+1. **最低要求：** 我强烈建议拥有一个作品集，简历/履历表，[领英][21]账户，包括[GitHub][22]上的信函，项目/仓库，并在 [CodePen][23] 或者 [Glitch][24] 上展示辅助项目。
+2. **简历/履历表的反馈：** 让别人复审你的简历。这将帮助你更全面的看清自己。
+3. **一页简历/履历：** 我收到的一些关于简历的反馈正是将其从两页更改为一页。招聘人员会查看数百份简历，因此你需要立即引起他们的注意。长篇幅的简历是绝对不行的。列出你的技术技能，首先展示你的相关经验和附带项目。如果招聘人员感兴趣，他们将跳转到你的领英个人资料以获取更多详细信息。
+4. **让所有人都知道你在找工作：** 将你自己放到公共平台上。注册并提交简历到招聘机构和找工作平台上，例如[Reed][25] 和 [Glassdoor][26]。修改你的领英资料，你正在寻找新的机会。
+5. **参加招聘会：** 有些专业的技术招聘会。这是一个绕过招聘机构并直接与雇主沟通的机会。
+6.  **直接联系公司：** 我从内部人员那里获得的建议。很多公司不会公布他们初级开发者职位。它们通常被潜在的候选人所淹没，因此请亲自与公司联系。这可能不会立即产生效果，但是他们会将你的信息记录在案。偶尔与他们接触，以查看他们是否有空的职位。
+7. **商业经验障碍：** 在 Web 开发中拥有“商业经验”通常是一个障碍。尤其是对于招聘机构。我认为即使是初级的 Web 开发者也需要具有商业经验。但是，具有商业经验并不一定意味着能为公司所用。我克服这个问题的方法是与招聘人员谈论我的自由职业。我的 WordPress 副业的客户合作就是有效的“商业经验”。他们通常会问我是如何找到第一个客户的。我做的第一个网站是一个为家庭成员服务的商业项目。我做了一个“按需付费”的模型，然后我抓住了这次机会。因此利用好相关联的信息。
+8. **网络：** 参加会议和聚会。网络非常棒。我不想错过任何一场聚会，就像我负有家庭责任一样。[杰克逊·贝茨][27] 有一篇很棒的文章，内容涉及到如何在你在第一次参加技术大会时，如何展示自己。但我只去过几次会议。在某些会议上，可能会有公司在场。他们经常希望招募开发者。绕开招聘机构并与技术公司直接交流又是另一个机会。我总是一个人去参加会议。我对此确实有些焦虑，但这鼓励我建立人脉并结识新朋友。
+9. **拥有积极的在线形象：** 我从一位雇主哪里得到的反馈是他们对我的在线形象印象深刻。许多潜在的雇主会在面试你之前尝试在网上找到你。他们想对你的情况先有所了解。拥有一个博客，写一些你热衷的事情。
+10. **执行 #100天编码挑战：** 在 Twitter 上记录你的过程。这是一个查看进度的好方法，同时这也是个扩展自己网络的好方法。我在 Twitter 上“满足”了许多积极进取的开发者。我可以看到其他人在编码过程中的表现并分享建议。另外，经验丰富的开发者经常也会发表评论并提供建议，从学习的角度来说，这是很棒的。
+11. **有一位导师：** 我丈夫是我的主要导师。但是我经常寻求社区中其他人的帮助，以获取不同的观点。不要害怕问。他们通常会很乐意为你提供建议和反馈的。
+12.  **解决技术问题的准备：** YouTube 上有很多在线文章和视频可帮助你解决技术问题。
+13. **常规性面试准备：** 不要忘记为常规性面试问题做准备，例如"说说你自己。"。
+14. **模拟面试：** 我从经验中知道模拟面试至关重要。纸上准备与实际面对人回答问题是完全不同的。需要不断练习。
+15. **不要看轻/低估自己** 对于我来说，这是我给出的最重要的建议。我每天都在为此而战。我最大的障碍其实不是我的技能，而是我缺乏自信。请记住，你所了解的比你想象的要多。不要贬低自己，对自己做的事和取得的成就要保持乐观。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/10/ian-schneider-TamMbr4okv4-unsplash.jpg)
 
-Photo by  [Ian Schneider][28]  on  [Unsplash][29]
+[伊恩·施耐德]拍摄在 [Unsplash][29]
 
-### Final thoughts
+### 最后的想法
 
-> “Grit is passion and perseverance for very long-term goals. Grit is having stamina. Grit is sticking with your future, day in, day out, not just for the week, not just for the month, but for years, and working really hard to make that future a reality. Grit is living life like it's a marathon, not a sprint.”  
+> "坚毅是对长远目标的热情和和坚持。坚毅是日复一日，年复一年的努力不懈，不断投入时间和精力，直到实现你的目标。坚毅的生活应该是一场马拉松，而不是短跑。"
 
-_Angela Lee Duckworth, "Grit: The power of passion and perseverance"_
+_安吉拉·李·达克沃思，“《坚毅：热情与坚持得力量》”_
 
-This quote by Angela Lee Duckworth, pretty much summarises the last two years of my life.
+安吉拉·李·达克沃思的这段话几乎总结了我最近两年的生活。
 
-My coding journey wasn’t a quick sprint, it was a two year marathon. There were ups, downs, tears of sadness and joy. I came close to giving up so many times. But what kept me going was passion and perseverance. Aside from raising children, this is the hardest thing I’ve ever undertaken.
+我的编码之旅不是快速的冲刺，而是两年的马拉松比赛。跌宕起伏，有悲伤，也有喜悦的眼泪。我很多次都想放弃了。但是让我继续前进的是热情与坚持。除了抚养孩子，这是我做过最难的事情了。
 
-I don’t want to give the impression that the learning stops here, though! It’s essential to keep on learning new skills and evolving, especially in the fast paced world of web development. A new marathon begins as I start my new career. I’m sure the ups and downs will continue, but it’s a road worth taking as I will be doing something I love.
+我不想给人留下学习就到此为止的印象。继续学习新技能并不断发展至关重要，尤其是在快速发展的 Web 开发领域。随着我开始了新的职业生涯，新的马拉松开始了。我确定跌宕起伏还会继续，但这是一条值得走的路，因为我将做我自己喜欢的事。
 
 [1]: https://www.freecodecamp.org/
 [2]: https://www.freecodecamp.org/news/how-i-went-from-stay-at-home-mum-to-front-end-web-developer-39724046692a/

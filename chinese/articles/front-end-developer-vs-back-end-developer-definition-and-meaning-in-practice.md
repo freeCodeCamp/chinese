@@ -82,61 +82,60 @@
 
 ## 什么是后端开发？
 
-The back end layer is usually where the business logic occurs. This can be super complex like the rules that determine revenue for an e-commerce company or something more common like a user profile.
+后端是程式逻辑发生的地方。这可以是非常复杂比如管理电子商务公司的收入或者只是简单的用户资料。
 
 ### 传统的后端开发是什么样的？
 
-The back ends of applications were historically built using server-side languages like  [PHP][30]  or  [Ruby][31]. The idea is that you have a server that you need to perform complex operations on, so the way to do that is with a language that server would understand.
+传统的应用程式后端通常使用伺服器编程语言如  [PHP][30] 或 [Ruby][31]。这个方法是需要一个伺服器来运行复杂的运动算的，所以才会使用伺服器能够明白的语言。
 
-On each request to the server, the backend would perform the full stack of the operations, including rendering out the front end. By using frameworks or DIY architectures, the back end would accept the request, figure out what it should do with that request, run any business logic needed with the request, and provide the front end any data that it would need to display a response to that request.
+所以对伺服器的请求，后端会执行所有的程式，当然也包括前端的渲染。通过使用框架或者自行定义的结构，后端能够接受请求，通过请求执行相对应的逻辑，然后提供前端所需要显示的资料。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/front-end-back-end-500-error.jpg)
 
-Back end giving the front end a 500 Internal Server Error
+后端给前端的 500 Internal Server Error
 
-Some of the more traditional back end tools include:
+一些传统的后端开发工具包括：
 
--   On-premise or remotely managed servers like  [Rackspace][32]
--   HTTP servers using  [Apache][33]
--   Databases like  [MySQL][34]
--   Server side languages like  [PHP][35]  or  [Perl][36]
--   Application frameworks like  [Ruby on Rails][37]
+-   本地或远程控制的伺服器如 [Rackspace][32]
+-   HTTP 伺服器如  [Apache][33]
+-   数据库如  [MySQL][34]
+-   伺服器程式语言如  [PHP][35] 或 [Perl][36]
+-   应用程式框架如 [Ruby on Rails][37]
 
 ### 目前的后端开发是什么样的？
 
-Back end stacks look somewhat similar to the way they did before, aside from newer code patterns, except more often you’ll see the back ends provide data through APIs via HTTP requests instead of directly to the templates the front end team are working on.
+目前后端的开发和之前并没有太大的变化，除了有新的编码格式，就是我们经长能够看见的后端透过 HTTP 请求提供资料给 API 而不是直接透过前端工程师所建立的模板。
 
-While the foundation isn’t super different, it actually be comes increasingly complex as you have to deal with different security implications that could compromise your system if not properly configured such as leaving an API open to the public that returns sensitive user data.
+因为基础并没有太大的变化，当我们开放存有敏感资料的 API 给大众时会带来复杂且难处理的安全隐患。
 
-But also how the server operates can be completely different. While previously, we might run our python on our own managed server (we still can), we can now make use of serverless functions with tools like  [AWS Lambda][38]  that simplify how we manage code.
+但伺服器的运行也有了不同。之前，我们需要在我们自己的伺服器运行 Python 代码（当然现在也可以），但现在我们可以使用如 [AWS Lambda][38] 的工具来简化我们的代码。
 
-While “[serverless][39]” doesn’t necessarily mean there are literally no servers, it means that as a service, the developer doesn’t have to worry about maintaining that server and can instead just focus on the code they need to run.
+可是 “[去伺服器][39]” 并不是真正不需要伺服器的意思，而是转化成为了一种服务，开发者能够不需要担心伺服器维护的情况下进行开发工作，只需要专注在编码本身的运行就行了。
+一些常用和广受欢迎的后端开发工具包括：
 
-Some of the back end tools that are more common and growing in popularity include:
-
--   Cloud servers like  [AWS EC2][40]
--   Serverless services like  [AWS Lambda][41]
--   NoSQL databases like  [MongoDB][42]
--   Languages like  [Python][43]  or javascript via  [NodeJS][44]
--   Web application frameworks like  [Serverless Framework][45]
+-   云伺服器如 [AWS EC2][40]
+-   去伺服器服务如 [AWS Lambda][41]
+-   NoSQL 数据库如 [MongoDB][42]
+-   程式语言如 [Python][43] 或透过 [NodeJS][44] 的 Javascript
+-   网页程式框架如 [Serverless Framework][45]
 
 ## 模糊地带
 
-Part of the twist with back ends is now you can write your back end with javascript. With the inception of  [Node.js][46], developers were given the ability to use their favorite browser language to do most of the same things they were used to and familiar with but now on a server.
+透过 [Node.js][46] 的 Javascript 开发者能够使用自己喜欢的浏览器语言执行与伺服器语言相同的任务。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/nodejs-never-stopped-to-think-if-should.jpg)
 
-Never stopped to think if we should write JS on a server
+不停止地想像能够在伺服器写 JS 代码
 
-While not everyone is fond of running javascript as a server side language, it became a little easier to use the same language to write the full stack of an application. This changed the game a bit as far as front ends and back ends were concerned.
+虽然并不是所有人都是以 Javascript 作为伺服器语言，当它的确能够简化整个程式只使用同一种语言。这重写了前端和后端的游戏规则。
 
-But it’s also started to come full circle where you now see systems that build APIs right  [next to the front end][47]  similar to what you might see in a traditional stack.
+但它他也开始进入一个完整的生态圈，就是现在我们会看到系统的 API 就建立在 [前端的隔壁][47] 这跟传统的格式一样。
 
 ## 前端 vs 后端
 
-Regardless of the stack, there will always be the separation of concerns. The UI and all of the interaction, whether rendered on the server or in the browser, is what makes the front end the front end and the data and business logic, whether coming from the server in your company’s closet or a managed function, is what makes the back end the back end.
+无论前端或后端，总是会有区分的界限。所有互动的 UI 不论是在伺服器或浏览器运行的，都属于前端。而那些使前端的逻辑发生和资料来源，不论是某公司提供的服务或者是自定义的结构，都是后端。
 
-Whether you prefer to work on the user facing features or build the logic that lets them do things, there are plenty of resources to get started.
+不论你喜欢搭建使用者界面或者建立后台逻辑，都有不少的资源让你开始。
 
 ## 学习资源
 

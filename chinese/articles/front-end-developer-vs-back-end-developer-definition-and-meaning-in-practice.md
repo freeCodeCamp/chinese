@@ -5,86 +5,86 @@
 
 ![Front End Developer vs Back End Developer – Definition and Meaning In Practice](https://www.freecodecamp.org/news/content/images/size/w2000/2020/06/front-end-back-end.jpg)
 
-Websites and applications are complex! Buttons and images are just the tip of the iceberg. With this kind of complexity, you need people to manage it, but which parts are the front end developers and back end developers responsible for?
+网页和应用程式是复杂的！按钮和图片只不过是冰山一角。按照这样的复杂程度，我们需要人工来处理，但前端程序员和后端程序员的职务分别是什么？
 
--   [The many layers of development][1]
--   [But we’re not all full stack][2]
--   [So what is the difference between Front End Development and Back End Development?][3]
--   [What is Front End Development?][4]
--   [What is Back End Development?][5]
--   [Where things get fuzzy][6]
--   [Resources to learn][7]
+-   [开发的多层次][1]
+-   [但我们不是全栈程序员][2]
+-   [所以前端和后端的区别到底是什么？][3]
+-   [什么是前端开发？][4]
+-   [什么是后端开发？][5]
+-   [模糊地带][6]
+-   [学习资源][7]
 
-## The many layers of development
+## 开发的多层次
 
-Whether you’re working on a website or a native iOS app, all development environments share a common theme — there’s a front end to an application and a back end.
+无论你是使用网站或者是ios应用程式，所有的开发环境都使用共同的模式 - 那就是前端开发和后端开发。
 
-This line can get blurry, especially given the rise of javascript and the  [serverless][8]  world. With the tooling somewhat merging together, we might sometimes wonder if we’re a  [full stack developer][9].
+这界限是模糊的，尤其是当 javascript 和[“去伺服器”][8]世界的兴起。当开发工具开始结合在一起时，我们开始怀疑自己算不算是[全栈开发者][9]。
 
-## But we’re not all full stack
+## 但我们不是全栈程序员
 
-As much as we might all  [want to be][10], we’re not all full stack developers. Personally, I find myself able to be productive in the back end of an application, but it’s not my strength and I much prefer to be heads down building UIs.
+虽然我们[都想被][10]称为全栈开发者，但我们并不是。以我个人来说，我发现自己在后端的开发比较有效率，但这并不是我的强项，我更喜欢建立使用者页面。
 
-And some people are the opposite, where they are strongest dealing with building APIs in the back end of an application and while they can build out a UI, it might be more of a prototype-like experience than a fleshed out application.
+当然也有些人跟我相反，他们的强项是在应用的后端构建 API 同时也能建立使用者页面，但可能是比较像原型设计以展示应用设计地那种。
 
-## So what is the difference between Front End Development and Back End Development?
+## 所以前端和后端的区别到底是什么？
 
-Even if you are a full stack developer, that doesn’t mean there’s not a division of responsibilities.
+就算你是个全栈开发者，但这并不代表没有职责的分支。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/front-end-vs-back-end-engineer-2.jpg)
 
-Front End Engineer vs Back End Engineer
+前端工程师 vs 后端工程师
 
-So what do those look like?
+他们是什么样的？
 
-## What is Front End Development?
+## 什么是前端开发？
 
-The front end of an application typically refers to the layer that represents the UI (user interface). This can include anything from a static site with HTML and CSS to a full  [React][11]  app that powers the UI.
+应用程式的前端通常是指显示使用者界面的图层。当中包括所有的静态网页如 HTML 和 CSS 到 [React][11] 所构建的使用者界面。
 
-### What did Front End Development traditionally look like?
+### 传统的前端开发是什么样的？
 
-Javascript currently rules the front end web, but that wasn’t always the case. While it could have been used to add little bits of interaction to a site, typically front ends were rendered using server-side templating languages like framework-driven  [PHP][12]  and  [Template Toolkit][13]  ([Perl][14]).
+目前统治前端网页的程式语言是 Javascript ，但并不完全只依赖一个程式语言就可以的。若需要在网页内增加一些互动，就需要使用如 [PHP][12]  和  [Template Toolkit][13]  ([Perl][14]) 的伺服器模板的程式语言渲染网页前端页面。
 
-This grew to be super popular in practice with home grown frameworks or tools like  [Wordpress][15]  that used PHP to drive a massive community of developers who built their websites with those tools.
+这种方式广泛的应用在用户自行建立的框架或如 [Wordpress][15] 这样使用 PHP 来驱使广大的开发者社群使用这个工具来开发网站。
 
-The way it worked was the templating language was able to get its data straight from the server as it was rendered. When a browser requested the page directly from the origin (the server itself), whatever data the template would need, the application logic would provide at that time.
+它的运作方式是这些模板可以在运行时直接从伺服器获取资料。当浏览器从伺服器请求网页资料时，模板所需的资料和应用的逻辑都会在那个时候获取。
 
-Some of the more traditional front end tools include:
+一些传统的前端工具包括：
 
--   Libraries like  [jQuery][16]  or  [MooTools][17]
--   Website frameworks like  [Wordpress][18]
--   Plain  [CSS][19]
--   Abundant use of  [Table][20]  elements
+-   软件包如 [jQuery][16] 或 [MooTools][17]
+-   网页框架 [Wordpress][18]
+-   纯 [CSS][19]
+-   充分地使用 [Table][20] 元素
 
-But as time went on, javascript kept getting more mature as a language and browsers kept getting more powerful, which led to the idea that we could move more of that work to the browser to build faster and more interactive experiences.
+但时间久了之后， 当 Javascript 变得越来越成熟和浏览器的强化，我们就能够建立更多，更快，互动性更强的使用者体验。
 
-### What does Front End Development look like now?
+### 目前的前端开发是什么样的？
 
-Now it’s common to see javascript-heavy websites and apps built using UI frameworks like  [React][21],  [Vue][22], and  [Angular][23]. These tools provide abstractions that allow developers to build complex UIs with reusable patterns like components.
+目前使用 Javascript 的网页和应用程式建立 UI　的框架如　[React][21]，　[Vue][22]，　和  [Angular][23]　越来越常见。这些工具提供了开发者能够重复使用的复杂　UI　元件的功能。
 
-When the browser loads the page, the page receives an initial HTML document that also includes the script tag to the javascript (same as always). But once that javascript loads, it reaches out to APIs using browser requests that when completed, update the page to fill in any kind of dynamic data that you’d typically get along with that first HTML document.
+当浏览器缓冲页面时，该页面会先接受一个起始的　HTML　文件当中包括　script　标签里所包含的　Javascript　文档（就跟之前的一样）。不同的是当　Javascript　运行时，它会自动从浏览器与外部的　API　连接，更新页面之后就像一个普通的静态网页从起始的　HTML　文件中获取这样。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/building-website-with-more-steps.jpg)
 
-It's like building a website... with more steps
+它就像是使用更多的步骤建立一个网页...
 
-While it sounds like more steps, it commonly provides a faster initial page load and render, not to mention it has a great developer experience. By delivering less on that first request and prioritizing what loads after that, it usually ends up as a better user experience.
+虽然看起来步骤变多了，但通常能够提供更快速的缓存和渲染，因此提供了更优质的开发体验。因为在初始请求页面时的资料减少和缓冲优先的排序，所以能够提供更好的使用者体验。
 
-Some of the front end tools that are more common and growing in popularity include:
+一些常用和广受欢迎的前端开发工具包括：
 
--   UI frameworks like  [React][24]  or  [Vue][25]
--   Web frameworks like  [Gatsby][26]
--   Compilers like  [Babel][27]
--   Bundlers like  [Webpack][28]
--   CSS tools like  [Sass][29]
+-   UI 框架如  [React][24]  或  [Vue][25]
+-   Web 框架如  [Gatsby][26]
+-   编译器如  [Babel][27]
+-   集合器如  [Webpack][28]
+-   CSS 工具如  [Sass][29]
 
-But those APIs, whether ones we pay for or create ourselves, need to be built  _somewhere_. That’s where the back end comes in.
+但是这些 API，无论是我们付费或者是自行建立的都需要建立在 _某些地方_。这就是所谓的后端。
 
-## What is Back End Development?
+## 什么是后端开发？
 
 The back end layer is usually where the business logic occurs. This can be super complex like the rules that determine revenue for an e-commerce company or something more common like a user profile.
 
-### What did Back End Development traditionally look like?
+### 传统的后端开发是什么样的？
 
 The back ends of applications were historically built using server-side languages like  [PHP][30]  or  [Ruby][31]. The idea is that you have a server that you need to perform complex operations on, so the way to do that is with a language that server would understand.
 
@@ -102,7 +102,7 @@ Some of the more traditional back end tools include:
 -   Server side languages like  [PHP][35]  or  [Perl][36]
 -   Application frameworks like  [Ruby on Rails][37]
 
-### What does Back End Development look like now?
+### 目前的后端开发是什么样的？
 
 Back end stacks look somewhat similar to the way they did before, aside from newer code patterns, except more often you’ll see the back ends provide data through APIs via HTTP requests instead of directly to the templates the front end team are working on.
 
@@ -120,7 +120,7 @@ Some of the back end tools that are more common and growing in popularity includ
 -   Languages like  [Python][43]  or javascript via  [NodeJS][44]
 -   Web application frameworks like  [Serverless Framework][45]
 
-## Where things get fuzzy
+## 模糊地带
 
 Part of the twist with back ends is now you can write your back end with javascript. With the inception of  [Node.js][46], developers were given the ability to use their favorite browser language to do most of the same things they were used to and familiar with but now on a server.
 
@@ -132,29 +132,29 @@ While not everyone is fond of running javascript as a server side language, it b
 
 But it’s also started to come full circle where you now see systems that build APIs right  [next to the front end][47]  similar to what you might see in a traditional stack.
 
-## Front End vs Back End
+## 前端 vs 后端
 
 Regardless of the stack, there will always be the separation of concerns. The UI and all of the interaction, whether rendered on the server or in the browser, is what makes the front end the front end and the data and business logic, whether coming from the server in your company’s closet or a managed function, is what makes the back end the back end.
 
 Whether you prefer to work on the user facing features or build the logic that lets them do things, there are plenty of resources to get started.
 
-## Resources to learn
+## 学习资源
 
-### Front End
+### 前端
 
 -   [freecodecamp.org Responsive Web Design Certification][48]  (freecodecamp.org)
 -   [Beginner Javascript][49]  (beginnerjavascript.com - Wes Bos)
 -   [React Tutorial for Beginners][50]  (youtube.com - Programming with Mosh)
 -   [Front End Masters][51]  (frontendmasters.com)
 
-### Back End
+### 后端
 
 -   [freecodecamp.org APIs and Microservices Certification][52]  (freecodecamp.org)
 -   [Super simple start to serverless][53]  (kentcdodds.com)
 -   [AWS Certified Cloud Practitioner Training 2019 - A Free 4-hour Video Course][54]  (freecodecamp.org)
 -   [CS50's Introduction to Computer Science][55]  (edx.org)
 
-### All the above
+### 以上皆是
 
 -   [How to Become a Full Stack Web Developer in 2020][56]  (colbyfayock.com)
 -   [Egghead.io][57]  (egghead.io)

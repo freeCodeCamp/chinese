@@ -5,13 +5,13 @@
 
 ![React 使用手册](https://cdn-media-1.freecodecamp.org/images/1*m5aPLXkrWJs7xKsfYViJEg.png)
 
-这份 React 使用手册遵循了 80/20 法则：花 20% 的时间学习 80% 主题相关的内容。 
+这份 React 使用手册遵循了 80/20 法则：花 20% 的时间学习 80% 与主题相关的内容。 
 
-在我看来，这种方法能够提供一份全面的概述。这部手册不会涵盖 React 相关的所有内容，但它会为你提供学习 React 和成为一名杰出的 React 开发者的必备基础。如果你认为这部手册还应该包含某些特定的内容，可以通过 Twitter [@flaviocopes](https://twitter.com/flaviocopes) 告诉我。
+在我看来，这种方法能够提供一份全面的概述。这份手册不会涵盖 React 相关的所有内容，但它提供了学习 React 和成为一名杰出的 React 开发者的必备基础。如果你认为这份手册还应该包含某些特定的内容，可以通过 Twitter [@flaviocopes](https://twitter.com/flaviocopes) 告诉我。
 
-希望这本书能够帮你达到目的：**学习 React 基础知识**。
+希望这份手册能够帮你达到目的：**学习 React 基础知识**。
 
-你可以通过 [reacthandbook.com](https://reacthandbook.com/) 获得PDF、ePub 和 Mobi 格式的电子书。
+你可以通过 [reacthandbook.com](https://reacthandbook.com/) 获得PDF、ePub 和 Mobi 格式的电子版手册。
 
 ### 手册索引
 
@@ -20,14 +20,14 @@
 [React 简介][3]  
 [如何使用 create-react-app][4]
 
-****SECTION 1****: MODERN JAVASCRIPT CORE CONCEPTS YOU NEED TO KNOW TO USE REACT
+****第 1 部分：****:  使用 React 必知的 JavaScript 核心概念
 
--   [Variables][5]
--   [Arrow functions][6]
--   [Rest and spread][7]
--   [Object and array destructuring][8]
--   [Template literals][9]
--   [Classes][10]
+-   [变量][5]
+-   [箭头函数][6]
+-   [剩余运算符和扩展运算符][7]
+-   [对象和数组的解构][8]
+-   [模板字符串][9]
+-   [类][10]
 -   [Callbacks][11]
 -   [Promises][12]
 -   [Async/Await][13]
@@ -100,9 +100,9 @@
 
 React 是一个 JavaScript 库，旨在简化可视化界面的开发。
 
-它由 Facebook 开发，于 2013 年发布，包括 Facebook, Instagram 在内的很多被广泛使用的应用程序都使用了 React。
+它由 Facebook 开发，于 2013 年发布，很多流行的应用程序，如Facebook, Instagram，都使用了 React。
 
-它的主要目标是通过将 UI 划分为组件集合，从而能够在任意时间点推断出组件界面和界面的状态。
+它的主要目标是通过将 UI 划分为组件集合，从而能够在任意时间点推断出组件的界面及界面的状态。
 
 #### React 为何如此风靡？
 
@@ -112,7 +112,7 @@ React 何以席卷了 web 前端开发领域呢？
 
 React 发布时，Ember.js 和 Angular 1.x 是最主流的框架，但这两个框架都对代码施加了诸多约束，导致迁移现有应用并不容易。
 
-React 则做到了易于已有项目的迁移，因为这也是 Facebook 的需求——将已有的代码库迁移到新框架。此外，这两个框架还由于过于深入造成很多麻烦，相比之下， React 只专注于 View 层，而非整个 MVC 框架。
+React 则做到了易于迁移已有项目，因为这也是 Facebook 的需求——将已有的代码库迁移到新框架。此外，上面提到的两个框架还由于过于深入造成很多麻烦，相比之下， React 只专注于 View 层，而非整个 MVC 框架。
 
 #### 完美的时机
 
@@ -143,11 +143,11 @@ React 本身是个非常小的 API，你基本上只用学习 4 个概念就能�
 
 React 是一个库，说 _下载_ 听起来可能会有点奇怪，也许 _配置_ 这个词会更贴切一些，关键是你能理解这是要做什么。
 
-配置 React 有许多不同的方法，以便在你的应用或网站上使用它。
+配置 React 有许多不同的方法，方便你在你的应用或网站上使用它。
 
-#### 在网页中直接加载 React
+#### 在网页中加载 React
 
-最简单的方法是直接在网页中添加 React 的 JavaScript 文件。当你的 React 应用只需要和单个页面上的元素进行互动，而不用管理导航问题时，这种方法比较适用。
+最简单的方法是直接在网页中添加 React 的 JavaScript 文件。这种方法适用于应用只需要和单个页面上的元素互动，而不用管理导航问题。
 
 在这个例子中，只需在 `body` 底部添加两个 `script` 标签。
 
@@ -170,9 +170,9 @@ React 是一个库，说 _下载_ 听起来可能会有点奇怪，也许 _配�
 
 > _请将版本号改为最新可用的 React 版本。_
 
-例子中我们加载了 React 和 React DOM。为什么需要添加两个库呢？这是因为 React 是 100% 独立于浏览器的，它可以在浏览器以外的环境里使用（比如搭配 React Native 在移动设备中使用）。因此，这里需要添加 React DOM 来操作浏览器。
+例子中我们加载了 React 和 React DOM。为什么需要添加两个库呢？这是因为 React 是 100% 独立于浏览器的，它也可以在浏览器以外的环境里使用（比如搭配 React Native 在移动设备中使用）。因此，需要添加 React DOM 来操作浏览器。
 
-在这些标签之后，你就可以加载其他使用 React 的 JavaScript 文件了，甚至可以通过 `script` 标签内联 JavaScript 代码。
+在这些标签之后，你就可以加载其他使用 React 的 JavaScript 文件了，或者可以通过 `script` 标签添加内联 JavaScript 代码。
 
 ```html
 <script src="app.js"></script>
@@ -181,19 +181,19 @@ React 是一个库，说 _下载_ 听起来可能会有点奇怪，也许 _配�
 
 ```
 
-使用 JSX 还需要额外的步骤：加载 Babel
+使用 JSX 还需要额外的步骤：加载 Babel，
 
 ```html
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 ```
 
-并且给 `script` 加上属性为 `text/babel` 的 MIME 类型：
+并且给 `script` 标签加上属性为 `text/babel` 的 MIME 类型：
 
 ```html
 <script src="app.js" type="text/babel"><;/script>
 ```
 
-现在你就可以在 `app.js` 文件中添加 JSX 代码了：
+现在你可以在 `app.js` 文件中添加 JSX 代码了：
 
 ```jsx
 const Button = () => {
@@ -208,13 +208,13 @@ const Button = () => {
 
 ### 如何使用 create-react-app
 
-`create-react-app` 是一个旨在帮你快速上手 React 的项目，它能够方便地实现多个页面的 React 应用。
+`create-react-app` 是一个旨在帮你快速上手 React 的项目，它能够满足多页面 React 应用的需求。
 
 你可以从使用 `npx` 开始。`npx` 是一种无需安装即可下载和执行 Node.js 命令的方法。`npx` 自带 `npm` （从 5.2 版本开始），如果你还没有下载 `npm` ，可以去 [nodejs.org](https://nodejs.org) 下载（`npm` 会和 Node 一起安装）。
 
 如果你不确定你的 npm 版本，可以通过执行 `npm -v` 来看看是否需要更新。
 
-> _提示： 如果你还不能熟练使用终端，可以看看我的[OSX 终端教程](https://flaviocopes.com/macos-terminal/)，它对于 Linux 同样适用。 - 很抱歉目前没有 Windows 教程，不过你可以向 Google 求助。_
+> _提示： 如果你还不能熟练地使用终端，可以看看我的[OSX 终端教程](https://flaviocopes.com/macos-terminal/)，它对于 Linux 同样适用。 - 很抱歉目前没有 Windows 教程，不过你可以向 Google 求助。_
 
 当你执行 `npx create-react-app <app-name>` 命令时， `npx` 会下载最新版本的 `create-react-app` ，运行 `create-react-app` ，然后将它从你的系统中删除。这样做的好处是，你的系统上永远不会有过时的版本，因为每次运行时，你都会获得最新版本。
 
@@ -232,7 +232,7 @@ npx create-react-app todolist
 
 `create-react-app` 会在你指定的文件夹内创建一个文件结构（这个例子中是 `todolist`），同时初始化一个 Git 仓库。
 
-此外，它还会在 `package.json` 文件中增加了一些命令，让你能够进入文件夹后，立马通过运行 `npm start` 命令来启动应用。
+此外，它还会在 `package.json` 文件中增加了一些命令，让你在进入文件夹后，能够通过运行 `npm start` 命令来立即启动应用。
 
 ![](https://cdn-media-1.freecodecamp.org/images/bIcUqq3FBoasmTjSSeYJ1LA4yMndxfNF12nu)
 
@@ -244,15 +244,15 @@ npx create-react-app todolist
 -   `npm test`: 通过 [Jest][60] 运行测试套件
 -   `npm eject`: 弹出 `create-react-app` 配置
 
-尽管 `create-react-app` 自动完成了很多操作，但如果你还想对项目有进一步的调整，可以通过弹出项目配置来实现。
+尽管 `create-react-app` 自动完成了很多操作，但如果你还想进一步调整项目，可以通过弹出项目配置来实现。
 
-毕竟 `create-react-app` 提供的是主流配置方案，只提供了有限的自定义选项，因此可能会出现无法满足你的项目的特有需求的情况。
+毕竟 `create-react-app` 提供的是主流配置方案，它只提供了有限的自定义选项，因此可能会出现无法满足你的项目的特殊需求的情况。
 
 当你弹出配置后，就无法自动更新配置了，但是你可以更灵活地配置 [Babel][61] 和 [Webpack][62]。
 
-弹出配置的操作是不可逆的。当你弹出设置后，应用目录中会出现 2 个新文件夹，分别是 `config` 和 `scripts`。它们包含了配置内容，你可以在里面修改配置。
+弹出配置的操作是不可逆的。当你弹出设置后，应用目录中会出现两个新文件夹，分别是 `config` 和 `scripts`。它们包含了配置内容，你可以在里面修改配置。
 
-> _如果你的 React 应用使用的是老版本的 React，可以通过在应用中添加 `console.log(React.version)` 来查看 React 的版本，接着运行 `yarn add [react@16.7][63]` 更新 React 的版本，yarn 会提醒你可更新的版本（选择最新的版本）。再运行 `yarn add [react-dom@16.7][64]` 更新 `react-dom`（将 16.7 替换成当前可用的最新版本号_
+> _如果你的 React 应用使用的是老版本的 React，可以通过在应用中添加 `console.log(React.version)` 来查看 React 的版本，接着运行 `yarn add [react@16.7][63]` 更新 React 的版本，yarn 会提醒你可更新的版本（选择最新的版本）。再运行 `yarn add [react-dom@16.7][64]` 更新 `react-dom`（将 16.7 替换成当前可用的最新版本号）_
 
 #### CodeSandbox
 
@@ -298,11 +298,11 @@ import { useState } from 'react'
 
 变量是指赋值给标识符的字面量，这样你就可以在程序中通过标识符来引用和使用字面量了。
 
-JavaScript 中的变量没有指定数据类型。给变量赋值为某种特定的字面量类型后，即使再重新指定这个变量为其他类型的字面量，也不会导致类型报错或其他问题。
+JavaScript 中的变量没有指定数据类型。给变量赋值为某种特定的字面量类型后，即使重新指定这个变量为其他类型的字面量，也不会导致类型报错或其他问题。
 
 这也是为什么 JavaScript 被认为是“无类型”语言。
 
-变量必须在使用前先声明。声明变量有 3 种方式：`var` , `let` , `const` 。这 3 种语法的使用方式也不尽相同。
+变量必须先声明再使用。有 3 种声明变量的语法：`var` , `let` , `const` 。这 3 种语法的使用方式不尽相同。
 
 #### 使用 `var` 声明变量
 
@@ -312,17 +312,17 @@ JavaScript 中的变量没有指定数据类型。给变量赋值为某种特定
 var a = 0
 ```
 
-如果你忘记使用 `var`，则会给一个未声明的变量赋值，结果会有所不同。
+如果你忘记使用 `var`，这样会给一个未声明的变量赋值，结果会有所不同。
 
-如果是在严格模式下，这样的用法会报错。在早期的环境中（或禁用严格模式的情况下），这样做会初始化一个全局变量，并给它赋值。
+如果是在严格模式下，这样的用法会报错。在早期的环境中（或禁用严格模式的情况下），这样会初始化一个全局变量，并给它赋值。
 
-如果声明变量时不给它赋值，那么这个变量的值会一直是 `undefined`，直到给它赋值。
+如果声明变量时不给它赋值，那么这个变量的值在赋值前一直是 `undefined`。
 
 ```jsx
 var a //typeof a === 'undefined'
 ```
 
-你可以多次声明变量，并将之前的声明覆盖掉：
+你可以对一个变量重复声明，这样会将之前的声明覆盖掉：
 
 ```jsx
 var a = 1
@@ -331,19 +331,19 @@ var a = 2
 
 你也可以在一个语句中一次声明多个变量：
 
-```js
-var a = 1, b = 2jsx
+```jsx
+var a = 1, b = 2
 ```
 
-**作用域**是指代码中可以访问到变量的部分。
+**作用域**是指可以访问到变量的代码部分。
 
-在函数外使用 `var` 声明的变量被赋值给全局对象，它拥有全局作用域，代码中的任何地方都可以访问到变量。在函数中使用 `var` 声明的变量被赋值给函数，它的作用域是函数内部，和函数的参数一样，只能在函数内部使用。
+在函数外使用 `var` 声明的变量会被赋值给全局对象，它拥有全局作用域，代码中的任何地方都可以访问到变量。在函数中使用 `var` 声明的变量被赋值给函数，它的作用域是函数内部，和函数的参数一样，只能在函数内部使用。
 
 函数中定义的变量如果和全局变量重名了，函数中的变量在函数中会替代全局变量。
 
 值得注意的是代码块（两个大括号之间）并不会定义新的作用域。只有定义函数的时候会创建新的作用域，因为 `var` 不会创建块作用域，只会创建函数作用域。
 
-函数中定义的变量在函数的任意位置都可以访问到，即使是在函数末尾定义的变量也可以在函数开头访问到，这是因为 JavaScript 在执行代码时会将 _所有变量移到顶部_ （这种现象叫做**变量提升**）。为了避免混淆，应该在函数开始时声明所有变量。
+函数中定义的变量在函数内的任意位置都可以访问到，即使是在函数末尾定义的变量也可以在函数开头访问到，这是因为 JavaScript 在执行代码时会将 _所有变量移到顶部_ （这种现象叫做**变量提升**）。为了避免混淆，应该在函数开始时声明所有变量。
 
 #### 使用 `let` 定义变量
 
@@ -351,13 +351,13 @@ var a = 1, b = 2jsx
 
 现在的 JavaScript 开发者倾向于选择只使用 `let` ，完全摒弃 `var`。
 
-> _如果 `let` 语法有些晦涩，那么就把 `let color = 'red'` 理解成_ let the color be red（让颜色变成红的）_,这样会就好理解了_
+> _如果 `let` 语法有些晦涩，那么把 `let color = 'red'` 理解成_ let the color be red（让颜色变成红的）_,这样会就好理解了_
 
 不同于 `var`，在函数外使用 `let` 定义变量并不会创建全局变量。
 
 #### 使用 `const` 定义变量
 
-使用 `var` 或 `let` 声明的变量可以再次声明，重新赋值，但是 `const` 声明的变量一旦初始化，它的值就不可以再更改了，不能再次赋值。
+使用 `var` 或 `let` 声明的变量可以重复声明、重新赋值，但是使用 `const` 声明的变量一旦初始化，它的值就不可以再更改了，不能再次对变量赋值。
 
 ```jsx
 const a = 'test'
@@ -515,7 +515,7 @@ const hey = 'hey'
 const arrayized = [...hey] // ['h', 'e', 'y']
 ```
 
-扩展运算符有非常方便的应用。其中的一个应用场景是可以将数组轻松转换成函数参数：
+该运算符在某些场景非常有用，其中的一个应用场景是可以将数组轻松转换成函数参数：
 
 ```jsx
 const f = (foo, bar) => {}
@@ -555,7 +555,7 @@ const { first, second, ...others } = {
 
 ```
 
-**扩展属性**允许通过组合在扩展运算符之后的对象属性来创建新的对象：
+**扩展属性**允许在创建新对象时，通过扩展运算符添加属性：
 
 ```jsx
 const items = { first, second, ...others }
@@ -574,6 +574,7 @@ const person = {
   age: 54 //made up
 }
 
+const { firstName: name, age } = person //name: Tom, age: 54
 ```
 
 可以提取 `name` 和 `age` 的值。
@@ -613,7 +614,7 @@ const a_string = something
 
 在 ES6 之前，如果想要创建一个多于两行的字符串，你需要在一行代码的末尾加上 `\` 。
 
-```
+```jsx
 const string =
   'first part \
   second part'
@@ -621,18 +622,18 @@ const string =
 
 这样虽然是通过两行代码创建的字符串，但渲染的结果仍是一行：
 
-`` `first part second part` ``
+`first part second part`
 
 要创建多行显示的字符串，你需要在每行末尾加上 `\n`，像这样：
 
-```
+```jsx
 const string =
   'first line\n second line'
 ```
 
 或是：
 
-```
+```jsx
 const string = 'first line\n' + 'second line'
 ```
 
@@ -640,18 +641,18 @@ const string = 'first line\n' + 'second line'
 
 一旦使用倒引号开始创建模板字符串，在需要新的一行时，你只需要敲回车就行，不需要添加其他特殊字符，字符串会按照原样渲染：
 
-```
-const string = Hey
+```jsx
+const string = `Hey
 this
 string
-is awesome!
+is awesome!`
 ```
 
 模板字符串中，空白符都会生效，因此这样输入字符串：
 
-```
-const string = First
-                Second
+```jsx
+const string = `First
+                Second`
 ```
 
 渲染的结果会如下：
@@ -663,9 +664,10 @@ First
 
 想要避免这个问题有个简单的方法，在模板字符串的结束倒引号后面加上 `trim()` 方法，它会消除第一个字符前的空白符：
 
-```
-const string = First
-Second.trim()
+```jsx
+const string = `
+First
+Second`.trim()
 ```
 
 #### 插入表达式
@@ -674,21 +676,21 @@ Second.trim()
 
 你可以通过 `${...}` 语法来实现：
 
-```
+```jsx
 const myVariable = 'test'
 const string = `something ${myVariable}` //something test
 ```
 
 在 `${}` 中可以添加任何内容，包括表达式：
 
-```
+```jsx
 const string = `something ${1 + 2 + 3}`
 const string2 = `something ${foo() ? 'x' : 'y'}`
 ```
 
 ### 类
 
-2015 年， ECMAScript 6 (ES6) 标准引入了类。
+2015 年，ECMAScript 6 (ES6) 标准引入了类。
 
 JavaScript 通过一种不常见的方式来实现继承：原型继承。在我看来，[原型继承][68]是很好的方法，但是和其他流行的基于类的编程语言实现继承的方式不太一样。
 
@@ -724,7 +726,7 @@ flavio.hello()
 
 #### 类的继承
 
-一个类可以扩展另一个类，并且使用这个类初始化的对象将继承两个类的所有方法。
+一个类可以扩展另一个类，并且使用这个类初始化的对象将继承两个类的全部方法。
 
 如果继承的类与继承结构中更高级别的类拥有相同名字的方法，则级别上更接近这个类的方法生效：
 
@@ -3210,7 +3212,7 @@ app.listen(PORT, () => {
 ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
-``call  `[ReactDOM.hydrate()][92]`, which is the same but has the additional ability to attach event listeners to existing markup once React loads:``
+而是调用 `[ReactDOM.hydrate()][92]` 方法。相较于 `ReactDOM.render()`，它还有一些额外的功能，会在 React 加载后立刻把事件监听器添加到现有的标记上。
 
 ```
 ReactDOM.hydrate(<App />, document.getElementById('root'))
@@ -4022,15 +4024,15 @@ ReactDOM.render(<App />, document.getElementById('app'))
 
 也可以在 Codepen 上查看[https://codepen.io/flaviocopes/pen/oJLyeY][102]
 
-### `SECTION 5: STYLING`
+### 第 5 部分：样式
 
-### `CSS in React`
+### React 中的 CSS
 
-`Using React you have various ways to add styling to your components.`
+使用 React 时，你可以通过多种方法给组件添加样式。
 
-#### `Using classes and CSS`
+#### 使用 classes 和 CSS 
 
-`The first and most simple is to use classes, and use a normal CSS file to target those classes:`
+最简单直接的方式就是使用 classes，并使用普通的 CSS 文件来定义 class 的样式：
 
 ```
 const Button = () => {
@@ -4041,17 +4043,17 @@ const Button = () => {
 }
 ```
 
-`You can import the stylesheet using an import statement, like this:`
+你可以使用如下方式引入样式文件：
 
 ```
 import './style.css'
 ```
 
-`and  [Webpack][103]  will take care of adding the CSS property to the bundle.`
+[Webpack][103]会在打包时添加 CSS 属性。
 
-#### `Using the style attribute`
+#### 使用 style 属性
 
-``A second method is to use the  `style`  attribute attached to a JSX element. Using this approach you don't need a separate CSS file.``
+第二种方式是给 JSX 元素添加 `style` 属性，这样就不需要单独的 CSS 文件了。
 
 ```
 const Button = () => {
@@ -4059,7 +4061,7 @@ const Button = () => {
 }
 ```
 
-``CSS is defined in a slightly different way now. First, notice the double curly brackets: it’s because  `style`  accepts an object. We pass in a JavaScript object, which is defined in curly braces. We could also do this:``
+CSS 的定义略有不同。首先，由于 `style` 属性接受的值为对象，因此需要使用双括号。我们也可以通过括号先定义一个 JavaScript 对象，再给 `style`，就像这样：
 
 ```
 const buttonStyle = { backgroundColor: 'yellow' }
@@ -4068,25 +4070,25 @@ const Button = () => {
 }
 ```
 
-``When using  `create-react-app`, those styles are autoprefixed by default thanks to its use of  [Autoprefixer][104].``
+当使用 `create-react-app` 时，[Autoprefixer][104]会自动给样式加上前缀。
 
-`Also, the style now is camelCased instead of using dashes. Every time a CSS property has a dash, remove it and start the next word capitalized.`
+此外，样式属性需要使用驼峰命名，而不是破折号。当 CSS 属性中含有破折号时，需要去掉破折号，并将下一个单词的首字母替换成大写。
 
-`Styles have the benefit of being local to the component, and they cannot leak to other components in other parts of the app, something that using classes and an external CSS file can’t provide.`
+这样的优点是样式在组件本地，它们不会泄露到应用的其他组件中，这是使用 classes 和外部 CSS 文件无法提供的。
 
-#### `Using CSS Modules`
+#### 使用 CSS 模块
 
-`**CSS Modules**  seem to be a perfect spot in the middle: you use classes, but CSS is scoped to the component, which means that any styling you add cannot be applied to other components without your permission. And yet your styles are defined in a separate CSS file, which is easier to maintain than CSS in JavaScript (and you can use your good old CSS property names).`
+**CSS 模块**似乎是一个中间的完美选择：你使用 classes，但是 CSS 仅限于组件内，也就是说，样式不会在你不允许的情况下应用到其他组件中。但样式是通过单独的 CSS 文件定义，比通过 JavaScript 维护更方便（你还可以使用 CSS 原来的属性名）。
 
-``Start by creating a CSS file that ends with  `.module.css`, for example  `Button.module.css`. A great choice is to give it the same name as the component you are going to style``
+创建 CSS 模块的方式是创建一个以 `.module.css` 命名结尾的 CSS 文件，如 `Button.module.css`。用即将应用这些样式的组件的名字命名 CSS 文件是比较好的方式。
 
-`Add your CSS here, then import it inside the component file you want to style:`
+在需要应用这些样式的组件内引入样式文件：
 
 ```
 import style from './Button.module.css'
 ```
 
-`now you can use it in your JSX:`
+也可以在 JSX 中使用：
 
 ```
 const Button = () => {
@@ -4094,107 +4096,113 @@ const Button = () => {
 }
 ```
 
-`That’s it! In the resulting markup, React will generate a specific, unique class for each rendered component, and assign the CSS to that class, so that the CSS is not affecting other markup.`
+在生成的标记中，React 会为每一个渲染的组件生成一个独一无二的 class，并将 CSS 分配给这个 class，以使 CSS 不会影响其他标记。
 
-### `SASS in React`
+### 在 React 中使用 SASS
 
-``When you build a React application using  `[create-react-app][105]`, you have many options at your disposal when it comes to styling.``
+当你使用 `[create-react-app][105]` 搭建 React 应用时，在样式方面，你有很多选择。
 
-> ``_Of course, if not using  `create-react-app`, you have all the choices in the world, but we limit the discussion to the  `create-react-app`-provided options._``
+> _当然，如果不使用 `create-react-app`，你将拥有所有的选择，但我们将讨论限制在 `create-react-app` 提供的选择上。_
 
-`You can style using plain classes and CSS files, using the style attribute or CSS Modules, to start with.`
+你可以通过 style 属性或 CSS 模块，使用普通的 class 或 CSS 文件来定义样式。
 
-`SASS/SCSS is a very popular option, a much loved one by many developers.`
+SASS/SCSS 是非常流行且受开发者喜爱的选择。
 
-``You can use it without any configuration at all, starting with  `create-react-app`  2.``
+使用 `create-react-app` 2，你可以不做任何配置就开始使用。
 
-``All you need is a  `.sass`  or  `.scss`  file, and you just import it in a component:``
+你只需要在组件中引入 `.sass` 或 `.scss` 文件：
 
 ```
 import './styles.scss'
 ```
 
-`You can see an example of it working at  [https://codesandbox.io/s/18qq31rp3][106].`
+你可以在这里：[https://codesandbox.io/s/18qq31rp3][106] 查看一个例子。
 
-### `Styled Components`
+### 样式化的组件
 
-`Styled Components are one of the new ways to use CSS in modern JavaScript. It is the meant to be a successor of CSS Modules, a way to write CSS that’s scoped to a single component, and not leak to any other element in the page`
+样式化的组件是现代 JavaScript 中使用 CSS 的新方法之一。它的目的是成为 CSS 模块的继任者，通过它写样式时，样式范围仅限于单个组件，而不会泄漏到页面的其他元素中。
 
-#### `A brief history`
+#### 历史概要
 
-`Once upon a time, the Web was really simple and CSS didn’t even exist. We laid out pages using  **tables** and frames. Good times.`
+从前，网络真的非常简单，CSS 甚至都不存在。我们通过**表格**和框架布置页面。真是好时光。
 
-`Then  **CSS**  came to life, and after some time it became clear that frameworks could greatly help especially in building grids and layouts, Bootstrap and Foundation playing a big part in this.`
+接着，**CSS**出现了，人们逐渐意识到，框架在搭建网格和布局方面能够起到很大的积极作用，Bootstrap 和 Foundation 在其中起到很大的作用。
 
-`Preprocessors like  **SASS**  and others helped a lot to slow down the adoption of frameworks, and to better organize the code, conventions like  **BEM**  and  **SMACSS**  grew in use, especially within teams.`
 
-`Conventions are not a solution to everything, and they are complex to remember, so in the last few years with the increasing adoption of  [JavaScript][107]  and build processes in every frontend project, CSS found its way into JavaScript (**CSS-in-JS**).`
+诸如 **SASS** 等预处理器极大地减缓了框架应用的速度，并更好地组织代码，尤其在团队内部，形成了如 **BEM** 和 **SMACSS** 等约定。
 
-`New tools explored new ways of doing CSS-in-JS and a few succeeded with increasing popularity:`
+约定并不是万能解药，它们过于复杂，难以记忆，因此在过去几年中，随着 [JavaScript][107] 的采用和前端项目的搭建流程的增加，CSS 逐渐找到自己在 JavaScript 中的位置（**CSS-in-JS**）。
+
+新工具在探索实现 CSS-in-JS 的新方式，其中一些变得流行起来：
 
 -   `React Style`
 -   `jsxstyle`
 -   `Radium`
 
-`and more.`
+还有其他方式。
 
-#### `Introducing Styled Components`
+#### 介绍样式化的组件
 
-`One of the most popular of these tools is  **Styled Components**.`
+这些工具中最流行的就是 **样式化的组件**。
 
-`It is the meant to be a successor to  **CSS Modules**, a way to write CSS that’s scoped to a single component, and not leak to any other element in the page.`
+它的目的是成为 **CSS 模块** 的继任者，使用它写样式时，样式范围仅限于单个组件，而不会泄漏到页面的其他元素中。
 
-`(more on CSS modules  [here][108]  and  [here][109])`
+可以通过 [这里][108] 和 [这里][109] 了解更多 CSS 模块的内容。
 
-`Styled Components allow you to write plain CSS in your components without worrying about class name collisions.`
+样式化的组件允许你在组件中写 CSS，不用担心类名冲突。
 
-#### `Installation`
+#### 安装
 
-`Simply install styled-components using  [npm][110]  or  [yarn][111]:`
+使用 [npm][110] 或 [yarn][111] 来安装 styled-components：
 
 ```
 npm install styled-components
 yarn add styled-components
 ```
 
-`That’s it! Now all you have to do is to add this import:`
+这样就好了！现在你可以将它引入了：
 
 ```
 import styled from 'styled-components'
 ```
 
-#### `Your first styled component`
+#### 你的第一个样式化的组件
 
-``With the  `styled`  object imported, you can now start creating Styled Components. Here's the first one:``
+通过引入样式对象，你就可以开始创建样式化组件了。这是第一个例子：
 
 ```
-const Button = styled.buttonfont-size: 1.5em;
+const Button = styled.button`
+  font-size: 1.5em;
   background-color: black;
   color: white;
+`
 ```
 
-`` `Button`  is now a React Component in all its greatness.``
+`Button` 如今是一个 React 组件。
 
-``We created it using a function of the styled object, called  `button`  in this case, and passing some CSS properties in a  [template literal][112].``
+我们使用样式对象的函数，在这个例子中即 `button`来创建组件，并在[模板字符串][112]中传入 CSS 属性。
 
-`Now this component can be rendered in our container using the normal React syntax:`
+现在这个组件可以通过普通的 React 语法在容器中渲染：
 
 ```
 render(<Button />)
 ```
 
-``Styled Components offer other functions you can use to create other components, not just  `button`, like  `section`,  `h1`,  `input`  and many others.``
+不仅限于 `button`，样式化组件还提供了其他创建组件的方法，如 `section`、 `h1`、 `input` 等等。
 
-`The syntax used, with the backtick, might be weird at first, but it’s called  [Tagged Templates][113], it’s plain JavaScript and it’s a way to pass an argument to the function.`
+刚开始使用反引号语法会有些奇怪，它们被称为 [标签模板 Tagged Templates][113]，是一种纯 JavaScript，是将参数传递给函数的一种方式。
 
-#### `Using props to customize components`
+#### 通过属性值自定义组件
 
-`When you pass some props to a Styled Component, it will pass them down to the  [DOM][114]node mounted.`
+当你给样式化组件传属性值时，这些属性值会传递给已挂载的[节点][114].
 
-``For example here’s how we pass the  `placeholder`  and  `type`  props to an  `input`component:``
+在下面的例子里，我们把 `placeholder` 和 `type` 属性传给 `input` 组件：
 
 ```
-const Input = styled.input//...
+const Input = styled.input`
+//...
+`
+
 render(
   <div>
     <Input placeholder="..." type="text" />
@@ -4202,13 +4210,16 @@ render(
 )
 ```
 
-`This will do just what you think, inserting those props as HTML attributes.`
+你只用把属性值像 HTML 属性一样传进去。
 
-`Props instead of just being blindly passed down to the  [DOM][115]  can also be used to customize a component based on the prop value. Here’s an example:`
+除了将值直接传给 [DOM][115]，属性还可以基于属性的值来自定义组件。就像下面的例子：
 
 ```
-const Button = styled.buttonbackground: ${props =&gt; (props.primary ? 'black' : 'white')};
-  color: ${props =&gt; (props.primary ? 'white' : 'black')};
+const Button = styled.button`
+  background: ${props => (props.primary ? 'black' : 'white')};
+  color: ${props => (props.primary ? 'white' : 'black')};
+`
+
 render(
   <div>
     <Button>A normal button</Button>
@@ -4218,16 +4229,22 @@ render(
 )
 ```
 
-``Setting the  `primary`  prop changes the color of the button.``
+设置 `primary` 属性的值可以改变按钮的颜色。
 
-#### `Extending an existing Styled Component`
+#### 扩展现有的样式化组件
 
-``If you have one component and you want to create a similar one, just styled slightly differently, you can use  `extend`:``
+当你想基于现有组件创建一个只有些许变化的组件时，你可以通过 `extend` 来创建：
 
 ```
-const Button = styled.buttoncolor: black;
+const Button = styled.button`
+  color: black;
   //...
-const WhiteButton = Button.extendcolor: white;
+`
+
+const WhiteButton = Button.extend`
+  color: white;
+`
+
 render(
   <div>
     <Button>A black button, like all buttons</Button>
@@ -4236,39 +4253,39 @@ render(
 )
 ```
 
-#### `It’s Regular CSS`
+#### 常规 CSS
 
-`In Styled Components, you can use the CSS you already know and love. It’s just plain CSS. It is not pseudo CSS nor inline CSS with its limitations.`
+你可以用你熟悉的 CSS 方式定义样式化组件的样式，而不需要用伪 CSS 或者内联样式。
 
-`You can use media queries,  [nesting][116]  and anything else you might need.`
+无论是媒体查询，[嵌套][116]还是任何其他样式，都可以在样式化组件中使用。
 
-#### `Using Vendor Prefixes`
+#### 浏览器引擎前缀
 
-`Styled Components automatically add all the vendor prefixes needed, so you don’t need to worry about this problem.`
+样式化组件会自动给样式添加浏览器引擎前缀，因此你不用担心样式在浏览器里是否生效的问题。
 
-### `SECTION 6: TOOLING`
+### 第 6 部分：工具
 
-### `Babel`
+### Babel
 
-`Babel is an awesome tool, and it’s been around for quite some time, but nowadays almost every JavaScript developer relies on it. This will continue, because Babel is now indispensable and has solved a big problem for everyone.`
+Babel 是个非常棒的工具。它已经存在一段时间了，而现在几乎每个 JavaScript 开发者都依赖它。这种情况会继续下去，因为 Babel 已是必不可少的工具，它帮每个人都解决了大问题。
 
-`Which problem?`
+什么问题呢？
 
-`The problem that every Web Developer has surely had: a feature of JavaScript is available in the latest release of a browser, but not in the older versions. Or maybe Chrome or Firefox implement it, but Safari iOS and Edge do not.`
+这是每个网页开发者都会面临的问题：最新版的浏览器支持的 JavaScript 特性在老版本的浏览器中不被支持；抑或是 Chrome 或 Firefox 支持的功能，Safari 或 Edge 并未支持。
 
-`For example, ES6 introduced the  **arrow function**:`
+比如，ES 6 引入了 **箭头函数**“
 
 ```
 [1, 2, 3].map((n) => n + 1)
 ```
 
-`Which is now supported by all modern browsers. IE11 does not support it, nor Opera Mini (How do I know? By checking the  [ES6 Compatibility Table][117]).`
+几乎所有的现代浏览器都支持这一特性，但 IE11 和 Opera Mini 并未支持（我如何知道的呢？可以查看 [ES6 兼容性表][117]）。
 
-`So how should you deal with this problem? Should you move on and leave those customers with older/incompatible browsers behind, or should you write older JavaScript code to make all your users happy?`
+要怎么处理这个问题呢？是不理会老版本/不兼容版本浏览器，把问题留给用户，还是为了满足用户而写兼容老版本的 JavaScript 代码呢？
 
-`Enter Babel. Babel is a  **compiler**: it takes code written in one standard, and it transpiles it to code written into another standard.`
+通过 Babel 解决。Babel 是一个 **编译器**：它接受以一种标准写的代码，并将它编译成另一种标准的代码。
 
-`You can configure Babel to transpile modern ES2017 JavaScript into JavaScript ES5 syntax:`
+你可以通过配置 Babel 来将现代的 ES2017 JavaScript 编译成 ES5 的语法：
 
 ```
 [1, 2, 3].map(function(n) {
@@ -4276,39 +4293,39 @@ render(
 })
 ```
 
-`This must happen at build time, so you must setup a workflow that handles this for you.  [Webpack][118]  is a common solution.`
+这需要在构建时处理，因此你需要设置一个工作流程来替你完成。[Webpack][118]就是一个通用方式。
 
-`(P.S. if all this  _ES_  thing sounds confusing to you, see more about ES versions  [in the ECMAScript guide][119])`
+（P.S. 如果这些 _ES_ 标准让你感到疑惑，可以通过[ECMAScript 指南][119]了解更多 ES 版本)
 
-#### `Installing Babel`
+#### 下载 Babel
 
-`Babel is easily installed using  [npm][120], locally in a project:`
+Babel 可以方便地通过 [npm][120]下载到本地项目中：
 
 ```
 npm install --save-dev @babel/core @babel/cli
 ```
 
-``Since npm now comes with  `[npx][121]`, locally installed CLI packages can run by typing the command in the project folder:``
+由于npm现在带有 [npx] [121]，因此可以通过在项目文件夹中输入命令来运行本地安装的CLI软件包：
 
-`So we can run Babel by just running`
+可以这样运行 Babel
 
 ```
 npx babel script.js
 ```
 
-#### `An example Babel configuration`
+#### Babel 配置的例子
 
-`Babel out of the box does not do anything useful, you need to configure it and add plugins.`
+初始的 Babel 并不会做任何有用的事情，你需要对它进行配置，并添加插件。
 
-> `[_Here is a list of Babel plugins_][122]`
+> [_这是一个 Babel 插件列表_][122]
 
-`To solve the problem we talked about in the introduction (using arrow functions in every browser), we can run`
+要解决前面提到的问题（在所有浏览器中运行箭头函数），我们可以运行下面的命令
 
 ```
 npm install --save-dev     @babel/plugin-transform-es2015-arrow-functions
 ```
 
-``to download the package in the  `node_modules`  folder of our app, then we need to add``
+将包下载到应用的 `node_modules` 文件夹中之后，我们需要添加插件到应用根目录下的 `.babelrc` 文件中。
 
 ```
 {
@@ -4316,7 +4333,7 @@ npm install --save-dev     @babel/plugin-transform-es2015-arrow-functions
 }
 ```
 
-``to the  `.babelrc`  file present in the application root folder. If you don't have that file already, you just create a blank file, and put that content into it.``
+如果文件夹中还没有这个文件，你可以创建一个空白文件，并添加内容到文件中。
 
 > `_TIP: If you have never seen a dot file (a file starting with a dot) it might be odd at first because that file might not appear in your file manager, as it’s a hidden file._`
 
@@ -4353,9 +4370,11 @@ var bob = {
   _friends: ["Sally", "Tom"],
   printFriends() {
     var _this = this;
-<span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(0, 119, 170);">this</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>_friends<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(221, 74, 104);">forEach</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(0, 119, 170);">function</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token parameter" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;">f</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span>
-  <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(0, 119, 170);">return</span> console<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(221, 74, 104);">log</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>_this<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>_name <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(154, 110, 58);">+</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">" knows "</span> <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(154, 110, 58);">+</span> f<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
-<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>  }
+    
+    this._friends.forEach(function (f) {
+      return console.log(_this._name + " knows " + f);
+    });
+  }
 };
 console.log(bob.printFriends());
 ```

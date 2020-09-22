@@ -225,8 +225,8 @@ import LearningOptions from "./components/LearningOptions/LearningOptions";
 
 我们定义的控件会接收到机器人的各种属性：
 
-- `actionProvider`  \- 将 `actionProvider` 的值赋值给控件，以执行动作
-- `setState`  \- 将 `setState` 函数值赋值给控件，以操作 state
+- `actionProvider`  \- 将 `actionProvider` 添加到控件，以执行动作
+- `setState`  \- 将 `setState` 添加到控件，以操作 state
 - `scrollIntoView`  \- 滑动到聊天框底部，在需要调整视图时使用这个函数
 - `props`  \- 给控件定义的 props 将通过 `configProps` 传递给控件
 - `state`  \- 通过 `mapStateToProps` 属性将自定义 state 传递给控件
@@ -303,7 +303,7 @@ const config = {
 
 ```
 
-So far so good, but we want to dynamically pass in props to this component so that we can reuse it for the other options as well. This means that we need to add another property to the widget object in the config:
+如果我们想动态给这个组件传递参数，以便对其他选项复用，那就需要给控件添加另一个属性：
 
 ```jsx
 import React from "react";
@@ -344,11 +344,11 @@ const config = {
 
 ```
 
-Now these props will be passed to the  `LinkList`  component as props.
+现在，这些 props 会作为参数传递给 `LinkList` 组件。
 
-Now we need to do two more things.
+我们再做两件事情。
 
-1.  We need to add a method to the  `actionProvider`
+- 给 `actionProvider` 添加一个方法
 
 ```jsx
 class ActionProvider {
@@ -374,7 +374,7 @@ this.setState((prevState) =&gt; ({
 
 ```
 
-2\. We need to add this method as the handler in the  `LearningOptions`  component:
+- 把这个方法作为 `LearningOptions` 组件 handler
 
 ```jsx
 import React from "react";
@@ -405,13 +405,13 @@ const LearningOptions = (props) => {
 
 ```
 
-Alright! That was quite a lot of information. But if we now try to click the JavaScript option in the chatbot, we get this result:
+好啦，信息量比较大。现在如果我们点击聊天机器人的 JavaScript 选项，会出现：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-22-at-17.35.27.png)
 
-Perfect. But we don't want to stop there, this is a chatbot after all. We want to be able to respond to users who want to use the input field as well. So we need to make a new rule in  `MessageParser`.
+完美！再进一步，如果用户输入信息，机器人也应该响应。所以我们需要给 `MessageParser` 创建新规则。
 
-Let's update our  `MessageParser.js`  file to look like this:
+更新 `MessageParser.js` 文件：
 
 ```jsx
 class MessageParser {
@@ -431,23 +431,15 @@ if (lowerCaseMessage.includes("javascript")) {
 
 ```
 
-Now try typing "javascript" into the input field and sending the message. You should get the same list in response from the chatbot.
+在输入框键入 “javaScript”，机器人会回复同样的清单。完成啦！
 
-So there you have it. We've set up a chatbot that renders a list of possible options and responds to user input.
+欢迎在 GitHub 访问[代码和文档][10].
 
-For now, we've only set up the bot to handle when someone clicks or types in JavaScript, but you can try to expand the other options on your own.  [Here's a link to the repository][9].
+## 结语
 
-All the code is on GitHub, so feel free to dive into  [the react-chatbot-kit code or docs][10].
+创建项目很有趣，也是一个帮助你拓展技能的很棒的方式。你完全可以动动脑筋，在这个项目基础上再开发别的，比如一个机器人通过一些简单的问题找到网店里最适合的产品，或者是一个帮公司回复顾客常见问题的机器人。你可以尽量实践你的新想法。也欢迎你 pull request，帮我完善这个项目。
 
-## Conclusion
-
-Building things is fun, and a great way to expand your skillset. There are no limits to where you could take this next.
-
-Perhaps you could make a chatbot that finds the ideal product in webshop based on some simple questions (utilising routing in the app), or maybe you can make one for your company taking care of the most common customer inquiries.
-
-Feel free to expand, come up with new ideas, and test them out. And if you see something that can be improved, send a pull request.
-
-If you want to improve as a developer, I encourage you to keep building. It truly is the only path forward. If you enjoyed this article, and would like to know when I post more content, you can  [follow me on Twitter][11].
+我觉得持续创建项目真的是开发者提升自己的唯一方式，建议你现在就动起来！
 
 [1]: https://www.npmjs.com/package/react-chatbot-kit
 [2]: https://fredrikoseberg.github.io/react-chatbot-kit-docs/

@@ -1,6 +1,6 @@
 > * 原文地址：[How to Build a Chatbot with React React 项目实践——创建一个聊天机器人](https://www.freecodecamp.org/news/how-to-build-a-chatbot-with-react/)
 > * 原文作者：Fredrik Strand Oseberg
-> * 译者：
+> * 译者：Chengjun.L
 > * 校对者：
 
 ![How to Build a Chatbot with React](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/wooden-robot-6069-1.jpg)

@@ -37,24 +37,19 @@ import Chatbot from 'react-chatbot-kit'
 
 ```
 
-现在开发服务器是这样的：
+现在你的开发服务器是这样的：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-10-at-16.03.51.png)
 
-The chatbot takes three props that must be included for it to work. First, it needs a config which must include an  `initialMessages`  property with chatbot message objects.
+聊天机器人要正常工作，需要接收三个 props。首先，需要具有 `initialMessages` 属性，包含聊天信息对象。然后，需要有 `MessageParser` class 用于解析，还有 `ActionProvider` class 基于解析结果执行我们需要它执行的动作。
 
+稍后我们进一步讲解这个。现在，[在这里获取代码][5]
 
-Secondly, it needs a  `MessageParser`  class that must implement a parse method.
+- 把 `MessageParser` 代码放到 `MessageParser.js` 文件
+- 把 `ActionProvider` 代码放到 `ActionProvider.js` 文件
+- 把 config 代码放到 `config.js` 文件
 
-Thirdly, it needs an  `ActionProvider`  class which will implement actions that we want to take based on parsing the message.
-
-We'll go deeper into this later. For now,  [go here to get the boilerplate code to get started.][5]
-
--   Put the  `MessageParser`  code in a file called  `MessageParser.js`
--   Put the  `ActionProvider`  code in a file called  `ActionProvider.js`
--   Put the config code in a file called  `config.js`
-
-When that's done, go back to your  `App.js`  file and add this code:
+现在返回到 `App.js` 文件，添加以下代码：
 
 ```jsx
 import React from 'react';
@@ -66,21 +61,21 @@ import config from './config';
 
 ```
 
-You should now see this on localhost:3000:
+localhost:3000 现在应该是这样显示：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-10-at-16.16.57.png)
 
-Sweet. Now we have the chatbot rendered to the screen and we can write in the input field and submit it to send a message to the chat. But when we try that, nothing happens.
+很棒！我们已经渲染了聊天机器人，可以输入和提交一些信息了。试试看，怎么没有显示什么呢？
 
-## Understanding how the chatbot works
+## 理解聊天机器人是怎么工作的
 
-Here we need to take a pit stop and take a look at how the  `MessageParser`  and  `ActionProvider`  interacts to make our bot take action.
+我们暂停一下，看看 `MessageParser` 和 `ActionProvider` 是怎么配合让聊天机器人执行动作的。
 
-When the bot is initialized, the  `initialMessages`  property from the config is put into the chatbot's internal state in a property called  `messages`, which is used to render messages to the screen.
+机器人初始化的时候，内部 state 的 `messages` 属性获取 `initialMessages` 属性值, 将信息渲染到屏幕。
 
-Moreover, when we write and push the submit button in the chat field, our  `MessageParser`  (which we passed as props to the chatbot) is calling its  `parse`  method. This is why this method must be implemented.
+接着，当我们在聊天框输入信息，按下 submit 提交键时，`MessageParser`（作为 props 传递给机器人)调用 `parse` 方法。
 
-Let's take a closer look at the  `MessageParser`  starter code:
+我们进一步看看 `MessageParser` 的代码：
 
 ```jsx
 class MessageParser {
@@ -90,9 +85,9 @@ class MessageParser {
 
 ```
 
-If we look closely, this method is constructed with an  `actionProvider`. This is the same  `ActionProvider`  class that we pass as props to the chatbot. This means that we control two things - how the message is parsed, and what action to take based on said parsing.
+代码中包含 `actionProvider`，这跟我们传递给聊天机器人的 props `ActionProvider` 是一样的。我们通过这个代码解析信息，并告诉机器人执行什么动作。
 
-Let's use this information to create a simple chatbot response. First alter the  `MessageParser`  like this:
+比如，我们创建一个简单的回应。首先，将 `MessageParser` 改为：
 
 ```
 class MessageParser {
@@ -108,9 +103,10 @@ if (lowerCaseMessage.includes("hello")) {
 
 ```
 
-Now our  `MessageParser`  is receiving the user message, checking if it includes the word "hello". If it does, it calls the  `greet`  method on the  `actionProvider`.
+`MessageParser` 接收到用户的信息，检查是否包含 “hello”。如果包含，则调用 `actionProvider` 的 `greet` 方法。
 
-Right now, this would crash, because we haven't implemented the  `greet`  method. Let's do that next. Head over to  `ActionProvider.js`:
+不过现在还行不通，因为我们还没有执行 `greet` 方法。稍后再处理这个。先处理 `ActionProvider.js` 文件如下：
+
 
 ```
 class ActionProvider {

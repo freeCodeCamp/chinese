@@ -155,7 +155,7 @@ const config = {
 
 ```
 
-我们增加了一些属性，修改初始信息，特别是给机器人取了个名字，更改了 `messagebox` 和 `chatbutton` 组件的颜色。
+我们增加了一些属性，修改了初始信息，特别是给机器人取了个名字，更改了 `messagebox` 和 `chatbutton` 组件的颜色。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-22-at-09.44.33.png)
 
@@ -198,7 +198,7 @@ export default LearningOptions;
 
 ```
 
-组件有了，接下来Now that we have our component, we need to register it with our chatbot. Head over to  `config.js`  and add the following:
+然后在机器人代码中使用组件。对 `config.js` 文件作如下操作：
 
 ```jsx
 import React from "react";
@@ -207,31 +207,31 @@ import LearningOptions from "./components/LearningOptions/LearningOptions";
 
 ```
 
-### Understanding widgets
+### 理解控件
 
-Alright. Let's take a breather and explore what we've done.
+小结一下：
 
-1.  We created the  `LearningOptions`  component.
-2.  We registered the component under  `widgets`  in our config.
-3.  We gave the  `createChatbotMessage`  function an options object specifying which widget to render with this message.
+- 我们创建了 `LearningOptions` 组件
+- 在 config 的  `widgets` 下使用组件
+- 给 `createChatbotMessage` 函数一个选项对象，说明需要渲染哪个控件和信息
 
-The result:
+结果：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-22-at-10.41.49.png)
 
-Fantastic, but why did we need to register our component in the config as a widget function?
+很棒！但是，为什么要在 config 中以控件函数的形式引入组件呢？
 
-By giving it a function, we control when we perform the invocation. This allows us room to decorate the widget with important properties inside the chatbot.
+通过将其设置为函数，我们可以在调用时以聊天机器人的重要属性来装饰控件。
 
-The widget that we define will receive a number of properties from the chatbot (some of which can be controlled by config properties):
+我们定义的控件会接收到机器人的各种属性：
 
-1.  `actionProvider`  \- we give the  `actionProvider`  to the widget in order to execute actions if we need to.
-2.  `setState`  \- we give the top level chatbot  `setState`  function to the widget in case we need to manipulate state.
-3.  `scrollIntoView`  \- utility function to scroll to the bottom of the chat window, should we need to adjust the view.
-4.  `props`  \- if we define any props in the widget config, those will be passed to the widget under the property name  `configProps`.
-5.  `state`  \- if we define custom state in the config, we can map it to the widget by using the  `mapStateToProps`  property
+- `actionProvider`  \- 将 `actionProvider` 的值赋值给控件，以执行动作
+- `setState`  \- 将 `setState` 函数值赋值给控件，以操作 state
+- `scrollIntoView`  \- 滑动到聊天框底部，在需要调整视图时使用这个函数
+- `props`  \- 给控件定义的 props 将通过 `configProps` 传递给控件
+- `state`  \- 通过 `mapStateToProps` 属性将自定义 state 传递给控件
 
-If you recall, we defined some options in the  `LearningOptions`  component:
+回头想想，我们给 `LearningOptions` 组件设置了一些选项：
 
 ```
   const options = [
@@ -243,11 +243,11 @@ If you recall, we defined some options in the  `LearningOptions`  component:
   ];
 ```
 
-Currently these have an empty handler. What we want to do now is to replace this handler by a call to the  `actionProvider`.
+暂时这些选项有一个空的 handler，我们想调用 `actionProvider` 替换 handler。
 
-So what do we want to have happen when we execute these functions? Ideally, we'd have some sort of chatbot message, and an accompanying widget that displays a list of links to helpful resources for each topic. So let's see how we can implement that.
+那么，我们想在执行这些函数的时候发生什么呢？理想状况下，机器人已经具有一些回复信息以及一个控件显示每个主题对应的资源列表链接。我们看看怎么实现。
 
-First, we need to create the link list component:
+首先，创建一个链接列表组件：
 
 ```jsx
 // in src/components/LinkList/LinkList.jsx
@@ -280,7 +280,7 @@ export default LinkList;
 
 ```
 
-Great. We now have a component that can display a list of links. Now we need to register it in in the widget section of the config:
+将这个组件添加到控件中：
 
 ```jsx
 import React from "react";

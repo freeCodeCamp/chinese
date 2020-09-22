@@ -5,33 +5,31 @@
 
 ![How to Build a Chatbot with React](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/wooden-robot-6069-1.jpg)
 
-My philosophy is simple. To become good at something, you need to do it a lot.
+我的哲学很简单：如果你想要在某个方面精通，那么你需要持续实践，实践一次不会有多少效果，你必须反复实践。
 
-It's not enough to do it once. You need to do it again, and again and again. It will never end. I used the same philosophy to get good at programming.
+我在编程这件事上就是这么做的。
 
-One thing I've noticed on this journey is that it's a lot more fun to build things that are interesting, and that look good. Things you can show you friends and be proud of. Something that makes you excited to get started when you sit down in front of your keyboard.
+在这个过程中，我特别感受到：创建一些有意思的好东西是非常有趣的。你可以向朋友展示自己引以为傲的作品，坐下来敲代码实现它的过程会让你感觉欢喜。
 
-That's why I built a chatbot.
+比如说我创建了一个聊天机器人（[npm 包][1]）。
 
-Which morphed into a  [npm package.][1]
+我们一起来创建吧！如果你想自己独立完成这个挑战，可以直接参考[这份文档（其实是一个聊天机器人成品）][2]。或者，你可以看[这个 YouTube 视频][3]来学习。
 
-So let's build one together. If you want to take on this challenge on your own, you can go directly to the  [documentation (which is actually a chatbot)][2]. Or, if you are a visual learner,  [I created a tutorial on YouTube.][3]
+好啦，我们开始吧。我就假设你已经安装了 Node，可以运行 npx 命令。如果没有的话，访问[这里][4]。
 
-Otherwise, let's go. I'm going to assume that you have Node installed, and access to the npx command. If not,  [go get it here.][4]
-
-## Initial setup
+## 初始设置
 
 ```
-// Run these commands from your command line
+// 运行以下代码
 npx create-react-app chatbot
 cd chatbot
 yarn add react-chatbot-kit
 yarn start
 ```
 
-This should install the npm package and open the development server at localhost:3000.
+安装 npm 包，启动开发服务器 localhost:3000。
 
-Next head over to  `App.js`  and make these changes:
+然后打开 `App.js`，修改如下：
 
 ```jsx
 import Chatbot from 'react-chatbot-kit'
@@ -39,11 +37,12 @@ import Chatbot from 'react-chatbot-kit'
 
 ```
 
-Great job. We're getting there. You should see this in your development server now:
+现在开发服务器是这样的：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-10-at-16.03.51.png)
 
 The chatbot takes three props that must be included for it to work. First, it needs a config which must include an  `initialMessages`  property with chatbot message objects.
+
 
 Secondly, it needs a  `MessageParser`  class that must implement a parse method.
 

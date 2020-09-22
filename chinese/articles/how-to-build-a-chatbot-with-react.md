@@ -1,37 +1,35 @@
 > * 原文地址：[How to Build a Chatbot with React React 项目实践——创建一个聊天机器人](https://www.freecodecamp.org/news/how-to-build-a-chatbot-with-react/)
 > * 原文作者：Fredrik Strand Oseberg
-> * 译者：
+> * 译者：Chengjun.L
 > * 校对者：
 
 ![How to Build a Chatbot with React](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/wooden-robot-6069-1.jpg)
 
-My philosophy is simple. To become good at something, you need to do it a lot.
+我的哲学很简单：如果你想要在某个方面精通，那么你需要持续实践，实践一次不会有多少效果，你必须反复实践。
 
-It's not enough to do it once. You need to do it again, and again and again. It will never end. I used the same philosophy to get good at programming.
+我在编程这件事上就是这么做的。
 
-One thing I've noticed on this journey is that it's a lot more fun to build things that are interesting, and that look good. Things you can show you friends and be proud of. Something that makes you excited to get started when you sit down in front of your keyboard.
+在这个过程中，我特别感受到：创建一些有意思的好东西是非常有趣的。你可以向朋友展示自己引以为傲的作品，坐下来敲代码实现它的过程会让你感觉欢喜。
 
-That's why I built a chatbot.
+比如说我创建了一个聊天机器人（[npm 包][1]）。
 
-Which morphed into a  [npm package.][1]
+我们一起来创建吧！如果你想自己独立完成这个挑战，可以直接参考[这份文档（其实是一个聊天机器人成品）][2]。或者，你可以看[这个 YouTube 视频][3]来学习。
 
-So let's build one together. If you want to take on this challenge on your own, you can go directly to the  [documentation (which is actually a chatbot)][2]. Or, if you are a visual learner,  [I created a tutorial on YouTube.][3]
+好啦，我们开始吧。我就假设你已经安装了 Node，可以运行 npx 命令。如果没有的话，访问[这里][4]。
 
-Otherwise, let's go. I'm going to assume that you have Node installed, and access to the npx command. If not,  [go get it here.][4]
-
-## Initial setup
+## 初始设置
 
 ```
-// Run these commands from your command line
+// 运行以下代码
 npx create-react-app chatbot
 cd chatbot
 yarn add react-chatbot-kit
 yarn start
 ```
 
-This should install the npm package and open the development server at localhost:3000.
+安装 npm 包，启动开发服务器 localhost:3000。
 
-Next head over to  `App.js`  and make these changes:
+然后打开 `App.js`，修改如下：
 
 ```jsx
 import Chatbot from 'react-chatbot-kit'
@@ -39,23 +37,19 @@ import Chatbot from 'react-chatbot-kit'
 
 ```
 
-Great job. We're getting there. You should see this in your development server now:
+现在你的开发服务器是这样的：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-10-at-16.03.51.png)
 
-The chatbot takes three props that must be included for it to work. First, it needs a config which must include an  `initialMessages`  property with chatbot message objects.
+聊天机器人要正常工作，需要接收三个 props。首先，需要具有 `initialMessages` 属性，包含聊天信息对象。然后，需要有 `MessageParser` class 用于解析，还有 `ActionProvider` class 基于解析结果执行我们需要它执行的动作。
 
-Secondly, it needs a  `MessageParser`  class that must implement a parse method.
+稍后我们进一步讲解这个。现在，[在这里获取代码][5]
 
-Thirdly, it needs an  `ActionProvider`  class which will implement actions that we want to take based on parsing the message.
+- 把 `MessageParser` 代码放到 `MessageParser.js` 文件
+- 把 `ActionProvider` 代码放到 `ActionProvider.js` 文件
+- 把 config 代码放到 `config.js` 文件
 
-We'll go deeper into this later. For now,  [go here to get the boilerplate code to get started.][5]
-
--   Put the  `MessageParser`  code in a file called  `MessageParser.js`
--   Put the  `ActionProvider`  code in a file called  `ActionProvider.js`
--   Put the config code in a file called  `config.js`
-
-When that's done, go back to your  `App.js`  file and add this code:
+现在返回到 `App.js` 文件，添加以下代码：
 
 ```jsx
 import React from 'react';
@@ -67,21 +61,21 @@ import config from './config';
 
 ```
 
-You should now see this on localhost:3000:
+localhost:3000 现在应该是这样显示：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-10-at-16.16.57.png)
 
-Sweet. Now we have the chatbot rendered to the screen and we can write in the input field and submit it to send a message to the chat. But when we try that, nothing happens.
+很棒！我们已经渲染了聊天机器人，可以输入和提交一些信息了。试试看，怎么没有显示什么呢？
 
-## Understanding how the chatbot works
+## 理解聊天机器人是怎么工作的
 
-Here we need to take a pit stop and take a look at how the  `MessageParser`  and  `ActionProvider`  interacts to make our bot take action.
+我们暂停一下，看看 `MessageParser` 和 `ActionProvider` 是怎么配合让聊天机器人执行动作的。
 
-When the bot is initialized, the  `initialMessages`  property from the config is put into the chatbot's internal state in a property called  `messages`, which is used to render messages to the screen.
+机器人初始化的时候，内部 state 的 `messages` 属性获取 `initialMessages` 属性值, 将信息渲染到屏幕。
 
-Moreover, when we write and push the submit button in the chat field, our  `MessageParser`  (which we passed as props to the chatbot) is calling its  `parse`  method. This is why this method must be implemented.
+接着，当我们在聊天框输入信息，按下 submit 提交键时，`MessageParser`（作为 props 传递给机器人)调用 `parse` 方法。
 
-Let's take a closer look at the  `MessageParser`  starter code:
+我们进一步看看 `MessageParser` 的代码：
 
 ```jsx
 class MessageParser {
@@ -91,9 +85,9 @@ class MessageParser {
 
 ```
 
-If we look closely, this method is constructed with an  `actionProvider`. This is the same  `ActionProvider`  class that we pass as props to the chatbot. This means that we control two things - how the message is parsed, and what action to take based on said parsing.
+代码中包含 `actionProvider`，这跟我们传递给聊天机器人的 props `ActionProvider` 是一样的。我们通过这个代码解析信息，并告诉机器人执行什么动作。
 
-Let's use this information to create a simple chatbot response. First alter the  `MessageParser`  like this:
+比如，我们创建一个简单的响应。首先，将 `MessageParser` 改为：
 
 ```
 class MessageParser {
@@ -109,9 +103,10 @@ if (lowerCaseMessage.includes("hello")) {
 
 ```
 
-Now our  `MessageParser`  is receiving the user message, checking if it includes the word "hello". If it does, it calls the  `greet`  method on the  `actionProvider`.
+`MessageParser` 接收到用户的信息，检查是否包含 “hello”。如果包含，则调用 `actionProvider` 的 `greet` 方法。
 
-Right now, this would crash, because we haven't implemented the  `greet`  method. Let's do that next. Head over to  `ActionProvider.js`:
+不过现在还行不通，因为我们还没有执行 `greet` 方法。稍后再处理这个。先处理 `ActionProvider.js` 文件如下：
+
 
 ```
 class ActionProvider {
@@ -133,15 +128,15 @@ class ActionProvider {
 
 ```
 
-Nice. Now if we type in "hello" into the chat field, we get this back:
+现在我们在聊天框输入 “hello”，可以看到：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-10-at-16.39.48.png)
 
-Fantastic. Now that we can control parsing the message and responding with an action, let's try to make something more complicated. Let's try to make a bot that provides you with learning resources for the programming language you ask for.
+很好！解析信息和响应都没有问题了。我们再做一些更复杂的东西，让机器人提供我们想要的编程语言学习资料。
 
-## Creating a learning bot
+## 创建一个学习机器人
 
-First, let's go back to our  `config.js`  file and make some slight changes:
+首先，回到 `config.js` 文件，稍作修改：
 
 ```
 import { createChatBotMessage } from 'react-chatbot-kit';
@@ -160,17 +155,15 @@ const config = {
 
 ```
 
-OK, so we've added some properties here and changed our initial message. Most notably we have given the bot a name and changed the color of the  `messagebox`  and  `chatbutton`  components.
+我们增加了一些属性，修改了初始信息，特别是给机器人取了个名字，更改了 `messagebox` 和 `chatbutton` 组件的颜色。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-22-at-09.44.33.png)
 
-Alright. Now we're getting to the good part.
+好玩的部分来了。
 
-Not only can we parse messages and the respond to the user with a chatbot message, we can define custom React components that we want to render with the message. These components can be anything we want – they are just plain old React components.
+我们不仅可以渲染信息和回复给用户，还可以根据想要的信息来自定义 React 组件。比如，我们创建一个选择组件，引导用户做不同选择。
 
-Let's try it out by creating an options component that will guide the user to possible options.
-
-First, we define the learning options component:
+首先，定义学习选项组件：
 
 ```jsx
 // in src/components/LearningOptions/LearningOptions.jsx
@@ -205,7 +198,7 @@ export default LearningOptions;
 
 ```
 
-Now that we have our component, we need to register it with our chatbot. Head over to  `config.js`  and add the following:
+然后在机器人代码中使用组件。对 `config.js` 文件作如下操作：
 
 ```jsx
 import React from "react";
@@ -214,31 +207,31 @@ import LearningOptions from "./components/LearningOptions/LearningOptions";
 
 ```
 
-### Understanding widgets
+### 理解控件
 
-Alright. Let's take a breather and explore what we've done.
+小结一下：
 
-1.  We created the  `LearningOptions`  component.
-2.  We registered the component under  `widgets`  in our config.
-3.  We gave the  `createChatbotMessage`  function an options object specifying which widget to render with this message.
+- 我们创建了 `LearningOptions` 组件
+- 在 config 的  `widgets` 下使用组件
+- 给 `createChatbotMessage` 函数一个选项对象，说明需要渲染哪个控件和信息
 
-The result:
+结果：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-22-at-10.41.49.png)
 
-Fantastic, but why did we need to register our component in the config as a widget function?
+很棒！但是，为什么要在 config 中以控件函数的形式引入组件呢？
 
-By giving it a function, we control when we perform the invocation. This allows us room to decorate the widget with important properties inside the chatbot.
+通过将其设置为函数，我们可以在调用时以聊天机器人的重要属性来装饰控件。
 
-The widget that we define will receive a number of properties from the chatbot (some of which can be controlled by config properties):
+我们定义的控件会接收到机器人的各种属性：
 
-1.  `actionProvider`  \- we give the  `actionProvider`  to the widget in order to execute actions if we need to.
-2.  `setState`  \- we give the top level chatbot  `setState`  function to the widget in case we need to manipulate state.
-3.  `scrollIntoView`  \- utility function to scroll to the bottom of the chat window, should we need to adjust the view.
-4.  `props`  \- if we define any props in the widget config, those will be passed to the widget under the property name  `configProps`.
-5.  `state`  \- if we define custom state in the config, we can map it to the widget by using the  `mapStateToProps`  property
+- `actionProvider`  \- 将 `actionProvider` 添加到控件，以执行动作
+- `setState`  \- 将 `setState` 添加到控件，以操作 state
+- `scrollIntoView`  \- 滑动到聊天框底部，在需要调整视图时使用这个函数
+- `props`  \- 给控件定义的 props 将通过 `configProps` 传递给控件
+- `state`  \- 通过 `mapStateToProps` 属性将自定义 state 传递给控件
 
-If you recall, we defined some options in the  `LearningOptions`  component:
+回头想想，我们给 `LearningOptions` 组件设置了一些选项：
 
 ```
   const options = [
@@ -250,11 +243,11 @@ If you recall, we defined some options in the  `LearningOptions`  component:
   ];
 ```
 
-Currently these have an empty handler. What we want to do now is to replace this handler by a call to the  `actionProvider`.
+暂时这些选项有一个空的 handler，我们想调用 `actionProvider` 替换 handler。
 
-So what do we want to have happen when we execute these functions? Ideally, we'd have some sort of chatbot message, and an accompanying widget that displays a list of links to helpful resources for each topic. So let's see how we can implement that.
+那么，我们想在执行这些函数的时候发生什么呢？理想状况下，机器人已经具有一些回复信息以及一个控件显示每个主题对应的资源列表链接。我们看看怎么实现。
 
-First, we need to create the link list component:
+首先，创建一个链接列表组件：
 
 ```jsx
 // in src/components/LinkList/LinkList.jsx
@@ -287,7 +280,7 @@ export default LinkList;
 
 ```
 
-Great. We now have a component that can display a list of links. Now we need to register it in in the widget section of the config:
+将这个组件添加到控件中：
 
 ```jsx
 import React from "react";
@@ -310,7 +303,7 @@ const config = {
 
 ```
 
-So far so good, but we want to dynamically pass in props to this component so that we can reuse it for the other options as well. This means that we need to add another property to the widget object in the config:
+如果我们想动态给这个组件传递参数，以便对其他选项复用，那就需要给控件添加另一个属性：
 
 ```jsx
 import React from "react";
@@ -351,11 +344,11 @@ const config = {
 
 ```
 
-Now these props will be passed to the  `LinkList`  component as props.
+现在，这些 props 会作为参数传递给 `LinkList` 组件。
 
-Now we need to do two more things.
+我们再做两件事情。
 
-1.  We need to add a method to the  `actionProvider`
+- 给 `actionProvider` 添加一个方法
 
 ```jsx
 class ActionProvider {
@@ -381,7 +374,7 @@ this.setState((prevState) =&gt; ({
 
 ```
 
-2\. We need to add this method as the handler in the  `LearningOptions`  component:
+- 把这个方法作为 `LearningOptions` 组件 handler
 
 ```jsx
 import React from "react";
@@ -412,13 +405,13 @@ const LearningOptions = (props) => {
 
 ```
 
-Alright! That was quite a lot of information. But if we now try to click the JavaScript option in the chatbot, we get this result:
+好啦，信息量比较大。现在如果我们点击聊天机器人的 JavaScript 选项，会出现：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-22-at-17.35.27.png)
 
-Perfect. But we don't want to stop there, this is a chatbot after all. We want to be able to respond to users who want to use the input field as well. So we need to make a new rule in  `MessageParser`.
+完美！再进一步，如果用户输入信息，机器人也应该响应。所以我们需要给 `MessageParser` 创建新规则。
 
-Let's update our  `MessageParser.js`  file to look like this:
+更新 `MessageParser.js` 文件：
 
 ```jsx
 class MessageParser {
@@ -438,23 +431,15 @@ if (lowerCaseMessage.includes("javascript")) {
 
 ```
 
-Now try typing "javascript" into the input field and sending the message. You should get the same list in response from the chatbot.
+在输入框键入 “javaScript”，机器人会回复同样的清单。完成啦！
 
-So there you have it. We've set up a chatbot that renders a list of possible options and responds to user input.
+欢迎在 GitHub 访问[代码和文档][10].
 
-For now, we've only set up the bot to handle when someone clicks or types in JavaScript, but you can try to expand the other options on your own.  [Here's a link to the repository][9].
+## 结语
 
-All the code is on GitHub, so feel free to dive into  [the react-chatbot-kit code or docs][10].
+创建项目很有趣，也是一个帮助你拓展技能的很棒的方式。你完全可以动动脑筋，在这个项目基础上再开发别的，比如一个机器人通过一些简单的问题找到网店里最适合的产品，或者是一个帮公司回复顾客常见问题的机器人。你可以尽量实践你的新想法。也欢迎你 pull request，帮我完善这个项目。
 
-## Conclusion
-
-Building things is fun, and a great way to expand your skillset. There are no limits to where you could take this next.
-
-Perhaps you could make a chatbot that finds the ideal product in webshop based on some simple questions (utilising routing in the app), or maybe you can make one for your company taking care of the most common customer inquiries.
-
-Feel free to expand, come up with new ideas, and test them out. And if you see something that can be improved, send a pull request.
-
-If you want to improve as a developer, I encourage you to keep building. It truly is the only path forward. If you enjoyed this article, and would like to know when I post more content, you can  [follow me on Twitter][11].
+我觉得持续创建项目真的是开发者提升自己的唯一方式，建议你现在就动起来！
 
 [1]: https://www.npmjs.com/package/react-chatbot-kit
 [2]: https://fredrikoseberg.github.io/react-chatbot-kit-docs/

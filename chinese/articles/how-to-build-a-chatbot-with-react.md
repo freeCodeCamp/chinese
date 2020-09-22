@@ -87,7 +87,7 @@ class MessageParser {
 
 代码中包含 `actionProvider`，这跟我们传递给聊天机器人的 props `ActionProvider` 是一样的。我们通过这个代码解析信息，并告诉机器人执行什么动作。
 
-比如，我们创建一个简单的回应。首先，将 `MessageParser` 改为：
+比如，我们创建一个简单的响应。首先，将 `MessageParser` 改为：
 
 ```
 class MessageParser {
@@ -128,15 +128,15 @@ class ActionProvider {
 
 ```
 
-Nice. Now if we type in "hello" into the chat field, we get this back:
+现在我们在聊天框输入 “hello”，可以看到：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-10-at-16.39.48.png)
 
-Fantastic. Now that we can control parsing the message and responding with an action, let's try to make something more complicated. Let's try to make a bot that provides you with learning resources for the programming language you ask for.
+很好！解析信息和响应都没有问题了。我们再做一些更复杂的东西，让机器人提供我们想要的编程语言学习资料。
 
-## Creating a learning bot
+## 创建一个学习机器人
 
-First, let's go back to our  `config.js`  file and make some slight changes:
+首先，回到 `config.js` 文件，稍作修改：
 
 ```
 import { createChatBotMessage } from 'react-chatbot-kit';
@@ -155,17 +155,15 @@ const config = {
 
 ```
 
-OK, so we've added some properties here and changed our initial message. Most notably we have given the bot a name and changed the color of the  `messagebox`  and  `chatbutton`  components.
+我们增加了一些属性，修改初始信息，特别是给机器人取了个名字，更改了 `messagebox` 和 `chatbutton` 组件的颜色。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-22-at-09.44.33.png)
 
-Alright. Now we're getting to the good part.
+好玩的部分来了。
 
-Not only can we parse messages and the respond to the user with a chatbot message, we can define custom React components that we want to render with the message. These components can be anything we want – they are just plain old React components.
+我们不仅可以渲染信息和回复给用户，还可以根据想要的信息来自定义 React 组件。比如，我们创建一个选择组件，引导用户做不同选择。
 
-Let's try it out by creating an options component that will guide the user to possible options.
-
-First, we define the learning options component:
+首先，定义学习选项组件：
 
 ```jsx
 // in src/components/LearningOptions/LearningOptions.jsx
@@ -200,7 +198,7 @@ export default LearningOptions;
 
 ```
 
-Now that we have our component, we need to register it with our chatbot. Head over to  `config.js`  and add the following:
+组件有了，接下来Now that we have our component, we need to register it with our chatbot. Head over to  `config.js`  and add the following:
 
 ```jsx
 import React from "react";

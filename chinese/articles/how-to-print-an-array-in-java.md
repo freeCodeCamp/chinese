@@ -26,7 +26,7 @@ System.out.println(intArray);
 ```
 
 Why did Java not print our array? What is happening under the hood?  
-为什么 Java 没用打印出来数组数据呢？背后发生了什么？  
+为什么 Java 没有打印出来数组数据呢？背后发生了什么？  
 
 The  `System.out.println()`  method converts the object we passed into a string by calling  `String.valueOf()`  . If we look at the  `String.valueOf()`  method’s implementation, we'll see this:  
 方法 `System.out.println()` 通过调用 `String.valueOf()` 把对象转为一个字符串。 如果我们查看 `String.valueOf()` 方法的实现，会看到如下的代码：
@@ -37,17 +37,23 @@ public static String valueOf(Object obj) {
 }
 ```
 
-If the passed-in object is  `null`  it returns null, else it calls  `obj.toString()`  . Eventually,  `System.out.println()`  calls  `toString()`  to print the output.
+If the passed-in object is  `null`  it returns null, else it calls  `obj.toString()`  . Eventually,  `System.out.println()`  calls  `toString()`  to print the output.  
+如果对象是 `null` 方法会返回空， 其它情况调用 `obj.toString()` 。 最终 `System.out.println()` 调用 `toString()` 方法打印出了字符串。
 
-If that object’s class does not override  `Object.toString()`'s implementation, it will call the  `Object.toString()`  method.
+If that object’s class does not override  `Object.toString()`'s implementation, it will call the  `Object.toString()`  method.  
+如果当前类没有重写 `Object.toString()` 的实现， 那就会调用超类 `Object` 的 `Object.toString()` 方法。
 
-`Object.toString()`  returns  `getClass().getName()+****‘@’****+Integer.toHexString(hashCode())`  . In simple terms, it returns: “class name @ object’s hash code”.
+`Object.toString()`  returns  `getClass().getName()+****‘@’****+Integer.toHexString(hashCode())`  . In simple terms, it returns: “class name @ object’s hash code”.  
+`Object.toString()`  返回的格式是  `getClass().getName()+****‘@’****+Integer.toHexString(hashCode())` 。 简单来说是： “class name @ object’s hash code”。
 
-In our previous output  `[I@74a14482`  , the  `[`  states that this is an array, and  `I`  stands for int (the type of the array).  `74a14482`  is the unsigned hexadecimal representation of the hash code of the array.
+In our previous output  `[I@74a14482`  , the  `[`  states that this is an array, and  `I`  stands for int (the type of the array).  `74a14482`  is the unsigned hexadecimal representation of the hash code of the array.  
+上文中输出的内容是 `[I@74a14482` ， `[` 表示这是一个数组， `I` 表示数组的数据类型是int。 `74a14482` 是数组的无符号十六进制hash值。
 
-Whenever we are creating our own custom classes, it is a best practice to override the  `Object.toString()`  method.
+Whenever we are creating our own custom classes, it is a best practice to override the  `Object.toString()`  method.  
+当我们创建自定义类时，重写 `Object.toString()` 方法是最佳的实践。
 
-We can not print arrays in Java using a plain  `System.out.println()`  method. Instead, these are the following ways we can print an array:
+We can not print arrays in Java using a plain  `System.out.println()`  method. Instead, these are the following ways we can print an array:  
+在 Java 中我们不能简单的使用 `System.out.println()` 方法打印数组。 相反，接下来的几种方法可以打印：
 
 1.  Loops: for loop and for-each loop
 2.  `Arrays.toString()`  method

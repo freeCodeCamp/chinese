@@ -1,6 +1,6 @@
 > * 原文地址：[Java Array Methods – How to Print an Array in Java Java 数组的打印方式](https://www.freecodecamp.org/news/java-array-methods-how-to-print-an-array-in-java/)
 > * 作者：Thanoshan MV
-> * 译者：
+> * 译者：Tengfei Wang
 > * 校对者：
 
 ![Java Array Methods – How to Print an Array in Java](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/Untitled-design--1-.png)

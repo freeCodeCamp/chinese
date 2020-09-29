@@ -5,26 +5,31 @@
 
 ![Java Array Methods – How to Print an Array in Java](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/Untitled-design--1-.png)
 
-An array is a data structure used to store data of the same type. Arrays store their elements in contiguous memory locations.
-数组是一种用来保存相同数据类型的数据结构。数组的元素在内存中是连续存储的。
-In Java, arrays are objects. All methods of class object may be invoked in an array. We can store a fixed number of elements in an array.
-在 Java 中，数组即对象。类的所有方法都被放进数组中调用。我们可以指定固定长度的数组。
-Let’s declare a simple primitive type of array:
+An array is a data structure used to store data of the same type. Arrays store their elements in contiguous memory locations.  
+数组是一种用来保存相同数据类型的数据结构。 数组的元素在内存中是连续存储的。  
+
+In Java, arrays are objects. All methods of class object may be invoked in an array. We can store a fixed number of elements in an array.  
+在 Java 中，数组即对象。类的所有方法都被放进数组中调用。 我们可以指定固定长度的数组。  
+
+Let’s declare a simple primitive type of array:  
 声明一个基本数据类型数组：
 ```Java
 int[] intArray = {2,5,46,12,34};
 ```
 
-Now let’s try to print it with the  `System.out.println()`  method:
+Now let’s try to print it with the  `System.out.println()`  method:  
 尝试使用 `System.out.println()` 方法打印数组：
+
 ```Java
 System.out.println(intArray);
 // output: [I@74a14482
 ```
 
-Why did Java not print our array? What is happening under the hood?
-为什么 Java 没用打印出来数组数据呢？背后发生了什么？
-The  `System.out.println()`  method converts the object we passed into a string by calling  `String.valueOf()`  . If we look at the  `String.valueOf()`  method’s implementation, we'll see this:
+Why did Java not print our array? What is happening under the hood?  
+为什么 Java 没用打印出来数组数据呢？背后发生了什么？  
+
+The  `System.out.println()`  method converts the object we passed into a string by calling  `String.valueOf()`  . If we look at the  `String.valueOf()`  method’s implementation, we'll see this:  
+方法 `System.out.println()` 通过调用 `String.valueOf()` 把对象转为一个字符串。 如果我们查看 `String.valueOf()` 方法的实现，会看到如下的代码：
 
 ```Java
 public static String valueOf(Object obj) {

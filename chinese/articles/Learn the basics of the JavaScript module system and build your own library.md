@@ -177,21 +177,17 @@ webpack, Rollup, Babel。 这些我们在日常工作中使用的工具，用于
 想象一下，如果我们只是发布库的 bundled version  将其托管在 CDN 上。 我们的用户将直接在`<script />`标记中使用它。 现在，如果使用者只想使用`<Button />`组件，则他们必须加载整个库。 另外，在浏览器中，没有可以解决 tree shaking 的打包工具，最终我们会将整个库代码发送给我们的使用者。 因此，我们不能像如下代码引入整个库文件\*\*
 
 ```html
-(
 <script type="module">
   import { Button } from "https://unpkg.com/uilibrary/index.js";
 </script>
-)
 ```
 
 \*\* 现在，如果我们只是简单地将 src 转换为 lib 并将该 lib 托管在 CDN 上，那么我们的使用者实际上可以得到他们想要的任何东西而没有任何开销。 “代码更少，加载更快”。 ✅
 
 ```html
-(
 <script type="module">
   import { Button } from "https://unpkg.com/uilibrary/lib/button.js";
 </script>
-)
 ```
 
 ## Core Packages

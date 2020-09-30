@@ -1,7 +1,7 @@
-> * 原文地址：[What exactly can you do with Python? Here are Python's 3 main applications.](https://www.freecodecamp.org/news/what-can-you-do-with-python-the-3-main-applications-518db9a68a78/)
-> * 原文作者：YK Sugi
-> * 译者：
-> * 校对者：
+> -   原文地址：[What exactly can you do with Python? Here are Python's 3 main applications.](https://www.freecodecamp.org/news/what-can-you-do-with-python-the-3-main-applications-518db9a68a78/)
+> -   原文作者：YK Sugi
+> -   译者：
+> -   校对者：
 
 If you’re thinking of learning Python — or if you recently started learning it — you may be asking yourself:
 
@@ -19,7 +19,7 @@ Let’s talk about each of them in turn.
 
 ### **Web Development**
 
-Web frameworks that are based on Python like  **Django**  and  **Flask**  have recently become very popular for web development.
+Web frameworks that are based on Python like **Django** and **Flask** have recently become very popular for web development.
 
 These web frameworks help you create server-side code (backend code) in Python. That’s the code that runs on your server, as opposed to on users’ devices and browsers (front-end code). If you’re not familiar with the difference between backend code and front-end code, please see my footnote below.
 
@@ -33,14 +33,14 @@ Django and Flask are two of the most popular Python web frameworks. I’d recomm
 
 #### **What’s the difference between Django and Flask?**
 
-There’s an  [excellent article][1]  about this topic by Gareth Dwyer, so let me quote it here:
+There’s an [excellent article][1] about this topic by Gareth Dwyer, so let me quote it here:
 
 **_<begin quo_**te>
 
 Main contrasts:
 
 -   Flask provides simplicity, flexibility and fine-grained control. It is unopinionated (it lets you decide how you want to implement things).
--   Django provides an all-inclusive experience: you get an admin panel, database interfaces, an  [ORM \[object-relational mapping\]][2], and directory structure for your apps and projects out of the box.
+-   Django provides an all-inclusive experience: you get an admin panel, database interfaces, an [ORM \[object-relational mapping\]][2], and directory structure for your apps and projects out of the box.
 
 You should probably choose:
 
@@ -53,15 +53,15 @@ In other words, If you’re a beginner, Flask is probably a better choice becaus
 
 On the other hand, if you’re looking to build something straight-forward, Django will probably let you get there faster.
 
-Now, if you’re looking to learn Django, I recommend the book called Django for Beginners. You can find it  [here][3].
+Now, if you’re looking to learn Django, I recommend the book called Django for Beginners. You can find it [here][3].
 
-You can also find the free sample chapters of that book  [here][4].
+You can also find the free sample chapters of that book [here][4].
 
 Okay, let’s go to the next topic!
 
 ### **Data Science — including machine learning, data analysis, and data visualization**
 
-#### **First of all, let’s review what machine learning  _is_.**
+#### **First of all, let’s review what machine learning _is_.**
 
 I think the best way to explain what machine learning is would be to give you a simple example.
 
@@ -120,7 +120,7 @@ You can use any of the above algorithms to solve the picture-labeling problem I 
 
 There are popular machine learning libraries and frameworks for Python.
 
-Two of the most popular ones are  **scikit-learn**  and  **TensorFlow**.
+Two of the most popular ones are **scikit-learn** and **TensorFlow**.
 
 -   scikit-learn comes with some of the more popular machine learning algorithms built-in. I mentioned some of them above.
 -   TensorFlow is more of a low-level library that allows you to build custom machine learning algorithms.
@@ -129,11 +129,11 @@ If you’re just getting started with a machine learning project, I would recomm
 
 #### **How should I learn machine learning?**
 
-To learn machine learning fundamentals, I would recommend either  [Stanford’s][5]  or  [Caltech’s][6]  machine learning course.
+To learn machine learning fundamentals, I would recommend either [Stanford’s][5] or [Caltech’s][6] machine learning course.
 
 Please note that you need basic knowledge of calculus and linear algebra to understand some of the materials in those courses.
 
-Then, I would practice what you’ve learned from one of those courses with  [Kaggle][7]. It’s a website where people compete to build the best machine learning algorithm for a given problem. They have nice tutorials for beginners, too.
+Then, I would practice what you’ve learned from one of those courses with [Kaggle][7]. It’s a website where people compete to build the best machine learning algorithm for a given problem. They have nice tutorials for beginners, too.
 
 ### **What about data analysis and data visualization?**
 
@@ -181,18 +181,18 @@ I used SQL at both of those companies to pull data from our databases. Then, I w
 
 #### **Data analysis / visualization with Python**
 
-One of the most popular libraries for data visualization is  [Matplotlib][8].
+One of the most popular libraries for data visualization is [Matplotlib][8].
 
 It’s a good library to get started with because:
 
 -   It’s easy to get started with
--   Some other libraries such as  [seaborn][9]  is based on it. So, learning Matplotlib will help you learn these other libraries later on.
+-   Some other libraries such as [seaborn][9] is based on it. So, learning Matplotlib will help you learn these other libraries later on.
 
 **How should I learn data analysis / visualization with Python?**
 
 You should first learn the fundamentals of data analysis and visualization. When I looked for good resources for this online, I couldn’t find any. So, I ended up making a YouTube video on this topic:
 
-I also ended up making a  [full course on this topic on Pluralsight][10], which you can take for free by signing up to their 10-day free trial.
+I also ended up making a [full course on this topic on Pluralsight][10], which you can take for free by signing up to their 10-day free trial.
 
 I’d recommend both of them.
 
@@ -228,7 +228,7 @@ Rather, I would recommend getting started with Unity with C#, which is one of th
 
 You could make one with Python using Tkinter, but it doesn’t seem like the most popular choice either.
 
-Instead, it seems like languages like  [Java, C#, and C++][11]  are more popular for this.
+Instead, it seems like languages like [Java, C#, and C++][11] are more popular for this.
 
 Recently, some companies have started using JavaScript to create Desktop applications, too.
 
@@ -262,7 +262,7 @@ This is where the backend code / server-side code comes in. You’ll need to wri
 
 -   Keep track of who’s following who
 -   Compress photos so they don’t take up so much storage space
--   Recommend photos and new accounts to each user in the _discovery_  feature
+-   Recommend photos and new accounts to each user in the _discovery_ feature
 
 So, this is the difference between backend code and front-end code.
 
@@ -270,7 +270,7 @@ By the way, Python is not the only good choice for writing backend / server-side
 
 ### Liked this article? Then, you might also like my YouTube channel.
 
-I have a programming education YouTube channel called  [CS Dojo][13]  with 440,000+ subscribers, where I produce more content like this article.
+I have a programming education YouTube channel called [CS Dojo][13] with 440,000+ subscribers, where I produce more content like this article.
 
 For example, you might like these videos:
 

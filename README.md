@@ -51,7 +51,7 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章][6]，分享前�
 
 #### Cloud
 
-This repository has [a GitHub action][12] to lint **Markdown & Native Language syntax** on **Pull Request commits**, translaters should follow the **Lint Report** to fix **Syntax Errors**.
+This repository has [a GitHub action][12] to lint **Markdown & Native Language syntax** on **Pull Request commits**, translaters should follow the **Lint Report** to fix **Syntax Warnings & Errors** of the own article.
 
 #### Local
 

@@ -1,7 +1,7 @@
-> * 原文地址：[About freeCodeCamp - Frequently Asked Questions](https://www.freecodecamp.org/news/about/)
-> * 原文作者：freeCodeCamp team
-> * 译者：Zhuotao Lian 
-> * 校对者：
+> -   原文地址：[About freeCodeCamp - Frequently Asked Questions](https://www.freecodecamp.org/news/about/)
+> -   原文作者：freeCodeCamp team
+> -   译者：Zhuotao Lian
+> -   校对者：
 
 # freeCodeCamp - 常见问题
 
@@ -21,19 +21,19 @@ Yes. Every aspect of freeCodeCamp is 100% free.
 
 ### Can freeCodeCamp help me get a job as a software developer?
 
-Yes. Every year, thousands of people who join the freeCodeCamp community get their first software developer job. If you're curious, you can  [**browse our alumni network on LinkedIn here**][1].
+Yes. Every year, thousands of people who join the freeCodeCamp community get their first software developer job. If you're curious, you can [**browse our alumni network on LinkedIn here**][1].
 
 ### How big is the freeCodeCamp community?
 
-If you add up all the people who use our learning platform, read our  [**news articles**][2], watch our  [**YouTube channel**][3], and post on  [**our forum**][4], each month we help millions of people learn about coding and technology.
+If you add up all the people who use our learning platform, read our [**news articles**][2], watch our [**YouTube channel**][3], and post on [**our forum**][4], each month we help millions of people learn about coding and technology.
 
 ### Is freeCodeCamp a nonprofit?
 
-Yes, we are a 501(c)(3)  [**donor-supported public charity**][5]. You can  [**download our IRS Determination Letter here**][6].
+Yes, we are a 501(c)(3) [**donor-supported public charity**][5]. You can [**download our IRS Determination Letter here**][6].
 
 ### Does freeCodeCamp accept donations in Bitcoin or other crypto currencies?
 
-Yes. Our cryptographically signed wallet details are  **[here][7]**.
+Yes. Our cryptographically signed wallet details are **[here][7]**.
 
 ### How long will it take me to finish each of freeCodeCamp's certifications?
 
@@ -57,7 +57,7 @@ As long as your code is publicly viewable somewhere on the internet, and you hav
 
 ### How did freeCodeCamp get started?
 
-[**Quincy**][8]  started the freeCodeCamp community in 2014. He is now just one of thousands of active contributors.
+[**Quincy**][8] started the freeCodeCamp community in 2014. He is now just one of thousands of active contributors.
 
 ### I'm a teacher. Is freeCodeCamp an appropriate resource for my class?
 
@@ -73,11 +73,11 @@ Yes. freeCodeCamp is open source (BSD-3 license), and most non-sensitive freeCod
 
 ### Does freeCodeCamp have a mobile app?
 
-You can learn on the go by listening to the  [**freeCodeCamp Podcast**][9]  or watching  [**freeCodeCamp's YouTube channel**][10]. And if you want a mobile app designed specifically for learning to code, we recommend Grasshopper. It's free and designed by a freeCodeCamp contributor and her team. You can download it on  [**iOS**][11]  or  [**Android**][12].
+You can learn on the go by listening to the [**freeCodeCamp Podcast**][9] or watching [**freeCodeCamp's YouTube channel**][10]. And if you want a mobile app designed specifically for learning to code, we recommend Grasshopper. It's free and designed by a freeCodeCamp contributor and her team. You can download it on [**iOS**][11] or [**Android**][12].
 
 ### Can I get a job at freeCodeCamp?
 
-We're a small donor-supported nonprofit. We've hired several prominent contributors from within the freeCodeCamp community, but you're much more likely to get a job at  [**one of the hundreds of companies**][13]  where freeCodeCamp alumni work.
+We're a small donor-supported nonprofit. We've hired several prominent contributors from within the freeCodeCamp community, but you're much more likely to get a job at [**one of the hundreds of companies**][13] where freeCodeCamp alumni work.
 
 ### Can my company advertise on freeCodeCamp?
 
@@ -85,11 +85,11 @@ We don’t show ads.
 
 ### How can I support the freeCodeCamp community?
 
-You can  [**set up a monthly donation to our nonprofit that you can afford**][14].
+You can [**set up a monthly donation to our nonprofit that you can afford**][14].
 
 ### Where can I get technical support for using the freeCodeCamp.org platform?
 
-Here are  [**answers to common technical support questions**][15].
+Here are [**answers to common technical support questions**][15].
 
 ## Become a supporter.
 
@@ -103,7 +103,7 @@ The freeCodeCamp Team (left to right): Miya, Mrugesh, Quincy, Kris, Ahmad. Not p
 
 ---
 
-If this article was helpful,  tweet it  or  share it.
+If this article was helpful, tweet it or share it.
 
 [Donate if you can][17].
 

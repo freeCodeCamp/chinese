@@ -1,7 +1,7 @@
-> - 原文地址：[A crash course in TypeScript](https://www.freecodecamp.org/news/a-crash-course-in-typescript-e6bf9c10946/)
-> - 原文作者：Gabriel Tanner
-> - 译者：[C 君](https://github.com/lihroff)
-> - 校对者：[ZhichengChen](https://github.com/ZhichengChen)
+> -   原文地址：[A crash course in TypeScript](https://www.freecodecamp.org/news/a-crash-course-in-typescript-e6bf9c10946/)
+> -   原文作者：Gabriel Tanner
+> -   译者：[C 君](https://github.com/lihroff)
+> -   校对者：[ZhichengChen](https://github.com/ZhichengChen)
 
 # TypeScript 速成课
 
@@ -123,9 +123,9 @@ let str: string = 'Hello World!';
 
 ```typescript
 if (typeof str === number) {
-  console.log('Str is a number');
+    console.log('Str is a number');
 } else {
-  console.log('Str is not a number');
+    console.log('Str is not a number');
 }
 ```
 
@@ -137,17 +137,17 @@ instanceof 运算符与 typeof 几乎相同，只是它还可以检查 javascrip
 
 ```typescript
 class Human {
-  name: string;
+    name: string;
 
-  constructor(data: string) {
-    this.name = data;
-  }
+    constructor(data: string) {
+        this.name = data;
+    }
 }
 
 let human = new Human('Gabriel');
 
 if (human instanceof Human) {
-  console.log(`${human.name} is a human`);
+    console.log(`${human.name} is a human`);
 }
 ```
 
@@ -222,7 +222,10 @@ let stringsAndNumbers: (string | number)[] = ['Age', 20];
 Typescript 还允许我们定义多维数组，这意味着我们可以将数组保存在另一个数组中。我们可以通过使用多个[]运算符来创建一个多维数组。
 
 ```typescript
-let numbersArray: number[][] = [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]];
+let numbersArray: number[][] = [
+    [1, 2, 3, 4, 5],
+    [6, 7, 8, 9, 10],
+];
 ```
 
 这里我们创建一个包含另一个数字数组的数组。
@@ -253,9 +256,9 @@ const exampleTuple: [string, number] = [20, 'https://google.com'];
 
 ```typescript
 enum State {
-  Playing = 0,
-  Paused = 1,
-  Stopped = 2,
+    Playing = 0,
+    Paused = 1,
+    Stopped = 2,
 }
 ```
 
@@ -263,9 +266,9 @@ enum State {
 
 ```typescript
 enum State {
-  Playing,
-  Paused,
-  Stopped,
+    Playing,
+    Paused,
+    Stopped,
 }
 ```
 
@@ -277,9 +280,9 @@ enum State {
 
 ```typescript
 enum State {
-  Playing = 'PLAYING',
-  Paused = 'PAUSED',
-  Stopped = 'STOPPED',
+    Playing = 'PLAYING',
+    Paused = 'PAUSED',
+    Stopped = 'STOPPED',
 }
 ```
 
@@ -301,12 +304,12 @@ const human = { firstName: 'Frank', age: 32, height: 185 };
 
 ```typescript
 const human = {
-  firstName: 'Frank',
-  age: 32,
-  height: 185,
-  greet: function() {
-    console.log('Greetings stranger!');
-  },
+    firstName: 'Frank',
+    age: 32,
+    height: 185,
+    greet: function () {
+        console.log('Greetings stranger!');
+    },
 };
 ```
 
@@ -316,9 +319,9 @@ Typescript 还允许我们自定义类型，以便于我们后续重用。要创
 
 ```typescript
 type Human = {
-  firstName: string;
-  age: number;
-  height: number;
+    firstName: string;
+    age: number;
+    height: number;
 };
 ```
 
@@ -340,11 +343,11 @@ Typescript 允许我们为方法参数和返回值指定数据类型。现在让
 
 ```typescript
 function printState(state: State): void {
-  console.log(`The song state is ${state}`);
+    console.log(`The song state is ${state}`);
 }
 
 function add(num1: number, num2: number): number {
-  return num1 + num2;
+    return num1 + num2;
 }
 ```
 
@@ -363,8 +366,8 @@ Typescript 允许我们为方法(注：接口等同样可以定义可选属性)�
 
 ```typescript
 function printName(firstName: string, lastName?: string) {
-  if (lastName) console.log(`Firstname: ${firstName}, Lastname: ${lastName}`);
-  else console.log(`Firstname: ${firstName}`);
+    if (lastName) console.log(`Firstname: ${firstName}, Lastname: ${lastName}`);
+    else console.log(`Firstname: ${firstName}`);
 }
 ```
 
@@ -383,7 +386,7 @@ printName('Gabriel');
 
 ```typescript
 function printName(firstName: string, lastName: string = 'Tanner') {
-  console.log(`Firstname: ${firstName}, Lastname: ${lastName}`);
+    console.log(`Firstname: ${firstName}, Lastname: ${lastName}`);
 }
 ```
 
@@ -397,16 +400,16 @@ Typescript 中的接口用于定义与我们的代码以及项目之外的代码
 
 ```typescript
 interface Person {
-  name: string;
+    name: string;
 }
 
 const person: Person = {
-  name: 'Gabriel',
+    name: 'Gabriel',
 };
 
 // 不能指定为Person接口
 const person2: Person = {
-  names: 'Gabriel',
+    names: 'Gabriel',
 };
 ```
 
@@ -418,17 +421,17 @@ const person2: Person = {
 
 ```typescript
 interface Person {
-  name: string;
-  age?: number;
+    name: string;
+    age?: number;
 }
 
 const person: Person = {
-  name: 'Frank',
-  age: 28,
+    name: 'Frank',
+    age: 28,
 };
 
 const person2: Person = {
-  name: 'Gabriel',
+    name: 'Gabriel',
 };
 ```
 
@@ -440,14 +443,14 @@ const person2: Person = {
 
 ```typescript
 interface Person {
-  name: string;
-  readonly id: number;
-  age?: number;
+    name: string;
+    readonly id: number;
+    age?: number;
 }
 
 const person: Person = {
-  name: 'Gabriel',
-  id: 3127831827,
+    name: 'Gabriel',
+    id: 3127831827,
 };
 
 person.id = 200; // 不可为id赋值因为它是只读的
@@ -484,7 +487,7 @@ import { Person, Animal, Human } from 'index';
 
 ```typescript
 function dummyFun(arg: any): any {
-  return arg;
+    return arg;
 }
 ```
 
@@ -494,7 +497,7 @@ function dummyFun(arg: any): any {
 
 ```typescript
 function dummyFun<T>(arg: T): T {
-  return arg;
+    return arg;
 }
 ```
 
@@ -545,11 +548,11 @@ TSLINT 允许使用配置我们自己的规则并自定义代码的外观。默�
 
 ```json
 {
-  "defaultSeverity": "error",
-  "extends": ["tslint:recommended"],
-  "jsRules": {},
-  "rules": {},
-  "rulesDirectory": []
+    "defaultSeverity": "error",
+    "extends": ["tslint:recommended"],
+    "jsRules": {},
+    "rules": {},
+    "rulesDirectory": []
 }
 ```
 

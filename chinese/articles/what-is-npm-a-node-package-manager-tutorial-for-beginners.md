@@ -1,7 +1,7 @@
-> - 原文地址：[What is npm? A Node Package Manager Tutorial for Beginners 写给初学者的编程教程：什么是 npm？](https://www.freecodecamp.org/news/what-is-npm-a-node-package-manager-tutorial-for-beginners/)
-> - 原文作者：Stanley Nguyen
-> - 译者：@nsuedu
-> - 校对者：
+> -   原文地址：[What is npm? A Node Package Manager Tutorial for Beginners 写给初学者的编程教程：什么是 npm？](https://www.freecodecamp.org/news/what-is-npm-a-node-package-manager-tutorial-for-beginners/)
+> -   原文作者：Stanley Nguyen
+> -   译者：@nsuedu
+> -   校对者：
 
 ![What is npm? A Node Package Manager Tutorial for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2020/06/cover-4.png)
 
@@ -21,8 +21,8 @@ It's also known as "Ninja Pumpkin Mutants", "Nonprofit Pizza Makers", and a host
 
 NPM consists of two main parts:
 
-- a CLI (command-line interface) tool for publishing and downloading packages, and
-- an [online repository][4] that hosts JavaScript packages
+-   a CLI (command-line interface) tool for publishing and downloading packages, and
+-   an [online repository][4] that hosts JavaScript packages
 
 For a more visual explanation, we can think of the repository [npmjs.com][5] as a fulfillment center that receives packages of goods from sellers (npm package authors) and distributes these goods to buyers (npm package users).
 
@@ -44,10 +44,10 @@ We can think of `package.json` as stamped labels on those npm good boxes that ou
 
 `package.json` will be generated when `npm init` is run to initialise a JavaScript/Node.js project, with these basic metadata provided by developers:
 
-- `name`: the name of your JavaScript library/project
-- `version`: the version of your project. Often times, for application development, this field is often neglected as there's no apparent need for versioning opensource libraies. But still, it can come handy as a source of the deployment's version.
-- `description`: the project's description
-- `license`: the project's license
+-   `name`: the name of your JavaScript library/project
+-   `version`: the version of your project. Often times, for application development, this field is often neglected as there's no apparent need for versioning opensource libraies. But still, it can come handy as a source of the deployment's version.
+-   `description`: the project's description
+-   `license`: the project's license
 
 ### npm scripts
 
@@ -55,15 +55,15 @@ We can think of `package.json` as stamped labels on those npm good boxes that ou
 
 ```json
 {
-  "scripts": {
-    "build": "tsc",
-    "format": "prettier --write **/*.ts",
-    "format-check": "prettier --check **/*.ts",
-    "lint": "eslint src/**/*.ts",
-    "pack": "ncc build",
-    "test": "jest",
-    "all": "npm run build && npm run format && npm run lint && npm run pack && npm test"
-  }
+    "scripts": {
+        "build": "tsc",
+        "format": "prettier --write **/*.ts",
+        "format-check": "prettier --check **/*.ts",
+        "lint": "eslint src/**/*.ts",
+        "pack": "ncc build",
+        "test": "jest",
+        "all": "npm run build && npm run format && npm run lint && npm run pack && npm test"
+    }
 }
 ```
 
@@ -77,25 +77,25 @@ These two come in form of key-value objects with npm libraries' names as the key
 
 ```json
 {
-  "dependencies": {
-    "@actions/core": "^1.2.3",
-    "@actions/github": "^2.1.1"
-  },
-  "devDependencies": {
-    "@types/jest": "^25.1.4",
-    "@types/node": "^13.9.0",
-    "@typescript-eslint/parser": "^2.22.0",
-    "@zeit/ncc": "^0.21.1",
-    "eslint": "^6.8.0",
-    "eslint-plugin-github": "^3.4.1",
-    "eslint-plugin-jest": "^23.8.2",
-    "jest": "^25.1.0",
-    "jest-circus": "^25.1.0",
-    "js-yaml": "^3.13.1",
-    "prettier": "^1.19.1",
-    "ts-jest": "^25.2.1",
-    "typescript": "^3.8.3"
-  }
+    "dependencies": {
+        "@actions/core": "^1.2.3",
+        "@actions/github": "^2.1.1"
+    },
+    "devDependencies": {
+        "@types/jest": "^25.1.4",
+        "@types/node": "^13.9.0",
+        "@typescript-eslint/parser": "^2.22.0",
+        "@zeit/ncc": "^0.21.1",
+        "eslint": "^6.8.0",
+        "eslint-plugin-github": "^3.4.1",
+        "eslint-plugin-jest": "^23.8.2",
+        "jest": "^25.1.0",
+        "jest-circus": "^25.1.0",
+        "js-yaml": "^3.13.1",
+        "prettier": "^1.19.1",
+        "ts-jest": "^25.2.1",
+        "typescript": "^3.8.3"
+    }
 }
 ```
 
@@ -103,8 +103,8 @@ These dependencies are installed via the `npm install` command with `--save` and
 
 Meanwhile, it's important to understand the possible signs that come before the semantic versions (assuming you have read up on `major.minor.patch` model of [semver][11]):
 
-- `^`: latest minor release. For example, a `^1.0.4` specification might install version `1.3.0` if that's the latest minor version in the `1` major series.
-- `~`: latest patch release. In the same way as `^` for minor releases, `~1.0.4` specification might install version `1.0.7` if that's the latest minor version in the `1.0` minor series.
+-   `^`: latest minor release. For example, a `^1.0.4` specification might install version `1.3.0` if that's the latest minor version in the `1` major series.
+-   `~`: latest patch release. In the same way as `^` for minor releases, `~1.0.4` specification might install version `1.0.7` if that's the latest minor version in the `1.0` minor series.
 
 All of these exact package versions will be documented in a generated `package-lock.json` file.
 

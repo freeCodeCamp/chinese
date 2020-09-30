@@ -7,7 +7,7 @@ on:
         branches:
             - master
 jobs:
-    Testing:
+    Lint:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
@@ -16,7 +16,7 @@ jobs:
               uses: actions/setup-node@v2-beta
               with:
                   node-version: '12'
-            - name: Install & Test
+            - name: Install & Lint
               run: |
                   npm install
-                  npm test
+                  npm run lint

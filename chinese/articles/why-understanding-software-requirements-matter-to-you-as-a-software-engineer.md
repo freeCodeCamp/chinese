@@ -1,7 +1,7 @@
-> * 原文地址：[Why You Need to Understand Software Requirements as a Software Engineer 你以为软件工程师就是写代码的吗？深入理解软件需求很重要！](https://www.freecodecamp.org/news/build-a-simple-json-api-in-python/)
-> * 原文作者：Greg Byrne
-> * 译者：
-> * 校对者：
+> -   原文地址：[Why You Need to Understand Software Requirements as a Software Engineer 你以为软件工程师就是写代码的吗？深入理解软件需求很重要！](https://www.freecodecamp.org/news/build-a-simple-json-api-in-python/)
+> -   原文作者：Greg Byrne
+> -   译者：
+> -   校对者：
 
 ![Why You Need to Understand Software Requirements as a Software Engineer](https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/understanding-software-requirements.jpg)
 
@@ -9,7 +9,7 @@ In this article, you'll learn all about Software Requirements. You'll get an out
 
 You should gain some insight into your role and activities with software requirements. If anything, you'll have something to discuss with colleagues after your next stand-up 😃
 
-This article borrows heavily from the tome that is the  [IEEE SWEBOK guide][1]. It attempts to distill some of that knowledge, re-purposing it more concisely. In case your wondering, SWEBOK is an acronym for the Software Engineering Body of Knowledge which is maintained by the IEEE Computer Society.
+This article borrows heavily from the tome that is the [IEEE SWEBOK guide][1]. It attempts to distill some of that knowledge, re-purposing it more concisely. In case your wondering, SWEBOK is an acronym for the Software Engineering Body of Knowledge which is maintained by the IEEE Computer Society.
 
 ## Upfront, Why is this important?
 
@@ -111,7 +111,7 @@ There are many sources to requirements, such as:
 If you're involved in the elicitation from sources, you'll need to:
 
 -   Pay particular attention to the goals.
-    -   These often are generally vague, like  _"The software must be implemented using best practices"_  or  _"The software must be user-friendly"_
+    -   These often are generally vague, like _"The software must be implemented using best practices"_ or _"The software must be user-friendly"_
     -   Assess the relative value to priority of the solution. Study relatively low-cost ways of achieving.
 -   Acquire or have available knowledge about the application domain
     -   This provides you the background information that gives understanding to the reasons behind the requirements.
@@ -266,7 +266,7 @@ You've made it. Kudos to you!
 
 I hope this article provided some benefit in acknowledging your role as a software engineer with Software Requirements.
 
-You can  [read more of my articles on my blog][2].
+You can [read more of my articles on my blog][2].
 
 _This article is shared freely and the author did not receive any contribution or profit as mandated by SWEBOK copyright and reprint permissions. Any views or opinions expressed do not reflect those of IEEE or any body/organization to which I am affiliated with, is not endorsed by the IEEE, and represent my own solely my own view and opinions._
 

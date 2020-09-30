@@ -1,7 +1,7 @@
-> - 原文地址：[How to make your app's architecture secure right now: separation, configuration, and access](https://www.freecodecamp.org/news/secure-application-basics/)
-> - 原文作者：Victoria Drake
-> - 译者：
-> - 校对者：
+> -   原文地址：[How to make your app's architecture secure right now: separation, configuration, and access](https://www.freecodecamp.org/news/secure-application-basics/)
+> -   原文作者：Victoria Drake
+> -   译者：
+> -   校对者：
 
 ![How to make your app's architecture secure right now: separation, configuration, and access](https://www.freecodecamp.org/news/content/images/size/w2000/2019/09/cover-2.png)
 
@@ -23,9 +23,9 @@ Building a foundation based on expediency rather than longevity is a bad way to 
 
 Security debt, like technical debt, amasses when developers make (usually hasty) decisions that can make it more difficult to secure the application later on.
 
-If you’re familiar with the concept of “pushing left” (or if you read my  [article about sensitive data exposure][1]), you’ll know that when it comes to security, sometimes there isn’t a version of “later” that isn’t  _too_  late.
+If you’re familiar with the concept of “pushing left” (or if you read my [article about sensitive data exposure][1]), you’ll know that when it comes to security, sometimes there isn’t a version of “later” that isn’t _too_ late.
 
-It’s a shame, since following some basic security practices with high benefit yield early in the development process doesn’t take significantly more time than  _not_  following them. Often, it comes down to having some basic but important knowledge that helps you to make the more secure decision.
+It’s a shame, since following some basic security practices with high benefit yield early in the development process doesn’t take significantly more time than _not_ following them. Often, it comes down to having some basic but important knowledge that helps you to make the more secure decision.
 
 While application architecture varies greatly, there are a few basic principles you can apply. This article will give you a high-level overview of these areas and point you in the right direction.
 
@@ -62,15 +62,15 @@ application/
      └───master-keys.txt
 ```
 
-In this simplified example, let’s say that all your application’s images are stored in the  `application/assets/images/`  directory. When one of your users creates a profile and uploads their picture to it, this picture is also stored in this folder. Makes sense, right? It’s an image, and that’s where the images go. What’s the issue?
+In this simplified example, let’s say that all your application’s images are stored in the `application/assets/images/` directory. When one of your users creates a profile and uploads their picture to it, this picture is also stored in this folder. Makes sense, right? It’s an image, and that’s where the images go. What’s the issue?
 
-If you’re familiar with navigating a file structure in a terminal, you may have seen this syntax before:  `../../`. The two dots are a handy way of saying, “go up one directory.” If you execute the command  `cd ../../`  in the  `images/`  directory of the simple file structure above, you’d go up into  `assets/`, then up again to the root directory,  `application/`. This is a problem because of a wee little vulnerability dubbed  [path traversal][2].
+If you’re familiar with navigating a file structure in a terminal, you may have seen this syntax before: `../../`. The two dots are a handy way of saying, “go up one directory.” If you execute the command `cd ../../` in the `images/` directory of the simple file structure above, you’d go up into `assets/`, then up again to the root directory, `application/`. This is a problem because of a wee little vulnerability dubbed [path traversal][2].
 
 While the dot syntax saves some typing, it also introduces the interesting advantage of not actually needing to know what the parent directory is called in order to go to it.
 
-Consider an attack payload script, delivered into the  `images/`  folder of this insecure application, that went up one directory using  `cd ../`  and then sent everything it found to the attacker, on repeat. Eventually, it would reach the root application directory and access the  `super-secret-configurations/`  folder. Not good.
+Consider an attack payload script, delivered into the `images/` folder of this insecure application, that went up one directory using `cd ../` and then sent everything it found to the attacker, on repeat. Eventually, it would reach the root application directory and access the `super-secret-configurations/` folder. Not good.
 
-While other measures should be in place to prevent path traversal and related user upload vulnerabilities, the simplest prevention by far is a separation of storage. Core application files and assets should not mix with other data, and especially not with  [user input][3]. It’s best to keep user-uploaded files and activity logs (which may contain juicy data and can be vulnerable to injection attacks) separate from the main application.
+While other measures should be in place to prevent path traversal and related user upload vulnerabilities, the simplest prevention by far is a separation of storage. Core application files and assets should not mix with other data, and especially not with [user input][3]. It’s best to keep user-uploaded files and activity logs (which may contain juicy data and can be vulnerable to injection attacks) separate from the main application.
 
 You can achieve separation by using a different server, different instance, separate IP range, or separate domain.
 
@@ -78,7 +78,7 @@ You can achieve separation by using a different server, different instance, sepa
 
 While wasting time on customization can hinder productivity, one area that you want to customize is configuration settings.
 
-[Security misconfiguration][4]  is listed in the OWASP Top 10. A significant number of security incidents occur because a server, firewall, or administrative account is running in production with default settings. Upon the opening of your new building, you’d hopefully be more careful to ensure you haven’t left any keys in the locks.
+[Security misconfiguration][4] is listed in the OWASP Top 10. A significant number of security incidents occur because a server, firewall, or administrative account is running in production with default settings. Upon the opening of your new building, you’d hopefully be more careful to ensure you haven’t left any keys in the locks.
 
 ![](https://www.freecodecamp.org/news/content/images/2019/09/defaultkey.png)
 
@@ -106,7 +106,7 @@ Developers can reduce the risk that this becomes are hard problem to fix later. 
 
 ![](https://www.freecodecamp.org/news/content/images/2019/09/access-1.png)
 
-[Broken access control][5]  is in the OWASP Top 10, which goes into more detail on its various forms. As a simple example, consider an application with two levels of access: administrators, and users. Developers want to build a new feature - the ability to moderate or ban users - with the intention that only administrators would be allowed to use it.
+[Broken access control][5] is in the OWASP Top 10, which goes into more detail on its various forms. As a simple example, consider an application with two levels of access: administrators, and users. Developers want to build a new feature - the ability to moderate or ban users - with the intention that only administrators would be allowed to use it.
 
 If you’re aware of possible access control vulnerabilities, you may decide to build the moderation feature in a separate area from the user-accessible space. This may be on a different domain, or as part of a model that users don’t share. This reduces the risk that an access control misconfiguration or elevation of privilege vulnerability might allow a user to improperly access the moderation feature later on.
 
@@ -114,7 +114,7 @@ Of course, robust access control in your application needs more support to be ef
 
 ## Security basics for maximum benefit
 
-Developers avoid racking up technical debt by choosing a well-vetted framework. Similarly, developers avoid security debt by becoming aware of common vulnerabilities and the architectural decisions that can help mitigate them. For a much more detailed resource on how to bake security into applications from the start, the  [OWASP Application Security Verification Standard][6]  is a robust guide.
+Developers avoid racking up technical debt by choosing a well-vetted framework. Similarly, developers avoid security debt by becoming aware of common vulnerabilities and the architectural decisions that can help mitigate them. For a much more detailed resource on how to bake security into applications from the start, the [OWASP Application Security Verification Standard][6] is a robust guide.
 
 [1]: https://victoria.dev/blog/hackers-are-googling-your-plain-text-passwords-preventing-sensitive-data-exposure/
 [2]: https://cwe.mitre.org/data/definitions/22.html

@@ -1,7 +1,7 @@
-> * 原文地址：[web-scraping-101-in-python](https://www.freecodecamp.org/news/web-scraping-101-in-python/)
-> * 原文作者：Pierre
-> * 译者：CoderSan1997
-> * 校对者：
+> -   原文地址：[web-scraping-101-in-python](https://www.freecodecamp.org/news/web-scraping-101-in-python/)
+> -   原文作者：Pierre
+> -   译者：CoderSan1997
+> -   校对者：
 
 ![Web Scraping 101 in Python: an overview of the tools & the pros and cons of each](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/oNWkJnaPpRTRTQaw.jpg)
 
@@ -9,12 +9,12 @@
 
 当然，我们不能全面地介绍每个工具。
 
-_注意: 本文中所涉及到的 Python 均指 Python3_ 
+_注意: 本文中所涉及到的 Python 均指 Python3_
 
 ### 本文要点：
 
 -   Web 基础
--   手动创建一个socket并且发送HTTP请求
+-   手动创建一个 socket 并且发送 HTTP 请求
 -   urllib3 & LXML
 -   requests & BeautifulSoup
 -   Scrapy（爬虫框架）
@@ -25,13 +25,13 @@ _注意: 本文中所涉及到的 Python 均指 Python3_
 
 互联网其实是**非常复杂的**–我们通过浏览器浏览一个简单的网页时，其背后其实涉及到许多技术和概念。 我并不打算对其进行逐一讲解, 但我会告诉你如果想要从网络中爬取数据需要了解哪些最重要的知识。
 
-## HyperText Transfer Protocol（超文本传输协议，简称HTTP）
+## HyperText Transfer Protocol（超文本传输协议，简称 HTTP）
 
-HTTP 采用  **C/S模型**, 在HTTP客户机 (如 浏览器, python程序, curl（命令行工具）, Requests等等) 创建一个连接并向HTTP服务器（如 Nginx，Apache等）发送信息 (“我想浏览产品页”)。
+HTTP 采用 **C/S 模型**, 在 HTTP 客户机 (如 浏览器, python 程序, curl（命令行工具）, Requests 等等) 创建一个连接并向 HTTP 服务器（如 Nginx，Apache 等）发送信息 (“我想浏览产品页”)。
 
-然后服务器返回一个响应 (如HTML代码)并且关闭连接.与FTP这些 有状态协议 不同，HTTP的每个事务都是独立的，因此被称为无状态协议。
+然后服务器返回一个响应 (如 HTML 代码)并且关闭连接.与 FTP 这些 有状态协议 不同，HTTP 的每个事务都是独立的，因此被称为无状态协议。
 
-基本上，当您在浏览器中键入网站地址时，HTTP请求如下所示:
+基本上，当您在浏览器中键入网站地址时，HTTP 请求如下所示:
 
 ```python
 GET /product/ HTTP/1.1
@@ -46,19 +46,19 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit\
 
 在这个请求的第一行, 你可以获得如下的信息:
 
--   使用Get动词或者方法, 意味着我们从指定的路径 `/product/` 请求数据。还有其他HTTP谓词，您可以在[这里][2]看到完整的列表。
--   HTTP协议的版本。在本教程中，我们将重点讨论HTTP1。
--   多个header字段。
+-   使用 Get 动词或者方法, 意味着我们从指定的路径 `/product/` 请求数据。还有其他 HTTP 谓词，您可以在[这里][2]看到完整的列表。
+-   HTTP 协议的版本。在本教程中，我们将重点讨论 HTTP1。
+-   多个 header 字段。
 
-以下是最重要的header字段:
+以下是最重要的 header 字段:
 
--   **Host：**  服务器的域名。如果没有给出端口号，则默认为80\*_._\*
--   **User-Agent：**  包含有关发起请求的客户端的信息, 包括OS等信息。比如说上面的例子中,表明了我的浏览器(Chrome),在Mac OS X系统上. 这个header字段很重要，因为它要么用于统计(有多少用户访问我的移动和桌面网站)，要么用于防止机器人的任何违规行为。因为这些报头是由客户端发送的，所以可以使用一种名为“报头欺骗”的技术对其进行修改。这正是我们的爬虫程序要做的，使他们看起来像一个正常的网页浏览器。
--   **Accept：**  表明响应可接受的内容类型. 有许多不同的内容类型和子类型:  **text/plain, text/html, image/jpeg, application/json**  ...
--   **Cookie：**name1=value1;name2=value2... 这个header字段包含一组键值对。这些称为会话cookie,是网站用来验证用户身份和在浏览器中存储数据的工具。比如说, 当你登录时填写完账号密码并提交,服务器会检查你输入的账号密码是否正确。如果无误,它将重定向并且在你的浏览器中注入一个会话cookie，浏览器会将此cookie连同随后的每个请求一起发送给服务器。
--   **Referrer**: 这个字段包含请求实际URL的URL。网站通过此header字段来判断用户的来源，进而调整该用户的网站权限。例如,很多新闻网站都有付费订阅，只允许你浏览10%的帖子。但是，如果用户是像 Reddit 这样的新闻聚合器，就能浏览全部内容。网站使用referrer头字段来进行检查这一点。 有时，我们不得不伪造这个header字段来获取我们想要提取的内容。
+-   **Host：** 服务器的域名。如果没有给出端口号，则默认为 80\*_._\*
+-   **User-Agent：** 包含有关发起请求的客户端的信息, 包括 OS 等信息。比如说上面的例子中,表明了我的浏览器(Chrome),在 Mac OS X 系统上. 这个 header 字段很重要，因为它要么用于统计(有多少用户访问我的移动和桌面网站)，要么用于防止机器人的任何违规行为。因为这些报头是由客户端发送的，所以可以使用一种名为“报头欺骗”的技术对其进行修改。这正是我们的爬虫程序要做的，使他们看起来像一个正常的网页浏览器。
+-   **Accept：** 表明响应可接受的内容类型. 有许多不同的内容类型和子类型: **text/plain, text/html, image/jpeg, application/json** ...
+-   **Cookie：**name1=value1;name2=value2... 这个 header 字段包含一组键值对。这些称为会话 cookie,是网站用来验证用户身份和在浏览器中存储数据的工具。比如说, 当你登录时填写完账号密码并提交,服务器会检查你输入的账号密码是否正确。如果无误,它将重定向并且在你的浏览器中注入一个会话 cookie，浏览器会将此 cookie 连同随后的每个请求一起发送给服务器。
+-   **Referrer**: 这个字段包含请求实际 URL 的 URL。网站通过此 header 字段来判断用户的来源，进而调整该用户的网站权限。例如,很多新闻网站都有付费订阅，只允许你浏览 10%的帖子。但是，如果用户是像 Reddit 这样的新闻聚合器，就能浏览全部内容。网站使用 referrer 头字段来进行检查这一点。 有时，我们不得不伪造这个 header 字段来获取我们想要提取的内容。
 
-当然header字段不仅仅是这些.你可以在[此处][3]获取更多的信息。
+当然 header 字段不仅仅是这些.你可以在[此处][3]获取更多的信息。
 
 服务器将返回类似如下的响应:
 
@@ -70,17 +70,17 @@ Server: nginx/1.4.6 (Ubuntu) Content-Type: text/html; charset=utf-8 <!DOCTYPE ht
 <meta charset="utf-8" /> ...[HTML CODE]
 ```
 
-在第一行我们能看到一个HTTP代码  `200 OK`。这意味着我们的请求成功了。至于请求头，有很多HTTP代码，分为四个常见的类：2XX用于成功请求，3XX用于重定向，4xx用于错误请求(最著名的是404未找到)，5XX用于服务器错误。
+在第一行我们能看到一个 HTTP 代码 `200 OK`。这意味着我们的请求成功了。至于请求头，有很多 HTTP 代码，分为四个常见的类：2XX 用于成功请求，3XX 用于重定向，4xx 用于错误请求(最著名的是 404 未找到)，5XX 用于服务器错误。
 
-如果你使用Web浏览器发送HTTP请求，它将解析HTML代码，获取所有最终资源(JavaScript、CSS和图像文件)，并将结果呈现到主窗口中。
+如果你使用 Web 浏览器发送 HTTP 请求，它将解析 HTML 代码，获取所有最终资源(JavaScript、CSS 和图像文件)，并将结果呈现到主窗口中。
 
-在下一节中，我们将看到使用Python执行HTTP请求的不同方法，并从响应中提取我们想要的数据。
+在下一节中，我们将看到使用 Python 执行 HTTP 请求的不同方法，并从响应中提取我们想要的数据。
 
-# 手动创建一个socket并且发送HTTP请求
+# 手动创建一个 socket 并且发送 HTTP 请求
 
 ## Socket（套接字）
 
-在Python中执行HTTP请求的最基本方法是打开一个[socket][4]并手动发送HTTP请求:
+在 Python 中执行 HTTP 请求的最基本方法是打开一个[socket][4]并手动发送 HTTP 请求:
 
 ```python
 import socket
@@ -101,7 +101,7 @@ while True:
 
 ```
 
-现在我们有了HTTP响应，从其中提取数据的最基本方法就是使用正则表达式。
+现在我们有了 HTTP 响应，从其中提取数据的最基本方法就是使用正则表达式。
 
 ## 正则表达式
 
@@ -109,13 +109,13 @@ while True:
 
 例如，你可以识别网页上的所有电话号码。您也可以轻松地替换字符串。例如，可以将格式较差的 HTML 中的所有大写标记用小写标记替换。还可以验证一些输入。
 
-你可能想知道，为什么在进行Web抓取时了解正则表达式很重要？毕竟，有各种不同的Python模块来解析HTML、XPath和CSS选择器。
+你可能想知道，为什么在进行 Web 抓取时了解正则表达式很重要？毕竟，有各种不同的 Python 模块来解析 HTML、XPath 和 CSS 选择器。
 
 在一个理想的[语义世界中][7] ，数据很容易被机器读取，信息被嵌入到相关的 HTML 元素和具有一定意义的属性中。
 
 但现实世界是混乱的。你经常会在 p 元素中搜索大量的文本。当你想要在这个巨大的文本块中提取特定数据（如价格、日期或名称）时，你必须使用正则表达式。
 
-**注意：**  这篇文章只介绍了一小部分你可以用正则表达式做的事情。你可以通过[这篇文章][8]来练习正则表达式，以及通过[这个很棒的博客][9]来进一步了解。
+**注意：** 这篇文章只介绍了一小部分你可以用正则表达式做的事情。你可以通过[这篇文章][8]来练习正则表达式，以及通过[这个很棒的博客][9]来进一步了解。
 
 当你的数据类似于下面这种的时候，正则表达式就能发挥很大的作用:
 
@@ -124,14 +124,14 @@ while True:
 
 ```
 
-我们可以使用XPath表达式选择这个文本节点，然后使用这种regex提取price。请记住，正则表达式模式是从左到右应用的，每个源字符只使用一次。:
+我们可以使用 XPath 表达式选择这个文本节点，然后使用这种 regex 提取 price。请记住，正则表达式模式是从左到右应用的，每个源字符只使用一次。:
 
 ```
 ^Price\s:\s(\d+.\d{2})$
 
 ```
 
-要提取HTML标记中的文本，使用regex是很烦人的，但它是可行的:
+要提取 HTML 标记中的文本，使用 regex 是很烦人的，但它是可行的:
 
 ```py
 import re
@@ -139,13 +139,13 @@ html_content = '<p>Price : 19.99$</p>'
 
 ```
 
-如您所见，通过socket手动发送HTTP请求并使用正则表达式解析响应是可以完成的，但这很复杂。所以有更高级别的API可以使这个任务变得更容易。
+如您所见，通过 socket 手动发送 HTTP 请求并使用正则表达式解析响应是可以完成的，但这很复杂。所以有更高级别的 API 可以使这个任务变得更容易。
 
 ## urllib3 & LXML
 
->说明: 我们在学习 Python 中的 urllib 系列的库的时候很容易感到迷茫。Python 除了有作为标准库一部分的 urlib 和 urlib2，还有 urlib3。urllib2 在 Python3 中被分成很多模块，不过 urllib3 在短期内应该不会成为标准库的一部分。其实应该有一篇单独文章来讨论这些令人困惑的细节，在本篇中，我选择只讨论 urllib 3，因为它在 Python 世界中被广泛使用。
+> 说明: 我们在学习 Python 中的 urllib 系列的库的时候很容易感到迷茫。Python 除了有作为标准库一部分的 urlib 和 urlib2，还有 urlib3。urllib2 在 Python3 中被分成很多模块，不过 urllib3 在短期内应该不会成为标准库的一部分。其实应该有一篇单独文章来讨论这些令人困惑的细节，在本篇中，我选择只讨论 urllib 3，因为它在 Python 世界中被广泛使用。
 
-urllib3是一个高级包，它允许您对HTTP请求做任何您想做的事情。我们可以用更少的代码行来完成上面的套接字操作：
+urllib3 是一个高级包，它允许您对 HTTP 请求做任何您想做的事情。我们可以用更少的代码行来完成上面的套接字操作：
 
 ```python
 import urllib3
@@ -154,9 +154,10 @@ r = http.request('GET', 'http://www.google.com')
 print(r.data)
 ```
 
-比套接字版本要简洁得多，对吗？不仅如此，API也很简单，您可以轻松地做许多事情，比如添加HTTP头、使用代理、发布表单等等。
+比套接字版本要简洁得多，对吗？不仅如此，API 也很简单，您可以轻松地做许多事情，比如添加 HTTP 头、使用代理、发布表单等等。
 
-例如，如果我们必须设置一些header字段来使用代理，我们只需这样做：
+例如，如果我们必须设置一些 header 字段来使用代理，我们只需这样做：
+
 ```python
 import urllib3
 user_agent_header = urllib3.make_headers(user_agent="<USER AGENT>")
@@ -166,27 +167,27 @@ r = pool.request('GET', 'https://www.google.com/')
 
 看见没?完全相同的行数
 
-然而，有些事情urllib 3并不容易处理。如果要添加cookie，则必须手动创建相应的header字段并将其添加到请求中。
+然而，有些事情 urllib 3 并不容易处理。如果要添加 cookie，则必须手动创建相应的 header 字段并将其添加到请求中。
 
-此外，urllib 3还可以做一些请求不能做的事情，比如池和代理池的创建和管理，以及重试策略的控制。
+此外，urllib 3 还可以做一些请求不能做的事情，比如池和代理池的创建和管理，以及重试策略的控制。
 
-简单地说，urllib 3在抽象方面介于请求和套接字之间，尽管它比套接字更接近请求。
+简单地说，urllib 3 在抽象方面介于请求和套接字之间，尽管它比套接字更接近请求。
 
-为了解析响应，我们将使用lxml包和XPath表达式。
+为了解析响应，我们将使用 lxml 包和 XPath 表达式。
 
 ## XPath
 
-XPath是一种使用路径表达式在XML或HTML文档中选择节点或节点集的技术。与文档对象模型(DocumentObjectModel)一样，XPath自1999年以来一直是W3C标准。即使XPath本身不是一种编程语言，它允许您编写可以直接访问特定节点或节点集的表达式，而无需遍历整个XML或HTML树。
+XPath 是一种使用路径表达式在 XML 或 HTML 文档中选择节点或节点集的技术。与文档对象模型(DocumentObjectModel)一样，XPath 自 1999 年以来一直是 W3C 标准。即使 XPath 本身不是一种编程语言，它允许您编写可以直接访问特定节点或节点集的表达式，而无需遍历整个 XML 或 HTML 树。
 
 可以将 XPath 看作一种专门用于 XML 或 HMTL 的正则表达式。
 
-要使用XPath从HTML文档中提取数据，我们需要3件事:
+要使用 XPath 从 HTML 文档中提取数据，我们需要 3 件事:
 
--   HTML文档
--   一些XPath表达式
--   运行这些表达式的XPath引擎
+-   HTML 文档
+-   一些 XPath 表达式
+-   运行这些表达式的 XPath 引擎
 
-首先，我们将使用我们通过urllib 3获得的HTML。我们只想从Google主页中提取所有链接，所以我们将使用一个简单的XPath表达式 `//a`，并使用LXML来运行它。LXML是一个快速易用的XML和HTML处理库，支持XPath。
+首先，我们将使用我们通过 urllib 3 获得的 HTML。我们只想从 Google 主页中提取所有链接，所以我们将使用一个简单的 XPath 表达式 `//a`，并使用 LXML 来运行它。LXML 是一个快速易用的 XML 和 HTML 处理库，支持 XPath。
 
 _安装_:
 
@@ -215,9 +216,9 @@ https://docs.google.com/document/?usp=docs_alc
 https://www.google.fr/intl/fr/about/products?tab=wh
 ```
 
-请记住，这个示例非常简单，并没有向您展示XPath有多强大。 (注意: 这个XPath表达式应该更改为 `//a/@href`  为了避免在`links`中迭代以获得它们的 `href`)。
+请记住，这个示例非常简单，并没有向您展示 XPath 有多强大。 (注意: 这个 XPath 表达式应该更改为 `//a/@href` 为了避免在`links`中迭代以获得它们的 `href`)。
 
-如果您想了解更多关于XPath的知识，可以阅读这个[很棒的介绍文档][12]. 这个[LXML 文档][13] 也编写得很好，很适合基础阅读。.
+如果您想了解更多关于 XPath 的知识，可以阅读这个[很棒的介绍文档][12]. 这个[LXML 文档][13] 也编写得很好，很适合基础阅读。.
 
 XPath 表达式和 regexp 一样很强大，是从 HTML 中提取信息的最快方法之一。虽然 XPath 也像 regexp 一样很快就会变得凌乱，难以阅读和维护。
 
@@ -225,7 +226,7 @@ XPath 表达式和 regexp 一样很强大，是从 HTML 中提取信息的最快
 
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--HrgsYR9Q--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/requests/requests/master/docs/_static/requests-logo-small.png)
 
-下载量已经超过11,000,000次的[Requests库][14]是Python包中的佼佼者,它是Python使用最广泛的包。
+下载量已经超过 11,000,000 次的[Requests 库][14]是 Python 包中的佼佼者,它是 Python 使用最广泛的包。
 
 安装:
 
@@ -234,30 +235,30 @@ pip install requests
 
 ```
 
-使用Requests库发送一个请求是非常容易的事情:
+使用 Requests 库发送一个请求是非常容易的事情:
 
 ```python
 import requests
 
 ```
 
-使用Requests库可以很容易地执行POST请求、处理cookie和查询参数
+使用 Requests 库可以很容易地执行 POST 请求、处理 cookie 和查询参数
 
-### Hacker News认证
+### Hacker News 认证
 
-假设我们想要创建一个工具来自动提交我们的博客文章给Hacker News或任何其他论坛如Buffer。在提交我们的链接之前，我们需要认证到这些网站。这就是我们要通过Requests和BeautifulSoup做的事情！
+假设我们想要创建一个工具来自动提交我们的博客文章给 Hacker News 或任何其他论坛如 Buffer。在提交我们的链接之前，我们需要认证到这些网站。这就是我们要通过 Requests 和 BeautifulSoup 做的事情！
 
-下面是Hacker News登录表单和相关的DOM:
+下面是 Hacker News 登录表单和相关的 DOM:
 
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--Dr2y7j7F--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://ksah.in/content/images/2016/02/screenshot_hn_login_form.png)
 
-这个表单上有三个 `<input>`标签。第一个带有hidden类型的名字为“goto”输入，另外两个是用户名和密码。
+这个表单上有三个 `<input>`标签。第一个带有 hidden 类型的名字为“goto”输入，另外两个是用户名和密码。
 
-如果你在Chrome浏览器中提交表单，你会发现有很多事情发生：重定向和正在设置cookie。这个cookie将由Chrome在每个后续请求上发送，以便服务器知道您已通过身份验证。
+如果你在 Chrome 浏览器中提交表单，你会发现有很多事情发生：重定向和正在设置 cookie。这个 cookie 将由 Chrome 在每个后续请求上发送，以便服务器知道您已通过身份验证。
 
-通过Requests来做这些工作将会变得非常简单，它将自动为我们处理重定向，而处理cookie则可以使用_Session_Object完成。
+通过 Requests 来做这些工作将会变得非常简单，它将自动为我们处理重定向，而处理 cookie 则可以使用\_Session_Object 完成。
 
-接下来我们需要的是BeautifulSoup，它是一个Python库，它将帮助我们解析服务器返回的HTML，以确定我们是否登录。
+接下来我们需要的是 BeautifulSoup，它是一个 Python 库，它将帮助我们解析服务器返回的 HTML，以确定我们是否登录。
 
 安装:
 
@@ -266,7 +267,7 @@ pip install beautifulsoup4
 
 ```
 
-所以我们要做的就是通过POST请求将这三个带有我们登录凭证的输入发送到 /login 终端，并且验证一个只在登录成功时才出现的元素。
+所以我们要做的就是通过 POST 请求将这三个带有我们登录凭证的输入发送到 /login 终端，并且验证一个只在登录成功时才出现的元素。
 
 ```python
 import requests
@@ -282,18 +283,18 @@ r = s.post(f'{BASE_URL}/login', data=data)
 
 我们可以尝试提取主页上的每一个链接，以了解更多关于 BeautifulSoup 的信息。
 
-_顺便说一句，Hacker News 提供了一个[功能强大的API][17]，所以我们这里只是以它为例，你真的应该直接使用 API，而不是爬取它！__
+\_顺便说一句，Hacker News 提供了一个[功能强大的 API][17]，所以我们这里只是以它为例，你真的应该直接使用 API，而不是爬取它！\_\_
 
-我们需要做的第一件事是观察分析Hacker News主页，以了解我们必须选择的结构和不同的CSS类：
+我们需要做的第一件事是观察分析 Hacker News 主页，以了解我们必须选择的结构和不同的 CSS 类：
 
-我们可以看到所有的posts都在  `<tr class="athing">`里 ,因此，我们需要做的第一件事是选择所有这些标记。通过下面这行代码我们很容易实现：
+我们可以看到所有的 posts 都在 `<tr class="athing">`里 ,因此，我们需要做的第一件事是选择所有这些标记。通过下面这行代码我们很容易实现：
 
 ```
 links = soup.findAll('tr', class_='athing')
 
 ```
 
-然后，对于每个链接，我们将提取其ID、标题、url和排名：
+然后，对于每个链接，我们将提取其 ID、标题、url 和排名：
 
 ```python
 import requests
@@ -313,7 +314,7 @@ for link in links:
 
 ```
 
-正如您所看到的，Requests和BeautifulSoup是提取数据和自动化实现各种操作(如填写表单)的很好的库。如果你想做大规模的网络抓取项目，你仍然可以使用请求，但你需要自己处理很多事情。
+正如您所看到的，Requests 和 BeautifulSoup 是提取数据和自动化实现各种操作(如填写表单)的很好的库。如果你想做大规模的网络抓取项目，你仍然可以使用请求，但你需要自己处理很多事情。
 
 在爬取大量网页的时候，你需要处理很多事情：
 
@@ -329,15 +330,15 @@ for link in links:
 
 ![](https://res.cloudinary.com/practicaldev/image/fetch/s--VIvNnTuY--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://secure.meetupstatic.com/photos/event/1/b/6/6/600_468367014.jpeg)
 
-scrapy是一个强大的Python Web抓取框架。它提供了许多特性来异步下载、处理和保存网页。它处理多线程、爬行(从链接到查找网站中的每个URL的过程)、站点地图爬行等等。
+scrapy 是一个强大的 Python Web 抓取框架。它提供了许多特性来异步下载、处理和保存网页。它处理多线程、爬行(从链接到查找网站中的每个 URL 的过程)、站点地图爬行等等。
 
-Scrapy还有一个名为ScrapyShell的交互模式。你可以使用 ScrapyShell 快速测试代码，比如 XPath 表达式或 CSS 选择器。
+Scrapy 还有一个名为 ScrapyShell 的交互模式。你可以使用 ScrapyShell 快速测试代码，比如 XPath 表达式或 CSS 选择器。
 
 Scrapy 的缺点在于陡峭的学习曲线——有很多东西要学。
 
 继续上述 Hacker News 的例子，我们将编写一个 ScrapySpider，它会抓取前 15 页的结果，并将所有内容保存在 CSV 文件中。
 
-pip安装Scrapy:
+pip 安装 Scrapy:
 
 ```
 pip install Scrapy
@@ -351,7 +352,7 @@ scrapy startproject hacker_news_scraper
 
 ```
 
-在`hacker_news_scraper/spider` 我们将使用Spider的代码创建一个新的Python文件:
+在`hacker_news_scraper/spider` 我们将使用 Spider 的代码创建一个新的 Python 文件:
 
 ```python
 from bs4 import BeautifulSoup
@@ -378,25 +379,25 @@ The initial download delay
 
 它将通过分析响应时间和调整并发线程的数量来确保目标网站不会因为爬虫而负载过大。
 
-您可以使用ScrapyCLI运行下面的代码并且设置不同的输出格式(CSV、JSON、XML等)
+您可以使用 ScrapyCLI 运行下面的代码并且设置不同的输出格式(CSV、JSON、XML 等)
 
 ```
 scrapy crawl hacker-news -o links.json
 
 ```
 
-类似于这样，最终爬取的结果会按照json的格式导出到一个名为links的json文件中
+类似于这样，最终爬取的结果会按照 json 的格式导出到一个名为 links 的 json 文件中
 
 # Selenium & Chrome —headless
 
-对于大规模的网络抓取任务来说，Scrapy是非常好的。但是，如果需要爬取用JavaScript框架编写的单页应用程序，这是不够的，因为它无法呈现JavaScript代码。
+对于大规模的网络抓取任务来说，Scrapy 是非常好的。但是，如果需要爬取用 JavaScript 框架编写的单页应用程序，这是不够的，因为它无法呈现 JavaScript 代码。
 
-爬取这些SPAs是很有挑战性的，因为经常涉及很多Ajax调用和WebSocket连接。如果性能存在问题，你将不得不逐个复制JavaScript代码，这意味着使用浏览器检查器手动检查所有网络调用，并复制和你感兴趣的数据相关的Ajax调用。
+爬取这些 SPAs 是很有挑战性的，因为经常涉及很多 Ajax 调用和 WebSocket 连接。如果性能存在问题，你将不得不逐个复制 JavaScript 代码，这意味着使用浏览器检查器手动检查所有网络调用，并复制和你感兴趣的数据相关的 Ajax 调用。
 
-在某些情况下，涉及到的异步HTTP调用太多，无法获取所需的数据，在headless模式的浏览器中呈现页面可能会更容易。
+在某些情况下，涉及到的异步 HTTP 调用太多，无法获取所需的数据，在 headless 模式的浏览器中呈现页面可能会更容易。
 
-另一个很好的用例是对一个页面进行截图。这是我们将要对Hacker News主页做的事情(再次！)
-pip安装Selenium包:
+另一个很好的用例是对一个页面进行截图。这是我们将要对 Hacker News 主页做的事情(再次！)
+pip 安装 Selenium 包:
 
 ```
 pip install selenium
@@ -410,7 +411,7 @@ brew install chromedriver
 
 ```
 
-然后，我们只需从Selenium包中导入Webriver，配置Chrome的Headless=True，并设置一个窗口大小(否则它非常小)：
+然后，我们只需从 Selenium 包中导入 Webriver，配置 Chrome 的 Headless=True，并设置一个窗口大小(否则它非常小)：
 
 ```python
 from selenium import webdriver
@@ -422,44 +423,39 @@ from selenium.webdriver.chrome.options import Options
 
 ![](https://landen.imgix.net/blog_pkzRugQgwaDvAtAE/assets/kfyrFQpXOyHUbqzq.png)
 
-您可以使用SeleniumAPI和Chrome做更多的事情，比如:
+您可以使用 SeleniumAPI 和 Chrome 做更多的事情，比如:
 
--   执行JavaScript
+-   执行 JavaScript
 -   填写表单
 -   点击元素
--   用CSS选择器或XPath表达式提取元素
+-   用 CSS 选择器或 XPath 表达式提取元素
 
 Selenium 和 headless 模式下的 Chrome 简直是完美组合，能爬取到任何你想要爬取的数据。你可以将使用普通的 Chrome 浏览器所做的所有操作都设置为自动化。
 
-Chrome 最大的缺点是需要大量的内存/CPU 能力。通过一些微调，您可以将每个Chrome实例的内存占用减少到300-400MB，但每个实例仍然需要一个CPU核心。
+Chrome 最大的缺点是需要大量的内存/CPU 能力。通过一些微调，您可以将每个 Chrome 实例的内存占用减少到 300-400MB，但每个实例仍然需要一个 CPU 核心。
 
-如果您想同时运行多个Chrome实例，你将需要强大的服务器（其成本迅速上升），以及持续监视资源。
+如果您想同时运行多个 Chrome 实例，你将需要强大的服务器（其成本迅速上升），以及持续监视资源。
 
 ## 总结
 
 下面是我们在本文中讨论的每一项技术的简要概述表。如果你想要对此表进行补充，请不要犹豫，直接在评论中回复我。
 
-| NAME | SOCKET | URLLIB3 | REQUESTS | SCRAPY | SELENIUM |
-| --- | --- | --- | --- | --- | --- |
-| 易用性 | \- - - | \+ + | \+ + + | \+ + | + |
-| 灵活性 | \+ + + | \+ + + | \+ + | \+ + + | \+ + + |
-| 执行速度 | \+ + + | \+ + | \+ + | \+ + + | + |
-| 适用范围 | \-编写底层编程接口 | \-需要对HTTP进行精细控制的高级应用程序(pip, aws client, requests, streming) | \-调用API  \-简单的应用程序(就HTTP需求而言) | \-爬取一个重要的网站列表  \- 对爬取到的数据进行过滤、提取和加载 | \-JS 渲染 \-Scraping SPA  \-自动化测试  \-程序截图 |
-| 更多 | \-  [官方文档][23]  \-  [不错的教程][24]  👍 | \-  [官方文档][25]  \-  [urllib 3的PIP使用][26], 很有趣 | \-  [官方文档][27]  \-  [Requests usage of urllib3][28] | \-  [官方文档][29]  \-  [Scrapy overview][30] | \-  [官方文档][31]  \-  [Scraping SPA][32] |
+| NAME     | SOCKET                                   | URLLIB3                                                                       | REQUESTS                                             | SCRAPY                                                         | SELENIUM                                         |
+| -------- | ---------------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------ |
+| 易用性   | \- - -                                   | \+ +                                                                          | \+ + +                                               | \+ +                                                           | +                                                |
+| 灵活性   | \+ + +                                   | \+ + +                                                                        | \+ +                                                 | \+ + +                                                         | \+ + +                                           |
+| 执行速度 | \+ + +                                   | \+ +                                                                          | \+ +                                                 | \+ + +                                                         | +                                                |
+| 适用范围 | \-编写底层编程接口                       | \-需要对 HTTP 进行精细控制的高级应用程序(pip, aws client, requests, streming) | \-调用 API \-简单的应用程序(就 HTTP 需求而言)        | \-爬取一个重要的网站列表 \- 对爬取到的数据进行过滤、提取和加载 | \-JS 渲染 \-Scraping SPA \-自动化测试 \-程序截图 |
+| 更多     | \- [官方文档][23] \- [不错的教程][24] 👍 | \- [官方文档][25] \- [urllib 3 的 PIP 使用][26], 很有趣                       | \- [官方文档][27] \- [Requests usage of urllib3][28] | \- [官方文档][29] \- [Scrapy overview][30]                     | \- [官方文档][31] \- [Scraping SPA][32]          |
 
-  
-我希望这个概述将帮助您选择您的Python抓取工具，并希望您通过本文能有所收获。
+我希望这个概述将帮助您选择您的 Python 抓取工具，并希望您通过本文能有所收获。
 
-我在这篇文章中所说的一切都是我用来建立我新的黑客项目的东西。:  [ScrapingNinja][33], 最简单的web爬虫API 😊.
+我在这篇文章中所说的一切都是我用来建立我新的黑客项目的东西。: [ScrapingNinja][33], 最简单的 web 爬虫 API 😊.
 
 这篇文章中提及的每一个工具，我之后都会单独写一篇博客来进行深入阐述其细节。
 
 不要犹豫，在评论中告诉我你还想知道关于爬虫的哪些知识。我将会在下一篇文章中进行讲解分析
 Happy Scraping!
-
-  
-
-  
 
 [1]: https://www.freecodecamp.org/news/guide-to-web-scraping/
 [2]: https://www.w3schools.com/tags/ref_httpmethods.asp

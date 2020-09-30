@@ -1,7 +1,7 @@
-> * 原文地址：[Why JavaScript Is the Programming Language of the Future](https://www.freecodecamp.org/news/future-of-javascript/)
-> * 原文作者：Mehul Mohan
-> * 译者：
-> * 校对者：
+> -   原文地址：[Why JavaScript Is the Programming Language of the Future](https://www.freecodecamp.org/news/future-of-javascript/)
+> -   原文作者：Mehul Mohan
+> -   译者：
+> -   校对者：
 
 ![Why JavaScript Is the Programming Language of the Future](https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/jsposter.jpg)
 
@@ -39,7 +39,7 @@ JavaScript has one of the most mature – if not THE most mature – ecosystems 
 
 You can fire up a browser (found on 100% of personal computers), open the console, and you'll find a JS engine waiting for you to run code! This was never the case with any other programming languages of such complexity.
 
-As if the vast community wasn't enough, we have the  `npm`  and  `yarn`  package systems. You name it and there's a package for that on the  `npm`  registry – everything from creating random strings to handling streams and buffers in JavaScript. There's a very famous saying among JavaScript developers:
+As if the vast community wasn't enough, we have the `npm` and `yarn` package systems. You name it and there's a package for that on the `npm` registry – everything from creating random strings to handling streams and buffers in JavaScript. There's a very famous saying among JavaScript developers:
 
 > What can be done in JavaScript, would eventually be done in JavaScript
 
@@ -69,7 +69,7 @@ For instance, here are some pending bleeding edge features which might make it i
 
 ![](https://www.freecodecamp.org/news/content/images/2020/04/Screenshot-2020-04-04-at-10.03.59-PM.png)
 
-You can find all the proposals here:  [TC39 Proposals][1].
+You can find all the proposals here: [TC39 Proposals][1].
 
 ## JavaScript is FAST and SCALABLE
 
@@ -83,9 +83,9 @@ JavaScript leads the asynchronous event driven programming model of the industry
 
 ## Conclusion
 
-I love JavaScript, and using it I've created a developer platform for developers like you. There you can not only learn JavaScript, but also various other languages like C, C++, Java, Node, Python, and more!  [Join here for free][2]  and learn with other developers straight outta your browser!
+I love JavaScript, and using it I've created a developer platform for developers like you. There you can not only learn JavaScript, but also various other languages like C, C++, Java, Node, Python, and more! [Join here for free][2] and learn with other developers straight outta your browser!
 
-JavaScript is here to stay, and rule the industry this decade. Do you agree? Tell me on my  [twitter][3]  and  [Instagram][4]  handles - let's connect!
+JavaScript is here to stay, and rule the industry this decade. Do you agree? Tell me on my [twitter][3] and [Instagram][4] handles - let's connect!
 
 [1]: https://github.com/tc39/proposals
 [2]: https://codedamn.com/

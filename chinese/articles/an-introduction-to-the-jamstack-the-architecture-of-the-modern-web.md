@@ -1,11 +1,11 @@
-> * 原文地址：[An introduction to the JAMstack: the architecture of the modern web](https://www.freecodecamp.org/news/an-introduction-to-the-jamstack-the-architecture-of-the-modern-web-c4a0d128d9ca/)
-> * 原文作者：Bolaji Ayodeji
-> * 译者：
-> * 校对者：
+> -   原文地址：[An introduction to the JAMstack: the architecture of the modern web](https://www.freecodecamp.org/news/an-introduction-to-the-jamstack-the-architecture-of-the-modern-web-c4a0d128d9ca/)
+> -   原文作者：Bolaji Ayodeji
+> -   译者：
+> -   校对者：
 
 ![An introduction to the JAMstack: the architecture of the modern web](https://cdn-media-1.freecodecamp.org/images/1*xYSNCnp6eh2ZDpwQtYL6qg.jpeg)
 
-I’m sure you’ve come across the word JAMstack before but you might not have understood what it really meant. I’ve seen this word before also but didn’t care to check it out until  [Egwuenu Gift][1]  organized  [JAMstack Lagos][2]. I then realized that I’ve been building JAMstack applications already.
+I’m sure you’ve come across the word JAMstack before but you might not have understood what it really meant. I’ve seen this word before also but didn’t care to check it out until [Egwuenu Gift][1] organized [JAMstack Lagos][2]. I then realized that I’ve been building JAMstack applications already.
 
 JAMstack is a modern web development architecture. It is not a programming language or any form of tool. It is more of a web development practice aimed towards enforcing better performance, higher security, lower cost of scaling, and better developer experience.
 
@@ -15,7 +15,7 @@ In this article, I’ll introduce you to what JAMstack means, why you should car
 
 ![](https://cdn-media-1.freecodecamp.org/images/oE3wYE3Ygr1SlH2dTXkM5lXW-DyHPlmMrQww)
 
-According to the official  [JAMstack documentation][3],
+According to the official [JAMstack documentation][3],
 
 > JAMstack is a Modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup.
 
@@ -23,11 +23,11 @@ According to the official  [JAMstack documentation][3],
 
 > The JAMstack is not about specific technologies. It’s a new way of building websites and apps that delivers better performance, higher security, lower cost of scaling, and a better developer experience.
 
-**JAMstack**  is a major trend in web development coined by  [Mathias Biilman][4], the CEO and co-founder of Netlify.
+**JAMstack** is a major trend in web development coined by [Mathias Biilman][4], the CEO and co-founder of Netlify.
 
 ### Okay, chill! What is JAMstack?
 
-You might have come across specific terms like  **MEAN stack**  and  **MERN stack.**  These are just terms used to classify or group some certain technologies with the aim of achieving a particular goal.
+You might have come across specific terms like **MEAN stack** and **MERN stack.** These are just terms used to classify or group some certain technologies with the aim of achieving a particular goal.
 
 JAMstack here stands for
 
@@ -48,9 +48,9 @@ JAMstack projects don’t rely on server-side code — they can be distributed i
 I’ll be using these terms in this article frequently and I thought you should know their meanings (if you don’t already):
 
 -   **API** is the acronym for Application Programming Interface, which is a software intermediary that allows two applications to talk to each other.
--   **CDN**  (content delivery network) is a system of distributed servers (network) that deliver pages and other Web content to a user, based on the geographic locations of the user, the origin of the webpage and the content delivery server.
--   A  **Server** is a computer designed to process requests and deliver data to another computer over the internet or a local network.
--   A  **Database** is a collection of information that is organized so that it can be easily accessed, managed, and updated
+-   **CDN** (content delivery network) is a system of distributed servers (network) that deliver pages and other Web content to a user, based on the geographic locations of the user, the origin of the webpage and the content delivery server.
+-   A **Server** is a computer designed to process requests and deliver data to another computer over the internet or a local network.
+-   A **Database** is a collection of information that is organized so that it can be easily accessed, managed, and updated
 
 ### Why JAMstack?
 
@@ -62,7 +62,7 @@ Sounds cool right?!
 
 #### JAMstack is fast
 
-When it comes to minimizing the time of load, nothing beats pre-built files served over a CDN. JAMstack sites are super fast because the HTML is already generated during deploy time and just served via  [CDN][5]  without any interference or backend delays.
+When it comes to minimizing the time of load, nothing beats pre-built files served over a CDN. JAMstack sites are super fast because the HTML is already generated during deploy time and just served via [CDN][5] without any interference or backend delays.
 
 #### JAMstack is highly secured
 
@@ -79,18 +79,18 @@ JAMstack sites only contain just a few files with minimal sizes that can be serv
 -   Use build tools and make your project compatible for all browsers (e.g Babel, Browserify, Webpack, etc.)
 -   Ensure your project is up to web standards and highly accessible
 -   Ensure your build process is automated to reduce stress.
--   Make your deployment process automatic, you can use platforms like  [Netlify][6]  to do this
+-   Make your deployment process automatic, you can use platforms like [Netlify][6] to do this
 
 ### How do I Get Started?
 
 You can use some already built technologies to build JAMstack applications in a few minutes. Here are a few:
 
--   [**Gatsby**][7]**:** Gatsby is a free and open source framework based on React that helps developers build blazing fast  **websites and**  **apps**
+-   [**Gatsby**][7]**:** Gatsby is a free and open source framework based on React that helps developers build blazing fast **websites and** **apps**
 -   [**NuxtJS**][8]**:** NuxtJS is the Vue.js Framework for Universal applications, static generated applications, single page applications, progressive web apps and desktop apps
 -   [**Hugo**][9]**:** Hugo is the world’s fastest framework for building websites. It is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.
 -   [**Netlify CMS**][10]**:** Netlify CMS is an open source content management for your Git workflow which can be used with any static site generator for a faster and more flexible web project
 -   [**Contentful**][11]**:** Contentful is a smarter and seamless content management system which provides editors and developers with a unified content thereby enhancing collaboration and ensuring digital products ship to the market faster.
--   [**Svelte**][12]**:** Svelte is a radical new approach to building user interfaces. Whereas traditional frameworks like React and Vue do the bulk of their work in the  _browser_, Svelte shifts that work into a  _compile step_  that happens when you build your app.
+-   [**Svelte**][12]**:** Svelte is a radical new approach to building user interfaces. Whereas traditional frameworks like React and Vue do the bulk of their work in the _browser_, Svelte shifts that work into a _compile step_ that happens when you build your app.
 
 [**_and many more. . ._**][13]
 
@@ -104,7 +104,7 @@ You can use some already built technologies to build JAMstack applications in a 
 -   [**Go static: 5 reasons to try JAMstack on your next project**][19]
 -   [**Static Websites + JAMstack = ❤**][20]
 
-Find more resources  [here][21]
+Find more resources [here][21]
 
 ### Conclusion
 
@@ -112,11 +112,11 @@ JAMstack was invented as a way to put a nomenclature to the new way of building 
 
 JAMstack is not about specific technologies, it is a modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup.
 
-Join the  [JAMstack community][22]  to learn more and get more updates.
+Join the [JAMstack community][22] to learn more and get more updates.
 
 ![](https://cdn-media-1.freecodecamp.org/images/BoR0w2G9fjZDSJDFTlZoGE4gK810ODcs8vz3)
 
-> PS: This article was first published on my blog  [here][23]
+> PS: This article was first published on my blog [here][23]
 
 [1]: https://www.freecodecamp.org/news/an-introduction-to-the-jamstack-the-architecture-of-the-modern-web-c4a0d128d9ca/undefined
 [2]: https://twitter.com/jamstacklagos

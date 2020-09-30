@@ -1,13 +1,13 @@
-> * 原文地址：[How to Turn Your Website into a Mobile App with 7 Lines of JSON](https://www.freecodecamp.org/news/how-to-turn-your-website-into-a-mobile-app-with-7-lines-of-json-631c9c9895f5/)
-> * 原文作者：Ethan
-> * 译者：Zhuotao Lian
-> * 校对者：
+> -   原文地址：[How to Turn Your Website into a Mobile App with 7 Lines of JSON](https://www.freecodecamp.org/news/how-to-turn-your-website-into-a-mobile-app-with-7-lines-of-json-631c9c9895f5/)
+> -   原文作者：Ethan
+> -   译者：Zhuotao Lian
+> -   校对者：
 
 ![How to Turn Your Website into a Mobile App with 7 Lines of JSON](https://cdn-media-1.freecodecamp.org/images/1*x-5_XGJJhAgiBmLe54I3xg.png)
 
 #### 一种将 web 引擎与应用程序融合的新方法
 
-如果我告诉你**上面7行橙色的 JSON 代码**就能将网站变成移动应用，你怎么看？不需要使用框架 API 重写你的网站就能让它像移动应用一样呈现。就让你现有的网站保持原样，利用简单的 URL 引用将其打包成原生应用即可。
+如果我告诉你**上面 7 行橙色的 JSON 代码**就能将网站变成移动应用，你怎么看？不需要使用框架 API 重写你的网站就能让它像移动应用一样呈现。就让你现有的网站保持原样，利用简单的 URL 引用将其打包成原生应用即可。
 
 倘若如上，你只需略微调整 JSON 代码，就可以访问所有的原生 API，原生 UI 组件以及实现原生视图转换。
 
@@ -37,9 +37,9 @@
 
 最后，请注意，二维码会随着你输入内容的不同而变化。此输入会触发二维码 Web 应用内的 JavaScript 函数，从而重新生成二维码。
 
-目前还没有试图从根本上解决  **“将 Web 视图无缝集成到原生应用程序”** 这一问题的应用开发框架，因为它们都专注于完全的原生或 HTML5。
+目前还没有试图从根本上解决 **“将 Web 视图无缝集成到原生应用程序”** 这一问题的应用开发框架，因为它们都专注于完全的原生或 HTML5。
 
-每当你听到有人谈论移动应用的未来，你都可能会听到他们谈论 **“究竟是 HTML5 还是原生方法会胜出呢？”** 
+每当你听到有人谈论移动应用的未来，你都可能会听到他们谈论 **“究竟是 HTML5 还是原生方法会胜出呢？”**
 
 人们觉得`原生`和`HTML`是不能共存的，更不会认为它们能相辅相成，甚至实现看似不可能的功能。
 
@@ -55,7 +55,7 @@
 
 #### 1\. 使用 Web 原生功能
 
-你的应用的某些部分可能更适合用 Web 引擎实现。 例如，[Websocket][4] 是一个为 Web 环境设计的原生 Web 功能。在这种情况下，安装本质上  **“模拟”**  Websocket 的第三方库，就不如使用内置的 Web 引擎（ **iOS 版的   WKWebView**  和 **Android 版的 WebView**）。 
+你的应用的某些部分可能更适合用 Web 引擎实现。 例如，[Websocket][4] 是一个为 Web 环境设计的原生 Web 功能。在这种情况下，安装本质上 **“模拟”** Websocket 的第三方库，就不如使用内置的 Web 引擎（ **iOS 版的 WKWebView** 和 **Android 版的 WebView**）。
 
 无需安装额外的代码，你就可以免费实现。这也引出了下一点。
 
@@ -87,9 +87,9 @@ Jasonette 是一种开源的，基于标记的用于构建跨平台原生应用�
 
 它就像一个 Web 浏览器，但它不是将 HTML 标记语言解释为网页，而是将 JSON 标记语言解释为 IOS 或 Android 端的原生应用。
 
-就像所有的 Web 浏览器都有完全相同的代码，却可以通过按需解释各种 HTML 标记来为你提供各种不同的 Web 应用程序一样，所有 Jasonette 应用程序都有完全相同的二进制文件，它按需解释各种 JSON  标记来创建你的应用。开发人员不需要接触代码。相反，你可以通过编写标记来构建应用程序，该标记可以实时转换为原生应用程序。
+就像所有的 Web 浏览器都有完全相同的代码，却可以通过按需解释各种 HTML 标记来为你提供各种不同的 Web 应用程序一样，所有 Jasonette 应用程序都有完全相同的二进制文件，它按需解释各种 JSON 标记来创建你的应用。开发人员不需要接触代码。相反，你可以通过编写标记来构建应用程序，该标记可以实时转换为原生应用程序。
 
-你可以在 [这里][5]进一步学习 Jasonette。 
+你可以在 [这里][5]进一步学习 Jasonette。
 
 虽然 Jasonette 的核心是构建原生应用程序，但本文旨在介绍如何将 HTML 集成到核心原生引擎中，接下来就让我们进一步探讨。
 
@@ -103,10 +103,10 @@ Jasonette 是一种开源的，基于标记的用于构建跨平台原生应用�
 2.  **父应用可以控制子 Web 容器：** 父应用应当可以轻松地控制子 Web 视图。
 3.  **子 Web 容器可以触发父应用的原生事件：** 子应用应当可以触发父应用事件从而运行原生 API。
 
-这有许多工作要做，所以我首先介绍第一部分： ——  **简单地将 Web 容器嵌入原生布局中**  ——并将其作为版本1发布： 
+这有许多工作要做，所以我首先介绍第一部分： —— **简单地将 Web 容器嵌入原生布局中** ——并将其作为版本 1 发布：
 
 [**JSON Web 容器**][6]  
-[_JSON 中的 HTML 变成了原生应用中的组件_jasonette.com][7]
+[\_JSON 中的 HTML 变成了原生应用中的组件\_jasonette.com][7]
 
 这已经非常实用了，但由于其不可交互性，仍然存在一些限制。
 
@@ -114,7 +114,7 @@ Jasonette 是一种开源的，基于标记的用于构建跨平台原生应用�
 
 #### C. Jasonette Web 容器 2.0：使其可交互
 
-在发布了版本1之后，我进行了第二部分的实验。——  **使 Web 容器变得可交互**
+在发布了版本 1 之后，我进行了第二部分的实验。—— **使 Web 容器变得可交互**
 
 下文将解释添加的解决方案，这些解决方案使得过去的静态 Web 容器变得可交互，并显著增强了它们的功能。
 
@@ -124,7 +124,7 @@ Jasonette 是一种开源的，基于标记的用于构建跨平台原生应用�
 
 #### 问题
 
-先前在版本1中，想要将 Web 容器用作后台视图组件，你必须要首先 [将`$jason.body.background.type`设置为`"html"`然后在 `$jason.body.background.text`属性下硬编码 HTML 文本 ][8]，如下所示：
+先前在版本 1 中，想要将 Web 容器用作后台视图组件，你必须要首先 [将`$jason.body.background.type`设置为`"html"`然后在 `$jason.body.background.text`属性下硬编码 HTML 文本 ][8]，如下所示：
 
 ```
 {  "$jason": {    "head": {      ...    },    "body": {      "background": {        "type": "html",        "text": "<html><body><h1>Hello World</h1></body></html>"      }    }  }}
@@ -134,7 +134,7 @@ Jasonette 是一种开源的，基于标记的用于构建跨平台原生应用�
 
 #### 解决方法
 
-Web 容器2.0已经添加了`url`属性。 你可以像这样嵌入本地`file://`HTML（它加载自应用程序附带的本地 HTML 文件）：
+Web 容器 2.0 已经添加了`url`属性。 你可以像这样嵌入本地`file://`HTML（它加载自应用程序附带的本地 HTML 文件）：
 
 ```
 {  "$jason": {    "head": {      ...    },    "body": {      "background": {        "type": "html",        "url": "file://index.html"      }    }  }}
@@ -150,7 +150,7 @@ Web 容器2.0已经添加了`url`属性。 你可以像这样嵌入本地`file:/
 
 #### 问题
 
-此前，Web容器只用于显示内容，而非可交互的。这意味着 **以下任一项都不可能实现：**
+此前，Web 容器只用于显示内容，而非可交互的。这意味着 **以下任一项都不可能实现：**
 
 1.  **Jasonette => Web 容器**: 从 Jasonette 调用 Web 容器内的 JavaScript 函数。
 2.  **Web 容器 => Jasonette**: 从 Web 容器代码调用原生 API。
@@ -159,22 +159,23 @@ Web 容器2.0已经添加了`url`属性。 你可以像这样嵌入本地`file:/
 
 #### 解决方法
 
-Jasonette 的重点是设计一种标准的标记语言来描述跨平台的移动应用程序。因此，我们需要它能够全面描述父应用与子 Web 容器间的通信。 
+Jasonette 的重点是设计一种标准的标记语言来描述跨平台的移动应用程序。因此，我们需要它能够全面描述父应用与子 Web 容器间的通信。
 
 为了实现这一点，我在父应用和子 Web 容器之间设计了一个基于`[JSON-RPC][9]`的通信信道。由于 Jasonette 上的所有内容都是用 JSON 对象表示的，所以使用 JSON-RPC 标准格式作为通信协议是非常有意义的。
 
 ![](https://cdn-media-1.freecodecamp.org/images/dISqZspArHgei6hasHQ89nw7g1GrWSsyPG8s)
 
 为了对 Web 容器能进行 JavaScript 函数调用我们声明了一个名为`$agent.request`的操作：
+
 ```
 {  "type": "$agent.request",  "options": {    "id": "$webcontainer",    "method": "login",    "params": ["username", "password"]  }}
 ```
 
 `[$agent.request][10]`是触发 JSON-RPC 请求并发送到 Web 容器中的原生 API。要使用它，我们必须传递一个`options`对象作为其参数。
 
- `options`对象是将被发送到 Web 容器的实际[ JSON-RPC 请求][11] 。让我们看看各个属性的含义：
+`options`对象是将被发送到 Web 容器的实际[ JSON-RPC 请求][11] 。让我们看看各个属性的含义：
 
--   `id`: Web 容器构建在一个名为  [Agent][12] 的底层架构之上。通常，一个视图可以有多个 Agent，每个 Agent 都有其唯一的ID。但是 [ Web 容器是一种特殊的 Agent，他只能使用`$webcontainer`作为 ID][13], 因此我们在这里使用这个 ID。
+-   `id`: Web 容器构建在一个名为 [Agent][12] 的底层架构之上。通常，一个视图可以有多个 Agent，每个 Agent 都有其唯一的 ID。但是 [ Web 容器是一种特殊的 Agent，他只能使用`$webcontainer`作为 ID][13], 因此我们在这里使用这个 ID。
 -   `method`: 要调用的 JavaScript 函数名
 -   `params`: 传递给 JavaScript 函数的参数数组。
 
@@ -200,17 +201,17 @@ login("alice", "1234")
 
 详情请参阅 [Agent 文档][18]。
 
-#### 范例 
+#### 范例
 
 让我们回到前面简单分享的二维码示例：
 
 ![](https://cdn-media-1.freecodecamp.org/images/q5-enhI0kpKTs6F33sgyI0mS9sLqOXnHFeHI)
 
-1.  其中 [底部的输入组件是100%原生的][19]。
+1.  其中 [底部的输入组件是 100%原生的][19]。
 2.  二维码是由 [作为 Web 应用][20]的 Web 容器产生的。
-3. 当用户输入某些内容，并按 “Generate” 时，它将调用 Web 容器 Agent 的`$agent.request`操作，并进一步调用  [JavaScript 函数 "qr"][21]。
+3.  当用户输入某些内容，并按 “Generate” 时，它将调用 Web 容器 Agent 的`$agent.request`操作，并进一步调用 [JavaScript 函数 "qr"][21]。
 
-你可以在[这里][22]参阅示例。 
+你可以在[这里][22]参阅示例。
 
 #### **3\. 脚本注入**
 
@@ -220,7 +221,7 @@ login("alice", "1234")
 
 假设你要构建一个自定义的 Web 浏览器应用程序。你可能想将自己的自定义 JavaScript 注入到每个 Web 视图中以自定义 Web 视图的行为，这有点像 Web 浏览器的扩展。
 
-就算你不想构建 Web 浏览器，在想对那些内容无法控制的 URL 实现自定义行为时，你也需要使用脚本注入方法。在原生应用程序和 Web 容器之间实现通信的唯一方法就是通过 `$agent`API。但若你无法更改 HTML 内容，则只能通过动态注入的方式将`$agent`接口添加到 Web 容器中。 
+就算你不想构建 Web 浏览器，在想对那些内容无法控制的 URL 实现自定义行为时，你也需要使用脚本注入方法。在原生应用程序和 Web 容器之间实现通信的唯一方法就是通过 `$agent`API。但若你无法更改 HTML 内容，则只能通过动态注入的方式将`$agent`接口添加到 Web 容器中。
 
 #### 解决方法
 
@@ -233,13 +234,13 @@ login("alice", "1234")
 在过去，Web 容器处理链接点击只有两种方法：
 
 1.  **只读：** 将 Web 容器视为只读，并忽略触摸或滚动等所有事件。这样所有 Web 容器都是只读的，除非你让它表现得像常规浏览器一样，正如下文所述。
-2.  **常规浏览器行为：**  像普通浏览器一样，让用户与页面交互。这需要将`“type”：“$default”`设置为 `“action”`属性来进行声明。
+2.  **常规浏览器行为：** 像普通浏览器一样，让用户与页面交互。这需要将`“type”：“$default”`设置为 `“action”`属性来进行声明。
 
 #### 问题
 
-二者都是  **“孤注一掷” 的方案**。
+二者都是 **“孤注一掷” 的方案**。
 
--   在 “只读”情况下，Web 容器将忽略你所有的交互。 
+-   在 “只读”情况下，Web 容器将忽略你所有的交互。
 -   在 “常规浏览器行为” 的情况下，Web 容器表现得像浏览器一样。当你点击一个链接，它会像网页一样将链接内容通过刷新页面展示给你。 你无法劫持该链接并调用原生 API。
 
 #### 解决方法
@@ -270,7 +271,7 @@ login("alice", "1234")
 {  "$jason": {    "head": {      "actions": {        "handleLink": [{          "{{#if $jason.url.indexOf('signin') !== -1 }}": {            "type": "$href",            "options": {              "url": "file://key.html"            }          }        }, {          "{{#else}}": {            "type": "$default"          }        }]      }    },    "body": {      "background": {        "type": "html",        "url": "file://index.html",        "action": {          "trigger": "handleLink"        }      }    }  }}
 ```
 
-我们测试URL是否包括`signin`字符串，然后根据结果执行不同的操作。
+我们测试 URL 是否包括`signin`字符串，然后根据结果执行不同的操作。
 
 1.  若包含`signin`，则会打开一个新视图并以原生方式处理本地登录。
 2.  若不包含`signin`，则只会运行`"type": "$default"`操作，就像普通浏览器一样。
@@ -306,7 +307,7 @@ login("alice", "1234")
 
 **步骤 2.根据`$jason.url`的值运行`visit`中的相关操作**
 
-在以下代码中，我们将检查`$jason.url`是否与 `newest`,  `show`,  `ask`等相匹配（它们是顶部菜单选项的链接）。若匹配，我们可以通过设置`"type": "$default"`来让 Web 容器像常规浏览器一样工作。
+在以下代码中，我们将检查`$jason.url`是否与 `newest`, `show`, `ask`等相匹配（它们是顶部菜单选项的链接）。若匹配，我们可以通过设置`"type": "$default"`来让 Web 容器像常规浏览器一样工作。
 
 若模式不匹配，我们将通过原生的`$href`过渡到新视图，并将点击的链接作为参数进行传递。
 
@@ -314,7 +315,7 @@ login("alice", "1234")
 ..."actions": {  "visit": [    {      "{{#if /\\/(newest|show|ask)$/.test($jason.url) }}": {        "type": "$default"      }    },    {      "{{#else}}": {        "type": "$href",        "options": {          "url": "https://jasonette.github.io/Jasonpedia/webcontainer/agent/hijack.json",          "preload": {            "background": "#ffffff"          },          "options": {            "url": "{{$jason.url}}"          }        }      }    }  ]},
 ```
 
-在  [此处][25]  查看 Web 浏览器的完整 JSON 标记（它仅有48行！）。
+在 [此处][25] 查看 Web 浏览器的完整 JSON 标记（它仅有 48 行！）。
 
 #### 即时 “混合” 应用
 

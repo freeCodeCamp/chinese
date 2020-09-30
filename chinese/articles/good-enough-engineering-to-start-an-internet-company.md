@@ -2,17 +2,16 @@
 title: 创建一家互联网公司的最佳工程实践
 date: 2019-08-06 16:04:51
 authors:
-  - TechQuery
-  - Wenbin Fang
+    - TechQuery
+    - Wenbin Fang
 categories:
-  - chinese
-  - articles
+    - chinese
+    - articles
 tags:
-  - engineer
-  - Internet
-  - start-up
+    - engineer
+    - Internet
+    - start-up
 updated: 2019-08-06 16:10:35
-
 ---
 
 I gave a guest lecture in an undergraduate software engineering class (CSCE431) at Texas A&M University in March 2019. Now I’ve turned this lecture into a blog post here, and hopefully some people on the Internet will find this useful.
@@ -51,15 +50,15 @@ I can choose to spend money being 200% more productive myself, or spend money hi
 
 By starting an internet business, we need to have a formal company, a legal entity. There’s a service for that.
 
-I used Stripe Atlas to incorporate Listen Notes, Inc. I paid $500, and I got a Delaware C Corp within 10 days. Stripe Atlas provides some nice perks, e.g., $5k AWS (Amazon Web Services) credits. But to keep the company around, I have to pay ~$2k/year for taxes, accounting, and other stuff. This gives you a basic idea of the minimum cost of running a company.
+I used Stripe Atlas to incorporate Listen Notes, Inc. I paid $500, and I got a Delaware C Corp within 10 days. Stripe Atlas provides some nice perks, e.g., $5k AWS (Amazon Web Services) credits. But to keep the company around, I have to pay ~\$2k/year for taxes, accounting, and other stuff. This gives you a basic idea of the minimum cost of running a company.
 
 Because we are a company now, we have to deal with some legal stuff. There’s a service for that.
 
 You can use Clerky to generate legal documents or use UpCounsel to get a lawyer. I’ve used both services. They aren’t perfect, but they worth the money. You can’t expect to get Ritz-Carlton-level services with a McDonald’s price, right? If you want to be happy, you’d better set the correct level of expectation.
 
-To get started, you just need a good enough domain name — a $10/year .com domain. You can always buy a great domain name later.
+To get started, you just need a good enough domain name — a \$10/year .com domain. You can always buy a great domain name later.
 
-For example, Dropbox used getdropbox.com for more than 2 years before they bought dropbox.com for $300k. How did I discover that kind of trivia? I listen to podcasts! There was a podcast interview of Drew Houston(Dropbox co-founder & CEO), where he talked about how they secured the dropbox.com domain name.
+For example, Dropbox used getdropbox.com for more than 2 years before they bought dropbox.com for \$300k. How did I discover that kind of trivia? I listen to podcasts! There was a podcast interview of Drew Houston(Dropbox co-founder & CEO), where he talked about how they secured the dropbox.com domain name.
 
 After you get a domain name, make sure you also create a bunch of company accounts on social networking sites such as Twitter, Facebook, Instagram, and (maybe) Snapchat.
 
@@ -129,7 +128,7 @@ In terms of front-end engineering, I have very little to share here. Listen Note
 
 For the web front-end, I use the conventional Reactjs & Bootstrap. Pretty standard nowadays.
 
-If you just get started with your projects, I would suggest focusing on a single platform first. Don’t go cross-platform too early. We typically have very limited resources at the very beginning. Look at Instagram: When they were an independent company, they had only an iOS app initially. And they got acquired for $1B.
+If you just get started with your projects, I would suggest focusing on a single platform first. Don’t go cross-platform too early. We typically have very limited resources at the very beginning. Look at Instagram: When they were an independent company, they had only an iOS app initially. And they got acquired for \$1B.
 
 If you are building a website, make sure you make it responsive from day 1. You can easily use modern browsers’ developer tools to test different screen sizes (e.g., on Chrome).
 
@@ -161,7 +160,7 @@ If you have never operated a popular online service before, you won’t be aware
 
 Different companies build different internal tools for various purposes. So far, I’ve built some internal tools to help development (e.g., preview email notification without actually sending emails), to provide God’s view (e.g., see search queries, quickly pull info for a particular user…), and to fight bad actors (e.g., content moderation, detect spam…).
 
-So by this point, we know how to start a company with $500 and we know how to build an online service with good enough engineering.
+So by this point, we know how to start a company with \$500 and we know how to build an online service with good enough engineering.
 
 Profit!
 
@@ -213,11 +212,11 @@ If you want to build a podcast app, try Listen API.
 
 ![Good enough engineering to start an Internet company](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/0_LwPXGTcWzWROtCb2-1.jpeg)
 
-I gave a guest lecture in an undergraduate software engineering class ([CSCE431][4]) at  [Texas A&M University][5]  in March 2019. Now I’ve turned this lecture into a blog post here, and hopefully some people on the Internet will find this useful.
+I gave a guest lecture in an undergraduate software engineering class ([CSCE431][4]) at [Texas A&M University][5] in March 2019. Now I’ve turned this lecture into a blog post here, and hopefully some people on the Internet will find this useful.
 
 If you arrived from a Google search, here are some contexts:
 
-I’m running a small Internet company — Listen Notes, Inc. — with only one full-time employee (me), as of August 2, 2019. We built a podcast search engine website  [ListenNotes.com][6]  and a  [podcast API][7].
+I’m running a small Internet company — Listen Notes, Inc. — with only one full-time employee (me), as of August 2, 2019. We built a podcast search engine website [ListenNotes.com][6] and a [podcast API][7].
 
 ---
 
@@ -251,13 +250,13 @@ In early 2017, I found myself consuming more information from podcasts than from
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_pXGHwh1sY_r0Hdk0.png)
 
-Very first version of Listen Notes. Credits:  [Lifehacker][9]
+Very first version of Listen Notes. Credits: [Lifehacker][9]
 
 I launched the prototype and used it a lot myself. But I didn’t touch the code for about nine months, until I decided to work on it full-time after I left my first failed startup. That was September 2017. Cut to 1.5 years later, I’m still having fun working on Listen Notes :)
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_3s9fAs-S58WF7YpI.jpeg)
 
-Do you need to know where to find an office? Yes, there’s a service for that. I use  [WeWork][10]. I’ve got a small office inside  [WeWork][11]  in San Francisco. The office is not cheap, but I think it’s a good investment for productivity.
+Do you need to know where to find an office? Yes, there’s a service for that. I use [WeWork][10]. I’ve got a small office inside [WeWork][11] in San Francisco. The office is not cheap, but I think it’s a good investment for productivity.
 
 I can choose to spend money being 200% more productive myself, or spend money hiring one more employee. I can choose to save money and waste more time, or to save time and make more money. If you were me, what would your choice be?
 
@@ -265,25 +264,25 @@ I can choose to spend money being 200% more productive myself, or spend money hi
 
 By starting an internet business, we need to have a formal company, a legal entity. There’s a service for that.
 
-I used  [Stripe Atlas][12]  to incorporate Listen Notes, Inc. I paid $500, and I got a Delaware C Corp within 10 days. Stripe Atlas provides some nice perks, e.g., $5k AWS (Amazon Web Services) credits. But to keep the company around, I have to pay ~$2k/year for taxes, accounting, and other stuff. This gives you a basic idea of the minimum cost of running a company.
+I used [Stripe Atlas][12] to incorporate Listen Notes, Inc. I paid $500, and I got a Delaware C Corp within 10 days. Stripe Atlas provides some nice perks, e.g., $5k AWS (Amazon Web Services) credits. But to keep the company around, I have to pay ~\$2k/year for taxes, accounting, and other stuff. This gives you a basic idea of the minimum cost of running a company.
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_l-l4WwCXLziPLLHm.jpeg)
 
 Because we are a company now, we have to deal with some legal stuff. There’s a service for that.
 
-You can use  [Clerky][13]  to generate legal documents or use  [UpCounsel][14]  to get a lawyer. I’ve used both services. They aren’t perfect, but they worth the money. You can’t expect to get Ritz-Carlton-level services with a McDonald’s price, right? If you want to be happy, you’d better set the correct level of expectation.
+You can use [Clerky][13] to generate legal documents or use [UpCounsel][14] to get a lawyer. I’ve used both services. They aren’t perfect, but they worth the money. You can’t expect to get Ritz-Carlton-level services with a McDonald’s price, right? If you want to be happy, you’d better set the correct level of expectation.
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_0bVKZbAgNClaVQ85.jpeg)
 
-To get started, you just need a good enough domain name — a $10/year .com domain. You can always buy a great domain name later.
+To get started, you just need a good enough domain name — a \$10/year .com domain. You can always buy a great domain name later.
 
-For example, Dropbox used getdropbox.com for more than 2 years before they bought dropbox.com for $300k. How did I discover that kind of trivia? I listen to podcasts! There was  [a podcast interview of Drew Houston][15](Dropbox co-founder & CEO), where he talked about how they secured the dropbox.com domain name.
+For example, Dropbox used getdropbox.com for more than 2 years before they bought dropbox.com for \$300k. How did I discover that kind of trivia? I listen to podcasts! There was [a podcast interview of Drew Houston][15](Dropbox co-founder & CEO), where he talked about how they secured the dropbox.com domain name.
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_ADgueIJbGpwHov-7.jpeg)
 
 After you get a domain name, make sure you also create a bunch of company accounts on social networking sites such as Twitter, Facebook, Instagram, and (maybe) Snapchat.
 
-And most companies just use  [G Suite][16]  for their company email, which is basically Gmail.
+And most companies just use [G Suite][16] for their company email, which is basically Gmail.
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_aJpa4rgV5Hj12KNg.jpeg)
 
@@ -297,7 +296,7 @@ All websites are online services, obviously. We use web browsers to access websi
 
 On the server side, we run servers. You just need good enough servers to get started. By “servers” I mean VPS (Virtual Private Servers), which basically provides root access to an IP address. Once you ssh into an IP address (a VPS), you can do whatever you want, e.g., install software & put your code there. And you are now open for business.
 
-For VPS, I recommend using something simple at the beginning, e.g.,  [DigitalOcean][17]  or  [AWS Lightsail][18]. At Listen Notes, we used  [DigitalOcean][19]  for about one year because it’s cheap & easy to set up, then we switched to AWS EC2 when our website got more traffic and we needed more flexibility & “production”-ish setup.
+For VPS, I recommend using something simple at the beginning, e.g., [DigitalOcean][17] or [AWS Lightsail][18]. At Listen Notes, we used [DigitalOcean][19] for about one year because it’s cheap & easy to set up, then we switched to AWS EC2 when our website got more traffic and we needed more flexibility & “production”-ish setup.
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_LxybEVeLPU7uck2_.jpeg)
 
@@ -315,34 +314,34 @@ For example, we generate this kind of image for search results on Listen Notes (
 
 This type of image-generation task is kind of compute intensive and is not urgent. So we offload it for workers to process, instead of handling them on the web servers.
 
-Finally, there must be a Scheduler for time-based scheduling jobs. Many companies just use cron jobs on Linux and they switch to something else when they become bigger (e.g.,  [I built a Scheduler system for my former employer Nextdoor a few years ago to replace cron jobs][21]). For Listen Notes, we have a lot of time-based scheduling jobs, e.g., sending  [Listen Alerts][22].
+Finally, there must be a Scheduler for time-based scheduling jobs. Many companies just use cron jobs on Linux and they switch to something else when they become bigger (e.g., [I built a Scheduler system for my former employer Nextdoor a few years ago to replace cron jobs][21]). For Listen Notes, we have a lot of time-based scheduling jobs, e.g., sending [Listen Alerts][22].
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_N2yqsvWuyxZtT6CC.jpeg)
 
-We use Nginx as a simple load balancer. The backend code is mostly in Python/Django. We use different datastores for different purposes. We use Postgres for the main datastore, which is our single source of truth. We are a search engine, so we use Elasticsearch. We use Redis for a lot of things, but mostly for caching & implementing some “fast” features like  [Listen Real-Time][23].
+We use Nginx as a simple load balancer. The backend code is mostly in Python/Django. We use different datastores for different purposes. We use Postgres for the main datastore, which is our single source of truth. We are a search engine, so we use Elasticsearch. We use Redis for a lot of things, but mostly for caching & implementing some “fast” features like [Listen Real-Time][23].
 
-On the asynchronous processing land, we use  [Celery][24],  [Celery Beat][25], and  [RabbitMQ][26].
+On the asynchronous processing land, we use [Celery][24], [Celery Beat][25], and [RabbitMQ][26].
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_C2dVWNEIv_f_pQHA.jpeg)
 
-We have to keep the server-side processes up and running 24/7. We’d better use some kind of process manager to automatically restart processes if they crash. We use  [Supervisor][27]  a lot at Listen Notes.
+We have to keep the server-side processes up and running 24/7. We’d better use some kind of process manager to automatically restart processes if they crash. We use [Supervisor][27] a lot at Listen Notes.
 
 Two recommendations here:
 
--   Learn tech stacks of real companies on  [stackshare.io][28]
--   Listen to  [Software Engineering Daily][29]. They interview engineers from real companies, so you can learn how companies do engineering.
+-   Learn tech stacks of real companies on [stackshare.io][28]
+-   Listen to [Software Engineering Daily][29]. They interview engineers from real companies, so you can learn how companies do engineering.
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_EeishiFBoh3ISQWh.jpeg)
 
 As end users, we get tons of notifications from online services via email, SMS, and push notifications. When an Uber driver is approaching, we get push notifications. When we shop on Amazon, we get email notifications (typically with receipts). When our bank accounts experience problems, we get SMS notifications.
 
-Let’s turn the table. When we build online services, how do we send notifications to users? There’s a service or API for each notification channel, e.g.,  [SendGrid][30]  or  [Amazon SES][31]  for email,  [Twilio][32]  for SMS…
+Let’s turn the table. When we build online services, how do we send notifications to users? There’s a service or API for each notification channel, e.g., [SendGrid][30] or [Amazon SES][31] for email, [Twilio][32] for SMS…
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_SrGLHpymGagenKzF.jpeg)
 
 Next, we need some kind of triggers to initiate notifications.
 
-One type of trigger is from user actions. For example, a user can invite people to contribute to the same playlist on  [Listen Later][33]. When he or she clicks the invite button, it triggers an email notification that is sent to the potential contributor. So the web server places a message in the message queue, and one of the workers picks up the message and sends the invite email later.
+One type of trigger is from user actions. For example, a user can invite people to contribute to the same playlist on [Listen Later][33]. When he or she clicks the invite button, it triggers an email notification that is sent to the potential contributor. So the web server places a message in the message queue, and one of the workers picks up the message and sends the invite email later.
 
 Another type of trigger is from time-based schedules, e.g., send emails to these 500 people at 7 a.m. every morning.
 
@@ -362,29 +361,29 @@ And we need a dev environment for development purposes, which is typically used 
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_eiriAOpM2vrtUpSJ.jpeg)
 
-For Listen Notes, we use  [Vagrant][34]  &  [VirtualBox][35]  to set up a virtual machine. And we run everything inside this virtual machine.
+For Listen Notes, we use [Vagrant][34] & [VirtualBox][35] to set up a virtual machine. And we run everything inside this virtual machine.
 
-Since the backend code of Listen Notes is primarily written in Python/Django, I use PyCharm to write code. I know, it’s not  [VS Code][36]  or whatever cool text editors others use. But I’m 1000x more productive using PyCharm than using other text editors - though, I was a Vim user for 5 years and an Emacs user for another 6 years :) It’s like some people like spicy food, while others don’t. We can’t blame people who don’t like spicy food, right? Don’t get involved in the religious war of IDEs, languages, technologies… GETTING THINGS DONE™ is more important.
+Since the backend code of Listen Notes is primarily written in Python/Django, I use PyCharm to write code. I know, it’s not [VS Code][36] or whatever cool text editors others use. But I’m 1000x more productive using PyCharm than using other text editors - though, I was a Vim user for 5 years and an Emacs user for another 6 years :) It’s like some people like spicy food, while others don’t. We can’t blame people who don’t like spicy food, right? Don’t get involved in the religious war of IDEs, languages, technologies… GETTING THINGS DONE™ is more important.
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_En1rYW0gxYbkH0FA.jpeg)
 
-In terms of front-end engineering, I have very little to share here. Listen Notes has only a website. We don’t have native apps (except for  [an experimental Just Listen][37]  app).
+In terms of front-end engineering, I have very little to share here. Listen Notes has only a website. We don’t have native apps (except for [an experimental Just Listen][37] app).
 
-For the web front-end, I use the conventional Reactjs &  [Bootstrap][38]. Pretty standard nowadays.
+For the web front-end, I use the conventional Reactjs & [Bootstrap][38]. Pretty standard nowadays.
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_NWGlzjmYMHId1cl-.jpeg)
 
-If you just get started with your projects, I would suggest focusing on a single platform first. Don’t go cross-platform too early. We typically have very limited resources at the very beginning. Look at Instagram: When they were an independent company, they had only an iOS app initially. And they got acquired for $1B.
+If you just get started with your projects, I would suggest focusing on a single platform first. Don’t go cross-platform too early. We typically have very limited resources at the very beginning. Look at Instagram: When they were an independent company, they had only an iOS app initially. And they got acquired for \$1B.
 
-If you are building a website, make sure you make it responsive from day 1. You can easily use modern browsers’ developer tools to test different screen sizes (e.g.,  [on Chrome][39]).
+If you are building a website, make sure you make it responsive from day 1. You can easily use modern browsers’ developer tools to test different screen sizes (e.g., [on Chrome][39]).
 
-You also want to test on multiple operating systems & browsers. There’s a service for that: Use  [BrowserStack][40].
+You also want to test on multiple operating systems & browsers. There’s a service for that: Use [BrowserStack][40].
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_tIQlkg6S1V_gTR3S.jpeg)
 
 If you have more than one server, you’d better NOT install software & do configuration manually. Infrastructure as code is a common practice in internet companies nowadays. Basically, we codify the specification of servers and automate the server configuration.
 
-For Listen Notes, we use  [Ansible][41]. We need to write a bunch of yml configuration files to specify what software to install & where to put config files. When we run ansible-playbook in command line, it’ll automatically configure multiple servers for us.
+For Listen Notes, we use [Ansible][41]. We need to write a bunch of yml configuration files to specify what software to install & where to put config files. When we run ansible-playbook in command line, it’ll automatically configure multiple servers for us.
 
 Nowadays, servers are elastic or even ephemeral, with on-demand configurations to suit the necessary workload. Servers come and go. You may run more servers during the daytime, when there’s more traffic; and run fewer servers at night, when there’s less traffic. Infrastructure as code makes this type of thing easy.
 
@@ -394,7 +393,7 @@ Internet companies deploy code pretty frequently nowadays, at least once per wee
 
 For Listen Notes, I’ve got a quick script to deploy code, where I can specify the deployment environment, server type, and git commit SHA as parameters. So I can push a button and deploy a specific version of code (e.g., HEAD, or any git commit) to specific servers (e.g., web, API, worker…) in a specific environment (e.g., production, staging…).
 
-We deploy new code, but we don’t necessarily release new features. Nowadays we do  [feature toggles][42]  in the code, which is basically some if-else statements. We can hide new code behind an if statement, and we use the feature toggle variable to control whether or not to execute the new code. We typically store the feature toggle variable in some kind of datastore, e.g., Redis. We can go very fancy here. We can turn on the new feature to 10% of users first, then 20%, then 50%, then 100%.
+We deploy new code, but we don’t necessarily release new features. Nowadays we do [feature toggles][42] in the code, which is basically some if-else statements. We can hide new code behind an if statement, and we use the feature toggle variable to control whether or not to execute the new code. We typically store the feature toggle variable in some kind of datastore, e.g., Redis. We can go very fancy here. We can turn on the new feature to 10% of users first, then 20%, then 50%, then 100%.
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_DtYd8dMFgOhu0yB2.jpeg)
 
@@ -402,11 +401,11 @@ Online services need to be up 24/7. So it’s important to have tools for monito
 
 There’s a service for that!
 
-Many companies use  [Datadog][43]. We use Datadog at Listen Notes as well. We can easily build monitoring graphs to provide great visibility for servers and applications. We can also set up alerts when some metrics are abnormal (e.g., higher than a certain threshold).
+Many companies use [Datadog][43]. We use Datadog at Listen Notes as well. We can easily build monitoring graphs to provide great visibility for servers and applications. We can also set up alerts when some metrics are abnormal (e.g., higher than a certain threshold).
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_MN8jF4VJZncXH3jS.jpeg)
 
-If you want to learn the best practices of building & operating online services, read  [The Twelve-Factor App][44].
+If you want to learn the best practices of building & operating online services, read [The Twelve-Factor App][44].
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_3c2lMu1346EFUJWr.jpeg)
 
@@ -418,7 +417,7 @@ Different companies build different internal tools for various purposes. So far,
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_1i-QbtebgVN1Lqxe.jpeg)
 
-So by this point, we know how to start a company with $500 and we know how to build an online service with good enough engineering.
+So by this point, we know how to start a company with \$500 and we know how to build an online service with good enough engineering.
 
 Profit!
 
@@ -428,7 +427,7 @@ Oh, wait….
 
 How do people find the thing you have built? How do you make money?
 
-[Pinterest CEO says key to success was marketing, not engineering.][45]  Well, this is so true.
+[Pinterest CEO says key to success was marketing, not engineering.][45] Well, this is so true.
 
 Engineering is deterministic. Marketing and business are non-deterministic.If you want to build an online service, you can build it. But we live in a noisy world now. Tons of things are competing for our attention. Marketing is super hard.
 
@@ -436,21 +435,21 @@ Engineering is deterministic. Marketing and business are non-deterministic.If yo
 
 I’m not an expert of marketing. I’m still figuring out how to do better marketing myself…
 
-There are multiple channels that you can use to get your messages out. Try them all. Find the most effective one. Double down on that one. A recommendation here:  [The 19 Channels You Can Use to Get Traction][46]
+There are multiple channels that you can use to get your messages out. Try them all. Find the most effective one. Double down on that one. A recommendation here: [The 19 Channels You Can Use to Get Traction][46]
 
 If you want to do SEO, you can find some good tutorials on the Internet. But generally, you want to make your website as fast as possible. Google prefers fast websites nowadays.
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_U6_Pa-7K1NiY2yhE.jpeg)
 
-The best SEO document is  [from Google][47]  itself.
+The best SEO document is [from Google][47] itself.
 
-And if you are curious about a website’s traffic, just use  [SimilarWeb’s chrome extension][48]. The number is not 100% accurate, but should be in the same order of magnitude :)
+And if you are curious about a website’s traffic, just use [SimilarWeb’s chrome extension][48]. The number is not 100% accurate, but should be in the same order of magnitude :)
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_luegMv5EuB6OA3_U.jpeg)
 
 An Internet company makes money by selling eyeballs to advertisers or selling goods/services directly to users.
 
-At Listen Notes, we do both. We run ads with a combination of  [Carbon Ads][49]& direct sales (managed via  [Google Ad Manager][50]). We also sell API to developers.
+At Listen Notes, we do both. We run ads with a combination of [Carbon Ads][49]& direct sales (managed via [Google Ad Manager][50]). We also sell API to developers.
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_-GXgPMkqZ1WJnvn9.jpeg)
 
@@ -458,7 +457,7 @@ You may ask me why I don’t use XYZ technologies. Well, I’m a practical perso
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_PQhWAP2aaAXa9USS.jpeg)
 
-In particular, I prefer boring technologies, which typically have existed for many years or even decades. Check out  [this blog post for Listen Notes tech stack][51].
+In particular, I prefer boring technologies, which typically have existed for many years or even decades. Check out [this blog post for Listen Notes tech stack][51].
 
 Software engineering nowadays is mostly Google and StackOverflow-driven :) If you need help, you can find more information for old & mature technologies from Google & StackOverflow — but like many things in our lives, this is not always true.
 
@@ -468,7 +467,7 @@ I need to tell you bad news: It’s impossible for you to come up with a 100% or
 
 When I mentioned “there’s a tool/service for that,” it’s a startup itself. You can borrow their ideas, and build a better version. Or you can tackle similar problems from a different angle.
 
-Oh, and here’s a video about Facebook’s tech in 2005:  [https://www.youtube.com/watch?v=xFFs9UgOAlE][52]
+Oh, and here’s a video about Facebook’s tech in 2005: [https://www.youtube.com/watch?v=xFFs9UgOAlE][52]
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_cD-AyO5meslYf6y2.jpeg)
 
@@ -478,15 +477,15 @@ _Eighty Percent of Success Is Showing Up_
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_WEQS02kCfZ-YsXHl.jpeg)
 
-You can find the deck here:  [http://bit.ly/good-enough-tech][53]
+You can find the deck here: [http://bit.ly/good-enough-tech][53]
 
 And you can always talk to me asynchronously via email :)
 
 ---
 
-If you like podcasts, try  [Listen Notes][54].
+If you like podcasts, try [Listen Notes][54].
 
-If you want to build a podcast app, try  [Listen API][55].
+If you want to build a podcast app, try [Listen API][55].
 
 [1]: https://www.listennotes.com/
 [2]: https://www.youtube.com/watch?v=xFFs9UgOAlE

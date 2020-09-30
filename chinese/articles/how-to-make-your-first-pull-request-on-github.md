@@ -5,13 +5,13 @@
 
 ![How to make your first pull request on GitHub](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/Untitled-design.png)
 
-## 什么是复刻（forking）?
+## 什么是复刻（forking）
 
 我们可以通过复刻操作将喜爱的仓库保存自己的 GitHub 账户中，以便独立地对其进行操作。
 
 通过复刻，我们可以得到包含完整版本历史的目标仓库的实例，之后可以对复刻得到的仓库进行任意操作而不会影响到原始仓库。
 
-## 什么是拉取请求（pull request）?
+## 什么是拉取请求（pull request）
 
 拉取请求是为团队项目或开源项目做贡献的一种方式。
 
@@ -33,7 +33,7 @@
 
 5. 编写代码：协助解决议题中提及的问题，询问是否需要自己提供帮助来增加新的功能特性或改进工具和测试流程。
 
-## 创建第一个拉取请求!
+## 创建第一个拉取请求
 
 如果你还不太熟悉 Git 和 GitHub, 请查看 [The beginner’s guide to Git & GitHub][2].
 
@@ -53,7 +53,7 @@
 
 打开终端并执行如下命令，把仓库克隆到本地。
 
-```
+```plain
 $ git clone [HTTPS ADDRESS]
 ```
 
@@ -63,7 +63,7 @@ $ git clone [HTTPS ADDRESS]
 
 运行如下命令，进入项目目录：
 
-```
+```plain
 $ cd [NAME OF REPOSITORY]
 ```
 
@@ -77,7 +77,7 @@ $ cd [NAME OF REPOSITORY]
 
 使用 `git checkout` 命令来创建一个分支：
 
-```
+```plain
 $ git checkout -b [Branch Name]
 ```
 
@@ -93,7 +93,7 @@ $ git checkout -b [Branch Name]
 
 执行 `git add` 命令，将这些变更加入到刚刚创建的分支:
 
-```
+```plain
 $ git add .
 ```
 
@@ -101,7 +101,7 @@ $ git add .
 
 使用 `git commit` 提交这些变更:
 
-```
+```plain
 $ git commit -m "Adding an article to week 02 of articles of the week"
 ```
 
@@ -111,7 +111,7 @@ $ git commit -m "Adding an article to week 02 of articles of the week"
 
 在推送变更之前先确认远程库的名称。
 
-```
+```plain
 $ git remote
 ```
 
@@ -121,7 +121,7 @@ $ git remote
 
 确认了远程库的名称之后，可以放心的把变更推送到 GitHub。
 
-```
+```plain
 git push origin [Branch Name]
 ```
 
@@ -151,7 +151,7 @@ git push origin [Branch Name]
 
 1. 首先查看当前所在分支。
 
-```
+```plain
 $ git branch
 ```
 
@@ -161,7 +161,7 @@ $ git branch
 
 2\. 切换到 master 分支。
 
-```
+```plain
 $ git checkout master
 ```
 
@@ -171,7 +171,7 @@ $ git checkout master
 
 为了能够拉取原始仓库的变更到你的复刻仓库中，需要将原始仓库添加为 upstream 仓库。
 
-```
+```plain
 $ git remote add upstream [HTTPS]
 ```
 
@@ -185,7 +185,7 @@ $ git remote add upstream [HTTPS]
 
 从原始仓库获取变更，所有提交到原始仓库的变更将会保存在本地的 upstream/master 分支中。
 
-```
+```plain
 $ git fetch upstream
 ```
 
@@ -195,7 +195,7 @@ $ git fetch upstream
 
 将 upstream/master 分支中的变更合并到本地的 master 分支，这样就能够做到让本地的 master 分支与原始仓库保持同步的同时保留本地变更。
 
-```
+```plain
 $ git merge upstream/master
 ```
 
@@ -203,7 +203,7 @@ $ git merge upstream/master
 
 现在你的本地分支已经原始仓库的 master 分支同步了。如果想更新 GitHub 仓库，需要把变更推送到 GitHub。
 
-```
+```plain
 $ git push origin master
 ```
 
@@ -211,7 +211,7 @@ $ git push origin master
 
 ![](https://www.freecodecamp.org/news/content/images/2020/01/remote-dlt.png)
 
-```
+```plain
 $ git remote rm [Remote Name]
 ```
 
@@ -219,7 +219,7 @@ $ git remote rm [Remote Name]
 
 创建分支是为了完成一些特定目标，目标完成之后，这些分支就没必要继续存在了，可以删除掉。
 
-```
+```plain
 $ git branch -d [Branch Name]
 ```
 
@@ -227,7 +227,7 @@ $ git branch -d [Branch Name]
 
 GitHub 上的无用分支也可以删除。
 
-```
+```plain
 git push origin --delete [Branch Name]
 ```
 

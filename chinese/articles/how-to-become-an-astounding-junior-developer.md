@@ -108,7 +108,7 @@ You've learned how to take something hard, complex, obscure, and break it into p
 
 More than learning JavaScript, React, Ruby, or anything else, the best thing you've learned is how to teach yourself. Take this practiced skill you have and show up with it every single day.
 
-## Own your growth—no one else will.
+## Own your growth—no one else will
 
 This might be the most important statement for a developer at any stage of their career: **your career is your own. You have to own it, and you have to own your growth.**
 
@@ -281,7 +281,7 @@ Take a deep breath, go for a quick walk, and approach each problem with a fresh 
 
 (This is, of course, easier said than done!)
 
-### #4 Remember to relax and take breaks!
+### #4 Remember to relax and take breaks
 
 Remember to take breaks when things start to feel overwhelming.
 
@@ -349,13 +349,13 @@ Here's some tips on how to build this system.
 
 ## 5 Debugging tips
 
-### #1 Don't thrash your code!
+### #1 Don't thrash your code
 
 One of the things I did as a new developer—and something I see many other new developers do when they run into a problem—is they start wildly changing things in their code. Instead of having a systematic evaluation process, they just make a ton of quick changes trying to see if that fixes the problem.
 
 This is a very bad habit. You will only create more mistakes doing this. What you should do is:
 
-### #2 Read the error message!
+### #2 Read the error message
 
 This tip may seem obvious, but actually _read_ the message. What is the error? What is the file where this error is occurring? What _line_ is this error coming from? This is all vital information.
 
@@ -389,7 +389,7 @@ What is in the `user` variable? What is the response from the HTTP request? Did 
 
 I've seen countless developers trying to debug and fix an issue (and I've done it many times myself too) when they weren't even working in the right file! A quick `print` or `console.log` will show you that you are in fact looking at the actual code being run.
 
-### #5 Take it _one_ step at a time.
+### #5 Take it _one_ step at a time
 
 A common mistake every new developer does: **they do too much at once.**
 

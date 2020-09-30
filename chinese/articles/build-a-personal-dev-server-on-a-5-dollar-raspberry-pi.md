@@ -65,14 +65,14 @@ Raspberry Pi OS 源自 Debian Linux 发行版，附带一个完整的桌面 UI �
 
 此时，还可以通过运行下面的命令在本地网络上找到树莓派的 IP 地址，然后用本地 IP 地址、用户名 Pi 、密码通过 SSH 连接到树莓派。
 
-```
+```plain
 $ hostname -I
 192.168.2.108 172.17.0.1
 ```
 
 [这里是 Raspberry Pi OS 上安装的软件包的完整列表][9]. 建议更新和升级到最新软件包。运行以下命令，请耐心等待。升级更新可能要花一个小时。
 
-```
+```plain
 $ sudo apt update && sudo apt upgrade
 ```
 
@@ -100,7 +100,7 @@ Git 还允许在私有 repo 中保存和备份自己的工作。对于像树莓�
 
 以下命令可以安装 Git：
 
-```
+```plain
 $ sudo apt install git
 ```
 
@@ -110,14 +110,14 @@ $ sudo apt install git
 
 对于当今的大多数开发者来说，最好从 Node.js 开始，有了它就可以用 JavaScript 编写服务器端应用。以下两个命令是在树莓派上安装 Node.js。
 
-```
+```plain
 $ curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 $ sudo apt install nodejs
 ```
 
 通过运行以下两个命令来验证安装是否正确完成。Node 和 npm 都可用。
 
-```
+```plain
 $ node -v
 v10.19.0
 $ npm -v
@@ -126,7 +126,7 @@ $ npm -v
 
 这里你可以使用 npm 安装模块，例如， 用 npm 安装一个常用的模块 express 框架，用于 Web 应用。
 
-```
+```plain
 $ npm install express
 ```
 
@@ -146,32 +146,32 @@ Rust 的一个重要用例是将 [ Rust 函数编译成 WebAssembly 并在 Node.
 
 以下命令是在树莓派上安装 Rust 编译器工具链。
 
-```
+```plain
 $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 运行下面的命令，无需注销和再次登录就能设置正确的路径。
 
-```
+```plain
 $ source $HOME/.cargo/env
 ```
 
 上面的命令还将安装名为 cargo 的 Rust 包管理器。大多数 Rust 开发者使用 cargo 创建和分享他们的工作。
 
-```
+```plain
 $ cargo -V
 cargo 1.44.1 (88ba85757 2020-06-11)
 ```
 
 接下来，可以 clone 我们的 [Rust learning repository][19], 从示例中学习 Rust.
 
-```
+```plain
 $ git clone https://github.com/second-state/wasm-learning.git
 ```
 
 这是 [hello world 示例][20]. 玩得开心
 
-```
+```plain
 $ cd wasm-learning/rust/hello
 $ cargo build
    Compiling hello v0.1.0 (/home/pi/Dev/wasm-learning/rust/hello)
@@ -190,20 +190,20 @@ Hello, world!
 
 以下两个命令是在树莓派上安装 Docker ：
 
-```
+```plain
 $ curl -fsSL https://get.docker.com -o get-docker.sh
 $ sudo sh get-docker.sh
 ```
 
 运行以下命令，以便可以将 Docker 作为树莓派用户使用：
 
-```
+```plain
 $ sudo usermod -aG docker pi
 ```
 
 Docker info 命令显示 Docker 现在已安装在具有 Raspberry Pi OS 的 ARM 系统上。
 
-```
+```plain
 $ docker info
 ... ...
  Kernel Version: 4.19.118-v7l+
@@ -220,14 +220,14 @@ $ docker info
 
 接下来，您可以获取最新的 Ubuntu 发行版的 Docker 映像，运行它，并以命令行用户的身份登录 Ubuntu。
 
-```
+```plain
 $ docker pull ubuntu
 ... ...
 $ docker run -it ubuntu bash
 root# ... enter commands ...
 ```
 
-## 接下来呢？
+## 接下来呢
 
 在本文中，我们介绍了基础知识，并学习了如何将 Raspberry Pi 4 设备变成软件开发者的个人开发服务器。
 

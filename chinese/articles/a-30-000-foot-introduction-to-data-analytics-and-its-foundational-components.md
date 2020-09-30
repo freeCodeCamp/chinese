@@ -153,7 +153,7 @@ John believes there are four possible levels of demand for his services:
 
 Based on past experiences in coding and building websites, John assigns the following probabilities to the various demand levels:
 
-```
+```plain
 P(very low demand) = 0.20
 P(low demand) = 0.50
 P(moderate demand) = 0.20
@@ -162,14 +162,14 @@ P(high demand) = 0.10
 
 (a) Set up the decision tree and compute the expected value of offering the service.
 
-```
+```plain
 .2 * (-100,000) + .5 * (10,000) + .2 * (25,000) + .1 * (75,000)
 = $ -2,500
 ```
 
 (b) Compute the expected value with perfect information for John’s payoff.
 
-```
+```plain
 .5*100,000 + .2*25,000 + .1*75,000 = $17,500
 ```
 

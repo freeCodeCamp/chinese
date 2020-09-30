@@ -62,7 +62,7 @@ I had the chance to build many awesome projects like the [Card Matching Game][11
 
 Without this course, I can truly and honestly say that I would not be where I am today. I gained many valuable experiences and lessons in this 9 month course.
 
-## Job Hunting...dun dun duuuuunnn!
+## Job Hunting...dun dun duuuuunnn
 
 ![a pencil on drafting plans](https://jonathansexton.me/blog/wp-content/uploads/2019/07/sven-mieke-fteR0e2BzKo-unsplash-1024x683.jpg)
 

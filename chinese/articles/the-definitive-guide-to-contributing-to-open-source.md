@@ -19,7 +19,7 @@
 
 恭喜你！
 
-#### 开源项目需要哪些要素？
+#### 开源项目需要哪些要素
 
 ![](https://cdn-media-1.freecodecamp.org/images/sLLZDyHDbg9D4OQ9g4b2NqF2vJbD6PajLJcZ)
 
@@ -47,7 +47,7 @@
 
 > 觉得自己不是创造者？去发现 bug、或者向程序猿提需求吧！
 
-#### 为什么值得我去花时间？
+#### 为什么值得我去花时间
 
 ![](https://cdn-media-1.freecodecamp.org/images/3OfZ84g5JkBgoyjN60Peh5BIg--bZSFzJscg)
 
@@ -93,7 +93,7 @@
 
 [GitHub][7] 贡献数据。不，不是我的。
 
-### 如何找到你的第一个项目？
+### 如何找到你的第一个项目
 
 有很多种方式。首先，像火狐和安卓这样的重量级项目拥有庞大的用户基数，需要大量的修改和优化。一旦你向这种项目提交了代码，你的修改将会被数百万人看到。你可以访问 GitHub 看看有哪些流行的仓库。比如，在撰写本文时，[GitHub 上拥有最多 star 的项目][8] 是 [freeCodeCamp][9].
 
@@ -117,7 +117,7 @@ GitHub 上的[热门项目][12]
 
 如果你希望持续不断地参与开源，你需要找到自己经常使用的东西，这样的话对你自身的提高大有裨益，也是目前为止最佳的保证高质量工作的方式。
 
-### 是什么让贡献变得有价值？
+### 是什么让贡献变得有价值
 
 ![](https://cdn-media-1.freecodecamp.org/images/I8PVJSTiJibbeYiy7wrmVeZFQMHuuXLYI-NW)
 

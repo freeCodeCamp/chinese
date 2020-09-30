@@ -49,7 +49,7 @@
 
 设置完成之后，进入项目目录并执行 npm install。
 
-```
+```plain
 cd path/to/my-component-or-lib
 
 npm install
@@ -116,7 +116,7 @@ src/lib-components/FccButton.vue
 
 为了查看这个组件的效果，需要将它添加到 `lib-components` 路径下的 `index.js` 文件中。index.js 文件内容如下：
 
-```
+```plain
 /* eslint-disable import/prefer-default-export */
 export { default as FccButton } from './FccButton';
 ```
@@ -125,7 +125,7 @@ src/lib-components/index.js
 
 还需要在 `dev` 路径下的 `serve.vue` 文件中导入这个组件，代码如下：
 
-```
+```plain
 <script>
 import Vue from "vue";
 import { FccButton } from "@/entry";

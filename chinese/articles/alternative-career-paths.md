@@ -13,7 +13,7 @@ But one question that threw me off was, "What if I don't want to be a software d
 
 I've been thinking about this a lot lately. After almost a decade leading product and engineering teams, I realized I was ready for a new challenge, so this summer, I started [freelance technical writing][3]. I didn't know it when I got my first client, but I quickly realized that _technical writing is one of many valid career paths for former software engineers_.
 
-## What Else Can Software Developers Do?
+## What Else Can Software Developers Do
 
 This realization got me thinking: "What other jobs can software engineers do besides write software?"
 

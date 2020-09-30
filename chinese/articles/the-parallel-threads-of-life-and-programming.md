@@ -13,7 +13,7 @@ Programming offers significant parallels to life. We are tasked with creating so
 
 ## The Four Parallels Between Programming and Life
 
-### Iteration is progress.
+### Iteration is progress
 
 Did you know, if you started the month with a single penny and it doubled every day, you would have $163 on the 15th of the month? Surely, you think, there must be a better way to make $163 in 15 days. But, if you wait another 15 days, you would have more than 5 million dollars.
 
@@ -29,7 +29,7 @@ When we have goals, progress can often feel–for the first few days, weeks, or 
 
 Stop starting over. Let iteration be the force the creates progress.
 
-### Most complex problems are collections of smaller problems that have already been solved.
+### Most complex problems are collections of smaller problems that have already been solved
 
 Even the most fascinating apps are a series of mostly mundane solutions to mundane problems. In fact, most of the solutions implemented within a program are nothing unique. It is the combination of those ordinary solutions that creates an extraordinary product.
 
@@ -49,7 +49,7 @@ All of us use abstractions and libraries in some shape or form. For example, the
 
 Reinvent the wheel only to learn how to make a wheel, not to drive to the store.
 
-### How you define a problem is how you will solve it.
+### How you define a problem is how you will solve it
 
 Recall the story of a truck that drove under a bridge and got stuck. Engineers spent hours trying to figure out how to move the bridge. A small child came up, face to face with the tires of the truck, and said, “what if you let the air out of the tires?”
 
@@ -57,7 +57,7 @@ From the child’s vantage point, the problem wasn’t the bridge was too short,
 
 Most people can solve any problem. In fact, most problems state the solution. For example, if the bridge is causing the issue, the answer is to do something with the bridge. If, however, the problem is that the truck is too tall, then the solution–almost glaringly obvious–is to make the truck shorter.
 
-### The arrangement of parts is much more important than the parts themselves.
+### The arrangement of parts is much more important than the parts themselves
 
 What does the Google Maps codebase, the Declaration of Independence, Martin Luther King Jr.’s _I have a dream_ speech, Steve Jobs’s 2005 commencement address, and my first app, _Hello, World_ have in common?
 

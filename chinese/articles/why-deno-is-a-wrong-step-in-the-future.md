@@ -40,7 +40,7 @@ Similarly, if you've never worked with TypeScript before, and you think you want
 
 That's right: there is a division of developers across Deno and Node - I would say that's a very good example of a competitive space.
 
-## Why try Deno?
+## Why try Deno
 
 Firstly, I would like to list some advantages of Deno – what it is and why it pitches itself as a better runtime:
 
@@ -52,7 +52,7 @@ Firstly, I would like to list some advantages of Deno – what it is and why it 
 
 In the next section, I'll pick all of these points apart one by one and will mention what Node can learn from them. I'll also discuss, wherever necessary, why Deno doesn't make a lot of sense.
 
-## Where Deno overdid?
+## Where Deno overdid
 
 Let's pick up the USPs of Deno and break them down one by one:
 

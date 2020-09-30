@@ -15,7 +15,7 @@ JAMstack sites are all the rage right now in the web dev world. And rightfully s
 -   [What are some examples of JAMstack?][6]
 -   [What are some tools I can use to build JAMstack sites or apps?][7]
 
-## What is this JAMstack?
+## What is this JAMstack
 
 To start, [JAMstack][8] is a software architecture and philosophy that adheres to the following components: Javascript, APIs, and Markup.
 
@@ -33,7 +33,7 @@ Consider an app hosted in static storage on the cloud provider of your choice. Y
 
 Combining these philosophies can go a long way, but they shouldn’t be confused as the same.
 
-## What makes up the JAMstack?
+## What makes up the JAMstack
 
 Back to the JAMstack: it's typically comprised of 3 components: Javascript, APIs, and Markup. Its [history stems][15] from growing the term "static site" into something more meaningful (and marketable). So while ultimately a static site is the end result, it's blown up to include first class tooling for every step of the way.
 
@@ -97,7 +97,7 @@ Instead, whether your doing it yourself with S3 or piping it into Netlify (which
 
 CDN distribution map
 
-## So what makes a JAMstack app so great?
+## So what makes a JAMstack app so great
 
 JAMstack apps inherently satisfy most if not all of the [5 pillars of the AWS Well-Architected Framework][32]. These are core concepts that AWS considers to deliver fast, secure, high-performing, resilient, and efficient infrastructure.
 
@@ -105,7 +105,7 @@ JAMstack apps inherently satisfy most if not all of the [5 pillars of the AWS We
 
 [AWS Well-Architected][33]
 
-Let’s see how…
+Let’s see how……
 
 ### Speed
 
@@ -135,7 +135,7 @@ As much as these points strike true for the static aspects of your site, keep in
 
 Try to take advantage of these requests at compile time when you can, such as with a static site generator. Otherwise you’ll need to weigh the amount of hits you’re making to a dynamic endpoint and how it impacts all of the points above for your overall experience.
 
-## Is my website considered to be on the JAMstack?
+## Is my website considered to be on the JAMstack
 
 We already talked about the 3 components (Javascript, APIs, Markup), but what we didn’t talk about is the fact that you don’t necessarily have to use all 3 of them in order to consider your site worthy of the JAM label.
 
@@ -147,7 +147,7 @@ Really it all boils down to the Markup and how you serve it. Instead of your Rai
 
 But you don’t even need to have APIs. You don’t even need to have Javascript! As long as you’re serving an HTML file without it having to be compiled on a server at request time (aka pre-rendering it), you’ve got yourself a JAMstack site.
 
-## What are some examples of JAMstack?
+## What are some examples of JAMstack
 
 ### freecodecamp.org
 
@@ -178,7 +178,7 @@ Google’s [web.dev][40] resource center is built out using the growing [11ty][4
 
 [https://web.dev/][43]
 
-## What are some tools I can use to build JAMstack sites or apps?
+## What are some tools I can use to build JAMstack sites or apps
 
 The good news with all of this buzz is there are a ton of tools currently available and a ton more on the way. They might still be a little rough around the edges, but that’s because this is a brave new world of tooling and that takes some smoothing out to get just right.
 
@@ -191,7 +191,7 @@ This is the fun part. How are you going to build your app? With [Scully][44] [in
 -   [Hugo][48]
 -   [Nift][49]
 -   [Scully][50] (for you Angular fans)
--   [And many more…][51]
+-   [And many more……][51]
 
 _Need me to pick one?_ Start with Gatsby and [bootstrap with a simple starter][52].
 
@@ -221,11 +221,11 @@ Really this can be anything that can be used as an API making requests from the 
 -   [Serverless Framework][66] \- DIY, easy to deploy serverless resources
 -   [Snipcart][67] \- Ecommerce
 -   [Stripe][68] \- Payment management
--   [And a bunch of other resources…][69]
--   [And a bunch of other CMS choices…][70]
+-   [And a bunch of other resources……][69]
+-   [And a bunch of other CMS choices……][70]
 -   [And some general info and tools...][71]
 
-### And how about general resources to learn?
+### And how about general resources to learn
 
 You can find a lot of resources to get up and running quickly in the JAMstack world.
 
@@ -241,7 +241,7 @@ Similar to its serverless counterpart, the days of JAMstack are young. As time g
 
 Join in the conversation on Twitter and [let me know][77] what your favorite part of building a JAMstack site is!
 
-## Missing something?
+## Missing something
 
 Missing your favorite JAMstack tool or an awesome example? [Ping me on Twitter][78]!
 

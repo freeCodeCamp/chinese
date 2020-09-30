@@ -33,7 +33,7 @@ By default, there are three routes which are already defined in the WebSocket AP
 
 Once a device is successfully connected through WebSocket API, the device will be allocated with a unique connection id. This connection id will be persisted throughout the lifetime if the connection. To send messages back to the device we need to use the following POST request using the connection id.
 
-```
+```plain
 POST https://{api-id}.execute-api.us-east 1.amazonaws.com/{stage}/@connections/{connection_id}
 ```
 
@@ -72,26 +72,26 @@ Next, let’s create the connect Lambda function. To create the Lambda function,
 
 In the code of the lambda function add the following code. This code will add the connection id of the connected device to the DynamoDB table that we have created.
 
-```
+```plain
 exports.handler = (event, context, callback) => {    const connectionId = event.requestContext.connectionId;    addConnectionId(connectionId).then(() => {    callback(null, {        statusCode: 200,        })    });}
 ```
 
-```
+```plain
 function addConnectionId(connectionId) {    return ddb.put({        TableName: 'Chat',        Item: {            connectionid : connectionId        },    }).promise();}
 ```
 
 Next, let us create the disconnect lambda function as well. Using the same steps create a new lambda function named  
 ‘ChatRoomDonnectFunction’. Add the following code to the function. This code will remove the connection id from the DynamoDB table when a device gets disconnected.
 
-```
+```plain
 const AWS = require('aws-sdk');const ddb = new AWS.DynamoDB.DocumentClient();
 ```
 
-```
+```plain
 exports.handler = (event, context, callback) => {    const connectionId = event.requestContext.connectionId;    addConnectionId(connectionId).then(() => {    callback(null, {        statusCode: 200,        })    });}
 ```
 
-```
+```plain
 function addConnectionId(connectionId) {    return ddb.delete({        TableName: 'Chat',        Key: {            connectionid : connectionId,        },    }).promise();}
 ```
 
@@ -115,7 +115,7 @@ The WebSocket URL is the URL that is used to connect through WebSockets to our A
 
 To call through WebSockets we can use the wscat tool. To install it, we need to just issue the `npm install -g wscat` command in the command line. After installing, we can use the tool using wscat command. To connect to our WebSocket API, issue the following command. Make sure to replace the WebSocket URL with the correct URL provided to you.
 
-```
+```plain
 wscat -c wss://bh5a9s7j1e.execute-api.us-east-1.amazonaws.com/Test
 ```
 
@@ -131,19 +131,19 @@ Now that we have tested our two routes, let us look into the custom route onMess
 
 Let’s first create the lambda function in the same way we created other two lambda functions. Name the lambda function ChatRoomOnMessageFunction and copy the following code to the function code.
 
-```
+```plain
 const AWS = require('aws-sdk');const ddb = new AWS.DynamoDB.DocumentClient();require('./patch.js');
 ```
 
-```
+```plain
 let send = undefined;function init(event) {  console.log(event)    const apigwManagementApi = new AWS.ApiGatewayManagementApi({    apiVersion: '2018-11-29',    endpoint: event.requestContext.domainName + '/' + event.requestContext.stage  });        send = async (connectionId, data) => {  await apigwManagementApi.postToConnection({ ConnectionId: connectionId, Data: `Echo: ${data}` }).promise();  }}
 ```
 
-```
+```plain
 exports.handler =  (event, context, callback) => {  init(event);  let message = JSON.parse(event.body).message    getConnections().then((data) => {        console.log(data.Items);        data.Items.forEach(function(connection) {           console.log("Connection " +connection.connectionid)           send(connection.connectionid, message);        });    });        return {}};
 ```
 
-```
+```plain
 function getConnections(){    return ddb.scan({        TableName: 'Chat',    }).promise();}
 ```
 
@@ -151,15 +151,15 @@ The above code will scan the DynamoDB to get all the available records in the ta
 
 Since WebSockets API is still new there are some things we need to do manually. Create a new file named patch.js and add the following code inside it.
 
-```
+```plain
 require('aws-sdk/lib/node_loader');var AWS = require('aws-sdk/lib/core');var Service = AWS.Service;var apiLoader = AWS.apiLoader;
 ```
 
-```
+```plain
 apiLoader.services['apigatewaymanagementapi'] = {};AWS.ApiGatewayManagementApi = Service.defineService('apigatewaymanagementapi', ['2018-11-29']);Object.defineProperty(apiLoader.services['apigatewaymanagementapi'], '2018-11-29', {  get: function get() {    var model = {      "metadata": {        "apiVersion": "2018-11-29",        "endpointPrefix": "execute-api",        "signingName": "execute-api",        "serviceFullName": "AmazonApiGatewayManagementApi",        "serviceId": "ApiGatewayManagementApi",        "protocol": "rest-json",        "jsonVersion": "1.1",        "uid": "apigatewaymanagementapi-2018-11-29",        "signatureVersion": "v4"      },      "operations": {        "PostToConnection": {          "http": {            "requestUri": "/@connections/{connectionId}",            "responseCode": 200          },          "input": {            "type": "structure",            "members": {              "Data": {                "type": "blob"              },              "ConnectionId": {                "location": "uri",                "locationName": "connectionId"              }            },            "required": [              "ConnectionId",              "Data"            ],            "payload": "Data"          }        }      },      "shapes": {}    }    model.paginators = {      "pagination": {}    }    return model;  },  enumerable: true,  configurable: true});
 ```
 
-```
+```plain
 module.exports = AWS.ApiGatewayManagementApi;
 ```
 
@@ -173,7 +173,7 @@ Now we have completed our WebSocket API and we can fully test the application. T
 
 After connecting, issue the following JSON to send messages:
 
-```
+```plain
 {"action" : "onMessage" , "message" : "Hello everyone"}
 ```
 

@@ -47,7 +47,7 @@
 
 项目文件夹和文件结构如下：
 
-```
+```plain
 src/
   |-public // folder with the content that we will feed to the browser
     |-style // folder for our css and emojis

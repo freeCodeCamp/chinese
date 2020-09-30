@@ -13,7 +13,7 @@ It is simple, tiny (~24KB), and very performant. It feels different from all the
 
 This post is pretty big! [Get it in PDF or ePub format here!][2]
 
-### First, what is a JavaScript front-end framework?
+### First, what is a JavaScript front-end framework
 
 If you’re unsure what a JavaScript framework is, Vue is the perfect first encounter with one.
 
@@ -74,7 +74,7 @@ Vue.js is probably the most approachable front-end framework around. Some people
 
 Vue was built by picking the best ideas of frameworks like Angular, React and Knockout, and by cherry-picking the best choices those frameworks made. And by excluding some less brilliant ones, it kind of started as a “best-of” set and grew from there.
 
-#### Where does Vue.js position itself in the frameworks landscape?
+#### Where does Vue.js position itself in the frameworks landscape
 
 The two elephants in the room, when talking about web development, are React and Angular. How does Vue position itself relative to those two big and popular frameworks?
 
@@ -110,7 +110,7 @@ First I’ll go through the most basic example of using Vue.
 
 You create an HTML file which contains:
 
-```
+```plain
 <html>  <body>    <div id="example">      <p>{{ hello }}</p>    </div>    <script src="https://unpkg.com/vue"></script>    <script>        new Vue({            el: '#example',            data: { hello: 'Hello World!' }        })    </script>  </body></html>
 ```
 
@@ -182,7 +182,7 @@ In the body it includes just one simple element: `<div id="app">`</div>. This is
 <body>  <div id="app"></div>  <!-- built files will be auto injected --></body>
 ```
 
-```
+```plain
 </html>
 ```
 
@@ -196,7 +196,7 @@ We set `productionTip` to `false`, to avoid Vue outputting a “you’re in deve
 
 Next, we create the Vue instance, by assigning it to the DOM element identified by `#app`, which we defined in `index.html`, and we tell it to use the App component.
 
-```
+```plain
 // The Vue build version to load with the `import` command// (runtime-only or standalone) has been set in webpack.base.conf with an alias.import Vue from 'vue'import App from './App'
 ```
 
@@ -222,21 +222,21 @@ We import a component from the `components/HelloWorld.vue` file, which we'll des
 
 This component is going to be referenced in our component. It’s a dependency. We are going to output this code
 
-```
+```plain
 <div id="app">  <img width="25%" src="./assets/logo.png">  <HelloWorld/></div>
 ```
 
 from this component, which you see references the `HelloWorld` component. Vue will automatically insert that component inside this placeholder.
 
-```
+```plain
 <template>  <div id="app">    <img width="25%" src="./assets/logo.png">    <HelloWorld/>  </div></template>
 ```
 
-```
+```plain
 <script>import HelloWorld from './components/HelloWorld'
 ```
 
-```
+```plain
 export default {  name: 'App',  components: {    HelloWorld  }}</script>
 ```
 
@@ -268,7 +268,7 @@ Anything that’s stored in `data` is reachable directly in the template via its
 <script>export default {  name: 'HelloWorld',  data() {    return {      msg: 'Welcome to Your Vue.js App'    }  }}</script>
 ```
 
-```
+```plain
 <!-- Add "scoped" attribute to limit CSS to this component only --><style scoped>h1,h2 {  font-weight: normal;}ul {  list-style-type: none;  padding: 0;}li {  display: inline-block;  margin: 0 10px;}a {  color: #42b983;}</style>
 ```
 
@@ -290,7 +290,7 @@ In the previous example, I introduced an example project based on the Vue CLI. W
 
 The Vue CLI is a command line utility, and you install it globally using npm:
 
-```
+```plain
 npm install -g @vue/cli
 ```
 
@@ -396,7 +396,7 @@ This is pretty cool. How many times do you dive in and change things, only to re
 
 You can skip the interactive panel and instruct Vue CLI to use a particular preset:
 
-```
+```plain
 vue create -p favourite example-2
 ```
 
@@ -420,7 +420,7 @@ vue add @vue/cli-plugin-babel
 
 All those plugins are used in the latest version available. You can force Vue CLI to use a specific version by passing the version property:
 
-```
+```plain
 "@vue/cli-plugin-eslint": {  "version": "^3.0.0"}
 ```
 
@@ -438,7 +438,7 @@ Extracted from the above, I made a sample [preset][36] which contains this confi
 
 It can be used to bootstrap a new application using:
 
-```
+```plain
 vue create --preset flaviocopes/vue-cli-preset example3
 ```
 
@@ -456,7 +456,7 @@ npm install -g @vue/cli-service-global
 //or
 ```
 
-```
+```plain
 yarn global add @vue/cli-service-global
 ```
 
@@ -468,7 +468,7 @@ Create an app.vue file:
 
 and then run
 
-```
+```plain
 vue serve app.vue
 ```
 
@@ -574,7 +574,7 @@ This will open the standalone Electron-based application.
 
 Now, paste the script tag it shows you
 
-```
+```plain
 <script src="http://localhost:8098"></script>
 ```
 
@@ -796,7 +796,7 @@ Vue components can be defined in four main ways. Let’s talk in code.
 
 The first is:
 
-```
+```plain
 new Vue({  /* options */})
 ```
 
@@ -818,7 +818,7 @@ In an SPA, where it’s Vue that builds the HTML, it’s more common to use Sing
 
 You instantiate Vue by mounting it on a DOM element. If you have a `<div id="app">`</div> tag, you will use:
 
-```
+```plain
 new Vue({ el: '#app' })
 ```
 
@@ -826,11 +826,11 @@ A component initialized with `new Vue` has no corresponding tag name, so it's us
 
 Other components used in the application are initialized using `Vue.component()`. Such a component allows you to define a tag — with which you can embed the component multiple times in the application — and specify the output of the component in the `template` property:
 
-```
+```plain
 <div id="app">  <user-name name="Flavio"></user-name></div>
 ```
 
-```
+```plain
 Vue.component('user-name', {  props: ['name'],  template: '<p>Hi {{ name }}</p>'})
 ```
 
@@ -846,7 +846,7 @@ The component accepts a prop, which is an attribute we use to pass data down to 
 
 In the `Vue.component()` call we passed `user-name` as the first parameter. This gives the component a name. You can write the name in 2 ways here. The first is the one we used, called kebab-case. The second is called PascalCase, which is like camelCase, but with the first letter capitalized:
 
-```
+```plain
 Vue.component('UserName', {  /* ... */})
 ```
 
@@ -870,11 +870,11 @@ new Vue({  el: '#app',  components: {    Sidebar  }})
 
 You can write the component in the same file, but a great way to do this is to use JavaScript modules:
 
-```
+```plain
 import Sidebar from './Sidebar'
 ```
 
-```
+```plain
 export default {  el: '#app',  components: {    Sidebar  }}
 ```
 
@@ -886,11 +886,11 @@ A child component can be added multiple times. Each separate instance is indepen
 <div id="app">  <user-name name="Flavio"></user-name>  <user-name name="Roger"></user-name>  <user-name name="Syd"></user-name></div>
 ```
 
-```
+```plain
 Vue.component('user-name', {  props: ['name'],  template: '<p>Hi {{ name }}</p>'})
 ```
 
-```
+```plain
 new Vue({  el: '#app'})
 ```
 
@@ -915,13 +915,13 @@ A component accepts other properties:
 
 A Vue component can be declared in a JavaScript file (`.js`) like this:
 
-```
+```plain
 Vue.component('component-name', {  /* options */})
 ```
 
 or also:
 
-```
+```plain
 new Vue({  /* options */})
 ```
 
@@ -941,7 +941,7 @@ Here’s an example:
 <template>  <p>{{ hello }}</p></template>
 ```
 
-```
+```plain
 <script>export default {  data() {    return {      hello: 'Hello World!'    }  }}</script>
 ```
 
@@ -982,13 +982,13 @@ You can use the `src` attribute to externalize it:
 
 This also works for your CSS:
 
-```
+```plain
 <template>  <p>{{ hello }}</p></template><script src="./hello.js"></script><style src="./hello.css"></style>
 ```
 
 Notice how I used
 
-```
+```plain
 export default {  data() {    return {      hello: 'Hello World!'    }  }}
 ```
 
@@ -996,7 +996,7 @@ in the component’s JavaScript to set up the data.
 
 Other common ways you will see are:
 
-```
+```plain
 export default {  data: function() {    return {      name: 'Flavio'    }  }}
 ```
 
@@ -1004,7 +1004,7 @@ The above is equivalent to what we did before.
 
 Or:
 
-```
+```plain
 export default {  data: () => {    return {      name: 'Flavio'    }  }}
 ```
 
@@ -1012,7 +1012,7 @@ This is different, because it uses an arrow function. Arrow functions are fine u
 
 You might also see:
 
-```
+```plain
 module.exports = {  data: () => {    return {      name: 'Flavio'    }  }}
 ```
 
@@ -1032,13 +1032,13 @@ This is a valid Vue.js template:
 
 This template can be put inside a Vue component declared explicitly:
 
-```
+```plain
 new Vue({  template: '<span>Hello!</span>'})
 ```
 
 or it can be put into a Single File Component:
 
-```
+```plain
 <template>  <span>Hello!</span></template>
 ```
 
@@ -1066,7 +1066,7 @@ In a single file component, that would be:
 <template>  <span>Hello {{name}}!</span></template>
 ```
 
-```
+```plain
 <script>export default {  data() {    return {      name: 'Flavio'    }  }}</script>
 ```
 
@@ -1084,17 +1084,17 @@ While in those templating engines they are “dumb”, in Vue, you can do much m
 
 You can use any JavaScript expression inside your interpolations, but you’re limited to just one expression:
 
-```
+```plain
 {{ name.reverse() }}
 ```
 
-```
+```plain
 {{ name === 'Flavio' ? 'Flavio' : 'stranger' }}
 ```
 
 Vue provides access to some global objects inside templates, including Math and Date, so you can use them:
 
-```
+```plain
 {{ Math.sqrt(16) * Math.random() }}
 ```
 
@@ -1118,7 +1118,7 @@ The simplest option to add CSS to a Vue.js component is to use the `style` tag, 
 <template>  <p style="text-decoration: underline">Hi!</p></template>
 ```
 
-```
+```plain
 <script>export default {  data() {    return {      decoration: 'underline'    }  }}</script>
 ```
 
@@ -1128,7 +1128,7 @@ This is as static as you can get. What if you want `underline` to be defined in 
 <template>  <p :style="{'text-decoration': decoration}">Hi!</p></template>
 ```
 
-```
+```plain
 <script>export default {  data() {    return {      decoration: 'underline'    }  }}</script>
 ```
 
@@ -1144,7 +1144,7 @@ You can avoid the quotes by using a special camelCase syntax that Vue.js enables
 
 Instead of binding an object to `style`, you can reference a computed property:
 
-```
+```plain
 <template>  <p :style="styling">Hi!</p></template>
 ```
 
@@ -1154,7 +1154,7 @@ Instead of binding an object to `style`, you can reference a computed property:
 
 Vue components generate plain HTML, so you can choose to add a class to each element, and add a corresponding CSS selector with properties that style it:
 
-```
+```plain
 <template>  <p class="underline">Hi!</p></template>
 ```
 
@@ -1164,7 +1164,7 @@ Vue components generate plain HTML, so you can choose to add a class to each ele
 
 You can use SCSS like this:
 
-```
+```plain
 <template>  <p class="underline">Hi!</p></template>
 ```
 
@@ -1174,43 +1174,43 @@ You can use SCSS like this:
 
 You can hard code the class like in the above example. Or you can bind the class to a component property, to make it dynamic, and only apply to that class if the data property is true:
 
-```
+```plain
 <template>  <p :class="{underline: isUnderlined}">Hi!</p></template>
 ```
 
-```
+```plain
 <script>export default {  data() {    return {      isUnderlined: true    }  }}</script>
 ```
 
-```
+```plain
 <style>.underline { text-decoration: underline; }</style>
 ```
 
 Instead of binding an object to class, like we did with `<p :class="{text: isText}">H`i!</p>, you can directly bind a string, and that will reference a data property:
 
-```
+```plain
 <template>  <p :class="paragraphClass">Hi!</p></template>
 ```
 
-```
+```plain
 <script>export default {  data() {    return {      paragraphClass: 'underline'    }  }}</script>
 ```
 
-```
+```plain
 <style>.underline { text-decoration: underline; }</style>
 ```
 
 You can assign multiple classes, either by adding two classes to `paragraphClass` in this case or by using an array:
 
-```
+```plain
 <template>  <p :class="[decoration, weight]">Hi!</p></template>
 ```
 
-```
+```plain
 <script>export default {  data() {    return {      decoration: 'underline',      weight: 'weight',    }  }}</script>
 ```
 
-```
+```plain
 <style>.underline { text-decoration: underline; }.weight { font-weight: bold; }</style>
 ```
 
@@ -1224,7 +1224,7 @@ The same can be done using an object inlined in the class binding:
 <script>export default {  data() {    return {      isUnderlined: true,      isBold: true    }  }}</script>
 ```
 
-```
+```plain
 <style>.underline { text-decoration: underline; }.weight { font-weight: bold; }</style>
 ```
 
@@ -1238,13 +1238,13 @@ And you can combine the two statements:
 <script>export default {  data() {    return {      decoration: 'underline',      isBold: true    }  }}</script>
 ```
 
-```
+```plain
 <style>.underline { text-decoration: underline; }.weight { font-weight: bold; }</style>
 ```
 
 You can also use a computed property that returns an object, which works best when you have many CSS classes to add to the same element:
 
-```
+```plain
 <template>  <p :class="paragraphClasses">Hi!</p></template>
 ```
 
@@ -1252,7 +1252,7 @@ You can also use a computed property that returns an object, which works best wh
 <script>export default {  data() {    return {      isUnderlined: true,      isBold: true    }  },  computed: {    paragraphClasses: function() {      return {        underlined: this.isUnderlined,        bold: this.isBold      }    }  }}</script>
 ```
 
-```
+```plain
 <style>.underlined { text-decoration: underline; }.bold { font-weight: bold; }</style>
 ```
 
@@ -1274,7 +1274,7 @@ Let’s see each of the Vue directives in detail.
 
 Instead of using interpolation, you can use the `v-text` directive. It performs the same job:
 
-```
+```plain
 <span v-text="name"></span>
 ```
 
@@ -1286,7 +1286,7 @@ Any time `name` changes in your component data, Vue is going to update the value
 
 Unless you use the `v-once` directive, which is basically like an HTML attribute:
 
-```
+```plain
 <span v-once>{{ name }}</span>
 ```
 
@@ -1296,7 +1296,7 @@ When you use interpolation to print a data property, the HTML is escaped. This i
 
 There are cases, however, where you want to output HTML and make the browser interpret it. You can use the `v-html`directive:
 
-```
+```plain
 <span v-html="someHtml"></span>
 ```
 
@@ -1312,7 +1312,7 @@ Attributes must use `v-bind`:
 
 `v-bind` is so common that there is a shorthand syntax for it:
 
-```
+```plain
 <a v-bind:href="url">{{ linkText }}</a><a :href="url">{{ linkText }}</a>
 ```
 
@@ -1332,7 +1332,7 @@ Attributes must use `v-bind`:
 
 You can use any JavaScript expression inside a directive:
 
-```
+```plain
 <span v-text="'Hi, ' + name + '!'"></span>
 ```
 
@@ -1346,13 +1346,13 @@ Any variable used in a directive references the corresponding data property.
 
 Inside a directive you can use the ternary operator to perform a conditional check, since that’s an expression:
 
-```
+```plain
 <span v-text="name == Flavio ? 'Hi Flavio!' : 'Hi' + name + '!'"></span>
 ```
 
 There are dedicated directives that allow you to perform more organized conditionals: `v-if`, `v-else` and `v-else-if`.
 
-```
+```plain
 <p v-if="shouldShowThis">Hey!</p>
 ```
 
@@ -1364,7 +1364,7 @@ There are dedicated directives that allow you to perform more organized conditio
 
 You can iterate on a simple array of values:
 
-```
+```plain
 <template>  <ul>    <li v-for="item in items">{{ item }}</li>  </ul></template>
 ```
 
@@ -1374,7 +1374,7 @@ You can iterate on a simple array of values:
 
 Or on an array of objects:
 
-```
+```plain
 <template>  <div>    <!-- using interpolation -->    <ul>      <li v-for="todo in todos">{{ todo.title }}</li>    </ul>    <!-- using v-text -->    <ul>      <li v-for="todo in todos" v-text="todo.title"></li>    </ul>  </div></template>
 ```
 
@@ -1402,7 +1402,7 @@ Or on an array of objects:
 
 You can pass parameters to any event:
 
-```
+```plain
 <template>  <a v-on:click="handleClick('test')">Click me!</a></template>
 ```
 
@@ -1412,11 +1412,11 @@ You can pass parameters to any event:
 
 Small bits of JavaScript (a single expression) can be put directly into the template:
 
-```
+```plain
 <template>  <a v-on:click="counter = counter + 1">{{counter}}</a></template>
 ```
 
-```
+```plain
 <script>export default {  data: function() {    return {      counter: 0    }  }}</script>
 ```
 
@@ -1432,7 +1432,7 @@ Small bits of JavaScript (a single expression) can be put directly into the temp
 
 You can choose to only show an element in the DOM if a particular property of the Vue instance evaluates to true, using `v-show`:
 
-```
+```plain
 <p v-show="isTrue">Something</p>
 ```
 
@@ -1446,7 +1446,7 @@ One good example is `.prevent`, which automatically calls `preventDefault()` on 
 
 In this case, the form does not cause the page to be reloaded, which is the default behavior:
 
-```
+```plain
 <form v-on:submit.prevent="formSubmitted"></form>
 ```
 
@@ -1472,13 +1472,13 @@ new Vue({  methods: {    handleClick: function() {      alert('test')    }  }})
 
 or in the case of Single File Components:
 
-```
+```plain
 <script>export default {  methods: {    handleClick: function() {      alert('test')    }  }}</script>
 ```
 
 Methods are especially useful when you need to perform an action and you attach a `v-on` directive on an element to handle events. Like this one, which calls `handleClick` when the element is clicked:
 
-```
+```plain
 <template>  <a @click="handleClick">Click me!</a></template>
 ```
 
@@ -1488,17 +1488,17 @@ Methods can accept parameters.
 
 In this case, you just pass the parameter in the template:
 
-```
+```plain
 <template>  <a @click="handleClick('something')">Click me!</a></template>
 ```
 
-```
+```plain
 new Vue({  methods: {    handleClick: function(text) {      alert(text)    }  }})
 ```
 
 or in the case of Single File Components:
 
-```
+```plain
 <script>export default {  methods: {    handleClick: function(text) {      alert(text)    }  }}</script>
 ```
 
@@ -1506,11 +1506,11 @@ or in the case of Single File Components:
 
 You can access any of the data properties of the Vue component by using `this.propertyName`:
 
-```
+```plain
 <template>  <a @click="handleClick()">Click me!</a></template>
 ```
 
-```
+```plain
 <script>export default {  data() {    return {      name: 'Flavio'    }  },  methods: {    handleClick: function() {      console.log(this.name)    }  }}</script>
 ```
 
@@ -1524,11 +1524,11 @@ A watcher is a special Vue.js feature that allows you to spy on one property of 
 
 Here’s an example. We have a component that shows a name, and allows you to change it by clicking a button:
 
-```
+```plain
 <template>  <p>My name is {{name}}</p>  <button @click="changeName()">Change my name!</button></template>
 ```
 
-```
+```plain
 <script>export default {  data() {    return {      name: 'Flavio'    }  },  methods: {    changeName: function() {      this.name = 'Flavius'    }  }}</script>
 ```
 
@@ -1536,7 +1536,7 @@ When the name changes we want to do something, like print a console log.
 
 We can do so by adding to the `watch` object a property named as the data property we want to watch over:
 
-```
+```plain
 <script>export default {  data() {    return {      name: 'Flavio'    }  },  methods: {    changeName: function() {      this.name = 'Flavius'    }  },  watch: {    name: function() {      console.log(this.name)    }  }}</script>
 ```
 
@@ -1576,7 +1576,7 @@ To do something more than a single expression, and to have more declarative temp
 
 Computed properties are defined in the `computed` property of the Vue component:
 
-```
+```plain
 <script>export default {  computed: {
 ```
 
@@ -1597,7 +1597,7 @@ Notice:
 <template>  <p>{{ count }}</p></template>
 ```
 
-```
+```plain
 <script>export default {  data() {    return {      items: [1, 2, 3]    }  },  computed: {    count: function() {      return 'The count is ' + this.items.length * 10    }  }}</script>
 ```
 
@@ -1611,7 +1611,7 @@ First, methods must be called, not just referenced, so you’d need to do:
 <template>  <p>{{ count() }}</p></template>
 ```
 
-```
+```plain
 <script>export default {  data() {    return {      items: [1, 2, 3]    }  },  methods: {    count: function() {      return 'The count is ' + this.items.length * 10    }  }}</script>
 ```
 
@@ -1625,7 +1625,7 @@ The result of the `count` computed property is internally cached until the `item
 <template>  <p>{{ now }}</p></template>
 ```
 
-```
+```plain
 <script>export default {  computed: {    now: function () {      return Date.now()    }  }}</script>
 ```
 
@@ -1672,7 +1672,7 @@ Vue.component('user-name', {  props: ['name'],  template: '<p>Hi {{ name }}</p>'
 
 or, in a Vue Single File Component:
 
-```
+```plain
 <template>  <p>{{ name }}</p></template>
 ```
 
@@ -1684,7 +1684,7 @@ or, in a Vue Single File Component:
 
 You can have multiple props by simply appending them to the array:
 
-```
+```plain
 Vue.component('user-name', {  props: ['firstName', 'lastName'],  template: '<p>Hi {{ firstName }} {{ lastName }}</p>'})
 ```
 
@@ -1721,7 +1721,7 @@ props: {  firstName: [String, Number]}
 
 You can require a prop to be mandatory:
 
-```
+```plain
 props: {  firstName: {    type: String,    required: true  }}
 ```
 
@@ -1763,7 +1763,7 @@ If it’s a data property, you use
 <template>  <ComponentName :color=color /></template>
 ```
 
-```
+```plain
 <script>...export default {  //...  data: function() {    return {      color: 'white'    }  },  //...}</script>
 ```
 
@@ -1773,25 +1773,25 @@ You can use a ternary operator inside the prop value to check a truthy condition
 <template>  <ComponentName :colored="color == 'white' ? true : false" /></template>
 ```
 
-```
+```plain
 <script>...export default {  //...  data: function() {    return {      color: 'white'    }  },  //...}</script>
 ```
 
 ### Handling Events in Vue
 
-#### What are Vue.js events?
+#### What are Vue.js events
 
 Vue.js allows us to intercept any DOM event by using the `v-on` directive on an element.
 
 If we want to do something when a click event happens in this element:
 
-```
+```plain
 <template>  <a>Click me!</a></template>
 ```
 
 we add a `v-on` directive:
 
-```
+```plain
 <template>  <a v-on:click="handleClick">Click me!</a></template>
 ```
 
@@ -1805,7 +1805,7 @@ You can choose to use the parentheses or not. `@click="handleClick"` is equivale
 
 `handleClick` is a method attached to the component:
 
-```
+```plain
 <script>export default {  methods: {    handleClick: function(event) {      console.log(event)    }  }}</script>
 ```
 
@@ -1831,7 +1831,7 @@ and if you already pass a variable:
 <template>  <a @click="handleClick('something', $event)">Click me!</a></template>
 ```
 
-```
+```plain
 <script>export default {  methods: {    handleClick: function(text, event) {      console.log(text)      console.log(event)    }  }}</script>
 ```
 
@@ -1856,7 +1856,7 @@ For more on propagation, bubbling and capturing, see my [JavaScript events guide
 
 A component can choose to define its content entirely, like in this case:
 
-```
+```plain
 Vue.component('user-name', {  props: ['name'],  template: '<p>Hi {{ name }}</p>'})
 ```
 
@@ -1866,13 +1866,13 @@ What’s a slot?
 
 You define it by putting `<slot>&`lt;/slot> in a component template:
 
-```
+```plain
 Vue.component('user-information', {  template: '<div class="user-information"><slot></slot></div>'})
 ```
 
 When using this component, any content added between the opening and closing tag will be added inside the slot placeholder:
 
-```
+```plain
 <user-information>  <h2>Hi!</h2>  <user-name name="Flavio"></user-information>
 ```
 
@@ -1888,7 +1888,7 @@ Anything outside any template tag is added to the main `slot`.
 
 For convenience, I use a `page` single file component in this example:
 
-```
+```plain
 <template>  <div>    <main>      <slot></slot>    </main>    <sidebar>      <slot name="sidebar"></slot>    </sidebar>  </div></template>
 ```
 
@@ -1908,11 +1908,11 @@ They don’t change a component’s data or anything, but they only affect the o
 
 Say you are printing a name:
 
-```
+```plain
 <template>  <p>Hi {{ name }}!</p></template>
 ```
 
-```
+```plain
 <script>export default {  data() {    return {      name: 'Flavio'    }  }}</script>
 ```
 
@@ -1920,11 +1920,11 @@ What if you want to check that `name` is actually containing a value, and if not
 
 Enter filters:
 
-```
+```plain
 <template>  <p>Hi {{ name | fallback }}!</p></template>
 ```
 
-```
+```plain
 <script>export default {  data() {    return {      name: 'Flavio'    }  },  filters: {    fallback: function(name) {      return name ? name : 'there'    }  }}</script>
 ```
 
@@ -1957,7 +1957,7 @@ Advanced filters can also accept parameters, using the normal function parameter
 <template>  <p>Hello {{ name | prepend('Dr.') }}</p></template>
 ```
 
-```
+```plain
 <script>export default {  data() {    return {      name: 'House'    }  },  filters: {    prepend: (name, prefix) => {      return `${prefix} ${name}`    }  }}</script>
 ```
 
@@ -1987,7 +1987,7 @@ Parents “pass down” data by adding arguments to the component declaration:
 <script>import Car from './components/Car'
 ```
 
-```
+```plain
 export default {  name: 'App',  components: {    Car  }}</script>
 ```
 
@@ -1999,13 +1999,13 @@ The reverse is not true, and you should never mutate a prop inside the child com
 
 Events allow you to communicate from the children up to the parent:
 
-```
+```plain
 <script>export default {  name: 'Car',  methods: {    handleClick: function() {      this.$emit('clickedSomething')    }  }}</script>
 ```
 
 The parent can intercept this using the `v-on` directive when including the component in its template:
 
-```
+```plain
 <template>  <div>    <Car v-on:clickedSomething="handleClickInParent" />    <!-- or -->    <Car @clickedSomething="handleClickInParent" />  </div></template>
 ```
 
@@ -2015,7 +2015,7 @@ The parent can intercept this using the `v-on` directive when including the comp
 
 You can pass parameters of course:
 
-```
+```plain
 <script>export default {  name: 'Car',  methods: {    handleClick: function() {      this.$emit('clickedSomething', param1, param2)    }  }}</script>
 ```
 
@@ -2041,13 +2041,13 @@ What we can do instead is to emit the event on a more generally accessible compo
 
 You can also create a Vue component dedicated to this job, and import it where you need.
 
-```
+```plain
 <script>export default {  name: 'Car',  methods: {    handleClick: function() {      this.$root.$emit('clickedSomething')    }  }}</script>
 ```
 
 Any other component can listen for this event. You can do so in the `mounted` callback:
 
-```
+```plain
 <script>export default {  name: 'App',  mounted() {    this.$root.$on('clickedSomething', () => {      //...    })  }}</script>
 ```
 
@@ -2112,7 +2112,7 @@ This file can be put anywhere. It’s generally suggested to put it in the `src/
 
 In this file we initialize Vuex and tell Vue to use it:
 
-```
+```plain
 import Vue from 'vue'import Vuex from 'vuex'
 ```
 
@@ -2144,7 +2144,7 @@ I delete the HelloWorld component and add a Form component, and a Display compon
 <template>  <div>    <label for="flavor">Favorite ice cream flavor?</label>    <input name="flavor">  </div></template>
 ```
 
-```
+```plain
 <template>  <div>    <p>You chose ???</p>  </div></template>
 ```
 
@@ -2156,7 +2156,7 @@ We add them to the `App.vue` code instead of the HelloWorld component:
 <template>  <div id="app">    <Form/>    <Display/>  </div></template>
 ```
 
-```
+```plain
 <script>import Form from './components/Form'import Display from './components/Display'
 ```
 
@@ -2168,15 +2168,15 @@ export default {  name: 'App',  components: {    Form,    Display  }}</script>
 
 So with this in place, we go back to the store.js file. We add a property to the store called `state`, which is an object, that contains the `flavor` property. That's an empty string initially.
 
-```
+```plain
 import Vue from 'vue'import Vuex from 'vuex'
 ```
 
-```
+```plain
 Vue.use(Vuex)
 ```
 
-```
+```plain
 export const store = new Vuex.Store({  state: {    flavor: ''  }})
 ```
 
@@ -2202,7 +2202,7 @@ export const store = new Vuex.Store({  state: {    flavor: ''  },  mutations: { 
 
 With that set, we need to add a way to look at the state. We do so using getters. We set up a getter for the `flavor`property:
 
-```
+```plain
 import Vue from 'vue'import Vuex from 'vuex'
 ```
 
@@ -2210,7 +2210,7 @@ import Vue from 'vue'import Vuex from 'vuex'
 Vue.use(Vuex)
 ```
 
-```
+```plain
 export const store = new Vuex.Store({  state: {    flavor: ''  },  mutations: {    change(state, flavor) {      state.flavor = flavor    }  },  getters: {    flavor: state => state.flavor  }})
 ```
 
@@ -2242,7 +2242,7 @@ We do so by using the `store.commit()` API.
 
 But first, let’s create a method that is invoked when the input content changes. We use `@input` rather than `@change`because the latter is only triggered when the focus is moved away from the input box, while `@input` is called on every keypress.
 
-```
+```plain
 <template>  <div>    <label for="flavor">Favorite ice cream flavor?</label>    <input @input="changed" name="flavor">  </div></template>
 ```
 
@@ -2252,7 +2252,7 @@ But first, let’s create a method that is invoked when the input content change
 
 Now that we have the value of the flavor, we use the Vuex API:
 
-```
+```plain
 <script>export default {  methods: {    changed: function(event) {      this.$store.commit('change', event.target.value)    }  }}</script>
 ```
 
@@ -2264,7 +2264,7 @@ The `commit()` method accepts a mutation name (we used `change` in the Vuex stor
 
 Now we need to reference the getter of this value in the Display template, by using `$store.getters.flavor`. `this` can be removed because we're in the template, and `this` is implicit.
 
-```
+```plain
 <template>  <div>    <p>You chose {{ $store.getters.flavor }}</p>  </div></template>
 ```
 
@@ -2301,7 +2301,7 @@ Vue Router is available via npm with the package named `vue-router`.
 
 If you use Vue via a script tag, you can include Vue Router using
 
-```
+```plain
 <script src="https://unpkg.com/vue-router"></script>
 ```
 
@@ -2309,7 +2309,7 @@ If you use Vue via a script tag, you can include Vue Router using
 
 If you use the Vue CLI, install it using:
 
-```
+```plain
 npm install vue-router
 ```
 
@@ -2317,7 +2317,7 @@ Once you install `vue-router` and make it available either using a script tag or
 
 You import it after `vue`, and you call `Vue.use(VueRouter)` to **install** it inside the app:
 
-```
+```plain
 import Vue from 'vue'import VueRouter from 'vue-router'
 ```
 
@@ -2347,13 +2347,13 @@ which resemble the `pushState`, `replaceState` and `go` methods of the History A
 
 Usage samples:
 
-```
+```plain
 this.$router.push('about') //named route, see laterthis.$router.push({ path: 'about' })this.$router.push({ path: 'post', query: { post_slug: 'hello-world' } }) //using query parameters (post?post_slug=hello-world)this.$router.replace({ path: 'about' })
 ```
 
 `go()` goes back and forth, accepting a number that can be positive or negative to go back in the history:
 
-```
+```plain
 this.$router.go(-1) //go back 1 stepthis.$router.go(1) //go forward 1 step
 ```
 
@@ -2377,7 +2377,7 @@ We pass them to the initialization of the `router` object, and we pass this obje
 
 Here’s the code:
 
-```
+```plain
 <script>import Vue from 'vue'import VueRouter from 'vue-router'
 ```
 
@@ -2385,11 +2385,11 @@ Here’s the code:
 Vue.use(Router)
 ```
 
-```
+```plain
 const Home  = {  template: '<div>Home</div>'}
 ```
 
-```
+```plain
 const Login = {  template: '<div>Login</div>'}
 ```
 
@@ -2397,7 +2397,7 @@ const Login = {  template: '<div>Login</div>'}
 const About = {  template: '<div>About</div>'}
 ```
 
-```
+```plain
 const router = new VueRouter({  routes: [    { path: '/', component: Home },    { path: '/login', component: Login },    { path: '/about', component: About }  ]})
 ```
 
@@ -2433,13 +2433,13 @@ If you pass a `name` param too, you have a named route.
 
 Remember how we used the Router object to push a new state before?
 
-```
+```plain
 this.$router.push({ path: 'about' })
 ```
 
 With a named route we can pass parameters to the new route:
 
-```
+```plain
 this.$router.push({ name: 'post', params: { post_slug: 'hello-world' } })
 ```
 
@@ -2534,7 +2534,7 @@ You’re not limited to this kind of syntax. Vue relies on [this library][62] to
 
 Now inside the Post route component we can reference the route using `$route`, and the post slug using `$route.params.post_slug`:
 
-```
+```plain
 const Post = {  template: '<div>Post: {{ $route.params.post_slug }}</div>'}
 ```
 
@@ -2554,7 +2554,7 @@ When this happens, Vue calls the `beforeRouteUpdate` life cycle event.
 
 There you can perform any operation you need:
 
-```
+```plain
 const Post = {  template: '<div>Post: {{ $route.params.post_slug }}</div>'  beforeRouteUpdate(to, from, next) {    console.log(`Updating slug from ${from} to ${to}`)    next() //make sure you always call next()  }}
 ```
 
@@ -2562,7 +2562,7 @@ const Post = {  template: '<div>Post: {{ $route.params.post_slug }}</div>'  befo
 
 In the examples, I used `$route.params.*` to access the route data. A component should not be so tightly coupled with the router, and instead, we can use props:
 
-```
+```plain
 const Post = {  props: ['post_slug'],  template: '<div>Post: {{ post_slug }}</div>'}
 ```
 
@@ -2588,7 +2588,7 @@ So, say we have an Author component taking care of the first dynamic segment:
 <script>import Vue from 'vue'import VueRouter from 'vue-router'
 ```
 
-```
+```plain
 Vue.use(Router)
 ```
 
@@ -2618,7 +2618,7 @@ const Post = {  template: '<div>Post: {{ $route.params.post_slug }}</div>'}
 
 Then we’ll inject the inner dynamic route in the `VueRouter` configuration:
 
-```
+```plain
 const router = new VueRouter({  routes: [{    path: '/post/:author',    component: Author,    children: [      path: ':post_slug',      component: Post    ]  }]})
 ```
 

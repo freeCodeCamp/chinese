@@ -41,7 +41,7 @@ The most common example Hello World of Node.js is a web server:
 const http = require('http')
 ```
 
-```
+```plain
 const hostname = '127.0.0.1'const port = 3000
 ```
 
@@ -384,7 +384,7 @@ Many times with Node.js we start servers, like this HTTP server:
 const express = require('express')const app = express()
 ```
 
-```
+```plain
 app.get('/', (req, res) => {  res.send('Hi!')})
 ```
 
@@ -398,11 +398,11 @@ In this case you need to send the command a `SIGTERM` signal, and handle that wi
 
 **Note:** `process` does not require a `require`, it's automatically available.
 
-```
+```plain
 const express = require('express')
 ```
 
-```
+```plain
 const app = express()
 ```
 
@@ -410,11 +410,11 @@ const app = express()
 app.get('/', (req, res) => {  res.send('Hi!')})
 ```
 
-```
+```plain
 app.listen(3000, () => console.log('Server ready'))
 ```
 
-```
+```plain
 process.on('SIGTERM', () => {  app.close(() => {    console.log('Process terminated')  })})
 ```
 
@@ -438,7 +438,7 @@ The `process` core module of Node provides the `env`property which hosts all the
 
 Here is an example that accesses the `NODE_ENV` environment variable, which is set to `development` by default.
 
-```
+```plain
 process.env.NODE_ENV // "development"
 ```
 
@@ -543,13 +543,13 @@ REPL stands for Read-Evaluate-Print-Loop, and it’s a great way to explore the 
 
 The `node` command is the one we use to run our Node.js scripts:
 
-```
+```plain
 node script.js
 ```
 
 If we omit the filename, we use it in REPL mode:
 
-```
+```plain
 node
 ```
 
@@ -567,7 +567,7 @@ The REPL is waiting for us to enter some JavaScript code.
 
 Start simple and enter:
 
-```
+```plain
 > console.log('test')testundefined>
 ```
 
@@ -633,7 +633,7 @@ How to accept arguments in a Node.js program passed from the command line
 
 You can pass any number of arguments when invoking a Node.js application using:
 
-```
+```plain
 node app.js
 ```
 
@@ -641,13 +641,13 @@ Arguments can be standalone or have a key and a value.
 
 For example:
 
-```
+```plain
 node app.js flavio
 ```
 
 or
 
-```
+```plain
 node app.js name=flavio
 ```
 
@@ -671,7 +671,7 @@ process.argv.forEach((val, index) => {  console.log(`${index}: ${val}`)})
 
 You can get only the additional arguments by creating a new array that excludes the first 2 params:
 
-```
+```plain
 const args = process.argv.slice(2)
 ```
 
@@ -689,7 +689,7 @@ const args = process.argv.slice(2)args[0]
 
 In this case:
 
-```
+```plain
 node app.js name=flavio
 ```
 
@@ -715,7 +715,7 @@ If you pass an object, it will render it as a string.
 
 You can pass multiple variables to `console.log`, for example:
 
-```
+```plain
 const x = 'x'const y = 'y'console.log(x, y)
 ```
 
@@ -736,7 +736,7 @@ console.log('My %s has %d years', 'cat', 2)
 
 Example:
 
-```
+```plain
 console.log('%O', Number)
 ```
 
@@ -774,7 +774,7 @@ const function2 = () => console.trace()const function1 = () => function2()functi
 
 This will print the stack trace. This is what’s printed if I try this in the Node REPL:
 
-```
+```plain
 Trace    at function2 (repl:1:33)    at function1 (repl:1:25)    at repl:1:1    at ContextifyScript.Script.runInThisContext (vm.js:44:33)    at REPLServer.defaultEval (repl.js:239:29)    at bound (domain.js:301:14)    at REPLServer.runBound [as eval] (domain.js:314:12)    at REPLServer.onLine (repl.js:440:10)    at emitOne (events.js:120:20)    at REPLServer.emit (events.js:210:7)
 ```
 
@@ -810,7 +810,7 @@ However, this is the low-level way to do this. The simplest way to go about colo
 
 You install it with `npm install chalk`, then you can use it:
 
-```
+```plain
 const chalk = require('chalk')console.log(chalk.yellow('hi!'))
 ```
 
@@ -838,7 +838,7 @@ How to make a Node.js CLI program interactive?
 
 Node since version 7 provides the `readline` [module][73] to perform exactly this: get input from a readable stream such as the `process.stdin` stream, which during the execution of a Node program is the terminal input, one line at a time.
 
-```
+```plain
 const readline = require('readline').createInterface({  input: process.stdin,  output: process.stdout})
 ```
 
@@ -862,7 +862,7 @@ A more complete and abstract solution is provided by the [Inquirer.js package][7
 
 You can install it using `npm install inquirer`, and then you can replicate the above code like this:
 
-```
+```plain
 const inquirer = require('inquirer')
 ```
 
@@ -1005,7 +1005,7 @@ npm update
 
 You can specify a single package to update as well:
 
-```
+```plain
 npm update <package-name>
 ```
 
@@ -1025,13 +1025,13 @@ In all those cases, versioning helps a lot, and `npm` follows the semantic versi
 
 The package.json file supports a format for specifying command line tasks that can be run by using
 
-```
+```plain
 npm <task-name>
 ```
 
 For example:
 
-```
+```plain
 {  "scripts": {    "start-dev": "node lib/server-development",    "start": "node lib/server-production"  }}
 ```
 
@@ -1207,7 +1207,7 @@ Lists the package author name
 
 Example:
 
-```
+```plain
 {  "author": "Flavio Copes <flavio@flaviocopes.com> (https://flaviocopes.com)"}
 ```
 
@@ -1239,7 +1239,7 @@ Links to the package issue tracker, most likely a GitHub issues page
 
 Example:
 
-```
+```plain
 {  "bugs": "https://github.com/flaviocopes/package/issues"}
 ```
 
@@ -1259,7 +1259,7 @@ Indicates the current version of the package.
 
 Example:
 
-```
+```plain
 "version": "1.0.0"
 ```
 
@@ -1285,7 +1285,7 @@ This property contains an array of keywords that associate with what your packag
 
 Example:
 
-```
+```plain
 "keywords": [  "email",  "machine learning",  "ai"]
 ```
 
@@ -1297,7 +1297,7 @@ This property contains a brief description of the package.
 
 Example:
 
-```
+```plain
 "description": "A package to work with strings"
 ```
 
@@ -1309,13 +1309,13 @@ This property specifies where this package repository is located.
 
 Example:
 
-```
+```plain
 "repository": "github:flaviocopes/testing",
 ```
 
 Notice the `github` prefix. There are other popular services baked in:
 
-```
+```plain
 "repository": "gitlab:flaviocopes/testing",
 ```
 
@@ -1325,7 +1325,7 @@ Notice the `github` prefix. There are other popular services baked in:
 
 You can explicitly set the version control system:
 
-```
+```plain
 "repository": {  "type": "git",  "url": "https://github.com/flaviocopes/testing.git"}
 ```
 
@@ -1408,7 +1408,7 @@ that package is automatically inserted in this list.
 
 Example:
 
-```
+```plain
 "devDependencies": {  "autoprefixer": "^7.1.2",  "babel-core": "^6.22.1"}
 ```
 
@@ -1418,7 +1418,7 @@ Sets which versions of Node.js and other commands this package/app works on.
 
 Example:
 
-```
+```plain
 "engines": {  "node": ">= 6.0.0",  "npm": ">= 3.0.0",  "yarn": "^0.13.0"}
 ```
 
@@ -1534,7 +1534,7 @@ npm list
 
 Example:
 
-```
+```plain
 ❯ npm list/Users/flavio/dev/node/cowsay└─┬ cowsay@1.3.1  ├── get-stdin@5.0.1  ├─┬ optimist@0.6.1  │ ├── minimist@0.0.10  │ └── wordwrap@0.0.3  ├─┬ string-width@2.1.1  │ ├── is-fullwidth-code-point@2.0.0  │ └─┬ strip-ansi@4.0.0  │   └── ansi-regex@3.0.0  └── strip-eof@1.0.0
 ```
 
@@ -1550,7 +1550,7 @@ To get only your top-level packages (basically, the ones you told npm to install
 
 You can get the version of a specific package by specifying the name:
 
-```
+```plain
 ❯ npm list cowsay/Users/flavio/dev/node/cowsay└── cowsay@1.3.1
 ```
 
@@ -1562,7 +1562,7 @@ This also works for dependencies of packages you installed:
 
 If you want to see what’s the latest available version of the package on the npm repository, run `npm view [package_name] version`:
 
-```
+```plain
 ❯ npm view cowsay version
 ```
 
@@ -1576,13 +1576,13 @@ Installing an older version of an npm package might be useful to solve a compati
 
 You can install an old version of an npm package using the `@` syntax:
 
-```
+```plain
 npm install <package>@<;version>
 ```
 
 Example:
 
-```
+```plain
 npm install cowsay
 ```
 
@@ -1652,7 +1652,7 @@ npm install -g npm-check-updates
 
 then run it:
 
-```
+```plain
 ncu -u
 ```
 
@@ -1666,7 +1666,7 @@ npm update
 
 If you just downloaded the project without the `node_modules` dependencies and you want to install the shiny new versions first, just run
 
-```
+```plain
 npm install
 ```
 
@@ -1729,7 +1729,7 @@ There are other rules, too:
 
 To uninstall a package you have previously installed **locally** (using `npm install <package-na`me> i`n the node_m`odules folder), run:
 
-```
+```plain
 npm uninstall <package-name>
 ```
 
@@ -1743,13 +1743,13 @@ npm uninstall -S <package-name>npm uninstall -D <package-name>
 
 If the package is installed **globally**, you need to add the `-g` / `--global` flag:
 
-```
+```plain
 npm uninstall -g <package-name>
 ```
 
 Example:
 
-```
+```plain
 npm uninstall -g webpack
 ```
 
@@ -1798,7 +1798,7 @@ Great examples of popular global packages which you might know are:
 
 You probably have some packages installed globally already on your system. You can see them by running:
 
-```
+```plain
 npm list -g --depth 0
 ```
 
@@ -1876,7 +1876,7 @@ Once downloaded, the downloaded code will be wiped.
 
 Use the `@` to specify the version, and combine that with the `node` npm package:
 
-```
+```plain
 npx node@6 -v #v6.14.3npx node@8 -v #v8.11.3
 ```
 
@@ -2040,11 +2040,11 @@ Example:
 const bar = () => console.log('bar')
 ```
 
-```
+```plain
 const baz = () => console.log('baz')
 ```
 
-```
+```plain
 const foo = () => {  console.log('foo')  setTimeout(bar, 0)  new Promise((resolve, reject) =>    resolve('should be right after baz, before bar')  ).then(resolve => console.log(resolve))  baz()}
 ```
 
@@ -2054,7 +2054,7 @@ foo()
 
 This prints:
 
-```
+```plain
 foobazshould be right after foo, before barbar
 ```
 
@@ -2068,7 +2068,7 @@ Every time the event loop takes a full trip, we call it a tick.
 
 When we pass a function to `process.nextTick()`, we instruct the engine to invoke this function at the end of the current operation, before the next event loop tick starts:
 
-```
+```plain
 process.nextTick(() => {  //do something})
 ```
 
@@ -2132,7 +2132,7 @@ const myFunction = (firstParam, secondParam) => {  // do something}
 const id = setTimeout(() => {  // should run after 2 seconds}, 2000)
 ```
 
-```
+```plain
 // I changed my mindclearTimeout(id)
 ```
 
@@ -2144,7 +2144,7 @@ If you specify the timeout delay to `0`, the callback function will be executed 
 setTimeout(() => {  console.log('after ')}, 0)
 ```
 
-```
+```plain
 console.log(' before ')
 ```
 
@@ -2158,7 +2158,7 @@ Some browsers (IE and Edge) implement a `setImmediate()` method that does this s
 
 `setInterval()` is a function similar to `setTimeout()` with a difference. Instead of running the callback function once, it will run it forever, at the specific time interval you specify (in milliseconds):
 
-```
+```plain
 setInterval(() => {  // runs every 2 seconds}, 2000)
 ```
 
@@ -2178,7 +2178,7 @@ It’s common to call `clearInterval` inside the `setInterval` callback function
 const interval = setInterval(function() {  if (App.somethingIWait === 'arrived') {    clearInterval(interval)
 ```
 
-```
+```plain
     // otherwise do things  }}, 100)
 ```
 
@@ -2262,7 +2262,7 @@ You can’t know when a user is going to click a button, so what you do is **def
 
 This event handler accepts a function, which will be called when the event is triggered:
 
-```
+```plain
 document.getElementById('button').addEventListener('click', () => {  //item clicked})
 ```
 
@@ -2296,11 +2296,11 @@ How do you handle errors with callbacks? One very common strategy is to use what
 
 If there is no error, the object is `null`. If there is an error, it contains some description of the error and other information.
 
-```
+```plain
 fs.readFile('/file.json', (err, data) => {  if (err !== null) {    //handle error    console.log(err)    return  }
 ```
 
-```
+```plain
   //no errors, process data  console.log(data)})
 ```
 
@@ -2310,7 +2310,7 @@ Callbacks are great for simple cases!
 
 However, every callback adds a level of nesting. When you have lots of callbacks, the code starts to be complicated very quickly:
 
-```
+```plain
 window.addEventListener('load', () => {  document.getElementById('button').addEventListener('click', () => {    setTimeout(() => {      items.forEach(item => {        //your code here      })    }, 2000)  })})
 ```
 
@@ -2361,7 +2361,7 @@ The Promise API exposes a Promise constructor, which you initialize using `new P
 let done = true
 ```
 
-```
+```plain
 const isItDoneYet = new Promise(  (resolve, reject) => {    if (done) {      const workDone = 'Here is the thing I built'      resolve(workDone)    } else {      const why = 'Still working on something else'      reject(why)    }  })
 ```
 
@@ -2375,7 +2375,7 @@ In the last section, we introduced how a promise is created.
 
 Now let’s see how the promise can be **consumed** or used:
 
-```
+```plain
 const isItDoneYet = new Promise(  //...)
 ```
 
@@ -2395,15 +2395,15 @@ The Fetch API is a promise-based mechanism, and calling `fetch()` is equivalent 
 
 #### Example of chaining promises
 
-```
+```plain
 const status = (response) => {  if (response.status >= 200 && response.status < 300) {    return Promise.resolve(response)  }  return Promise.reject(new Error(response.statusText))}
 ```
 
-```
+```plain
 const json = (response) => response.json()
 ```
 
-```
+```plain
 fetch('/todos.json')  .then(status)  .then(json)  .then((data) => { console.log('Request succeeded with JSON response', data) })  .catch((error) => { console.log('Request failed', error) })
 ```
 
@@ -2424,7 +2424,7 @@ If that succeeds instead, it calls the json() function we defined. Since the pre
 
 In this case, we return the data JSON processed, so the third promise receives the JSON directly:
 
-```
+```plain
 .then((data) => {  console.log('Request succeeded with JSON response', data)})
 ```
 
@@ -2452,7 +2452,7 @@ new Promise((resolve, reject) => {  reject('Error')})  .catch((err) => { console
 
 If inside the `catch()` you raise an error, you can append a second `catch()` to handle it, and so on.
 
-```
+```plain
 new Promise((resolve, reject) => {  throw new Error('Error')})  .catch((err) => { throw new Error('Error') })  .catch((err) => { console.error(err) })
 ```
 
@@ -2468,7 +2468,7 @@ Example:
 const f1 = fetch('/something.json')const f2 = fetch('/something2.json')
 ```
 
-```
+```plain
 Promise.all([f1, f2]).then((res) => {    console.log('Array of results', res)}).catch((err) => {  console.error(err)})
 ```
 
@@ -2486,7 +2486,7 @@ You are not limited to using `fetch` of course, **any promise is good to go**.
 
 Example:
 
-```
+```plain
 const first = new Promise((resolve, reject) => {    setTimeout(resolve, 500, 'first')})const second = new Promise((resolve, reject) => {    setTimeout(resolve, 100, 'second')})
 ```
 
@@ -2530,7 +2530,7 @@ When you want to call this function you prepend `await`, and the calling code wi
 
 Here’s an example:
 
-```
+```plain
 const doSomething = async () => {    console.log(await doSomethingAsync())}
 ```
 
@@ -2538,15 +2538,15 @@ const doSomething = async () => {    console.log(await doSomethingAsync())}
 
 This is a simple example of `async/await` used to run a function asynchronously:
 
-```
+```plain
 const doSomethingAsync = () => {    return new Promise((resolve) => {        setTimeout(() => resolve('I did something'), 3000)    })}
 ```
 
-```
+```plain
 const doSomething = async () => {    console.log(await doSomethingAsync())}
 ```
 
-```
+```plain
 console.log('Before')doSomething()console.log('After')
 ```
 
@@ -2568,7 +2568,7 @@ This is why this code is valid:
 const aFunction = async () => {  return 'test'}
 ```
 
-```
+```plain
 aFunction().then(alert) // This will alert 'test'
 ```
 
@@ -2604,7 +2604,7 @@ And here is the same functionality provided using `await/async`:
 const getFirstUserData = async () => {  const response = await fetch('/users.json') // get users list  const users = await response.json() // parse JSON  const user = users[0] // pick first user  const userResponse = await fetch(`/users/${user.name}`) // get user data  const userData = await user.json() // parse JSON  return userData}
 ```
 
-```
+```plain
 getFirstUserData()
 ```
 
@@ -2616,11 +2616,11 @@ getFirstUserData()
 const promiseToDoSomething = () => {    return new Promise(resolve => {        setTimeout(() => resolve('I did something'), 10000)    })}
 ```
 
-```
+```plain
 const watchOverSomeoneDoingSomething = async () => {    const something = await promiseToDoSomething()    return something + ' and I watched'}
 ```
 
-```
+```plain
 const watchOverSomeoneWatchingSomeoneDoingSomething = async () => {    const something = await watchOverSomeoneDoingSomething()    return something + ' and I watched as well'}
 ```
 
@@ -2836,7 +2836,7 @@ The request header is a set of `field: value` pairs that set certain values.
 
 There are 2 mandatory fields, one of which is `Host`, and the other is `Connection`, while all the other fields are optional:
 
-```
+```plain
 Host: flaviocopes.comConnection: close
 ```
 
@@ -2873,7 +2873,7 @@ The response starts with the status code and the status message. If the request 
 
 The request might return a different status code and message, like one of these:
 
-```
+```plain
 404 Not Found403 Forbidden301 Moved Permanently500 Internal Server Error304 Not Modified401 Unauthorized
 ```
 
@@ -2895,7 +2895,7 @@ How browsers render the page then is out of the scope, but it’s important to u
 
 Here is the HTTP web server we used as the Node.js Hello World application in the introduction:
 
-```
+```plain
 const http = require('http')
 ```
 
@@ -2903,7 +2903,7 @@ const http = require('http')
 const port = 3000
 ```
 
-```
+```plain
 const server = http.createServer((req, res) => {  res.statusCode = 200  res.setHeader('Content-Type', 'text/plain')  res.end('Hello World\n')})
 ```
 
@@ -2951,7 +2951,7 @@ I use the term HTTP, but HTTPS is what should be used everywhere, therefore thes
 
 #### Perform a GET Request
 
-```
+```plain
 const https = require('https')const options = {  hostname: 'flaviocopes.com',  port: 443,  path: '/todos',  method: 'GET'}
 ```
 
@@ -2959,15 +2959,15 @@ const https = require('https')const options = {  hostname: 'flaviocopes.com',  p
 const req = https.request(options, (res) => {  console.log(`statusCode: ${res.statusCode}`)
 ```
 
-```
+```plain
   res.on('data', (d) => {    process.stdout.write(d)  })})
 ```
 
-```
+```plain
 req.on('error', (error) => {  console.error(error)})
 ```
 
-```
+```plain
 req.end()
 ```
 
@@ -2977,7 +2977,7 @@ req.end()
 const https = require('https')
 ```
 
-```
+```plain
 const data = JSON.stringify({  todo: 'Buy the milk'})
 ```
 
@@ -2993,7 +2993,7 @@ const req = https.request(options, (res) => {  console.log(`statusCode: ${res.st
   res.on('data', (d) => {    process.stdout.write(d)  })})
 ```
 
-```
+```plain
 req.on('error', (error) => {  console.error(error)})
 ```
 
@@ -3027,7 +3027,7 @@ Using Axios has quite a few advantages over the native Fetch API:
 
 Axios can be installed using npm:
 
-```
+```plain
 npm install axios
 ```
 
@@ -3039,7 +3039,7 @@ yarn add axios
 
 or simply include it in your page using unpkg.com:
 
-```
+```plain
 <script src="https://unpkg.com/axios/dist/axios.min.js"><;/script>
 ```
 
@@ -3047,7 +3047,7 @@ or simply include it in your page using unpkg.com:
 
 You can start an HTTP request from the `axios` object:
 
-```
+```plain
 axios({  url: 'https://dog.ceo/api/breeds/list/all',  method: 'get',  data: {    foo: 'bar'  }})
 ```
 
@@ -3075,7 +3075,7 @@ One convenient way to use Axios is to use the modern (ES2017) `async/await` synt
 
 This Node.js example queries the [Dog API][109] to retrieve a list of all the dog breeds, using `axios.get()`, and it counts them:
 
-```
+```plain
 const axios = require('axios')
 ```
 
@@ -3119,13 +3119,13 @@ A GET response can contain parameters in the URL, like this: `[https://site.com/
 
 With Axios you can perform this by simply using that URL:
 
-```
+```plain
 axios.get('https://site.com/?foo=bar')
 ```
 
 or you can use a `params` property in the options:
 
-```
+```plain
 axios.get('https://site.com/', {  params: {    foo: 'bar'  }})
 ```
 
@@ -3197,7 +3197,7 @@ connection.onopen = () => {  //...}
 
 If there’s any error, the `onerror` function callback is fired:
 
-```
+```plain
 connection.onerror = error => {  console.log(`WebSocket error: ${error}`)}
 ```
 
@@ -3207,7 +3207,7 @@ Once the connection is open, you can send data to the server.
 
 You can do so conveniently inside the `onopen` callback function:
 
-```
+```plain
 connection.onopen = () => {  connection.send('hey')}
 ```
 
@@ -3322,7 +3322,7 @@ There are other advanced methods, but the bulk of what you’ll use in your day-
 const fs = require('fs')fs.stat('/Users/flavio/test.txt', (err, stats) => {  if (err) {    console.error(err)    return  }
 ```
 
-```
+```plain
   stats.isFile() //true  stats.isDirectory() //false  stats.isSymbolicLink() //false  stats.size //1024000 //= 1MB})
 ```
 
@@ -3342,7 +3342,7 @@ You need to pay attention when using paths in your applications, as this differe
 
 You include this module in your files using:
 
-```
+```plain
 const path = require('path')
 ```
 
@@ -3362,7 +3362,7 @@ Example:
 const notes = '/users/flavio/notes.txt'
 ```
 
-```
+```plain
 path.dirname(notes) // /users/flaviopath.basename(notes) // notes.txtpath.extname(notes) // .txt
 ```
 
@@ -3376,7 +3376,7 @@ path.basename(notes, path.extname(notes)) //notes
 
 You can join two or more parts of a path by using `path.join()`:
 
-```
+```plain
 const name = 'flavio'path.join('/', 'users', name, 'notes.txt') //'/users/flavio/notes.txt'
 ```
 
@@ -3388,13 +3388,13 @@ path.resolve('flavio.txt') //'/Users/flavio/flavio.txt' if run from my home fold
 
 In this case Node.js will simply append `/flavio.txt` to the current working directory. If you specify a second parameter folder, `resolve` will use the first as a base for the second:
 
-```
+```plain
 path.resolve('tmp', 'flavio.txt')// '/Users/flavio/tmp/flavio.txt' if run from my home folder
 ```
 
 If the first parameter starts with a slash, that means it’s an absolute path:
 
-```
+```plain
 path.resolve('/etc', 'flavio.txt')// '/etc/flavio.txt'
 ```
 
@@ -3446,7 +3446,7 @@ Example:
 const fs = require('fs')
 ```
 
-```
+```plain
 const content = 'Some content!'
 ```
 
@@ -3456,7 +3456,7 @@ fs.writeFile('/Users/flavio/test.txt', content, (err) => {  if (err) {    consol
 
 Alternatively, you can use the synchronous version `fs.writeFileSync()`:
 
-```
+```plain
 const fs = require('fs')
 ```
 
@@ -3489,7 +3489,7 @@ You can find more about [flags][116].
 
 A handy method to append content to the end of a file is `fs.appendFile()` (and its `fs.appendFileSync()` counterpart):
 
-```
+```plain
 const content = 'Some content!'
 ```
 
@@ -3523,7 +3523,7 @@ const fs = require('fs')
 const folderName = '/Users/flavio/test'
 ```
 
-```
+```plain
 try {  if (!fs.existsSync(dir)){    fs.mkdirSync(dir)  }} catch (err) {  console.error(err)}
 ```
 
@@ -3537,7 +3537,7 @@ This piece of code reads the content of a folder, both files and subfolders, and
 const fs = require('fs')const path = require('path')
 ```
 
-```
+```plain
 const folderPath = '/Users/flavio'
 ```
 
@@ -3547,7 +3547,7 @@ fs.readdirSync(folderPath)
 
 You can get the full path:
 
-```
+```plain
 fs.readdirSync(folderPath).map(fileName => {  return path.join(folderPath, fileName)}
 ```
 
@@ -3557,7 +3557,7 @@ You can also filter the results to only return the files, and exclude the folder
 const isFile = fileName => {  return fs.lstatSync(fileName).isFile()}
 ```
 
-```
+```plain
 fs.readdirSync(folderPath).map(fileName => {  return path.join(folderPath, fileName)).filter(isFile)}
 ```
 
@@ -3567,11 +3567,11 @@ Use `fs.rename()` or `fs.renameSync()` to rename folder.
 
 The first parameter is the current path, the second the new path:
 
-```
+```plain
 const fs = require('fs')
 ```
 
-```
+```plain
 fs.rename('/Users/flavio', '/Users/roger', (err) => {  if (err) {    console.error(err)    return  }  //done})
 ```
 
@@ -3615,7 +3615,7 @@ fs.remove(folder, err => {  console.error(err)})
 
 It can also be used with promises:
 
-```
+```plain
 fs.remove(folder).then(() => {  //done}).catch(err => {  console.error(err)})
 ```
 
@@ -3635,7 +3635,7 @@ The `fs` module provides a lot of very useful functionality to access and intera
 
 There is no need to install it. Being part of the Node.js core, it can be used by simply requiring it:
 
-```
+```plain
 const fs = require('fs')
 ```
 
@@ -3687,7 +3687,7 @@ For example let’s examine the `fs.rename()` method. The asynchronous API is us
 const fs = require('fs')
 ```
 
-```
+```plain
 fs.rename('before.json', 'after.json', (err) => {  if (err) {    return console.error(err)  }
 ```
 
@@ -3697,7 +3697,7 @@ fs.rename('before.json', 'after.json', (err) => {  if (err) {    return console.
 
 A synchronous API can be used like this, with a `try/catch` block to handle errors:
 
-```
+```plain
 const fs = require('fs')
 ```
 
@@ -3903,7 +3903,7 @@ It only returns a meaningful value on Linux and macOS.
 
 Example:
 
-```
+```plain
 [ 3.68798828125, 4.00244140625, 11.1181640625 ]
 ```
 
@@ -4004,7 +4004,7 @@ door.eventNames()
 
 Get the maximum amount of listeners one can add to an EventListener object, which defaults to 10 but can be increased or lowered by using `setMaxListeners()`:
 
-```
+```plain
 door.getMaxListeners()
 ```
 
@@ -4012,7 +4012,7 @@ door.getMaxListeners()
 
 Get the count of listeners of the event passed as parameter:
 
-```
+```plain
 door.listenerCount('open')
 ```
 
@@ -4020,7 +4020,7 @@ door.listenerCount('open')
 
 Gets an array of listeners of the event passed as parameter:
 
-```
+```plain
 door.listeners('open')
 ```
 
@@ -4034,7 +4034,7 @@ Adds a callback function that’s called when an event is emitted.
 
 Usage:
 
-```
+```plain
 door.on('open', () => {  console.log('Door was opened')})
 ```
 
@@ -4108,7 +4108,7 @@ This property lists all the HTTP methods supported:
 
 This property lists all the HTTP status codes and their description:
 
-```
+```plain
 > require('http').STATUS_CODES{ '100': 'Continue',  '101': 'Switching Protocols',  '102': 'Processing',  '200': 'OK',  '201': 'Created',  '202': 'Accepted',  '203': 'Non-Authoritative Information',  '204': 'No Content',  '205': 'Reset Content',  '206': 'Partial Content',  '207': 'Multi-Status',  '208': 'Already Reported',  '226': 'IM Used',  '300': 'Multiple Choices',  '301': 'Moved Permanently',  '302': 'Found',  '303': 'See Other',  '304': 'Not Modified',  '305': 'Use Proxy',  '307': 'Temporary Redirect',  '308': 'Permanent Redirect',  '400': 'Bad Request',  '401': 'Unauthorized',  '402': 'Payment Required',  '403': 'Forbidden',  '404': 'Not Found',  '405': 'Method Not Allowed',  '406': 'Not Acceptable',  '407': 'Proxy Authentication Required',  '408': 'Request Timeout',  '409': 'Conflict',  '410': 'Gone',  '411': 'Length Required',  '412': 'Precondition Failed',  '413': 'Payload Too Large',  '414': 'URI Too Long',  '415': 'Unsupported Media Type',  '416': 'Range Not Satisfiable',  '417': 'Expectation Failed',  '418': 'I\'m a teapot',  '421': 'Misdirected Request',  '422': 'Unprocessable Entity',  '423': 'Locked',  '424': 'Failed Dependency',  '425': 'Unordered Collection',  '426': 'Upgrade Required',  '428': 'Precondition Required',  '429': 'Too Many Requests',  '431': 'Request Header Fields Too Large',  '451': 'Unavailable For Legal Reasons',  '500': 'Internal Server Error',  '501': 'Not Implemented',  '502': 'Bad Gateway',  '503': 'Service Unavailable',  '504': 'Gateway Timeout',  '505': 'HTTP Version Not Supported',  '506': 'Variant Also Negotiates',  '507': 'Insufficient Storage',  '508': 'Loop Detected',  '509': 'Bandwidth Limit Exceeded',  '510': 'Not Extended',  '511': 'Network Authentication Required' }
 ```
 
@@ -4184,7 +4184,7 @@ Created by an `http.Server` and passed as the second parameter to the `request` 
 
 Commonly known and used in code as `res`:
 
-```
+```plain
 const server = http.createServer((req, res) => {  //res is an http.ServerResponse object})
 ```
 
@@ -4206,7 +4206,7 @@ To send data to the client in the response body, you use `write()`. It will send
 
 If the headers were not sent yet using `response.writeHead()`, it will send the headers first, with the status code and message that’s set in the request, which you can edit by setting the `statusCode` and `statusMessage` properties values:
 
-```
+```plain
 response.statusCode = 500response.statusMessage = 'Internal Server Error'
 ```
 
@@ -4344,7 +4344,7 @@ To create a writable stream we extend the base `Writable` object, and we impleme
 
 First create a stream object:
 
-```
+```plain
 const Stream = require('stream')const writableStream = new Stream.Writable()
 ```
 
@@ -4356,7 +4356,7 @@ writableStream._write = (chunk, encoding, next) => {    console.log(chunk.toStri
 
 You can now pipe a readable stream in:
 
-```
+```plain
 process.stdin.pipe(writableStream)
 ```
 
@@ -4364,15 +4364,15 @@ process.stdin.pipe(writableStream)
 
 How do we read data from a readable stream? Using a writable stream:
 
-```
+```plain
 const Stream = require('stream')
 ```
 
-```
+```plain
 const readableStream = new Stream.Readable()const writableStream = new Stream.Writable()
 ```
 
-```
+```plain
 writableStream._write = (chunk, encoding, next) => {    console.log(chunk.toString())    next()}
 ```
 
@@ -4380,13 +4380,13 @@ writableStream._write = (chunk, encoding, next) => {    console.log(chunk.toStri
 readableStream.pipe(writableStream)
 ```
 
-```
+```plain
 readableStream.push('hi!')readableStream.push('ho!')
 ```
 
 You can also consume a readable stream directly, using the `readable` event:
 
-```
+```plain
 readableStream.on('readable', () => {  console.log(readableStream.read())})
 ```
 
@@ -4402,7 +4402,7 @@ writableStream.write('hey!\n')
 
 Use the `end()` method:
 
-```
+```plain
 const Stream = require('stream')
 ```
 
@@ -4438,7 +4438,7 @@ We’ll use `[mysqljs/mysql][122]`, a package that has over 12,000 GitHub stars 
 
 You install it using:
 
-```
+```plain
 npm install mysql
 ```
 
@@ -4452,7 +4452,7 @@ const mysql = require('mysql')
 
 and you create a connection:
 
-```
+```plain
 const options = {  user: 'the_mysql_user_name',  password: 'the_mysql_user_password',  database: 'the_mysql_database_name'}const connection = mysql.createConnection(options)
 ```
 
@@ -4495,7 +4495,7 @@ const id = 223connection.query('SELECT * FROM todos WHERE id = ?', [id], (error,
 
 To pass multiple values, just put more elements in the array you pass as the second parameter:
 
-```
+```plain
 const id = 223const author = 'Flavio'connection.query('SELECT * FROM todos WHERE id = ? AND author = ?', [id, author], (error, todos, fields) => {  if (error) {    console.error('An error occurred while executing the query')    throw error  }  console.log(todos)})
 ```
 
@@ -4509,7 +4509,7 @@ const todo = {  thing: 'Buy the milk'  author: 'Flavio'}connection.query('INSERT
 
 If the table has a primary key with `auto_increment`, the value of that will be returned in the `results.insertId`value:
 
-```
+```plain
 const todo = {  thing: 'Buy the milk'  author: 'Flavio'}connection.query('INSERT INTO todos SET ?', todo, (error, results, fields) => {  if (error) {    console.error('An error occurred while executing the query')    throw error  }}  const id = results.resultId  console.log(id))
 ```
 

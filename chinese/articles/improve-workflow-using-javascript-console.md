@@ -11,7 +11,7 @@
 
 当提到控制台时，我们会首先想到 `console.log`，没错吧？但它还拥有许多其他的方法。 现在，我们将了解如何充分利用控制台。我还会给出一些提示，以便你更好地理解这些方法。
 
-### 什么是控制台？
+### 什么是控制台
 
 JavaScript 控制台是现代浏览器中内置的开箱即用的开发工具，其界面类似 Shell。 它允许开发人员执行以下操作：
 
@@ -73,11 +73,11 @@ console.time 和 console.count 使用示例
 
 ![](https://cdn-media-1.freecodecamp.org/images/ZH4tfVHdbM-xG0R2TcTuQ58RuuozuPTGddug)
 
-### Delete all the Consoles?
+### Delete all the Consoles
 
 使用控制台通常会迫使我们消除它们。有时我们会忘记是生产版本（并且几天后才粗心地注意到这些控制台输出）。当然，我不建议任何人在不需要控制台的时候滥用它（在看到输入更改生效后就可以删除控制台命令）。你应该将错误日志或跟踪日志保留在开发模式下，以帮助你调试。不论是在工作中还是在我自己的项目中，我都经常使用 Webpack。它允许你使用 [uglifyjs-webpack-plugin] [1] 从生产版本中（按类型）删除所有不想保留的控制台。
 
-```
+```plain
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')var debug = process.env.NODE_ENV !== "production";.....optimization: {        minimizer: !debug ? [            new UglifyJsPlugin({                // Compression specific options                uglifyOptions: {                    // Eliminate comments                    comments: false,                    compress: {                       // remove warnings                       warnings: false,                       // Drop console statements                       drop_console: true                    },                }           })] : []}
 ```
 

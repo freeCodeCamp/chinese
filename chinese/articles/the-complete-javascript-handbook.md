@@ -181,7 +181,7 @@ const foo = () => doSomething()
 
 Also, if you have a single parameter, you could write:
 
-```
+```plain
 const foo = param => doSomething(param)
 ```
 
@@ -232,19 +232,19 @@ Generators enable whole new paradigms of programming in JavaScript, allowing:
 
 Here is an example of a generator which explains how it all works.
 
-```
+```plain
 function *calculator(input) {    var doubleThat = 2 * (yield (input / 2))    var another = yield (doubleThat)    return (input * doubleThat * another)}
 ```
 
 We initialize it with
 
-```
+```plain
 const calc = calculator(10)
 ```
 
 Then we start the iterator on our generator:
 
-```
+```plain
 calc.next()
 ```
 
@@ -392,7 +392,7 @@ const var = 'test'const string = `something ${var}` //something test
 
 You can perform more complex expressions as well:
 
-```
+```plain
 const string = `something ${1 + 2 + 3}`const string2 = `something ${foo() ? 'x' : 'y' }`
 ```
 
@@ -402,7 +402,7 @@ and strings can span over multiple lines:
 const string3 = `Heythis
 ```
 
-```
+```plain
 stringis awesome!`
 ```
 
@@ -416,7 +416,7 @@ var str = 'One\n' +'Two\n' +'Three'
 
 Functions now support default parameters:
 
-```
+```plain
 const foo = function(index = 0, testing = true) { /* ... */ }foo()
 ```
 
@@ -450,7 +450,7 @@ const newObj = { ...oldObj }
 
 Using strings, the spread operator creates an array with each char in the string:
 
-```
+```plain
 const hey = 'hey'const arrayized = [...hey] // ['h', 'e', 'y']
 ```
 
@@ -490,7 +490,7 @@ In ES2015 Object Literals gained superpowers.
 
 Instead of doing
 
-```
+```plain
 const something = 'y'const x = {  something: something}
 ```
 
@@ -611,7 +611,7 @@ This method returns an array containing all the object own property values.
 
 Usage:
 
-```
+```plain
 const person = { name: 'Fred', age: 87 }Object.values(person) // ['Fred', 87]
 ```
 
@@ -706,7 +706,7 @@ This feature allows to have trailing commas in function declarations, and in fun
 const doSomething = (var1, var2,) => {  //...}
 ```
 
-```
+```plain
 doSomething('test2', 'test2',)
 ```
 
@@ -738,7 +738,7 @@ function doSomethingAsync() {    return new Promise((resolve) => {        setTim
 async function doSomething() {    console.log(await doSomethingAsync())}
 ```
 
-```
+```plain
 console.log('Before')doSomething()console.log('After')
 ```
 
@@ -752,15 +752,15 @@ BeforeAfterI did something //after 3s
 
 Async functions can be chained very easily, and the syntax is much more readable than with plain promises:
 
-```
+```plain
 function promiseToDoSomething() {    return new Promise((resolve)=>{        setTimeout(() => resolve('I did something'), 10000)    })}
 ```
 
-```
+```plain
 async function watchOverSomeoneDoingSomething() {    const something = await promiseToDoSomething()    return something + ' and I watched'}
 ```
 
-```
+```plain
 async function watchOverSomeoneWatchingSomeoneDoingSomething() {    const something = await watchOverSomeoneDoingSomething()    return something + ' and I watched as well'}
 ```
 
@@ -876,7 +876,7 @@ Lookaheads use the `?=` symbol. They were already available.
 
 A lookbehind is negated using `?&l`t;!:
 
-```
+```plain
 /(?<!Roger) Waters/
 ```
 
@@ -908,7 +908,7 @@ There are many other boolean properties, which you just check by adding their na
 /^\p{Lowercase}$/u.test('h') //✅/^\p{Uppercase}$/u.test('H') //✅
 ```
 
-```
+```plain
 /^\p{Emoji}+$/u.test('H')   //❌/^\p{Emoji}+$/u.test('??') //✅
 ```
 
@@ -924,7 +924,7 @@ There are many other boolean properties, which you just check by adding their na
 
 `In ES2018 a capturing group can be assigned to a name, rather than just being assigned a slot in the resulting array:`
 
-```
+```plain
 const re = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/const result = re.exec('2015-01-02')
 ```
 
@@ -980,7 +980,7 @@ const re = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/const result = re.exec(
 -   `` **Variable declarations**: always declare variables to avoid polluting the global object. Never use `var`. Default to `const`, and only use `let` if you reassign the variable. ``
 -   `` **Functions**: use arrow functions unless you have a specific reason to use regular functions, like in object methods or constructors, due to how`this` works. Declare them as const, and use implicit returns if possible. Feel free to use nested functions to hide helper functions to the rest of the code. ``
 
-```
+```plain
 const test = (a, b) => a + b
 ```
 
@@ -1041,7 +1041,7 @@ try {  statements} catch (variable) {  statements} finally {  statements}
 
 -   `` **Whitespace**: use whitespace wisely to improve readability: put a whitespace after a keyword followed by a `(`; before & after a binary operation (`+`, `-`, `/`, `*`, `&&`..); inside the for statement, after each `;`to separate each part of the statement; after each `,`. ``
 -   `**New lines**: use new lines to separate blocks of code that perform logically related operations.`
--   `` **Quotes** favor single quotes `'` instead of double quotes `"`. Double quotes are a standard in HTML attributes, so using single quotes helps remove problems when dealing with HTML strings. Use template literals when appropriate instead of variable interpolation. ``
+-   `**Quotes** favor single quotes `'` instead of double quotes `"`. Double quotes are a standard in HTML attributes, so using single quotes helps remove problems when dealing with HTML strings. Use template literals when appropriate instead of variable interpolation.`
 
 ### `Lexical Struture`
 
@@ -1085,7 +1085,7 @@ returnvariable
 
 `[You can use two kind of comments in JavaScript:][26]`
 
-```
+```plain
 /* */
 ```
 
@@ -1105,7 +1105,7 @@ returnvariable
 5'Test'true['a', 'b']{color: 'red', shape: 'Rectangle'}
 ```
 
-`` [An **identifier** is a sequence of characters that can be used to identify a variable, a function, an object. It can start with a letter, the dollar sign `$`or an underscore `_`, and it can contain digits. Using Unicode, a letter can be any allowed char, for example an emoji ?.][31] ``
+`[An **identifier** is a sequence of characters that can be used to identify a variable, a function, an object. It can start with a letter, the dollar sign `$`or an underscore `_`, and it can contain digits. Using Unicode, a letter can be any allowed char, for example an emoji ?.][31]`
 
 ```
 TesttestTEST_testTest1$test
@@ -1177,7 +1177,7 @@ var a = 1, b = 2
 
 #### `` [Using `let`][54] ``
 
-`` [`let` is a new feature introduced in ES2015 and it's essentially a block scoped version of `var`. Its scope is limited to the block, statement or expression where it's defined, and all the contained inner blocks.][55] ``
+`[`let`is a new feature introduced in ES2015 and it's essentially a block scoped version of`var`. Its scope is limited to the block, statement or expression where it's defined, and all the contained inner blocks.][55]`
 
 `` [Modern JavaScript developers might choose to only use `let` and completely discard the use of `var`.][56] ``
 
@@ -1189,7 +1189,7 @@ var a = 1, b = 2
 
 `` [Variables declared with `var` or `let` can be changed later on in the program, and reassigned. A once a `const` is initialized, its value can never be changed again, and it can't be reassigned to a different value.][60] ``
 
-```
+```plain
 const a = 'test'
 ```
 
@@ -1236,7 +1236,7 @@ const a = 'test'
 
 `[Floats:][81]`
 
-```
+```plain
 3.14.12345.2e4 //5.2 * 10^4
 ```
 
@@ -1256,7 +1256,7 @@ const a = 'test'
 
 `[A string can contain escape sequences that can be interpreted when the string is printed, like \n to create a new line. The backslash is also useful when you need to enter for example a quote in a string enclosed in quotes, to prevent the char to be interpreted as a closing quote:][85]`
 
-```
+```plain
 'I\'m a developer'
 ```
 
@@ -1276,7 +1276,7 @@ const a = 'test'
 
 `[You can perform string substitution, embedding the result of any JavaScript expression:][89]`
 
-```
+```plain
 `a string with ${something}``a string with ${something+somethingElse}``a string with ${obj.something()}`
 ```
 
@@ -1290,7 +1290,7 @@ const a = 'test'
 
 `` [JavaScript defines two reserved words for booleans: true and false. Many comparision operations `==` `===` `&`l`t`; > (and so on) return either one or the other.][92] ``
 
-`` [`if`, `while` statements and other control structures use booleans to determine the flow of the program.][93] ``
+`[`if`, `while` statements and other control structures use booleans to determine the flow of the program.][93]`
 
 `[They don’t just accept true or false, but also accept **truthy** and **falsy** values.][94]`
 
@@ -1312,7 +1312,7 @@ const a = 'test'
 
 `` [`undefined` indicates that a variable has not been initialized and the value is absent.][101] ``
 
-`` [It’s commonly returned by functions with no `return` value. When a function accepts a parameter but that's not set by the caller, it's undefined.][102] ``
+`[It’s commonly returned by functions with no `return` value. When a function accepts a parameter but that's not set by the caller, it's undefined.][102]`
 
 `` [To detect if a value is `undefined`, you use the construct:][103] ``
 
@@ -1350,7 +1350,7 @@ typeof variable === 'undefined'
 
 `[Under this category go variable references, literals and constants:][114]`
 
-```
+```plain
 20.02'something'truefalsethis //the current objectundefinedi //where i is a variable or a constant
 ```
 
@@ -1388,7 +1388,7 @@ object.property //reference a property (or method) of an objectobject[property]o
 
 #### `[Object creation expressions][121]`
 
-```
+```plain
 new object()new a(1)new MyRectangle('name', 2, {a: 4})
 ```
 
@@ -1436,11 +1436,11 @@ const car = new Object()
 
 `[If you initialize an array, which is an object:][135]`
 
-```
+```plain
 const list = []//orconst list = new Array()
 ```
 
-`` [The prototype is `Array`.][136] ``
+`[The prototype is `Array`.][136]`
 
 `[You can verify this by checking the Object.getPrototypeOf() and the Object.prototype.isPrototypeOf() methods:][137]`
 
@@ -1492,7 +1492,7 @@ Object.getPrototypeOf(Array.prototype) == Object.prototype
 const car = Object.create({})const list = Object.create(Array)
 ```
 
-`` [You can check the prototype of an object using the `isPrototypeOf()` method:][145] ``
+`[You can check the prototype of an object using the `isPrototypeOf()` method:][145]`
 
 ```
 Array.isPrototypeOf(list) //true
@@ -1586,7 +1586,7 @@ Person.genericHello() //Hello
 class Person {  constructor(name) {    this._name = name  }
 ```
 
-```
+```plain
   set name(value) {    this._name = value  }
 ```
 
@@ -1636,7 +1636,7 @@ throw value
 
 `` [Any exception raised in the lines of code included in the `try`block is handled in the corresponding `catch` block:][182] ``
 
-```
+```plain
 try {  //lines of code} catch (e) {
 ```
 
@@ -1666,7 +1666,7 @@ try {  //lines of code} catch (e) {
 
 `` [You can use `finally` without a `catch` block, to serve as a way to clean up any resource you might have opened in the `try`block, like files or network requests:][187] ``
 
-```
+```plain
 try {  //lines of code} finally {
 ```
 
@@ -1678,7 +1678,7 @@ try {  //lines of code} finally {
 
 `` [`try` blocks can be nested, and an exception is always handled in the nearest catch block:][189] ``
 
-```
+```plain
 try {  //lines of code
 ```
 
@@ -1796,7 +1796,7 @@ const a = 1const b = 2const c = a + b(a + b).toString()
 
 `[Pick some rules:][223]`
 
--   `` [be careful with `return` statements. If you return something, add it on the same line as the return (same for `break`, `throw`, `continue`)][224] ``
+-   `[be careful with `return` statements. If you return something, add it on the same line as the return (same for `break`, `throw`, `continue`)][224]`
 -   `[never start a line with parentheses, those might be concatenated with the previous line to form a function call, or array element reference][225]`
 
 `[And ultimately, always test your code to make sure it does what you want.][226]`
@@ -1813,13 +1813,13 @@ const a = 1const b = 2const c = a + b(a + b).toString()
 
 `[The first 2 are essentially the same:][233]`
 
-```
+```plain
 const test = 'test'const bike = "bike"
 ```
 
 `[There’s little to no difference in using one or the other. The only difference lies in having to escape the quote character you use to delimit the string:][234]`
 
-```
+```plain
 const test = 'test'const test = 'te\'st'const test = 'te"st'const test = "te\"st"const test = "te'st"
 ```
 
@@ -1885,13 +1885,13 @@ const string = 'first part \second part'
 
 `` [To render the string on multiple lines as well, you explicitly need to add `\n`at the end of each line, like this:][256] ``
 
-```
+```plain
 const string = 'first line\n \second line'
 ```
 
 `[or][257]`
 
-```
+```plain
 const string = 'first line\n' +               'second line'
 ```
 
@@ -1935,7 +1935,7 @@ const string = `FirstSecond`.trim()
 const var = 'test'const string = `something ${var}` //something test
 ```
 
-`` [Inside the `${}` you can add anything, even expressions:][266] ``
+`[Inside the `${}` you can add anything, even expressions:][266]`
 
 ```
 const string = `something ${1 + 2 + 3}`const string2 = `something ${foo() ? 'x' : 'y' }`
@@ -1959,7 +1959,7 @@ const query = gql`  query {    ...  }`
 
 `` The `styled.button` and `gql` template tags highlighted in those examples are just**functions**: ``
 
-```
+```plain
 function gql(literals, ...expressions) {
 ```
 
@@ -1975,7 +1975,7 @@ function gql(literals, ...expressions) {
 
 `If we take the example above:`
 
-```
+```plain
 const string = `something ${1 + 2 + 3}`
 ```
 
@@ -1985,11 +1985,11 @@ const string = `something ${1 + 2 + 3}`
 
 `A more complex example is:`
 
-```
+```plain
 const string = `somethinganother ${'x'}new line ${1 + 2 + 3}test`
 ```
 
-`` In this case `literals` is an array where the first item is: ``
+`In this case `literals` is an array where the first item is:`
 
 ```
 `somethinganother `
@@ -2007,17 +2007,17 @@ const string = `somethinganother ${'x'}new line ${1 + 2 + 3}test`
 `test`
 ```
 
-`` `expressions` in this case is an array with two items, `x` and `6`.``
+`expressions` in this case is an array with two items, `x` and `6`.`
 
 `The function that is passed those values can do anything with them, and this is the power of this kind of feature.`
 
-`` The most simple example is replicating what the string interpolation does, by simply joining `literals` and `expressions`: ``
+`The most simple example is replicating what the string interpolation does, by simply joining `literals` and `expressions`:`
 
 ```
 const interpolated = interpolate`I paid ${10}€`
 ```
 
-`` and this is how `interpolate` works: ``
+`and this is how `interpolate` works:`
 
 ```
 function interpolate(literals, ...expressions) {  let string = ``  for (const [i, val] of expressions.entries()) {    string += literals[i] + val  }  string += literals[literals.length - 1]  return string}
@@ -2083,7 +2083,7 @@ const dosomethingElseAgain = (foo, bar) => {  //do something}
 
 `Starting with ES6/ES2015, functions can have default values for the parameters:`
 
-```
+```plain
 const dosomething = (foo = 1, bar = 'hey') => {  //do something}
 ```
 
@@ -2117,11 +2117,11 @@ const dosomething = ({ foo = 1, bar = 'hey' }) => {  //do something  console.log
 
 #### `Return values`
 
-`` Every function returns a value, which by default is `undefined`. ``
+`Every function returns a value, which by default is `undefined`.`
 
 ![](https://cdn-media-1.freecodecamp.org/images/fSqbe1Bp37sJJ7LWgOlD2GgZJLmzkMvDGaek)
 
-`` Any function is terminated when its lines of code end, or when the execution flow finds a `return` keyword. ``
+`Any function is terminated when its lines of code end, or when the execution flow finds a `return` keyword.`
 
 `When JavaScript encounters this keyword it exits the function execution and gives control back to its caller.`
 
@@ -2165,11 +2165,11 @@ const car = {  brand: 'Ford',  model: 'Fiesta',  start: function() {    console.
 car.start()
 ```
 
-#### `` `"this"` in arrow functions``
+#### `"this"` in arrow functions`
 
 `There’s an important behavior of Arrow Functions vs regular Functions when used as object methods. Consider this example:`
 
-```
+```plain
 const car = {  brand: 'Ford',  model: 'Fiesta',  start: function() {    console.log(`Started ${this.brand} ${this.model}`)  },  stop: () => {    console.log(`Stopped ${this.brand} ${this.model}`)  }}
 ```
 
@@ -2235,7 +2235,7 @@ dosomething()const dosomething = function dosomething() {  console.log('did some
 const dosomethingdosomething()dosomething = function dosomething() {  console.log('did something')}
 ```
 
-`` The same happens for `let` declarations. `var` declarations do not work either, but with a different error: ``
+`The same happens for `let` declarations. `var` declarations do not work either, but with a different error:`
 
 ![](https://cdn-media-1.freecodecamp.org/images/acnsMMT-DwJj6AuOKDq6y95gSZ31Q7FjCJQm)
 
@@ -2253,7 +2253,7 @@ const dosomethingdosomething()dosomething = function dosomething() {  console.lo
 
 `Visually, it’s a simple and welcome change, which allows you to write functions with a shorter syntax, from:`
 
-```
+```plain
 const myFunction = function foo() {  //...}
 ```
 
@@ -2293,7 +2293,7 @@ const myFunction = param => doSomething(param)
 const myFunction = () => 'test'
 ```
 
-```
+```plain
 myFunction() //'test'
 ```
 
@@ -2381,7 +2381,7 @@ const prepareBark = dog => {  const say = `${dog} barked!`  return () => console
 const bark = prepareBark(`Roger`)
 ```
 
-```
+```plain
 bark()
 ```
 
@@ -2425,7 +2425,7 @@ const a = []const a = [1, 2, 3]const a = Array.of(1, 2, 3)const a = Array(6).fil
 
 `Don’t use the old syntax (just use it for typed arrays)`
 
-```
+```plain
 const a = new Array() //never useconst a = new Array(1, 2, 3) //never use
 ```
 
@@ -2449,7 +2449,7 @@ a.every(f)
 a.some(f)
 ```
 
-`` Iterates `a` until `f()` returns true ``
+`Iterates `a` until `f()` returns true`
 
 #### `Iterate the array and return a new one with the returned result of a function`
 
@@ -2493,7 +2493,7 @@ a.reduce((accumulator, currentValue, currentIndex, array) => {  //...}, initialV
 
 > `_ES6_`
 
-```
+```plain
 a.forEach(f)
 ```
 
@@ -2545,7 +2545,7 @@ let it = a.entries()
 console.log(it.next().value) //[0, 1]console.log(it.next().value) //[1, 2]console.log(it.next().value) //[2, 3]
 ```
 
-`` `.keys()` allows to iterate on the keys:``
+`.keys()` allows to iterate on the keys:`
 
 ```
 let it = a.keys()
@@ -2653,7 +2653,7 @@ a.includes(value)
 a.includes(value, i)
 ```
 
-`` Returns true if `a` contains `value` after the position `i`. ``
+`Returns true if `a` contains `value` after the position `i`.`
 
 #### `Get a portion of an array`
 
@@ -2762,7 +2762,7 @@ do {  if (something) break} while (true)
 
 `` and you can jump to the next iteration using `continue`: ``
 
-```
+```plain
 do {  if (something) continue
 ```
 
@@ -2810,7 +2810,7 @@ for (let property in object) {  console.log(property) //property name  console.l
 //iterate over the valuefor (const value of ['a', 'b', 'c']) {  console.log(value) //value}
 ```
 
-```
+```plain
 //get the index as well, using `entries()`for (const [index, value] of ['a', 'b', 'c'].entries()) {  console.log(index) //index  console.log(value) //value}
 ```
 
@@ -2875,7 +2875,7 @@ const xhr = new XMLHttpRequest()xhr.onreadystatechange = () => {  //.. do someth
 window.addEventListener('load', () => {  //window loaded})
 ```
 
-> `` _Note that IE8 and below do not support this, and instead used their own`attachEvent()` API. Keep it in mind if you need to support older browsers._ ``
+> `_Note that IE8 and below do not support this, and instead used their own`attachEvent()` API. Keep it in mind if you need to support older browsers._`
 
 #### `Listening on different elements`
 
@@ -2885,7 +2885,7 @@ window.addEventListener('load', () => {  //window loaded})
 
 #### `The Event object`
 
-`` An event handler gets an `Event` object as the first parameter: ``
+`An event handler gets an`Event` object as the first parameter:`
 
 ```
 const link = document.getElementById('my-link')link.addEventListener('click', event => {  // link clicked})
@@ -2931,7 +2931,7 @@ const link = document.getElementById('my-link')link.addEventListener('mousedown'
 <div id="container">  <button>Click me</button></div>
 ```
 
-`` You want to track when users click on the button, and you have two event listeners, one on `button`, and one on `#container`. Remember, a click on a child element will always propagate to its parents, unless you stop the propagation (we’ll see this later). ``
+`You want to track when users click on the button, and you have two event listeners, one on `button`, and one on `#container`. Remember, a click on a child element will always propagate to its parents, unless you stop the propagation (we’ll see this later).`
 
 `Those event listeners will be called in order, and this order is determined by the event bubbling/capturing model used.`
 
@@ -2939,7 +2939,7 @@ const link = document.getElementById('my-link')link.addEventListener('mousedown'
 
 `` In our example, the handler on `button` will fire before the `#container` handler. ``
 
-`` **Capturing** is the opposite: the outer event handlers are fired before the more specific handler, the one on `button`. ``
+`**Capturing** is the opposite: the outer event handlers are fired before the more specific handler, the one on `button`.`
 
 `**By default all events bubble**.`
 
@@ -2961,7 +2961,7 @@ document.getElementById('container').addEventListener(  'click',  () => {    //w
 
 `An event on a DOM element will be propagated to all its parent elements tree, unless it’s stopped.`
 
-```
+```plain
 <html>  <body>    <section>      &lt;a id="my-link" ...>
 ```
 
@@ -2983,7 +2983,7 @@ const link = document.getElementById('my-link')link.addEventListener('mousedown'
 
 #### `Load`
 
-`` `load` is fired on `window` and the `body` element when the page has finished loading.``
+`load` is fired on `window` and the `body` element when the page has finished loading.`
 
 #### `Mouse events`
 
@@ -3067,7 +3067,7 @@ const baz = () => console.log('baz')
 const foo = () => {  console.log('foo')  bar()  baz()}
 ```
 
-```
+```plain
 foo()
 ```
 
@@ -3109,11 +3109,11 @@ const bar = () => console.log('bar')
 const baz = () => console.log('baz')
 ```
 
-```
+```plain
 const foo = () => {  console.log('foo')  setTimeout(bar, 0)  baz()}
 ```
 
-```
+```plain
 foo()
 ```
 
@@ -3139,7 +3139,7 @@ foobazbar
 
 `When setTimeout() is called, the Browser or Node.js start the timer. Once the timer expires, in this case immediately as we put 0 as the timeout, the callback function is put in the **Message Queue**.`
 
-`` The Message Queue is also where user-initiated events like click or keyboard events, or fetch responses are queued before your code has the opportunity to react to them. Or also DOM events like `onLoad`. ``
+`The Message Queue is also where user-initiated events like click or keyboard events, or fetch responses are queued before your code has the opportunity to react to them. Or also DOM events like `onLoad`.`
 
 `**The loop gives priority to the call stack, and it first processes everything it finds in the call stack, and once there’s nothing in there, it goes to pick up things in the event queue.**`
 
@@ -3298,7 +3298,7 @@ window.addEventListener('load', () => {  document.getElementById('button').addEv
 
 `At this point, the caller function waits for it to either return the promise in a **resolved state**, or in a **rejected state**, but _the function continues its execution while the promise does its work_.`
 
-#### `Which JS APIs use promises?`
+#### Which JS APIs use promises
 
 `In addition to your own code and libraries code, promises are used by standard modern Web APIs such as:`
 
@@ -3338,7 +3338,7 @@ const isItDoneYet = new Promise(  //...)
 const checkIfItsDone = () => {  isItDoneYet    .then((ok) => {      console.log(ok)    })    .catch((err) => {      console.error(err)    })}
 ```
 
-`` Running `checkIfItsDone()` will execute the `isItDoneYet()`promise and will wait for it to resolve, using the `then` callback, and if there is an error, it will handle it in the `catch` callback. ``
+`Running `checkIfItsDone()` will execute the `isItDoneYet()`promise and will wait for it to resolve, using the `then` callback, and if there is an error, it will handle it in the `catch` callback.`
 
 #### `Chaining promises`
 
@@ -3358,18 +3358,18 @@ const status = (response) => {  if (response.status >= 200 && response.status < 
 const json = (response) => response.json()
 ```
 
-```
+```plain
 fetch('/todos.json')  .then(status)  .then(json)  .then((data) => { console.log('Request succeeded with JSON response', data) })  .catch((error) => { console.log('Request failed', error) })
 ```
 
-`` In this example, we call `fetch()` to get a list of TODO items from the `todos.json` file found in the domain root, and we create a chain of promises. ``
+`In this example, we call `fetch()` to get a list of TODO items from the `todos.json` file found in the domain root, and we create a chain of promises.`
 
 `` Running `fetch()` returns a [response][282], which has many properties, and within those we reference: ``
 
 -   `` `status`, a numeric value representing the HTTP status code``
 -   `` `statusText`, a status message, which is `OK` if the request succeeded``
 
-`` `response` also has a `json()` method, which returns a promise that will resolve with the content of the body processed and transformed into JSON.``
+`response` also has a `json()` method, which returns a promise that will resolve with the content of the body processed and transformed into JSON.`
 
 `` So given those premises, this is what happens: the first promise in the chain is a function that we defined, called `status()`, that checks the response status and if it's not a success response (between 200 and 299), it rejects the promise. ``
 
@@ -3391,7 +3391,7 @@ fetch('/todos.json')  .then(status)  .then(json)  .then((data) => { console.log(
 
 `` When anything in the chain of promises fails and raises an error or rejects the promise, the control goes to the nearest `catch()`statement down the chain. ``
 
-```
+```plain
 new Promise((resolve, reject) => {  throw new Error('Error')})  .catch((err) => { console.error(err) })
 ```
 
@@ -3399,7 +3399,7 @@ new Promise((resolve, reject) => {  throw new Error('Error')})  .catch((err) => 
 // or
 ```
 
-```
+```plain
 new Promise((resolve, reject) => {  reject('Error')})  .catch((err) => { console.error(err) })
 ```
 
@@ -3485,7 +3485,7 @@ const doSomething = async () => {    console.log(await doSomethingAsync())}
 
 `This is a simple example of async/await used to run a function asynchronously:`
 
-```
+```plain
 const doSomethingAsync = () => {    return new Promise((resolve) => {        setTimeout(() => resolve('I did something'), 3000)    })}
 ```
 
@@ -3551,7 +3551,7 @@ getFirstUserData()
 const getFirstUserData = async () => {  const response = await fetch('/users.json') // get users list  const users = await response.json() // parse JSON  const user = users[0] // pick first user  const userResponse = await fetch(`/users/${user.name}`) // get user data  const userData = await user.json() // parse JSON  return userData}
 ```
 
-```
+```plain
 getFirstUserData()
 ```
 
@@ -3629,7 +3629,7 @@ for (const operation of operations) {  operation()}
 var i;const operations = []
 ```
 
-```
+```plain
 for (i = 0; i < 5; i++) {  operations.push(() => {    console.log(i)  })}
 ```
 
@@ -3679,7 +3679,7 @@ const operations = []
 for (var i = 0; i < 5; i++) {  operations.push(((j) => {    return () => console.log(j)  })(i))}
 ```
 
-```
+```plain
 for (const operation of operations) {  operation()}
 ```
 
@@ -3691,7 +3691,7 @@ for (const operation of operations) {  operation()}
 
 `When writing JavaScript code, you might want to delay the execution of a function.`
 
-`` This is the job of `setTimeout`. You specify a callback function to execute later, and a value expressing how later you want it to run, in milliseconds: ``
+`This is the job of `setTimeout`. You specify a callback function to execute later, and a value expressing how later you want it to run, in milliseconds:`
 
 ```
 setTimeout(() => {  // runs after 2 seconds}, 2000)
@@ -3713,7 +3713,7 @@ const myFunction = (firstParam, secondParam) => {  // do something}
 
 `` `setTimeout` returns the timer id. This is generally not used, but you can store this id, and clear it if you want to delete this scheduled function execution:``
 
-```
+```plain
 const id = setTimeout(() => {  // should run after 2 seconds}, 2000)
 ```
 
@@ -3725,7 +3725,7 @@ const id = setTimeout(() => {  // should run after 2 seconds}, 2000)
 
 `` If you specify the timeout delay to `0`, the callback function will be executed as soon as possible, but after the current function execution: ``
 
-```
+```plain
 setTimeout(() => {  console.log('after ')}, 0)
 ```
 
@@ -3759,7 +3759,7 @@ clearInterval(id)
 
 `` It’s common to call `clearInterval` inside the setInterval callback function, to let it auto-determine if it should run again or stop. For example this code runs something unless App.somethingIWait has the value `arrived`: ``
 
-```
+```plain
 const interval = setInterval(() => {  if (App.somethingIWait === 'arrived') {    clearInterval(interval)    return  }  // otherwise do things}, 100)
 ```
 
@@ -3803,7 +3803,7 @@ setTimeout(  myFunction()}, 1000)
 
 ### `This`
 
-`` `this` is a value that has different values depending on where it’s used. Not knowing this tiny detail of JavaScript can cause a lot of headaches, so it’s worth taking 5 minutes to learn all the tricks``
+`this` is a value that has different values depending on where it’s used. Not knowing this tiny detail of JavaScript can cause a lot of headaches, so it’s worth taking 5 minutes to learn all the tricks`
 
 `Not knowing this tiny detail of JavaScript can cause a lot of headaches, so it’s worth taking 5 minutes to learn all the tricks.`
 
@@ -3823,7 +3823,7 @@ setTimeout(  myFunction()}, 1000)
 
 `Here’s one:`
 
-```
+```plain
 const car = {  maker: 'Ford',  model: 'Fiesta',
 ```
 
@@ -3863,7 +3863,7 @@ car.drive()//Driving a Ford Fiesta car!
 
 `An arrow function does not work in the same way, as it’s lexically bound:`
 
-```
+```plain
 const car = {  maker: 'Ford',  model: 'Fiesta',
 ```
 
@@ -3885,7 +3885,7 @@ car.drive()//Driving a undefined undefined car!
 
 `` JavaScript offers a few ways to map `this` to any object you want. ``
 
-`` Using `bind()`, at the **function declaration** step: ``
+`Using `bind()`, at the **function declaration** step:`
 
 ```
 const car = {  maker: 'Ford',  model: 'Fiesta'}
@@ -3895,7 +3895,7 @@ const car = {  maker: 'Ford',  model: 'Fiesta'}
 const drive = function() {  console.log(`Driving a ${this.maker} ${this.model} car!`)}.bind(car)
 ```
 
-```
+```plain
 drive()//Driving a Ford Fiesta car!
 ```
 
@@ -3967,7 +3967,7 @@ document.querySelector('#button').addEventListener(  'click',  function(e) {    
 
 `Strict mode is optional. As with every breaking change in JavaScript, we can’t simply change how the language behaves by default, because that would break gazillions of JavaScript around, and JavaScript puts a lot of effort into making sure 1996 JavaScript code still works today. It’s a key of its success.`
 
-`` So we have the `'use strict'` directive we need to use to enable Strict Mode. ``
+`So we have the `'use strict'` directive we need to use to enable Strict Mode.`
 
 `You can put it at the beginning of a file, to apply it to all the code contained in the file:`
 
@@ -3989,7 +3989,7 @@ const name = 'Flavio'const hello = () => 'hey'
 function hello() {  'use strict'
 ```
 
-```
+```plain
   return 'hey'}
 ```
 
@@ -4001,7 +4001,7 @@ function hello() {  'use strict'
 
 `If you assign a value to an undeclared variable, JavaScript by default creates that variable on the global object:`
 
-```
+```plain
 ;(function() {  variable = 'hey'})()(() => {  name = 'Flavio'})()
 ```
 
@@ -4011,7 +4011,7 @@ variable //'hey'name //'Flavio'
 
 `Turning on Strict Mode, an error is raised if you try to do what we did above:`
 
-```
+```plain
 ;(function() {  'use strict'  variable = 'hey'})()(() => {  'use strict'  myname = 'Flavio'})()
 ```
 
@@ -4047,7 +4047,7 @@ const car = {}Object.defineProperty(car, 'color', { value: 'blue', writable: fal
 const car = {  get color() {    return 'blue'  }}car.color = 'red'(  //ok
 ```
 
-```
+```plain
   () => {    'use strict'    car.color = 'yellow' //TypeError: Cannot set property color of #<Object> which has only a getter  })()
 ```
 
@@ -4057,7 +4057,7 @@ const car = {  get color() {    return 'blue'  }}car.color = 'red'(  //ok
 const car = { color: 'blue' }Object.preventExtensions(car)car.model = 'Fiesta'(  //ok
 ```
 
-```
+```plain
   () => {    'use strict'    car.owner = 'Flavio' //TypeError: Cannot add property owner, object is not extensible  })()
 ```
 
@@ -4069,7 +4069,7 @@ true.false = ''(  //''  1).name =  'xxx' //'xxx'var test = 'test' //undefinedtes
 
 `Strict mode fails in all those cases:`
 
-```
+```plain
 ;(() => {  'use strict'  true.false = ''(    //TypeError: Cannot create property 'false' on boolean 'true'    1  ).name =    'xxx' //TypeError: Cannot create property 'name' on number '1'  'test'.testing = true //TypeError: Cannot create property 'testing' on string 'test'})()
 ```
 
@@ -4115,7 +4115,7 @@ delete Object.prototype(  //false
 (() => {  'use strict'  console.log(010)})()//Uncaught SyntaxError: Octal literals are not allowed in strict mode.
 ```
 
-`` You can still enable octal numbers in Strict Mode using the `0oXX` syntax: ``
+`You can still enable octal numbers in Strict Mode using the `0oXX` syntax:`
 
 ```
 ;(() => {  'use strict'  console.log(0o10)})()//8
@@ -4249,7 +4249,7 @@ const result = 20 / 5 //result === 4const result = 20 / 7 //result === 2.8571428
 const result = 20 % 5 //result === 0const result = 20 % 7 //result === 6
 ```
 
-`` A reminder by zero is always `NaN`, a special value that means "Not a Number": ``
+`A reminder by zero is always `NaN`, a special value that means "Not a Number":`
 
 ```
 1 % 0 //NaN-1 % 0 //NaN
@@ -4293,7 +4293,7 @@ let x = 0x-- //0x //-1--x //-2
 
 `Return the negation of the operand`
 
-```
+```plain
 let x = 2-x //-2x //2
 ```
 
@@ -4324,7 +4324,7 @@ x = '2a'+x //NaN
 -   `` `*=`: multiplication assignment``
 -   `` `/=`: division assignment``
 -   `` `%=`: remainder assignment``
--   `` `**=`: exponentiation assignment``
+-   `**=`: exponentiation assignment`
 
 `Examples:`
 
@@ -4403,7 +4403,7 @@ Math.asin(0.8) //0.9272952180016123
 
 `Returns the arctangent of the operand`
 
-```
+```plain
 Math.atan(30) //1.5374753309166493
 ```
 
@@ -4411,7 +4411,7 @@ Math.atan(30) //1.5374753309166493
 
 `Returns the arctangent of the quotient of its arguments.`
 
-```
+```plain
 Math.atan2(30, 20) //0.982793723247329
 ```
 
@@ -4419,7 +4419,7 @@ Math.atan2(30, 20) //0.982793723247329
 
 `Rounds a number up`
 
-```
+```plain
 Math.ceil(2.5) //3Math.ceil(2) //2Math.ceil(2.1) //3Math.ceil(2.99999) //3
 ```
 
@@ -4499,7 +4499,7 @@ Math.round(1.2) //1Math.round(1.6) //2
 
 `Calculates the sin of an angle expressed in radiants`
 
-```
+```plain
 Math.sin(0) //0Math.sin(Math.PI) //1.2246467991473532e-16)
 ```
 
@@ -4515,7 +4515,7 @@ Math.sqrt(4) //2Math.sqrt(16) //4Math.sqrt(5) //2.23606797749979
 
 `Calculates the tangent of an angle expressed in radiants`
 
-```
+```plain
 Math.tan(0) //0Math.tan(Math.PI) //-1.2246467991473532e-16
 ```
 
@@ -4565,7 +4565,7 @@ export default str => str.toUpperCase()
 
 `` It’s important to note that any script loaded with `type="module"` is loaded in strict mode. ``
 
-`` In this example, the `uppercase.js` module defines a **default export**, so when we import it, we can assign it a name we prefer: ``
+`In this example, the`uppercase.js` module defines a **default export**, so when we import it, we can assign it a name we prefer:`
 
 ```
 import toUpperCase from './uppercase.js'
@@ -4647,7 +4647,7 @@ import React, { Component } from 'react'
 
 #### `What about browsers that do not support modules?`
 
-`` Use a combination of `type="module"` and `nomodule`: ``
+`Use a combination of `type="module"` and `nomodule`:`
 
 ```
 <script type="module" src="module.js"></script><script nomodule src="fallback.js"></script>
@@ -4729,7 +4729,7 @@ const value = require('./file.js')
 
 #### `Block`
 
-`` In JavaScript a block is delimited curly braces (`{}`). An `if` statement contains a block, a `for` loop contains a block. ``
+`In JavaScript a block is delimited curly braces (`{}`). An `if` statement contains a block, a `for` loop contains a block.`
 
 #### `Block Scoping`
 
@@ -4769,7 +4769,7 @@ const value = require('./file.js')
 
 #### `Reassignment`
 
-`` JavaScript with `var` and `let` declaration allows you to reassign a variable indefinitely. With `const`declarations you effectively declare an immutable value for strings, integers, booleans, and an object that cannot be reassigned (but you can still modify it through its methods). ``
+`JavaScript with `var` and `let` declaration allows you to reassign a variable indefinitely. With `const`declarations you effectively declare an immutable value for strings, integers, booleans, and an object that cannot be reassigned (but you can still modify it through its methods).`
 
 #### `Scope`
 

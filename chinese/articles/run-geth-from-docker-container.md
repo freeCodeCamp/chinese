@@ -79,7 +79,7 @@ config=”{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2
 
 这将显示容器 ID，其中包含使用的映像名称，状态和使用的端口。
 
-```
+```plain
 
 #下面的命令是从 Docker CLI 来运行以太坊 Go 节点客户端
 

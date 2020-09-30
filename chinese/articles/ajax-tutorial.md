@@ -4,7 +4,7 @@
 
 ![AJAX Tutorial: What AJAX Is and How to Use it](https://images.unsplash.com/photo-1557234396-e1506d9a85b3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-## **What is AJAX?**
+## **What is AJAX**
 
 \***\*AJAX\*\*** stands for \***\*Asynchronous JavaScript And XML\*\***. It is not a programming language. It is a technology for developing better, faster and interactive Web Applications using HTML, CSS, JavaScript and XML.
 
@@ -13,7 +13,7 @@
 3.  JavaScript : JavaScript is used for making a Web Application interactive, interesting and user friendly.
 4.  XML : Extensible Markup Language (XML) is a format to store and transport data from the Web Server.
 
-### What's the meaning of Asynchronous in AJAX?
+### What's the meaning of Asynchronous in AJAX
 
 Asynchronous means that the the Web Application could send and receive data from the Web Server without refreshing the page. This background process of sending and receiving data from the server along with updating different sections of a web page defines Asynchronous property/feature of AJAX.
 

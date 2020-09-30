@@ -11,7 +11,7 @@ I’ve grouped the lessons into three categories to match the phases of a typica
 
 While most of the lessons apply directly to software engineers and technical professionals, the principles behind these lessons can be applied to all careers. I hope you find something useful that you can apply to your professional lives.
 
-## How did I get started?
+## How did I get started
 
 > “If you’re going to fail, do it fast.” — Unknown
 
@@ -23,7 +23,7 @@ So from January through early March 2020, I applied to and was contacted by comp
 
 109+ applications later, I landed myself more than 60 interviews. These comprised more than 60 introductory phone interviews, 50+ technical phone screen interviews, 18 take-home coding projects, 11 coding challenges and 8 on-site interviews including 3 virtual ones.
 
-## What did I learn?
+## What did I learn
 
 For better appreciation, I have grouped the lessons into three categories to match the different phases of a typical recruitment process.
 
@@ -152,7 +152,7 @@ One of the companies I interviewed with provided hourly pay, about \$68/hr, for 
 
 Never compromise on code quality for take-home projects. Be very intentional about your design decisions, naming conventions, code structure and so on, and be ready to defend your choices.
 
-### What tools should you use?
+### What tools should you use
 
 During my interview with Course Hero, I used [regex][2] to solve a problem I could have solved using a simpler string parsing algorithm. It turned out to be a bad decision as I didn’t pass the interview.
 
@@ -178,15 +178,15 @@ There are many reasons why you didn’t pass an interview. Some of the best engi
 
 So separate failed interviews from yourself, look for the learning points from each failed interview, and use those to forge ahead. As they say – we move!
 
-### What about success?
+### What about success
 
 Celebrate your successes, regardless of how small you think they are. I have a few ideas for celebration.
 
-## Am I better after doing this?
+## Am I better after doing this
 
 I’m not going to tell you that I've aced every interview that has come my way since I embarked on this journey. But assuredly, I can tell you I have gotten better at interviewing and my confidence levels have really grown. And yes, I also got multiple offers too 😊.
 
-## What should you do next?
+## What should you do next
 
 -   Practice doing a lot of mock interviews with friends. While I don’t totally agree that practice makes perfect (because perfection sounds like a moving target to me) practice helps you **quickly** identify patterns in interview questions, grow in mastery and ultimately your confidence.
 -   For technical interviews, nothing beats a very good understanding of the fundamentals of data structures and algorithms. I’ve added links to resources I think you may find helpful.

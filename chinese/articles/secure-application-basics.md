@@ -5,7 +5,7 @@
 
 ![How to make your app's architecture secure right now: separation, configuration, and access](https://www.freecodecamp.org/news/content/images/size/w2000/2019/09/cover-2.png)
 
-### If you're a busy developer, this article will be a good starting point for building secure application architecture.
+### If you're a busy developer, this article will be a good starting point for building secure application architecture
 
 Developers today get to focus more on building software than they were able to in the past, and that’s a great thing.
 

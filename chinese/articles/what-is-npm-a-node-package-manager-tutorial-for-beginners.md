@@ -13,7 +13,7 @@ One of the major factors of Node's success is npm - its popular package manager,
 
 As of the moment I'm writing this post, npm has facilitated the publication of over 1.3 million packages with a weekly download rate of over 16 billion! These numbers are fantastic for any software tool. So now let's talk about what exactly npm is.
 
-## What is NPM?
+## What is NPM
 
 NPM – or "Node Package Manager" – is the default package manager for JavaScript's runtime Node.js.
 

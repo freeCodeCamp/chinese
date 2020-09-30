@@ -8,11 +8,11 @@ Stack Overflow 在 90,000 名开发者中开展了 [一项调查][1]，结果显
 
 在过去几年中，TypeScript 的热门程度、社区规模和使用率都在不断提高。如今，甚至 [Facebook 正将 Jest 项目转移至 TypeScript][2]。
 
-# **什么是 TypeScript？**
+# **什么是 TypeScript**
 
 TypeScript 是 JavaScript 的超集，具有静态类型特性，旨在简化大型 JavaScript 应用程序的开发，也被称为 **JavaScript that scales**（**可拓展的 JavaScript**）。
 
-## **为什么要用 TypeScript？**
+## **为什么要用 TypeScript**
 
 JavaScript 在过去几年中快速发展，成为客户端和服务器端最通用的跨平台语言。
 

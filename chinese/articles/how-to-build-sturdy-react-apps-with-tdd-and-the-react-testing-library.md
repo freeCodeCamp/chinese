@@ -21,15 +21,15 @@ In this article, we will learn to exercise TDD in order to build solid React app
 
 We’re going to start off by running `create-react-app` and installing the dependencies. My assumption is that if you’re reading an article about testing applications, you’re probably already a familiar with installing and starting up JavaScript projects. I’ll be using `yarn` rather than `npm` here.
 
-```
+```plain
 create-react-app comment-feed
 ```
 
-```
+```plain
 cd comment-feed
 ```
 
-```
+```plain
 yarn
 ```
 
@@ -43,7 +43,7 @@ We don’t want to test implementation details anymore. We want to render a comp
 
 Let’s install them and get to work.
 
-```
+```plain
 yarn add react-testing-library
 ```
 
@@ -51,7 +51,7 @@ yarn add react-testing-library
 
 Let’s do this first component TDD-style. Fire up your test runner.
 
-```
+```plain
 yarn test --watch
 ```
 

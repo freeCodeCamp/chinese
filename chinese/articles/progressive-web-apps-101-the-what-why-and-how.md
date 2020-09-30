@@ -5,7 +5,7 @@
 
 ![Progressive Web Apps 101: the What, Why and How](https://cdn-media-1.freecodecamp.org/images/1*2tyNWs0uYC0q-gwyWj8BTw.jpeg)
 
-#### 什么是渐进式 Web 应用(PWA)？为什么我们需要 PWA？我们应该如何搭建一个 PWA 应用？
+#### 什么是渐进式 Web 应用(PWA)？为什么我们需要 PWA？我们应该如何搭建一个 PWA 应用
 
 你有看到过上面第一张图的“添加到主屏幕”弹出框吗？当你按下这个按钮时，这个"APP"就会自动在后台进行安装，然后你就可以在你手机的 APP 列表里找到它。打开它时，你可以在里面做和之前在浏览器里一样的事，不过这次不用再打开浏览器了，这个 APP 现在直接运行在你的手机系统中。
 
@@ -17,7 +17,7 @@
 
 但是，对于 Web 应用而言，渐进式到底意味着什么？ 让我们来更深入地研究什么是 PWA，为什么我认为它们比原生 APP 更好，它们又是为什么与传统的 Web 应用不同。
 
-### 什么是渐进式 Web 应用(PWA)？
+### 什么是渐进式 Web 应用(PWA)
 
 PWA 这一概念是由[Alex Russell][1]和 Frances Berriman 创造的。引用 Alex 的话：
 
@@ -27,7 +27,7 @@ PWA 这一概念是由[Alex Russell][1]和 Frances Berriman 创造的。引用 A
 
 PWA 通过渐进增强来提高用户体验。换句话说，这意味着 PWA 应用可以兼容几乎所有的设备。当然，某些功能可能不可用，但这个 APP 仍然可以正常提供应有的功能。
 
-### 为什么我们需要 PWA？
+### 为什么我们需要 PWA
 
 在讲为什么我们需要 PWA 之前，让我们先谈谈当今原生和 Web 应用所面临的一些问题。
 
@@ -54,7 +54,7 @@ PWA is on **FIRE**！
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*maLaYJoCMBNabnUdrgwPMQ.jpeg)
 
-### 我们应该如何搭建一个 PWA 应用？
+### 我们应该如何搭建一个 PWA 应用
 
 Google 为渐进式 Web 应用发布了 [项目清单][2]。 想让一个 Web 应用成为 PWA 应用，至少需要以下四个要求：
 

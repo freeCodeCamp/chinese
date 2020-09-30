@@ -11,7 +11,7 @@
 
 _注意: 本文中所涉及到的 Python 均指 Python3_
 
-### 本文要点：
+### 本文要点
 
 -   Web 基础
 -   手动创建一个 socket 并且发送 HTTP 请求
@@ -62,7 +62,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit\
 
 服务器将返回类似如下的响应:
 
-```
+```plain
 HTTP/1.1 200 OK
 Server: nginx/1.4.6 (Ubuntu) Content-Type: text/html; charset=utf-8 <!DOCTYPE html>
 <html>
@@ -119,14 +119,14 @@ while True:
 
 当你的数据类似于下面这种的时候，正则表达式就能发挥很大的作用:
 
-```
+```plain
 <p>Price : 19.99$</p>
 
 ```
 
 我们可以使用 XPath 表达式选择这个文本节点，然后使用这种 regex 提取 price。请记住，正则表达式模式是从左到右应用的，每个源字符只使用一次。:
 
-```
+```plain
 ^Price\s:\s(\d+.\d{2})$
 
 ```
@@ -191,7 +191,7 @@ XPath 是一种使用路径表达式在 XML 或 HTML 文档中选择节点或节
 
 _安装_:
 
-```
+```plain
 pip install lxml
 
 ```
@@ -262,7 +262,7 @@ import requests
 
 安装:
 
-```
+```plain
 pip install beautifulsoup4
 
 ```
@@ -340,14 +340,14 @@ Scrapy 的缺点在于陡峭的学习曲线——有很多东西要学。
 
 pip 安装 Scrapy:
 
-```
+```plain
 pip install Scrapy
 
 ```
 
 然后，你可以使用 scrapycli 生成项目的样板代码：
 
-```
+```plain
 scrapy startproject hacker_news_scraper
 
 ```
@@ -381,7 +381,7 @@ The initial download delay
 
 您可以使用 ScrapyCLI 运行下面的代码并且设置不同的输出格式(CSV、JSON、XML 等)
 
-```
+```plain
 scrapy crawl hacker-news -o links.json
 
 ```
@@ -399,14 +399,14 @@ scrapy crawl hacker-news -o links.json
 另一个很好的用例是对一个页面进行截图。这是我们将要对 Hacker News 主页做的事情(再次！)
 pip 安装 Selenium 包:
 
-```
+```plain
 pip install selenium
 
 ```
 
 你还需要[Chromedriver][21]:
 
-```
+```plain
 brew install chromedriver
 
 ```

@@ -429,14 +429,14 @@ const string =
 
 `` To render the string on multiple lines as well, you explicitly need to add `\n` at the end of each line, like this: ``
 
-```
+```plain
 const string =
   'first line\n second line'
 ```
 
 `or`
 
-```
+```plain
 const string = 'first line\n' + 'second line'
 ```
 
@@ -497,7 +497,7 @@ const person = {
 const {firstName: name, age} = person
 ```
 
-`` `name` and `age` contain the desired values.``
+`name` and `age` contain the desired values.`
 
 `The syntax also works on arrays:`
 
@@ -573,7 +573,7 @@ x.a_b //z
 
 `` ES5 back in 2009 introduced `forEach()` loops. While nice, they offered no way to break, like `for` loops always did. ``
 
-`` ES2015 introduced the `**for-of**` **loop**, which combines the conciseness of `forEach` with the ability to break: ``
+`ES2015 introduced the `**for-of**`**loop**, which combines the conciseness of`forEach` with the ability to break:`
 
 ```
 //iterate over the value
@@ -587,12 +587,12 @@ for (const [i, v] of ['a', 'b', 'c'].entries()) {
 }
 ```
 
-`` Notice the use of `const`. This loop creates a new scope in every iteration, so we can safely use that instead of `let`. ``
+`Notice the use of `const`. This loop creates a new scope in every iteration, so we can safely use that instead of `let`.`
 
 `` The difference with `for...in` is: ``
 
 -   `` `for...of` **iterates over the property values**``
--   `` `for...in` **iterates the property names**``
+-   `for...in` **iterates the property names**`
 
 ## `Promises`
 
@@ -637,7 +637,7 @@ const isItDoneYet = new Promise((resolve, reject) => {
 
 `` As you can see the promise checks the `done` global constant, and if that's true, we return a resolved promise, otherwise a rejected promise. ``
 
-`` Using `resolve` and `reject` we can communicate back a value, in the above case we just return a string, but it could be an object as well. ``
+`Using `resolve` and `reject` we can communicate back a value, in the above case we just return a string, but it could be an object as well.`
 
 ### `Consuming a promise`
 
@@ -645,7 +645,7 @@ const isItDoneYet = new Promise((resolve, reject) => {
 
 `Now let’s see how the promise can be _consumed_ or used.`
 
-```
+```plain
 const isItDoneYet = new Promise()
 //...
 const checkIfItsDone = () => {
@@ -697,9 +697,9 @@ fetch('/todos.json')
 -   `` `status`, a numeric value representing the HTTP status code``
 -   `` `statusText`, a status message, which is `OK` if the request succeeded``
 
-`` `response` also has a `json()` method, which returns a promise that will resolve with the content of the body processed and transformed into JSON.``
+`response` also has a `json()` method, which returns a promise that will resolve with the content of the body processed and transformed into JSON.`
 
-`` So given those premises, this is what happens: the first promise in the chain is a function that we defined, called `status()`, that checks the response status and if it's not a success response (between 200 and 299), it rejects the promise. ``
+`So given those premises, this is what happens: the first promise in the chain is a function that we defined, called `status()`, that checks the response status and if it's not a success response (between 200 and 299), it rejects the promise.`
 
 `` This operation will cause the promise chain to skip all the chained promises listed and will skip directly to the `catch()` statement at the bottom, logging the `Request failed` text along with the error message. ``
 
@@ -753,13 +753,13 @@ new Promise((resolve, reject) => {
 
 ### `Orchestrating promises`
 
-#### `` `Promise.all()` ``
+#### `Promise.all()`
 
 `` If you need to synchronize different promises, `Promise.all()` helps you define a list of promises, and execute something when they are all resolved. ``
 
 `Example:`
 
-```
+```plain
 const f1 = fetch('/something.json')
 const f2 = fetch('/something2.json')
 Promise.all([f1, f2])
@@ -781,7 +781,7 @@ Promise.all([f1, f2]).then(([res1, res2]) => {
 
 `` You are not limited to using `fetch` of course, **any promise is good to go**. ``
 
-#### `` `Promise.race()` ``
+#### `Promise.race()`
 
 `` `Promise.race()` runs as soon as one of the promises you pass to it resolves, and it runs the attached callback just once with the result of the first promise resolved.``
 
@@ -819,7 +819,7 @@ import package from 'module-name'
 
 `while CommonJS uses`
 
-```
+```plain
 const package = require('module-name')
 ```
 
@@ -841,11 +841,11 @@ export default str => str.toUpperCase()
 <script type="module" src="index.js"></script>
 ```
 
-> `` _Note: this module import behaves like a `defer` script load. See [efficiently load JavaScript with defer and async][11]_ ``
+> `_Note: this module import behaves like a `defer` script load. See [efficiently load JavaScript with defer and async][11]_`
 
 `` It’s important to note that any script loaded with `type="module"` is loaded in strict mode. ``
 
-`` In this example, the `uppercase.js` module defines a **default export**, so when we import it, we can assign it a name we prefer: ``
+`In this example, the `uppercase.js` module defines a **default export**, so when we import it, we can assign it a name we prefer:`
 
 ```
 import toUpperCase from './uppercase.js'
@@ -904,12 +904,12 @@ import * from 'module'
 
 `You can import just a few of those exports, using the destructuring assignment:`
 
-```
+```plain
 import { a } from 'module'
 import { a, b } from 'module'
 ```
 
-`` You can rename any import, for convenience, using `as`: ``
+`You can rename any import, for convenience, using `as`:`
 
 ```
 import { a, b as two } from 'module'
@@ -948,24 +948,24 @@ import React, { Component } from 'react'
 
 `Any string value got some new instance methods:`
 
--   `` `repeat()` ``
+-   `repeat()`
 -   `` `codePointAt()` ``
 
 ### `repeat()`
 
 `Repeats the strings for the specified number of times:`
 
-```
+```plain
 'Ho'.repeat(3) //'HoHoHo'
 ```
 
-`` Returns an empty string if there is no parameter, or the parameter is `0`. If the parameter is negative you'll get a RangeError. ``
+`Returns an empty string if there is no parameter, or the parameter is `0`. If the parameter is negative you'll get a RangeError.`
 
 ### `codePointAt()`
 
 `This method can be used to handle Unicode characters that cannot be represented by a single 16-bit Unicode unit, but need 2 instead.`
 
-`` Using `charCodeAt()` you need to retrieve the first, and the second, and combine them. Using `codePointAt()` you get the whole character in one call. ``
+`Using `charCodeAt()` you need to retrieve the first, and the second, and combine them. Using `codePointAt()`you get the whole character in one call.`
 
 `For example, this Chinese character “𠮷” is composed by 2 UTF-16 (Unicode) parts:`
 
@@ -980,7 +980,7 @@ import React, { Component } from 'react'
 "\ud842\udfb7" //"𠮷"
 ```
 
-`` You can get the same result sign `codePointAt()`: ``
+`You can get the same result sign `codePointAt()`:`
 
 ```
 "𠮷".codePointAt(0) //20bb7
@@ -988,7 +988,7 @@ import React, { Component } from 'react'
 
 `If you create a new character by combining those unicode characters:`
 
-```
+```plain
 "\u{20bb7}" //"𠮷"
 ```
 
@@ -998,9 +998,9 @@ import React, { Component } from 'react'
 
 `ES2015 introduced several static methods under the Object namespace:`
 
--   `` `Object.is()` determines if two values are the same value``
+-   `Object.is()` determines if two values are the same value`
 -   `` `Object.assign()` used to shallow copy an object``
--   `` `Object.setPrototypeOf` sets an object prototype``
+-   `Object.setPrototypeOf` sets an object prototype`
 
 ### `Object.is()`
 
@@ -1012,22 +1012,22 @@ import React, { Component } from 'react'
 Object.is(a, b)
 ```
 
-`` The result is always `false` unless: ``
+`The result is always`false` unless:`
 
 -   `` `a` and `b` are the same exact object``
--   `` `a` and `b` are equal strings (strings are equal when composed by the same characters)``
--   `` `a` and `b` are equal numbers (numbers are equal when their value is equal)``
+-   `a` and `b` are equal strings (strings are equal when composed by the same characters)`
+-   `a` and `b` are equal numbers (numbers are equal when their value is equal)`
 -   `` `a` and `b` are both `undefined`, both `null`, both `NaN`, both `true` or both `false` ``
 
 `` `0` and `-0` are different values in JavaScript, so pay attention in this special case (convert all to `+0` using the `+` unary operator before comparing, for example).``
 
 ### `Object.assign()`
 
-`` Introduced in `ES2015`, this method copies all the ****enumerable own properties**** of one or more objects into another. ``
+`Introduced in `ES2015`, this method copies all the ****enumerable own properties**** of one or more objects into another.`
 
 `Its primary use case is to create a shallow copy of an object.`
 
-```
+```plain
 const copied = Object.assign({}, original)
 ```
 
@@ -1091,7 +1091,7 @@ dog.isMammal //true
 
 ### `The spread operator`
 
-`` You can expand an array, an object or a string using the spread operator `...`  ``
+`You can expand an array, an object or a string using the spread operator `...`
 
 `Let’s start with an array example. Given`
 
@@ -1101,7 +1101,7 @@ const a = [1, 2, 3]
 
 `you can create a new array using`
 
-```
+```plain
 const b = [...a, 4, 5, 6]
 ```
 
@@ -1126,7 +1126,7 @@ const arrayized = [...hey] // ['h', 'e', 'y']
 
 `This operator has some pretty useful applications. The most important one is the ability to use an array as function argument in a very simple way:`
 
-`` (In the past you could do this using `f.apply(null, a)` but that's not as nice and readable.) ``
+`(In the past you could do this using `f.apply(null, a)`but that's not as nice and readable.)`
 
 `The ****rest element**** is useful when working with ****array destructuring****:`
 
@@ -1137,7 +1137,7 @@ const numbers = [1, 2, 3, 4, 5]
 
 `and ****spread elements****:`
 
-```
+```plain
 const numbers = [1, 2, 3, 4, 5]
 const sum = (a, b, c, d, e) => a + b + c + d + e
 const sum = sum(...numbers)
@@ -1177,7 +1177,7 @@ items //{ first: 1, second: 2, third: 3, fourth: 4, fifth: 5 }
 
 `A Set is initialized by calling:`
 
-```
+```plain
 const s = new Set()
 ```
 
@@ -1192,7 +1192,7 @@ s.add('two')
 
 `` A set only stores unique elements, so calling `s.add('one')` multiple times won't add new items. ``
 
-`` You can’t add multiple elements to a set at the same time. You need to call `add()` multiple times. ``
+`You can’t add multiple elements to a set at the same time. You need to call `add()` multiple times.`
 
 ### `Check if an item is in the set`
 
@@ -1205,9 +1205,9 @@ s.has('three') //false
 
 ### `Delete an item from a Set by key`
 
-`` Use the `delete()` method: ``
+`Use the `delete()`method:`
 
-```
+```plain
 s.delete('one')
 ```
 
@@ -1221,7 +1221,7 @@ s.size
 
 ### `Delete all items from a Set`
 
-`` Use the `clear()` method: ``
+`Use the `clear()` method:`
 
 ```
 s.clear()
@@ -1229,9 +1229,9 @@ s.clear()
 
 ### `Iterate the items in a Set`
 
-`` Use the `keys()` or `values()` methods - they are equivalent: ``
+`Use the`keys()`or`values()` methods - they are equivalent:`
 
-```
+```plain
 for (const k of s.keys()) {
   console.log(k)
 }
@@ -1305,7 +1305,7 @@ const a = [...s.values()]
 
 `Before its introduction, people generally used objects as maps, by associating some object or value to a specific key value:`
 
-```
+```plain
 const car = {}
 car['color'] = 'red'
 car.owner = 'Flavio'
@@ -1338,7 +1338,7 @@ m.set('age', 2)
 
 `` And you can get items out of a map by using `get`: ``
 
-```
+```plain
 const color = m.get('color')
 const age = m.get('age')
 ```
@@ -1353,7 +1353,7 @@ m.delete('color')
 
 ### `Delete all items from a map`
 
-`` Use the `clear()` method: ``
+`Use the `clear()` method:`
 
 ```
 m.clear()
@@ -1361,7 +1361,7 @@ m.clear()
 
 ### `Check if a map contains an item by key`
 
-`` Use the `has()` method: ``
+`Use the `has()` method:`
 
 ```
 const hasColor = m.has('color')
@@ -1379,7 +1379,7 @@ const size = m.size
 
 `You can initialize a map with a set of values:`
 
-```
+```plain
 const m = new Map([['color', 'red'], ['owner', 'Flavio'], ['age', 2]])
 ```
 
@@ -1402,7 +1402,7 @@ m.get(-0) //test
 
 ### `Iterate over map keys`
 
-`` Map offers the `keys()` method we can use to iterate on all the keys: ``
+`Map offers the `keys()` method we can use to iterate on all the keys:`
 
 ```
 for (const k of m.keys()) {
@@ -1432,7 +1432,7 @@ for (const [k, v] of m.entries()) {
 
 `which can be simplified to`
 
-```
+```plain
 for (const [k, v] of m) {
   console.log(k, v)
 }
@@ -1479,9 +1479,9 @@ const a = [...m.values()]
 
 `The code decides that it has to wait, so it lets other code “in the queue” to run, and keeps the right to resume its operations “when the thing it’s waiting for” is done.`
 
-`` All this is done with a single, simple keyword: `yield`. When a generator contains that keyword, the execution is halted. ``
+`All this is done with a single, simple keyword: `yield`. When a generator contains that keyword, the execution is halted.`
 
-`` A generator can contain many `yield` keywords, thus halting itself multiple times, and it's identified by the `_function_` _keyword, which is not to be confused with the pointer dereference operator used in lower level programming languages such as C, C++ or Go._ ``
+`A generator can contain many `yield` keywords, thus halting itself multiple times, and it's identified by the `_function_` _keyword, which is not to be confused with the pointer dereference operator used in lower level programming languages such as C, C++ or Go._`
 
 `_Generators enable whole new paradigms of programming in JavaScript, allowing:_`
 
@@ -1519,7 +1519,7 @@ calc.next()
 }
 ```
 
-`` What happens is: the code runs the function, with `input = 10` as it was passed in the generator constructor. It runs until it reaches the `yield`, and returns the content of `yield`: `input / 2 = 5`. So we got a value of 5, and the indication that the iteration is not done (the function is just paused). ``
+`What happens is: the code runs the function, with `input = 10` as it was passed in the generator constructor. It runs until it reaches the `yield`, and returns the content of`yield`: `input / 2 = 5`. So we got a value of 5, and the indication that the iteration is not done (the function is just paused).`
 
 `` In the second iteration we pass the value `7`: ``
 
@@ -1529,7 +1529,7 @@ calc.next(7)
 
 `and what we got back is:`
 
-```
+```plain
 {
   done: false
   value: 14
@@ -1538,11 +1538,11 @@ calc.next(7)
 
 `` `7` was placed as the value of `doubleThat`. Important: you might read like `input / 2` was the argument, but that's just the return value of the first iteration. We now skip that, and use the new input value, `7`, and multiply it by 2.``
 
-`` We then reach the second yield, and that returns `doubleThat`, so the returned value is `14`. ``
+`We then reach the second yield, and that returns `doubleThat`, so the returned value is `14`.`
 
 `In the next, and last, iteration, we pass in 100`
 
-```
+```plain
 calc.next(100)
 ```
 
@@ -1555,7 +1555,7 @@ calc.next(100)
 }
 ```
 
-`` As the iteration is done (no more yield keywords found) and we just return `(input * doubleThat * another)` which amounts to `10 * 14 * 100`. ``
+`As the iteration is done (no more yield keywords found) and we just return `(input * doubleThat * another)` which amounts to `10 * 14 * 100`.`
 
 ---
 
@@ -1567,9 +1567,9 @@ calc.next(100)
 
 `This feature introduces a more readable syntax for checking if an array contains an element.`
 
-`` With ES6 and lower, to check if an array contained an element you had to use `indexOf`, which checks the index in the array, and returns `-1` if the element is not there. ``
+`With ES6 and lower, to check if an array contained an element you had to use `indexOf`, which checks the index in the array, and returns `-1` if the element is not there.`
 
-`` Since `-1` is evaluated as a true value, you could ****not**** do for example ``
+`Since `-1`is evaluated as a true value, you could ****not**** do for example`
 
 ```
 if (![1,2].indexOf(3)) {
@@ -1579,7 +1579,7 @@ if (![1,2].indexOf(3)) {
 
 `With this feature introduced in ES7 we can do`
 
-```
+```plain
 if (![1,2].includes(3)) {
   console.log('Not found')
 }
@@ -1587,7 +1587,7 @@ if (![1,2].includes(3)) {
 
 # `Exponentiation Operator`
 
-`` The exponentiation operator **is the equivalent of `Math.pow()`, but brought into the language instead of being a library function.** ``
+`The exponentiation operator **is the equivalent of `Math.pow()`, but brought into the language instead of being a library function.**`
 
 ```
 Math.pow(4, 2) == 4  2
@@ -1595,7 +1595,7 @@ Math.pow(4, 2) == 4  2
 
 `This feature is a nice addition for math intensive JS applications.`
 
-`` The `**` operator is standardized across many languages including Python, Ruby, MATLAB, Lua, Perl and many others. ``
+`The`**` operator is standardized across many languages including Python, Ruby, MATLAB, Lua, Perl and many others.`
 
 `![](https://www.freecodecamp.org/news/content/images/2019/10/1_ta8eBjBIGeJucahugjlopg.png)`
 
@@ -1611,7 +1611,7 @@ Math.pow(4, 2) == 4  2
 
 `` ES2017 introduces two `String` methods: `padStart()` and `padEnd()`. ``
 
-```
+```plain
 padStart(targetLength [, padString])
 padEnd(targetLength [, padString])
 ```
@@ -1699,13 +1699,13 @@ Object.assign(person2, person1)
 
 `But this will work:`
 
-```
+```plain
 const person3 = {}Object.defineProperties(person3,  Object.getOwnPropertyDescriptors(person1))
 ```
 
 `As you can see with a simple console test:`
 
-```
+```plain
 person1.name = 'x'
 "x"
 person2.name = 'x'
@@ -1721,7 +1721,7 @@ person3.name = 'x'
 
 `This feature allows to have trailing commas in function declarations, and in functions calls:`
 
-```
+```plain
 const doSomething = (var1, var2,) => {
   //...
 }
@@ -1752,7 +1752,7 @@ doSomething('test2', 'test2',)
 
 `An async function returns a promise, like in this example:`
 
-```
+```plain
 const doSomethingAsync = () => {
   return new Promise(resolve => {
     setTimeout(() => resolve('I did something'), 3000)
@@ -1855,7 +1855,7 @@ getFirstUserData()
 
 `Async functions can be chained very easily, and the syntax is much more readable than with plain promises:`
 
-```
+```plain
 const promiseToDoSomething = () => {
   return new Promise(resolve => {
     setTimeout(() => resolve('I did something'), 10000)
@@ -1906,7 +1906,7 @@ I did something and I watched and I watched as well
 
 `ES2015 introduced the concept of a ****rest element**** when working with ****array destructuring****:`
 
-```
+```plain
 const numbers = [1, 2, 3, 4, 5]
 [first, second, ...others] = numbers
 ```
@@ -1939,7 +1939,7 @@ items //{ first: 1, second: 2, third: 3, fourth: 4, fifth: 5 }
 
 ## `Asynchronous iteration`
 
-`` The new construct `for-await-of` allows you to use an async iterable object as the loop iteration: ``
+`The new construct `for-await-of` allows you to use an async iterable object as the loop iteration:`
 
 ```
 for await (const line of readLines(filePath)) {
@@ -1947,7 +1947,7 @@ for await (const line of readLines(filePath)) {
 }
 ```
 
-`` Since this uses `await`, you can use it only inside `async` functions, like a normal `await`. ``
+`Since this uses`await`, you can use it only inside `async` functions, like a normal `await`.`
 
 ## `Promise.prototype.finally()`
 
@@ -1974,7 +1974,7 @@ fetch('file.json')
 
 `` This is a lookahead: you use `?=` to match a string that's followed by a specific substring: ``
 
-```
+```plain
 /Roger(?=Waters)/
 /Roger(?= Waters)/.test('Roger is my dog') //false
 /Roger(?= Waters)/.test('Roger is my dog and Roger Waters is a famous musician') //true
@@ -1988,7 +1988,7 @@ fetch('file.json')
 /Roger(?! Waters)/.test('Roger Waters is a famous musician') //false
 ```
 
-`` Lookaheads use the `?=` symbol. They were already available. ``
+`Lookaheads use the`?=` symbol. They were already available.`
 
 `` ****Lookbehinds****, a new feature, uses `?<=`. ``
 
@@ -2008,9 +2008,9 @@ fetch('file.json')
 
 ### `Unicode property escapes \p{…} and \P{…}`
 
-`` In a regular expression pattern you can use `\d` to match any digit, `\s` to match any character that's not a white space, `\w` to match any alphanumeric character, and so on. ``
+`In a regular expression pattern you can use`\d` to match any digit, `\s` to match any character that's not a white space, `\w` to match any alphanumeric character, and so on.`
 
-`` This new feature extends this concept to all Unicode characters introducing `\p{}` and is negation `\P{}`. ``
+`This new feature extends this concept to all Unicode characters introducing `\p{}` and is negation `\P{}`.`
 
 `` Any unicode character has a set of properties. For example `Script` determines the language family, `ASCII` is a boolean that's true for ASCII characters, and so on. You can put this property in the graph parentheses, and the regex will check for that to be true: ``
 
@@ -2022,7 +2022,7 @@ fetch('file.json')
 
 `` `ASCII_Hex_Digit` is another boolean property, that checks if the string only contains valid hexadecimal digits:``
 
-```
+```plain
 /^\p{ASCII_Hex_Digit}+$/u.test('0123456789ABCDEF') //✅
 /^\p{ASCII_Hex_Digit}+$/u.test('h')                //❌
 ```
@@ -2101,7 +2101,7 @@ const result = re.exec('2015-01-02')
 
 `` By default it only “flats” up to one level, but you can add a parameter to set the number of levels you want to flat the array to. Set it to `Infinity` to have unlimited levels: ``
 
-```
+```plain
 ['Dog', ['Sheep', ['Wolf']]].flat()
 //[ 'Dog', 'Sheep', [ 'Wolf' ] ]
 ['Dog', ['Sheep', ['Wolf']]].flat(2)
@@ -2151,7 +2151,7 @@ try {
 
 `` It returns an array containing all the object own properties, as an array of `[key, value]` pairs: ``
 
-```
+```plain
 const person = { name: 'Fred', age: 87 }
 Object.entries(person) // [['name', 'Fred'], ['age', 87]]
 ```
@@ -2173,7 +2173,7 @@ person !== newPerson //true
 
 `Return a new string with removed white space from the start of the original string`
 
-```
+```plain
 'Testing'.trimStart() //'Testing'
 ' Testing'.trimStart() //'Testing'
 ' Testing '.trimStart() //'Testing '
@@ -2204,7 +2204,7 @@ testSymbol.description // 'Test'
 
 `Before this change, the line separator (\u2028) and paragraph separator (\u2029) symbols were not allowed in strings parsed as JSON.`
 
-`` Using JSON.parse(), those characters resulted in a `SyntaxError` but now they parse correctly, as defined by the JSON standard. ``
+`Using JSON.parse(), those characters resulted in a `SyntaxError` but now they parse correctly, as defined by the JSON standard.`
 
 ### `Well-formed JSON.stringify()`
 
@@ -2212,11 +2212,11 @@ testSymbol.description // 'Test'
 
 `` Before this change calling `JSON.stringify()` would return a malformed Unicode character (a "�"). ``
 
-`` Now those surrogate code points can be safely represented as strings using `JSON.stringify()`, and transformed back into their original representation using `JSON.parse()`. ``
+`Now those surrogate code points can be safely represented as strings using `JSON.stringify()`, and transformed back into their original representation using `JSON.parse()`.`
 
 ## `Function.prototype.toString()`
 
-`` Functions have always had an instance method called `toString()` which return a string containing the function code. ``
+`Functions have always had an instance method called`toString()` which return a string containing the function code.`
 
 `ES2019 introduced a change to the return value to avoid stripping comments and other characters like whitespace, exactly representing the function as it was defined.`
 

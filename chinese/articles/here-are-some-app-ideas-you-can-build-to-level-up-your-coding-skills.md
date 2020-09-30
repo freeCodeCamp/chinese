@@ -123,7 +123,7 @@ You must only use native HTML, CSS, and Javascript to implement this app. Image 
 
 **Description**: Practice and test your knowledge by answering questions in a quiz application.
 
-As a developer, you can create a quiz application for testing coding skills of other developers. (HTML, CSS, JavaScript, Python, PHP, etc…)
+As a developer, you can create a quiz application for testing coding skills of other developers. (HTML, CSS, JavaScript, Python, PHP, etc……)
 
 #### User Stories
 
@@ -583,19 +583,19 @@ You can contribute in two ways:
 
 You can also add your own examples to the projects after you have completed them. I highly encourage you to do this as it will show others what amazing things you have built! ?
 
-### Spread the word!
+### Spread the word
 
 If the information from this article and from the repo was useful to you in any way, make sure you give it a star ?, this way others can find it and benefit too! Together we can grow and make our community better!
 
 Do you have any suggestions on how we could improve this project overall? Let us know! We’d love to hear your feedback!
 
-#### Main Contributors ??
+#### Main Contributors 
 
 **Florin Pop**: [Twitter][47] and [website][48].
 
 **Jim Medlock**: [Twitter][49] and [Medium][50]
 
-### **Weekly Coding Challenge ?**
+### **Weekly Coding Challenge**
 
 As a bonus, there’s a Weekly Coding Challenge where you can learn more by practicing your skills on real-world projects. Read [The Complete Guide][51] to find out how you can participate! ?
 

@@ -27,7 +27,7 @@ As much as we might all [want to be][10], we’re not all full stack developers.
 
 And some people are the opposite, where they are strongest dealing with building APIs in the back end of an application and while they can build out a UI, it might be more of a prototype-like experience than a fleshed out application.
 
-## So what is the difference between Front End Development and Back End Development?
+## So what is the difference between Front End Development and Back End Development
 
 Even if you are a full stack developer, that doesn’t mean there’s not a division of responsibilities.
 
@@ -37,11 +37,11 @@ Front End Engineer vs Back End Engineer
 
 So what do those look like?
 
-## What is Front End Development?
+## What is Front End Development
 
 The front end of an application typically refers to the layer that represents the UI (user interface). This can include anything from a static site with HTML and CSS to a full [React][11] app that powers the UI.
 
-### What did Front End Development traditionally look like?
+### What did Front End Development traditionally look like
 
 Javascript currently rules the front end web, but that wasn’t always the case. While it could have been used to add little bits of interaction to a site, typically front ends were rendered using server-side templating languages like framework-driven [PHP][12] and [Template Toolkit][13] ([Perl][14]).
 
@@ -58,7 +58,7 @@ Some of the more traditional front end tools include:
 
 But as time went on, javascript kept getting more mature as a language and browsers kept getting more powerful, which led to the idea that we could move more of that work to the browser to build faster and more interactive experiences.
 
-### What does Front End Development look like now?
+### What does Front End Development look like now
 
 Now it’s common to see javascript-heavy websites and apps built using UI frameworks like [React][21], [Vue][22], and [Angular][23]. These tools provide abstractions that allow developers to build complex UIs with reusable patterns like components.
 
@@ -80,11 +80,11 @@ Some of the front end tools that are more common and growing in popularity inclu
 
 But those APIs, whether ones we pay for or create ourselves, need to be built _somewhere_. That’s where the back end comes in.
 
-## What is Back End Development?
+## What is Back End Development
 
 The back end layer is usually where the business logic occurs. This can be super complex like the rules that determine revenue for an e-commerce company or something more common like a user profile.
 
-### What did Back End Development traditionally look like?
+### What did Back End Development traditionally look like
 
 The back ends of applications were historically built using server-side languages like [PHP][30] or [Ruby][31]. The idea is that you have a server that you need to perform complex operations on, so the way to do that is with a language that server would understand.
 
@@ -102,7 +102,7 @@ Some of the more traditional back end tools include:
 -   Server side languages like [PHP][35] or [Perl][36]
 -   Application frameworks like [Ruby on Rails][37]
 
-### What does Back End Development look like now?
+### What does Back End Development look like now
 
 Back end stacks look somewhat similar to the way they did before, aside from newer code patterns, except more often you’ll see the back ends provide data through APIs via HTTP requests instead of directly to the templates the front end team are working on.
 

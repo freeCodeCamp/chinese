@@ -19,7 +19,7 @@
 
 在开始之前，我们需要做些准备工作。
 
-1. 确保你的当你安装了 Node.js 和 npm。可以通过 [ Node.js Source](https://nodejs.org/en/download/) 或者 [NVM (Node Version Manager)](https://github.com/creationix/nvm) 来安装，我推荐安装最新版或者目前稳定版。
+1. 确保你的当你安装了 Node.js 和 npm。可以通过 [Node.js Source](https://nodejs.org/en/download/) 或者 [NVM (Node Version Manager)](https://github.com/creationix/nvm) 来安装，我推荐安装最新版或者目前稳定版。
 2. 接下来，我们需要安装 Express Generator cli，它可以快速帮我们生成 Express 应用骨架，在命令行工具中输入：
 
 ```bash
@@ -77,11 +77,11 @@ npm install
 
 -   `bin/www.js` 文件：
 
-```
+```plain
 // bin/www.js
 ```
 
-```
+```plain
 /** * Module dependencies. */
 ```
 
@@ -95,7 +95,7 @@ import http from 'http';
 const debug = debugLib('your-project-name:server');
 ```
 
-```
+```plain
 // generated code below.
 ```
 
@@ -103,7 +103,7 @@ const debug = debugLib('your-project-name:server');
 
 -   `routes/index.js` 文件：
 
-```
+```plain
 // routes/index.js
 ```
 
@@ -125,7 +125,7 @@ export default router;
 
 -   `app.js` 文件：
 
-```
+```plain
 // app.js
 ```
 
@@ -168,7 +168,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 其次，我们删除了 `routes/users.js` 文件，所以还需要在 `app.js`中移除以下代码
 
-```
+```plain
 // remove these lines
 ```
 

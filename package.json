@@ -12,39 +12,20 @@
     },
     "devDependencies": {
         "husky": "^4.3.0",
+        "lint-md-cli": "^0.1.2",
         "lint-staged": "^10.4.0",
-        "prettier": "^2.1.2",
-        "remark-cli": "^8.0.1",
-        "remark-preset-lint-recommended": "^4.0.1",
-        "zhlint": "^0.2.2"
+        "prettier": "^2.1.2"
     },
     "prettier": {
         "singleQuote": true,
         "tabWidth": 4
     },
-    "remarkConfig": {
-        "plugins": [
-            "remark-preset-lint-recommended",
-            [
-                "remark-lint-no-literal-urls",
-                false
-            ],
-            [
-                "remark-lint-no-shortcut-reference-link",
-                false
-            ],
-            [
-                "remark-lint-list-item-indent",
-                false
-            ]
-        ]
-    },
     "lint-staged": {
-        "*.{md,json,yml}": "prettier --write",
-        "chinese/**/*.md": "zhlint --fix"
+        "*.{json,yml}": "prettier --write",
+        "*.md": "lint-md --fix"
     },
     "scripts": {
-        "lint": "remark !(node_modules)/**/*.md",
+        "lint": "lint-md chinese/**/*.md",
         "test": "lint-staged"
     },
     "husky": {

@@ -197,7 +197,7 @@ On the bright side, if you read the documentation a little longer, you’ll find
 
 It reads:
 
-> It helps you write applications that behave consistently…
+> It helps you write applications that behave consistently……
 
 You see that?
 
@@ -482,7 +482,7 @@ Have a good look at the `state` object.
 
 There’s just one field, `tech`, in the `state` object and it is passed down as `prop` into the `HelloWorld` component as shown below:
 
-```
+```plain
 <HelloWorld tech={this.state.tech}/>
 ```
 
@@ -1068,7 +1068,7 @@ The GIF!
 
 Here’s how this is different from the previous example. In this scenario, the user is performing certain actions that influence the state of the application. In the former example, all we did was display the initial state of the app with no user actions taken into consideration.
 
-### What is a Redux Action?
+### What is a Redux Action
 
 When you walk into a bank, the Cashier receives your action, that is, your intent for coming into the bank. In our previous example, it was `WITHDRAWAL_MONEY` . The only way money leaves the bank Vault is if you make your action or intent known to the Cashier.
 
@@ -1553,7 +1553,7 @@ Also, the `tech` of the button is grabbed from the dataset of the button. You se
 
 Now we’re dispatching the right actions. Can we tell if this works as expected now?
 
-### Actions Dispatched. Does this Thing Work?
+### Actions Dispatched. Does this Thing Work
 
 Firstly, here’s a short quiz question. Upon clicking a `button` and consequently dispatching an action, what happens next within Redux? Which of the Redux actors come into play?
 
@@ -2795,7 +2795,7 @@ Then involve the render function to have the App render correctly.
 render();
 ```
 
-Now, import the `store` you created earlier …
+Now, import the `store` you created earlier ……
 
 ```js
 import store from './store';
@@ -2841,7 +2841,7 @@ The first line, `console.log("%c Rendered with ? ??", "background: purple; color
 
 Enough talking. Here’s the complete code:
 
-`` `**index.js**` ``
+`**index.js**`
 
 ```js
 import ReactDOM from 'react-dom';
@@ -3052,7 +3052,7 @@ _If you’re coding along, resize the browser to see the beautiful view on mobil
 
 _Hang In there!_
 
-### _Got questions?_
+### _Got questions_
 
 _It’s perfectly normal to have questions._
 
@@ -4600,7 +4600,7 @@ In `MessageInput.js`, add a `handleSubmit` event handler as shown below:
 ...
 ```
 
-Think about it for a minute. To update the list of messages in the conversation…we need to dispatch an action!
+Think about it for a minute. To update the list of messages in the conversation……we need to dispatch an action!
 
 This action needs to take the `value` in the input box, and add it to the messages of the active user.
 
@@ -4671,7 +4671,7 @@ Let’s fix that next.
 
 Here’s a list of all the reducers we’ve got at this point:
 
-```
+```plain
 activeUserId.js
 contacts.js
 messages.js
@@ -5068,7 +5068,7 @@ Include the delete message functionality shown here.
 
 Those should be fun to implement!
 
-### Chapter 5: What Next?
+### Chapter 5: What Next
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*6cQLUZREZeokTDCuYJxxPg.png)
 

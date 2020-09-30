@@ -23,15 +23,15 @@ Web frameworks that are based on Python like **Django** and **Flask** have recen
 
 These web frameworks help you create server-side code (backend code) in Python. That’s the code that runs on your server, as opposed to on users’ devices and browsers (front-end code). If you’re not familiar with the difference between backend code and front-end code, please see my footnote below.
 
-#### **But wait, why do I need a web framework?**
+#### **But wait, why do I need a web framework**
 
 That’s because a web framework makes it easier to build common backend logic. This includes mapping different URLs to chunks of Python code, dealing with databases, and generating HTML files users see on their browsers.
 
-#### **Which Python web framework should I use?**
+#### **Which Python web framework should I use**
 
 Django and Flask are two of the most popular Python web frameworks. I’d recommend using one of them if you’re just getting started.
 
-#### **What’s the difference between Django and Flask?**
+#### **What’s the difference between Django and Flask**
 
 There’s an [excellent article][1] about this topic by Gareth Dwyer, so let me quote it here:
 
@@ -61,7 +61,7 @@ Okay, let’s go to the next topic!
 
 ### **Data Science — including machine learning, data analysis, and data visualization**
 
-#### **First of all, let’s review what machine learning _is_.**
+#### **First of all, let’s review what machine learning _is_**
 
 I think the best way to explain what machine learning is would be to give you a simple example.
 
@@ -127,7 +127,7 @@ Two of the most popular ones are **scikit-learn** and **TensorFlow**.
 
 If you’re just getting started with a machine learning project, I would recommend that you first start with scikit-learn. If you start running into efficiency issues, then I would start looking into TensorFlow.
 
-#### **How should I learn machine learning?**
+#### **How should I learn machine learning**
 
 To learn machine learning fundamentals, I would recommend either [Stanford’s][5] or [Caltech’s][6] machine learning course.
 
@@ -135,7 +135,7 @@ Please note that you need basic knowledge of calculus and linear algebra to unde
 
 Then, I would practice what you’ve learned from one of those courses with [Kaggle][7]. It’s a website where people compete to build the best machine learning algorithm for a given problem. They have nice tutorials for beginners, too.
 
-### **What about data analysis and data visualization?**
+### **What about data analysis and data visualization**
 
 To help you understand what these might look like, let me give you a simple example here.
 
@@ -200,7 +200,7 @@ After learning the fundamentals of data analysis and visualization, learning fun
 
 ### **Scripting**
 
-#### **What is scripting?**
+#### **What is scripting**
 
 Scripting usually refers to writing small programs that are designed to automate simple tasks.
 
@@ -214,17 +214,17 @@ We could have done it manually, but instead, I wrote a simple program / simple s
 
 Actually, we used Ruby for this back then, but Python is also a good language for this kind of task. Python is suited for this type of task mainly because it has relatively simple syntax and is easy to write. It’s also quick to write something small with it and test it.
 
-### **What about embedded applications?**
+### **What about embedded applications**
 
 I’m not an expert on embedded applications, but I know that Python works with Rasberry Pi. It seems like a popular application among hardware hobbyists.
 
-### **What about gaming?**
+### **What about gaming**
 
 You could use the library called PyGame to develop games, but it’s not the most popular gaming engine out there. You could use it to build a hobby project, but I personally wouldn’t choose it if you’re serious about game development.
 
 Rather, I would recommend getting started with Unity with C#, which is one of the most popular gaming engines. It allows you to build a game for many platforms, including Mac, Windows, iOS, and Android.
 
-### **What about desktop applications?**
+### **What about desktop applications**
 
 You could make one with Python using Tkinter, but it doesn’t seem like the most popular choice either.
 
@@ -238,11 +238,11 @@ Personally, if I was building a desktop application, I would go with a JavaScrip
 
 However, I’m not an expert on desktop applications either, so please let me know in a comment if you disagree or agree with me on this.
 
-### **Python 3 or Python 2?**
+### **Python 3 or Python 2**
 
 I would recommend Python 3 since it’s more modern and it’s a more popular option at this point.
 
-### **Footnote: A note about back-end code vs front-end code (just in case you are not familiar with the terms):**
+### **Footnote: A note about back-end code vs front-end code (just in case you are not familiar with the terms)**
 
 Let’s say you want to make something like Instagram.
 
@@ -268,13 +268,13 @@ So, this is the difference between backend code and front-end code.
 
 By the way, Python is not the only good choice for writing backend / server-side code. There are many other popular choices, including Node.js, which is based on JavaScript.
 
-### Liked this article? Then, you might also like my YouTube channel.
+### Liked this article? Then, you might also like my YouTube channel
 
 I have a programming education YouTube channel called [CS Dojo][13] with 440,000+ subscribers, where I produce more content like this article.
 
 For example, you might like these videos:
 
-#### Anyway, thanks a lot for reading my article!
+#### Anyway, thanks a lot for reading my article
 
 [1]: https://www.codementor.io/garethdwyer/flask-vs-django-why-flask-might-be-better-4xs7mdf8v
 [2]: https://stackoverflow.com/questions/1279613/what-is-an-orm-and-where-can-i-learn-more-about-it

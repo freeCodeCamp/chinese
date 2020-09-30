@@ -11,7 +11,7 @@
 
 但是，和图中效果相比较始终还是有点细微差别。在我的接下来的解决方案中，很好地利用了 React Hooks。
 
-## 我们将要做什么？
+## 我们将要做什么
 
 -   开始构建一个基本的项目骨架
 -   为元素的消失添加动画效果，解决一些小问题
@@ -27,7 +27,7 @@
 
 实现代码很简单，效果也很无趣。当用户点击眼睛图标时，我们改变卡片的 `display` 属性。
 
-```
+```plain
 function Box({ word }) {
   const color = colors[Math.floor(Math.random() * 9)];
   const [visible, setVisible] = useState(true);
@@ -72,7 +72,7 @@ npm install --save react-animated-css
 
 在上面的 `Box` 组件中，将渲染结果改为
 
-```
+```plain
 return (
   <Animated animationIn="zoomIn" animationOut="zoomOut" isVisible={visible}>
     <div className="box" style={style}>
@@ -93,7 +93,7 @@ animate.css 会为 `opacity` 和其他 css 属性添加动画；但不能在 `di
 
 所以我们可以添加以下代码。
 
-```
+```plain
 function Box({ word }) {
   const color = colors[Math.floor(Math.random() * 9)];
   const [visible, setVisible] = useState(true);
@@ -139,7 +139,7 @@ function Box({ word }) {
 
 我们可以创建一个传统的 React 类组件来管理和动画相关的状态：切换隐藏/显示，设置 `display` 属性的超时时间
 
-```
+```plain
 class AnimatedVisibility extends Component {
   constructor(props) {
     super(props);
@@ -170,7 +170,7 @@ class AnimatedVisibility extends Component {
 
 然后使用它
 
-```
+```plain
 function Box({ word }) {
   const color = colors[Math.floor(Math.random() * 9)];
   const [visible, setVisible] = useState(true);
@@ -202,7 +202,7 @@ function Box({ word }) {
 
 [useEffect](https://reactjs.org/docs/hooks-effect.html) 钩子为 `componentWillReceiveProps` 的使用提供了一种优雅的替代方案。它的代码更简洁，我们还可以使用函数式组件。
 
-```
+```plain
 function AnimatedVisibility({ visible, children }) {
   const [noDisplay, setNoDisplay] = useState(!visible);
   useEffect(() => {
@@ -234,7 +234,7 @@ function AnimatedVisibility({ visible, children }) {
 
 大家都喜欢 Sidebar 和 Navbar，我们来添加一个吧。
 
-```
+```plain
 function ToggleButton({ label, isOpen, onClick }) {
   const icon = isOpen ? (
     <i className="fas fa-toggle-off fa-lg" />
@@ -319,7 +319,7 @@ function App() {
 }
 ```
 
-## 还没结束...
+## 还没结束
 
 到这里我们就可以停下了，但就像我之前提到的关注点分离，我更倾向于避免在 `Box`、`Sidebar` 和 `Navbar` 的 render 方法中混合 `AnimatedVisibility` 组件（代码有点重复）。
 
@@ -377,7 +377,7 @@ export default AnimatedVisibility
 
 然后在 App.js 中使用这些基于函数式的 HOCs
 
-```
+```plain
 function Navbar() {
   return (
     <nav className="bar nav">
@@ -435,7 +435,7 @@ function App() {
 }
 ```
 
-## 接下来呢？
+## 接下来呢
 
 对于简单的动画，可以使用我所提到的方法。如果比较复杂，我会使用像 [react-motion](https://github.com/chenglou/react-motion) 这样的库。
 

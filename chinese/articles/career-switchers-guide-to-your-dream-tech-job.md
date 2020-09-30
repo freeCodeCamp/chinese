@@ -284,7 +284,7 @@ The measuring stick is simply a coding test, NOT how well you talk, NOT how expe
 
 Personally, I don’t quite agree that this is the best way to find the best engineers. For example, I've worked with many very experienced software engineers. Some are expert GUI/app developers, some are C++ experts, others are low-level Linux gurus, but many of them tell me that they would fail miserably in a timed Algorithms and Data Structures (A&DS) coding test.
 
-But since this is the only game in town, in order to break into the tech industry, \***\*you have to “Crack the Coding Interview”\*\***…
+But since this is the only game in town, in order to break into the tech industry, \***\*you have to “Crack the Coding Interview”\*\***……
 
 ![](https://miro.medium.com/max/940/0*ZPXWlO_1OlBQa5fw.jpg)
 
@@ -419,7 +419,7 @@ For example, when I was at the Facebook interview, I was asked how to design a s
 
 Interviewer: “So how many servers do you think you need?”
 
-Me: “Well, this depends on how many people are using it and how beefy the servers are…”
+Me: “Well, this depends on how many people are using it and how beefy the servers are……”
 
 Interviewer: “Why do you need to know how beefy the servers are?”
 
@@ -601,7 +601,7 @@ But for early-stage startup companies, you can not find reliable data points on 
 
 In reality, these equity components are hard to evaluate, are extremely non-liquid with no monetary value for years to come, and indeed go to zero value when [90% of all startups fail][43]. (source: Forbes).
 
-I received a few offers from early-stage startup companies. The typical package is light on cash (i.e. low base salary and bonus) and heavy on equity (lots of options with a huge potential payout… or nothing). This makes sense, as most early-stage startups do not make a profit, and any cash salary/bonus they pay out depletes their cash on hand or, in Venture Capital (VC) speak, burns up their runway.
+I received a few offers from early-stage startup companies. The typical package is light on cash (i.e. low base salary and bonus) and heavy on equity (lots of options with a huge potential payout…… or nothing). This makes sense, as most early-stage startups do not make a profit, and any cash salary/bonus they pay out depletes their cash on hand or, in Venture Capital (VC) speak, burns up their runway.
 
 Even though the startups I received offers from do really exciting work and the prospects look very promising — one had Google Ventures as a backer — I ended up choosing Google because I need the certainty and stability of a large company. After all, I'll have a college-bound kid soon. I can’t afford to join a startup for a few years only to see it fail and have my equity component wiped out.
 

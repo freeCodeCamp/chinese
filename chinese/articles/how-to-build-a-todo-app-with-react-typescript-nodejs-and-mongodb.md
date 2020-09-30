@@ -46,7 +46,7 @@ _就让我们一探究竟吧。_
 
 然后，按照以下目录构建项目:
 
-```
+```plain
 ├── dist
 ├── node_modules
 ├── src
@@ -194,7 +194,7 @@ const todoSchema: Schema = new Schema(
 export default model<ITodo>('Todo', todoSchema);
 ```
 
-如你所见，我们首先导入 `ITodo ` 接口和 一些 `mongoose` 导出的模块，后者是帮助定义 Todo schema 和在导出前把 ITodo 作为类型参数传入 `model` 。
+如你所见，我们首先导入 `ITodo` 接口和 一些 `mongoose` 导出的模块，后者是帮助定义 Todo schema 和在导出前把 ITodo 作为类型参数传入 `model` 。
 
 这样，我们现在就可以在其他文件中使用 Todo 模型来与数据库交互。
 
@@ -416,7 +416,7 @@ mongoose
 
 安装完成后，按照以下目录构建项目：
 
-```
+```plain
 ├── node_modules
 ├── public
 ├── src

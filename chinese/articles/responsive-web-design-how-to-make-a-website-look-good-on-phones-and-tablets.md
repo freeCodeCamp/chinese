@@ -74,7 +74,7 @@ The code above is a simple example, but what it's actually doing is pretty inter
 
 Although media queries are essential for responsive web design, many other new CSS features are also becoming widely adopted and supported in browsers. Flexbox is one of these new, important CSS feature in terms of responsive web design.
 
-## What is Flexbox?
+## What is Flexbox
 
 You might be wondering - "what does Flexbox do"? The better question is - "what can't Flexbox do"? What's the easiest way to vertically center with CSS? Flexbox. How do you create a responsive grid layout? Flexbox. How can we achieve global peace? Flexbox.
 
@@ -148,7 +148,7 @@ Example horizontal scroll menu
 How'd you do that!? Let's take a deeper dive.
 
 -   `overflow-y: scroll` is the key ingredient of this recipe. By specifying it child elements will overflow the horizontal axis with scrolling behavior.
--   Not so fast! Although you may think `` `overflow-y` `` would be enough, we have to also tell the browser not to wrap the child elements with `white-space: nowrap` 🤷
+-   Not so fast! Although you may think `overflow-y` would be enough, we have to also tell the browser not to wrap the child elements with `white-space: nowrap` 🤷
 
 Now that we have a few RWD layout techniques up our sleeve, let's take a look at elements that pose challenges specific to their visual nature - images and video.
 

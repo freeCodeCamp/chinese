@@ -16,7 +16,7 @@ The article is split into 4 sections:
 -   **How** to write it
 -   The **process** around it
 
-### Why write a design document?
+### Why write a design document
 
 A design doc — also known as a technical spec — is a description of how you plan to solve a problem.
 
@@ -34,7 +34,7 @@ Great! If you are still reading, you believe in the importance of design docs. H
 
 Photo by [Todd Quackenbush][2] on [Unsplash][3]
 
-### What to include in a design doc?
+### What to include in a design doc
 
 A design doc describes the solution to a problem. Since the nature of each problem is different, naturally you’d want to structure your design doc differently.
 
@@ -130,7 +130,7 @@ Don’t try to write like the academic papers you’ve read. They are written to
 -   Simple words
 -   Short sentences
 -   Bulleted lists and/or numbered lists
--   Concrete examples, like “User Alice connects her bank account, then …”
+-   Concrete examples, like “User Alice connects her bank account, then ……”
 
 #### **Add lots of charts and diagrams**
 
@@ -146,9 +146,9 @@ The scale of the problem often determines the solution. To help reviewers get a 
 
 A spec is not an academic paper. Also, people like reading funny things, so this is a good way to keep the reader engaged. Don’t overdo this to the point of taking away from the core idea though.
 
-If you, like me, have trouble being funny, [Joel Spolsky][7] (_obviously_ known for his comedic talents…) has this tip:
+If you, like me, have trouble being funny, [Joel Spolsky][7] (_obviously_ known for his comedic talents……) has this tip:
 
-> One of the easiest ways to be funny is to be _specific_ when it’s not called for \[… Example:\] Instead of saying “special interests,” say “left-handed avacado farmers.”
+> One of the easiest ways to be funny is to be _specific_ when it’s not called for \[…… Example:\] Instead of saying “special interests,” say “left-handed avacado farmers.”
 
 #### Do the **Skeptic Test**
 

@@ -278,7 +278,7 @@ I grappled with the decision for days, wavering between Google and Lyft, but gra
 
 Six months later, I couldn’t be happier working at Lyft. And to my delight, my morning reflection was dead on. My team is supportive, my work fascinating, and my compensation strong, but the priceless reward of becoming an engineer was falling in love with learning. Now that I’m in love, I don’t intend to leave it.
 
-## [In search of software engineering roles?][27]
+## [In search of software engineering roles][27]
 
 I've curated the list of top resources I used to prep for interviews. I'm also offering coaching sessions to job seekers that commit 10% or more of their future income to high impact charities. **Get access to both [here][28].**
 

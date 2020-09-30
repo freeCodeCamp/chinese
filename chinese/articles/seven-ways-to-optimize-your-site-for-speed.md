@@ -92,7 +92,7 @@ _Lighthouse._
 
 我们来看看静态网站如何实现这一点：
 
-### 静态网站生成器如何工作？
+### 静态网站生成器如何工作
 
 静态网站生成器包含一系列模板和样式。它们可以组合在一起，生成不同的内容。
 
@@ -200,7 +200,7 @@ Javascript 和 CSS 文件的位置也会影响性能。比如，我通常将 jav
     <script src="lazysizes.min.js" async=""></script>
     ```
 
-    （如果你使用 Hugo，也可以像我**嵌入 JavaScript 和 CSS ** 那样将 `lazysizes` 直接嵌入 HTML ）
+    （如果你使用 Hugo，也可以像我**嵌入 JavaScript 和 CSS** 那样将 `lazysizes` 直接嵌入 HTML ）
 
 2. 给所有你想要延迟加载的内容加上 `lazyload` 类名
 

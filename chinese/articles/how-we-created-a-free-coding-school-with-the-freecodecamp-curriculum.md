@@ -146,7 +146,7 @@ If they simply do not show up or communicate with us, then they are free to reap
 
 Without volunteers, it would be quite overwhelming to run a program like this. Here are some of the different types of volunteers you will need to be successful.
 
-### Responsibilities:
+### Responsibilities
 
 1.  **Organizers –** Yes, we are volunteers too. We are fortunate to have an amazing team of organizers who run the program. This includes myself, two other developers, and a computer lab supervisor from the library who also knows how to code. We chat several times per week in Discord to make sure the program is running smoothly and students are progressing. I think 3-5 is a pretty good number for an organizing team, but we might add more to do specific things, such as 'community manager' or 'volunteer coordinator.'
 2.  **Presenters –** These people give lectures during class times or special help sessions held on weekends usually. This is the hardest type of volunteering to manage. In our program, the lectures are 1.5-2 hours long and there are only 24 of them, so every single one has to be on point and flow with the rest of the curriculum. Some well-meaning volunteers might not be the right fit for giving lectures for people who are brand new to development. It is **very** important to be clear about what you want them to cover in the lecture, down to the individual points and expected learning outcomes. We also made sure to give volunteers a boilerplate slide deck to work off of so it matched the rest of the curriculum.

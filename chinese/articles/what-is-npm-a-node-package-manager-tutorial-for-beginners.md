@@ -1,6 +1,6 @@
 > * 原文地址：[What is npm? A Node Package Manager Tutorial for Beginners 写给初学者的编程教程：什么是 npm？](https://www.freecodecamp.org/news/what-is-npm-a-node-package-manager-tutorial-for-beginners/)
 > * 原文作者：Stanley Nguyen
-> * 译者：
+> * 译者：@nsuedu
 > * 校对者：
 
 ![What is npm? A Node Package Manager Tutorial for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2020/06/cover-4.png)

@@ -18,7 +18,7 @@
 -   响应式网页设计中适应手机和平板电脑的有效技术
 -   帮助模拟和监控手机和平板电脑用户体验的工具
 
-## What is Responsive Web Design? (RWD)
+## 响应式网页设计是什么? (RWD)
 
 Responsive web design is an approach that focuses on a website user’s environment. The user's environment will depend on which device they have connected to the internet.
 

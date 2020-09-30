@@ -1,22 +1,22 @@
 > * 原文地址：[Responsive Web Design – How to Make a Website Look Good on Phones and Tablets 响应式网页设计入门](https://www.freecodecamp.org/news/responsive-web-design-how-to-make-a-website-look-good-on-phones-and-tablets/)
 > * 作者：Adam Henson
-> * 译者：
+> * 译者：@TechQuery
 > * 校对者：
 
-![Responsive Web Design – How to Make a Website Look Good on Phones and Tablets](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/curve-design-futuristic-lines-911738.jpg)
+![响应式网页设计 – 怎样让一个网站在手机、平板上好看](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/curve-design-futuristic-lines-911738.jpg)
 
-In the rapidly evolving landscape of connected devices, responsive web design continues to be crucial in web development.
+在联网设备快速发展的格局中, 响应式网页设计在Web开发中仍然至关重要。
 
-Not long ago the term "responsive web design" was non-existent. But today, most of us have had to adopt it to some extent.
+不久前，“响应式网页设计”一词尚不存在. 但是今天，我们大多数人不得不在某种程度上采用它。
 
-[According to Statistica][1], as of 2019, 61% of all Google search visits take place on a mobile device. In September of 2020  [Google will change its search algorithm][2]  to prioritize mobile friendly websites.
+[据统计][1], 截至 2019 年, 61% 的 Google 搜索访问来自移动设备. 在 2020 年 9 月，[Google 将改变其搜索算法][2]，让其优先展示移动端友好的网站。
 
-**In this post I'll cover the following:**
+**在这篇文章中，我将介绍以下内容:**
 
--   What is responsive web design?
--   The viewport meta tag and what it does
--   Effective techniques used in responsive web design to accommodate mobile and tablet devices
--   Tools to help simulate and monitor mobile and tablet user experience
+-   响应式网页设计是什么?
+-   视口元标签及其作用
+-   响应式网页设计中适应手机和平板电脑的有效技术
+-   帮助模拟和监控手机和平板电脑用户体验的工具
 
 ## What is Responsive Web Design? (RWD)
 

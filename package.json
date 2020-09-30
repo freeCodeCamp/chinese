@@ -21,12 +21,11 @@
         "tabWidth": 4
     },
     "lint-staged": {
-        "*.{json,yml}": [
+        "*.{md,json,yml}": [
             "prettier --write"
         ],
-        "*.md": [
-            "prettier --write",
-            "zhlint --fix"
+        "chinese/**/*.md": [
+            "zhlint"
         ]
     },
     "scripts": {

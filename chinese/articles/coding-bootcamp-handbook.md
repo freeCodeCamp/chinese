@@ -1,7 +1,7 @@
-> * 原文地址：[The Coding Bootcamp Handbook: How Do Bootcamps Work and Are They Right for You?](https://www.freecodecamp.org/news/coding-bootcamp-handbook/)
-> * 原文作者：[Quincy Larson](https://www.freecodecamp.org/news/author/quincylarson/)
-> * 译者：
-> * 校对者：
+> -   原文地址：[The Coding Bootcamp Handbook: How Do Bootcamps Work and Are They Right for You?](https://www.freecodecamp.org/news/coding-bootcamp-handbook/)
+> -   原文作者：[Quincy Larson](https://www.freecodecamp.org/news/author/quincylarson/)
+> -   译者：
+> -   校对者：
 
 ![The Coding Bootcamp Handbook: How Do Bootcamps Work and Are They Right for You?](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/If-you-dream-it--you-can-do-it--1-.png)
 
@@ -15,19 +15,19 @@ Before you spend thousands of dollars and several months of your life on a codin
 
 # For the people who think they're too busy to read this handbook...
 
-My advice to you boils down to this:  **Do your research**.
+My advice to you boils down to this: **Do your research**.
 
-**Apply for lots of developer jobs first.**  Go through some job interviews. You may be able to get a developer job without needing to attend a bootcamp.
+**Apply for lots of developer jobs first.** Go through some job interviews. You may be able to get a developer job without needing to attend a bootcamp.
 
-**Don't blindly trust bootcamps' testimonials or employment statistics.**  Use LinkedIn to reach out to their alumni directly.
+**Don't blindly trust bootcamps' testimonials or employment statistics.** Use LinkedIn to reach out to their alumni directly.
 
-**Prepare yourself.**  Make sure you have enough money. If you're ready to enroll, make sure you have enough cash to pay tuition. And make sure you have enough cash to survive during the bootcamp, and for 6 months after while you apply for jobs.
+**Prepare yourself.** Make sure you have enough money. If you're ready to enroll, make sure you have enough cash to pay tuition. And make sure you have enough cash to survive during the bootcamp, and for 6 months after while you apply for jobs.
 
-**Bootcamps aren't magic.**  Bootcamps can only help prepare you.  _You_  have to learn everything.  _You_  have to go through the developer job interview process.  _You_  have to put in the work.
+**Bootcamps aren't magic.** Bootcamps can only help prepare you. _You_ have to learn everything. _You_ have to go through the developer job interview process. _You_ have to put in the work.
 
 # A note on objectivity
 
-I've designed this handbook to be as objective as possible. To this end,  **I do not mention any bootcamps or their founders by name.**  I do not link to any of their websites.
+I've designed this handbook to be as objective as possible. To this end, **I do not mention any bootcamps or their founders by name.** I do not link to any of their websites.
 
 I didn't write this handbook to help bootcamps. I wrote this handbook to help you.
 
@@ -35,7 +35,7 @@ As the teacher who founded freeCodeCamp, I am in a unique position to write abou
 
 1.  A lot of bootcamps use freeCodeCamp for their curriculum and course prepwork. I've helped coach a lot of bootcamp founders on how to prepare people for developer careers.
 2.  I learned to code in San Francisco in the early 2010's, when bootcamps first came onto the scene. I didn't attend a bootcamp, but I hung out with many bootcamp founders and attended student "demo days."
-3.  Over the past 3 years, I've conducted significant primary research. I've published  [several datasets][1]  containing responses from thousands of bootcamp alumni.
+3.  Over the past 3 years, I've conducted significant primary research. I've published [several datasets][1] containing responses from thousands of bootcamp alumni.
 
 freeCodeCamp's mission is to help as many people learn to code as possible. Bootcamps help a lot of people accomplish this. So they are helping freeCodeCamp in our mission.
 
@@ -194,8 +194,8 @@ But regardless of your skills, finding a developer job is inherently difficult. 
 
 It is not uncommon for graduates of even selective bootcamps to have to apply to hundreds of developer jobs (and interview at dozens of companies) before getting a satisfactory job offer.
 
-> "Sometimes people put in all the work, and are talented, but just don’t get lucky for a long time. Other times, many people spam click job applications on angel list and other job boards. This rarely works.  
->   
+> "Sometimes people put in all the work, and are talented, but just don’t get lucky for a long time. Other times, many people spam click job applications on angel list and other job boards. This rarely works.
+>
 > The best thing (by far) to do is make industry connections and meet real people. And then ask other developers for help, on preparing, on seeking jobs, and on referrals. Internal referrals are generally the best bet." - another former bootcamp manager I talked to while researching this handbook
 
 So in many cases, when people fail to transition into tech, it's not really the bootcamp's fault. Some people just underestimate how arduous the job search process can be and give up before they find success.
@@ -337,21 +337,21 @@ Some bootcamps don't require you to pay tuition up-front. Instead, they garnish 
 
 Basically, you sign a contract with these bootcamps. These bootcamps then work closely with the US Internal Revenue Service. They figure out exactly how much money you make, then garnish a percentage of your pre-tax income (usually 17%) for a number of years (usually 2 years).
 
-If your first job out of a bootcamp pays $50,000 per year, that means you would pay:
+If your first job out of a bootcamp pays \$50,000 per year, that means you would pay:
 
 ```
 ($50,000 * 17% = $8,500) * 2 years = $17,000 total
 
 ```
 
-If you made $80,000 per year:
+If you made \$80,000 per year:
 
 ```
 ($80,000 * 17% = $13,600) * 2 years = $27,400 total
 
 ```
 
-If you made $100,000 per year:
+If you made \$100,000 per year:
 
 ```
 ($100,000 * 17% = $17,000) * 2 years = $34,000 total
@@ -366,7 +366,7 @@ ISAs are a new form of "financial engineering". They seem to be legal, but none 
 
 It's also unclear what happens if you take out an ISA, and then the bootcamp goes bankrupt. (This happens often - even to big bootcamp chains). You would have no control over who gains ownership over your debt. It's unclear how aggressively they could pursue you to pay them back.
 
-So again,  **do your research**.
+So again, **do your research**.
 
 ## How much are living expenses during a bootcamp?
 
@@ -382,7 +382,7 @@ Opportunity Cost is a concept from economics that roughly means "foregone earnin
 
 To get the true cost of attending a coding bootcamp, you should factor in opportunity cost as well.
 
-**Example**: You currently earn $3,000 per month. You're moving to San Francisco, where it can cost $2,000 per month just to rent a bedroom. You'll attend a 12-week bootcamp that costs $15,000.
+**Example**: You currently earn $3,000 per month. You're moving to San Francisco, where it can cost $2,000 per month just to rent a bedroom. You'll attend a 12-week bootcamp that costs \$15,000.
 
 Here is your true cost, assuming an additional 6 months until you get a job and cash your first pay check:
 
@@ -482,7 +482,7 @@ San Francisco is home to several excellent bootcamps. It also has tons of employ
 
 But San Francisco is an expensive, stressful place to live. I worked there as a developer for 4 years, and I don't plan on moving back any time soon.
 
-The important thing to remember is:  **software is still software - regardless of where you are in the world.**
+The important thing to remember is: **software is still software - regardless of where you are in the world.**
 
 You can learn a lot from most experienced developers who have worked in tech for 5 or 10 years. Almost as much as you could learn from an elite developer at a San Francisco tech company.
 
@@ -492,7 +492,7 @@ You can learn a lot from most experienced developers who have worked in tech for
 
 ![Para todo hay solucion](https://images.unsplash.com/photo-1534190239940-9ba8944ea261?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-This may sound counter-intuitive, but I'm going to come right out and say it.  **The tools don't matter.**
+This may sound counter-intuitive, but I'm going to come right out and say it. **The tools don't matter.**
 
 Some bootcamps teach Ruby and Rails or Sinatra. Despite their declining popularity, these are still good tools for new developers.
 

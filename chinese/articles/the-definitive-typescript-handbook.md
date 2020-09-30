@@ -1,8 +1,8 @@
-> * 原文地址：[The Definitive TypeScript Handbook](https://www.freecodecamp.org/news/the-definitive-typescript-handbook/)
-> * 标题：TypeScript 完全手册
-> * 作者：Gustavo Azevedo
-> * 译者：Theoda
-> * 校对者：Miya
+> -   原文地址：[The Definitive TypeScript Handbook](https://www.freecodecamp.org/news/the-definitive-typescript-handbook/)
+> -   标题：TypeScript 完全手册
+> -   作者：Gustavo Azevedo
+> -   译者：Theoda
+> -   校对者：Miya
 
 Stack Overflow 在 90,000 名开发者中开展了 [一项调查][1]，结果显示 TypeScript 是人们最想学习的工具之一。
 
@@ -10,7 +10,7 @@ Stack Overflow 在 90,000 名开发者中开展了 [一项调查][1]，结果显
 
 # **什么是 TypeScript？**
 
-TypeScript 是 JavaScript 的超集，具有静态类型特性，旨在简化大型 JavaScript 应用程序的开发，也被称为 __JavaScript that scales__（__可拓展的 JavaScript__）。
+TypeScript 是 JavaScript 的超集，具有静态类型特性，旨在简化大型 JavaScript 应用程序的开发，也被称为 **JavaScript that scales**（**可拓展的 JavaScript**）。
 
 ## **为什么要用 TypeScript？**
 
@@ -34,13 +34,13 @@ JavaScript 在过去几年中快速发展，成为客户端和服务器端最通
 
 ## **TypeScript 的缺点**
 
-1. 需要额外的学习：__需要在短期放缓进度与长期提高效率间进行权衡。__
+1. 需要额外的学习：**需要在短期放缓进度与长期提高效率间进行权衡。**
 2. 类型错误可能多种多样。
 3. 配置极大地影响运行。
 
 # **类型**
 
-## **Boolean (布尔值)** 
+## **Boolean (布尔值)**
 
 ```typescript
 const isLoading: boolean = false;
@@ -56,7 +56,7 @@ const binary: number = 0b110;
 ## **String (字符串)**
 
 ```typescript
-const fruit: string = "orange";
+const fruit: string = 'orange';
 ```
 
 ## **Array (数组)**
@@ -76,7 +76,7 @@ Tuple 类型表示一种组织好的数组，元素的类型预先知道，并�
 
 ```typescript
 let contact: [string, number] = ['John', 954683];
-contact = ['Ana', 842903, 'extra argument']  /* Error! 
+contact = ['Ana', 842903, 'extra argument']; /* Error! 
 Type '[string, number, string]' is not assignable to type '[string, number]'. */
 ```
 
@@ -98,7 +98,7 @@ variable.someRandomMethod(); /* 行吧，
 
 ```typescript
 function sayMyName(name: string): void {
-  console.log(name);
+    console.log(name);
 }
 sayMyName('Heisenberg');
 ```
@@ -110,20 +110,20 @@ sayMyName('Heisenberg');
 ```typescript
 // 抛出异常
 function error(message: string): never {
-  throw new Error(message);
+    throw new Error(message);
 }
 
 // 永远不能返回
 function continuousProcess(): never {
-  while (true) {
-      // ...
-  }
+    while (true) {
+        // ...
+    }
 }
 ```
 
 ## **Null 和 Undefined**
 
-`undefined` 和 `null` 两者各自有自己的类型分别叫做 `undefined` 和 `null`。和 `void` 相似，它们的本身的类型用处不是很大，但是在联合类型中非常有用 __（稍后介绍）__。 
+`undefined` 和 `null` 两者各自有自己的类型分别叫做 `undefined` 和 `null`。和 `void` 相似，它们的本身的类型用处不是很大，但是在联合类型中非常有用 **（稍后介绍）**。
 
 ```typescript
 type someProp = string | null | undefined;
@@ -134,10 +134,10 @@ type someProp = string | null | undefined;
 TypeScript 3.0 引入了 unknown (未知) 类型，它是与 `any` 类型对应的安全类型。任何东西都可以赋值给 `unknown`，但 `unknown` 不能赋值给除了它本身和 `any` 以外的任何东西。在没有先断言或指定到更具体类型的情况下，不允许对 `unknown` 进行任何操作。
 
 ```typescript
-type I1 = unknown & null;    // null
-type I2 = unknown & string;  // string
-type U1 = unknown | null;    // unknown
-type U2 = unknown | string;  // unknown
+type I1 = unknown & null; // null
+type I2 = unknown & string; // string
+type U1 = unknown | null; // unknown
+type U2 = unknown | string; // unknown
 ```
 
 ## **类型别名**
@@ -162,11 +162,11 @@ type Password = string | number;
 
 ```typescript
 interface Person {
-  name: string;
-  age: number;
+    name: string;
+    age: number;
 }
 interface Worker {
-  companyId: string;
+    companyId: string;
 }
 type Employee = Person & Worker;
 ```
@@ -175,34 +175,34 @@ type Employee = Person & Worker;
 
 接口好似你和编译器定义契约，由你指定一个类型，预期它的属性应该是些什么类型。
 
-__边注：接口不受 JavaScript 运行时的特性影响，它只在类型检查中会用到。__
+**边注：接口不受 JavaScript 运行时的特性影响，它只在类型检查中会用到。**
 
--   可以声明****可选属性****（带有 `?` 标记），意味着接口的对象可能会、也可能不会定义这些属性。
--   可以声明****只读属性****，意味着一旦为属性赋值，就无法更改。
+-   可以声明\***\*可选属性\*\***（带有 `?` 标记），意味着接口的对象可能会、也可能不会定义这些属性。
+-   可以声明\***\*只读属性\*\***，意味着一旦为属性赋值，就无法更改。
 
 ```typescript
 interface ICircle {
-  readonly id: string;
-  center: {
-    x: number;
-    y: number;
-  },
-  radius: number;
-  color?: string;  // 可选属性
+    readonly id: string;
+    center: {
+        x: number;
+        y: number;
+    };
+    radius: number;
+    color?: string; // 可选属性
 }
 
 const circle1: ICircle = {
-  id: '001',
-  center: { x: 0 },
-  radius: 8,
-};  /* Error! Property 'y' is missing in type '{ x: number; }' 
+    id: '001',
+    center: { x: 0 },
+    radius: 8,
+}; /* Error! Property 'y' is missing in type '{ x: number; }' 
 but required in type '{ x: number; y: number; }'. */
 
 const circle2: ICircle = {
-  id: '002',
-  center: { x: 0, y: 0 },
-  radius: 8,
-}  // 正确
+    id: '002',
+    center: { x: 0, y: 0 },
+    radius: 8,
+}; // 正确
 ```
 
 ## **扩展接口**
@@ -211,7 +211,7 @@ const circle2: ICircle = {
 
 ```typescript
 interface ICircleWithArea extends ICircle {
-  getArea: () => number;
+    getArea: () => number;
 }
 ```
 
@@ -221,8 +221,8 @@ interface ICircleWithArea extends ICircle {
 
 ```typescript
 interface IClock {
-  currentTime: Date;
-  setTime(d: Date): void;
+    currentTime: Date;
+    setTime(d: Date): void;
 }
 ```
 
@@ -232,10 +232,10 @@ interface IClock {
 
 ```typescript
 enum CardSuit {
-  Clubs,
-  Diamonds,
-  Hearts,
-  Spades
+    Clubs,
+    Diamonds,
+    Hearts,
+    Spades,
 }
 let card = CardSuit.Clubs;
 ```
@@ -247,10 +247,10 @@ let card = CardSuit.Clubs;
 ```typescript
 var CardSuit;
 (function (CardSuit) {
-  CardSuit[CardSuit["Clubs"] = 0] = "Clubs";
-  CardSuit[CardSuit["Diamonds"] = 1] = "Diamonds";
-  CardSuit[CardSuit["Hearts"] = 2] = "Hearts";
-  CardSuit[CardSuit["Spades"] = 3] = "Spades";
+    CardSuit[(CardSuit['Clubs'] = 0)] = 'Clubs';
+    CardSuit[(CardSuit['Diamonds'] = 1)] = 'Diamonds';
+    CardSuit[(CardSuit['Hearts'] = 2)] = 'Hearts';
+    CardSuit[(CardSuit['Spades'] = 3)] = 'Spades';
 })(CardSuit || (CardSuit = {}));
 ```
 
@@ -258,22 +258,22 @@ var CardSuit;
 
 ```typescript
 enum SocialMedia {
-  Facebook = 'FACEBOOK',
-  Twitter = 'TWITTER',
-  Instagram = 'INSTAGRAM',
-  LinkedIn = 'LINKEDIN'
+    Facebook = 'FACEBOOK',
+    Twitter = 'TWITTER',
+    Instagram = 'INSTAGRAM',
+    LinkedIn = 'LINKEDIN',
 }
 ```
 
 ## **反向映射**
 
-`enum` 支持反向映射，也就是说，可以通过值来获得成员、成员名。 
+`enum` 支持反向映射，也就是说，可以通过值来获得成员、成员名。
 
 回顾之前 CardSuit 的例子：
 
 ```typescript
 const clubsAsNumber: number = CardSuit.Clubs; // 3
-const clubsAsString: string = CardSuit[0];    // 'Clubs'
+const clubsAsString: string = CardSuit[0]; // 'Clubs'
 ```
 
 # **函数**
@@ -282,29 +282,28 @@ const clubsAsString: string = CardSuit[0];    // 'Clubs'
 
 ```typescript
 function add(x: number, y: number): number {
-  return x + y;
+    return x + y;
 }
 ```
 
 ## **函数重载**
 
-TypeScript 允许声明 __函数重载__。简单来说，可以使用多个名称相同但参数类型和返回类型不同的函数。参考下面的例子：
+TypeScript 允许声明 **函数重载**。简单来说，可以使用多个名称相同但参数类型和返回类型不同的函数。参考下面的例子：
 
 ```typescript
 function padding(a: number, b?: number, c?: number, d?: any) {
-  if (b === undefined && c === undefined && d === undefined) {
-    b = c = d = a;
-  }
-  else if (c === undefined && d === undefined) {
-    c = a;
-    d = b;
-  }
-  return {
-    top: a,
-    right: b,
-    bottom: c,
-    left: d
-  };
+    if (b === undefined && c === undefined && d === undefined) {
+        b = c = d = a;
+    } else if (c === undefined && d === undefined) {
+        c = a;
+        d = b;
+    }
+    return {
+        top: a,
+        right: b,
+        bottom: c,
+        left: d,
+    };
 }
 ```
 
@@ -315,19 +314,18 @@ function padding(all: number);
 function padding(topAndBottom: number, leftAndRight: number);
 function padding(top: number, right: number, bottom: number, left: number);
 function padding(a: number, b?: number, c?: number, d?: number) {
-  if (b === undefined && c === undefined && d === undefined) {
-    b = c = d = a;
-  }
-  else if (c === undefined && d === undefined) {
-    c = a;
-    d = b;
-  }
-  return {
-    top: a,
-    right: b,
-    bottom: c,
-    left: d
-  };
+    if (b === undefined && c === undefined && d === undefined) {
+        b = c = d = a;
+    } else if (c === undefined && d === undefined) {
+        c = a;
+        d = b;
+    }
+    return {
+        top: a,
+        right: b,
+        bottom: c,
+        left: d,
+    };
 }
 ```
 
@@ -337,30 +335,30 @@ function padding(a: number, b?: number, c?: number, d?: number) {
 
 ```typescript
 class Greeter {
-  greeting: string;
-  constructor(message: string) {
-    this.greeting = message;
-  }
-  greet(name: string) {
-    return `Hi ${name}, ${this.greeting}`;
-  }
+    greeting: string;
+    constructor(message: string) {
+        this.greeting = message;
+    }
+    greet(name: string) {
+        return `Hi ${name}, ${this.greeting}`;
+    }
 }
 ```
 
 ## **访问修饰符**
 
-Typescript 支持 `public` (公有),  `private` (私有),  `protected` (保护)  修饰符，它们决定了类成员的可访问性。
+Typescript 支持 `public` (公有), `private` (私有), `protected` (保护) 修饰符，它们决定了类成员的可访问性。
 
 -   `public` (公有) 成员和纯 JavaScript 的成员一样，是默认的修饰符。
 -   `private` (私有) 成员对外界来说不可访问。
 -   `protected`(保护) 成员和私有成员的区别在于，它能够被继承类访问。
 
 ```markdown
-| 具有访问权限     | public | protected | private |
-| :------------- | :----: | :-------: | :-----: |
-| 类本身          |   yes  |    yes    |   yes   |
-| 派生类          |   yes  |    yes    |    no   |
-| 类实例          |   yes  |     no    |    no   |
+| 具有访问权限 | public | protected | private |
+| :----------- | :----: | :-------: | :-----: |
+| 类本身       |  yes   |    yes    |   yes   |
+| 派生类       |  yes   |    yes    |   no    |
+| 类实例       |  yes   |    no     |   no    |
 ```
 
 ## **只读修饰符**
@@ -369,23 +367,22 @@ Typescript 支持 `public` (公有),  `private` (私有),  `protected` (保护) 
 
 ```typescript
 class Spider {
-  readonly name: string;
-  readonly numberOfLegs: number = 8;
-  constructor (theName: string) {
-    this.name = theName;
-  }
+    readonly name: string;
+    readonly numberOfLegs: number = 8;
+    constructor(theName: string) {
+        this.name = theName;
+    }
 }
 ```
 
 ## **参数属性**
 
-__参数属性__  可以放在一个地方创建并初始化成员。它通过给构造函数参数添加一个访问限定符来声明。
+**参数属性** 可以放在一个地方创建并初始化成员。它通过给构造函数参数添加一个访问限定符来声明。
 
 ```typescript
 class Spider {
-  readonly numberOfLegs: number = 8;
-  constructor(readonly name: string) {
-  }
+    readonly numberOfLegs: number = 8;
+    constructor(readonly name: string) {}
 }
 ```
 
@@ -393,8 +390,8 @@ class Spider {
 
 abstract (抽象) 这个关键字可以用在抽象类上，也可以用在抽象类方法上。
 
--   ****抽象类****  不会直接被实例化。抽象类主要用于继承，继承抽象类必须实现它所有的抽象方法。
--   ****抽象成员****  不包含具体实现，因此不能被直接访问。这些成员必须在派生类中实现。 __(类似接口)__
+-   \***\*抽象类\*\*** 不会直接被实例化。抽象类主要用于继承，继承抽象类必须实现它所有的抽象方法。
+-   \***\*抽象成员\*\*** 不包含具体实现，因此不能被直接访问。这些成员必须在派生类中实现。 **(类似接口)**
 
 # **类型断言**
 
@@ -402,21 +399,21 @@ TypeScript 允许你以任何方式覆盖其推断的类型。当你比编译器
 
 ```typescript
 const friend = {};
-friend.name = 'John';  // Error! Property 'name' does not exist on type '{}'
+friend.name = 'John'; // Error! Property 'name' does not exist on type '{}'
 
 interface Person {
-  name: string;
-  age: number;
+    name: string;
+    age: number;
 }
 
 const person = {} as Person;
-person.name = 'John';  // 正确
+person.name = 'John'; // 正确
 ```
 
 最初，类型断言的语法是 `<type>`
 
 ```typescript
-let person = <Person> {};
+let person = <Person>{};
 ```
 
 但这在 JSX 中使用时产生了歧义。因此建议使用 `as` 代替。
@@ -425,7 +422,7 @@ let person = <Person> {};
 
 但断言也会 **被认为有害。**
 
-我们来看看上一个示例中的 Person 接口，你注意到了什么问题吗？如果你注意到丢失了 ****age**** 属性，恭喜，你对了！编译器可能会帮助你自动完成 Person 的属性，但如果您遗漏了任何属性，它也不会报错。
+我们来看看上一个示例中的 Person 接口，你注意到了什么问题吗？如果你注意到丢失了 \***\*age\*\*** 属性，恭喜，你对了！编译器可能会帮助你自动完成 Person 的属性，但如果您遗漏了任何属性，它也不会报错。
 
 # **类型推论**
 
@@ -435,13 +432,13 @@ let person = <Person> {};
 /**
  * 变量声明
  */
-let a = "some string";
+let a = 'some string';
 let b = 1;
-a = b;  // Error! Type 'number' is not assignable to type 'string'.
+a = b; // Error! Type 'number' is not assignable to type 'string'.
 
 // 如果是复杂的对象，TypeScript 会用最常见的类型
 // 来推断对象类型。
-const arr = [0, 1, false, true];  // (number | boolean)[]
+const arr = [0, 1, false, true]; // (number | boolean)[]
 ```
 
 # **类型兼容性**
@@ -452,11 +449,11 @@ const arr = [0, 1, false, true];  // (number | boolean)[]
 
 ```typescript
 interface Person {
-name: string;
+    name: string;
 }
 
-let x: Person;  // 正确，尽管不是Person接口的实现
-let y = { name: 'John', age: 20 };  // type { name: string; age: number }
+let x: Person; // 正确，尽管不是Person接口的实现
+let y = { name: 'John', age: 20 }; // type { name: string; age: number }
 x = y;
 ```
 
@@ -464,25 +461,25 @@ x = y;
 
 ## _**函数**_
 
-****参数数量****  
+\***\*参数数量\*\***  
 在函数调用中，至少需要传入足够的参数，多余的参数不会导致任何错误。
 
 ```typescript
 function consoleName(person: Person) {
-  console.log(person.name);
+    console.log(person.name);
 }
-consoleName({ name: 'John' });           // 正确
-consoleName({ name: 'John', age: 20 });  // 多余的参数也合法
+consoleName({ name: 'John' }); // 正确
+consoleName({ name: 'John', age: 20 }); // 多余的参数也合法
 ```
 
-****返回值类型****  
+\***\*返回值类型\*\***  
 返回值类型必须至少包含足够的数据。
 
 ```typescript
-let x = () => ({name: 'John'});
-let y = () => ({name: 'John', age: 20 });
-x = y;  // 正确
-y = x;  /* Error! Property 'age' is missing in type '{ name: string; }'
+let x = () => ({ name: 'John' });
+let y = () => ({ name: 'John', age: 20 });
+x = y; // 正确
+y = x; /* Error! Property 'age' is missing in type '{ name: string; }'
 but required in type '{ name: string; age: number; }' */
 ```
 
@@ -496,10 +493,10 @@ but required in type '{ name: string; age: number; }' */
 
 ```typescript
 function example(x: number | boolean) {
-  if (typeof x === 'number') {
-    return x.toFixed(2);
-  }
-  return x.toFixed(2); // Error! Property 'toFixed' does not exist on type 'boolean'.
+    if (typeof x === 'number') {
+        return x.toFixed(2);
+    }
+    return x.toFixed(2); // Error! Property 'toFixed' does not exist on type 'boolean'.
 }
 ```
 
@@ -507,24 +504,24 @@ function example(x: number | boolean) {
 
 ```typescript
 class MyResponse {
-  header = 'header example';
-  result = 'result example';
-  // ...
+    header = 'header example';
+    result = 'result example';
+    // ...
 }
 class MyError {
-  header = 'header example';
-  message = 'message example';
-  // ...
+    header = 'header example';
+    message = 'message example';
+    // ...
 }
 function example(x: MyResponse | MyError) {
-  if (x instanceof MyResponse) {
-    console.log(x.message); // Error! Property 'message' does not exist on type 'MyResponse'.
-    console.log(x.result);  // 正确
-  } else {
-    // TypeScript 知道这里一定是 MyError
-    console.log(x.message); // 正确
-    console.log(x.result);  // Error! Property 'result' does not exist on type 'MyError'.
-  }
+    if (x instanceof MyResponse) {
+        console.log(x.message); // Error! Property 'message' does not exist on type 'MyResponse'.
+        console.log(x.result); // 正确
+    } else {
+        // TypeScript 知道这里一定是 MyError
+        console.log(x.message); // 正确
+        console.log(x.result); // Error! Property 'result' does not exist on type 'MyError'.
+    }
 }
 ```
 
@@ -534,12 +531,12 @@ function example(x: MyResponse | MyError) {
 
 ```typescript
 interface Person {
-  name: string;
-  age: number;
+    name: string;
+    age: number;
 }
 const person: Person = {
-  name: 'John',
-  age: 28,
+    name: 'John',
+    age: 28,
 };
 
 const checkForName = 'name' in person; // true
@@ -555,7 +552,7 @@ function changeOrientation(x: Orientation) {
   // ...
 }
 changeOrientation('portrait'); // 正确
-changeOrientation('vertical'); /* Error! Argument of type '"vertical"' is not 
+changeOrientation('vertical'); /* Error! Argument of type '"vertical"' is not
 assignable to parameter of type 'Orientation'. /
 ```
 
@@ -567,7 +564,7 @@ _条件类型表示类型关系的测试，并根据测试的结果选择两种�
 type X = A extends B ? C : D;
 ```
 
-_如果 `A` 类型可以赋值给 `B` 类型，那么 `X` 是 `C` 类型；否则 `X`  是 `D` 类型。_
+_如果 `A` 类型可以赋值给 `B` 类型，那么 `X` 是 `C` 类型；否则 `X` 是 `D` 类型。_
 
 # _**泛型**_
 
@@ -577,7 +574,7 @@ _下面例子中的函数会返回所传入的任何类型的数组。_
 
 ```typescript
 function reverse<T>(items: T[]): T[] {
-  return items.reverse();
+    return items.reverse();
 }
 reverse([1, 2, 3]); // number[]
 reverse([0, true]); // (number | boolean)[]
@@ -589,8 +586,8 @@ _`keyof` 运算符会查询给定类型的键集。_
 
 ```typescript
 interface Person {
-  name: string;
-  age: number;
+    name: string;
+    age: number;
 }
 type PersonKeys = keyof Person; // 'name' | 'age'
 ```
@@ -603,14 +600,14 @@ _映射类型，通过在属性类型上建立映射，从现有的类型创建�
 
 ```typescript
 type Partial<T> = {
-  [P in keyof T]?: T[P];
-}
+    [P in keyof T]?: T[P];
+};
 ```
 
 -   _泛型 Partial 类型被定义时只有一个类型参数 `T`。_
 -   _`keyof T` 表示所有 `T` 类型属性的名字（字符串字面类型）的联合。_
 -   _`[P in keyof T]?: T[P]` 表示所有 `T` 类型的属性 `P` 的类型都应该是可选的，并且都会被转换为 `T[P]`。_
--   _`T[P]`  表示 `T` 类型的属性 `P` 的类型。_
+-   _`T[P]` 表示 `T` 类型的属性 `P` 的类型。_
 
 ## _**Readonly (只读)**_
 
@@ -618,7 +615,7 @@ _正如在接口部分中所介绍的，TypeScript 中可以创建只读属性�
 
 ```typescript
 type Readonly<T> = {
-  readonly [P in keyof T]: T[P];
+    readonly [P in keyof T]: T[P];
 };
 ```
 
@@ -631,13 +628,13 @@ _`Exclude` 可以从其他类型中排除某些类型。排除的是可以赋值
  * type Exclude<T, U> = T extends U ? never : T;
  */
 type User = {
-  _id: number;
-  name: string;
-  email: string;
-  created: number;
+    _id: number;
+    name: string;
+    email: string;
+    created: number;
 };
 
-type UserNoMeta = Exclude<keyof User, '_id' | 'created'>
+type UserNoMeta = Exclude<keyof User, '_id' | 'created'>;
 ```
 
 ## **Pick**
@@ -650,7 +647,7 @@ type UserNoMeta = Exclude<keyof User, '_id' | 'created'>
  *   [P in K]: T[P];
  *  };
  */
-type UserNoMeta = Pick<User, 'name' | 'email'>
+type UserNoMeta = Pick<User, 'name' | 'email'>;
 ```
 
 ## _**infer**_
@@ -668,8 +665,8 @@ type UserNoMeta = Pick<User, 'name' | 'email'>
  */
 type MyReturnType<T> = T extends (...args: any) => infer R ? R : any;
 
-type TypeFromInfer = MyReturnType<() => number>;  // number
-type TypeFromFallback = MyReturnType<string>;     // any
+type TypeFromInfer = MyReturnType<() => number>; // number
+type TypeFromFallback = MyReturnType<string>; // any
 ```
 
 我们来拆解 `MyReturnType`：

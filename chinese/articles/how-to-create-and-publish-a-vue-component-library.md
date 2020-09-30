@@ -1,7 +1,7 @@
-> * 原文地址：[How to Create and Publish a Vue Component Library 如何搭建、发布一个 Vue 组件库](https://www.freecodecamp.org/news/how-to-create-and-publish-a-vue-component-library/)
-> * 原文作者：Brian Barrow
-> * 译者：Humilitas
-> * 校对者：
+> -   原文地址：[How to Create and Publish a Vue Component Library 如何搭建、发布一个 Vue 组件库](https://www.freecodecamp.org/news/how-to-create-and-publish-a-vue-component-library/)
+> -   原文作者：Brian Barrow
+> -   译者：Humilitas
+> -   校对者：
 
 ![How to Create and Publish a Vue Component Library](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/trnava-university-BEEyeib-am8-unsplash.jpg)
 
@@ -42,8 +42,8 @@
 
 在提示中选择如下选项：
 
--   **Is this a single component or a library?**  Library
--   **What is the npm name of your library?**  （名称在 npm 中必须是唯一的，这里我使用的是 _brian-component-lib_）
+-   **Is this a single component or a library?** Library
+-   **What is the npm name of your library?** （名称在 npm 中必须是唯一的，这里我使用的是 _brian-component-lib_）
 -   **Will this library be written in JavaScript or TypeScript?** JavaScript（可以放心地选择 TypeScript，只要你清楚自己的选择）
 -   **Enter a location to save the library files:** （项目的文件夹名称，默认为之前步骤设置的 npm 名称，所以可以直接按 enter 取默认值。）
 
@@ -155,7 +155,7 @@ export default Vue.extend({
 
 如文档所述：
 
-> 执行 build 脚本将会在 `dist` 路径中生成3个编译后的文件，文件名和路径由 package.json 文件中的 `main`、`module`、`unpkg` 属性指定。这些文件生成之后，可以进行下一步。
+> 执行 build 脚本将会在 `dist` 路径中生成 3 个编译后的文件，文件名和路径由 package.json 文件中的 `main`、`module`、`unpkg` 属性指定。这些文件生成之后，可以进行下一步。
 
 命令执行完毕之后，我们已经准备好将组件库发布到 NPM 了。在此之前，确保你有一个 NPM 账号（没有的话，可以点击 [这里][6] 进行注册）。
 

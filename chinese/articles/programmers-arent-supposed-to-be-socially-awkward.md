@@ -1,7 +1,7 @@
-> * 原文地址：[Programmers Don't Have to be Socially Awkward. Here Are 10 Social Skills To Improve Your Career.](https://www.freecodecamp.org/news/programmers-dont-have-to-be-socially-awkward/)
-> * 原文作者：[Fatos Morina](https://www.freecodecamp.org/news/author/fatosmorina/)
-> * 译者：[Miya](https://github.com/miyaliu666)
-> * 校对者：[jingruzhang](https://github.com/jingruzhang)
+> -   原文地址：[Programmers Don't Have to be Socially Awkward. Here Are 10 Social Skills To Improve Your Career.](https://www.freecodecamp.org/news/programmers-dont-have-to-be-socially-awkward/)
+> -   原文作者：[Fatos Morina](https://www.freecodecamp.org/news/author/fatosmorina/)
+> -   译者：[Miya](https://github.com/miyaliu666)
+> -   校对者：[jingruzhang](https://github.com/jingruzhang)
 
 ![Programmers Aren’t Supposed to Be Socially Awkward. Here Are 10 Social Skills To Improve Your Career.](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/Napoleon-Dynamite.jpg)
 
@@ -27,7 +27,7 @@
 
 ![](https://cdn-images-1.medium.com/max/1600/0*-4dWGC_4RI1FCEOC)
 
-图片来源：[Austin Distel][1]  on [Unsplash][2]
+图片来源：[Austin Distel][1] on [Unsplash][2]
 
 你可能特别机灵特别勤奋，谁都比不上你。但是如果你的行为不讨人喜欢，或者缺乏善意，同伴们可能会讨厌和你协作。是的，即使你写得一手好代码，维护代码的能力也不在话下，他们仍会因为你可恶的态度而讨厌和你协作。
 
@@ -103,7 +103,7 @@
 
 ![](https://cdn-images-1.medium.com/max/1600/0*QVGYyz8F3j1Lq3kG)
 
-图片来源：[Jason Rosewell][6]  on [Unsplash][7]
+图片来源：[Jason Rosewell][6] on [Unsplash][7]
 
 我们总是认为自己是理性的人类，而事实上我们都是被情感驱使、容易生气的生物。无论你是对还是错，气头上都可能和他人有些不愉快的争执。即便你是对的，只是想维护自己正确的观点，和他人的激烈争吵也会破坏你们的关系。
 
@@ -122,12 +122,15 @@ Dale Carnegie 在[《如何赢得友谊并影响他人》][8]一书中提到：
 假设执行某项任务的人手不足，然后你担心开发者们可能不喜欢做前端部分的工作，你可以告诉他们，如果下次会议上不能演示这个特性的话，客户对团队的印象会大打折扣。
 
 比如你可以这样提问：
+
 > _“你可以加会儿班完成这部分吗？这对咱们项目特别重要。”_
 
 好过用命令的口吻：
+
 > _“完不成这个任务你就别想回家。”_
 
 你还可以这么说：
+
 > _“你可以负责这项工作吗？我知道你在这块特别有经验”_
 
 让他们感觉到自己是团队中的重要一员，客户会因为他们的工作对团队有好印象，之后也会有更多的项目合作。

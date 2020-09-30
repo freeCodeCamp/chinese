@@ -1,13 +1,13 @@
-> * 原文地址：[Everything you need to know about CSS Variables](https://www.freecodecamp.org/news/everything-you-need-to-know-about-css-variables-c74d922ea855/)
-> * 原文作者：[Emmanuel Ohans](https://www.freecodecamp.org/news/author/emmanuel/)
-> * 译者：LolaWei
-> * 校对者：
+> -   原文地址：[Everything you need to know about CSS Variables](https://www.freecodecamp.org/news/everything-you-need-to-know-about-css-variables-c74d922ea855/)
+> -   原文作者：[Emmanuel Ohans](https://www.freecodecamp.org/news/author/emmanuel/)
+> -   译者：LolaWei
+> -   校对者：
 
 ![你需要知道的关于 CSS 变量的一切](https://cdn-media-1.freecodecamp.org/images/1*Im5WsB6Y7CubjWRx9hH7Gg.png)
 
 很多编程语言都支持变量，但很遗憾， CSS 从开发之始便不支持原生变量。
 
-你写 CSS 代码吗？那么除非利用像 Sass 这样的预处理器，否则无法使用变量。 
+你写 CSS 代码吗？那么除非利用像 Sass 这样的预处理器，否则无法使用变量。
 
 Sass 这样的预处理器将变量使用作为其主要的销售卖点，这也是我们值得一试的理由。
 
@@ -35,7 +35,7 @@ Sass 这样的预处理器将变量使用作为其主要的销售卖点，这也
 
 在[Codepen][1]上查看项目
 
-#### 项目 2 ：使用 CSS 变量设置主题风格 
+#### 项目 2 ：使用 CSS 变量设置主题风格
 
 你可能在其他地方看到过类似功能。我会教你使用 CSS 变量轻松创建全站主题风格。
 
@@ -63,7 +63,7 @@ Sass 这样的预处理器将变量使用作为其主要的销售卖点，这也
 
 花点时间在 [Codepen][3] 上享受乐趣吧。
 
-注意：本文假设你已熟练掌握了 CSS，如果你不太解CSS，或者想学习做出炫酷的用户界面，我建议你学习我的[高级CSS课程][4] (包括85课的付费课程)，这篇文章即摘自此课程。< /厚着脸皮做广告咯> ？
+注意：本文假设你已熟练掌握了 CSS，如果你不太解 CSS，或者想学习做出炫酷的用户界面，我建议你学习我的[高级 CSS 课程][4] (包括 85 课的付费课程)，这篇文章即摘自此课程。< /厚着脸皮做广告咯> ？
 
 ### 为什么变量如此重要？
 
@@ -73,7 +73,7 @@ Sass 这样的预处理器将变量使用作为其主要的销售卖点，这也
 
 项目过程中，你可以很快了解变量是如何增强代码库的可读性与可维护性的。
 
-#### **理由二：易于跨大文档修改
+#### \*\*理由二：易于跨大文档修改
 
 如果所有常量都保存在单个文件中，就不需要在几千行代码里一一修改变量了。使用变量之后，你只需改动一个地方即可实现。
 
@@ -111,13 +111,13 @@ amAwesome = "awesome string"
 
 CSS 变量又名 “自定义属性”
 
-###  CSS 变量的作用范围
+### CSS 变量的作用范围
 
 注意：
 
 在 Javascript 中，变量有作用范围。可能是`全局`变量或`局部`变量。
 
- CSS 变量同样如此。
+CSS 变量同样如此。
 
 举例如下：
 
@@ -128,7 +128,6 @@ CSS 变量又名 “自定义属性”
 使用`:root` 选择器可定位 DOM 或文档树中最高级别的元素。
 
 这种变量即为全局变量。
-
 
 ![](https://cdn-media-1.freecodecamp.org/images/XjRjOOsd5x9tj7-HtCx5CxhWQqfS-Ih9brdo)
 
@@ -153,7 +152,6 @@ CSS 变量又名 “自定义属性”
 ```
 
 CSS 变量前要加双破折号，如 `--color`。
-
 
 ### 使用 CSS 变量
 
@@ -184,7 +182,6 @@ $font-size: 20px.test {  font-size: $font-size}
 一旦解决了这个问题，你就会越来越爱 CSS 变量！
 
 另外要注意，不同于 Sass (或其他预处理器) 中的变量————你可以在很多地方使用这些变量，并做数学计算————但使用时要小心。大部分时候，CSS 变量用作属性值。
-
 
 ```
 /*此写法错误*/.margin {--side: margin-top;var(--side): 20px;}
@@ -218,7 +215,7 @@ $font-size: 20px.test {  font-size: $font-size}
 
 自定义属性与普通属性作用相同
 
-#### 2\. CSS 属性具有继承性与级联性 
+#### 2\. CSS 属性具有继承性与级联性
 
 参考下面的例子：
 
@@ -230,9 +227,9 @@ div {  --color: red;}div.test {  color: var(--color)}div.ew {  color: var(--colo
 
 ![](https://cdn-media-1.freecodecamp.org/images/g-kAkNulNHQGkMd9vst3XuTG5kvoJJ2IfVff)
 
-#### 3\.  CSS 变量可添加条件规则，如媒体类型
+#### 3\. CSS 变量可添加条件规则，如媒体类型
 
-与其他属性相同，使用  `@media` 或其他条件规则可改变 CSS 变量的值。
+与其他属性相同，使用 `@media` 或其他条件规则可改变 CSS 变量的值。
 
 举个例子，在大屏幕上，以下代码会改变 gutter 的值：
 
@@ -286,13 +283,13 @@ div {  --color: red;}div.test {  color: var(--color)}div.ew {  color: var(--colo
 :root { --color: blue; }
 ```
 
-第一个 `div` 元素为  `绿色` 。这很显然。因为我们使用变量指定了`div`元素颜色为绿色。
+第一个 `div` 元素为 `绿色` 。这很显然。因为我们使用变量指定了`div`元素颜色为绿色。
 
 ```
 div { --color: green; }
 ```
 
-ID 为 `alert` 的  `div` 元素不为绿色，而为 `红色`。
+ID 为 `alert` 的 `div` 元素不为绿色，而为 `红色`。
 
 ```
 #alert { --color: red; }
@@ -309,6 +306,7 @@ ID 中的变量有直接作用域，其颜色属性会覆盖掉原来的属性�
 ```
 
 与其他属性相同，CSS 变量具有继承性，子元素会继承父元素 `#alert` 的属性值。
+
 ```
 #alert { --color: red; }
 ```
@@ -321,7 +319,7 @@ ID 中的变量有直接作用域，其颜色属性会覆盖掉原来的属性�
 
 循环依赖会发生在以下情境中：
 
-1\.  变量需要依赖其自身值。即，定义时就使用了`var()` 引用其值。  
+1\. 变量需要依赖其自身值。即，定义时就使用了`var()` 引用其值。
 
 ```
 :root {  --m: var(--m)}body {  margin: var(--m)}
@@ -351,7 +349,7 @@ ID 中的变量有直接作用域，其颜色属性会覆盖掉原来的属性�
 
 ![](https://cdn-media-1.freecodecamp.org/images/tdeD7sLFRUvKCdXP2Y6SXuQCakTcv-hV5PNR)
 
-注意，如果你直接写 `background-color: 20px` ，那么这个属性声明即是无效的。该元素会使用前面元素对颜色的声明，即红色。 
+注意，如果你直接写 `background-color: 20px` ，那么这个属性声明即是无效的。该元素会使用前面元素对颜色的声明，即红色。
 
 ![](https://cdn-media-1.freecodecamp.org/images/24FLLWAoCML1VC4G95GQ1IGLQnPuwoJ2AoGA)
 
@@ -365,11 +363,12 @@ ID 中的变量有直接作用域，其颜色属性会覆盖掉原来的属性�
 font-size: 20px
 ```
 
-简单点说， `20px` 是一个整体。 
+简单点说， `20px` 是一个整体。
 
 当用 CSS 变量创建单一标记时，需要小心点。
 
 举个例子，请看如下代码：
+
 ```
 :root { --size: 20}div {  font-size: var(--size)px /*提醒*/}
 ```
@@ -392,7 +391,7 @@ font-size: 20px
 
 开始吧。
 
-### 项目1: 使用CSS变量创建可变组件。
+### 项目 1: 使用 CSS 变量创建可变组件。
 
 假设你需要创建两个不同的按钮。两个按钮基础样式相同，但只有一点小小的区别。
 
@@ -422,7 +421,6 @@ font-size: 20px
 
 按钮样式如何变化呢？
 
-
 ```
 /* 变化 */.btn.red {  border-color: red}.btn.red:hover {  background: red}
 ```
@@ -441,7 +439,7 @@ font-size: 20px
  /*悬浮状态*/  .btn:hover {  cursor: pointer;   background: var(--color, black);   color: white; }
 ```
 
-设置 `background:  **var(--color, black)**` 是为了让背景颜色变成 `--color`变量的值。但当变量不存在时，该元素就会自动使用替换值 `**black**`。
+设置 `background: **var(--color, black)**` 是为了让背景颜色变成 `--color`变量的值。但当变量不存在时，该元素就会自动使用替换值 `**black**`。
 
 这就是设置默认属性值的方法，跟在 JavaScript 或其他的编程语言中如出一辙。
 
@@ -471,17 +469,13 @@ font-size: 20px
 
 ### 项目二: 使用 CSS 变量定制网站主题
 
-
 我敢说，你之前肯定浏览过类似网站。主题网站会让用户觉得自己可以定制主题，就好像自己在主管该网站一样。
 
 以下便是我们要使用的例子。
 
-
 ![](https://cdn-media-1.freecodecamp.org/images/LsBPxBoN-bc9PZorRq39kklAE5yTiSmkgm6I)
 
-
 使用 CSS 变量会让创建过程变得多么简单呢？
-
 
 这个例子非常重要。在这个例子中，我会介绍如何使用 Javascript 来更新 CSS 变量。
 
@@ -504,7 +498,6 @@ CSS 变量的魅力在于其互动性。一旦你修改了某个 CSS 变量，�
 该项目的原理就是这样。
 
 除此之外，我们怎么改变 CSS 变量的值呢？
-
 
 ![](https://cdn-media-1.freecodecamp.org/images/UIQ3ij9Cy-iU3rO5OXkQc1uyPhMPGuHD1zXb)
 
@@ -562,7 +555,7 @@ const root = document.documentElement const themeBtns = document.querySelectorAl
 
 除此之外，还要获取按钮元素，`const themeBtns = document.querySelectorAll('.theme > button`)
 
-`querySelectorAll`方法会获取伪数组。之后遍历该伪数组，然后添加对应的点击事件。  
+`querySelectorAll`方法会获取伪数组。之后遍历该伪数组，然后添加对应的点击事件。
 
 代码如下：
 
@@ -570,7 +563,7 @@ const root = document.documentElement const themeBtns = document.querySelectorAl
 themeBtns.forEach((btn) => {  btn.addEventListener('click', handleThemeUpdate)})
 ```
 
- `handleThemeUpdate`函数在哪里呢？请继续往下看。
+`handleThemeUpdate`函数在哪里呢？请继续往下看。
 
 点击按钮会触发对应的`handleThemeUpdate`函数。需要为每一个按钮的点击事件配置对应的操作。
 
@@ -609,7 +602,7 @@ themeBtns.forEach((btn) => {  btn.addEventListener('click', handleThemeUpdate)})
 如下所示：
 
 ```
-<main class="booth">  <aside class="slider">    <label>Move this ? </label>    <input class="booth-slider" type="range" min="-50" max="50" value="-50" step="5"/>  </aside>    <section class="color-boxes">    <div class="color-box" id="1"><input value="red"/></div>    <div class="color-box" id="2"><input/></div>    <div class="color-box" id="3"><input/></div>    <div class="color-box" id="4"><input/&gt;</div&gt;    <div class="color-box" id="5"><input/></div>    <div class="color-box" id="6">;<input/>&lt;/div>  </section>  <footer class="instructions">    ?? Move the slider<br/>    ?? Write any color in the red boxes   </footer></main>  
+<main class="booth">  <aside class="slider">    <label>Move this ? </label>    <input class="booth-slider" type="range" min="-50" max="50" value="-50" step="5"/>  </aside>    <section class="color-boxes">    <div class="color-box" id="1"><input value="red"/></div>    <div class="color-box" id="2"><input/></div>    <div class="color-box" id="3"><input/></div>    <div class="color-box" id="4"><input/&gt;</div&gt;    <div class="color-box" id="5"><input/></div>    <div class="color-box" id="6">;<input/>&lt;/div>  </section>  <footer class="instructions">    ?? Move the slider<br/>    ?? Write any color in the red boxes   </footer></main>
 ```
 
 注意以下几点：
@@ -624,10 +617,9 @@ themeBtns.forEach((btn) => {  btn.addEventListener('click', handleThemeUpdate)})
 ![](https://cdn-media-1.freecodecamp.org/images/pY28lnZFx4xvar807GegIg4HIn4DNcBAG5rE)
 
 1.  将类名为`.slider`和`.instructions`的元素移出文档流，进行绝对定位。
-2.  为`body`元素添加日出的背景颜色，再用一朵花的背景图做装饰，放在页面左下角。 
+2.  为`body`元素添加日出的背景颜色，再用一朵花的背景图做装饰，放在页面左下角。
 3.  居中对齐`color-boxes`元素 。
 4.  为`color-boxes`元素设置样式。
-
 
 具体代码如下：
 
@@ -651,15 +643,15 @@ body {  margin: 0;  color: rgba(255,255,255,0.9);  background: url('http://bit.l
 
 `0 100%`设置了背景图片的位置。
 
-下面的文章介绍了在 CSS 中，如何对背景定位： 
+下面的文章介绍了在 CSS 中，如何对背景定位：
 
 ![](https://cdn-media-1.freecodecamp.org/images/4rZugtEKFeay00FsfDXFuXyiHA1Amf1iG2Jd)
 
-来源:  [CSS 高级编程][7]
+来源: [CSS 高级编程][7]
 
 ![](https://cdn-media-1.freecodecamp.org/images/zFcuuEu5RnrGWiG5Doqg7jS4OS-PyOh7H93v)
 
-来源:  [CSS 高级编程][8]
+来源: [CSS 高级编程][8]
 
 分隔号后面的`340px`代表`background-size`。如果你把数值设置的更小，那么图片尺寸也会变小。
 
@@ -695,7 +687,7 @@ main.booth {  min-height: 100vh;    display: flex;  justify-content: center;  al
 
 设置完后，子元素会拥有一个美丽的阴影，这会让最后的效果更加酷炫。
 
-这还不够，我们要设置类名为 `container-boxes` 的盒子属性。 
+这还不够，我们要设置类名为 `container-boxes` 的盒子属性。
 
 ```
 /* Color Boxes */.color-boxes {  background: var(--secondary-color);  box-shadow: 10px 10px 30px rgba(0,0,0,0.4);  border-radius: 0.3rem;    transform: perspective(500px) rotateY( calc(var(--slider) * 1deg));  transition: transform 0.3s}
@@ -709,13 +701,13 @@ main.booth {  min-height: 100vh;    display: flex;  justify-content: center;  al
 .color-boxes {   background: var(--secondary-color);   box-shadow: 10px 10px 30px rgba(0,0,0,0.4);   border-radius: 0.3rem;}
 ```
 
-以上代码用了一个新变量。因此需要在 root 选择器中加上定义。 
+以上代码用了一个新变量。因此需要在 root 选择器中加上定义。
 
 ```
 :root {  --primary-color: rgba(241,196,15 ,1);  --secondary-color: red;}
 ```
 
-secondary-color 变量值为红色。因此容器背景为红色。 
+secondary-color 变量值为红色。因此容器背景为红色。
 
 但你可能对如下代码感到困惑：
 
@@ -773,7 +765,7 @@ transform 合并了两个不同的函数。一是透视，二是以 Y 轴为标�
 
 这样就可以在需要的时候任意使用这些值，既可以转化为`deg`，也可以转化为相对于用户窗口视图 `vw` 的比例。
 
-在这个例子中，我们把一个数字乘以一个 1deg的值，得到了一个有单位的数值。
+在这个例子中，我们把一个数字乘以一个 1deg 的值，得到了一个有单位的数值。
 
 ![](https://cdn-media-1.freecodecamp.org/images/gXw20rbptib1kLg0FpxSEsrIKOZGlECgESrn)
 
@@ -782,7 +774,6 @@ transform 合并了两个不同的函数。一是透视，二是以 Y 轴为标�
 现在来到下一步。在 JavaScript 中可以任意改变变量值。
 
 还剩下一点 CSS 代码：
-
 
 ```
 /* Handle colors for each color box */.color-box:nth-child(1) {  background: var(--bg-1)}.color-box:nth-child(2) {  background: var(--bg-2)}.color-box:nth-child(3) {  background: var(--bg-3)}.color-box:nth-child(4) {  background: var(--bg-4)}.color-box:nth-child(5) {  background: var(--bg-5)}.color-box:nth-child(6) {  background: var(--bg-6)}
@@ -845,7 +836,7 @@ function handleSlider (e) {  let value = e.target.value   root.style.setProperty
 
 ![](https://cdn-media-1.freecodecamp.org/images/0PtXkLeMkuwE0mJxuJX3T0emkunPARGxRN8T)
 
-`root.style.setProperty('--slider', value)`  指把`root`元素的 style 属性设置为对应值。
+`root.style.setProperty('--slider', value)` 指把`root`元素的 style 属性设置为对应值。
 
 ### 处理颜色变化
 
@@ -891,11 +882,9 @@ function handleInputChange (e) {  let value = e.target.value  let inputId = e.ta
 
 那么，你现在会在项目中使用 CSS 变量吗？ 我会说是的！不过，请务必检查一下适用的比例。
 
-
 往好的方面来看，你可以使用类似 [Myth][13] 的预处理器。它可以把你现在使用的 CSS 变成未来可期的 CSS，非常酷！
 
 如果你曾经使用过 [postCSS][14], 那也是一个现在使用未来 CSS 的不错的方法。这里有一些例子：[postCSS module for CSS variables][15]。
-
 
 ### 我还有问题要问呢！
 

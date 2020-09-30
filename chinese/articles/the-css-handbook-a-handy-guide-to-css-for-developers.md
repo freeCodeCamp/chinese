@@ -1,7 +1,7 @@
-> * 原文地址：[The CSS Handbook: a handy guide to CSS for developers](https://www.freecodecamp.org/news/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11/)
-> * 原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> * 译者：
-> * 校对者：
+> -   原文地址：[The CSS Handbook: a handy guide to CSS for developers](https://www.freecodecamp.org/news/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11/)
+> -   原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
+> -   译者：
+> -   校对者：
 
 ![The CSS Handbook: a handy guide to CSS for developers](https://cdn-media-1.freecodecamp.org/images/1*aeXtrs9UI4WniMd1miDIDw.png)
 
@@ -37,9 +37,9 @@ Thank you for getting this ebook. My goal with it is to give you a quick yet com
 
 Flavio
 
-You can reach me via email at  [flavio@flaviocopes.com][2], on Twitter  [@flaviocopes][3].
+You can reach me via email at [flavio@flaviocopes.com][2], on Twitter [@flaviocopes][3].
 
-My website is  [flaviocopes.com][4].
+My website is [flaviocopes.com][4].
 
 ## Table of Contents
 
@@ -91,7 +91,7 @@ My website is  [flaviocopes.com][4].
 
 ### INTRODUCTION TO CSS
 
-**CSS**  (an abbreviation of  **Cascading Style Sheets**) is the language that we use to style an HTML file, and tell the browser how should it render the elements on the page.
+**CSS** (an abbreviation of **Cascading Style Sheets**) is the language that we use to style an HTML file, and tell the browser how should it render the elements on the page.
 
 > _In this book I talk exclusively about styling HTML documents, although CSS can be used to style other things too._
 
@@ -99,12 +99,12 @@ A CSS file contains several CSS rules.
 
 Each rule is composed by 2 parts:
 
--   the  **selector**
--   the  **declaration block**
+-   the **selector**
+-   the **declaration block**
 
 The selector is a string that identifies one or more elements on the page, following a special syntax that we’ll soon talk about extensively.
 
-The declaration block contains one or more  **declarations**, in turn composed by a  **property**  and  **value**pair.
+The declaration block contains one or more **declarations**, in turn composed by a **property** and **value**pair.
 
 Those are all the things we have in CSS.
 
@@ -112,13 +112,13 @@ Carefully organising properties, associating them values, and attaching those to
 
 #### How does CSS look like
 
-A CSS  **rule set**  has one part called  **selector**, and the other part called  **declaration**. The declaration contains various  **rules**, each composed by a  **property**, and a  **value**.
+A CSS **rule set** has one part called **selector**, and the other part called **declaration**. The declaration contains various **rules**, each composed by a **property**, and a **value**.
 
-In this example,  `p`  is the selector, and applies one rule which sets the value  `20px`  to the  `font-size`  property:
+In this example, `p` is the selector, and applies one rule which sets the value `20px` to the `font-size` property:
 
 ```css
 p {
-  font-size: 20px;
+    font-size: 20px;
 }
 ```
 
@@ -126,38 +126,35 @@ Multiple rules are stacked one after the other:
 
 ```css
 p {
-  font-size: 20px;
+    font-size: 20px;
 }
-
-
 ```
 
 A selector can target one or more items:
 
 ```css
-p, a {
-  font-size: 20px;
+p,
+a {
+    font-size: 20px;
 }
 ```
 
-and it can target HTML tags, like above, or HTML elements that contain a certain class attribute with  `.my-class`, or HTML elements that have a specific  `id`  attribute with  `#my-id`.
+and it can target HTML tags, like above, or HTML elements that contain a certain class attribute with `.my-class`, or HTML elements that have a specific `id` attribute with `#my-id`.
 
 More advanced selectors allow you to choose items whose attribute matches a specific value, or also items which respond to pseudo-classes (more on that later)
 
 #### Semicolons
 
-Every CSS rule terminates with a semicolon. Semicolons are  **not**  optional, except after the last rule. But I suggest to always use them for consistency and to avoid errors if you add another property and forget to add the semicolon on the previous line.
+Every CSS rule terminates with a semicolon. Semicolons are **not** optional, except after the last rule. But I suggest to always use them for consistency and to avoid errors if you add another property and forget to add the semicolon on the previous line.
 
 #### Formatting and indentation
 
 There is no fixed rule for formatting. This CSS is valid:
 
 ```css
-p
-      {
-  font-size:           20px   ;
-                      }
-
+p {
+    font-size: 20px;
+}
 ```
 
 but a pain to see. Stick to some conventions, like the ones you see in the examples above: stick selectors and the closing brackets to the left, indent 2 spaces for each rule, have the opening bracket on the same line of the selector, separated by one space.
@@ -170,7 +167,7 @@ Before moving on, I want to give you a brief recap of the history of CSS.
 
 CSS was grown out of the necessity of styling web pages. Before CSS was introduced, people wanted a way to style their web pages, which looked all very similar and “academic” back in the day. You couldn’t do much in terms of personalisation.
 
-HTML 3.2 introduced the option of defining colors inline as HTML element attributes, and presentational tags like  `center`  and  `font`, but that escalated quickly into a far from ideal situation.
+HTML 3.2 introduced the option of defining colors inline as HTML element attributes, and presentational tags like `center` and `font`, but that escalated quickly into a far from ideal situation.
 
 CSS let us move everything presentation-related from the HTML to the CSS, so that HTML could get back being the format that defines the structure of the document, rather than how things should look in the browser.
 
@@ -180,7 +177,7 @@ It’s hard to imagine the times when CSS was born and how different the web was
 
 At the time, we had several competing browsers, the main ones being Internet Explorer or Netscape Navigator.
 
-Pages were styled by using HTML, with special presentational tags like  `bold`  and special attributes, most of which are now deprecated.
+Pages were styled by using HTML, with special presentational tags like `bold` and special attributes, most of which are now deprecated.
 
 This meant you had a limited amount of customisation opportunities.
 
@@ -196,13 +193,13 @@ CSS Level 2 (“CSS 2”) got published in 1998.
 
 Since then, work began on CSS Level 3. The CSS Working Group decided to split every feature and work on it separately, in modules.
 
-Browsers weren’t especially fast at implementing CSS. We had to wait until 2002 to have the first browser implement the full CSS specification: IE for Mac, as nicely described in this CSS Tricks post:  [https://css-tricks.com/look-back-history-css/][50]
+Browsers weren’t especially fast at implementing CSS. We had to wait until 2002 to have the first browser implement the full CSS specification: IE for Mac, as nicely described in this CSS Tricks post: [https://css-tricks.com/look-back-history-css/][50]
 
 Internet Explorer implemented the box model incorrectly right from the start, which led to years of pain trying to have the same style applied consistently across browsers. We had to use various tricks and hacks to make browsers render things as we wanted.
 
 Today things are much, much better. We can just use the CSS standards without thinking about quirks, most of the time, and CSS has never been more powerful.
 
-We don’t have official release numbers for CSS any more now, but the CSS Working Group releases a “snapshot” of the modules that are currently considered stable and ready to be included in browsers. This is the latest snapshot, from 2018:  [https://www.w3.org/TR/css-2018/][51]
+We don’t have official release numbers for CSS any more now, but the CSS Working Group releases a “snapshot” of the modules that are currently considered stable and ready to be included in browsers. This is the latest snapshot, from 2018: [https://www.w3.org/TR/css-2018/][51]
 
 CSS Level 2 is still the base for the CSS we write today, and we have many more features built on top of it.
 
@@ -210,25 +207,25 @@ CSS Level 2 is still the base for the CSS we write today, and we have many more 
 
 CSS is attached to an HTML page in different ways.
 
-#### 1: Using the  `link`  tag
+#### 1: Using the `link` tag
 
-The  `link`  tag is the way to include a CSS file. This is the preferred way to use CSS as it's intended to be used: one CSS file is included by all the pages of your site, and changing one line on that file affects the presentation of all the pages in the site.
+The `link` tag is the way to include a CSS file. This is the preferred way to use CSS as it's intended to be used: one CSS file is included by all the pages of your site, and changing one line on that file affects the presentation of all the pages in the site.
 
-To use this method, you add a  `link`  tag with the  `href`  attribute pointing to the CSS file you want to include. You add it inside the  `head`  tag of the site (not inside the  `body`  tag):
+To use this method, you add a `link` tag with the `href` attribute pointing to the CSS file you want to include. You add it inside the `head` tag of the site (not inside the `body` tag):
 
 ```html
-<link rel="stylesheet" type="text/css" href="myfile.css">
+<link rel="stylesheet" type="text/css" href="myfile.css" />
 ```
 
-The  `rel`  and  `type`  attributes are required too, as they tell the browser which kind of file we are linking to.
+The `rel` and `type` attributes are required too, as they tell the browser which kind of file we are linking to.
 
-#### 2: using the  `style`  tag
+#### 2: using the `style` tag
 
-Instead of using the  `link`  tag to point to separate stylesheet containing our CSS, we can add the CSS directly inside a  `style`  tag. This is the syntax:
+Instead of using the `link` tag to point to separate stylesheet containing our CSS, we can add the CSS directly inside a `style` tag. This is the syntax:
 
 ```html
 <style>
-...our CSS...
+    ...our CSS...;
 </style>
 ```
 
@@ -236,7 +233,7 @@ Using this method we can avoid creating a separate CSS file. I find this is a go
 
 #### 3: inline styles
 
-Inline styles are the third way to add CSS to a page. We can add a  `style`  attribute to any HTML tag, and add CSS into it.
+Inline styles are the third way to add CSS to a page. We can add a `style` attribute to any HTML tag, and add CSS into it.
 
 ```
 <div style="">...</div>
@@ -254,25 +251,25 @@ A selector allows us to associate one or more declarations to one or more elemen
 
 #### Basic selectors
 
-Suppose we have a  `p`  element on the page, and we want to display the words into it using the yellow color.
+Suppose we have a `p` element on the page, and we want to display the words into it using the yellow color.
 
-We can  **target**  that element using this selector  `p`, which targets all the element using the  `p`  tag in the page. A simple CSS rule to achieve what we want is:
+We can **target** that element using this selector `p`, which targets all the element using the `p` tag in the page. A simple CSS rule to achieve what we want is:
 
 ```css
 p {
-  color: yellow;
+    color: yellow;
 }
 ```
 
-Every HTML tag has a corresponding selector, for example:  `div`,  `span`,  `img`.
+Every HTML tag has a corresponding selector, for example: `div`, `span`, `img`.
 
 If a selector matches multiple elements, all the elements in the page will be affected by the change.
 
-HTML elements have 2 attributes which are very commonly used within CSS to associate styling to a specific element on the page:  `class`  and  `id`.
+HTML elements have 2 attributes which are very commonly used within CSS to associate styling to a specific element on the page: `class` and `id`.
 
-There is one big difference between those two: inside an HTML document you can repeat the same  `class`  value across multiple elements, but you can only use an  `id`  once. As a corollary, using classes you can select an element with 2 or more specific class names, something not possible using ids.
+There is one big difference between those two: inside an HTML document you can repeat the same `class` value across multiple elements, but you can only use an `id` once. As a corollary, using classes you can select an element with 2 or more specific class names, something not possible using ids.
 
-Classes are identified using the  `.`  symbol, while ids using the  `#`  symbol.
+Classes are identified using the `.` symbol, while ids using the `#` symbol.
 
 Example using a class:
 
@@ -322,7 +319,7 @@ Why would you want to do that, if the class or id already provides a way to targ
 
 #### Targeting multiple classes
 
-You can target an element with a specific class using  `.class-name`, as you saw previously. You can target an element with 2 (or more) classes by combining the class names separated with a dot, without spaces.
+You can target an element with a specific class using `.class-name`, as you saw previously. You can target an element with 2 (or more) classes by combining the class names separated with a dot, without spaces.
 
 Example:
 
@@ -367,7 +364,7 @@ You can add spaces in those declarations to make them more clear:
 ```css
 p,
 .dog-name {
-  color: yellow;
+    color: yellow;
 }
 ```
 
@@ -375,7 +372,7 @@ p,
 
 We’ve seen how to target an element in the page by using a tag name, a class or an id.
 
-You can create a more specific selector by combining multiple items to follow the document tree structure. For example, if you have a  `span`  tag nested inside a  `p`  tag, you can target that one without applying the style to a  `span`  tag not included in a  `p`  tag:
+You can create a more specific selector by combining multiple items to follow the document tree structure. For example, if you have a `span` tag nested inside a `p` tag, you can target that one without applying the style to a `span` tag not included in a `p` tag:
 
 ```css
 <span>
@@ -390,46 +387,42 @@ You can create a more specific selector by combining multiple items to follow th
 
 ```
 
-See how we used a space between the two tokens  `p`  and  `span`.
+See how we used a space between the two tokens `p` and `span`.
 
 This works even if the element on the right is multiple levels deep.
 
-To make the dependency strict on the first level, you can use the  `>`  symbol between the two tokens:
+To make the dependency strict on the first level, you can use the `>` symbol between the two tokens:
 
 ```css
 p > span {
-  color: yellow;
+    color: yellow;
 }
 ```
 
-In this case, if a  `span`  is not a first children of the  `p`  element, it's not going to have the new color applied.
+In this case, if a `span` is not a first children of the `p` element, it's not going to have the new color applied.
 
 Direct children will have the style applied:
 
 ```html
 <p>
-  <span>
-    This is yellow
-  </span>
-  <strong>
-    <span>
-      This is not yellow
-    </span>
-  </strong>
+    <span> This is yellow </span>
+    <strong>
+        <span> This is not yellow </span>
+    </strong>
 </p>
 ```
 
-Adjacent sibling selectors let us style an element only if preceded by a specific element. We do so using the  `+`  operator:
+Adjacent sibling selectors let us style an element only if preceded by a specific element. We do so using the `+` operator:
 
 Example:
 
 ```css
 p + span {
-  color: yellow;
+    color: yellow;
 }
 ```
 
-This will assign the color yellow to all span elements preceded by a  `p`  element:
+This will assign the color yellow to all span elements preceded by a `p` element:
 
 ```html
 <p>This is a paragraph</p>
@@ -480,30 +473,28 @@ What happens when an element is targeted by multiple rules, with different selec
 For example, let’s talk about this element:
 
 ```html
-<p class="dog-name">
-  Roger
-</p>
+<p class="dog-name">Roger</p>
 ```
 
 We can have
 
 ```css
 .dog-name {
-  color: yellow;
+    color: yellow;
 }
 ```
 
-and another rule that targets  `p`, which sets the color to another value:
+and another rule that targets `p`, which sets the color to another value:
 
 ```css
 p {
-  color: red;
+    color: red;
 }
 ```
 
-And another rule that targets  `p.dog-name`. Which rule is going to take precedence over the others, and why?
+And another rule that targets `p.dog-name`. Which rule is going to take precedence over the others, and why?
 
-Enter specificity.  **The more specific rule will win**. If two or more rules have the  **same specificity, the one that appears last wins**.
+Enter specificity. **The more specific rule will win**. If two or more rules have the **same specificity, the one that appears last wins**.
 
 Sometimes what is more specific in practice is a bit confusing to beginners. I would say it’s also confusing to experts that do not look at those rules that frequently, or simply overlook them.
 
@@ -511,15 +502,15 @@ Sometimes what is more specific in practice is a bit confusing to beginners. I w
 
 Specificity is calculated using a convention.
 
-We have 4 slots, and each one of them starts at 0:  `0 0 0 0 0`. The slot at the left is the most important, and the rightmost one is the least important.
+We have 4 slots, and each one of them starts at 0: `0 0 0 0 0`. The slot at the left is the most important, and the rightmost one is the least important.
 
-Like it works for numbers in the decimal system:  `1 0 0 0`  is higher than  `0 1 0 0`.
+Like it works for numbers in the decimal system: `1 0 0 0` is higher than `0 1 0 0`.
 
 #### Slot 1
 
 The first slot, the rightmost one, is the least important.
 
-We increase this value when we have an  **element selector**. An element is a tag name. If you have more than one element selector in the rule, you increment accordingly the value stored in this slot.
+We increase this value when we have an **element selector**. An element is a tag name. If you have more than one element selector in the rule, you increment accordingly the value stored in this slot.
 
 Examples:
 
@@ -543,72 +534,63 @@ _Every time a rule meets one of those, we increment the value of the second colu
 
 _Examples:_
 
-_`.name {}                 /`_ `0 0 1 0 _/
-.users .name {}          /_ 0 0 2 0 _/
-[href$='.pdf'] {}        /_ 0 0 1 0 _/
-:hover {}                /_ 0 0 1 0 _/_`
+_`.name {} /`_ `0 0 1 0 _/ .users .name {} /_ 0 0 2 0 _/ [href$='.pdf'] {} /_ 0 0 1 0 _/ :hover {} /_ 0 0 1 0 _/_`
 
 _Of course slot 2 selectors can be combined with slot 1 selectors:_
 
-_`div .name {}             /`_ `0 0 1 1 _/
-a[href$='.pdf'] {}       /_ 0 0 1 1 _/
-.pictures img:hover {}   /_ 0 0 2 1 _/_`
+_`div .name {} /`_ `0 0 1 1 _/ a[href$='.pdf'] {} /_ 0 0 1 1 _/ .pictures img:hover {} /_ 0 0 2 1 _/_`
 
 _One nice trick with classes is that you can repeat the same class and increase the specificity. For example:_
 
-_`.name {}              /`_ `0 0 1 0 _/
-.name.name {}         /_ 0 0 2 0 _/
-.name.name.name {}    /_ 0 0 3 0 _/_`
+_`.name {} /`_ `0 0 1 0 _/ .name.name {} /_ 0 0 2 0 _/ .name.name.name {} /_ 0 0 3 0 _/_`
 
 #### _Slot 3_
 
-_Slot 3 holds the most important thing that can affect your CSS specificity in a CSS file: the  `id`._
+_Slot 3 holds the most important thing that can affect your CSS specificity in a CSS file: the `id`._
 
-_Every element can have an  `id`  attribute assigned, and we can use that in our stylesheet to target the element._
+_Every element can have an `id` attribute assigned, and we can use that in our stylesheet to target the element._
 
 _Examples:_
 
-_`#name {}                    /`_ `0 1 0 0 _/
-.user #name {}              /_ 0 1 1 0 _/
-#name span {}               /_ 0 1 0 1 _/_`
+_`#name {} /`_ `0 1 0 0 _/ .user #name {} /_ 0 1 1 0 _/ #name span {} /_ 0 1 0 1 _/_`
 
 #### _Slot 4_
 
-_Slot 4 is affected by inline styles. Any inline style will have precedence over any rule defined in an external CSS file, or inside the  `style`  tag in the page header._
+_Slot 4 is affected by inline styles. Any inline style will have precedence over any rule defined in an external CSS file, or inside the `style` tag in the page header._
 
 _Example:_
 
 _`<p style="color: red">Test</p> /`_ `1 0 0 0 */`
 
-Even if any other rule in the CSS defines the color, this inline style rule is going to be applied. Except for one case — if  `!important`  is used, which fills the slot 5.
+Even if any other rule in the CSS defines the color, this inline style rule is going to be applied. Except for one case — if `!important` is used, which fills the slot 5.
 
 #### Importance
 
-Specificity does not matter if a rule ends with  `!important`:
+Specificity does not matter if a rule ends with `!important`:
 
 ```css
 p {
-  font-size: 20px!important;
+    font-size: 20px !important;
 }
 ```
 
 That rule will take precedence over any rule with more specificity
 
-Adding  `!important`  in a CSS rule is going to make that rule more important than any other rule, according to the specificity rules. The only way another rule can take precedence is to have  `!important`  as well, and have higher specificity in the other less important slots.
+Adding `!important` in a CSS rule is going to make that rule more important than any other rule, according to the specificity rules. The only way another rule can take precedence is to have `!important` as well, and have higher specificity in the other less important slots.
 
 #### Tips
 
 In general you should use the amount of specificity you need, but not more. In this way, you can craft other selectors to overwrite the rules set by preceding rules without going mad.
 
-`!important`  is a highly debated tool that CSS offers us. Many CSS experts advocate against using it. I find myself using it especially when trying out some style and a CSS rule has so much specificity that I need to use  `!important`  to make the browser apply my new CSS.
+`!important` is a highly debated tool that CSS offers us. Many CSS experts advocate against using it. I find myself using it especially when trying out some style and a CSS rule has so much specificity that I need to use `!important` to make the browser apply my new CSS.
 
-But generally,  `!important`  should have no place in your CSS files.
+But generally, `!important` should have no place in your CSS files.
 
-Using the  `id`  attribute to style CSS is also debated a lot, since it has a very high specificity. A good alternative is to use classes instead, which have less specificity, and so they are easier to work with, and they are more powerful (you can have multiple classes for an element, and a class can be reused multiple times).
+Using the `id` attribute to style CSS is also debated a lot, since it has a very high specificity. A good alternative is to use classes instead, which have less specificity, and so they are easier to work with, and they are more powerful (you can have multiple classes for an element, and a class can be reused multiple times).
 
 #### Tools to calculate the specificity
 
-You can use the site  [https://specificity.keegan.st/][52]  to perform the specificity calculation for you automatically.
+You can use the site [https://specificity.keegan.st/][52] to perform the specificity calculation for you automatically.
 
 It’s useful especially if you are trying to figure things out, as it can be a nice feedback tool.
 
@@ -616,15 +598,15 @@ It’s useful especially if you are trying to figure things out, as it can be a 
 
 When you set some properties on a selector in CSS, they are inherited by all the children of that selector.
 
-I said  _some_, because not all properties show this behaviour.
+I said _some_, because not all properties show this behaviour.
 
 This happens because some properties make sense to be inherited. This helps us write CSS much more concisely, since we don’t have to explicitly set that property again on every single child.
 
-Some other properties make more sense to  _not_  be inherited.
+Some other properties make more sense to _not_ be inherited.
 
-Think about fonts: you don’t need to apply the  `font-family`  to every single tag of your page. You set the  `body`  tag font, and every child inherits it, along with other properties.
+Think about fonts: you don’t need to apply the `font-family` to every single tag of your page. You set the `body` tag font, and every child inherits it, along with other properties.
 
-The  `background-color`  property, on the other hand, makes little sense to be inherited.
+The `background-color` property, on the other hand, makes little sense to be inherited.
 
 #### Properties that inherit
 
@@ -667,13 +649,13 @@ Here is a list of the properties that do inherit. The list is non-comprehensive,
 -   word-break
 -   word-spacing
 
-I got it from this  [nice Sitepoint article][53]  on CSS inheritance.
+I got it from this [nice Sitepoint article][53] on CSS inheritance.
 
 #### Forcing properties to inherit
 
 What if you have a property that’s not inherited by default, and you want it to, in a child?
 
-In the children, you set the property value to the special keyword  `inherit`.
+In the children, you set the property value to the special keyword `inherit`.
 
 Example:
 
@@ -681,37 +663,36 @@ Example:
 body {
     background-color: yellow;
 }
-
 ```
 
 #### Forcing properties to NOT inherit
 
 On the contrary, you might have a property inherited and you want to avoid so.
 
-You can use the  `revert`  keyword to revert it. In this case, the value is reverted to the original value the browser gave it in its default stylesheet.
+You can use the `revert` keyword to revert it. In this case, the value is reverted to the original value the browser gave it in its default stylesheet.
 
 In practice this is rarely used, and most of the times you’ll just set another value for the property to overwrite that inherited value.
 
 #### Other special values
 
-In addition to the  `inherit`  and  `revert`  special keywords we just saw, you can also set any property to:
+In addition to the `inherit` and `revert` special keywords we just saw, you can also set any property to:
 
 -   `initial`: use the default browser stylesheet if available. If not, and if the property inherits by default, inherit the value. Otherwise do nothing.
 -   `unset`: if the property inherits by default, inherit. Otherwise do nothing.
 
 ### IMPORT
 
-From any CSS file you can import another CSS file using the  `@import`  directive.
+From any CSS file you can import another CSS file using the `@import` directive.
 
 Here is how you use it:
 
 ```css
-@import url(myfile.css)
+@import url(myfile.css);
 ```
 
 url() can manage absolute or relative URLs.
 
-One important thing you need to know is that  `@import`  directives must be put before any other CSS in the file, or they will be ignored.
+One important thing you need to know is that `@import` directives must be put before any other CSS in the file, or they will be ignored.
 
 You can use media descriptors to only load a CSS file on the specific media:
 
@@ -731,7 +712,7 @@ In this section we’ll analyze attribute selectors, and we’ll talk about pseu
 
 The first selector type is the attribute presence selector.
 
-We can check if an element  **has**  an attribute using the  `[]`  syntax.  `p[id]`  will select all  `p`tags in the page that have an  `id`  attribute, regardless of its value:
+We can check if an element **has** an attribute using the `[]` syntax. `p[id]` will select all `p`tags in the page that have an `id` attribute, regardless of its value:
 
 ```css
 p[id] {
@@ -741,31 +722,29 @@ p[id] {
 
 #### _Exact attribute value selectors_
 
-_Inside the brackets you can check the attribute value using  `=`, and the CSS will be applied only if the attribute matches the exact value specified:_
+_Inside the brackets you can check the attribute value using `=`, and the CSS will be applied only if the attribute matches the exact value specified:_
 
-_`p[id="my-id"] {
-  /`_ `... _/
-}_`
+_`p[id="my-id"] { /`_ `... _/ }_`
 
 #### _Match an attribute value portion_
 
-_While  `=`  lets us check for exact value, we have other operators:_
+_While `=` lets us check for exact value, we have other operators:_
 
--   `=`  checks if the attribute contains the partial
--   `^=`  checks if the attribute starts with the partial
--   `$=`  checks if the attribute ends with the partial
--   `|=`  checks if the attribute starts with the partial and it's followed by a dash (common in classes, for example), or just contains the partial
--   `~=`  checks if the partial is contained in the attribute, but separated by spaces from the rest
+-   `=` checks if the attribute contains the partial
+-   `^=` checks if the attribute starts with the partial
+-   `$=` checks if the attribute ends with the partial
+-   `|=` checks if the attribute starts with the partial and it's followed by a dash (common in classes, for example), or just contains the partial
+-   `~=` checks if the partial is contained in the attribute, but separated by spaces from the rest
 
-All the checks we mentioned are  **case sensitive**.
+All the checks we mentioned are **case sensitive**.
 
-If you add an  `i`  just before the closing bracket, the check will be case insensitive. It's supported in many browsers but not in all, check  [https://caniuse.com/#feat=css-case-insensitive][54].
+If you add an `i` just before the closing bracket, the check will be case insensitive. It's supported in many browsers but not in all, check [https://caniuse.com/#feat=css-case-insensitive][54].
 
 ### PSEUDO-CLASSES
 
-Pseudo classes are predefined keywords that are used to select an element based on its  **state**, or to target a specific child.
+Pseudo classes are predefined keywords that are used to select an element based on its **state**, or to target a specific child.
 
-They start with a  **single colon**  `:`.
+They start with a **single colon** `:`.
 
 They can be used as part of a selector, and they are very useful to style active or visited links, for example, change the style on hover, focus, or target the first child, or odd rows. Very handy in many cases.
 
@@ -773,11 +752,11 @@ These are the most popular pseudo classes you will likely use:
 
 ![](https://cdn-media-1.freecodecamp.org/images/ACo1IxL9QFOQvDYkMigh3FXw717fjM2ChP3w)
 
-Let’s do an example. A common one, actually. You want to style a link, so you create a CSS rule to target the  `a`  element:
+Let’s do an example. A common one, actually. You want to style a link, so you create a CSS rule to target the `a` element:
 
 ```css
 a {
-  color: yellow;
+    color: yellow;
 }
 ```
 
@@ -785,7 +764,7 @@ Things seem to work fine, until you click one link. The link goes back to the pr
 
 Why does that happen?
 
-Because the link when clicked changes state, and goes in the  `:active`  state. And when it's been visited, it is in the  `:visited`  state. Forever, until the user clears the browsing history.
+Because the link when clicked changes state, and goes in the `:active` state. And when it's been visited, it is in the `:visited` state. Forever, until the user clears the browsing history.
 
 So, to correctly make the link yellow across all states, you need to write
 
@@ -793,34 +772,34 @@ So, to correctly make the link yellow across all states, you need to write
 a,
 a:visited,
 a:active {
-  color: yellow;
+    color: yellow;
 }
 ```
 
-`:nth-child()`  deserves a special mention. It can be used to target odd or even children with  `:nth-child(odd)`  and  `:nth-child(even)`.
+`:nth-child()` deserves a special mention. It can be used to target odd or even children with `:nth-child(odd)` and `:nth-child(even)`.
 
 It is commonly used in lists to color odd lines differently from even lines:
 
 ```css
 ul:nth-child(odd) {
-  color: white;
+    color: white;
     background-color: black;
 }
 ```
 
-You can also use it to target the first 3 children of an element with  `:nth-child(-n+3)`. Or you can style 1 in every 5 elements with  `:nth-child(5n)`.
+You can also use it to target the first 3 children of an element with `:nth-child(-n+3)`. Or you can style 1 in every 5 elements with `:nth-child(5n)`.
 
-Some pseudo classes are just used for printing, like  `:first`,  `:left`,  `:right`, so you can target the first page, all the left pages, and all the right pages, which are usually styled slightly differently.
+Some pseudo classes are just used for printing, like `:first`, `:left`, `:right`, so you can target the first page, all the left pages, and all the right pages, which are usually styled slightly differently.
 
 ### PSEUDO-ELEMENTS
 
 #### Pseudo-elements are used to style a specific part of an element.
 
-They start with a double colon  `::`.
+They start with a double colon `::`.
 
 > _Sometimes you will spot them in the wild with a single colon, but this is only a syntax supported for backwards compatibility reasons. You should use 2 colons to distinguish them from pseudo-classes._
 
-`::before`  and  `::after`  are probably the most used pseudo-elements. They are used to add content before or after an element, like icons for example.
+`::before` and `::after` are probably the most used pseudo-elements. They are used to add content before or after an element, like icons for example.
 
 Here’s the list of the pseudo-elements:
 
@@ -830,7 +809,7 @@ Let’s do an example. Say you want to make the first line of a paragraph slight
 
 ```css
 p::first-line {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 ```
 
@@ -838,19 +817,18 @@ Or maybe you want the first letter to be bolder:
 
 ```css
 p::first-letter {
-  font-weight: bolder;
+    font-weight: bolder;
 }
 ```
 
-`::after`  and  `::before`  are a bit less intuitive. I remember using them when I had to add icons using CSS.
+`::after` and `::before` are a bit less intuitive. I remember using them when I had to add icons using CSS.
 
-You specify the  `content`  property to insert any kind of content after or before an element:
+You specify the `content` property to insert any kind of content after or before an element:
 
 ```css
 p::before {
-  content: url(/myimage.png);
+    content: url(/myimage.png);
 }
-
 ```
 
 ### COLORS
@@ -867,7 +845,7 @@ We have these properties:
 -   `background-color`
 -   `border-color`
 
-All of them accept a  **color value**, which can be in different forms.
+All of them accept a **color value**, which can be in different forms.
 
 #### Named colors
 
@@ -1022,26 +1000,26 @@ First, we have CSS keywords that define colors. CSS started with 16, but today t
 -   `yellow`
 -   `yellowgreen`
 
-plus  `tranparent`, and  `currentColor`  which points to the  `color`  property, for example it’s useful to make the  `border-color`  inherit it.
+plus `tranparent`, and `currentColor` which points to the `color` property, for example it’s useful to make the `border-color` inherit it.
 
-They are defined in the  [CSS Color Module, Level 4][55]. They are case insensitive.
+They are defined in the [CSS Color Module, Level 4][55]. They are case insensitive.
 
-Wikipedia has a  [nice table][56]  which lets you pick the perfect color by its name.
+Wikipedia has a [nice table][56] which lets you pick the perfect color by its name.
 
 Named colors are not the only option.
 
 ### RGB and RGBa
 
-You can use the  `rgb()`  function to calculate a color from its RGB notation, which sets the color based on its red-green-blue parts. From 0 to 255:
+You can use the `rgb()` function to calculate a color from its RGB notation, which sets the color based on its red-green-blue parts. From 0 to 255:
 
 ```css
 p {
-  color: rgb(255, 255, 255); /* white /
+    color: rgb(255, 255, 255); /* white /
     background-color: rgb(0, 0, 0); / black */
 }
 ```
 
-`rgba()`  lets you add the alpha channel to enter a transparent part. That can be a number from 0 to 1:
+`rgba()` lets you add the alpha channel to enter a transparent part. That can be a number from 0 to 1:
 
 ```css
 p {
@@ -1053,13 +1031,13 @@ p {
 
 Another option is to express the RGB parts of the colors in the hexadecimal notation, which is composed by 3 blocks.
 
-Black, which is  `rgb(0,0,0)`  is expressed as  `#000000`  or  `#000`  (we can shortcut the 2 numbers to 1 if they are equal).
+Black, which is `rgb(0,0,0)` is expressed as `#000000` or `#000` (we can shortcut the 2 numbers to 1 if they are equal).
 
-White,  `rgb(255,255,255)`  can be expressed as  `#ffffff`  or  `#fff`.
+White, `rgb(255,255,255)` can be expressed as `#ffffff` or `#fff`.
 
 The hexadecimal notation lets us express a number from 0 to 255 in just 2 digits, since they can go from 0 to “15” (f).
 
-We can add the alpha channel by adding 1 or 2 more digits at the end, for example  `#00000033`. Not all browsers support the shortened notation, so use all 6 digits to express the RGB part.
+We can add the alpha channel by adding 1 or 2 more digits at the end, for example `#00000033`. Not all browsers support the shortened notation, so use all 6 digits to express the RGB part.
 
 #### HSL and HSLa
 
@@ -1067,17 +1045,17 @@ This is a more recent addition to CSS.
 
 HSL = Hue Saturation Lightness.
 
-In this notation, black is  `hsl(0, 0%, 0%)`  and white is  `hsl(0, 0%, 100%)`.
+In this notation, black is `hsl(0, 0%, 0%)` and white is `hsl(0, 0%, 100%)`.
 
 If you are more familiar with HSL than RGB because of your past knowledge, you can definitely use that.
 
-You also have  `hsla()`  which adds the alpha channel to the mix, again a number from 0 to 1:  `hsl(0, 0%, 0%, 0.5)`
+You also have `hsla()` which adds the alpha channel to the mix, again a number from 0 to 1: `hsl(0, 0%, 0%, 0.5)`
 
 ### UNITS
 
 One of the things you’ll use every day in CSS are units. They are used to set lengths, paddings, margins, align elements and so on.
 
-Things like  `px`,  `em`,  `rem`, or percentages.
+Things like `px`, `em`, `rem`, or percentages.
 
 They are everywhere. There are some obscure ones, too. We’ll go through each of them in this section.
 
@@ -1095,94 +1073,81 @@ Example:
 
 ```css
 .parent {
-  width: 400px;
+    width: 400px;
 }
-
 ```
 
 #### _Real-world measurement units_
 
 _We have those measurement units which are translated from the outside world. Mostly useless on screen, they can be useful for print stylesheets. They are:_
 
--   _`cm`  a centimeter (maps to 37.8 pixels)_
--   _`mm`  a millimeter (0.1cm)_
--   _`q`  a quarter of a millimeter_
--   _`in`  an inch (maps to 96 pixels)_
--   _`pt`  a point (1 inch = 72 points)_
--   _`pc`  a pica (1 pica = 12 points)_
+-   _`cm` a centimeter (maps to 37.8 pixels)_
+-   _`mm` a millimeter (0.1cm)_
+-   _`q` a quarter of a millimeter_
+-   _`in` an inch (maps to 96 pixels)_
+-   _`pt` a point (1 inch = 72 points)_
+-   _`pc` a pica (1 pica = 12 points)_
 
 #### _Relative units_
 
--   _`em`  is the value assigned to that element's  `font-size`, therefore its exact value changes between elements. It does not change depending on the font used, just on the font size. In typography this measures the width of the  `m`  letter._
--   _`rem`  is similar to  `em`, but instead of varying on the current element font size, it uses the root element (`html`) font size. You set that font size once, and  `rem`  will be a consistent measure across all the page._
--   _`ex`  is like  `em`, but inserted of measuring the width of  `m`, it measures the height of the  `x`  letter. It can change depending on the font used, and on the font size._
--   _`ch`  is like  `ex`  but instead of measuring the height of  `x`  it measures the width of  `0`  (zero)._
+-   _`em` is the value assigned to that element's `font-size`, therefore its exact value changes between elements. It does not change depending on the font used, just on the font size. In typography this measures the width of the `m` letter._
+-   _`rem` is similar to `em`, but instead of varying on the current element font size, it uses the root element (`html`) font size. You set that font size once, and `rem` will be a consistent measure across all the page._
+-   _`ex` is like `em`, but inserted of measuring the width of `m`, it measures the height of the `x` letter. It can change depending on the font used, and on the font size._
+-   _`ch` is like `ex` but instead of measuring the height of `x` it measures the width of `0` (zero)._
 
 #### _Viewport units_
 
--   _`vw`  the  **viewport width unit**  represents a percentage of the viewport width.  `50vw`  means 50% of the viewport width._
--   _`vh`  the  **viewport height unit**  represents a percentage of the viewport height.  `50vh`  means 50% of the viewport height._
--   _`vmin`  the  **viewport minimum unit**  represents the minimum between the height or width in terms of percentage.  `30vmin`  is the 30% of the current width or height, depending which one is smaller_
--   _`vmax`  the  **viewport maximum unit**  represents the maximum between the height or width in terms of percentage.  `30vmax`  is the 30% of the current width or height, depending which one is bigger_
+-   _`vw` the **viewport width unit** represents a percentage of the viewport width. `50vw` means 50% of the viewport width._
+-   _`vh` the **viewport height unit** represents a percentage of the viewport height. `50vh` means 50% of the viewport height._
+-   _`vmin` the **viewport minimum unit** represents the minimum between the height or width in terms of percentage. `30vmin` is the 30% of the current width or height, depending which one is smaller_
+-   _`vmax` the **viewport maximum unit** represents the maximum between the height or width in terms of percentage. `30vmax` is the 30% of the current width or height, depending which one is bigger_
 
 #### _Fraction units_
 
-_`fr`  are fraction units, and they are used in CSS Grid to divide space into fractions._
+_`fr` are fraction units, and they are used in CSS Grid to divide space into fractions._
 
 _We’ll talk about them in the context of CSS Grid later on._
 
 ### _URL_
 
-_When we talk about background images,  `@import`, and more, we use the  `url()`  function to load a resource:_
+_When we talk about background images, `@import`, and more, we use the `url()` function to load a resource:_
 
-_`div {
-  background-image: url(test.png);
-}`_
+_`div { background-image: url(test.png); }`_
 
 _In this case I used a relative URL, which searches the file in the folder where the CSS file is defined._
 
 _I could go one level back_
 
-_`div {
-  background-image: url(../test.png);
-}`_
+_`div { background-image: url(../test.png); }`_
 
 _or go into a folder_
 
-_`div {
-  background-image: url(subfolder/test.png);
-}`_
+_`div { background-image: url(subfolder/test.png); }`_
 
 _Or I could load a file starting from the root of the domain where the CSS is hosted:_
 
-_`div {
-  background-image: url(/test.png);
-}`_
+_`div { background-image: url(/test.png); }`_
 
 _Or I could use an absolute URL to load an external resource:_
 
-_`div {
-  background-image: url([https://mysite.com/test.png][57]);
-}`_
+_`div { background-image: url([https://mysite.com/test.png][57]); }`_
 
 ### _CALC_
 
-_The  `calc()`  function lets you perform basic math operations on values, and it's especially useful when you need to add or subtract a length value from a percentage._
+_The `calc()` function lets you perform basic math operations on values, and it's especially useful when you need to add or subtract a length value from a percentage._
 
 _This is how it works:_
 
-_`div {
-    max-width: calc(80% - 100px)
-}`_
+_`div { max-width: calc(80% - 100px) }`_
 
 _It returns a length value, so it can be used anywhere you expect a pixel value._
 
 _You can perform_
 
--   _additions using  `+`_
--   _subtractions using  `-`_
+-   _additions using `+`_
+-   _subtractions using `-`_
 -   _multiplication using_
--   division using  `/`
+-   division using `/`
 
 > _One caveat: with addition and subtraction, the space around the operator is mandatory, otherwise it does not work as expected._
 
@@ -1190,9 +1155,8 @@ Examples:
 
 ```css
 div {
-    max-width: calc(50% / 3)
+    max-width: calc(50% / 3);
 }
-
 ```
 
 ### BACKGROUNDS
@@ -1208,66 +1172,65 @@ The background of an element can be changed using several CSS properties:
 -   `background-attachment`
 -   `background-size`
 
-and the shorthand property  `background`, which allows us to shorten definitions and group them on a single line.
+and the shorthand property `background`, which allows us to shorten definitions and group them on a single line.
 
-`background-color`  accepts a color value, which can be one of the color keywords, or an  `rgb`  or  `hsl`  value:
+`background-color` accepts a color value, which can be one of the color keywords, or an `rgb` or `hsl` value:
 
 ```css
 p {
-  background-color: yellow;
+    background-color: yellow;
 }
-
 ```
 
 Instead of using a color, you can use an image as background to an element, by specifying the image location URL:
 
 ```css
 div {
-  background-image: url(image.png);
+    background-image: url(image.png);
 }
 ```
 
-`background-clip`  lets you determine the area used by the background image, or color. The default value is  `border-box`, which extends up to the border outer edge.
+`background-clip` lets you determine the area used by the background image, or color. The default value is `border-box`, which extends up to the border outer edge.
 
 Other values are
 
--   `padding-box`  to extend the background up to the padding edge, without the border
--   `content-box`  to extend the background up to the content edge, without the padding
--   `inherit`  to apply the value of the parent
+-   `padding-box` to extend the background up to the padding edge, without the border
+-   `content-box` to extend the background up to the content edge, without the padding
+-   `inherit` to apply the value of the parent
 
-When using an image as background you will want to set the position of the image placement using the  `background-position`  property:  `left`,  `right`,  `center`  are all valid values for the X axis, and  `top`,  `bottom`  for the Y axis:
-
-```css
-div {
-  background-position: top right;
-}
-```
-
-If the image is smaller than the background, you need to set the behavior using  `background-repeat`. Should it  `repeat-x`,  `repeat-y`  or  `repeat`  on all the axes? This last one is the default value. Another value is  `no-repeat`.
-
-`background-origin`  lets you choose where the background should be applied: to the entire element including padding (default) using  `padding-box`, to the entire element including the border using  `border-box`, to the element without the padding using  `content-box`.
-
-With  `background-attachment`  we can attach the background to the viewport, so that scrolling will not affect the background:
+When using an image as background you will want to set the position of the image placement using the `background-position` property: `left`, `right`, `center` are all valid values for the X axis, and `top`, `bottom` for the Y axis:
 
 ```css
 div {
-  background-attachment: fixed;
+    background-position: top right;
 }
 ```
 
-By default the value is  `scroll`. There is another value,  `local`. The best way to visualize their behavior is  [this Codepen][58].
+If the image is smaller than the background, you need to set the behavior using `background-repeat`. Should it `repeat-x`, `repeat-y` or `repeat` on all the axes? This last one is the default value. Another value is `no-repeat`.
 
-The last background property is  `background-size`. We can use 3 keywords:  `auto`,  `cover`  and  `contain`.  `auto`  is the default.
+`background-origin` lets you choose where the background should be applied: to the entire element including padding (default) using `padding-box`, to the entire element including the border using `border-box`, to the element without the padding using `content-box`.
 
-`cover`  expands the image until the entire element is covered by the background.
+With `background-attachment` we can attach the background to the viewport, so that scrolling will not affect the background:
 
-`contain`  stops expanding the background image when one dimension (x or y) covers the whole smallest edge of the image, so it's fully contained into the element.
+```css
+div {
+    background-attachment: fixed;
+}
+```
+
+By default the value is `scroll`. There is another value, `local`. The best way to visualize their behavior is [this Codepen][58].
+
+The last background property is `background-size`. We can use 3 keywords: `auto`, `cover` and `contain`. `auto` is the default.
+
+`cover` expands the image until the entire element is covered by the background.
+
+`contain` stops expanding the background image when one dimension (x or y) covers the whole smallest edge of the image, so it's fully contained into the element.
 
 You can also specify a length value, and if so it sets the width of the background image (and the height is automatically defined):
 
 ```css
 div {
-  background-size: 100%;
+    background-size: 100%;
 }
 ```
 
@@ -1275,17 +1238,17 @@ If you specify 2 values, one is the width and the second is the height:
 
 ```css
 div {
-  background-size: 800px 600px;
+    background-size: 800px 600px;
 }
 ```
 
-The shorthand property  `background`  allows to shorten definitions and group them on a single line.
+The shorthand property `background` allows to shorten definitions and group them on a single line.
 
 This is an example:
 
 ```css
 div {
-  background: url(bg.png) top left no-repeat;
+    background: url(bg.png) top left no-repeat;
 }
 ```
 
@@ -1293,7 +1256,7 @@ If you use an image, and the image could not be loaded, you can set a fallback c
 
 ```css
 div {
-  background: url(image.png) yellow;
+    background: url(image.png) yellow;
 }
 ```
 
@@ -1301,29 +1264,30 @@ You can also set a gradient as background:
 
 ```css
 div {
-  background: linear-gradient(#fff, #333);
+    background: linear-gradient(#fff, #333);
 }
 ```
 
 ### COMMENTS
 
-CSS gives you the ability to write comments in a CSS file, or in the  `style`  tag in the page header
+CSS gives you the ability to write comments in a CSS file, or in the `style` tag in the page header
 
-The format is the  `/* this is a comment _/_` _C-style (or JavaScript-style, if you prefer) comments._
+The format is the `/* this is a comment _/_` _C-style (or JavaScript-style, if you prefer) comments._
 
-_This is a multiline comment. Until you add the closing_ `/`  token, the all the lines found after the opening one are commented.
+_This is a multiline comment. Until you add the closing_ `/` token, the all the lines found after the opening one are commented.
 
 Example:
 
 ```css
-#name { display: block; } /* Nice rule! */
+#name {
+    display: block;
+} /* Nice rule! */
 /* #name { display: block; } */
-
 ```
 
-CSS does not have inline comments, like  `//`  in C or JavaScript.
+CSS does not have inline comments, like `//` in C or JavaScript.
 
-Pay attention though — if you add  `//`  before a rule, the rule will not be applied, looking like the comment worked. In reality, CSS detected a syntax error and due to how it works it ignored the line with the error, and went straight to the next line.
+Pay attention though — if you add `//` before a rule, the rule will not be applied, looking like the comment worked. In reality, CSS detected a syntax error and due to how it works it ignored the line with the error, and went straight to the next line.
 
 Knowing this approach lets you purposefully write inline comments, although you have to be careful because you can’t add random text like you can in a block comment.
 
@@ -1331,10 +1295,12 @@ For example:
 
 ```css
 // Nice rule!
-#name { display: block; }
+#name {
+    display: block;
+}
 ```
 
-In this case, due to how CSS works, the  `#name`  rule is actually commented out. You can find more details  [here][59]  if you find this interesting. To avoid shooting yourself in the foot, just avoid using inline comments and rely on block comments.
+In this case, due to how CSS works, the `#name` rule is actually commented out. You can find more details [here][59] if you find this interesting. To avoid shooting yourself in the foot, just avoid using inline comments and rely on block comments.
 
 ### CUSTOM PROPERTIES
 
@@ -1346,31 +1312,31 @@ The main benefits of those technologies are, in my opinion:
 -   The provide an easy imports functionality
 -   They give you variables
 
-Modern CSS has a new powerful feature called  **CSS Custom Properties**, also commonly known as  **CSS Variables**.
+Modern CSS has a new powerful feature called **CSS Custom Properties**, also commonly known as **CSS Variables**.
 
-CSS is not a programming language like  [JavaScript][60], Python, PHP, Ruby or Go where variables are key to do something useful. CSS is very limited in what it can do, and it’s mainly a declarative syntax to tell browsers how they should display an HTML page.
+CSS is not a programming language like [JavaScript][60], Python, PHP, Ruby or Go where variables are key to do something useful. CSS is very limited in what it can do, and it’s mainly a declarative syntax to tell browsers how they should display an HTML page.
 
 But a variable is a variable: a name that refers to a value, and variables in CSS help reduce repetition and inconsistencies in your CSS, by centralizing the values definition.
 
-And it introduces a unique feature that CSS preprocessors won’t ever have:  **you can access and change the value of a CSS Variable programmatically using JavaScript**.
+And it introduces a unique feature that CSS preprocessors won’t ever have: **you can access and change the value of a CSS Variable programmatically using JavaScript**.
 
 #### The basics of using variables
 
-A CSS Variable is defined with a special syntax, prepending  **two dashes**  to a name (`--variable-name`), then a colon and a value. Like this:
+A CSS Variable is defined with a special syntax, prepending **two dashes** to a name (`--variable-name`), then a colon and a value. Like this:
 
 ```css
 :root {
-  --primary-color: yellow;
+    --primary-color: yellow;
 }
 ```
 
-(more on  `:root`  later)
+(more on `:root` later)
 
-You can access the variable value using  `var()`:
+You can access the variable value using `var()`:
 
 ```css
 p {
-  color: var(--primary-color)
+    color: var(--primary-color);
 }
 ```
 
@@ -1378,9 +1344,9 @@ The variable value can be any valid CSS value, for example:
 
 ```css
 :root {
-  --default-padding: 30px 30px 20px 20px;
-  --default-color: red;
-  --default-background: #fff;
+    --default-padding: 30px 30px 20px 20px;
+    --default-color: red;
+    --default-background: #fff;
 }
 ```
 
@@ -1390,71 +1356,69 @@ CSS Variables can be defined inside any element. Some examples:
 
 ```css
 :root {
-  --default-color: red;
+    --default-color: red;
 }
 body {
-  --default-color: red;
+    --default-color: red;
 }
 main {
-  --default-color: red;
+    --default-color: red;
 }
 p {
-  --default-color: red;
+    --default-color: red;
 }
 span {
-  --default-color: red;
+    --default-color: red;
 }
-
 ```
 
-What changes in those different examples is the  **scope**.
+What changes in those different examples is the **scope**.
 
 #### Variables scope
 
 Adding variables to a selector makes them available to all the children of it.
 
-In the example above you saw the use of  `:root`  when defining a CSS variable:
+In the example above you saw the use of `:root` when defining a CSS variable:
 
 ```css
 :root {
-  --primary-color: yellow;
+    --primary-color: yellow;
 }
 ```
 
-`:root`  is a CSS pseudo-class that identifies the root element of a tree.
+`:root` is a CSS pseudo-class that identifies the root element of a tree.
 
-In the context of an HTML document, using the  `:root`  selector points to the  `html`element, except that  `:root`  has higher specificity (takes priority).
+In the context of an HTML document, using the `:root` selector points to the `html`element, except that `:root` has higher specificity (takes priority).
 
-In the context of an SVG image,  `:root`  points to the  `svg`  tag.
+In the context of an SVG image, `:root` points to the `svg` tag.
 
-Adding a CSS custom property to  `:root`  makes it available to all the elements in the page.
+Adding a CSS custom property to `:root` makes it available to all the elements in the page.
 
-If you add a variable inside a  `.container`  selector, it's only going to be available to children of  `.container`:
+If you add a variable inside a `.container` selector, it's only going to be available to children of `.container`:
 
 ```css
 .container {
-  --secondary-color: yellow;
+    --secondary-color: yellow;
 }
 ```
 
 and using it outside of this element is not going to work.
 
-Variables can be  **reassigned**:
+Variables can be **reassigned**:
 
 ```css
 :root {
-  --primary-color: yellow;
+    --primary-color: yellow;
 }
-
 ```
 
-Outside  `.container`,  `--primary-color`  will be  _yellow_, but inside it will be  _blue_.
+Outside `.container`, `--primary-color` will be _yellow_, but inside it will be _blue_.
 
-You can also assign or overwrite a variable inside the HTML using  **inline styles**:
+You can also assign or overwrite a variable inside the HTML using **inline styles**:
 
 ```html
 <main style="--primary-color: orange;">
-  <!-- ... -->
+    <!-- ... -->
 </main>
 ```
 
@@ -1467,40 +1431,40 @@ The coolest thing with CSS Variables is the ability to access and edit them usin
 Here’s how you set a variable value using plain JavaScript:
 
 ```js
-const element = document.getElementById('my-element')
-element.style.setProperty('--variable-name', 'a-value')
+const element = document.getElementById('my-element');
+element.style.setProperty('--variable-name', 'a-value');
 ```
 
-This code below can be used to access a variable value instead, in case the variable is defined on  `:root`:
+This code below can be used to access a variable value instead, in case the variable is defined on `:root`:
 
 ```js
-const styles = getComputedStyle(document.documentElement)
-const value = String(styles.getPropertyValue('--variable-name')).trim()
+const styles = getComputedStyle(document.documentElement);
+const value = String(styles.getPropertyValue('--variable-name')).trim();
 ```
 
 Or, to get the style applied to a specific element, in case of variables set with a different scope:
 
 ```js
-const element = document.getElementById('my-element')
-const styles = getComputedStyle(element)
-const value = String(styles.getPropertyValue('--variable-name')).trim()
+const element = document.getElementById('my-element');
+const styles = getComputedStyle(element);
+const value = String(styles.getPropertyValue('--variable-name')).trim();
 ```
 
 #### Handling invalid values
 
 If a variable is assigned to a property which does not accept the variable value, it’s considered invalid.
 
-For example you might pass a pixel value to a  `position`  property, or a rem value to a color property.
+For example you might pass a pixel value to a `position` property, or a rem value to a color property.
 
 In this case the line is considered invalid and is ignored.
 
 #### Browser support
 
-Browser support for CSS Variables is  **very good**,  [according to Can I Use][61].
+Browser support for CSS Variables is **very good**, [according to Can I Use][61].
 
 CSS Variables are here to stay, and you can use them today if you don’t need to support Internet Explorer and old versions of the other browsers.
 
-If you need to support older browsers you can use libraries like  [PostCSS][62]  or  [Myth][63], but you’ll lose the ability to interact with variables via JavaScript or the Browser Developer Tools, as they are transpiled to good old variable-less CSS (and as such, you lose most of the power of CSS Variables).
+If you need to support older browsers you can use libraries like [PostCSS][62] or [Myth][63], but you’ll lose the ability to interact with variables via JavaScript or the Browser Developer Tools, as they are transpiled to good old variable-less CSS (and as such, you lose most of the power of CSS Variables).
 
 #### CSS Variables are case sensitive
 
@@ -1518,11 +1482,11 @@ is different than this one:
 
 #### Math in CSS Variables
 
-To do math in CSS Variables, you need to use  `calc()`, for example:
+To do math in CSS Variables, you need to use `calc()`, for example:
 
 ```css
 :root {
-  --default-left-padding: calc(10px * 2);
+    --default-left-padding: calc(10px * 2);
 }
 ```
 
@@ -1532,21 +1496,20 @@ Nothing special here. CSS Variables normally apply to media queries:
 
 ```css
 body {
-  --width: 500px;
+    --width: 500px;
 }
 @media screen and (max-width: 1000px) and (min-width: 700px) {
-  --width: 800px;
+    --width: 800px;
 }
-
 ```
 
 #### Setting a fallback value for var()
 
-`var()`  accepts a second parameter, which is the default fallback value when the variable value is not set:
+`var()` accepts a second parameter, which is the default fallback value when the variable value is not set:
 
 ```css
 .container {
-  margin: var(--default-margin, 30px);
+    margin: var(--default-margin, 30px);
 }
 ```
 
@@ -1558,7 +1521,7 @@ Thankfully today you can load any kind of font on your pages.
 
 CSS has gained many nice capabilities over the years in regards to fonts.
 
-The  `font`  property is the shorthand for a number of properties:
+The `font` property is the shorthand for a number of properties:
 
 -   `font-family`
 -   `font-weight`
@@ -1566,13 +1529,13 @@ The  `font`  property is the shorthand for a number of properties:
 -   `font-style`
 -   `font-size`
 
-Let’s see each one of them and then we’ll cover  `font`.
+Let’s see each one of them and then we’ll cover `font`.
 
-Then we’ll talk about how to load custom fonts, using  `@import`  or  `@font-face`, or by loading a font stylesheet.
+Then we’ll talk about how to load custom fonts, using `@import` or `@font-face`, or by loading a font stylesheet.
 
 #### `font-family`
 
-Sets the font  _family_  that the element will use.
+Sets the font _family_ that the element will use.
 
 Why “family”? Because what we know as a font is actually composed of several sub-fonts which provide all the style (bold, italic, light..) we need.
 
@@ -1584,7 +1547,7 @@ This property lets you select a specific font, for example:
 
 ```css
 body {
-  font-family: Helvetica;
+    font-family: Helvetica;
 }
 ```
 
@@ -1592,11 +1555,11 @@ You can set multiple values, so the second option will be used if the first cann
 
 ```css
 body {
-  font-family: Helvetica, Arial;
+    font-family: Helvetica, Arial;
 }
 ```
 
-I used some specific fonts up to now, ones we call  **Web Safe Fonts**, as they are pre-installed on different operating systems.
+I used some specific fonts up to now, ones we call **Web Safe Fonts**, as they are pre-installed on different operating systems.
 
 We divide them in Serif, Sans-Serif, and Monospace fonts. Here’s a list of some of the most popular ones:
 
@@ -1626,21 +1589,21 @@ We divide them in Serif, Sans-Serif, and Monospace fonts. Here’s a list of som
 -   Lucida Console
 -   Monaco
 
-You can use all of those as  `font-family`  properties, but they are not guaranteed to be there for every system. Others exist, too, with a varying level of support.
+You can use all of those as `font-family` properties, but they are not guaranteed to be there for every system. Others exist, too, with a varying level of support.
 
 You can also use generic names:
 
--   `sans-serif`  a font without ligatures
--   `serif`  a font with ligatures
--   `monospace`  a font especially good for code
--   `cursive`  used to simulate handwritten pieces
--   `fantasy`  the name says it all
+-   `sans-serif` a font without ligatures
+-   `serif` a font with ligatures
+-   `monospace` a font especially good for code
+-   `cursive` used to simulate handwritten pieces
+-   `fantasy` the name says it all
 
-Those are typically used at the end of a  `font-family`  definition, to provide a fallback value in case nothing else can be applied:
+Those are typically used at the end of a `font-family` definition, to provide a fallback value in case nothing else can be applied:
 
 ```css
 body {
-  font-family: Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 ```
 
@@ -1658,10 +1621,10 @@ Or using the numeric keywords
 -   100
 -   200
 -   300
--   400, mapped to  `normal`
+-   400, mapped to `normal`
 -   500
 -   600
--   700 mapped to  `bold`
+-   700 mapped to `bold`
 -   800
 -   900
 
@@ -1693,11 +1656,11 @@ Allows you to apply an italic style to a font:
 
 ```css
 p {
-  font-style: italic;
+    font-style: italic;
 }
 ```
 
-This property also allows the values  `oblique`  and  `normal`. There is very little, if any, difference between using  `italic`  and  `oblique`. The first is easier to me, as HTML already offers an  `i`  element which means italic.
+This property also allows the values `oblique` and `normal`. There is very little, if any, difference between using `italic` and `oblique`. The first is easier to me, as HTML already offers an `i` element which means italic.
 
 #### `font-size`
 
@@ -1705,7 +1668,7 @@ This property is used to determine the size of fonts.
 
 You can pass 2 kinds of values:
 
-1.  a length value, like  `px`,  `em`,  `rem`  etc, or a percentage
+1.  a length value, like `px`, `em`, `rem` etc, or a percentage
 2.  a predefined value keyword
 
 In the second case, the values you can use are:
@@ -1724,9 +1687,8 @@ Usage:
 
 ```css
 p {
-  font-size: 20px;
+    font-size: 20px;
 }
-
 ```
 
 #### `font-variant`
@@ -1741,13 +1703,13 @@ Small caps means the text is rendered in “smaller caps” beside its uppercase
 
 #### `font`
 
-The  `font`  property lets you apply different font properties in a single one, reducing the clutter.
+The `font` property lets you apply different font properties in a single one, reducing the clutter.
 
-We must at least set 2 properties,  `font-size`  and  `font-family`, the others are optional:
+We must at least set 2 properties, `font-size` and `font-family`, the others are optional:
 
 ```css
 body {
-  font: 20px Helvetica;
+    font: 20px Helvetica;
 }
 ```
 
@@ -1756,37 +1718,37 @@ If we add other properties, they need to be put in the correct order.
 This is the order:
 
 ```css
-font: <font-stretch> <font-style> <font-variant> <font-weight> <font-size> <line-height> <font-family>;
+font: <font-stretch> <font-style> <font-variant> <font-weight> <font-size>
+    <line-height> <font-family>;
 ```
 
 Example:
 
 ```css
 body {
-  font: italic bold 20px Helvetica;
+    font: italic bold 20px Helvetica;
 }
-
 ```
 
-#### Loading custom fonts using  `@font-face`
+#### Loading custom fonts using `@font-face`
 
-`@font-face`  lets you add a new font family name, and map it to a file that holds a font.
+`@font-face` lets you add a new font family name, and map it to a file that holds a font.
 
 This font will be downloaded by the browser and used in the page, and it’s been such a fundamental change to typography on the web — we can now use any font we want.
 
-We can add  `@font-face`  declarations directly into our CSS, or link to a CSS dedicated to importing the font.
+We can add `@font-face` declarations directly into our CSS, or link to a CSS dedicated to importing the font.
 
-In our CSS file we can also use  `@import`  to load that CSS file.
+In our CSS file we can also use `@import` to load that CSS file.
 
-A  `@font-face`  declaration contains several properties we use to define the font, including  `src`, the URI (one or more URIs) to the font. This follows the same-origin policy, which means fonts can only be downloaded form the current origin (domain + port + protocol).
+A `@font-face` declaration contains several properties we use to define the font, including `src`, the URI (one or more URIs) to the font. This follows the same-origin policy, which means fonts can only be downloaded form the current origin (domain + port + protocol).
 
 Fonts are usually in the formats
 
--   `woff`  (Web Open Font Format)
--   `woff2`  (Web Open Font Format 2.0)
--   `eot`  (Embedded Open Type)
--   `otf`  (OpenType Font)
--   `ttf`  (TrueType Font)
+-   `woff` (Web Open Font Format)
+-   `woff2` (Web Open Font Format 2.0)
+-   `eot` (Embedded Open Type)
+-   `otf` (OpenType Font)
+-   `ttf` (TrueType Font)
 
 The following properties allow us to define the properties to the font we are going to load, as we saw above:
 
@@ -1831,16 +1793,16 @@ This property can transform the case of an element.
 
 There are 4 valid values:
 
--   `capitalize`  to uppercase the first letter of each word
--   `uppercase`  to uppercase all the text
--   `lowercase`  to lowercase all the text
--   `none`  to disable transforming the text, used to avoid inheriting the property
+-   `capitalize` to uppercase the first letter of each word
+-   `uppercase` to uppercase all the text
+-   `lowercase` to lowercase all the text
+-   `none` to disable transforming the text, used to avoid inheriting the property
 
 Example:
 
 ```css
 p {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 ```
 
@@ -1858,7 +1820,7 @@ Example:
 
 ```css
 p {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 ```
 
@@ -1868,11 +1830,11 @@ Example:
 
 ```css
 p {
-  text-decoration: underline dashed yellow;
+    text-decoration: underline dashed yellow;
 }
 ```
 
-Valid style values are  `solid`,  `double`,  `dotted`,  `dashed`,  `wavy`.
+Valid style values are `solid`, `double`, `dotted`, `dashed`, `wavy`.
 
 You can do all in one line, or use the specific properties:
 
@@ -1884,21 +1846,21 @@ Example:
 
 ```css
 p {
-  text-decoration-line: underline;
-  text-decoration-color: yellow;
-  text-decoration-style: dashed;
+    text-decoration-line: underline;
+    text-decoration-color: yellow;
+    text-decoration-style: dashed;
 }
 ```
 
 #### `text-align`
 
-By default text align has the  `start`  value, meaning the text starts at the "start", origin 0, 0 of the box that contains it. This means top left in left-to-right languages, and top right in right-to-left languages.
+By default text align has the `start` value, meaning the text starts at the "start", origin 0, 0 of the box that contains it. This means top left in left-to-right languages, and top right in right-to-left languages.
 
-Possible values are  `start`,  `end`,  `left`,  `right`,  `center`,  `justify`  (nice to have a consistent spacing at the line ends):
+Possible values are `start`, `end`, `left`, `right`, `center`, `justify` (nice to have a consistent spacing at the line ends):
 
 ```css
 p {
-  text-align: right;
+    text-align: right;
 }
 ```
 
@@ -1910,14 +1872,14 @@ We have several values for this property. First we can assign a length or percen
 
 Then we have the keywords:
 
--   `baseline`  (the default), aligns the baseline to the baseline of the parent element
--   `sub`  makes an element subscripted, simulating the  `sub`  HTML element result
--   `super`  makes an element superscripted, simulating the  `sup`  HTML element result
--   `top`  align the top of the element to the top of the line
--   `text-top`  align the top of the element to the top of the parent element font
--   `middle`  align the middle of the element to the middle of the line of the parent
--   `bottom`  align the bottom of the element to the bottom of the line
--   `text-bottom`  align the bottom of the element to the bottom of the parent element font
+-   `baseline` (the default), aligns the baseline to the baseline of the parent element
+-   `sub` makes an element subscripted, simulating the `sub` HTML element result
+-   `super` makes an element superscripted, simulating the `sup` HTML element result
+-   `top` align the top of the element to the top of the line
+-   `text-top` align the top of the element to the top of the parent element font
+-   `middle` align the middle of the element to the middle of the line of the parent
+-   `bottom` align the bottom of the element to the bottom of the line
+-   `text-bottom` align the bottom of the element to the bottom of the parent element font
 
 #### `line-height`
 
@@ -1925,7 +1887,7 @@ This allows you to change the height of a line. Each line of text has a certain 
 
 ```css
 p {
-  line-height: 0.9rem;
+    line-height: 0.9rem;
 }
 ```
 
@@ -1935,17 +1897,17 @@ Indent the first line of a paragraph by a set length, or a percentage of the par
 
 ```css
 p {
-  text-indent: -10px;
+    text-indent: -10px;
 }
 ```
 
 #### `text-align-last`
 
-By default the last line of a paragraph is aligned following the  `text-align`  value. Use this property to change that behavior:
+By default the last line of a paragraph is aligned following the `text-align` value. Use this property to change that behavior:
 
 ```css
 p {
-  text-align-last: right;
+    text-align-last: right;
 }
 ```
 
@@ -1953,26 +1915,24 @@ p {
 
 Modifies the spacing between each word.
 
-You can use the  `normal`  keyword, to reset inherited values, or use a length value:
+You can use the `normal` keyword, to reset inherited values, or use a length value:
 
 ```css
 p {
-  word-spacing: 2px;
+    word-spacing: 2px;
 }
-
 ```
 
 #### `letter-spacing`
 
 Modifies the spacing between each letter.
 
-You can use the  `normal`  keyword, to reset inherited values, or use a length value:
+You can use the `normal` keyword, to reset inherited values, or use a length value:
 
 ```css
 p {
-  letter-spacing: 0.2px;
+    letter-spacing: 0.2px;
 }
-
 ```
 
 #### `text-shadow`
@@ -1991,9 +1951,8 @@ Examples:
 
 ```css
 p {
-  text-shadow: 0.2px 2px;
+    text-shadow: 0.2px 2px;
 }
-
 ```
 
 #### `white-space`
@@ -2002,14 +1961,14 @@ Sets how CSS handles the white space, new lines and tabs inside an element.
 
 Valid values that collapse white space are:
 
--   `normal`  collapses white space. Adds new lines when necessary as the text reaches the container end
--   `nowrap`  collapses white space. Does not add a new line when the text reaches the end of the container, and suppresses any line break added to the text
--   `pre-line`  collapses white space. Adds new lines when necessary as the text reaches the container end
+-   `normal` collapses white space. Adds new lines when necessary as the text reaches the container end
+-   `nowrap` collapses white space. Does not add a new line when the text reaches the end of the container, and suppresses any line break added to the text
+-   `pre-line` collapses white space. Adds new lines when necessary as the text reaches the container end
 
 Valid values that preserve white space are:
 
--   `pre`  preserves white space. Does not add a new line when the text reaches the end of the container, but preserves line break added to the text
--   `pre-wrap`  preserves white space. Adds new lines when necessary as the text reaches the container end
+-   `pre` preserves white space. Does not add a new line when the text reaches the end of the container, but preserves line break added to the text
+-   `pre-wrap` preserves white space. Adds new lines when necessary as the text reaches the container end
 
 #### `tab-size`
 
@@ -2017,9 +1976,8 @@ Sets the width of the tab character. By default it’s 8, and you can set an int
 
 ```css
 p {
-  tab-size: 2;
+    tab-size: 2;
 }
-
 ```
 
 #### `writing-mode`
@@ -2028,9 +1986,9 @@ Defines whether lines of text are laid out horizontally or vertically, and the d
 
 The values you can use are
 
--   `horizontal-tb`  (default)
--   `vertical-rl`  content is laid out vertically. New lines are put on the left of the previous
--   `vertical-lr`  content is laid out vertically. New lines are put on the right of the previous
+-   `horizontal-tb` (default)
+-   `vertical-rl` content is laid out vertically. New lines are put on the left of the previous
+-   `vertical-lr` content is laid out vertically. New lines are put on the right of the previous
 
 #### `hyphens`
 
@@ -2038,27 +1996,27 @@ Determines if hyphens should be automatically added when going to a new line.
 
 Valid values are
 
--   `none`  (default)
--   `manual`  only add an hyphen when there is already a visible hyphen or a hidden hyphen (a special character)
--   `auto`  add hyphens when determined the text can have a hyphen.
+-   `none` (default)
+-   `manual` only add an hyphen when there is already a visible hyphen or a hidden hyphen (a special character)
+-   `auto` add hyphens when determined the text can have a hyphen.
 
 #### `text-orientation`
 
-When  `writing-mode`  is in a vertical mode, determines the orientation of the text.
+When `writing-mode` is in a vertical mode, determines the orientation of the text.
 
 Valid values are
 
--   `mixed`  is the default, and if a language is vertical (like Japanese) it preserves that orientation, while rotating text written in western languages
--   `upright`  makes all text be vertically oriented
--   `sideways`  makes all text horizontally oriented
+-   `mixed` is the default, and if a language is vertical (like Japanese) it preserves that orientation, while rotating text written in western languages
+-   `upright` makes all text be vertically oriented
+-   `sideways` makes all text horizontally oriented
 
 #### `direction`
 
-Sets the direction of the text. Valid values are  `ltr`  and  `rtl`:
+Sets the direction of the text. Valid values are `ltr` and `rtl`:
 
 ```css
 p {
-  direction: rtl;
+    direction: rtl;
 }
 ```
 
@@ -2066,17 +2024,17 @@ p {
 
 This property specifies how to break lines within words.
 
--   `normal`  (default) means the text is only broken between words, not inside a word
--   `break-all`  the browser can break a word (but no hyphens are added)
--   `keep-all`  suppress soft wrapping. Mostly used for CJK (Chinese/Japanese/Korean) text.
+-   `normal` (default) means the text is only broken between words, not inside a word
+-   `break-all` the browser can break a word (but no hyphens are added)
+-   `keep-all` suppress soft wrapping. Mostly used for CJK (Chinese/Japanese/Korean) text.
 
-Speaking of CJK text, the property  `line-break`  is used to determine how text lines break. I'm not an expert with those languages, so I will avoid covering it.
+Speaking of CJK text, the property `line-break` is used to determine how text lines break. I'm not an expert with those languages, so I will avoid covering it.
 
 #### `overflow-wrap`
 
 If a word is too long to fit a line, it can overflow outside of the container.
 
-> _This property is also known as  `word-wrap`, although that is non-standard (but still works as an alias)_
+> _This property is also known as `word-wrap`, although that is non-standard (but still works as an alias)_
 
 This is the default behavior (`overflow-wrap: normal;`).
 
@@ -2084,7 +2042,7 @@ We can use:
 
 ```css
 p {
-  overflow-wrap: break-word;
+    overflow-wrap: break-word;
 }
 ```
 
@@ -2092,13 +2050,13 @@ to break it at the exact length of the line, or
 
 ```css
 p {
-  overflow-wrap: anywhere;
+    overflow-wrap: anywhere;
 }
 ```
 
 if the browser sees there’s a soft wrap opportunity somewhere earlier. No hyphens are added, in any case.
 
-This property is very similar to  `word-break`. We might want to choose this one on western languages, while  `word-break`  has special treatment for non-western languages.
+This property is very similar to `word-break`. We might want to choose this one on western languages, while `word-break` has special treatment for non-western languages.
 
 ### BOX MODEL
 
@@ -2117,11 +2075,11 @@ The best way to visualize the box model is to open the browser DevTools and chec
 
 ![](https://cdn-media-1.freecodecamp.org/images/xj9Q5XeqWTDKdl2roL0mkiHGXxRfGnAs4MhI)
 
-Here you can see how Firefox tells me the properties of a  `span`  element I highlighted. I right-clicked on it, pressed Inspect Element, and went to the Layout panel of the DevTools.
+Here you can see how Firefox tells me the properties of a `span` element I highlighted. I right-clicked on it, pressed Inspect Element, and went to the Layout panel of the DevTools.
 
 See, the light blue space is the content area. Surrounding it there is the padding, then the border and finally the margin.
 
-By default, if you set a width (or height) on the element, that is going to be applied to the  **content area**. All the padding, border, and margin calculations are done outside of the value, so you have to keep this in mind when you do your calculation.
+By default, if you set a width (or height) on the element, that is going to be applied to the **content area**. All the padding, border, and margin calculations are done outside of the value, so you have to keep this in mind when you do your calculation.
 
 Later you’ll see how you can change this behavior using Box Sizing.
 
@@ -2135,11 +2093,11 @@ You can work on borders by using those properties:
 -   `border-color`
 -   `border-width`
 
-The property  `border`  can be used as a shorthand for all those properties.
+The property `border` can be used as a shorthand for all those properties.
 
-`border-radius`  is used to create rounded corners.
+`border-radius` is used to create rounded corners.
 
-You also have the ability to use images as borders, an ability given to you by  `border-image`  and its specific separate properties:
+You also have the ability to use images as borders, an ability given to you by `border-image` and its specific separate properties:
 
 -   `border-image-source`
 -   `border-image-slice`
@@ -2147,11 +2105,11 @@ You also have the ability to use images as borders, an ability given to you by  
 -   `border-image-outset`
 -   `border-image-repeat`
 
-Let’s start with  `border-style`.
+Let’s start with `border-style`.
 
 #### The border style
 
-The  `border-style`  property lets you choose the style of the border. The options you can use are:
+The `border-style` property lets you choose the style of the border. The options you can use are:
 
 -   `dotted`
 -   `dashed`
@@ -2166,9 +2124,9 @@ The  `border-style`  property lets you choose the style of the border. The optio
 
 ![](https://cdn-media-1.freecodecamp.org/images/lCWsi0wfQU30QoiDD6GsvfRrWx-4DurGOMeX)
 
-Check out  [this Codepen][64]  for a live example.
+Check out [this Codepen][64] for a live example.
 
-The default for the style is  `none`, so to make the border appear at all you need to change it to something else.  `solid`  is a good choice most of the time.
+The default for the style is `none`, so to make the border appear at all you need to change it to something else. `solid` is a good choice most of the time.
 
 You can set a different style for each edge using the properties
 
@@ -2177,7 +2135,7 @@ You can set a different style for each edge using the properties
 -   `border-bottom-style`
 -   `border-left-style`
 
-or you can use  `border-style`  with multiple values to define them, using the usual Top-Right-Bottom-Left order:
+or you can use `border-style` with multiple values to define them, using the usual Top-Right-Bottom-Left order:
 
 ```
 p {
@@ -2187,12 +2145,12 @@ p {
 
 #### The border width
 
-`border-width`  is used to set the width of the border.
+`border-width` is used to set the width of the border.
 
 You can use one of the pre-defined values:
 
 -   `thin`
--   `medium`  (the default value)
+-   `medium` (the default value)
 -   `thick`
 
 or express a value in pixels, em or rem or any other valid length value.
@@ -2201,7 +2159,7 @@ Example:
 
 ```css
 p {
-  border-width: 2px;
+    border-width: 2px;
 }
 ```
 
@@ -2209,25 +2167,25 @@ You can set the width of each edge (Top-Right-Bottom-Left) separately by using 4
 
 ```css
 p {
-  border-width: 2px 1px 2px 1px;
+    border-width: 2px 1px 2px 1px;
 }
 ```
 
-or you can use the specific edge properties  `border-top-width`,  `border-right-width`,  `border-bottom-width`,  `border-left-width`.
+or you can use the specific edge properties `border-top-width`, `border-right-width`, `border-bottom-width`, `border-left-width`.
 
 #### The border color
 
-`border-color`  is used to set the color of the border.
+`border-color` is used to set the color of the border.
 
 If you don’t set a color, the border by default is colored using the color of the text in the element.
 
-You can pass any valid color value to  `border-color`.
+You can pass any valid color value to `border-color`.
 
 Example:
 
 ```css
 p {
-  border-color: yellow;
+    border-color: yellow;
 }
 ```
 
@@ -2235,48 +2193,48 @@ You can set the color of each edge (Top-Right-Bottom-Left) separately by using 4
 
 ```css
 p {
-  border-color: black red yellow blue;
+    border-color: black red yellow blue;
 }
 ```
 
-or you can use the specific edge properties  `border-top-color`,  `border-right-color`,  `border-bottom-color`,  `border-left-color`.
+or you can use the specific edge properties `border-top-color`, `border-right-color`, `border-bottom-color`, `border-left-color`.
 
 #### The border shorthand property
 
-Those 3 properties mentioned,  `border-width`,  `border-style`  and  `border-color`  can be set using the shorthand property  `border`.
+Those 3 properties mentioned, `border-width`, `border-style` and `border-color` can be set using the shorthand property `border`.
 
 Example:
 
 ```css
 p {
-  border: 2px black solid;
+    border: 2px black solid;
 }
 ```
 
-You can also use the edge-specific properties  `border-top`,  `border-right`,  `border-bottom`,  `border-left`.
+You can also use the edge-specific properties `border-top`, `border-right`, `border-bottom`, `border-left`.
 
 Example:
 
 ```css
 p {
-  border-left: 2px black solid;
-  border-right: 3px red dashed;
+    border-left: 2px black solid;
+    border-right: 3px red dashed;
 }
 ```
 
 #### The border radius
 
-`border-radius`  is used to set rounded corners to the border. You need to pass a value that will be used as the radius of the circle that will be used to round the border.
+`border-radius` is used to set rounded corners to the border. You need to pass a value that will be used as the radius of the circle that will be used to round the border.
 
 Usage:
 
 ```css
 p {
-  border-radius: 3px;
+    border-radius: 3px;
 }
 ```
 
-You can also use the edge-specific properties  `border-top-left-radius`,  `border-top-right-radius`,  `border-bottom-left-radius`,  `border-bottom-right-radius`.
+You can also use the edge-specific properties `border-top-left-radius`, `border-top-right-radius`, `border-bottom-left-radius`, `border-bottom-right-radius`.
 
 #### Using images as borders
 
@@ -2290,20 +2248,20 @@ We have 5 properties:
 -   `border-image-outset`
 -   `border-image-repeat`
 
-and the shorthand  `border-image`. I won't go in much details here as images as borders would need a more in-depth coverage as what I can do in this little chapter. I recommend reading the  [CSS Tricks almanac entry on border-image][65]  for more information.
+and the shorthand `border-image`. I won't go in much details here as images as borders would need a more in-depth coverage as what I can do in this little chapter. I recommend reading the [CSS Tricks almanac entry on border-image][65] for more information.
 
 ### PADDING
 
-The  `padding`  CSS property is commonly used in CSS to add space in the inner side of an element.
+The `padding` CSS property is commonly used in CSS to add space in the inner side of an element.
 
 Remember:
 
--   `margin`  adds space outside an element border
--   `padding`  adds space inside an element border
+-   `margin` adds space outside an element border
+-   `padding` adds space inside an element border
 
 #### Specific padding properties
 
-`padding`  has 4 related properties that alter the padding of a single edge at once:
+`padding` has 4 related properties that alter the padding of a single edge at once:
 
 -   `padding-top`
 -   `padding-right`
@@ -2317,13 +2275,13 @@ padding-left: 30px;
 padding-right: 3em;
 ```
 
-#### Using the  `padding`  shorthand
+#### Using the `padding` shorthand
 
-`padding`  is a shorthand to specify multiple padding values at the same time, and depending on the number of values entered, it behaves differently.
+`padding` is a shorthand to specify multiple padding values at the same time, and depending on the number of values entered, it behaves differently.
 
 #### 1 value
 
-Using a single value applies that to  **all**  the paddings: top, right, bottom, left.
+Using a single value applies that to **all** the paddings: top, right, bottom, left.
 
 ```css
 padding: 20px;
@@ -2331,7 +2289,7 @@ padding: 20px;
 
 #### 2 values
 
-Using 2 values applies the first to  **bottom & top**, and the second to  **left & right**.
+Using 2 values applies the first to **bottom & top**, and the second to **left & right**.
 
 ```css
 padding: 20px 10px;
@@ -2339,7 +2297,7 @@ padding: 20px 10px;
 
 #### 3 values
 
-Using 3 values applies the first to  **top**, the second to  **left & right**, the third to  **bottom**.
+Using 3 values applies the first to **top**, the second to **left & right**, the third to **bottom**.
 
 ```css
 padding: 20px 10px 30px;
@@ -2347,30 +2305,30 @@ padding: 20px 10px 30px;
 
 #### 4 values
 
-Using 4 values applies the first to  **top**, the second to  **right**, the third to  **bottom**, the fourth to  **left**.
+Using 4 values applies the first to **top**, the second to **right**, the third to **bottom**, the fourth to **left**.
 
 ```css
 padding: 20px 10px 5px 0px;
 ```
 
-So, the order is  _top-right-bottom-left_.
+So, the order is _top-right-bottom-left_.
 
 #### Values accepted
 
-`padding`  accepts values expressed in any kind of length unit, the most common ones are px, em, rem, but  [many others exist][66].
+`padding` accepts values expressed in any kind of length unit, the most common ones are px, em, rem, but [many others exist][66].
 
 ### MARGIN
 
-The  `margin`  CSS property is commonly used in CSS to add space around an element.
+The `margin` CSS property is commonly used in CSS to add space around an element.
 
 Remember:
 
--   `margin`  adds space outside an element border
--   `padding`  adds space inside an element border
+-   `margin` adds space outside an element border
+-   `padding` adds space inside an element border
 
 #### Specific margin properties
 
-`margin`  has 4 related properties that alter the margin of a single edge at once:
+`margin` has 4 related properties that alter the margin of a single edge at once:
 
 -   `margin-top`
 -   `margin-right`
@@ -2384,13 +2342,13 @@ margin-left: 30px;
 margin-right: 3em;
 ```
 
-#### Using the  `margin`  shorthand
+#### Using the `margin` shorthand
 
-`margin`  is a shorthand to specify multiple margins at the same time, and depending on the number of values entered, it behaves differently.
+`margin` is a shorthand to specify multiple margins at the same time, and depending on the number of values entered, it behaves differently.
 
 #### 1 value
 
-Using a single value applies that to  **all**  the margins: top, right, bottom, left.
+Using a single value applies that to **all** the margins: top, right, bottom, left.
 
 ```css
 margin: 20px;
@@ -2398,7 +2356,7 @@ margin: 20px;
 
 #### 2 values
 
-Using 2 values applies the first to  **bottom & top**, and the second to  **left & right**.
+Using 2 values applies the first to **bottom & top**, and the second to **left & right**.
 
 ```css
 margin: 20px 10px;
@@ -2406,7 +2364,7 @@ margin: 20px 10px;
 
 #### 3 values
 
-Using 3 values applies the first to  **top**, the second to  **left & right**, the third to  **bottom**.
+Using 3 values applies the first to **top**, the second to **left & right**, the third to **bottom**.
 
 ```css
 margin: 20px 10px 30px;
@@ -2414,37 +2372,37 @@ margin: 20px 10px 30px;
 
 #### 4 values
 
-Using 4 values applies the first to  **top**, the second to  **right**, the third to  **bottom**, the fourth to  **left**.
+Using 4 values applies the first to **top**, the second to **right**, the third to **bottom**, the fourth to **left**.
 
 ```css
 margin: 20px 10px 5px 0px;
 ```
 
-So, the order is  _top-right-bottom-left_.
+So, the order is _top-right-bottom-left_.
 
 #### Values accepted
 
-`margin`  accepts values expressed in any kind of length unit, the most common ones are px, em, rem, but  [many others exist][67].
+`margin` accepts values expressed in any kind of length unit, the most common ones are px, em, rem, but [many others exist][67].
 
-It also accepts percentage values, and the special value  `auto`.
+It also accepts percentage values, and the special value `auto`.
 
-#### Using  `auto`  to center elements
+#### Using `auto` to center elements
 
-`auto`  can be used to tell the browser to select automatically a margin, and it's most commonly used to center an element in this way:
+`auto` can be used to tell the browser to select automatically a margin, and it's most commonly used to center an element in this way:
 
 ```css
 margin: 0 auto;
 ```
 
-As said above, using 2 values applies the first to  **bottom & top**, and the second to  **left & right**.
+As said above, using 2 values applies the first to **bottom & top**, and the second to **left & right**.
 
-The modern way to center elements is to use  [Flexbox][68], and its  `justify-content: center;`  directive.
+The modern way to center elements is to use [Flexbox][68], and its `justify-content: center;` directive.
 
-Older browsers of course do not implement Flexbox, and if you need to support them  `margin: 0 auto;`  is still a good choice.
+Older browsers of course do not implement Flexbox, and if you need to support them `margin: 0 auto;` is still a good choice.
 
 #### Using a negative margin
 
-`margin`  is the only property related to sizing that can have a negative value. It's extremely useful, too. Setting a negative top margin makes an element move over elements before it, and given enough negative value it will move out of the page.
+`margin` is the only property related to sizing that can have a negative value. It's extremely useful, too. Setting a negative top margin makes an element move over elements before it, and given enough negative value it will move out of the page.
 
 A negative bottom margin moves up the elements after it.
 
@@ -2454,40 +2412,42 @@ A negative left margin moves the element left over the elements that precede it,
 
 ### BOX SIZING
 
-The default behavior of browsers when calculating the width of an element is to apply the calculated width and height to the  **content area**, without taking any of the padding, border and margin in consideration.
+The default behavior of browsers when calculating the width of an element is to apply the calculated width and height to the **content area**, without taking any of the padding, border and margin in consideration.
 
 This approach has proven to be quite complicated to work with.
 
-You can change this behavior by setting the  `box-sizing`  property.
+You can change this behavior by setting the `box-sizing` property.
 
-The  `box-sizing`  property is a great help. It has 2 values:
+The `box-sizing` property is a great help. It has 2 values:
 
 -   `border-box`
 -   `content-box`
 
-`content-box`  is the default, the one we had for ages before  `box-sizing`  became a thing.
+`content-box` is the default, the one we had for ages before `box-sizing` became a thing.
 
-`border-box`  is the new and great thing we are looking for. If you set that on an element:
+`border-box` is the new and great thing we are looking for. If you set that on an element:
 
 ```css
 .my-div {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 ```
 
 width and height calculation include the padding and the border. Only the margin is left out, which is reasonable since in our mind we also typically see that as a separate thing: margin is outside of the box.
 
-This property is a small change but has a big impact. CSS Tricks even declared an  [international box-sizing awareness day][69], just saying, and it’s recommended to apply it to every element on the page, out of the box, with this:
+This property is a small change but has a big impact. CSS Tricks even declared an [international box-sizing awareness day][69], just saying, and it’s recommended to apply it to every element on the page, out of the box, with this:
 
 ```css
-, *:before, *:after {
-  box-sizing: border-box;
+,
+*:before,
+*:after {
+    box-sizing: border-box;
 }
 ```
 
 ### _DISPLAY_
 
-_The  `display`  property of an object determines how it is rendered by the browser._
+_The `display` property of an object determines how it is rendered by the browser._
 
 _It’s a very important property, and probably the one with the highest number of values you can use._
 
@@ -2499,7 +2459,7 @@ _Those values include:_
 -   _`contents`_
 -   _`flow`_
 -   _`flow-root`_
--   _`table`  (and all the  `table-`_  ones)
+-   _`table` (and all the `table-`_ ones)
 -   `flex`
 -   `grid`
 -   `list-item`
@@ -2509,7 +2469,7 @@ _Those values include:_
 -   `inline-grid`
 -   `inline-list-item`
 
-plus others you will not likely use, like  `ruby`.
+plus others you will not likely use, like `ruby`.
 
 Choosing any of those will considerably alter the behavior of the browser with the element and its children.
 
@@ -2520,23 +2480,23 @@ In this section we’ll analyze the most important ones not covered elsewhere:
 -   `inline-block`
 -   `none`
 
-We’ll see some of the others in later chapters, including coverage of  `table`,  `flex`  and  `grid`.
+We’ll see some of the others in later chapters, including coverage of `table`, `flex` and `grid`.
 
 #### `inline`
 
 Inline is the default display value for every element in CSS.
 
-All the HTML tags are displayed inline out of the box except some elements like  `div`,  `p`and  `section`, which are set as  `block`  by the user agent (the browser).
+All the HTML tags are displayed inline out of the box except some elements like `div`, `p`and `section`, which are set as `block` by the user agent (the browser).
 
 Inline elements don’t have any margin or padding applied.
 
 Same for height and width.
 
-You  _can_  add them, but the appearance in the page won’t change — they are calculated and applied automatically by the browser.
+You _can_ add them, but the appearance in the page won’t change — they are calculated and applied automatically by the browser.
 
 #### `inline-block`
 
-Similar to  `inline`, but with  `inline-block`  `width`  and  `height`  applied as you specify.
+Similar to `inline`, but with `inline-block` `width` and `height` applied as you specify.
 
 #### `block`
 
@@ -2547,15 +2507,15 @@ As mentioned, normally elements are displayed inline, with the exception of some
 -   `section`
 -   `ul`
 
-which are set as  `block`  by the browser.
+which are set as `block` by the browser.
 
-With  `display: block`, elements are stacked one after each other, vertically, and every element takes up 100% of the page.
+With `display: block`, elements are stacked one after each other, vertically, and every element takes up 100% of the page.
 
-The values assigned to the  `width`  and  `height`  properties are respected, if you set them, along with  `margin`  and  `padding`.
+The values assigned to the `width` and `height` properties are respected, if you set them, along with `margin` and `padding`.
 
 #### `none`
 
-Using  `display: none`  makes an element disappear. It's still there in the HTML, but just not visible in the browser.
+Using `display: none` makes an element disappear. It's still there in the HTML, but just not visible in the browser.
 
 ### POSITIONING
 
@@ -2563,9 +2523,9 @@ Positioning is what makes us determine where elements appear on the screen, and 
 
 You can move elements around, and position them exactly where you want.
 
-In this section we’ll also see how things change on a page based on how elements with different  `position`  interact with each other.
+In this section we’ll also see how things change on a page based on how elements with different `position` interact with each other.
 
-We have one main CSS property:  `position`.
+We have one main CSS property: `position`.
 
 It can have those 5 values:
 
@@ -2581,24 +2541,24 @@ This is the default value for an element. Static positioned elements are display
 
 #### Relative positioning
 
-If you set  `position: relative`  on an element, you are now able to position it with an offset, using the properties
+If you set `position: relative` on an element, you are now able to position it with an offset, using the properties
 
 -   top
 -   right
 -   bottom
 -   left
 
-which are called  **offset properties**. They accept a length value or a percentage.
+which are called **offset properties**. They accept a length value or a percentage.
 
-Take  [this example I made on Codepen][70]. I create a parent container, a child container, and an inner box with some text:
+Take [this example I made on Codepen][70]. I create a parent container, a child container, and an inner box with some text:
 
 ```html
 <div class="parent">
-  <div class="child">
-    <div class="box">
-      <p>Test</p>
+    <div class="child">
+        <div class="box">
+            <p>Test</p>
+        </div>
     </div>
-  </div>
 </div>
 ```
 
@@ -2606,24 +2566,23 @@ with some CSS to give some colors and padding, but does not affect positioning:
 
 ```css
 .parent {
-  background-color: #af47ff;
-  padding: 30px;
-  width: 300px;
+    background-color: #af47ff;
+    padding: 30px;
+    width: 300px;
 }
 .child {
-  background-color: #ff4797;
-  padding: 30px;
+    background-color: #ff4797;
+    padding: 30px;
 }
-
 ```
 
 here’s the result:
 
 ![](https://cdn-media-1.freecodecamp.org/images/gtXUfjyrczqxDqdfrjJyec58o9ru6CqGGCFD)
 
-You can try and add any of the properties I mentioned before (`top`,  `right`,  `bottom`,  `left`) to  `.box`, and nothing will happen. The position is  `static`.
+You can try and add any of the properties I mentioned before (`top`, `right`, `bottom`, `left`) to `.box`, and nothing will happen. The position is `static`.
 
-Now if we set  `position: relative`  to the box, at first apparently nothing changes. But the element is now able to move using the  `top`,  `right`,  `bottom`,  `left`  properties, and now you can alter the position of it relatively to the element containing it.
+Now if we set `position: relative` to the box, at first apparently nothing changes. But the element is now able to move using the `top`, `right`, `bottom`, `left` properties, and now you can alter the position of it relatively to the element containing it.
 
 For example:
 
@@ -2637,113 +2596,73 @@ For example:
 
 _![](https://cdn-media-1.freecodecamp.org/images/aYTcDVhCB9-CazlQrWrPyfxMpr3TThT0V-ho)_
 
-_A negative value for  `top`  will make the box move up relatively to its container._
+_A negative value for `top` will make the box move up relatively to its container._
 
 _Or_
 
-_`.box {
-  /`_ `... _/
-  position: relative;
-  top: -60px;
-  left: 180px;
-}_`
+_`.box { /`_ `... _/ position: relative; top: -60px; left: 180px; }_`
 
 _![](https://cdn-media-1.freecodecamp.org/images/5ePc6ALKZV0fubpagz0OzfPBCzctqPAJY81p)_
 
 _Notice how the space that is occupied by the box remains preserved in the container, like it was still in its place._
 
-_Another property that will now work is  `z-index`  to alter the z-axis placement. We'll talk about it later on._
+_Another property that will now work is `z-index` to alter the z-axis placement. We'll talk about it later on._
 
 #### _Absolute positioning_
 
-_Setting  `position: absolute`  on an element will remove it from the document's flow._
+_Setting `position: absolute` on an element will remove it from the document's flow._
 
 _Remember in relative positioning that we noticed the space originally occupied by an element was preserved even if it was moved around?_
 
-_With absolute positioning, as soon as we set  `position: absolute`  on  `.box`, its original space is now collapsed, and only the origin (x, y coordinates) remain the same._
+_With absolute positioning, as soon as we set `position: absolute` on `.box`, its original space is now collapsed, and only the origin (x, y coordinates) remain the same._
 
-_`.box {
-  /`_ `... _/
-  position: absolute;
-}_`
+_`.box { /`_ `... _/ position: absolute; }_`
 
 _![](https://cdn-media-1.freecodecamp.org/images/B4aFUpYab0eSO-LUQKAu2Vmbi-wnFA8qFOHm)_
 
-_We can now move the box around as we please, using the  `top`,  `right`,  `bottom`,  `left`properties:_
+_We can now move the box around as we please, using the `top`, `right`, `bottom`, `left`properties:_
 
-_`.box {
-  /`_ `... _/
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}_`
+_`.box { /`_ `... _/ position: absolute; top: 0px; left: 0px; }_`
 
 _![](https://cdn-media-1.freecodecamp.org/images/NHw-ZkR2lzBsPyb9gSYTyuYGreSvedNPsJ7J)_
 
 _or_
 
-_`.box {
-  /`_ `... _/
-  position: absolute;
-  top: 140px;
-  left: 50px;
-}_`
+_`.box { /`_ `... _/ position: absolute; top: 140px; left: 50px; }_`
 
 _![](https://cdn-media-1.freecodecamp.org/images/QOYrWkDjiNv7ODZ9WtYCBVEnJf5oZwGfombH)_
 
-_The coordinates are relative to the closest container that is not  `static`._
+_The coordinates are relative to the closest container that is not `static`._
 
-_This means that if we add  `position: relative`  to the  `.child`  element, and we set  `top`and  `left`  to 0, the box will not be positioned at the top left margin of the  _window_, but rather it will be positioned at the 0, 0 coordinates of  `.child`:_
+_This means that if we add `position: relative` to the `.child` element, and we set `top`and `left` to 0, the box will not be positioned at the top left margin of the \_window_, but rather it will be positioned at the 0, 0 coordinates of `.child`:\_
 
-_`.child {
-  /`_ `... */
-  position: relative;
-}` 
+_`.child { /`_ `... */ position: relative; }`
 
-`.box {
-  /* ... _/_ _position: absolute;
-  top: 0px;
-  left: 0px;
-}_`
+`.box { /* ... _/_ _position: absolute; top: 0px; left: 0px; }_`
 
 _![](https://cdn-media-1.freecodecamp.org/images/1FB8qKtiZgmxtp7xjd6UU7CW573XRxTrZlNc)_
 
-_Here’s how we already saw that  `.child`  is static (the default):_
+_Here’s how we already saw that `.child` is static (the default):_
 
-_`.child {
-  /`_ `... */
-  position: static;
-}` 
+_`.child { /`_ `... */ position: static; }`
 
-`.box {
-  /* ... _/_ _position: absolute;
-  top: 0px;
-  left: 0px;
-}_`
+`.box { /* ... _/_ _position: absolute; top: 0px; left: 0px; }_`
 
 _![](https://cdn-media-1.freecodecamp.org/images/eF4yC5dRIkcyezTcVUCbG36sfxOVurQX2L38)_
 
-_Like for relative positioning, you can use  `z-index`  to alter the z-axis placement._
+_Like for relative positioning, you can use `z-index` to alter the z-axis placement._
 
 #### _Fixed positioning_
 
-_Like with absolute positioning, when an element is assigned  `position: fixed`  it's removed from the flow of the page._
+_Like with absolute positioning, when an element is assigned `position: fixed` it's removed from the flow of the page._
 
 _The difference with absolute positioning is this: elements are now always positioned relative to the window, instead of the first non-static container._
 
-_`.box {
-  /`_ `... _/
-  position: fixed;
-}_`
+_`.box { /`_ `... _/ position: fixed; }_`
 
 _![](https://cdn-media-1.freecodecamp.org/images/Ium4uJdPRXPpp-gAVsMMWveviu6HY-g0nUYA)_
 
-_`.box {
-  /`_ `... */
-  position: fixed;
-  top: 0;
-  left: 0;
-}`
+_`.box { /`_ `... */ position: fixed; top: 0; left: 0; }`
 
 ![](https://cdn-media-1.freecodecamp.org/images/k3-LecCC6WXUjssKdQ9u9w70EZSh3hzK3iFY)
 
@@ -2753,7 +2672,7 @@ Another big difference is that elements are not affected by scrolling. Once you 
 
 While the above values have been around for a very long time, this one was introduced recently and it’s still relatively unsupported ([see caniuse.com][71])
 
-The UITableView iOS component is the thing that comes to mind when I think about  `position: sticky`. You know when you scroll in the contacts list and the first letter is stuck to the top, to let you know you are viewing that particular letter's contacts?
+The UITableView iOS component is the thing that comes to mind when I think about `position: sticky`. You know when you scroll in the contacts list and the first letter is stuck to the top, to let you know you are viewing that particular letter's contacts?
 
 We used JavaScript to emulate that, but this is the approach taken by CSS to allow it natively.
 
@@ -2765,11 +2684,11 @@ It was used in lots of hacks and creative usages because it was one of the few w
 
 Luckily times have changed and today we have Flexbox and Grid to help us with layout, and float has gone back to its original scope: placing content on one side of the container element, and making its siblings show up around it.
 
-The  `float`  property supports 3 values:
+The `float` property supports 3 values:
 
 -   `left`
 -   `right`
--   `none`  (the default)
+-   `none` (the default)
 
 Say we have a box which contains a paragraph with some text, and the paragraph also contains an image.
 
@@ -2785,15 +2704,14 @@ Here’s some code:
   </div>
 </div>
 .parent {
-  background-color: #af47ff;
-  padding: 30px;
-  width: 500px;
+    background-color: #af47ff;
+    padding: 30px;
+    width: 500px;
 }
 .child {
-  background-color: #ff4797;
-  padding: 30px;
+    background-color: #ff4797;
+    padding: 30px;
 }
-
 ```
 
 and the visual appearance:
@@ -2802,12 +2720,12 @@ and the visual appearance:
 
 As you can see, the normal flow by default considers the image inline, and makes space for it in the line itself.
 
-If we add  `float: left`  to the image, and some padding:
+If we add `float: left` to the image, and some padding:
 
 ```css
 img {
-  float: left;
-  padding: 20px 20px 0px 0px;
+    float: left;
+    padding: 20px 20px 0px 0px;
 }
 ```
 
@@ -2819,8 +2737,8 @@ and this is what we get by applying a float: right, adjusting the padding accord
 
 ```css
 img {
-  float: right;
-  padding: 20px 0px 20px 20px;
+    float: right;
+    padding: 20px 0px 20px 20px;
 }
 ```
 
@@ -2830,7 +2748,7 @@ A floated element is removed from the normal flow of the page, and the other con
 
 [See the example on Codepen][73]
 
-You are not limited to floating images, too. Here we switch the image with a  `span`element:
+You are not limited to floating images, too. Here we switch the image with a `span`element:
 
 ```css
 <div class="parent">
@@ -2854,16 +2772,16 @@ What happens when you float more than one element?
 
 If when floated they find another floated image, by default they are stacked up one next to the other, horizontally. Until there is no room, and they will start being stacked on a new line.
 
-Say we had 3 inline images inside a  `p`  tag:
+Say we had 3 inline images inside a `p` tag:
 
 ![](https://cdn-media-1.freecodecamp.org/images/15-LCn0BOSVAVMraLSiNzWpP-oWBiEKIGULW)
 
-If we add  `float: left`  to those images:
+If we add `float: left` to those images:
 
 ```css
 img {
-  float: left;
-  padding: 20px 20px 0px 0px;
+    float: left;
+    padding: 20px 20px 0px 0px;
 }
 ```
 
@@ -2871,20 +2789,20 @@ this is what we’ll have:
 
 ![](https://cdn-media-1.freecodecamp.org/images/JGZ7LTxKux1nKWIISdzIPgb2jzxcqpifbxIx)
 
-if you add  `clear: left`  to images, those are going to be stacked vertically rather than horizontally:
+if you add `clear: left` to images, those are going to be stacked vertically rather than horizontally:
 
 ![](https://cdn-media-1.freecodecamp.org/images/9J-ggQAlJFZ4C1hUbnpD74FcjuKpS960LABv)
 
-I used the  `left`  value for  `clear`. It allows
+I used the `left` value for `clear`. It allows
 
--   `left`  to clear left floats
--   `right`  to clear right floats
--   `both`  to clear both left and right floats
--   `none`  (default) disables clearing
+-   `left` to clear left floats
+-   `right` to clear right floats
+-   `both` to clear both left and right floats
+-   `none` (default) disables clearing
 
 ### Z-INDEX
 
-When we talked about positioning, I mentioned that you can use the  `z-index`  property to control the Z axis positioning of elements.
+When we talked about positioning, I mentioned that you can use the `z-index` property to control the Z axis positioning of elements.
 
 It’s very useful when you have multiple elements that overlap each other, and you need to decide which one is visible, as nearer to the user, and which one(s) should be hidden behind it.
 
@@ -2894,9 +2812,9 @@ The higher the z-index value, the more an element is positioned nearer to the us
 
 When deciding which element should be visible and which one should be positioned behind it, the browser does a calculation on the z-index value.
 
-The default value is  `auto`, a special keyword. Using  `auto`, the Z axis order is determined by the position of the HTML element in the page - the last sibling appears first, as it's defined last.
+The default value is `auto`, a special keyword. Using `auto`, the Z axis order is determined by the position of the HTML element in the page - the last sibling appears first, as it's defined last.
 
-By default elements have the  `static`  value for the  `position`  property. In this case, the  `z-index`  property does not make any difference - it must be set to  `absolute`,  `relative`or  `fixed`  to work.
+By default elements have the `static` value for the `position` property. In this case, the `z-index` property does not make any difference - it must be set to `absolute`, `relative`or `fixed` to work.
 
 Example:
 
@@ -2909,10 +2827,9 @@ Example:
     height: 600px;
     z-index: 10;
 }
-
 ```
 
-The element with class  `.my-second-div`  will be displayed, and behind it  `.my-first-div`.
+The element with class `.my-second-div` will be displayed, and behind it `.my-first-div`.
 
 Here we used 10 and 20, but you can use any number. Negative numbers too. It’s common to pick non-consecutive numbers, so you can position elements in the middle. If you use consecutive numbers instead, you would need to re-calculate the z-index of each element involved in the positioning.
 
@@ -2940,19 +2857,19 @@ Unless you need to support old browsers like IE8 and IE9, there is no reason to 
 -   Table layouts
 -   Floats
 -   clearfix hacks
--   `display: table`  hacks
+-   `display: table` hacks
 
 In this guide there’s all you need to know about going from zero knowledge of CSS Grid to being a proficient user.
 
 #### The basics
 
-The CSS Grid layout is activated on a container element (which can be a  `div`  or any other tag) by setting  `display: grid`.
+The CSS Grid layout is activated on a container element (which can be a `div` or any other tag) by setting `display: grid`.
 
 As with flexbox, you can define some properties on the container, and some properties on each individual item in the grid.
 
 These properties combined will determine the final look of the grid.
 
-The most basic container properties are  `grid-template-columns`  and  `grid-template-rows`.
+The most basic container properties are `grid-template-columns` and `grid-template-rows`.
 
 #### grid-template-columns and grid-template-rows
 
@@ -2962,9 +2879,9 @@ The following snippet defines a grid with 4 columns each 200px wide, and 2 rows 
 
 ```css
 .container {
-  display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
-  grid-template-rows: 300px 300px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 300px 300px;
 }
 ```
 
@@ -2974,9 +2891,9 @@ Here’s another example of a grid with 2 columns and 2 rows:
 
 ```css
 .container {
-  display: grid;
-  grid-template-columns: 200px 200px;
-  grid-template-rows: 100px 100px;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 100px 100px;
 }
 ```
 
@@ -2988,8 +2905,8 @@ Many times you might have a fixed header size, a fixed footer size, and the main
 
 ```css
 .container {
-  display: grid;
-  grid-template-rows: 100px auto 100px;
+    display: grid;
+    grid-template-rows: 100px auto 100px;
 }
 ```
 
@@ -3001,9 +2918,9 @@ You can specify any value for each row/column, to create a lot of different desi
 
 ```css
 .container {
-  display: grid;
-  grid-template-columns: 100px 200px;
-  grid-template-rows: 100px 50px;
+    display: grid;
+    grid-template-columns: 100px 200px;
+    grid-template-rows: 100px 50px;
 }
 ```
 
@@ -3013,9 +2930,9 @@ Another example:
 
 ```css
 .container {
-  display: grid;
-  grid-template-columns: 10px 100px;
-  grid-template-rows: 100px 10px;
+    display: grid;
+    grid-template-columns: 10px 100px;
+    grid-template-rows: 100px 10px;
 }
 ```
 
@@ -3030,17 +2947,17 @@ You can add spacing by using those properties:
 -   `grid-column-gap`
 -   `grid-row-gap`
 
-or the shorthand syntax  `grid-gap`.
+or the shorthand syntax `grid-gap`.
 
 Example:
 
 ```css
 .container {
-  display: grid;
-  grid-template-columns: 100px 200px;
-  grid-template-rows: 100px 50px;
-  grid-column-gap: 25px;
-  grid-row-gap: 25px;
+    display: grid;
+    grid-template-columns: 100px 200px;
+    grid-template-rows: 100px 50px;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
 }
 ```
 
@@ -3050,10 +2967,10 @@ The same layout using the shorthand:
 
 ```css
 .container {
-  display: grid;
-  grid-template-columns: 100px 200px;
-  grid-template-rows: 100px 50px;
-  grid-gap: 25px;
+    display: grid;
+    grid-template-columns: 100px 200px;
+    grid-template-rows: 100px 50px;
+    grid-gap: 25px;
 }
 ```
 
@@ -3072,15 +2989,14 @@ Example:
 
 ```css
 .container {
-  display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
-  grid-template-rows: 300px 300px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 300px 300px;
 }
 .item1 {
-  grid-column-start: 2;
-  grid-column-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
 }
-
 ```
 
 ![](https://cdn-media-1.freecodecamp.org/images/JrzZm5o6SkpvGiKZo6v8XmRDAfpajBt6mym4)
@@ -3089,7 +3005,7 @@ The numbers correspond to the vertical line that separates each column, starting
 
 ![](https://cdn-media-1.freecodecamp.org/images/JdCCwzrGzvd1O68dBAqIHSWh4hMbM6ttuJ8Z)
 
-The same principle applies to  `grid-row-start`  and  `grid-row-end`, except this time instead of taking more columns, a cell takes more rows.
+The same principle applies to `grid-row-start` and `grid-row-end`, except this time instead of taking more columns, a cell takes more rows.
 
 #### Shorthand syntax
 
@@ -3102,28 +3018,26 @@ The usage is simple, here’s how to replicate the above layout:
 
 ```css
 .container {
-  display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
-  grid-template-rows: 300px 300px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 300px 300px;
 }
 .item1 {
-  grid-column: 2 / 4;
+    grid-column: 2 / 4;
 }
-
 ```
 
-Another approach is to set the starting column/row, and set how many it should occupy using  `span`:
+Another approach is to set the starting column/row, and set how many it should occupy using `span`:
 
 ```css
 .container {
-  display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
-  grid-template-rows: 300px 300px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 300px 300px;
 }
 .item1 {
-  grid-column: 2 / span 2;
+    grid-column: 2 / span 2;
 }
-
 ```
 
 ### More grid configuration
@@ -3138,7 +3052,7 @@ The following example divides a grid into 3 columns with the same width, 1/3 of 
 
 ```css
 .container {
-  grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 ```
 
@@ -3148,19 +3062,19 @@ You can also use percentages, and mix and match fractions, pixels, rem and perce
 
 ```css
 .container {
-  grid-template-columns: 3rem 15% 1fr 2fr
+    grid-template-columns: 3rem 15% 1fr 2fr;
 }
 ```
 
-#### Using  `repeat()`
+#### Using `repeat()`
 
-`repeat()`  is a special function that takes a number that indicates the number of times a row/column will be repeated, and the length of each one.
+`repeat()` is a special function that takes a number that indicates the number of times a row/column will be repeated, and the length of each one.
 
 If every column has the same width, you can specify the layout using this syntax:
 
 ```css
 .container {
-  grid-template-columns: repeat(4, 100px);
+    grid-template-columns: repeat(4, 100px);
 }
 ```
 
@@ -3170,7 +3084,7 @@ Or using fractions:
 
 ```css
 .container {
-  grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 ```
 
@@ -3182,15 +3096,15 @@ Here’s an example where the sidebar takes 1/4 of the screen and never takes le
 
 ```css
 .container {
-  grid-template-columns: minmax(200px, 3fr) 9fr;
+    grid-template-columns: minmax(200px, 3fr) 9fr;
 }
 ```
 
-You can also set just a maximum value using the  `auto`  keyword:
+You can also set just a maximum value using the `auto` keyword:
 
 ```css
 .container {
-  grid-template-columns: minmax(auto, 50%) 9fr;
+    grid-template-columns: minmax(auto, 50%) 9fr;
 }
 ```
 
@@ -3198,15 +3112,15 @@ or just a minimum value:
 
 ```css
 .container {
-  grid-template-columns: minmax(100px, auto) 9fr;
+    grid-template-columns: minmax(100px, auto) 9fr;
 }
 ```
 
-#### Positioning elements using  `grid-template-areas`
+#### Positioning elements using `grid-template-areas`
 
 By default elements are positioned in the grid using their order in the HTML structure.
 
-Using  `grid-template-areas`  you can define template areas to move them around in the grid, and also to spawn an item on multiple rows / columns instead of using  `grid-column`.
+Using `grid-template-areas` you can define template areas to move them around in the grid, and also to spawn an item on multiple rows / columns instead of using `grid-column`.
 
 Here’s an example:
 
@@ -3228,34 +3142,34 @@ Here’s an example:
 
 ```
 
-Despite their original order, items are placed where  `grid-template-areas`  define, depending on the  `grid-area`  property associated to them.
+Despite their original order, items are placed where `grid-template-areas` define, depending on the `grid-area` property associated to them.
 
 #### Adding empty cells in template areas
 
-You can set an empty cell using the dot  `.`  instead of an area name in  `grid-template-areas`:
+You can set an empty cell using the dot `.` instead of an area name in `grid-template-areas`:
 
 ```css
 .container {
-  display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
-  grid-template-rows: 300px 300px;
-  grid-template-areas:
-    ". header header ."
-    "sidebar . main main"
-    ". footer footer .";
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 300px 300px;
+    grid-template-areas:
+        '. header header .'
+        'sidebar . main main'
+        '. footer footer .';
 }
 ```
 
 #### Fill a page with a grid
 
-You can make a grid extend to fill the page using  `fr`:
+You can make a grid extend to fill the page using `fr`:
 
 ```css
 .container {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 ```
 
@@ -3269,13 +3183,17 @@ Here’s the markup:
 
 ```html
 <div class="wrapper">
-  <header>Header</header>
-  <article>
-    <h1>Welcome</h1>
-    <p>Hi!</p>
-  </article>
-  <aside><ul><li>Sidebar</li></ul></aside>
-  <footer>Footer</footer>
+    <header>Header</header>
+    <article>
+        <h1>Welcome</h1>
+        <p>Hi!</p>
+    </article>
+    <aside>
+        <ul>
+            <li>Sidebar</li>
+        </ul>
+    </aside>
+    <footer>Footer</footer>
 </div>
 ```
 
@@ -3283,49 +3201,49 @@ and here’s the CSS:
 
 ```css
 header {
-  grid-area: header;
-  background-color: #fed330;
-  padding: 20px;
+    grid-area: header;
+    background-color: #fed330;
+    padding: 20px;
 }
 article {
-  grid-area: content;
-  background-color: #20bf6b;
-  padding: 20px;
+    grid-area: content;
+    background-color: #20bf6b;
+    padding: 20px;
 }
 aside {
-  grid-area: sidebar;
-  background-color: #45aaf2;
+    grid-area: sidebar;
+    background-color: #45aaf2;
 }
 footer {
-  padding: 20px;
-  grid-area: footer;
-  background-color: #fd9644;
+    padding: 20px;
+    grid-area: footer;
+    background-color: #fd9644;
 }
 .wrapper {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas:
-    "header  header"
-    "sidebar content"
-    "footer  footer";
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+        'header  header'
+        'sidebar content'
+        'footer  footer';
 }
 ```
 
-I added some colors to make it prettier, but basically it assigns to every different tag a  `grid-area`  name, which is used in the  `grid-template-areas`  property in  `.wrapper`.
+I added some colors to make it prettier, but basically it assigns to every different tag a `grid-area` name, which is used in the `grid-template-areas` property in `.wrapper`.
 
 When the layout is smaller we can put the sidebar below the content using a media query:
 
 ```css
 @media (max-width: 500px) {
-  .wrapper {
-    grid-template-columns: 4fr;
-    grid-template-areas:
-      "header"
-      "content"
-      "sidebar"
-      "footer";
-  }
+    .wrapper {
+        grid-template-columns: 4fr;
+        grid-template-areas:
+            'header'
+            'content'
+            'sidebar'
+            'footer';
+    }
 }
 ```
 
@@ -3337,7 +3255,7 @@ These are the basics of CSS Grid. There are many things I didn’t include in th
 
 Flexbox, also called Flexible Box Module, is one of the two modern layouts systems, along with CSS Grid.
 
-Compared to CSS Grid (which is bi-dimensional), flexbox is a  **one-dimensional layout model**. It will control the layout based on a row or on a column, but not together at the same time.
+Compared to CSS Grid (which is bi-dimensional), flexbox is a **one-dimensional layout model**. It will control the layout based on a row or on a column, but not together at the same time.
 
 The main goal of flexbox is to allow items to fill the whole space offered by their container, depending on some rules you set.
 
@@ -3346,7 +3264,7 @@ Unless you need to support old browsers like IE8 and IE9, Flexbox is the tool th
 -   Table layouts
 -   Floats
 -   clearfix hacks
--   `display: table`  hacks
+-   `display: table` hacks
 
 Let’s dive into flexbox and become a master of it in a very short time.
 
@@ -3372,7 +3290,7 @@ or
 display: inline-flex;
 ```
 
-The content  **inside the container**  will be aligned using flexbox.
+The content **inside the container** will be aligned using flexbox.
 
 #### Container properties
 
@@ -3386,26 +3304,26 @@ Some flexbox properties apply to the container, which sets the general rules for
 
 #### Align rows or columns
 
-The first property we see,  `**flex-direction**`, determines if the container should align its items as rows, or as columns:
+The first property we see, `**flex-direction**`, determines if the container should align its items as rows, or as columns:
 
--   `flex-direction: row`  places items as a  **row**, in the text direction (left-to-right for western countries)
--   `flex-direction: row-reverse`  places items just like  `row`  but in the opposite direction
--   `flex-direction: column`  places items in a  **column**, ordering top to bottom
--   `flex-direction: column-reverse`  places items in a column, just like  `column`  but in the opposite direction
+-   `flex-direction: row` places items as a **row**, in the text direction (left-to-right for western countries)
+-   `flex-direction: row-reverse` places items just like `row` but in the opposite direction
+-   `flex-direction: column` places items in a **column**, ordering top to bottom
+-   `flex-direction: column-reverse` places items in a column, just like `column` but in the opposite direction
 
 ![](https://cdn-media-1.freecodecamp.org/images/o26IgBk91Cjdfe8h-uAl-NAULk6k5fUjTI8o)
 
 #### Vertical and horizontal alignment
 
-By default, items start from the left if  `flex-direction`  is row, and from the top if  `flex-direction`  is column.
+By default, items start from the left if `flex-direction` is row, and from the top if `flex-direction` is column.
 
 ![](https://cdn-media-1.freecodecamp.org/images/lgTI1ZtxbWha-5GyAWbTNrmOhe03ikkpo-Gx)
 
-You can change this behavior using  `justify-content`  to change the horizontal alignment, and  `align-items`  to change the vertical alignment.
+You can change this behavior using `justify-content` to change the horizontal alignment, and `align-items` to change the vertical alignment.
 
 #### Change the horizontal alignment
 
-`**justify-content**`  has 5 possible values:
+`**justify-content**` has 5 possible values:
 
 -   `flex-start`: align to the left side of the container.
 -   `flex-end`: align to the right side of the container.
@@ -3417,7 +3335,7 @@ You can change this behavior using  `justify-content`  to change the horizontal 
 
 #### Change the vertical alignment
 
-`**align-items**`  has 5 possible values:
+`**align-items**` has 5 possible values:
 
 -   `flex-start`: align to the top of the container.
 -   `flex-end`: align to the bottom of the container.
@@ -3427,17 +3345,17 @@ You can change this behavior using  `justify-content`  to change the horizontal 
 
 ![](https://cdn-media-1.freecodecamp.org/images/1pQRvAAzAtBRjO8UI8-zpoa8rL51uKkKklZR)
 
-A note on  `baseline`:
+A note on `baseline`:
 
-`baseline`  looks similar to  `flex-start`  in this example, due to my boxes being too simple. Check out  [this Codepen][76]  to have a more useful example, which I forked from a Pen originally created by  [Martin Michálek][77]. As you can see there, item dimensions are aligned.
+`baseline` looks similar to `flex-start` in this example, due to my boxes being too simple. Check out [this Codepen][76] to have a more useful example, which I forked from a Pen originally created by [Martin Michálek][77]. As you can see there, item dimensions are aligned.
 
 #### Wrap
 
 By default, items in a flexbox container are kept on a single line, shrinking them to fit in the container.
 
-To force the items to spread across multiple lines, use  `flex-wrap: wrap`. This will distribute the items according to the order set in  `flex-direction`. Use  `flex-wrap: wrap-reverse`  to reverse this order.
+To force the items to spread across multiple lines, use `flex-wrap: wrap`. This will distribute the items according to the order set in `flex-direction`. Use `flex-wrap: wrap-reverse` to reverse this order.
 
-A shorthand property called  `flex-flow`  allows you to specify  `flex-direction`  and  `flex-wrap`  in a single line, by adding the  `flex-direction`  value first, followed by  `flex-wrap`value, for example:  `flex-flow: row wrap`.
+A shorthand property called `flex-flow` allows you to specify `flex-direction` and `flex-wrap` in a single line, by adding the `flex-direction` value first, followed by `flex-wrap`value, for example: `flex-flow: row wrap`.
 
 #### Properties that apply to each single item
 
@@ -3456,15 +3374,15 @@ Let’s see them in detail.
 
 #### Moving items before / after another one using order
 
-Items are ordered based on the order they are assigned. By default every item has order  `0`  and the appearance in the HTML determines the final order.
+Items are ordered based on the order they are assigned. By default every item has order `0` and the appearance in the HTML determines the final order.
 
-You can override this property using  `order`  on each separate item. This is a property you set on the item, not the container. You can make an item appear before all the others by setting a negative value.
+You can override this property using `order` on each separate item. This is a property you set on the item, not the container. You can make an item appear before all the others by setting a negative value.
 
 ![](https://cdn-media-1.freecodecamp.org/images/B1sZQ2N0Faporf-B6QSoT9qlksFM0ul6Ova2)
 
 #### Vertical alignment using align-self
 
-An item can choose to  **override**  the container  `align-items`  setting, using  `**align-self**`, which has the same 5 possible values of  `align-items`:
+An item can choose to **override** the container `align-items` setting, using `**align-self**`, which has the same 5 possible values of `align-items`:
 
 -   `flex-start`: align to the top of the container.
 -   `flex-end`: align to the bottom of the container.
@@ -3490,7 +3408,7 @@ If all items are defined as 1 and one is defined as 3, the bigger element will s
 
 **flex-basis**
 
-If set to  `auto`, it sizes an item according to its width or height, and adds extra space based on the  `flex-grow`  property.
+If set to `auto`, it sizes an item according to its width or height, and adds extra space based on the `flex-grow` property.
 
 If set to 0, it does not add any extra space for the item when calculating the layout.
 
@@ -3504,7 +3422,7 @@ This property combines the above 3 properties:
 -   `flex-shrink`
 -   `flex-basis`
 
-and provides a shorthand syntax:  `flex: 0 1 auto`
+and provides a shorthand syntax: `flex: 0 1 auto`
 
 ### TABLES
 
@@ -3516,22 +3434,22 @@ Let’s start from the HTML. This is a basic table:
 
 ```html
 <table>
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Flavio</th>
-      <td>36</td>
-    </tr>
-    <tr>
-      <th scope="row">Roger</th>
-      <td>7</td>
-    </tr>
-  </tbody>
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Flavio</th>
+            <td>36</td>
+        </tr>
+        <tr>
+            <th scope="row">Roger</th>
+            <td>7</td>
+        </tr>
+    </tbody>
 </table>
 ```
 
@@ -3543,11 +3461,13 @@ We can use CSS to style all the elements of the table, of course.
 
 Let’s start with the border. A nice border can go a long way.
 
-We can apply it on the  `table`  element, and on the inner elements too, like  `th`  and  `td`:
+We can apply it on the `table` element, and on the inner elements too, like `th` and `td`:
 
 ```css
-table, th, td {
-  border: 1px solid #333;
+table,
+th,
+td {
+    border: 1px solid #333;
 }
 ```
 
@@ -3555,11 +3475,11 @@ If we pair it with some margin, we get a nice result:
 
 ![](https://cdn-media-1.freecodecamp.org/images/77EZWjHTyPL1-2BHjB6PtNKGxoefvaH8Ou0N)
 
-One common thing with tables is the ability to add a color to one row, and a different color to another row. This is possible using the  `:nth-child(odd)`  or  `:nth-child(even)`selector:
+One common thing with tables is the ability to add a color to one row, and a different color to another row. This is possible using the `:nth-child(odd)` or `:nth-child(even)`selector:
 
 ```css
 tbody tr:nth-child(odd) {
-  background-color: #af47ff;
+    background-color: #af47ff;
 }
 ```
 
@@ -3567,7 +3487,7 @@ This gives us:
 
 ![](https://cdn-media-1.freecodecamp.org/images/bgYEzQ0jzePRY8Z1QsjS8Wr33gzw8Hm2R0-o)
 
-If you add  `border-collapse: collapse;`  to the table element, all borders are collapsed into one:
+If you add `border-collapse: collapse;` to the table element, all borders are collapsed into one:
 
 ![](https://cdn-media-1.freecodecamp.org/images/YBEKBLgWtAy6VbpdnQCbpIzfWJYKvGPesyGA)
 
@@ -3575,17 +3495,17 @@ If you add  `border-collapse: collapse;`  to the table element, all borders are 
 
 Centering things in CSS is a task that is very different if you need to center horizontally or vertically.
 
-In this post I explain the most common scenarios and how to solve them. If a new solution is provided by  [Flexbox][78]  I ignore the old techniques because we need to move forward, and Flexbox has been supported by browsers for years, IE10 included.
+In this post I explain the most common scenarios and how to solve them. If a new solution is provided by [Flexbox][78] I ignore the old techniques because we need to move forward, and Flexbox has been supported by browsers for years, IE10 included.
 
 ### Center horizontally
 
 #### Text
 
-Text is very simple to center horizontally using the  `text-align`  property set to  `center`:
+Text is very simple to center horizontally using the `text-align` property set to `center`:
 
 ```css
 p {
-  text-align: center;
+    text-align: center;
 }
 ```
 
@@ -3595,12 +3515,12 @@ The modern way to center anything that is not text is to use Flexbox:
 
 ```css
 #mysection {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 ```
 
-any element inside  `#mysection`  will be horizontally centered.
+any element inside `#mysection` will be horizontally centered.
 
 ![](https://cdn-media-1.freecodecamp.org/images/poUby5NpYUt0D8ADmTgP6wWXhjj2PMjWuK4p)
 
@@ -3610,23 +3530,23 @@ Anything that is not text can be centered by applying an automatic margin to lef
 
 ```css
 section {
-  margin: 0 auto;
-  width: 50%;
+    margin: 0 auto;
+    width: 50%;
 }
 ```
 
-the above  `margin: 0 auto;`  is a shorthand for:
+the above `margin: 0 auto;` is a shorthand for:
 
 ```css
 section {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 ```
 
-Remember to set the item to  `display: block`  if it's an inline element.
+Remember to set the item to `display: block` if it's an inline element.
 
 ### Center vertically
 
@@ -3634,12 +3554,12 @@ Traditionally this has always been a difficult task. Flexbox now provides us a g
 
 ```css
 #mysection {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 ```
 
-any element inside  `#mysection`  will be vertically centered.
+any element inside `#mysection` will be vertically centered.
 
 ![](https://cdn-media-1.freecodecamp.org/images/XOIWKiWU2zPe3VNje1LpiaHur6lJu4db8Cyp)
 
@@ -3649,21 +3569,21 @@ Flexbox techniques to center vertically and horizontally can be combined to comp
 
 ```css
 #mysection {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 ```
 
 ![](https://cdn-media-1.freecodecamp.org/images/OtQEQ-F5AsSU0b49Oo5cGwoyLafxN05qmoLQ)
 
-The same can be done using  [CSS Grid][79]:
+The same can be done using [CSS Grid][79]:
 
 ```css
 body {
-  display: grid;
-  place-items: center;
-  height: 100vh;
+    display: grid;
+    place-items: center;
+    height: 100vh;
 }
 ```
 
@@ -3673,37 +3593,37 @@ Lists are a very important part of many web pages.
 
 CSS can style them using several properties.
 
-`list-style-type`  is used to set a predefined marker to be used by the list:
+`list-style-type` is used to set a predefined marker to be used by the list:
 
 ```css
 li {
-  list-style-type: square;
+    list-style-type: square;
 }
 ```
 
-We have lots of possible values, which you can see here  [https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type][80]  with examples of their appearance. Some of the most popular ones are  `disc`,  `circle`,  `square`  and  `none`.
+We have lots of possible values, which you can see here [https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type][80] with examples of their appearance. Some of the most popular ones are `disc`, `circle`, `square` and `none`.
 
-`list-style-image`  is used to use a custom marker when a predefined marker is not appropriate:
+`list-style-image` is used to use a custom marker when a predefined marker is not appropriate:
 
 ```css
 li {
-  list-style-image: url(list-image.png);
+    list-style-image: url(list-image.png);
 }
 ```
 
-`list-style-position`  lets you add the marker  `outside`  (the default) or  `inside`  of the list content, in the flow of the page rather than outside of it
+`list-style-position` lets you add the marker `outside` (the default) or `inside` of the list content, in the flow of the page rather than outside of it
 
 ```css
 li {
-  list-style-position: inside;
+    list-style-position: inside;
 }
 ```
 
-The  `list-style`  shorthand property lets us specify all those properties in the same line:
+The `list-style` shorthand property lets us specify all those properties in the same line:
 
 ```css
 li {
-  list-style: url(list-image.png) inside;
+    list-style: url(list-image.png) inside;
 }
 ```
 
@@ -3715,14 +3635,14 @@ In this section we’re going to first introduce media types and media feature d
 
 Used in media queries and @import declarations, media types allow us to determine on which media a CSS file, or a piece of CSS, is loaded.
 
-We have the following  **media types**
+We have the following **media types**
 
--   `all`  means all the media
--   `print`  used when printing
--   `screen`  used when the page is presented on a screen
--   `speech`  used for screen readers
+-   `all` means all the media
+-   `print` used when printing
+-   `screen` used when the page is presented on a screen
+-   `speech` used for screen readers
 
-`screen`  is the default.
+`screen` is the default.
 
 In the past we had more of them, but most are deprecated as they proved to be ineffective ways of determining device needs.
 
@@ -3739,18 +3659,23 @@ We can load a CSS file on multiple media types separating each with a comma:
 @import url(myfile.css) screen, print;
 ```
 
-The same works for the  `link`  tag in HTML:
+The same works for the `link` tag in HTML:
 
 ```html
 <link rel="stylesheet" type="text/css" href="myfile.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="another.css" media="screen, print" />
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="another.css"
+    media="screen, print"
+/>
 ```
 
-We’re not limited to just using media types in the  `media`  attribute and in the  `@import`declaration. There's more.
+We’re not limited to just using media types in the `media` attribute and in the `@import`declaration. There's more.
 
 #### Media feature descriptors
 
-First, let’s introduce  **media feature descriptors**. They are additional keywords that we can add to the  `media`  attribute of  `link`  or the the  `@import`  declaration, to express more conditionals over the loading of the CSS.
+First, let’s introduce **media feature descriptors**. They are additional keywords that we can add to the `media` attribute of `link` or the the `@import` declaration, to express more conditionals over the loading of the CSS.
 
 Here’s the list of them:
 
@@ -3770,12 +3695,12 @@ Here’s the list of them:
 
 Each of them has a corresponding min- _and max-_, for example:
 
--   `min-width`,  `max-width`
--   `min-device-width`,  `max-device-width`
+-   `min-width`, `max-width`
+-   `min-device-width`, `max-device-width`
 
 and so on.
 
-Some of those accept a length value which can be expressed in  `px`  or  `rem`  or any length value. It's the case of  `width`,  `height`,  `device-width`,  `device-height`.
+Some of those accept a length value which can be expressed in `px` or `rem` or any length value. It's the case of `width`, `height`, `device-width`, `device-height`.
 
 For example:
 
@@ -3785,21 +3710,26 @@ For example:
 
 Notice that we wrap each block using media feature descriptors in parentheses.
 
-Some accept a fixed value.  `orientation`, used to detect the device orientation, accepts  `portrait`  or  `landscape`.
+Some accept a fixed value. `orientation`, used to detect the device orientation, accepts `portrait` or `landscape`.
 
 Example:
 
 ```html
-<link rel="stylesheet" type="text/css" href="myfile.css" media="screen and (orientation: portrait)" />
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="myfile.css"
+    media="screen and (orientation: portrait)"
+/>
 ```
 
-`scan`, used to determine the type of screen, accepts  `progressive`  (for modern displays) or  `interlace`  (for older CRT devices).
+`scan`, used to determine the type of screen, accepts `progressive` (for modern displays) or `interlace` (for older CRT devices).
 
 Some others want an integer.
 
-Like  `color`  which inspects the number of bits per color component used by the device. Very low-level, but you just need to know it's there for your usage (like  `grid`,  `color-index`,  `monochrome`).
+Like `color` which inspects the number of bits per color component used by the device. Very low-level, but you just need to know it's there for your usage (like `grid`, `color-index`, `monochrome`).
 
-`aspect-ratio`  and  `device-aspect-ratio`  accept a ratio value representing the width to height viewport ratio, which is expressed as a fraction.
+`aspect-ratio` and `device-aspect-ratio` accept a ratio value representing the width to height viewport ratio, which is expressed as a fraction.
 
 Example:
 
@@ -3807,7 +3737,7 @@ Example:
 @import url(myfile.css) screen and (aspect-ratio: 4/3);
 ```
 
-`resolution`  represents the pixel density of the device, expressed in a  [resolution data type][81]  like  `dpi`.
+`resolution` represents the pixel density of the device, expressed in a [resolution data type][81] like `dpi`.
 
 Example:
 
@@ -3817,10 +3747,15 @@ Example:
 
 #### Logic operators
 
-We can combine rules using  `and`:
+We can combine rules using `and`:
 
 ```html
-<link rel="stylesheet" type="text/css" href="myfile.css" media="screen and (max-width: 800px)" />
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="myfile.css"
+    media="screen and (max-width: 800px)"
+/>
 ```
 
 We can perform an “or” type of logic operation using commas, which combines multiple media queries:
@@ -3829,19 +3764,19 @@ We can perform an “or” type of logic operation using commas, which combines 
 @import url(myfile.css) screen, print;
 ```
 
-We can use  `not`  to negate a media query:
+We can use `not` to negate a media query:
 
 ```css
 @import url(myfile.css) not screen;
 ```
 
-> _Important:  `not`  can only be used to negate an entire media query, so it must be placed at the beginning of it (or after a comma)._
+> _Important: `not` can only be used to negate an entire media query, so it must be placed at the beginning of it (or after a comma)._
 
 #### Media queries
 
-All those above rules we saw applied to @import or the the  `link`  HTML tag can be applied inside the CSS, too.
+All those above rules we saw applied to @import or the the `link` HTML tag can be applied inside the CSS, too.
 
-You need to wrap them in a  `@media () {}`  structure.
+You need to wrap them in a `@media () {}` structure.
 
 Example:
 
@@ -3851,35 +3786,29 @@ Example:
 }
 ```
 
-_and this is the foundation for  **responsive design**._
+_and this is the foundation for **responsive design**._
 
 _Media queries can be quite complex. This example applies the CSS only if it’s a screen device, the width is between 600 and 800 pixels, and the orientation is landscape:_
 
-_`@media screen and (max-width: 800px) and (min-width: 600px) and (orientation: landscape) {
-  /`_ `enter some CSS _/
-}_`
+_`@media screen and (max-width: 800px) and (min-width: 600px) and (orientation: landscape) { /`_ `enter some CSS _/ }_`
 
 ### _FEATURE QUERIES_
 
-_Feature queries are a recent and relatively unknown ability of CSS, but a  [well supported][82]one._
+_Feature queries are a recent and relatively unknown ability of CSS, but a [well supported][82]one._
 
-_We can use it to check if a feature is supported by the browser using the  `@supports`keyword._
+_We can use it to check if a feature is supported by the browser using the `@supports`keyword._
 
 _I think this is especially useful, at the time of writing, for checking if a browser supports CSS grid, for example, which can be done using:_
 
-_`@supports (display: grid) {
-  /`_ `apply this CSS _/
-}_`
+_`@supports (display: grid) { /`_ `apply this CSS _/ }_`
 
-_We check if the browser supports the  `grid`  value for the  `display`  property._
+_We check if the browser supports the `grid` value for the `display` property._
 
-_We can use  `@supports`  for any CSS property, to check any value._
+_We can use `@supports` for any CSS property, to check any value._
 
-_We can also use the logical operators  `and`,  `or`  and  `not`  to build complex feature queries:_
+_We can also use the logical operators `and`, `or` and `not` to build complex feature queries:_
 
-_`@supports (display: grid) and (display: flex) {
-  /`_ `apply this CSS */
-}`
+_`@supports (display: grid) and (display: flex) { /`_ `apply this CSS */ }`
 
 ### FILTERS
 
@@ -3887,11 +3816,11 @@ Filters allow us to perform operations on elements.
 
 Things you normally do with Photoshop or other photo editing software, like changing the opacity or the brightness, and more.
 
-You use the  `filter`  property. Here's an example of it applied on an image, but this property can be used on  _any_  element:
+You use the `filter` property. Here's an example of it applied on an image, but this property can be used on _any_ element:
 
 ```css
 img {
-  filter: <something>;
+    filter: <something>;
 }
 ```
 
@@ -3915,17 +3844,17 @@ For example:
 
 ```css
 img {
-  filter: opacity(0.5);
+    filter: opacity(0.5);
 }
 ```
 
-means the image will be 50% transparent, because  `opacity()`  takes one value from 0 to 1, or a percentage.
+means the image will be 50% transparent, because `opacity()` takes one value from 0 to 1, or a percentage.
 
 You can also apply multiple filters at once:
 
 ```css
 img {
-  filter: opacity(0.5) blur(2px);
+    filter: opacity(0.5) blur(2px);
 }
 ```
 
@@ -3933,42 +3862,42 @@ Let’s now talk about each filter in detail.
 
 #### `blur()`
 
-Blurs an element content. You pass it a value, expressed in  `px`  or  `em`  or  `rem`  that will be used to determine the blur radius.
+Blurs an element content. You pass it a value, expressed in `px` or `em` or `rem` that will be used to determine the blur radius.
 
 Example:
 
 ```css
 img {
-  filter: blur(4px);
+    filter: blur(4px);
 }
 ```
 
 #### `opacity()`
 
-`opacity()`  takes one value from 0 to 1, or a percentage, and determines the image transparency based on it.
+`opacity()` takes one value from 0 to 1, or a percentage, and determines the image transparency based on it.
 
-`0`, or  `0%`, means totally transparent.  `1`, or  `100%`, or higher, means totally visible.
+`0`, or `0%`, means totally transparent. `1`, or `100%`, or higher, means totally visible.
 
 Example:
 
 ```css
 img {
-  filter: opacity(0.5);
+    filter: opacity(0.5);
 }
 ```
 
-CSS also has an  `opacity`  property.  `filter`  however can be hardware accelerated, depending on the implementation, so this should be the preferred method.
+CSS also has an `opacity` property. `filter` however can be hardware accelerated, depending on the implementation, so this should be the preferred method.
 
 #### `drop-shadow()`
 
-`drop-shadow()`  shows a shadow behind the element, which follows the alpha channel. This means that if you have a transparent image, you get a shadow applied to the image shape, not the image box. If the image does not have an alpha channel, the shadow will be applied to the entire image box.
+`drop-shadow()` shows a shadow behind the element, which follows the alpha channel. This means that if you have a transparent image, you get a shadow applied to the image shape, not the image box. If the image does not have an alpha channel, the shadow will be applied to the entire image box.
 
 It accepts a minimum of 2 parameters, up to 5:
 
--   _offset-x_  sets the horizontal offset. Can be negative.
--   _offset-y_  sets the vertical offset. Can be negative.
+-   _offset-x_ sets the horizontal offset. Can be negative.
+-   _offset-y_ sets the vertical offset. Can be negative.
 -   _blur-radius_, optional, sets the blur radius for the shadow. It defaults to 0, no blur.
--   _spread-radius_, optional, sets the spread radius. Expressed in  `px`,  `rem`  or  `em`
+-   _spread-radius_, optional, sets the spread radius. Expressed in `px`, `rem` or `em`
 -   _color_, optional, sets the color of the shadow.
 
 You can set the color without setting the spread radius or blur radius. CSS understands the value is a color and not a length value.
@@ -3977,12 +3906,11 @@ Example:
 
 ```css
 img {
-  filter: drop-shadow(10px 10px 5px orange);
+    filter: drop-shadow(10px 10px 5px orange);
 }
 img {
-  filter: drop-shadow(10px 10px orange);
+    filter: drop-shadow(10px 10px orange);
 }
-
 ```
 
 #### `grayscale()`
@@ -3995,7 +3923,7 @@ Example:
 
 ```css
 img {
-  filter: grayscale(50%);
+    filter: grayscale(50%);
 }
 ```
 
@@ -4009,7 +3937,7 @@ Example:
 
 ```css
 img {
-  filter: sepia(50%);
+    filter: sepia(50%);
 }
 ```
 
@@ -4025,21 +3953,21 @@ Example:
 
 ```css
 img {
-  filter: invert(50%);
+    filter: invert(50%);
 }
 ```
 
 #### `hue-rotate()`
 
-The HSL color wheel is represented in degrees. Using  `hue-rotate()`  you can rotate the color using a positive or negative rotation.
+The HSL color wheel is represented in degrees. Using `hue-rotate()` you can rotate the color using a positive or negative rotation.
 
-The function accepts a  `deg`  value.
+The function accepts a `deg` value.
 
 Example:
 
 ```css
 img {
-  filter: hue-rotate(90deg);
+    filter: hue-rotate(90deg);
 }
 ```
 
@@ -4055,7 +3983,7 @@ Example:
 
 ```css
 img {
-  filter: brightness(50%);
+    filter: brightness(50%);
 }
 ```
 
@@ -4071,7 +3999,7 @@ Example:
 
 ```css
 img {
-  filter: contrast(150%);
+    filter: contrast(150%);
 }
 ```
 
@@ -4087,7 +4015,7 @@ Example:
 
 ```css
 img {
-  filter: saturate();
+    filter: saturate();
 }
 ```
 
@@ -4099,11 +4027,11 @@ Example:
 
 ```css
 img {
-  filter: url(filter.svg);
+    filter: url(filter.svg);
 }
 ```
 
-SVG filters are out of the scope of this piece, but you can read more on this Smashing Magazine post:  [https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/][83]
+SVG filters are out of the scope of this piece, but you can read more on this Smashing Magazine post: [https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/][83]
 
 ### TRANSFORMS
 
@@ -4111,24 +4039,24 @@ Transforms allow you to translate, rotate, scale, and skew elements, in the 2D o
 
 #### 2D transforms
 
-The  `transform`  property accepts those functions:
+The `transform` property accepts those functions:
 
--   `translate()`  to move elements around
--   `rotate()`  to rotate elements
--   `scale()`  to scale elements in size
--   `skew()`  to twist or slant an element
--   `matrix()`  a way to perform any of the above operations using a matrix of 6 elements, a less user friendly syntax but less verbose
+-   `translate()` to move elements around
+-   `rotate()` to rotate elements
+-   `scale()` to scale elements in size
+-   `skew()` to twist or slant an element
+-   `matrix()` a way to perform any of the above operations using a matrix of 6 elements, a less user friendly syntax but less verbose
 
 We also have axis-specific functions:
 
--   `translateX()`  to move elements around on the X axis
--   `translateY()`  to move elements around on the Y axis
--   `scaleX()`  to scale elements in size on the X axis
--   `scaleY()`  to scale elements in size on the Y axis
--   `skewX()`  to twist or slant an element on the X axis
--   `skewY()`  to twist or slant an element on the Y axis
+-   `translateX()` to move elements around on the X axis
+-   `translateY()` to move elements around on the Y axis
+-   `scaleX()` to scale elements in size on the X axis
+-   `scaleY()` to scale elements in size on the Y axis
+-   `skewX()` to twist or slant an element on the X axis
+-   `skewY()` to twist or slant an element on the Y axis
 
-Here is an example of a transform which changes the  `.box`  element width by 2 (duplicating it) and the height by 0.5 (reducing it to half):
+Here is an example of a transform which changes the `.box` element width by 2 (duplicating it) and the height by 0.5 (reducing it to half):
 
 ```css
 .box {
@@ -4136,7 +4064,7 @@ Here is an example of a transform which changes the  `.box`  element width by 2 
 }
 ```
 
-`[transform-origin][84]`  lets us set the origin (the  `(0, 0)`  coordinates) for the transformation, letting us change the rotation center.
+`[transform-origin][84]` lets us set the origin (the `(0, 0)` coordinates) for the transformation, letting us change the rotation center.
 
 #### Combining multiple transforms
 
@@ -4152,17 +4080,17 @@ transform: rotateY(20deg) scaleX(3) translateY(100px);
 
 We can go one step further and move our elements in a 3D space instead of in a 2D space. With 3D, we are adding another axis, Z, which adds depth to our visuals.
 
-Using the  `perspective`  property you can specify how far the 3D object is from the viewer.
+Using the `perspective` property you can specify how far the 3D object is from the viewer.
 
 Example:
 
 ```css
-.3Delement {
-  perspective: 100px;
+.3delement {
+    perspective: 100px;
 }
 ```
 
-`perspective-origin`  determines the appearance of the position of the viewer, how are we looking at it in the X and Y axis.
+`perspective-origin` determines the appearance of the position of the viewer, how are we looking at it in the X and Y axis.
 
 Now we can use additional functions that control the Z axis, and that add up to the other X and Y axis transforms:
 
@@ -4170,7 +4098,7 @@ Now we can use additional functions that control the Z axis, and that add up to 
 -   `rotateZ()`
 -   `scaleZ()`
 
-and the corresponding shorthands  `translate3d()`,  `rotate3d()`  and  `scale3d()`  as shorthands for using the  `translateX()`,  `translateY()`  and  `translateZ()`  functions and so on.
+and the corresponding shorthands `translate3d()`, `rotate3d()` and `scale3d()` as shorthands for using the `translateX()`, `translateY()` and `translateZ()` functions and so on.
 
 3D transforms are a bit too advanced for this handbook, but are a great topic to explore on your own.
 
@@ -4184,14 +4112,11 @@ CSS Transitions are defined by these properties:
 
 ![](https://cdn-media-1.freecodecamp.org/images/-84q2WYZR7Ojj24SC1gD4k8ZIRNGq2pXDfSo)
 
-The  `transition`  property is a handy shorthand:
+The `transition` property is a handy shorthand:
 
 ```css
 .container {
-  transition: property
-              duration
-              timing-function
-              delay;
+    transition: property duration timing-function delay;
 }
 ```
 
@@ -4202,23 +4127,22 @@ This code implements a CSS Transition:
 ```css
 .one,
 .three {
-  background: rgba(142, 92, 205, .75);
-  transition: background 1s ease-in;
+    background: rgba(142, 92, 205, 0.75);
+    transition: background 1s ease-in;
 }
 .two,
 .four {
-  background: rgba(236, 252, 100, .75);
+    background: rgba(236, 252, 100, 0.75);
 }
-
 ```
 
-See the example on Glitch  [https://flavio-css-transitions-example.glitch.me][85]
+See the example on Glitch [https://flavio-css-transitions-example.glitch.me][85]
 
-When hovering the  `.one`  and  `.three`  elements, the purple circles, there is a transition animation that eases the change of background, while the yellow circles do not, because they do not have the  `transition`  property defined.
+When hovering the `.one` and `.three` elements, the purple circles, there is a transition animation that eases the change of background, while the yellow circles do not, because they do not have the `transition` property defined.
 
 #### Transition timing function values
 
-`transition-timing-function`  allows you to specify the acceleration curve of the transition.
+`transition-timing-function` allows you to specify the acceleration curve of the transition.
 
 There are some simple values you can use:
 
@@ -4228,13 +4152,13 @@ There are some simple values you can use:
 -   `ease-out`
 -   `ease-in-out`
 
-[This Glitch][86]  shows how these work in practice.
+[This Glitch][86] shows how these work in practice.
 
-You can create a completely custom timing function using  [cubic bezier curves][87]. This is rather advanced, but basically any of those functions above are built using bezier curves. We have handy names as they are common ones.
+You can create a completely custom timing function using [cubic bezier curves][87]. This is rather advanced, but basically any of those functions above are built using bezier curves. We have handy names as they are common ones.
 
 #### CSS Transitions in Browser DevTools
 
-The  [Browser DevTools][88]  offer a great way to visualize transitions.
+The [Browser DevTools][88] offer a great way to visualize transitions.
 
 This is Chrome:
 
@@ -4363,124 +4287,131 @@ Here’s the full list:
 
 CSS Animations are a great way to create visual animations, not limited to a single movement like CSS Transitions, but much more articulated.
 
-An animation is applied to an element using the  `animation`  property.
+An animation is applied to an element using the `animation` property.
 
 ```css
 .container {
-  animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
 }
 ```
 
-`spin`  is the name of the animation, which we need to define separately. We also tell CSS to make the animation last 10 seconds, perform it in a linear way (no acceleration or any difference in its speed) and to repeat it infinitely.
+`spin` is the name of the animation, which we need to define separately. We also tell CSS to make the animation last 10 seconds, perform it in a linear way (no acceleration or any difference in its speed) and to repeat it infinitely.
 
-You must  **define how your animation works**  using  **keyframes**. Example of an animation that rotates an item:
+You must **define how your animation works** using **keyframes**. Example of an animation that rotates an item:
 
 ```css
 @keyframes spin {
-  0% {
-    transform: rotateZ(0);
-  }
-  100% {
-    transform: rotateZ(360deg);
-  }
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
 ```
 
-Inside the  `@keyframes`  definition you can have as many intermediate waypoints as you want.
+Inside the `@keyframes` definition you can have as many intermediate waypoints as you want.
 
 In this case we instruct CSS to make the transform property to rotate the Z axis from 0 to 360 grades, completing the full loop.
 
 You can use any CSS transform here.
 
-Notice how this does not dictate anything about the temporal interval the animation should take. This is defined when you use it via  `animation`.
+Notice how this does not dictate anything about the temporal interval the animation should take. This is defined when you use it via `animation`.
 
 #### A CSS Animations Example
 
 I want to draw four circles, all with a starting point in common, all 90 degrees distant from each other.
 
 ```css
-<div class="container">
-  <div class="circle one"></div>
-  <div class="circle two"></div>
-  <div class="circle three"></div>
-  <div class="circle four"></div>
-</div>
-body {
-  display: grid;
-  place-items: center;
-  height: 100vh;
+<div
+    class='container'
+    > <div
+    class='circle one'
+    > </div
+    > <div
+    class='circle two'
+    > </div
+    > <div
+    class='circle three'
+    > </div
+    > <div
+    class='circle four'
+    > </div
+    > </div
+    > body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
 }
 .circle {
-  border-radius: 50%;
-  left: calc(50% - 6.25em);
-  top: calc(50% - 12.5em);
-  transform-origin: 50% 12.5em;
-  width: 12.5em;
-  height: 12.5em;
-  position: absolute;
-  box-shadow: 0 1em 2em rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    left: calc(50% - 6.25em);
+    top: calc(50% - 12.5em);
+    transform-origin: 50% 12.5em;
+    width: 12.5em;
+    height: 12.5em;
+    position: absolute;
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.5);
 }
 .one,
 .three {
-  background: rgba(142, 92, 205, .75);
+    background: rgba(142, 92, 205, 0.75);
 }
 .two,
 .four {
-  background: rgba(236, 252, 100, .75);
+    background: rgba(236, 252, 100, 0.75);
 }
 .one {
-  transform: rotateZ(0);
+    transform: rotateZ(0);
 }
 .two {
-  transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
 }
 .three {
-  transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
 }
-
 ```
 
-You can see them in this Glitch:  [https://flavio-css-circles.glitch.me][89]
+You can see them in this Glitch: [https://flavio-css-circles.glitch.me][89]
 
 Let’s make this structure (all the circles together) rotate. To do this, we apply an animation on the container, and we define that animation as a 360 degree rotation:
 
 ```css
 @keyframes spin {
-  0% {
-    transform: rotateZ(0);
-  }
-  100% {
-    transform: rotateZ(360deg);
-  }
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
-
 ```
 
-See it on  [https://flavio-css-animations-tutorial.glitch.me][90]
+See it on [https://flavio-css-animations-tutorial.glitch.me][90]
 
 You can add more keyframes to have funnier animations:
 
 ```css
 @keyframes spin {
-  0% {
-    transform: rotateZ(0);
-  }
-  25% {
-    transform: rotateZ(30deg);
-  }
-  50% {
-    transform: rotateZ(270deg);
-  }
-  75% {
-    transform: rotateZ(180deg);
-  }
-  100% {
-    transform: rotateZ(360deg);
-  }
+    0% {
+        transform: rotateZ(0);
+    }
+    25% {
+        transform: rotateZ(30deg);
+    }
+    50% {
+        transform: rotateZ(270deg);
+    }
+    75% {
+        transform: rotateZ(180deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
 ```
 
-See the example on  [https://flavio-css-animations-four-steps.glitch.me][91]
+See the example on [https://flavio-css-animations-four-steps.glitch.me][91]
 
 #### The CSS animation properties
 
@@ -4488,18 +4419,12 @@ CSS animations offers a lot of different parameters you can tweak:
 
 ![](https://cdn-media-1.freecodecamp.org/images/AurqyVJOCys9sUi4S6DtBlaxKGi6evJQhsbB)
 
-The  `animation`  property is a shorthand for all these properties, in this order:
+The `animation` property is a shorthand for all these properties, in this order:
 
 ```css
 .container {
-  animation: name
-             duration
-             timing-function
-             delay
-             iteration-count
-             direction
-             fill-mode
-             play-state;
+    animation: name duration timing-function delay iteration-count direction
+        fill-mode play-state;
 }
 ```
 
@@ -4507,7 +4432,7 @@ This is the example we used above:
 
 ```css
 .container {
-  animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
 }
 ```
 
@@ -4519,17 +4444,24 @@ Using JavaScript you can listen for the following events:
 -   `animationend`
 -   `animationiteration`
 
-Be careful with  `animationstart`, because if the animation starts on page load, your JavaScript code is always executed after the CSS has been processed, so the animation is already started and you cannot intercept the event.
+Be careful with `animationstart`, because if the animation starts on page load, your JavaScript code is always executed after the CSS has been processed, so the animation is already started and you cannot intercept the event.
 
 ```js
-const container = document.querySelector('.container')
-container.addEventListener('animationstart', (e) => {
-  //do something
-}, false)
-container.addEventListener('animationend', (e) => {
-  //do something
-}, false)
-
+const container = document.querySelector('.container');
+container.addEventListener(
+    'animationstart',
+    (e) => {
+        //do something
+    },
+    false
+);
+container.addEventListener(
+    'animationend',
+    (e) => {
+        //do something
+    },
+    false
+);
 ```
 
 #### Which Properties You Can Animate using CSS Animations
@@ -4653,9 +4585,9 @@ Most of the time those styles are very useful.
 
 Since every browser has its own set, it’s common to find a common ground.
 
-Rather than removing all defaults, like one of the  **CSS reset**  approaches does, the normalizing process removes browser inconsistencies, while keeping a basic set of rules you can rely on.
+Rather than removing all defaults, like one of the **CSS reset** approaches does, the normalizing process removes browser inconsistencies, while keeping a basic set of rules you can rely on.
 
-Normalize.css  [http://necolas.github.io/normalize.css][92]  is the most commonly used solution for this problem.
+Normalize.css [http://necolas.github.io/normalize.css][92] is the most commonly used solution for this problem.
 
 You must load the normalizing CSS file before any other CSS.
 
@@ -4677,17 +4609,17 @@ p {
 }
 ```
 
-the line with the error AND the next one will  **not**  be applied, but the third rule will be successfully applied on the page. Basically, it scans all until it finds a semicolon, but when it reaches it, the rule is now  `font-size: 20px color: black;`, which is invalid, so it skips it.
+the line with the error AND the next one will **not** be applied, but the third rule will be successfully applied on the page. Basically, it scans all until it finds a semicolon, but when it reaches it, the rule is now `font-size: 20px color: black;`, which is invalid, so it skips it.
 
 Sometimes it’s tricky to realize there is an error somewhere, and where that error is, because the browser won’t tell us.
 
-This is why tools like  [CSS Lint][93]  exist.
+This is why tools like [CSS Lint][93] exist.
 
 ### VENDOR PREFIXES
 
 Vendor prefixes are one way browsers use to give CSS developers access to newer features not yet considered stable.
 
-Before going on, keep in mind that this approach is declining in popularity. People now favour using  **experimental flags**, which must be enabled explicitly in the user’s browser.
+Before going on, keep in mind that this approach is declining in popularity. People now favour using **experimental flags**, which must be enabled explicitly in the user’s browser.
 
 Why? Because developers, instead of considering vendor prefixes as a way to preview features, sometimes ship them in production — something considered harmful by the CSS Working Group.
 
@@ -4695,7 +4627,7 @@ Mostly because once you add a flag and developers start using it in production, 
 
 That said, let’s see what vendor prefixes are.
 
-I specifically remember them for working with CSS Transitions in the past. Instead of just using the  `transition`  property, you had to do this:
+I specifically remember them for working with CSS Transitions in the past. Instead of just using the `transition` property, you had to do this:
 
 ```css
 .myClass {
@@ -4719,16 +4651,16 @@ since the property is now well supported by all modern browsers.
 
 The prefixes used are:
 
--   `-webkit-`  (Chrome, Safari, iOS Safari / iOS WebView, Android)
--   `-moz-`  (Safari)
--   `-ms-`  (Edge, Internet Explorer)
--   `-o-`  (Opera, Opera Mini)
+-   `-webkit-` (Chrome, Safari, iOS Safari / iOS WebView, Android)
+-   `-moz-` (Safari)
+-   `-ms-` (Edge, Internet Explorer)
+-   `-o-` (Opera, Opera Mini)
 
-Since Opera is Chromium-based and Edge will soon be too,  `-o-`  and  `-ms-`  will probably soon go out of fashion. But as we said, vendor prefixes as a whole are going out of fashion, too.
+Since Opera is Chromium-based and Edge will soon be too, `-o-` and `-ms-` will probably soon go out of fashion. But as we said, vendor prefixes as a whole are going out of fashion, too.
 
-Writing prefixes is hard, mostly because of uncertainty. Do you actually need a prefix for one property? Several online resources are outdated, too, which makes it even harder to do right. Projects like  [Autoprefixer][94]  can automate the process in its entirety without us needing to find out if a prefix is needed any more, or the feature is now stable and the prefix should be dropped. It uses data from caniuse.com, a very good reference site for all things related to browser support.
+Writing prefixes is hard, mostly because of uncertainty. Do you actually need a prefix for one property? Several online resources are outdated, too, which makes it even harder to do right. Projects like [Autoprefixer][94] can automate the process in its entirety without us needing to find out if a prefix is needed any more, or the feature is now stable and the prefix should be dropped. It uses data from caniuse.com, a very good reference site for all things related to browser support.
 
-If you use React or Vue, projects like  `create-react-app`  and Vue CLI, two common ways to start building an application, use  `autoprefixer`  out of the box, so you don't even have to worry about it.
+If you use React or Vue, projects like `create-react-app` and Vue CLI, two common ways to start building an application, use `autoprefixer` out of the box, so you don't even have to worry about it.
 
 ### CSS FOR PRINT
 
@@ -4751,10 +4683,7 @@ Maybe you want to use a different font for printing, which is totally legit.
 If you have a large CSS for print, you’d better use a separate file for it. Browsers will only download it when printing:
 
 ```html
-<link rel="stylesheet"
-      src="print.css"
-      type="text/css"
-      media="print" />
+<link rel="stylesheet" src="print.css" type="text/css" media="print" />
 ```
 
 #### CSS @media print
@@ -4773,21 +4702,16 @@ _is going to be applied only to printed documents._
 
 _HTML is great because of links. It’s called HyperText for a good reason. When printing we might lose a lot of information, depending on the content._
 
-_CSS offers a great way to solve this problem by editing the content, appending the link after the  `<`;a> tag text, using:_
+_CSS offers a great way to solve this problem by editing the content, appending the link after the `<`;a> tag text, using:_
 
-_`@media print {
-    a[href`_`='//']:after {
-        content:" (" attr(href) ") ";
-        color: $primary;
-    }
-}`
+_`@media print { a[href`_`='//']:after { content:" (" attr(href) ") "; color: $primary; } }`
 
-I target  `a[href*='//']`  to only do this for external links. I might have internal links for navigation and internal indexing purposes, which would be useless in most of my use cases. If you also want internal links to be printed, just do:
+I target `a[href*='//']` to only do this for external links. I might have internal links for navigation and internal indexing purposes, which would be useless in most of my use cases. If you also want internal links to be printed, just do:
 
 ```css
 @media print {
     a:after {
-        content:" (" attr(href) ") ";
+        content: ' (' attr(href) ') ';
         color: $primary;
     }
 }
@@ -4795,7 +4719,7 @@ I target  `a[href*='//']`  to only do this for external links. I might have inte
 
 #### Page margins
 
-You can add margins to every single page.  `cm`  or  `in`  is a good unit for paper printing.
+You can add margins to every single page. `cm` or `in` is a good unit for paper printing.
 
 ```css
 @page {
@@ -4806,20 +4730,19 @@ You can add margins to every single page.  `cm`  or  `in`  is a good unit for pa
 }
 ```
 
-`@page`  can also be used to only target the first page, using  `@page :first`, or only the left and right pages using  `@page :left`  and  `@page: right`.
+`@page` can also be used to only target the first page, using `@page :first`, or only the left and right pages using `@page :left` and `@page: right`.
 
 #### Page breaks
 
-You might want to add a page break after some elements, or before them. Use  `page-break-after`  and  `page-break-before`:
+You might want to add a page break after some elements, or before them. Use `page-break-after` and `page-break-before`:
 
 ```css
 .book-date {
     page-break-after: always;
 }
-
 ```
 
-Those properties  [accept a wide variety of values][95].
+Those properties [accept a wide variety of values][95].
 
 #### Avoid breaking images in the middle
 
@@ -4829,11 +4752,11 @@ Use
 
 ```css
 p {
-  page-break-inside: avoid;
+    page-break-inside: avoid;
 }
 ```
 
-and wrap your images in a  `p`  tag. Targeting  `img`  directly didn't work in my tests.
+and wrap your images in a `p` tag. Targeting `img` directly didn't work in my tests.
 
 This applies to other content as well, not just images. If you notice something is cut when you don’t want, use this property.
 
@@ -4843,7 +4766,7 @@ The Chrome DevTools offer ways to emulate the print layout:
 
 ![](https://cdn-media-1.freecodecamp.org/images/-uiIs0O58DxJGuPKuMjjzg356Nq2On7GH7QI)
 
-Once the panel opens, change the rendering emulation to  `print`:
+Once the panel opens, change the rendering emulation to `print`:
 
 ![](https://cdn-media-1.freecodecamp.org/images/XO5KBdEIBUtWLlIXwISJMN3GaehM9Gfd22K7)
 

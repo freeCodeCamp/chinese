@@ -1,21 +1,21 @@
-> * 原文地址：[How to Build a Personal Dev Server on a $5 Raspberry Pi 如何用树莓派搭建个人服务器](https://www.freecodecamp.org/news/build-a-personal-dev-server-on-a-5-dollar-raspberry-pi/)
-> * 原文作者：Michael Yuan
-> * 译者：Miley Fu & alabulei
-> * 校对者：
+> -   原文地址：[How to Build a Personal Dev Server on a \$5 Raspberry Pi 如何用树莓派搭建个人服务器](https://www.freecodecamp.org/news/build-a-personal-dev-server-on-a-5-dollar-raspberry-pi/)
+> -   原文作者：Michael Yuan
+> -   译者：Miley Fu & alabulei
+> -   校对者：
 
 ![How to Build a Personal Dev Server on a $5 Raspberry Pi](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/IMG_8632.JPG)
 
-> 本文你会学到如何通过安装 Git、Node.js、Rust 和 Docker 在树莓派上创建个人开发服务器。最便宜的树莓派版本只需5美金。 [点击这里免费赢取价值25美金的树莓派。][1].
+> 本文你会学到如何通过安装 Git、Node.js、Rust 和 Docker 在树莓派上创建个人开发服务器。最便宜的树莓派版本只需 5 美金。 [点击这里免费赢取价值 25 美金的树莓派。][1].
 
-树莓派个头很小，却是个强大的计算机。最便宜的版本[树莓派 Zero][2], 可以运行功能齐全的 Linux 发行版并驱动高清显示。大小为两个25美分的硬币，价格为5美元。
+树莓派个头很小，却是个强大的计算机。最便宜的版本[树莓派 Zero][2], 可以运行功能齐全的 Linux 发行版并驱动高清显示。大小为两个 25 美分的硬币，价格为 5 美元。
 
-售价10美元的树莓派 [Zero W][3]  带有集成蓝牙和 WiFi.
+售价 10 美元的树莓派 [Zero W][3] 带有集成蓝牙和 WiFi.
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/img_8603.png)
 
-售价10美元的树莓派 Zero W 具有强大的 CPU、WiFi、蓝牙和各种连接器
+售价 10 美元的树莓派 Zero W 具有强大的 CPU、WiFi、蓝牙和各种连接器
 
-如果选择更加高配的版本，不到100美元的价格就可以购买[Raspberry Pi 4 desktop kit][4] 。 这个套件运行 1.5GHz 的4核 ARM CPU、GPU、2GB（最大8GB）的 RAM、MicroSD 卡、WiFi 、以太网接口、USB 端口、可驱动的 HDMI 端口、 16GB（最大2TB）的存储空间、4K显示器、键盘、鼠标。
+如果选择更加高配的版本，不到 100 美元的价格就可以购买[Raspberry Pi 4 desktop kit][4] 。 这个套件运行 1.5GHz 的 4 核 ARM CPU、GPU、2GB（最大 8GB）的 RAM、MicroSD 卡、WiFi 、以太网接口、USB 端口、可驱动的 HDMI 端口、 16GB（最大 2TB）的存储空间、4K 显示器、键盘、鼠标。
 
 树莓派不仅仅是标准计算机。树莓派非常有趣，又有多种玩法。树莓派表面有一排 GPIO（通用输入输出）引脚。你可以将简单的传感器（例如温度，湿度，光线）连接到这些引脚，通过运行在树莓派上的应用程序捕获这些数据。
 
@@ -31,16 +31,15 @@
 
 ## 首先, 准备一个树莓派
 
-如果之前你没用过树莓派，最简单也是最昂贵的方式是[花100美元买一个台式机套件][5]。这里面包含计算机里面的所有零件，除了显示器。
+如果之前你没用过树莓派，最简单也是最昂贵的方式是[花 100 美元买一个台式机套件][5]。这里面包含计算机里面的所有零件，除了显示器。
 
 如果是将树莓派用作个人开发服务器，在初步的设置之后不需要显示器，只需要在开启的时候用笔记本电脑通过 SSH 链接它。
 
-如何你想要参与[高性能 Web 学习][7]，点击[这里][6] 了解如何免费获取树莓派套件！  .
+如何你想要参与[高性能 Web 学习][7]，点击[这里][6] 了解如何免费获取树莓派套件！ .
 
+当然，如果你有备用的计算机零件，例如 MicroSD 卡、USB 电源、键盘和鼠标，那么只要购买最简易的树莓派主板就可以省下一笔钱。只需要花 5 美元买一个树莓派 Zero 主板，或者以 35 美元的价格买一个树莓派 4 主板。
 
-当然，如果你有备用的计算机零件，例如 MicroSD 卡、USB 电源、键盘和鼠标，那么只要购买最简易的树莓派主板就可以省下一笔钱。只需要花5美元买一个树莓派 Zero 主板，或者以35美元的价格买一个树莓派4主板。
-
-但是有了主板，还缺少 MicroSD 卡。MicroSD 卡可以用作存储操作系统和数据的“硬盘”。因此还需要购买 16GB MicroSD 卡，MicroSD 读卡器，这大概需要10美元。使用树莓派 [Raspberry Pi Imager][8]  从笔记本电脑上将操作系统加载到 MicroSD 卡上。
+但是有了主板，还缺少 MicroSD 卡。MicroSD 卡可以用作存储操作系统和数据的“硬盘”。因此还需要购买 16GB MicroSD 卡，MicroSD 读卡器，这大概需要 10 美元。使用树莓派 [Raspberry Pi Imager][8] 从笔记本电脑上将操作系统加载到 MicroSD 卡上。
 
 一般大家都会选择 Raspberry Pi OS 和 Ubuntu Linux。两者都是基于 Debian 的 Linux 发行版。大多数入门工具包都在其 MicroSD 卡上预安装了 Raspberry Pi OS，称为 NOOBS。
 
@@ -50,7 +49,7 @@
 
 将带有 NOOBS 的 MicroSD 卡插入并连接显示器、键盘和鼠标后，打开电源。
 
-然后，按照屏幕上的说明安装 Raspberry Pi OS（以前称为Raspbian OS）。接着为树莓派的用户设置密码以及 wifi 连接。
+然后，按照屏幕上的说明安装 Raspberry Pi OS（以前称为 Raspbian OS）。接着为树莓派的用户设置密码以及 wifi 连接。
 
 登录后，找到 Preference，然后来到 Raspberry Pi Configuration 菜单并启用 SSH，这样就可以从另一台计算机登录到树莓派。
 
@@ -58,10 +57,9 @@
 
 Raspberry Pi OS 源自 Debian Linux 发行版，附带一个完整的桌面 UI 环境、一个现代 Web 浏览器、一个命令行终端以及学习程序，例如类似 Python，Java 和 Scratch IDE 的学习教程。
 
-
 ![](https://www.freecodecamp.org/news/content/images/2020/07/IMG_8672.JPG)
 
-我设置好的有 Raspberry Pi OS 的树莓派4，主机非常小。
+我设置好的有 Raspberry Pi OS 的树莓派 4，主机非常小。
 
 一切准备就绪，我们要做的是通过命令行终端安装开发和服务器软件。
 
@@ -80,17 +78,17 @@ $ sudo apt update && sudo apt upgrade
 
 ## 如何设置 Ubuntu 服务器 20.04
 
-Raspberry Pi OS 主要面向台式机设计。对于只想将树莓派用作服务器或 IoT 设备的开发者，Ubuntu Linux 是更好的选择，带有最新的软件包和库。在没有桌面窗口、Web浏览器、Java、游戏和学习工具的情况下，Ubuntu Linux 效率可能更高。
+Raspberry Pi OS 主要面向台式机设计。对于只想将树莓派用作服务器或 IoT 设备的开发者，Ubuntu Linux 是更好的选择，带有最新的软件包和库。在没有桌面窗口、Web 浏览器、Java、游戏和学习工具的情况下，Ubuntu Linux 效率可能更高。
 
 你可以从网上下载用于树莓派的 [Ubuntu Server images][10]， 并将其加载到 MicroSD 卡上。但是，更简单的方法是使用 [Raspberry Pi Imager][11], 从菜单中选择 Ubuntu Server 20.04 TLS，然后将其写入空的 MicroSD 卡。
 
-准备好 MicroSD 卡后，按照 [说明][12]  输入 WiFi 网络名称和密码。这样，树莓派设备一启动就能立即连接到网络。
+准备好 MicroSD 卡后，按照 [说明][12] 输入 WiFi 网络名称和密码。这样，树莓派设备一启动就能立即连接到网络。
 
-基本上，将 MicroSD 卡放入 Raspberry Pi 中，连接 USB 电源，等待其上线。然后从 WiFi 路由器找到 `raspberrypi` 设备的 IP，就可以通过 SSH 连接到网络上的任一计算机。 
+基本上，将 MicroSD 卡放入 Raspberry Pi 中，连接 USB 电源，等待其上线。然后从 WiFi 路由器找到 `raspberrypi` 设备的 IP，就可以通过 SSH 连接到网络上的任一计算机。
 
 初始用户名和密码是 `ubuntu/ubuntu` 。甚至无需连接显示器或键盘。超级简单，这样就完成 headless 设置了！
 
-**注意**: 如果莓派在启动时无法连接到WiFi，就需要连接 HDMI 显示器和 USB 键盘。然后按照 [说明][13]  在运行系统上调试和设置 WiFi。
+**注意**: 如果莓派在启动时无法连接到 WiFi，就需要连接 HDMI 显示器和 USB 键盘。然后按照 [说明][13] 在运行系统上调试和设置 WiFi。
 
 接下来，让我们在树莓派上安装开发者工具堆栈。
 
@@ -100,7 +98,7 @@ Raspberry Pi OS 主要面向台式机设计。对于只想将树莓派用作服�
 
 Git 还允许在私有 repo 中保存和备份自己的工作。对于像树莓派这样的小型计算机，我建议在 Git 中保存所有工作，以防丢失设备或 MicroSD 卡。
 
-以下命令可以安装Git：
+以下命令可以安装 Git：
 
 ```
 $ sudo apt install git
@@ -132,13 +130,13 @@ $ npm -v
 $ npm install express
 ```
 
-现在，您可以运行一次  [ExpressJS hello world 例子][14]  在树莓派上创建一个Web服务器，并使用网络上任何计算机上的 Web 浏览器来访问应用！
+现在，您可以运行一次 [ExpressJS hello world 例子][14] 在树莓派上创建一个 Web 服务器，并使用网络上任何计算机上的 Web 浏览器来访问应用！
 
 ## 安装 Rust
 
-Rust 是一种快速成长的编程语言，用于编写系统和 Web 应用程序。Rust 接近硬件，性能高，内存安全性强。这使 Rust非常适合在资源受限的设备，例如树莓派，上编写应用。
+Rust 是一种快速成长的编程语言，用于编写系统和 Web 应用程序。Rust 接近硬件，性能高，内存安全性强。这使 Rust 非常适合在资源受限的设备，例如树莓派，上编写应用。
 
-而且，Rust 是 StackOverflow 上用户连续5年最喜欢的编程语言。非常值得花时间学习！
+而且，Rust 是 StackOverflow 上用户连续 5 年最喜欢的编程语言。非常值得花时间学习！
 
 Rust 的一个重要用例是将 [ Rust 函数编译成 WebAssembly 并在 Node.js 程序运行][15]以实现[超强性能、安全性和代码可移植性][16]. 这是在小型 [Raspberry Pi device][17] 设备上运行计算密集型 Web 应用程序的绝佳选择。实际上，只要知道如何在 Node.js 运行 Rust 函数，就可以免费赢取一份[树莓派入门套件][18]。
 
@@ -182,7 +180,7 @@ $ target/debug/hello
 Hello, world!
 ```
 
-查看  [Rust 官方网站][21]  以及 [Rust by Example][22]  书籍，获取更多学习资源。
+查看 [Rust 官方网站][21] 以及 [Rust by Example][22] 书籍，获取更多学习资源。
 
 ## 学习 Docker
 
@@ -202,6 +200,7 @@ $ sudo sh get-docker.sh
 ```
 $ sudo usermod -aG docker pi
 ```
+
 Docker info 命令显示 Docker 现在已安装在具有 Raspberry Pi OS 的 ARM 系统上。
 
 ```
@@ -234,7 +233,7 @@ root# ... enter commands ...
 
 有关 Git、Node.js、Rust、WebAssembly 和 Docker 的知识很多。我们还可以在树莓派上安装许多其它开发者堆栈。
 
-[免费获得树莓派][23]  别忘了告诉我们t!
+[免费获得树莓派][23] 别忘了告诉我们 t!
 
 [订阅 newsletter][24]，保持联系！
 

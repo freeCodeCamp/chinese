@@ -1,9 +1,9 @@
-> * 原文地址：[A quick intro to Higher-Order Functions in JavaScript](https://www.freecodecamp.org/news/a-quick-intro-to-higher-order-functions-in-javascript-1a014f89c6b/)
-> * 原文作者：[Yazeed Bzadough](https://www.freecodecamp.org/news/author/yazeedb/)
-> * 译者：[jingruzhang](https://github.com/jingruzhang)
-> * 校对者：[acusp](https://github.com/acusp) 
+> -   原文地址：[A quick intro to Higher-Order Functions in JavaScript](https://www.freecodecamp.org/news/a-quick-intro-to-higher-order-functions-in-javascript-1a014f89c6b/)
+> -   原文作者：[Yazeed Bzadough](https://www.freecodecamp.org/news/author/yazeedb/)
+> -   译者：[jingruzhang](https://github.com/jingruzhang)
+> -   校对者：[acusp](https://github.com/acusp)
 
-# JavaScript 高阶函数入门浅析 
+# JavaScript 高阶函数入门浅析
 
 ### 高阶函数
 
@@ -13,13 +13,13 @@
 
 JavaScript 中，函数的应用场景很丰富：
 
-- 作为变量存储
-- 在数组中使用
-- 作为对象属性（即方法）
-- 作为参数传递
-- 作为其他函数的返回值
+-   作为变量存储
+-   在数组中使用
+-   作为对象属性（即方法）
+-   作为参数传递
+-   作为其他函数的返回值
 
-理解高阶函数的关键在于，*函数即数据*。
+理解高阶函数的关键在于，_函数即数据_。
 
 ### 数据是函数运作的基本
 
@@ -57,7 +57,7 @@ console.log(result2); // 'Access denied'
 
 ```
 getFirstName = (obj) => obj.firstName;
-result = getFirstName({  
+result = getFirstName({
 	firstName: 'Yazeed'
 });
 
@@ -73,7 +73,7 @@ result = len([1, 2, 3]);
 console.log(result); // 3
 ```
 
-在所有的主流语言中，以上这五种数据类型被称为 [“头等对象”](https://en.wikipedia.org/wiki/First-class_citizen)。 
+在所有的主流语言中，以上这五种数据类型被称为 [“头等对象”](https://en.wikipedia.org/wiki/First-class_citizen)。
 
 为什么是“头等”呢？因为这五种数据类型既可以作为参数传递，又可以存储在变量或者数组中，还可以作为变量用于计算，是数据的基本形式。
 
@@ -100,9 +100,9 @@ console.log(result); // [2, 4]
 add = (x) => (y) => x + y;
 ```
 
-`add` 函数需要两个参数，但不需要它们俩同时传入，第一次传参传入 `x` 就会返还一个新函数，这个函数需要传入 `y` 参数。 
+`add` 函数需要两个参数，但不需要它们俩同时传入，第一次传参传入 `x` 就会返还一个新函数，这个函数需要传入 `y` 参数。
 
-能够这样操作的基础在于 JavaScript 语言允许函数本身作为返回值存在，就像函数可以返回字符串（strings）、数字（numbers）、布尔值（booleans）等，JS 函数还可以返回另一个函数。 
+能够这样操作的基础在于 JavaScript 语言允许函数本身作为返回值存在，就像函数可以返回字符串（strings）、数字（numbers）、布尔值（booleans）等，JS 函数还可以返回另一个函数。
 
 当然，我们也可以使用“双重调用”的方式，一次性提供 `x` 和 `y` 两个参数：
 
@@ -111,6 +111,7 @@ result = add(10)(20);
 
 console.log(result); // 30
 ```
+
 或者分两次调用，先传参数 `x`，再传参数 `y`：
 
 ```
@@ -240,10 +241,9 @@ console.log(totalAge);
 
 ### 总结
 
-- 字符串（strings）、数字（numbers）、布尔值（booleans）、数组（arrays）、对象（objects）可以作为变量（variables）、数组（arrays）、属性（ properties）或者方法（methods）存储起来。
-- JavaScript 语言中，函数也是像数据一样同等对待的。
-- 因此函数可以作为另外一个函数的参数或者返回值使用，这样的做法叫**高阶函数**。
-- `map`、`filter`、 `reduce` 等函数就是高阶函数的最佳代表，它们让数组的处理（改变，搜索，相加等）变得简单不少！
+-   字符串（strings）、数字（numbers）、布尔值（booleans）、数组（arrays）、对象（objects）可以作为变量（variables）、数组（arrays）、属性（ properties）或者方法（methods）存储起来。
+-   JavaScript 语言中，函数也是像数据一样同等对待的。
+-   因此函数可以作为另外一个函数的参数或者返回值使用，这样的做法叫**高阶函数**。
+-   `map`、`filter`、 `reduce` 等函数就是高阶函数的最佳代表，它们让数组的处理（改变，搜索，相加等）变得简单不少！
 
 如果你想和我继续交流，可以在[我的推特](https://twitter.com/yazeedBee)找到我。下次见！
-

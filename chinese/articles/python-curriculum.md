@@ -1,7 +1,7 @@
-> * 原文地址：[Build 111 Projects, Earn 10 Certifications - Now With Python](https://www.freecodecamp.org/news/python-curriculum/)
-> * 原文作者：Quincy Larson
-> * 译者：
-> * 校对者：
+> -   原文地址：[Build 111 Projects, Earn 10 Certifications - Now With Python](https://www.freecodecamp.org/news/python-curriculum/)
+> -   原文作者：Quincy Larson
+> -   译者：
+> -   校对者：
 
 ![Build 111 Projects, Earn 10 Certifications - Now With Python](https://images.unsplash.com/photo-1447433865958-f402f562b843?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 

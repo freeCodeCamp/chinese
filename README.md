@@ -45,6 +45,32 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章][6]，分享前�
 
 我们会和译者一同确认校对意见，形成终稿，即校对完毕。翻译及校对完毕的文章将以翻译者的姓名（或昵称）发布在 [freeCodeCamp 官网][11]（我们会邀请译者在官网注册作者账号）；同时发布在 freeCodeCamp 微信公众号，在公众号发布时将在文章中同时注明翻译者和校对者的姓名（或昵称）。此外，我们还会在其他相关站点的 freeCodeCamp 专栏发布译文，链接到官网。
 
+## Lint & Format rules
+
+### Linter
+
+#### Cloud
+
+This repository has [a GitHub action][12] to lint **Markdown & Native Language syntax** on **Pull Request commits**, translaters should follow the **Lint Report** to fix **Syntax Warnings & Errors** of the own article.
+
+#### Local
+
+To use Linters locally by running these commands shown below:
+
+```Shell
+# First time
+cd ~/Desktop
+git clone https://github.com/freeCodeCamp/news-translation.git
+cd news-translation
+npm install
+# Every time
+npm test
+```
+
+### Formatter
+
+[Prettier][13] has many **Formatter Plugins** to support popular **Editors & IDEs**.
+
 [1]: http://makeapullrequest.com/
 [2]: http://www.firsttimersonly.com/
 [3]: https://www.freecodecamp.org/news
@@ -56,3 +82,5 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章][6]，分享前�
 [9]: https://github.com/freeCodeCamp/news-translation/wiki/%E7%BF%BB%E8%AF%91%E6%8A%80%E5%B7%A7
 [10]: https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3AReview-awaiting
 [11]: https://chinese.freecodecamp.org/news/
+[12]: https://github.com/freeCodeCamp/news-translation/actions?query=workflow%3A%22CI+%26+CD%22
+[13]: https://prettier.io/

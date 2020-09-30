@@ -1,14 +1,13 @@
-> * 原文地址：[How to Build a Todo App with React, TypeScript, NodeJS, and MongoDB 如何用 React，TypeScript，NodeJS 和 MongoDB 搭建待办事项 App](https://www.freecodecamp.org/news/how-to-build-a-todo-app-with-react-typescript-nodejs-and-mongodb/)
-> * 原文作者：Ibrahima Ndaw
-> * 译者：cyan
-> * 校对者：
+> -   原文地址：[How to Build a Todo App with React, TypeScript, NodeJS, and MongoDB 如何用 React，TypeScript，NodeJS 和 MongoDB 搭建待办事项 App](https://www.freecodecamp.org/news/how-to-build-a-todo-app-with-react-typescript-nodejs-and-mongodb/)
+> -   原文作者：Ibrahima Ndaw
+> -   译者：cyan
+> -   校对者：
 
 ![How to Build a Todo App with React, TypeScript, NodeJS, and MongoDB](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/cover-1.png)
 
 在本教程中，我们将在两端(服务器和客户端)使用 TypeScript、React、NodeJS、Express 和 MongoDB 从头开始构建一个 Todo 应用程序。
 
 那么，让我们从设计 API 开始。
-
 
 -   [用 NodeJS, Express, MongoDB 和 TypeScript 设计 API][1]
 -   [构建][2]
@@ -30,11 +29,11 @@
 
 _就让我们一探究竟吧。_
 
-## 用NodeJS, Express, MongoDB 和 TypeScript 设计 API
+## 用 NodeJS, Express, MongoDB 和 TypeScript 设计 API
 
 ### 构建
 
-如果你是新手，你可以从 [TypeScript的实用指南][18]，或者从 [如何用Node JS、Express和MongoDB中从头开始构建API][19] 开始，从而充分体验本教程。否则，我们可以直接开始。
+如果你是新手，你可以从 [TypeScript 的实用指南][18]，或者从 [如何用 Node JS、Express 和 MongoDB 中从头开始构建 API][19] 开始，从而充分体验本教程。否则，我们可以直接开始。
 
 为了创建一个新的 NodeJS 应用程序，你需要在终端上运行这个命令:
 
@@ -150,20 +149,19 @@ _就让我们一探究竟吧。_
 
 ```
 
-`concurrently`  帮助编译 TypeScript 代码，持续观察变化，同时启动服务器。也就是说，我们现在可以启动服务器了——但是，我们还没有创建一些有意义的东西。所以，让我们在下一节中解决这个问题。
+`concurrently` 帮助编译 TypeScript 代码，持续观察变化，同时启动服务器。也就是说，我们现在可以启动服务器了——但是，我们还没有创建一些有意义的东西。所以，让我们在下一节中解决这个问题。
 
 ### 创建 Todo 类型
 
 -   types/todo.ts
 
 ```ts
-import { Document } from "mongoose"
+import { Document } from 'mongoose';
 export interface ITodo extends Document {
-  name: string
-  description: string
-  status: boolean
+    name: string;
+    description: string;
+    status: boolean;
 }
-
 ```
 
 这里，我们有了继承 `mongoose` 提供的 `Document` 类型的 Todo 接口。稍后我们将使用它与 MongoDB 交互。也就是说，我们现在可以定义 Todo 模型。
@@ -173,27 +171,27 @@ export interface ITodo extends Document {
 -   models/todo.ts
 
 ```ts
-import { ITodo } from "./../types/todo"
-import { model, Schema } from "mongoose"
+import { ITodo } from './../types/todo';
+import { model, Schema } from 'mongoose';
 const todoSchema: Schema = new Schema(
-  {
-    name: {
-      type: String,
-      required: true,
-    },
- description: {
-      type: String,
-      required: true,
-    },
+    {
+        name: {
+            type: String,
+            required: true,
+        },
+        description: {
+            type: String,
+            required: true,
+        },
 
-    status: {
-      type: Boolean,
-      required: true,
+        status: {
+            type: Boolean,
+            required: true,
+        },
     },
-  },
-  { timestamps: true }
-)
-export default model<ITodo>("Todo", todoSchema)
+    { timestamps: true }
+);
+export default model<ITodo>('Todo', todoSchema);
 ```
 
 如你所见，我们首先导入 `ITodo ` 接口和 一些 `mongoose` 导出的模块，后者是帮助定义 Todo schema 和在导出前把 ITodo 作为类型参数传入 `model` 。
@@ -207,18 +205,18 @@ export default model<ITodo>("Todo", todoSchema)
 -   controllers/todos/index.ts
 
 ```ts
-import { Response, Request } from "express"
-import { ITodo } from "./../../types/todo"
-import Todo from "../../models/todo"
+import { Response, Request } from 'express';
+import { ITodo } from './../../types/todo';
+import Todo from '../../models/todo';
 
 const getTodos = async (req: Request, res: Response): Promise<void> => {
-  try {
-    const todos: ITodo[] = await Todo.find()
-    res.status(200).json({ todos })
-  } catch (error) {
-    throw error
-  }
-}
+    try {
+        const todos: ITodo[] = await Todo.find();
+        res.status(200).json({ todos });
+    } catch (error) {
+        throw error;
+    }
+};
 ```
 
 这里，我们首先需要从 `express` 导入一些类型，因为我想显式指明类型。如果你想，你可以让 TypeScript 帮你推断。
@@ -231,25 +229,27 @@ const getTodos = async (req: Request, res: Response): Promise<void> => {
 
 ```ts
 const addTodo = async (req: Request, res: Response): Promise<void> => {
-   try {
-    const body = req.body as Pick<ITodo, "name" | "description" | "status">
+    try {
+        const body = req.body as Pick<ITodo, 'name' | 'description' | 'status'>;
 
-    const todo: ITodo = new Todo({
-      name: body.name,
-      description: body.description,
-      status: body.status,
-    })
+        const todo: ITodo = new Todo({
+            name: body.name,
+            description: body.description,
+            status: body.status,
+        });
 
-    const newTodo: ITodo = await todo.save()
-    const allTodos: ITodo[] = await Todo.find()
+        const newTodo: ITodo = await todo.save();
+        const allTodos: ITodo[] = await Todo.find();
 
-    res
-      .status(201)
-      .json({ message: "Todo added", todo: newTodo, todos: allTodos })
-  } catch (error) {
-    throw error
-  }
-}
+        res.status(201).json({
+            message: 'Todo added',
+            todo: newTodo,
+            todos: allTodos,
+        });
+    } catch (error) {
+        throw error;
+    }
+};
 ```
 
 如你所见，`addTodo()` 函数接收包含用户输入数据的 body 对象。
@@ -262,26 +262,25 @@ const addTodo = async (req: Request, res: Response): Promise<void> => {
 
 ```ts
 const updateTodo = async (req: Request, res: Response): Promise<void> => {
-  try {
-    const {
-      params: { id },
-      body,
-    } = req
-    const updateTodo: ITodo | null = await Todo.findByIdAndUpdate(
-      { _id: id },
-      body
-    )
-    const allTodos: ITodo[] = await Todo.find()
-    res.status(200).json({
-      message: "Todo updated",
-      todo: updateTodo,
-      todos: allTodos,
-    })
-  } catch (error) {
-    throw error
-  }
-}
-
+    try {
+        const {
+            params: { id },
+            body,
+        } = req;
+        const updateTodo: ITodo | null = await Todo.findByIdAndUpdate(
+            { _id: id },
+            body
+        );
+        const allTodos: ITodo[] = await Todo.find();
+        res.status(200).json({
+            message: 'Todo updated',
+            todo: updateTodo,
+            todos: allTodos,
+        });
+    } catch (error) {
+        throw error;
+    }
+};
 ```
 
 为了实现更新 todo, 我们需要拿到 id 和从 `req` 对象中获取 body，然后把他们传入 `findByIdAndUpdate()`，这个函数将会在数据库中找到 Todo 并且更新它。
@@ -290,22 +289,22 @@ const updateTodo = async (req: Request, res: Response): Promise<void> => {
 
 ```ts
 const deleteTodo = async (req: Request, res: Response): Promise<void> => {
-  try {
-    const deletedTodo: ITodo | null = await Todo.findByIdAndRemove(
-      req.params.id
-    )
-    const allTodos: ITodo[] = await Todo.find()
-    res.status(200).json({
-      message: "Todo deleted",
-      todo: deletedTodo,
-      todos: allTodos,
-    })
-  } catch (error) {
-    throw error
-  }
-}
+    try {
+        const deletedTodo: ITodo | null = await Todo.findByIdAndRemove(
+            req.params.id
+        );
+        const allTodos: ITodo[] = await Todo.find();
+        res.status(200).json({
+            message: 'Todo deleted',
+            todo: deletedTodo,
+            todos: allTodos,
+        });
+    } catch (error) {
+        throw error;
+    }
+};
 
-export { getTodos, addTodo, updateTodo, deleteTodo }
+export { getTodos, addTodo, updateTodo, deleteTodo };
 ```
 
 `deleteTodo()` 函数允许你从数据库中删除 Todo。在这里，我们从 req 中拿到 id，并把它作为参数传递给 `findByIdAndRemove()`，来获取到对应的 Todo 并从 DB 中删除它。
@@ -317,14 +316,18 @@ export { getTodos, addTodo, updateTodo, deleteTodo }
 -   routes/index.ts
 
 ```ts
-import { Router } from "express"
-import { getTodos, addTodo, updateTodo, deleteTodo } from "../controllers/todos"
-const router: Router = Router()
-router.get("/todos", getTodos)
-router.post("/add-todo", addTodo)
-router.put("/edit-todo/:id", updateTodo)
-router.delete("/delete-todo/:id", deleteTodo)
-
+import { Router } from 'express';
+import {
+    getTodos,
+    addTodo,
+    updateTodo,
+    deleteTodo,
+} from '../controllers/todos';
+const router: Router = Router();
+router.get('/todos', getTodos);
+router.post('/add-todo', addTodo);
+router.put('/edit-todo/:id', updateTodo);
+router.delete('/delete-todo/:id', deleteTodo);
 ```
 
 如你所见，我们创建四个路由对应从数据库中获取、新增、更新和删除 todo。因为我们已经创建了函数，所以我们唯一要做的就是导入这些方法并将它们作为参数传递。
@@ -353,33 +356,32 @@ router.delete("/delete-todo/:id", deleteTodo)
 -   app.ts
 
 ```ts
-import express, { Express } from "express"
-import mongoose from "mongoose"
-import cors from "cors"
-import todoRoutes from "./routes"
+import express, { Express } from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import todoRoutes from './routes';
 
-const app: Express = express()
+const app: Express = express();
 
-const PORT: string | number = process.env.PORT || 4000
+const PORT: string | number = process.env.PORT || 4000;
 
-app.use(cors())
-app.use(todoRoutes)
+app.use(cors());
+app.use(todoRoutes);
 
-const uri: string = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@clustertodo.raz9g.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`
-const options = { useNewUrlParser: true, useUnifiedTopology: true }
-mongoose.set("useFindAndModify", false)
+const uri: string = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@clustertodo.raz9g.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`;
+const options = { useNewUrlParser: true, useUnifiedTopology: true };
+mongoose.set('useFindAndModify', false);
 
 mongoose
-  .connect(uri, options)
-  .then(() =>
-    app.listen(PORT, () =>
-      console.log(`Server running on http://localhost:${PORT}`)
+    .connect(uri, options)
+    .then(() =>
+        app.listen(PORT, () =>
+            console.log(`Server running on http://localhost:${PORT}`)
+        )
     )
-  )
-  .catch(error => {
-    throw error
-  })
-
+    .catch((error) => {
+        throw error;
+    });
 ```
 
 这里，我们首先从导入 `express` 库开始，这使用我们能调用 `use()` 方法，这个方法将帮助处理 Todo 路由。
@@ -411,6 +413,7 @@ mongoose
   yarn add axios
 
 ```
+
 安装完成后，按照以下目录构建项目：
 
 ```
@@ -434,7 +437,7 @@ mongoose
 
 ```
 
-这样，我们有一个相对简单的文件结构。最值得注意的是  `src/type.d.ts`  被用来存放类型。我几乎在每个文件中都使用了它们，所以我添加了扩展 `.d.ts` ，使类型全局可用。现在我们不再需要导入它们。
+这样，我们有一个相对简单的文件结构。最值得注意的是 `src/type.d.ts` 被用来存放类型。我几乎在每个文件中都使用了它们，所以我添加了扩展 `.d.ts` ，使类型全局可用。现在我们不再需要导入它们。
 
 ### 创建 Todo 类型
 
@@ -442,71 +445,68 @@ mongoose
 
 ```ts
 interface ITodo {
-  _id: string
-  name: string
-  description: string
-  status: boolean
-  createdAt?: string
-  updatedAt?: string
+    _id: string;
+    name: string;
+    description: string;
+    status: boolean;
+    createdAt?: string;
+    updatedAt?: string;
 }
 interface TodoProps {
-  todo: ITodo
+    todo: ITodo;
 }
-
 ```
 
-这里， `ITodo`  接口需要跟 API 返回的数据类型一样。我们在这里没有  `mongoose` , 所以我们需要加一些额外的属性来匹配 API 定义的数据类型。
+这里， `ITodo` 接口需要跟 API 返回的数据类型一样。我们在这里没有 `mongoose` , 所以我们需要加一些额外的属性来匹配 API 定义的数据类型。
 
 然后，我们用相同的的接口定义 `TodoProps` ，组件会接受它并渲染数据。
 
 现在我们已经定义了类型——现在让我们开始从 API 获取数据。
 
-### 从API获取数据
+### 从 API 获取数据
 
 -   src/API.ts
 
 ```ts
-import axios, { AxiosResponse } from "axios"
+import axios, { AxiosResponse } from 'axios';
 
-const baseUrl: string = "http://localhost:4000"
+const baseUrl: string = 'http://localhost:4000';
 
 export const getTodos = async (): Promise<AxiosResponse<ApiDataType>> => {
-  try {
-    const todos: AxiosResponse<ApiDataType> = await axios.get(
-      baseUrl + "/todos"
-    )
-    return todos
-  } catch (error) {
-    throw new Error(error)
-  }
-}
-
+    try {
+        const todos: AxiosResponse<ApiDataType> = await axios.get(
+            baseUrl + '/todos'
+        );
+        return todos;
+    } catch (error) {
+        throw new Error(error);
+    }
+};
 ```
 
-如你所见，我们需要导入 `axios`，通过 api 来请求数据。然后，我们用  `getTodos()`  函数从服务端获取数据。 它将返回 `AxiosResponse` 为类型的 promise， 保存获取到的 `ApiDataType` 类型的 Todos。
+如你所见，我们需要导入 `axios`，通过 api 来请求数据。然后，我们用 `getTodos()` 函数从服务端获取数据。 它将返回 `AxiosResponse` 为类型的 promise， 保存获取到的 `ApiDataType` 类型的 Todos。
 
 -   src/API.ts
 
 ```ts
 export const addTodo = async (
-  formData: ITodo
+    formData: ITodo
 ): Promise<AxiosResponse<ApiDataType>> => {
-  try {
-    const todo: Omit<ITodo, "_id"> = {
-      name: formData.name,
-      description: formData.description,
-      status: false,
+    try {
+        const todo: Omit<ITodo, '_id'> = {
+            name: formData.name,
+            description: formData.description,
+            status: false,
+        };
+        const saveTodo: AxiosResponse<ApiDataType> = await axios.post(
+            baseUrl + '/add-todo',
+            todo
+        );
+        return saveTodo;
+    } catch (error) {
+        throw new Error(error);
     }
-    const saveTodo: AxiosResponse<ApiDataType> = await axios.post(
-      baseUrl + "/add-todo",
-      todo
-    )
-    return saveTodo
-  } catch (error) {
-    throw new Error(error)
-  }
-}
-
+};
 ```
 
 这个函数接受用户输入的数据作为参数并返回 promise。这里，我们需要去掉 `_id` 属性因为 MongoDB 会自动生成。
@@ -515,22 +515,21 @@ export const addTodo = async (
 
 ```ts
 export const updateTodo = async (
-  todo: ITodo
+    todo: ITodo
 ): Promise<AxiosResponse<ApiDataType>> => {
-  try {
-    const todoUpdate: Pick<ITodo, "status"> = {
-      status: true,
+    try {
+        const todoUpdate: Pick<ITodo, 'status'> = {
+            status: true,
+        };
+        const updatedTodo: AxiosResponse<ApiDataType> = await axios.put(
+            `${baseUrl}/edit-todo/${todo._id}`,
+            todoUpdate
+        );
+        return updatedTodo;
+    } catch (error) {
+        throw new Error(error);
     }
-    const updatedTodo: AxiosResponse<ApiDataType> = await axios.put(
-      `${baseUrl}/edit-todo/${todo._id}`,
-      todoUpdate
-    )
-    return updatedTodo
-  } catch (error) {
-    throw new Error(error)
-  }
-}
-
+};
 ```
 
 为了实现更新 Todo，我们必须传入更新后的数据和对象 id。这里，我们需要更改 Todo 的 `状态` ，那么在发送到服务器之前我们只需要选择所需的属性即可。
@@ -539,18 +538,17 @@ export const updateTodo = async (
 
 ```ts
 export const deleteTodo = async (
-  _id: string
+    _id: string
 ): Promise<AxiosResponse<ApiDataType>> => {
-  try {
-    const deletedTodo: AxiosResponse<ApiDataType> = await axios.delete(
-      `${baseUrl}/delete-todo/${_id}`
-    )
-    return deletedTodo
-  } catch (error) {
-    throw new Error(error)
-  }
-}
-
+    try {
+        const deletedTodo: AxiosResponse<ApiDataType> = await axios.delete(
+            `${baseUrl}/delete-todo/${_id}`
+        );
+        return deletedTodo;
+    } catch (error) {
+        throw new Error(error);
+    }
+};
 ```
 
 这里，我们也有一个函数接受 `_id` 属性作为参数并返回 promise。
@@ -566,8 +564,8 @@ export const deleteTodo = async (
 ```jsx
 import React, { useState } from 'react'
 
-type Props = { 
-  saveTodo: (e: React.FormEvent, formData: ITodo | any) => void 
+type Props = {
+  saveTodo: (e: React.FormEvent, formData: ITodo | any) => void
 }
 
 const AddTodo: React.FC<Props> = ({ saveTodo }) => {
@@ -645,7 +643,7 @@ const Todo: React.FC<Props> = ({ todo, updateTodo, deleteTodo }) => {
 
 ```
 
-这里，我们需要继承 `TodoProps`  类型并加入 `updateTodo`  和  `deleteTodo`  函数，作为 props 传递给组件。
+这里，我们需要继承 `TodoProps` 类型并加入 `updateTodo` 和 `deleteTodo` 函数，作为 props 传递给组件。
 
 现在，当传入 Todo 对象，我们将能够显示它并更新或删除 Todo。
 
@@ -676,7 +674,7 @@ const App: React.FC = () => {
 
 ```
 
-这里，我们首先导入组件和 `API.ts` 导出的函数。然后，我们传递 `ITodo`  类型的数组给 `useState` 并且把它初始化为空数组。
+这里，我们首先导入组件和 `API.ts` 导出的函数。然后，我们传递 `ITodo` 类型的数组给 `useState` 并且把它初始化为空数组。
 
 `getTodos()` 方法会返回 promise —— 因此，我们可以调用 then 函数并用获取到的数据更新 state，或者在发生任何错误时抛出一个错误。
 
@@ -686,17 +684,16 @@ const App: React.FC = () => {
 
 ```jsx
 const handleSaveTodo = (e: React.FormEvent, formData: ITodo): void => {
-  e.preventDefault()
-  addTodo(formData)
-    .then(({ status, data }) => {
-      if (status !== 201) {
-        throw new Error("Error! Todo not saved")
-      }
-      setTodos(data.todos)
-    })
-    .catch(err => console.log(err))
-}
-
+    e.preventDefault();
+    addTodo(formData)
+        .then(({ status, data }) => {
+            if (status !== 201) {
+                throw new Error('Error! Todo not saved');
+            }
+            setTodos(data.todos);
+        })
+        .catch((err) => console.log(err));
+};
 ```
 
 当发送表单时，我们用 `addTodo()` 向服务端发送请求，如果 Todo 被成功保存，我们将更新数据，否则将会抛出错误。
@@ -705,16 +702,15 @@ const handleSaveTodo = (e: React.FormEvent, formData: ITodo): void => {
 
 ```jsx
 const handleUpdateTodo = (todo: ITodo): void => {
-  updateTodo(todo)
-    .then(({ status, data }) => {
-      if (status !== 200) {
-        throw new Error("Error! Todo not updated")
-      }
-      setTodos(data.todos)
-    })
-    .catch(err => console.log(err))
-}
-
+    updateTodo(todo)
+        .then(({ status, data }) => {
+            if (status !== 200) {
+                throw new Error('Error! Todo not updated');
+            }
+            setTodos(data.todos);
+        })
+        .catch((err) => console.log(err));
+};
 ```
 
 更新和删除 Todo 函数是很类似的。他们都接受参数，发送请求并得到响应。然后他们会检查请求是否成功并作相应处理。
@@ -740,7 +736,7 @@ const handleUpdateTodo = (todo: ITodo): void => {
 
 ```
 
-这里我们遍历  `todos`  数组并将所需的数据传递给 `TodoItem`。
+这里我们遍历 `todos` 数组并将所需的数据传递给 `TodoItem`。
 
 现在，如果你打开服务器端应用程序的文件夹(并在终端中执行以下命令)：
 
@@ -756,7 +752,7 @@ yarn start
 
 ```
 
-你应该能看到我们的Todo应用程序会按预期工作。
+你应该能看到我们的 Todo 应用程序会按预期工作。
 
 ![app](https://drive.google.com/uc?id=1bmmN-yfXsisixCgSNDnWLNYKaulFscY1)
 

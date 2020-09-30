@@ -1,7 +1,7 @@
-> * 原文地址：[How I Went from Sales to Front End Developer in 16 Months 自学编程 16 个月后，我从销售员成功转型为程序员](https://www.freecodecamp.org/news/how-i-landed-my-first-developer-job-without-an-application/)
-> * 原文作者：Braedon Gough
-> * 译者：
-> * 校对者：
+> -   原文地址：[How I Went from Sales to Front End Developer in 16 Months 自学编程 16 个月后，我从销售员成功转型为程序员](https://www.freecodecamp.org/news/how-i-landed-my-first-developer-job-without-an-application/)
+> -   原文作者：Braedon Gough
+> -   译者：
+> -   校对者：
 
 ![How I Went from Sales to Front End Developer in 16 Months](https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/P1111754.jpg)
 
@@ -9,7 +9,7 @@ On August 18, 2015, I was on a one-way flight headed to Copenhagen from Toronto 
 
 I can easily remember the date because it was my brother's birthday. He was forced to spend it at the airport with our family as they sent me off to Denmark, for what they thought would only be 8 months.
 
-My only familiarity with Copenhagen was from watching the  [CPH Open on Thrasher Magazine's YouTube channel][1]. Luckily for me, I absolutely fell in love with the city and, after my first semester abroad, I made it my mission to stay here even longer. I was due to start an internship upon returning back to Canada and challenged myself to find one in Copenhagen instead.
+My only familiarity with Copenhagen was from watching the [CPH Open on Thrasher Magazine's YouTube channel][1]. Luckily for me, I absolutely fell in love with the city and, after my first semester abroad, I made it my mission to stay here even longer. I was due to start an internship upon returning back to Canada and challenged myself to find one in Copenhagen instead.
 
 ## Working in Copenhagen
 
@@ -61,7 +61,7 @@ Pleo Team Camp, Dec 2019
 
 From there, I jumped straight into another course, this time on Node directly followed up with a course on React.
 
-Somewhere between the Node and React courses, I had started a new job as an account manager at what I still deem to be  [Denmark's coolest startup][2]. It was and is incredibly exciting to be a part of a company growing so fast. It was even more exciting to meet so many new and talented developers to learn from.
+Somewhere between the Node and React courses, I had started a new job as an account manager at what I still deem to be [Denmark's coolest startup][2]. It was and is incredibly exciting to be a part of a company growing so fast. It was even more exciting to meet so many new and talented developers to learn from.
 
 About three months into my new job, my manager and I were discussing how my role could develop in the future. I was honest with her and said I wasn't interested in any further responsibility. I wanted to spend any and all excess capacity teaching myself to code, with the hopes of one day becoming a developer.
 
@@ -79,7 +79,7 @@ With some extra time on my hands over the holiday period, I began to look throug
 
 Luckily for me, our frontend challenge was very similar to the final project of the React course, so I could reuse much of the boilerplate and components for my submission. I definitely felt like I was cheating.
 
-But I sent through  [my project][3]  anyway and eagerly await feedback. Having my code reviewed by two of our senior engineers was incredibly scary and I was prepared for some harsh feedback.
+But I sent through [my project][3] anyway and eagerly await feedback. Having my code reviewed by two of our senior engineers was incredibly scary and I was prepared for some harsh feedback.
 
 After a couple weeks, my grade was in, and my submission wasn't a total failure! I had received some really great, actionable points of criticism. One of my colleagues even spent an hour with me after work, talking me through each line of feedback. Our code review session went so well, we decided to meet again, week after week, until well after I transitioned into becoming a developer.
 
@@ -115,9 +115,9 @@ Noise aside, there hasn't been a single day where I haven't been excited about c
 
 The experience I gained in sales is incredibly advantageous in my work today. Strong communication, time-management, and presentational skills have been invaluable as a dev. But I have found these to be lacking in most dev communities I've observed.
 
-I realize I'm incredibly lucky to have been presented an opportunity to work with production code so early on.  It was without a doubt a huge leap forward in my learning and massively helped in expediting my understanding of the realities of working as a dev that is impossible to gain from online tutorials_._
+I realize I'm incredibly lucky to have been presented an opportunity to work with production code so early on. It was without a doubt a huge leap forward in my learning and massively helped in expediting my understanding of the realities of working as a dev that is impossible to gain from online tutorials*.*
 
-Having a mentor to work with hugely accelerated my learning and was extremely helpful in keeping me accountable for always having a project on the go, so we always had something to work with. Without all of the support around me, I think I would still be spending all of my nights and weekends working through tutorials or building  [random Pokemon generators][4].
+Having a mentor to work with hugely accelerated my learning and was extremely helpful in keeping me accountable for always having a project on the go, so we always had something to work with. Without all of the support around me, I think I would still be spending all of my nights and weekends working through tutorials or building [random Pokemon generators][4].
 
 I made a commitment early on to spend all of my free time continuing with my development. I think it's very easy to underestimate how large of a time commitment this journey is. Access to a mentor is a huge help, although even someone with enough knowledge to occasionally answer questions can save you hours of frustration. Don't be afraid to ask for help.
 
@@ -131,7 +131,7 @@ If there was one piece of advice I wish I had earlier on, it would have been to 
 
 You're not a developer once someone pays you to be a developer, you're a developer the second you start coding.
 
-Don't be a stranger! Feel free to write if you have any questions,  [email me your favourite book recommendations,][5]  [connect with me on Linkedin][6]  or  [follow me on twitter][7]!
+Don't be a stranger! Feel free to write if you have any questions, [email me your favourite book recommendations,][5] [connect with me on Linkedin][6] or [follow me on twitter][7]!
 
 [1]: https://www.youtube.com/watch?v=EYOCa7kusJg
 [2]: https://www.pleo.io/

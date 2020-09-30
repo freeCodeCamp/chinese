@@ -1,7 +1,7 @@
-> * 原文地址：[How I took the first step towards learning to code 我是怎么迈出学习编程的第一步的](https://www.freecodecamp.org/news/the-first-step-towards-learning-to-code-2e4c31e86630/)
-> * 原文作者：Niamh McCooey
-> * 译者：Chengjun.L
-> * 校对者：
+> -   原文地址：[How I took the first step towards learning to code 我是怎么迈出学习编程的第一步的](https://www.freecodecamp.org/news/the-first-step-towards-learning-to-code-2e4c31e86630/)
+> -   原文作者：Niamh McCooey
+> -   译者：Chengjun.L
+> -   校对者：
 
 ![How I took the first step towards learning to code](https://cdn-media-1.freecodecamp.org/images/1*CFeeiP9bD0riPqSIfCzX6A.jpeg)
 
@@ -99,7 +99,6 @@ Sounded like the thing — a place to learn to code that’s designed to welcome
 希望这篇文章能帮助其他和我一样的编程新手理解一件事：并不是谁天生就适合编程。
 
 对我来说，这是我的第一个收获。
-
 
 [1]: http://www.codebar.io/
 [2]: https://niamhmccoo.github.io/

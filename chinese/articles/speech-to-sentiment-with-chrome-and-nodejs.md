@@ -1,7 +1,7 @@
-> * 原文地址：[How to Build a Speech to Emotion Converter with the Web Speech API and Node.js 用 Web Speech API 和 Node.js 将语音转换成 emoji](https://www.freecodecamp.org/news/speech-to-sentiment-with-chrome-and-nodejs/)
-> * 原文作者：Diogo Spínola
-> * 译者：miyaliu666
-> * 校对者：
+> -   原文地址：[How to Build a Speech to Emotion Converter with the Web Speech API and Node.js 用 Web Speech API 和 Node.js 将语音转换成 emoji](https://www.freecodecamp.org/news/speech-to-sentiment-with-chrome-and-nodejs/)
+> -   原文作者：Diogo Spínola
+> -   译者：miyaliu666
+> -   校对者：
 
 ![How to Build a Speech to Emotion Converter with the Web Speech API and Node.js](https://images.unsplash.com/photo-1542394731-170c9e6d914e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
@@ -23,10 +23,10 @@
 
 在你开始构建一个项目时，你应该（至少模糊地）勾勒出你的目标以及构思如何实现。在开始搜索之前，我罗列出需要做的事情：
 
-- 记录语音
-- 将语音转换成为文字
-- 文字内容测评
-- 将结果反馈给说话人
+-   记录语音
+-   将语音转换成为文字
+-   文字内容测评
+-   将结果反馈给说话人
 
 搜索一番之后，我发现 [Web Speech API][1] 就可以录音以及将语音转换成文字，在 Google Chrome 就可以使用这个功能，[语音识别][2] 部分正是我们需要的。
 
@@ -35,12 +35,13 @@
 结果反馈这一步，我们用 HTML，JavaScript 和 CSS 编写程序来处理结果，将 emoji 展示在网页上。
 
 现在我们知道要用到些什么了，总结一下：
-- 浏览器接收用户的语音，通过 Web Speech API 返回一些文字
-- 向 Node.js 服务器发起处理文字的请求
-- 服务依据 AFINN 的列表测评文字，返回分数（？）
-- 浏览器根据分数显示不同的 emoji
 
-**注：**  如果你熟悉项目设置，那么你可以跳过以下“项目文件和设置”部分。
+-   浏览器接收用户的语音，通过 Web Speech API 返回一些文字
+-   向 Node.js 服务器发起处理文字的请求
+-   服务依据 AFINN 的列表测评文字，返回分数（？）
+-   浏览器根据分数显示不同的 emoji
+
+**注：** 如果你熟悉项目设置，那么你可以跳过以下“项目文件和设置”部分。
 
 ## 项目文件和设置
 
@@ -63,24 +64,75 @@ src/
 
 ```html
 <html>
-  <head>
-    <title>
-      Speech to emotion
-    </title>
-    <link rel="stylesheet" href="style/css/emojis.css">
-  </head>
-  <body>
+    <head>
+        <title>Speech to emotion</title>
+        <link rel="stylesheet" href="style/css/emojis.css" />
+    </head>
+    <body>
+        nothing for now
 
-nothing for now
-
-<span class="token tag" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);"><span class="token tag" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);"><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">&lt;</span>script</span> <span class="token attr-name" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">src</span><span class="token attr-value" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);"><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">=</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">"</span>recognition.js<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">"</span></span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">&gt;</span></span><span class="token tag" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);"><span class="token tag" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);"><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">&lt;/</span>script</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">&gt;</span></span>
+        <span
+            class="token tag"
+            style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);"
+            ><span
+                class="token tag"
+                style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);"
+                ><span
+                    class="token punctuation"
+                    style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);"
+                    >&lt;</span
+                >script</span
+            >
+            <span
+                class="token attr-name"
+                style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);"
+                >src</span
+            ><span
+                class="token attr-value"
+                style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);"
+                ><span
+                    class="token punctuation"
+                    style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);"
+                    >=</span
+                ><span
+                    class="token punctuation"
+                    style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);"
+                    >"</span
+                >recognition.js<span
+                    class="token punctuation"
+                    style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);"
+                    >"</span
+                ></span
+            ><span
+                class="token punctuation"
+                style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);"
+                >&gt;</span
+            ></span
+        ><span
+            class="token tag"
+            style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);"
+            ><span
+                class="token tag"
+                style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);"
+                ><span
+                    class="token punctuation"
+                    style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);"
+                    >&lt;/</span
+                >script</span
+            ><span
+                class="token punctuation"
+                style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);"
+                >&gt;</span
+            ></span
+        >
+    </body>
+</html>
 ```
 
 _recognition.js_ 文件在 _DOMContentLoaded_ 事件中，确保在执行 JS 代码前加载页面。
 
 ```js
 document.addEventListener('DOMContentLoaded', speechToEmotion, false);
-
 ```
 
 _emojis.css_ 文件暂时为空。
@@ -89,52 +141,50 @@ _emojis.css_ 文件暂时为空。
 
 接下来，我们需要用 _npm install_ 安装两个包，让事情变得简单点：
 
--   [expressjs][4]  \- 包含 HTTP 服务器
--   [nodemon][5]  \- 这样我们在修改 _server.js_ 的时候就不需要不断键入 **node server.js**
+-   [expressjs][4] \- 包含 HTTP 服务器
+-   [nodemon][5] \- 这样我们在修改 _server.js_ 的时候就不需要不断键入 **node server.js**
 
 _package.json_:
 
 ```json
 {
-  "name": "speech-to-emotion",
-  "version": "1.0.0",
-  "description": "We speak and it feels us :o",
-  "main": "index.js",
-  "scripts": {
-    "server": "node server.js",
-    "server-debug": "nodemon --inspect server.js"
-  },
-  "author": "daspinola",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
-  }
+    "name": "speech-to-emotion",
+    "version": "1.0.0",
+    "description": "We speak and it feels us :o",
+    "main": "index.js",
+    "scripts": {
+        "server": "node server.js",
+        "server-debug": "nodemon --inspect server.js"
+    },
+    "author": "daspinola",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.2"
+    }
 }
 ```
 
 _server.js_:
 
 ```js
-const express = require('express')
-const path = require('path')
-const port = 3000
-const app = express()
-app.use(express.static(path.join(__dirname, 'public')))
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'))
-})
-app.get('/emotion', function(req, res) {
-  // Valence of emotion section code will be here for not it returns nothing
-  res.send({})
-})
-
+const express = require('express');
+const path = require('path');
+const port = 3000;
+const app = express();
+app.use(express.static(path.join(__dirname, 'public')));
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+app.get('/emotion', function (req, res) {
+    // Valence of emotion section code will be here for not it returns nothing
+    res.send({});
+});
 ```
 
 接着，在终端运行 **npm run server-debug**，在 _localhost:3000_ 打开浏览器，会看到 HTML 文件中的 “nothing for now” 信息。
-
 
 ## Web Speech API
 
@@ -147,18 +197,18 @@ app.get('/emotion', function(req, res) {
 _recognition.js_ 文件的代码如下：
 
 ```javascript
-const recognition = new webkitSpeechRecognition()
-recognition.lang = 'en-US'
-recognition.onresult = function(event) {
-  const results = event.results;
-  const transcript = results[0][0].transcript
-  console.log('text ->', transcript)
-}
-recognition.onend = function() {
-  console.log('disconnected')
-}
-
+const recognition = new webkitSpeechRecognition();
+recognition.lang = 'en-US';
+recognition.onresult = function (event) {
+    const results = event.results;
+    const transcript = results[0][0].transcript;
+    console.log('text ->', transcript);
+};
+recognition.onend = function () {
+    console.log('disconnected');
+};
 ```
+
 如此连接麦克风几秒钟以收听音频。如果没有捕捉到什么，连接就会断开。
 
 语音识别引擎可识别[这份文件][7]里罗列的语言。
@@ -166,19 +216,19 @@ recognition.onend = function() {
 如果想要延长连接的时间（或者是一段话分几次说的情况），我们可以使用一个叫作 **continuous** 的属性，像给 **lang** 设置属性值一样把它的值设置为 **true**，这样就可以不间断地捕捉音频了。
 
 ```js
-const recognition = new webkitSpeechRecognition()
-recognition.lang = 'en-US'
-recognition.continuous = true
-recognition.onresult = function(event) {
-  const results = event.results;
-  const transcript = results[results.length-1][0].transcript
-  console.log('text ->', transcript)
-}
-recognition.onend = function() {
-  console.log('disconnected')
-}
-
+const recognition = new webkitSpeechRecognition();
+recognition.lang = 'en-US';
+recognition.continuous = true;
+recognition.onresult = function (event) {
+    const results = event.results;
+    const transcript = results[results.length - 1][0].transcript;
+    console.log('text ->', transcript);
+};
+recognition.onend = function () {
+    console.log('disconnected');
+};
 ```
+
 我们添加了 **continuous** 属性，只获取最后一个结果，而不是所有结果。
 
 刷新页面，首先会弹出对话框问我们是否启用麦克风，选择 yes，然后我们就可以讲话，并且在 Chrome DevTools console 查看语音信息转换成文字的结果。
@@ -259,7 +309,7 @@ app.get('/emotion', function(req, res) {
 
 ```
 
-_sentiment.analyze(<our\_text\_variable>)_  会执行上面说的步骤: 根据 AFINN 列表检查文字中每个词语，最后给我们一个总分。
+_sentiment.analyze(<our_text_variable>)_ 会执行上面说的步骤: 根据 AFINN 列表检查文字中每个词语，最后给我们一个总分。
 
 变量 **score** 的对象：
 
@@ -287,20 +337,18 @@ _sentiment.analyze(<our\_text\_variable>)_  会执行上面说的步骤: 根据 
 
 ```html
 <html>
-  <head>
-    <title>
-      Speech to emotion
-    </title>
-    <link rel="stylesheet" href="style/css/emojis.css">
-  </head>
-  <body>
-    <!-- We replace the "nothing for now" -->
-    <div class="emoji">
-      <img class="idle">
-    </div>
-    <!-- And leave the rest alone -->
-    <script src="recognition.js"></script>
-  </body>
+    <head>
+        <title>Speech to emotion</title>
+        <link rel="stylesheet" href="style/css/emojis.css" />
+    </head>
+    <body>
+        <!-- We replace the "nothing for now" -->
+        <div class="emoji">
+            <img class="idle" />
+        </div>
+        <!-- And leave the rest alone -->
+        <script src="recognition.js"></script>
+    </body>
 </html>
 ```
 
@@ -308,46 +356,45 @@ _sentiment.analyze(<our\_text\_variable>)_  会执行上面说的步骤: 根据 
 
 我们下载一些喜欢的 icon，把它们添加到 images 文件夹，稍后我们会使用这些 emoji：
 
--   **error 错误**  \- 出现错误时
--   **idle 懒洋洋**  \- 麦克风未启用时
--   **listening 倾听**  \- 麦克风已连接等待输入时
+-   **error 错误** \- 出现错误时
+-   **idle 懒洋洋** \- 麦克风未启用时
+-   **listening 倾听** \- 麦克风已连接等待输入时
 -   **negative 负面** \- 分值为正时
 -   **neutral 中性** \- 分值为零时
 -   **positive 正面** \- 分值为负时
 -   **searching 搜索** \- 发起服务器请求时
- 
+
 在 _emojis.css_ 中添加：
 
 ```css
 .emoji img {
-  width: 100px;
-  width: 100px;
+    width: 100px;
+    width: 100px;
 }
 .emoji .error {
-  content:url("../images/error.png");
+    content: url('../images/error.png');
 }
 .emoji .idle {
-  content:url("../images/idle.png");
+    content: url('../images/idle.png');
 }
 .emoji .listening {
-  content:url("../images/listening.png");
+    content: url('../images/listening.png');
 }
 .emoji .negative {
-  content:url("../images/negative.png");
+    content: url('../images/negative.png');
 }
 .emoji .neutral {
-  content:url("../images/neutral.png");
+    content: url('../images/neutral.png');
 }
 .emoji .positive {
-  content:url("../images/positive.png");
+    content: url('../images/positive.png');
 }
-
 ```
 
 第一个选择器是给 emoji 设置一个一致的尺寸，其余的是各种 emoji 图片。
 
 做完以上修改之后，我们重新加载页面，会显示懒洋洋 emoji，这是因为我们还没有根据不同场景替换 <img> 元素的 **idle** 类。
-When we reload the page after these changes it'll show the idle emoji. It never changes, though, since we haven't replaced our  **idle**  class in the <img> element depending on the scenario.
+When we reload the page after these changes it'll show the idle emoji. It never changes, though, since we haven't replaced our **idle** class in the <img> element depending on the scenario.
 
 我们还需要对 _recognition.js_ 文件进行一步操作，添加一个函数以更改 emoji。
 
@@ -355,28 +402,29 @@ When we reload the page after these changes it'll show the idle emoji. It never 
 /**
 
 ```
+
 在收到服务器请求的反馈之后，我们开始检测分值为正负或是零，相应地调用 _setEmoji_ 函数。
 
 ```js
-console.log(transcript) // So we know what it understood when we spoke
+console.log(transcript); // So we know what it understood when we spoke
 
-setEmoji('searching')
-
+setEmoji('searching');
 ```
+
 将 emoji 设置为 **searching**，然后发起请求。
 
 最后，添加 _onerror_ 和 _onaudiostart_ 事件，修改 _onend_ 事件，这样就设置为正确的 emoji 了。
 
 ```js
-  recognition.onerror = function(event) {
-    console.error('Recognition error -> ', event.error)
-    setEmoji('error')
-  }
-  recognition.onaudiostart = function() {
-    setEmoji('listening')
-  }
-
+recognition.onerror = function (event) {
+    console.error('Recognition error -> ', event.error);
+    setEmoji('error');
+};
+recognition.onaudiostart = function () {
+    setEmoji('listening');
+};
 ```
+
 最后，_recognition.js_ 文件是这样：
 
 ```js
@@ -421,6 +469,7 @@ console<span class="token punctuation" style="box-sizing: inherit; margin: 0px; 
   /**
 
 ```
+
 测试项目，显示结果：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/11/sentiment-to-emotion.gif)
@@ -440,7 +489,6 @@ console<span class="token punctuation" style="box-sizing: inherit; margin: 0px; 
 希望这篇文章可以给你一些启发。如果你用我介绍的方法做了什么项目，请告诉我啊。
 
 你可以在我的 GitHub 仓库**[查看代码][12]**。
-  
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition

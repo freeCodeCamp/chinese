@@ -1,7 +1,7 @@
-> * 原文地址：[How to build a real-time todo app with React Native](https://www.freecodecamp.org/news/how-to-build-a-real-time-todo-app-with-react-native-19a1ce15b0b3/)
-> * 原文作者：Divyanshu Maithani
-> * 译者：blackcai
-> * 校对者：
+> -   原文地址：[How to build a real-time todo app with React Native](https://www.freecodecamp.org/news/how-to-build-a-real-time-todo-app-with-react-native-19a1ce15b0b3/)
+> -   原文作者：Divyanshu Maithani
+> -   译者：blackcai
+> -   校对者：
 
 <center>![如何使用React Native构建实时todo应用程序
 ](https://cdn-media-1.freecodecamp.org/images/1*e2uBLw946pDyqjdV5xAJpQ.png)</center>
@@ -22,7 +22,7 @@
 
 以下是[文档][5]的描述：
 
->React Native 允许你仅使用 JavaScript 搭建移动待办事项应用程序。它和 React 使用相同的设计，让你通过声明组件组成丰富的移动 UI。
+> React Native 允许你仅使用 JavaScript 搭建移动待办事项应用程序。它和 React 使用相同的设计，让你通过声明组件组成丰富的移动 UI。
 
 即使你刚开始使用 React 或 React Native，你也应该能够按照这个故事来搭建自己的实时待办待办事项应用程序。
 
@@ -60,7 +60,6 @@
 
 我在[这里][20]使用 GitHub 分支中的 [create-react-native-app][19] 设置了启动项目。 你可以通过运行以下命令来[下载 zip][21] 或克隆基础分支：
 
-
 ```
 git clone -b base https://github.com/appbaseio-apps/todos-native
 ```
@@ -71,7 +70,7 @@ git clone -b base https://github.com/appbaseio-apps/todos-native
 cd todos-native && yarn && yarn start
 ```
 
-- 在包启动后，你可以使用 [Expo][22] 应用程序 或使用 Android 或 IOS 模拟器在手机上运行这个应用程序：
+-   在包启动后，你可以使用 [Expo][22] 应用程序 或使用 Android 或 IOS 模拟器在手机上运行这个应用程序：
 
 <center>![图片](https://cdn-media-1.freecodecamp.org/images/1*vTzfrdAPwha5GKpkzxaOeQ.png)</center>
 
@@ -87,11 +86,11 @@ navigation
 ├── MainTabNavigator.js      // Tab navigation component
 screens
 ├── TodosScreen.js           // Renders the TodosContainer
-components        
-├── Header.js                // Header component         
-├── AddTodo.js               // Add todo input        
+components
+├── Header.js                // Header component
+├── AddTodo.js               // Add todo input
 ├── AddTodoButton.js         // Add todo floating button
-├── TodoItem.js              // The todo item         
+├── TodoItem.js              // The todo item
 ├── TodosContainer.js        // Todos main container api
 ├── todos.js                 // APIs for performing writes
 constants                    // All types of constants used in app
@@ -154,7 +153,11 @@ const TabNav = TabNavigator(
                         name={iconName}
                         size={28}
                         style={{ marginBottom: -3 }}
-                        color={focused ? Colors.tabIconSelected : Colors.tabIconDefault}
+                        color={
+                            focused
+                                ? Colors.tabIconSelected
+                                : Colors.tabIconDefault
+                        }
                     />
                 );
             },
@@ -164,9 +167,8 @@ const TabNav = TabNavigator(
         tabBarPosition: 'bottom',
         animationEnabled: true,
         swipeEnabled: true,
-    },
+    }
 );
-
 ```
 
 -   `TabNavigator` 函数接受两个参数，第一个是路由配置，第二个是`TabNavigator` 配置。 在上面的代码片段中，我们传递的配置是在底部显示选项卡导航栏并为每个选项卡设置不同的图标。
@@ -193,15 +195,15 @@ const TabNav = TabNavigator(
 
 ```js
 const AddTodoButton = ({ onPress }) => (
-  <Fab
-      direction="up"
-      containerStyle={{}}
-      style={{ backgroundColor: COLORS.primary }}
-      position="bottomRight"
-      onPress={onPress}
-  >
-      <Icon name="add" />
-  </Fab>
+    <Fab
+        direction="up"
+        containerStyle={{}}
+        style={{ backgroundColor: COLORS.primary }}
+        position="bottomRight"
+        onPress={onPress}
+    >
+        <Icon name="add" />
+    </Fab>
 );
 ```
 
@@ -289,10 +291,9 @@ export default class TodosContainer extends React.Component {
 
 添加待办事项后，将其添加到 Elasticsearch（我们在 `constants / Config.js` 中的配置）中。 可以使用 [ReactiveSearch Native][36] 组件实时查看所有这些数据。
 
-仓库提供了超过10个的本地 [UI 组件][37]。 对于我们的待办事项应用程序，我们将主要使用 [ReactiveList][38] 组件来显示待办事项的状态。
+仓库提供了超过 10 个的本地 [UI 组件][37]。 对于我们的待办事项应用程序，我们将主要使用 [ReactiveList][38] 组件来显示待办事项的状态。
 
 让我们添加 `ReactiveList` 组件并显示我们的待办事项。 我们将在 `components / TodosContainer.js` 中添加此组件以及它的必要工作方式。 以下是 `ReactiveList` 的使用方法：
-
 
 ```js
 
@@ -304,13 +305,13 @@ import { ReactiveList } from '@appbaseio/reactivesearch-native';
 
 我们还没有添加 `onAllData` 方法，但是让我们先了解一下这里使用的 props：
 
--   `componentId`  - 组件的唯一标识符。
+-   `componentId` - 组件的唯一标识符。
 
 -   `defaultQuery`：最初应用于列表的查询。 我们将使用 `match_all` 显示默认情况下的所有待办事项。
 
 -   `stream`：是否流式传输新结果更新或仅显示历史结果。 通过将此设置为 `true`，我们现在还可以实时监听 Todo 的更新。 我们稍后会添加与流相关的逻辑。
 
--   `onAllData`  - 一个回调函数，它接收当前待办事项列表和数据流（新的待办事项和任何更新），并返回一个 React 组件或 JSX 进行渲染。 这是语法大概的样子：
+-   `onAllData` - 一个回调函数，它接收当前待办事项列表和数据流（新的待办事项和任何更新），并返回一个 React 组件或 JSX 进行渲染。 这是语法大概的样子：
 
 ```js
 <ReactiveList
@@ -462,9 +463,9 @@ class TodosContainer extends Component {
       <FlatList
         ...
         renderItem={({ item: todo }) => (
-          <TodoItem 
+          <TodoItem
             todo={todo}
-            onUpdate={this.api.update} 
+            onUpdate={this.api.update}
             onDelete={this.api.destroy}
           />
         )}
@@ -482,7 +483,7 @@ class TodosContainer extends Component {
 
 你可能已经注意到 todos 显示正常，但你无法在不刷新 app 的情况下查看更新的待办事项。 在最后一步中，我们将解决这个难题的缺失部分。
 
-在上一节中，我们为 ReactiveListcomponent 添加了一个 `onAllData` 方法。 
+在上一节中，我们为 ReactiveListcomponent 添加了一个 `onAllData` 方法。
 我们将利用接收的第二个参数 `onAllData` 结构更新流来保持待办事项的更新。以下是更新的 `onAllData` 方法在 `components / TodosContainer.js` 中的大概的样子。
 
 ```
@@ -550,7 +551,7 @@ export default Utils;
 2. [ReactiveSearch GitHub repo][49]⭐️
 3. ReactiveSearch [文档][50]
 4. 希望你喜欢这个故事。 如果你有任何想法或建议，请告诉我并享受乐趣！
-特别感谢 [Dhruvdutt Jadhav][51] 帮我讲述这个故事和 Todos app。
+   特别感谢 [Dhruvdutt Jadhav][51] 帮我讲述这个故事和 Todos app。
 
 [1]: https://stateofjs.com/2017/mobile/results/
 [2]: https://github.com/appbaseio/reactivesearch/tree/dev/packages/native
@@ -603,5 +604,3 @@ export default Utils;
 [49]: https://github.com/appbaseio/reactivesearch
 [50]: https://opensource.appbase.io/reactive-manual/native
 [51]: https://www.freecodecamp.org/news/how-to-build-a-real-time-todo-app-with-react-native-19a1ce15b0b3
-
-

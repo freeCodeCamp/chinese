@@ -1,37 +1,37 @@
-> * 原文地址：[23 Alternative Career Paths that Software Developers Can Grow Into 程序员职业发展的 23 种路径](https://www.freecodecamp.org/news/alternative-career-paths/)
+> * 原文地址：[程序员职业发展的 23 种路径](https://www.freecodecamp.org/news/alternative-career-paths/)
 > * 原文作者：Karl Hughes
 > * 译者：MMMAY
 > * 校对者：
 
-![23 Alternative Career Paths that Software Developers Can Grow Into]程序员职业发展的 23 种路径(https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/Alternate-Career-Pathways.png)
+!程序员职业发展的 23 种路径(https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/Alternate-Career-Pathways.png)
 
-Over the past five years, I've given dozens of guest lectures at many of the coding bootcamps in Chicago.过去5年中，我在芝加哥编程训练营举办了数十场客座演讲。
+过去5年中，我在芝加哥编程训练营举办了数十场客座演讲。
 
-A few questions never fail to come up: "[Which language should I learn next?][1]", "[How can I prepare for technical interviews?][2]", "Are you hiring?"听到的问题大多千篇一律：接下来我该学什么语言呢？如何准备技术面试？您招人吗？诸如此类。
+听到的问题大多千篇一律：接下来我该学什么语言呢？[1]如何准备技术面试？[2]您招人吗？诸如此类。
 
-But one question that threw me off was, "What if I don't want to be a software developer?"但有一个问题直击我的灵魂深处：如果我不想再当程序员了，该怎么办？
+但有一个问题直击我的灵魂深处：如果我不想再当程序员了，该怎么办？
 
-I've been thinking about this a lot lately. After almost a decade leading product and engineering teams, I realized I was ready for a new challenge, so this summer, I started  [freelance technical writing][3]. I didn't know it when I got my first client, but I quickly realized that  _technical writing is one of many valid career paths for former software engineers_.之后关于这个问题我思考了很久。我带产品和技术团队将近十年了，我意识到我遇到了新的挑战。所以今年夏天，我开始了[自由技术写作][3]。很快我便意识到，技术写作是程序员转型后切实职业发展道路之一，而在遇到第一个客户时我甚至还没有意识到这一点。
+后关于这个问题我思考了很久。我带产品和技术团队将近十年了，我意识到我遇到了新的挑战。所以今年夏天，我开始了[自由技术写作][3]。很快我便意识到，技术写作是程序员转型后切实职业发展道路之一，而在遇到第一个客户时我甚至还没有意识到这一点。
 
-## What Else Can Software Developers Do?程序员还能做什么工作？
+## 程序员还能做什么工作？
 
-This realization got me thinking: "What other jobs can software engineers do besides write software?"“除了开发软件外，程序员还能做什么工作？”意识到技术写作是其中一个选择后，我开始思考有无其他选择。
+“除了开发软件外，程序员还能做什么工作？”意识到技术写作是其中一个选择后，我开始思考有无其他选择。
 
-The list is surprisingly long.可选项出乎意料地多。
+可选项出乎意料地多。
 
-This post will go through many of the career paths available to software developers, especially recent bootcamp graduates. I'll explain what each job does, how you can get your foot in the door, and the long-term prospects.这篇文章会历数程序员转型后的职业发展路径，尤其是对最近的编程训练营毕业生而言。我会介绍每份工作的内容、如何起步，以及长期规划。
+这篇文章会历数程序员转型后的职业发展路径，尤其是对最近的编程训练营毕业生而言。我会介绍每份工作的内容、如何起步，以及长期规划。
 
-Whether you're looking for an alternate career path because you haven't found a job as an engineer or because you realized software development wasn't for you, this guide will help you find a career fit for your skillset.不管你是因为没有找到程序员的工作还是因为不适合软件开发而开始寻找其他工作，这篇指南会帮你根据自己的技能找到一份适合你自己的工作。
+不管你是因为没有找到程序员的工作还是因为不适合软件开发而开始寻找其他工作，这篇指南会帮你根据自己的技能找到一份适合你自己的工作。
 
-![Alternative career paths for software developers](https://i.imgur.com/PFyQku1.png)程序员职业发展路径(https://i.imgur.com/PFyQku1.png)
+!程序员职业发展路径(https://i.imgur.com/PFyQku1.png)
 
-## Customer-Facing Roles面向消费者工作
+## 面向消费者工作
 
-While software engineers benefit from having people skills, some bootcamp graduates I've talked to aren't looking forward to sitting quietly and writing code all day. If you want a career path that provides more opportunities to interact with people, these jobs may suit you.程序员会因人际沟通技能而受益颇多，我之前沟通过的一些编程训练营毕业生也不打算整天坐在电脑面前写代码。如果你想做一份能与人更多互动的工作，下面这些选择可能会比较适合你。
+程序员会因人际沟通技能而受益颇多，我之前沟通过的一些编程训练营毕业生也不打算整天坐在电脑面前写代码。如果你想做一份能与人更多互动的工作，下面这些选择可能会比较适合你。
 
 ### 1\. Developer Relations, Advocacy, or Evangelism程序员关系、程序员布道师
 
-As more companies strive to build relationships with developers who are their customers, users, or advocates, the field of developer relations is growing quickly.随着越来越多的公司与同时是消费者、用户或支持者的程序员建立关系，程序员关系领域正在快速发展。
+随着越来越多的公司与同时是消费者、用户或支持者的程序员建立关系，程序员关系领域正在快速发展。
 
 Developer relations professionals (some companies call them developer advocates, developer evangelists, community managers, or "DevRels") help establish and build a community around their company's software.程序员关系专家（有些公司称他们为程序员布道师、社群管理或“DevRels”）协助建立了围绕公司软件的社群。
 
@@ -137,115 +137,114 @@ Traditionally, System Administrators have been  [responsible for maintaining and
 
 Either way, you'll need a basic understanding of operating systems, hosting platforms, automation tools, bash scripting, and system architecture. It can be  [hard to find entry-level jobs in this field][24]  because it requires such a wide array of technical knowledge, but it's a great role to transition into if you like the problem-solving aspects of engineering without the UI/UX requirements that most customer-facing products require.如果想要做这类工作，你需要对操作系统、主机平台、自动化工具、Bash脚本编程和系统架构有基本了解。在这一领域找一份入门级工作有些难，因为其对技术知识要求广泛。但如果你喜欢解决问题，不想要受面向消费者产品的UI和UX要求束缚，这类工作也值得尝试。
 
-### 13\. Database Administrator
+### 13\. Database Administrator数据库管理员
 
-Some companies lump database administrators in with system administrators, but this can be a distinct role.
+Some companies lump database administrators in with system administrators, but this can be a distinct role.有些公司将数据库管理员与系统管理员混为一谈，但其实数据库管理员是一个不同的工种。
 
-Database administrators deal with security, provisioning, scaling, and optimization of low-level data storage systems. You'll need a knowledge of SQL and NoSQL databases, security best practices, and some basic scripting skills, but you won't likely be writing code all day. You'll also get to worry about really minute optimization problems like fixing indexes and caches.
+Database administrators deal with security, provisioning, scaling, and optimization of low-level data storage systems. You'll need a knowledge of SQL and NoSQL databases, security best practices, and some basic scripting skills, but you won't likely be writing code all day. You'll also get to worry about really minute optimization problems like fixing indexes and caches.数据库管理员负责低层次数据存储系统安全、供给、测量和优化。这个职业需要懂得SQL和NoSQL数据库、安全最佳实践和一些基础脚本知识，但无需整天写代码，处理的都是类似修复索引和缓存的小优化问题。
 
-If you're new to software development, start by learning everything you can about databases. You'll need to know which database is right for which application and how to optimize each of them at scale, so it can be hard to practice this on your own. If you want to find some large datasets to work with, check out  [Kaggle][25].
+If you're new to software development, start by learning everything you can about databases. You'll need to know which database is right for which application and how to optimize each of them at scale, so it can be hard to practice this on your own. If you want to find some large datasets to work with, check out  [Kaggle][25].如果你是软件开发的新手，那就开始尽己所能地学习有关数据库的知识吧。你将需要知道哪个数据库适合哪个应用以及如何大规模优化这些数据库。实践起来可能会有些难度。如果你想要找一些工作中使用的大数据集，可以去[Kaggle][25]看看。
 
-### 14\. Site Reliability Engineer
+### 14\. Site Reliability Engineer站点可靠性工程师
 
-Site Reliability Engineers are responsible for responding to and fixing critical issues that come up in production. Often this means they rotate through an "on-call" list, so you might work some strange hours. The upside is that you'll get really good at solving a wide range of unusual problems, building automated alerts, and reading server logs.
+Site Reliability Engineers are responsible for responding to and fixing critical issues that come up in production. Often this means they rotate through an "on-call" list, so you might work some strange hours. The upside is that you'll get really good at solving a wide range of unusual problems, building automated alerts, and reading server logs.站点可靠性工程师负责响应并修复打造产品时出现的重要问题。通常这意味着站点可靠性工程师处于随时待命状态，工作时长会比较特殊。但乐观一点来看，站点工程师将会成为解决各种异常问题、建立自动警示和读服务器日志的一把好手。
 
-Because of the highly reactive nature of this job, it can be hard to keep experienced software engineers in site reliability roles for a long time. That said, it could be a great place to get your foot in the door if you're having trouble finding your first software development role. I've known two bootcamp graduates who started in SRE roles before transitioning into software development. You might even find that you like the challenge and excitement of fast-paced problem-solving.
+Because of the highly reactive nature of this job, it can be hard to keep experienced software engineers in site reliability roles for a long time. That said, it could be a great place to get your foot in the door if you're having trouble finding your first software development role. I've known two bootcamp graduates who started in SRE roles before transitioning into software development. You might even find that you like the challenge and excitement of fast-paced problem-solving.由于站点可靠性工程师总是需要人处于随时待命状态，有经验的软件工程师不太可能长时间地一直呆在这个岗位。然而，从另一个角度看，如果你正在寻找你的第一份软件开发工作，但又不知如何是好，站点可靠性工程师可能是一个不错的入门选择。我认识的两个训练营的毕业生在正式从事软件开发工作之前，就是从站点可靠性工程师过渡的。或许在这份职业中，你会发现你喜欢快节奏解决问题所带来的挑战和激情。
+### 15\. Technical or Customer Support技术或消费者支持
 
-### 15\. Technical or Customer Support
+While some engineers fear interactions with customers, others find it energizing to help people solve problems all day. Your experience coding will make you an ideal candidate for customer support roles at software companies who need someone with a technical background to answer questions and suggest fixes.一些工程师害怕与消费者交流，但也有些工程师认为帮助人们解决问题非常鼓舞人心。在需要技术人员解答问题和提出修复建议的软件公司，如果你有写代码经验，那么你就是消费者支持岗位的理想人选。
 
-While some engineers fear interactions with customers, others find it energizing to help people solve problems all day. Your experience coding will make you an ideal candidate for customer support roles at software companies who need someone with a technical background to answer questions and suggest fixes.
+The downside to working in support is that you might have to interact with people at their worst. Unsatisfied or frustrated users probably aren't happy to be talking to the tech support team, so you'll need a lot of patience and thick skin to stay in this role for long.然而，不好的一面在于，在支持岗位工作，意味着不得不跟处在最糟状态下的用户打交道。如果用户不满意或者沮丧，他们很可能不会心平气和地与技术支持团队沟通。所以这份职业需要你耐心十足，不撞南墙不回头。
 
-The downside to working in support is that you might have to interact with people at their worst. Unsatisfied or frustrated users probably aren't happy to be talking to the tech support team, so you'll need a lot of patience and thick skin to stay in this role for long.
+## Teaching and Writing Roles教育和写作工作
 
-## Teaching and Writing Roles
+I've always loved teaching, so I found myself gravitating towards engineering roles that allowed me to do this. If you enjoy breaking complex topics down and presenting them to other engineers, there are a few career paths you can pursue.我一直都对教育怀有热忱，所以如果工程师角色能够让我从事教育相关工作，这对我有莫大的吸引力。如果你喜欢将复杂问题掰开揉碎分析，并把这些展示给其他工程师，那你可以考虑一下下面的几种职业选择。
 
-I've always loved teaching, so I found myself gravitating towards engineering roles that allowed me to do this. If you enjoy breaking complex topics down and presenting them to other engineers, there are a few career paths you can pursue.
+![Teaching roles for software developers](https://i.imgur.com/kwWqa5I.jpg)[软件开发者可以从事的教育角色](https://i.imgur.com/kwWqa5I.jpg)
 
-![Teaching roles for software developers](https://i.imgur.com/kwWqa5I.jpg)
+### 16\. Technical Writer技术写作者
 
-### 16\. Technical Writer
+My third internship in college was as a technical writer at a huge corporation. It was pretty dry writing, but I enjoyed learning new things every day.读大学时，我的第三份实习是在一家大公司担任技术写作者。工作内容就是纯粹写作，但我很喜欢，因为每天都能学到新东西。
 
-My third internship in college was as a technical writer at a huge corporation. It was pretty dry writing, but I enjoyed learning new things every day.
+I've since discovered that technical writing doesn't only mean documentation. You can pursue  [technical blogging][26]  or copywriting; you can create internal or external documentation; you can create demo apps and tutorials. It's one of the best-paid fields for writers, so it's worth considering.自那以后我发现，技术写作不仅仅意味着文档写作，还包括[技术博客][26]、文案写作、内部或外部文档、示例程序和指导手册。对写作者而言，技术写作收入可观，值得考虑。
 
-I've since discovered that technical writing doesn't only mean documentation. You can pursue  [technical blogging][26]  or copywriting; you can create internal or external documentation; you can create demo apps and tutorials. It's one of the best-paid fields for writers, so it's worth considering.
+If you go this route, you will need to be good at writing (obviously), organizing complex ideas, and learning new things. The more you're able to self-edit, the more valuable your work will be, so invest in tools that help make you better and more efficient.如果你决定走这条路线，那么你需要擅长写作（很明显）、组织复杂观点和学习新东西。自我编辑能力越强，产出的作品约有价值，所以要投资那些能帮你变得更好、更高效的工具。
 
-If you go this route, you will need to be good at writing (obviously), organizing complex ideas, and learning new things. The more you're able to self-edit, the more valuable your work will be, so invest in tools that help make you better and more efficient.
+You can start off writing for  [some of the paid community writing programs][27], and parlay that experience into a full-time job as you build up a network and portfolio.刚开始写作，你可以给[一些有偿社区写作项目][27]投稿，在你建立起传播网络和作品集时，可以将这段经历包装成为全职工作。
 
-You can start off writing for  [some of the paid community writing programs][27], and parlay that experience into a full-time job as you build up a network and portfolio.
+### 17\. Teacher老师
 
-### 17\. Teacher
+There are several ways you can pivot from a career in software development into one as a teacher. You could get a job teaching at a coding bootcamp, you could teach at a college or high school, you could join a platform like  [egghead.io][28], or you could create your own course website with Teachable or Educative. The path you take depends on your background and risk tolerance.有多种方式可以从软件开发中跳出来成为一名老师。可以去训练营任教、去大学或高中任教，可以加入类似[egghead.io][28]之类的平台，或者可以在Teachable或Educative创办自己的课程网站。
 
-There are several ways you can pivot from a career in software development into one as a teacher. You could get a job teaching at a coding bootcamp, you could teach at a college or high school, you could join a platform like  [egghead.io][28], or you could create your own course website with Teachable or Educative. The path you take depends on your background and risk tolerance.
+In any case, teachers have to learn new information quickly and present it in a digestible format to their students. You have to meet your audience at their level and build trust with them to succeed. Teaching may pay less than software development, but it can also be a very fulfilling career path.无论在何种情况下，老师们都需要快速学习新知识，并需要将知识转变成易于学生理解的形式。这就要求老师要考虑学生的水平，并能够与学生建立信任，直至成功。老师的收入可能不敌软件开发，但这份工作带来的成就感十足。
 
-In any case, teachers have to learn new information quickly and present it in a digestible format to their students. You have to meet your audience at their level and build trust with them to succeed. Teaching may pay less than software development, but it can also be a very fulfilling career path.
+### 18\. Trainer培训师
 
-### 18\. Trainer
+Corporate training is another form of teaching, but also worth considering. Trainers may work as independent consultants or employees at large companies where they typically travel to their customers' offices to deliver hands-on training for specialized software.企业培训是教育的另一种形式，也值得考虑，在大公司里，培训师可能是独立的咨询师或者员工，会前往客户办公地点提供专门软件亲自实践培训。
 
-Corporate training is another form of teaching, but also worth considering. Trainers may work as independent consultants or employees at large companies where they typically travel to their customers' offices to deliver hands-on training for specialized software.
+Trainers may have deep technical knowledge, but some are just tech-savvy communicators. Corporate training usually pays better than teaching, but it might also be more sales-driven. Trainers often speak at conferences, deliver community workshops, or travel to meetup groups between training sessions.一般来讲，培训师的技术储备知识丰厚，但也有些技术知识和沟通能力均十分出色。企业培训的收入比教学要好，但企业培训的销售导向也会更强。培训师经常在大会上发言，举办社区工作室，或在培训环节前往各种社团。
 
-Trainers may have deep technical knowledge, but some are just tech-savvy communicators. Corporate training usually pays better than teaching, but it might also be more sales-driven. Trainers often speak at conferences, deliver community workshops, or travel to meetup groups between training sessions.
+If you like being on stage and presenting technical concepts, this could be an ideal career path.如果你喜欢站在舞台上，展示各种技术概念，那这份工作也是理想的选择。
 
-If you like being on stage and presenting technical concepts, this could be an ideal career path.
+## Analytical Roles分析工作
 
-## Analytical Roles
+Lots of roles within technology companies require analytical skills. While many of these fields require specialized education, it's worth considering them if you're making a career pivot away from software engineering. You'll get to work at a different pace than most product-focused engineers, and like some of the support roles above, you may get to interact with other parts of the business.技术公司的大量工作都对分析技能做了要求。有些领域需要专门的教育背景，如果你想从软件开发转行，这些分析岗位也是备选项。分析工作与专注产品的工程师工作的节奏非常不同，类似上面提及的支持工作，分析工作需要与业务的其他部门互动。
 
-Lots of roles within technology companies require analytical skills. While many of these fields require specialized education, it's worth considering them if you're making a career pivot away from software engineering. You'll get to work at a different pace than most product-focused engineers, and like some of the support roles above, you may get to interact with other parts of the business.
+### 19\. Data Scientist or Engineer数据科学家或工程师
 
-### 19\. Data Scientist or Engineer
+These two roles (some companies combine them) involve using large data sets to help the business or their customers make better decisions.有两种工作（一些公司会将这两者混为一谈）都涉及到使用大量数据集帮助业务或消费者更好决策。
 
-These two roles (some companies combine them) involve using large data sets to help the business or their customers make better decisions.
+Data engineers usually work on the data ingestion and organization pipeline, while data scientists design the experiments and algorithms that crunch this data into useful results.  [Data science (AI, Machine Learning, etc.) is a huge field][29]  with roots in math, software engineering, and statistics.数据工程师通常负责数据获取和组织管道，数据科学家则负责设计实验和算法，以使得数据形成有用结果。[数据科学（人工智能、机器学习等）是一个大的领域][29]，扎根于数学、软件工程和统计学。
 
-Data engineers usually work on the data ingestion and organization pipeline, while data scientists design the experiments and algorithms that crunch this data into useful results.  [Data science (AI, Machine Learning, etc.) is a huge field][29]  with roots in math, software engineering, and statistics.
+There are courses, bootcamps, and college degrees for data science and engineering, but you might be able to learn some of the basics on your own if you have a strong math background. If not, consider brushing up on numerical analysis, matrix algebra, and statistics first.有许多课程、训练营和大学学位有关数据科学和工程，但如果你数学背景强大，你也有能力自学一些这方面的基础课程。如果你没有数学背景，可以首先考虑进修数值分析、矩阵代数和统计学。
 
-There are courses, bootcamps, and college degrees for data science and engineering, but you might be able to learn some of the basics on your own if you have a strong math background. If not, consider brushing up on numerical analysis, matrix algebra, and statistics first.
+Because these skills take a long time to learn and data scientists are in high demand, this role pays well and isn't likely to go away anytime soon.学习这些知识要花大量时间，当前也对数据科学家有大量需求，因此这份工作收入不菲，也不太可能短时间内就消失。
 
-Because these skills take a long time to learn and data scientists are in high demand, this role pays well and isn't likely to go away anytime soon.
+### 20\. Security Analyst安全分析师
 
-### 20\. Security Analyst
+Information security roles usually fly under the radar until something goes wrong. While every developer should be aware of security vulnerabilities and risks, security analysts are hired explicitly to find, catalog, and suggest fixes for security issues.从事信息安全工作的人一般都很低调，除非出了什么岔子。虽然每个开发者应该都能觉察到安全漏洞和风险，但安全分析师就是专门雇来发现、记录安全问题并提出修复方案的。
 
-Information security roles usually fly under the radar until something goes wrong. While every developer should be aware of security vulnerabilities and risks, security analysts are hired explicitly to find, catalog, and suggest fixes for security issues.
+Some work as independent consultants, but at larger companies, there may be teams in-house. This role is interesting because it requires a mix of technical, compliance, business, and risk assessment skills.有些安全分析师是独立的咨询师，但在大一点的公司，可能会有一个内部安全分析团队。这个岗位很有趣，因为岗位需要技术、顺从、业务和风险评估技能结合。
 
-Some work as independent consultants, but at larger companies, there may be teams in-house. This role is interesting because it requires a mix of technical, compliance, business, and risk assessment skills.
+Security jobs are also  [among the hardest for technology leaders to fill][30], so you'll have job security here. Information security is a broad field, so  [check out some of the many paths you can take][31]  if you're interested in pursuing it.安全工作是技术领导人最难找到填补空缺的岗位[30]，所以总会找到安全方面的工作。信息安全是一个很广阔的领域，如果你对这个领域感兴趣，不妨看看这些你可以选择的道路[31]。
 
-Security jobs are also  [among the hardest for technology leaders to fill][30], so you'll have job security here. Information security is a broad field, so  [check out some of the many paths you can take][31]  if you're interested in pursuing it.
+### 21\. R&D研发
 
-### 21\. R&D
+Working in research and development can be a unique experience for someone with software engineering skills. Large companies like Google and Amazon devote a portion of their profits to high-risk, potentially high-reward experiments carried out by research and development teams. These cross-disciplinary teams may include software developers, data scientists, business analysts, and project managers.对有软件开发技能的人而言，在研发部门工作是一份不可多得的经历。谷歌和亚马逊这类的大公司把一部分利润点放在了高风险，但同时也具有高回报潜力的实验上，由研发团队实施。这些跨学科团队可能包括软件开发人员、数据科学家、商业分析师和项目经理。
 
-Working in research and development can be a unique experience for someone with software engineering skills. Large companies like Google and Amazon devote a portion of their profits to high-risk, potentially high-reward experiments carried out by research and development teams. These cross-disciplinary teams may include software developers, data scientists, business analysts, and project managers.
+Getting into a good R&D team is hard. These roles tend to be competitive and require highly specialized knowledge about topics that you likely won't learn in a coding bootcamp. That said, some companies hire  [ethical hackers][32], founders, or  [polyglots][33]  to help round out the team and throw some creative thinking into the mix.加入一个好的研发团队很难。这些工作岗位竞争力十足，对知识的专业性要求很高，而这基本不可能在编程训练营中习得。也就是说，一些公司会雇佣讲道德的黑客[32]、创始人或通晓多种语言的人[33]来整顿团队，提出一些创造性思维。
 
-Getting into a good R&D team is hard. These roles tend to be competitive and require highly specialized knowledge about topics that you likely won't learn in a coding bootcamp. That said, some companies hire  [ethical hackers][32], founders, or  [polyglots][33]  to help round out the team and throw some creative thinking into the mix.
+## 独立和灵活性
 
-## Independence and Flexibility
+尽管我们的工作经常允许我们远程办公，有时也有公休，但你可能在生活中想要更多的灵活性。如果你有驱动力，想要自己创业，那你可能每周需要工作4小时，每年出差6个月，或者花费一般的工作时间在开源项目上。这并不容易。但作为一名软件开发人员，相比大多数人，你已经具有很大优势。
 
-While ours is a profession that often allows remote work and sometimes even  [sabbaticals][34], you may want even more flexibility in your life. If you have the drive to start your own business, you might be able to work 4 hours per week, spend six months of the year traveling, or spend half your time working on open source projects. It's not easy, but as a software developer, you have a huge leg up on most people.
+### 22\. Freelancer or Consultant自由职业者或咨询师
 
-### 22\. Freelancer or Consultant
+想要获得更多自由，其中一个方法是辞掉朝九晚五的工作成为一名自由职业者，这样你便可以自己雇佣自己，为一位或多位按时支付薪酬的客户写代码。公司通常也会雇佣自由职业者来负责具体的短期项目、清理技术负债或顶替休假的正式员工。
 
-One way to capture more freedom is to leave your 9-5 job and become a freelancer. As a freelancer, you will hire yourself out to one or more clients who will pay you by the hour to write code for them. Companies often hire freelancers to work on specific short-term projects, clean up technical debt, or fill in gaps when an employee takes a break.
+咨询师是高级的自由职业者，可以为客户解决具体问题。他们可能写代码，但客户更看重的是他们的专业知识或特殊背景。自由职业者与咨询师之间的界限非常模糊，所以不要在两者之间过于纠结。
 
-Consultants are higher-end freelancers who solve specific problems for their clients. While they may write code, they're often brought in because of their expertise or unique background. The line between freelancers and consultants is pretty blurry, so don't get caught up too much in the semantics.
+自由职业者或咨询师起步时期最为艰难。如果你没有强大的人脉积累，你很可能需要依赖像[Upwork][35]或[Toptal][36]等平台来寻找客户。这些平台会从你的收入中收取一笔可观佣金，并迫使你直接与世界上大量的自由职业者直接竞争。
 
-Getting started as a freelancer or consultant is the hardest part. If you don't have a huge network, you'll probably rely on platforms like  [Upwork][35]  or  [Toptal][36]  to find clients. These platforms take a significant cut of your revenue and force you to compete directly with lots of other freelancers around the world.
+在你不断积累起名声、积攒起客户后，就可以通过转介绍获得更多客户。转介绍非常有效，因为客户与你一开始就建立起了信任关系，而不再是互联网的匿名陌生状态。如果你的自由职业或咨询做的非常不错，你可以提高收费，在接手项目之间也可以适时休息。
 
-As you build up a reputation and client list, you will be able to get more work from referrals. Referrals are great because the client comes to you based on a trusted relationship rather than the anonymity of the internet. If you get really good at freelancing or consulting, you can push your rate high enough that you can take some time off between each engagement.
+### 23\. 创业公司创始人
 
-### 23\. Startup Founder
+互联网上充斥着各种软件工程师创业的故事([1][37],  [2][38],  [3][39])，这可能给你留下了“创业很简单”或“创业是个好主意”的印象。
 
-The internet is full of stories of software engineers who start businesses ([1][37],  [2][38],  [3][39]), so you might get the impression that it's easy or even a good idea.
+但真相是，创业有成有败。
 
-The truth is, it depends.
+创业公司获得收入要花很长时间，所以很有可能在创业的前数个月甚至数年你都没有工资收入。换句话说，如果你想成立自己的软件公司，发展是个未知数。
 
-Startups usually take a long time to generate revenue, so you'll need to live without a paycheck for several months or years to make this work. That said, if you want to build your own software business, the upside is nearly limitless.
+你也可能在自己的工作时间之外成为一家公司，尽管很难，也可能出现各种结果[40]，但这都很常见。如果你能找到一两个合伙人一起承担创业贷款，那成功的几率会有所提升。
 
-You may also be able to start a company outside of your regular working hours. While this is  [hard to do (and may have legal ramifications)][40], it's not uncommon. If you can find one or two other founders to share the load with, that may increase your chance of success.
+## 最后的一些想法
 
-## Final Thoughts
+软件开发领域令人激动，但它并非适合所有人。即便你离开了，决定去做一些别的事情，但你所获得的知识并不会浪费。
 
-Software engineering is an exciting field, but it's not for everyone. Even if you leave, the skills you gained won't go to waste if you decide to do something else.
+许多训练营毕业生惧怕在软件开发领域之外找工作，但我鼓励你们追逐自己的发展道路。平衡好实用性（赚的钱要保证自己生活）和自身兴趣，找到一个并不像是“工作”的职业发展道路还是很有希望的。
 
-Many bootcamp graduates are afraid to seek jobs outside the field of software development, but I'd encourage you to follow your own path. Balance practicality (making enough money to live) with your interests, and hopefully, you can find a career path where work doesn't feel like "work."
-
-I'd love to hear your thoughts. If you've taken an unconventional path or made a career switch,  [let me know what you think on Twitter][41].
+我想听到你们的想法。不管是你走过的路不同寻常，还是你转行了，我都希望能在推特上了解你的所思所想[41]。
 
 [1]: https://www.freecodecamp.org/news/what-programming-language-should-i-learn-first-19a33b0a467d/
 [2]: https://www.freecodecamp.org/news/interviewing-prep-tips-and-tricks/

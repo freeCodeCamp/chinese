@@ -1,7 +1,7 @@
-> * 原文地址：[Learn Serverless by Building your own Slack App](https://www.freecodecamp.org/news/make-a-serverless-slack-app/)
-> * 原文作者：Lekha Surasani
-> * 译者：[Zhicheng](https://github.com/ZhichengChen)
-> * 校对者：
+> -   原文地址：[Learn Serverless by Building your own Slack App](https://www.freecodecamp.org/news/make-a-serverless-slack-app/)
+> -   原文作者：Lekha Surasani
+> -   译者：[Zhicheng](https://github.com/ZhichengChen)
+> -   校对者：
 
 ![Learn Serverless by Building your own Slack App](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/serverless-1.jpg)
 
@@ -39,7 +39,7 @@ Serverless 除了让开发者只关心代码外，还有如下优势。
 
 首屏
 
-接下来，创建一个 IAM 用户。[IAM][2]  (Identity and Access Management) 用户可以操作 AWS 以及指定的资源。可以按场景创建具有相应权限的不同的 IAM 用户，不必担忧泄露 root 用户账号从而引发安全隐患。
+接下来，创建一个 IAM 用户。[IAM][2] (Identity and Access Management) 用户可以操作 AWS 以及指定的资源。可以按场景创建具有相应权限的不同的 IAM 用户，不必担忧泄露 root 用户账号从而引发安全隐患。
 
 点击页面导航栏的 "services“ ，在搜索框输入 ”IAM“ ：
 
@@ -61,19 +61,17 @@ IAM 用户用什么名字都可以，在这里用的是 `serverless-admin`。确
 
 我没有给创建的用户添加任何标签。这对于接下来保存 Access ID 和 Secret Access Key 信息很重要。
 
-
-
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screenshot_2019-08-04-IAM-Management-Console.png)
 
 千万不要在没有复制和下载 key 前关掉这个页面。关掉了就在也看不到 Secret access key 了。
 
-最后，使用 AWS 命令行添加 credentials 。可以根据这个[指引][4]来安装 aws cli。 
+最后，使用 AWS 命令行添加 credentials 。可以根据这个[指引][4]来安装 aws cli。
 
-运行 `aws --version `来确保已经安装成功。如下：
+运行 `aws --version`来确保已经安装成功。如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screen-Shot-2019-08-04-at-2.02.27-PM.png)
 
-接着运行 `aws configure` 填写 Key 信息： 
+接着运行 `aws configure` 填写 Key 信息：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screen-Shot-2019-08-04-at-5.42.53-PM.png)
 
@@ -103,7 +101,7 @@ IAM 用户用什么名字都可以，在这里用的是 `serverless-admin`。确
 
 首先，打开 `serverless.yml`。会看到有大量的注释的代码描述了可以再这个文件使用的不同的选项。可以了解一下，下面的文件它们都删除了，便于显示：
 
-```
+```plain
 service: exampleslackapp
 
 provider:
@@ -115,7 +113,7 @@ provider:
 
 serverless.yml
 
-由于默认的 `region` 是 `us-east-1` 我添加了 `region`  改成 `us-east-2`。
+由于默认的 `region` 是 `us-east-1` 我添加了 `region` 改成 `us-east-2`。
 
 运行 `serverless deploy` 来部署 `serverless` 刚刚创建的 app。输出如下：
 
@@ -123,7 +121,7 @@ serverless.yml
 
 如果在终端运行 `serverless invoke -f hello`，会启动 app，输出如下：
 
-```
+```plain
 {
     "statusCode": 200,
     "body": "{\n  "message": "Go Serverless v1.0! Your function executed successfully!",\n  "input": {}\n}"
@@ -138,7 +136,7 @@ serverless.yml
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-33.png)
 
-接下来，通过 serverless 构建 slack app，可以通过  [slash command][9] 向 slack 随机发送 [Ron Swanson][8] 的名言，如下：
+接下来，通过 serverless 构建 slack app，可以通过 [slash command][9] 向 slack 随机发送 [Ron Swanson][8] 的名言，如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screen-Shot-2019-08-07-at-10.23.40-PM.png)
 
@@ -158,7 +156,7 @@ serverless.yml
 
 打开默认的函数改成如下：
 
-```
+```plain
 module.exports.hello = (event) => {
   getRon();
 };
@@ -168,7 +166,7 @@ module.exports.hello = (event) => {
 
 `getRon` 方法如下
 
-```
+```plain
 function getRon() {
   request('https://ron-swanson-quotes.herokuapp.com/v2/quotes', function (err, resp, body) {
     console.log('error:', err)
@@ -214,8 +212,6 @@ I've added "Modify your public channels" so that the bot could write to a channe
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-65.png)
 
-
-
 点击 Install App to Workspace 按钮，就会获得一个 OAuth Access Token。一会会用到它，复制或者下载它到某个地方。
 
 ---
@@ -228,7 +224,7 @@ I've added "Modify your public channels" so that the bot could write to a channe
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screenshot_2019-08-07-Lambda-Management-Console.png)
 
-返回代码在函数里添加 Slack key。在文件顶部，声明一个 `const` ，引用 OAuth Token。 
+返回代码在函数里添加 Slack key。在文件顶部，声明一个 `const` ，引用 OAuth Token。
 
 const SLACK_OAUTH_TOKEN = process.env.OAUTH_TOKEN`.
 
@@ -240,7 +236,7 @@ const SLACK_OAUTH_TOKEN = process.env.OAUTH_TOKEN`.
 
 上面的两幅图片是我在 API 文档里面截的，参考文档发起对应请求，这里使用 `request` 方法传入了一个名为 `options` 的对象：
 
-```
+```plain
   let options = {
     url: 'https://slack.com/api/chat.postMessage',
     headers: {
@@ -257,7 +253,7 @@ const SLACK_OAUTH_TOKEN = process.env.OAUTH_TOKEN`.
 
 然后发起请求：
 
-```
+```plain
   request(options, function(err, resp, body) {
     console.log('error:', err)
     console.log('statusCode:', resp && resp.statusCode)
@@ -267,7 +263,7 @@ const SLACK_OAUTH_TOKEN = process.env.OAUTH_TOKEN`.
 
 最后封装成函数：
 
-```
+```plain
 function postRon(quote) {
   let options = {
     url: 'https://slack.com/api/chat.postMessage',
@@ -286,7 +282,7 @@ function postRon(quote) {
 
 给这个函数命名为 `getRon`，如下：
 
-```
+```plain
 function getRon() {
   request('https://ron-swanson-quotes.herokuapp.com/v2/quotes', function (err, resp, body) {
     console.log('error:', err)
@@ -299,7 +295,7 @@ function getRon() {
 
 整个代码看起来如下：
 
-```
+```plain
 'use strict';
 let request = require('request');
 const SLACK_OAUTH_TOKEN = process.env.OAUTH_TOKEN
@@ -334,15 +330,15 @@ function postRon(quote) {
 
 运行 `serverless invoke local -f hello`，在 #general channel 会看到类似下面的信息：
 
-![](https://www.freecodecamp.org/news/content/images/2019/08/image-69.png)_
+![](https://www.freecodecamp.org/news/content/images/2019/08/image-69.png)\_
 
-*注意我的是测试 workspace 所以 channel 名字是 `general`，如果在真实的 workspace 里，应该为测试 app 创建一个单独的 channel，在测试的时候把消息发到这里面*。
+_注意我的是测试 workspace 所以 channel 名字是 `general`，如果在真实的 workspace 里，应该为测试 app 创建一个单独的 channel，在测试的时候把消息发到这里面_。
 
 终端里输出如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screen-Shot-2019-08-07-at-10.48.38-PM.png)
 
-如果正常，使用命令 `serverless deploy` 部署。如果有问题，通过 `serverless invoke local -f hello ` 来debug。	
+如果正常，使用命令 `serverless deploy` 部署。如果有问题，通过 `serverless invoke local -f hello` 来 debug。
 
 ---
 
@@ -376,7 +372,7 @@ function postRon(quote) {
 
 最后，返回代码做最后的调整。如果尝试使用 slash command，会返回错误 - 这是因为 slack 预期收到一个 response，AWS 也预期 endpoint 触达时返回一个响应。修改代码返回 `callback`（[文档][22]）
 
-```
+```plain
 module.exports.hello = (event,context,callback) => {
   getRon(callback);
 };
@@ -384,7 +380,7 @@ module.exports.hello = (event,context,callback) => {
 
 修改 `getRon` 返回 callback：
 
-```
+```plain
 function getRon(callback) {
   request('https://ron-swanson-quotes.herokuapp.com/v2/quotes', function (err, resp, body) {
     console.log('error:', err)
@@ -398,18 +394,18 @@ function getRon(callback) {
 
 在文件顶部添加 `SUCCESS_RESPONSE`:
 
-```
+```plain
 const SUCCESS_RESPONSE = {
   statusCode: 200,
   body: null
 }
 ```
 
-可以把 callback 放在  `postRon` 里 - 具体取决于代码。
+可以把 callback 放在 `postRon` 里 - 具体取决于代码。
 
-我的代码如下： 
+我的代码如下：
 
-```
+```plain
 'use strict';
 let request = require('request');
 const SLACK_OAUTH_TOKEN = OAUTH_TOKEN
@@ -449,11 +445,11 @@ function postRon(quote) {
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screenshot_2019-08-07-Lambda-Management-Console-1-.png)
 
-代码现在可以运行，我们已经 hardcoded 了 channel name。但是实际上我们想在任何发送 `/ron ` 的 channel 返回名言。 
+代码现在可以运行，我们已经 hardcoded 了 channel name。但是实际上我们想在任何发送 `/ron` 的 channel 返回名言。
 
 在函数里面使用 event。
 
-```
+```plain
 module.exports.hello = (event,context,callback) => {
   console.log(event)
   getRon(callback);
@@ -478,7 +474,7 @@ Now, we can alter our code to save that string as a variable:
 
 `let channel = 'general'`（做为 fallback）
 
-```
+```plain
 module.exports.hello = (event,context,callback) => {
   console.log(event)
   channel = event.body.split("&")[3].split("=")[1]
@@ -489,7 +485,7 @@ module.exports.hello = (event,context,callback) => {
 
 以及 `postRon`:
 
-```
+```plain
   let options = {
     url: 'https://slack.com/api/chat.postMessage',
     headers: {
@@ -507,8 +503,6 @@ module.exports.hello = (event,context,callback) => {
 可选的 psotRon 里的 var
 
 最后，如果在 workspace 的任何 channel 使用 slack command，会看到 Ron Swanson 的名言。如果没有，就像之前说的那样，最好的 debug serverless app 的工具是 `serverless invoke local -f <function name>` 以及 Cloudwatch 日志。
-
-
 
 希望你能成功的创建 Slack 应用！我已经在文末附了相关资料和背景阅读。希望能够解决你的问题。
 

@@ -1,6 +1,6 @@
 > -   原文地址：[How to Become a Software Engineer if You Don't Have a Computer Science Degree 没有计算机相关学位，怎么成为软件工程师](https://www.freecodecamp.org/news/paths-to-becoming-a-software-engineer/)
 > -   作者：Randall Kanna
-> -   译者：
+> -   译者：NemanjaJoe
 > -   校对者：
 
 How to Become a Software Engineer if You Don't Have a Computer Science Degree

@@ -5,12 +5,16 @@
 
 How to Become a Software Engineer if You Don't Have a Computer Science Degree
 There isn’t just one way to become an engineer anymore. These days you can attend a bootcamp, teach yourself, get a degree, or get an internship. I attended a bootcamp but I still had to teach myself during it and just figure things out.
+  假如你没有计算机科学学位，怎么成为一个软件工程师？ 当然不是只有这一条路可以成为一个工程师。当前，你可以参加编程训练营、自学、获取学位亦或得到一份实习慢慢去成为一名软件工程师。我参加了一个编程训练营，但在那段时间里我自己仍然要额外的学习，只是为了真正的搞懂。
 
 My first company hired me as an apprentice on a trial basis. After I proved myself, they hired me as a full-time engineer. I’m now a published author with one of the biggest engineering publishing companies in the world.
+  我被第一个公司雇佣，在试用期做学徒。在我证明自己后，我作为一名全职工程师被他们雇佣了。我现在是一名出版作者，在世界上最大的工程出版公司之一里。
 
 Meanwhile, my sister offered to work for free at a company for the first few weeks, just to prove she could do the work. This just goes to show that there are so many paths open to anyone willing to work hard and learn.
+  与此同时，妹妹在一家公司里，在刚开始的几周里免费地为他们工作，仅仅只是为了证明她能做好这份工作。这就揭示了，许多道路都会为那些愿意努力工作和学习的人开通。
 
 If you didn’t get a CS degree, that’s fine! There are so many other paths to becoming a software engineer. Let's look at a few of them here.
+  如果你没有获得一个CS(computer science的缩写，计算机科学)学位，没问题！有许多其他的道路也可以成为一名软件工程师。让我们瞧瞧它们其中的几个。
 
 Bootcamps
 A legitimate bootcamp is a great investment in your career. When I graduated from college, I felt a little lost on what I wanted to do next.

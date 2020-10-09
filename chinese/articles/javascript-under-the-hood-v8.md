@@ -3,7 +3,7 @@
 > -   译者：Zhuotao Lian
 > -   校对者：
 
-![How JavaScript Works: Under the Hood of the V8 Engine](https://images.unsplash.com/photo-1552656967-7a0991a13906?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
+![在 V8 引擎的加持下 JavaScript 是如何工作的](https://images.unsplash.com/photo-1552656967-7a0991a13906?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
 Today we’ll look under the hood of JavaScript's V8 engine and figure out how exactly JavaScript is executed.
 

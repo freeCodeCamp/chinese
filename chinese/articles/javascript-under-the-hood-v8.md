@@ -1,6 +1,6 @@
 > -   原文地址：[How JavaScript Works: Under the Hood of the V8 Engine JavaScript 到底是怎么运行的](https://www.freecodecamp.org/news/javascript-under-the-hood-v8/)
 > -   作者：Ilya Lyamkin
-> -   译者：
+> -   译者：Zhuotao Lian
 > -   校对者：
 
 ![How JavaScript Works: Under the Hood of the V8 Engine](https://images.unsplash.com/photo-1552656967-7a0991a13906?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)

@@ -18,14 +18,20 @@ If you didn’t get a CS degree, that’s fine! There are so many other paths to
 
 Bootcamps
 A legitimate bootcamp is a great investment in your career. When I graduated from college, I felt a little lost on what I wanted to do next.
+####训练营
+  一个合法的训练营是你生涯中的一个巨大投资。我从大学毕业的时候，对于接下来想要做什么我感到有些迷失方向。
 
 I’d always loved coding but had never really pursued it. My aunt knew that I was trying to figure out what I should do for my first real career steps, besides internships and part-time jobs in college, and sent me an email about coding bootcamps. This absolutely saved me.
+  我一向热爱编程但却从未真正追逐过它。我姨姨知道，我正在尝试弄清楚我应该为我真正的职业生涯的第一步做什么，不是在大学里面的实习和兼职。她给我发了一份关于编程训练营的邮件，这真的拯救了我。
 
 I had never even heard of a coding bootcamp before. I immediately started doing a ton of research. It just seemed too good to be true. I read blog posts from every single student that had been to the bootcamp that I could find online. I read any review I could find. I started emailing students that attended the bootcamp and begging them to answer a few questions.
+  我之前甚至从来没有听过编程训练营。我立刻就开始做一大堆调查，编程训练营似乎太好了以至于感觉不现实。从那些能在网上能找到的、去过训练营的学生上，我阅读他们每一个人发的博客帖子。我阅读和复习我能找到的。我开始发邮件给那些参加过训练营的学生，请求他们回答几个问题。
 
 After I did my research, I decided to apply to Dev Bootcamp. I was so nervous when I got in. I didn’t have the money at the time so I had to take a loan from my parents. I couldn’t even find a reasonably priced apartment in San Francisco, so I was sleeping on a bunk bed with a roommate in a crowded house that had the vibe of Ron Weasley’s house but without the magic.
+  在我做完我的调查后，我决定申请一个训练营。当我进去的时候我非常紧张，那时我并没有钱，所以我得去我父母那儿贷款。我甚至没办法在旧金山找到一个价格合理的公寓，所以在一个拥挤的房子里，我和室友睡在双层床上，这房子有点像罗恩·韦斯莱(哈利波特里面的主角)的味道但却并没有魔法。
 
 It was the best thing I had ever done.
+  这是我做过最好的事情了。
 
 Fast forward five years and I’m a senior software engineer. I speak at conferences all the time, I’ve worked at big public companies such as Eventbrite and Pandora. I’ve been interviewed for newspapers and on television several times. I’ve been paid to consult at cutting edge companies, and I’m a published author with the biggest engineering publisher in the world. A coding bootcamp completely changed my life.
 

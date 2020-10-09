@@ -8,7 +8,7 @@ There isn’t just one way to become an engineer anymore. These days you can att
   假如你没有计算机科学学位，怎么成为一个软件工程师？ 当然不是只有这一条路可以成为一个工程师。当前，你可以参加编程训练营、自学、获取学位亦或得到一份实习慢慢去成为一名软件工程师。我参加了一个编程训练营，但在那段时间里我自己仍然要额外的学习，只是为了真正的搞懂。
 
 My first company hired me as an apprentice on a trial basis. After I proved myself, they hired me as a full-time engineer. I’m now a published author with one of the biggest engineering publishing companies in the world.
-  我被第一个公司雇佣，在试用期做学徒。在我证明自己后，我作为一名全职工程师被他们雇佣了。我现在是一名出版作者，在世界上最大的工程出版公司之一里。
+  我被第一个公司雇佣，在试用期做学徒。在我证明自己后，我作为一名全职工程师被他们雇佣了。我现在在世界上最大的工程出版公司里做一名出版作者。
 
 Meanwhile, my sister offered to work for free at a company for the first few weeks, just to prove she could do the work. This just goes to show that there are so many paths open to anyone willing to work hard and learn.
   与此同时，妹妹在一家公司里，在刚开始的几周里免费地为他们工作，仅仅只是为了证明她能做好这份工作。这就揭示了，许多道路都会为那些愿意努力工作和学习的人开通。
@@ -34,12 +34,16 @@ It was the best thing I had ever done.
   这是我做过最好的事情了。
 
 Fast forward five years and I’m a senior software engineer. I speak at conferences all the time, I’ve worked at big public companies such as Eventbrite and Pandora. I’ve been interviewed for newspapers and on television several times. I’ve been paid to consult at cutting edge companies, and I’m a published author with the biggest engineering publisher in the world. A coding bootcamp completely changed my life.
+  五年后，我是一名高级软件工程师。我一直待在会议室里讲话，在像Eventbrite和Pandra这样的巨大的上市公司里工作过，被报纸和电视上采访过几次，被顶尖公司聘请去做顾问，在世界上最大的工程出版社做出版作者。一个编程训练营完全的改变了我的命运。
 
 But it didn’t work out for everyone that attended with me. I started out with 50–60 students in my cohort. By the time we graduated, about ten graduated with us. Some had stayed behind a cohort to learn a little more. Some dropped out early, while they still got a significant refund. Others decided that engineering wasn’t for them partway through the program when the financial loss was high. Others were asked to leave because they couldn’t keep up.
+  但是，不是所有和我参加了训练营的人都会这样。刚开始进去的时候我们这帮人有50-60个学生，等到毕业的时候就只有十个了。有些人留级去学习更多，有些早早辍学了，不过他们仍然得到了一大笔退学费。当财务损失太高时，有些人在中途认为工程不适合他们；其他人因为跟不上而被劝退。
 
 A coding bootcamp is one of the largest purchases you’ll make in your life. Do your research. Many horror stories exist online of people who paid \$10–20k only to find out the bootcamp was a scam or the teachers were inadequate.
+  一个编程训练营是你人生中最大的采购之一了。做调查，网上有许多吓人的故事：那些支付了6、7万元的人发现训练营是诈骗或老师不合格。
 
 A good bootcamp will start with an online phase first, where you’ll learn from your home. It will teach you the basic concepts of programming so that when you get to the onsite portion of the program, you can focus on the tougher engineering concepts with teachers around to answer your questions.
+  一个好的训练营会在线上开始第一阶段，你会在家里学习，会教你基本的编程概念，所以当你到编程现场的时候，你能够专注于更难的工程概念，旁边的老师会回答你的问题。
 
 Make sure that you find a program that also has a phase focused on interviewing prep and that supplies you with a career team. This was one of the most beneficial parts of my bootcamp. I got my first engineering job because the bootcamp helped me write out my LinkedIn and make my profile stand out. My first company actually found me on LinkedIn — I didn’t even have to apply.
 

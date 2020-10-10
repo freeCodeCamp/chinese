@@ -46,34 +46,47 @@ A good bootcamp will start with an online phase first, where you’ll learn from
   一个好的训练营会在线上开始第一阶段，你会在家里学习，会教你基本的编程概念，所以当你到编程现场的时候，你能够专注于更难的工程概念，旁边的老师会回答你的问题。
 
 Make sure that you find a program that also has a phase focused on interviewing prep and that supplies you with a career team. This was one of the most beneficial parts of my bootcamp. I got my first engineering job because the bootcamp helped me write out my LinkedIn and make my profile stand out. My first company actually found me on LinkedIn — I didn’t even have to apply.
+  确保你找到一个程序，有一个阶段关注于面试你的准备，并且有职业生涯团队提供帮助。这是我在训练营最受益的部分。我能得到第一份工程师工作是因为训练营帮助我写好了LinkedIn并且让我的简历变的优秀。我的第一个公司实际上在LinkedIn上找到了我，我甚至都没有申请这公司。
 
 If you do decide to research coding bootcamps, I recommend you start with the following. bootcamps: HackReactor, App Academy, and Hackbright.
+  如果你决定要做个编程训练营的调查，我建议你从这几个开始：HackReactor, App Academy 和 Hackbright.
 
 Self-learning
 If you have the time and can manage your own time well, this option might be a great fit. It’s definitely the toughest choice because you will need to keep to a schedule and stay motivated.
+####自学
+  如果你有时间并且能够很好的管理你的时间，这部分也许会非常适合你。这绝对是最难的抉择，因为你要坚持一个计划并且保持动力。
 
 It’s important to set goals to keep yourself on track. I recommend starting out with free resources before you commit to a more expensive paid course online. Try the freeCodeCamp responsive web design course to start out.
+  为了让你坚持下去，设定目标非常重要。我建议在你学习一个更加昂贵的线上课程之前西先用一些免费资源作为学习的开始。试试 [https://www.freecodecamp.com]freeCodeCamp 的 responsive web design 课程来开始你的编程吧。
 
 Once you’ve completed a few online courses, start challenging yourself. Don’t just keep following tutorials. Try to build something of your own.
+  一旦你完成了这几项线上课程，开始挑战你自己。不要总是跟着教程走，尝试建立一些你自己的项目。
 
 Pick an idea that you’re really excited about. If you’re really passionate about what you’re building, you’ll be motivated to keep going. Do you have any fun websites ideas or command line projects you could try to build? Start small but keep increasing the complexity in your projects. Later on, you can use these projects for your portfolio.
+  选一个让你感到兴奋的想法。如果你真的对你所建造的东西充满激情，你就会有动力坚持下去。你有什么你能尝试的有趣的网站想法或命令行项目吗？千里之行，始于足下，每天做一点点但是保持增加项目的复杂度。不久之后，你就能在你的简历上用上这些项目。
 
 Make sure you carve out a dedicated time each day that you’ll teach yourself how to code. Even if it’s only a half hour every day - that will make a much bigger impact than a few hours once a week.
+  确保你每一天都划分有一个专门的时间用来教学习编程，即使每天只有半个小时——这比一周几个小时一次有作用的多。
 
 If you choose to teach yourself, it won’t hurt to find an accountability partner! Try to find someone else who is on the same path as you. Reach out to them once a day and share what you did the day before to push your learning forward and what you’ll do that day.
+  如果你选择了自学，这并不妨碍你去找一个灵魂搭档！试着去找一个和你在同一条道路上的人。在继续学习你今天要的之前，向他们伸出援手并分享你今天所做的。
 
 Apprenticeships/Internships
 After I graduated from my coding bootcamp, my first job as an engineer was an apprenticeship with a ticketing startup. The startup had the resources to mentor two junior engineers and I was one of the two selected for the first iteration of the program. I had another offer from a huge tech company at the time that paid much more but I thought it was important to take a risk and prioritize learning.
+####培训制/实习
+  从训练营毕业后，我作为工程师的第一份工作就是接受培训，一个购票系统的建造。这个工程有着资源，可以知道两名初级工程师，我就是在重复程序中被选中的工程师之一。
 
 The apprenticeship taught me more than I ever thought possible in just a few months. I paired with an engineer frequently and the company didn't put pressure on me to produce a ton of code right away.
-
+  这个培训教的比我一个月前能想到的还要多。我和一名工程师被频繁分配，公司也不压迫我立刻去写大量的代码。
+  
 I was so glad that I decided to take an apprenticeship that focused on learning instead of a more stressful job that wouldn't have focused on teaching me and growing my career as an individual.
+  我非常高兴我决定参加了这个让我专注于学习的培训，而不是一个既不会关注教我东西也不会让我在个人职业生涯中成长的苦逼工作。
 
 The company ended my apprenticeship a month early and hired me full time as a software engineer. I was promoted to a senior software engineer a year and a half later because they had prioritized teaching me and given me individualized attention.
-
-Most apprenticeships and internships are paid and offer mentorship/support. You’ll most likely need to look for programs from larger companies because startups generally don’t have the resources to do these kinds of programs yet.
-
+  公司提前一个月结束了我的培训并且把我作为一名全职工程师给雇用了。一年半后，我被推去做了一名高级软件工程师，因为他们优先培训了我并且给了我特别的关注。
+  
 A larger company will also have a more formalized process which will mean you’ll probably have a dedicated mentor, time to onboard, and more resources. My apprenticeship at a startup was only able to hire me because several senior engineers truly wanted to help grow the career of a junior engineer and volunteered their time.
+  一个更大的公司也会有一个更加规范的程序，这也意味着你可能有专门的指导，去国外的机会和更多的资源。
 
 However, generally the candidates for an apprenticeship or internship have either already graduated with a CS degree, attended a bootcamp, or are generally able to hit the ground running.
 

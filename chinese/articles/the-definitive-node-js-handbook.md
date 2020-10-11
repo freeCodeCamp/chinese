@@ -85,7 +85,7 @@ We set the Content-Type header:
 res.setHeader('Content-Type', 'text/plain')
 ```
 
-…and we end close the response, adding the content as an argument to `end()`:
+……and we end close the response, adding the content as an argument to `end()`:
 
 ```
 res.end('Hello World\n')
@@ -2887,7 +2887,7 @@ The browser now has received the HTML and starts to parse it, and will repeat th
 -   images
 -   the favicon
 -   JavaScript files
--   …
+-   ……
 
 How browsers render the page then is out of the scope, but it’s important to understand that the process I described is not just for the HTML pages, but for any item that’s served over HTTP.
 
@@ -3926,7 +3926,7 @@ Return the platform that Node.js was compiled for:
 -   `linux`
 -   `openbsd`
 -   `win32`
--   …more
+-   ……more
 
 #### `os.release()`
 

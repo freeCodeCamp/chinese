@@ -2,6 +2,6 @@
     "rules": {
         "no-empty-code-lang": 0,
         "no-trailing-punctuation": 0,
-        "no-long-code": 1
+        "no-long-code": 0
     }
 }

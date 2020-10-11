@@ -2837,7 +2837,7 @@ Hmmm. What have I done?
 
 `console.log(store.getState())` is the bit you’re familiar with. This will log the state retrieved from the store.
 
-The first line, `console.log("%c Rendered with ? ??", "background: purple; color: #fff");` will log the text, “Rendered with ……”, plus some emoji, and some CSS style to make it distinguishable. The `%c` written before the “Rendered with …” text makes it possible to use the CSS styling.
+The first line, `console.log("%c Rendered with ? ??", "background: purple; color: #fff");` will log the text, “Rendered with ……”, plus some emoji, and some CSS style to make it distinguishable. The `%c` written before the “Rendered with ……” text makes it possible to use the CSS styling.
 
 Enough talking. Here’s the complete code:
 
@@ -4043,7 +4043,7 @@ What’s changed?
 
 Remember that the `activeUserId` is passed as props into the `ChatWindow`component.
 
-Now, instead of rendering the text, _Conversation for user id: …_ , render the `Header`component.
+Now, instead of rendering the text, _Conversation for user id: ……_ , render the `Header`component.
 
 The Header component cannot be rendered properly without having knowledge of the clicked user. Why?
 
@@ -5090,7 +5090,7 @@ The following section is an excerpt from, [Understanding Redux 2][32]_._
 >
 > _Back to Redux._
 >
-> _Setting up the Reducer, subscribing to the Store, listening and re-rendering upon state changes … we can reduce some of the hassles._
+> _Setting up the Reducer, subscribing to the Store, listening and re-rendering upon state changes …… we can reduce some of the hassles._
 >
 > _Like Internet banking brings a breath of fresh air to the process of withdrawing money from your account, ‘bindings’ such as React-redux also make it slightly easier to use Redux with React — without performance concerns._
 

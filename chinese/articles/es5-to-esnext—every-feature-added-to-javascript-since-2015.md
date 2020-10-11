@@ -15,7 +15,7 @@ The future of JavaScript is going to be brilliant. Keeping up with the changes s
 
 # Introduction to ECMAScript
 
-Whenever you read about JavaScript you’ll inevitably see one of these terms: ES3, ES5, ES6, ES7, ES8, ES2015, ES2016, ES2017, ECMAScript 2017, ECMAScript 2016, ECMAScript 2015… what do they mean?
+Whenever you read about JavaScript you’ll inevitably see one of these terms: ES3, ES5, ES6, ES7, ES8, ES2015, ES2016, ES2017, ECMAScript 2017, ECMAScript 2016, ECMAScript 2015…… what do they mean?
 
 They are all referring to a **standard**, called ECMAScript.
 
@@ -427,7 +427,7 @@ const string =
 
 `first part second part`
 
-`To render the string on multiple lines as well, you explicitly need to add `\n` at the end of each line, like this:`
+`To render the string on multiple lines as well, you explicitly need to add`\n`at the end of each line, like this:`
 
 ```plain
 const string =
@@ -470,7 +470,7 @@ another </span></span></code></pre><p style="box-sizing: inherit; margin: 0px 0p
 new line </span></span></code></pre><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;"><code style="box-sizing: inherit; margin: 0px; padding: 0px 5px 2px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: 1em; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 0.8em; vertical-align: baseline; background: rgb(208, 208, 213); word-break: break-all;">expressions</code><span> </span>in this case is an array with two items,<span> </span><code style="box-sizing: inherit; margin: 0px; padding: 0px 5px 2px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: 1em; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 0.8em; vertical-align: baseline; background: rgb(208, 208, 213); word-break: break-all;">x</code><span> </span>and<span> </span><code style="box-sizing: inherit; margin: 0px; padding: 0px 5px 2px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: 1em; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 0.8em; vertical-align: baseline; background: rgb(208, 208, 213); word-break: break-all;">6</code>.</p><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">The function that is passed those values can do anything with them, and this is the power of this kind feature.</p><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">The most simple example is replicating what the string interpolation does, by joining<span> </span><code style="box-sizing: inherit; margin: 0px; padding: 0px 5px 2px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: 1em; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 0.8em; vertical-align: baseline; background: rgb(208, 208, 213); word-break: break-all;">literals</code><span> </span>and<span> </span><code style="box-sizing: inherit; margin: 0px; padding: 0px 5px 2px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: 1em; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 0.8em; vertical-align: baseline; background: rgb(208, 208, 213); word-break: break-all;">expressions</code>:</p><pre class=" language-js" style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; color: rgb(27, 27, 50); background: rgb(238, 238, 240); text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none; overflow: auto; min-width: 100%; max-width: 100%;"><code class=" language-js" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; color: rgb(0, 0, 0); background: transparent; text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none;"><span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">const</span> interpolated <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> interpolate<span class="token template-string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline;"><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">I paid ${10}€`
 ```
 
-`` and this is how `interpolate` works: ``
+`and this is how`interpolate`works:`
 
 ```
 function interpolate(literals, ...expressions) {
@@ -506,7 +506,7 @@ const a = [1,2,3,4,5]
 const [first, second] = a
 ```
 
-`` This statement creates 3 new variables by getting the items with index 0, 1, 4 from the array `a`: ``
+`This statement creates 3 new variables by getting the items with index 0, 1, 4 from the array`a`:`
 
 ## `Enhanced Object Literals`
 
@@ -571,9 +571,9 @@ x.a_b //z
 
 ## `For-of loop`
 
-`` ES5 back in 2009 introduced `forEach()` loops. While nice, they offered no way to break, like `for` loops always did. ``
+`ES5 back in 2009 introduced`forEach()`loops. While nice, they offered no way to break, like`for`loops always did.`
 
-`ES2015 introduced the`**for-of**`**loop**, which combines the conciseness of`forEach` with the ability to break:`
+`ES2015 introduced the`**for-of**`**loop**, which combines the conciseness of`forEach`with the ability to break:`
 
 ```
 //iterate over the value
@@ -587,11 +587,11 @@ for (const [i, v] of ['a', 'b', 'c'].entries()) {
 }
 ```
 
-`Notice the use of `const`. This loop creates a new scope in every iteration, so we can safely use that instead of`let`.`
+`Notice the use of`const`. This loop creates a new scope in every iteration, so we can safely use that instead of`let`.`
 
-`` The difference with `for...in` is: ``
+`The difference with`for...in`is:`
 
--   `` `for...of` **iterates over the property values**``
+-   `for...of` **iterates over the property values**`
 -   `for...in` **iterates the property names**`
 
 ## `Promises`
@@ -620,7 +620,7 @@ for (const [i, v] of ['a', 'b', 'c'].entries()) {
 
 ### `Creating a promise`
 
-`` The Promise API exposes a Promise constructor, which you initialize using `new Promise()`: ``
+`The Promise API exposes a Promise constructor, which you initialize using`new Promise()`:`
 
 ```
 let done = true
@@ -635,9 +635,9 @@ const isItDoneYet = new Promise((resolve, reject) => {
 })
 ```
 
-`` As you can see the promise checks the `done` global constant, and if that's true, we return a resolved promise, otherwise a rejected promise. ``
+`As you can see the promise checks the`done`global constant, and if that's true, we return a resolved promise, otherwise a rejected promise.`
 
-`Using`resolve` and `reject` we can communicate back a value, in the above case we just return a string, but it could be an object as well.`
+`Using`resolve`and`reject`we can communicate back a value, in the above case we just return a string, but it could be an object as well.`
 
 ### `Consuming a promise`
 
@@ -659,7 +659,7 @@ const checkIfItsDone = () => {
 }
 ```
 
-`` Running `checkIfItsDone()` will execute the `isItDoneYet()` promise and will wait for it to resolve, using the `then` callback, and if there is an error, it will handle it in the `catch` callback. ``
+`Running`checkIfItsDone()`will execute the`isItDoneYet()`promise and will wait for it to resolve, using the`then`callback, and if there is an error, it will handle it in the`catch`callback.`
 
 ### `Chaining promises`
 
@@ -667,7 +667,7 @@ const checkIfItsDone = () => {
 
 `A great example of chaining promises is given by the [Fetch API][9], a layer on top of the XMLHttpRequest API, which we can use to get a resource and queue a chain of promises to execute when the resource is fetched.`
 
-`The Fetch API is a promise-based mechanism, and calling `fetch()` is equivalent to defining our own promise using `new Promise()`.`
+`The Fetch API is a promise-based mechanism, and calling`fetch()`is equivalent to defining our own promise using`new Promise()`.`
 
 ### `Example of chaining promises`
 
@@ -690,20 +690,20 @@ fetch('/todos.json')
   })
 ```
 
-`In this example, we call `fetch()` to get a list of TODO items from the `todos.json`file found in the domain root, and we create a chain of promises.`
+`In this example, we call`fetch()`to get a list of TODO items from the`todos.json`file found in the domain root, and we create a chain of promises.`
 
-`` Running `fetch()` returns a [response][10], which has many properties, and within those we reference: ``
+`Running`fetch()`returns a [response][10], which has many properties, and within those we reference:`
 
--   `` `status`, a numeric value representing the HTTP status code``
--   `` `statusText`, a status message, which is `OK` if the request succeeded``
+-   `status`, a numeric value representing the HTTP status code`
+-   `statusText`, a status message, which is `OK` if the request succeeded`
 
 `response` also has a `json()` method, which returns a promise that will resolve with the content of the body processed and transformed into JSON.`
 
-`So given those premises, this is what happens: the first promise in the chain is a function that we defined, called `status()`, that checks the response status and if it's not a success response (between 200 and 299), it rejects the promise.`
+`So given those premises, this is what happens: the first promise in the chain is a function that we defined, called`status()`, that checks the response status and if it's not a success response (between 200 and 299), it rejects the promise.`
 
-`` This operation will cause the promise chain to skip all the chained promises listed and will skip directly to the `catch()` statement at the bottom, logging the `Request failed` text along with the error message. ``
+`This operation will cause the promise chain to skip all the chained promises listed and will skip directly to the`catch()`statement at the bottom, logging the`Request failed`text along with the error message.`
 
-`If that succeeds instead, it calls the json() function we defined. Since the previous promise, when successful, returned the `response` object, we get it as an input to the second promise.`
+`If that succeeds instead, it calls the json() function we defined. Since the previous promise, when successful, returned the`response`object, we get it as an input to the second promise.`
 
 `In this case, we return the data JSON processed, so the third promise receives the JSON directly:`
 
@@ -717,9 +717,9 @@ fetch('/todos.json')
 
 ### `Handling errors`
 
-`` In the above example, in the previous section, we had a `catch` that was appended to the chain of promises. ``
+`In the above example, in the previous section, we had a`catch`that was appended to the chain of promises.`
 
-`When anything in the chain of promises fails and raises an error or rejects the promise, the control goes to the nearest `catch()` statement down the chain.`
+`When anything in the chain of promises fails and raises an error or rejects the promise, the control goes to the nearest`catch()`statement down the chain.`
 
 ```
 new Promise((resolve, reject) => {
@@ -737,7 +737,7 @@ new Promise((resolve, reject) => {
 
 ### `Cascading errors`
 
-`` If inside the `catch()` you raise an error, you can append a second `catch()` to handle it, and so on. ``
+`If inside the`catch()`you raise an error, you can append a second`catch()`to handle it, and so on.`
 
 ```
 new Promise((resolve, reject) => {
@@ -755,7 +755,7 @@ new Promise((resolve, reject) => {
 
 #### `Promise.all()`
 
-`If you need to synchronize different promises, `Promise.all()` helps you define a list of promises, and execute something when they are all resolved.`
+`If you need to synchronize different promises,`Promise.all()`helps you define a list of promises, and execute something when they are all resolved.`
 
 `Example:`
 
@@ -779,7 +779,7 @@ Promise.all([f1, f2]).then(([res1, res2]) => {
 })
 ```
 
-`` You are not limited to using `fetch` of course, **any promise is good to go**. ``
+`You are not limited to using`fetch`of course, **any promise is good to go**.`
 
 #### `Promise.race()`
 
@@ -823,7 +823,7 @@ import package from 'module-name'
 const package = require('module-name')
 ```
 
-`` A module is a JavaScript file that **exports** one or more values (objects, functions or variables), using the `export` keyword. For example, this module exports a function that returns a string uppercase: ``
+`A module is a JavaScript file that **exports** one or more values (objects, functions or variables), using the`export`keyword. For example, this module exports a function that returns a string uppercase:`
 
 > `_uppercase.js_`
 
@@ -841,11 +841,11 @@ export default str => str.toUpperCase()
 <script type="module" src="index.js"></script>
 ```
 
-> `_Note: this module import behaves like a `defer` script load. See [efficiently load JavaScript with defer and async][11]_`
+> `_Note: this module import behaves like a`defer`script load. See [efficiently load JavaScript with defer and async][11]_`
 
-`` It’s important to note that any script loaded with `type="module"` is loaded in strict mode. ``
+`It’s important to note that any script loaded with`type="module"`is loaded in strict mode.`
 
-`In this example, the `uppercase.js` module defines a **default export**, so when we import it, we can assign it a name we prefer:`
+`In this example, the`uppercase.js`module defines a **default export**, so when we import it, we can assign it a name we prefer:`
 
 ```
 import toUpperCase from './uppercase.js'
@@ -877,7 +877,7 @@ import { toUpperCase } from 'uppercase.js'
 import { toUpperCase } from 'utils/uppercase.js'
 ```
 
-`` It’s either absolute, or has a `./` or `/` before the name. ``
+`It’s either absolute, or has a`./`or`/`before the name.`
 
 ### `Other import/export options`
 
@@ -925,11 +925,11 @@ import React, { Component } from 'react'
 
 ### `CORS`
 
-`` Modules are fetched using CORS. This means that if you reference scripts from other domains, they must have a valid CORS header that allows cross-site loading (like `Access-Control-Allow-Origin: *`) ``
+`Modules are fetched using CORS. This means that if you reference scripts from other domains, they must have a valid CORS header that allows cross-site loading (like`Access-Control-Allow-Origin: *`)`
 
 #### `What about browsers that do not support modules?`
 
-`` Use a combination of `type="module"` and `nomodule`: ``
+`Use a combination of`type="module"`and`nomodule`:`
 
 ```
 <script type="module" src="module.js"></script>
@@ -959,13 +959,13 @@ import React, { Component } from 'react'
 'Ho'.repeat(3) //'HoHoHo'
 ```
 
-`Returns an empty string if there is no parameter, or the parameter is `0`. If the parameter is negative you'll get a RangeError.`
+`Returns an empty string if there is no parameter, or the parameter is`0`. If the parameter is negative you'll get a RangeError.`
 
 ### `codePointAt()`
 
 `This method can be used to handle Unicode characters that cannot be represented by a single 16-bit Unicode unit, but need 2 instead.`
 
-`Using `charCodeAt()`you need to retrieve the first, and the second, and combine them. Using`codePointAt()`you get the whole character in one call.`
+`Using`charCodeAt()`you need to retrieve the first, and the second, and combine them. Using`codePointAt()`you get the whole character in one call.`
 
 `For example, this Chinese character “𠮷” is composed by 2 UTF-16 (Unicode) parts:`
 
@@ -980,7 +980,7 @@ import React, { Component } from 'react'
 "\ud842\udfb7" //"𠮷"
 ```
 
-`You can get the same result sign `codePointAt()`:`
+`You can get the same result sign`codePointAt()`:`
 
 ```
 "𠮷".codePointAt(0) //20bb7
@@ -1023,7 +1023,7 @@ Object.is(a, b)
 
 ### `Object.assign()`
 
-`Introduced in `ES2015`, this method copies all the ****enumerable own properties**** of one or more objects into another.`
+`Introduced in`ES2015`, this method copies all the ****enumerable own properties**** of one or more objects into another.`
 
 `Its primary use case is to create a shallow copy of an object.`
 
@@ -1091,7 +1091,7 @@ dog.isMammal //true
 
 ### `The spread operator`
 
-`You can expand an array, an object or a string using the spread operator `...`
+`You can expand an array, an object or a string using the spread operator`...`
 
 `Let’s start with an array example. Given`
 
@@ -1126,7 +1126,7 @@ const arrayized = [...hey] // ['h', 'e', 'y']
 
 `This operator has some pretty useful applications. The most important one is the ability to use an array as function argument in a very simple way:`
 
-`(In the past you could do this using `f.apply(null, a)`but that's not as nice and readable.)`
+`(In the past you could do this using`f.apply(null, a)`but that's not as nice and readable.)`
 
 `The ****rest element**** is useful when working with ****array destructuring****:`
 
@@ -1183,16 +1183,16 @@ const s = new Set()
 
 ### `Add items to a Set`
 
-`You can add items to the Set by using the `add`method:`
+`You can add items to the Set by using the`add`method:`
 
 ```
 s.add('one')
 s.add('two')
 ```
 
-`` A set only stores unique elements, so calling `s.add('one')` multiple times won't add new items. ``
+`A set only stores unique elements, so calling`s.add('one')`multiple times won't add new items.`
 
-`You can’t add multiple elements to a set at the same time. You need to call `add()`multiple times.`
+`You can’t add multiple elements to a set at the same time. You need to call`add()`multiple times.`
 
 ### `Check if an item is in the set`
 
@@ -1205,7 +1205,7 @@ s.has('three') //false
 
 ### `Delete an item from a Set by key`
 
-`Use the `delete()`method:`
+`Use the`delete()`method:`
 
 ```plain
 s.delete('one')
@@ -1221,7 +1221,7 @@ s.size
 
 ### `Delete all items from a Set`
 
-`Use the `clear()` method:`
+`Use the`clear()`method:`
 
 ```
 s.clear()
@@ -1240,14 +1240,14 @@ for (const k of s.values()) {
 }
 ```
 
-`` The `entries()` method returns an iterator, which you can use like this: ``
+`The`entries()`method returns an iterator, which you can use like this:`
 
 ```
 const i = s.entries()
 console.log(i.next())
 ```
 
-`` calling `i.next()` will return each element as a `{ value, done = false }` object until the iterator ends, at which point `done` is `true`. ``
+`calling`i.next()`will return each element as a`{ value, done = false }`object until the iterator ends, at which point`done`is`true`.`
 
 `You can also use the forEach() method on the set:`
 
@@ -1327,7 +1327,7 @@ const m = new Map()
 
 ### `Add items to a Map`
 
-`You can add items to the map by using the `set` method:`
+`You can add items to the map by using the`set`method:`
 
 ```
 m.set('color', 'red')
@@ -1336,7 +1336,7 @@ m.set('age', 2)
 
 ### `Get an item from a map by key`
 
-`And you can get items out of a map by using `get`:`
+`And you can get items out of a map by using`get`:`
 
 ```plain
 const color = m.get('color')
@@ -1345,7 +1345,7 @@ const age = m.get('age')
 
 ### `Delete an item from a map by key`
 
-`Use the`delete()` method:`
+`Use the`delete()`method:`
 
 ```
 m.delete('color')
@@ -1353,7 +1353,7 @@ m.delete('color')
 
 ### `Delete all items from a map`
 
-`Use the `clear()`method:`
+`Use the`clear()`method:`
 
 ```
 m.clear()
@@ -1361,7 +1361,7 @@ m.clear()
 
 ### `Check if a map contains an item by key`
 
-`Use the `has()` method:`
+`Use the`has()`method:`
 
 ```
 const hasColor = m.has('color')
@@ -1369,7 +1369,7 @@ const hasColor = m.has('color')
 
 ### `Find the number of items in a map`
 
-`Use the `size` property:`
+`Use the`size`property:`
 
 ```
 const size = m.size
@@ -1387,7 +1387,7 @@ const m = new Map([['color', 'red'], ['owner', 'Flavio'], ['age', 2]])
 
 `Just like any value (object, array, string, number) can be used as the value of the key-value entry of a map item, ****any value can be used as the key****, even objects.`
 
-`` If you try to get a non-existing key using `get()` out of a map, it will return `undefined`. ``
+`If you try to get a non-existing key using`get()`out of a map, it will return`undefined`.`
 
 ### `Weird situations you’ll almost never find in real life`
 
@@ -1402,7 +1402,7 @@ m.get(-0) //test
 
 ### `Iterate over map keys`
 
-`Map offers the `keys()` method we can use to iterate on all the keys:`
+`Map offers the`keys()`method we can use to iterate on all the keys:`
 
 ```
 for (const k of m.keys()) {
@@ -1412,7 +1412,7 @@ for (const k of m.keys()) {
 
 ### `Iterate over map values`
 
-`` The Map object offers the `values()` method we can use to iterate on all the values: ``
+`The Map object offers the`values()`method we can use to iterate on all the values:`
 
 ```
 for (const v of m.values()) {
@@ -1422,7 +1422,7 @@ for (const v of m.values()) {
 
 ### `Iterate over map key, value pairs`
 
-`` The Map object offers the `entries()` method we can use to iterate on all the values: ``
+`The Map object offers the`entries()`method we can use to iterate on all the values:`
 
 ```
 for (const [k, v] of m.entries()) {
@@ -1466,7 +1466,7 @@ const a = [...m.values()]
 
 -   `get(k)`
 -   `set(k, v)`
--   `` `has(k)` ``
+-   `has(k)`
 -   `delete(k)`
 
 `The use cases of a WeakMap are less evident than the ones of a Map, and you might never find the need for them, but essentially it can be used to build a memory-sensitive cache that is not going to interfere with garbage collection, or for careful encapsulation and information hiding.`
@@ -1481,7 +1481,7 @@ const a = [...m.values()]
 
 `All this is done with a single, simple keyword:`yield`. When a generator contains that keyword, the execution is halted.`
 
-`A generator can contain many `yield`keywords, thus halting itself multiple times, and it's identified by the`_function_` _keyword, which is not to be confused with the pointer dereference operator used in lower level programming languages such as C, C++ or Go._`
+`A generator can contain many`yield`keywords, thus halting itself multiple times, and it's identified by the`_function_`_keyword, which is not to be confused with the pointer dereference operator used in lower level programming languages such as C, C++ or Go._`
 
 `_Generators enable whole new paradigms of programming in JavaScript, allowing:_`
 
@@ -1519,9 +1519,9 @@ calc.next()
 }
 ```
 
-`What happens is: the code runs the function, with `input = 10`as it was passed in the generator constructor. It runs until it reaches the`yield`, and returns the content of`yield`: `input / 2 = 5`. So we got a value of 5, and the indication that the iteration is not done (the function is just paused).`
+`What happens is: the code runs the function, with`input = 10`as it was passed in the generator constructor. It runs until it reaches the`yield`, and returns the content of`yield`:`input / 2 = 5`. So we got a value of 5, and the indication that the iteration is not done (the function is just paused).`
 
-`In the second iteration we pass the value `7`:`
+`In the second iteration we pass the value`7`:`
 
 ```
 calc.next(7)
@@ -1538,7 +1538,7 @@ calc.next(7)
 
 `7` was placed as the value of `doubleThat`. Important: you might read like `input / 2` was the argument, but that's just the return value of the first iteration. We now skip that, and use the new input value, `7`, and multiply it by 2.`
 
-`We then reach the second yield, and that returns `doubleThat`, so the returned value is `14`.`
+`We then reach the second yield, and that returns`doubleThat`, so the returned value is`14`.`
 
 `In the next, and last, iteration, we pass in 100`
 
@@ -1555,7 +1555,7 @@ calc.next(100)
 }
 ```
 
-`As the iteration is done (no more yield keywords found) and we just return`(input * doubleThat * another)` which amounts to `10 * 14 * 100`.`
+`As the iteration is done (no more yield keywords found) and we just return`(input * doubleThat * another)`which amounts to`10 * 14 * 100`.`
 
 ---
 
@@ -1567,9 +1567,9 @@ calc.next(100)
 
 `This feature introduces a more readable syntax for checking if an array contains an element.`
 
-`With ES6 and lower, to check if an array contained an element you had to use `indexOf`, which checks the index in the array, and returns `-1` if the element is not there.`
+`With ES6 and lower, to check if an array contained an element you had to use`indexOf`, which checks the index in the array, and returns`-1`if the element is not there.`
 
-`Since `-1`is evaluated as a true value, you could ****not**** do for example`
+`Since`-1`is evaluated as a true value, you could ****not**** do for example`
 
 ```
 if (![1,2].indexOf(3)) {
@@ -1587,7 +1587,7 @@ if (![1,2].includes(3)) {
 
 # `Exponentiation Operator`
 
-`The exponentiation operator **is the equivalent of `Math.pow()`, but brought into the language instead of being a library function.**`
+`The exponentiation operator **is the equivalent of`Math.pow()`, but brought into the language instead of being a library function.**`
 
 ```
 Math.pow(4, 2) == 4  2
@@ -1609,7 +1609,7 @@ Math.pow(4, 2) == 4  2
 
 `The purpose of string padding is to ****add characters to a string****, so it ****reaches a specific length****.`
 
-`` ES2017 introduces two `String` methods: `padStart()` and `padEnd()`. ``
+`ES2017 introduces two`String`methods:`padStart()`and`padEnd()`.`
 
 ```plain
 padStart(targetLength [, padString])
@@ -1631,7 +1631,7 @@ const person = { name: 'Fred', age: 87 }
 Object.values(person) // ['Fred', 87]
 ```
 
-`` `Object.values()` also works with arrays:``
+`Object.values()` also works with arrays:`
 
 ```
 const people = ['Fred', 'Tony']
@@ -1640,7 +1640,7 @@ Object.values(people) // ['Fred', 'Tony']
 
 ## `Object.entries()`
 
-`` This method returns an array containing all the object own properties, as an array of `[key, value]` pairs. ``
+`This method returns an array containing all the object own properties, as an array of`[key, value]`pairs.`
 
 `Usage:`
 
@@ -1649,7 +1649,7 @@ const person = { name: 'Fred', age: 87 }
 Object.entries(person) // [['name', 'Fred'], ['age', 87]]
 ```
 
-`` `Object.entries()` also works with arrays:``
+`Object.entries()` also works with arrays:`
 
 ```
 const people = ['Fred', 'Tony']Object.entries(people) // [['0', 'Fred'], ['1', 'Tony']]
@@ -1674,11 +1674,11 @@ const people = ['Fred', 'Tony']Object.entries(people) // [['0', 'Fred'], ['1', '
 
 ### `In what way is this useful?`
 
-`ES6 gave us `Object.assign()`, which copies all enumerable own properties from one or more objects, and return a new object.`
+`ES6 gave us`Object.assign()`, which copies all enumerable own properties from one or more objects, and return a new object.`
 
 `However there is a problem with that, because it does not correctly copies properties with non-default attributes.`
 
-`If an object for example has just a setter, it’s not correctly copied to a new object, using `Object.assign()`.`
+`If an object for example has just a setter, it’s not correctly copied to a new object, using`Object.assign()`.`
 
 `For example with`
 
@@ -1713,7 +1713,7 @@ person3.name = 'x'
 "x"
 ```
 
-`` `person2` misses the setter, it was not copied over.``
+`person2` misses the setter, it was not copied over.`
 
 `The same limitation goes for shallow cloning objects with ****Object.create()****.`
 
@@ -1760,7 +1760,7 @@ const doSomethingAsync = () => {
 }
 ```
 
-`When you want to ****call**** this function you prepend `await`, and ****the calling code will stop until the promise is resolved or rejected****. One caveat: the client function must be defined as `async`. Here's an example:`
+`When you want to ****call**** this function you prepend`await`, and ****the calling code will stop until the promise is resolved or rejected****. One caveat: the client function must be defined as`async`. Here's an example:`
 
 ```
 const doSomething = async () => {
@@ -1796,7 +1796,7 @@ I did something //after 3s
 
 ### `Promise all the things`
 
-`Prepending the `async`keyword to any function means that the function will return a promise.`
+`Prepending the`async`keyword to any function means that the function will return a promise.`
 
 `Even if it’s not doing so explicitly, it will internally make it return a promise.`
 
@@ -1890,7 +1890,7 @@ I did something and I watched and I watched as well
 
 `WebWorkers are used to create multithreaded programs in the browser.`
 
-`They offer a messaging protocol via events. Since ES2017, you can create a shared memory array between web workers and their creator, using a `SharedArrayBuffer`.`
+`They offer a messaging protocol via events. Since ES2017, you can create a shared memory array between web workers and their creator, using a`SharedArrayBuffer`.`
 
 `Since it’s unknown how much time writing to a shared memory portion takes to propagate, ****Atomics**** are a way to enforce that when reading a value, any kind of writing operation is completed.`
 
@@ -1947,13 +1947,13 @@ for await (const line of readLines(filePath)) {
 }
 ```
 
-`Since this uses`await`, you can use it only inside `async` functions, like a normal `await`.`
+`Since this uses`await`, you can use it only inside`async`functions, like a normal`await`.`
 
 ## `Promise.prototype.finally()`
 
-`When a promise is fulfilled, successfully it calls the `then()` methods, one after another.`
+`When a promise is fulfilled, successfully it calls the`then()`methods, one after another.`
 
-`If something fails during this, the `then()` methods are jumped and the `catch()` method is executed.`
+`If something fails during this, the`then()`methods are jumped and the`catch()`method is executed.`
 
 `finally()` allow you to run some code regardless of the successful or not successful execution of the promise:`
 
@@ -1972,7 +1972,7 @@ fetch('file.json')
 
 ### `RegExp lookbehind assertions: match a string depending on what precedes it`
 
-`` This is a lookahead: you use `?=` to match a string that's followed by a specific substring: ``
+`This is a lookahead: you use`?=`to match a string that's followed by a specific substring:`
 
 ```plain
 /Roger(?=Waters)/
@@ -1980,7 +1980,7 @@ fetch('file.json')
 /Roger(?= Waters)/.test('Roger is my dog and Roger Waters is a famous musician') //true
 ```
 
-`` `?!` performs the inverse operation, matching if a string is ****not**** followed by a specific substring:``
+`?!` performs the inverse operation, matching if a string is ****not**** followed by a specific substring:`
 
 ```
 /Roger(?!Waters)/
@@ -1988,9 +1988,9 @@ fetch('file.json')
 /Roger(?! Waters)/.test('Roger Waters is a famous musician') //false
 ```
 
-`Lookaheads use the`?=` symbol. They were already available.`
+`Lookaheads use the`?=`symbol. They were already available.`
 
-`` ****Lookbehinds****, a new feature, uses `?<=`. ``
+`****Lookbehinds****, a new feature, uses`?<=`.`
 
 ```
 /(?<=Roger) Waters/
@@ -2008,11 +2008,11 @@ fetch('file.json')
 
 ### `Unicode property escapes \p{…} and \P{…}`
 
-`In a regular expression pattern you can use`\d`to match any digit,`\s` to match any character that's not a white space, `\w`to match any alphanumeric character, and so on.`
+`In a regular expression pattern you can use`\d`to match any digit,`\s`to match any character that's not a white space,`\w`to match any alphanumeric character, and so on.`
 
 `This new feature extends this concept to all Unicode characters introducing`\p{}`and is negation`\P{}`.`
 
-`` Any unicode character has a set of properties. For example `Script` determines the language family, `ASCII` is a boolean that's true for ASCII characters, and so on. You can put this property in the graph parentheses, and the regex will check for that to be true: ``
+`Any unicode character has a set of properties. For example`Script`determines the language family,`ASCII`is a boolean that's true for ASCII characters, and so on. You can put this property in the graph parentheses, and the regex will check for that to be true:`
 
 ```
 /^\p{ASCII}+$/u.test('abc')   //✅
@@ -2027,7 +2027,7 @@ fetch('file.json')
 /^\p{ASCII_Hex_Digit}+$/u.test('h')                //❌
 ```
 
-`` There are many other boolean properties, which you just check by adding their name in the graph parentheses, including `Uppercase`, `Lowercase`, `White_Space`, `Alphabetic`, `Emoji` and more: ``
+`There are many other boolean properties, which you just check by adding their name in the graph parentheses, including`Uppercase`,`Lowercase`,`White_Space`,`Alphabetic`,`Emoji`and more:`
 
 ```
 /^\p{Lowercase}$/u.test('h') //✅
@@ -2059,7 +2059,7 @@ const result = re.exec('2015-01-02')
 
 ### `The s flag for regular expressions`
 
-`` The `s` flag, short for __single line__, causes the `.` to match new line characters as well. Without it, the dot matches regular characters but not the new line: ``
+`The`s`flag, short for __single line__, causes the`.`to match new line characters as well. Without it, the dot matches regular characters but not the new line:`
 
 ```
 /hi.welcome/.test('hi\nwelcome') // false
@@ -2090,7 +2090,7 @@ const result = re.exec('2015-01-02')
 
 ## `Array.prototype.{flat,flatMap}`
 
-`` `flat()` is a new array instance method that can create a one-dimensional array from a multidimensional array.``
+`flat()` is a new array instance method that can create a one-dimensional array from a multidimensional array.`
 
 `Example:`
 
@@ -2099,7 +2099,7 @@ const result = re.exec('2015-01-02')
 //[ 'Dog', 'Sheep', 'Wolf' ]
 ```
 
-`By default it only “flats” up to one level, but you can add a parameter to set the number of levels you want to flat the array to. Set it to `Infinity`to have unlimited levels:`
+`By default it only “flats” up to one level, but you can add a parameter to set the number of levels you want to flat the array to. Set it to`Infinity`to have unlimited levels:`
 
 ```plain
 ['Dog', ['Sheep', ['Wolf']]].flat()
@@ -2110,9 +2110,9 @@ const result = re.exec('2015-01-02')
 //[ 'Dog', 'Sheep', 'Wolf' ]
 ```
 
-`If you are familiar with the JavaScript `map()` method of an array, you know that using it you can execute a function on every element of an array.`
+`If you are familiar with the JavaScript`map()`method of an array, you know that using it you can execute a function on every element of an array.`
 
-`` `flatMap()` is a new Array instance method that combines `flat()` with `map()`. It's useful when calling a function that returns an array in the map() callback, but you want your resulted array to be flat:``
+`flatMap()` is a new Array instance method that combines `flat()` with `map()`. It's useful when calling a function that returns an array in the map() callback, but you want your resulted array to be flat:`
 
 ```
 ['My dog', 'is awesome'].map(words => words.split(' '))
@@ -2135,7 +2135,7 @@ try {
 }
 ```
 
-`` Even if we never had to use `e` to analyze the error. We can now simply omit it: ``
+`Even if we never had to use`e`to analyze the error. We can now simply omit it:`
 
 ```
 try {
@@ -2147,16 +2147,16 @@ try {
 
 ## `Object.fromEntries()`
 
-`` Objects have an `entries()` method, since ES2017. ``
+`Objects have an`entries()`method, since ES2017.`
 
-`` It returns an array containing all the object own properties, as an array of `[key, value]` pairs: ``
+`It returns an array containing all the object own properties, as an array of`[key, value]`pairs:`
 
 ```plain
 const person = { name: 'Fred', age: 87 }
 Object.entries(person) // [['name', 'Fred'], ['age', 87]]
 ```
 
-`ES2019 introduces a new `Object.fromEntries()`method, which can create a new object from such array of properties:`
+`ES2019 introduces a new`Object.fromEntries()`method, which can create a new object from such array of properties:`
 
 ```
 const person = { name: 'Fred', age: 87 }
@@ -2169,7 +2169,7 @@ person !== newPerson //true
 
 `This feature has been part of v8/Chrome for almost a year now, and it’s going to be standardized in ES2019.`
 
-## `` `trimStart()` ``
+## `trimStart()`
 
 `Return a new string with removed white space from the start of the original string`
 
@@ -2180,7 +2180,7 @@ person !== newPerson //true
 'Testing'.trimStart() //'Testing'
 ```
 
-## `` `trimEnd()` ``
+## `trimEnd()`
 
 `Return a new string with removed white space from the end of the original string`
 
@@ -2193,7 +2193,7 @@ person !== newPerson //true
 
 ## `Symbol.prototype.description`
 
-`` You can now retrieve the description of a symbol by accessing its `description` property instead of having to use the `toString()` method: ``
+`You can now retrieve the description of a symbol by accessing its`description`property instead of having to use the`toString()`method:`
 
 ```
 const testSymbol = Symbol('Test')
@@ -2204,19 +2204,19 @@ testSymbol.description // 'Test'
 
 `Before this change, the line separator (\u2028) and paragraph separator (\u2029) symbols were not allowed in strings parsed as JSON.`
 
-`Using JSON.parse(), those characters resulted in a`SyntaxError` but now they parse correctly, as defined by the JSON standard.`
+`Using JSON.parse(), those characters resulted in a`SyntaxError`but now they parse correctly, as defined by the JSON standard.`
 
 ### `Well-formed JSON.stringify()`
 
-`Fixes the `JSON.stringify()` output when it processes surrogate UTF-8 code points (U+D800 to U+DFFF).`
+`Fixes the`JSON.stringify()`output when it processes surrogate UTF-8 code points (U+D800 to U+DFFF).`
 
 `Before this change calling`JSON.stringify()`would return a malformed Unicode character (a "�").`
 
-`Now those surrogate code points can be safely represented as strings using `JSON.stringify()`, and transformed back into their original representation using `JSON.parse()`.`
+`Now those surrogate code points can be safely represented as strings using`JSON.stringify()`, and transformed back into their original representation using`JSON.parse()`.`
 
 ## `Function.prototype.toString()`
 
-`Functions have always had an instance method called`toString()` which return a string containing the function code.`
+`Functions have always had an instance method called`toString()`which return a string containing the function code.`
 
 `ES2019 introduced a change to the return value to avoid stripping comments and other characters like whitespace, exactly representing the function as it was defined.`
 

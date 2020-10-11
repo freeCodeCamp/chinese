@@ -964,7 +964,7 @@ const isItDoneYet = new Promise((resolve, reject) => {
 
 `` As you can see the promise checks the `done` global constant, and if that's true, we return a resolved promise, otherwise a rejected promise. ``
 
-`` Using `resolve` and `reject` we can communicate back a value, in the above case we just return a string, but it could be an object as well. ``
+`Using `resolve` and `reject` we can communicate back a value, in the above case we just return a string, but it could be an object as well.`
 
 #### `Consuming a promise`
 
@@ -994,7 +994,7 @@ const checkIfItsDone = () => {
 
 `A great example of chaining promises is given by the [Fetch API][72], a layer on top of the XMLHttpRequest API, which we can use to get a resource and queue a chain of promises to execute when the resource is fetched.`
 
-`` The Fetch API is a promise-based mechanism, and calling `fetch()` is equivalent to defining our own promise using `new Promise()`. ``
+`The Fetch API is a promise-based mechanism, and calling `fetch()` is equivalent to defining our own promise using `new Promise()`.`
 
 `Example:`
 
@@ -1017,7 +1017,7 @@ fetch('/todos.json')
   })
 ```
 
-`In this example, we call `fetch()` to get a list of TODO items from the `todos.json` file found in the domain root, and we create a chain of promises.`
+`In this example, we call `fetch()`to get a list of TODO items from the`todos.json` file found in the domain root, and we create a chain of promises.`
 
 `` Running `fetch()` returns a [response][73], which has many properties, and within those we reference: ``
 
@@ -1357,7 +1357,7 @@ import { foo } from 'uppercase.js'
 import { foo } from 'utils/uppercase.js'
 ```
 
-`` It’s either absolute, or has a `./` or `/` before the name. ``
+`It’s either absolute, or has a `./` or `/` before the name.`
 
 ### `Other import/export options`
 
@@ -1409,7 +1409,7 @@ import React, { Component } from 'react'
 
 #### `What about browsers that do not support modules?`
 
-`Use a combination of`type="module"` and `nomodule`:`
+`Use a combination of`type="module"`and`nomodule`:`
 
 ```
 <script type="module" src="module.js"></script>
@@ -1743,7 +1743,7 @@ const element = <h1 id={myId}>Hello, world!</h1>
 `` You just need to pay attention when an attribute has a dash (`-`) which is converted to camelCase syntax instead, and these 2 special cases: ``
 
 -   `` `class` becomes `className` ``
--   `` `for` becomes `htmlFor` ``
+-   `for` becomes `htmlFor`
 
 `because they are reserved words in JavaScript.`
 
@@ -1758,7 +1758,7 @@ const element = <h1 id={myId}>Hello, world!</h1>
 
 `A tag always needs to be closed, because this is more XML than HTML (if you remember the XHTML days, this will be familiar, but since then the HTML5 loose syntax won). In this case a self-closing tag is used.`
 
-`` Notice how I wrapped the 2 components into a `div`. Why? Because **the render() function can only return a single node**, so in case you want to return 2 siblings, just add a parent. It can be any tag, not just `div`. ``
+`Notice how I wrapped the 2 components into a `div`. Why? Because **the render() function can only return a single node**, so in case you want to return 2 siblings, just add a parent. It can be any tag, not just`div`.`
 
 #### `Transpiling JSX`
 
@@ -1974,7 +1974,7 @@ ReactDOM.render(<div style={{ color: 'white' }}>Hello World!</div>, mountNode)
 <p>{'© 2017'}</p>
 ```
 
-`` But it’s not, it’s printing `© 2017` because the string is escaped. ``
+`But it’s not, it’s printing `© 2017` because the string is escaped.`
 
 `To fix this you can either move the entities outside the expression:`
 
@@ -2089,7 +2089,7 @@ for (const [index, value] of elements.entries()) {
 }
 ```
 
-`` Now when rendering the JSX you can embed the `items` array simply by wrapping it in curly braces: ``
+`Now when rendering the JSX you can embed the `items` array simply by wrapping it in curly braces:`
 
 ```
 const elements = ['one', 'two', 'three'];
@@ -2600,7 +2600,7 @@ PropTypes.shape({
 
 #### `Requiring properties`
 
-`Appending `isRequired` to any PropTypes option will cause React to return an error if that property is missing:`
+`Appending`isRequired` to any PropTypes option will cause React to return an error if that property is missing:`
 
 ```
 PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -2933,7 +2933,7 @@ class Converter extends React.Component {
 -   `if the data is handled by the DOM, we call them **uncontrolled components**`
 -   `if the data is handled by the components we call them **controlled components**`
 
-`` As you can imagine, controlled components is what you will use most of the time. The component state is the single source of truth, rather than the DOM. Some form fields are inherently uncontrolled because of their behavior, like the `<input type="file">`field. ``
+`As you can imagine, controlled components is what you will use most of the time. The component state is the single source of truth, rather than the DOM. Some form fields are inherently uncontrolled because of their behavior, like the `<input type="file">`field.`
 
 `` When an element state changes in a form field managed by a component, we track it using the `onChange` attribute. ``
 
@@ -3019,7 +3019,7 @@ class Form extends React.Component {
 
 `` Validation in a form can be handled in the `handleChange` method: you have access to the old value of the state, and the new one. You can check the new value and if not valid reject the updated value (and communicate it in some way to the user). ``
 
-`` HTML Forms are inconsistent. They have a long history, and it shows. React however makes things more consistent for us, and you can get (and update) fields using its `value`attribute. ``
+`HTML Forms are inconsistent. They have a long history, and it shows. React however makes things more consistent for us, and you can get (and update) fields using its `value`attribute.`
 
 `` Here’s a `textarea`, for example: ``
 
@@ -3027,7 +3027,7 @@ class Form extends React.Component {
 <textarea value={this.state.address} onChange={this.handleChange} />
 ```
 
-`` The same goes for the `select` tag: ``
+`The same goes for the`select` tag:`
 
 ```
 <select value="{this.state.age}" onChange="{this.handleChange}">
@@ -3036,7 +3036,7 @@ class Form extends React.Component {
 </select>
 ```
 
-`` Previously we mentioned the `<input type="file">` field. That works a bit differently. ``
+`Previously we mentioned the `<input type="file">` field. That works a bit differently.`
 
 `` In this case you need to get a reference to the field by assigning the `ref` attribute to a property defined in the constructor with `React.createRef()`, and use that to get the value of it in the submit handler: ``
 
@@ -3150,9 +3150,9 @@ npm install express
 
 `` You have a set of folders in your app directory. Create a new folder called `server`, then go into it and create a file named `server.js`. ``
 
-`` Following the `create-react-app` conventions, the app lives in the `src/App.js` file. We're going to load that component, and render it to a string using [ReactDOMServer.renderToString()][91], which is provided by `react-dom`. ``
+`Following the `create-react-app` conventions, the app lives in the `src/App.js` file. We're going to load that component, and render it to a string using [ReactDOMServer.renderToString()][91], which is provided by `react-dom`.`
 
-``` You get the contents of the `./build/index.html` file, and replace the `<div id="root"></div>`placeholder, which is the tag where the application hooks by default, with `` `<div id="root">${ReactDOMServer.renderToString(<App />)}</div>``. ```
+`You get the contents of the `./build/index.html` file, and replace the `<div id="root"></div>`placeholder, which is the tag where the application hooks by default, with `` `<div id="root">${ReactDOMServer.renderToString(<App />)}</div>``.`
 
 `All the content inside the `build` folder is going to be served as-is, statically by Express.`
 
@@ -3198,7 +3198,7 @@ app.listen(PORT, () => {
 ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
-`` call `[ReactDOM.hydrate()][92]`, which is the same but has the additional ability to attach event listeners to existing markup once React loads: ``
+`call `[ReactDOM.hydrate()][92]`, which is the same but has the additional ability to attach event listeners to existing markup once React loads:`
 
 ```
 ReactDOM.hydrate(<App />, document.getElementById('root'))
@@ -3212,7 +3212,7 @@ ReactDOM.hydrate(<App />, document.getElementById('root'))
 npm install @babel/register @babel/preset-env @babel/preset-react ignore-styles express
 ```
 
-`` `[ignore-styles][93]` is a Babel utility that will tell it to ignore CSS files imported using the `import` syntax.``
+`[ignore-styles][93]` is a Babel utility that will tell it to ignore CSS files imported using the `import` syntax.`
 
 `` Let’s create an entry point in `server/index.js`: ``
 
@@ -3893,7 +3893,7 @@ const App = () => {
 }
 ```
 
-`Cool! We must have a way now to ask GitHub for the details of a single username. We’ll do so using a `Form` component, where we manage our own state (`username`), and we ask GitHub for information about a user using their public APIs, via Axios:`
+`Cool! We must have a way now to ask GitHub for the details of a single username. We’ll do so using a`Form` component, where we manage our own state (`username`), and we ask GitHub for information about a user using their public APIs, via Axios:`
 
 ```
 const Form = props => {
@@ -3919,7 +3919,7 @@ axios<span class="token punctuation" style="box-sizing: inherit; margin: 0px; pa
 }
 ```
 
-`` When the form is submitted we call the `handleSubmit` event, and after the network call we call `props.onSubmit` passing the parent (`App`) the data we got from GitHub. ``
+`When the form is submitted we call the `handleSubmit` event, and after the network call we call `props.onSubmit` passing the parent (`App`) the data we got from GitHub.`
 
 `` We add it to `App`, passing a method to add a new card to the list of cards, `addNewCard`, as its `onSubmit` prop: ``
 
@@ -4033,7 +4033,7 @@ import './style.css'
 
 #### `Using the style attribute`
 
-`` A second method is to use the `style` attribute attached to a JSX element. Using this approach you don't need a separate CSS file. ``
+`A second method is to use the `style` attribute attached to a JSX element. Using this approach you don't need a separate CSS file.`
 
 ```
 const Button = () => {
@@ -4041,7 +4041,7 @@ const Button = () => {
 }
 ```
 
-`` CSS is defined in a slightly different way now. First, notice the double curly brackets: it’s because `style` accepts an object. We pass in a JavaScript object, which is defined in curly braces. We could also do this: ``
+`CSS is defined in a slightly different way now. First, notice the double curly brackets: it’s because `style` accepts an object. We pass in a JavaScript object, which is defined in curly braces. We could also do this:`
 
 ```
 const buttonStyle = { backgroundColor: 'yellow' }
@@ -4050,7 +4050,7 @@ const Button = () => {
 }
 ```
 
-`` When using `create-react-app`, those styles are autoprefixed by default thanks to its use of [Autoprefixer][104]. ``
+`When using `create-react-app`, those styles are autoprefixed by default thanks to its use of [Autoprefixer][104].`
 
 `Also, the style now is camelCased instead of using dashes. Every time a CSS property has a dash, remove it and start the next word capitalized.`
 
@@ -4090,7 +4090,7 @@ const Button = () => {
 
 `` You can use it without any configuration at all, starting with `create-react-app` 2. ``
 
-`` All you need is a `.sass` or `.scss` file, and you just import it in a component: ``
+`All you need is a `.sass`or`.scss` file, and you just import it in a component:`
 
 ```
 import './styles.scss'
@@ -4302,7 +4302,7 @@ npm install --save-dev     @babel/plugin-transform-es2015-arrow-functions
 
 > `_TIP: If you have never seen a dot file (a file starting with a dot) it might be odd at first because that file might not appear in your file manager, as it’s a hidden file._`
 
-`` Now if we have a `script.js` file with this content: ``
+`Now if we have a`script.js`file with this content:`
 
 ```
 var a = () => {};
@@ -4534,7 +4534,7 @@ yarn build
 `**By default, webpack (starting from version 4) does not require any config if you respect these conventions:**`
 
 -   `` **the **entry point** of your app is `./src/index.js`** ``
--   `` **the output is put in `./dist/main.js`.** ``
+-   `**the output is put in `./dist/main.js`.**`
 -   `**Webpack works in production mode**`
 
 `` **You can customize every little bit of webpack of course, when you need. The webpack configuration is stored in the `webpack.config.js` file, in the project root folder.** ``
@@ -4976,7 +4976,7 @@ npm install --save-dev jest
 }
 ```
 
-`` so that tests can be run using `yarn test` or `npm run test`. ``
+`so that tests can be run using `yarn test` or `npm run test`.`
 
 `Alternatively, you can install Jest globally:`
 
@@ -5020,7 +5020,7 @@ const div = (a, b) => a / b
 export default { sum, mul, sub, div }
 ```
 
-`` Now create a `math.test.js` file, in the same folder, and there we’ll use Jest to test the functions defined in `math.js`: ``
+`Now create a `math.test.js` file, in the same folder, and there we’ll use Jest to test the functions defined in `math.js`:`
 
 ```
 const { sum, mul, sub, div } = require('./math')
@@ -5075,12 +5075,12 @@ test('Adding 1 + 1 equals 2', () => {
 -   `toBeGreaterThan` true if the result of expect() is higher than the argument`
 -   `` `toBeGreaterThanOrEqual` true if the result of expect() is equal to the argument, or higher than the argument``
 -   `` `toBeLessThan` true if the result of expect() is lower than the argument``
--   `` `toBeLessThanOrEqual` true if the result of expect() is equal to the argument, or lower than the argument``
+-   `toBeLessThanOrEqual` true if the result of expect() is equal to the argument, or lower than the argument`
 -   `` `toMatch` is used to compare strings with [regular expression][141] pattern matching``
 -   `` `toContain` is used in arrays, true if the expected array contains the argument in its elements set``
 -   `` `toHaveLength(number)`: checks the length of an array``
 -   `` `toHaveProperty(key, value)`: checks if an object has a property, and optionally checks its value``
--   `` `toThrow` checks if a function you pass throws an exception (in general) or a specific exception``
+-   `toThrow` checks if a function you pass throws an exception (in general) or a specific exception`
 -   `` `toBeInstanceOf()`: checks if an object is an instance of a class``
 
 `` All those matchers can be negated using `.not.` inside the statement, for example: ``
@@ -5282,7 +5282,7 @@ test(uppercase 'test' to equal 'TEST', async () => {
 -   `` `expect().toHaveBeenCalled()`: check if a spied function has been called``
 -   `` `expect().toHaveBeenCalledTimes()`: count how many times a spied function has been called``
 -   `` `expect().toHaveBeenCalledWith()`: check if the function has been called with a specific set of parameters``
--   `` `expect().toHaveBeenLastCalledWith()`: check the parameters of the last time the function has been invoked``
+-   `expect().toHaveBeenLastCalledWith()`: check the parameters of the last time the function has been invoked`
 
 #### `Spy packages without affecting the functions code`
 
@@ -5339,7 +5339,7 @@ test(The mathjs log function, () => {
 })
 ```
 
-`` You can also use `jest.fn().mockReturnValue('test')` to create a simple mock that does nothing except returning a value. ``
+`You can also use `jest.fn().mockReturnValue('test')` to create a simple mock that does nothing except returning a value.`
 
 #### `Pre-built mocks`
 
@@ -5400,7 +5400,7 @@ exports[renders correctly 1] = &lt;div
 
 `![](https://cdn-media-1.freecodecamp.org/images/imS-QSkC1rmVVRYLkLYSJrGk5b3DOjodEJkx)`
 
-`When using `yarn test` in `create-react-app` you are in **watch mode**, and from there you can press `w` and show more options:`
+`When using`yarn test` in `create-react-app` you are in **watch mode**, and from there you can press `w` and show more options:`
 
 ```plain
 Watch Usage
@@ -5455,7 +5455,7 @@ test('First test', () => {
 
 `Let’s do something a bit more useful now, to actually test a React component. We only have App now, which is not doing anything really useful, so let’s first set up the environment with a little application with more functionality: the counter app we built previously. If you skipped it, you can go back and read how we built it, but for easier reference I add it here again.`
 
-`` It’s just 2 components: App and Button. Create the `App.js` file: ``
+`It’s just 2 components: App and Button. Create the `App.js` file:`
 
 ```
 import React, { useState } from 'react'
@@ -5534,7 +5534,7 @@ test('+1 Button works', () => {
 })
 ```
 
-`` Similarly we test a +100 button, this time checking the output is `+100` and the button click increments the count of 100. ``
+`Similarly we test a +100 button, this time checking the output is `+100` and the button click increments the count of 100.`
 
 ```plain
 test('+100 Button works', () => {
@@ -5641,13 +5641,13 @@ https://application.com/#/dashboard / HashRouter    */
 
 -   `` `BrowserRouter`, usually aliased as `Router` ``
 -   `` `Link` ``
--   `` `Route` ``
+-   `Route`
 
 `BrowserRouter` wraps all your Route components.`
 
 `` `Link` components are - as you can imagine - used to generate links to your routes``
 
-`` `Route` components are responsible for showing - or hiding - the components they contain.``
+`Route` components are responsible for showing - or hiding - the components they contain.`
 
 ### `BrowserRouter`
 
@@ -5733,7 +5733,7 @@ ReactDOM.render(
 
 `` When the route is changed by clicking the “About” link to `/about`, the Dashboard component is removed and the **About** component is inserted in the DOM. ``
 
-`Notice the `exact` attribute. Without this, `path="/"` would also match `/about`, since `/`is contained in the route.`
+`Notice the `exact` attribute. Without this, `path="/"` would also match `/about`, since`/`is contained in the route.`
 
 ### `Match multiple paths`
 
@@ -5988,7 +5988,7 @@ const listManager = (state = {}, action) => {
 -   `**holds the state** of the app`
 -   `` **exposes the state** via `getState()`  ``
 -   `` allows us to **update the state** via `dispatch()`  ``
--   `` allows us to (un)register a **state change listener** using `subscribe()`  ``
+-   `allows us to (un)register a **state change listener** using `subscribe()`
 
 `A store is **unique** in the app.`
 
@@ -6056,14 +6056,14 @@ unsubscribe()
 `Here is a non-exhaustive list of the main Next.js features:`
 
 -   `**Hot Code Reloading**: Next.js reloads the page when it detects any change saved to disk.`
--   `` **Automatic Routing**: any URL is mapped to the filesystem, to files put in the `pages` folder, and you don’t need any configuration (you have customization options of course). ``
+-   `**Automatic Routing**: any URL is mapped to the filesystem, to files put in the `pages` folder, and you don’t need any configuration (you have customization options of course).`
 -   `**Single File Components**: using [styled-jsx][156], completely integrated as built by the same team, it’s trivial to add styles scoped to the component.`
 -   `**Server Rendering**: you can (optionally) render React components on the server side, before sending the HTML to the client.`
 -   `**Ecosystem Compatibility**: Next.js plays well with the rest of the JavaScript, Node and React ecosystem.`
 -   `**Automatic Code Splitting**: pages are rendered with just the libraries and JavaScript that they need, no more.`
 -   `` **Prefetching**: the `Link` component, used to link together different pages, supports a `prefetch` prop which automatically prefetches page resources (including code missing due to code splitting) in the background. ``
 -   `**Dynamic Components**: you can import JavaScript modules and React Components dynamically ([https://github.com/zeit/next.js#dynamic-import][157]).`
--   `` **Static Exports**: using the `next export` command, Next.js allows you to export a fully static site from your app. ``
+-   `**Static Exports**: using the `next export` command, Next.js allows you to export a fully static site from your app.`
 
 #### `Installation`
 
@@ -6101,7 +6101,7 @@ npm run dev
 
 `` the script will raise an error complaining about not finding the `pages` folder. This is the only thing that Next.js requires to run. ``
 
-`` Create an empty `pages` folder, and run the command again, and Next.js will start up a server on `localhost:3000`. ``
+`Create an empty `pages` folder, and run the command again, and Next.js will start up a server on `localhost:3000`.`
 
 `If you go to that URL now, you’ll be greeted by a friendly 404 page, with a nice clean design.`
 
@@ -6155,7 +6155,7 @@ export default () => (
 
 #### `Hot reloading`
 
-`` Note how you did not have to restart the `npm` process to load the second page. Next.js does this for you under the hood. ``
+`Note how you did not have to restart the `npm` process to load the second page. Next.js does this for you under the hood.`
 
 #### `Client rendering`
 
@@ -6163,7 +6163,7 @@ export default () => (
 
 `` Next.js provides a `Link` component you can use to build links. Try linking the two pages above. ``
 
-`` Change `index.js` to this code: ``
+`Change `index.js` to this code:`
 
 ```
 import Link from 'next/link'
@@ -6435,7 +6435,7 @@ gatsby develop
 `If you open the site you created with your favorite code editor (I use [VS Code][179]), you’ll find there are 3 folders:`
 
 -   `` `.cache`, a hidden folder that contains the Gatsby internals, nothing you should change right now``
--   `` `public`, which contains the resulting website once you build it``
+-   `public`, which contains the resulting website once you build it`
 -   `` `src` contains the React components, in this case just the `index` component``
 -   `` `static` which will contain the static resources like CSS and images``
 
@@ -6458,7 +6458,7 @@ export default () => <div>Second page!</div>
 
 #### `Linking pages`
 
-`` You can link those pages by importing a Gatsby-provided React component called `Link`: ``
+`You can link those pages by importing a Gatsby-provided React component called `Link`:`
 
 ```
 import { Link } from "gatsby"

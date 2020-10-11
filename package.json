@@ -26,6 +26,7 @@
     },
     "scripts": {
         "lint": "lint-md chinese/**/*.md",
+        "format": "lint-md chinese/**/*.md --fix",
         "test": "lint-staged"
     },
     "husky": {

@@ -932,7 +932,7 @@ const re = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/const result = re.exec(
 // result.groups.year === '2015';// result.groups.month === '01';// result.groups.day === '02';
 ```
 
-#### `` The `'s’` flag for regular expressions ``
+#### `The `'s’` flag for regular expressions`
 
 `` The `s` flag, short for _single line_, causes the `.` to match new line characters as well. Without it, the dot matches regular characters but not the new line: ``
 
@@ -1005,7 +1005,7 @@ if (condition) {  statements} else {  statements}
 if (condition) {  statements} else if (condition) {  statements} else {  statements}
 ```
 
-`` **for:** Always initialize the length in the initialization to cache it, don’t insert it in the condition. Avoid using `for in` except with used in conjunction with`.hasOwnProperty()`. Prefer `for of`: ``
+`**for:** Always initialize the length in the initialization to cache it, don’t insert it in the condition. Avoid using `for in` except with used in conjunction with`.hasOwnProperty()`. Prefer `for of`:`
 
 ```
 for (initialization; condition; update) {  statements}
@@ -1041,7 +1041,7 @@ try {  statements} catch (variable) {  statements} finally {  statements}
 
 -   `` **Whitespace**: use whitespace wisely to improve readability: put a whitespace after a keyword followed by a `(`; before & after a binary operation (`+`, `-`, `/`, `*`, `&&`..); inside the for statement, after each `;`to separate each part of the statement; after each `,`. ``
 -   `**New lines**: use new lines to separate blocks of code that perform logically related operations.`
--   `**Quotes** favor single quotes `'` instead of double quotes `"`. Double quotes are a standard in HTML attributes, so using single quotes helps remove problems when dealing with HTML strings. Use template literals when appropriate instead of variable interpolation.`
+-   `**Quotes** favor single quotes `'`instead of double quotes`"`. Double quotes are a standard in HTML attributes, so using single quotes helps remove problems when dealing with HTML strings. Use template literals when appropriate instead of variable interpolation.`
 
 ### `Lexical Struture`
 
@@ -1105,7 +1105,7 @@ returnvariable
 5'Test'true['a', 'b']{color: 'red', shape: 'Rectangle'}
 ```
 
-`[An **identifier** is a sequence of characters that can be used to identify a variable, a function, an object. It can start with a letter, the dollar sign `$`or an underscore `_`, and it can contain digits. Using Unicode, a letter can be any allowed char, for example an emoji ?.][31]`
+`[An **identifier** is a sequence of characters that can be used to identify a variable, a function, an object. It can start with a letter, the dollar sign `$`or an underscore`_`, and it can contain digits. Using Unicode, a letter can be any allowed char, for example an emoji ?.][31]`
 
 ```
 TesttestTEST_testTest1$test
@@ -1310,7 +1310,7 @@ const a = 'test'
 
 #### `[undefined][100]`
 
-`` [`undefined` indicates that a variable has not been initialized and the value is absent.][101] ``
+`[`undefined` indicates that a variable has not been initialized and the value is absent.][101]`
 
 `[It’s commonly returned by functions with no `return` value. When a function accepts a parameter but that's not set by the caller, it's undefined.][102]`
 
@@ -1440,7 +1440,7 @@ const car = new Object()
 const list = []//orconst list = new Array()
 ```
 
-`[The prototype is `Array`.][136]`
+`[The prototype is`Array`.][136]`
 
 `[You can verify this by checking the Object.getPrototypeOf() and the Object.prototype.isPrototypeOf() methods:][137]`
 
@@ -1580,7 +1580,7 @@ Person.genericHello() //Hello
 
 #### `[Getters and setters][170]`
 
-`` [You can add methods prefixed with `get` or `set` to create a getter and setter, which are two different pieces of code that are execute based on what you are doing: accessing the variable, or modifying its value.][171] ``
+`[You can add methods prefixed with `get` or `set` to create a getter and setter, which are two different pieces of code that are execute based on what you are doing: accessing the variable, or modifying its value.][171]`
 
 ```
 class Person {  constructor(name) {    this._name = name  }
@@ -1626,7 +1626,7 @@ class Person {  constructor(name) {    this._name = name  }
 throw value
 ```
 
-`` [Where `value` can be any JavaScript value including a string, a number or an object.][178] ``
+`[Where `value` can be any JavaScript value including a string, a number or an object.][178]`
 
 `[As soon as JavaScript executes this line, the normal program flow is halted and the control is held back to the nearest **exception handler**.][179]`
 
@@ -1664,7 +1664,7 @@ try {  //lines of code} catch (e) {
 }
 ```
 
-`` [You can use `finally` without a `catch` block, to serve as a way to clean up any resource you might have opened in the `try`block, like files or network requests:][187] ``
+`[You can use `finally` without a `catch` block, to serve as a way to clean up any resource you might have opened in the `try`block, like files or network requests:][187]`
 
 ```plain
 try {  //lines of code} finally {
@@ -1676,7 +1676,7 @@ try {  //lines of code} finally {
 
 #### `` [Nested `try` blocks][188] ``
 
-`` [`try` blocks can be nested, and an exception is always handled in the nearest catch block:][189] ``
+`[`try` blocks can be nested, and an exception is always handled in the nearest catch block:][189]`
 
 ```plain
 try {  //lines of code
@@ -1694,7 +1694,7 @@ try {  //lines of code
 }
 ```
 
-`` [If an exception is raised in the inner `try`, it's handled in the outer `catch`block.][190] ``
+`[If an exception is raised in the inner `try`, it's handled in the outer`catch`block.][190]`
 
 ### `[Semicolons][191]`
 
@@ -1738,7 +1738,7 @@ const hey = 'hey'const you = 'hey'const heyYou = hey + ' ' + you
 ['h', 'e', 'y'].forEach((letter) => console.log(letter))
 ```
 
-`` [You’ll get the error `Uncaught TypeError: Cannot read property 'forEach' of undefined` because based on rule `1` JavaScript tries to interpret the code as][211] ``
+`[You’ll get the error `Uncaught TypeError: Cannot read property 'forEach' of undefined` because based on rule `1` JavaScript tries to interpret the code as][211]`
 
 ```
 const hey = 'hey';const you = 'hey';const heyYou = hey + ' ' + you['h', 'e', 'y'].forEach((letter) => console.log(letter))
@@ -1750,7 +1750,7 @@ const hey = 'hey';const you = 'hey';const heyYou = hey + ' ' + you['h', 'e', 'y'
 (1 + 2).toString()
 ```
 
-`` [prints `"3"`.][213] ``
+`[prints `"3"`.][213]`
 
 ```
 const a = 1const b = 2const c = a + b(a + b).toString()
@@ -1770,7 +1770,7 @@ const a = 1const b = 2const c = a + b(a + b).toString()
 
 `` [You’d expect the return value of this immediately-invoked function to be an object that contains the `color` property, but it's not. Instead, it's`undefined`, because JavaScript inserts a semicolon after `return`.][216] ``
 
-`` [Instead you should put the opening bracket right after `return`:][217] ``
+`[Instead you should put the opening bracket right after `return`:][217]`
 
 ```
 (() => {  return {    color: 'white'  }})()
@@ -1796,7 +1796,7 @@ const a = 1const b = 2const c = a + b(a + b).toString()
 
 `[Pick some rules:][223]`
 
--   `[be careful with `return` statements. If you return something, add it on the same line as the return (same for `break`, `throw`, `continue`)][224]`
+-   `[be careful with`return` statements. If you return something, add it on the same line as the return (same for `break`,`throw`, `continue`)][224]`
 -   `[never start a line with parentheses, those might be concatenated with the previous line to form a function call, or array element reference][225]`
 
 `[And ultimately, always test your code to make sure it does what you want.][226]`
@@ -1957,7 +1957,7 @@ const Button = styled.button`  font-size: 1.5em;  background-color: black;  colo
 const query = gql`  query {    ...  }`
 ```
 
-`` The `styled.button` and `gql` template tags highlighted in those examples are just**functions**: ``
+`The `styled.button` and `gql` template tags highlighted in those examples are just**functions**:`
 
 ```plain
 function gql(literals, ...expressions) {
@@ -1989,7 +1989,7 @@ const string = `something ${1 + 2 + 3}`
 const string = `somethinganother ${'x'}new line ${1 + 2 + 3}test`
 ```
 
-`In this case `literals` is an array where the first item is:`
+`In this case `literals`is an array where the first item is:`
 
 ```
 `somethinganother `
@@ -2183,7 +2183,7 @@ const car = {  brand: 'Ford',  model: 'Fiesta',  start: function() {    console.
 
 `` `this`, which refers to the host object using `function()` ``
 
-`` This implies that **arrow functions are not suitable to be used for object methods** and constructors (arrow function constructors will actually raise a `TypeError`when called). ``
+`This implies that **arrow functions are not suitable to be used for object methods** and constructors (arrow function constructors will actually raise a `TypeError`when called).`
 
 #### `IIFE, Immediately Invoked Function Expressions`
 
@@ -2307,7 +2307,7 @@ const myFunction = () => ({value: 'test'})
 myFunction() //{value: 'test'}
 ```
 
-#### `` How `this` works in arrow functions ``
+#### `How `this`works in arrow functions`
 
 `` `this` is a concept that can be complicated to grasp, as it varies a lot depending on the context and also varies depending on the mode of JavaScript (_strict mode_ or not).``
 
@@ -2409,7 +2409,7 @@ Roger barked!Syd barked!
 
 `` As you can see, the **state** of the variable `say` is linked to the function that's returned from `prepareBark()`. ``
 
-`` Also notice that we redefine a new `say` variable the second time we call `prepareBark()`, but that does not affect the state of the first `prepareBark()` scope. ``
+`Also notice that we redefine a new `say` variable the second time we call `prepareBark()`, but that does not affect the state of the first`prepareBark()` scope.`
 
 `This is how a closure works: the function that’s returned keeps the original state in its scope.`
 
@@ -2441,7 +2441,7 @@ const l = a.length
 a.every(f)
 ```
 
-`` Iterates `a` until `f()` returns false ``
+`Iterates `a` until `f()` returns false`
 
 #### `` Iterating the array with `some`  ``
 
@@ -2760,7 +2760,7 @@ const list = ['a', 'b', 'c']let i = 0do {  console.log(list[i]) //value  console
 do {  if (something) break} while (true)
 ```
 
-`` and you can jump to the next iteration using `continue`: ``
+`and you can jump to the next iteration using `continue`:`
 
 ```plain
 do {  if (something) continue
@@ -2820,7 +2820,7 @@ for (let property in object) {  console.log(property) //property name  console.l
 
 `` The difference with `for...in` is: ``
 
--   `` `for...of` **iterates over the property values**``
+-   `for...of` **iterates over the property values**`
 -   `` `for...in` **iterates the property names**``
 
 ### `Events`
@@ -2865,7 +2865,7 @@ window.onload = () => {  //window loaded}
 const xhr = new XMLHttpRequest()xhr.onreadystatechange = () => {  //.. do something}
 ```
 
-`` You can check if an handler is already assigned to a property using `if ('onsomething' in window) {}`. ``
+`You can check if an handler is already assigned to a property using `if ('onsomething' in window) {}`.`
 
 #### `` Using `addEventListener()`  ``
 
@@ -2879,7 +2879,7 @@ window.addEventListener('load', () => {  //window loaded})
 
 #### `Listening on different elements`
 
-`` You can listen on `window` to intercept "global" events, like the usage of the keyboard, and you can listen on specific elements to check events happening on them, like a mouse click on a button. ``
+`You can listen on `window` to intercept "global" events, like the usage of the keyboard, and you can listen on specific elements to check events happening on them, like a mouse click on a button.`
 
 `` This is why `addEventListener` is sometimes called on `window`, sometimes on a DOM element. ``
 
@@ -2937,7 +2937,7 @@ const link = document.getElementById('my-link')link.addEventListener('mousedown'
 
 `**Bubbling** means that the event propagates from the item that was clicked (the child) up to all its parent tree, starting from the nearest one.`
 
-`` In our example, the handler on `button` will fire before the `#container` handler. ``
+`In our example, the handler on `button`will fire before the`#container` handler.`
 
 `**Capturing** is the opposite: the outer event handlers are fired before the more specific handler, the one on `button`.`
 
@@ -3225,7 +3225,7 @@ document.getElementById('button').addEventListener('click', () => {  //item clic
 
 `A callback is a simple function that’s passed as a value to another function, and will only be executed when the event happens. We can do this because JavaScript has first-class functions, which can be assigned to variables and passed around to other functions (called **higher-order functions**)`
 
-`` It’s common to wrap all your client code in a `load` event listener on the `window` object, which runs the callback function only when the page is ready: ``
+`It’s common to wrap all your client code in a `load` event listener on the `window` object, which runs the callback function only when the page is ready:`
 
 ```
 window.addEventListener('load', () => {  //window loaded  //do what you want})
@@ -3362,7 +3362,7 @@ const json = (response) => response.json()
 fetch('/todos.json')  .then(status)  .then(json)  .then((data) => { console.log('Request succeeded with JSON response', data) })  .catch((error) => { console.log('Request failed', error) })
 ```
 
-`In this example, we call `fetch()` to get a list of TODO items from the `todos.json` file found in the domain root, and we create a chain of promises.`
+`In this example, we call`fetch()` to get a list of TODO items from the `todos.json` file found in the domain root, and we create a chain of promises.`
 
 `` Running `fetch()` returns a [response][282], which has many properties, and within those we reference: ``
 
@@ -3389,7 +3389,7 @@ fetch('/todos.json')  .then(status)  .then(json)  .then((data) => { console.log(
 
 `` In the example, in the previous section, we had a `catch` that was appended to the chain of promises. ``
 
-`` When anything in the chain of promises fails and raises an error or rejects the promise, the control goes to the nearest `catch()`statement down the chain. ``
+`When anything in the chain of promises fails and raises an error or rejects the promise, the control goes to the nearest `catch()`statement down the chain.`
 
 ```plain
 new Promise((resolve, reject) => {  throw new Error('Error')})  .catch((err) => { console.error(err) })
@@ -3435,7 +3435,7 @@ Promise.all([f1, f2]).then(([res1, res2]) => {    console.log('Results', res1, r
 
 `` You are not limited to using `fetch` of course, **any promise is good to go**. ``
 
-#### `` `Promise.race()` ``
+#### `Promise.race()`
 
 `` `Promise.race()` runs when the first of the promises you pass to it resolves, and it runs the attached callback just once, with the result of the first promise resolved.``
 
@@ -3475,7 +3475,7 @@ Promise.race([first, second]).then((result) => {  console.log(result) // second}
 const doSomethingAsync = () => {    return new Promise((resolve) => {        setTimeout(() => resolve('I did something'), 3000)    })}
 ```
 
-`` When you want to **call** this function you prepend `await`, and **the calling code will stop until the promise is resolved or rejected**. One caveat: the client function must be defined as `async`. Here's an example: ``
+`When you want to **call** this function you prepend `await`, and **the calling code will stop until the promise is resolved or rejected**. One caveat: the client function must be defined as `async`. Here's an example:`
 
 ```
 const doSomething = async () => {    console.log(await doSomethingAsync())}
@@ -3711,7 +3711,7 @@ const myFunction = (firstParam, secondParam) => {  // do something}
 // runs after 2 secondssetTimeout(myFunction, 2000, firstParam, secondParam)
 ```
 
-`` `setTimeout` returns the timer id. This is generally not used, but you can store this id, and clear it if you want to delete this scheduled function execution:``
+`setTimeout` returns the timer id. This is generally not used, but you can store this id, and clear it if you want to delete this scheduled function execution:`
 
 ```plain
 const id = setTimeout(() => {  // should run after 2 seconds}, 2000)
@@ -3733,11 +3733,11 @@ setTimeout(() => {  console.log('after ')}, 0)
 console.log(' before ')
 ```
 
-`` will print `before after`. ``
+`will print `before after`.`
 
 `This is especially useful to avoid blocking the CPU on intensive tasks and let other functions execute while performing a heavy calculation, by queuing functions in the scheduler.`
 
-> `` _Some browsers (IE and Edge) implement a `setImmediate()` method that does this same exact functionality, but it’s not standard and [unavailable on other browsers][283]. But it’s a standard function in Node.js._ ``
+> `_Some browsers (IE and Edge) implement a`setImmediate()` method that does this same exact functionality, but it’s not standard and [unavailable on other browsers][283]. But it’s a standard function in Node.js._`
 
 #### `setInterval`
 
@@ -3809,11 +3809,11 @@ setTimeout(  myFunction()}, 1000)
 
 #### `` `this` in strict mode``
 
-`` Outside any object, `this` in **strict mode** is always `undefined`. ``
+`Outside any object, `this` in **strict mode** is always `undefined`.`
 
 `` Notice I mentioned strict mode. If strict mode is disabled (the default state if you don’t explicitly add `'use strict'` on top of your file ), you are in the so-called _sloppy mode_, and `this` - unless some specific cases mentioned here below - has the value of the global object. ``
 
-`` Which means `window` in a browser context. ``
+`Which means `window` in a browser context.`
 
 #### `` `this` in methods``
 
@@ -3881,7 +3881,7 @@ car.drive()//Driving a undefined undefined car!
 
 `` It’s simply not possible due to the way they work. `this` is **lexically bound**, which means its value is derived from the context where they are defined. ``
 
-#### `` Explicitly pass an object to be used as `this`  ``
+#### `Explicitly pass an object to be used as `this`
 
 `` JavaScript offers a few ways to map `this` to any object you want. ``
 
@@ -4105,7 +4105,7 @@ delete Object.prototype(  //false
 
 #### `Octal syntax`
 
-`` Octal syntax in Strict Mode is disabled. By default, prepending a `0` to a number compatible with the octal numeric format makes it (sometimes confusingly) interpreted as an octal number: ``
+`Octal syntax in Strict Mode is disabled. By default, prepending a `0` to a number compatible with the octal numeric format makes it (sometimes confusingly) interpreted as an octal number:`
 
 ```
 (() => {  console.log(010)})()//8
@@ -4595,7 +4595,7 @@ import { foo } from '/uppercase.js'import { foo } from '../uppercase.js'
 import { foo } from 'uppercase.js'import { foo } from 'utils/uppercase.js'
 ```
 
-`` It’s either absolute, or has a `./` or `/` before the name. ``
+`It’s either absolute, or has a `./` or `/` before the name.`
 
 #### `Other import/export options`
 

@@ -988,7 +988,7 @@ Since Redux manages the app’s `state`, all you need to do is feed in `state` f
 
 Another big question you’re likely asking yourself is “Why did I have to go through all this stress just to have the state of my App managed by Redux?”
 
-Reducer, Store, createStore blah, blah, blah …
+Reducer, Store, createStore blah, blah, blah ……
 
 Yeah, I get it.
 
@@ -1655,7 +1655,7 @@ This is exactly what we’re doing with the Reducer.
 
 The `switch` statement checks the `type` of the action.
 
-What do you want to do? Withdraw, deposit, whatever…
+What do you want to do? Withdraw, deposit, whatever……
 
 After that, we then handle the known `cases` we expect. For now, there’s just one `case`which is `SET_TECHNOLOGY`.
 
@@ -2184,7 +2184,7 @@ By association, you wouldn’t be wrong to have a picture like this in your mind
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*FPioi1H_8bq2mtnmnHzTbQ.png)
 
-Hmmm….A giant user box with nested contacts
+Hmmm…….A giant user box with nested contacts
 
 You may then go on to describe the state of the app like this.
 
@@ -2837,7 +2837,7 @@ Hmmm. What have I done?
 
 `console.log(store.getState())` is the bit you’re familiar with. This will log the state retrieved from the store.
 
-The first line, `console.log("%c Rendered with ? ??", "background: purple; color: #fff");` will log the text, “Rendered with …”, plus some emoji, and some CSS style to make it distinguishable. The `%c` written before the “Rendered with …” text makes it possible to use the CSS styling.
+The first line, `console.log("%c Rendered with ? ??", "background: purple; color: #fff");` will log the text, “Rendered with ……”, plus some emoji, and some CSS style to make it distinguishable. The `%c` written before the “Rendered with …” text makes it possible to use the CSS styling.
 
 Enough talking. Here’s the complete code:
 

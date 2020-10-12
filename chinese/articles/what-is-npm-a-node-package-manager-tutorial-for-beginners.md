@@ -5,36 +5,37 @@
 
 ![What is npm? A Node Package Manager Tutorial for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2020/06/cover-4.png)
 
-This article should serve as an all-in-one essential guide for Node.js' favorite sidekick: npm.
+本篇文章是 Node.js 最喜欢的伙伴:npm，的一个基本指南。
 
-Node.js has been taking the world by storm since 2009. Hundreds of thousands of systems have been built using Node.js, prompting the developer community to claim that "JavaScript is eating software".
+自 2009 年以来，Node.js 一直席卷全球。数十万个系统被 Node.js 构建出来，促使开发人员在社区宣称“JavaScript 正在吞噬软件”。
 
-One of the major factors of Node's success is npm - its popular package manager, which allows JavaScript developers to share useful packages like [lodash][1] and [moment][2] quickly and easily.
+Node 成功的主要因素之一是它受欢迎的软件包管理器-npm，因为 npm 使 JavaScript 开发人员可以快速方便地共享有用的软件包，
+例如 [lodash][1] 和 [moment][2]。
 
-As of the moment I'm writing this post, npm has facilitated the publication of over 1.3 million packages with a weekly download rate of over 16 billion! These numbers are fantastic for any software tool. So now let's talk about what exactly npm is.
+在我撰写这篇文章时，npm 已帮助发布了 130 万个软件包，每周下载量超过 160 亿个！ 这些数字对于任何软件工具都非常有用。 因此，现在让我们讨论一下 npm 到底是什么。
 
 ## What is NPM?
 
-NPM – or "Node Package Manager" – is the default package manager for JavaScript's runtime Node.js.
+NPM（“Node 包管理器”）是 JavaScript 运行时 Node.js 的默认程序包管理器。
 
-It's also known as "Ninja Pumpkin Mutants", "Nonprofit Pizza Makers", and a host of other random names that you can explore and probably contribute to over at [npm-expansions][3].
+它也被称为“Ninja Pumpkin Mutants”，“Nonprofit Pizza Makers”，以及许多其他随机名称，你可以在 [npm-expansions][3] 上探索它们。
 
-NPM consists of two main parts:
+NPM 由两个主要部分组成:
 
-- a CLI (command-line interface) tool for publishing and downloading packages, and
-- an [online repository][4] that hosts JavaScript packages
+- 用于发布和下载程序包的 CLI（命令行界面）工具
+- 托管 JavaScript 程序包的 [在线存储库][4]
 
-For a more visual explanation, we can think of the repository [npmjs.com][5] as a fulfillment center that receives packages of goods from sellers (npm package authors) and distributes these goods to buyers (npm package users).
+为了获得更直观的解释，我们可以将存储库 [npmjs.com][5] 视为一个物流集散中心，该中心从卖方（npm 包裹的作者）那里接收货物的包裹，并将这些货物分发给买方（npm 包裹的用户）。
 
-To facilitate this process, the [npmjs.com][6] fulfillment center employs an army of hardworking wombats (npm CLI) who will be assigned as personal assistants to each individual [npmjs.com][7] customer. So dependencies are delivered to JavaScript developers like this:
+为了促进此过程，[npmjs.com][6] 物流集散中心雇用了一群勤劳的袋熊（npm CLI），他们将被分配为每个 [npmjs.com][7] 客户的私人助理。 因此，dependencies(依赖项)会如下传递给 JavaScript 开发人员：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/wombat-install.png)
 
-and the process of publishing a package for your JS mates would be something like this:
+发布 JS 软件包的过程如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/wombat-publish.png)
 
-Let's look at how this army of wombats assist developers who want to use JavaScript packages in their projects. We'll also see how they help open-source wizards get their cool libraries out into the world.
+让我们看看这只袋熊如何协助想要在项目中使用 JavaScript 包的开发人员。 我们还将看到它们如何帮助开源向导将其出色的库推向世界。
 
 ## package.json
 

@@ -1,7 +1,7 @@
-> * 原文地址：[How to Build a Chatbot with React React 项目实践——创建一个聊天机器人](https://www.freecodecamp.org/news/how-to-build-a-chatbot-with-react/)
-> * 原文作者：Fredrik Strand Oseberg
-> * 译者：Chengjun.L
-> * 校对者：
+> -   原文地址：[How to Build a Chatbot with React React 项目实践——创建一个聊天机器人](https://www.freecodecamp.org/news/how-to-build-a-chatbot-with-react/)
+> -   原文作者：Fredrik Strand Oseberg
+> -   译者：Chengjun.L
+> -   校对者：
 
 ![How to Build a Chatbot with React](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/wooden-robot-6069-1.jpg)
 
@@ -19,7 +19,7 @@
 
 ## 初始设置
 
-```
+```plain
 // 运行以下代码
 npx create-react-app chatbot
 cd chatbot
@@ -32,9 +32,7 @@ yarn start
 然后打开 `App.js`，修改如下：
 
 ```jsx
-import Chatbot from 'react-chatbot-kit'
-
-
+import Chatbot from 'react-chatbot-kit';
 ```
 
 现在你的开发服务器是这样的：
@@ -45,20 +43,19 @@ import Chatbot from 'react-chatbot-kit'
 
 稍后我们进一步讲解这个。现在，[在这里获取代码][5]
 
-- 把 `MessageParser` 代码放到 `MessageParser.js` 文件
-- 把 `ActionProvider` 代码放到 `ActionProvider.js` 文件
-- 把 config 代码放到 `config.js` 文件
+-   把 `MessageParser` 代码放到 `MessageParser.js` 文件
+-   把 `ActionProvider` 代码放到 `ActionProvider.js` 文件
+-   把 config 代码放到 `config.js` 文件
 
 现在返回到 `App.js` 文件，添加以下代码：
 
 ```jsx
 import React from 'react';
-import Chatbot from 'react-chatbot-kit'
+import Chatbot from 'react-chatbot-kit';
 import './App.css';
 import ActionProvider from './ActionProvider';
 import MessageParser from './MessageParser';
 import config from './config';
-
 ```
 
 localhost:3000 现在应该是这样显示：
@@ -89,7 +86,7 @@ class MessageParser {
 
 比如，我们创建一个简单的响应。首先，将 `MessageParser` 改为：
 
-```
+```plain
 class MessageParser {
   constructor(actionProvider) {
     this.actionProvider = actionProvider;
@@ -107,8 +104,7 @@ if (lowerCaseMessage.includes("hello")) {
 
 不过现在还行不通，因为我们还没有执行 `greet` 方法。稍后再处理这个。先处理 `ActionProvider.js` 文件如下：
 
-
-```
+```plain
 class ActionProvider {
   constructor(createChatBotMessage, setStateFunc) {
     this.createChatBotMessage = createChatBotMessage;
@@ -138,9 +134,9 @@ class ActionProvider {
 
 首先，回到 `config.js` 文件，稍作修改：
 
-```
+```plain
 import { createChatBotMessage } from 'react-chatbot-kit';
-const config = { 
+const config = {
   botName: "LearningBot",
   initialMessages: [createChatBotMessage("Hi, I'm here to help. What do you want to learn?")],
   customStyles: {
@@ -201,19 +197,18 @@ export default LearningOptions;
 然后在机器人代码中使用组件。对 `config.js` 文件作如下操作：
 
 ```jsx
-import React from "react";
-import { createChatBotMessage } from "react-chatbot-kit";
-import LearningOptions from "./components/LearningOptions/LearningOptions";
-
+import React from 'react';
+import { createChatBotMessage } from 'react-chatbot-kit';
+import LearningOptions from './components/LearningOptions/LearningOptions';
 ```
 
 ### 理解控件
 
 小结一下：
 
-- 我们创建了 `LearningOptions` 组件
-- 在 config 的  `widgets` 下使用组件
-- 给 `createChatbotMessage` 函数一个选项对象，说明需要渲染哪个控件和信息
+-   我们创建了 `LearningOptions` 组件
+-   在 config 的 `widgets` 下使用组件
+-   给 `createChatbotMessage` 函数一个选项对象，说明需要渲染哪个控件和信息
 
 结果：
 
@@ -225,15 +220,15 @@ import LearningOptions from "./components/LearningOptions/LearningOptions";
 
 我们定义的控件会接收到机器人的各种属性：
 
-- `actionProvider`  \- 将 `actionProvider` 添加到控件，以执行动作
-- `setState`  \- 将 `setState` 添加到控件，以操作 state
-- `scrollIntoView`  \- 滑动到聊天框底部，在需要调整视图时使用这个函数
-- `props`  \- 给控件定义的 props 将通过 `configProps` 传递给控件
-- `state`  \- 通过 `mapStateToProps` 属性将自定义 state 传递给控件
+-   `actionProvider` \- 将 `actionProvider` 添加到控件，以执行动作
+-   `setState` \- 将 `setState` 添加到控件，以操作 state
+-   `scrollIntoView` \- 滑动到聊天框底部，在需要调整视图时使用这个函数
+-   `props` \- 给控件定义的 props 将通过 `configProps` 传递给控件
+-   `state` \- 通过 `mapStateToProps` 属性将自定义 state 传递给控件
 
 回头想想，我们给 `LearningOptions` 组件设置了一些选项：
 
-```
+```plain
   const options = [
     { text: "Javascript", handler: () => {}, id: 1 },
     { text: "Data visualization", handler: () => {}, id: 2 },
@@ -348,7 +343,7 @@ const config = {
 
 我们再做两件事情。
 
-- 给 `actionProvider` 添加一个方法
+-   给 `actionProvider` 添加一个方法
 
 ```jsx
 class ActionProvider {
@@ -374,35 +369,34 @@ this.setState((prevState) =&gt; ({
 
 ```
 
-- 把这个方法作为 `LearningOptions` 组件 handler
+-   把这个方法作为 `LearningOptions` 组件 handler
 
 ```jsx
-import React from "react";
-import "./LearningOptions.css";
+import React from 'react';
+import './LearningOptions.css';
 const LearningOptions = (props) => {
-  const options = [
-    {
-      text: "Javascript",
-      handler: props.actionProvider.handleJavascriptList,
-      id: 1,
-    },
-    { text: "Data visualization", handler: () => {}, id: 2 },
-    { text: "APIs", handler: () => {}, id: 3 },
-    { text: "Security", handler: () => {}, id: 4 },
-    { text: "Interview prep", handler: () => {}, id: 5 },
-  ];
-  const optionsMarkup = options.map((option) => (
-    <button
-      className="learning-option-button"
-      key={option.id}
-      onClick={option.handler}
-    >
-      {option.text}
-    </button>
-  ));
-  return <div className="learning-options-container">{optionsMarkup}</div>;
+    const options = [
+        {
+            text: 'Javascript',
+            handler: props.actionProvider.handleJavascriptList,
+            id: 1,
+        },
+        { text: 'Data visualization', handler: () => {}, id: 2 },
+        { text: 'APIs', handler: () => {}, id: 3 },
+        { text: 'Security', handler: () => {}, id: 4 },
+        { text: 'Interview prep', handler: () => {}, id: 5 },
+    ];
+    const optionsMarkup = options.map((option) => (
+        <button
+            className="learning-option-button"
+            key={option.id}
+            onClick={option.handler}
+        >
+            {option.text}
+        </button>
+    ));
+    return <div className="learning-options-container">{optionsMarkup}</div>;
 };
-
 ```
 
 好啦，信息量比较大。现在如果我们点击聊天机器人的 JavaScript 选项，会出现：
@@ -415,20 +409,20 @@ const LearningOptions = (props) => {
 
 ```jsx
 class MessageParser {
-  constructor(actionProvider) {
-    this.actionProvider = actionProvider;
-  }
-  parse(message) {
-    const lowerCaseMessage = message.toLowerCase();
-if (lowerCaseMessage.includes("hello")) {
-  this.actionProvider.greet();
-}
+    constructor(actionProvider) {
+        this.actionProvider = actionProvider;
+    }
+    parse(message) {
+        const lowerCaseMessage = message.toLowerCase();
+        if (lowerCaseMessage.includes('hello')) {
+            this.actionProvider.greet();
+        }
 
-if (lowerCaseMessage.includes("javascript")) {
-  this.actionProvider.handleJavascriptList();
-}  }
+        if (lowerCaseMessage.includes('javascript')) {
+            this.actionProvider.handleJavascriptList();
+        }
+    }
 }
-
 ```
 
 在输入框键入 “javaScript”，机器人会回复同样的清单。完成啦！

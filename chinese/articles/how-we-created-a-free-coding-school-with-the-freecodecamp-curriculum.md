@@ -1,7 +1,7 @@
-> * 原文地址：[We Created a Local Free Coding School Using the freeCodeCamp Curriculum. Here's What We Learned. 我们是如何采用 freeCodeCamp 的课程创办一所免费编程学校的](https://www.freecodecamp.org/news/how-we-created-a-free-coding-school-with-the-freecodecamp-curriculum/)
-> * 原文作者：Gwendolyn Faraday
-> * 译者：
-> * 校对者：
+> -   原文地址：[We Created a Local Free Coding School Using the freeCodeCamp Curriculum. Here's What We Learned. 我们是如何采用 freeCodeCamp 的课程创办一所免费编程学校的](https://www.freecodecamp.org/news/how-we-created-a-free-coding-school-with-the-freecodecamp-curriculum/)
+> -   原文作者：Gwendolyn Faraday
+> -   译者：
+> -   校对者：
 
 ![We Created a Local Free Coding School Using the freeCodeCamp Curriculum. Here's What We Learned.](https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
@@ -17,7 +17,7 @@ Option number one is the cheapest, but also the most frustrating and difficult. 
 
 Options two and three could work out well, if you can afford to take time off work (or at least work fewer hours), pay the tuition plus living expenses while you are attending and looking for a job, and still be able to manage your family and personal life. Not everyone is able to do that.
 
-This is why we created  [freeCodeSchool Indy][1]. It's a free coding program based off of the freeCodeCamp curriculum where we guide students through part-time coding school programs for three months.
+This is why we created [freeCodeSchool Indy][1]. It's a free coding program based off of the freeCodeCamp curriculum where we guide students through part-time coding school programs for three months.
 
 We have two two-hour classes per week - Monday and Wednesday from 6-8 pm, where we teach them everything from HTML basics to JavaScript and Intro to React.
 
@@ -75,7 +75,7 @@ When we were planning this program, our worry was that we would not get enough i
 
 It was very exciting to get so much interest in our program, but we also had to decide which students to take and how to choose in a fair way.
 
-We decided to whittle down the field by requiring people to show up for three pre-screening activities where they would complete some basic challenges, like  [Code.org's Flappy Game][3]. This let us know which students were dedicated to showing up and got the number of people in line down to around 80. That was still too way too many for the space we had so had to do a random lottery to select the final students.
+We decided to whittle down the field by requiring people to show up for three pre-screening activities where they would complete some basic challenges, like [Code.org's Flappy Game][3]. This let us know which students were dedicated to showing up and got the number of people in line down to around 80. That was still too way too many for the space we had so had to do a random lottery to select the final students.
 
 ### Teaching Students
 
@@ -146,19 +146,19 @@ If they simply do not show up or communicate with us, then they are free to reap
 
 Without volunteers, it would be quite overwhelming to run a program like this. Here are some of the different types of volunteers you will need to be successful.
 
-### Responsibilities:
+### Responsibilities
 
-1.  **Organizers –** Yes, we are volunteers too.  We are fortunate to have an amazing team of organizers who run the program. This includes myself, two other developers, and a computer lab supervisor from the library who also knows how to code. We chat several times per week in Discord to make sure the program is running smoothly and students are progressing. I think 3-5 is a pretty good number for an organizing team, but we might add more to do specific things, such as 'community manager' or 'volunteer coordinator.'
-2.  **Presenters –** These people give lectures during class times or special help sessions held on weekends usually. This is the hardest type of volunteering to manage. In our program, the lectures are 1.5-2 hours long and there are only 24 of them, so every single one has to be on point and flow with the rest of the curriculum. Some well-meaning volunteers might not be the right fit for giving lectures for people who are brand new to development. It is  **very**  important to be clear about what you want them to cover in the lecture, down to the individual points and expected learning outcomes. We also made sure to give volunteers a boilerplate slide deck to work off of so it matched the rest of the curriculum.
-3.  **Mentors –**  Students will not only have coding questions, but also have questions about their careers, networking, etc. Mentorship is great for answering these types of questions. We are currently working on setting up our mentorship program where volunteer mentors will check in with students at least once per week to make sure they are on track and answer any questions they have. One of the reasons for the delay is we have been working on a system for how to handle any complaints of inappropriate language or behavior that might take place when students meet one on one with volunteers.
-4.  **Lab Assistants –**  Lab assistants are there to help out synchronously during live lab sessions, usually with problems running software or debugging. We utilized lab assistants much more when we held in-person classes. With things being remote, we can't see the students' screens so we have had to just have a few people available to answer questions in the chat if people get stuck.
+1.  **Organizers –** Yes, we are volunteers too. We are fortunate to have an amazing team of organizers who run the program. This includes myself, two other developers, and a computer lab supervisor from the library who also knows how to code. We chat several times per week in Discord to make sure the program is running smoothly and students are progressing. I think 3-5 is a pretty good number for an organizing team, but we might add more to do specific things, such as 'community manager' or 'volunteer coordinator.'
+2.  **Presenters –** These people give lectures during class times or special help sessions held on weekends usually. This is the hardest type of volunteering to manage. In our program, the lectures are 1.5-2 hours long and there are only 24 of them, so every single one has to be on point and flow with the rest of the curriculum. Some well-meaning volunteers might not be the right fit for giving lectures for people who are brand new to development. It is **very** important to be clear about what you want them to cover in the lecture, down to the individual points and expected learning outcomes. We also made sure to give volunteers a boilerplate slide deck to work off of so it matched the rest of the curriculum.
+3.  **Mentors –** Students will not only have coding questions, but also have questions about their careers, networking, etc. Mentorship is great for answering these types of questions. We are currently working on setting up our mentorship program where volunteer mentors will check in with students at least once per week to make sure they are on track and answer any questions they have. One of the reasons for the delay is we have been working on a system for how to handle any complaints of inappropriate language or behavior that might take place when students meet one on one with volunteers.
+4.  **Lab Assistants –** Lab assistants are there to help out synchronously during live lab sessions, usually with problems running software or debugging. We utilized lab assistants much more when we held in-person classes. With things being remote, we can't see the students' screens so we have had to just have a few people available to answer questions in the chat if people get stuck.
 5.  **General Helpers –** These people help answer students' questions in the chat and perform other tasks like reviewing projects and portfolios. They are also useful for students to rubber duck off of or for encouragement.
 
 ### Volunteer Handbook
 
 We made a two-page handbook detailing expectations for volunteer behavior as well as requirements for participation in our program. It's pretty basic right now, but we will be building off of it as we go along I'm sure.
 
-We also give them a link to the  [freeCodeCamp code of conduct][4]  because it's short, sweet, and to the point: be kind, understanding, etc.
+We also give them a link to the [freeCodeCamp code of conduct][4] because it's short, sweet, and to the point: be kind, understanding, etc.
 
 ### Making Sure Staff has the Tools to Succeed
 
@@ -186,7 +186,7 @@ In the future, we hope to be able to provide internet access and laptop computer
 
 We don't have any marketing experts on our team. Our marketing efforts basically consist of making sure we keep our branding that we agreed upon - colors, verbiage, etc. - consistent and collectively sharing updates on social media.
 
-Fortunately, I have a small following on  [YouTube][5], LinkedIn, and other platforms where I have been able to solicit volunteers and get some community interest in our program.
+Fortunately, I have a small following on [YouTube][5], LinkedIn, and other platforms where I have been able to solicit volunteers and get some community interest in our program.
 
 The public library has also been helpful with reaching out to many different communities and pulling in students that we might never have been able to reach otherwise.
 
@@ -238,17 +238,17 @@ Putting this program together might have been the hardest thing I've ever done. 
 
 It wasn't just me though: There was a team of people helping out and none of this would have happened without them.
 
-I want to give special thanks to  [Jared Wilcurt][6], Casssandra Bautista, Marianne Mckenzie,  [The Indianapolis Public Library][7], freeCodeCamp, and all of our wonderful volunteers – all of whom were crucial in putting this program together.
+I want to give special thanks to [Jared Wilcurt][6], Casssandra Bautista, Marianne Mckenzie, [The Indianapolis Public Library][7], freeCodeCamp, and all of our wonderful volunteers – all of whom were crucial in putting this program together.
 
 We are working on open-sourcing our curriculum we used – slides, projects, freeCodeCamp challenges, supplementary material, and so on. It's taking a little bit of time to put everything together in a nice format, but be patient, we will get it out to anyone who is interested soon :)
 
 I'm interested in your thoughts. Do you have any ideas for things we can do better next time around? Please reach out to me and let me know.
 
-My Twitter:  [@gwen\_faraday][8]
+My Twitter: [@gwen_faraday][8]
 
-My YouTube:  [Faraday Academy][9]
+My YouTube: [Faraday Academy][9]
 
-Program Website:  [freecodeschoolindy.com][10]
+Program Website: [freecodeschoolindy.com][10]
 
 [1]: https://freecodeschoolindy.com/
 [2]: https://github.com/freecodeschoolindy

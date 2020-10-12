@@ -1,25 +1,25 @@
-> * 原文地址：[CSS Shapes Explained: How to Draw a Circle, Triangle, and More Using Pure CSS 通过绘制图形实例详解 CSS shape](https://www.freecodecamp.org/news/css-shapes-explained-how-to-draw-a-circle-triangle-and-more-using-pure-css/)
-> * 原文作者：Thomas Weibenfalk
-> * 译者：
-> * 校对者：
+> -   原文地址：[CSS Shapes Explained: How to Draw a Circle, Triangle, and More Using Pure CSS 通过绘制图形实例详解 CSS shape](https://www.freecodecamp.org/news/css-shapes-explained-how-to-draw-a-circle-triangle-and-more-using-pure-css/)
+> -   原文作者：Thomas Weibenfalk
+> -   译者：
+> -   校对者：
 
 ![CSS Shapes Explained: How to Draw a Circle, Triangle, and More Using Pure CSS](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/delila-ziebart-b0GSCFJ-Gzg-unsplash.jpg)
 
 Are you new to web development and CSS? Have you ever wondered how those nice shapes are made that you see all over the internet? Wonder no more. You've come to the right place.
 
-Below I will explain the very basics of creating shapes with CSS. There's  **a lot**  to tell you about this topic! Therefore I will not cover all (far from all) tools and shapes but this should give you a basic idea of how shapes are created with CSS.
+Below I will explain the very basics of creating shapes with CSS. There's **a lot** to tell you about this topic! Therefore I will not cover all (far from all) tools and shapes but this should give you a basic idea of how shapes are created with CSS.
 
-Some shapes require more "fix and tricks" than others. Creating shapes with CSS is usually a combination of using  **width, height, top, right, left, border, bottom, transform**  and pseudo-elements like  **:before**  and  **:after.** We also have more modern CSS properties to create shapes with like  **shape-outside**  and  **clip-path.** I'll write about them below also.
+Some shapes require more "fix and tricks" than others. Creating shapes with CSS is usually a combination of using **width, height, top, right, left, border, bottom, transform** and pseudo-elements like **:before** and **:after.** We also have more modern CSS properties to create shapes with like **shape-outside** and **clip-path.** I'll write about them below also.
 
 ## **CSS Shapes - The basic way**
 
-By using a few tricks in CSS we've always been able to create basic shapes like squares_,_ circles_,_  and triangles with regular CSS properties. Let's look at a few of them now.
+By using a few tricks in CSS we've always been able to create basic shapes like squares*,* circles*,* and triangles with regular CSS properties. Let's look at a few of them now.
 
 ### Squares and rectangles
 
 Squares and rectangles are probably the easiest shapes to achieve. By default, a div is always a square or a rectangle.
 
-You set the width and height as shown in the below code. Then it's just a matter of giving the element a background color. You can have whatever other properties you want on the element.  
+You set the width and height as shown in the below code. Then it's just a matter of giving the element a background color. You can have whatever other properties you want on the element.
 
 ```css
 #square {
@@ -33,7 +33,8 @@ You set the width and height as shown in the below code. Then it's just a matter
 
 A CSS square
 
-###   
+###
+
 Circles
 
 It's almost as easy to create a circle. To create a circle we can set the border-radius on the element. This will create curved corners on the element.
@@ -77,16 +78,16 @@ CSS Borders have angled edges
 
 A CSS Triangle
 
-If you want to have a triangle/arrow pointing in another direction You can change the border values corresponding to what side you want to be visible. Or you can rotate the element with the  _transform_  property if you want to be really fancy.
+If you want to have a triangle/arrow pointing in another direction You can change the border values corresponding to what side you want to be visible. Or you can rotate the element with the _transform_ property if you want to be really fancy.
 
 ```css
- #triangle {
-     width: 0;
-     height: 0;
-     border-top: 40px solid transparent;
-     border-right: 80px solid lightblue;
-     border-bottom: 40px solid transparent;
- }
+#triangle {
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-right: 80px solid lightblue;
+    border-bottom: 40px solid transparent;
+}
 ```
 
 ![](https://www.freecodecamp.org/news/content/images/2020/01/triangle2.png)
@@ -111,39 +112,39 @@ Luckily we have some modern CSS properties to use instead.
 
 Nowadays we have a property called **shape-outside** to use in CSS. This property lets you define a shape that the text will wrap/flow around.
 
-Along with this property we have some basic shapes:  
-  
+Along with this property we have some basic shapes:
+
 **inset()**  
 **circle()  
 ellipse()  
 polygon()**
 
-**Here's a tip**: You can also use the  **clip-path**  property. You can create your shape with that in the same way, but it won't let the text wrap around your shape like shape-outside does.
+**Here's a tip**: You can also use the **clip-path** property. You can create your shape with that in the same way, but it won't let the text wrap around your shape like shape-outside does.
 
-The element that we are going to apply the shape to with the shape-outside property to has to be floated. It also has to have a defined width and height.  **That's really important to know!**
+The element that we are going to apply the shape to with the shape-outside property to has to be floated. It also has to have a defined width and height. **That's really important to know!**
 
-You can read more about why  [here][2]. Below is also a text that I've taken from the provided link to developer.mozilla.org.
+You can read more about why [here][2]. Below is also a text that I've taken from the provided link to developer.mozilla.org.
 
-> The  `shape-outside`  property is specified using the values from the list below, which define the float area for float elements. The float area determines the shape around which inline content (float elements) wrap.
+> The `shape-outside` property is specified using the values from the list below, which define the float area for float elements. The float area determines the shape around which inline content (float elements) wrap.
 
 ### inset()
 
 The inset() type can be used to create a rectangle/square with an optional offset for the wrapping text. It allows you to provide values on how much you want your wrapping text to overlap the shape.
 
-You can specify the offset to be the same for all four directions like this:  **inset(20px).**  Or it can be individually set for each direction:  **inset(20px 5px 30px 10px)**.
+You can specify the offset to be the same for all four directions like this: **inset(20px).** Or it can be individually set for each direction: **inset(20px 5px 30px 10px)**.
 
-You can use other units also to set the offset, for example, percent. The values correspond like this:  **inset(top right bottom left)**_**.**_
+You can use other units also to set the offset, for example, percent. The values correspond like this: **inset(top right bottom left)**_**.**_
 
 Check out the below code example. I've specified the inset values to be 20px at the top, 5px to the right, 30px at the bottom and 10px to the left. If you want your text to go around your square instead you can just skip using inset() at all. Instead set the background on your div and specify the size as usual.
 
 ```css
- #square {
-     float: left;
-     width: 100px;
-     height: 100px;
-     shape-outside: inset(20px 5px 30px 10px);
-     background: lightblue;
- }
+#square {
+    float: left;
+    width: 100px;
+    height: 100px;
+    shape-outside: inset(20px 5px 30px 10px);
+    background: lightblue;
+}
 ```
 
 ![](https://www.freecodecamp.org/news/content/images/2020/01/inset.png)
@@ -153,13 +154,13 @@ The text is offset by the specified values. In this case 20px at top, 5px to the
 It is also possible to give inset() a second value that specifies the border-radius of the inset. Like below:
 
 ```css
- #square {
-     float: left;
-     width: 100px;
-     height: 100px;
-     shape-outside: inset(20px 5px 30px 10px round 50px);
-     background: lightblue;
- }
+#square {
+    float: left;
+    width: 100px;
+    height: 100px;
+    shape-outside: inset(20px 5px 30px 10px round 50px);
+    background: lightblue;
+}
 ```
 
 ![](https://www.freecodecamp.org/news/content/images/2020/01/inset2.png)
@@ -168,9 +169,9 @@ border-radius set to 50px on the inset
 
 ### circle()
 
-In this one a circle is created using the  **shape-outside**  property. You also have to apply a  **clip-path**  with the corresponding property for the circle to show up.
+In this one a circle is created using the **shape-outside** property. You also have to apply a **clip-path** with the corresponding property for the circle to show up.
 
-The  **clip-path**  property can take the same value as the shape-outside property so we can give it the standard  **circle()**  shape that we used for  **shape-outside**. Also, note that I've applied a 20px margin on the element here to give the text some space.
+The **clip-path** property can take the same value as the shape-outside property so we can give it the standard **circle()** shape that we used for **shape-outside**. Also, note that I've applied a 20px margin on the element here to give the text some space.
 
 ```css
 #circle {
@@ -197,35 +198,35 @@ In the below example I've set the radius to 50%. Then I have shifted the center 
 I've also specified another position value on the clip-path. This will clip the circle in half as I move the position to zero.
 
 ```css
- #circle {
-      float: left;
-      width: 150px;
-      height: 150px;
-      margin: 20px;
-      shape-outside: circle(50% at 30%);
-      clip-path: circle(50% at 0%);
-      background: lightblue;
-    }
+#circle {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    shape-outside: circle(50% at 30%);
+    clip-path: circle(50% at 0%);
+    background: lightblue;
+}
 ```
 
 ![](https://www.freecodecamp.org/news/content/images/2020/01/circle2.png)
 
 ### ellipse()
 
-Ellipses work the same way as circles except that they create an oval. You can define both the X value and the Y value, like this:  **ellipse(25px 50px).**
+Ellipses work the same way as circles except that they create an oval. You can define both the X value and the Y value, like this: **ellipse(25px 50px).**
 
 The same as a circle, it also takes a position value as the last value.
 
 ```css
-   #ellipse {
-      float: left;
-      width: 150px;
-      height: 150px;
-      margin: 20px;
-      shape-outside: ellipse(20% 50%);
-      clip-path: ellipse(20% 50%);
-      background: lightblue;
-    }
+#ellipse {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    shape-outside: ellipse(20% 50%);
+    clip-path: ellipse(20% 50%);
+    background: lightblue;
+}
 ```
 
 ![](https://www.freecodecamp.org/news/content/images/2020/01/ellipse.png)
@@ -236,11 +237,11 @@ A polygon is a shape with different vertices/coordinates defined. Below I create
 
 ```css
 #polygon {
-      float: left;
-      width: 150px;
-      height: 150px;
-      margin: 0 20px;
-      shape-outside: polygon(
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: 0 20px;
+    shape-outside: polygon(
         0 0,
         100% 0,
         100% 20%,
@@ -249,8 +250,8 @@ A polygon is a shape with different vertices/coordinates defined. Below I create
         40% 100%,
         40% 20%,
         0 20%
-      );
-      clip-path: polygon(
+    );
+    clip-path: polygon(
         0 0,
         100% 0,
         100% 20%,
@@ -259,9 +260,9 @@ A polygon is a shape with different vertices/coordinates defined. Below I create
         40% 100%,
         40% 20%,
         0 20%
-      );
-      background: lightblue;
-    }
+    );
+    background: lightblue;
+}
 ```
 
 ![](https://www.freecodecamp.org/news/content/images/2020/01/polygon_t.png)
@@ -280,11 +281,11 @@ This is a .png image with a transparent background.
 
 ```css
 #moon {
-      float: left;
-      width: 150px;
-      height: 150px;
-      shape-outside: url("./src/moon.png");
-    }
+    float: left;
+    width: 150px;
+    height: 150px;
+    shape-outside: url('./src/moon.png');
+}
 ```
 
 ![](https://www.freecodecamp.org/news/content/images/2020/01/moon2.png)

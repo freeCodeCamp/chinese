@@ -1,7 +1,7 @@
-> * 原文地址：[How to Become a Software Engineer if You Don't Have a Computer Science Degree 没有计算机相关学位，怎么成为软件工程师](https://www.freecodecamp.org/news/paths-to-becoming-a-software-engineer/)
-> * 作者：Randall Kanna
-> * 译者：
-> * 校对者：
+> -   原文地址：[How to Become a Software Engineer if You Don't Have a Computer Science Degree 没有计算机相关学位，怎么成为软件工程师](https://www.freecodecamp.org/news/paths-to-becoming-a-software-engineer/)
+> -   作者：Randall Kanna
+> -   译者：
+> -   校对者：
 
 How to Become a Software Engineer if You Don't Have a Computer Science Degree
 There isn’t just one way to become an engineer anymore. These days you can attend a bootcamp, teach yourself, get a degree, or get an internship. I attended a bootcamp but I still had to teach myself during it and just figure things out.
@@ -27,7 +27,7 @@ Fast forward five years and I’m a senior software engineer. I speak at confere
 
 But it didn’t work out for everyone that attended with me. I started out with 50–60 students in my cohort. By the time we graduated, about ten graduated with us. Some had stayed behind a cohort to learn a little more. Some dropped out early, while they still got a significant refund. Others decided that engineering wasn’t for them partway through the program when the financial loss was high. Others were asked to leave because they couldn’t keep up.
 
-A coding bootcamp is one of the largest purchases you’ll make in your life. Do your research. Many horror stories exist online of people who paid $10–20k only to find out the bootcamp was a scam or the teachers were inadequate.
+A coding bootcamp is one of the largest purchases you’ll make in your life. Do your research. Many horror stories exist online of people who paid \$10–20k only to find out the bootcamp was a scam or the teachers were inadequate.
 
 A good bootcamp will start with an online phase first, where you’ll learn from your home. It will teach you the basic concepts of programming so that when you get to the onsite portion of the program, you can focus on the tougher engineering concepts with teachers around to answer your questions.
 

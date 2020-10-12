@@ -1,7 +1,7 @@
-> * 原文地址：[Why You Need to Understand Software Requirements as a Software Engineer 你以为软件工程师就是写代码的吗？深入理解软件需求很重要！](https://www.freecodecamp.org/news/build-a-simple-json-api-in-python/)
-> * 原文作者：Greg Byrne
-> * 译者：
-> * 校对者：
+> -   原文地址：[Why You Need to Understand Software Requirements as a Software Engineer 你以为软件工程师就是写代码的吗？深入理解软件需求很重要！](https://www.freecodecamp.org/news/build-a-simple-json-api-in-python/)
+> -   原文作者：Greg Byrne
+> -   译者：
+> -   校对者：
 
 ![Why You Need to Understand Software Requirements as a Software Engineer](https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/understanding-software-requirements.jpg)
 
@@ -9,9 +9,9 @@ In this article, you'll learn all about Software Requirements. You'll get an out
 
 You should gain some insight into your role and activities with software requirements. If anything, you'll have something to discuss with colleagues after your next stand-up 😃
 
-This article borrows heavily from the tome that is the  [IEEE SWEBOK guide][1]. It attempts to distill some of that knowledge, re-purposing it more concisely. In case your wondering, SWEBOK is an acronym for the Software Engineering Body of Knowledge which is maintained by the IEEE Computer Society.
+This article borrows heavily from the tome that is the [IEEE SWEBOK guide][1]. It attempts to distill some of that knowledge, re-purposing it more concisely. In case your wondering, SWEBOK is an acronym for the Software Engineering Body of Knowledge which is maintained by the IEEE Computer Society.
 
-## Upfront, Why is this important?
+## Upfront, Why is this important
 
 There is a misconception from those not in software engineering that the role of a software engineer is to just "write code."
 
@@ -21,7 +21,7 @@ A software engineer's role is to build business solutions at enterprise scale. T
 
 One area of responsibility you have as a professional software engineer is the area of software requirements.
 
-## What are Software Requirements?
+## What are Software Requirements
 
 Software Requirements on the surface sound simple. The software must do X for Y so that Z. Think about it for long enough on any problem that software could solve (or about existing software already solving a problem) and you could probably brainstorm a large number of requirements. Easy right?
 
@@ -47,7 +47,7 @@ Requirements engineering is distinct from software engineering in the type of wo
 
 It is important you understand your connection with the requirements process as likely you will be generally involved in some requirements activity at some point.
 
-## What is involved in software requirements for the software engineer?
+## What is involved in software requirements for the software engineer
 
 Depending on your organization's requirements process and/or the requirement activities the software engineer is responsible for, you may be involved in any or all stages. This could be from gathering requirements right through to verifying their implementation.
 
@@ -66,7 +66,7 @@ Managing and documenting requirements won't typically be your responsibility. It
 
 It is important that you know how to access and use the management system of requirements to assess requirement changes and impact analysis.
 
-### Um, there isn't a management system of requirements...
+### Um, there isn't a management system of requirements
 
 In some cases, the recording and management of requirements may not be in a specialized system. They could be recorded in other types of recording systems, such as issue tracking software, project management tools, or perhaps even the version control system.
 
@@ -92,13 +92,13 @@ Requirements elicitation refers to the activity that describes how the requireme
 
 From a project management perspective, elicitation is critical to derive the project scope and the deliverables important to the client or user needs, prioritizing the most important needs first.
 
-### What is involved in eliciting software requirements?
+### What is involved in eliciting software requirements
 
 Depending on the your role's level of involvement in the requirements process, you may need to take requirements from source.
 
 Requirements elicitation helps inform the design and architecture of the overall solution. It's important you understand where requirements come from and what techniques are used.
 
-### Where do the software requirements come from?
+### Where do the software requirements come from
 
 There are many sources to requirements, such as:
 
@@ -111,7 +111,7 @@ There are many sources to requirements, such as:
 If you're involved in the elicitation from sources, you'll need to:
 
 -   Pay particular attention to the goals.
-    -   These often are generally vague, like  _"The software must be implemented using best practices"_  or  _"The software must be user-friendly"_
+    -   These often are generally vague, like _"The software must be implemented using best practices"_ or _"The software must be user-friendly"_
     -   Assess the relative value to priority of the solution. Study relatively low-cost ways of achieving.
 -   Acquire or have available knowledge about the application domain
     -   This provides you the background information that gives understanding to the reasons behind the requirements.
@@ -123,7 +123,7 @@ If you're involved in the elicitation from sources, you'll need to:
     -   The operating environment will be subject to an organization's structure, culture and internal politics.
     -   A general principle your software should strive for is not introducing unplanned or forced changes on the organization's business process.
 
-### How do I get the software requirements?
+### How do I get the software requirements
 
 Some principal techniques you may be involved with (providing technical expertise) could be:
 
@@ -266,7 +266,7 @@ You've made it. Kudos to you!
 
 I hope this article provided some benefit in acknowledging your role as a software engineer with Software Requirements.
 
-You can  [read more of my articles on my blog][2].
+You can [read more of my articles on my blog][2].
 
 _This article is shared freely and the author did not receive any contribution or profit as mandated by SWEBOK copyright and reprint permissions. Any views or opinions expressed do not reflect those of IEEE or any body/organization to which I am affiliated with, is not endorsed by the IEEE, and represent my own solely my own view and opinions._
 

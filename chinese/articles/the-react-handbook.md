@@ -4335,9 +4335,9 @@ npm install --save-dev     @babel/plugin-transform-es2015-arrow-functions
 
 如果文件夹中还没有这个文件，你可以创建一个空白文件，并添加内容到文件中。
 
-> `_TIP: If you have never seen a dot file (a file starting with a dot) it might be odd at first because that file might not appear in your file manager, as it’s a hidden file._`
+> _提示：如果你从未见过命名以点开头的文件，一开始可能会觉得奇怪，因为这个文件是隐藏文件，它应该不会出现在你的文件管理器中。_
 
-``Now if we have a  `script.js`  file with this content:``
+现在如果 `script.js` 文件中包含如下内容：
 
 ```
 var a = () => {};
@@ -4355,7 +4355,7 @@ var bob = {
 console.log(bob.printFriends());
 ```
 
-``running  `babel script.js`  will output the following code:``
+执行 `babel script.js` 会输出以下代码：
 
 ```
 var a = function () {};var a = function (b) {
@@ -4379,25 +4379,25 @@ var bob = {
 console.log(bob.printFriends());
 ```
 
-`As you can see arrow functions have all been converted to JavaScript ES5 functions.`
+可以看到箭头函数全被转换成了 JavaScript ES5 标准的函数。
 
-#### `Babel presets`
+#### Babel 预设值
 
-`We just saw in the previous article how Babel can be configured to transpile specific JavaScript features.`
+我们在前面学习了配置 Babel 编译 JavaScript 的功能。
 
-`You can add much more plugins, but you can’t add to the configuration features one by one, it’s not practical.`
+你可以添加更多插件，但是不能一一添加到配置功能中，这是不实际的。
 
-`This is why Babel offers  **presets**.`
+这是为什么 Babel 提供 **预设值**。
 
-``The most popular presets are  `env`  and  `react`.``
+最广泛用到的预设值是 `env` 和 `react`。
 
-> ``_Tip: Babel 7 deprecated (and removed) yearly presets like  `preset-es2017`, and stage presets. Use  `@babel/preset-env`  instead._``
+> _提示： Babel 7 废弃（并删除）了以年为单位的预设值，如 `preset-es2017`，和针对处于标准提案阶段的功能所编写的预设。取而代之的是 `@babel/preset-env`。_
 
-#### `` `env`  preset``
+#### `env` 预设
 
-``The  `env`  preset is very nice: you tell it which environments you want to support, and it does everything for you,  **supporting all modern JavaScript features**.``
+`env` 预设非常方便：你告知 Babel 你希望支持哪些环境，它就会帮你处理，**支持所有现代的 JavaScript 功能**。
 
-`E.g. “support the last 2 versions of every browser, but for Safari let’s support all versions since Safari 7”`
+·例如，“支持所有浏览器的最新两个版本，以及支持 Safari 7 之后的所有 Safari 版本。
 
 ```
 {
@@ -4411,7 +4411,7 @@ console.log(bob.printFriends());
 }
 ```
 
-`or “I don’t need browser support, just let me work with  [Node.js][123]  6.10”`
+或是“我不需要浏览器支持，让我使用 Node.js 6.10 环境就行了”。
 
 ```
 {
@@ -4425,29 +4425,29 @@ console.log(bob.printFriends());
 }
 ```
 
-#### `` `react`  preset``
+#### `react` 预设
 
-``The  `react`  preset is very convenient when writing React apps: adding  `preset-flow`,  `syntax-jsx`,  `transform-react-jsx`,  `transform-react-display-name`.``
+写 React 应用时，`react` 预设非常方便：添加 `preset-flow`, `syntax-jsx`,  `transform-react-jsx`,  `transform-react-display-name`。
 
-`By including it, you are all ready to go developing React apps, with JSX transforms and Flow support.`
+添加以上内容后，你在开发 React 应用时就支持 JSX 语法转换和 Flow 了。
 
-#### `More info on presets`
+#### 更多关于预审的信息
 
-`[https://babeljs.io/docs/plugins/][124]`
+[https://babeljs.io/docs/plugins/][124]
 
-#### `Using Babel with webpack`
+#### 配合 webpack 使用 Babel
 
-`If you want to run modern JavaScript in the browser, Babel on its own is not enough, you also need to bundle the code. Webpack is the perfect tool for this.`
+如果你想在浏览器运行现代 JavaScript，仅靠 Babel 是不够的，你还需要打包代码。Webpack 是完成这项任务的最佳工具。
 
-`Modern JS needs two different stages: a compile stage, and a runtime stage. This is because some ES6+ features need a polyfill or a runtime helper.`
+现代 JS 包含两个不同的阶段：编译阶段和执行阶段。这是因为有些 ES6+ 的功能需要 polyfill 或者运行帮助。
 
-`To install the Babel polyfill runtime functionality, run`
+执行以下命令下载 Babel polyfill 运行功能
 
 ```
 npm install @babel/polyfill             @babel/runtime             @babel/plugin-transform-runtime
 ```
 
-``Now in your  `webpack.config.js`  file add:``
+接下来在你的 `webpack.config.js` 文件中添加：
 
 ```
 entry: [
@@ -4476,78 +4476,78 @@ module: {
 }
 ```
 
-``**By keeping the presets and plugins information inside the  `webpack.config.js`  file, we can avoid having a  `.babelrc`  file.**``
+在 `webpack.config.js` 文件中维护预设和插件信息就可以避免使用 `.babelrc` 文件了。
 
-### `**Webpack**`
+### Webpack
 
-`**Webpack is a tool that lets you compile JavaScript modules, also known as  **module bundler**. Given a large number of files, it generates a single file (or a few files) that run your app.**`
+Webpack 是编译 JavaScript 模块的工具，也被称为**模块打包器**。给它许多文件，它会生成一个（或几个文件）来运行你的应用。
 
-`**It can perform many operations:**`
+它可以执行以下操作：
 
--   `**helps you bundle your resources.**`
--   `**watches for changes and re-runs the tasks.**`
--   `**can run Babel transpilation to ES5, allowing you to use the latest JavaScript features without worrying about browser support.**`
--   `**can transpile CoffeeScript to JavaScript**`
--   `**can convert inline images to data URIs.**`
--   `**allows you to use require() for CSS files.**`
--   `**can run a development webserver.**`
--   `**can handle hot module replacement.**`
--   `**can split the output files into multiple files, to avoid having a huge js file to load in the first page hit.**`
--   `**can perform  [tree shaking][125].**`
+- 帮你打包资源
+- 监听文件变动，并重新运行打包任务
+- 运行 Babel 将代码编译到 ES5，让你可以不用顾虑浏览器支持，使用最新的 JavaScript 特性
+- 可以将 CoffeeScript 编译成 JavaScript
+- 可以将内联图片转换成数据 URI
+- 允许你对 CSS 文件使用 require()
+- 可以运行开发 web 服务器
+- 可以处理热模块更换
+- 可以将输出文件拆分成多个文件，防止首页加载时文件过大
+- 可以执行 tree shaking
 
-`**Webpack is not limited to be use on the frontend, it’s also useful in backend Node.js development as well.**`
+Webpack 不仅限于在前端使用，它在后端 Node.js 开发中也很有用。
 
-`**Predecessors of webpack, and still widely used tools, include:**`
+仍被广泛使用的、在 webpack 之前出现的打包工具包括：
 
--   `**Grunt**`
--   `**Broccoli**`
--   `**Gulp**`
+-  Grunt
+-  Broccoli
+-  Gulp
 
-`**There are lots of similarities in what those and Webpack can do, but the main difference is that those are known as  **task runners**, while webpack was born as a module bundler.**`
+这些工具和 Webpack 的功能之间有很多相似性，但是最主要的区别时它们是**任务运行器**，而 webpack 是作为模块打包器诞生的。
 
-`**It’s a more focused tool: you specify an entry point to your app (it could even be an HTML file with script tags) and webpack analyzes the files and bundles all you need to run the app in a single JavaScript output file (or in more files if you use code splitting).**`
+它的功能更加集中：你指定应用的入口（它甚至可以是包含 script 标签的 HTML 文件），webpack 分析所有的文件，并将你需要的代码打包在一个 JavaScript 输出文件(或在多个拆分的文件)中。
 
-#### `**Installing webpack**`
+#### 安装 webpack
 
-`**Webpack can be installed globally or locally for each project.**`
+Webpack 可以全局安装，也可以在项目本地安装。
 
-#### `**Global install**`
+#### 全局安装
 
-`**Here’s how to install it globally with  [Yarn][126]:**`
+以下命令通过 Yarn 全局安装 webpack：
 
 ```
 yarn global add webpack webpack-cli
 ```
 
-`**with  [npm][127]:**`
+通过 npm 安装：
 
 ```
 npm i -g webpack webpack-cli
 ```
 
-`**once this is done, you should be able to run**`
+安装完成后，你就可以运行了
 
 ```
 webpack-cli
 ```
 
-#### `**Local install**`
+#### 本地安装
 
-`**Webpack can be installed locally as well. It’s the recommended setup, because webpack can be updated per-project, and you have less resistance to using the latest features just for a small project rather than updating all the projects you have that use webpack.**`
+Webpack 也可以在本地安装。这是推荐的操作，因为 webpack 可以按项目进行更新，而且你可以更轻松地在小项目中使用最新的特性，而不需要更新所有项目的 webpack。
 
-`**With  [Yarn][128]:**`
+通过 Yarn 安装：
 
 ```
 yarn add webpack webpack-cli -D
 ```
 
-`**with  [npm][129]:**`
+通过 npm 安装：
 
 ```
 npm i webpack webpack-cli --save-dev
 ```
 
-``**Once this is done, add this to your  `package.json`  file:**``
+安装完成后，在你的 `package.json` 文件中添加以下代码：
 
 ```
 {
@@ -4558,23 +4558,21 @@ npm i webpack webpack-cli --save-dev
 }
 ```
 
-`**once this is done, you can run webpack by typing**`
+安装完成后，你可以在项目目录下输入以下命令运行 webpack
 
 ```
 yarn build
 ```
 
-`**in the project root.**`
+#### Webpack 配置
 
-#### `**Webpack configuration**`
+默认情况下，如果你遵循以下约定，webpack（从版本 4 开始）就不用做任何配置：
 
-`**By default, webpack (starting from version 4) does not require any config if you respect these conventions:**`
+- 你的应用**入口**是 `./src/index.js`
+- 输入是 `./dist/main.js`
+- Webpack 在生产环境使用
 
--   ``**the  **entry point**  of your app is  `./src/index.js`**``
--   ``**the output is put in  `./dist/main.js`.**``
--   `**Webpack works in production mode**`
-
-``**You can customize every little bit of webpack of course, when you need. The webpack configuration is stored in the  `webpack.config.js`  file, in the project root folder.**``
+如果需要，你当然可以自定义 webpack 的每一个细节。webpack 配置保存在项目根文件夹的 `webpack.config.js` 文件中。
 
 #### `**The entry point**`
 
@@ -4588,9 +4586,9 @@ module.exports = {
 }
 ```
 
-#### `**The output**`
+#### 输出
 
-``**By default the output is generated in  `./dist/main.js`. This example puts the output bundle into  `app.js`:**``
+输出默认生成在 `./dist/main.js`。以下例子将输出改为 `app.js`：
 
 ```
 module.exports = {
@@ -4603,19 +4601,19 @@ module.exports = {
 }
 ```
 
-#### `Loaders`
+#### Loaders
 
-``Using webpack allows you to use  `import`  or  `require`  statements in your JavaScript code to not just include other JavaScript, but any kind of file, for example CSS.``
+使用 webpack 不仅可以在 JavaScript 代码中通过 `import` 或 `require` 引入 JavaScript，还有其他文件，如 CSS。
 
-`Webpack aims to handle all our dependencies, not just JavaScript, and loaders are one way to do that.`
+Webpack 旨在处理所有的依赖，而不仅是 JavaScript，loader 就是用来实现这一功能的。
 
-`For example, in your code you can use:`
+例如，你可以在代码中使用：
 
 ```
 import 'style.css'
 ```
 
-`by using this loader configuration:`
+通过使用如下 load 配置：
 
 ```
 module.exports = {
@@ -4629,9 +4627,9 @@ module.exports = {
 }
 ```
 
-`The  [regular expression][130]  targets any CSS file.`
+以上正则表达式表示任意 CSS 文件。
 
-`A loader can have options:`
+load 配置可以添加 options：
 
 ```
 module.exports = {
@@ -4655,7 +4653,7 @@ module.exports = {
 }
 ```
 
-`You can require multiple loaders for each rule:`
+你可以针对每条规则添加多个 loader：
 
 ```
 module.exports = {
@@ -4676,13 +4674,13 @@ module.exports = {
 }
 ```
 
-``In this example,  `css-loader`  interprets the  `import 'style.css'`  directive in the CSS.  `style-loader`  is then responsible for injecting that CSS in the DOM, using a  `<style>`  tag.``
+在这个例子中， `css-loader` 解释了 `import 'style.css'` 指令。`style-loader` 接着通过 `<style>` 标签将 CSS 注入到 DOM 中。
 
-`The order matters, and it’s reversed (the last is executed first).`
+顺序对结果有影响，并且是倒序的（靠后的规则先执行）。
 
-`What kind of loaders are there? Many!  [You can find the full list here][131].`
+有多少 loader 呢？许多！你可以在[列表][131]中查看。
 
-`A commonly used loader is Babel, which is used to transpile modern JavaScript to ES5 code:`
+最常用的 loader 就是 Babel，用来将现代 JavaScript 编译成 ES5 代码：
 
 ```
 module.exports = {
@@ -4705,7 +4703,7 @@ module.exports = {
 }
 ```
 
-`This example makes Babel preprocess all our React/JSX files:`
+下面的例子预处理了所有 React/JSX 文件：
 
 ```
 module.exports = {
@@ -4729,7 +4727,7 @@ module.exports = {
 }
 ```
 
-``[See the  `babel-loader`  options here][132].``
+[查看 `babel-loader` 的 options 配置][132]。
 
 #### `Plugins`
 

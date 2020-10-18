@@ -33,7 +33,7 @@
 -   [Async/Await][13]
 -   [ES Modules][14]
 
-****SECTION 2****: REACT CONCEPTS
+\***\*SECTION 2\*\***: REACT CONCEPTS
 
 -   [Single Page Applications][15]
 -   [Declarative][16]
@@ -43,7 +43,7 @@
 -   [The Virtual DOM][20]
 -   [Unidirectional Data Flow][21]
 
-****SECTION 3****: IN-DEPTH REACT
+\***\*SECTION 3\*\***: IN-DEPTH REACT
 
 -   [JSX][22]
 -   [Components][23]
@@ -64,28 +64,28 @@
 -   [Hooks][38]
 -   [Code splitting][39]
 
-****SECTION 4****: PRACTICAL EXAMPLES
+\***\*SECTION 4\*\***: PRACTICAL EXAMPLES
 
 -   [Build a simple counter][40]
 -   [Fetch and display GitHub users information via API][41]
 
-****SECTION 5****: STYLING
+\***\*SECTION 5\*\***: STYLING
 
 -   [CSS in React][42]
 -   [SASS in React][43]
 -   [Styled Components][44]
 
-****SECTION 6****: TOOLING
+\***\*SECTION 6\*\***: TOOLING
 
 -   [Babel][45]
 -   [Webpack][46]
 
-****SECTION 7****: TESTING
+\***\*SECTION 7\*\***: TESTING
 
 -   [Jest][47]
 -   [Testing React components][48]
 
-****SECTION 8****: THE REACT ECOSYSTEM
+\***\*SECTION 8\*\***: THE REACT ECOSYSTEM
 
 -   [React Router][49]
 -   [Redux][50]
@@ -153,18 +153,18 @@ React 是一个库，说 _下载_ 听起来可能会有点奇怪，也许 _配�
 
 ```html
 <html>
-  ...
-  <body>
     ...
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.3/umd/react.development.js"
-      crossorigin
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.3/umd/react-dom.production.min.js"
-      crossorigin
-    ></script>
-  </body>
+    <body>
+        ...
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.3/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.3/umd/react-dom.production.min.js"
+            crossorigin
+        ></script>
+    </body>
 </html>
 ```
 
@@ -178,7 +178,6 @@ React 是一个库，说 _下载_ 听起来可能会有点奇怪，也许 _配�
 <script src="app.js"></script>
 
 <!-- or -->
-
 ```
 
 使用 JSX 还需要额外的步骤：加载 Babel，
@@ -197,9 +196,8 @@ React 是一个库，说 _下载_ 听起来可能会有点奇怪，也许 _配�
 
 ```jsx
 const Button = () => {
-  return <button>Click me!</button>
-}
-
+    return <button>Click me!</button>;
+};
 ```
 
 可以看看这个简单的 Glitch 示例： [https://glitch.com/edit/#!/react-example-inline-jsx?path=script.js](https://glitch.com/edit/#!/react-example-inline-jsx?path=script.js)
@@ -273,13 +271,13 @@ Codepen 里的 "pens" 适合只包含一个 JavaScript 文件的快速项目，�
 使用 Codepen 时需要注意的是，由于 Codepen 的内部机制，在引入 ES 模块时不会使用 `import` 语法，以 `useState` 举例，引入时应这样使用：
 
 ```jsx
-const { useState } = React
+const { useState } = React;
 ```
 
 而不是：
 
 ```jsx
-import { useState } from 'react'
+import { useState } from 'react';
 ```
 
 ### 第 1 部分： 使用 React 必知的 JavaScript 核心概念
@@ -309,7 +307,7 @@ JavaScript 中的变量没有指定数据类型。给变量赋值为某种特定
 在 ES2015 之前，`var` 是唯一用于定义变量的语法。
 
 ```jsx
-var a = 0
+var a = 0;
 ```
 
 如果你忘记使用 `var`，这样会给一个未声明的变量赋值，结果会有所不同。
@@ -319,14 +317,14 @@ var a = 0
 如果声明变量时不给它赋值，那么这个变量的值在赋值前一直是 `undefined`。
 
 ```jsx
-var a //typeof a === 'undefined'
+var a; //typeof a === 'undefined'
 ```
 
 你可以对一个变量重复声明，这样会将之前的声明覆盖掉：
 
 ```jsx
-var a = 1
-var a = 2
+var a = 1;
+var a = 2;
 ```
 
 你也可以在一个语句中一次声明多个变量：
@@ -360,7 +358,7 @@ var a = 1, b = 2
 使用 `var` 或 `let` 声明的变量可以重复声明、重新赋值，但是使用 `const` 声明的变量一旦初始化，它的值就不可以再更改了，不能再次对变量赋值。
 
 ```jsx
-const a = 'test'
+const a = 'test';
 ```
 
 我们无法将另一个字面量赋值给常量 `a`。但如果 `a` 是一个提供了改变内部值的方法的对象，我们可以通过这个方法来修改 `a` 的值。
@@ -382,35 +380,35 @@ const a = 'test'
 从写法上来看，这一变化简单又受欢迎，因为它使你可以通过更简短的语法写函数，从原来的写法：
 
 ```jsx
-const myFunction = function() {
-  //...
-}
+const myFunction = function () {
+    //...
+};
 ```
 
 变为：
 
 ```jsx
 const myFunction = () => {
-  //...
-}
+    //...
+};
 ```
 
 如果函数体只包含一条语句，你可以省略大括号，将所有内容写在一行里：
 
 ```jsx
-const myFunction = () => doSomething()
+const myFunction = () => doSomething();
 ```
 
 参数通过括号传入：
 
 ```jsx
-const myFunction = (param1, param2) => doSomething(param1, param2)
+const myFunction = (param1, param2) => doSomething(param1, param2);
 ```
 
 如果函数值只有一个参数，你可以把括号也省略掉：
 
 ```jsx
-const myFunction = param => doSomething(param)
+const myFunction = (param) => doSomething(param);
 ```
 
 得益于这种简短的语法，箭头函数**鼓励使用小函数**。
@@ -422,15 +420,13 @@ const myFunction = param => doSomething(param)
 当函数体只有一行语句时，值会隐式返回。
 
 ```jsx
-const myFunction = () => 'test'
-
+const myFunction = () => 'test';
 ```
 
 另一个例子是，当函数返回一个对象时，需要使用圆括号把返回的对象包起来，防止对象的大括号被认为是返回的函数体的大括号。
 
 ```jsx
-const myFunction = () => ({ value: 'test' })
-
+const myFunction = () => ({ value: 'test' });
 ```
 
 ### 箭头函数中的 this
@@ -473,11 +469,10 @@ const car = {
 处理事件时也会有这一问题，DOM 事件监听器让 `this` 指向目标元素，如果事件处理器依赖 `this` ，那么使用普通函数更加合适：
 
 ```jsx
-const link = document.querySelector('#link')
+const link = document.querySelector('#link');
 link.addEventListener('click', () => {
-  // this === window
-})
-
+    // this === window
+});
 ```
 
 ### 剩余运算符和扩展运算符
@@ -487,40 +482,40 @@ link.addEventListener('click', () => {
 我们先以数组为例。如
 
 ```jsx
-const a = [1, 2, 3]
+const a = [1, 2, 3];
 ```
 
 你可以这样创建一个新的数组：
 
 ```jsx
-const b = [...a, 4, 5, 6]
+const b = [...a, 4, 5, 6];
 ```
 
 也可以这样复制一个数组：
 
 ```jsx
-const c = [...a]
+const c = [...a];
 ```
 
 这一方法同样适用于对象。你可以这样复制一个对象：
 
 ```jsx
-const newObj = { ...oldObj }
+const newObj = { ...oldObj };
 ```
 
 用于字符串时，扩展运算符会使用字符串的字符创建数组：
 
 ```jsx
-const hey = 'hey'
-const arrayized = [...hey] // ['h', 'e', 'y']
+const hey = 'hey';
+const arrayized = [...hey]; // ['h', 'e', 'y']
 ```
 
 该运算符在某些场景非常有用，其中的一个应用场景是可以将数组轻松转换成函数参数：
 
 ```jsx
-const f = (foo, bar) => {}
-const a = [1, 2]
-f(...a)
+const f = (foo, bar) => {};
+const a = [1, 2];
+f(...a);
 ```
 
 （过去你需要通过 `f.apply(null, a)` 来实现，但是写起来既不优雅，可读性也不高）
@@ -535,9 +530,9 @@ const numbers = [1, 2, 3, 4, 5]
 还有**扩展运算符**：
 
 ```jsx
-const numbers = [1, 2, 3, 4, 5]
-const sum = (a, b, c, d, e) => a + b + c + d + e
-const sumOfNumbers = sum(...numbers)
+const numbers = [1, 2, 3, 4, 5];
+const sum = (a, b, c, d, e) => a + b + c + d + e;
+const sumOfNumbers = sum(...numbers);
 ```
 
 ES2018 引入了剩余属性，用法和剩余运算符相同，不过适用于对象。
@@ -546,20 +541,19 @@ ES2018 引入了剩余属性，用法和剩余运算符相同，不过适用于�
 
 ```jsx
 const { first, second, ...others } = {
-  first: 1,
-  second: 2,
-  third: 3,
-  fourth: 4,
-  fifth: 5
-}
-
+    first: 1,
+    second: 2,
+    third: 3,
+    fourth: 4,
+    fifth: 5,
+};
 ```
 
 **扩展属性**允许在创建新对象时，通过扩展运算符添加属性：
 
 ```jsx
-const items = { first, second, ...others }
-items //{ first: 1, second: 2, third: 3, fourth: 4, fifth: 5 }
+const items = { first, second, ...others };
+items; //{ first: 1, second: 2, third: 3, fourth: 4, fifth: 5 }
 ```
 
 ### 对象和数组的解构
@@ -582,14 +576,14 @@ const { firstName: name, age } = person //name: Tom, age: 54
 解构的语法同样适用于数组：
 
 ```jsx
-const a = [1, 2, 3, 4, 5]
-const [first, second] = a
+const a = [1, 2, 3, 4, 5];
+const [first, second] = a;
 ```
 
 以下语句通过索引 0、1、4 从数组 `a` 中取值创建了 3 个新的变量。
 
 ```jsx
-const [first, second, , , fifth] = a
+const [first, second, , , fifth] = a;
 ```
 
 ### 模板字符串
@@ -599,7 +593,7 @@ const [first, second, , , fifth] = a
 新的语法乍看之下非常简单，不过是用倒引号取代了原先的单引号或双引号：
 
 ```jsx
-const a_string = something
+const a_string = something;
 ```
 
 但模板字符串提供了许多普通字符串不具备的特性，具体来说：
@@ -752,7 +746,7 @@ flavio.hello()
 
 静态方法直接在类上执行：
 
-```
+```plain
 class Person {
   static genericHello() {
     return 'Hello'
@@ -1007,7 +1001,7 @@ Fetch API 的实现是基于 Promise 的机制，调用 `fetch()` 相当于通�
 
 示例：
 
-```
+```plain
 const status = response => {
   if (response.status >= 200 && response.status < 300) {
     return Promise.resolve(response)
@@ -1175,7 +1169,7 @@ const doSomething = async () => {
 
 这是一个用 async/await 运行异步函数的简单示例：
 
-```
+```plain
 const doSomethingAsync = () => {
   return new Promise(resolve => {
     setTimeout(() => resolve('I did something'), 3000)
@@ -1205,7 +1199,7 @@ I did something //after 3s
 
 这也是为什么下面的代码是有效的：
 
-```
+```plain
 const aFunction = async () => {
   return 'test'
 }
@@ -1373,7 +1367,7 @@ import { foo } from 'utils/uppercase.js'
 
 我们在前面看到这个示例：
 
-```
+```plain
 export default str => str.toUpperCase()
 ```
 
@@ -1654,7 +1648,7 @@ DOM (_Document Object Model 文档对象模型_)是页面的树形表示，从 `
 
 如果你不使用如 jQuery 及其他库提供的抽象 API ，那么 DOM 的 API 就是你经常看到的熟悉语法：
 
-```
+```plain
 document.getElementById(id)
 document.getElementsByTagName(name)
 document.createElement(name)
@@ -1759,7 +1753,7 @@ const element = <h1 id={myId}>Hello, world!</h1>
 
 以下 JSX 代码段将两个组件放入到 `div` 标签中：
 
-```
+```plain
 <div>
   <BlogPostsList />
   <Sidebar />
@@ -1843,7 +1837,6 @@ ReactDOM.render(
 ```
 
 如你所见，_我们在 JSX 代码中放入了 JavaScript 代码，又在 JavaScript 代码中定义了 JSX，又在这一层 JSX 中嵌套了 JavaScript 代码_。如有需要，你可以无限嵌套。
-
 
 #### JSX 中的 HTML
 
@@ -2506,7 +2499,7 @@ class ChildComponent extends React.Component {
 
 组件的内部状态可以在构造器内通过 props 来设定值，像这样：
 
-```
+```plain
 class ChildComponent extends React.Component {
   constructor(props) {
     super(props)
@@ -2580,7 +2573,7 @@ PropTypes.oneOf(['Test1', 'Test2']),
 
 可以使用类的实例类型：
 
-```
+```plain
 PropTypes.instanceOf(Something)
 ```
 
@@ -2687,7 +2680,7 @@ const CurrencySwitcher = props => {
 
 类组件中，通常会将事件处理器定义成方法：
 
-```
+```plain
 class Converter extends React.Component {
   handleChangeCurrency = event => {
     this.setState({ currency: this.state.currency === '€' ? '$' : '€' })
@@ -2701,7 +2694,7 @@ class Converter extends React.Component {
 
 在类组件中，不要忘记绑定方法。ES6 的类默认不绑定方法，也就是说除非通过箭头函数定义方法，否则方法的 `this` 没有定义：
 
-```
+```plain
 class Converter extends React.Component {
   handleClick = e => {
     /* ... */
@@ -3054,7 +3047,7 @@ HTML 表单由于历史原因表现不一致。React 则帮我们处理了这些
 
 在下面的例子中，需要在构造器中使用 `React.createRef()` 来创建引用，并将这个引用指定给表单的 `ref` 属性，这样才能在 submit 处理器中获取表单字段的值：
 
-```
+```plain
 class FileInput extends React.Component {
   constructor(props) {
     super(props)
@@ -3421,7 +3414,7 @@ function App() {
 
 在组件 JSX 中，你可以渲染 `this.props.children` ，它会自动将父组件传入的任意 JSX 注入为子元素。
 
-```
+```plain
 class Parent extends React.Component {
   constructor(props) {
     super(props)
@@ -3644,7 +3637,7 @@ hook 是一个开头以 `use` 命名的函数。它接受任意数量的参数�
 
 示例：
 
-```
+```plain
 const useGetData() {
   //...
   return data
@@ -3727,7 +3720,7 @@ export default () => {
 
 使用 `fallback` 属性来输出一些 JSX 或组件内容：
 
-```
+```plain
 ...
       <React.Suspense fallback={<p>Please wait</p>}>
         <TodoList />
@@ -3789,7 +3782,7 @@ ReactDOM.render(<App />, document.getElementById('app'))
 
 我们给按钮加上 `onClickFunction` 属性，这样点击按钮就能改变计数了。
 
-```
+```plain
 const Button = ({ increment, onClickFunction }) => {
   const handleClick = () => {
     onClickFunction(increment)
@@ -3957,13 +3950,13 @@ const App = () => {
 
 最后渲染应用：
 
-```
+```plain
 ReactDOM.render(<App />, document.getElementById('app'))
 ```
 
 以下是这个 React 应用的完整源代码：
 
-```
+```plain
 const { useState } = React
 const Card = props => {
   return (
@@ -4155,14 +4148,14 @@ import './styles.scss'
 
 使用 [npm][110] 或 [yarn][111] 来安装 styled-components：
 
-```
+```plain
 npm install styled-components
 yarn add styled-components
 ```
 
 这样就好了！现在你可以将它引入了：
 
-```
+```plain
 import styled from 'styled-components'
 ```
 
@@ -4287,7 +4280,7 @@ Babel 是个非常棒的工具。它已经存在一段时间了，而现在几�
 
 你可以通过配置 Babel 来将现代的 ES2017 JavaScript 编译成 ES5 的语法：
 
-```
+```plain
 [1, 2, 3].map(function(n) {
   return n + 1
 })
@@ -4443,7 +4436,7 @@ console.log(bob.printFriends());
 
 执行以下命令下载 Babel polyfill 运行功能
 
-```
+```plain
 npm install @babel/polyfill             @babel/runtime             @babel/plugin-transform-runtime
 ```
 
@@ -4574,9 +4567,9 @@ yarn build
 
 如果需要，你当然可以自定义 webpack 的每一个细节。webpack 配置保存在项目根文件夹的 `webpack.config.js` 文件中。
 
-#### `**The entry point**`
+#### **The entry point
 
-``**By default the entry point is  `./src/index.js`  This simple example uses the  `./index.js`file as a starting point:**``
+`` **By default the entry point is `./src/index.js` This simple example uses the `./index.js`file as a starting point:** ``
 
 ```
 module.exports = {
@@ -4745,11 +4738,11 @@ module.exports = {
 }
 ```
 
-``The  `HTMLWebpackPlugin`  plugin has the job of automatically creating an HTML file, adding the output JS bundle path, so the JavaScript is ready to be served.``
+`` The `HTMLWebpackPlugin` plugin has the job of automatically creating an HTML file, adding the output JS bundle path, so the JavaScript is ready to be served. ``
 
-`There are  [lots of plugins available][133].`
+`There are [lots of plugins available][133].`
 
-``One useful plugin,  `CleanWebpackPlugin`, can be used to clear the  `dist/`  folder before creating any output, so you don't leave files around when you change the name of the output file:``
+`` One useful plugin, `CleanWebpackPlugin`, can be used to clear the `dist/` folder before creating any output, so you don't leave files around when you change the name of the output file: ``
 
 ```
 module.exports = {
@@ -4763,9 +4756,9 @@ module.exports = {
 
 #### `The webpack mode`
 
-``This mode (introduced in webpack 4) sets the environment on which webpack works. It can be set to  `development`  or  `production`  (defaults to production, so you only set it when moving to development)``
+`` This mode (introduced in webpack 4) sets the environment on which webpack works. It can be set to `development` or `production` (defaults to production, so you only set it when moving to development) ``
 
-```
+```plain
 module.exports = {
   entry: './index.js',
   mode: 'development',
@@ -4786,7 +4779,7 @@ module.exports = {
 
 `Production mode is slower to build, since it needs to generate a more optimized bundle. The resulting JavaScript file is smaller in size, as it removes many things that are not needed in production.`
 
-``I made a sample app that just prints a  `console.log`  statement.``
+`I made a sample app that just prints a `console.log` statement.`
 
 `Here’s the production bundle:`
 
@@ -4798,9 +4791,9 @@ module.exports = {
 
 #### `Running webpack`
 
-``Webpack can be run from the command line manually if installed globally, but generally you write a script inside the  `package.json`  file, which is then run using  `npm`  or  `yarn`.``
+`Webpack can be run from the command line manually if installed globally, but generally you write a script inside the `package.json` file, which is then run using `npm` or `yarn`.`
 
-``For example this  `package.json`  scripts definition we used before:``
+`` For example this `package.json` scripts definition we used before: ``
 
 ```
 "scripts": {
@@ -4808,9 +4801,9 @@ module.exports = {
 }
 ```
 
-``allows us to run  `webpack`  by running``
+`allows us to run `webpack`by running`
 
-```
+```plain
 npm run build
 ```
 
@@ -4856,11 +4849,11 @@ yarn run watch
 yarn watch
 ```
 
-``One nice feature of the watch mode is that the bundle is only changed if the build has no errors. If there are errors,  `watch`  will keep listening for changes, and try to rebuild the bundle, but the current, working bundle is not affected by those problematic builds.``
+`One nice feature of the watch mode is that the bundle is only changed if the build has no errors. If there are errors, `watch`will keep listening for changes, and try to rebuild the bundle, but the current, working bundle is not affected by those problematic builds.`
 
 #### `Handling images`
 
-``Webpack allows us to use images in a very convenient way, using the  `[file-loader][134]`loader.``
+`` Webpack allows us to use images in a very convenient way, using the `[file-loader][134]`loader. ``
 
 `This simple configuration:`
 
@@ -4890,13 +4883,13 @@ img.src = Icon
 element.appendChild(img)
 ```
 
-``(`img`  is an HTMLImageElement. Check the  [Image docs][135])``
+`(`img` is an HTMLImageElement. Check the [Image docs][135])`
 
-`` `file-loader`  can handle other asset types as well, like fonts, CSV files, xml, and more.``
+`file-loader` can handle other asset types as well, like fonts, CSV files, xml, and more.`
 
-``Another nice tool to work with images is the  `url-loader`  loader.``
+`` Another nice tool to work with images is the `url-loader` loader. ``
 
-`This example loads any PNG file smaller than 8KB as a  [data URL][136].`
+`This example loads any PNG file smaller than 8KB as a [data URL][136].`
 
 ```
 module.exports = {
@@ -4922,7 +4915,7 @@ module.exports = {
 
 #### `Process your SASS code and transform it to CSS`
 
-``Using  `sass-loader`,  `css-loader`  and  `style-loader`:``
+`Using`sass-loader`, `css-loader` and `style-loader`:`
 
 ```
 module.exports = {
@@ -4947,9 +4940,9 @@ module.exports = {
 
 `Since webpack bundles the code, Source Maps are mandatory to get a reference to the original file that raised an error, for example.`
 
-``You tell webpack to generate source maps using the  `devtool`  property of the configuration:``
+`` You tell webpack to generate source maps using the `devtool` property of the configuration: ``
 
-```
+```plain
 module.exports = {
   /.../
   devtool: 'inline-source-map',
@@ -4957,7 +4950,7 @@ module.exports = {
 }
 ```
 
-`` `devtool`  has  [many possible values][137], the most used probably are:``
+`` `devtool` has [many possible values][137], the most used probably are:``
 
 -   `` `none`: adds no source maps``
 -   `` `source-map`: ideal for production, provides a separate source map that can be minimized, and adds a reference into the bundle, so development tools know that the source map is available. Of course you should configure the server to avoid shipping this, and just use it for debugging purposes``
@@ -4972,7 +4965,7 @@ module.exports = {
 `It’s an open source project maintained by Facebook, and it’s especially well suited for React code testing, although not limited to that: it can test any JavaScript code. Its strengths are:`
 
 -   `it’s fast`
--   `it can perform  **snapshot testing**`
+-   `it can perform **snapshot testing**`
 -   `it’s opinionated, and provides everything out of the box without requiring you to make choices`
 
 `Jest is a tool very similar to Mocha, although they have differences:`
@@ -4985,23 +4978,23 @@ module.exports = {
 
 #### `Installation`
 
-``Jest is automatically installed in  `create-react-app`, so if you use that, you don’t need to install Jest.``
+`` Jest is automatically installed in `create-react-app`, so if you use that, you don’t need to install Jest. ``
 
-`Jest can be installed in any other project using  [Yarn][138]:`
+`Jest can be installed in any other project using [Yarn][138]:`
 
 ```
 yarn add --dev jest
 ```
 
-`or  [npm][139]:`
+`or [npm][139]:`
 
 ```
 npm install --save-dev jest
 ```
 
-``notice how we instruct both to put Jest in the  `devDependencies`  part of the  `package.json`  file, so that it will only be installed in the development environment and not in production.``
+`notice how we instruct both to put Jest in the `devDependencies` part of the `package.json` file, so that it will only be installed in the development environment and not in production.`
 
-``Add this line to the scripts part of your  `package.json`  file:``
+`` Add this line to the scripts part of your `package.json` file: ``
 
 ```
 {
@@ -5011,7 +5004,7 @@ npm install --save-dev jest
 }
 ```
 
-``so that tests can be run using  `yarn test`  or  `npm run test`.``
+`so that tests can be run using`yarn test` or `npm run test`.`
 
 `Alternatively, you can install Jest globally:`
 
@@ -5019,17 +5012,17 @@ npm install --save-dev jest
 yarn global add jest
 ```
 
-``and run all your tests using the  `jest`  command line tool.``
+`` and run all your tests using the `jest` command line tool. ``
 
 #### `Create the first Jest test`
 
-``Projects created with  `create-react-app`  have Jest installed and preconfigured out of the box, but adding Jest to any project is as easy as typing``
+`` Projects created with `create-react-app` have Jest installed and preconfigured out of the box, but adding Jest to any project is as easy as typing ``
 
 ```
 yarn add --dev jest
 ```
 
-``Add to your  `package.json`  this line:``
+`Add to your `package.json` this line:`
 
 ```
 {
@@ -5039,15 +5032,15 @@ yarn add --dev jest
 }
 ```
 
-``and run your tests by executing  `yarn test`  in your shell.``
+`` and run your tests by executing `yarn test` in your shell. ``
 
 `Now, you don’t have any tests here, so nothing is going to be executed:`
 
 `![](https://cdn-media-1.freecodecamp.org/images/QJ4lMCN6PhDyBBZ8mPyLmLciew9p9cUE9ug0)`
 
-``Let’s create the first test. Open a  `math.js`  file and type a couple functions that we’ll later test:``
+`` Let’s create the first test. Open a `math.js` file and type a couple functions that we’ll later test: ``
 
-```
+```plain
 const sum = (a, b) => a + b
 const mul = (a, b) => a * b
 const sub = (a, b) => a - b
@@ -5055,7 +5048,7 @@ const div = (a, b) => a / b
 export default { sum, mul, sub, div }
 ```
 
-``Now create a  `math.test.js`  file, in the same folder, and there we’ll use Jest to test the functions defined in  `math.js`:``
+`Now create a `math.test.js` file, in the same folder, and there we’ll use Jest to test the functions defined in `math.js`:`
 
 ```
 const { sum, mul, sub, div } = require('./math')
@@ -5073,21 +5066,21 @@ test('Dividing 1 / 1 equals 1', () => {
 })
 ```
 
-``Running  `yarn test`  results in Jest being run on all the test files it finds, and returning us the end result:``
+`Running `yarn test` results in Jest being run on all the test files it finds, and returning us the end result:`
 
 `![](https://cdn-media-1.freecodecamp.org/images/vGSvRogM-QF8N3EP5j9vUYYrkWvRc89OhE98)`
 
 #### `Run Jest with VS Code`
 
-`Visual Studio Code is a great editor for JavaScript development. The  [Jest extension][140]offers a top notch integration for our tests.`
+`Visual Studio Code is a great editor for JavaScript development. The [Jest extension][140]offers a top notch integration for our tests.`
 
-`Once you install it, it will automatically detect if you have installed Jest in your devDependencies and run the tests. You can also invoke the tests manually by selecting the  **Jest: Start Runner**  command. It will run the tests and stay in watch mode to re-run them whenever you change one of the files that have a test (or a test file):`
+`Once you install it, it will automatically detect if you have installed Jest in your devDependencies and run the tests. You can also invoke the tests manually by selecting the **Jest: Start Runner** command. It will run the tests and stay in watch mode to re-run them whenever you change one of the files that have a test (or a test file):`
 
 `![](https://cdn-media-1.freecodecamp.org/images/WYyCsxacP34Fss8u9jT5lT0u3O--1Uwz9cKW)`
 
 #### `Matchers`
 
-``In the previous article I used  `toBe()`  as the only  **matcher**:``
+`` In the previous article I used `toBe()` as the only **matcher**: ``
 
 ```
 test('Adding 1 + 1 equals 2', () => {
@@ -5097,28 +5090,28 @@ test('Adding 1 + 1 equals 2', () => {
 
 `A matcher is a method that lets you test values.`
 
-``Most commonly used matchers, comparing the value of the result of  `expect()`  with the value passed in as argument, are:``
+`` Most commonly used matchers, comparing the value of the result of `expect()` with the value passed in as argument, are: ``
 
--   `` `toBe`  compares strict equality, using  `===` ``
--   `` `toEqual`  compares the values of two variables. If it’s an object or array, it checks the equality of all the properties or elements``
--   `` `toBeNull`  is true when passing a null value``
--   `` `toBeDefined`  is true when passing a defined value (opposite to the above)``
--   `` `toBeUndefined`  is true when passing an undefined value``
--   `` `toBeCloseTo`  is used to compare floating values, avoiding rounding errors``
--   `` `toBeTruthy`  true if the value is considered true (like an  `if`  does)``
--   `` `toBeFalsy`  true if the value is considered false (like an  `if`  does)``
--   `` `toBeGreaterThan`  true if the result of expect() is higher than the argument``
--   `` `toBeGreaterThanOrEqual`  true if the result of expect() is equal to the argument, or higher than the argument``
--   `` `toBeLessThan`  true if the result of expect() is lower than the argument``
--   `` `toBeLessThanOrEqual`  true if the result of expect() is equal to the argument, or lower than the argument``
--   `` `toMatch`  is used to compare strings with  [regular expression][141]  pattern matching``
--   `` `toContain`  is used in arrays, true if the expected array contains the argument in its elements set``
+-   `` `toBe` compares strict equality, using `===` ``
+-   `` `toEqual` compares the values of two variables. If it’s an object or array, it checks the equality of all the properties or elements``
+-   `` `toBeNull` is true when passing a null value``
+-   `` `toBeDefined` is true when passing a defined value (opposite to the above)``
+-   `` `toBeUndefined` is true when passing an undefined value``
+-   `` `toBeCloseTo` is used to compare floating values, avoiding rounding errors``
+-   `` `toBeTruthy` true if the value is considered true (like an `if` does)``
+-   `toBeFalsy` true if the value is considered false (like an `if` does)`
+-   `toBeGreaterThan` true if the result of expect() is higher than the argument`
+-   `` `toBeGreaterThanOrEqual` true if the result of expect() is equal to the argument, or higher than the argument``
+-   `` `toBeLessThan` true if the result of expect() is lower than the argument``
+-   `toBeLessThanOrEqual` true if the result of expect() is equal to the argument, or lower than the argument`
+-   `` `toMatch` is used to compare strings with [regular expression][141] pattern matching``
+-   `` `toContain` is used in arrays, true if the expected array contains the argument in its elements set``
 -   `` `toHaveLength(number)`: checks the length of an array``
 -   `` `toHaveProperty(key, value)`: checks if an object has a property, and optionally checks its value``
--   `` `toThrow`  checks if a function you pass throws an exception (in general) or a specific exception``
--   `` `toBeInstanceOf()`: checks if an object is an instance of a class``
+-   `toThrow` checks if a function you pass throws an exception (in general) or a specific exception`
+-   `toBeInstanceOf()`: checks if an object is an instance of a class`
 
-``All those matchers can be negated using  `.not.`  inside the statement, for example:``
+`` All those matchers can be negated using `.not.` inside the statement, for example: ``
 
 ```
 test('Adding 1 + 1 does not equal 3', () => {
@@ -5126,7 +5119,7 @@ test('Adding 1 + 1 does not equal 3', () => {
 })
 ```
 
-``For use with promises, you can use  `.resolves`  and  `.rejects`:``
+`` For use with promises, you can use `.resolves` and `.rejects`: ``
 
 ```
 expect(Promise.resolve('lemon')).resolves.toBe('lemon')
@@ -5137,7 +5130,7 @@ expect(Promise.reject(new Error('octopus'))).rejects.toThrow('octopus')
 
 `Before running your tests you will want to perform some initialization.`
 
-``To do something once before all the tests run, use the  `beforeAll()`  function:``
+`To do something once before all the tests run, use the `beforeAll()` function:`
 
 ```
 beforeAll(() => {
@@ -5145,7 +5138,7 @@ beforeAll(() => {
 })
 ```
 
-``To perform something before each test runs, use  `beforeEach()`:``
+`` To perform something before each test runs, use `beforeEach()`: ``
 
 ```
 beforeEach(() => {
@@ -5157,7 +5150,7 @@ beforeEach(() => {
 
 `Just as you can do with setup, you can also perform something after each test runs:`
 
-```
+```plain
 afterEach(() => {
   //do something
 })
@@ -5195,7 +5188,7 @@ describe('second set', () => {
   })
   test(/.../)
   test(/.../)
-}) 
+})
 ```
 
 #### `Testing asynchronous code`
@@ -5204,7 +5197,7 @@ describe('second set', () => {
 
 #### `Callbacks`
 
-``You can’t have a test in a callback, because Jest won’t execute it — the execution of the test file ends before the callback is called. To fix this, pass a parameter to the test function, which you can conveniently call  `done`. Jest will wait until you call  `done()`before ending that test:``
+`You can’t have a test in a callback, because Jest won’t execute it — the execution of the test file ends before the callback is called. To fix this, pass a parameter to the test function, which you can conveniently call `done`. Jest will wait until you call `done()`before ending that test:`
 
 ```
 //uppercase.js
@@ -5226,7 +5219,7 @@ test(uppercase 'test' to equal 'TEST', (done) => {
 
 #### `Promises`
 
-`With functions that return promises, we simply  **return a promise**  from the test:`
+`With functions that return promises, we simply **return a promise** from the test:`
 
 ```
 //uppercase.js
@@ -5251,7 +5244,7 @@ test(uppercase 'test' to equal 'TEST', () => {
 
 `![](https://cdn-media-1.freecodecamp.org/images/8j7LKC8uKE5Tw0X4WN4Gm0rD3NziyPxNwyCn)`
 
-``Promises that are rejected can be tested using  `.catch()`:``
+`` Promises that are rejected can be tested using `.catch()`: ``
 
 ```
 //uppercase.js
@@ -5293,35 +5286,35 @@ test(uppercase 'test' to equal 'TEST', async () => {
 
 #### `Mocking`
 
-`In testing,  **mocking**  allows you to test functionality that depends on:`
+`In testing, **mocking** allows you to test functionality that depends on:`
 
 -   `**Database**`
--   `**Network**  requests`
--   `access to  **Files**`
--   `any  **External**  system`
+-   `**Network** requests`
+-   `access to **Files**`
+-   `any **External** system`
 
 `so that:`
 
-1.  `your tests run  **faster**, giving a quick turnaround time during development`
-2.  `your tests are  **independent**  of network conditions, or the state of the database`
-3.  `your tests do not  **pollute**  any data storage because they do not touch the database`
+1.  `your tests run **faster**, giving a quick turnaround time during development`
+2.  `your tests are **independent** of network conditions, or the state of the database`
+3.  `your tests do not **pollute** any data storage because they do not touch the database`
 4.  `any change done in a test does not change the state for subsequent tests, and re-running the test suite should start from a known and reproducible starting point`
 5.  `you don’t have to worry about rate limiting on API calls and network requests`
 
 `Mocking is useful when you want to avoid side effects (e.g. writing to a database) or you want to skip slow portions of code (like network access), and also avoids implications with running your tests multiple times (e.g. imagine a function that sends an email or calls a rate-limited API).`
 
-`Even more important, if you are writing a  **Unit Test**, you should test the functionality of a function in isolation, not with all its baggage of things it touches.`
+`Even more important, if you are writing a **Unit Test**, you should test the functionality of a function in isolation, not with all its baggage of things it touches.`
 
 `Using mocks, you can inspect if a module function has been called and which parameters were used, with:`
 
--   `` `expect().toHaveBeenCalled()`: check if a spied function has been called``
+-   `expect().toHaveBeenCalled()`: check if a spied function has been called`
 -   `` `expect().toHaveBeenCalledTimes()`: count how many times a spied function has been called``
 -   `` `expect().toHaveBeenCalledWith()`: check if the function has been called with a specific set of parameters``
--   `` `expect().toHaveBeenLastCalledWith()`: check the parameters of the last time the function has been invoked``
+-   `expect().toHaveBeenLastCalledWith()`: check the parameters of the last time the function has been invoked`
 
 #### `Spy packages without affecting the functions code`
 
-``When you import a package, you can tell Jest to “spy” on the execution of a particular function, using  `spyOn()`, without affecting how that method works.``
+`When you import a package, you can tell Jest to “spy” on the execution of a particular function, using `spyOn()`, without affecting how that method works.`
 
 `Example:`
 
@@ -5337,11 +5330,11 @@ test(The mathjs log function, () => {
 
 #### `Mock an entire package`
 
-``Jest provides a convenient way to mock an entire package. Create a  `**mocks**`folder in the project root, and in this folder create one JavaScript file for each of your packages.``
+`` Jest provides a convenient way to mock an entire package. Create a `**mocks**`folder in the project root, and in this folder create one JavaScript file for each of your packages. ``
 
-``Say you import  `mathjs`. Create a  `**mocks**/mathjs.js`  file in your project root, and add this content:``
+`` Say you import `mathjs`. Create a `**mocks**/mathjs.js` file in your project root, and add this content: ``
 
-```
+```plain
 module.exports = {
   log: jest.fn(() => 'test')
 }
@@ -5361,7 +5354,7 @@ test(The mathjs log function, () => {
 
 #### `Mock a single function`
 
-``More simply, you can mock a single function using  `jest.fn()`:``
+`More simply, you can mock a single function using `jest.fn()`:`
 
 ```
 const mathjs = require('mathjs')
@@ -5374,17 +5367,17 @@ test(The mathjs log function, () => {
 })
 ```
 
-``You can also use  `jest.fn().mockReturnValue('test')`  to create a simple mock that does nothing except returning a value.``
+`You can also use `jest.fn().mockReturnValue('test')`to create a simple mock that does nothing except returning a value.`
 
 #### `Pre-built mocks`
 
-``You can find pre-made mocks for popular libraries. For example this package  [https://github.com/jefflau/jest-fetch-mock][142]  allows you to mock  `fetch()`  calls, and provide sample return values without interacting with the actual server in your tests.``
+`` You can find pre-made mocks for popular libraries. For example this package [https://github.com/jefflau/jest-fetch-mock][142] allows you to mock `fetch()` calls, and provide sample return values without interacting with the actual server in your tests. ``
 
 #### `Snapshot testing`
 
 `Snapshot testing is a pretty cool feature offered by Jest. It can memorize how your UI components are rendered, and compare it to the current test, raising an error if there’s a mismatch.`
 
-``This is a simple test on the App component of a simple  `create-react-app`  application (make sure you install  `react-test-renderer`):``
+`` This is a simple test on the App component of a simple `create-react-app` application (make sure you install `react-test-renderer`): ``
 
 ```
 import React from 'react'
@@ -5396,7 +5389,7 @@ it('renders correctly', () => {
 })
 ```
 
-``the first time you run this test, Jest saves the snapshot to the  `**snapshots**`folder. Here’s what App.test.js.snap contains:``
+`the first time you run this test, Jest saves the snapshot to the `**snapshots**`folder. Here’s what App.test.js.snap contains:`
 
 ```
 // Jest Snapshot v1, https://goo.gl/fbAQLP
@@ -5431,13 +5424,13 @@ exports[renders correctly 1] = &lt;div
 
 `As you see it’s the code that the App component renders, nothing more.`
 
-``The next time the test compares the output of  `<App`  /> to this. If App changes, you get an error:``
+`` The next time the test compares the output of `<App` /> to this. If App changes, you get an error: ``
 
 `![](https://cdn-media-1.freecodecamp.org/images/imS-QSkC1rmVVRYLkLYSJrGk5b3DOjodEJkx)`
 
-``When using  `yarn test`  in  `create-react-app`  you are in  **watch mode**, and from there you can press  `w`  and show more options:``
+`When using`yarn test` in `create-react-app`you are in **watch mode**, and from there you can press`w`and show more options:`
 
-```
+```plain
 Watch Usage
  › Press u to update failing snapshots.
  › Press p to filter by a filename regex pattern.
@@ -5446,9 +5439,9 @@ Watch Usage
  › Press Enter to trigger a test run.
 ```
 
-``If your change is intended, pressing  `u`  will update the failing snapshots, and make the test pass.``
+`` If your change is intended, pressing `u` will update the failing snapshots, and make the test pass. ``
 
-``You can also update the snapshot by running  `jest -u`  (or  `jest --updateSnapshot`) outside of watch mode.``
+`` You can also update the snapshot by running `jest -u` (or `jest --updateSnapshot`) outside of watch mode. ``
 
 ### `Testing React components`
 
@@ -5456,9 +5449,9 @@ Watch Usage
 
 `If you are familiar with testing software, it’s just like unit testing you do for classes: you test each component functionality.`
 
-``I assume you created a React app with  `create-react-app`, which already comes with  **Jest**  installed, the testing package we'll need.``
+`` I assume you created a React app with `create-react-app`, which already comes with **Jest** installed, the testing package we'll need. ``
 
-``Let’s start with a simple test. CodeSandbox is a great environment to try this out. Start with a React sandbox, and create an  `App.js`  component in a  `components`  folder, and add an  `App.test.js`  file.``
+`Let’s start with a simple test. CodeSandbox is a great environment to try this out. Start with a React sandbox, and create an `App.js`component in a`components` folder, and add an `App.test.js`file.`
 
 ```
 import React from 'react'
@@ -5490,7 +5483,7 @@ test('First test', () => {
 
 `Let’s do something a bit more useful now, to actually test a React component. We only have App now, which is not doing anything really useful, so let’s first set up the environment with a little application with more functionality: the counter app we built previously. If you skipped it, you can go back and read how we built it, but for easier reference I add it here again.`
 
-``It’s just 2 components: App and Button. Create the  `App.js`  file:``
+`It’s just 2 components: App and Button. Create the `App.js`file:`
 
 ```
 import React, { useState } from 'react'
@@ -5513,7 +5506,7 @@ const App = () => {
 export default App
 ```
 
-``and the  `Button.js`  file:``
+`and the `Button.js` file:`
 
 ```
 import React from 'react'
@@ -5526,21 +5519,21 @@ const Button = ({ increment, onClickFunction }) => {
 export default Button
 ```
 
-``We are going to use the  `react-testing-library`, which is a great help as it allows us to inspect the output of every component and to apply events on them. You can read more about it on  [https://github.com/kentcdodds/react-testing-library][144]  or watch  [this video][145].``
+`` We are going to use the `react-testing-library`, which is a great help as it allows us to inspect the output of every component and to apply events on them. You can read more about it on [https://github.com/kentcdodds/react-testing-library][144] or watch [this video][145]. ``
 
 `Let’s test the Button component first.`
 
-``We start by importing  `render`  and  `fireEvent`  from  `react-testing-library`, two helpers. The first lets us render JSX. The second lets us emit events on a component.``
+`` We start by importing `render` and `fireEvent` from `react-testing-library`, two helpers. The first lets us render JSX. The second lets us emit events on a component. ``
 
-``Create a  `Button.test.js`  and put it in the same folder as  `Button.js`.``
+`Create a `Button.test.js`and put it in the same folder as`Button.js`.`
 
-```
+```plain
 import React from 'react'
 import { render, fireEvent } from 'react-testing-library'
 import Button from './Button'
 ```
 
-``Buttons are used in the app to accept a click event and then they call a function passed to the  `onClickFunction`  prop. We add a  `count`  variable and we create a function that increments it:``
+`` Buttons are used in the app to accept a click event and then they call a function passed to the `onClickFunction` prop. We add a `count` variable and we create a function that increments it: ``
 
 ```
 let count
@@ -5549,9 +5542,9 @@ const incrementCount = increment => {
 }
 ```
 
-``Now off to the actual tests. We first initialize count to 0, and we render a  `+1`  `Button`component passing a  `1`  to  `increment`  and our  `incrementCount`  function to  `onClickFunction`.``
+`Now off to the actual tests. We first initialize count to 0, and we render a `+1` `Button`component passing a`1`to`increment` and our `incrementCount` function to `onClickFunction`.`
 
-``Then we get the content of the first child of the component, and we check it outputs  `+1`.``
+`` Then we get the content of the first child of the component, and we check it outputs `+1`. ``
 
 `We then proceed to clicking the button, and we check that the count got from 0 to 1:`
 
@@ -5569,9 +5562,9 @@ test('+1 Button works', () => {
 })
 ```
 
-``Similarly we test a +100 button, this time checking the output is  `+100`  and the button click increments the count of 100.``
+`Similarly we test a +100 button, this time checking the output is `+100` and the button click increments the count of 100.`
 
-```
+```plain
 test('+100 Button works', () => {
   count = 0
   const { container } = render(
@@ -5618,7 +5611,7 @@ test('App works', () => {
 })
 ```
 
-`Check the code working on this CodeSandbox:  [https://codesandbox.io/s/pprl4y0wq][146]`
+`Check the code working on this CodeSandbox: [https://codesandbox.io/s/pprl4y0wq][146]`
 
 ### `SECTION 8: THE REACT ECOSYSTEM`
 
@@ -5630,25 +5623,25 @@ test('App works', () => {
 
 `React at its core is a very simple library, and it does not dictate anything about routing.`
 
-`Routing in a Single Page Application is the way to introduce some features to navigating the app through links, which are  **expected**  in normal web applications:`
+`Routing in a Single Page Application is the way to introduce some features to navigating the app through links, which are **expected** in normal web applications:`
 
-1.  `The browser should  **change the URL**  when you navigate to a different screen`
-2.  `**Deep linking**  should work: if you point the browser to a URL, the application should reconstruct the same view that was presented when the URL was generated.`
-3.  `The  **browser back (and forward) button**  should work like expected.`
+1.  `The browser should **change the URL** when you navigate to a different screen`
+2.  `**Deep linking** should work: if you point the browser to a URL, the application should reconstruct the same view that was presented when the URL was generated.`
+3.  `The **browser back (and forward) button** should work like expected.`
 
-`**Routing links together your application navigation with the navigation features offered by the browser**: the  **address bar**  and the  **navigation buttons**.`
+`**Routing links together your application navigation with the navigation features offered by the browser**: the **address bar** and the **navigation buttons**.`
 
-`React Router offers a way to write your code so that  **it will show certain components of your app only if the route matches what you define**.`
+`React Router offers a way to write your code so that **it will show certain components of your app only if the route matches what you define**.`
 
 ### `Installation`
 
-`With  [npm][147]:`
+`With [npm][147]:`
 
 ```
 npm install react-router-dom
 ```
 
-`With  [Yarn][148]:`
+`With [Yarn][148]:`
 
 ```
 yarn add react-router-dom
@@ -5668,21 +5661,21 @@ https://application.com/dashboard   /* BrowserRouter /
 https://application.com/#/dashboard / HashRouter    */
 ```
 
-``Which one to use is mainly dictated by the browsers you need to support.  `BrowserRouter`  uses the  [History API][151], which is relatively recent, and not supported in IE9 and below. If you don't have to worry about older browsers, it's the recommended choice.``
+`` Which one to use is mainly dictated by the browsers you need to support. `BrowserRouter` uses the [History API][151], which is relatively recent, and not supported in IE9 and below. If you don't have to worry about older browsers, it's the recommended choice. ``
 
 ### `Components`
 
 `The 3 components you will interact the most when working with React Router are:`
 
--   `` `BrowserRouter`, usually aliased as  `Router` ``
+-   `BrowserRouter`, usually aliased as `Router`
 -   `` `Link` ``
--   `` `Route` ``
+-   `Route`
 
-`` `BrowserRouter`  wraps all your Route components.``
+`BrowserRouter` wraps all your Route components.`
 
-`` `Link`  components are - as you can imagine - used to generate links to your routes``
+`` `Link` components are - as you can imagine - used to generate links to your routes``
 
-`` `Route`  components are responsible for showing - or hiding - the components they contain.``
+`Route` components are responsible for showing - or hiding - the components they contain.`
 
 ### `BrowserRouter`
 
@@ -5702,11 +5695,11 @@ ReactDOM.render(
 )
 ```
 
-``A BrowserRouter component can only have one child element, so we wrap all we’re going to add in a  `div`  element.``
+`` A BrowserRouter component can only have one child element, so we wrap all we’re going to add in a `div` element. ``
 
 ### `Link`
 
-``The Link component is used to trigger new routes. You import it from  `react-router-dom`, and you can add the Link components to point at different routes, with the  `to`attribute:``
+`` The Link component is used to trigger new routes. You import it from `react-router-dom`, and you can add the Link components to point at different routes, with the `to`attribute: ``
 
 ```
 import React from 'react'
@@ -5762,17 +5755,17 @@ ReactDOM.render(
 )
 ```
 
-`Check this example on Glitch:  [https://flaviocopes-react-router-v4.glitch.me/][152]`
+`Check this example on Glitch: [https://flaviocopes-react-router-v4.glitch.me/][152]`
 
-``When the route matches  `/`, the application shows the  **Dashboard**  component.``
+`When the route matches `/`, the application shows the **Dashboard** component.`
 
-``When the route is changed by clicking the “About” link to  `/about`, the Dashboard component is removed and the  **About**  component is inserted in the DOM.``
+`When the route is changed by clicking the “About” link to `/about`, the Dashboard component is removed and the **About** component is inserted in the DOM.`
 
-``Notice the  `exact`  attribute. Without this,  `path="/"`  would also match  `/about`, since  `/`is contained in the route.``
+`Notice the `exact` attribute. Without this, `path="/"` would also match `/about`, since`/`is contained in the route.`
 
 ### `Match multiple paths`
 
-``You can have a route respond to multiple paths simply using a regex, because  `path`  can be a regular expressions string:``
+`` You can have a route respond to multiple paths simply using a regex, because `path` can be a regular expressions string: ``
 
 ```
 <Route path="/(about|who)/" component={Dashboard} />
@@ -5780,7 +5773,7 @@ ReactDOM.render(
 
 ### `Inline rendering`
 
-``Instead of specifying a  `component`  property on  `Route`, you can set a  `render`  prop:``
+`` Instead of specifying a `component` property on `Route`, you can set a `render` prop: ``
 
 ```
 <Route
@@ -5822,9 +5815,9 @@ const Post = ({match}) => (
 <Route exact path="/post/:id" component={Post} />
 ```
 
-``In your Route component you can lookup the dynamic parameters in  `match.params`.``
+`In your Route component you can lookup the dynamic parameters in `match.params`.`
 
-`` `match`  is also available in inline rendered routes, and this is especially useful in this case, because we can use the  `id`  parameter to lookup the post data in our data source before rendering Post:``
+`` `match` is also available in inline rendered routes, and this is especially useful in this case, because we can use the `id` parameter to lookup the post data in our data source before rendering Post:``
 
 ```
 const posts = [
@@ -5847,7 +5840,7 @@ const Post = ({post}) => (
 
 `Redux is a state manager that’s usually used along with React, but it’s not tied to that library — it can be used with other technologies as well, but we’ll stick to React for the sake of the explanation..`
 
-`Redux is a way to manage an application state, and move it to an  **external global store**.`
+`Redux is a way to manage an application state, and move it to an **external global store**.`
 
 `There are a few concepts to grasp, but once you do, Redux is a very simple approach to the problem.`
 
@@ -5861,15 +5854,15 @@ const Post = ({post}) => (
 
 #### `Immutable State Tree`
 
-`In Redux, the whole state of the application is represented by  **one**  [JavaScript][153]  object, called  **State**  or  **State Tree**.`
+`In Redux, the whole state of the application is represented by **one** [JavaScript][153] object, called **State** or **State Tree**.`
 
-`We call it  **Immutable State Tree**  because it is read only: it can’t be changed directly.`
+`We call it **Immutable State Tree** because it is read only: it can’t be changed directly.`
 
-`It can only be changed by dispatching an  **Action**.`
+`It can only be changed by dispatching an **Action**.`
 
 #### `Actions`
 
-`An  **Action**  is  **a JavaScript object that describes a change in a minimal way**  (with just the information needed):`
+`An **Action** is **a JavaScript object that describes a change in a minimal way** (with just the information needed):`
 
 ```
 {
@@ -5882,7 +5875,7 @@ const Post = ({post}) => (
 }
 ```
 
-``The only requirement of an action object is having a  `type`  property, whose value is usually a string.``
+`` The only requirement of an action object is having a `type` property, whose value is usually a string. ``
 
 #### `Actions types should be constants`
 
@@ -5903,7 +5896,7 @@ import { ADD_ITEM, REMOVE_ITEM } from './actions'
 
 #### `Action creators`
 
-`**Actions Creators**  are functions that create actions.`
+`**Actions Creators** are functions that create actions.`
 
 ```
 function addItem(t) {
@@ -5931,9 +5924,9 @@ dispatchAddItem('Milk')
 
 `When an action is fired, something must happen, the state of the application must change.`
 
-`This is the job of  **reducers**.`
+`This is the job of **reducers**.`
 
-`A  **reducer**  is a  **pure function**  that calculates the next State Tree based on the previous State Tree, and the action dispatched.`
+`A **reducer** is a **pure function** that calculates the next State Tree based on the previous State Tree, and the action dispatched.`
 
 ```
 ;(currentState, action) => newState
@@ -5946,9 +5939,9 @@ dispatchAddItem('Milk')
 `A reducer should be a pure function, so it should:`
 
 -   `never mutate its arguments`
--   ``never mutate the state, but instead create a new one with  `Object.assign({}, ...)` ``
+-   `` never mutate the state, but instead create a new one with `Object.assign({}, ...)`  ``
 -   `never generate side-effects (no API calls changing anything)`
--   ``never call non-pure functions, functions that change their output based on factors other than their input (e.g.  `Date.now()`  or  `Math.random()`)``
+-   `` never call non-pure functions, functions that change their output based on factors other than their input (e.g. `Date.now()` or `Math.random()`) ``
 
 `There is no reinforcement, but you should stick to the rules.`
 
@@ -6018,14 +6011,14 @@ const listManager = (state = {}, action) => {
 
 #### `The Store`
 
-`The  **Store**  is an object that:`
+`The **Store** is an object that:`
 
--   `**holds the state**  of the app`
--   ``**exposes the state**  via  `getState()` ``
--   ``allows us to  **update the state**  via  `dispatch()` ``
--   ``allows us to (un)register a  **state change listener**  using  `subscribe()` ``
+-   `**holds the state** of the app`
+-   `` **exposes the state** via `getState()`  ``
+-   `` allows us to **update the state** via `dispatch()`  ``
+-   `allows us to (un)register a **state change listener** using `subscribe()`
 
-`A store is  **unique**  in the app.`
+`A store is **unique** in the app.`
 
 `Here is how a store for the listManager app is created:`
 
@@ -6037,9 +6030,9 @@ let store = createStore(listManager)
 
 #### `Can I initialize the store with server-side data?`
 
-`Sure,  **just pass a starting state**:`
+`Sure, **just pass a starting state**:`
 
-```
+```plain
 let store = createStore(listManager, preexistingState)
 ```
 
@@ -6066,9 +6059,9 @@ unsubscribe()
 
 #### `Data Flow`
 
-`Data flow in Redux is always  **unidirectional**.`
+`Data flow in Redux is always **unidirectional**.`
 
-``You call  `dispatch()`  on the Store, passing an Action.``
+`You call `dispatch()` on the Store, passing an Action.`
 
 `The Store takes care of passing the Action to the Reducer, generating the next State.`
 
@@ -6076,29 +6069,29 @@ unsubscribe()
 
 ### `Next.js`
 
-`Working on a modern  [JavaScript][154]  application powered by  [React][155]  is awesome until you realize that there are a couple problems related to rendering all the content on the client-side.`
+`Working on a modern [JavaScript][154] application powered by [React][155] is awesome until you realize that there are a couple problems related to rendering all the content on the client-side.`
 
 `First, the page takes longer to the become visible to the user, because before the content loads, all the JavaScript must load, and your application needs to run to determine what to show on the page.`
 
 `Second, if you are building a publicly available website, you have a content SEO issue. Search engines are getting better at running and indexing JavaScript apps, but it’s much better if we can send them content instead of letting them figure it out.`
 
-`The solution to both of those problems is  **server rendering**, also called  **static pre-rendering**.`
+`The solution to both of those problems is **server rendering**, also called **static pre-rendering**.`
 
-`Next.js is one React framework to do all of this in a very simple way, but it’s not limited to this. It’s advertised by its creators as a  **zero-configuration, single-command toolchain for React apps**.`
+`Next.js is one React framework to do all of this in a very simple way, but it’s not limited to this. It’s advertised by its creators as a **zero-configuration, single-command toolchain for React apps**.`
 
 `It provides a common structure that allows you to easily build a frontend React application, and transparently handle server-side rendering for you.`
 
 `Here is a non-exhaustive list of the main Next.js features:`
 
 -   `**Hot Code Reloading**: Next.js reloads the page when it detects any change saved to disk.`
--   ``**Automatic Routing**: any URL is mapped to the filesystem, to files put in the  `pages`  folder, and you don’t need any configuration (you have customization options of course).``
--   `**Single File Components**: using  [styled-jsx][156], completely integrated as built by the same team, it’s trivial to add styles scoped to the component.`
+-   `**Automatic Routing**: any URL is mapped to the filesystem, to files put in the `pages` folder, and you don’t need any configuration (you have customization options of course).`
+-   `**Single File Components**: using [styled-jsx][156], completely integrated as built by the same team, it’s trivial to add styles scoped to the component.`
 -   `**Server Rendering**: you can (optionally) render React components on the server side, before sending the HTML to the client.`
 -   `**Ecosystem Compatibility**: Next.js plays well with the rest of the JavaScript, Node and React ecosystem.`
 -   `**Automatic Code Splitting**: pages are rendered with just the libraries and JavaScript that they need, no more.`
--   ``**Prefetching**: the  `Link`  component, used to link together different pages, supports a  `prefetch`  prop which automatically prefetches page resources (including code missing due to code splitting) in the background.``
+-   `` **Prefetching**: the `Link` component, used to link together different pages, supports a `prefetch` prop which automatically prefetches page resources (including code missing due to code splitting) in the background. ``
 -   `**Dynamic Components**: you can import JavaScript modules and React Components dynamically ([https://github.com/zeit/next.js#dynamic-import][157]).`
--   ``**Static Exports**: using the  `next export`  command, Next.js allows you to export a fully static site from your app.``
+-   `**Static Exports**: using the `next export`command, Next.js allows you to export a fully static site from your app.`
 
 #### `Installation`
 
@@ -6110,7 +6103,7 @@ unsubscribe()
 npm install next react react-dom
 ```
 
-`or with  [Yarn][158]:`
+`or with [Yarn][158]:`
 
 ```
 yarn add next react react-dom
@@ -6118,7 +6111,7 @@ yarn add next react react-dom
 
 #### `Getting started`
 
-``Create a  `package.json`  file with this content:``
+`` Create a `package.json` file with this content: ``
 
 ```
 {
@@ -6134,9 +6127,9 @@ yarn add next react react-dom
 npm run dev
 ```
 
-``the script will raise an error complaining about not finding the  `pages`  folder. This is the only thing that Next.js requires to run.``
+`` the script will raise an error complaining about not finding the `pages` folder. This is the only thing that Next.js requires to run. ``
 
-``Create an empty  `pages`  folder, and run the command again, and Next.js will start up a server on  `localhost:3000`.``
+`Create an empty`pages` folder, and run the command again, and Next.js will start up a server on `localhost:3000`.`
 
 `If you go to that URL now, you’ll be greeted by a friendly 404 page, with a nice clean design.`
 
@@ -6146,7 +6139,7 @@ npm run dev
 
 #### `Create a page`
 
-``In the  `pages`  folder create an  `index.js`  file with a simple React functional component:``
+`` In the `pages` folder create an `index.js` file with a simple React functional component: ``
 
 ```
 export default () => (
@@ -6156,17 +6149,17 @@ export default () => (
 )
 ```
 
-``If you visit  `localhost:3000`, this component will automatically be rendered.``
+`If you visit `localhost:3000`, this component will automatically be rendered.`
 
 `Why is this so simple?`
 
 `Next.js uses a declarative pages structure, which is based on the filesystem structure.`
 
-``Simply put, pages are inside a  `pages`  folder, and the page URL is determined by the page file name. The filesystem is the pages API.``
+`` Simply put, pages are inside a `pages` folder, and the page URL is determined by the page file name. The filesystem is the pages API. ``
 
 #### `Server-side rendering`
 
-``Open the page source,  `View -> Developer -> View` Source with Chrome.``
+`` Open the page source, `View -> Developer -> View` Source with Chrome. ``
 
 `As you can see, the HTML generated by the component is sent directly in the page source. It’s not rendered client-side, but instead it’s rendered on the server.`
 
@@ -6174,7 +6167,7 @@ export default () => (
 
 #### `Add a second page`
 
-``Let’s create another page, in  `pages/contact.js` ``
+`` Let’s create another page, in `pages/contact.js`  ``
 
 ```
 export default () => (
@@ -6186,19 +6179,19 @@ export default () => (
 )
 ```
 
-``If you point your browser to  `localhost:3000/contact`  this page will be rendered. As you can see, also this page is server rendered.``
+`` If you point your browser to `localhost:3000/contact` this page will be rendered. As you can see, also this page is server rendered. ``
 
 #### `Hot reloading`
 
-``Note how you did not have to restart the  `npm`  process to load the second page. Next.js does this for you under the hood.``
+`Note how you did not have to restart the `npm` process to load the second page. Next.js does this for you under the hood.`
 
 #### `Client rendering`
 
 `Server rendering is very convenient in your first page load, for all the reasons we saw above, but when it comes to navigating inside the website, client-side rendering is key to speeding up the page load and improving the user experience.`
 
-``Next.js provides a  `Link`  component you can use to build links. Try linking the two pages above.``
+`Next.js provides a `Link` component you can use to build links. Try linking the two pages above.`
 
-``Change  `index.js`  to this code:``
+`Change `index.js`to this code:`
 
 ```
 import Link from 'next/link'
@@ -6214,9 +6207,9 @@ export default () => (
 
 `Now go back to the browser and try this link. As you can see, the Contact page loads immediately, without a page refresh.`
 
-`This is client-side navigation working correctly, with complete support for the  [**History API**][160], which means your users back button won’t break.`
+`This is client-side navigation working correctly, with complete support for the [**History API**][160], which means your users back button won’t break.`
 
-``If you now  `cmd-click`  the link, the same Contact page will open in a new tab, now server rendered.``
+`` If you now `cmd-click` the link, the same Contact page will open in a new tab, now server rendered. ``
 
 #### `Dynamic pages`
 
@@ -6224,7 +6217,7 @@ export default () => (
 
 `A dynamic page is a page that has no fixed content, but instead display some data based on some parameters.`
 
-``Change  `index.js`  to``
+`` Change `index.js` to ``
 
 ```
 import Link from 'next/link'
@@ -6253,17 +6246,17 @@ export default () => (
 
 `![](https://cdn-media-1.freecodecamp.org/images/nEBXVSebNz6KzUWgNg62w-clo2vL7tnLIYpl)`
 
-``Now create a  `post.js`  file in the  `pages`  folder, and add:``
+`` Now create a `post.js` file in the `pages` folder, and add: ``
 
 ```
 export default props => <h1>{props.url.query.title}</h1>
 ```
 
-``Now clicking a single post will render the post title in a  `h1`  tag:``
+`` Now clicking a single post will render the post title in a `h1` tag: ``
 
 `![](https://cdn-media-1.freecodecamp.org/images/urgIpOydqbjE4i9nyELblMonOjrK0Plrn3OJ)`
 
-``You can use clean URLs without query parameters. The Next.js Link component helps us by accepting an  `as`  attribute, which you can use to pass a slug:``
+`You can use clean URLs without query parameters. The Next.js Link component helps us by accepting an `as` attribute, which you can use to pass a slug:`
 
 ```
 import Link from 'next/link'
@@ -6290,7 +6283,7 @@ export default () => (
 
 #### `CSS-in-JS`
 
-`Next.js by default provides support for  [styled-jsx][161], which is a CSS-in-JS solution provided by the same development team, but you can use whatever library you prefer, like Styled Components.`
+`Next.js by default provides support for [styled-jsx][161], which is a CSS-in-JS solution provided by the same development team, but you can use whatever library you prefer, like Styled Components.`
 
 `Example:`
 
@@ -6314,7 +6307,7 @@ export default () => (
 )
 ```
 
-``Styles are scoped to the component, but you can also edit global styles adding  `global`  to the  `style`  element:``
+`` Styles are scoped to the component, but you can also edit global styles adding `global` to the `style` element: ``
 
 ```
 export default () => (
@@ -6336,15 +6329,15 @@ export default () => (
 
 #### `Exporting a static site`
 
-`A Next.js application can be easily exported as a static site, which can be deployed on one of the super fast static site hosts, like  [Netlify][164]  or  [Firebase Hosting][165], without the need to set up a Node environment.`
+`A Next.js application can be easily exported as a static site, which can be deployed on one of the super fast static site hosts, like [Netlify][164] or [Firebase Hosting][165], without the need to set up a Node environment.`
 
-`The process requires you to declare the URLs that compose the site, but it’s  [a straightforward process][166].`
+`The process requires you to declare the URLs that compose the site, but it’s [a straightforward process][166].`
 
 #### `Deploying`
 
 `Creating a production-ready copy of the application, without source maps or other development tooling that aren’t needed in the final build, is easy.`
 
-``At the beginning of this tutorial you created a  `package.json`  file with this content:``
+`` At the beginning of this tutorial you created a `package.json` file with this content: ``
 
 ```
 {
@@ -6354,9 +6347,9 @@ export default () => (
 }
 ```
 
-``which was the way to start up a development server using  `npm run dev`.``
+`which was the way to start up a development server using `npm run dev`.`
 
-``Now just add the following content to  `package.json`  instead:``
+`Now just add the following content to`package.json` instead:`
 
 ```
 {
@@ -6368,39 +6361,39 @@ export default () => (
 }
 ```
 
-``and prepare your app by running  `npm run build`  and  `npm run start`.``
+`` and prepare your app by running `npm run build` and `npm run start`. ``
 
 #### `Now`
 
-`The company behind Next.js provides an awesome hosting service for Node.js applications, called  [**Now**][167].`
+`The company behind Next.js provides an awesome hosting service for Node.js applications, called [**Now**][167].`
 
-``Of course they integrate both their products so you can deploy Next.js apps seamlessly,  [once you have Now installed][168], by running the  `now`  command in the application folder.``
+`Of course they integrate both their products so you can deploy Next.js apps seamlessly, [once you have Now installed][168], by running the `now` command in the application folder.`
 
 `Behind the scenes Now sets up a server for you, and you don’t need to worry about anything, just wait for your application URL to be ready.`
 
 #### `Zones`
 
-`You can set up multiple Next.js instances to listen to different URLs, yet the application to an outside user will simply look like it’s being powered by a single server:  [https://github.com/zeit/next.js/#multi-zones][169]`
+`You can set up multiple Next.js instances to listen to different URLs, yet the application to an outside user will simply look like it’s being powered by a single server: [https://github.com/zeit/next.js/#multi-zones][169]`
 
 #### `Plugins`
 
-`Next.js has a list of plugins at  [https://github.com/zeit/next-plugins][170]`
+`Next.js has a list of plugins at [https://github.com/zeit/next-plugins][170]`
 
 #### `Starter kit on Glitch`
 
-`If you’re looking to experiment, I recommend Glitch. Check out my  [Next.js Glitch Starter Kit][171].`
+`If you’re looking to experiment, I recommend Glitch. Check out my [Next.js Glitch Starter Kit][171].`
 
 ### `Gatsby`
 
 `Gatsby is a platform for building apps and websites using React.`
 
-`It is one of the tools that allow you to build on a set of technologies and practices collectively known as  [JAMstack][172].`
+`It is one of the tools that allow you to build on a set of technologies and practices collectively known as [JAMstack][172].`
 
 `Gatsby is one of the cool kids in the Frontend Development space right now. Why? I think the reasons are:`
 
 -   `the explosion of the JAMstack approach to building Web Apps and Web Sites`
--   `the rapid adoption of the  [Progressive Web Apps][173]  technology in the industry, which is one of the key features of Gatsby`
--   `it’s built in React and  [GraphQL][174], which are two very popular and rising technologies`
+-   `the rapid adoption of the [Progressive Web Apps][173] technology in the industry, which is one of the key features of Gatsby`
+-   `it’s built in React and [GraphQL][174], which are two very popular and rising technologies`
 -   `it’s really powerful`
 -   `it’s fast`
 -   `the documentation is great`
@@ -6430,7 +6423,7 @@ export default () => (
 npm install -g gatsby-cli
 ```
 
-``This installs the  `gatsby`  CLI utility.``
+`This installs the `gatsby` CLI utility.`
 
 `(when a new version is out, update it by calling this command again)`
 
@@ -6440,11 +6433,11 @@ npm install -g gatsby-cli
 gatsby new mysite https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
-``This command creates a brand new Gatsby site in the  `mysite`  folder, using the  _starter_available at  [https://github.com/gatsbyjs/gatsby-starter-hello-world][176].``
+`` This command creates a brand new Gatsby site in the `mysite` folder, using the _starter_available at [https://github.com/gatsbyjs/gatsby-starter-hello-world][176]. ``
 
 `![](https://cdn-media-1.freecodecamp.org/images/rNWB5DuHCS526rLjNuhwMdYAErq4TTAJFqg5)`
 
-``A  _starter_  is a sample site that you can build upon. Another common starter is  `default`, available at  [https://github.com/gatsbyjs/gatsby-starter-default][177].``
+`` A _starter_ is a sample site that you can build upon. Another common starter is `default`, available at [https://github.com/gatsbyjs/gatsby-starter-default][177]. ``
 
 > `[_Here you can find a list of all the starters you can use_][178]_._`
 
@@ -6467,39 +6460,39 @@ gatsby develop
 
 ### `Inspecting the site`
 
-`If you open the site you created with your favorite code editor (I use  [VS Code][179]), you’ll find there are 3 folders:`
+`If you open the site you created with your favorite code editor (I use [VS Code][179]), you’ll find there are 3 folders:`
 
 -   `` `.cache`, a hidden folder that contains the Gatsby internals, nothing you should change right now``
--   `` `public`, which contains the resulting website once you build it``
--   `` `src`  contains the React components, in this case just the  `index`  component``
--   `` `static`  which will contain the static resources like CSS and images``
+-   `public`, which contains the resulting website once you build it`
+-   `` `src` contains the React components, in this case just the `index` component``
+-   `` `static` which will contain the static resources like CSS and images``
 
 `![](https://cdn-media-1.freecodecamp.org/images/x5XH1s5uMEQdUfnZB6BM2-T9HXkDwv1xLhPd)`
 
-``Now, making a simple change to the default page is easy, just open  `src/pages/index.js`and change “Hello world!” to something else, and save. The browser should instantly  **hot reload**  the component (which means the page does not actually refresh, but the content changes - a trick made possible by the underlying technology).``
+`` Now, making a simple change to the default page is easy, just open `src/pages/index.js`and change “Hello world!” to something else, and save. The browser should instantly **hot reload** the component (which means the page does not actually refresh, but the content changes - a trick made possible by the underlying technology). ``
 
-``To add a second page, just create another .js file in this folder, with the same content of  `index.js`  (tweak the content) and save it.``
+`` To add a second page, just create another .js file in this folder, with the same content of `index.js` (tweak the content) and save it. ``
 
-``For example I created a  `second.js`  file with this content:``
+`For example I created a `second.js` file with this content:`
 
 ```
 import React from 'react'
 export default () => <div>Second page!</div>
 ```
 
-`and I opened the browser to  [http://localhost:8000/second][180]:`
+`and I opened the browser to [http://localhost:8000/second][180]:`
 
 `![](https://cdn-media-1.freecodecamp.org/images/g4uWZNxitB4AAVbqOFmCKKPugS7yrxKYH-ld)`
 
 #### `Linking pages`
 
-``You can link those pages by importing a Gatsby-provided React component called  `Link`:``
+`You can link those pages by importing a Gatsby-provided React component called`Link`:`
 
 ```
 import { Link } from "gatsby"
 ```
 
-`and using it in your component  [JSX][181]:`
+`and using it in your component [JSX][181]:`
 
 ```
 <Link to="/second/">Second&lt;/Link>
@@ -6524,20 +6517,20 @@ import './index.css'
 
 #### `Using plugins`
 
-`Gatsby provides lots of things out of the box, but many other functionalities are provided by  [plugins][182].`
+`Gatsby provides lots of things out of the box, but many other functionalities are provided by [plugins][182].`
 
 `There are 3 kind of plugins:`
 
--   `**source plugins**  fetch data from a source. Create nodes that can be then filtered by transformer plugins`
--   `**transformer plugins**  transform the data provided by source plugins into something Gatsby can use`
--   `**functional plugins**  implement some kind of functionality, like adding sitemap support or more`
+-   `**source plugins** fetch data from a source. Create nodes that can be then filtered by transformer plugins`
+-   `**transformer plugins** transform the data provided by source plugins into something Gatsby can use`
+-   `**functional plugins** implement some kind of functionality, like adding sitemap support or more`
 
 `Some commonly used plugins are:`
 
--   ``[gatsby-plugin-react-helmet][183]  which allows to edit the  `head`  tag content``
--   `[gatsby-plugin-catch-links][184]  which uses the  [History API][185]  to prevent the browser reloading the page when a link is clicked, loading the new content using AJAX instead`
+-   `` [gatsby-plugin-react-helmet][183] which allows to edit the `head` tag content ``
+-   `[gatsby-plugin-catch-links][184] which uses the [History API][185] to prevent the browser reloading the page when a link is clicked, loading the new content using AJAX instead`
 
-``A Gatsby plugin is installed in 2 steps. First you install it using  `npm`, then you add it to the Gatsby configuration in  `gatsby-config.js`.``
+`` A Gatsby plugin is installed in 2 steps. First you install it using `npm`, then you add it to the Gatsby configuration in `gatsby-config.js`. ``
 
 `For example you can install the Catch Links plugin:`
 
@@ -6545,7 +6538,7 @@ import './index.css'
 npm install gatsby-plugin-catch-links
 ```
 
-``In  `gatsby-config.js`  (create it if you don’t have it, in the website root folder), add the plugin to the  `plugins`  exported array:``
+`` In `gatsby-config.js` (create it if you don’t have it, in the website root folder), add the plugin to the `plugins` exported array: ``
 
 ```
 module.exports = {
@@ -6573,15 +6566,15 @@ gatsby serve
 
 #### `Deployment`
 
-``Once you build the site using  `gatsby build`, all you need to do is to deploy the result contained in the  `public`  folder.``
+`Once you build the site using `gatsby build`, all you need to do is to deploy the result contained in the `public` folder.`
 
-`Depending on the solution you choose, you’ll need different steps here, but generally you’ll push to a Git repository and let the Git post-commit hooks do the job of deploying.  [Here are some great guides for some popular hosting platforms][186]  where you can deploy Gatsby.`
+`Depending on the solution you choose, you’ll need different steps here, but generally you’ll push to a Git repository and let the Git post-commit hooks do the job of deploying. [Here are some great guides for some popular hosting platforms][186] where you can deploy Gatsby.`
 
 ### `Wrapping up`
 
 `I hope this book has helped you get started with React, and maybe it gave you a head start in exploring some of the most advanced aspects of React programming. That’s my hope, at least.`
 
-> `You can get this ebook in PDF, ePub and Mobi format at  [reacthandbook.com][187]`
+> `You can get this ebook in PDF, ePub and Mobi format at [reacthandbook.com][187]`
 
 [1]: https://twitter.com/flaviocopes
 [2]: https://reacthandbook.com/

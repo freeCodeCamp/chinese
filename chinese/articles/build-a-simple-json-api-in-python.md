@@ -1,18 +1,17 @@
-> * 原文地址：[How to build a JSON API with Python](https://www.freecodecamp.org/news/build-a-simple-json-api-in-python/)
-> * 原文作者：Peter Gleeson
-> * 译者：fearlessfe
-> * 校对者：miyaliu666
-
+> -   原文地址：[How to build a JSON API with Python](https://www.freecodecamp.org/news/build-a-simple-json-api-in-python/)
+> -   原文作者：Peter Gleeson
+> -   译者：fearlessfe
+> -   校对者：miyaliu666
 
 ![如何使用 Python 构建 JSON API](https://images.unsplash.com/photo-1499892477393-f675706cbe6e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-[JSON API规范][1]是一种用于客户端和和服务器之间通信的方式。它使用JSON格式来限定两者之间请求和响应的格式。
+[JSON API 规范][1]是一种用于客户端和和服务器之间通信的方式。它使用 JSON 格式来限定两者之间请求和响应的格式。
 
 作为一种数据格式，JSON 具有轻量和可读的优势。这使得它非常快速、高效。JSON 规范旨在最大限度的减少客户端和服务端之间请求的数量及发送的数据量。
 
 本文将介绍如何使用 Python 和 Flask 构建基本的 JSON API，以及如何实现一些符合 JSON API 规范的特性。
 
-[Flask][2]是一个为web开发提供“微框架”的Python库。它非常适合快速开发，因为它的核心功能简单且可拓展。
+[Flask][2]是一个为 web 开发提供“微框架”的 Python 库。它非常适合快速开发，因为它的核心功能简单且可拓展。
 
 下面是一个展示如何使用 Flask 来发送类 JSON 响应的基础示例
 
@@ -28,8 +27,8 @@ def example():
 
 本文将使用两个 Flask 的附加组件:
 
-- [Flask-REST-JSONAPI][3] 帮助开发严格遵循 JSON 规范的 API。
-- [Flask-SQLAlchemy][4] 使用 [SQLAlchemy][5] 使得创建一个简单的数据库并与之交互变得非常简单。
+-   [Flask-REST-JSONAPI][3] 帮助开发严格遵循 JSON 规范的 API。
+-   [Flask-SQLAlchemy][4] 使用 [SQLAlchemy][5] 使得创建一个简单的数据库并与之交互变得非常简单。
 
 ### 概览
 
@@ -58,7 +57,8 @@ $ cd flask-jsonapi-demo/
 ```
 
 为每个 Python 项目创建[创建虚拟环境][7]是一种很好的做法。你可以跳过此步骤，但是强烈建议你不跳过。
-```
+
+```plain
 $ python -m venv .venv
 $ source .venv/bin/activate
 
@@ -66,7 +66,7 @@ $ source .venv/bin/activate
 
 在创建并激活虚拟环境后，你就可以为该项目安装所需的依赖模块。
 
-```
+```plain
 $ pip install flask-rest-jsonapi flask-sqlalchemy
 ```
 
@@ -74,7 +74,7 @@ $ pip install flask-rest-jsonapi flask-sqlalchemy
 
 下一步是为项目创建 Python 入口文件和数据库文件。
 
-```
+```plain
 $ touch application.py artists.db
 ```
 
@@ -139,7 +139,7 @@ birth_year <span class="token operator" style="box-sizing: inherit; margin: 0px;
 genre <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> fields<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>Str<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
 ```
 
-### 创建资源管理器和URL端点
+### 创建资源管理器和 URL 端点
 
 最后一个难题是为每个路由 (/artists, /artists/id) 创建资源管理器和对应的端点。
 
@@ -147,7 +147,7 @@ genre <span class="token operator" style="box-sizing: inherit; margin: 0px; padd
 
 这里他们有两个属性。`schema` 用于表示资源管理器使用的数据抽象层，`data_layer` 表示将用于数据层的会话和数据模型。
 
-接下来，将 `api` 定义为 Flask-REST-JSONAPI 的 `Api` 类的实例，并使用 `api.route()` 创建API的路由。 该方法有三个参数——数据抽象层类，端点名称和 URL 路径。
+接下来，将 `api` 定义为 Flask-REST-JSONAPI 的 `Api` 类的实例，并使用 `api.route()` 创建 API 的路由。 该方法有三个参数——数据抽象层类，端点名称和 URL 路径。
 
 最后一步是编写主函数，并在调试模式下启动应用。调试模式非常适合开发，但它不适合在生产中运行。
 
@@ -174,7 +174,7 @@ api.route(ArtistOne, 'artist_one', '/artists/<int:id>')
 
 运行 `application.py` 脚本来启动服务器：
 
-```
+```plain
 $ python application.py
 ```
 
@@ -183,7 +183,8 @@ $ python application.py
 你可以发送 POST 请求来向数据库添加记录。其中一种方式是在命令行中使用 curl。或者，你可以使用 [Insomnia] [11]之类的工具，或者编写一个使用表单发送数据的简单 HTML 用户界面。
 
 在命令行中使用 [curl][12] ：
-```
+
+```plain
 curl -i -X POST -H 'Content-Type: application/json' -d '{"data":{"type":"artist", "attributes":{"name":"Salvador Dali", "birth_year":1904, "genre":"Surrealism"}}}' http://localhost:5000/artists
 ```
 
@@ -193,23 +194,23 @@ curl -i -X POST -H 'Content-Type: application/json' -d '{"data":{"type":"artist"
 
 ### 过滤和排序
 
-JSON API 规范的一个有用功能是能够通过在URL中定义一些参数以更有用的方式返回响应结果。例如，你可以根据选定的字段对结果进行排序，也可以根据某些条件进行过滤。
+JSON API 规范的一个有用功能是能够通过在 URL 中定义一些参数以更有用的方式返回响应结果。例如，你可以根据选定的字段对结果进行排序，也可以根据某些条件进行过滤。
 
 Flask-REST-JSONAPI 内置了该功能。
 
-要按出生年份排序艺术家，只需导航到 [http://localhost:5000/artists?sort=birth\_year][16]。 在Web应用程序中，这将使你无需在客户端对结果进行排序，这在性能方面成本很高，因此会影响用户体验。
+要按出生年份排序艺术家，只需导航到 [http://localhost:5000/artists?sort=birth_year][16]。 在 Web 应用程序中，这将使你无需在客户端对结果进行排序，这在性能方面成本很高，因此会影响用户体验。
 
 实现过滤也很容易。将筛选条件以方括号的形式添加到 URL 末尾。包括以下三个字段：
 
--  "name"- 过滤的字段（比如 `birth_year`）
--  "op" - 过滤操作符（等于，大于，小于等）
--  "val" - 过滤的值（例如 1990）
+-   "name"- 过滤的字段（比如 `birth_year`）
+-   "op" - 过滤操作符（等于，大于，小于等）
+-   "val" - 过滤的值（例如 1990）
 
-例如，下面的 URL 将检索出生年份大于1900的艺术家：
+例如，下面的 URL 将检索出生年份大于 1900 的艺术家：
 
-[http://localhost:5000/artists?filter=\[{"name":"birth\_year","op":"gt","val":1900}\]][17]
+[http://localhost:5000/artists?filter=\[{"name":"birth_year","op":"gt","val":1900}\]][17]
 
-此功能使得在调用API时仅检索相关信息变得更加容易。这对于提高性能很有价值，尤其是在较慢的网络环境查询大量数据时。
+此功能使得在调用 API 时仅检索相关信息变得更加容易。这对于提高性能很有价值，尤其是在较慢的网络环境查询大量数据时。
 
 ### 分页
 
@@ -244,7 +245,7 @@ from flask_rest_jsonapi import ResourceRelationship
 接下来，重写抽象层：
 
 ```python
-# Create data abstraction 
+# Create data abstraction
 class ArtistSchema(Schema):
     class Meta:
         type_ = 'artist'
@@ -298,7 +299,7 @@ api.route(ArtistArtwork, 'artist_artworks',
 
 运行 `application.py` 并试着从命令行用 curl 发送一些数据：
 
-```
+```plain
 curl -i -X POST -H 'Content-Type: application/json' -d '{"data":{"type":"artwork", "attributes":{"title":"The Persistance of Memory", "artist_id":1}}}' http://localhost:5000/artworks
 ```
 
@@ -330,7 +331,6 @@ JSON API 规范是一个非常有用的框架，用于以干净，灵活的格�
 
 谢谢阅读，keep coding in Python!
 
-
 [1]: https://jsonapi.org/
 [2]: https://flask.palletsprojects.com/en/1.1.x/
 [3]: https://flask-rest-jsonapi.readthedocs.io/en/latest/
@@ -347,6 +347,7 @@ JSON API 规范是一个非常有用的框架，用于以干净，灵活的格�
 [14]: http://localhost:5000/artists
 [15]: http://localhost:5000/artists/1
 [16]: http://localhost:5000/artists?sort=birth_year
+
 [17]: http://localhost:5000/artists?filter=[{%22name%22:%22birth_year%22,%22op%22:%22gt%22,%22val%22:1900}]
 [18]: http://localhost:5000/artists?page[size]=2&page[number]=1
 [19]: http://localhost:5000/artworks

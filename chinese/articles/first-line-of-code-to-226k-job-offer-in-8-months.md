@@ -1,14 +1,14 @@
-> * 原文地址：[How I Went from Writing My First Line of Code to a $226K Job Offer in Just 8 Months](https://www.freecodecamp.org/news/first-line-of-code-to-226k-job-offer-in-8-months/)
-> * 原文作者：Jason Zedde
-> * 译者：MMMAY521
-> * 校对者：
+> -   原文地址：[How I Went from Writing My First Line of Code to a \$226K Job Offer in Just 8 Months](https://www.freecodecamp.org/news/first-line-of-code-to-226k-job-offer-in-8-months/)
+> -   原文作者：Jason Zedde
+> -   译者：MMMAY521
+> -   校对者：
 
 ![How I Went from Writing My First Line of Code to a $226K Job Offer in Just 8 Months]
-八个月：从写下第一行代码到拿下226K美元的工作
+八个月：从写下第一行代码到拿下 226K 美元的工作
 (https://www.freecodecamp.org/news/content/images/size/w2000/2019/09/Love-to-learn_tim-mossholder_unsplash.jpg)
 
 I got offers from Google, Lyft, Yelp, cloud unicorn Rubrik, IBM Artificial Intelligence, and JP Morgan Chase. My story may help you in your job search.
-我找工作时曾拿到了包括谷歌、Lyft、Yelp、云独角兽公司Rubrik、IBM人工智能部门和摩根大通集团在内的工作offer，我的求职故事可能会对你有所启发。
+我找工作时曾拿到了包括谷歌、Lyft、Yelp、云独角兽公司 Rubrik、IBM 人工智能部门和摩根大通集团在内的工作 offer，我的求职故事可能会对你有所启发。
 
 ### Introduction
 
@@ -24,7 +24,7 @@ Every job seeker's story will be different, but I hope yours benefits from mine.
 
 On July 29th, 2018, I made an irrational decision.
 
-I was choosing between a Chief of Staff role for a hyper-growth adtech company and attending a  [coding “bootcamp.”][1]  The Chief of Staff role was lucrative and certain - seemingly an extraordinary ticket to a Silicon Valley fast track. The bootcamp seemed expensive and risky.
+I was choosing between a Chief of Staff role for a hyper-growth adtech company and attending a [coding “bootcamp.”][1] The Chief of Staff role was lucrative and certain - seemingly an extraordinary ticket to a Silicon Valley fast track. The bootcamp seemed expensive and risky.
 
 I had written my first line of JavaScript five weeks earlier on June 24th with no intention of becoming an engineer. I already had a degree in Economics and three years’ experience as a non-technical management consultant for nonprofits. I just wanted to make myself a more attractive candidate for roles that involved working with engineers in the Bay Area.
 
@@ -34,17 +34,17 @@ Most engineers I knew had four-year computer science degrees, years of experienc
 
 The Chief of Staff role, on the other hand, looked like a dream come true. I would be the most junior member by ~10 years in “the room where it happens” as the company navigated upcoming acquisition talks. Salary negotiations went better than expected, and it seemed I would likely inherit a department of my own after a few years.
 
-But once I started coding I didn’t want to stop. I loved the technical challenge, was thrilled to make headway against something so intimidating. And I figured  [developing a second professional skillset][2]  might prepare me for an unusually impactful career.
+But once I started coding I didn’t want to stop. I loved the technical challenge, was thrilled to make headway against something so intimidating. And I figured [developing a second professional skillset][2] might prepare me for an unusually impactful career.
 
-An inner voice also asked if becoming an engineer would be as personally transformational as professional:  _If I succeed in learning this, what couldn’t I learn?_  This attitude, more than anything else, would become the theme of my journey.
+An inner voice also asked if becoming an engineer would be as personally transformational as professional: _If I succeed in learning this, what couldn’t I learn?_ This attitude, more than anything else, would become the theme of my journey.
 
-I took an online course and, after coding ~40 hours/week for three weeks, I decided to apply to  [Hack Reactor][3], which I had heard described as “the Harvard of bootcamps,” just to see if I could get in. I passed the entrance exam by the skin of my teeth the same week I received the Chief of Staff offer.
+I took an online course and, after coding ~40 hours/week for three weeks, I decided to apply to [Hack Reactor][3], which I had heard described as “the Harvard of bootcamps,” just to see if I could get in. I passed the entrance exam by the skin of my teeth the same week I received the Chief of Staff offer.
 
-After 72 hours of soul searching I checked my bank account one last time. I estimated I would have three months’ rent and food after Hack Reactor.  _Just enough time to find a job,_  I thought.
+After 72 hours of soul searching I checked my bank account one last time. I estimated I would have three months’ rent and food after Hack Reactor. _Just enough time to find a job,_ I thought.
 
 I chose bootcamp.
 
-I declined by phone with the adtech company, hung up, and was hit by a wave of mixed emotions. Part of me was scared:  _I’m throwing away a once-in-a-lifetime opportunity for a moonshot idea!_ Another part excited:  _The only thing that stands between me and regret is taking risks!_
+I declined by phone with the adtech company, hung up, and was hit by a wave of mixed emotions. Part of me was scared: _I’m throwing away a once-in-a-lifetime opportunity for a moonshot idea!_ Another part excited: _The only thing that stands between me and regret is taking risks!_
 
 Soon my excitement won out. No turning back now – I was in for an adventure.
 
@@ -56,35 +56,35 @@ Hack Reactor and other “bootcamps” aspire to do in three months much of what
 
 The goal is ambitious, and every moment counts. For 12-14 hours/day, 6 days/week over the course of 3 months, the program threw us repeatedly into overwhelming tasks against tight time constraints.
 
-At the start of every assignment I would get a sickening pit in my stomach and think,  _This deadline seems impossible – I don’t even know where to start_! But somehow I would (almost) always hack together a working solution just as time expired.
+At the start of every assignment I would get a sickening pit in my stomach and think, _This deadline seems impossible – I don’t even know where to start_! But somehow I would (almost) always hack together a working solution just as time expired.
 
 After enough reps, I started to associate the pit in my stomach with a sense of excitement — the more impossible the challenge seemed, the more satisfying it would be to find a solution.
 
-Hack Reactor wasn’t just teaching content, it was teaching a new kind of  [grit][4]  and  [growth mindset][5], and the process was exhilarating.
+Hack Reactor wasn’t just teaching content, it was teaching a new kind of [grit][4] and [growth mindset][5], and the process was exhilarating.
 
 Still doubting I would get a job before my savings ran out, I invested in the best learning and self-care habits I could find.
 
-To ensure ample  [sleep for learning][6], I kept strict bedtimes.
+To ensure ample [sleep for learning][6], I kept strict bedtimes.
 
-To fight repetitive stress aches,  [boost wellbeing][7], and  [support learning][8], I worked out every other day.
+To fight repetitive stress aches, [boost wellbeing][7], and [support learning][8], I worked out every other day.
 
 To improve retention and make each day’s learning a little better than the last, I reviewed core lessons and reflected on what went well and what did not most evenings.
 
-And most importantly, to maintain baseline wellbeing during such an intense schedule, I meditated for a full hour every morning before class, usually using a mix of vipassana (a form of  [body scanning][9]) and  [loving-kindness][10]  techniques.
+And most importantly, to maintain baseline wellbeing during such an intense schedule, I meditated for a full hour every morning before class, usually using a mix of vipassana (a form of [body scanning][9]) and [loving-kindness][10] techniques.
 
-This last habit may strike some as extreme, but the  [evidence behind meditation][11]  improving wellbeing is strong, especially  [loving-kindness][12]. I cannot overstate how valuable this practice was in helping me embrace the curiosity and joy of learning rather than grow anxious about the challenges of bootcamp and uncertain employment.
+This last habit may strike some as extreme, but the [evidence behind meditation][11] improving wellbeing is strong, especially [loving-kindness][12]. I cannot overstate how valuable this practice was in helping me embrace the curiosity and joy of learning rather than grow anxious about the challenges of bootcamp and uncertain employment.
 
-I also benefited from a blessing in disguise. A travel conflict prevented me from enrolling in the in-person immersive, so despite living a 10-minute walk from the SF campus, I had to take the remote program. Between the lack of commute, easy access to food, and the quiet of my apartment, I was able to protect another ~90 minutes a day of uninterrupted  [deep work][13].
+I also benefited from a blessing in disguise. A travel conflict prevented me from enrolling in the in-person immersive, so despite living a 10-minute walk from the SF campus, I had to take the remote program. Between the lack of commute, easy access to food, and the quiet of my apartment, I was able to protect another ~90 minutes a day of uninterrupted [deep work][13].
 
-The first six weeks involved two-day pair programming sprints building on semi-completed code repositories. We raced through rewriting the JavaScript  [Underscore][14]  library, building basic data structures from scratch, learning object-oriented vs. functional programming, calculating time and space complexity, and wiring up a full stack app from client to server to database. Our smaller, 24-person cohort grew close joking with one another over video conference 10+ hours/day.
+The first six weeks involved two-day pair programming sprints building on semi-completed code repositories. We raced through rewriting the JavaScript [Underscore][14] library, building basic data structures from scratch, learning object-oriented vs. functional programming, calculating time and space complexity, and wiring up a full stack app from client to server to database. Our smaller, 24-person cohort grew close joking with one another over video conference 10+ hours/day.
 
-Three weeks in, I was afraid I wasn’t going to pass the gating mid-course assessment, so I  [wrote a letter to myself][15]  dated in the future explaining how it came to be that I passed the assessment.
+Three weeks in, I was afraid I wasn’t going to pass the gating mid-course assessment, so I [wrote a letter to myself][15] dated in the future explaining how it came to be that I passed the assessment.
 
-I mentioned all my existing self-care and learning habits and added a few more, including reviewing code I didn’t fully understand until I could mentally explain the core concepts to an imaginary 8 year-old (the  [Feynman Technique][16]).
+I mentioned all my existing self-care and learning habits and added a few more, including reviewing code I didn’t fully understand until I could mentally explain the core concepts to an imaginary 8 year-old (the [Feynman Technique][16]).
 
 Three weeks later, I built my first full stack application from scratch in under 24 hours and passed the exam with flying colors. College was a great education. This was another level.
 
-The second six weeks involved more free-form group projects. Taking inspiration from  [positive deviance][17], I tracked down and got in touch with bootcamp alumni who were especially successful in the job search. I followed their guidance to set tight personal deadlines for intimidating technical challenges, select “hot” skills on the job market (like working with Docker and microservices), and diversifying my roles across different projects. I arranged a tutoring session with one alum and successfully implemented a feature that originally took him weeks in two days.
+The second six weeks involved more free-form group projects. Taking inspiration from [positive deviance][17], I tracked down and got in touch with bootcamp alumni who were especially successful in the job search. I followed their guidance to set tight personal deadlines for intimidating technical challenges, select “hot” skills on the job market (like working with Docker and microservices), and diversifying my roles across different projects. I arranged a tutoring session with one alum and successfully implemented a feature that originally took him weeks in two days.
 
 Hack Reactor hires some of its graduates from each cohort to serve as temporary, part-time teaching assistants to support full-time staff. After graduation, I took a 6-week position working ~35 hours/week and helped roll out new curriculum, conducted independent research, lectured job-seeking alumni on my findings, and interviewed incoming Hack Reactor candidates.
 
@@ -98,9 +98,9 @@ Companies that made me offers
 
 On December 7, 165 days after my first line of code, my employment with Hack Reactor ended, leaving me with savings to pay for four months’ rent and food. Hack Reactor warns its graduates to budget six months for job searching. The clock was ticking!
 
-I wrote down my goals. I was ambitious and the odds were stacked against me.  I wanted:
+I wrote down my goals. I was ambitious and the odds were stacked against me. I wanted:
 
--   A top 25th-percentile Hack Reactor outcome in compensation, hoping for over $120K/annual salary
+-   A top 25th-percentile Hack Reactor outcome in compensation, hoping for over \$120K/annual salary
 -   The steepest possible learning curve; ideally in a role with both autonomy and access to experienced mentors
 -   A team and company culture that was technically strong but people-first
 -   Interesting and meaningful work
@@ -110,7 +110,7 @@ I never imagined I would get everything I wanted and more. But the search would 
 
 Hack Reactor left me with a terrific foundation in little time, but I was still weeks, if not months, of full-time study away from where I needed to be to interview successfully at top companies.
 
-I would also have to face relentless, ongoing rejection with no certainty of success. Hiring from coding bootcamps is not yet mainstream, and despite  [evidence suggesting bootcamps grads perform just as well as those with four-year CS degrees in interviews][19], it would be an uphill battle to land interviews. And the vastness of topics covered in software engineering interviews meant I could never be completely prepared.
+I would also have to face relentless, ongoing rejection with no certainty of success. Hiring from coding bootcamps is not yet mainstream, and despite [evidence suggesting bootcamps grads perform just as well as those with four-year CS degrees in interviews][19], it would be an uphill battle to land interviews. And the vastness of topics covered in software engineering interviews meant I could never be completely prepared.
 
 When it was all over, I had applied to 44 companies with 41 referrals and received 14 coding challenges or technical phone interviews, which converted to 8 on-sites and 7 offers by February 15, 2019 - 245 days after my first line of code.
 
@@ -130,12 +130,12 @@ My third coding challenge was a multi-hour, heart-thumping affair in which I pas
 
 I told myself it was a numbers game, and every morning after my hour of loving-kindness meditation, I’d take a minute to remind myself of two things:
 
--   First, while my goals gave me direction, overly focusing on goals would only leave me dissatisfied with the gap between where I was and where I wanted to be. I wanted  [habits over goals][20].
+-   First, while my goals gave me direction, overly focusing on goals would only leave me dissatisfied with the gap between where I was and where I wanted to be. I wanted [habits over goals][20].
 -   Second, I reflected that regardless of what job landed, the real prize of this journey was personal, not professional, transformation. I was lucky to have months dedicated full-time to learning how to learn, and I was falling in love with it!
 
 I knew early failures could be seeds for later success, but they would require special care. I made sure to do a post-mortem on every failed coding challenge and interview, then redo the problem in my text editor until I solved it. One 20-minute prompt took me 9 hours over three days to solve!
 
-I kept notes on new concepts and “aha” moments after I solved a problem, treating them as my invaluable collection of “[mental models][21]” I hoped would grow sufficient to pattern match to any interview prompt. I would review them on  [spaced repetition intervals][22]  to most efficiently commit to long-term memory.
+I kept notes on new concepts and “aha” moments after I solved a problem, treating them as my invaluable collection of “[mental models][21]” I hoped would grow sufficient to pattern match to any interview prompt. I would review them on [spaced repetition intervals][22] to most efficiently commit to long-term memory.
 
 For problems involving new code syntax, I’d redo them under time pressure to ensure accurate recall in an interview setting.
 
@@ -160,9 +160,9 @@ I also did my best to time applications so I could interview first with less des
 
 My interview with IBM proved to be a bright spot to my rocky start, but even still, it doubled as a lesson to persist amidst uncertainty. It consisted of a phone interview and three more interviews at the “on-site.”
 
-At the start of every interview I experienced that now-familiar pit in my stomach and thought:  _I do not know how to do this_.
+At the start of every interview I experienced that now-familiar pit in my stomach and thought: _I do not know how to do this_.
 
-I responded each time by taking a breath and reminding myself:  _It’s fun turning this feeling into a working solution at home, so imagine how much more fun it will be here where the stakes are higher and the job is on the line!_
+I responded each time by taking a breath and reminding myself: _It’s fun turning this feeling into a working solution at home, so imagine how much more fun it will be here where the stakes are higher and the job is on the line!_
 
 After the first two interviews, I wondered if my excitement and learning orientation were contagious — my interviewers certainly knew I didn’t see an answer right away, but they seemed to enjoy how the energy in the conversation rose as I neared a solution.
 
@@ -174,7 +174,7 @@ Fortunately, seeds sown in December’s failures bloomed into January's success.
 
 > **"Your hardest times often lead to the greatest moments of your life. Keep going." ―Roy T. Bennet**
 
-The first week of January, IBM called with an informal offer with formal details forthcoming.  _Could I use this as leverage in the meantime?_  I thought. I shared the news with a Google recruiter, who responded by accelerating me past the phone interview straight to an on-site.
+The first week of January, IBM called with an informal offer with formal details forthcoming. _Could I use this as leverage in the meantime?_ I thought. I shared the news with a Google recruiter, who responded by accelerating me past the phone interview straight to an on-site.
 
 Suddenly, I could command recruiters’ attention. I immediately informed all companies I was speaking with that I had an offer. Doing so during the start of the new year immediately heated up my pipeline.
 
@@ -202,11 +202,11 @@ I started to handle several calls per day from phone interviewers, recruiters, a
 
 As on-sites came and went, I had to watch my words around recruiters. The security startup said they were afraid they wouldn’t be able to keep up with big companies like IBM and JP Morgan Chase and asked what salary offers I had received.
 
-I almost bit the bait, but paused and  [deflected the salary question][24]  as Hack Reactor instructs.  _“_I’d actually like to go the other way – can you tell me your range and I’ll tell you if you’re in the ballpark?” I said. “Sure, we start at $125K.”
+I almost bit the bait, but paused and [deflected the salary question][24] as Hack Reactor instructs. \_“\_I’d actually like to go the other way – can you tell me your range and I’ll tell you if you’re in the ballpark?” I said. “Sure, we start at \$125K.”
 
-$125K. That exceeded my goal!
+\$125K. That exceeded my goal!
 
-I looked away hoping to disguise my excitement by making it look like I was thinking about it. I turned back and said calmly,  _“_If that’s your starting point, I think we can have a conversation.” He responded: “Oh good, I’m relieved we’re still in the running!” _Me too,_  I thought.
+I looked away hoping to disguise my excitement by making it look like I was thinking about it. I turned back and said calmly, _“\_If that’s your starting point, I think we can have a conversation.” He responded: “Oh good, I’m relieved we’re still in the running!” \_Me too,_ I thought.
 
 The formal offer was in a few days later: $125K plus $6K/annual in stock options at current valuation. But the money was almost insignificant! It was a good cultural fit, a fascinating back end role, and mentorship opportunities looked unusually strong. The team of ~40 engineers all had at least two years’ experience and were mostly from top schools like MIT, Stanford, or Berkeley. It was everything I wanted!
 
@@ -216,15 +216,15 @@ But the offers were just getting started.
 
 > **"Effective negotiators look past their counterparts’ stated positions and delve into their underlying motivations... they are relentlessly curious." –Chris Voss**
 
-Rubrik called two days later and shocked me. They wanted me to be their first-ever bootcamp hire too. Rubrik was already valued at $3.3B — a hot new unicorn and coveted place to work by software engineers with plenty of experience. I laughed with the recruiter, overjoyed such a competitive company wanted me, and hung up so excited I almost didn’t realize I had a missed call from Google.
+Rubrik called two days later and shocked me. They wanted me to be their first-ever bootcamp hire too. Rubrik was already valued at \$3.3B — a hot new unicorn and coveted place to work by software engineers with plenty of experience. I laughed with the recruiter, overjoyed such a competitive company wanted me, and hung up so excited I almost didn’t realize I had a missed call from Google.
 
 I dialed back with bated breath. The recruiter got right to it: “I just got out of Hiring Committee and wanted to call you right away. We’d like to make you an offer — ”
 
 I couldn’t contain myself. I yelled, jumping into my empty kitchen. Google! The gold standard of software engineering and my hardest interviewer had decided they wanted me! Then she mentioned numbers and things got surreal. $163K all-in: $120 base salary, $18K minimum bonus, and $25K annual in (liquid) equity.
 
-$163K.
+\$163K.
 
-_Are you out of your mind?_  I thought. My last tax return declared $77K.  _That is a stupid amount of money._
+_Are you out of your mind?_ I thought. My last tax return declared \$77K. _That is a stupid amount of money._
 
 I took the afternoon off and walked around my neighborhood dancing when I thought nobody was looking and calling family members to share the unbelievable news.
 
@@ -240,13 +240,13 @@ The next few days flew by in a flurry of phone calls with recruiters and advisor
 
 I learned to love it. Each conversation was a fascinating puzzle, with layers ranging from high-level strategy, like when and how I shared information, to moment-to-moment tactics, like my tone of voice. It was especially fun to have so many at-bats – I would sometimes talk to multiple recruiters in a single day, each phone call doubling as another opportunity to try out new skills and learn from mistakes.
 
-I had read Harvard Negotiation Project’s  _Getting to the Yes_ and  _Getting Past the No_  in college and was familiar with concepts like BATNA and win-win solutions. But I took most of my inspiration from Chris Voss’s  _Never Split the Difference_, which I re-read immediately after Google’s offer.
+I had read Harvard Negotiation Project’s _Getting to the Yes_ and _Getting Past the No_ in college and was familiar with concepts like BATNA and win-win solutions. But I took most of my inspiration from Chris Voss’s _Never Split the Difference_, which I re-read immediately after Google’s offer.
 
-I also scoured blog posts by  [Haseeb Qureshi][25], another earn-to-give bootcamp graduate, and chatted regularly with my Hack Reactor career coach who had advised hundreds of negotiations before mine.
+I also scoured blog posts by [Haseeb Qureshi][25], another earn-to-give bootcamp graduate, and chatted regularly with my Hack Reactor career coach who had advised hundreds of negotiations before mine.
 
 Rubrik’s first offer came in at $163K, matching Google perfectly. Then Yelp called with the latest plot twist. They “leveled-up” my application to a non-entry level role and offered me $160K plus a $20K sign-on bonus for $180K all-in first-year compensation.
 
-$180K and a non-entry level role?
+\$180K and a non-entry level role?
 
 I put on my very best performance at my Yelp interview — finishing every challenge with time to spare, adapting code seamlessly to meet new constraints, and making remarks about systems architecture using back-of-the-envelope calculations that seemed to surprise my interviewer. But that didn’t change the fact I had zero experience! Google and Rubrik immediately said they’d prepare a counter offer.
 
@@ -256,37 +256,37 @@ Lyft emailed asking to get on the phone. Lyft was by far my favorite interview e
 
 _“I’m juggling a handful of different calls right now. Do you mind breaking the news by email? I’m guessing it’s a rejection, in which case I would love to get 1-2 sentences of feedback from each interview. Other than that, thank you for your time and shepherding me through the process!”_
 
-She responded with one line:  _“It’s not a rejection :)”_
+She responded with one line: _“It’s not a rejection :)”_
 
-_What! Would no company reject me?_  I couldn’t believe my top choice was back on the table. We talked numbers the next day: $210K all-in.
+_What! Would no company reject me?_ I couldn’t believe my top choice was back on the table. We talked numbers the next day: \$210K all-in.
 
-$210K.
+\$210K.
 
 And to think that was Lyft, where I would have loved to work, money aside! A couple of my friends at Lyft were some of my favorite people — harder to say if they were kinder than they were brilliant or vice versa — and my interviewers seemed cut from the same cloth.
 
 I informed everyone a last minute offer had been made and set a decision deadline for one week, encouraging everyone to make their final offers. I was getting worn down in constant negotiations, I felt a deadline would professionally bound the time everyone was investing in my candidacy, and Voss suggests deadlines can be used to your advantage.
 
-Google had prepared $189K to come in over Yelp, but said it would come back again given news about Lyft. Rubrik agreed to get on the phone. Yelp and and the security startup said they couldn’t negotiate further, and I was no longer keeping JP Morgan Chase or IBM up to speed. Uber, my only other onsite, did not make me an offer.
+Google had prepared \$189K to come in over Yelp, but said it would come back again given news about Lyft. Rubrik agreed to get on the phone. Yelp and and the security startup said they couldn’t negotiate further, and I was no longer keeping JP Morgan Chase or IBM up to speed. Uber, my only other onsite, did not make me an offer.
 
 The Lyft team had me for lunch and I swooned. Teams at Google, Yelp, and the security startup were enjoyable, but 9 people took time out of their day to lunch with me at Lyft, laughing as if I were already part of the team. They wanted to staff me on the company’s number one 2019 priority and a senior engineer told me he would happily serve as a mentor. Lyft was also months away from an IPO.
 
 I had it all: mentorship, opportunity in a high-growth environment, a people-first culture, exciting work, and now outrageously high compensation.
 
-Rubrik didn’t counter offer in time, but Google came in at $233K, $216K before their 401(k) match and charity match programs (which I consider good as cash since I  [earn-to-give][26]  and will be donating 25% of my pre-tax income this year). The team was also a good cultural fit, and Google is world-class in developing junior engineers into top talent.
+Rubrik didn’t counter offer in time, but Google came in at $233K, $216K before their 401(k) match and charity match programs (which I consider good as cash since I [earn-to-give][26] and will be donating 25% of my pre-tax income this year). The team was also a good cultural fit, and Google is world-class in developing junior engineers into top talent.
 
 I grappled with the decision for days, wavering between Google and Lyft, but gradually growing confident that, compensation aside, Lyft was an opportunity I couldn’t pass up. I negotiated a final package of $226 all-in compensation: $135K base salary, $71K in equity at pre-IPO valuation, and $20K sign-on bonus. On Monday, February 25, 245 days after my first line of code, I spoke the two words that brought it all to a close: “I accept.”
 
 Six months later, I couldn’t be happier working at Lyft. And to my delight, my morning reflection was dead on. My team is supportive, my work fascinating, and my compensation strong, but the priceless reward of becoming an engineer was falling in love with learning. Now that I’m in love, I don’t intend to leave it.
 
-## [In search of software engineering roles?][27]
+## [In search of software engineering roles][27]
 
-I've curated the list of top resources I used to prep for interviews. I'm also offering coaching sessions to job seekers that commit 10% or more of their future income to high impact charities. **Get access to both  [here][28].**
+I've curated the list of top resources I used to prep for interviews. I'm also offering coaching sessions to job seekers that commit 10% or more of their future income to high impact charities. **Get access to both [here][28].**
 
 Note: I write with a pen name to maintain a little separation between my personal life and growing presence as a job search coach.
 
-I shared specific compensation information in this article for two reasons. One, I want this post to be as useful as possible to job seekers from non-traditional backgrounds, many of whom may be less familiar with these numbers. And two, because  [sharing our salaries][29]  is a concrete way to fight pay inequality that hurts everyone,  [especially minorities][30].
+I shared specific compensation information in this article for two reasons. One, I want this post to be as useful as possible to job seekers from non-traditional backgrounds, many of whom may be less familiar with these numbers. And two, because [sharing our salaries][29] is a concrete way to fight pay inequality that hurts everyone, [especially minorities][30].
 
-Fighting pay inequality is also aligned with the mission and culture of Lyft, which is extraordinarily committed to fighting pay inequality. It administers a third-party pay equity audit every year, and this past year Lyft became a different kind of “unicorn” in Silicon Valley after  [no systemic pay gap was found][31]. Precise salary information already exists on sites like  [paysa][32],  [levels][33], and  [blind][34], so details shared here are nothing new.
+Fighting pay inequality is also aligned with the mission and culture of Lyft, which is extraordinarily committed to fighting pay inequality. It administers a third-party pay equity audit every year, and this past year Lyft became a different kind of “unicorn” in Silicon Valley after [no systemic pay gap was found][31]. Precise salary information already exists on sites like [paysa][32], [levels][33], and [blind][34], so details shared here are nothing new.
 
 Finally, I'm grateful for the support of many on this journey, especially Lena Johnson, my job search coach and negotiation advisor, and Robin Kim, my technical mentor. Thank you!
 

@@ -1,7 +1,7 @@
-> * 原文地址：[How I went from newbie to Software Engineer in 9 months while working full time](https://www.freecodecamp.org/news/how-i-went-from-newbie-to-software-engineer-in-9-months-while-working-full-time-460bd8485847/)
-> * 原文作者：Austin Tackaberry
-> * 译者：
-> * 校对者：
+> -   原文地址：[How I went from newbie to Software Engineer in 9 months while working full time](https://www.freecodecamp.org/news/how-i-went-from-newbie-to-software-engineer-in-9-months-while-working-full-time-460bd8485847/)
+> -   原文作者：Austin Tackaberry
+> -   译者：
+> -   校对者：
 
 ![How I went from newbie to Software Engineer in 9 months while working full time](https://cdn-media-1.freecodecamp.org/images/1*wyxuq21keffc5b0d_lMkUw.jpeg)
 
@@ -39,7 +39,7 @@ Besides, the worst case was that I’d realize that I couldn’t do it on my own
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*KZkc4nIrFnwol9D3OggP3A.jpeg)
 
-Photo by  [Robert Baker][1]  on  [Unsplash][2]
+Photo by [Robert Baker][1] on [Unsplash][2]
 
 You need to have a goal. Especially if you are trying to learn while working full-time. It is easy to let your learning drag on and on if you don’t have any external pressure pushing you. So you need to create internal pressure. Your goal should be simple and quantitative. You should do enough research to come up with a reasonable goal. Mine was the following:
 
@@ -49,9 +49,9 @@ You need to have a goal. Especially if you are trying to learn while working ful
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*e7O7A5rM79ng6b8Dc3EbEg.jpeg)
 
-Photo by  [Glenn Carstens-Peters][3]  on  [Unsplash][4]
+Photo by [Glenn Carstens-Peters][3] on [Unsplash][4]
 
-Once you have a goal, you need a plan to help you get there. This is where you consume as many success stories as you can. None of them will match your exact situation, but you can take some advice from each one. I developed (and iterated on) my plan using resources such as the  [learnprogramming subreddit][5], the  [freeCodeCamp forum][6], and  [Medium][7].
+Once you have a goal, you need a plan to help you get there. This is where you consume as many success stories as you can. None of them will match your exact situation, but you can take some advice from each one. I developed (and iterated on) my plan using resources such as the [learnprogramming subreddit][5], the [freeCodeCamp forum][6], and [Medium][7].
 
 On May 27, 2017 I decided I was going to make the coding plunge, and I dove in head first. That day I decided to start putting in no more than 40 hours per week at my job, so that I had time to code after work and on the weekends. Luckily for you, I did a pretty good job of documenting my progress.
 
@@ -69,7 +69,7 @@ To start, my plan was simple. At the time, I thought I was going to follow Googl
 
 The high of making this big decision gave me a ton of energy. I would start coding as soon as I got home from work and wouldn’t stop until I went to bed. And then again all weekend. Udacity CS101 tracked completion percentage, which was a big motivator for me. I logged my completion percentage every day after coding. I finished the first 75% in 10 days. The last 25% was heavy in recursion, and it was a bit tougher for me. All in all, it took me 20 days to finish Udacity CS101.
 
-While I was taking Udacity CS101, I had started reading the  [learnprogramming subreddit][8]  quite heavily. I read that it was important for self-taught developers looking to make a career change to be active online. I decided to make new Twitter, Reddit, Stack Overflow, Medium, and Quora accounts using my full name, so that I could build up an online presence.
+While I was taking Udacity CS101, I had started reading the [learnprogramming subreddit][8] quite heavily. I read that it was important for self-taught developers looking to make a career change to be active online. I decided to make new Twitter, Reddit, Stack Overflow, Medium, and Quora accounts using my full name, so that I could build up an online presence.
 
 Also, I decided to stop reading distracting media like Instagram, Facebook, and non-programming subreddits. I would only check my phone for programming-related news and posts. This was crucial in making sure that I was finding out about the best learning paths and learning resources. It was because of this that I found out about Harvard CS50 on edX.
 
@@ -77,7 +77,7 @@ I was originally content with just doing one intro course, but everyone seemed t
 
 ### **Month 1 - Harvard CS50, Linux, 1st Meetup, freeCodeCamp**
 
-I completed CS50 about halfway into the month. I’m not going to comment too much on my experience with CS50, because I wrote an in-depth post about my experience  [here][9].
+I completed CS50 about halfway into the month. I’m not going to comment too much on my experience with CS50, because I wrote an in-depth post about my experience [here][9].
 
 TLDR: It’s a great course, I highly recommend it. David Malan is an excellent lecturer, and there are a ton of resources to help you get through it. You start in C, move on to Python, and then finish with web development. It is very dense, and there is a lot of material, but I think it is well worth it.
 
@@ -85,7 +85,7 @@ After CS50, I decided to set up my XPS 15 to dual boot Windows and Ubuntu. That 
 
 I slowly weaned myself off of Windows and eventually was solely using Ubuntu. I wanted to force myself to get comfortable with the command line which I think worked to some degree, but I still have a long ways to go.
 
-I started 100 days of code to make sure I stayed focused and coded every day.  It is important to document your progress. If you are making progress every day, it won’t seem like much but when you look back a month or several months, you will realize that you have actually made quite a bit of progress which motivates you to keep going.
+I started 100 days of code to make sure I stayed focused and coded every day. It is important to document your progress. If you are making progress every day, it won’t seem like much but when you look back a month or several months, you will realize that you have actually made quite a bit of progress which motivates you to keep going.
 
 I knew that networking would make or break me, so I mustered up the courage to go to my first coding meetup. I had never gone to any meetup let alone a coding meetup. I was so nervous that after driving there, parking, and walking to the door, I almost turned around and went home.
 
@@ -107,11 +107,11 @@ And then two days later I ditched that idea.
 
 That is one of the downsides of going the self-taught route. One minute you think you know what path you should take, but then the next day you wonder if that was the right move.
 
-I read that Ruby was falling out of favor, and I proved this by searching for Ruby vs JavaScript jobs, so I ended up starting freeCodeCamp. The one thing that bothered me about freeCodeCamp was that they came up with the project ideas, so every camper does the same projects. This concerned me at first because I wanted to stand out to recruiters. However, I ended up loving freeCodeCamp, and now I highly recommend it. For more details on my experience and recommendations regarding freeCodeCamp, check out my writeup  [here][10].
+I read that Ruby was falling out of favor, and I proved this by searching for Ruby vs JavaScript jobs, so I ended up starting freeCodeCamp. The one thing that bothered me about freeCodeCamp was that they came up with the project ideas, so every camper does the same projects. This concerned me at first because I wanted to stand out to recruiters. However, I ended up loving freeCodeCamp, and now I highly recommend it. For more details on my experience and recommendations regarding freeCodeCamp, check out my writeup [here][10].
 
 ### **Month 2 — YDKJS, freeCodeCamp Front End, React**
 
-I started reading  [You Don’t Know JavaScript][11], because everyone recommended it to supplement freeCodeCamp. I had to re-read several sections as it is pretty dense, but it’s a perfect resource to learn lexical scope, closures, promises, and all parts of JavaScript that you hear about and want to learn but never do because they seem difficult.
+I started reading [You Don’t Know JavaScript][11], because everyone recommended it to supplement freeCodeCamp. I had to re-read several sections as it is pretty dense, but it’s a perfect resource to learn lexical scope, closures, promises, and all parts of JavaScript that you hear about and want to learn but never do because they seem difficult.
 
 I finished the front-end section of freeCodeCamp. The checklist format and estimated completion time helped motivate me to finish quickly. I was also itching to move on to the next section and learn React. However, this also meant that my projects had minimal styling. I did whatever it took to fulfill the user stories and nothing more.
 
@@ -127,7 +127,7 @@ I tried reading the docs and following along with Facebook’s Tic-Tac-Toe tutor
 
 Ultimately, I just decided I would work my way through the freeCodeCamp React projects to see how it went. That code was ugly, but it did help me understand React a little better.
 
-That meetup I had been attending weekly decided that they were going to build projects with full stack JavaScript instead of Ruby, and they decided that the first project would be to build a website for the meetup group,  [CodeClub.Social][12].
+That meetup I had been attending weekly decided that they were going to build projects with full stack JavaScript instead of Ruby, and they decided that the first project would be to build a website for the meetup group, [CodeClub.Social][12].
 
 I developed cards using React and Meetup API allowing the user to sign up for the next three meetups from our website. It was a little difficult for me to take a quick break from freeCodeCamp to do this, but it was an opportunity I couldn’t pass up. I was happy to be working on a project with a small group of people. It also helped me learn Git and Github.
 
@@ -147,7 +147,7 @@ I finally felt ready to start making my own useful and polished full-stack web a
 
 When looking for a new restaurant, I always found myself opening Yelp to check reviews, and then opening Maps to check their reviews. What if I made an app that compared both side by side?
 
-So I made  [Yeggle][13]. I used Node/Express/React along with the Google Maps and Yelp APIs. There were a couple obstacles I didn’t think I would be able to overcome, but in the end I finished and I was very proud of my app. Then I posted it to Reddit, and no one cared. That was a bit of a bummer, but I didn’t let it get me down.
+So I made [Yeggle][13]. I used Node/Express/React along with the Google Maps and Yelp APIs. There were a couple obstacles I didn’t think I would be able to overcome, but in the end I finished and I was very proud of my app. Then I posted it to Reddit, and no one cared. That was a bit of a bummer, but I didn’t let it get me down.
 
 ### Month 5 - StockIT
 
@@ -155,7 +155,7 @@ I didn’t get quite as much done this month, as I started it off with a two wee
 
 But I did start and complete my next project. I kept reading about how difficult it was to get a job as a self-taught developer, so I thought I needed to do something unique. I remembered a game where a Dow Jones stock graph started trending, and you had one opportunity to buy and one opportunity to sell, and the goal was to beat the market. The purpose of the game was to show you how difficult it was to beat the market.
 
-My idea was to make a game similar to that, but instead of the market, you would be playing against a machine learning algorithm. So I created  [StockIT][14].
+My idea was to make a game similar to that, but instead of the market, you would be playing against a machine learning algorithm. So I created [StockIT][14].
 
 I took a video tutorial on Pandas and Scikit Learn that covered multiple machine learning techniques. I originally wanted to do some cool deep learning techniques, but I realized that took massive datasets and more time than I wanted to spend.
 
@@ -171,9 +171,9 @@ After StockIT, I rolled right into my next personal project. I wanted to make a 
 
 For example, let’s say I was looking for a job that was looking for someone who knew JavaScript, React, and/or Python, and I really wanted to work with JavaScript and React but I didn’t care so much about Python. Then I could give JavaScript a 3, React a 3, and maybe Python a 1. The listings would then sort accordingly.
 
-I ran into various obstacles with this project and had to change course a couple times, but I ended up with a product I was happy with. My final tech stack was React/Node/Express/MySQL. I posted the project to the  [cscareerquestions subreddit][15]and got 650 views before it was taken down because they don’t allow personal projects.
+I ran into various obstacles with this project and had to change course a couple times, but I ended up with a product I was happy with. My final tech stack was React/Node/Express/MySQL. I posted the project to the [cscareerquestions subreddit][15]and got 650 views before it was taken down because they don’t allow personal projects.
 
-The “final” product is  [here][16], and if you’re interested in knowing more about my struggles and refactors, check out my post  [here][17].
+The “final” product is [here][16], and if you’re interested in knowing more about my struggles and refactors, check out my post [here][17].
 
 Because of my issues, jobSort() took up a decent portion of the month. I ended up getting coffee with a friend I had met at my first meetup, and he advised me to start applying for jobs now. I read all over the place that everyone says they waited too long to apply. Also, whenever I saw a post asking when to apply, the top comment was always “now.”
 
@@ -212,7 +212,7 @@ I started this month working the night shift for a 40 day stretch at my full tim
 
 I knew I wouldn’t be able to get as much done this month, but I had a goal and I wanted to meet it, so I couldn’t take a month off.
 
-I refactored  [jobSort.tech][18]  to use Redux which was surprisingly not as difficult as I thought it would be. I listened to a lot of podcasts about it and read blogposts about it, and it never quite made sense to me until I started using it.
+I refactored [jobSort.tech][18] to use Redux which was surprisingly not as difficult as I thought it would be. I listened to a lot of podcasts about it and read blogposts about it, and it never quite made sense to me until I started using it.
 
 I really like the flow of data with Redux. It’s interesting now seeing people complain about Redux. I don’t think I’m qualified to spout off my opinions strongly, but I do like the reducer pattern.
 
@@ -222,7 +222,7 @@ Everyone said it was a difficult codebase to read let alone contribute to. But I
 
 I would start by reading the docs all the way through and then pouring through the codebase. Watch every issue, every PR. Reading through the React docs in full was a great exercise, and I’m glad I did it. But I quickly realized that the issue with contributing to React is that there just aren’t that many “good first issues,” and they get snatched up quickly.
 
-At one of the meetups I attended,  [Anthony Ng][19]  recommended that I try out  [Downshift][20], an autocomplete library by  [Kent C. Dodds][21]. This was a gamechanger. It was right in my wheelhouse. The right difficulty, right amount of issues to help with, not too many collaborators, super helpful maintainer, clean well-tested code. On top of all that, it was a perfect solution to some issues I was having with my jobSort() application.
+At one of the meetups I attended, [Anthony Ng][19] recommended that I try out [Downshift][20], an autocomplete library by [Kent C. Dodds][21]. This was a gamechanger. It was right in my wheelhouse. The right difficulty, right amount of issues to help with, not too many collaborators, super helpful maintainer, clean well-tested code. On top of all that, it was a perfect solution to some issues I was having with my jobSort() application.
 
 About halfway through the month, I received an email from one of the companies I applied to in the previous month. They set up an initial phone screen, and then a technical phone screen. The technologies they were looking for were exactly what I had learned - React, Redux, and D3. I mostly just talked about my projects and why I made certain decisions. After this, they asked me to come onsite for an interview. My first onsite interview!
 
@@ -243,7 +243,7 @@ Up to this point, I have mostly shared my story with some advice sprinkled in. C
 1.  **Find out what motivates you and use it to your advantage.** For me, it was checklists, documenting my progress, and interacting with various programming communities. If you are not motivated to reach your goal, then nothing else matters because you won’t finish.
 2.  **Make goals and meet them.** I would argue that you should have monthly goals and maybe even daily goals. Monthly goals to make sure you are on track to meet your main goal, and daily goals to make sure that you actually make daily progress. One strategy that worked for me was to make my daily goals the night before. That way, you can’t do unproductive work all day and feel like you made progress when you really didn’t. It forces you to compare your daily accomplishments with your daily goals.
 3.  **Go to meetups way before you think you are ready.** Going to meetups can feel scary, but as I mentioned above. But, in general everyone is nice and willing to help. You might find people that aren’t interested in talking with you, but they are the minority and no one will be judgmental. Also, everyone loves to give advice (like I’m doing right now).
-4.  **Contribute to open source way before you think you are ready.** When you first start programming, Github seems like this scary place that you never want to go to. It is actually very welcoming to beginners and is a great place to see good code and get your own code reviewed. If you’re still not convinced, check out my post,  [Why you should contribute to open source right now][22].
+4.  **Contribute to open source way before you think you are ready.** When you first start programming, Github seems like this scary place that you never want to go to. It is actually very welcoming to beginners and is a great place to see good code and get your own code reviewed. If you’re still not convinced, check out my post, [Why you should contribute to open source right now][22].
 5.  **Start applying way before you think you are ready.** This one was tough for me because I thought I was different. I thought I didn’t need to test the market to get a feel for what to work on. I thought I would know when I would be ready to apply. I’m telling you right now. You will not know when to apply. So you might as well start now. You shouldn’t go crazy and apply to 300 companies before you learn for loops. But you should know that the best way to know what you need to learn is by applying and testing the market.
 
 Now get back out there and code!

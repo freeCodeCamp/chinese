@@ -1,4 +1,4 @@
-```
+```plain
 > 原文地址：https://www.freecodecamp.org/news/how-i-got-my-software-engineering-internship-after-4-months-of-self-study-5b5c4836bd6f/](https://www.freecodecamp.org/news/build-a-simple-json-api-in-python/)
 > 原文作者：Alyssa
 > 译者：Alyssa
@@ -26,7 +26,7 @@
 
 例如，如果你打算进行前端开发，那么 freeCodeCamp 上的 Web 课程将特别有用。 本指南将主要侧重于前端。
 
-#### **我做了什么：**
+#### **我做了什么**
 
 就个人而言，我一直对前端工作更感兴趣。而对于前端开发者来说，深入了解 JavaScript，HTML 和 CSS 无疑是最重要的。
 
@@ -34,7 +34,7 @@
 
 HTML 和 CSS 学起来相对容易。我在 freeCodeCamp 学习完整的 Web 设计课程。这是最棒的免费学习资源之一。 如果你完成了整个课程，你将了解 Web 开发的基础知识。
 
-课外阅读小编推荐《[ 前端开发人员手册](https://frontendmasters.com/books/front-end-handbook/2019/#1)》。 它是前端开发者最完整的资源清单，含数千小时的阅读时间。它将教你 Web 开发应该知道的所有技巧，for free。
+课外阅读小编推荐《[前端开发人员手册](https://frontendmasters.com/books/front-end-handbook/2019/#1)》。 它是前端开发者最完整的资源清单，含数千小时的阅读时间。它将教你 Web 开发应该知道的所有技巧，for free。
 
 ### **步骤 2：创建项目**
 
@@ -44,7 +44,7 @@ HTML 和 CSS 学起来相对容易。我在 freeCodeCamp 学习完整的 Web 设
 
 在你创建好项目并且完成测试之后，请把源代码放到 GitHub 上。这至关重要，因为你没有经验，你所应聘的公司会通过这些代码来看你的技术实力。展示高质量的代码和文档。
 
-#### **我做了什么：**
+#### **我做了什么**
 
 我获得实习机会的时候，做了 4-5 个项目。我首先是从另一个学生的 GitHub 仓库 fork 他的一个游戏 app，学到很多，添加自己的代码。接着我慢慢做一些复杂的项目。
 
@@ -69,13 +69,13 @@ HTML 和 CSS 学起来相对容易。我在 freeCodeCamp 学习完整的 Web 设
 
 请务必做好准备。 在线上有许多资源教你如何进行技术面试。阅读的话你可以尝试《Cracking The Coding Interview》。
 
-技术面试压力很大。 [ Leetcode](https://translate.googleusercontent.com/translate_c?depth=1&rurl=translate.google.com&sl=auto&sp=nmt4&tl=zh-CN&u=https://leetcode.com/&xid=17259,15700022,15700186,15700190,15700256,15700259,15700262,15700265&usg=ALkJrhiA7JiEOOhLP62hUyzU93Z4O7QzJQ)为实践提供了许多很好的问题。
+技术面试压力很大。 [Leetcode](https://translate.googleusercontent.com/translate_c?depth=1&rurl=translate.google.com&sl=auto&sp=nmt4&tl=zh-CN&u=https://leetcode.com/&xid=17259,15700022,15700186,15700190,15700256,15700259,15700262,15700265&usg=ALkJrhiA7JiEOOhLP62hUyzU93Z4O7QzJQ)为实践提供了许多很好的问题。
 
 由于它们广为人知，你不太可能会得完全相同的问题。 面试官通常有一堆不在网上发布的问题。 但是基本思想保持不变，比如你怎么都应该掌握好数据结构和 BigO。
 
 需要注意的另一件事：我面试过的公司经常就我做的项目问我如何实现之类的技术问题，并问我有关的技术问题。 这是他们测试你是不是作假的方法，因此请为此做好准备。
 
-#### **我做了什么 ：**
+#### **我做了什么**
 
 我完全搞砸了我的第一个面试。 很难堪。
 

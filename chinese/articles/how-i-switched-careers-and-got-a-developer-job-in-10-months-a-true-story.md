@@ -1,151 +1,158 @@
-> * 原文地址：[How I switched careers and got a developer job in 10 months: a true story](https://www.freecodecamp.org/news/how-i-switched-careers-and-got-a-developer-job-in-10-months-a-true-story-b8895e855a8b/)
-> * 原文作者：[Syk Houdeib](https://www.freecodecamp.org/news/author/syknapse/)
-> * 译者：
-> * 校对者：
+> -   原文地址：[How I switched careers and got a developer job in 10 months: a true story](https://www.freecodecamp.org/news/how-i-switched-careers-and-got-a-developer-job-in-10-months-a-true-story-b8895e855a8b/)
+> -   原文作者：[Syk Houdeib](https://www.freecodecamp.org/news/author/syknapse/)
+> -   译者：richard1230
+> -   校对者：
 
-![How I switched careers and got a developer job in 10 months: a true story](https://cdn-media-1.freecodecamp.org/images/1*P9eWpGDxFMTN2ApRQteOpg.jpeg)
+![我如何在10个月以内转行成为一个开发者:一个真实的故事](https://cdn-media-1.freecodecamp.org/images/1*P9eWpGDxFMTN2ApRQteOpg.jpeg)
 
-This is how I career changed to front-end development at 40, starting with no relevant background experience or degree. I used only self-directed study while working full-time and spending next to nothing.
+这篇文章主要讲述的是在我 40 岁的时候，我如何从一个没有任何相关工作经验以及相关专业学位的情况下转行成为一个前端开发的。需要注意的是，在全职工作的同时我仅仅依靠自学而没有花费任何其他的费用。
 
-> “ I’m sitting in a café in the heart of Madrid, having a cup of coffee, tapping away at my laptop while it rains outside. In a few moments I will walk into my first day as a front-end developer. 10 months ago I was an English teacher in Granada who knew nothing about programming, and now I’m here. How did this happen?”
+> “外面下着雨，我正坐在马德里市中心的一家咖啡馆里，一边喝着咖啡一边敲着键盘。不久我将以前端开发者的身份开启全新的职业生涯。就在 10 个月之前,我还在 Granada 当英语老师，对编程一窍不通，而现在，我即将成为一名软件开发者，这是怎么发生的呢？”
 
-I wrote those excited words a few months ago as I was getting ready to start my first day at my new job. Come along with me as I share with you my journey of how I got here.
+就在几个月之前,当我为转行而开始做准备的时候，我写下了那些激动人心的话语。跟我来吧，我将与你们分享我是如何走到今天这一步的。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*Qf68OyUJggEvunHepyoRLg.jpeg)
 
-### Feeling special
+### 特别的感觉
 
-When I first started thinking about becoming a developer, I would read articles like this one with a bit of skepticism. I kept on looking for something in the writer’s background that made them “special”. That made them suited for this job. Something that I didn’t have.
+当我刚开始考虑成为一个开发者的时候，我会将信将疑地阅读此类文章。我会试图找出这些文章作者所拥有的而我所没有的特殊的背景，这可能使得他们适合这种工作。
 
-I have since come to understand that this is not how it works. There aren’t any “special” requirements to becoming a developer. I’m not going to tell you it’s easy, because it isn’t. But the good news is that all the requirements are things that are in everyone’s reach. You have to be willing to work hard, learn a lot, and be consistent. You need to persist when things get tough. Talk yourself out of the moments of desperation when you feel like you are not cut out for this. That’s all it takes, and everyone can do these things with a bit of practice.
+从那以后，我开始明白事情不是那样的。成为一名开发人员不需要任何的 "特殊" 的背景。我不会告诉你这非常容易，因为事实并非如此，但好消息是每个人都可以达到要求。你必须非常努力工作，学习很多东西，不能半途而废。当出现困难的时候，更不能退缩。当你自己觉得不适合做这件事情的时候，说服自己不要陷入绝望。以上就是你所需要的，每个人都可以通过练习来做这些事情。
 
-I started with no related background study. I had no money to spend on expensive courses, no time in my already busy day, and I was already almost middle aged. Everyone’s circumstances are different, but I learned that if you put your mind to it, you can do it.
+我起步的时候没有任何相关背景。我并没有把钱花在昂贵的课程上面，在忙碌的一天工作之后我并没有太多时间去学习，同时我也已经步入中年。每个人的情况是不一样的，但是只要你用心去做，你就能做到。
 
-### Background
+### 背景
 
-On the day I wrote my first line of code, I had never done any programming before or had any contact with it. I had an early career in the restaurant business. Then I got a degree in Music technology, followed by a decade as an ESL teacher in Spain. I wasn’t even particularly skilled with computers. I did always feel excited by the latest tech ideas. And I considered programmers the modern day superheroes.
+在我写下第一行代码的那天之前，我从未接触过编程，也从来没做过相关工作。在我职业生涯的早期，我从事餐饮行业。然后我获得了音乐相关专业的学位，之后再西班牙当了十年的 ESL 老师。我甚至对电脑的基本操作也不是很熟练。我总是对最新的科技感到好奇与兴奋。我认为程序员是这个时代的超级英雄。
 
-I never contemplated doing it myself, though. Partly because I thought coding was some kind of an elite activity. Something for gifted individuals who graduate from top (and expensive) universities. While individuals like this do exist, the majority of developers aren’t that Hollywood hacker type. Development is far more accessible than I believed.
+不过，我从未想过自己动手做。部分原因是我认为编程只有精英才能做。这种工作是为那些从名牌大学毕业的聪明人所准备的。虽然这样的人确实存在，但是大多数人并不是好莱坞电影里面的那种有天赋的天才。开发远比我想象的要容易的多。
 
-#### Origin story
+#### 故事起源
 
-It all started with an animated conversation with my partner. She was exploring the causes behind the low numbers of women in STEM and especially in tech. She decided to do something about it by becoming a programmer herself. She wanted to be a model for younger girls in our family. And just like that she started learning about it.
+一切源于我与我的伴侣的一次热烈地交谈。她正在探索在 STEM 领域尤其是科技领域导致女性人数减少的原因。她决定通过成为一名程序员来改变这一现状。她想成为我们家族中年轻女孩的榜样。就这样，她开始学习了解了。
 
-That soon excited me too, as we realized that there are plenty of resources available. This wasn’t some dark art, but a skill that we could learn and master.
+这很快也让我兴奋起来，因为我们意识到有很多可用的资源。这不是什么黑魔法，而是一种我们可以学习和掌握的技能。
 
-Spoiler alert, she also managed a career change from HR and in fact  [got a developer job][1]a month before I did.
+剧透一下，她成功地从人力资源方向[转行][1]，事实上比我早一个月获得了开发的工作。
 
-And so, one day we found a children’s book about programming in a science museum. We went back home, opened Notepad, wrote  `<h1>Hello Worl`d</h1> opened it in the browser and t`hen change`d color: red. We were screaming with excitement! What witchcraft was that!
+某一天我们在一个科学博物馆里面发现了一个有关儿童编程方面的书籍。一回到家我们就打开记事本写下了 "Hello world" 的代码并在浏览器里面打开，然后将页面颜色更改为红色。这是什么魔法！我们兴奋地尖叫着。
 
-I was hooked. I wanted to make stuff with code, I wanted computers to do things I said!
+我彻底迷上了编程。我想要用电脑和代码做我想做的事情。
 
-#### My previous job
+#### 我之前的工作
 
-At that point I had been working with kids for 8 years. This is not going to be the typical part where one talks about a dead-end job that they didn’t like. Because I loved my teaching job, enjoyed working with kids, and I was comfortable in my workplace. It was gratifying and enjoyable.
+那时我已经做英语老师八年了。这不是典型的一个人在谈论他的没有前途的工作的场景。相反我非常热爱我的教学工作，喜欢工作的时候和孩子们在一起，而且我在工作场所很自在。这让我很满意。
 
-But sometimes, even when you love something, you know in your heart that it is time to move on. It was a new phase in my life and I had a new outlook and new aspirations. And above all, I wanted a new challenge. Something that would push me well out of my comfort zone.
+但是有时候，即使你爱上了某样事情，你心里也知道是时候该继续前进了。这是我人生的一个新阶段，我有了新的展望和抱负。最重要的是，我想要一个新的挑战。让我远离舒适区。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*cUOknyEHrQ6wGqynmp__Eg.jpeg)
 
-### The one true path to success
+### 通往成功的真正途径
 
-This clearly doesn’t exist. Three of us started around the same time learning to code for a career change: my partner, myself, and a good friend. All three of us are now working in the field, and there is very little in common between our approaches. Each one followed the material and methods that worked for them. If there is one thing in common between us, it is that we simply did not give up, and kept on going. We all put a lot of hard work and persistence.
+显然这是不存的。我们三个人（我的伴侣、我和我的好朋友）为了转行几乎同时开始学习编程。我们三个人现在都在该领域工作，我们每个人的方法都不一样。每个人都有适合自己风格的方法。如果说我们之间有什么共同点的话，那就是我们没有放弃，没有半途而废。我们都付出了很多努力。
 
-So instead of the one true path, I’m going to tell you a bit about my path. It’s not the only way, it is not the best way. It is what worked for me.
+所以这里我要告诉你们的将不是一个通用的方法，而是我自己所特有的方法。这不是唯一的方法，可能也不是最好的方法。但是这对我很有效。
 
-#### Getting started
+#### 开始
 
-First, I started reading and watching YouTube videos about programming to understand where to begin. Then I started playing around with HTML and CSS. I followed tutorials and coded along to build some basic web pages. This made me see that it was something I really wanted to get into.
+首先，我在 YouTube 上观看关于编程的视频，找到切入点。然后我开始学习 HTML 和 CSS。我按照教程构建了一些基本的 web 网页。我开始明白这是我想要从事的工作。
 
-#### Setting an Objective
+#### 设定目标
 
-I reached out to two of my friends working in the field for tips and advice. Those early words of encouragement and guidance were vital in getting me going and in focusing my mind on a clear goal.
+我向两个在这个领域工作的朋友寻求建议。那些鼓励的话语对我在前行的路上专注于一个明确的目标至关重要。
 
-It took some time to sort through all the options and set realistic objectives that would work for me. I needed a swift career change. I had no alternative source of income, which meant maintaining my job until I could do the switch.
+我花了些时间整理了所有的选项，并设定了对我有用的现实目标。我需要在最短的时间内转行成功。我没有其他的收入来源，这意味着我要继续做之前的工作直到我能转行为止。
 
-I decided that front-end development was the most accessible and in-demand option. I narrowed it down further by focusing on the skills needed for a job in a startup rather than the freelance route.
+我认为前端开发是初学者最容易进入同时是需求量最大的一个方向。我专注于初创公司所需要的技能而不是自由职业，这样我进一步缩小了范围。
 
-Then I set a deadline. I did not want this objective to end up on a to-do list I never see again. It was spring of 2017, so I promised myself that the following school course was going to be my last as a teacher. So by September 2018, a little over a year later, I had to be working in the field.
+然后我设定了最后期限。我不希望这个目标出现在一个我再也看不见的待办事项清单上面。2017 年的春天，我向自己承诺接下来的教学将是我老师生涯的最后一站。就是说到 2019 年 9 月份，我将不会继续做老师相关的工作。
 
-It would be naive to pretend that at this stage I had everything crystal clear and under control. I didn’t. Certainty is not a luxury you can have while making such a risky career change. There were all kinds of doubts at that point and throughout the process. The key here was persistence. Once I made the decision, I was going to walk this path to see where it led no matter what.
+在这个阶段我能够把一切尽在掌握中么，这是不可能的。在做出如此具有冒险的职业选择时，肯定会存在不确定性。在那个阶段和整个过程中都存在各种各样的疑问。这里的关键是能否坚持不懈，不半途而废。一旦做出决定，我将沿着这条路走下去，看看未来将会发生什么。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*vuNrt3UwQSiuLiD8sw5Hcg.jpeg)
 
-#### Learning
+#### 学习
 
-I knew that the only way forward was to study for it. I had full-time employment, so waiting until “I had time” was never an option. I had to do it while working, or not at all. I was lucky that my partner was learning at the same time. This helped us organize our days to maximize learning time. At first we would do what we called our “weekend boot camps” where we would dedicate the entire weekend to coding. A typical day looked like this:
+我明白不断进步的唯一途径就是学习。我有一份全职工作，所以永远都不可能等到有时间的时候。我必须一边工作一边学习，要么就干脆不做。幸运的是，我的伴侣同时也在学习。这有助于安排我们自己的时间，以最大限度地提高学习时间。首先，我们执行我们自己称呼为 "周末训练营" 的计划，就是说我们会花整个周末来编程。典型的一天是这样的：
 
-8:00 am: Wake up, breakfast.  
-8:30 am: Start coding  
-12:30 pm: Go to the gym  
-1:30 pm: Have lunch, then a break  
-3:00/4:00 pm: Continue coding  
-8:00/11:00 pm: Finish for the day
+8:00 am: 起床，吃早饭。
 
-Then my summer holiday came and I made the most of it by turning the “weekend boot camp” into the “daily boot camp”. I stuck to that schedule assiduously despite the temptation to enjoy the summer and kick back a bit.
+8:30 am: 开始编程
 
-September came and I was back to work. I had made a conscious decision to reduce my hours at work. I accepted that I would have less income in exchange for having more time to study. It was also another step to make my commitment to the career change more serious.
+12:30 pm: 去健身房
 
-It is hard to convey how difficult it was to be away from my code. All I wanted to do was to be back at my computer to finish solving this problem or fixing that layout. But then real life kicks in. The start of a school year always requires a lot of time for preparation and organization. As any teacher will tell you, it also takes up a lot of one’s personal time too.
+1:30 pm: 吃午饭 ，休息
 
-That was the moment my mission could have been derailed. Despite my best efforts, I had less and less time to code. I started losing my momentum. I tried to keep it up but there were days when I simply didn’t have time. Even with the best of intentions and good motivation, life can make things complicated.
+3:00/4:00 pm: 继续敲代码
+
+8:00/11:00 pm: 完成一天的工作
+
+之后我暑期来了，我将 "周末训练营" 变成了 "每日训练营"，从而充分利用了这个假期。尽管有享受夏天和放松的诱惑，我还是坚持不懈地完成了我的计划。
+
+九月来的时候我又得回去工作了。我有意识地决定减少我的工作时间。我接受了更少的收入以此来换取更多的学习时间。这也是我在转行的路上踏上的更为坚实的一步。
+
+很难表达离开代码有多难。我想要做的就是回到我的计算机面前解决某个问题或是 bug。但是现实生活开始了。一学年的开始总是需要很多时间来准备和组织。正如任何老师都会告诉你的，这也占用很多个人时间。
+
+就在那个阶段，我感觉我平常的任务要偏离原有的目标了。尽管我尽力最大努力，但是我编写代码的时间越来越少了。我开始失去动力。我试着坚持下去，但是有时候就是没有时间来写。即使有最好的目标和良好的动机，生活也会使事情变得复杂。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*Ho2hNeNpx13UnERU9fI-8Q.png)
 
-My activity on GitHub showing the dip in October
+我的 GitHub 上显示了十月份活跃度下降
 
-However, as you can see from my GitHub activity image, I kept trying. I kept putting in the time, even if it was an hour, even if it was reading an article. I did everything I could not to get to the stage of losing all motivation. When you have left something for long enough, it makes it harder to get back to with every passing day.
+然而，你可以从我的 github 活跃度显示中看到，我一直在尝试。我不停地投入时间，哪怕是一小时，哪怕是读一篇文章。我做了我所能做的一切来使得我养成这个习惯。当你把一件事拖得太久，可能会失去原来的习惯。
 
-Then as December approached, seeing the new year looming and my deadline closer, I rallied again and got organized. I started pushing through, putting in those hours no matter how tired I was and how little time I had. Sometimes I would get up early to code, sometimes I would stay up late.
+随着 12 月的临近，眼看着新年即将到来，我最后的期限也越来越近，我再次振作起来，做事变得井井有条。我开始努力工作，不管我有多累，时间有多少，我都要坚持几小时。有时我会早点起来敲代码，有时我会熬夜。
 
-This meant that my life was pretty much reduced to doing the job that was paying the rent, and studying. And little else. And I basically maintained that rhythm all the way until the day I started packing to move to Madrid. That was in the spring of 2018, several months before my deadline.
+这意味着我的生活被几乎被压缩到只能一边做一份付房租的工作一边学习。我基本上保持着这种节奏，一直到我收拾行李搬到马德里的那一天为止。那是在 2018 年的春天，距离我截止的日期还有几个月。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*s1wGpl3ZUIh7wj1YHFDxCA.jpeg)
 
-### Tools and resources
+### 工具和资源
 
-Over the 10 months leading to my job offer, I immersed myself in everything code related. The most frequent question I get asked on  [Twitter][2]  is about what resources I used. I’ve written  [another article][3]  that answers this question in-depth. However, here is a brief list of the most important tools and resources.
+在一边工作一边学习编程的这 10 个月中，我的主要精力都放在了编程上面，我在 [Twitter][2] 上面被问到最多的问题是使用了那些资源。我写了[另一篇文章][3]，深入回答了这个问题。这里，我列一个我认为是最重要的列表（包含最重要的工具和资源）。
 
-#### Courses
+#### 课程
 
--   freeCodeCamp.org
--   Cassidy Williams and Colt Steele’s Udemy courses
--   Wes Bos’ JavaScript 30 and other courses
--   YouTube: Traversy Media, LevelUpTuts
--   Christina Truong’s Lynda.com courses
--   Udacity Front-End Nanodegree (a paid course, but I got a scholarship from Google)
+-   freeCodeCamp 相关课程
+-   Udemy 上面 Cassidy Williams 、Colt Steele 的课程
+-   Wes Bos’ JavaScript 30 以及其他的课程
+-   YouTube 上面的资源: Traversy Media, LevelUpTuts
+-   Lynda.com 上面 Christina Truong 的课程
+-   Udacity 上面的前端纳米课程 (这是一个付费课程，但是我从 Google 获得了奖学金)
 
-Courses can only take you so far, so I complemented this with other tools to help me learn and get a job.
+仅仅学习这些课程是不够的，故这里我补充了其他有用的工具来帮助我学习进而找到工作。
 
--   Twitter: a cornerstone of my experience. Especially the incredibly supportive and warm  [#100DaysOfCode][4]  community.
--   GitHub: an important tool to learn, and where I hosted all my projects for free. It’s usually the first place employers look to see your work.
--   Portfolio: I learned the most vital development skills by building it and other self-initiated projects.
+-   Twitter: 这是我所有知识来源的地方。尤其是 [#100DaysOfCode][4] 社区，它给了我无穷的动力和支持。
 
-You can also check out  [My Learning Tracker][5]  GitHub repo. It has a full list of the resources and paths I used those first ten months.
+-   Github: 一个非常重要的学习工具，也是我免费托管所有项目的地方。通常这是雇主重点关注的地方。
+
+-   Portfolio：通过构建开发项目和其他项目，我学习了最重要的开发技能。
+
+你可以在 github 上面查看 [我的学习轨迹][5]。它有我前十个月学习路径和使用资源的完整列表。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*F74hOCN3MRUfNFEe9p56uQ.jpeg)
 
-### Getting a job
+### 获取工作
 
-Surprisingly, for me, this part was not overly complex. I didn’t send masses of CVs, or spend hours looking for jobs. Instead I opted for being selective and focused.
+对我而言，令人称奇的是这部分并不太复杂。我没有海投，也没有花数小时找工作。相反，我是有选择性并且专注的。
 
-In the end I entered five interview processes. I got rejected from one, and failed to finish the take-home challenge of another. I completed three, and got three out of three offers. One of these was completely inadequate and unattractive. The other two, arriving almost at the same time, were both very interesting offers. One of them is my current job.
+最后，我获得了五个面试邀请。其中一个拒绝了我，有一个未能完成，完成了其余三个并获得相应的报价。其中一个我不感兴趣，其余两个很有吸引力，其中之一就是我目前的工作。
 
-I don’t mean to sound nonchalant about this. It was an intense time. I still had no idea if my skills were anywhere near being employable or not. I entered processes not even sure if I was going to be laughed at for how little experience I had. It was a nerve-racking time, but it was an exciting and hopeful time too. And when I finally found myself with two actual good offers on the table I was elated and could hardly believe it.
+我并不是对此漠不关心，那段时间很紧张，我仍然不知道我的技能是否能够胜任开发相关工作，我会不会因为我的经验太少而被嘲笑，那一刻很紧张，但也是一个令人兴奋和充满希望的时刻。当我最终发现有两份心仪的报价的时候，我欣喜若狂，简直不敢相信。
 
-I will always be eternally grateful to the individuals who made these decisions and decided to give me a chance.
+我将永远感谢那些做出决定给我机会的人。
 
-The interview process in the two companies was very different. One was a series of video calls to talk to various people at the company. It was a small but well-established company hoping to build a new team of front-end developers. After a few weeks of back and forth, they made me my first real offer.
+这两家公司的面试过程很不一样。其中一个是视频电话，可以与公司的每一个人交谈。这是一家规模不大但是实力雄厚的公司，希望建立一个新的前端开发团队。经过几周的折返，他们给了我一个满意的报价。
 
-The other was a young startup in the middle of great growth. After a phone interview I got sent a technical challenge to complete within few days. It involved building a component, making API calls, and showing the correct information. Then came a video chat about the code I wrote. Then I got invited to have a drink with the tech team to find out if we click. After which I got an offer to join as a junior front-end.
+另外一家是处于高速成长中的年轻初创公司。在一次电话面试之后，我收到了一项技术挑战，需要在几天之内完成。它包含构建组件、进行 API 调用以及显示正确的信息。然后是关于我编写代码的视频聊天。然后，我受邀与技术团队一起喝酒，以了解我们是否合拍。之后，我拿到了 offer 。
 
-In the end I had to choose. Which was a luxury I couldn’t believe I got. But I knew what I wanted, I took the offer with the  [startup][6]  based on one main point: they seemed to be very clear on the importance of mentorship and giving me guidance to grow and learn. That was the key. And it definitely was the right choice.
+最后我不得不从这两家之间做出选择，这是我不敢相信的。但是我知道我想要的是什么，我接受了这家[初创][6]公司的邀请，这家公司有一点比较吸引我：他们非常清楚导师的重要性，并给我提供成长和学习的指导。这点很关键，绝对是正确的选择。
 
-And so, on that rainy day in Madrid, after finishing my coffee. I walked into an office in the business area, introduced myself as the new front-end developer, and started my new career.
+就这样，在马德里的一个下雨天，我喝完咖啡之后走进了商务区的办公室，介绍自己是新来的开发人员，然后开启了我的新的职业生涯。
 
-_I hope you enjoyed my story. If you did, you would make me happy if you give it some of those tasty claps. And you could even make my day by sharing it so more people can read it and learn they too can make it. I want to keep writing more of these articles. So if there is any particular aspect of this process you would like to know more about, I would love to hear about it. Come and say hi on  [Twitter][7]  @Syknapse_
+希望你能喜欢我的故事，如果你能给本文点赞，我将非常高兴，你也可以将其分享从而让更多的人来阅读并从中找到动力。我想继续写更多的此类文章，如果你想要知道更多以及哪方面的细节，请到推特上与我[Twitter][7] 沟通吧。
 
-[Check out my article about all the resources I used to get this job.][8]
+[另外一篇文章讲述了我是如何利用上面提到的学习资源学习的][8]
 
 [1]: https://twitter.com/Elena_in_code/status/973319215196368896
 [2]: https://twitter.com/Syknapse

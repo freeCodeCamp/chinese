@@ -1,6 +1,6 @@
 > -   原文地址：[What I Learned from Doing 60+ Technical Interviews in 30 Days 一个月之内参加 60 多场面试，我收获了什么？](https://www.freecodecamp.org/news/what-i-learned-from-doing-60-technical-interviews-in-30-days/)
 > -   作者：Uduak Obong-Eren
-> -   译者：
+> -   译者：pjwok
 > -   校对者：
 
 ![What I Learned from Doing 60+ Technical Interviews in 30 Days](https://www.freecodecamp.org/news/content/images/size/w2000/2020/06/header-image.png)

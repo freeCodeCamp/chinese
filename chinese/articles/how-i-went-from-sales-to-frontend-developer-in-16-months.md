@@ -1,6 +1,6 @@
 > -   原文地址：[How I Went from Sales to Front End Developer in 16 Months 自学编程 16 个月后，我从销售员成功转型为程序员](https://www.freecodecamp.org/news/how-i-landed-my-first-developer-job-without-an-application/)
 > -   原文作者：Braedon Gough
-> -   译者：
+> -   译者：Casey0808
 > -   校对者：
 
 ![How I Went from Sales to Front End Developer in 16 Months](https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/P1111754.jpg)

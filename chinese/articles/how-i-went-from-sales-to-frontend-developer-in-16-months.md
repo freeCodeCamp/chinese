@@ -1,21 +1,24 @@
-> -   原文地址：[How I Went from Sales to Front End Developer in 16 Months 自学编程 16 个月后，我从销售员成功转型为程序员](https://www.freecodecamp.org/news/how-i-landed-my-first-developer-job-without-an-application/)
+> -   原文地址：[自学编程 16 个月后，我从销售员成功转型为程序员](https://www.freecodecamp.org/news/how-i-landed-my-first-developer-job-without-an-application/)
 > -   原文作者：Braedon Gough
 > -   译者：Casey0808
 > -   校对者：
 
-![How I Went from Sales to Front End Developer in 16 Months](https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/P1111754.jpg)
+![自学编程 16 个月后，我从销售员成功转型为程序员](https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/P1111754.jpg)
 
-On August 18, 2015, I was on a one-way flight headed to Copenhagen from Toronto Pearson Airport. I was starting my two semester exchange at the Copenhagen Business school.
+2015年8月18日，我正在多伦多飞往哥本哈根的飞机上，准备开启在哥本哈根商学院为期两学期的交换生活。
 
 I can easily remember the date because it was my brother's birthday. He was forced to spend it at the airport with our family as they sent me off to Denmark, for what they thought would only be 8 months.
+那天是我哥哥的生日，所以我对这个日期记得格外清晰。他和家人一起在机场送我，于是被迫在机场度过了这个生日。
 
-My only familiarity with Copenhagen was from watching the [CPH Open on Thrasher Magazine's YouTube channel][1]. Luckily for me, I absolutely fell in love with the city and, after my first semester abroad, I made it my mission to stay here even longer. I was due to start an internship upon returning back to Canada and challenged myself to find one in Copenhagen instead.
+过去我对哥本哈根的唯一了解是从[CPH Open on Thrasher Magazine's YouTube channel][1]这个油管频道。幸运的是我完完全全地爱上了这个城市，于是在第一个学期之后我决定要在哥本哈根待更久时间。我没有选择在加拿大实习，而是尽可能在哥本哈根找一份实习工作。
 
-## Working in Copenhagen
 
-I didn't really have a plan, so I started looking for roles as a sales development representative (SDR). I had just learned about this entry-level role in one of my classes. Since all of my previous experience was in sales and customer service, I thought it would be a good fit.
+## 在哥本哈根工作
+
+我对此毫无计划，所以我开始找销售发展代表的实习。我之前在某节课上听说过这个初级职位，而且因为我之前的工作经历都与销售和客服有关，我以为这会非常合适。
 
 I sent out my application to a young startup and within 4 hours, I was on the phone with my soon-to-be sales manager. That was my first taste of how quickly things can move in startup-land! About a month later, I had my first day. This was also the first time I had met professional developers.
+我投了简历给一家初创企业，四小时不到，我已经在和我未来的销售经理通电话了。
 
 I've always had a deep interest in technology, although the closest I'd been to software development at that point was in my Visual Basic class in high school!
 

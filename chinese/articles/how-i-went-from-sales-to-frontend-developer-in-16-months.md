@@ -7,8 +7,7 @@
 
 2015年8月18日，我正在多伦多飞往哥本哈根的飞机上，准备开启在哥本哈根商学院为期两学期的交换生活。
 
-I can easily remember the date because it was my brother's birthday. He was forced to spend it at the airport with our family as they sent me off to Denmark, for what they thought would only be 8 months.
-那天是我哥哥的生日，所以我对这个日期记得格外清晰。他和家人一起在机场送我，于是被迫在机场度过了这个生日。
+那天是我哥哥的生日，所以我对这个日期记得格外清晰。他不得不在机场度过这个生日，因为全家人都在机场为我送行，他们原以为我只是去八个月。
 
 过去我对哥本哈根的唯一了解是从[CPH Open on Thrasher Magazine's YouTube channel][1]这个油管频道。幸运的是我完完全全地爱上了这个城市，于是在第一个学期之后我决定要在哥本哈根待更久时间。我没有选择在加拿大实习，而是尽可能在哥本哈根找一份实习工作。
 

@@ -9,39 +9,38 @@
 
 那天是我哥哥的生日，所以我对这个日期记得格外清晰。他不得不在机场度过这个生日，因为全家人都在机场为我送行，他们原以为我只是去八个月。
 
-过去我对哥本哈根的唯一了解是从[CPH Open on Thrasher Magazine's YouTube channel][1]这个油管频道。幸运的是我完完全全地爱上了这个城市，于是在第一个学期之后我决定要在哥本哈根待更久时间。我没有选择在加拿大实习，而是尽可能在哥本哈根找一份实习工作。
+过去我对哥本哈根的唯一了解是从[CPH Open on Thrasher Magazine's YouTube channel][1]这个油管频道得到的。幸运的是我完完全全地爱上了这个城市，于是在第一个学期之后我决定要在哥本哈根待更久时间。我没有选择在加拿大实习，而是尽可能在哥本哈根找一份实习工作。
 
 
 ## 在哥本哈根工作
 
-我对此毫无计划，所以我开始找销售发展代表的实习。我之前在某节课上听说过这个初级职位，而且因为我之前的工作经历都与销售和客服有关，我以为这会非常合适。
+然而我对此毫无计划，所以我开始找销售发展代表的实习。我之前在某节课上听说过这个初级职位，因为我之前的工作经历都与销售和客服有关，我以为这会非常合适。
 
-I sent out my application to a young startup and within 4 hours, I was on the phone with my soon-to-be sales manager. That was my first taste of how quickly things can move in startup-land! About a month later, I had my first day. This was also the first time I had met professional developers.
-我投了简历给一家初创企业，四小时不到，我已经在和我未来的销售经理通电话了。
+我投了简历给一家初创企业，四小时不到，我已经在和我未来的销售经理通电话了。这是我第一次感受到创业公司的快节奏！一个月后我入职了。这也是我第一次接触到专业程序员。
 
-I've always had a deep interest in technology, although the closest I'd been to software development at that point was in my Visual Basic class in high school!
+虽然我只在高中的 Visual Basic 课程里接触过软件开发，但是我对技术一直有着很深的兴趣。
 
-Starting my new job was the first time I got to work directly alongside developers. It was thrilling to hear about their work. There were always so many buzz words and technologies they spoke about – React, Ember, Scala, Python, TypeScript, boilerplate-code, compliers, rendering. It was intimidating to think you had to know about so much to develop software.
+这份工作让我第一次有了和程序员共同工作的机会。他们的工作听起来非常酷。他们谈论一些专业术语和技术————React, Ember, Scala, Python, TypeScript, boilerplate-code, compliers, rendering。开发软件竟然需要了解这么多内容，这听起来令人害怕。
 
 ![Sales floor picture](https://www.freecodecamp.org/news/content/images/2020/04/Famly-office-sales-2-1920x1200.png)
 
-The sales floor I worked on
+办公区的地板
 
-I spent the next year and a half continuing to progress in my sales career, eventually being promoted to account executive. I felt like I had greatly developed my communication, time-management, and presentational skills.
+接下来一年半我继续在销售职位上打拼，最终我升职成了客户主管。在这份工作中，我感到我的沟通能力、时间管理能力、表现能力都得到了很大的提升。
 
-## Discovering freeCodeCamp
+## 发现了freeCodeCamp
 
-Although I was successful in my current role as an account executive, I wasn't sure if a future in sales was exactly what I wanted. It was also limiting to my future job prospects if I wanted to continue to remain in Denmark – it's not easy find a good job selling in English in a country where the first language is Danish!
+虽然我作为一名客户主管还算成功，我对自己未来是否愿意在销售业发展还是存在疑问。而且在母语非英语的国家里做英语销售，职业选择也有所限制。
 
-I found myself reading more, searching for a new hobby or challenge. That's when I found the freeCodeCamp blog (it was still on Medium at that time). It actually took me a few days before I realized freeCodeCamp wasn't just a blog, it was an entire platform available to learn how to code online, for free! As if the name didn't speak for itself...
+我开始拓展阅读，寻找新爱好或者挑战。我就是在这时发现了 freeCodeCamp 的博客（当时还建在 Medium 上）。我花了几天时间才意识到 freeCodeCamp 并不仅仅是一个博客，它是一个在线免费学习编程的平台！网站名已经不言而喻了...
 
-It only took completing a few HTML challenges before I was absolutely hooked. It was then that I decided I would spend all my free time working through the freeCodeCamp curriculum, with the goal of one day in the long-distant future maybe becoming a developer. I loved the idea of being able to speak to my colleagues about React, however far-away that felt.
+在做完几道HTML题之后我已经完全着迷了。那时我就决定在空闲时间完成 freeCodeCamp 的课程，为了在遥远将来的某天能成为一名开发人员，和我的同事讨论 React。我喜欢这个想法。
 
-## Struggling with the Basics
+## 艰难地学习基础知识
 
-I was feeling fairly confident in how quickly I was learning HTML and CSS until I actually attempted to complete one of the projects. Create a simple portfolio? This should be easy!
+我很快地学习了 HTML 和 CSS，我感到相当自信，直到我开始尝试完成一个项目。搭建一个作品集网站？小菜一碟！
 
-But it was overwhelming how lost I suddenly felt in an editor outside of freeCodeCamp. Attempting to start a project from scratch seemed impossible and it was frightening how quickly it felt like I forgot everything. Becoming a real developer suddenly felt like an impossibility.
+离开了 freeCodeCamp 的编辑器我突然感到非常迷茫。从头开始写项目似乎变成了不可能的任务，我好像把学到的东西忘得一干二净了。我突然感觉自己不可能成为一名真正的程序员。
 
 Finally asking for help was the best thing I did for myself. After stewing in my frustration for far too long, I reached out to a colleague who patiently guided me through using VS Code, structuring my HTML document, and linking it to a CSS file. After finally cobbling together a portfolio, I checked the box as done, even though I felt my work was terrible compared to others attempting this same challenge.
 

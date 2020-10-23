@@ -23,12 +23,11 @@
 这份工作让我第一次有了和程序员共同工作的机会。他们的工作听起来非常酷。他们谈论一些专业术语和技术————React, Ember, Scala, Python, TypeScript, boilerplate-code, compliers, rendering。开发软件竟然需要了解这么多内容，这听起来令人害怕。
 
 ![Sales floor picture](https://www.freecodecamp.org/news/content/images/2020/04/Famly-office-sales-2-1920x1200.png)
-
-办公区的地板
+办公区
 
 接下来一年半我继续在销售职位上打拼，最终我升职成了客户主管。在这份工作中，我感到我的沟通能力、时间管理能力、表现能力都得到了很大的提升。
 
-## 发现了freeCodeCamp
+## 发现freeCodeCamp
 
 虽然我作为一名客户主管还算成功，我对自己未来是否愿意在销售业发展还是存在疑问。而且在母语非英语的国家里做英语销售，职业选择也有所限制。
 
@@ -38,37 +37,36 @@
 
 ## 艰难地学习基础知识
 
-我很快地学习了 HTML 和 CSS，我感到相当自信，直到我开始尝试完成一个项目。搭建一个作品集网站？小菜一碟！
+我很快地学习了 HTML 和 CSS，在我开始尝试完成一个项目之前我都相当自信。搭建一个作品集网站？小菜一碟！
 
-离开了 freeCodeCamp 的编辑器我突然感到非常迷茫。从头开始写项目似乎变成了不可能的任务，我好像把学到的东西忘得一干二净了。我突然感觉自己不可能成为一名真正的程序员。
+离开了 freeCodeCamp 的编辑器我突然感到非常迷茫。从头开始写项目似乎变成了不可能的任务，我好像把学到的东西忘得一干二净了。我突然认为自己不可能成为一名真正的程序员。
 
-Finally asking for help was the best thing I did for myself. After stewing in my frustration for far too long, I reached out to a colleague who patiently guided me through using VS Code, structuring my HTML document, and linking it to a CSS file. After finally cobbling together a portfolio, I checked the box as done, even though I felt my work was terrible compared to others attempting this same challenge.
+而此时，寻求帮助是我做出的最好的决定。我的一位同事耐心地教我使用 VS Code, 构建 HTML 文档并链接相应的 CSS 文件。拙劣地完成了作品集网站后，我把这项任务勾选成了已完成，虽然我的成果和其他人相比非常糟糕。
 
-I eventually made my way into the JavaScript curriculum, which I had been impatiently waiting to start after about a month and half of struggling through HTML and CSS.
+在历时一个半月学完 HTML 和 CSS 课程后，我终于开始学习我期待已久的 JavaScript 课程。
 
-## Learning JavaScript
+## 学习 JavaScript
 
-It started out easy enough, although it wasn't before long that I found myself lost and frustrated again. After completing all of the JavaScript modules, I felt I was lacking the confidence and tenacity to attempt the more difficult JavaScript projects. Instead, I took the easy way out and started through the Codecademy JavaScript curriculum.
+开始时很简单，但没过多久我又感觉到迷茫和受挫了。学完了 JavaScript 的所有模块后，我没有自信和韧劲去挑战更难的 JavaScript 项目。相反，我选择了容易的路线，开始学习 Codecademy 的 JavaScript 课程。
 
-It was certainly helpful in solidifying the basics for me – after all, repetition is key. However, the biggest mistake I made in my learning journey was not going back to attempt those challenges.
+这对巩固基础知识当然是有帮助的，毕竟反复练习是关键。然而，在学习过程中我犯的最大错误就是没有回过头去尝试那些更难的项目。
 
-After working through all of the Codecademy modules, I started yet another JavaScript course, this time purchasing "The JavaScript Bootcamp" through Udemy. As this was my third time working through the fundamentals, I left that course with more stable footing and more confidence in my ability to work with JavaScript.
+学完 Codecademy 的所有模块后，我又买了 Udemy 上的 "The JavaScript Bootcamp" 准备继续学 JavaScript。鉴于这已经是我第三次梳理基础知识，课程结束后我感到自己对 JavaScript 更有把握了。
 
-## Starting at Pleo
+## 进入 Pleo
 
 ![group photo of my colleagues](https://www.freecodecamp.org/news/content/images/2020/04/P1111151_-1-.jpg)
+Pleo，2019年12月
 
-Pleo Team Camp, Dec 2019
+在这时我直接开始学习Node，紧接着学习了一门 React 课。
 
-From there, I jumped straight into another course, this time on Node directly followed up with a course on React.
+在两门课之间的某个时间，我在 [Denmark's coolest startup][2] 找到一份客户经理的工作。作为发展如此迅速的创业公司的一员非常令人兴奋。更令人兴奋的是，遇到如此多年轻有天赋的开发人员并有机会向他们学习。
 
-Somewhere between the Node and React courses, I had started a new job as an account manager at what I still deem to be [Denmark's coolest startup][2]. It was and is incredibly exciting to be a part of a company growing so fast. It was even more exciting to meet so many new and talented developers to learn from.
+在做了三个月左右时，主管和我讨论我的职业规划。我非常坦诚地告诉她，我不想再在销售行业发展了。我想尽全力自学编程，争取在未来某天成为一名程序员。
 
-About three months into my new job, my manager and I were discussing how my role could develop in the future. I was honest with her and said I wasn't interested in any further responsibility. I wanted to spend any and all excess capacity teaching myself to code, with the hopes of one day becoming a developer.
+没有人想在自己组里一个初级销售代表的口中听到这些话。但是令我惊讶的是，她非常支持我的决定，并且愿意尽力帮助我达成目标。
 
-This is not something you want to hear from a relatively new sales rep on your team. But to my surprise, she was incredibly supportive and made a commitment to help me any way she could, as long as I hit my targets.
-
-## Attempting the Coding Challenge
+## 尝试编程挑战
 
 After speaking with one of our engineering directors, it was clear that for us to continue a conversation around what a transition from sales to product would look like, I would need to complete our frontend hiring challenge, like an outside candidate would.
 

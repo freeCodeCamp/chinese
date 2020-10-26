@@ -60,7 +60,7 @@ Pleo，2019年12月
 
 在这时我直接开始学习Node，紧接着学习了一门 React 课。
 
-在两门课之间的某个时间，我在 [Denmark's coolest startup][2] 找到一份客户经理的工作。作为发展如此迅速的创业公司的一员非常令人兴奋。更令人兴奋的是，遇到如此多年轻有天赋的开发人员并有机会向他们学习。
+在两门课之间的某个时间，我在 [Pleo][2] 找到一份客户经理的工作。作为发展如此迅速的创业公司的一员非常令人兴奋。更令人兴奋的是，遇到如此多年轻有天赋的开发人员并有机会向他们学习。
 
 在做了三个月左右时，主管和我讨论我的职业规划。我非常坦诚地告诉她，我不想再在销售行业发展了。我想尽全力自学编程，争取在未来某天成为一名程序员。
 
@@ -68,23 +68,24 @@ Pleo，2019年12月
 
 ## 尝试编程挑战
 
-After speaking with one of our engineering directors, it was clear that for us to continue a conversation around what a transition from sales to product would look like, I would need to complete our frontend hiring challenge, like an outside candidate would.
+和公司的一位技术总监聊过之后，我了解到我需要完成招聘流程中要求的前端编程任务，才能继续从销售部到产品部的转行。
 
-The thought of attempting this was both incredibly intimidating and motivating. This is when I started staying late in the office every night. I didn't want to waste time biking home, so the second the clock hit 17:00, I would scurry to find some dinner, returning to my desk as soon as possible, to start my day pretending to be a developer.
+尝试这件事的想法令人害怕又充满动力。也是从这时起，我开始在办公室待到更晚。我不想浪费时间骑自行车回家，所以每到下午五点，我会赶紧找点晚餐吃，尽快回到工位，开始我假装作为程序员的一天。
 
-I had finally finished my React course just before the Christmas holiday and was working on a few side-projects, although I never really followed through with any of them. I knew I needed to start applying my knowledge but found it difficult to complete a project without a real end goal.
+我终于在圣诞假期前上完了 React 课，并且开始做一些没头没尾的个人项目。我知道我需要把学到的知识应用于实际中，但我发现我很难完成没有最终目标的项目。
 
-With some extra time on my hands over the holiday period, I began to look through the frontend challenge again. I still felt far from capable to produce a worthy submission, however, I felt it gave me some sort of end goal to work towards so I could actually finish something.
+假期里时间变得充裕，我便又开始看之前遇到的前端挑战了。我对自己有能力提交一个有价值的成果仍然表示怀疑，但是因为有目标，我想我说不定最终能完成一些东西。
 
-Luckily for me, our frontend challenge was very similar to the final project of the React course, so I could reuse much of the boilerplate and components for my submission. I definitely felt like I was cheating.
+幸运的是，我们公司的前端挑战很像那门 React 课程里的期末项目，所以我可以复用很多之前的代码和组件。我感觉我有点像在作弊。
 
-But I sent through [my project][3] anyway and eagerly await feedback. Having my code reviewed by two of our senior engineers was incredibly scary and I was prepared for some harsh feedback.
+我还是提交了我的项目，并积极地等待回应。由公司的两名高级工程师评审我的代码，我感到非常害怕，我已经准备好接受一些严苛的反馈了。
 
-After a couple weeks, my grade was in, and my submission wasn't a total failure! I had received some really great, actionable points of criticism. One of my colleagues even spent an hour with me after work, talking me through each line of feedback. Our code review session went so well, we decided to meet again, week after week, until well after I transitioned into becoming a developer.
+几周后我拿到了结果，我的提交还不算太糟！我收到了一些非常有可行性的批评和建议。我的一位同事甚至在下班后留下来和我逐行讲解那些反馈信息。代码评审会议进行得非常顺利，于是我们决定每周都约定一次，直到我有能力转行成一名真正的开发人员。
 
-## My First PR
+## 我的第一次Pull Request
 
 My sales manager and the director of engineering continued to check in on my progress throughout the coming months. In April, the opportunity was presented that I could possibly work on the side with our internal tools team. There were many small, non-urgent tickets that needed attention in our back-office system.
+接下来的几个月里，我的销售主管和技术总监时不时来监督我的进程。四月时，我有了一个可以进入内部工具组工作的机会，后勤系统有一些需要引起注意但不紧急的小标签？？？？
 
 I was excited – it would be a great way for me to get some real experience in working with the product team and it was made very clear this wasn't to interfere with my work in sales. That thought of working with real, production code was INSANE!
 

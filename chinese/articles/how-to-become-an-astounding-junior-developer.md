@@ -112,9 +112,7 @@
 对于一个处于职业生涯任何阶段的开发人员来说，这可能是最重要的：**你的事业是你自己的。你必须拥有它，你必须拥抱你的成长。**
 
 有时你的公司、职位或老板会帮助促进你成长，但最终还是取决于你。
-
-Most companies have some kind of scheduled review process—possibly quarterly or yearly. If they do, great, but if they don't, own your growth! Ask your supervisor regularly for feedback, and do what they say. If someone mentions something you've never heard of, ask them about it or go do your own research it!
-大多数公司都有某种固定的审查程序——可能是季度或年度。如果他们有，那很好，如果没有，拥有自己的成长！定期征求上司的意见，并按他们说的去做。如果有人提到了你从未听说过的东西，问问他们，或者自己去研究一下!
+大多数公司都有某种固定的审查程序,可能是季度或年度。如果他们有，那很好，如果没有，拥有自己的成长！定期征求上司的意见，并按他们说的去做。如果有人提到了你从未听说过的东西，问问他们，或者自己去研究一下!
 
 ### 微小收益的力量
 
@@ -122,362 +120,248 @@ Most companies have some kind of scheduled review process—possibly quarterly o
 
 https://jamesclear.com/marginal-gains
 
-One of my favorite books,  [_Atomic Habits_  by James Clear,][1]  has a great diagram titled "The Power of Tiny Gains." It's a simple diagram. It shows the difference between a 1%  _improvement_  and 1%  _decline_  every day.
-我最喜欢的一本书之一——《小习惯 詹姆斯·克莱尔》[1] 有一个非常棒的图表标题 “微小收益的力量”。这是一个简单的图表。它显示了每天1%的改善和1%的下降之间的差异。
+我最喜欢的一本书之一——《小习惯 詹姆斯·克莱尔》[1] 有一个非常棒的图表标题叫 “微小收益的力量”。这是一个简单的图表。它显示了每天1%的 _提高_ 和1%的 _下降_ 之间的差异。
 
-If you get 1% better every day, after a year you'll be almost 38 times better than you were at the start of the year! That's the power of "tiny gains," and it's just as true for becoming a great software developer.
-如果你每天都有1%的改善，一年之后，你会比年初好38倍!这就是“微小收益”的力量，对于成为一名伟大的软件开发人员来说也是如此。
+如果你每天都有1%的提高，一年之后，你会比年初好38倍!这就是“微小收益”的力量，对于成为一名伟大的软件开发人员来说也是如此。
 
-Every day you have an opportunity to learn something new—no matter how tiny it is. Maybe it's a new function on arrays you didn't know about, a different method for structuring CSS, a new text editor shortcut, or something new entirely like learning SQL and how data is stored at the database level.
 每天你都有机会学习新东西，不管它有多小。也许是一个您不知道的数组上的新函数，一种不同的CSS结构化方法，一个新的文本编辑器快捷方式，或者是一些全新的东西，比如学习SQL以及如何在数据库级别存储数据。
 
-Regardless, aim to be 1% better every day (most days you'll end up doing much more) and the growth from the first few years of your career will be astounding.
 无论如何，每天提高1%(大多数日子你会做得更多)，你职业生涯最初几年的成长将是惊人的。
 
-### One page per day
 ### 每天一页
 
 ![](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-29-at-10.10.23-AM.png)
 
-I heard a story on a developer podcast once about the guy who maintains the  `pg`  gem for Ruby. This is the gem that is the interface between your Ruby code and the Postgresql database. It's some pretty serious stuff, and it's used by most Ruby developers every single day.
-我曾经在一个博客上听说过一个故事，讲的是一位维护Ruby的`pg` gem。这是Ruby和Postgresql之间的一个接口。这是一个相当严肃的事情，因为大多数Ruby开发人员每天都在使用它。
+我曾经在一个博客上听说过一个故事，讲的是一位为Ruby维护`pg` gem的人。`pg` gem是Ruby和Postgresql之间的一个接口。这是一个相当严肃的事情，因为大多数Ruby开发人员每天都在使用它。
 
-The story of how he became the maintainer of this gem was interesting. He said that when he was first getting started, he would open up the Postgresql documentation and read one page—just one page each and every day.
 他如何成为gem的维护者的故事非常有趣。他说当他刚开始的时候，他会打开Postgresql文档并阅读一页——每天只读一页。
 
-Over time, he grew an extensive knowledge of Postgresql and was able to start contributing to the  `pg`  gem. After a little while longer, he became the maintainer of that gem.随着时间的推移，他对Postgresql有了广泛的了解，并开始为“pg”gem做出贡献。过了一段时间，他成为了gem的维护者。
+随着时间的推移，他对Postgresql有了广泛的了解，并开始为“pg”gem做出贡献。过了一段时间，他成为了gem的维护者。
 
-It's the perfect example of tiny gains stacking up—just one page per day. Any of us can do that, and I encourage you to take the same philosophy and apply it to whatever language or system you're working with!
 这是积累点滴的完美例子——每天一页就够了。我们每个人都可以做到这一点，我鼓励你将同样的理念应用到你正在使用的任何语言或系统中!
-### "Practice make perfect"
+
 ### 实践出真知
 
-You've probably heard this phase before:  _"practice makes perfect."_
-你以前可能听说过这个短语:实践出真知。
+你以前可能听说过这个短语: _“实践出真知”_ 。
 
-My piano teacher growing up used a different phrase:  _"**perfect**  practice makes perfect."_
-我的钢琴老师使用了不同的短语：**完美**的实践出真知。
+我的钢琴老师使用了不同的短语：_ **完美** _的实践出真知。
 
-I think he was right. I could practice the piano in the wrong way—with bad technique, sloppy, without a steady rhythm—and that's the result I would get: sloppy piano playing.
-我认为他说的对，我可能会用错误的方式练习钢琴——糟糕的技术，马虎，没有稳定的节奏——结果就是:马虎的钢琴演奏。
+我认为他说的对，我可能会用错误的方式练习钢琴,如用糟糕的技术，马虎，没有稳定的节奏，结果就是马虎的钢琴演奏。
 
-It's not just practice, but  _how_  you practice that matters. I could practice the first measure of a song over and over and get it down perfectly, but if I never pushed beyond the first measure I would never learn the song. I could play that first measure of the song at the level of a world-class pianist, but I wanted to  _play_  the piano, so I had to learn the whole song.
-重要的不只是实践，而是你如何实践。我可以一遍又一遍地练习一首歌曲的第一小节，并把它写得很完美，但如果我只关注第一小节，我就永远学不会这首歌。我可以以世界级钢琴家的水平演奏这首歌的第一小节，但我想弹钢琴，所以我不得不学习整首歌。
+重要的不只是实践，而是你 _如何_ 实践。我可以一遍又一遍地练习一首歌曲的第一小节，并把它写得很完美，但如果我只关注第一小节，我就永远学不会这首歌。我可能可以以世界级钢琴家的水平演奏这首歌的第一小节，但我想弹钢琴，所以我不得不学习整首歌。
 
-This is a perfect parallel for development. The way you "practice" development (your daily habits, methods and routines for development) determines the type of developer you will become.
-这对于开发来说是一个完美的对比。你实践开发的方式(你的日常习惯、开发方法和常规)决定了你将成为什么样的开发人员。
+这对于开发来说是一个完美的对比。你实践开发的方式(你的日常习惯、开发方法以及路线)决定了你将成为什么样的开发人员。
 
-In the beginning you'll make lots of mistakes (everyone does), but if you're conscious of your work, you'll notice areas you can improve. These are perfect practice moments: the opportunity to learn something new or do something in a better way.
-一开始你会犯很多错误(每个人都会犯)，但是如果你对你的工作上心，你就会发现你有可以改进的地方。这些都是完美的练习时刻:学习新东西或以更好的方式做某事的机会。
+一开始你会犯很多错误(每个人都会犯)，但是如果你对你的工作上心，你就会发现你有可以改进的地方。这些都是完美的练习时刻，是学习新东西或以更好的方式做某事的机会。
 
-When you look back on your career ten years from now, you will want to have had ten years of growth, practice, and learning—not one year of growth, practice, and learning ten times.
-当你从现在开始回顾十年的职业生涯时，你想要的应该是十年的成长、实践和学习，而不是一年的成长、实践和学习经历十次。
+当你从现在开始回顾十年的职业生涯时，你想要的应该是十年的成长、实践和学习，而不是一年的成长、实践和学习，经历十次。
 
-So ask those dumb questions. Ask the obvious questions. When someone mentions something you don't know anything about, boldly ask, "What's that?" My hope is that they respond in a kind and teaching manner, but regardless, be ready to learn.
-所以去问那些愚蠢的问题。问那些可能显而易见的问题。当别人提到一些你不知道的事情时，大胆地问:“那是什么?”我希望他们能以一种和蔼可亲的方式回应我，无论如何，你都要做好学习的准备。
+所以去问那些愚蠢的问题。问那些可能显而易见的问题。当别人提到一些你不知道的事情时，大胆地问:“那是什么?”我希望他们能以一种和蔼可亲的方式回应，无论如何，你都要做好学习的准备。
 
-It all comes back to owning your growth.
 这一切都会见证你的成长。
 
-## T-shaped people
 ## T字型的人
 
 ![A "T-shaped" person](https://www.freecodecamp.org/news/content/images/2020/05/new_developer2.001.jpeg)
 
-A "T-shaped" person
 一个T字型的人
 
-In the beginning of your development career, there are so many topics that you can benefit from knowing, so you want to spread your effort and knowledge across a wide range of subjects.
-在您的开发生涯开始时，您可以从了解许多主题中获益，因此您希望将您的努力和知识传播到广泛的主题中。
+在您的开发生涯开始时，您可以从了解许多方向中获益，因此你希望将你的努力和知识传播到更为广泛的学科中。
 
-If you're aiming at becoming a full-stack developer, that list might include things like HTML, CSS, JS, a backend language of your choice, SQL, Git, etc. There's so much easily attainable knowledge and benefit right on the surface of each of those topics that can be acquired by casting a wide net and taking it all in.
-如果你致力于成为一名全栈工程师，你可能需要掌握HTML、CSS、JS、一种你想使用的后端语言、SQL、Git等。在每一个方向中都有比较容易获取的知识，你可以慢慢进行吸收。
+如果你立志成为一名全栈工程师，你可能需要掌握HTML、CSS、JS、一种你想使用的后端语言、SQL、Git等。在每一个方向中都有比较容易获取的知识，你可以慢慢进行吸收。
 
-Over time, you'll find what type of development you enjoy most. Maybe it's frontend, backend, database work, ops, design—or some combination of those and more.
-随着时间的推移，你会发现你最喜欢哪种开发。可能是前端、后端、数据库、ops（这个不知道是啥）、设计或者这些和其他一些组合。
+随着时间的推移，你会发现你最喜欢哪种开发。可能是前端、后端、数据库、ops（这个不知道是啥）、设计或者这些和其他的一些组合。
 
-As your career progresses, you'll start to become a "T-shaped person." A T-shaped person is someone who, like the letter "T" is visualized, has a wide but shallow knowledge and experience about a lot of things, and a couple areas with a deep amount of knowledge and experience.
 随着你事业的发展，你会开始成为T字型人才。T字型人才，就像字母"T"，指对很多事物在宽度和深度有着更加深度的理解，在一些领域有丰富的知识和经验。
 
-This deep knowledge takes a while to build up, and each step down is increasingly more effort than the previous—that's just the reality as you approach mastery of a subject. In the beginning, scoop up all of those easier beginner gains across a wide field of subjects.
-这种深刻的认识需要一段时间来建立，每一步都要比前一步付出更多的努力，这正是你在精通一门学科时的事实。
+这种深刻的认识需要一段时间来建立，每一步都要比前一步付出更多的努力，这正是你在精通一门学科时的事实。在开始的时候，在广泛的学科领域里，掌握所有那些初学者容易掌握的东西。
 
-Having this T-shape ability will help you become a better developer as a whole. Frontend developers who understand the database schema or backend developers who understand how those database tables are going to be used as models in the frontend will be more knowledgeable and better teammates than those who are siloed in their own area.
 拥有T字型的能力将帮助你成为一个更好的开发者。了解数据库模式的前端开发人员，或者了解如何在前端将数据库表用作模型的后端开发人员，将比那些只局限于自己领域的人更有见识，也更能成为好的团队成员。
 
-In the beginning this little foray into all of the aspects of development is also useful to find what you're drawn to, and to give you the bigger picture of all of the moving pieces in the software world.
-在开始阶段，对开发的所有方面的小尝试也有助于找到吸引你的东西，并给你一个软件世界中所有移动的更大的蓝图。
+在开始阶段，对开发的各个方面的小尝试也有助于找到吸引你的东西，并给你一个软件世界中更大的蓝图。
 
-Follow your interests and stay hungry to learn!
 追随你的兴趣，保持求知欲!
 
-## Tips for being a great new developer
 ## 为新开发者的一个建议
 
-Now that we've covered your expectations and how to think about them, here's some practical tips to make you a great new developer—one your teammates love to work with.
-现在我们已经介绍了你的期望以及如何考虑它们，这里有一些实用的技巧可以帮助你成为一名优秀的开发人员，一名你的队友喜欢与之共事的开发人员。
+现在我们已经介绍了你的期望以及如何考虑它们，这里有一些实用的技巧可以帮助你成为一名优秀的开发人员，一名你的团队成员喜欢与你共事的开发人员。
 
-### #1 Communicate really really really really really really well
-### #1 沟通是非常非常好的
+### #1 沟通是非常非常重要的
 
-You may not have incredible development knowledge and skill walking into your first day, but you  _can_ have incredible communication skills.
-第一天上班时，你可能没有令人难以置信的开发知识和技能，但你可以有令人难以置信的沟通技巧。
+第一天上班时，你可能没有令人难以置信的开发知识和技能，但你 _可以_ 有令人难以置信的沟通技巧。
 
-As a new developer, you're going to ask for help and guidance—a lot. And that's ok! Here's a tip for how to ask for help effectively.
 作为一名新开发人员，您将需要大量的帮助和指导。没关系，这里有一个如何有效地寻求帮助的小窍门。
 
-Getting stuck is frustrating (it was for me). In these moments, it's easy to let that frustration overwhelm you and fire off questions to your teammate next to you (or maybe via email or a chat app).
 被困住是令人沮丧的(对我来说就是这样)。这种挫败感很容易将你压倒，你可以向旁边的同事抛出问题(或者通过电子邮件或聊天应用)。
 
-Things like:
 类似：
 
-> "im stuck"  
-> 我困住了
-> "it errored"  
-> 显示错误
-> "the page won't load"
-> 页面不能加载
+> “我困住了”
+> “显示错误”
+> “页面不能加载”
 
-Now take a step back and view this from the perspective of the person you're asking help from. A message like  _"the page won't load"_  doesn't help this person help you at all. There's no context. There's no information for them to go on. In fact, they have to  _ask for more information from you._  This is incredibly inefficient and very frustrating for the person that is trying to help you.
-现在退一步，从你请求帮助的那个人的角度来看待这个问题。像_“页面无法加载”_这样的信息对这个人毫无帮助。没有上下文。没有信息可以让他们继续。事实上，他们还得向你获取更多的信息。这样做效率非常低，而且会让试图帮助你的人非常沮丧。
+现在退一步，从你请求帮助的那个人的角度来看待这个问题。像 _“页面无法加载”_ 这样的信息对这个人毫无帮助。没有上下文。没有信息可以让他们继续。事实上，他们还得向你 _获取更多的信息_。这样做效率非常低，而且会让试图帮助你的人非常沮丧。
 
-A better way to ask for help is to think of it like a  [Mad Lib][2]™ (if you remember those):
 寻求帮助的一个更好的方式是像[Mad Lib][2]™一样思考(如果你还记得的话):
 
-> I am working on \_\_\_\_\_,  
 > 我正在做 \_\_\_\_\_,
-> but when I try \_\_\_\_\_,  
 > 但是在我尝试\_\_\_\_\_的时候，
-> \_\_\_\_\_ happens instead. 
 >却发生了这个。
 >   
-> I've tried \_\_\_\_\_, \_\_\_\_\_, and \_\_\_\_\_.  
 > 我试着\_\_\_\_\_, \_\_\_\_\_,和\_\_\_\_\_.
-> and I've looked at \_\_\_\_\_ and \_\_\_\_\_
 > 我发现\_\_\_\_\_ 和 \_\_\_\_\_
 
-An example of this message might be something like this:
 这条信息的一个例子可能是这样的:
 
-> I am working on  **the user password reset bug**, 
 > 我正在处理**用户密码重置错误的bug**，
 > but when I try  **to generate a password reset link**,  
-> 但是当我**尝试生成密码重置链接时**，
-> **the user's token is already empty**.  
+> 但是当我尝试**生成密码重置链接时**，
 > **用户的令牌已经为空**
 >   
-> I've looked at  **where the token is set**, and  **I can see the token in the database**,  
 > 我看过**令牌是在哪设的**，我发现**令牌在数据库中**
-> but  **the token is missing on line X of File Y.**
 > 但是 **这个令牌在文件Y的X行上丢失了。**
 
-If you sent someone the message above, they can understand:
 如果你给别人发了上面的信息，他们可以理解:
 
--   What you're working on
 - 你在做什么
--   What the problem is
 - 问题是什么
--   What you've  _tried already_
 - 你已经试过了什么
--   Where the problem is
 - 问题发生在哪
 
-This is a wealth of information for the person you're asking help from. They will  **greatly**  appreciate that you gave them that information so clearly—and that you've already  _tried to fix it yourself._  This shows them that you respect their time, and you're not just looking for an easy handout.
-对于你寻求帮助的人来说，这是一个丰富的信息。他们会**非常**感谢你给了他们如此清晰的信息，并且_你已经尝试自己去解决它_.这让他们知道你尊重他们的时间，而不是简单的施舍。
+对于你寻求帮助的人来说，这是一个丰富的信息。他们会**非常**感激你给了他们如此清晰的信息，并且你已经尝试自己去解决它.这让他们知道你尊重他们的时间，而不是你在等待他们简单的施舍。
 
-There's nothing wrong with getting help, but if someone just fixes the problem for you they've really robbed you of the opportunity to learn and grow yourself.
 寻求帮助并没有错，但是如果有人只是帮你解决问题，他们实际上是在剥夺你学习和成长的机会。
 
-It's not like there's ten problems you have to work through and you're done for the rest of your life—you'll face problems every single day as a developer. So the best outcome is if they give you enough help to get you unstuck but allow you to solve the problem yourself.
-这并不是说你必须解决十个问题然后你的余生就结束了，作为一名开发人员，您每天都会遇到问题。所以最好的结果是，他们给你足够的帮助让你摆脱困境，但允许你自己解决问题。
+这并不是说你必须解决这十个问题然后你的余生就结束了，作为一名开发人员，您每天都会遇到问题。所以最好的结果是，他们给你足够的帮助让你摆脱困境，但允许你自己独自解决问题。
 
-### #2 Hone your Google Fu
+### #2 用好谷歌
 
-Just like developing skill in the physical martial art of Kung Fu, over time as a developer you will develop skill in the art of Google Fu—that is the art of finding answers by Googling them. This is a real skill that every experienced developer has and it is developed over time.
-就像在武术中施展技能一样，作为一名开发人员，随着时间的推移，您将施展谷歌的的艺术技能，这就是用谷歌搜索答案的艺术。这是每个有经验的开发人员都拥有的一项真正的技能，它是随着时间的推移而开发出来的。
+就像在武术中施展技能一样，作为一名开发人员，随着时间的推移，您将施展谷歌的的才能，这就是用谷歌搜索答案的艺术。这是每个有经验的开发人员都拥有的一项真正的技能，它是随着时间的推移而开发出来的。
 
-Sometimes, you just need to google the exact problem you have (this works great with error messages):
 有时，你只需要谷歌你所遇到的问题(这对报错非常有效):
 
-![Sometimes pasting the whole error message works](https://www.freecodecamp.org/news/content/images/2020/05/new_developer.041.jpeg)
+![有时粘贴整个错误消息可以得到结果](https://www.freecodecamp.org/news/content/images/2020/05/new_developer.041.jpeg)
 
-Sometimes pasting the whole error message works
 有时粘贴整个报错信息就可以解决
 
-Sometimes googling the exact error message will produce the correct result, as it did above. You ran into a technical problem, and someone else ran into the exact same problem.
 有时，谷歌准确的错误信息将产生正确的结果，正如上面所做的。你遇到了一个技术问题，其他人也遇到过完全相同的问题。
 
-But sometimes, you need to edit the search query a little bit to remove project-specific info:
 但有时你需要对搜索信息进行一些编辑，以删除删除特定项目的信息：
 
-![Too much project-specific info returns no results](https://www.freecodecamp.org/news/content/images/2020/05/new_developer.042-1.jpeg)
+![太多特定于项目的信息不会得到结果](https://www.freecodecamp.org/news/content/images/2020/05/new_developer.042-1.jpeg)
 
-Too much project-specific info returns no results
 有太多特定于项目的信息你不会得到一个满意的结果
 
-In the image above, Google has never seen the function  `whos_that_pokemon_its_pikachu()`  in the file  `gotta_catchem_all.rb`  (except now it has since I searched it :)). Removing that project-specific info and adding generic info returns better results.
 如上图，谷歌从未在 `gotta_catchem_all.rb` 文件中见过 `whos_that_pokemon_its_pikachu()` 这个函数（但是我仍然还在搜索它）。删除特定项目的信息并添加通用信息将会返回更好的结果。
 
-![The underlying generic error](https://www.freecodecamp.org/news/content/images/2020/05/new_developer.043-1.jpeg)
+![基本的通用错误](https://www.freecodecamp.org/news/content/images/2020/05/new_developer.043-1.jpeg)
 
-The underlying generic error
 基本的通用错误
 
-### #3 Use a "try timer"
+### #3 尝试使用计时器
 
-As a new developer you're going to get stuck a lot. There will be error messages you haven't seen before, and how you handle these situations will determine how quickly you grow as a developer.
 作为一名新开发人员，你会遇到很多困难。可能会出现以前你从未见过的错误消息，如何处理这些情况将决定您作为开发人员的成长速度。
 
-Although these can be terribly frustrating moments, these are the moments where you will learn and you will grow. You don't learn by doing the same kind of work over and over again—it's by journeying through these bumps in the road that growth takes place.
-尽管这可能是非常令人沮丧的时刻，这些是你学习和成长的时刻。你不能通过一遍又一遍地做同样的工作来学习——只有在经历坎坷的过程中才能成长。
+尽管这可能是非常令人沮丧的时刻，这些是你学习和成长的时刻。你不能通过一遍又一遍地做同样的工作来学习，只有在经历坎坷的过程中才能成长。
 
-When you run into one of these problems, take some time to try and figure it out yourself. Some companies will tell you this as a part of onboarding—something like  _"try for 30min before asking for help."_  In other companies it's not as clearly defined, but the message is still there: do your best and then if you're still stuck ask for help.
-当您遇到其中一个问题时，请花些时间尝试并自己解决它。有些公司会把这句话作为培训的一部分来告诉你，比如“30分钟后再寻求帮助”。在其他一些公司，虽然没有这么明确的定义，但这个提示依然适用:尽你所能，如果你还是卡住了，那就寻求帮助。
+当您遇到其中一个问题时，请花些时间尝试并自己解决它。有些公司会把这句话作为培训的一部分来告诉你，比如“30分钟后再寻求帮助”。在其他一些公司，虽然没有这么明确，但这个提示依然适用:尽你所能，如果你还是卡住了，那就寻求帮助。
 
-This not only allows you the opportunity to figure it out and learn for yourself, but it also respects the time of your teammates who are focused on their own work. Interrupting someone for something you could have quickly figured out yourself is a net loss for the team.
 这不仅让你有机会弄清楚，而且也尊重在专注于自己的工作的的团队成员的时间。因为一些你本可以很快意识到的事情去打断别人，这将对团队来说是一种净损失。
 
-So give it a good try, and then of course ask for help!
 所以好好尝试一下，然后再寻求帮助!
 
-Here's the secret to being a great new developer though:  **always reset the timer.**
 下面是成为一名优秀的新开发人员的秘诀: **总是重置计时器**
 
-Let's say you get stuck, try for 30min, and then ask for help. The next time you get stuck  **try again for another 30min**  before asking for help.
 假设你被困住了，尝试了30分钟，然后再去寻求帮助。下次你被困住的时候，去寻求帮助之前 **再试30分钟**。
 
-This may seem obvious, but on those days where it feels like you hit nothing but problem after problem, you're going to get frustrated and you're going to want to start asking for help as soon as the next problem arrives—it's just natural.
 显而易见，当你觉得你遇到了一个又一个问题的时候，你会感到沮丧，你会想要在遇到下一个问题之前寻求帮助，这是很自然的。
 
-Take a deep breath, go for a quick walk, and approach each problem with a fresh perspective.
-深呼吸，快走一会儿，用全新的视角来看待每一个问题。
+深呼吸，去快走一会儿，用全新的视角来看待每一个问题。
 
-(This is, of course, easier said than done!)
 (当然，说起来容易做起来难!)
 
-### #4 Remember to relax and take breaks!
 ### #4 记住放松和休息！
 
-Remember to take breaks when things start to feel overwhelming.
 记住，当事情开始让你感到难以承受时，要休息一下。
 
-Go for a walk. Go get a glass of water. Sleep on it if you can. Sometimes just getting up and moving for a minute can help you re-center yourself.
 去散个步。接杯水。如果可以的话，放一个晚上。有时候仅仅睡一觉或者动一动就可以帮助你重新调整自己。
 
-Remember that every developer was once in your place, and you will get through it.
 请记住，每个开发人员都曾经历过你这种情形，您会度过难关的。
 
-Development will always be frustrating to some extent—you never stop making mistakes or running into problems. But over time you just get better at dealing with them, and your confidence to fix those problems increases so it bothers you less and less.
 在某种程度上来讲，开发总是令人沮丧，你永远不会停止犯错或者遇到问题。但随着时间的推移，你会越来越擅长处理这些问题，你解决这些问题的信心也会增强，所以这些问题对你的困扰会越来越少。
 
 
-### #5 Ask the duck
 ### #5 小黄鸭调试法
 
-Have you ever written an email or a text message describing a problem you have to someone, and right before you hit send you realize the solution? In the software world there's a phrase for this—[_rubber duck debugging_][3]:
 你是否曾向某人写过描述你遇到的一个问题的电子邮件或短信，然后在你点击发送之前你已经知道了解决方法?在软件世界里有这样一个短语，—[_小黄鸭调试法_]
 
-> The name is a reference to a story in the book The Pragmatic Programmer in which a programmer would carry around a rubber duck and debug their code by forcing themselves to explain it, line-by-line, to the duck.
-这个名字是引用了《实用程序员》一书中的一个故事，在这个故事中，一个程序员带着一只橡皮鸭，通过强迫自己一行一行地向橡皮鸭解释代码来调试他们的代码。
+> 这个名字是引用了《实用程序员》一书中的一个故事，在这个故事中，一个程序员带着一只橡皮鸭，通过强迫自己一行一行地向橡皮鸭解释代码来调试他们的代码。
 
-You see, by writing an email or talking to another person, you're forced to explain the entire context in a logical way in order for the other person to understand what's going on.
-通过写电子邮件或与另一个人交谈，你被迫以一种逻辑的方式来解释整个上下文，以便让另一个人理解发生了什么。
+通过写电子邮件或与另一个人交谈，你被迫整理整个上下文逻辑，以便让另一个人理解发生了什么。
 
-To explain the problem in this way,  _you yourself_  have to be able to think about and order it logically. Just the act of trying to prepare this context for someone else can cause you to think about the problem in a different light, and many times you'll find the solution yourself.
-用这种方式解释这个问题，你自己必须有逻辑地思考和整理。仅仅是试着为别人准备上下文的行为就会让你从不同的角度来思考问题，很多时候你自己就会找到解决方案。
+用这种方式解释这个问题， _你自己_ 必须有逻辑地思考和整理。仅仅是试着为别人准备上下文的行为就会让你从不同的角度来思考问题，很多时候你自己就会找到解决方案。
 
-So relating back to using a try timer, before you ask for help, try explaining (or typing) up the summary of the problem in an email that you don't send. The chances are you'll gain new insight about the problem without having to interrupt another person, and worst case, you've got a great email or chat message to send them.
 回到尝试使用计时器，在你寻求帮助之前，试着用你没有发送的邮件解释问题的概要。你很有可能在不打扰别人的情况下对这个问题有了新的见解，最糟糕的情况是，你有一封很好的邮件或聊天信息要发送给他们。
-(I've seen many people put actual rubber ducks on their desk too!)
 (我也见过很多人把真正的橡皮鸭放在桌子上!)
 
-### #6 Take notes
 ### #6 记笔记
 
-This tip may seem obvious...but take notes!
 这个建议可能看起来很明显!
 
-You will be introduced to many different things when you first join a company: codebases, products, people, business logic, and it will be impossible to remember it all. Write this stuff down.
 当你第一次加入一家公司的时候，你会接触到很多不同的东西：源代码、产品、人、业务逻辑，不可能把这些全部记住，所以把这些东西写下来。
 
-When I started my first job, my boss told me he had no problem explaining anything to me, but he didn't want to have to do it twice. I understood then, but now eight years later I really understand—it's all about respecting your teammates and their time.
 当我开始我的第一份工作时，我的老板告诉我他可以向我解释任何事情，但是他不想解释两次。那时候我明白，但8年后的今天我真才真正明白，这是在尊重你的团队成员以及他们的时间。
 
-If he explains something to me and I forget it, we've wasted both of our time—_and_  I'll have to ask him again. At his recommendation I even started putting physical sticky notes on my monitor of things I wanted to see often and remember. Things like:
 如果他跟我解释了某件事情，我却忘了，我们就浪费了彼此的时间，所以只能再问他一遍。在他的建议下，我甚至开始在我的显示器上贴物理便利贴，记下我想经常遇到和需要记住的事情。就像：
 
-> \- TRY FOR 30MIN  
 > \- 尝试30分钟
-> \- CHECK THE BUILD PASSES BEFORE ASKING FOR PR REVIEW  
 > \- 在请求PR评审之前，检查构建是否通过
-> \- MAKE SURE YOU HAVE LATEST CODE
 > \- 确保你有最新的代码
 
-### #7 Fight against imposter syndrome daily
 ### #7 每天与骗子综合症作斗争
 
-If you don't know what imposter syndrome is, it sounds like this in your head:
 如果你不知道什么是骗子综合症，你的脑海里这样想:
 
-> I don't belong. I'm a fraud. Everyone else understands this but me.
 > 我不属于这里。我是一个骗子。除了我，其他人都明白这一点。
 
-This is a mindset you have to fight on a daily basis. There will be frustrating times as a developer, but you've faced frustration already and pushed through it. Every developer has felt this, and this too will pass.
-这是一种你每天都要与之抗争的心态。作为一名开发人员，会有令人沮丧的时候，但是你已经面对过挫折并努力克服了它。
+这是一种你每天都要与之抗争的心态。作为一名开发人员，会有令人沮丧的时候，但是你已经面对过挫折并努力克服了它。每个开发人员都有这种感觉，而且这种感觉也会过去的。
 
-In reality, imposter syndrome looks more like this:
 实际上，骗子综合症看起来更像这样:
 
 ![骗子综合症 ](https://www.freecodecamp.org/news/content/images/2020/05/imposter_.png)
 
-Imposter syndrome
 骗子综合症
 
-## The one key difference between a "senior" and "junior" developer
 ## “高级”和“初级”开发者之间的一个关键区别
 
-Sure, a senior developer has more knowledge and experience than a new developer, but that isn't what sets them apart. A senior developer has a  **problem solving system.**
-当然，高级开发人员比新开发人员有更多的知识和经验，但这并不是他们的区别。一个高级开发人员有一个 **处理问题体系**
+当然，高级开发人员比新开发人员有更多的知识和经验，但这并不是他们的根本区别。一个高级开发人员有一个 **处理问题体系**
 
-When I first started in development I thought eventually I would stop making mistakes—that I would stop running into errors.
 当我第一次开始开发时，我想我最终会停止犯错误会停止遇到报错。
 
-The opposite happened. I still make an incredible number of mistakes every day. Wrong syntax, wrong file, wrong function.
 相反，我每天仍然会犯很多错误。错误的语法，错误的文件，错误的函数。
 
-I didn't stop making mistakes—_I just got incredibly fast at fixing them._
 我没有停止犯错误—_我只是很快就修好了。_
 
-This is a skill that is developed over time, and it requires intentional problem solving.
 这是一种随着时间发展而来的技能，需要有意识地解决问题。
 
-Here's some tips on how to build this system.
 这里有一些关于如何构建这个体系的提示。
 
 ## 5 调试技巧
 
 ### #1 不要盲目敲打你的代码
 
-One of the things I did as a new developer—and something I see many other new developers do when they run into a problem—is they start wildly changing things in their code. Instead of having a systematic evaluation process, they just make a ton of quick changes trying to see if that fixes the problem.
 我看到许多新开发人员遇到问题时会开始疯狂的开始改代码（我是新开发者的时候我也这么做过）。他们没有系统的代码评估过程，只是对代码做大量的修改，看看这样是否能解决问题。
 
-This is a very bad habit. You will only create more mistakes doing this. What you should do is:
 这是一个很坏的习惯。这样做只会犯更多的错误。你应该做的是:
 
 ### #2 读错误信息
 
-This tip may seem obvious, but actually  _read_  the message. What is the error? What is the file where this error is occurring? What  _line_  is this error coming from? This is all vital information.
-这个建议似乎很明显，但实际上是在读取信息。错误是什么？发生这个错误的文件是什么?错误产生在哪一行？这些都是至关重要的信息。
+这个建议似乎很明显，但实际上是在 _读取_ 信息。错误是什么？发生这个错误的文件是什么?错误产生在哪一 _行_ ？这些都是至关重要的信息。
 
-If you resist just changing your code rapidly, you can jump  **straight to the exact place the error is happening.**
 如果您不愿意快速更改代码的话，你可以直接**跳到错误产生的地方**
 
-This is what the experienced developer does. Read the message—go straight to the problem.
 这是有经验的开发人员所做的。读取消息然后直接找到问题所在。
 
-Doing this will save you an incredible amount of wasted time and mental effort.
 这样做会为你节省大量的时间和精力。
 
 ## #3 不要把时间浪费在不可能的事情上（或者是至少不可能的事情）
@@ -486,32 +370,24 @@ Doing this will save you an incredible amount of wasted time and mental effort.
 
 不要把时间浪费在不可能的事情上！
 
-This is something I see new developers do often. They face an error in their code, they find something that they think is the problem, and they can't believe how it's not true. As an example:
-我看到的新开发人员会经常做这样一件事。举个例子：
+我看到的新开发人员会经常做这样一件事。他们在代码中遇到错误，他们在代码中发现了一些他们认为是问题的东西，他们不相信这不是真的。举个例子：
 
-> "I see the problem is on line 14, where it checks if the  `is_admin`  variable is  `true`, and it's not  `true`—but the user  _**is**_  an admin!!
-> "我发现问题出现在第14行，它会检查"is_admin"变量是否为真，但是它不是真，然而管理员确实是管理员！
+> "我发现问题出现在第14行，它会检查 `is_admin"` 变量是否为真，但是它不是真，然而用户确实 _**是**_ 管理员！
 
-They approach this problem thinking,  _"How can this be!!!"_  instead of,  _"How can this be?"_
-他们是这么思考这个问题，“这怎么可以！”，而不是“为什么会这样？”
+他们是这么思考这个问题，_“这怎么可以！”_ ，而不是 _“为什么会这样？”_
 
-There are times when you will encounter a core language or framework bug, but 99.9% of the time,  **you did something wrong or the situation is not as it appears.**
 有时候你会遇到核心语言或框架的bug，但99.9%的情况下， **你可能是做错了什么，或者情况并不像看上去的那样。**
 
-Instead of spending time marveling at the impossible unfolding before your eyes, question your assumptions about the situation. Something is not as it seems. Being aghast at the impossible is only a waste of time—start your problem-solving system.有些事并不像看上去的那样。被不可能的事情吓到只是在浪费时间，开始解决问题。
-不要再眼前不可能展开的事情上花时间，质疑你对情况的假设。
+有些事并不像看上去的那样。被不可能的事情吓到只是在浪费时间，开始解决问题。
+不要在眼前不可能展开的事情上花时间，质疑你对情况的假设。
 
-### #4 "When in doubt, print more out." - Some wise person
 ### #4 “当有疑问时，打印更多的信息” ——一些明智的人
 
-I don't know who originally said this, but it's one of the most effective debugging techniques out there. When you don't know what's happening, start printing the state of your program in places where you think the problem is happening.
 我不知道最初是谁说的，但这是最有效的调试技术之一。当你不知道发生了什么情况时，开始在你认为发生问题的地方打印程序的相应信息。
 
-What is in the  `user`  variable? What is the response from the HTTP request? Did we take the  `if`  or the  `else`  branch in this situation? Did we even call this function or are we even on this page?
 ' user '变量中有什么?HTTP请求的响应是什么?在这种情况下，我们使用了if或else分支吗?我们调用过这个函数吗?是否在此页面?
 
-I've seen countless developers trying to debug and fix an issue (and I've done it many times myself too) when they weren't even working in the right file! A quick  `print`  or  `console.log`  will show you that you are in fact looking at the actual code being run.
-我见过无数的开发人员尝试调试和修复一个问题的时候(我自己也做过很多次)，他们甚至没有在正确的文件中进行调试!快速“打印”或者在“控制台”中可以显示您实际上正在查看实际运行的代码。
+我见过无数的开发人员尝试调试和修复一个问题的时候(我自己也做过很多次)，他们甚至没有在正确的文件中进行调试!快速打印或者在“控制台”中可以显示您实际上正在查看实际运行的代码。
 
 ### #5 一次做一件事。
 

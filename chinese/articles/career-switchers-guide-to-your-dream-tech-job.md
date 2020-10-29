@@ -1,7 +1,7 @@
-> * 原文地址：[A Career Switcher’s Guide to Landing Your Dream Tech Job](https://www.freecodecamp.org/news/career-switchers-guide-to-your-dream-tech-job/)
-> * 原文作者：David Tian
-> * 译者：
-> * 校对者：
+> -   原文地址：[A Career Switcher’s Guide to Landing Your Dream Tech Job](https://www.freecodecamp.org/news/career-switchers-guide-to-your-dream-tech-job/)
+> -   原文作者：David Tian
+> -   译者：
+> -   校对者：
 
 ![A Career Switcher’s Guide to Landing Your Dream Tech Job](https://www.freecodecamp.org/news/content/images/size/w2000/2019/11/googleplex.jpg)
 
@@ -23,11 +23,11 @@ Googleplex: Google’s Worldwide Headquarters
 
 If you are short on time, here is the quick 5 step recipe that worked for me.
 
--   ****Curate****: Work on a project that you are passionate about and showcase it online
--   ****Study****: Practice Algorithms and Data Structures coding and System Design problems intensively
--   ****Apply****: Leverage multiple channels to land interviews
--   ****Interview****: Keep your cool during Phone and On-site Interviews
--   ****Negotiate****: Know what you want as you negotiate offers and match with teams
+-   \***\*Curate\*\***: Work on a project that you are passionate about and showcase it online
+-   \***\*Study\*\***: Practice Algorithms and Data Structures coding and System Design problems intensively
+-   \***\*Apply\*\***: Leverage multiple channels to land interviews
+-   \***\*Interview\*\***: Keep your cool during Phone and On-site Interviews
+-   \***\*Negotiate\*\***: Know what you want as you negotiate offers and match with teams
 
 As you can see, this is a very SIMPLE 5 steps recipe. However, completing each step takes a lot of HARD WORK. Read on for details.
 
@@ -51,9 +51,9 @@ In April 2019, I started my full-time preparation for this career switch. And I 
 
 In Feb 2019, my good friend, Igor, encouraged me to create a cool project and write about it. At the time, I didn’t have any good ideas, had never published anything online and didn’t know where to begin.
 
-But in early April, while I was vacationing with my family in Mexico, one night I suddenly had a revelation that I wanted to build a self-driving car. Given that I had no prior experience with robotics or electronics, I set out to build a  [Deep Learning/Self-Driving Robotic Car, DeepPiCar][3], that could run in my living room.
+But in early April, while I was vacationing with my family in Mexico, one night I suddenly had a revelation that I wanted to build a self-driving car. Given that I had no prior experience with robotics or electronics, I set out to build a [Deep Learning/Self-Driving Robotic Car, DeepPiCar][3], that could run in my living room.
 
-One month later, after successfully built the self-driving car, I started to write a 6 part blog post on Towards Data Science to teach others how to build one. Within weeks, my blogs received over 10,000 views, and the reaction from readers worldwide was overwhelming. I felt my 2 months hard work — one month to build the car, and another month to write the blogs — was well worth it.  
+One month later, after successfully built the self-driving car, I started to write a 6 part blog post on Towards Data Science to teach others how to build one. Within weeks, my blogs received over 10,000 views, and the reaction from readers worldwide was overwhelming. I felt my 2 months hard work — one month to build the car, and another month to write the blogs — was well worth it.
 
 ![](https://miro.medium.com/max/1776/0*PqGFISPKqUjwc_Ki.jpeg)
 
@@ -65,13 +65,12 @@ Not only was I able to tell them how passionate I feel about AI/ML, but when I p
 
 Some of my friends ask me to recommend good projects to work on. Here are some of my suggestions:
 
--   If you want to transition into front-end development, create a cool website with a lot of interactivity with popular open-source frameworks, such as  [React][4]  and  [Angular][5].
--   If you are interested in server-side development, try to create a web crawler or search engine using distributed server technology such as  [Cassandra][6],  [ZooKeeper][7],  [Memcached][8], and  [Elastic Search][9], etc
+-   If you want to transition into front-end development, create a cool website with a lot of interactivity with popular open-source frameworks, such as [React][4] and [Angular][5].
+-   If you are interested in server-side development, try to create a web crawler or search engine using distributed server technology such as [Cassandra][6], [ZooKeeper][7], [Memcached][8], and [Elastic Search][9], etc
 -   If you are into mobile devices, try to create and publish an Apple/Android app. Note that publishing an app on Apple’s App Store takes much longer than Google’s Play Store.
--   If you are interested in AI/ML, take one of the existing Computer Vision or Natural Language Processing deep learning models, and try to make a product out of it. For example, I took a pre-trained  [object detection model, SSD][10], and adapted it to be a traffic sign detector for my DeepPiCar. If you are new to AI/ML, be sure to read  [Part 1 of DeepPiCar][11], where I list several ML courses and resources to get you started.
--   If you are into robotics, try to build some cool robots using a Raspberry Pi or an Nvidia Jetson Nano. Be sure to use either the new  [Raspberry Pi 4][12] or  [Jetson Nano][13]. Raspberry is more widely used by makers and enjoys better support, while Jetson Nano has a GPU onboard, so it may be better for  [Deep Learning projects][14].
--   If you don’t have any project ideas, do not despair. You can always contribute to one of the open-source projects mentioned above, as well as  [TensorFlow][15]  or  [PyTorch][16]  if you are into AI/ML. You may think you need to be an expert to contribute to these well-known open-source projects. You do NOT. Actually, in each open source project, there are quite a few small features and easy bug fixes designated for noobs to get their hands dirty first. This way, you can be familiar with the code base and submission process before tackling more complex issues.  
-    
+-   If you are interested in AI/ML, take one of the existing Computer Vision or Natural Language Processing deep learning models, and try to make a product out of it. For example, I took a pre-trained [object detection model, SSD][10], and adapted it to be a traffic sign detector for my DeepPiCar. If you are new to AI/ML, be sure to read [Part 1 of DeepPiCar][11], where I list several ML courses and resources to get you started.
+-   If you are into robotics, try to build some cool robots using a Raspberry Pi or an Nvidia Jetson Nano. Be sure to use either the new [Raspberry Pi 4][12] or [Jetson Nano][13]. Raspberry is more widely used by makers and enjoys better support, while Jetson Nano has a GPU onboard, so it may be better for [Deep Learning projects][14].
+-   If you don’t have any project ideas, do not despair. You can always contribute to one of the open-source projects mentioned above, as well as [TensorFlow][15] or [PyTorch][16] if you are into AI/ML. You may think you need to be an expert to contribute to these well-known open-source projects. You do NOT. Actually, in each open source project, there are quite a few small features and easy bug fixes designated for noobs to get their hands dirty first. This way, you can be familiar with the code base and submission process before tackling more complex issues.
 
 ![](https://miro.medium.com/max/1688/0*Ch5vkdlhxP1uRsbe.png)
 
@@ -95,11 +94,11 @@ If there is one single skill you need to master for tech interviews, it is Algor
 
 My favorite programming languages are C++ and Python, but for coding interviews, I recommend Python. It is so concise and you can do so much with so few lines compared to C++, which is very verbose. There are tons of resources that prepare you for A&DS. I used the following resources:
 
-[****Cracking the Coding Interview Book**  **(CtCI)****][17]: this book is about 700 pages, and only costs $30. If you need a refresher on A&DS concept, this is an excellent starting point. In addition to concepts, it gives a series of easy to medium level practice questions with full solutions. I spent about 2 to 3 weeks full time on it, spending 1–2 full days on each A&DS related chapter. I skipped chapters on math/brain teasers/OOD/C++/Java/SQL, as they are not related to A&DS.
+[\***\*Cracking the Coding Interview Book** **(CtCI)\*\***][17]: this book is about 700 pages, and only costs \$30. If you need a refresher on A&DS concept, this is an excellent starting point. In addition to concepts, it gives a series of easy to medium level practice questions with full solutions. I spent about 2 to 3 weeks full time on it, spending 1–2 full days on each A&DS related chapter. I skipped chapters on math/brain teasers/OOD/C++/Java/SQL, as they are not related to A&DS.
 
 ![](https://miro.medium.com/max/350/0*AGWwwLapmQvGVQ6o.jpg)
 
-[****LeetCode.com****][18]: I also used LeetCode (LC) heavily, as I felt CtCI did not give me enough practice. Leetcode is probably the most comprehensive and organized online database of coding interview questions, with over 1000 easy, medium and hard questions. Each question has a unique number. (e.g. LC#1 is TwoSum) Many online posts simply refer to their interview questions as LC #xxx instead of typing out the whole question.
+[\***\*LeetCode.com\*\***][18]: I also used LeetCode (LC) heavily, as I felt CtCI did not give me enough practice. Leetcode is probably the most comprehensive and organized online database of coding interview questions, with over 1000 easy, medium and hard questions. Each question has a unique number. (e.g. LC#1 is TwoSum) Many online posts simply refer to their interview questions as LC #xxx instead of typing out the whole question.
 
 I highly recommend spending $30/month to sign up for LeetCode Premium, as it gives you access to ALL of the LC questions and solutions. I felt that it was so helpful, I signed up for the annual membership for $99, as I think of it as a “gym membership fee for my brain”.
 
@@ -107,7 +106,7 @@ I completed over 100 LeetCode questions (35 easy, 60 medium, 14 hard). About 90%
 
 ![](https://miro.medium.com/max/1360/0*nS7N-kMs_oFwiTcG.png)
 
-[****Tushar Roy’s LeetCode Hard Solutions****][19]: Tushar is actually an Engineering Manager at Apple. He made these videos when he was just a software engineer. I would say that watching his videos taught me not only these algorithms but also how to  ****present**** complex ideas/algorithms clearly. This helped me immensely when I was doing whiteboard coding during on-site interviews.
+[\***\*Tushar Roy’s LeetCode Hard Solutions\*\***][19]: Tushar is actually an Engineering Manager at Apple. He made these videos when he was just a software engineer. I would say that watching his videos taught me not only these algorithms but also how to \***\*present\*\*** complex ideas/algorithms clearly. This helped me immensely when I was doing whiteboard coding during on-site interviews.
 
 ![](https://miro.medium.com/max/1280/0*sTf-RyIfjStnTdf1.jpg)
 
@@ -125,12 +124,12 @@ It is also a soft skill test because you need to be able to draw a clear diagram
 
 Here are the resources that I used:
 
--   [****Cracking the Coding Interview Book(CtCI)****][20]: There is a chapter that discussed system design, but it is covered at a pretty basic level
--   [****Gaurav Sen’s System Design YouTube Channel****][21]: I felt unfulfilled after reading CtCI’s system design chapter. Then I stumbled upon Gaurav’s channel, which has 22 videos. I downloaded all his videos onto my laptop and watched them on a long plane ride. Man, this guy is so GOOD (and funny) and explains things so clearly! About 10 videos are in-depth descriptions of individual distributed system components, the rest are actual use case discussion on how to build NetFlix, or Tinder, or Facebook systems, etc.
+-   [\***\*Cracking the Coding Interview Book(CtCI)\*\***][20]: There is a chapter that discussed system design, but it is covered at a pretty basic level
+-   [\***\*Gaurav Sen’s System Design YouTube Channel\*\***][21]: I felt unfulfilled after reading CtCI’s system design chapter. Then I stumbled upon Gaurav’s channel, which has 22 videos. I downloaded all his videos onto my laptop and watched them on a long plane ride. Man, this guy is so GOOD (and funny) and explains things so clearly! About 10 videos are in-depth descriptions of individual distributed system components, the rest are actual use case discussion on how to build NetFlix, or Tinder, or Facebook systems, etc.
 
 ![](https://miro.medium.com/max/1280/0*rIMPbQS57T_u5U-R.jpg)
 
--   [****Tushar Roy’s System Design Videos****][22]****:**** While Tushar is very good in LC Hard questions, he also has 5 great System Design videos. I recommend watching these videos after Gaurav’s, as Gaurav gives you a solid foundation in system design, and Tushar’s videos assume some of that knowledge.
+-   [\***\*Tushar Roy’s System Design Videos\*\***][22]\***\*:\*\*** While Tushar is very good in LC Hard questions, he also has 5 great System Design videos. I recommend watching these videos after Gaurav’s, as Gaurav gives you a solid foundation in system design, and Tushar’s videos assume some of that knowledge.
 
 For me personally, since I had worked on quite a few distributed systems before, I was able to grasp the general idea pretty quickly even though I had not used some of the new technology mentioned in the videos above. After watching enough videos, I was able to generalize most distributed system into the following layers:
 
@@ -197,23 +196,23 @@ So I recommend that you find any of your family member/friends/classmates that w
 
 Another way is to use your LinkedIn network wisely. You can search for people that work for a specific company, and ask one of your mutual friends to introduce you two. If not, send the person a LinkedIn Mail.
 
-Note that if you send a lot of LinkedIn Mail, you need LinkedIn Premium. I signed up for about 3 months of LinkedIn Premium (about $30/month) and was able to connect with a lot more people directly. Some of the connections lead to interviews. As a side benefit, I received many more recruiter messages than before, because I believe that the LinkedIn algorithm ranked me ahead of non-paying users.
+Note that if you send a lot of LinkedIn Mail, you need LinkedIn Premium. I signed up for about 3 months of LinkedIn Premium (about \$30/month) and was able to connect with a lot more people directly. Some of the connections lead to interviews. As a side benefit, I received many more recruiter messages than before, because I believe that the LinkedIn algorithm ranked me ahead of non-paying users.
 
 ### 3rd Party Recruiting Agencies
 
-Overall, I felt that most 3rd party agencies didn’t work well for my job search this time. As a reference, when I looked for finance jobs in the past, I exclusively used executive search firms, and the results were great. But most of the tech giants don’t use 3rd party recruiting agencies. The only agencies that worked well for me were  [TripleByte][23] and  [DeepLearning.ai][24], which I will discuss below.
+Overall, I felt that most 3rd party agencies didn’t work well for my job search this time. As a reference, when I looked for finance jobs in the past, I exclusively used executive search firms, and the results were great. But most of the tech giants don’t use 3rd party recruiting agencies. The only agencies that worked well for me were [TripleByte][23] and [DeepLearning.ai][24], which I will discuss below.
 
-### [TripleByte][25]  — Skip the phone interviews
+### [TripleByte][25] — Skip the phone interviews
 
 ![](https://miro.medium.com/max/1067/1*N8n2DoEP57Wpmtb0xmKF6w.png)
 
 TripleByte is a unique recruiting agency. Its appeal to the candidate is that once the candidate passes TripleByte’s comprehensive 2-hour live tech screening test, they can go directly on-site with many companies. It is also appealing to companies because TripleByte weeds out most of the weak candidates for them, saving their engineers hours of phone screening time.
 
-When I passed TripleByte’s test, I could choose from about 200 companies. They were mostly small startups, but with quite a few large companies, such as Apple, Adobe, American Express, etc. I ended up interviewing with the  [Apple Siri group][26]  (Huge),  [Zoox][27] (Medium), and  [Determined.ai][28]  (small) on-site. All of them are doing amazing engineering work.
+When I passed TripleByte’s test, I could choose from about 200 companies. They were mostly small startups, but with quite a few large companies, such as Apple, Adobe, American Express, etc. I ended up interviewing with the [Apple Siri group][26] (Huge), [Zoox][27] (Medium), and [Determined.ai][28] (small) on-site. All of them are doing amazing engineering work.
 
-I highly recommend going through the TripleByte process, as it identified my weak points and saved me from many hours of phone screening and related headaches.  [Take TripleByte’s online test here][29].
+I highly recommend going through the TripleByte process, as it identified my weak points and saved me from many hours of phone screening and related headaches. [Take TripleByte’s online test here][29].
 
-### [DeepLearning.ai][30]  and  [Workera.ai][31]  — The Gospel for Aspiring Data Scientists/ML Engineers
+### [DeepLearning.ai][30] and [Workera.ai][31] — The Gospel for Aspiring Data Scientists/ML Engineers
 
 ![](https://miro.medium.com/max/1171/1*I5gI_cSrZLdT3fFf4N_cYQ.png)
 
@@ -225,7 +224,7 @@ The differences between Workera.ai’s and TripleByte’s tests are two folds. F
 
 Second, the Workera.ai test is non-binding, meaning passing its test does NOT skip you straight to on-site interviews. Instead, Workera.ai refers you to DS/ML groups in a few of their affiliated companies, and essentially brings you to the front of the queue. But you still have to go through the whole phone/on-site interview process.
 
-I feel it is still very valuable as Andrew Ng’s reputation and network in Deep Learning space in the Bay Area are quite wide-reaching. I ended up interviewing with  [Pinterest][33] and  [Scale.ai][34]’s ML groups. I don’t think I would’ve gotten interviews from either company had I just applied directly.  [Click here to apply to Workera.ai’s AI Program for Experienced Engineers][35].
+I feel it is still very valuable as Andrew Ng’s reputation and network in Deep Learning space in the Bay Area are quite wide-reaching. I ended up interviewing with [Pinterest][33] and [Scale.ai][34]’s ML groups. I don’t think I would’ve gotten interviews from either company had I just applied directly. [Click here to apply to Workera.ai’s AI Program for Experienced Engineers][35].
 
 ### Online Job Boards — Don’t rely heavily on them
 
@@ -269,7 +268,7 @@ Usually, the first contact with a company is a recruiter’s email. The recruite
 
 ![](https://miro.medium.com/max/485/0*vN0RSfOWzKkGulG7.jpg)
 
-One or two days before the technical phone interview, be sure to read up on  [Glassdoor][36]  and  [Leetcode][37] for previously asked interview questions for this company. For big companies, such a Google and Facebook, this does NOT work well, as there are hundreds of previously asked questions.
+One or two days before the technical phone interview, be sure to read up on [Glassdoor][36] and [Leetcode][37] for previously asked interview questions for this company. For big companies, such a Google and Facebook, this does NOT work well, as there are hundreds of previously asked questions.
 
 But for smaller companies, this is somewhat effective. I would scroll through many posts on Glassdoor and copy down any specific technical questions. Then I would try to solve all of them. During the phone interviews, it is pretty rare to bump into the exact questions posted online, but doing this company’s past problems better prepares you for this company’s phone interview.
 
@@ -285,7 +284,7 @@ The measuring stick is simply a coding test, NOT how well you talk, NOT how expe
 
 Personally, I don’t quite agree that this is the best way to find the best engineers. For example, I've worked with many very experienced software engineers. Some are expert GUI/app developers, some are C++ experts, others are low-level Linux gurus, but many of them tell me that they would fail miserably in a timed Algorithms and Data Structures (A&DS) coding test.
 
-But since this is the only game in town, in order to break into the tech industry,  ****you have to “Crack the Coding Interview”****…
+But since this is the only game in town, in order to break into the tech industry, \***\*you have to “Crack the Coding Interview”\*\***……
 
 ![](https://miro.medium.com/max/940/0*ZPXWlO_1OlBQa5fw.jpg)
 
@@ -305,24 +304,24 @@ Personally, phone screens are the hardest part of the interview process for me. 
 
 Here are what I did to combat the above difficulties:
 
--   ****Use a good phone headset.**** This should be very obvious because you want to free both of your hands to code! So invest in a good Bluetooth headset and make sure it is fully charged before phone interviews.
--   ****Keep “Chit-chat” to a minimum****. In my first couple of interviews, I would try to give the interviewer a good impression of myself. So I would spend about 5–7 min talking about my background, my experiences, and then my self-driving car. Sometimes, the interviewer would ask me a few questions, and it could drag on to the first 10 minutes! What I quickly discovered was that all this “chit-chat” time ate into the total 45 min allotted for my interview, which meant I had less time to work on the coding problem. In fact, most interviewers are there to gauge your coding skills ONLY, and your strong work experience is not relevant to them at this time. So I learned to shorten the “chit-chat” to about less than 2 min at the beginning, and leave my questions to the end of the interview. In fact, if I finished the coding problem successfully, the interviewers usually are more willing to talk with me a bit longer than the 45 min slot. On the other hand, if you “bombed” the coding interview, chatting won’t change the outcome of the interview, anyways. Note that this tip applies to on-site interviews as well.
+-   \***\*Use a good phone headset.\*\*** This should be very obvious because you want to free both of your hands to code! So invest in a good Bluetooth headset and make sure it is fully charged before phone interviews.
+-   \***\*Keep “Chit-chat” to a minimum\*\***. In my first couple of interviews, I would try to give the interviewer a good impression of myself. So I would spend about 5–7 min talking about my background, my experiences, and then my self-driving car. Sometimes, the interviewer would ask me a few questions, and it could drag on to the first 10 minutes! What I quickly discovered was that all this “chit-chat” time ate into the total 45 min allotted for my interview, which meant I had less time to work on the coding problem. In fact, most interviewers are there to gauge your coding skills ONLY, and your strong work experience is not relevant to them at this time. So I learned to shorten the “chit-chat” to about less than 2 min at the beginning, and leave my questions to the end of the interview. In fact, if I finished the coding problem successfully, the interviewers usually are more willing to talk with me a bit longer than the 45 min slot. On the other hand, if you “bombed” the coding interview, chatting won’t change the outcome of the interview, anyways. Note that this tip applies to on-site interviews as well.
 
 ![](https://miro.medium.com/max/600/1*HOQJzGbrCYQrXMZoIPl3UQ.png)
 
--   ****Use two monitors.****  One monitor would be for the shared notepad, and the other monitors would be for googling and IDE, etc. Most laptops nowadays have ports for external monitors. Be sure you connect your laptop to at least one external monitor when you code, so you won’t have to flip back and forth between windows.
--   ****Use an external mouse****. If you use a laptop, be sure to invest in an external mouse. For me, using an external mouse significantly improves my ability to select, copy and paste code.
+-   \***\*Use two monitors.\*\*** One monitor would be for the shared notepad, and the other monitors would be for googling and IDE, etc. Most laptops nowadays have ports for external monitors. Be sure you connect your laptop to at least one external monitor when you code, so you won’t have to flip back and forth between windows.
+-   \***\*Use an external mouse\*\***. If you use a laptop, be sure to invest in an external mouse. For me, using an external mouse significantly improves my ability to select, copy and paste code.
 
 ![](https://miro.medium.com/max/650/0*_KphaQpx9VCemE2C.jpg)
 
--   ****Use an IDE****. Even though you are coding in the shared notepad, sometimes, to troubleshoot, it may be better to copy-paste the code into your IDE, fix syntax errors and bugs, and then copy the working code back into the shared notepad. Most interviewers won’t mind, as long as you can get the code working within the allocated time. They want to see you succeed as well! Before your phone interview, be sure to set up an empty project where you can quickly paste in code and run. You don’t want to spend precious interview time creating a project and setting up run parameters. Having an IDE open also means that you can directly paste in your code at the end of the interview so you can save a copy of the questions and your solution for further analysis.
+-   \***\*Use an IDE\*\***. Even though you are coding in the shared notepad, sometimes, to troubleshoot, it may be better to copy-paste the code into your IDE, fix syntax errors and bugs, and then copy the working code back into the shared notepad. Most interviewers won’t mind, as long as you can get the code working within the allocated time. They want to see you succeed as well! Before your phone interview, be sure to set up an empty project where you can quickly paste in code and run. You don’t want to spend precious interview time creating a project and setting up run parameters. Having an IDE open also means that you can directly paste in your code at the end of the interview so you can save a copy of the questions and your solution for further analysis.
 
 ![](https://miro.medium.com/max/2000/0*4QQMQfLgKT0Y7XLV.png)
 
--   ****Use a programming language that saves you from typing****. Most of the tips here are designed to help you save time TYPING, so you can spend more time THINKING about the solution. So try to  ****choose a language that can do a lot with very little typing****. My best languages are C++ and Python. I choose Python for all my interviews, unless an interviewer specifically requests C++, because it is so much more expressive compared with C++.
--   ****Make good use of Google.**** This is one advantage of a phone interview over an on-site interview because you can google! If you are not too familiar with the API of a function, or certain syntax of a language, feel free to google it. It is understood you can google during a phone interview. Heck, if your interviewer is lazy and grabbed a problem verbatim from LC, then congratulations! ;-)
--   ****Talk through your approach****  thoroughly with the interviewer BEFORE you start implementation. For my first few interviews, I would start coding after having a rough idea of what to do, thinking I could flesh out the details as I coded. This was NOT a good idea.  ****Try to fl**e**sh out as much as detail during your initial discussion with the interviewer**. This **will actually save you lots of time later on****. The interviewer is, of course, very familiar with all the good and bad approaches to the problem. If you present a suboptimal or incorrect approach, they may steer you towards a more optimal one and/or may point out bugs/corner cases you forgot to consider. This can save you tons of implementation time down the road. But be sure to cover as many corner cases as possible on your own, as you will get points deducted if the interviewer has to point out the missing corner cases.
--   ****Solving the problem is better than not solving the problem****. This statement may not be that obvious when you are searching for the most optimal solution. Sometimes, if I couldn’t conjure up the most optimal solution, I would propose and finish implementing a suboptimal solution. In any case, the fact that I came up with some working solution (albeit suboptimal) gave the interviewer a decent data point to compare me to others. In some instances, the interviewers told me, after the fact, that the “optimal” solution that I thought was possible does not exist! As I learned from my own failed experiences, not coming up with a working solution would certainly be a FAILED interview.
+-   \***\*Use a programming language that saves you from typing\*\***. Most of the tips here are designed to help you save time TYPING, so you can spend more time THINKING about the solution. So try to \***\*choose a language that can do a lot with very little typing\*\***. My best languages are C++ and Python. I choose Python for all my interviews, unless an interviewer specifically requests C++, because it is so much more expressive compared with C++.
+-   \***\*Make good use of Google.\*\*** This is one advantage of a phone interview over an on-site interview because you can google! If you are not too familiar with the API of a function, or certain syntax of a language, feel free to google it. It is understood you can google during a phone interview. Heck, if your interviewer is lazy and grabbed a problem verbatim from LC, then congratulations! ;-)
+-   \***\*Talk through your approach\*\*** thoroughly with the interviewer BEFORE you start implementation. For my first few interviews, I would start coding after having a rough idea of what to do, thinking I could flesh out the details as I coded. This was NOT a good idea. \***\*Try to fl**e**sh out as much as detail during your initial discussion with the interviewer**. This **will actually save you lots of time later on\*\***. The interviewer is, of course, very familiar with all the good and bad approaches to the problem. If you present a suboptimal or incorrect approach, they may steer you towards a more optimal one and/or may point out bugs/corner cases you forgot to consider. This can save you tons of implementation time down the road. But be sure to cover as many corner cases as possible on your own, as you will get points deducted if the interviewer has to point out the missing corner cases.
+-   \***\*Solving the problem is better than not solving the problem\*\***. This statement may not be that obvious when you are searching for the most optimal solution. Sometimes, if I couldn’t conjure up the most optimal solution, I would propose and finish implementing a suboptimal solution. In any case, the fact that I came up with some working solution (albeit suboptimal) gave the interviewer a decent data point to compare me to others. In some instances, the interviewers told me, after the fact, that the “optimal” solution that I thought was possible does not exist! As I learned from my own failed experiences, not coming up with a working solution would certainly be a FAILED interview.
 
 ![](https://miro.medium.com/max/516/0*zYwn2rtIyq9npuS_.png)
 
@@ -338,22 +337,25 @@ Usually, you would get a link to an online test from a company’s recruiter. Th
 
 Here are some tips for online coding tests:
 
--   ****Use an IDE****: you can write and test your code entirely in your favorite IDE and then paste into the online test page to run the official test cases.
--   ****Read all the problems before you start****. Some online tests are designed so that most people can’t complete all questions within the allotted time. So be sure to read all the questions before you start any problems and start on the easier questions first so that you can finish as many questions as possible.
--   ****Get it working first****. For most of the online tests, time is a scarce resource. So the goal is generally to pass as many test cases as possible, not necessarily ALL the test cases. If you have a working solution, it should pass most of the test cases. If your solution is not the most time-optimized, you may time out on a few test cases, which is fine. Just move on to solve the next problem, come back if you have more time left. (Note: DO NOT do this when you are writing production-level code. For production-level code, DO spend the time to get your algorithms right and cleaned up, and add enough documentation so that you and others can maintain your code in the future.)
--   ****Save a copy of the questions and your solutions****  for future analysis. This should be routine that you save ALL your interview questions regardless of whether they are phone/online/on-site questions.
+-   \***\*Use an IDE\*\***: you can write and test your code entirely in your favorite IDE and then paste into the online test page to run the official test cases.
+-   \***\*Read all the problems before you start\*\***. Some online tests are designed so that most people can’t complete all questions within the allotted time. So be sure to read all the questions before you start any problems and start on the easier questions first so that you can finish as many questions as possible.
+-   \***\*Get it working first\*\***. For most of the online tests, time is a scarce resource. So the goal is generally to pass as many test cases as possible, not necessarily ALL the test cases. If you have a working solution, it should pass most of the test cases. If your solution is not the most time-optimized, you may time out on a few test cases, which is fine. Just move on to solve the next problem, come back if you have more time left. (Note: DO NOT do this when you are writing production-level code. For production-level code, DO spend the time to get your algorithms right and cleaned up, and add enough documentation so that you and others can maintain your code in the future.)
+-   \***\*Save a copy of the questions and your solutions\*\*** for future analysis. This should be routine that you save ALL your interview questions regardless of whether they are phone/online/on-site questions.
 
 ### Take-Home Projects
 
 A few companies give take-home projects before, or in lieu of, a technical phone screen. I had two companies that gave me take-home projects, both of which were Machine Learning related. I have found these projects to be much more enjoyable and more relevant to the job that I was applying for. So I wish more companies would give take-home projects in lieu of technical phone screens.
 
-But I do understand that it may not be as effective or as fair because 1) companies don’t know if you or your ML expert friend did the project, and 2) even if you did it yourself, how long did it take you?
+But I do understand that it may not be as effective or as fair because
+
+1. companies don’t know if you or your ML expert friend did the project, and
+2. even if you did it yourself, how long did it take you?
 
 ![](https://miro.medium.com/max/750/0*2DB9c6E9xy1Hsu_e)
 
 For take-home projects, since you typically need to spend a lot of time on them, make sure you are using your time wisely.
 
-For a company that you are really excited about, yes, do spend the 8–10 hours do a nice job coding and documenting your approach and design decisions. For  [Scale.ai][38]’s project, I spent at least 10 hours working on their project — even though the instruction told me to only spend about 2–3 hours. I did this because I thought it was fun and I learned a lot by exploring different ML approaches.
+For a company that you are really excited about, yes, do spend the 8–10 hours do a nice job coding and documenting your approach and design decisions. For [Scale.ai][38]’s project, I spent at least 10 hours working on their project — even though the instruction told me to only spend about 2–3 hours. I did this because I thought it was fun and I learned a lot by exploring different ML approaches.
 
 For companies you are not so excited about, don’t spend that much time, and save the time for more LC problems, so you can be better prepared for coding interviews in general.
 
@@ -367,12 +369,12 @@ Your experience may be different, but don’t be discouraged when you get reject
 
 Here are some interview scheduling tips:
 
--   ****Keep a detailed interview log****: This is the same log mentioned in Step 2. Now is the time to start to keep track of when and what was discussed in each interview.
--   ****Put all interviews in your calendar and set reminders/alerts****. You don’t want to miss a single interview because you forgot about it. Also, make sure you confirm the interview time zone. For simplicity, I always communicate to recruiters in their time zone (usually this is Pacific Time).
--   ****Schedule back-to-back phone interviews with at least 30 mins in between****. This is because some interviewers may call 5–10 min late, and some interviewers may allow the interview to go over the time limit by 5–10 min. So if you set two phone interviews back-to-back, you may have to cut one short or miss the other call. Plus you need a 5–10 min break to clear your head and write down the interview notes.
--   ****Ask for a Second Chance.****  This may be a little known fact. If you fail the first phone interview, many companies will allow you to have a second chance. Most won’t offer it automatically, but would if you ask nicely. So always ask, but schedule it a few weeks after the first interview, so you have enough time to study. There usually won’t be a third chance unless you wait for 6 months.
--   ****Stagger your interviews.****  I staggered my interviews in phases. I put the companies I believed were easier to pass in the earlier phase, and the harder-to-pass and more well-known ones in the later phases, which was about 2–3 weeks later. This way, if you discover you are weak in some topics, you have 2–3 weeks to study them.
--   ****Cluster your on-site interviews.****  Because most of the companies that I interviewed with are in the Bay Area, I tried to schedule all of the on-site interviews within a 1–2 weeks span, so I could fly out once and get all these on-site interviews done. For example, my Bay Area on-site interviews lasted 2 full weeks, during which I interviewed with 6 companies — 3 interviews per week. Some companies would be more willing to bring you on-site if they know you would be in town for other interviews. Also, they don’t have to pay for your plane ticket. Various companies paid for some of the hotel nights, and I had to cover the other nights. This was fine for me, since it saved me a lot of time, and I was able to cluster all on-site interviews together, so I could hear back the decisions from all of them around the same time.
+-   \***\*Keep a detailed interview log\*\***: This is the same log mentioned in Step 2. Now is the time to start to keep track of when and what was discussed in each interview.
+-   \***\*Put all interviews in your calendar and set reminders/alerts\*\***. You don’t want to miss a single interview because you forgot about it. Also, make sure you confirm the interview time zone. For simplicity, I always communicate to recruiters in their time zone (usually this is Pacific Time).
+-   \***\*Schedule back-to-back phone interviews with at least 30 mins in between\*\***. This is because some interviewers may call 5–10 min late, and some interviewers may allow the interview to go over the time limit by 5–10 min. So if you set two phone interviews back-to-back, you may have to cut one short or miss the other call. Plus you need a 5–10 min break to clear your head and write down the interview notes.
+-   \***\*Ask for a Second Chance.\*\*** This may be a little known fact. If you fail the first phone interview, many companies will allow you to have a second chance. Most won’t offer it automatically, but would if you ask nicely. So always ask, but schedule it a few weeks after the first interview, so you have enough time to study. There usually won’t be a third chance unless you wait for 6 months.
+-   \***\*Stagger your interviews.\*\*** I staggered my interviews in phases. I put the companies I believed were easier to pass in the earlier phase, and the harder-to-pass and more well-known ones in the later phases, which was about 2–3 weeks later. This way, if you discover you are weak in some topics, you have 2–3 weeks to study them.
+-   \***\*Cluster your on-site interviews.\*\*** Because most of the companies that I interviewed with are in the Bay Area, I tried to schedule all of the on-site interviews within a 1–2 weeks span, so I could fly out once and get all these on-site interviews done. For example, my Bay Area on-site interviews lasted 2 full weeks, during which I interviewed with 6 companies — 3 interviews per week. Some companies would be more willing to bring you on-site if they know you would be in town for other interviews. Also, they don’t have to pay for your plane ticket. Various companies paid for some of the hotel nights, and I had to cover the other nights. This was fine for me, since it saved me a lot of time, and I was able to cluster all on-site interviews together, so I could hear back the decisions from all of them around the same time.
 
 ## 4.2 On-Site Interviews
 
@@ -390,7 +392,7 @@ Gaurav Sen Designing WhatsApp
 
 This was covered in Step 2: Interview preparation. If you watched all the system design YouTube videos I recommended and can generalize it to a framework similar to what I outlined, you will be in pretty good shape.
 
-****Clarify the spec.****  One important technique of the System Design question is to clarify the features and functionality of the system early on. You want to define a set of features that is not too trivial and not too complex that you can’t finish within the 45 min time frame.
+\***\*Clarify the spec.\*\*** One important technique of the System Design question is to clarify the features and functionality of the system early on. You want to define a set of features that is not too trivial and not too complex that you can’t finish within the 45 min time frame.
 
 For example, when asked to design an Instant Messaging App, be sure to mention essential features such as:
 
@@ -409,7 +411,7 @@ For a 45 min session, I would not mention these non-essential features:
 
 Of course, if you are asked to design Skype, you would have to design for voice and video calls, but I wouldn’t include sharing computer desktops just to limit the feature set to a manageable scope.
 
-****Watch for curveballs.****  During the interview, watch out for odd questions and be able to respond intelligently.
+\***\*Watch for curveballs.\*\*** During the interview, watch out for odd questions and be able to respond intelligently.
 
 ![](https://miro.medium.com/max/1000/0*FuUaWBV2H26hOdIy.jpg)
 
@@ -417,7 +419,7 @@ For example, when I was at the Facebook interview, I was asked how to design a s
 
 Interviewer: “So how many servers do you think you need?”
 
-Me: “Well, this depends on how many people are using it and how beefy the servers are…”
+Me: “Well, this depends on how many people are using it and how beefy the servers are……”
 
 Interviewer: “Why do you need to know how beefy the servers are?”
 
@@ -443,7 +445,7 @@ I could see him slightly nodding his head.
 
 This moral of the story is to illustrate how important it is to clarify what the interviewer is asking/telling you. You can do this by repeating the question/statement back to them in your own words. If you are really stuck, ask them what they meant by what they just said. Maybe they will rephrase the questions/statements in a different way, so you can understand and proceed.
 
-Remember many interviewers are not native English speakers, so  ****what they say**** and  ****what they mean to say****  may not exactly match. Similarly, many interviewees (yours truly included) are not native English speakers either, so  ****what they hear****  and  ****what they think they hear****  also may not exactly match.
+Remember many interviewers are not native English speakers, so \***\*what they say\*\*** and \***\*what they mean to say\*\*** may not exactly match. Similarly, many interviewees (yours truly included) are not native English speakers either, so \***\*what they hear\*\*** and \***\*what they think they hear\*\*** also may not exactly match.
 
 Having the interviewers say the same thing in different ways may greatly help interviewees understand what the interviewers truly mean.
 
@@ -457,19 +459,19 @@ On-site A&DS questions are almost exclusively done on whiteboards. Many people, 
 
 But as I went through all these onsite interviews, I have found that whiteboard coding is, in some sense, easier than phone interviews. I will cover some techniques specifically for whiteboard coding below.
 
-****Illustrate your algorithm with diagrams/charts/tables.****  There is an old saying, “A picture is worth a thousand lines of code”, or something like that. Before you write code, try to illustrate how your code would work with diagrams/charts/tables. This will give your interviewer a road map of what your code might look like, and will allow them to point out any potential issues that they see.
+\***\*Illustrate your algorithm with diagrams/charts/tables.\*\*** There is an old saying, “A picture is worth a thousand lines of code”, or something like that. Before you write code, try to illustrate how your code would work with diagrams/charts/tables. This will give your interviewer a road map of what your code might look like, and will allow them to point out any potential issues that they see.
 
-Once you are done coding, try to walk through your code line-by-line with the diagrams on the side, so that you can show the interviewer that your implementation matches what you intended to do. Be sure to watch  [****Tushar Roy’s LeetCode Hard Solutions****][39]  YouTube videos to learn how to present ideas on a whiteboard.
+Once you are done coding, try to walk through your code line-by-line with the diagrams on the side, so that you can show the interviewer that your implementation matches what you intended to do. Be sure to watch [\***\*Tushar Roy’s LeetCode Hard Solutions\*\***][39] YouTube videos to learn how to present ideas on a whiteboard.
 
-****Split the whiteboard into sections****. For reasons mentioned in the previous tip, I recommend splitting the whiteboard into at least 2–3 vertical sections. One section is reserved for diagrams, and other sections are for code. This way, you can always refer to the diagrams before/during/after you code.
+\***\*Split the whiteboard into sections\*\***. For reasons mentioned in the previous tip, I recommend splitting the whiteboard into at least 2–3 vertical sections. One section is reserved for diagrams, and other sections are for code. This way, you can always refer to the diagrams before/during/after you code.
 
-****Don’t sweat the syntactic details****. If you are allowed to code in any programming language (as this is the norm), then the interviewer should not be very picky on the syntax of your code. For example, if you miss a trailing semicolon in C++/Java, or trailing colon in Python, it is not a big deal, as long as your indentation is correct. Or if you misspell or shorten the name of a built-in function, it is also not a big deal, as long as the interviewer understands what your intentions are. On the contrary, you are not afforded the same luxury in phone interviews.
+\***\*Don’t sweat the syntactic details\*\***. If you are allowed to code in any programming language (as this is the norm), then the interviewer should not be very picky on the syntax of your code. For example, if you miss a trailing semicolon in C++/Java, or trailing colon in Python, it is not a big deal, as long as your indentation is correct. Or if you misspell or shorten the name of a built-in function, it is also not a big deal, as long as the interviewer understands what your intentions are. On the contrary, you are not afforded the same luxury in phone interviews.
 
-****Use shortened variable/function names****. Because writing out long names with a marker can take a long time and a lot of space, tell your interviewer the full name and meaning of a variable, and then use the shortened name in your code. This will save you a lot of precious time as well as precious whiteboard space.
+\***\*Use shortened variable/function names\*\***. Because writing out long names with a marker can take a long time and a lot of space, tell your interviewer the full name and meaning of a variable, and then use the shortened name in your code. This will save you a lot of precious time as well as precious whiteboard space.
 
-****Constantly Seek Feedback****. This is one of the many benefits of an on-site interview because you can quite easily gauge the feedback of an interviewer. When I present my design or approach, I regularly check the facial expressions of the interviewer and ask casually, “Am I on the right track?” or “How does it look?” Usually, the interviewers are pretty helpful and give you some feedback, or at least nod or frown. If you are way off, they surely let you know, if you ask.
+\***\*Constantly Seek Feedback\*\***. This is one of the many benefits of an on-site interview because you can quite easily gauge the feedback of an interviewer. When I present my design or approach, I regularly check the facial expressions of the interviewer and ask casually, “Am I on the right track?” or “How does it look?” Usually, the interviewers are pretty helpful and give you some feedback, or at least nod or frown. If you are way off, they surely let you know, if you ask.
 
-As I found out the hard way a few times, when I didn’t seek feedback, some interviewers would let me finish the whole implementation and then point out some major flaws in the end. As a result, I failed all those interviews miserably. So try to  ****fl**e**sh out your design as much as possible before coding**** and  ****seek feedback****.
+As I found out the hard way a few times, when I didn’t seek feedback, some interviewers would let me finish the whole implementation and then point out some major flaws in the end. As a result, I failed all those interviews miserably. So try to \***\*fl**e**sh out your design as much as possible before coding\*\*** and \***\*seek feedback\*\***.
 
 ![](https://miro.medium.com/max/400/0*VOO-nVdsgXIbDUr5.png)
 
@@ -477,7 +479,7 @@ As I found out the hard way a few times, when I didn’t seek feedback, some int
 
 Some of these non-technical tips may be common sense, but I will list them as a reminder.
 
-****Ask good questions at the end****. You probably won’t have a lot of time to ask questions at the end of each interview session. So keep these questions short and impactful. The interview is a two-way process - companies are trying to extract information from you for their evaluation process, and you need to do the same to these companies, so you can make the most informed decisions when you get offers.
+\***\*Ask good questions at the end\*\***. You probably won’t have a lot of time to ask questions at the end of each interview session. So keep these questions short and impactful. The interview is a two-way process - companies are trying to extract information from you for their evaluation process, and you need to do the same to these companies, so you can make the most informed decisions when you get offers.
 
 ![](https://miro.medium.com/max/998/0*rvbji0M2GsMoD0CW.png)
 
@@ -488,25 +490,25 @@ Here are the typical questions I like to ask:
 -   What would be an ideal candidate for your group/company? Once the interviewer mentions a few characteristics of the ideal candidate, you can echo by saying you also have some of these characteristics and give a quick example to back it up.
 -   Sell yourself a bit. This may not work for everyone. I also used the “questions” time at the end of the interview to show my self-driving robotic car and a couple of YouTube videos of the car to the interviewers. I think it worked out surprisingly well because I saw most interviewers were quite pleasantly surprised when they held the actual car in their hands.
 
-****Stay hydrated****. You will be talking a lot during the interview, and you will be sweating a lot (unconsciously), so you always want to be hydrated at all times. This means refilling your cup after every interview session, and taking a sip whenever you are not writing on the whiteboard. I find caffeine (coffee/tea/Coke) to be quite effective at keeping me at peak performance.
+\***\*Stay hydrated\*\***. You will be talking a lot during the interview, and you will be sweating a lot (unconsciously), so you always want to be hydrated at all times. This means refilling your cup after every interview session, and taking a sip whenever you are not writing on the whiteboard. I find caffeine (coffee/tea/Coke) to be quite effective at keeping me at peak performance.
 
 ![](https://miro.medium.com/max/2000/0*VsgMcMV6BniWLJgN.jpg)
 
-****Take washroom breaks****. After each interview session, be sure to take a washroom break. Unfortunately, these 45–60 min interview sessions are usually back-to-back with no breaks in between. So be sure to ask for one before the next session starts. You want to be able to walk and stretch your legs a bit and more importantly, wash your hands and face, so you can go to the next interview refreshed. Don’t take too long a break though, because the break time eats into your next 45 minutes.
+\***\*Take washroom breaks\*\***. After each interview session, be sure to take a washroom break. Unfortunately, these 45–60 min interview sessions are usually back-to-back with no breaks in between. So be sure to ask for one before the next session starts. You want to be able to walk and stretch your legs a bit and more importantly, wash your hands and face, so you can go to the next interview refreshed. Don’t take too long a break though, because the break time eats into your next 45 minutes.
 
-****Take notes****. I always keep a detailed log of my interviews. Since most of your interview sessions are back-to-back, the only time you can take notes is during bathroom breaks. :) Bring your phone and quickly jot down a few notes of the questions and your approach so you can remind yourself after you are done for the day. This should take no more than 1 min.
+\***\*Take notes\*\***. I always keep a detailed log of my interviews. Since most of your interview sessions are back-to-back, the only time you can take notes is during bathroom breaks. :) Bring your phone and quickly jot down a few notes of the questions and your approach so you can remind yourself after you are done for the day. This should take no more than 1 min.
 
-****Eat a light lunch.****  It is pretty hard not to overeat at lunch because many top tech companies have awesome free food! Facebook even has free ice cream! While it is tempting to try all the free food while you are there, you need to remember  ****you are not there to eat just once****  but to interview and  ****get the job, so that you can eat there every single day****!
+\***\*Eat a light lunch.\*\*** It is pretty hard not to overeat at lunch because many top tech companies have awesome free food! Facebook even has free ice cream! While it is tempting to try all the free food while you are there, you need to remember \***\*you are not there to eat just once\*\*** but to interview and \***\*get the job, so that you can eat there every single day\*\***!
 
 Two reasons to not overeat: first, you want to stay alert in the afternoon session and not feel drowsy. Second, you want to spend most of the time chatting with your lunch buddy. While for some companies (Google/Facebook), your lunch buddy’s feedback is not part of the offer decision, many times, they are senior folks in the firms so their opinions may matter and you want to leave a good impression.
 
 ![](https://miro.medium.com/max/1024/0*TBXEsZ8Nnx8eWzk-.jpg)
 
-****Pack some snacks****. On the flip side to the last point, for some of my on-site interviews, either by design or due to time conflicts, the lunch is scheduled at 1:30–2 pm or skipped altogether! I would be so hungry by then and would be running on fumes. So I learned to always pack a granola bar and a few pieces of chocolate with me so that I could take a few quick bites in between interviews.
+\***\*Pack some snacks\*\***. On the flip side to the last point, for some of my on-site interviews, either by design or due to time conflicts, the lunch is scheduled at 1:30–2 pm or skipped altogether! I would be so hungry by then and would be running on fumes. So I learned to always pack a granola bar and a few pieces of chocolate with me so that I could take a few quick bites in between interviews.
 
-****Bring a few resumes****: Yes, most interviewers would indeed bring a copy of your resume with them. However, occasionally I encountered interviewers who didn’t bring a copy of my resume with them, so I just gave them a copy. For tech interviews, it probably doesn’t matter that much, but it is a nice gesture.
+\***\*Bring a few resumes\*\***: Yes, most interviewers would indeed bring a copy of your resume with them. However, occasionally I encountered interviewers who didn’t bring a copy of my resume with them, so I just gave them a copy. For tech interviews, it probably doesn’t matter that much, but it is a nice gesture.
 
-****Post mortem analysis****. After you are done with the interviews for the day, don’t relax right away. While your memory is still fresh, go back to the hotel/home and immediately jot down as much detail about the interviews as you can, including interviewers’ names/background, all the questions asked, your approaches, interviewers’ answers to your questions, etc. Do this electronically (not on a paper notepad) so it is easier to search and archive later.
+\***\*Post mortem analysis\*\***. After you are done with the interviews for the day, don’t relax right away. While your memory is still fresh, go back to the hotel/home and immediately jot down as much detail about the interviews as you can, including interviewers’ names/background, all the questions asked, your approaches, interviewers’ answers to your questions, etc. Do this electronically (not on a paper notepad) so it is easier to search and archive later.
 
 Also, at a later time, revisit all the interview questions, get optimized solutions, and think about how you can improve your performance next time. If you find the interview questions on LC, be sure to tag the questions with the company names, so others can benefit from your experience.
 
@@ -522,7 +524,7 @@ If any of you ask me for specific interview questions that I encountered, unfort
 
 ## 5.1 Offer Negotiation
 
-If you are reading this, you probably have received at least one offer. Wow, congratulations! (If you have not received any offers yet, stop reading right now, and go back to do more LC and interviews! ;-) )
+If you are reading this, you probably have received at least one offer. Wow, congratulations! (If you have not received any offers yet, stop reading right now, and go back to do more LC and interviews! 😜 )
 
 ![](https://miro.medium.com/max/480/0*cU5XEYWCmu9FJg8u)
 
@@ -534,19 +536,23 @@ Source: levels.fyi
 
 These are the typical components of an offer package of a tech company. I will give a sample of a mid-level software engineer (SWE), typically 3–5 years of experience (YoE).
 
--   ****Sign-on Bonus****: This is the money you get right after you start work, NOT when you sign the offer letter. For example, $30,000 one time payment.
--   ****Base Salary****: This is the money that goes into your bank account every month. For example, $150,000/year.
--   ****Annual Bonus****: This is a percentage of your base salary, usually 10–30%, given every year. For example, 20%, which is $30,000 for a base salary of $150,000.
--   ****Stock Options or Stock Grants****: bigger companies tend to give Stocks (called Restricted Stock Units, RSUs) which are worth something at the time of the grant. Startup companies tend to give stock options, which are worth very little at the time of the grant but may have big potential. For example, $300,000 worth of Stock Grant vested over 4 years, so $75,000 is vested every year.
--   ****Relocation package**** (If you need to relocate): This usually includes 1) a few weeks of corporate housing for your family, 2) moving of all your belongings, 3) help with selling and buying houses, and optionally 4) some cash to help with other relocation-related expenses. The relocation package is based on your family composition, location, and level. It is not usually negotiable.
+-   \***\*Sign-on Bonus\*\***: This is the money you get right after you start work, NOT when you sign the offer letter. For example, \$30,000 one time payment.
+-   \***\*Base Salary\*\***: This is the money that goes into your bank account every month. For example, \$150,000/year.
+-   \***\*Annual Bonus\*\***: This is a percentage of your base salary, usually 10–30%, given every year. For example, 20%, which is $30,000 for a base salary of $150,000.
+-   \***\*Stock Options or Stock Grants\*\***: bigger companies tend to give Stocks (called Restricted Stock Units, RSUs) which are worth something at the time of the grant. Startup companies tend to give stock options, which are worth very little at the time of the grant but may have big potential. For example, $300,000 worth of Stock Grant vested over 4 years, so $75,000 is vested every year.
+-   \***\*Relocation package\*\*** (If you need to relocate): This usually includes
+    1. a few weeks of corporate housing for your family
+    2. moving of all your belongings
+    3. help with selling and buying houses, and optionally
+    4. some cash to help with other relocation-related expenses. The relocation package is based on your family composition, location, and level. It is not usually negotiable.
 
-****Annualized Total Compensation (TC)**** This is the one number that makes all the offer packages comparable.
+\***\*Annualized Total Compensation (TC)\*\*** This is the one number that makes all the offer packages comparable.
 
 TC = Base Salary + Annual Bonus + Annual Stock Grants+ amortized Sign-on bonus (Assume you amortize the sign-on bonus over 3 years)
 
 TC of our mid-level SWE
 
-\= $150k + $30K + $75K + $30K / 3 = $265,000
+\= $150k + $30K + $75K + $30K / 3 = \$265,000
 
 Note that the relocation package is not considered part of TC calculation, as it is expected you will be spending most, if not all, of the relocation package.
 
@@ -554,7 +560,7 @@ Note that the relocation package is not considered part of TC calculation, as it
 
 Even though you know your YoE, the company may interview you at a certain level that is company-specific. For example, a 4 YoE engineer may interview at L3 or L4 at Google, E3 or E4 at Facebook, and Level 59–62 at Microsoft.
 
-****Ask the recruiter what level are you interviewing****  for. But this may not be the level you will be offered the job at. For example, you may interview at Facebook at E4, in the end, the hiring committee may decide that your performance is not stellar enough for an E4, but good enough to receive an offer for E3. So  ****ask the recruiter again what level is your job offer for****. With this level, you can find out the expected value and range of TC. (see below)
+\***\*Ask the recruiter what level are you interviewing\*\*** for. But this may not be the level you will be offered the job at. For example, you may interview at Facebook at E4, in the end, the hiring committee may decide that your performance is not stellar enough for an E4, but good enough to receive an offer for E3. So \***\*ask the recruiter again what level is your job offer for\*\***. With this level, you can find out the expected value and range of TC. (see below)
 
 ![](https://miro.medium.com/max/1025/1*iSvZ60-cnf0qTPfwEGDHCw.png)
 
@@ -562,7 +568,7 @@ Even though you know your YoE, the company may interview you at a certain level 
 
 You can’t negotiate if you don’t know your prevailing market value. For years, companies have kept compensation information very secretive, so the candidates have suffered HUGE information disadvantage.
 
-Fortunately, in recent years, the compensation information has been democratized, with many websites crowdsourcing from many candidates and then presenting the anonymized compensation data by level, job function and location. One well-known site is  [levels.fyi][40].
+Fortunately, in recent years, the compensation information has been democratized, with many websites crowdsourcing from many candidates and then presenting the anonymized compensation data by level, job function and location. One well-known site is [levels.fyi][40].
 
 ![](https://miro.medium.com/max/917/1*LCu-2A8IXNYVfe-m9t5AFQ.png)
 
@@ -576,7 +582,7 @@ As you can see above, all the top-paying jobs are in the San Francisco Bay Area 
 
 For any non-Bay Area engineers, total compensation of $300,000–$400,000 may be eye-popping. But remember that Bay area housing is THE most expensive metro area in the US. The median housing price of Palo Alto, CA is $2.8M (source: Zillow.com), and of San Francisco Metro Area (source:  [censusreporter.com][41]) is $1.1M. For preciously this reason — lots of people are paid at a much higher rate.
 
-As a comparison, the median home prices of Manhattan, NY is $1.2M (source: Zillow.com), and that of New York/New Jersey Metro Area is only $440K. (source:  [censusreporter.com][42])
+As a comparison, the median home prices of Manhattan, NY is $1.2M (source: Zillow.com), and that of New York/New Jersey Metro Area is only $440K. (source: [censusreporter.com][42])
 
 Armed with levels.fyi, your level (obtained from the previous step) and the company name, you can clearly see the average reported TC as well as its range. For example, for the Google L4 SWE in the Bay Area, the average reported TC is about $260K, with a range from $200K to $320K. So if you received a Google L4 offer in the low $200K, then you know you have room to negotiate.
 
@@ -588,15 +594,18 @@ Armed with levels.fyi, your level (obtained from the previous step) and the comp
 
 Levels.fyi is a great tool to compare offers between more mature companies (public or private), as the equity component of the comp can be evaluated in dollar terms with higher certainty.
 
-But for early-stage startup companies, you can not find reliable data points on Levels.fyi. Very often you are given either 1) a percentage of the company stocks or 2) given a certain number of stock options. The company recruiter or the CEO may tell you that even though the value of your equity component is worth very little right now, it may work 20x–50x more if the company goes IPO in 3–5 years.
+But for early-stage startup companies, you can not find reliable data points on Levels.fyi. Very often you are given either
 
-In reality, these equity components are hard to evaluate, are extremely non-liquid with no monetary value for years to come, and indeed go to zero value when  [90% of all startups fail][43]. (source: Forbes).
+1. a percentage of the company stocks or
+2. given a certain number of stock options. The company recruiter or the CEO may tell you that even though the value of your equity component is worth very little right now, it may work 20x–50x more if the company goes IPO in 3–5 years.
 
-I received a few offers from early-stage startup companies. The typical package is light on cash (i.e. low base salary and bonus) and heavy on equity (lots of options with a huge potential payout… or nothing). This makes sense, as most early-stage startups do not make a profit, and any cash salary/bonus they pay out depletes their cash on hand or, in Venture Capital (VC) speak, burns up their runway.
+In reality, these equity components are hard to evaluate, are extremely non-liquid with no monetary value for years to come, and indeed go to zero value when [90% of all startups fail][43]. (source: Forbes).
+
+I received a few offers from early-stage startup companies. The typical package is light on cash (i.e. low base salary and bonus) and heavy on equity (lots of options with a huge potential payout…… or nothing). This makes sense, as most early-stage startups do not make a profit, and any cash salary/bonus they pay out depletes their cash on hand or, in Venture Capital (VC) speak, burns up their runway.
 
 Even though the startups I received offers from do really exciting work and the prospects look very promising — one had Google Ventures as a backer — I ended up choosing Google because I need the certainty and stability of a large company. After all, I'll have a college-bound kid soon. I can’t afford to join a startup for a few years only to see it fail and have my equity component wiped out.
 
-However, if I were younger and had no kids, I would certainly work for a startup and try to hit a home run. If I failed, I wouldn't be under pressure to support the family and still have enough time to start over. If my wife made enough income to support the expenses of our entire family, then I could also work for startups for its potential upside. In finance speak, this is called  [diversification][44]  — by combining risky stocks with safer stocks or bonds, you can actually achieve higher  [risk-adjusted returns][45].
+However, if I were younger and had no kids, I would certainly work for a startup and try to hit a home run. If I failed, I wouldn't be under pressure to support the family and still have enough time to start over. If my wife made enough income to support the expenses of our entire family, then I could also work for startups for its potential upside. In finance speak, this is called [diversification][44] — by combining risky stocks with safer stocks or bonds, you can actually achieve higher [risk-adjusted returns][45].
 
 ### Don’t Accept an Offer on the First Call
 
@@ -624,11 +633,11 @@ In this case, you can try to let these companies bid up your compensation. This 
 
 Even if you don’t have a strong hand — i.e. only one offer or only low offers — you can tell the recruiter that you are really excited about the company, but your salary expectation is actually $XYZ. The recruiter will probably ask you to justify this figure, and you can say it is based on figures from levels.fyi, or your friends/co-workers who have similar YoE and their TC is $XYZ.
 
-If you present yourself professionally, it is very likely the initial offer will be bumped up somewhat. It is highly unlikely that the company will retract its original offer simply because you try to negotiate. After all, the company invests a lot of effort to find a qualified candidate, so it doesn’t want to lose a good candidate over a small increase. So  ****you have nothing to lose by asking for more comp, nicely****.
+If you present yourself professionally, it is very likely the initial offer will be bumped up somewhat. It is highly unlikely that the company will retract its original offer simply because you try to negotiate. After all, the company invests a lot of effort to find a qualified candidate, so it doesn’t want to lose a good candidate over a small increase. So \***\*you have nothing to lose by asking for more comp, nicely\*\***.
 
 ### Offer Negotiation — Money is Not the Only Thing on the Table
 
-Remember  ****money is not the only thing you can negotiate****. Anything that the company can offer you is on the negotiation table.
+Remember \***\*money is not the only thing you can negotiate\*\***. Anything that the company can offer you is on the negotiation table.
 
 For example, you can ask to work for a different group (say a core group rather than support related group), a different title (say Senior Software Engineer instead of Software Engineer), a different job function (say a research engineer rather than a software engineer), more Paid Time Off days, flex time to work from home, or a better relocation package.
 
@@ -636,7 +645,7 @@ Of course, this varies heavily from company to company. Larger companies may be 
 
 ### Offer Negotiation — Don’t Be Too Greedy
 
-After a few rounds of back-and-forth with the recruiter, if you sense that there is not much more room to negotiate, stop asking for more. Recruiters at larger firms see this every day, and probably won't mind too much. For smaller firms, the recruiter may be working directly with your hiring manager or even the owner/founder. If you drive your bargain too hard, you may be perceived as too greedy. So even if they hire you, they may view you negatively.  ****Know when to be content****.
+After a few rounds of back-and-forth with the recruiter, if you sense that there is not much more room to negotiate, stop asking for more. Recruiters at larger firms see this every day, and probably won't mind too much. For smaller firms, the recruiter may be working directly with your hiring manager or even the owner/founder. If you drive your bargain too hard, you may be perceived as too greedy. So even if they hire you, they may view you negatively. \***\*Know when to be content\*\***.
 
 ### Offer Stalling Tactics
 
@@ -652,11 +661,11 @@ Delaying an offer allows you more time to interview and land that perfect offer.
 
 These above strategies work best for most companies. For some large tech companies, once they decide to give you an offer, the offer is usually good for at least a few months, because you have met their technical bar, and they would be happy to hire a good SWE anytime. Your recruiter may not be willing to tell you this, as they want to close on you ASAP, but you can find out from other sources, i.e. Google Search and Blind App.
 
-Lastly, remember all recruiters want to see you get hired by the company. Being able to close on a candidate (i.e. convert a qualified candidate to an employee) is one of their performance metrics, which is tied to a recruiter’s performance bonus. So  ****treat your recruiter as your advocate, not your adversary****.
+Lastly, remember all recruiters want to see you get hired by the company. Being able to close on a candidate (i.e. convert a qualified candidate to an employee) is one of their performance metrics, which is tied to a recruiter’s performance bonus. So \***\*treat your recruiter as your advocate, not your adversary\*\***.
 
 ## 5.2 Team Matching/Selection
 
-****Don’t choose a job simply because it pays the most right now.**** While compensation is an important factor in your offer decision process, what may be more important is how a job impacts your career. I will discuss how to select a company/team that will maximize your career potential in the long run.
+\***\*Don’t choose a job simply because it pays the most right now.\*\*** While compensation is an important factor in your offer decision process, what may be more important is how a job impacts your career. I will discuss how to select a company/team that will maximize your career potential in the long run.
 
 ### Team Matching Process
 
@@ -668,7 +677,7 @@ However, for some companies such as Google and Facebook, they interview most can
 
 Facebook extends a firm written offer first and then match you to a team. Team matching can also happen before you join, as you take calls from hiring managers, or after you join, during the first 4–6 weeks of orientation/boot camp stage. The pro of this process is that the candidate knows that their offer is firm. The con is that you run the risk of joining then not being able to find a team you like during boot camp. But I was told by my Facebook friends that this situation is highly unlikely.
 
-Google, on the other hand, works very differently. They do not run a long orientation/boot camp like Facebook. They first extend you a verbal offer and then require you to be matched to a team  ****before**** extending a formal written offer. Even after you are matched with a team, this offer can be rejected/modified by the hiring committee. Even the final comp can be revised from the initial verbal offer by the compensation committee.
+Google, on the other hand, works very differently. They do not run a long orientation/boot camp like Facebook. They first extend you a verbal offer and then require you to be matched to a team \***\*before\*\*** extending a formal written offer. Even after you are matched with a team, this offer can be rejected/modified by the hiring committee. Even the final comp can be revised from the initial verbal offer by the compensation committee.
 
 I have read, from many online posts, that this is a long and arduous process. As I found out personally, the team matching process was indeed long and frustrating and took 1.5 months. At one point, I seriously thought it would not work out and wanted to join another company instead.
 
@@ -680,11 +689,11 @@ Had Google extended me a firm written offer first like Facebook, it would’ve b
 
 Here are the questions that I ask myself during the interview or offer stage. You don’t need to ask these exact questions to the interviewers, but you want to somehow extract the answers to these questions from your interviews/conversations with the companies/groups.
 
-1.  ****Which group will I be joining?****  I wanted to join one of the “core” groups of a company – a group that the company had put a lot of commitment and resources behind. These are often its flagship product groups or high growth groups. Working in these groups offers stability and/or growth.
-2.  ****What types of work will I be doing for this company/group?****  I looked for work experiences that were transferable in my later career. I would prefer to work with publicly available tools and technologies, and not so much with the company’s proprietary technologies. For example, if I was to work on an ad recommendation machine learning system, I am sure I could easily find another company that also wanted to improve its ad/product recommendation system. However, I would not be so interested to work on automating some internal processes with a company's proprietary scripting language.
-3.  ****What will I be learning by working for this company/group?****  Work is a two-way street. I wanted to be able to contribute a lot to my company. At the same time, I wanted to learn a ton from my work, so that my skill sets could be in high demand whenever I look for my next job. I believe AI/ML, Computer Vision, Cloud computing, Self-driving car, and AR/VR skills will be in high demand in the future, so I wanted to learn some of these skills in my next job.
-4.  ****Do I have a passion for this job?****  If you don’t have a passion for what you do, it doesn’t matter how much the job pays – you won’t be happy and won’t be putting in that 120%. I was passionate about quantitative finance because it was cool to see math and technology transforming a whole industry. But after 10+ years, my passion is now in AI/ML. It is really awesome and magical that you don’t have to tell a computer exactly how to do something. All you have to do is to feed it data and it will figure out how to do it better than someone would with code.
-5.  ****Do I like my manager and my peers? And do they like me?**** You want a manager that appreciates you and will support you in your new job. You also want to enjoy being around your teammates, since you will be with them for 8+ hours every single day, even longer than when you are with your family!
+1.  \***\*Which group will I be joining?\*\*** I wanted to join one of the “core” groups of a company – a group that the company had put a lot of commitment and resources behind. These are often its flagship product groups or high growth groups. Working in these groups offers stability and/or growth.
+2.  \***\*What types of work will I be doing for this company/group?\*\*** I looked for work experiences that were transferable in my later career. I would prefer to work with publicly available tools and technologies, and not so much with the company’s proprietary technologies. For example, if I was to work on an ad recommendation machine learning system, I am sure I could easily find another company that also wanted to improve its ad/product recommendation system. However, I would not be so interested to work on automating some internal processes with a company's proprietary scripting language.
+3.  \***\*What will I be learning by working for this company/group?\*\*** Work is a two-way street. I wanted to be able to contribute a lot to my company. At the same time, I wanted to learn a ton from my work, so that my skill sets could be in high demand whenever I look for my next job. I believe AI/ML, Computer Vision, Cloud computing, Self-driving car, and AR/VR skills will be in high demand in the future, so I wanted to learn some of these skills in my next job.
+4.  \***\*Do I have a passion for this job?\*\*** If you don’t have a passion for what you do, it doesn’t matter how much the job pays – you won’t be happy and won’t be putting in that 120%. I was passionate about quantitative finance because it was cool to see math and technology transforming a whole industry. But after 10+ years, my passion is now in AI/ML. It is really awesome and magical that you don’t have to tell a computer exactly how to do something. All you have to do is to feed it data and it will figure out how to do it better than someone would with code.
+5.  \***\*Do I like my manager and my peers? And do they like me?\*\*** You want a manager that appreciates you and will support you in your new job. You also want to enjoy being around your teammates, since you will be with them for 8+ hours every single day, even longer than when you are with your family!
 
 Many times, not all of the above can be satisfied. Then you have to weigh the pros and cons of each. But if one of the above gives you a red flag, I would seriously consider passing on that position.
 
@@ -706,30 +715,30 @@ If you are going through interviews, please let me know which of my tips worked 
 
 Here is an appendix of resources (in alphabetical order) that I used in my job hunting process. Hope you will find them helpful as well.
 
-[****Blind****][46]: This is an app that allows employees of varies companies (mostly tech) to post questions and answers anonymously. People generally discuss career decisions, company culture, interviews, and compensation, etc.
+[\***\*Blind\*\***][46]: This is an app that allows employees of varies companies (mostly tech) to post questions and answers anonymously. People generally discuss career decisions, company culture, interviews, and compensation, etc.
 
 I found this platform to be both good and bad. It is good because you get more candid answers/responses and sometimes inside information. It is bad because some people write offensive responses due to the anonymity, and the environment can be toxic at times. You have been warned.
 
 ![](https://miro.medium.com/max/730/0*r7S6egJR6P9O9WP7)
 
-[****Coursera****][47]: Learn about the subjects you are passionate about. It is free or for a very nominal fee. I took both ML and DL courses there.
+[\***\*Coursera\*\***][47]: Learn about the subjects you are passionate about. It is free or for a very nominal fee. I took both ML and DL courses there.
 
 ![](https://miro.medium.com/max/512/0*EcegqF8UG1uE9qGO)
 
-[****DeepLearning.ai****][48] ****and** [Workera**.ai**][49]**
+[\***\*DeepLearning.ai\*\***][48] \***\*and** [Workera**.ai**][49]\*\*
 
 -   Take the 5 course Deep Learning series, if you are interested in Deep Learning techniques in computer vision (CV) or natural language processing (NLP)
 -   Pass their screening test to be referred to hiring managers in ML groups in top tech companies
 
-[****Elements of Programming Interviews****][50] ****Book:**** This is another excellent interview preparation book, similar to the CtCI book. But it is more geared towards experienced engineers, while CtCI can be read by beginners who have little algorithms background.
+[\***\*Elements of Programming Interviews\*\***][50] \***\*Book:\*\*** This is another excellent interview preparation book, similar to the CtCI book. But it is more geared towards experienced engineers, while CtCI can be read by beginners who have little algorithms background.
 
 ![](https://miro.medium.com/max/350/0*5aU2C4jyITY0A8-D.jpg)
 
-[****GeeksForGeeks****][51]: Like LeetCode, this is another website with very comprehensive A&DS questions and solutions. This site is free, and sometimes contains interview questions not found in LeetCode.
+[\***\*GeeksForGeeks\*\***][51]: Like LeetCode, this is another website with very comprehensive A&DS questions and solutions. This site is free, and sometimes contains interview questions not found in LeetCode.
 
 ![](https://miro.medium.com/max/667/0*ZTMjAXFNZJnxw5wM.png)
 
-[****Glassdoor****][52]
+[\***\*Glassdoor\*\***][52]
 
 ![](https://miro.medium.com/max/589/1*qVt2_-4lyAnBgBxpQ7JV5A.png)
 
@@ -737,38 +746,38 @@ I found this platform to be both good and bad. It is good because you get more c
 -   Find previous interview questions
 -   Set up job alerts to receive new job updates
 
-[****Google Search****][53]: The starting point for ANY question in life. Do I need to say more?
+[\***\*Google Search\*\***][53]: The starting point for ANY question in life. Do I need to say more?
 
 ![](https://miro.medium.com/max/1280/0*foG6evRh08Khr-wZ.jpg)
 
-****Internal Employees:**** Always try to reach out to your friends, or friends of friends, that work in the companies you want to apply to. They will be your most effective informants as well as advocates.  [Connect with me on LinkedIn][54], and if you are a good fit, I would be happy to refer you to Google myself, or one of my friends who work at other top tech firms.
+\***\*Internal Employees:\*\*** Always try to reach out to your friends, or friends of friends, that work in the companies you want to apply to. They will be your most effective informants as well as advocates. [Connect with me on LinkedIn][54], and if you are a good fit, I would be happy to refer you to Google myself, or one of my friends who work at other top tech firms.
 
-[****LeetCode****][55]
+[\***\*LeetCode\*\***][55]
 
 -   Practice A&DS questions
 -   Use LeetCode Premium ($35/month or $99/year with coupon) to find past interview questions asked by a given company. I recommend paying for the annual membership. Just think of it as a gym membership for your coding brain.
 
-[****Level.fyi****][56]: This site lists crowdsourced salary information by company, by seniority levels, by location, and by job function, so you will know if you are getting a fair offer from the companies. Of course, this works well only for larger companies, as there are more data points.
+[\***\*Level.fyi\*\***][56]: This site lists crowdsourced salary information by company, by seniority levels, by location, and by job function, so you will know if you are getting a fair offer from the companies. Of course, this works well only for larger companies, as there are more data points.
 
 ![](https://miro.medium.com/max/560/0*y6YcevhJEHIeMO0-.jpg)
 
-[****LinkedIn****][57]:
+[\***\*LinkedIn\*\***][57]:
 
 -   Lookup people’s professional and educational background
 -   Turn on “Open to new opportunities” setting so that recruiters can find you.
 -   Use LinkedIn Premium to connect to people who interest you
 -   Set up job alerts to receive new job updates
 
-[****Medium**/**Blog Sites****][58]:
+[\***\*Medium**/**Blog Sites\*\***][58]:
 
 -   Read tutorials and how-tos to help with your personal projects
 -   Blog on Medium or elsewhere to showcase your own personal projects
 
 ![](https://miro.medium.com/max/590/1*YNzUC78SPulsAznKTeUyNw.png)
 
-[****TripleByte****][59]: Skip the phone interviews and directly go to on-sites if you pass their tech screening. See detailed description above
+[\***\*TripleByte\*\***][59]: Skip the phone interviews and directly go to on-sites if you pass their tech screening. See detailed description above
 
-[****YouTube****][60]
+[\***\*YouTube\*\***][60]
 
 ![](https://miro.medium.com/max/491/1*lVrmEfw_VMiq51OoZNKVkw.png)
 

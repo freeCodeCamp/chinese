@@ -1,11 +1,11 @@
-> * 原文地址：[Why I Believe Deno is a Step in the Wrong Direction for JavaScript Runtime Environments 为什么我认为 Deno 是一个迈向错误方向的 JavaScript 运行时](https://www.freecodecamp.org/news/why-deno-is-a-wrong-step-in-the-future/)
-> * 原文作者：Mehul Mohan
-> * 译者：hylerrix
-> * 校对者：
+> -   原文地址：[Why I Believe Deno is a Step in the Wrong Direction for JavaScript Runtime Environments 为什么我认为 Deno 是一个迈向错误方向的 JavaScript 运行时](https://www.freecodecamp.org/news/why-deno-is-a-wrong-step-in-the-future/)
+> -   原文作者：Mehul Mohan
+> -   译者：hylerrix
+> -   校对者：
 
 ![Why I Believe Deno is a Step in the Wrong Direction for JavaScript Runtime Environments](https://images.unsplash.com/photo-1558519847-19fc2aa15a16?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-I haven't found any other developers on YouTube with a channel the size of  [codedamn][1]  (100K+ subscribers) who are not not "super excited" about the release of Deno.
+I haven't found any other developers on YouTube with a channel the size of [codedamn][1] (100K+ subscribers) who are not not "super excited" about the release of Deno.
 
 Last week, I released a video on my channel stating some reasons (that were pretty clear to me) why I believe we do not need Deno - another runtime environment for JavaScript built on the top of V8 and Node.
 
@@ -13,12 +13,12 @@ With an article like this, I can add more thoughts and bundle them in a better w
 
 To just prove that I'm not against "Deno" and JavaScript in general, I'd like to state something. I love JavaScript more than anything. My primary tech stack involves nothing but JavaScript - Node / React / MongoDB / React Native / NativeScript / Ionic / you name it.
 
-I built a  [100K subscriber YouTube channel][2]  and a  [developer platform][3]  mostly on a single programming language - JavaScript.
+I built a [100K subscriber YouTube channel][2] and a [developer platform][3] mostly on a single programming language - JavaScript.
 
 But at the same time, it's important to stay practical and keep a clear head to see both sides of the coin. Deno has a good side, as well as a side which people aren't seeing/writing about yet. I'm going to write my views on the second side. Let's go!
 
-_**Note:**  This is going to be a controversial article. Let's keep it civil and control our emotions. I'd love it if you'd read the full article till the end, and maybe then decide what you think._  
-  
+_**Note:** This is going to be a controversial article. Let's keep it civil and control our emotions. I'd love it if you'd read the full article till the end, and maybe then decide what you think._
+
 _I have my social media links at the bottom of the article and would love to have a healthy discussion on this topic there._
 
 ## Deno vs Node - there IS actually competition
@@ -40,7 +40,7 @@ Similarly, if you've never worked with TypeScript before, and you think you want
 
 That's right: there is a division of developers across Deno and Node - I would say that's a very good example of a competitive space.
 
-## Why try Deno?
+## Why try Deno
 
 Firstly, I would like to list some advantages of Deno – what it is and why it pitches itself as a better runtime:
 
@@ -52,7 +52,7 @@ Firstly, I would like to list some advantages of Deno – what it is and why it 
 
 In the next section, I'll pick all of these points apart one by one and will mention what Node can learn from them. I'll also discuss, wherever necessary, why Deno doesn't make a lot of sense.
 
-## Where Deno overdid?
+## Where Deno overdid
 
 Let's pick up the USPs of Deno and break them down one by one:
 
@@ -74,13 +74,13 @@ So, what can Node learn from Deno about this? I would say not a lot. Node \*migh
 
 As far as I know, you cannot "sandbox" filesystem or network access on such low-level languages like C/C++ – it's just not efficient.
 
-Note: Recently I discovered that you can pretty much do everything with Deno with the  `--allow-run`  flag enabled. This video dives in details:
+Note: Recently I discovered that you can pretty much do everything with Deno with the `--allow-run` flag enabled. This video dives in details:
 
 ### TypeScript support baked in
 
 Hurray for TypeScript. I'm truly happy that Deno supports it out of the box.
 
-_**NOTE:**  Thank you @lilasquared for pointing out deno runs  `.js`  files out of the box too. Please read the further paragraphs keeping in mind we're coding in  `.ts`  files. Deno works fine with  `.js`  files too._
+_**NOTE:** Thank you @lilasquared for pointing out deno runs `.js` files out of the box too. Please read the further paragraphs keeping in mind we're coding in `.ts` files. Deno works fine with `.js` files too._
 
 But let's roll back a little. Do you know why JavaScript (and Node) has a trillion developers across the globe? Because the entry barrier is almost nil. JavaScript is flexible and forgives a lot of mistakes - while bringing in some of the weirdest behavior you'd expect from a deterministic computer.
 
@@ -89,11 +89,11 @@ This is super bad for production-level applications where you want no funky stuf
 With beginners, I fear that if they opt-in for Deno (which mandates the use of TypeScript), we'll be seeing a lot of code like this because they don't understand TypeScript yet and just want to run JavaScript on the server:
 
 ```ts
-const httpResponse: any = await getAPIResponse<any>({ myParams })
+const httpResponse: any = await getAPIResponse<any>({ myParams });
 // ...
-const someOtherVariable = something() as any
+const someOtherVariable = something() as any;
 // ...
-any, any, any
+any, any, any;
 ```
 
 TypeScript is a superset of JavaScript. You can write bad TypeScript code too – just using it doesn't make your JavaScript bulletproof.
@@ -132,7 +132,7 @@ Huge thing. Deno doesn't support NPM. As much as Ryan, the creator or Node and D
 
 I just believe it's a wrong move to not use a package manager. They do a lot of things - versioning, running scripts, managing dependency updates, etc. Why Deno won't use npm? I don't know. But here's what I can think about:
 
-1.  Firstly, because they're JavaScript - and Deno needs TypeScript.  **CORRECTION:**  Deno  **can**  work with .js files as well.
+1.  Firstly, because they're JavaScript - and Deno needs TypeScript. **CORRECTION:** Deno **can** work with .js files as well.
 2.  Next, a lot of these npm modules would require filesystem/networking/other permissions - which Deno restricts by default. So you need to mess around with some new "permissions" field in package.json. Oops, Deno doesn't work with npm, hence no package.json, let's see how it handles the module system then.
 3.  NPM modules are bloated and there are a lot of them, but at the same time, that's the powerhouse of the Node ecosystem. Want a package to extract tar files into a stream? You got it (tar-stream). Want a data validation package? You got it (joi). Want to work with JWT? You got it (jsonwebtoken). I wonder how long it will take for developers to port their packages to a Deno-compatible system?
 
@@ -140,7 +140,7 @@ Deno has a different approach to module systems altogether. If, in any case, it 
 
 According to what I've learned about Deno so far, here's how it looks:
 
-> **Deno**  \= (mostly) \[TypeScript + Node + Correctly configured docker container + single executable binaries + <some more little tooling here and there> - NPM\]
+> **Deno** \= (mostly) \[TypeScript + Node + Correctly configured docker container + single executable binaries + <some more little tooling here and there> - NPM\]
 
 Alright! Let's cool down things a little and let me conclude this article.
 
@@ -150,7 +150,7 @@ I'm as excited about Deno as everyone else. But when there's a complete rewrite 
 
 Deno includes a bunch of nice features like automatic TypeScript documentation, which I didn't mention because this post aims to show the other side of the coin. You'll find the advantages of Deno in almost every other article, but I believe this is something that needed to be said.
 
-To be honest, Deno seems like a big undertaking for a small benefit with a huge debt of transferring existing npm modules and codebases. Do you agree or disagree with me? I would like to know your opinions. Tweet/follow me:  [**@mehulmpt**][4]  and on  [**Instagram**][5]  too!
+To be honest, Deno seems like a big undertaking for a small benefit with a huge debt of transferring existing npm modules and codebases. Do you agree or disagree with me? I would like to know your opinions. Tweet/follow me: [**@mehulmpt**][4] and on [**Instagram**][5] too!
 
 Peace!
 

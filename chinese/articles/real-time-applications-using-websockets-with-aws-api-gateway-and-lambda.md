@@ -1,7 +1,7 @@
-> * 原文地址：[How to build real-time applications using WebSockets with AWS API Gateway and Lambda 使用 WebSockets，AWS API Gateway 和 Lambda 创建实时应用程序](https://www.freecodecamp.org/news/real-time-applications-using-websockets-with-aws-api-gateway-and-lambda-a5bb493e9452/)
-> * 原文作者：Janitha Tennakoon
-> * 译者：
-> * 校对者：
+> -   原文地址：[How to build real-time applications using WebSockets with AWS API Gateway and Lambda 使用 WebSockets，AWS API Gateway 和 Lambda 创建实时应用程序](https://www.freecodecamp.org/news/real-time-applications-using-websockets-with-aws-api-gateway-and-lambda-a5bb493e9452/)
+> -   原文作者：Janitha Tennakoon
+> -   译者：
+> -   校对者：
 
 ![How to build real-time applications using WebSockets with AWS API Gateway and Lambda](https://cdn-media-1.freecodecamp.org/images/0*OaDVOjdkCturioO_.png)
 
@@ -21,19 +21,19 @@ In this post, we are going to create a simple chat application using API Gateway
 
 ### WebSocket API Concepts
 
-A WebSocket API is composed of one or more routes. A  _route selection expression_ is there to determine which route a particular inbound request should use, which will be provided in the inbound request. The expression is evaluated against an inbound request to produce a value that corresponds to one of your route’s  _routeKey_  values. For example, if our JSON messages contain a property call action, and you want to perform different actions based on this property, your route selection expression might be  `${request.body.action}`.
+A WebSocket API is composed of one or more routes. A _route selection expression_ is there to determine which route a particular inbound request should use, which will be provided in the inbound request. The expression is evaluated against an inbound request to produce a value that corresponds to one of your route’s _routeKey_ values. For example, if our JSON messages contain a property call action, and you want to perform different actions based on this property, your route selection expression might be `${request.body.action}`.
 
 For example: if your JSON message looks like {“action” : “onMessage” , “message” : “Hello everyone”}, then the onMessage route will be chosen for this request.
 
 By default, there are three routes which are already defined in the WebSocket API. In addition to the below-mentioned routes, we can add custom routes for our needs.
 
--   **$default**  — Used when the route selection expression produces a value that does not match any of the other route keys in your API routes. This can be used, for example, to implement a generic error handling mechanism.
--   **$connect**  — The associated route is used when a client first connects to your WebSocket API.
--   **$disconnect**  — The associated route is used when a client disconnects from your API.
+-   **\$default** — Used when the route selection expression produces a value that does not match any of the other route keys in your API routes. This can be used, for example, to implement a generic error handling mechanism.
+-   **\$connect** — The associated route is used when a client first connects to your WebSocket API.
+-   **\$disconnect** — The associated route is used when a client disconnects from your API.
 
 Once a device is successfully connected through WebSocket API, the device will be allocated with a unique connection id. This connection id will be persisted throughout the lifetime if the connection. To send messages back to the device we need to use the following POST request using the connection id.
 
-```
+```plain
 POST https://{api-id}.execute-api.us-east 1.amazonaws.com/{stage}/@connections/{connection_id}
 ```
 
@@ -47,14 +47,14 @@ In our application, devices will be connected to the API Gateway. When a device 
 
 #### Creating WebSocket API
 
-In order to create the WebSocket API, we need first go to Amazon API Gateway service using the console. In there choose to create new API. Click on WebSocket to create a WebSocket API, give an API name and our Route Selection Expression. In our case add $request.body.action as our selection expression and hit Create API.
+In order to create the WebSocket API, we need first go to Amazon API Gateway service using the console. In there choose to create new API. Click on WebSocket to create a WebSocket API, give an API name and our Route Selection Expression. In our case add \$request.body.action as our selection expression and hit Create API.
 
 ![](https://cdn-media-1.freecodecamp.org/images/Fu3WT1nNu67o1AEQbVvyqPjF4Xfgdy5DIdU8)
 
 After creating the API we will be redirected to the routes page. Here we can see already predefined three routes: $connect, $disconnect and $default. We will also create a custom route $onMessage. In our architecture, $connect and $disconnect routes achieve the following tasks:
 
--   $connect — when this route is called, a Lambda function will add the connection id of the connected device to DynamoDB.
--   $disconnect — when this route is called, a Lambda function will delete the connection id of the disconnected device from DynamoDB.
+-   \$connect — when this route is called, a Lambda function will add the connection id of the connected device to DynamoDB.
+-   \$disconnect — when this route is called, a Lambda function will delete the connection id of the disconnected device from DynamoDB.
 -   onMessage — when this route is called, the message body will be sent to all the devices that are connected at the time.
 
 Before adding the route according to the above, we need to do four tasks:
@@ -72,34 +72,34 @@ Next, let’s create the connect Lambda function. To create the Lambda function,
 
 In the code of the lambda function add the following code. This code will add the connection id of the connected device to the DynamoDB table that we have created.
 
-```
+```plain
 exports.handler = (event, context, callback) => {    const connectionId = event.requestContext.connectionId;    addConnectionId(connectionId).then(() => {    callback(null, {        statusCode: 200,        })    });}
 ```
 
-```
+```plain
 function addConnectionId(connectionId) {    return ddb.put({        TableName: 'Chat',        Item: {            connectionid : connectionId        },    }).promise();}
 ```
 
 Next, let us create the disconnect lambda function as well. Using the same steps create a new lambda function named  
 ‘ChatRoomDonnectFunction’. Add the following code to the function. This code will remove the connection id from the DynamoDB table when a device gets disconnected.
 
-```
+```plain
 const AWS = require('aws-sdk');const ddb = new AWS.DynamoDB.DocumentClient();
 ```
 
-```
+```plain
 exports.handler = (event, context, callback) => {    const connectionId = event.requestContext.connectionId;    addConnectionId(connectionId).then(() => {    callback(null, {        statusCode: 200,        })    });}
 ```
 
-```
+```plain
 function addConnectionId(connectionId) {    return ddb.delete({        TableName: 'Chat',        Key: {            connectionid : connectionId,        },    }).promise();}
 ```
 
-Now we have created the DynamoDB table and two lambda functions. Before creating the third lambda function, let us go back again to API Gateway and configure the routes using our created lambda functions. First, click on $connect route. As integration type, select Lambda function and select the ChatRoomConnectionFunction.
+Now we have created the DynamoDB table and two lambda functions. Before creating the third lambda function, let us go back again to API Gateway and configure the routes using our created lambda functions. First, click on \$connect route. As integration type, select Lambda function and select the ChatRoomConnectionFunction.
 
 ![](https://cdn-media-1.freecodecamp.org/images/Jm4gDZE2iTvkM7jjEIbD5dJwxMpfQqNJcxaw)
 
-We can do the same on $disconnect route as well where the lambda function will be ChatRoomDisconnectionFunction:
+We can do the same on \$disconnect route as well where the lambda function will be ChatRoomDisconnectionFunction:
 
 ![](https://cdn-media-1.freecodecamp.org/images/xydcct1RcCF4MMgATbCUE7RoOlVw5Zx-rBzy)
 
@@ -113,9 +113,9 @@ After deploying, we will be presented with two URLs. The first URL is called Web
 
 The WebSocket URL is the URL that is used to connect through WebSockets to our API by devices. And the second URL, which is Connection URL, is the URL which we will use to call back to the devices which are connected. Since we have not yet configured call back to devices, let’s first only test the $connect and $disconnect routes.
 
-To call through WebSockets we can use the wscat tool. To install it, we need to just issue the  `npm install -g wscat`  command in the command line. After installing, we can use the tool using wscat command. To connect to our WebSocket API, issue the following command. Make sure to replace the WebSocket URL with the correct URL provided to you.
+To call through WebSockets we can use the wscat tool. To install it, we need to just issue the `npm install -g wscat` command in the command line. After installing, we can use the tool using wscat command. To connect to our WebSocket API, issue the following command. Make sure to replace the WebSocket URL with the correct URL provided to you.
 
-```
+```plain
 wscat -c wss://bh5a9s7j1e.execute-api.us-east-1.amazonaws.com/Test
 ```
 
@@ -131,19 +131,19 @@ Now that we have tested our two routes, let us look into the custom route onMess
 
 Let’s first create the lambda function in the same way we created other two lambda functions. Name the lambda function ChatRoomOnMessageFunction and copy the following code to the function code.
 
-```
+```plain
 const AWS = require('aws-sdk');const ddb = new AWS.DynamoDB.DocumentClient();require('./patch.js');
 ```
 
-```
+```plain
 let send = undefined;function init(event) {  console.log(event)    const apigwManagementApi = new AWS.ApiGatewayManagementApi({    apiVersion: '2018-11-29',    endpoint: event.requestContext.domainName + '/' + event.requestContext.stage  });        send = async (connectionId, data) => {  await apigwManagementApi.postToConnection({ ConnectionId: connectionId, Data: `Echo: ${data}` }).promise();  }}
 ```
 
-```
+```plain
 exports.handler =  (event, context, callback) => {  init(event);  let message = JSON.parse(event.body).message    getConnections().then((data) => {        console.log(data.Items);        data.Items.forEach(function(connection) {           console.log("Connection " +connection.connectionid)           send(connection.connectionid, message);        });    });        return {}};
 ```
 
-```
+```plain
 function getConnections(){    return ddb.scan({        TableName: 'Chat',    }).promise();}
 ```
 
@@ -151,19 +151,19 @@ The above code will scan the DynamoDB to get all the available records in the ta
 
 Since WebSockets API is still new there are some things we need to do manually. Create a new file named patch.js and add the following code inside it.
 
-```
+```plain
 require('aws-sdk/lib/node_loader');var AWS = require('aws-sdk/lib/core');var Service = AWS.Service;var apiLoader = AWS.apiLoader;
 ```
 
-```
+```plain
 apiLoader.services['apigatewaymanagementapi'] = {};AWS.ApiGatewayManagementApi = Service.defineService('apigatewaymanagementapi', ['2018-11-29']);Object.defineProperty(apiLoader.services['apigatewaymanagementapi'], '2018-11-29', {  get: function get() {    var model = {      "metadata": {        "apiVersion": "2018-11-29",        "endpointPrefix": "execute-api",        "signingName": "execute-api",        "serviceFullName": "AmazonApiGatewayManagementApi",        "serviceId": "ApiGatewayManagementApi",        "protocol": "rest-json",        "jsonVersion": "1.1",        "uid": "apigatewaymanagementapi-2018-11-29",        "signatureVersion": "v4"      },      "operations": {        "PostToConnection": {          "http": {            "requestUri": "/@connections/{connectionId}",            "responseCode": 200          },          "input": {            "type": "structure",            "members": {              "Data": {                "type": "blob"              },              "ConnectionId": {                "location": "uri",                "locationName": "connectionId"              }            },            "required": [              "ConnectionId",              "Data"            ],            "payload": "Data"          }        }      },      "shapes": {}    }    model.paginators = {      "pagination": {}    }    return model;  },  enumerable: true,  configurable: true});
 ```
 
-```
+```plain
 module.exports = AWS.ApiGatewayManagementApi;
 ```
 
-I took the above code from this  [article][1]. The functionality of this code is to automatically create the Callback URL for our API and send the POST request.
+I took the above code from this [article][1]. The functionality of this code is to automatically create the Callback URL for our API and send the POST request.
 
 ![](https://cdn-media-1.freecodecamp.org/images/Uq12ZG3KNn38ut5jQQLRjOPebZBuLIxxqesW)
 
@@ -173,7 +173,7 @@ Now we have completed our WebSocket API and we can fully test the application. T
 
 After connecting, issue the following JSON to send messages:
 
-```
+```plain
 {"action" : "onMessage" , "message" : "Hello everyone"}
 ```
 
@@ -181,6 +181,6 @@ Here, the action is the custom route we defined and the message is the data that
 
 ![](https://cdn-media-1.freecodecamp.org/images/hHo2bGE-lEcSiKIF9CNUpHwXJrKj05h2F5mV)
 
-That is it for our simple chat application using AWS WebSocket API. We have not actually configured the $defalut route which is called on every occasion where there no route is found. I will leave the implementation of that route to you. Thank you and see you in another post. :)
+That is it for our simple chat application using AWS WebSocket API. We have not actually configured the \$defalut route which is called on every occasion where there no route is found. I will leave the implementation of that route to you. Thank you and see you in another post. :)
 
 [1]: https://hackernoon.com/websockets-api-gateway-9d4aca493d39

@@ -1,289 +1,295 @@
-> * 原文地址：[How to Set Up a Continuous Integration Pipeline with GitHub Actions and Puppeteer 如何使用 GitHub Actions 和 Puppeteer 设置持续集成管道](https://www.freecodecamp.org/news/continuous-integration-with-github-actions-and-puppeteer/)
-> * 原文作者：Dor Shinar
-> * 译者：
-> * 校对者：
+> -   原文地址：[How to Set Up a Continuous Integration Pipeline with GitHub Actions and Puppeteer 如何使用 GitHub Actions 和 Puppeteer 设置持续集成管道](https://www.freecodecamp.org/news/continuous-integration-with-github-actions-and-puppeteer/)
+> -   原文作者：Dor Shinar
+> -   译者：RetownPlato
+> -   校对者：
 
 ![How to Set Up a Continuous Integration Pipeline with GitHub Actions and Puppeteer](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/7i4mnqi4x5tl0rn204ab.png)
 
-Lately I've added continuous integration to my blog using Puppeteer for end to end testing. My main goal was to allow automatic dependency updates using  [Dependabot][1]. In this guide I'll show you how to create such a pipeline yourself.
+最近，我使用 Puppeteer 将持续集成集成到我的博客中，以进行端到端测试。我的主要目标是允许使用[Dependabot][1]进行自动依赖项更新。在本指南中，我将向您展示如何自己创建这样的管道。
 
-As my CI platform, I chose  [Github Actions][2], as it is super easy to work with. It also integrates beautifully with any Github repository you already have. The whole thing only took roughly two days of intermittent work, and I think the results are quite awesome.
+作为我的 CI 平台，我选择了[Github Actions][2]，因为它非常易于使用。它还可以与您已经拥有的任何 Github 仓库完美集成。整个过程大约只花了两天的间歇时间，我认为结果非常棒。
 
-I do want to give a shout-out to Nick Taylor, who published  [his article on the subject][3], and laid the ground work for my efforts here. I encourage you to read his article as well.
+我确实要大声赞扬 Nick Taylor，他发表了[有关该主题的文章][3]，并为我在这里的努力奠定了基础。我鼓励您也阅读他的文章。
 
-My tech stack is quite different though. I chose  [puppeteer][4]  as my end-to-end framework for several reasons. The first is that it is written and maintained by the folks behind the Chrome dev tools, so I'm guaranteed a life-time of support (until Chrome dies out, which is not in the near future), and it is really easy to work with.
+但我的技术栈却大不相同。由于多种原因，我选择[puppeteer][4]作为我的端到端框架。首先是它是由 Chrome 开发者工具背后的人们编写和维护的，因此可以保证我将终身提供支持（直到 Chrome 淘汰，这不会在不久的将来），而且这确实很容易上手。
 
-Another reason is that at home I'm working on a windows laptop with WSL (on which I'm running zshell with oh-my-zsh). Setting up cypress is quite a bit more difficult (although in our world nothing is impossible). Both reasons led me to choose puppeteer, and so far I'm not regretting it.
+另一个原因是在家里，我正在使用 WSL 的 Windows 笔记本电脑上工作（在该笔记本电脑上，我正在使用 oh-my-zsh 运行 zshell）设置 Cypress 要困难得多（尽管在我们这个世界上没有什么是不可能的）。这两个原因都促使我选择了 Puppeteer，到目前为止，我并不后悔。
 
-## End to end testing
+## 端到端测试
 
-End to end (or E2E) tests are different from other types of automated tests. E2E tests simulate a real user, performing actions on the screen. This kind of test should help fill the blank space between "static" tests - such as unit tests, where you usually don't bootstrap the entire application - and component testing, which usually runs against a single component (or a service in a micro-service architecture).
+端到端（或 E2E）测试与其他类型的自动化测试不同。 E2E 测试可模拟真实用户，并在屏幕上执行操作。这种测试应该有助于填补“静态”测试（例如，单元测试通常不引导整个应用程序）和组件测试之间的空白，组件测试通常针对单个组件（或微型服务运行服务架构）。
 
-By simulating user interaction you get to test the experience of using your application or service in the same way a regular user would experience it.
+通过模拟用户交互，您可以测试普通用户体验应用程序或服务的体验。
 
-The mantra that we try to follow is that it does not matter if your code performs perfectly if the button the user should press is hidden due to some CSS quirk. The end result is that the user will never get to feel the greatness of your code.
+我们尝试遵循的口头禅是，由于某些 CSS 怪癖，如果用户应按下的按钮处于隐藏状态，则代码是否可以完美执行并不重要。最终结果是用户将永远不会感觉到您的代码的强大之处。
 
-## Getting started with puppeteer
+## 入门 Puppeteer
 
-Puppeteer has a few configuration options that make it really awesome to use for writing and validating tests.
+Puppeteer 有几个配置选项，使编写和验证测试使用起来真的很棒。
 
-Puppeteer tests can run in a "head-full" state. This means you can open a real browser window, navigate to the site being tested, and perform actions on the given page. This way you - the developers writing the tests - can see exactly what happens in the test, what buttons are being pressed and what the resulting UI looks like.
+Puppeteer 测试可以在“head-full”状态下运行。这意味着您可以打开真实的浏览器窗口，导航到要测试的站点，然后在给定页面上执行操作。这样，您（编写测试的开发人员）可以确切地看到测试中发生的情况，按下了哪些按钮以及生成的 UI 外观。
 
-The opposite of "head-full" would be headless, where puppeteer does not open a browser window, making it ideal for CI pipelines.
+与“ head-full”相反的是 headless 的，其中 Puppeteer 不会打开浏览器窗口，因此非常适合 CI 管道。
 
-Puppeteer is quite easy to work with, but you'll be surprised with the number of actions you can perform using an automated tool.
+Puppeteer 的使用非常简单，但是你会惊讶于使用自动化工具可以执行的操作数量。
 
-We'll start with a basic scraper that prints the page title when we go to  [https://dorshinar.me][5]. In order to run puppeteer tests, we must install it as a dependency:
+我们将从基本的爬虫开始，当我们转到[https://dorshinar.me][5] 时，该爬虫将打印页面标题。为了运行 Puppeteer 的测试，我们必须将其安装为依赖项：
 
-```bash
+```powershell
 npm i puppeteer
-
 ```
 
-Now, our basic scraper looks like this:
+现在，我们的基本爬虫如下所示：
 
-```js
-const puppeteer = require("puppeteer");
+```javascript
+const puppeteer = require('puppeteer');
 
 (async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.goto("https://dorshinar.me");
-  console.log(await page.title());
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto('https://dorshinar.me');
+    console.log(await page.title());
 
-```
-
-What we do here is very simple: we open the browser with  `puppeteer.launch()`, create a new page with  `browser.newPage()`  and navigate to this blog with  `page.goto()`, and then we print the title.
-
-There are a bunch of things we can do with the puppeteer API, such as:
-
-Running code in the context of the page:
-
-```js
-(async () => {
-  await page.evaluate(() => document.querySelector(".awesome-button").click());
+    await browser.close();
 })();
-
 ```
 
-Clicking on elements in the screen using a CSS selector:
+我们在这里做的事情非常简单：我们使用`puppeteer.launch()`打开浏览器，使用`browser.newPage()`创建一个新页面，然后使用`page.goto()`导航到该博客，然后打印标题。
+
+我们可以使用 puppeteer API 做很多事情，例如：
+
+在页面上下文中运行代码：
+
+```javascript
+(async () => {
+    await page.evaluate(() =>
+        document.querySelector('.awesome-button').click()
+    );
+})();
+```
+
+使用 CSS 选择器单击屏幕上的元素：
 
 ```js
 (async () => {
-  await page.click(".awesome-button");
+    await page.click('.awesome-button');
 })();
-
 ```
 
-Making use of the  `$`  selector (jQuery style):
+利用`$`选择器（jQuery 样式）：
 
 ```js
 (async () => {
-  await page.$(".awesome-button");
+    await page.$('.awesome-button');
 })();
-
 ```
 
-Taking a screenshot:
+截屏：
 
 ```js
 (async () => {
-  await page.screenshot({ path: "screenshot.png" });
+    await page.screenshot({ path: 'screenshot.png' });
 })();
-
 ```
 
-There is a bunch more you can do with the puppeteer API, and I suggest you take a look at it before diving into writing tests. But the examples I've shown should give you a solid foundation to build from.
+您可以使用 puppeteer API 做更多的事情，我建议您在开始编写测试之前先进行了解。但是我展示的示例应该为您提供坚实的基础。
 
-### Integrating puppeteer with Jest
+### 将 Puppeteer 与 Jest 集成
 
-[jest][7]  is an awesome test runner and assertion library. From their docs:
+[jest][7]是一个了不起的测试运行程序和断言库。从他们的文档：
 
-> Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
+> Jest 是一个令人愉悦的 JavaScript 测试框架，其重点是简单性。
 
-Jest allows you to run tests, mock imports, and make complex assertions really easily. Jest is also bundled with create-react-app, so I use it often at work.
+Jest 允许您真正轻松地运行测试，模拟导入以及进行复杂的断言。Jest 还与 create-react-app 捆绑在一起，因此我经常在工作中使用它。
 
-#### Writing your first Jest test
+#### 编写您的第一个 Jest 测试
 
-Jest tests are super easy to write, and they might be familiar to those who know other testing frameworks (as Jest uses  `it`,  `test`,  `describe`  and other familiar conventions).
+Jest 测试是超级容易写，那些知道其他的测试框架的人可能会觉得熟悉的（如 Jest 使用`it`，`test`，`describe`和其他类似的惯例）。
 
-A basic test could look like:
+基本测试可能类似于：
 
 ```js
 function subtract(a, b) {
-  return a - b;
+    return a - b;
 }
 
+it('subtracts 4 from 6 and returns 2', () => {
+    expect(subtract(6, 4)).toBe(2);
+});
 ```
 
-You can also group multiple tests under one  `describe`, so you can run different describes or use it for convenient reporting:
+您还可以将多个测试归为一类`describe`，因此您可以运行不同的 describes 或将其用于方便的报告：
 
 ```js
 function divide(a, b) {
-  if (b === 0) {
-    throw new Error("Can't divide by zero!");
-  }
-  return a / b;
+    if (b === 0) {
+        throw new Error("Can't divide by zero!");
+    }
+    return a / b;
 }
 
+describe('divide', () => {
+    it('throws when dividing by zero', () => {
+        expect(() => divide(6, 0)).toThrow();
+    });
+    it('returns 3 when dividing 6 by 3', () => {
+        expect(divide(6, 3)).toBe(2);
+    });
+});
 ```
 
-You can, of course, create much more complicated tests using mocks and other type of assertions (or expectations), but for now that's enough.
+当然，您可以使用模拟和其他类型的断言（或期望）来创建更复杂的测试，但是到目前为止就足够了。
 
-Running the tests is also very simple:
+运行测试也非常简单：
 
 ```bash
 jest
-
 ```
 
-Jest will look for test files with any of the following popular naming conventions:
+Jest 将使用以下任何流行的命名约定查找测试文件：
 
--   Files with  `.js`  suffix in  `**tests**`  folders.
--   Files with  `.test.js`  suffix.
--   Files with  `.spec.js`  suffix.
+-   `__tests__`文件夹中带有`.js`后缀的文件。
+-   带`.test.js`后缀的文件。
+-   带`.spec.js`后缀的文件。
 
 #### jest-puppeteer
 
-Now, we need to make puppeteer play nicely with jest. This isn't a particularly hard job to do, as there is a great package named  [jest-puppeteer][8]  that comes to our aid.
+现在，我们需要使 Puppeteer 和 jest 合作愉快。这并不是一件特别困难的事情，因为有一个名为[jest-puppeteer][8]的出色软件包可以帮助我们。
 
-First, we must install it as a dependency:
+首先，我们必须将其安装为依赖项：
 
 ```bash
 npm i jest-puppeteer
-
 ```
 
-And now we must extend our jest configuration. If you don't have one yet, there are a number of ways to do it. I'll go with a config file. Create a file named  `jest.config.js`  in the root of your project:
+现在，我们必须扩展我们的 jest 配置。如果您还没有，那么有很多方法可以做到。我将使用一个配置文件。在项目的根目录中创建一个名为`jest.config.js`：
 
 ```bash
 touch jest.config.js
-
 ```
 
-In the file we must tell jest to use  `jest-puppeteer`'s preset, so add the following code to the file:
+在此文件中，我们必须告诉 jest 使用`jest-puppeteer`的预设，因此将以下代码添加到文件中：
 
 ```js
 module.exports = {
-  preset: "jest-puppeteer"
-  // The rest of your file...
+    preset: 'jest-puppeteer',
+    // The rest of your file...
 };
-
 ```
 
-You may specify a special launch configuration in a  `jest-puppeteer.config.js`  file, and jest-puppeteer will pass this configuration to  `puppeteer.launch()`. For example:
+您可以在`jest-puppeteer.config.js`文件中指定特殊的启动配置，并且 jest-puppeteer 会将此配置传递给`puppeteer.launch()`。例如：
 
 ```js
 module.exports = {
-  launch: {
-    headless: process.env.CI === "true",
-    ignoreDefaultArgs: ["--disable-extensions"],
-    args: ["--no-sandbox"],
-    executablePath: "chrome.exe"
-  }
+    launch: {
+        headless: process.env.CI === 'true',
+        ignoreDefaultArgs: ['--disable-extensions'],
+        args: ['--no-sandbox'],
+        executablePath: 'chrome.exe',
+    },
 };
-
 ```
 
-`jest-puppeteer`  will take care of opening a new browser and a new page and store them on the global scope. So in your tests you can simply use the globally available  `browser`  and  `page`  objects.
+`jest-puppeteer`将负责打开新的浏览器和新的页面，并将它们存储在全局范围内。因此，在测试中，您可以简单地使用全局可用的`browser`和`page`对象。
 
-Another great feature we can use is the ability of jest-puppeteer to run your server during your tests, and kill it afterwards, with the  `server`  key:
+我们可以使用的另一个出色功能是 jest-puppeteer 能够在测试期间运行服务器，然后使用以下`server`键将其杀死：
 
 ```js
 module.exports = {
-  launch: {},
-  server: {
-    command: "npm run serve",
-    port: 9000,
-    launchTimeout: 180000
-  }
+    launch: {},
+    server: {
+        command: 'npm run serve',
+        port: 9000,
+        launchTimeout: 180000,
+    },
 };
-
 ```
 
-Now jest-puppeteer will run  `npm run serve`, with a timeout of 180 seconds (3 minutes), and listen on port 9000 to see when it will be up. Once the server starts the tests will run.
+现在，jest-puppeteer 将运行`npm run serve`，超时时间为 180 秒（3 分钟），并在端口 9000 上监听以查看何时启动。服务器启动后，测试将运行。
 
-You can now write a full test suite using jest and puppeteer. The only thing left is creating a CI pipeline, for which we'll use GitHub actions.
+您现在可以使用 jest 和 puppeteer 编写完整的测试套件。剩下的唯一事情就是创建一个 CI 管道，我们将使用 GitHub actions。
 
-You can add a script to your  `package.json`  file to execute your tests:
+您可以将脚本添加到`package.json`文件中以执行测试：
 
 ```json
 {
-  "scripts": {
-    "test:e2e": "jest"
-  }
+    "scripts": {
+        "test:e2e": "jest"
+    }
 }
-
 ```
 
-## Github Actions in a gist
+## Github Actions 要点
 
-Recently, Github released a big new feature called Actions. Basically, actions allow you to create workflows using plain yaml syntax, and run them on dedicated virtual machines.
+最近，Github 发布了一项名为 Actions 的重要新功能。基本上，操作允许您使用简单的 yaml 语法创建工作流，并在专用虚拟机上运行它们。
 
-In your workflow you can do pretty much anything you want, from basic  `npm ci && npm build && npm run test`  to more complicated stuff.
+在您的工作流程中，您可以执行几乎所有您想做的事情，从基本`npm ci && npm build && npm run test`到更复杂的事情。
 
-I'll show you how to configure a basic workflow running your puppeteer test suite, and prevent merging if your tests don't pass.
+我将向您展示如何配置运行 puppeteer 测试套件的基本工作流程，并在测试未通过的情况下防止 merge。
 
-The easiest way to start is to click on the  `Actions`  tab in your github repo. If you haven't configured any action before, you'll see a list of previously configured workflows, from which you can choose one with some predefined configuration.
+最简单的开始方法是单击 github 仓库中的`Actions`选项卡。如果您之前未配置任何操作，则将看到以前配置的工作流列表，您可以从中选择具有一些预定义配置的工作流。
 
 ![github-actions-start-3](https://www.freecodecamp.org/news/content/images/2020/01/github-actions-start-3.png)
 
-For our case, choosing the predefined Node.js action is good enough. The generated yaml looks like this:
+对于我们的情况，选择预定义的 Node.js action 就足够了。生成的 yaml 如下所示：
 
 ```yaml
 name: Node CI
-on: [push]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-<span class="token key atrule" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">strategy</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span>
-  <span class="token key atrule" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">matrix</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span>
-    <span class="token key atrule" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">node-version</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">[</span>8.x<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> 10.x<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> 12.x<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">]</span>
 
-<span class="token key atrule" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">steps</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span>
-  <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">-</span> <span class="token key atrule" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">uses</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> actions/checkout@v1
-  <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">-</span> <span class="token key atrule" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">name</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> Use Node.js $<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span> matrix.node<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">-</span>version <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span>
-    <span class="token key atrule" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">uses</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> actions/setup<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">-</span>node@v1
-    <span class="token key atrule" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">with</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span>
-      <span class="token key atrule" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">node-version</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> $<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span> matrix.node<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">-</span>version <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span>
-  <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">-</span> <span class="token key atrule" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">name</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> npm install<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> build<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> and test
-    <span class="token key atrule" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">run</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">|</span><span class="token scalar string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">
-      npm ci
-      npm run build --if-present
-      npm test</span>
-    <span class="token key atrule" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">env</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span>
-      <span class="token key atrule" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">CI</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token boolean important" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 700; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(238, 153, 0);">true</span>
+on: [push]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [8.x, 10.x, 12.x]
+
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: npm install, build, and test
+              run: |
+                  npm ci
+                  npm run build --if-present
+                  npm test
+              env:
+                  CI: true
 ```
 
-In the file you can configure the workflow name, jobs to run, and when to run the workflow. You can run your workflow on every push, on new pull requests, or as a recurring event.
+在该文件中，您可以配置工作流名称，要运行的作业以及运行时间。您可以在每次 push，新的 pull 请求或重复发生的事件上运行您的工作流。
 
-Jobs in a workflow run in parallel by default, but can be configured to run in sequence. In the above workflow, there is one job named  `build`.
+工作流中的作业默认情况下并行运行，但可以配置为按顺序运行。在上述工作流程中，有一个名为`build`的作业。
 
-You can also choose the OS on which your workflow will run (by default you can use Windows Server 2019, Ubuntu 18.04, Ubuntu 16.04 and macOS Catalina 10.15 - at the time of publishing) with the  `runs-on`  key.
+您还可以使用`runs-on`键选择将在其上运行工作流的操作系统（默认情况下，您可以在发布时使用 Windows Server 2019，Ubuntu 18.04，Ubuntu 16.04 和 macOS Catalina 10.15）。
 
-The  `strategy`  key can help us run our tests on a matrix of node versions. In this case we have the latest versions of the latest LTS majors -  `8.x`,  `10.x`  and  `12.x`. If you are interested in that you can leave it as is, or simply remove it and use any specific version you want.
+该`strategy`键可以帮助我们在运行矩阵测试（Matrix Testing）。在这种情况下，我们有最新版本的最新的 LTS major - `8.x`，`10.x`和`12.x`。如果您对此感兴趣，可以将其保留不变，也可以将其删除并使用所需的任何特定版本。
 
-The most interesting configuration option is the  `steps`. With it we define what actually goes on in our pipeline.
+最有趣的配置选项是`steps`。通过它，我们定义了管道中实际发生的事情。
 
-Each step represents an action you can perform, such as checking out code from the repo, setting up your node version, installing dependencies, running tests, uploading artifacts (to be used later or downloaded) and many more.
+每个步骤都代表您可以执行的操作，例如从仓库中 checkout 代码，设置节点版本，安装依赖项，运行测试，上传 artifact（以供以后使用或下载）等等。
 
-You can find a very extensive list of readily available actions in the  [Actions Marketplace][9].
+您可以在[Actions Marketplace][9]中找到非常广泛的随时可用的 actions 列表。
 
-The basic configuration will install dependencies, build our project and run our tests. If you need more (for example if you want to serve your application for e2e tests) you may alter it to your liking. Once done, commit your changes and you are good to go.
+基本配置将安装依赖项，构建我们的项目并运行我们的测试。如果您需要更多服务（例如，如果要为 e2e 测试提供服务），则可以根据自己的喜好进行更改。完成后，提交您的更改，一切顺利。
 
-### Forcing checks to pass before merge
+### 强制检查在合并之前通过
 
-The only thing left for us is to make sure no code can be merged before our workflow passes successfully. For that, go to your repo's settings and click on Branches:
+我们剩下的唯一事情是确保在我们的工作流成功通过之前，不能合并任何代码。为此，请转到您的仓库的设置，然后单击 branches：
 
 ![Github Settings > Branch](https://www.freecodecamp.org/news/content/images/2020/01/github-settings-branch-1.png)
 
-We need to set a  **Branch protection rule**  so that malicious code (or at least code that doesn't pass our tests) won't be merged. Click on  **Add rule**, and under  **Branch name pattern**  put your protected branch (master, dev or whichever one you choose). Make sure  **Require status checks to pass before merging**  is checked, and you'll be able to choose which checks must pass:
+我们需要设置**Branch protection rule，**以使恶意代码（或至少未通过测试的代码）不会被合并。单击**Add rule**，然后在**Branch name pattern**放置受保护的分支（master，dev 或您选择的任何一个）。确保选中**Require status checks to pass before merging**，然后您可以选择必须通过哪些检查：
 
 ![Require status checks](https://www.freecodecamp.org/news/content/images/2020/01/github-actions-protections-1.png)
 
-Click on Save changes below, and you're good to go!
+点击下面的“保存更改”，一切顺利！
 
-Thank you for reading!
+感谢您的阅读！
 
 [1]: https://dependabot.com/
 [2]: https://github.com/features/actions

@@ -135,7 +135,7 @@ freeCodeCamp 团队（左起）：Miya, Mrugesh, Quincy, Kris, Ahmad. Not pictur
 
 如果这篇文章对你有帮助，请在社交媒体分享它。
 
-[我y想捐助][17].
+[我想捐助][17].
 
 [1]: https://www.linkedin.com/school/4831032/alumni/
 [2]: https://www.freecodecamp.org/news

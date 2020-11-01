@@ -4722,11 +4722,11 @@ module.exports = {
 
 [查看 `babel-loader` 的 options 配置][132]。
 
-#### `Plugins`
+#### 插件
 
-`Plugins are like loaders, but on steroids. They can do things that loaders can’t do, and they are the main building block of webpack.`
+插件和 loaders 一样，但是功能更丰富，可以实现 loader 实现不了的功能。它们是 webpack 的主要组成部分。
 
-`Take this example:`
+看看这个例子:
 
 ```
 module.exports = {
@@ -4738,11 +4738,11 @@ module.exports = {
 }
 ```
 
-`` The `HTMLWebpackPlugin` plugin has the job of automatically creating an HTML file, adding the output JS bundle path, so the JavaScript is ready to be served. ``
+`HTMLWebpackPlugin` 插件可以自动创建 HTML 文件，加入外部的 JS 包，这样 JavaScript 就可即用了。
 
-`There are [lots of plugins available][133].`
+[可用插件][133]种类非常多。
 
-`` One useful plugin, `CleanWebpackPlugin`, can be used to clear the `dist/` folder before creating any output, so you don't leave files around when you change the name of the output file: ``
+另一个有用的插件 `CleanWebpackPlugin` 可以在输出内容前清空 `dist/` 文件夹，当你修改输出文件时，文件夹内不会留有任何文件：
 
 ```
 module.exports = {
@@ -4754,9 +4754,9 @@ module.exports = {
 }
 ```
 
-#### `The webpack mode`
+#### webpack 模式
 
-`` This mode (introduced in webpack 4) sets the environment on which webpack works. It can be set to `development` or `production` (defaults to production, so you only set it when moving to development) ``
+webpack 4 引入的模式属性用于设置 webpack 执行的环境。可以设置为 `development` 开发或 `production` 生产（默认是生成环境，只有当修改设置值时才会作用于开发环境）。
 
 ```plain
 module.exports = {
@@ -4769,31 +4769,31 @@ module.exports = {
 }
 ```
 
-`Development mode:`
+开发模式：
 
--   `builds very fast`
--   `is less optimized than production`
--   `does not remove comments`
--   `provides more detailed error messages and suggestions`
--   `provides a better debugging experience`
+- 搭建迅速
+- 优化效果不如生产环境
+- 不会移除注释
+- 提供更详细的报错信息和建议
+- 提供更好的调试体验
 
-`Production mode is slower to build, since it needs to generate a more optimized bundle. The resulting JavaScript file is smaller in size, as it removes many things that are not needed in production.`
+生成模式由于需要生成优化的包，因此搭建速度更慢。最终生成的 JavaScript 文件移除了生产环境不需要的内容，因此体积更小。
 
-`I made a sample app that just prints a `console.log` statement.`
+我搭建了一个非常简单的只通过 `console.log` 打印内容的 app。
 
-`Here’s the production bundle:`
+这是它在生产模式下生产的包：
 
 `![](https://cdn-media-1.freecodecamp.org/images/kbXOiSFaO06VSDxcLC29Nh4a8ycSoaL9LDup)`
 
-`Here’s the development bundle:`
+这是它在开发模式下生产的包：
 
 `![](https://cdn-media-1.freecodecamp.org/images/W-1sAge4rvYL0aH00e7FuyJ5NLv7PJYpves0)`
 
-#### `Running webpack`
+#### 运行 webpack
 
-`Webpack can be run from the command line manually if installed globally, but generally you write a script inside the `package.json` file, which is then run using `npm` or `yarn`.`
+当 webpack 已经全局安装时，可以通过命令行手动运行，但是通常会在 `package.json` 文件中写入脚本，通过 `npm` 或 `yarn` 来运行。
 
-`` For example this `package.json` scripts definition we used before: ``
+我们拿前面用过的 `package.json` 脚本作例子：
 
 ```
 "scripts": {
@@ -4801,29 +4801,29 @@ module.exports = {
 }
 ```
 
-`allows us to run `webpack`by running`
+它允许我们这样运行 `webpack` 
 
 ```plain
 npm run build
 ```
 
-`or`
+或是
 
 ```
 yarn run build
 ```
 
-`or simply`
+或
 
 ```
 yarn build
 ```
 
-#### `Watching changes`
+#### 监听变动
 
-`Webpack can automatically rebuild the bundle when a change in your app happens, and keep listening for the next change.`
+当你的 app 发生变动时，webpack 可以自动重新打包，并继续监听下一次变动。
 
-`Just add this script:`
+只用增加这段脚本：
 
 ```
 "scripts": {
@@ -4831,31 +4831,31 @@ yarn build
 }
 ```
 
-`and run`
+并且执行
 
 ```
 npm run watch
 ```
 
-`or`
+或
 
 ```
 yarn run watch
 ```
 
-`or simply`
+或
 
 ```
 yarn watch
 ```
 
-`One nice feature of the watch mode is that the bundle is only changed if the build has no errors. If there are errors, `watch`will keep listening for changes, and try to rebuild the bundle, but the current, working bundle is not affected by those problematic builds.`
+监听模式的一大特性是只在没有错误时打包。如果发现错误，会继续监听变动，尝试再次打包，但是当下运行的包不会被问题代码影响。
 
-#### `Handling images`
+#### 处理图像
 
-`` Webpack allows us to use images in a very convenient way, using the `[file-loader][134]`loader. ``
+使用 `[file-loader][134]` 后，webpack 让我们可以方便地使用图像。
 
-`This simple configuration:`
+只需简单的配置：
 
 ```
 module.exports = {
@@ -4874,7 +4874,7 @@ module.exports = {
 }
 ```
 
-`Allows you to import images in your JavaScript:`
+这样就可以在 JavaScript 中引入图像了：
 
 ```
 import Icon from './icon.png'
@@ -4883,13 +4883,13 @@ img.src = Icon
 element.appendChild(img)
 ```
 
-`(`img` is an HTMLImageElement. Check the [Image docs][135])`
+（`img` 是一个 HTMLImageElement，更新信息可以查看 [Image 文档][135]）
 
-`file-loader` can handle other asset types as well, like fonts, CSV files, xml, and more.`
+`file-loader` 可以处理其他类型的资源，如字体、CSV 文件、xml 等。
 
-`` Another nice tool to work with images is the `url-loader` loader. ``
+另一个处理图像的工具是 `url-loader`。
 
-`This example loads any PNG file smaller than 8KB as a [data URL][136].`
+这个例子中，任何小雨 8KB 的 PNG 文件都会作为 [数据 URL][136] 加载。
 
 ```
 module.exports = {
@@ -4913,9 +4913,9 @@ module.exports = {
 }
 ```
 
-#### `Process your SASS code and transform it to CSS`
+#### 处理 SASS 代码，并转换成 CSS 
 
-`Using`sass-loader`, `css-loader` and `style-loader`:`
+使用 `sass-loader`、`css-loader` 和 `style-loader`：
 
 ```
 module.exports = {
@@ -4936,11 +4936,11 @@ module.exports = {
 }
 ```
 
-#### `Generate Source Maps`
+#### 生成源地图
 
-`Since webpack bundles the code, Source Maps are mandatory to get a reference to the original file that raised an error, for example.`
+webpack 打包代码后，必须使用源地图来获取报错时对原始文件的引用。
 
-`` You tell webpack to generate source maps using the `devtool` property of the configuration: ``
+通过配置中的 `devtool` 属性来设置 webpack 源地图的类型：
 
 ```plain
 module.exports = {
@@ -4950,51 +4950,51 @@ module.exports = {
 }
 ```
 
-`` `devtool` has [many possible values][137], the most used probably are:``
+`devtool` 的[可选项][137] 非常多，最常用的有：
 
--   `` `none`: adds no source maps``
--   `` `source-map`: ideal for production, provides a separate source map that can be minimized, and adds a reference into the bundle, so development tools know that the source map is available. Of course you should configure the server to avoid shipping this, and just use it for debugging purposes``
--   `` `inline-source-map`: ideal for development, inlines the source map as a Data URL``
+- `none`” 不添加源地图
+- `source-map`：适用于生产环境，单独提供一份最小化的源地图，并添加对包的引用，这样开发工具就可以引用源地图了。不过你需要配置服务器不要传输源地图，仅用作调试目的。
+- `inline-source-map`：适用于开发环境，将源地图内联为数据 URL。
 
-### `SECTION 7: TESTING`
+### 第 7 部分：测试
 
-### `Jest`
+### Jest
 
-`Jest is a library for testing JavaScript code.`
+Jest 是一个用于测试 JavaScript 代码的库。
 
-`It’s an open source project maintained by Facebook, and it’s especially well suited for React code testing, although not limited to that: it can test any JavaScript code. Its strengths are:`
+它是一个由 Facebook 维护的开源项目，尤其适合测试 React 代码，且不仅于此：它可以测试任何 JavaScript 代码。其优势包括：
 
--   `it’s fast`
--   `it can perform **snapshot testing**`
--   `it’s opinionated, and provides everything out of the box without requiring you to make choices`
+- 运行迅速
+- 可以进行**快照测试**
+- 配置固定，不需要你做任何配置，开箱即用
 
-`Jest is a tool very similar to Mocha, although they have differences:`
+Jest 是一种与 Mocha 非常类似的工具，尽管它们之间有一些差异：
 
--   `Mocha is less opinionated, while Jest has a certain set of conventions`
--   `Mocha requires more configuration, while Jest works usually out of the box, thanks to being opinionated`
--   `Mocha is older and more established, with more tooling integrations`
+- Mocha 的配置不那么固定，而 Jest 则由一系列使用规范
+- Mocha 需要自行配置，而 Jest 由于配置固定，可以开箱即用
+- Mocha 存在的时间更久、更成熟，因此有更多继承工具
 
-`In my opinion the biggest feature of Jest is it’s an out of the box solution that works without having to interact with other testing libraries to perform its job.`
+在我看来，Jest 最大的特性是开箱即用，不用与其他测试库产生交互。
 
-#### `Installation`
+#### 安装
 
-`` Jest is automatically installed in `create-react-app`, so if you use that, you don’t need to install Jest. ``
+`create-react-app` 会自动安装 Jest，因此如果你使用 `create-react-app`，就不用自己安装 Jest。
 
-`Jest can be installed in any other project using [Yarn][138]:`
+使用 [Yarn][138]可以在其他项目中安装 Jest：
 
 ```
 yarn add --dev jest
 ```
 
-`or [npm][139]:`
+或使用 [npm][139]：
 
 ```
 npm install --save-dev jest
 ```
 
-`notice how we instruct both to put Jest in the `devDependencies` part of the `package.json` file, so that it will only be installed in the development environment and not in production.`
+注意我们在以上两种安装方式中都将 Jest 放在 `package.json` 文件的 `devDependencies` 开发依赖部分，这样只有在开发环境而不是生成环境中才会安装 Jest。
 
-`` Add this line to the scripts part of your `package.json` file: ``
+在 `package.json` 文件中增加这行脚本：
 
 ```
 {
@@ -5004,25 +5004,25 @@ npm install --save-dev jest
 }
 ```
 
-`so that tests can be run using`yarn test` or `npm run test`.`
+这样就可以通过 `yarn test` 或 `npm run test` 来运行测试了。
 
-`Alternatively, you can install Jest globally:`
+此外，你也可以全局安装 Jest：
 
 ```
 yarn global add jest
 ```
 
-`` and run all your tests using the `jest` command line tool. ``
+并通过 `jest` 命令行工具运行所有的测试。
 
-#### `Create the first Jest test`
+#### 创建第一个 Jest 测试
 
-`` Projects created with `create-react-app` have Jest installed and preconfigured out of the box, but adding Jest to any project is as easy as typing ``
+尽管通过 `create-react-app` 创建的项目已经安装并预先配置了 Jest，不过在其他项目中添加 Jest 也非常简单
 
 ```
 yarn add --dev jest
 ```
 
-`Add to your `package.json` this line:`
+在 `package.json` 中增加以下代码：
 
 ```
 {
@@ -5032,13 +5032,13 @@ yarn add --dev jest
 }
 ```
 
-`` and run your tests by executing `yarn test` in your shell. ``
+并在终端运行 `yarn test` 来运行测试。
 
-`Now, you don’t have any tests here, so nothing is going to be executed:`
+现在，由于你还没有任何测试，因此不会执行任何操作：
 
 `![](https://cdn-media-1.freecodecamp.org/images/QJ4lMCN6PhDyBBZ8mPyLmLciew9p9cUE9ug0)`
 
-`` Let’s create the first test. Open a `math.js` file and type a couple functions that we’ll later test: ``
+让我们先创建一个测试。打开 `math.js` 文件，并输入几个我们稍后要测试的方法：
 
 ```plain
 const sum = (a, b) => a + b
@@ -5048,7 +5048,7 @@ const div = (a, b) => a / b
 export default { sum, mul, sub, div }
 ```
 
-`Now create a `math.test.js` file, in the same folder, and there we’ll use Jest to test the functions defined in `math.js`:`
+现在在同一文件夹中创建一个 `math.test.js` 文件，这个文件将用来测试 `math.js` 中定义的方法：
 
 ```
 const { sum, mul, sub, div } = require('./math')
@@ -5066,21 +5066,21 @@ test('Dividing 1 / 1 equals 1', () => {
 })
 ```
 
-`Running `yarn test` results in Jest being run on all the test files it finds, and returning us the end result:`
+运行 `yarn test` 会测试所有可以查找到的测试文件，并返回测试结果：
 
 `![](https://cdn-media-1.freecodecamp.org/images/vGSvRogM-QF8N3EP5j9vUYYrkWvRc89OhE98)`
 
-#### `Run Jest with VS Code`
+#### 在 VS Code 中运行 Jest
 
-`Visual Studio Code is a great editor for JavaScript development. The [Jest extension][140]offers a top notch integration for our tests.`
+Visual Studio Code 是非常厉害的 JavaScript 开发编辑器。[Jest 扩展][140]为你的测试提供一流的集成。
 
-`Once you install it, it will automatically detect if you have installed Jest in your devDependencies and run the tests. You can also invoke the tests manually by selecting the **Jest: Start Runner** command. It will run the tests and stay in watch mode to re-run them whenever you change one of the files that have a test (or a test file):`
+安装完成后会自动检测到你的开发依赖里已经安装了 Jest 并运行测试。你也可以通过手动选择 **Jest: Start Runner** 命令来运行测试，并且保持监听模式，当测试范围内的文件（或测试文件）发生变动时，重新运行测试：
 
 `![](https://cdn-media-1.freecodecamp.org/images/WYyCsxacP34Fss8u9jT5lT0u3O--1Uwz9cKW)`
 
-#### `Matchers`
+#### 匹配器
 
-`` In the previous article I used `toBe()` as the only **matcher**: ``
+在前一章我使用了 `toBe()` 作为唯一的匹配器：
 
 ```
 test('Adding 1 + 1 equals 2', () => {
@@ -5088,30 +5088,30 @@ test('Adding 1 + 1 equals 2', () => {
 })
 ```
 
-`A matcher is a method that lets you test values.`
+匹配器是帮你测试的方法。
 
-`` Most commonly used matchers, comparing the value of the result of `expect()` with the value passed in as argument, are: ``
+最常用的匹配器会比较 `expect()` 方法的结果和传入的参数，它们包括：
 
--   `` `toBe` compares strict equality, using `===` ``
--   `` `toEqual` compares the values of two variables. If it’s an object or array, it checks the equality of all the properties or elements``
--   `` `toBeNull` is true when passing a null value``
--   `` `toBeDefined` is true when passing a defined value (opposite to the above)``
--   `` `toBeUndefined` is true when passing an undefined value``
--   `` `toBeCloseTo` is used to compare floating values, avoiding rounding errors``
--   `` `toBeTruthy` true if the value is considered true (like an `if` does)``
--   `toBeFalsy` true if the value is considered false (like an `if` does)`
--   `toBeGreaterThan` true if the result of expect() is higher than the argument`
--   `` `toBeGreaterThanOrEqual` true if the result of expect() is equal to the argument, or higher than the argument``
--   `` `toBeLessThan` true if the result of expect() is lower than the argument``
--   `toBeLessThanOrEqual` true if the result of expect() is equal to the argument, or lower than the argument`
--   `` `toMatch` is used to compare strings with [regular expression][141] pattern matching``
--   `` `toContain` is used in arrays, true if the expected array contains the argument in its elements set``
--   `` `toHaveLength(number)`: checks the length of an array``
--   `` `toHaveProperty(key, value)`: checks if an object has a property, and optionally checks its value``
--   `toThrow` checks if a function you pass throws an exception (in general) or a specific exception`
--   `toBeInstanceOf()`: checks if an object is an instance of a class`
+- `toBe` 使用 `===`，比较值是否严格相等
+- `toEqual` 比较两个参数。如果是对象或数组，则比较它们的每一个属性或元素是否相等
+- `toBeNull` 当传入的值是 null 时，结果为 true
+- `toBeDefined` 当传入已定义的值（与上一条相反）时，结果为 true
+- `toBeUndefined` 当传入未定义的值时，结果为 true
+- `toBeCloseTo` 用于比较浮点数值，避免舍入误差
+- `toBeTruthy` 当传入的值为真（与 `if` 类似）时，结果为 true
+- `toBeFalsy` 当传入的值为假（与 `if` 类似）时，结果为 true
+- `toBeGreaterThan` 当 expect() 的结果大于传入的值时，结果为 true
+- `toBeGreaterThanOrEqual` 当 expect() 的结果大于或等于传入的值时，结果为 true
+- `toBeLessThan` 当 expect() 的结果小于传入的值时，结果为 true
+- `toBeLessThanOrEqual` 当 expect() 的结果小于或等于传入的值时，结果为 true
+- `toMatch` 用于比较字符串和[正则表达式][141]是否匹配
+- `toContain` 用于检查传入的值是否是数组的一个元素
+- `toHaveLength(number)` 用于检查数组的元素个数
+- `toHaveProperty(key, value)` 用于检查一个对象是否有某个属性，可以选择是否检查该属性值
+- `toThrow` 检查传入的方法正常情况下是否会抛出异常或抛出某个特定异常
+- `toBeInstanceOf()` 检查一个对象是否为某个类的实例
 
-`` All those matchers can be negated using `.not.` inside the statement, for example: ``
+所有的匹配器都可以通过在表达式中使用 `.not` 取反，如：
 
 ```
 test('Adding 1 + 1 does not equal 3', () => {
@@ -5119,18 +5119,18 @@ test('Adding 1 + 1 does not equal 3', () => {
 })
 ```
 
-`` For use with promises, you can use `.resolves` and `.rejects`: ``
+当用于 promise 时，可以使用 `.resolves` 和 `.rejects`：
 
 ```
 expect(Promise.resolve('lemon')).resolves.toBe('lemon')
 expect(Promise.reject(new Error('octopus'))).rejects.toThrow('octopus')
 ```
 
-#### `Setup`
+#### 启动
 
-`Before running your tests you will want to perform some initialization.`
+在运行测试之前，你可能需要执行一些初始化。
 
-`To do something once before all the tests run, use the `beforeAll()` function:`
+使用 `beforeAll()` 方法可以在所有测试运行前执行一次操作：
 
 ```
 beforeAll(() => {
@@ -5138,7 +5138,7 @@ beforeAll(() => {
 })
 ```
 
-`` To perform something before each test runs, use `beforeEach()`: ``
+使用 `beforeEach()` 方法可以在每一次测试运行前执行操作：
 
 ```
 beforeEach(() => {
@@ -5146,9 +5146,9 @@ beforeEach(() => {
 })
 ```
 
-#### `Teardown`
+#### 拆卸
 
-`Just as you can do with setup, you can also perform something after each test runs:`
+你不仅可以在测试启动时执行操作，也可以在每次测试运行结果之后执行操作：
 
 ```plain
 afterEach(() => {
@@ -5156,7 +5156,7 @@ afterEach(() => {
 })
 ```
 
-`and after all tests end:`
+也可以在所有测试运行结束后执行：
 
 ```
 afterAll(() => {
@@ -5164,9 +5164,9 @@ afterAll(() => {
 })
 ```
 
-#### `Group tests using describe()`
+#### `describe()` 给测试分组
 
-`You can create groups of tests, in a single file, that isolate the setup and teardown functions:`
+你可以在一个文件中给测试分组，让它们有各自的启动和拆卸方法：
 
 ```
 describe('first set', () => {
@@ -5191,13 +5191,13 @@ describe('second set', () => {
 })
 ```
 
-#### `Testing asynchronous code`
+#### 测试异步代码
 
-`Asynchronous code in modern JavaScript can have basically 2 forms: callbacks and promises. On top of promises we can use async/await.`
+现代 JavaScript 的异步代码有两种形式：回调函数和 promise。除了 promise，我们还可以使用 async/await。
 
-#### `Callbacks`
+#### 回调函数
 
-`You can’t have a test in a callback, because Jest won’t execute it — the execution of the test file ends before the callback is called. To fix this, pass a parameter to the test function, which you can conveniently call `done`. Jest will wait until you call `done()`before ending that test:`
+回调函数中无法加入测试，因为 Jest 不会执行它 —— 测试文件会在回调函数执行前执行。为了解决这一问题，你可以给测试方法传入一个 `done` 参数。Jest 会在调用 `done()` 之后结束测试：
 
 ```
 //uppercase.js
@@ -5217,9 +5217,9 @@ test(uppercase 'test' to equal 'TEST', (done) => {
 
 `![](https://cdn-media-1.freecodecamp.org/images/wsyP30ZeaXYM6LTu4UOiTIg4cFjUOo4GtutV)`
 
-#### `Promises`
+#### Promises
 
-`With functions that return promises, we simply **return a promise** from the test:`
+当测试返回 promise 的方法时，测试也**返回 promise**
 
 ```
 //uppercase.js
@@ -5244,7 +5244,7 @@ test(uppercase 'test' to equal 'TEST', () => {
 
 `![](https://cdn-media-1.freecodecamp.org/images/8j7LKC8uKE5Tw0X4WN4Gm0rD3NziyPxNwyCn)`
 
-`` Promises that are rejected can be tested using `.catch()`: ``
+使用 `.catch()` 可以测试失败的 promise：
 
 ```
 //uppercase.js
@@ -5269,9 +5269,9 @@ test(uppercase 'test' to equal 'TEST', () => {
 
 `![](https://cdn-media-1.freecodecamp.org/images/F9HWCuZKWwG1RMZdNkDAaGMRsC0zaIsMokia)`
 
-#### `Async/await`
+#### Async/await
 
-`To test functions that return promises we can also use async/await, which makes the syntax very straightforward and simple:`
+测试返回 promise 的方法时，我们也可以使用 async/await，这样可以让语法更加直接和简单：
 
 ```
 //uppercase.test.js
@@ -5284,39 +5284,39 @@ test(uppercase 'test' to equal 'TEST', async () => {
 
 `![](https://cdn-media-1.freecodecamp.org/images/7xWQMgM0PC9AGUBewAzcCgNWvHIjjxerfRxR)`
 
-#### `Mocking`
+#### 模拟
 
-`In testing, **mocking** allows you to test functionality that depends on:`
+在测试中，**模拟**可以测试基于以下功能的方法：
 
--   `**Database**`
--   `**Network** requests`
--   `access to **Files**`
--   `any **External** system`
+- **数据库**
+- **网络**请求
+- **文件**访问
+- 任何**外部**系统
 
-`so that:`
+因此：
 
-1.  `your tests run **faster**, giving a quick turnaround time during development`
-2.  `your tests are **independent** of network conditions, or the state of the database`
-3.  `your tests do not **pollute** any data storage because they do not touch the database`
-4.  `any change done in a test does not change the state for subsequent tests, and re-running the test suite should start from a known and reproducible starting point`
-5.  `you don’t have to worry about rate limiting on API calls and network requests`
+1. 测试运行**更快**，在开发时提供更快的周转时间
+2. 测试**独立于**网络连接或数据库状态
+3. 由于测试不会接触数据库，因此也不会**污染**任何数据存储
+4. 测试产生变得不会影响接下来的测试，重新运行测试会从已知的可重复使用的起点开始
+5. 不用担心 API 调用或网络请求的速率限制
 
-`Mocking is useful when you want to avoid side effects (e.g. writing to a database) or you want to skip slow portions of code (like network access), and also avoids implications with running your tests multiple times (e.g. imagine a function that sends an email or calls a rate-limited API).`
+当你希望避免副作用（如数据库写入）或跳过代码的低速运行部分（如网络请求）或防止多次运行测试造成的影响（如发送邮件或调用有速率限制的 API）时，模拟非常有用。
 
-`Even more important, if you are writing a **Unit Test**, you should test the functionality of a function in isolation, not with all its baggage of things it touches.`
+更重要的是，如果你正在编写**单元测试**，你应该单独测试一个功能，而不是它涉及到的所有功能。
 
-`Using mocks, you can inspect if a module function has been called and which parameters were used, with:`
+使用模拟时，你可以通过以下方法检查模块中调用的方法和使用的参数：
 
--   `expect().toHaveBeenCalled()`: check if a spied function has been called`
--   `` `expect().toHaveBeenCalledTimes()`: count how many times a spied function has been called``
--   `` `expect().toHaveBeenCalledWith()`: check if the function has been called with a specific set of parameters``
--   `expect().toHaveBeenLastCalledWith()`: check the parameters of the last time the function has been invoked`
+- `expect().toHaveBeenCalled()`：检查目标函数是否被调用
+- `expect().toHaveBeenCalledTimes()`：检查目标函数被调用的次数
+- `expect().toHaveBeenCalledWith()`：检查目标函数调用时，是否使用了特定的参数
+- `expect().toHaveBeenLastCalledWith()`：检查目标函数上一次调用时的参数
 
-#### `Spy packages without affecting the functions code`
+#### 在不影响代码的情况下检查包
 
-`When you import a package, you can tell Jest to “spy” on the execution of a particular function, using `spyOn()`, without affecting how that method works.`
+当你引入包后，可以通过 `spyOn()` 方法，在不影响包的功能的情况下，监听特定包的使用情况：
 
-`Example:`
+如：
 
 ```
 const mathjs = require('mathjs')
@@ -5328,11 +5328,11 @@ test(The mathjs log function, () => {
 })
 ```
 
-#### `Mock an entire package`
+#### 模拟整个包
 
-`` Jest provides a convenient way to mock an entire package. Create a `**mocks**`folder in the project root, and in this folder create one JavaScript file for each of your packages. ``
+Jest 提供了方便地模拟整个包的方法。在项目根目录下创建一个 **mocks** 文件夹，并在文件夹中给每个包创建一个 JavaScript 文件。
 
-`` Say you import `mathjs`. Create a `**mocks**/mathjs.js` file in your project root, and add this content: ``
+例如你引入了 `mathjs` 包，那么在你的项目根目录下创建一个 `mocks/mathjs.js` 文件，并加入以下内容：
 
 ```plain
 module.exports = {
@@ -5340,7 +5340,7 @@ module.exports = {
 }
 ```
 
-`This will mock the log() function of the package. Add as many functions as you want to mock:`
+这个文件会模拟包的 log() 方法。你可以添加任意你希望模拟的方法：
 
 ```
 const mathjs = require('mathjs')
@@ -5352,9 +5352,9 @@ test(The mathjs log function, () => {
 })
 ```
 
-#### `Mock a single function`
+#### 模拟单个方法
 
-`More simply, you can mock a single function using `jest.fn()`:`
+你可以使用 `jest.fn()` 更简单地模拟单个方法：
 
 ```
 const mathjs = require('mathjs')
@@ -5367,17 +5367,17 @@ test(The mathjs log function, () => {
 })
 ```
 
-`You can also use `jest.fn().mockReturnValue('test')`to create a simple mock that does nothing except returning a value.`
+你还可以使用 `jest.fn().mockReturnValue('test')` 来模拟一个只返回某个值而不包含其他功能的函数。
 
-#### `Pre-built mocks`
+#### 预制模拟
 
-`` You can find pre-made mocks for popular libraries. For example this package [https://github.com/jefflau/jest-fetch-mock][142] allows you to mock `fetch()` calls, and provide sample return values without interacting with the actual server in your tests. ``
+你可以在常用库中找到预制模拟。如这个包[https://github.com/jefflau/jest-fetch-mock][142] 允许你模拟调用 `fetch()`，在不与服务器交互的情况下提供示例返回值。
 
-#### `Snapshot testing`
+#### 快照测试
 
-`Snapshot testing is a pretty cool feature offered by Jest. It can memorize how your UI components are rendered, and compare it to the current test, raising an error if there’s a mismatch.`
+快照测试是 Jest 的一项非常厉害的功能。它可以记录 UI 组件的渲染情况，并与当前测试做比较，如果渲染情况不一致，则抛出错误。
 
-`` This is a simple test on the App component of a simple `create-react-app` application (make sure you install `react-test-renderer`): ``
+下面是给一个简单的 `create-react-app` 应用的 App 组件的测试（你需要安装 `react-test-renderer`）：
 
 ```
 import React from 'react'
@@ -5389,46 +5389,48 @@ it('renders correctly', () => {
 })
 ```
 
-`the first time you run this test, Jest saves the snapshot to the `**snapshots**`folder. Here’s what App.test.js.snap contains:`
+当你第一次运行测试时，Jest 在 **snapshot** 文件夹中保存了快照。下面是 App.test.js.snp 文件的内容：
 
 ```
 // Jest Snapshot v1, https://goo.gl/fbAQLP
-exports[renders correctly 1] = &lt;div
+exports[`renders correctly 1`] = `
+<div
   className="App"
-&gt;
-  &lt;header
+>
+  <header
     className="App-header"
-  &gt;
-    &lt;img
+  >
+    <img
       alt="logo"
       className="App-logo"
       src="logo.svg"
-    /&gt;
-    &lt;h1
+    />
+    <h1
       className="App-title"
-    &gt;
+    >
       Welcome to React
-    &lt;/h1&gt;
-  &lt;/header&gt;
-  &lt;p
+    </h1>
+  </header>
+  <p
     className="App-intro"
-  &gt;
+  >
     To get started, edit
-    &lt;code&gt;
+    <code>
       src/App.js
-    &lt;/code&gt;
+    </code>
      and save to reload.
-  &lt;/p&gt;
-&lt;/div&gt;
+  </p>
+</div>
+`
 ```
 
-`As you see it’s the code that the App component renders, nothing more.`
+正如你所看到的，文件中只保存了 App 组件的渲染情况。
 
-`` The next time the test compares the output of `<App` /> to this. If App changes, you get an error: ``
+下一次运行测试时会比较 `<App />` 输出的内容，如果 App 内容发生变化，就会报错：
 
 `![](https://cdn-media-1.freecodecamp.org/images/imS-QSkC1rmVVRYLkLYSJrGk5b3DOjodEJkx)`
 
-`When using`yarn test` in `create-react-app`you are in **watch mode**, and from there you can press`w`and show more options:`
+当在 `create-react-app` 中使用 `yarn test` 时会使用**监听模式**，你可以输入 `w` 来显示更多选项：
 
 ```plain
 Watch Usage
@@ -5439,19 +5441,19 @@ Watch Usage
  › Press Enter to trigger a test run.
 ```
 
-`` If your change is intended, pressing `u` will update the failing snapshots, and make the test pass. ``
+如果变动是有意为之，可以输入 `u` 来更新报错的快照，并让测试通过。
 
-`` You can also update the snapshot by running `jest -u` (or `jest --updateSnapshot`) outside of watch mode. ``
+你也可以在非监听模式下通过输入 `jest -u`（或 `jest --updateSnapshot`）来更新快照。
 
-### `Testing React components`
+### 测试 React 组件
 
-`The easiest way to start with testing React components is doing snapshot testing, a testing technique that lets you test components in isolation.`
+最简单的测试 React 组件的方法就是快照测试，它让你可以独立地测试每个组件。
 
-`If you are familiar with testing software, it’s just like unit testing you do for classes: you test each component functionality.`
+如果你熟悉测试软件，快照测试就如同你对类做单元测试一样：独立测试每个组件的功能。
 
-`` I assume you created a React app with `create-react-app`, which already comes with **Jest** installed, the testing package we'll need. ``
+假设你通过 `create-react-app` 创建了一个 React 应用，应用中已经安装了我们要使用的 **Jest**。
 
-`Let’s start with a simple test. CodeSandbox is a great environment to try this out. Start with a React sandbox, and create an `App.js`component in a`components` folder, and add an `App.test.js`file.`
+让我们从一个简单的测试开始。CodeSandbox 是一个非常方便的测试环境。在 React 沙盒的 `components` 文件夹中创建一个 `App.js` 组件和一个 `App.test.js` 文件。
 
 ```
 import React from 'react'
@@ -5465,7 +5467,7 @@ export default function App() {
 }
 ```
 
-`Our first test is dumb:`
+我们的第一个测试非常简单：
 
 ```
 test('First test', () => {
@@ -5473,17 +5475,17 @@ test('First test', () => {
 })
 ```
 
-`When CodeSandbox detects test files, it automatically runs them for you, and you can click the Tests button in the bottom of the view to show your test results:`
+当 CodeSandbox 检测到测试文件时，它会自动运行测试，你可以点击底部的测试按钮来查看测试结果：
 
 `![](https://cdn-media-1.freecodecamp.org/images/DKFPyZSWF0O2ldKLAMyz7i0Di9NLqMs-ChQ4)`
 
-`A test file can contain multiple tests:`
+测试文件中可以包含多个测试：
 
 `![](https://cdn-media-1.freecodecamp.org/images/iWZgjKzyxhyAtvjpsyTTEpzs4pKot938aVjk)`
 
-`Let’s do something a bit more useful now, to actually test a React component. We only have App now, which is not doing anything really useful, so let’s first set up the environment with a little application with more functionality: the counter app we built previously. If you skipped it, you can go back and read how we built it, but for easier reference I add it here again.`
+让我们来对 React 组件做一些有用的测试。我们现在只有 App 组件，它没有实现任何功能，所以我们来给应用增加一些功能：我们使用前面创建的计数器应用。如果你跳过了这部分内容，可以回到前面看看我们如何创建计数器，但是为了更方便查看，我在这里再展示一次。
 
-`It’s just 2 components: App and Button. Create the `App.js`file:`
+它只有两个组件：App 和 Button。创建 `App.js` 文件：
 
 ```
 import React, { useState } from 'react'
@@ -5506,7 +5508,7 @@ const App = () => {
 export default App
 ```
 
-`and the `Button.js` file:`
+和 `Button.js` 文件：
 
 ```
 import React from 'react'
@@ -5519,13 +5521,13 @@ const Button = ({ increment, onClickFunction }) => {
 export default Button
 ```
 
-`` We are going to use the `react-testing-library`, which is a great help as it allows us to inspect the output of every component and to apply events on them. You can read more about it on [https://github.com/kentcdodds/react-testing-library][144] or watch [this video][145]. ``
+接下来我们使用 `react-testing-library`，它能够检测每一个组件输出的内容，并给他们添加事件。你可以在[https://github.com/kentcdodds/react-testing-library][144]或者观看[视频][145]了解更多关于 `react-testing-library` 的内容。
 
-`Let’s test the Button component first.`
+我们先测试 Button 组件。
 
-`` We start by importing `render` and `fireEvent` from `react-testing-library`, two helpers. The first lets us render JSX. The second lets us emit events on a component. ``
+我们从 `react-testing-library` 引入 `render` 和 `fireEvent` 两个方法。`render` 可以渲染 JSX，`fireEvent` 可以触发组件的事件。
 
-`Create a `Button.test.js`and put it in the same folder as`Button.js`.`
+创建 `Button.test.js` 文件，将它放在 `Button.js` 所在的文件夹下。
 
 ```plain
 import React from 'react'
@@ -5533,7 +5535,7 @@ import { render, fireEvent } from 'react-testing-library'
 import Button from './Button'
 ```
 
-`` Buttons are used in the app to accept a click event and then they call a function passed to the `onClickFunction` prop. We add a `count` variable and we create a function that increments it: ``
+应用中的按钮组件在触发点击事件时，调用通过 `onClickFunction` 属性传入的方法。我们给方法增加 `count` 变量，并创建一个自增 count 的方法：
 
 ```
 let count
@@ -5542,11 +5544,11 @@ const incrementCount = increment => {
 }
 ```
 
-`Now off to the actual tests. We first initialize count to 0, and we render a `+1` `Button`component passing a`1`to`increment` and our `incrementCount` function to `onClickFunction`.`
+现在开始测试。我们先将计数器初始值设为 0，接着渲染一个点击会 `+1` 的 Button 组件，将 `1` 赋值给 `increment`，将 `incrementCount` 方法传给 `onClickFunction` 属性。
 
-`` Then we get the content of the first child of the component, and we check it outputs `+1`. ``
+这样我们就得到了组件的第一个子元素的内容，并检查它的输出是 `+1`。
 
-`We then proceed to clicking the button, and we check that the count got from 0 to 1:`
+接着我们点击按钮，检查计数从 0 变为 1：
 
 ```
 test('+1 Button works', () => {
@@ -5562,7 +5564,7 @@ test('+1 Button works', () => {
 })
 ```
 
-`Similarly we test a +100 button, this time checking the output is `+100` and the button click increments the count of 100.`
+同样的，我们测试一个 +100 的按钮，我们检查它的输出是 `+100` ，且点击按钮后计数增加 100。
 
 ```plain
 test('+100 Button works', () => {
@@ -5578,7 +5580,7 @@ test('+100 Button works', () => {
 })
 ```
 
-`Let’s test the App component now. It shows 4 buttons and the result in the page. We can inspect each button and see if the result increases when we click them, clicking multiple times as well:`
+现在让我们测试 App 组件。页面展示了 4 个按钮和当前的计数结果。我们可以通过点击每个按钮，并检查点击后计数的结果变化，也可以点击多次：
 
 ```
 import React from 'react'
@@ -5611,75 +5613,75 @@ test('App works', () => {
 })
 ```
 
-`Check the code working on this CodeSandbox: [https://codesandbox.io/s/pprl4y0wq][146]`
+可以在 CodeSandbox[https://codesandbox.io/s/pprl4y0wq][146] 里试试上面的代码。
 
-### `SECTION 8: THE REACT ECOSYSTEM`
+### 第 8 部分：React 生态
 
-`The ecosystem around React is huge. Here I introduce you to 4 of the most popular projects based upon React: React Router, Redux, Next.js, Gatsby.`
+围绕 React 的生态系统巨大。在这里我将介绍 4 个基于 React 的最最受欢迎的项目：React Router、 Redux、 Next.js、 Gatsby。
 
-### `React Router`
+### React Router
 
-`React Router is the de-facto React routing library, and it’s one of the most popular projects built on top of React.`
+React Router 是事实上的 React 路由库，它是基于 React 的最受欢迎的的项目之一。
 
-`React at its core is a very simple library, and it does not dictate anything about routing.`
+React 本质上是一个非常简单的库，它没有实现任何关于路由的功能。
 
-`Routing in a Single Page Application is the way to introduce some features to navigating the app through links, which are **expected** in normal web applications:`
+在单页面应用中，路由是通过链接来导航到应用不同部分的功能，这些功能在正常的网页应用中是**预期内的**：
 
-1.  `The browser should **change the URL** when you navigate to a different screen`
-2.  `**Deep linking** should work: if you point the browser to a URL, the application should reconstruct the same view that was presented when the URL was generated.`
-3.  `The **browser back (and forward) button** should work like expected.`
+1. 当导航到其他屏幕时，浏览器应该**变更 URL**
+2. **深度链接**应该起作用：将浏览器指向某个 URL 时，应用程序应重建与生成 URL 时相同的视图。
+3. **浏览器的回退（和前进）按钮**应该如预期一样生效
 
-`**Routing links together your application navigation with the navigation features offered by the browser**: the **address bar** and the **navigation buttons**.`
+应用的导航由路由和浏览器提供的导航功能：**地址栏**和**导航按钮**，共同组成
 
-`React Router offers a way to write your code so that **it will show certain components of your app only if the route matches what you define**.`
+React Router 让你的代码能够**仅当路由与定义的内容相匹配时才展示特定组件**。
 
-### `Installation`
+### 安装
 
-`With [npm][147]:`
+通过 [npm][147]安装：
 
 ```
 npm install react-router-dom
 ```
 
-`With [Yarn][148]:`
+通过 [Yarn][148]安装：
 
 ```
 yarn add react-router-dom
 ```
 
-### `Types of routes`
+### 路由的类型
 
-`React Router provides two different kind of routes:`
+React Router 提供两种不同的路由类型：
 
--   `` `BrowserRouter` ``
--   `` `HashRouter` ``
+- BrowserRouter 浏览器路由
+- HashRouter 哈希路由
 
-`One builds classic URLs, the other builds URLs with the hash:`
+一个构建传统的 URL，一个构建带有哈希值的 URL：
 
 ```
 https://application.com/dashboard   /* BrowserRouter /
 https://application.com/#/dashboard / HashRouter    */
 ```
 
-`` Which one to use is mainly dictated by the browsers you need to support. `BrowserRouter` uses the [History API][151], which is relatively recent, and not supported in IE9 and below. If you don't have to worry about older browsers, it's the recommended choice. ``
+使用哪种 URL 取决于你希望适配的浏览器。`BrowserRouter` 使用相对较新的 [History API][151]，IE9 及更低版本的浏览器不支持这一 API。如果你不需要考虑老版本浏览器，则建议使用它。
 
-### `Components`
+### 组件
 
-`The 3 components you will interact the most when working with React Router are:`
+使用 React Router 时，交互最多的 3 个组件是：
 
--   `BrowserRouter`, usually aliased as `Router`
--   `` `Link` ``
--   `Route`
+- `BrowserRouter`，通常使用别名 `Router`
+- `Link`
+- `Route`
 
-`BrowserRouter` wraps all your Route components.`
+`BrowserRouter` 包住了所有的路由组件。
 
-`` `Link` components are - as you can imagine - used to generate links to your routes``
+`Link` 组件用于生成导向路由的链接。
 
-`Route` components are responsible for showing - or hiding - the components they contain.`
+`Route` 组件用于展示或隐藏组件包含的内容。
 
 ### `BrowserRouter`
 
-`Here’s a simple example of the BrowserRouter component. You import it from react-router-dom, and you use it to wrap all your app:`
+这是一个 BrowserRouter 组件的简单示例。从 react-router-dom 引入 BrowserRouter，并用它包起你的应用：
 
 ```
 import React from 'react'
@@ -5695,11 +5697,11 @@ ReactDOM.render(
 )
 ```
 
-`` A BrowserRouter component can only have one child element, so we wrap all we’re going to add in a `div` element. ``
+BrowserRouter 组件只能有一个子元素，所以我们通过一个 `div` 元素包住所有要添加的元素。 
 
 ### `Link`
 
-`` The Link component is used to trigger new routes. You import it from `react-router-dom`, and you can add the Link components to point at different routes, with the `to`attribute: ``
+Link 租用用于触发新的路由。从 `react-router-dom` 引入 `Link`，你可以通过给 Link 组件设置 `to` 属性，让它导向不同的路由：
 
 ```
 import React from 'react'
@@ -5721,7 +5723,7 @@ ReactDOM.render(
 
 ### `Route`
 
-`Now let’s add the Route component in the above snippet to make things actually work as we want:`
+现在让我们给上面的代码添加 Route 组件，从而使它如我们希望的那样起作用：
 
 ```
 import React from 'react'
@@ -5743,37 +5745,39 @@ ReactDOM.render(
   <Router>
     <div>
       <aside>
-        <Link to={/}>Dashboard</Link>
-        <Link to={/about}>About</Link>
+        <Link to={`/`}>Dashboard</Link>
+        <Link to={`/about`}>About</Link>
       </aside>
-  &lt;main&gt;
-    &lt;Route exact path="/" component={Dashboard} /&gt;
-    &lt;Route path="/about" component={About} /&gt;
-  &lt;/main&gt;
-&lt;/div&gt;  </Router>,
+      
+      <main>
+        <Route exact path="/" component={Dashboard} />
+        <Route path="/about" component={About} />
+      </main>
+    </div>
+  </Router>,
   document.getElementById('app')
 )
 ```
 
-`Check this example on Glitch: [https://flaviocopes-react-router-v4.glitch.me/][152]`
+查看 Glitch：[https://flaviocopes-react-router-v4.glitch.me/][152]上的例子
 
-`When the route matches `/`, the application shows the **Dashboard** component.`
+当路由匹配 `/` 时，应用会展示 **Dashboard** 组件。
 
-`When the route is changed by clicking the “About” link to `/about`, the Dashboard component is removed and the **About** component is inserted in the DOM.`
+当点击 "About" 链接，路由导向 `/about` 时，Dashboard 组件会被移除，**About** 组件插入到 DOM 中。
 
-`Notice the `exact` attribute. Without this, `path="/"` would also match `/about`, since`/`is contained in the route.`
+注意 `exact` 属性。如果没有这一属性，由于 `/about` 也包含了 `/`，`path="/"`会同样匹配到 `/about`。
 
-### `Match multiple paths`
+### 匹配多个路径
 
-`` You can have a route respond to multiple paths simply using a regex, because `path` can be a regular expressions string: ``
+你可以通过使用正则表达式让路由匹配到多个路径，因为 `path` 属性可以接受正则字符串：
 
 ```
 <Route path="/(about|who)/" component={Dashboard} />
 ```
 
-### `Inline rendering`
+### 内联渲染
 
-`` Instead of specifying a `component` property on `Route`, you can set a `render` prop: ``
+除了在 `Route` 中指定 `component` 属性，你也可以设置 `render` 属性：
 
 ```
 <Route
@@ -5787,9 +5791,9 @@ ReactDOM.render(
 />
 ```
 
-### `Match dynamic route parameter`
+### 匹配动态路由参数
 
-`You already saw how to use static routes like`
+你已经看到如何使用静态路由了：
 
 ```
 const Posts = () => (
@@ -5802,7 +5806,7 @@ const Posts = () => (
 <Route exact path="/posts" component={Posts} />
 ```
 
-`Here’s how to handle dynamic routes:`
+下面是如何使用动态路由：
 
 ```
 const Post = ({match}) => (
@@ -5815,9 +5819,9 @@ const Post = ({match}) => (
 <Route exact path="/post/:id" component={Post} />
 ```
 
-`In your Route component you can lookup the dynamic parameters in `match.params`.`
+在 Route 组件中，你可以在 `match.params` 中查看动态参数。
 
-`` `match` is also available in inline rendered routes, and this is especially useful in this case, because we can use the `id` parameter to lookup the post data in our data source before rendering Post:``
+`match` 在内联渲染中也可用，且在这种情况中特别有用，因为我们在渲染 Post 组件前，使用 `id` 参数在数据源者能够查找发布的内容：
 
 ```
 const posts = [
@@ -5836,33 +5840,34 @@ const Post = ({post}) => (
 )} />
 ```
 
-### `Redux`
+### Redux
 
-`Redux is a state manager that’s usually used along with React, but it’s not tied to that library — it can be used with other technologies as well, but we’ll stick to React for the sake of the explanation..`
+Redux 是常与 React 一同使用的状态管理器，但不仅限于同 React 一同使用 —— 它也可以和其他框架一同使用，不过为了便于解释，我们将使用 React。
 
-`Redux is a way to manage an application state, and move it to an **external global store**.`
+Redux 是用于管理应用状态的方案，它将状态移动到**外部全局存储**。
 
-`There are a few concepts to grasp, but once you do, Redux is a very simple approach to the problem.`
+使用 Redux 需要掌握一些概念，但是一旦掌握后，使用 Redux 来解决问题就非常简单了。
 
-`Redux is very popular with React applications, but it’s in no way unique to React: there are bindings for nearly any popular framework. That said, I’ll make some examples using React as it is its primary use case.`
+Redux 在 React 应用中非常流行，但并不是只用于 React：它和几乎所有的流行框架都有绑定。也就是说，我将使用 React 作为主要用例来举例说明。
 
-#### `When should you use Redux?`
+#### 何时使用 Redux？
 
-`Redux is ideal for medium to big apps, and you should only use it when you have trouble managing the state with the default state management of React, or the other library you use.`
+Redux 适用于中到大型应用，当不方便使用 React 或任何你使用的库的默认状态管理器时，可以使用 Redux。
 
 `Simple apps should not need it at all (and there’s nothing wrong with simple apps).`
+简单的应用不需要使用 Redux（并不是说简单的应用不好）。
 
-#### `Immutable State Tree`
+#### 不可修改的状态树
 
-`In Redux, the whole state of the application is represented by **one** [JavaScript][153] object, called **State** or **State Tree**.`
+Redux 里，整个应用的状态由**一个** [JavaScript][153] 对象表示，称为 **State 状态**或**State Tree 状态树**。
 
-`We call it **Immutable State Tree** because it is read only: it can’t be changed directly.`
+我们称之为**不可修改的状态树**因为它是只读的：不能直接修改。
 
-`It can only be changed by dispatching an **Action**.`
+它只能通过调用 **Action 操作** 来修改。
 
-#### `Actions`
+#### Actions 操作
 
-`An **Action** is **a JavaScript object that describes a change in a minimal way** (with just the information needed):`
+一个 **Action 操作** 是一个 JavaScript 对象，它用最简单的方式描述变动（仅包含需要的信息）：
 
 ```
 {
@@ -5875,28 +5880,28 @@ const Post = ({post}) => (
 }
 ```
 
-`` The only requirement of an action object is having a `type` property, whose value is usually a string. ``
+操作对象唯一的要求是有一个 `type` 属性，其值通常是字符串。
 
-#### `Actions types should be constants`
+#### 操作对象应该是常量
 
-`In a simple app an action type can be defined as a string, as I did in the example in the previous lesson.`
+在简单的应用中，操作类型可以被定义成字符串，就像我在上一个例子中那样。
 
-`When the app grows is best to use constants:`
+当应用扩展时，最好使用常量：
 
 ```
 const ADD_ITEM = 'ADD_ITEM'
 const action = { type: ADD_ITEM, title: 'Third item' }
 ```
 
-`and to separate actions in their own files, and import them`
+并且最后将操作分散在各自的文件中，使用时引入它们
 
 ```
 import { ADD_ITEM, REMOVE_ITEM } from './actions'
 ```
 
-#### `Action creators`
+#### 操作创建器
 
-`**Actions Creators** are functions that create actions.`
+操作创建器是创建操作的方法。
 
 ```
 function addItem(t) {
@@ -5907,53 +5912,53 @@ function addItem(t) {
 }
 ```
 
-`You usually run action creators in combination with triggering the dispatcher:`
+我们通常结合触发调度程序来运行操作创建器：
 
 ```
 dispatch(addItem('Milk'))
 ```
 
-`or by defining an action dispatcher function:`
+或定义一个操作调度方法：
 
 ```
 const dispatchAddItem = i => dispatch(addItem(i))
 dispatchAddItem('Milk')
 ```
 
-#### `Reducers`
+#### Reducers
 
-`When an action is fired, something must happen, the state of the application must change.`
+当触发操作时，应用的状态必须变更。
 
-`This is the job of **reducers**.`
+这就是 **reducers** 的任务。
 
-`A **reducer** is a **pure function** that calculates the next State Tree based on the previous State Tree, and the action dispatched.`
+**reducer** 是一个 **纯函数**，它基于前一个状态树计算下一个状态树，并调度操作。
 
 ```
 ;(currentState, action) => newState
 ```
 
-`A pure function takes an input and returns an output without changing the input or anything else. Thus, a reducer returns a completely new state tree object that substitutes the previous one.`
+纯函数接收传入的参数，返回输出，而不修改传入的参数或其他任何内容。因此，reducer 在不修改前一个状态树的情况下返回一个全新的状态树。
 
-#### `What a reducer should not do`
+#### reducer 不应该做什么
 
-`A reducer should be a pure function, so it should:`
+reducer 应该是穿函数，因此它应该：
 
--   `never mutate its arguments`
--   `` never mutate the state, but instead create a new one with `Object.assign({}, ...)`  ``
--   `never generate side-effects (no API calls changing anything)`
--   `` never call non-pure functions, functions that change their output based on factors other than their input (e.g. `Date.now()` or `Math.random()`) ``
+- 永远不要修改参数
+- 永远不要修改状态，而是通过 `Object.assign({}, ...)` 创建一个新的状态
+- 永远不要产生副作用（不调用修改内容的 API）
+- 永远不要调用非纯函数，这些函数会根据输入以外的因素来改变其输出（例如`Date.now()`或`Math.random()`）
 
-`There is no reinforcement, but you should stick to the rules.`
+这些规则并非强制的，但是你应该遵循它们。
 
-#### `Multiple reducers`
+#### 多个 reducer
 
-`Since the state of a complex app could be really wide, there is not a single reducer, but many reducers for any kind of action.`
+由于复杂应用的状态覆盖非常广，因此不会只有单一的 reducer，而是有许多 recuder 处理不同的操作。
 
-#### `A simulation of a reducer`
+#### 一个模拟 reducer 
 
-`At its core, Redux can be simplified with this simple model:`
+本质上，Redux 可以简化为以下模型：
 
-#### `The state`
+#### 状态
 
 ```
 {
@@ -5965,7 +5970,7 @@ dispatchAddItem('Milk')
 }
 ```
 
-#### `A list of actions`
+#### 一系列操作
 
 ```
 { type: 'ADD_ITEM', title: 'Third item' }
@@ -5973,7 +5978,7 @@ dispatchAddItem('Milk')
 { type: 'CHANGE_LIST_TITLE', title: 'Road trip list' }
 ```
 
-#### `A reducer for every part of the state`
+#### 修改状态不同部分的 reducer 
 
 ```
 const title = (state = '', action) => {
@@ -5998,7 +6003,7 @@ const list = (state = [], action) => {
 }
 ```
 
-#### `A reducer for the whole state`
+#### 修改整个状态的 reducer
 
 ```
 const listManager = (state = {}, action) => {
@@ -6009,18 +6014,18 @@ const listManager = (state = {}, action) => {
 }
 ```
 
-#### `The Store`
+#### Store
 
-`The **Store** is an object that:`
+**Store** 是一个有如下功能的对象：
 
--   `**holds the state** of the app`
--   `` **exposes the state** via `getState()`  ``
--   `` allows us to **update the state** via `dispatch()`  ``
--   `allows us to (un)register a **state change listener** using `subscribe()`
+- **包含**整个应用的**状态**
+- 通过 `getState()` **暴露状态**
+- 允许我们通过 `dispatch()` **更新状态**
+- 允许我们通过 `subscribe()` 注册或者注销一个**状态变动监听器**
 
-`A store is **unique** in the app.`
+应用的 store 是**独一无二**的。
 
-`Here is how a store for the listManager app is created:`
+下面看看列表管理器应用的 store 是如何创建的：
 
 ```
 import { createStore } from 'redux'
@@ -6028,27 +6033,27 @@ import listManager from './reducers'
 let store = createStore(listManager)
 ```
 
-#### `Can I initialize the store with server-side data?`
+#### 我可以通过服务端的数据初始化 store 吗？
 
-`Sure, **just pass a starting state**:`
+当然可以，**只用传入初始状态即可**：
 
 ```plain
 let store = createStore(listManager, preexistingState)
 ```
 
-#### `Getting the state`
+#### 获取状态
 
 ```
 store.getState()
 ```
 
-#### `Update the state`
+#### 更新状态
 
 ```
 store.dispatch(addItem('Something'))
 ```
 
-#### `Listen to state changes`
+#### 监听状态变动
 
 ```
 const unsubscribe = store.subscribe(() =>
@@ -6057,61 +6062,61 @@ const unsubscribe = store.subscribe(() =>
 unsubscribe()
 ```
 
-#### `Data Flow`
+#### 数据流
 
-`Data flow in Redux is always **unidirectional**.`
+Redux 中的数据流永远是**单向**的。
 
-`You call `dispatch()` on the Store, passing an Action.`
+你可以传入一个 action 对 store 调用 `dispatch()` 方法。
 
-`The Store takes care of passing the Action to the Reducer, generating the next State.`
+store 负责将 action 传给 reducer，并生成下一个状态。
 
-`The Store updates the State and alerts all the Listeners.`
+store 更新状态，并通知所有的监听器。
 
-### `Next.js`
+### Next.js
 
-`Working on a modern [JavaScript][154] application powered by [React][155] is awesome until you realize that there are a couple problems related to rendering all the content on the client-side.`
+编写由 [React][155] 驱动的现代 [JavaScript][154] 应用非常棒，直到你意识到在客户端呈现所有内容时会遇到一些问题。
 
-`First, the page takes longer to the become visible to the user, because before the content loads, all the JavaScript must load, and your application needs to run to determine what to show on the page.`
+首先，页面呈现给用户需要一些时间，因为在内容加载完成之前，所有的 JavaScript 需要加载完成，应用需要决定哪些内容展示在页面上。
 
-`Second, if you are building a publicly available website, you have a content SEO issue. Search engines are getting better at running and indexing JavaScript apps, but it’s much better if we can send them content instead of letting them figure it out.`
+其次，如果你创建了一个对公众可见的网站，你会遇到内容 SEO 问题。搜索引擎在运行和索引 JavaScript 应用上取得了进步，但是如果我们能够自行发送内容而不是由它们来查找内容会更好。
 
-`The solution to both of those problems is **server rendering**, also called **static pre-rendering**.`
+这些问题的解决方案是**服务端渲染**，也叫做**静态预渲染**。
 
-`Next.js is one React framework to do all of this in a very simple way, but it’s not limited to this. It’s advertised by its creators as a **zero-configuration, single-command toolchain for React apps**.`
+Next.js 是一个可以简单实现这些功能，且不局限于此的 React 框架。它的创建者声称它可以**零配置、通过简单命令串起 React 应用**。
 
-`It provides a common structure that allows you to easily build a frontend React application, and transparently handle server-side rendering for you.`
+它提供了一个通用架构，可以轻松搭建 React 前端应用，并透明地处理服务端渲染。
 
-`Here is a non-exhaustive list of the main Next.js features:`
+这份列表罗列了 Next.js 的部分特性：
 
--   `**Hot Code Reloading**: Next.js reloads the page when it detects any change saved to disk.`
--   `**Automatic Routing**: any URL is mapped to the filesystem, to files put in the `pages` folder, and you don’t need any configuration (you have customization options of course).`
--   `**Single File Components**: using [styled-jsx][156], completely integrated as built by the same team, it’s trivial to add styles scoped to the component.`
--   `**Server Rendering**: you can (optionally) render React components on the server side, before sending the HTML to the client.`
--   `**Ecosystem Compatibility**: Next.js plays well with the rest of the JavaScript, Node and React ecosystem.`
--   `**Automatic Code Splitting**: pages are rendered with just the libraries and JavaScript that they need, no more.`
--   `` **Prefetching**: the `Link` component, used to link together different pages, supports a `prefetch` prop which automatically prefetches page resources (including code missing due to code splitting) in the background. ``
--   `**Dynamic Components**: you can import JavaScript modules and React Components dynamically ([https://github.com/zeit/next.js#dynamic-import][157]).`
--   `**Static Exports**: using the `next export`command, Next.js allows you to export a fully static site from your app.`
+- **热重载**：当检测到保存到磁盘的任何修改时，Next.js会重新加载页面
+- **自动路由**：任何 URL 都映射到文件系统中，也映射到放置在 `pages` 文件夹中的文件，并且你不需要任何配置（当然，你可以使用自定义选项）
+- **单个文件组件**：使用 [styled-jsx][156]，该库由同一个团队搭建，因此可以方便地给组件添加样式
+- **服务端渲染**：你可以（选择性的）在客户端接收到 HTML 前在服务端渲染 React 组件
+- **生态系统兼容性**：Next.js 与 JavaScript、 Node 和 React 生态都能很好地兼容
+- **自动代码拆分**：页面渲染时只用到需要的库和 JavaScript 代码
+- **预加载**：用于链接不同页面的 `Link` 组件支持 `prefetch` 属性，用于在后台自动预加载页面资源（包括由于代码拆分缺失的代码）
+- **动态组件**：可以动态地引入 JavaScript 模块和 React 组件([https://github.com/zeit/next.js#dynamic-import][157])
+- **静态输出**：使用 `next export` 命名可以输出整个静态网站
 
-#### `Installation`
+#### 安装
 
-`Next.js supports all the major platforms: Linux, macOS, Windows.`
+Next.js 支持所有的主流平台：Linux、 macOs 和 Windows。
 
-`A Next.js project is started easily with npm:`
+使用 npm 可以轻松地启动 Next.js 项目：
 
 ```
 npm install next react react-dom
 ```
 
-`or with [Yarn][158]:`
+或者使用 [Yarn][158]：
 
 ```
 yarn add next react react-dom
 ```
 
-#### `Getting started`
+#### 开始
 
-`` Create a `package.json` file with this content: ``
+创建一个包含以下内容的 `package.json` 文件：
 
 ```
 {
@@ -6121,25 +6126,25 @@ yarn add next react react-dom
 }
 ```
 
-`If you run this command now:`
+如果你运行下以下命令：
 
 ```
 npm run dev
 ```
 
-`` the script will raise an error complaining about not finding the `pages` folder. This is the only thing that Next.js requires to run. ``
+脚本会报错找不到 `pages` 文件夹。这是运行 Next.js 的唯一要求。
 
-`Create an empty`pages` folder, and run the command again, and Next.js will start up a server on `localhost:3000`.`
+创建一个空的 `pages` 文件夹，再次运行命令，这时 Next.js 会在 `localhost:3000` 启动服务器。
 
-`If you go to that URL now, you’ll be greeted by a friendly 404 page, with a nice clean design.`
+、如果你此时访问 `localhost:3000`，你会看到一个简单设计的友好的 404 页面。
 
 `![](https://cdn-media-1.freecodecamp.org/images/wBBqzsveZC9evvtqiPb6yrFav9V5UjExd0HE)`
 
-`Next.js handles other error types as well, like 500 errors for example.`
+Next.js 也会处理其他类型的错误，比如 500。
 
-#### `Create a page`
+#### 创建一个页面
 
-`` In the `pages` folder create an `index.js` file with a simple React functional component: ``
+在 `pages` 文件夹中创建一个简单的 React 方法函数的 `index.js` 文件。
 
 ```
 export default () => (
@@ -6149,25 +6154,25 @@ export default () => (
 )
 ```
 
-`If you visit `localhost:3000`, this component will automatically be rendered.`
+如果你访问 `localhost:3000`，这个组件就会被自动渲染。
 
-`Why is this so simple?`
+为什么这么简单呢？
 
-`Next.js uses a declarative pages structure, which is based on the filesystem structure.`
+Next.js 基于文件系统的结构使用了声明式的页面结构。
 
-`` Simply put, pages are inside a `pages` folder, and the page URL is determined by the page file name. The filesystem is the pages API. ``
+只用在 `pages` 文件夹中加入页面文件，页面的文件名决定了页面的 URL。文件系统就是页面的 API。
 
-#### `Server-side rendering`
+#### 服务端渲染
 
-`` Open the page source, `View -> Developer -> View` Source with Chrome. ``
+使用 Chrome 打开页面源，`View -> Developer -> View`。
 
-`As you can see, the HTML generated by the component is sent directly in the page source. It’s not rendered client-side, but instead it’s rendered on the server.`
+如你所见，组件生成的 HTML 直接在页面源中发送。它不是在用户端渲染的，而是在服务端渲染的。
 
-`The Next.js team wanted to create a developer experience for server rendered pages similar to the one you get when creating a basic PHP project, where you simply drop PHP files and you call them, and they show up as pages. Internally of course it’s all very different, but the apparent ease of use is clear.`
+Next.js 团队希望创建一种类似 PHP 项目的服务端渲染页面的开发体验，你只用加入 PHP 文件，调用它们，页面就展示出来。当然它们的内部实现方式非常不一样，但是显然易于使用。
 
-#### `Add a second page`
+#### 增加第二个页面
 
-`` Let’s create another page, in `pages/contact.js`  ``
+让我们创建另一个页面 `pages/contact.js`：
 
 ```
 export default () => (
@@ -6179,19 +6184,19 @@ export default () => (
 )
 ```
 
-`` If you point your browser to `localhost:3000/contact` this page will be rendered. As you can see, also this page is server rendered. ``
+如果你在浏览器中访问 `localhost:3000/contac`，页面就会渲染出来。如你所见，这个页面也是服务端渲染的。
 
-#### `Hot reloading`
+#### 热重载
 
-`Note how you did not have to restart the `npm` process to load the second page. Next.js does this for you under the hood.`
+注意你不需要重复 `npm` 操作来加载第二个页面，Next.js 已经暗自为你做了这一步。
 
-#### `Client rendering`
+#### 客户端渲染
 
-`Server rendering is very convenient in your first page load, for all the reasons we saw above, but when it comes to navigating inside the website, client-side rendering is key to speeding up the page load and improving the user experience.`
+正如我们在前面看到的，服务端渲染在加载第一个页面时非常方便，但当在网站内部导航时，客户端渲染是提升页面加载速度和提升用户体验的关键。
 
-`Next.js provides a `Link` component you can use to build links. Try linking the two pages above.`
+Next.js 提供了 `Link` 组件用来创建链接。试试将以上两个页面链接起来。
 
-`Change `index.js`to this code:`
+将以下代码替换到 `index.js` 中：
 
 ```
 import Link from 'next/link'
@@ -6205,25 +6210,25 @@ export default () => (
 )
 ```
 
-`Now go back to the browser and try this link. As you can see, the Contact page loads immediately, without a page refresh.`
+现在回到浏览器中，并试试链接。你会看到，Contact 页面加载非常迅速，且不需要刷新页面。
 
-`This is client-side navigation working correctly, with complete support for the [**History API**][160], which means your users back button won’t break.`
+这是客户端导航正常运行的结果，它完成支持 [**History API**][160]，这意味着回退按钮不会失效。
 
-`` If you now `cmd-click` the link, the same Contact page will open in a new tab, now server rendered. ``
+你按住 cmd 再点击链接，这是 Contact 页面会在新的标签页中打开，且是服务端渲染。
 
-#### `Dynamic pages`
+#### 动态页面
 
-`A good use case for Next.js is a blog, as it’s something that all developers know how it works, and it’s a good fit for a simple example of how to handle dynamic pages.`
+Next.js 的一个好例子是博客，因为所有的开发者都知道它是如何运作的，并且它是一个处理动态页面的好例子。
 
-`A dynamic page is a page that has no fixed content, but instead display some data based on some parameters.`
+动态页面没有固定的内容，而是基于参数展示数据。
 
-`` Change `index.js` to ``
+将 `index.js` 改为以下内容：
 
 ```
 import Link from 'next/link'
 const Post = props => (
   <li>
-    <Link href={/post?title=</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>props<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>title<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">}>
+    <Link href={`/post?title=${props.title}`}>
       <a>{props.title}</a>
     </Link>
   </li>
@@ -6242,27 +6247,27 @@ export default () => (
 )
 ```
 
-`This will create a series of posts and will fill the title query parameter with the post title:`
+它会生成一系列发布的文章，文章的标题将填入 title 参数：
 
 `![](https://cdn-media-1.freecodecamp.org/images/nEBXVSebNz6KzUWgNg62w-clo2vL7tnLIYpl)`
 
-`` Now create a `post.js` file in the `pages` folder, and add: ``
+接着在 `pages` 文件夹中创建一个 `post.js` 文件，并加入以下代码：
 
 ```
 export default props => <h1>{props.url.query.title}</h1>
 ```
 
-`` Now clicking a single post will render the post title in a `h1` tag: ``
+单击一个文章将在 `h1` 标签中显示文字的标题：
 
 `![](https://cdn-media-1.freecodecamp.org/images/urgIpOydqbjE4i9nyELblMonOjrK0Plrn3OJ)`
 
-`You can use clean URLs without query parameters. The Next.js Link component helps us by accepting an `as` attribute, which you can use to pass a slug:`
+你可以使用不带参数的 URL。Next.js 的 Link 组件接收一个 `as` 属性，你可以用来传入标签：
 
 ```
 import Link from 'next/link'
 const Post = props => (
   <li>
-    <Link as={/</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>props<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>slug<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">} href={/post?title=</span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline;"><span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">${</span>props<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>title<span class="token interpolation-punctuation punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 16px; vertical-align: baseline; color: rgb(102, 153, 0);">}>
+    <Link as={`/${props.slug}`} href={`/post?title=${props.title}`}>
       <a>{props.title}</a>
     </Link>
   </li>
@@ -6281,11 +6286,11 @@ export default () => (
 )
 ```
 
-#### `CSS-in-JS`
+#### CSS-in-JS
 
-`Next.js by default provides support for [styled-jsx][161], which is a CSS-in-JS solution provided by the same development team, but you can use whatever library you prefer, like Styled Components.`
+Next.js 默认支持 [styled-jsx][161]，这是同一个开发团队提供的 CSS-in-JS 解决方案，但是你可以使用任何你希望的库，如 Styled Components。
 
-`Example:`
+示例：
 
 ```
 export default () => (
@@ -6307,7 +6312,7 @@ export default () => (
 )
 ```
 
-`` Styles are scoped to the component, but you can also edit global styles adding `global` to the `style` element: ``
+样式的作用域是组件，但是你也可以通过给 `style` 元素增加 `global` 来修改全局样式：
 
 ```
 export default () => (
@@ -6327,17 +6332,17 @@ export default () => (
 )
 ```
 
-#### `Exporting a static site`
+#### 输出静态站点
 
-`A Next.js application can be easily exported as a static site, which can be deployed on one of the super fast static site hosts, like [Netlify][164] or [Firebase Hosting][165], without the need to set up a Node environment.`
+一个 Next.js 应用可以方便地输出一个静态站点，它不用配置 Node 环境就能部署在一个超快的静态站点域上，如 [Netlify][164] 或 [Firebase Hosting][165]。
 
-`The process requires you to declare the URLs that compose the site, but it’s [a straightforward process][166].`
+这个过程要求你声明组成站点的 URL，但是是一个[简单的过程][166]。
 
-#### `Deploying`
+#### 部署
 
-`Creating a production-ready copy of the application, without source maps or other development tooling that aren’t needed in the final build, is easy.`
+创建一个用于生产环境的应用副本非常简单，这个副本不需要源地图或其他在最终版本中需要的开发工具。
 
-`` At the beginning of this tutorial you created a `package.json` file with this content: ``
+在这个教程的最开始，你创建了一个包含以下内容的 `package.json` 文件：
 
 ```
 {
@@ -6347,9 +6352,9 @@ export default () => (
 }
 ```
 
-`which was the way to start up a development server using `npm run dev`.`
+它是使用 `npm run dev` 启动开发服务器的方式。
 
-`Now just add the following content to`package.json` instead:`
+接下来只用将以下内容加入到 `package.json` 中：
 
 ```
 {
@@ -6361,152 +6366,154 @@ export default () => (
 }
 ```
 
-`` and prepare your app by running `npm run build` and `npm run start`. ``
+接着运行 `npm run build` 和 `npm run start`。
 
-#### `Now`
+#### Now
 
-`The company behind Next.js provides an awesome hosting service for Node.js applications, called [**Now**][167].`
+Next.js 所属公司为 Node.js 应用提供了出色的托管服务，叫做 [**Now**][167]。
 
-`Of course they integrate both their products so you can deploy Next.js apps seamlessly, [once you have Now installed][168], by running the `now` command in the application folder.`
+公司集成了他们的产品，因此只要你[按照了 Now][168]，你就在应用的文件夹内运行 `now` 命令来无缝地部署 Next.js 应用。
 
-`Behind the scenes Now sets up a server for you, and you don’t need to worry about anything, just wait for your application URL to be ready.`
+Now 在幕后为你设置了服务器，你无需担心任何事情，只用等到你的应用 URL 就绪即可。
 
-#### `Zones`
+#### 多-zone
 
-`You can set up multiple Next.js instances to listen to different URLs, yet the application to an outside user will simply look like it’s being powered by a single server: [https://github.com/zeit/next.js/#multi-zones][169]`
+你可以启动多个 Next.js 示例监听不同的 URL，在外部用户看来，应用就像都在一个服务器上：[https://github.com/zeit/next.js/#multi-zones][169]
 
-#### `Plugins`
+#### 插件
 
-`Next.js has a list of plugins at [https://github.com/zeit/next-plugins][170]`
+Next.js 有一系列插件 [https://github.com/zeit/next-plugins][170]
 
-#### `Starter kit on Glitch`
+#### Glitch 上的入门套件
 
-`If you’re looking to experiment, I recommend Glitch. Check out my [Next.js Glitch Starter Kit][171].`
+如果你想做一些实验，我推荐你使用 Glitch。可以查看我的 [Next.js Glitch 入门套件]
 
-### `Gatsby`
+### Gatsby
 
-`Gatsby is a platform for building apps and websites using React.`
+Gatsby 是一个使用 React 搭建应用和网站的平台。
 
-`It is one of the tools that allow you to build on a set of technologies and practices collectively known as [JAMstack][172].`
+它允许你基于一组统称为 [JAMstack][172] 的技术和实践构建应用和网站。
 
-`Gatsby is one of the cool kids in the Frontend Development space right now. Why? I think the reasons are:`
+Gatsby 是目前前端开发领域的佼佼者。为什么呢？我觉得有如下原因：
 
--   `the explosion of the JAMstack approach to building Web Apps and Web Sites`
--   `the rapid adoption of the [Progressive Web Apps][173] technology in the industry, which is one of the key features of Gatsby`
--   `it’s built in React and [GraphQL][174], which are two very popular and rising technologies`
--   `it’s really powerful`
--   `it’s fast`
--   `the documentation is great`
--   `the network effect (people use it, create sites, make tutorials, people know more about it, creating a cycle)`
--   `everything is JavaScript (no need to learn a new templating language)`
--   `it hides the complexity, in the beginning, but allows us access into every step to customize`
+- 使用 JAMstack 方法构建应用和网站呈爆发式增长
+- 行业内迅速采用的 [渐进式应用][173]技术正式 Gatsby 的核心特性
+- 它基于 React 和 [GraphQL][174] 两大流行且势头正劲的技术
+- 功能强大
+- 运行迅速
+- 文档写得好
+- 网络效应（人们使用它，搭建网站，制作教程，于是任何对它有了更多了解，形成一个循环）
+- 全都使用 JavaScript（不需要学习新的模板语言）
+- 开始时隐藏了复杂性，但是允许我们自定义每一个步骤
 
-`All those are great points, and Gatsby is definitely worth a look.`
+以上特性都非常棒，因此 Gatsby 值得一看。
 
-#### `How does it work?`
+#### 如何运作
 
-`With Gatsby, your applications are built using React components.`
+使用 Gatsby 时，你使用 React 组件构建应用。
 
-`The content you’ll render in a site is generally written using Markdown, but you can use any kind of data source, like a headless CMS or a web service like Contentful.`
+网站中需要渲染的内容通常使用 Markdown 编写，但你也可以使用任何数据源，如无头 CMS 或注入 Contentful 之类的网络服务。
 
-`Gatsby builds the site, and it’s compiled to static HTML which can be deployed on any Web Server you want, like Netlify, AWS S3, GitHub Pages, regular hosting providers, PAAS and more. All you need is a place that serves plain HTTP pages and your assets to the client.`
+Gatsby 搭建站点后，将其编译为静态 HTML，从而可以在任何你希望的网络服务器上部署，如 Netlify、 AWS S3、Github Pages、 常见托管商、 PAAS 等。你只需要一个将普通 HTTP 页面和你的资源提供给客户端的地方。
 
-`I mentioned Progressive Web Apps in the list. Gatsby automatically generates your site as a PWA, with a service worker that speeds up page loading and resource caching.`
+我在列表中提到渐进性应用。Gatsby 使用 service worker 将你的网站自动生成渐进式应用，从而提升页面加载的速度，生成资源缓存。
 
-`You can enhance the functionality of Gatsby via plugins.`
+你可以通过插件来增强 Gatsby 的功能。
 
-#### `Installation`
+#### 安装
 
-`You can install Gatsby by simply running this in your terminal:`
+你可以在终端中允许以下命令来安装 Gatsby：
 
 ```
 npm install -g gatsby-cli
 ```
 
-`This installs the `gatsby` CLI utility.`
+这将安装 `gatsby` CLI 使用程序。
 
-`(when a new version is out, update it by calling this command again)`
+（当新版本发布后，运行这个命令可以更新版本）
 
-`You create a new “Hello World” site by running`
+运行以下命令可以创建一个新的 "Hello World" 站点
 
 ```
 gatsby new mysite https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
-`` This command creates a brand new Gatsby site in the `mysite` folder, using the _starter_available at [https://github.com/gatsbyjs/gatsby-starter-hello-world][176]. ``
+这个命令使用 _启动器_[https://github.com/gatsbyjs/gatsby-starter-hello-world][176] 在 `mysite` 文件夹中创建一个新的 Gatsby 站点。
+
 
 `![](https://cdn-media-1.freecodecamp.org/images/rNWB5DuHCS526rLjNuhwMdYAErq4TTAJFqg5)`
 
-`` A _starter_ is a sample site that you can build upon. Another common starter is `default`, available at [https://github.com/gatsbyjs/gatsby-starter-default][177]. ``
 
-> `[_Here you can find a list of all the starters you can use_][178]_._`
+_启动器_ 是一个你可以基于它大家站点的简易站点。另一个通用启动器是 `default` [https://github.com/gatsbyjs/gatsby-starter-default][177]。
 
-#### `Running the Gatsby site`
+> [你可以在这里查看一系列可用的启动器][178]
 
-`After the terminal has finished installing the starter, you can run the website by calling`
+#### 运行 Gatsby 站点
+
+当终端安装完启动器后，你可以运行如下命令来运行网站
 
 ```
 cd mysite
 gatsby develop
 ```
 
-`which will start up a new Web Server and serve the site on port 8000 on localhost.`
+以上命令会启动一个新的网络服务器，并在本地端口 8000 启动该站点。
 
 `![](https://cdn-media-1.freecodecamp.org/images/tThFtYg35ax6YBnuLS9z4y92JYUhdxJZaBaj)`
 
-`And here is our Hello World starter in action:`
+这是我们使用 Hello World 启动器：
 
 `![](https://cdn-media-1.freecodecamp.org/images/i-aQLpALPcniL3pkUylOWeoqYCKvnzDHX8Sx)`
 
-### `Inspecting the site`
+### 检查站点
 
-`If you open the site you created with your favorite code editor (I use [VS Code][179]), you’ll find there are 3 folders:`
+如果你在代码编辑器（我使用的是 [VS Code][179]）中打开站点，你会发现有 3 个文件夹：
 
--   `` `.cache`, a hidden folder that contains the Gatsby internals, nothing you should change right now``
--   `public`, which contains the resulting website once you build it`
--   `` `src` contains the React components, in this case just the `index` component``
--   `` `static` which will contain the static resources like CSS and images``
+- `.cache` 是一个包含了 Gatsby 内部构件的隐藏文件夹，你现在不需要修改里面的任何内容
+- `public` 包含了构建的网站内容
+- `src` 包含了 React 组件，这个例子中只有 `index` 组件
+- `static` 包含了静态资源，如 CSS 和图像
 
 `![](https://cdn-media-1.freecodecamp.org/images/x5XH1s5uMEQdUfnZB6BM2-T9HXkDwv1xLhPd)`
 
-`` Now, making a simple change to the default page is easy, just open `src/pages/index.js`and change “Hello world!” to something else, and save. The browser should instantly **hot reload** the component (which means the page does not actually refresh, but the content changes - a trick made possible by the underlying technology). ``
+现在可以非常容易地修改默认页面了，只用打开 `src/pages/index.js` 文件，将 "Hello world" 改为其他内容，然后保存即可。浏览器会立马**热重载**组件（这意味着页面并没有刷新，只是内容发生了改变 -- 通过底层技术实现了这一技巧）
 
-`` To add a second page, just create another .js file in this folder, with the same content of `index.js` (tweak the content) and save it. ``
+在文件夹中创建另一个 .js 文件就可以添加页面了，只用使用 `index.js` 相同的内容（调整展示内容）后保存就行了。
 
-`For example I created a `second.js` file with this content:`
+比如使用以下内容创建 `second.js` 文件：
 
 ```
 import React from 'react'
 export default () => <div>Second page!</div>
 ```
 
-`and I opened the browser to [http://localhost:8000/second][180]:`
+并且在 [http://localhost:8000/second][180] 中打开浏览器：
 
 `![](https://cdn-media-1.freecodecamp.org/images/g4uWZNxitB4AAVbqOFmCKKPugS7yrxKYH-ld)`
 
-#### `Linking pages`
+#### 链接页面
 
-`You can link those pages by importing a Gatsby-provided React component called`Link`:`
+你可以通过 Gatsby 提供的 React 组件 `Link` 来链接页面：
 
 ```
 import { Link } from "gatsby"
 ```
 
-`and using it in your component [JSX][181]:`
+在你的组件 [JSX][181] 中使用它：
 
 ```
 <Link to="/second/">Second&lt;/Link>
 ```
 
-#### `Adding CSS`
+#### 添加 CSS
 
-`You can import any CSS file using a JavaScript import:`
+你可以在 JavaScript 中引入任何 CSS 文件：
 
 ```
 import './index.css'
 ```
 
-`You can use React styling:`
+也可以使用 React 样式：
 
 ```
 <p style={{
@@ -6515,30 +6522,30 @@ import './index.css'
   }}>Hello world</p>
 ```
 
-#### `Using plugins`
+#### 使用插件
 
-`Gatsby provides lots of things out of the box, but many other functionalities are provided by [plugins][182].`
+Gatsby 提供了许多现成的功能，但是[插件][182]提供了需要额外的功能。
 
-`There are 3 kind of plugins:`
+插件主要分为 3 类：
 
--   `**source plugins** fetch data from a source. Create nodes that can be then filtered by transformer plugins`
--   `**transformer plugins** transform the data provided by source plugins into something Gatsby can use`
--   `**functional plugins** implement some kind of functionality, like adding sitemap support or more`
+- **数据源插件**从数据源获取数据。创建接下来被数据转换插件筛选的节点
+- **数据转换插件**将数据源插件提供的数据转换成 Gatsby 可以使用的内容
+- **功能插件**能够完成某些功能，如增加对网站地图的支持等
 
-`Some commonly used plugins are:`
+通用的插件有：
 
--   `` [gatsby-plugin-react-helmet][183] which allows to edit the `head` tag content ``
--   `[gatsby-plugin-catch-links][184] which uses the [History API][185] to prevent the browser reloading the page when a link is clicked, loading the new content using AJAX instead`
+- [gatsby-plugin-react-helmet][183] 可以修改 `head` 标签的内容
+- [gatsby-plugin-catch-links][184]使用 [History API][185]，在点击链接时通过 AJAX 加载新的内容，防止浏览器重载
 
-`` A Gatsby plugin is installed in 2 steps. First you install it using `npm`, then you add it to the Gatsby configuration in `gatsby-config.js`. ``
+Gatsby 插件分 2 步加载。首先你通过 `npm` 安装，接着再 `gatsby-config.js` 中将其加入到 Gatsby 配置里。
 
-`For example you can install the Catch Links plugin:`
+比如你可以这样按照 Catch Links 插件：
 
 ```
 npm install gatsby-plugin-catch-links
 ```
 
-`` In `gatsby-config.js` (create it if you don’t have it, in the website root folder), add the plugin to the `plugins` exported array: ``
+在 `gatsby-config.js` 中（如果在网站根目录下没有这个文件就创建一个），在 `plugins` 数组中加入插件：
 
 ```
 module.exports = {
@@ -6546,35 +6553,35 @@ module.exports = {
 }
 ```
 
-`That’s it, the plugin will now do its job.`
+这样就可以了，插件就能生效了。
 
-#### `Building the static website`
+#### 搭建静态网站
 
-`Once you are done tweaking the site and you want to generate the production static site, you will call`
+一旦你修改好了网站内容，希望生成生产环境的静态站点时，你可以使用
 
 ```
 gatsby build
 ```
 
-`At this point you can check that it all works as you expect by starting a local Web Server using`
+这时你可以使用以下启动一个本地的网络服务器来检查是否所有内容都没问题：
 
 ```
 gatsby serve
 ```
 
-`which will render the site as close as possible to how you will see it in production.`
+网站会像生成环境一样渲染出来。
 
-#### `Deployment`
+#### 部署
 
-`Once you build the site using `gatsby build`, all you need to do is to deploy the result contained in the `public` folder.`
+当你使用 `gatsby build` 搭建站点后，你需要做的就只是部署 `public` 文件夹中的内容。
 
-`Depending on the solution you choose, you’ll need different steps here, but generally you’ll push to a Git repository and let the Git post-commit hooks do the job of deploying. [Here are some great guides for some popular hosting platforms][186] where you can deploy Gatsby.`
+根据你选择的解决方案的不同，部署的步骤会略有不同，但是通常来说，你需要将内容推到一个 Git 仓库，然后让 Git 提交后的钩子帮你完成部署。[这里有一些常用托管平台的使用指南][186]帮你部署 Gatsby。
 
-### `Wrapping up`
+### 总结
 
-`I hope this book has helped you get started with React, and maybe it gave you a head start in exploring some of the most advanced aspects of React programming. That’s my hope, at least.`
+我希望这本书能够帮你开始使用 React，或许能够让你开始探索 React 编程的一些最高级内容。
 
-> `You can get this ebook in PDF, ePub and Mobi format at [reacthandbook.com][187]`
+> 你可以在 [reacthandbook.com][187] 获取这本电子书的 PDF、 ePub 和 Mobi 格式版本。
 
 [1]: https://twitter.com/flaviocopes
 [2]: https://reacthandbook.com/

@@ -84,12 +84,13 @@ Pleo，2019年12月
 
 ## 我的第一次Pull Request
 
-My sales manager and the director of engineering continued to check in on my progress throughout the coming months. In April, the opportunity was presented that I could possibly work on the side with our internal tools team. There were many small, non-urgent tickets that needed attention in our back-office system.
-接下来的几个月里，我的销售主管和技术总监时不时来监督我的进程。四月时，我有了一个可以进入内部工具组工作的机会，后勤系统有一些需要引起注意但不紧急的小标签？？？？
+接下来的几个月里，我的销售主管和技术总监时不时来监督我的进程。四月时，我有了一个可以进入内部工具组工作的机会，后勤系统有一些不紧急但还是需要处理的事件单。
 
-I was excited – it would be a great way for me to get some real experience in working with the product team and it was made very clear this wasn't to interfere with my work in sales. That thought of working with real, production code was INSANE!
+我非常兴奋————这是我得到和产品部合作经验的绝佳方式，而且已经明确了这个任务并不会妨碍到销售工作。一想到我能接触到生产环境的代码就感觉非常疯狂！
 
 After a bit of coordination, an introduction to the team, and an invite to our company Github org, I was given my first ticket to work on.
+我被介绍给了产品部同事，
+
 
 I was to add an input to make a field editable for our compliance team. It was immediately clear I had no idea how to do this. Sure, I've added an input before and I knew vaguely how forms worked in React but this code felt like nothing I'd seen in any of my tutorials.
 

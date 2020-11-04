@@ -88,15 +88,13 @@ Pleo，2019年12月
 
 我非常兴奋————这是我得到和产品部合作经验的绝佳方式，而且已经明确了这个任务并不会妨碍到销售工作。一想到我能接触到生产环境的代码就感觉非常疯狂！
 
-After a bit of coordination, an introduction to the team, and an invite to our company Github org, I was given my first ticket to work on.
-我被介绍给了产品部同事，
+在简短的入组介绍并得到公司 Github 页面的权限之后，我开始处理我的第一个事件单。
 
+我需要给合规组加一个可编辑输入字段。我毫无头绪。 我以前的确知道怎么加输入框也粗略地了解表单在 React 里是如何运作的，但是我好像从没在任何教程里看过和这段代码类似的东西。
 
-I was to add an input to make a field editable for our compliance team. It was immediately clear I had no idea how to do this. Sure, I've added an input before and I knew vaguely how forms worked in React but this code felt like nothing I'd seen in any of my tutorials.
+我突然感觉自己掉进了问题的深渊里。怎么写TypeScript？branch 是什么？我怎么提交 Pull Request？这些库都是做什么用的？我到底怎么写代码并且发给其他用户？要是我破坏了重要的功能怎么办？
 
-I was suddenly left with an ocean of questions. How does TypeScript work? What is a branch? How do I make a PR? What do all of these libraries do? How does my code even get built and sent to our users? What happens if I break something important?
-
-It took me a couple days to get my bearings, but after much patience and help from the engineering lead, I managed to get two approvals and ship code to production. That was a huge milestone in my journey.
+我花了好几天才搞明白，但是因为有了工程师主管的耐心与帮助，我终于成功提交了两段能发布的代码。这是我编程之旅上巨大的里程碑。
 
 ## Making the Switch
 

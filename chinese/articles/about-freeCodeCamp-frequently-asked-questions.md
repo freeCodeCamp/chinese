@@ -90,7 +90,7 @@ Chainlink: 0xE757fa6D434bdAca558db9747fEaBf0584f433d1
 
 ### freeCodeCamp 有移动端应用吗?
 
-你可以通过收听 [**freeCodeCamp 播客**][9]，观看  [**freeCodeCamp 的 YouTube 频道**][10] 或 [**bilibili 频道**](https://space.bilibili.com/335505768)的视频来随时随地学习。如果你想要一个专门为了学习编程而设计的移动应用，我们推荐你使用 Grasshopper。它是免费的，并是由 freeCodeCamp 贡献者和她的团队设计的。你可以在 [**iOS**][11]  或  [**Android**][12] 上下载.
+你可以通过收听 [**freeCodeCamp 播客**][9]，观看 [**freeCodeCamp 的 YouTube 频道**][10] 或 [**bilibili 频道**](https://space.bilibili.com/335505768)的视频，或阅读 freeCodeCamp 微信公众号的文章来随时随地学习。如果你想要一个专门为了学习编程而设计的移动应用，我们推荐你使用 Grasshopper。它是免费的，并是由 freeCodeCamp 贡献者和她的团队设计的。你可以在 [**iOS**][11]  或  [**Android**][12] 上下载.
 
 ### 我能入职 freeCodeCamp 吗？
 

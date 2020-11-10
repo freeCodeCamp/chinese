@@ -96,15 +96,16 @@ Pleo，2019年12月
 
 我花了好几天才搞明白，但是因为有了工程师主管的耐心与帮助，我终于成功提交了两段能发布的代码。这是我编程之旅上巨大的里程碑。
 
-## Making the Switch
+## 作出职业转变
 
-Over the next five months, I continued my routine of staying in the office late, working 09:00-17:00 in sales and 17:00 until whenever pretending to be a developer working with what I considered to be real code.
+在接下来的五个月时间里，我继续在办公室待到很晚，9到17点做销售工作，17点之后开始做开发者，直到我对自己写的代码满意之后才离开。
 
-As you could expect, my desire to continue in sales dwindled every day and I started pressing to see if we could agree on a date for me to officially switch.
+可想而知，我对销售工作的热情每天都在衰减，我开始想要有个正式的职业转变。
 
-It certainly didn't go smoothly. No one had experience in what it means to move someone from sales to our product team. First and foremost, I had to be on target. I think that's true with most sales organisations – everything always comes back to making your quota.
+当然，这个转变并不是很顺利。没人知道把一个销售转到产品部意味着什么。首先，我必须完成销售目标。我想这对绝大部分销售部门来说都很正常————无论如何要完成自己的工作配额。
 
-After much back and forth, an agreement was made that I could officially make the switch August 1st, contingent that I remain on target. This was the light at the end of the tunnel for me. It was absolutely baffling to think I would soon be presented with an employment contract for my new role as a software engineer. The weeks leading up flew by. By 17:00, Wednesday, July 31, I was no longer an account manager.
+经过多次来回周旋之后，我终于被允许在8月1号正式转岗，只要我能完成销售配额。这就像是隧道尽头的亮光。我马上就要签一份软件工程师的合同，这对我来说挺难想象的。接下来几周过得飞快。在7月31号17点这一刻后，我不再是客户经理了。
+
 
 There was definitely a transition period in getting used to my new role. It felt like being a stock broker working on the trading room floor to suddenly becoming a librarian.
 

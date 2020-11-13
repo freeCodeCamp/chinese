@@ -38,7 +38,7 @@ public static String valueOf(Object obj) {
 
 `Object.toString()` 返回的是 `getClass().getName()+****‘@’****+Integer.toHexString(hashCode())`。 简化格式为：“class name @ object’s hash code”。
 
-上文中输出的内容是 `[I@74a14482`， `[` 表示数组， `I` 表示 int（数组的数据类型）。 `74a14482` 是数组的无符号十六进制hash值。
+上文中输出的内容是 `[I@74a14482`， `[` 表示数组， `I` 表示 int 数据类型（数组的数据类型）。 `74a14482` 是数组的无符号十六进制hash值。
 
 当创建自定义类时，重写 `Object.toString()` 方法是最佳的实践。
 
@@ -66,8 +66,7 @@ for(int i=0; i<intArray.length; i++){
 }
 ```
 
-All wrapper classes override  `Object.toString()`  and return a string representation of their value.
-所有的包装类都重写了 `Object.toString()` ，返回数组元素的字符串形式。
+Java 的包装类都重写了 `Object.toString()` ，返回数组元素的字符串形式。
 
 for-each 循环示例：
 
@@ -84,7 +83,7 @@ for(int i: intArray){
 
 `Arrays.toString()` 是 `java.util` 包下数组类的一个静态方法。它返回指定数组内容的字符串形式。这种方法可以用来打印一维数组。
 
-数组元素被转换为字符串，使用了 `String.valueOf()` 方法，例如：
+数组元素被转换为字符串，调用了 `String.valueOf()` 方法，例如：
 
 ```Java
 int[] intArray = {2,5,46,12,34};
@@ -92,7 +91,7 @@ System.out.println(Arrays.toString(intArray));
 // output: [2, 5, 46, 12, 34]
 ```
 
-对于引用类型的数组，需要确保重写了该引用类型的 `Object.toString()` 方法。
+对于引用类型的数组，确保重写该引用类的 `Object.toString()` 方法。
 
 例如：
 
@@ -134,6 +133,7 @@ int[][] multiDimensionalArr = { {2,3}, {5,9} };
 System.out.println(Arrays.toString(multiDimensionalArr));
 // output: [[I@74a14482, [I@1540e19d]
 ```
+
 借助 `Arrays.deepToString()` 方法可以打印多维数组。
 
 # 3\. Arrays.deepToString() 方法
@@ -212,7 +212,7 @@ System.out.println(Arrays.asList(teachers));
 
 # 5\. Java Iterator interface
 
-Iterator 和 for-each 循环类似，可以使用 Iterator 接口遍历数组元素并打印。
+Iterator 接口和 for-each 循环类似，可以使用 Iterator 接口遍历数组元素并打印。
 
 Collection 调用 `iterator()` 方法创建 Iterator 对象。Iterator 对象可以遍历该集合的元素。
 
@@ -220,8 +220,10 @@ Iterator 接口打印数组示例：
 
 ```Java
 Integer[] intArray = {2,5,46,12,34};
+
 // creating a List of Integer
 List<Integer> list = Arrays.asList(intArray);
+
 // creating an iterator of Integer List
 Iterator<Integer> it = list.iterator();
 

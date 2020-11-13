@@ -56,17 +56,25 @@ We can not print arrays in Java using a plain  `System.out.println()`  method. I
 在 Java 中我们不能简单的使用 `System.out.println()` 方法打印数组。 相反，接下来的几种方法可以打印：
 
 1.  Loops: for loop and for-each loop
+1. 循环：for 循环和 for-each 循环
 2.  `Arrays.toString()`  method
+2. `Arrays.toString()` 方法
 3.  `Arrays.deepToString()`  method
+3. `Arrays.deepToString()` 方法
 4.  `Arrays.asList()`  method
+4. `Arrays.asList()` 方法
 5.  Java Iterator interface
+5. Java 迭代器接口
 6.  Java Stream API
+6. Java 流 API
 
 Let’s see them one by one.
+接下来我们依次看下效果。
 
 # 1\. Loops: for loop and for-each loop
-
+# 1\. 循环：for 循环和 for-each 循环
 Here's an example of a for loop:
+for 循环示例：
 
 ```Java
 int[] intArray = {2,5,46,12,34};
@@ -75,19 +83,23 @@ int[] intArray = {2,5,46,12,34};
 ```
 
 All wrapper classes override  `Object.toString()`  and return a string representation of their value.
+所有的包装类都重写了 `Object.toString()` ，返回数组内容的字符串。
 
 And here's a for-each loop:
+for-each 循环示例：
 
 ```Java
 int[] intArray = {2,5,46,12,34};
 
 ```
 
-# 2\. Arrays.toString() method
+# 2\. Arrays.toString() 方法
 
 `Arrays.toString()`  is a static method of the array class which belongs to the  `java.util`  package. It returns a string representation of the contents of the specified array. We can print one-dimensional arrays using this method.
+`Arrays.toString()` 是 `java.util` 包里数组类的一个静态方法。它返回指定数组内容的字符串形式。我们可以使用这种方法打印一维数组。
 
 Array elements are converted to strings using the  `String.valueOf()`  method, like this:
+使用 `String.valueOf()` 方法将数组元素转换为字符串，例如：
 
 ```Java
 int[] intArray = {2,5,46,12,34};
@@ -96,8 +108,10 @@ System.out.println(Arrays.toString(intArray));
 ```
 
 For a reference type of array, we have to make sure that the reference type class overrides the  `Object.toString()`  method.
+对于引用类型的数组，需要重写该引用类型的 `Object.toString()` 方法。
 
 For example:
+例如：
 
 ```Java
 public class Test {
@@ -127,6 +141,7 @@ public String toString() {
 ```
 
 This method is not appropriate for multidimensional arrays. It converts multidimensional arrays to strings using  `Object.toString()`  which describes their identities rather than their contents.
+此方法不适用于多维数组。在多维数组中， `Object.toString()` 会打印数组对象的地址而不是内容。
 
 For example:
 

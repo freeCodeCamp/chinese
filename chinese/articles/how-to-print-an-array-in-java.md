@@ -5,31 +5,26 @@
 
 ![Java Array Methods – How to Print an Array in Java](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/Untitled-design--1-.png)
 
-An array is a data structure used to store data of the same type. Arrays store their elements in contiguous memory locations.  
 数组是一种用来保存相同数据类型的数据结构。 数组的元素在内存中是连续存储的。  
 
-In Java, arrays are objects. All methods of class object may be invoked in an array. We can store a fixed number of elements in an array.  
-在 Java 中，数组即对象。类的所有方法都被放进数组中调用。 我们可以指定固定长度的数组。  
+Java 中数组即对象。类的所有方法都被放进数组中调用。我们可以声明一个指定长度的数组。  
 
-Let’s declare a simple primitive type of array:  
 声明一个基本数据类型数组：
+
 ```Java
 int[] intArray = {2,5,46,12,34};
 ```
 
-Now let’s try to print it with the  `System.out.println()`  method:  
-尝试使用 `System.out.println()` 方法打印数组：
+现在尝试使用 `System.out.println()` 方法打印数组：
 
 ```Java
 System.out.println(intArray);
 // output: [I@74a14482
 ```
 
-Why did Java not print our array? What is happening under the hood?  
-为什么 Java 没有打印出来数组数据呢？背后发生了什么？  
+为什么 Java 没有打印出来数组数据呢？背后发生了什么事情？  
 
-The  `System.out.println()`  method converts the object we passed into a string by calling  `String.valueOf()`  . If we look at the  `String.valueOf()`  method’s implementation, we'll see this:  
-方法 `System.out.println()` 通过调用 `String.valueOf()` 把对象转为一个字符串。 如果我们查看 `String.valueOf()` 方法的实现，会看到如下的代码：
+方法 `System.out.println()` 通过调用 `String.valueOf()` 把入参对象转换为一个字符串。 如果我们查看 `String.valueOf()` 方法的实现，会看到如下的代码：
 
 ```Java
 public static String valueOf(Object obj) {
@@ -37,23 +32,17 @@ public static String valueOf(Object obj) {
 }
 ```
 
-If the passed-in object is  `null`  it returns null, else it calls  `obj.toString()`  . Eventually,  `System.out.println()`  calls  `toString()`  to print the output.  
-如果对象是 `null` 方法会返回空， 其它情况调用 `obj.toString()` 。 最终 `System.out.println()` 调用 `toString()` 方法打印出了字符串。
+如果入参是 `null` 会返回空， 其它情况会调用 `obj.toString()`。 最后 `System.out.println()` 调用 `toString()` 方法打印出了字符串。
 
-If that object’s class does not override  `Object.toString()`'s implementation, it will call the  `Object.toString()`  method.  
-如果当前类没有重写 `Object.toString()` 的实现， 那就会调用超类 `Object` 的 `Object.toString()` 方法。
+如果对象的类没有重写 `Object.toString()` 方法并实现，那就会调用超类 `Object` 的 `Object.toString()` 方法。
 
-`Object.toString()`  returns  `getClass().getName()+****‘@’****+Integer.toHexString(hashCode())`  . In simple terms, it returns: “class name @ object’s hash code”.  
-`Object.toString()`  返回的格式是  `getClass().getName()+****‘@’****+Integer.toHexString(hashCode())` 。 简单来说是： “class name @ object’s hash code”。
+`Object.toString()` 返回的是 `getClass().getName()+****‘@’****+Integer.toHexString(hashCode())`。 简化格式为：“class name @ object’s hash code”。
 
-In our previous output  `[I@74a14482`  , the  `[`  states that this is an array, and  `I`  stands for int (the type of the array).  `74a14482`  is the unsigned hexadecimal representation of the hash code of the array.  
-上文中输出的内容是 `[I@74a14482` ， `[` 表示这是一个数组， `I` 表示数组的数据类型是int。 `74a14482` 是数组的无符号十六进制hash值。
+上文中输出的内容是 `[I@74a14482`， `[` 表示数组， `I` 表示 int（数组的数据类型）。 `74a14482` 是数组的无符号十六进制hash值。
 
-Whenever we are creating our own custom classes, it is a best practice to override the  `Object.toString()`  method.  
-当我们创建自定义类时，重写 `Object.toString()` 方法是最佳的实践。
+当创建自定义类时，重写 `Object.toString()` 方法是最佳的实践。
 
-We can not print arrays in Java using a plain  `System.out.println()`  method. Instead, these are the following ways we can print an array:  
-在 Java 中我们不能简单的使用 `System.out.println()` 方法打印数组。 相反，接下来的几种方法可以打印：
+Java 中我们不能简单的使用 `System.out.println()` 方法打印数组。 相反，下面的几种方法可以打印：
 
 1. 循环：for 循环和 for-each 循环
 2. `Arrays.toString()` 方法
@@ -62,8 +51,7 @@ We can not print arrays in Java using a plain  `System.out.println()`  method. I
 5. Java Iterator interface
 6. Java Stream API
 
-Let’s see them one by one.
-接下来我们依次看下效果。
+让我们来学习如何使用他们吧。
 
 # 1\. 循环：for 循环和 for-each 循环
 
@@ -72,25 +60,31 @@ for 循环示例：
 ```Java
 int[] intArray = {2,5,46,12,34};
 
-
+for(int i=0; i<intArray.length; i++){
+    System.out.print(intArray[i]);
+    // output: 25461234
+}
 ```
 
 All wrapper classes override  `Object.toString()`  and return a string representation of their value.
-所有的包装类都重写了 `Object.toString()` ，返回数组内容的字符串。
+所有的包装类都重写了 `Object.toString()` ，返回数组元素的字符串形式。
 
-And here's a for-each loop:
 for-each 循环示例：
 
 ```Java
 int[] intArray = {2,5,46,12,34};
 
+for(int i: intArray){
+    System.out.print(i);
+    // output: 25461234
+}
 ```
 
 # 2\. Arrays.toString() 方法
 
-`Arrays.toString()` 是 `java.util` 包里数组类的一个静态方法。它返回指定数组内容的字符串形式。我们可以使用这种方法打印一维数组。
+`Arrays.toString()` 是 `java.util` 包下数组类的一个静态方法。它返回指定数组内容的字符串形式。这种方法可以用来打印一维数组。
 
-使用 `String.valueOf()` 方法将数组元素转换为字符串，例如：
+数组元素被转换为字符串，使用了 `String.valueOf()` 方法，例如：
 
 ```Java
 int[] intArray = {2,5,46,12,34};
@@ -98,10 +92,8 @@ System.out.println(Arrays.toString(intArray));
 // output: [2, 5, 46, 12, 34]
 ```
 
-For a reference type of array, we have to make sure that the reference type class overrides the  `Object.toString()`  method.
-对于引用类型的数组，需要重写该引用类型的 `Object.toString()` 方法。
+对于引用类型的数组，需要确保重写了该引用类型的 `Object.toString()` 方法。
 
-For example:
 例如：
 
 ```Java
@@ -131,51 +123,48 @@ public String toString() {
 }
 ```
 
-This method is not appropriate for multidimensional arrays. It converts multidimensional arrays to strings using  `Object.toString()`  which describes their identities rather than their contents.
-此方法不适用于多维数组。在多维数组中， `Object.toString()` 会打印数组对象的内存地址而不是内容。
+此方法不适用于多维数组。在多维数组中， `Object.toString()` 会打印数组元素的内存地址而不是内容。
 
-For example:
 例如：
 
 ```Java
 // creating multidimensional array
 int[][] multiDimensionalArr = { {2,3}, {5,9} };
 
+System.out.println(Arrays.toString(multiDimensionalArr));
+// output: [[I@74a14482, [I@1540e19d]
 ```
-
-With the help of  `Arrays.deepToString()`, we can print multidimensional arrays.
-使用 `Arrays.deepToString()` 可以打印多维数组。
+借助 `Arrays.deepToString()` 方法可以打印多维数组。
 
 # 3\. Arrays.deepToString() 方法
 
-`Arrays.deepToString()`  returns a string representation of the “deep contents” of the specified array.
 `Arrays.deepToString()` 返回数组“深层内容”的字符串形式。
 
-If an element is an array of primitive type, it is converted to a string by invoking the appropriate overloading of  `Arrays.toString()`  .
 对于基本类型数组，通过重载调用 `Arrays.toString()` 方法将其转换为字符串。
 
-Here is an example of the primitive type of multidimensional array:
 基本类型多维数组示例：
 
 ```Java
 // creating multidimensional array
 int[][] multiDimensionalArr = { {2,3}, {5,9} };
 
+System.out.println(Arrays.deepToString(multiDimensionalArr));
+// output: [[2, 3], [5, 9]]
 ```
 
-If an element is an array of reference type, it is converted to a string by invoking  `Arrays.deepToString()`  recursively.
 对于引用类型数组，通过递归调用 `Arrays.deepToString()` 方法将其转换为字符串。
 
 ```Java
 Teacher[][] teachers = 
 {{ new Teacher("John"), new Teacher("David") }, {new Teacher("Mary")} };
 
+System.out.println(Arrays.deepToString(teachers));
+// output: 
+[[Teacher{name='John'}, Teacher{name='David'}],[Teacher{name='Mary'}]]
 ```
 
-We have to override  `Object.toString()`  in our Teacher class.
 我们在 Teacher 类中重写了 `Object.toString()` 方法。
 
-If you are curious as to how it does recursion, here is the  [source code][1]  for the  `Arrays.deepToString()`  method.
 如果你对递归调用感兴趣，请查看 `Arrays.deepToString()` 方法的[源码][1]。
 
 **NOTE:**  引用类型的一维数组也可以用 `Arrays.deepToString()` 方法打印。 例如:
@@ -189,26 +178,26 @@ System.out.println(Arrays.deepToString(oneDimensionalArr));
 
 # 4\. Arrays.asList() 方法
 
-This method returns a fixed-size list backed by the specified array.
 此方法返回固定大小（数组长度）的列表。
 
 ```Java
 Integer[] intArray = {2,5,46,12,34};
 
+System.out.println(Arrays.asList(intArray));
+// output: [2, 5, 46, 12, 34]
 ```
 
-We have changed the type to Integer from int, because List is a collection that holds a list of objects. When we are converting an array to a list it should be an array of reference type.
-因为 List 是对象列表的集合，所以数据类型由 int 变为 Integer。当我们把数组转换为列表时，数组应该是引用类型。
+因为 List 是对象列表集合，所以数据类型由 int 变为 Integer。当我们把数组转换为列表时，数组应该是引用类型。
 
-Java calls  `Arrays.__asList__(intArray).toString()`  . This technique internally uses the  `toString()`  method of the type of the elements within the list.
-Java 调用 `Arrays.__asList__(intArray).toString()` 。内部实现是列表元素调用了 `toString()` 方法。
+Java 调用 `Arrays.__asList__(intArray).toString()` 。其内部实现是列表元素调用了 `toString()` 方法。
 
-Another example with our custom Teacher class:
-Teacher 类示例：
+自定义 Teacher 类示例：
 
 ```Java
 Teacher[] teacher = { new Teacher("John"), new Teacher("Mary") };
 
+System.out.println(Arrays.asList(teacher));
+// output: [Teacher{name='John'}, Teacher{name='Mary'}]
 ```
 
 **NOTE:**  不能使用此方法打印多维数据。 例如：
@@ -218,12 +207,12 @@ Teacher[][] teachers =
 {{ new Teacher("John"), new Teacher("David") }, { new Teacher("Mary") }};
 System.out.println(Arrays.asList(teachers));
 
+// output: [[Lcom.thano.article.printarray.Teacher;@1540e19d, [Lcom.thano.article.printarray.Teacher;@677327b6] 
 ```
 
 # 5\. Java Iterator interface
 
-Similar to a for-each loop, we can use the Iterator interface to loop through array elements and print them.
-类似于 for-each 循环，可以使用 Iterator 接口遍历数组元素并打印。
+Iterator 和 for-each 循环类似，可以使用 Iterator 接口遍历数组元素并打印。
 
 Collection 调用 `iterator()` 方法创建 Iterator 对象。Iterator 对象可以遍历该集合的元素。
 
@@ -236,6 +225,11 @@ List<Integer> list = Arrays.asList(intArray);
 // creating an iterator of Integer List
 Iterator<Integer> it = list.iterator();
 
+// if List has elements to be iterated
+while(it.hasNext()) {
+    System.out.print(it.next());
+    // output: 25461234
+}
 ```
 
 # 6\. Java Stream API
@@ -253,7 +247,7 @@ Arrays.stream(intArray).forEach(System.out::print);
 // output: 25461234
 ```
 
-现在就掌握了 Java 数组的打印方式。
+现在我们掌握了 Java 数组的打印方式。
 
 感谢阅读。
 

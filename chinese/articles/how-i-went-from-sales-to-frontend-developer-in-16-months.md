@@ -106,32 +106,31 @@ Pleo，2019年12月
 
 经过多次来回周旋之后，我终于被允许在8月1号正式转岗，只要我能完成销售配额。这就像是隧道尽头的亮光。我马上就要签一份软件工程师的合同，这对我来说挺难想象的。接下来几周过得飞快。在7月31号17点这一刻后，我不再是客户经理了。
 
+适应我的新角色需要一个转变期。这就像在交易所工作的股票经纪人突然变成图书管理员一样。
 
-There was definitely a transition period in getting used to my new role. It felt like being a stock broker working on the trading room floor to suddenly becoming a librarian.
+除了噪音之外，我没有任何一天不期待来上班的。我继续在内部工具组工作，搭建合规组和用户支持的后台系统。
 
-Noise aside, there hasn't been a single day where I haven't been excited about coming into work. I've continued working in our internal tools team, building out our compliance and customer support back-office.
+## 我所学到的东西
 
-## What I learned
+之前的销售工作经历对我现在的工作非常有帮助。很强的沟通能力、时间管理能力和表达能力对于一个开发人员也是无价的。但我发现开发群体中普遍缺乏这些品质。
 
-The experience I gained in sales is incredibly advantageous in my work today. Strong communication, time-management, and presentational skills have been invaluable as a dev. But I have found these to be lacking in most dev communities I've observed.
+我意识到我真的非常幸运能这么快就得到了写生产代码的机会。这毫无疑问是我在学习编程过程中的巨大跳跃，也扩展了我对现实中开发工作的理解，这些在网课中是无法得到的。
 
-I realize I'm incredibly lucky to have been presented an opportunity to work with production code so early on. It was without a doubt a huge leap forward in my learning and massively helped in expediting my understanding of the realities of working as a dev that is impossible to gain from online tutorials*.*
+有个导师加快了我的学习进程，也帮助我更好地坚持下去，所以我们总有项目处于进行时。如果我没有周围那么多支持，我想我可能还在花费整个晚上和周末看教程或者搭建[随机生成宝可梦][4]之类的项目吧。
 
-Having a mentor to work with hugely accelerated my learning and was extremely helpful in keeping me accountable for always having a project on the go, so we always had something to work with. Without all of the support around me, I think I would still be spending all of my nights and weekends working through tutorials or building [random Pokemon generators][4].
+我下决心要把所有空闲时间用在个人发展上。我想人们很容易低估这个过程的时间成本。有指导者是一个巨大的帮助，即便只是有一个偶尔能回答你的问题的人，也能让你免于数小时的沮丧。千万不要害怕寻求帮助。
 
-I made a commitment early on to spend all of my free time continuing with my development. I think it's very easy to underestimate how large of a time commitment this journey is. Access to a mentor is a huge help, although even someone with enough knowledge to occasionally answer questions can save you hours of frustration. Don't be afraid to ask for help.
+回过头来看，我希望我能花更多时间搭建一些小项目，应用我所学的知识。我频繁地开始做项目但又半途而废，因为我一直认为我不能用正确的方式写完代码。
 
-Looking retrospectively, I wish I would have spent more time building small projects and applying the things I learned. I frequently started projects but never followed through because I felt like I couldn't code something the correct way.
+花时间艰难地研究一些东西对我的学习过程更有帮助。学一些交互性的编程网课确实更安心，但这对你把编程知识应用于现实世界有一定的限制。我确实踩过坑。
 
-Spending time struggling through something has been way more helpful for my learning. There is certainly safety to staying on the rails of an interactive coding course but it can put a ceiling on your ability to apply your knowledge in the real world. I definitely fell into that trap.
+我花了一段时间才意识到，并没有人知道什么是正确的（学习）方式，那些都是人为编造的。作为一个编程新手，能以新角度看问题也是有价值的吧。
 
-It took me a while before a realized no one knows what the right way is, it's all made up. As a novice developer, there is value in a fresh perspective.
+如果我希望过去的我能得到一则建议，那它会是“更努力地边学边应用”。特别是在你学习的过程中，并没有什么现实代码或者做事的正确方式。任何你能在过程中学以致用的机会都是有价值的。
 
-If there was one piece of advice I wish I had earlier on, it would have been to make a greater attempt to apply my knowledge as I learned. There is no such thing as real code or the correct way to do things, especially when you're learning. Any chance you have to apply your learnings along the way is valuable.
+不一定要等到有人给你薪酬你才是一名开发人员，只要你开始写代码，你就已经是了。
 
-You're not a developer once someone pays you to be a developer, you're a developer the second you start coding.
-
-Don't be a stranger! Feel free to write if you have any questions, [email me your favourite book recommendations,][5] [connect with me on Linkedin][6] or [follow me on twitter][7]!
+看完希望能交个朋友！如果有任何问题或者有推荐的书籍，欢迎给我发[邮件][5]，在[LinkedIn][6]上找我，或者关注我的[Twitter][7]！
 
 [1]: https://www.youtube.com/watch?v=EYOCa7kusJg
 [2]: https://www.pleo.io/

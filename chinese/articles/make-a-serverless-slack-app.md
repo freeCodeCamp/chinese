@@ -1,108 +1,107 @@
-> * 原文地址：[Learn Serverless by Building your own Slack App](https://www.freecodecamp.org/news/make-a-serverless-slack-app/)
-> * 原文作者：Lekha Surasani
-> * 译者：
-> * 校对者：
+> -   原文地址：[Learn Serverless by Building your own Slack App](https://www.freecodecamp.org/news/make-a-serverless-slack-app/)
+> -   原文作者：Lekha Surasani
+> -   译者：[Zhicheng](https://github.com/ZhichengChen)
+> -   校对者：
 
 ![Learn Serverless by Building your own Slack App](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/serverless-1.jpg)
 
-Serverless architecture is the industry's latest buzzword and many of the largest tech companies have begun to embrace it.
+Serverless 架构在业内炙手可热，很多大厂已经开始拥抱它了。
 
-In this article, we'll learn what it is and why you should use it. We'll also set up AWS, create our serverless app, and create a slack app!
-
----
-
-## What is Serverless?
-
-Serverless is a cloud computing paradigm in which the developer no longer has to worry about maintaining a server – they just focus on the code.
-
-Cloud providers, such as AWS or Azure, are now responsible for executing code and maintaining servers by dynamically allocating their resources. A variety of events can trigger code execution, including cron jobs, http requests, or database events.
-
-The code that developers send to the cloud is usually just a function so, many times, serverless architecture is implemented using Functions-as-a-Service, or FaaS. The major cloud providers provide frameworks for FaaS, such as AWS Lambda and Azure Functions.
-
-## Why Serverless?
-
-Not only does serverless allow developers to just focus on code, but it has many other benefits as well.
-
-Since cloud providers are now responsible for executing code and dynamically allocate resources based on event triggers, you typically only pay per request, or when your code is being executed.
-
-Additionally, since cloud providers are handling your servers, you don't have to worry about scaling up – the cloud provider will handle it. This makes serverless apps lower cost, easier to maintain, and easier to scale.
+本文将介绍 Serverless 是什么，为什么要拥抱它。以及 AWS 设置，如何创建 serverless app，如何创建 slack app。
 
 ---
 
-## Setting up AWS Lambda
+## 什么是 Serverless
 
-For this tutorial, I will be using AWS Lambda, so first, we'll create an  [AWS account][1]. I find AWS's UI hard to understand and difficult to navigate, so I will be adding screenshots for each step.
+Serverless 是云计算范例，开发者只需关注代码，无需担忧服务器运维。
 
-Once you log in, you should see this:
+云提供商，比如 AWS 或者 Azure，通过动态分配资源来运行代码以及运维服务。很多事件都可以触发代码，包括定时任务、http 请求或者数据库事件。
+
+开发者发送到云端的代码通常只是一个函数，因此，serverless 架构通常实现为函数即服务（Function-as-a-Service），即 FaaS。很多云服务商提供 FaaS 框架，比如 AWS 的 Lambda 和 Azure 的 Functions。
+
+## 为什么使用 Serverless
+
+Serverless 除了让开发者只关心代码外，还有如下优势。
+
+由于云服务商负责运行代码以及分配资源，所以可以按请求数或者代码执行次数付费。
+
+另外，由于云服务商接管服务器，不必担心流量涌入等问题，云服务商会搞定。综上，serverless app 便宜、易维护、高可用。
+
+---
+
+## 设置 AWS Lambda
+
+在这个教程里会使用 AWS Lambda，首先来创建一个 [AWS 账号][1]。AWS UI 不是很友好，我会给每个步骤贴一个截图。
+
+登录后，如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-17.png)
 
-Main screen
+首屏
 
-Next, we'll set up an IAM user. An  [IAM][2]  (Identity and Access Management) user interacts with AWS and its resources on your behalf. This allows you to create different IAM users with different permissions and purposes, without compromising the security of your root user account.
+接下来，创建一个 IAM 用户。[IAM][2] (Identity and Access Management) 用户可以操作 AWS 以及指定的资源。可以按场景创建具有相应权限的不同的 IAM 用户，不必担忧泄露 root 用户账号从而引发安全隐患。
 
-Click on the "services" tab at the top of the page, and type "IAM" into the bar:
+点击页面导航栏的 "services“ ，在搜索框输入 ”IAM“ ：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-27.png)
 
-Click on the first result, and you'll see, on the left-hand sidebar, that you're at the dashboard. Click on the "Users" option to get to create our new IAM user.
+单击第一个搜索结果，看到如下的左侧边栏，这就是 IAM 控制台了。点击 ”User“ 选项来创建一个新的 IAM 用户。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-28.png)
 
-Click on the "Add user" button to create a new user. Fill in the details as follows:
+点击 ”Add user“ 按钮创建一个新用户。按照下图填写详情：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-29.png)
 
-You can name your user anything you'd like, but I went with  `serverless-admin`. Be sure that your user has "Programmatic access" to AWS,  **not**  "AWS Management Console Access". You'd use the latter for teammates, or other  _humans_  who need access to AWS. We just need this user to interact with AWS Lambda, so we can just give them programmatic access.
+IAM 用户用什么名字都可以，在这里用的是 `serverless-admin`。确保选中了 ”Programmatic access“，取消 ”AWS Management Console Access“ 选中。 后者是给团队成员或者其它需要访问 AWS 的人用的。这里的 IAM 用户只需要和 AWS Lambda 交互，只需要给予 programmatic 权限即可。
 
-For permissions, I've chosen to attach existing policies since I don't have any groups, and I don't have any existing users that I want to copy permissions for. In this example, I will create the user with Administrator access since it's just for a personal project; however, if you were to use a serverless app in an actual production environment, your IAM user should be scoped to only access Lambda-necessary parts of AWS. (Instructions can be found  [here][3]).
+在权限这里，因为还没有任何 Groups，也没有存在的可以复制权限的用户，选择 Attach existing policies。由于只是一个私人的项目，这里创建了一个具有超级管理员（Administrator）访问权限的用户。如果在生产环境使用 serverless app，IMA 用户应该限制为只具有访问 AWS Lambda 的权限。（[这里][3]有介绍）。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-58.png)
 
-I didn't add any tags and created the user. It's vital to save the information given to you on the next screen - the Access ID and Secret Access Key.
+我没有给创建的用户添加任何标签。这对于接下来保存 Access ID 和 Secret Access Key 信息很重要。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screenshot_2019-08-04-IAM-Management-Console.png)
 
-Don't leave this screen without copying down both! You won't be able to see the Secret access key again after this screen.
+千万不要在没有复制和下载 key 前关掉这个页面。关掉了就在也看不到 Secret access key 了。
 
-Finally, we'll add these credentials to command line AWS. Use this  [guide][4]  to get aws cli setup.
+最后，使用 AWS 命令行添加 credentials 。可以根据这个[指引][4]来安装 aws cli。
 
-Make sure you have it installed by running  `aws --version`. You should see something like this:
+运行 `aws --version`来确保已经安装成功。如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screen-Shot-2019-08-04-at-2.02.27-PM.png)
 
-Then run  `aws configure`  and fill in the prompts:
+接着运行 `aws configure` 填写 Key 信息：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screen-Shot-2019-08-04-at-5.42.53-PM.png)
 
-I have the default region as  `us-east-2`  already set up, but you can use  [this][5]  to determine what your region is.
+上面默认的地区就是 `us-east-2`, 可以通过[这个][4]来确定你的地区是什么。
 
-To make sure that you have your credentials set up correctly, you can run  `cat ~/.aws/credentials`  in your terminal.
+为了确保 credentials 设置成功，可以在终端里运行 `cat ~/.aws/credentials`。
 
-If you want to configure a profile other than your default, you can run the command as follows:  `aws configure --profile [profile name]`.
+如果想设置某一个属性，可以运行如下命令：`aws configure --profile [profile name]`。
 
-If you had trouble following the steps, you can also check out  [AWS's documentation][6].
+如果有和预期不符的地方，可以查询 [AWS 的文档][6]。
 
 ---
 
-## Set up serverless
+## 设置 serverless
 
-Go to your terminal and install the  `serverless`  package globally using  `npm`:  `npm i -g serverless`. ([More info on serverless here][7])  
-and your terminal should look something like this:
+打开终端执行命令 `npm i -g serverless` 在全局安装 `serverless` 框架。如下所示。[戳此了解更多 serverless 框架][7]。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screen-Shot-2019-08-04-at-1.55.12-PM.png)
 
-Next, navigate to the directory where you want to create the app, then run  `serverless`and follow the prompts:
+接着，到工作目录下，运行 `serverless`，按如下填写：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screen-Shot-2019-08-04-at-5.55.03-PM.png)
 
-For this application, we'll be using Node.js. You can name your app anything you want, but I've called mine  `exampleSlackApp`.
+在这里使用 Node.js。可以给 app 起任何名字，在这里使用 `exampleSlackApp`。
 
-Open your favorite code editor to the contents in  `exampleSlackApp`  (or whatever you've called your application).
+用代码编辑器打开 `exampleSlackApp`（或者你命名的项目）。
 
-First, we'll take a look at  `serverless.yml`. You'll see there's a lot of commented code here describing the different options you can use in the file. Definitely give it a read, but I've deleted it down to just:
+首先，打开 `serverless.yml`。会看到有大量的注释的代码描述了可以再这个文件使用的不同的选项。可以了解一下，下面的文件它们都删除了，便于显示：
 
-```
+```plain
 service: exampleslackapp
 
 provider:
@@ -114,60 +113,60 @@ provider:
 
 serverless.yml
 
-I've included  `region`  since the default is  `us-east-1`  but my aws profile is configured for  `us-east-2`.
+由于默认的 `region` 是 `us-east-1` 我添加了 `region` 改成 `us-east-2`。
 
-Let's deploy what we already have by running  `serverless deploy`  in the directory of the app that  `serverless`  just created for us. The output should look something like this:
+运行 `serverless deploy` 来部署 `serverless` 刚刚创建的 app。输出如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screen-Shot-2019-08-05-at-12.07.10-AM.png)
 
-And if you run  `serverless invoke -f hello`  in your terminal, it'll run the app, and you should see:
+如果在终端运行 `serverless invoke -f hello`，会启动 app，输出如下：
 
-```
+```plain
 {
     "statusCode": 200,
     "body": "{\n  "message": "Go Serverless v1.0! Your function executed successfully!",\n  "input": {}\n}"
 }
 ```
 
-For further proof that our slack app is live, you can head back to AWS console. Go to the services dropdown, search for "Lambda", and click on the first option ("Run code without thinking about servers").
+为了证明 slack app 已经在线，回到 AWS 控制台。打开 services 下拉菜单，搜索 ”Lambda“，选择第一个选项（Run code without thinking about servers）。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-32.png)
 
-And here's your app!
+这里就是我们的 app！
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-33.png)
 
-Next, we'll explore actually using serverless by building our slack app. Our slack app will post a random  [Ron Swanson][8]  quote to slack using a  [slash command][9]  like this:
+接下来，通过 serverless 构建 slack app，可以通过 [slash command][9] 向 slack 随机发送 [Ron Swanson][8] 的名言，如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screen-Shot-2019-08-07-at-10.23.40-PM.png)
 
-The following steps don't necessarily have to be done in the order that I've done them, so if you want to skip around, feel free!
+下面的步骤不必按顺序做，如果想跳着来，随意。
 
 ---
 
-## Adding the API to our code
+## 给我们的代码添加 API
 
-I'm using  [this API][10]  to generate Ron Swanson quotes since the docs are fairly simple (and of course, it's free). To see how requests are make and what gets returned, you can just put this URL in your browser:
+我使用[这个 API][10] 来生成 Ron Swanson 的名言，它的文档很清晰（最重要的是免费）。如果想知道怎么调用以及返回格式，把这个链接复制到浏览器，访问一下：
 
 [`https://ron-swanson-quotes.herokuapp.com/v2/quotes`][11]
 
-You should see something like this:
+结果如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-59.png)
 
-So, we can take our initial function and modify it as such:
+打开默认的函数改成如下：
 
-```
+```plain
 module.exports.hello = (event) => {
   getRon();
 };
 ```
 
-Note: I've removed the async portion
+注：我已经移除了 async
 
-and  `getRon`  looks like:
+`getRon` 方法如下
 
-```
+```plain
 function getRon() {
   request('https://ron-swanson-quotes.herokuapp.com/v2/quotes', function (err, resp, body) {
     console.log('error:', err)
@@ -177,65 +176,67 @@ function getRon() {
 }
 ```
 
-Now, let's check if it works. To test this code locally, in your terminal:  `serverless invoke local -f hello`. Your output should look something like:
+现在，检查一下是否正常。在终端里执行：`serverless invoke local -f hello`，在本地测试代码。输出如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screen-Shot-2019-08-07-at-9.41.53-PM.png)
 
 Spoiler: There was a wrong way to consume alcohol
 
-`serverless invoke -f hello`  would run the code that you've deployed, as we saw in previous sections.  `serverless invoke local -f hello`, however, runs your local code, so it's useful for testing. Go ahead and deploy using  `serverless deploy`!
+`serverless invoke -f hello` 会运行已经部署的代码，如前文所述。
 
----
+`serverless invoke local -f hello`，在本地运行代码，用它来测试很方便。测试无虞后 `serverless deploy` 部署一下，棒。
 
-## Create your Slack App
+## 创建 Slack App
 
-To create your slack app, follow this  [link][13]. It'll make you sign into a slack workspace first, so be sure you're a part of one that you can add this app to. I've created a testing one for my purposes. You'll be prompted with this modal. You can fill in whatever you want, but here's what I have as an example:
+按照这个[链接][13]创建 slack app。需要先注册 slack worksapce，确保有添加 slack app 的权限。这里创建了一个测试。弹出这个弹窗后，信息按需填写，如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-61.png)
 
-From there, you'll be taken to the homepage for your app. You should definitely explore these pages and the options. For example, I've added the following customization to my app:
+接下来，是 app 的首页。这里可以好好研究一下，我是像下面这样定制的 app：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-62.png)
 
-Display information can be found from the "Basic Information" tab on the app
+Display information 可以在 app 的 ”Basic information“ 标签页打开
 
-Next, we need to add some permissions to the app:
+接下来需要给 app 添加一些权限：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screenshot_2019-08-07-Slack-API-Applications-lekha_test-Slack.png)
 
-To get an OAuth Access Token, you have to add some scope and permissions, which you can do by scrolling down:
+向下滚动页面，添加 scope 和 permissions 来获得 OAuth Access Token。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-64.png)
 
 I've added "Modify your public channels" so that the bot could write to a channel, "Send messages as Ron Swanson" so when the message gets posted, it looks like a user called Ron Swanson is posting the message, and slash commands so the user can "request" a quote as shown in the screenshot at the beginning of the article. After you save the changes, you should be able to scroll back up to OAuths & Permissions to see:
 
+添加 ”Modify your public channels“ 以便机器人可以向 channel 发消息。添加 ”Send messages as Ron Swaon“，这样收到信息时，看起来像是 Ron Swanson 用户发送的，以及 ”slash commands“，以便用户可以像文章开头的截图那样请求名言。点击 Save Changes 后，滚动回 OAuths & Permissions 如下：
+
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-65.png)
 
-Click the button to Install App to Workspace, and you'll have an OAuth Access Token! We'll come back to this in a second, so either copy it down or remember it's in this spot.
+点击 Install App to Workspace 按钮，就会获得一个 OAuth Access Token。一会会用到它，复制或者下载它到某个地方。
 
 ---
 
-## Connect Code and Slack App
+## 链接代码到 Slack App
 
-In AWS Lambda, find your slack app function. Your Function Code section should show our updated code with the call to our Ron Swanson API (if it does not, go back to your terminal and run  `serverless deploy`).
+在 AWS Lambda 里，找到对应的 slack app 函数。函数代码部分应该显示更新过的代码，包含调用 Ron Swanson API 的代码（如果没有，在终端里执行一下 `serverless deploy`）。
 
-Scroll below that to the section that says "[Environment Variables][14]", and put your Slack OAuth Access Token here (you can name the key whatever you'd like):
+滚动屏幕到 ”Environment Variables“ 部分，把 Slack OAuth Access Token 放在这里（给 key 起一个名字）：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screenshot_2019-08-07-Lambda-Management-Console.png)
 
-Let's go back to our code and add Slack into our function. At the top of our file, we can declare a  `const`  with our new OAuth Token:
+返回代码在函数里添加 Slack key。在文件顶部，声明一个 `const` ，引用 OAuth Token。
 
-`const SLACK_OAUTH_TOKEN = process.env.OAUTH_TOKEN`.
+const SLACK_OAUTH_TOKEN = process.env.OAUTH_TOKEN`.
 
-`process.env`  just grabs our environment variables ([additional reading][15]). Next, let's take a look at the  [Slack API][16]  to figure out how to post a message to a channel.
+`process.env` 只是获取到环境变量（[戳此查看介绍][15]）。接下来看一下 [Slack API][16] 来研究一下怎么向 channel 里发消息。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-67.png)
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-76.png)
 
-The two pictures above I've taken from the API are the most relevant to us. So, to make this API request, I'll use  `request`  by passing in an object called  `options`:
+上面的两幅图片是我在 API 文档里面截的，参考文档发起对应请求，这里使用 `request` 方法传入了一个名为 `options` 的对象：
 
-```
+```plain
   let options = {
     url: 'https://slack.com/api/chat.postMessage',
     headers: {
@@ -250,9 +251,9 @@ The two pictures above I've taken from the API are the most relevant to us. So, 
   }
 ```
 
-and we can make the request:
+然后发起请求：
 
-```
+```plain
   request(options, function(err, resp, body) {
     console.log('error:', err)
     console.log('statusCode:', resp && resp.statusCode)
@@ -260,9 +261,9 @@ and we can make the request:
   })
 ```
 
-Finally, I'll wrap the whole thing in a function:
+最后封装成函数：
 
-```
+```plain
 function postRon(quote) {
   let options = {
     url: 'https://slack.com/api/chat.postMessage',
@@ -279,9 +280,9 @@ function postRon(quote) {
 
 ```
 
-and we can call it from  `getRon`  like this:
+给这个函数命名为 `getRon`，如下：
 
-```
+```plain
 function getRon() {
   request('https://ron-swanson-quotes.herokuapp.com/v2/quotes', function (err, resp, body) {
     console.log('error:', err)
@@ -292,9 +293,9 @@ function getRon() {
 }
 ```
 
-So our code should all in all look like this:
+整个代码看起来如下：
 
-```
+```plain
 'use strict';
 let request = require('request');
 const SLACK_OAUTH_TOKEN = process.env.OAUTH_TOKEN
@@ -325,61 +326,61 @@ function postRon(quote) {
 
 ```
 
-Now let's test! Unfortunately, our environment variable in AWS Lambda isn't available to us when we run  `serverless invoke local -f hello`. There are a few ways you can approach this, but for our purposes, you can just replace the value for  `SLACK_OAUTH_TOKEN`  with your actual OAuth Token (make sure it's a string). But be sure you switch it back before you push it up to version control!
+现在来测试一下！很不幸 AWS Lambda 里的环境变量在运行 `serverless invoke local -f hello` 时并不可用。有很多方法来解决这个问题，这里我们把 `SLACK_OAUTH_TOKEN` 替换成真实的 OAuth Token（确保以字符串的形式）。一定要记得不要把它提交到版本控制里面去哦。
 
-Run  `serverless invoke local -f hello`, and hopefully you should see a message like this in your #general channel:
+运行 `serverless invoke local -f hello`，在 #general channel 会看到类似下面的信息：
 
-![](https://www.freecodecamp.org/news/content/images/2019/08/image-69.png)
+![](https://www.freecodecamp.org/news/content/images/2019/08/image-69.png)\_
 
-_Please note that I put down my channel name as 'general' since it's my test workspace; however, if you're in an actual workspace, you should create a separate channel for testing apps, and put the message there instead while you're testing._
+_注意我的是测试 workspace 所以 channel 名字是 `general`，如果在真实的 workspace 里，应该为测试 app 创建一个单独的 channel，在测试的时候把消息发到这里面_。
 
-And in your terminal, you should see something like:
+终端里输出如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screen-Shot-2019-08-07-at-10.48.38-PM.png)
 
-If that works, go ahead and deploy it using  `serverless deploy`. If it does not, the best way to debug this is to adjust code and run  `serverless invoke local -f hello`.
+如果正常，使用命令 `serverless deploy` 部署。如果有问题，通过 `serverless invoke local -f hello` 来 debug。
 
 ---
 
-## Adding slash command
+## 添加 slash command
 
-The last and final part is adding a slash command! Go back to your function's home page in AWS Lambda and look for the button that says "Add trigger":
+最后一件事就是添加 slash command！返回 AWS Lambda 函数的首页，找到 “Add trigger” 按钮：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-70.png)
 
-We're going to add an API Gateway (as I already have).
+我们将要添加 API Gateway（其实已经存在了）。
 
-Click on the button to get to the "Add trigger" page, and select "API Gateway" from the list:
+单击按钮打开 “Add trigger” 页，在列表中选择 "API Gateway"：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-71.png)
 
-I've filled in the information based on defaults mostly:
+按下图填写信息：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-72.png)
 
-I've also left this API open for use – however, if you're using this in production, you should discuss what standard protocol would be with your team. "Add" the API, and you should receive an API endpoint. Hold on to this, because we'll need it for the next step.
+这个 API 会开放使用，如果用于生产环境，需要和团队讨论一下协议标准。”Add“ API，会收到一个 API endpoint。记住它，在下一步会用到。
 
-Let's switch back over to our slack app and add a slash command:
+返回 slack app 添加 slash 命令：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-73.png)
 
-Click on "Create New Command" and it should pop up with a new window to create a command. Here's how I filled mine out:
+点击 ”Create New Command“，会弹出一个新窗口来创建命令。下面是我的填写：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screenshot_2019-08-07-Slack-API-Applications-lekha_test-Slack-1-.png)
 
-You can enter anything you want for "command" and "short description" but for "request URL", you should put your API endpoint.
+”command“ 和 ”short description“ 可以随意填写，但是 ”request URL“，需要填写刚才的 API endpoint。
 
-Finally, we'll go back to our code to make some final adjustments. If you try to use the slash command, you should receive some kind of error back – this is because slack expects a response and AWS expects you to give a response when the endpoint is hit. So, we'll change our function to allow a  `callback`  ([for reference][22]):
+最后，返回代码做最后的调整。如果尝试使用 slash command，会返回错误 - 这是因为 slack 预期收到一个 response，AWS 也预期 endpoint 触达时返回一个响应。修改代码返回 `callback`（[文档][22]）
 
-```
+```plain
 module.exports.hello = (event,context,callback) => {
   getRon(callback);
 };
 ```
 
-and then we'll change  `getRon`  to do something with the  `callback`:
+修改 `getRon` 返回 callback：
 
-```
+```plain
 function getRon(callback) {
   request('https://ron-swanson-quotes.herokuapp.com/v2/quotes', function (err, resp, body) {
     console.log('error:', err)
@@ -391,20 +392,20 @@ function getRon(callback) {
 }
 ```
 
-where  `SUCCESS_RESPONSE`  is at the top of the file:
+在文件顶部添加 `SUCCESS_RESPONSE`:
 
-```
+```plain
 const SUCCESS_RESPONSE = {
   statusCode: 200,
   body: null
 }
 ```
 
-You can put the callback here or in  `postRon`  – it just depends on what your purposes are with the callback.
+可以把 callback 放在 `postRon` 里 - 具体取决于代码。
 
-Our code at this point now looks something like:
+我的代码如下：
 
-```
+```plain
 'use strict';
 let request = require('request');
 const SLACK_OAUTH_TOKEN = OAUTH_TOKEN
@@ -440,38 +441,40 @@ function postRon(quote) {
 
 ```
 
-You should be able to use the  `/ron`  command in slack now and get a Ron Swanson quote back. If you don't, you can use Cloudwatch logs to see what went wrong:
+现在可以再 slack 里面使用 `/ron` 命令获取 Ron Swanson 的名言啦。如果有问题，可以使用 Cloudwatch 日志来看一下哪里出了问题：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screenshot_2019-08-07-Lambda-Management-Console-1-.png)
 
-The way our code works now, we've hardcoded in the channel name. But, what we actually want is for the quote to get posted in the message where you used  `/ron`.
+代码现在可以运行，我们已经 hardcoded 了 channel name。但是实际上我们想在任何发送 `/ron` 的 channel 返回名言。
 
-So, we can now use the  `event`  portion of our function.
+在函数里面使用 event。
 
-```
+```plain
 module.exports.hello = (event,context,callback) => {
   console.log(event)
   getRon(callback);
 };
 ```
 
-Use  `/ron`  to run the function, and then check your Cloudwatch logs to see what gets logged to the console (you may need to refresh). Check on the most recent logs and you should see something like this:
+使用 `/ron` 来运行函数，然后检查 Cloudwatch 日志来看控制台输出了什么（可能会需要刷新）。检查最新的日志会看到如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-74.png)
 
-The first item in this list (where it says "resource", "path", etc.) is the event, so if you expand that, you'll see a long list of things, but what we're looking for is 'body' all the way down at the bottom:
+列表的第一项（也就是 "resource"、"path"，等）是 event，如果展开它，你会发现一长列表东西，我们关注的是在底部的 “body”。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/image-75.png)
 
-where's waldo: spot the param edition
+waldo 在哪里: 发现 param 版本
 
-Body is a string with some relevant information in it, one of them being "channel\_id". We can use channel\_id (or channel\_name) and pass it into the function that creates our slack message. For your convenience, I've already parsed this string:  `event.body.split("&")[3].split("=")[1]`  should give you the channel\_id. I hardcoded in which entry (3) the channel\_id was for simplicity.
+Body 是含有一些相关信息的字符串，其中的一个是 “channel_id”。可以使用 channel_id （或者 channel_name）做为参数传入创建 Slack 信息的函数。为了方便，直接给出获取该参数方法：`event.body.slit("&")[3].split("=")[1]`，这会返回 channel_id。hardcoded 了一下，第三个值就是 channel_id。
 
 Now, we can alter our code to save that string as a variable:
 
-`let channel = 'general'`  (as our fallback)
+现在，可以获取到的字符串保存为一个变量：
 
-```
+`let channel = 'general'`（做为 fallback）
+
+```plain
 module.exports.hello = (event,context,callback) => {
   console.log(event)
   channel = event.body.split("&")[3].split("=")[1]
@@ -480,9 +483,9 @@ module.exports.hello = (event,context,callback) => {
 };
 ```
 
-and in  `postRon`:
+以及 `postRon`:
 
-```
+```plain
   let options = {
     url: 'https://slack.com/api/chat.postMessage',
     headers: {
@@ -497,13 +500,11 @@ and in  `postRon`:
   }
 ```
 
-options var in postRon
+可选的 psotRon 里的 var
 
-Finally, if you use a slack command in any channel in your workspace, you should be able to see a Ron Swanson quote pop up! If not, as I mentioned before, the most common tools I use to debug serverless apps are  `serverless invoke local -f <function name>`and Cloudwatch logs.
+最后，如果在 workspace 的任何 channel 使用 slack command，会看到 Ron Swanson 的名言。如果没有，就像之前说的那样，最好的 debug serverless app 的工具是 `serverless invoke local -f <function name>` 以及 Cloudwatch 日志。
 
----
-
-Hopefully you were successfully able to create a functioning Slack application! I've included resources and background reading dispersed throughout the article and I'm happy to answer any questions you may have!
+希望你能成功的创建 Slack 应用！我已经在文末附了相关资料和背景阅读。希望能够解决你的问题。
 
 _Final Repo with code:_ [https://github.com/lsurasani/ron-swanson-slack-app/][27]
 

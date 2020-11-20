@@ -7,10 +7,10 @@
 
 ![About freeCodeCamp - Frequently Asked Questions](https://www.freecodecamp.org/news/content/images/size/w2000/2019/06/freecodecamp-conference-photo.jpeg)
 
-
 ### freeCodeCamp 是什么？
 
 这是一个非营利性社区，帮助你通过构建项目的方式来学习编程。
+=======
 
 ### 你们如何帮助我学习编程呢？
 
@@ -32,7 +32,6 @@
 
 是的，我们是501(c)(3) [**捐款人支持的公共慈善组织**][5]。你可以[**在此下载我们的国税局认定书**][6]。
 
-How can I support the freeCodeCamp community?
 ### 我可以怎么支持 freeCodeCamp 社区？
 你可以[设置一个你能负担的每月给我们的非营利组织捐款的计划](https://www.freecodecamp.org/donate)。
 

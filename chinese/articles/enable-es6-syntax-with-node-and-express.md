@@ -1,7 +1,7 @@
-> * 原文地址：[How to enable ES6 (and beyond) syntax with Node and Express](https://www.freecodecamp.org/news/how-to-enable-es6-and-beyond-syntax-with-node-and-express-68d3e11fe1ab/)
-> * 原文作者：[Jonathan Albert M. Cunanan](https://github.com/jcunanan05)
-> * 译者：[Zou Li](https://github.com/zlv2s)
-> * 校对者：
+> -   原文地址：[How to enable ES6 (and beyond) syntax with Node and Express](https://www.freecodecamp.org/news/how-to-enable-es6-and-beyond-syntax-with-node-and-express-68d3e11fe1ab/)
+> -   原文作者：[Jonathan Albert M. Cunanan](https://github.com/jcunanan05)
+> -   译者：[Zou Li](https://github.com/zlv2s)
+> -   校对者：
 
 # 在 Node 和 Express 中使用 ES6 （及以上）语法
 
@@ -9,16 +9,17 @@
 
 ### 目录内容
 
-- [预备知识](#prerequisites)
-- [安装 Express](#installing-express)
-- [脚本配置](#setting-up-scripts)
-- [小技巧](#bonus)
-- [TL;DR](#tl-dr)
+-   [预备知识](#prerequisites)
+-   [安装 Express](#installing-express)
+-   [脚本配置](#setting-up-scripts)
+-   [小技巧](#bonus)
+-   [TL;DR](#tl-dr)
 
 <h3 id="prerequisites">预备知识</h3>
 
 在开始之前，我们需要做些准备工作。
-1. 确保你的当你安装了 Node.js 和 npm。可以通过 [ Node.js Source](https://nodejs.org/en/download/) 或者 [NVM (Node Version Manager)](https://github.com/creationix/nvm) 来安装，我推荐安装最新版或者目前稳定版。
+
+1. 确保你的当你安装了 Node.js 和 npm。可以通过 [Node.js Source](https://nodejs.org/en/download/) 或者 [NVM (Node Version Manager)](https://github.com/creationix/nvm) 来安装，我推荐安装最新版或者目前稳定版。
 2. 接下来，我们需要安装 Express Generator cli，它可以快速帮我们生成 Express 应用骨架，在命令行工具中输入：
 
 ```bash
@@ -58,11 +59,11 @@ npm install
 
 在等待安装的过程中，你可以做如下几步操作：
 
-- 创建 `src/` 目录
-- 将 `bin/`，`app.js` 和 `routes/` 移动到 `src` 目录
-- 将 `bin` 目录中的 `www` 文件重命名为 `www.js`
-- 将 `public/` 移动到项目根目录
-- 删除 `routes/users.js`，我们暂时不需要
+-   创建 `src/` 目录
+-   将 `bin/`，`app.js` 和 `routes/` 移动到 `src` 目录
+-   将 `bin` 目录中的 `www` 文件重命名为 `www.js`
+-   将 `public/` 移动到项目根目录
+-   删除 `routes/users.js`，我们暂时不需要
 
 整个项目结构如下：
 
@@ -74,13 +75,13 @@ npm install
 
 将 Express 应用生成器生成的代码转换为 ES6 语法的过程有点枯燥，所以我直接将代码贴在下面，你可以复制粘贴。
 
-- `bin/www.js` 文件：
+-   `bin/www.js` 文件：
 
-```
+```plain
 // bin/www.js
 ```
 
-```
+```plain
 /** * Module dependencies. */
 ```
 
@@ -94,15 +95,15 @@ import http from 'http';
 const debug = debugLib('your-project-name:server');
 ```
 
-```
+```plain
 // generated code below.
 ```
 
 我们几乎只需要在文件的顶部和底部进行修改，其他的代码不需要。
 
-- `routes/index.js` 文件：
+-   `routes/index.js` 文件：
 
-```
+```plain
 // routes/index.js
 ```
 
@@ -113,7 +114,7 @@ var router = express.Router();
 
 ```js
 /* GET home page. */
-router.get('/', function(req, res, next) {  
+router.get('/', function (req, res, next) {
     res.render('index', { title: 'Express' });
 });
 ```
@@ -122,9 +123,9 @@ router.get('/', function(req, res, next) {
 export default router;
 ```
 
-- `app.js` 文件：
+-   `app.js` 文件：
 
-```
+```plain
 // app.js
 ```
 
@@ -167,7 +168,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 其次，我们删除了 `routes/users.js` 文件，所以还需要在 `app.js`中移除以下代码
 
-```
+```plain
 // remove these lines
 ```
 
@@ -212,15 +213,16 @@ npm install -D @babel/core @babel/cli @babel/preset-env @babel/node
 
 因为我们使用 Babel 来转换不同类型的 js 语法，所以需要在 `.babelrc` 中配置 `preset-env` 预设（之前安装的），它会告诉 Babel 去转换哪种类型。
 
-在这些都设置好后，我们就可以测试 node server能否在 ES6 语法环境下运行，首先，在 `package.json` 中添加 dev 脚本：
+在这些都设置好后，我们就可以测试 node server 能否在 ES6 语法环境下运行，首先，在 `package.json` 中添加 dev 脚本：
 
 ```json
-"scripts": { 
-    "start": "node ./bin/www",    
-    "server": "babel-node ./src/bin/www",    
+"scripts": {
+    "start": "node ./bin/www",
+    "server": "babel-node ./src/bin/www",
     "dev": "NODE_ENV=development npm-run-all server"
 }
 ```
+
 在上面的代码中我们添加了 server 和 dev 两个脚本，使用代码分隔将他们组合起来，再通过 `npm-run-all` 来运行所有命令。
 
 现在输入以下命令来测试服务器能否正常启动：
@@ -237,9 +239,9 @@ npm run dev
 
 prod 脚本 和 dev 脚本有点区别，我们需要将 `src` 目录中的所有 js 文件代码转换为 nodejs 能够识别的语法形式。运行 prod 脚本会生成一个和 `src/` 目录结构类似的 `dist/` 文件夹，但是每次在运行该脚本之前，我们需要将旧的 `dist/` 文件夹删除，确保我们运行的是最新生成的代码。下面是具体步骤：
 
-- 创建 build 脚本，它会转换 `src/` 中的文件代码并生成新的 `dist/` 文件夹。
-- 安装 rimraf 包，并新建 clean 脚本，用来删除 `dist/` 文件夹。
-- 新建 prod 脚本，将 clean，build，start server 脚本组合起来。 
+-   创建 build 脚本，它会转换 `src/` 中的文件代码并生成新的 `dist/` 文件夹。
+-   安装 rimraf 包，并新建 clean 脚本，用来删除 `dist/` 文件夹。
+-   新建 prod 脚本，将 clean，build，start server 脚本组合起来。
 
 #### Clean 脚本
 
@@ -252,10 +254,10 @@ npm install rimraf --save
 安装好后，在 `package.json` 的 scripts 字段中加入 clean 脚本，我们会在 build 脚本中使用到它，现在整个 scripts 字段结构如下：
 
 ```json
-"scripts": { 
-    "start": "node ./bin/www", 
-    "server": "babel-node ./src/bin/www", 
-    "dev": "NODE_ENV=development npm-run-all server",  
+"scripts": {
+    "start": "node ./bin/www",
+    "server": "babel-node ./src/bin/www",
+    "dev": "NODE_ENV=development npm-run-all server",
     "clean": "rimraf dist"
 },
 ```
@@ -265,12 +267,12 @@ npm install rimraf --save
 现在我们来添加 build 脚本，会用到 babel-cli（之前安装过的），如下：
 
 ```json
-"scripts": {   
+"scripts": {
     "start": "node ./bin/www",
-    "server": "babel-node ./src/bin/www", 
-    "dev": "NODE_ENV=development npm-run-all server",  
-    "clean": "rimraf dist",  
-    "build": "babel ./src --out-dir dist"  
+    "server": "babel-node ./src/bin/www",
+    "dev": "NODE_ENV=development npm-run-all server",
+    "clean": "rimraf dist",
+    "build": "babel ./src --out-dir dist"
 },
 ```
 
@@ -279,13 +281,13 @@ npm install rimraf --save
 prod 脚本组合了 build，clean，和 start 脚本，现在我们来修改下 start 脚本：
 
 ```json
-"scripts": {   
-    "start": "npm run prod", 
-    "server": "babel-node ./src/bin/www", 
-    "server:prod": "node ./dist/bin/www", 
-    "dev": "NODE_ENV=development npm-run-all server", 
-    "clean": "rimraf dist", 
-    "build": "babel ./src --out-dir dist",   
+"scripts": {
+    "start": "npm run prod",
+    "server": "babel-node ./src/bin/www",
+    "server:prod": "node ./dist/bin/www",
+    "dev": "NODE_ENV=development npm-run-all server",
+    "clean": "rimraf dist",
+    "build": "babel ./src --out-dir dist",
     "prod": "NODE_ENV=production npm-run-all clean build server:prod"
 },
 ```
@@ -305,9 +307,9 @@ npm i -D nodemon
 `nodemon.json` 配置文件：
 
 ```json
-{ 
-    "exec": "npm run dev", 
-    "watch": ["src/*", "public/*"], 
+{
+    "exec": "npm run dev",
+    "watch": ["src/*", "public/*"],
     "ext": "js, html, css, json"
 }
 ```
@@ -317,15 +319,15 @@ npm i -D nodemon
 我们将其添加到 `package.json` 的 scripts 字段中：
 
 ```json
-"scripts": {  
-    "start": "npm run prod",   
-    "server": "babel-node ./src/bin/www",  
-    "server:prod": "node ./dist/bin/www",   
-    "dev": "NODE_ENV=development npm-run-all server", 
-    "clean": "rimraf dist",   
-    "build": "babel ./src --out-dir dist",  
-    "prod": "NODE_ENV=production npm-run-all clean build server:prod",  
-    "watch": "nodemon" 
+"scripts": {
+    "start": "npm run prod",
+    "server": "babel-node ./src/bin/www",
+    "server:prod": "node ./dist/bin/www",
+    "dev": "NODE_ENV=development npm-run-all server",
+    "clean": "rimraf dist",
+    "build": "babel ./src --out-dir dist",
+    "prod": "NODE_ENV=production npm-run-all clean build server:prod",
+    "watch": "nodemon"
 },
 ```
 
@@ -339,9 +341,9 @@ npm run watch
 
 我将整个教程简化为以下几个步骤，并附上仓库地址，你可以参考学习：
 
-- 在命令行终端中使用 `express your-project-name` 新建项目。
-- 新建 `src/` 目录，将 `bin/`，`routes/` 和 `app` 移动到该目录；将部分代码转换为 ES6 语法；重命名 `bin/www` 为 `www.js`。
-- 安装开发依赖和生产依赖
+-   在命令行终端中使用 `express your-project-name` 新建项目。
+-   新建 `src/` 目录，将 `bin/`，`routes/` 和 `app` 移动到该目录；将部分代码转换为 ES6 语法；重命名 `bin/www` 为 `www.js`。
+-   安装开发依赖和生产依赖
 
 ```bash
 npm i -D @babel/cli @babel/core @babel/node @babel/preset-env nodemon
@@ -350,49 +352,47 @@ npm i -D @babel/cli @babel/core @babel/node @babel/preset-env nodemon
 ```bash
 npm i --save rimraf npm-run-all
 ```
-- package.json 中添加脚本
+
+-   package.json 中添加脚本
 
 ```json
-"scripts": {   
-    "start": "npm run prod", 
-    "server": "babel-node ./src/bin/www",  
-    "server:prod": "node ./dist/bin/www",   
-    "dev": "NODE_ENV=development npm-run-all server", 
-    "clean": "rimraf dist",  
-    "build": "babel ./src --out-dir dist", 
-    "prod": "NODE_ENV=production npm-run-all clean build server:prod", 
-    "watch": "nodemon" 
+"scripts": {
+    "start": "npm run prod",
+    "server": "babel-node ./src/bin/www",
+    "server:prod": "node ./dist/bin/www",
+    "dev": "NODE_ENV=development npm-run-all server",
+    "clean": "rimraf dist",
+    "build": "babel ./src --out-dir dist",
+    "prod": "NODE_ENV=production npm-run-all clean build server:prod",
+    "watch": "nodemon"
 },
 ```
 
-- 新建 `nodemon.json` 和 `.babelrc`，并配置
-
+-   新建 `nodemon.json` 和 `.babelrc`，并配置
 
 ```json
 // nodemon.json
 
-{  
-    "exec": "npm run dev", 
-    "watch": ["src/*", "public/*"], 
+{
+    "exec": "npm run dev",
+    "watch": ["src/*", "public/*"],
     "ext": "js, html, css, json"
 }
 ```
 
-
 ```json
 // .babelrc
 
-{  
-"presets": ["@babel/preset-env"]
+{
+    "presets": ["@babel/preset-env"]
 }
 ```
 
-- 运行 `npm run dev`，`npm run prod`，`npm run watch` 测试脚本
-- 完整的[仓库代码](https://github.com/jcunanan05/express-es6-sample/tree/for-article)
+-   运行 `npm run dev`，`npm run prod`，`npm run watch` 测试脚本
+-   完整的[仓库代码](https://github.com/jcunanan05/express-es6-sample/tree/for-article)
 
 ### 总结
 
 最后，希望你在本教程中能学到东西，感谢你的阅读!
 
 happy coding!
-

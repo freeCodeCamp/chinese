@@ -1,13 +1,13 @@
-> * 原文地址：[Here are some app ideas you can build to level up your coding skills](https://www.freecodecamp.org/news/here-are-some-app-ideas-you-can-build-to-level-up-your-coding-skills-39618291f672/)
-> * 原文作者：[Florin Pop](https://www.freecodecamp.org/news/author/florinpop17/)
-> * 译者：
-> * 校对者：
+> -   原文地址：[Here are some app ideas you can build to level up your coding skills](https://www.freecodecamp.org/news/here-are-some-app-ideas-you-can-build-to-level-up-your-coding-skills-39618291f672/)
+> -   原文作者：[Florin Pop](https://www.freecodecamp.org/news/author/florinpop17/)
+> -   译者：
+> -   校对者：
 
 ![Here are some app ideas you can build to level up your coding skills](https://cdn-media-1.freecodecamp.org/images/0*v3qXmKe1LTiiW_3H.png)
 
 Have you ever wanted to build something but you had no idea what to do? Just as authors sometimes have “writer's block” it’s also true for developers.
 
-Together with my friend  [Jim][1]  we created a  [collection of application ideas][2]  which is intended to solve this issue once and for all! ?
+Together with my friend [Jim][1] we created a [collection of application ideas][2] which is intended to solve this issue once and for all! ?
 
 These applications are:
 
@@ -22,23 +22,23 @@ This is not just a simple list of projects, but a collection that describes each
 Each project specification contains the following:
 
 1.  A clear and descriptive objective
-2.  A list of  _User Stories_  which should be implemented (these stories act more as a guideline than a forced list of  _To-Do’s_. Feel free to add your own features if you want)
-3.  A list of  _bonus features_  that improve not only the base project but also your skills at the same time
+2.  A list of _User Stories_ which should be implemented (these stories act more as a guideline than a forced list of _To-Do’s_. Feel free to add your own features if you want)
+3.  A list of _bonus features_ that improve not only the base project but also your skills at the same time
 4.  All the resources and links to help you find what you need to complete the project
 
 ### Projects
 
 All of the projects are divided into three tiers based on the knowledge and experience required to complete them. These tiers are:
 
-1.  **Beginner**  — Developers in the early stages of their learning journey. Those who are typically focused on creating user-facing applications.
-2.  **Intermediate**  — Developers at an intermediate stage of learning and experience. They are comfortable in UI/UX, using development tools, and building apps that use API services.
-3.  **Advanced**  — Developers who have all of the above, and are learning more advanced techniques like implementing BackEnd applications and Database services.
+1.  **Beginner** — Developers in the early stages of their learning journey. Those who are typically focused on creating user-facing applications.
+2.  **Intermediate** — Developers at an intermediate stage of learning and experience. They are comfortable in UI/UX, using development tools, and building apps that use API services.
+3.  **Advanced** — Developers who have all of the above, and are learning more advanced techniques like implementing BackEnd applications and Database services.
 
-Below you’ll find  **5 projects**  for each of the tiers (**15 in total**), but there are over  **30 projects**  (at the moment) in  [this GitHub repository][3]. Make sure you check it out as we are planning to add more projects in the future. You are welcome to help! (More about this in the  _Contributing_ section below ?)
+Below you’ll find **5 projects** for each of the tiers (**15 in total**), but there are over **30 projects** (at the moment) in [this GitHub repository][3]. Make sure you check it out as we are planning to add more projects in the future. You are welcome to help! (More about this in the _Contributing_ section below ?)
 
 ### 1\. Notes App
 
-**Tier:**  1 — Beginner
+**Tier:** 1 — Beginner
 
 **Description**: Create and store your notes for a later purpose!
 
@@ -64,7 +64,7 @@ Below you’ll find  **5 projects**  for each of the tiers (**15 in total**), bu
 
 ### 2\. Christmas Lights
 
-**Tier:**  1 — Beginner
+**Tier:** 1 — Beginner
 
 **Description**: The Christmas Lights application relies on your development talents to create a mesmerizing light display. Your task is to draw seven colored circles in a row and based on a timer change the intensity of each circle. When a circle is brightened its predecessor returns to its normal intensity.
 
@@ -91,7 +91,7 @@ This simulates the effect of a string of rippling lights, similar to the ones di
 
 ### 3\. FlipImage
 
-**Tier:**  1 — Beginner
+**Tier:** 1 — Beginner
 
 **Description**: It’s important for Web Developers to understand the basics of manipulating images since rich web applications rely on images to add value to the user interface and user experience (UI/UX).
 
@@ -119,22 +119,22 @@ You must only use native HTML, CSS, and Javascript to implement this app. Image 
 
 ### 4\. Quiz App
 
-**Tier:**  1 — Beginner
+**Tier:** 1 — Beginner
 
 **Description**: Practice and test your knowledge by answering questions in a quiz application.
 
-As a developer, you can create a quiz application for testing coding skills of other developers. (HTML, CSS, JavaScript, Python, PHP, etc…)
+As a developer, you can create a quiz application for testing coding skills of other developers. (HTML, CSS, JavaScript, Python, PHP, etc……)
 
 #### User Stories
 
--   User can start the quiz by pressing a  `button`
+-   User can start the quiz by pressing a `button`
 -   User can see a question with 4 possible answers
 -   After selecting an answer, display the next question to the User. Do this until the quiz is finished
 -   In the end, the User can see the following statistics:
 
 1.  Time it took to finish the quiz
 2.  How many correct answers did he get
-3.  A message showing if he  `passed`  or  `failed`  the quiz
+3.  A message showing if he `passed` or `failed` the quiz
 
 #### Bonus features
 
@@ -148,15 +148,15 @@ As a developer, you can create a quiz application for testing coding skills of o
 
 #### Example projects
 
-[Quiz app built with React][12]  (wait for it to load as it is hosted on Heroku)
+[Quiz app built with React][12] (wait for it to load as it is hosted on Heroku)
 
 ### 5\. Roman Numeral to Decimal numbers Converter
 
-**Tier:**  1 — Beginner
+**Tier:** 1 — Beginner
 
 **Description**: The numeric system represented by Roman numerals originated in ancient Rome and remained the usual way of writing numbers throughout Europe well into the Late Middle Ages. Roman numerals, as used today, employ seven symbols, each with a fixed integer value.
 
-See the below table the  _Symbol — Value_  pairs:
+See the below table the _Symbol — Value_ pairs:
 
 -   I — 1
 -   V — 5
@@ -187,14 +187,14 @@ See the below table the  _Symbol — Value_  pairs:
 
 ### 6\. Book Finder App
 
-**Tier:**  2 — Intermediate
+**Tier:** 2 — Intermediate
 
 **Description**: Create an application that will allow users to search for books by entering a query (Title, Author, etc). Display the resulting books in a list on the page with all the corresponding data.
 
 #### User Stories
 
--   User can enter a search query into an  `input`  field
--   User can submit the query. This will call an API that will return an array of books with the corresponding data (**Title**,  **Author**,  **Published Date**,  **Picture**, etc)
+-   User can enter a search query into an `input` field
+-   User can submit the query. This will call an API that will return an array of books with the corresponding data (**Title**, **Author**, **Published Date**, **Picture**, etc)
 -   User can see the list of books appearing on the page
 
 #### Bonus features
@@ -205,7 +205,7 @@ See the below table the  _Symbol — Value_  pairs:
 
 #### Useful links and resources
 
-You can use the  [Google Books API][15]
+You can use the [Google Books API][15]
 
 #### Example Project
 
@@ -213,19 +213,19 @@ You can use the  [Google Books API][15]
 
 ### 7\. Card-Memory-Game
 
-**Tier:**  2 — Intermediate
+**Tier:** 2 — Intermediate
 
 **Description**: Card memory is a game where you have to click on a card to see what image is underneath it and try to find the matching image underneath the other cards.
 
 #### User Stories
 
--   User can see a grid with n x n cards (`n`  is an integer). All the cards are faced down initially (`hidden`  state)
+-   User can see a grid with n x n cards (`n` is an integer). All the cards are faced down initially (`hidden` state)
 -   User can click a button to start the game. When this button is clicked, a timer will start
--   User can click on any card to unveil the image that is underneath it (change it to  `visible`  state). The image will be displayed until the user clicks on a 2nd card
+-   User can click on any card to unveil the image that is underneath it (change it to `visible` state). The image will be displayed until the user clicks on a 2nd card
 
 When the User clicks on the 2nd card:
 
--   If there is a match, the 2 cards will be eliminated from the game (either hide/remove them or leave them in the  `visible`  state)
+-   If there is a match, the 2 cards will be eliminated from the game (either hide/remove them or leave them in the `visible` state)
 -   If there isn’t a match, the 2 cards will flip back to their original state (`hidden`state)
 -   When all the matches have been found, the User can see a dialog box showing a Congratulations message with a counter displaying the time it took to finish the game
 
@@ -246,23 +246,23 @@ When the User clicks on the 2nd card:
 
 ### 8\. Markdown Table Generator
 
-**Tier:**  2 — Intermediate
+**Tier:** 2 — Intermediate
 
 **Description**: Create an application that will convert a regular table with data provided by the User (optionally) into a Markdown formatted table.
 
 #### User Stories
 
--   User can create an  `HTML table`  with a given number of  **Rows**  and  **Columns**
--   User can insert text in each cell of the  `HTML table`
--   User can generate a  `Markdown formatted table`  that will contain the data from the  `HTML table`
--   User can preview the  `Markdown formatted table`
+-   User can create an `HTML table` with a given number of **Rows** and **Columns**
+-   User can insert text in each cell of the `HTML table`
+-   User can generate a `Markdown formatted table` that will contain the data from the `HTML table`
+-   User can preview the `Markdown formatted table`
 
 #### Bonus features
 
--   User can copy the  `Markdown formatted table`  to the clipboard by pressing a button
--   User can insert a new  **Row**  or  **Column**  to a specified location
--   User can delete a  **Row**  or a  **Column**  entirely
--   User can align (to the  _left_,  _right_  or  _center_) a  **cell**, a  **column**, a  **row**, or the entire  **table**
+-   User can copy the `Markdown formatted table` to the clipboard by pressing a button
+-   User can insert a new **Row** or **Column** to a specified location
+-   User can delete a **Row** or a **Column** entirely
+-   User can align (to the _left_, _right_ or _center_) a **cell**, a **column**, a **row**, or the entire **table**
 
 #### Useful links and resources
 
@@ -276,7 +276,7 @@ When the User clicks on the 2nd card:
 
 ### 9\. String Art
 
-**Tier:**  2 — Intermediate
+**Tier:** 2 — Intermediate
 
 **Description**: The purpose of String Art is to provide the developer with practice creating a simple animated graphic, using geometry in the animation algorithm, and creating something that’s visually pleasant to watch.
 
@@ -305,19 +305,19 @@ Animation libraries are not allowed. Use only Vanilla HTML/CSS/JavaScript.
 
 #### Example project
 
-This project is very close, but has a small enclosing window and is monochromatic.  [Daniel Cortes][26]
+This project is very close, but has a small enclosing window and is monochromatic. [Daniel Cortes][26]
 
 ### 10\. To-Do App
 
-**Tier:**  2 — Intermediate
+**Tier:** 2 — Intermediate
 
 **Description**: The classic To-Do application where a user can write down all the things he wants to accomplish.
 
 #### User Stories
 
--   User can see an  `input`  field where he can type in a to-do item
+-   User can see an `input` field where he can type in a to-do item
 -   By pressing enter (or a button), the User can submit the to-do item and can see that being added to a list of to-do’s
--   User can mark a to-do as  `completed`
+-   User can mark a to-do as `completed`
 -   User can remove a to-do item by pressing on a button (or on the to-do item itself)
 
 #### Bonus features
@@ -338,7 +338,7 @@ This project is very close, but has a small enclosing window and is monochromati
 
 ### 11\. Battleship Game Engine
 
-**Tier:**  3 — Advanced
+**Tier:** 3 — Advanced
 
 **Description**: Battleship Game Engine (BGE) implements the classic turn-based board game as a package that’s separated from any presentation layer. This is a type of architectural pattern that useful in many application since it allows any number of apps to utilize the same service.
 
@@ -352,21 +352,21 @@ BGE is responsible for maintaining the game state.
 
 #### BGE
 
--   Caller can invoke a  `startGame()`  function to begin a 1-player game. This function will generate an 8x8 game board consisting of 3 ships having a width of one square and a length of:
+-   Caller can invoke a `startGame()` function to begin a 1-player game. This function will generate an 8x8 game board consisting of 3 ships having a width of one square and a length of:
 
 1.  Destroyer: 2 squares
 2.  Cruiser: 3 squares
 3.  Battleship: 4 squares
 
-`startGame()`  will randomly place these ships on the board in any direction and will return an array representing ship placement.
+`startGame()` will randomly place these ships on the board in any direction and will return an array representing ship placement.
 
--   Caller can invoke a  `shoot()`  function passing the target row and column coordinates of the targeted cell on the game board.  `shoot()`  will return indicators representing if the shot resulted in a hit or miss, the number of ships left (i.e. not yet sunk), the ship placement array, and updated hits and misses array.
+-   Caller can invoke a `shoot()` function passing the target row and column coordinates of the targeted cell on the game board. `shoot()` will return indicators representing if the shot resulted in a hit or miss, the number of ships left (i.e. not yet sunk), the ship placement array, and updated hits and misses array.
 
-Cells in the hits and misses array will contain a space if they have yet to be targeted,  `O`  if they were targeted but no part of a ship was at that location, or  `X`if the cell was occupied by part of a ship.
+Cells in the hits and misses array will contain a space if they have yet to be targeted, `O` if they were targeted but no part of a ship was at that location, or `X`if the cell was occupied by part of a ship.
 
 #### Text-based Presentation Layer
 
--   User can see the hits and misses array displayed as a 2-dimensional character representation of the game board returned by the  `startGame()`  function.
+-   User can see the hits and misses array displayed as a 2-dimensional character representation of the game board returned by the `startGame()` function.
 -   User can be prompted to enter the coordinates of a target square on the game board.
 -   User can see an updated hits and misses array display after taking a shot.
 -   User can see a message after each shot indicating whether the shot resulted in a hit or miss.
@@ -377,15 +377,15 @@ Cells in the hits and misses array will contain a space if they have yet to be t
 
 #### BGE
 
--   Caller can specify the number of rows and columns in the game board as a parameter to the  `startGame()`  function.
--   Caller can invoke a  `gameStats()`  function that returns a Javascript object containing metrics for the current game. For example, the number of turns played, the current number of hits and misses, etc.
--   Caller can specify the number of players (1 or 2) when calling  `startGame()`which will generate one board for each player randomly populated with ships.
+-   Caller can specify the number of rows and columns in the game board as a parameter to the `startGame()` function.
+-   Caller can invoke a `gameStats()` function that returns a Javascript object containing metrics for the current game. For example, the number of turns played, the current number of hits and misses, etc.
+-   Caller can specify the number of players (1 or 2) when calling `startGame()`which will generate one board for each player randomly populated with ships.
 
-`shoot()`  will accept the player number the shot is being made for along with the coordinates of the shot. The data it returns will be for that player.
+`shoot()` will accept the player number the shot is being made for along with the coordinates of the shot. The data it returns will be for that player.
 
 #### Text-based Presentation Layer
 
--   User can see the current game statics at any point by entering the phrase  `stats`in place of target coordinates. (Note that this requires the  `gameStats()`function in the BGE)
+-   User can see the current game statics at any point by entering the phrase `stats`in place of target coordinates. (Note that this requires the `gameStats()`function in the BGE)
 -   User can specify a two-player game is to be played, with each player alternating turns in the same terminal session (Note that this requires corresponding Bonus Features in the BGE)
 -   User can see the player number in prompts associated with the inputs in each turn.
 -   User can see both players board at the end of each turn.
@@ -397,13 +397,13 @@ Cells in the hits and misses array will contain a space if they have yet to be t
 
 #### Example projects
 
-This YouTube video shows how a text-based  [Battleship Game][31]  is played.
+This YouTube video shows how a text-based [Battleship Game][31] is played.
 
-The following example is provided as a demonstration of the Battleship game if it is unfamiliar to you. Remember you are to implement a text-based presentation layer for testing.  [Battleship Game by Chris Brody][32]
+The following example is provided as a demonstration of the Battleship game if it is unfamiliar to you. Remember you are to implement a text-based presentation layer for testing. [Battleship Game by Chris Brody][32]
 
 ### 12\. Chat App
 
-**Tier:**  3 — Advanced
+**Tier:** 3 — Advanced
 
 **Description**: Real-time chat interface where multiple users can interact with each other by sending messages.
 
@@ -412,8 +412,8 @@ As an MVP(Minimum Viable Product) you can focus on building the Chat interface. 
 #### User Stories
 
 -   User is prompted to enter a username when he visits the chat app. The username will be stored in the application
--   User can see an  `input field`  where he can type a new message
--   By pressing the  `enter`  key or by clicking on the  `send`  button the text will be displayed in the  `chat box`  alongside his username (e.g.  `John Doe: Hello World!`)
+-   User can see an `input field` where he can type a new message
+-   By pressing the `enter` key or by clicking on the `send` button the text will be displayed in the `chat box` alongside his username (e.g. `John Doe: Hello World!`)
 
 #### Bonus features
 
@@ -423,7 +423,7 @@ As an MVP(Minimum Viable Product) you can focus on building the Chat interface. 
 -   User can send images, videos, and links which will be displayed properly
 -   User can select and send an emoji
 -   Users can chat in private
--   Users can join  `channels`  on specific topics
+-   Users can join `channels` on specific topics
 
 #### Useful links and resources
 
@@ -436,7 +436,7 @@ As an MVP(Minimum Viable Product) you can focus on building the Chat interface. 
 
 ### 13\. GitHub Timeline
 
-**Tier:**  3 — Advanced
+**Tier:** 3 — Advanced
 
 **Description**: API’s and graphical representation of information are hallmarks of modern web applications. GitHub Timeline combines the two to create a visual history of a users GitHub activity.
 
@@ -475,7 +475,7 @@ curl -u "user-id" https://api.github.com/users/user-id/repos
 
 ### 14\. Spell-It
 
-**Tier:**  3 — Advanced
+**Tier:** 3 — Advanced
 
 **Description**: Knowing how to spell is a fundamental part of being fluent in any language. Whether you are a youngster learning how to spell or an individual learning a new language being able to practice helps to solidify your language skills.
 
@@ -511,7 +511,7 @@ The Spell-It app helps users practice their spelling by playing the audio record
 
 ### 15\. Survey App
 
-**Tier:**  3 — Advanced
+**Tier:** 3 — Advanced
 
 **Description**: Surveys are a valuable part of any developers toolbox. They are useful for getting feedback from your users on a variety of topics including application satisfaction, requirements, upcoming needs, issues, priorities, and just plain aggravations to name a few.
 
@@ -519,8 +519,8 @@ The Survey app gives you the opportunity to learn by developing a full-featured 
 
 Users of this app are divided into two distinct roles, each having different requirements:
 
--   _Survey Coordinators_  define and conduct surveys. This is an administrative function not available to normal users.
--   _Survey Respondents_  Complete surveys and view results. They have no administrative privileges within the app.
+-   _Survey Coordinators_ define and conduct surveys. This is an administrative function not available to normal users.
+-   _Survey Respondents_ Complete surveys and view results. They have no administrative privileges within the app.
 
 Commercial survey tools include distribution functionality that mass emails surveys to Survey Respondents. For simplicity, this app assumes that surveys open for responses will be accessed from the app’s web page.
 
@@ -564,40 +564,40 @@ Commercial survey tools include distribution functionality that mass emails surv
 
 #### Useful links and resources
 
-Libraries for building surveys:  [SurveyJS][43]
+Libraries for building surveys: [SurveyJS][43]
 
-Some commercial survey services include:  [Survey Monkey][44]  and  [Typeform][45]
+Some commercial survey services include: [Survey Monkey][44] and [Typeform][45]
 
 #### Example project
 
 ### _Contributing_
 
-You are welcome to contribute to the project in the  [GitHub repository][46]! Any contribution is highly appreciated.
+You are welcome to contribute to the project in the [GitHub repository][46]! Any contribution is highly appreciated.
 
 You can contribute in two ways:
 
-1.  create an issue and tell us your idea. Make sure that you use the  **new idea**  label in this case;
+1.  create an issue and tell us your idea. Make sure that you use the **new idea** label in this case;
 2.  fork the project and submit a PR. Before doing that, please make sure that you read and follow the Contribution Guide (you can find it in the repository);
 
 #### Add your own examples
 
 You can also add your own examples to the projects after you have completed them. I highly encourage you to do this as it will show others what amazing things you have built! ?
 
-### Spread the word!
+### Spread the word
 
 If the information from this article and from the repo was useful to you in any way, make sure you give it a star ?, this way others can find it and benefit too! Together we can grow and make our community better!
 
 Do you have any suggestions on how we could improve this project overall? Let us know! We’d love to hear your feedback!
 
-#### Main Contributors ??
+#### Main Contributors 
 
-**Florin Pop**:  [Twitter][47]  and  [website][48].
+**Florin Pop**: [Twitter][47] and [website][48].
 
-**Jim Medlock**:  [Twitter][49]  and  [Medium][50]
+**Jim Medlock**: [Twitter][49] and [Medium][50]
 
-### **Weekly Coding Challenge ?**
+### **Weekly Coding Challenge**
 
-As a bonus, there’s a Weekly Coding Challenge where you can learn more by practicing your skills on real-world projects. Read  [The Complete Guide][51]  to find out how you can participate! ?
+As a bonus, there’s a Weekly Coding Challenge where you can learn more by practicing your skills on real-world projects. Read [The Complete Guide][51] to find out how you can participate! ?
 
 [1]: https://twitter.com/jd_medlock
 [2]: https://github.com/florinpop17/app-ideas

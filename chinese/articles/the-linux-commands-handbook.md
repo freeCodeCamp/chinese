@@ -1,6 +1,6 @@
 > * 原文地址：[The Linux Command Handbook Linux 命令手册](https://www.freecodecamp.org/news/the-linux-commands-handbook/)
 > * 原文作者：Flavio Copes
-> * 译者：
+> * 译者：Monstorix
 > * 校对者：
 
 ![The Linux Command Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2020/10/cover-1.jpg)

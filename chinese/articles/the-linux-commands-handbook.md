@@ -1,4 +1,4 @@
-> * 原文地址：[Linux 中的 Command Handbook Linux 命令手册](https://www.freecodecamp.org/news/the-linux-commands-handbook/)
+> * 原文地址：[The Linux Command Handbook Linux 命令手册](https://www.freecodecamp.org/news/the-linux-commands-handbook/)
 > * 原文作者：Flavio Copes
 > * 译者：Monstorix
 > * 校对者：

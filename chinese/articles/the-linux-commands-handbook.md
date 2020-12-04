@@ -1,96 +1,96 @@
-> * 原文地址：[The Linux Command Handbook Linux 命令手册](https://www.freecodecamp.org/news/the-linux-commands-handbook/)
+> * 原文地址：[Linux 中的 Command Handbook Linux 命令手册](https://www.freecodecamp.org/news/the-linux-commands-handbook/)
 > * 原文作者：Flavio Copes
 > * 译者：Monstorix
 > * 校对者：
 
-![The Linux Command Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2020/10/cover-1.jpg)
+![Linux 命令手册](https://www.freecodecamp.org/news/content/images/size/w2000/2020/10/cover-1.jpg)
 
-This Linux Command Handbook will cover 60 core Bash commands you will need as a developer. Each command includes example code and tips for when to use it.
+这本《Linux 命令手册》将涵盖 60 个作为开发者时，你会需要的核心 Bash 命令。每个命令都附有代码示例和用法提示。
 
-This Linux Command Handbook follows the 80/20 rule: you'll learn 80% of a topic in around 20% of the time you spend studying it.
+这本手册遵循二八定律：你花两成的时间学习一个主题，便可获得其中八成的知识。
 
-I find that this approach gives you a well-rounded overview.
+我觉得这种方式能给你一个全面的概述。
 
-This handbook does not try to cover everything under the sun related to Linux and its commands. It focuses on the small core commands that you will use the 80% or 90% of the time, and tries to simplify the usage of the more complex ones.
+这本手册并不试图涵盖所有关于 Linux 及其命令的内容，而是专注于那些你在大部分时间里都会用到的小型核心命令，同时试着简化更复杂命令的用法。
 
-All these commands work on Linux, macOS, WSL, and anywhere you have a UNIX environment.
+以下介绍的命令，在 Linux、macOS、WSL 和其他类 UNIX 环境均可使用。
 
-I hope the contents of this handbook will help you achieve what you want:  **getting comfortable with Linux**.
+我希望这本手册的内容可以帮助你达成你想要的目标：**熟练掌握 Linux** 。
 
-You can bookmark this page in your browser so you can reference this handbook in the future.
+你可以收藏本页，这样就能在以后随时参考这本手册。
 
-And you can  [download this handbook in PDF / ePUB / Mobi format for free][1].
+你也可以  [免费下载这本书的 PDF、ePUB、Mobi 版本][1].
 
-Enjoy!
+尽情享受吧！
 
-## Table of Contents
+## 目录
 
--   [Introduction to Linux and shells][2]
--   [The Linux  `man`  command][3]
--   [The Linux  `ls`  command][4]
--   [The Linux  `cd`  command][5]
--   [The Linux  `pwd`  command][6]
--   [The Linux  `mkdir`  command][7]
--   [The Linux  `rmdir`  command][8]
--   [The Linux  `mv`  command][9]
--   [The Linux  `cp`  command][10]
--   [The Linux  `open`  command][11]
--   [The Linux  `touch`  command][12]
--   [The Linux  `find`  command][13]
--   [The Linux  `ln`  command][14]
--   [The Linux  `gzip`  command][15]
--   [The Linux  `gunzip`  command][16]
--   [The Linux  `tar`  command][17]
--   [The Linux  `alias`  command][18]
--   [The Linux  `cat`  command][19]
--   [The Linux  `less`  command][20]
--   [The Linux  `tail`  command][21]
--   [The Linux  `wc`  command][22]
--   [The Linux  `grep`  command][23]
--   [The Linux  `sort`  command][24]
--   [The Linux  `uniq`  command][25]
--   [The Linux  `diff`  command][26]
--   [The Linux  `echo`  command][27]
--   [The Linux  `chown`  command][28]
--   [The Linux  `chmod`  command][29]
--   [The Linux  `umask`  command][30]
--   [The Linux  `du`  command][31]
--   [The Linux  `df`  command][32]
--   [The Linux  `basename`  command][33]
--   [The Linux  `dirname`  command][34]
--   [The Linux  `ps`  command][35]
--   [The Linux  `top`  command][36]
--   [The Linux  `kill`  command][37]
--   [The Linux  `killall`  command][38]
--   [The Linux  `jobs`  command][39]
--   [The Linux  `bg`  command][40]
--   [The Linux  `fg`  command][41]
--   [The Linux  `type`  command][42]
--   [The Linux  `which`  command][43]
--   [The Linux  `nohup`  command][44]
--   [The Linux  `xargs`  command][45]
--   [The Linux  `vim`  editor command][46]
--   [The Linux  `emacs`  editor command][47]
--   [The Linux  `nano`  editor command][48]
--   [The Linux  `whoami`  command][49]
--   [The Linux  `who`  command][50]
--   [The Linux  `su`  command][51]
--   [The Linux  `sudo`  command][52]
--   [The Linux  `passwd`  command][53]
--   [The Linux  `ping`  command][54]
--   [The Linux  `traceroute`  command][55]
--   [The Linux  `clear`  command][56]
--   [The Linux  `history`  command][57]
--   [The Linux  `export`  command][58]
--   [The Linux  `crontab`  command][59]
--   [The Linux  `uname`  command][60]
--   [The Linux  `env`  command][61]
--   [The Linux  `printenv`  command][62]
--   [Conclusion][63]
+-   [Linux 和 Shell 简介][2]
+-   [Linux 中的 `man`  命令][3]
+-   [Linux 中的  `ls`  命令][4]
+-   [Linux 中的  `cd`  命令][5]
+-   [Linux 中的  `pwd`  命令][6]
+-   [Linux 中的  `mkdir`  命令][7]
+-   [Linux 中的  `rmdir`  命令][8]
+-   [Linux 中的  `mv`  命令][9]
+-   [Linux 中的  `cp`  命令][10]
+-   [Linux 中的  `open`  命令][11]
+-   [Linux 中的  `touch`  命令][12]
+-   [Linux 中的  `find`  命令][13]
+-   [Linux 中的  `ln`  命令][14]
+-   [Linux 中的  `gzip`  命令][15]
+-   [Linux 中的  `gunzip`  命令][16]
+-   [Linux 中的  `tar`  命令][17]
+-   [Linux 中的  `alias`  命令][18]
+-   [Linux 中的  `cat`  命令][19]
+-   [Linux 中的  `less`  命令][20]
+-   [Linux 中的  `tail`  命令][21]
+-   [Linux 中的  `wc`  命令][22]
+-   [Linux 中的  `grep`  命令][23]
+-   [Linux 中的  `sort`  命令][24]
+-   [Linux 中的  `uniq`  命令][25]
+-   [Linux 中的  `diff`  命令][26]
+-   [Linux 中的  `echo`  命令][27]
+-   [Linux 中的  `chown`  命令][28]
+-   [Linux 中的  `chmod`  命令][29]
+-   [Linux 中的  `umask`  命令][30]
+-   [Linux 中的  `du`  命令][31]
+-   [Linux 中的  `df`  命令][32]
+-   [Linux 中的  `basename`  命令][33]
+-   [Linux 中的  `dirname`   命令][34]
+-   [Linux 中的  `ps`  命令][35]
+-   [Linux 中的  `top`  命令][36]
+-   [Linux 中的  `kill`  命令][37]
+-   [Linux 中的  `killall`  命令][38]
+-   [Linux 中的  `jobs`  命令][39]
+-   [Linux 中的  `bg`  命令][40]
+-   [Linux 中的  `fg`  命令][41]
+-   [Linux 中的  `type`  命令][42]
+-   [Linux 中的  `which`  命令][43]
+-   [Linux 中的  `nohup`  命令][44]
+-   [Linux 中的  `xargs`  命令][45]
+-   [Linux 中的  `vim`  编辑器命令][46]
+-   [Linux 中的  `emacs`  编辑器命令][47]
+-   [Linux 中的  `nano`  编辑器命令][48]
+-   [Linux 中的  `whoami`  命令][49]
+-   [Linux 中的  `who`  命令][50]
+-   [Linux 中的  `su`  命令][51]
+-   [Linux 中的  `sudo`  命令][52]
+-   [Linux 中的  `passwd`  命令][53]
+-   [Linux 中的  `ping`  命令][54]
+-   [Linux 中的  `traceroute`  命令][55]
+-   [Linux 中的  `clear`  命令][56]
+-   [Linux 中的  `history`  命令][57]
+-   [Linux 中的  `export`  命令][58]
+-   [Linux 中的  `crontab`  命令][59]
+-   [Linux 中的  `uname`  命令][60]
+-   [Linux 中的  `env`  命令][61]
+-   [Linux 中的  `printenv`  命令][62]
+-   [结论][63]
 
-## Introduction to Linux and shells
+## Linux 和 Shell 简介
 
-### What is Linux?
+### 什么是 Linux?
 
 Linux is an operating system, like macOS or Windows.
 

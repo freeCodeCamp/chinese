@@ -90,75 +90,75 @@
 
 ## Linux 和 Shell 简介
 
-### 什么是 Linux?
+### 什么是 Linux？
 
-Linux is an operating system, like macOS or Windows.
+Linux 是一种操作系统， 就像 macOS 和 Windows 一样。
 
-It is also the most popular Open Source operating system, and it gives you a lot of freedom.
+它也是最流行的开放源代码操作系统，给予用户很大的自由度。
 
-It powers the vast majority of the servers that compose the Internet. It's the base upon which everything is built. But not just that. Android is based on (a modified version of) Linux.
+它驱动了绝大多数的互联网服务器，是构建任何设施的“地基”，但还不仅如此。 Android 操作系统（中文也称“安卓”）实际上是基于（一种修改版的）Linux 构建的。
 
-The Linux "core" (called a  _kernel_) was born in 1991 in Finland, and it has come a really long way from its humble beginnings. It went on to be the kernel of the GNU Operating System, creating the duo GNU/Linux.
+Linux 的“内核” （我们称之为  _kernel_ ）诞生于 1991 年的芬兰， 从最初的简陋构造到今天，已经走了很长的一段路。 后来它成为了 GNU 操作系统的内核，于是出现了 GNU/Linux 组合系统。
 
-There's one thing about Linux that corporations like Microsoft, Apple, and Google will never be able to offer: the freedom to do whatever you want with your computer.
+Linux 可以让你拥有用计算机做任何事情的自由。这是微软、苹果、谷歌这样的大公司永远不会向用户提供的。
 
-They're actually going in the opposite direction, building walled gardens, especially on the mobile side.
+他们实际走的是另一条路：创造生态壁垒，尤其是在移动端。
 
-Linux is the ultimate freedom.
+而 Linux 代表着无尽的自由。
 
-It is developed by volunteers, some paid by companies that rely on it, some independently. But there's no single commercial company that can dictate what goes into Linux, or the project's priorities.
+它的开发人员通常来自社区志愿者，这其中一些人是独立参与开发工作的，还有一些人是由于受雇于使用它的公司而参与的，但从来没有任何一家商业公司可以擅自决定 Linux 所含的内容，或者是某个项目的优先级。 
 
-You can also use Linux as your day to day computer. I use macOS because I really enjoy the applications and design (and I also used to be an iOS and Mac apps developer). But before using macOS I used Linux as my main computer Operating System.
+你可以将 Linux 作为日常使用的系统。我当前使用 macOS ，因为我很喜欢它的应用程序和界面设计（同时我也是一名 iOS 和 Mac 应用开发者）。但在使用  macOS 之前，我一直使用 Linux 作为我的主要计算机操作系统。 
 
-No one can dictate which apps you can run, or "call home" with apps that track you, your position, and more.
+在上面，没有人能够支配你可以运行哪些应用程序，或者使用特定的应用程序收集你的个人资料、位置和其他信息。
 
-Linux is also special because there's not just "one Linux", like is the case with Windows or macOS. Instead, we have  **distributions**.
+Linux 还有一个特别之处，那就是“世界上不只有一个 Linux”，这和 Windows 还有 macOS 是不一样的。对于 Linux，我们有**发行版**的概念。
 
-A "distro" is made by a company or organization and packages the Linux core with additional programs and tooling.
+发行版通常由某个公司或组织制作，他们会将 Linux 内核和一些额外的程序与工具整合在一起。
 
-For example you have Debian, Red Hat, and Ubuntu, probably the most popular distributions.
+比如，你也许使用过 Debian、Red Hat、Ubuntu，这些可能是最流行的发行版了。
 
-But many, many more exist. You can create your own distribution, too. But most likely you'll use a popular one that has lots of users and a community of people around it. This lets you do what you need to do without losing too much time reinventing the wheel and figuring out answers to common problems.
+但实际上还有更多。你甚至还可以制作属于你自己的发行版。然而在大多数情况下，人们会选择一个流行的发行版，因为这些版本通常有大量的用户，以及完善的社区支持。这可以让你花更少的时间，做更多的事，既不需要重复造轮子，同时查找某个问题的解决方案也更为方便。
 
-Some desktop computers and laptops ship with Linux preinstalled. Or you can install it on your Windows-based computer, or on a Mac.
+某些台式电脑或笔记本电脑在出厂时预装了 Linux。但你也可以在 Windows 或 Mac 电脑上手动安装它。
 
-But you don't need to disrupt your existing computer just to get an idea of how Linux works.
+不过，如果你只是想了解 Linux 的运行方式，那么没有必要去打乱现有的电脑系统。
 
-I don't have a Linux computer.
+我自己并没有专门的“Linux 电脑”。
 
-If you use a Mac, you just need to know that under the hood macOS is a UNIX Operating System. It shares a lot of the same ideas and software that a GNU/Linux system uses, because GNU/Linux is a free alternative to UNIX.
+如果你在使用 Mac，你只需要了解一件事：macOS 的皮下实际上是 UNIX 操作系统，而 GNU/Linux 是 UNIX 的自由替代品，因此 macOS 和 GNU/Linux 在很多理念和一些软件的使用上，是共通的。
 
-> [UNIX][64]  is an umbrella term that groups many operating systems used in big corporations and institutions, starting from the 70's
+> [UNIX][64] 是对 20 世纪 70 年代开始在一些大型公司和机构中使用的多种操作系统的统称。 
 
-The macOS terminal gives you access to the same exact commands I'll describe in the rest of this handbook.
+在 macOS 的终端里，你同样可以使用我在这本手册中介绍的任何命令。
 
-Microsoft has an official  [Windows Subsystem for Linux][65]  which you can (and should!) install on Windows. This will give you the ability to run Linux in a very easy way on your PC.
+微软官方提供了  [适用于 Linux 的 Windows 子系统][65]，你可以（甚至可以说应该！）将其安装在 Windows 上。这可以使得在 PC 上运行 Linux 有一种更简单的方式。
 
-But the vast majority of the time you will run a Linux computer in the cloud via a VPS (Virtual Private Server) like DigitalOcean.
+但大多数时候，人们会通过 VPS （虚拟专用服务器，如 DigitalOcean） 在云端运行 Linux 电脑。
 
-### What is a Linux shell?
+### 什么是 Linux 的 Shell？
 
-A shell is a command interpreter that exposes an interface to the user to work with the underlying operating system.
+Shell 通常指的是命令行界面的解析器，简单来说，它给用户提供一个操作界面，来访问底层的操作系统内核进行工作。
 
-It allows you to execute operations using text and commands, and it provides users advanced features like being able to create scripts.
+它可以让你使用文本和命令执行操作，同时还提供诸如创建脚本之类的高级功能。
 
-This is important: shells let you perform things in a more optimized way than a GUI (Graphical User Interface) could ever possibly let you do. Command line tools can offer many different configuration options without being too complex to use.
+这很重要：Shell 为用户提供了一种比 GUI （图形用户界面）更为高效的方式来做事。命令行工具可以提供更多不同的参数设置，但用起来不会变得太复杂。
 
-There are many different kind of shells. This post focuses on Unix shells, the ones that you will find commonly on Linux and macOS computers.
+Shell 有很多种，这里主要介绍 Unix shell，通常在 Linux 和 macOS 电脑上都可以见到。
 
-Many different kind of shells were created for those systems over time, and a few of them dominate the space: Bash, Csh, Zsh, Fish and many more!
+经过长年发展，很多人为这些系统开发了不同种类的 Shell。其中有一些是最主要的，比如 Bash、Csh、Zsh、Fish等，当然还有更多。
 
-All shells originate from the Bourne Shell, called  `sh`. "Bourne" because its creator was Steve Bourne.
+所有的 Shell 都从 Bourne Shell 发展而来，我们把它叫做 `sh`。名字中的“Bourne”是取自它的创建人——史蒂夫 · 伯恩（Steve Bourne）。
 
-Bash means  _Bourne-again shell_.  `sh`  was proprietary and not open source, and Bash was created in 1989 to create a free alternative for the GNU project and the Free Software Foundation. Since projects had to pay to use the Bourne shell, Bash became very popular.
+Bash 的全称是  _Bourne-again shell_。  `sh`  是专有软件，并不开放源码，Bash 则在 1989 年由 GNU 计划和自由软件基金会创建，意在为其提供一个免费的替代品。由于 Bourne shell 需要付费才能在项目中使用，因而 Bash 变得非常流行。
 
-If you use a Mac, try opening your Mac terminal. By default it runs ZSH (or, pre-Catalina, Bash).
+如果你在使用 Mac，可以试试打开终端，默认的 Shell 一般是 ZSH（在 Catalina 版本前使用的是 Bash）。
 
-You can set up your system to run any kind of shell – for example I use the Fish shell.
+你可以在你的系统上配置和运行各种 Shell，比如我使用的是 Fish shell。
 
-Each single shell has its own unique features and advanced usage, but they all share a common functionality: they can let you execute programs, and they can be programmed.
+每一种 Shell 都有其独特的功能和高级的用法，但在大多数的操作上是相通的：它们可以让你执行程序，你也可以对它们进行编程。
 
-In the rest of this handbook we'll see in detail the most common commands you will use.
+在本手册的余下部分，我们将详细探究那些人们最常用到的命令。
 
 ## The Linux  `man`  command
 

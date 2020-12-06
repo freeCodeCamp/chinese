@@ -1,7 +1,7 @@
-> * 原文地址：[How to Build a Bot and Automate your Everyday Work Python 基础教程：这个自动化程序让你的工作更高效](https://www.freecodecamp.org/news/building-bots/)
-> * 作者：Tim Grossmann
-> * 译者：
-> * 校对者：
+> -   原文地址：[How to Build a Bot and Automate your Everyday Work Python 基础教程：这个自动化程序让你的工作更高效](https://www.freecodecamp.org/news/building-bots/)
+> -   作者：Tim Grossmann
+> -   译者：
+> -   校对者：
 
 ![How to Build a Bot and Automate your Everyday Work](https://www.freecodecamp.org/news/content/images/size/w2000/2020/06/freecodecamp_cover.png)
 
@@ -64,8 +64,8 @@ This stuck with me and made me question the tool I've built for exactly that pur
 
 The fact that these interactions and the engagement can be automated and “faked” more and more leads to a distorted and broken social media system.
 
-People who produce valuable and good content are invisible to other users and advertisement companies if they don’t use bots and other engagement systems.  
-  
+People who produce valuable and good content are invisible to other users and advertisement companies if they don’t use bots and other engagement systems.
+
 A friend of mine came up with the following association with Dante’s “Nine Circles of Hell” where with each step closer to becoming a social influencer you get less and less aware of how broken this whole system actually is.
 
 I want to share this with you here since I think it's an extremely accurate representation of what I witnessed while actively working with Influencers with InstaPy.
@@ -73,16 +73,16 @@ I want to share this with you here since I think it's an extremely accurate repr
 **Level 1: Limbo -** If you don’t bot at all  
 **Level 2: Flirtation** \- When you manually like and follow as many people as you can to get them to follow you back / like your posts  
 **Level 3: Conspiracy** \- when you join a Telegram group to like and comment on 10 photos so the next 10 people will like and comment on your photo  
-**Level 4: Infidelity**  \- When you use a low-cost Virtual Assistant to like and follow on your behalf  
+**Level 4: Infidelity** \- When you use a low-cost Virtual Assistant to like and follow on your behalf  
 **Level 5: Lust -** When you use a bot to give likes, and don’t receive any likes back in return (but you don’t pay for it - for example, a Chrome extension)  
 **Level 6: Promiscuity -** When you use a bot to Give 50+ likes to Get 50+ likes, but you don’t pay for it - for example, a Chrome extension  
 **Level 7: Avarice or Extreme Greed** \- When you use a bot to Like / Follow / Comment on between 200–700 photos, ignoring the chance of getting banned  
 **Level 8: Prostitution** \- When you pay an unknown 3rd party service to engage in automated reciprocal likes / follows for you, but they use your account to like / follow back  
 **Level 9: Fraud / Heresy** \- When you buy followers and likes and try to sell yourself to brands as an influencer
 
-The level of botting on social media is so prevalent that  **if you don’t bot, you will be stuck in Level 1, Limbo**, with no follower growth and low engagement relative to your peers.
+The level of botting on social media is so prevalent that **if you don’t bot, you will be stuck in Level 1, Limbo**, with no follower growth and low engagement relative to your peers.
 
-In economic theory, this is known as a  **prisoner's dilemma and zero-sum game**. If I don’t bot and you bot, you win. If you don’t bot and I bot, I win. If no one bots, everyone wins. But since there is no incentive for everyone not to bot, everyone bots, so no one wins.
+In economic theory, this is known as a **prisoner's dilemma and zero-sum game**. If I don’t bot and you bot, you win. If you don’t bot and I bot, I win. If no one bots, everyone wins. But since there is no incentive for everyone not to bot, everyone bots, so no one wins.
 
 > Be aware of this and never forget the implications this whole tooling has on social media.
 
@@ -102,16 +102,16 @@ So all we want to do is this:
 
 ### Setting up the Argument Parser
 
-Since we are working with operating system functionality like moving files, we need to import the  `os`  library. In addition to that, we want to give the user some control over what folder is cleaned up. We will use the  `argparse`  library for this.
+Since we are working with operating system functionality like moving files, we need to import the `os` library. In addition to that, we want to give the user some control over what folder is cleaned up. We will use the `argparse` library for this.
 
 ```python
 import os
 import argparse
 ```
 
-After importing the two libraries, let's first set up the argument parser. Make sure to give a description and a help text to each added argument to give valuable help to the user when they type  `--help`.
+After importing the two libraries, let's first set up the argument parser. Make sure to give a description and a help text to each added argument to give valuable help to the user when they type `--help`.
 
-Our argument will be named  `--path`. The double dashes in front of the name tell the library that this is an optional argument. By default we want to use the current directory, so set the default value to be  `"."`.
+Our argument will be named `--path`. The double dashes in front of the name tell the library that this is an optional argument. By default we want to use the current directory, so set the default value to be `"."`.
 
 ```python
 parser = argparse.ArgumentParser(
@@ -135,16 +135,16 @@ This already finishes the argument parsing section – it's quite simple and rea
 Let's execute our script and check for errors.
 
 ```bash
-python directory_clean.py --path ./test 
+python directory_clean.py --path ./test
 
 ```
 
 Once executed, we can see the directory name being printed to the console, perfect.  
-Let's now use the  `os`  library to get the files of the given path.
+Let's now use the `os` library to get the files of the given path.
 
 ### Getting a list of files from the folder
 
-By using the  `os.listdir(path)`  method and providing it a valid path, we get a list of all the files and folders inside of that directory.
+By using the `os.listdir(path)` method and providing it a valid path, we get a list of all the files and folders inside of that directory.
 
 After listing all elements in the folder, we want to differentiate between files and folders since we don't want to clean up the folders, only the files.
 
@@ -158,7 +158,7 @@ path_dir_content = [os.path.join(path, doc) for doc in dir_content]
 # filter our directory content into a documents and folders list
 docs = [doc for doc in path_dir_content if os.path.isfile(doc)]
 folders = [folder for folder in path_dir_content if os.path.isdir(folder)]
-# counter to keep track of amount of moved files 
+# counter to keep track of amount of moved files
 # and list of already created folders to avoid multiple creations
 moved = 0
 created_folders = []
@@ -168,17 +168,17 @@ created_folders = []
 As always, let's make sure that our users get feedback. So add a print statement that gives the user an indication about how many files will be moved.
 
 ```bash
-python directory_clean.py --path ./test 
+python directory_clean.py --path ./test
 
 ```
 
-After re-executing the python script, we can now see that the  `/test`  folder I created contains 60 files that will be moved.
+After re-executing the python script, we can now see that the `/test` folder I created contains 60 files that will be moved.
 
 ### Creating a folder for every file extension
 
 The next and more important step now is to create the folder for each of the file extensions. We want to do this by going through all of our filtered files and if they have an extension for which there is no folder already, create one.
 
-The  `os`  library helps us with more nice functionality like the splitting of the filetype and path of a given document, extracting the path itself and name of the document.
+The `os` library helps us with more nice functionality like the splitting of the filetype and path of a given document, extracting the path itself and name of the document.
 
 ```python
 # go through all files and move them into according folders
@@ -192,16 +192,16 @@ for doc in docs:
 <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">print</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>doc_path<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
 <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">print</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>doc_name<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
 
-<span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">break</span></code></pre><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">The break statement at the end of the code above makes sure that our terminal does not get spammed if our directory contains dozens of files.</p><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">Once we've set this up, let's execute our script to see an output similar to this:</p><pre class=" language-bash" style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; color: var(--gray85); background: var(--gray05); text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none; overflow: auto; min-width: 100%; max-width: 100%;"><code class=" language-bash" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; color: rgb(0, 0, 0); background: transparent; text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none;">python directory_clean.py --path ./test 
+<span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">break</span></code></pre><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">The break statement at the end of the code above makes sure that our terminal does not get spammed if our directory contains dozens of files.</p><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">Once we've set this up, let's execute our script to see an output similar to this:</p><pre class=" language-bash" style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; color: var(--gray85); background: var(--gray05); text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none; overflow: auto; min-width: 100%; max-width: 100%;"><code class=" language-bash" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; color: rgb(0, 0, 0); background: transparent; text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none;">python directory_clean.py --path ./test
 ```
 
 We can now see that the implementation above splits off the filetype and then extracts the parts from the full path.
 
 Since we have the filetype now, we can check if a folder with the name of this type already exists.
 
-Before we do that, we want to make sure to skip a few files. If we use the current directory  `"."`  as the path, we need to avoid moving the python script itself. A simple if condition takes care of that.
+Before we do that, we want to make sure to skip a few files. If we use the current directory `"."` as the path, we need to avoid moving the python script itself. A simple if condition takes care of that.
 
-In addition to that, we don't want to move  [Hidden Files][5], so let's also include all files that start with a dot. The  `.DS_Store`  file on macOS is an example of a hidden file.
+In addition to that, we don't want to move [Hidden Files][5], so let's also include all files that start with a dot. The `.DS_Store` file on macOS is an example of a hidden file.
 
 ```python
     # skip this file when it is in the directory
@@ -217,7 +217,7 @@ subfolder_path <span class="token operator" style="box-sizing: inherit; margin: 
         created_folders<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>append<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>subfolder_path<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
         <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">print</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token string-interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">f"Folder </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span>subfolder_path<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);"> created."</span></span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
     <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">except</span> FileExistsError <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">as</span> err<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span>
-        <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">print</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token string-interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">f"Folder already exists at </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span>subfolder_path<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">... </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span>err<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">"</span></span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span></code></pre><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">After setting up the folder creation, let's re-execute our script.</p><pre class=" language-bash" style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; color: var(--gray85); background: var(--gray05); text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none; overflow: auto; min-width: 100%; max-width: 100%;"><code class=" language-bash" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; color: rgb(0, 0, 0); background: transparent; text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none;">python directory_clean.py --path ./test 
+        <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(0, 119, 170);">print</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token string-interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">f"Folder already exists at </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span>subfolder_path<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">... </span><span class="token interpolation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline;"><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span>err<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span></span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(102, 153, 0);">"</span></span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 18px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span></code></pre><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">After setting up the folder creation, let's re-execute our script.</p><pre class=" language-bash" style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; color: var(--gray85); background: var(--gray05); text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none; overflow: auto; min-width: 100%; max-width: 100%;"><code class=" language-bash" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; color: rgb(0, 0, 0); background: transparent; text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none;">python directory_clean.py --path ./test
 ```
 
 On the first run of execution, we can see a list of logs telling us that the folders with the given types of file extensions have been created.
@@ -228,7 +228,7 @@ The last step now is to actually move the files into their new parent folders.
 
 An important thing to understand when working with os operations is that sometimes operations can not be undone. This is, for example, the case with deletion. So it makes sense to first only log out the behavior our script would achieve if we execute it.
 
-This is why the  `os.rename(...)`  method has been commented here.
+This is why the `os.rename(...)` method has been commented here.
 
 ```python
 # get the new folder path and move the file
@@ -244,7 +244,7 @@ moved <span class="token operator" style="box-sizing: inherit; margin: 0px; padd
 ```
 
 ```bash
-python directory_clean.py --path ./test 
+python directory_clean.py --path ./test
 
 ```
 
@@ -252,11 +252,11 @@ This final execution will now move all the files into their appropriate folders 
 
 In the next step, we could now use the script we created above and, for example, schedule it to execute every Monday to clean up our Downloads folder for more structure.
 
-**That is exactly what we are creating as a follow-up inside of  [our Bot Creation and Workflow Automation Udemy course][6].**
+**That is exactly what we are creating as a follow-up inside of [our Bot Creation and Workflow Automation Udemy course][6].**
 
 ## [A Complete Guide to Bot Creation and Automating Your Everyday Work][7]
 
-Felix and I built an  **online video course to teach you how to create your own bots**  based on what we've learned building  **InstaPy**  and his  **Travian-Bot**. In fact, he  **was even forced to take down since it was too effective.**
+Felix and I built an **online video course to teach you how to create your own bots** based on what we've learned building **InstaPy** and his **Travian-Bot**. In fact, he **was even forced to take down since it was too effective.**
 
 [1]: https://www.freecodecamp.org/news/building-bots/#areas-of-automation-and-where-to-start
 [2]: https://www.freecodecamp.org/news/building-bots/#ethical-considerations

@@ -1,7 +1,7 @@
-> * 原文地址：[Responsive Web Design – How to Make a Website Look Good on Phones and Tablets 响应式网页设计入门](https://www.freecodecamp.org/news/responsive-web-design-how-to-make-a-website-look-good-on-phones-and-tablets/)
-> * 作者：Adam Henson
-> * 译者：
-> * 校对者：
+> -   原文地址：[Responsive Web Design – How to Make a Website Look Good on Phones and Tablets 响应式网页设计入门](https://www.freecodecamp.org/news/responsive-web-design-how-to-make-a-website-look-good-on-phones-and-tablets/)
+> -   作者：Adam Henson
+> -   译者：
+> -   校对者：
 
 ![Responsive Web Design – How to Make a Website Look Good on Phones and Tablets](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/curve-design-futuristic-lines-911738.jpg)
 
@@ -9,7 +9,7 @@ In the rapidly evolving landscape of connected devices, responsive web design co
 
 Not long ago the term "responsive web design" was non-existent. But today, most of us have had to adopt it to some extent.
 
-[According to Statistica][1], as of 2019, 61% of all Google search visits take place on a mobile device. In September of 2020  [Google will change its search algorithm][2]  to prioritize mobile friendly websites.
+[According to Statistica][1], as of 2019, 61% of all Google search visits take place on a mobile device. In September of 2020 [Google will change its search algorithm][2] to prioritize mobile friendly websites.
 
 **In this post I'll cover the following:**
 
@@ -44,7 +44,7 @@ When the meta viewport element is absent, mobile browsers will display web pages
 Below is a standard implementation:
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
 Viewport meta tag example
@@ -61,10 +61,8 @@ Below is an example of a common use case of mobile first styling in which a colu
 
 ```css
 .column {
-  width: 100%;
+    width: 100%;
 }
-
-
 ```
 
 Mobile first CSS example
@@ -72,11 +70,11 @@ Mobile first CSS example
 The code above is a simple example, but what it's actually doing is pretty interesting.
 
 1.  In considering mobile first, the "column" element is set to have a width of 100%;
-2.  By using a  `min-width`  media query, we define rules specifically for viewports with a minimum width of  `600px`  (viewports wider than  `600px`). So, for viewports wider than  `600px`, our column element will have a width that is 50% of its parent.
+2.  By using a `min-width` media query, we define rules specifically for viewports with a minimum width of `600px` (viewports wider than `600px`). So, for viewports wider than `600px`, our column element will have a width that is 50% of its parent.
 
 Although media queries are essential for responsive web design, many other new CSS features are also becoming widely adopted and supported in browsers. Flexbox is one of these new, important CSS feature in terms of responsive web design.
 
-## What is Flexbox?
+## What is Flexbox
 
 You might be wondering - "what does Flexbox do"? The better question is - "what can't Flexbox do"? What's the easiest way to vertically center with CSS? Flexbox. How do you create a responsive grid layout? Flexbox. How can we achieve global peace? Flexbox.
 
@@ -111,10 +109,10 @@ CSS flexbox example
 
 We accomplish the following with this code:
 
-1.  Establish a flexbox layout with  `display: flex`  in our  `main`  container element.
-2.  Style for mobile first. We set the  `main`  element to  `flex-wrap: wrap`  which allows child elements to wrap within our flexbox layout as illustrated below in figure 1. We set  `flex-basis: 100%`  on our  `div`  elements to ensure they encompass 100% of the parent width in the flexbox layout (figure 1).
-3.  Style for larger devices like tablets and desktop. We utilize a media query similar to our example in the previous section to set our container  `main`  element to  `flex-wrap: nowrap`. This makes sure that child elements do not wrap and that they maintain a column within a row type of layout. By setting  `div`  to  `flex-basis: 33%`  within the media query - we establish columns that are 33% the width of the parent.
-4.  In this example the magic would appear in larger devices with our combined media query and flexbox rules. Because we defined  `display: flex`, and because we didn't override the rule within the media query, we have a flexbox layout for mobile, tablet, and desktop. The media query  `flex-basis: 33%`  and inherited  `display: flex`  rules will give us a recognizable flexbox layout as seen in figure 2. In the past, to achieve this column type of layout, we would need to do some serious heavy lifting and write tangles of CSS.
+1.  Establish a flexbox layout with `display: flex` in our `main` container element.
+2.  Style for mobile first. We set the `main` element to `flex-wrap: wrap` which allows child elements to wrap within our flexbox layout as illustrated below in figure 1. We set `flex-basis: 100%` on our `div` elements to ensure they encompass 100% of the parent width in the flexbox layout (figure 1).
+3.  Style for larger devices like tablets and desktop. We utilize a media query similar to our example in the previous section to set our container `main` element to `flex-wrap: nowrap`. This makes sure that child elements do not wrap and that they maintain a column within a row type of layout. By setting `div` to `flex-basis: 33%` within the media query - we establish columns that are 33% the width of the parent.
+4.  In this example the magic would appear in larger devices with our combined media query and flexbox rules. Because we defined `display: flex`, and because we didn't override the rule within the media query, we have a flexbox layout for mobile, tablet, and desktop. The media query `flex-basis: 33%` and inherited `display: flex` rules will give us a recognizable flexbox layout as seen in figure 2. In the past, to achieve this column type of layout, we would need to do some serious heavy lifting and write tangles of CSS.
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/grid-mobile-1.png)
 
@@ -132,7 +130,7 @@ There may come a time that you have content overflowing the viewport without a g
 
 Common uses for this technique include scrollable menus and tables. Below is an example of a scrollable menu.
 
-Responsive Web Design  RWD  Responsive menu  Overflow scroll example  This is a lot of content!  Yes  we  have  another  item
+Responsive Web Design RWD Responsive menu Overflow scroll example This is a lot of content! Yes we have another item
 
 ```html
 <style>
@@ -149,8 +147,8 @@ Example horizontal scroll menu
 
 How'd you do that!? Let's take a deeper dive.
 
--   `overflow-y: scroll`  is the key ingredient of this recipe. By specifying it child elements will overflow the horizontal axis with scrolling behavior.
--   Not so fast! Although you may think  `` `overflow-y` ``  would be enough, we have to also tell the browser not to wrap the child elements with  `white-space: nowrap`  🤷
+-   `overflow-y: scroll` is the key ingredient of this recipe. By specifying it child elements will overflow the horizontal axis with scrolling behavior.
+-   Not so fast! Although you may think `overflow-y` would be enough, we have to also tell the browser not to wrap the child elements with `white-space: nowrap` 🤷
 
 Now that we have a few RWD layout techniques up our sleeve, let's take a look at elements that pose challenges specific to their visual nature - images and video.
 
@@ -160,20 +158,19 @@ By using modern image tag attributes we can accommodate a range of devices and r
 
 ```html
 <style>
-  img {
-    max-width: 100%;
-  }
+    img {
+        max-width: 100%;
+    }
 </style>
-
 ```
 
 This is doing a lot of things. Let's break it down:
 
-1.  By setting  `max-width: 100%`  the image will scale up or down based on its container width.
-2.  By using a combination of  `picture`,  `source`, and  `img`  tags we are actually only rendering one image and are only loading the best fitting image based on the user's device.
-3.  **WebP**  is a modern image format that provides superior compression for images on the web. By utilizing  `source`  we can reference a WebP image to use for browsers that support it, and another  `source`  tag to reference a PNG version of the images that don't support WebP.
-4.  `srcset`  is used to tell the browser which image to use based on the device's resolution.
-5.  We establish  [native lazy loading][8]  by utilizing the  `loading="lazy"`  attribute / value pair.
+1.  By setting `max-width: 100%` the image will scale up or down based on its container width.
+2.  By using a combination of `picture`, `source`, and `img` tags we are actually only rendering one image and are only loading the best fitting image based on the user's device.
+3.  **WebP** is a modern image format that provides superior compression for images on the web. By utilizing `source` we can reference a WebP image to use for browsers that support it, and another `source` tag to reference a PNG version of the images that don't support WebP.
+4.  `srcset` is used to tell the browser which image to use based on the device's resolution.
+5.  We establish [native lazy loading][8] by utilizing the `loading="lazy"` attribute / value pair.
 
 ## Responsive Video
 
@@ -181,32 +178,31 @@ Responsive video is another subject that has inspired a large number of articles
 
 One key strategy to establish responsive images, video, iframes and other elements involves the use of aspect-ratio. The aspect ratio box is not a new technique and quite a useful tool to have up your sleeve as a web developer.
 
-[This article provides a solid demonstration][9]  about how to achieve "fluid" width videos. Let's take a look at the code and break it down.
+[This article provides a solid demonstration][9] about how to achieve "fluid" width videos. Let's take a look at the code and break it down.
 
 ```html
 <style>
-  .videoWrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-  }
-  .videoWrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+    .videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+    }
+    .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 </style>
-
 ```
 
-In this example we have a YouTube video embed as an iframe and a  `div`  container with  `videoWrapper`  class. This code is doing a lot... let's dig in.
+In this example we have a YouTube video embed as an iframe and a `div` container with `videoWrapper` class. This code is doing a lot... let's dig in.
 
--   `position: relative`  on the container element allows child elements to utilize absolution positioning relative to it.
--   `height: 0`  combined with  `padding-bottom: 56.25%`  is the key ingredient here which establishes a dynamic behavior, enforcing a  `16:9`  aspect ratio.
--   `position: absolute`,  `top: 0`  and  `left: 0`  set on the iframe creates a behavior in which the element positions itself absolutely relative to its parent... sticking it to the top left.
--   And finally width and height of 100% makes the child, iframe element 100% of its parent. The parent,  `.videoWrapper`  takes full control of establishing this aspect ratio layout.
+-   `position: relative` on the container element allows child elements to utilize absolution positioning relative to it.
+-   `height: 0` combined with `padding-bottom: 56.25%` is the key ingredient here which establishes a dynamic behavior, enforcing a `16:9` aspect ratio.
+-   `position: absolute`, `top: 0` and `left: 0` set on the iframe creates a behavior in which the element positions itself absolutely relative to its parent... sticking it to the top left.
+-   And finally width and height of 100% makes the child, iframe element 100% of its parent. The parent, `.videoWrapper` takes full control of establishing this aspect ratio layout.
 
 I know... it's a lot. There's more we can do to make video and images look the best on phones and tablets. I'd encourage research on those topics independently in addition to this.
 

@@ -1,10 +1,10 @@
 ![Object Oriented Programming Concepts: How to go from Zero to One with Objects](https://images.unsplash.com/photo-1496346651079-6ca5cb67f42f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-> * 原文地址：[Object Oriented Programming Concepts: How to go from Zero to One with Objects](https://www.freecodecamp.org/news/object-oriented-concepts/)
-> * 标题：面向对象的编程概念：从0到1使用对象
-> * 作者：Parathan Thiyagalingam
-> * 译者：Theoda
-> * 校对者：
+> -   原文地址：[Object Oriented Programming Concepts: How to go from Zero to One with Objects](https://www.freecodecamp.org/news/object-oriented-concepts/)
+> -   标题：面向对象的编程概念：从 0 到 1 使用对象
+> -   作者：Parathan Thiyagalingam
+> -   译者：Theoda
+> -   校对者：
 
 面向对象编程是最为广泛使用的编程范式之一。它的名字就定义了它的工作原理。“面向对象”——“对象”起着重要的作用。操作对象、并得到结果是面向对象编程的最终目标。
 
@@ -33,10 +33,10 @@
 
 例如，我们构造一个名为“树” (Tree) 的类。“树”这个类的 状态/属性 就是：
 
--  树的名称 (Name)
--  树的年龄 (Age)
--  树的类型 (Type)
--  树的高度 (Height)
+-   树的名称 (Name)
+-   树的年龄 (Age)
+-   树的类型 (Type)
+-   树的高度 (Height)
 
 状态/属性 用于定义对象的属性。
 
@@ -44,16 +44,16 @@
 
 “树”的动作行为可以是：
 
--  结果实
--  落叶
--  从根部吸收水分运往上部
--  形成树荫
+-   结果实
+-   落叶
+-   从根部吸收水分运往上部
+-   形成树荫
 
 然后，我们可以用“树”类定义一个变量 Mango (芒果树) 。我们可以通过创建 Mango 对象来存储和访问我们之前为“树”类定义的所有属性和行为。
 
 用“树” (Tree) 类创建 Mango 这个对象的语法是：
 
-**Tree**  Mango;
+**Tree** Mango;
 
 ### 封装
 
@@ -79,7 +79,6 @@
 
 你：外部的应用程序或其他软件的代码
 
-
 ![](https://docs.google.com/drawings/d/spRw5P3ZQcCXoRMBDaWoceg/image?w=431&h=300&rev=30&ac=1&parent=1co9lGXLHg9idixOA7Dssbv3whQYlkF3jd5n9wWo0Oaw)
 
 通过封装，**可以限制** 外部代码访问内部的数据。比如你可以在实现代码的时候这么定义：只有在类中定义的函数才能访问类的成员。程序员是可以在开发过程中指定成员变量的可访问性的，而不是像过程化语言那样使所有变量全局化。这种可访问性的控制也称为 **信息隐藏**。
@@ -100,7 +99,6 @@
 
 1.  抽象类：(0-100)% 的抽象
 2.  接口类：100% 的抽象
-
 
 ### 继承
 
@@ -127,7 +125,7 @@ Polymorphism (多态) 是一个 **希腊词语**，指的是具有多种形态�
 
 以名为 sum 的函数为例，它可以带 2 或 3 个参数：
 
-sum(3,4) sum(10,23,56)  
+sum(3,4) sum(10,23,56)
 
 通过提供适当数量的参数来调用这些函数，将根据被调用函数的设计方式给出相应结果。
 
@@ -139,13 +137,13 @@ sum(3,4) sum(10,23,56)
 
 ### 面向对象编程的用途
 
--  使用 **封装**（信息隐藏）可以对外部隐藏数据
--  使用 **继承** 可以重用代码
--  使用 **多态** 可以重载操作符/方法/函数。即相同的函数名或操作符名称可用于多种任务
--  数据抽象可以用 **抽象** 实现
--  项目易于迁移（可以从小项目转换成大项目）
--  同一项目分工
--  软件复杂性可控
+-   使用 **封装**（信息隐藏）可以对外部隐藏数据
+-   使用 **继承** 可以重用代码
+-   使用 **多态** 可以重载操作符/方法/函数。即相同的函数名或操作符名称可用于多种任务
+-   数据抽象可以用 **抽象** 实现
+-   项目易于迁移（可以从小项目转换成大项目）
+-   同一项目分工
+-   软件复杂性可控
 
 ### 面向对象编程的应用领域
 
@@ -160,7 +158,7 @@ sum(3,4) sum(10,23,56)
 
 任何关于我的文章的反馈，请发送至 parathan19@gmail.com
 
-[LinkedIn][1]  |  [Twitter][2]
+[LinkedIn][1] | [Twitter][2]
 
 [1]: https://www.linkedin.com/in/parathantl/
 [2]: http://twitter.com/parathantl

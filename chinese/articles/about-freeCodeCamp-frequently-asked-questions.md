@@ -1,111 +1,127 @@
 > * 原文地址：[About freeCodeCamp - Frequently Asked Questions](https://www.freecodecamp.org/news/about/)
 > * 原文作者：freeCodeCamp team
 > * 译者：Zhuotao Lian 
-> * 校对者：
+> * 校对者：Miya
 
 # freeCodeCamp - 常见问题
 
 ![About freeCodeCamp - Frequently Asked Questions](https://www.freecodecamp.org/news/content/images/size/w2000/2019/06/freecodecamp-conference-photo.jpeg)
 
-### What is freeCodeCamp?
+### freeCodeCamp 是什么？
 
-We’re a nonprofit community that helps you learn to code by building projects.
+这是一个非营利性社区，帮助你通过构建项目的方式来学习编程。
+=======
 
-### How can you help me learn to code?
+### 你们如何帮助我学习编程呢？
 
-You'll learn to code by completing coding challenges and building projects. You'll also earn verified certifications along the way.
+你将通过完成编程挑战和构建项目来学习编程，在此过程中你还将获得认证证书。 
 
-### Is freeCodeCamp really free?
+### freeCodeCamp 真的是免费的吗？
 
-Yes. Every aspect of freeCodeCamp is 100% free.
+当然，freeCodeCamp 的所有学习资源都是完全免费的。
 
-### Can freeCodeCamp help me get a job as a software developer?
+### freeCodeCamp 能帮助我找到软件开发的工作吗？
 
-Yes. Every year, thousands of people who join the freeCodeCamp community get their first software developer job. If you're curious, you can  [**browse our alumni network on LinkedIn here**][1].
+当然可以。每年都有成千上万名 freeCodeCamp 学员找到自己的第一份软件开发工作。如果你对此感兴趣，可以 [**在 Linkedln 上浏览我们的校友网络**][1]。
 
-### How big is the freeCodeCamp community?
+### freeCodeCamp 社区有多大规模？
 
-If you add up all the people who use our learning platform, read our  [**news articles**][2], watch our  [**YouTube channel**][3], and post on  [**our forum**][4], each month we help millions of people learn about coding and technology.
+如果你把所有使用我们的学习平台、阅读我们[**专栏**][2]、观看我们 [**YouTube 频道**][3]，以及活跃在 [**我们的论坛**][4]上的用户数量都加起来，我们每个月帮助数百万人学习编程和技术。
 
-### Is freeCodeCamp a nonprofit?
+### freeCodeCamp 是非营利组织吗?
 
-Yes, we are a 501(c)(3)  [**donor-supported public charity**][5]. You can  [**download our IRS Determination Letter here**][6].
+是的，我们是501(c)(3) [**捐款人支持的公共慈善组织**][5]。你可以[**在此下载我们的国税局认定书**][6]。
 
-### Does freeCodeCamp accept donations in Bitcoin or other crypto currencies?
+### 我可以怎么支持 freeCodeCamp 社区？
+你可以[设置一个你能负担的每月给我们的非营利组织捐款的计划](https://www.freecodecamp.org/donate)。
 
-Yes. Our cryptographically signed wallet details are  **[here][7]**.
+### 我设置了一个每月捐款计划，但是我需要更新或停止这个计划，应该怎么做？
+请发送你的其中一次捐款的收据给邮箱 donors@freecodecamp.org，告诉我们你想要做什么，然后我们会处理，并发送邮件和你确认。
 
-### How long will it take me to finish each of freeCodeCamp's certifications?
+### freeCodeCamp 接受比特币或者其他数字货币捐款吗？
+是的，我们的钱包详情是：
+```
+Bitcoin: 12skYi7aMCjDUdrVdoB3JjZ77ug8gxJfbL
+Ethereum: 0x0ADbEf2471416BD8732cf0f3944294eE393CcAF5
+Litecoin: LKu8UG8Z1nbTxnq9Do96PsC3FwbNtycf3X
+Bitcoin Cash: 1EBxPEJWrGZWxe2UayyAsnd5VsRg5H9xfu
+DAI: 0xB6D4FE7ac5EC9147d575E4EE955B413dF3689934
+Dash: Xv7WX5B1Av4PxiZfsZuBedCkhyxXfgy7qo
+Zcash: t1L7mqoAqGkBnoMvW1p2cG221zK4SBXKoLb
+Chainlink: 0xE757fa6D434bdAca558db9747fEaBf0584f433d1
+```
 
-Each certification takes around 300 hours of dedicated learning. Some people may take longer. These certifications are completely self-paced, so take as long as you need.
+### 获得 freeCodeCamp 的每个认证需要多少时间？
 
-### Is freeCodeCamp a coding bootcamp?
+完成每个认证大约需要 300 个小时的学习时间。有的人可能需要更长的时间。所有课程都是由学员自由安排学习进度的，所以你可以按照自己的实际情况安排时间。
 
-No. A lot of coding bootcamps use freeCodeCamp as part of their curriculum, though.
+### freeCodeCamp 是一个编程训练营吗?
 
-### Is freeCodeCamp a replacement for a 4-year degree?
+不是。但许多编程训练营都将 freeCodeCamp 用作其课程的一部分。
 
-No. Please don’t drop out of college just to pursue freeCodeCamp. You can pursue both concurrently. Even though you don’t need a 4-year degree to work as a software developer, it still helps a lot.
+### freeCodeCamp 能否替代四年制学位?
 
-### Should I complete all of the coding challenges in order?
+不能。请不要为了学习 freeCodeCamp 的课程而辍学。你可以同时完成两者。尽管你不需要 4 年制学位就可以成为一名软件开发人员，但学位仍然会有很大的帮助。 
 
-We’ve put a lot of thought into how we introduce concepts. But you’re free to jump around.
+### 我应该按顺序完成编程挑战吗？
 
-### Do I have to use CodePen for the front end projects?
+我们对于如何引入各种编程概念作了大量思考。但你仍可以随意安排学习的顺序。
 
-As long as your code is publicly viewable somewhere on the internet, and you have a live demo, you can use whatever tools you want.
+### 对于前端项目一定要使用 CodePen 吗？
 
-### How did freeCodeCamp get started?
+只要你的代码可以在网络上被人们公开查看，并且可以进行实时演示，你就可以随意选择开发工具。
 
-[**Quincy**][8]  started the freeCodeCamp community in 2014. He is now just one of thousands of active contributors.
+### freeCodeCamp 是怎样创立起来的？
 
-### I'm a teacher. Is freeCodeCamp an appropriate resource for my class?
+[**Quincy**][8]  于 2014 年创立了 freeCodeCamp 社区。如今 freeCodeCamp 已拥有成千上万名像 Quincy 一样的活跃贡献者。
 
-Yes. Many high school, college, and adult ed programs incorporate freeCodeCamp into their coursework. We're open source, so no license or special permission from us is necessary. We're even building special tools for teachers.
+### 我是一名老师，我可以把 freeCodeCamp 课程用作我的教学资源吗？
 
-### Can I live-stream myself working on freeCodeCamp challenges and projects? Can I blog about how I solved them?
+当然可以。很多高中、大学和成人教育都将 freeCodeCamp 纳入其课程。freeCodeCamp 是开源的，因此你并不需要从我们这里获得什么执照或特别的许可。我们甚至将打造适合老师在课堂上使用的工具。
 
-Yes. We welcome this. Also, don't be shy about "spoiling" projects or challenges. The solutions to all of these challenges are already all over the internet.
+### 我可以直播自己做 freeCodeCamp 题目和项目的过程吗？我能否将自己的解决方案写成博客呢？
 
-### Can I create apps or tools based around the freeCodeCamp community and platform?
+是的，我们对此表示欢迎。此外，请不要因为你写的项目或完成挑战的方案不够好而不好意思分享，事实上网络上已经有很多相关的分享内容。
 
-Yes. freeCodeCamp is open source (BSD-3 license), and most non-sensitive freeCodeCamp data is publicly available. But you must make it clear that you don't represent freeCodeCamp itself, and that your project is not officially endorsed by freeCodeCamp.
+### 我可以基于 freeCodeCamp 社区和平台创建应用或工具吗？
 
-### Does freeCodeCamp have a mobile app?
+可以的，freeCodeCamp 是开源的（BSD-3 许可），并且 freeCodeCamp 的大部分非敏感数据是公开可用的。但你必须明确声明，你不代表 freeCodeCamp，并且你的项目没有得到 freeCodeCamp 的官方认可。
 
-You can learn on the go by listening to the  [**freeCodeCamp Podcast**][9]  or watching  [**freeCodeCamp's YouTube channel**][10]. And if you want a mobile app designed specifically for learning to code, we recommend Grasshopper. It's free and designed by a freeCodeCamp contributor and her team. You can download it on  [**iOS**][11]  or  [**Android**][12].
+### freeCodeCamp 有移动端应用吗?
 
-### Can I get a job at freeCodeCamp?
+你可以通过收听 [**freeCodeCamp 播客**][9]，观看 [**freeCodeCamp 的 YouTube 频道**][10] 或 [**bilibili 频道**](https://space.bilibili.com/335505768)的视频，或阅读 freeCodeCamp 微信公众号的文章来随时随地学习。如果你想要一个专门为了学习编程而设计的移动应用，我们推荐你使用 Grasshopper。它是免费的，并是由 freeCodeCamp 贡献者和她的团队设计的。你可以在 [**iOS**][11]  或  [**Android**][12] 上下载.
 
-We're a small donor-supported nonprofit. We've hired several prominent contributors from within the freeCodeCamp community, but you're much more likely to get a job at  [**one of the hundreds of companies**][13]  where freeCodeCamp alumni work.
+### 我能入职 freeCodeCamp 吗？
 
-### Can my company advertise on freeCodeCamp?
+我们是一个小型的捐款人支持的非营利组织。我们已经从 freeCodeCamp 社区中招聘了几位杰出的贡献者，但你更有可能在 freeCodeCamp 校友们工作的  [**数百家公司**][13]  中找到工作。
 
-We don’t show ads.
+### 我的公司能在 freeCodeCamp 上打广告吗？
 
-### How can I support the freeCodeCamp community?
+我们不做广告。
 
-You can  [**set up a monthly donation to our nonprofit that you can afford**][14].
+### 我能给 freeCodeCamp 投资吗？
+我们是一个公共慈善机构，所以确切地说，你已经拥有了 freeCodeCamp。没有人可以拥有一个公共慈善机构的股份，并且这个机构不能被买卖。
 
-### Where can I get technical support for using the freeCodeCamp.org platform?
+不过，[我们欢迎你给 freeCodeCamp 捐款](https://www.freecodecamp.org/donate)。你可以直接影响 freeCodeCamp 的方式是行动起来，[为这个项目做贡献](https://contribute.freecodecamp.org/#/)。
 
-Here are  [**answers to common technical support questions**][15].
+### 我能怎样支持 freeCodeCamp 社区？
 
-## Become a supporter.
+你可以  [**在能力范围内每月向我们的非营利组织捐款**][14].
 
-### [❤️ Set up your tax-deductible donation here. ❤️][16]
+### 我在哪里获得有关使用 freeCodeCamp.org 平台的技术支持？
+
+以下是[**常见技术支持问题的答案**][15]。
+
+## 成为支持者
+
+### [❤️ 在这里设置你的免税捐款计划 ❤️][16]
 
 ![](https://www.freecodecamp.org/news/content/images/2019/07/freecodecamp-hk-meeting.jpg)
 
-The freeCodeCamp Team (left to right): Miya, Mrugesh, Quincy, Kris, Ahmad. Not pictured: Abbey, Beau
+freeCodeCamp 团队的部分成员（左起）：Miya，Mrugesh，Quincy，Kris，Ahmad
 
-## Thank you from the freeCodeCamp.org team.
+## freeCodeCamp.org 团队向你致谢！
 
----
-
-If this article was helpful,  tweet it  or  share it.
-
-[Donate if you can][17].
 
 [1]: https://www.linkedin.com/school/4831032/alumni/
 [2]: https://www.freecodecamp.org/news
@@ -123,4 +139,3 @@ If this article was helpful,  tweet it  or  share it.
 [14]: https://donate.freecodecamp.org/
 [15]: https://support.freecodecamp.org/
 [16]: https://donate.freecodecamp.org/
-[17]: https://freecodecamp.org/donate

@@ -1,7 +1,7 @@
-> * 原文地址：[The Deno Handbook: A TypeScript Runtime Tutorial with Code Examples Deno 入门手册](https://www.freecodecamp.org/news/the-deno-handbook/)
-> * 原文作者：Flavio Copes
-> * 译者：hylerrix, Yunkou
-> * 校对者：hylerrix
+> -   原文地址：[The Deno Handbook: A TypeScript Runtime Tutorial with Code Examples Deno 入门手册](https://www.freecodecamp.org/news/the-deno-handbook/)
+> -   原文作者：Flavio Copes
+> -   译者：hylerrix, Yunkou
+> -   校对者：hylerrix
 
 ![The Deno Handbook: A TypeScript Runtime Tutorial with Code Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2020/05/Screen-Shot-2020-05-11-at-18.55.24.png)
 
@@ -11,43 +11,43 @@
 
 ## 目录
 
-- [什么是 Deno？](#什么是-Deno？)
-- [为什么是 Deno？为什么是现在？](#为什么是-Deno？为什么是现在？)
-- [你应该学习 Deno 吗？](#你应该学习-Deno-吗？)
-- [Deno 将取代 Node.js 吗？](#Deno-将取代-Node.js-吗？)
-- [一流的 TypeScript 支持](#一流的-TypeScript-支持)
-- [与 Node.js 的异同](#与-Node.js-的异同)
-- [不再有包管理器](#no-package-manager)
-- [安装 Deno](#安装-Deno)
-- [Deno 命令](#Deno-命令)
-- [你的第一个 Deno 应用](#你的第一个-Deno-应用)
-- [Deno 代码实例](#Deno-代码实例)
-- [你的第一个 Deno 应用（深入版）](#你的第一个-Deno-应用（深入版）)
-- [Deno 安全沙箱（Sandbox）](#Deno-安全沙箱（Sandbox）)
-- [格式化代码](#格式化代码)
-- [标准库](#标准库)
-- [另一个 Deno 示例](#另一个-Deno-示例)
-- [Deno 是否有 Express/Hapi/Koa/\*？](#Deno-是否有-Express/Hapi/Koa/*？)
-- [示例：使用 Oak 构建 REST API](#示例：使用-Oak-构建-REST-API)
-- [更多内容](#更多内容)
-- [结语](#结语)
+-   [什么是 Deno？](#什么是-Deno？)
+-   [为什么是 Deno？为什么是现在？](#为什么是-Deno？为什么是现在？)
+-   [你应该学习 Deno 吗？](#你应该学习-Deno-吗？)
+-   [Deno 将取代 Node.js 吗？](#Deno-将取代-Node.js-吗？)
+-   [一流的 TypeScript 支持](#一流的-TypeScript-支持)
+-   [与 Node.js 的异同](#与-Node.js-的异同)
+-   [不再有包管理器](#no-package-manager)
+-   [安装 Deno](#安装-Deno)
+-   [Deno 命令](#Deno-命令)
+-   [你的第一个 Deno 应用](#你的第一个-Deno-应用)
+-   [Deno 代码实例](#Deno-代码实例)
+-   [你的第一个 Deno 应用（深入版）](#你的第一个-Deno-应用（深入版）)
+-   [Deno 安全沙箱（Sandbox）](#Deno-安全沙箱（Sandbox）)
+-   [格式化代码](#格式化代码)
+-   [标准库](#标准库)
+-   [另一个 Deno 示例](#另一个-Deno-示例)
+-   [Deno 是否有 Express/Hapi/Koa/\*？](#Deno-是否有-Express/Hapi/Koa/*？)
+-   [示例：使用 Oak 构建 REST API](#示例：使用-Oak-构建-REST-API)
+-   [更多内容](#更多内容)
+-   [结语](#结语)
 
 此外，[你可以在此处获取此 Deno 手册的 PDF / ePub / Mobi 版本。](https://flaviocopes.com/page/deno-handbook/)
 
-## 什么是 Deno？
+## 什么是 Deno
 
 如果你熟悉流行的服务器端 JavaScript 运行时 Node.js，那么 Deno 就像 Node.js 一样，但却在很多方面都得到了深刻改善的全新 JavaScript / TypeScript 运行时。
 
 让我们从 Deno 的功能列表快速了解：
 
-- Deno 基于最新的 JavaScript 语言；
-- Deno 具有覆盖面广泛的标准库；
-- Deno 以 TypeScript 为核心，配以更多独特的方式从而带来了巨大的优势，其中包括一流的 TypeScript 支持（Deno 自动编译 TypeScript 而无需你单独编译）；
-- Deno 大力拥抱 ES 模块标准；
-- Deno 没有包管理器；
-- Deno 具有一流的 `await` 语法支持；
-- Deno 内置测试工具；
-- Deno 旨在尽可能地与浏览器兼容，例如通过提供内置对象 `fetch` 和全局 `window` 对象。
+-   Deno 基于最新的 JavaScript 语言；
+-   Deno 具有覆盖面广泛的标准库；
+-   Deno 以 TypeScript 为核心，配以更多独特的方式从而带来了巨大的优势，其中包括一流的 TypeScript 支持（Deno 自动编译 TypeScript 而无需你单独编译）；
+-   Deno 大力拥抱 ES 模块标准；
+-   Deno 没有包管理器；
+-   Deno 具有一流的 `await` 语法支持；
+-   Deno 内置测试工具；
+-   Deno 旨在尽可能地与浏览器兼容，例如通过提供内置对象 `fetch` 和全局 `window` 对象。
 
 我们将在本手册中展开探索所有上述功能。
 
@@ -59,7 +59,7 @@ Node.js 的确很棒，并在可见的未来将继续成为 JavaScript 世界中
 
 由于没有向后兼容性的历史原因，Deno 将可以承担起所有使用现代 Web 技术编写的工程建设。但目前的现实是，我们也无法保证十年之内 Deno 不会发生像 Node.js 同样的事情，并且不会出现一项新技术代替 Deno。
 
-## 为什么是 Deno？为什么是现在？
+## 为什么是 Deno？为什么是现在
 
 大约 2 年前，Node.js 的创建者 Ryan Dahl 在 JSConf EU 上首次介绍了 Deno。观看[当时的演讲视频](https://www.youtube.com/watch?v=M3BM9TB-8yA)会非常有趣。如果你平时在大量接触 Node.js 和 JavaScript，这个视频请不要错过。
 
@@ -73,7 +73,7 @@ Node.js 的确很棒，并在可见的未来将继续成为 JavaScript 世界中
 
 1.0 看起来仅仅是个数字，但在社区约定下，意味着直到 Deno 2.0 前 Deno 都不会有太多重大的破坏性改变——这很重要，因为你终于可以安心学习 Deno 当前的稳定版本了。
 
-## 你应该学习 Deno 吗？
+## 你应该学习 Deno 吗
 
 这并不那么容易回答。
 
@@ -83,7 +83,7 @@ Node.js 的确很棒，并在可见的未来将继续成为 JavaScript 世界中
 
 但如果你喜欢 TypeScript、也不想让项目中依赖无比庞大的 NPM 软件包、还想要随时随地使用 `await` 等语法，那么你可能真的需要 Deno。
 
-## Deno 将取代 Node.js 吗？
+## Deno 将取代 Node.js 吗
 
 不能。Node.js 的生态已经十分庞大和完善，获得了数以万计的优秀技术支持，将能再战数十年。
 
@@ -109,17 +109,17 @@ Deno 基于 Rust 和 TypeScript 这两种今天正在迅速发展的语言编写
 
 相似之处：
 
-- 两者都是基于 [V8 引擎](https://flaviocopes.com/v8/)开发的；
-- 两者都非常适合在服务器端上编写 JavaScript 应用。
+-   两者都是基于 [V8 引擎](https://flaviocopes.com/v8/)开发的；
+-   两者都非常适合在服务器端上编写 JavaScript 应用。
 
 差异之处：
 
-- Node.js 用 C++ 和 JavaScript 语言编写。Deno 用 Rust 和 TypeScript 语言编写。
-- Node.js 有一个官方的软件包管理器，称为 NPM。Deno 不会有，而会允许你从 URL 导入任何 ES 模块。
-- Node.js 使用 CommonJS 模块语法导入软件包。Deno 使用 ES 标准模块导入。
-- Deno 在其所有 API 和标准库中都使用现代 ECMAScript 功能，而 Node.js 使用基于回调的标准库，并且没有计划对其进行升级。
-- Deno 通过权限控制提供了一个安全的沙箱环境，程序只能访问由用户设置为可执行标志的文件。Node.js 程序可以直接访问用户足以访问的任何内容。
-- Deno 长期以来一直在探索将程序编译成单个可执行文件的可能性，从而使得该可执行文件可以在没有外部依赖项（例如 Go）的情况下运行，但这并[不是一件容易的事](https://github.com/denoland/deno/issues/986)，如果做得到，将会成为更有话语权的游戏规则改变者。
+-   Node.js 用 C++ 和 JavaScript 语言编写。Deno 用 Rust 和 TypeScript 语言编写。
+-   Node.js 有一个官方的软件包管理器，称为 NPM。Deno 不会有，而会允许你从 URL 导入任何 ES 模块。
+-   Node.js 使用 CommonJS 模块语法导入软件包。Deno 使用 ES 标准模块导入。
+-   Deno 在其所有 API 和标准库中都使用现代 ECMAScript 功能，而 Node.js 使用基于回调的标准库，并且没有计划对其进行升级。
+-   Deno 通过权限控制提供了一个安全的沙箱环境，程序只能访问由用户设置为可执行标志的文件。Node.js 程序可以直接访问用户足以访问的任何内容。
+-   Deno 长期以来一直在探索将程序编译成单个可执行文件的可能性，从而使得该可执行文件可以在没有外部依赖项（例如 Go）的情况下运行，但这并[不是一件容易的事](https://github.com/denoland/deno/issues/986)，如果做得到，将会成为更有话语权的游戏规则改变者。
 
 ## 没有包依赖管理器
 
@@ -196,20 +196,20 @@ OPTIONS:
 
 请注意上节中 `deno --help` 后 `SUBCOMMANDS` 中的部分，其中列出了我们在当前版本（0.42.0）中可以运行的所有命令，如下：
 
-- `bundle` ：将项目的模块和依赖项捆绑到单个文件中；
-- `cache` ：缓存依赖项；
-- `completions` ：generate shell completions；
-- `doc` ：显示某模块的文档；
-- `eval` ：运行一段代码，例如 `deno eval "console.log(1 + 2)`；
-- `fmt` ：内置的代码格式化程序（类似于 Go 语言中的 `gofmt`）；
-- `help` ：打印某消息或某给定子命令的帮助信息；
-- `info` ：显示有关缓存的信息或与源文件有关的信息；
-- `install` ：将脚本安装为可执行文件；
-- `repl` ：开启 REPL 环境（默认子命令）；
-- `run` ：运行给定文件名或 URL 的程序；
-- `test` ：运行测试；
-- `types` ：打印运行时的 TypeScript 声明；
-- `upgrade` ：升级 Deno 到最新版本。
+-   `bundle` ：将项目的模块和依赖项捆绑到单个文件中；
+-   `cache` ：缓存依赖项；
+-   `completions` ：generate shell completions；
+-   `doc` ：显示某模块的文档；
+-   `eval` ：运行一段代码，例如 `deno eval "console.log(1 + 2)`；
+-   `fmt` ：内置的代码格式化程序（类似于 Go 语言中的 `gofmt`）；
+-   `help` ：打印某消息或某给定子命令的帮助信息；
+-   `info` ：显示有关缓存的信息或与源文件有关的信息；
+-   `install` ：将脚本安装为可执行文件；
+-   `repl` ：开启 REPL 环境（默认子命令）；
+-   `run` ：运行给定文件名或 URL 的程序；
+-   `test` ：运行测试；
+-   `types` ：打印运行时的 TypeScript 声明；
+-   `upgrade` ：升级 Deno 到最新版本。
 
 你可以运行 `deno <subcommand> help` 以获取该子命令的特定文档，例如 `deno run --help`。
 
@@ -237,12 +237,12 @@ Deno 让我感到非常惊奇的特性是：你甚至不必写一行代码，便
 
 ![Deno](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-12.22.30.jpg)
 
-__当然，我一般不建议从 Internet 运行无法保障安全性的代码。在这种情况下，我们先运行 Deno 官方网站上提供的 Demo；另外 Deno 还有一个沙箱，可以阻止程序执行你不希望做的事情。稍后再详细介绍。__
+**当然，我一般不建议从 Internet 运行无法保障安全性的代码。在这种情况下，我们先运行 Deno 官方网站上提供的 Demo；另外 Deno 还有一个沙箱，可以阻止程序执行你不希望做的事情。稍后再详细介绍。**
 
 这个程序很简单，只需要一个`console.log()`调用：
 
 ```ts
-console.log("Welcome to Deno 🦕");
+console.log('Welcome to Deno 🦕');
 ```
 
 如果使用浏览器打开直接打开 [https://deno.land/std/examples/welcome.ts](https://deno.land/std/examples/welcome.ts) 这个 URL，则会看到以下页面：
@@ -370,16 +370,16 @@ OPTIONS:
 
 在撰写本手册时，我们可以找到：
 
-- `cat.ts` ：打印的内容是作为参数提供的文件列表；
-- `catj.ts` ：打印的内容是作为参数提供的文件列表；
-- `chat/` ：聊天的一种实现；
-- `colors.ts` ：打印一个彩色版本的 Hello world!；
-- `curl.ts` ：一个简单的实现，curl 它打印指定为参数的 URL 的内容；
-- `echo_server.ts` ：TCP 回显服务器；
-- `gist.ts` ：一个将文件发布到 gist.github.com 的程序；
-- `test.ts` ：样本测试套件；
-- `welcome.ts` ：一个简单的 console.log 语句（我们在上面运行的第一个程序）；
-- `xeval.ts` ：允许你为收到的任何标准输入行运行任何 TypeScript 代码。曾经被设计为 `deno xeval` 子命令但现在从官方命令中删除。
+-   `cat.ts` ：打印的内容是作为参数提供的文件列表；
+-   `catj.ts` ：打印的内容是作为参数提供的文件列表；
+-   `chat/` ：聊天的一种实现；
+-   `colors.ts` ：打印一个彩色版本的 Hello world!；
+-   `curl.ts` ：一个简单的实现，curl 它打印指定为参数的 URL 的内容；
+-   `echo_server.ts` ：TCP 回显服务器；
+-   `gist.ts` ：一个将文件发布到 gist.github.com 的程序；
+-   `test.ts` ：样本测试套件；
+-   `welcome.ts` ：一个简单的 console.log 语句（我们在上面运行的第一个程序）；
+-   `xeval.ts` ：允许你为收到的任何标准输入行运行任何 TypeScript 代码。曾经被设计为 `deno xeval` 子命令但现在从官方命令中删除。
 
 ## 你的第一个 Deno 应用（深入版）
 
@@ -390,11 +390,11 @@ OPTIONS:
 接下来让我们从 Deno 官方网站上列出的默认示例应用开始。
 
 ```ts
-import { serve } from "https://deno.land/std/http/server.ts";
+import { serve } from 'https://deno.land/std/http/server.ts';
 const s = serve({ port: 8000 });
-console.log("http://localhost:8000/");
+console.log('http://localhost:8000/');
 for await (const req of s) {
-  req.respond({ body: "Hello World\n" });
+    req.respond({ body: 'Hello World\n' });
 }
 ```
 
@@ -403,7 +403,7 @@ for await (const req of s) {
 从 `https://deno.land/std/http/server.ts` 中导入会导入最新版本的模块。你可以使用`@VERSION`导入特定的版本，如下所示。
 
 ```ts
-import { serve } from "https://deno.land/std@v0.42.0/http/server.ts";
+import { serve } from 'https://deno.land/std@v0.42.0/http/server.ts';
 ```
 
 该 serve 函数在此文件中的定义如下：
@@ -420,13 +420,13 @@ import { serve } from "https://deno.land/std@v0.42.0/http/server.ts";
  *     }
  */
 export function serve(addr: string | HTTPOptions): Server {
-  if (typeof addr === "string") {
-    const [hostname, port] = addr.split(":");
-    addr = { hostname, port: Number(port) };
-  }
+    if (typeof addr === 'string') {
+        const [hostname, port] = addr.split(':');
+        addr = { hostname, port: Number(port) };
+    }
 
-  const listener = listen(addr);
-  return new Server(listener);
+    const listener = listen(addr);
+    return new Server(listener);
 }
 ```
 
@@ -436,7 +436,7 @@ export function serve(addr: string | HTTPOptions): Server {
 
 ```ts
 for await (const req of s) {
-  req.respond({ body: "Hello World\n" });
+    req.respond({ body: 'Hello World\n' });
 }
 ```
 
@@ -450,7 +450,7 @@ for await (const req of s) {
 
 该扩展将为 `VS Code` 提供几个实用工具和不错的东西来帮助你编写应用程序。
 
-现在在一个文件夹中创建一个` app.ts` 文件，然后粘贴上面的代码。
+现在在一个文件夹中创建一个`app.ts` 文件，然后粘贴上面的代码。
 
 ![app.ts](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-15.40.18.png)
 
@@ -463,21 +463,20 @@ Deno 会先下载、编译我们导入的那个依赖及其所有需要的依赖
 这是由于我们导入的 `https://deno.land/std/http/server.ts` 文件本身就有数个其它依赖：
 
 ```ts
-import { encode } from '../encoding/utf8.ts'
-import { BufReader, BufWriter } from '../io/bufio.ts'
-import { assert } from '../testing/asserts.ts'
-import { deferred, Deferred, MuxAsyncIterator } from '../async/mod.ts'
+import { encode } from '../encoding/utf8.ts';
+import { BufReader, BufWriter } from '../io/bufio.ts';
+import { assert } from '../testing/asserts.ts';
+import { deferred, Deferred, MuxAsyncIterator } from '../async/mod.ts';
 import {
-bodyReader,
-chunkedBodyReader,
-emptyReader,
-writeResponse,
-readRequest,
-} from './_io.ts'
-import Listener = Deno.Listener
-import Conn = Deno.Conn
-import Reader = Deno.Reader
-
+    bodyReader,
+    chunkedBodyReader,
+    emptyReader,
+    writeResponse,
+    readRequest,
+} from './_io.ts';
+import Listener = Deno.Listener;
+import Conn = Deno.Conn;
+import Reader = Deno.Reader;
 ```
 
 但 Deno 都会帮我们自动导入。
@@ -518,14 +517,14 @@ deno run --allow-net app.ts
 
 其他标志允许 Deno 解锁其他功能，如下所示：
 
-- `--allow-env` ：允许访问环境变量；
-- `--allow-hrtime` ：允许高分辨率时间测量；
-- `--allow-net=<allow-net>` ：允许网络访问；
-- `--allow-plugin` ：允许加载插件；
-- `--allow-read=<allow-read>` ：允许文件系统读取权限；
-- `--allow-run` ：允许运行子进程；
-- `--allow-write=<allow-write>` ：允许文件系统写入访问；
-- `--allow-all` ：允许所有权限(与`-A`相同)。
+-   `--allow-env` ：允许访问环境变量；
+-   `--allow-hrtime` ：允许高分辨率时间测量；
+-   `--allow-net=<allow-net>` ：允许网络访问；
+-   `--allow-plugin` ：允许加载插件；
+-   `--allow-read=<allow-read>` ：允许文件系统读取权限；
+-   `--allow-run` ：允许运行子进程；
+-   `--allow-write=<allow-write>` ：允许文件系统写入访问；
+-   `--allow-all` ：允许所有权限(与`-A`相同)。
 
 其中，`net`、`read` 和 `write` 的权限可以是细化的。例如，你可以使用 `--allow-read=/dev`，允许从特定文件夹中读取。
 
@@ -547,22 +546,22 @@ JavaScript 程序员都习惯于运行 [Prettier](https://flaviocopes.com/pretti
 
 尽管 Deno 还很年轻，但它的标准库仍然很庞大。这包括：
 
-- `archive` ：tar 文件归档的实用程序
-- `async` ：异步工具
-- `bytes` ：帮助器来操作字节切片
-- `datetime` ：日期 / 时间解析
-- `encoding` ：各种格式的编码/解码
-- `flags` ：解析命令行标志
-- `fmt` ：格式化和打印
-- `fs` ：文件系统 API
-- `hash` ：加密库
-- `http` ：HTTP 服务器
-- `io` ：I/O 库
-- `log` ：日志实用程序
-- `mime` ：支持多类型数据
-- `node` ：Node.js 兼容层
-- `path` ：路径操纵
-- `ws` ：WebSockets
+-   `archive` ：tar 文件归档的实用程序
+-   `async` ：异步工具
+-   `bytes` ：帮助器来操作字节切片
+-   `datetime` ：日期 / 时间解析
+-   `encoding` ：各种格式的编码/解码
+-   `flags` ：解析命令行标志
+-   `fmt` ：格式化和打印
+-   `fs` ：文件系统 API
+-   `hash` ：加密库
+-   `http` ：HTTP 服务器
+-   `io` ：I/O 库
+-   `log` ：日志实用程序
+-   `mime` ：支持多类型数据
+-   `node` ：Node.js 兼容层
+-   `path` ：路径操纵
+-   `ws` ：WebSockets
 
 ## 另一个 Deno 示例
 
@@ -571,9 +570,9 @@ JavaScript 程序员都习惯于运行 [Prettier](https://flaviocopes.com/pretti
 ```ts
 const filenames = Deno.args;
 for (const filename of filenames) {
-  const file = await Deno.open(filename);
-  await Deno.copy(file, Deno.stdout);
-  file.close();
+    const file = await Deno.open(filename);
+    await Deno.copy(file, Deno.stdout);
+    file.close();
 }
 ```
 
@@ -609,15 +608,15 @@ deno run --allow-read=./ https://deno.land/std/examples/cat.ts app.ts
 
 ![allow-read](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-17.07.54-6.png)
 
-## Deno 是否有 Express/Hapi/Koa/\*
+## Deno 是否有 Express/Hapi/Koa/
 
 当然有。可以看看下方这些库。
 
-- [deno-drash](https://github.com/drashland/deno-drash)
-- [deno-express](https://github.com/NMathar/deno-express)
-- [oak](https://github.com/oakserver/oak)
-- [pogo](https://github.com/sholladay/pogo)
-- [servest](https://github.com/keroxp/servest)
+-   [deno-drash](https://github.com/drashland/deno-drash)
+-   [deno-express](https://github.com/NMathar/deno-express)
+-   [oak](https://github.com/oakserver/oak)
+-   [pogo](https://github.com/sholladay/pogo)
+-   [servest](https://github.com/keroxp/servest)
 
 ## 示例：使用 Oak 构建 REST-API
 
@@ -629,11 +628,11 @@ deno run --allow-read=./ https://deno.land/std/examples/cat.ts app.ts
 
 我们的需求是：
 
-- 添加旺柴；
-- 列出旺柴；
-- 获取有关特定旺柴的详细信息；
-- 从名单上删除一只旺柴；
-- 更新旺柴的年龄；
+-   添加旺柴；
+-   列出旺柴；
+-   获取有关特定旺柴的详细信息；
+-   从名单上删除一只旺柴；
+-   更新旺柴的年龄；
 
 我们将使用 TypeScript 进行此操作，但是没有什么可以阻止你使用 JavaScript 编写 API——你只需要删除下方 TypeScript 文件中所有有关类型描述的代码并将文件名后缀改为 `.js`。
 
@@ -642,7 +641,7 @@ deno run --allow-read=./ https://deno.land/std/examples/cat.ts app.ts
 让我们开始从 Oak 导入 `Application` 和 `Router` 对象：
 
 ```ts
-import { Application, Router } from "https://deno.land/x/oak/mod.ts";
+import { Application, Router } from 'https://deno.land/x/oak/mod.ts';
 ```
 
 然后我们得到环境变量 `PORT` 和 `HOST`:
@@ -650,7 +649,7 @@ import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 ```ts
 const env = Deno.env.toObject();
 const PORT = env.PORT || 4000;
-const HOST = env.HOST || "127.0.0.1";
+const HOST = env.HOST || '127.0.0.1';
 ```
 
 默认情况下，我们的应用程序将在 `localhost：4000` 上运行。
@@ -690,19 +689,19 @@ deno run --allow-env --allow-net app.ts
 
 ```ts
 interface Dog {
-  name: string;
-  age: number;
+    name: string;
+    age: number;
 }
 
 let dogs: Array<Dog> = [
-  {
-    name: "Roger",
-    age: 8,
-  },
-  {
-    name: "Syd",
-    age: 7,
-  },
+    {
+        name: 'Roger',
+        age: 8,
+    },
+    {
+        name: 'Syd',
+        age: 7,
+    },
 ];
 ```
 
@@ -714,20 +713,20 @@ let dogs: Array<Dog> = [
 const router = new Router();
 
 router
-  .get("/dogs", getDogs)
-  .get("/dogs/:name", getDog)
-  .post("/dogs", addDog)
-  .put("/dogs/:name", updateDog)
-  .delete("/dogs/:name", removeDog);
+    .get('/dogs', getDogs)
+    .get('/dogs/:name', getDog)
+    .post('/dogs', addDog)
+    .put('/dogs/:name', updateDog)
+    .delete('/dogs/:name', removeDog);
 ```
 
 看到了吗？我们的 API 定义是：
 
-- `GET /dogs`
-- `GET /dogs/:name`
-- `POST /dogs`
-- `PUT /dogs/:name`
-- `DELETE /dogs/:name`
+-   `GET /dogs`
+-   `GET /dogs/:name`
+-   `POST /dogs`
+-   `PUT /dogs/:name`
+-   `DELETE /dogs/:name`
 
 让我们开始一一实现。
 
@@ -735,7 +734,7 @@ router
 
 ```ts
 export const getDogs = ({ response }: { response: any }) => {
-  response.body = dogs;
+    response.body = dogs;
 };
 ```
 
@@ -745,23 +744,23 @@ export const getDogs = ({ response }: { response: any }) => {
 
 ```ts
 export const getDog = ({
-  params,
-  response,
+    params,
+    response,
 }: {
-  params: {
-    name: string;
-  };
-  response: any;
+    params: {
+        name: string;
+    };
+    response: any;
 }) => {
-  const dog = dogs.filter((dog) => dog.name === params.name);
-  if (dog.length) {
-    response.status = 200;
-    response.body = dog[0];
-    return;
-  }
+    const dog = dogs.filter((dog) => dog.name === params.name);
+    if (dog.length) {
+        response.status = 200;
+        response.body = dog[0];
+        return;
+    }
 
-  response.status = 400;
-  response.body = { msg: `Cannot find dog ${params.name}` };
+    response.status = 400;
+    response.body = { msg: `Cannot find dog ${params.name}` };
 };
 ```
 
@@ -771,18 +770,18 @@ export const getDog = ({
 
 ```ts
 export const addDog = async ({
-  request,
-  response,
+    request,
+    response,
 }: {
-  request: any;
-  response: any;
+    request: any;
+    response: any;
 }) => {
-  const body = await request.body();
-  const dog: Dog = body.value;
-  dogs.push(dog);
+    const body = await request.body();
+    const dog: Dog = body.value;
+    dogs.push(dog);
 
-  response.body = { msg: "OK" };
-  response.status = 200;
+    response.body = { msg: 'OK' };
+    response.status = 200;
 };
 ```
 
@@ -794,29 +793,29 @@ export const addDog = async ({
 
 ```ts
 export const updateDog = async ({
-  params,
-  request,
-  response,
+    params,
+    request,
+    response,
 }: {
-  params: {
-    name: string;
-  };
-  request: any;
-  response: any;
+    params: {
+        name: string;
+    };
+    request: any;
+    response: any;
 }) => {
-  const temp = dogs.filter((existingDog) => existingDog.name === params.name);
-  const body = await request.body();
-  const { age }: { age: number } = body.value;
+    const temp = dogs.filter((existingDog) => existingDog.name === params.name);
+    const body = await request.body();
+    const { age }: { age: number } = body.value;
 
-  if (temp.length) {
-    temp[0].age = age;
-    response.status = 200;
-    response.body = { msg: "OK" };
-    return;
-  }
+    if (temp.length) {
+        temp[0].age = age;
+        response.status = 200;
+        response.body = { msg: 'OK' };
+        return;
+    }
 
-  response.status = 400;
-  response.body = { msg: `Cannot find dog ${params.name}` };
+    response.status = 400;
+    response.body = { msg: `Cannot find dog ${params.name}` };
 };
 ```
 
@@ -826,25 +825,25 @@ export const updateDog = async ({
 
 ```ts
 export const removeDog = ({
-  params,
-  response,
+    params,
+    response,
 }: {
-  params: {
-    name: string;
-  };
-  response: any;
+    params: {
+        name: string;
+    };
+    response: any;
 }) => {
-  const lengthBefore = dogs.length;
-  dogs = dogs.filter((dog) => dog.name !== params.name);
+    const lengthBefore = dogs.length;
+    dogs = dogs.filter((dog) => dog.name !== params.name);
 
-  if (dogs.length === lengthBefore) {
-    response.status = 400;
-    response.body = { msg: `Cannot find dog ${params.name}` };
-    return;
-  }
+    if (dogs.length === lengthBefore) {
+        response.status = 400;
+        response.body = { msg: `Cannot find dog ${params.name}` };
+        return;
+    }
 
-  response.body = { msg: "OK" };
-  response.status = 200;
+    response.body = { msg: 'OK' };
+    response.status = 200;
 };
 ```
 
@@ -853,125 +852,125 @@ export const removeDog = ({
 这是完整的示例代码：
 
 ```ts
-import { Application, Router } from "https://deno.land/x/oak/mod.ts";
+import { Application, Router } from 'https://deno.land/x/oak/mod.ts';
 
 const env = Deno.env.toObject();
 const PORT = env.PORT || 4000;
-const HOST = env.HOST || "127.0.0.1";
+const HOST = env.HOST || '127.0.0.1';
 
 interface Dog {
-  name: string;
-  age: number;
+    name: string;
+    age: number;
 }
 
 let dogs: Array<Dog> = [
-  {
-    name: "Roger",
-    age: 8,
-  },
-  {
-    name: "Syd",
-    age: 7,
-  },
+    {
+        name: 'Roger',
+        age: 8,
+    },
+    {
+        name: 'Syd',
+        age: 7,
+    },
 ];
 
 export const getDogs = ({ response }: { response: any }) => {
-  response.body = dogs;
+    response.body = dogs;
 };
 
 export const getDog = ({
-  params,
-  response,
+    params,
+    response,
 }: {
-  params: {
-    name: string;
-  };
-  response: any;
+    params: {
+        name: string;
+    };
+    response: any;
 }) => {
-  const dog = dogs.filter((dog) => dog.name === params.name);
-  if (dog.length) {
-    response.status = 200;
-    response.body = dog[0];
-    return;
-  }
+    const dog = dogs.filter((dog) => dog.name === params.name);
+    if (dog.length) {
+        response.status = 200;
+        response.body = dog[0];
+        return;
+    }
 
-  response.status = 400;
-  response.body = { msg: `Cannot find dog ${params.name}` };
+    response.status = 400;
+    response.body = { msg: `Cannot find dog ${params.name}` };
 };
 
 export const addDog = async ({
-  request,
-  response,
+    request,
+    response,
 }: {
-  request: any;
-  response: any;
+    request: any;
+    response: any;
 }) => {
-  const body = await request.body();
-  const { name, age }: { name: string; age: number } = body.value;
-  dogs.push({
-    name: name,
-    age: age,
-  });
+    const body = await request.body();
+    const { name, age }: { name: string; age: number } = body.value;
+    dogs.push({
+        name: name,
+        age: age,
+    });
 
-  response.body = { msg: "OK" };
-  response.status = 200;
+    response.body = { msg: 'OK' };
+    response.status = 200;
 };
 
 export const updateDog = async ({
-  params,
-  request,
-  response,
+    params,
+    request,
+    response,
 }: {
-  params: {
-    name: string;
-  };
-  request: any;
-  response: any;
+    params: {
+        name: string;
+    };
+    request: any;
+    response: any;
 }) => {
-  const temp = dogs.filter((existingDog) => existingDog.name === params.name);
-  const body = await request.body();
-  const { age }: { age: number } = body.value;
+    const temp = dogs.filter((existingDog) => existingDog.name === params.name);
+    const body = await request.body();
+    const { age }: { age: number } = body.value;
 
-  if (temp.length) {
-    temp[0].age = age;
-    response.status = 200;
-    response.body = { msg: "OK" };
-    return;
-  }
+    if (temp.length) {
+        temp[0].age = age;
+        response.status = 200;
+        response.body = { msg: 'OK' };
+        return;
+    }
 
-  response.status = 400;
-  response.body = { msg: `Cannot find dog ${params.name}` };
+    response.status = 400;
+    response.body = { msg: `Cannot find dog ${params.name}` };
 };
 
 export const removeDog = ({
-  params,
-  response,
+    params,
+    response,
 }: {
-  params: {
-    name: string;
-  };
-  response: any;
+    params: {
+        name: string;
+    };
+    response: any;
 }) => {
-  const lengthBefore = dogs.length;
-  dogs = dogs.filter((dog) => dog.name !== params.name);
+    const lengthBefore = dogs.length;
+    dogs = dogs.filter((dog) => dog.name !== params.name);
 
-  if (dogs.length === lengthBefore) {
-    response.status = 400;
-    response.body = { msg: `Cannot find dog ${params.name}` };
-    return;
-  }
+    if (dogs.length === lengthBefore) {
+        response.status = 400;
+        response.body = { msg: `Cannot find dog ${params.name}` };
+        return;
+    }
 
-  response.body = { msg: "OK" };
-  response.status = 200;
+    response.body = { msg: 'OK' };
+    response.status = 200;
 };
 
 const router = new Router();
 router
-  .get("/dogs", getDogs)
-  .get("/dogs/:name", getDog)
-  .post("/dogs", addDog)
-  .put("/dogs/:name", updateDog)
-  .delete("/dogs/:name", removeDog);
+    .get('/dogs', getDogs)
+    .get('/dogs/:name', getDog)
+    .post('/dogs', addDog)
+    .put('/dogs/:name', updateDog)
+    .delete('/dogs/:name', removeDog);
 
 const app = new Application();
 
@@ -995,8 +994,8 @@ API 文档位于 [https://doc.deno.land](https://doc.deno.land) 和 [https://den
 
 ## 花絮
 
-- Deno 提供了一个内置的 `fetch` 实现，该实现与浏览器中可用的匹配。
-- Deno 正在进行与 Node.js stdlib 的兼容层
+-   Deno 提供了一个内置的 `fetch` 实现，该实现与浏览器中可用的匹配。
+-   Deno 正在进行与 Node.js stdlib 的兼容层
 
 ## 结语
 

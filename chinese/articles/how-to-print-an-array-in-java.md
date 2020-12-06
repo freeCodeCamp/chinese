@@ -1,3 +1,4 @@
+
 > * 原文地址：[Java Array Methods – How to Print an Array in Java Java 数组的打印方式](https://www.freecodecamp.org/news/java-array-methods-how-to-print-an-array-in-java/)
 > * 作者：Thanoshan MV
 > * 译者：Tengfei Wang
@@ -15,7 +16,9 @@ Java 中数组即对象。类的所有方法都被放进数组中调用。我们
 int[] intArray = {2,5,46,12,34};
 ```
 
+
 现在尝试使用 `System.out.println()` 方法打印数组：
+
 
 ```Java
 System.out.println(intArray);
@@ -24,13 +27,16 @@ System.out.println(intArray);
 
 为什么 Java 没有打印出来数组数据呢？背后发生了什么事情？  
 
+
 方法 `System.out.println()` 通过调用 `String.valueOf()` 把入参对象转换为一个字符串。 如果我们查看 `String.valueOf()` 方法的实现，会看到如下的代码：
+
 
 ```Java
 public static String valueOf(Object obj) {
     return (obj == null) ? "null" : obj.toString();
 }
 ```
+
 
 如果入参是 `null` 会返回空， 其它情况会调用 `obj.toString()`。 最后 `System.out.println()` 调用 `toString()` 方法打印出了字符串。
 
@@ -51,6 +57,7 @@ Java 中我们不能简单的使用 `System.out.println()` 方法打印数组。
 5. Java Iterator interface
 6. Java Stream API
 
+
 让我们来学习如何使用他们吧。
 
 # 1\. 循环：for 循环和 for-each 循环
@@ -66,7 +73,9 @@ for(int i=0; i<intArray.length; i++){
 }
 ```
 
+
 Java 的包装类都重写了 `Object.toString()` ，返回数组元素的字符串形式。
+
 
 for-each 循环示例：
 
@@ -81,9 +90,11 @@ for(int i: intArray){
 
 # 2\. Arrays.toString() 方法
 
+
 `Arrays.toString()` 是 `java.util` 包下数组类的一个静态方法。它返回指定数组内容的字符串形式。这种方法可以用来打印一维数组。
 
 数组元素被转换为字符串，调用了 `String.valueOf()` 方法，例如：
+
 
 ```Java
 int[] intArray = {2,5,46,12,34};
@@ -91,7 +102,9 @@ System.out.println(Arrays.toString(intArray));
 // output: [2, 5, 46, 12, 34]
 ```
 
+
 对于引用类型的数组，确保重写该引用类的 `Object.toString()` 方法。
+
 
 例如：
 
@@ -122,7 +135,9 @@ public String toString() {
 }
 ```
 
+
 此方法不适用于多维数组。在多维数组中， `Object.toString()` 会打印数组元素的内存地址而不是内容。
+
 
 例如：
 
@@ -134,7 +149,9 @@ System.out.println(Arrays.toString(multiDimensionalArr));
 // output: [[I@74a14482, [I@1540e19d]
 ```
 
+
 借助 `Arrays.deepToString()` 方法可以打印多维数组。
+
 
 # 3\. Arrays.deepToString() 方法
 
@@ -154,8 +171,9 @@ System.out.println(Arrays.deepToString(multiDimensionalArr));
 
 对于引用类型数组，通过递归调用 `Arrays.deepToString()` 方法将其转换为字符串。
 
+
 ```Java
-Teacher[][] teachers = 
+Teacher[][] teachers =
 {{ new Teacher("John"), new Teacher("David") }, {new Teacher("Mary")} };
 
 System.out.println(Arrays.deepToString(teachers));
@@ -168,6 +186,7 @@ System.out.println(Arrays.deepToString(teachers));
 如果你对递归调用感兴趣，请查看 `Arrays.deepToString()` 方法的[源码][1]。
 
 **NOTE:**  引用类型的一维数组也可以用 `Arrays.deepToString()` 方法打印。 例如:
+
 
 ```Java
 Integer[] oneDimensionalArr = {1,4,7};
@@ -191,6 +210,7 @@ System.out.println(Arrays.asList(intArray));
 
 Java 调用 `Arrays.__asList__(intArray).toString()` 。其内部实现是列表元素调用了 `toString()` 方法。
 
+
 自定义 Teacher 类示例：
 
 ```Java
@@ -202,8 +222,9 @@ System.out.println(Arrays.asList(teacher));
 
 **NOTE:**  不能使用此方法打印多维数据。 例如：
 
+
 ```Java
-Teacher[][] teachers = 
+Teacher[][] teachers =
 {{ new Teacher("John"), new Teacher("David") }, { new Teacher("Mary") }};
 System.out.println(Arrays.asList(teachers));
 
@@ -215,6 +236,7 @@ System.out.println(Arrays.asList(teachers));
 Iterator 接口和 for-each 循环类似，可以使用 Iterator 接口遍历数组元素并打印。
 
 Collection 调用 `iterator()` 方法创建 Iterator 对象。Iterator 对象可以遍历该集合的元素。
+
 
 Iterator 接口打印数组示例：
 
@@ -240,6 +262,7 @@ Stream API 用于处理对象集合。 流是一个对象序列。流不能改�
 
 借助终端操作 `forEach()` 可以遍历流的每个元素。
 
+
 例如：
 
 ```Java
@@ -257,7 +280,7 @@ Arrays.stream(intArray).forEach(System.out::print);
 
 我的另一篇文章  [Medium][4]。
 
-****Happy Coding!****
+\***\*Happy Coding!\*\***
 
 [1]: http://hg.openjdk.java.net/jdk8u/jdk8u/jdk/file/be44bff34df4/src/share/classes/java/util/Arrays.java#l4611
 [2]: https://unsplash.com/@acharki95?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

@@ -1,7 +1,7 @@
-> * 原文地址：[How To Master Async/Await With This Real World Example](https://www.freecodecamp.org/news/how-to-master-async-await-with-this-real-world-example-19107e7558ad/)
-> * 原文作者：[Adrian Hajdin](https://www.freecodecamp.org/news/author/adrianhajdin/)
-> * 译者：[Zou Li](https://github.com/zlv2s)
-> * 校对者：
+> -   原文地址：[How To Master Async/Await With This Real World Example](https://www.freecodecamp.org/news/how-to-master-async-await-with-this-real-world-example-19107e7558ad/)
+> -   原文作者：[Adrian Hajdin](https://www.freecodecamp.org/news/author/adrianhajdin/)
+> -   译者：[Zou Li](https://github.com/zlv2s)
+> -   校对者：
 
 # 通过一个开发实例掌握 Async/Await
 
@@ -26,7 +26,7 @@ Async/Await 是一种建立在 promises 基础上的，书写异步代码的新�
 
 ```js
 setTimeout(() => {
-  console.log('This runs after 1000 milliseconds.');
+    console.log('This runs after 1000 milliseconds.');
 }, 1000);
 ```
 
@@ -41,22 +41,24 @@ setTimeout(() => {
 
 #### 回调地狱
 
->指的是回调函数被嵌套在另一个回调函数中，嵌套层级有多层，使我们的代码可读性和可维护性变得非常差。
+> 指的是回调函数被嵌套在另一个回调函数中，嵌套层级有多层，使我们的代码可读性和可维护性变得非常差。
 
 ### 使用 Promises
 
 ```js
 const promiseFunction = new Promise((resolve, reject) => {
-  const add = (a, b) => a + b;
-  
-  resolve(add(2, 2));
+    const add = (a, b) => a + b;
+
+    resolve(add(2, 2));
 });
 
-promiseFunction.then((response) => {
-  console.log(response);
-}).catch((error) => {
-  console.log(error);
-});
+promiseFunction
+    .then((response) => {
+        console.log(response);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
 ```
 
 promiseFunction 这个函数返回一个表示函数运行过程的 Promise 对象， resolve 函数表示任务已经完成。
@@ -74,8 +76,8 @@ Async 函数为我们提供了简洁的语法，我们可以通过它实现与 P
 
 ```js
 const asyncFunction = async () => {
-  // Code
-}
+    // Code
+};
 ```
 
 异步函数使用 await 表达式可以暂停函数的执行，await 关键字只能在 async 函数中使用，它会返回 async 函数的处理结果。
@@ -87,12 +89,13 @@ promises 和 async/await 的区别：
 const asyncGreeting = async () => 'Greetings';
 
 // Promises
-const promiseGreeting = () => new Promise(((resolve) => {
-  resolve('Greetings');
-}));
+const promiseGreeting = () =>
+    new Promise((resolve) => {
+        resolve('Greetings');
+    });
 
-asyncGreeting().then(result => console.log(result));
-promiseGreeting().then(result => console.log(result));
+asyncGreeting().then((result) => console.log(result));
+promiseGreeting().then((result) => console.log(result));
 ```
 
 Async/Await 更易于我们理解，因为它看起来像同步代码。
@@ -109,13 +112,13 @@ Async/Await 更易于我们理解，因为它看起来像同步代码。
 
 在这个程序中，我们将从以下两个 API 异步获取数据：
 
-1. **Currency Layer** ——  https://currencylayer.com - 你需要先免费注册账号，才能获取 API Access Key。这个 API 为我们提供了 计算货币间汇率所需的数据。
+1. **Currency Layer** —— https://currencylayer.com - 你需要先免费注册账号，才能获取 API Access Key。这个 API 为我们提供了 计算货币间汇率所需的数据。
 
 2. **Rest Countries** —— http://restcountries.eu/ - 这个 API 为我们提供转换后的货币在哪些国家流通的信息。
 
 首先，创建一个新目录并运行 `npm init` 初始化项目，接下里我们选择默认值，跳过所有步骤，然后再输入 `npm i --save axios` 安装 axios。在当前文件夹内创建一个 `currency-convert .js` 的文件。
 
-在 `currency-convert .js` 文件中，我们先通过 `require` 语法引入 axios 
+在 `currency-convert .js` 文件中，我们先通过 `require` 语法引入 axios
 
 ```js
 const axios = require(‘axios’);`
@@ -130,15 +133,17 @@ const axios = require(‘axios’);`
 我们创建一个接收两个参数（fromCurrency 和 toCurrency）的异步函数。
 
 ```js
-const getExchangeRate = async (fromCurrency, toCurrency) => {}
+const getExchangeRate = async (fromCurrency, toCurrency) => {};
 ```
 
 现在我们获取数据，然后通过使用 async/await，可以直接将我们想要的数据赋值给变量。调用接口之前别忘了要注册账号，才能获得 API access key
 
 ```js
 const getExchangeRate = async (fromCurrency, toCurrency) => {
-  const response = await axios.get('http://data.fixer.io/api/latest?access_key=[yourAccessKey]&format=1');
-}
+    const response = await axios.get(
+        'http://data.fixer.io/api/latest?access_key=[yourAccessKey]&format=1'
+    );
+};
 ```
 
 我们可以通过 `response.data.rates` 来提取我们想要的数据，然后我们将它赋值给一个变量 `rate`：
@@ -168,19 +173,21 @@ const exchangeRate = euro * rate[toCurrency];
 创建一个异步函数，接收 `currencyCode` 作为参数
 
 ```js
-const getCountries = async (currencyCode) => {}
+const getCountries = async (currencyCode) => {};
 ```
 
 和之前一样，获取数据，然后将其赋值给一个变量：
 
 ```js
-const response = await axios.get(`https://restcountries.eu/rest/v2/currency/${currencyCode}`);
+const response = await axios.get(
+    `https://restcountries.eu/rest/v2/currency/${currencyCode}`
+);
 ```
 
 然后通过数组 map 方法将 `country.name` 提取出来，映射为一个新的数组：
 
 ```js
-return response.data.map(country => country.name);
+return response.data.map((country) => country.name);
 ```
 
 最终代码：
@@ -192,7 +199,7 @@ return response.data.map(country => country.name);
 创建一个异步函数，接收 `fromCurrency`, `toCurrency`, `amount` 三个参数：
 
 ```js
-const convert = async (fromCurrency, toCurrency, amount) => {}
+const convert = async (fromCurrency, toCurrency, amount) => {};
 ```
 
 第一步，获取货币数据：
@@ -229,17 +236,21 @@ return `${amount} ${fromCurrency} is worth ${convertedAmount} ${toCurrency}. You
 
 ```js
 const getExchangeRate = async (fromCurrency, toCurrency) => {
-  try {
-    const response = await       axios.get('http://data.fixer.io/api/latest?access_key=f68b13604ac8e570a00f7d8fe7f25e1b&format=1');
-    
-    const rate = response.data.rates;
-    const euro = 1 / rate[fromCurrency];
-    const exchangeRate = euro * rate[toCurrency];
-    
-    return exchangeRate;
-  } catch (error) {
-    throw new Error(`Unable to get currency ${fromCurrency} and  ${toCurrency}`);
-  }
+    try {
+        const response = await axios.get(
+            'http://data.fixer.io/api/latest?access_key=f68b13604ac8e570a00f7d8fe7f25e1b&format=1'
+        );
+
+        const rate = response.data.rates;
+        const euro = 1 / rate[fromCurrency];
+        const exchangeRate = euro * rate[toCurrency];
+
+        return exchangeRate;
+    } catch (error) {
+        throw new Error(
+            `Unable to get currency ${fromCurrency} and  ${toCurrency}`
+        );
+    }
 };
 ```
 
@@ -247,13 +258,15 @@ const getExchangeRate = async (fromCurrency, toCurrency) => {
 
 ```js
 const getCountries = async (currencyCode) => {
-  try {
-    const response = await axios.get(`https://restcountries.eu/rest/v2/currency/${currencyCode}`);
-    
-return response.data.map(country => country.name);
-  } catch (error) {
-    throw new Error(`Unable to get countries that use ${currencyCode}`);
-  }
+    try {
+        const response = await axios.get(
+            `https://restcountries.eu/rest/v2/currency/${currencyCode}`
+        );
+
+        return response.data.map((country) => country.name);
+    } catch (error) {
+        throw new Error(`Unable to get countries that use ${currencyCode}`);
+    }
 };
 ```
 
@@ -263,19 +276,18 @@ return response.data.map(country => country.name);
 
 ```js
 convertCurrency('USD', 'HRK', 20)
-  .then((message) => {
-    console.log(message);
-  }).catch((error) => {
-    console.log(error.message);
-  });
+    .then((message) => {
+        console.log(message);
+    })
+    .catch((error) => {
+        console.log(error.message);
+    });
 ```
 
 你会看到下面的结果：
 
 ![](https://cdn-media-1.freecodecamp.org/images/NqMrupAN1UpMWy1CRD7KpmfZdnjJ2Pexbx5A)
 
-
 ### 成功啦
 
 看到这里你应该写好这个程序了吧！如果你在写程序过程中有任何困惑，那么你可以参考这个[仓库](https://github.com/adrianhajdin/currency-converter)里的代码。如果你有任何问题，可以在下面留言。你也可关注我的 YouTube 频道，我会给大家分享更多干货！
-

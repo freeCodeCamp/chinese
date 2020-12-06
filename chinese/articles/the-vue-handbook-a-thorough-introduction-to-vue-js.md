@@ -1,32 +1,32 @@
-> * 原文地址：[The Vue Handbook: a thorough introduction to Vue.js](https://www.freecodecamp.org/news/the-vue-handbook-a-thorough-introduction-to-vue-js-1e86835d8446/)
-> * 原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> * 译者：blackcai
-> * 校对者：
+> -   原文地址：[The Vue Handbook: a thorough introduction to Vue.js](https://www.freecodecamp.org/news/the-vue-handbook-a-thorough-introduction-to-vue-js-1e86835d8446/)
+> -   原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
+> -   译者：@blackcai
+> -   校对者：@TechQuery
 
 ![The Vue Handbook: a thorough introduction to Vue.js](https://cdn-media-1.freecodecamp.org/images/1*Nzc4LiAlVXl8ic9T6v31zw.jpeg)
 
 > 在 [vuehandbook.com][1] 上获取 PDF/ePub/MOBI 的帖子。
 
-
 Vue 是一款非常受欢迎的前端框架，它正在快速的成长。
 
-它简单、小巧（大约24kb）且有着很优秀的性能。它与其它的 JavaScript 前端框架和视图库有着不同的感觉。让我们来找出（它们）不同的原因吧。
+它简单、小巧（大约 24kb）且有着很优秀的性能。它与其它的 JavaScript 前端框架和视图库有着不同的感觉。让我们来找出（它们）不同的原因吧。
 
 这篇文章很长！[在这里以 PDF 或者 ePub 的格式获取它][2]（英文版）。
 
 ### <span id="a1">首先，什么是 JavaScript 前端框架？</span>
+
 如果你不确定什么是 JavaScript 框架，Vue 将是你最好的选择。  
 一个 JavaScript 框架可以帮助我们创建现代应用程序。现代 JavaScript 应用程序主要用在 Web 上，但是也为许多的桌面和移动应用程序提供支持。  
-直到21世纪初，浏览器才具备现在的功能。它们的性能要弱得多，并且在里面构建复杂的应用程序是不可行的。这个工具甚至不是人们所想要的东西。  
-当谷歌发布了 [Google Maps][3] 和 [GMail][4] 这两款运行在浏览器里面的应用程序之后，一切都变了。 [Ajax][5] 使异步网络请求成为可能。慢慢的，开发人员开始在 Web 平台上进行构建，而工程师则平台上工作 —— 浏览器，Web 标准，浏览器 API 和 JavaScript 语言。
+直到 21 世纪初，浏览器才具备现在的功能。它们的性能要弱得多，并且在里面构建复杂的应用程序是不可行的。这个工具甚至不是人们所想要的东西。  
+当谷歌发布了 [Google Maps][3] 和 [GMail][4] 这两款运行在浏览器里面的应用程序之后，一切都变了。 [AJAX][5] 使异步网络请求成为可能。慢慢的，开发人员开始在 Web 平台上进行构建，而工程师则平台上工作 —— 浏览器、Web 标准、浏览器 API 和 JavaScript 语言。
 
 像 [jQuery][6] 和 [Mootools][7] 这样的库是第一批基于 JavaScript 的大型项目，并且在一段时间内非常的受欢迎。它们主要提供了更好的 API 来与浏览器交互，并为不同的浏览器之间的错误和不一致提供了解决方案。
 
 像 [Backbone][8]、[Ember][9]、[Knockout][10] 和 [AngularJS][11] 这样的框架是现代 JavaScript 框架的第一波浪潮。
 
-第二波浪潮则是目前的一波， 以 [React][12]、 [Angular][13]、和 [Vue][14] 作为主要的参与者。
+第二波浪潮则是目前的一波， 以 [React][12]、[Angular][13] 和 [Vue][14] 作为主要的参与者。
 
-值得注意的是，Jquery、 Ember 和我提到的其它项目仍被大量使用、积极维护，数百万网站依赖他们。
+值得注意的是，jQuery、Ember 和我提到的其它项目仍被大量使用、积极维护，数百万网站依赖他们。
 
 也就是说，技术和工具在不断发展，而作为 JavaScript 开发人员，你现在需要知道 React、Angular 或者 Vue，而不是那些旧的框架。
 
@@ -42,12 +42,12 @@ Vue.js 有多受欢迎？
 
 Vue 有：
 
--   7,600 2016年在 GitHub 上的 stars 数
--   36,700 2017年在 GitHub 上的 stars 数
--   82,400 2018年在 GitHub 上的 stars 数
--   154,833 2019年在 GitHub 上的 stars 数
+-   7,600 2016 年在 GitHub 上的 stars 数
+-   36,700 2017 年在 GitHub 上的 stars 数
+-   82,400 2018 年在 GitHub 上的 stars 数
+-   154,833 2019 年在 GitHub 上的 stars 数
 
-它在 [npm][18] 的下载数量每天都在增长，现在它的下载量大约每周 790,000次
+它在 [NPM][18] 的下载数量每天都在增长，现在它的下载量大约每周 790,000 次
 
 考虑到这些数据，我想说 Vue 很受欢迎。
 
@@ -61,13 +61,13 @@ Vue 崛起的一个关键点就是 Laravel 生态系统的采用，这是一个�
 
 首先，Vue 被称为渐进式框架。
 
-这意味着它可以适应开发人员的需要。其他框架需要开发人员或团队的全面支持，并且常常想要你重写现有的应用程序，因为他们有一些特别的约定。Vue 以一个简单的 `script` 标签开始愉快的进入你的应用程序，并且它可以随着你的需求而增长，从3行扩展到你的整个视图层。
+这意味着它可以适应开发人员的需要。其他框架需要开发人员或团队的全面支持，并且常常想要你重写现有的应用程序，因为他们有一些特别的约定。Vue 以一个简单的 `script` 标签开始愉快的进入你的应用程序，并且它可以随着你的需求而增长，从 3 行扩展到你的整个视图层。
 
-你不需要知道 [webpack][19]、 [Babel][20]、 npm 或者任何与 Vue 有关的东西。但是当你准备好了，Vue会让你更容易的依赖它们。
+你不需要知道 [webpack][19]、 [Babel][20]、 NPM 或者任何与 Vue 有关的东西。但是当你准备好了，Vue 会让你更容易的依赖它们。
 
 这是一个非常好的卖点，特别是在当前的 JavaScript 前端框架和库的生态系统中，它们往往会疏远新人，并且让有经验的开发者在各种可能性和选择的海洋中感到迷茫。
 
-Vue.js 可能是最容易理解的前端框架。有些人将 Vue 称为 **new Jquery（新一代的 Jquery）**，因为它可以通过应用程序中的一个 script 标记而引用，并通过它逐渐地获得空间。可以把它看做一种称赞，因为 jQuery 在过去几年中主导了 Web，而且它仍然在大量的站点上发挥作用。
+Vue.js 可能是最容易理解的前端框架。有些人将 Vue 称为 **new jQuery（新一代的 jQuery）**，因为它可以通过应用程序中的一个 script 标记而引用，并通过它逐渐地获得空间。可以把它看做一种称赞，因为 jQuery 在过去几年中主导了 Web，而且它仍然在大量的站点上发挥作用。
 
 Vue 借鉴了 Angular、React 和 Knockout 等框架的核心理念，并筛选出了最佳的选择构建而成的。并且通过排除一些不太出色的（选择），它开始成为一个“最好的”集合，并从那里开始发展。
 
@@ -75,11 +75,11 @@ Vue 借鉴了 Angular、React 和 Knockout 等框架的核心理念，并筛选�
 
 在讨论 web 开发时，房间里就像有两头名为 React 和 Angular 的大象。相对于这两个大而流行的框架，Vue 是如何给自己定位的呢？
 
-Vue 是尤雨溪在谷歌开发 AngularJS（Angular 1.0）应用时创建的。它是出于创建性能更高的应用程序的需要而诞生的。Vue 选择了 Angular 的一些模板语法，但去掉了 Angular 必要而固执的复杂堆栈，使它变的非常高效。
+Vue 是尤雨溪在谷歌开发 AngularJS (Angular 1.0) 应用时创建的。它是出于创建性能更高的应用程序的需要而诞生的。Vue 选择了 Angular 的一些模板语法，但去掉了 Angular 必要而固执的复杂堆栈，使它变的非常高效。
 
-新的 Angular(Angular 2.0) 也解决了很多 AngularJS 的问题，但是方式截然不同。它还需要一个对 [TypeScript][21] 的支持，不是所有的开发人员都喜欢使用（或者想要学习）。
+新的 Angular (Angular 2.0) 也解决了很多 AngularJS 的问题，但是方式截然不同。它还需要一个对 [TypeScript][21] 的支持，不是所有的开发人员都喜欢使用（或者想要学习）。
 
-那么关于 React 呢？ Vue 从 React中获得了很多好理念，最重要的是 Virtual DOM（虚拟 DOM）。但是 Vue 通过某种自动的依赖关系来实现它。它跟踪哪些组件受到状态更改的影响，以便在状态属性更改的时候重新渲染那些组件。
+那么关于 React 呢？ Vue 从 React 中获得了很多好理念，最重要的是 Virtual DOM（虚拟 DOM）。但是 Vue 通过某种自动的依赖关系来实现它。它跟踪哪些组件受到状态更改的影响，以便在状态属性更改的时候重新渲染那些组件。
 
 另一方面，在 React 中，当影响组件的一部分状态发生变化的时候，它将被重新渲染。默认情况下，它的所有子元素都将被重新渲染。为了避免这种情况，你需要使用每个组件的 `shouleComponentUpdate` 方法，并确定是否应该重新渲染该组件。这使 Vue 在易用性和开箱即用的性能方面具有一定的优势。
 
@@ -89,7 +89,7 @@ Vue 模板与 [Mustache][24] 和 [Handlebars][25] 非常的类似（尽管他们
 
 官方的状态管理库，[Vuex][26]，遵循 Fulx 架构，在概念上有点类似 [Redux][27]。同样，这也是 Vue 中值得肯定的一面，它在 React 中看到了这种优良的模式，并借鉴了它的生态系统，虽然你可以在 Vue 中使用 Redux，但是 Vuex 是专门为 Vue 及其内部工作而特别定制的。
 
-Vue 是灵活的，但是实际上核心团队维护两个对任何 web 应用程序（如路由和状态管理）都非常重要的包，这使得它比 React 更加碎片化。例如：`Vue-router` 和 `vuex` 是 Vue 成功的关键。
+Vue 是灵活的，但是实际上核心团队维护两个对任何 web 应用程序（如路由和状态管理）都非常重要的包，这使得它比 React 更加碎片化。例如：`vue-router` 和 `vuex` 是 Vue 成功的关键。
 
 你不需要选择或者担心你选择的库将来是否会被维护并且和官方保持同步更新。因为他们是官方的，它们是各自的领域内的标准的首选库（当然，你也可以选择自己喜欢的库）。
 
@@ -107,7 +107,7 @@ Vue 与 React 和 Angular 相比有一点与众不同，那就是 Vue 是一个 
 
 你创建一个 HTML 文件，其中包含：
 
-```
+```HTML
 <html>
   <body>
     <div id="example">
@@ -128,13 +128,26 @@ Vue 与 React 和 Angular 相比有一点与众不同，那就是 Vue 是一个 
 
 我将 script 标签放在 body 的末尾，以便在 DOM 加载完成之后按顺序执行它们。
 
-这段代码所做的是实例化一个新的 Vue 应用程序，链接 “#example” 元素作为它的模板。它通常使用 CSS 选择器定义，但你也可以传入一个 `HTMLElement`。
+这段代码所做的是实例化一个新的 Vue 应用程序，链接 `#example` 元素作为它的模板。它通常使用 CSS 选择器定义，但你也可以传入一个 `HTMLElement`。
 
 然后，它将该模板与 `data` 对象关联起来。这是一个特殊的对象，它承载我们希望 Vue 渲染的数据。
 
 在模板当中，特殊的 `{{}}` 标签表明这是模板的某个动态部分，其内容应该在 Vue 应用程序的数据中查找。
 
 你可以在 [CodePen][28] 查看这个案例。
+
+<iframe 
+    style="width: 100%; height: 90vh" scrolling="no" frameborder="no" 
+    loading="lazy" allowtransparency="true" allowfullscreen="true"
+    title="A Vue.js Hello World" 
+    src="https://codepen.io/flaviocopes/embed/YLoLOp?height=265&theme-id=light&default-tab=js,result"
+>
+  See the Pen 
+  <a href='https://codepen.io/flaviocopes/pen/YLoLOp'>A Vue.js Hello World</a> 
+  by Flavio Copes
+  (<a href='https://codepen.io/flaviocopes'>@flaviocopes</a>) on 
+  <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 CodePen 有点不同于使用普通的 HTML 文件，并且你需要配置它指向 Pen 设置中的 Vue 库的位置：
 
@@ -148,21 +161,29 @@ CodePen 有点不同于使用普通的 HTML 文件，并且你需要配置它指
 
 那里有两种方法可以得到这个应用程序：
 
-**在本地使用 Vue CLI **
+##### 在本地使用 Vue CLI
 
 首先要在你的电脑上安装 Vue CLI 并运行以下命令：
 
-```
+```Shell
 vue create <enter the app name>
 ```
 
 在一般情况下，你只需要按照提示按回车即可完成安装。
 
-**使用 CodeSandbox**
+##### 使用 CodeSandbox
 
 一个更简单的方法，不需要安装任何东西，就是去 [CodeSandbox][29]。该链接打开 Vue CLI 默认应用程序。
 
-CodeSandbox 是一个很酷的代码编辑器，它允许你在云服务中构建应用程序。你可以使用任何的 npm 包，并且可以轻松的与 [Zeit Now][30]集成，以便轻松的部署，也可以和 [GitHub][31] 集成来管理版本。
+<iframe 
+  src="https://codesandbox.io/embed/vue-vue?fontsize=14&hidenavigation=1&theme=dark"
+  style="width:100%; height:90vh; border:0; border-radius: 4px; overflow:hidden;"
+  title="Vue"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
+
+CodeSandbox 是一个很酷的代码编辑器，它允许你在云服务中构建应用程序。你可以使用任何的 NPM 包，并且可以轻松的与 [Zeit Now][30]集成，以便轻松的部署，也可以和 [GitHub][31] 集成来管理版本。
 
 无论你是选择在本地使用 Vue CLI，还是通过 CodeSandbox，让我们详细的检查一下这个 Vue 应用程序。
 
@@ -184,9 +205,9 @@ CodeSandbox 是一个很酷的代码编辑器，它允许你在云服务中构�
 
 `public/index.html` 文件是主要的应用程序文件。
 
-在 body 中，它只包含一个简单的元素：'<div id="app"></div>'。这是我们将用于附加到 DOM 的 Vue 应用程序的元素。
+在 body 中，它只包含一个简单的元素：`<div id="app"></div>`。这是我们将用于附加到 DOM 的 Vue 应用程序的元素。
 
-```
+```HTML
 <!DOCTYPE html>
 <html>
 
@@ -214,7 +235,7 @@ CodeSandbox 是一个很酷的代码编辑器，它允许你在云服务中构�
 
 接下来，我们通过将 Vue 实例分配给在 `index.html` 中定义的 `#app` 标识的 DOM 元素来创建 Vue 实例，并告诉它使用 App 组件。
 
-```
+```JavaScript
 // 使用 `import` 命令加载 Vue 构建版本
 // 别名设置在 vue.config.js 中，具体参数请[参考][https://github.com/neutrinojs/webpack-chain#config-resolve-alias]
 import Vue from 'vue'
@@ -230,7 +251,7 @@ new Vue({
 })
 ```
 
-译者著：请注意阅读两个文档并区分，别名设置是在根目录下的 [vue.config.js][64] 中，这个文件默认应用程序并没有建立文件，需要自行新建。而 [Vue.config.productionTip][65] 则是写在 src/main.js 中的配置信息，它们是不同的服务的配置。
+译者著：请注意阅读两个文档并区分，别名设置是在根目录下的 [vue.config.js][64] 中，这个文件默认应用程序并没有建立文件，需要自行新建。而 [Vue.config.productionTip][65] 则是写在 `src/main.js` 中的配置信息，它们是不同的服务的配置。
 
 #### `src/App.vue`
 
@@ -246,21 +267,20 @@ new Vue({
 
 这个组件将在我们的组件中被引用。这是一个依赖项。我们将从这个组件输出以下代码：
 
-```
+```HTML
 <div id="app">
   <img width="25%" src="./assets/logo.png">
-  <HelloWorld/>
+  <HelloWorld />
 </div>
 ```
 
 你可以看到它引用了 `Helloworld` 组件。Vue 将自动将该组件插入这个占位符中。
 
-
-```
+```HTML
 <template>
   <div id="app">
     <img width="25%" src="./assets/logo.png">
-    <HelloWorld/>
+    <HelloWorld />
   </div>
 </template>
 
@@ -297,13 +317,13 @@ export default {
 
 你可以通过查看 `style` 标签轻松的确定它。如果它有 `scoped` 属性，那么它的作用域是：`<style scoped>`
 
-这意味着生成的CSS将通过一个由 Vue 透明应用的 class 唯一地针对组件。你不需要担心这个， CSS 不会 **泄露** 到页面的其它部分。
+这意味着生成的 CSS 将通过一个由 Vue 透明应用的 class 唯一地针对组件。你不需要担心这个， CSS 不会 **泄露** 到页面的其它部分。
 
 组件输出的消息存储在 Vue 实例的 `data` 属性中，并在模板中以 `{{ msg }}`输出
 
 任何存储在 `data` 中的内容都可以在模板中通过名称直接访问。我们不需要指明 `data.msg`，而仅仅是 `msg`。
 
-```
+```HTML
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
@@ -434,15 +454,15 @@ CodeSandbox 是一个非常酷的在线编码和工作（的网站），而不�
 
 #### 安装
 
-Vue CLI 是一个命令行实用工具，你可以使用 npm 全局安装它：
+Vue CLI 是一个命令行实用工具，你可以使用 NPM 全局安装它：
 
-```
+```Shell
 npm install -g @vue/cli
 ```
 
 或者使用 Yarn：
 
-```
+```Shell
 yarn global add @vue/cli
 ```
 
@@ -464,7 +484,7 @@ CLI 对于 Vue.js 的快速开发是必不可少的。
 
 你可以配置任何东西并且仍然能够轻松的升级。
 
-当你创建和配置完应用程序之后，它作为一个运行时依赖的工具，构建在了 Webpack 之上。
+当你创建和配置完应用程序之后，它作为一个运行时依赖的工具，构建在了 webpack 之上。
 
 与 CLI 的第一次接触是在创建一个 Vue 项目的时候。
 
@@ -472,11 +492,9 @@ CLI 对于 Vue.js 的快速开发是必不可少的。
 
 你要做的第一件事是用 CLI 创建一个 Vue 应用程序。
 
-```
+```Shell
 vue create example
 ```
-
-The cool thing is that it’s an interactive process. You need to pick a preset. By default, there is one preset that provides Babel and  [ESLint][32]  integration:
 
 很酷的是，这是一个互动的过程。你需要选择预设配置。默认情况下，这里有一个预设提供 Babel 和 [ESLint][32] 的集成：
 
@@ -544,7 +562,7 @@ Vue CLI 为我们创建了应用程序，并且我们可以进入 `example` 文�
 
 你可以跳过互动面板，并指示 Vue CLI 使用特定的预设：
 
-```
+```Shell
 vue create -p favourite example-2
 ```
 
@@ -552,7 +570,7 @@ vue create -p favourite example-2
 
 预设存储在根目录下的 `.vuejs` 文件中。这是我在创建第一个 “favorite” 预设后的状态：
 
-```
+```JSON
 {
   "useTaobaoRegistry": false,
   "packageManager": "yarn",
@@ -582,14 +600,14 @@ vue create -p favourite example-2
 
 当项目创建以后，你可以使用 `vue add` 添加更多的插件：
 
-```
+```Shell
 vue add @vue/cli-plugin-babel
 ```
 
 所有的这些插件都使用的最新版本。你可以通过版本属性强制 Vue CLI 使用指定的版本：
 
-```
-"@vue/cli-plugin-eslint": {  "version": "^3.0.0"}
+```JSON
+"@vue/cli-plugin-eslint": {"version": "^3.0.0"}
 ```
 
 当一个新的版本有大的更改或者是 bug，并且你需要稍等一段时间才使用它，这是非常有用的。
@@ -600,7 +618,7 @@ vue add @vue/cli-plugin-babel
 
 从上面提取，我做了一个包含如下配置的样本 [预设][36]：
 
-```
+```JSON
 {
     "useConfigFiles": true,
     "plugins": {
@@ -617,7 +635,7 @@ vue add @vue/cli-plugin-babel
 
 它可以用来引导一个新的应用程序可以使用：
 
-```
+```Shell
 vue create --preset flaviocopes/vue-cli-preset example3
 ```
 
@@ -627,21 +645,15 @@ vue create --preset flaviocopes/vue-cli-preset example3
 
 怎么做？首先安装全局安装 `cli-service-global` 包：
 
-```
+```Shell
 npm install -g @vue/cli-service-global
-```
-
-```
-//or
-```
-
-```
+# or
 yarn global add @vue/cli-service-global
 ```
 
 创建一个 app.vue 文件：
 
-```
+```HTML
 <template>
     <div>
         <h2>Hello world!</h2>
@@ -652,41 +664,37 @@ yarn global add @vue/cli-service-global
 
 然后运行
 
-```
+```Shell
 vue serve app.vue
 ```
 
-![](https://cdn-media-1.freecodecamp.org/images/pp3QTRAMwLtOnkhazBRgRrjYKnMEbnm1CbWL)
-
-<center>独立的应用程序</center>
-
+<figure>
+  <img src="https://cdn-media-1.freecodecamp.org/images/pp3QTRAMwLtOnkhazBRgRrjYKnMEbnm1CbWL">
+  <figcaption>独立的应用程序</figcaption>
+</figure>
 
 你可以服务更多有组织的项目，这些项目由 JavaScript 和 HTML 文件组成。Vue CLI 默认使用 `main.js / index.js` 作为它的入口点，并且你可以设置 `package.json` 和任何工具配置。`vue serve` 将会启动它。
 
-Since this uses global dependencies, it’s not an optimal approach for anything more than a demonstration or quick testing.
-
 由于它使用全局依赖关系，因此除了用于演示或快速测试外，她不是最佳的方法。
-
-Running  `vue build`  will prepare the project for deployment in  `dist/`, and will generate all the corresponding code (also for vendor dependencies).
 
 运行 `vue build` 将为在 `dist/` 中部署项目做好准备，并将生成所有相应的代码（也针对供应商依赖关系）。
 
-#### Webpack
+#### webpack
 
-Vue CLI 可以在内部是用 Webpack，但是配置是抽象的，并且我们在文件夹中甚至看不到配置文件。你仍然可以通过调用 `vue inspect` 来访问它。
+Vue CLI 可以在内部是用 webpack，但是配置是抽象的，并且我们在文件夹中甚至看不到配置文件。你仍然可以通过调用 `vue inspect` 来访问它。
 
 ![](https://cdn-media-1.freecodecamp.org/images/dGT6I8Uq75505tD1Xj8wR-h7rO9ZvRby80cH)
 
 ### Vue 开发者工具
 
-当你第一次尝试使用 Vue 的时候，如果你打开浏览器开发者工具，你将发现以下信息：“Download the Vue Devtools extension for a better development experience:  [https://github.com/vuejs/vue-devtools][37]” 。
+当你第一次尝试使用 Vue 的时候，如果你打开浏览器开发者工具，你将发现以下信息：“Download the Vue DevTools extension for a better development experience: [https://github.com/vuejs/vue-devtools][37]” 。
 
-![](https://cdn-media-1.freecodecamp.org/images/J-LJE-u3DphYF8pOpMnkCX9KoNz3fGp4OPea)
+<figure>
+  <img src="https://cdn-media-1.freecodecamp.org/images/J-LJE-u3DphYF8pOpMnkCX9KoNz3fGp4OPea">
+  <figcaption>提示安装 Vue 开发工具</figcaption>
+</figure>
 
-<center>提示安装 Vue 开发工具</center>
-
-
-这是一个友好的安装 Vue 开发者工具扩展提示。那是什么？任何流行的框架都有自己的 devtools 扩展，它通常会为浏览器开发人员工具添加一个新的面板，这个面板比浏览器默认提供的面板更专业。在这种情况下，面板将允许我们检查 Vue 应用程序并与之交互。
+这是一个友好的安装 Vue 开发者工具扩展提示。那是什么？任何流行的框架都有自己的 DevTools 扩展，它通常会为浏览器开发人员工具添加一个新的面板，这个面板比浏览器默认提供的面板更专业。在这种情况下，面板将允许我们检查 Vue 应用程序并与之交互。
 
 在搭建 Vue 应用程序的时候，这个工具将提供令人吃惊的帮助。开发者工具只能在 Vue 应用程序处于开发模式时检查它。这将确保没有人可以使用它们来与你的应用程序产品进行交互，并将使 Vue 具有更高的性能，因为它不必关心开发者工具。
 
@@ -698,11 +706,11 @@ Vue CLI 可以在内部是用 Webpack，但是配置是抽象的，并且我们�
 -   在 Firefox 上
 -   作为一个独立的应用程序
 
-自定义扩展不支持 Safari，Edge 和 其它浏览器，但是使用独立的应用程序，你可以在任何浏览器里面运行调试 Vue.js 应用程序。
+自定义扩展不支持 Safari、Edge 和 其它浏览器，但是使用独立的应用程序，你可以在任何浏览器里面运行调试 Vue.js 应用程序。
 
 #### 安装在 Chrome 中
 
-转到 Google Chrome [Store][38] 页面并点击 ``**Add to Chrome**``。
+转到 Google Chrome [Store][38] 页面并点击 **Add to Chrome**。
 
 ![](https://cdn-media-1.freecodecamp.org/images/uh0CFZPRsdnKFOY-OWWvQCN3UVcnh-0KXpfh)
 
@@ -742,21 +750,15 @@ Vue.js 开发者工具图标出现在工具栏中，如果页面没有运行 Vue
 
 简单的安装它：
 
-```
+```Shell
 npm install -g @vue/devtools
-```
-
-```
-//or
-```
-
-```
+# or
 yarn global add @vue/devtools
 ```
 
 通过调用运行它：
 
-```
+```Shell
 vue-devtools
 ```
 
@@ -764,7 +766,7 @@ vue-devtools
 
 现在，粘贴显示给你的 script 标签
 
-```
+```HTML
 <script src="http://localhost:8098"></script>
 ```
 
@@ -786,10 +788,10 @@ vue-devtools
 
 在顶部有四个按钮：
 
-- **Components** (当前面板)，其中列出了当前页面中运行的实例的所有组件。Vue 可以同时运行多个实例。例如，它可以使用单独轻量级应用程序管理购物车的小部件和幻灯片。
-- **Vuex** 你可以在这里检查通过 Vuex 管理的状态
-- **Events** 显示所有发生的事件
-- **Refresh** 重新加载 devtools 面板
+-   **Components** (当前面板)，其中列出了当前页面中运行的实例的所有组件。Vue 可以同时运行多个实例。例如，它可以使用单独轻量级应用程序管理购物车的小部件和幻灯片。
+-   **Vuex** 你可以在这里检查通过 Vuex 管理的状态
+-   **Events** 显示所有发生的事件
+-   **Refresh** 重新加载 DevTools 面板
 
 注意到组件旁边的小文本 `= $vm0`了吗？这是使用 Console 检查组件的便捷方法。按下 “esc” 键将在开发者工具底部显示控制台，你可以键入 `$vm0` 来访问 Vue 组件：
 
@@ -805,11 +807,12 @@ vue-devtools
 
 #### 在页面上选择一个组件
 
-点击 `**在页面上选择组件**` 按钮
+点击 **在页面上选择组件** 按钮
 
-![](https://cdn-media-1.freecodecamp.org/images/RE969Y8eHdDn1rqHvj2OGfnEqthwHMVy37A-)
-
-<center>在页面上选择组件</center>
+<figure>
+  <img src="https://cdn-media-1.freecodecamp.org/images/RE969Y8eHdDn1rqHvj2OGfnEqthwHMVy37A-">
+  <figcaption>在页面上选择组件</figcaption>
+</figure>
 
 你可以用鼠标悬停在页面中的任何组件上，单击它，它将在开发者工具中打开。
 
@@ -825,9 +828,10 @@ vue-devtools
 
 点击检查 DOM 按钮，跳转到开发者工具元素检查器，该 DOM 元素由组件生成。
 
-![](https://cdn-media-1.freecodecamp.org/images/YKTlyULN-MDOAg3R1KPA3tI27IqX5Q9ckIH4)
-
-<center>检查 DOM</center>
+<figure>
+  <img src="https://cdn-media-1.freecodecamp.org/images/YKTlyULN-MDOAg3R1KPA3tI27IqX5Q9ckIH4">
+  <figcaption>检查 DOM</figcaption>
+</figure>
 
 #### 在编辑器中打开
 
@@ -843,7 +847,7 @@ vue-devtools
 
 #### Vetur
 
-它叫做 Vetur，它非常受欢迎（下载量超过350万），你可以在 [Visual Studio 市场][43] 上找到它。
+它叫做 Vetur，它非常受欢迎（下载量超过 350 万），你可以在 [Visual Studio 市场][43] 上找到它。
 
 ![](https://cdn-media-1.freecodecamp.org/images/OOfHNunbiMBxokJsrmdrvWixSoDmaDdPRzxK)
 
@@ -926,20 +930,20 @@ Vetur 还为每种不同的语言启用了 [IntelliSense][44]，并具有自动�
 
 如果输入 `scaffold`，你将会获得单文件组件的初始包：
 
-```
+```HTML
 <template>
 
 </template>
 ```
 
-```
+```HTML
 <script>
     export default {
     }
 </script>
 ```
 
-```
+```HTML
 <style>
 
 </style>
@@ -951,7 +955,7 @@ Vetur 还为每种不同的语言启用了 [IntelliSense][44]，并具有自动�
 
 #### Emmet
 
-[Emmet][45], 默认支持流行的 HTML/CSS 缩写引擎。你可以输入 Emmet 的缩写之一，然后按 `tab`、 VS Code 将自动将其扩展为相同的 HTML：
+[Emmet][45], 默认支持流行的 HTML/CSS 缩写引擎。你可以输入 Emmet 的缩写之一，然后按 <kbd>tab</kbd>、 VS Code 将自动将其扩展为相同的 HTML：
 
 ![](https://cdn-media-1.freecodecamp.org/images/R7Q4k9hsI0yzBe-xaVIMxdBMukjQWzzIw-FG)
 
@@ -981,19 +985,17 @@ Vue 组件可以通过四种主要方式进行定义。让我们用代码来讨�
 
 第一个是：
 
-```
-new Vue({  /* options */})
+```JavaScript
+new Vue({/* options */})
 ```
 
 第二个是：
 
-```
-Vue.component('component-name', {  /* options */})
+```JavaScript
+Vue.component('component-name', {/* options */})
 ```
 
 第三个是通过使用本地组件。这些是只能由特定组成访问的组件，而在其它地方则不可用（非常适合封装）。
-
-The fourth is in  `.vue`  files, also called Single File Components.
 
 第四个是在 `.vue` 文件中，也称为 Single File Components （单文件组件）。
 
@@ -1005,7 +1007,7 @@ The fourth is in  `.vue`  files, also called Single File Components.
 
 你可以通过在挂载 Vue 在 DOM 元素上来实例化它。如果你有一个 `<div id="app"></div>` 标签，你将要使用：
 
-```
+```JavaScript
 new Vue({ el: '#app' })
 ```
 
@@ -1013,24 +1015,30 @@ new Vue({ el: '#app' })
 
 应用程序中使用的其他组件使用 `Vue.component()` 进行初始化。这样的组件允许你定义一个标签 - 你可以使用该标签将组件嵌入应用程序中 - 并在 `template` 属性中指定该组件的输出：
 
-```
+```HTML
 <div id="app">
     <user-name name="Flavio"></user-name>
 </div>
 ```
 
-```
+```JavaScript
 Vue.component('user-name', {
     props: ['name'],
     template: '<p>Hi {{ name }}</p>'
 })
 ```
 
-```
-new Vue({  el: '#app'})
+```JavaScript
+new Vue({ el: '#app' })
 ```
 
-[在 JSFiddle 查看][48]
+<iframe 
+  style="width: 100%; height: 90vh" frameborder="0" 
+  allowfullscreen allowpaymentrequest 
+  src="//jsfiddle.net/flaviocopes/nvgedhq4/embedded/"
+>
+  在 JSFiddle 查看
+</iframe>
 
 我们在做什么？我们在 `#app` 上初始化 Vue 根组件，在这里面，我们使用 Vue 组件 `user-name`，它抽象了我们对用户的问候。
 
@@ -1038,8 +1046,8 @@ new Vue({  el: '#app'})
 
 在 `Vue.component()` 调用中，我们传递了 `user-name` 作为第一个参数。这将为组件提供一个名称，你可以把名字写成两种形式。第一个是我们用过的，叫做 kebab-case （短横线命名法）。第二个叫做 PascalCase （帕斯卡命名法），和 camelCase （驼峰命名法） 类似，但是第一个字母是大写：
 
-```
-Vue.component('UserName', {  /* ... */})
+```JavaScript
+Vue.component('UserName', {/* ... */})
 ```
 
 Vue 会在内部自从创建一个 `user-name` 到 `UserName` 的别名，反之亦然，因此你可以随意使用。通常最好在 JavaScript 中使用 `UserName`，在模板中使用 `user-name`。
@@ -1050,7 +1058,7 @@ Vue 会在内部自从创建一个 `user-name` 到 `UserName` 的别名，反之
 
 你可以通过将自定义组件对象为变量赋值给一个对象在本地封装组件：
 
-```
+```JavaScript
 const Sidebar = {
     template: '<aside>Sidebar</aside>'
 }
@@ -1058,7 +1066,7 @@ const Sidebar = {
 
 然后使用 `components` 属性使其在另一个组件内部使用：
 
-```
+```JavaScript
 new Vue({
     el: '#app',
     components: { Sidebar }
@@ -1067,7 +1075,7 @@ new Vue({
 
 你可以在同一个文件中编写文件，但是有一个很好的方法是使用 JavaScript 模块：
 
-```
+```JavaScript
 import Sidebar from './Sidebar'
 
 export default {
@@ -1080,7 +1088,7 @@ export default {
 
 子组件可以添加多次。每个单独的示例都独立于其它实例。
 
-```
+```HTML
 <div id="app">
     <user-name name="Flavio"></user-name>
     <user-name name="Roger"></user-name>
@@ -1088,67 +1096,73 @@ export default {
 </div>
 ```
 
-```
+```JavaScript
 Vue.component('user-name', {
     props: ['name'],
     template: '<p>Hi {{ name }}</p>'
 })
 ```
 
-```
-new Vue({  el: '#app'})
+```JavaScript
+new Vue({ el: '#app' })
 ```
 
-[在 JSFiddle 查看][49]
+<iframe 
+  style="width: 100%; height: 90vh" frameborder="0" 
+  allowfullscreen allowpaymentrequest 
+  src="//jsfiddle.net/flaviocopes/3kebv908/embedded/"
+>
+  在 JSFiddle 查看
+</iframe>
 
 #### 组件的组成部分
 
 到目前为止，我们已经看到了组件如何接受 `el`、 `props` 和 `template` 属性。
 
-- `el` 仅在使用 `new Vue({})` 初始化的根组件中使用，并标识组件将挂载的 DOM 元素。
-- `props` 列出了我们可以传递给子组件的所有属性
-- `template` 是我们可以设置组件模板的地方，它负责定义输出生成的组件。
+-   `el` 仅在使用 `new Vue({})` 初始化的根组件中使用，并标识组件将挂载的 DOM 元素。
+-   `props` 列出了我们可以传递给子组件的所有属性
+-   `template` 是我们可以设置组件模板的地方，它负责定义输出生成的组件。
 
 组件接受其它属性：
 
-- `data` 组件本地的状态
-- `methods` ： 组件方法
-- `computed`：与组件关联的计算属性
-- `watch`：组件观察者
+-   `data` 组件本地的状态
+-   `methods` ： 组件方法
+-   `computed`：与组件关联的计算属性
+-   `watch`：组件观察者
 
 ### 单文件组件
 
 可以在 JavaScript 文件（ `.js` ）中声明 Vue 组件，如下所示：
 
-```
-Vue.component('component-name', {  /* options */})
+```JavaScript
+Vue.component('component-name', {/* options */})
 ```
 
 或者：
 
-```
-new Vue({  /* options */})
+```JavaScript
+new Vue({/* options */})
 ```
 
 或者可以在 .vue 文件中指定。
 
 `.vue` 文件非常酷，因为它允许你定义：
 
-- JavaScript 逻辑
-- HTML 代码模板
-- CSS 样式
+-   JavaScript 逻辑
+-   HTML 代码模板
+-   CSS 样式
 
 全部都在一个文件中，因此，称它为 Single File Component （单文件组件）。
 
 这里是一个示例：
 
-```
+```HTML
 <template>
     <p>{{ hello }}</p>
 </template>
 ```
 
-```
+```HTML
 <script>
     export default {
         data() {
@@ -1160,15 +1174,15 @@ new Vue({  /* options */})
 </script>
 ```
 
-```
+```HTML
 <style scoped>
     p { color: blue; }
 </style>
 ```
 
-由于使用了 Webpack，所以这些都是可能的。Vue CLI 使得这个操作非常容易，并且支持开箱即用。如果没有设置 Webpack ，将无法使用 `.vue` 文件，因此，它们不太适合仅在页面上使用 Vue 而又不是完整的单页面应用程序（SPA）的应用程序。
+由于使用了 webpack，所以这些都是可能的。Vue CLI 使得这个操作非常容易，并且支持开箱即用。如果没有设置 webpack ，将无法使用 `.vue` 文件，因此，它们不太适合仅在页面上使用 Vue 而又不是完整的单页面应用程序（SPA）的应用程序。
 
-由于 Single File Components （单文件组件）依赖于 Webpack,所以我们可以免费使用现代 Web 特性。
+由于 Single File Components （单文件组件）依赖于 webpack,所以我们可以免费使用现代 Web 特性。
 
 你可以使用 SCSS 或 Stylus 定义 CSS，可以使用 Pug 构建模板，要做的就是向 Vue 声明要使用哪种语言预处理器。
 
@@ -1187,13 +1201,13 @@ new Vue({  /* options */})
 
 说到 CSS 的作用域，通过使用 `<style scoped>` 标记，Single File Components（单文件组件）使得编写不会 **泄露** 给其他组件的 CSS 变的非常容易。
 
-如果你省略了 `scoped`，你定义的 CSS 将是全局的。但是在添加了 `scoped` 标签后，Vue 会自动向组件添加一个特定的类，这个类对于你的应用程序是唯一的，因此可以保证 CSS不会泄露给其他组件。
+如果你省略了 `scoped`，你定义的 CSS 将是全局的。但是在添加了 `scoped` 标签后，Vue 会自动向组件添加一个特定的类，这个类对于你的应用程序是唯一的，因此可以保证 CSS 不会泄露给其他组件。
 
 也许你的 JavaScript 太大了，因为你需要处理一些逻辑。如果你想为你的 JavaScript 使用一个单独的文件怎么办呢？
 
 你可以使用 `src` 属性将其外部化：
 
-```
+```HTML
 <template>
     <p>{{ hello }}</p>
 </template>
@@ -1201,11 +1215,9 @@ new Vue({  /* options */})
 <script src="./hello.js"></script>
 ```
 
-This also works for your CSS:
-
 这也适用于你的 CSS：
 
-```
+```HTML
 <template>
     <p>{{ hello }}</p>
 </template>
@@ -1217,7 +1229,7 @@ This also works for your CSS:
 
 注意我是怎么使用的
 
-```
+```JavaScript
 export default {
     data() {
         return {
@@ -1231,7 +1243,7 @@ export default {
 
 你将看到的其它常见方式是：
 
-```
+```JavaScript
 export default {
     data: function() {
         return {
@@ -1245,7 +1257,7 @@ export default {
 
 或者
 
-```
+```JavaScript
 export default {
     data: () => {
         return {
@@ -1259,7 +1271,7 @@ export default {
 
 你可能还会看到：
 
-```
+```JavaScript
 module.exports = {
     data: () => {
         return {
@@ -1269,9 +1281,7 @@ module.exports = {
 }
 ```
 
-This is using the  [CommonJS][50]  syntax and it works as well. But I recommend using the ES Modules syntax, as that is a JavaScript standard.
-
-这是使用 [CommonJS][50] 语法，它工作的很好。但是我建议使用 the ES Modules syntax （ ES 模块语法)，因为这是一个Javascript 标准。
+这是使用 [CommonJS][50] 语法，它工作的很好。但是我建议使用 the ES Modules syntax （ ES 模块语法)，因为这是一个 Javascript 标准。
 
 ### Vue 模板
 
@@ -1281,13 +1291,13 @@ Vue.js 使用的模板语言是 HTML 的超集。
 
 这是一个有效的 Vue.js 模板：
 
-```
+```HTML
 <span>Hello!</span>
 ```
 
 这可以将该模板放入显式声明的 Vue 组件中：
 
-```
+```JavaScript
 new Vue({
     template: '<span>Hello!</span>'
 })
@@ -1295,7 +1305,7 @@ new Vue({
 
 或者可以将其放入 Single File Component（单文件组件） 中:
 
-```
+```HTML
 <template>
     <span>Hello!</span>
 </template>
@@ -1305,7 +1315,7 @@ new Vue({
 
 这可以使用插值来完成。首先，我们向组件添加一些数据：
 
-```
+```JavaScript
 new Vue({
     data: {
         name: 'Flavio'
@@ -1316,7 +1326,7 @@ new Vue({
 
 然后我们可以使用双括号语法将其添加到模板中：
 
-```
+```JavaScript
 new Vue({
     data: {
         name: 'Flavio'
@@ -1331,7 +1341,7 @@ new Vue({
 
 在一个单文件组件中，这将是：
 
-```
+```HTML
 <template>
     <span>Hello {{name}}!</span>
 </template>
@@ -1361,17 +1371,17 @@ new Vue({
 
 你可以在插值表达式中使用任何 JavaScript 表达式，但是你只能使用一个表达式：
 
-```
+```Handlebars
 {{ name.reverse() }}
 ```
 
-```
+```Handlebars
 {{ name === 'Flavio' ? 'Flavio' : 'stranger' }}
 ```
 
 Vue 提供了对模板中一些全局对象的访问，包括 Math 和 Date，所以你可以使用它们：
 
-```
+```Handlebars
 {{ Math.sqrt(16) * Math.random() }}
 ```
 
@@ -1391,7 +1401,7 @@ Vue 提供了对模板中一些全局对象的访问，包括 Math 和 Date，�
 
 将 CSS 添加到 Vue.js 组件的最简单选择是使用 `style` 标签，就像在 HTML 中一样：
 
-```
+```HTML
 <template>
     <p style="text-decoration: underline">Hi!</p>
 </template>
@@ -1409,7 +1419,7 @@ Vue 提供了对模板中一些全局对象的访问，包括 Math 和 Date，�
 
 这是你能得到的最静态的。如果希望在组件数据中定义 `下划线`，该怎么办？你可以这样做：
 
-```
+```HTML
 <template>
     <p :style="{'text-decoration': decoration}">Hi!</p>
 </template>
@@ -1429,11 +1439,9 @@ Vue 提供了对模板中一些全局对象的访问，包括 Math 和 Date，�
 
 注意我们是如何在引号中包装 `text-deciration` 的。这是因为破折号不是有效的 JavaScript 标志符的一部分。
 
-You can avoid the quotes by using a special camelCase syntax that Vue.js enables, and rewriting it to  `textDecoration`:
-
 你可以通过使用 Vue.js 支持的特殊 camelCase （驼峰式命名法）语法来避免引号，并将其重写为 `textDecoration`：
 
-```
+```HTML
 <template>
     <p :style="{textDecoration: decoration}">Hi!</p>
 </template>
@@ -1441,7 +1449,7 @@ You can avoid the quotes by using a special camelCase syntax that Vue.js enables
 
 不需要将对象绑定到 `style`，你可以引用一个计算属性：
 
-```
+```HTML
 <template>
     <p :style="styling">Hi!</p>
 </template>
@@ -1468,7 +1476,7 @@ You can avoid the quotes by using a special camelCase syntax that Vue.js enables
 
 Vue 组件生成纯 HTML，因此你可以选择向每个元素添加一个 class，并添加具有样式属性设置其属性的相应 CSS 选择器：
 
-```
+```HTML
 <template>
     <p class="underline">Hi!</p>
 </template>
@@ -1480,7 +1488,7 @@ Vue 组件生成纯 HTML，因此你可以选择向每个元素添加一个 clas
 
 你可以像这样使用 SCSS：
 
-```
+```HTML
 <template>
     <p class="underline">Hi!</p>
 </template>
@@ -1494,7 +1502,7 @@ Vue 组件生成纯 HTML，因此你可以选择向每个元素添加一个 clas
 
 你可以想上面的示例那样对 class 进行硬编码。或者你可以将 class 绑定到组件属性，使其成为动态的，并且仅在数据属性为真时才应用于该类：
 
-```
+```HTML
 <template>
     <p :class="{underline: isUnderlined}">Hi!</p>
 </template>
@@ -1516,7 +1524,7 @@ Vue 组件生成纯 HTML，因此你可以选择向每个元素添加一个 clas
 
 而不是绑定一个对象到 class，就像我们做的 `<p :class="{text: isText}">Hi!</p>`，你可以直接绑定一个字符串，这将引用一个数据属性：
 
-```
+```HTML
 <template>
     <p :class="paragraphClass">Hi!</p>
 </template>
@@ -1538,7 +1546,7 @@ Vue 组件生成纯 HTML，因此你可以选择向每个元素添加一个 clas
 
 你可以分配多个 class，在这种情况下，你可以通过在 `paragraphClass` 中添加两个 class，或者使用数组：
 
-```
+```HTML
 <template>
     <p :class="[decoration, weight]">Hi!</p>
 </template>
@@ -1562,7 +1570,7 @@ Vue 组件生成纯 HTML，因此你可以选择向每个元素添加一个 clas
 
 使用 class 绑定内联的对象可以完成相同的操作：
 
-```
+```HTML
 <template>
     <p :class="{underline: isUnderlined, weight: isBold}">Hi!</p>
 </template>
@@ -1586,7 +1594,7 @@ Vue 组件生成纯 HTML，因此你可以选择向每个元素添加一个 clas
 
 并且你可以合并一下两个语句：
 
-```
+```HTML
 <template>
     <p :class="[decoration, {weight: isBold}]">Hi!</p>
 </template>
@@ -1610,7 +1618,7 @@ Vue 组件生成纯 HTML，因此你可以选择向每个元素添加一个 clas
 
 你还可以使用返回对象的计算属性，当你将多个 CSS 的 class 添加到同一元素时，该属性最有效：
 
-```
+```HTML
 <template>
     <p :class="paragraphClasses">Hi!</p>
 </template>
@@ -1658,7 +1666,7 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 
 你可以使用 `v-text` 指令代替插值表达式。它执行相同的工作：
 
-```
+```HTML
 <span v-text="name"></span>
 ```
 
@@ -1670,7 +1678,7 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 
 除非你使用 `v-once` 指令，它基本上就像一个 HTML 属性：
 
-```
+```HTML
 <span v-once>{{ name }}</span>
 ```
 
@@ -1680,7 +1688,7 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 
 但是，在某些情况下，你希望输出 HTML 并让浏览器解释他，你可以使用 `v-html` 指令：
 
-```
+```HTML
 <span v-html="someHtml"></span>
 ```
 
@@ -1690,13 +1698,13 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 
 属性必须使用 `v-bind`：
 
-```
+```HTML
 <a v-bind:href="url">{{ linkText }}</a>
 ```
 
 `v-bind` 非常的常见，它有一个简单的语法：
 
-```
+```HTML
 <a v-bind:href="url">{{ linkText }}</a>
 <a :href="url">{{ linkText }}</a>
 ```
@@ -1705,12 +1713,12 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 
 例如，`v-model` 让我们绑定一个表单输入元素，并让它在用户更该字段内容时更改 Vue 数据属性。
 
-```
+```HTML
 <input v-model="message" placeholder="Enter a message">
 <p>Message is: {{ message }}</p>
 ```
 
-```
+```HTML
 <select v-model="selected">
     <option disabled value="">Choose a fruit</option>
     <option>Apple</option>
@@ -1724,11 +1732,11 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 
 你可以在指令里面使用任何 JavaScript 表达式。
 
-```
+```HTML
 <span v-text="'Hi, ' + name + '!'"></span>
 ```
 
-```
+```HTML
 <a v-bind:href="'https://' + domain + path">{{ linkText }}</a>
 ```
 
@@ -1738,13 +1746,13 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 
 在指令中，你可以使用三元运算符来执行条件检查，因为这是一个表达式：
 
-```
+```HTML
 <span v-text="name == Flavio ? 'Hi Flavio!' : 'Hi' + name + '!'"></span>
 ```
 
 有一些专用指令允许你执行更有组织的条件语句： `v-if`，`v-else` 和 `v-else-if`
 
-```
+```HTML
 <p v-if="shouldShowThis">Hey!</p>
 ```
 
@@ -1756,7 +1764,7 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 
 你可以迭代一个简单的数组的值：
 
-```
+```HTML
 <template>
     <ul>
         <li v-for="item in items">{{ item }}</li>
@@ -1776,7 +1784,7 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 
 或对象数组：
 
-```
+```HTML
 <template>
     <div>
         <!-- using interpolation -->
@@ -1806,7 +1814,7 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 
 `v-for` 可以给你索引使用：
 
-```
+```HTML
 <li v-for="(todo, index) in todos"></li>
 ```
 
@@ -1814,7 +1822,7 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 
 `v-on` 允许监听 DOM 事件，并在事件发生时触发一个方法。下面我们来监听一个点击事件：
 
-```
+```HTML
 <template>
     <a v-on:click="handleClick">Click me!</a>
 </template>
@@ -1823,7 +1831,7 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
     export default {
         methods: {
             handleClick: function() {
-                alert('test')    
+                alert('test')
             }
         }
     }
@@ -1832,7 +1840,7 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 
 你可以传递参数给任何事件：
 
-```
+```HTML
 <template>
     <a v-on:click="handleClick('test')">Click me!</a>
 </template>
@@ -1850,7 +1858,7 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 
 一小段 JavaScript（单个表达式）可以直接放入模板：
 
-```
+```HTML
 <template>
     <a v-on:click="counter = counter + 1">{{counter}}</a>
 </template>
@@ -1870,7 +1878,7 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 
 `v-on` 非常常见，它有一个简写语法 `@`：
 
-```
+```HTML
 <a v-on:click="handleClick">Click me!</a>
 <a @click="handleClick">Click me!</a>
 ```
@@ -1879,7 +1887,7 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 
 如果 Vue 实例的某个属性值为 true，可以使用 `v-show` 选择只显示 DOM 中的一个元素：
 
-```
+```HTML
 <p v-show="isTrue">Something</p>
 ```
 
@@ -1889,11 +1897,11 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 
 这个指令保持在元素上直到关联实例结束编译。和 CSS 规则如 [v-cloak] { display: none } 一起用时，这个指令可以隐藏未编译的 Mustache 标签直到实例准备完毕。
 
-```
+```HTML
 <template>
-<div v-cloak>
-  {{ message }}
-</div>
+  <div v-cloak>
+    {{ message }}
+  </div>
 </template>
 
 <style>
@@ -1910,7 +1918,7 @@ Vue 将处理任何未像第一个示例中那样进行硬编码的 CSS，Vue �
 跳过指定元素和它的子元素的编译过程。可以用来显示原始 Mustache 标签。跳过大量没有指令的节点会加快编译。
 如下代码：
 
-```
+```HTML
 <span v-pre>{{ this will not be compiled }}</span>
 ```
 
@@ -1924,7 +1932,7 @@ Vue 提供了一些可选的事件修饰符，你可以将它们与 `v-on` 一�
 
 在这种情况下，该表单不会导致页面被重新加载，这是默认行为：
 
-```
+```HTML
 <form v-on:submit.prevent="formSubmitted"></form>
 ```
 
@@ -1944,7 +1952,7 @@ Vue 方法是与 Vue 实例关联的函数。
 
 方法在 `methods` 属性中定义：
 
-```
+```JavaScript
 new Vue({
     methods: {
         handleClick: function() {
@@ -1956,7 +1964,7 @@ new Vue({
 
 或者在 Single File Components（单文件组件）的情况下：
 
-```
+```HTML
 <script>
     export default {
         methods: {
@@ -1970,7 +1978,7 @@ new Vue({
 
 方法在需要执行某个操作并在元素上附加 `v-on` 指令以处理事件时特别有用。比如这个，当元素被点击时，它会调用 `handleClick`。
 
-```
+```HTML
 <template>
     <a @click="handleClick">Click me!</a>
 </template>
@@ -1982,11 +1990,13 @@ new Vue({
 
 在这个示例中，你只需在模板中传递参数：
 
-```
+```HTML
 <template>
     <a @click="handleClick('something')">Click me!</a>
 </template>
+```
 
+```JavaScript
 new Vue({
     methods: {
         handleClick: function(text) {
@@ -1998,7 +2008,7 @@ new Vue({
 
 或对于 Single File Components（单文件组件）：
 
-```
+```HTML
 <script>
     export default {
         methods: {
@@ -2014,7 +2024,7 @@ new Vue({
 
 你可以通过使用 `this.propertyName` 来访问 Vue 组件的任何数据属性。
 
-```
+```HTML
 <template>
     <a @click="handleClick()">Click me!</a>
 </template>
@@ -2045,7 +2055,7 @@ new Vue({
 
 这里是一个例子。我们有一个组件，显示一个名称，并允许你通过点击按钮改变它。
 
-```
+```HTML
 <template>
     <p>My name is {{name}}</p>
     <button @click="changeName()">Change my name!</button>
@@ -2071,7 +2081,7 @@ new Vue({
 
 为此，我们可以向 `watch` 对象添加一个属性，该属性名为我们想要监视的 data 属性：
 
-```
+```HTML
 <script>
     export default {
         data() {
@@ -2095,7 +2105,7 @@ new Vue({
 
 分配给 `watch.name` 的函数可以选择接受两个参数。第一个是新的属性值。第二个是旧的属性值：
 
-```
+```HTML
 <script>
     export default {
     /* ... */
@@ -2116,7 +2126,7 @@ new Vue({
 
 在 Vue.js 中，你可以使用括号输出任何数据的值:
 
-```
+```HTML
 <template>
     <p>{{ count }}</p>
 </template>
@@ -2134,7 +2144,7 @@ new Vue({
 
 这个属性可以承载一些小型计算。例如：
 
-```
+```HTML
 <template>
     {{ count * 10 }}
 </template>
@@ -2148,7 +2158,7 @@ new Vue({
 
 计算属性在 Vue 组件的 `computed` 属性中的定义。
 
-```
+```HTML
 <script>
     export default {
         computed: {}
@@ -2162,10 +2172,9 @@ new Vue({
 
 声明：
 
-1.我不必调用 `{{ count() }}`。Vue.js 自动调用该函数。
-2.我是用了一个常规函数（不是箭头函数）来定义 `count` 计算属性，因为我需要能够通过 `this` 访问组件实例。
+1.我不必调用 `{{ count() }}`。Vue.js 自动调用该函数。 2.我是用了一个常规函数（不是箭头函数）来定义 `count` 计算属性，因为我需要能够通过 `this` 访问组件实例。
 
-```
+```HTML
 <template>
     <p>{{ count }}</p>
 </template>
@@ -2192,7 +2201,7 @@ new Vue({
 
 首先，方法必须被调用，而不只是引用，所以你需要做：
 
-```
+```HTML
 <template>
     <p>{{ count() }}</p>
 </template>
@@ -2217,11 +2226,9 @@ new Vue({
 
 `count` 计算属性的结果在内部缓存，直到 `items` 数据属性被更改。
 
-**Important:**  Computed properties are only updated when a reactive source updates. Regular JavaScript methods are not reactive, so a common example is to use  `Date.now()`:
-
 **重要：** 计算属性仅在响应源更新的时候更新。常规的 JavaScript 方法不是被动的，所以一个常见的例子是使用 `Date.now()` ：
 
-```
+```HTML
 <template>
     <p>{{ now }}</p>
 </template>
@@ -2242,30 +2249,31 @@ new Vue({
 在这种情况下，方法更适合你的需要。
 
 ### Methods、Watchers、和 Computed Properties
+
 现在你已经了解了方法、观察者和计算属性，你可能想知道什么时候应该使用一种方法，什么时候应该使用另一种方法。
 
 这是该问题的细分。
 
 #### 什么时候使用 methods
 
-- 对 DOM 中发生的某些事件作出反应
-- 当组件中发生某些事情时调用函数
-  你可以从计算的属性或观察者调用方法
+-   对 DOM 中发生的某些事件作出反应
+-   当组件中发生某些事情时调用函数
+    你可以从计算的属性或观察者调用方法
 
 #### 什么时候使用计算属性
 
-- 你需要从现有数据源组合新数据
-- 你在模板中使用了一个由一个或多个数据属性构建的变量
-- 你希望将复杂的、嵌套的属性名简化为更易阅读和使用的名称（但在原始属性更改时更新）
-- 你需要从模板引用一个值。在这种情况下，最好创建一个 computed 属性，因为它是缓存的
-- 你需要监听多个数据属性的更改
+-   你需要从现有数据源组合新数据
+-   你在模板中使用了一个由一个或多个数据属性构建的变量
+-   你希望将复杂的、嵌套的属性名简化为更易阅读和使用的名称（但在原始属性更改时更新）
+-   你需要从模板引用一个值。在这种情况下，最好创建一个 computed 属性，因为它是缓存的
+-   你需要监听多个数据属性的更改
 
 #### 什么时候使用观察者
 
-- 你希望在数据属性更改时监听，并执行一些操作
-- 你想要监听 prop 值的改变
-- 你只需要监听一个特定的属性（你不能同时监听多个属性）
-- 你希望监听一个数据属性，直到它达到某个特定值，然后再做一些事情
+-   你希望在数据属性更改时监听，并执行一些操作
+-   你想要监听 prop 值的改变
+-   你只需要监听一个特定的属性（你不能同时监听多个属性）
+-   你希望监听一个数据属性，直到它达到某个特定值，然后再做一些事情
 
 ### Props： 将数据传递给子组件
 
@@ -2273,7 +2281,7 @@ Props 是组件从包含它们的组件（父组件）接受数据的方式。
 
 当一个组件需要一个或多个 prop 时，它必须在 `props` 属性中定义它们：
 
-```
+```JavaScript
 Vue.component('user-name', {
     props: ['name'],
     template: '<p>Hi {{ name }}</p>'
@@ -2282,7 +2290,7 @@ Vue.component('user-name', {
 
 或者，在一个 Vue Single File Component(单文件组件)中：
 
-```
+```HTML
 <template>
     <p>{{ name }}</p>
 </template>
@@ -2298,7 +2306,7 @@ Vue.component('user-name', {
 
 你可以拥有多个 props，只需要把他们添加到数组：
 
-```
+```JavaScript
 Vue.component('user-name', {
     props: ['firstName', 'lastName'],
     template: '<p>Hi {{ firstName }} {{ lastName }}</p>'
@@ -2309,7 +2317,7 @@ Vue.component('user-name', {
 
 你可以很简单的指定一个 prop 的类型，使用一个对象而不是数组，使用属性的名称作为每个属性的键，类型作为值：
 
-```
+```JavaScript
 Vue.component('user-name', {
     props: {
         firstName: String,
@@ -2336,7 +2344,7 @@ Prop 类型可以更加明确。
 
 你可以允许多种不同类型的值：
 
-```
+```JavaScript
 props: {
     firstName: [String, Number]
 }
@@ -2346,7 +2354,7 @@ props: {
 
 你可以要求一个 prop 是强制性的：
 
-```
+```JavaScript
 props: {
     firstName: {
         type: String,
@@ -2359,7 +2367,7 @@ props: {
 
 你可以指定一个默认值
 
-```
+```JavaScript
 props: {
     firstName: {
         type: String,
@@ -2370,7 +2378,7 @@ props: {
 
 对象：
 
-```
+```JavaScript
 props: {
     name: {
         type: Object,
@@ -2386,7 +2394,7 @@ props: {
 
 你甚至可以创建一个自定义验证，该验证器对复杂数据很酷：
 
-```
+```JavaScript
 props: {
     name: {
         validator: name => {
@@ -2399,7 +2407,8 @@ props: {
 #### 将 props 传递到组件
 
 你使用语法将一个 prop 传递给组件。
-```
+
+```JSX
 <ComponentName color="white" />
 ```
 
@@ -2407,38 +2416,39 @@ props: {
 
 如果是数据属性，则使用
 
-```
+```HTML
 <template>
     <ComponentName :color=color />
 </template>
 
-<script>...export default {
-    //...  data: function() {
+<script>
+export default {
+    data: function() {
         return {
             color: 'white'
         }
-    },
-    //...}
+    }
+}
 </script>
 ```
 
 你可以在 prop 的值中使用三元运算符来检查一个真实的条件，并传递一个依赖于它的值：
 
-```
+```HTML
 <template>
     <ComponentName :colored="color == 'white' ? true : false" />
 </template>
 ```
 
-```
+```HTML
 <script>
-    ...export default {
-        //...  data: function() {
-            return {
-                color: 'white'
-            }
-        },
-    //...}
+export default {
+    data: function() {
+        return {
+            color: 'white'
+        }
+    }
+}
 </script>
 ```
 
@@ -2450,7 +2460,7 @@ Vue.js 允许我们通过在一个元素上使用 `v-on` 指令来拦截任何 D
 
 如果我们想做某事时，点击事件发生在这个元素：
 
-```
+```HTML
 <template>
     <a>Click me!</a>
 </template>
@@ -2458,7 +2468,7 @@ Vue.js 允许我们通过在一个元素上使用 `v-on` 指令来拦截任何 D
 
 我们添加一个 `v-on` 指令：
 
-```
+```HTML
 <template>
     <a v-on:click="handleClick">Click me!</a>
 </template>
@@ -2466,17 +2476,17 @@ Vue.js 允许我们通过在一个元素上使用 `v-on` 指令来拦截任何 D
 
 Vue 还提供了一个非常方便的替代语法：
 
-```
+```HTML
 <template>
     <a @click="handleClick">Click me!</a>
 </template>
 ```
 
-你可以选择是否使用圆括号。  `@click="handleClick"` 相当于 `@click="handleClick()"`。
+你可以选择是否使用圆括号。 `@click="handleClick"` 相当于 `@click="handleClick()"`。
 
 `handleClick` 是一个附加在组件上的方法
 
-```
+```HTML
 <script>
     export default {
         methods: {
@@ -2488,7 +2498,7 @@ Vue 还提供了一个非常方便的替代语法：
 </script>
 ```
 
-这里需要知道的是，可以从事件传递参数  `@click="handleClick(param)"`， 并且它们将在这个方法里面被接收。
+这里需要知道的是，可以从事件传递参数 `@click="handleClick(param)"`， 并且它们将在这个方法里面被接收。
 
 #### 访问原始事件对象
 
@@ -2496,7 +2506,7 @@ Vue 还提供了一个非常方便的替代语法：
 
 使用特殊的 `$event` 指令：
 
-```
+```HTML
 <template>
     <a @click="handleClick($event)">Click me!</a>
 </template>
@@ -2514,7 +2524,7 @@ Vue 还提供了一个非常方便的替代语法：
 
 或者你已经传递了一个变量：
 
-```
+```HTML
 <template>
     <a @click="handleClick('something', $event)">Click me!</a>
 </template>
@@ -2537,12 +2547,12 @@ Vue 还提供了一个非常方便的替代语法：
 
 不要在你的方法中使用 DOM "事务"，而是告诉 Vue 为你处理事情
 
--   `@click.prevent`  调用  `event.preventDefault()`
--   `@click.stop`  调用  `event.stopPropagation()`
+-   `@click.prevent` 调用 `event.preventDefault()`
+-   `@click.stop` 调用 `event.stopPropagation()`
 -   `@click.passive` 使用 [addEventListener 的被动选项][53]
 -   `@click.capture` 使用事件捕获而不是事件冒泡，即内部元素触发的事件先在此处理，然后才交由内部元素进行处理
--   `@click.self`  确保单击事件不是从子事件冒泡，而是直接发生在该元素上
--   `@click.once`  事件只会被触发一次
+-   `@click.self` 确保单击事件不是从子事件冒泡，而是直接发生在该元素上
+-   `@click.once` 事件只会被触发一次
 
 所有的这些选项都可以通过添加一个修饰符来组合。
 
@@ -2554,7 +2564,7 @@ Vue 还提供了一个非常方便的替代语法：
 
 组件可以选择完全定义其内容，就像在这种情况下：
 
-```
+```JavaScript
 Vue.component('user-name', {
     props: ['name'],
     template: '<p>Hi {{ name }}</p>'
@@ -2567,7 +2577,7 @@ Vue.component('user-name', {
 
 通过在组件模板中放入 `<slot></slot>` 来定义它：
 
-```
+```JavaScript
 Vue.component('user-information', {
     template: '<div class="user-information"><slot></slot></div>'
 })
@@ -2575,7 +2585,7 @@ Vue.component('user-information', {
 
 使用该组件时，在开始和结束标签之间添加的任何内容都将添加到插槽占位符中：
 
-```
+```HTML
 <user-information>
     <h2>Hi!</h2>
     <user-name name="Flavio">
@@ -2586,7 +2596,7 @@ Vue.component('user-information', {
 
 一个复杂的组件布局可能需要更好的方式来组织内容。
 
-输入 **命名插槽**
+输入**命名插槽**
 
 使用命名插槽，你可以将插槽的部分分配到模板布局中的特定位置，并且可以对任何标记使用 `插槽` 属性来将内容分配到该插槽。
 
@@ -2594,7 +2604,7 @@ Vue.component('user-information', {
 
 为了方便，我在这个例子中使用了一个 `页面` 的单文件组件。
 
-```
+```HTML
 <template>
     <div>
         <main>
@@ -2625,7 +2635,7 @@ Vue.component('user-information', {
 
 假设你正在打印一个名字：
 
-```
+```HTML
 <template>
     <p>Hi {{ name }}!</p>
 </template>
@@ -2645,7 +2655,7 @@ Vue.component('user-information', {
 
 输入过滤器：
 
-```
+```HTML
 <template>
     <p>Hi {{ name | fallback }}!</p>
 </template>
@@ -2676,14 +2686,14 @@ Vue.component('user-information', {
 
 过滤器的良好用例是什么？
 
-- 转换字符串，例如，大写或将其小写
-- 格式化金额
+-   转换字符串，例如，大写或将其小写
+-   格式化金额
 
 上面你看到了一个简单的过滤器示例：`{{ name | fallback }}`
 
 过滤器通过重复的管道语法链接：
 
-```
+```Handlebars
 {{ name | fallback | capitalize }}
 ```
 
@@ -2691,7 +2701,7 @@ Vue.component('user-information', {
 
 高级过滤器也可以接受参数，使用正常的函数参数语法：
 
-```
+```HTML
 <template>
     <p>Hello {{ name | prepend('Dr.') }}</p>
 </template>
@@ -2718,7 +2728,7 @@ Vue.component('user-information', {
 
 注意我用了一个箭头函数。通常，我们在方法和计算属性中避免使用箭头函数，因为他们几乎总是引用 `this` 来访问组件数据。但是在这种情况下，过滤器不需要访问 `this`，而是通过参数接收它需要的所有数据，我们可以安全的使用更简单的箭头函数语法。
 
-[这个包][55]有很多预先设置的过滤器，你可以直接在模板中使用，包括  `capitalize`,  `uppercase`,  `lowercase`,  `placeholder`,  `truncate`,  `currency`,  `pluralize` 等等。
+[这个包][55]有很多预先设置的过滤器，你可以直接在模板中使用，包括 `capitalize`, `uppercase`, `lowercase`, `placeholder`, `truncate`, `currency`, `pluralize` 等等。
 
 ### 组件之间的通信
 
@@ -2730,7 +2740,7 @@ Vue 中的组件可以以各种方式进行通信
 
 父类通过向组件声明中添加参数来 “传递” 数据：
 
-```
+```HTML
 <template>
     <div>
         <Car color="green" />
@@ -2755,7 +2765,7 @@ Props 是单向的：从父级到子级。每当父元素更改了这个 prop，
 
 事件允许你从子对象到父对象的通信：
 
-```
+```HTML
 <script>
     export default {
         name: 'Car',
@@ -2770,7 +2780,7 @@ Props 是单向的：从父级到子级。每当父元素更改了这个 prop，
 
 当模板中包含组件时，父级可以使用 `v-on` 指令来拦截：
 
-```
+```HTML
 <template>
     <div>
         <Car v-on:clickedSomething="handleClickInParent" />
@@ -2784,7 +2794,7 @@ Props 是单向的：从父级到子级。每当父元素更改了这个 prop，
         name: 'App',
         methods: {
             handleClickInParent: function() {
-            //...    
+            //...
             }
         }
     }
@@ -2793,7 +2803,7 @@ Props 是单向的：从父级到子级。每当父元素更改了这个 prop，
 
 当然你可以传递参数：
 
-```
+```HTML
 <script>
     export default {
         name: 'Car',
@@ -2808,7 +2818,7 @@ Props 是单向的：从父级到子级。每当父元素更改了这个 prop，
 
 并在父级取得：
 
-```
+```HTML
 <template>
     <div>
         <Car v-on:clickedSomething="handleClickInParent" />
@@ -2841,7 +2851,7 @@ Props 是单向的：从父级到子级。每当父元素更改了这个 prop，
 
 你还可以创建专用于此工作的 Vue 组件，并在需要的地方导入它。
 
-```
+```HTML
 <script>
     export default {
         name: 'Car',
@@ -2856,7 +2866,7 @@ Props 是单向的：从父级到子级。每当父元素更改了这个 prop，
 
 任何其它组件都可以监听此事件。你可以 `mounted` 中这样做：
 
-```
+```HTML
 <script>
     export default {
         name: 'App',
@@ -2881,8 +2891,8 @@ Vuex 是 Vue.js 的官方状态管理库。
 
 开箱即用的 Vue.js 的组件可以进行通信。
 
-- props，将状态从父组件传递到子组件
-- events，用于从子组件更改父组件的状态，或将根组件用做事件的总线
+-   props，将状态从父组件传递到子组件
+-   events，用于从子组件更改父组件的状态，或将根组件用做事件的总线
 
 有时事情会比这些简单的选项所允许的更复杂。
 
@@ -2892,7 +2902,7 @@ Vuex 是 Vue.js 的官方状态管理库。
 
 Vuex 并不是你可以在 Vue 中使用的唯一的状态管理器选项（你也可以使用 [Redux][56]），但是它主要的优势在于它是官方的，它与 Vue.js 的集成使它脱颖而出。
 
-使用 React 的时候，你不得不从众多可用的库中选择一个，因为它的生态系统非常庞大，而且没有实际的标准。最近 Redux 是最受欢迎的选择， [Mobx][57] 紧随其后。对于 Vue，我想说的是，除了Vuex，你不需要寻找其它任何的东西，尤其是在开始的时候。
+使用 React 的时候，你不得不从众多可用的库中选择一个，因为它的生态系统非常庞大，而且没有实际的标准。最近 Redux 是最受欢迎的选择， [MobX][57] 紧随其后。对于 Vue，我想说的是，除了 Vuex，你不需要寻找其它任何的东西，尤其是在开始的时候。
 
 Vuex 从 React 的生态系统借鉴了很多想法，因为这是 Redux 流行的 Flux 模式。
 
@@ -2930,7 +2940,7 @@ Vue 应用程序中的组件可以有自己的状态。例如，输入框将在�
 
 在这个文件中，我们初始化 Vuex，并告诉 Vue 使用它：
 
-```
+```JavaScript
 import Vue from 'vue'import Vuex from 'vuex'
 
 Vue.use(Vuex)
@@ -2954,7 +2964,7 @@ export const store = new Vuex.Store({})
 
 我删除了 HelloWorld 组件，并添加一个表单组件和一个显示组件。
 
-```
+```HTML
 <template>
     <div>
         <label for="flavor">Favorite ice cream flavor?</label>
@@ -2973,11 +2983,11 @@ export const store = new Vuex.Store({})
 
 我们将它们添加到 `App.vue` 中而不是 HelloWorld 组件：
 
-```
+```HTML
 <template>
     <div id="app">
-        <Form/>
-        <Display/>
+        <Form />
+        <Display />
     </div>
 </template>
 
@@ -2999,7 +3009,7 @@ export const store = new Vuex.Store({})
 
 有了这个，我们回到 store.js 文件。我们添加一个名为 `state` 的属性到 store 中，它是一个包含 `flavor` 属性的对象。一开始就是一个空字符串。
 
-```
+```JavaScript
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -3014,11 +3024,9 @@ export const store = new Vuex.Store({
 
 #### 添加一个 mutation
 
-The state cannot be manipulated except by using mutations. We set up one mutation which will be used inside the  `Form`  component to notify the store that the state should change.
-
 state 除了通过 mutations 以外不能被控制。我们设置了一个将在 `Form` 组件内部使用的 mutation，以通知 store 应该更改 state。
 
-```
+```JavaScript
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -3038,7 +3046,7 @@ export const store = new Vuex.Store({
 
 有了这个集合，我们需要添加一种查看 state 的方法。我们是用 getters 来实现。我们为 `glavor` 属性设置了一个 getter：
 
-```
+```JavaScript
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -3065,13 +3073,13 @@ export const store = new Vuex.Store({
 
 我们添加
 
-```
+```JavaScript
 import { store } from './store/store'
 ```
 
 并且在 Vue 应用程序中添加它：
 
-```
+```JavaScript
 new Vue({
     el: '#app',
     store,
@@ -3086,15 +3094,13 @@ new Vue({
 
 让我们在用户输入内容时更新 state。
 
-We do so by using the  `store.commit()`  API.
-
 我们通过使用 `store.commit()` API 来实现。
 
 但首先，让我们创建一个在输入内容更改时调用的方法。我们使用 `@input` 而不是 `@change`，因为后者只在焦点从输入框移开时触发，而 `@input` 则在每次按键响应时调用。
 
-```
+```HTML
 <template>
-    <div> 
+    <div>
         <label for="flavor">Favorite ice cream flavor?</label>
         <input @input="changed" name="flavor">
     </div>
@@ -3113,7 +3119,7 @@ We do so by using the  `store.commit()`  API.
 
 现在我们有了 flavor 的值，我们使用 Vuex API：
 
-```
+```HTML
 <script>
     export default {
         methods: {
@@ -3125,7 +3131,7 @@ We do so by using the  `store.commit()`  API.
 </script>
 ```
 
-看到我们如何使用 `this.$store` 引用 store 了吗？这要感谢主 Vue 组件初始化中包含的 `store` 对象。 
+看到我们如何使用 `this.$store` 引用 store 了吗？这要感谢主 Vue 组件初始化中包含的 `store` 对象。
 
 `commit()` 方法接受一个 mutation 名（我们在 Vuex store 中使用 `change`）和一个 payload，它将作为回调函数的第二个参数传递给 mutation。
 
@@ -3133,7 +3139,7 @@ We do so by using the  `store.commit()`  API.
 
 现在我们需要使用 `$store.getters.flavor` 在 Display 模板中引用这个值的 getter，可以删除 `this`，因为我们在模板中， `this` 是隐式的。
 
-```
+```HTML
 <template>
     <div>
         <p>You chose {{ $store.getters.flavor }}</p>
@@ -3160,7 +3166,7 @@ We do so by using the  `store.commit()`  API.
 
 传统上，web 是围绕 URLs 构建的。当你点击某个 URL 的时候，将显示一个特定的页面。
 
-随着浏览器中运行的应用程序的引入和用户所看到内容的改变，许多应用程序破坏了这种交互，你必须使用浏览器的 History API 手动更新URL。
+随着浏览器中运行的应用程序的引入和用户所看到内容的改变，许多应用程序破坏了这种交互，你必须使用浏览器的 History API 手动更新 URL。
 
 当你需要将 URLS 同步到你的应用程序中的视图时，你需要一个 router。这是非常普遍的需求，现在所有主流的现代框架都允许你管理路由。
 
@@ -3170,19 +3176,19 @@ Vue Router 库是 Vue.js 应用程序的发展方向。Vue 不强制使用这个
 
 #### 安装
 
-Vue Router 可以通过 npm 获得，包名为 `vue-router`。
+Vue Router 可以通过 NPM 获得，包名为 `vue-router`。
 
 如果你通过一个 script 标签使用 Vue，你可以通过使用引入使用 Vue Router
 
-```
+```HTML
 <script src="https://unpkg.com/vue-router"></script>
 ```
 
-[UNPKG][60] 是一个非常方便的工具，它使浏览器中的每个 npm 包都可以通过一个简单的链接获得。
+[UNPKG][60] 是一个非常方便的工具，它使浏览器中的每个 NPM 包都可以通过一个简单的链接获得。
 
 如果你使用 Vue CLI，安装它使用：
 
-```
+```Shell
 npm install vue-router
 ```
 
@@ -3190,7 +3196,7 @@ npm install vue-router
 
 你在 `vue` 的后面引入它，然后你调用 `Vue.use(VueRouter)` 在应用程序中 **安装** 它：
 
-```
+```JavaScript
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
@@ -3199,8 +3205,8 @@ Vue.use(VueRouter)
 
 调用 `Vue.use()` 传递 router 对象后，在应用程序的任何组件中你都可以访问以下对象：
 
--   `this.$router`  是一个 router 对象
--   `this.$route`  是当前 router 对象
+-   `this.$router` 是一个 router 对象
+-   `this.$route` 是当前 router 对象
 
 #### router 对象
 
@@ -3214,12 +3220,12 @@ Vue.use(VueRouter)
 
 类似于 History API 的 `pushState`、`replaceState` 和 `go` 方法。
 
--   `push()`  是用来跳转到一个新的路由，添加一个新的项到历史浏览器
--   `replace()`  是一样的，它不会将新的状态推送到历史记录
+-   `push()` 是用来跳转到一个新的路由，添加一个新的项到历史浏览器
+-   `replace()` 是一样的，它不会将新的状态推送到历史记录
 
 用法样本：
 
-```
+```JavaScript
 this.$router.push('about') // named route, see later
 this.$router.push({ path: 'about' })
 this.$router.push({ path: 'post', query: { post_slug: 'hello-world' } }) // using query parameters (post?post_slug=hello-world)
@@ -3228,20 +3234,20 @@ this.$router.replace({ path: 'about' })
 
 `go()` 返回或前进，接受一个可以为正数或负数的数字返回历史记录：
 
-```
+```JavaScript
 this.$router.go(-1) // go back 1 step
 this.$router.go(1) // go forward 1 step
 ```
 
 #### 定义路由
 
-在本例中，我是用了一个 Vue Single File Component（Vue 单文件组件）。 
+在本例中，我是用了一个 Vue Single File Component（Vue 单文件组件）。
 
 在模板中，我使用了一个 `nav` 标签，它有三个 `router-link` 组件，分别是 Home，Login 和 About 标签。URL 是通过 `to` 属性分配的。
 
 `router-view` 组件是 Vue Router 放置与当前 URL 匹配的内容的地方。
 
-```
+```HTML
 <template>
     <div id="app">
         <nav>
@@ -3262,8 +3268,7 @@ this.$router.go(1) // go forward 1 step
 
 这里是代码：
 
-```
-<script>
+```JavaScript
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
@@ -3281,27 +3286,27 @@ const router = new VueRouter({
     ]
 })
 
-new Vue({  router}).$mount('#app')</script>
+new Vue({ router }).$mount('#app')
 ```
 
 通常，在 Vue 应用程序中，你实例化并且挂载根应用程序使用：
 
-```
-new Vue({  render: h => h(App)}).$mount('#app')
+```JavaScript
+new Vue({ render: h => h(App) }).$mount('#app')
 ```
 
 当你使用 Vue Router 时，你不会传递 `render` 属性，而是使用 `router`。
 
 上面的例子中使用的语法：
 
-```
-new Vue({  router}).$mount('#app')
+```JavaScript
+new Vue({ router: router }).$mount('#app')
 ```
 
 缩写：
 
-```
-new Vue({  router: router}).$mount('#app')
+```JavaScript
+new Vue({ router }).$mount('#app')
 ```
 
 在本例中，我们将一个 `routers` 数组传递给 `VueRouter` 构造函数。该数组中的每个路由都有一个 `path` 和 `component` 参数。
@@ -3312,13 +3317,13 @@ new Vue({  router: router}).$mount('#app')
 
 还记得我们之前是如何使用 Router 对象来推送新的状态的吗？
 
-```
+```JavaScript
 this.$router.push({ path: 'about' })
 ```
 
 使用指定的路由，我们可以将参数传递给新路由：
 
-```
+```JavaScript
 this.$router.push({
     name: 'post',
     params: { post_slug: 'hello-world' }
@@ -3327,7 +3332,7 @@ this.$router.push({
 
 `replace()` 也一样：
 
-```
+```JavaScript
 this.$router.replace({
     name: 'post',
     params: { post_slug: 'hello-world' }
@@ -3348,19 +3353,19 @@ this.$router.replace({
 
 你可以通过给 router 的 `beforEach()` 和 `afterEach()` 属性添加回调来实现全局守卫。
 
-- `beforeEach()` 是在导航确认之前调用
-- `beforeResolve()` 是当执行 `beforEach()` 并调用 `beforeRouterEnter` 和 `beforeRouteUpdate` 守卫时，但在导航被确认前调用。最后检查。
-- `afterEach()` 在导航被确认后调用
+-   `beforeEach()` 是在导航确认之前调用
+-   `beforeResolve()` 是当执行 `beforEach()` 并调用 `beforeRouterEnter` 和 `beforeRouteUpdate` 守卫时，但在导航被确认前调用。最后检查。
+-   `afterEach()` 在导航被确认后调用
 
 “导航已确认”的意思是什么？我们马上就会看到。与此同时，把它想成 `应用程序可以去的路由`。
 
 用法是：
 
-```
+```JavaScript
 this.$router.beforeEach((to, from, next) => {  // ...})
 ```
 
-```
+```JavaScript
 this.$router.afterEach((to, from) => {  // ...})
 ```
 
@@ -3372,20 +3377,20 @@ this.$router.afterEach((to, from) => {  // ...})
 
 单独的路由组件也有保护：
 
-- `beforeRouteEnter(from, to, next)` 在当前路由被确认之前调用
-- `beforeRouteUpdate(from, to, next)` 当路由改变但管理它的组件仍然相同时调用（对于动态路由，参见 `next`）
-- `beforeRouteLeave(from, to, next)`  当我们离开这里的时候
+-   `beforeRouteEnter(from, to, next)` 在当前路由被确认之前调用
+-   `beforeRouteUpdate(from, to, next)` 当路由改变但管理它的组件仍然相同时调用（对于动态路由，参见 `next`）
+-   `beforeRouteLeave(from, to, next)` 当我们离开这里的时候
 
 我们提到的导航。为了确定一个路由的导航是否被确认，Vue Router 执行了一些检查：
 
-- 当前组件中调用 `beforeRouteLeave` 守卫
-- 调用 router的 `beforeEach()` 守卫
-- 在任何需要复用的组件（如果存在的话）中调用 `beforeRouteUpdate（）`
-- 在 route 对象上调用了 `beforeEnter()` 守卫（我没有提到它，但是你可以在[此处][61]查看）
-- 在我们应该进入的组件中调用 `beforeRouterEnter()`
-- 调用 router 的 `beforeResolve()` 守卫
-- 如果一切正常，导航确认！
-- 调用 router 的 `afterEach()` 守卫
+-   当前组件中调用 `beforeRouteLeave` 守卫
+-   调用 router 的 `beforeEach()` 守卫
+-   在任何需要复用的组件（如果存在的话）中调用 `beforeRouteUpdate（）`
+-   在 route 对象上调用了 `beforeEnter()` 守卫（我没有提到它，但是你可以在[此处][61]查看）
+-   在我们应该进入的组件中调用 `beforeRouterEnter()`
+-   调用 router 的 `beforeResolve()` 守卫
+-   如果一切正常，导航确认！
+-   调用 router 的 `afterEach()` 守卫
 
 你可以使用特定于路由的守卫（ `beforeRouteEnter` 和 `beforeRouteUpdate` 在动态路由的情况下）作为生命周期钩子，以便例如你可以启动数据获取请求。
 
@@ -3403,7 +3408,7 @@ this.$router.afterEach((to, from) => {  // ...})
 
 这些是静态段：
 
-```
+```JavaScript
 const router = new VueRouter({
     routes: [
         { path: '/', component: Home },
@@ -3415,7 +3420,7 @@ const router = new VueRouter({
 
 我们添加了一个动态段来处理博客文章：
 
-```
+```JavaScript
 const router = new VueRouter({
     routes: [
         { path: '/', component: Home },
@@ -3432,7 +3437,7 @@ const router = new VueRouter({
 
 现在在 Post 路由组件中，我们可以使用 `$route` 引用路由，而帖子别名使用 `$route.params.post_slug`:
 
-```
+```JavaScript
 const Post = {
     template: '<div>Post: {{ $route.params.post_slug }}</div>'
 }
@@ -3454,7 +3459,7 @@ const Post = {
 
 在那里你可以执行任何你需要的操作
 
-```
+```JavaScript
 const Post = {
     template: '<div>Post: {{ $route.params.post_slug }}</div>',
     beforeRouteUpdate(to, from, next) {
@@ -3468,7 +3473,7 @@ const Post = {
 
 在示例中，我使用了 `$route.params.*` 以取得路由数据。一个组件不应该与 router 紧密耦合，相反，我们可以使用 props：
 
-```
+```JavaScript
 const Post = {
     props: ['post_slug'],
     template: '<div>Post: {{ post_slug }}</div>'
@@ -3491,7 +3496,7 @@ const router = new VueRouter({
 
 加入我们有一个负责第一个动态段的 Author 组件：
 
-```
+```HTML
 <template>
     <div id="app">
         <router-view></router-view>
@@ -3520,7 +3525,7 @@ const router = new VueRouter({
 
 我们可以插入第二个 `router-view` 组件实例内的 Author 模板：
 
-```
+```JavaScript
 const Author  = {
     template: '<div>Author: {{ $route.params.author}}<router-view></router-view></div>'
 }
@@ -3528,7 +3533,7 @@ const Author  = {
 
 我们添加了 Post 组件：
 
-```
+```JavaScript
 const Post = {
     template: '<div>Post: {{ $route.params.post_slug }}</div>'
 }
@@ -3536,7 +3541,7 @@ const Post = {
 
 然后我们将注入内部的动态路由在 `VueRouter` 配置：
 
-```
+```JavaScript
 const router = new VueRouter({
     routes: [
         { path: '/post/:author', component: Author, children: [ path: ':post_slug', component: Post ] }
@@ -3553,7 +3558,7 @@ const router = new VueRouter({
 [3]: https://www.google.com/maps
 [4]: https://www.google.com/gmail
 [5]: https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started
-[6]: https://jquery.com/
+[6]: https://jQuery.com/
 [7]: https://mootools.net/
 [8]: http://backbonejs.org/
 [9]: https://www.emberjs.com/
@@ -3595,8 +3600,6 @@ const router = new VueRouter({
 [45]: https://emmet.io/
 [46]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 [47]: https://prettier.io/
-[48]: https://jsfiddle.net/flaviocopes/nvgedhq4/
-[49]: https://jsfiddle.net/flaviocopes/3kebv908/
 [50]: http://requirejs.org/docs/commonjs.html
 [51]: https://cn.vuejs.org/v2/guide/events.html#Event-Modifiers
 [52]: https://cn.vuejs.org/v2/guide/custom-directive.html
@@ -3611,9 +3614,6 @@ const router = new VueRouter({
 [61]: https://router.vuejs.org/guide/advanced/navigation-guards.html#per-route-guard
 [62]: https://github.com/pillarjs/path-to-regexp
 [63]: https://vuehandbook.com/
-
-##### 译者补充说明
-
 [64]: https://cli.vuejs.org/zh/config/#vue-config-js
 [65]: https://vuejs.org/v2/api/#Global-Config
 [66]: https://cn.vuejs.org/v2/guide/events.html#%E4%BA%8B%E4%BB%B6%E4%BF%AE%E9%A5%B0%E7%AC%A6

@@ -1,4 +1,4 @@
-> * 原文：[What is Freelancing? How to Find Freelance Jobs Online And Clients in Your City 一位有 20 年自由职业经验的开发者分享：如何找到客户](https://www.freecodecamp.org/news/what-is-freelancing/)
+> * 原文：[What is Freelancing? How to Find Freelance Jobs Online And Clients in Your City 一位有 20 年自由职业经验的开发者分享：如何找到客户和工作](https://www.freecodecamp.org/news/what-is-freelancing/)
 > * 作者：Luke Ciciliano
 > * 译者：
 > * 校对者：

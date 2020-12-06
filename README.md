@@ -45,6 +45,17 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章][6]，分享前�
 
 我们会和译者一同确认校对意见，形成终稿，即校对完毕。翻译及校对完毕的文章将以翻译者的姓名（或昵称）发布在 [freeCodeCamp 官网][11]（我们会邀请译者在官网注册作者账号）；同时发布在 freeCodeCamp 微信公众号，在公众号发布时将在文章中同时注明翻译者和校对者的姓名（或昵称）。此外，我们还会在其他相关站点的 freeCodeCamp 专栏发布译文，链接到官网。
 
+## 译者交流
+
+### 开放周会
+
+- 时间：
+- 地点：https://meeting.tencent.com/p/3840877398
+
+### 日常讨论
+
+https://chat.freecodecamp.org/channel/tongyong
+
 ## Lint & Format rules
 
 ### Linter

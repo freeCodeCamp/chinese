@@ -1,7 +1,7 @@
-> * 原文地址：[2020年的Web开发：你应该学习哪些编程工具](https://www.freecodecamp.org/news/web-development-2020/)
-> * 原文作者：Quincy Larson
-> * 译者：tanjiarui15
-> * 校对者：
+> -   原文地址：[2020 年的 Web 开发：你应该学习哪些编程工具](https://www.freecodecamp.org/news/web-development-2020/)
+> -   原文作者：Quincy Larson
+> -   译者：tanjiarui15
+> -   校对者：
 
 ![2020 年 Web 开发者学习路线](https://www.freecodecamp.org/news/content/images/size/w2000/2019/12/desktop-cropped.jpg)
 
@@ -71,7 +71,7 @@ Bootstrap 仍然是目前最流行的 CSS 框架，但是也有一些其他的�
 
 “无需为小型站点学习 DevOps 和 AWS 以及所有这些东西。托管站点或托管主机站点（如 InMotion 或 Hostgator）就可以了。它可以让你直接在浏览器中进行 [部署]。不需要让事情变得太复杂。”
 
-他认为，即便是在2020年，使用熟悉的工具也是有好处的。
+他认为，即便是在 2020 年，使用熟悉的工具也是有好处的。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/12/download--6-.png)
 
@@ -99,11 +99,11 @@ Brad 演讲的幻灯片，其中包含每种语言最流行的框架。
 
 对于服务器端开发框架，他建议学习 Express，因为它是最流行的，而且“它给了你很多自由，可以按照自己的方式构建东西”。
 
-他还在一些项目中使用Python，并推荐使用它。
+他还在一些项目中使用 Python，并推荐使用它。
 
 “Python 有两个很棒的框架。Django 是一个大型的，功能齐全的框架，Flask 更加简约。它提供了你所需的内容，但你可以做出其余的决定。老实说，我对这两个框架没有偏好，我两个都喜欢，将它们用于不同需求。”
 
-他快速简要地为PHP辩护：
+他快速简要地为 PHP 辩护：
 
 “很多人都讨厌 PHP，这很不幸，因为 PHP 可以是一门很棒的语言。它很实用，并且可以在任何地方轻松部署。PHP 非常适合需要快速出手的自由职业者。如果你打算在一家大公司工作，PHP 可能不是最佳选择，但是如果你要自由职业和构建个人项目，PHP 可能是个不错的选择。抨击 PHP 现在是很流行的行为。PHP 是我学到的第一门语言，我仍然非常喜欢它……如果你查看 Laravel 代码，它非常优雅。”
 
@@ -145,7 +145,7 @@ Brad 还解释了虚拟化的工作原理，并讨论了虚拟化如何通过跨
 
 他提到了 JAMstack（客户端 JavaScript，可重用 API 和预构建标记 Markup）和 serverless 架构。这些都是更高级的主题，他的频道和 freeCodeCamp 的 YouTube 频道都提供了视频教程。
 
-然后他描述了2020年的大趋势。
+然后他描述了 2020 年的大趋势。
 
 ## 机器学习和 WebAssembly
 
@@ -169,9 +169,9 @@ Rust 是 WebAssembly 可以使用的语言之一（除了 C 和 C++）。它比 
 
 再一次，我要感谢 Brad Traversy，是他为我们提供了这段全面的视频介绍。
 
-人们总是问我“如果我想成为一名web开发人员，我应该学习什么?”我的回答是“把freeCodeCamp作为你的核心课程，然后扩展到其他学习资源。
+人们总是问我“如果我想成为一名 web 开发人员，我应该学习什么?”我的回答是“把 freeCodeCamp 作为你的核心课程，然后扩展到其他学习资源。
 
-我很高兴地说，[Brad 的 Traversy Media YouTube 频道][2]是我最推荐的其他资源之一。Brad，如果你正在读这篇文章，恭喜你拥有十年的YouTube视频。期待下个十年！
+我很高兴地说，[Brad 的 Traversy Media YouTube 频道][2]是我最推荐的其他资源之一。Brad，如果你正在读这篇文章，恭喜你拥有十年的 YouTube 视频。期待下个十年！
 
 [1]: https://www.youtube.com/user/TechGuyWeb
 [2]: https://www.youtube.com/user/TechGuyWeb

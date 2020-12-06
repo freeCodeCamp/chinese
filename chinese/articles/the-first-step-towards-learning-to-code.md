@@ -1,7 +1,7 @@
-> * 原文地址：[How I took the first step towards learning to code 我是怎么迈出学习编程的第一步的](https://www.freecodecamp.org/news/the-first-step-towards-learning-to-code-2e4c31e86630/)
-> * 原文作者：Niamh McCooey
-> * 译者：Chengjun.L
-> * 校对者：
+> -   原文地址：[How I took the first step towards learning to code 我是怎么迈出学习编程的第一步的](https://www.freecodecamp.org/news/the-first-step-towards-learning-to-code-2e4c31e86630/)
+> -   原文作者：Niamh McCooey
+> -   译者：Chengjun.L
+> -   校对者：
 
 ![How I took the first step towards learning to code](https://cdn-media-1.freecodecamp.org/images/1*CFeeiP9bD0riPqSIfCzX6A.jpeg)
 
@@ -9,7 +9,7 @@
 
 编程似乎是一种力量特别强大的技能（也因此而具有吸引力），同时呢，给人的感觉又超级复杂而且陌生。
 
-我大学的时候是一名文科生，在我的印象里，编程这件事情有时候很呆板，有时候又很有魅力。有魅力是因为一个会编程的人给人的感觉是聪明的、成功的。至于呆板呢，好吧，社会大众对程序员的大部分描述都是这样......
+我大学的时候是一名文科生，在我的印象里，编程这件事情有时候很呆板，有时候又很有魅力。有魅力是因为一个会编程的人给人的感觉是聪明的、成功的。至于呆板呢，好吧，社会大众对程序员的大部分描述都是这样……
 
 ![](https://cdn-media-1.freecodecamp.org/images/nfRdlv1hiH988xDoDqM7-FxSYU14fNJb6VPO)
 
@@ -61,7 +61,7 @@
 
 肯定地说，我从不觉得自己具有那样的特质。所以，不难理解，**我从没觉得自己是可以做那样炫酷的事情的人**。
 
-### 为什么是现在?
+### 为什么是现在
 
 镜头切换到 10 周前，我和那位在职开发者聊起代码的吸引力的时候，她给我介绍了 [Codebar][1]。那个活动每周举办一次，旨在发展技术领域的多样性，会常常为非技术人群开办训练课程。
 
@@ -99,7 +99,6 @@ Sounded like the thing — a place to learn to code that’s designed to welcome
 希望这篇文章能帮助其他和我一样的编程新手理解一件事：并不是谁天生就适合编程。
 
 对我来说，这是我的第一个收获。
-
 
 [1]: http://www.codebar.io/
 [2]: https://niamhmccoo.github.io/

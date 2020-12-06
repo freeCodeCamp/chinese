@@ -1,8 +1,7 @@
-> * 原文地址：[How To Host Your Personal Website for Free](https://medium.com/better-programming/how-to-host-your-personal-website-for-free-3101c4ab2e49)
-> * 原文作者：[Joey Colon](https://medium.com/@joey_colon)
-> * 译者：ZhichengChen
-> * 校对者：
-
+> -   原文地址：[How To Host Your Personal Website for Free](https://medium.com/better-programming/how-to-host-your-personal-website-for-free-3101c4ab2e49)
+> -   原文作者：[Joey Colon](https://medium.com/@joey_colon)
+> -   译者：ZhichengChen
+> -   校对者：
 
 # 通过亚马逊 S3 和 Cloudflare 免费托管网站
 
@@ -26,29 +25,29 @@
 
 登录 AWS 控制台，进入 [S3 管理控制台](https://console.aws.amazon.com/s3/home)。
 
-点击创建存储桶按钮。弹出一个存储桶信息表单的对话框。 
+点击创建存储桶按钮。弹出一个存储桶信息表单的对话框。
 
 ![](https://miro.medium.com/max/1398/1*SQ-ze3rTSlM8M4FtHhm7vQ.png)
 
-*AWS S3 管理控制台*
+_AWS S3 管理控制台_
 
 在“存储桶名称”栏，填写完整的域名。在这个教程里，我会使用 tutorial.joey.dev。“区域”栏，选择离我比较近的州，US East (N.Virginia)。当然你可以选择离你比较近的地区。选好后点击下一步。
 
 ![](https://miro.medium.com/max/1093/1*8hN5P5cU0e2xR73btV3P0w.png)
 
-*AWS S3 创建存储桶 步骤一*
+_AWS S3 创建存储桶 步骤一_
 
 在步骤二，直接点击下一步。在步骤三，取消*阻止所有公共访问*选项，我们也用不到 S3 日志传输服务，直接点击下一步。
 
 ![https://miro.medium.com/max/1099/1*6Dqwkgk5dUglp2fZAmZ94Q.png](https://miro.medium.com/max/1099/1*6Dqwkgk5dUglp2fZAmZ94Q.png)
 
-*AWS S3 创建存储桶 步骤三*
+_AWS S3 创建存储桶 步骤三_
 
 在步骤四，直接单击创建存储桶按钮。在 S3 管理控制台会看见新创建的存储桶。点击新创建的存储桶，会出现下面的界面：
 
 ![](https://miro.medium.com/max/1251/1*DAws-OGBVHZrNKh0oAEZWQ.png)
 
-*AWS S3 新创建的存储桶*
+_AWS S3 新创建的存储桶_
 
 点击屏幕顶部的*属性*选项卡，然后选择第一行的*静态网站托管*卡片。选中*使用此存储桶托管网站*选项。索引文档，直接填写 `idnex.html`然后点击保存。
 
@@ -56,13 +55,13 @@
 
 ![](https://miro.medium.com/max/1905/1*H_O_F82gTDOnmNjfYMYEag.png)
 
-*AWS S3 静态网站托管配置*
+_AWS S3 静态网站托管配置_
 
 漂亮。最后一步就是上传网站文件到存储桶里了。点击*概述*标签页然后点击*上传*按钮。出现下面的弹窗，开始上传吧。
 
 ![](https://miro.medium.com/max/1094/1*QZkDDVQGmYh6UaXNNnhP5w.png)
 
-*AWS S3 上传文件 步骤一*
+_AWS S3 上传文件 步骤一_
 
 在选择上传的文件后，点击下一步按钮。在第二步，点击*管理公共权限下拉框*选择*为此对象授予公共读取访问权限*选项。点击下一步。
 
@@ -84,17 +83,17 @@
 
 这里需要两个不同的`CNAME`记录。
 
-第一个记录，*name*，输入`www`，*Domain name*，输入不包含 http:// 的域名，如`tutorial.joey.dev`。
+第一个记录，_name_，输入`www`，_Domain name_，输入不包含 http:// 的域名，如`tutorial.joey.dev`。
 
-第二个记录，*name*  输入域名，*Domain name*，输入我们之前提到的 S3 存储桶的终端节点。确保添加这些记录的时候橙色的云是可用的。
+第二个记录，_name_ 输入域名，_Domain name_，输入我们之前提到的 S3 存储桶的终端节点。确保添加这些记录的时候橙色的云是可用的。
 
 ![](https://miro.medium.com/max/1074/1*a1FiP8wLTfhBRkxi5iK-rQ.png)
 
-*Cloudflare DNS 记录配置*
+_Cloudflare DNS 记录配置_
 
 对照着上图，如果确定设置没有问题，点击*Continue*。现在需要把你的域名的 nameservers 从域名注册商指向 Cloudflare 的 nameservers。这涉及到域名注册商网站的一些操作，可以阅读一下相关的文档。
 
-修改完 nameservers，还需要设置一些页面规则。在这之前，先确保 SSL 证书设置正确。在 Cloudflare 控制台，点击域名进入到域名控制台，点击 *Crypto* 选项卡确保 SSL 的设置是 *Flexible*。
+修改完 nameservers，还需要设置一些页面规则。在这之前，先确保 SSL 证书设置正确。在 Cloudflare 控制台，点击域名进入到域名控制台，点击 _Crypto_ 选项卡确保 SSL 的设置是 _Flexible_。
 
 ![](https://miro.medium.com/max/1196/1*lpTdVq6okXGcga07TeSNhQ.png)
 

@@ -1,7 +1,7 @@
-> * 原文地址：[The Definitive Guide to Contributing to Open Source](https://www.freecodecamp.org/news/the-definitive-guide-to-contributing-to-open-source-900d5f9f2282/)
-> * 原文作者：Piotr Gaczkowski
-> * 译者：[hunterwyld](https://github.com/hunterwyld)
-> * 校对者：
+> -   原文地址：[The Definitive Guide to Contributing to Open Source](https://www.freecodecamp.org/news/the-definitive-guide-to-contributing-to-open-source-900d5f9f2282/)
+> -   原文作者：Piotr Gaczkowski
+> -   译者：[hunterwyld](https://github.com/hunterwyld)
+> -   校对者：
 
 ![The Definitive Guide to Contributing to Open Source](https://cdn-media-1.freecodecamp.org/images/0*2dSjV5OCE6x2jI2W)
 
@@ -19,15 +19,15 @@
 
 恭喜你！
 
-#### 开源项目需要哪些要素？
+#### 开源项目需要哪些要素
 
 ![](https://cdn-media-1.freecodecamp.org/images/sLLZDyHDbg9D4OQ9g4b2NqF2vJbD6PajLJcZ)
 
 “卷饼” ，来自 [Pixabay][2]，作者 [samuelfernandezrivera][1]
 
- [Firefox ][3] 浏览器就是开源项目的一个范例。它是由数千行源代码和如何将此源代码转换为可用产品（如 Web 浏览器）的指令组成。这些代码是公开的，每个人都能获取、阅读、评审或构建它。每个想要修改 Firefox 行为的人都可以更改源代码并构建自定义版本。不仅如此，每个人还可以将自定义的修改回馈给项目维护者。
+[Firefox ][3] 浏览器就是开源项目的一个范例。它是由数千行源代码和如何将此源代码转换为可用产品（如 Web 浏览器）的指令组成。这些代码是公开的，每个人都能获取、阅读、评审或构建它。每个想要修改 Firefox 行为的人都可以更改源代码并构建自定义版本。不仅如此，每个人还可以将自定义的修改回馈给项目维护者。
 
-然而，代码并不是开源项目的全部，还有用户界面和图形设计。没错，即使像Vim这样的终端程序也有自己的图形界面。
+然而，代码并不是开源项目的全部，还有用户界面和图形设计。没错，即使像 Vim 这样的终端程序也有自己的图形界面。
 
 > 你无需编写代码即可为开源做贡献！
 
@@ -45,13 +45,13 @@
 
 最好的状态是这样的：每个成员都贡献出一点点时间、一点点努力、一点点经验，整个社区协作产出一款出色的产品，而且通常是一款免费产品！
 
-> 觉得自己不是创造者？去发现bug、或者向程序猿提需求吧！
+> 觉得自己不是创造者？去发现 bug、或者向程序猿提需求吧！
 
-#### 为什么值得我去花时间？
+#### 为什么值得我去花时间
 
 ![](https://cdn-media-1.freecodecamp.org/images/3OfZ84g5JkBgoyjN60Peh5BIg--bZSFzJscg)
 
-图片来自 [Unsplash][5]，作者 [Kyle Glenn][4] 
+图片来自 [Unsplash][5]，作者 [Kyle Glenn][4]
 
 为什么向开源社区做贡献是值得的？为什么你要在提建议、写代码或翻译文章上花费时间，而不是出去走走？有很多理由， 所有理由的前提是：对开源做出的贡献是公开可见的。每个人都能看见其他任何人所做的事情，这种感觉非常棒！
 
@@ -59,7 +59,7 @@
 
 当你在编写代码、设计界面，或者绘制原画时，你就是在学习，这对那些正在寻求改变职业的人来说是很好的锻炼机会。在开源世界，没有人会在意你是一个资深开发人员还是一个园丁，真正重要的是你所做贡献的质量。当你在开源项目中证明了自己，你将获得宝贵的经验，不用再觉得自己是刚从训练营毕业的新手，你已经是社区的正式成员，所有人都看得到你的贡献。
 
-当你在某项技术中遇到困难时，这会很有帮助，因为你可以想象你的未来不拘于此。假如你是一个梦想得到一份 UX 设计工作的 COBOL 开发者，那么从现在开始尝试改进Firefox的交互体验、为开源做出贡献吧。一旦建议被社区接受，你就可以在简历中新增一项工作经历：Firefox 交互设计师。就像这样，你既能学到有用的知识，又能丰富自己的经历，一箭双雕。
+当你在某项技术中遇到困难时，这会很有帮助，因为你可以想象你的未来不拘于此。假如你是一个梦想得到一份 UX 设计工作的 COBOL 开发者，那么从现在开始尝试改进 Firefox 的交互体验、为开源做出贡献吧。一旦建议被社区接受，你就可以在简历中新增一项工作经历：Firefox 交互设计师。就像这样，你既能学到有用的知识，又能丰富自己的经历，一箭双雕。
 
 #### 提升知名度
 
@@ -93,41 +93,41 @@
 
 [GitHub][7] 贡献数据。不，不是我的。
 
-### 如何找到你的第一个项目？
+### 如何找到你的第一个项目
 
-有很多种方式。首先，像火狐和安卓这样的重量级项目拥有庞大的用户基数，需要大量的修改和优化。一旦你向这种项目提交了代码，你的修改将会被数百万人看到。你可以访问 GitHub 看看有哪些流行的仓库。比如，在撰写本文时，[GitHub上拥有最多star的项目][8] 是 [freeCodeCamp][9].
+有很多种方式。首先，像火狐和安卓这样的重量级项目拥有庞大的用户基数，需要大量的修改和优化。一旦你向这种项目提交了代码，你的修改将会被数百万人看到。你可以访问 GitHub 看看有哪些流行的仓库。比如，在撰写本文时，[GitHub 上拥有最多 star 的项目][8] 是 [freeCodeCamp][9].
 
 ![](https://cdn-media-1.freecodecamp.org/images/HZV4c0DRdzgPk5XXu73SA01zudn0gyB51fPW)
 
-GitHub上拥有[最多 star 的仓库][10]
+GitHub 上拥有[最多 star 的仓库][10]
 
 如果你是个新手，我不会推荐上面第一种方式。一个庞大项目最大的优势往往也是它最为人诟病的。每个人都想做出贡献，但是维护人员的数量是极为有限的。如果你真的想产生影响，不如试试一些小规模的、处于上升阶段的项目。[GitHub Trending][11] 就是一个好的方法。
 
 ![](https://cdn-media-1.freecodecamp.org/images/n-mf9pvBj7kB5DnharePSMFXtNmLRS8Fwwwp)
 
-GitHub上的[热门项目][12]
+GitHub 上的[热门项目][12]
 
-另一种方式是选择 _awesome_ 项目作为第一次贡献者，这是比较节省精力的方法。 _awesome_ 项目是一个链接列表的大集合。比如，[awesome-shell][13] 列出了一些酷炫的命令行工具，而 awesome-JavaScript 列出了每天涌出的优秀JS框架， 当然还有 [Mind Expanding Books][14] 和 [awesome_lists][15] 等等。
+另一种方式是选择 _awesome_ 项目作为第一次贡献者，这是比较节省精力的方法。 _awesome_ 项目是一个链接列表的大集合。比如，[awesome-shell][13] 列出了一些酷炫的命令行工具，而 awesome-JavaScript 列出了每天涌出的优秀 JS 框架， 当然还有 [Mind Expanding Books][14] 和 [awesome_lists][15] 等等。
 
 为什么说这是个好办法？因为给这些项目做贡献的门槛比较低，而贡献的成就感更容易刺激产生多巴胺，多巴胺又会刺激做下个贡献。一旦皮球开始滚动，就很难让它停下来了。
 
-我推荐的最后一个方法是参加大型开源活动，比如每年十月举办的 [Hacktoberfest][16]，参与者需要提交5次 Pull Request（即5次贡献），每个完成任务的参与者都会从赞助方领取到精美的礼物（T恤或标签）。为了让降低参与门槛，活动网站上会列出一些入门的示例项目以供选择。
+我推荐的最后一个方法是参加大型开源活动，比如每年十月举办的 [Hacktoberfest][16]，参与者需要提交 5 次 Pull Request（即 5 次贡献），每个完成任务的参与者都会从赞助方领取到精美的礼物（T 恤或标签）。为了让降低参与门槛，活动网站上会列出一些入门的示例项目以供选择。
 
 另一个类似的活动是 [Google Summer of Code][17]。你可以参考往期的项目列表，也许这回给你带来灵感！哦对了，这里还有一个 [Awesome First PR Opportunities][18] 列表！
 
 如果你希望持续不断地参与开源，你需要找到自己经常使用的东西，这样的话对你自身的提高大有裨益，也是目前为止最佳的保证高质量工作的方式。
 
-### 是什么让贡献变得有价值？
+### 是什么让贡献变得有价值
 
 ![](https://cdn-media-1.freecodecamp.org/images/I8PVJSTiJibbeYiy7wrmVeZFQMHuuXLYI-NW)
 
-图片来自 [Unsplash][20]，作者 [rawpixel][19]  
+图片来自 [Unsplash][20]，作者 [rawpixel][19]
 
 我们现在了解了为什么贡献开源以及在哪里参与开源。现在我们聚焦于是什么让我们的贡献变得有价值？毫无意义的贡献是不会被接受的，所以最好有所准备！
 
 #### 我们需要尊重工作须知
 
-首先，我们需要尊重他人制定的工作须知。在许多项目中，你可以找到像`CONTRIBUTORS.md`这样的文档，说明了做出贡献的首选方式。如果项目中没有`CONTRIBUTORS.md`，你也可以阅读`README.md`或项目wiki页面。熟悉并理解这些规则，然后按照规则参与开源。
+首先，我们需要尊重他人制定的工作须知。在许多项目中，你可以找到像`CONTRIBUTORS.md`这样的文档，说明了做出贡献的首选方式。如果项目中没有`CONTRIBUTORS.md`，你也可以阅读`README.md`或项目 wiki 页面。熟悉并理解这些规则，然后按照规则参与开源。
 
 如果你没有遵循开发指南列出的规则，很可能在 review 之前就会被拒绝。那些规则就是为了节省维护者的时间的，如果不去遵守，那么维护者会认为你对待其它工作的时候也经常粗心大意。
 
@@ -149,7 +149,7 @@ GitHub上的[热门项目][12]
 
 ![](https://cdn-media-1.freecodecamp.org/images/p5rnB4wdDuBMkn0Cw8UKWh12BwR8l1i1Xz1p)
 
-图片来自 [Unsplash][22]，作者 [Wes Hicks][21]  
+图片来自 [Unsplash][22]，作者 [Wes Hicks][21]
 
 请记住这点：你每次在网上发布一些东西的时候，都是把自己暴露在攻击之下。不管你发布的是一句评论、一张照片、一篇文章，还是一份代码，你都可能收到批评，所以，要对批评的声音持开放的态度，这样会有助于你的成长。
 
@@ -193,11 +193,11 @@ GitHub上的[热门项目][12]
 
 #### 永远适用的方法
 
-我最喜欢的方法就是“捐赠”按钮，你可以在我的一个叫 [Songcorder][27] 的项目中看到它的工作方式。你可以根据希望收到的捐赠金额选择 Paypal（希望收到大于15美元的捐赠）或者 [Buy me a Coffee][28]（希望收到小于15美元的捐赠）。
+我最喜欢的方法就是“捐赠”按钮，你可以在我的一个叫 [Songcorder][27] 的项目中看到它的工作方式。你可以根据希望收到的捐赠金额选择 Paypal（希望收到大于 15 美元的捐赠）或者 [Buy me a Coffee][28]（希望收到小于 15 美元的捐赠）。
 
 ![](https://cdn-media-1.freecodecamp.org/images/AXmQ1s5wJWjlPqB-FYd8pzriBsG1ptc8K3s3)
 
-[Songcorder捐赠按钮][29]
+[Songcorder 捐赠按钮][29]
 
 下面就是一个“Buy me a Coffee”按钮（如果你认为我应得的话可以点击它）：
 
@@ -205,13 +205,13 @@ GitHub上的[热门项目][12]
 
 [https://www.buymeacoffee.com/doomhammer][30]
 
-除了通用的按钮之外，还有一些开源项目专用的方法，比如Gittip/[Liberapay][31]（后者经常换名字）。有趣的是，Liberapay 所支持的最受欢迎的仓库是 [awesome][32]...
+除了通用的按钮之外，还有一些开源项目专用的方法，比如 Gittip/[Liberapay][31]（后者经常换名字）。有趣的是，Liberapay 所支持的最受欢迎的仓库是 [awesome][32]...
 
-这与 [Flattr][33] 很类似。你可以选择每月要捐赠的金额，当你认可某些作品时，作品的作者将获得预算的一部分。也就是说，如果你决定每月向开源项目捐赠5美元，在某月你认可4个项目的工作（通过 star 或者点击 Flattr 按钮），那么每个项目的作者将会得到1.25美元。就是这么简单。
+这与 [Flattr][33] 很类似。你可以选择每月要捐赠的金额，当你认可某些作品时，作品的作者将获得预算的一部分。也就是说，如果你决定每月向开源项目捐赠 5 美元，在某月你认可 4 个项目的工作（通过 star 或者点击 Flattr 按钮），那么每个项目的作者将会得到 1.25 美元。就是这么简单。
 
 ![](https://cdn-media-1.freecodecamp.org/images/RCgiw9zaA3vLNKLoMLxV3dZCpxsOu-MD9Mji)
 
-[与Liberapay关联的仓库][34]
+[与 Liberapay 关联的仓库][34]
 
 除了支持整个项目，你也可以直接（近乎直接）向开发者捐款。[Tip4Commit][35] 就是以这种方式运作的。支持者向某项目的账户存入一定数量的比特币，然后每个开发者就可以从这个账户分到一笔钱了。
 
@@ -233,8 +233,8 @@ GitHub上的[热门项目][12]
 
 带薪实习是另一个有效的方法。有两个备受欢迎的选择：
 
-- [Google Summer of Code][57]  — 面向学生
-- [Outreachy][58] — 面向技术领域的少数民族
+-   [Google Summer of Code][57] — 面向学生
+-   [Outreachy][58] — 面向技术领域的少数民族
 
 或者，如果你真的对开源充满激情，为什么不加入一家专注于开发开源软件的公司呢？会有很多这样的选择。就像咨询一样，你将获得报酬，并同时能够为社区做点事情。
 
@@ -242,7 +242,7 @@ GitHub上的[热门项目][12]
 
 #### 更多方法
 
-如果你还想寻找更多赚钱的灵感，可以看看GitHub上的 [lemonade-stand][59] 项目，或者在那里留下你的看法。有了开源，一切皆有可能！
+如果你还想寻找更多赚钱的灵感，可以看看 GitHub 上的 [lemonade-stand][59] 项目，或者在那里留下你的看法。有了开源，一切皆有可能！
 
 #### 寻找志同道合的人
 
@@ -254,20 +254,20 @@ GitHub上的[热门项目][12]
 
 每个项目都有专属的社区，而且也有很多让众多拥有不同背景的开源爱好者聚集起来的地方。
 
-你可以加入一些在线交流社群，比如领英的 [Linux & Open Source][62]。你也可以加入很多有趣的 [Gitter][63] 频道，Gitter是为开源社区打造的即时通讯软件。当然，还有一些邮件组、论坛或平台（如 GitHub）允许大家互相协作和交流。但是，如果您想亲自结识志趣相投的人，请考虑访问或加入黑客空间。
+你可以加入一些在线交流社群，比如领英的 [Linux & Open Source][62]。你也可以加入很多有趣的 [Gitter][63] 频道，Gitter 是为开源社区打造的即时通讯软件。当然，还有一些邮件组、论坛或平台（如 GitHub）允许大家互相协作和交流。但是，如果您想亲自结识志趣相投的人，请考虑访问或加入黑客空间。
 
-黑客空间是将对实践的热爱传递到软件世界之外的地方。软件、硬件、DIY和手工都会收到同样的欢迎。有一个维基百科页面专门列举出了[所有的黑客空间][64]，找到离你最近的那个然后拜访他们，你会为思想与行动碰撞时所产生的火花而感到无比惊讶！
+黑客空间是将对实践的热爱传递到软件世界之外的地方。软件、硬件、DIY 和手工都会收到同样的欢迎。有一个维基百科页面专门列举出了[所有的黑客空间][64]，找到离你最近的那个然后拜访他们，你会为思想与行动碰撞时所产生的火花而感到无比惊讶！
 
 [1]: https://pixabay.com/en/users/samuelfernandezrivera-5770955/
 [2]: https://pixabay.com/
 [3]: https://www.mozilla.org/en-US/firefox/new/
-[4]: https://unsplash.com/@kylejglenn?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
-[5]: https://unsplash.com/?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
+[4]: https://unsplash.com/@kylejglenn?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
+[5]: https://unsplash.com/?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
 [6]: https://github.com/
 [7]: https://www.freecodecamp.org/news/the-definitive-guide-to-contributing-to-open-source-900d5f9f2282/undefined
-[8]: https://github.com/search?q=stars%3A%3E0&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;s=stars&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;type=Repositories
+[8]: https://github.com/search?q=stars%3A%3E0&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;s=stars&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;type=Repositories
 [9]: https://github.com/freeCodeCamp/freeCodeCamp
-[10]: https://github.com/search?q=stars:%3E1&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;s=stars&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;type=Repositories
+[10]: https://github.com/search?q=stars:%3E1&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;s=stars&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;type=Repositories
 [11]: https://github.com/trending
 [12]: https://github.com/trending
 [13]: https://github.com/alebcay/awesome-shell
@@ -276,14 +276,14 @@ GitHub上的[热门项目][12]
 [16]: https://hacktoberfest.digitalocean.com/
 [17]: https://summerofcode.withgoogle.com/
 [18]: https://github.com/MunGell/awesome-for-beginners
-[19]: https://unsplash.com/@rawpixel?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
-[20]: https://unsplash.com/?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
-[21]: https://unsplash.com/@sickhews?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
-[22]: https://unsplash.com/?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
+[19]: https://unsplash.com/@rawpixel?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
+[20]: https://unsplash.com/?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
+[21]: https://unsplash.com/@sickhews?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
+[22]: https://unsplash.com/?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
 [23]: https://betterhumans.coach.me/the-complete-guide-to-understanding-and-dealing-with-online-trolls-4a606ae25c2c
 [24]: https://www.freecodecamp.org/news/the-definitive-guide-to-contributing-to-open-source-900d5f9f2282/undefined
-[25]: https://unsplash.com/@rawpixel?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
-[26]: https://unsplash.com/?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
+[25]: https://unsplash.com/@rawpixel?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
+[26]: https://unsplash.com/?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
 [27]: https://doomhammer.github.io/songcorder/#tips-welcome
 [28]: https://www.freecodecamp.org/news/the-definitive-guide-to-contributing-to-open-source-900d5f9f2282/undefined
 [29]: https://doomhammer.github.io/songcorder/#tips-welcome
@@ -317,8 +317,8 @@ GitHub上的[热门项目][12]
 [57]: https://summerofcode.withgoogle.com/
 [58]: https://www.outreachy.org/
 [59]: https://github.com/nayafia/lemonade-stand
-[60]: https://unsplash.com/@bamagal?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
-[61]: https://unsplash.com/?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
+[60]: https://unsplash.com/@bamagal?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
+[61]: https://unsplash.com/?utm_source=medium&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;utm_medium=referral
 [62]: https://www.linkedin.com/groups/65688/
 [63]: https://gitter.im/
 [64]: https://wiki.hackerspaces.org/List_of_ALL_Hacker_Spaces

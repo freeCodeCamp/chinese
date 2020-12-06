@@ -1,8 +1,8 @@
-> * 原文地址：[Landing My First Development Job - What a Crazy Journey!](https://www.freecodecamp.org/news/landing-my-first-development-job-what-a-crazy-journey/)
-> * 原文作者：Jonathan Sexton
-> * 译者：
-> * 校对者：
-![How I Landed My First Developer Job - What a Crazy Journey](https://www.freecodecamp.org/news/content/images/size/w2000/2019/07/japheth-mast-Ls3yexjyRpk-unsplash-2.jpg)
+> -   原文地址：[Landing My First Development Job - What a Crazy Journey!](https://www.freecodecamp.org/news/landing-my-first-development-job-what-a-crazy-journey/)
+> -   原文作者：Jonathan Sexton
+> -   译者：
+> -   校对者：
+>     ![How I Landed My First Developer Job - What a Crazy Journey](https://www.freecodecamp.org/news/content/images/size/w2000/2019/07/japheth-mast-Ls3yexjyRpk-unsplash-2.jpg)
 
 After I was offered a development position with a company and after some negotiating I accepted their generous offer.
 
@@ -14,7 +14,7 @@ I've had a lot of people ask me to distill my journey into an article to share a
 
 ## Getting Started
 
-I've always been interested in computers, tech, etc. Like many people my age, I got to 'cut my teeth' with development by creating a  [GeoCities][1]  site and later by personalizing my MySpace page with some basic CSS.
+I've always been interested in computers, tech, etc. Like many people my age, I got to 'cut my teeth' with development by creating a [GeoCities][1] site and later by personalizing my MySpace page with some basic CSS.
 
 I didn't know it at the time but this was development, a crude version of it but still development nonetheless. At that time, I didn't know that people would pay for this kind of work or I might have stuck with it. So, I went to college and got a degree in nothing tech related - psychology. Not a useless degree, but one I ultimately never put into professional use.
 
@@ -24,13 +24,13 @@ Fast forward to the summer time in 2016 where I found myself with an abundance o
 
 I started by searching for resources and came across Codecademy. I took handwritten notes by copying the entire question, answer, and result into a notebook. I wrote down everything thinking that I would need it. I came back to these notes from time to time to review them. It's also interesting to look back on them and compare what I considered difficult then to what I consider difficult now. ?
 
-A friend introduced me to  [freeCodeCamp][2]  because he knew I was self teaching and told me this platform was built for people like me. I had planned to check it out, maybe do one or two lessons and then go to bed. I finished the entire section on HTML that night! I was hooked.
+A friend introduced me to [freeCodeCamp][2] because he knew I was self teaching and told me this platform was built for people like me. I had planned to check it out, maybe do one or two lessons and then go to bed. I finished the entire section on HTML that night! I was hooked.
 
 The more I learned the more questions I had. I felt this urge, this pull to find answers to those questions. So I continued on working through the lessons and projects. I finished 2 projects before the curriculum was overhauled and revamped on freeCodeCamp.
 
 I was finding any excuse to learn and work on projects. While I was standing in any line waiting for something I would pull out my phone and instead of looking at social media, I began to read web development articles or watch a development related video.
 
-I feel like this was a major shift in the way I viewed downtime as compared to previously where "mindless consumption" ruled my time.  _(_If you enjoy social media or funny animal videos I'm not calling you mindless, I'm simply saying that type of consumption typically doesn't require you to be engaged. It's the type of consumption that you can do on auto pilot and frankly I still do it from time to time.)
+I feel like this was a major shift in the way I viewed downtime as compared to previously where "mindless consumption" ruled my time. \_(\_If you enjoy social media or funny animal videos I'm not calling you mindless, I'm simply saying that type of consumption typically doesn't require you to be engaged. It's the type of consumption that you can do on auto pilot and frankly I still do it from time to time.)
 
 During that time I had bounced around the various different sources and was like a kid in a candy store. At one point I had a folder that had roughly 300 links to material I had planned to work through. I now know that finding a resource and sticking with it is far better than hoping from one resource to another.
 
@@ -52,21 +52,21 @@ The image that came with my acceptance e-mail
 
 In January 2018 I applied for and was awarded a scholarship to Udacity's Front-End Nanodegree program. This was not only an awesome opportunity to help propel me towards my goal but a humbling experience as well.
 
-I came into this program with a basic knowledge of HTML, CSS, and a small portion of JavaScript in the vanilla flavor. In this course I was introduced to  [jQuery][3],  [functional programming][4],  [object-oriented programming][5]  (OOP),  [test driven development][6]  (TDD),  [accessibility][7], servers,  [API's][8], basic networking,  [React][9],  [AJAX][10], and so many more facets of web development that I hadn't previously been exposed to.
+I came into this program with a basic knowledge of HTML, CSS, and a small portion of JavaScript in the vanilla flavor. In this course I was introduced to [jQuery][3], [functional programming][4], [object-oriented programming][5] (OOP), [test driven development][6] (TDD), [accessibility][7], servers, [API's][8], basic networking, [React][9], [AJAX][10], and so many more facets of web development that I hadn't previously been exposed to.
 
 I'll be honest, it wasn't always easy or fun and there were times I seriously considered dropping out. I felt like I would never learn these concepts and that I was in over my head.
 
 I'm happy that I didn't quit because no one ever accomplished their goals by quitting - first and only cliche statement I promise :D
 
-I had the chance to build many awesome projects like the  [Card Matching Game][11],  [Arcade Game Replica][12],  [Restaurant Review App][13], and the  [Neighborhood Map App][14]. More than the projects though, I got to meet many great people and valuable experience collaborating with other developers in the course.
+I had the chance to build many awesome projects like the [Card Matching Game][11], [Arcade Game Replica][12], [Restaurant Review App][13], and the [Neighborhood Map App][14]. More than the projects though, I got to meet many great people and valuable experience collaborating with other developers in the course.
 
 Without this course, I can truly and honestly say that I would not be where I am today. I gained many valuable experiences and lessons in this 9 month course.
 
-## Job Hunting...dun dun duuuuunnn!
+## Job Hunting...dun dun duuuuunnn
 
 ![a pencil on drafting plans](https://jonathansexton.me/blog/wp-content/uploads/2019/07/sven-mieke-fteR0e2BzKo-unsplash-1024x683.jpg)
 
-Photo by  [Sven Mieke][15]  on  [Unsplash][16]
+Photo by [Sven Mieke][15] on [Unsplash][16]
 
 At this point I had been working diligently (sometimes slacking off as well) for about two years. I did not feel as though I was job ready but a friend who became my mentor told me that I'll never feel ready. He said that I should apply and if I get interviews then let them tell me I'm not ready if that's the case but to not exclude myself from an opportunity.
 
@@ -88,12 +88,12 @@ I decided not to let these disappointments define or destroy my confidence. I st
 
 Here are some metrics about my job search:
 
--   Applications submitted across all platforms:  **271**
--   Any form of contact from company after application:  **28**
--   Phone Interviews:  **7**
--   In person interviews:  **8**
--   Job offers:  **3**  (one was contract with the (small) possibility for full time, one a part time freelance gig, and the eventual offer that I took for a full time position
--   Companies that ignored me after expressing interest:  **Too many to count**
+-   Applications submitted across all platforms: **271**
+-   Any form of contact from company after application: **28**
+-   Phone Interviews: **7**
+-   In person interviews: **8**
+-   Job offers: **3** (one was contract with the (small) possibility for full time, one a part time freelance gig, and the eventual offer that I took for a full time position
+-   Companies that ignored me after expressing interest: **Too many to count**
 
 If you are applying for jobs, in any field, don't let the numbers discourage you! Yes it is disheartening, yes it can be daunting, yes it stinks to fill out an application and never hear anything back, but don't quit! You can do this! I'm proof!
 
@@ -108,7 +108,7 @@ This is by no means an exhaustive list of tips/tricks but below are some pieces 
 -   Just because companies turn you down doesn't mean you're a failure
 -   Show companies you can do the work by building projects outside of tutorials
 -   Ask for help if you need it (this was a hard one for me to learn)
--   Apply for jobs on all of the major platforms but don't forget that platforms like  [GitHub jobs][17]  also exist
+-   Apply for jobs on all of the major platforms but don't forget that platforms like [GitHub jobs][17] also exist
 -   Ensure you take care of yourself - get enough sleep, exercise, eat healthy (it's important for overall health!)
 -   Don't be afraid to take breaks
 -   Don't compare yourself, your job search, your situation, or your skills to others
@@ -117,9 +117,9 @@ This is by no means an exhaustive list of tips/tricks but below are some pieces 
 
 ---
 
-As always, I wish you nothing but the best in all you do. If you need advice or help I'd be glad to do what I can. Connect with me on  [Twitter][18]  or  [LinkedIn][19]. I'm always willing to help and I love meeting new people!
+As always, I wish you nothing but the best in all you do. If you need advice or help I'd be glad to do what I can. Connect with me on [Twitter][18] or [LinkedIn][19]. I'm always willing to help and I love meeting new people!
 
-I also run a personal  [blog][20]  where I write articles related to web development. While you're there consider signing up for my newsletter that I send out once a month with articles and great finds from around the web.
+I also run a personal [blog][20] where I write articles related to web development. While you're there consider signing up for my newsletter that I send out once a month with articles and great finds from around the web.
 
 Have an amazing day and happy coding!
 

@@ -1,7 +1,7 @@
-> * 原文地址：[How to build a reusable animation component using React Hooks](https://www.freecodecamp.org/news/animating-visibility-with-css-an-example-of-react-hooks/)
-> * 原文作者：Christian Sepulveda
-> * 译者：[zlv2s](https://github.com/zlv2s)
-> * 校对者：
+> -   原文地址：[How to build a reusable animation component using React Hooks](https://www.freecodecamp.org/news/animating-visibility-with-css-an-example-of-react-hooks/)
+> -   原文作者：Christian Sepulveda
+> -   译者：[zlv2s](https://github.com/zlv2s)
+> -   校对者：
 
 动画总是会取悦用户。就像你认为的那样，大量的文章也表明，开发者们更喜欢使用 React Hooks 。但我发现自己开始慢慢对 Hooks 产生厌倦了。
 
@@ -9,16 +9,15 @@
 
 我正在开发一个基于 React 的、使用网格布局组合卡片组件的应用，当删除某个卡片组件时，为它添加动画效果，看起来像下面一样：
 
-
 但是，和图中效果相比较始终还是有点细微差别。在我的接下来的解决方案中，很好地利用了 React Hooks。
 
-## 我们将要做什么？
+## 我们将要做什么
 
-- 开始构建一个基本的项目骨架
-- 为元素的消失添加动画效果，解决一些小问题
-- 最终效果实现后，将其重构为一个可复用的动画组件
-- 在顶部导航和侧边导航中使用该动画组件
-- ...（文末需要阅读）
+-   开始构建一个基本的项目骨架
+-   为元素的消失添加动画效果，解决一些小问题
+-   最终效果实现后，将其重构为一个可复用的动画组件
+-   在顶部导航和侧边导航中使用该动画组件
+-   ...（文末需要阅读）
 
 如果你没耐心，这里有整个项目的仓库[地址](https://github.com/csepulv/animated-visibility)，每一步都有相应的标记（链接地址和描述参考 README 文件）
 
@@ -26,10 +25,9 @@
 
 我使用 [create-react-app](https://facebook.github.io/create-react-app/) 创建了一个简单的应用程序，它是一个简单的卡片网格结构，每个单独卡片可以被隐藏。
 
-
 实现代码很简单，效果也很无趣。当用户点击眼睛图标时，我们改变卡片的 `display` 属性。
 
-```
+```plain
 function Box({ word }) {
   const color = colors[Math.floor(Math.random() * 9)];
   const [visible, setVisible] = useState(true);
@@ -66,12 +64,15 @@ npm install --save react-animated-css
 在 `index.html` 中添加 animate.css
 
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" />
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css"
+/>
 ```
 
 在上面的 `Box` 组件中，将渲染结果改为
 
-```
+```plain
 return (
   <Animated animationIn="zoomIn" animationOut="zoomOut" isVisible={visible}>
     <div className="box" style={style}>
@@ -92,7 +93,7 @@ animate.css 会为 `opacity` 和其他 css 属性添加动画；但不能在 `di
 
 所以我们可以添加以下代码。
 
-```
+```plain
 function Box({ word }) {
   const color = colors[Math.floor(Math.random() * 9)];
   const [visible, setVisible] = useState(true);
@@ -127,7 +128,6 @@ function Box({ word }) {
 
 这样我们就能得到想要的效果。
 
-
 ## 构建一个可复用的组件
 
 现在到此为止，但目前有两个问题（对于我来说）
@@ -139,7 +139,7 @@ function Box({ word }) {
 
 我们可以创建一个传统的 React 类组件来管理和动画相关的状态：切换隐藏/显示，设置 `display` 属性的超时时间
 
-```
+```plain
 class AnimatedVisibility extends Component {
   constructor(props) {
     super(props);
@@ -170,7 +170,7 @@ class AnimatedVisibility extends Component {
 
 然后使用它
 
-```
+```plain
 function Box({ word }) {
   const color = colors[Math.floor(Math.random() * 9)];
   const [visible, setVisible] = useState(true);
@@ -202,7 +202,7 @@ function Box({ word }) {
 
 [useEffect](https://reactjs.org/docs/hooks-effect.html) 钩子为 `componentWillReceiveProps` 的使用提供了一种优雅的替代方案。它的代码更简洁，我们还可以使用函数式组件。
 
-```
+```plain
 function AnimatedVisibility({ visible, children }) {
   const [noDisplay, setNoDisplay] = useState(!visible);
   useEffect(() => {
@@ -234,7 +234,7 @@ function AnimatedVisibility({ visible, children }) {
 
 大家都喜欢 Sidebar 和 Navbar，我们来添加一个吧。
 
-```
+```plain
 function ToggleButton({ label, isOpen, onClick }) {
   const icon = isOpen ? (
     <i className="fas fa-toggle-off fa-lg" />
@@ -319,11 +319,11 @@ function App() {
 }
 ```
 
-## 还没结束...
+## 还没结束
 
 到这里我们就可以停下了，但就像我之前提到的关注点分离，我更倾向于避免在 `Box`、`Sidebar` 和 `Navbar` 的 render 方法中混合 `AnimatedVisibility` 组件（代码有点重复）。
 
-我们可以创建一个高阶组件（HOC）。（实际上，我写了一篇关于动画和 HOC 的文章，[如何在React中创建动态微交互](https://medium.com/free-code-camp/how-to-build-animated-microinteractions-in-react-aab1cb9fe7c8)）由于状态管理的原因， HOCs 通常会涉及到类组件。
+我们可以创建一个高阶组件（HOC）。（实际上，我写了一篇关于动画和 HOC 的文章，[如何在 React 中创建动态微交互](https://medium.com/free-code-camp/how-to-build-animated-microinteractions-in-react-aab1cb9fe7c8)）由于状态管理的原因， HOCs 通常会涉及到类组件。
 
 但是使用了 React Hooks，我们只需要组合 HOC 就可以了（函数式编程概念）
 
@@ -377,7 +377,7 @@ export default AnimatedVisibility
 
 然后在 App.js 中使用这些基于函数式的 HOCs
 
-```
+```plain
 function Navbar() {
   return (
     <nav className="bar nav">
@@ -435,10 +435,10 @@ function App() {
 }
 ```
 
-## 接下来呢？
+## 接下来呢
 
 对于简单的动画，可以使用我所提到的方法。如果比较复杂，我会使用像 [react-motion](https://github.com/chenglou/react-motion) 这样的库。
 
-不仅仅是动画，React Hooks 让我们有机会编写可读性高、更简洁的代码。但是，我们需要在思维上有个调整，像  useEffect 这样的 Hooks 不完全是 React 生命周期函数的替代品，你需要深入学习和研究。
+不仅仅是动画，React Hooks 让我们有机会编写可读性高、更简洁的代码。但是，我们需要在思维上有个调整，像 useEffect 这样的 Hooks 不完全是 React 生命周期函数的替代品，你需要深入学习和研究。
 
 我建议看看像 [useHooks.com](https://usehooks.com/) 这样的网站，还有像 [react-use](https://github.com/streamich/react-use) 这样的库（不同钩子用例的集合）。

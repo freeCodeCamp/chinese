@@ -1,19 +1,19 @@
-> * 原文地址：[How to Create a Simple Gantt Chart Using CSS Grid 如何用 CSS 绘制甘特图](https://www.freecodecamp.org/news/create-gantt-chart-using-css-grid/)
-> * 原文作者：Alfrick Opidi
-> * 译者：sheenalu
-> * 校对者：
+> -   原文地址：[How to Create a Simple Gantt Chart Using CSS Grid 如何用 CSS 绘制甘特图](https://www.freecodecamp.org/news/create-gantt-chart-using-css-grid/)
+> -   原文作者：Alfrick Opidi
+> -   译者：sheenalu
+> -   校对者：
 
 ![How to Create a Simple Gantt Chart Using CSS Grid](https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
 甘特图是一种便利的条状图，用于在项目管理中显示任务进度。它以级联水平条形图显示项目活动，宽度表示项目持续时间。
 
-作为前端web设计人员或开发人员，你可以使用甘特图来管理项目并提高团队的工作效率。
+作为前端 web 设计人员或开发人员，你可以使用甘特图来管理项目并提高团队的工作效率。
 
-在本文中，我将向你展示如何用CSS布局绘制简单的甘特图。本文只需使用纯CSS，不需要外部库或其它杂项。
+在本文中，我将向你展示如何用 CSS 布局绘制简单的甘特图。本文只需使用纯 CSS，不需要外部库或其它杂项。
 
-你可以参考  [本教程][1] ，学习如何使用布局系统来应用CSS规则。
+你可以参考 [本教程][1] ，学习如何使用布局系统来应用 CSS 规则。
 
-图表将显示从1月到12月的典型软件开发生命周期过程。
+图表将显示从 1 月到 12 月的典型软件开发生命周期过程。
 
 以下是本课程结束时甘特图的屏幕截图：
 
@@ -21,9 +21,9 @@
 
 让我们开始吧！
 
-## 步骤1: 创建类名为container的div元素
+## 步骤 1: 创建类名为 container 的 div 元素
 
-首先，为甘特图创建一个类名为container的div元素：
+首先，为甘特图创建一个类名为 container 的 div 元素：
 
 ```css
 <div class="container">
@@ -31,33 +31,38 @@
 
 ```
 
-为其添加CSS样式：
+为其添加 CSS 样式：
 
 ```css
-.container {    max-width: 1200px; 
-    min-width: 650px;    margin: 0 auto; 
+.container {
+    max-width: 1200px;
+    min-width: 650px;
+    margin: 0 auto;
     padding: 50px;
 }
 ```
 
-## 创建类名为chart的div元素
+## 创建类名为 chart 的 div 元素
 
-在总容器里创建一个div元素，并将其类名设置为chart。步骤如下：
+在总容器里创建一个 div 元素，并将其类名设置为 chart。步骤如下：
 
 ```css
 <div class="chart">
 
 ```
 
-为其添加CSS样式：
+为其添加 CSS 样式：
 
 ```css
-.chart { 
-    display: grid;    border: 2px solid #000;    position: relative;    overflow: hidden; 
-} 
+.chart {
+    display: grid;
+    border: 2px solid #000;
+    position: relative;
+    overflow: hidden;
+}
 ```
 
-注意：我已设置chart类的  **display**  属性为  **grid.**  因此，其所有直接子元素将自动成为  _网格项_.
+注意：我已设置 chart 类的 **display** 属性为 **grid.** 因此，其所有直接子元素将自动成为 _网格项_.
 
 ## Step 3: 为甘特图创建行
 
@@ -73,22 +78,25 @@
 </div>
 ```
 
-请注意，我已经提供了12个 **span**  元素，它们将横跨整个行，显示项目持续的月份，即从1月到12月。
+请注意，我已经提供了 12 个 **span** 元素，它们将横跨整个行，显示项目持续的月份，即从 1 月到 12 月。
 
-CSS样式如下：
+CSS 样式如下：
 
 ```css
-.chart-row {    display: grid; 
-    grid-template-columns: 50px 1fr; 
-    background-color: #DCDCDC;
+.chart-row {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    background-color: #dcdcdc;
 }
 ```
 
 ```css
-.chart-period { 
-    color:  #fff;    background-color:  #708090 !important;    border-bottom: 2px solid #000;    grid-template-columns: 50px repeat(12, 1fr);
+.chart-period {
+    color: #fff;
+    background-color: #708090 !important;
+    border-bottom: 2px solid #000;
+    grid-template-columns: 50px repeat(12, 1fr);
 }
-
 ```
 
 请注意，我使用了**grid-template-columns** 来指定网格布局中的列数及各列宽度。
@@ -99,36 +107,40 @@ CSS样式如下：
 
 接下来，添加一些纵向贯穿整个图表的线条，使其看上去像盒子一样，这有助于显示每个项目的持续时间。
 
-我仍旧使用12个  **span**  元素来创建线条。
+我仍旧使用 12 个 **span** 元素来创建线条。
 
 ```css
-<div class="chart-row chart-lines"> 
+<div class="chart-row chart-lines">
     <span></span><span></span><span></span>
     <span></span><span></span><span></span>
     <span></span><span></span><span></span>
     <span></span><span></span>    <span></span></div>
 ```
 
-CSS样式如下：
+CSS 样式如下：
 
 ```css
-.chart-lines { 
-    position: absolute;    height: 100%;    width: 100%;    background-color: transparent;    grid-template-columns: 50px repeat(12, 1fr);}
-
+.chart-lines {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    grid-template-columns: 50px repeat(12, 1fr);
+}
 ```
 
 其在浏览器中的效果如下：
 
 ![](https://paper-attachments.dropbox.com/s_71DD472E9787F22210482D610A0DD84B11827762D701C2FF3CA4E87715003165_1567024250393_gantt2.png)
 
-## 步骤4：添加条目项
+## 步骤 4：添加条目项
 
 最后，让我们添加条目来说明长达一年的软件开发过程。
 
-以下例子展示我如何添加条目1：
+以下例子展示我如何添加条目 1：
 
 ```css
-<div class="chart-row">    <div class="chart-row-item">1</div> 
+<div class="chart-row">    <div class="chart-row-item">1</div>
     <ul class="chart-row-bars">        <li class="chart-li-one">Planning</li>
     </ul>
 </div>
@@ -136,52 +148,73 @@ CSS样式如下：
 
 让我描述一下上面代码中发生了什么：
 
--   首先，我在前面已经介绍过了，条目1中的 **div**  元素有一个  **chart-row**类。
+-   首先，我在前面已经介绍过了，条目 1 中的 **div** 元素有一个 **chart-row**类。
 -   含有**chart-row-item** 类的**div** 用于对甘特图的条目进行编号。其样式如下：
 
 ```css
-.chart-row-item { 
-    background-color: #808080;    border: 1px solid #000;    border-top: 0;  border-left: 0;    padding: 20px 0;  font-size: 15px;    font-weight: bold;    text-align: center;
+.chart-row-item {
+    background-color: #808080;
+    border: 1px solid #000;
+    border-top: 0;
+    border-left: 0;
+    padding: 20px 0;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
 }
 ```
 
 -   为了在甘特图上显示任务，我创建了一个无序列表，并将其样式设置为显示水平条形图，该条形图的长度显示了任务的持续时间。
 
-**chart-row-bars** 的CSS样式如下：
+**chart-row-bars** 的 CSS 样式如下：
 
 ```css
-.chart-row-bars { 
-    list-style: none; 
-    display: grid;  padding: 15px 0;    margin: 0;    grid-template-columns: repeat(12, 1fr); 
-    grid-gap: 10px 0;    border-bottom: 1px solid #000;
+.chart-row-bars {
+    list-style: none;
+    display: grid;
+    padding: 15px 0;
+    margin: 0;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px 0;
+    border-bottom: 1px solid #000;
 }
 ```
 
--   条目项定义在li标签里，其样式如下：
+-   条目项定义在 li 标签里，其样式如下：
 
 ```css
-li {    font-weight: 450;    text-align: left;    font-size: 15px;  min-height: 15px;    background-color: #708090;    padding: 5px 15px;  color: #fff;    overflow: hidden;    position: relative;    cursor: pointer;    border-radius: 15px;
- } 
-
+li {
+    font-weight: 450;
+    text-align: left;
+    font-size: 15px;
+    min-height: 15px;
+    background-color: #708090;
+    padding: 5px 15px;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border-radius: 15px;
+}
 ```
 
 请注意，我使用了**grid-column**属性来指定项目持续时间。
 
-例如，在“开发”条目中，grid-column属性为 **grid-column: 3/9;**  这使该任务从网格的3月横跨到8月。
+例如，在“开发”条目中，grid-column 属性为 **grid-column: 3/9;** 这使该任务从网格的 3 月横跨到 8 月。
 
-条目1在浏览器中的显示效果如下：
+条目 1 在浏览器中的显示效果如下：
 
 ![](https://paper-attachments.dropbox.com/s_71DD472E9787F22210482D610A0DD84B11827762D701C2FF3CA4E87715003165_1567024868326_gantt3.png)
 
-我采用与条目1一样的方法将其他条目添加到图表中。最终，它生成了一个漂亮的甘特图，正如我早前展示的一样。
+我采用与条目 1 一样的方法将其他条目添加到图表中。最终，它生成了一个漂亮的甘特图，正如我早前展示的一样。
 
 ## 总结
 
-就是这样！你可以在CodePen上查看本教程的全部代码： 
+就是这样！你可以在 CodePen 上查看本教程的全部代码：
 
-如你所见，用CSS绘制甘特图并不复杂。你可以使用它来高效管理web开发项目,并确保每个人都朝着规定的目标前进。
+如你所见，用 CSS 绘制甘特图并不复杂。你可以使用它来高效管理 web 开发项目,并确保每个人都朝着规定的目标前进。
 
-此外，甘特图也可于其它行业的项目管理。例如，如果你在卖  [堆肥厕所][2]，可以使用甘特图来显示一段时期的销售数量。
+此外，甘特图也可于其它行业的项目管理。例如，如果你在卖 [堆肥厕所][2]，可以使用甘特图来显示一段时期的销售数量。
 
 当然，甘特图可以用来做很多事情，我只是触及了一些皮毛。
 
@@ -189,7 +222,7 @@ li {    font-weight: 450;    text-align: left;    font-size: 15px;  min-height: 
 
 你有什么问题或意见吗？
 
-请通过下面的Twitter联系我，我会尽我所能做出回复。
+请通过下面的 Twitter 联系我，我会尽我所能做出回复。
 
 [1]: https://www.freecodecamp.org/learn/responsive-web-design/css-grid/
 [2]: https://www.waterless-toilet.com/top-6-best-composting-toilets-to-choose/

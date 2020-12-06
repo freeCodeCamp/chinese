@@ -5,7 +5,7 @@
 
 ![Linux 命令手册](https://www.freecodecamp.org/news/content/images/size/w2000/2020/10/cover-1.jpg)
 
-这本《Linux 命令手册》将涵盖 60 个作为开发者时，你会需要的核心 Bash 命令。每个命令都附有代码示例和用法提示。
+这本《Linux 命令手册》将涵盖 60 个作为开发者时，你需要用到的核心 Bash 命令。每个命令都附有代码示例和用法提示。
 
 这本手册遵循二八定律：你花两成的时间学习一个主题，便可获得其中八成的知识。
 
@@ -86,7 +86,7 @@
 -   [Linux 中的  `uname`  命令][60]
 -   [Linux 中的  `env`  命令][61]
 -   [Linux 中的  `printenv`  命令][62]
--   [结论][63]
+-   [结语][63]
 
 ## Linux 和 Shell 简介
 
@@ -98,7 +98,7 @@ Linux 是一种操作系统， 就像 macOS 和 Windows 一样。
 
 它驱动了绝大多数的互联网服务器，是构建任何设施的“地基”，但还不仅如此。 Android 操作系统（中文也称“安卓”）实际上是基于（一种修改版的）Linux 构建的。
 
-Linux 的“内核” （我们称之为  _kernel_ ）诞生于 1991 年的芬兰， 从最初的简陋构造到今天，已经走了很长的一段路。 后来它成为了 GNU 操作系统的内核，于是出现了 GNU/Linux 组合系统。
+Linux 的“内核” （我们称之为  _kernel_ ）诞生于 1991 年的芬兰，从最初的简陋构造到今天，已经走了很长的一段路。后来它成为了 GNU 操作系统的内核，于是出现了 GNU/Linux 组合系统。
 
 Linux 可以让你拥有用计算机做任何事情的自由。这是微软、苹果、谷歌这样的大公司永远不会向用户提供的。
 
@@ -108,9 +108,9 @@ Linux 可以让你拥有用计算机做任何事情的自由。这是微软、�
 
 它的开发人员通常来自社区志愿者，这其中一些人是独立参与开发工作的，还有一些人是由于受雇于使用它的公司而参与的，但从来没有任何一家商业公司可以擅自决定 Linux 所含的内容，或者是某个项目的优先级。 
 
-你可以将 Linux 作为日常使用的系统。我当前使用 macOS ，因为我很喜欢它的应用程序和界面设计（同时我也是一名 iOS 和 Mac 应用开发者）。但在使用  macOS 之前，我一直使用 Linux 作为我的主要计算机操作系统。 
+你可以将 Linux 作为日常使用的系统。我当前使用 macOS ，因为我很喜欢它的应用程序和界面设计（同时我也是一名 iOS 和 Mac 应用开发者）。但在此之前，我一直使用 Linux 作为我的主要计算机操作系统。 
 
-在上面，没有人能够支配你可以运行哪些应用程序，或者使用特定的应用程序收集你的个人资料、位置和其他信息。
+在 Linux 上面，没有人能够支配你可以运行哪些应用程序，或者使用特定的应用程序收集你的个人资料、位置和其他信息。
 
 Linux 还有一个特别之处，那就是“世界上不只有一个 Linux”，这和 Windows 还有 macOS 是不一样的。对于 Linux，我们有**发行版**的概念。
 
@@ -126,13 +126,13 @@ Linux 还有一个特别之处，那就是“世界上不只有一个 Linux”�
 
 我自己并没有专门的“Linux 电脑”。
 
-如果你在使用 Mac，你只需要了解一件事：macOS 的皮下实际上是 UNIX 操作系统，而 GNU/Linux 是 UNIX 的自由替代品，因此 macOS 和 GNU/Linux 在很多理念和一些软件的使用上，是共通的。
+如果你在使用 Mac，你只需要了解一件事：抛去外壳，macOS 实际上是一种 UNIX 操作系统，而 GNU/Linux 是 UNIX 的自由替代品，因此 macOS 和 GNU/Linux 在很多理念和一些软件的使用上，是共通的。
 
 > [UNIX][64] 是对 20 世纪 70 年代开始在一些大型公司和机构中使用的多种操作系统的统称。 
 
 在 macOS 的终端里，你同样可以使用我在这本手册中介绍的任何命令。
 
-微软官方提供了  [适用于 Linux 的 Windows 子系统][65]，你可以（甚至可以说应该！）将其安装在 Windows 上。这可以使得在 PC 上运行 Linux 有一种更简单的方式。
+微软官方提供了[适用于 Linux 的 Windows 子系统][65]，你可以（甚至是有必要！）将其安装在 Windows 上。这让在 PC 上运行 Linux 有了一种更简单的方式。
 
 但大多数时候，人们会通过 VPS （虚拟专用服务器，如 DigitalOcean） 在云端运行 Linux 电脑。
 
@@ -152,42 +152,42 @@ Shell 有很多种，这里主要介绍 Unix shell，通常在 Linux 和 macOS �
 
 Bash 的全称是  _Bourne-again shell_。  `sh`  是专有软件，并不开放源码，Bash 则在 1989 年由 GNU 计划和自由软件基金会创建，意在为其提供一个免费的替代品。由于 Bourne shell 需要付费才能在项目中使用，因而 Bash 变得非常流行。
 
-如果你在使用 Mac，可以试试打开终端，默认的 Shell 一般是 ZSH（在 Catalina 版本前使用的是 Bash）。
+如果你在使用 Mac，可以试试打开终端，默认的 Shell 一般是 ZSH（在 Catalina 版本之前，默认是 Bash）。
 
-你可以在你的系统上配置和运行各种 Shell，比如我使用的是 Fish shell。
+你可以在你的系统上配置和运行各种 Shell，譬如我使用的是 Fish shell。
 
 每一种 Shell 都有其独特的功能和高级的用法，但在大多数的操作上是相通的：它们可以让你执行程序，你也可以对它们进行编程。
 
 在本手册的余下部分，我们将详细探究那些人们最常用到的命令。
 
-## The Linux  `man`  command
+## Linux 中的  `man`  命令
 
   
-The first command I'll introduce will help you understand all the other commands.
+我们要介绍的第一条命令，将帮助你了解剩下的其他命令。
 
-Every time I don't know how to use a command, I type  `man <command>`  to get the manual:
+每当我不记得某条命令的用法时，我会输入  `man <命令名>`  获取它的说明：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-07-04-at-18.42.40.png)
 
-This is a man (from  _\_manual\__) page. Man pages are an essential tool to learn as a developer. They contain so much information that sometimes it's almost too much.  
-The above screenshot is just 1 of 14 screens of explanation for the  `ls`  command.
+这是一个 man （取自 _\_manual\__ 的缩写）页面。Man 页面是你学习开发时的必备工具。它通常包含非常多的信息（有时几乎可以说太多了！）。
+上方的屏幕截图，实际上只是  `ls`  命令的 14 页用法指南中的第 1 页。
 
-Most of the time when I need to learn a command quickly I use this site called  **tldr pages**:  [https://tldr.sh][66]. It's a command you can install, which you then run like this:  `tldr <command>`. It gives you a very quick overview of a command, with some handy examples of common usage scenarios:
+大多数时候，如果我需要快速了解某个命令的用法，我会访问一个叫做**tldr pages**的网站： [https://tldr.sh][66]。 它也可以作为一条命令安装在你的电脑上。比如，你可以运行 `tldr <命令名>` ，它就会快速提供这条命令的概述，以及一些常见的场景和用法指引：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-07.35.41.png)
 
-This is not a substitute for  `man`, but a handy tool to avoid losing yourself in the huge amount of information present in a  `man`  page. Then you can use the  `man`  page to explore all the different options and parameters you can use on a command.
+需要注意的是，这条命令并不是 `man` 的替代品，而只是一个帮助你摆脱迷失在 `man` 页面上大量信息里的便利工具。之后你还是可以在 `man` 页面查阅某个命令可用的不同选项和详细参数。 
 
-## The Linux  `ls`  command
+## Linux 中的  `ls`  命令
 
-Inside a folder you can list all the files that the folder contains using the  `ls`  command:
+在文件夹内，你可以使用 `ls` 命令列出其中包含的全部文件：
 
 ```bash
 ls
 
 ```
 
-If you add a folder name or path, it will print that folder's contents:
+如果你在后面加上别的文件夹名字或者路径，它就会列出那个文件夹的内容：
 
 ```bash
 ls /bin
@@ -196,7 +196,7 @@ ls /bin
 
 ![Screenshot-2019-02-09-at-18.50.14](https://www.freecodecamp.org/news/content/images/2020/10/Screenshot-2019-02-09-at-18.50.14.png)
 
-`ls`  accepts a lot of options. One of my favorite combinations is  `-al`. Try it:
+`ls`  支持很多参数。我喜欢的其中一个是 `-al` 。试试看：
 
 ```bash
 ls -al /bin
@@ -205,27 +205,27 @@ ls -al /bin
 
 ![Screenshot-2019-02-09-at-18.49.52](https://www.freecodecamp.org/news/content/images/2020/10/Screenshot-2019-02-09-at-18.49.52.png)
 
-Compared to the plain  `ls`  command, this returns much more information.
+与常规的  `ls`  命令相比，这会返回更多的信息。
 
-You have, from left to right:
+你可以看到（从左至右）：
 
--   the file permissions (and if your system supports ACLs, you get an ACL flag as well)
--   the number of links to that file
--   the owner of the file
--   the group of the file
--   the file size in bytes
--   the file's last modified datetime
--   the file name
+-   文件权限（如果你的系统支持 ACL，这里也会有一个 ACL 标识）
+-   链接到该文件的数量
+-   该文件的所有者
+-   该文件的用户组
+-   文件大小（单位为字节）
+-   文件最后的修改日期
+-   文件名
 
-This set of data is generated by the  `l`  option. The  `a`  option instead also shows the hidden files.
+这串数据是由 `l` 参数产生的，而 `a` 参数则用来包含被隐藏的文件。
 
-Hidden files are files that start with a dot (`.`).
+隐藏文件的文件名通常以英文句号（ `.` ）开头。
 
-## The Linux  `cd`  command
+## Linux 中的  `cd`  命令
 
-Once you have a folder, you can move into it using the  `cd`  command.  `cd`  means  **c**hange  **d**irectory. You invoke it specifying a folder to move into. You can specify a folder name, or an entire path.
+假如有一个文件夹，那么你可以用 `cd` 命令来打开它。 `cd` 是 **c**hange  **d**irectory（改变目录）的缩写。同样，你可以在后面加上文件夹的名字，或完整的路径，来访问某个特定的文件夹。
 
-Example:
+示例：
 
 ```bash
 mkdir fruits
@@ -233,18 +233,18 @@ cd fruits
 
 ```
 
-Now you are in the  `fruits`  folder.
+现在你进入了  `fruits`  文件夹。
 
-You can use the  `..`  special path to indicate the parent folder:
+你可以使用 `..` 这个特殊的路径来代指上一层文件夹。
 
 ```bash
-cd .. #back to the home folder
+cd .. #回到上级文件夹
 
 ```
 
-The # character indicates the start of the comment, which lasts for the entire line after it's found.
+井号（#）表示注释的开始，在它之后的整行内容都是注释。
 
-You can use it to form a path:
+你可以用它来组成特定的路径：
 
 ```bash
 mkdir fruits
@@ -254,27 +254,27 @@ cd ../cars
 
 ```
 
-There is another special path indicator which is  `.`, and indicates the  **current**  folder.
+另一个特殊路径是 `.`，它指代的是**当前所在的**文件夹。
 
-You can also use absolute paths, which start from the root folder  `/`:
+你也可以使用绝对路径，也就是从根文件夹 `/` 开头的位置：
 
 ```bash
 cd /etc
 
 ```
 
-## The Linux  `pwd`  command
+## Linux 中的  `pwd`  命令
 
-Whenever you feel lost in the filesystem, call the  `pwd`  command to know where you are:
+如果你在文件系统里迷路了，输入 `pwd` ，它会显示你现在的位置：
 
 ```bash
 pwd
 
 ```
 
-It will print the current folder path.
+这条命令输出当前所在文件夹的路径。
 
-## The Linux  `mkdir`  command
+## Linux 中的  `mkdir`  命令
 
 You create folders using the  `mkdir`  command:
 
@@ -301,7 +301,7 @@ Options in UNIX commands commonly take this form. You add them right after the c
 
 You can find which options a command supports by typing  `man <commandname>`. Try now with  `man mkdir`  for example (press the  `q`  key to esc the man page). Man pages are the amazing built-in help for UNIX.
 
-## The Linux  `rmdir`  command
+## Linux 中的  `rmdir`  命令
 
 Just as you can create a folder using  `mkdir`, you can delete a folder using  `rmdir`:
 
@@ -332,7 +332,7 @@ Be careful as this command does not ask for confirmation and it will immediately
 
 There is no  **bin**  when removing files from the command line, and recovering lost files can be hard.
 
-## The Linux  `mv`  command
+## Linux 中的  `mv`  命令
 
 Once you have a file, you can move it around using the  `mv`  command. You specify the file current path, and its new path:
 
@@ -354,7 +354,7 @@ mv pear apple fruits #pear and apple moved to the fruits folder
 
 ```
 
-## The Linux  `cp`  command
+## Linux 中的  `cp`  命令
 
 You can copy a file using the  `cp`  command:
 
@@ -372,7 +372,7 @@ cp -r fruits cars
 
 ```
 
-## The Linux  `open`  command
+## Linux 中的  `open`  命令
 
 The  `open`  command lets you open a file using this syntax:
 
@@ -404,7 +404,7 @@ open <application name>
 
 ```
 
-## The Linux  `touch`  command
+## Linux 中的  `touch`  命令
 
 You can create an empty file using the  `touch`  command:
 
@@ -415,7 +415,7 @@ touch apple
 
 If the file already exists, it opens the file in write mode, and the timestamp of the file is updated.
 
-## The Linux  `find`  command
+## Linux 中的  `find`  命令
 
 The  `find`  command can be used to find files or folders matching a particular search pattern. It searches recursively.
 
@@ -506,7 +506,7 @@ find . -type f -exec cat {} \;
 
 Notice the terminating  `\;`.  `{}`  is filled with the file name at execution time.
 
-## The Linux  `ln`  command
+## Linux 中的  `ln`  命令
 
 The  `ln`  command is part of the Linux file system commands.
 
@@ -567,7 +567,7 @@ Now if you delete the original file, the links will be broken, and the shell wil
 
 ![Screen-Shot-2020-09-02-at-11.27.03](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-02-at-11.27.03.png)
 
-## The Linux  `gzip`  command
+## Linux 中的  `gzip`  命令
 
 You can compress a file using the gzip compression protocol named  [LZ77][67]  using the  `gzip`  command.
 
@@ -629,7 +629,7 @@ gzip -d filename.gz
 
 ```
 
-## The Linux  `gunzip`  command
+## Linux 中的  `gunzip`  命令
 
 The  `gunzip`  command is basically equivalent to the  `gzip`  command, except the  `-d`  option is always enabled by default.
 
@@ -649,7 +649,7 @@ gunzip -c filename.gz > anotherfilename
 
 ```
 
-## The Linux  `tar`  command
+## Linux 中的  `tar`  命令
 
 The  `tar`  command is used to create an archive, grouping multiple files in a single file.
 
@@ -701,7 +701,7 @@ tar -xf archive.tar.gz
 
 ```
 
-## The Linux  `alias`  command
+## Linux 中的  `alias`  命令
 
 It's common to always run a program with a set of options that you like using.
 
@@ -743,7 +743,7 @@ alias lscurrent='ls $PWD'
 
 $PWD refers to the current folder the shell is in. If you now navigate away to a new folder,  `lscurrent`  lists the files in the new folder, whereas  `lsthis`  still lists the files in the folder where you were when you defined the alias.
 
-## The Linux  `cat`  command
+## Linux 中的  `cat`  命令
 
 Similar to  [`tail`][68]  in some ways, we have  `cat`. Except  `cat`  can also add content to a file, and this makes it super powerful.
 
@@ -786,7 +786,7 @@ You can only add a number to non-blank lines using  `-b`, or you can also remove
 
 `cat`  is often used in combination with the pipe operator  `|`  to feed a file's content as input to another command:  `cat file1 | anothercommand`.
 
-## The Linux  `less`  command
+## Linux 中的  `less`  命令
 
 The  `less`  command is one I use a lot. It shows you the content stored inside a file, in a nice and interactive UI.
 
@@ -808,7 +808,7 @@ This doesn't happen by default, and you only see the file version at the time yo
 
 You can open multiple files, and navigate through them using  `:n`  (to go to the next file) and  `:p`  (to go to the previous).
 
-## The Linux  `tail`  command
+## Linux 中的  `tail`  命令
 
 The best use case of tail in my opinion is when called with the  `-f`  option. It opens the file at the end, and watches for file changes.
 
@@ -837,7 +837,7 @@ tail -n +10 <filename>
 
 `tail`  can do much more and as always my advice is to check  `man tail`.
 
-## The Linux  `wc`  command
+## Linux 中的  `wc`  命令
 
 The  `wc`  command gives us useful information about a file or input it receives via pipes.
 
@@ -888,7 +888,7 @@ wc -m test.txt
 
 ```
 
-## The Linux  `grep`  command
+## Linux 中的  `grep`  命令
 
 The  `grep`  command is a very useful tool. When you master it, it will help you tremendously in your day to day coding.
 
@@ -940,7 +940,7 @@ Another thing you might find very useful is to invert the result, excluding the 
 
 ![Screen-Shot-2020-09-04-at-09.42.04](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-09.42.04.png)
 
-## The Linux  `sort`  command
+## Linux 中的  `sort`  命令
 
 Suppose you have a text file which contains the names of dogs:
 
@@ -977,7 +977,7 @@ ls | sort
 
 ![Screen-Shot-2020-09-07-at-08.01.27](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-08.01.27.png)
 
-## The Linux  `uniq`  command
+## Linux 中的  `uniq`  命令
 
 `uniq`  is a command that helps you sort lines of text.
 
@@ -1032,7 +1032,7 @@ to then sort those lines by most frequent:
 
 ![Screen-Shot-2020-09-07-at-08.37.49](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-08.37.49.png)
 
-## The Linux  `diff`  command
+## Linux 中的  `diff`  命令
 
 `diff`  is a handy command. Suppose you have 2 files, which contain almost the same information, but you can't find the difference between the two.
 
@@ -1070,7 +1070,7 @@ There are many more options you can explore in the man page by running  `man dif
 
 ![Screen-Shot-2020-09-07-at-09.02.32](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-09.02.32.png)
 
-## The Linux  `echo`  command
+## Linux 中的  `echo`  命令
 
 The  `echo`  command does one simple job: it prints to the output the argument passed to it.
 
@@ -1151,7 +1151,7 @@ echo {1..5}
 
 `![Screen-Shot-2020-09-03-at-15.47.19](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-15.47.19.png)`
 
-## ``The Linux  `chown`  command``
+## Linux 中的  `chown`  命令
 
 `Every file/directory in an Operating System like Linux or macOS (and every UNIX system in general) has an  **owner**.`
 
@@ -1208,7 +1208,7 @@ chgrp <group> <filename>
 
 ```
 
-## ``The Linux  `chmod`  command``
+## Linux 中的  `chmod`  命令
 
 `Every file in the Linux / macOS Operating Systems (and UNIX systems in general) has 3 permissions: read, write, and execute.`
 
@@ -1292,7 +1292,7 @@ chmod 644 filename
 
 ```
 
-## ``The Linux  `umask`  command``
+## Linux 中的  `umask`  命令
 
 `When you create a file, you don't have to decide permissions up front. Permissions have defaults.`
 
@@ -1342,7 +1342,7 @@ umask g+r
 
 ```
 
-## ``The Linux  `du`  command``
+## Linux 中的  `du`  命令
 
 ``The  `du`  command will calculate the size of a directory as a whole:``
 
@@ -1380,7 +1380,7 @@ du -h <directory> | sort -nr
 
 `![Screen-Shot-2020-09-04-at-08.22.25](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-08.22.25.png)`
 
-## ``The Linux  `df`  command``
+## Linux 中的  `df`  命令
 
 ``The  `df`  command is used to get disk usage information.``
 
@@ -1396,7 +1396,7 @@ du -h <directory> | sort -nr
 
 `![Screen-Shot-2020-09-08-at-08.41.27](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-08-at-08.41.27.png)`
 
-## ``The Linux  `basename`  command``
+## Linux 中的  `basename`  命令
 
 ``Suppose you have a path to a file, for example  `/Users/flavio/test.txt`.``
 
@@ -1415,7 +1415,7 @@ basename /Users/flavio/test.txt
 
 `![Screen-Shot-2020-09-10-at-08.28.11](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-10-at-08.28.11.png)`
 
-## ``The Linux  `dirname`  command``
+## Linux 中的  `dirname`  命令
 
 ``Suppose you have a path to a file, for example  `/Users/flavio/test.txt`.``
 
@@ -1430,7 +1430,7 @@ dirname /Users/flavio/test.txt
 
 `![Screen-Shot-2020-09-10-at-08.31.08-1](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-10-at-08.31.08-1.png)`
 
-## ``The Linux  `ps`  command``
+## Linux 中的  `ps`  命令
 
 `Your computer is running tons of different processes at all times.`
 
@@ -1485,7 +1485,7 @@ The columns returned by  `ps`  represent some key information.``
 
 `` `TIME`  tells us how long the process has been running.``
 
-## ``The Linux  `top`  command``
+## Linux 中的  `top`  命令
 
 ``The  `top`  command is used to display dynamic real-time information about running processes in the system.``
 
@@ -1509,7 +1509,7 @@ top -o mem
 
 ```
 
-## ``The Linux  `kill`  command``
+## Linux 中的  `kill`  命令
 
 `Linux processes can receive  **signals**  and react to them.`
 
@@ -1561,7 +1561,7 @@ kill -STOP <PID>
 `18`  corresponds to  `CONT`.  
 `15`  corresponds to  `STOP`.``
 
-## ``The Linux  `killall`  command``
+## Linux 中的  `killall`  命令
 
 ``Similar to the  `kill`  command,  `killall`  will send the signal to multiple processes at once instead of sending a signal to a specific process id.``
 
@@ -1581,7 +1581,7 @@ killall -HUP top
 
 ```
 
-## ``The Linux  `jobs`  command``
+## Linux 中的  `jobs`  命令
 
 ``When we run a command in Linux / macOS, we can set it to run in the background using the  `&`  symbol after the command.``
 
@@ -1605,7 +1605,7 @@ Now we can switch back to one of those using  `fg <jobid>`. To stop the program 
 
 ``Running  `jobs -l`  will also print the process id of each job.``
 
-## ``The Linux  `bg`  command``
+## Linux 中的  `bg`  命令
 
 ``When a command is running you can suspend it using  `ctrl-Z`.``
 
@@ -1620,7 +1620,7 @@ I can run  `bg 1`  to resume in the background the execution of the job #1.``
 
 ``I could have also said  `bg`  without any option, as the default is to pick the job #1 in the list.``
 
-## ``The Linux  `fg`  command``
+## Linux 中的  `fg`  命令
 
 ``When a command is running in the background, because you started it with  `&`  at the end (example:  `top &`  or because you put it in the background with the  `bg`  command), you can put it to the foreground using  `fg`.``
 
@@ -1641,7 +1641,7 @@ fg
 
 `![Screen-Shot-2020-09-03-at-16.12.54](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-16.12.54.png)`
 
-## ``The Linux  `type`  command``
+## Linux 中的  `type`  命令
 
 `A command can be one of those 4 types:`
 
@@ -1665,7 +1665,7 @@ fg
 ``![Screen-Shot-2020-09-03-at-16.33.06](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-16.33.06.png)  
 One of the most interesting things here is that for aliases it will tell you what it is aliasing to. You can see the  `ll`  alias, in the case of Bash and Zsh, but Fish provides it by default, so it will tell you it's a built-in shell function.``
 
-## ``The Linux  `which`  command``
+## Linux 中的  `which`  命令
 
 `Suppose you have a command you can execute, because it's in the shell path, but you want to know where it is located.`
 
@@ -1674,7 +1674,7 @@ One of the most interesting things here is that for aliases it will tell you wha
 ``![Screen-Shot-2020-09-03-at-17.22.47](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-17.22.47.png)  
 `which`  will only work for executables stored on disk, not aliases or built-in shell functions.``
 
-## ``The Linux  `nohup`  command``
+## Linux 中的  `nohup`  命令
 
 `Sometimes you have to run a long-lived process on a remote machine, and then you need to disconnect.`
 
@@ -1684,7 +1684,7 @@ One of the most interesting things here is that for aliases it will tell you wha
 
 ``Use  `nohup <command>`  to let the process continue working even after you log out.``
 
-## ``The Linux  `xargs`  command``
+## Linux 中的  `xargs`  命令
 
 ``The  `xargs`  command is used in a UNIX shell to convert input from standard input into arguments to a command.``
 
@@ -1745,7 +1745,7 @@ command1 | xargs -I % /bin/bash -c 'command2 %; command3 %'
 
 > ``You can swap the  `%`  symbol I used above with anything else – it's a variable.``
 
-## ``The Linux  `vim`  editor command``
+## Linux 中的  `vim`  editor 命令
 
 `` `vim`  is a  **very**  popular file editor, especially among programmers. It's actively developed and frequently updated, and there's a big community around it. There's even a  [Vim conference][70]!``
 
@@ -1807,7 +1807,7 @@ At this point you can navigate the file, but you can't add content to it (and be
 
 ``To find out more about Vim I can recommend the  [Vim FAQ][71]. You can also run the  `vimtutor`  command, which should already be installed in your system and will greatly help you start your  `vim`  exploration.``
 
-## ``The Linux  `emacs`  editor command``
+## Linux 中的  `emacs`  editor 命令
 
 `` `emacs`  is an awesome editor and it's historically regarded as  _the_  editor for UNIX systems. Famously,  `vi`  vs  `emacs`  flame wars and heated discussions have caused many unproductive hours for developers around the world.``
 
@@ -1843,7 +1843,7 @@ Or  `ctrl-x`  followed by  `c`  (keep  `ctrl`  pressed).``
 
 ``There is a lot to know about Emacs, certainly more than I am able to write in this little introduction. I encourage you to open Emacs and press  `ctrl-h`  `r`  to open the built-in manual and  `ctrl-h`  `t`  to open the official tutorial.``
 
-## ``The Linux  `nano`  editor command``
+## Linux 中的  `nano`  editor 命令
 
 `` `nano`  is a beginner friendly editor.``
 
@@ -1858,7 +1858,7 @@ Or  `ctrl-x`  followed by  `c`  (keep  `ctrl`  pressed).``
 ``![Screenshot-2019-02-10-at-11.03.51](https://www.freecodecamp.org/news/content/images/2020/10/Screenshot-2019-02-10-at-11.03.51.png)  
 `pico`  is more or less the same, although  `nano`  is the GNU version of  `pico`  which at some point in history was not open source. The  `nano`  clone was made to satisfy the GNU operating system license requirements.``
 
-## ``The Linux  `whoami`  command``
+## Linux 中的  `whoami`  命令
 
 ``Type  `whoami`  to print the user name currently logged in to the terminal session:``
 
@@ -1866,7 +1866,7 @@ Or  `ctrl-x`  followed by  `c`  (keep  `ctrl`  pressed).``
 
 > ``Note: this is different from the  `who am i`  command, which prints more information``
 
-## ``The Linux  `who`  command``
+## Linux 中的  `who`  命令
 
 ``The  `who`  command displays the users logged in to the system.``
 
@@ -1888,7 +1888,7 @@ Or  `ctrl-x`  followed by  `c`  (keep  `ctrl`  pressed).``
 
 `![Screen-Shot-2020-09-03-at-18.07.30](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-18.07.30.png)`
 
-## ``The Linux  `su`  command``
+## Linux 中的  `su`  命令
 
 `While you're logged in to the terminal shell with one user, you might need to switch to another user.`
 
@@ -1910,7 +1910,7 @@ su <username>
 
 ``When you're done, typing  `exit`  in the shell will close that shell, and will return you back to the current user's shell.``
 
-## ``The Linux  `sudo`  command``
+## Linux 中的  `sudo`  命令
 
 `` `sudo`  is commonly used to run a command as root.``
 
@@ -1939,7 +1939,7 @@ sudo -u flavio ls /Users/flavio
 
 ```
 
-## ``The Linux  `passwd`  command``
+## Linux 中的  `passwd`  命令
 
 ``Users in Linux have a password assigned. You can change the password using the  `passwd`  command.``
 
@@ -1965,7 +1965,7 @@ passwd <username> <new password>
 
 `In this case you don't need to enter the old one.`
 
-## ``The Linux  `ping`  command``
+## Linux 中的  `ping`  命令
 
 ``The  `ping`  command pings a specific network host, on the local network or on the Internet.``
 
@@ -1996,7 +1996,7 @@ The command sends a request to the server, and the server returns a response.`
 
 `Usually the nearer the server is geographically, the less time it will take to return back to you. Simple physical laws cause a longer distance to introduce more delay in the cables.`
 
-## ``The Linux  `traceroute`  command``
+## Linux 中的  `traceroute`  命令
 
 `When you try to reach a host on the Internet, you go through your home router. Then you reach your ISP network, which in turn goes through its own upstream network router, and so on, until you finally reach the host.`
 
@@ -2032,7 +2032,7 @@ traceroute -q 1 flaviocopes.com
 
 `![Screen-Shot-2020-09-09-at-16.36.07](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-16.36.07.png)`
 
-## ``The Linux  `clear`  command``
+## Linux 中的  `clear`  命令
 
 ``Type  `clear`  to clear all the previous commands that were run in the current terminal.``
 
@@ -2046,7 +2046,7 @@ traceroute -q 1 flaviocopes.com
 
 ``So you might want to use  `clear -x`  instead, which still clears the screen, but lets you go back to see the previous work by scrolling up.``
 
-## ``The Linux  `history`  command``
+## Linux 中的  `history`  命令
 
 `Every time you run a command, it's memorized in the history.`
 
@@ -2075,7 +2075,7 @@ history | grep docker
 ``![Screen-Shot-2020-09-04-at-08.04.50](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-08.04.50.png)  
 To clear the history, run  `history -c`.``
 
-## ``The Linux  `export`  command``
+## Linux 中的  `export`  命令
 
 ``The  `export`  command is used to export variables to child processes.``
 
@@ -2135,7 +2135,7 @@ export -n TEST
 
 ``Calling  `export`  without any option will list all the exported variables.``
 
-## ``The Linux  `crontab`  command``
+## Linux 中的  `crontab`  命令
 
 `Cron jobs are jobs that are scheduled to run at specific intervals. You might have a command perform something every hour, or every day, or every 2 weeks. Or on weekends.`
 
@@ -2213,7 +2213,7 @@ crontab -l
 
 `![Screen-Shot-2020-09-09-at-18.07.49](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-18.07.49.png)`
 
-## ``The Linux  `uname`  command``
+## Linux 中的  `uname`  命令
 
 ``Calling  `uname`  without any options will return the Operating System codename:``
 
@@ -2239,7 +2239,7 @@ crontab -l
 
 > `Darwin is the name of the kernel of macOS. The kernel is the "core" of the Operating System, while the Operating System as a whole is called macOS. In Linux, Linux is the kernel, and GNU/Linux would be the Operating System name (although we all refer to it as "Linux").`
 
-## ``The Linux  `env`  command``
+## Linux 中的  `env`  命令
 
 ``The  `env`  command can be used to pass environment variables without setting them on the outer environment (the current shell).``
 
@@ -2330,7 +2330,7 @@ env -u HOME node app.js
 
 ```
 
-## ``The Linux  `printenv`  command``
+## Linux 中的  `printenv`  命令
 
 ``Here's a quick guide to the  `printenv`  command, used to print the values of environment variables``
 
@@ -2358,7 +2358,7 @@ printenv PATH
 
 `![Screen-Shot-2020-09-10-at-16.31.20](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-10-at-16.31.20.png)`
 
-## `Conclusion`
+## `结语`
 
 `Thanks a lot for reading this handbook.`
 

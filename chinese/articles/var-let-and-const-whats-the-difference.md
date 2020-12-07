@@ -1,235 +1,234 @@
-> * 原文地址：[Var, Let, and Const – What's the Difference? JavaScript 中的 Var，Let 和 Const 有什么区别](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/)
-> * 原文作者：Sarah Chima Atuonwu
-> * 译者：
-> * 校对者：
+> -   原文地址：[Var, Let, and Const – What's the Difference? JavaScript 中的 Var，Let 和 Const 有什么区别](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/)
+> -   原文作者：Sarah Chima Atuonwu
+> -   译者：@nsuedu
+> -   校对者：
 
 ![Var, Let, and Const – What's the Difference?](https://images.unsplash.com/photo-1493836512294-502baa1986e2?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-A lot of shiny new features came out with ES2015 (ES6). And now, since it's 2020, it's assumed that a lot of JavaScript developers have become familiar with and have started using these features.
+ES2015（ES6）推出了许多闪亮的新功能。 从 2020 年开始，我们假设许多 JavaScript 开发人员已经熟悉并开始使用这些功能。
 
-While this assumption might be partially true, it's still possible that some of these features remain a mystery to some devs.
+尽管这个假设可能部分正确，但是其中某些功能可能对一些开发人员来说仍然是个谜。
 
-One of the features that came with ES6 is the addition of  `let`  and  `const`, which can be used for variable declaration. The question is, what makes them different from good ol'  `var`  which we've been using? If you are still not clear about this, then this article is for you.
+ES6 附带的功能之一是添加了`let`和`const`，可用于变量声明。 问题是，它们与`var`有何不同？ 如果你仍然不清楚-那么读完本文你就知道了 😂。
 
-In this article, we'll discuss  `var`,  `let`  and  `const`  with respect to their scope, use, and hoisting. As you read, take note of the differences between them that I'll point out.
+在本文中，我们将讨论`var`，`let`和`const`的作用域，用途和变量提升。 当你阅读时，请注意我将指出的它们之间的差异。
 
 ## Var
 
-Before the advent of ES6,  `var`  declarations ruled. There are issues associated with variables declared with  `var`, though. That is why it was necessary for new ways to declare variables to emerge. First, let's get to understand  `var`  more before we discuss those issues.
+在 ES6 出现之前，必须使用 `var` 声明。 但是，前端开发出现的一些问题与使用 `var` 声明的变量有关。 这就是为什么必须要有新的方法来声明变量。 首先，让我们在讨论这些问题之前更多地了解 `var`。
 
-### Scope of var
+### var 的作用域
 
-**Scope**  essentially means where these variables are available for use.  `var`  declarations are globally scoped or function/locally scoped.
+**作用域**本质上是指变量/函数可供访问的范围。 `var`可以在全局范围声明或函数/局部范围内声明。
 
-The scope is global when a  `var`  variable is declared outside a function. This means that any variable that is declared with  `var`  outside a function block is available for use in the whole window.
+当在最外层函数的外部声明`var`变量时，作用域是全局的。 这意味着在最外层函数的外部用`var`声明的任何变量都可以在`windows`中使用。
 
-`var`  is function scoped when it is declared within a function. This means that it is available and can be accessed only within that function.
+当在函数中声明`var`时，作用域是局部的。 这意味着它只能在函数内访问。
 
-To understand further, look at the example below.
+要进一步了解，请查看下面的示例。
 
 ```javascript
-    var greeter = "hey hi";
+var greeter = 'hey hi';
 
 function newFunction() {
-    var hello = "hello";
+    var hello = 'hello';
 }
 ```
 
-Here,  `greeter`  is globally scoped because it exists outside a function while  `hello`  is function scoped. So we cannot access the variable  `hello`  outside of a function. So if we do this:
+这里，`greeter`是全局范围的，因为它存在于函数外部，而`hello`是函数范围的。 因此，我们无法在函数外部访问变量`hello`。 因此，如果我们这样做：
 
 ```javascript
-    var tester = "hey hi";
+var tester = 'hey hi';
 function newFunction() {
-    var hello = "hello";
+    var hello = 'hello';
 }
 console.log(hello); // error: hello is not defined
 ```
 
-We'll get an error which is as a result of  `hello`  not being available outside the function.
+我们会收到错误消息，这是由于函数外部没有`hello`导致的。
 
-### var variables can be re-declared and updated
+### var 变量可以重新声明和修改
 
-This means that we can do this within the same scope and won't get an error.
-
-```javascript
-    var greeter = "hey hi";
-    var greeter = "say Hello instead";
-
-```
-
-and this also
+这意味着我们可以在相同的作用域内执行下面的操作，并且不会出错
 
 ```javascript
-    var greeter = "hey hi";
-    greeter = "say Hello instead";
-
+var greeter = 'hey hi';
+var greeter = 'say Hello instead';
 ```
 
-### Hoisting of var
-
-Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. This means that if we do this:
+又比如
 
 ```javascript
-    console.log (greeter);
-    var greeter = "say hello"
-
+var greeter = 'hey hi';
+greeter = 'say Hello instead';
 ```
 
-it is interpreted as this:
+### var 的变量提升
+
+变量提升是 JavaScript 的一种机制:在执行代码之前，变量和函数声明会移至其作用域的顶部。 这意味着如果我们这样做:
 
 ```javascript
-    var greeter;
-    console.log(greeter); // greeter is undefined
-    greeter = "say hello"
-
+console.log(greeter);
+var greeter = 'say hello';
 ```
 
-So  `var`  variables are hoisted to the top of their scope and initialized with a value of  `undefined`.
+生面的代码会被解释为:
 
-### Problem with var
+```javascript
+var greeter;
+console.log(greeter); // greeter is undefined
+greeter = 'say hello';
+```
 
-There's a weakness that comes with `var`. I'll use the example below to explain:
+因此，将`var`声明的变量会被提升到其作用域的顶部，并使用 undefined 值对其进行初始化.
+
+### var 的问题
+
+`var`有一个弱点。 我将使用以下示例进行说明：
 
 ```javascript
     var greeter = "hey hi";
     var times = 4;
 if (times &gt; 3) {
-    var greeter = "say Hello instead"; 
+    var greeter = "say Hello instead";
 }
 
 console.log(greeter) // "say Hello instead"
 ```
 
-So, since  `times > 3`  returns true,  `greeter`  is redefined to  `"say Hello instead"`. While this is not a problem if you knowingly want  `greeter`  to be redefined, it becomes a problem when you do not realize that a variable  `greeter`  has already been defined before.
+由于`times> 3`返回 true，因此将`greeter`重新定义为`saysay Hello`。 如果你有是故意重新定义`greeter`，这段代码是问题的，但是当你不知道之前已经定义了变量`greeter`时，这将成为产生问题。
 
-If you have used  `greeter`  in other parts of your code, you might be surprised at the output you might get. This will likely cause a lot of bugs in your code. This is why  `let`  and  `const`  are necessary.
+如果在代码的其他部分使用了`greeter`,这可能会导致代码中出现许多错误。 这就是为什么需要`let`和`const`的原因。
 
 ## Let
 
-`let`  is now preferred for variable declaration. It's no surprise as it comes as an improvement to  `var`  declarations. It also solves the problem with  `var`  that we just covered. Let's consider why this is so.
+`let`现在已经成为变量声明的首选。 这并不奇怪，因为它是对`var`声明的改进。 它也解决了我们刚刚介绍的`var`问题。 让我们考虑一下为什么会这样。
 
-### let is block scoped
+### let 是块级作用域
 
-A block is a chunk of code bounded by {}. A block lives in curly braces. Anything within curly braces is a block.
+块是由 {} 界定的代码块,大括号中有一个块.大括号内的任何内容都包含在一个块级作用域中.
 
-So a variable declared in a block with  `let`  is only available for use within that block. Let me explain this with an example:
-
-```javascript
-   let greeting = "say Hi";
-   let times = 4;
-
-```
-
-We see that using  `hello`  outside its block (the curly braces where it was defined) returns an error. This is because  `let`  variables are block scoped .
-
-### let can be updated but not re-declared.
-
-Just like  `var`, a variable declared with  `let`  can be updated within its scope. Unlike  `var`, a  `let`  variable cannot be re-declared within its scope. So while this will work:
+因此，在带有`let`的块中声明的变量仅可在该块中使用。 让我用一个例子解释一下
 
 ```javascript
-    let greeting = "say Hi";
-    greeting = "say Hello instead";
+let greeting = 'say Hi';
+let times = 4;
 
+if (times > 3) {
+    let hello = 'say Hello instead';
+    console.log(hello); // "say Hello instead"
+}
+console.log(hello); // hello is not defined
 ```
 
-this will return an error:
+我们看到在其代码块（定义它的花括号）之外使用`hello`会返回错误。 这是因为`let`变量是块范围的.
+
+### let 可以被修改但是不能被重新声明.
+
+就像`var`一样，用`let`声明的变量可以在其范围内被修改。 但与`var`不同的是，`let`变量无法在其作用域内被重新声明。 来看下面的栗子:
 
 ```javascript
-    let greeting = "say Hi";
-    let greeting = "say Hello instead"; // error: Identifier 'greeting' has already been declared
-
+let greeting = 'say Hi';
+greeting = 'say Hello instead';
 ```
 
-However, if the same variable is defined in different scopes, there will be no error:
+上面的代码将会返回一个错误:
 
 ```javascript
-    let greeting = "say Hi";
-    if (true) {
-        let greeting = "say Hello instead";
-        console.log(greeting); // "say Hello instead"
-    }
-    console.log(greeting); // "say Hi"
-
+let greeting = 'say Hi';
+let greeting = 'say Hello instead'; // error: Identifier 'greeting' has already been declared
 ```
 
-Why is there no error? This is because both instances are treated as different variables since they have different scopes.
+但是，如果在不同的作用域中定义了相同的变量，则不会有错误:
 
-This fact makes  `let`  a better choice than  `var`. When using  `let`, you don't have to bother if you have used a name for a variable before as a variable exists only within its scope.
+```javascript
+let greeting = 'say Hi';
+if (true) {
+    let greeting = 'say Hello instead';
+    console.log(greeting); // "say Hello instead"
+}
+console.log(greeting); // "say Hi"
+```
 
-Also, since a variable cannot be declared more than once within a scope, then the problem discussed earlier that occurs with  `var`  does not happen.
+为什么没有错误？ 这是因为两个实例的作用域不同，因此它们会被视为不同的变量。
 
-### Hoisting of let
+这个事实说明:使用`let`,是比`var`更好的选择。 当使用`let`时，你不必费心思考 🤔 变量的名称，因为变量仅在其块级作用域内存在。
 
-Just like `var`,  `let`  declarations are hoisted to the top. Unlike  `var`  which is initialized as  `undefined`, the  `let`  keyword is not initialized. So if you try to use a  `let`  variable before declaration, you'll get a  `Reference Error`.
+同样，由于在一个块级作用域内不能多次声明一个变量，因此不会发生前面讨论的`var`出现的问题。
+
+### let 的变量提升
+
+就像`var`一样，`let`声明也被提升到作用域顶部。
+但不同的是:
+
+-   用`var`声明的变量会被提升到其作用域的顶部，并使用 undefined 值对其进行初始化。
+-   用`let`声明的变量会被提升到其作用域的顶部，不会对值进行初始化。
+
+因此，如果你尝试在声明前使用`let`变量，则会收到`Reference Error`。
 
 ## Const
 
-Variables declared with the  `const`  maintain constant values.  `const`  declarations share some similarities with  `let`  declarations.
+用`const`声明的变量保持常量值。 `const`声明与`let`声明有一些相似之处
 
-### const declarations are block scoped
+### const 声明的变量在块级作用域内
 
-Like  `let`  declarations,  `const`  declarations can only be accessed within the block they were declared.
+像`let`声明一样，`const`声明只能在声明它们的块级作用域中访问
 
-### const cannot be updated or re-declared
+### const 不能被修改并且不能被重新声明
 
-This means that the value of a variable declared with  `const`  remains the same within its scope. It cannot be updated or re-declared. So if we declare a variable with  `const`, we can neither do this:
-
-```javascript
-    const greeting = "say Hi";
-    greeting = "say Hello instead";// error: Assignment to constant variable. 
-
-```
-
-nor this:
+这意味着用`const`声明的变量的值保持不变。 不能修改或重新声明。 因此，如果我们使用`const`声明变量，那么我们将无法做到这一点:
 
 ```javascript
-    const greeting = "say Hi";
-    const greeting = "say Hello instead";// error: Identifier 'greeting' has already been declared
-
+const greeting = 'say Hi';
+greeting = 'say Hello instead'; // error: Assignment to constant variable.
 ```
 
-Every  `const`  declaration, therefore, must be initialized at the time of declaration.
-
-This behavior is somehow different when it comes to objects declared with  `const`. While a  `const`  object cannot be updated, the properties of this objects can be updated. Therefore, if we declare a  `const`  object as this:
+或者这个这样:
 
 ```javascript
-    const greeting = {
-        message: "say Hi",
-        times: 4
-    }
-
+const greeting = 'say Hi';
+const greeting = 'say Hello instead'; // error: Identifier 'greeting' has already been declared
 ```
 
-while we cannot do this:
+因此，每个`const`声明都必须在声明时进行初始化。
+
+当用`const`声明对象时，这种行为却有所不同。 虽然不能更新`const`对象，但是可以更新该对象的属性。 因此，如果我们声明一个`const`对象为
 
 ```javascript
-    const greeting = {
-        words: "Hello",
-        number: "five"
-    } // error:  Assignment to constant variable.
-
+const greeting = {
+    message: 'say Hi',
+    times: 4,
+};
 ```
 
-we can do this:
+同样不能像下面这样做:
 
 ```javascript
-    greeting.message = "say Hello instead";
-
+const greeting = {
+    words: 'Hello',
+    number: 'five',
+}; // error:  Assignment to constant variable.
 ```
 
-This will update the value of  `greeting.message`  without returning errors.
+但我们可以这样做:
 
-### Hoisting of const
+```javascript
+greeting.message = 'say Hello instead';
+```
 
-Just like  `let`,  `const`  declarations are hoisted to the top but are not initialized.
+这将更新`greeting.message`的值，而不会返回错误。
 
-So just in case you missed the differences, here they are:
+### const 的变量提升
 
--   `var`  declarations are globally scoped or function scoped while  `let`  and  `const`  are block scoped.
--   `var`  variables can be updated and re-declared within its scope;  `let`  variables can be updated but not re-declared;  `const`  variables can neither be updated nor re-declared.
--   They are all hoisted to the top of their scope. But while  `var`  variables are initialized with  `undefined`,  `let`  and  `const`  variables are not initialized.
--   While  `var`  and  `let`  can be declared without being initialized,  `const`  must be initialized during declaration.
+就像`let`一样，`const`声明也被提升到顶部，但是没有初始化。
 
-Got any question or additions? Please let me know.
+最后，我们总结一下它们的异同：
 
-Thank you for reading :)
+-   `var`声明是全局作用域或函数作用域，而`let`和`const`是块作用域。
+-   `var`变量可以在其范围内更新和重新声明； `let`变量可以被更新但不能重新声明； `const`变量既不能更新也不能重新声明。
+-   它们都被提升到其作用域的顶端。 但是，虽然使用变量`undefined`初始化了`var`变量，但未初始化`let`和`const`变量。
+-   尽管可以在不初始化的情况下声明`var`和`let`，但是在声明期间必须初始化`const`。
+
+有任何疑问或补充吗？ 请告诉我。
+
+谢谢你的阅读:)

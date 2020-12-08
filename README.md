@@ -89,7 +89,7 @@ npm test
 [5]: https://github.com/freeCodeCamp/news-translation/actions
 [6]: https://www.freecodecamp.org/news/
 [7]: https://chinese.freecodecamp.org/news/
-[8]: https://git-pager.leanapp.cn/Contributing.md
+[8]: https://github.com/freeCodeCamp/news-translation/blob/master/Contributing.md
 [9]: https://github.com/freeCodeCamp/news-translation/wiki/%E7%BF%BB%E8%AF%91%E6%8A%80%E5%B7%A7
 [10]: https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3AReview-awaiting
 [11]: https://chinese.freecodecamp.org/news/

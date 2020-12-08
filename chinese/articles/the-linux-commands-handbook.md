@@ -116,7 +116,7 @@ Linux 还有一个特别之处，那就是“世界上不只有一个 Linux”�
 
 发行版通常由某个公司或组织制作，他们会将 Linux 内核和一些额外的程序与工具整合在一起。
 
-比如，你也许使用过 Debian、Red Hat、Ubuntu，这些可能是最流行的发行版了。
+例如，你也许使用过 Debian、Red Hat、Ubuntu，这些可能是最流行的发行版了。
 
 但实际上还有更多。你甚至还可以制作属于你自己的发行版。然而在大多数情况下，人们会选择一个流行的发行版，因为这些版本通常有大量的用户，以及完善的社区支持。这可以让你花更少的时间，做更多的事，既不需要重复造轮子，同时查找某个问题的解决方案也更为方便。
 
@@ -276,34 +276,34 @@ pwd
 
 ## Linux 中的  `mkdir`  命令
 
-You create folders using the  `mkdir`  command:
+使用 `mkdir` 命令创建新的文件夹：
 
 ```bash
 mkdir fruits
 
 ```
 
-You can create multiple folders with one command:
+这条命令还可以一次创建多个文件夹：
 
 ```bash
 mkdir dogs cars
 
 ```
 
-You can also create multiple nested folders by adding the  `-p`  option:
+你也可以添加 `-p` 参数，创建多个嵌套的文件夹：
 
 ```bash
 mkdir -p fruits/apples
 
 ```
 
-Options in UNIX commands commonly take this form. You add them right after the command name, and they change how the command behaves. You can often combine multiple options, too.
+UNIX 命令的参数通常都是这样的形式，只需要在命令的名字之后加上它们，就可以改变命令的工作方式。多个参数也可以同时使用。
 
-You can find which options a command supports by typing  `man <commandname>`. Try now with  `man mkdir`  for example (press the  `q`  key to esc the man page). Man pages are the amazing built-in help for UNIX.
+你可以通过 Man 页面查找某个命令支持的具体参数，只需要输入 `man <命令名>`。现在，你可以试试输入 `man mkdir`，来查看这一命令的参数（按下字母`q`以退出 Man 页面）。 Man 页面是 UNIX 极佳的内置帮助系统。
 
 ## Linux 中的  `rmdir`  命令
 
-Just as you can create a folder using  `mkdir`, you can delete a folder using  `rmdir`:
+如上所述，`mkdir` 命令可以创建文件夹，与之相反，`rmdir` 命令用来删除文件夹：
 
 ```bash
 mkdir fruits
@@ -311,7 +311,7 @@ rmdir fruits
 
 ```
 
-You can also delete multiple folders at once:
+这个命令也可以一次删除多个文件夹：
 
 ```bash
 mkdir fruits cars
@@ -319,22 +319,22 @@ rmdir fruits cars
 
 ```
 
-The folder you delete must be empty.
+用这个命令删除的文件夹，必须是空的。
 
-To delete folders with files in them, we'll use the more generic  `rm`  command which deletes files and folders, using the  `-rf`  option:
+如果要删除含有内容的文件夹，这里有一个更通用的命令：`rm` ，配合`-rf` 参数即可同时删除文件夹和其中的文件：
 
 ```bash
 rm -rf fruits cars
 
 ```
 
-Be careful as this command does not ask for confirmation and it will immediately remove anything you ask it to remove.
+请小心操作，这个命令在执行时不会向你确认，而是立刻删除你指定的文件。
 
-There is no  **bin**  when removing files from the command line, and recovering lost files can be hard.
+用命令行删除文件，是没有**回收站**存在的，恢复丢失的文件会很难。
 
 ## Linux 中的  `mv`  命令
 
-Once you have a file, you can move it around using the  `mv`  command. You specify the file current path, and its new path:
+当你有一个文件时，你可以用 `mv` 命令移动它。只需要指定文件的当前路径和新路径：
 
 ```bash
 touch test
@@ -342,21 +342,21 @@ mv pear new_pear
 
 ```
 
-The  `pear`  file is now moved to  `new_pear`. This is how you  **rename**  files and folders.
+文件 `pear`  现在被移动到 `new_pear` 了。这也是为文件和目录**重命名**的方法。
 
-If the last parameter is a folder, the file located at the first parameter path is going to be moved into that folder. In this case, you can specify a list of files and they will all be moved in the folder path identified by the last parameter:
+如果你指定的最后路径是一个文件夹，那么前面路径中的文件将被移动到那个文件夹。这时，你可以列出一组要移动的文件，这些文件将被移动到最后一个参数中指定的路径：
 
 ```bash
 touch pear
 touch apple
 mkdir fruits
-mv pear apple fruits #pear and apple moved to the fruits folder
+mv pear apple fruits #文件 pear 和 apple 被移动到 fruits 文件夹
 
 ```
 
 ## Linux 中的  `cp`  命令
 
-You can copy a file using the  `cp`  command:
+ `cp` 命令可以用来复制文件：
 
 ```bash
 touch test
@@ -364,7 +364,7 @@ cp apple another_apple
 
 ```
 
-To copy folders you need to add the  `-r`  option to recursively copy the whole folder contents:
+要复制整个文件夹，可以添加 `-r` 参数来递归复制那个文件夹的内容：
 
 ```bash
 mkdir fruits
@@ -374,46 +374,46 @@ cp -r fruits cars
 
 ## Linux 中的  `open`  命令
 
-The  `open`  command lets you open a file using this syntax:
+ `open`  命令可以让你打开任意一个文件，格式如下：
 
 ```bash
-open <filename>
+open <命令名>
 
 ```
 
-You can also open a directory, which on macOS opens the Finder app with the current directory open:
+你也可以用它打开目录。在 macOS 上，这个命令会打开访达（Finder）并显示你当前指定的目录：
 
 ```bash
-open <directory name>
+open <目录名>
 
 ```
 
-I use it all the time to open the current directory:
+我一直使用下面的命令打开当前目录：
 
 ```bash
 open .
 
 ```
 
-> The special  `.`  symbol points to the current directory, as  `..`  points to the parent directory
+> 特殊符号  `.`  代指当前目录， 而  `..` 代指上级目录（父目录）。
 
-The same command can also be be used to run an application:
+此外，它还可以用来打开一个应用程序：
 
 ```bash
-open <application name>
+open <应用程序名>
 
 ```
 
 ## Linux 中的  `touch`  命令
 
-You can create an empty file using the  `touch`  command:
+`touch` 命令可以用来创建空白的文件：
 
 ```bash
 touch apple
 
 ```
 
-If the file already exists, it opens the file in write mode, and the timestamp of the file is updated.
+如果指定的文件已经存在，那么它将以写入模式打开文件，文件的时间戳（修改日期）也同时更新。
 
 ## Linux 中的  `find`  命令
 
@@ -514,7 +514,7 @@ It's used to create links. What is a link? It's like a pointer to another file, 
 
 We have 2 types of links:  **hard links**  and  **soft links**.
 
-#### Hard links
+#### 硬链接
 
 Hard links are rarely used. They have a few limitations: you can't link to directories, and you can't link to external filesystems (disks).
 
@@ -542,7 +542,7 @@ If you delete the original file, the link will still contain the original file c
 
 ![Screen-Shot-2020-09-02-at-11.26.07](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-02-at-11.26.07.png)
 
-#### Soft links
+#### 软链接
 
 Soft links are different. They are more powerful as you can link to other filesystems and to directories. But keep in mind that when the original is removed, the link will be broken.
 

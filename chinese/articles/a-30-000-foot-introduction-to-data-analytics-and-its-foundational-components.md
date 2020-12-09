@@ -1,7 +1,7 @@
-> * 原文地址：[What is Data Analytics? A 30,000-Foot Intro to Key Data Analysis Concepts 关于数据分析核心概念的详细介绍](https://www.freecodecamp.org/news/a-30-000-foot-introduction-to-data-analytics-and-its-foundational-components/)
-> * 作者：Adam Naor
-> * 译者：
-> * 校对者：
+> -   原文地址：[What is Data Analytics? A 30,000-Foot Intro to Key Data Analysis Concepts 关于数据分析核心概念的详细介绍](https://www.freecodecamp.org/news/a-30-000-foot-introduction-to-data-analytics-and-its-foundational-components/)
+> -   作者：Adam Naor
+> -   译者：
+> -   校对者：
 
 ![What is Data Analytics? A 30,000-Foot Intro to Key Data Analysis Concepts](https://images.unsplash.com/photo-1423189871551-9b8513198c81?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
@@ -27,13 +27,13 @@ The manager of an internet retailing operation selling a single product has foun
 
 Assume that exactly 8 potential customers visit the site every day. Imagine that the manager is on an incentive plan that pays him $300 for any day in which the site generates three or more sales. Otherwise his pay is $100 per day.
 
-a. What is the probability of him earning the $300 on any random day?
+a. What is the probability of him earning the \$300 on any random day?
 
 Answer: ~35%
 
 b. What is the expected value of his pay on any random day?
 
-Answer: $170
+Answer: \$170
 
 c. The manager is offered his choice of two alternative incentive schemes, by which he will receive either (a) no base salary, but a commission of $75 per sale, or (b) a fixed salary of $160 per day, or (c) the original plan outlined above.
 
@@ -59,10 +59,10 @@ Do you have continuous or discrete data? Is your data categorical or numerical?
 
 After answering those questions, you are ready to dive deeper.
 
-Data has three primary types of characteristics:  
+Data has three primary types of characteristics:
 
 1.  Data can be cross-sectional. This means that the data is a snapshot of a pattern or trend. An example is the results of a survey, like the national census.
-2.  Data can be a time series. An example is my test scores,  [wages earned][1]  in a period of time, or how companies measure and  [apply discounts][2]  throughout the year.
+2.  Data can be a time series. An example is my test scores, [wages earned][1] in a period of time, or how companies measure and [apply discounts][2] throughout the year.
 3.  There's also panel data. An example is data that a firm might store in a CRM. Panel data enables multiple subjects and multiple points in time. As storage is becoming increasingly cheap, this form of data is becoming more common.
 
 Now that you know the data types and the primary characteristics of data, I want to provide an overview of how data is distributed.
@@ -97,7 +97,7 @@ Back to our M&M example.
 
 Imagine you did this activity (pulling an M&M out of an imagery jar) an infinite amount of times and got the same result. In other words you only saw red M&Ms. What could you possibly say then?
 
-You would ascertain that it is  _likely_  that only red M&Ms exist in the jar. This is a valid conclusion.
+You would ascertain that it is _likely_ that only red M&Ms exist in the jar. This is a valid conclusion.
 
 Notice that we are not saying “no other types of M&Ms exist”. Rather you are saying that there is a high probability that only red M&Ms exist in the jar.
 
@@ -117,17 +117,16 @@ Your ultimate goal may be to see how often events occur or how many types of out
 
 ## Bringing It All Together: Sampling and Expected Value
 
-Observations are key to data analytics because they can help you answer very specific questions:  
+Observations are key to data analytics because they can help you answer very specific questions:
 
 1.  How likely are things to occur?
-2.  If you have certain odds, what are the payoffs of that event occurring (that is, you will get paid off if a certain event happens)?  
-    
+2.  If you have certain odds, what are the payoffs of that event occurring (that is, you will get paid off if a certain event happens)?
 
 To capture expected value you need to know the probability of an event multiplied by the amount of times the event happens.
 
 Expected payoffs can increase as they fall further from the data’s midpoint. Think about the likelihood of starting a company that is highly successful. Most firms don’t IPO.
 
-But for those that do, the payoffs are very large. When I started a website to  [help people work from home][3], I thought the odds of success were 10% at best.
+But for those that do, the payoffs are very large. When I started a website to [help people work from home][3], I thought the odds of success were 10% at best.
 
 Jeff Bezos famously said that the odds of Amazon being successful were 30%.
 
@@ -147,14 +146,14 @@ Website designer and coder John Bell would like to determine whether it would be
 
 John believes there are four possible levels of demand for his services:
 
--   Very low demand — 1% of companies would use the service; John would lose $100,000.
--   Low demand — 5% of companies would use the service; John would earn $10,000.
--   Moderate demand — 10% of companies would use the service; John would earn $25,000.
--   High demand — 29% of companies would use the service; John would earn $75,000.
+-   Very low demand — 1% of companies would use the service; John would lose \$100,000.
+-   Low demand — 5% of companies would use the service; John would earn \$10,000.
+-   Moderate demand — 10% of companies would use the service; John would earn \$25,000.
+-   High demand — 29% of companies would use the service; John would earn \$75,000.
 
 Based on past experiences in coding and building websites, John assigns the following probabilities to the various demand levels:
 
-```
+```plain
 P(very low demand) = 0.20
 P(low demand) = 0.50
 P(moderate demand) = 0.20
@@ -163,18 +162,18 @@ P(high demand) = 0.10
 
 (a) Set up the decision tree and compute the expected value of offering the service.
 
-```
-.2 * (-100,000) + .5 * (10,000) + .2 * (25,000) + .1 * (75,000) 
+```plain
+.2 * (-100,000) + .5 * (10,000) + .2 * (25,000) + .1 * (75,000)
 = $ -2,500
 ```
 
 (b) Compute the expected value with perfect information for John’s payoff.
 
-```
+```plain
 .5*100,000 + .2*25,000 + .1*75,000 = $17,500
 ```
 
-In other words, John believes he will earn $17,500 if he opens his web design company.
+In other words, John believes he will earn \$17,500 if he opens his web design company.
 
 With that forward looking guidance, John can decide if he wants to take the next steps or look for alternative paths for his skills and time.
 
@@ -194,33 +193,33 @@ Now conceptualize how data analytics is profoundly influencing all of these fiel
 
 Think about the human body.
 
-[Health products][4],  [wellness marketing][5]  programs, and exercise apps all use data analytics to optimize exercises for the human body based on data that we emit (think: heart rates, blood oxygen levels, sleep patterns).
+[Health products][4], [wellness marketing][5] programs, and exercise apps all use data analytics to optimize exercises for the human body based on data that we emit (think: heart rates, blood oxygen levels, sleep patterns).
 
 These tools are using data analytics to assess real-time customizations (sampling), biometric authentication, and sentiment analysis.
 
 Think about software.
 
-[Low code workflow automation][6]  tools use data analytics for predictive experiences and enable developers of varied experience levels to create applications model-driven logic. Data modules are predefined.
+[Low code workflow automation][6] tools use data analytics for predictive experiences and enable developers of varied experience levels to create applications model-driven logic. Data modules are predefined.
 
-Much like with software, education is being transformed by data analytics. Online learning for schools and  [coding apps for kids][7]  rely on data analytics for risk management (when students fall behind) and content retention.
+Much like with software, education is being transformed by data analytics. Online learning for schools and [coding apps for kids][7] rely on data analytics for risk management (when students fall behind) and content retention.
 
 Think about how risk is priced.
 
-Sampling is being used to change how insurance companies like  [True Blue][8]  are pricing insurance policies. More financial institutions and insurance firms are using data analytics to assess credit quality, to price and market insurance contracts, and to automate client interaction.
+Sampling is being used to change how insurance companies like [True Blue][8] are pricing insurance policies. More financial institutions and insurance firms are using data analytics to assess credit quality, to price and market insurance contracts, and to automate client interaction.
 
 Think about website design.
 
-Whether or not you want to apply data analytics to build the next  [call tracking software][9]  or  [fact aggregation site][10], data analytics will help you measure what matters and turn data into actionable insights.
+Whether or not you want to apply data analytics to build the next [call tracking software][9] or [fact aggregation site][10], data analytics will help you measure what matters and turn data into actionable insights.
 
 Think about agriculture.
 
-High-tech plant growers such as  [JoyOrganics][11]  and  [TakeSpruce][12]  are using seed-to-sale cycle tracking to follow plants through stages from cultivation to harvest to extraction.
+High-tech plant growers such as [JoyOrganics][11] and [TakeSpruce][12] are using seed-to-sale cycle tracking to follow plants through stages from cultivation to harvest to extraction.
 
 Farmers are using data analytics to find signals for higher and uncorrelated returns and optimize growing.
 
-Think about  [indoor air quality][13]  and  [natural language processing][14].
+Think about [indoor air quality][13] and [natural language processing][14].
 
-Or the way in which  [CRM software][15]  is built, or how people  [communicate in real time][16].
+Or the way in which [CRM software][15] is built, or how people [communicate in real time][16].
 
 In short, think about the modern world.
 

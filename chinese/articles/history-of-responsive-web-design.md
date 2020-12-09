@@ -1,7 +1,7 @@
-> * 原文地址：[A Brief History of Responsive Web Design 响应式 Web 设计简史](https://www.freecodecamp.org/news/history-of-responsive-web-design/)
-> * 原文作者：Abhishek Chaudhary
-> * 译者：
-> * 校对者：
+> -   原文地址：[A Brief History of Responsive Web Design 响应式 Web 设计简史](https://www.freecodecamp.org/news/history-of-responsive-web-design/)
+> -   原文作者：Abhishek Chaudhary
+> -   译者：
+> -   校对者：
 
 ![A Brief History of Responsive Web Design](https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
@@ -37,15 +37,15 @@ A basic HTML page would look like this:
 
 ```html
 <html>
-<head>
-  <title>FreeCodeCamp</title>  
-</head>
-<body>
-  <h1>FreeCodeCamp</h1>
-    <img src="logo.jpg" height="150" width="150" align="right">
-    <p>Text goes here</p>
-  <p>Text goes here</p>
-</body>
+    <head>
+        <title>FreeCodeCamp</title>
+    </head>
+    <body>
+        <h1>FreeCodeCamp</h1>
+        <img src="logo.jpg" height="150" width="150" align="right" />
+        <p>Text goes here</p>
+        <p>Text goes here</p>
+    </body>
 </html>
 ```
 
@@ -55,7 +55,7 @@ A basic HTML web page
 
 There were no structured or uniform ways of styling HTML elements. But luckily, HTML gave you some customization through special tags.
 
-All these tags even exist today, though some of them were deprecated in HTML5 because they were too basic. For example, there was a  `<marquee>`  tag, a tag for creating sliding text, images and other HTML elements.
+All these tags even exist today, though some of them were deprecated in HTML5 because they were too basic. For example, there was a `<marquee>` tag, a tag for creating sliding text, images and other HTML elements.
 
 You can achieve the same effect can now through CSS alone. But at that time, developers had to create separate tags for every single functionality. (**Fun Fact**: Google has an easter egg if you search "marquee tag." You get to see it in action.)
 
@@ -73,26 +73,27 @@ Now that designers had complete control over the webpage, they had to make sure 
 
 Desktops are still popular today, but a majority of people also use hand-held mobile devices to surf the web. Now designers have less width but a more usable height, as scrolling is very convenient on touch-screen devices compared to desktops.
 
-Websites now had to incorporate  **Responsive Web Design:**
+Websites now had to incorporate **Responsive Web Design:**
 
 > Responsive web design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes.
 
-The most common way of dealing with smaller screens is a  **Sidebar**. A sidebar is like a drawer where links and other not-so-important stuff is kept. Designers just transfer all secondary stuff to the sidebar so that the webpage looks clean.
+The most common way of dealing with smaller screens is a **Sidebar**. A sidebar is like a drawer where links and other not-so-important stuff is kept. Designers just transfer all secondary stuff to the sidebar so that the webpage looks clean.
 
 This is an overused method, however, and sidebars weren't originally intended for this purpose.
 
-Prior to this trend, the  `<frameset>`  and  `<frame>`  tags were very popular, as they allowed designers to embed external web pages.
+Prior to this trend, the `<frameset>` and `<frame>` tags were very popular, as they allowed designers to embed external web pages.
 
-But unlike the now popular  `<iframe>`  tags, these tags were highly unresponsive. This was because they didn't adapt to different screen sizes, and tried to maintain their layout even on smaller screens which looked terrible.
+But unlike the now popular `<iframe>` tags, these tags were highly unresponsive. This was because they didn't adapt to different screen sizes, and tried to maintain their layout even on smaller screens which looked terrible.
 
 ```html
 <frameset rows="100,*">
-  <frame src="header.html"/>
-  <frameset cols="33%,33%,*">Nested frameset
-    <frame src="subframe1.html"/>
-    <frame src="subframe2.html"/>
-    <frame src="subframe3.html"/>
-  </frameset>
+    <frame src="header.html" />
+    <frameset cols="33%,33%,*"
+        >Nested frameset
+        <frame src="subframe1.html" />
+        <frame src="subframe2.html" />
+        <frame src="subframe3.html" />
+    </frameset>
 </frameset>
 ```
 
@@ -110,7 +111,7 @@ Any web designer knows that having to make a transition from a larger to a small
 
 Since there were no guidelines for being responsive back in the day, web designers often used naive ways of putting elements on various parts of the screen.
 
-For example, using  `<table>`  tags.
+For example, using `<table>` tags.
 
 Using a table tag for a layout was a bad practice for various reasons, such as:
 
@@ -120,7 +121,7 @@ Using a table tag for a layout was a bad practice for various reasons, such as:
 
 ## Case Study of Some Large Websites
 
-Let us see how some large websites dealt with this dilemma. We'll take  **YouTube,**  for example.
+Let us see how some large websites dealt with this dilemma. We'll take **YouTube,** for example.
 
 You have likely seen the desktop version of YouTube. It's full of stuff – a header on top, a sidebar on the left, videos stacked around each other, and a footer. Now, most of these things are quite unnecessary for mobile users as they can't utilize them properly.
 
@@ -132,13 +133,13 @@ YouTube might have chosen responsive design, but that would mean hiding these ex
 
 Anyone who has designed a website knows how important website performance is. Each and every thing you put on a page slows it down. So, in YouTube's case, it would be a waste to fetch them from server only to hide them.
 
-And YouTube is old, and so is its design. Modifying already written code has a high chance of breaking stuff that is already working. So instead, YouTube used what is known as  **Dynamic Serving**.
+And YouTube is old, and so is its design. Modifying already written code has a high chance of breaking stuff that is already working. So instead, YouTube used what is known as **Dynamic Serving**.
 
 Dynamic Serving is a method where the server checks whether the device requesting the webpage is a desktop or a mobile. Then it dynamically serves the webpage depending on the type of device.
 
 This method is easy to implement, as designers don't have to deal with different screen sizes. But it's also often discouraged because if not properly configured it can devastate SEO because of duplicate content issues.
 
-These mobile versions are often served through a different subdomain like  **m.<site-name>.com**  to distinguish them.
+These mobile versions are often served through a different subdomain like **m.<site-name>.com** to distinguish them.
 
 This method was used by Facebook, Wikipedia, and other huge websites, for similar reasons. Responsive Web Design is an ideal solution which is difficult to implement.
 
@@ -150,7 +151,7 @@ Also, the problem with native mobile apps was that they were expensive to make, 
 
 These were the problems faced by sites which already existed. For new websites Responsive design became a must in order to compete with other websites.
 
-Google also recently introduced  **mobile-first indexing**  which means that it prefers mobile-friendly websites in search on mobile devices, creating one more reason adapt.
+Google also recently introduced **mobile-first indexing** which means that it prefers mobile-friendly websites in search on mobile devices, creating one more reason adapt.
 
 ### Mobile-first approach
 
@@ -172,7 +173,7 @@ Also, mobile users switch pages much more frequently, so it is important to grab
 
 The web is growing at an incredible rate. People are shifting their businesses online, and competition is stiffer than before.
 
-There is also a discussion as to whether businesses actually need a mobile app anymore. With growth of  **Progressive Web Apps (PWAs)**  and various web API's, the web is much more powerful than before. And most native features like notifications, location, caching, and offline compatibility are now possible with PWAs.
+There is also a discussion as to whether businesses actually need a mobile app anymore. With growth of **Progressive Web Apps (PWAs)** and various web API's, the web is much more powerful than before. And most native features like notifications, location, caching, and offline compatibility are now possible with PWAs.
 
 > A progressive web application is a type of application software delivered through the web, built using common web technologies including HTML, CSS and JavaScript.
 
@@ -198,7 +199,7 @@ As we've seen, technology continues to improve, and the internet continues to be
 
 The shift of web design trends leans more towards performance and user experience. And will continue to do so.
 
-We are also heading towards  **Web 3.0**:
+We are also heading towards **Web 3.0**:
 
 > Web 3.0 is the next generation of Internet technology that heavily relies on the use of machine learning and artificial intelligence (AI). It aims to create more open, connected, and intelligent websites and web applications, which focus on using a machine-based understanding of data.
 
@@ -220,6 +221,6 @@ And unlike the old days, we are not limited to any one tool. We are free to use 
 
 The web is a wonderful place and there are many great websites to get inspired by. Let's keep our fingers crossed and keep moving forward.
 
-_Hope you liked my first article. I invite you to my internet home  [theabbie.github.io][1]  where I keep everything. Thank you for reading._
+_Hope you liked my first article. I invite you to my internet home [theabbie.github.io][1] where I keep everything. Thank you for reading._
 
 [1]: https://theabbie.github.io/

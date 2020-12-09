@@ -1,7 +1,7 @@
-> * 原文：[Lessons Learned from My Journey as a Self-Taught Developer 我在自学编程时犯的 5 个“错误”，可能大部分程序员都会犯](https://www.freecodecamp.org/news/lessons-learned-from-my-journey-as-a-self-taught-developer/)
-> * 作者：Victor Cassone
-> * 译者：
-> * 校对者：
+> -   原文：[Lessons Learned from My Journey as a Self-Taught Developer 我在自学编程时犯的 5 个“错误”，可能大部分程序员都会犯](https://www.freecodecamp.org/news/lessons-learned-from-my-journey-as-a-self-taught-developer/)
+> -   作者：Victor Cassone
+> -   译者：
+> -   校对者：
 
 ![Lessons Learned from My Journey as a Self-Taught Developer](https://www.freecodecamp.org/news/content/images/size/w2000/2020/05/1_DAP7LzvAGemiogLG4lSnWA--1-.png)
 
@@ -133,7 +133,7 @@ Not good.
 
 Luckily, the classwork and guidance from the teacher allowed me to take a step back from my Android app and reflect on my programming abilities. I started to value learning and reigned back my desires to make a completed app.
 
-I've now come to realize that if I would've spoken to just  **one**  experienced developer in those early days, they would’ve seen what I was doing. I could have set my priorities straight, and talked some sense into me. They would’ve helped me correct my path when I was going down useless dead ends (like trying to work with FFMPEG).
+I've now come to realize that if I would've spoken to just **one** experienced developer in those early days, they would’ve seen what I was doing. I could have set my priorities straight, and talked some sense into me. They would’ve helped me correct my path when I was going down useless dead ends (like trying to work with FFMPEG).
 
 Instead, I isolated myself from the world partially because I felt like there wasn’t anyone who could help me.
 
@@ -185,7 +185,7 @@ Landing my first programming job was sort of a random occurrence.
 
 I just moved to Omaha, Nebraska and I had around a year of self-taught development under my belt.
 
-I knew very few people in Omaha, so I searched  [Meetup.com][1]  to try and find other people interested in Android development. I found a Meetup focused on mobile development which covered both iOS and Android development and I decided to go.
+I knew very few people in Omaha, so I searched [Meetup.com][1] to try and find other people interested in Android development. I found a Meetup focused on mobile development which covered both iOS and Android development and I decided to go.
 
 Going to that first meeting was nerve-racking. I spent around 10 minutes in my car at the venue deciding if I should go in or drive off.
 
@@ -217,7 +217,7 @@ Self-taught developers will need to go out into the world and build their networ
 
 Cold calling employers and sending out resumes can work. However, I've found people like hiring people who are close to them in their social network.
 
-Websites like  [Meetup.com][2]  are great for finding monthly programming-specific groups. Even in a pandemic, there are still many virtual Meetups that are very informative and beneficial.
+Websites like [Meetup.com][2] are great for finding monthly programming-specific groups. Even in a pandemic, there are still many virtual Meetups that are very informative and beneficial.
 
 There are also other Slack channels or Discord communities that you can leverage to make meaningful relationships. You can also try reaching out to various people in your area and ask to have a quick 15-minute virtual coffee with them.
 

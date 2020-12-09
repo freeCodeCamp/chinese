@@ -88,7 +88,7 @@ We finalize the design with a Footer section where we add common elements such a
 Creating additional page elements in our wireframe
 在线框图中创建页面元素
 ## Step #3: Using Markup in Wireframes
-## 步骤 #3：在线框图中使用标注
+## 步骤 #3：在线框图中使用标注  
 
 The wireframe is often viewed not just by designers, but by developers, clients, and management. So it's useful to add some markup to each part of the content. This can help guide people viewing your wireframe for the first time. I usually do this at the end of completing a page.
 线框图不仅仅是给设计师看的，通常开发者、客户和管理者也可能会查看。所以，为各部分内容添加适当的标注是很有用的，能够为初次查看这个线框图的读者提供一些指引。我通常在即将完成一个页面时为其添加标注。
@@ -103,37 +103,40 @@ Note that Markup doesn't have to literally explain what the content will eventua
 How to Markup a wireframe
 如何标注线框图
 ## Step #4: Add Other Wireframe Components like Header, Menu, and Footer
+## 步骤 #4：创建其他组件的线框图，如页眉、菜单、页脚等
 
 Now that we have already created a header and footer, we can reuse them for additional pages. If you're working digitally, you can copy-paste headers, footers, and other recurring elements into new page wireframes. (And if you are just using paper and pen, you can always use a razor and a photocopier to achieve the same effect.)
-
+我们已经创建了页眉和页脚，所以可以在新增的页面中复用它们。如果你用的是电子设备，可以用复制粘贴的方式在新页面中复用元素。（如果你用的是纸和笔，那你可以用小刀和复印机来达到同样的效果）
 This allows your wireframe design to remain consistent. Tools like Figma will allow you to create asset components which you can also copy-paste throughout your design. You can even configure them to dynamically update other parts of your wireframe when you change your root component.
-
+这样能让你的设计保持一致性。像 Figma 这样的工具允许你创建通用组件，这些组件可以在整个设计中重复使用。通过配置，这些组件实例甚至能够随着源组件的变化动态更新。
 In our example, we are going to reuse components to build a features page. By creating our first features section component, we can then copy and paste it below several times to build out our entire features page in just a few minutes.
-
+示例中，我们将通过复用组件来创建一个“功能特性”页面。创建一个“功能介绍”组件，再将它复制粘贴几次，就可以在几分钟时间里构建整个页面结构了。
 ![](https://www.freecodecamp.org/news/content/images/2020/08/wireframe-6.gif)
 
 Adding wireframe components and reusing them on different pages
-
+创建组件并复用
 ## Step #5: Features Page and Contact Page
+## 步骤 #5：“功能特性”和“联系我们”页面
 
 It gets easier and easier to building out additional pages once you get started with wireframing and build out some components. With the features page finished, we can create a Contact Us page. All we really have to do is add a few common elements, such as a Google Map, Contact Us form, and some basic contact details like a phone number and email address.
-
+构建好一些通用组件之后，再构建其他页面就变得越来越简单了。“功能特性”页面完成之后，可以开始创建“联系我们”页面，我们只需要在其中添加一些通用组件，比如 Google 地图、“联系我们”表单和一些联系方式。
 In this example, I have small logos for a phone and email, and large blocks to represent where they will be located on the page.
-
+示例中，我给电话号码和邮件地址加上了小图标，用一大块区域来展示访问者所处的地理位置。
 The contact form will be located below (without a box outline), as well as a Google map on the right hand side.
-
+“联系我们”表单放在了下方（没有边框），Google 地图放在了右边。
 ![](https://www.freecodecamp.org/news/content/images/2020/08/wireframe-7.gif)
 
 Wireframing the Contact Us Page
-
+创建“联系我们”页面的线框图
 ## Step #6: Make a Mobile Responsive Wireframe
+## 步骤 #6：创建响应式线框图
 
 No good wireframe can exist these days without a mobile version. This is because much of the web today is viewed on mobile devices.
-
+如今，设计良好的线框图一定要兼容移动端，因为很多人都在移动设备上浏览网页。
 It's good to know how a design might collapse down to smaller viewports. If you are have more time on your hands, you can also build out a tablet version of the responsive wireframe as well.
-
+最好了解一下如何适配小屏设备，如果有时间的话，你还可以构建一个平板电脑版本的响应式线框图。
 In our example, we build out the home page design wireframe section-by-section. Most of the rows and columns are collapsed. And since we're on a mobile viewport, many of the images, texts and blocks reduce in size.
-
+示例中，我们逐段地构建主页内容，大部分行和列的内容都折叠起来了，而且由于我们是在移动视口上，很多图片、文字和区块都会缩小。
 Because of this, it's possible for some of the sections to still have the same amount of height as their respective desktop versions. On the other hand, some sections with lots of images (like the sponsors section) might end up having much more scroll height.
 
 Due to this, I often also add additional markup to show which desktop version sections correspond to which responsive equivalents for the mobile version.

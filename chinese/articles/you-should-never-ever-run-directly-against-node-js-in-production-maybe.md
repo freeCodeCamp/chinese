@@ -1,6 +1,6 @@
 > -   原文地址：[You should never ever run directly against Node.js in production. Maybe.](https://www.freecodecamp.org/news/you-should-never-ever-run-directly-against-node-js-in-production-maybe-7fdfaed51ec6/)
 > -   原文作者：[Burke Holland](https://www.freecodecamp.org/news/author/burkeholland/)
-> -   译者：
+> -   译者：samwangdd
 > -   校对者：
 
 ![You should never ever run directly against Node.js in production. Maybe.](https://cdn-media-1.freecodecamp.org/images/1*Lh8JaRfiqPj9bTrd8a3xgQ.png)

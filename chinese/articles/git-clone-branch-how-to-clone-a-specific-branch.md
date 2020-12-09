@@ -1,6 +1,6 @@
 > * 原文：[Git Clone Branch – How to Clone a Specific Branch 如何 Git Clone 指定分支](https://www.freecodecamp.org/news/git-clone-branch-how-to-clone-a-specific-branch/)
 > * 作者：Bolaji Ayodeji
-> * 译者：
+> * 译者：Tengfei Wang
 > * 校对者：
 
 ![Git Clone Branch – How to Clone a Specific Branch](https://www.freecodecamp.org/news/content/images/size/w2000/2020/06/article-banner--1-.gif)

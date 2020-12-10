@@ -5,15 +5,15 @@
 
 ![You should never ever run directly against Node.js in production. Maybe.](https://cdn-media-1.freecodecamp.org/images/1*Lh8JaRfiqPj9bTrd8a3xgQ.png)
 
-Sometimes I wonder if I know much of anything at all.
+我经常会怀疑自己是否一无所知。
 
-Just a few weeks ago I was talking to a friend who mentioned off-hand, “you would never run an application directly against Node in production”. I nodded vigorously to signal that I _also_ would never ever run against Node in production because……hahaha…….everyone knows that. But I didn’t know that! Should I have known that?!?? AM I STILL ALLOWED TO PROGRAM?
+就在几周前，我跟一个朋友聊天时，他随口提到：“在生产环境里，你绝不要直接在 Node 上运行程序。”我点头如捣蒜，表示我也不会这样做，因为...哈哈哈，你懂的。但实际上我并不知道真正的原因！我早该知道吗？我还可以编程吗？
 
-If I was to draw a Venn Diagram of what I know vs what I feel like everyone else knows, it would look like this……
+如果把我知道的和我觉得其他人都知道的画一个韦恩图，它大概长这样：
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*ThJbM2JMjrnTuHczo0tLqw.png)
 
-By the way, that tiny dot gets smaller the older I get.
+顺便说一下，随着我年龄的增长，那个点会越来越小。
 
 There is a better diagram created by [Alicia Liu][1] that kind of changed my life. She says that it’s more like this……
 

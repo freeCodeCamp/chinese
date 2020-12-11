@@ -18,7 +18,7 @@ If you are considering building a website, you can do a wireframe quickly and ea
 To get started, all you need is a pencil and some paper. (Or if you want to get fancy, an iPad and iPencil like I use in my video tutorial above.)
 只需一支铅笔和一些白纸就可以动手实践了。（如果想要玩点花哨的，也可以像我一样用 iPad 和 iPencil 来做）
 We are going to create a wireframe and show how it allows for a quick, iterative design process. This will create a living piece of documentation that you can use for yourself and for a client. And you can use this to reason through your planning – all before you invest any time in actually coding it.
-我将展示如何快速创建一个可交互的线框图文档，我们可以用它给客户做演示，它也可以用在开发过程中——先评估设计，再决定是否编码实现。
+我将展示如何快速创建一个可交互的线框图文档，我们可以用它给客户做演示，也可以把它用在开发过程中——先评估设计，再决定是否编码实现。
 Here are some steps we'll cover in this article (and in the accompanying video tutorial):
 步骤如下（视频中也是如此）：
 1.  Sitemap planning
@@ -30,7 +30,7 @@ Here are some steps we'll cover in this article (and in the accompanying video t
 1.  规划网站地图
 2.  创建主页的线框图
 3.  在线框图中使用标记
-4.  创建其他组件的线框图（header，menu，footer）
+4.  创建其他组件的线框图（页眉，菜单，页脚）
 5.  创建功能特性页面和联系方式页面的线框图
 6.  创建响应式线框图
 
@@ -61,7 +61,7 @@ Creating a homepage wireframe
 ## 步骤 #2：创建主页线框图
 
 We are going to create our first wireframe page. If you haven't wireframed before, the process is quite simple. Each aspect of a website is represented with a shape or simple graphic, such as:
-开始创建第一个页面。创建过程很简单，我们使用简单的几何图形来表示页面元素，如：
+开始创建第一个页面。过程很简单，我们使用简单的几何图形来表示页面元素，如：
 -   boxes with diagonal lines through them to represent images
 -   horizontal lines to represent paragraphs of text
 -   and a circle with an L in it to represent your logo.
@@ -97,7 +97,7 @@ In our example, let's markup the homepage and label each part of the content wit
 Aspects you want to markup include items such as sections, titles, contact forms, and what images might be.
 这些内容可能需要标注：各个版块、标题、表单以及图片内容。
 Note that Markup doesn't have to literally explain what the content will eventually be – just what it represents. So instead of putting in the actual "Example of intro title", you can label the title as "Intro Title."
-注意，标注不必指定最终展示的准确内容，只要说明它表示什么就行了。所以，比起“一个示例标题”，你更应该使用“标题”来标注。
+注意，标注不必指定最终展示的准确内容，只要说明它表示什么就行了。所以，比起标注准确内容，你更应该使用概括性文字来做标注。
 ![](https://www.freecodecamp.org/news/content/images/2020/08/wireframe-5.gif)
 
 How to Markup a wireframe
@@ -110,7 +110,7 @@ Now that we have already created a header and footer, we can reuse them for addi
 This allows your wireframe design to remain consistent. Tools like Figma will allow you to create asset components which you can also copy-paste throughout your design. You can even configure them to dynamically update other parts of your wireframe when you change your root component.
 这样能让你的设计保持一致性。像 Figma 这样的工具允许你创建通用组件，这些组件可以在整个设计中重复使用。通过配置，这些组件实例甚至能够随着源组件的变化动态更新。
 In our example, we are going to reuse components to build a features page. By creating our first features section component, we can then copy and paste it below several times to build out our entire features page in just a few minutes.
-示例中，我们将通过复用组件来创建一个“功能特性”页面。创建一个“功能介绍”组件，再将它复制粘贴几次，就可以在几分钟时间里构建整个页面结构了。
+示例中，我们将通过复用组件来创建一个“功能特性”页面。创建一个“功能介绍”组件，再将它复制粘贴几次，这样就可以在几分钟时间里构建整个页面结构了。
 ![](https://www.freecodecamp.org/news/content/images/2020/08/wireframe-6.gif)
 
 Adding wireframe components and reusing them on different pages
@@ -138,27 +138,28 @@ It's good to know how a design might collapse down to smaller viewports. If you 
 In our example, we build out the home page design wireframe section-by-section. Most of the rows and columns are collapsed. And since we're on a mobile viewport, many of the images, texts and blocks reduce in size.
 示例中，我们逐段地构建主页内容，大部分行和列的内容都折叠起来了，而且由于我们是在移动视口上，很多图片、文字和区块都会缩小。
 Because of this, it's possible for some of the sections to still have the same amount of height as their respective desktop versions. On the other hand, some sections with lots of images (like the sponsors section) might end up having much more scroll height.
-
+因此，可能有一些区域的高度还是跟桌面版本的一样。另一方面，一些包含很多图片的区域（比如捐赠者列表）的滚动高度会变得很大。
 Due to this, I often also add additional markup to show which desktop version sections correspond to which responsive equivalents for the mobile version.
-
+因此，我经常会添加一些额外的标注来说明桌面版本和移动端版本的元素之间的对应关系。
 ![](https://www.freecodecamp.org/news/content/images/2020/08/wireframe.JPG)
 
 The final wireframe with several pages designed, the sitemap, and markup
-
+线框图成品：包含多个页面、网站地图以及标注信息
 ## Conclusion
+## 总结
 
 Wireframing is a quick way to get a better idea of your website or application visually. I recommend you try it for your next project to help you plan how it might function and look.
-
+相框图是一个能够让你快速了解网站或应用的视觉效果的方式。建议你在开发下一个项目的时候试试线框图，它能帮你更好地规划功能、设计外观。
 Wireframing is the ideal approach for this, since it takes so much less time than having a designer do a full-blown User Interface prototype.
-
+绘制线框图是前期规划的理想方式，因为比起让设计师做出一个完整的界面原型，它能够节省许多时间。
 As a developer, I've built wireframes for my websites for years. I almost never develop a website without sketching out at least some of my ideas of how it will look visually.
-
+作为一个开发者，我为自己的网站构建线框图好多年了，我几乎从来不会在勾画出网站的视觉效果之前就投入开发。
 Happy wireframing.
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/freeCodeCamp.jpg)
 
 I hope you enjoyed this article. If you don't know who I am, I'm Adrian from Australia ? I have a tiny channel on Twitter & YouTube, so if you want to know more about me or enjoy my content, check me out sometime ?
-
+希望你喜欢这篇文章。可能你还不了解我，我是来自澳大利亚的 Adrian。我在 Twitter 和 YouTube 上有个小频道，如果你想了解我的更多信息或者喜欢我创作的内容，欢迎来我的频道看看。
 -   ****Youtube:****  [https://youtube.com/adriantwarog][1]
 -   ****Twitter:****  [https://twitter.com/adrian\_twarog][2]
 

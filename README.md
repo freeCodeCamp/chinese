@@ -39,7 +39,7 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章][6]，分享前�
 
 ### 参与校对
 
-每一篇翻译好的文章，我们会有一位贡献者对其进行校对。如果你希望参与校对，请在 [Review-awaiting][10] 列表选取文章并留言“认领校对”，我们会邀请你成为 collaborator。
+每一篇翻译好的文章，我们会有一位贡献者对其进行校对。如果你希望参与校对，请在 [Review-awaiting][10] 列表选取文章并留言“认领校对”。
 
 ### 发布文章
 
@@ -49,12 +49,18 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章][6]，分享前�
 
 ### 开放周会
 
-- 时间：
-- 地点：https://meeting.tencent.com/p/3840877398
+- 时间：每周六晚上 19:30 - 21:30
+- 地点：会议室链接 https://meeting.tencent.com/p/3840877398
+
+参与者无需提前报名，在以上时间内直接进入会议室。
+
+请所有参与者务必遵守 [freeCodeCamp 社区行为规范](https://chinese.freecodecamp.org/news/code-of-conduct/)。
 
 ### 日常讨论
 
-https://chat.freecodecamp.org/channel/tongyong
+欢迎大家加入 [freeCodeCamp Chat 聊天室](https://chat.freecodecamp.org/channel/tongyong)，可随时讨论翻译、编程等话题。
+
+关于聊天室的详细介绍，请阅读[《freeCodeCamp Chat 上线了！欢迎加入中文开发者社区聊天室！》](https://chinese.freecodecamp.org/news/freecodecamp-chat/)。
 
 ## Lint & Format rules
 

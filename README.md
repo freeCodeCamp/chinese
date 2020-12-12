@@ -30,6 +30,10 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章][6]，分享前�
 
 -   [图文详解如何参与翻译][8]
 -   [翻译技巧][9]
+-   [疑难词典][10]
+-   协作指南
+    - [网页浏览器][11]（推荐）
+    - [代码编辑器][12]
 
 在校对了好多篇文章之后，我们发现不少文章有一些类似的小问题，在这里特别提醒一下：
 
@@ -39,11 +43,11 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章][6]，分享前�
 
 ### 参与校对
 
-每一篇翻译好的文章，我们会有一位贡献者对其进行校对。如果你希望参与校对，请在 [Review-awaiting][10] 列表选取文章并留言“认领校对”。
+每一篇翻译好的文章，我们会有一位贡献者对其进行校对。如果你希望参与校对，请在 [Review-awaiting][13] 列表选取文章并留言“认领校对”。
 
 ### 发布文章
 
-我们会和译者一同确认校对意见，形成终稿，即校对完毕。翻译及校对完毕的文章将以翻译者的姓名（或昵称）发布在 [freeCodeCamp 官网][11]（我们会邀请译者在官网注册作者账号）；同时发布在 freeCodeCamp 微信公众号，在公众号发布时将在文章中同时注明翻译者和校对者的姓名（或昵称）。此外，我们还会在其他相关站点的 freeCodeCamp 专栏发布译文，链接到官网。
+我们会和译者一同确认校对意见，形成终稿，即校对完毕。翻译及校对完毕的文章将以翻译者的姓名（或昵称）发布在 [freeCodeCamp 官网][14]（我们会邀请译者在官网注册作者账号）；同时发布在 freeCodeCamp 微信公众号，在公众号发布时将在文章中同时注明翻译者和校对者的姓名（或昵称）。此外，我们还会在其他相关站点的 freeCodeCamp 专栏发布译文，链接到官网。
 
 ## 译者交流
 
@@ -68,7 +72,7 @@ freeCodeCamp 英文社区的成员发布了大量[优质文章][6]，分享前�
 
 #### Cloud
 
-This repository has [a GitHub action][12] to lint **Markdown & Native Language syntax** on **Pull Request commits**, translaters should follow the **Lint Report** to fix **Syntax Warnings & Errors** of the own article.
+This repository has [a GitHub action][15] to lint **Markdown & Native Language syntax** on **Pull Request commits**, translaters should follow the **Lint Report** to fix **Syntax Warnings & Errors** of the own article.
 
 #### Local
 
@@ -86,7 +90,7 @@ npm test
 
 ### Formatter
 
-[Prettier][13] has many **Formatter Plugins** to support popular **Editors & IDEs**.
+[Prettier][16] has many **Formatter Plugins** to support popular **Editors & IDEs**.
 
 [1]: http://makeapullrequest.com/
 [2]: http://www.firsttimersonly.com/
@@ -97,7 +101,10 @@ npm test
 [7]: https://chinese.freecodecamp.org/news/
 [8]: https://github.com/freeCodeCamp/news-translation/blob/master/Contributing.md
 [9]: https://github.com/freeCodeCamp/news-translation/wiki/%E7%BF%BB%E8%AF%91%E6%8A%80%E5%B7%A7
-[10]: https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3AReview-awaiting
-[11]: https://chinese.freecodecamp.org/news/
-[12]: https://github.com/freeCodeCamp/news-translation/actions?query=workflow%3A%22CI+%26+CD%22
-[13]: https://prettier.io/
+[10]: https://github.com/freeCodeCamp/news-translation/wiki/%E7%96%91%E9%9A%BE%E8%AF%8D%E6%B1%87%E8%A1%A8
+[11]: https://github.com/freeCodeCamp/news-translation/issues/46
+[12]: https://github.com/freeCodeCamp/news-translation/wiki/%E5%8D%8F%E4%BD%9C%E6%B5%81%E7%A8%8B
+[13]: https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3AReview-awaiting
+[14]: https://chinese.freecodecamp.org/news/
+[15]: https://github.com/freeCodeCamp/news-translation/actions?query=workflow%3A%22CI+%26+CD%22
+[16]: https://prettier.io/

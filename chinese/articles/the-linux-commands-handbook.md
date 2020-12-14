@@ -434,171 +434,156 @@ find . -type d -name node_modules -or -name public
 find . -type d -name '*.md' -not -path 'node_modules/*'
 ```
 
-You can search files that have more than 100 characters (bytes) in them:
+你还可以搜索当前目录树中内容超过100个字符（字节）的文件：
 
 ```bash
 find . -type f -size +100c
-
 ```
 
-Search files bigger than 100KB but smaller than 1MB:
+搜索大于 100KB，但小于 1MB 的文件：
 
 ```bash
 find . -type f -size +100k -size -1M
-
 ```
 
-Search files edited more than 3 days ago:
+搜索至少 3 天前编辑的文件：
 
 ```bash
 find . -type f -mtime +3
-
 ```
 
-Search files edited in the last 24 hours:
+搜索最近 24 小时编辑的文件：
 
 ```bash
 find . -type f -mtime -1
-
 ```
 
-You can delete all the files matching a search by adding the  `-delete`  option. This deletes all the files edited in the last 24 hours:
+你可以使用 `-delete` 参数同步删除搜索到的文件。比如，下面的命令会删除最近24小时编辑的文件：
 
 ```bash
 find . -type f -mtime -1 -delete
-
 ```
 
-You can execute a command on each result of the search. In this example we run  `cat`  to print the file content:
+你还可以在每个搜索结果上同时运行某个命令。在这里，我们运行 `cat` 来输出搜索到的文件的内容：
 
 ```bash
 find . -type f -exec cat {} \;
-
 ```
 
-Notice the terminating  `\;`.  `{}`  is filled with the file name at execution time.
+请注意结尾的 `\;` 。 命令执行时，搜索结果中的文件名会被自动填入花括号 `{}` 。 
 
 ## Linux 中的  `ln`  命令
 
-The  `ln`  command is part of the Linux file system commands.
+`ln` 命令是 Linux 诸多文件系统命令的一部分。 
 
-It's used to create links. What is a link? It's like a pointer to another file, or a file that points to another file. You might be familiar with Windows shortcuts. They're similar.
+它的用途是创建链接。“链接”是什么？链接就像是指针，指向另一个文件，或者说是指向另一个文件的文件。你可能熟悉 Windows 上的快捷方式，二者是类似的。
 
-We have 2 types of links:  **hard links**  and  **soft links**.
+我们有两种类型的链接：**硬链接**和**软链接**。
 
 #### 硬链接
 
-Hard links are rarely used. They have a few limitations: you can't link to directories, and you can't link to external filesystems (disks).
+硬链接现在很少使用。它有一些弱点：你无法链接到目录，也无法链接到外部文件系统（磁盘驱动器）。
 
-A hard link is created using the following syntax:
+要创建一个硬链接，可以使用下面的语法：
 
 ```bash
-ln <original> <link>
-
+ln <源文件路径> <链接路径>
 ```
 
-For example, say you have a file called recipes.txt. You can create a hard link to it using:
+例如，你有一个叫做 recipes.txt 的文件，你可以用下面的写法创建一个硬链接：
 
 ```bash
 ln recipes.txt newrecipes.txt
-
 ```
 
-The new hard link you created is indistinguishable from a regular file:
+这个新创建的硬链接和普通的文件没有什么区别：
 
 ![Screen-Shot-2020-09-02-at-11.26.21](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-02-at-11.26.21.png)
 
-Now any time you edit any of those files, the content will be updated for both.
+现在，如果你编辑这对文件中的任何一个，另一个文件的内容也会随之更新。
 
-If you delete the original file, the link will still contain the original file content, as that's not removed until there is one hard link pointing to it.
+即使你删除了源文件，链接文件仍然会包含源文件的内容。那是因为直到创建硬链接时，源文件还没有被删除。
 
 ![Screen-Shot-2020-09-02-at-11.26.07](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-02-at-11.26.07.png)
 
 #### 软链接
 
-Soft links are different. They are more powerful as you can link to other filesystems and to directories. But keep in mind that when the original is removed, the link will be broken.
+软链接则有所不同，它更为强大一些，你可以用它链接到其他的文件系统和目录。但请注意，当你删除源文件时，这个链接会断掉。
 
-You create soft links using the  `-s`  option of  `ln`:
+你可以使用 `ln` 命令的 `-s` 参数创建一个软链接：
 
 ```bash
-ln -s <original> <link>
-
+ln -s <源文件路径> <链接路径>
 ```
 
-For example, say you have a file called recipes.txt. You can create a soft link to it using:
+例如，你有一个叫做 recipes.txt 的文件。你可以用下面的写法为它创建一个软链接：
 
 ```bash
 ln -s recipes.txt newrecipes.txt
-
 ```
 
-In this case you can see there's a special  `l`  flag when you list the file using  `ls -al`. The file name has a  `@`  at the end, and it's also colored differently if you have colors enabled:
+这种情况下，当你用  `ls -al` 列出文件时，你可以看见一个特殊的  `l` 标记。在文件名的末尾有一个 `@` 符号，如果你启用了终端的显色，文件名还会有不同的颜色：
 
 ![Screen-Shot-2020-09-02-at-11.27.18](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-02-at-11.27.18.png)  
-Now if you delete the original file, the links will be broken, and the shell will tell you "No such file or directory" if you try to access it:
+
+现在，如果你删除源文件，链接就会断掉，如果你在终端里尝试访问它，Shell 会提示 "No such file or directory" （没有这个文件或目录）：
 
 ![Screen-Shot-2020-09-02-at-11.27.03](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-02-at-11.27.03.png)
 
 ## Linux 中的  `gzip`  命令
 
-You can compress a file using the gzip compression protocol named  [LZ77][67]  using the  `gzip`  command.
+你可以使用 `gzip` 命令，从而使用一种称为 [LZ77][67] 的 gzip 压缩协议，来压缩文件。
 
-Here's the simplest usage:
-
-```bash
-gzip filename
-
-```
-
-This will compress the file, and append a  `.gz`  extension to it. The original file is deleted.
-
-To prevent this, you can use the  `-c`  option and use output redirection to write the output to the  `filename.gz`  file:
+以下是最简单的用法：
 
 ```bash
-gzip -c filename > filename.gz
-
+gzip 文件名
 ```
 
-> The  `-c`  option specifies that the output will go to the standard output stream, leaving the original file intact.
+这会压缩指定的文件，并为它加上 `.gz` 扩展名。源文件会被删除。
 
-Or you can use the  `-k`  option:
+如果不想删除源文件，你可以加上 `-c` 参数，然后使用输出重定向，将输出文件写到 `文件名.gz` 中。
 
 ```bash
-gzip -k filename
-
+gzip -c 文件名 > 文件名.gz
 ```
 
-There are various levels of compression. The more the compression, the longer it will take to compress (and decompress). Levels range from 1 (fastest, worst compression) to 9 (slowest, better compression), and the default is 6.
+> `-c` 参数用来指定输出文件进入标准输出流，同时保持原始文件的完整性。
 
-You can choose a specific level with the  `-<NUMBER>`  option:
+或者使用 `-k` 参数：
 
 ```bash
-gzip -1 filename
-
+gzip -k 文件名
 ```
 
-You can compress multiple files by listing them:
+文件有不同的压缩率。压缩率越高，压缩（或者解压）的时间就越长。压缩率等级一般从 1（速度最快，压缩效果最差）开始，直到 9 （速度最慢，压缩效果更好）结束。默认为 6 。
+
+你可以用  `-<数字>` 参数指定使用的压缩率：
 
 ```bash
-gzip filename1 filename2
-
+gzip -1 文件名
 ```
 
-You can compress all the files in a directory, recursively, using the  `-r`  option:
+你可以压缩多个文件，只需要依次列出它们：
 
 ```bash
-gzip -r a_folder
-
+gzip 文件名1 文件名2
 ```
 
-The  `-v`  option prints the compression percentage information. Here's an example of it being used along with the  `-k`  (keep) option:
+你可以用递归的方式压缩某个目录包含的全部文件，只需要使用 `-r` 参数：
+
+```bash
+gzip -r 文件夹路径
+```
+
+`-v` 参数会输出文件压缩时的百分比信息。以下是它和 `-k` （Keep，意为保留） 参数并用时的情形：
 
 ![Screen-Shot-2020-09-09-at-15.55.42](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-15.55.42.png)  
-`gzip`  can also be used to decompress a file, using the  `-d`  option:
+
+`gzip` 命令也可以用来解压文件，只需使用 `-d` 参数：
 
 ```bash
-gzip -d filename.gz
-
+gzip -d 文件名.gz
 ```
 
 ## Linux 中的  `gunzip`  命令

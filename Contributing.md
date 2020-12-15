@@ -16,7 +16,7 @@
 
 ![image](https://user-images.githubusercontent.com/19969570/62818127-2baf7e80-bb75-11e9-8fd1-79afe4b5e353.png)
 
-5. 新打开的页面中，在标题下方的文本框中输入 `#xx`（翻译任务标题后的序号） ，再在弹出的提示列表中选择对应的**翻译任务**
+5. 在新打开的页面中，在标题下方的文本框中输入 `#xx`（翻译任务标题后的序号） ，再在弹出的提示列表中选择对应的**翻译任务**
 
 ![image](https://user-images.githubusercontent.com/19969570/62818130-408c1200-bb75-11e9-9edf-81b787da19ae.png)
 
@@ -32,8 +32,8 @@
 
 ![image](https://user-images.githubusercontent.com/19969570/62818137-65808500-bb75-11e9-98d9-7ba710c003b5.png)
 
-9. 每翻译几段文字想**暂时保存**时，就在编辑器最下方 Commit changes 处提交一次。注意翻译的时候只需要写中文，请把英文删掉喔。
+9. 每翻译几段文字想**暂时保存**时，就在编辑器最下方 Commit changes 处提交一次。注意翻译的时候**只需要写中文，请把英文删掉喔**。
 
-10. 翻译团队核心成员会定期查看翻译进度，在你翻译完后便开始校对，请注意查收 **GitHub 账号下的邮箱**
+10. 翻译团队核心成员会定期查看翻译进度，在你翻译完后便开始校对，请注意在 **GitHub 账号下的邮箱查收邮件**
 
 [1]: https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3ATranslation-needed

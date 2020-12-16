@@ -113,7 +113,7 @@ npm test
 [7]: https://chinese.freecodecamp.org/news/
 [8]: https://github.com/freeCodeCamp/news-translation/blob/master/Contributing.md
 [9]: https://github.com/freeCodeCamp/news-translation/wiki/%E7%BF%BB%E8%AF%91%E6%8A%80%E5%B7%A7
-[10]: https://github.com/freeCodeCamp/news-translation/wiki/%E7%96%91%E9%9A%BE%E8%AF%8D%E6%B1%87%E8%A1%A8
+[10]: https://github.com/freeCodeCamp/news-translation/wiki/words_list
 [11]: https://github.com/freeCodeCamp/news-translation/issues/46
 [12]: https://github.com/freeCodeCamp/news-translation/wiki/%E5%8D%8F%E4%BD%9C%E6%B5%81%E7%A8%8B
 [13]: https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3AReview-awaiting

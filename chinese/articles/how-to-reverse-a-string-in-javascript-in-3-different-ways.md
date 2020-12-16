@@ -143,12 +143,13 @@ function reverseString(str) {
 /*
 递归方法的第一部分
 你需要记住不会只有一次回调，会存在多次嵌套回调
-每次回调的公式: str === "?"                         reverseString(str.subst(1))     + str.charAt(0)
-1st call – reverseString("Hello")   will return   reverseString("ello")           + "h"
-2nd call – reverseString("ello")    will return   reverseString("llo")            + "e"
-3rd call – reverseString("llo")     will return   reverseString("lo")             + "l"
-4th call – reverseString("lo")      will return   reverseString("o")              + "l"
-5th call – reverseString("o")       will return   reverseString("")               + "o"
+每次回调的公式: str === "?" reverseString(str.subst(1)) + str.charAt(0)
+第一次调用 – reverseString("Hello")  将会返回  reverseString("ello") + "h"
+第二次调用 – reverseString("ello")   将会返回  reverseString("llo")  + "e"
+第三次调用 – reverseString("llo")    将会返回  reverseString("lo")   + "l"
+第四次调用 – reverseString("lo")     将会返回  reverseString("o")    + "l"
+第五次调用 – reverseString("o")      将会返回  reverseString("")     + "o"
+
 递归方法的第二部分
 该方法达一旦到if条件，嵌套最深的调用会立即返回
 
@@ -203,12 +204,12 @@ _在本文中，我将说明如何解决 freeCodeCamp 的“字符串中每个�
 
 ### 资源
 
--   [split() method — MDN][12]
--   [reverse() method — MDN][13]
--   [join() method — MDN][14]
+-   [split() 方法 — MDN][12]
+-   [reverse() 方法 — MDN][13]
+-   [join() 方法 — MDN][14]
 -   [String.length — MDN][15]
--   [substr() method — MDN][16]
--   [charAt() method — MDN][17]
+-   [substr() 方法 — MDN][16]
+-   [charAt() 方法 — MDN][17]
 
 [2]: https://www.freecodecamp.org/news/three-ways-to-repeat-a-string-in-javascript-2a9053b93a2d/
 [3]: https://www.freecodecamp.org/news/two-ways-to-confirm-the-ending-of-a-string-in-javascript-62b4677034ac/

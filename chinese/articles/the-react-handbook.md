@@ -704,9 +704,9 @@ class Person {
 }
 ```
 
-`A class has an identifier, which we can use to create new objects using `new ClassIdentifier()`.`
+`A class has an identifier, which we can use to create new objects using`new ClassIdentifier()`.`
 
-`` When the object is initialized, the `constructor` method is called, with any parameters passed. ``
+`When the object is initialized, the `constructor` method is called, with any parameters passed.`
 
 `` A class also has as many methods as it needs. In this case `hello` is a method and can be called on all objects derived from this class: ``
 
@@ -735,7 +735,7 @@ flavio.hello()
 
 `Classes do not have explicit class variable declarations, but you must initialize any variable in the constructor.`
 
-`` Inside a class, you can reference the parent class calling `super()`. ``
+`Inside a class, you can reference the parent class calling `super()`.`
 
 #### `Static methods`
 
@@ -760,7 +760,7 @@ Person.genericHello() //Hello
 
 #### `Getters and setters`
 
-`` You can add methods prefixed with `get` or `set` to create a getter and setter, which are two different pieces of code that are executed based on what you are doing: accessing the variable, or modifying its value. ``
+`You can add methods prefixed with `get` or `set` to create a getter and setter, which are two different pieces of code that are executed based on what you are doing: accessing the variable, or modifying its value.`
 
 ```
 class Person {
@@ -1026,7 +1026,7 @@ fetch('/todos.json')
 
 `response` also has a `json()` method, which returns a promise that will resolve with the content of the body processed and transformed into JSON.`
 
-`` So given those premises, this is what happens: the first promise in the chain is a function that we defined, called `status()`, that checks the response status and if it's not a success response (between 200 and 299), it rejects the promise. ``
+`So given those premises, this is what happens: the first promise in the chain is a function that we defined, called`status()`, that checks the response status and if it's not a success response (between 200 and 299), it rejects the promise.`
 
 `` This operation will cause the promise chain to skip all the chained promises listed and will skip directly to the `catch()` statement at the bottom, logging the `Request failed`text along with the error message. ``
 
@@ -1044,9 +1044,9 @@ fetch('/todos.json')
 
 #### `Handling errors`
 
-`` In the above example, in the previous section, we had a `catch` that was appended to the chain of promises. ``
+`In the above example, in the previous section, we had a `catch` that was appended to the chain of promises.`
 
-`` When anything in the chain of promises fails and raises an error or rejects the promise, the control goes to the nearest `catch()` statement down the chain. ``
+`When anything in the chain of promises fails and raises an error or rejects the promise, the control goes to the nearest `catch()` statement down the chain.`
 
 ```
 new Promise((resolve, reject) => {
@@ -1742,7 +1742,7 @@ const element = <h1 id={myId}>Hello, world!</h1>
 
 `You just need to pay attention when an attribute has a dash (`-`) which is converted to camelCase syntax instead, and these 2 special cases:`
 
--   `` `class` becomes `className` ``
+-   `class` becomes `className`
 -   `for` becomes `htmlFor`
 
 `because they are reserved words in JavaScript.`
@@ -1854,7 +1854,7 @@ ReactDOM.render(
 
 #### `` `class` becomes `className` ``
 
-`Due to the fact that JSX is JavaScript, and `class` is a reserved word, you can't write`
+`Due to the fact that JSX is JavaScript, and`class` is a reserved word, you can't write`
 
 ```
 <p class="description">
@@ -1924,7 +1924,7 @@ ReactDOM.render(<div style={{ color: 'white' }}>Hello World!</div>, mountNode)
 
 `_This helps solve some weird behavior of regular [DOM][84] interaction when inspecting `input.value` and `input.getAttribute('value')` returning one the current value and one the original default value._`
 
-`This also applies to the `textarea` field, e.g.`
+`This also applies to the`textarea` field, e.g.`
 
 ```
 <textarea>Some text</textarea>
@@ -1956,7 +1956,7 @@ ReactDOM.render(<div style={{ color: 'white' }}>Hello World!</div>, mountNode)
 
 #### `A more consistent onChange`
 
-`Passing a function to the `onChange` attribute you can subscribe to events on form fields.`
+`Passing a function to the `onChange`attribute you can subscribe to events on form fields.`
 
 `` It works consistently across fields, even `radio`, `select` and `checkbox` input fields fire a `onChange` event. ``
 
@@ -2125,7 +2125,7 @@ return (
 
 `Even plain HTML tags are component on their own, and they are added by default.`
 
-`The next 2 lines are equivalent, they do the same thing. One with ****JSX****, one without, by injecting `<h1>Hello World!</h1>` into an element with id `app`.`
+`The next 2 lines are equivalent, they do the same thing. One with ****JSX****, one without, by injecting`<h1>Hello World!</h1>` into an element with id `app`.`
 
 ```
 import React from 'react'
@@ -2259,7 +2259,7 @@ this.setState({ clicked: true })
 
 `The object can contain a subset, or a superset, of the state. Only the properties you pass will be mutated, the ones omitted will be left in their current state.`
 
-#### `` Why you should always use `setState()`  ``
+#### `Why you should always use `setState()`
 
 `The reason is that using this method, React knows that the state has changed. It will then start the series of events that will lead to the Component being re-rendered, along with any [DOM][85] update.`
 
@@ -2685,7 +2685,7 @@ class Converter extends React.Component {
 
 #### `Bind`this`in methods`
 
-`` If you use class components, don’t forget to bind methods. The methods of ES6 classes by default are not bound. What this means is that `this` is not defined unless you define methods as arrow functions: ``
+`If you use class components, don’t forget to bind methods. The methods of ES6 classes by default are not bound. What this means is that `this` is not defined unless you define methods as arrow functions:`
 
 ```plain
 class Converter extends React.Component {
@@ -2842,7 +2842,7 @@ class Converter extends React.Component {
 
 #### `Mounting`
 
-`When mounting you have 4 lifecycle methods before the component is mounted in the DOM: the `constructor`, `getDerivedStateFromProps`, `render`and`componentDidMount`.`
+`When mounting you have 4 lifecycle methods before the component is mounted in the DOM: the`constructor`,`getDerivedStateFromProps`, `render`and`componentDidMount`.`
 
 #### `Constructor`
 
@@ -2898,7 +2898,7 @@ class Converter extends React.Component {
 
 `This method is called when the component has been updated in the DOM. Use this to run any 3rd party DOM API or call APIs that must be updated when the DOM changes.`
 
-`` It corresponds to the `componentDidMount()` method from the mounting phase. ``
+`It corresponds to the `componentDidMount()`method from the mounting phase.`
 
 #### `Unmounting`
 
@@ -2985,7 +2985,7 @@ class Form extends React.Component {
 }
 ```
 
-`` Similarly, we use the `onSubmit` attribute on the form to call the `handleSubmit` method when the form is submitted: ``
+`Similarly, we use the `onSubmit` attribute on the form to call the `handleSubmit` method when the form is submitted:`
 
 ```
 class Form extends React.Component {
@@ -3154,7 +3154,7 @@ npm install express
 
 `You get the contents of the`./build/index.html` file, and replace the `<div id="root"></div>`placeholder, which is the tag where the application hooks by default, with `` `<div id="root">${ReactDOMServer.renderToString(<App />)}</div>.`
 
-`All the content inside the `build` folder is going to be served as-is, statically by Express.`
+`All the content inside the`build` folder is going to be served as-is, statically by Express.`
 
 ```
 import path from 'path'
@@ -3361,7 +3361,7 @@ import Context from './context'
 
 `You might want to use Higher Order Components when you want to enhance an existing component, operate on the state or props, or its rendered markup.`
 
-`` There is a convention of prepending a Higher Order Component with the `with` string (it's a convention, so it's not mandatory), so if you have a `Button` component, its HOC counterpart should be called `withButton`. ``
+`There is a convention of prepending a Higher Order Component with the`with` string (it's a convention, so it's not mandatory), so if you have a `Button` component, its HOC counterpart should be called `withButton`.`
 
 `Let’s create one.`
 
@@ -3492,7 +3492,7 @@ ReactDOM.render(<App />, document.getElementById('app'))
 
 #### `Access state`
 
-`Using the `useState()` API, you can create a new state variable, and have a way to alter it. `useState()` accepts the initial value of the state item and returns an array containing the state variable, and the function you call to alter the state. Since it returns an array we use [array destructuring][96] to access each individual item, like this: `const [count, setCount] = useState(0)`
+`Using the`useState()` API, you can create a new state variable, and have a way to alter it. `useState()`accepts the initial value of the state item and returns an array containing the state variable, and the function you call to alter the state. Since it returns an array we use [array destructuring][96] to access each individual item, like this:`const [count, setCount] = useState(0)`
 
 `Here’s a practical example:`
 
@@ -3522,7 +3522,7 @@ ReactDOM.render(<Counter />, document.getElementById('app'))
 
 `` Hooks provide the `useEffect()` API. The call accepts a function as argument. ``
 
-`The function runs when the component is first rendered, and on every subsequent re-render/update. React first updates the DOM, then calls any function passed to `useEffect()`. All without blocking the UI rendering even on blocking code, unlike the old `componentDidMount` and `componentDidUpdate`, which makes our apps feel faster.`
+`The function runs when the component is first rendered, and on every subsequent re-render/update. React first updates the DOM, then calls any function passed to`useEffect()`. All without blocking the UI rendering even on blocking code, unlike the old `componentDidMount` and `componentDidUpdate`, which makes our apps feel faster.`
 
 `Example:`
 
@@ -3846,7 +3846,7 @@ ReactDOM.render(<App />, document.getElementById('app'))
 
 `` When _Add card_ is pressed, the input form is cleared by clearing the `userName` state of the **Form** component. ``
 
-`` The example uses, in addition to React, the [Axios][101] library. It’s a nice useful and lightweight library to handle network requests. Add it to the Pen settings in Codepen, or install it locally using `npm install axios`. ``
+`The example uses, in addition to React, the [Axios][101] library. It’s a nice useful and lightweight library to handle network requests. Add it to the Pen settings in Codepen, or install it locally using `npm install axios`.`
 
 `We start by creating the `Card` component, the one that will display our image and details as gathered from GitHub. It gets its data via props, using`
 
@@ -3921,7 +3921,7 @@ axios<span class="token punctuation" style="box-sizing: inherit; margin: 0px; pa
 
 `When the form is submitted we call the `handleSubmit`event, and after the network call we call`props.onSubmit` passing the parent (`App`) the data we got from GitHub.`
 
-`We add it to `App`, passing a method to add a new card to the list of cards, `addNewCard`, as its `onSubmit` prop:`
+`We add it to`App`, passing a method to add a new card to the list of cards, `addNewCard`, as its `onSubmit` prop:`
 
 ```
 const App = () => {
@@ -4033,7 +4033,7 @@ import './style.css'
 
 #### `Using the style attribute`
 
-`A second method is to use the `style` attribute attached to a JSX element. Using this approach you don't need a separate CSS file.`
+`A second method is to use the`style` attribute attached to a JSX element. Using this approach you don't need a separate CSS file.`
 
 ```
 const Button = () => {
@@ -4088,9 +4088,9 @@ const Button = () => {
 
 `SASS/SCSS is a very popular option, a much loved one by many developers.`
 
-`You can use it without any configuration at all, starting with `create-react-app` 2.`
+`You can use it without any configuration at all, starting with`create-react-app` 2.`
 
-`All you need is a `.sass`or`.scss` file, and you just import it in a component:`
+`All you need is a `.sass`or`.scss`file, and you just import it in a component:`
 
 ```
 import './styles.scss'
@@ -4147,7 +4147,7 @@ import styled from 'styled-components'
 
 #### `Your first styled component`
 
-`With the`styled` object imported, you can now start creating Styled Components. Here's the first one:`
+`With the`styled`object imported, you can now start creating Styled Components. Here's the first one:`
 
 ```
 const Button = styled.buttonfont-size: 1.5em;
@@ -4165,7 +4165,7 @@ const Button = styled.buttonfont-size: 1.5em;
 render(<Button />)
 ```
 
-`` Styled Components offer other functions you can use to create other components, not just `button`, like `section`, `h1`, `input` and many others. ``
+`Styled Components offer other functions you can use to create other components, not just `button`, like `section`,`h1`, `input` and many others.`
 
 `The syntax used, with the backtick, might be weird at first, but it’s called [Tagged Templates][113], it’s plain JavaScript and it’s a way to pass an argument to the function.`
 
@@ -4173,7 +4173,7 @@ render(<Button />)
 
 `When you pass some props to a Styled Component, it will pass them down to the [DOM][114]node mounted.`
 
-`` For example here’s how we pass the `placeholder` and `type` props to an `input`component: ``
+`For example here’s how we pass the `placeholder` and `type` props to an `input`component:`
 
 ```
 const Input = styled.input//...
@@ -4358,7 +4358,7 @@ console.log(bob.printFriends());
 
 #### `` `env` preset``
 
-`` The `env` preset is very nice: you tell it which environments you want to support, and it does everything for you, **supporting all modern JavaScript features**. ``
+`The `env` preset is very nice: you tell it which environments you want to support, and it does everything for you, **supporting all modern JavaScript features**.`
 
 `E.g. “support the last 2 versions of every browser, but for Safari let’s support all versions since Safari 7”`
 
@@ -4537,7 +4537,7 @@ yarn build
 -   `**the output is put in`./dist/main.js`.**`
 -   `**Webpack works in production mode**`
 
-`**You can customize every little bit of webpack of course, when you need. The webpack configuration is stored in the`webpack.config.js` file, in the project root folder.**`
+`**You can customize every little bit of webpack of course, when you need. The webpack configuration is stored in the`webpack.config.js`file, in the project root folder.**`
 
 #### **The entry point
 
@@ -4710,7 +4710,7 @@ module.exports = {
 }
 ```
 
-`` The `HTMLWebpackPlugin` plugin has the job of automatically creating an HTML file, adding the output JS bundle path, so the JavaScript is ready to be served. ``
+`The `HTMLWebpackPlugin` plugin has the job of automatically creating an HTML file, adding the output JS bundle path, so the JavaScript is ready to be served.`
 
 `There are [lots of plugins available][133].`
 
@@ -4887,7 +4887,7 @@ module.exports = {
 
 #### `Process your SASS code and transform it to CSS`
 
-`Using`sass-loader`, `css-loader` and `style-loader`:`
+`Using`sass-loader`, `css-loader`and`style-loader`:`
 
 ```
 module.exports = {
@@ -4912,7 +4912,7 @@ module.exports = {
 
 `Since webpack bundles the code, Source Maps are mandatory to get a reference to the original file that raised an error, for example.`
 
-`` You tell webpack to generate source maps using the `devtool` property of the configuration: ``
+`You tell webpack to generate source maps using the `devtool` property of the configuration:`
 
 ```plain
 module.exports = {
@@ -4994,7 +4994,7 @@ yarn global add jest
 yarn add --dev jest
 ```
 
-`Add to your `package.json` this line:`
+`Add to your `package.json`this line:`
 
 ```
 {
@@ -5077,7 +5077,7 @@ test('Adding 1 + 1 equals 2', () => {
 -   `` `toBeLessThan` true if the result of expect() is lower than the argument``
 -   `toBeLessThanOrEqual` true if the result of expect() is equal to the argument, or lower than the argument`
 -   `` `toMatch` is used to compare strings with [regular expression][141] pattern matching``
--   `` `toContain` is used in arrays, true if the expected array contains the argument in its elements set``
+-   `toContain` is used in arrays, true if the expected array contains the argument in its elements set`
 -   `` `toHaveLength(number)`: checks the length of an array``
 -   `` `toHaveProperty(key, value)`: checks if an object has a property, and optionally checks its value``
 -   `toThrow` checks if a function you pass throws an exception (in general) or a specific exception`
@@ -5286,7 +5286,7 @@ test(uppercase 'test' to equal 'TEST', async () => {
 
 #### `Spy packages without affecting the functions code`
 
-`When you import a package, you can tell Jest to “spy” on the execution of a particular function, using `spyOn()`, without affecting how that method works.`
+`When you import a package, you can tell Jest to “spy” on the execution of a particular function, using`spyOn()`, without affecting how that method works.`
 
 `Example:`
 
@@ -5423,7 +5423,7 @@ Watch Usage
 
 `` I assume you created a React app with `create-react-app`, which already comes with **Jest** installed, the testing package we'll need. ``
 
-`Let’s start with a simple test. CodeSandbox is a great environment to try this out. Start with a React sandbox, and create an `App.js`component in a`components` folder, and add an `App.test.js`file.`
+`Let’s start with a simple test. CodeSandbox is a great environment to try this out. Start with a React sandbox, and create an`App.js`component in a`components` folder, and add an `App.test.js`file.`
 
 ```
 import React from 'react'
@@ -5516,7 +5516,7 @@ const incrementCount = increment => {
 
 `Now off to the actual tests. We first initialize count to 0, and we render a `+1` `Button`component passing a`1`to`increment` and our `incrementCount` function to `onClickFunction`.`
 
-`` Then we get the content of the first child of the component, and we check it outputs `+1`. ``
+`Then we get the content of the first child of the component, and we check it outputs `+1`.`
 
 `We then proceed to clicking the button, and we check that the count got from 0 to 1:`
 
@@ -5640,7 +5640,7 @@ https://application.com/#/dashboard / HashRouter    */
 `The 3 components you will interact the most when working with React Router are:`
 
 -   `BrowserRouter`, usually aliased as `Router`
--   `` `Link` ``
+-   `Link`
 -   `Route`
 
 `BrowserRouter` wraps all your Route components.`
@@ -5987,7 +5987,7 @@ const listManager = (state = {}, action) => {
 
 -   `**holds the state** of the app`
 -   `` **exposes the state** via `getState()`  ``
--   `` allows us to **update the state** via `dispatch()`  ``
+-   `allows us to **update the state** via `dispatch()`
 -   `allows us to (un)register a **state change listener** using `subscribe()`
 
 `A store is **unique** in the app.`
@@ -6111,7 +6111,7 @@ npm run dev
 
 #### `Create a page`
 
-`` In the `pages` folder create an `index.js` file with a simple React functional component: ``
+`In the `pages` folder create an `index.js` file with a simple React functional component:`
 
 ```
 export default () => (
@@ -6538,7 +6538,7 @@ gatsby serve
 
 #### `Deployment`
 
-`Once you build the site using `gatsby build`, all you need to do is to deploy the result contained in the `public` folder.`
+`Once you build the site using`gatsby build`, all you need to do is to deploy the result contained in the `public` folder.`
 
 `Depending on the solution you choose, you’ll need different steps here, but generally you’ll push to a Git repository and let the Git post-commit hooks do the job of deploying. [Here are some great guides for some popular hosting platforms][186] where you can deploy Gatsby.`
 

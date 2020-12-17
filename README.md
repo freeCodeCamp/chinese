@@ -33,7 +33,9 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 
 相信你可以根据这份清晰、简洁的指南提交你的你一篇译文！
 
-如果你对这份指南有疑问，请在 [freeCodeCamp Chat 聊天室](https://chat.freecodecamp.org/channel/tongyong)提问，我们随时在线和你交流:)
+**除了在 [Translation-needed](https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3ATranslation-needed) 列表认领文章来翻译，你也可以从[英文专栏](https://www.freecodecamp.org/news)选择自己喜欢的文章，自己[发起 New issue](https://github.com/freeCodeCamp/news-translation/issues/new/choose) 进行翻译。**
+
+如果你对指南有疑问，请在 [freeCodeCamp Chat 聊天室](https://chat.freecodecamp.org/channel/tongyong)提问，我们随时在线和你交流:)
 
 在翻译过程中，你可能会需要参考以下资料（强烈建议你花十分钟浏览这些资料后，再开始翻译，当然你也可以在翻译过程中随时回来查看）：
 

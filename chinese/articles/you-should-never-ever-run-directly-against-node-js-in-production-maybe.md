@@ -13,15 +13,15 @@
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*ThJbM2JMjrnTuHczo0tLqw.png)
 
-顺便说一下，随着我年龄的增长，那个点会越来越小。
+而且，随着我年龄的增长，那个点会越来越小。
 
-There is a better diagram created by [Alicia Liu][1] that kind of changed my life. She says that it’s more like this……
+[Alicia Liu][1] 则画出了更加贴切的图表，它改变了我的生活。她说它更像这样...
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*N7vv39ri9yC0l6krsSFlQA.png)
 
-I love this diagram so much because I want it to be true. I don’t want to spend the rest of my life as a tiny, shrinking blue dot of insignificance.
+我非常欣赏这个图表，因为我期望它是真的。我不想看到我花费余生精力，仍只是个无关紧要的小蓝点。
 
-SO DRAMATIC. Blame Pandora. I don’t control what gets played next while I’m writing this article and [Dashboard Confessional][2] is a helluva drug.
+如此戏精。责怪潘多拉。当我在写这篇文章的时候不能控制接下来会写到什么，但是 [Dashboard Confessional][2] 是一种毒药。
 
 Well, assuming that Alicia’s diagram is true, I would like to share with you what I \_now_know about running Node apps in production. Perhaps our relative Venn Diagrams don’t overlap on this subject.
 

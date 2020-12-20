@@ -110,7 +110,7 @@
 
 我也在我的部落格写一些编程的教学 ,  [Coder-Coder.com][1]. 以下是其他你会喜欢的文章:
 
--   [Learn web development as an absolute beginner][2]po
+-   [Learn web development as an absolute beginner][2]
 -   [4 Reasons your z-index isn't working (and how to fix it)][3]
 -   [Gulp tutorial for beginners][4]
 

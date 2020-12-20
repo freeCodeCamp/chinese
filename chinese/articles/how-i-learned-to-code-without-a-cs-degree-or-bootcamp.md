@@ -6,23 +6,23 @@
 
 ![How I Learned to Code (Without a CS Degree or Bootcamp)](https://www.freecodecamp.org/news/content/images/size/w2000/2020/12/2560x1440-howIlearnedcoding.jpg)
 
-I've been a professional web developer for about 8 years now, working in both the back and front end.
+我从事网络开发员工程师已经有8年了。 back 和 front end都有尝试过.
 
-But what's surprising to people is that I didn't go to school for computer science, and never took a course or enrolled in a coding bootcamp! And I didn't even get into the field until my late 20s.
+但是最令人惊讶的是我重来没有就读过计算机专业学位，也没有上过任何的课程或编程训练营！而且我是在我20几岁的时候才踏入这个领域的。
 
-So how did I learn to code without any formal education in programming?
+那你觉得我是这么办到的？我是这么学会编程的呢？
 
 ![](https://www.freecodecamp.org/news/content/images/2020/12/hiltc-1.JPG)
 
-## Coding was just a hobby...
+## 编程曾经只是一个兴趣而已...
 
-It all started back in high school, when I discovered the internet, and taught myself basic HTML & CSS for fun.
+应该可以从高中说起，当我发现网络世界的时候。我自己学会基础的 HTML & CSS。当时的我只是觉得好玩。
 
-Mostly I made web pages dedicated to my obsession at the time, snowboarding. I also loved customizing my Xanga blog with CSS to style it just the way I wanted. (Remember Xanga?? 😂)
+我大部分都会做一些关于我自己当时迷恋的网页, 譬如单板滑雪。 我也挺喜欢用 CSS 定制我的 Xanga 部落格，设计一个我想要的风格。 (还记得 Xanga 吗? 😂)
 
-Looking back, it might seem mind-boggling that I didn't consider learning computer science or web development in school. But it honestly was just a hobby in my mind. I was planning on becoming a doctor, like my parents wanted me to.
+回想起来, 令人难以置信的一点是我从来没有考虑过到学校读计算机专业学位或网络开发。但是坦白说，在我脑海了，那真的只是一门兴趣而已。我是打算成为一名医生的，那也是我父母对我的期望。
 
-But that didn't pan out, and instead I spent the next several years struggling to figure out a path. What happened?
+可是没有进展的很顺利, 我反而在接下来的那几年对我未来的路挺挣扎的。 究竟发生了什么事呢?
 
 ## Photography job
 

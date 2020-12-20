@@ -1,7 +1,7 @@
 
 > * 原文地址：[How I Learned to Code (Without a CS Degree or Bootcamp)](https://www.freecodecamp.org/news/how-i-learned-to-code-without-a-cs-degree-or-bootcamp/)
 > * 原文作者：Jessica Chan
-> * 译者：
+> * 译者：jennyma8
 > * 校对者：
 
 ![How I Learned to Code (Without a CS Degree or Bootcamp)](https://www.freecodecamp.org/news/content/images/size/w2000/2020/12/2560x1440-howIlearnedcoding.jpg)

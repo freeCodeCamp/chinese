@@ -6,7 +6,7 @@
 
 ![How I Learned to Code (Without a CS Degree or Bootcamp)](https://www.freecodecamp.org/news/content/images/size/w2000/2020/12/2560x1440-howIlearnedcoding.jpg)
 
-我从事 web 开发者已经有8年了。 back 和 front end 都有做过。
+我从事 web 开发者已经有8年了。 Back 和 Front End 都有做过。
 
 但是最令人惊讶的是我重来没有就读过计算机专业学位，也没有上过任何的课程或编程训练营！而且我是在我快30岁的时候才踏入这个领域的。
 

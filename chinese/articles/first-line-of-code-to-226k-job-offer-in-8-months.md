@@ -1,6 +1,6 @@
 > -   原文地址：[How I Went from Writing My First Line of Code to a \$226K Job Offer in Just 8 Months](https://www.freecodecamp.org/news/first-line-of-code-to-226k-job-offer-in-8-months/)
 > -   原文作者：Jason Zedde
-> -   译者：MMMAY521
+> -   译者: jennyma8
 > -   校对者：
 
 ![How I Went from Writing My First Line of Code to a $226K Job Offer in Just 8 Months]

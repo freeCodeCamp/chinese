@@ -1,6 +1,6 @@
 > * 原文地址：[React for Beginners – A React.js Handbook for Front End Developers React.js 入门教程](https://www.freecodecamp.org/news/react-beginner-handbook/#howmuchjavascriptyouneedtoknowtousereact)
 > * 原文作者：Flavio Copes
-> * 译者：
+> * 译者：xinlei_ye@163.com
 > * 校对者：
 
 ![React for Beginners – A React.js Handbook for Front End Developers](https://www.freecodecamp.org/news/content/images/size/w2000/2020/11/book-2.jpg)

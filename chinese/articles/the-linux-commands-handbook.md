@@ -583,122 +583,113 @@ gzip -r 文件夹路径
 `gzip` 命令也可以用来解压文件，只需使用 `-d` 参数：
 
 ```bash
-gzip -d 文件名.gz
+gzip -d filename.gz
 ```
 
 ## Linux 中的  `gunzip`  命令
 
-The  `gunzip`  command is basically equivalent to the  `gzip`  command, except the  `-d`  option is always enabled by default.
+`gunzip` 命令与 `gzip` 命令基本等同，但前者总是默认启用后者的 `-d` 参数。
 
-The command can be invoked in this way:
+可以用下面的方式调用这个命令：
 
 ```bash
 gunzip filename.gz
-
 ```
 
-This will gunzip and will remove the  `.gz`  extension, putting the result in the  `filename`  file. If that file exists, it will overwrite that.
+这会执行解压，将压缩文件的 `.gz` 扩展名去除，并将结果放进`filename` 文件中。如果相应文件已经存在，将会被提取结果覆盖。
 
-You can extract to a different filename using output redirection using the  `-c`  option:
+你可以加上 `-c` 参数，使用输出重定向，将压缩文件解压到不同的文件名：
 
 ```bash
-gunzip -c filename.gz > anotherfilename
-
+gunzip -c filename.gz > 另一个文件名
 ```
 
 ## Linux 中的  `tar`  命令
 
-The  `tar`  command is used to create an archive, grouping multiple files in a single file.
+`tar` 命令可以用来创建档案包，将多个文件打包为一个文件。
 
-Its name comes from the past and means  _tape archive_  (back when archives were stored on tapes).
+它的名称来源于旧时，意思是 _tape archive（磁带档案）_ （很久以前档案都是用磁带存储的）。
 
-This command creates an archive named  `archive.tar`  with the content of  `file1`  and  `file2`:
+下面的命令会将 `file1` 和 `file2` 打包成一个名为 `archive.tar` 的档案包文件：
 
 ```bash
 tar -cf archive.tar file1 file2
-
 ```
 
-> The  `c`  option stands for  _create_. The  `f`  option is used to write to file the archive.
+> `c` 参数是  _create（创建）_ 的简写。`f` 参数则用来将合成的档案包写入一个文件。
 
-To extract files from an archive in the current folder, use:
+要在当前文件夹下的某个档案包中提取文件，可以使用如下命令：
 
 ```bash
 tar -xf archive.tar
-
 ```
 
-> the  `x`  option stands for  _extract_.
+> 参数 `x` 是  _extract（提取）_ 的简写。
 
-And to extract them to a specific directory, use:
+如果要提取文件到指定目录，使用下面的命令：
 
 ```bash
-tar -xf archive.tar -C directory
-
+tar -xf archive.tar -C 目录路径
 ```
 
-You can also just list the files contained in an archive:
+你也可以不提取文件，只罗列某个档案包里含有的文件列表：
 
 ![Screen-Shot-2020-09-09-at-16.56.33](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-16.56.33.png)  
-`tar`  is often used to create a  **compressed archive**, gzipping the archive.
+`tar` 常用来创建**压缩档案包**。
 
-This is done using the  `z`  option:
+这可以用 `z` 参数来完成：
 
 ```bash
 tar -czf archive.tar.gz file1 file2
-
 ```
 
-This is just like creating a tar archive, and then running  `gzip`  on it.
+这就像是先创建了一个 tar 档案包，再运行 `gzip` 来压缩它。
 
-To unarchive a gzipped archive, you can use  `gunzip`, or  `gzip -d`, and then unarchive it. But  `tar -xf`  will recognize it's a gzipped archive, and do it for you:
+如果你要提取一个被压缩的档案包，可以先使用 `gunzip` 或  `gzip -d` 来解压，再提取里面的文件。除此之外 `tar -xf` 也可以直接识别压缩的档案包，然后为你完成解压提取操作：
 
 ```bash
 tar -xf archive.tar.gz
-
 ```
 
 ## Linux 中的  `alias`  命令
 
-It's common to always run a program with a set of options that you like using.
+通常情况下，人们总会使用一组喜欢的参数去运行一个程序。
 
-For example, take the  `ls`  command. By default it prints very little information:
+此处用 `ls` 命令举例。默认情况下，它只输出少量的信息：
 
 ![Screen-Shot-2020-09-03-at-15.21.00](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-15.21.00.png)
 
-But if you use the  `-al`  option it will print something more useful, including the file modification date, the size, the owner, and the permissions. It will also list hidden files (files starting with a  `.`):
+但如果你带上了 `-al` 参数，它会输出一些更有用的信息，像是文件的修改日期、大小、所有者、权限之类。它也会同时列出隐藏的文件（文件名以英文句号`.` 开头的文件）：
 
 ![Screen-Shot-2020-09-03-at-15.21.08](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-15.21.08.png)
 
-You can create a new command, for example I like to call it  `ll`, that is an alias to  `ls -al`.
+你可以创建一个新的命令，比如我喜欢叫它 `ll`，它是 `ls -al` 命令的一个别名。
 
-You do it like this:
+方法如下所示：
 
 ```bash
 alias ll='ls -al'
-
 ```
 
-Once you do, you can call  `ll`  just like it was a regular UNIX command:
+一旦这么做了，你就可以像使用普通的 UNIX 命令一样，调用 `ll` ：
 
 ![Screen-Shot-2020-09-03-at-15.22.51](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-15.22.51.png)
 
-Now calling  `alias`  without any option will list the aliases defined:
+当调用 `alias` ，但不加任何参数时，它会列出已经定义的所有别名：
 
 ![Screen-Shot-2020-09-03-at-15.30.19](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-15.30.19.png)  
-The alias will work until the terminal session is closed.
+用以上方法定义的别名，在终端会话关闭后就会失效。
 
-To make it permanent, you need to add it to the shell configuration. This could be  `~/.bashrc`  or  `~/.profile`  or  `~/.bash_profile`  if you use the Bash shell, depending on the use case.
+如果要让别名永久有效，你必须将其添加到 Shell 的配置文件中。如果你正在使用 Bash shell，配置文件可能是 `~/.bashrc` 、`~/.profile` 或 `~/.bash_profile` ，依据实际用法而定。
 
-Be careful with quotes if you have variables in the command: if you use double quotes, the variable is resolved at definition time. If you use use single quotes, it's resolved at invocation time. Those 2 are different:
+如果你定义的命令中存在变量，那么请注意引号的用法：如果使用双引号，变量会在进行定义时解析；如果使用单引号，变量则会在命令被调用时解析。两者是不同的：
 
 ```bash
 alias lsthis="ls $PWD"
 alias lscurrent='ls $PWD'
-
 ```
 
-$PWD refers to the current folder the shell is in. If you now navigate away to a new folder,  `lscurrent`  lists the files in the new folder, whereas  `lsthis`  still lists the files in the folder where you were when you defined the alias.
+$PWD 代表 Shell 当前所在的文件夹。如果你导航到新的文件夹，`lscurrent` 命令会列出新文件夹中的文件，而 `lsthis` 仍然会列出你定义变量时所在文件夹中的文件。
 
 ## Linux 中的  `cat`  命令
 

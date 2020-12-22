@@ -1,6 +1,6 @@
 > -   原文地址：[How to Build a Bot and Automate your Everyday Work Python 基础教程：这个自动化程序让你的工作更高效](https://www.freecodecamp.org/news/building-bots/)
 > -   作者：Tim Grossmann
-> -   译者：
+> -   译者：pjwok
 > -   校对者：
 
 ![How to Build a Bot and Automate your Everyday Work](https://www.freecodecamp.org/news/content/images/size/w2000/2020/06/freecodecamp_cover.png)

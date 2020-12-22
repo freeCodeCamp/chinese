@@ -5,17 +5,17 @@
 
 ![How to Become a Standout Developer and Accelerate Your Coding Skills](https://images.unsplash.com/photo-1588364384672-560e33514629?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-There is an endless stream of new challenges to tackle in technology.
+技术拥有无穷的挑战让我们去应对。
 
-The frameworks you know will change. The tools you feel so comfortable using will evolve. Technologies will go in and out of style. You might want to switch to a different area in tech when your interest wanes in another.
+你会的构架会改变。你最熟悉的工具会进化。技术会迈进或退流行。You might want to switch to a different area in tech when your interest wanes in another.
 
-Working in engineering means you’re always learning something new to keep your skills fresh.
+在工程行业工作代表着你会一直学习新的东西，保持新鲜的技能。
 
-While Angular was popular five years ago and most frontend jobs wanted Angular skills, now the market has changed. React has overtaken all other frontend frameworks as the hot new technology.
+5年前，Angular 是非常受欢迎的。大部分的前端工作都想要 Angular 技能，现在市场变了。 React 超越所有前端构架，成为最火红的新技术。
 
-While Rails was popular five years ago, now Node and Python are dominating job descriptions.
+5年前，Rails 是非常受欢迎的。 现在 Node 和 Python 在职务描述上遥遥领先。
 
-Keeping your skills fresh is one of the key parts to being a standout engineer and building a lasting career.
+保持新鲜的技能是主要元素之一，那会让你在众多的工程师当中拖影而去，营造一个持久的事业。
 
 However, this might seem challenging when you start out in your career. I remember looking at everything I had to learn and feeling so frustrated when people would discuss some new technology that I didn’t know.
 

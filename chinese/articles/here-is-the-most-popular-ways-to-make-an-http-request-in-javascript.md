@@ -11,7 +11,7 @@ Javascript 拥有非常棒的建立 HTTP 请求并向服务端发送或者接收
 
 Ajax 是最常规的建立异步 HTTP 请求的方式。你可以使用 HTTP POST 方法来发送数据，以及使用 HTTP GET 来接受数据。我们先来看看如何发起一个 `GET` 请求。这里我会用到一个免费在线的 REST API 工具 JSONPlaceholder，它可以用来给开发者返回随机的 JSON 格式数据。
 
-要在 Ajax 中发起一个 HTTP 调用，你需要先用 `XMLHttpRequest()` 创建一个新的对象，准备好 URL 和 HTTP 方法（此处为 GET）。最后，使用 `open()` 方法将两者合并起来，并调用 `send()` 方法执行请求。
+要在 Ajax 中发起一个 HTTP 调用，你需要先用 `XMLHttpRequest()` 创建一个新的对象，准备好 URL 和 HTTP 方法（此处为 GET）。最后，使用 `open()` 方法将两者结合起来，并调用 `send()` 方法执行请求。
 
 我们可以在 `XMLHTTPRequest.onreadystatechange` 的事件监听器中输出 HTTP 请求结果日志到控制台中，这个事件监听器会在 `readystatechanged` 事件发生的时候触发。
 
@@ -50,76 +50,75 @@ jQuery 有很多可以轻松处理 HTTP 请求的方法。为了能使用到这�
 
 #### $.ajax
 
-jQuery 的 ajax 是发起 HTTP 调用的方法之一
-jQuery Ajax is one of the simplest methods to make an HTTP call.
+jQuery 的 ajax 是发起 HTTP 调用最简单的方法之一。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*vZ4BqVQfsvtpJm_RCsCE2Q.png)
 
-The $.ajax method takes many parameters, some of which are required and others optional. It contains two callback options  `success`  and  `error`  to handle the response received.
+$.ajax 方法拥有很多参数，有的是必要的，有的是可选的。它有两个回调选项 `success`  和 `error` ，可以用来处理接收到的响应数据。
 
-#### $.get method
+#### $.get 方法
 
-The $.get method is used to execute GET requests. It takes two parameters: the endpoint and a callback function.
+$.get 方法用来执行 GET 请求，它接收两个参数：端点和回调函数
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*2koN5FJuT68WIyRKTihe5w.png)
 
 #### $.post
 
-The  `**$.post**`  method is another way to post data to the server. It take three parameters: the  `url`, the data you want to post, and a callback function.
+`**$.post**` 方法是另一种向服务端发送数据的方法，它接收三个参数：`url`，你想要发送的数据，和一个回调函数
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*ql6Yp1EJfD7850GXhErwyw.png)
 
 #### $.getJSON
 
-The  `$.getJSON`  method only retrieves data that is in JSON format. It takes two parameters: the  `url`  and a callback function.
+`$.getJSON` 方法仅用于获取 JSON 格式的数据。它接收两个参数：`url` 和一个回调函数。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*hdcFdVHiBiRAo1YOi_Kt0Q.png)
 
-jQuery has all these methods to request for or post data to a remote server. But you can actually put all these methods into one: the  `$.ajax`  method, as seen in the example below:
+jQuery 有以上这些方法用来给远端服务器发起请求或者传递数据。不过你最终可以将所有的这些方法都用一个方法来实现: `$.ajax` , 正如下面示例中所看到的那样。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*soPARjfQXMcZ5ccPK1QMmA.png)
 
 ### fetch
 
-`fetch`  is a new powerful web API that lets you make asynchronous requests. In fact,  `fetch`  is one of the best and my favorite way to make an HTTP request. It returns a “Promise” which is one of the great features of ES6.  If you are not familiar with ES6, you can read about it in  [this][3]  article. Promises allow us to handle the asynchronous request in a smarter way. Let’s take a look at how  `fetch`  technically works.
+`fetch` 是一个功能强大的新的 web API，它能够让你发起异步的请求。实际上， `fetch` 是最好的也是我最喜欢用的发起 HTTP 请求的方式之一。它会返回一个 “Promise”，这也是 ES6 中最强大的特性之一，如果你不是很熟悉 ES6，可以看看[这篇文章][3]了解一下。Promise 可以让我们用一种更聪明的方式处理异步请求。让我们来看一下 `fetch` 从技术上来说是如何工作的。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*kz6k4VRs0RiVCasWR0pCow.png)
 
-The  `fetch`  function takes one required parameter: the  `endpoint`  URL. It also has other optional parameters as in the example below:
+`fetch` 函数接收一个必要参数：`端点` URL。在下面的示例中它也有其它的可选参数：
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*QasrBgYZcU4BBFHqD2bBdg.png)
 
-As you can see,  `fetch`  has many advantages for making HTTP requests. You can learn more about it  [here][4]. Additionally, within fetch there are other modules and plugins that allow us to send and receive a request to and from the server side, such as  [axios][5].
+如你所见，`fetch` 在创建 HTTP 请求方面有很多优势。你可以从[这里][4]了解更多。另外，在 fetch 之上也有一些其他的模块和插件可以让我们给服务端发送请求或者从服务端接收请求，比如[axios][5]
 
 ### Axios
 
-Axios is an open source library for making HTTP requests and provides many great features. Let’s have a look at how it works.
+Axios 是一个开源的创建 HTTP 请求的库，它提供了许多好用的特性，让我们来看一看它是如何用的吧。
 
 #### Usage:
 
-First, you’d need to include Axios. There are two ways to include Axios in your project.
+首先，你需要引入 Axios。这里有两种方式将 Axios 引入你的项目。
 
-First, you can use npm:
+第一种，你可以使用 npm 进行安装:
 
 ```bash
 npm install axios --save
 ```
 
-Then you’d need to import it
+然后你需要引入它:
 
 ```js
 import axios from 'axios'
 ```
 
-Second, you can include axios using a CDN.
+第二种，你可以使用 CDN 来引入 axios：
 
 ```html
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 ```
 
-#### Making a Request with axios:
+#### 使用 axios 创建请求:
 
-With Axios you can use  `GET`  and  `POST`  to retrieve and post data from the server.
+基于 Axios，你可以使用 `GET` 和 `POST` 来向服务端请求数据和发送数据。
 
 #### GET:
 

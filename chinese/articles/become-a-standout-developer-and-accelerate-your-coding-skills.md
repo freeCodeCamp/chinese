@@ -19,11 +19,11 @@
 
 但是，这或许也是在你事业刚开始的时候比较有挑战性的。我还记得我当时看着所有我要学的东西，大家讨论我不懂的新技术而感到愤怒。
 
-每次我感觉我可以胜任一个构架的手，另外一个就会变得受欢迎。 我感觉我永远都赶不上。
+每次我感觉我可以胜任一个构架的时候，就会有另外一个变得受欢迎。 我感觉我永远都赶不上。
 
 但是那也是做工程师最好的部分 – 你永远都不会感觉到无聊。那也是一个可以帮助你在竞争里脱颖而出的工具。
 
-Learning how to learn like a developer is nothing like how you’ve learned in school. There will be some reading, and some courses. But the majority of time will be spent building.
+一个开发者的学习方式是跟你到学校学习完全不一样的。会有一些阅读，一些课程。但最主要的时间是建设。
 
 ## 怎么用‘做’来学习
 

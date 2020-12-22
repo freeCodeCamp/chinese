@@ -1,6 +1,6 @@
 > -   原文地址：[How to Become a Standout Developer and Accelerate Your Coding Skills 如何成为一名出色的开发者，提升你的编程技能](https://www.freecodecamp.org/news/become-a-standout-developer-and-accelerate-your-coding-skills/)
 > -   原文作者：Randall Kanna
-> -   译者：
+> -   译者：jennyma8
 > -   校对者：
 
 ![How to Become a Standout Developer and Accelerate Your Coding Skills](https://images.unsplash.com/photo-1588364384672-560e33514629?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)

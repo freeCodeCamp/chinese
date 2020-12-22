@@ -7,27 +7,27 @@
 
 技术拥有无穷的挑战让我们去应对。
 
-你会的构架会改变。你最熟悉的工具会进化。技术会迈进或退流行。You might want to switch to a different area in tech when your interest wanes in another.
+你会的构架会改变。你最熟悉的工具会进化。技术会迈进或退流行。你会为了兴趣而转到技术的某一个部门。
 
 在工程行业工作代表着你会一直学习新的东西，保持新鲜的技能。
 
-5年前，Angular 是非常受欢迎的。大部分的前端工作都想要 Angular 技能，现在市场变了。 React 超越所有前端构架，成为最火红的新技术。
+5年前，Angular 是非常受欢迎的。大部分的前端工作都想要 Angular 的技能，现在市场变了。 React 超越所有前端构架，成为最火红的新技术。
 
 5年前，Rails 是非常受欢迎的。 现在 Node 和 Python 在职务描述上遥遥领先。
 
-保持新鲜的技能是主要元素之一，那会让你在众多的工程师当中拖影而去，营造一个持久的事业。
+保持新鲜的技能是主要元素之一，那会让你在众多的工程师当中脱颖而出，营造一个持久的事业生涯。
 
-However, this might seem challenging when you start out in your career. I remember looking at everything I had to learn and feeling so frustrated when people would discuss some new technology that I didn’t know.
+但是，这或许也是在你事业刚开始的时候比较有挑战性的。我还记得我当时看着所有我要学的东西，大家讨论我不懂的新技术而感到愤怒。
 
-And as soon as I felt competent in one framework, another one would become popular. I felt like I would never catch up.
+每次我感觉我可以胜任一个构架的手，另外一个就会变得受欢迎。 我感觉我永远都赶不上。
 
-But this is also one of the best parts of being an engineer – you will never be bored. And this is a tool you can use to set yourself apart from the competition.
+但是那也是做工程师最好的部分 – 你永远都不会感觉到无聊。那也是一个可以帮助你在竞争里脱颖而出的工具。
 
 Learning how to learn like a developer is nothing like how you’ve learned in school. There will be some reading, and some courses. But the majority of time will be spent building.
 
-## How to Learn by Doing
+## 怎么用‘做’来学习
 
-When you were a child, you learned by  _doing_.
+小时候，你是因为做才学会的。
 
 You started speaking even if it wasn’t in full sentences. You started drawing by doing. You didn’t read about it as an infant. You weren’t reading the ‘Baby’s Guide to Fingerpainting 101.”
 

@@ -1,19 +1,19 @@
-> * 原文地址：[Here are the most popular ways to make an HTTP request in JavaScript 用 JavaScript 发起 HTTP 请求的几种方法](https://www.freecodecamp.org/news/here-is-the-most-popular-ways-to-make-an-http-request-in-javascript-954ce8c95aaa/)
+> * 原文地址：[Here are the most popular ways to make an HTTP request in JavaScript](https://www.freecodecamp.org/news/here-is-the-most-popular-ways-to-make-an-http-request-in-javascript-954ce8c95aaa/)
 > * 原文作者：Said Hayani
 > * 译者：arronKler
 > * 校对者：
 
 ![Here are the most popular ways to make an HTTP request in JavaScript](https://cdn-media-1.freecodecamp.org/images/1*gqHgCNubMncv7EwWNdArGQ.png)
 
-JavaScript has great modules and methods to make HTTP requests that can be used to send or receive data from a server side resource. In this article, we are going to look at a few popular ways to make HTTP requests in JavaScript.
+Javascript 拥有非常棒的建立 HTTP 请求并向服务端发送或者接收资源的模块和方法。本文会带着大家一起看看在 JavaScript 中常用的建立 HTTP 请求的方式有哪些。
 
 ### Ajax
 
-Ajax is the traditional way to make an asynchronous HTTP request. Data can be sent using the HTTP POST method and received using the HTTP GET method. Let’s take a look and make a  `GET`  request. I’ll be using JSONPlaceholder, a free online REST API for developers that returns random data in JSON format.
+Ajax 是最常规的建立异步 HTTP 请求的方式。你可以使用 HTTP POST 方法来发送数据，以及使用 HTTP GET 来接受数据。我们先来看看如何发起一个 `GET` 请求。这里我会用到一个免费在线的 REST API 工具 JSONPlaceholder，它可以用来给开发者返回随机的 JSON 格式数据。
 
-To make an HTTP call in Ajax, you need to initialize a new  `XMLHttpRequest()`  method, specify the URL endpoint and HTTP method (in this case GET). Finally, we use the  `open()`  method to tie the HTTP method and URL endpoint together and call the  `send()`  method to fire off the request.
+要在 Ajax 中发起一个 HTTP 调用，你需要先用 `XMLHttpRequest()` 创建一个新的对象，准备好 URL 和 HTTP 方法（此处为 GET）。最后，使用 `open()` 方法将两者合并起来，并调用 `send()` 方法执行请求。
 
-We log the HTTP response to the console by using the  `XMLHTTPRequest.onreadystatechange`  property which contains the event handler to be called when the  `readystatechanged`  event is fired.
+我们可以在 `XMLHTTPRequest.onreadystatechange` 的事件监听器中输出 HTTP 请求结果日志到控制台中，这个事件监听器会在 `readystatechanged` 事件发生的时候触发。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*zXtlRe4yRF3tZkFFvBhZeA.png)
 
@@ -23,22 +23,26 @@ const url='https://jsonplaceholder.typicode.com/posts';
 Http.open("GET", url);
 Http.send();
 
-
+Http.onreadystatechange = (e) => {
+  console.log(Http.responseText)
+}
 ```
 
-If you view your browser console, it will return an Array of data in JSON format. But how would we know if the request is done? In other words, how we can handle the responses with Ajax?
+如果你查看浏览器的控制台，上面的代码会返回一组 JSON 格式的数组数据。但是我们怎么知道请求已经完成了呢？换句话说，我们应该怎样处理 Ajax 的响应数据呢？
 
-The  `onreadystatechange`  property has two methods,  `readyState`  and  `status`  which allow us to check the state of our request.
+
+`onreadystatechange` 有两个方式可以让我们可以检测到当前请求的状态， `readyState` 和 `status`。
+
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*UfZf6qaZwNh5Mptft4WIZA.png)
 
-If  `readyState`  is equal to 4, it means the request is done. The  `readyState`  property has 5 responses. Learn more about it  [here][1].
+如果 `readyState` 等于 4，意味着请求已经完成了。`readyState` 这个属性可以有 5 种状态值。你可以点击这里[了解更多][1]。
 
-Apart from directly making an Ajax call with JavaScript, there are other more powerful methods of making an HTTP call such as  `$.Ajax`  which is a jQuery method. I’ll discuss those now.
+除了直接通过 JavaScript 创建 Ajax 调用，还有其他的非常有效的创建 HTTP 调用的方法，比如 jQuery 中的方法 `$.Ajax`。现在我们就来讨论这些方法。
 
-### jQuery methods
+### jQuery 方法
 
-jQuery has many methods to easily handle HTTP requests. In order to use these methods, you’ll need to include the jQuery library in your project.
+jQuery 有很多可以轻松处理 HTTP 请求的方法。为了能使用到这些方法，你需要在你的项目中引入 jQuery 库。
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -46,6 +50,7 @@ jQuery has many methods to easily handle HTTP requests. In order to use these me
 
 #### $.ajax
 
+jQuery 的 ajax 是发起 HTTP 调用的方法之一
 jQuery Ajax is one of the simplest methods to make an HTTP call.
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*vZ4BqVQfsvtpJm_RCsCE2Q.png)

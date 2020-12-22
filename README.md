@@ -61,8 +61,8 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 
 ### 开放周会
 
-- 时间：每周六晚上 19:30 - 21:30（北京时间）
-- 地点：会议室链接 https://meeting.tencent.com/p/3840877398
+- 时间：每周六下午 13:00 - 15:00（北京时间）
+- 地点：会议室链接 https://join.skype.com/WNwhdeBLA1RT
 
 参与者无需提前报名，在以上时间内直接进入会议室。请所有参与者务必遵守 [freeCodeCamp 社区行为规范](https://chinese.freecodecamp.org/news/code-of-conduct/)。
 

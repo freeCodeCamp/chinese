@@ -1,6 +1,6 @@
 > * 原文地址：[Here are the most popular ways to make an HTTP request in JavaScript 用 JavaScript 发起 HTTP 请求的几种方法](https://www.freecodecamp.org/news/here-is-the-most-popular-ways-to-make-an-http-request-in-javascript-954ce8c95aaa/)
 > * 原文作者：Said Hayani
-> * 译者：
+> * 译者：arronKler
 > * 校对者：
 
 ![Here are the most popular ways to make an HTTP request in JavaScript](https://cdn-media-1.freecodecamp.org/images/1*gqHgCNubMncv7EwWNdArGQ.png)

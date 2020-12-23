@@ -25,21 +25,21 @@
 
 一个开发者的学习方式是跟你到学校学习完全不一样的。会有一些阅读，一些课程。但最主要的时间是建设。
 
-## 怎么用‘做’来学习
+## 从做中学习
 
-小时候，你是因为做才学会的。
+小时候，你是从做中学习。
 
-You started speaking even if it wasn’t in full sentences. You started drawing by doing. You didn’t read about it as an infant. You weren’t reading the ‘Baby’s Guide to Fingerpainting 101.”
+你先学会讲话，虽然不是完整的句子。从做中学会画画。你是婴儿的时候没有读过有关的书。你没有读过“婴儿手指绘画101教学”。
 
-You started walking by practicing. And this helped you to grasp new concepts quickly. You were always  _doing_.
+先学会爬再走。这才帮助你快速驾驭新的概念。你永远都在————做。
 
-Generally, in engineering, concepts will start to stick if you focus on building rather than memorization.
+通常，在工程里面，概念会因为建设而保存，而不是死背。
 
-When I started out as an engineer, I would read books constantly and make flashcards. I can’t tell you how much time I spent making flashcards. I thought buying a new book or online course would teach me how to code and make me a superstar engineer. But that never happened.
+当我刚开始做工程师的时候，我不断阅读书本和做抽认卡。我用了无数的时间制造抽认卡。我以为买了一本新书或网上课程就会教会我自己怎么编程，然后变成工程师巨星。但是这并没有发生。
 
-Looking back now, I’m not sure what I thought those flashcards would do.
+回想起来，我不确定那些抽认卡会有什么作用。
 
-After months of trying to memorize syntax and definitions, I was right where I had started. It wasn’t until I started building that my skills started accelerating.
+花了几个月时间熟背句法和定义, 我还是在原地。 只有开始建设的时候，技能才开始进步。
 
 While I loved reading engineering books and still do, the majority of my time is spent skimming the book and then trying out a new concept right away.
 

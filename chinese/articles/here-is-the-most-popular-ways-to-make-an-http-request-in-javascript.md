@@ -9,7 +9,7 @@ Javascript 拥有非常棒的建立 HTTP 请求并向服务端发送或者接收
 
 ### Ajax
 
-Ajax 是最常规的建立异步 HTTP 请求的方式。你可以使用 HTTP POST 方法来发送数据，以及使用 HTTP GET 来接受数据。我们先来看看如何发起一个 `GET` 请求。这里我会用到一个免费在线的 REST API 工具 JSONPlaceholder，它可以用来给开发者返回随机的 JSON 格式数据。
+Ajax 是最常规的建立异步 HTTP 请求的方式。你可以使用 HTTP POST 方法来发送数据，以及使用 HTTP GET 来接收数据。我们先来看看如何发起一个 `GET` 请求。这里我会用到一个免费在线的 REST API 工具 JSONPlaceholder，它可以用来给开发者返回随机的 JSON 格式数据。
 
 要在 Ajax 中发起一个 HTTP 调用，你需要先用 `XMLHttpRequest()` 创建一个新的对象，准备好 URL 和 HTTP 方法（此处为 GET）。最后，使用 `open()` 方法将两者结合起来，并调用 `send()` 方法执行请求。
 
@@ -143,42 +143,42 @@ Angular 有它自己的和 Angular 应用一起运行的 HTTP 模块。它使用
 #### 使用 Angular HttpClient 来发起一个服务端调用
 为了能使用 Angular HttpClient 来发起一个请求，我们需要将代码运行在一个 Angular 应用中。所以我这里就创建了一个。如果你对 Angular 不是很熟悉的话，可以看一下我的文章 [20分钟内学会如何创建你的第一个 Angular 应用][10] 。
 
-我们需要做的第一件事儿是引入 `app.module.ts` 中的 `HttpClientModule` 模块。
+我们需要做的第一件事儿是在 `app.module.ts` 中引入 `HttpClientModule` 模块。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*iFuW5Fbp91VR5gwQ6XNMEQ.png)
 
-Then, we have to create a service to handle the requests. You can easily generate a service using  [Angular CLI][11].
+然后，我们需要创建一个服务来处理请求。你可以使用 [Angular CLI][11] 很容易的创建一个服务。
 
 ```bash
 ng g service  FetchdataService
 ```
 
-Then, we need to import HttpClient in  `fetchdataService.ts`  service and inject it inside the constructor.
+再然后，我们需要在 `fetchdataService.ts` 服务中的引入 HttpClient 并且将其注入到构造器中。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*kKwELAhSSpnN8DvIgdOfcQ.png)
 
-And in  `app.component.ts`  import  `fetchdataService`
+在 `app.component.ts` 文件中引入 `fetchdataService`。
 
 ```ts
 //import
 import { FetchdataService } from './fetchdata.service';
 ```
 
-Finally, call the service and run it.
+最后，调用这个服务并运行。
 
 `app.component.ts:`
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*OrRe183Yaclt19n5ZQ194Q.png)
 
-You can check out the demo example  [on Stackblitz][12].
+你可以在 [Stackblitz][12] 上看到这整个示例。
 
-### Wrapping Up
+### 总结
 
-We’ve just covered the most popular ways to make an HTTP call request in JavaScript.
+我们刚刚了解了在 JavaScript 中最常用的创建 HTTP 请求的几种方式。
 
-Thank you for your time. If you like it, clap up to 50, click follow, and reach out to me on  [Twitter][13].
+感谢你的阅读。如果你喜欢的话，点击 "关注"，然后可以在 [Twitter][13] 上找到我。
 
-_By the way, I’ve recently worked with a strong group of software engineers for one of my mobile applications. The organization was great, and the product was delivered very quickly, much faster than other firms and freelancers I’ve worked with, and I think I can honestly recommend them for other projects out there. Shoot me an email if you want to get in touch —_ [_said@devsdata.com_][14]_._
+顺便说一下，我最近与一群强大的软件工程师一起为我的一个移动应用程序工作。该组织非常出色，产品交付速度非常快，比我所合作的其他公司和自由职业者要快得多，我认为我可以诚实地推荐他们用于其他项目。如果您想与我联系，请给我发送电子邮件 —— [_said@devsdata.com_][14]
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
 [2]: https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js

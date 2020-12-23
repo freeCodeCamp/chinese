@@ -124,27 +124,26 @@ import axios from 'axios'
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*4wmqiPsSN5mdgjJiRaKVZg.png)
 
-`axios`  takes one required parameter, and can take a second optional parameter too. This takes some data as a simple query.
+`axios` 需要一个必填参数，当然你也可以提供第二个可选参数，用来传递一些简单的 query 数据。
 
 #### POST:
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*ey6-vwsrm9RAhyoU15u6xQ.png)
 
-[Axios][7]  returns a “Promise.” If you’re familiar with promises, you probably know that a promise can execute multiple requests. You can do the same thing with axios and run multiple requests at the same time.
+[Axios][7]  返回一个 “Promise”。如果你对 Promise 比较熟悉的话，你应该知道用 Promise 可以用来执行并行请求。这里你就可以用 axios 在同一时间运行多个并行请求。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*40Pji4utVKPpC7-dePfC6Q.png)
 
-Axios supports many other methods and options. You can explore them  [here][8].
+Axios 还提供了一些其他的方法和选项，你可以在[这里][8]具体看看。
 
 ### Angular HttpClient
 
-Angular has its own HTTP module that works with Angular apps. It uses the  [RxJS][9]  library to handle asynchronous requests and provides many options to perform the HTTP requests.
+Angular 有它自己的和 Angular 应用一起运行的 HTTP 模块。它使用到了 [RxJS][9] 库来处理异步请求，同时还提供了许多用来执行 HTTP 请求的选择。
 
-#### Making a call to the server using the Angular HttpClient
+#### 使用 Angular HttpClient 来发起一个服务端调用
+为了能使用 Angular HttpClient 来发起一个请求，我们需要将代码运行在一个 Angular 应用中。所以我这里就创建了一个。如果你对 Angular 不是很熟悉的话，可以看一下我的文章 [20分钟内学会如何创建你的第一个 Angular 应用][10] 。
 
-To make a request using the Angular HttpClient, we have to run our code inside an Angular app. So I created one. If you’re not familiar with Angular, check out my article,  [learn how to create your first Angular app in 20 minutes][10].
-
-The first thing we need to do is to import  `HttpClientModule`  in  `app.module.ts`
+我们需要做的第一件事儿是引入 `app.module.ts` 中的 `HttpClientModule` 模块。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*iFuW5Fbp91VR5gwQ6XNMEQ.png)
 

@@ -108,13 +108,13 @@
 
 当你在学一个新的技能的时候， 远离书籍和课程。尝试在工作上找一个任务可以用的上你想学的新技能。这样会帮你快速的学会技能。
 
-## **get comfortable being uncomfortable**
+## **舒适圈get comfortable being uncomfortable**
 
-While learning new skills, you also need to push yourself. You need to get comfortable being uncomfortable.
+在学习新技能的时候，你要逼迫自己。让你的不舒适进入舒适圈。
 
-Before I became an engineer, going through tutorials felt easy and welcoming. I rarely felt overwhelmed. I would use Codecademy and other similar platforms and  _think_  I was making progress. But I wasn’t.
+当工程师前，看教学感觉很容易。我会很少感觉到疲倦。我会用 Codecademy 和其他频道，然后觉得我有进步。但是我没有。
 
-After over 6 months of tutorials, I wasn’t much further along in my coding journey than when I had started. I was still a beginner.
+6月过后，我并没有I wasn’t much further along in my coding journey than when I had started. I was still a beginner.
 
 When I started working as a junior software engineer, I was in a constant state of fear. I felt like I could never get enough work done. It was a terrifying feeling. Yet I suddenly learned  _faster_  than I ever had in my life. My brain felt like a sponge.
 

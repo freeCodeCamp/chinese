@@ -67,40 +67,40 @@
 
 若感到舒适的时候，马上远离网上教学。教学只是刚开始的时候才好。但是，到某一个程度，那只会把你的学习缓慢，特别是如果你是太过依赖的话。
 
-这可以应用在你整个事业的途中。If you’re a junior engineer, pick a small project. Don’t use a tutorial. Try to figure out how to build it on your own. Don’t feel bad if you can’t build an entire application yet - that’s fine! Start with small projects and build up.
+这可以应用在你整个事业的途中。如果你是一个初级工程师，选一个小小的方案。不要用网上教学。尝试自己了解怎么建设。不要气馁，不成功没关系！从小方案开始做起来。
 
-And if you’re an engineer and have a few years of experience and want to switch to machine learning from backend engineering, for instance, pick a small project and start coding.
+还有，如果你是一位拥有很多年经验的工程师，而想要从后端工程转做机器工程话，选一个小方案开始编程吧。
 
-## **Always Be Learning**
+## **永久学习**
 
-Another skill a standout developer must have is to become an endless learner.
+另一个可以让你变成一个出众的开发者的技能是当一个永久的学习者。
 
-When you first start learning how to code, the amount of material you learn every day seems astronomical. You’re picking up new concepts constantly. It seems like there’s an endless stream of information to learn.
+当你刚开始学习着编程的时候，每天的素材非常多。你不断的吸取新的概念。要学的知识好像无止尽似的。
 
-Ideally, you’ll always be learning something new no matter how long you’ve been an engineer. But this can sometimes level off.
+在理想的世界里，无论你当了工程师多久，你还睡永远的学习新的东西。始终会找到平衡的。
 
-You begin to feel comfortable in a job and the nagging feeling that your skills have started to stagnate starts to set in. Boredom quickly follows.
+You begin to feel comfortable in a job and the nagging feeling that your skills have started to stagnate starts to set in. 很快就会感觉到无聊。
 
 Keeping your skills sharp will keep your employment status stable even in tough economic times.
 
-Here are a few ways you can  _always_  be learning.
+以下是几个可以让你永久学习的方法。
 
--   Write code. A  _lot_  of it.
--   Find developers who are better than you and work with them.
--   Ask to switch teams at your job if you feel you’ve stagnated.
--   Contribute to open source projects.
--   Attend meetups and conferences.
--   Subscribe to newsletters.
--   Start connecting with developers on Twitter.
--   Read constantly.
--   Build side projects.
--   Pursue new certifications.
--   Take online courses.
--   Take some time off. You can’t take your PTO to the grave.
--   Read blog posts.
--   Find a mentor.
--   Share your knowledge.
--   Write blog posts.
+-   写编码，常写
+-   跟比你优秀的开发者合作
+-   如果感觉被耽误的话，要求在工作上换队
+-   贡献 open source 的方案
+-   参加会议和讲座
+-   订阅通讯
+-   开始在Twitter跟开发者交流
+-   不断的阅读
+-   建设方案
+-   考新的文凭
+-   上网上课程
+-   休息。年休假是不可以带到棺材里面的。
+-   阅读部落格
+-   找导师
+-   分享知识
+-   写部落格
 
 Some of these things you can’t do in your spare time. And that’s OK. We all have personal lives. Focus on finding ways you can be learning during your work hours like switching teams, finding a mentor or becoming a mentor, and so on.
 
@@ -182,11 +182,11 @@ Start building this time up. Try to work up to a 45 minute uninterrupted session
 
 There are many apps that use the Pomodoro technique that can help you stay focused. Try to experiment with a few and see what works for you.
 
-## Wrapping Up
+## 结语
 
-Building a standout career as a developer is all about becoming a life long learner. If you can use the strategies that I've shared above to grow your skills, you'll always be employed.
+要成为一个出众的工程师是要不断地永久学习。如果你运用我刚分享的技能策略的话，你永远都会找到工作的。
 
-This blog post is an excerpt from my latest book, The Standout Career. It's available for  [pre-order][2]  now.
+这个文章是出于我最新的书籍，The Standout Career。 现在正在预购。[pre-order][2]
 
 [1]: https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692
 [2]: https://gumroad.com/l/xOzJU

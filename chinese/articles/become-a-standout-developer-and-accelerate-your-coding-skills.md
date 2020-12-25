@@ -31,7 +31,7 @@
 
 你先学会讲话，虽然不是完整的句子。从做中学会画画。你是婴儿的时候没有读过有关的书。你没有读过“婴儿手指绘画101教学”。
 
-先学会爬再走。这才帮助你快速驾驭新的概念。你永远都在————做。
+先学会爬再走。这才帮助你快速驾驭新的概念。你永远都在 —— 做。
 
 通常，在工程里面，概念会因为建设而保存，而不是死背。
 
@@ -41,33 +41,33 @@
 
 花了几个月时间熟背句法和定义, 我还是在原地。 只有开始建设的时候，技能才开始进步。
 
-While I loved reading engineering books and still do, the majority of my time is spent skimming the book and then trying out a new concept right away.
+在热爱阅读工程书籍的同时，我大部分的时间会花在略读一本书，然后立刻尝试新的概念。
 
-This is a more painful way to learn. I won’t lie to you – it’s scary. But nothing helps build new programming skills quite like building something out yourself.  _The fastest way to learn to code will be by building._
+这是一个比较痛苦的学习方式。我不会骗你 —— 挺可怕的。 但是没有什么能像亲自建设一样，帮助建设新的编程技能。最快的速度学习就是建设。
 
-But how can you do this?
+但你怎能办到呢?
 
-## **Escape Tutorial Hell**
+## **逃离教学地狱**
 
-When I was learning how to code, I spent months following tutorials. I would watch the tutorial and follow along step by step. Never attempting to do anything on my own.
+当我学习怎么编程的时候， 我花费了几个月的时间跟随网上教学。 我会一边看教学，一边跟着每个步骤的做。 永远都不会尝试着靠自己。
 
-If a tutorial got too difficult, I would switch to another one. I would spend hours every day watching tutorials.
+如果教学太难的话，我会换另外一个。我会每天花几个小时再看教学。
 
-I tried to use the learning skills I had from college and apply them to coding. And it  _didn’t_  work. Learning how to code is about active learning. Not passive.
+我尝试过用我在大学学习的方式，用在编程里。但并没有用。学习编程是要活跃的学习，不是被动式的。
 
-But it was so  _easy_  following tutorials. I never felt stupid or felt any imposter syndrome. I would feel like I had accomplished something at the end of the day.
+但是模仿网上教学挺容易的。我永远都不会觉得愚蠢或感觉到冒牌者症候群。我会最终觉得很有成就感。
 
-Meanwhile, I was absentmindedly following along with the video and not learning a  _single_  thing. I wasn’t pushing myself. If you want to learn new skills fast, you have to  _push_  yourself.
+与其同时，我会盲目的跟随着影片，而不会学到任何东西。我不会逼迫自己。如果你想要学一门新的技能的话， 你一定要逼迫自己往前进。
 
-After around six months of sticking around in tutorial hell enjoying the warm weather,  _I realized I had learned next to nothing_. I had no skills. I had prioritized flashcards and passively watching tutorials over actually building anything.
+6个月过去了，徘徊在教学地狱里面，享受着那里的温暖天气，舒适圈。我发觉到我没有学到任何东西。我没有任何的技能。我太重视抽认卡和被动式的看网上教学，多过于建设任何东西。
 
-Meanwhile, friends that had started working on projects right away were whizzing right by me at a pace I thought was incredible.
+与其同时， 早已经开始建设方案的朋友们会在我身旁略过，他们的学习速度快到难以置信。
 
-I felt so frustrated. I couldn’t even create a basic application. If it wasn’t in a tutorial with step by step guides, I couldn’t do it. It wasn’t until I started focusing on building something small on my own that coding finally  _clicked_  for me.
+我会感到很愤怒。我连建设一个基础的程式都不会。如果不是在一个同步网上教学里面，我真的不会。直到我开始建设小型的程式，我才被点醒。
 
-Step away from the tutorials as soon as you feel comfortable. Tutorials are great when you’re starting out. But at a certain point, they only slow down your learning if you rely on them too much.
+若感到舒适的时候，马上远离网上教学。教学只是刚开始的时候才好。但是，到某一个程度，那只会把你的学习缓慢，特别是如果你是太过依赖的话。
 
-This applies in every step of your career. If you’re a junior engineer, pick a small project. Don’t use a tutorial. Try to figure out how to build it on your own. Don’t feel bad if you can’t build an entire application yet - that’s fine! Start with small projects and build up.
+这可以应用在你整个事业的途中。If you’re a junior engineer, pick a small project. Don’t use a tutorial. Try to figure out how to build it on your own. Don’t feel bad if you can’t build an entire application yet - that’s fine! Start with small projects and build up.
 
 And if you’re an engineer and have a few years of experience and want to switch to machine learning from backend engineering, for instance, pick a small project and start coding.
 

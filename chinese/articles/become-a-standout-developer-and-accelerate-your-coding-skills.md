@@ -73,15 +73,15 @@
 
 ## **永久学习**
 
-另一个可以让你变成一个出众的开发者的技能是当一个永久的学习者。
+另一个可以让你变成一个出色的开发者的技能是当一个永久的学习者。
 
 当你刚开始学习着编程的时候，每天的素材非常多。你不断的吸取新的概念。要学的知识好像无止尽似的。
 
 在理想的世界里，无论你当了工程师多久，你还睡永远的学习新的东西。始终会找到平衡的。
 
-You begin to feel comfortable in a job and the nagging feeling that your skills have started to stagnate starts to set in. 很快就会感觉到无聊。
+你会开始觉得在工作上变得很舒适，然后抱怨自己的技能怎么好像凝滞似的。 很快就会感觉到无聊。
 
-Keeping your skills sharp will keep your employment status stable even in tough economic times.
+保持技能敏锐会帮助你工作稳固，就算景气不好的时候。
 
 以下是几个可以让你永久学习的方法。
 
@@ -102,13 +102,13 @@ Keeping your skills sharp will keep your employment status stable even in tough 
 -   分享知识
 -   写部落格
 
-Some of these things you can’t do in your spare time. And that’s OK. We all have personal lives. Focus on finding ways you can be learning during your work hours like switching teams, finding a mentor or becoming a mentor, and so on.
+以上会有些是你不可以在你的空挡的时间做的。没关系。 我们都会有私生活。专住在工作上学习，像换团队，找导师，或成为一位导师，等等。
 
-Being a standout engineer doesn’t mean you need to spend all your spare time coding. Coding is still a job. It is your 9-5. But you can choose to be a builder at your job.
+成为一位出色的工程师不代表要无时无刻的编程。编程是一个工作。这是你朝九晚五。但是你可以选择在你工作上成为一个建设者。
 
-When you’re working on a new skill, step away from the book and course. Try to pick up tasks at work that use the new skills you want to acquire right away. This will enable you to build skills quickly and efficiently at work.
+当你在学一个新的技能的时候， 远离书籍和课程。尝试在工作上找一个任务可以用的上你想学的新技能。这样会帮你快速的学会技能。
 
-## **Get Comfortable Being Uncomfortable**
+## **get comfortable being uncomfortable**
 
 While learning new skills, you also need to push yourself. You need to get comfortable being uncomfortable.
 
@@ -184,7 +184,7 @@ There are many apps that use the Pomodoro technique that can help you stay focus
 
 ## 结语
 
-要成为一个出众的工程师是要不断地永久学习。如果你运用我刚分享的技能策略的话，你永远都会找到工作的。
+要成为一个出色的工程师是要不断地永久学习。如果你运用我刚分享的技能策略的话，你永远都会找到工作的。
 
 这个文章是出于我最新的书籍，The Standout Career。 现在正在预购。[pre-order][2]
 

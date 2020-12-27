@@ -6,28 +6,42 @@
 ![9 Habits I Wish I Had as a Junior Developer](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/my-life-journal-WI30grRfBnE-unsplash.jpg)
 
 Have you ever sat down and taken an inventory of your habits? Habits are what make us who we are.
+你有没有试过坐下来清点自己的习惯？塑造我们的正是我们的习惯。
 
 Good habits help you to become who you want to be. Bad habits will slowly turn you into someone you don't want to be.
+好的习惯帮助你成为你想成为的样子；而坏习惯则会逐渐把你变成你讨厌的人。
+
 
 After more than 12 years as a software developer, I've grown some habits that I'm proud of and some that I'd rather get rid of.
+超过十二年的软件开发生涯，让我既养成了一些引以为豪的习惯，也有一些我宁愿摆脱的习惯。
 
 Most of the time, I wasn't aware of my habits, but looking back, it's pretty clear to me which habits were helping me grow and which were hindering me.
+虽然这其中的绝大部分时间，我都对这些习惯毫无觉察；然而回过头看，我能清晰地意识到哪些习惯在帮助我成长，而哪些习惯在阻碍我进步。
+
 
 This drove me to take an inventory and write about good developer habits to maybe inspire you to do the same.
+这个观察驱动我梳理这些习惯，并且希望它们也能对你有所启发。
 
 If you're starting as a developer, have a look at the habits outlined below and ask yourself if they would help you become who you want to be. Be conscious of your habits and actively nurture them to become a great software developer.
+如果你刚步入软件开发这个领域，花点时间看看这些习惯，问问你自己，这些习惯是否能帮助你成长。对自己的习惯保持觉察，有意识地主动培养好习惯，能帮助你成为优秀的开发者。
 
 # Volunteer for Things You Don't Know
+（主动去做?)你还不太了解的事情
 
 At the start of your career, you don't know a lot. You come into that new project and feel like an impostor because they're paying you money even though you don't understand half of the acronyms, technologies, and frameworks they're throwing around in each meeting.
+在你的职业生涯初期，很多事情你都不知道。你进到一个新的专案组，然后感觉自己像个冒充者，因为你对会议上丢出的一半的缩略语、技术和框架都一无所知，与此同时还有人在付钱给你。
 
 And you only faintly know the other half because you googled them.
+（而另外那一半你模糊知道的东西，仅仅是你刚刚 Google 出来的结果？？）
 
 Replace "At the start of your career" with "At the start of any new project", and you have a pretty good summary of a software development career.
+用「at the start of any new project」替换「在你的职业生涯初期」，你就可以得到一个很好/很清晰的总结，（对什么的总结？），对软件开发这份工作的总结。？？？
 
 Every new project, we start over. There are new people to meet, new requirements to understand, and new frameworks to learn. Every single time.
+每一个新专案，都是从头来过。有新的伙伴磨合，新的需求需要理解，新的框架需要学习。每一次都是如此。
 
 This is why it's important to learn new stuff. If you just keep doing the things you know, you'll never be confident about starting a new project. There will always be the fear of the unknown.
+所以，学习新技术非常重要。 如果你一直只做自己熟悉的事情，那你永远都不会有信心开始一个新的专案。你会永远被未知吓倒。
 
 **If you make it a habit to volunteer for tasks you don't know anything about, you will constantly learn new things.**
 

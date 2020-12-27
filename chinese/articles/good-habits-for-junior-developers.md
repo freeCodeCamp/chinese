@@ -1,6 +1,6 @@
 > * 原文地址：[9 Habits I Wish I Had as a Junior Developer 帮助初级开发者提升自己的 9 个好习惯](https://www.freecodecamp.org/news/good-habits-for-junior-developers/)
 > * 原文作者：Tom Hombergs
-> * 译者：
+> * 译者：Chen-Shuijiao
 > * 校对者：
 
 ![9 Habits I Wish I Had as a Junior Developer](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/my-life-journal-WI30grRfBnE-unsplash.jpg)

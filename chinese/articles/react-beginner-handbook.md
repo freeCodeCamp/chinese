@@ -5,7 +5,7 @@
 
 ![React for Beginners – A React.js Handbook for Front End Developers](https://www.freecodecamp.org/news/content/images/size/w2000/2020/11/book-2.jpg)
 
-React is one of the most popular JavaScript frameworks ever created, and I believe that it's one of the best tools out there.
+React 是有史以来最受欢迎的 JavaScript 框架之一，我认为它也是目前最好用的开发工具之一。
 
 The goal of this handbook is to provide a starter guide to learning React.
 

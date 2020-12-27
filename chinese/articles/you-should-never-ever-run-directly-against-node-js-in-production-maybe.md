@@ -55,13 +55,10 @@ app.get('/', function (req, res) {
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*VceC98Qk5zKqzBmiu1szDQ.png)
 
-There are sort of two problems here. The first is a development problem and the second is a production problem.
 这里存在两个问题。第一是开发问题，第二是生产问题。
 
-The development problem is that when we change the code, we have to stop and start the application to get our changes picked up.
 开发环境问题是每当我们修改了代码，我们不得不暂停程序再重新启动应用，才能获得我们的更改。
 
-To solve that, we usually use some sort of Node process manager like . These packages will watch our project and restart our server whenever we make changes. I usually do that like this……
 为了解决这个问题，我们通常使用某种 Node 进程管理工具，比如：`supervisor`  `nodemon`。这些工具将会监听我们的项目，每当我们有任何改变都会重启我们的服务。我通常这样使用......
 
 ```plain

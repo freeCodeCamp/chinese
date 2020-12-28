@@ -9,11 +9,11 @@ Have you ever sat down and taken an inventory of your habits? Habits are what ma
 你有没有试过坐下来清点自己的习惯？塑造我们的正是我们的习惯。
 
 Good habits help you to become who you want to be. Bad habits will slowly turn you into someone you don't want to be.
-好的习惯帮助你成为你想成为的样子；而坏习惯则会逐渐把你变成你讨厌的人。
+好的习惯帮助你成为自己想成为的样子；而坏习惯则会把你逐渐变成自己讨厌的人。
 
 
 After more than 12 years as a software developer, I've grown some habits that I'm proud of and some that I'd rather get rid of.
-超过十二年的软件开发生涯，让我既养成了一些引以为豪的习惯，也有一些我宁愿摆脱的习惯。
+超过十二年的软件开发生涯，让我养成了一些引以为豪的习惯，也让我养成了一些宁愿摆脱的习惯。
 
 Most of the time, I wasn't aware of my habits, but looking back, it's pretty clear to me which habits were helping me grow and which were hindering me.
 虽然这其中的绝大部分时间，我都对这些习惯毫无觉察；然而回过头看，我能清晰地意识到哪些习惯在帮助我成长，而哪些习惯在阻碍我进步。
@@ -26,10 +26,10 @@ If you're starting as a developer, have a look at the habits outlined below and 
 如果你刚步入软件开发这个领域，花点时间看看这些习惯，问问你自己，这些习惯是否能帮助你成长。对自己的习惯保持觉察，有意识地主动培养好习惯，能帮助你成为优秀的开发者。
 
 # Volunteer for Things You Don't Know
-（主动去做?)你还不太了解的事情
+（义务去做?)你还不太了解的事情
 
 At the start of your career, you don't know a lot. You come into that new project and feel like an impostor because they're paying you money even though you don't understand half of the acronyms, technologies, and frameworks they're throwing around in each meeting.
-在你的职业生涯初期，很多事情你都不知道。你进到一个新的专案组，然后感觉自己像个冒充者，因为你对会议上丢出的一半的缩略语、技术和框架都一无所知，与此同时还有人在付钱给你。
+在你的职业生涯初期，很多事情你都不知道。你进入一个新的专案，然后感觉自己像个冒充者，因为你对会议上丢出的一半的缩略语、技术和框架都一无所知，与此同时还有人在付钱给你。
 
 And you only faintly know the other half because you googled them.
 （而另外那一半你模糊知道的东西，仅仅是你刚刚 Google 出来的结果？？）
@@ -44,20 +44,33 @@ This is why it's important to learn new stuff. If you just keep doing the things
 所以，学习新技术非常重要。 如果你一直只做自己熟悉的事情，那你永远都不会有信心开始一个新的专案。你会永远被未知吓倒。
 
 **If you make it a habit to volunteer for tasks you don't know anything about, you will constantly learn new things.**
+（如果你养成主动帮忙做你不熟悉的事的习惯，你就能持续地学到新东西。）
 
 If the build needs fixing and you've never worked with the build system, get on it! You'll learn about build management.
+如果软件开发/测试版？（build）中出现任何问题需要修复，而你从来没有使用过这个组建系统（build system），想办法去解决它吧！你将学到有关组建管理（build management）的新知识。
 
 If there's a bug in the JavaScript frontend and you've only worked on the Java backend so far, fix it! You'll learn new Javascript idioms.
+如果JavaScript前端出现了程序错误，而你一直在Java后端工作，试着调试吧！你将会学到新的 JavaScript 语法.
 
 Doing stuff you're not confident about doing is a great way to grow. Be sure to manage other people's expectations towards you, though. Don't pretend you're an ace. Tell them you haven't done it before but you would like to learn.
+做一些你没有信心的事情是一种很好的成长方式，不过要注意管理其他人对你的期望。不要假装自己是个大师。告诉他们你以前没有做过，但你愿意学习。
 
 # Ask to Pair Up
+寻找伙伴？
+结伴工作？
+主动求助？
 
 If you're stuck and can't get started with a task because you're unfamiliar with the context, ask someone with experience in the topic to pair up with you.
+如果你被困住、无法开始某个新任务，是因为你对这个工作不太熟悉，你可以寻找一个在这个领域有经验的人和你搭档。
+如果你因为不熟悉某项工作而被困住、无法开始，你可以去寻找一个在这个领域有经验的人，请祂和你搭档。
+如果你因为对背景不熟悉而卡住、无法开始某项工作，你可以去寻找一个在这个领域有经验的人，请祂和你搭档。
 
 **A pairing session is a great way to kick off the work on a task.**  Discuss the requirements with your partner until you have an understanding of what is expected. Then, discuss the solution.
+结伴工作是启动任务的好方式。（？？）和你的伙伴一起讨论需求，直到你理解为止；然后，继续讨论解决方案。
 
 What's the context? Which codebase(s) do you have to touch? What are the explicit and implicit conventions in the codebase?
+（这个任务的）背景是什么？需要用到哪些代码库？代码库的显性规则是什么，有没有约定俗成的规矩？
+
 
 But you can take pairing even further.  **Instead of just pairing up to kick off a task, schedule more time with your partner**. After kicking off the topic, start working on it together. You drive, your partner gives advice, then the other way around.
 
@@ -68,6 +81,7 @@ This way, you even get to learn how your partner thinks and solves problems. You
 If that is a problem in your team, talk about it with your teammates (in a retro, for example) and it will be much easier afterward. Turns out it's just a habit to re-learn.
 
 # Talk about What You're Doing (and What You're Not Doing)
+谈论你正在做的事情（和你没有做的事情）
 
 I don't remember how often I have eagerly taken on a task, thinking I'd be done within a day, but I end up still working on it a week later.
 
@@ -95,6 +109,7 @@ In the best case, this status update is ritualized in the team. It's commonly ca
 But even if you have a daily ritual like that, take a couple of minutes to think if anyone should be updated that is not part of the daily ritual. Should they be included? Or should they be updated through some other mechanism?
 
 **Make it a habit to regularly update the people that have an interest in the results of your work.**
+养成习惯，持续地向对你的工作感兴趣的人给予反馈
 
 # Write a Blog
 
@@ -203,6 +218,7 @@ I use it as a trigger to stand up from my chair to stretch my muscles and drink 
 If you want to read more on habits, I can warmly recommend the book "Atomic Habits" by James Clear.
 
 # Don't Chase Silver Bullets
+
 
 I wrote a  [book][4]  on a specific architectural style and I regularly get emails saying "I love that architecture style and I want to apply it to all of my projects! How can I do that?".
 

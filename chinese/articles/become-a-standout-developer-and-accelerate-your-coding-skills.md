@@ -108,17 +108,17 @@
 
 当你在学一个新的技能的时候， 远离书籍和课程。尝试在工作上找一个任务可以用的上你想学的新技能。这样会帮你快速的学会技能。
 
-## **舒适圈get comfortable being uncomfortable**
+## **适应非舒适区**
 
-在学习新技能的时候，你要逼迫自己。让你的不舒适进入舒适圈。
+在学习新技能的时候，你要逼迫自己。让你适应非舒适区。
 
 当工程师前，看教学感觉很容易。我会很少感觉到疲倦。我会用 Codecademy 和其他频道，然后觉得我有进步。但是我没有。
 
-6月过后，我并没有I wasn’t much further along in my coding journey than when I had started. I was still a beginner.
+6月过后，比起刚开始的编程路程里，我并没有前进。 我还是很初级。
 
-When I started working as a junior software engineer, I was in a constant state of fear. I felt like I could never get enough work done. It was a terrifying feeling. Yet I suddenly learned  _faster_  than I ever had in my life. My brain felt like a sponge.
+当我刚开始担任初级软件工程师的时候，我是在一个持续的恐惧状态。我感觉我有做不完的工作。那是一个很恐怖的感觉。我突然间比以前学快很多。我脑袋像一个海绵一样。
 
-Find opportunities for growth. If you continue to do the same thing and feel comfortable, you’ll never find the opportunities for growth. If you take on the same tasks at work and continuously work on the same things, you won’t be pushing yourself and growing.
+寻找机会成长。如果你继续做同样的事情的话和待在舒适圈，你永远都寻找不到机会成长。If you take on the same tasks at work and continuously work on the same things, you won’t be pushing yourself and growing.
 
 Always be  _biting off more than you can chew_. If you spend all your time taking tutorials, it will begin to feel routine and it won’t be a challenge anymore. And you won’t be learning.
 

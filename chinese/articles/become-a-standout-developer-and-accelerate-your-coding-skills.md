@@ -118,21 +118,21 @@
 
 当我刚开始担任初级软件工程师的时候，我是在一个持续的恐惧状态。我感觉我有做不完的工作。那是一个很恐怖的感觉。我突然间比以前学快很多。我脑袋像一个海绵一样。
 
-寻找机会成长。如果你继续做同样的事情的话和待在舒适圈，你永远都寻找不到机会成长。If you take on the same tasks at work and continuously work on the same things, you won’t be pushing yourself and growing.
+寻找机会成长。你如果继续做同样的事情的话和待在舒适圈，你永远都寻找不到机会成长。你如果做同样的任务和继续地做同样的事，你不会推自己向上和成长。
 
-Always be  _biting off more than you can chew_. If you spend all your time taking tutorials, it will begin to feel routine and it won’t be a challenge anymore. And you won’t be learning.
+永远的不自量力。 你如果花所有的时间看网上教学，你会感觉到轮回而不会觉得有挑战性。你也不会觉得学习。
 
-However if you choose to push yourself, you’ll learn faster. You’ll be uncomfortable which means you’ll be growing.
+但是你如果选择强迫自己，你会学得比较快。觉得不习惯就到表正在成长。
 
-Much as if you were practicing piano, if you kept practicing the same piece over and over again because you were confident with it, you wouldn’t be improving your skills by learning more challenging pieces.
+就像学钢琴一样，你如果不停重复练习同一个你已经很熟练的曲子，你是不会进步的因为你要学一些比较有挑战性的曲子。
 
-The same principle applies to most things in life.
+同样的逻辑可以放在人生的另外阶段。
 
-When I was trying to get my first dev job, I had to decide between a position at Apple and an apprenticeship at a small startup.
+当我在找我第一份开发者工作的时候，选择在 Apple 的一个职位或新兴小型企业当学徒。
 
-The role at Apple was going to pay more and I knew other people who worked there so I would have built-in friends and a support system. However, it was half QA and half engineering, with the opportunity to move to full time engineering if things went well.
+Apple 的那一份工作薪水比较高，我也认识几个朋友在哪工作，相对来说我已经有一个朋友圈和支持系统。但是，那职位是一半 QA 一半工程，如果做的好的话，有机会转到全职工程师。
 
-The startup job was unstable at best. Nothing was guaranteed. They didn’t have another engineer who identified as a woman at the company. I would be the only woman in the entire engineering team.
+那个新兴小型企业的工作是非常的不稳定。没有任何的保证。They didn’t have another engineer who identified as a woman at the company. I would be the only woman in the entire engineering team.
 
 Not to mention – this  _wasn’t_  a job offer! It was an offer for a three month apprenticeship with no guarantee that I would have a job after. I would have to move to the city, sign a lease, and hope that I could somehow afford the rent if I failed the apprenticeship.
 

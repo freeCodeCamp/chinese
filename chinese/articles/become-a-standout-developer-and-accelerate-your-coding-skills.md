@@ -132,9 +132,9 @@
 
 Apple 的那一份工作薪水比较高，我也认识几个朋友在哪工作，相对来说我已经有一个朋友圈和支持系统。但是，那职位是一半 QA 一半工程，如果做的好的话，有机会转到全职工程师。
 
-那个新兴小型企业的工作是非常的不稳定。没有任何的保证。They didn’t have another engineer who identified as a woman at the company. I would be the only woman in the entire engineering team.
+那个新兴小型企业的工作是非常的不稳定。没有任何的保证。公司里没有另外一个女工程师。我是在整个工程团里唯一的女性。
 
-Not to mention – this  _wasn’t_  a job offer! It was an offer for a three month apprenticeship with no guarantee that I would have a job after. I would have to move to the city, sign a lease, and hope that I could somehow afford the rent if I failed the apprenticeship.
+我还没有提到那不是一个工作提案! 工作提案是3个月当学徒之后没有保证会录用你。我要搬进城市里，签一个租约，如果当学徒失败的话，还可以负担租金。
 
 And this was back when coding bootcamps were at the largest point of the bubble. Students were graduating in San Francisco and the market was more saturated than ever before. Job postings frequently included “No bootcamp grads” which was highly discouraging.
 

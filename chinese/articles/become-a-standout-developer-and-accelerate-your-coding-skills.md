@@ -168,19 +168,19 @@ Apple 的那一份工作薪水比较高，我也认识几个朋友在哪工作�
 
 ## **深度工作**
 
-Coding is a job that requires deep concentration. Switching context to check your phone or social media platforms will be detrimental to the amount of work you can get done in a given day.
+编程是一份需要深层集中精神的工作。转移景况看手机或社交平台,只会对你一天的工作有害。
 
-Most people will work for a few minutes and then check their phone. If the average employee spends 8 hours working each day, and spends two hours or more being unproductive, you can quickly become known as an engineer who gets things done by simply spending your work hours  _actually_  working.
+大部分的人都会工作几分钟，然后就会看手机。如果平均每个员工每天都会花8小时工作，然后花2小时以上做一些没有效率的事，你就会很快出名，变成事实上在上班时间稳稳当当工作的一位好员工。
 
-By building a habit of focus and deep work, you’ll become an engineer that stands out from the crowd. Creating this habit will also show that you have an impenetrable work ethic.
+你只要习惯性投入和深度地工作，你会成为一位出众的工程师。 创造这一种习惯也会呈现你拥有坚不可摧的工作道德。
 
-How long can you go without checking your phone or Facebook or Twitter? Five minutes? Ten? Fifteen?
+你可以多长时间不看手机或 Facebook 或 Twitter? 5分钟？10？ 15？
 
-If you haven’t read it, pick up a copy of  [Deep Work][1]  by Cal Newport. Start small. Try to focus on one task for 20-25 minutes without interruptions. Put your phone on airplane mode, close all unnecessary tabs and put a big sign on your door that says ‘DO NOT DISTURB.’
+你如果还没阅读它, 去取一本 [Deep Work][1]  由 Cal Newport。 从一点开始。尝试在同一个任务无干扰地专注20-25分钟。把手机调到飞行模式。删去所有没用的标签，在你门口放一个大的招牌写着‘请勿打扰’。
 
-Start building this time up. Try to work up to a 45 minute uninterrupted session. In such a distracted world, the ability to do this is rare and the amount of work you’ll find you can suddenly get done in a short time will be shocking.
+从这个时间起，开始建设。尝试不打扰之下工作45分钟。在一个干扰匆匆的世界里，有能力做这样的事是很宝贵的。你会发觉你在这么短的时间内可以完成的工作量会很惊人的。
 
-There are many apps that use the Pomodoro technique that can help you stay focused. Try to experiment with a few and see what works for you.
+有很多应用程序使用 Pomodoro 技术帮助专注力。尝试体验一下，看看那个适合你。
 
 ## 结语
 

@@ -7,21 +7,37 @@
 
 In this article, you'll learn all about Software Requirements. You'll get an outline on the topic area, the process, and most importantly what your responsibilities are in this area as a software engineer.
 
+在本文中，您将了解有关软件需求的所有信息。您将获得有关主题领域，过程的概述，最重要的是，您作为软件工程师在该领域的职责是什么。
+
 You should gain some insight into your role and activities with software requirements. If anything, you'll have something to discuss with colleagues after your next stand-up 😃
 
 This article borrows heavily from the tome that is the [IEEE SWEBOK guide][1]. It attempts to distill some of that knowledge, re-purposing it more concisely. In case your wondering, SWEBOK is an acronym for the Software Engineering Body of Knowledge which is maintained by the IEEE Computer Society.
 
+本文从《IEEE SWEBOK指南》中借鉴了大量内容，试图更加简洁地提炼其中的某些知识。 如果您想知道，SWEBOK是由IEEE计算机协会维护的软件工程知识体系的缩写。
+
 ## Upfront, Why is this important
+
+## 前言，为什么说软件需求很重要
 
 There is a misconception from those not in software engineering that the role of a software engineer is to just "write code."
 
+对于那些不在软件工程领域的人来说有一个误解，即软件工程师的角色仅仅是“编写代码”。
+
 Yes, we're technologists who generally love learning programming. In reality, this is a simplistic view that under-values what a software engineer professional actually does in their day-to-day job and career. It focuses only on a slice of their overall responsibilities.
+
+是的，我们技术人员通常喜欢学习编程。但事实上这是一个简单的看法，它仅侧重于他们的整体责任，低估了软件工程师专业人员在日常工作和职业中所面临的实际工作。
 
 A software engineer's role is to build business solutions at enterprise scale. This includes a large number of responsibilities that aren't related to the code they create.
 
+软件工程师的职责是在企业范围内构建业务解决方案，这包括大量与他们创建的代码无关的职责。
+
 One area of responsibility you have as a professional software engineer is the area of software requirements.
 
+作为一名专业软件工程师，您要承担的责任之一就是了解软件需求。
+
 ## What are Software Requirements
+
+## 什么是软件需求
 
 Software Requirements on the surface sound simple. The software must do X for Y so that Z. Think about it for long enough on any problem that software could solve (or about existing software already solving a problem) and you could probably brainstorm a large number of requirements. Easy right?
 

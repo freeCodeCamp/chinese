@@ -150,23 +150,23 @@ Apple 的那一份工作薪水比较高，我也认识几个朋友在哪工作�
 
 与此同时，跟我读同一个训练营的朋友都会跟我讨论他们在 Apple 轻松的工作，他们每天都有合理的工作时间。刚不用提， 他们还赚得比我还多！
 
-After the first two months my manager asked to have a meeting about the apprenticeship. I was convinced they were going to fire me.
+2个月过后，我经理想要跟我开个会商量学徒期的事。我当时深信他们会开除我。
 
-Instead they told me that they were ending the apprenticeship program a month early and they were going to offer me a full-time software engineering position at the company. I can’t describe how happy I was that day.
+他们反而告诉我他们会提前一个月结束学徒期，给我一个全职工程师的职位。我没办法形容我那天有多开心。
 
-I continued throwing myself into my work. I would volunteer for tasks that I didn’t feel ready to complete. If I didn’t know how to do something, I would say I could do it anyway. A year and a half after that, I was a senior software engineer at the same startup.
+我继续把自己投身于工作里面。我会义务去做一些我比较没把握的任务。我如果不懂怎么做一些事，我还是会说我可以。一年半后，我在同一个小型企业里成为了一位资深的工程师。
 
-Would it have been easier if I accepted the position at Apple? Absolutely. But the engineers I knew that accepted the Apple position never had a mentor like I did to push them and challenge them to improve their skills.
+若是答应了 Apple 的那一份工作会比较容易吗？肯定会。但是答应做那 Apple 工作的工程师永远都不会像我这样有一个好导师逼迫他们突出自己，挑战他们的技能而进步。
 
-In the long term, they ended up spending more time recovering from the lost learning early on. Some are still stuck with the same entry level title years later.
+长期来说，他们始终花很多时间在回复失去早期学习的机会。有一些几年后还在同一个职位。
 
-Depending on your goals, that might be fine for you. And that’s okay. But I wanted to become a standout developer with an exceptional career. And I’m guessing if you’re reading this, so do you.
+根据你的目标，那可能对你来说很好。没为题。但是，我是要成为一个出色的开发这，并且拥有非凡的事业。我猜如果你正在阅读这篇文章的话，你也是如此的想。
 
-Was it risky to accept the startup job? Absolutely. Most people thought it wasn’t a good move. But I chose to be uncomfortable and it paid off. Did it feel comfortable? Absolutely not. I probably aged five years in that role.
+答应小型企业的工作会很冒险的吗？肯定会。很多人都觉得那不是一个好策略。但是，我选择非舒适，我也得到收获。会觉得习惯吗？肯定不会。我或许老了5岁吧。
 
-Choose  _discomfort_. The biggest most rewarding success in life happens after hard work. Put down the tutorial and pick up a task you don’t know how to solve.
+选择非舒适。人生最大的收获就是努力工作。把网上教学放下，捡起你不会解决的任务吧。
 
-## **Deep Work**
+## **深度工作**
 
 Coding is a job that requires deep concentration. Switching context to check your phone or social media platforms will be detrimental to the amount of work you can get done in a given day.
 

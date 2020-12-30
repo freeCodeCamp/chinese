@@ -136,19 +136,19 @@ Apple 的那一份工作薪水比较高，我也认识几个朋友在哪工作�
 
 我还没有提到那不是一个工作提案! 工作提案是3个月当学徒之后没有保证会录用你。我要搬进城市里，签一个租约，如果当学徒失败的话，还可以负担租金。
 
-And this was back when coding bootcamps were at the largest point of the bubble. Students were graduating in San Francisco and the market was more saturated than ever before. Job postings frequently included “No bootcamp grads” which was highly discouraging.
+那时候是编程训练营最澎湃的阶段。当时有非常多旧金山的毕业生，所以他们都面临了市场最饱和的时期。很多招聘都会常常写着‘拒训练营毕业生’，情况让人非常的沮丧。
 
-I knew if I started at Apple, it would be good for my resume. I’d be making more money as well. But I couldn’t stop thinking about growth and mentorship opportunities that the startup offered me.
+我知道如果我在 Apple 工作的话, 会对我的简历非常好。 我也会赚比较多钱。但是我不停的思考小型企业可以带给我的成长和指导机会。
 
-Sadly, I had no idea what to do. I had been sold the idea of a high paying dev job during my coding bootcamp. Not a low paying apprenticeship that might not even lead to a job.
+我真的不知道该怎么办。 在训练营的时候，我一直都被灌输一个概念，就是会得到高薪水的开发者工作。不是一个低薪水的学徒经验，还有没有保障之后会留一个职位给你。
 
-I ended up accepting the three month apprenticeship. Most of my friends thought I had lost it. My own family thought I had lost it.
+我始终答应了3个月的学徒期。我大部分的朋友都以为我疯了。我家人也觉得我疯了。
 
-I suddenly had three months to prove myself at the apprenticeship. I quickly lost count of how many weekends and late nights I worked. I was  _terrified_.
+我突然有3个月在学徒期证明自己。我很快就数不完有工作了多少个周末和夜晚。我吓坏了。
 
-The pace was fast and I was blown away by how little I knew. I felt so nervous some days that I wanted to call in sick. I would fantasize about my train getting delayed underground so I would be forced to miss work. Every standup felt like torture because I felt I wasn’t doing enough.
+这里速度非常快。我不可置信我会的有多么的少。有几天，我紧张到我快要请病假了。 我幻想火车会延迟，让我可以不用上班。每一个会议都是折磨，因为我会觉得我做得不够。
 
-Meanwhile, friends that attended the same bootcamp as I had were discussing their cushy entry level jobs at Apple and how they got to leave at a reasonable hour every day. Not to mention, they were paid so much more!
+与此同时，跟我读同一个训练营的朋友都会跟我讨论他们在 Apple 轻松的工作，他们每天都有合理的工作时间。刚不用提， 他们还赚得比我还多！
 
 After the first two months my manager asked to have a meeting about the apprenticeship. I was convinced they were going to fire me.
 

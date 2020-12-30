@@ -7,13 +7,13 @@
 
 React 是有史以来最受欢迎的 JavaScript 框架之一，我认为它也是目前最好用的开发工具之一。
 
-The goal of this handbook is to provide a starter guide to learning React.
+希望这篇文章可以为 React 初学者提供一些帮助。
 
-At the end of the book, you'll have a basic understanding of:
+在学习完这篇文章后，你就可以对 React 有初步的了解：
 
--   What React is and why it's so popular
--   How to install React
--   React Components
+-   什么是 React 以及为什么 React 这么受欢迎
+-   怎么安装 React
+-   React 组件
 -   React State
 -   React Props
 -   Handling user events in React

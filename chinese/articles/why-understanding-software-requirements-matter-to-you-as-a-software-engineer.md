@@ -41,17 +41,31 @@ One area of responsibility you have as a professional software engineer is the a
 
 Software Requirements on the surface sound simple. The software must do X for Y so that Z. Think about it for long enough on any problem that software could solve (or about existing software already solving a problem) and you could probably brainstorm a large number of requirements. Easy right?
 
+表面上的软件需求听起来很简单，该软件必须将X代为Y，以便Z。对于软件可以解决的任何问题（或已解决问题的现有软件）考虑足够长的时间，您可能会头脑风暴出大量的需求，这还容易吗？
+
 Well no, in fact, for most enterprise software.
+
+事实上，对于大多数企业软件而言答案都是否定的。
 
 _How are you gathering your requirements? Are you considering the stakeholders needs and priorities? Is this really a requirement for users of the software? Are there technical limitations of considerations? How do you know when it's done? Does the requirement implementation satisfy a set criterion? And so on..._
 
+您如何收集需求？您有考虑到利益相关者的需求和优先事项吗？这是该软件用户的一个真实需求吗？技术限制相关事项有考虑到吗？你怎么知道什么时候能完成？需求实现是否满足设定的标准？等等有一系列要考虑的问题......
+
 When you start drilling into the idea of Software Requirements, you find that they hide a large and deeper knowledge area.
+
+当您开始深入了解软件需求的思想时，您会发现那里隐藏了一个更大更深的知识领域。
 
 How deep and large a knowledge area? SWEBOK defines the area of Software Requirements as being "_concerned with the elicitation, analysis, specification, and validation of software requirements as well as the management of requirements during the whole life cycle of the software product._"
 
+有多大多深呢？SWEBOK将软件需求领域定义为“关注软件需求的启发，分析，规范和验证以及软件产品整个生命周期中的需求管理。”
+
 The size of this area, such as the number of activities and how involved each can be, gave enough credence to devote a branch of engineering known as "_requirements engineering_" solely focused on the requirements process.
 
+该领域的规模，例如活动的数量以及每项活动的参与程度，给了足够的重视，可以专门研究一个工程分支，称为“需求工程”，专门针对需求过程。
+
 Certain organizations may hire specifically for the role of a requirements engineer. You may see this more often in really large organizations who provide system-level solutions, for example, where their proposed solutions to customer problems encompass a total solution of which the software is just a single component.
+
+某些组织可能会专门聘请需求工程师。在提供系统级解决方案的大型组织中，您可能会经常看到这种情况，例如，他们针对客户问题提出的解决方案包括一个整体解决方案，而该解决方案仅是软件的单个组件。
 
 More typically, organizations tend to share requirements engineering responsibility through activities assigned amongst the various other project roles, like designers, business analysts, product owners, offering or client management, technical writers, software architects/engineers, and so on.
 

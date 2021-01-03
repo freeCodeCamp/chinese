@@ -7,7 +7,7 @@
 
 Progressive web apps are a way to bring that native app feeling to a traditional web app. With PWAs we can enhance our website with mobile app features which increase usability and offer a great user experience.
 
-In this article, we are going to build a PWA from scratch with HTML, CSS, and JavaScript. Here are the topics we'll cover:
+在这篇文章中，我们将使用HTML、CSS和JavaScript从零开始构建PWA。我们要讨论的主题有：
 
 -   [What is a Progressive Web App ?][1]
 -   [Markup][2]
@@ -23,11 +23,11 @@ In this article, we are going to build a PWA from scratch with HTML, CSS, and Ja
 
 So, let's get started with an important question: What the heck is a PWA?
 
-## What is a Progressive Web App ?
+## 什么是渐进式 Web App ?
 
 A Progressive Web App is a web app that delivers an app-like experience to users by using modern web capabilities. In the end, it's just your regular website that runs in a browser with some enhancements. It gives you the ability:
 
--   To install it on a mobile home screen
+-   安装到你的手机桌面上
 -   To access it when offline
 -   To access the camera
 -   To get push notifications

@@ -1,6 +1,6 @@
 > -   原文地址：[The definitive Node.js handbook](https://www.freecodecamp.org/news/the-definitive-node-js-handbook-6912378afc6e/)
 > -   原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> -   译者：
+> -   译者：blackcai
 > -   校对者：
 
 ![The definitive Node.js handbook](https://cdn-media-1.freecodecamp.org/images/1*7F50Qc-ysFgy6tCjUyruTA.jpeg)

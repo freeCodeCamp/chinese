@@ -3,21 +3,35 @@
 > -   译者：blackcai
 > -   校对者：
 
-![The definitive Node.js handbook](https://cdn-media-1.freecodecamp.org/images/1*7F50Qc-ysFgy6tCjUyruTA.jpeg)
+![Node.js 权威手册](https://cdn-media-1.freecodecamp.org/images/1*7F50Qc-ysFgy6tCjUyruTA.jpeg)
 
 Note: you can get a [PDF, ePub, or Mobi][1] version of this handbook for easier reference, or for reading on your Kindle or tablet.
 
+注意：你可以获取本手册的 [PDF, ePub, or Mobi][1] 版本以方便在你的 Kindle 或者平板电脑上阅读。
+
 ### Introduction to Node.js
+
+### Node.js 简介
 
 This handbook is a getting started guide to Node.js, the server-side JavaScript runtime environment.
 
+本手册是服务端 JavaScript 运行时环境 Node.js 的入门指南。
+
 #### Overview
+
+#### 概述
 
 Node.js is a **runtime environment for JavaScript** that runs on the **server**.
 
+Node.js 是一种运行在服务端的 JavaScript 运行时环境。
+
 Node.js is open source, cross-platform, and since its introduction in 2009, it got hugely popular and now plays a significant role in the web development scene. If GitHub stars are one popularity indication factor, having 58000+ stars means being very popular.
 
+Node.js 是开源、跨平台的，自2009年问世以来，已广受欢迎，并且在 Web 开发领域中扮演着重要的角色。如果 GitHub 星标是一个受欢迎程度指标，那么拥有 75800+ 星标意味着非常受欢迎。
+
 Node.js runs the V8 JavaScript engine, the core of Google Chrome, outside of the browser. Node.js is able to leverage the work of the engineers that made (and will continue to make) the Chrome JavaScript runtime blazing fast, and this allows Node.js to benefit from the huge performance improvements and the Just-In-Time compilation that V8 performs. Thanks to this, JavaScript code running in Node.js can become very performant.
+
+Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境，位于浏览器之外。
 
 A Node.js app is run by a single process, without creating a new thread for every request. Node provides a set of asynchronous I/O primitives in its standard library that will prevent JavaScript code from blocking and generally, libraries in Node.js are written using non-blocking paradigms, making a blocking behavior an exception rather than the normal.
 
@@ -4695,3 +4709,5 @@ I hope this introduction to Node.js will help you get started using it, or help 
 [121]: https://nodejs.org/api/stream.html
 [122]: https://github.com/mysqljs/mysql
 [123]: https://pugjs.org/api/express.html
+
+

@@ -5,202 +5,198 @@
 
 ![How to build a PWA from scratch with HTML, CSS, and JavaScript](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/Group-1.png)
 
-Progressive web apps are a way to bring that native app feeling to a traditional web app. With PWAs we can enhance our website with mobile app features which increase usability and offer a great user experience.
+渐进式 Web 应用是一种能给传统 Web 应用带来原生应用体验的方式。使用 PWA ，我们能够使用移动应用的特性来增强我们的网站，从而提高可用性并提供良好的用户体验。
 
-在这篇文章中，我们将使用HTML、CSS和JavaScript从零开始构建PWA。我们要讨论的主题有：
+在这篇文章中，我们将使用 HTML、CSS 和 JavaScript 从零开始构建 PWA。我们要讨论的主题有：
 
--   [What is a Progressive Web App ?][1]
--   [Markup][2]
--   [Styling][3]
--   [Show data with JavaScript][4]
--   [Web App Manifest][5]
--   [What is a Service Worker?][6]
--   [Cache the assets][7]
--   [Fetch the assets][8]
--   [Register the Service Worker][9]
--   [Final thoughts][10]
--   [Next steps][11]
+-   [什么是渐进式 Web App ?][1]
+-   [标记][2]
+-   [样式][3]
+-   [用 JavaScript 显示数据][4]
+-   [Web 应用 Manifest][5]
+-   [什么是 Service Worker?][6]
+-   [缓存资源][7]
+-   [获取资源][8]
+-   [注册 Service Worker][9]
+-   [最后的想法][10]
+-   [下一步][11]
 
-So, let's get started with an important question: What the heck is a PWA?
+那么，让我们从一个重要的问题开始：PWA 到底是什么？
 
 ## 什么是渐进式 Web App ?
 
-A Progressive Web App is a web app that delivers an app-like experience to users by using modern web capabilities. In the end, it's just your regular website that runs in a browser with some enhancements. It gives you the ability:
+渐进式 Web 应用是一种通过使用现代 Web 能力向用户提供类似于应用程序的体验的 Web 应用程序。总而言之，它只是一个运行在浏览器上且使用了一些增强特性的普通网站。它赋予你以下的能力：
 
 -   安装到你的手机桌面上
--   To access it when offline
--   To access the camera
--   To get push notifications
--   To do background synchronization
+-   脱机访问
+-   使用摄像头
+-   通知推送
+-   后台同步
 
-And so much more.
+还有更多等等。
 
-However, to be able to transform our traditional web app to a PWA, we have to adjust it a little bit by adding a web app manifest file and a service worker.
+但是，为了将传统的 Web 应用转换成 PWA，我们必须对其做出一些小调整，添加一个 manifest 文件和 service worker。
 
-Don't worry about these new terms – we'll cover them below.
+别担心这些新术语，我们将会在下面介绍它们。
 
-First, we have to build our traditional web app. So let's start with the markup.
+首先，我们必须要构建传统的 Web 应用，所以让我们从编写结构开始吧。
 
-## Markup
+## 标记
 
-The HTML file is relatively simple. We wrap everything in the  `main`  tag.
+这个 HTML 文件十分简单，我们只需要将所有内容放置在 `main` 标签内即可
 
--   In  `index.html`
+-   在 `index.html`
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Dev'Coffee PWA</title>
-  </head>
-  <body>
-    <main>
-      <nav>
-        <h1>Dev'Coffee</h1>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Blog</li>
-        </ul>
-      </nav>
-      <div class="container"></div>
-    </main>
-    <script src="js/app.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Dev'Coffee PWA</title>
+    </head>
+    <body>
+        <main>
+            <nav>
+                <h1>Dev'Coffee</h1>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Blog</li>
+                </ul>
+            </nav>
+            <div class="container"></div>
+        </main>
+        <script src="js/app.js"></script>
+    </body>
 </html>
-
 ```
 
-And create a navigation bar with the  `nav`  tag. Then, the  `div`  with the class  `.container`  will hold our cards that we add later with JavaScript.
+然后用 `nav` 标签来创建一个导航栏。用 `div` 标签来创建一个 class 为 `container` 的元素来放置剩下的卡片，稍后我们将使用 Javascript 来添加它们。
 
-Now that we've gotten that out of the way, let's style it with CSS.
+现在我们把这些都弄好了，让我们用 CSS 来给它加点样式。
 
-## Styling
+## 样式
 
-Here, as usual, we start by importing the fonts we need. Then we'll do some resets to prevent the default behavior.
+向往常一样，我们需要先引入一些字体。然后我们再重置某些默认样式。
 
--   In  `css/style.css`
+-   在 `css/style.css`
 
 ```css
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
-  background: #fdfdfd;
-  font-family: "Nunito", sans-serif;
-  font-size: 1rem;
+    background: #fdfdfd;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
 }
 main {
-  max-width: 900px;
-  margin: auto;
-  padding: 0.5rem;
-  text-align: center;
+    max-width: 900px;
+    margin: auto;
+    padding: 0.5rem;
+    text-align: center;
 }
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 ul {
-  list-style: none;
-  display: flex;
+    list-style: none;
+    display: flex;
 }
-
-
 ```
 
-Then, we limit the  `main`  element's maximum width to  `900px`  to make it look good on a large screen.
+然后我们限制 `main` 元素的最大宽度为 `900px`让它在大屏幕上看起来有更好的呈现方式。
 
-For the navbar, I want the logo to be at the left and the links at the right. So for the  `nav`  tag, after making it a flex container, we use  `justify-content: space-between;`  to align them.
+对于导航栏 ，我希望 logo 在左边，链接在右边。所以对于 `nav` 标签，将其设为 flex 容器后，我们使用 `justify-content: space-between;` 将其对齐。
 
--   In  `css/style.css`
+-   在 `css/style.css`
 
 ```css
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  padding: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1rem 0;
 }
 .card {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 15rem auto;
-  height: 15rem;
-  background: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 10px;
-  margin: auto;
-  overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 15rem auto;
+    height: 15rem;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 10px;
+    margin: auto;
+    overflow: hidden;
 }
 .card--avatar {
-  width: 100%;
-  height: 10rem;
-  object-fit: cover;
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
 }
 .card--title {
-  color: #222;
-  font-weight: 700;
-  text-transform: capitalize;
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
+    color: #222;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
 }
 .card--link {
-  text-decoration: none;
-  background: #db4938;
-  color: #fff;
-  padding: 0.3rem 1rem;
-  border-radius: 20px;
+    text-decoration: none;
+    background: #db4938;
+    color: #fff;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
 }
-
 ```
 
-We'll have several cards, so for the container element it will be displayed as a grid. And, with  `grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr))`, we can now make our cards responsive so that they use at least  `15rem`  width if there is enough space (and  `1fr`  if not).
+我们有几个卡片，所以 container 元素将使用 grid 布局来显示。然后添加属性 `grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr))`，我们现在能够使卡片具有响应式。这样的话如果有足够空间它们将最少具有 `15rem` 的宽度（如果没有则足够的空间则使用 `1fr`）。
 
-And to make them look nice we double the shadow effect on the  `.card`  class and use  `object-fit: cover`  on  `.card--avatar`  to prevent the image from stretching.
+然后为了使它们更加好看，我们在 `.card` 类上添加了双倍的阴影效果，并在 `.card--avatar` 上使用 `object-fit: cover` 属性为了防止图像的拉伸
 
-Now it looks much better – but we still don't have data to show.
+现在它看起来更好看了，但是我们仍然没有数据显示。
 
-Let's fix it in the next section
+让我们在下个节来解决这个问题。
 
-## Show data with JavaScript
+## 使用 JavaScript 显示数据
 
 Notice that I used large images that take some time to load. This will show you in the best way the power of service workers.
 
-As I said earlier, the  `.container`  class will hold our cards. Therefore, we need to select it.
+As I said earlier, the `.container` class will hold our cards. Therefore, we need to select it.
 
--   In  `js/app.js`
+-   In `js/app.js`
 
 ```javascript
-const container = document.querySelector(".container")
+const container = document.querySelector('.container');
 const coffees = [
-  { name: "Perspiciatis", image: "images/coffee1.jpg" },
-  { name: "Voluptatem", image: "images/coffee2.jpg" },
-  { name: "Explicabo", image: "images/coffee3.jpg" },
-  { name: "Rchitecto", image: "images/coffee4.jpg" },
-  { name: " Beatae", image: "images/coffee5.jpg" },
-  { name: " Vitae", image: "images/coffee6.jpg" },
-  { name: "Inventore", image: "images/coffee7.jpg" },
-  { name: "Veritatis", image: "images/coffee8.jpg" },
-  { name: "Accusantium", image: "images/coffee9.jpg" },
-]
-
+    { name: 'Perspiciatis', image: 'images/coffee1.jpg' },
+    { name: 'Voluptatem', image: 'images/coffee2.jpg' },
+    { name: 'Explicabo', image: 'images/coffee3.jpg' },
+    { name: 'Rchitecto', image: 'images/coffee4.jpg' },
+    { name: ' Beatae', image: 'images/coffee5.jpg' },
+    { name: ' Vitae', image: 'images/coffee6.jpg' },
+    { name: 'Inventore', image: 'images/coffee7.jpg' },
+    { name: 'Veritatis', image: 'images/coffee8.jpg' },
+    { name: 'Accusantium', image: 'images/coffee9.jpg' },
+];
 ```
 
 Then, we create an array of cards with names and images.
+然后我们将创建一个包含 name 和 image 的卡片数组。
 
--   In  `js/app.js`
+-   In `js/app.js`
 
 ```javascript
 const showCoffees = () => {
@@ -218,7 +214,7 @@ const showCoffees = () => {
 
 ```
 
-With this code above, we can now loop through the array and show them on the HTML file. And to make everything work, we wait until the DOM (Document Object Model) content finishes loading to run the  `showCoffees`  method.
+With this code above, we can now loop through the array and show them on the HTML file. And to make everything work, we wait until the DOM (Document Object Model) content finishes loading to run the `showCoffees` method.
 
 We've done a lot, but for now, we just have a traditional web app. So, let's change that in the next section by introducing some PWA features.
 
@@ -228,9 +224,9 @@ We've done a lot, but for now, we just have a traditional web app. So, let's cha
 
 The web app manifest is a simple JSON file that informs the browser about your web app. It tells how it should behave when installed on the user's mobile device or desktop. And to show the Add to Home Screen prompt, the web app manifest is required.
 
-Now that we know what a web manifest is, let's create a new file named  `manifest.json`  (you have to name it like that) in the root directory. Then add this code block below.
+Now that we know what a web manifest is, let's create a new file named `manifest.json` (you have to name it like that) in the root directory. Then add this code block below.
 
--   In  `manifest.json`
+-   In `manifest.json`
 
 ```javascript
 {
@@ -283,15 +279,15 @@ In the end, it's just a JSON file with some mandatory and optional properties.
 
 name: When the browser launches the splash screen, it will be the name displayed on the screen.
 
-short\_name: It will be the name displayed underneath your app shortcut on the home screen.
+short_name: It will be the name displayed underneath your app shortcut on the home screen.
 
-start\_url: It will be the page shown to the user when your app is open.
+start_url: It will be the page shown to the user when your app is open.
 
-display: It tells the browser how to display the app. There are several modes like  `minimal-ui`,  `fullscreen`,  `browser`  etc. Here, we use the  `standalone`  mode to hide everything related to the browser.
+display: It tells the browser how to display the app. There are several modes like `minimal-ui`, `fullscreen`, `browser` etc. Here, we use the `standalone` mode to hide everything related to the browser.
 
-background\_color: When the browser launches the splash screen, it will be the background of the screen.
+background_color: When the browser launches the splash screen, it will be the background of the screen.
 
-theme\_color: It will be the background color of the status bar when we open the app.
+theme_color: It will be the background color of the status bar when we open the app.
 
 orientation: It tells the browser the orientation to have when displaying the app.
 
@@ -299,7 +295,7 @@ icons: When the browser launches the splash screen, it will be the icon displaye
 
 Now that we have a web app manifest, let's add it to the HTML file.
 
--   In  `index.html`  (head tag)
+-   In `index.html` (head tag)
 
 ```html
 <link rel="manifest" href="manifest.json" />
@@ -314,10 +310,9 @@ Now that we have a web app manifest, let's add it to the HTML file.
 <link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
 <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
 <meta name="theme-color" content="#db4938" />
-
 ```
 
-As you can see, we linked our  `manifest.json`  file to the head tag. And add some other links which handle the iOS support to show the icons and colorize the status bar with our theme color.
+As you can see, we linked our `manifest.json` file to the head tag. And add some other links which handle the iOS support to show the icons and colorize the status bar with our theme color.
 
 With that, we can now dive into the final part and introduce the service worker.
 
@@ -331,49 +326,48 @@ However, it's super powerful. The service worker can intercept and handle networ
 
 ![wow](https://media.giphy.com/media/5VKbvrjxpVJCM/source.gif)
 
-S0 let's create our very first service worker in the root folder and name it  `serviceWorker.js`  (the name is up to you). But you have to put it in the root so that you don't limit its scope to one folder.
+S0 let's create our very first service worker in the root folder and name it `serviceWorker.js` (the name is up to you). But you have to put it in the root so that you don't limit its scope to one folder.
 
 ### Cache the assets
 
--   In  `serviceWorker.js`
+-   In `serviceWorker.js`
 
 ```javascript
-const staticDevCoffee = "dev-coffee-site-v1"
+const staticDevCoffee = 'dev-coffee-site-v1';
 const assets = [
-  "/",
-  "/index.html",
-  "/css/style.css",
-  "/js/app.js",
-  "/images/coffee1.jpg",
-  "/images/coffee2.jpg",
-  "/images/coffee3.jpg",
-  "/images/coffee4.jpg",
-  "/images/coffee5.jpg",
-  "/images/coffee6.jpg",
-  "/images/coffee7.jpg",
-  "/images/coffee8.jpg",
-  "/images/coffee9.jpg",
-]
-
+    '/',
+    '/index.html',
+    '/css/style.css',
+    '/js/app.js',
+    '/images/coffee1.jpg',
+    '/images/coffee2.jpg',
+    '/images/coffee3.jpg',
+    '/images/coffee4.jpg',
+    '/images/coffee5.jpg',
+    '/images/coffee6.jpg',
+    '/images/coffee7.jpg',
+    '/images/coffee8.jpg',
+    '/images/coffee9.jpg',
+];
 ```
 
 This code looks intimidating first but it just JavaScript (so don't worry).
 
-We declare the name of our cache  `staticDevCoffee`  and the assets to store in the cache. And to perform that action, we need to attach a listener to  `self`.
+We declare the name of our cache `staticDevCoffee` and the assets to store in the cache. And to perform that action, we need to attach a listener to `self`.
 
-`self`  is the service worker itself. It enables us to listen to life cycle events and do something in return.
+`self` is the service worker itself. It enables us to listen to life cycle events and do something in return.
 
-The service worker has several life cycles, and one of them is the  `install`  event. It runs when a service worker is installed. It's triggered as soon as the worker executes, and it's only called once per service worker.
+The service worker has several life cycles, and one of them is the `install` event. It runs when a service worker is installed. It's triggered as soon as the worker executes, and it's only called once per service worker.
 
-When the  `install`  event is fired, we run the callback which gives us access to the  `event`  object.
+When the `install` event is fired, we run the callback which gives us access to the `event` object.
 
 Caching something on the browser can take some time to finish because it's asynchronous.
 
-So to handle it, we need to use  `waitUntil()`  which, as you might guess, waits for the action to finish.
+So to handle it, we need to use `waitUntil()` which, as you might guess, waits for the action to finish.
 
-Once the cache API is ready, we can run the  `open()`  method and create our cache by passing its name as an argument to  `caches.open(staticDevCoffee)`.
+Once the cache API is ready, we can run the `open()` method and create our cache by passing its name as an argument to `caches.open(staticDevCoffee)`.
 
-Then it returns a promise, which helps us store our assets in the cache with  `cache.addAll(assets)`.
+Then it returns a promise, which helps us store our assets in the cache with `cache.addAll(assets)`.
 
 ![image-cache](https://drive.google.com/uc?id=1ynBQRQ00wHo5J6CnjfLCX3b3UNiSrGqZ)
 
@@ -387,22 +381,21 @@ So, let's fetch our cache.
 
 ### Fetch the assets
 
--   In  `serviceWorker.js`
+-   In `serviceWorker.js`
 
 ```javascript
-self.addEventListener("fetch", fetchEvent => {
-  fetchEvent.respondWith(
-    caches.match(fetchEvent.request).then(res => {
-      return res || fetch(fetchEvent.request)
-    })
-  )
-})
-
+self.addEventListener('fetch', (fetchEvent) => {
+    fetchEvent.respondWith(
+        caches.match(fetchEvent.request).then((res) => {
+            return res || fetch(fetchEvent.request);
+        })
+    );
+});
 ```
 
-Here, we use the  `fetch`  event to, well, get back our data. The callback gives us access to  `fetchEvent`. Then we attach  `respondWith()`  to prevent the browser's default response. Instead it returns a promise because the fetch action can take time to finish.
+Here, we use the `fetch` event to, well, get back our data. The callback gives us access to `fetchEvent`. Then we attach `respondWith()` to prevent the browser's default response. Instead it returns a promise because the fetch action can take time to finish.
 
-And once the cache ready, we apply the  `caches.match(fetchEvent.request)`. It will check if something in the cache matches  `fetchEvent.request`. By the way,  `fetchEvent.request`  is just our array of assets.
+And once the cache ready, we apply the `caches.match(fetchEvent.request)`. It will check if something in the cache matches `fetchEvent.request`. By the way, `fetchEvent.request` is just our array of assets.
 
 Then, it returns a promise. And finally, we can return the result if it exists or the initial fetch if not.
 
@@ -416,23 +409,22 @@ But a service worker alone can't do the job. We need to register it in our proje
 
 ## Register the Service Worker
 
--   In  `js/app.js`
+-   In `js/app.js`
 
 ```javascript
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function() {
-    navigator.serviceWorker
-      .register("/serviceWorker.js")
-      .then(res => console.log("service worker registered"))
-      .catch(err => console.log("service worker not registered", err))
-  })
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+        navigator.serviceWorker
+            .register('/serviceWorker.js')
+            .then((res) => console.log('service worker registered'))
+            .catch((err) => console.log('service worker not registered', err));
+    });
 }
-
 ```
 
-Here, we start by checking if the  `serviceWorker`  is supported by the current browser (as it's still not supported by all browsers).
+Here, we start by checking if the `serviceWorker` is supported by the current browser (as it's still not supported by all browsers).
 
-Then, we listen to the page load event to register our service worker by passing the name of our file  `serviceWorker.js`  to  `navigator.serviceWorker.register()`  as a parameter to register our worker.
+Then, we listen to the page load event to register our service worker by passing the name of our file `serviceWorker.js` to `navigator.serviceWorker.register()` as a parameter to register our worker.
 
 With this update, we have now transformed our regular web app to a PWA.
 
@@ -448,9 +440,9 @@ And you can go even further with service workers by caching assets dynamically o
 
 Thanks for reading this article.
 
-You can check it out live  [here][12]  and the source code is  [here][13].
+You can check it out live [here][12] and the source code is [here][13].
 
-Read more of my articles on  [my blog][14]
+Read more of my articles on [my blog][14]
 
 ## Next steps
 

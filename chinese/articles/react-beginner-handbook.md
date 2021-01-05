@@ -16,16 +16,16 @@ React 是有史以来最受欢迎的 JavaScript 框架之一，我认为它也�
 -   React 组件
 -   React State
 -   React Props
--   Handling user events in React
+-   处理 React 中的用户事件
 -   Lifecycle events in a React component
 
-These topics will be the base upon which you will build in other more advanced React tutorials.
+这些主题将是你构建其他高级 React 教程的基础。
 
-This book is especially written for JavaScript programmers who are new to React. So let's get started.
+这篇文章专门为刚接触 React 的 JavaScript 程序员而写的。现在，让我们开始吧。
 
-## What is React?
+## 什么是 React？
 
-React is a JavaScript library that aims to simplify the development of visual interfaces.
+React 是一个 JavaScript 库，旨在简化可视界面（visual interfaces）的开发。
 
 Developed at Facebook and released to the world in 2013, it drives some of the most widely used apps, powering Facebook and Instagram among countless other applications.
 

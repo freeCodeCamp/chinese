@@ -241,7 +241,7 @@ ES6 提供了一个更加可靠、优雅的方式来解决这个问题：
 Reflect.apply(func, obj, arr);
 ```
 
-这样，如果 `func` 不是 callable 对象，会抛出 [`TypeError`][2]。此外 `Reflect.apply()` 也更简洁、易于理解。
+这样，如果 `func` 不是可调用对象，会抛出 [`TypeError`][2]。此外 `Reflect.apply()` 也更简洁、易于理解。
 
 ### 帮助实现其他类型的反射
 

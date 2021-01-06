@@ -27,7 +27,7 @@ React 是有史以来最受欢迎的 JavaScript 框架之一，我认为它也�
 
 React 是一个 JavaScript 库，旨在简化可视界面（visual interfaces）的开发。
 
-Developed at Facebook and released to the world in 2013, it drives some of the most widely used apps, powering Facebook and Instagram among countless other applications.
+React 诞生在 Facebook，于2013年发布，并为 Facebook 和 Instagram 提供了大量的应用程序，其中的一些 app 有着最广泛的使用。
 
 Its primary goal is to make it easy to reason about an interface and its state at any point in time. It does this by dividing the UI into a collection of components.
 

@@ -6,6 +6,8 @@
 ![Git Clone Branch – How to Clone a Specific Branch](https://www.freecodecamp.org/news/content/images/size/w2000/2020/06/article-banner--1-.gif)
 
 Unlike older centralized version control systems such as SVN and CVS, Git is distributed. Every developer has the full history and control of their code locally or remotely. They can also access or manipulate several parts of the code as they deem fit from different locations.
+不像 SVN 和 CVS 等旧的集中式版本控制系统一样，Git是分布式的。 每个开发者都能在本地和远程查看记录和控制代码。
+他们也可以视情况从不同位置访问或操纵不同部分的代码。
 
 Since Linus Torvalds (the famous creator of the Linux operating system kernel) created Git in 2005 for Linux kernel development, it has become the most widely used modern version control system in the world.
 

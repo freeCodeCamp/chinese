@@ -6,20 +6,27 @@
 ![REST API Tutorial – REST Client, REST Service, and API Calls Explained With Code Examples](https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
 Ever wondered how login/signup on a website works on the back-end? Or how when you search for "cute kitties" on YouTube, you get a bunch of results and are able to stream off of a remote machine?
+有想过网站的注册/登录功能在后端是怎么实现的吗？你在 YouTube 上搜索“cute kitties”，得到一堆结果，然后观看视频的过程又是怎么回事？
 
 In this beginner friendly guide, I will walk you through the process of setting up a RESTful API. We'll declassify some of the jargon and have a look at how we can code a server in NodeJS. Let's dive a bit deeper into JavaScript!
+这个入门教程会带着你们一起构建一个 RESTful API，我会解释一些术语，并使用 NodeJS 来编码实现一个服务端程序。//todo
 
 ## Get that jargon away
+## 术语解释
 
 So, what is REST? According to Wikipedia:
+REST 是什么？维基百科：
 
 > **Representational state transfer**  (**REST**) is a software architectural style that defines a set of constraints to be used for creating Web services. RESTful Web services allow the requesting systems to access and manipulate textual representations of Web resources by using a uniform and predefined set of stateless operations
+> **表现层状态转换（Representational state transfer）**  (**REST**) 是一种软件架构风格，它定义了一组创建 Web 服务的约束。RESTful Web 服务允许请求系统通过使用统一和预定义的无状态操作集来访问和操作 Web 资源的文本表示。
 
 Let's demystify what that means (hopefully you got the full form). REST is basically a set of rules for communication between a client and server. There are a few constraints on the definition of REST:
+揭开神秘面纱，看看 REST 究竟是什么意思。REST 基本上就是客户端和服务端通信的一组规则。REST 架构的限制条件：
 
 1.  **Client-Server Architecture**: the user interface of the website/app should be separated from the data request/storage, so each part can be scaled individually.
 2.  **Statelessness**: the communication should have no client context stored on server. This means each request to the server should be made with all the required data and no assumptions should be made if the server has any data from previous requests.
 3.  **Layered system**: client should not be able to tell if it is communicating directly with the server or some intermediary. These intermediary servers (be it proxy or load balancers) allow for scalability and security of the underlying server.
+
 
 Okay, so now that you know what RESTful services are, here are some of the terms used in the heading:
 
@@ -28,24 +35,33 @@ Okay, so now that you know what RESTful services are, here are some of the terms
 3.  **REST API**: this defines the endpoint and methods allowed to access/submit data to the server. We will talk about this in great detail below. Other alternatives to this are: GraphQL, JSON-Pure and oData.
 
 ## So tell me now, how does REST look?
+## 现在告诉我，REST 是什么？
 
 In very broad terms, you ask the server for a certain data or ask it to save some data, and the server responds to the requests.
+广义地说，就是客户端向服务端请求访问指定数据或者在服务端保存数据、服务端响应客户端请求的过程。
 
 In programming terms, there is an endpoint (a URL) that the server is waiting to get a request. We connect to that endpoint and send in some data about us (remember, REST is stateless, no data about the request is stored) and the server responds with the correct response.
+从编程角度来说，服务端提供了一个端点（URL）等待接收客户端的请求，客户端连接这个端点并发送数据（记住，REST 是无状态的，请求中携带的数据不会被存储）、服务端返回正确的响应。
 
 Words are boring, let me give you a demonstration. I will be using Postman to show you the request and response:
+文字是枯燥的，我们来看看示例。使用 Postman 来展示请求和响应：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/04/image-162.png)
 
 postman: setting up request
+配置 postman 请求
 
 The returned data is in JSON (JavaScript Object Notation) and can be accessed directly.
+返回的数据是 JSON（JavaScript Object Notation）格式的，可以直接访问。
 
 Here,  `https://official-joke-api.appspot.com/random_joke`  is called an endpoint of an API. There will be a server listening on that endpoint for requests like the one we made.
+这里的 `https://official-joke-api.appspot.com/random_joke` 被称为 API 端点，服务端会监听指向这个端点的请求。
 
 ## Anatomy of REST:
+## REST 剖析：
 
 Alright, so now we know that data can be requested by the client and the server will respond appropriately. Let's look deeper into how a request is formed.
+现在我们知道了客户端可以向服务端发送携带数据的请求、服务端会返回适当的响应，再来深入了解一下如何构造一个请求。
 
 1.  **Endpoint**: I have already told you about this. For a refresher, it is the URL where the REST Server is listening.
 2.  **Method**: Earlier, I wrote that you can either request data or modify it, but how will the server know what kind of operation the client wants to perform? REST implements multiple 'methods' for different types of request, the following are most popular:  
@@ -66,12 +82,16 @@ Alright, so now we know that data can be requested by the client and the server 
 4.  **Data**: (also called body or message) contains info you want to send to the server.
 
 ## Enough with the details – show me the code.
+## 跳出细节 - 开始编码
 
 Let's begin coding a REST Service in Node. We will be implementing all the things we learnt above. We will also be using ES6+ to write our service in.
+在 Node 环境中编写 REST 服务的代码，我们会实现上面学到的全部内容。在编码过程中会用到 ES6+ 的语法。 
 
 Make sure you have Node.JS installed and  `node`  and  `npm`  are available in your path. I will be using Node 12.16.2 and NPM 6.14.4.
-
+要确保你已经安装了 Node.JS，并且 `node` 和 `npm` 命令是可用的，我自己使用的版本分别是 Node 12.16.2 和 NPM 6.14.4。
+ 
 Create a directory  `rest-service-node`  and cd into it:
+创建一个名为 `rest-service-node` 的文件夹，并使用 cd 命令进入：
 
 ```shell
 mkdir rest-service-node
@@ -79,14 +99,17 @@ cd rest-service-node
 ```
 
 Initialize the node project:
+初始化 node 项目：
 
 ```shell
 npm init -y
 ```
 
 The  `-y`  flag skips all the questions. If you want to fill in the whole questionnaire, just run  `npm init`.
-
+参数 `-y` 表示跳过所有配置项。如果想要手动填写这些配置的话，执行 `npm init`。
+ 
 Let's install some packages. We will be using the ExpressJS framework for developing the REST Server. Run the following command to install it:
+安装一些依赖包，这里使用 ExpressJS 框架来开发 REST 服务。执行以下命令来安装：
 
 ```shell
 npm install --save express body-parser

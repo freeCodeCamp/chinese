@@ -31,11 +31,11 @@ React 诞生在 Facebook，于2013年发布，并为 Facebook 和 Instagram 提�
 
 它的主要目的是在任何时间点都可以轻松的推断接口及其状态。它通过将 UI 划分为组件的集合来实现这个目的。
 
-You might experience some initial difficulties when learning React. But once it "clicks", I guarantee it's going to be one of the best experiences you ever have. React makes many things easier, and its ecosystem is filled with great libraries and tools.
+在学习 React 的时候，你可能遇到一些小问题。但是只要你解决了它们，我保证这将会是你最好的经历。React 使很多事情变的更加简单，而且它的生态里有很多好用的库和工具。
 
-React in itself has a very small API, and you basically need to understand 4 concepts to get started:
+React 自身有一套非常简单的 API，当你开始学习的时候，只需要明白 4 个基本概念：
 
--   Components
+-   组件
 -   JSX
 -   State
 -   Props

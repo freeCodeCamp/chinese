@@ -31,7 +31,7 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 
 -   [图文详解如何参与翻译][8]
 
-相信你可以根据这份清晰、简洁的指南提交你的你一篇译文！
+相信你可以根据这份清晰、简洁的指南提交你的第一篇译文！
 
 **除了在 [Translation-needed](https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3ATranslation-needed) 列表认领文章来翻译，你也可以从[英文专栏](https://www.freecodecamp.org/news)选择自己喜欢的文章，自己[发起 New issue](https://github.com/freeCodeCamp/news-translation/issues/new/choose) 进行翻译。**
 

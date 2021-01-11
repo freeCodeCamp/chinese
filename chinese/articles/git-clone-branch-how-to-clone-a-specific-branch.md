@@ -10,8 +10,10 @@ Unlike older centralized version control systems such as SVN and CVS, Git is dis
 他们也可以视情况从不同位置访问或操纵不同部分的代码。
 
 Since Linus Torvalds (the famous creator of the Linux operating system kernel) created Git in 2005 for Linux kernel development, it has become the most widely used modern version control system in the world.
+ 自从 Linus Torvalds （Linux 操作系统内核的著名作者） 在2005年为 Linux 内核开发创建了 Git，它就开始成为世界上使用最广泛的现代版本控制系统。
 
 In this article, I'll introduce you to the Git clone and Git branch workflows and I'll show you how you can clone a specific branch based on your needs. Let's begin! ?
+在本篇文章中，我会介绍 Git 克隆和 Git 分支工作流，并且展示如何根据自己的需求克隆一个指定的分支。让我们开始吧！
 
 ## Prerequisites
 

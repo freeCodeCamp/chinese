@@ -31,49 +31,81 @@ Node.js 是开源、跨平台的，自2009年问世以来，已广受欢迎，�
 
 Node.js runs the V8 JavaScript engine, the core of Google Chrome, outside of the browser. Node.js is able to leverage the work of the engineers that made (and will continue to make) the Chrome JavaScript runtime blazing fast, and this allows Node.js to benefit from the huge performance improvements and the Just-In-Time compilation that V8 performs. Thanks to this, JavaScript code running in Node.js can become very performant.
 
-Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境，位于浏览器之外。
+Node.js 运行在 Google Chrome 核心 V8 JavaScript 引擎上且位于浏览器之外。Node.js 能够利用工程师的工作，使 Chrome JavaScript 运行时变得（并且持续）非常快速，这允许 Node.js 从 V8 执行的巨大性能改进和实时编译中获益，多亏了这点，在 Node.js 中运行的 JavaScript 代码可以变的非常高效。
 
 A Node.js app is run by a single process, without creating a new thread for every request. Node provides a set of asynchronous I/O primitives in its standard library that will prevent JavaScript code from blocking and generally, libraries in Node.js are written using non-blocking paradigms, making a blocking behavior an exception rather than the normal.
 
+Node.js 应用程序通过单进程运行，而不是为每个请求创建一个新的线程。Node 在它的标准库中提供一套异步的 I/O 原语，这些原语将防止 JavaScript 代码阻塞，在通常情况下，Node.js 的库是使用非阻塞范式编写，使阻塞行为成为异常而不是正常的行为。
+
 When Node.js needs to perform an I/O operation, like reading from the network, access a database or the filesystem, instead of blocking the thread Node.js will resume the operations when the response comes back, instead of wasting CPU cycles waiting.
+
+当 Node.js 需要执行 I/O 操作时，比如从网络读取、访问数据库或文件系统，而不是阻塞线程，当响应返回的时候 Node.js 将会恢复操作，而不是浪费 CPU 周期等待。
 
 This allows Node.js to handle thousands of concurrent connections with a single server without introducing the burden of managing threads concurrency, which would be a major source of bugs.
 
+这使得 Node.js 可以在一台服务器上处理成千上万的并发连接，而不会带来管理线程并发性的负担，这将是一个主要的 bug 来源。
+
 Node.js has a unique advantage because millions of frontend developers that write JavaScript for the browser are now able to run the server-side code and frontend-side code without the need to learn a completely different language.
+
+Node.js 有一个独特的优势，因为数百万的为浏览器编写 JavaScript 的前端开发人员现在能够运行服务端代码和前端代码而无需学习完全不同的语言。
 
 In Node.js the new ECMAScript standards can be used without problems, as you don’t have to wait for all your users to update their browsers — you are in charge of deciding which ECMAScript version to use by changing the Node.js version, and you can also enable specific experimental features by running Node with flags.
 
+新的 ECMAScript 标准在 Node.js 中使用毫无问题，因为你不必等待所有用户更新浏览器--你负责通过修改 Node.js 版本来决定使用哪个 ECMAScript 版本，还可以通过运行带有标志的节点来启用特定的实验功能。
+
 #### It has a huge number of libraries
+#### 它有大量的库
 
 With its simple structure, the node package manager ([npm][2]) helped the ecosystem of Node.js proliferate. Now the [npm registry][3] hosts almost 500,000 open source packages you can freely use.
 
+Node 包管理器[npm][2] 通过其简单的结构使得 Node.js 生态系统激增。现在 [npm registry][3] 主机托管了近 500000 个开源包，并且你可以自由使用。
+
 ### A sample Node.js application
 
+### Node.js 应用程序示例
+
 The most common example Hello World of Node.js is a web server:
+
+最常见的 Node.js 的 Hello World 示例是 Web 服务器：
 
 ```
 const http = require('http')
 ```
 
 ```plain
-const hostname = '127.0.0.1'const port = 3000
+const hostname = '127.0.0.1'
+const port = 3000
 ```
 
 ```
-const server = http.createServer((req, res) => {  res.statusCode = 200  res.setHeader('Content-Type', 'text/plain')  res.end('Hello World\n')})
+const server = http.createServer((req, res) => {
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'text/plain')
+    res.end('Hello World\n')
+})
 ```
 
 ```
-server.listen(port, hostname, () => {  console.log(`Server running at http://${hostname}:${port}/`)})
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`)
+})
 ```
 
 To run this snippet, save it as a `server.js` file and run `node server.js` in your terminal.
 
+要运行此代码片段，需要将这个文件另存为 'server.js' 并且在你的终端运行 'node server.js'。
+
 This code first includes the Node.js `http` [module][4].
+
+这段代码首先包含了 Node.js 的 'http' [模块][4]。
 
 Node.js has an amazing [standard library][5], including a first-class support for networking.
 
+Node.js 有一个惊人的 [标准库][5]，包括一流的网络支持。
+
 The `createServer()` method of `http` creates a new HTTP server and returns it.
+
+'http' 的 'createServer' 方法创建了一个新的 HTTP 服务并且返回了它。
 
 The server is set to listen on the specified port and hostname. When the server is ready, the callback function is called, in this case informing us that the server is running.
 

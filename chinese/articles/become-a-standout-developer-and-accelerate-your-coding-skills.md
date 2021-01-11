@@ -1,192 +1,192 @@
 > -   原文地址：[How to Become a Standout Developer and Accelerate Your Coding Skills 如何成为一名出色的开发者，提升你的编程技能](https://www.freecodecamp.org/news/become-a-standout-developer-and-accelerate-your-coding-skills/)
 > -   原文作者：Randall Kanna
-> -   译者：
+> -   译者：jennyma8
 > -   校对者：
 
 ![How to Become a Standout Developer and Accelerate Your Coding Skills](https://images.unsplash.com/photo-1588364384672-560e33514629?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-There is an endless stream of new challenges to tackle in technology.
+技术领域充满无尽的挑战。
 
-The frameworks you know will change. The tools you feel so comfortable using will evolve. Technologies will go in and out of style. You might want to switch to a different area in tech when your interest wanes in another.
+你会的构架会改变。你最熟悉的工具会进化。有的技术正流行，有的技术已落后。你会因为兴趣改变而投入到一个新的技术领域。
 
-Working in engineering means you’re always learning something new to keep your skills fresh.
+在工程行业工作代表着你会一直学习新的东西，保持新鲜的技能。
 
-While Angular was popular five years ago and most frontend jobs wanted Angular skills, now the market has changed. React has overtaken all other frontend frameworks as the hot new technology.
+5年前，Angular 是非常受欢迎的。大部分的前端工作都想要 Angular 的技能，现在市场变了。 React 超越所有前端构架，成为最火红的新技术。
 
-While Rails was popular five years ago, now Node and Python are dominating job descriptions.
+5年前，Rails 是非常受欢迎的。 现在职务描述里出现频率最高的是 Node 和 Python。
 
-Keeping your skills fresh is one of the key parts to being a standout engineer and building a lasting career.
+保持新鲜的技能是主要元素之一，那会让你在众多的工程师当中脱颖而出，营造一个持久的事业生涯。
 
-However, this might seem challenging when you start out in your career. I remember looking at everything I had to learn and feeling so frustrated when people would discuss some new technology that I didn’t know.
+我还记得我当时看着所有我要学的东西，大家讨论我不懂的新技术，我会非常沮丧。
 
-And as soon as I felt competent in one framework, another one would become popular. I felt like I would never catch up.
+每次我感觉我可以胜任一个构架的时候，就会有另外一个变得更受欢迎。 我感觉我永远都赶不上。
 
-But this is also one of the best parts of being an engineer – you will never be bored. And this is a tool you can use to set yourself apart from the competition.
+但是那也是做工程师最好的部分 —— 你永远不会感觉到无聊。那也是一个可以帮助你在竞争里脱颖而出的工具。
 
-Learning how to learn like a developer is nothing like how you’ve learned in school. There will be some reading, and some courses. But the majority of time will be spent building.
+开发者的学习方式和你在学校学习的方式是完全不一样的。会有一些阅读，一些课程。但大部分时间应该用来构建项目。
 
-## How to Learn by Doing
+## 从实践中学习
 
-When you were a child, you learned by  _doing_.
+小时候，你是从实践中学习。
 
-You started speaking even if it wasn’t in full sentences. You started drawing by doing. You didn’t read about it as an infant. You weren’t reading the ‘Baby’s Guide to Fingerpainting 101.”
+你先学会讲话，虽然不是完整的句子。从做中学会画画。你婴儿的时候没有读过有关的书籍。你没有读过“婴儿手指绘画101教学”。
 
-You started walking by practicing. And this helped you to grasp new concepts quickly. You were always  _doing_.
+你通过练习学会走路。这才帮助你快速驾驭新的概念。你永远都在 —— 做。
 
-Generally, in engineering, concepts will start to stick if you focus on building rather than memorization.
+在工程领域，你是通过构建项目来掌握概念的，而不是通过死背。
 
-When I started out as an engineer, I would read books constantly and make flashcards. I can’t tell you how much time I spent making flashcards. I thought buying a new book or online course would teach me how to code and make me a superstar engineer. But that never happened.
+当我刚开始做工程师的时候，我不断阅读书本和做抽认卡。我用了无数的时间制作抽认卡。我以为买了一本新书或网上课程就会教会我自己怎么编程，然后变成工程师巨星。但是这并没有发生。
 
-Looking back now, I’m not sure what I thought those flashcards would do.
+回想起来，我不确定那些抽认卡会有什么作用。
 
-After months of trying to memorize syntax and definitions, I was right where I had started. It wasn’t until I started building that my skills started accelerating.
+花了几个月时间熟背句法和定义, 我还是在原地。 只有开始构建项目的时候，技能才开始进步。
 
-While I loved reading engineering books and still do, the majority of my time is spent skimming the book and then trying out a new concept right away.
+在热爱阅读工程书籍的同时，我大部分的时间会花在略读一本书，然后立刻尝试新的概念。
 
-This is a more painful way to learn. I won’t lie to you – it’s scary. But nothing helps build new programming skills quite like building something out yourself.  _The fastest way to learn to code will be by building._
+这是一个比较痛苦的学习方式。我不会骗你 —— 挺可怕的。 但是没有什么能像亲自构建项目一样帮助你提升编程技能。速度最快的学习方式就是构建项目。
 
-But how can you do this?
+但你怎能办到呢?
 
-## **Escape Tutorial Hell**
+## **逃离教学地狱**
 
-When I was learning how to code, I spent months following tutorials. I would watch the tutorial and follow along step by step. Never attempting to do anything on my own.
+当我学习怎么编程的时候， 我花了几个月的时间跟随网上教学。 我会一边看教学，一边跟着每个步骤的做。 永远都不会试着靠自己。
 
-If a tutorial got too difficult, I would switch to another one. I would spend hours every day watching tutorials.
+如果教学太难的话，我会换另外一个。我会每天花几个小时再看教学。
 
-I tried to use the learning skills I had from college and apply them to coding. And it  _didn’t_  work. Learning how to code is about active learning. Not passive.
+我尝试过用我在大学学习的方式用在编程里。但并没有用。学习编程是要活跃的学习，不是被动式的。
 
-But it was so  _easy_  following tutorials. I never felt stupid or felt any imposter syndrome. I would feel like I had accomplished something at the end of the day.
+但是模仿网上教学挺容易的。我永远都不会觉得愚蠢或感觉到冒牌者症候群。我会最终觉得很有成就感。
 
-Meanwhile, I was absentmindedly following along with the video and not learning a  _single_  thing. I wasn’t pushing myself. If you want to learn new skills fast, you have to  _push_  yourself.
+与此同时，我会盲目的跟随着影片，而不会学到任何东西。我不会逼迫自己。如果你想要学一门新的技能的话， 你一定要逼迫自己往前进。
 
-After around six months of sticking around in tutorial hell enjoying the warm weather,  _I realized I had learned next to nothing_. I had no skills. I had prioritized flashcards and passively watching tutorials over actually building anything.
+6个月过去，徘徊在教学地狱里面，享受着那里的温暖气候，舒适圈。我发觉到我没有学到任何东西。我没有任何的技能。我太重视抽认卡和被动式得看网上教学，多过于构建任何东西。
 
-Meanwhile, friends that had started working on projects right away were whizzing right by me at a pace I thought was incredible.
+与此同时， 早已经开始构建项目的朋友们会在我身旁略过，他们的学习速度快到难以置信。
 
-I felt so frustrated. I couldn’t even create a basic application. If it wasn’t in a tutorial with step by step guides, I couldn’t do it. It wasn’t until I started focusing on building something small on my own that coding finally  _clicked_  for me.
+我会感到很沮丧。我连写一个基础的程序都不会。如果不是跟着一个教程的指导一步一步地做，我真的不会。直到我开始写小型的程序，我才被点醒。
 
-Step away from the tutorials as soon as you feel comfortable. Tutorials are great when you’re starting out. But at a certain point, they only slow down your learning if you rely on them too much.
+若感到舒适的时候，马上远离网上教学。教学只是刚开始的时候才好。但是，到某一个程度，那只会把你的学习缓慢，特别是如果你是太过于依赖的话。
 
-This applies in every step of your career. If you’re a junior engineer, pick a small project. Don’t use a tutorial. Try to figure out how to build it on your own. Don’t feel bad if you can’t build an entire application yet - that’s fine! Start with small projects and build up.
+这可以应用在你整个事业的旅途。如果你是一个初级工程师，选一个小小的方案。不要用网上教学。尝试自己了解怎么建设。不要气馁，不成功没关系！从小方案开始做起来。
 
-And if you’re an engineer and have a few years of experience and want to switch to machine learning from backend engineering, for instance, pick a small project and start coding.
+还有，如果你是一位拥有很多年经验的工程师，而想要从后端工程转做机器工程话，选一个小方案开始编程吧。
 
-## **Always Be Learning**
+## **持续学习**
 
-Another skill a standout developer must have is to become an endless learner.
+另一个可以让你变成一名出色的开发者的技能是当一个永久学习者。
 
-When you first start learning how to code, the amount of material you learn every day seems astronomical. You’re picking up new concepts constantly. It seems like there’s an endless stream of information to learn.
+当你刚开始学习编程的时候，每天的素材非常多。你不断的吸取新的概念。要学的知识好像无止尽似的。
 
-Ideally, you’ll always be learning something new no matter how long you’ve been an engineer. But this can sometimes level off.
+在理想的世界里，无论你当了工程师多久，你还会永远学习新东西。始终会找到平衡的。
 
-You begin to feel comfortable in a job and the nagging feeling that your skills have started to stagnate starts to set in. Boredom quickly follows.
+你会开始觉得在工作上变得很舒适，然后抱怨自己的技能怎么好像凝滞似的。 很快就会感觉到无聊。
 
-Keeping your skills sharp will keep your employment status stable even in tough economic times.
+保持技能敏锐会帮助你工作稳固，就算经济不好的时候。
 
-Here are a few ways you can  _always_  be learning.
+以下是几个可以让你永久学习的方法。
 
--   Write code. A  _lot_  of it.
--   Find developers who are better than you and work with them.
--   Ask to switch teams at your job if you feel you’ve stagnated.
--   Contribute to open source projects.
--   Attend meetups and conferences.
--   Subscribe to newsletters.
--   Start connecting with developers on Twitter.
--   Read constantly.
--   Build side projects.
--   Pursue new certifications.
--   Take online courses.
--   Take some time off. You can’t take your PTO to the grave.
--   Read blog posts.
--   Find a mentor.
--   Share your knowledge.
--   Write blog posts.
+-   写编码，常写
+-   跟比你优秀的开发者合作
+-   如果感觉被耽误的话，要求在工作上换队伍
+-   为开源项目做贡献
+-   参加会议和讲座
+-   定期邮件
+-   开始在 Twitter 跟开发者交流
+-   不断的阅读
+-   构建项目
+-   考新的文凭
+-   网上课程
+-   休息。年休假是不可以带到棺材里面的。
+-   阅读部落格
+-   找导师
+-   分享知识
+-   写部落格
 
-Some of these things you can’t do in your spare time. And that’s OK. We all have personal lives. Focus on finding ways you can be learning during your work hours like switching teams, finding a mentor or becoming a mentor, and so on.
+以上会有些是你不可以在你空挡的时间做的。没关系。 我们都会有私生活。专住在工作上学习，像换团队，找导师，或成为一位导师，等等。
 
-Being a standout engineer doesn’t mean you need to spend all your spare time coding. Coding is still a job. It is your 9-5. But you can choose to be a builder at your job.
+成为一位出色的工程师不代表要无时无刻的编程。编程是一个工作。这是你朝九晚五的工作。但是你可以选择在你工作上成为一个建设者。
 
-When you’re working on a new skill, step away from the book and course. Try to pick up tasks at work that use the new skills you want to acquire right away. This will enable you to build skills quickly and efficiently at work.
+当你在学新技能的时候， 远离书籍和课程。尝试在工作上找一个任务可以用的上你想学的新技能。这样会帮你快速的学会。
 
-## **Get Comfortable Being Uncomfortable**
+## **适应非舒适区**
 
-While learning new skills, you also need to push yourself. You need to get comfortable being uncomfortable.
+在学习新技能的时候，你要逼迫自己。让你适应非舒适区。
 
-Before I became an engineer, going through tutorials felt easy and welcoming. I rarely felt overwhelmed. I would use Codecademy and other similar platforms and  _think_  I was making progress. But I wasn’t.
+当工程师前，看教学感觉很容易。我会很少感觉到疲倦。我会用 Codecademy 和其他频道，然后觉得我有进步。但是我并没有。
 
-After over 6 months of tutorials, I wasn’t much further along in my coding journey than when I had started. I was still a beginner.
+6月过后，比起刚开始的编程路程里，我并没有前进。 我还是很初级。
 
-When I started working as a junior software engineer, I was in a constant state of fear. I felt like I could never get enough work done. It was a terrifying feeling. Yet I suddenly learned  _faster_  than I ever had in my life. My brain felt like a sponge.
+当我刚开始担任初级软件工程师的时候，我是在一个持续的恐惧状态。我感觉我有做不完的工作。那是一个很恐怖的感觉。我突然间比以前学快很多。我脑袋像一个海绵一样。
 
-Find opportunities for growth. If you continue to do the same thing and feel comfortable, you’ll never find the opportunities for growth. If you take on the same tasks at work and continuously work on the same things, you won’t be pushing yourself and growing.
+寻找机会成长。你如果继续做同样的事情的话和待在舒适圈，你永远都寻找不到机会成长。你如果做同样的任务和继续地做同样的事，你不会推自己向上和成长。
 
-Always be  _biting off more than you can chew_. If you spend all your time taking tutorials, it will begin to feel routine and it won’t be a challenge anymore. And you won’t be learning.
+保持“自不量力”。 你如果花所有的时间看网上教学，你会感觉到轮回而不会觉得有挑战性。你也不会觉得正在学习。
 
-However if you choose to push yourself, you’ll learn faster. You’ll be uncomfortable which means you’ll be growing.
+但是，你如果选择强迫自己，你会学得比较快。觉得不习惯就到表正在成长。
 
-Much as if you were practicing piano, if you kept practicing the same piece over and over again because you were confident with it, you wouldn’t be improving your skills by learning more challenging pieces.
+就像学钢琴一样，你如果不停重复练习同一个你已经很熟练的曲子，你是不会进步的，因为你要学一些比较有挑战性的曲子。
 
-The same principle applies to most things in life.
+同样的逻辑可以放在人生的其他阶段。
 
-When I was trying to get my first dev job, I had to decide between a position at Apple and an apprenticeship at a small startup.
+当我在找我第一份开发者的工作的时候，选择有在 Apple 的一个职位或新兴小型企业当学徒。
 
-The role at Apple was going to pay more and I knew other people who worked there so I would have built-in friends and a support system. However, it was half QA and half engineering, with the opportunity to move to full time engineering if things went well.
+Apple 的那一份工作薪水比较高，我也认识几个朋友在那里工作，相对来说我已经有一个朋友圈和支持系统。但是，那职位是一半 QA 一半工程，如果做的好，会有机会转到全职工程师。
 
-The startup job was unstable at best. Nothing was guaranteed. They didn’t have another engineer who identified as a woman at the company. I would be the only woman in the entire engineering team.
+那个新兴小型企业的工作是非常的不稳定。没有任何保证。公司里没有另外一个女工程师。我是在工程团里唯一的女生。
 
-Not to mention – this  _wasn’t_  a job offer! It was an offer for a three month apprenticeship with no guarantee that I would have a job after. I would have to move to the city, sign a lease, and hope that I could somehow afford the rent if I failed the apprenticeship.
+我还没有提到那不是一个工作邀约！那只是当学徒 3 个月，之后不保证会录用我。我要搬进城市里，签一个租约，如果当学徒失败的话，还要负担租金。
 
-And this was back when coding bootcamps were at the largest point of the bubble. Students were graduating in San Francisco and the market was more saturated than ever before. Job postings frequently included “No bootcamp grads” which was highly discouraging.
+那时候是编程训练营最澎湃的阶段。当时有非常多旧金山的毕业生，所以他们都面临了市场最饱和的时期。很多招聘都会常常写着‘拒招训练营毕业生’，情况让人非常的沮丧。
 
-I knew if I started at Apple, it would be good for my resume. I’d be making more money as well. But I couldn’t stop thinking about growth and mentorship opportunities that the startup offered me.
+我知道如果我在 Apple 工作的话, 会对我的简历非常好。 我也会赚比较多钱。但是我不停的思考小型企业可以带给我的成长和指导机会。
 
-Sadly, I had no idea what to do. I had been sold the idea of a high paying dev job during my coding bootcamp. Not a low paying apprenticeship that might not even lead to a job.
+我真的不知道该怎么办。 在训练营的时候，我一直都被灌输一个概念，就是会得到高薪水的开发者工作。不是一个低薪水和没保障的学徒经验。
 
-I ended up accepting the three month apprenticeship. Most of my friends thought I had lost it. My own family thought I had lost it.
+我始终答应了3个月的学徒期。我大部分的朋友都以为我疯了。我家人也觉得我疯了。
 
-I suddenly had three months to prove myself at the apprenticeship. I quickly lost count of how many weekends and late nights I worked. I was  _terrified_.
+我突然要在3个月内在学徒期证明自己。我很快就有数不完的周末和夜晚都在工作中度过。我吓坏了。
 
-The pace was fast and I was blown away by how little I knew. I felt so nervous some days that I wanted to call in sick. I would fantasize about my train getting delayed underground so I would be forced to miss work. Every standup felt like torture because I felt I wasn’t doing enough.
+这里速度非常快。我不可置信我会的东西有多么的少。有几天，我紧张到我快要请病假了。 我幻想火车会延迟，让我可以不用上班。每一个会议都是折磨，因为我会觉得我做得不够。
 
-Meanwhile, friends that attended the same bootcamp as I had were discussing their cushy entry level jobs at Apple and how they got to leave at a reasonable hour every day. Not to mention, they were paid so much more!
+与此同时，跟我读同一个训练营的朋友都会跟我讨论他们在 Apple 轻松工作，他们每天都有合理的工作时间。更不用提他们还赚得比我还多！
 
-After the first two months my manager asked to have a meeting about the apprenticeship. I was convinced they were going to fire me.
+2个月过后，我经理想要跟我开会商量学徒期的事。我当时深信他们会开除我。
 
-Instead they told me that they were ending the apprenticeship program a month early and they were going to offer me a full-time software engineering position at the company. I can’t describe how happy I was that day.
+他们反而告诉我会提前一个月结束学徒期，给我一个全职工程师的职位。我没办法形容我那天有多开心。
 
-I continued throwing myself into my work. I would volunteer for tasks that I didn’t feel ready to complete. If I didn’t know how to do something, I would say I could do it anyway. A year and a half after that, I was a senior software engineer at the same startup.
+我继续把自己投身于工作里面。我会义务去做一些我没把握的任务。我如果不懂怎么做一些事，我还是会说我可以。一年半后，我在同一个小型企业里成为了一位资深的工程师。
 
-Would it have been easier if I accepted the position at Apple? Absolutely. But the engineers I knew that accepted the Apple position never had a mentor like I did to push them and challenge them to improve their skills.
+若是答应了 Apple 的那一份工作会比较容易吗？肯定会。但是答应做那 Apple 工作的工程师永远都不会像我这样有一个好导师逼迫他们自我挑战，提升技能。
 
-In the long term, they ended up spending more time recovering from the lost learning early on. Some are still stuck with the same entry level title years later.
+长期来说，他们会花更多时间来弥补早期失去的学习机会。有一些几年后还在同一个职位。
 
-Depending on your goals, that might be fine for you. And that’s okay. But I wanted to become a standout developer with an exceptional career. And I’m guessing if you’re reading this, so do you.
+根据你的目标，那可能对你来说很好。没问题。但是，我是要成为一个出色的开发者，并且拥有非凡的事业。我猜如果你正在阅读这篇文章的话，你也是如此的想。
 
-Was it risky to accept the startup job? Absolutely. Most people thought it wasn’t a good move. But I chose to be uncomfortable and it paid off. Did it feel comfortable? Absolutely not. I probably aged five years in that role.
+答应小型企业的工作会很冒险吗？肯定会。很多人都觉得那不是一个好策略。但是，我选择非舒适，我也得到收获。会觉得习惯吗？肯定不会。我或许老了5岁吧。
 
-Choose  _discomfort_. The biggest most rewarding success in life happens after hard work. Put down the tutorial and pick up a task you don’t know how to solve.
+选择非舒适。人生最大的收获就是努力工作。把网上教学放下，选择你不会解决的任务吧。
 
-## **Deep Work**
+## **深度工作**
 
-Coding is a job that requires deep concentration. Switching context to check your phone or social media platforms will be detrimental to the amount of work you can get done in a given day.
+编程是一份需要深层集中精神的工作。切换场景看手机或社交平台,只会对你一天的工作有害。
 
-Most people will work for a few minutes and then check their phone. If the average employee spends 8 hours working each day, and spends two hours or more being unproductive, you can quickly become known as an engineer who gets things done by simply spending your work hours  _actually_  working.
+大部分的人都会工作几分钟，然后就会看手机。如果普通员工每天都会花8小时工作，然后花2小时以上做一些没有效率的事，你很快就会脱颖而出，因为你是真的好好利用工作时间，完成了任务。
 
-By building a habit of focus and deep work, you’ll become an engineer that stands out from the crowd. Creating this habit will also show that you have an impenetrable work ethic.
+你只要培养专注和深度工作的习惯，你会成为一名出众的工程师。 创造这一种习惯也会呈现你拥有坚不可摧的工作道德。
 
-How long can you go without checking your phone or Facebook or Twitter? Five minutes? Ten? Fifteen?
+你可以多长时间不看手机或 Facebook 或 Twitter? 5分钟？10？ 15？
 
-If you haven’t read it, pick up a copy of  [Deep Work][1]  by Cal Newport. Start small. Try to focus on one task for 20-25 minutes without interruptions. Put your phone on airplane mode, close all unnecessary tabs and put a big sign on your door that says ‘DO NOT DISTURB.’
+你如果还没阅读它, 去取一本由 Cal Newport 的 [Deep Work][1]。 从一点开始。尝试在同一个任务无干扰地专注20-25分钟。把手机调到飞行模式。删去所有没用的标签，在你门口放一个大的招牌写着‘请勿打扰’。
 
-Start building this time up. Try to work up to a 45 minute uninterrupted session. In such a distracted world, the ability to do this is rare and the amount of work you’ll find you can suddenly get done in a short time will be shocking.
+从这个时间起，开始构建程序。尝试不打扰之下工作45分钟。在一个干扰匆匆的世界里，有能力做这样的事是很宝贵的。你会发觉你在这么短的时间内可以完成的工作量会很惊人的。
 
-There are many apps that use the Pomodoro technique that can help you stay focused. Try to experiment with a few and see what works for you.
+有很多应用程序使用 Pomodoro 技术帮助专注力。尝试体验一下，看看那个适合你。
 
-## Wrapping Up
+## 结语
 
-Building a standout career as a developer is all about becoming a life long learner. If you can use the strategies that I've shared above to grow your skills, you'll always be employed.
+要成为一名出色的工程师是要不断地持续学习。如果你运用我刚分享的技能策略的话，你永远都会找到工作的。
 
-This blog post is an excerpt from my latest book, The Standout Career. It's available for  [pre-order][2]  now.
+这个文章是出于我最新的书籍，The Standout Career。 现在正在预购。[pre-order][2]
 
 [1]: https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692
 [2]: https://gumroad.com/l/xOzJU

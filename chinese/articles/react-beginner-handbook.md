@@ -40,7 +40,7 @@ React 自身有一套非常简单的 API，当你开始学习的时候，只需�
 -   State
 -   Props
 
-We'll explore all of these in this book, and we'll leave the more advanced concepts to other tutorials. I will give you some pointers in the last section about how to move forward.
+我们将在这篇文章中学习这几个基本概念，那些高级的概念我们会留给其他的教程。我将会在文章的末尾给出深入学习 React 的资料。
 
 And you can  [download this handbook in PDF / ePub / Mobi format for free][1].
 

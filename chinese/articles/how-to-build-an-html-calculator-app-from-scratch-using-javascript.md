@@ -14,10 +14,10 @@
 ### 前置条件
 
 在你开始本节课程前，请确保你对JavaScript有一个不错的了解。最起码，你需要知道以下事情：
-1.  [If/else statements][1]
-2.  [For loops][2]
-3.  [JavaScript functions][3]
-4.  [Arrow functions][4]
+1.  [If/else分支][1]
+2.  [For循环][2]
+3.  [JavaScript函数][3]
+4.  [箭头函数][4]
 5.  `&&`  和  `||`  操作符
 6.  如何使用`textContent`属性修改文本
 7.  如何使用事件代理模式添加事件

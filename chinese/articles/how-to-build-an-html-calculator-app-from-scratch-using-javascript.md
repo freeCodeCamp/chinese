@@ -11,17 +11,16 @@ This is an epic article where you learn how to build a calculator from scratch. 
 
 ![](https://cdn-media-1.freecodecamp.org/images/Cw7jNVIhWFV4NSNY8-Lv8uX4583Hr5LvzYFq)
 
-### The prerequisites
+### 前置条件
 
-Before you attempt follow through the lesson, please make sure you have a decent command of JavaScript. Minimally, you need to know these things:
-
+在你开始本节课程前，请确保你对JavaScript有一个不错的了解。最起码，你需要知道以下事情：
 1.  [If/else statements][1]
 2.  [For loops][2]
 3.  [JavaScript functions][3]
 4.  [Arrow functions][4]
 5.  `&&`  and  `||`  operators
-6.  How to change the text with the  `textContent`  property
-7.  How to add event listeners with the event delegation pattern
+6.  怎么使用`textContent`属性修改文本
+7.  怎么使用事件代理模式添加事件
 
 ### Before you begin
 

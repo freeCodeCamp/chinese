@@ -4,23 +4,23 @@
 > -   校对者：
 
 ![How I went from newbie to Software Engineer in 9 months while working full time](https://cdn-media-1.freecodecamp.org/images/1*wyxuq21keffc5b0d_lMkUw.jpeg)
-
+我是如何在全职工作期间用9个月的时间从一名编程小白成长为软件工程师的
 by Austin Tackaberry
-
+奥斯汀·塔卡贝里
 In this post, I’ll share how I went from zero(ish) to a six-figure software engineering job offer in nine months while working full time and being self-taught.
-
+在本帖中，我将分享自己是如何在全职工作期间，用9个月的时间，依靠自学从编程零基础到拿到一份六位数薪酬的软件工程师工作机会的历程。
 Whenever I would start reading a success story, I would immediately look to find the author’s background, hoping it would match mine. I never found someone who had the same background as I did, and most likely mine won’t match yours exactly.
-
+每当我阅读一篇成功故事分享时，我一开始就会立马去查找一下作者的背景信息，希望他的背景和我相适。可我从未找到过和我背景完全一致的人。而且绝大情况下，我的背景也不会和读文章的你完全一致。
 Nonetheless, I hope that my story inspires others and acts as a valuable data point that can be added to your success story dataset.
-
+尽管如此，我希望我的故事能对别人起到激励，并成为一个能够加入大家成功案例数据集的有价值的数据点。
 ### Full Disclosure
-
+### 背景大揭秘
 I took a Visual Basic for Applications (VBA) course in high school (nine years ago). In my freshman engineering course (seven years ago), I learned some C, Python, Matlab, and Labview. I graduated from a good university with a chemical engineering degree and a good GPA (three years ago). I hadn’t done any programming outside of school, in high school or college, until I decided I wanted to learn last year.
-
+我在高中时修过一门Visual Basic for Applications (VBA)的课程（9年前）。后来在大学一年级的工程课上（7年前），学了一些C、Python、Matlab和Labview。3年前，我以优秀的GPA毕于一所很好的大学毕业，获得化学工程学位。除此之外，我就再也没在校外、高中、大学期间做过任何编程。直到去年，我才决定想要学习编程。
 After college, I got a job as a Process Engineer at a refinery. I worked there until I changed careers into Software Engineering.
-
+大学毕业后，我在一家提炼厂做工艺工程师。在我转向做软件工程师之前，我一直都在那里工作。
 ### Why I wanted to change careers
-
+### 我为什么想要换工作
 I enjoyed solving technical problems, but I knew I wanted to get into the business/startup world at some point. I always kept the thought of an MBA in the back of my mind, but every time I looked at the price tag of the top schools, my interest waned.
 
 On May 27th, 2017 I found myself googling about MBAs again, and somehow I stumbled upon software engineering. It seemed like a perfect fit.

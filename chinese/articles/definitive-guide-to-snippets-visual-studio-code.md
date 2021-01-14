@@ -5,77 +5,91 @@
 
 ![Visual Studio Code Snippets – the Definitive VS Code Snippet Guide for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/harry-hd.png)
 
-Snippets can add a touch of magic to your editor. It's like an incantation. Utter a short phrase (type a prefix), wave your wand (press  `Enter`  or  `Tab`), and presto! A wonderful event unfolds in front of you. ✨
+代码片段(Snippets)可以给你的编辑器添加些许魔力。它就如咒语一样。说出指令（输入前缀），挥动魔杖（按下 `Enter` 或者 `Tab` 键），然后神奇的事情马上就发生在你眼前了。 ✨
 
-Most code editors support snippets out of the box. The code editor I will use to showcase snippets is Visual Studio Code (VS Code), the most popular editor of the day.
+现在大多数代码编辑器都支持开箱即用的代码段。我将用来展示代码片段的代码编辑器是如今最流行的代码编辑器 Visual Studio Code(VS Code)。
 
 Also, there are some "text expander" apps that allow you to use snippets globally (across all apps). I will briefly cover how you can utilise these apps to get even more out of snippets.
 
-Let's dive into all things snippets. ?
+另外，有一些“文本扩展器”应用可以让你在全局（所有应用中）使用代码片段。我会简要的介绍如何使用这类应用来获取更多的代码片段。
 
-## Definition
+接下来，让我们深入了解与代码片段的相关所有事情。 ？
 
-> A snippet is a template that can be inserted into a document. It is inserted by a command or through some trigger text.
+## 定义
 
-With snippets, you can create a boilerplate file, and insert commonly used blocks of text. The general idea is to save you typing out the same things completely again and again, and again. ?
+> 一个代码片段就是一份可以插入到文档中的模板。它通常通过输入命令或者一些触发文本插入。
 
-## Why should you use Snippets?
+使用代码片段，您可以创建样板文件，并插入常用的文本块。好处是让您能够免于一次又一次地输入完全相同的内容。 ？
 
-I'm not going to shock you with this statement: the internet is home to a lot conflicting opinions! Snippets do not escape this ignominy, but I don't think it is a topic that make people's blood pressure soar!
+## 为什么你需要使用代码片段?
+
+我并不想以这种说法吓到你：互联网上有很多相互矛盾的观点！这种说法同样适用于是否需要使用代码片段这件事，有人赞成，有人反对。但是我并不认为这是一个让人血压升高的话题。
 
 For the sake of balance, I will present a cross-section of those opinions here.
 
+公平起见，我会在这称述两边的观点。
+
 You don't have to pick a camp and be all-for or all-against snippets. I suggest you adopt them to a degree that serves you best.
 
-### Yay Camp ?
+你完全没有必要在这些完全相反的观点里站队，你可以根据你自己的喜好在一定程度上接受它。
 
--   Snippets can boost your productivity, saving you keystrokes and reducing input errors.
--   Snippets leaves me with more mental CPU and enjoyment to spend on writing the code that I care about and want to focus on.
--   Snippets can help you to remember to include something important!
--   Integrating snippets into your workflow implicitly encourages you to use the mouse less often. Well-written snippets offer a logical path which you can tab through, stopping to edit along the way to complete the template exactly the way you want, and when you are done, you arrive on the other side ready to write your next line
+### 支持?
 
-### Nay Camp ?
+-   代码片段可以提高生产效率，减少输入错误，以及减少按键的次数。
+-   代码片段让我有更多的时间思考和设计自己在意和关注的代码。
+-   代码片段可以帮助你记住重要的内容。
+-   把代码片段集成到你的现有工作流中，会明显减少你使用鼠标的次数。成熟的代码片段提供了一个完整的逻辑链路，你可以使用 tab 键来进行跳转，填写完所有代码片段提示需要的信息。或者停下来，自己完成剩余逻辑的编写。不管怎样，一旦你完成，就意味着你可以开始编写下一行的代码了。
+    
+### 反对?
 
--   I refrain from using them, mostly because I don't like being reliant on any given tool.
--   I never use snippets. I prefer to invest time in avoiding repetition rather than making it easier.
--   I found that at some point I forgot how to write the code without using the snippet. For trivial stuff that I understand, it is OK, but I don't want to forget some other stuff!
--   Most, if not all, snippets I've seen online, for code I'm looking for, have mistakes in them. I've not once been able to find a numerical algorithm that didn't have floating point errors in it. I can't imagine there being any resource of perfectly clean code snippets.
+-   我不使用它们，因为我不喜欢依赖任何即成的工具。
+-   我从不使用代码片段，我宁愿将时间花在避免重复上，而不是让它变得更容易。
+-   我发现有些时候，在没有代码片段的情况下，我忘记代码应该怎么写了。对于我已经烂熟于心的内容，使用代码片段是OK的，但我不想因此忘记了其它内容。
+-   大多数情况下，我在网上找到的代码片段都存在错误。我曾经几乎无法找到不存在浮点数错误的数值算法。我无法想象有任何资源可以提供完全干净的代码片段。
 
-## When should you use snippets?
 
-Donald Knuth, one of the grand-wizards of computer science, said "premature optimization \[of code\] is the root of all evil".
+## 什么时候你需要使用代码片段?
 
-I think this is relevant to snippets also. Snippets are an optimization of code production. If you don't know a language or framework very well, implementing a slew of snippets for that language or framework is likely to be a premature move.
+唐纳德·克努斯（Donald Knuth）是计算机科学界的佼佼者之一，他说：“过早的优化（代码）是万恶之源”。
 
-If you are comfortable, then try some out!
+我认为这句话对于代码片段也适用。代码片段是代码生产的优化。如果你不了解某种语言或者框架，就为它实现大量代码片段，那就像不成熟的举动。
 
-## What I use snippets for
+但是当你觉得代码片段带了便利和舒适，那就使用它吧！
 
-Personally, I use snippets often but judiciously. I use a set of snippets for Markdown and most of the languages I work with.
+## 使用代码片段的目的
 
-I haven't used snippets much for frameworks. I started using some snippets for Vue recently, but I only use the boilerplate snippet. I will probably adopt more of them once my Vue IQ has risen.
+个人而言，我经常使用代码片段，而且是理智的使用。我在 Markdown 和我经常使用的其它语言上，使用了大量的代码片段。
 
-I haven't used snippets for algorithms.
+我并没有在框架上使用很多代码片段。最近才开始在 Vue 中使用一些，而且都是样板代码。随着我的 Vue 熟练度的提升，我可能会使用更多的代码片段。
 
-## Types of Snippets
+我并没有在算法上使用代码片段。
 
-Snippets can be classified according to the scope of interactivity between the snippet and the editor.
+## 代码片段的类型
 
-#### Static Snippets
+可以根据代码片段和编辑器之间的交互作用范围对片段进行分类。
 
-You can think of it as a copy-and-paste of some source text as a single command.
+#### 静态代码片段
 
-#### Dynamic Snippets
+您可以将其视为通过单个命令进行的文本的复制和粘贴。
 
-A dynamic snippet can be customised to provide a wizard-like experience for completion of a snippet.
+#### 动态代码片段
 
-It can include:
+可以自定义动态代码段，以为完成代码片段提供类似向导的体验。
+
+它包括:
 
 -   _Tab Stops_: You can number stops that can be tabbed through in order,
 -   _Mirrored Tab Stops_: There are times when you need to provide the same value in several places in the inserted text. You can mirror a tab stop to achieve this, and any edit will be reflected in the related tab stops instantly.
 -   _Placeholders_  : It is a tab stop with a default value which can be overwritten on focus.
 -   _Choices_  : At a tab stop you are presented with a dropdown list of values to choose from.
 -   _Variables_: Input values from the environment such as: the selected text in the editor, system dates, or content from the clipboard.
+
+-   _Tab Stops_: You can number stops that can be tabbed through in order,
+-   _Mirrored Tab Stops_: 有时，您需要在文本的多个位置中插入相同的值。 你可以使用镜像的 tab stop 来实现, 任何编辑都会立即反映在镜像的 tab stop 中。
+-   _Placeholders_  : It is a tab stop with a default value which can be overwritten on focus.
+-   _Choices_  : At a tab stop you are presented with a dropdown list of values to choose from.
+-   _Variables_: Input values from the environment such as: the selected text in the editor, system dates, or content from the clipboard.
+
 
 Here is an example of a markdown snippet which adds a task list with 2 tasks. It uses  _tab stops_,  _placeholders_, and  _choices_  for checking a task.
 

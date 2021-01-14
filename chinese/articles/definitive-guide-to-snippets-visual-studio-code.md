@@ -1,6 +1,6 @@
 > -   原文地址：[Visual Studio Code Snippets – the Definitive VS Code Snippet Guide for Beginners](https://www.freecodecamp.org/news/definitive-guide-to-snippets-visual-studio-code/)
 > -   原文作者：Rob O'Leary
-> -   译者：
+> -   译者：董凯
 > -   校对者：
 
 ![Visual Studio Code Snippets – the Definitive VS Code Snippet Guide for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/harry-hd.png)

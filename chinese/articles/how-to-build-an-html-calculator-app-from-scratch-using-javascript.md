@@ -7,7 +7,7 @@
 
 This is an epic article where you learn how to build a calculator from scratch. We’ll focus on the JavaScript you need to write—how to think about building the calculator, how to write the code, and eventually, how to clean up your code.
 
-By the end of the article, you should get a calculator that functions exactly like an iPhone calculator (without the  `+/-`  and percentage functionalities).
+在这篇文章结束，你会得到一款和iPhone计算器功能一样的计算器（除了 +/- 和百分比功能外）。
 
 ![](https://cdn-media-1.freecodecamp.org/images/Cw7jNVIhWFV4NSNY8-Lv8uX4583Hr5LvzYFq)
 

@@ -22,13 +22,12 @@
 6.  如何使用`textContent`属性修改文本
 7.  如何使用事件代理模式添加事件
 
-### Before you begin
+### 开始之前
 
-I urge you to try and build the calculator yourself before following the lesson. It’s good practice, because you’ll train yourself to think like a developer.
+我建议你在开始课程之前自己尝试下自己开发计算器。这是一个很好的锻炼，因为你会训练自己像开发人员一样思考。
+一旦你尝试了一小时（不管你是成功还是失败。当年尝试过，思考过，这会帮助你在更短的时间内吸收本节课的内容）。
 
-Come back to this lesson once you’ve tried for one hour (doesn’t matter whether you succeed or fail. When you try, you think, and that’ll help you absorb the lesson in double quick time).
-
-With that, let’s begin by understanding how a calculator works.
+就这样，我们先来了解下计算器的工作原理。
 
 ### Building the calculator
 

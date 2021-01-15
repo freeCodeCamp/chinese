@@ -174,9 +174,13 @@ ul {
 
 Notice that I used large images that take some time to load. This will show you in the best way the power of service workers.
 
+请注意，我使用了大图片，加载它会需要一些时间。这将以最好的方式向你展示 service workers 的能力。
+
 As I said earlier, the `.container` class will hold our cards. Therefore, we need to select it.
 
--   In `js/app.js`
+正如我之前说过用 Class 名为 `.container` 的元素保存我们的卡片，因此我们需要选择它。
+
+-   在 `js/app.js`
 
 ```javascript
 const container = document.querySelector('.container');
@@ -194,9 +198,10 @@ const coffees = [
 ```
 
 Then, we create an array of cards with names and images.
-然后我们将创建一个包含 name 和 image 的卡片数组。
 
--   In `js/app.js`
+然后，我们创建一个包含名字和图片的卡片数组。
+
+-   在 `js/app.js`
 
 ```javascript
 const showCoffees = () => {
@@ -216,7 +221,11 @@ const showCoffees = () => {
 
 With this code above, we can now loop through the array and show them on the HTML file. And to make everything work, we wait until the DOM (Document Object Model) content finishes loading to run the `showCoffees` method.
 
+有了上面的代码，我们现在能够通过遍历数组并将其显示在 HTML 上。为了保证工作正常，我们等待 DOM （文档对象模型）内容加载完成再执行 `showCoffees` 方法。
+
 We've done a lot, but for now, we just have a traditional web app. So, let's change that in the next section by introducing some PWA features.
+
+我们已经做了很多，但现在，我们只有一个传统的 Web 应用，所以，让我们在下一节通过引入一些 PWA 的特性来改变这种情况。
 
 ![super-excited](https://media.giphy.com/media/l3V0dy1zzyjbYTQQM/source.gif)
 

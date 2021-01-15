@@ -85,8 +85,8 @@
 
 构建这个计算器的第一步是能够监听所有（1）的按键，确定（2）被按下时候的类型。在这个案例中，我们可以使用事件代理模式去监听，因为所有的按键都是`.calculator__keys`的孩子。
 ```js
-const calculator = document.querySelector(‘.calculator’)
-const keys = calculator.querySelector(‘.calculator__keys’)
+const calculator = document.querySelector('.calculator')
+const keys = calculator.querySelector('.calculator__keys')
 
 
 ```
@@ -104,7 +104,6 @@ if (!action) {
 }
 ```
 
-If the key has a  `data-action`  that is either  `add`,  `subtract`,  `multiply`  or  `divide`, we know the key is an operator.
 如果这个按键有`data-action`，它的值是 `add`，`subtract`，`multiply`或者`divide`，我们就可以知道这是一个操作按键。
 ```js
 if (
@@ -134,23 +133,22 @@ if (action === 'clear') {
 在这里，你可以使用`console.log`方法，来响应每个按键的事件。
 ![](https://cdn-media-1.freecodecamp.org/images/lbXTncsu2Ni5V-Ejx6RYCO-kW8XJm7f5woGC)
 
-### Building the happy path
+### 开始构建happy path
 
-Let’s consider what the average person would do when they pick up a calculator.  **This “what the average person would do” is called the happy path**.
+让我们思考一下，一个普通人拿到一个计算器之后，会做什么呢？**这个普通人会做什么的问题被称作happy path**。
 
-Let’s call our average person Mary.
+这个普通人我们就称作Mary吧。
+当Mary拿起计算器时，她可能会点击任何一个按键：
 
-When Mary picks up a calculator, she could hit any of these keys:
+1.  一个数字键（0-9）
+2.  一个操作键 （+，-，×，÷）
+3.  小数点键
+4.  等号键
+5.  清除键
 
-1.  a number key (0–9)
-2.  an operator key (+, -, ×, ÷)
-3.  the decimal key
-4.  the equal key
-5.  the clear key
 
-It can be overwhelming to consider five types of keys at once, so let’s take it step by step.
-
-### When a user hits a number key
+一下子要思考五种按键可以能不太容易，所以让我们一步一步来。
+### 当使用者按下数字键
 
 At this point, if the calculator shows 0 (the default number), the target number should replace zero.
 

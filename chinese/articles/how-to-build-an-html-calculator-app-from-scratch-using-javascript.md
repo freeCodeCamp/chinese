@@ -150,28 +150,24 @@ if (action === 'clear') {
 一下子要思考五种按键可以能不太容易，所以让我们一步一步来。
 ### 当使用者按下数字键
 
-At this point, if the calculator shows 0 (the default number), the target number should replace zero.
-
+如果计算器显示0（默认数字），此时，目标数字需要替换这个0。
 ![](https://cdn-media-1.freecodecamp.org/images/mpr4JFLSU-MHaq8LPMedsaDxnU5Y-MTx56SU)
 
-If the calculator shows a non-zero number, the target number should be appended to the displayed number.
-
+如果计算器显示的是非零数字，那么目标数字就需要在显示的数字后面添加上。
 ![](https://cdn-media-1.freecodecamp.org/images/PNfa-nAlgIBtFt1MaVEDvuzisaIps6Kdb482)
 
-Here, we need to know two things:
+现在，我们需要知道两件事情：
+1.  当前被点击的按键的数字。
+2.  当前显示的数字。
 
-1.  The number of the key that was clicked
-2.  The current displayed number
-
-We can get these two values through the  `textContent`  property of the clicked key and  `.calculator__display`  , respectively.
+我们可以通过`textContent`和点击按键的`.calculator__display`分别获取到这两个值。
 
 ```js
 const display = document.querySelector('.calculator__display')
 
 ```
 
-**If the calculator shows 0, we want to replace the calculator’s display with the clicked key.**  We can do so by replacing the display’s textContent property.
-
+**如果计算器显示0，我们需要用点击按键的数字替换计算器显示屏的数字。** 我们可以通过显示屏的textContent属性进行替换。
 ```js
 if (!action) {
   if (displayedNum === '0') {
@@ -180,8 +176,7 @@ if (!action) {
 }
 ```
 
-**If the calculator shows a non-zero number, we want to append the clicked key to the displayed number.**  To append a number, we concatenate a string.
-
+**如果计算器显示的是非零数字，我们需要在当前显示的数字后面追加点击键的数字。** 要追加一个数字，我们就需要一个连接字符串。
 ```js
 if (!action) {
   if (displayedNum === '0') {
@@ -192,14 +187,13 @@ if (!action) {
 }
 ```
 
-At this point, Mary may click either of these keys:
+这时，Mary可能会点击其中一个按键：
+1.  小数点键
+2.  操作符键
 
-1.  A decimal key
-2.  An operator key
 
-Let’s say Mary hits the decimal key.
-
-### When a user hits the decimal key
+让我们告诉Mary点击一下小数点键吧。
+### 当使用者点击小数点键时
 
 When Mary hits the decimal key, a decimal should appear on the display. If Mary hits any number after hitting a decimal key, the number should be appended on the display as well.
 

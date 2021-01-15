@@ -29,12 +29,11 @@
 
 就这样，我们先来了解下计算器的工作原理。
 
-### Building the calculator
+### 构建计算器
 
-First, we want to build the calculator.
+首先，我们想要建立计算器。
 
-The calculator consist of two parts: the display and the keys.
-
+这个计算机包含两个部分：显示屏和键盘。
 ![](https://cdn-media-1.freecodecamp.org/images/rfV0r9RtFghhau8sZU5CzOFMuJAT1H48tFeL)
 
 ```html
@@ -43,8 +42,7 @@ The calculator consist of two parts: the display and the keys.
   <div class=”calculator__keys”> … </div>
 </div>
 ```
-
-We can use CSS Grid to make the keys, since they’re arranged in a grid-like format. This has already been done for you in the starter file. You can find the starter file at  [this pen][5].
+我们使用CSS Grid去制作键盘部分，因为他们是类似网格的格式进行排列的。这里已经在启动文件中完成了，你可以在以下地址找到启动文件 [此处][5].
 
 ```css
 .calculator__keys { 
@@ -53,8 +51,7 @@ We can use CSS Grid to make the keys, since they’re arranged in a grid-like fo
 }
 ```
 
-To help us identify operator, decimal, clear, and equal keys, we’re going to supply a data-action attribute that describes what they do.
-
+为了帮助我们区分操作符，小数点，清除符号以及等号，我们将设置一个data-action属性用来描述他们的功能。
 ```html
 <div class="calculator__keys">
   <button class="key--operator" data-action="add">+</button>
@@ -77,18 +74,16 @@ To help us identify operator, decimal, clear, and equal keys, we’re going to s
 </div>
 ```
 
-### Listening to key-presses
+### 监听键盘点击
 
-Five things can happen when a person gets hold of a calculator. They can hit:
+当一个人拿着几个计算器，他会做五种事情，他们可以点击：
+1.  一个数字键（0-9）
+2.  一个操作键 （+，-，×，÷）
+3.  小数点键
+4.  等号键
+5.  清除键
 
-1.  a number key (0–9)
-2.  an operator key (+, -, ×, ÷)
-3.  the decimal key
-4.  the equals key
-5.  the clear key
-
-The first steps to building this calculator are to be able to (1) listen for all keypresses and (2) determine the type of key that is pressed. In this case, we can use an event delegation pattern to listen, since keys are all children of  `.calculator__keys`.
-
+构建这个计算器的第一步是能够监听所有（1）的按键，确定（2）被按下时候的类型。在这个案例中，我们可以使用事件代理模式去监听，因为所有的按键都是`.calculator__keys`的孩子。
 ```js
 const calculator = document.querySelector(‘.calculator’)
 const keys = calculator.querySelector(‘.calculator__keys’)
@@ -96,15 +91,13 @@ const keys = calculator.querySelector(‘.calculator__keys’)
 
 ```
 
-Next, we can use the  `data-action`  attribute to determine the type of key that is clicked.
-
+接下来，我们利用`data-action`属性去确定点击按键的类型。
 ```js
 const key = e.target
 const action = key.dataset.action
 ```
-
-If the key does not have a  `data-action`  attribute, it must be a number key.
-
+ 
+如果按键没有`data-action`属性，那么它一定是一个数字键。
 ```js
 if (!action) {
   console.log('number key!')
@@ -112,7 +105,7 @@ if (!action) {
 ```
 
 If the key has a  `data-action`  that is either  `add`,  `subtract`,  `multiply`  or  `divide`, we know the key is an operator.
-
+如果这个按键有`data-action`，它的值是 `add`，`subtract`，`multiply`或者`divide`，我们就可以知道这是一个操作按键。
 ```js
 if (
   action === 'add' ||
@@ -124,10 +117,10 @@ if (
 }
 ```
 
-If the key’s  `data-action`  is  `decimal`, we know the user clicked on the decimal key.
 
-Following the same thought process, if the key’s  `data-action`  is  `clear`, we know the user clicked on the clear (the one that says AC) key. If the key’s  `data-action`  is  `calculate`, we know the user clicked on the equals key.
+如果这个按键的`data-action`属性是`decimal`，我们就可以知道使用者点击了小数点键。
 
+按照同样的思路，如果键的`data-action`是`clear`，我们知道用户点击了清除（写着AC的那个）键。如果键的`data-action`是`calculate`，我们知道用户点击了等于键。
 ```js
 if (action === 'decimal') {
   console.log('decimal key!')
@@ -138,8 +131,7 @@ if (action === 'clear') {
 
 ```
 
-At this point, you should get a  `console.log`  response from every calculator key.
-
+在这里，你可以使用`console.log`方法，来响应每个按键的事件。
 ![](https://cdn-media-1.freecodecamp.org/images/lbXTncsu2Ni5V-Ejx6RYCO-kW8XJm7f5woGC)
 
 ### Building the happy path

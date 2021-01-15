@@ -78,127 +78,125 @@ You don't have to pick a camp and be all-for or all-against snippets. I suggest 
 
 它包括:
 
--   _Tab Stops_: You can number stops that can be tabbed through in order,
--   _Mirrored Tab Stops_: There are times when you need to provide the same value in several places in the inserted text. You can mirror a tab stop to achieve this, and any edit will be reflected in the related tab stops instantly.
--   _Placeholders_  : It is a tab stop with a default value which can be overwritten on focus.
--   _Choices_  : At a tab stop you are presented with a dropdown list of values to choose from.
--   _Variables_: Input values from the environment such as: the selected text in the editor, system dates, or content from the clipboard.
-
--   _Tab Stops_: You can number stops that can be tabbed through in order,
--   _Mirrored Tab Stops_: 有时，您需要在文本的多个位置中插入相同的值。 你可以使用镜像的 tab stop 来实现, 任何编辑都会立即反映在镜像的 tab stop 中。
--   _Placeholders_  : It is a tab stop with a default value which can be overwritten on focus.
--   _Choices_  : At a tab stop you are presented with a dropdown list of values to choose from.
--   _Variables_: Input values from the environment such as: the selected text in the editor, system dates, or content from the clipboard.
+-   _Tab Stops_: 你可以按顺序编号 tab 跳转的位置（tab stop）。
+-   _Mirrored Tab Stops_: 有时，你需要在文本的多个位置中插入相同的值。 你可以使用相同的序号标记 tab stop, 编辑一处都会立即反映其它相同序号的 tab stop 中。
+-   _Placeholders_  : 有默认值的 tab stop 位置，当获得焦点时你可以重写它。
+-   _Choices_  : 有下拉列表的 tab stop 位置，你可以通过下拉列表选择它的值。
+-   _Variables_: 来自环境变量中的值，比如: 选中的文字， 系统日期，或者剪贴板中的内容。
 
 
 Here is an example of a markdown snippet which adds a task list with 2 tasks. It uses  _tab stops_,  _placeholders_, and  _choices_  for checking a task.
 
+下图是一个例子，在 markdown 中使用代码片段。它使用了 _tab stops_,  _placeholders_, and  _choices_ 。
+
 ![task](https://www.freecodecamp.org/news/content/images/2020/09/task.gif)
 
-#### Macro Snippets
+#### 宏代码片段
 
-The top level of sorcery is to have the capability to transform input. Transformations allow you to alter the value of a variable before they are inserted, or alter a placeholder after you have made an edit.
+顶级巫术拥有转变输入的能力，转变意味着你可以改变一个变量的值在插入它之前，或者在你编辑之后改变占位符的值。
 
-For example, you may want to capitalise a class name once it is entered.
+例如，你可能想在输入类名过后，把它大写。
 
-Anything that you can think of doing with a regex is typically possible. Some editors offer more advanced scripting possibilities.
+你可能首先想到使用正则，那是可行的。此外，某些编辑器还提供了更高级的脚本能力。
 
-## Snippets in Visual Studio Code
+## VS Code 中的代码片段
 
 In VS Code, snippets appear in  **IntelliSense**  (`Ctrl+Space`  gives you a suggestion list), they are mixed in with other suggestions.
 
-You can also access them in a dedicated snippet picker by using the  **'Insert Snippet' command**. This combines all user, extension, and built-in snippets for that language into a single list.
+在 VS Code 中，代码片段是 **智能** 出现的（`Ctrl+Space`  会显示一个建议列表），通常还和其它建议混在一起。
+
+你可以通过命令 **'Insert Snippet' command** 来浏览所有可用的代码片段并选择一个。它列出了当前文件语言的所有用户添加的，插件提供的，以及预设的代码片段。
 
 ![insert-snippet-list](https://www.freecodecamp.org/news/content/images/2020/09/insert-snippet-list.png)
 
-[Emmet][1]  is integrated into VS Code and has it's own CSS-selector inspired syntax for inserting HTML and CSS snippets.
+[Emmet][1]  已集成到VS Code中，并且具有自己的CSS选择器启发式语法，可用于插入HTML和CSS代码段。
 
 Emmet is it's own thing really, but the mechanics are the same. You can learn about Emmet with the  [Emmet in Visual Studio Code guide][2].
 
-### Related User Settings
+### 用户相关设置
 
-Snippets will appear as  **quick suggestions**  if the setting  `editor.quickSuggestions`  is set to true for the language you are working in. Quick suggestions are enabled by default for most languages except markdown.
+如果你在设置里将当前使用的语言的 `editor.quickSuggestions` 设置为 true ，代码片段将以**快速建议**的形式出现。该设置针对大多数语言都默认开启，除了 markdown。
 
 ![quick-suggestions-js](https://www.freecodecamp.org/news/content/images/2020/09/quick-suggestions-js.png)
 
-Snippets support  **tab-completion**. You can type a snippet prefix (the trigger text), and press  `Tab`  to insert a snippet. You can enable it with the setting  `editor.tabCompletion`.
+代码片段支持  **tab-completion** 。你可以输入一个代码片段的前缀（触发字符），再按下 `Tab` 就能输入完整的代码片段了。你可以在设置里设置 `editor.tabCompletion` 的值来打开该功能。
 
-The values are:
+可选值:
 
--   `on`: Tab completion is enabled for all sources.
--   `off`: Disable tab completions. This is the  _default value_.
--   `onlySnippets`: Tab completion only for snippets.
+-   `on`: 打开tab-completion 功能。
+-   `off`: 关闭 tab-completion 功能，这是_默认值_。
+-   `onlySnippets`: 只对代码片段打开 tab-completion。
 
 ```json
 "editor.tabCompletion": "onlySnippets",
 
 ```
 
-If you would like to control how  **snippets suggestions**  are shown, you can edit the setting  `editor.snippetSuggestions`.
+如果你想控制代码片段的建议是如何显示的，你可以改变设置中 `editor.snippetSuggestions` 的值。
 
-The values are:
+可选值:
 
--   `top`: Show snippet suggestions on top of other suggestions. I use this value.
--   `bottom`: Show snippet suggestions below other suggestions.
--   `inline`: Show snippets suggestions with other suggestions. This is the  _default value_.
--   `none`: Do not show snippet suggestions.
+-   `top`: 展示代码片段建议在其它建议之上，也是我正在使用的方式。
+-   `bottom`: 展示代码片段建议在其它建议之下。
+-   `inline`: 和其他建议一起显示，这是 _默认值_ 。
+-   `none`: 不显示代码片段的建议。
 
 ```json
 "editor.snippetSuggestions": "top",
 
 ```
 
-These are the most important settings for snippets, but there are a few more. You can check out this  [list of the default settings][3]  to explore more, or do a search in the Settings UI.
+以上是代码片段相关的重要设置，但还有其他一些设置。您可以查看此[默认设置列表][3] 浏览更多，或在“设置”界面中浏览。
 
-### Are there built-in snippets?
+### 有预设的代码片段么?
 
 Yes!
 
-They aren't documented in the VS Code docs, though. And inside VS Code, there is no central point to browse them. So, you may not know what they are.
+但是，他们没有出现在 VS Code 的文档中。而且在 VS Code 中也没有一个专门的地方介绍它们。所以，你可能对内置的代码片段了解的并不多。
 
-So, how can you find out what languages have built-in snippets?
+那么，怎么才能找出当前语言的所有内置的代码片段呢？
 
-Long story short, I was frustrated by this scenario, so I wrote an extension called  [**Snippets Ranger**][4]  to give a nice UI to explore snippets easily. Think of it as a  _Marauder's Map_  for snippets!
+长话短说，我对上面的情况不满，所以我写了一个 VS Code 插件 [**Snippets Ranger**][4]，提供了一个漂亮的UI界面来展示所有的内置代码片段。Think of it as a  _Marauder's Map_  for snippets!
 
 ![snippets-ranger](https://www.freecodecamp.org/news/content/images/2020/09/snippets-ranger.png)
 
-#### But I want to find the snippets for myself?
+#### 但是我就想自己找到这些代码片段呢?
 
-You can, it just requires a bit more effort.
+你当然可以，不过要多花费一些精力。
 
-As I mentioned earlier, the  **'Insert Snippet' command**  will show you all snippets for the language of the active document.
+上面提到过， **'Insert Snippet' command** 会显示你当前语言的所有代码片段。 
 
-Remember though, this is an  _aggregate_  of all of the user, extension, and built-in snippets. So, if you want to find out if a particular language has built-in snippets, you need to open a file for that language, and run the command to see that list.
+不过请记住，那是一个合集，包括用户的，插件的，内置的。如果你想搞清楚某种语言是否有内置的代码片段，你需要打开一个该语言的文件，然后输入这个命令来查看。
 
-If you have an snippets extension installed for that language that makes it too hard to identify which is which, you could disable it to ensure that only the built-in snippets are showing. ?
+如果你安装了相关语言的代码片段插件，可能很难分清楚谁是内置的，谁是插件提供的，所以你可以暂时关闭插件，剩下的就是内置的了。
 
-If you want to track down the source file yourself, the built-in snippets live inside each individual language extension directory. The file is located at  `«app root»\resources\app\extensions\«language»\snippets\«language».code-snippets`  on Windows. The location is similar for Mac and Linux.
+如果你想自己查看代码片段的源文件，Windows 下路径是 ：`«app root»\resources\app\extensions\«language»\snippets\«language».code-snippets`。Mac 和 Linux 下路径相似。
 
-### Snippets Extensions
+### 代码片段插件
 
-The Visual Studio Marketplace has a  [snippets category][5]  where you can find snippets for almost anything.
+Visual Studio 市场 有专门的 [snippets category][5] 分类，你可以在这查找你所需要的。
 
-A lot of Programming Language Pack extensions include snippets also (Python, C#, Go, Java, and C/C++ amongst others).
+此外还有许多程序语言包扩展，自带了代码片段（Python, C#, Go, Java, and C/C++ ...）。
 
-### How do I write my own?
+### 自己如何写代码片段?
 
-Snippets files are written in JSON. You can also add C-style comments if you wish (technically it is Microsoft's "JSONC" format).
+代码片段文件是 JSON 格式的。 如果你想，你还可以添加C语言风格的注释（技术上讲，它是微软的"JSONC"格式）。 
 
-You can create snippets for different scopes: global, workspace, and for a particular language.
+你可以创建不同作用域的代码片段：全局的，工作区的，以及针对特定语言类型的。
 
-To create the snippets file, run the  **'Preferences: Configure User Snippets' command**, which opens a quickpick dialog as below. Your selection will open a file for editing.
+执行 **'Preferences: Configure User Snippets' command** 来创建代码片段的文件，它会打开一个下图这样的对话框。选择任意一个都会打开一个新文件进行编辑。
 
 ![user snippets](https://www.freecodecamp.org/news/content/images/2020/09/user-snippets.png)
 
-If you would prefer to write a snippet in a GUI, you can use the  [snippet generator web app][6].
+如果你更喜欢使用GUI界面来编写代码片段，你可以尝试以下 [snippet generator web app][6]。
 
 ![snippet generator](https://www.freecodecamp.org/news/content/images/2020/09/snippet-generator.png)
 
-Let's look at an example to get familiar with the syntax.
+我们看一个例子来熟悉下语法。
 
 #### Example
 
-Here is a markdown snippet that comes with VS Code.
+这是一个 VS Code 中 markdown 代码片段。
 
 ```json
 {
@@ -211,33 +209,33 @@ Here is a markdown snippet that comes with VS Code.
 
 ```
 
-This snippet inserts a level 1 heading which wraps the markdown around the current selection (if there is one).
+这个代码片段插入一个一级标题，内容是当前选中的文字（如果有选中的话）。
 
-A snippet has the following properties:
+一个代码片段拥有下列属性：
 
-1.  "Insert heading level 1" is the snippet name. This is the value that is displayed in the IntelliSense suggestion list if no  `description`  is provided.
-2.  The`prefix`  property defines the trigger phrase for the snippet. It can be a string or an array of strings (if you want multiple trigger phrases). Substring matching is performed on prefixes, so in this case, typing "h1" would match our example snippet.
-3.  The  `body`  property is the content that is inserted into the editor. It is an array of strings, which is one or more lines of content. The content is joined together before insertion.
-4.  The  `description`  property can provide more information about the snippet. It is optional.
-5.  The  `scope`  property allows you to target specific languages, and you can supply a comma-separated list in the string. It is optional. Of course, it is redundant for a language-specific snippet file.
+1.  "Insert heading level 1" 是代码片段的名字。如果没有 `description`，它就会出现在智能建议的列表里。
+2.  `prefix`属性定义了代码片段的触发文本。它可以是一个字符串或者一个字符串数组（如果你想有多个触发文本）。前缀的子字符串同样可以触发，在我们的例子里，输入"h1"一样能匹配到我们的代码片段。
+3.  `body`属性代表了要插入编辑器的内容。它是一个字符串数组，可能一行或者多行。在插入之前会被合并成一段。
+4.  `description`属性提供了代码片段的更多描述。它是可选的。
+5.  `scope`属性允许你指定特定的语言类型，你可以使用逗号来分割多种语言。它也是可选的。当然，对于特定于语言的代码片段文件来说是多余的。
 
-The body of this snippet has 2 tab stops and uses the variable  `${TM_SELECTED_TEXT}`.
+该代码片段的内容具有2个 tab stop ，并使用了`$ {TM_SELECTED_TEXT}`变量。
 
-Let's get into the syntax to understand this fully.
+接下来，让我们详细了解下语法相关的细节。
 
-#### Snippet syntax
+#### 代码片段语法
 
-VS Code's snippet syntax is the same as the  [TextMate snippet syntax][7]. However, it does not support 'interpolated shell code' and the use of the  `\u`  transformation.
+VS Code 的代码片段语法和 [TextMate snippet syntax][7] 是相同的。然而，它不支持'interpolated shell code'和 `\u` 转换。
 
-The  `body`  of a snippet supports the following features:
+代码片段的`body`属性支持以下特性：
 
 #### 1\. Tab Stops
 
-Tab stops are specified by a dollar sign and an ordinal number e.g.  `$1`  .  `$1`  will be the first location,  `$2`  will the second location, and so on.  `$0`  is the final cursor position, which exits the snippet mode.
+Tab stops由 **$** 和 **序号** 组成，就像 `$1`。`$1`代表了第一个位置，`$2`代表了第二个位置，以此类推。`$0`代表退出代码片段，以及最后光标停留的位置，
 
-For example, let's say we want to make an HTML  _div_  snippet and we want the first tab stop to be between the opening and closing tags. We also want to allow the user to tab outside of the tags to finish the snippet.
+举个例子，我们希望写一个 _div_ 的代码片段。它的第一个 tab stop 在标签内，同时希望用户按下 tab 的时候能退出代码片段，并让光标停留在标签外。
 
-Then we could make a snippet like this:
+看起来就像下面这样:
 
 ```json
 {

@@ -195,28 +195,23 @@ if (!action) {
 让我们告诉Mary点击一下小数点键吧。
 ### 当使用者点击小数点键时
 
-When Mary hits the decimal key, a decimal should appear on the display. If Mary hits any number after hitting a decimal key, the number should be appended on the display as well.
-
+当Mary点击了小数点键之后，小数点就需要出现在显示屏上。如果Mary在敲击小数键后敲击任何数字，那么数字也应该添加在显示屏上。
 ![](https://cdn-media-1.freecodecamp.org/images/5Pc6RLFHdPNzPi3BrlXJSs3xrFf2L90A2WXx)
 
-To create this effect, we can concatenate  `.`  to the displayed number.
-
+为了实现上述效果，我们需要将`.`添加到已经显示的数字后面。
 ```js
 if (action === 'decimal') {
   display.textContent = displayedNum + '.'
 }
 ```
 
-Next, let’s say Mary continues her calculation by hitting an operator key.
+接下来，我们可以让Mary继续点击计算器的操作按键继续她的计算。
+### 当使用者点击操作按钮
 
-### When a user hits an operator key
-
-If Mary hits an operator key, the operator should be highlighted so Mary knows the operator is active.
-
+如果Mary点击操作按键，这个操作符需要被高亮，这样的话Mary就知道了这个操作符是激活的。
 ![](https://cdn-media-1.freecodecamp.org/images/VarwRgJGrN0mwcgYGpX1Zw54QRfbXdMmQNEG)
 
-To do so, we can add the  `is-depressed`  class to the operator key.
-
+为了实现这个功能，我们给操作符按钮添加一个名字叫`is-depressed`的类名。
 ```js
 if (
   action === 'add' ||
@@ -228,16 +223,14 @@ if (
 }
 ```
 
-Once Mary has hit an operator key, she’ll hit another number key.
+一旦Mary按下了一个操作键，她将会点击另外的数字键。
 
-### When a user hits a number key after an operator key
+### 当使用者在点击了操作键后点击了数字键
 
-When Mary hits a number key again, the previous display should be replaced with the new number. The operator key should also release its pressed state.
-
+当Mary再次点击了数字键，之前显示的数字应该被替换成新的数组。操作键也应该被解除“被点击”的状态。
 ![](https://cdn-media-1.freecodecamp.org/images/GDuLfupPob7rW0UWTH6RqI5CuQX36vcILKwo)
 
-To release the pressed state, we remove the  `is-depressed`  class from all keys through a  `forEach`  loop:
-
+我们可以使用`forEach`循环遍历所有的按键，去移除`is-depressed`类：
 ```js
 keys.addEventListener('click', e => {
   if (e.target.matches('button')) {
@@ -248,10 +241,9 @@ Array<span class="token punctuation" style="box-sizing: inherit; margin: 0px; pa
   <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(221, 74, 104);">forEach</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token parameter" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline;">k</span> <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(154, 110, 58);">=&gt;</span> k<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>classList<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(221, 74, 104);">remove</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">'is-depressed'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
 ```
 
-Next, we want to update the display to the clicked key. Before we do this, we need a way to tell if the previous key is an operator key.
-
-One way to do this is through a custom attribute. Let’s call this custom attribute  `data-previous-key-type`.
-
+接下来，我们想要把显示的内容更新为之前点击过的按键。在我们做这件事之前，我们需要判断之前的按键是否是一个操作键。
+ 
+我们可以通过自定义属性来实现。让我们定义一个自定义属性`data-previous-key-type`。
 ```js
 const calculator = document.querySelector('.calculator')
 // ...
@@ -271,28 +263,25 @@ keys.addEventListener('click', e => {
 ```
 
 If the  `previousKeyType`  is an operator, we want to replace the displayed number with clicked number.
-
+如果`previousKeyType`是一个操作符，我们希望可以用当前点击的数字替换当前显示的数字。
 ```js
 const previousKeyType = calculator.dataset.previousKeyType
 
 ```
 
-Next, let’s say Mary decides to complete her calculation by hitting the equals key.
+接下来让我们告诉Mary点击等号键来完成她的计算。
+### 当使用者点击等号键时
 
-### When a user hits the equals key
+当Mary点击等号键，计算器应该根据三个值计算一个结果：
+1.  **第一个**输入计算器中的数字
+2.  **操作符**
+3.  **第二个**输入计算器中的数字
 
-When Mary hits the equals key, the calculator should calculate a result that depends on three values:
-
-1.  The  **first number**  entered into the calculator
-2.  The  **operator**
-3.  The  **second number**  entered into the calculator
-
-After the calculation, the result should replace the displayed value.
-
+在计算之后，结果会替换当前已显示的值出现在屏幕上。
 ![](https://cdn-media-1.freecodecamp.org/images/TMFTHXrjCGzKQBIzBFApP7usoJCjcQ-oz2Jc)
 
 At this point, we only know the  **second number**  — that is, the currently displayed number.
-
+这里我们只知道**第二个数字**是当前已经显示的数字。
 ```js
 if (action === 'calculate') {
   const secondValue = displayedNum
@@ -300,10 +289,9 @@ if (action === 'calculate') {
 }
 ```
 
-To get the  **first number**, we need to store the calculator’s displayed value before we wipe it clean. One way to save this first number is to add it to a custom attribute when the operator button gets clicked.
+为了获取**第一个数字**，我们需要储存之前在计算器上被我们已经清除了的值。我们可以添加一个自定义的属性，在我们点击操作键是储存第一个值。
 
-To get the  **operator**, we can also use the same technique.
-
+获取**操作符**，我们可以使用同样的方法。
 ```js
 if (
   action === 'add' ||
@@ -317,8 +305,7 @@ if (
 }
 ```
 
-Once we have the three values we need, we can perform a calculation. Eventually, we want the code to look something like this:
-
+一旦我们得到了三个我们需要的值，接下来我们就可以进行计算。最终，我们需要实现这样的代码：
 ```js
 if (action === 'calculate') {
   const firstValue = calculator.dataset.firstValue
@@ -327,8 +314,7 @@ if (action === 'calculate') {
 
 ```
 
-That means we need to create a  `calculate`  function. It should take in three parameters: the first number, the operator, and the second number.
-
+接下来我们需要构建一个`calculate`方法。它需要接收**第一个数字**，**操作符**和**第二个数字**三个参数。
 ```js
 const calculate = (n1, operator, n2) => {
   // Perform calculation and return calculated value

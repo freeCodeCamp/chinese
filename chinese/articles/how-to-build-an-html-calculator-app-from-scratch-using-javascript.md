@@ -321,8 +321,7 @@ const calculate = (n1, operator, n2) => {
 }
 ```
 
-If the operator is  `add`, we want to add values together. If the operator is  `subtract`, we want to subtract the values, and so on.
-
+如果操作符是`add`，我们希望两个数字可以相加在一起。如果操作符是 `subtract`，则希望两个数字相减，其余的操作符也是如此。
 ```js
 const calculate = (n1, operator, n2) => {
   let result = ''
@@ -338,15 +337,13 @@ const calculate = (n1, operator, n2) => {
 
 ```
 
-Remember that  `firstValue`  and  `secondValue`  are strings at this point. If you add strings together, you’ll concatenate them (`1 + 1 = 11`).
+请记住现在的`第一个数字`和`第二个数字`都是字符串。如果你进行字符串相加的话，一会把它们连在一起 (`1 + 1 = 11`)。
 
-So, before calculating the result, we want to convert strings to numbers. We can do so with the two functions  `parseInt`  and  `parseFloat`.
-
+所以在计算结果之前，我们需要将字符串类型转换成数字类型。我们可以使用`parseInt`和`parseFloat`两个方法来实现。
 -   `parseInt`  converts a string into an  **integer**.
 -   `parseFloat`  converts a string into a  **float**  (this means a number with decimal places).
 
-For a calculator, we need a float.
-
+对于计算器来说，我们需要浮点数。
 ```js
 const calculate = (n1, operator, n2) => {
   let result = ''
@@ -361,36 +358,33 @@ const calculate = (n1, operator, n2) => {
   }
 
 ```
+ 
+你可以通过 [这个链接][6] 获取源代码（往下滚动，在方框里输入你的邮箱地址，我就会把源代码直接发到你的邮箱里）。
+### 边缘的测试用例
 
-That’s it for the happy path!
+如果需要构建一款足够健壮的计算器，你需要使你的计算器能够适应各种奇怪的输入。
+因此，你需要想象有一个破坏者，他会尝试按照错误的点击顺序来破坏你的计算器。我们就把这个破坏者叫做Tim吧。
 
-You can grab the source code for the happy path through  [this link][6]  (scroll down and enter your email address in the box, and I’ll send the source codes right to your mailbox).
+Tim可以按照任何的方式点击这些按键：
+1.  数字键
+2.  运算符键
+3.  小数点键
+4.  等号键
+5.  清除键
 
-### The edge cases
+### 当Tim点击小数点键的时候会发生什么呢
 
-The hapy path isn’t enough. To build a calculator that’s robust, you need to make your calculator resilient to weird input patterns. To do so, you have to imagine a troublemaker who tries to break your calculator by hitting keys in the wrong order. Let’s call this troublemaker Tim.
-
-Tim can hit these keys in any order:
-
-1.  A number key (0–9)
-2.  An operator key (+, -, ×, ÷)
-3.  The decimal key
-4.  The equals key
-5.  The clear key
-
-### What happens if Tim hits the decimal key
-
-If Tim hits a decimal key when the display already shows a decimal point, nothing should happen.
-
+如果在Tim点击小数点键之前已经有小数点显示在屏幕上了，那么他点击之后将什么都不会发生。
 ![](https://cdn-media-1.freecodecamp.org/images/Lbvc-ZcYHO2iWjXIjdYiOVJcmPTmtwkknBw5)
 
 ![](https://cdn-media-1.freecodecamp.org/images/Orj4wS6vgnPAMYFq1xI3DEYXBMS4PWLlSw8a)
 
-Here, we can check that the displayed number contains a  `.`  with the  `includes`  method.
+ 
+我们可以利用`includes`方法检查是否已经包含`.`。
+ 
+`includes`方法会检查字符串是否匹配。如果找到一个字符串，它返回 "true"；如果没有，它返回 "false"。
 
-`includes`  checks strings for a given match. If a string is found, it returns  `true`; if not, it returns  `false`.
-
-**Note**:  `includes`  is case sensitive.
+**注**:  `includes`区分大小写。
 
 ```js
 // Example of how includes work.
@@ -399,8 +393,7 @@ const hasExclaimation = string.includes('!')
 console.log(hasExclaimation) // true
 ```
 
-To check if the string already has a dot, we do this:
-
+检查字符串中是否包含小数点的方法如下：
 ```js
 // Do nothing if string has a dot
 if (!displayedNum.includes('.')) {
@@ -408,14 +401,11 @@ if (!displayedNum.includes('.')) {
 }
 ```
 
-Next, if Tim hits the decimal key after hitting an operator key, the display should show  `0.`.
-
+接下来，如果Tim在点击任何操作键之后点击了小数点键，那么应该显示为`0.`。
 ![](https://cdn-media-1.freecodecamp.org/images/fLLhOqkyFZqsOZIxgMPAkpezrUisGpDKFEsw)
 
-Here we need to know if the previous key is an operator. We can tell by checking the the custom attribute,  `data-previous-key-type`, we set in the previous lesson.
-
-`data-previous-key-type`  is not complete yet. To correctly identify if  `previousKeyType`  is an operator, we need to update  `previousKeyType`  for each clicked key.
-
+我们需要知道上一个按键是否是操作符键。 我们可以通过上节课设置的自定义属性 `data-previous-key-type `来判断。
+当然`data-previous-key-type`还没有完成，为了判断`previousKeyType`是否是操作符，我们还需要在每次点击按键时更新`previousKeyType`。
 ```js
 if (!action) {
   // ...
@@ -432,8 +422,7 @@ if (action === 'clear') {
 
 ```
 
-Once we have the correct  `previousKeyType`, we can use it to check if the previous key is an operator.
-
+现在，我们正确的获取了`previousKeyType`，我们可以使用它来判断上一次按键是否是操作符键。
 ```js
 if (action === 'decimal') {
   if (!displayedNum.includes('.')) {
@@ -444,7 +433,7 @@ if (action === 'decimal') {
 
 ```
 
-### What happens if Tim hits an operator key
+### 当Tim点击操作符键会发生什么
 
 If Tim hits an operator key first, the operator key should light up. (We’ve already covered for this edge case, but how? See if you can identify what we did).
 

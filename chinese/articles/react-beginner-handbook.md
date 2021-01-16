@@ -41,18 +41,18 @@ React 自身有一套非常简单的 API，当你开始学习的时候，只需�
 -   Props
 
 我们将在这篇文章中学习这几个基本概念，那些高级的概念我们会留给其他的教程。我将会在文章的末尾给出深入学习 React 的资料。
-
+免费下载这份手册的 ******* 格式
 And you can  [download this handbook in PDF / ePub / Mobi format for free][1].
-
+你可以[免费下载 PDF / ePub / Mobi 格式的手册][1]
 ## Summary of the handbook
 
--   [How much JavaScript you need to know to use React][2]
--   [Why should you learn React?][3]
--   [How to install React][4]
--   [React Components][5]
--   [Introduction to JSX][6]
--   [Using JSX to compose a UI][7]
--   [The difference between JSX and HTML][8]
+-   [学习 React 需要对 JavaScript 有多少了解][2]
+-   [为什么要学习 React][3]
+-   [如何安装 React][4]
+-   [React 组件][5]
+-   [JSX 简介][6]
+-   [使用 JSX 实现 UI][7]
+-   [JSX 与 HTML 的区别][8]
 -   [Embedding JavaScript in JSX][9]
 -   [Managing state in React][10]
 -   [Component Props in React][11]

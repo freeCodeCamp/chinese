@@ -435,26 +435,24 @@ if (action === 'decimal') {
 
 ### 当Tim点击操作符键会发生什么
 
-If Tim hits an operator key first, the operator key should light up. (We’ve already covered for this edge case, but how? See if you can identify what we did).
-
+首先第一种情况，如果Tim首先点击了操作键，那么按键就会高亮。(We’ve already covered for this edge case, but how? See if you can identify what we did).
 ![](https://cdn-media-1.freecodecamp.org/images/q3D72rgBjtPOPUltYm1MMIN06dvxGOKyJyUs)
 
-Second, nothing should happen if Tim hits the same operator key multiple times. (We’ve already covered for this edge case as well).
+第二种情况，如果Tim多次点击同样的操作键，应该什么都不会发生。(我们也已经涵盖了这种边缘情况)。
+**注:** 如果想要提供更好的用户体验，你可以通过CSS来让操作者的反复点击得到反馈。 我们不在这里实现，你可以将这个功能当作一次挑战，看看如何实现。
 
-**Note:**  if you want to provide better UX, you can show the operator getting clicked on repeatedly with some CSS changes. We didn’t do it here, but see if you can program that yourself as an extra coding challenge.
 
 ![](https://cdn-media-1.freecodecamp.org/images/IXW7zY77RWE7tNQ6HZMYma73hsxW44EjWg0n)
 
-Third, if Tim hits another operator key after hitting the first operator key, the first operator key should be released. Then, the second operator key should be depressed. (We covered for this edge case too — but how?).
 
+情况，如果Tim在点击一个操作键之后又点击了另外一个操作键，那么第一个按的操作键会被解除点击状态，第二次按的操作键应该被设置成按压状态。（我们也覆盖了这种情况，但如何实现的？）
 ![](https://cdn-media-1.freecodecamp.org/images/Rez20RY9AcS6ORFWIIumk69YWzwTyv8qseM7)
 
-Fourth, if Tim hits a number, an operator, a number and another operator, in that order, the display should be updated to a calculated value.
 
+第四种情况，如果Tim点击了一个数字键，一个操作键和另外一个操作键，这种情况下，应当直接显示计算之后的结果。
 ![](https://cdn-media-1.freecodecamp.org/images/MAMWFTkNu6Ho8tlMGyJlTfjCbeYq8rO0bQyR)
 
-This means we need to use the  `calculate`  function when  `firstValue`,  `operator`  and  `secondValue`  exist.
-
+这就意味着在`firstValue`，`operator`和`secondValue`三个参数存在时，我们需要调用`calculate`方法。
 ```js
 if (
   action === 'add' ||

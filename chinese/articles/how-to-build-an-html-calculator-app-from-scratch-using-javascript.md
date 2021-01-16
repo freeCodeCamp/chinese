@@ -280,7 +280,6 @@ const previousKeyType = calculator.dataset.previousKeyType
 在计算之后，结果会替换当前已显示的值出现在屏幕上。
 ![](https://cdn-media-1.freecodecamp.org/images/TMFTHXrjCGzKQBIzBFApP7usoJCjcQ-oz2Jc)
 
-At this point, we only know the  **second number**  — that is, the currently displayed number.
 这里我们只知道**第二个数字**是当前已经显示的数字。
 ```js
 if (action === 'calculate') {
@@ -470,12 +469,10 @@ if (
 
 ```
 
-Although we can calculate a value when the operator key is clicked for a second time, we have also introduced a bug at this point — additional clicks on the operator key calculates a value when it shouldn’t.
-
+尽管我们在第二次点击操作键的时候我们可以得到一个计算的值，但这里依然有一个bug存在————额外点击操作键会计算出一个不应该的值。
 ![](https://cdn-media-1.freecodecamp.org/images/8ktjtHeYaRTEn-lPbOM3fhEg3qrvDl5WfOVY)
 
-To prevent the calculator from performing a calculation on subsequent clicks on the operator key, we need to check if the  `previousKeyType`  is an operator. If it is, we don’t perform a calculation.
-
+为了防止计算器在后续点击操作键时进行计算，我们需要检查 `previousKeyType `是否是一个操作键。如果是，我们不执行计算。
 ```js
 if (
   firstValue &&

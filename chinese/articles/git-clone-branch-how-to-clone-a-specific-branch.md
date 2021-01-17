@@ -13,31 +13,41 @@ Since Linus Torvalds (the famous creator of the Linux operating system kernel) c
  自从 Linus Torvalds （Linux 操作系统内核的著名作者） 在2005年为 Linux 内核开发创建了 Git，它就开始成为世界上使用最广泛的现代版本控制系统。
 
 In this article, I'll introduce you to the Git clone and Git branch workflows and I'll show you how you can clone a specific branch based on your needs. Let's begin! ?
-在本篇文章中，我会介绍 Git 克隆和 Git 分支工作流，并且展示如何根据自己的需求克隆一个指定的分支。让我们开始吧！
+在本篇文章中，我会介绍 Git 克隆和 Git 分支工作流，并且展示如何根据需求克隆一个指定的分支。让我们开始吧！
 
 ## Prerequisites
+## 必备知识
 
 -   Basic knowledge of the terminal
+-   基本的终端知识
 -   Ability to type commands in the terminal
+-   能使用终端指令
 -   Git installed (I'll still show you how)
+-   已经安装了 Git（我也会教如何安装）
 -   A GitHub account
+-   GitHub 账号
 -   A smile on your face (Put up that smile friend ?)
+-   好的心情（笑起来，朋友）
 
 ## Quick Introduction to Git and GitHub
+## 简单介绍 Git 和 GitHub
 
 According to  [Wikipedia][1],
+来自  [维基百科][1],
 
 > **Git**  is a distributed version control system designed to track changes to a project (code) in software development. It is intended to enforce coordination, collaboration, speed, and efficiency among developers.
+> **Git**  软件开发中用来跟踪项目（代码）变更的一个分布式版本控制系统。 主要专注在开发人员之间加强协调，协作，速度和效率。
 
-**GitHub,**  on the other hand, is a web-based hosting service for version control using Git. It offers all of the distributed version control and source code management functionality of Git as well as adding more features for computer code.
+> **GitHub**  on the other hand, is a web-based hosting service for version control using Git. It offers all of the distributed version control and source code management functionality of Git as well as adding more features for computer code.
+> **GitHub**  是基于 Web 的托管服务，使用 Git 进行版本控制。 它提供了 Git 的所有分布式版本控制和源代码管理的功能，还添加了更多计算机编码的功能。
 
-## How to Install Git on Windows
+## 如何在 Windows 上安装 Git
 
-Download and install the latest  [Git for Windows Installer here.][2]
+下载和安装最新的版本  [Windows 上 Git 的安装程序][2]
 
-## How to Install Git on Linux
+## 如何在 Linux 上安装 Git
 
-Here are the commands based on your Linux distro:
+不同的 Linux 发行版本，有不同的命令：
 
 ### Debian or Ubuntu
 
@@ -70,9 +80,9 @@ sudo pacman -Sy git
 sudo emerge --ask --verbose dev-vcs/git
 ```
 
-## How to Install Git on a Mac
+## 如何在 Mac 上安装 Git
 
-Download and install the latest  [Git for Mac installer here][3].
+下载和安装最新的版本  [Mac 上 Git 的安装程序][3].
 
 Or you can type this command:
 
@@ -81,6 +91,7 @@ brew install git
 ```
 
 Now that we've got Git installed, let's move on to the tutorial.
+现在我们已经安装了 Git，让我们继续本教程。
 
 ## Introduction to Git Clone
 

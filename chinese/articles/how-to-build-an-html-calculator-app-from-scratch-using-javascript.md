@@ -483,17 +483,15 @@ if (
 }
 ```
 
-Fifth, after the operator key calculates a number, if Tim hits on a number, followed by another operator, the operator should continue with the calculation, like this:  `8 - 1 = 7`,  `7 - 2 = 5`,  `5 - 3 = 2`.
-
+第五种情况，在点击操作键之后计算出一个数字之后，如果Tim又点击了一下数字键，接着又按了下操作键，操作键应该继续之前的结果进行计算，就像这样： `8 - 1 = 7`,  `7 - 2 = 5`,  `5 - 3 = 2`。
 ![](https://cdn-media-1.freecodecamp.org/images/RSsXyuKJe0biqkH-WPDdrGLhFBWmyZ2R1J2Y)
 
-Right now, our calculator cannot make consecutive calculations. The second calculated value is wrong. Here’s what we have:  `99 - 1 = 98`,  `98 - 1 = 0`.
+现在，我们的计算器不能进行连续计算。第二个计算值是错误的。我们的计算结果是这样的：`99 - 1 = 98`，`98 - 1 = 0`。 `99 - 1 = 98`, `98 - 1 = 0`。
 
 ![](https://cdn-media-1.freecodecamp.org/images/0r9I8Gu7J9pMbfzUG4hL6tU7RCP-cDhsaGp1)
 
-The second value is calculated wrongly, because we fed the wrong values into the  `calculate`  function. Let’s go through a few pictures to understand what our code does.
-
-### Understanding our calculate function
+第二个值是计算错误的，因为我们把错误的值输入了`calculate`函数。让我们通过几张图片来了解我们的代码是怎么做的。
+### 理解calculate方法
 
 First, let’s say a user clicks on a number, 99. At this point, nothing is registered in the calculator yet.
 

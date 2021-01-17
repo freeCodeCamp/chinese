@@ -23,14 +23,14 @@ In this article, I'll introduce you to the Git clone and Git branch workflows an
 -   Ability to type commands in the terminal
 -   能使用终端指令
 -   Git installed (I'll still show you how)
--   已经安装了 Git（我也会教如何安装）
+-   安装 Git（我也会教如何安装）
 -   A GitHub account
 -   GitHub 账号
 -   A smile on your face (Put up that smile friend ?)
 -   好的心情（笑起来，朋友）
 
 ## Quick Introduction to Git and GitHub
-## 简单介绍 Git 和 GitHub
+## 快速入门 Git 和 GitHub
 
 According to  [Wikipedia][1],
 来自  [维基百科][1],
@@ -93,21 +93,25 @@ brew install git
 Now that we've got Git installed, let's move on to the tutorial.
 现在我们已经安装了 Git，让我们继续本教程。
 
-## Introduction to Git Clone
+## 简介 Git 克隆
 
 Git allows you to manage and version your project(s) in a "repository". This repository is stored on a web-based hosting service for version control, like GitHub.
+Git 允许你在“仓库”中版本化管理项目。该仓库是基于 Web 的托管服务进行版本控制，和 GitHub一样。
 
 You can then clone this repository to your local machine and have all the files and branches locally (I'll explain more about branches soon).
+你可以克隆仓库到你本地的机器，并且得到所有的文件和分支。（我稍后会讲解更多关于分支）
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-23-at-5.47.48-AM.png)
 
 For example, you can clone freeCodeCamp's repository with SSH like so:  
+例如，可以通过SSH克隆 freeCodeCamp 的仓库，如下：
 
 ```
 git clone git@github.com:freeCodeCamp/freeCodeCamp.git
 ```
 
 ## Introduction to Git Branches
+## 简介 Git 分支
 
 When working on a project, you will likely have different features. And multiple contributors will be working on this project and its features.
 

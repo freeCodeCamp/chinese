@@ -93,7 +93,7 @@ server.listen(port, hostname, () => {
 
 To run this snippet, save it as a `server.js` file and run `node server.js` in your terminal.
 
-要运行此代码片段，需要将这个文件另存为 'server.js' 并且在你的终端运行 'node server.js'。
+若要运行此代码片段，需要将这个文件另存为 'server.js' 并且在你的终端运行 'node server.js'。
 
 This code first includes the Node.js `http` [module][4].
 
@@ -109,15 +109,28 @@ The `createServer()` method of `http` creates a new HTTP server and returns it.
 
 The server is set to listen on the specified port and hostname. When the server is ready, the callback function is called, in this case informing us that the server is running.
 
+服务器在指定的端口和主机名上设置监听。当服务器准备就绪时，将调用回调函数，在本例中通知我们服务器正在运行。
+
 Whenever a new request is received, the `request` [event][6] is called, providing two objects: a request (an `[http.IncomingMessage][7]`object) and a response (an `[http.ServerResponse][8]`object).
+
+每当接收到新的请求时，都会调用 `request` [event][6]，（这个方法）提供两个对象：一个请求（一个 `[http.IncomingMessage][7]` 对象）和一个响应（一个 `[http.ServerResponse][8]` 对象）
 
 These 2 objects are essential to handle the HTTP call.
 
+这两个对象是处理 HTTP 调用必需的。
+
 The first provides the request details. In this simple example, this is not used, but you could access the request headers and request data.
+
+第一个提供了请求的详细信息。在这个简单的示例中，不使用此选项，但你可以访问请求头和请求数据。
 
 The second is used to return data to the caller.
 
+第二个用于向访客返回数据。
+
 In this case with:
+
+在这种情况下：
+
 
 ```
 res.statusCode = 200
@@ -125,7 +138,11 @@ res.statusCode = 200
 
 We set the `statusCode` property to `200`, to indicate a successful response.
 
+我们设置 `statusCode` 的属性为 `200` 来表明这是一个成功的请求。
+
 We set the Content-Type header:
+
+我们设置 Content-Type 头：
 
 ```
 res.setHeader('Content-Type', 'text/plain')
@@ -133,52 +150,101 @@ res.setHeader('Content-Type', 'text/plain')
 
 ……and we end close the response, adding the content as an argument to `end()`:
 
+……并且我们可以关闭请求，将内容作为参数添加到 `end()`
+
 ```
 res.end('Hello World\n')
 ```
 
 ### Node.js frameworks and tools
 
+### Node.js 框架和工具
+
 Node.js is a low-level platform. To make things easier and more interesting for developers, thousands of libraries were built upon Node.js.
+
+Node.js 是一个底层平台。为了让开发人员做事情更简单和更有趣，数以千计的库被建立在 Node.js 上。
 
 Many of those established over time as popular options. Here is a non-comprehensive list to the ones I consider very relevant and worth learning:
 
+随着时间的流逝，其中许多已经变成受欢迎的选择。以下是我认为非常有意义且值得学习的非全面的列表：
+
 -   [**Express**][9]  
     One of the most simple yet powerful ways to create a web server. Its minimalist approach and unopinionated focus on the core features of a server is key to its success.
+    
+    创建 web 服务器最简单但功能最强大的方法之一。它极简的方法和对服务器核心特性的专注是其成功的关键。
+    
 -   [**Meteor**][10]  
     An incredibly powerful full-stack framework, empowering you with an isomorphic approach to building apps with JavaScript and sharing code on the client and the server. Once an off-the-shelf tool that provided everything, it now integrates with front-end libraries such as [React][11], [Vue][12] and [Angular][13]. Meteor can be used to create mobile apps as well.
+    
+    一个功能强大的难以置信的全站框架，让你能够用一种同构的方法来使用 JavaScript 构建应用程序，并在客户端和服务器上共用代码。它曾经是一个现成的提供一切的工具，现在它集成了前端库，如[React][11]、[Vue][12]、[Angular][13]。Meteor 也可以用来创建移动应用程序。
+    
 -   [**Koa**][14]  
     Built by the same team behind Express, Koa aims to be even simpler and smaller, building on top of years of knowledge. The new project was born out of the need to create incompatible changes without disrupting the existing community.
+    
+    Koa 由 Express 原班人马打造，目标是在多年的经验积累上，变的更简单，更小的。这个新项目的诞生是出于在不破坏现有社区的情况下创建不兼容的更改。
+    
 -   [**Next.js**][15]  
     This is a framework to render server-side rendered [React][16] applications.
+    
+    这是一个用于渲染服务端渲染的 [React][16] 应用程序的框架。
+    
 -   [**Micro**][17]  
     This is a very lightweight server to create asynchronous HTTP microservices.
+    
+    这是一个非常轻量的服务器，用于创建 HTTP 微服务。
+    
 -   [**Socket.io**][18]  
     This is a real-time communication engine to build network applications.
+    
+    这是一个构建网络应用程序的实时通信引擎。
 
 ### A brief history of Node.js
 
+### Node.js 简史
+
 #### A look back on the history of Node.js from 2009 to today
+
+#### Node.js 2009年至今的发展历程回顾。
 
 Believe it or not, Node.js is just 9 years old.
 
+信不信由你，Node.js 才九岁。
+
 In comparison, JavaScript is 23 years old and the web as we know it (after the introduction of Mosaic) is 25 years old.
+
+相比之下，JavaScript 有23年的历史，而我们知道的 web（在引入 Mosaic 之后）有25那年的历史
 
 9 years is such a little amount of time for a technology, but Node.js seems to have been around forever.
 
+对于一项技术来讲，9年是如此的短暂，但是 Node.js 似乎一直都存在。
+
 I’ve had the pleasure to work with Node.js since the early days when it was just 2 years old, and despite the little information available, you could already feel it was a huge thing.
+
+我很高兴在早期的早期的时候就用 Node.js 工作，那时候它才两岁，尽管可获得的信息很少，但依然可以感觉它是一个庞大的事物。
 
 In this section, I want to draw the big picture of Node.js in its history, to put things in perspective.
 
+在本节中，我想勾勒出 Node.js 历史的全貌，以正确的看待它。
+
 #### A little bit of history
+
+#### 一点历史
 
 JavaScript is a programming language that was created at Netscape as a scripting tool to manipulate web pages inside their browser, [Netscape Navigator][19].
 
+JavaScript 是 Netscape 创建的一种编程语言，它是一种脚本工具，用于在他们的浏览器 [Netscape Navigator][19] 中操作网页。
+
 Part of the business model of Netscape was to sell Web Servers, which included an environment called “Netscape LiveWire”, which could create dynamic pages using server-side JavaScript. So the idea of server-side JavaScript was not introduced by Node.js, it’s old just like JavaScript — but at the time it was not successful.
+
+Netscape 的部分业务是销售 Web 服务器，其包括名为 "Netscape LiveWire" 的环境，该环境可以使用服务器端 JavaScript 创建动态页面。因此服务器端 JavaScript 的概念并不是由 JS 引入的，它和 JavaScript 一样古老，但当时并不成功。
 
 One key factor that led to the rise of Node.js was timing. A few years ago, JavaScript was starting to be considered a serious language, thanks for the “Web 2.0” applications that showed the world what a modern experience on the web could be like (think Google Maps or GMail).
 
+导致 Node.js 崛起的一个关键因素是时机。几年前，JavaScript 开始被认为是一种严肃的语言，这要感谢 ”Web2.0“ 应用程序向世界展示了现在网络体验（比如 Google 地图或 GMail）。
+
 The JavaScript engines performance bar raised considerably thanks to the browser competition battle, which is still going strong. Development teams behind each major browser work hard every day to give us better performance, which is a huge win for JavaScript as a platform. Chrome V8, the engine that Node.js uses under the hood, is one of those and in particular it’s the Chrome JavaScript engine.
+
+由于浏览器激烈的竞争，JavaScript 引擎的性能有了很大的提高，这种竞争仍然在持续。
 
 But of course, Node.js is not popular just because of pure luck or timing. It introduced much innovative thinking on how to program in JavaScript on the server.
 

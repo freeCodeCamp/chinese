@@ -249,9 +249,9 @@ Tab stops由 **$** 和 **序号** 组成，就像 `$1`。`$1`代表了第一个�
 
 #### 2\. Mirrored Tab Stops
 
-There are times when you need to provide the same value in several places in the inserted text. In these situations you can re-use the same ordinal number for tab stops to signal that you want them mirrored. Then your edits are synced.
+有时候你想在插入的内容中的几个地方输入相同的值。这种时候你可以使用相同序号的 tab stops 来标识这几个地方，当你编辑其中一个的时候，就会自动同步输入的值到其它地方。
 
-A typical example is a  _for_  loop which uses an  _index_  variable multiple times. Below is a JavaScript example of a  _for_  loop.
+一个典型的例子就是 _for_ 循环中的 _index_ 变量会被多次使用，下面是一个JavaScript中的 _for_ 循环代码片段。
 
 ```json
 {
@@ -270,13 +270,13 @@ A typical example is a  _for_  loop which uses an  _index_  variable multiple ti
 
 #### 3\. Placeholders
 
-Placeholders are tab stops with default values. They are wrapped in curly braces, for example  `${1:default}`. The placeholder text is selected on focus such that it can be easily edited. Placeholders can be nested, like this:  `${1:first ${2:second}}`.
+占位符是有默认值的 tab stops。他们一般被大括号包裹着，就像 `${1:default}` 。占位符的内容是默认被选中的，所以你可以很容易的修改它。占位符支持嵌套，像这样 `${1:first ${2:second}}`。
 
 #### 4\. Choices
 
-Choices present the user with a list of values at a tab stop. They are written as a comma-separated list of values enclosed in pipe-characters e.g.  `${1|yes,no|}`.
+Choices 代表着这个 tab stop 会默认有一个列表展示给用户选择。Choices 的可选值的写法是用逗号分割的字符串，并且由两个竖线（|）包裹。就像 `${1|yes,no|}` 。
 
-This is the code for the markdown example shown earlier for inserting a task list. The choices are 'x' or a blank space.
+下面是前面显示的用于插入任务列表的markdown示例的代码。choices “x”或者空格。
 
 ```json
 {
@@ -289,9 +289,9 @@ This is the code for the markdown example shown earlier for inserting a task lis
 
 #### 5\. Variables
 
-There is a good selection of variables you can use. You simply prefix the name with a dollar sign to use them, for example  `$TM_SELECTED_TEXT`.
+VScode许多变量供你使用。你可以简单的在变量名前加上 $ ,就可以使用他们了。 像这样 `$TM_SELECTED_TEXT`。
 
-For example, this snippet will create a block comment for any language with today's date:
+比如，下面这个代码片段，会为任意语言创建一个带有今天日期的注释块。
 
 ```json
 {
@@ -305,11 +305,12 @@ For example, this snippet will create a block comment for any language with toda
 
 ```
 
-You can specify a default for a variable if you wish, like  `${TM_SELECTED_TEXT:default}`. If a variable does not have a value assigned, the default or an empty string is inserted.
+如果你想，你可以为变量指定一个默认值，像这样 `${TM_SELECTED_TEXT:default}` 。如果该变量没有被赋值，默认值或者空字符串就会被插入。
 
-If you make a mistake and include a variable name that is not defined, the name of the variable is transformed into a placeholder.
+如果你不小心写错了变量名，写错的变量名会被当成 placeholder 使用。
 
-The following workspace variables can be used:
+
+下面是一些属于工作区的变量:
 
 -   `TM_SELECTED_TEXT`: The currently selected text or the empty string,
 -   `TM_CURRENT_LINE`: The contents of the current line,

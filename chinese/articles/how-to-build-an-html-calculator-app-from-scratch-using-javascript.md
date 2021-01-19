@@ -493,20 +493,16 @@ if (
 第二个值是计算错误的，因为我们把错误的值输入了`calculate`函数。让我们通过几张图片来了解我们的代码是怎么做的。
 ### 理解calculate方法
 
-First, let’s say a user clicks on a number, 99. At this point, nothing is registered in the calculator yet.
-
+首先，我们告诉使用者输入一个数字99，此时，计算器没有储存任何值。
 ![](https://cdn-media-1.freecodecamp.org/images/0hH4Cz5kOEaDOcTQ2PMPmkDl26a8JHSXNrJ7)
 
-Second, let’s say the user clicks the subtract operator. After they click the subtract operator, we set  `firstValue`  to 99. We set also  `operator`  to subtract.
-
+接着，我们让使用者点击一下减号键，在他点击减号键之后，我们设置`firstValue`为99，同样的设置`operator`为`subtract`。
 ![](https://cdn-media-1.freecodecamp.org/images/0K-KPTzdCBgfVvVaDNcVDYSjXfUO8p5LRs2v)
 
-Third, let’s say the user clicks on a second value — this time, it’s 1. At this point, the displayed number gets updated to 1, but our  `firstValue`,  `operator`  and  `secondValue`  remain unchanged.
-
+第三步，假设用户这次输入的数字是1，此时，将显示的数字改成1，但是我们的 `firstValue`，`operator` 和 `secondValue`保持不变。
 ![](https://cdn-media-1.freecodecamp.org/images/0MacG-A5Tl7rZeB6NLeNvghVyBpmSqaZQkn9)
 
-Fourth, the user clicks on subtract again. Right after they click subtract, before we calculate the result, we set  `secondValue`  as the displayed number.
-
+第四步，用户再次点击减号键。就在他们点击减法后，在计算结果之前，我们设置`secondValue`作为显示的数字。
 ![](https://cdn-media-1.freecodecamp.org/images/RgDMKK92og4djxxmaYO1HUYiVoetKDK9x0j7)
 
 Fifth, we perform the calculation with  `firstValue`  99,  `operator`  subtract, and  `secondValue`  1\. The result is 98.

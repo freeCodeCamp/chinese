@@ -312,60 +312,60 @@ VScode许多变量供你使用。你可以简单的在变量名前加上 $ ,就�
 
 下面是一些属于工作区的变量:
 
--   `TM_SELECTED_TEXT`: The currently selected text or the empty string,
--   `TM_CURRENT_LINE`: The contents of the current line,
--   `TM_CURRENT_WORD`: The contents of the word under cursor or the empty string,
--   `TM_LINE_INDEX`: The zero-index based line number,
--   `TM_LINE_NUMBER`: The one-index based line number,
--   `TM_FILENAME`: The filename of the current document,
--   `TM_FILENAME_BASE`: The filename of the current document without its extensions,
--   `TM_DIRECTORY`: The directory of the current document,
--   `TM_FILEPATH`: The full file path of the current document,
--   `CLIPBOARD`: The contents of your clipboard,
--   `WORKSPACE_NAME`: The name of the opened workspace or folder.
+-   `TM_SELECTED_TEXT`: 当前选中的文字或者空字符串,
+-   `TM_CURRENT_LINE`: 当前行的文字,
+-   `TM_CURRENT_WORD`: 光标下的单词或者空字符串,
+-   `TM_LINE_INDEX`: 以0为第一行的当前行序号,
+-   `TM_LINE_NUMBER`: 以1为第一行的当前行序号,
+-   `TM_FILENAME`: 当前文档的文件名,
+-   `TM_FILENAME_BASE`: 当前文档的文件名，不带扩展名,
+-   `TM_DIRECTORY`: 当前文档所在的文件夹,
+-   `TM_FILEPATH`: 当前文件的绝对路径,
+-   `CLIPBOARD`: 当前剪贴板的内容,
+-   `WORKSPACE_NAME`: 当前打开的工作区或者文件夹的名字.
 
-The following time-related variables can be used:
+下面是一些与时间相关的变量:
 
--   `CURRENT_YEAR`: The current year,
--   `CURRENT_YEAR_SHORT`: The current year's last two digits,
--   `CURRENT_MONTH`: The month as two digits (example '07'),
--   `CURRENT_MONTH_NAME`: The full name of the month (example 'July'),
--   `CURRENT_MONTH_NAME_SHORT`: The short name of the month (example 'Jul'),
--   `CURRENT_DATE`: The day of the month,
--   `CURRENT_DAY_NAME`: The name of day (example 'Monday'),
--   `CURRENT_DAY_NAME_SHORT`: The short name of the day (example 'Mon'),
--   `CURRENT_HOUR`: The current hour in 24-hour clock format,
--   `CURRENT_MINUTE`: The current minute,
--   `CURRENT_SECOND`: The current second,
--   `CURRENT_SECONDS_UNIX`: The number of seconds since the Unix epoch.
+-   `CURRENT_YEAR`: 当前年份,
+-   `CURRENT_YEAR_SHORT`: 当前年份的缩写，即最后两位数字,
+-   `CURRENT_MONTH`: 当前月份，两位数字表示(例如 '07'),
+-   `CURRENT_MONTH_NAME`: 当前月份名字(例如 'July'),
+-   `CURRENT_MONTH_NAME_SHORT`: 当前月份名字缩写(例如 'Jul'),
+-   `CURRENT_DATE`: 当前月份中的日期,
+-   `CURRENT_DAY_NAME`: 当前日期的名字 (例如 'Monday'),
+-   `CURRENT_DAY_NAME_SHORT`: 当前日期的名字缩写 (例如 'Mon'),
+-   `CURRENT_HOUR`: 当前的时间（小时）以24小时制展示,
+-   `CURRENT_MINUTE`: 当前分钟数,
+-   `CURRENT_SECOND`: 当前秒数,
+-   `CURRENT_SECONDS_UNIX`: 从UNIX起的秒数（时间戳）.
 
-The following comment variables can be used. They honour the syntax of the document's language:
+下面是一些关于注释的变量，在不同的语言下会出现不同的注释字符串:
 
--   `BLOCK_COMMENT_START`: For example,  `<!--`  in HTML,
--   `BLOCK_COMMENT_END`: For example ,  `-->`  in HTML,
--   `LINE_COMMENT`: For example,  `//`  in JavaScript.
+-   `BLOCK_COMMENT_START`: 例如,  `<!--`  在HTML中,
+-   `BLOCK_COMMENT_END`: 例如 ,  `-->`  在HTML中,
+-   `LINE_COMMENT`: 例如,  `//`  在JavaScript中.
 
 #### 6\. Transformations
 
-Transformations can be applied to a variable or a placeholder. If you are familiar with regular expressions (regex), most of this should be familiar.
+转换一般运用于variable 或者 placeholder 。如果你熟悉正则表达式（regex），你会发现这很相似。
 
-The format of a transformation is:  `${«variable or placeholder»/«regex»/«replacement string»/«flags»}`. It is similar to  [String.protoype.replace()][8]  in JavaScript. The "parameters" do the following:
+转换的格式像下面这样：`${«variable or placeholder»/«regex»/«replacement string»/«flags»}`。他很像JavaScript中的 [String.protoype.replace()][8] 。其中参数的作用如下:
 
--   `«regex»`: This is a regular expression that is matched against the value of the variable or placeholder. The JavaScript regex syntax is supported.
--   `«replacement string»`: This is the string you want to replace the original text with. It can reference capture groups from the  `«regex»`, perform case formatting (using the special functions:  `/upcase`,  `/downcase`, and  `/capitalize`), and perform conditional insertions. See  [TextMate Replacement String Syntax][9]  for more in-depth information.
--   `«flags»`: Flags that are passed to the regular expression. The  [JavaScript regex flags][10]  can be used:
-    -   `g`  : Global search,
-    -   `i`  : Case-insensitive search,
-    -   `m`  : Multi-line search,
-    -   `s`  : Allows  `.`  to match newline characters,
+-   `«regex»`: 这是一个与变量或占位符的值匹配的正则表达式。支持JavaScript regex语法。
+-   `«replacement string»`: 这是用来替换匹配到的内容的字符串。它可以引用`«regex»`中的捕获组，执行大小写的格式化（使用特殊的标记函数：`/upcase`, `/downcase`, 和 `/capitalize`），以及执行条件插入。查看 [TextMate Replacement String Syntax][9] 了解更多信息。
+-   `«flags»`: Flags是传递给正则表达式使用的。可以使用 [JavaScript regex flags][10] 中的标志:
+    -   `g`  : 全局搜索,
+    -   `i`  : 大小写敏感,
+    -   `m`  : 多行搜索,
+    -   `s`  : 允许 `.` 匹配新行的字符,
     -   `u`  : Unicode. Treat the pattern as a sequence of Unicode code points,
     -   `y`  : Perform a "sticky" search that matches starting at the current position in the target string.
 
-To reference a capture group, use  `$n`  where  `n`  is the capture group number. Using  `$0`  means the entire match.
+使用 `$n` 引用捕获组，其中 `n` 代表第几个捕获组。使用 `$0` 代表整个匹配内容。
 
-This can be a bit confusing since tab stops have the same syntax. Just remember that if it is contained within forward slashes, then it is referencing a capture group.
+因为它的语法和 tab stops 的语法相同，所以可能会造成混淆。不过你只需要记住，如果它是被包括在正斜杠（/）之中的，它就是指向捕获组的。
 
-The easiest way to understand the syntax fully is to check out a few examples.
+搞清楚这个语法最简单的方式，就是多看一些例子。
 
 | SNIPPET  _BODY_ | INPUT | OUTPUT | EXPLANATION |
 | --- | --- | --- | --- |

@@ -505,13 +505,12 @@ if (
 第四步，用户再次点击减号键。就在他们点击减法后，在计算结果之前，我们设置`secondValue`作为显示的数字。
 ![](https://cdn-media-1.freecodecamp.org/images/RgDMKK92og4djxxmaYO1HUYiVoetKDK9x0j7)
 
-Fifth, we perform the calculation with  `firstValue`  99,  `operator`  subtract, and  `secondValue`  1\. The result is 98.
-
-Once the result is calculated, we set the display to the result. Then, we set  `operator`  to subtract, and  `firstValue`  to the previous displayed number.
-
+第五步，我们用`firstValue`99，`operator`减号以及`secondValue`1进行计算，得到结果98。
+ 
+计算出结果后，我们将显示设置为结果。然后，我们设置`operator`为减法，`firstValue`为之前显示的数字。
 ![](https://cdn-media-1.freecodecamp.org/images/X3VFJ5ar--k84pP3pM5VDVODvYlX4fCwHcnS)
 
-Well, that’s terribly wrong! If we want to continue with the calculation, we need to update  `firstValue`  with the calculated value.
+好吧，这是非常错误的！如果我们想继续计算，我们需要用计算值更新`firstValue`。如果我们想继续计算，我们需要用计算值更新`firstValue`。
 
 ![](https://cdn-media-1.freecodecamp.org/images/gp-lkqhUOjoo46fIwx-7oLtbV7CP7jZwzc9y)
 
@@ -535,19 +534,17 @@ if (
 
 ```
 
-With this fix, consecutive calculations done by operator keys should now be correct.
-
+修改之后，现在通过操作键进行的连续计算应该是正确的。
 ![](https://cdn-media-1.freecodecamp.org/images/tKZ-VlIHo7dRNHDR2BBxZChE1cgqIuMU0Uh-)
 
-### What happens if Tim hits the equals key?
+### Tim点击等号键时候发生了什么？
 
-First, nothing should happen if Tim hits the equals key before any operator keys.
-
+第一种情况，Tim在点击等号前没点击过任何操作键，那么什么都不会发生。
 ![](https://cdn-media-1.freecodecamp.org/images/FBvnFZadNPXTllID0R7JfAkrsDb5SLcWTUhV)
 
 ![](https://cdn-media-1.freecodecamp.org/images/fKJV0ZqgVf-ppPqrx-70FpByKioVL2T9oAsF)
 
-We know that operator keys have not been clicked yet if  `firstValue`  is not set to a number. We can use this knowledge to prevent the equals from calculating.
+我们知道，如果`firstValue`没有设置为数字，也就代表操作键还没有被点击。我们可以利用这个点来防止等号进行计算。
 
 ```js
 if (action === 'calculate') {
@@ -560,8 +557,7 @@ if (firstValue) {
 
 ```
 
-Second, if Tim hits a number, followed by an operator, followed by a equals, the calculator should calculate the result such that:
-
+第二种情况，如果Tim输入了一个数字，接着又按下了操作键，随后又按了等号键。计算器计算的结果应该是这样：
 1.  `2 + =`  —>  `2 + 2 = 4`
 2.  `2 - =`  —>  `2 - 2 = 0`
 3.  `2 × =`  —>  `2 × 2 = 4`
@@ -569,10 +565,9 @@ Second, if Tim hits a number, followed by an operator, followed by a equals, the
 
 ![](https://cdn-media-1.freecodecamp.org/images/MUgIi0ck8OJRV18hfJ-kdn8k7Ydyy5mDvV6z)
 
-We have already taken this weird input into account. Can you understand why? :)
-
-Third, if Tim hits the equals key after a calculation is completed, another calculation should be performed again. Here’s how the calculation should read:
-
+我们已经处理了这种奇怪的情况，你知道为什么吗？
+ 
+第三种情况，如果Tim在一次计算完成之后点击了等号键，应该进行另外一次计算，例如这样：
 1.  Tim hits keys 5–1
 2.  Tim hits equal. Calculated value is  `5 - 1 = 4`
 3.  Tim hits equal. Calculated value is  `4 - 1 = 3`
@@ -582,15 +577,14 @@ Third, if Tim hits the equals key after a calculation is completed, another calc
 
 ![](https://cdn-media-1.freecodecamp.org/images/vB2oVoTXZsMABqV60qqclJhoOxYu2JeVhLx4)
 
-Unfortunately, our calculator messes this calculation up. Here’s what our calculator shows:
-
-1.  Tim hits key 5–1
-2.  Tim hits equal. Calculated value is  `4`
-3.  Tim hits equal. Calculated value is  `1`
+不幸的是，我们的把这个计算弄乱了，下面是我们计算的结果：
+1.  Tim 输入 5 - 1
+2.  Tim点击等号，计算结果是`4`  
+3.  Time再点击等号，计算结果是`1` 
 
 ![](https://cdn-media-1.freecodecamp.org/images/8roqRbhSH3hLVvtK7t-T2iRsRegqPWSrn4SF)
 
-### Correcting the calculation
+###  修改计算
 
 First, let’s say our user clicks 5. At this point, nothing is registered in the calculator yet.
 

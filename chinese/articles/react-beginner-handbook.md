@@ -44,9 +44,9 @@ React 自身有一套非常简单的 API，当你开始学习的时候，只需�
 免费下载这份手册的 ******* 格式
 And you can  [download this handbook in PDF / ePub / Mobi format for free][1].
 你可以[免费下载 PDF / ePub / Mobi 格式的手册][1]
-## Summary of the handbook
+## 手册目录
 
--   [学习 React 需要对 JavaScript 有多少了解][2]
+-   [学习 React 需要知道多少 JavaScript][2]
 -   [为什么要学习 React][3]
 -   [如何安装 React][4]
 -   [React 组件][5]
@@ -54,28 +54,28 @@ And you can  [download this handbook in PDF / ePub / Mobi format for free][1].
 -   [使用 JSX 实现 UI][7]
 -   [JSX 与 HTML 的区别][8]
 -   [Embedding JavaScript in JSX][9]
--   [Managing state in React][10]
--   [Component Props in React][11]
+-   [React 中的状态管理][10]
+-   [React 组件中的 Props][11]
 -   [Data flow in a React application][12]
--   [Handling user events in React][13]
+-   [在 React 中处理用户事件][13]
 -   [Lifecycle events in a React component][14]
 -   [Where to go from here][15]
 
-## How much JavaScript you need to know to use React
+## 学习 React 需要知道多少 JavaScript
 
-Before jumping straight into React, you should have a good understanding of some core JavaScript concepts.
+在真正开始学习 React 之前，你需要对 JavaScript 的核心概念有很好的理解
 
-You don't have to be a JavaScript expert, but I think you need a good overview of:
+你不需要成为 JavaScript 专家，但是我希望你对以下内容有很好的了解：
 
--   [Variables][16]
--   [Arrow functions][17]
--   [Work with objects and arrays using Rest and Spread][18]
--   [Object and array destructuring][19]
--   [Template literals][20]
--   [Callbacks][21]
--   [ES Modules][22]
+-   [变量][16]
+-   [箭头函数][17]
+-   [使用扩展运算符处理对象和数组][18]
+-   [对象和数组的解构][19]
+-   [模板字符串][20]
+-   [回调函数][21]
+-   [ES 模块化][22]
 
-If those concepts sound unfamiliar, I've provided you with some links to find out more about those subjects.
+如果你对这些概念不熟悉，我为你提供了一些学习这些概念的链接。
 
 ## Why should you learn React?
 

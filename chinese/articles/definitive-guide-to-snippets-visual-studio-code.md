@@ -365,29 +365,22 @@ VScode许多变量供你使用。你可以简单的在变量名前加上 $ ,就�
 
 因为它的语法和 tab stops 的语法相同，所以可能会造成混淆。不过你只需要记住，如果它是被包括在正斜杠（/）之中的，它就是指向捕获组的。
 
-搞清楚这个语法最简单的方式，就是多看一些例子。
+为了彻底搞清楚这个语法，我们需要多看一些例子。
 
 | SNIPPET  _BODY_ | INPUT | OUTPUT | EXPLANATION |
 | --- | --- | --- | --- |
-| `["${TM_SELECTED_TEXT/^.+$/• $0/gm}"]` | line1  
-line2 | • line1  
-• line2 | Put a bullet point before each non-empty line of the selected text. |
-| `["${TM_SELECTED_TEXT/^(\\w+)/${1:/capitalize}/}"]` | the cat is on the mat. | The cat is on the mat. | Capitalize the first word of selected text. |
-| `["${TM_FILENAME/.*/${0:/upcase}/}"]` | example.js | EXAMPLE.JS | Insert the filename of the current file uppercased. |
-| `[`  
-`"[",`  
-`"${CLIPBOARD/^(.+)$/'$1',/gm}",`  
-`"]"`  
-`]` | line1  
-line2 | \['line1', 'line2',\] | Turn the contents of the clipboard into a string array. Each non-empty line is an element. |
+| `["${TM_SELECTED_TEXT/^.+$/• $0/gm}"]` | line1 <br/> line2 | • line1 <br/> • line2 | 在你选中的非空行前面添加一个无序序号（•）。 |
+| `["${TM_SELECTED_TEXT/^(\\w+)/${1:/capitalize}/}"]` | the cat is on the mat. | The cat is on the mat. | 把你选中的文字首个单词的首字母大写。 |
+| `["${TM_FILENAME/.*/${0:/upcase}/}"]` | example.js | EXAMPLE.JS | 以大写的方式插入当前文件的名字。 |
+| `[` <br/>`"[",` <br/>`"${CLIPBOARD/^(.+)$/'$1',/gm}",` <br/>`"]"` <br/>`]` | line1 <br/> line2 | \['line1','line2',\] | 将剪贴板的内容转换为一个字符串数组，每一个非空行都会转换为数组中的一个元素。 |
 
-As you can see from the second example above, metacharacter sequences must be escaped, for example insert  `\\w`  for a word character.
+如你所见，上方第二个例子，正则中的元字符必须被转义，就像例子中匹配一个单词你必须插入 `\\w`。
 
 #### Placeholder Transformations
 
-**Placeholder transforms do  not  allow a default value or choices**! Maybe it is more suitable to call them tab stop transformations.
+**Placeholder transforms 并不能使用默认值或者选项值**! 或许称它为 tab stop transformations 更为合适。
 
-The example below will uppercase the text of the first tab stop.
+下面的例子会把第一个 tab stop 输入的内容大写。
 
 ![placeholder transform](https://www.freecodecamp.org/news/content/images/2020/09/placeholder-transform.gif)
 
@@ -401,9 +394,9 @@ The example below will uppercase the text of the first tab stop.
 
 ```
 
-You can have a placeholder and perform a transformation on a mirrored instance. The transformation will not be performed on the initial placeholder. ?
+你甚至可以写一个 placeholder，然而却在镜像的 tab stop 上运用转换。转换是并不会在原始的 placeholder 上执行的。？
 
-Would you use this behaviour somewhere? I find it confusing initially, so it may have the same affect on others.
+你会选择使用这个特性嘛？我最开始对这个特性感到困惑，所以我觉得你们也可能会。
 
 ```json
 {
@@ -415,11 +408,11 @@ Would you use this behaviour somewhere? I find it confusing initially, so it may
 
 ```
 
-### How do I assign Keyboard Shortcuts for snippets?
+### 如何为代码片段绑定快捷键?
 
-By adding your shortcuts to  `keybindings.json`  . You can open the file by running the  **'Preferences: Open Keyboard Shortcuts File (JSON)'**  command.
+通过向 `keybindings.json` 加入你的快捷键。你可以通过这个命令 **'Preferences: Open Keyboard Shortcuts File (JSON)'** 打开这个文件。
 
-For example, to add a shortcut for the built-in markdown snippet "Insert heading level 1":
+比如，为 markdown的 代码片段 "Insert heading level 1" 绑定一个快捷键：
 
 ```json
 {
@@ -434,11 +427,11 @@ For example, to add a shortcut for the built-in markdown snippet "Insert heading
 
 ```
 
-You define a shortcut by specifying the key combination you want to use, the command ID, and an optional  [when clause context][11]  for the context when the keyboard shortcut is enabled.
+你可以定义你的快捷键组合，指定命令的ID，以及可选的 [when clause context][11] 来指定什么时候这个快捷键是可用的。
 
-Through the  `args`  object, you can target an existing snippet by using the  `langId`  and  `name`  properties. The  `langId`  argument is the  [language ID][12]  of the language that the snippets were written for. The  `name`  is the snippet's name as it is defined in the snippet file.
+通过 `args` 对象，你可以通过 `langId` 和 `name` 指定目标代码片段。其中 `langId` 参数是目标代码片段所属的语言ID [language ID][12] ，参数 `name` 是你编辑代码片段时指定的名字。
 
-You can define an inline snippet if you wish using the  `snippet`  property.
+如果你想，你可以使用 `snippet` 属性指定行内的代码片段。
 
 ```json
 [
@@ -454,9 +447,9 @@ You can define an inline snippet if you wish using the  `snippet`  property.
 
 ```
 
-You can use the  _Keyboard Shortcuts UI_  also, but it does not have the ability to add a new shortcut.
+你也可以使用  _Keyboard Shortcuts UI_ 来编辑快捷键，但是它不具备添加新的快捷键的能力。  
 
-Another downside of the UI is that it does not show the  `args`  object, which makes it more difficult to find and edit your custom shortcuts. ?
+使用UI的另一个缺点是，他不会显示 `args` 对象，这会让你查找或者编辑自定义快捷键时更加费劲。？
 
 ![shortcuts-ui](https://www.freecodecamp.org/news/content/images/2020/09/shortcuts-ui.png)
 

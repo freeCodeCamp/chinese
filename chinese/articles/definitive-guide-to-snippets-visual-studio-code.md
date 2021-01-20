@@ -453,45 +453,47 @@ VScode许多变量供你使用。你可以简单的在变量名前加上 $ ,就�
 
 ![shortcuts-ui](https://www.freecodecamp.org/news/content/images/2020/09/shortcuts-ui.png)
 
-## A question of style
+## 风格问题
 
-Something that I found offputting initially with snippets was the propensity for people to create snippets with abbreviated prefixes. Do I have to learn a big list of gibberish acronyms to use someone else's snippets?
+我发现最初与摘要存在争议的是人们倾向于创建带有缩写前缀的摘要。我是否需要学习一大堆乱七八糟的缩写词才能使用其他人的摘要？
 
 What do I mean by abbreviated prefixes? The table below list a few of the snippets from the  [JavaScript (ES6) code snippets][13]  VS Code extension. You can see in the  _Trigger_  column, the prefixes listed are abbreviations, for example  _fre_  to represent a "for each" loop.
 
+缩写前缀是什么意思？下表列出了 [JavaScript（ES6）snippets] [13] VS Code 扩展中的一些代码段。其中 _Trigger_ 列中的就是前缀缩写，例如 _fre_ 代表 "for each" 循环。
+
 ![es6 snippets excerpt](https://www.freecodecamp.org/news/content/images/2020/09/es6-snippets-excerpt.png)
 
-This is unnecessary in two ways.
+这在两个方面都是不必要的。
 
-Firstly, the quick suggestions offered by VS Code are produced from a  **fuzzy substring search**. If I type "fe" and the prefix of a snippet is "foreach", this will match and be offered as a quick suggestion.
+第一点，VS Code 提供的快速建议功能包含了 **模糊字符串搜索** 功能。如果你输入 "fe" 且代码片段的前缀是 "foreach"，这就能够被快速建议匹配到。
 
-As you can see below, this is the second match.
+你可以从下图看到，"foreach" 是第二个匹配项。
 
 ![fe quick suggestion](https://www.freecodecamp.org/news/content/images/2020/09/fe-quick-suggestion.png)
 
-The first match is  _fre_, which is a snippet from the extension. Which suggestion is more descriptive? ?
+第一个匹配项是 _fre_ , 来自某个扩展。你觉得哪一个更具描述性？？
 
-If you use the "Insert Snippet" command for snippets, it does not make much of a difference. The description field makes amends for this shortcoming. I don't use snippets in this way, so I would prefer a more descriptive prefix.
+如果你使用 "Insert Snippet" 命令来插入代码片段，并不会有太大的区别。因为描述字段对这个缺点做了补充，你可以通过描述文字来了解代码片段的能力。我自己不使用这种方式使用代码片段，所以我更喜欢一个更具描述性的前缀。
 
 ![insert snippet foreach](https://www.freecodecamp.org/news/content/images/2020/09/insertsnippet-foreach.png)
 
-Secondly,  _fre_  is a  **duplicate**  of the built-in snippet  _foreach_.
+第二点， _fre_ 与内置的代码片段 _foreach_  **重复** 了。
 
-Some people turn off quick suggestions for snippets and use tab completion only. In this case, you need to type a prefix out without getting visual feedback. Some people may prefer to use an abbreviated prefix to save keystrokes here.
+一些人可能把快速建议的功能关闭了，只使用tab键来触发代码片段。这种情况下你需要在没有提示的情况下输入前缀。一些人可能更喜欢使用缩写前缀来减少按键的次数。
 
-The same fuzzy substring search is being performed in the background, so the first snippet match is inserted when you hit tab.
+然而这种方式，同样使用了模糊搜索，所以你按下 tab 键的时候，代表你选择了第一个匹配项。
 
 ![snippet-tab-completion](https://www.freecodecamp.org/news/content/images/2020/09/snippet-tab-completion.gif)
 
-Looking at the example above, you can see that typing "fr" and hitting  _tab_  inserts the  _fre_  snippet. Typing "fore" and hitting tab inserts the  _foreach_  snippet.
+观察上面这个例子，你可以看见输入 "fr" 时， 按下 _tab_ 键插入了 _fre_ 代码片段。输入 "fore" 时，插入了 _foreach_ 代码片段。
 
-So, you do not need to type out the entire prefix, if you really don't want to! ? If you have many similarly named snippet prefixes for a language, it would be impractical I imagine.
+所以你并不需要输入完整的前缀！？一种情况可能是例外，就是你为一种语言设置了大量名称相似的代码片段，但我觉得那是不切实际的。
 
-It is more practical to learn the prefixes properly, and type them out entirely before hitting tab.
+更实际的做法是，选择合适的前缀，在按下tab键之前，完整的把它们打出来。
 
-There are some trade-offs depending on your preferences for using snippets.
+根据你使用代码片段的偏好，这里可能存在一些取舍。
 
-Personally, I like to use quick suggestions as I like the visual feedback. I have snippets set to be the top suggestions, that way I can type abbreviated versions of the prefixes without needing to memorise them.
+就我而言，我更喜欢使用快速建议功能，因为它有视觉反馈。我通常把代码片段的建议设置在列表最上面，这样我就能看着列表输入缩写前缀，而不是去记住他们。
 
 Some snippet authors have rigid patterns to overcome this, but that's just something I can't get into easily.
 

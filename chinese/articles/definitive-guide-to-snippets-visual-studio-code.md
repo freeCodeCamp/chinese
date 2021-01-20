@@ -491,78 +491,80 @@ What do I mean by abbreviated prefixes? The table below list a few of the snippe
 
 更实际的做法是，选择合适的前缀，在按下tab键之前，完整的把它们打出来。
 
-根据你使用代码片段的偏好，这里可能存在一些取舍。
+根据你使用代码片段的偏好，可能存在一些取舍。
 
 就我而言，我更喜欢使用快速建议功能，因为它有视觉反馈。我通常把代码片段的建议设置在列表最上面，这样我就能看着列表输入缩写前缀，而不是去记住他们。
 
 Some snippet authors have rigid patterns to overcome this, but that's just something I can't get into easily.
 
-If you use a lot of snippets for a language, you may want to choose snippets that are written in a similar style.
+可能一些代码片段的作者有严格的模式去克服这个问题，但我并不能很容易的去接受它。
 
-If you use snippets for different frameworks and libraries in a language, they can add up and overlap. I haven't needed to do this, but you may need to do it eventually.
+如果你针对某种语言使用了大量的代码片段，你可能会选择那些风格相似的代码片段使用。
 
-## Global Snippets
+如果你在同种语言的不同框架或者库中使用代码片段，它们的代码片段可能会出现交叉，重叠的情况。我不需要处理这种情况，但你最终可能需要处理这些。
 
-Outside of your code editor, you can benefit from snippets also. Having snippets available in every app offers more possibilities.
+## 全局的代码片段
 
-Common use cases are:
+在代码编辑器之外，你也能享受代码片段带来的好处。让每个应用提供代码片段的能力，带来了更多可能。
 
--   canned responses for messages,
--   autocorrecting common typos,
--   adding contact information or signatures to documents,
--   inserting dates,
--   formatting of selected text and pasted text,
--   inserting search phrases for your search engine or app,
--   HTML snippets available inside your email client,
--   adding different templates to documents.
+常用的场景如下：
 
-Most of the apps for snippets are touted as "text expanders", but quite a few task and productivity apps also include snippet-esque features.
+-   邮件的固定回复头信息,
+-   自动纠正常见的错误单词,
+-   在文档中添加联系信息或者签名,
+-   插入日期,
+-   格式化选中的文字或者粘贴文字,
+-   为你的搜索引擎或者应用加入常见的搜索词组,
+-   在邮件客户端中使用HTML的代码片段,
+-   向文档添加不同的模板.
 
-Global snippets are  **bit more limited that code editor snippets**, as you cannot use tab stops and placeholders. In most apps you can use some dynamic variables such as dates.
+大多数针对代码片段的应用都称自己为 “文本扩展器” ，但是还是有很多用于任务管理或者生产力的应用同样包含了代码片段的功能。
+
+全局代码片段相比代码编辑器的代码片段，**有更多的限制** ，你不能使用 tab stops 和 plaecholders。大多数应用能使用的是一些动态变量，比如有关日期的变量。
 
 ### App Review
 
 #### Autohotkey (Windows)
 
-[AutoHotkey][14]  is a  **free, open-source scripting language for Windows**  to do all kinds of tasks.
+[AutoHotkey][14]  是一个 **Windows下的免费，开源的脚本语言** ，用于执行所有类型任务.
 
-It has it's own unique syntax. You can install the  [AutoHotKey extension][15]  to add language support to VS Code for a better editing experience.
+它拥有自己专属语法。你可以在 VS Code 中安装 [AutoHotKey extension][15] ，来获得更好的编辑体验。 
 
-For defining prefixes to trigger a snippet insertion, you use the following format:  `::<<prefix>>::<<text to insert>>`. The following script will insert Rob's email address when you type "robmail" and hit  _space_  or  _tab_  or  _enter_.
+你可以使用如下形式：`::<<prefix>>::<<text to insert>>` ，来定义触发代码片段插入的前缀。下面的脚本会插入 Rob's email 地址，当你输入了 "robmail" 后，并按下 _space_ 或者 _tab_ 或者 _enter_。
 
 ```
 ::robmail::rob@someservername.com
 
 ```
 
-The following script will insert the text "This is the snippet text" when you press  `Ctrl+D`.
+下面这个片段会插入 "This is the snippet text" 这段内容，当你按下 `Ctrl+D`。 
 
 ```
 ^d::  Send This is the snippet text
 
 ```
 
-You can read the  [docs][16]  to learn more.
+你可以阅读文档 [docs][16] 了解更多。
 
 #### PhraseExpress (Windows, Mac, iOS)
 
-[PhraseExpress][17]  is "a text expander software, that manages frequently used text templates for insertion into any program".
+[PhraseExpress][17] 是一个文本扩展器应用，它管理常用文本模板，并可以插入任何程序。
 
-It is a  **freemium, GUI-based app**. It is aimed at a wider audience than  _AutoHotKey_.
+这是一个 **基于GUI的免费增值应用**。它比 _AutoHotKey_ 的受众更广泛。
 
-It is quite polished and easy to use. You set it to run on start-up and it will be active in the background.
+他十分简洁和易于使用。你可以设置它为启动时运行，他就会在后台被激活。
 
-Your snippets can be organized into custom folders and synced using cloud services.
+你可以用文件夹组织和管理你的代码片段，也可以用云服务进行保存或者同步。
 
 ![phrase-express](https://www.freecodecamp.org/news/content/images/2020/09/phrase-express.png)
 
 #### Espanso (Windows, Mac, Linux)
 
-This is a  **open-source, cross-platform text expander written in Rust**.
+这是一个 **用Rust写的开源，跨平台的文本扩展器应用**。
 
-It uses a  **file-based configuration approach**. The config files are written in  [YAML][18].
+它采用了 **基于文件配置的方法**，配置文件采用了 [YAML][18] 语法。
 
-The  `default.yml`  file contains the main configuration. The config below will insert Rob's email address when you type "robmail" .
+默认配置文件  `default.yml` ，包括了主要的配置。 下面的配置会输入 Rob's email ，当你输入"robmail"时。
 
 ```yaml
 matches:
@@ -571,11 +573,11 @@ matches:
 
 ```
 
-You can  **specify the initial cursor position**, however you cannot define tab stops.
+你可以 **指定初始的光标位置**，然而你并不能定义 tab stops。
 
-You can  **add extensions**  to increase the capability of Espanso. There are extensions for running external scripts, including dates, generating random text, and including clipboard data.
+你可以 **添加扩展** 来增强 Espanso 的能力。有大量扩展提供了其它能力，包括日期，生成随机文本以及插入剪贴板数据。
 
-And that's about it! I hope you learned something about snippets today, and you can use them to make yourself more productive.
+这就是所有了！我希望你今天能有所收获，而且可以使用代码片段让你变得更具生产力。
 
 [1]: https://www.emmet.io/
 [2]: https://code.visualstudio.com/docs/editor/emmet

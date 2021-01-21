@@ -41,9 +41,9 @@ React 自身有一套非常简单的 API，当你开始学习的时候，只需�
 -   Props
 
 我们将在这篇文章中学习这几个基本概念，那些高级的概念我们会留给其他的教程。我将会在文章的末尾给出深入学习 React 的资料。
-免费下载这份手册的 ******* 格式
-And you can  [download this handbook in PDF / ePub / Mobi format for free][1].
+
 你可以[免费下载 PDF / ePub / Mobi 格式的手册][1]
+
 ## 手册目录
 
 -   [学习 React 需要知道多少 JavaScript][2]
@@ -77,15 +77,16 @@ And you can  [download this handbook in PDF / ePub / Mobi format for free][1].
 
 如果你对这些概念不熟悉，我为你提供了一些学习这些概念的链接。
 
-## Why should you learn React?
+## 为什么要学习 React?
 
 I highly recommend that any Web developer has at least a basic understanding of React.
+我强烈建议任何一位 Web 开发者至少对 React 有基本的了解。
 
-That's because of a few reasons.
+那是因为以下几个原因：
 
-1.  React is very popular. As a developer, it's quite likely that you're going to work on a React project in the future. Perhaps an existing project, or maybe your team will want you to work on a brand new app based on React.
-2.  A lot of tooling today is built using React at the core. Popular frameworks and tools like Next.js, Gatsby, and many others use React under the hood.
-3.  As a frontend engineer, React is probably going to come up in a job interview.
+1. React 十分受欢迎。作为一名开发者，你很可能在将来参与 React 项目。可能是目前正在进行的项目，也可能是你的团队希望你使用 React 开发一个全新的 App。
+2. 现在很多工具都是基于 React 开发的。诸如 Next.js，Gatsby 等流行框架与工具都在后台使用了 React。
+3. 作为一名前端工程师，很可能会在面试时遇到 React。
 
 Those are all good reasons, but one of the main reasons I want you to learn React is that it's great.
 

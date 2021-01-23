@@ -5,13 +5,13 @@
 
 ![Here are the most popular ways to make an HTTP request in JavaScript](https://cdn-media-1.freecodecamp.org/images/1*gqHgCNubMncv7EwWNdArGQ.png)
 
-Javascript 拥有非常棒的建立 HTTP 请求并向服务端发送或者接收资源的模块和方法。本文会带着大家一起看看在 JavaScript 中常用的建立 HTTP 请求的方式有哪些。
+JavaScript 具有非常棒的模块和方法来建立可从服务器端资源发送或接收数据的 HTTP 请求。本文会带着大家一起看看在 JavaScript 中常用的建立 HTTP 请求的方式有哪些。
 
 ### Ajax
 
 Ajax 是最常规的建立异步 HTTP 请求的方式。你可以使用 HTTP POST 方法来发送数据，以及使用 HTTP GET 来接收数据。我们先来看看如何发起一个 `GET` 请求。这里我会用到一个免费在线的 REST API 工具 JSONPlaceholder，它可以用来给开发者返回随机的 JSON 格式数据。
 
-要在 Ajax 中发起一个 HTTP 调用，你需要先用 `XMLHttpRequest()` 创建一个新的对象，准备好 URL 和 HTTP 方法（此处为 GET）。最后，使用 `open()` 方法将两者结合起来，并调用 `send()` 方法执行请求。
+要在 Ajax 中发起一个 HTTP 调用，你需要初始化一个新的 XMLHttpRequest() 方法，指定 URL 端点和 HTTP 方法（在本例中为 GET）。最后，使用 `open()` 方法将两者结合起来，并调用 `send()` 方法执行请求。
 
 我们可以在 `XMLHTTPRequest.onreadystatechange` 的事件监听器中输出 HTTP 请求结果日志到控制台中，这个事件监听器会在 `readystatechanged` 事件发生的时候触发。
 
@@ -124,7 +124,7 @@ import axios from 'axios'
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*4wmqiPsSN5mdgjJiRaKVZg.png)
 
-`axios` 需要一个必填参数，当然你也可以提供第二个可选参数，用来传递一些简单的 query 数据。
+`axios` 需要一个必填参数，当然你也可以提供第二个可选参数。这个示例调用一些数据作简单的查询。
 
 #### POST:
 

@@ -1494,8 +1494,7 @@ if (action === 'clear') {
 
 ### 在`updateCalculatorState`中实现等号键的的状态变化
 
-Here’s the code we wrote for the equals key:
-
+这是等号键的代码：
 ```js
 if (action === 'calculate') {
   let firstValue = calculator.dataset.firstValue
@@ -1510,7 +1509,7 @@ display<span class="token punctuation" style="box-sizing: inherit; margin: 0px; 
 
 ```
 
-Here’s what we’re left with if we remove everything that concerns  `display.textContent`.
+下面是我们删除所有涉及`display.textContent`的内容后剩下的内容。
 
 ```js
 if (action === 'calculate') {
@@ -1523,8 +1522,7 @@ if (action === 'calculate') {
 
 ```
 
-We can refactor this into the following:
-
+我们可以将其重构为以下内容：
 ```js
 if (keyType === 'calculate') {
   calculator.dataset.modValue = firstValue && previousKeyType === 'calculate'
@@ -1533,8 +1531,7 @@ if (keyType === 'calculate') {
 }
 ```
 
-As always, take note of the properties and variables used:
-
+一如既往，注意使用的属性和变量：
 ```js
 const updateCalculatorState = (key, calculator) => {
   // Variables and properties needed
@@ -1546,18 +1543,16 @@ const updateCalculatorState = (key, calculator) => {
 }
 ```
 
-### Passing in necessary variables
+### 传入必要的变量
 
-We know we need five variables/properties for  `updateCalculatorState`:
-
+我们需要给`updateCalculatorState`传入五个参数：
 1.  `key`
 2.  `calculator`
 3.  `calculatedValue`
 4.  `displayedNum`
 5.  `modValue`
 
-Since  `modValue`  can be retrieved from  `calculator.dataset`, we only need to pass in four values:
-
+由于`modValue`可以从`calculator.dataset`中获取，所以我们只需要传入四个值。
 ```js
 const updateCalculatorState = (key, calculator, calculatedValue, displayedNum) => {
   // ...
@@ -1571,16 +1566,15 @@ keys.addEventListener('click', e => {
 
 ```
 
-### Refactoring updateCalculatorState again
+### 再次重构 updateCalculatorState
 
-We changed three kinds of values in  `updateCalculatorState`:
+我们改变了 "updateCalculatorState "中的三种值。
 
 1.  `calculator.dataset`
-2.  The class for pressing/depressing operators
-3.  `AC`  vs  `CE`  text
+2.   操作键的按下/未按下的类
+3.  `AC` 和 `CE`  文字
 
-If you want to make it cleaner, you can split (2) and (3) into another function —  `updateVisualState`. Here's what  `updateVisualState`  can look like:
-
+如果您想让它更简洁，您可以将(2)和(3)拆分成另一个函数————`updateVisualState`。下面是`updateVisualState`。
 ```js
 const updateVisualState = (key, calculator) => {
   const keyType = getKeyType(key)
@@ -1592,9 +1586,9 @@ const updateVisualState = (key, calculator) => {
 
 ```
 
-### Wrapping up
+### 收尾工作
 
-The code become much cleaner after the refactor. If you look into the event listener, you’ll know what each function does. Here’s what the event listener looks like at the end:
+重构后的代码变得更加简洁。如果你研究一下事件监听器，你就会知道每个函数的作用。下面是事件监听器最后的样子：
 
 ```js
 keys.addEventListener('click', e => {
@@ -1606,11 +1600,11 @@ keys.addEventListener('click', e => {
 
 ```
 
-You can grab the source code for the refactor part through  [this link][12]  (scroll down and enter your email address in the box, and I’ll send the source codes right to your mailbox).
+你可以通过[这个链接][12]来获取重构部分的源代码（往下滚动，在下面输入你的邮箱地址，我会直接把源代码发到你的邮箱里）。
 
-I hope you enjoyed this article. If you did, you might love  [Learn JavaScript][13]—a course where I show you how to build 20 components, step by step, like how we built this calculator today.
+我希望你喜欢这篇文章。你可能也会喜欢[Learn JavaScript][13]————在这个课程中，我向你展示如何一步步构建20个组件，就像我们今天如何构建这个计算器一样。
 
-Note: we can improve the calculator further by adding keyboard support and accessibility features like Live regions. Want to find out how? Go check out Learn JavaScript :)
+注意：我们可以通过添加键盘支持和像Live regions这样的可访问性功能来进一步改进计算器。想知道如何改进吗？去看看《学习JavaScript》吧:)
 
 [1]: https://zellwk.com/blog/js-if-else
 [2]: https://zellwk.com/blog/js-for-loops

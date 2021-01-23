@@ -1,6 +1,6 @@
 > -   原文地址：[How to build a PWA from scratch with HTML, CSS, and JavaScript](https://www.freecodecamp.org/news/build-a-pwa-from-scratch-with-html-css-and-javascript/)
 > -   原文作者：Ibrahima Ndaw
-> -   译者：
+> -   译者：lanxisama
 > -   校对者：
 
 ![How to build a PWA from scratch with HTML, CSS, and JavaScript](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/Group-1.png)

@@ -590,7 +590,7 @@ if (firstValue) {
 ![](https://cdn-media-1.freecodecamp.org/images/2vf5VGXNZ0vjGkyaY0y22PRTqqHDwgEKvCC3)
 
 
-第二部，让用户点击减号键，再点击减号键之后，我们设置`firstValue`为5，同时设置`operator`为减号。
+第二步，让用户点击减号键，再点击减号键之后，我们设置`firstValue`为5，同时设置`operator`为减号。
 ![](https://cdn-media-1.freecodecamp.org/images/Fc-QupYbv3HInXqv1vHFCc1avhDe3iyEErhs)
 
 第三步，让用户输入第二个值，假设是数字1。此时，显示的数字应该被更新为1，但是我们的`firstValue，`operator`和`secondValue`是保持不变的。
@@ -623,7 +623,7 @@ display.textContent = calculate(firstValue, operator, secondValue)
 
 ```
 
-wo我们可能也想把上一次计算的`secondValue`带到下一次计算当中。为了做到这个功能，我们需要利用另外的自定义属性来存储它。让我们来定义一个叫`modValue`的属性。
+我们可能也想把上一次计算的`secondValue`带到下一次计算当中。为了做到这个功能，我们需要利用另外的自定义属性来存储它。让我们来定义一个叫`modValue`的属性。
 ```js
 if (action === 'calculate') {
   let firstValue = calculator.dataset.firstValue
@@ -638,8 +638,7 @@ display.textContent = calculate(firstValue, operator, secondValue)
 
 ```
 
-If the  `previousKeyType`  is  `calculate`, we know we can use  `calculator.dataset.modValue`  as  `secondValue`. Once we know this, we can perform the calculation.
-
+如果`previousKeyType`是`calculate`，我可以使用 `calculator.dataset.modValue`作为`secondValue`。知道这个的话，我们就可以进行计算
 ```js
 if (firstValue) {
   if (previousKeyType === 'calculate') {
@@ -649,16 +648,16 @@ if (firstValue) {
 
 ```
 
-With that, we have the correct calculation when the equals key is clicked consecutively.
+这样一来，当连续点击等号键时，我们就有了正确的计算方法。
 
 ![](https://cdn-media-1.freecodecamp.org/images/sjYX-ImohfhbFFbw1-FqmKagBvfFQKm0PzAu)
 
-### Back to the equals key
+### 回到等号键
 
-Fourth, if Tim hits a decimal key or a number key after the calculator key, the display should be replaced with  `0.`  or the new number respectively.
 
-Here, instead of just checking if the  `previousKeyType`  is  `operator`, we also need to check if it’s  `calculate`.
+第四，如果Tim在计算器键后按下小数键或数字键，则应分别用`0.`或新数字代替显示。
 
+在这里，我们不只检查`previousKeyType`是否是`operator`，还需要检查是否是`calculate`。
 ```js
 if (!action) {
   if (
@@ -685,11 +684,10 @@ if (action === 'decimal') {
 ```
 
 Fifth, if Tim hits an operator key right after the equals key, the calculator should  **not**  calculate.
-
+第五，如果Tim再点击等号之后又点击了操作键，计算器则不应该进行计算。
 ![](https://cdn-media-1.freecodecamp.org/images/uuifuJ41Oo86NXMsPj44RSQf7ExULROc2GaI)
 
-To do this, we check if the  `previousKeyType`  is  `calculate`  before performing calculations with operator keys.
-
+为此，我们在用操作键进行计算之前，先检查 `previousKeyType `是否为 `calculate`。
 ```js
 if (
   action === 'add' ||
@@ -714,20 +712,22 @@ if (
 ```
 
 The clear key has two uses:
+清除键有两种用法：
 
 1.  All Clear (denoted by  `AC`) clears everything and resets the calculator to its initial state.
 2.  Clear entry (denoted by  `CE`) clears the current entry. It keeps previous numbers in memory.
 
 When the calculator is in its default state,  `AC`  should be shown.
+1.  全部清除（用 "AC "表示）清除所有的东西，并将计算器恢复到初始状态。
+2.  清除输入（用 "CE "表示）清除当前的输入。它将以前的数字保留在内存中。
 
+当计算器处于默认状态时，应该显示 "AC"。
 ![](https://cdn-media-1.freecodecamp.org/images/22fj2VLJJ1SPexybqdWIqPRkj9JkrlI3AAYl)
 
-First, if Tim hits a key (any key except clear),  `AC`  should be changed to  `CE`.
-
+首先，如果Tim点击了一个键（除了清ad除键之外的任何键），`AC`应该被改成`CE`。
 ![](https://cdn-media-1.freecodecamp.org/images/Hs9tjp3JQIYOaAgh8KDnxj5QShScU0nMkDa7)
-
-We do this by checking if the  `data-action`  is  `clear`. If it’s not  `clear`, we look for the clear button and change its  `textContent`.
-
+5
+我们通过检查`data-action`是不是`clear`来判断，如果不是`clear`，我们找到清除按钮，并改变`textContent`。
 ```js
 if (action !== 'clear') {
   const clearButton = calculator.querySelector('[data-action=clear]')
@@ -735,8 +735,8 @@ if (action !== 'clear') {
 }
 ```
 
-Second, if Tim hits  `CE`, the display should read 0. At the same time,  `CE`  should be reverted to  `AC`  so Tim can reset the calculator to its initial state.\*\*
 
+接下来，如果Tim点击`CE`，显示的数字应该为0。与此同时，`CE`应该改为`AC`。所以Tim可以将计算器重置到初始状态。
 ![](https://cdn-media-1.freecodecamp.org/images/Dv6SFw5LY8wB0WqTFQBe46-QoraBiq8TvpdY)
 
 ```js
@@ -747,10 +747,9 @@ if (action === 'clear') {
 }
 ```
 
-Third, if Tim hits  `AC`, reset the calculator to its initial state.
-
-To reset the calculator to its initial state, we need to clear all custom attributes we’ve set.
-
+第三，如果Tim点击了`AC`，重置了计算器的状态。
+ 
+为了将计算器的状态改为初始状态，我们需要清空所有我们设置的自定义属性。
 ```js
 if (action === 'clear') {
   if (key.textContent === 'AC') {
@@ -764,25 +763,23 @@ if (action === 'clear') {
 
 ```
 
-That’s it — for the edge cases portion, anyway!
+就是这样~反正是边缘用例！
 
-You can grab the source code for the edge cases part through  [this link][7]  (scroll down and enter your email address in the box, and I’ll send the source codes right to your mailbox).
+你可以通过这个连接获取源码 [这个链接][7] （滚动到最下面然后输入你的邮箱地址，我将会发送源码到你的邮箱）。
 
-At this point, the code we created together is quite confusing. You’ll probably get lost if you try to read the code on your own. Let’s refactor it to make it cleaner.
-
-### Refactoring the code
+我们创建的代码是相当混乱的。如果你尝试自己阅读代码可能会比较混乱，让我们一起重构一下它。
+### 重构代码
 
 When you refactor, you’ll often start with the most obvious improvements. In this case, let’s start with  `calculate`.
-
+当你重构时，常常会从最明显的地方进行改进。在这种情况下，让我们从`calculate`开始。
 Before continuing on, make sure you know these JavaScript practices/features. We’ll use them in the refactor.
-
+在重构开始之前，请确保你了解JavaScript的这些特性，我们将在重构中使用到。
 1.  [Early returns][8]
-2.  [Ternary operators][9]
+2.  [三目运算符][9]
 3.  [Pure functions][10]
 4.  [ES6 Destructuring][11]
 
-With that, let’s begin!
-
+让我们开始吧！
 ### Refactoring the calculate function
 
 Here’s what we have so far.

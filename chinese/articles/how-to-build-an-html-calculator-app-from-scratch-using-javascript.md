@@ -586,34 +586,29 @@ if (firstValue) {
 
 ###  修改计算
 
-First, let’s say our user clicks 5. At this point, nothing is registered in the calculator yet.
-
+首先让我们的用户点击数字5，，此时计算器中没有任何被定义过的东西。
 ![](https://cdn-media-1.freecodecamp.org/images/2vf5VGXNZ0vjGkyaY0y22PRTqqHDwgEKvCC3)
 
-Second, let’s say the user clicks the subtract operator. After they click the subtract operator, we set  `firstValue`  to 5. We set also  `operator`  to subtract.
 
+第二部，让用户点击减号键，再点击减号键之后，我们设置`firstValue`为5，同时设置`operator`为减号。
 ![](https://cdn-media-1.freecodecamp.org/images/Fc-QupYbv3HInXqv1vHFCc1avhDe3iyEErhs)
 
-Third, the user clicks on a second value. Let’s say it’s 1. At this point, the displayed number gets updated to 1, but our  `firstValue`,  `operator`  and  `secondValue`  remain unchanged.
-
+第三步，让用户输入第二个值，假设是数字1。此时，显示的数字应该被更新为1，但是我们的`firstValue，`operator`和`secondValue`是保持不变的。
 ![](https://cdn-media-1.freecodecamp.org/images/lW3CtoXJ1gxpUS5SZM3zh3zmqSB-ksM6E0vr)
 
-Fourth, the user clicks the equals key. Right after they click equals, but before the calculation, we set  `secondValue`  as  `displayedNum`
-
+第四步，用户点击等号键。紧接着用户点击了等号，但是在计算之前，我们设置`secondValue`为`displayedNum`。
+第四，用户点击等号键后，我们设置`secondValue`为`displayNum`。就在他们点击等号之后，但在计算之前，我们设置`secondValue`为`displayedNum`。
 ![](https://cdn-media-1.freecodecamp.org/images/yeQCYcu0ecbNbJlHa9aqEZopHj-FyTqXuRmw)
 
-Fifth, the calculator calculates the result of  `5 - 1`  and gives  `4`. The result gets updated to the display.  `firstValue`  and  `operator`  get carried forward to the next calculation since we did not update them.
-
+第五，计算器计算`5-1`并且得到结果`4`。得到结果并将显示的数字更新。`firstValue`和`operator`会在下一次计算中使用，因为我们没有更新它们。
 ![](https://cdn-media-1.freecodecamp.org/images/YOsfq7AWCs0YbABkiebax-oaQVGc5tWsNyXJ)
 
-Sixth, when the user hits equals again, we set  `secondValue`  to  `displayedNum`  before the calculation.
-
+第六，当用户再次点击等号键，我们在计算之前把`secondValue`设置成`displayNum`。
 ![](https://cdn-media-1.freecodecamp.org/images/BF7tBEUHJN4gnIwQqUTq9ctHIUIVcYM026Ro)
 
-You can tell what’s wrong here.
+这里有一个问题。
 
-Instead of  `secondValue`, we want the set  `firstValue`  to the displayed number.
-
+我们要的不是 "secondValue"，而是设置 "firstValue "为显示的数字。
 ```js
 if (action === 'calculate') {
   let firstValue = calculator.dataset.firstValue
@@ -628,8 +623,7 @@ display.textContent = calculate(firstValue, operator, secondValue)
 
 ```
 
-We also want to carry forward the previous  `secondValue`  into the new calculation. For  `secondValue`  to persist to the next calculation, we need to store it in another custom attribute. Let’s call this custom attribute  `modValue`  (stands for modifier value).
-
+wo我们可能也想把上一次计算的`secondValue`带到下一次计算当中。为了做到这个功能，我们需要利用另外的自定义属性来存储它。让我们来定义一个叫`modValue`的属性。
 ```js
 if (action === 'calculate') {
   let firstValue = calculator.dataset.firstValue

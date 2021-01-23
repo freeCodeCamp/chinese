@@ -53,13 +53,13 @@
 
 就我而言，我经常使用代码片段，而且是有选择的使用。我在我经常使用的 Markdown 和其它语言上，使用了大量的代码片段。
 
-而对于框架，我并没有使用很多代码片段。最近才开始在 Vue 上少量使用，大部分还是样板代码。不过随着我对 Vue 的掌握度的提升，我可能会使用更多的代码片段。
+对于框架，我并没有使用很多代码片段。最近才开始在 Vue 上少量使用，大部分还是样板代码。不过随着我对 Vue 的掌握度的提升，我可能会使用更多的代码片段。
 
-另外，在算法相关的代码上，我完全没有使用代码片段。
+另外，在算法相关的代码上，我完全没有使用过代码片段。
 
 ## 代码片段的类型
 
-可以根据代码片段和编辑器之间的互动范围进行分类。
+可以根据代码片段和编辑器之间的交互范围进行分类。
 
 #### 静态代码片段
 
@@ -67,48 +67,43 @@
 
 #### 动态代码片段
 
-可以定制一个逻辑链路，来帮助用户完成代码片段所需信息的填写。
+动态代码片段意味着你可以定制一个逻辑链路，来帮助用户完成代码片段所需信息的填写。
 
 它包括:
 
 -   _Tab Stops_: 可以按顺序编号的 tab 键跳转的位置（tab stop）。
--   _Mirrored Tab Stops_: 有时，你需要在文本的多个位置中插入相同的值。 你可以使用相同的序号标记 tab stop, 编辑一处都会立即反映其它相同序号的 tab stop 中。
--   _Placeholders_  : 有默认值的 tab stop 位置，当获得焦点时你可以重写它。
--   _Choices_  : 有下拉列表的 tab stop 位置，你可以通过下拉列表选择它的值。
--   _Variables_: 来自环境变量中的值，比如: 选中的文字， 系统日期，或者剪贴板中的内容。
+-   _Mirrored Tab Stops_: 有时，你需要在模板的多个位置中插入同样的值。你可以使用相同的序号标记 tab stop, 然后你在任意一处输入都会立即同步输入到其它相同序号的 tab stop 中。
+-   _Placeholders_  : 拥有默认值的 tab stop 位置，当它获得焦点时你可以重写它的值。
+-   _Choices_  : 拥有下拉列表的 tab stop 位置，你可以通过下拉列表选择它的值。
+-   _Variables_: 来自环境变量中的值，比如: 选中的文字，系统日期，或者剪贴板中的内容。
 
-
-Here is an example of a markdown snippet which adds a task list with 2 tasks. It uses  _tab stops_,  _placeholders_, and  _choices_  for checking a task.
-
-下图是一个例子，在 markdown 中使用代码片段。它使用了 _tab stops_,  _placeholders_, and  _choices_ 。
+下图是一个 markdown 中使用代码片段。它使用了 _tab stops_,  _placeholders_, 和 _choices_ 来帮助编辑已完成的任务。
 
 ![task](https://www.freecodecamp.org/news/content/images/2020/09/task.gif)
 
 #### 宏代码片段
 
-顶级巫术拥有转变输入的能力，转变意味着你可以改变一个变量的值在插入它之前，或者在你编辑之后改变占位符的值。
+高级魔法拥有转变输入的能力，转变在这里意味着你可以在插入变量前改变它的值，或者重写了占位符后改变它的值。
 
-例如，你可能想在输入类名过后，把它大写。
+比如，你可能想在输入类名过后，把它变成大写。
 
-你可能首先想到使用正则，那是可行的。此外，某些编辑器还提供了更高级的脚本能力。
+你能想到的所有用正则表达式进行的操作，现在基本上都是可能的。一些编辑器还提供了更多高级的脚本特性。
 
 ## VS Code 中的代码片段
 
-In VS Code, snippets appear in  **IntelliSense**  (`Ctrl+Space`  gives you a suggestion list), they are mixed in with other suggestions.
-
 在 VS Code 中，代码片段是 **智能** 出现的（`Ctrl+Space`  会显示一个建议列表），通常还和其它建议混在一起。
 
-你可以通过命令 **'Insert Snippet' command** 来浏览所有可用的代码片段并选择一个。它列出了当前文件语言的所有用户添加的，插件提供的，以及预设的代码片段。
+你可以通过命令 **'Insert Snippet' command** 来打开一个专门用于显示代码片段列表的选择器。它列出了当前文件语言的所有用户添加的，插件提供的，以及预设的代码片段。
 
 ![insert-snippet-list](https://www.freecodecamp.org/news/content/images/2020/09/insert-snippet-list.png)
 
-[Emmet][1]  已集成到VS Code中，并且具有自己的CSS选择器启发式语法，可用于插入HTML和CSS代码段。
+[Emmet][1] 已集成到VS Code中，并且具有自己的CSS选择器启发式语法，可用于插入HTML和CSS代码段。
 
-Emmet is it's own thing really, but the mechanics are the same. You can learn about Emmet with the  [Emmet in Visual Studio Code guide][2].
+Emmet是独立的功能，但是机制和代码片段是一样的。你可以从片文章 [Emmet in Visual Studio Code guide][2] 里了解相关信息。
 
 ### 用户相关设置
 
-如果你在设置里将当前使用的语言的 `editor.quickSuggestions` 设置为 true ，代码片段将以**快速建议**的形式出现。该设置针对大多数语言都默认开启，除了 markdown。
+如果你在设置里将当前使用的语言的 `editor.quickSuggestions` 设置为 true ，代码片段将以 **快速建议** 的形式出现。该设置针对大多数语言都默认开启，除了 markdown。
 
 ![quick-suggestions-js](https://www.freecodecamp.org/news/content/images/2020/09/quick-suggestions-js.png)
 
@@ -117,7 +112,7 @@ Emmet is it's own thing really, but the mechanics are the same. You can learn ab
 可选值:
 
 -   `on`: 打开tab-completion 功能。
--   `off`: 关闭 tab-completion 功能，这是_默认值_。
+-   `off`: 关闭 tab-completion 功能，这是 _默认值_。
 -   `onlySnippets`: 只对代码片段打开 tab-completion。
 
 ```json
@@ -139,31 +134,31 @@ Emmet is it's own thing really, but the mechanics are the same. You can learn ab
 
 ```
 
-以上是代码片段相关的重要设置，但还有其他一些设置。您可以查看此[默认设置列表][3] 浏览更多，或在“设置”界面中浏览。
+以上是代码片段相关的重要设置，其他一些设置，你可以在[默认设置列表][3]里查看，或在打开“设置”界面进行查看。
 
-### 有预设的代码片段么?
+### 有内置的代码片段么?
 
 Yes!
 
-但是，他们没有出现在 VS Code 的文档中。而且在 VS Code 中也没有一个专门的地方介绍它们。所以，你可能对内置的代码片段了解的并不多。
+但是，VS Code 的文档中并没有提及。而且在 VS Code 中也没有专门的区域介绍它们。所以，你可能并不是很了解有哪些内置的代码片段。
 
-那么，怎么才能找出当前语言的所有内置的代码片段呢？
+那么，怎么才能找出你使用的语言的的所有内置的代码片段呢？
 
-长话短说，我对上面的情况不满，所以我写了一个 VS Code 插件 [**Snippets Ranger**][4]，提供了一个漂亮的UI界面来展示所有的内置代码片段。Think of it as a  _Marauder's Map_  for snippets!
+简单说，我对上面的情况表示不满，所以我写了一个 VS Code 插件 [**Snippets Ranger**][4]，提供了一个漂亮的UI界面来展示所有的内置代码片段。Think of it as a  _Marauder's Map_  for snippets!
 
 ![snippets-ranger](https://www.freecodecamp.org/news/content/images/2020/09/snippets-ranger.png)
 
-#### 但是我就想自己找到这些代码片段呢?
+#### 如果我想自己找到这些代码片段呢?
 
-你当然可以，不过要多花费一些精力。
+当然可以，不过要多花费一些时间和精力。
 
-上面提到过， **'Insert Snippet' command** 会显示你当前语言的所有代码片段。 
+上面提到过， **'Insert Snippet' command** 会显示一个选择器，展示当前语言的所有代码片段。 
 
-不过请记住，那是一个合集，包括用户的，插件的，内置的。如果你想搞清楚某种语言是否有内置的代码片段，你需要打开一个该语言的文件，然后输入这个命令来查看。
+如果你想搞清楚某种语言是否有内置的代码片段，你应该打开一个该语言的文件，然后输入这个命令来查看。不过请记住，那是一个合集，包括用户的，插件的，内置的代码片段。
 
-如果你安装了相关语言的代码片段插件，可能很难分清楚谁是内置的，谁是插件提供的，所以你可以暂时关闭插件，剩下的就是内置的了。
+如果你安装了相关语言的代码片段插件，可能很难分清楚谁是内置的，谁是插件提供的，不过你可以暂时关闭插件，剩下的就是内置的了。
 
-如果你想自己查看代码片段的源文件，Windows 下路径是 ：`«app root»\resources\app\extensions\«language»\snippets\«language».code-snippets`。Mac 和 Linux 下路径相似。
+如果你想自己查看代码片段的源文件，Windows 下路径是 ：`«app root»\resources\app\extensions\«language»\snippets\«language».code-snippets`。Mac 和 Linux 下路径与此相似。
 
 ### 代码片段插件
 
@@ -175,17 +170,17 @@ Visual Studio 市场 有专门的 [snippets category][5] 分类，你可以在�
 
 代码片段文件是 JSON 格式的。 如果你想，你还可以添加C语言风格的注释（技术上讲，它是微软的"JSONC"格式）。 
 
-你可以创建不同作用域的代码片段：全局的，工作区的，以及针对特定语言类型的。
+你可以创建针对不同作用域的代码片段：全局的，工作区的，以及针对特定语言类型的。
 
 执行 **'Preferences: Configure User Snippets' command** 来创建代码片段的文件，它会打开一个下图这样的对话框。选择任意一个都会打开一个新文件进行编辑。
 
 ![user snippets](https://www.freecodecamp.org/news/content/images/2020/09/user-snippets.png)
 
-如果你更喜欢使用GUI界面来编写代码片段，你可以尝试以下 [snippet generator web app][6]。
+如果你更喜欢使用GUI界面来编写代码片段，你可以尝试以这个 [snippet generator web app][6] 网站。
 
 ![snippet generator](https://www.freecodecamp.org/news/content/images/2020/09/snippet-generator.png)
 
-我们看一个例子来熟悉下语法。
+我们先看一个例子来熟悉下语法。
 
 #### Example
 
@@ -214,7 +209,7 @@ Visual Studio 市场 有专门的 [snippets category][5] 分类，你可以在�
 
 该代码片段的内容具有2个 tab stop ，并使用了`$ {TM_SELECTED_TEXT}`变量。
 
-接下来，让我们详细了解下语法相关的细节。
+接下来，让我们详细了解语法相关的细节。
 
 #### 代码片段语法
 
@@ -224,9 +219,9 @@ VS Code 的代码片段语法和 [TextMate snippet syntax][7] 是相同的。然
 
 #### 1\. Tab Stops
 
-Tab stops由 **$** 和 **序号** 组成，就像 `$1`。`$1`代表了第一个位置，`$2`代表了第二个位置，以此类推。`$0`代表退出代码片段，以及最后光标停留的位置，
+Tab stops由 **$** 和 **序号** 组成，像 `$1`。`$1`代表了第一个位置，`$2`代表了第二个位置，以此类推。`$0`代表退出代码片段，以及最后光标停留的位置，
 
-举个例子，我们希望写一个 _div_ 的代码片段。它的第一个 tab stop 在标签内，同时希望用户按下 tab 的时候能退出代码片段，并让光标停留在标签外。
+看一个例子，我们希望写一个 _div_ 的代码片段。它的第一个 tab stop 在标签内，同时希望用户按下 tab 的时候能退出代码片段，并让光标停留在标签外。
 
 看起来就像下面这样:
 
@@ -242,7 +237,7 @@ Tab stops由 **$** 和 **序号** 组成，就像 `$1`。`$1`代表了第一个�
 
 #### 2\. Mirrored Tab Stops
 
-有时候你想在插入的内容中的几个地方输入相同的值。这种时候你可以使用相同序号的 tab stops 来标识这几个地方，当你编辑其中一个的时候，就会自动同步输入的值到其它地方。
+有时候你想在插入的模板中的多个位置输入相同的值。这种时候你可以使用相同序号的 tab stops 来标识这几个位置，当你编辑其中一个的时候，就会自动同步输入的值到其它位置。
 
 一个典型的例子就是 _for_ 循环中的 _index_ 变量会被多次使用，下面是一个JavaScript中的 _for_ 循环代码片段。
 
@@ -263,13 +258,13 @@ Tab stops由 **$** 和 **序号** 组成，就像 `$1`。`$1`代表了第一个�
 
 #### 3\. Placeholders
 
-占位符是有默认值的 tab stops。他们一般被大括号包裹着，就像 `${1:default}` 。占位符的内容是默认被选中的，所以你可以很容易的修改它。占位符支持嵌套，像这样 `${1:first ${2:second}}`。
+Placeholders 是有默认值的 tab stop 。他们一般被大括号包裹着，就像 `${1:default}` 。占位符的内容是默认被选中的，所以你可以很容易的修改它。占位符支持嵌套，像这样 `${1:first ${2:second}}`。
 
 #### 4\. Choices
 
 Choices 代表着这个 tab stop 会默认有一个列表展示给用户选择。Choices 的可选值的写法是用逗号分割的字符串，并且由两个竖线（|）包裹。就像 `${1|yes,no|}` 。
 
-下面是前面显示的用于插入任务列表的markdown示例的代码。choices “x”或者空格。
+下面是前面显示的用于插入任务列表的 markdown 代码片段。choices 可选值是 'x' 或者 空格。
 
 ```json
 {
@@ -282,7 +277,7 @@ Choices 代表着这个 tab stop 会默认有一个列表展示给用户选择�
 
 #### 5\. Variables
 
-VScode许多变量供你使用。你可以简单的在变量名前加上 $ ,就可以使用他们了。 像这样 `$TM_SELECTED_TEXT`。
+VS Code 提供了大量变量供你使用。你可以简单的在变量名前加上 $ ,就可以引用他们了。 像这样 `$TM_SELECTED_TEXT`。
 
 比如，下面这个代码片段，会为任意语言创建一个带有今天日期的注释块。
 
@@ -298,10 +293,9 @@ VScode许多变量供你使用。你可以简单的在变量名前加上 $ ,就�
 
 ```
 
-如果你想，你可以为变量指定一个默认值，像这样 `${TM_SELECTED_TEXT:default}` 。如果该变量没有被赋值，默认值或者空字符串就会被插入。
+你可以为变量指定一个默认值，像这样 `${TM_SELECTED_TEXT:default}` 。当该变量没有被赋值时，就会被插入默认值或者空字符串。
 
 如果你不小心写错了变量名，写错的变量名会被当成 placeholder 使用。
-
 
 下面是一些属于工作区的变量:
 
@@ -340,9 +334,9 @@ VScode许多变量供你使用。你可以简单的在变量名前加上 $ ,就�
 
 #### 6\. Transformations
 
-转换一般运用于variable 或者 placeholder 。如果你熟悉正则表达式（regex），你会发现这很相似。
+转换一般运用于 variable 或者 placeholder 。如果你熟悉正则表达式（regex），你会发现这很相似。
 
-转换的格式像下面这样：`${«variable or placeholder»/«regex»/«replacement string»/«flags»}`。他很像JavaScript中的 [String.protoype.replace()][8] 。其中参数的作用如下:
+转换的语法像下面这样：`${«variable or placeholder»/«regex»/«replacement string»/«flags»}`。它很像JavaScript中的 [String.protoype.replace()][8] 。其中参数的作用如下:
 
 -   `«regex»`: 这是一个与变量或占位符的值匹配的正则表达式。支持JavaScript regex语法。
 -   `«replacement string»`: 这是用来替换匹配到的内容的字符串。它可以引用`«regex»`中的捕获组，执行大小写的格式化（使用特殊的标记函数：`/upcase`, `/downcase`, 和 `/capitalize`），以及执行条件插入。查看 [TextMate Replacement String Syntax][9] 了解更多信息。
@@ -354,11 +348,11 @@ VScode许多变量供你使用。你可以简单的在变量名前加上 $ ,就�
     -   `u`  : Unicode. Treat the pattern as a sequence of Unicode code points,
     -   `y`  : Perform a "sticky" search that matches starting at the current position in the target string.
 
-使用 `$n` 引用捕获组，其中 `n` 代表第几个捕获组。使用 `$0` 代表整个匹配内容。
+可以使用 `$n` 引用捕获组，其中 `n` 代表第几个捕获组的值。使用 `$0` 代表整个匹配内容。
 
 因为它的语法和 tab stops 的语法相同，所以可能会造成混淆。不过你只需要记住，如果它是被包括在正斜杠（/）之中的，它就是指向捕获组的。
 
-为了彻底搞清楚这个语法，我们需要多看一些例子。
+我们需要多看一些例子，来彻底搞清楚这个语法。
 
 | SNIPPET  _BODY_ | INPUT | OUTPUT | EXPLANATION |
 | --- | --- | --- | --- |
@@ -367,11 +361,11 @@ VScode许多变量供你使用。你可以简单的在变量名前加上 $ ,就�
 | `["${TM_FILENAME/.*/${0:/upcase}/}"]` | example.js | EXAMPLE.JS | 以大写的方式插入当前文件的名字。 |
 | `[` <br/>`"[",` <br/>`"${CLIPBOARD/^(.+)$/'$1',/gm}",` <br/>`"]"` <br/>`]` | line1 <br/> line2 | \['line1','line2',\] | 将剪贴板的内容转换为一个字符串数组，每一个非空行都会转换为数组中的一个元素。 |
 
-如你所见，上方第二个例子，正则中的元字符必须被转义，就像例子中匹配一个单词你必须插入 `\\w`。
+如你所见，上方第二个例子，正则中的元字符必须被转义，比如例子中匹配一个单词你必须写成 `\\w`。
 
 #### Placeholder Transformations
 
-**Placeholder transforms 并不能使用默认值或者选项值**! 或许称它为 tab stop transformations 更为合适。
+**Placeholder 转换不能使用默认值或者选项值**! 或许称它为 tab stop transformations 更为合适。
 
 下面的例子会把第一个 tab stop 输入的内容大写。
 
@@ -386,10 +380,9 @@ VScode许多变量供你使用。你可以简单的在变量名前加上 $ ,就�
 }
 
 ```
+有一个令人困惑的特性，当你在第一个tab stop上设置了placeholder，但却在它的镜像tab stop上运用了转换，转换会发生在第一个tab stop上么？不会！
 
-你甚至可以写一个 placeholder，然而却在镜像的 tab stop 上运用转换。转换是并不会在原始的 placeholder 上执行的。？
-
-你会选择使用这个特性嘛？我最开始对这个特性感到困惑，所以我觉得你们也可能会。
+你会选择使用这个特性嘛？我最开始对这个特性感到十分困惑，所以我觉得你们也可能会。下面时具体的例子：
 
 ```json
 {
@@ -403,7 +396,7 @@ VScode许多变量供你使用。你可以简单的在变量名前加上 $ ,就�
 
 ### 如何为代码片段绑定快捷键?
 
-通过向 `keybindings.json` 加入你的快捷键。你可以通过这个命令 **'Preferences: Open Keyboard Shortcuts File (JSON)'** 打开这个文件。
+你可以通过向 `keybindings.json` 加入你的快捷键。这个文件可以通过这个命令 **'Preferences: Open Keyboard Shortcuts File (JSON)'** 打开。
 
 比如，为 markdown的 代码片段 "Insert heading level 1" 绑定一个快捷键：
 
@@ -422,9 +415,9 @@ VScode许多变量供你使用。你可以简单的在变量名前加上 $ ,就�
 
 你可以定义你的快捷键组合，指定命令的ID，以及可选的 [when clause context][11] 来指定什么时候这个快捷键是可用的。
 
-通过 `args` 对象，你可以通过 `langId` 和 `name` 指定目标代码片段。其中 `langId` 参数是目标代码片段所属的语言ID [language ID][12] ，参数 `name` 是你编辑代码片段时指定的名字。
+通过 `args` 对象，你可以通过 `langId` 和 `name` 指定目标代码片段。其中 `langId` 参数是目标代码片段所属的语言ID [language ID][12] ，参数 `name` 是你编写代码片段时指定的名字。
 
-如果你想，你可以使用 `snippet` 属性指定行内的代码片段。
+如果你想，你也可以使用 `snippet` 属性指定行内的代码片段。
 
 ```json
 [
@@ -442,15 +435,13 @@ VScode许多变量供你使用。你可以简单的在变量名前加上 $ ,就�
 
 你也可以使用  _Keyboard Shortcuts UI_ 来编辑快捷键，但是它不具备添加新的快捷键的能力。  
 
-使用UI的另一个缺点是，他不会显示 `args` 对象，这会让你查找或者编辑自定义快捷键时更加费劲。？
+使用UI的另一个缺点是，他不会显示 `args` 对象，这会让你查找或者编辑自定义快捷键时更加费劲。
 
 ![shortcuts-ui](https://www.freecodecamp.org/news/content/images/2020/09/shortcuts-ui.png)
 
 ## 风格问题
 
-我发现最初与摘要存在争议的是人们倾向于创建带有缩写前缀的摘要。我是否需要学习一大堆乱七八糟的缩写词才能使用其他人的摘要？
-
-What do I mean by abbreviated prefixes? The table below list a few of the snippets from the  [JavaScript (ES6) code snippets][13]  VS Code extension. You can see in the  _Trigger_  column, the prefixes listed are abbreviations, for example  _fre_  to represent a "for each" loop.
+编写代码片段的人总是喜欢用缩写前缀，这可能让刚开始接触代码片段的人感到反感。我必须要学习一大堆乱七八糟的缩写词，才能使用其他人的代码片段？
 
 缩写前缀是什么意思？下表列出了 [JavaScript（ES6）snippets] [13] VS Code 扩展中的一些代码段。其中 _Trigger_ 列中的就是前缀缩写，例如 _fre_ 代表 "for each" 循环。
 
@@ -464,27 +455,27 @@ What do I mean by abbreviated prefixes? The table below list a few of the snippe
 
 ![fe quick suggestion](https://www.freecodecamp.org/news/content/images/2020/09/fe-quick-suggestion.png)
 
-第一个匹配项是 _fre_ , 来自某个扩展。你觉得哪一个更具描述性？？
+第一个匹配项是 _fre_ , 属于某个扩展的代码片段。你觉得哪一个更具描述性？？
 
-如果你使用 "Insert Snippet" 命令来插入代码片段，并不会有太大的区别。因为描述字段对这个缺点做了补充，你可以通过描述文字来了解代码片段的能力。我自己不使用这种方式使用代码片段，所以我更喜欢一个更具描述性的前缀。
+如果你使用 "Insert Snippet" 命令来插入代码片段，描述性上就不会有太大的区别了。因为列表中的描述字段对这个缺点做了补充，你可以通过描述文字来了解代码片段的能力。我自己不使用这种方式插入代码片段，所以我更喜欢一个更具描述性的前缀。
 
 ![insert snippet foreach](https://www.freecodecamp.org/news/content/images/2020/09/insertsnippet-foreach.png)
 
 第二点， _fre_ 与内置的代码片段 _foreach_  **重复** 了。
 
-一些人可能把快速建议的功能关闭了，只使用tab键来触发代码片段。这种情况下你需要在没有提示的情况下输入前缀。一些人可能更喜欢使用缩写前缀来减少按键的次数。
+一些人可能把快速建议的功能关闭了，只使用tab键来触发代码片段。这种情况下你需要在没有提示的情况下输入前缀。这些人可能更喜欢使用缩写前缀来减少按键的次数。
 
-然而这种方式，同样使用了模糊搜索，所以你按下 tab 键的时候，代表你选择了第一个匹配项。
+然而这种方式，同样使用了模糊搜索，所以你按下 tab 键的时候，代表你默认选择了第一个匹配项。
 
 ![snippet-tab-completion](https://www.freecodecamp.org/news/content/images/2020/09/snippet-tab-completion.gif)
 
 观察上面这个例子，你可以看见输入 "fr" 时， 按下 _tab_ 键插入了 _fre_ 代码片段。输入 "fore" 时，插入了 _foreach_ 代码片段。
 
-所以你并不需要输入完整的前缀！？一种情况可能是例外，就是你为一种语言设置了大量名称相似的代码片段，但我觉得那是不切实际的。
+因此，如果你想的话，你可以不输入完整的前缀！？但是想象一下，在某种语言下，拥有大量相似前缀的代码片段，你只输入前缀缩写是多么不切实际的。
 
 更实际的做法是，选择合适的前缀，在按下tab键之前，完整的把它们打出来。
 
-根据你使用代码片段的偏好，可能存在一些取舍。
+以上观点，可能根据你个人存在某些取舍。
 
 就我而言，我更喜欢使用快速建议功能，因为它有视觉反馈。我通常把代码片段的建议设置在列表最上面，这样我就能看着列表输入缩写前缀，而不是去记住他们。
 
@@ -492,9 +483,9 @@ Some snippet authors have rigid patterns to overcome this, but that's just somet
 
 可能一些代码片段的作者有严格的模式去克服这个问题，但我并不能很容易的去接受它。
 
-如果你针对某种语言使用了大量的代码片段，你可能会选择那些风格相似的代码片段使用。
+如果你针对某种语言使用了大量的代码片段，你很可能会选择那些风格相似的代码片段使用（意味着很可能缩写前缀是十分相似的）。
 
-如果你在同种语言的不同框架或者库中使用代码片段，它们的代码片段可能会出现交叉，重叠的情况。我不需要处理这种情况，但你最终可能需要处理这些。
+如果你在同种语言的不同框架或者库中使用代码片段，它们的代码片段可能会出现交叉，重叠的情况。我不需要处理这种情况，但如果你使用缩写前缀，最终可能需要处理这些冲突。
 
 ## 全局的代码片段
 

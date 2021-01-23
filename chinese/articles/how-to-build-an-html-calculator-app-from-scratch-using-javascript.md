@@ -14,9 +14,9 @@
 ### 前置条件
 
 在你开始本节课程前，请确保你对 JavaScript 有一个不错的了解。最起码，你需要知道以下事情：
-1.  [If/else分支][1]
-2.  [For循环][2]
-3.  [JavaScript函数][3]
+1.  [If/else 分支][1]
+2.  [For 循环][2]
+3.  [JavaScript 函数][3]
 4.  [箭头函数][4]
 5.  `&&`  和  `||`  操作符
 6.  如何使用`textContent`属性修改文本
@@ -42,7 +42,7 @@
   <div class=”calculator__keys”> … </div>
 </div>
 ```
-我们使用CSS Grid去制作键盘部分，因为他们是类似网格的格式进行排列的。这里已经在启动文件中完成了，你可以在以下地址找到启动文件 [此处][5].
+我们使用 CSS Grid 去制作键盘部分，因为他们是类似网格的格式进行排列的。这里已经在启动文件中完成了，你可以在以下地址找到启动文件 [此处][5].
 
 ```css
 .calculator__keys { 
@@ -51,7 +51,7 @@
 }
 ```
 
-为了帮助我们区分操作符，小数点，清除符号以及等号，我们将设置一个data-action属性用来描述他们的功能。
+为了帮助我们区分操作符，小数点，清除符号以及等号，我们将设置一个`data-action`属性用来描述他们的功能。
 ```html
 <div class="calculator__keys">
   <button class="key--operator" data-action="add">+</button>
@@ -133,9 +133,9 @@ if (action === 'clear') {
 在这里，你可以使用`console.log`方法，来响应每个按键的事件。
 ![](https://cdn-media-1.freecodecamp.org/images/lbXTncsu2Ni5V-Ejx6RYCO-kW8XJm7f5woGC)
 
-### 开始构建happy path
+### 开始构建 happy path
 
-让我们思考一下，一个普通人拿到一个计算器之后，会做什么呢？**这个普通人会做什么的问题被称作happy path**。
+让我们思考一下，一个普通人拿到一个计算器之后，会做什么呢？**这个普通人会做什么的问题被称作 happy path**。
 
 这个普通人我们就称作 Mary 吧。
 当 Mary拿起计算器时，她可能会点击任何一个按键：
@@ -150,7 +150,7 @@ if (action === 'clear') {
 一下子要思考五种按键可以能不太容易，所以让我们一步一步来。
 ### 当使用者按下数字键
 
-如果计算器显示0（默认数字），此时，目标数字需要替换这个0。
+如果计算器显示 0（默认数字），此时，目标数字需要替换这个 0。
 ![](https://cdn-media-1.freecodecamp.org/images/mpr4JFLSU-MHaq8LPMedsaDxnU5Y-MTx56SU)
 
 如果计算器显示的是非零数字，那么目标数字就需要在显示的数字后面添加上。
@@ -167,7 +167,7 @@ const display = document.querySelector('.calculator__display')
 
 ```
 
-**如果计算器显示0，我们需要用点击按键的数字替换计算器显示屏的数字。** 我们可以通过显示屏的textContent属性进行替换。
+**如果计算器显示0，我们需要用点击按键的数字替换计算器显示屏的数字。** 我们可以通过显示屏的`textContent`属性进行替换。
 ```js
 if (!action) {
   if (displayedNum === '0') {
@@ -362,18 +362,18 @@ const calculate = (n1, operator, n2) => {
 ### 边缘的测试用例
 
 如果需要构建一款足够健壮的计算器，你需要使你的计算器能够适应各种奇怪的输入。
-因此，你需要想象有一个破坏者，他会尝试按照错误的点击顺序来破坏你的计算器。我们就把这个破坏者叫做Tim吧。
+因此，你需要想象有一个破坏者，他会尝试按照错误的点击顺序来破坏你的计算器。我们就把这个破坏者叫做 Tim 吧。
 
-Tim可以按照任何的方式点击这些按键：
+Tim 可以按照任何的方式点击这些按键：
 1.  数字键
 2.  运算符键
 3.  小数点键
 4.  等号键
 5.  清除键
 
-### 当Tim点击小数点键的时候会发生什么呢
+### 当 Tim 点击小数点键的时候会发生什么呢
 
-如果在Tim点击小数点键之前已经有小数点显示在屏幕上了，那么他点击之后将什么都不会发生。
+如果在 Tim 点击小数点键之前已经有小数点显示在屏幕上了，那么他点击之后将什么都不会发生。
 ![](https://cdn-media-1.freecodecamp.org/images/Lbvc-ZcYHO2iWjXIjdYiOVJcmPTmtwkknBw5)
 
 ![](https://cdn-media-1.freecodecamp.org/images/Orj4wS6vgnPAMYFq1xI3DEYXBMS4PWLlSw8a)
@@ -400,7 +400,7 @@ if (!displayedNum.includes('.')) {
 }
 ```
 
-接下来，如果Tim在点击任何操作键之后点击了小数点键，那么应该显示为`0.`。
+接下来，如果 Tim 在点击任何操作键之后点击了小数点键，那么应该显示为`0.`。
 ![](https://cdn-media-1.freecodecamp.org/images/fLLhOqkyFZqsOZIxgMPAkpezrUisGpDKFEsw)
 
 我们需要知道上一个按键是否是操作符键。 我们可以通过上节课设置的自定义属性 `data-previous-key-type `来判断。
@@ -438,7 +438,7 @@ if (action === 'decimal') {
 ![](https://cdn-media-1.freecodecamp.org/images/q3D72rgBjtPOPUltYm1MMIN06dvxGOKyJyUs)
 
 第二种情况，如果 Tim 多次点击同样的操作键，应该什么都不会发生。(我们也已经涵盖了这种边缘情况)。
-**注:** 如果想要提供更好的用户体验，你可以通过CSS来让操作者的反复点击得到反馈。 我们不在这里实现，你可以将这个功能当作一次挑战，看看如何实现。
+**注:** 如果想要提供更好的用户体验，你可以通过 CSS 来让操作者的反复点击得到反馈。 我们不在这里实现，你可以将这个功能当作一次挑战，看看如何实现。
 
 
 ![](https://cdn-media-1.freecodecamp.org/images/IXW7zY77RWE7tNQ6HZMYma73hsxW44EjWg0n)
@@ -491,21 +491,21 @@ if (
 ![](https://cdn-media-1.freecodecamp.org/images/0r9I8Gu7J9pMbfzUG4hL6tU7RCP-cDhsaGp1)
 
 第二个值是计算错误的，因为我们把错误的值输入了`calculate`函数。让我们通过几张图片来了解我们的代码是怎么做的。
-### 理解calculate方法
+### 理解 calculate 方法
 
-首先，我们告诉使用者输入一个数字99，此时，计算器没有储存任何值。
+首先，我们告诉使用者输入一个数字 99，此时，计算器没有储存任何值。
 ![](https://cdn-media-1.freecodecamp.org/images/0hH4Cz5kOEaDOcTQ2PMPmkDl26a8JHSXNrJ7)
 
-接着，我们让使用者点击一下减号键，在他点击减号键之后，我们设置`firstValue`为99，同样的设置`operator`为`subtract`。
+接着，我们让使用者点击一下减号键，在他点击减号键之后，我们设置`firstValue`为 99，同样的设置`operator`为`subtract`。
 ![](https://cdn-media-1.freecodecamp.org/images/0K-KPTzdCBgfVvVaDNcVDYSjXfUO8p5LRs2v)
 
-第三步，假设用户这次输入的数字是1，此时，将显示的数字改成1，但是我们的 `firstValue`，`operator` 和 `secondValue`保持不变。
+第三步，假设用户这次输入的数字是 1，此时，将显示的数字改成1，但是我们的 `firstValue`，`operator` 和 `secondValue`保持不变。
 ![](https://cdn-media-1.freecodecamp.org/images/0MacG-A5Tl7rZeB6NLeNvghVyBpmSqaZQkn9)
 
 第四步，用户再次点击减号键。就在他们点击减法后，在计算结果之前，我们设置`secondValue`作为显示的数字。
 ![](https://cdn-media-1.freecodecamp.org/images/RgDMKK92og4djxxmaYO1HUYiVoetKDK9x0j7)
 
-第五步，我们用`firstValue`99，`operator`减号以及`secondValue`1进行计算，得到结果98。
+第五步，我们用`firstValue` 99，`operator`减号以及`secondValue` 1进行计算，得到结果 98。
  
 计算出结果后，我们将显示设置为结果。然后，我们设置`operator`为减法，`firstValue`为之前显示的数字。
 ![](https://cdn-media-1.freecodecamp.org/images/X3VFJ5ar--k84pP3pM5VDVODvYlX4fCwHcnS)
@@ -586,14 +586,14 @@ if (firstValue) {
 
 ###  修改计算
 
-首先让我们的用户点击数字5，，此时计算器中没有任何被定义过的东西。
+首先让我们的用户点击数字 5，，此时计算器中没有任何被定义过的东西。
 ![](https://cdn-media-1.freecodecamp.org/images/2vf5VGXNZ0vjGkyaY0y22PRTqqHDwgEKvCC3)
 
 
-第二步，让用户点击减号键，再点击减号键之后，我们设置`firstValue`为5，同时设置`operator`为减号。
+第二步，让用户点击减号键，再点击减号键之后，我们设置`firstValue`为 5，同时设置`operator`为减号。
 ![](https://cdn-media-1.freecodecamp.org/images/Fc-QupYbv3HInXqv1vHFCc1avhDe3iyEErhs)
 
-第三步，让用户输入第二个值，假设是数字1。此时，显示的数字应该被更新为1，但是我们的`firstValue，`operator`和`secondValue`是保持不变的。
+第三步，让用户输入第二个值，假设是数字 1。此时，显示的数字应该被更新为1，但是我们的`firstValue，`operator`和`secondValue`是保持不变的。
 ![](https://cdn-media-1.freecodecamp.org/images/lW3CtoXJ1gxpUS5SZM3zh3zmqSB-ksM6E0vr)
 
 第四步，用户点击等号键。紧接着用户点击了等号，但是在计算之前，我们设置`secondValue`为`displayedNum`。
@@ -709,13 +709,8 @@ if (
 
 ```
 
-The clear key has two uses:
 清除键有两种用法：
 
-1.  All Clear (denoted by  `AC`) clears everything and resets the calculator to its initial state.
-2.  Clear entry (denoted by  `CE`) clears the current entry. It keeps previous numbers in memory.
-
-When the calculator is in its default state,  `AC`  should be shown.
 1.  全部清除（用 "AC "表示）清除所有的东西，并将计算器恢复到初始状态。
 2.  清除输入（用 "CE "表示）清除当前的输入。它将以前的数字保留在内存中。
 
@@ -724,7 +719,7 @@ When the calculator is in its default state,  `AC`  should be shown.
 
 首先，如果 Tim 点击了一个键（除了清ad除键之外的任何键），`AC`应该被改成`CE`。
 ![](https://cdn-media-1.freecodecamp.org/images/Hs9tjp3JQIYOaAgh8KDnxj5QShScU0nMkDa7)
-5
+
 我们通过检查`data-action`是不是`clear`来判断，如果不是`clear`，我们找到清除按钮，并改变`textContent`。
 ```js
 if (action !== 'clear') {
@@ -732,7 +727,6 @@ if (action !== 'clear') {
   clearButton.textContent = 'CE'
 }
 ```
-
 
 接下来，如果 Tim 点击`CE`，显示的数字应该为0。与此同时，`CE`应该改为`AC`。所以 Tim 可以将计算器重置到初始状态。
 ![](https://cdn-media-1.freecodecamp.org/images/Dv6SFw5LY8wB0WqTFQBe46-QoraBiq8TvpdY)

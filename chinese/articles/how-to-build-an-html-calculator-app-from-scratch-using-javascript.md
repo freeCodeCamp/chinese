@@ -5,15 +5,15 @@
 
 ![How to build an HTML calculator app from scratch using JavaScript](https://cdn-media-1.freecodecamp.org/images/0*7GfUdSILXBLyAbQy.png)
 
-这是一篇很棒的文章，在这里你可以学习如何从零做出一款计算器。我们希望你使用JavaScript开发并且思考怎么构建一款计算器, 如何编写代码，以及最后，如何整理自己的代码。
+这是一篇很棒的文章，在这里你可以学习如何从零做出一款计算器。我们希望你使用 JavaScript 开发并且思考怎么构建一款计算器, 如何编写代码，以及最后，如何整理自己的代码。
 
-在这篇文章结束，你会得到一款和iPhone计算器功能一样的计算器（除了 +/- 和百分比功能外）。
+在这篇文章结束，你会得到一款和 iPhone 计算器功能一样的计算器（除了 +/- 和百分比功能外）。
 
 ![](https://cdn-media-1.freecodecamp.org/images/Cw7jNVIhWFV4NSNY8-Lv8uX4583Hr5LvzYFq)
 
 ### 前置条件
 
-在你开始本节课程前，请确保你对JavaScript有一个不错的了解。最起码，你需要知道以下事情：
+在你开始本节课程前，请确保你对 JavaScript 有一个不错的了解。最起码，你需要知道以下事情：
 1.  [If/else分支][1]
 2.  [For循环][2]
 3.  [JavaScript函数][3]
@@ -119,7 +119,7 @@ if (
 
 如果这个按键的`data-action`属性是`decimal`，我们就可以知道使用者点击了小数点键。
 
-按照同样的思路，如果键的`data-action`是`clear`，我们知道用户点击了清除（写着AC的那个）键。如果键的`data-action`是`calculate`，我们知道用户点击了等于键。
+按照同样的思路，如果键的`data-action`是`clear`，我们知道用户点击了清除（写着 AC 的那个）键。如果键的`data-action`是`calculate`，我们知道用户点击了等于键。
 ```js
 if (action === 'decimal') {
   console.log('decimal key!')
@@ -137,8 +137,8 @@ if (action === 'clear') {
 
 让我们思考一下，一个普通人拿到一个计算器之后，会做什么呢？**这个普通人会做什么的问题被称作happy path**。
 
-这个普通人我们就称作Mary吧。
-当Mary拿起计算器时，她可能会点击任何一个按键：
+这个普通人我们就称作 Mary 吧。
+当 Mary拿起计算器时，她可能会点击任何一个按键：
 
 1.  一个数字键（0-9）
 2.  一个操作键 （+，-，×，÷）
@@ -187,15 +187,15 @@ if (!action) {
 }
 ```
 
-这时，Mary可能会点击其中一个按键：
+这时，Mary 可能会点击其中一个按键：
 1.  小数点键
 2.  操作符键
 
 
-让我们告诉Mary点击一下小数点键吧。
+让我们告诉 Mary 点击一下小数点键吧。
 ### 当使用者点击小数点键时
 
-当Mary点击了小数点键之后，小数点就需要出现在显示屏上。如果Mary在敲击小数键后敲击任何数字，那么数字也应该添加在显示屏上。
+当 Mary 点击了小数点键之后，小数点就需要出现在显示屏上。如果 Mary 在敲击小数键后敲击任何数字，那么数字也应该添加在显示屏上。
 ![](https://cdn-media-1.freecodecamp.org/images/5Pc6RLFHdPNzPi3BrlXJSs3xrFf2L90A2WXx)
 
 为了实现上述效果，我们需要将`.`添加到已经显示的数字后面。
@@ -205,10 +205,10 @@ if (action === 'decimal') {
 }
 ```
 
-接下来，我们可以让Mary继续点击计算器的操作按键继续她的计算。
+接下来，我们可以让 Mary 继续点击计算器的操作按键继续她的计算。
 ### 当使用者点击操作按钮
 
-如果Mary点击操作按键，这个操作符需要被高亮，这样的话Mary就知道了这个操作符是激活的。
+如果 Mary 点击操作按键，这个操作符需要被高亮，这样的话 Mary 就知道了这个操作符是激活的。
 ![](https://cdn-media-1.freecodecamp.org/images/VarwRgJGrN0mwcgYGpX1Zw54QRfbXdMmQNEG)
 
 为了实现这个功能，我们给操作符按钮添加一个名字叫`is-depressed`的类名。
@@ -223,11 +223,11 @@ if (
 }
 ```
 
-一旦Mary按下了一个操作键，她将会点击另外的数字键。
-
+一旦 Mary 按下了一个操作键，她将会点击另外的数字键。
+ 
 ### 当使用者在点击了操作键后点击了数字键
 
-当Mary再次点击了数字键，之前显示的数字应该被替换成新的数组。操作键也应该被解除“被点击”的状态。
+当 Mary 再次点击了数字键，之前显示的数字应该被替换成新的数组。操作键也应该被解除“被点击”的状态。
 ![](https://cdn-media-1.freecodecamp.org/images/GDuLfupPob7rW0UWTH6RqI5CuQX36vcILKwo)
 
 我们可以使用`forEach`循环遍历所有的按键，去移除`is-depressed`类：
@@ -269,10 +269,10 @@ const previousKeyType = calculator.dataset.previousKeyType
 
 ```
 
-接下来让我们告诉Mary点击等号键来完成她的计算。
+接下来让我们告诉 Mary 点击等号键来完成她的计算。
 ### 当使用者点击等号键时
 
-当Mary点击等号键，计算器应该根据三个值计算一个结果：
+当 Mary 点击等号键，计算器应该根据三个值计算一个结果：
 1.  **第一个**输入计算器中的数字
 2.  **操作符**
 3.  **第二个**输入计算器中的数字
@@ -432,23 +432,23 @@ if (action === 'decimal') {
 
 ```
 
-### 当Tim点击操作符键会发生什么
+### 当 Tim 点击操作符键会发生什么
 
-首先第一种情况，如果Tim首先点击了操作键，那么按键就会高亮。(We’ve already covered for this edge case, but how? See if you can identify what we did).
+首先第一种情况，如果 Tim 首先点击了操作键，那么按键就会高亮。(We’ve already covered for this edge case, but how? See if you can identify what we did).
 ![](https://cdn-media-1.freecodecamp.org/images/q3D72rgBjtPOPUltYm1MMIN06dvxGOKyJyUs)
 
-第二种情况，如果Tim多次点击同样的操作键，应该什么都不会发生。(我们也已经涵盖了这种边缘情况)。
+第二种情况，如果 Tim 多次点击同样的操作键，应该什么都不会发生。(我们也已经涵盖了这种边缘情况)。
 **注:** 如果想要提供更好的用户体验，你可以通过CSS来让操作者的反复点击得到反馈。 我们不在这里实现，你可以将这个功能当作一次挑战，看看如何实现。
 
 
 ![](https://cdn-media-1.freecodecamp.org/images/IXW7zY77RWE7tNQ6HZMYma73hsxW44EjWg0n)
 
 
-情况，如果Tim在点击一个操作键之后又点击了另外一个操作键，那么第一个按的操作键会被解除点击状态，第二次按的操作键应该被设置成按压状态。（我们也覆盖了这种情况，但如何实现的？）
+情况，如果 Tim 在点击一个操作键之后又点击了另外一个操作键，那么第一个按的操作键会被解除点击状态，第二次按的操作键应该被设置成按压状态。（我们也覆盖了这种情况，但如何实现的？）
 ![](https://cdn-media-1.freecodecamp.org/images/Rez20RY9AcS6ORFWIIumk69YWzwTyv8qseM7)
 
 
-第四种情况，如果Tim点击了一个数字键，一个操作键和另外一个操作键，这种情况下，应当直接显示计算之后的结果。
+第四种情况，如果 Tim 点击了一个数字键，一个操作键和另外一个操作键，这种情况下，应当直接显示计算之后的结果。
 ![](https://cdn-media-1.freecodecamp.org/images/MAMWFTkNu6Ho8tlMGyJlTfjCbeYq8rO0bQyR)
 
 这就意味着在`firstValue`，`operator`和`secondValue`三个参数存在时，我们需要调用`calculate`方法。
@@ -483,7 +483,7 @@ if (
 }
 ```
 
-第五种情况，在点击操作键之后计算出一个数字之后，如果Tim又点击了一下数字键，接着又按了下操作键，操作键应该继续之前的结果进行计算，就像这样： `8 - 1 = 7`,  `7 - 2 = 5`,  `5 - 3 = 2`。
+第五种情况，在点击操作键之后计算出一个数字之后，如果 Tim 又点击了一下数字键，接着又按了下操作键，操作键应该继续之前的结果进行计算，就像这样： `8 - 1 = 7`,  `7 - 2 = 5`,  `5 - 3 = 2`。
 ![](https://cdn-media-1.freecodecamp.org/images/RSsXyuKJe0biqkH-WPDdrGLhFBWmyZ2R1J2Y)
 
 现在，我们的计算器不能进行连续计算。第二个计算值是错误的。我们的计算结果是这样的：`99 - 1 = 98`，`98 - 1 = 0`。 `99 - 1 = 98`, `98 - 1 = 0`。
@@ -537,9 +537,9 @@ if (
 修改之后，现在通过操作键进行的连续计算应该是正确的。
 ![](https://cdn-media-1.freecodecamp.org/images/tKZ-VlIHo7dRNHDR2BBxZChE1cgqIuMU0Uh-)
 
-### Tim点击等号键时候发生了什么？
+### Tim 点击等号键时候发生了什么？
 
-第一种情况，Tim在点击等号前没点击过任何操作键，那么什么都不会发生。
+第一种情况，Tim 在点击等号前没点击过任何操作键，那么什么都不会发生。
 ![](https://cdn-media-1.freecodecamp.org/images/FBvnFZadNPXTllID0R7JfAkrsDb5SLcWTUhV)
 
 ![](https://cdn-media-1.freecodecamp.org/images/fKJV0ZqgVf-ppPqrx-70FpByKioVL2T9oAsF)
@@ -557,7 +557,7 @@ if (firstValue) {
 
 ```
 
-第二种情况，如果Tim输入了一个数字，接着又按下了操作键，随后又按了等号键。计算器计算的结果应该是这样：
+第二种情况，如果 Tim 输入了一个数字，接着又按下了操作键，随后又按了等号键。计算器计算的结果应该是这样：
 1.  `2 + =`  —>  `2 + 2 = 4`
 2.  `2 - =`  —>  `2 - 2 = 0`
 3.  `2 × =`  —>  `2 × 2 = 4`
@@ -567,20 +567,20 @@ if (firstValue) {
 
 我们已经处理了这种奇怪的情况，你知道为什么吗？
  
-第三种情况，如果Tim在一次计算完成之后点击了等号键，应该进行另外一次计算，例如这样：
-1.  Tim点击了 `5 - 1`
-2.  Tim点击了等号，计算的值是`5 - 1 = 4`
-3.  Tim点击了等号，计算的值是 `4 - 1 = 3`
-4.  Tim点击了等号，计算的值是 `3 - 1 = 2`
-5.  Tim点击了等号，计算的值是  `2 - 1 = 1`
-6.  Tim点击了等号，计算的值是`1 - 1 = 0`
+第三种情况，如果 Tim 在一次计算完成之后点击了等号键，应该进行另外一次计算，例如这样：
+1.  Tim 点击了 `5 - 1`
+2.  Tim 点击了等号，计算的值是`5 - 1 = 4`
+3.  Tim 点击了等号，计算的值是 `4 - 1 = 3`
+4.  Tim 点击了等号，计算的值是 `3 - 1 = 2`
+5.  Tim 点击了等号，计算的值是  `2 - 1 = 1`
+6.  Tim 点击了等号，计算的值是`1 - 1 = 0`
 
 ![](https://cdn-media-1.freecodecamp.org/images/vB2oVoTXZsMABqV60qqclJhoOxYu2JeVhLx4)
 
 不幸的是，我们的把这个计算弄乱了，下面是我们计算的结果：
 1.  Tim 输入 `5 - 1`
-2.  Tim点击等号，计算结果是`4`  
-3.  Time再点击等号，计算结果是`1` 
+2.  Tim 点击等号，计算结果是`4`  
+3.  Tim 再点击等号，计算结果是`1` 
 
 ![](https://cdn-media-1.freecodecamp.org/images/8roqRbhSH3hLVvtK7t-T2iRsRegqPWSrn4SF)
 
@@ -655,7 +655,7 @@ if (firstValue) {
 ### 回到等号键
 
 
-第四，如果Tim在计算器键后按下小数键或数字键，则应分别用`0.`或新数字代替显示。
+第四，如果 Tim 在计算器键后按下小数键或数字键，则应分别用`0.`或新数字代替显示。
 
 在这里，我们不只检查`previousKeyType`是否是`operator`，还需要检查是否是`calculate`。
 ```js
@@ -682,9 +682,7 @@ if (action === 'decimal') {
   }
 
 ```
-
-Fifth, if Tim hits an operator key right after the equals key, the calculator should  **not**  calculate.
-第五，如果Tim再点击等号之后又点击了操作键，计算器则不应该进行计算。
+第五，如果 Tim 再点击等号之后又点击了操作键，计算器则不应该进行计算。
 ![](https://cdn-media-1.freecodecamp.org/images/uuifuJ41Oo86NXMsPj44RSQf7ExULROc2GaI)
 
 为此，我们在用操作键进行计算之前，先检查 `previousKeyType `是否为 `calculate`。
@@ -724,7 +722,7 @@ When the calculator is in its default state,  `AC`  should be shown.
 当计算器处于默认状态时，应该显示 "AC"。
 ![](https://cdn-media-1.freecodecamp.org/images/22fj2VLJJ1SPexybqdWIqPRkj9JkrlI3AAYl)
 
-首先，如果Tim点击了一个键（除了清ad除键之外的任何键），`AC`应该被改成`CE`。
+首先，如果 Tim 点击了一个键（除了清ad除键之外的任何键），`AC`应该被改成`CE`。
 ![](https://cdn-media-1.freecodecamp.org/images/Hs9tjp3JQIYOaAgh8KDnxj5QShScU0nMkDa7)
 5
 我们通过检查`data-action`是不是`clear`来判断，如果不是`clear`，我们找到清除按钮，并改变`textContent`。
@@ -736,7 +734,7 @@ if (action !== 'clear') {
 ```
 
 
-接下来，如果Tim点击`CE`，显示的数字应该为0。与此同时，`CE`应该改为`AC`。所以Tim可以将计算器重置到初始状态。
+接下来，如果 Tim 点击`CE`，显示的数字应该为0。与此同时，`CE`应该改为`AC`。所以 Tim 可以将计算器重置到初始状态。
 ![](https://cdn-media-1.freecodecamp.org/images/Dv6SFw5LY8wB0WqTFQBe46-QoraBiq8TvpdY)
 
 ```js
@@ -747,7 +745,7 @@ if (action === 'clear') {
 }
 ```
 
-第三，如果Tim点击了`AC`，重置了计算器的状态。
+第三，如果 Tim 点击了`AC`，重置了计算器的状态。
  
 为了将计算器的状态改为初始状态，我们需要清空所有我们设置的自定义属性。
 ```js
@@ -772,8 +770,8 @@ if (action === 'clear') {
 
 When you refactor, you’ll often start with the most obvious improvements. In this case, let’s start with  `calculate`.
 当你重构时，常常会从最明显的地方进行改进。在这种情况下，让我们从`calculate`开始。
-Before continuing on, make sure you know these JavaScript practices/features. We’ll use them in the refactor.
-在重构开始之前，请确保你了解JavaScript的这些特性，我们将在重构中使用到。
+
+在重构开始之前，请确保你了解 JavaScript 的这些特性，我们将在重构中使用到。
 1.  [提前返回][8]
 2.  [三目运算符][9]
 3.  [纯函数][10]

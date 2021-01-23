@@ -5,38 +5,35 @@
 
 ![How to build an HTML calculator app from scratch using JavaScript](https://cdn-media-1.freecodecamp.org/images/0*7GfUdSILXBLyAbQy.png)
 
-This is an epic article where you learn how to build a calculator from scratch. We’ll focus on the JavaScript you need to write—how to think about building the calculator, how to write the code, and eventually, how to clean up your code.
+这是一篇很棒的文章，在这里你可以学习如何从零做出一款计算器。我们希望你使用 JavaScript 开发并且思考怎么构建一款计算器, 如何编写代码，以及最后，如何整理自己的代码。
 
-By the end of the article, you should get a calculator that functions exactly like an iPhone calculator (without the  `+/-`  and percentage functionalities).
+在这篇文章结束，你会得到一款和 iPhone 计算器功能一样的计算器（除了 +/- 和百分比功能外）。
 
 ![](https://cdn-media-1.freecodecamp.org/images/Cw7jNVIhWFV4NSNY8-Lv8uX4583Hr5LvzYFq)
 
-### The prerequisites
+### 前置条件
 
-Before you attempt follow through the lesson, please make sure you have a decent command of JavaScript. Minimally, you need to know these things:
+在你开始本节课程前，请确保你对 JavaScript 有一个不错的了解。最起码，你需要知道以下事情：
+1.  [If/else 分支][1]
+2.  [For 循环][2]
+3.  [JavaScript 函数][3]
+4.  [箭头函数][4]
+5.  `&&`  和  `||`  操作符
+6.  如何使用`textContent`属性修改文本
+7.  如何使用事件代理模式添加事件
 
-1.  [If/else statements][1]
-2.  [For loops][2]
-3.  [JavaScript functions][3]
-4.  [Arrow functions][4]
-5.  `&&`  and  `||`  operators
-6.  How to change the text with the  `textContent`  property
-7.  How to add event listeners with the event delegation pattern
+### 开始之前
 
-### Before you begin
+我建议你在开始课程之前自己尝试下自己开发计算器。这是一个很好的锻炼，因为你会训练自己像开发人员一样思考。
+一旦你尝试了一小时，再回来上这节课（不管你是成功还是失败。当年尝试过，思考过，这会帮助你在更短的时间内吸收本节课的内容）。
 
-I urge you to try and build the calculator yourself before following the lesson. It’s good practice, because you’ll train yourself to think like a developer.
+就这样，我们先来了解下计算器的工作原理。
 
-Come back to this lesson once you’ve tried for one hour (doesn’t matter whether you succeed or fail. When you try, you think, and that’ll help you absorb the lesson in double quick time).
+### 构建计算器
 
-With that, let’s begin by understanding how a calculator works.
+首先，我们想要建立计算器。
 
-### Building the calculator
-
-First, we want to build the calculator.
-
-The calculator consist of two parts: the display and the keys.
-
+这个计算机包含两个部分：显示屏和键盘。
 ![](https://cdn-media-1.freecodecamp.org/images/rfV0r9RtFghhau8sZU5CzOFMuJAT1H48tFeL)
 
 ```html
@@ -45,8 +42,7 @@ The calculator consist of two parts: the display and the keys.
   <div class=”calculator__keys”> … </div>
 </div>
 ```
-
-We can use CSS Grid to make the keys, since they’re arranged in a grid-like format. This has already been done for you in the starter file. You can find the starter file at  [this pen][5].
+我们使用 CSS Grid 去制作键盘部分，因为他们是类似网格的格式进行排列的。这里已经在启动文件中完成了，你可以在以下地址找到启动文件 [此处][5].
 
 ```css
 .calculator__keys { 
@@ -55,8 +51,7 @@ We can use CSS Grid to make the keys, since they’re arranged in a grid-like fo
 }
 ```
 
-To help us identify operator, decimal, clear, and equal keys, we’re going to supply a data-action attribute that describes what they do.
-
+为了帮助我们区分操作符，小数点，清除符号以及等号，我们将设置一个`data-action`属性用来描述他们的功能。
 ```html
 <div class="calculator__keys">
   <button class="key--operator" data-action="add">+</button>
@@ -79,42 +74,37 @@ To help us identify operator, decimal, clear, and equal keys, we’re going to s
 </div>
 ```
 
-### Listening to key-presses
+### 监听键盘点击
 
-Five things can happen when a person gets hold of a calculator. They can hit:
+当一个人拿着几个计算器，他会做五种事情，他们可以点击：
+1.  一个数字键（0-9）
+2.  一个操作键 （+，-，×，÷）
+3.  小数点键
+4.  等号键
+5.  清除键
 
-1.  a number key (0–9)
-2.  an operator key (+, -, ×, ÷)
-3.  the decimal key
-4.  the equals key
-5.  the clear key
-
-The first steps to building this calculator are to be able to (1) listen for all keypresses and (2) determine the type of key that is pressed. In this case, we can use an event delegation pattern to listen, since keys are all children of  `.calculator__keys`.
-
+构建这个计算器的第一步是能够监听所有（1）的按键，确定（2）被按下时候的类型。在这个案例中，我们可以使用事件代理模式去监听，因为所有的按键都是`.calculator__keys`的孩子。
 ```js
-const calculator = document.querySelector(‘.calculator’)
-const keys = calculator.querySelector(‘.calculator__keys’)
+const calculator = document.querySelector('.calculator')
+const keys = calculator.querySelector('.calculator__keys')
 
 
 ```
 
-Next, we can use the  `data-action`  attribute to determine the type of key that is clicked.
-
+接下来，我们利用`data-action`属性去确定点击按键的类型。
 ```js
 const key = e.target
 const action = key.dataset.action
 ```
-
-If the key does not have a  `data-action`  attribute, it must be a number key.
-
+ 
+如果按键没有`data-action`属性，那么它一定是一个数字键。
 ```js
 if (!action) {
   console.log('number key!')
 }
 ```
 
-If the key has a  `data-action`  that is either  `add`,  `subtract`,  `multiply`  or  `divide`, we know the key is an operator.
-
+如果这个按键有`data-action`，它的值是 `add`，`subtract`，`multiply`或者`divide`，我们就可以知道这是一个操作按键。
 ```js
 if (
   action === 'add' ||
@@ -126,10 +116,10 @@ if (
 }
 ```
 
-If the key’s  `data-action`  is  `decimal`, we know the user clicked on the decimal key.
 
-Following the same thought process, if the key’s  `data-action`  is  `clear`, we know the user clicked on the clear (the one that says AC) key. If the key’s  `data-action`  is  `calculate`, we know the user clicked on the equals key.
+如果这个按键的`data-action`属性是`decimal`，我们就可以知道使用者点击了小数点键。
 
+按照同样的思路，如果键的`data-action`是`clear`，我们知道用户点击了清除（写着 AC 的那个）键。如果键的`data-action`是`calculate`，我们知道用户点击了等于键。
 ```js
 if (action === 'decimal') {
   console.log('decimal key!')
@@ -140,50 +130,44 @@ if (action === 'clear') {
 
 ```
 
-At this point, you should get a  `console.log`  response from every calculator key.
-
+在这里，你可以使用`console.log`方法，来响应每个按键的事件。
 ![](https://cdn-media-1.freecodecamp.org/images/lbXTncsu2Ni5V-Ejx6RYCO-kW8XJm7f5woGC)
 
-### Building the happy path
+### 开始构建 happy path
 
-Let’s consider what the average person would do when they pick up a calculator.  **This “what the average person would do” is called the happy path**.
+让我们思考一下，一个普通人拿到一个计算器之后，会做什么呢？**这个普通人会做什么的问题被称作 happy path**。
 
-Let’s call our average person Mary.
+这个普通人我们就称作 Mary 吧。
+当 Mary拿起计算器时，她可能会点击任何一个按键：
 
-When Mary picks up a calculator, she could hit any of these keys:
+1.  一个数字键（0-9）
+2.  一个操作键 （+，-，×，÷）
+3.  小数点键
+4.  等号键
+5.  清除键
 
-1.  a number key (0–9)
-2.  an operator key (+, -, ×, ÷)
-3.  the decimal key
-4.  the equal key
-5.  the clear key
 
-It can be overwhelming to consider five types of keys at once, so let’s take it step by step.
+一下子要思考五种按键可以能不太容易，所以让我们一步一步来。
+### 当使用者按下数字键
 
-### When a user hits a number key
-
-At this point, if the calculator shows 0 (the default number), the target number should replace zero.
-
+如果计算器显示 0（默认数字），此时，目标数字需要替换这个 0。
 ![](https://cdn-media-1.freecodecamp.org/images/mpr4JFLSU-MHaq8LPMedsaDxnU5Y-MTx56SU)
 
-If the calculator shows a non-zero number, the target number should be appended to the displayed number.
-
+如果计算器显示的是非零数字，那么目标数字就需要在显示的数字后面添加上。
 ![](https://cdn-media-1.freecodecamp.org/images/PNfa-nAlgIBtFt1MaVEDvuzisaIps6Kdb482)
 
-Here, we need to know two things:
+现在，我们需要知道两件事情：
+1.  当前被点击的按键的数字。
+2.  当前显示的数字。
 
-1.  The number of the key that was clicked
-2.  The current displayed number
-
-We can get these two values through the  `textContent`  property of the clicked key and  `.calculator__display`  , respectively.
+我们可以通过`textContent`和点击按键的`.calculator__display`分别获取到这两个值。
 
 ```js
 const display = document.querySelector('.calculator__display')
 
 ```
 
-**If the calculator shows 0, we want to replace the calculator’s display with the clicked key.**  We can do so by replacing the display’s textContent property.
-
+**如果计算器显示0，我们需要用点击按键的数字替换计算器显示屏的数字。** 我们可以通过显示屏的`textContent`属性进行替换。
 ```js
 if (!action) {
   if (displayedNum === '0') {
@@ -192,8 +176,7 @@ if (!action) {
 }
 ```
 
-**If the calculator shows a non-zero number, we want to append the clicked key to the displayed number.**  To append a number, we concatenate a string.
-
+**如果计算器显示的是非零数字，我们需要在当前显示的数字后面追加点击键的数字。** 要追加一个数字，我们就需要一个连接字符串。
 ```js
 if (!action) {
   if (displayedNum === '0') {
@@ -204,37 +187,31 @@ if (!action) {
 }
 ```
 
-At this point, Mary may click either of these keys:
+这时，Mary 可能会点击其中一个按键：
+1.  小数点键
+2.  操作符键
 
-1.  A decimal key
-2.  An operator key
 
-Let’s say Mary hits the decimal key.
+让我们告诉 Mary 点击一下小数点键吧。
+### 当使用者点击小数点键时
 
-### When a user hits the decimal key
-
-When Mary hits the decimal key, a decimal should appear on the display. If Mary hits any number after hitting a decimal key, the number should be appended on the display as well.
-
+当 Mary 点击了小数点键之后，小数点就需要出现在显示屏上。如果 Mary 在敲击小数键后敲击任何数字，那么数字也应该添加在显示屏上。
 ![](https://cdn-media-1.freecodecamp.org/images/5Pc6RLFHdPNzPi3BrlXJSs3xrFf2L90A2WXx)
 
-To create this effect, we can concatenate  `.`  to the displayed number.
-
+为了实现上述效果，我们需要将`.`添加到已经显示的数字后面。
 ```js
 if (action === 'decimal') {
   display.textContent = displayedNum + '.'
 }
 ```
 
-Next, let’s say Mary continues her calculation by hitting an operator key.
+接下来，我们可以让 Mary 继续点击计算器的操作按键继续她的计算。
+### 当使用者点击操作按钮
 
-### When a user hits an operator key
-
-If Mary hits an operator key, the operator should be highlighted so Mary knows the operator is active.
-
+如果 Mary 点击操作按键，这个操作符需要被高亮，这样的话 Mary 就知道了这个操作符是激活的。
 ![](https://cdn-media-1.freecodecamp.org/images/VarwRgJGrN0mwcgYGpX1Zw54QRfbXdMmQNEG)
 
-To do so, we can add the  `is-depressed`  class to the operator key.
-
+为了实现这个功能，我们给操作符按钮添加一个名字叫`is-depressed`的类名。
 ```js
 if (
   action === 'add' ||
@@ -246,16 +223,14 @@ if (
 }
 ```
 
-Once Mary has hit an operator key, she’ll hit another number key.
+一旦 Mary 按下了一个操作键，她将会点击另外的数字键。
+ 
+### 当使用者在点击了操作键后点击了数字键
 
-### When a user hits a number key after an operator key
-
-When Mary hits a number key again, the previous display should be replaced with the new number. The operator key should also release its pressed state.
-
+当 Mary 再次点击了数字键，之前显示的数字应该被替换成新的数组。操作键也应该被解除“被点击”的状态。
 ![](https://cdn-media-1.freecodecamp.org/images/GDuLfupPob7rW0UWTH6RqI5CuQX36vcILKwo)
 
-To release the pressed state, we remove the  `is-depressed`  class from all keys through a  `forEach`  loop:
-
+我们可以使用`forEach`循环遍历所有的按键，去移除`is-depressed`类：
 ```js
 keys.addEventListener('click', e => {
   if (e.target.matches('button')) {
@@ -266,10 +241,9 @@ Array<span class="token punctuation" style="box-sizing: inherit; margin: 0px; pa
   <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(221, 74, 104);">forEach</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token parameter" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline;">k</span> <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(154, 110, 58);">=&gt;</span> k<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>classList<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span><span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(221, 74, 104);">remove</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">'is-depressed'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
 ```
 
-Next, we want to update the display to the clicked key. Before we do this, we need a way to tell if the previous key is an operator key.
-
-One way to do this is through a custom attribute. Let’s call this custom attribute  `data-previous-key-type`.
-
+接下来，我们想要把显示的内容更新为之前点击过的按键。在我们做这件事之前，我们需要判断之前的按键是否是一个操作键。
+ 
+我们可以通过自定义属性来实现。让我们定义一个自定义属性`data-previous-key-type`。
 ```js
 const calculator = document.querySelector('.calculator')
 // ...
@@ -289,28 +263,24 @@ keys.addEventListener('click', e => {
 ```
 
 If the  `previousKeyType`  is an operator, we want to replace the displayed number with clicked number.
-
+如果`previousKeyType`是一个操作符，我们希望可以用当前点击的数字替换当前显示的数字。
 ```js
 const previousKeyType = calculator.dataset.previousKeyType
 
 ```
 
-Next, let’s say Mary decides to complete her calculation by hitting the equals key.
+接下来让我们告诉 Mary 点击等号键来完成她的计算。
+### 当使用者点击等号键时
 
-### When a user hits the equals key
+当 Mary 点击等号键，计算器应该根据三个值计算一个结果：
+1.  **第一个**输入计算器中的数字
+2.  **操作符**
+3.  **第二个**输入计算器中的数字
 
-When Mary hits the equals key, the calculator should calculate a result that depends on three values:
-
-1.  The  **first number**  entered into the calculator
-2.  The  **operator**
-3.  The  **second number**  entered into the calculator
-
-After the calculation, the result should replace the displayed value.
-
+在计算之后，结果会替换当前已显示的值出现在屏幕上。
 ![](https://cdn-media-1.freecodecamp.org/images/TMFTHXrjCGzKQBIzBFApP7usoJCjcQ-oz2Jc)
 
-At this point, we only know the  **second number**  — that is, the currently displayed number.
-
+这里我们只知道**第二个数字**是当前已经显示的数字。
 ```js
 if (action === 'calculate') {
   const secondValue = displayedNum
@@ -318,10 +288,9 @@ if (action === 'calculate') {
 }
 ```
 
-To get the  **first number**, we need to store the calculator’s displayed value before we wipe it clean. One way to save this first number is to add it to a custom attribute when the operator button gets clicked.
+为了获取**第一个数字**，我们需要储存之前在计算器上被我们已经清除了的值。我们可以添加一个自定义的属性，在我们点击操作键是储存第一个值。
 
-To get the  **operator**, we can also use the same technique.
-
+获取**操作符**，我们可以使用同样的方法。
 ```js
 if (
   action === 'add' ||
@@ -335,8 +304,7 @@ if (
 }
 ```
 
-Once we have the three values we need, we can perform a calculation. Eventually, we want the code to look something like this:
-
+一旦我们得到了三个我们需要的值，接下来我们就可以进行计算。最终，我们需要实现这样的代码：
 ```js
 if (action === 'calculate') {
   const firstValue = calculator.dataset.firstValue
@@ -345,16 +313,14 @@ if (action === 'calculate') {
 
 ```
 
-That means we need to create a  `calculate`  function. It should take in three parameters: the first number, the operator, and the second number.
-
+接下来我们需要构建一个`calculate`方法。它需要接收**第一个数字**，**操作符**和**第二个数字**三个参数。
 ```js
 const calculate = (n1, operator, n2) => {
   // Perform calculation and return calculated value
 }
 ```
 
-If the operator is  `add`, we want to add values together. If the operator is  `subtract`, we want to subtract the values, and so on.
-
+如果操作符是`add`，我们希望两个数字可以相加在一起。如果操作符是 `subtract`，则希望两个数字相减，其余的操作符也是如此。
 ```js
 const calculate = (n1, operator, n2) => {
   let result = ''
@@ -370,15 +336,13 @@ const calculate = (n1, operator, n2) => {
 
 ```
 
-Remember that  `firstValue`  and  `secondValue`  are strings at this point. If you add strings together, you’ll concatenate them (`1 + 1 = 11`).
+请记住现在的`第一个数字`和`第二个数字`都是字符串。如果你进行字符串相加的话，一会把它们连在一起 (`1 + 1 = 11`)。
 
-So, before calculating the result, we want to convert strings to numbers. We can do so with the two functions  `parseInt`  and  `parseFloat`.
-
+所以在计算结果之前，我们需要将字符串类型转换成数字类型。我们可以使用`parseInt`和`parseFloat`两个方法来实现。
 -   `parseInt`  converts a string into an  **integer**.
 -   `parseFloat`  converts a string into a  **float**  (this means a number with decimal places).
 
-For a calculator, we need a float.
-
+对于计算器来说，我们需要浮点数。
 ```js
 const calculate = (n1, operator, n2) => {
   let result = ''
@@ -393,36 +357,33 @@ const calculate = (n1, operator, n2) => {
   }
 
 ```
+ 
+你可以通过 [这个链接][6] 获取源代码（往下滚动，在方框里输入你的邮箱地址，我就会把源代码直接发到你的邮箱里）。
+### 边缘的测试用例
 
-That’s it for the happy path!
+如果需要构建一款足够健壮的计算器，你需要使你的计算器能够适应各种奇怪的输入。
+因此，你需要想象有一个破坏者，他会尝试按照错误的点击顺序来破坏你的计算器。我们就把这个破坏者叫做 Tim 吧。
 
-You can grab the source code for the happy path through  [this link][6]  (scroll down and enter your email address in the box, and I’ll send the source codes right to your mailbox).
+Tim 可以按照任何的方式点击这些按键：
+1.  数字键
+2.  运算符键
+3.  小数点键
+4.  等号键
+5.  清除键
 
-### The edge cases
+### 当 Tim 点击小数点键的时候会发生什么呢
 
-The hapy path isn’t enough. To build a calculator that’s robust, you need to make your calculator resilient to weird input patterns. To do so, you have to imagine a troublemaker who tries to break your calculator by hitting keys in the wrong order. Let’s call this troublemaker Tim.
-
-Tim can hit these keys in any order:
-
-1.  A number key (0–9)
-2.  An operator key (+, -, ×, ÷)
-3.  The decimal key
-4.  The equals key
-5.  The clear key
-
-### What happens if Tim hits the decimal key
-
-If Tim hits a decimal key when the display already shows a decimal point, nothing should happen.
-
+如果在 Tim 点击小数点键之前已经有小数点显示在屏幕上了，那么他点击之后将什么都不会发生。
 ![](https://cdn-media-1.freecodecamp.org/images/Lbvc-ZcYHO2iWjXIjdYiOVJcmPTmtwkknBw5)
 
 ![](https://cdn-media-1.freecodecamp.org/images/Orj4wS6vgnPAMYFq1xI3DEYXBMS4PWLlSw8a)
 
-Here, we can check that the displayed number contains a  `.`  with the  `includes`  method.
+ 
+我们可以利用`includes`方法检查是否已经包含`.`。
+ 
+`includes`方法会检查字符串是否匹配。如果找到一个字符串，它返回 "true"；如果没有，它返回 "false"。
 
-`includes`  checks strings for a given match. If a string is found, it returns  `true`; if not, it returns  `false`.
-
-**Note**:  `includes`  is case sensitive.
+**注**:  `includes`区分大小写。
 
 ```js
 // Example of how includes work.
@@ -431,8 +392,7 @@ const hasExclaimation = string.includes('!')
 console.log(hasExclaimation) // true
 ```
 
-To check if the string already has a dot, we do this:
-
+检查字符串中是否包含小数点的方法如下：
 ```js
 // Do nothing if string has a dot
 if (!displayedNum.includes('.')) {
@@ -440,14 +400,11 @@ if (!displayedNum.includes('.')) {
 }
 ```
 
-Next, if Tim hits the decimal key after hitting an operator key, the display should show  `0.`.
-
+接下来，如果 Tim 在点击任何操作键之后点击了小数点键，那么应该显示为`0.`。
 ![](https://cdn-media-1.freecodecamp.org/images/fLLhOqkyFZqsOZIxgMPAkpezrUisGpDKFEsw)
 
-Here we need to know if the previous key is an operator. We can tell by checking the the custom attribute,  `data-previous-key-type`, we set in the previous lesson.
-
-`data-previous-key-type`  is not complete yet. To correctly identify if  `previousKeyType`  is an operator, we need to update  `previousKeyType`  for each clicked key.
-
+我们需要知道上一个按键是否是操作符键。 我们可以通过上节课设置的自定义属性 `data-previous-key-type `来判断。
+当然`data-previous-key-type`还没有完成，为了判断`previousKeyType`是否是操作符，我们还需要在每次点击按键时更新`previousKeyType`。
 ```js
 if (!action) {
   // ...
@@ -464,8 +421,7 @@ if (action === 'clear') {
 
 ```
 
-Once we have the correct  `previousKeyType`, we can use it to check if the previous key is an operator.
-
+现在，我们正确的获取了`previousKeyType`，我们可以使用它来判断上一次按键是否是操作符键。
 ```js
 if (action === 'decimal') {
   if (!displayedNum.includes('.')) {
@@ -476,28 +432,26 @@ if (action === 'decimal') {
 
 ```
 
-### What happens if Tim hits an operator key
+### 当 Tim 点击操作符键会发生什么
 
-If Tim hits an operator key first, the operator key should light up. (We’ve already covered for this edge case, but how? See if you can identify what we did).
-
+首先第一种情况，如果 Tim 首先点击了操作键，那么按键就会高亮。(We’ve already covered for this edge case, but how? See if you can identify what we did).
 ![](https://cdn-media-1.freecodecamp.org/images/q3D72rgBjtPOPUltYm1MMIN06dvxGOKyJyUs)
 
-Second, nothing should happen if Tim hits the same operator key multiple times. (We’ve already covered for this edge case as well).
+第二种情况，如果 Tim 多次点击同样的操作键，应该什么都不会发生。(我们也已经涵盖了这种边缘情况)。
+**注:** 如果想要提供更好的用户体验，你可以通过 CSS 来让操作者的反复点击得到反馈。 我们不在这里实现，你可以将这个功能当作一次挑战，看看如何实现。
 
-**Note:**  if you want to provide better UX, you can show the operator getting clicked on repeatedly with some CSS changes. We didn’t do it here, but see if you can program that yourself as an extra coding challenge.
 
 ![](https://cdn-media-1.freecodecamp.org/images/IXW7zY77RWE7tNQ6HZMYma73hsxW44EjWg0n)
 
-Third, if Tim hits another operator key after hitting the first operator key, the first operator key should be released. Then, the second operator key should be depressed. (We covered for this edge case too — but how?).
 
+情况，如果 Tim 在点击一个操作键之后又点击了另外一个操作键，那么第一个按的操作键会被解除点击状态，第二次按的操作键应该被设置成按压状态。（我们也覆盖了这种情况，但如何实现的？）
 ![](https://cdn-media-1.freecodecamp.org/images/Rez20RY9AcS6ORFWIIumk69YWzwTyv8qseM7)
 
-Fourth, if Tim hits a number, an operator, a number and another operator, in that order, the display should be updated to a calculated value.
 
+第四种情况，如果 Tim 点击了一个数字键，一个操作键和另外一个操作键，这种情况下，应当直接显示计算之后的结果。
 ![](https://cdn-media-1.freecodecamp.org/images/MAMWFTkNu6Ho8tlMGyJlTfjCbeYq8rO0bQyR)
 
-This means we need to use the  `calculate`  function when  `firstValue`,  `operator`  and  `secondValue`  exist.
-
+这就意味着在`firstValue`，`operator`和`secondValue`三个参数存在时，我们需要调用`calculate`方法。
 ```js
 if (
   action === 'add' ||
@@ -515,12 +469,10 @@ if (
 
 ```
 
-Although we can calculate a value when the operator key is clicked for a second time, we have also introduced a bug at this point — additional clicks on the operator key calculates a value when it shouldn’t.
-
+尽管我们在第二次点击操作键的时候我们可以得到一个计算的值，但这里依然有一个bug存在————额外点击操作键会计算出一个不应该的值。
 ![](https://cdn-media-1.freecodecamp.org/images/8ktjtHeYaRTEn-lPbOM3fhEg3qrvDl5WfOVY)
 
-To prevent the calculator from performing a calculation on subsequent clicks on the operator key, we need to check if the  `previousKeyType`  is an operator. If it is, we don’t perform a calculation.
-
+为了防止计算器在后续点击操作键时进行计算，我们需要检查 `previousKeyType `是否是一个操作键。如果是，我们不执行计算。
 ```js
 if (
   firstValue &&
@@ -531,41 +483,34 @@ if (
 }
 ```
 
-Fifth, after the operator key calculates a number, if Tim hits on a number, followed by another operator, the operator should continue with the calculation, like this:  `8 - 1 = 7`,  `7 - 2 = 5`,  `5 - 3 = 2`.
-
+第五种情况，在点击操作键之后计算出一个数字之后，如果 Tim 又点击了一下数字键，接着又按了下操作键，操作键应该继续之前的结果进行计算，就像这样： `8 - 1 = 7`,  `7 - 2 = 5`,  `5 - 3 = 2`。
 ![](https://cdn-media-1.freecodecamp.org/images/RSsXyuKJe0biqkH-WPDdrGLhFBWmyZ2R1J2Y)
 
-Right now, our calculator cannot make consecutive calculations. The second calculated value is wrong. Here’s what we have:  `99 - 1 = 98`,  `98 - 1 = 0`.
+现在，我们的计算器不能进行连续计算。第二个计算值是错误的。我们的计算结果是这样的：`99 - 1 = 98`，`98 - 1 = 0`。 `99 - 1 = 98`, `98 - 1 = 0`。
 
 ![](https://cdn-media-1.freecodecamp.org/images/0r9I8Gu7J9pMbfzUG4hL6tU7RCP-cDhsaGp1)
 
-The second value is calculated wrongly, because we fed the wrong values into the  `calculate`  function. Let’s go through a few pictures to understand what our code does.
+第二个值是计算错误的，因为我们把错误的值输入了`calculate`函数。让我们通过几张图片来了解我们的代码是怎么做的。
+### 理解 calculate 方法
 
-### Understanding our calculate function
-
-First, let’s say a user clicks on a number, 99. At this point, nothing is registered in the calculator yet.
-
+首先，我们告诉使用者输入一个数字 99，此时，计算器没有储存任何值。
 ![](https://cdn-media-1.freecodecamp.org/images/0hH4Cz5kOEaDOcTQ2PMPmkDl26a8JHSXNrJ7)
 
-Second, let’s say the user clicks the subtract operator. After they click the subtract operator, we set  `firstValue`  to 99. We set also  `operator`  to subtract.
-
+接着，我们让使用者点击一下减号键，在他点击减号键之后，我们设置`firstValue`为 99，同样的设置`operator`为`subtract`。
 ![](https://cdn-media-1.freecodecamp.org/images/0K-KPTzdCBgfVvVaDNcVDYSjXfUO8p5LRs2v)
 
-Third, let’s say the user clicks on a second value — this time, it’s 1. At this point, the displayed number gets updated to 1, but our  `firstValue`,  `operator`  and  `secondValue`  remain unchanged.
-
+第三步，假设用户这次输入的数字是 1，此时，将显示的数字改成1，但是我们的 `firstValue`，`operator` 和 `secondValue`保持不变。
 ![](https://cdn-media-1.freecodecamp.org/images/0MacG-A5Tl7rZeB6NLeNvghVyBpmSqaZQkn9)
 
-Fourth, the user clicks on subtract again. Right after they click subtract, before we calculate the result, we set  `secondValue`  as the displayed number.
-
+第四步，用户再次点击减号键。就在他们点击减法后，在计算结果之前，我们设置`secondValue`作为显示的数字。
 ![](https://cdn-media-1.freecodecamp.org/images/RgDMKK92og4djxxmaYO1HUYiVoetKDK9x0j7)
 
-Fifth, we perform the calculation with  `firstValue`  99,  `operator`  subtract, and  `secondValue`  1\. The result is 98.
-
-Once the result is calculated, we set the display to the result. Then, we set  `operator`  to subtract, and  `firstValue`  to the previous displayed number.
-
+第五步，我们用`firstValue` 99，`operator`减号以及`secondValue` 1进行计算，得到结果 98。
+ 
+计算出结果后，我们将显示设置为结果。然后，我们设置`operator`为减法，`firstValue`为之前显示的数字。
 ![](https://cdn-media-1.freecodecamp.org/images/X3VFJ5ar--k84pP3pM5VDVODvYlX4fCwHcnS)
 
-Well, that’s terribly wrong! If we want to continue with the calculation, we need to update  `firstValue`  with the calculated value.
+好吧，这是非常错误的！如果我们想继续计算，我们需要用计算值更新`firstValue`。如果我们想继续计算，我们需要用计算值更新`firstValue`。
 
 ![](https://cdn-media-1.freecodecamp.org/images/gp-lkqhUOjoo46fIwx-7oLtbV7CP7jZwzc9y)
 
@@ -589,19 +534,17 @@ if (
 
 ```
 
-With this fix, consecutive calculations done by operator keys should now be correct.
-
+修改之后，现在通过操作键进行的连续计算应该是正确的。
 ![](https://cdn-media-1.freecodecamp.org/images/tKZ-VlIHo7dRNHDR2BBxZChE1cgqIuMU0Uh-)
 
-### What happens if Tim hits the equals key?
+### Tim 点击等号键时候发生了什么？
 
-First, nothing should happen if Tim hits the equals key before any operator keys.
-
+第一种情况，Tim 在点击等号前没点击过任何操作键，那么什么都不会发生。
 ![](https://cdn-media-1.freecodecamp.org/images/FBvnFZadNPXTllID0R7JfAkrsDb5SLcWTUhV)
 
 ![](https://cdn-media-1.freecodecamp.org/images/fKJV0ZqgVf-ppPqrx-70FpByKioVL2T9oAsF)
 
-We know that operator keys have not been clicked yet if  `firstValue`  is not set to a number. We can use this knowledge to prevent the equals from calculating.
+我们知道，如果`firstValue`没有设置为数字，也就代表操作键还没有被点击。我们可以利用这个点来防止等号进行计算。
 
 ```js
 if (action === 'calculate') {
@@ -614,8 +557,7 @@ if (firstValue) {
 
 ```
 
-Second, if Tim hits a number, followed by an operator, followed by a equals, the calculator should calculate the result such that:
-
+第二种情况，如果 Tim 输入了一个数字，接着又按下了操作键，随后又按了等号键。计算器计算的结果应该是这样：
 1.  `2 + =`  —>  `2 + 2 = 4`
 2.  `2 - =`  —>  `2 - 2 = 0`
 3.  `2 × =`  —>  `2 × 2 = 4`
@@ -623,57 +565,50 @@ Second, if Tim hits a number, followed by an operator, followed by a equals, the
 
 ![](https://cdn-media-1.freecodecamp.org/images/MUgIi0ck8OJRV18hfJ-kdn8k7Ydyy5mDvV6z)
 
-We have already taken this weird input into account. Can you understand why? :)
-
-Third, if Tim hits the equals key after a calculation is completed, another calculation should be performed again. Here’s how the calculation should read:
-
-1.  Tim hits keys 5–1
-2.  Tim hits equal. Calculated value is  `5 - 1 = 4`
-3.  Tim hits equal. Calculated value is  `4 - 1 = 3`
-4.  Tim hits equal. Calculated value is  `3 - 1 = 2`
-5.  Tim hits equal. Calculated value is  `2 - 1 = 1`
-6.  Tim hits equal. Calculated value is  `1 - 1 = 0`
+我们已经处理了这种奇怪的情况，你知道为什么吗？
+ 
+第三种情况，如果 Tim 在一次计算完成之后点击了等号键，应该进行另外一次计算，例如这样：
+1.  Tim 点击了 `5 - 1`
+2.  Tim 点击了等号，计算的值是`5 - 1 = 4`
+3.  Tim 点击了等号，计算的值是 `4 - 1 = 3`
+4.  Tim 点击了等号，计算的值是 `3 - 1 = 2`
+5.  Tim 点击了等号，计算的值是  `2 - 1 = 1`
+6.  Tim 点击了等号，计算的值是`1 - 1 = 0`
 
 ![](https://cdn-media-1.freecodecamp.org/images/vB2oVoTXZsMABqV60qqclJhoOxYu2JeVhLx4)
 
-Unfortunately, our calculator messes this calculation up. Here’s what our calculator shows:
-
-1.  Tim hits key 5–1
-2.  Tim hits equal. Calculated value is  `4`
-3.  Tim hits equal. Calculated value is  `1`
+不幸的是，我们的把这个计算弄乱了，下面是我们计算的结果：
+1.  Tim 输入 `5 - 1`
+2.  Tim 点击等号，计算结果是`4`  
+3.  Tim 再点击等号，计算结果是`1` 
 
 ![](https://cdn-media-1.freecodecamp.org/images/8roqRbhSH3hLVvtK7t-T2iRsRegqPWSrn4SF)
 
-### Correcting the calculation
+###  修改计算
 
-First, let’s say our user clicks 5. At this point, nothing is registered in the calculator yet.
-
+首先让我们的用户点击数字 5，，此时计算器中没有任何被定义过的东西。
 ![](https://cdn-media-1.freecodecamp.org/images/2vf5VGXNZ0vjGkyaY0y22PRTqqHDwgEKvCC3)
 
-Second, let’s say the user clicks the subtract operator. After they click the subtract operator, we set  `firstValue`  to 5. We set also  `operator`  to subtract.
 
+第二步，让用户点击减号键，再点击减号键之后，我们设置`firstValue`为 5，同时设置`operator`为减号。
 ![](https://cdn-media-1.freecodecamp.org/images/Fc-QupYbv3HInXqv1vHFCc1avhDe3iyEErhs)
 
-Third, the user clicks on a second value. Let’s say it’s 1. At this point, the displayed number gets updated to 1, but our  `firstValue`,  `operator`  and  `secondValue`  remain unchanged.
-
+第三步，让用户输入第二个值，假设是数字 1。此时，显示的数字应该被更新为1，但是我们的`firstValue，`operator`和`secondValue`是保持不变的。
 ![](https://cdn-media-1.freecodecamp.org/images/lW3CtoXJ1gxpUS5SZM3zh3zmqSB-ksM6E0vr)
 
-Fourth, the user clicks the equals key. Right after they click equals, but before the calculation, we set  `secondValue`  as  `displayedNum`
-
+第四步，用户点击等号键。紧接着用户点击了等号，但是在计算之前，我们设置`secondValue`为`displayedNum`。
+第四，用户点击等号键后，我们设置`secondValue`为`displayNum`。就在他们点击等号之后，但在计算之前，我们设置`secondValue`为`displayedNum`。
 ![](https://cdn-media-1.freecodecamp.org/images/yeQCYcu0ecbNbJlHa9aqEZopHj-FyTqXuRmw)
 
-Fifth, the calculator calculates the result of  `5 - 1`  and gives  `4`. The result gets updated to the display.  `firstValue`  and  `operator`  get carried forward to the next calculation since we did not update them.
-
+第五，计算器计算`5-1`并且得到结果`4`。得到结果并将显示的数字更新。`firstValue`和`operator`会在下一次计算中使用，因为我们没有更新它们。
 ![](https://cdn-media-1.freecodecamp.org/images/YOsfq7AWCs0YbABkiebax-oaQVGc5tWsNyXJ)
 
-Sixth, when the user hits equals again, we set  `secondValue`  to  `displayedNum`  before the calculation.
-
+第六，当用户再次点击等号键，我们在计算之前把`secondValue`设置成`displayNum`。
 ![](https://cdn-media-1.freecodecamp.org/images/BF7tBEUHJN4gnIwQqUTq9ctHIUIVcYM026Ro)
 
-You can tell what’s wrong here.
+这里有一个问题。
 
-Instead of  `secondValue`, we want the set  `firstValue`  to the displayed number.
-
+我们要的不是 "secondValue"，而是设置 "firstValue "为显示的数字。
 ```js
 if (action === 'calculate') {
   let firstValue = calculator.dataset.firstValue
@@ -688,8 +623,7 @@ display.textContent = calculate(firstValue, operator, secondValue)
 
 ```
 
-We also want to carry forward the previous  `secondValue`  into the new calculation. For  `secondValue`  to persist to the next calculation, we need to store it in another custom attribute. Let’s call this custom attribute  `modValue`  (stands for modifier value).
-
+我们可能也想把上一次计算的`secondValue`带到下一次计算当中。为了做到这个功能，我们需要利用另外的自定义属性来存储它。让我们来定义一个叫`modValue`的属性。
 ```js
 if (action === 'calculate') {
   let firstValue = calculator.dataset.firstValue
@@ -704,8 +638,7 @@ display.textContent = calculate(firstValue, operator, secondValue)
 
 ```
 
-If the  `previousKeyType`  is  `calculate`, we know we can use  `calculator.dataset.modValue`  as  `secondValue`. Once we know this, we can perform the calculation.
-
+如果`previousKeyType`是`calculate`，我可以使用 `calculator.dataset.modValue`作为`secondValue`。知道这个的话，我们就可以进行计算
 ```js
 if (firstValue) {
   if (previousKeyType === 'calculate') {
@@ -715,16 +648,16 @@ if (firstValue) {
 
 ```
 
-With that, we have the correct calculation when the equals key is clicked consecutively.
+这样一来，当连续点击等号键时，我们就有了正确的计算方法。
 
 ![](https://cdn-media-1.freecodecamp.org/images/sjYX-ImohfhbFFbw1-FqmKagBvfFQKm0PzAu)
 
-### Back to the equals key
+### 回到等号键
 
-Fourth, if Tim hits a decimal key or a number key after the calculator key, the display should be replaced with  `0.`  or the new number respectively.
 
-Here, instead of just checking if the  `previousKeyType`  is  `operator`, we also need to check if it’s  `calculate`.
+第四，如果 Tim 在计算器键后按下小数键或数字键，则应分别用`0.`或新数字代替显示。
 
+在这里，我们不只检查`previousKeyType`是否是`operator`，还需要检查是否是`calculate`。
 ```js
 if (!action) {
   if (
@@ -749,13 +682,10 @@ if (action === 'decimal') {
   }
 
 ```
-
-Fifth, if Tim hits an operator key right after the equals key, the calculator should  **not**  calculate.
-
+第五，如果 Tim 再点击等号之后又点击了操作键，计算器则不应该进行计算。
 ![](https://cdn-media-1.freecodecamp.org/images/uuifuJ41Oo86NXMsPj44RSQf7ExULROc2GaI)
 
-To do this, we check if the  `previousKeyType`  is  `calculate`  before performing calculations with operator keys.
-
+为此，我们在用操作键进行计算之前，先检查 `previousKeyType `是否为 `calculate`。
 ```js
 if (
   action === 'add' ||
@@ -779,21 +709,18 @@ if (
 
 ```
 
-The clear key has two uses:
+清除键有两种用法：
 
-1.  All Clear (denoted by  `AC`) clears everything and resets the calculator to its initial state.
-2.  Clear entry (denoted by  `CE`) clears the current entry. It keeps previous numbers in memory.
+1.  全部清除（用 "AC "表示）清除所有的东西，并将计算器恢复到初始状态。
+2.  清除输入（用 "CE "表示）清除当前的输入。它将以前的数字保留在内存中。
 
-When the calculator is in its default state,  `AC`  should be shown.
-
+当计算器处于默认状态时，应该显示 "AC"。
 ![](https://cdn-media-1.freecodecamp.org/images/22fj2VLJJ1SPexybqdWIqPRkj9JkrlI3AAYl)
 
-First, if Tim hits a key (any key except clear),  `AC`  should be changed to  `CE`.
-
+首先，如果 Tim 点击了一个键（除了清ad除键之外的任何键），`AC`应该被改成`CE`。
 ![](https://cdn-media-1.freecodecamp.org/images/Hs9tjp3JQIYOaAgh8KDnxj5QShScU0nMkDa7)
 
-We do this by checking if the  `data-action`  is  `clear`. If it’s not  `clear`, we look for the clear button and change its  `textContent`.
-
+我们通过检查`data-action`是不是`clear`来判断，如果不是`clear`，我们找到清除按钮，并改变`textContent`。
 ```js
 if (action !== 'clear') {
   const clearButton = calculator.querySelector('[data-action=clear]')
@@ -801,8 +728,7 @@ if (action !== 'clear') {
 }
 ```
 
-Second, if Tim hits  `CE`, the display should read 0. At the same time,  `CE`  should be reverted to  `AC`  so Tim can reset the calculator to its initial state.\*\*
-
+接下来，如果 Tim 点击`CE`，显示的数字应该为0。与此同时，`CE`应该改为`AC`。所以 Tim 可以将计算器重置到初始状态。
 ![](https://cdn-media-1.freecodecamp.org/images/Dv6SFw5LY8wB0WqTFQBe46-QoraBiq8TvpdY)
 
 ```js
@@ -813,10 +739,9 @@ if (action === 'clear') {
 }
 ```
 
-Third, if Tim hits  `AC`, reset the calculator to its initial state.
-
-To reset the calculator to its initial state, we need to clear all custom attributes we’ve set.
-
+第三，如果 Tim 点击了`AC`，重置了计算器的状态。
+ 
+为了将计算器的状态改为初始状态，我们需要清空所有我们设置的自定义属性。
 ```js
 if (action === 'clear') {
   if (key.textContent === 'AC') {
@@ -830,29 +755,26 @@ if (action === 'clear') {
 
 ```
 
-That’s it — for the edge cases portion, anyway!
+就是这样~反正是边缘用例！
 
-You can grab the source code for the edge cases part through  [this link][7]  (scroll down and enter your email address in the box, and I’ll send the source codes right to your mailbox).
+你可以通过这个连接获取源码 [这个链接][7] （滚动到最下面然后输入你的邮箱地址，我将会发送源码到你的邮箱）。
 
-At this point, the code we created together is quite confusing. You’ll probably get lost if you try to read the code on your own. Let’s refactor it to make it cleaner.
-
-### Refactoring the code
+我们创建的代码是相当混乱的。如果你尝试自己阅读代码可能会比较混乱，让我们一起重构一下它。
+### 重构代码
 
 When you refactor, you’ll often start with the most obvious improvements. In this case, let’s start with  `calculate`.
+当你重构时，常常会从最明显的地方进行改进。在这种情况下，让我们从`calculate`开始。
 
-Before continuing on, make sure you know these JavaScript practices/features. We’ll use them in the refactor.
+在重构开始之前，请确保你了解 JavaScript 的这些特性，我们将在重构中使用到。
+1.  [提前返回][8]
+2.  [三目运算符][9]
+3.  [纯函数][10]
+4.  [ES6][11]
 
-1.  [Early returns][8]
-2.  [Ternary operators][9]
-3.  [Pure functions][10]
-4.  [ES6 Destructuring][11]
+让我们开始吧！
+### 重构计算方法
 
-With that, let’s begin!
-
-### Refactoring the calculate function
-
-Here’s what we have so far.
-
+这是我们目前知道的。
 ```js
 const calculate = (n1, operator, n2) => {
   let result = ''
@@ -868,7 +790,7 @@ const calculate = (n1, operator, n2) => {
 
 ```
 
-You learned that we should reduce reassignments as much as possible. Here, we can remove assignments if we return the result of the calculation within the  `if`  and  `else if`  statements:
+你知道的，我们应该尽可能的减少赋值操作。在这里，如果在`if`和`else if`中返回计算结果的话，我们就可以删除赋值语句：
 
 ```js
 const calculate = (n1, operator, n2) => {
@@ -884,8 +806,7 @@ const calculate = (n1, operator, n2) => {
 }
 ```
 
-Since we return all values, we can use  **early returns**. If we do so, there’s no need for any  `else if`  conditions.
-
+由于所有的情况都需要返回结果，我们可以使用**提前返回**。如果这样，就不需要任何的`else if`条件。
 ```js
 const calculate = (n1, operator, n2) => {
   if (operator === 'add') {
@@ -900,8 +821,7 @@ const calculate = (n1, operator, n2) => {
 
 ```
 
-And since we have one statement per  `if`  condition, we can remove the brackets. (Note: some developers swear by curly brackets, though). Here's what the code would look like:
-
+由于我们每个`if`条件只有一条语句，我们可以去掉括号。（注意：有些开发人员发誓要用大括号）。下面是代码的样子。
 ```js
 const calculate = (n1, operator, n2) => {
   if (operator === 'add') return parseFloat(n1) + parseFloat(n2)
@@ -911,8 +831,7 @@ const calculate = (n1, operator, n2) => {
 }
 ```
 
-Finally, we called  `parseFloat`  eight times in the function. We can simplify it by creating two variables to contain float values:
-
+最后，我们在函数中调用了八次`parseFloat`。我们可以通过创建两个变量来包含浮点值来简化它：
 ```js
 const calculate = (n1, operator, n2) => {
   const firstNum = parseFloat(n1)
@@ -924,12 +843,9 @@ const calculate = (n1, operator, n2) => {
 }
 ```
 
-We’re done with  `calculate`  now. Don't you think it's easier to read compared to before?
-
-### Refactoring the event listener
-
-The code we created for the event listener is huge. Here’s what we have at the moment:
-
+`calculate`的重构工作就到此为止了，你不觉得比以前更容易阅读吗？
+### 重构事件监听
+代码中用来进行事件监听的部分太冗余了，这是我们目前的情况：
 ```js
 keys.addEventListener('click', e => {
   if (e.target.matches('button')) {
@@ -947,8 +863,7 @@ keys.addEventListener('click', e => {
 <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(0, 119, 170);">if</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>action <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(154, 110, 58);">===</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(102, 153, 0);">'calculate'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span> <span class="token comment" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(112, 128, 144);">/* ... */</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span>
 ```
 
-How do you begin refactoring this piece of code? If you don’t know any programming best practices, you may be tempted to refactor by splitting up each kind of action into a smaller function:
-
+如何开始重构这段代码呢？如果你不了解任何更好的代码写法。你可能会把每种操作细分来重构这部分代码：
 ```js
 // Don't do this!
 const handleNumberKeys = (/* ... /) => {/ ... /}
@@ -958,10 +873,9 @@ const handleClearKey = (/ ... /) => {/ ... /}
 const handleCalculateKey = (/ ... /) => {/ ... /}
 ```
 
-_Don’t do this. It doesn’t help, because you’re merely splitting up blocks of code. When you do so, the function gets harder to read._
+不要做这些，这没有帮助的，因为你仅仅是把代码块分割了，当你做这些，函数将会更难读。
 
-_A better way is to split the code into pure and impure functions. If you do so, you’ll get code that looks like this:_
-
+更好的方法是把代码分成纯函数和不纯函数。如果你这样做，你将得到这样的代码：
 _`keys.addEventListener('click', e => {
   // Pure function
   const resultString = createResultString(/`_ `... */)` 
@@ -971,30 +885,24 @@ _`keys.addEventListener('click', e => {
   updateCalculatorState(/* ... */)
 })`
 
-Here,  `createResultString`  is a pure function that returns what needs to be displayed on the calculator.  `updateCalculatorState`  is an impure function that changes the calculator's visual appearance and custom attributes.
+这里`createResultString`是一个纯函数，我们需要把它的返回值显示在计算器上， `updateCalculatorState` 是一个不纯函数，可以改变计算器的自定义属性和外观。
+### 实现 createResultString
 
-### Making createResultString
-
-As mentioned before,  `createResultString`  should return the value that needs to be displayed on the calculator.  
-You can get these values through parts of the code that says  `display.textContent = 'some value`.
-
+像之前所说的，`createResultString`的返回值需要显示在计算器上，你可以通过display.textContent = 'some value`.来得到这部分值。
 ```js
 display.textContent = 'some value'
 ```
 
-Instead of  `display.textContent = 'some value'`, we want to return each value so we can use it later.
+而不是`display.textContent = 'some value'`，我们要返回每个值，以便我们以后可以使用它。
 
 ```js
 // replace the above with this
 return 'some value'
 ```
+让我们一起开始，一步一步实现，首先从数字键开始。
+### 实现数字键的结果字符串
 
-Let’s go through this together, step by step, starting with number keys.
-
-### Making the result string for number keys
-
-Here’s the code we have for number keys:
-
+这是关于数字键的代码：
 ```js
 if (!action) {
   if (
@@ -1010,8 +918,7 @@ if (!action) {
 }
 ```
 
-The first step is to copy parts that say  `display.textContent = 'some value'`  into  `createResultString`. When you do this, make sure you change  `display.textContent =`  into  `return`.
-
+第一步是将`display.textContent = 'some value'`的部分复制到`createResultString`中。当你这样做时，确保你把`display.textContent =`改为`return`。
 ```js
 const createResultString = () => {
   if (!action) {
@@ -1028,8 +935,7 @@ const createResultString = () => {
 }
 ```
 
-Next, we can convert the  `if/else`  statement to a ternary operator:
-
+接着，我们把`if/else`改成三目运算符：
 ```js
 const createResultString = () => {
   if (action!) {
@@ -1042,8 +948,8 @@ const createResultString = () => {
 }
 ```
 
-When you refactor, remember to note down a list of variables you need. We’ll come back to the list later.
-
+当你重构时，记得记下你需要变量的清单。我们稍后再来看看这个清单。
+ 
 ```js
 const createResultString = () => {
   // Variables required are:
@@ -1054,10 +960,9 @@ const createResultString = () => {
 
 ```
 
-### Making the result string for the decimal key
+### 实现小数点键的结果字符串
 
-Here’s the code we have for the decimal key:
-
+这是我们代码中关于小数点键的部分：
 ```js
 if (action === 'decimal') {
   if (!displayedNum.includes('.')) {
@@ -1071,31 +976,29 @@ if (action === 'decimal') {
 
 ```
 
-As before, we want to move anything that changes  `display.textContent`into  `createResultString`.
-
+和之前一样，我们要把任何改变`display.textContent`的东西移到`createResultString`中。
 ```js
 const createResultString = () => {
   // ...
 
 ```
 
-Since we want to return all values, we can convert  `else if`  statements into early returns.
-
+由于我们想要返回所有的值，我们可以将`else if`语句转换为提前返回。
+ 
 ```js
 const createResultString = () => {
   // ...
 
 ```
 
-A common mistake here is to forget to return the currently displayed number when neither condition is matched. We need this because we will replace the  `display.textContent`  with the value returned from  `createResultString`. If we missed it,  `createResultString`  will return  `undefined`, which is not what we desire.
-
+这里一个常见的错误是当两个条件都不匹配时，忘记返回当前显示的数字。我们需要用`createResultString`返回的值替换`display.textContent`。如果我们忘记返回值，`createResultString`将返回`undefined`，这不是我们想要的。
 ```js
 const createResultString = () => {
   // ...
 
 ```
 
-As always, take note of the variables that are required. At this point, the required variables remain the same as before:
+和之前一样，记下所需的变量。此时，所需的变量仍与之前相同：
 
 ```js
 const createResultString = () => {
@@ -1107,10 +1010,9 @@ const createResultString = () => {
 }
 ```
 
-### Making the result string for operator keys
+### 实现操作键的结果字符串
 
-Here’s the code we wrote for operator keys.
-
+这是我们关于操作键的代码。
 ```js
 if (
   action === 'add' ||
@@ -1136,7 +1038,7 @@ if (
 
 ```
 
-You know the drill by now: we want to move everything that changes  `display.textContent`  into  `createResultString`. Here's what needs to be moved:
+你现在知道该怎么做了：我们要把改变`display.textContent`的所有内容移到`createResultString`中。下面是需要移动的内容。
 
 ```js
 const createResultString = () => {
@@ -1160,7 +1062,7 @@ const createResultString = () => {
 <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span>
 ```
 
-Remember,  `createResultString`  needs to return the value to be displayed on the calculator. If the  `if`  condition did not match, we still want to return the displayed number.
+请记住，`createResultString`需要返回要在计算器上显示的值。如果`if`条件不匹配，我们仍然要返回显示的数字。
 
 ```js
 const createResultString = () => {
@@ -1186,7 +1088,7 @@ const createResultString = () => {
 <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span>
 ```
 
-We can then refactor the  `if/else`  statement into a ternary operator:
+然后我们可以将 `if/else `语句重构为三元操作符。
 
 ```js
 const createResultString = () => {
@@ -1208,7 +1110,7 @@ const createResultString = () => {
   <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> displayedNum
 ```
 
-If you look closely, you’ll realize that there’s no need to store a  `secondValue`variable. We can use  `displayedNum`  directly in the  `calculate`  function.
+如果你仔细观察，你会发现没有必要存储一个`secondValue`变量。我们可以在`calculate`函数中直接使用`displayedNum`。
 
 ```js
 const createResultString = () => {
@@ -1229,8 +1131,7 @@ const createResultString = () => {
   <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> displayedNum
 ```
 
-Finally, take note of the variables and properties required. This time, we need  `calculator.dataset.firstValue`  and  `calculator.dataset.operator`.
-
+最后，注意一下所需的变量和属性。这次，我们需要`calculator.dataset.firstValue`和`calculator.dataset.operator`。
 ```js
 const createResultString = () => {
   // Variables & properties required are:
@@ -1243,10 +1144,9 @@ const createResultString = () => {
 }
 ```
 
-### Making the result string for the clear key
+### 实现清除键键的结果字符串
 
-We wrote the following code to handle the  `clear`  key.
-
+这是我们处理`clear`键的代码。
 ```js
 if (action === 'clear') {
   if (key.textContent === 'AC') {
@@ -1260,8 +1160,7 @@ if (action === 'clear') {
 
 ```
 
-As above, want to move everything that changes  `display.textContent`into  `createResultString`.
-
+如上，我们需要把改变`display.textContent`的内容都放到`createResultString`中。
 ```js
 const createResultString = () => {
   // ...
@@ -1269,10 +1168,9 @@ const createResultString = () => {
 }
 ```
 
-### Making the result string for the equals key
+### 实现等号键的结果字符串
 
-Here’s the code we wrote for the equals key:
-
+处理点击等号事件的代码：
 ```js
 if (action === 'calculate') {
   let firstValue = calculator.dataset.firstValue
@@ -1288,7 +1186,7 @@ display<span class="token punctuation" style="box-sizing: inherit; margin: 0px; 
 ```
 
 As above, we want to copy everything that changes  `display.textContent`into  `createResultString`. Here's what needs to be copied:
-
+同样的 我们需要把改变`display.textContent`的内容放到 `createResultString`中，以下是我们需要复制的：
 ```js
 if (action === 'calculate') {
   let firstValue = calculator.dataset.firstValue
@@ -1297,8 +1195,7 @@ if (action === 'calculate') {
 
 ```
 
-When copying the code into  `createResultString`, make sure you return values for every possible scenario:
-
+当把代码复制到`createResultString`中时，要确保为每一种可能的情况返回值。
 ```js
 const createResultString = () => {
   // ...
@@ -1317,7 +1214,7 @@ const createResultString = () => {
 <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span>
 ```
 
-Next, we want to reduce reassignments. We can do so by passing in the correct values into  `calculate`  through a ternary operator.
+接下来，我们要减少重赋值。我们可以通过三元运算符将正确的值传入`calculate`来实现。
 
 ```js
 const createResultString = () => {
@@ -1335,7 +1232,7 @@ const createResultString = () => {
 <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span>
 ```
 
-You can further simplify the above code with another ternary operator if you feel comfortable with it:
+如果你觉得舒服的话，可以用另一个三元运算符进一步简化上述代码。
 
 ```js
 const createResultString = () => {
@@ -1351,7 +1248,7 @@ const createResultString = () => {
   <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> displayedNum
 ```
 
-At this point, we want to take note of the properties and variables required again:
+此时，我们要再注意一下所需的属性和变量。
 
 ```js
 const createResultString = () => {
@@ -1366,10 +1263,10 @@ const createResultString = () => {
 }
 ```
 
-### Passing in necessary variables
+### 传入必要的变量
 
 We need seven properties/variables in  `createResultString`:
-
+我们需要向`createResultString`传递这些变量/属性：
 1.  `keyContent`
 2.  `displayedNum`
 3.  `previousKeyType`
@@ -1378,10 +1275,9 @@ We need seven properties/variables in  `createResultString`:
 6.  `modValue`
 7.  `operator`
 
-We can get  `keyContent`  and  `action`  from  `key`. We can also get  `firstValue`,  `modValue`,  `operator`  and  `previousKeyType`  from  `calculator.dataset`.
+我们可以从`key`中得到`keyContent`和`action`。我们还可以从`calculator.dataset`中得到`firstValue`、`modValue`、`operator`和`previousKeyType`。
 
-That means the  `createResultString`  function needs three variables—`key`,  `displayedNum`  and  `calculator.dataset`. Since  `calculator.dataset`represents the state of the calculator, let's use a variable called  `state`instead.
-
+这意味着`createResultString`函数需要三个变量`key`、`displayedNum`和`calculator.dataset`。由于`calculator.dataset`代表了计算器的状态，所以我们使用一个叫做`state`的变量来代替。
 ```js
 const createResultString = (key, displayedNum, state) => {
   const keyContent = key.textContent
@@ -1400,8 +1296,7 @@ keys.addEventListener('click', e => {
 
 ```
 
-Feel free to destructure variables if you desire:
-
+如果你愿意的话，可以随意拆分变量。
 ```js
 const createResultString = (key, displayedNum, state) => {
   const keyContent = key.textContent
@@ -1415,10 +1310,9 @@ const createResultString = (key, displayedNum, state) => {
 
 ```
 
-### Consistency within if statements
+### if语句的一致性
 
-In  `createResultString`, we used the following conditions to test for the type of keys that were clicked:
-
+在`createResultString`中，我们使用以下条件来测试被点击的键的类型：
 ```js
 // If key is number
 if (!action) { /* ... */ }
@@ -1436,7 +1330,7 @@ if (action === 'clear') { /* ... */ }
 
 ```
 
-_They’re not consistent, so they’re hard to read. If possible, we want to make them consistent so we can write something like this:_
+_它们不一致，所以很难读懂。如果可能的话，我们想让它们保持一致，这样我们就可以这样写：_
 
 _`if (keyType === 'number') { /`_ `... _/ }
 if (keyType === 'decimal') { /_ ... _/ }
@@ -1444,7 +1338,7 @@ if (keyType === 'operator') { /_ ... _/}
 if (keyType === 'clear') { /_ ... _/ }
 if (keyType === 'calculate') { /_ ... */ }`
 
-To do so, we can create a function called  `getKeyType`. This function should return the type of key that was clicked.
+为此，我们可以创建一个名为`getKeyType`的函数。这个函数应该返回被点击的键的类型。
 
 ```js
 const getKeyType = (key) => {
@@ -1461,21 +1355,20 @@ const getKeyType = (key) => {
 }
 ```
 
-Here’s how you’d use the function:
-
+下面是你如何使用这个函数：
 ```js
 const createResultString = (key, displayedNum, state) => {
   const keyType = getKeyType(key)
 
 ```
 
-We’re done with  `createResultString`. Let's move on to  `updateCalculatorState`.
+我们完成了`createResultString`。让我们继续进行`updateCalculatorState`。
 
-### Making updateCalculatorState
+### 实现updateCalculatorState
 
-`updateCalculatorState`  is a function that changes the calculator's visual appearance and custom attributes.
+`updateCalculatorState`是一个改变计算器的外观和自定义属性的函数。
 
-As with  `createResultString`, we need to check the type of key that was clicked. Here, we can reuse  `getKeyType`.
+与`createResultString`一样，我们需要检查被点击的键的类型，这里，我们可以重复使用`getKeyType`。在这里，我们可以重复使用`getKeyType`。
 
 ```js
 const updateCalculatorState = (key) => {
@@ -1483,8 +1376,7 @@ const updateCalculatorState = (key) => {
 
 ```
 
-If you look at the leftover code, you may notice we change  `data-previous-key-type`  for every type of key. Here's what the code looks like:
-
+如果你看一下剩下的代码，你可能会注意到我们为每一种类型的键改变了`data-previous-key-type`。下面是代码的样子：
 ```js
 const updateCalculatorState = (key, calculator) => {
   const keyType = getKeyType(key)
@@ -1512,8 +1404,7 @@ const updateCalculatorState = (key, calculator) => {
 
 ```
 
-This is redundant because we already know the key type with  `getKeyType`. We can refactor the above to:
-
+这是多余的，因为我们已经通过`getKeyType`知道按键类型。我们可以将上述内容修改为：
 ```js
 const updateCalculatorState = (key, calculator) => {
   const keyType = getKeyType(key)
@@ -1521,10 +1412,9 @@ const updateCalculatorState = (key, calculator) => {
 
 ```
 
-### Making  `updateCalculatorState`  for operator keys
+### 在`updateCalculatorState`实现操作键的状态变化
 
-Visually, we need to make sure all keys release their depressed state. Here, we can copy and paste the code we had before:
-
+从视图上看，我们需要重设所有按键的点击状态，这里我们可以复制之前的代码：
 ```js
 const updateCalculatorState = (key, calculator) => {
   const keyType = getKeyType(key)
@@ -1532,7 +1422,7 @@ const updateCalculatorState = (key, calculator) => {
 
 ```
 
-Here’s what’s left from what we’ve written for operator keys, after moving pieces related to  `display.textContent`  into  `createResultString`.
+这是我们为操作键所写的部分中，在把与`display.textContent`相关的部分移到`createResultString`中后，剩下的内容。
 
 ```js
 if (keyType === 'operator') {
@@ -1548,7 +1438,7 @@ if (keyType === 'operator') {
 
 ```
 
-You may notice that we can shorten the code with a ternary operator:
+你可能会注意到，我们可以用三元操作符来缩短代码。
 
 ```js
 if (keyType === 'operator') {
@@ -1563,7 +1453,7 @@ if (keyType === 'operator') {
 }
 ```
 
-As before, take note of the variables and properties you need. Here, we need  `calculatedValue`  and  `displayedNum`.
+和以前一样，注意你需要的变量和属性。这里，我们需要`calculatedValue`和`displayedNum`。
 
 ```js
 const updateCalculatorState = (key, calculator) => {
@@ -1575,10 +1465,9 @@ const updateCalculatorState = (key, calculator) => {
 }
 ```
 
-### Making  `updateCalculatorState`  for the clear key
+### 在`updateCalculatorState`中实现清除键的的状态变化
 
-Here’s the leftover code for the clear key:
-
+这是清除键的剩余代码：
 ```js
 if (action === 'clear') {
   if (key.textContent === 'AC') {
@@ -1593,12 +1482,11 @@ if (action === 'clear') {
 
 ```
 
-There’s nothing much we can refactor here. Feel free to copy/paste everything into  `updateCalculatorState`.
+这里没有什么可以重构的。可以随意复制/粘贴所有内容到`updateCalculatorState`中。
 
-### Making  `updateCalculatorState`  for the equals key
+### 在`updateCalculatorState`中实现等号键的的状态变化
 
-Here’s the code we wrote for the equals key:
-
+这是等号键的代码：
 ```js
 if (action === 'calculate') {
   let firstValue = calculator.dataset.firstValue
@@ -1613,7 +1501,7 @@ display<span class="token punctuation" style="box-sizing: inherit; margin: 0px; 
 
 ```
 
-Here’s what we’re left with if we remove everything that concerns  `display.textContent`.
+下面是我们删除所有涉及`display.textContent`的内容后剩下的内容。
 
 ```js
 if (action === 'calculate') {
@@ -1626,8 +1514,7 @@ if (action === 'calculate') {
 
 ```
 
-We can refactor this into the following:
-
+我们可以将其重构为以下内容：
 ```js
 if (keyType === 'calculate') {
   calculator.dataset.modValue = firstValue && previousKeyType === 'calculate'
@@ -1636,8 +1523,7 @@ if (keyType === 'calculate') {
 }
 ```
 
-As always, take note of the properties and variables used:
-
+一如既往，注意使用的属性和变量：
 ```js
 const updateCalculatorState = (key, calculator) => {
   // Variables and properties needed
@@ -1649,18 +1535,16 @@ const updateCalculatorState = (key, calculator) => {
 }
 ```
 
-### Passing in necessary variables
+### 传入必要的变量
 
-We know we need five variables/properties for  `updateCalculatorState`:
-
+我们需要给`updateCalculatorState`传入五个参数：
 1.  `key`
 2.  `calculator`
 3.  `calculatedValue`
 4.  `displayedNum`
 5.  `modValue`
 
-Since  `modValue`  can be retrieved from  `calculator.dataset`, we only need to pass in four values:
-
+由于`modValue`可以从`calculator.dataset`中获取，所以我们只需要传入四个值。
 ```js
 const updateCalculatorState = (key, calculator, calculatedValue, displayedNum) => {
   // ...
@@ -1674,16 +1558,15 @@ keys.addEventListener('click', e => {
 
 ```
 
-### Refactoring updateCalculatorState again
+### 再次重构 updateCalculatorState
 
-We changed three kinds of values in  `updateCalculatorState`:
+我们改变了 "updateCalculatorState "中的三种值。
 
 1.  `calculator.dataset`
-2.  The class for pressing/depressing operators
-3.  `AC`  vs  `CE`  text
+2.   操作键的按下/未按下的类
+3.  `AC` 和 `CE`  文字
 
-If you want to make it cleaner, you can split (2) and (3) into another function —  `updateVisualState`. Here's what  `updateVisualState`  can look like:
-
+如果您想让它更简洁，您可以将(2)和(3)拆分成另一个函数————`updateVisualState`。下面是`updateVisualState`。
 ```js
 const updateVisualState = (key, calculator) => {
   const keyType = getKeyType(key)
@@ -1695,9 +1578,9 @@ const updateVisualState = (key, calculator) => {
 
 ```
 
-### Wrapping up
+### 收尾工作
 
-The code become much cleaner after the refactor. If you look into the event listener, you’ll know what each function does. Here’s what the event listener looks like at the end:
+重构后的代码变得更加简洁。如果你研究一下事件监听器，你就会知道每个函数的作用。下面是事件监听器最后的样子：
 
 ```js
 keys.addEventListener('click', e => {
@@ -1709,11 +1592,11 @@ keys.addEventListener('click', e => {
 
 ```
 
-You can grab the source code for the refactor part through  [this link][12]  (scroll down and enter your email address in the box, and I’ll send the source codes right to your mailbox).
+你可以通过[这个链接][12]来获取重构部分的源代码（往下滚动，在下面输入你的邮箱地址，我会直接把源代码发到你的邮箱里）。
 
-I hope you enjoyed this article. If you did, you might love  [Learn JavaScript][13]—a course where I show you how to build 20 components, step by step, like how we built this calculator today.
+我希望你喜欢这篇文章。你可能也会喜欢[Learn JavaScript][13]————在这个课程中，我向你展示如何一步步构建20个组件，就像我们今天如何构建这个计算器一样。
 
-Note: we can improve the calculator further by adding keyboard support and accessibility features like Live regions. Want to find out how? Go check out Learn JavaScript :)
+注意：我们可以通过添加键盘支持和像Live regions这样的可访问性功能来进一步改进计算器。想知道如何改进吗？去看看《学习JavaScript》吧:)
 
 [1]: https://zellwk.com/blog/js-if-else
 [2]: https://zellwk.com/blog/js-for-loops

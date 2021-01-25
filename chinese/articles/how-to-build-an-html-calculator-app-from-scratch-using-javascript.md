@@ -138,7 +138,7 @@ if (action === 'clear') {
 让我们思考一下，一个普通人拿到一个计算器之后，会做什么呢？**这个普通人会做什么的问题被称作 happy path**。
 
 这个普通人我们就称作 Mary 吧。
-当 Mary拿起计算器时，她可能会点击任何一个按键：
+当 Mary 拿起计算器时，她可能会点击任何一个按键：
 
 1.  一个数字键（0-9）
 2.  一个操作键 （+，-，×，÷）
@@ -167,7 +167,7 @@ const display = document.querySelector('.calculator__display')
 
 ```
 
-**如果计算器显示0，我们需要用点击按键的数字替换计算器显示屏的数字。** 我们可以通过显示屏的`textContent`属性进行替换。
+**如果计算器显示 0，我们需要用点击按键的数字替换计算器显示屏的数字。** 我们可以通过显示屏的`textContent`属性进行替换。
 ```js
 if (!action) {
   if (displayedNum === '0') {
@@ -262,7 +262,6 @@ keys.addEventListener('click', e => {
 <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span>
 ```
 
-If the  `previousKeyType`  is an operator, we want to replace the displayed number with clicked number.
 如果`previousKeyType`是一个操作符，我们希望可以用当前点击的数字替换当前显示的数字。
 ```js
 const previousKeyType = calculator.dataset.previousKeyType
@@ -339,8 +338,8 @@ const calculate = (n1, operator, n2) => {
 请记住现在的`第一个数字`和`第二个数字`都是字符串。如果你进行字符串相加的话，一会把它们连在一起 (`1 + 1 = 11`)。
 
 所以在计算结果之前，我们需要将字符串类型转换成数字类型。我们可以使用`parseInt`和`parseFloat`两个方法来实现。
--   `parseInt`  converts a string into an  **integer**.
--   `parseFloat`  converts a string into a  **float**  (this means a number with decimal places).
+-   `parseInt`把一个字符串变成**整型**
+-   `parseFloat`把一个字符串变成**浮点型**（一种有小数点的数字）。
 
 对于计算器来说，我们需要浮点数。
 ```js
@@ -469,7 +468,7 @@ if (
 
 ```
 
-尽管我们在第二次点击操作键的时候我们可以得到一个计算的值，但这里依然有一个bug存在————额外点击操作键会计算出一个不应该的值。
+尽管我们在第二次点击操作键的时候我们可以得到一个计算的值，但这里依然有一个 bug 存在————额外点击操作键会计算出一个不应该的值。
 ![](https://cdn-media-1.freecodecamp.org/images/8ktjtHeYaRTEn-lPbOM3fhEg3qrvDl5WfOVY)
 
 为了防止计算器在后续点击操作键时进行计算，我们需要检查 `previousKeyType `是否是一个操作键。如果是，我们不执行计算。
@@ -586,7 +585,7 @@ if (firstValue) {
 
 ###  修改计算
 
-首先让我们的用户点击数字 5，，此时计算器中没有任何被定义过的东西。
+首先让我们的用户点击数字 5，此时计算器中没有任何被定义过的东西。
 ![](https://cdn-media-1.freecodecamp.org/images/2vf5VGXNZ0vjGkyaY0y22PRTqqHDwgEKvCC3)
 
 
@@ -728,7 +727,7 @@ if (action !== 'clear') {
 }
 ```
 
-接下来，如果 Tim 点击`CE`，显示的数字应该为0。与此同时，`CE`应该改为`AC`。所以 Tim 可以将计算器重置到初始状态。
+接下来，如果 Tim 点击`CE`，显示的数字应该为 0。与此同时，`CE`应该改为`AC`。所以 Tim 可以将计算器重置到初始状态。
 ![](https://cdn-media-1.freecodecamp.org/images/Dv6SFw5LY8wB0WqTFQBe46-QoraBiq8TvpdY)
 
 ```js
@@ -762,7 +761,6 @@ if (action === 'clear') {
 我们创建的代码是相当混乱的。如果你尝试自己阅读代码可能会比较混乱，让我们一起重构一下它。
 ### 重构代码
 
-When you refactor, you’ll often start with the most obvious improvements. In this case, let’s start with  `calculate`.
 当你重构时，常常会从最明显的地方进行改进。在这种情况下，让我们从`calculate`开始。
 
 在重构开始之前，请确保你了解 JavaScript 的这些特性，我们将在重构中使用到。
@@ -1144,7 +1142,7 @@ const createResultString = () => {
 }
 ```
 
-### 实现清除键键的结果字符串
+### 实现清除键的结果字符串
 
 这是我们处理`clear`键的代码。
 ```js
@@ -1185,8 +1183,7 @@ display<span class="token punctuation" style="box-sizing: inherit; margin: 0px; 
 
 ```
 
-As above, we want to copy everything that changes  `display.textContent`into  `createResultString`. Here's what needs to be copied:
-同样的 我们需要把改变`display.textContent`的内容放到 `createResultString`中，以下是我们需要复制的：
+同样的，我们需要把改变`display.textContent`的内容放到 `createResultString`中，以下是我们需要复制的：
 ```js
 if (action === 'calculate') {
   let firstValue = calculator.dataset.firstValue
@@ -1265,7 +1262,6 @@ const createResultString = () => {
 
 ### 传入必要的变量
 
-We need seven properties/variables in  `createResultString`:
 我们需要向`createResultString`传递这些变量/属性：
 1.  `keyContent`
 2.  `displayedNum`

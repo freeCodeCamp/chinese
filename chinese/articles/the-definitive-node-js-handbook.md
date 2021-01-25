@@ -244,69 +244,110 @@ One key factor that led to the rise of Node.js was timing. A few years ago, Java
 
 The JavaScript engines performance bar raised considerably thanks to the browser competition battle, which is still going strong. Development teams behind each major browser work hard every day to give us better performance, which is a huge win for JavaScript as a platform. Chrome V8, the engine that Node.js uses under the hood, is one of those and in particular it’s the Chrome JavaScript engine.
 
-由于浏览器激烈的竞争，JavaScript 引擎的性能有了很大的提高，这种竞争仍然在持续。
+由于浏览器激烈的竞争，JavaScript 引擎的性能有了很大的提高，这种竞争仍然在持续。每个主要浏览器的开发团队都在努力的工作，以给我们提供更好的性能，这对于 JavaScript 做为一个平台来讲是巨大的胜利。Node.js 在后台使用 Chrome V8 引擎就是其中之一，尤其是 Chrome JavaScript 引擎。
 
 But of course, Node.js is not popular just because of pure luck or timing. It introduced much innovative thinking on how to program in JavaScript on the server.
+
+当然，Node.js 单纯的因为运气或时机所以不受欢迎。它引入了许多关于如何在服务器上运行 JavaScript 编程的创新思想。
 
 #### 2009
 
 Node.js is born
 
+Node.js 诞生了。
+
 The first form of [npm][20] is created
+
+第一种形式的 [npm][20] 被创建。
 
 #### 2010
 
 [Express][21] is born
 
+[Express][21] 诞生了。
+
 [Socket.io][22] is born
+
+[Socket.io][22] 诞生了。
 
 #### 2011
 
 npm hits 1.0
 
+npm 发布 1.0。
+
 Big companies start adopting Node: [LinkedIn][23], [Uber][24]
 
+大公司开始采用 Node：[LinkedIn][23], [Uber][24]。
+
 [Hapi][25] is born
+
+[Hapi][25] 诞生了。
 
 #### 2012
 
 Adoption continues very rapidly
 
+采纳仍在持续的进行。
+
 #### 2013
 
 First big blogging platform using Node.js: [Ghost][26]
+第一个使用 Node.js 的大型博客平台：[Ghost][26]。
 
 [Koa][27] is born
+
+[Koa][27] 诞生了。
 
 #### 2014
 
 Big drama: [IO.js][28] is a major fork of Node.js, with the goal of introducing ES6 support and move faster
 
+重头戏：[IO.js][28] 是 Node.js 的一个重要分支，其目标是引入 ES6 的支持并加快运行速度。
+
 #### 2015
 
 The [Node.js Foundation][29] is born
 
+[Node.js 基金会][29] 诞生了。
+
 IO.js is merged back into Node.js
+
+IO.js 被合并到 Node.js。
 
 npm introduces private modules
 
+npm 引入了私有模块。
+
 [Node 4][30] (no 1, 2, 3 versions were previously released)
+
+[Node 4][30] （之前没有发布1，2，3版本）
 
 #### 2016
 
 The [leftpad incident][31]
 
+[leftpad 事件][31]。
+
 [Yarn][32] is born: Node 6
+
+[Yarn][32] 诞生: Node 6。
 
 #### 2017
 
 npm focuses more on security: Node 8
 
+npm 更关注安全性： Node 8。
+
 [HTTP/2][33]
 
 [V8][34] introduces Node in its testing suite, officially making Node a target for the JavaScript engine, in addition to Chrome
 
+[V8][34] 在其测试套件中引入 Node，正式使 Node 成为除了 Chrome 之外的 JavaScript 引擎的目标。
+
 3 billion npm downloads every week
+
+每周有 30亿 npm 下载量。
 
 #### 2018
 
@@ -316,17 +357,30 @@ Node 10
 
 [mjs][36] experimental support
 
+[mjs][36] 实验支持。
+
 ### How to install Node.js
 
+### 如何安装 Node.js
+
 #### How you can install Node.js on your system: a package manager, the official website installer or nvm
+#### 如何在系统上安装 Node.js：包管理器、官方网站安装程序或 nvm。
 
 Node.js can be installed in different ways. This post highlights the most common and convenient ones.
 
+Node.js 可以用不同的方式安装。这篇文章重点介绍最常见和最方便的。
+
 Official packages for all the major platforms are available [here][37].
+
+所有主要平台的官方软件包都可以在[这里][37]获得。
 
 One very convenient way to install Node.js is through a package manager. In this case, every operating system has its own.
 
+安装 Node.js 的一种非常方便的方法是通过包管理器。在这种情况下，每种操作系统都有自己的操作命令。
+
 On macOS, [Homebrew][38] is the de-facto standard, and — once installed — allows to install Node.js very easily, by running this command in the CLI:
+
+在 macOS 上，[Homebrew][38] 是事实上的标准，一旦安装，通过在 CLI 中运行一下命令，可以非常轻松的安装 Node.js：
 
 ```
 brew install node
@@ -334,21 +388,39 @@ brew install node
 
 Other package managers for Linux and Windows are listed [here][39].
 
+其它的用于 Linux 和 Windows 的包管理器列表在 [这里][39]。
+
 [nvm][40] is a popular way to run Node.js. It allows you to easily switch the Node.js version, and install new versions to try and easily rollback if something breaks, for example.
+
+[nvm][40] 是运行 Node.js 流行的方法。它允许你轻松的切换 Node.js 版本，并且在安装新版本出现故障时尝试轻松回滚。
 
 It is also very useful to test your code with old Node.js versions.
 
+例如，它在永久版本测试您的代码的时候也非常有用。
+
 My suggestion is to use the official installer if you are just starting out and you don’t use Homebrew already. Otherwise, Homebrew is my favorite solution.
+
+我的建议是使用官方的安装程序，如果你刚开始并且没有使用 Homebrew。否则，Homebrew 是我最喜欢的解决方案。
 
 ### How much JavaScript do you need to know to use Node.js?
 
+你需要了解多少 JavaScript 才能使用 Node.js？
+
 If you are just starting out with JavaScript, how deeply do you need to know the language?
+
+如果你才开始使用 JavaScript，你需要对语言有多深的了解？
 
 As a beginner, it’s hard to get to a point where you are confident enough in your programming abilities.
 
+作为一个初学者，很难对自己的编程能力有足够的信心。
+
 While learning to code, you might also be confused at where does JavaScript end, and where Node.js begins, and vice versa.
 
+在学习编程时，你可能还不清楚 JavaScript 在哪里结束，Node.js 在哪里开始，反之亦然。
+
 I would recommend you to have a good grasp of the main JavaScript concepts before diving into Node.js:
+
+在深入研究 Node.js 之前，我建议你充分掌握主要的 JavaScript 概念：
 
 -   Lexical Structure
 -   Expressions
@@ -365,9 +437,28 @@ I would recommend you to have a good grasp of the main JavaScript concepts befor
 -   Strict Mode
 -   ECMAScript 6, 2016, 2017
 
+-   词法结构
+-   表达式
+-   类型
+-   变量
+-   函数
+-   this
+-   箭头函数
+-   循环
+-   循环和作用域
+-   数组
+-   模板标签
+-   分号
+-   严格模式
+-   ECMAScript 6, 2016, 2017
+
 With those concepts in mind, you are well on your road to become a proficient JavaScript developer, in both the browser and in Node.js.
 
+记住这些概念，无论在浏览器还是在 Node.js 中，你将成为一名精通 JavaScript 的开发人员。
+
 The following concepts are also key to understand asynchronous programming, which is one fundamental part of Node.js:
+
+以下概念也是理解异步编程的关键，异步编程是 Node.js 的一个基础部分：
 
 -   Asynchronous programming and callbacks
 -   Timers
@@ -376,29 +467,60 @@ The following concepts are also key to understand asynchronous programming, whic
 -   Closures
 -   The Event Loop
 
+- 异步编程和回调
+- 定时器
+- Promises
+- Async and Await
+- 闭包
+- 事件循环
+
 Luckily I wrote a free ebook that explains all those topics, and it’s called [JavaScript Fundamentals][41]. It’s the most compact resource you’ll find to learn all of this.
+
+幸运的是，我写了一本免费的电子书用来解释所有的主题，它叫 [JavaScript 基础][41]。这是你能找到的学习这些内容最紧凑的资源。。
 
 ### Differences between Node.js and the Browser
 
+### Node.js 和浏览器的区别
+
 How writing JavaScript application in Node.js differs from programming for the Web inside the browser.
+
+在 Node.js 中编写 JavaScript 应用程序和在浏览器中为 Web 编程有何不同。
 
 Both the browser and Node use JavaScript as their programming language.
 
+浏览器和 Node 都用 JavaScript 作为它们的编程语言。
+
 Building apps that run in the browser is a completely different thing than building a Node.js application.
+
+构建在浏览器中运行的应用程序和构建 Node.js 应用程序完全不同。
 
 Despite the fact that it’s always JavaScript, there are some key differences that make the experience radically different.
 
+尽管事实上它始终是 JavaScript，但是有一些关键的差异使得体验完全不同。
+
 A front-end developer that writes Node.js apps has a huge advantage — the language is still the same.
+
+前端开发者编写 Node.js 应用程序有一个巨大的优势 - 语言仍然是一样的。
 
 You have a huge opportunity because we know how hard it is to fully, deeply learn a programming language. By using the same language to perform all your work on the web — both on the client and on the server — you’re in a unique position of advantage.
 
+你有一个巨大的契机，因为我们知道全面、深入的学习一门编程语言是多么的困难。通过使用同一种语言在 Web 上完成你的工作， 无论是在浏览器还是服务器上，你都处于独特的优势地位。
+
 What changes is the ecosystem.
+
+改变的是生态系统。
 
 In the browser, most of the time what you are doing is interacting with the DOM, or other Web Platform APIs like Cookies. Those do not exist in Node.js, of course. You don’t have the `document`, `window` and all the other objects that are provided by the browser.
 
+在浏览器中，你大部分时间所做的是与 DOM 或者其它 Web 平台 API（如 Cookies）进行交互。当然，这些在 Node.js 中并不存在。你没有 `document`、`window` 和浏览器提供的其它所有的对象。
+
 And in the browser, we don’t have all the nice APIs that Node.js provides through its modules, like the file system access functionality.
 
+在浏览器中，我们并没有 Node.js 通过其模块提供的不错的 API，比如文件系统访问功能。
+
 Another big difference is that in Node.js you control the environment. Unless you are building an open source application that anyone can deploy anywhere, you know which version of Node.js you will run the application on. Compared to the browser environment, where you don’t get the luxury to choose what browser your visitors will use, this is very convenient.
+
+另一个很大的区别是，在 Node.js 中，你可以控制环境。除非你正在搭建一个任何人都可以在任何地方部署的开源应用程序，你知道在哪些版本的 Node.js 上运行该程序。与浏览器的环境相比，你不能选择访问者使用的浏览器，这是非常方便的。
 
 This means that you can write all the modern ES6–7–8–9 JavaScript that your Node version supports.
 

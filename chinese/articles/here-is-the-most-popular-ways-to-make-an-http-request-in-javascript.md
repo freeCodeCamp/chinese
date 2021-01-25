@@ -1,19 +1,19 @@
-> * 原文地址：[Here are the most popular ways to make an HTTP request in JavaScript 用 JavaScript 发起 HTTP 请求的几种方法](https://www.freecodecamp.org/news/here-is-the-most-popular-ways-to-make-an-http-request-in-javascript-954ce8c95aaa/)
+> * 原文地址：[Here are the most popular ways to make an HTTP request in JavaScript](https://www.freecodecamp.org/news/here-is-the-most-popular-ways-to-make-an-http-request-in-javascript-954ce8c95aaa/)
 > * 原文作者：Said Hayani
-> * 译者：
+> * 译者：arronKler
 > * 校对者：
 
 ![Here are the most popular ways to make an HTTP request in JavaScript](https://cdn-media-1.freecodecamp.org/images/1*gqHgCNubMncv7EwWNdArGQ.png)
 
-JavaScript has great modules and methods to make HTTP requests that can be used to send or receive data from a server side resource. In this article, we are going to look at a few popular ways to make HTTP requests in JavaScript.
+JavaScript 具有非常棒的模块和方法来建立可从服务器端资源发送或接收数据的 HTTP 请求。本文会带着大家一起看看在 JavaScript 中常用的建立 HTTP 请求的方式有哪些。
 
 ### Ajax
 
-Ajax is the traditional way to make an asynchronous HTTP request. Data can be sent using the HTTP POST method and received using the HTTP GET method. Let’s take a look and make a  `GET`  request. I’ll be using JSONPlaceholder, a free online REST API for developers that returns random data in JSON format.
+Ajax 是最常规的建立异步 HTTP 请求的方式。你可以使用 HTTP POST 方法来发送数据，以及使用 HTTP GET 来接收数据。我们先来看看如何发起一个 `GET` 请求。这里我会用到一个免费在线的 REST API 工具 JSONPlaceholder，它可以用来给开发者返回随机的 JSON 格式数据。
 
-To make an HTTP call in Ajax, you need to initialize a new  `XMLHttpRequest()`  method, specify the URL endpoint and HTTP method (in this case GET). Finally, we use the  `open()`  method to tie the HTTP method and URL endpoint together and call the  `send()`  method to fire off the request.
+要在 Ajax 中发起一个 HTTP 调用，你需要初始化一个新的 XMLHttpRequest() 方法，指定 URL 端点和 HTTP 方法（在本例中为 GET）。最后，使用 `open()` 方法将两者结合起来，并调用 `send()` 方法执行请求。
 
-We log the HTTP response to the console by using the  `XMLHTTPRequest.onreadystatechange`  property which contains the event handler to be called when the  `readystatechanged`  event is fired.
+我们可以在 `XMLHTTPRequest.onreadystatechange` 的事件监听器中输出 HTTP 请求结果日志到控制台中，这个事件监听器会在 `readystatechanged` 事件发生的时候触发。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*zXtlRe4yRF3tZkFFvBhZeA.png)
 
@@ -23,22 +23,26 @@ const url='https://jsonplaceholder.typicode.com/posts';
 Http.open("GET", url);
 Http.send();
 
-
+Http.onreadystatechange = (e) => {
+  console.log(Http.responseText)
+}
 ```
 
-If you view your browser console, it will return an Array of data in JSON format. But how would we know if the request is done? In other words, how we can handle the responses with Ajax?
+如果你查看浏览器的控制台，上面的代码会返回一组 JSON 格式的数组数据。但是我们怎么知道请求已经完成了呢？换句话说，我们应该怎样处理 Ajax 的响应数据呢？
 
-The  `onreadystatechange`  property has two methods,  `readyState`  and  `status`  which allow us to check the state of our request.
+
+`onreadystatechange` 有两个方式可以让我们可以检测到当前请求的状态， `readyState` 和 `status`。
+
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*UfZf6qaZwNh5Mptft4WIZA.png)
 
-If  `readyState`  is equal to 4, it means the request is done. The  `readyState`  property has 5 responses. Learn more about it  [here][1].
+如果 `readyState` 等于 4，意味着请求已经完成了。`readyState` 这个属性可以有 5 种状态值。你可以点击这里[了解更多][1]。
 
-Apart from directly making an Ajax call with JavaScript, there are other more powerful methods of making an HTTP call such as  `$.Ajax`  which is a jQuery method. I’ll discuss those now.
+除了直接通过 JavaScript 创建 Ajax 调用，还有其他的非常有效的创建 HTTP 调用的方法，比如 jQuery 中的方法 `$.Ajax`。现在我们就来讨论这些方法。
 
-### jQuery methods
+### jQuery 方法
 
-jQuery has many methods to easily handle HTTP requests. In order to use these methods, you’ll need to include the jQuery library in your project.
+jQuery 有很多可以轻松处理 HTTP 请求的方法。为了能使用到这些方法，你需要在你的项目中引入 jQuery 库。
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -46,136 +50,135 @@ jQuery has many methods to easily handle HTTP requests. In order to use these me
 
 #### $.ajax
 
-jQuery Ajax is one of the simplest methods to make an HTTP call.
+jQuery 的 ajax 是发起 HTTP 调用最简单的方法之一。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*vZ4BqVQfsvtpJm_RCsCE2Q.png)
 
-The $.ajax method takes many parameters, some of which are required and others optional. It contains two callback options  `success`  and  `error`  to handle the response received.
+$.ajax 方法拥有很多参数，有的是必要的，有的是可选的。它有两个回调选项 `success`  和 `error` ，可以用来处理接收到的响应数据。
 
-#### $.get method
+#### $.get 方法
 
-The $.get method is used to execute GET requests. It takes two parameters: the endpoint and a callback function.
+$.get 方法用来执行 GET 请求，它接收两个参数：端点和回调函数
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*2koN5FJuT68WIyRKTihe5w.png)
 
 #### $.post
 
-The  `**$.post**`  method is another way to post data to the server. It take three parameters: the  `url`, the data you want to post, and a callback function.
+`**$.post**` 方法是另一种向服务端发送数据的方法，它接收三个参数：`url`，你想要发送的数据，和一个回调函数
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*ql6Yp1EJfD7850GXhErwyw.png)
 
 #### $.getJSON
 
-The  `$.getJSON`  method only retrieves data that is in JSON format. It takes two parameters: the  `url`  and a callback function.
+`$.getJSON` 方法仅用于获取 JSON 格式的数据。它接收两个参数：`url` 和一个回调函数。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*hdcFdVHiBiRAo1YOi_Kt0Q.png)
 
-jQuery has all these methods to request for or post data to a remote server. But you can actually put all these methods into one: the  `$.ajax`  method, as seen in the example below:
+jQuery 有以上这些方法用来给远端服务器发起请求或者传递数据。不过你最终可以将所有的这些方法都用一个方法来实现: `$.ajax` , 正如下面示例中所看到的那样。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*soPARjfQXMcZ5ccPK1QMmA.png)
 
 ### fetch
 
-`fetch`  is a new powerful web API that lets you make asynchronous requests. In fact,  `fetch`  is one of the best and my favorite way to make an HTTP request. It returns a “Promise” which is one of the great features of ES6.  If you are not familiar with ES6, you can read about it in  [this][3]  article. Promises allow us to handle the asynchronous request in a smarter way. Let’s take a look at how  `fetch`  technically works.
+`fetch` 是一个功能强大的新的 web API，它能够让你发起异步的请求。实际上， `fetch` 是最好的也是我最喜欢用的发起 HTTP 请求的方式之一。它会返回一个 “Promise”，这也是 ES6 中最强大的特性之一，如果你不是很熟悉 ES6，可以看看[这篇文章][3]了解一下。Promise 可以让我们用一种更聪明的方式处理异步请求。让我们来看一下 `fetch` 从技术上来说是如何工作的。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*kz6k4VRs0RiVCasWR0pCow.png)
 
-The  `fetch`  function takes one required parameter: the  `endpoint`  URL. It also has other optional parameters as in the example below:
+`fetch` 函数接收一个必要参数：`端点` URL。在下面的示例中它也有其它的可选参数：
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*QasrBgYZcU4BBFHqD2bBdg.png)
 
-As you can see,  `fetch`  has many advantages for making HTTP requests. You can learn more about it  [here][4]. Additionally, within fetch there are other modules and plugins that allow us to send and receive a request to and from the server side, such as  [axios][5].
+如你所见，`fetch` 在创建 HTTP 请求方面有很多优势。你可以从[这里][4]了解更多。另外，在 fetch 之上也有一些其他的模块和插件可以让我们给服务端发送请求或者从服务端接收请求，比如[axios][5]
 
 ### Axios
 
-Axios is an open source library for making HTTP requests and provides many great features. Let’s have a look at how it works.
+Axios 是一个开源的创建 HTTP 请求的库，它提供了许多好用的特性，让我们来看一看它是如何用的吧。
 
 #### Usage:
 
-First, you’d need to include Axios. There are two ways to include Axios in your project.
+首先，你需要引入 Axios。这里有两种方式将 Axios 引入你的项目。
 
-First, you can use npm:
+第一种，你可以使用 npm 进行安装:
 
 ```bash
 npm install axios --save
 ```
 
-Then you’d need to import it
+然后你需要引入它:
 
 ```js
 import axios from 'axios'
 ```
 
-Second, you can include axios using a CDN.
+第二种，你可以使用 CDN 来引入 axios：
 
 ```html
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 ```
 
-#### Making a Request with axios:
+#### 使用 axios 创建请求:
 
-With Axios you can use  `GET`  and  `POST`  to retrieve and post data from the server.
+基于 Axios，你可以使用 `GET` 和 `POST` 来向服务端请求数据和发送数据。
 
 #### GET:
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*4wmqiPsSN5mdgjJiRaKVZg.png)
 
-`axios`  takes one required parameter, and can take a second optional parameter too. This takes some data as a simple query.
+`axios` 需要一个必填参数，当然你也可以提供第二个可选参数。这个示例调用一些数据作简单的查询。
 
 #### POST:
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*ey6-vwsrm9RAhyoU15u6xQ.png)
 
-[Axios][7]  returns a “Promise.” If you’re familiar with promises, you probably know that a promise can execute multiple requests. You can do the same thing with axios and run multiple requests at the same time.
+[Axios][7]  返回一个 “Promise”。如果你对 Promise 比较熟悉的话，你应该知道用 Promise 可以用来执行并行请求。这里你就可以用 axios 在同一时间运行多个并行请求。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*40Pji4utVKPpC7-dePfC6Q.png)
 
-Axios supports many other methods and options. You can explore them  [here][8].
+Axios 还提供了一些其他的方法和选项，你可以在[这里][8]具体看看。
 
 ### Angular HttpClient
 
-Angular has its own HTTP module that works with Angular apps. It uses the  [RxJS][9]  library to handle asynchronous requests and provides many options to perform the HTTP requests.
+Angular 有它自己的和 Angular 应用一起运行的 HTTP 模块。它使用到了 [RxJS][9] 库来处理异步请求，同时还提供了许多用来执行 HTTP 请求的选择。
 
-#### Making a call to the server using the Angular HttpClient
+#### 使用 Angular HttpClient 来发起一个服务端调用
+为了能使用 Angular HttpClient 来发起一个请求，我们需要将代码运行在一个 Angular 应用中。所以我这里就创建了一个。如果你对 Angular 不是很熟悉的话，可以看一下我的文章 [20分钟内学会如何创建你的第一个 Angular 应用][10] 。
 
-To make a request using the Angular HttpClient, we have to run our code inside an Angular app. So I created one. If you’re not familiar with Angular, check out my article,  [learn how to create your first Angular app in 20 minutes][10].
-
-The first thing we need to do is to import  `HttpClientModule`  in  `app.module.ts`
+我们需要做的第一件事儿是在 `app.module.ts` 中引入 `HttpClientModule` 模块。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*iFuW5Fbp91VR5gwQ6XNMEQ.png)
 
-Then, we have to create a service to handle the requests. You can easily generate a service using  [Angular CLI][11].
+然后，我们需要创建一个服务来处理请求。你可以使用 [Angular CLI][11] 很容易的创建一个服务。
 
 ```bash
 ng g service  FetchdataService
 ```
 
-Then, we need to import HttpClient in  `fetchdataService.ts`  service and inject it inside the constructor.
+再然后，我们需要在 `fetchdataService.ts` 服务中的引入 HttpClient 并且将其注入到构造器中。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*kKwELAhSSpnN8DvIgdOfcQ.png)
 
-And in  `app.component.ts`  import  `fetchdataService`
+在 `app.component.ts` 文件中引入 `fetchdataService`。
 
 ```ts
 //import
 import { FetchdataService } from './fetchdata.service';
 ```
 
-Finally, call the service and run it.
+最后，调用这个服务并运行。
 
 `app.component.ts:`
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*OrRe183Yaclt19n5ZQ194Q.png)
 
-You can check out the demo example  [on Stackblitz][12].
+你可以在 [Stackblitz][12] 上看到这整个示例。
 
-### Wrapping Up
+### 总结
 
-We’ve just covered the most popular ways to make an HTTP call request in JavaScript.
+我们刚刚了解了在 JavaScript 中最常用的创建 HTTP 请求的几种方式。
 
-Thank you for your time. If you like it, clap up to 50, click follow, and reach out to me on  [Twitter][13].
+感谢你的阅读。如果你喜欢的话，点击 "关注"，然后可以在 [Twitter][13] 上找到我。
 
-_By the way, I’ve recently worked with a strong group of software engineers for one of my mobile applications. The organization was great, and the product was delivered very quickly, much faster than other firms and freelancers I’ve worked with, and I think I can honestly recommend them for other projects out there. Shoot me an email if you want to get in touch —_ [_said@devsdata.com_][14]_._
+顺便说一下，我最近与一群强大的软件工程师一起为我的一个移动应用程序工作。该组织非常出色，产品交付速度非常快，比我所合作的其他公司和自由职业者要快得多，我认为我可以诚实地推荐他们用于其他项目。如果您想与我联系，请给我发送电子邮件 —— [_said@devsdata.com_][14]
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
 [2]: https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js

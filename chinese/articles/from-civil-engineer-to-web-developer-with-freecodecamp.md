@@ -7,9 +7,9 @@
 
 Hey everyone! 👋
 
-2020 was a very tough year.
+过去的2020年是艰难的一年。
 
-The COVID-19 pandemic is still going strong. Some people are sick or recovering from the virus, some are grieving family or friends, some have lost their jobs, and others have seen their businesses fall apart.
+The COVID-19 pandemic is still going strong. Some people are sick or recovering from the virus, some are s family or friends, some have lost their jobs, and others have seen their businesses fall apart.新冠病毒的疫情越来越严重，大家各有各的忧愁：被感染、正在恢复中、丧失亲人朋友、丢掉工作、或者眼看着自己的生意失败了。
 
 At times like these, we're put to the test in situations we've never imagined we'd be. And this always means there's an opportunity to grow.
 

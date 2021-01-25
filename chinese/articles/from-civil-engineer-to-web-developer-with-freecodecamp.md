@@ -1,6 +1,6 @@
 > -   原文地址：[How I Went from Civil Engineer to Web Developer Using freeCodeCamp to Learn to Code](https://www.freecodecamp.org/news/from-civil-engineer-to-web-developer-with-freecodecamp/)
 > -   原文作者：Eduardo Vedes
-> -   译者：
+> -   译者：newdegen
 > -   校对者：
 
 ![How I Went from Civil Engineer to Web Developer Using freeCodeCamp to Learn to Code](https://www.freecodecamp.org/news/content/images/size/w2000/2021/01/yasmine-arfaoui-G40jEUyEsEk-unsplash.jpg)

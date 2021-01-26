@@ -21,53 +21,53 @@ Hey everyone! 👋
 
 坐在我旁边的是一位经验丰富的混泥土工程师，Pedro。作为副驾驶员的他既是我的朋友，也是一名极其专业的工程师，有他在，所有的建筑问题都能解决。而作为高级土建工程师的我，主要负责在政府与承建方之间协调，管理项目进度。
 
-Two Portuguese expats in the middle of nowhere. We had just left Huambo and were well out of town when we stopped at a level crossing waiting for a train to pass.
+两个葡萄牙人驾车驶出万博城区，来到一个荒无人烟的地方，停在铁轨和公路的交叉口，等待火车过去。
 
-The radio was playing African fusion hits of the moment, and out of the blue I told him:
+汽车收音机正播放着非洲的流行歌曲，我突然和他说：
 
-> "It's January again... A New Year has begun and my life, you know, is completely turned upside down like I never imagined it to be. A complete mess. My relationship is dead, almost have no money, my daughter (firstborn) is far away from me and, above all,  **I'm completely tired of this job**."
+> “新的一年开始了，又是一月份，我的生活简直是一塌糊涂。我的那段感情没了，钱也没了，大女儿也跟我很疏远，总之，我很反感这份工作”。
 
-We were both forced to work abroad, running away from the GFC (Global Financial Crisis of 2007-2008) and the subsequent Portuguese Financial Crisis. It had drowned the construction market and sent it into a big recession and we quickly got into the Angolan oil crisis in 2015.
+为了减少GFC（2007-2008年的全球金融危机）和后续的葡萄牙经济危机对我们的影响，我们不得不努力工作。金融危机导致建筑行业市场大萧条，而到了2015年，我们又陷入了安哥拉的石油危机。
 
-That was the beginning of a big change in my life which I only realized later in time.
+后面我才意识到我生活巨变的开端。
 
-We were living in Cubal, a small former colonial town destroyed by the 1975-2002 independence and civil wars. There was nothing to do besides work by day, drink beer by night, and wander through the baobab trees in the fields.
+我们住在库巴尔的一个小镇，这里之前是前殖民地，也被1975年-2002的独立战争和内战严重摧毁过。在这个地方，除了白天工作，晚上喝酒，就是在猴面包树林里瞎晃悠。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/baobab.jpg)
 
-Baobab tree near Cubal
+库巴尔附近的猴面包树
 
-In the meantime I started to manage other contracts, and traveling became like an intense sport. I was doing almost 10,000 km a month, almost coast to coast, from the beaches of Benguela to the inner parts of Africa, Kuito Kuanavale, near the Zambian western frontier.
+处理这个项目的同时，我还要安排其他的项目合同，使得我经常要开很远的车，几乎达到1万公里每个月：从这个海岸到另一端的海岸，从本格拉的海滩到Kuito Kuanavale，一个靠近赞比亚西部边疆的非洲中部城市。
 
-This time was precious and helped trigger my desire for a change. From day to day this outburst I had with Pedro started to mingle in my mind, and my need to change my life grew stronger and stronger.
+这是一段宝贵的时光，他开启了我改变现状的欲望。随着时间流逝，这种欲望在Pedro和我的脑袋开始联结，想要自我改变的欲望越来越强烈。
 
-## The Need for a Change
+## 为什么要改变自我
 
-My first change was to better occupy my time with activities that stimulated my brain. I started to read a lot, to watch movies on my computer, and to design the master plan which would change my life forever.
+我的改变从利用自己的时间刺激大脑开始，因此我开始在电脑上阅读、看电影、为永远改变自己的生过设计宏伟的计划。
 
-In April I returned to Portugal and separated from my lifemate with whom I'd shared my life for 13 years. Soon after that I went back to Angola to work some more.
+4月份，我回到葡萄牙，并且和生活了13年的妻子离婚了。很快，我又回到安哥拉工作。
 
-But I kept on improving. I started to play lots of sports to keep my life filled with good habits.
+但我仍在保持进步，通过大量的运动来保持生活健康。
 
-A little while later I met the one who would be my future wife. She was a bank accountant in Cubal and we started to date sooner than I had expected.
+不久后，我遇到了我未来的妻子，她是库巴尔的一名银行会计。我们第一次约会比我想象的还要快。
 
-I continued to improve my life, always reading, always searching for a variety of knowledge. Then things started to change.
+我通过阅读、查阅大量知识，以达到继续提高自我的目的。随后，生活的进展发生新的变化了。
 
-One year passed, it was September 2016, and suddenly things got much worse. The economic oil crisis grew from day to day, with oil prices per barrel plummeting below 40 USD. The Kwanza (Angola's currency) fell to about a fifth of its typical value in USD.
+一年后，也就是2016年9月，生活突然变得很糟糕。经济石油危机日益增强，导致石油价格暴跌到低于40美元一桶。而Kwanza（安哥拉的货币）兑换美元汇率大约下跌到通常情况的五分之一。
 
-Some salaries were delayed and we were almost running out of money. At that time, besides my firstborn Maria, I already had my new partner (now wife) Benvinda, my stepdaughter Teresa, and our young baby Benedita to care for as well.
+工资被拖欠，手上的钱也用得差不多了。那个时候，除了我的第一个孩子Maria，我还有新的伴侣Benvinda（现在是我的妻子），我的继女Teresa，我们小宝宝Benedita需要照顾。
 
-I had to change something in our lives. My wife was struggling to keep her job (banks were closing branches every day) and it was impossible to transfer money from Angola to Portugal, as Kwanza became very unstable and was a blocked currency (not convertible outside the country).
+我不得不在生活上有所调整，而我的妻子也有失业危险，因为银行每天都在关闭分支机构。钱无法从安哥拉转到葡萄牙，因为Kwanza下跌太快，现在是一种封闭的货币，也就是无法在安哥拉之外交易。
 
-Christmas 2016 arrived and I traveled to Portugal.
+2016年圣诞节的时候，我去了葡萄牙。
 
-I was tired of running out of ideas on how to rise above my current situation. I sat at the computer and tried to build a small website to help me manage my team and expenses at work, in Angola.
+我疲于想尽各种办法去改善我的现状。我坐在电脑前，尝试通过建立一个小网站来帮助管理我的团队和在安哥拉的工作花费。
 
-I always loved computers, and once upon a time I had dived into a bit of HTML, CSS and the LAMP stack. It was difficult, but it I know it wouldn't be impossible to learn more. And that would help me to stop thinking about how hard our situation was at that time and how we were running out of money.
+我一直喜欢电脑，以前也学过一些HTML，CSS，LAMP技术。即使很难学，我也相信我能够学更多，并且，这种学习能让我忘记当时糟糕的处境和贫穷。
 
-Soon I discovered that what I knew about programming was not enough to do what I wanted. So, as a hobby, I started to study a bit. I tried to solve each of the individual problems I needed to get things working.
+很快我就发现仅凭已有的编程知识无法满足我的需要，因此，我把编程当做一个爱好去一点点的学，试着去解决工作中遇到的每一个问题。
 
-I found some sites and some tutorials but I was a bit confused. I didn't know what to learn first. Should I learn MySQL? PHP? Ruby on Rails?
+我找到了一些网站和辅导资料，却陷入了困惑，因为我不知道从哪开始学，MySQL？ PHP？还是Ruby on Rails？
 
 ## Finding freeCodeCamp
 

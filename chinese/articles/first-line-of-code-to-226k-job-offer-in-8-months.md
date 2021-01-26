@@ -1,12 +1,12 @@
-> * 原文地址：[How I Went from Writing My First Line of Code to a $226K Job Offer in Just 8 Months](https://www.freecodecamp.org/news/first-line-of-code-to-226k-job-offer-in-8-months/)
-> * 原文作者：Jason Zedde
-> * 译者：MMMAY521
-> * 校对者：
+> -   原文地址：[How I Went from Writing My First Line of Code to a \$226K Job Offer in Just 8 Months](https://www.freecodecamp.org/news/first-line-of-code-to-226k-job-offer-in-8-months/)
+> -   原文作者：Jason Zedde
+> -   译者：MMMAY521
+> -   校对者：
 
 ![How I Went from Writing My First Line of Code to a $226K Job Offer in Just 8 Months]
+
 八个月：从写下第一行代码到拿下年薪22.6万美元的工作
 (https://www.freecodecamp.org/news/content/images/size/w2000/2019/09/Love-to-learn_tim-mossholder_unsplash.jpg)
-
 
 找工作时我曾拿到了包括谷歌、Lyft、Yelp、云独角兽公司Rubrik、IBM人工智能部门和摩根大通集团在内的工作offer，希望我的求职故事对你有所启发。
 
@@ -62,7 +62,7 @@
 
 充足的睡眠才能保证学习效率[6]，因此我制定了严格的睡眠时间。
 
- 为了缓解经常性压力，每隔一天我都会锻炼身体促进健康[7]、支持学习[8]。
+为了缓解经常性压力，每隔一天我都会锻炼身体促进健康[7]、支持学习[8]。
 
 为了提升记忆力、让每一天的学习都比前一天有进步，几乎每天晚上我都会复习核心课程，思考哪些事情做得比较好，哪些还不够好。
 

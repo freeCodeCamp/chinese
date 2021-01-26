@@ -9,17 +9,17 @@ Hey everyone! 👋
 
 过去的2020年是艰难的一年。
 
-The COVID-19 pandemic is still going strong. Some people are sick or recovering from the virus, some are s family or friends, some have lost their jobs, and others have seen their businesses fall apart.新冠病毒的疫情越来越严重，大家各有各的忧愁：被感染、正在恢复中、丧失亲人朋友、丢掉工作、或者眼看着自己的生意失败了。
+新冠病毒的疫情越来越严重，很多人被感染、正在治疗中、丧失亲人朋友、丢掉工作、或者眼看着自己的生意失败了。
 
-At times like these, we're put to the test in situations we've never imagined we'd be. And this always means there's an opportunity to grow.
+在这样的时刻，我们会面临从未想象过的考验，也会有成长的机会。
 
-Let me share with you the story of how I learned to code, which feels meaningful to me at this point in time.
+让我分享一个关于学习编程的类似“时刻”，一个对我来说很有意义的故事给你。
 
-## My Life as a Civil Engineer
+## 作为土建工程师的我
 
-It was January 2015 and I was traveling by car, moving from Huambo to Cubal (two Angolan towns) to start a new project: we were building a 100 km road to create a shortcut between two distant municipalities, Cubal and Chongoroi.
+2015年一月，为了一个新项目，我在安哥拉坐车从万博去库巴尔。工程的内容是：建设100公里长的道路，直接连通两个遥远的城市（库巴尔和雄戈罗伊）
 
-At my side was Pedro, an experienced soils and concrete lab technician. He was my co-pilot, my friend, and also a great professional which helped me make sure all technical aspects of the construction were under control. I myself, as a Sr. Civil Engineer, was occupied managing and tracking the contract between the government and the contractor.
+坐在我旁边的是一位经验丰富的混泥土工程师，Pedro。作为副驾驶员的他既是我的朋友，也是一名极其专业的工程师，有他在，所有的建筑问题都能解决。而作为高级土建工程师的我，主要负责在政府与承建方之间协调，管理项目进度。
 
 Two Portuguese expats in the middle of nowhere. We had just left Huambo and were well out of town when we stopped at a level crossing waiting for a train to pass.
 

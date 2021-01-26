@@ -27,7 +27,7 @@ React 是有史以来最受欢迎的 JavaScript 框架之一，我认为它也�
 
 React 是一个 JavaScript 库，旨在简化可视界面（visual interfaces）的开发。
 
-React 诞生在 Facebook，于2013年发布，并为 Facebook 和 Instagram 提供了大量的应用程序，其中的一些 app 有着最广泛的使用。
+React 诞生在 Facebook，于 2013 年发布，并为 Facebook 和 Instagram 提供了大量的应用程序，其中的一些 app 有着最广泛的使用。
 
 它的主要目的是在任何时间点都可以轻松的推断接口及其状态。它通过将 UI 划分为组件的集合来实现这个目的。
 
@@ -79,8 +79,7 @@ React 自身有一套非常简单的 API，当你开始学习的时候，只需�
 
 ## 为什么要学习 React?
 
-I highly recommend that any Web developer has at least a basic understanding of React.
-我强烈建议任何一位 Web 开发者至少对 React 有基本的了解。
+我强烈建议每一位 Web 开发者至少对 React 有基本的了解。
 
 那是因为以下几个原因：
 
@@ -88,9 +87,9 @@ I highly recommend that any Web developer has at least a basic understanding of 
 2. 现在很多工具都是基于 React 开发的。诸如 Next.js，Gatsby 等流行框架与工具都在后台使用了 React。
 3. 作为一名前端工程师，很可能会在面试时遇到 React。
 
-Those are all good reasons, but one of the main reasons I want you to learn React is that it's great.
+这些都是很好的理由，但是我希望你学习 React 的主要原因之一是它非常棒。
 
-It promotes several good development practices, including code reusability and component-driven development. It is fast, it is lightweight, and the way it makes you think about the data flow in your application perfectly suits a lot of common scenarios.
+React 促成了包括代码复用、组件化开发在内的几种很好的开发实践。它效率高、轻量，并且它使你关注应用中数据流的开发方法非常适合很多常见的场景。
 
 ## How to install React
 

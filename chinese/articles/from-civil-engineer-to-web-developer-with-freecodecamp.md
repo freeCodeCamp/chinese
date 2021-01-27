@@ -17,7 +17,7 @@ Hey everyone! 👋
 
 让我分享一个关于学习编程的类似“时刻”，一个对我来说很有意义的故事给你。
 
-## 作为土建工程师的我
+## 我曾经是土木工程师
 
 2015年一月，为了一个新项目，我在安哥拉坐车从万博去库巴尔。工程的内容是：建设100公里长的道路，直接连通两个遥远的城市（库巴尔和雄戈罗伊）
 
@@ -99,59 +99,59 @@ freeCodeCamp的学习路线帮助我重拾对编程的热情，因为我们只�
 
 ## 回到葡萄牙
 
-In May 2017 I left Angola and settled in my parents' house, with the few savings my wife and I had, studying night and day. I would sleep for a few hours when I couldn't keep my eyes open anymore. It wasn't easy. But it was possible, and I was very passionate about what I was doing.
+2017年五月，带着妻子和我仅有的一点点存款，我离开安哥拉，搬进父母的房子，不分昼夜的学习编程。每天学习到眼睛睁不开，我才休息几个小时，虽然艰难，但我还是挺过来了，因为我对编程的热爱简直到了狂热的地步。
 
-My wife and kids stayed in Angola for a while. It was painful. Month after month we wondered when could we be together again. That was a big lesson for us: to be patient and believe that we would soon be together and well. We didn't know when, but we believed in it with all our hearts.
+当时我的老婆孩子都住在安哥拉，每天对他们的思念让我很难受。我们最终又聚到一起，这事告诉了我：耐心地相信我们终将重聚。虽然我们不知道何时能重聚，但我们始终坚信。
 
-When you really commit yourself to something, you can achieve it. Believing it's possible is the first main factor to achieve it and to manifest it.
+有志者，事竟成。决心是成功的第一要素。
 
-In Portugal I had a lot more opportunities than in Angola. There was a local community -  [Geek Sessions][2]  \- and some kewl guys organizing events like talks and workshops (such as nodeschool).
+葡萄牙的机会比安哥拉多，我在这发现一个本地社区，并且一些小伙伴组织研讨会（比如：nodeschool）。
 
-I started to meet and get to know the community.
+我开始参与到研讨会，并慢慢融入社区。
 
-For the first time, I met people who lived and breathed programming - real developers - and got three great official mentors:  [Miguel Coquet][3],  [Nelson Neves][4], and  [André Jonas][5].  _Thanks once again folks, for everything you've done for me._
+在参加社区的过程中，我第一次遇到了真正的程序员，并得到三位好导师： [Miguel Coquet][3],  [Nelson Neves][4], and  [André Jonas][5]，_再次感谢你们给我的帮助_
 
-My learning speed increased a lot. I quickly got into Node.js and MongoDB. In a few months I was able to build a minimal full stack app (a front end, a back end and a database).
+我的学习进步很快，并投入到Node.js和MongoDB的学习中。几个月后，我搭建了一个小的全栈应用（包括前端、后端和数据库）
 
-## Getting My First Developer Job
+## 找到第一份开发工作
 
-Then the  _voilà_  moment happened. freeCodeCamp supplied me all the ingredients to become an entry-level full stack dev.
+到freeCodeCamp的最后一个学习挑战完成后，我从freeCodeCamp学到了作为初级全栈工程师的所有知识。
 
-In September 2017 I was hired by Miguel Coquet. I never expected it to happen so soon. He was starting to get the ball rolling with his own consultancy company and saw something in me. The vulnerability, the courage, the strength, the ability to bet all my life on the job that I so much wanted and needed.
+2017年9月，万万没想到，我会快被Miguel Coquet录用了。他当时正在创建咨询公司，并且看中了我的脆弱、勇气、实力，以及为了理想工作全力以赴的能力。
 
-My first job was already a remote one - with his mentoring and guidance - working for a mid-sized company in Amsterdam.
+我的第一份工作就是远程工作，在他的监督和指导下，为阿姆斯特丹的一家中型企业工作。
 
-I couldn't believe I was making money as a programmer. I was SURVIVING!!
+我自己都不敢相信：我通过编程挣钱了。我成功了！
 
-Computers and programming had always been an hobby of mine, and all of a sudden I was buying food with it. It started with a very nice salary, which helped me quickly reunite with my family in Portugal.
+电脑和编程技术一直是我的爱好，感觉很突然，我现在通过它养家活口了。我一开始的薪资就不低，让我很快把老婆孩子都接到葡萄牙来与我团聚。
 
-Just before Summer 2018 my wife, kids, and I were all together just in time to celebrate Benedita's second birthday in Portugal.
+Just before Summer 2018 my wife, kids, and I were all together just in time to celebrate Benedita's second birthday in Portugal.2018年的春天，我和我的老婆、孩子一起在葡萄牙庆祝Benedita的周岁。
 
-## Life as a Developer
+## 作为开发者的我
 
-Since those days I've kept studying and reading at a fast pace. Being a programmer makes you a lifelong learner, and that is one of the greatest hidden values of doing freeCodeCamp.
+尽管前面那段时间我疯狂地学习和大量的阅读，但终生学习态度是程序员必备的，这也是freeCodeCamp带给我的隐藏财富。
 
-You quickly learn to be autonomous. But it also provides you all the support you need from its community. The general rule of thumb is to "Read, Search, Ask".
+很快你就能自主学习，不过freeCodeCamp的社区依然能提供很多帮助，第一要领就是：“阅读、探索、提问”。
 
-Nowadays I work as a remote frontend developer for a Swedish company - developing an agile remote collaboration and production solution for broadcasters. I make more money than 95% of the people in Portugal do, all without leaving home.
+目前我是一家瑞典公司的前端工程师，通过敏捷远程协作为广播公司提供产品解决方案。我不用出门，薪水却超过葡萄牙95%的人。
 
-If you told me this in 2015, I wouldn't have believed it was possible. Five years have passed, and that's a lot of time. But things happen faster than you think.
+如果2015年你告诉我这些，我根本不会相信。五年过去，时间很长，事物的变化也超乎想象。
 
-My career reboot was very fast (8 months, 3 of which I worked during the day). If only I had known about freeCodeCamp before! 🙈
+我的事业转变很快（8个月，其中3个月我白天还需要工作）。假如我更早了解freeCodeCamp🙈
 
-So...
+情况可能更不一样...
 
-## Take Those Next Steps
+## 尝试以下几个步骤
 
-Maybe you're feeling like I was in 2015, without hope, without motivation, without strength, without faith.
+也许你和2015年的我一样，失望、麻木、佛系、自卑。
 
-If you've found this article, maybe you're searching for something but you don't know what exactly.
+假如你遇到这篇文章，可能你正在搜索你不知道的东西。
 
-Maybe life is sending you a message that there's hope for you, there's a path, there's a solution.
+也许生活在告诉你：这里有希望，一条新路，一个解决方案。
 
-Maybe you don't know that the right time for a change is NOW.
+也许你并不知道，“现在”是改变自己的最好的时间
 
-Just believe, put in all the effort, put in the hours, work day and night, talk to people, find a "traveling mate", find a mentor, study, grow, expose your vulnerabilities with honesty, fail, ask all the questions you have (there's no dumb questions), and make it happen. ❤️
+❤️请相信，全力以赴，夜以继日的努力，和他人交流，找一个伙伴，找一个导师去学习和成长，真诚地跑出你的弱点，尝试失败，提出你遇到的各种问题（所有的问题都有意义），然后实现你的目标。❤️
 
 ## Why You Should Start  [freeCodeCamp][6]
 

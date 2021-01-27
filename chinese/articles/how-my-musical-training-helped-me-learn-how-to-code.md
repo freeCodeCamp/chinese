@@ -1,6 +1,6 @@
 > -   原文地址：[How My Musical Training Has Helped Me Learn How to Code](https://www.freecodecamp.org/news/how-my-musical-training-helped-me-learn-how-to-code/)
 > -   原文作者：Jessica Wilkins
-> -   译者：
+> -   译者：michaelhe545
 > -   校对者：
 
 ![How My Musical Training Has Helped Me Learn How to Code](https://images.unsplash.com/photo-1513883049090-d0b7439799bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDN8fHBpYW5vfGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2000)

@@ -3,7 +3,9 @@
 > -   译者：newdegen
 > -   校对者：
 
-![How I Went from Civil Engineer to Web Developer Using freeCodeCamp to Learn to Code](https://www.freecodecamp.org/news/content/images/size/w2000/2021/01/yasmine-arfaoui-G40jEUyEsEk-unsplash.jpg)
+![How I Went from Civil Engineer to Web Developer Using freeCodeCamp to Learn to Code](
+
+/images/size/w2000/2021/01/yasmine-arfaoui-G40jEUyEsEk-unsplash.jpg)
 
 Hey everyone! 👋
 
@@ -69,33 +71,33 @@ Hey everyone! 👋
 
 我找到了一些网站和辅导资料，却陷入了困惑，因为我不知道从哪开始学，MySQL？ PHP？还是Ruby on Rails？
 
-## Finding freeCodeCamp
+## 发现 freeCodeCamp
 
-In early 2017 I discovered freeCodeCamp and started to investigate it immediately ([here][1]). I read a lot about what people were doing with freeCodeCamp, about career change, programming, job interviews and salaries. I couldn't believe what I was seeing. This could be a solution to my job situation.
+在2017年年初，我发现并开始摸索freeCodeCamp([here][1])，我在freeCodeCamp不断的阅读文章，发现了不少人因此改变了职业、编写程序、面试、获得报酬等。发现的这些事让我难以置信，因为它就是我工作困境的解药。
 
-On the 3rd of January I started going through the freeCodeCamp curriculum with all the strength I had.
+从1月3号开始，我全身心地投入到freeCodeCamp的课程中。
 
-At that time, I found Alex Kallaway's #100DaysOfCode very motivational and I immediately felt that I'd need that kind of energy in my life.
+当时，我找到了Alex Kallaway的#100DaysOfCode（挑战编程100天），它是如此鼓舞人心，以至于我立马感觉它就是我生命中的动力。
 
-Through the freeCodeCamp community I quickly met João Henrique, who was also starting freeCodeCamp "just for fun". João lived near me (60km) and soon we became study partners and started to support each other. Without him it would have been much harder to stand up.
+在freeCodeCamp社区我发现了João Henrique，freeCodeCamp中“兴趣编程”活动的组织者。João的住处离我60公里，我们很快成为学习伙伴，并相互帮助。如果没有他陪伴，我的学习很难坚持下来。
 
-Together we started our first freeCodeCamp local meet up (freeCodeCamp Algarve was born)! We didn't know at the beginning, and it was only us. Soon-ish we'd be gathering 10-20 peeps to chit chat and code with us (but that's another story).
+我们组织了第一次freeCodeCamp本地聚会（阿尔加维的freeCodeCamp组织也因此诞生了）。刚开始的时候，我们并不知道本地聚会只有我们两，不过，很快就聚集了10多个伙伴一起交流和编程（当然，这是后话了）。
 
-I quickly surpassed the first obstacles and reached the JavaScript section. In the meanwhile, I'd started to read a lot about programming and started grokking things very quickly.
+我快速地完成第一项挑战，进入JavaScript学习模块，同时，我也阅读了大量编程的知识，一切开始向着好的方向发展。
 
-An old passion was revived. The freeCodeCamp road map helped a lot. We just followed the proposed challenges without questioning the process.
+freeCodeCamp的学习路线帮助我重拾对编程的热情，因为我们只需要毫无顾虑地跟着学习路线的建议一项项去完成。
 
-Somehow I could see a future, a change, an improvement in my life and in the lives of my family. I kept reading posts on the freeCodeCamp forum as it was my biggest source of faith. Everyday someone was publishing a "Got my first job!" post.
+我有种感觉：我家人和我的生活将来会变得好起来。这种信心主要来自freeCodeCamp论坛上看到的大量文章：几乎每天都有人发布“找到第一份编程工作”的文章。
 
-I kept my job in Angola for a while. In February I returned there and explained to my wife how this could be a great change in our lives. We would be able to live in Portugal as soon as I could find a job as a programmer. Working as a Civil Engineer by day and studying by night I had reached the end of the front end certification.
+我在安哥拉又工作了一段时间。在二月份的时候，我回到安哥拉，向妻子解释编程将如何改变我们的生活，并且一旦我找到编程工作，我们就能去葡萄牙生活。通过白天工作（土木工程师），晚上学习的方式，我拿到了前端认证。
 
-The Simon Game almost killed me but I was able to do it in the end!
+西蒙游戏很难，但我最终完成了挑战！
 
-Thanks to Miguel Coquet (my former mentor and later first employer) who guided me through the intricacies of JavaScript's async nature I was able to do it. And it felt goooood. It was a great victory, in the middle of the night, on that construction site where I was working and living temporarily.
+感谢我的导师、我的第一个老板Miguel Coquet指导我弄懂复杂的JavaScript 异步编程。在那个曾经工作并临时居住的工地上，即使是三更半夜了，我依然感觉很兴奋，因为那项挑战是一个伟大的胜利。
 
-I had made my decision. I was going to be a programmer, no matter what.
+我下定决心，一定要当程序员。
 
-## Life Back in Portugal
+## 回到葡萄牙
 
 In May 2017 I left Angola and settled in my parents' house, with the few savings my wife and I had, studying night and day. I would sleep for a few hours when I couldn't keep my eyes open anymore. It wasn't easy. But it was possible, and I was very passionate about what I was doing.
 

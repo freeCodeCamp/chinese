@@ -89,19 +89,19 @@ React 自身有一套非常简单的 API，当你开始学习的时候，只需�
 
 这些都是很好的理由，但是我希望你学习 React 的主要原因之一是它非常棒。
 
-React 促成了包括代码复用、组件化开发在内的几种很好的开发实践。它效率高、轻量，并且它使你关注应用中数据流的开发方法非常适合很多常见的场景。
+React 促成了包括代码复用、组件化开发在内的几种很好的开发实践。它高效、轻量，并且它使你关注应用中数据流的开发方法非常适合很多常见的场景。
 
-## How to install React
+## 如何安装 React
 
-There are a few different ways to install React.
+有几种不同的方式安装 React。
 
-To start with, I highly recommend one approach, and that's using the officially recommended tool called  `create-react-app`.
+在开始时，我强烈建议一种方法，那就是使用官方推荐的工具：`create-react-app`。
 
-`create-react-app`  is a command line application, aimed at getting you up to speed with React in no time.
+`create-react-app` 是一个命令行工具，旨在让你快速了解 React。
 
-You start by using  `npx`, which is an easy way to download and execute Node.js commands without installing them.
+你可以从使用 `npx` 开始，这是一种不需要安装就能下载和执行 Node.js 命令的便捷方法。
 
-> See my npx guide here:  [https://flaviocopes.com/npx/][23]
+> 在这里查看我的 npx 指南：[https://flaviocopes.com/npx/][23]
 
 `npx`  comes with  `npm`  (since version 5.2). If you don't have npm installed already, do it now from  [https://nodejs.org][24]  (npm is installed with Node).
 

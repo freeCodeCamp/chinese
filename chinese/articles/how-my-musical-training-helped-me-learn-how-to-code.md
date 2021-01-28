@@ -11,24 +11,26 @@
 ## 做就完了
 ![#做就完了](https://images.unsplash.com/photo-1523309375637-b3f4f2347f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDN8fG5pa2V8ZW58MHx8fA&ixlib=rb-1.2.1&q=80&w=2000)
 图片由乔治·帕甘III拍摄[2]  /  [Unsplash][3]
+
 上大学那会儿，我有好些时间在上课、排练、或是考试前都准备欠佳。
 可我非但没有反思到是因为自己准备不够充分，反而会去找各种借口，比如，
-> “我之所以没有做好课前预习是因为我要忙着复习一个音乐理论的小测。”
+“我之所以没有做好课前预习是因为我要忙着复习一个音乐理论的小测。”
 又或者是，
-> “我在忙着准备马上要去参加的一个很重要的试演。”
+“我在忙着准备马上要去参加的一个很重要的试演。”
 然而，不管我说出的理由有多么五花八门，我的双簧管老师却从不买账。他坚信我在一天的时间里可以兼顾练习、学习，并留点时间去社交。
 紧接着，他经常会向我抛出那句耐克的知名广告语，“Just Do It”（做就完了）。
 我总会对之哧哧一笑，但他说的话没毛病。
 对一个自学编程的人来说，你身边时时刻刻总有各种各样的干扰。你很容易就会产生如下这些念头，
-> “我在算法上的确需要多加练习，但要不明天再练吧”，
+“我在算法上的确需要多加练习，但要不明天再练吧”，
 或是，
-> “我必须得要开始着手那个新项目了，但我真的很忙。”
+“我必须得要开始着手那个新项目了，但我真的很忙。”
 大多数人在生活中都不会具备连续24小时不被打扰的空闲时间去做我们想做的事，总有别的事情在半路跳出来需要我们处理。
 但残酷的现实是，我们只有保持自律、完成我们的工作，才能成为更优秀的程序员。
 因此，当你再度为拖延找寻借口时，记住，无论如何也要做完手中的工作！
 ## 熟能生巧，一定能吗？
 ![](https://images.unsplash.com/photo-1551696785-927d4ac2d35b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDJ8fG9yY2hlc3RyYXxlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)
 图片由塞缪尔·西亚尼帕拍摄[4]  /  [Unsplash][5]
+
 我们都听过这句话，“熟能生巧”。
 但是，这句话并不总是正确。
 我的双簧管老师就从来不屑这句话，而是告诉我们，“孰能生恒”。
@@ -42,6 +44,7 @@
 ## 持之以恒是关键
 ![](https://images.unsplash.com/photo-1593642532400-2682810df593?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDI0fHxvZmZpY2V8ZW58MHx8fA&ixlib=rb-1.2.1&q=80&w=2000)
 图片由XPS拍摄[6]  /  [Unsplash][7]
+
 和一些人一样，我也从7岁就开始学钢琴，头几年我还蛮喜欢弹钢琴的。
 可自从我开始学一些难点的曲子后，我就没有练习的动力了。
 当时的我可谓三天打鱼，两天晒网，结果就是我的琴艺豪无长进。我报的课程也完全成了一种浪费，因为我们每周几乎都在重复同样的事情。
@@ -56,8 +59,8 @@
 持之以恒是学好一切的关键。
 ## 练习你不懂的东西
 ![Microsoft Surface Platinum Laptop <p>Shot by : Christiann Koepke " srcset="<a href=](https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2000)https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=600 600w, [https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=1000][8] 1000w, [https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=1600][9] 1600w, [https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2400][10] 2400w" sizes="(min-width: 720px) 720px" style="box-sizing: inherit; margin: 0px auto; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: middle; max-width: 100%; display: block; height: auto;">
-
 图片由Surface拍摄[11]  /  [Unsplash][12]
+
 大三那年，我们的风月合奏指挥曾对我们讲过一句话，我至今仍为忘怀。
 他说，“要敢于去练习你不懂的东西。”
 我们大多数人想在练习室里练习的都是听起来还不错的音乐。这也许是一种让我们自我感觉良好并让自我感到满足的方式。
@@ -72,14 +75,25 @@
 祝大家编程愉快哦！
 
 [1]: https://en.wikipedia.org/wiki/Oboe
+
 [2]: https://unsplash.com/@gpthree?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit
+
 [3]: https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit
+
 [4]: https://unsplash.com/@samthewam24?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit
+
 [5]: https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit
+
 [6]: https://unsplash.com/@xps?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit
+
 [7]: https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit
+
 [8]: https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=1000
+
 [9]: https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=1600
+
 [10]: https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2400
+
 [11]: https://unsplash.com/@surface?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit
+
 [12]: https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit

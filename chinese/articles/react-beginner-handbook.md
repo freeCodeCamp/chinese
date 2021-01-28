@@ -103,11 +103,11 @@ React 促成了包括代码复用、组件化开发在内的几种很好的开�
 
 > 在这里查看我的 npx 指南：[https://flaviocopes.com/npx/][23]
 
-`npx`  comes with  `npm`  (since version 5.2). If you don't have npm installed already, do it now from  [https://nodejs.org][24]  (npm is installed with Node).
+从 5.2 版 `npm` 开始，增加了 `npx` 命令。如果你现在还没安装 npm，那么点击这里 [https://nodejs.org][24] 安装吧（npm 是随 Node 安装的）。
 
-If you are unsure which version of npm you have, run  `npm -v`  to check if you need to update.
+如果你不能确定你的 npm 版本号，那么执行 `npm -v` 命令来检查你是否需要更新 npm。
 
-> Tip: check out my OSX terminal tutorial at  [https://flaviocopes.com/macos-terminal/][25]  if you're unfamiliar with using the terminal. It applies to Mac and Linux.
+> 注意：如果你不熟悉终端的使用方法，请访问 [https://flaviocopes.com/macos-terminal/][25]，查看我的 OSX 终端教程。这份教程适用于 Mac 和 Linux。
 
 When you run  `npx create-react-app <app-name>`,  `npx`  is going to  _download_  the most recent  `create-react-app`  release, run it, and then remove it from your system.
 

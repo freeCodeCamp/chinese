@@ -58,7 +58,7 @@
 但你如果每天计划学习8个小时，可过了一段时间就中断了2周，那结果只能是成效甚微。
 持之以恒是学好一切的关键。
 ## 练习你不懂的东西
-![Microsoft Surface Platinum Laptop <p>Shot by : Christiann Koepke " srcset="<a href=](https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2000)https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=600 600w, [https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=1000][8] 1000w, [https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=1600][9] 1600w, [https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2400][10] 2400w" sizes="(min-width: 720px) 720px" style="box-sizing: inherit; margin: 0px auto; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: middle; max-width: 100%; display: block; height: auto;">
+![Microsoft Surface Platinum Laptop <p>Shot by : Christiann Koepke " srcset="<a href=]
 图片由Surface拍摄[11]  /  [Unsplash][12]
 
 大三那年，我们的风月合奏指挥曾对我们讲过一句话，我至今仍为忘怀。

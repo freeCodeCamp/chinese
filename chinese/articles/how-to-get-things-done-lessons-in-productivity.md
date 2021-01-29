@@ -1,6 +1,6 @@
 > -   原文地址：[How to Be Productive, Feel Less Overwhelmed, and Get Things Done](https://www.freecodecamp.org/news/how-to-get-things-done-lessons-in-productivity/)
 > -   原文作者：Endy Austin
-> -   译者：
+> -   译者：michaelhe545
 > -   校对者：
 
 ![How to Be Productive, Feel Less Overwhelmed, and Get Things Done](https://images.unsplash.com/photo-1547809397-e2c7eea071fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDYxfHxtYWdpY3xlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)

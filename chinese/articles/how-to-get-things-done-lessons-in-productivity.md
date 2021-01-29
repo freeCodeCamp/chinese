@@ -4,71 +4,77 @@
 > -   校对者：
 
 ![How to Be Productive, Feel Less Overwhelmed, and Get Things Done](https://images.unsplash.com/photo-1547809397-e2c7eea071fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDYxfHxtYWdpY3xlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)
-
+心理学分析：如何以良好状态提高开发的效率
 This guide is based on 5 years of applying techniques from Behavioral Psychology and research on productivity. I've used it as a developer, mentor, and creator. And it works.
-
+本指南基于个人5年的技法应用经验，这些技法或来自行为心理学，或来自工作效率的有关研究。我曾以一名开发者、导师、创作者的身份使用过这份指南，效果很好。
 If you remember only one lesson from this post, it's this:
-
+如果说读完这篇帖子你还能记得里面的一条建议的话，它将是：
 > The productivity techniques that work are built on principles. Not quick hacks. Or fancy tools.
 
 If you understand and apply this, you'll be able to keep a clear head and stay focused. And it'll come in handy especially when things blow up out of proportion.
-
+倘若你理解了我的建议并将其予以运用，你将能够保持头脑清醒并集中注意力。而且当你身处一团乱麻时，我的建议尤为能够派上用场。
 ## What this post will cover
-
+## 这篇帖子会讲什么
 -   **Part I:**  Processes >> Tools
 -   **Part II:**  What to do when you can't stop procrastinating
 -   **Part III:**  Put sanity over execution
-
+-   **第一部分：** 过程 >> 工具
+-   **第二部分：** 当你无法摆脱拖延时该怎么办
+-   **第三部分：** 
 Let's jump into it.
-
+话不多说，我们就直奔主题吧！
 ## Part I: Processes >> tools
-
+## 第一部分: 过程 >> 工具
 Whenever you feel overwhelmed, it’s likely because the process you have in place is failing you. Not the tools.
-
+每当你感到应接不暇时，大多数情况是，你所经历的过程让你倍感失望，而非你所使用的工具。
 And a sound process will beat fancy tools, any day.
-
+一个完善合理的过程在任何时候都要远远胜过各种花里胡哨的工具。
 ![Chaos vs. Your Process. The more chaotic you feel, the less efficient your process is. Conversely, you could have way more to do than everyone else yet operate more efficiently. Why? Because of your well-designed process.](https://lifetechpsych.com/static/23cf5f440ed7873366665092b38fbe5d/2bef9/chart.png "Chaos vs. Your Process. The more chaotic you feel, the less efficient your process is. Conversely, you could have way more to do than everyone else yet operate more efficiently. Why? Because of your well-designed process.")
 
 The more chaotic you feel, the less efficient your process is. Conversely, you could have way more to do than everyone around yet operate more efficiently due to a well-designed process.
-
+你越是感到一切杂乱无序，你在工作过程中效率就会越低。反之，如果你的工作过程设计合理，你不仅能够比周围的人做更多的事情，还能保持更高的办事效率。
 Before I understood this, I struggled with consistent productivity. The keyword here is  _consistent._
-
+在我认识到这一点之前，我曾苦于追求“持久性的工作效率”。它的关键就在于“持久性”一词。
 Anyone can be productive once in a while, but it takes a certain level of finesse to do it consistently.
-
+每个人时不时地都能保持高效，可要想把这种高效保持下去就需要费点心思了。
 Back then, I did a lot of things. But I constantly felt like I was missing something. My approach was speed and execution over anything else. This works in the short term but it's not sustainable long term.
-
+以前，我能完成很多事情。但我总觉得自己漏了点什么。我的做事理念就是速度和执行力高于一切。这种理念在短期内是行之有效的，但是长期来看缺乏可持续性。
 I knew life hacks here and there, and tried every tool under the sun including the popular ones:
-
+我从各种地方获知了一些生活的小窍门儿，也试着用过任何一种效率管理工具，包括下面这几款比较流行的：
 -   [Evernote][1]: Your notes. Organized. Effortless.
 -   [Google Keep][2]: Quickly capture what’s on your mind.
 -   [One Note][3]: The digital note-taking app for your devices.
 -   [Any.Do][4]: To do list app with Calendar, Planner, & Reminders.
 -   [Todoist][5]: The to do list to organize work & life.
-
+-   [印象笔记][1]: 毫不费力地让你的笔记有条有理。
+-   [Google Keep][2]: 随时记录您的想法。
+-   [One Note][3]: 适用于您的设备的数字笔记应用程序。
+-   [Any.Do][4]: 一款可结合日历、计划器和提醒来使用的待办事项清单应用。
+-   [Todoist][5]: 安排工作和生活的待办事项清单应用.
 Oh and I tried  [Trello][6]  at least 3x because everyone swore it was the greatest app ever.
-
+哦对了，我还用了Trello，前后装卸过3次，因为所有人都说没有比它更好用的应用了。
 But I couldn’t stand it.
-
+这点我不敢苟同。
 Every few months, I’d jump between apps.
-
+每隔几个月，我都会在这些应用中换着用。
 Once in a while, I'd ditch digital and go all paper. But then I'd forget my notebook at home or hate to carry it around because it couldn’t fit in my pocket.
-
+时不时地，我也会去电子化，该用全纸质版。但那个时候我要么是把笔记本落在家里了，要么就是懒得背在身上，因为那个本子根本装不进我的口袋。
 Nothing worked – I still felt overwhelmed with tasks to complete. But over time, I learned that:
-
+但这一切都没有用 - 我还是感觉被待完成的任务压的喘不过气来。可过了一段时间后，我认识到：
 > The best tool used with the wrong process feels like a failed tool.
-
+> 再好的工具遇到了不合理的做事过程只能是于事无补。
 So I shifted my approach to focus on processes. And it worked. My productivity and time management skills skyrocketed.
-
+因此，我把做事的理念转向了专于过程，效果显著。无论是我的工作效率还是时间管理能力都大幅提升。
 It doesn't matter what app you prefer to use,  **these 4 simple processes I share can be used in your favorite todo app**.
-
+我下面要分享的4步简单的做事流程适用于所有应用，无论你更偏好用哪款应用都没有关系。
 Mine happens to be Google Keep. But as you read through, I want you to replace  _“Google Keep”_  with  _“Todoist”_,  _“One Note”_, or whatever app you love the most.
-
+我现在在用的是Google Keep。但当你接着往下读的时候，我希望你能自动把它替换为你最爱的那款应用，或是Todoist，或是One Note，或是别的，都没问题。
 Focus on the big picture of how things fit because this is the most important aspect of using any tool.
-
+我们要专注的是如何从宏观上安排诸多任务，因为这才是我们使用任何工具也好最重要的一个方面。
 Make sense?
-
+是不是很有道理？
 Let’s get to it!
-
+那我们就看看这4步具体是什么吧！
 ## 1) Find your single source of truth
 
 ![](https://images.unsplash.com/photo-1527631746610-bca00a040d60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDU4fHx0cmF2ZWx8ZW58MHx8fA&ixlib=rb-1.2.1&q=80&w=2000)

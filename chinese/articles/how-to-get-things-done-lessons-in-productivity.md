@@ -76,44 +76,49 @@ Make sense?
 Let’s get to it!
 那我们就看看这4步具体是什么吧！
 ## 1) Find your single source of truth
-
+## 1) 找到你获取“真相”的唯一来源
 ![](https://images.unsplash.com/photo-1527631746610-bca00a040d60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDU4fHx0cmF2ZWx8ZW58MHx8fA&ixlib=rb-1.2.1&q=80&w=2000)
 
 [Image Credi][7][t][8]  – First, find your main productivity tool. Next revolve other tools around it.
-
+你首先要确定你的主要生产效率工具，然后让其它工具以它为中心去展开。
 I use Google Keep as my single source of truth that feeds into other productivity tools. This means it’s my first stop.
-
+我把Google Keep当作自己获取“真相”的唯一来源，然后把其它效率工具当作一种辅助。也就是说，Google Keep是我做事前要前往的第一站。
 First stop for:
-
+它涵盖的内容有
 -   Grocery list
 -   Journaling
 -   Workout plans
 -   Strategy for finances
 -   Netflix shows to checkout
 -   Any random thought that crosses my mind
-
+-   购物清单
+-   日志
+-   健身计划
+-   理财策略
+-   想看的奈飞剧集
+-   其它随时随地的想法
 Each of these have their own labels so capturing things usually takes a few taps on my phone or three clicks on a Chrome tab that’s always open with Google Keep.
-
+以上每一类事项都有它们的专属标签。因此，我只需在手机上点几下或是在谷歌浏览器的标签页点击几下就能对我的待办事项了然于胸了（我的Google Keep在谷歌浏览器是保持日常打开状态的）。
 From there I move to Calendar for fixed appointments and to eyeball how much time meetings consume per week.
-
+接着，我会去日历上看看已确定的预约事项，顺便瞟一眼我每周在会议上花费的时间。
 Then Trello for team tracking collaborations.
-
+接着，我会打开Trello看看团队追踪合作。
 Next, I switch between Notes for personal writing or Google docs for collaborations. What’s interesting here is that most of my write ups start in Keep on my phone.
-
+再接着，我会交替使用Notes和Google docs，分别进行个人写作和协作写作。有趣的是，我大部分的写作都是从手机上的Google Keep开始的，
 Including this write-up.
-
+包括这篇帖子。
 When it starts getting longer I switch to my laptop and copy out the content from Google Keep web into Notes or Google Docs.
-
+如果我看写的比较长了，我会转到我的笔记本电脑上去，从网页版的Google Keep中把内容复制粘贴到Notes或是Google Docs。
 Any time it feels like I need special formatting or I get the itch to write in my favorite font ([Montserrat font][9]), it’s a sign that I need to switch to a writing tool.
-
+每当我感觉我需要用到特殊格式或是我想用我最爱的字体([Montserrat font][9])写作时，我就又知道我该切换到一个写作工具上去了。
 Switching to another tool isn’t necessarily a bad thing.
-
+切换到另一个工具并非一定是件坏事。
 But not many believe that.
-
+尽管很多人不相信这一点。
 **If finding your single source of truth is the only idea you put to action right away, you'll see a dramatic change.**
-
+如果你现在立马就行动起来去找寻你唯一的“真相”来源，你的生活将会发生巨大改观。
 But if you miss this, you'll struggle with staying afloat when you start feeling overwhelmed. Trust me, things will get overwhelming.
-
+但如果你仍无动于衷，那么当你开始感到手头的事情应接不暇时，你仍将苦于心烦气躁。相信我，你一定会有感到应接不暇的时候。
 ## 2) Stop chasing the everything app
 
 ![](https://images.unsplash.com/photo-1547619292-8816ee7cdd50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDd8fGZ1bm55fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2000)

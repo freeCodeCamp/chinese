@@ -10,7 +10,7 @@ This guide is based on 5 years of applying techniques from Behavioral Psychology
 If you remember only one lesson from this post, it's this:
 如果说读完这篇帖子你还能记得里面的一条建议的话，它将是：
 > The productivity techniques that work are built on principles. Not quick hacks. Or fancy tools.
-
+> 有效的工作效率技法是以一定的原理为依托的，而不是什么窍门儿，也不是任何花里胡哨的工具。
 If you understand and apply this, you'll be able to keep a clear head and stay focused. And it'll come in handy especially when things blow up out of proportion.
 倘若你理解了我的建议并将其予以运用，你将能够保持头脑清醒并集中注意力。而且当你身处一团乱麻时，我的建议尤为能够派上用场。
 ## What this post will cover
@@ -120,75 +120,79 @@ But not many believe that.
 But if you miss this, you'll struggle with staying afloat when you start feeling overwhelmed. Trust me, things will get overwhelming.
 但如果你仍无动于衷，那么当你开始感到手头的事情应接不暇时，你仍将苦于心烦气躁。相信我，你一定会有感到应接不暇的时候。
 ## 2) Stop chasing the everything app
-
+## 2) 不要去追求一个事事都能解决的应用
 ![](https://images.unsplash.com/photo-1547619292-8816ee7cdd50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDd8fGZ1bm55fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2000)
 
 [Image Credit][10]  – We rush so fast to the newest productivity and time management tools. But using tools alone won't cut it.
-
+我们急于去追求最新的生产效率和时间管理工具，可单凭工具的使用并不能解决问题。
 This one is a little controversial.
-
+这一观点有点颇受争议。
 And in the past, some have contested my stance especially after a new tool becomes popular (e.g.  [Notion][11]).
-
+之前曾有人站出来质疑过我，尤其是一款名为Notion的新应用走红以后。
 Most people try to hack their favorite productivity app to become a writing app, a collaboration tool, a calendar app, an EVERYTHING tool.
-
+大多数人试图黑进他们最爱的生产效率工具，让这些工具兼具写作功能、协作功能、日历功能等等。总之就是一个全能型应用。
 > The fact is that no one tool will address everything.
-
+> 现实是，没有哪款应用可以解决一切问题。
 I made this mistake for so long.
-
+很长一段时间以来，我也曾深陷“全能应用”这种错误观念之中。
 Trust me, you’re better off picking up a single source of truth and then building others around it.
-
+相信我，挑选一个你获取“真相”的唯一来源，然后让其它工具予以辅助，远比找到一个“全能应用”好用的多。
 -   It’s fine to use Keep and Trello.
 -   It’s fine to have Notion and Notes.
 -   It’s fine to use a todo reminder and calendar.
-
+-   同时去用Keep和Trello是完全可以的。
+-   同时去用Notion和Notes也是完全可以的。
+-   同时去用待办事项提醒应用和日历应用也是完全可以的。
 One doesn’t have to replace the other. They can complement each other.
-
+这些工具未必是相互替代的，它们也可以相得益彰。
 ## 3) It's not paper  _OR_  digital – it's paper  _AND_  digital
-
+## 3) 不要纠结纸质_还是_电子 – 可以既纸质_又_电子
 ![Sun's out, bums out. Two zebras on the plains of Etosha before a storm rolls in.](https://images.unsplash.com/photo-1579172342894-e6d751ec390c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDJ8fHR3b3xlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)
 
 [Image credit][12]  – Mix paper and digital to get the best of your productivity.
-
+配合使用纸质工具和电子工具，让你的工作效率得到充分发挥。
 Once in a while I get the itch to write on paper.
-
+偶尔隔一段时间，我会倾向在纸张上写作。
 That feeling is especially strong when I’m planning big goals. I love to map out everything in front of me.
-
+尤其是当我要计划一些重大的目标是，我会更想在纸面上把它们写下来。我喜欢把各种事情以脑图的形式呈现在眼前。
 And writing with my favorite pen keeps the ideas flowing.
-
+此外，用我最爱用的笔去书写时，我的思路也会更加顺畅。
 In paper situations, I scribble all on paper then when I get done, I take a screenshot and add it under the relevant label in Keep.
-
+在用纸张书写时，我会现在纸上草草写下，写完后再把它拍下来并添加到我Google keep的相关标签下。
 Example, if you saw my  _“big ideas”_  label you’d see a lot of screenshots in there.
-
+举个例子来说，如果你去查看我的“重大目标”标签下的内容，你会发现那里有一大堆的照片。
 I also do this when white-boarding with colleagues on a coding project or brainstorming sessions.
-
+当然，在和同事在白板上探讨编程项目或是进行头脑风暴时我也会习惯采用上面提到的这种形式。
 -   Get done.
 -   Take picture.
 -   Add to specific label.
-
+-   写在纸上。
+-   拍照。
+-   添加到相关标签下。
 Then I trash the paper.
-
+然后这张纸就进垃圾桶了。
 ![Brainstorming Screenshot](https://lifetechpsych.com/static/f21516c156c1ed8d7781e5560ac74292/72e01/psychology.jpg "Brainstorming Screenshot")
 
 A screenshot from my Google Keep showing what I wrote while brainstorming on techniques from Behavioral Psychology for entrepreneurs to reduce their procrastination tendencies.
-
+这张截图就存在我的Google Keep中，它是我在一次头脑风暴中写下的，主题是行为心理学中可帮助创业者减轻拖延倾向的一些技法。
 Multiple years of writing on paper has taught me that the paper I write on only feels good in the moment.
-
+从多年以来的纸质书写经历中我发现，我只是在纸上写字的那一刻觉得纸质书写很享受。
 A few weeks later and it looks like I’ve got paper trash all over the place.
-
+过了几个星期后，我会发现我的办公区域全是废纸屑。
 So I screenshot and trash ASAP.
-
+所以，拍下照片后我很快就会把纸张丢进垃圾桶。
 This process satisfies both my digital access to my planner (beats small notebooks any day). But it also lets me scratch my paper itch whenever it comes up.
-
+这就既满足了我要用planner（任何时间都远比小笔记本好用）的需求，又能满足我不时想在纸上写写画画的爱好。
 > I'm not loyal to only digital or only paper. That's nonsense.
-
+> 在我看来，没必要纠结是只用纸质还是只用电子。 这个问题本身就很荒谬。
 I'm more interested in what helps me reduce my overwhelming workload. And using both works well.
-
+我更关心的是如何才能帮助我减轻繁重的工作负担，两个都用且效果好的话也没什么不可。
 You may want only paper or only digital. That's okay. Just remember you don't have to feel you must only use one to be productive.
-
+你可能只想用纸质或者只用电子，这也完全是可以的。你只需注意，要想保持高效，二者并非鱼和熊掌、不可兼得。
 Some recommend  _[Rocketbook (a smart notebook)][13]_. It is a reusable notebook that lets you write, upload to the cloud, and then wipe the page clean!
-
+有人曾推荐过 _[Rocketbook (a smart notebook)][13]_。它是一种可以复写的笔记本，写下内容后，你可以上传云端，然后把整页纸重新擦干净。
 I’ve never used it but wanted to highlight this in case you find it useful.
-
+尽管我从未用过它，但还是想在这里说明一下，如果你觉得不错可以看看。
 ## 4) Review often – weekly, monthly, yearly
 
 ![My pup, Odie, relaxing during an easy-going morning in San Diego’s Pembry Hotel.](https://images.unsplash.com/photo-1524549110215-6624d76a0b0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDJ8fGhpbGFyaW91c3xlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)

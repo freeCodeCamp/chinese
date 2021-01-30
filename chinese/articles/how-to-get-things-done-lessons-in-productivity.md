@@ -194,23 +194,23 @@ Some recommend  _[Rocketbook (a smart notebook)][13]_. It is a reusable notebook
 I’ve never used it but wanted to highlight this in case you find it useful.
 尽管我从未用过它，但还是想在这里说明一下，如果你觉得不错可以看看。
 ## 4) Review often – weekly, monthly, yearly
-
+## 4) 多去反思 – 每周一次，每月一次，每年一次
 ![My pup, Odie, relaxing during an easy-going morning in San Diego’s Pembry Hotel.](https://images.unsplash.com/photo-1524549110215-6624d76a0b0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDJ8fGhpbGFyaW91c3xlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)
 
 [Image Credit][14]  – To build strong time management skills, you need frequent reviews.
-
+要想建立强大的时间管理能力，你需要经常回头反思。
 Every morning on weekdays I go through Keep on my laptop to see things that should be top of mind that day.
-
+在工作日，我每天早上都会在笔记本上浏览一遍我的Google Keep，以便获悉当天的重要事项。
 This is key to proactively prevent me from getting to a place where I feel overwhelmed with tasks because too many things slipped through.
-
+这点也是我避免因为手头事情越积越多而陷入一种应接不暇的状态的关键。
 During the day, I add things to Keep either from my phone or laptop. The cycle continues until Friday.
-
+在一天中，我会通过手机或是笔记本在Google Keep上增加事项。如此一直循环到周五。
 Every Friday, I go through my Keep to clean up any tasks that fell through or that should move into other tools.
-
+每到一个周五，我会浏览一遍我的Google Keep，清理掉那些没有完成的任务或是那些应该移到其它工具的任务。
 Then repeat.
-
+如此周复一周。
 Following this process gets you right in the heart of smashing things efficiently but sometimes, procrastination blocks your progress.
-
+遵循这个过程可以让你处理事情时不仅得心应手且事半功倍，但有时，拖延症会让你停滞不前。
 # Part II: What to do when you can't stop procrastinating
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/reduce-clarify-modify.png)

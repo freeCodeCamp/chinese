@@ -153,15 +153,15 @@ Just before Summer 2018 my wife, kids, and I were all together just in time to c
 
 ❤️请相信，全力以赴，夜以继日的努力，和他人交流，找一个伙伴，找一个导师去学习和成长，真诚地抛出你的弱点，尝试失败，提出你遇到的各种问题（所有的问题都有意义），然后实现你的目标。❤️
 
-## Why You Should Start  [freeCodeCamp][6]
+## 在 [freeCodeCamp][6] 上学习编程的原因
 
-These are the main advantages of freeCodeCamp as I see it:
+freeCodeCamp 主要有以下几个优点：
 
--   It's  **completely free**. In times where you're running out of money this is very important. And believe me, paid bootcamps aren't better than freeCodeCamp. All it requires is that you put in the effort, to be the driver of your learning. In paid bootcamps you have to do exactly the same.
--   It provides a  **user-friendly**  environment for beginners, with a baby steps approach to code.
--   It provides you with a great  **road map**: you don't have to get confused about what should you learn first. If you want to work on the web, this is it.
--   It provides you with a simple rule:  **"Read, Search, Ask"**  which, if you apply it correctly, will help you get really good at searching Google for what you need. And in the end, if you're still stuck, backs you with community support. And believe me, this is the best community in which you can expect to learn how to code.
--   It provides you with  **challenging projects**. In the end what we want is to  **learn by doing**. This will make you read through the challenges carefully, investigate how to solve them, learn the technologies, and  **discuss with other students or mentors**. Through this process you'll find  **everything you need to be successful "on the job".**
+-   freeCodeCamp是免费的，即使你手头紧张也能学习，而且，花钱的培训班也不一定不freeCodeCamp的质量更好。因为，freeCodeCamp和花钱的培训班一样需要个人自律、努力学习。
+-   freeCodeCamp的学习环境属于**用户友好型**，帮助你从零开始。
+-   freeCodeCamp有很好的学习路线，保证你不会为如何学而烦恼。如果你想从事web相关工作，选择freeCodeCamp准没错。
+-   freeCodeCamp有一个简单的准则：**浏览，搜索，提问**，正确地使用这个准则能帮助你在Google上搜索你需要的内容，假如你依然没找到答案，那就去社区里寻求帮助。相信我，学习编程 freeCodeCamp的社区是最棒的。
+-   freeCodeCamp提供**挑战性的项目**，帮助你**边做边学**。这个过程会帮助你了解项目、思索解决方案、学习技术以及**和其他学生或者导师讨论**。通过这个过程你会获得**工作所需的所有技能。**
 -   freeCodeCamp is a  **serious thing**. Don't think that you need a certificate from an expensive paid bootcamp or university. I've done dozens of interviews and people already know freeCodeCamp. I've already been interviewed by someone who had done freeCodeCamp. Everybody knows someone who's a great developer in a kewl company that did freeCodeCamp. Moreover, companies know that you're a self-starter, a lifelong learner, someone who, in the middle of an issue, has the tools to strive and figure out those problems. And this is what companies want. People that drive their success, that come up with solutions instead of problems.
 
 Don't think you're too old, or that your current job has nothing to do with code. I was 37 when I rebooted and brought a lot of soft skills with me. Everyone that has working experience brings a set of skills that are very useful and admired.

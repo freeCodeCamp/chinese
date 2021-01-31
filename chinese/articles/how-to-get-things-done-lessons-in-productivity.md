@@ -212,92 +212,100 @@ Then repeat.
 Following this process gets you right in the heart of smashing things efficiently but sometimes, procrastination blocks your progress.
 遵循这个过程可以让你处理事情时不仅得心应手且事半功倍，但有时，拖延症会让你停滞不前。
 # Part II: What to do when you can't stop procrastinating
-
+# 第二部分: 当你无法摆脱拖延时该怎么办
 ![](https://www.freecodecamp.org/news/content/images/2021/01/reduce-clarify-modify.png)
 
 You start by reducing perfectionism. Next clarify your next tiny action. And finally modify your behavior when you don't feel like doing any work
-
+你可以从减轻完美主义倾向开始做起。然后再去搞清楚下一个一小步。最后当你不想做任何工作时要去调整你的行为。
 Do you know  [that 80% of us fail to fulfill our New Year’s resolutions][15]?
-
+你知道吗？[80%的人都无法完成自己的新年计划][15]?
 That's crazy.
-
+是不是很惊人。
 Sadly, procrastination plays a big role in this.
-
+不幸的是，拖延症在其中扮演着重要角色。
 But no worries, you can beat procrastination through these three techniques: reducing your “perfect” goals, clarifying your next actions, and modifying your steps through Behavioral Psychology.
-
+但别担心，你可以通过这三个方法来打败拖延症：减少你的“完美”目标，弄清楚自己下一步的行动，然后借助行为心理学调节自己的行为。
 Let's dig into these one by one.
-
+让我们一个一个来看。
 ### 1) Reduce your first move from “A+” to “B”.
-
+### 1) 把你的第一步要求从“A+”降低到“B”。
 If you're a perfectionist, you'll procrastinate. If you goal is too big to take a first step, you'll procrastinate.
-
+如果你是一个完美主义者，你会产生拖延。如果你的目标过于宏大，以致不知如何迈出第一步，你也会产生拖延。
 If you're a procrastinating perfectionist, you'll feel paralyzed and frustrated many times because your big goals remain in your head with zero actions in reality.
-
+如果你是一个拖延型的完美主义者，你会经常感到疲惫不堪且沮丧无比，因为你的宏大目标一直都是停留在你的脑子里，却在现实中未付诸任何行动。
 You'll take zero actions because you want all your steps to be perfect.
-
+之所以没有付诸任何行动，是因为你期望你的每一步都走得尽善尽美。
 > To fix your procrastination as a perfectionist, start with a “B” goal instead of “A+”. This means you should go back and change your first step to be “good enough” instead of “perfect”.
-
+> 一个完美主义者要想解决拖延问题，就要从以“B”而非“A+”来要求自己的第一步开始做起。也就是说，你要退一步，让自己的第一步看着“还不错”就可以了，而非一定要“完完美美”。
 ### 2) Clarify the next, tiny action.
-
+### 2) 明确接下来的一小步。
 Whenever it’s not crystal clear what you’re supposed to work on next, your mind will stop you from moving forward.
-
+每当你感到不清楚下一步该干嘛时，你的意识就会阻碍你继续向前。
 For example, your todo list has:
-
+比如说，你的待办事项可能是这么写的：
 > Build the best portfolio page to get a job. Then create amazing landing page to show off to everyone.
-
+> 构建一个最好的作品集网页，以便得到一份工作。然后设计一个完美的登录页面惊艳众人。
 ![](https://images.unsplash.com/photo-1558800199-1f485762061b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDE5fHxjb25mdXNlZHxlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)
 
 [Image Credit][16]  – Anytime you create vague tasks, you open the doors to procrastination.
-
+每当你创建的任务含混不清时，你就为拖延症提供了可乘之机。
 But:
-
+但是：
 -   What does  _“best”_  mean?
 -   What  [type of programming projects][17]  should I have in my portfolio?
 -   Is it smart to build my app from scratch or use an existing template?
 -   Which language should I learn? How long? When? How?
-
+-   _“最好”_  具体指哪方面有多好呢?
+-   什么  [类型的编程项目][17]  应该放在我的作品集中呢?
+-   我是重新做一个自己的App比较好还是用一个现有的模版呢?
+-   我需要学哪种语言呢? 需要多长时间? 什么时候学? 怎么学?
 When you have too many floating thoughts in your head, your mind runs away from any actions and falls back into procrastination.
-
+当你头脑中有太多个悬而未决的问题有待解决时，你的意识就会拒绝采取任何行动，从而陷入拖延之中。
 The cure is to spend 90 seconds and answer:
-
+破解这一困境的方法是花90秒的时间去想想并回答这个问题：
 > What is the smallest, next action for the task I want to achieve?
-
+> 针对这个任务，我接下来想要实现的最小一步行动是什么呢?
 For example:
-
+比如说：
 -   If you’re building a portfolio, the next tiniest action is open up a document and write up a rough plan. Not to open visual studio and  [struggle with the quirks in C++.][18]
 -   If you're writing a book on lessons for new programmers, your tiniest action isn’t to write chapter one. It’s to come up with the first DRAFT of your outline for the all book chapters.
 -   And if you’re completely new to programming, your best bet is to [start with places where you can learn to code][19]  so you narrow down on one option. Not to jump around aimlessly and still feel lost after several months.
+-   如果你在构建一个作品集，接下来的最小一步就是打开一个文档，写下一个粗略的计划。 而不是打开visual studio，[捣鼓 C++里的各种小技巧.][18]
+-   如果你在为编程小白编写一本教科书，你接下来的最小一步不是去写第一章，而是去为整本书各个章节列一个初始的大纲。
+-   如果你刚刚接触编程, 你要去做的就是 [寻找你可以学习编程的渠道][19]  你可以最终落脚到某一个具体的渠道。 而非漫无目的地东一榔头、西一棒槌，过了几个月后仍然感到很茫然。
 
 The tinier the next action, the more likely you are to get it done.
-
+你的下一步行动越细微，你就越可能把它实现。
 Stack multiple small actions and you, my friend, are gold.
-
+当你一步一个小行动往前推进任务时，你就赢了。
 ### 3) Modify through techniques from Behavioral Psychology
-
+### 3) 借助行为心理学的方法调整自己
 ![Anything that can go wrong will go wrong.](https://images.unsplash.com/photo-1498019559366-a1cbd07b5160?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fG1hZ2ljfGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2000)
 
 [Image Credit][20]  – Procrastination is a psychological issue that needs psychological techniques.
-
+拖延症是一个需要用心理学的方法来解决的心理学问题。
 Some days are just lazy days.
-
+有些日子里，你就是会犯懒。
 You know you should ignore how you feel and get to work but it's not happening.
-
+你也明白，不管你心里怎么想，你得去工作了，可你并没有采取任何行动。
 You can use these principles of from Behavioral Psychology.
-
+你可以用用下面这些行为心理学的法则。
 -   **Deadline effect:** Go to  [www.tomato-timer.com][21], click 5 minutes and start working on your tiniest next action as fast as you can. Most times you’ll end up going beyond 5 mins. That’s perfect because the  [Zeigarnik effect][22]  has kicked in and you'll feel like completing the work you already started.
 -   **Negative reinforcement  until you work:** If somehow you didn't do anything and the timer ends, restart it. An additional tip is to go to settings and set the sound that is most annoying to you. Do this at least 5x and every time “punish” yourself by watching the timer count down!
 -   **Revisit your motivation:** If after 5x, you can’t do anything, it means your motivation is off and you have a deeper question to answer:
-
+-   **截止日期效应:** 访问  [www.tomato-timer.com][21], 设置一个5分钟的倒计时，然后尽最快速度去开始着手你的下一个最小一步。大多数情况下，你会发现自己工作了不止5分钟。这就对了，因为在[蔡格尼克记忆效应][22]作用下，你会倾向完成你已经开始的工作。
+-   **负面增强，知道你开始工作为止:** 如果你发现自己不知为什么在这5分钟啥也没干计时器就截止了，重新开始计时。一条附加的建议是，打开计时器设置，设置一个你最为讨厌的提醒铃声。重复这个过程5遍，每一遍都通过看着倒计时触发铃声的方式来惩罚自己！
+-   **重新反思你的动力:** 假如过了5遍之后，你还是什么也没干。那就说明你根本就没有动力去做这件事，你需要思考一个更加深层次的问题：
 > “What will I gain by working on this?”
-
+> “我做完这件事对我有什么意义?”
 Sometimes, looking to  [how other developers have transformed their lives][23]  can give you the needed push.
-
+有时，去看看[别的开发者是如何改变了他们的生活的][23]或许能给你一些动力。
 If you still have no answer to what you’ll gain, abandon the task as it's time to find something else that has more intrinsic motivation.
-
+如果你还是对这件事的意义感到不明不白，那就不要做这件事了，你需要去寻找其它能够激发你的动力的事情去做。
 But no matter how much you get done, it's important to recognize that productivity is not about working non-stop.
-
+但要尤为注意的是，无论你完成了多少工作，高效绝不是24小时连轴转、毫不停歇地工作。
 You need balance to consistently move forward.
-
+你需要权衡以保证能够持续向前推进工作的开展。
 # Part III: Put sanity over execution
 
 ![I shot this using a light tube.](https://images.unsplash.com/photo-1529374814797-de52885a0249?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDIwfHx3YXJyaW9yfGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2000)

@@ -109,11 +109,11 @@ React 促成了包括代码复用、组件化开发在内的几种很好的开�
 
 > 注意：如果你不熟悉终端的使用方法，请访问 [https://flaviocopes.com/macos-terminal/][25]，查看我的 OSX 终端教程。这份教程适用于 Mac 和 Linux。
 
-When you run  `npx create-react-app <app-name>`,  `npx`  is going to  _download_  the most recent  `create-react-app`  release, run it, and then remove it from your system.
+当你执行 `npx create-react-app <app-name>` 命令时，`npx` 首先会 _下载_ 最新版的 `create-react-app`，然后再运行它，运行结束后会把它从你的系统中删除。
 
-This is great because you will never have an outdated version on your system, and every time you run it, you're getting the latest and greatest code available.
+这点很不错，因为你的系统上永远不会有旧的版本，并且每次运行的时候，你都会获得最新、最全的代码。
 
-Let's start then:
+让我们开始吧：
 
 ```sh
 npx create-react-app todolist
@@ -122,11 +122,12 @@ npx create-react-app todolist
 
 ![cra-start](https://www.freecodecamp.org/news/content/images/2020/11/cra-start.png)
 
-This is when it finished running:
+运行成功后你会看到：
 
 ![create-react-app-finished](https://www.freecodecamp.org/news/content/images/2020/11/create-react-app-finished.png)
 
 `create-react-app`  created a file structure in the folder you told it to (`todolist`  in this case), and initialized a  [Git][26]  repository.
+`create-react-app` 会在你指定的文件夹下创建文件结构（本示例中为 `todolist`），并且初始化为一个 [Git][26] 仓库。
 
 It also added a few commands in the  `package.json`  file:
 

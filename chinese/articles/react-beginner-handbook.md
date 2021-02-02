@@ -129,19 +129,19 @@ npx create-react-app todolist
 `create-react-app`  created a file structure in the folder you told it to (`todolist`  in this case), and initialized a  [Git][26]  repository.
 `create-react-app` 会在你指定的文件夹下创建文件结构（本示例中为 `todolist`），并且初始化为一个 [Git][26] 仓库。
 
-It also added a few commands in the  `package.json`  file:
+它也会在 `package.json` 文件中添加几个命令：
 
 ![cra-packagejson](https://www.freecodecamp.org/news/content/images/2020/11/cra-packagejson.png)
 
-So you can immediately start the app by going into the newly created application folder and running  `npm start`.
+所以你可以即刻进入到新创建的应用目录下，运行 `npm start` 命令来启动 app。
 
 ![cra-running](https://www.freecodecamp.org/news/content/images/2020/11/cra-running.png)
 
-By default this command launches the app on your local port 3000, and it opens your browser showing you the welcome screen:
+默认情况下，这个命令会你本地的 3000 端口启动 app，并打开浏览器，为你展示欢迎界面：
 
 ![cra-browser](https://www.freecodecamp.org/news/content/images/2020/11/cra-browser.png)
 
-Now you're ready to work on this application!
+现在你就可以开始开发这个应用程序了！
 
 ## React Components
 

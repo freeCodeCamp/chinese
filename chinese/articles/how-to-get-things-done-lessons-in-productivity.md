@@ -6,13 +6,13 @@
 ![How to Be Productive, Feel Less Overwhelmed, and Get Things Done](https://images.unsplash.com/photo-1547809397-e2c7eea071fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDYxfHxtYWdpY3xlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)
 心理学分析：如何以良好状态提高开发的效率
 This guide is based on 5 years of applying techniques from Behavioral Psychology and research on productivity. I've used it as a developer, mentor, and creator. And it works.
-本指南基于个人5年的技法应用经验，这些技法或来自行为心理学，或来自工作效率的有关研究。我曾以一名开发者、导师、创作者的身份使用过这份指南，效果很好。
+本指南基于作者5年的方法应用经验，这些方法或来自行为心理学，或来自工作效率的有关研究。我曾以一名开发者、导师、创作者的身份应用过这份指南，效果很好。
 If you remember only one lesson from this post, it's this:
-如果说读完这篇帖子你还能记得里面的一条建议的话，它将是：
+如果说读完这篇帖子你只能记得一条学到的内容，它将是：
 > The productivity techniques that work are built on principles. Not quick hacks. Or fancy tools.
-> 有效的工作效率技法是以一定的原理为依托的，而不是什么窍门儿，也不是任何花里胡哨的工具。
+> 有效的工作效率提升是以一定的科学原理为依托的，绝不是什么窍门儿，也不是任何花里胡哨的工具。
 If you understand and apply this, you'll be able to keep a clear head and stay focused. And it'll come in handy especially when things blow up out of proportion.
-倘若你理解了我的建议并将其予以运用，你将能够保持头脑清醒并集中注意力。而且当你身处一团乱麻时，我的建议尤为能够派上用场。
+倘若你理解了我这句话并将其予以运用，你将不会再为保持头脑清醒和注意力集中而困扰，而且当你身处一团乱麻时，这条建议尤为能够派得上用场。
 ## What this post will cover
 ## 这篇帖子会讲什么
 -   **Part I:**  Processes >> Tools

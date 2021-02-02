@@ -1,6 +1,6 @@
 > -   原文地址：[The Complete Freelance Web Developer Guide: How to Make Money Through Freelance Programming Jobs](https://www.freecodecamp.org/news/freelance-web-developer-guide/)
 > -   原文作者：Luke Ciciliano
-> -   译者：
+> -   译者：michaelhe545
 > -   校对者：
 
 ![The Complete Freelance Web Developer Guide: How to Make Money Through Freelance Programming Jobs](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/Hit-with-money.jpg)

@@ -1,6 +1,6 @@
 > -   原文地址：[How to Manipulate the DOM - the Ultimate Beginner's Guide](https://www.freecodecamp.org/news/how-to-manipulate-the-dom-beginners-guide/)
 > -   原文作者：Chibuike Okere
-> -   译者：
+> -   译者：Humilitas
 > -   校对者：
 
 ![How to Manipulate the DOM - the Ultimate Beginner's Guide](https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wxfDF8c2VhcmNofDZ8fGhlbHB8ZW58MHx8fA&ixlib=rb-1.2.1&q=80&w=2000)

@@ -3,9 +3,7 @@
 > -   译者：newdegen
 > -   校对者：
 
-![How I Went from Civil Engineer to Web Developer Using freeCodeCamp to Learn to Code](
-
-/images/size/w2000/2021/01/yasmine-arfaoui-G40jEUyEsEk-unsplash.jpg)
+![How I Went from Civil Engineer to Web Developer Using freeCodeCamp to Learn to Code](https://www.freecodecamp.org/news/content/images/size/w2000/2021/01/yasmine-arfaoui-G40jEUyEsEk-unsplash.jpg)
 
 大家好! 👋
 

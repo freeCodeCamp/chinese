@@ -55,7 +55,7 @@ Hey everyone! 👋
 
 我通过阅读、查阅大量知识，以达到继续提高自我的目的。随后，生活的进展发生新的变化了。
 
-一年后，也就是2016年9月，生活突然变得很糟糕。经济石油危机日益增强，导致石油价格暴跌到低于40美元一桶。而Kwanza（安哥拉的货币）兑换美元汇率大约下跌到通常情况的五分之一。
+一年后，也就是2016年9月，生活突然变得很糟糕。经济石油危机日益增强，导致石油价格暴跌到低于40美元一桶。而Kwanza（安哥拉的货币）兑换美元汇率大约下跌到原来的五分之一。
 
 工资被拖欠，手上的钱也用得差不多了。那个时候，除了我的第一个孩子Maria，我还有新的伴侣Benvinda（现在是我的妻子），我的继女Teresa，我们小宝宝Benedita需要照顾。
 
@@ -162,15 +162,15 @@ freeCodeCamp 主要有以下几个优点：
 -   freeCodeCamp有很好的学习路线，保证你不会为如何学而烦恼。如果你想从事web相关工作，选择freeCodeCamp准没错。
 -   freeCodeCamp有一个简单的准则：**浏览，搜索，提问**，正确地使用这个准则能帮助你在Google上搜索你需要的内容，假如你依然没找到答案，那就去社区里寻求帮助。相信我，学习编程 freeCodeCamp的社区是最棒的。
 -   freeCodeCamp提供**挑战性的项目**，帮助你**边做边学**。这个过程会帮助你了解项目、思索解决方案、学习技术以及**和其他学生或者导师讨论**。通过这个过程你会获得**工作所需的所有技能。**
--   freeCodeCamp is a  **serious thing**. Don't think that you need a certificate from an expensive paid bootcamp or university. I've done dozens of interviews and people already know freeCodeCamp. I've already been interviewed by someone who had done freeCodeCamp. Everybody knows someone who's a great developer in a kewl company that did freeCodeCamp. Moreover, companies know that you're a self-starter, a lifelong learner, someone who, in the middle of an issue, has the tools to strive and figure out those problems. And this is what companies want. People that drive their success, that come up with solutions instead of problems.
+-   freeCodeCamp is a  **serious thing**. Don't think that you need a certificate from an expensive paid bootcamp or university. I've done dozens of interviews and people already know freeCodeCamp. I've already been interviewed by someone who had done freeCodeCamp. Everybody knows someone who's a great developer in a kewl company that did freeCodeCamp. Moreover, companies know that you're a self-starter, a lifelong learner, someone who, in the middle of an issue, has the tools to strive and figure out those problems. And this is what companies want. People that drive their success, that come up with solutions instead of problems.freeCodeCamp是一个权威的平台。不要觉得昂贵学费的培训班证书或者大学文凭才能帮你找工作，我采访过很多了解freeCodeCamp的人，从freeCodeCamp毕业的人，freeCodeCamp的学习帮助不少人成为厉害的开发者，在很棒的公司找到工作。而且，公司需要的是解决问题的员工，而不是带来麻烦的员工，通过freeCodeCamp自学成才的人正是他们需要的。
 
-Don't think you're too old, or that your current job has nothing to do with code. I was 37 when I rebooted and brought a lot of soft skills with me. Everyone that has working experience brings a set of skills that are very useful and admired.
+学习编程这事与年龄无关，与你现在从事的工作无关。我37岁的时候开始重新学习编程，这个年龄为我带来很多软实力，因为每一份工作经历都会给我们有用的，令人钦佩的软实力。
 
-If you're passionate about computers, programming, the web, and nerdy stuff, you won't regret it at all.  **It will definitely change your life for the better.**
+如果你渴望电脑、编程、互联网之类书呆子式的知识，freeCodeCamp不会让你失望，**它绝对会给你带来更好的生活**。
 
-Cheers everyone, Happy New Year, and don't forget to code, code, code.
+为大家干杯，新年快乐！别忘了写代码、写代码、写代码。
 
-Hey, and one of these days reach out to me on  [twitter][7]  and tell me how it's going! ♥️
+嘿，哪天有空了来 [twitter][7] 上找我，告诉你的体会！ ♥️
 
   
 

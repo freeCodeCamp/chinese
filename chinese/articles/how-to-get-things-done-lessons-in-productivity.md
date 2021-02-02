@@ -20,7 +20,7 @@ If you understand and apply this, you'll be able to keep a clear head and stay f
 -   **Part III:**  Put sanity over execution
 -   **第一部分：** 过程 >> 工具
 -   **第二部分：** 当你无法摆脱拖延时该怎么办
--   **第三部分：** 
+-   **第三部分：** 理智先行，执行力后行
 Let's jump into it.
 话不多说，我们就直奔主题吧！
 ## Part I: Processes >> tools
@@ -307,110 +307,115 @@ But no matter how much you get done, it's important to recognize that productivi
 You need balance to consistently move forward.
 你需要权衡以保证能够持续向前推进工作的开展。
 # Part III: Put sanity over execution
-
+# 第三部分: 理智先行，执行力后行
 ![I shot this using a light tube.](https://images.unsplash.com/photo-1529374814797-de52885a0249?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDIwfHx3YXJyaW9yfGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2000)
 
 [Image Credit][24]  – You can dominate your work and reduce stress if you have a well-built process that bakes in self care.
-
+如果你的工作流程设计合理的同时又能让你照顾好自己，你便能主宰自己的工作，减轻焦虑。
 Getting things done is not always about doing more. Sometimes you don't need faster, better.
-
+完成一些任务后并不总是意味着要接着做更多。有时，你需要的不再是更快、更好。
 You need the sanity from self care.
-
+你需要的是照顾好自己的理智。
 > “_Self-care is never a selfish act. Anytime we can listen to true self and give the care it requires, we do it not only for ourselves, but for the many others whose lives we touch._” - Parker Palmer
+自我照顾绝不是自私的体现。每当我们倾听真我并对其予以需要的关怀时，我们并不仅是为了我们自己才那么做，也是为了与我们的生命有交集的诸多他人。——帕克·帕尔默
+
 
 If you don't prioritize self care, you'll definitely burn out. Trust me, developer burn out is real.
-
+如果你不把自我照顾摆在重要位置，你一定会累垮。相信我，真的有开发者累垮过。
 Burn out too many times and you start to think maybe you're not cut out for the work.
-
+而当累倒了好几次后，你就会开始质疑，或许自己并不是吃着晚饭的料。
 You are.
-
+你是。
 Your approach is simply what's killing you.
-
+只不过你的工作方式一点点蚕食了你的斗志。
 Here are simple ways to start caring more for yourself. These little activities don't come close to the hype that people expect when they hear 'productivity'.
-
+下面是一些简单的方法，你可以以它们为起点，对自己的关怀更多一些。这些小活动并没有那么引人入胜。
 But you need them.
-
+但是你需要它们。
 ### Have a different spot for work and relaxation
-
+### 将你的工作地点和放松地点区别开来
 ![](https://images.unsplash.com/photo-1507131924971-8b54a6e746e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDIwfHxyZWxheHxlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)
 
 [Image Credit][25]  – Having a dedicated place to relax will help you fully unplug.
-
+拥有一个专门用于休息的地方能够帮你完全放松下来。
 I've found that relaxing in the same spot and later trying to work doesn't cut it.
-
+我发现，在一个地方休息之后，接着再在这个地方工作时会有些吃力。
 Same applies when flipped around: working in the same spot and later trying to switch to relaxation mode is hard.
-
+同样，在一个地方工作之后，接着再在这个地方休息很难放松下来。
 You don't need separate rooms for this.
-
+你并不必为此找到两个不同的房间。
 You only need to intentionally create a physical difference so you can switch out from one to the other. Not doing this kept me spinning in cycles for several weeks.
-
+你只需要有意识地去创造一种物理上的不同即可，如此你便可以从一个模式切换到另一个模式。如果没有这种区分，我会连续几周都感到晕头转向、身心疲惫。
 ### Recharge through a daily shower
-
+### 一日一浴，体力充裕
 ![](https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDV8fGtpZCUyMGhhcHB5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2000)
 
 [Image Credit][26]  – A daily shower is simple yet powerful enough to reset.
-
+每天洗个澡，看似简单，却足以让你恢复身心。
 This is straightforward. Early showers are better but if you can't do that have one at night before the day runs out. You'll feel like you've accomplished something already.
-
+这条建议很容易实现。如果能在早上洗澡更好，但如果不行，你在快要结束前一日时也可以洗个睡前澡。这会让你感觉你这一天已经有所作为了。
 ### Cooking as therapy
-
+### 烹饪疗法
 ![Donuts halo’ed with fruits and flowers. Whatever could be better?](https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDE5fHxyZWNpcGV8ZW58MHx8fA&ixlib=rb-1.2.1&q=80&w=2000)
 
 [Image Credit][27]  – Cooking is one of the most gratifying ways to reboot yourself.
-
+烹饪是让你自己重启的最佳方式之一。
 I don't cook as much as I'd love to. But following instructions on a recipe and coming up with something new feels magical.
-
+尽管我并不经常烹饪，我很喜欢烹饪。按照菜谱的指示操作并想出一些新点子的感觉非常神奇。
 > “No one who cooks, cooks alone. Even at her most solitary, a cook in the kitchen is surrounded by generations of cooks past, the advice and menus of cooks present, the wisdom of cookbook writers.” — Laurie Colwin
-
+没有人在烹饪是一个人。即便是在她最孤独的时候，一名厨房里的厨师也被先前的几代厨师、当下厨师的建议和菜单及烹饪作家的智慧紧紧围绕着。——劳里·柯文
 Pick any meal – whether it comes out good or not doesn't matter.
-
+做什么饭都可以，做出来的食物好吃或不好吃都没有关系。
 It's the process of unplugging from the world that helps. Pair the cooking with jazz music and you're automatically teleported to another universe.
-
+起到帮助的是你远离尘世喧嚣的过程。烹饪时再放点爵士乐，你不知不觉就被传送到另外一个宇宙了。
 ### Get any amount of sunshine
-
+### 晒晒太阳，多少都无所谓
 ![san diego](https://images.unsplash.com/photo-1483489571097-0ca295ba3d08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDEwfHxoYXBweSUyMGtpZHxlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)
 
 [Image Credit][28]  – Sometimes, stepping out to bright light is the productivity kick you need.
-
+有时，迈步到亮光下就是你所需的高效触发器。
 I've never believed that the weather has an impact on one's mood, but it does.
-
+我从不相信天气会对一个人的心情有很大影响，但它的确会。
 Stay in doors too much and things will start to feel gloomy.  [Cabin fever][29]  sets in and you pack your living space back and forth like a mad raccoon.
-
+待在室内太久会让你感到万事都很无望。当患上[幽闭烦躁症][29]时，你会像只发了疯的浣熊似的在你的生活空间里暴躁不安、横冲直撞。
 But you don't need to step out to fix this issue. I've realized that my cabin fever completely disappears if I open up windows early in the day.
-
+要解决这个问题，你也不一定非得踏出门外。我发现如果我每天早上都把窗户打开，我就完全不会有幽闭烦躁症的感觉。
 No need for huge windows or long walks outside. Just a few minutes of quiet, alone sunshine is all it takes.
-
+你无需一面巨大的窗户，也无需到室外长走，只需要留出几分钟的时间安静地一人享受一会儿阳光就够了。
 ## Closing out
-
+## 写在最后
 ![](https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDV8fFZpY3Rvcnl8ZW58MHx8fA&ixlib=rb-1.2.1&q=80&w=2000)
 
 [Image Credit][30]  – Small, hidden steps prepare you for any big battle out there.
-
+微小、不起眼的行动可以让你为身临大战做好准备。
 > While it may seem small, the ripple effects of small things is extraordinary. –  [Matt Bevin][31]
-
+有些事情可能并不起眼，可在涟漪效应下，这些小事情也能会发挥大作用。——马特·贝文
 Think about what you’ve read so far.
-
+回顾一下你刚刚读到的内容。
 You’ll notice that each one sounds simplistic because they are minor tweaks by themselves.
-
+你会发现每一条建议听起来都很简单，因为它们本身都是非常微小的事情。
 But combining all of them together transformed how I got on top of things. You can achieve this type of change too if you follow the principles.
-
+但是将它们所有结合在一起改变了我掌控一切的方式。如果你能遵循这些原则，你也可以实现同样的转变。
 Remember:
-
+记得：
 -   Processes >> tools
 -   Beat procrastination or it'll control you
 -   Put self care and sanity over constant execution
-
+-   过程 >> 工具
+-   打败拖延症，否则你就会为它所控
+-   自我照顾和理智比毫不停歇的工作更重要
 ## Thanks for reading
-
+## 谢谢阅读
 If you enjoyed this, there's more.
-
+如果你喜欢这篇分享，以下是更多推荐。
 -   [**Join my email community**][32]: I share techniques for new coders and junior developers to grow faster and double their confidence. If you're interested,  [join the community.][33]
+[**加入我的电子邮件社区**] [32]：我会为编码小白和初级开发者分享一些技巧，以帮助他们更快成长，并使他们信心加倍。如果您有兴趣，请[加入社区。] [33]
 -   [**Follow me on Twitter**][34]: Want more rapid-fire tips? Or have a question? I'm most active on Twitter so feel free to  [reach out to me.][35]  My DM is open.
+[**在Twitter上关注我**] [34]：是否需要更多高效工作的技巧？或是有疑问？我的Twitter账号最为活跃，请随时与我联系。[35]我的DM已打开。
 -   **[Read more articles][36]:**  If you want more articles,  [check out other posts on my blog][37].
-
+** [阅读更多文章] [36]：**如果您想要更多文章，欢迎[查看我博客上的其他文章] [37]。
 __Heads Up__  \- I love research so I tend to back my advice and approach with concepts from Behavioral Psychology and Neuroscience.
-
-  
+__小贴士____ \-我喜欢研究，所以我倾向于用行为心理学和神经科学的概念来支撑我的建议和方法。
 
 [1]: https://evernote.com/
 [2]: https://keep.google.com/

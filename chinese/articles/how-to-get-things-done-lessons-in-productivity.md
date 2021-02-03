@@ -22,7 +22,7 @@
 ![Chaos vs. Your Process. The more chaotic you feel, the less efficient your process is. Conversely, you could have way more to do than everyone else yet operate more efficiently. Why? Because of your well-designed process.](https://lifetechpsych.com/static/23cf5f440ed7873366665092b38fbe5d/2bef9/chart.png "Chaos vs. Your Process. The more chaotic you feel, the less efficient your process is. Conversely, you could have way more to do than everyone else yet operate more efficiently. Why? Because of your well-designed process.")
 
 你越是感到一切杂乱无序，你在工作过程中效率就会越低。反之，如果你的工作流程设计合理，你不仅能够比周围的人做更多的事情，还能保持更高的办事效率。
-在我认识到这一点之前，我曾苦于追求“持久性的工作效率”。它的关键就在于The keyword here is  _持久性_  一词。
+在我认识到这一点之前，我曾苦于追求“持久性的工作效率”。它的关键就在于  _持久性_  一词。
 每个人时不时地都能保持高效，可要想把这种高效保持下去就需要费点心思了。
 以前，我能完成很多事情。但我总觉得自己漏了点什么。我的做事理念就是速度和执行力高于一切。这种理念在短期内是行之有效的，但是长期来看缺乏可持续性。
 我从各种地方获悉了一些生活小窍门儿，也试着用过市面上所有的效率管理工具，包括下面这几款比较流行的：

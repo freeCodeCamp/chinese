@@ -139,14 +139,12 @@
 > 一个完美主义者要想解决拖延问题，就要从以“B”而非“A+”来要求自己的第一步开始做起。也就是说，你要退一步，让自己的第一步看着“还不错”就可以了，而非一定要“完完美美”。
 
 ### 2) 明确接下来的一小步。
-每当你感到不清楚下一步该干嘛时，你的意识就会阻碍你继续向前。
+![](https://images.unsplash.com/photo-1558800199-1f485762061b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDE5fHxjb25mdXNlZHxlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)
+
+[Image Credit][16]  – 每当你感到不清楚下一步该干嘛时，你的意识就会阻碍你继续向前。每当你创建的任务含混不清时，你就为拖延症提供了可乘之机。
 比如说，你的待办事项可能是这么写的：
 > 构建一个绝佳的作品集网页来助力自己找工作。还要设计一个惊艳众人的登录页面。
 
-![](https://images.unsplash.com/photo-1558800199-1f485762061b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDE5fHxjb25mdXNlZHxlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)
-
-[Image Credit][16]  – 每当你创建的任务含混不清时，你就为拖延症提供了可乘之机。
-But:
 但是：
 -   _“绝佳”_  具体指哪方面有多好呢?
 -   什么  [类型的编程项目][17]  应该放在我的作品集中呢?

@@ -752,82 +752,73 @@ cat -n file1
 
 ## Linux 中的 `tail` 命令
 
-The best use case of tail in my opinion is when called with the `-f` option. It opens the file at the end, and watches for file changes.
+在我看来，tail 命令的最佳用法是带上 `-f` 参数一起调用。它会打开并显示文件最末尾的内容，并实时监控文件的改动。
 
-Any time there is new content in the file, it is printed in the window. This is great for watching log files, for example:
+有新内容进入文件时，它就将其输出到终端窗口中。这对于查看日志文件是非常棒的。例如：
 
 ```bash
 tail -f /var/log/system.log
-
 ```
 
-To exit, press `ctrl-C`.
+要退出，就按下 `ctrl-C`.
 
-You can print the last 10 lines in a file:
+使用以下命令，你可以输出任一文件的最后十行内容：
 
 ```bash
-tail -n 10 <filename>
-
+tail -n 10 <文件名>
 ```
 
-You can print the whole file content starting from a specific line using `+` before the line number:
+你还可以在行号前添加加号 `+` 指定从文件的某一行开始输出之后的所有内容：
 
 ```bash
-tail -n +10 <filename>
-
+tail -n +10 <文件名>
 ```
 
-`tail` can do much more and as always my advice is to check `man tail`.
+`tail` 还可以做更多的事情，像往常一样，我建议你去查询 `man tail` 了解更多。
 
 ## Linux 中的 `wc` 命令
 
-The `wc` command gives us useful information about a file or input it receives via pipes.
+`wc` 命令会为我们显示关于指定文件（或透过管道符接收的参数）的有用信息。
 
 ```bash
 echo test >> test.txt
 wc test.txt
 1       1       5 test.txt
-
 ```
 
-Example via pipes, we can count the output of running the `ls -al` command:
+以下是透过管道符的例子，我们可以利用它来给 `ls -al` 命令的运行输出计数：
 
 ```bash
 ls -al | wc
 6      47     284
-
 ```
 
-The first column returned is the number of lines. The second is the number of words. The third is the number of bytes.
+第一列返回的是行数，第二列是字数，第三列则是比特数。
 
-We can tell it to just count the lines:
+我们可以让它只计算行数：
 
 ```bash
 wc -l test.txt
-
 ```
 
-or just the words:
+或者只计算字数：
 
 ```bash
 wc -w test.txt
-
 ```
 
-or just the bytes:
+或者只计算比特数：
 
 ```bash
 wc -c test.txt
-
 ```
 
-Bytes in ASCII charsets equate to characters. But with non-ASCII charsets, the number of characters might differ because some characters might take multiple bytes (for example this happens in Unicode).
+在 ASCII 字符集中，比特数等于字符数。但对于非 ASCII 字符集，由于一些字符可能占用多个比特，字符的数目可能会不同（这在 Unicode 里有发生过）。
 
-In this case the `-m` flag will help you get the correct value:
+这种情况下使用 `-m` 参数可以得到正确的数目：
 
 ```bash
 wc -m test.txt
-
 ```
 
 ## Linux 中的 `grep` 命令

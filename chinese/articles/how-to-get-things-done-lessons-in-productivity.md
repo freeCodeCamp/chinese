@@ -142,6 +142,7 @@
 每当你感到不清楚下一步该干嘛时，你的意识就会阻碍你继续向前。
 比如说，你的待办事项可能是这么写的：
 > 构建一个绝佳的作品集网页来助力自己找工作。还要设计一个惊艳众人的登录页面。
+
 ![](https://images.unsplash.com/photo-1558800199-1f485762061b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDE5fHxjb25mdXNlZHxlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)
 
 [Image Credit][16]  – 每当你创建的任务含混不清时，你就为拖延症提供了可乘之机。

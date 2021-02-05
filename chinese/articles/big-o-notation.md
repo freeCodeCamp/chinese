@@ -83,7 +83,7 @@ This means that a 2 person party has two games, as each guest takes it in turn t
 
 In general, an ‘n’ person party requires n!, or n factorial games, so the speed of making the cake is related to the this.
 
-n! is calculated by multiplying all whole numbers from n down to one “n \* (n - 1) \* (n - 2) … \* 2 \* 1”. So for the 2 person party it is 2 \* 1, or 2. For the three person party it is 3 \* 2 \* 1, which is 6.
+n! is calculated by multiplying all whole numbers from n down to one “n \* (n - 1) \* (n - 2) …… \* 2 \* 1”. So for the 2 person party it is 2 \* 1, or 2. For the three person party it is 3 \* 2 \* 1, which is 6.
 
 Real world examples of O(n!) operations are anything that requires analysing a list of permutations, such as the  [traveling salesman problem][2].
 

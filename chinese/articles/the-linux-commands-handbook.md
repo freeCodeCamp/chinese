@@ -1221,9 +1221,9 @@ The weird strings you see on each file line, like  `drwxr-xr-x`, define the perm
 
 `The first letter indicates the type of file:`
 
--   `` `-`  means it's a normal file``
--   `` `d`  means it's a directory``
--   `` `l`  means it's a link``
+-   `-`  means it's a normal file`
+-   `d`  means it's a directory`
+-   `l`  means it's a link`
 
 `Then you have 3 sets of values:`
 
@@ -1235,14 +1235,14 @@ The weird strings you see on each file line, like  `drwxr-xr-x`, define the perm
 
 ``You can change the permissions given to a file using the  `chmod`  command.``
 
-`` `chmod`  can be used in 2 ways. The first is using symbolic arguments, the second is using numeric arguments. Let's start with symbols first, which is more intuitive.``
+`chmod`  can be used in 2 ways. The first is using symbolic arguments, the second is using numeric arguments. Let's start with symbols first, which is more intuitive.`
 
 ``You type  `chmod`  followed by a space, and a letter:``
 
--   `` `a`  stands for  _all_``
--   `` `u`  stands for  _user_``
--   `` `g`  stands for  _group_``
--   `` `o`  stands for  _others_``
+-   `a`  stands for  _all_`
+-   `u`  stands for  _user_`
+-   `g`  stands for  _group_`
+-   `o`  stands for  _others_`
 
 ``Then you type either  `+`  or  `-`  to add a permission, or to remove it. Then you enter one or more permission symbols (`r`,  `w`,  `x`).``
 
@@ -1268,20 +1268,20 @@ chmod og-r filename #other and group can't read any more
 
 `Numeric arguments are faster but I find them hard to remember when you are not using them day to day. You use a digit that represents the permissions of the persona. This number value can be a maximum of 7, and it's calculated in this way:`
 
--   `` `1`  if has execution permission``
--   `` `2`  if has write permission``
--   `` `4`  if has read permission``
+-   `1`  if has execution permission`
+-   `2`  if has write permission`
+-   `4`  if has read permission`
 
 `This gives us 4 combinations:`
 
--   `` `0`  no permissions``
--   `` `1`  can execute``
--   `` `2`  can write``
--   `` `3`  can write, execute``
--   `` `4`  can read``
--   `` `5`  can read, execute``
--   `` `6`  can read, write``
--   `` `7`  can read, write and execute``
+-   `0`  no permissions`
+-   `1`  can execute`
+-   `2`  can write`
+-   `3`  can write, execute`
+-   `4`  can read`
+-   `5`  can read, execute`
+-   `6`  can read, write`
+-   `7`  can read, write and execute`
 
 `We use them in pairs of 3, to set the permissions of all the 3 groups altogether:`
 
@@ -1317,14 +1317,14 @@ In this case, the user (`u`), owner of the file, has read, write and execution p
 
 `Here's a list that gives a meaning to the number:`
 
--   `` `0`  read, write, execute``
--   `` `1`  read and write``
--   `` `2`  read and execute``
--   `` `3`  read only``
--   `` `4`  write and execute``
--   `` `5`  write only``
--   `` `6`  execute only``
--   `` `7`  no permissions``
+-   `0`  read, write, execute`
+-   `1`  read and write`
+-   `2`  read and execute`
+-   `3`  read only`
+-   `4`  write and execute`
+-   `5`  write only`
+-   `6`  execute only`
+-   `7`  no permissions`
 
 ``Note that this numeric notation differs from the one we use in  `chmod`.``
 
@@ -1472,18 +1472,18 @@ The columns returned by  `ps`  represent some key information.``
 
 ``Then  `STAT`  tells us the state of the process:``
 
-`` `I`  a process that is idle (sleeping for longer than about 20 seconds)  
+`I`  a process that is idle (sleeping for longer than about 20 seconds)  
 `R`  a runnable process  
 `S`  a process that is sleeping for less than about 20 seconds  
 `T`  a stopped process  
 `U`  a process in uninterruptible wait  
-`Z`  a dead process (a  _zombie_)``
+`Z`  a dead process (a  _zombie_)`
 
 `If you have more than one letter, the second represents further information, which can be very technical.`
 
 ``It's common to have  `+`  which indicates that the process is in the foreground in its terminal.  `s`  means the process is a  [session leader][69].``
 
-`` `TIME`  tells us how long the process has been running.``
+`TIME`  tells us how long the process has been running.`
 
 ## ``The Linux  `top`  command``
 
@@ -1540,26 +1540,26 @@ kill -STOP <PID>
 
 ```
 
-`` `HUP`  means  **hang up**. It's sent automatically when a terminal window that started a process is closed before terminating the process.``
+`HUP`  means  **hang up**. It's sent automatically when a terminal window that started a process is closed before terminating the process.`
 
-`` `INT`  means  **interrupt**, and it sends the same signal used when we press  `ctrl-C`  in the terminal, which usually terminates the process.``
+`INT`  means  **interrupt**, and it sends the same signal used when we press  `ctrl-C`  in the terminal, which usually terminates the process.`
 
-`` `KILL`  is not sent to the process, but to the operating system kernel, which immediately stops and terminates the process.``
+`KILL`  is not sent to the process, but to the operating system kernel, which immediately stops and terminates the process.`
 
-`` `TERM`  means  **terminate**. The process will receive it and terminate itself. It's the default signal sent by  `kill`.``
+`TERM`  means  **terminate**. The process will receive it and terminate itself. It's the default signal sent by  `kill`.`
 
-`` `CONT`  means  **continue**. It can be used to resume a stopped process.``
+`CONT`  means  **continue**. It can be used to resume a stopped process.`
 
-`` `STOP`  is not sent to the process, but to the operating system kernel, which immediately stops (but does not terminate) the process.``
+`STOP`  is not sent to the process, but to the operating system kernel, which immediately stops (but does not terminate) the process.`
 
 ``You might see numbers used instead, like  `kill -1 <PID>`. In this case,``
 
-`` `1`  corresponds to  `HUP`.  
+`1`  corresponds to  `HUP`.  
 `2`  corresponds to  `INT`.  
 `9`  corresponds to  `KILL`.  
 `15`  corresponds to  `TERM`.  
 `18`  corresponds to  `CONT`.  
-`15`  corresponds to  `STOP`.``
+`15`  corresponds to  `STOP`.`
 
 ## ``The Linux  `killall`  command``
 
@@ -1747,9 +1747,9 @@ command1 | xargs -I % /bin/bash -c 'command2 %; command3 %'
 
 ## ``The Linux  `vim`  editor command``
 
-`` `vim`  is a  **very**  popular file editor, especially among programmers. It's actively developed and frequently updated, and there's a big community around it. There's even a  [Vim conference][70]!``
+`vim`  is a  **very**  popular file editor, especially among programmers. It's actively developed and frequently updated, and there's a big community around it. There's even a  [Vim conference][70]!`
 
-`` `vi`  in modern systems is just an alias for  `vim`, which means  `vi`  i`m`proved.``
+`vi`  in modern systems is just an alias for  `vim`, which means  `vi`  i`m`proved.`
 
 ``You start it by running  `vi`  on the command line.``
 
@@ -1788,9 +1788,9 @@ At this point you can navigate the file, but you can't add content to it (and be
 
 ``One thing you might want to do now is  **save the file**. You can do so by pressing  `:`  (colon), then  `w`.``
 
-``You can  **save and quit**  by pressing  `:`  then  `w`  and  `q`:  `:wq` ``
+`You can  **save and quit**  by pressing`:`then`w`and`q`:`:wq`
 
-``You can  **quit without saving**  by pressing  `:`  then  `q`  and  `!`:  `:q!` ``
+`You can  **quit without saving**  by pressing`:`then`q`and`!`:`:q!`
 
 ``You can  **undo**  and edit by going to command mode and pressing  `u`. You can  **redo**  (cancel an undo) by pressing  `ctrl-r`.``
 
@@ -1809,9 +1809,9 @@ At this point you can navigate the file, but you can't add content to it (and be
 
 ## ``The Linux  `emacs`  editor command``
 
-`` `emacs`  is an awesome editor and it's historically regarded as  _the_  editor for UNIX systems. Famously,  `vi`  vs  `emacs`  flame wars and heated discussions have caused many unproductive hours for developers around the world.``
+`emacs`  is an awesome editor and it's historically regarded as  _the_  editor for UNIX systems. Famously,  `vi`  vs  `emacs`  flame wars and heated discussions have caused many unproductive hours for developers around the world.`
 
-`` `emacs`  is very powerful. Some people use it all day long as a kind of operating system ([https://news.ycombinator.com/item?id=19127258][72]). We'll just talk about the basics here.``
+`emacs`  is very powerful. Some people use it all day long as a kind of operating system ([https://news.ycombinator.com/item?id=19127258][72]). We'll just talk about the basics here.`
 
 ``You can open a new emacs session simply by invoking  `emacs`:``
 
@@ -1845,7 +1845,7 @@ Or  `ctrl-x`  followed by  `c`  (keep  `ctrl`  pressed).``
 
 ## ``The Linux  `nano`  editor command``
 
-`` `nano`  is a beginner friendly editor.``
+`nano`  is a beginner friendly editor.`
 
 ``Run it using  `nano <filename>`.``
 
@@ -1912,7 +1912,7 @@ su <username>
 
 ## ``The Linux  `sudo`  command``
 
-`` `sudo`  is commonly used to run a command as root.``
+`sudo`  is commonly used to run a command as root.`
 
 ``You must be enabled to use  `sudo`, and once you are, you can run commands as root by entering your user's password (_not_  the root user password).``
 
@@ -1976,7 +1976,7 @@ passwd <username> <new password>
 `![Screen-Shot-2020-09-09-at-15.21.46](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-15.21.46.png)  
 The command sends a request to the server, and the server returns a response.`
 
-`` `ping`  keeps sending the request every second, by default. It will keep running until you stop it with  `ctrl-C`, unless you pass the number of times you want to try with the  `-c`  option:  `ping -c 2 google.com`.``
+`ping`  keeps sending the request every second, by default. It will keep running until you stop it with  `ctrl-C`, unless you pass the number of times you want to try with the  `-c`  option:  `ping -c 2 google.com`.`
 
 ``Once  `ping`  is stopped, it will print some statistics about the results: the percentage of packages lost, and statistics about the network performance.``
 
@@ -1988,7 +1988,7 @@ The command sends a request to the server, and the server returns a response.`
 
 `Sometimes this is done on purpose, to "hide" the server, or just to reduce the load. The ping packets can also be filtered by firewalls.`
 
-`` `ping`  works using the  **ICMP protocol**  (_Internet Control Message Protocol_), a network layer protocol just like TCP or UDP.``
+`ping`  works using the  **ICMP protocol**  (_Internet Control Message Protocol_), a network layer protocol just like TCP or UDP.`
 
 ``The request sends a packet to the server with the  `ECHO_REQUEST`  message, and the server returns a  `ECHO_REPLY`  message. I won't go into details, but this is the basic concept.``
 
@@ -2040,7 +2040,7 @@ traceroute -q 1 flaviocopes.com
 
 `![Screen-Shot-2020-09-03-at-18.10.32](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-18.10.32.png)`
 
-> ``Note: this command has a handy shortcut:  `ctrl-L` ``
+> `Note: this command has a handy shortcut:`ctrl-L`
 
 `Once you do that, you will lose access to scrolling to see the output of the previous commands entered.`
 

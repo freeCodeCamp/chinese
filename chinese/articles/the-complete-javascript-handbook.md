@@ -932,7 +932,7 @@ const re = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/const result = re.exec(
 // result.groups.year === '2015';// result.groups.month === '01';// result.groups.day === '02';
 ```
 
-#### `The `'s’` flag for regular expressions`
+#### `The`'s’` flag for regular expressions`
 
 `The `s`flag, short for _single line_, causes the`.` to match new line characters as well. Without it, the dot matches regular characters but not the new line:`
 
@@ -977,8 +977,8 @@ const re = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/const result = re.exec(
 -   `**Inline Comments**: use inline comments in your code. Use block comments only to document.`
 -   `**No dead code**: Don’t leave old code commented, “just in case” it will be useful later. Keep only the code you need now, version control/your notes app is meant for this.`
 -   `**Only comment when useful**: Don’t add comments that don’t help understand what the code is doing. If the code is self-explanatory through the use of good variable and function naming, and JSDoc function comments, don’t add a comment.`
--   `**Variable declarations**: always declare variables to avoid polluting the global object. Never use`var`. Default to `const`, and only use `let` if you reassign the variable.`
--   `**Functions**: use arrow functions unless you have a specific reason to use regular functions, like in object methods or constructors, due to how`this` works. Declare them as const, and use implicit returns if possible. Feel free to use nested functions to hide helper functions to the rest of the code.`
+-   `**Variable declarations**: always declare variables to avoid polluting the global object. Never use`var`. Default to `const`, and only use`let` if you reassign the variable.`
+-   `**Functions**: use arrow functions unless you have a specific reason to use regular functions, like in object methods or constructors, due to how`this`works. Declare them as const, and use implicit returns if possible. Feel free to use nested functions to hide helper functions to the rest of the code.`
 
 ```plain
 const test = (a, b) => a + b
@@ -988,7 +988,7 @@ const test = (a, b) => a + b
 const another = a => a + 2
 ```
 
--   `` **Names**: function names, variable names and method names always start with a lowercase letter (unless you identify them as private, read below), and are camelCased. Only constructor functions and class names should start capitalized. If you use a framework that requires specific conventions, change your habits accordingly. File names should all be lowercase, with words separated by `-`. ``
+-   `**Names**: function names, variable names and method names always start with a lowercase letter (unless you identify them as private, read below), and are camelCased. Only constructor functions and class names should start capitalized. If you use a framework that requires specific conventions, change your habits accordingly. File names should all be lowercase, with words separated by `-`.`
 -   `**Statement-specific formats and rules**:`
 
 `**if**`
@@ -1039,9 +1039,9 @@ try {  statements} catch (variable) {  statements}
 try {  statements} catch (variable) {  statements} finally {  statements}
 ```
 
--   `**Whitespace**: use whitespace wisely to improve readability: put a whitespace after a keyword followed by a `(`; before & after a binary operation (`+`, `-`, `/`, `*`, `&&`..); inside the for statement, after each `;`to separate each part of the statement; after each `,`.`
+-   `**Whitespace**: use whitespace wisely to improve readability: put a whitespace after a keyword followed by a `(`; before & after a binary operation (`+`, `-`, `/`, `*`, `&&`..); inside the for statement, after each `;`to separate each part of the statement; after each`,`.`
 -   `**New lines**: use new lines to separate blocks of code that perform logically related operations.`
--   `**Quotes** favor single quotes `'`instead of double quotes`"`. Double quotes are a standard in HTML attributes, so using single quotes helps remove problems when dealing with HTML strings. Use template literals when appropriate instead of variable interpolation.`
+-   `**Quotes** favor single quotes`'`instead of double quotes`"`. Double quotes are a standard in HTML attributes, so using single quotes helps remove problems when dealing with HTML strings. Use template literals when appropriate instead of variable interpolation.`
 
 ### `Lexical Struture`
 
@@ -1063,7 +1063,7 @@ try {  statements} catch (variable) {  statements} finally {  statements}
 returnvariable
 ```
 
-`[Or starting a line with parentheses (`[` or `(`) and you'll be safe 99.9% of the times (and your linter will warn you).][16]`
+`[Or starting a line with parentheses (`[`or`(`) and you'll be safe 99.9% of the times (and your linter will warn you).][16]`
 
 `[It’s up to personal preference, and lately I have decided to **never add useless semicolons**, so within this article you’ll never see them.][17]`
 
@@ -1147,7 +1147,7 @@ var a = 0
 
 `[In modern environments, with strict mode enabled, you will get an error. In older environments (or with strict mode disabled) this will simply initialize the variable and assign it to the global object.][45]`
 
-`[If you don’t initialize the variable when you declare it, it will have the `undefined` value until you assign a value to it.][46]`
+`[If you don’t initialize the variable when you declare it, it will have the`undefined` value until you assign a value to it.][46]`
 
 ```
 var a //typeof a === 'undefined'
@@ -1171,7 +1171,7 @@ var a = 1, b = 2
 
 `[Any variable defined into a function with the same name of a global variable takes precedence over the global variable, shadowing it.][51]`
 
-`[It’s important to understand that a block (identified by a pair of curly braces) does not define a new scope. A new scope is only created when a function is created, because `var` does not have block scope, but function scope.][52]`
+`[It’s important to understand that a block (identified by a pair of curly braces) does not define a new scope. A new scope is only created when a function is created, because`var` does not have block scope, but function scope.][52]`
 
 `[Inside a function, any variable defined in it is visible throughout all the function code, even if the variable is declared at the end of the function it can still be referenced in the beginning, because JavaScript before executing the code actually _moves all variables on top_ (something that is called**hoisting**). To avoid confusion, always declare variables at the beginning of a function.][53]`
 
@@ -1181,11 +1181,11 @@ var a = 1, b = 2
 
 `` [Modern JavaScript developers might choose to only use `let` and completely discard the use of `var`.][56] ``
 
-> `` [_If `let` seems an obscure term, just read `let color = 'red'` as_ let the color be red _and all has much more sense._][57] ``
+> `[_If `let` seems an obscure term, just read `let color = 'red'`as_ let the color be red _and all has much more sense._][57]`
 
 `` [Defining `let` outside of any function - contrary to `var` - does not create a global variable.][58] ``
 
-#### `[Using `const`][59]`
+#### `[Using`const`][59]`
 
 `` [Variables declared with `var` or `let` can be changed later on in the program, and reassigned. A once a `const` is initialized, its value can never be changed again, and it can't be reassigned to a different value.][60] ``
 
@@ -1195,7 +1195,7 @@ const a = 'test'
 
 `` [We can’t assign a different literal to the `a` const. We can however mutate `a`if it's an object that provides methods that mutate its contents.][61] ``
 
-`[`const` does not provide immutability, just makes sure that the reference can't be changed.][62]`
+`[`const`does not provide immutability, just makes sure that the reference can't be changed.][62]`
 
 `` [`const` has block scope, same as `let`.][63] ``
 
@@ -1304,9 +1304,9 @@ const a = 'test'
 
 #### `[null][97]`
 
-`[`null` is a special value that indicates the absence of a value.][98]`
+`[`null`is a special value that indicates the absence of a value.][98]`
 
-`[It’s a common concept in other languages as well, can be known as `nil` or `None`in Python for example.][99]`
+`[It’s a common concept in other languages as well, can be known as`nil`or`None`in Python for example.][99]`
 
 #### `[undefined][100]`
 
@@ -1426,13 +1426,13 @@ a.x(2)window.resize()
 const car = {}
 ```
 
-`` [Or one created with the `new Object` syntax:][133] ``
+`[Or one created with the `new Object` syntax:][133]`
 
 ```
 const car = new Object()
 ```
 
-`` [In any case, the prototype of `car` is `Object`:][134] ``
+`[In any case, the prototype of `car` is `Object`:][134]`
 
 `[If you initialize an array, which is an object:][135]`
 
@@ -1472,7 +1472,7 @@ Array.prototype.isPrototypeOf(list)
 
 ![](https://cdn-media-1.freecodecamp.org/images/KGMfF2VqFksLEngS1kDBKjhxkDwXM1id5i4p)
 
-`` [`Object.prototype` is the base prototype of all the objects:][139] ``
+`[`Object.prototype` is the base prototype of all the objects:][139]`
 
 ```
 Object.getPrototypeOf(Array.prototype) == Object.prototype
@@ -1484,7 +1484,7 @@ Object.getPrototypeOf(Array.prototype) == Object.prototype
 
 `[I can make an object that extends Array and any object I instantiate using it, will have Array and Object in its prototype chain and inherit properties and methods from all the ancestors.][142]`
 
-`` [In addition to using the `new` operator to create an object, or using the literals syntax for objects and arrays, you can instantiate an object using `Object.create()`.][143] ``
+`[In addition to using the `new` operator to create an object, or using the literals syntax for objects and arrays, you can instantiate an object using `Object.create()`.][143]`
 
 `[The first argument passed is the object used as prototype:][144]`
 
@@ -1492,7 +1492,7 @@ Object.getPrototypeOf(Array.prototype) == Object.prototype
 const car = Object.create({})const list = Object.create(Array)
 ```
 
-`[You can check the prototype of an object using the `isPrototypeOf()` method:][145]`
+`[You can check the prototype of an object using the`isPrototypeOf()` method:][145]`
 
 ```
 Array.isPrototypeOf(list) //true
@@ -1504,7 +1504,7 @@ Array.isPrototypeOf(list) //true
 const list = Object.create(Array.prototype)
 ```
 
-`[and in this case `Array.isPrototypeOf(list)` is false, while `Array.prototype.isPrototypeOf(list)` is true.][147]`
+`[and in this case`Array.isPrototypeOf(list)` is false, while `Array.prototype.isPrototypeOf(list)`is true.][147]`
 
 ### `[Classes][148]`
 
@@ -1556,7 +1556,7 @@ const flavio = new Programmer('Flavio')flavio.hello()
 
 `[Classes do not have explicit class variable declarations, but you must initialize any variable in the constructor.][162]`
 
-`` [Inside a class, you can reference the parent class calling `super()`.][163] ``
+`[Inside a class, you can reference the parent class calling`super()`.][163]`
 
 #### `[Static methods][164]`
 
@@ -1580,7 +1580,7 @@ Person.genericHello() //Hello
 
 #### `[Getters and setters][170]`
 
-`[You can add methods prefixed with `get` or `set`to create a getter and setter, which are two different pieces of code that are execute based on what you are doing: accessing the variable, or modifying its value.][171]`
+`[You can add methods prefixed with `get`or`set`to create a getter and setter, which are two different pieces of code that are execute based on what you are doing: accessing the variable, or modifying its value.][171]`
 
 ```
 class Person {  constructor(name) {    this._name = name  }
@@ -1626,7 +1626,7 @@ class Person {  constructor(name) {    this._name = name  }
 throw value
 ```
 
-`[Where`value` can be any JavaScript value including a string, a number or an object.][178]`
+`[Where`value`can be any JavaScript value including a string, a number or an object.][178]`
 
 `[As soon as JavaScript executes this line, the normal program flow is halted and the control is held back to the nearest **exception handler**.][179]`
 
@@ -1644,13 +1644,13 @@ try {  //lines of code} catch (e) {
 }
 ```
 
-`` [`e` in this example is the exception value.][183] ``
+`[`e` in this example is the exception value.][183]`
 
 `[You can add multiple handlers, that can catch different kinds of errors.][184]`
 
-#### `` [`finally`][185] ``
+#### `[`finally`][185]`
 
-`` [To complete this statement JavaScript has another statement called `finally`, which contains code that is executed regardless of the program flow, if the exception was handled or not, if there was an exception or if there wasn't:][186] ``
+`[To complete this statement JavaScript has another statement called `finally`, which contains code that is executed regardless of the program flow, if the exception was handled or not, if there was an exception or if there wasn't:][186]`
 
 ```
 try {  //lines of code} catch (e) {
@@ -1694,7 +1694,7 @@ try {  //lines of code
 }
 ```
 
-`[If an exception is raised in the inner `try`, it's handled in the outer`catch`block.][190]`
+`[If an exception is raised in the inner`try`, it's handled in the outer`catch`block.][190]`
 
 ### `[Semicolons][191]`
 
@@ -1738,7 +1738,7 @@ const hey = 'hey'const you = 'hey'const heyYou = hey + ' ' + you
 ['h', 'e', 'y'].forEach((letter) => console.log(letter))
 ```
 
-`[You’ll get the error`Uncaught TypeError: Cannot read property 'forEach' of undefined`because based on rule`1` JavaScript tries to interpret the code as][211]`
+`[You’ll get the error`Uncaught TypeError: Cannot read property 'forEach' of undefined`because based on rule`1`JavaScript tries to interpret the code as][211]`
 
 ```
 const hey = 'hey';const you = 'hey';const heyYou = hey + ' ' + you['h', 'e', 'y'].forEach((letter) => console.log(letter))
@@ -1756,7 +1756,7 @@ const hey = 'hey';const you = 'hey';const heyYou = hey + ' ' + you['h', 'e', 'y'
 const a = 1const b = 2const c = a + b(a + b).toString()
 ```
 
-`[Instead, the above code raises a `TypeError: b is not a function` exception, because JavaScript tries to interpret it as][214]`
+`[Instead, the above code raises a`TypeError: b is not a function` exception, because JavaScript tries to interpret it as][214]`
 
 ```
 const a = 1const b = 2const c = a + b(a + b).toString()
@@ -1768,9 +1768,9 @@ const a = 1const b = 2const c = a + b(a + b).toString()
 (() => {  return  {    color: 'white'  }})()
 ```
 
-`` [You’d expect the return value of this immediately-invoked function to be an object that contains the `color` property, but it's not. Instead, it's`undefined`, because JavaScript inserts a semicolon after `return`.][216] ``
+`[You’d expect the return value of this immediately-invoked function to be an object that contains the`color` property, but it's not. Instead, it's`undefined`, because JavaScript inserts a semicolon after `return`.][216]`
 
-`[Instead you should put the opening bracket right after `return`:][217]`
+`[Instead you should put the opening bracket right after`return`:][217]`
 
 ```
 (() => {  return {    color: 'white'  }})()
@@ -1796,7 +1796,7 @@ const a = 1const b = 2const c = a + b(a + b).toString()
 
 `[Pick some rules:][223]`
 
--   `[be careful with`return` statements. If you return something, add it on the same line as the return (same for `break`,`throw`, `continue`)][224]`
+-   `[be careful with`return` statements. If you return something, add it on the same line as the return (same for `break`,`throw`,`continue`)][224]`
 -   `[never start a line with parentheses, those might be concatenated with the previous line to form a function call, or array element reference][225]`
 
 `[And ultimately, always test your code to make sure it does what you want.][226]`
@@ -1929,13 +1929,13 @@ const string = `FirstSecond`.trim()
 
 `[Template literals provide an easy way to interpolate variables and expressions into strings.][264]`
 
-`[You do so by using the `${...}` syntax:][265]`
+`[You do so by using the`${...}`syntax:][265]`
 
 ```
 const var = 'test'const string = `something ${var}` //something test
 ```
 
-`[Inside the `${}` you can add anything, even expressions:][266]`
+`[Inside the`${}` you can add anything, even expressions:][266]`
 
 ```
 const string = `something ${1 + 2 + 3}`const string2 = `something ${foo() ? 'x' : 'y' }`
@@ -1957,7 +1957,7 @@ const Button = styled.button`  font-size: 1.5em;  background-color: black;  colo
 const query = gql`  query {    ...  }`
 ```
 
-`The `styled.button` and `gql`template tags highlighted in those examples are just**functions**:`
+`The`styled.button` and `gql`template tags highlighted in those examples are just**functions**:`
 
 ```plain
 function gql(literals, ...expressions) {
@@ -1969,9 +1969,9 @@ function gql(literals, ...expressions) {
 
 `This function returns a string, which can be the result of _any_ kind of computation.`
 
-`` `literals` is an array containing the template literal content tokenized by the expressions interpolations.``
+`literals` is an array containing the template literal content tokenized by the expressions interpolations.`
 
-`` `expressions` contains all the interpolations.``
+`expressions` contains all the interpolations.`
 
 `If we take the example above:`
 
@@ -1979,7 +1979,7 @@ function gql(literals, ...expressions) {
 const string = `something ${1 + 2 + 3}`
 ```
 
-`` `literals` is an array with two items. The first is `something`, the string until the first interpolation, and the second is an empty string, the space between the end of the first interpolation (we only have one) and the end of the string.``
+`literals` is an array with two items. The first is `something`, the string until the first interpolation, and the second is an empty string, the space between the end of the first interpolation (we only have one) and the end of the string.`
 
 `` `expressions` in this case is an array with a single item, `6`.``
 
@@ -2011,7 +2011,7 @@ const string = `somethinganother ${'x'}new line ${1 + 2 + 3}test`
 
 `The function that is passed those values can do anything with them, and this is the power of this kind of feature.`
 
-`The most simple example is replicating what the string interpolation does, by simply joining `literals` and `expressions`:`
+`The most simple example is replicating what the string interpolation does, by simply joining `literals`and`expressions`:`
 
 ```
 const interpolated = interpolate`I paid ${10}€`
@@ -2117,7 +2117,7 @@ const dosomething = ({ foo = 1, bar = 'hey' }) => {  //do something  console.log
 
 #### `Return values`
 
-`Every function returns a value, which by default is `undefined`.`
+`Every function returns a value, which by default is`undefined`.`
 
 ![](https://cdn-media-1.freecodecamp.org/images/fSqbe1Bp37sJJ7LWgOlD2GgZJLmzkMvDGaek)
 
@@ -2173,7 +2173,7 @@ car.start()
 const car = {  brand: 'Ford',  model: 'Fiesta',  start: function() {    console.log(`Started ${this.brand} ${this.model}`)  },  stop: () => {    console.log(`Stopped ${this.brand} ${this.model}`)  }}
 ```
 
-`` The `stop()` method does not work as you would expect. ``
+`The `stop()`method does not work as you would expect.`
 
 ![](https://cdn-media-1.freecodecamp.org/images/mx0eyCGhRHR2UyhfgYfZ7hQadu7jxr9EF2NZ)
 
@@ -2181,7 +2181,7 @@ const car = {  brand: 'Ford',  model: 'Fiesta',  start: function() {    console.
 
 ![](https://cdn-media-1.freecodecamp.org/images/cAYxt2Sp1Lo5qJO9xldyVpd5MbNe-NPYYnMz)
 
-`` `this`, which refers to the host object using `function()` ``
+`this`, which refers to the host object using `function()`
 
 `This implies that **arrow functions are not suitable to be used for object methods** and constructors (arrow function constructors will actually raise a `TypeError`when called).`
 
@@ -2235,7 +2235,7 @@ dosomething()const dosomething = function dosomething() {  console.log('did some
 const dosomethingdosomething()dosomething = function dosomething() {  console.log('did something')}
 ```
 
-`The same happens for`let` declarations. `var` declarations do not work either, but with a different error:`
+`The same happens for`let` declarations. `var`declarations do not work either, but with a different error:`
 
 ![](https://cdn-media-1.freecodecamp.org/images/acnsMMT-DwJj6AuOKDq6y95gSZ31Q7FjCJQm)
 
@@ -2285,7 +2285,7 @@ const myFunction = param => doSomething(param)
 
 #### `Implicit return`
 
-`` Arrow functions allow you to have an implicit return: values are returned without having to use the `return` keyword. ``
+`Arrow functions allow you to have an implicit return: values are returned without having to use the `return` keyword.`
 
 `It works when there is a on-line statement in the function body:`
 
@@ -2309,11 +2309,11 @@ myFunction() //{value: 'test'}
 
 #### `How`this`works in arrow functions`
 
-`` `this` is a concept that can be complicated to grasp, as it varies a lot depending on the context and also varies depending on the mode of JavaScript (_strict mode_ or not).``
+`this` is a concept that can be complicated to grasp, as it varies a lot depending on the context and also varies depending on the mode of JavaScript (_strict mode_ or not).`
 
 `It’s important to clarify this concept because arrow functions behave very differently compared to regular functions.`
 
-`` When defined as a method of an object, in a regular function `this` refers to the object, so you can do: ``
+`When defined as a method of an object, in a regular function`this`refers to the object, so you can do:`
 
 ```
 const car = {  model: 'Fiesta',  manufacturer: 'Ford',  fullName: function() {    return `${this.manufacturer} ${this.model}`  }}
@@ -2329,11 +2329,11 @@ const car = {  model: 'Fiesta',  manufacturer: 'Ford',  fullName: () => {    ret
 
 `Due to this, arrow functions are not suited as object methods.`
 
-`Arrow functions cannot be used as constructors as well, when instantiating an object. It will raise a `TypeError`.`
+`Arrow functions cannot be used as constructors as well, when instantiating an object. It will raise a`TypeError`.`
 
 `This is where regular functions should be used instead, **when dynamic context is not needed**.`
 
-`This is also a problem when handling events. DOM Event listeners set `this`to be the target element, and if you rely on`this` in an event handler, a regular function is necessary:`
+`This is also a problem when handling events. DOM Event listeners set`this`to be the target element, and if you rely on`this` in an event handler, a regular function is necessary:`
 
 ```
 const link = document.querySelector('#link')link.addEventListener('click', () => {  // this === window})
@@ -2369,7 +2369,7 @@ const bark = dog => {  const say = `${dog} barked!`  ;(() => console.log(say))()
 bark(`Roger`)
 ```
 
-`` This logs to the console `Roger barked!`, as expected. ``
+`This logs to the console `Roger barked!`, as expected.`
 
 `What if you want to return the action instead:`
 
@@ -2409,7 +2409,7 @@ Roger barked!Syd barked!
 
 `` As you can see, the **state** of the variable `say` is linked to the function that's returned from `prepareBark()`. ``
 
-`Also notice that we redefine a new `say` variable the second time we call `prepareBark()`, but that does not affect the state of the first`prepareBark()` scope.`
+`Also notice that we redefine a new`say`variable the second time we call`prepareBark()`, but that does not affect the state of the first`prepareBark()` scope.`
 
 `This is how a closure works: the function that’s returned keeps the original state in its scope.`
 
@@ -2441,15 +2441,15 @@ const l = a.length
 a.every(f)
 ```
 
-`Iterates `a` until `f()` returns false`
+`Iterates `a` until `f()`returns false`
 
-#### `Iterating the array with `some`
+#### `Iterating the array with`some`
 
 ```
 a.some(f)
 ```
 
-`Iterates `a` until `f()` returns true`
+`Iterates`a`until`f()`returns true`
 
 #### `Iterate the array and return a new one with the returned result of a function`
 
@@ -2457,7 +2457,7 @@ a.some(f)
 const b = a.map(f)
 ```
 
-`` Iterates `a` and builds a new array with the result of executing `f()` on each `a`element ``
+`Iterates `a` and builds a new array with the result of executing `f()`on each`a`element`
 
 #### `Filter an array`
 
@@ -2497,7 +2497,7 @@ a.reduce((accumulator, currentValue, currentIndex, array) => {  //...}, initialV
 a.forEach(f)
 ```
 
-`` Iterates `f` on `a` without a way to stop ``
+`Iterates `f` on `a` without a way to stop`
 
 `Example:`
 
@@ -2519,7 +2519,7 @@ for (let v of a) {  console.log(v)}
 for (let i = 0; i < a.length; i += 1) {  //a[i]}
 ```
 
-`` Iterates `a`, can be stopped using `return` or `break` and an iteration can be skipped using `continue`  ``
+`Iterates `a`, can be stopped using `return`or`break`and an iteration can be skipped using`continue`
 
 #### `@@iterator`
 
@@ -2633,7 +2633,7 @@ a.find((element, index, array) => {  //return true or false})
 a.find(x => x.id === my_id)
 ```
 
-`` The above line will return the first element in the array that has `id === my_id`. ``
+`The above line will return the first element in the array that has`id === my_id`.`
 
 `` `findIndex` returns the index of the first item that returns true, and if not found, it returns `undefined`:``
 
@@ -2731,7 +2731,7 @@ const a = [1, 2, 3, 4]a.copyWithin(0, 2) // [3, 4, 3, 4]const b = [1, 2, 3, 4, 5
 const list = ['a', 'b', 'c']for (let i = 0; i < list.length; i++) {  console.log(list[i]) //value  console.log(i) //index}
 ```
 
--   `You can interrupt a `for` loop using `break`
+-   `You can interrupt a`for`loop using`break`
 -   `You can fast forward to the next iteration of a `for` loop using `continue`
 
 #### `forEach`
@@ -2748,19 +2748,19 @@ const list = ['a', 'b', 'c']list.forEach((item, index) => {  console.log(item) /
 
 `Unfortunately you cannot break out of this loop.`
 
-#### `` `do...while` ``
+#### `do...while`
 
 ```
 const list = ['a', 'b', 'c']let i = 0do {  console.log(list[i]) //value  console.log(i) //index  i = i + 1} while (i < list.length)
 ```
 
-`` You can interrupt a `while` loop using `break`: ``
+`You can interrupt a `while` loop using `break`:`
 
 ```
 do {  if (something) break} while (true)
 ```
 
-`and you can jump to the next iteration using `continue`:`
+`and you can jump to the next iteration using`continue`:`
 
 ```plain
 do {  if (something) continue
@@ -2776,7 +2776,7 @@ do {  if (something) continue
 const list = ['a', 'b', 'c']let i = 0while (i < list.length) {  console.log(list[i]) //value  console.log(i) //index  i = i + 1}
 ```
 
-`You can interrupt a `while` loop using `break`:`
+`You can interrupt a`while` loop using `break`:`
 
 ```
 while (true) {  if (something) break}
@@ -2804,7 +2804,7 @@ for (let property in object) {  console.log(property) //property name  console.l
 
 #### `` `for...of` ``
 
-`` ES2015 introduced the `for...of` loop, which combines the conciseness of forEach with the ability to break: ``
+`ES2015 introduced the `for...of` loop, which combines the conciseness of forEach with the ability to break:`
 
 ```
 //iterate over the valuefor (const value of ['a', 'b', 'c']) {  console.log(value) //value}
@@ -2909,7 +2909,7 @@ const link = document.getElementById('my-link')link.addEventListener('click', ev
 
 `Each of those has a MDN page linked, so you can inspect all their properties.`
 
-`For example when a KeyboardEvent happens, you can check which key was pressed, in a readable format (`Escape`, `Enter`and so on) by checking the `key` property:`
+`For example when a KeyboardEvent happens, you can check which key was pressed, in a readable format (`Escape`, `Enter`and so on) by checking the `key`property:`
 
 ```
 window.addEventListener('keydown', event => {  // key pressed  console.log(event.key)})
@@ -2937,9 +2937,9 @@ const link = document.getElementById('my-link')link.addEventListener('mousedown'
 
 `**Bubbling** means that the event propagates from the item that was clicked (the child) up to all its parent tree, starting from the nearest one.`
 
-`In our example, the handler on `button`will fire before the`#container` handler.`
+`In our example, the handler on`button`will fire before the`#container` handler.`
 
-`**Capturing** is the opposite: the outer event handlers are fired before the more specific handler, the one on `button`.`
+`**Capturing** is the opposite: the outer event handlers are fired before the more specific handler, the one on`button`.`
 
 `**By default all events bubble**.`
 
@@ -2965,9 +2965,9 @@ document.getElementById('container').addEventListener(  'click',  () => {    //w
 <html>  <body>    <section>      &lt;a id="my-link" ...>
 ```
 
-`` A click event on `a` will propagate to `section` and then `body`. ``
+`A click event on`a`will propagate to`section` and then `body`.`
 
-`` You can stop the propagation by calling the `stopPropagation()`method of an Event, usually at the end of the event handler: ``
+`You can stop the propagation by calling the `stopPropagation()`method of an Event, usually at the end of the event handler:`
 
 ```
 const link = document.getElementById('my-link')link.addEventListener('mousedown', event => {  // process the event  // ...
@@ -2991,11 +2991,11 @@ const link = document.getElementById('my-link')link.addEventListener('mousedown'
 
 #### `Keyboard events`
 
-`` `keydown` fires when a keyboard button is pressed (and any time the key repeats while the button _stays_ pressed). `keyup` is fired when the key is released.``
+`keydown` fires when a keyboard button is pressed (and any time the key repeats while the button _stays_ pressed). `keyup` is fired when the key is released.`
 
 #### `Scroll`
 
-`` The `scroll` event is fired on `window` every time you scroll the page. Inside the event handler you can check the current scrolling position by checking `window.scrollY` (Y Axis). ``
+`The`scroll` event is fired on `window` every time you scroll the page. Inside the event handler you can check the current scrolling position by checking `window.scrollY` (Y Axis).`
 
 `Keep in mind that this event is not a one-time thing. It fires a lot of times during scrolling, not just at the end or beginning of the scrolling, so don’t do any heavy computation or manipulation in the handler - use _throttling_ instead.`
 
@@ -3079,7 +3079,7 @@ foobarbaz
 
 `as expected.`
 
-`` When this code runs, first `foo()` is called. Inside `foo()` we first call `bar()`, then we call `baz()`. ``
+`When this code runs, first `foo()` is called. Inside `foo()` we first call `bar()`, then we call `baz()`.`
 
 `At this point the call stack looks like this:`
 
@@ -3249,7 +3249,7 @@ const xhr = new XMLHttpRequest()xhr.onreadystatechange = () => {  if (xhr.readyS
 
 `How do you handle errors with callbacks? One very common strategy is to use what Node.js adopted: the first parameter in any callback function is the error object: **error-first callbacks**`
 
-`` If there is no error, the object is `null`. If there is an error, it contains some description of the error and other information. ``
+`If there is no error, the object is `null`. If there is an error, it contains some description of the error and other information.`
 
 ```
 fs.readFile('/file.json', (err, data) => {  if (err !== null) {    //handle error    console.log(err)    return  }
@@ -3320,7 +3320,7 @@ let done = true
 const isItDoneYet = new Promise(  (resolve, reject) => {    if (done) {      const workDone = 'Here is the thing I built'      resolve(workDone)    } else {      const why = 'Still working on something else'      reject(why)    }  })
 ```
 
-`` As you can see the promise checks the `done` global constant, and if that's true, we return a resolved promise, otherwise a rejected promise. ``
+`As you can see the promise checks the `done` global constant, and if that's true, we return a resolved promise, otherwise a rejected promise.`
 
 `` Using `resolve` and `reject` we can communicate back a value, and in the above case we just return a string, but it could be an object as well. ``
 
@@ -3346,7 +3346,7 @@ const checkIfItsDone = () => {  isItDoneYet    .then((ok) => {      console.log(
 
 `A great example of chaining promises is given by the Fetch API, a layer on top of the XMLHttpRequest API, which we can use to get a resource and queue a chain of promises to execute when the resource is fetched.`
 
-`The Fetch API is a promise-based mechanism, and calling `fetch()` is equivalent to defining our own promise using `new Promise()`.`
+`The Fetch API is a promise-based mechanism, and calling`fetch()`is equivalent to defining our own promise using`new Promise()`.`
 
 #### `Example of chaining promises`
 
@@ -3371,11 +3371,11 @@ fetch('/todos.json')  .then(status)  .then(json)  .then((data) => { console.log(
 
 `response` also has a `json()` method, which returns a promise that will resolve with the content of the body processed and transformed into JSON.`
 
-`` So given those premises, this is what happens: the first promise in the chain is a function that we defined, called `status()`, that checks the response status and if it's not a success response (between 200 and 299), it rejects the promise. ``
+`So given those premises, this is what happens: the first promise in the chain is a function that we defined, called`status()`, that checks the response status and if it's not a success response (between 200 and 299), it rejects the promise.`
 
-`` This operation will cause the promise chain to skip all the chained promises listed and will skip directly to the `catch()` statement at the bottom, logging the`Request failed` text along with the error message. ``
+`This operation will cause the promise chain to skip all the chained promises listed and will skip directly to the `catch()` statement at the bottom, logging the`Request failed` text along with the error message.`
 
-`` If that succeeds instead, it calls the `json()` function we defined. Since the previous promise, when successful, returned the `response` object, we get it as an input to the second promise. ``
+`If that succeeds instead, it calls the `json()` function we defined. Since the previous promise, when successful, returned the `response` object, we get it as an input to the second promise.`
 
 `In this case, we return the data JSON processed, so the third promise receives the JSON directly:`
 
@@ -3387,7 +3387,7 @@ fetch('/todos.json')  .then(status)  .then(json)  .then((data) => { console.log(
 
 #### `Handling errors`
 
-`` In the example, in the previous section, we had a `catch` that was appended to the chain of promises. ``
+`In the example, in the previous section, we had a `catch` that was appended to the chain of promises.`
 
 `When anything in the chain of promises fails and raises an error or rejects the promise, the control goes to the nearest`catch()`statement down the chain.`
 
@@ -3405,7 +3405,7 @@ new Promise((resolve, reject) => {  reject('Error')})  .catch((err) => { console
 
 #### `Cascading errors`
 
-`If inside the`catch()`you raise an error, you can append a second`catch()` to handle it, and so on.`
+`If inside the`catch()`you raise an error, you can append a second`catch()`to handle it, and so on.`
 
 ```
 new Promise((resolve, reject) => {  throw new Error('Error')})  .catch((err) => { throw new Error('Error') })  .catch((err) => { console.error(err) })
@@ -3413,7 +3413,7 @@ new Promise((resolve, reject) => {  throw new Error('Error')})  .catch((err) => 
 
 #### `Orchestrating promises`
 
-#### `` `Promise.all()` ``
+#### `Promise.all()`
 
 `` If you need to synchronize different promises, `Promise.all()`helps you define a list of promises, and execute something when they are all resolved. ``
 
@@ -3605,7 +3605,7 @@ for (var i = 0; i < 5; i++) {  operations.push(() => {    console.log(i)  })}
 for (const operation of operations) {  operation()}
 ```
 
-`` It basically iterates and for 5 times it adds a function to an array called operations. This function simply console logs the loop index variable `i`. ``
+`It basically iterates and for 5 times it adds a function to an array called operations. This function simply console logs the loop index variable`i`.`
 
 `Later it runs these functions.`
 
@@ -3637,11 +3637,11 @@ for (i = 0; i < 5; i++) {  operations.push(() => {    console.log(i)  })}
 for (const operation of operations) {  operation()}
 ```
 
-`So, in the for-of loop, `i` is still visible, it's equal to 5 and every reference to `i` in the function is going to use this value.`
+`So, in the for-of loop, `i` is still visible, it's equal to 5 and every reference to `i`in the function is going to use this value.`
 
 `So how should we do to make things work as we want?`
 
-`` The simplest solution is to use `let` declarations. Introduced in ES2015, they are a great help in avoiding some of the weird things about `var` declarations. ``
+`The simplest solution is to use`let` declarations. Introduced in ES2015, they are a great help in avoiding some of the weird things about `var`declarations.`
 
 `` Simply changing `var` to `let` in the loop variable is going to work fine: ``
 
@@ -3665,11 +3665,11 @@ for (const operation of operations) {  operation()}
 
 `How is this possible? This works because on every loop iteration `i`is created as a new variable each time, and every function added to the`operations`array gets its own copy of`i`.`
 
-`` Keep in mind you cannot use `const` in this case, because there would be an error as `for` tries to assign a new value in the second iteration. ``
+`Keep in mind you cannot use `const` in this case, because there would be an error as `for` tries to assign a new value in the second iteration.`
 
 `Another way to solve this problem was very common in pre-ES6 code, and it is called **Immediately Invoked Function Expression** (IIFE).`
 
-`` In this case you can wrap the entire function and bind `i` to it. Since in this way you're creating a function that immediately executes, you return a new function from it, so we can execute it later: ``
+`In this case you can wrap the entire function and bind `i` to it. Since in this way you're creating a function that immediately executes, you return a new function from it, so we can execute it later:`
 
 ```
 const operations = []
@@ -3799,7 +3799,7 @@ setTimeout(  myFunction()}, 1000)
 
 `setTimeout` and `setInterval` are available in Node.js, through the Timers module.`
 
-`` Node.js also provides `setImmediate()`, which is equivalent to using `setTimeout(() => {},` 0), mostly used to work with the Node.js Event Loop. ``
+`Node.js also provides `setImmediate()`, which is equivalent to using `setTimeout(() => {},` 0), mostly used to work with the Node.js Event Loop.`
 
 ### `This`
 
@@ -3809,11 +3809,11 @@ setTimeout(  myFunction()}, 1000)
 
 #### `` `this` in strict mode``
 
-`Outside any object,`this` in **strict mode** is always `undefined`.`
+`Outside any object,`this`in **strict mode** is always`undefined`.`
 
-`` Notice I mentioned strict mode. If strict mode is disabled (the default state if you don’t explicitly add `'use strict'` on top of your file ), you are in the so-called _sloppy mode_, and `this` - unless some specific cases mentioned here below - has the value of the global object. ``
+`Notice I mentioned strict mode. If strict mode is disabled (the default state if you don’t explicitly add `'use strict'`on top of your file ), you are in the so-called _sloppy mode_, and`this` - unless some specific cases mentioned here below - has the value of the global object.`
 
-`Which means`window` in a browser context.`
+`Which means`window`in a browser context.`
 
 #### `this` in methods`
 
@@ -3835,7 +3835,7 @@ const car = {  maker: 'Ford',  model: 'Fiesta',
 car.drive()//Driving a Ford Fiesta car!
 ```
 
-`` In this case, using a regular function, `this` is automatically bound to the object. ``
+`In this case, using a regular function,`this`is automatically bound to the object.`
 
 `` Note: the above method declaration is the same as `drive: function() {`..., but shorter: ``
 
@@ -3881,7 +3881,7 @@ car.drive()//Driving a undefined undefined car!
 
 `` It’s simply not possible due to the way they work. `this` is **lexically bound**, which means its value is derived from the context where they are defined. ``
 
-#### `Explicitly pass an object to be used as `this`
+#### `Explicitly pass an object to be used as`this`
 
 `JavaScript offers a few ways to map `this`to any object you want.`
 
@@ -3917,7 +3917,7 @@ const anotherCar = {  maker: 'Audi',  model: 'A4'}
 car.drive.bind(anotherCar)()//Driving a Audi A4 car!
 ```
 
-`Using `call()` or `apply()`, at the **function invocation** step:`
+`Using`call()` or `apply()`, at the **function invocation** step:`
 
 ```
 const car = {  maker: 'Ford',  model: 'Fiesta'}
@@ -3939,7 +3939,7 @@ drive.apply(car, [100])//Driving a Ford Fiesta car at 100 km/h!
 
 #### `The special case of browser event handlers`
 
-`` In event handlers callbacks, `this` refers to the HTML element that received the event: ``
+`In event handlers callbacks, `this` refers to the HTML element that received the event:`
 
 ```
 document.querySelector('#button').addEventListener('click', function(e) {  console.log(this) //HTMLElement}
@@ -4097,7 +4097,7 @@ delete Object.prototype(  //false
 (function(a, a, b) {  'use strict'  console.log(a, b)})(1, 2, 3)//Uncaught SyntaxError: Duplicate parameter name not allowed in this context
 ```
 
-`` Note that arrow functions always raise a `SyntaxError` in this case: ``
+`Note that arrow functions always raise a`SyntaxError` in this case:`
 
 ```
 ((a, a, b) => {  console.log(a, b)})(1, 2, 3)//Uncaught SyntaxError: Duplicate parameter name not allowed in this context
@@ -4105,7 +4105,7 @@ delete Object.prototype(  //false
 
 #### `Octal syntax`
 
-`Octal syntax in Strict Mode is disabled. By default, prepending a `0`to a number compatible with the octal numeric format makes it (sometimes confusingly) interpreted as an octal number:`
+`Octal syntax in Strict Mode is disabled. By default, prepending a`0`to a number compatible with the octal numeric format makes it (sometimes confusingly) interpreted as an octal number:`
 
 ```
 (() => {  console.log(010)})()//8
@@ -4115,7 +4115,7 @@ delete Object.prototype(  //false
 (() => {  'use strict'  console.log(010)})()//Uncaught SyntaxError: Octal literals are not allowed in strict mode.
 ```
 
-`You can still enable octal numbers in Strict Mode using the`0oXX` syntax:`
+`You can still enable octal numbers in Strict Mode using the`0oXX`syntax:`
 
 ```
 ;(() => {  'use strict'  console.log(0o10)})()//8
@@ -4123,7 +4123,7 @@ delete Object.prototype(  //false
 
 #### `` Removed `with`  ``
 
-`` Strict Mode disables the `with` keyword, to remove some edge cases and allow more optimization at the compiler level. ``
+`Strict Mode disables the `with` keyword, to remove some edge cases and allow more optimization at the compiler level.`
 
 ### `Immediately-Invoked Function Expressions (IIFE)`
 
@@ -4215,7 +4215,7 @@ delete Object.prototype(  //false
 const three = 1 + 2const four = three + 1
 ```
 
-`The `+` operator also serves as string concatenation if you use strings, so pay attention:`
+`The `+`operator also serves as string concatenation if you use strings, so pay attention:`
 
 ```
 const three = 1 + 2three + 1 // 4'three' + 1 // three1
@@ -4319,9 +4319,9 @@ x = '2a'+x //NaN
 
 `They are:`
 
--   `` `+=`: addition assignment``
+-   `+=`: addition assignment`
 -   `` `-=`: subtraction assignment``
--   `` `*=`: multiplication assignment``
+-   `*=`: multiplication assignment`
 -   `` `/=`: division assignment``
 -   `%=`: remainder assignment`
 -   `**=`: exponentiation assignment`
@@ -4351,7 +4351,7 @@ const a = 1 * 2 + 5 / 2 % 2
 -   `+` `-` addition/subtraction`
 -   `` `=` `+=` `-=` `*=` `/=` `%=` `**=` assignments``
 
-`Operations on the same level (like `+` and `-`) are executed in the order they are found`
+`Operations on the same level (like`+` and `-`) are executed in the order they are found`
 
 `Following the order above, we can solve this calculation:`
 
@@ -4555,7 +4555,7 @@ export default str => str.toUpperCase()
 
 `Now, **any other JavaScript module** can import the functionality offered by uppercase.js by importing it.`
 
-`An HTML page can add a module by using a `<scri`pt> tag with the sp`ecial type="m`odule" attribute:`
+`An HTML page can add a module by using a`<scri`pt> tag with the sp`ecial type="m`odule" attribute:`
 
 ```
 <script type="module" src="index.js"><;/script>
@@ -4563,7 +4563,7 @@ export default str => str.toUpperCase()
 
 > `` _Note: this module import behaves like a `defer` script load. See[efficiently load JavaScript with defer and async][285]_ ``
 
-`It’s important to note that any script loaded with`type="module"` is loaded in strict mode.`
+`It’s important to note that any script loaded with`type="module"`is loaded in strict mode.`
 
 `In this example, the`uppercase.js` module defines a **default export**, so when we import it, we can assign it a name we prefer:`
 
@@ -4595,7 +4595,7 @@ import { foo } from '/uppercase.js'import { foo } from '../uppercase.js'
 import { foo } from 'uppercase.js'import { foo } from 'utils/uppercase.js'
 ```
 
-`It’s either absolute, or has a `./` or `/` before the name.`
+`It’s either absolute, or has a `./` or `/`before the name.`
 
 #### `Other import/export options`
 
@@ -4643,7 +4643,7 @@ import React, { Component } from 'react'
 
 #### `CORS`
 
-`Modules are fetched using [CORS][287]. This means that if you reference scripts from other domains, they must have a valid CORS header that allows cross-site loading (like `Access-Control-Allow-Origin: *`)`
+`Modules are fetched using [CORS][287]. This means that if you reference scripts from other domains, they must have a valid CORS header that allows cross-site loading (like`Access-Control-Allow-Origin: *`)`
 
 #### `What about browsers that do not support modules?`
 
@@ -4769,7 +4769,7 @@ const value = require('./file.js')
 
 #### `Reassignment`
 
-`JavaScript with`var` and `let`declaration allows you to reassign a variable indefinitely. With`const`declarations you effectively declare an immutable value for strings, integers, booleans, and an object that cannot be reassigned (but you can still modify it through its methods).`
+`JavaScript with`var`and`let`declaration allows you to reassign a variable indefinitely. With`const`declarations you effectively declare an immutable value for strings, integers, booleans, and an object that cannot be reassigned (but you can still modify it through its methods).`
 
 #### `Scope`
 

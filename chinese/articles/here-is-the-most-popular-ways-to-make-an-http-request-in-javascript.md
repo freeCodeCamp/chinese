@@ -141,7 +141,7 @@ Axios 还提供了一些其他的方法和选项，你可以在[这里][8]具体
 Angular 有它自己的和 Angular 应用一起运行的 HTTP 模块。它使用到了 [RxJS][9] 库来处理异步请求，同时还提供了许多用来执行 HTTP 请求的选择。
 
 #### 使用 Angular HttpClient 来发起一个服务端调用
-为了能使用 Angular HttpClient 来发起一个请求，我们需要将代码运行在一个 Angular 应用中。所以我这里就创建了一个。如果你对 Angular 不是很熟悉的话，可以看一下我的文章 [20分钟内学会如何创建你的第一个 Angular 应用][10] 。
+为了能使用 Angular HttpClient 来发起一个请求，我们需要将代码运行在一个 Angular 应用中。所以我这里就创建了一个。如果你对 Angular 不是很熟悉的话，可以看一下我的文章 [20 分钟内学会如何创建你的第一个 Angular 应用][10] 。
 
 我们需要做的第一件事儿是在 `app.module.ts` 中引入 `HttpClientModule` 模块。
 

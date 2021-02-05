@@ -35,7 +35,7 @@ It can be easier to talk about computer networking if its many functions are spl
 
 Some of the people in question are part of the Internet Engineering Task Force (IETF). They created the  [RFC-1122][1]  publication, discussing the Internet’s communications layers. Half of a whole, the standard:
 
-> …covers the communications protocol layers: link layer, IP layer, and transport layer; its companion  [RFC-1123][2]  covers the application and support protocols.
+> ……covers the communications protocol layers: link layer, IP layer, and transport layer; its companion  [RFC-1123][2]  covers the application and support protocols.
 
 The layers described by RFC-1122 and RFC-1123 each encapsulate protocols that satisfy the layer’s functionality. Let’s look at each of these communications layers and see how TCP and IP stack up in this model of the Internet layer cake.
 

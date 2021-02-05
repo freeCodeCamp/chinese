@@ -12,6 +12,7 @@ But please before I start, permit me to share with you my little story on how I 
 在开始之前，请允许我分享一个关于我是如何了解到 DOM 的有趣的小故事。
 
 ## How I learned about the DOM
+## 我是如何了解到 DOM 的
 
 A few months into my web development career, I was still learning the good old HTML and CSS. I mistakenly stumbled upon a DOM course on w3schools. The first example they had was one with a light bulb and two buttons.
 做了几个月的 web 开发之后，我还在学习古老的 HTML 和 CSS。我偶然地发现了 w3schools 的一个 DOM 课程，其中第一个示例是一个灯泡和两个按钮。
@@ -285,7 +286,7 @@ That's the juice of this article so please stay with me. Let's continue.
 这是本文的重点，请跟着我的脚步，继续前进。
 
 ```javascript
-  <div id="parent">
+    <div id="parent">
         <div id="firstchild">i am a first child</div>
         <p id="secondchild">i am the second child</p>
         <h4>i am alive</h4>
@@ -313,7 +314,7 @@ That's the juice of this article so please stay with me. Let's continue.
 ### 创建元素
 
 The code above shows a parent element with 5 children elements. Let's assume we want to add another  `div`  tag with JavaScript. We would definitely have to create a new element with the  `createElement()`  method, like this:
-
+上面代码中的 HTML 片段中有一个包含 5 个子元素的父元素，如果想使用 JavaScript 往其中添加一个 `div` 元素，我们需要调用 `createElement()` 方法来创建一个新的元素：
 
 ```javascript
  const createEl = document.createElement('div')
@@ -321,8 +322,10 @@ The code above shows a parent element with 5 children elements. Let's assume we 
 ```
 
 ### How to Set innerHTML
+### 设置 innerHTML
 
 We have successfully created a  `div`  tag, but currently it does not have any text node. We are going to use the  `.innerHTML()`  property to add its text node.
+我们成功创建了一个 `div` 标签，不过现在其中还没有文本节点。我们将会调用 `.innerHTML()` 方法来为它添加文本节点。
 
 ```javascript
  const innerhtml = createEl.innerHTML = 'i am a frontend developer'
@@ -331,10 +334,13 @@ We have successfully created a  `div`  tag, but currently it does not have any t
 ```
 
 ### How to Append an Element
+### 在页面中追加元素
 
 What we have achieved so far is creating an element and inserting its text node. But this created element is not part of the DOM tree yet.
+目前已经完成了创建元素以及往其中插入文本节点的操作，但是创建出的新元素还没有插入到 DOM 树中。
 
 So now, I am going to show you how to append it to that HTML page in this section. Building on the code above:
+现在演示如何将创建出的新元素追加到 HTML 页面中，代码如下：
 
 ```javascript
  const createEl = document.createElement('div')
@@ -347,117 +353,164 @@ So now, I am going to show you how to append it to that HTML page in this sectio
 ![](https://www.freecodecamp.org/news/content/images/2021/01/Document---Google-Chrome-16_01_2021-11_50_14-PM--2-.png)
 
 ### How to Insert One Element Before Another
+### 在指定元素之前插入元素
 
 If you noticed from the console log image above, the appended child  `div`  tag was added at the bottom automatically.
+注意上面的控制台打印信息截图，追加的 `div` 标签子元素自动地插入到了父元素的最下面。
 
 What if for some reason you want to append it anywhere of your choice? Maybe before the first element or before the fourth element. I am here to tell you that it is very much possible. In the code below we are going to add it before the current first element.
+如果出于某种原因想要把元素追加到其它位置该怎么办？也许是第一个元素之前或者是第四个元素之前的位置。这些情况都是很有可能出现的。下方代码把元素插入到当前第一个元素之前。
 
 We are going to be using the  `insertBefore()`  JavaScript method which accepts two parameters, the  `newNode`  and the  `existingNode`  in this order =>  `document.insertBefore(newNode, existingNode)`.
+我们会用到 `insertBefore()` 方法，它接收两个参数：`document.insertBefore(newNode, existingNode)`。
 
 ```javascript
- const parentEl = document.getElementById('parent')
- const firstchildEl = document.getElementById('firstchild')
- const createEl = document.createElement('div')
- const innerhtml = createEl.innerHTML = 'i am a frontend developer'
+    const parentEl = document.getElementById('parent')
+    const firstchildEl = document.getElementById('firstchild')
+    
+    const createEl = document.createElement('div')
+    
+    const innerhtml = createEl.innerHTML = 'i am a frontend developer'
+    
+    parentEl.insertBefore(createEl, firstchildEl)
+    console.log(parentEl)
 
 ```
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/mmm.png)
 
 ### How to Replace a Child Element
+### 替换子元素
 
 We are going to be using the  `replaceChild()`  JavaScript method which accepts two parameters to replace our first element with the newly created one. It works in this order =>  `document.replaceChild(newNode, existingNode)`.
+我们使用 `replaceChild()` 方法将第一个子元素替换为新创建的元素，它接收两个参数：`document.replaceChild(newNode, existingNode)`。
 
 ```javascript
- const firstchildEl = document.getElementById('firstchild')
- const parentEl = document.getElementById('parent')
- const createEl = document.createElement('div')
- const innerhtml = createEl.innerHTML = 'i am a frontend developer'
- parentEl.replaceChild(createEl, firstchildEl)
+    const firstchildEl = document.getElementById('firstchild')
+    const parentEl = document.getElementById('parent')
+    
+    const createEl = document.createElement('div')
+    const innerhtml = createEl.innerHTML = 'i am a frontend developer'
+    
+    parentEl.replaceChild(createEl, firstchildEl)
 
+    console.log(parentEl)                
 ```
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/kkk.png)
 
 ### How to Remove a Child Element
+### 移除子元素
 
 We are going to be using the  `removeChild()`  JavaScript method which accepts just one parameter ()that is the element you want to remove, which in this case is our original first element. It works in this order =>  `document.removeChild(element)`
+我们使用 `removeChild()` 方法来移除指定元素（这里指的是第一个子元素），它接收一个参数：`document.removeChild(element)`。
 
 ```javascript
-const firstchildEl = document.getElementById('firstchild')
- const parentEl = document.getElementById('parent')
- parentEl.removeChild(firstchildEl)
-
+    const firstchildEl = document.getElementById('firstchild')
+    const parentEl = document.getElementById('parent')
+    
+    parentEl.removeChild(firstchildEl)
+    
+    console.log(parentEl)
 ```
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/vvv.png)
 
 ## How to Add Styling with CSS
+## 为元素添加 CSS 样式
 
 From the previous examples, we saw how to create an element and append it to the specified parent element.
+前面的示例中演示了如何创建元素，并将其追加到指定的父元素。
 
 Therefore, for an element to have a style we have to add a CSS class to it. In this case we'll do it with JavaScript.
+为了设定元素样式，我们需要为它添加 CSS 类，这里使用 JavaScript 来操作。
 
 I am not only going to show you how to add a class. I will also show you how to remove a class and how to also toggle between classes.
+我将为你演示如何添加、移除以及切换 CSS 类。
 
 Don't worry, it's not difficult. I am here to walk you through all of it.
+别担心，这并不难，我会为你详细介绍。
 
 ### How to Add a CSS Class
+### 添加 CSS 类
 
 Currently we have a normal HTML button with an id of "master" but without any style applied to it. See the image below:
+现在有一个普通的 HTML 按钮，它的 id 为 "master"，没有应用额外样式，如下图：
 
 ![ttt](https://www.freecodecamp.org/news/content/images/2021/01/ttt.png)
 
 The first thing we are going to do is create the CSS style for the button.
+第一步，为这个按钮创建一个 CSS 样式。
 
 Next, in our JavaScript I will add an event listener to the button so that, when you click it, JavaScript automatically adds the CSS style with a class of "button".
+接着，在 JavaScript 代码部分为这个按钮添加一个事件监听器：点击按钮时为这个按钮元素添加“button”类样式。
 
 ```javascript
- <style>
+    <style>
         body{
-            background-color: hotpink;
-            display: flex;
-            align-items: center;
+             background-color: hotpink;
+             display: flex;
+             align-items: center;
         }
-    <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>button<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span>
-        background<span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(154, 110, 58);">-</span>color<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> blueviolet<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
-        width<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 0, 85);">200</span>px<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
-        border<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> none<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
-        font<span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(154, 110, 58);">-</span>size<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 0, 85);">2</span>rem<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
-        padding<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 0, 85);">0.5</span>rem<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
-        border<span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(154, 110, 58);">-</span>radius<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 0, 85);">5</span>px<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
-        cursor<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> pointer<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
-    <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span>
-<span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(154, 110, 58);">&lt;</span><span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(154, 110, 58);">/</span>style<span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(154, 110, 58);">&gt;</span>  <button id="master">Click me</button>
-const buttonEl = document.getElementById('master')
-buttonEl.addEventListener('click', addFunction)
-
+        
+        .button{
+             background-color: blueviolet;
+             width: 200px;
+             border: none;
+             font-size: 2rem;
+             padding: 0.5rem;
+             border-radius: 5px;
+             cursor: pointer;
+        }
+    </style>
+    
+    
+    <button id="master">Click me</button>
+    
+    
+    const buttonEl = document.getElementById('master')
+    buttonEl.addEventListener('click', addFunction)
+     
+    function addFunction(){
+        buttonEl.classList.add('button')
+    }
 ```
 
 After the button is clicked, you'll see the below. Beautiful right?
+点击按钮之后，可以看到效果如下，好看吧？
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/jjj.png)
 
 ### How to Remove a Class
+### 移除 CSS 类
 
 Still using the same example above, we are going to remove the CSS style, this time around with  `classList.remove()`  in JavaScript. You probably already guessed what would happen, right?
+还是使用上面的示例，我们要移除 CSS 类，这次会使用 `classList.remove()` 方法。也许你已经猜到结果了，对吧？
 
 Exactly, the button will go back to its default state.
+确实，这个按钮会变回默认样式。
 
 ```javascript
 
-const buttonEl = document.getElementById('master')
-buttonEl.addEventListener('click', addFunction)
-
+    const buttonEl = document.getElementById('master')
+    buttonEl.addEventListener('click', addFunction)
+    
+    function addFunction(){
+        buttonEl.classList.remove('button')
+    }
 ```
 
 ### How to Toggle a Class
+### 切换 CSS 类
 
 Let's say you don't want to remove the CSS style completely. You want a way to toggle between the styled and unstyled button.
+如果不想完全移除这个 CSS 样式，你可能希望能有一种方式能够能够在默认按钮和应用样式的按钮之间来回切换。
 
 The  `classList.toggle()`  JavaScript method gives you that ability.
+`classList.toggle()` 方法为这种操作提供了支持。
 
 The  `classList.toggle()`  method is typically used in most social media platforms like Twitter. It allows you to like a post with a button and unlike it with that same button whenever you want.
+像 Twitter 之类的社交媒体平台上通常会用到 `classList.toggle()` 方法，它使得用户可以通过点击按钮为一个帖子点赞，也可以随时点击这个按钮来取消点赞。
 
 So JavaScript checks if our button has the CSS class.
 

@@ -155,7 +155,6 @@ id 是区分大小写的，比如：“master”和“Master”就是两个完�
 <script>
 	const master = document.querySelector("#master") 
 </script>
-
 ```
 
 上面的方法接收一个 CSS 选择器作为参数，返回匹配这个选择器的第一个元素。
@@ -173,7 +172,6 @@ id 是区分大小写的，比如：“master”和“Master”就是两个完�
 	const master = document.querySelectorAll(".master") 
 	console.log(master[1])  //<p class="master">Vue</p>
 </script>
-
 ```
 
 ### 选择 DOM 元素的方法总结

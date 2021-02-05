@@ -44,7 +44,7 @@ public static String valueOf(Object obj) {
 
 `Object.toString()` 返回的是 `getClass().getName()+****‘@’****+Integer.toHexString(hashCode())`。 简化格式为：“class name @ object’s hash code”。
 
-上文中输出的内容是 `[I@74a14482`， `[` 表示数组， `I` 表示 int 数据类型（数组的数据类型）。 `74a14482` 是数组的无符号十六进制hash值。
+上文中输出的内容是 `[I@74a14482`， `[` 表示数组， `I` 表示 int 数据类型（数组的数据类型）。 `74a14482` 是数组的无符号十六进制 hash 值。
 
 当创建自定义类时，重写 `Object.toString()` 方法是最佳的实践。
 

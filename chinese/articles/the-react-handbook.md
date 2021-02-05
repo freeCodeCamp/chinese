@@ -735,7 +735,7 @@ flavio.hello()
 
 `Classes do not have explicit class variable declarations, but you must initialize any variable in the constructor.`
 
-`Inside a class, you can reference the parent class calling `super()`.`
+`Inside a class, you can reference the parent class calling`super()`.`
 
 #### `Static methods`
 
@@ -760,7 +760,7 @@ Person.genericHello() //Hello
 
 #### `Getters and setters`
 
-`You can add methods prefixed with `get` or `set` to create a getter and setter, which are two different pieces of code that are executed based on what you are doing: accessing the variable, or modifying its value.`
+`You can add methods prefixed with`get` or `set` to create a getter and setter, which are two different pieces of code that are executed based on what you are doing: accessing the variable, or modifying its value.`
 
 ```
 class Person {
@@ -828,7 +828,7 @@ console.log(c)
 doSomething()
 ```
 
-`But JavaScript was born inside the browser, its main job, in the beginning, was to respond to user actions, like`onClick`, `onMouseOver`, `onChange`, `onSubmit` and so on. How could it do this with a synchronous programming model?`
+`But JavaScript was born inside the browser, its main job, in the beginning, was to respond to user actions, like`onClick`, `onMouseOver`, `onChange`, `onSubmit`and so on. How could it do this with a synchronous programming model?`
 
 `The answer was in its environment. The **browser** provides a way to do it by providing a set of APIs that can handle this kind of functionality.`
 
@@ -1022,7 +1022,7 @@ fetch('/todos.json')
 `` Running `fetch()` returns a [response][73], which has many properties, and within those we reference: ``
 
 -   `status`, a numeric value representing the HTTP status code`
--   `` `statusText`, a status message, which is `OK` if the request succeeded``
+-   `statusText`, a status message, which is `OK` if the request succeeded`
 
 `response` also has a `json()` method, which returns a promise that will resolve with the content of the body processed and transformed into JSON.`
 
@@ -1638,7 +1638,7 @@ const Sidebar = props => {
 
 `First, what is the DOM?`
 
-`` The DOM (_Document Object Model_) is a Tree representation of the page, starting from the `<ht`ml> tag, going down into every child, which are called nodes. ``
+`The DOM (_Document Object Model_) is a Tree representation of the page, starting from the `<ht`ml> tag, going down into every child, which are called nodes.`
 
 `It’s kept in the browser memory, and directly linked to what you see in a page. The DOM has an API that you can use to traverse it, access every single node, filter them, modify them.`
 
@@ -1849,7 +1849,7 @@ ReactDOM.render(
 `` In HTML you’ll find attributes without any case (e.g. `onchange`). In JSX, they are renamed to their camelCase equivalent: ``
 
 -   `onchange` => `onChange`
--   `` `onclick` => `onClick` ``
+-   `onclick` => `onClick`
 -   `` `onsubmit` => `onSubmit` ``
 
 #### `` `class` becomes `className` ``
@@ -1922,7 +1922,7 @@ ReactDOM.render(<div style={{ color: 'white' }}>Hello World!</div>, mountNode)
 
 `` The `defaultValue` attribute holds the default value that was set when the field was created. ``
 
-`_This helps solve some weird behavior of regular [DOM][84] interaction when inspecting `input.value` and `input.getAttribute('value')` returning one the current value and one the original default value._`
+`_This helps solve some weird behavior of regular [DOM][84] interaction when inspecting `input.value`and`input.getAttribute('value')` returning one the current value and one the original default value._`
 
 `This also applies to the`textarea` field, e.g.`
 
@@ -2196,7 +2196,7 @@ React.createClass({
 })
 ```
 
-`` You’ll rarely see this in modern, `> ES6` codebases. ``
+`You’ll rarely see this in modern, `> ES6` codebases.`
 
 ### `State`
 
@@ -2251,7 +2251,7 @@ class BlogPostExcerpt extends Component {
 this.state.clicked = true
 ```
 
-`Instead, you should always use`setState()` instead, passing it an object:`
+`Instead, you should always use`setState()`instead, passing it an object:`
 
 ```
 this.setState({ clicked: true })
@@ -2985,7 +2985,7 @@ class Form extends React.Component {
 }
 ```
 
-`Similarly, we use the `onSubmit` attribute on the form to call the `handleSubmit` method when the form is submitted:`
+`Similarly, we use the `onSubmit`attribute on the form to call the`handleSubmit`method when the form is submitted:`
 
 ```
 class Form extends React.Component {
@@ -3082,7 +3082,7 @@ class FileInput extends React.Component {
 ref={el => this.someProperty = el}
 ```
 
-`` Put this into context, for example with a `button` element: ``
+`Put this into context, for example with a `button` element:`
 
 ```
 <button ref={el => (this.button = el)} />
@@ -3150,7 +3150,7 @@ npm install express
 
 `` You have a set of folders in your app directory. Create a new folder called `server`, then go into it and create a file named `server.js`. ``
 
-`Following the `create-react-app` conventions, the app lives in the `src/App.js` file. We're going to load that component, and render it to a string using [ReactDOMServer.renderToString()][91], which is provided by `react-dom`.`
+`Following the`create-react-app` conventions, the app lives in the `src/App.js` file. We're going to load that component, and render it to a string using [ReactDOMServer.renderToString()][91], which is provided by `react-dom`.`
 
 `You get the contents of the`./build/index.html` file, and replace the `<div id="root"></div>`placeholder, which is the tag where the application hooks by default, with `` `<div id="root">${ReactDOMServer.renderToString(<App />)}</div>.`
 
@@ -3198,7 +3198,7 @@ app.listen(PORT, () => {
 ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
-`call `[ReactDOM.hydrate()][92]`, which is the same but has the additional ability to attach event listeners to existing markup once React loads:`
+`call`[ReactDOM.hydrate()][92]`, which is the same but has the additional ability to attach event listeners to existing markup once React loads:`
 
 ```
 ReactDOM.hydrate(<App />, document.getElementById('root'))
@@ -3361,7 +3361,7 @@ import Context from './context'
 
 `You might want to use Higher Order Components when you want to enhance an existing component, operate on the state or props, or its rendered markup.`
 
-`There is a convention of prepending a Higher Order Component with the`with` string (it's a convention, so it's not mandatory), so if you have a `Button` component, its HOC counterpart should be called `withButton`.`
+`There is a convention of prepending a Higher Order Component with the`with`string (it's a convention, so it's not mandatory), so if you have a`Button` component, its HOC counterpart should be called `withButton`.`
 
 `Let’s create one.`
 
@@ -3522,7 +3522,7 @@ ReactDOM.render(<Counter />, document.getElementById('app'))
 
 `` Hooks provide the `useEffect()` API. The call accepts a function as argument. ``
 
-`The function runs when the component is first rendered, and on every subsequent re-render/update. React first updates the DOM, then calls any function passed to`useEffect()`. All without blocking the UI rendering even on blocking code, unlike the old `componentDidMount` and `componentDidUpdate`, which makes our apps feel faster.`
+`The function runs when the component is first rendered, and on every subsequent re-render/update. React first updates the DOM, then calls any function passed to`useEffect()`. All without blocking the UI rendering even on blocking code, unlike the old `componentDidMount`and`componentDidUpdate`, which makes our apps feel faster.`
 
 `Example:`
 
@@ -3565,7 +3565,7 @@ useEffect(() => {
 
 `useEffect()` can be called multiple times, which is nice to separate unrelated logic (something that plagues the class component lifecycle events).`
 
-`` Since the `useEffect()` functions are run on every subsequent re-render/update, we can tell React to skip a run, for performance purposes, by adding a second parameter which is an array that contains a list of state variables to watch for. React will only re-run the side effect if one of the items in this array changes. ``
+`Since the `useEffect()` functions are run on every subsequent re-render/update, we can tell React to skip a run, for performance purposes, by adding a second parameter which is an array that contains a list of state variables to watch for. React will only re-run the side effect if one of the items in this array changes.`
 
 ```
 useEffect(
@@ -3800,9 +3800,9 @@ const App = () => {
 ReactDOM.render(<App />, document.getElementById('app'))
 ```
 
-`` Here, every Button element has 2 props: `increment` and `onClickFunction`. We create 4 different buttons, with 4 increment values: 1, 10, 100, 1000. ``
+`Here, every Button element has 2 props: `increment` and `onClickFunction`. We create 4 different buttons, with 4 increment values: 1, 10, 100, 1000.`
 
-`When the button in the Button component is clicked, the `incrementCount` function is called.`
+`When the button in the Button component is clicked, the `incrementCount`function is called.`
 
 `This function must increment the local count. How can we do so? We can use hooks:`
 
@@ -3844,9 +3844,9 @@ ReactDOM.render(<App />, document.getElementById('app'))
 
 `` This code creates a reusable **Card** component. When you enter a name in the `input`field managed by the **Form** component, this name is _bound to its state_. ``
 
-`` When _Add card_ is pressed, the input form is cleared by clearing the `userName` state of the **Form** component. ``
+`When _Add card_ is pressed, the input form is cleared by clearing the `userName` state of the **Form** component.`
 
-`The example uses, in addition to React, the [Axios][101] library. It’s a nice useful and lightweight library to handle network requests. Add it to the Pen settings in Codepen, or install it locally using `npm install axios`.`
+`The example uses, in addition to React, the [Axios][101] library. It’s a nice useful and lightweight library to handle network requests. Add it to the Pen settings in Codepen, or install it locally using`npm install axios`.`
 
 `We start by creating the `Card` component, the one that will display our image and details as gathered from GitHub. It gets its data via props, using`
 
@@ -3919,7 +3919,7 @@ axios<span class="token punctuation" style="box-sizing: inherit; margin: 0px; pa
 }
 ```
 
-`When the form is submitted we call the `handleSubmit`event, and after the network call we call`props.onSubmit` passing the parent (`App`) the data we got from GitHub.`
+`When the form is submitted we call the `handleSubmit`event, and after the network call we call`props.onSubmit`passing the parent (`App`) the data we got from GitHub.`
 
 `We add it to`App`, passing a method to add a new card to the list of cards, `addNewCard`, as its `onSubmit` prop:`
 
@@ -4060,7 +4060,7 @@ const Button = () => {
 
 `**CSS Modules** seem to be a perfect spot in the middle: you use classes, but CSS is scoped to the component, which means that any styling you add cannot be applied to other components without your permission. And yet your styles are defined in a separate CSS file, which is easier to maintain than CSS in JavaScript (and you can use your good old CSS property names).`
 
-`` Start by creating a CSS file that ends with `.module.css`, for example `Button.module.css`. A great choice is to give it the same name as the component you are going to style ``
+`Start by creating a CSS file that ends with`.module.css`, for example `Button.module.css`. A great choice is to give it the same name as the component you are going to style`
 
 `Add your CSS here, then import it inside the component file you want to style:`
 
@@ -4165,7 +4165,7 @@ const Button = styled.buttonfont-size: 1.5em;
 render(<Button />)
 ```
 
-`Styled Components offer other functions you can use to create other components, not just `button`, like `section`,`h1`, `input` and many others.`
+`Styled Components offer other functions you can use to create other components, not just `button`, like`section`,`h1`, `input` and many others.`
 
 `The syntax used, with the backtick, might be weird at first, but it’s called [Tagged Templates][113], it’s plain JavaScript and it’s a way to pass an argument to the function.`
 
@@ -4553,7 +4553,7 @@ module.exports = {
 
 #### `**The output**`
 
-`` **By default the output is generated in `./dist/main.js`. This example puts the output bundle into `app.js`:** ``
+`**By default the output is generated in `./dist/main.js`. This example puts the output bundle into `app.js`:**`
 
 ```
 module.exports = {
@@ -4763,9 +4763,9 @@ module.exports = {
 
 #### `Running webpack`
 
-`Webpack can be run from the command line manually if installed globally, but generally you write a script inside the `package.json` file, which is then run using `npm` or `yarn`.`
+`Webpack can be run from the command line manually if installed globally, but generally you write a script inside the `package.json`file, which is then run using`npm` or `yarn`.`
 
-`` For example this `package.json` scripts definition we used before: ``
+`For example this `package.json` scripts definition we used before:`
 
 ```
 "scripts": {
@@ -4984,7 +4984,7 @@ npm install --save-dev jest
 yarn global add jest
 ```
 
-`` and run all your tests using the `jest` command line tool. ``
+`and run all your tests using the `jest` command line tool.`
 
 #### `Create the first Jest test`
 
@@ -5038,7 +5038,7 @@ test('Dividing 1 / 1 equals 1', () => {
 })
 ```
 
-`Running `yarn test` results in Jest being run on all the test files it finds, and returning us the end result:`
+`Running`yarn test` results in Jest being run on all the test files it finds, and returning us the end result:`
 
 `![](https://cdn-media-1.freecodecamp.org/images/vGSvRogM-QF8N3EP5j9vUYYrkWvRc89OhE98)`
 
@@ -5065,16 +5065,16 @@ test('Adding 1 + 1 equals 2', () => {
 `` Most commonly used matchers, comparing the value of the result of `expect()` with the value passed in as argument, are: ``
 
 -   `` `toBe` compares strict equality, using `===` ``
--   `` `toEqual` compares the values of two variables. If it’s an object or array, it checks the equality of all the properties or elements``
+-   `toEqual` compares the values of two variables. If it’s an object or array, it checks the equality of all the properties or elements`
 -   `` `toBeNull` is true when passing a null value``
 -   `` `toBeDefined` is true when passing a defined value (opposite to the above)``
 -   `` `toBeUndefined` is true when passing an undefined value``
--   `` `toBeCloseTo` is used to compare floating values, avoiding rounding errors``
+-   `toBeCloseTo` is used to compare floating values, avoiding rounding errors`
 -   `` `toBeTruthy` true if the value is considered true (like an `if` does)``
 -   `toBeFalsy` true if the value is considered false (like an `if` does)`
 -   `toBeGreaterThan` true if the result of expect() is higher than the argument`
 -   `` `toBeGreaterThanOrEqual` true if the result of expect() is equal to the argument, or higher than the argument``
--   `` `toBeLessThan` true if the result of expect() is lower than the argument``
+-   `toBeLessThan` true if the result of expect() is lower than the argument`
 -   `toBeLessThanOrEqual` true if the result of expect() is equal to the argument, or lower than the argument`
 -   `` `toMatch` is used to compare strings with [regular expression][141] pattern matching``
 -   `toContain` is used in arrays, true if the expected array contains the argument in its elements set`
@@ -5083,7 +5083,7 @@ test('Adding 1 + 1 equals 2', () => {
 -   `toThrow` checks if a function you pass throws an exception (in general) or a specific exception`
 -   `toBeInstanceOf()`: checks if an object is an instance of a class`
 
-`` All those matchers can be negated using `.not.` inside the statement, for example: ``
+`All those matchers can be negated using `.not.` inside the statement, for example:`
 
 ```
 test('Adding 1 + 1 does not equal 3', () => {
@@ -5216,7 +5216,7 @@ test(uppercase 'test' to equal 'TEST', () => {
 
 `![](https://cdn-media-1.freecodecamp.org/images/8j7LKC8uKE5Tw0X4WN4Gm0rD3NziyPxNwyCn)`
 
-`` Promises that are rejected can be tested using `.catch()`: ``
+`Promises that are rejected can be tested using `.catch()`:`
 
 ```
 //uppercase.js
@@ -5280,8 +5280,8 @@ test(uppercase 'test' to equal 'TEST', async () => {
 `Using mocks, you can inspect if a module function has been called and which parameters were used, with:`
 
 -   `expect().toHaveBeenCalled()`: check if a spied function has been called`
--   `` `expect().toHaveBeenCalledTimes()`: count how many times a spied function has been called``
--   `` `expect().toHaveBeenCalledWith()`: check if the function has been called with a specific set of parameters``
+-   `expect().toHaveBeenCalledTimes()`: count how many times a spied function has been called`
+-   `expect().toHaveBeenCalledWith()`: check if the function has been called with a specific set of parameters`
 -   `expect().toHaveBeenLastCalledWith()`: check the parameters of the last time the function has been invoked`
 
 #### `Spy packages without affecting the functions code`
@@ -5343,7 +5343,7 @@ test(The mathjs log function, () => {
 
 #### `Pre-built mocks`
 
-`` You can find pre-made mocks for popular libraries. For example this package [https://github.com/jefflau/jest-fetch-mock][142] allows you to mock `fetch()` calls, and provide sample return values without interacting with the actual server in your tests. ``
+`You can find pre-made mocks for popular libraries. For example this package [https://github.com/jefflau/jest-fetch-mock][142] allows you to mock `fetch()` calls, and provide sample return values without interacting with the actual server in your tests.`
 
 #### `Snapshot testing`
 
@@ -5423,7 +5423,7 @@ Watch Usage
 
 `` I assume you created a React app with `create-react-app`, which already comes with **Jest** installed, the testing package we'll need. ``
 
-`Let’s start with a simple test. CodeSandbox is a great environment to try this out. Start with a React sandbox, and create an`App.js`component in a`components` folder, and add an `App.test.js`file.`
+`Let’s start with a simple test. CodeSandbox is a great environment to try this out. Start with a React sandbox, and create an`App.js`component in a`components`folder, and add an`App.test.js`file.`
 
 ```
 import React from 'react'
@@ -5514,9 +5514,9 @@ const incrementCount = increment => {
 }
 ```
 
-`Now off to the actual tests. We first initialize count to 0, and we render a `+1` `Button`component passing a`1`to`increment` and our `incrementCount` function to `onClickFunction`.`
+`Now off to the actual tests. We first initialize count to 0, and we render a `+1` `Button`component passing a`1`to`increment`and our`incrementCount` function to `onClickFunction`.`
 
-`Then we get the content of the first child of the component, and we check it outputs `+1`.`
+`Then we get the content of the first child of the component, and we check it outputs`+1`.`
 
 `We then proceed to clicking the button, and we check that the count got from 0 to 1:`
 
@@ -5624,7 +5624,7 @@ yarn add react-router-dom
 `React Router provides two different kind of routes:`
 
 -   `` `BrowserRouter` ``
--   `` `HashRouter` ``
+-   `HashRouter`
 
 `One builds classic URLs, the other builds URLs with the hash:`
 
@@ -5633,7 +5633,7 @@ https://application.com/dashboard   /* BrowserRouter /
 https://application.com/#/dashboard / HashRouter    */
 ```
 
-`` Which one to use is mainly dictated by the browsers you need to support. `BrowserRouter` uses the [History API][151], which is relatively recent, and not supported in IE9 and below. If you don't have to worry about older browsers, it's the recommended choice. ``
+`Which one to use is mainly dictated by the browsers you need to support.`BrowserRouter` uses the [History API][151], which is relatively recent, and not supported in IE9 and below. If you don't have to worry about older browsers, it's the recommended choice.`
 
 ### `Components`
 
@@ -5733,7 +5733,7 @@ ReactDOM.render(
 
 `When the route is changed by clicking the “About” link to `/about`, the Dashboard component is removed and the **About** component is inserted in the DOM.`
 
-`Notice the `exact` attribute. Without this, `path="/"` would also match `/about`, since`/`is contained in the route.`
+`Notice the`exact` attribute. Without this, `path="/"`would also match`/about`, since`/`is contained in the route.`
 
 ### `Match multiple paths`
 
@@ -5913,7 +5913,7 @@ dispatchAddItem('Milk')
 -   `never mutate its arguments`
 -   `` never mutate the state, but instead create a new one with `Object.assign({}, ...)`  ``
 -   `never generate side-effects (no API calls changing anything)`
--   `` never call non-pure functions, functions that change their output based on factors other than their input (e.g. `Date.now()` or `Math.random()`) ``
+-   `never call non-pure functions, functions that change their output based on factors other than their input (e.g. `Date.now()` or `Math.random()`)`
 
 `There is no reinforcement, but you should stick to the rules.`
 
@@ -6056,12 +6056,12 @@ unsubscribe()
 `Here is a non-exhaustive list of the main Next.js features:`
 
 -   `**Hot Code Reloading**: Next.js reloads the page when it detects any change saved to disk.`
--   `**Automatic Routing**: any URL is mapped to the filesystem, to files put in the `pages` folder, and you don’t need any configuration (you have customization options of course).`
+-   `**Automatic Routing**: any URL is mapped to the filesystem, to files put in the `pages`folder, and you don’t need any configuration (you have customization options of course).`
 -   `**Single File Components**: using [styled-jsx][156], completely integrated as built by the same team, it’s trivial to add styles scoped to the component.`
 -   `**Server Rendering**: you can (optionally) render React components on the server side, before sending the HTML to the client.`
 -   `**Ecosystem Compatibility**: Next.js plays well with the rest of the JavaScript, Node and React ecosystem.`
 -   `**Automatic Code Splitting**: pages are rendered with just the libraries and JavaScript that they need, no more.`
--   `` **Prefetching**: the `Link` component, used to link together different pages, supports a `prefetch` prop which automatically prefetches page resources (including code missing due to code splitting) in the background. ``
+-   `**Prefetching**: the `Link` component, used to link together different pages, supports a `prefetch` prop which automatically prefetches page resources (including code missing due to code splitting) in the background.`
 -   `**Dynamic Components**: you can import JavaScript modules and React Components dynamically ([https://github.com/zeit/next.js#dynamic-import][157]).`
 -   `**Static Exports**: using the `next export`command, Next.js allows you to export a fully static site from your app.`
 
@@ -6101,7 +6101,7 @@ npm run dev
 
 `` the script will raise an error complaining about not finding the `pages` folder. This is the only thing that Next.js requires to run. ``
 
-`Create an empty`pages` folder, and run the command again, and Next.js will start up a server on `localhost:3000`.`
+`Create an empty`pages`folder, and run the command again, and Next.js will start up a server on`localhost:3000`.`
 
 `If you go to that URL now, you’ll be greeted by a friendly 404 page, with a nice clean design.`
 
@@ -6111,7 +6111,7 @@ npm run dev
 
 #### `Create a page`
 
-`In the `pages` folder create an `index.js` file with a simple React functional component:`
+`In the`pages` folder create an `index.js` file with a simple React functional component:`
 
 ```
 export default () => (
@@ -6131,7 +6131,7 @@ export default () => (
 
 #### `Server-side rendering`
 
-`` Open the page source, `View -> Developer -> View` Source with Chrome. ``
+`Open the page source, `View -> Developer -> View` Source with Chrome.`
 
 `As you can see, the HTML generated by the component is sent directly in the page source. It’s not rendered client-side, but instead it’s rendered on the server.`
 
@@ -6155,15 +6155,15 @@ export default () => (
 
 #### `Hot reloading`
 
-`Note how you did not have to restart the `npm` process to load the second page. Next.js does this for you under the hood.`
+`Note how you did not have to restart the`npm` process to load the second page. Next.js does this for you under the hood.`
 
 #### `Client rendering`
 
 `Server rendering is very convenient in your first page load, for all the reasons we saw above, but when it comes to navigating inside the website, client-side rendering is key to speeding up the page load and improving the user experience.`
 
-`Next.js provides a `Link` component you can use to build links. Try linking the two pages above.`
+`Next.js provides a`Link` component you can use to build links. Try linking the two pages above.`
 
-`Change `index.js`to this code:`
+`Change`index.js`to this code:`
 
 ```
 import Link from 'next/link'
@@ -6224,7 +6224,7 @@ export default () => (
 export default props => <h1>{props.url.query.title}</h1>
 ```
 
-`` Now clicking a single post will render the post title in a `h1` tag: ``
+`Now clicking a single post will render the post title in a `h1` tag:`
 
 `![](https://cdn-media-1.freecodecamp.org/images/urgIpOydqbjE4i9nyELblMonOjrK0Plrn3OJ)`
 
@@ -6434,14 +6434,14 @@ gatsby develop
 
 `If you open the site you created with your favorite code editor (I use [VS Code][179]), you’ll find there are 3 folders:`
 
--   `` `.cache`, a hidden folder that contains the Gatsby internals, nothing you should change right now``
+-   `.cache`, a hidden folder that contains the Gatsby internals, nothing you should change right now`
 -   `public`, which contains the resulting website once you build it`
 -   `` `src` contains the React components, in this case just the `index` component``
--   `` `static` which will contain the static resources like CSS and images``
+-   `static` which will contain the static resources like CSS and images`
 
 `![](https://cdn-media-1.freecodecamp.org/images/x5XH1s5uMEQdUfnZB6BM2-T9HXkDwv1xLhPd)`
 
-`` Now, making a simple change to the default page is easy, just open `src/pages/index.js`and change “Hello world!” to something else, and save. The browser should instantly **hot reload** the component (which means the page does not actually refresh, but the content changes - a trick made possible by the underlying technology). ``
+`Now, making a simple change to the default page is easy, just open `src/pages/index.js`and change “Hello world!” to something else, and save. The browser should instantly **hot reload** the component (which means the page does not actually refresh, but the content changes - a trick made possible by the underlying technology).`
 
 `` To add a second page, just create another .js file in this folder, with the same content of `index.js` (tweak the content) and save it. ``
 
@@ -6499,7 +6499,7 @@ import './index.css'
 
 `Some commonly used plugins are:`
 
--   `` [gatsby-plugin-react-helmet][183] which allows to edit the `head` tag content ``
+-   `[gatsby-plugin-react-helmet][183] which allows to edit the `head` tag content`
 -   `[gatsby-plugin-catch-links][184] which uses the [History API][185] to prevent the browser reloading the page when a link is clicked, loading the new content using AJAX instead`
 
 `` A Gatsby plugin is installed in 2 steps. First you install it using `npm`, then you add it to the Gatsby configuration in `gatsby-config.js`. ``

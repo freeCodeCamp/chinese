@@ -145,7 +145,7 @@ Let’s dive in.
 
 After reading the heading to this section, you may be saying “what funding?” This is understandable as most think freelancing requires little more than their laptop.
 
-Well…...wrong. There are going to be expenses associated with your new venture. Especially if you want to…you know...make money. Such expenses can include renting server space, buying liability insurance for the business, fees for professionals (such as attorneys and accountants), and more.
+Well……...wrong. There are going to be expenses associated with your new venture. Especially if you want to…you know...make money. Such expenses can include renting server space, buying liability insurance for the business, fees for professionals (such as attorneys and accountants), and more.
 
 The good news is that it takes very little money to start up in today’s world. The amounts necessary will seem especially small once you start generating some revenue. With all of that said, let’s look at a few rules around funding your initial operations.
 
@@ -337,7 +337,7 @@ I’m going to look at several points in this part of our discussion. The topics
 -   Marketing items which need to be completed
 -   The importance of ongoing learning
 
-So…shall we?
+So……shall we?
 
 ### Freelance developers must understand the importance of starting their new business off on the right foot
 
@@ -827,7 +827,7 @@ If you’ve come this far into this guide then I think it’s fair to assume you
 
 As mentioned above, the key is to identify your high value activities and to ensure that such activities receive a serious and efficient time commitment on your end.
 
-To help you get there, this section will discuss the need to focus on the right tasks, how to make sure you’re putting in the right amount of time, and tips for making sure that you’re using that time efficiently. If you focus on these things, then you’re likely to make more money. If you don’t…then you’re not.
+To help you get there, this section will discuss the need to focus on the right tasks, how to make sure you’re putting in the right amount of time, and tips for making sure that you’re using that time efficiently. If you focus on these things, then you’re likely to make more money. If you don’t……then you’re not.
 
 The most important part of getting rich is making sure that you’re focusing your time into higher value activities. This concept is pretty simple: identify the tasks which yield the best results and  **do more of those tasks**!
 

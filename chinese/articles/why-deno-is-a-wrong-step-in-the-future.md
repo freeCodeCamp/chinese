@@ -118,7 +118,7 @@ Node 虽不支持“安全的运行时”——但经过深思熟虑后，我觉
 
 为 TypeScript 现阶段的进展欢呼，我很高兴 Deno 开箱即用地支持 TypeScript。
 
-_**注:**  感谢 [@lilasquared ](/lilasquared )指出 Deno 也能开箱即用地运行 `.js` 文件。本文重点强调使用 `.ts` 文件编写代码。Deno 当然可以直接运行 .js 文件。_
+_**注:**  感谢 [@lilasquared](/lilasquared )指出 Deno 也能开箱即用地运行 `.js` 文件。本文重点强调使用 `.ts` 文件编写代码。Deno 当然可以直接运行 .js 文件。_
 
 但是，让我们退一步来说：你知道为什么 JavaScript 和 Node 在全球拥有数以万计的开发人员吗？因为进入这个领域的壁垒几乎为零。JavaScript 是灵活的，可以容许你的诸多错误。而 TypeScript 总会给你一些奇怪的错误。
 

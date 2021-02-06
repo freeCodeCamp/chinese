@@ -1,4 +1,4 @@
-> * 原文地址：[Where are Docker Images Stored? Docker Container Paths Explained Docker 教程——理解 Docker 容器路径和图像储存](https://www.freecodecamp.org/news/where-are-docker-images-stored-docker-container-paths-explained/)
+> * 原文地址：[Where are Docker Images Stored? Docker Container Paths Explained Docker 教程——理解 Docker 镜像和容器的存储路径](https://www.freecodecamp.org/news/where-are-docker-images-stored-docker-container-paths-explained/)
 > * 原文作者：Sebastian Barthel
 > * 译者：Humilitas
 > * 校对者：

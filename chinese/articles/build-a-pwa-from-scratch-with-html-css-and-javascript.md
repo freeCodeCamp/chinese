@@ -172,11 +172,7 @@ ul {
 
 ## 使用 JavaScript 显示数据
 
-Notice that I used large images that take some time to load. This will show you in the best way the power of service workers.
-
 请注意，我使用了大图片，加载它会需要一些时间。这将以最好的方式向你展示 service workers 的能力。
-
-As I said earlier, the `.container` class will hold our cards. Therefore, we need to select it.
 
 正如我之前说过用 Class 名为 `.container` 的元素保存我们的卡片，因此我们需要选择它。
 
@@ -196,8 +192,6 @@ const coffees = [
     { name: 'Accusantium', image: 'images/coffee9.jpg' },
 ];
 ```
-
-Then, we create an array of cards with names and images.
 
 然后，我们创建一个包含名字和图片的卡片数组。
 
@@ -219,23 +213,23 @@ const showCoffees = () => {
 
 ```
 
-With this code above, we can now loop through the array and show them on the HTML file. And to make everything work, we wait until the DOM (Document Object Model) content finishes loading to run the `showCoffees` method.
-
 有了上面的代码，我们现在能够通过遍历数组并将其显示在 HTML 上。为了保证工作正常，我们等待 DOM （文档对象模型）内容加载完成再执行 `showCoffees` 方法。
-
-We've done a lot, but for now, we just have a traditional web app. So, let's change that in the next section by introducing some PWA features.
 
 我们已经做了很多，但现在，我们只有一个传统的 Web 应用，所以，让我们在下一节通过引入一些 PWA 的特性来改变这种情况。
 
 ![super-excited](https://media.giphy.com/media/l3V0dy1zzyjbYTQQM/source.gif)
 
-## Web App Manifest
+## Web 应用 Manifest
 
 The web app manifest is a simple JSON file that informs the browser about your web app. It tells how it should behave when installed on the user's mobile device or desktop. And to show the Add to Home Screen prompt, the web app manifest is required.
 
+web 应用 manifest 是一个简单的 JSON 文件，它向浏览器告知你的 web 应用。它告诉浏览器在移动设备或桌面安装时该如何表现。而要显示”添加到主屏幕“的提示，则需要 web 应用 manifest。
+
 Now that we know what a web manifest is, let's create a new file named `manifest.json` (you have to name it like that) in the root directory. Then add this code block below.
 
--   In `manifest.json`
+现在我们知道 web manifest 是什么了，让我们在根目录创建一个名为 `manifest.json` 的文件（你得这样命名）。然后在里面添加这些代码。
+
+-   在 `manifest.json`
 
 ```javascript
 {
@@ -286,7 +280,11 @@ Now that we know what a web manifest is, let's create a new file named `manifest
 
 In the end, it's just a JSON file with some mandatory and optional properties.
 
+最后，这个 JSON 文件具有一些可填和必填的属性。
+
 name: When the browser launches the splash screen, it will be the name displayed on the screen.
+
+name:
 
 short_name: It will be the name displayed underneath your app shortcut on the home screen.
 

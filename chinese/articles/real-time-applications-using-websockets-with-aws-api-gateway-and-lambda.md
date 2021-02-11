@@ -1,7 +1,7 @@
-> - 原文地址：[How to build real-time applications using WebSockets with AWS API Gateway and Lambda](https://www.freecodecamp.org/news/real-time-applications-using-websockets-with-aws-api-gateway-and-lambda-a5bb493e9452/)
-> - 原文作者：Janitha Tennakoon
-> - 译者：ZhichengChen
-> - 校对者：
+> -   原文地址：[How to build real-time applications using WebSockets with AWS API Gateway and Lambda](https://www.freecodecamp.org/news/real-time-applications-using-websockets-with-aws-api-gateway-and-lambda-a5bb493e9452/)
+> -   原文作者：Janitha Tennakoon
+> -   译者：ZhichengChen
+> -   校对者：
 
 ![How to build real-time applications using WebSockets with AWS API Gateway and Lambda](https://cdn-media-1.freecodecamp.org/images/0*OaDVOjdkCturioO_.png)
 

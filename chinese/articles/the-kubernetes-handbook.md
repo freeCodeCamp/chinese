@@ -1,6 +1,6 @@
 > * 原文地址：[The Kubernetes Handbook Kubernetes 完全手册](https://www.freecodecamp.org/news/the-kubernetes-handbook/)
 > * 原文作者：Farhan Hasin Chowdhury
-> * 译者：
+> * 译者：ZhichengChen
 > * 校对者：
 
 ![The Kubernetes Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/107889834_1307234906308429_6629041044900498480_n.png)

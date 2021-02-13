@@ -3,15 +3,15 @@
 > -   译者：michaelhe545
 > -   校对者：
 
-![The Complete Freelance Web Developer Guide: How to Make Money Through Freelance Programming Jobs](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/Hit-with-money.jpg)
+![自由职业开发者完全指南：如何通过自由职业编程赚得收入](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/Hit-with-money.jpg)
 
-It’s common for developers to go the freelance route. This is true for many who have just finished freeCodeCamp and are thinking of working for themselves as opposed to working for “the man.” It is also true for many who have developer jobs but are considering going out on their own.
+开发者走自由职业路线已成普遍。对很多在freeCodeCamp刚刚完成学习的人来说便是如此，他们并不想“为别人打工”，而是想为自己打拼。不仅如此，很多在职的开发者也都在想着单干。
 
-The idea of freelancing is also appealing to those who would like to make extra money even though they’re already working a dev job.
+同样受自由职业路线吸引的还有那些虽然已有一份开发工作但是想额外赚点外快的一群人。
 
-Regardless of the reason you’re striking out on your own, it’s important that you go about it correctly. Going about things “the right way” can help you look like the person pictured above.
+但无论出自何种原因，重要的是，如果你想建立自己的小事业，你要能够走对自己的每一步。走上正确的道路，你才能成为上面这张图片中的人。
 
-While doing things the “wrong” way can leave you counting pennies like this:
+而一旦走上了错误的道路，你就会成为下面这张图片中的人。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/12/Man-counting-pennies.jpg)
 

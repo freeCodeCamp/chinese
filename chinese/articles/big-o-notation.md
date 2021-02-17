@@ -1,101 +1,99 @@
-> -   原文地址：[How Big O Notation Works – Explained with Cake](https://www.freecodecamp.org/news/big-o-notation/)
+> -   原文地址：[How Big O Notation Works – Explained with Cake 用蛋糕描述大 O 表示法](https://www.freecodecamp.org/news/big-o-notation/)
 > -   原文作者：cedd burge
 > -   译者：ZhichengChen
 > -   校对者：
 
 ![How Big O Notation Works – Explained with Cake](https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDEyfHxjYWtlfGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2000)
 
-Big O notation is used in computer science to define an upper bound of an algorithm. It is mostly used to define the maximum time of an algorithm as a function of the input size, but it can also be used to define memory usage.
+在计算机科学里，大 O 表示法用来表示一个算法的上界。它通常用输入大小的函数来表示算法的最大运行时间，也可以用来表示内存占用。
 
-In this article we will talk through the most common types of ‘Big O’ notation, using birthday cakes to illustrate the concepts. We'll pretend we're hosting a party, and need to determine how many cakes to bake based on how many people attend.
+在这篇文章里我们会使用生日蛋糕来阐述大 O 表示法时间复杂度。假设我们正在举办 party，需要基于参会的人数烘焙蛋糕。
 
-## O(1) - Constant Time
+## O(1) - 常数时间
 
-For the Constant Time example, no matter how many people come to the birthday party, you only make one cake. So the cake making time stays constant.
+对于常数时间，不管多少人参加生日聚会，都只需要做一个蛋糕。因此制作蛋糕的时间是一个常量。
 
 ![0(1) Constant Time Illustration](https://www.freecodecamp.org/news/content/images/2020/12/o-1--constant-time.png)
 
-Note that Big O notation doesn’t specify how long the Constant Time is (maybe it takes 1 hour to make the cake, maybe it takes 4 hours). It just states that the time taken doesn’t increase with the number of guests.
+注意大 O 表示法无需指定这个常数时间是多少（制作蛋糕可能花费一个小时，也可能花费四个小时）。它只是陈述了时间不随着参会人数的增加而增加。
 
-A real world example of an O(1) operation is accessing an array by its index. It is just as quick to retrieve an element from a 10 item array as it is to retrieve an element from a 1 million item array.
-
+一个 O(1) 操作的例子是通过 index 访问数组的元素。从 10 个元素的数组检索一个元素和从 100 万个元素的数组里检索一个元素一样快。
 ![0(1) Constant Time Graph](https://www.freecodecamp.org/news/content/images/2020/12/o-1--constant-time-grqph.png)
 
-## O(log n) - Logarithmic Time
+##  O(log n) - 对数时间
 
-For the Logarithmic Time example, the birthday cakes are used as a way to incentivise people to turn up to the party on time.
+对于对数时间，生日蛋糕用来奖励先到的人。
 
-The first person to arrive gets a cake all to themselves. Then the next 2 people to arrive share a cake. Then the next 4 people all share a cake, and so on.
+第一个到的人独享蛋糕，接下来到的两个人分一个蛋糕，在接着到的四个人分一个蛋糕，以此类推。
 
-So a 1 person party requires 1 cake. A 2 or 3 person party requires 2 cakes. A 4 - 7 person party requires 3 cakes, and a 8 to 15 person party requires 4 cakes. In general an ‘n’ person party requires log_2_(n) cakes.
+因此一个人聚会需要一个蛋糕。两人或者三人聚会需要两个蛋糕。4 - 7人聚会需要 3 个蛋糕。8 - 15 人聚会需要四个蛋糕。 ‘n’ 个人聚会需要 log_2_(n) 个蛋糕。
 
 ![O(log n) Logarithmic Time Illustration](https://www.freecodecamp.org/news/content/images/2020/12/o-log-n--logarithmic-time.png)
 
-The most common real world example of an O(log n) operation is a binary search of an ordered array.
+一个 O(log n) 操作的例子是有序数组的二分查找。
 
-This algorithm looks at the middle of an array and sees if the value is lower or higher than the one it is looking for. Since the list is ordered, it then knows which half of the array the target value is in.
+二分查找算法找到数组中间的元素，和要找的元素进行对比。因为数组是有序的，所以可以知道要找的值在数组的哪一半里面。
 
-It then repeats the process with that half of the array. So for a 16 item array, the first iteration narrows down the search to 8 items, then 4 then 2 and then 1, for a maximum of 4, or log_2_(16), iterations over all.
+然后再一半的数组里面重复这一过程。对于 16 个元素的数组，第一次迭代将搜索范围缩小到 8，然后依次是 4、2、1。最多 4 次，也就是 log_2_(16) 次，迭代结束。
 
 ![O(log n) Logarithmic Time Graph](https://www.freecodecamp.org/news/content/images/2020/12/o-log-n--logarithmic-time-graph.png)
 
-## O(n) - Linear Time
+## O(n) - 线性时间
 
-For the Linear Time example, each guest gets their own cake. If ‘n’ people come to the party, you need to make ‘n’ cakes. So the time taken is related to the number of guests.
+对于线性时间，每个参会的人都有一个蛋糕。如果 ‘n’ 个人参会需要准备 ‘n’ 个蛋糕，因此花费的时间和参会的人数相关。
 
 ![O(n) Linear Time Illustration](https://www.freecodecamp.org/news/content/images/2020/12/o-n--linear-time.png)
 
-Again Big O notation doesn’t specify how long the time is (maybe it takes 1 hour to make the cake, maybe it takes 4 hours), it just states that the time increases linearly with the number of guests.
+再一次，大 O 表示法不关注具体时间是多少（可能是一个小时制作一个蛋糕，也可能是四个小时），它只是表示时间随着参会人数线性增长。
 
-A real world example of an O(n) operation is a naive search for an item in an array. In a 10 item array, at worst you will have to look all 10 items to find the one you want. But for a 1 million item array, you may have to look at all 1 million.
+一个 O(n) 操作的例子是用最粗暴的方式在数组里遍历找到指定元素。在 10 个元素的数组里，最坏情况下需要找十次才能找到指定元素。在 100 万个元素的数组里，可能需要找 100 万次。
 
-Of course, you might find the solution sooner, but Big O notation specifies the maximum amount of time that an algorithm will take.
+当然，可能很快就能找到想要的值，但是大 O 表示法描述的是算法会花费的最大时间。
 
 ![O(n) Linear Time Graph](https://www.freecodecamp.org/news/content/images/2020/12/o-n--linear-time-graph.png)
 
-## O(n^2) - Quadratic Time
+## O(n^2) - 二次时间
 
-For the Quadratic Time example, each guest gets their own cake. Additionally, each cake has the names of all the guests written on it, with some delicious icing.
+对于二次时间，每个参会者都有自己的蛋糕，另外，每个蛋糕上的奶油都有所有人的签名。
 
-In this case a 1 person party has one cake with one name on it. A 2 person party has two cakes, both with two names on (4 names total) and a 3 person party has three cakes, all with three names on them, which is 9 names in total.
+在这种情况下一人参会需要 1 个蛋糕和 1 个签名。两人参会需要 2 个蛋糕，每个蛋糕都需要 2 个名字（一共 4 个名字）。三人参会需要 3个蛋糕，每个蛋糕都有 3 个名字，一共 9 个名字。
 
 ![O(n^2) Quadratic Time Illustration](https://www.freecodecamp.org/news/content/images/2020/12/o-n-2--quadratic-time.png)
 
-In general, an ‘n’ person party requires n\*n names to be written (also known as n squared, or n to the power of 2), so the speed of making cakes (and writing all the names) is related to the square of the number of guests.
+‘n’ 个人参会需要签 n\*n 个名字（也就是 n 的平方或者 n 的二次方），因此制作蛋糕（以及签名）的时间和参会人数的平方相关。
 
-A real world example of an O(n^2) operation is a naive search for duplicates in an array. In this scenario, you loop through all the items in the array, and for each of those items, loop through the array again to see if there are any matches.
+O(n^2) 操作的一个例子是暴力搜索数组中的重复项。遍历数组中的所有元素，对于每一个元素，在遍历一遍数组看是否有和其相同的元素。
 
-For a 10 item array, the outer loop has 10 iterations, and for each of those there are 10 iterations of the inner loop, for 100 in total. For a 1 million item array, it is 1000 billion.
+对于 10 个元素的数组，外部需要循环 10 次，每一次外部循环都需要内部循环 10 次，总共是 100 次。对于 100 万个元素的数组，需要 10000 亿次。
 
-There is a more general case of O(n^2), where instead of the time being relative to n to the power of 2 (n^2), it is relative to n to the power of c (n^c). This is usually called Polynomial Time.
+还有一个比 O(n^2) 更普遍的情况，和时间与 n 的平方相关不同，它与 n 的 c 次方相关 （n^c）。这通常叫做多项式时间。
 
 ![O(n^2) Quadratic Time Graph](https://www.freecodecamp.org/news/content/images/2020/12/o-n-2--quadratic-time-graph.png)
 
-## O(n!) - Factorial Time
+## O(n!) - 阶乘时间
 
-For the Factorial Time example, the guests take part in a  [Pétanque][1]  competition, and the winner takes home the cake.
+阶乘时间，所有参会的人进行[法式滚球][1]比赛，赢的人拿走蛋糕。
 
-There is a slight issue, though, in that the player that takes the first turn is at a disadvantage. To help level things out, many games are played, so that each permutation of guests is covered and everyone gets to go first. All these permutations are written on to the cake, again with some tasty icing.
+还存在一个小问题，先投球的玩家会更劣势。为了解决这个问题，同时进行多场比赛，每组都会先手一次。所有比赛的排列都会写在蛋糕的奶油上。
 
-This means that a 2 person party has two games, as each guest takes it in turn to go first. A 3 person party has 6 games (if we imagine that the guests are Anna, Brian and Chris, then the permutations are ABC, ACB, BAC, BCA, CAB, CBA).
-
+这意味着两人参会会有两场比赛，每一个选手都会依次先手。三人参会会有 6 场比赛（假设选手为安娜 A、布莱恩 B 和克里斯 C，那么排列会是 ABC、ACB、BAC、BCA、CAB、CBA）。
+ 
 ![O(n!) - Factorial Time Illustration](https://www.freecodecamp.org/news/content/images/2020/12/o-n---factorial-time.png)
 
-In general, an ‘n’ person party requires n!, or n factorial games, so the speed of making the cake is related to the this.
+ ‘n’ 个人参会需要 n! 或者 n 的阶乘次比赛，制作蛋糕的时间与阶乘相关。
 
-n! is calculated by multiplying all whole numbers from n down to one “n \* (n - 1) \* (n - 2) …… \* 2 \* 1”. So for the 2 person party it is 2 \* 1, or 2. For the three person party it is 3 \* 2 \* 1, which is 6.
+n! 的计算是从 n 到 1 的所有数相乘， “n \* (n - 1) \* (n - 2) …… \* 2 \* 1”。对于两人聚会就是 2 \* 1 也就是 2。对于三人聚会就是 3 \* 2 \* 1，也就是 6。
 
-Real world examples of O(n!) operations are anything that requires analysing a list of permutations, such as the  [traveling salesman problem][2].
-
+需要分析列表组合的算法就是 O(n!) 操作，比如[旅行商问题][2]。
 ![O(n!) Factorial Time Graph](https://www.freecodecamp.org/news/content/images/2020/12/image-165.png)
 
-## Conclusions
+## 结论
 
-Hopefully the birthday cakes have made ‘Big O’ notation easier to digest! The graph below is also a good memory aid, showing the relative speeds of the algorithms (if there is a choice, then you want the faster one!)
+希望生日蛋糕能让大 O 表示法更好理解。下图也是一个很好的记忆辅助工具，展示了算法的相对速度（如果有的选，要选更快的算法！）
 
 ![Big O Notation graph](https://www.freecodecamp.org/news/content/images/2020/12/image-166.png)
 
-There are quite a few other ‘Big O’ notations, such as O(n log n) and O(c^n) but they all follow the same pattern. If you want to learn more about it,  [check out this article][3].
+还有一些其它的大 O 表示法，比如 O(n log n) 和 O(c^n)，但是他们都遵循相同的模式，如果想了解更多，[查看这篇文章][3]。
 
 [1]: https://en.wikipedia.org/wiki/P%C3%A9tanque
 [2]: https://en.wikipedia.org/wiki/Travelling_salesman_problem

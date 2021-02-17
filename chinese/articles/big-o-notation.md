@@ -1,6 +1,6 @@
 > -   原文地址：[How Big O Notation Works – Explained with Cake](https://www.freecodecamp.org/news/big-o-notation/)
 > -   原文作者：cedd burge
-> -   译者：
+> -   译者：ZhichengChen
 > -   校对者：
 
 ![How Big O Notation Works – Explained with Cake](https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDEyfHxjYWtlfGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2000)

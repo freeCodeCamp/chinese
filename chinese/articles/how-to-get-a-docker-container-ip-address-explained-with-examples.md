@@ -1,6 +1,6 @@
 > * 原文地址：[How to Get A Docker Container IP Address - Explained with Examples 如何获取 Docker 容器的 IP 地址](https://www.freecodecamp.org/news/how-to-get-a-docker-container-ip-address-explained-with-examples/)
 > * 原文作者：Marcelo Costa
-> * 译者：
+> * 译者：ZhichengChen
 > * 校对者：
 
 ![How to Get A Docker Container IP Address - Explained with Examples](https://images.unsplash.com/photo-1545935950-b7a28791ad7a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)

@@ -1,6 +1,6 @@
 > -   原文地址：[The SOLID Principles of Object-Oriented Programming Explained in Plain English](https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/)
 > -   原文作者：Yiğit Kemal Erinç
-> -   译者：
+> -   译者：ZhichengChen
 > -   校对者：
 
 ![The SOLID Principles of Object-Oriented Programming Explained in Plain English](https://www.freecodecamp.org/news/content/images/size/w2000/2020/08/solid.png)

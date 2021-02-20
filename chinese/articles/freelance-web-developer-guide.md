@@ -25,25 +25,25 @@
 
 由于种种原因吧，这篇指南很长。下面是一份我们将会讨论到的内容的大纲：
 
-1.  自由职业开发者赚取收入的3条核心法则  ([跳至第2部分][2])
-2.  为你的事业谋篇布局  ([跳至第3部分][3])
+1.  自由职业开发者赚取收入的3条核心法则  ([跳至此部分][2])
+2.  为你的事业谋篇布局  ([跳至此部分][3])
     -   为你的经营筹集资金
     -   确定你的服务领域
     -   确定你的服务项目和服务费用
     -   确定你的经营架构
     -   确定筹划经营中的“待办事项”
-3.  开始你的经营  ([跳至第4部分][4])
+3.  开始你的经营  ([跳至此部分][4])
     -   “迈对第一步”的重要性
     -   待完成的经营管理事务
     -   待完成的市场营销事务
     -   确定开始经营中的“待办事项”
-4.  为你的新生意拓展客户  ([跳至第5部分][5])
+4.  为你的新生意拓展客户  ([跳至此部分][5])
     -   在短期内获得客户的同时也要关注长期
     -   如何在客户面前推销自己
     -   短期内如何寻找客户
     -   长期内打造自己的品牌
     -   确定展开市场营销中的待办事项
-5.  管理你的日常经营  ([跳至第6部分][6])
+5.  管理你的日常经营  ([跳至此部分][6])
     -   经营管理&财务管理
     -   管理你的发展/重大事宜
     -   确保日常经营管理正常运行的“检查清单”
@@ -64,282 +64,282 @@
 
 让我们一个一个来看。
 
-### Developers must understand that making money means providing value to others
+### 开发者一定要认识到，要想赚钱就以为着你要为他人提供价值
 
-Most people starting a business for the first time are used to working traditional jobs. Such jobs often mean getting paid for one’s time. When you go into a job that pays “x” per hour, for example, then you get paid “x” regardless of what you actually produced in that hour.
+很多初次投身创业的人在传统的工作中已经待习惯了。这种传统是指，你的报酬是以你的工作时间来衡量的。好比说，如果你获得了一份时薪为X的工作，那么无论你在这一小时里做了多少有价值的事情你都会得到X的报酬。
 
-When you’re providing dev services to a client, however, all the client is going to care about is how much value they receive out of it. If, for example, you’re building a website or app for a small business then what the business is willing to pay is going to depend on the value they expect to receive from the website or app in the future.
+但是，当你为你的客户提供开发服务时，他们更关心的是你的服务中为他们创造了多少价值。举个例子来说，假如你要为一家小公司制作一个网站或是开发一款App，决定这家公司愿意支付你多少酬劳的是他们预期在未来能够从这一网站或是App中获取的价值高低。
 
-The price the customer is willing to pay is not based on the time you put in (as is the case in hourly jobs). Instead it’s based on the increase in value that your customer will receive.
+客户不会再想时薪制的工作那样基于你的工作时间投入来支付你酬金。取而代之的是，依据你的客户在未来因你的服务而会获得的价值增长。
 
-So, to put it bluntly, making money means understanding that your services are about providing value to others and not about putting in time.
+说白了，就是你要明白，要想赚钱，你的服务就要能为客户提供价值，而无关你投入时间的多少。
 
-It’s also important to understand that value will always be based on the customer’s perceptions and not yours. Too often developers see a website built on one type of framework as “better” than something that looks and functions the same, but is built on another framework.
+另外很重要的一点是，有没有价值和价值的多少永远不是你说了算，而是客户说了算。太多情况下，开发者自己觉得基于某一种框架搭建的网站要“优”于基于另一种框架搭建但外观和功能大差不差的网站。
 
-The bottom line, however, is that if each meets the customer’s needs just as well as the other, then the one which provides the most value to the client is that which costs less.
+然而需要尤为强调的是，如果这两种设计都能很好地满足客户的需求，那么哪一种成本低，哪种就能为客户提供最大化的价值。
 
-Think of it like this - suppose a customer can get a website built by someone using a CMS for $2,500. You propose building something with Bootstrap for $3,500. You think yours would be better because you’re using “real code” and not a CMS like WordPress or Joomla.
+试着这么去想，假如一个客户在花费$2,500的情况下就能获得一个利用CMS建立的网站。而你却提议用Bootstrap去建立这样一个网站，但是价格为$3,500。你可能会觉得你的方案会更优，因为你用的是“实码”而不是诸如WordPress或是Joomla之类的CMS。
 
-At the end of the day, however, both websites visually look the same and one does just as good a job of bringing in business as the other. This means that your “better” website didn’t provide more value to the customer, it just cost more. Of course, the customer would not be happy with such an arrangement.
+但是，等到你们都完成设计的那天，你们的网站在视觉上看起来没什么两样，两个对于吸引生意来说几乎不分上下。这种情况下，你所认为的“更优”的方案就并不能为客户带来更高的价值，因为它成本更高。显然，客户也不会选择这样一种方案。
 
-Want to make money? Then start thinking in terms of how you can provide what the customer perceives as value.
+想要赚钱？那就开始想像你怎么才能创造出客户心中所理解的价值。
 
-### Developers must understand that making money means putting time into high value activities
+### 开发者一定要明白，要想赚钱，就要把时间投入高价值的事情中去
 
-The heading for this section may seem like something you would say “duh” to, but you would be surprised. I see many, many, many, many (many) instances in which small businesses or solo operations are putting time into efforts which really don’t matter very much at the end of the day.
+看了这个小标题，你可能会发出“咄”的一声，但你后面越读就会越吃惊。我见到过很多很多很多很多很多小公司或是小经营把时间花费在根本就“无伤大雅”的事情上。
 
-Think of it like this. Many small operations make really good money engaging in activity “x.” They then think that they want to grow their business by beginning to offer service “y” in addition to x. When service y doesn’t work out, they then scrap the idea on move on to service “z.”
+试着这么去想。很多小经营能通过从事X活动来获取可观的收入。接着，他们就想要不再新开辟一种服务Y来壮大一下自己的生意。如果服务Y经营不利，他们就会又想去着眼于服务Z。
 
-This strategy, unfortunately, is a bit insane. If activity x is making money then, instead of spreading resources across activities, just do more of x. In other words, pick your highest value activity and do more of it! This is why Mark Cuban has been quoted as saying that “diversification is for idiots.”
+遗憾的是，这种策略是有点荒谬的。如果活动X能够赚钱，那就不要再把资源浪费到别的活动了，把X做大做强就够了。换句话说，挑选出你最能创造价值的活动，把它做大做强！这也是为什么马克·库班会说那句名言，“傻子才会搞多元化。”
 
-Let’s look at two examples of what I mean by this.
+让我们来看两个例子吧。
 
-Suppose you can build a relatively simple website, with certain functionality, for small businesses and charge $3,000 for this service. Creating such a site takes you twenty hours (meaning you make $150 per hour of input).
+设想你的客户是小型企业，你能为它们建立一种相对简单、只具有某些功能的网站，为此你收取$3,000的服务费用。创建一个这样的网站你需要花费20个小时（也就是说，你每小时可以赚到150美元）。
 
-Now suppose you can build larger scale ecommerce products for around $7,500 to $10,000 a pop, but only earn $130 per hour of input due to the projects being more complex.
+但现在，设想你有能力去设计一种更大规模的电子商务产品，每卖一个就能赚$7,500到$10,000。但是，这样，你每小时的投入就只能获得$130的报酬，因为这个项目要更加复杂一些。
 
-It’s easy to look at these projects and think the latter is worth more money. The former, however, pays more per unit of input. This means you should be focusing on getting more of those $3,000 projects and try to make such projects your primary business.
+纵观两个项目，你很容易会去想第二个项目会更赚钱。但别忘了，第一个项目的单位投入报酬要更高。也就是说，你应该关注的是如何从那个$3,000的项目中赚更多钱，并把它设置为你的主营业务。
 
-To put it simply, identify the projects which pay the most per unit of input and to the extent possible, focus  **solely**  on getting as many of those projects as possible.
+简单来说，你要明确哪些项目是你进行单位投入后能获利最多的，然后  **只去**  专注这些项目尽可能地把它们做大做强就行了。
 
-### Freelance developers must understand that they now have a full-time job
+### 作为自由职业开发者，你一定要明白，你在做一份全职工作
 
-I’ve talked to a lot of start-ups and entrepreneurs who don’t understand that they got a full-time job as soon as they struck out on their own. This is true even if they don’t have a single customer. I strongly, strongly, strongly (strongly) believe that this is one of the main reasons why many small businesses fail.
+我曾与很多初创企业老板和创业者聊过，其中很多人都没有认识到自己在单干的那一刻起就开启了一份全职工作。哪怕是你连一个客户也没有，你在做的也是一份全职工作。我强烈强烈强烈强烈认为，很多小公司倒闭的主要原因中有一点就是他们没有认识到这一点。
 
-Let’s look at why I say you have a full-time job as soon as you start up.
+让我来给你解释解释为什么说你是在做一份全职工作。
 
-Suppose Joe Developer starts up his new freelance dev operation. He puts up a website advertising his services and maybe pays for a little bit of advertising. He gets the occasional customer here and there. He completes projects for these customers on a timely basis but never really does much else to grow his business. He probably only puts about twenty hours a week into the operation during the course of the year.
+假如有一个叫Joe的开发者刚刚创立了它的自由职业开发业务。他搭建了一个网站，用以宣传推广他的服务，或许还花了点钱做了一些广告营销。后来它时不时地接了一些散客。他每次都能按时完成客户交付的项目，但除此之外对壮大自己的业务从未考虑更多。可能一年下来，他会每周花上20个小时开展自己的经营。
 
-At the end of the year he wonders why his business is stuck in first gear. Joe then shuts down his operation thinking that his phone “didn’t ring enough” from customers and that his advertising was ineffective. Joe blames “bad advertising” for why his business failed.
+到了年底，Joe不禁感概，为什么自己的生意还是停留在初级阶段。然后，心想手机接到的订单越来越少，自己的广告营销也不是很有用，Joe就关掉了自己的经营，还心想是自己的营销问题导致自己经营失败。
 
-What Joe failed to understand was that he had a full-time job once he started up. His business failed because he only worked part-time (twenty hours a week) at it.
+但是，Joe没有认识到的是，打他开始经营的那天起，他就开启了一份全职工作。他之所以会失败，是因为它只是把经营当成了自己每周20个小时的副业。
 
-It’s really quite simple. People don’t get paid for not working. This goes for business owners as well. Once you start up, consider yourself as having a full-time, minimum of forty hours per week, commitment.
+其实道理很简单。天下没有免费的午餐，没有工作，就没有收入。这点对创业者同样适用。当你开始自己的经营时，就当自己是在做一份全职工作，每周投入不少于40个小时的时间进去。
 
-What this means is that if your coding and admin work only takes up twenty hours a week, then you are now  **required**  to put the other twenty hours a week into hustling up new business. So Joe spent twenty hours a week coding, and should have spent the other twenty hours a week going to networking events or some other marketing activity. If he had put in his time, he would have gotten more business.
+也就是说，如果说你每周的编程和日常管理花费只需20个小时，那你就  **需要**  把剩余的时间用到去拓展新生意上。所以如果Joe每周用20个小时编程，就应该把另外20个小时用到拓展自己的人际关系网或是其它营销活动上去。倘若他花了这些时间，他的生意也会越来越多。
 
-Once you start up, just remember one simple rule. You now have a full-time job. To the extent that you don’t have coding projects to put in time on, you are now  **obligated**  to spend the rest of your working time trying to hustle up more business.
+当你开始自己的经营时，记住这条简单的法则。你现在在做的事全职工作。只要你除了要编程还有别的空余时间，你就一定要  **尽最大可能**  利用剩余的时间去招揽更多的生意。
 
-Do you want to be successful? If so then it’s simple. Understand that you have to provide value to your clients and that you should be focusing on the value providing activities which yield the highest amount of money per unit of input. Finally, put the time into your new business. Those three rules are key to making money in any new enterprise.
+你想获得成功吗？如果你的回答是肯定的，那就好办了。记得，你一定要为你的客户提供价值，要专注于那些能够创造价值的事情，即那些能够在单位投入内产出最多报酬的事情。最后，要为你的生意投入足够的时间。这三点对于任何新生意来说都是盈利的核心法则。
 
-## Planning your new freelance development business ([back to top][8])
+## 为你的自由职业发展新事业谋篇布局 ([返回顶部][8])
 
 ![](https://lh4.googleusercontent.com/q1K1mJB27zEZMakll6c_6DtYztQHjjGoVvFqsT36awdAT6e9A--adWBMCnwnOua-a1ojRMbzZUrkUB_hct3XpE1UyE7KtXrb6LpJ5Ue5eO5nJMjm4g7DjFozNK94WWaAX5yFGFBh)
 
-Once you’ve decided to start up it’s then important to plan out your business. I can’t stress enough how crucial this is. Too many entrepreneurs just open up shop and start haphazardly engaging in activities out of the hope that such activities will yield a profit.
+当你决定好要开工时，为你的生意谋篇布局是下一步行动的重中之重。做好计划真得真得真得非常非常重要。很多创业者脑袋一热就开业了，开展的经营活动毫无章法，但却希望能够从中捞上一笔。
 
-Well, no disrespect to such fine folk, but starting a business without a plan is a lot like getting in your car, driving around aimlessly, and acting surprised when you don’t wind up in a place you’d like to be.
+我这么说没有什么恶意，只是开办生意前没有计划就好比跳进你的车里漫无目的的四处乱逛一样，然后当你最后发现自己并没有到达想去的地点时又会觉得惊愕不已。
 
-So let’s look at what you need to for the “planning” phase of your new venture.
+既然如此，那我们就看看在为你的新生意“准备”阶段你都需要什么吧。
 
-There are several steps involved in getting your new endeavor off of the ground. We’ll look at each of them in turn. These steps include:
+要想让你的新生意落地，需要好几个步骤。我们一个一个来看吧，它们有：
 
--   Funding your new operation.
--   Deciding what niche you’re going to serve.
--   Deciding on the services you will offer, as well as pricing.
--   Structuring your business.
+-   为你的经营筹集资金。
+-   确定你的服务领域。
+-   确定你的服务项目和服务费用。
+-   确定你的经营架构。
 
-Let’s dive in.
+让我们一探究竟。
 
-### Freelance developers will need to fund their new business
+### 自由职业开发者需要为自己的新经营筹集资金
 
-After reading the heading to this section, you may be saying “what funding?” This is understandable as most think freelancing requires little more than their laptop.
+看到这个小标题，你可能会心想，“就这还要筹集资金？”这也不难理解，因为在大多人心中，一台笔记本电脑对于自由职业就够够的了。
 
-Well…...wrong. There are going to be expenses associated with your new venture. Especially if you want to…you know...make money. Such expenses can include renting server space, buying liability insurance for the business, fees for professionals (such as attorneys and accountants), and more.
+嗯……不对。你的新经营会牵涉到很多花费，尤其是如果你想要……你懂的……大赚一笔。这些花费可能包括服务器空间租用费，经营负债保险费，专家咨询费（如律师、会计咨询费用），甚至更多。
 
-The good news is that it takes very little money to start up in today’s world. The amounts necessary will seem especially small once you start generating some revenue. With all of that said, let’s look at a few rules around funding your initial operations.
+但好消息是，在今天开办一家经营你并不需要花费太多。尤其是当你开始盈利时，你最初花的这点钱相比之下简直就是九牛一毛。铺垫了这么多，一起来看看为你的初始运营筹集资金时需要注意的几个原则吧。
 
-The number one rule to remember with your finances is that, contrary to what many people in tech-related businesses think,  _it is not OK to lose money!_  This point was driven home really well in the book  [Profit First][9], which I strongly suggest reading.
+原则一，处理财务时永远记得，和很多科技领域生意人的想法恰恰相反  _亏损是一项大忌！_  这一点在  [利润为先][9]这本书里讲得非常清楚和透彻，我强烈建议各位去读一读。
 
-While many small companies are willing to lose money for the sake of growing quickly, I cannot stress enough that this is actually a really bad idea.
+很多小公司为了谋求更快的增长不惜亏损营业，这真的是非常糟糕的想法。
 
-The reasons that this is a bad idea would be a) lengthy and b) the subject of another article. The biggest point to take away for now is that you should be profitable on Day One and in each month thereafter.
+说它糟糕的原因很多很长，在我的另一篇文章里有详细论述。援引那篇文章中最重要的一点就是，你应该在第一天以及此后的每个月中获利。
 
-The easiest way to ensure that you start out profitably, and stay that way, is to remember to avoid debt when you’re starting up as a solo.
+要想确保一开始就盈利并保持下去，最简单的方法是，如果你是只身一人在单干，记得防止出现任何债务。
 
-Unfortunately, way too many people start a business (of any type, not just coding) and start putting initial expenses on credit cards. They may also take out some type of personal loan to get started.
+遗憾的是，有太多人开办公司后（不仅是在编程领域），会用信用卡支付他们的初始支出，可能还会通过个人贷款来站稳脚跟。
 
-But ensuring that you are profitable from Day One, and that you stay that way, is simple as long as you avoid debt. Why do I say this? Because if you’re avoiding debt then you can’t spend more than you take in. So, by definition the worst you can do is break even.
+而要确保你从第一天就是盈利的并如此保持下去其实很简单，只要你防止出现债务就够了。我为什么要这么说？因为如果你要杜绝一切债务，你就只能在你盈利的范围内去支出。也就是说，就算是在最坏的情况下，你也不过是不赚不陪。
 
-Growing your operations then comes from reinvesting your profits. As you make money, reinvest in the business for growth. This leads to greater profits. Keep repeating the process and next thing you know the business is doing really well without ever having borrowed any money.
+然后，通过对利润进行重新投资，你的经营就会日渐壮大。当你赚到钱时，把钱投回你的生意中去，从而实现生意的壮大。经营壮大了以后，你的利润会更高。如此循环往复，你就会发现，即便在没有任何债务的情况下，你的生意仍能非常良好地维持运转。
 
-### Freelance developers must decide which niche they are going to serve
+### 自由职业开发者必须确定好自己的服务领域
 
-There are a few things to address in regards to deciding what niche you’re going to serve. The first is an explanation of why you need a “niche” in the first place. The second is how to go about choosing that niche.
+这条值得说的不多。首先，我将为大家解释一下为什么你最一开始需要确定下来某一个“客户群体”。其次，我会说明如何去做出选择。
 
-As I’ll explain below, focusing on a particular subset of customers, and not saying “I’ll take whatever walks in the door” leads to higher profits and a more scaleable business. Second, picking that niche is a lot easier than many people think. So let’s have a discussion.
+聚焦某一个具体的服务群体，不要想着“只要上门，我就服务”，这样你才能获得更高的利润并把生意做得更大。这点我在后面会具体解释。很多人会觉得挑选出一个合适的领域会很难，但其实并非如此。我们不妨就此讨论一番。
 
-When striking out on your own it’s  **crucial**  that you focus on a few particular types/classes of customers instead of trying to be a general purpose coder for every type of business.
+当你开始经营自己的生意时，  **非常重要的是，**  你要专注于某几个具体类别的客户，不要想着去当一个“万金油”式的程序员，各种活儿都想着往自己手里揽。
 
-The reason for this is simple: if you’re always building different types of products then you put yourself in the role of constantly learning new frameworks and familiarizing yourself with whatever third-party applications the customer may want to integrate into the product.
+其背后的原因也很简单：如果你一直忙着构建各种不同类型的产品，那你就会陷入这样一种境地。你要不断学习新的框架，熟悉各式各样的第三方应用，因为只要客户要求将其融合入产品之中，你就得照做。
 
-While I understand that it is fun to learn new things (I like to consider myself a constant learner), this  **is not**  the way to run a business.
+虽然说我也明白，学习新的知识总是有趣的（我喜欢自称是一个活到老学到老的人），但那  **绝不是**  经营生意的方式。
 
-The reason for this is simple - it’s scale. If you build products for a particular type of company then you will certainly have to learn something new for each customer, but this learning curve will be nowhere as extreme. This leads to greater profits on your end. Let’s look at what I mean.
+原因也很简单，规模。如果你专注为某一个特殊类别的公司做产品，你就一定需要针对每一个客户去学习一些必要的新知识，但这种学习是合理适度的。这就意味着最后你的收益会越来越多。我再来详细解释一下。
 
-My primary business tends to focus on building and maintaining websites for law firms, as well as individual app development which allows an attorney’s practice to run more smoothly.
+我的主营业务倾向于专注为法律公司制作和维护网站，并为其开发App用以帮助他们的律师工作起来更加顺畅。
 
-Since many law firms have similar needs I can generally re-use the same code base. Since I charge a flat rate for dev services, I’m collecting my full fee without always having to build a product from the ground up.
+鉴于很多法律公司的需求都很相似，我基本上可以对一个代码库进行重复利用。但是我在提供开发服务时是统一收费的，那么就意味着我在收取相应费用时虽然是收的完整费用，但我并非总是需要从零开始做一个产品。
 
-If, by contrast, I offered these same types of services to every type of business which existed, I would lose the ability to scale up the use of existing code. Do you want to grow your profits? If the answer is “yes” then find a niche and focus on it.
+可是相比之下，如果我的服务项目没有变，但是现在是为各行各业的公司提供服务，我就没有办法再去重复使用我已经写好的编程了。问问自己想要增加自己的利润吗？如果答案是肯定的，那就确定好一个服务领域后专注下去。
 
-One other point about choosing a niche is that you wind up providing a much, much, much (much) higher level of service to your customers. Because I have extensive experience in serving a narrow class of companies, I’m able to anticipate their needs and offer solutions they may not otherwise have thought of.
+在选择服务领域时还需要注意的是，你最后确定提供的服务对你的客户来说过于过于过于过于高阶。因为我在专注为服务某一小类公司这方面已经经验很丰富了，我能预测出客户的需求，并为他们提供他们自己都没有考虑到的解决方案。
 
-Also, since I’m not completely starting a new codebase all the time, the client does not have to be overly worried about bugs. So, in other words, I am able to provide a better product and better service by focusing on a niche.
+此外，因为我并非总是完全从零开始创建一个新的编码库的，我的客户也无需为各种bug过于担心。换句话说，专注于某一个具体的服务群体后，我能够为客户提供更好的产品、更佳的服务。
 
-Unfortunately, many startup developers decide to take whatever work “comes in the door.” This is very bad for their long-term profits. I just spelled out why serving a niche increases profits. Taking “anything you can find” works in the opposite direction.
+遗憾的是，很多刚刚创业的开发者都是“只要进门，我就服务”。这在长期来看对他们的盈利有着十分不利的影响。我刚刚已经解释了为什么专注一个领域能够增加利润。当你秉承“只要进门，我就服务”这种观念时，一切就会向刚刚讲到的一切的反方向去发展。
 
-First, you may put a lot of time into learning something new only to find that you never use it again after you deploy the customer’s product. Second, all that time that you put into having to learn something new or write a brand new code base could have been put into developing marketing towards your niche.
+首先，你可能花了很多时间去学习新的知识，但最后却发现这些知识在为这个客户设计产品时用过一次后就再也派不上用场了。其次，你在学习这些新知识或是创建新的代码库时花费的时间完全本可以用于为某一个服务领域做一些营销工作。
 
-In other words, people who take whatever they can get are foregoing actual business building to make a few quick bucks. This is the equivalent of stepping over a dollar bill so you can pick up a penny. Never a good idea.
+也就是说，那些“只要进门，我就服务”的人是在弃绝自己真真正正去经营好生意、赚一笔快钱的良机。这就好比说，你放弃赚到一块钱的机会不顾，只为最后能捡到一分钱。这怎么看都不是明智之举。
 
-When deciding what type of niche you want to serve, you really only need to ask yourself two questions.
+在决定自己想要服务哪一具体类型的群体时，你只需问清楚自己两个问题就够了。
 
-First, is there an area where you can bring unique experience or value that some other developers may not be able to provide? If the answer is “yes,” then you have an opportunity to provide value to your customers.
+第一个，有没有哪个领域是你可以而其它开发者不可以提供独有经验或价值的领域？如果有，那你就找到了一个为你的客户提供价值的机会。
 
-Second, ask yourself if there is a particular type of work which you would enjoy doing.
+第二个，问问自己有没有哪一种类型的工作是你乐于去做的。
 
-If you don’t fit into one of these two types of niches then you’re going to have problems. The reason for this is simple.
+如果你选择的领域不能很好的回答以上两个问题中的任意一个，那你将会面临诸多问题。原因很简单。
 
-First, if you’re not providing unique value then you’re going to grind it out and get frustrated with how difficult it is to run your business.
+首先，倘若你并不能提供独特的价值，那你只是机械地在做一些工作，最终会为难以维持生意而陷入沮丧。
 
-Second, even if you’re not providing truly unique value, if you’re really passionate about what you’re doing then you’ll be able to persevere the grind.
+其次，就算你不能提供真正独特的价值，但如果你对你做的工作真的很有热情，那你还是可以坚持机械地把生意做下去的。
 
-Picking an area that you’re good at/have specialized knowledge in or picking one that you have a passion for will help you to succeed.
+选择一个自己擅长/有专门知识的领域，或者选择一个自己热衷的领域都将帮助你获得成功。
 
-### Developers must figure out their services and pricing in order to be successful
+### 要想取得成功，开发者必须确定好自己服务项目和服务定价
 
-Once you’ve carved out the niche you’re going to serve it’s then time to decide what services you will offer, within that niche, and what you’ll be charging for your services.
+当你选择好自己的市场定位之后，你就要开始运营了。这时你就需要确定好自己要为客户提供什么服务，每项服务又该如何收费呢。
 
-**Your services**
+**你的服务**
 
-Deciding what services to offer may seem like something you can do quickly, but it’s actually important to consider a few different factors in regards to your offerings. Also, when determining pricing it’s important that you consider going the flat fee route for services as opposed to charging by the hour. Let’s dive into each of these issues.
+确定自己的服务项目看似是一件不需要花费多长时间就能搞定的事情，但这一步其实非常重要，你要在确定服务时考虑到好几个因素。此外，在确定价格时，很重要的一点是，你最好采用固定收费的模式而非按时收费。让我们一个一个来细看这些问题。
 
-There are three things any freelance developer should consider when deciding what services they wish to offer. Once these three areas are analyzed, if your potential service offering seems to make sense, you consider the size of the current addressable market. They are:
+在确定服务项目时，每一个自由职业开发者都应注意三件事。分析完这三件事后，如果你意向中的服务项目选择合理，你就要考虑当前潜在市场的规模。这三件事是：
 
--   your level of interest in a given area
--   the extent to which you can scale up the offering, and
--   your ability to outsource some of the work.
+-   你对这一特定领域感兴趣的程度
+-   你的服务项目可以扩大到哪种程度，以及
+-   你将某些工作外包的能力。
 
-You then look at the market to see if there is enough available work to turn the offering into a business.
+然后，你可以观察一下市场，看看还有没有剩余的市场份额足以有理由让你把自己的服务项目推入运营。
 
-I can’t stress enough that your service offerings should focus around things which interest you. Again, as stated in the section above, you’re likely to burn out and quit if you start engaging in activities that leave you looking as bored as this guy:
+一定记得你的服务项目一定是围绕你感兴趣的事物展开的，这点怎么强调都不为过。就像刚刚上一小节已经提到的，如果你所从事的工作让你就像下面这张图片中的人那样感到巨无聊，那你很可能会在累垮后就放弃了。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/12/Bored-male-at-computer.jpeg)
 
-By selecting an area that you are generally excited to learn about and work in, you will be able to view your work as something other than drudgery. This leads to you putting in more hours which, in turn, leads to more of dat sick cash flow. So, again, when deciding what services to offer, ask yourself what you’re actually interested in.
+选择一个总体来说在为之学习和工作时你会感到兴奋的领域，你才不会在工作时觉得一切都是单调乏味的苦差事。而且当你对工作有兴趣时，你才会投入更多的时间，相应的，你的现金流也将不会让你失望。所以说，再次强调，当你决定要去提供什么服务时，问清楚自己真正感兴趣的东西是什么。
 
-It’s also crucial to consider scaleability when deciding what services to offer. The concept of scale is simple. You want to focus on something where your profit margins actually increase, or at least stay the same as you grow your revenue.
+选择服务项目时还很重要的一点是规模。规模一词并不难理解。随着营业额的增加，人人都会希望专注那些边际收益在增长或者至少持平的业务。
 
-Areas in which you can write, and then re-use, a codebase allow you to achieve this.
+而那些让你能够重新利用已写完的代码库的业务就可以帮你实现上面所说的这种情况。
 
-Areas in which you are constantly doing things from scratch, and spending a lot of time learning things that won’t apply to more than one or a few clients, will take you in the opposite direction. Always ask yourself “can I scale this up” before diving into an area.
+而有些业务却需要你总是从零做起并花费大量时间学习新知识，而且这些业务只适用于为极少数的客户提供服务，这些业务会让你越做越穷。在深入某一个业务时，一定问清楚自己，“我能把这项业务做大吗？”
 
-The final thing to consider is the extent to which you’ll be able to outsource the work which needs to be performed. The greater the ability to outsource, then the more you can grow the company by leveraging the labor of others.
+需要考虑的最后一件事是你把一些工作外包的能力。你能把工作外包的能力越强，那么你就越可以通过利用他人的劳动力来发展自己的公司。
 
-In our main business, for example, we subcontract the writing of legal content to attorneys and law students who wish to write as a side hustle. Given that there is a large population of people who have the skills to do this work, and are looking for the opportunity to do so, outsourcing our content needs does not prove to be a problem.
+拿我们公司的主营业务来说，我们会将法律内容的撰写工作外包给希望将其作为副业的律师或法律专业学生。鉴于有大量的人具有执行这项工作的技能并正在寻找这样的机会，我们根本不用发愁找不到这项工作的外包。
 
-Another example of products which outsource well are those which don’t have complicated codebases. The simpler it is to build a product then the easier it will be to hire/subcontract another developer to assist you. This is because you will not need to bring on an individual with as high of a skill set.
+再举一个例子来说，还很适合外包的是那些不会用到复杂代码库的产品。一款产品的构建越简单，就越容易雇用/外包其他开发人员来为你提供帮助。这样一来，你就不再需要让你手下具有很高技能的人去做这些工作了。
 
-So when deciding what services to offer your niche, you’re looking for a scalable area which interests you and in which you can outsource as much of the work as possible.
+因此，在决定提供哪些服务项目时，你其实是在找这些业务：你要对它感兴趣，这项业务能够做大，且这项业务涉及的工作能够让你最大程度上进行外包。
 
-Once you find this area, it’s time to weigh it against the actual size of the market. If you have a great offering, but there just aren’t enough available customers, then you’re not going to get anywhere for obvious reasons. If, however, there is an abundance of available customers, then have at it.
+确定好你的服务项目后，你就要去衡量一下这些业务的实际市场规模了。如果你的服务很好，但市场上却没有足够多的客户，那显而易见，这项业务并不能让你获利多少。但是，如果市场上有充足的客户，那你就可以借此大赚一笔了。
 
-Let’s look at how the concepts discussed above work in practice. As an example, a company we recently started is focusing on building simple (often single page) websites for small businesses for a low introductory rate.
+我们不妨一起来看看上面这些理论在实践中是如何发挥作用的。举个例子，我们最近成立的一家公司专注于以较低的介绍率为小型企业构建简单的（通常是单页）网站。
 
-We greatly enjoy working with small businesses, and given the simple nature of the websites we’ll be building, we’ll be re-using large amounts of code. Also, since the websites won’t require extensive JavaScript development, or much other development beyond HTML and CSS, this is work we can outsource. So this area would be considered viable under the three factor test I just laid out.
+我们非常喜欢与小公司合作，并且鉴于我们需要建立的网站较为简单，我们将重新利用很多之前写的代码。另外，由于这些网站不需要进行太深入的JavaScript开发，也不需要HTML和CSS以外的其它开发，我们也可以把这项工作外包。因此，依照我刚刚提出的三个考虑因素来看，这项业务或许可以列为一项服务项目。
 
-We then have to weigh the idea against the size of the market. Well, as I mentioned in my article on  [whether one should become a freelance developer][10], roughly thirty percent of America’s 24 million small businesses didn’t have or needed a new website in 2017. This means that there are roughly 7.2 million potential customers out there for the new company we started (30% \* 24 million).
+接下来，我们再看看这项业务有没有市场。就这点来说，正如我在  [“是否应该成为一名自由职业开发者”][10]  一文中提到的那样，2017年，在美国的2400万家小型企业中大约有30％没有或需要建立一个新网站，这就意味着我们有大约有720万的潜在客户（30％\ * 2400万）。
 
-This is certainly a large and addressable market. Since our business idea passed the three tests and will address a large market, we went ahead and launched the service offering.
+T这无疑是一个庞大且可获利的市场。这样一来，这项业务就不仅能够通过三个要素的测试，还能满足一个巨大的市场，我们就可以继续推出这项服务。
 
-**Pricing**
+**定价**
 
-It’s time to determine your price structure once you’ve decided what services you’re going to offer your niche. It’s important that, as much as possible, you stick with flat fees for a project as opposed to any type of hourly billing. You also want to try to create recurring revenue. Let’s discuss why these things are true.
+明确了服务群体，定好了服务项目，接下来得定下来你的收费标准了。定价时非常重要的是，你要按项目统一收费，不要搞任何形式的按时收费。你还要试着建立一些经常性收入。接下来我会一一解释为什么。
 
-To the extent possible, you should work for flat rates and avoid “by the hour” work. This leads to greater profits for a few reasons.
+你应该尽最大可能去按统一定价收费而非按时收费，这样能让你获得更多的利润，原因有以下几点。
 
-First, as your expertise within your niche expands, you’ll be able to complete work in less time.
+第一，随着你对目标客户群的服务越来越娴熟，你完成一项工作的时间会越来越短。
 
-Suppose you take on a project for $5,000 and get it launched after 50 hours. This equates to $100 an hour. Now suppose that a similar project comes along a few months later. You charge another $5,000.
+假如说你接手了一个价值$5,000的项目，最后花了50个小时把活全部干完。那你的时薪就是$100/h。现在设想过了几个月后，你接到了一个类似的项目，你的收费仍是$5,000。
 
-The second time, however, you don’t have to spend as much time learning about the domain of the business and you can also re-use some of your previous code base. You get the second project done in only thirty hours.
+但这一次，你已经不用再去花那么多的时间去学习服务对象所在商业领域的知识了，你甚至还可以重新利用上一个项目的部分编码。这样一来，你花了仅仅30个小时就完成了第二个项目。
 
-This means that your “per hour rate” just went from $100 to $166. This value of prior experience and code writing is lost when you elect to charge by the hour.
+这也就意味着，你每小时所获得的收益从$100涨到了$166。但是如果你自始至终按照小时收费，你就白白浪费了过往经验和先前写好的代码的价值。
 
-The fact that you are reusing old code, in the example above, in no way means that your second client is receiving less value. In addition to the product you launch for them, they are also receiving the benefit of your gained expertise in their area. They are also gaining the benefit of your experience in building similar applications. This experience means a smoother launch, fewer bugs, etc. So flat fees are a win-win for everyone.
+值得注意的是，在上面的例子中，虽然你在重复利用一些旧代码，但这绝不意味着你的第二个客户获得的价值因此受损。除了从你为他设计的产品中获得价值，他也会因你在他所在商业领域的经验增加而获利。你在构建类似应用程序中的经验也在为他创造价值。因为你的丰富经验意味着你为他设计的产品会更好用，bug会更少，等等。所以说，统一固定收费是一个双赢的收费模式。
 
-In addition to working for flat fees, you want to develop offerings which can generate recurring revenue. As an example, the company we started which services small businesses also provides ongoing maintenance after we launch a website. We host the customer’s website on our virtual private server and keep everything up to date for the client. We charge $50 per month for this service and it forms a nice piece of recurring revenue.
+除了固定收费标准，你还需要设立一些能够带来经常性收入的服务项目。以我们上面提到的那家专为小企业服务的公司为例，这家公司在为客户建立一个网站后还会提供后续的维护服务。我们会将客户的网站托管在我们的虚拟专用服务器上，并为客户提供所有网站相关最新信息。这项维护服务收费为每个月$50，这就是很好的一项经常性收入。
 
-By offering services with a recurring revenue stream, you help to make your income more consistent.
+通过提供具有经常性收入来源的服务，可以让你的盈收更加稳定。
 
-So, to wrap up, when deciding your pricing it’s important to remember three words: “flat fee” and “recurring.”
+因此，总结起来，在决定价格时，请务必记住两点：“固定费用”和“经常性收入”。
 
-### Freelance developers need to choose the right business structure when starting up
+### 自由职业开发者在建立生意时要选择合适的经营架构
 
-It’s time to form your business after you’ve selected a niche and narrowed both your service offerings and pricing.
+确定了服务群体、服务项目、服务费用后，是时候建立你的生意架构了。
 
-It is generally suggested that you form an LLC through which to run your business. Doing so provides you with liability protection that you won’t receive if you operate as a sole proprietorship. (Disclaimer: this article can’t be construed as legal advice and I am not holding myself out as a legal professional. I suggest that you discuss your individual situation with an attorney).
+通常情况下，我会建议你组建一家有限责任公司来开展生意。这么做可以为你提供负债保护，而通常如果是独资经营者，你是不会获得负债保护的。（免责声明：本文观点不可充当为任何法律建议，作者本人并非法律专业人士。建议您寻求专业律师就您的个人情况进行咨询。）
 
-Generally speaking, this liability protection can help you in the event of a lawsuit and can also help to prevent you from being personally responsible for business debts if your affairs are structured properly. Also, there are tax benefits, which I briefly discuss below, associated with forming an LLC.
+一般而言，这种负债保护可以在发生诉讼时为你提供帮助，并且如果你的公司业务架构合理，还可以帮你免于独自一人承担商业债务的风险。另外，组建有限责任公司时还能享受税收优惠，我将在下面简要说明。
 
-Once your LLC is formed then it is important to remember that you and your company are now considered separate legal entities. This means that you must keep separate bank accounts and that you must not run personal expenses through the business.
+当你建立好一家有限责任公司后，很重要的是，一定要记得，你和你的公司是两个独立的法律个体。也就是说，你要把自己的私人银行账户和公司的企业账户区别开来，而且绝不可以用公司的账户去支付你的个人私人费用。
 
-For a full breakdown of the legal requirements associated with managing an LLC it is, again, a good idea to speak with an attorney.
+要想详细了解经营一家有限责任公司时相关的法律规定，还是那句话，找一位专业律师谈谈是很好的选择。
 
-There are also multiple tax benefits which you can reap by forming an LLC for your business. The specifics of these benefits should be discussed with a tax professional, as I am not licensed to give tax advice.
+建立一家有限责任公司时，你还能享受到诸多税收优惠。具体情况你应向税务专业人士咨询，我在这里没有提供纳税建议的资格。
 
-But to summarize, the benefits of an LLC include, among other things, being exempted from self-employment taxes in regards to the company’s profits. To ensure that you receive this break you need to fill out  [IRS form 2553][11]  and “elect” to be treated as an S Corp. You will also need to pay yourself a reasonable salary.
+但总而言之，建立有限责任公司的好处包括刚刚提到的那些以及在对公司的利润征税时免征自雇税。读到这里你可以去休息一下，可以去填写  [IRS 表格 2553][11]  ，这样你才能被“选举”被视为一个S公司。对了，你还需要支付给自己一份合理的薪酬。
 
-To avoid making this part of this guide too long, I break this idea down, in further detail, in this video:  
+我不想把这部分内容搞得太长，在下面这个视频里面，我会在针对这点详细拆解，讲得会更细致一些。 
 
-The tax benefits alone are reason enough to go the LLC route. Add in the liability protections and it becomes a no-brainer.
+单是凭税收优惠这点，你就应该选择组建有限责任公司。再加上获得的负债保护，不用动脑子想你也应该建立有限责任公司。
 
-### Action items for developers who are preparing to start a freelance business
+### 一份针对准备开启自由职业的开发人员的行动事项清单
 
-I can’t stress enough that it is crucial for you to adequately plan your new venture. I’m a very strong believer that the reason for which many small businesses fail is a lack of adequate planning. If you take the time to “do it right” then you can avoid the fate that many small businesses, unfortunately, arrive at.
+一定要为你的新公司做好十足的准备，这点非常重要，怎么强调也不为过。我深信，很多小公司倒闭的原因就是因为缺乏充足的准备。如果你能利用好时间，把事事都准备完善，那你就能免于太多小公司所历经的不幸命运。
 
-Your immediate list of needs should include the following:
+你当下最迫切的需求清单如下：
 
--   Determine how you are going to fund your new venture
+-   确定好自己将如何为自己的新经营筹集资金
 
--   AVOID debt or credit cards as a form of funding
--   If necessary, work some type of second job until you have the money needed to get off the ground
+-   避开一切债务型或信用卡形式的融资
+-   必要的话，先从事点副业，等钱攒够了再去大干一番
 
--   Decide on the niche that your new business is going to serve
+-   确定好你的新公司要为哪个客户群体服务
 
--   The niche you wish to serve should be in an area you enjoy and/or are interested in
--   DO NOT get in the habit of taking work simply because it is available - stay in your niche
+-   你选择的服务领域应是你喜欢的或是你感兴趣的
+-   不要抱着“只要上门，我就服务”的理念去办生意，专注于为你的目标客户群服务
 
--   Determine what services you will offer to your niche and determine your pricing
+-   确定你的服务项目和服务收费标准
 
--   When determining pricing and services, weigh your ability to scale the service and to outsource work against the size of the addressable market
--   Charge flat fees whenever possible and avoid hourly billing
--   Make sure you have a model which can build recurring revenue
+-   在确定定价和服务项目时，掂量一下自己有没有能力把这项服务做大，以及能够有能力外包，还要考虑这项服务有没有可服务的市场，市场规模有多大。
+-   尽可能按固定标准统一收费，不要按时收费
+-   确保你的经营模式里有能为你带来经常性收入的业务类别
 
--   Form an LLC for your new company
+-   组建公司时选择有限责任公司
 
--   Discuss the benefits, and specifics, of doing so with an attorney immediately
--   Discuss your tax situation with a professional and consider making the S Corp election (again, after talking to a tax professional)
+-   尽早向专业律师人士咨询有关建立有限责任公司的优惠、法律规定细则
+-   像专业人士咨询你的纳税问题，记得去填写申请公司注册的表格（同样要向税务专业人士咨询）
 
-## Getting started with your new freelance development business([back to top][12])
+## 着手创建你的自由职业发展公司([返回顶部][12])
 
 ![](https://lh3.googleusercontent.com/ki_6IcxMUnB0maht1uG2iC1Mw4xvHlsl3WAEJ7ARCbAQZESRlhOnabrnOT2OpLYG5jBZ5l5WywWwFruoKMy8bAghptuI_7bH83jfw-c-b1rtUigLpHmLjEF6XKdXLmQAy3j5X3nj)
 
-Once you’ve planned your new business then it’s officially time to hit the ground running. The first step is making sure you have everything you’re going to need in order to start out effectively.
+在你做好所有计划之后，现在你就可以正式把计划落地了。要想迈好第一步，你首先要确保你已经拥有你开办生意所需的一切了。
 
-If you don’t have everything you need then it’s going to be like hitting the ground running with no shoes on. That’s why this section of the article will be devoted to things you need to do right away in order to make sure that you’ve got clients coming in and that you’re operating efficiently.
+如果你万事尚未具备，那就会向要去跑步了你还光着脚一样。所以这一部分指南将会专门介绍你开办公司后需要立即去做的事情，以确保你能吸引到客户并让你的公司高效运作。
 
-I’m going to look at several points in this part of our discussion. The topics we’re going to dive into include:
+在这部分中，我们会深入探讨下面几点，主题分别是：
 
--   The importance of getting started off on the right foot
--   Administrative items which need to be completed
--   Marketing items which need to be completed
--   The importance of ongoing learning
+-   迈好第一步的重要性
+-   需要完成的管理事项
+-   需要完成的市场营销事项
+-   活到老学到老的重要性
 
-So…shall we?
+那我们就一个一个开始谈吧？
 
-### Freelance developers must understand the importance of starting their new business off on the right foot
+### 自由职业开发者必须认识到迈好第一步的重要性
 
 Before I get into how to hit the ground running, it’s important that we discuss the need to start out well-organized and with all of your ducks in a row. It’s crucial for multiple reasons.
 

@@ -15,54 +15,54 @@
 
 ![](https://www.freecodecamp.org/news/content/images/2019/12/Man-counting-pennies.jpg)
 
-I’m assuming you would rather look like the former and not the latter. If you have decided to go out on your own, and you are not opposed to prosperity, then this guide will help serve as a road map for how to get your new business running. It will also serve as a guide as to how to manage things once you’re off the ground.
+我想你一定希望自己成为前者而非后者。如果你已下定决心要干一番自己的事业，而且你也不讨厌钱的话，这份指南将为你提供一份如何开展新生意的线路图。此外，当你偏离正轨时，这份指南也能为你解惑如何摆脱困境。
 
-If you’re someone who absorbs information more by reading, like me, then read on. For those who prefer a discussion based format, I’ve prepared this video:
+如果你和我一样，偏爱通过阅读来获取和吸收信息，你可以继续往下读。但如果你更偏爱讨论型的形式，我为你准备了下面这个视频：
 
-This guide is geared towards those who have already decided to go the freelance/self-employed route. If you’re debating whether you wish to work for yourself, then you may wish to read the first section of my article on  [making money as a freelance developer][1].
+这份指南是为那些已经决定要走自由职业路线的人制定的。如果你还正在纠结是否要走自由职业，我会建议你读我另一篇名为  [“自由职业开发者如何赚得收入”][1]的文章中的第一部分内容。.
 
-For those who have already decided that it’s time to strike out on their own, let’s get to it.
+对于那些已经下定决心的朋友，我们就正式步入主题吧！
 
-This guide, for obvious reasons, is quite long. This road map provides a layout of what we’ll be discussing:
+由于种种原因吧，这篇指南很长。下面是一份我们将会讨论到的内容的大纲：
 
-1.  Three essential rules for making money as a freelancer  ([jump to section][2])
-2.  Planning your new business  ([jump to section][3])
-    -   Funding your new venture
-    -   Deciding what niche you’re going to serve
-    -   Determining what services to offer & pricing
-    -   Structuring your new business
-    -   A “to do” list for planning your new business
-3.  Getting started with your new business  ([jump to section][4])
-    -   The importance of “starting out right”
-    -   Administrative items to complete
-    -   Marketing items to complete
-    -   A “to do” list for getting your business started
-4.  Finding clients for your new business  ([jump to section][5])
-    -   The need to get clients in the short-term, while focusing on the long-term
-    -   How to sell yourself to clients
-    -   Getting clients in the short-term
-    -   Building a brand for the long-term
-    -   A “to do” list for getting your marketing started
-5.  Managing your day-to-day business  ([jump to section][6])
-    -   Administrative & financial management
-    -   Managing your development/substantive work
-    -   A “to do” list for making sure you properly manage your business day to day
+1.  自由职业开发者赚取收入的3条核心法则  ([跳至第2部分][2])
+2.  为你的事业谋篇布局  ([跳至第3部分][3])
+    -   为你的经营筹集资金
+    -   确定你的服务领域
+    -   确定你的服务项目和服务费用
+    -   确定你的经营架构
+    -   确定筹划经营中的“待办事项”
+3.  开始你的经营  ([跳至第4部分][4])
+    -   “迈对第一步”的重要性
+    -   待完成的经营管理事务
+    -   待完成的市场营销事务
+    -   确定开始经营中的“待办事项”
+4.  为你的新生意拓展客户  ([跳至第5部分][5])
+    -   在短期内获得客户的同时也要关注长期
+    -   如何在客户面前推销自己
+    -   短期内如何寻找客户
+    -   长期内打造自己的品牌
+    -   确定展开市场营销中的待办事项
+5.  管理你的日常经营  ([跳至第6部分][6])
+    -   经营管理&财务管理
+    -   管理你的发展/重大事宜
+    -   确保日常经营管理正常运行的“检查清单”
 
-When reading this guide, just hit a “back to top” link and you’ll be brought back to the road map. So, without further delay:
+阅读过程中，点击“返回顶部”的链接，你就能回到这一大纲的位置。那就话不多说，直奔主题吧！
 
-## There are three essential rules for making money has a freelance developer ([back to top][7])
+## 自由职业开发者赚取收入的3条核心法则 ([返回顶部][7])
 
 ![](https://lh4.googleusercontent.com/nM4-ArtOzEsqoFCqbTRIP1H-24V27fF0n6Fk1cEzDk0tRePuoep_f9KwpIyHp-aEP5bTQuECJvKRJaEBUkiCz0ICm37KHy7xweTThdTMpk-Cnin0dUNGEgD82k6zHQb0yWiJ35gK)
 
-The first step in making money as a freelance developer requires an understanding of how to make money in general. Trying to make money without understanding these fundamental things will go about as well as playing monopoly against an expert without having an understanding of the game’s rules.
+自由职业开发者要想赚取收入，首先要对普通意义上的赚钱过程有一个认识。如果连基础的问题都还没搞清楚就贸然想要捞一笔，那就会想玩大富翁一样，你的对手个个老奸巨猾，可你连基本的游戏规则都还糊里糊涂、一窍不通。
 
-The three rules for making money are:
+想要赚钱有3条法则：
 
--   Understanding that the amount of money (or lack thereof) that you earn will be in direct proportion to the level of value which you provide to others.
--   Understanding that making money requires putting time into high value activities.
--   Understanding that you have a full-time job as soon as you strike out on your own, regardless of whether you actually have any clients.
+-   你要明白，你赚到的钱的多少是直接和你为他人提供的价值大小挂钩的。
+-   你要明白，要想赚钱，就要把时间花在高价值的事情上。
+-   你要明白，当你开始单干的那一刻，你就已然投身一份全职工作之中，无论你是否已有客户。
 
-Let’s look at each of these in turn.
+让我们一个一个来看。
 
 ### Developers must understand that making money means providing value to others
 

@@ -1,6 +1,6 @@
 > * 原文地址：[What I Learned from Building My First Solo Project](https://www.freecodecamp.org/news/what-i-learned-from-building-my-first-solo-project/)
 > * 原文作者：Jessica Wilkins
-> * 译者：
+> * 译者：michaelhe545
 > * 校对者：
 
 ![What I Learned from Building My First Solo Project](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/Screen-Shot-2021-02-03-at-2.51.14-AM.png)

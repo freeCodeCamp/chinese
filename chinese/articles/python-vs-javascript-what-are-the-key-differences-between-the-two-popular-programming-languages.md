@@ -1,6 +1,6 @@
 > * 原文地址：[Python VS JavaScript – What are the Key Differences Between The Two Popular Programming Languages?](https://www.freecodecamp.org/news/python-vs-javascript-what-are-the-key-differences-between-the-two-popular-programming-languages/)
 > * 原文作者：Estefania Cassingena Navone
-> * 译者：
+> * 译者：ZhichengChen
 > * 校对者：
 
 ![Python VS JavaScript – What are the Key Differences Between The Two Popular Programming Languages?](https://www.freecodecamp.org/news/content/images/size/w2000/2021/01/Python-vs.-JavaScript-1.png)

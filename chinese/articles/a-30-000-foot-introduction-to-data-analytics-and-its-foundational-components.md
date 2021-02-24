@@ -5,41 +5,48 @@
 
 ![What is Data Analytics? A 30,000-Foot Intro to Key Data Analysis Concepts](https://images.unsplash.com/photo-1423189871551-9b8513198c81?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Data analytics is the process of inspecting, cleansing, transforming, and modeling data with the goal of discovering useful information.
+数据分析是一个包含了数据检查、清洗、变换和建模的过程，借助数据分析我们可以从数据中发掘有用的信息。
 
+在现代生活中，数据分析无处不在：它有助于我们使用的技术，软件应该如何构建以及产品如何发展。
 Data analytics is everywhere in the modern world: it helps inform the technology we use, how software is built, and the ways in which products are developed.
 
+本篇博文将讲述一下三方面内容：
+- 数据分析的核心原则及其应用
+- 一些例子？
+- 从你的数据中获得有用的信息
 In this post I will cover core data analytics principles and how to apply them, providing examples that you can deploy to capture and obtain meaningful insights from your data.
 
-I will also share examples of how data analytics is being used in a variety of products you are likely familiar with - website optimization, health and diet apps, agriculture, and insurance to name a few.
+同时，我也会分享几个大家所熟悉的，诸如网页优化、健康和饮食软件，农业和保险等产品中的数据分析应用。
 
+如果你也认同“数据会引导你的决定“，那么就往下继续学习吧。
 If you share my belief that data is a guide that can inform your decisions, it is worthy of further study.
 
-## Sample Questions
+## 例题
 
-First, see if you can answer these questions.
+首先，看看你是否可以回答以下这些问题，
 
-If these don’t come easily, don’t worry.
+即使现在不能轻易地回答出这些问题，也没有关系。
 
-I will walk you through how to learn the basics of data analytics so that you can approach each of these questions with confidence.
+通过本文的学习，你一定可以轻松地给出问题的答案。
 
-The manager of an internet retailing operation selling a single product has found that people who visit the web site buy the product 26% of the time. He's also discovered and that the behavior of customers seems to be independent.
+一家只售卖一件商品的互联网零售业务经理发现，大约有26%的网页访问者会购买商品。他同时也发现这些消费者的行为是独立的。
 
-Assume that exactly 8 potential customers visit the site every day. Imagine that the manager is on an incentive plan that pays him $300 for any day in which the site generates three or more sales. Otherwise his pay is $100 per day.
+现在假设有8位潜在的消费者每天都会访问网站。这位经理参加了一个激励计划：如果一天之内有超过三位（包含三位）消费者在该网站上进行了消费，那么经理将得到$300的日薪，否则他只能得到$100的日薪。
 
-a. What is the probability of him earning the \$300 on any random day?
+a. 这位经理得到$300日薪的概率是多少呢？
 
-Answer: ~35%
+答案：~35%
 
-b. What is the expected value of his pay on any random day?
+b. 这位经理的期望日薪是多少呢？
 
+答案：\$170
 Answer: \$170
 
-c. The manager is offered his choice of two alternative incentive schemes, by which he will receive either (a) no base salary, but a commission of $75 per sale, or (b) a fixed salary of $160 per day, or (c) the original plan outlined above.
+c. 现在，这位经理一共有三个可选择的激励计划：(a) 没有基础工资，但是每卖出一件商品，就可以获得$75的奖励；(b) 每天固定工资$165；(c) 保持原激励计划不变
 
-Which plan should he select if he wants to maximize the expected value of his earnings?
+如果这位经理想要最大化自己的期望收益，他该选择哪一个激励计划呢？
 
-Answer: the original plan
+答案：原来的激励计划
 
 ## The Basics of Data Analytics
 

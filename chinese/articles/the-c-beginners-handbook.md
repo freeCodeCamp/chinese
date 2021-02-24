@@ -174,7 +174,7 @@ gcc hello.c -o hello
 
 这是 C 的优点之一：它是高度优化的，这也是它非常适用于资源非常有限的嵌入式设备的原因之一。
 
-<h2 id="variables-and-types">变量与类型<h2>
+<h2 id="variables-and-types">变量与类型</h2>
 
 C 是一门静态类型语言。
 

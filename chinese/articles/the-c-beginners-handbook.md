@@ -32,7 +32,7 @@
 13.  [静态变量](#static-variables)
 14.  [全局变量](#global-variables)
 15.  [类型定义](#type-definitions)
-16.  [枚举类型](#emunerated-types)
+16.  [枚举类型](#enumerated-types)
 17.  [结构体](#structures)
 18.  [命令行参数](#command-line-parameters)
 19.  [头文件](#header-files)
@@ -1639,7 +1639,7 @@ PERSON flavio;
 PERSON flavio = { 37, "Flavio" };
 ```
 
-<h2 id="commandline-parameters">命令行参数</h2>
+<h2 id="command-line-parameters">命令行参数</h2>
 
 在 C 程序中，你可能需要在命令启动时从命令行接收参数。
 
@@ -1705,7 +1705,7 @@ c
 
 对于简单的需求而言，这个系统工作得很好。对于更加复杂的需求，有一些常用的包，比如 **getopt**。
 
-<h2 id="headers-files">头文件</h2>
+<h2 id="header-files">头文件</h2>
 
 简单的程序可以直接放在单个文件中。但是当你的程序变大，将它放在单个文件中就不可能了。
 

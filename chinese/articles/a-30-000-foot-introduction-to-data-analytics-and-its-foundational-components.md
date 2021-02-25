@@ -172,25 +172,21 @@ P(高需求) = 0.10
 = $ -2,500
 ```
 
-(b) 计算期望收益
+(b) 当John知道每种需求的类型时，计算他的期望收益（也就是他可以拒绝接受极低需求的开发工作）
 
 ```plain
 .5*100,000 + .2*25,000 + .1*75,000 = $17,500
 ```
 
-
-(b) Compute the expected value with perfect information for John’s payoff.
-
-
 换言之，John相信如果开设公司，他将会赚$17,500。
 
-有了前瞻性指导，John可以决定是继续开公司还是寻找另一种展现才华的方式。
+有了数据分析作为前瞻性指导，John可以决定是继续开公司还是寻找另一种展现才华的方式。
 
+## 关于数据分析的个人想法
 
-## Final Thoughts on Data Analytics
+这篇文章只是一片启发式读物，我希望它可以激发你学习和研究数据分析的兴趣。
 
-This article is a primer and should help whet your appetite to dive deeper.
-
+学习数据分析将帮助你更好地理解软件和开发自己的产品。就像John的例子一样，你也可以使用数据分析的方法为你的决策提供更具前瞻性的指导。
 Learning data analytics will help you better understand software and how to build products. Like the scenario with John above, you can leverage data analytics to make better informed and forward looking decisions.
 
 You can take risks and understand the odds of success and failure. You can use the principle of counting to determine your current actions.

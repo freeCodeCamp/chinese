@@ -74,115 +74,118 @@ c. 现在，这位经理一共有三个可选择的激励计划：(a) 没有基�
 
 ## 离散程度：数据是如何组织的
 
-## Dispersion: How Data is Organized
+通过观察数据的形状，你可以大致地了解到它们的离散程度。
 
-Unique insights can be gleaned by looking at the shape of your data.
+我们也可以使用集中趋势这一方法对数据进行组织。
 
-Data can be organized via a central tendency.
+首先我们需要让数据从小到大排序。
 
-To do so, order your data set from smallest to largest.
+当数据有序地排列时，你就可以直观地看到他们的离散程度。
 
-When data is neatly lined up, you can start to see dispersion for the first time.
+你可以通过最大数据值减去最小数据值的方式得到数据的取值范围，这是衡量数据离散程度一种方式。
 
-By seeing how spread out data is you can compute the data’s range by subtracting the largest value from the smallest value.
+如果数据的取值范围很大，我们就可以称这样的数据具有较高的离散程度。
 
-If data has a large range (the distance between the minimum and maximum values) then it is said to have high dispersion.
+最后，你可以在现有可获得的数据或是数据集中，尝试计算出他们的平均值，中位数和众数。
 
-Lastly, you can look at all available data or a snapshot of a dataset. You can easily compute the mean, median, and mode.
+现在试想一下这个实验：假设你在装满M&M巧克力豆的不透明罐子里取出了一颗红色的巧克力豆，你对这罐巧克力豆会有什么样的想法呢？
 
-Think about the following thought experiment. If you place your hand into a jar of M&Ms and pull out one red one, what can you deduce?
+显然，仅仅一次的实验结果并不能让我们得出什么有用的推断。下面我们就用置信区间这一概念进行解释。
 
-Likely not much. Let us explain why by defining confidence intervals.
+## 置信区间
 
-## Confidence Intervals
+置信区间就是当前样本数据可能的取值范围，这个可能性的大小我们用置信度来描述。
 
-A confidence interval is a range of values that’s likely to include a population value with a certain degree of confidence.
+置信区间以置信上限和置信下限做区间的上下限，整个数据的均值往往也是这个区间的均值，置信度则用百分数来表示。
 
-Usually it is expressed as a percentage whereby the population mean lies between a lower and upper interval.
+回到M&M巧克力豆的问题。
 
-Back to our M&M example.
+假设你做了无数次的实验，每次都从这个罐子里取出了红色的巧克力豆。也句是说，你只能取出红色的巧克力豆。那么此时你对这罐巧克力豆有什么样的猜测呢？
 
-Imagine you did this activity (pulling an M&M out of an imagery jar) an infinite amount of times and got the same result. In other words you only saw red M&Ms. What could you possibly say then?
+你会觉得 _很有可能_ 这个罐子里只有红色的巧克力豆。这是一个有效的结论。
 
-You would ascertain that it is _likely_ that only red M&Ms exist in the jar. This is a valid conclusion.
+需要注意的是，我们并不是说“这个罐子里没有其他颜色的巧克力豆”。而是说有很大的可能性，这个罐子里只有一种颜色的巧克力豆，那就是红色。
 
-Notice that we are not saying “no other types of M&Ms exist”. Rather you are saying that there is a high probability that only red M&Ms exist in the jar.
+你每取出一颗红色巧克力豆，这个推论的置信度就会相应增加。
 
-Each time you remove an M&M your degree of confidence goes up.
+## 抽样 vs 整体测量
 
-## Sampling vs Measuring the Whole Population
+在收集数据的时候，你既可以关注整体所有的数据，也可以关注整体数据的抽样样本
 
-When gathering data you can look at a population or you can sample the population.
+为了说明世界上的M&M巧克力豆只有一种颜色，你是否需要看遍每一颗巧克力豆？还是只需要关注抽样后的巧克力豆？
 
-Do you need to look at every M&M in the world to say that all are a certain color? Or could you look at a random sampling and make the same conclusion?
+这就是抽样存在的意义。
 
-At its core, that is what sampling is about.
+抽样总体是总体数据中一个子集。通过对这个子集的分析我们可以推测出总体数据的某些特性。
 
-A sampling population is the selection of a subset (a statistical sample) of individuals from within a statistical population to estimate characteristics of the whole population.
+我们的最终目标就是为了说明在某一个分布中，某一件事发生了多少事或者某一种类型的结果出现了多少次。
 
-Your ultimate goal may be to see how often events occur or how many types of outcomes show up in a distribution.
 
 ## Bringing It All Together: Sampling and Expected Value
 
-Observations are key to data analytics because they can help you answer very specific questions:
+观察是数据分析的关键，因为观察可以帮助你回答一些特定的问题：
+1. 事情发生的可能性有多大？
+2. 如果某件事的概率已知，那么当这件事发生的时候，你可以获得多少收益？
 
-1.  How likely are things to occur?
-2.  If you have certain odds, what are the payoffs of that event occurring (that is, you will get paid off if a certain event happens)?
+某件事发生的期望次数就是这件事情发生的概率乘上总共有多少次事件发生。
 
-To capture expected value you need to know the probability of an event multiplied by the amount of times the event happens.
+如果当前的期望收益远低于数据的中点，那么未来的期望收益就会增加。想象一下创立一家成功的公司的概率。大多数公司不会发起首次公开募股(IPO)。
 
-Expected payoffs can increase as they fall further from the data’s midpoint. Think about the likelihood of starting a company that is highly successful. Most firms don’t IPO.
+但是那么发起IPO的公司就会获得巨大的收益。当我成立一个[帮助人们远程办公]的网站时，我认为成功的概率最多只有10%。
 
-But for those that do, the payoffs are very large. When I started a website to [help people work from home][3], I thought the odds of success were 10% at best.
+Jeff Bezos曾说他认为亚马逊(Amazon)成功的概率有30%。
 
-Jeff Bezos famously said that the odds of Amazon being successful were 30%.
+一个经常用来描述离散度的方法是标准差。标准差是方差的算术平方根。
 
-A commonly used measure of dispersion (and therefore the likelihood of an outcome) is the standard deviation, which is simply the square root of the variance.
+方差是每个数据与该数据集的平均值的差的平方的总和。
 
-The variance of a data set is calculated by taking the arithmetic mean of the squared differences between each value and the mean value.
+## 例题和答案
 
-## Example Questions & Answers
+这篇文章概括性地介绍了统计和数据分析中的核心概念。
 
-This article serves as a high level overview to introduce you to key foundational components of statistics and data analytics.
+现在尝试回答下面两个问题。
 
-Now try these two questions.
+如果你能成功解决它们，说明你学习得不错！解决这两个问题，需要用到前文提到的期望概念。
 
-If you can solve them, great! In order to solve these, think about expected value and payoffs.
+网站的设计者和程序员John Bell想要知道创立一家网页设计公司是否可以盈利。
 
-Website designer and coder John Bell would like to determine whether it would be profitable to establish a website design company.
+根据需求的不同，John认为他可以提供四种不同的服务：
 
-John believes there are four possible levels of demand for his services:
+- 极低需求 - 只有1%的公司会使用这种服务，John因此会损失\$100,000
+- 低需求 - 只有5%的公司会使用这种服务，John因此可以盈利\$10,000
+- 中等需求 - 有10%的公司会使用这种服务，John因此可以盈利\$25,000
+- 高需求 - 有29%的公司会使用这种服务，John因此可以盈利\$75,000
 
--   Very low demand — 1% of companies would use the service; John would lose \$100,000.
--   Low demand — 5% of companies would use the service; John would earn \$10,000.
--   Moderate demand — 10% of companies would use the service; John would earn \$25,000.
--   High demand — 29% of companies would use the service; John would earn \$75,000.
-
-Based on past experiences in coding and building websites, John assigns the following probabilities to the various demand levels:
+根据过往的设计网站的经验，John认为每种需求的占比如下：
 
 ```plain
-P(very low demand) = 0.20
-P(low demand) = 0.50
-P(moderate demand) = 0.20
-P(high demand) = 0.10
+P(极低需求) = 0.20
+P(低需求) = 0.50
+P(中等需求) = 0.20
+P(高需求) = 0.10
 ```
 
-(a) Set up the decision tree and compute the expected value of offering the service.
+(a) 建立决策树并计算提供服务的期望收益
 
 ```plain
 .2 * (-100,000) + .5 * (10,000) + .2 * (25,000) + .1 * (75,000)
 = $ -2,500
 ```
 
-(b) Compute the expected value with perfect information for John’s payoff.
+(b) 计算期望收益
 
 ```plain
 .5*100,000 + .2*25,000 + .1*75,000 = $17,500
 ```
 
-In other words, John believes he will earn \$17,500 if he opens his web design company.
 
-With that forward looking guidance, John can decide if he wants to take the next steps or look for alternative paths for his skills and time.
+(b) Compute the expected value with perfect information for John’s payoff.
+
+
+换言之，John相信如果开设公司，他将会赚$17,500。
+
+有了前瞻性指导，John可以决定是继续开公司还是寻找另一种展现才华的方式。
+
 
 ## Final Thoughts on Data Analytics
 

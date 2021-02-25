@@ -467,12 +467,12 @@ The following concepts are also key to understand asynchronous programming, whic
 -   Closures
 -   The Event Loop
 
-- 异步编程和回调
-- 定时器
-- Promises
-- Async and Await
-- 闭包
-- 事件循环
+-   异步编程和回调
+-   定时器
+-   Promises
+-   Async and Await
+-   闭包
+-   事件循环
 
 Luckily I wrote a free ebook that explains all those topics, and it’s called [JavaScript Fundamentals][41]. It’s the most compact resource you’ll find to learn all of this.
 
@@ -524,63 +524,122 @@ Another big difference is that in Node.js you control the environment. Unless yo
 
 This means that you can write all the modern ES6–7–8–9 JavaScript that your Node version supports.
 
+这意味着你可以编写 Node 版本支持的所有现代 ES6-7-8-9 Javascript。
+
 Since JavaScript moves so fast, but browsers can be a bit slow and users a bit slow to upgrade — sometimes on the web, you are stuck using older JavaScript/ECMAScript releases.
+
+由于 Javascript 的变化速度很快，但是浏览器可能有点慢，并且用户升级也会有点慢 - 有时候在 web 上，你只能使用比较老的 JavaScript/ECMAScript 版本。
 
 You can use Babel to transform your code to be ES5-compatible before shipping it to the browser, but in Node.js, you won’t need that.
 
+在将代码发布到浏览器之前，你可以使用 Babel 将其转换为兼容 ES5-compatible 的代码，但是在 Node.js 中，你不需要这么做。
+
 Another difference is that Node.js uses the [CommonJS][42] module system, while in the browser we are starting to see the ES Modules standard being implemented.
+
+另一个不同点是 Node.js 使用 [CommonJS][42] 模块系统，在浏览器中，我们开始看到 ES Modules 标准开始实施。
 
 In practice, this means that for the time being you use `require()` in Node.js and `import`in the browser.
 
+实际上，这意味着目前你可以在 Node.js 中使用 `require()` 和在浏览器中使用 `import`。
+
 ### The V8 JavaScript Engine
+
+### Javascript V8 引擎
 
 V8 is the name of the JavaScript engine that powers Google Chrome. It’s the thing that takes our JavaScript and executes it while browsing with Chrome.
 
+V8 是 Google Chrome 的 Javascript 引擎的名字。它是一种在使用 Chrome 浏览时获取 JavaScript 并执行的事物。
+
 V8 provides the runtime environment in which JavaScript executes. The DOM, and the other Web Platform APIs are provided by the browser.
+
+V8 为 JavaScript 的执行提供了运行环境。DOM 和其它 Web 平台 api 由浏览器提供。
 
 The cool thing is that the JavaScript engine is independent by the browser in which it’s hosted. This key feature enabled the rise of Node.js. V8 was chosen for being the engine chosen by Node.js back in 2009, and as the popularity of Node.js exploded, V8 became the engine that now powers an incredible amount of server-side code written in JavaScript.
 
+最酷的事情是 JavaScript 引擎独立于它所在的浏览器。这个关键特征使得 Node.js 兴起。V8 早在 2009 年就被选为 Node.js 的引擎，并且伴随着 Node.js 的爆发性发展，V8 变成了现在可以驱动大量用 JavaScript 编写的服务器端代码的引擎。
+
 The Node.js ecosystem is huge and thanks to it V8 also powers desktop apps, with projects like [Electron][43].
+
+Node.js 的生态系统是非常庞大的，并且 V8 还为桌面应用程序提供了支持，比如 [Electron][43]。
 
 #### Other JS engines
 
+#### 其它的 JS 引擎
 Other browsers have their own JavaScript engine:
+
+其它的浏览器有它们自己的 JavaScript 引擎：
 
 -   Firefox has [Spidermonkey][44]
 -   Safari has [JavaScriptCore][45] (also called Nitro)
 -   Edge has [Chakra][46]
 
+-   Firefox 有 [Spidermonkey][44]
+-   Safari 有 [JavaScriptCore][45] (也可以叫 Nitro)
+-   Edge 有 [Chakra][46]
+
 and many others exist as well.
+
+并且还有其它的也存在。
 
 All those engines implement the ECMA ES-262 standard, also called ECMAScript, the standard used by JavaScript.
 
+所有的这些引擎都实现了 ECMA ES-262 标准，也叫 ECMAScript，JavaScript 使用的标准。
+
 #### The quest for performance
+
+#### 性能的探索
 
 V8 is written in C++, and it’s continuously improved. It is portable and runs on Mac, Windows, Linux and several other systems.
 
+V8 是用 C++ 编写的，并且持续的改进。它是便携式的，可以在 Mac, Windows, Linux 和其它一些操作系统上。
+
 In this V8 introduction, I will ignore the implementation details of V8. They can be found on more authoritative sites, including the [V8 official site][47], and they change over time, often radically.
+
+在 V8 的简介中，我将忽略 V8 的实现细节。它们可以在更权威的网站上找到，包括 [V8 官网][47]，并且它们会随着时间的推移变化，通常会发生根本性的变化。
 
 V8 is always evolving, just like the other JavaScript engines around, to speed up the Web and the Node.js ecosystem.
 
+就像其他的 JavaScript 引擎一样，V8 在持续不断的发展以加速 Web 和 Node.js 生态系统。
+
 On the web, there is a race for performance that’s been going on for years, and we (as users and developers) benefit a lot from this competition because we get faster and more optimized machines year after year.
+
+在网络上，对性能的竞争已经持续很多年了，我们（做为用户和开发者）从这场竞争中获益匪浅，因为我们可以获得一年比一年更快、优化更好的机器。
 
 #### Compilation
 
+#### 编译
+
 JavaScript is generally considered an interpreted language, but modern JavaScript engines no longer just interpret JavaScript, they compile it.
+
+JavaScript 通常被认为是一种解释型语言，但是现在 JavaScript 引擎已不再仅仅是解释 JavaScript，而是一种编译语言。
 
 This happens since 2009 when the SpiderMonkey JavaScript compiler was added to Firefox 3.5, and everyone followed this idea.
 
+自 2009年 SpiderMonkey JavaScript 编译器被添加到 Firefox 3.5 后，所有人都遵循这个想法。
+
 JavScript is internally compiled by V8 with just-in-time (JIT) compilation to speed up the execution.
 
-This might seem counter-intuitive,. But since the introduction of Google Maps in 2004, JavaScript has evolved from a language that was generally executing a few dozens of lines of code to complete applications with thousands to hundreds of thousands of lines running in the browser.
+JavaScript 是由 V8 内部编译的，它使用即时(JIT) 编译（原文：just-in-time (JIT) compilation）来加速执行。
+
+This might seem counter-intuitive. But since the introduction of Google Maps in 2004, JavaScript has evolved from a language that was generally executing a few dozens of lines of code to complete applications with thousands to hundreds of thousands of lines running in the browser.
+
+这看起来有违常理。但是自从2004年引入 Google 地图以来，JavaScript 已经从一种通常执行几十行代码的语言演变为在浏览器中运行数千到数十万行代码的应用程序。
 
 Our applications now can run for hours inside a browser, rather than being just a few form validation rules or simple scripts.
 
+我们的应用程序可以在浏览器中运行数小时，而不仅仅是一些表单验证规则或简单的脚本。
+
 In this **new world**, compiling JavaScript makes perfect sense because while it might take a little bit more to have the JavaScript **ready**, once done it’s going to be much more performant that purely interpreted code.
+
+在这个 **新世界**，编译 JavaScript 非常有意义，因为尽管 **尽管** 准备 JavaScript 可能需要更多的时间，但是一旦完成，纯解释性代码的性能会更好。
 
 ### How to exit from a Node.js program
 
+### 如何退出 Node.js 程序
+
 There are various ways to terminate a Node.js application.
+
+有多种方法可以结束 Node.js 应用程序。
 
 When running a program in the console you can close it with `ctrl-C`, but what I want to discuss here is programmatically exiting.
 

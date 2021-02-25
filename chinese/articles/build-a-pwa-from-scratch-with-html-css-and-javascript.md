@@ -221,13 +221,9 @@ const showCoffees = () => {
 
 ## Web 应用 Manifest
 
-The web app manifest is a simple JSON file that informs the browser about your web app. It tells how it should behave when installed on the user's mobile device or desktop. And to show the Add to Home Screen prompt, the web app manifest is required.
-
 web 应用 manifest 是一个简单的 JSON 文件，它向浏览器告知你的 web 应用。它告诉浏览器在移动设备或桌面安装时该如何表现。而要显示”添加到主屏幕“的提示，则需要 web 应用 manifest。
 
-Now that we know what a web manifest is, let's create a new file named `manifest.json` (you have to name it like that) in the root directory. Then add this code block below.
-
-现在我们知道 web manifest 是什么了，让我们在根目录创建一个名为 `manifest.json` 的文件（你得这样命名）。然后在里面添加这些代码。
+现在我们知道 web manifest 是什么了，让我们在根目录创建一个名为 `manifest.json` 的新文件（你得这样命名）。然后在里面添加这些代码。
 
 -   在 `manifest.json`
 
@@ -278,31 +274,45 @@ Now that we know what a web manifest is, let's create a new file named `manifest
 
 ```
 
-In the end, it's just a JSON file with some mandatory and optional properties.
-
 最后，这个 JSON 文件具有一些可填和必填的属性。
 
 name: When the browser launches the splash screen, it will be the name displayed on the screen.
 
-name:
+name: 当浏览器显示启动画面时，在屏幕上显示的名称。
 
 short_name: It will be the name displayed underneath your app shortcut on the home screen.
 
+short_name: 你的 app 在主屏幕上显示的快捷方式的名称。
+
 start_url: It will be the page shown to the user when your app is open.
+
+start_url: 当你的 app 打开时，所要显示的页面。
 
 display: It tells the browser how to display the app. There are several modes like `minimal-ui`, `fullscreen`, `browser` etc. Here, we use the `standalone` mode to hide everything related to the browser.
 
+display: 告诉浏览器如何显示你的 app。这里有几种模式，如`minimal-ui`、`fullscreen`、`browser`等等。这里我们使用`standalone`模式来隐藏与浏览器有关的任何内容。
+
 background_color: When the browser launches the splash screen, it will be the background of the screen.
+
+background_color: 当浏览器显示启动画面时，指定屏幕的背景颜色。
 
 theme_color: It will be the background color of the status bar when we open the app.
 
+theme_color: 当我们打开 app 的时候指定状态栏的背景颜色。
+
 orientation: It tells the browser the orientation to have when displaying the app.
+
+orientation: 告诉浏览器显示 app 时的方向。
 
 icons: When the browser launches the splash screen, it will be the icon displayed on the screen. Here, I used all sizes to fit any device's preferred icon. But you can just use one or two. It's up to you.
 
+icons： 当浏览器在屏幕上启动时，它将是在屏幕上显示的图标，这里，我们使用了所有尺寸以及任何设备的首选图标，但是你只能选择一到两个，由你决定。
+
 Now that we have a web app manifest, let's add it to the HTML file.
 
--   In `index.html` (head tag)
+现在我们有了一个 web 应用的 manifest，让我们来将它添加到 html 文件中。
+
+-   在 `index.html` (head 标签中)
 
 ```html
 <link rel="manifest" href="manifest.json" />
@@ -321,11 +331,17 @@ Now that we have a web app manifest, let's add it to the HTML file.
 
 As you can see, we linked our `manifest.json` file to the head tag. And add some other links which handle the iOS support to show the icons and colorize the status bar with our theme color.
 
+如你所看到的，我们在 head 标签里引入了`manifest.json`文件。并且还引入了一些其他文件来处理 IOS 上的图标显示、状态栏颜色和我们的主题色。
+
 With that, we can now dive into the final part and introduce the service worker.
 
-## What is a Service Worker?
+现在我们可以深入探讨最后一步并介绍 service worker。
+
+## 什么是 Service Worker?
 
 Notice that PWAs run only on https because the service worker can access the request and handle it. Therefore security is required.
+
+需要注意的是，由于 service worker 能够访问并处理请求，所以 PWA 仅在 https 上运行。因此安全是必须的。
 
 A service worker is a script that your browser runs in the background in a separate thread. That means it runs in a different place and is completely separate from your web page. That's the reason why it can't manipulate your DOM element.
 

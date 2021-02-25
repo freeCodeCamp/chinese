@@ -48,31 +48,31 @@ c. 现在，这位经理一共有三个可选择的激励计划：(a) 没有基�
 
 答案：原来的激励计划
 
-## The Basics of Data Analytics
+## 数据分析的基本概念
 
-Let’s walk through how to think about data and build on these learnings so that you can answer the above questions.
+我们需要先对数据本身有一定的了解，才能在此基础学习更多，从而解决上述问题。
 
-The first aspect of data analytics we must learn is that there are different types of data. Simple, right?
+关于数据分析首先要知道的是，数据有不同的类型。这个概念就和听上去的一样简单易懂。
 
-It sure is.
+按照不同的数据分类规则，数据可以被分为不同类型。
 
-Data can be categorical (gender, location, and so on) or numerical (number of customers, active users, and so on).
+数据可以是分类数据（性别、地点等）；也可以是数值型数据（客户数量、活跃用户数等）。
 
-Some data is discrete (that is, the number of job applicants applying to a job) and other data is continuous (infinite number of possible outcomes).
+数据可以是离散的，比如说一份工作的应聘人数就是离散的；也可以是连续的，比如说一些无限可能的结果。
 
-Before analyzing data, take a moment to understand the types of data you have.
+在开始数据分析前，首先了解你的数据类型是非常有必要的。
 
-Do you have continuous or discrete data? Is your data categorical or numerical?
+你所拥有的数据是离散的还是连续？你的数据是分类数据还是数值型数据？
 
-After answering those questions, you are ready to dive deeper.
+在回答了这些问题之后，你才可以对数据进行进一步的挖掘。
 
-Data has three primary types of characteristics:
+除了上述两种分法外，数据还可以根据其和时间的关系，分为下面三大类：
 
-1.  Data can be cross-sectional. This means that the data is a snapshot of a pattern or trend. An example is the results of a survey, like the national census.
-2.  Data can be a time series. An example is my test scores, [wages earned][1] in a period of time, or how companies measure and [apply discounts][2] throughout the year.
-3.  There's also panel data. An example is data that a firm might store in a CRM. Panel data enables multiple subjects and multiple points in time. As storage is becoming increasingly cheap, this form of data is becoming more common.
+1. 截面数据类型：这种数据描述了某个时间点上，事物的模式或者趋势。像人口普查这种民意调查的结果就是截面数据的一种。
+2. 时间序列数据类型：这种数据与一段时间相关，比如我的测试成绩、一段时间内的[工资][1]、 公司一年的[折扣][2]情况等都属于时间序列数据。
+3. 面板数据：像公司存在客户关系管理(CRM)系统中的数据就是面板数据的一种。面板数据包含了多个事物在多个时间点上的信息。随着存储设备日趋便宜，这种数据类型也变得更加普遍。
 
-Now that you know the data types and the primary characteristics of data, I want to provide an overview of how data is distributed.
+## 离散程度：数据是如何组织的
 
 ## Dispersion: How Data is Organized
 

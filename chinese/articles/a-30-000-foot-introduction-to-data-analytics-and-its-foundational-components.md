@@ -184,42 +184,44 @@ P(高需求) = 0.10
 
 ## 关于数据分析的个人想法
 
-这篇文章只是一片启发式读物，我希望它可以激发你学习和研究数据分析的兴趣。
+这篇文章只是一篇启发式读物，希望它可以激发你学习和研究数据分析的兴趣。
 
 学习数据分析将帮助你更好地理解软件和开发自己的产品。就像John的例子一样，你也可以使用数据分析的方法为你的决策提供更具前瞻性的指导。
-Learning data analytics will help you better understand software and how to build products. Like the scenario with John above, you can leverage data analytics to make better informed and forward looking decisions.
+
 
 You can take risks and understand the odds of success and failure. You can use the principle of counting to determine your current actions.
 
-Data analytics will also help you better understand how technology is transforming offline environments and therefore make you a more thoughtful consumer.
+数据分析也会帮助你理解科技是如何改变线下环境，因此促使你成为一名更有想法的消费者。
 
-The range of uses for data analytics is incredibly large. Pause for a moment and ask yourself what areas of science, technology, business, software, or product design you find most interesting.
+数据分析的应用范围十分广阔。不知道看到这里的你是否也对它在科学、技术、商业、软件或者产品设计等方面的应用感兴趣呢？
 
-Now conceptualize how data analytics is profoundly influencing all of these fields.
+现在我将正式说明数据分析在这些领域中的深远影响。
 
-Think about the human body.
+首先考虑我们的身体。
 
-[Health products][4], [wellness marketing][5] programs, and exercise apps all use data analytics to optimize exercises for the human body based on data that we emit (think: heart rates, blood oxygen levels, sleep patterns).
+[健康产品][4]，[健康营销][5]，健身app都使用了来自用户的数据，并通过分析这些数据来优化自身产品（比如说心率数据、血氧数据、睡眠模式等）。
 
-These tools are using data analytics to assess real-time customizations (sampling), biometric authentication, and sentiment analysis.
+这些产品通过数据分析评估用户实时状态、生理特征识别和情绪分析。
 
-Think about software.
+再来看看软件。
 
+[低代码量开发][6] 工具也使用了数据分析的方法为开发者们提供了各式各样的用户体验。在这个项目中，数据模块是提前定义好的。
 [Low code workflow automation][6] tools use data analytics for predictive experiences and enable developers of varied experience levels to create applications model-driven logic. Data modules are predefined.
 
-Much like with software, education is being transformed by data analytics. Online learning for schools and [coding apps for kids][7] rely on data analytics for risk management (when students fall behind) and content retention.
+和软件很像，教育行业也正在通过数据分析进行转型。学校的在线学习模式和[儿童编程app][7]依赖于数据分析进行风险管理（当学生的进度落后时）和复习。
 
-Think about how risk is priced.
+接着再考虑保险险别是如何定价的。
 
-Sampling is being used to change how insurance companies like [True Blue][8] are pricing insurance policies. More financial institutions and insurance firms are using data analytics to assess credit quality, to price and market insurance contracts, and to automate client interaction.
+当保险公司需要对不同保险政策定价时，抽样就发挥了作用。越来越多的金融机构和保险公司运用数据分析来评估用户的声誉，以此来定价和销售保险合同，以及自动化与客户的互动。
 
-Think about website design.
+网页设计也值得一提。
 
-Whether or not you want to apply data analytics to build the next [call tracking software][9] or [fact aggregation site][10], data analytics will help you measure what matters and turn data into actionable insights.
+无论你是否主动想要将数据分析运用到搭建下个[电话追踪软件][9]还是[真相收集网页][10]，数据分析都会帮助你衡量事物重要性并且将数据转化为有价值的信息。
 
-Think about agriculture.
+数据分析在农业领域也很重要。
 
-High-tech plant growers such as [JoyOrganics][11] and [TakeSpruce][12] are using seed-to-sale cycle tracking to follow plants through stages from cultivation to harvest to extraction.
+高科技种植业比如 [JoyOrganics][11]和[TakeSpruce][12]都在使用数据分析对农产品进行了完整的追踪，从种子萌芽成长开始一直到收获销售。
+
 
 Farmers are using data analytics to find signals for higher and uncorrelated returns and optimize growing.
 
@@ -227,7 +229,8 @@ Think about [indoor air quality][13] and [natural language processing][14].
 
 Or the way in which [CRM software][15] is built, or how people [communicate in real time][16].
 
-In short, think about the modern world.
+简而言之，多想想我们身处的现代社会。
+
 
 All of these products leverage data analytics to calculate sampling errors, standard deviations, and regressions to ensure product quality and customer satisfaction.
 

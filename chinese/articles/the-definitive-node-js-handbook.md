@@ -643,15 +643,27 @@ There are various ways to terminate a Node.js application.
 
 When running a program in the console you can close it with `ctrl-C`, but what I want to discuss here is programmatically exiting.
 
+在控制台运行程序的时候，你可以通过 `ctrl-C` 关闭它，但是这里我要讨论的是如何以编程的方式退出。
+
 Let’s start with the most drastic one, and see why you’re better off **not** using it.
+
+让我们从最极端的一个开始，并且看看为什么你最好**不要**使用它。
 
 The `process` core module is provides a handy method that allows you to programmatically exit from a Node.js program: `process.exit()`.
 
+`process` 核心模块提供了一个简便的方法允许你以编程的方式退出 Node.js 程序 `process.exit()`
+
 When Node.js runs this line, the process is immediately forced to terminate.
+
+当 Node.js 运行这行的时候，进程会立即强制结束。
 
 This means that any callback that’s pending, any network request still being sent, any file system access, or processes writing to `stdout` or `stderr` — all is going to be ungracefully terminated right away.
 
+这意味着任何正挂起的回调、正在发送的网络请求、任何文件系统访问、或者正在写入 `stdout` 或 `stderr` 的进程 - 都将立即被恶意终止。
+
 If this is fine for you, you can pass an integer that signals the operating system the exit code:
+
+如果对你是合适的，你可以传递一个整数，向操作系统发送退出代码：
 
 ```
 process.exit(1)
@@ -659,9 +671,15 @@ process.exit(1)
 
 By default the exit code is `0`, which means success. Different exit codes have different meaning, which you might want to use in your own system to have the program communicate to other programs.
 
+默认情况下，退出代码为 `0`，表示成功。不同的退出代码具有不懂的涵义，你可可能希望在自己的系统中使用这些代码，一边程序与其他程序通信。
+
 You can read more on exit codes [here][48].
 
+你可以在 [这里][48] 阅读更多关于退出代码的信息。
+
 You can also set the `process.exitCode` property:
+
+你还可以设置 `process.exitCode` 属性：
 
 ```
 process.exitCode = 1
@@ -669,9 +687,15 @@ process.exitCode = 1
 
 and when the program will later end, Node.js will return that exit code.
 
+当程序将要结束时，Node.js 将返回退出代码。
+
 A program will gracefully exit when all the processing is done.
 
+所有的处理完成后，程序将正常退出。
+
 Many times with Node.js we start servers, like this HTTP server:
+
+很多时候，我们用 Node.js 启动服务器，比如这个 HTTP 服务器：
 
 ```
 const express = require('express')const app = express()
@@ -687,9 +711,15 @@ app.listen(3000, () => console.log('Server ready'))
 
 This program is never going to end. If you call `process.exit()`, any currently pending or running request is going to be aborted. This is **not nice**.
 
+这个程序永远不会结束。如果你调用 `process.exit()`，任何当前挂起或者正在运行的请求都将被终止。这 **不太好**。
+
 In this case you need to send the command a `SIGTERM` signal, and handle that with the process signal handler:
 
+在这种情况下，你需要向终端发送一个 `SIGTERM` 命令，并使用进程命令处理程序处理该命令。
+
 **Note:** `process` does not require a `require`, it's automatically available.
+
+**注意**：`process` 不需要 `require`，它是自带可用的。
 
 ```plain
 const express = require('express')
@@ -713,17 +743,27 @@ process.on('SIGTERM', () => {  app.close(() => {    console.log('Process termina
 
 What are signals? Signals are a Portable Operating System Interface (POSIX) intercommunication system: a notification sent to a process in order to notify it of an event that occurred.
 
+什么是信号？信号是可移植操作系统接口（POSIX）内部通信系统：一种发给进程的通知，以通知它所发生的事情。
+
 `SIGKILL` is the signals that tells a process to immediately terminate, and would ideally act like `process.exit()`.
+
+`SIGKILL` 是通知进程立即终止的信号，理想情况下，它的行为类似于 `process.exit()`。
 
 `SIGTERM` is the signals that tells a process to gracefully terminate. It is the signal that's sent from process managers like `upstart` or `supervisord` and many others.
 
+`SIGTERM` 是通知进程正常终止的信号。这是进程管理器发出的信号，如 `upstart` 或 `supervisord` 等。
+
 You can send this signal from inside the program, in another function:
+
+你可以通过另一个功能从程序内部发送此信号：
 
 ```
 process.kill(process.pid, 'SIGTERM')
 ```
 
 Or from another Node.js running program, or any other app running in your system that knows the PID of the process you want to terminate.
+
+或者从另外一个正在运行的 Node.js 程序、或者系统中运行的任何其它应用程序知道要终止的进程的 PID。
 
 ### How to read environment variables from Node.js
 

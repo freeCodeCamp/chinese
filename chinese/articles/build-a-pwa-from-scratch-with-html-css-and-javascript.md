@@ -28,7 +28,7 @@
 渐进式 Web 应用是一种通过使用现代 Web 能力向用户提供类似于应用程序的体验的 Web 应用程序。总而言之，它只是一个运行在浏览器上且使用了一些增强特性的普通网站。它赋予你以下的能力：
 
 -   安装到你的手机桌面上
--   脱机访问
+-   离线访问
 -   使用摄像头
 -   通知推送
 -   后台同步
@@ -168,11 +168,11 @@ ul {
 
 现在它看起来更好看了，但是我们仍然没有数据显示。
 
-让我们在下个节来解决这个问题。
+让我们在下一节来解决这个问题。
 
 ## 使用 JavaScript 显示数据
 
-请注意，我使用了大图片，加载它会需要一些时间。这将以最好的方式向你展示 service workers 的能力。
+请注意，我使用了较大的图片，加载它会需要一些时间。这将以最好的方式向你展示 service workers 的能力。
 
 正如我之前说过用 Class 名为 `.container` 的元素保存我们的卡片，因此我们需要选择它。
 
@@ -215,7 +215,7 @@ const showCoffees = () => {
 
 有了上面的代码，我们现在能够通过遍历数组并将其显示在 HTML 上。为了保证工作正常，我们等待 DOM （文档对象模型）内容加载完成再执行 `showCoffees` 方法。
 
-我们已经做了很多，但现在，我们只有一个传统的 Web 应用，所以，让我们在下一节通过引入一些 PWA 的特性来改变这种情况。
+我们已经做了很多了，但现在我们只有一个传统的 Web 应用。所以，让我们在下一节通过引入一些 PWA 的特性来改变这种情况。
 
 ![super-excited](https://media.giphy.com/media/l3V0dy1zzyjbYTQQM/source.gif)
 
@@ -276,39 +276,21 @@ web 应用 manifest 是一个简单的 JSON 文件，它向浏览器告知你的
 
 最后，这个 JSON 文件具有一些可填和必填的属性。
 
-name: When the browser launches the splash screen, it will be the name displayed on the screen.
-
 name: 当浏览器显示启动画面时，在屏幕上显示的名称。
-
-short_name: It will be the name displayed underneath your app shortcut on the home screen.
 
 short_name: 你的 app 在主屏幕上显示的快捷方式的名称。
 
-start_url: It will be the page shown to the user when your app is open.
-
 start_url: 当你的 app 打开时，所要显示的页面。
 
-display: It tells the browser how to display the app. There are several modes like `minimal-ui`, `fullscreen`, `browser` etc. Here, we use the `standalone` mode to hide everything related to the browser.
-
-display: 告诉浏览器如何显示你的 app。这里有几种模式，如`minimal-ui`、`fullscreen`、`browser`等等。这里我们使用`standalone`模式来隐藏与浏览器有关的任何内容。
-
-background_color: When the browser launches the splash screen, it will be the background of the screen.
+display: 告诉浏览器如何显示你的 app。有几种模式可以选择，如`minimal-ui`、`fullscreen`、`browser`等等。这里我们使用`standalone`模式来隐藏与浏览器有关的任何内容。
 
 background_color: 当浏览器显示启动画面时，指定屏幕的背景颜色。
 
-theme_color: It will be the background color of the status bar when we open the app.
-
 theme_color: 当我们打开 app 的时候指定状态栏的背景颜色。
-
-orientation: It tells the browser the orientation to have when displaying the app.
 
 orientation: 告诉浏览器显示 app 时的方向。
 
-icons: When the browser launches the splash screen, it will be the icon displayed on the screen. Here, I used all sizes to fit any device's preferred icon. But you can just use one or two. It's up to you.
-
-icons： 当浏览器在屏幕上启动时，它将是在屏幕上显示的图标，这里，我们使用了所有尺寸以及任何设备的首选图标，但是你只能选择一到两个，由你决定。
-
-Now that we have a web app manifest, let's add it to the HTML file.
+icons： 当浏览器显示启动画面时，在屏幕上显示的图标。我们在这里使用了所有尺寸以及任何设备的首选图标，但是你只能选择一到两个，由你决定。
 
 现在我们有了一个 web 应用的 manifest，让我们来将它添加到 html 文件中。
 
@@ -329,31 +311,25 @@ Now that we have a web app manifest, let's add it to the HTML file.
 <meta name="theme-color" content="#db4938" />
 ```
 
-As you can see, we linked our `manifest.json` file to the head tag. And add some other links which handle the iOS support to show the icons and colorize the status bar with our theme color.
-
-如你所看到的，我们在 head 标签里引入了`manifest.json`文件。并且还引入了一些其他文件来处理 IOS 上的图标显示、状态栏颜色和我们的主题色。
-
-With that, we can now dive into the final part and introduce the service worker.
+如你所看到的，我们在 head 标签里引入了`manifest.json`文件。并且还引入了一些其他文件来处理 IOS 上的图标显示、状态栏颜色和主题色。
 
 现在我们可以深入探讨最后一步并介绍 service worker。
 
 ## 什么是 Service Worker?
 
-Notice that PWAs run only on https because the service worker can access the request and handle it. Therefore security is required.
-
 需要注意的是，由于 service worker 能够访问并处理请求，所以 PWA 仅在 https 上运行。因此安全是必须的。
 
-A service worker is a script that your browser runs in the background in a separate thread. That means it runs in a different place and is completely separate from your web page. That's the reason why it can't manipulate your DOM element.
+service worker 是浏览器在后台的独立线程中运行的脚本。这意味着它将在不同的地方运行，并且与你的页面完全隔离，这就是为什么它不能操纵你的 DOM 元素的原因。
 
-However, it's super powerful. The service worker can intercept and handle network requests, manage the cache to enable offline support or send push notifications to your users.
+不过，它的功能超级强大。service worker 能拦截并处理网络请求，管理缓存以实现离线访问或者向你的用户推送通知。
 
 ![wow](https://media.giphy.com/media/5VKbvrjxpVJCM/source.gif)
 
-S0 let's create our very first service worker in the root folder and name it `serviceWorker.js` (the name is up to you). But you have to put it in the root so that you don't limit its scope to one folder.
+所以让我们在根目录下创建第一个 service worker，并命名为`serviceWorker.js`(名称由你决定)。但是你必须将它放在根目录上，这样你就不会把它的范围限制在一个文件夹里。
 
-### Cache the assets
+### 资源缓存
 
--   In `serviceWorker.js`
+-   在 `serviceWorker.js`
 
 ```javascript
 const staticDevCoffee = 'dev-coffee-site-v1';
@@ -374,37 +350,37 @@ const assets = [
 ];
 ```
 
-This code looks intimidating first but it just JavaScript (so don't worry).
+这段代码看起来有点吓人，但它只是 JavaScript 而已（所以别担心）。
 
-We declare the name of our cache `staticDevCoffee` and the assets to store in the cache. And to perform that action, we need to attach a listener to `self`.
+我们声明了缓存的名称`staticDevCoffee`和要储存在缓存中的资源。为了执行这些操作，我们需要给`self`添加一个监听器。
 
-`self` is the service worker itself. It enables us to listen to life cycle events and do something in return.
+`self`就是 service worker 本身。它能够让我们监听生命周期中的事件并做一些对应的事情。
 
-The service worker has several life cycles, and one of them is the `install` event. It runs when a service worker is installed. It's triggered as soon as the worker executes, and it's only called once per service worker.
+service worker 有几个生命周期，其中之一是 `install` 事件。当 service worker 被安装时，它就会运行。它在 worker 执行后立即触发，而且每个 service worker 只调用一次。
 
-When the `install` event is fired, we run the callback which gives us access to the `event` object.
+当`install`事件触发时，回调函数将被调用，通过这个回调函数我们可以访问`event`对象。
 
-Caching something on the browser can take some time to finish because it's asynchronous.
+在浏览器上缓存某些内容的时候可能需要一些时间才能完成，因为它是异步的。
 
-So to handle it, we need to use `waitUntil()` which, as you might guess, waits for the action to finish.
+为了处理这个问题，我们需要使用`waitUntil()`。正如你所猜的这样，它会等待操作完成。
 
-Once the cache API is ready, we can run the `open()` method and create our cache by passing its name as an argument to `caches.open(staticDevCoffee)`.
+一旦 cache API 准备就绪，我们可以执行`open()`方法，并通过将缓存名称当作参数传递给`caches.open(staticDevCoffee)`来创建我们的缓存。
 
-Then it returns a promise, which helps us store our assets in the cache with `cache.addAll(assets)`.
+它会返回一个 promise，将帮助我们使用`cache.addAll(assets)`将我们的资源储存在缓存中。
 
 ![image-cache](https://drive.google.com/uc?id=1ynBQRQ00wHo5J6CnjfLCX3b3UNiSrGqZ)
 
-Hopefully, you're still with me.
+希望你还能听懂我的话。
 
 ![desesperate](https://media.giphy.com/media/OQEcw90jACeU8/source.gif)
 
-Now, we've successfully cached our assets in the browser. And the next time we load the page, the service worker will handle the request and fetch the cache if we are offline.
+现在，我们已经顺利的把资源缓存到浏览器中。而下次我们加载页面时，如果我们处于离线状态， service worker 将会处理该请求并获取缓存。
 
-So, let's fetch our cache.
+所以，让我们取回我们的缓存吧。
 
-### Fetch the assets
+### 获取资源
 
--   In `serviceWorker.js`
+-   在 `serviceWorker.js`
 
 ```javascript
 self.addEventListener('fetch', (fetchEvent) => {
@@ -418,21 +394,23 @@ self.addEventListener('fetch', (fetchEvent) => {
 
 Here, we use the `fetch` event to, well, get back our data. The callback gives us access to `fetchEvent`. Then we attach `respondWith()` to prevent the browser's default response. Instead it returns a promise because the fetch action can take time to finish.
 
-And once the cache ready, we apply the `caches.match(fetchEvent.request)`. It will check if something in the cache matches `fetchEvent.request`. By the way, `fetchEvent.request` is just our array of assets.
+这里，我们使用`fetch`事件来获取我们的数据，通过回调函数我们可以访问`fetchEvent`。我们添加`respondWith()` 来阻止浏览器的默认响应。然后返回一个 promise，因为 fetch 操作可能需要一些时间才能完成。
 
-Then, it returns a promise. And finally, we can return the result if it exists or the initial fetch if not.
+当一个缓存准备就绪时，我们将使用 `caches.match(fetchEvent.request)`。它将检查缓存中是否有与`fetchEvent.request`匹配的内容。顺便一提，`fetchEvent.request`只是我们的 assets 数组。
 
-Now, our assets can be cached and fetched by the service worker which increases the load time of our images quite a bit.
+然后，它会返回一个 promise。如果缓存存在，我们可以直接返回它，否则则返回最初的 fetch。
 
-And most important, it makes our app available in offline mode.
+现在， 我们的资源可以被 service worker 缓存并获取，这将大大的优化了我们的图片的加载时间。
 
-But a service worker alone can't do the job. We need to register it in our project.
+最重要的是，它使我们的应用可以在离线模式下使用。
+
+但现在 service worker 还不能工作，我们还需要在我们的项目中注册它。
 
 ![let-s-do-it](https://media.giphy.com/media/Z9EvIRmLEOS3JNFeVb/source.gif)
 
-## Register the Service Worker
+## 注册 Service Worker
 
--   In `js/app.js`
+-   在 `js/app.js`
 
 ```javascript
 if ('serviceWorker' in navigator) {
@@ -445,37 +423,37 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-Here, we start by checking if the `serviceWorker` is supported by the current browser (as it's still not supported by all browsers).
+在这里，我们先检查当前浏览器是否支持`serviceWorker`（因为并未所有的浏览器都支持它）。
 
-Then, we listen to the page load event to register our service worker by passing the name of our file `serviceWorker.js` to `navigator.serviceWorker.register()` as a parameter to register our worker.
+然后，我们将监听页面的 load 事件来注册我们的 service worker。通过传递文件名`serviceWorker.js`作为参数给`navigator.serviceWorker.register()`来作为注册 service worker 的参数。
 
-With this update, we have now transformed our regular web app to a PWA.
+通过上述步骤，我们现在已经将传统的 web 应用转换成为 PWA。
 
 ![we-did-it](https://media.giphy.com/media/3o6ZtlGkjeschymLNm/source.gif)
 
-## Final thoughts
+## 最后的想法
 
-Throughout this article, we have seen how amazing PWAs can be. By adding a web app manifest file and a service worker, it really improves the user experience of our traditional web app. This is because PWAs are fast, secure, reliable, and – most importantly – they support offline mode.
+在本文中，我们已经看到了 PWA 的神奇之处。通过添加一个 web 应用 manifest 和一个 service worker，确实提高了我们传统 web 应用的用户体验。这是因为 PWA 快速、安全、可靠，更重要的是它支持离线模式。
 
-Many frameworks out there now come with a service worker file already set-up for us. But knowing how to implement it with Vanilla JavaScript can help you understand PWAs.
+现在很多的框架都已经为我们设置了好了 service worker 文件。但是知道如何用 Vanilla JavaScript 来实现它可以帮你理解 PWA。
 
-And you can go even further with service workers by caching assets dynamically or limiting the size of your cache and so on.
+而且你还可通过动态缓存资源或者限制缓存大小等方法更进一步的使用 service worker。
 
-Thanks for reading this article.
+感谢你阅读本文。
 
-You can check it out live [here][12] and the source code is [here][13].
+你可以在线上[浏览][12]，源代码在[这里][13]。
 
-Read more of my articles on [my blog][14]
+在我的博客上阅读我的更多文章。
 
-## Next steps
+## 下一步
 
-[Web Manifest Documentation][15]
+[Web Manifest 文档][15]
 
-[Service Worker Documentation][16]
+[Service Worker 文档][16]
 
-[Web Manifest Generator][17]
+[Web Manifest 生成器][17]
 
-[Browser Support][18]
+[浏览器支持][18]
 
 [1]: https://www.freecodecamp.org/news/build-a-pwa-from-scratch-with-html-css-and-javascript/#what-is-a-progressive-web-app
 [2]: https://www.freecodecamp.org/news/build-a-pwa-from-scratch-with-html-css-and-javascript/#markup

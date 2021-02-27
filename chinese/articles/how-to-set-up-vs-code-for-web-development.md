@@ -1,6 +1,6 @@
 > -   原文地址：[How to Set Up VS Code for Web Development in A Few Simple Steps](https://www.freecodecamp.org/news/how-to-set-up-vs-code-for-web-development/)
 > -   原文作者：Thu Nghiem
-> -   译者：
+> -   译者：tianheg
 > -   校对者：
 
 

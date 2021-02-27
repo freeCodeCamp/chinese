@@ -3,29 +3,31 @@
 > - 译者：tianheg
 > - 校对者：
 
----
-
-- [介绍 VS Code](#介绍-vs-code)
-- [VS Code 欢迎标签](#vs-code-欢迎标签)
-- [VS Code File Explorer](#vs-code-file-explorer)
-- [VS Code Extensions](#vs-code-extensions)
-- [Conclusion](#conclusion)
-
----
-
 ![How to Set Up VS Code for Web Development in A Few Simple Steps](https://www.freecodecamp.org/news/content/images/size/w2000/2021/01/ep11-vscode-1.jpg)
+
+Visual Studio Code has become the most popular source code editor out there. It is lightweight but powerful, and it is no doubt my favorite.
 
 VS Code 已经成为当今最受欢迎的代码编辑器。它虽然轻量但却很强大，它无疑是我的最爱。
 
+In this article, I am going to walk you through how to get started and set up VS Code for Web Developers.
+
 在这篇文章，我会教你如何开始使用 VS Code。
+
+Here's a video you can watch if you want to supplement this article:
 
 这里有一个视频，作为文章的补充。
 
+VS Code Setup Video
+
 VS Code 安装视频
+
+## Introduction to VS Code
 
 ## 介绍 VS Code
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/Screenshot-2021-01-20-at-17.22.57.png)
+
+Download Visual Studio Code
 
 下载 VS Code
 
@@ -33,35 +35,59 @@ If you don't yet have VS Code installed on your computer, head to  [code.visuals
 
 如果你还没有安装 VS Code，去 [code.visualstudio.com][1] 下载。你可以在下拉菜单上选择你想下载的版本，但一般情况下，直接点击下载按钮就行。
 
+## VS Code Welcome Tab
+
 ## VS Code 欢迎标签
+
+Once you have it installed and opened, the first thing you will see is a Welcome tab. Here, you'll find 5 sections:
 
 在你安装并打开后，你第一眼看到的是欢迎标签。这会在这儿发现 5 个部分：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/Screenshot-2021-01-20-at-17.26.12.png)
 
+Welcome Tab
+
 欢迎标签
+
+**Start**: You can choose to either create a new file or open a folder.
 
 **开始**：你可以选择新建文件或打开文件夹。
 
+**Recent**: You can find any recently opened folders.
+
 **最近**：你能够找到最近打开的所有文件夹。
+
+**Help**: You can find some handy information. For example, the printable keyboard cheatsheet or a series of introduction videos.
 
 **帮助**：你能够找到一些有用的信息。比如，可打印的键盘清单或一系列介绍视频。
 
 **Customize**: You can see that you can install settings and keyboard shortcuts from other code editors like Vim or Atom. So in case you are used to using these editors at the moment, you can go ahead and check it out.
 
-But what we want to look into is the  **color theme**. If you select it you can see that there is a list of themes to choose from. You can also use the up and down arrow keys to preview the themes. But my favorite theme is the default one, so I am gonna stick with it.
+**自定义**：如你所见，你能够从像 Vim 或 Atom 之类的代码编辑器上为 VS Code 安装设置和键盘快捷键。所以在你目前已经习惯使用这些编辑器的情况下，你可以去看看。
+
+But what we want to look into is the **color theme**. If you select it you can see that there is a list of themes to choose from. You can also use the up and down arrow keys to preview the themes. But my favorite theme is the default one, so I am gonna stick with it.
+
+但我们将要看的是 **色彩主题**。你能看到有一系列如果你想选择。你也可以通过上下箭头预览主题。但我最喜欢默认主题，所以我不会修改。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/Screenshot-2021-01-20-at-17.59.13.png)
 
 Color Theme
 
-**Learn**: Here you'll find 3 selections. The first selection on the list is  **Find and run all commands.**  With this, we can find and run all the available commands. We are going to use this a lot, so I recommend that you to memorize the short-cut, which is  `Command/Control + Shift + P`.
+色彩主题
 
-The second selection is  **Interface Overview**. If we select it, we can see the most common elements on the user interface and we can also see the shortcut to toggle the elements:
+**Learn**: Here you'll find 3 selections. The first selection on the list is **Find and run all commands**.  With this, we can find and run all the available commands. We are going to use this a lot, so I recommend that you to memorize the short-cut, which is  `Command/Control + Shift + P`.
+
+**学习**：这儿你会发现 3 个选项。表中的第一个选项是 **寻找并运行全部命令**。我们可以通过它找到并运行全部的可用的命令。我们会经常使用，所以我推荐你记住这一快捷键——`Command/Control + Shift + P`。
+
+The second selection is **Interface Overview**. If we select it, we can see the most common elements on the user interface and we can also see the shortcut to toggle the elements:
+
+第二部分是 **界面预览**。如果我们选择它，我们能看到用户界面上大部分常用的元素，我们还能看到切换元素的快捷键：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/Screenshot-2021-01-20-at-17.30.16.png)
 
 Interface Overview
+
+界面预览
 
 The last selection is the  **Interactive Editor Playground**. Here, you can find the highlight features from VS Code with instructions and examples.
 

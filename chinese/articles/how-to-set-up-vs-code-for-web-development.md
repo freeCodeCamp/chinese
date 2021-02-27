@@ -1,8 +1,7 @@
-> -   原文地址：[How to Set Up VS Code for Web Development in A Few Simple Steps](https://www.freecodecamp.org/news/how-to-set-up-vs-code-for-web-development/)
-> -   原文作者：Thu Nghiem
-> -   译者：tianheg
-> -   校对者：
-
+> - 原文地址：[How to Set Up VS Code for Web Development in A Few Simple Steps](https://www.freecodecamp.org/news/how-to-set-up-vs-code-for-web-development/)
+> - 原文作者：Thu Nghiem
+> - 译者：tianheg
+> - 校对者：
 
 ![How to Set Up VS Code for Web Development in A Few Simple Steps](https://www.freecodecamp.org/news/content/images/size/w2000/2021/01/ep11-vscode-1.jpg)
 
@@ -134,10 +133,10 @@ That concludes the article. You can follow me on social media for future updates
   
 \_\_\_\_\_\_\_\_\_\_ 🐣 About me \_\_\_\_\_\_\_\_\_\_
 
--   I am the founder of  [DevChallenges][4]
--   Subscribe to  [my Channel][5]
--   Follow  [my Twitter][6]
--   Join  [Discord][7]
+- I am the founder of  [DevChallenges][4]
+- Subscribe to  [my Channel][5]
+- Follow  [my Twitter][6]
+- Join  [Discord][7]
 
 [1]: https://code.visualstudio.com/
 [2]: https://docs.emmet.io/cheat-sheet/

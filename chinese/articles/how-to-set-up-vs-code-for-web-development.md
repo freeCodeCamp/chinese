@@ -91,15 +91,25 @@ Interface Overview
 
 The last selection is the  **Interactive Editor Playground**. Here, you can find the highlight features from VS Code with instructions and examples.
 
+最后一个部分是 **交互编辑区**。你能在发现高亮的特性，来自 VS Code 的指导和例子。
+
 Let's select  **Emmet**, for instance. With  **Emmet**, we can write shortcuts and then expand them into a piece of code.
 
+比如，选择 **Emmet**。我们能用 **Emmet** 写快捷键然后扩展成代码片段。
+
 So let's say, for example, that we want to create an unordered list element with 3 items inside and each item has a class name of "fruit". We can type  `ul>li.fruit*3`  and press  `tab`.
+
+例如，我们假设自己想创造一个有三个项目的无序列表，每个项目的类名字是 “fruit”。我们可以打出 `ul>li.fruit*3` 然后按下 `tab`。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/emmet.gif)
 
 Emmet in Interactive Editor Playground
 
+交互编辑区中 Emmet
+
 You can also see that in the existing example (`ul>li.item$*5`), they tried to create an unordered list element and 5 items with a class name of  `item`  inside. But the class name also comes with  _numbering:_
+
+你也可以看那个已有的例子（`ul>li.item$*5`），它会创建一个无序列表，它的类名称也是按照顺序排列的：
 
 ```html
 <ul>
@@ -113,21 +123,37 @@ You can also see that in the existing example (`ul>li.item$*5`), they tried to c
 
 In this section, you can also find a link to the  [Emmet Cheat Sheet][2], which is super useful.
 
+在这部分，你还可以找到非常有用的 [Emmet 清单][2]。
+
 Alright, I recommend that you check out all of these features. There are a lot of them, and it's okay if you don't understand it all now. You can always come back in the future.
+
+好了，我推荐你尝试这些特性。它们有很多，所以现在不理解也没关系，以后你可以时常看看这些。
 
 ## VS Code File Explorer
 
+## VS Code 文件浏览器
+
 Next, let's go to  **File Explorer**  by selecting the first tab on the side navigation or  `Command/Control + Shift + E`.
+
+下面，一起来到 **文件浏览器**，通过点击侧导航的第一个标签或者快捷键 `Command/Control + Shift + E` 显示。
 
 Here you can open an existing folder, but let's create a new folder and a new file. Instead of opening a new window, let's open the terminal in VS Code. You can select the  **error and warning**  button on the status bar and then select the  `Terminal`  tab or you can use the shortcut `Control +`.
 
+你可以在这打开一个已存在的文件夹，但是让我们新建一个文件夹和文件。打开 VS Code 的终端而不是打开一个新窗口。你可以选择状态栏的错误和警告按钮，然后选择终端标签或者你可以使用快捷键 `Control +`.
+
 Right now I am in my home directory. Let's create a new folder by typing  `mkdir vscode-tutorials`  and let's go inside it with  `cd vscode-tutorials`.
 
+现在我在自己的家目录。通过输入 `mkdir vscode-tutorials` 新建文件夹，通过输入 `cd vscode-tutorials` 进入文件夹。
+
 Now we want to open this folder, so we can select the  `open folder`  button and navigate to the folder directory – but that's a lot of work. So instead, in the terminal, we can say  `code .`. Now, you might face an error:  `bash: code: command not found`.
+
+现在我们想在 VS Code 中打开这个文件夹，所以我们可以选择 `open folder` 导航到文件夹目录——但这样会麻烦很多。倒不如在终端输入 `code .`。你可能会遇到错误：`bash: code: command not found`。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/Screenshot-2021-01-20-at-17.52.42.png)
 
 Terminal In VS Code
+
+VS Code 的终端
 
 To fix this, we can open the  **Command Palette**  and search for  `Shell Command: Install code command in Path`, and select it. Now if we go back to the terminal and type  `code .`, the new VS Code window will be opened with the created folder.
 

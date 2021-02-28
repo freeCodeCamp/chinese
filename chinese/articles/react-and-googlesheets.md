@@ -1,6 +1,6 @@
 > -   原文地址：[How to Turn Google Sheets into a REST API and Use it with a React Application](https://www.freecodecamp.org/news/react-and-googlesheets/)
 > -   原文作者：Nishant Kumar
-> -   译者：
+> -   译者：ZhichengChen
 > -   校对者：
 
 ![How to Turn Google Sheets into a REST API and Use it with a React Application](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/Pink-Cute-Chic-Vintage-90s-Virtual-Trivia-Quiz-Presentations--28-.png)

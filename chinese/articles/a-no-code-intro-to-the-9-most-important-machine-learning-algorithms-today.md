@@ -3,15 +3,15 @@
 > -   译者：michaelhe545
 > -   校对者：
 
-![9 Key Machine Learning Algorithms Explained in Plain English](https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
+![通俗讲解之9个核心机器学习算法](https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-[Machine learning][1]  is changing the world. Google uses machine learning to suggest search results to users. Netflix uses it to recommend movies for you to watch. Facebook uses machine learning to suggest people you may know.
+如今，[机器学习][1]  正改变着我们的世界。借助机器学习（ML），谷歌在为我们推荐搜索结果，奈飞在为我们推荐观看影片，脸书在为我们推荐可能认识的朋友。
 
-Machine learning has never been more important. At the same time, understanding machine learning is hard. The field is full of jargon. And the number of different ML algorithms grows each year.
+机器学习从未像在今天这样重要。但与此同时，机器学习这一领域也充斥着各种术语，晦涩难懂，各种机器学习的算法每年层出不穷。
 
-This article will introduce you to the fundamental concepts within the field of machine learning. More specifically, we will discuss the basic concepts behind the 9 most important machine learning algorithms today.
+本篇文章将向您介绍机器学习领域的基础概念。更确切地说，我们将讨论时下9大核心机器学习算法背后的基本概念。
 
-# Recommendation Systems
+# 推荐系统
 
 ### What Are Recommendation Systems?
 

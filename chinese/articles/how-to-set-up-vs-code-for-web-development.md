@@ -157,50 +157,93 @@ VS Code 的终端
 
 To fix this, we can open the  **Command Palette**  and search for  `Shell Command: Install code command in Path`, and select it. Now if we go back to the terminal and type  `code .`, the new VS Code window will be opened with the created folder.
 
+为了修正它，我们可以打开 **命令面板** 并寻找 `Shell Command: Install code command in Path`，选择它。现在如果我们回到终端并输入 `code .`，创建的文件夹会在新的 VS Code 窗口里。
+
 Alright, next, we want to create a new file. In the folder section, we can click the new file icon or right-click and select  `new file`. Let's name the file  `index.html`, and inside it let's type the exclamation mark (!) and press tab or enter. With  **Emmet**, it will generate an HTML template.
+
+下一步，我们想创建一个新文件。在文件夹区域，我们能够点击新建文件图标或者在文件夹右键选择 `新文件`。取名 `index.html`，输入感叹号（!）按下 <kbd>tab</kbd> 或回车。因为 `Emmet` 的存在它会生成一个 HTML 模板。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/Screenshot-2021-01-20-at-17.55.20.png)
 
 Generating HTML with Emmet in VS Code
 
+在 VS Code 里使用 Emmet 生成 HTML
+
 Now let's open the  **Command Palette**  again, and search for  **Format Document**  and select it. You can see that it add spacings between different sections and cleans up our code.
 
-This is a super useful feature from VS Code. But we don't want to search for  **Format Documen**t all the time and we want it to format whenever we save the file.
+现在让我们再一次打开 **命令面板**，搜索 `格式化文档` 并选择它。你能看到在不同的部分添加了空格，我们的代码也变整洁了。
+
+This is a super useful feature from VS Code. But we don't want to search for  **Format Document** all the time and we want it to format whenever we save the file.
+
+这是 VS Code 里非常有用的特性。但是我们不想总是搜索 `格式化文档`，我们想在无论何时保存文件都会格式文档。
 
 You also notice here that the indention is now equal to  **4 spaces**, which in my opinion is a bit much. So let's change it to 2. And to do that, we can go to settings or use the shortcut `Command/Control + ,`.
 
+你也会注意到：在这里缩进和 **四个空格** 的效果是相等的。在我看来这有点多。所以，把它改成 2 个空格的缩进。为了能改变空格的缩进数目，我们可以去打开设置，可以使用快捷键 `Command/Control + ,` 打开。
+
 In the  **Commonly Used**  tab, we can change the Tab size to be 2 and under  **Text Editor/Formatting**, we can select  **Format on Save**. Now whenever we save, the files will be properly formatted.
+
+在 **常用** 标签栏，我们可以改变标签大小；在 **文本编辑或格式化** 区域，我们可以选择 **在保存时格式化**。现在无论我们什么时候保存，文件都会正确地格式化。
 
 ## VS Code Extensions
 
+## VS Code 扩展
+
 The last thing I want to show you how to use is  **Extensions**. You can select the extensions tab from the side navigation or with the shortcut:  `Command/Control + Shift + X`.
+
+我想教你使用的最后一个事物是 **扩展**。你可以直接点击侧边导航打开扩展标签或者使用快捷键 `Command/Control + Shift + X` 打开。
 
 Here we can filter the extensions by, for example,  **Most Popular**  or  **Recommended**.
 
+在这里我们可以通过一些设置过滤扩展，比如，**最受欢迎的** 或 **推荐的**。
+
 There are many extensions to choose from. But the first extension that we need to install is  [Live Server][3]. With this, we can have a local server reload static web pages.
+
+有很多扩展供你选择。但是我们第一个要下载的扩展是 [Live Server][3]。有了它我们就有了一个能够加载静态网页的本地服务器。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/Screenshot-2021-01-20-at-17.56.38.png)
 
 Live Server Extension
 
+Live Server 扩展
+
 For example, if we go to our  `index.html`  and open the Command Palette and search for  **Live Server: Open with Live Server**  you can see that a new tab on the browser is opened.
+
+例如，我们要预览 `index.html` 打开命令面板搜索 **Live Server: 用 Live Server 打开**，点击它，你会看到一个新的标签页在浏览器上。
 
 And if we create a new element on our HTML, for example  `<h1>VScode Introduction<h1/>`, after we save the page will automatically be reloaded and we can see the changes. In  `index.html`, you can also open the live server with the  **go live**  button on the status bar.
 
+在我们的 HTML 文件里新建一个元素，比如，`<h1>VScode Introduction<h1/>`，在我们保存页面后，网页会自动加载，我们就可以看到改变。活动页面在 `index.html` 时，可以直接点击状态栏的 **Go Live** 打开 Live Server。
+
 ## Conclusion
+
+## 总结
 
 There are many other useful extensions, but I will cover them in another article and video.
 
+还有其他的很多的有用的扩展，不过我们会在另一篇文章和视频里说明它们。
+
 For now, with this introduction and setup guide, I am sure that you are ready to start your Web Development Journey.
 
-That concludes the article. You can follow me on social media for future updates. Otherwise, stay happy coding and see you in future posts.  
+现在，在这份介绍和安装指南的帮助下，我可以肯定你准备好开始你的 Web 开发之旅了。
+
+That concludes the article. You can follow me on social media for future updates. Otherwise, stay happy coding and see you in future posts.
+
+文章到此结束。为了未来的更新，你可以关注我的社交媒体。否则，请继续愉快地编写代码，在以后的帖子中再见。
   
 \_\_\_\_\_\_\_\_\_\_ 🐣 About me \_\_\_\_\_\_\_\_\_\_
+
+\_\_\_\_\_\_\_\_\_\_ 🐣 关于我 \_\_\_\_\_\_\_\_\_\_
 
 - I am the founder of  [DevChallenges][4]
 - Subscribe to  [my Channel][5]
 - Follow  [my Twitter][6]
 - Join  [Discord][7]
+
+- 我创建了 [DevChallenges][4]
+- 订阅 [我的频道][5]
+- 关注 [我的 Twitter][6]
+- 加入 [Discord][7]
 
 [1]: https://code.visualstudio.com/
 [2]: https://docs.emmet.io/cheat-sheet/

@@ -1,6 +1,6 @@
 > -   原文地址：[The Nine Most Common Mistakes Developers Make in JavaScript (and How to Fix Them) JavaScript 编程中最常见的 9 个错误](https://www.freecodecamp.org/news/nine-most-common-mistakes-developers-make-in-javascript/)
 > -   原文作者：Dipto Karmakar
-> -   译者：
+> -   译者：AlexWong258
 > -   校对者：
 
 JavaScript is a [scripting language][1] used in webpages to add functionality and interactivity. For a beginner coming from a different programming language, JavaScript is quite easy to understand. With a few tutorials, you should be able to get started with it right away.

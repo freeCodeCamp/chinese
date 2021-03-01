@@ -3,19 +3,19 @@
 > -   译者：AlexWong258
 > -   校对者：
 
-JavaScript 是一种在网页中使用的【脚本语言】【1】，它可以增加网页的功能和交互性。对熟悉其他编程语言的编程者，JavaScript 很容易理解。跟着一些教程，你应该立刻就能够开始使用它。
+JavaScript 是一种在网页中使用的【脚本语言】【1】，它可以增加网页的功能和交互性。对熟悉其他编程语言的编程者来说，JavaScript 很容易理解。跟着一些教程，你应该立刻就能够开始使用它。
 JavaScript is a [scripting language][1] used in webpages to add functionality and interactivity. For a beginner coming from a different programming language, JavaScript is quite easy to understand. With a few tutorials, you should be able to get started with it right away.
 
-然而，很多初学者还是会犯一些常见的错误。为了帮助你成为一个更好的 JS 编程者，在本文章中，我们将展示九种常见的错误（或者不好的编程习惯）以及相应的解决办法。
+然而，很多初学者还是会犯一些常见的错误。为了帮助你成为一个更好的 JS 编程者，在本文中，我们将展示九种常见的错误（或不好的编程习惯）以及相应的解决办法。
 However, there are a few common mistakes that many beginner programmers make. In this article, we’ll address nine common mistakes (or bad practices) and their solutions to help you become a better JS developer.
 
 ## 混淆赋值运算符（=）和相等比较运算符（==, ===）
 ## Confusing the assignment (=) and equality (==, ===) operators
 
-像它的名字表明的一样，【赋值运算符】【2】是用来给变量赋值的。开发者经常会把它和相等比较运算符混淆。
+从名字可以看出来，【赋值运算符】【2】是用来给变量赋值的。开发者经常会把它和相等比较运算符混淆。
 Like its name implies, the [assignment operator][2](=) is used to assign values to variables. Developers often confuse it with the equality operator.
 
-下面是一个例子：
+来看一个例子：
 Here's an example:
 
 ```javascript
@@ -26,13 +26,13 @@ if ((name = 'nodejs')) {
 // output - nodejs
 ```
 
-在这个例子里，它没有比较变量 name 和字符串 'nodejs' ，而是把 'nodejs' 分配给了 name，因此最后打印出来的是 'nodejs'。
+在这个例子里，它其实并没有比较变量 name 和字符串 'nodejs' ，而是把 'nodejs' 分配给了 name，因此最后打印出来的是 'nodejs'。
 The name variable and ‘nodejs' string are not compared in this case. Instead, 'nodejs' is assigned to name and 'nodejs' is printed to the console.
 
-在 JavaScript 里，双等号（==）和三个等号（===）被称作比较运算符。
+在 JavaScript 里，双等号（==）和三个等号（===）都叫作比较运算符。
 In JavaScript, the double equal sign(==) and triple equal sign(===) are called comparison operators.
 
-对上面的代码来说，这才是比较两个值正确的做法：
+对上面的代码来说，下面才是比较两个值正确的做法：
 For the code above, this is the appropriate way of comparing values:
 
 ```javascript
@@ -54,7 +54,7 @@ The difference between these comparison operators is that the double equals perf
 宽松的比较只比较值，严格比较会同时比较值和数据类型。
 In a loose comparison, only the values are compared. But in a strict comparison, the values and datatype are compared.
 
-下面的代码能更好地解释这一点：
+下面的代码能解释得更清楚：
 The following code explains it better:
 
 ```javascript

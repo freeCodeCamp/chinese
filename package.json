@@ -1,7 +1,7 @@
 {
     "name": "news-translation",
     "version": "1.0.0",
-    "license": "CC BY-NC-SA 4.0",
+    "license": "CC-BY-NC-SA-4.0",
     "homepage": "https://github.com/freeCodeCamp/news-translation#readme",
     "repository": {
         "type": "git",

@@ -70,12 +70,16 @@ The variable number was assigned a string value of 1. When compared with 1 (of n
 
 But when compared using triple equals, it returns false because each value has a different data type.
 
+## 以为回调函数是同步的
 ## Expecting callbacks to be synchronous
 
+回调函数可以用来处理 JavaScript 的异步操作，但是选用 Promise、async/await 更好，因为多重回调函数会导致【回调地狱】【3】。
 Callbacks are one way that JavaScript handles asynchronous operations. Promises and async/await, however, are preferable methods for handling asynchronous operations because multiple callbacks lead to [callback hell][3].
 
+回调函数不是\***\*同步的\*\***，它是延时操作执行完毕之后会被调用的一个函数。
 Callbacks are not \***\*synchronous\*\***. They are used as a function to be called after an operation when a delayed execution completes.
 
+比如全局方法 "setTimeout" ，它第一个参数就是一个回调函数，第二个参数是等待的时间，以毫秒为单位，如下：
 An example is the global `setTimeout​` function which receives a callback function as its first argument and a duration (in ms) as a second argument like so:
 
 ```javascript
@@ -89,10 +93,13 @@ function callback() {
 ​​// I am the first
 ```
 
+300毫秒之后，回调函数 callback 会被调用。但是在它完成前，剩下的代码会继续往下运行，所以 "I am the last" 会被先打印出来。
 After 300 milliseconds, the callback function is called. But before it completes, the rest of the code runs. This is the reason why the last console.log was run first.​​
 
+开发者会犯的一个常见错误是把回调函数误解为同步的。比如，他们会把回调函数的返回值用在其他操作上。
 A common mistake developers make is to misinterpret callbacks as synchronous. For example, a callback which returns a value that would be used for other operations.
 
+比如下面这个错误：
 ​​Here's that mistake:
 
 ```javascript
@@ -108,8 +115,10 @@ function addTwoNumbers() {
 ​​// NaN
 ```
 
+会输出 "NaN" ，因为 "secondNumber" 还未被赋值。在 "firstNumber + secondNumber" 被执行的时候，"secondNumber" 还没有被赋值，因为 "setTimeout" 函数要在 "200毫秒" 后才调用回调函数。
 `NaN`​ is the output because `secondNumber​` is undefined​. At the time of running `firstNumber + secondNumber`, `secondNumber` is still undefined because the `setTimeout` function would execute the callback after `200ms`.
 
+最好的解决办法是把剩下的代码放在回调函数里去执行：
 The best way to approach this is to execute the rest of the code in the callback function:
 
 ```javascript

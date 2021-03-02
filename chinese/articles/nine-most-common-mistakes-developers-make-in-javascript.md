@@ -200,9 +200,10 @@ The best ways to go about retaining the reference to `this`​ in `setTimeout` i
 ​​// JavaScript
 ```
 
-## Disregarding object mutability
+## 忽视对象的易变性
 ## Disregarding object mutability
 
+跟字符串类型、数值类型等这类简单类型不一样，JavaScript 的对象是引用数据类型。比如，在 key-value 型对象中：
 Unlike primitive data types like string, number and so on, in JavaScript objects are reference data types. For example, in key-value objects:
 
 ```javascript
@@ -215,8 +216,10 @@ const obj1 = {
 ​​// programming
 ```
 
+"obj1" 和 "obj2" 持有相同的引用，都指向该对象在内存中的存储位置。
 `obj1​` and `obj2`​ possess the same reference to the location in memory where the object is stored.
 
+在数组中：
 In arrays:
 
 ```javascript
@@ -227,12 +230,16 @@ const arr1 = [2, 3, 4];
 ​​// ['javascript', 3, 4]
 ```
 
+开发者常犯的一个错误是他们会忽略 JavaScript 的本质，然后就会导致一些意想不到的错误。比如，如果五个对象持有同一个对象的引用，那么某个对象就可能会在大范围的代码库里干扰到一些属性。
 A common mistake developers make is they disregard this nature of JavaScript and this results in unexpected errors. For instance, if 5 objects have the same reference to the same object, one of the object may interfere with the properties in a large-scale code base.
 
+当这种情况发生的时候，任何试图去访问原始属性的操作都会返回 undefined 或者可能会抛出异常。
 When this happens, any attempt to access the original properties would return undefined​ or possibly throw an error.
 
+最好的实践是，当你想要复制对象的时候，永远给新的对象创建新的引用。剩余操作符（"..." ES6中引入）可以很好地做到这一点。
 The best practice for this is to always create new references for new objects when you want to duplicate an object. To do this, the rest operator ( `...​` introduced in ES6) is a perfect solution.
 
+比如，在 key-value 型对象中：
 ​​For example, in key-value objects:
 
 ```javascript

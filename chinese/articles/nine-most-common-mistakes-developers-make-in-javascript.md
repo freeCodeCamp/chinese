@@ -3,7 +3,7 @@
 > -   译者：AlexWong258
 > -   校对者：
 
-JavaScript 是一种在网页中使用的【脚本语言】【1】，它可以增加网页的功能和交互性。对熟悉其他编程语言的编程者来说，JavaScript 很容易理解。跟着一些教程，你应该立刻就能够开始使用它。
+JavaScript 是一种在网页中使用的[脚本语言][1]，它可以增加网页的功能和交互性。对熟悉其他编程语言的编程者来说，JavaScript 很容易理解。跟着一些教程，你应该立刻就能够开始使用它。
 JavaScript is a [scripting language][1] used in webpages to add functionality and interactivity. For a beginner coming from a different programming language, JavaScript is quite easy to understand. With a few tutorials, you should be able to get started with it right away.
 
 然而，很多初学者还是会犯一些常见的错误。为了帮助你成为一个更好的 JS 编程者，在本文中，我们将展示九种常见的错误（或不好的编程习惯）以及相应的解决办法。
@@ -12,7 +12,7 @@ However, there are a few common mistakes that many beginner programmers make. In
 ## 混淆赋值运算符（=）和相等比较运算符（==, ===）
 ## Confusing the assignment (=) and equality (==, ===) operators
 
-从名字可以看出来，【赋值运算符】【2】是用来给变量赋值的。开发者经常会把它和相等比较运算符混淆。
+从名字可以看出来，[赋值运算符][2]是用来给变量赋值的。开发者经常会把它和相等比较运算符混淆。
 Like its name implies, the [assignment operator][2](=) is used to assign values to variables. Developers often confuse it with the equality operator.
 
 来看一个例子：
@@ -73,7 +73,7 @@ But when compared using triple equals, it returns false because each value has a
 ## 以为回调函数是同步的
 ## Expecting callbacks to be synchronous
 
-回调函数可以用来处理 JavaScript 的异步操作，但是选用 Promise、async/await 更好，因为多重回调函数会导致【回调地狱】【3】。
+回调函数可以用来处理 JavaScript 的异步操作，但是选用 Promise、async/await 更好，因为多重回调函数会导致[回调地狱][3]。
 Callbacks are one way that JavaScript handles asynchronous operations. Promises and async/await, however, are preferable methods for handling asynchronous operations because multiple callbacks lead to [callback hell][3].
 
 回调函数不是\***\*同步的\*\***，它是延时操作执行完毕之后会被调用的一个函数。
@@ -137,7 +137,7 @@ function addTwoNumbers() {
 ## 对 "this" 错误的引用
 ## Wrong references to `this​`
 
-"this" 是 JavaScript 中经常【被误解的一个概念】【4】。在 JavaScript 里使用 "this"，你得真的理解它的运行原理，因为它跟在别的语言中的表现稍微有些不同。
+"this" 是 JavaScript 中经常[被误解的一个概念][4]。在 JavaScript 里使用 "this"，你得真的理解它的运行原理，因为它跟在别的语言中的表现稍微有些不同。
 `this​` is a commonly [misunderstood concept][4] in JavaScript. To use `this`​ in JavaScript, you really need to understand how it works because it operates a bit differently compared to other languages.
 
 下面是一个使用 "this" 时常见的错误：
@@ -269,7 +269,7 @@ const arr1 = [2, 3, 4];
 ## 在浏览器中存储数组和对象
 ## Saving arrays and objects to browser storage
 
-有时候在使用 JavaScript 的时候，开发者可能会想使用 "localStorage" 来方便地存储数据。但一个常见的错误是试图按原样把【数组和对象】【5】存到 "localStorage" 里。"localStorage" 只接受字符串。
+有时候在使用 JavaScript 的时候，开发者可能会想使用 "localStorage" 来方便地存储数据。但一个常见的错误是试图按原样把[数组和对象][5]存到 "localStorage" 里。"localStorage" 只接受字符串。
 Sometimes, while working with JavaScript, developers may want to take advantage of the `localStorage` for saving values. But a common mistake is trying to save [arrays and objects][5] as-is in the `localStorage`. `localStorage` only accepts strings.
 
 为了存储对象，JavaScript 会把对象转成字符串。结果就是对象会变成 "[Object Object]"，数组元素会变成用逗号分隔的字符串。
@@ -314,7 +314,7 @@ The correct version of the code above would be:
 ## 不设默认值
 ## Not using default values
 
-给动态变量设置【默认值】【6】是一个非常好的实践，可以预防产生意想不到的错误。下面是一个常见错误的例子：
+给动态变量设置[默认值][6]是一个非常好的实践，可以预防产生意想不到的错误。下面是一个常见错误的例子：
 Setting [default values][6] in dynamic variables is a very good practice for preventing unexpected errors. Here's an example of a common mistake:​​
 
 ```javascript
@@ -355,7 +355,7 @@ This example, though minimal, emphasizes the importance of default values. Addit
 ## 变量命名不够恰当
 ## Improper naming of variables
 
-是的，开发者们还是会犯这种错误。命名很难，但开发者别无选择。恰当的【变量】【7】命名和注释一样，都是编程中很好的实践。
+是的，开发者们还是会犯这种错误。命名很难，但开发者别无选择。恰当的[变量][7]命名和注释一样，都是编程中很好的实践。
 Yes, developers still make this mistake. Naming is hard, but developers really have no choice. Comments are good practice in programming, and so is naming [variables][7].
 
 例如：
@@ -395,7 +395,7 @@ const isRaining = false
 ​​// It is not raining
 ```
 
-像上面的代码这样检查【boolean类型的值】【8】是一种常见的编程习惯。虽然这样是可以的，但是在测试某些值的时候就会出现错误。
+像上面的代码这样检查[boolean类型的值][8]是一种常见的编程习惯。虽然这样是可以的，但是在测试某些值的时候就会出现错误。
 It is common practice to check [boolean values][8] as seen in the above code. While this is okay, errors set in when testing some values.
 
 在 JavaScript 里，宽松地比较 "0" 和 "false" 的话，会返回 "true"；宽松地比较 "1" 和 "true" 的话，也返回 "true"。也就是说，如果 "isRaining" 是 "1"，"isRaining" 就会是 "true"。
@@ -428,10 +428,13 @@ if(a === false)...
 if(object.hasOwnProperty(property))...
 ```
 
+## 混淆相加和拼接
 ## Confusing Addition and Concatenation
 
+JavaScript 中的加号 "(+)" 有两个功能：相加和拼接。也就是数字的相加和字符串的拼接。一些开发者经常会误用这个操作符。
 The plus sign `(+)` has two functions in JavaScript: addition and concatenation. Addition is for numbers and Concatenation is for strings. Some developers often misuse this operator.
 
+比如：
 For example:
 
 ```javascript
@@ -449,12 +452,16 @@ const num1 = 30;
 ​​
 ```
 
+把字符串和数值相加时，JavaScript 会把数值转换成字符串，然后把值拼接在一起。数值和数值相加时，会进行数学的相加操作。
 ​​When adding strings and numbers, JavaScript converts the numbers to strings, and concatenates all values. For addition of numbers, a mathematical operation is performed.​​
 
+## 总结
 ## Conclusion
 
+当然，除上面列出来的这些之外，还有更多的错误（有些琐碎细微，有些严重）。所以确保你自己跟紧语言最新的发展。
 There are, of course, more mistakes (some trivial, some serious) than the ones listed above. So just make sure you stay up to date with developments in the language.
 
+学习和避免这些错误可以帮助你开发出更好的、更可靠的 web 应用和工具。
 Studying and avoiding these mistakes will help you build better and more reliable web applications and tools.
 
 [1]: https://en.wikipedia.org/wiki/Scripting_language

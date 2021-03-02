@@ -6,7 +6,7 @@
 JavaScript 是一种在网页中使用的[脚本语言][1]，它可以增加网页的功能和交互性。对熟悉其他编程语言的编程者来说，JavaScript 很容易理解。跟着一些教程，你应该立刻就能够开始使用它。
 JavaScript is a [scripting language][1] used in webpages to add functionality and interactivity. For a beginner coming from a different programming language, JavaScript is quite easy to understand. With a few tutorials, you should be able to get started with it right away.
 
-然而，很多初学者还是会犯一些常见的错误。为了帮助你成为一个更好的 JS 编程者，在本文中，我们将展示九种常见的错误（或不好的编程习惯）以及相应的解决办法。
+然而，很多初学者还是会犯一些常见的错误。为了帮助你成为一个更好的 JS 编程者，在本文中，我们将展示九种常见的错误（或不好的实践）及相应的解决办法。
 However, there are a few common mistakes that many beginner programmers make. In this article, we’ll address nine common mistakes (or bad practices) and their solutions to help you become a better JS developer.
 
 ## 混淆赋值运算符（=）和相等比较运算符（==, ===）
@@ -76,10 +76,10 @@ But when compared using triple equals, it returns false because each value has a
 回调函数可以用来处理 JavaScript 的异步操作，但是选用 Promise、async/await 更好，因为多重回调函数会导致[回调地狱][3]。
 Callbacks are one way that JavaScript handles asynchronous operations. Promises and async/await, however, are preferable methods for handling asynchronous operations because multiple callbacks lead to [callback hell][3].
 
-回调函数不是\***\*同步的\*\***，它是延时操作执行完毕之后会被调用的一个函数。
+回调函数不是\***\*同步的\*\***，它是延时操作执行完毕后会被调用的一个函数。
 Callbacks are not \***\*synchronous\*\***. They are used as a function to be called after an operation when a delayed execution completes.
 
-比如全局方法 "setTimeout" ，它第一个参数就是一个回调函数，第二个参数是等待的时间，以毫秒为单位，如下：
+比如全局方法 "setTimeout" ，它第一个参数就是一个回调函数，第二个参数是等待的时间（以毫秒为单位），如下：
 An example is the global `setTimeout​` function which receives a callback function as its first argument and a duration (in ms) as a second argument like so:
 
 ```javascript
@@ -96,10 +96,10 @@ function callback() {
 300毫秒之后，回调函数 callback 会被调用。但是在它完成前，剩下的代码会继续往下运行，所以 "I am the last" 会被先打印出来。
 After 300 milliseconds, the callback function is called. But before it completes, the rest of the code runs. This is the reason why the last console.log was run first.​​
 
-开发者会犯的一个常见错误是把回调函数误解为同步的。比如，他们会把回调函数的返回值用在其他操作上。
+开发者常犯的一个错误是误以为回调函数是同步的。比如，他们会把回调函数的返回值用在其他操作上。
 A common mistake developers make is to misinterpret callbacks as synchronous. For example, a callback which returns a value that would be used for other operations.
 
-比如下面这个错误：
+例如下面这个错误：
 ​​Here's that mistake:
 
 ```javascript
@@ -137,10 +137,10 @@ function addTwoNumbers() {
 ## 对 "this" 错误的引用
 ## Wrong references to `this​`
 
-"this" 是 JavaScript 中经常[被误解的一个概念][4]。在 JavaScript 里使用 "this"，你得真的理解它的运行原理，因为它跟在别的语言中的表现稍微有些不同。
+"this" 是 JavaScript 中经常[被误解的一个概念][4]。在 JavaScript 里使用 "this"，你得真正理解它的运行原理，因为它跟在别的语言中的表现稍微有些不同。
 `this​` is a commonly [misunderstood concept][4] in JavaScript. To use `this`​ in JavaScript, you really need to understand how it works because it operates a bit differently compared to other languages.
 
-下面是一个使用 "this" 时常见的错误：
+下面是一个使用 "this" 时常犯的错误：
 Here's an example of a common mistake when using `this​`:
 
 ```javascript
@@ -176,10 +176,10 @@ For an object to have called `setTimeout​`, something like `obj.setTimeout...�
 window 里没有 "name"，所以就会导致 "undefined"。
 ​​ `name`​ does not exist on window​, resulting in `undefined`​.
 
-如果想在 setTimeout 函数里保留对 "this" 的引用，最好的办法是使用 "bind"、"call"、"apply" 或者箭头函数（ES6中引入）。跟普通的函数不一样，箭头函数不创造它们自己的 "this"。
+如果想在 setTimeout 函数里把引用保留在 "this" 里，最好的办法是使用 "bind"、"call"、"apply" 或者箭头函数（ES6中引入）。跟普通的函数不一样，箭头函数不创造它们自己的 "this"。
 The best ways to go about retaining the reference to `this`​ in `setTimeout` is to use `bind​`, `call​`, `apply`​ or arrow functions (introduced in ES6). Unlike normal functions, arrow functions do not create their own `this`​.
 
-所以，下面的代码就可以保留对 "this" 的引用：
+所以，下面的代码就可以把引用保留在 "this" 里：
 ​​So, the following will retain its reference to `this​`:​​
 
 ```javascript
@@ -254,6 +254,7 @@ The best practice for this is to always create new references for new objects wh
 ​​// 'JavaScript'
 ```
 
+在数组中：
 ​​In arrays:
 
 ```javascript
@@ -272,7 +273,7 @@ const arr1 = [2, 3, 4];
 有时候在使用 JavaScript 的时候，开发者可能会想使用 "localStorage" 来方便地存储数据。但一个常见的错误是试图按原样把[数组和对象][5]存到 "localStorage" 里。"localStorage" 只接受字符串。
 Sometimes, while working with JavaScript, developers may want to take advantage of the `localStorage` for saving values. But a common mistake is trying to save [arrays and objects][5] as-is in the `localStorage`. `localStorage` only accepts strings.
 
-为了存储对象，JavaScript 会把对象转成字符串。结果就是对象会变成 "[Object Object]"，数组元素会变成用逗号分隔的字符串。
+为了存储对象，JavaScript 会把对象转成字符串。结果就是 object 会变成 "[Object Object]"，数组元素会变成用逗号分隔的字符串。
 In an attempt to save objects, JavaScript converts the object to a string. The result is `[Object Object]` for objects and a comma-separated string for array elements.
 
 例如：
@@ -314,7 +315,7 @@ The correct version of the code above would be:
 ## 不设默认值
 ## Not using default values
 
-给动态变量设置[默认值][6]是一个非常好的实践，可以预防产生意想不到的错误。下面是一个常见错误的例子：
+给动态变量设置[默认值][6]是一个非常好的实践，可以预防发生意想不到的错误。下面是一个常见错误的例子：
 Setting [default values][6] in dynamic variables is a very good practice for preventing unexpected errors. Here's an example of a common mistake:​​
 
 ```javascript
@@ -325,7 +326,7 @@ function addTwoNumbers(a, b) {
 ​​// NaN
 ```
 
-结果是 "NaN"，因为 a 是 未赋值"undefined"，b 也是未赋值 "undefined"。如果设置了默认值，就可以避免这样的错误。比如：
+结果是 "NaN"，因为 a 是未赋值 "undefined"，b 也是未赋值 "undefined"。如果设置了默认值，就可以避免这样的错误。比如：
 The result is `NaN​` because `a`​ is `undefined`​ and `b`​ is `undefined​`. By using default values, errors like this can be prevented. For example:
 
 ```javascript
@@ -338,7 +339,7 @@ function addTwoNumbers(a, b) {
 ​​// 0
 ```
 
-或者，可以像下面这样使用ES6中引入的默认值特性：
+或者，可以像下面这样，使用ES6中引入的默认值特性：
 Alternatively, the default value feature introduced in ES6 can be used like so:
 
 ```javascript
@@ -367,7 +368,7 @@ function total(discount, p) {
 ​​}
 ```
 
-变量 "discount" 可以，但是 "p" 和 "total" 呢？什么的 total？更好的实践应该是这样的：
+变量 "discount" 可以，但是 "p" 和 "total" 呢？什么的 total（总和）？更好的实践应该是这样的：
 The variable `discount`​ is okay, but what about `p`​ or `total​`? Total of what? A better practice for above would be:
 
 ```javascript
@@ -376,7 +377,7 @@ function totalPrice(discount, price) {
 ​​}
 ```
 
-恰当的变量命名很重要，因为在某个时候或者在未来这个开发者可能不会是这个代码库唯一的开发者。
+恰当的变量命名很重要，因为这个代码库可能不会只有一个开发者。
 ​​Properly naming variables is important because a developer may never be the only developer on a codebase at a particular time or in the future.
 
 恰当的命名变量就可以让其他开发者很容易地理解这个项目的工作原理。
@@ -458,7 +459,7 @@ const num1 = 30;
 ## 总结
 ## Conclusion
 
-当然，除上面列出来的这些之外，还有更多的错误（有些琐碎细微，有些严重）。所以确保你自己跟紧语言最新的发展。
+当然，除了上面列出来的这些，还有更多的错误（有些琐碎细微，有些严重）。所以确保你自己跟紧语言最新的发展。
 There are, of course, more mistakes (some trivial, some serious) than the ones listed above. So just make sure you stay up to date with developments in the language.
 
 学习和避免这些错误可以帮助你开发出更好的、更可靠的 web 应用和工具。

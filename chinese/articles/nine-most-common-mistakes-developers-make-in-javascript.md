@@ -311,8 +311,10 @@ The correct version of the code above would be:
 ​​// JavaScript, programming, 45
 ```
 
+## 不设默认值
 ## Not using default values
 
+给动态变量设置【默认值】【6】是一个非常好的实践，可以预防产生意想不到的错误。下面是一个常见错误的例子：
 Setting [default values][6] in dynamic variables is a very good practice for preventing unexpected errors. Here's an example of a common mistake:​​
 
 ```javascript
@@ -323,6 +325,7 @@ function addTwoNumbers(a, b) {
 ​​// NaN
 ```
 
+结果是 "NaN"，因为 a 是 未赋值"undefined"，b 也是未赋值 "undefined"。如果设置了默认值，就可以避免这样的错误。比如：
 The result is `NaN​` because `a`​ is `undefined`​ and `b`​ is `undefined​`. By using default values, errors like this can be prevented. For example:
 
 ```javascript
@@ -335,6 +338,7 @@ function addTwoNumbers(a, b) {
 ​​// 0
 ```
 
+或者，可以像下面这样使用ES6中引入的默认值特性：
 Alternatively, the default value feature introduced in ES6 can be used like so:
 
 ```javascript
@@ -345,6 +349,7 @@ Alternatively, the default value feature introduced in ES6 can be used like so:
 ​​// 0
 ```
 
+这个例子虽然很小，但是强调了默认值的重要性。另外，当预期的值没有出现时，开发者可以提供错误信息或警告信息。
 This example, though minimal, emphasizes the importance of default values. Additionally, developers can provide errors or warning messages when expected values are not provided.
 
 ## Improper naming of variables

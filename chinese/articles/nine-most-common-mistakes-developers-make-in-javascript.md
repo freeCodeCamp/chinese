@@ -352,10 +352,13 @@ Alternatively, the default value feature introduced in ES6 can be used like so:
 这个例子虽然很小，但是强调了默认值的重要性。另外，当预期的值没有出现时，开发者可以提供错误信息或警告信息。
 This example, though minimal, emphasizes the importance of default values. Additionally, developers can provide errors or warning messages when expected values are not provided.
 
+## 变量命名不够恰当
 ## Improper naming of variables
 
+是的，开发者们还是会犯这种错误。命名很难，但开发者别无选择。恰当的【变量】【7】命名和注释一样，都是编程中很好的实践。
 Yes, developers still make this mistake. Naming is hard, but developers really have no choice. Comments are good practice in programming, and so is naming [variables][7].
 
+例如：
 For example:
 
 ```javascript
@@ -364,6 +367,7 @@ function total(discount, p) {
 ​​}
 ```
 
+变量 "discount" 可以，但是 "p" 和 "total" 呢？什么的 total？更好的实践应该是这样的：
 The variable `discount`​ is okay, but what about `p`​ or `total​`? Total of what? A better practice for above would be:
 
 ```javascript
@@ -372,8 +376,10 @@ function totalPrice(discount, price) {
 ​​}
 ```
 
+恰当的变量命名很重要，因为在某个时候或者在未来这个开发者可能不会是这个代码库唯一的开发者。
 ​​Properly naming variables is important because a developer may never be the only developer on a codebase at a particular time or in the future.
 
+恰当的命名变量就可以让其他开发者很容易地理解这个项目的工作原理。
 Naming variables properly will allow contributors easily understand how a project works.
 
 ## Check-up for boolean values

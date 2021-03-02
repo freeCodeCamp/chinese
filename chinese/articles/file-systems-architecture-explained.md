@@ -1,6 +1,6 @@
 > -   原文地址：[What Is a File System? Types of Computer File Systems and How they Work – Explained with Examples](https://www.freecodecamp.org/news/file-systems-architecture-explained/)
 > -   原文作者：Reza Lavarian
-> -   译者：
+> -   译者：michaelhe545
 > -   校对者：
 
 ![What Is a File System? Types of Computer File Systems and How they Work – Explained with Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/pexels-photo-6571015.jpeg)

@@ -1,186 +1,181 @@
 > * 原文地址：[Python VS JavaScript – What are the Key Differences Between The Two Popular Programming Languages?](https://www.freecodecamp.org/news/python-vs-javascript-what-are-the-key-differences-between-the-two-popular-programming-languages/)
 > * 原文作者：Estefania Cassingena Navone
-> * 译者：
+> * 译者：ZhichengChen
 > * 校对者：
 
 ![Python VS JavaScript – What are the Key Differences Between The Two Popular Programming Languages?](https://www.freecodecamp.org/news/content/images/size/w2000/2021/01/Python-vs.-JavaScript-1.png)
 
-**Welcome!**  If you want to learn the differences between Python and JavaScript, then this article is for you.
+**欢迎**！如果你想了解 Python 和 JavaScript 的区别，这篇文章就是为你准备的。
 
-These two languages are very popular and powerful, but they do have key differences. We will cover them in detail here.
+这两门语言都很流行也很强大，但是他们有一些区别。这里会详细介绍。
 
-**In this article, you will learn:**
+**在这篇文章里，你会学到：**
 
--   The different real-world applications of Python and JavaScript.
--   The key syntactic and functional differences between Python and JavaScript.
+-   现实中 Python 和 JavaScript 的应用场景。
+-   Python 和 JavaScript 句法和函数的区别。
 
-**Let's begin!**  ✨
+**开始吧**  ✨
 
-## 🔹 Python VS JavaScript: Real-World Applications
+## 🔹 Python VS JavaScript: 真实世界的应用领域
 
-We will start with a quick tour of their real-world applications.
+我们会快速看一下他们在现实中的应用领域。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-187.png)
 
 ### Python
 
-Python has become an essential tool in virtually every scientific application around the world because of its power and versatility. It is a general-purpose programming language that supports different programming paradigms.
+得益于 Python 的功能强大和灵活多变，它已成为全球几乎所有科学领域中必不可少的工具。 它是一种通用的编程语言，支持不同的编程范式。
 
-It is widely used in scientific and specialized applications, including data science, artificial intelligence, machine learning, computer science education, computer vision and image processing, medicine, biology, and even astronomy.
+Python 广泛应用于科学和特定领域，包括数据科学、人工智能、机器学习、计算机科学教育、计算机视觉和图像处理、医学、生物甚至是天文学。
 
-It is also used for web development. This is where we can start to compare its applications to the applications of JavaScript. Python is used for back-end development, which is the area of web development in charge of creating the elements that users don't see, such as the server side of an application.
-
+Python 也可以用于 web 开发。我们要和 JavaScript 应用对比的就是 Python 的 web 应用。Python 可以用于后端开发，后端开发的程序是 web 开发里用户直接看不到的部分，比如服务端应用程序。
 ### JavaScript
 
-While Python can be used to develop the back-end part of a web application, JavaScript can be used to develop both the back-end and the front-end of the application.
+Python 可以用来开发后端应用，JavaScript 既可以开发后端应用也可以开发前端应用。
 
-The front-end is the part of the application that the user sees and interacts with. Whenever you see or interact with a website or web application, you are using JavaScript "behind the scenes".
+前端是应用里用户可以看见及交互的部分。当你浏览或者操作网站或者 web 应用时，就使用了 JavaScript。
 
-Similarly, when you interact with a mobile app, you might be using JavaScript because frameworks like  [React Native][1]  let us write applications that adapt to different platforms.
+类似的，当你使用移动应用时，也可能用到了 JavaScript，因为一些框架诸如   [React Native][1] 允许我们写一些可以发布到不同平台的移动应用。
 
-JavaScript is so widely used in web development because it is a versatile language that gives us the tools we need to develop the components of a web application.
+JavaScript 在 web 开发里应用的如此广泛也得益于它的灵活性，可以用它来构建各种 web 组件。
 
-### Differences between the applications of Python and JavaScript
+### Python 和 JavaScript 应用领域的区别
 
-In short, developers use Python for a range of scientific applications. They use JavaScript for web development, user-facing functionality, and servers
+简短来说，开发者经常在科学领域使用 Python。而 JavaScript 则用于 web 开发，用户界面交互以及服务端开发。
 
-## 🔸 Python VS JavaScript: Syntax
+## 🔸 Python VS JavaScript: 句法
 
-Now that you know what they are used for, let's see how they are written and the differences in their syntax.
+现在了解了他们的应用领域，来看一看他们写法和句法的不同。
 
-We will cover the differences in their main elements:
+我们会涉及到如下部分：
 
--   Code Blocks
--   Variable Definitions
--   Variable Naming Conventions
--   Constants
--   Data Types and Values
--   Comments
--   Built-in Data Structures
--   Operators
--   Input/Output
--   Conditional Statements
--   For Loops and While Loops
--   Functions
--   Object-Oriented Programming
+-   语句块
+-   变量定义
+-   变量命名约定
+-   常量
+-   数据类型和值
+-   注释
+-   内置数据结构
+-   操作符
+-   输入/输出
+-   条件语句
+-   for 循环和 while 循环
+-   函数
+-   面向对象编程
 
-## Code Blocks in Python and JavaScript
+## Python 和 JavaScript 中的语句块
 
-Each programming language has its own style to define code blocks. Let's see their differences in Python and JavaScript:
+每种编程语言都有他自己的代码块风格，让我们来看看 Python 和 JavaScript 间代码块的区别：
 
-### How Python defines code blocks
+### Python 怎样定义代码块
 
-Python relies on indentation to define code blocks. When a series of continuous lines of code are indented at the same level, they are considered part of the same code block.
+Python 依赖缩进来定义代码块。当一系列连续的代码行缩进级别相同时，代表他们是同一个代码块。
 
-We use this to define conditionals, functions, loops, and basically every compound statement in Python.
+我们在 Python 中用这种方式来定义条件、函数、循环以及每个基本的语句。
 
-These are some examples:
+这里是一些例子：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-127.png)
+Python 中使用缩进来定义代码块
 
-Use of indentation to define code blocks in Python
+**💡 提示:**  一会我们会看到 Python 和 JavaScript 中这些语句的区别，目前只关注缩进就好了。
 
-**💡 Tip:**  We will see the specific differences between these elements in Python and JavaScript in just a moment. At this moment, please focus on the indentation.
+### JavaScript 怎样定义代码块
 
-### How JavaScript defines code blocks
+JavaScript 使用大括号(`{}`)来给相同的代码块分组。
 
-In contrast, in JavaScript we use curly braces (`**{}**`) to group statements that belong to the same code block.
-
-These are some examples:
+这里是一些例子：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-128.png)
+JavaScript 使用大括号来定义代码块
 
-Use of curly braces to define code blocks in JavaScript
+## Python 和 JavaScript 中的变量定义
 
-## Variable Definitions in Python and JavaScript
+赋值语句在任何编程语言里都是最基础的语句。来看一下 怎样在 Python 和 JavaScript 中定义一个变量。
+### 怎样在 Python 中定义一个变量
 
-The assignment statement is one of the most fundamental statements in any programming language. Let's see how we can define a variable in Python and JavaScript.
+在 Python 中定义变量，可以在变量名后跟一个等号(`=`)和要赋给变量的值。
 
-### How to define a variable in Python
-
-To define a variable in Python, we write the name of the variable followed by an equal sign (`**=**`) and the value that will be assigned to the variable.
-
-Like this:
+如下：
 
 ```python
 <variable_name> = <value>
 ```
 
-For example:
+比如：
 
 ```python
 x = 5
 ```
 
-### How to define a variable in JavaScript
+### 怎样在 JavaScript 中定义一个变量
 
-The syntax is very similar in JavaScript, but we just need to add the keyword  `**var**`  before the name of the variable and end the line with a semicolon (`**;**`).
+JavaScript 的句法类似，只需要在变量名前添加关键字 `var`，然后在行末尾添加一个分号（`;`）。
 
-Like this:
+如下：
 
 ```
 var <variable_name> = <value>;
 ```
 
-**💡 Tip:**  When you define a variable using  `**var**`, the variable has function scope.
+**💡 提示:**  当使用 `var`  定义变量时，变量具有函数作用域。
 
-For example:
+举个例子：
 
 ```
 var x = 5;
 ```
 
-We can also use the keyword  `**let**`:
+也可以使用关键字 `let`：
 
 ```
 let <variable_name> = <value>;
 ```
 
-For example:
+举个例子：
 
 ```
 let x = 5;
 ```
 
-**💡 Tip:** In this case, when we use  `**let**`, the variable will have block scope. It will only be recognized in the code block where it was defined.
+**💡 提示:** 在这里，使用 `let` 关键字，变量具有块级作用域。仅可以在定义它的语句块内可用。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-125.png)
+Python 和 JavaScript 中的变量定义
 
-Variable definitions in Python and JavaScript
+💡  **提示：** 在 JavaScript 里，语句结尾有一个分号（`;`）但是在 Python 里，另起一行就代表了语句结束。
 
-💡  **Tip:**  In JavaScript, the end of a statement is marked with a semicolon (`;`) but in Python, we just start a new line to mark the end of a statement.
+## Python 和 JavaScript 里的变量命名约定
 
-## Variable Naming Conventions in Python and JavaScript
+Python 和 JavaScript 遵循两种不同的变量命名约定。
 
-Python and JavaScript follow two different variable naming conventions.
+### Python 怎么命名变量
 
-### How to name variables in Python
+在 Python 里使用 `蛇形命名（snake_case）`。
 
-In Python, we should use the  `**snake_case**`  naming style.
+根据  [Python 编程规范][2]：
 
-According to the  [Python Style Guide][2]:
+> 变量命名遵循和函数命名相同的规范。
+>
+> 函数命名应该 “小写，下划线分割单词” 以提高辨识度。
 
-> Variable names follow the same convention as function names.  
->   
-> Function names should be  **lowercase, with words separated by underscores**  as necessary to improve readability.
-
-Therefore, a typical variable name in Python would look like this:
+因此，Python 里典型的变量命名如下：
 
 ```python
 first_name
 ```
 
-💡  **Tip:**  The style guide also mentions that "`**mixedCase**`  is allowed only in contexts where that's already the prevailing style, to retain backwards compatibility."
+💡  **提示：** 编程规范也提到，如果上下文使用了 `mixedCase`，那么应该保持风格统一。
 
-### How to name variables in JavaScript
+### JavaScript 里怎么命名变量
 
-In contrast, we should use the  `**lowerCamelCase**`  naming style in JavaScript. The name starts with a lowercase letter and then every new word starts with an uppercase letter.
+在 JavaScript 里使用 `小驼峰（lowerCamelCase）` 命名风格。变量名以小写字母开始，每个新的单词以大写字母开始。
 
-According to the  [JavaScript guidelines][3]  article by the MDN Web Docs:
+根据 MDN Web 文档的 [JavaScript 准则][3]：
 
-> For variable names use lowerCamelCasing, and use concise, human-readable, semantic names where appropriate.
+> 变量命名使用小驼峰。命名应该是简洁的、可读的、语义化的。
 
-Therefore, a typical variable name in JavaScript should look like this:
+JavaScript 里典型的命名变量如下：
 
 ```javascript
 firstName
@@ -188,134 +183,134 @@ firstName
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-178.png)
 
-## Constants in Python and JavaScript
+## Python和 JavaScript 里的常量
 
-Great. Now you know more about variables, so let's talk a little bit about constants. Constants are values that cannot be changed during the execution of the program.
+可。现在已经了解了变量，现在来聊一聊常量。常量的值在程序执行期间不可改变。
 
-### How to define constants in Python
+### 怎样在 Python 里定义常量
 
-In Python, we rely on naming conventions to define constants because there are no strict rules in the language to prevent changes to their values.
+在 Python 里，用命名约定来定义常量，在语言没有严格的规则来阻止值的改变。
 
-According to the  [Python Style Guide][4]:
+根据  [Python 编程规范][4]：
 
-> Constants are usually defined on a module level and  **written in all capital letters with underscores separating words**.
+> 常量通常在模块级别定义，单词大写通过下划线分割。
 
-This is the naming style that we should use to define a constant in Python:
+这是在 Python 里定义常量的命名风格：
 
 ```
 CONSTANT_NAME
 ```
 
-For example:
+比如:
 
 ```javascript
 TAX_RATE_PERCENTAGE = 32
 ```
 
-💡  **Tip:**  This serves as a red warning for ourselves and for other developers indicating that this value should not be modified in the program. But technically, the value can still be modified.
+ 💡 **提示：** 这对我们自己和其他开发人员来说是一个提示，表示不应在程序中修改此值。但是技术上，这个值还是能被修改的。
 
-### How to define constants in JavaScript
+# 怎样在 JavaScript 中定义常量
 
-In contrast, in JavaScript we can define constants that cannot be changed in the program, and the variable identifier cannot be reassigned.
+JavaScript 则可以定义不能在程序里修改，无法重新分配修饰符的常量。
 
-But this does not mean that the value itself cannot be changed.
+但这并不意味着值本身不能改变。
 
-According to the article  `**const**`  in  [MDN Web Docs][5]:
+根据  [MDN Web 文档][5] 里的  `const` 文章：
 
-> The  `const`  declaration creates a read-only reference to a value. It does  **not**  mean the value it holds is immutable—just that the variable identifier cannot be reassigned. For instance, in the case where the content is an object, this means the object's contents (e.g., its properties) can be altered.
+> `const`  声明创建了值的一个只读引用。这并不意味着值不能改变 — 只是表示修饰符不能重新分配。比如，如果常量引用的是一个对象，这意味着对象的内容（比如，属性）可以改变。
 
-To define a constant in JavaScript, we add the keyword  `**const**`  before the name of the variable:
+在常量名称前添加 `const` 关键字来定义常量：
 
 ```
 const TAX_RATE_PERCENTAGE = 32;
 ```
 
-If we try to change the value of the constant, we will see this error:
+如果尝试改变常量的值，会报错：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-180.png)
 
-Therefore, the value cannot be changed.
+也就是说，常量的值不能改成另一个值。
 
-**💡 Tip:**  To run and test small code snippets of JavaScript code, you can use the  [console in Chrome Developer Tools][6].
+**💡 提示：** 可以在  [Chrome 开发者工具里的控制台][6] 来运行 JavaScript 代码片段。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-181.png)
 
-## Data Types and Values in Python and JavaScript
+## Python 和 JavaScript 里的数据类型和值
 
-Let's see the main differences between Python and JavaScript data types.
+让我们来看一下 Python 和 JavaScript 的数据类型的区别。
 
-### Numeric Data Types
+### 数值类型
 
-**Python** has three numeric types to help us perform precise calculations for scientific purposes. These numeric types include:  `int`  (integers), `float`  (floating-point numbers), and  `complex`. Each one of them has its own properties, characteristics, and applications.
+**Python** 具有三种数值类型，可帮助我们更科学的执行精确的计算。 这些数字类型包括：`int`（整数），`float`（浮点数）和 `complex`（复数）。 它们中的每一个都有其自己的属性，特征和应用领域。
 
-In contrast,  **JavaScript** has only two numeric types:  `**Number**`  and  `**BigInt**`. Integers and floating-point numbers are both considered to be of type  `**Number**`.
+而  **JavaScript** 只有两种数值类型：`Number`  和  `BigInt`。 `Number` 既可以是整数也可以是浮点数。
 
-According to the article  [Number][7]  in MDN Web Docs:
+根据 MDN Web 文档的  [Number][7]：
 
-> A number literal like  `37`  in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. (JavaScript now has a  [BigInt][8]  type, but it was not designed to replace Number for everyday uses.  `37`  is still a Number, not a BigInt.)
+> JavaScript 代码中的数字如 `37` 是浮点值，而不是整数。 日常使用中没有单独的整数类型。（JavaScript 现在有了 [BigInt][8] 类型，但并非旨在用于替换日常使用的 Number 。`37` 仍然是Number而不是BigInt。）
 
 ### None vs. null
 
-In  **Python**, there is a special value called  `**None**`  that we typically use to indicate that a variable doesn't have a value at a particular point in the program.
+在 **Python** 中，有一个特殊的值叫做 **None**，我们通常使用它来描述变量在程序中没有值的状态。
 
-The equivalent value in  **JavaScript** is  `**null**`, which "represents the intentional absence of any object value" ([source][9]).
+**JavaScript** 中的等效值是 `null`，它表示变量指向尚未创建的对象（[源][9]）。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-144.png)
 
-### The  `undefined`  Value
+### `undefined`  值
 
-In  **JavaScript**, we have a special value that is assigned automatically when we declare a variable without assigning an initial value.
+在 **JavaScript** 中，我们有一个特殊值，当我们声明变量而不分配初始值时会自动分配这个特殊值。
 
-This is an example:
+这是一个例子：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-142.png)
 
-As you can see, the value of the variable  `**x**`  is  `**undefined**`.
+可以看到，变量 `x` 的值是 `undefined`。
 
-In  **Python**, you have to assign an initial value to the variable. We can't declare it without an initial value.
+在 **Python** 中，必须为变量分配一个初始值。 没有初始值会声明失败。
 
-**💡 Tip:** You can assign  `**None**`  as the initial value of a variable in Python to represent the absence of a value.
+**💡提示：** 可以将 **None** 分配为 Python 中的变量作为初始值，以表示不存在任何值。
 
-### Primitive Data Types in Python and JavaScript
+### Python 和 JavaScript 里的原始数据类型
 
-Primitive data types represent the most fundamental values that we can work with in a programming language. Let's compare the primitive data types of these two languages:
+原始数据类型是可以在编程语言中使用的最基本的值。让我们比较一下这两种语言的原始数据类型：
 
--   **Python** has four primitive data types: Integers (`int`), Floats (`float`), Booleans (`bool`), and strings (`str`).
--   **JavaScript** has six primitive data types:  `**undefined**`**,**  Boolean, String, Number,  `**BigInt**`, and  `**Symbol**`.
+- **Python** 具有四种原始数据类型：整数类型（`int`）、浮点数类型（`float`）、布尔类型（`bool`）和字符串类型（`str`）。
+ - **JavaScript** 具有六种原始数据类型：`undefined`、布尔值、字符串、数字、`BigInt` 和 `Symbol`。
 
-## How to Write Comments in Python and JavaScript
+## 怎样在 Python 和 JavaScript 里写注释
 
-Comments are very important to write clean and readable code. Let's see how you can use them in Python and JavaScript:
+注释对于编写简洁易读的代码非常重要。让我们看看如何在 Python 和 JavaScript 中添加注释：
 
-### Single-Line Comments
+### 单行注释
 
--   In  **Python**, we use a hashtag (`**#**`) to write a comment. All the characters on the same line after this symbol are considered part of the comment.
--   In  **JavaScript**, we write two slashes (`**//**`) to start a single-line comment.
+- 在 **Python** 中，我们使用井号（`#`）编写注释。 该符号后面同一行上的所有字符均被视为注释的一部分。
+ - 在 **JavaScript** 中，我们用两个斜线（`//`）开始单行注释。
 
-This is a graphical example:
+这里是一个例子：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-145.png)
 
-In Python:
+在 Python 里:
 
 ```python
 # Comment
 ```
 
-In JavaScript:
+在 JavaScript 里:
 
 ```javascript
 // Comment
 ```
 
-### Multi-Line Comments
+### 多行注释
 
--   In  **Python**, to write a multi-line comment we start each line with a hashtag.
--   In  **JavaScript**, multi-line comments start with a  `**/***`  and end with a  `***/**`. All the characters between these symbols are considered part of the comment.
+- 在 **Python** 中，多行注释的每一行都以井号标签开始。
+- 在 **JavaScript** 中，多行注释以 `/*` 开始，以 `*/` 结尾。 这些符号之间的所有字符均被视为注释的一部分。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-146.png)
 
-In Python:
+在 Python 里:
 
 ```python
 # Multi-line comment 
@@ -323,7 +318,7 @@ In Python:
 # the code in detail.
 ```
 
-In JavaScript:
+在 JavaScript 里:
 
 ```javascript
 /* 
@@ -333,51 +328,52 @@ the code in detail.
 */
 ```
 
-## Built-in Data Structures in Python and JavaScript
+## Python 和 JavaScript 的内置数据结构
 
-The built-in data structures in Python and JavaScript also have key differences.
+Python 和 JavaScript 的内置数据结构也有一些区别。
 
 ### Tuples
 
--   In  **Python**, we have a built-in data structure called  **tuple** that is very similar to a list but immutable. Therefore, it cannot be changed during the execution of the program, so it is used to store data that should not be modified.
--   In  **JavaScript**, there isn't a built-in data structure with these characteristics. Although you can implement a similar data structure with certain features of the language.
+- 在 **Python** 中，我们有一个称为 **tuple** 的内置数据结构，它与 list 非常相似，但不可变。因此，在程序执行期间无法更改它，它可以用于存储不应修改的数据。
+ - 在 **JavaScript** 中，没有内置这种数据结构。但是可以使用语言的某些特性来实现类似的数据结构。
+
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-182.png)
 
 ### Lists vs. Arrays
 
--   In **Python,**  **lists** are used to store a sequence of values in the same data structure. They can be modified, indexed, sliced, and used in the program.
--   In  **JavaScript**, an equivalent version of this data structure is called  **array**.
+- 在 **Python** 中，**lists** 用于在同一数据结构中存储一系列值。 可以在程序中对其进行修改、索引、切片和使用。
+- 在 **JavaScript** 中，此数据结构的等效版本称为 **array**。
 
-This is an example:
+这是一个例子：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-147.png)
 
-### Hash Tables
+### 哈希表
 
--   In  **Python**, there is a built-in data structure called  **dictionary** that helps us map certain values to other values and create key-value pairs. This works as a hash table.
--   **JavaScript** doesn't have this type of built-in data structure, but there are certain ways to reproduce its functionality with certain elements of the language.
+- 在 **Python** 中，有一个称为 **dictionary** 的内置数据结构，可帮助我们将某些值映射到其他值并创建键值对。这可以用作哈希表。
+ - **JavaScript** 没有这种类型的内置数据结构，可以使用语言的某些元素来实现相同的功能。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-183.png)
 
-## Operators in Python and JavaScript
+## Python 和 JavaScript 的运算符
 
-Operators are essential to write expressions in any programming language. Let's see their key differences in Python and JavaScript.
+任何编程语言编写表达式都需要用到运算符。让我们看看 Python 和 JavaScript 中的运算符主要区别。
 
 ### Floor Division
 
-While most of the arithmetic operators work exactly the same in Python and JavaScript, the floor division operator is a little bit different.
+大多数算术运算符在 Python 和 JavaScript 中的用法完全相同，Floor Division 运算符却略有不同。
 
--   In  **Python**, the floor division operation (also called "integer division") is represented with a double slash (`**//**`).
--   In  **JavaScript**, we don't have a particular floor division operator. Instead, we call the  `**Math.floor()**`  method to round down the result to the nearest integer.
+- 在 **Python** 中， 用双斜杠（`//`）表示 floor division 运算（也称为 “整数除法”）。
+ - 在 **JavaScript** 中，没有特定的 floor division 运算符。 但是可以调用 **Math.floor()** 方法将结果四舍五入到最接近的整数。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-149.png)
 
-### Comparing Values and Types
+### 比较值和类型
 
-In  **Python**, we use the  `**==**`  operator to compare if two values and their data types are equal.
+在 **Python** 里使用 `==` 运算符来比较两个值或者数据类型是否相等。
 
-For example:
+比如：
 
 ```python
 # Comparing Two Integers
@@ -388,119 +384,116 @@ True
 False
 ```
 
-In  **JavaScript**, we also have this operator but it works a little bit differently because it converts the two objects to the same type before actually performing the comparison.
+在 **JavaScript** 中也有此运算符，但它的工作方式略有不同，它会在执行比较之前将两个对象转换为相同的类型。
 
-If we check the result of the "integer vs. string" comparison from the previous example using JavaScript (`0 == "0"`), the result is  `**True**`  instead of  `**False**`  because the values are converted to the same data type before being compared:
+如果我们使用 JavaScript 运行上一个示例中的 “整数与字符串” 比较（`0 == "0"`），比较的结果为 `True` 而不是 `False` ，因为 JavaScript 在比较之前会将比较的值转换为相同的数据类型：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-150.png)
 
-In JavaScript, to check if the value  **and** the data type are both equal, we need to use this operator  `**===**`  (a triple equal sign).
+在JavaScript中，要检查值**和**数据类型是否相等，我们需要使用此运算符 `===`（严格相等运算符）。
 
-Now we get the result that we were expecting:
+现在我们得到了预期的结果：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-151.png)
 
-Awesome, right?
+棒！
 
-**💡 Tip:**  The  `**==**`  operator in Python works like the  `**===**`  operator in JavaScript.
+**💡提示：** Python中的 `==` 等价于JavaScript中的 `===` 运算符。
 
-### Logical Operators
+### 逻辑运算符
 
--   In  **Python**, the three logical operators are:  `**and**`,  `**or**`, and  `**not**`.
--   In  **JavaScript**, these operators are:  `**&&**`,  `**||**`, and  `**!**`  (respectively).
+- 在 **Python** 中，三个逻辑运算符为：`and`、`or` 和 `not`。
+- 在 **JavaScript** 中，这些运算符分别为：`&&`、`||` 和 `!` 。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-152.png)
 
-### Type Operators
+### 类型运算符
 
--   In  **Python**, to check the type of an object we use the  `**type()**`  function.
--   In  **JavaScript**, we use the  `**typeof**`  operator.
+- 在 **Python** 中，使用 `type()` 函数来检查对象的类型。
+ -在 **JavaScript** 中，使用 `typeof` 运算符。
 
-This is a graphical description of their syntax:
+这是它们语法的图示：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-153.png)
 
-## Input and Output in Python and JavaScript
+## Python 和 JavaScript 里的输入和输出
 
-Asking for user input and displaying values to the user are very common operations. Let's see how you can do this in Python and JavaScript:
+读取用户输入并向用户显示值是非常常见的操作。让我们看看如何用 Python 和 JavaScript 做到这一点：
 
 ### Input
 
--   In  **Python**, we use the  `**input()**`  function to ask for user input. We write the message within parentheses.
--   In  **JavaScript**, one alternative (if you are running the code on a browser) is to display a small prompt with  `**window.prompt(message)**`  and assign the result to a variable.
+- 在 **Python** 中，使用 `input()` 函数来读取用户输入。 将提示信息写在括号内。
+- 在 **JavaScript** 中，一种替代方法（如果您正在浏览器上运行代码）是显示 `window.prompt(message)` 提示框，并将结果分配给变量。
 
-The main difference between these two approaches is that in Python, the user will be prompted to enter a value in the console while in JavaScript, a small prompt will be displayed on the browser and it will ask the user to enter a value.
+两种方法之间的主要区别是，在 Python 中，将提示用户在控制台中输入值，而在 JavaScript 中，浏览器中会显示一个提示框，用户可以在上面输入值。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-161.png)
 
-💡  **Tip:**  You will see this in the Python console to enter a value:
+💡  **提示：** 您将在 Python 控制台中看到如下提示：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-184.png)
 
-In JavaScript, if you open Chrome Developer tools and enter this line of code in the console:
+对于 JavaScript，可以打开Chrome Developer工具并在控制台中输入以下代码：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-163.png)
 
-This prompt will be displayed:
+会展示如下提示框：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-162.png)
-
-Prompt displayed when window.prompt() is called
+当调用  window.prompt() 时弹出的提示框
 
 ### Output
 
--   In  **Python**, we print a value to the console with the  `**print()**`  function, passing the value within parentheses.
--   In  **JavaScript**, we print a value to the console using  `**console.log()**`, passing the value within parentheses as well.
+- 在 **Python** 中，使用 `print()` 函数将值打印到控制台，括号内是要打印的值。
+- 在 **JavaScript** 中，使用 `console.log()` 向控制台打印一个值，括号内是要打印的值。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-164.png)
 
-💡  **Tip:**  If you are working on a browser, you can also call  `**alert()**`  to display a small prompt with the message (or value) passed within parentheses.
+💡 **提示：** 如果您使用的是浏览器，还可以调用 `alert()` 以显示一个提示框，括号内是要显示的消息（或值）。
 
-## Conditional Statements in Python and JavaScript
+## Python 和 JavaScript 中的条件语句
 
-With conditionals, we can choose what happens in the program based on whether a specific condition is  `**True**`  or  `**False**`. Let's see their differences in Python and JavaScript.
+使用条件，可以根据特定条件是 `True` 还是 `False` 来选择程序中执行的语句。让我们看看它们在 Python 和 JavaScript 中的区别。
 
-### `if`  Statement
+### `if`  语句
 
--   In  **Python**, we rely on indentation to indicate which lines of code belong to the conditional.
--   In  **JavaScript**, we have to surround the condition with parentheses and the code with curly braces. The code should also be indented.
+- 在 **Python** 中，依靠缩进来指示哪些代码行属于条件代码。
+- 在 **JavaScript** 中，必须用括号将条件括起来，用花括号将条件代码括起来。该代码也应缩进。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-154.png)
+Python（左）和 JavaScript（右）的条件
 
-Conditional in Python (left) and JavaScript (right)
+### `if/else`  语句
 
-### `if/else`  Statement
+else 子句在两种语言中都非常相似。唯一的区别是：
 
-The else clause is very similar in both languages. The only difference is that:
+- 在 **Python** 中，要在 `else` 关键字后写一个冒号（`:`）
+- 在 **JavaScript** 中，用花括号（`{}`）将属于此子句的代码括起来。
 
--   In  **Python**,  we write a colon (`**:**`) after the  `**else**`  keyword
--   In  **JavaScript**,  we surround the code that belongs to this clause with curly braces (`**{}**`) .
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-155.png)
 
-### Multiple Conditions
+### 多重条件
 
-To write multiple conditions:
+多重条件用法:
 
--   In  **Python**, we write the keyword  `**elif**`  followed by the condition. After the condition, we write a colon (`:`) and the code indented on the next line.
--   In  **JavaScript**, we write the keywords  `**else if**`  followed by the condition (surrounded by parentheses). After the condition, we write curly braces and the code indented within the braces.
+- 在 **Python** 中，在关键字 `elif` 后跟新的条件。条件后跟一个冒号（`:`），并在下一行缩进显示条件执行的代码。
+- 在 **JavaScript** 中，在关键字 `else if` 后接条件（用括号括起来）。条件后写花括号，并在花括号中缩进代码。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-156.png)
+Python（左）和 JavaScript（右）的条件
 
-Conditional in Python (left) and JavaScript (right)
+### JavaScript 里的 Switch 语句
 
-### Switch in JavaScript
+- 在 **JavaScript** 中，我们还有一个额外的控件结构，可用于根据表达式的值选择要执行的代码。 该语句就是 `switch`。
+- **Python** 没有内置这种控制结构。
 
--   In  **JavaScript**, we have an additional control structure that we can use to choose what happens based on the value of an expression. This statement is called  `**switch**`.
--   **Python** doesn't have this type of built-in control structure.
-
-This is the general syntax of this statement:
+这是该语句的一般语法：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-159.png)
+JavaScript 中的 switch 语句
 
-Switch statement in JavaScript
-
-In JavaScript:
+在 JavaScript 里：
 
 ```javascript
 switch (expression) {
@@ -518,70 +511,66 @@ switch (expression) {
 }
 ```
 
-**💡 Tip:** We can add as many cases as we need and the expression can be a variable.
+**💡提示：** 我们可以根据需要添加任意多个 case，并且表达式可以是变量。
 
-## For Loops and While Loops in Python and JavaScript
+## Python 和 JavaScript 中的 for 循环和 while 循环
 
-Now let's see how we can define different types of loops in Python and JavaScript and their main differences.
+现在，让我们看看如何在 Python 和 JavaScript 中定义不同类型的循环以及它们的主要区别。
 
-### For Loops
+### For 循环
 
-The syntax to define a for loop in Python is relatively simpler than the syntax in JavaScript.
+在 Python 中定义 for 循环的语法比 JavaScript 中的语法相对简单。
 
--   In  **Python**, we write the keyword  `for`  followed by the name of the loop variable, the keyword  `in`, and a call to the  `range()`  function specifying the necessary parameter(s). Then, we write a colon (`:`) followed by the body of the loop indented.
--   In  **JavaScript**, we have to specify several values explicitly. We start with the  `for`  keyword followed by parentheses. Within those parentheses, we define the loop variable with its initial value, the condition that must be  `False`  to stop the loop, and how the variable will be updated on every iteration. Then, we write curly braces to create a code block and within the braces we write the body of the loop indented.
+- 在 **Python** 中，在关键字 `for` 后跟循环变量的名称，关键字`in`，以及对 `range()` 函数的调用，函数需指定必要的参数。然后，我们写一个冒号（`:`），后面跟缩进的循环体。
+-  在 **JavaScript** 中，必须明确指定几个语句。从关键字 `for` 开始，后跟括号。在这些括号内，定义循环变量及其初始值，为 `False` 时终止的循环的条件，以及每次迭代时变量的更新方式。然后，我们编写花括号以创建代码块，并在花括号内编写缩进的循环主体。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-165.png)
+Python（左）和 JavaScript（右）中的 For 循环
 
-For Loop in Python (left) and JavaScript (right)
+### 通过遍历迭代
 
-### Iterating Over Iterables
+可以在 Python 和 JavaScript 中使用 for 循环来迭代可迭代对象的元素。
 
-We can use a for loop in Python and JavaScript to iterate over the elements of an iterable.
-
--   In  **Python**, we write the keyword  `for`  followed by the loop variable, the  `in`  keyword, and the iterable. Then, we write a colon (`:`) and the body of the loop (indented).
--   In  **JavaScript**, we can use a  `**for .. of**`  loop. We write the  `for`  keyword followed by parentheses and within those parentheses, we write the keyword  `var`  followed by the loop variable, the keyword  `of`, and the iterable. We surround the body of the loop with curly braces and then we indent it.
+- 在 **Python** 中，关键字 `for` 后跟循环变量，`in` 关键字和迭代的对象。 然后是冒号（`:`）和循环体（缩进）。
+- 在 **JavaScript** 中，可以使用 `for..of` 循环。 先写 `for` 关键字后跟括号，然后在括号内写上 `var` 关键字后以及循环变量、关键字 `of` 和迭代的对象。接着用花括号将循环的主体括起来，别忘了保持缩进。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-167.png)
+Python（左）和 JavaScript（右）中的 For 循环
 
-For Loop in Python (left) and JavaScript (right)
+在 **JavaScript** 中，还可以用 `for..in` 循环来迭代对象的属性。
 
-In  **JavaScript**, we also have  `**for .. in**`  loops to iterate over the properties of an object.
+根据 [MDN Web 文档][10]:
 
-According to  [MDN Web Docs][10]:
+> `for...in` 语句以任意顺序遍历一个对象的除 Symbol 以外的可枚举属性。
 
-> The  **`for...in`  statement**  iterates over all enumerable properties of an object that are keyed by strings (ignoring ones keyed by Symbols), including inherited enumerable properties.
-
-This is an example:
+这是例子：
 
 ```javascript
 const object = { a: 1, b: 2, c: 3 };
 
-
 ```
 
-The output when we run this code in the console of Chrome Developer Tools is:
+当我们在 Chrome 开发者工具的控制台中运行此代码时，输​​出为：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-168.png)
 
-### While Loops
+### While循环
 
-While loops are very similar in Python and JavaScript.
+While 循环在 Python 和 JavaScript 中非常相似。
 
--   In  **Python**, we write the keyword  `while`  followed by the condition, a colon (`:`), and in a new line, the body of the loop (indented).
--   In  **JavaScript**, the syntax is very similar. The differences are that we have to surround the condition with parentheses and the body of the loop with curly braces.
+- 在 **Python** 中，编写关键字 `while` 后跟条件、冒号（`:`），并在新行中编写循环的主体（缩进）。
+- 在 **JavaScript** 中，语法非常相似。 不同之处在于，必须用括号将条件括起来，并用花括号将循环的主体括起来。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-169.png)
+Python（左）和 JavaScript（右）中的 While 循环
 
-While Loop in Python (left) and JavaScript (right)
+### JavaScript 中的 `do..while` 循环
 
-### `do..while`  Loops in JavaScript
+在 **JavaScript** 中，我们还有一种 Python 中不存在的循环类型。
 
-In  **JavaScript**, we also have a type of loop that doesn't exist in Python.
+这种循环称为 `do..while` 循环，因为它至少执行一次操作，并且在条件为  `True` 时继续运行。
 
-This type of loop is called a  `**do..while**`  loop because it does something at least once and it continues running while a condition is  `True`.
-
-This is the basic syntax:
+这是基本语法：
 
 ```javascript
 do {
@@ -589,28 +578,27 @@ do {
 } while (condition);
 ```
 
-💡  **Tip:**  This type of loop guarantees that the code will be executed at least once.
+💡 **提示：** 这种类型的循环保证代码将至少执行一次。
 
-This is particularly helpful when we ask for user input because the user will be prompted to enter the input. If the input is valid, we can continue with the program. But if it's not valid, we can prompt the user to enter the value again until it is valid.
+当我们要求用户输入时，这特别有用，因为将提示用户键入值。 如果输入有效，我们可以继续执行该程序。 如果无效，我们可以提示用户再次输入该值，直到有效为止。
 
-## Functions in Python and JavaScript
+## Python 和 JavaScript 中的函数
 
-Functions are incredibly important to write concise, maintainable, and readable programs. The syntax is very similar in Python and JavaScript, but let's analyze their key differences:
+对于编写简洁、可维护和易读的程序，函数非常重要。函数的语法在 Python 和 JavaScript 中非常相似，让我们分析它们的主要区别：
 
--   In  **Python**, we write the keyword  `**def**`  followed by the name of the function, and within parentheses the parameters list. After this list, we write a colon (`:`) and the body of the function (indented).
--   In  **JavaScript**, the only differences are that we define a function using the  `**function**`  keyword and surround the body of the function with curly braces.
+- 在 **Python** 中，关键字 `def` 后跟函数名称，括号内是参数列表。 在此列表之后，跟一个冒号（`:`）和该函数的主体（缩进）。
+- 在 **JavaScript** 中，唯一的区别是我们使用 `function` 关键字定义一个函数，并用花括号将函数的主体括起来。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-170.png)
+Python（左）和 JavaScript（右）中的函数
 
-Function in Python (top) and JavaScript (bottom)
+此外，Python 和 JavaScript 函数之间还有一个非常重要的区别：
 
-In addition, there is a very important difference between Python and JavaScript functions:
+### Function 的参数个数
 
-### Number of Function Arguments
+- 在 **Python** 中，传递给函数调用的参数数量必须与函数定义中定义的参数数量相匹配。 如果不是这种情况，将发生异常。
 
--   In  **Python**, the number of arguments passed to the function call has to match the number of parameters defined in the function definition. If this is not the case, an exception will occur.
-
-This is an example:
+这是一个例子：
 
 ```python
 >>> def foo(x, y):
@@ -618,114 +606,126 @@ This is an example:
 
 ```
 
--   In  **JavaScript**, this is not necessary since parameters are optional. You can call a function with fewer or more arguments than the parameters that were defined in the function definition. Missing arguments are assigned the value  `**undefined**`  by default and extra arguments can be accessed with the  `**arguments**`  object.
+- 在 **JavaScript** 中，这不是必要的，因为参数是可选的。可以传入比函数定义的参数更少或更多的参数来调用函数。默认情况下，缺少的参数会被赋予值 `undefined`，并且额外的参数可以通过 `arguments` 对象进行访问。
 
-This is an example in JavaScript:
+这是 JavaScript 中的一个例子：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-171.png)
 
-Notice how the function was called with three arguments but only two parameters were included in the parameters list of the function definition.
+注意用三个参数调用函数，但是函数定义的参数列表中仅包含两个参数。
 
-💡  **Tip:**  To get the number of arguments passed to the function, you can use  **`arguments.length`** within the function.
+💡 **提示：** 要获取传递给函数的参数数量，您可以在函数内使用 `arguments.length`。
 
-## Object-Oriented Programming in Python and JavaScript
+## Python 和 JavaScript 面向对象编程
 
-Both Python and JavaScript support Object-Oriented Programming, so let's see how you can create and use the main elements of this programming paradigm.
+Python 和 JavaScript 都支持面向对象编程，因此让我们看看如何创建和使用此编程范例的主要元素。
 
 ### Classes
 
-The first line of a class definition is very similar in Python and JavaScript. We write the keyword  `**class**`  followed by the name of the class.
+在 Python 和 JavaScript 中 class 定义的第一行非常相似。 关键字 `class` 后跟类的名称。
 
-The only difference is that:
+唯一的区别是：
 
--   In  **Python**, after the name of the class, we write a colon (`**:**`)
--   In  **JavaScript**, we surround the content of the class with curly braces (`**{}**`)
+- 在 **Python** 中，在 class 名之后，要写一个冒号（`:`）
+- 在 **JavaScript** 中，用大括号（`{}`）包围 class 的内容
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-172.png)
+Python（左）和 JavaScript（右）中的 class 定义
 
-Class definition in Python (left) and JavaScript (right)
+**💡提示：** 在 Python 和 JavaScript 中，类名应以大写字母开头，每个单词也应以大写字母开头。
 
-**💡 Tip:**  In Python and JavaScript, class names should start with an uppercase letter and each word should start with an uppercase letter as well.
+### 构造器和属性
 
-### Constructor and Attributes
+构造函数是一种特殊的方法，当创建类的新实例（新对象）时会调用该方法。 其主要目的是初始化实例的属性。
 
-The constructor is a special method that is called when a new instance of the class (a new object) is created. Its main purpose is to initialize the attributes of the instance.
+- 在 **Python** 中，用于初始化新实例的构造函数称为`init`（前后都有两个下划线）。 在创建类的实例初始化其属性时，会自动调用此方法。 它的参数列表定义了创建实例必须传递的值。 该列表的第一个参数是 `self`。
 
--   In  **Python**, the constructor that initializes the new instance is called  `**init**`  (with two leading and trailing underscores). This method is called automatically when an instance of the class is created to initialize its attributes. Its parameters list defines the values that we have to pass to create the instance. This list starts with  `**self**`  as the first parameter.
--   In  **JavaScript**, the constructor method is called  `**constructor**`  and it has a parameters list as well.
+**💡提示：** 在 Python 中，使用 `self` 来引用实例，而在 JavaScript 中，使用 `this`。
 
-**💡 Tip:** In Python, we use  `**self**`  to refer to the instance while in JavaScript we use  `**this**`.
-
-To assign values to the attributes in  **Python**, we use this syntax:
+使用以下语法，将值分配给 **Python** 中的属性：
 
 ```
 self.attribute = value
 ```
 
-In contrast, we use this syntax in  **JavaScript**:
+而在 **JavaScript**，使用如下语法：
 
 ```
 this.attribute = value;
 ```
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/image-174.png)
+Python（左）和 JavaScript（右）中的 class 例子
 
-Class Example in Python (left) and JavaScript (right)
+## Python 和 JavaScript 中的方法
 
-## Methods in Python and JavaScript
+- 在 **Python** 中，我们使用关键字 `def` 定义方法，然后是方法名以及括号内的参数列表。 该参数列表以 `self` 参数开头，该参数引用正在调用该方法的实例。 在此列表之后，需要跟一个冒号（`:`），并将该方法的主体缩进。
 
--   In  **Python**, we define methods with the  `**def**`  keyword followed by their name and the parameters list within parentheses. This parameters list starts with the  `**self**`  parameter to refer to the instance that is calling the method. After this list, we write a colon (`**:**`) and the body of the method indented.
-
-This is an example:
+这是一个例子：
 
 ```python
+
 class Circle:
-<span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(0, 119, 170);">def</span> <span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(221, 74, 104);">__init__</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>self<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> radius<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> color<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span>
-    self<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>radius <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> radius
-    self<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>color <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> color
 
-<span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(0, 119, 170);">def</span> <span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(221, 74, 104);">calc_diameter</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span>self<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span>
-    <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(0, 119, 170);">return</span> self<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>radius <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(154, 110, 58);">*</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 0, 85);">2</span></code></pre><figcaption style="box-sizing: inherit; margin: 1em auto 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: inherit; font-size: 17.6px; vertical-align: baseline; text-align: center; max-width: 1040px;">Example: Method in a Python Class</figcaption></figure><ul style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px 1.5em 0px 1.3em; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; list-style: disc; max-width: 100%; min-width: 100%;"><li style="box-sizing: inherit; margin: 0px 0px 0.5em; padding: 0px 0px 0px 0.3em; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.6em; font-family: inherit; font-size: 22px; vertical-align: baseline; word-break: break-word;">In<span> </span><strong style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; color: var(--gray85);">JavaScript</strong>, methods are defined by writing their name followed by the parameters list and curly braces. Within the curly braces, we write the body of the method.</li></ul><figure class="kg-card kg-code-card" style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; width: 740px;"><pre class=" language-javascript" style="box-sizing: inherit; margin: 0px; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; color: var(--gray85); background: var(--gray05); text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none; overflow: auto; min-width: 100%; max-width: 100%;"><code class=" language-javascript" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; color: rgb(0, 0, 0); background: transparent; text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none;"><span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(0, 119, 170);">class</span> <span class="token class-name" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(221, 74, 104);">Circle</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span>
+	def __init__(self, radius, color):
+		self.radius = radius
+		self.color = color
 
-<span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(221, 74, 104);">constructor</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token parameter" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline;">radius<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> color</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span>
-    <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(0, 119, 170);">this</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>radius <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> radius<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
-    <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(0, 119, 170);">this</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>color <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> color<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
-<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span>
+	def calc_diameter(self):
+		return self.radius * 2
 
-<span class="token function" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(221, 74, 104);">calcDiameter</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span> <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">{</span>
-    <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(0, 119, 170);">return</span> <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(0, 119, 170);">this</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>radius <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(154, 110, 58);">*</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 0, 85);">2</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">;</span>
-<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span>
+
 ```
 
-Example: Method in a JavaScript Class
+例子：Python Class 里的方法
+
+- 在 **JavaScript** 中，方法是通过编写其名称，后跟参数列表和花括号来定义的。 在花括号内，我们编写方法的主体。
+
+```javascript
+
+class Circle {
+
+    constructor(radius, color) {
+        this.radius = radius;
+        this.color = color;
+    }
+
+    calcDiameter() {
+        return this.radius * 2;
+    }
+}
+
+```
+
+例子：JavaScript Class 里的方法
 
 ### Instances
 
-To create instances of a class:
+创建 class 的实例
 
--   In  **Python**, we write the name of the class and pass the arguments within parentheses.
+- 在 **Python** 中，直接编写类的名称，并在括号内传递参数。
 
 ```python
 my_circle = Circle(5, "Red")
 ```
 
--   In  **JavaScript**, we need to add the  `**new**`  keyword before the name of the class.
+- 在 **JavaScript** 中，需要在类名之前添加 `new` 关键字。
 
 ```javascript
 my_circle = new Circle(5, "Red");
 ```
 
-## 🔹 To Summarize
+## 🔹总结
 
-Python and JavaScript are very powerful languages with different real-world applications.
+Python 和 JavaScript 在不同的应用场景里都是非常强大的语言。
 
-Python can be used for web development and for a wide range of applications, including scientific purposes. JavaScript is mainly used for web development (front-end and back-end) and for mobile app development.
+Python 可用于 Web 开发和其他广泛的应用场景，包括科学研究领域。  JavaScript 主要用于 Web 开发（前端和后端）和移动应用程序开发。
 
-They have important differences, but they both have the same basic elements that we need to write powerful programs.
+它们具有重要的区别，但是它们都具有我们编写功能强大的程序所需的相同基本要素。
 
-**I hope you liked this article and found it helpful.** Now you know the key differences between Python and JavaScript.
+**我希望您喜欢这篇文章并且对您有所帮助。** 现在，您知道 Python 和 JavaScript 之间的主要区别了吧。
 
-⭐  [**Subscribe to my YouTube channel**][11]  and follow me on  [**Twitter**][12]  to find more coding tutorials and tips.
+⭐ [**订阅我的 YouTube 频道**][11]，并在 [**Twitter**][12] 上关注我，以找到更多的编码教程和技巧。
 
   
 

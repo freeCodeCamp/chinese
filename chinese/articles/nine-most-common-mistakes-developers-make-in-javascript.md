@@ -382,6 +382,7 @@ function totalPrice(discount, price) {
 恰当的命名变量就可以让其他开发者很容易地理解这个项目的工作原理。
 Naming variables properly will allow contributors easily understand how a project works.
 
+## 检查 boolean 类型的值
 ## Check-up for boolean values
 
 ```javascript
@@ -394,10 +395,13 @@ const isRaining = false
 ​​// It is not raining
 ```
 
+像上面的代码这样检查【boolean类型的值】【8】是一种常见的编程习惯。虽然这样是可以的，但是在测试某些值的时候就会出现错误。
 It is common practice to check [boolean values][8] as seen in the above code. While this is okay, errors set in when testing some values.
 
+在 JavaScript 里，宽松地比较 "0" 和 "false" 的话，会返回 "true"；宽松地比较 "1" 和 "true" 的话，也返回 "true"。也就是说，如果 "isRaining" 是 "1"，"isRaining" 就会是 "true"。
 ​​In JavaScript, a loose comparison of `0`​ and `false`​ returns `true` and `1`​ and `true​` returns `true`. This means that if `isRaining`​ was `1`​, `isRaining`​ would be `true`.
 
+这也是在对象里经常犯的错误。比如：
 This is also a mistake often made in objects. For example:
 
 ```javascript
@@ -413,8 +417,10 @@ const obj = {
 ​​// number property does not exist
 ```
 
+虽然 "number" 属性存在，但 "obj.number" 返回 "0"，也就是返回 "false"，因此else代码块会被执行。
 Although the `number`​ property exists, `obj.number`​ returns `0`, which is a `falsy` value, therefore the `else​` block is executed.
 
+所以，除非你很确定会出现的值的范围，不然 boolean 类型的值和对象属性应该这样来检查：
 So unless you're sure of the range of values that would be used, boolean values and properties in objects should be tested like this:
 
 ```javascript

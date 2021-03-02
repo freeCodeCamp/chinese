@@ -134,10 +134,13 @@ function addTwoNumbers() {
 ​​// 15
 ```
 
+## 对 "this" 错误的引用
 ## Wrong references to `this​`
 
+"this" 是 JavaScript 中经常【被误解的一个概念】【4】。在 JavaScript 里使用 "this"，你得真的理解它的运行原理，因为它跟在别的语言中的表现稍微有些不同。
 `this​` is a commonly [misunderstood concept][4] in JavaScript. To use `this`​ in JavaScript, you really need to understand how it works because it operates a bit differently compared to other languages.
 
+下面是一个使用 "this" 时常见的错误：
 Here's an example of a common mistake when using `this​`:
 
 ```javascript
@@ -158,10 +161,13 @@ const obj = {
 ​​// undefined
 ```
 
+第一个输出结果是**"JavaScript"**，因为 "this.name" 正确地指向了对象的 name 属性。第二个输出结果是 "**undefined**​"，因为 "this" 已经失去了对对象的属性的引用（包括 name）。
 ​​The first result is **`JavaScript`** because `this.name`​ correctly points to the object's name property. The second result is `**undefined**​` because `this​` has lost reference to the object's properties (including name).
 
+这是因为 "this" 取决于调用了它所在函数的那个对象。每个函数都有一个 "this"，但是它指向哪个对象取决于哪个对象调用了该函数。
 This is because `this​` depends on the object calling the function which it lives in. There is a `this`​ variable in every function but the object it points to is determined by the object calling it.
 
+"obj.printName()" 里的 "this" 直接指向 "obj"；"obj.printNameIn2Secs​" 里的 "this" 直接指向 "obj"；但是回调函数 "setTimeout" 里的 "this" 不指向任何对象，因为它没被任何对象调用。
 The `this​` in `obj.printName()`​ points directly to `obj`​. The `this`​ in `obj.printNameIn2Secs​` points directly to `obj​`. But the `this​` in the callback function of `setTimeout​` does not point to any object because no object called it.
 
 For an object to have called `setTimeout​`, something like `obj.setTimeout...​` would be executed. Since there is no object calling that function, the default object (which is `window`​) is used.

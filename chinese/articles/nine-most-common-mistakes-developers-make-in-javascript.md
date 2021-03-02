@@ -266,12 +266,16 @@ const arr1 = [2, 3, 4];
 ​​// [2, 3, 4]
 ```
 
+## 在浏览器中存储数组和对象
 ## Saving arrays and objects to browser storage
 
+有时候在使用 JavaScript 的时候，开发者可能会想使用 "localStorage" 来方便地存储数据。但一个常见的错误是试图按原样把【数组和对象】【5】存到 "localStorage" 里。"localStorage" 只接受字符串。
 Sometimes, while working with JavaScript, developers may want to take advantage of the `localStorage` for saving values. But a common mistake is trying to save [arrays and objects][5] as-is in the `localStorage`. `localStorage` only accepts strings.
 
+为了存储对象，JavaScript 会把对象转成字符串。结果就是对象会变成 "[Object Object]"，数组元素会变成用逗号分隔的字符串。
 In an attempt to save objects, JavaScript converts the object to a string. The result is `[Object Object]` for objects and a comma-separated string for array elements.
 
+例如：
 For example:
 
 ```javascript
@@ -285,10 +289,13 @@ For example:
 ​​// JavaScript, programming, 45
 ```
 
+对象被这样存储起来的话，就会很难访问它们。以 object 为例，用 ".name" 的方式去访问 object 就会导致异常。这是因为 "[Object Object]" 已经是一个字符串了，它并没有 "name" 属性。
 When objects are saved like this, it becomes difficult to access them. For the object example, accessing the object like `.name​` would result in an error. This is because `[Object Object]` is a string now, without a `​name` property.
 
+想要在 localStorage 里存储对象和数组，更好的方式是使用 "JSON.stringify"（用于把对象转换成字符串）和 "JSON.parse"（用于把字符串转换成对象）。这样就可以很容易地访问对象了。
 A better way to save objects and arrays in local storage is by using `JSON.stringify​`(for converting objects to strings) and `JSON.parse​` (for converting strings to objects). This way, accessing the objects becomes easy.
 
+上面的代码正确的版本应该是：
 The correct version of the code above would be:
 
 ```javascript

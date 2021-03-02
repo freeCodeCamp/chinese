@@ -170,12 +170,16 @@ This is because `this​` depends on the object calling the function which it li
 "obj.printName()" 里的 "this" 直接指向 "obj"；"obj.printNameIn2Secs​" 里的 "this" 直接指向 "obj"；但是回调函数 "setTimeout" 里的 "this" 不指向任何对象，因为它没被任何对象调用。
 The `this​` in `obj.printName()`​ points directly to `obj`​. The `this`​ in `obj.printNameIn2Secs​` points directly to `obj​`. But the `this​` in the callback function of `setTimeout​` does not point to any object because no object called it.
 
+如果有对象调用了 "setTimeout"，会执行类似 "obj.setTimeout..." 这样的语句。既然没有任何对象调用那个函数，就会使用默认对象（也就是 "window" ）。
 For an object to have called `setTimeout​`, something like `obj.setTimeout...​` would be executed. Since there is no object calling that function, the default object (which is `window`​) is used.
 
+window 里没有 "name"，所以就会导致 "undefined"。
 ​​ `name`​ does not exist on window​, resulting in `undefined`​.
 
+如果想在 setTimeout 函数里保留对 "this" 的引用，最好的办法是使用 "bind"、"call"、"apply" 或者箭头函数（ES6中引入）。跟普通的函数不一样，箭头函数不创造它们自己的 "this"。
 The best ways to go about retaining the reference to `this`​ in `setTimeout` is to use `bind​`, `call​`, `apply`​ or arrow functions (introduced in ES6). Unlike normal functions, arrow functions do not create their own `this`​.
 
+所以，下面的代码就可以保留对 "this" 的引用：
 ​​So, the following will retain its reference to `this​`:​​
 
 ```javascript
@@ -196,6 +200,7 @@ The best ways to go about retaining the reference to `this`​ in `setTimeout` i
 ​​// JavaScript
 ```
 
+## Disregarding object mutability
 ## Disregarding object mutability
 
 Unlike primitive data types like string, number and so on, in JavaScript objects are reference data types. For example, in key-value objects:

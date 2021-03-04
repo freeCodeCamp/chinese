@@ -5,23 +5,23 @@
 
 ![JavaScript Array Methods Tutorial – The Most Useful Methods Explained with Examples](https://images.unsplash.com/photo-1566837945700-30057527ade0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDE5fHxjb2Rpbmd8ZW58MHx8fA&ixlib=rb-1.2.1&q=80&w=2000)
 
-If you're a JavaScript developer and want to improve your coding, then you should be familiar with the most commonly used ES5 and ES6+ array methods.
+如果你想要进一步提高自己的JavaScript编程水平，那么你一定要熟练掌握最常使用的ES5和ES6+的数组方法。
 
-These methods make coding a lot easier and also make your code look clean and easy to understand.
+这些数组方法能帮助你轻松编程，同时让代码更加简洁易懂。
 
-So in this article, we will explore some of the most popular and widely used array methods. So let's get started.
+因此，本文列举了最普遍、最常使用的数组方法。
 
-## The Array.forEach Method
+## Array.forEach 方法
 
-The  `Array.forEach`  method has the following syntax:
+`Array.forEach` 方法有以下句法syntax：
 
 ```js
 Array.forEach(callback(currentValue [, index [, array]])[, thisArg]);
 ```
 
-The  `forEach`  method executes a provided function once for every element in the array.
+`forEach` 方法对于数组里的每一个元素都执行一次给定的函数。
 
-Take a look at the below code:
+例如：
 
 ```js
 const months = ['January', 'February', 'March', 'April'];
@@ -37,11 +37,13 @@ April
 
 ```
 
-Here's a  [Code Pen Demo][1].
 
+[代码演示][1]在此.
+
+在 `forEach` 循环回调函数中，数组中的每个元素都会自动作为第一个参数传参到函数中。
 Here, inside the  `forEach`  loop callback function, each element of the array is automatically passed as the first parameter of the function.
 
-The equivalent for loop code for the above example looks like this:
+上述例子中的循环代码也可以写成这样：
 
 ```js
 const months = ['January', 'February', 'March', 'April'];
@@ -56,11 +58,11 @@ April
 
 ```
 
-Here's a  [Code Pen Demo][2].
+[代码演示][2]在此.
 
-The thing you need to keep in mind is that the  `forEach`  method does not return any value.
+需要注意的是，`forEach` 方法不返回任何值。
 
-Take a look at the below code:
+例如：
 
 ```js
 const months = ['January', 'February', 'March', 'April'];
@@ -70,14 +72,14 @@ const returnedValue = months.forEach(function (month) {
 
 ```
 
-Here's a  [Code Pen Demo][3].
+[代码演示][3]在此.
 
-> _Note that_ `_forEach_` _is only used to loop through the array and perform some processing or logging. It does not return any value, even if you explicitly return a value from the callback function (this means that the returned value comes as_ `undefined` _in the above example)._
+> _注意：_ _`_forEach_` _只用于循环数组和执行一些处理或日志记录。它不返回任何值，即使你想要从回调函数中显式地返回值也不行（这意味着在上述例子中返回的值是_`undefined`_）。_
 
-In all the above examples, we have used only the first parameter of the callback function. But the callback function also receives two additional parameters, which are:
+在上述所有例子中，我们只用了回调函数的第一个参数。但回调函数还可以有另外两个参数：
 
--   index - the index of the element which is currently being iterated
--   array - original array which we're looping over
+-   index - 当前迭代的元素索引
+-   array - 正在循环的原始数组
 
 ```js
 const months = ['January', 'February', 'March', 'April'];
@@ -92,13 +94,13 @@ April 3 ["January", "February", "March", "April"]
 
 ```
 
-Here's a  [Code Pen Demo][4].
+[代码演示][4]在此.
 
-Depending on the requirement, you may find it useful to use the  `index`  and  `array`  parameters.
+有时候根据需要，`index` 和 `array` 参数可能会很有用。
 
-### Advantages of using forEach instead of a for loop
+### 在 for 循环中使用 forEach 的优势
 
--   Using a  `forEach`  loop makes your code shorter and easier to understand
+-   使用 `forEach` Using a  `forEach`  loop makes your code shorter and easier to understand
 -   When using a  `forEach`  loop, we don't need to keep track of how many elements are available in the array. So it avoids the creation of an extra counter variable.
 -   Using a  `forEach`  loop makes code easy to debug because there are no extra variables for looping through the array
 -   The  `forEach`  loop automatically stops when all the elements of the array are finished iterating.

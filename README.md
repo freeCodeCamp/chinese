@@ -35,7 +35,7 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 
 **除了在 [Translation-needed](https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3ATranslation-needed) 列表认领文章来翻译，你也可以从[英文专栏](https://www.freecodecamp.org/news)选择自己喜欢的文章，自己[发起 New issue](https://github.com/freeCodeCamp/news-translation/issues/new/choose) 进行翻译。**
 
-如果你对指南有疑问，请在 [freeCodeCamp Chat 聊天室](https://chat.freecodecamp.org/channel/tongyong)提问，我们随时在线和你交流:)
+如果你对指南有疑问，请在 [freeCodeCamp Chat 中文社区聊天室](https://chat.freecodecamp.org/channel/zhongwen)提问，我们随时在线和你交流:)
 
 在翻译过程中，你可能会需要参考以下资料（强烈建议你花十分钟浏览这些资料后，再开始翻译，当然你也可以在翻译过程中随时回来查看）：
 
@@ -62,21 +62,19 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 ### 开放周会
 
 - 时间：每周六下午 13:00 - 15:00（北京时间）
-- 地点：会议室链接 https://join.skype.com/WNwhdeBLA1RT
+- 地点：会议室链接（请微信联系小助手 fcczhongguo 或邮件联系 chinese@freecodecamp.org 获得会议室链接）
 
 参与者无需提前报名，在以上时间内直接进入会议室。请所有参与者务必遵守 [freeCodeCamp 社区行为规范](https://chinese.freecodecamp.org/news/code-of-conduct/)。
 
 **周会流程：**
 - 自我介绍（10min）
-- 介绍 freeCodeCamp 社区概况和翻译计划概况（5min）
-- 反馈在翻译过程中遇到的问题，提出建议（20min）
-- 分享校对建议（20min）
-- 自由翻译&讨论（60min）
-- 总结（5min）
+- 介绍 freeCodeCamp 社区概况和文章、课程、视频翻译计划概况（20min）
+- 反馈在翻译、校对过程中遇到的问题和提出建议（30min）
+- 自由讨论&翻译（60min）
 
 ### 日常讨论
 
-欢迎大家加入 [freeCodeCamp Chat 聊天室](https://chat.freecodecamp.org/channel/tongyong)，可随时讨论翻译、编程等话题。
+欢迎大家加入 [freeCodeCamp Chat 聊天室](https://chat.freecodecamp.org/channel/zhongwen)，可随时讨论翻译、编程等话题。
 
 关于聊天室的详细介绍，请阅读[《freeCodeCamp Chat 上线了！欢迎加入中文开发者社区聊天室！》](https://chinese.freecodecamp.org/news/freecodecamp-chat/)。
 

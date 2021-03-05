@@ -1,6 +1,6 @@
 > -   原文地址：[A Brief History of Responsive Web Design](https://www.freecodecamp.org/news/a-brief-history-of-responsive-web-design/)
 > -   原文作者：Kris Koishigawa
-> -   译者：
+> -   译者：ZhichengChen
 > -   校对者：
 
 ![A Brief History of Responsive Web Design](https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDF8fHJlc3BvbnNpdmUlMjBkZXNpZ258ZW58MHx8fA&ixlib=rb-1.2.1&q=80&w=2000)

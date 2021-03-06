@@ -5,43 +5,44 @@
 
 ![How to Turn Google Sheets into a REST API and Use it with a React Application](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/Pink-Cute-Chic-Vintage-90s-Virtual-Trivia-Quiz-Presentations--28-.png)
 
-Posting data to API's has never been easy. But have you ever used React to post form data to Google Sheets? If not, then this tutorial is for you.
+如今 API 开发已经很简单。 但是你是否尝试过使用 React 将表单数据发布到 Google 表格中？ 如果没有，那么可以了解一下本教程。
 
-Today, we are going to talk about how to POST form data from React to Google Sheets like REST APIs.
+今天，我们将讨论如何将 React 中的表单数据像发送到 REST API 一样发送到 Google Sheets 中。
 
-## First, Create Your React App.
+## 第一步，创建一个 React App
 
-To get started, you can use create-react-app to set up your React app.
+这里使用 create-react-app 创建一个 React app。
 
-Just type  `npx create-react-app react-googlesheets`  to setup the project directory.
+执行 `npx create-react-app react-googlesheets` 创建项目文件。
+
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/Screenshot-2021-02-15-01-00-55.png)
 
-The folder structure
+目录结构
 
-## How to Install Semantic UI
+## 安装 Semantic UI
 
-Semantic UI is a framework used to design and develop beautiful and responsive layouts. It has components for Buttons, Containers, Lists, Inputs, and much more.
+Semantic UI 是用于设计和开发精美响应式布局的框架。 它有按钮、容器、列表、输入框等组件。
 
-To install Semantic UI in your React application, use the following command:
+执行下面的命令在 React 应用中安装 Semantic UI：
 
 ```bash
 npm install semantic-ui-react semantic-ui-css
 ```
 
-After it has done installing, open the index.js file and import the following at the top:
+安装完成后，打开 Index.is 文件，按如下引入资源：
 
 ```bash
 import 'semantic-ui-css/semantic.min.css'
 ```
 
-Now, run the app using the command  **`npm start`**.
+执行 **`npm start`** 命令运行 app。
 
-## Let's create some input boxes
+## 创建一些输入框
 
-Let's create a form and input boxes to get our inputs like name, age, salary, and hobbies from our React App.
+创建一个表单以及一些输入框，以获取 name、age、salary 和 hobbiea。
 
-Here, we are importing Buttons, Form, Container, and Header from the  _semantic-ui-react_  library and creating form fields.
+从   _semantic-ui-react_  库里导入 Buttons,、Form,、Container 和 Header，并创建表单字段。
 
 ```react
 import React, { Component } from 'react'
@@ -87,15 +88,15 @@ App.js
 
 App.css
 
-This is what it'll look like:
+此时界面如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/Screenshot-2021-02-15-01-23-55-1.png)
 
-Output form
+界面
 
-Now, we are done with the UI. Let's add some functionality.
+目前为止，UI 已经搞定。来添加功能
 
-First of all, let's create states for our four form fields in the constructor.
+首先，在 constructor 里为表单字段创建状态。
 
 ```react
 import React, { Component } from 'react'
@@ -145,50 +146,49 @@ this.state = {
 )
 ```
 
-Here, we have four form fields and their respective states. We also have a changeHandler method to track the change in the input values.
+这里，有四个表单字段，分别为其创建状态。还有一个 changeHandler 方法来跟踪输入值的改变。
 
-Let's destructure the states in the render method and add their values into the value attribute of the inputs (line \*).
+在 render 方法里解构状态并将其值添加到 input 的 value 属性里。
 
-The last thing we need is an onSubmit handler. On the form tag, add the onSubmit event and assign the submitHandler method.
+最后要处理的是 onSubmit 方法。在 form 标签里添加 onSubmit 事件并赋值为 submitHandler 方法。
 
-Fill out the form and click submit. You will the inputted data in the console.
+填写表单然后点击提交。输入的数据会现实在 console 上。
 
-And that's it – we have a form that takes name, age, salary, and hobby and logs them into the console.
+现在，有了接收 name、age、salary 和 hobby 并将其打印到 console 的表单。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/Screenshot-2021-02-15-02-13-09.png)
 
-##   
-How to Post the data to Google Sheets
+## 怎样将其发送到 Google Sheets 里
 
-Let's change our Google sheets into a REST API.
+先来把 Google sheets 变成 REST API。
 
-We will be posting data to Google Sheets as a REST API, and for that, we need to install Axios. It is a library that you can use for sending requests to APIs, just like  _fetch._
+以 REST API 的形式向 Google Sheets 发送数据，先安装 Axios。这是一个可以向 API 发起请求的库，就像  _fetch_ 一样。
 
-Open a new Spreadsheet by clicking File, then New, and then Spreadsheet.
+点击 File，然后点击 New，在点击 Spreadsheet 打开一个 Spreadsheet。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/Screenshot-2021-02-15-02-24-46.png)
 
-Name the sheet to name of your choice and save.
+给 sheet 添加一个名字并保存。
 
-Click the share button on the top right of your screen, and edit the permission to public.
+点击屏幕右上方的 share 按钮，编辑权限使其可以被公开访问。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/Screenshot-2021-02-15-02-27-45.png)
 
-Copy the link and go to  [https://sheet.best/][1]  and create your free account.
+复制链接然后访问  [https://sheet.best/][1] 创建一个免费账户。
 
-Create a new connection and paste your copied URL from the Google Sheets in the connection URL box.
+创建一个新的 connection，在 connection 的 URL 输入框粘贴刚刚复制的 Google Sheets 链接。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/Screenshot-2021-02-15-02-30-51.png)
 
-Click on connect. You'll be redirected to your connections page. Here, you can see all your connections. Click on the details of your new connection.
+点击 connect。会跳转到 connections 页。在这里会看到所有的 connections。点击新创建的 connections 查看详情。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/Screenshot-2021-02-15-02-33-25.png)
 
-Copy the CONNECTION URL. This URL will be used as the endpoint for sending POST Requests.
+复制 CONNECTION URL。 该 URL 将用作发送 POST 请求的端点。
 
-Now, let's install Axios. Type  `npm install axios`  in your terminal to install the package.
+现在来安装 Axios。在终端执行 `npm install axios` 安装这个包。
 
-After it has been installed, import it at the top of your file. We will make the POST Request in the submitHandler function.
+安装后，将其导入文件顶部。 我们将在 SubmitHandler 函数中发出 POST 请求。
 
 ```react
 submitHandler = e => {
@@ -200,11 +200,11 @@ axios.post('url', this.state)
 })
 ```
 
-submitHandler Method
+submitHandler 方法
 
-Replace the submitHandler function with the code above. Here, we are using Axios to post the data to the URL and get back the response in the console using the  **.then**  keyword.
+用上面的代码替换 SubmitHandler 函数。 在这里，我们使用 Axios 将数据发送到URL，并通过 **.then** 关键字在控制台中获取响应。
 
-Paste the copied CONNECTION URL  endpoint from  **sheet.best**  and replace it with the URL in axios.post('url')_._
+把 axios.post('url') 中的 URL 替换成 **sheet.best** 中的 CONNECTION URL。
 
 ```react
 submitHandler = e => {
@@ -216,29 +216,29 @@ axios.post('https://sheet.best/api/sheets/a6e67deb-2f00-43c3-89d3-b331341d53ed',
 })
 ```
 
-submitHandler function
+submitHandler 函数
 
-Now, open up Google Sheets and fill up the first columns, that is name, age, salary, and hobby. Please fill them out carefully, or else it will not work. It should be case sensitive.
+现在，打开Google表格，然后填写第一列，即姓name、age、salary 和 hobby。请仔细填写，否则将无法正常工作。 应该区分大小写。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/Screenshot-2021-02-15-02-43-12.png)
 
-Add name, age, salary and hobby fields
+添加 name、age、salary 和 hobby 字段
 
-Now, run your React app and fill in the input fields. You'll see that the data is getting populated into your Google Sheets one by one.
+现在，运行 React 应用程序并填写输入字段。会看到数据正在一列一列地填充到 Google 表格中。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/Screenshot-2021-02-18-14-03-16.png)
 
-React form
+React 表单
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/Screenshot-2021-02-15-02-45-27.png)
 
-Sample Fields
+例子字段
 
-That's all folks. Now you know how to turn Google Sheets into a REST API. Now, you store your data in Google Sheets with a React application.
+就是这些。现在，可以使用 React 应用程序将数据存储在 Google 表格中。
 
-Alternatively, you can  [find the code on Github][2]  to experiment.
+或者，您可以[在 Github 上找到代码][2]进行实验。
 
-> _Happy Learning._
+> _学习愉快。_
 
   
 

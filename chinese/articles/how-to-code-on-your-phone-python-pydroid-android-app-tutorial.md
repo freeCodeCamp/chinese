@@ -1,6 +1,6 @@
 > -   原文地址：[How to Build a Web App on Your Phone – Python & Pydroid Android App Tutorial](https://www.freecodecamp.org/news/how-to-code-on-your-phone-python-pydroid-android-app-tutorial/)
 > -   原文作者：Precious Oladele
-> -   译者：
+> -   译者：ZhichengChen
 > -   校对者：
 
 Hey there, how are you? I'm an 18 year old a backend developer and an aspiring Machine Learning Engineer. And in this article, I'm going to be writing about how to build a web app on your phone using Python 😁. Let's dive into it.

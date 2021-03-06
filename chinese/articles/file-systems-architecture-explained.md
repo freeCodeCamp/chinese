@@ -129,7 +129,7 @@
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/5794340306_caef1e6960_b.jpg)
 
-[**BIOS**](https://www.flickr.com/photos/computerhotline/5794340306) By [Thomas Bresson](https://www.flickr.com/photos/computerhotline/), Licensed under **[CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)**
+[**BIOS**](https://www.flickr.com/photos/computerhotline/5794340306)，图源： [Thomas Bresson](https://www.flickr.com/photos/computerhotline/)， 许可： **[CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)**
 
 当打开计算机电源时，固件是第一个运行的程序。
 
@@ -230,7 +230,7 @@ GPT正在逐步取代MBR，尽管旧PC和新PC仍广泛支持MBR。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/GUID_Partition_Table_Scheme.svg)
 
-**[GUID Partition Table Scheme](https://commons.wikimedia.org/wiki/File:GUID_Partition_Table_Scheme.svg)** By [Kbolino](https://en.wikipedia.org/wiki/User:Kbolino), Licensed under **[CC BY\-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/)**
+**[GUID Partition Table Scheme](https://commons.wikimedia.org/wiki/File:GUID_Partition_Table_Scheme.svg)** ，图源： [Kbolino](https://en.wikipedia.org/wiki/User:Kbolino)， 许可： **[CC BY\-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/)**
 
 在GPT中，所有的引导服务（引导加载程序，引导管理器，预操作系统环境和壳层）都位于名为 **EFI系统分区（简称ESP）**的特殊分区中，UEFI固件可以使用该分区。
 

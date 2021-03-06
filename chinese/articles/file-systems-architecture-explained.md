@@ -3,23 +3,23 @@
 > -   译者：michaelhe545
 > -   校对者：
 
-![What Is a File System? Types of Computer File Systems and How they Work – Explained with Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/pexels-photo-6571015.jpeg)
+![何为文件系统？例解几种计算机文件系统及其运行原理](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/pexels-photo-6571015.jpeg)
 
-It's a bit tricky to explain what exactly a file system is in just one sentence.
+文件系统到底是个啥？单凭一句话来解释清楚这个问题可不容易。
 
-That's why I decided to write an article about it. This post is meant to be a high\-level overview of file systems, but I'll sneak into the lower\-level concepts as well. As long as it doesn't get boring. :)
+所以我决定写下这篇文章来聊这个话题。写这篇帖子的初衷是想从一个比较宏观的角度去谈各种文件系统，但文中时不时也会提及一些微观层面的概念，但愿你读到时不会睡着。 :)
 
-## What is a file system?
+## 什么是文件系统？
 
-Let's start with a simple definition:
+先来上一个简单的定义：
 
-A **file system** defines how files are **named**, **stored**, and **retrieved** from a storage device.
+**文件系统** 决定着从存储设备中对文件进行 **命名**、 **存储** 和 **检索** 的方式。
 
-When people talk about file systems, they might refer to different aspects of a file system depending on the context \- that's where things start to seem knotty.
+当说到“文件系统”一词时，基于不同的语境，人们实际所指的可能是有关“文件系统”一词多重定义的某个方面 \- 这也是让问题变得棘手的地方。
 
-And you might end up asking yourself, WHAT IS A FILE SYSTEM ANYWAY? 🤯
+最后，你可能会“扪心自问”，文件系统到底是个啥？ 🤯
 
-In this guide, I'll help you understand file systems and any conversation about file systems. I'll also cover partitioning and booting as well, to help you understand the concepts surrounding file systems.
+在本份指南，我将帮你理解这一问题，并助你搞定任何关于文件系统的谈话。此外，为了帮助你理解有关文件系统的一些概念，指南也会涉及分区和启动程式的讲解。
 
 To keep this guide manageable, I'll concentrate on Unix\-like environments when explaining the lower\-level structures or console commands. However, the concepts remain relevant to other environments and file systems.
 

@@ -30,7 +30,7 @@ Semantic UI 是用于设计和开发精美响应式布局的框架。 它有按�
 npm install semantic-ui-react semantic-ui-css
 ```
 
-安装完成后，打开 Index.is 文件，按如下引入资源：
+安装完成后，打开 index.is 文件，按如下引入资源：
 
 ```bash
 import 'semantic-ui-css/semantic.min.css'
@@ -40,9 +40,9 @@ import 'semantic-ui-css/semantic.min.css'
 
 ## 创建一些输入框
 
-创建一个表单以及一些输入框，以获取 name、age、salary 和 hobbiea。
+创建一个表单以及一些输入框，以获取 name、age、salary 和 hobbies。
 
-从   _semantic-ui-react_  库里导入 Buttons,、Form,、Container 和 Header，并创建表单字段。
+从   _semantic-ui-react_  库里导入 Buttons、Form、Container 和 Header，并创建表单字段。
 
 ```react
 import React, { Component } from 'react'
@@ -140,9 +140,9 @@ this.state = {
             <label>Hobby</label>
             <input placeholder='Enter your hobby' type="text" name = "hobby" value = {hobby} onChange={this.changeHandler}/>
           </Form.Field>
-      &lt;Button color="blue" type='submit'&gt;Submit&lt;/Button&gt;
-    &lt;/Form&gt;
-  &lt;/Container&gt;
+      <Button color="blue" type='submit'>Submit</Button>;
+    </Form>
+  </Container>
 )
 ```
 
@@ -152,9 +152,9 @@ this.state = {
 
 最后要处理的是 onSubmit 方法。在 form 标签里添加 onSubmit 事件并赋值为 submitHandler 方法。
 
-填写表单然后点击提交。输入的数据会现实在 console 上。
+填写表单然后点击提交。输入的数据会显示在 console 上。
 
-现在，有了接收 name、age、salary 和 hobby 并将其打印到 console 的表单。
+现在，有了接收 name、age、salary 和 hobby 的表单，提交会将信息打印到 console 上。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/Screenshot-2021-02-15-02-13-09.png)
 
@@ -234,7 +234,7 @@ React 表单
 
 例子字段
 
-就是这些。现在，可以使用 React 应用程序将数据存储在 Google 表格中。
+就是这些。现在，可以使用 React 应用程序将数据存储在 Google 表格中啦。
 
 或者，您可以[在 Github 上找到代码][2]进行实验。
 

@@ -1,6 +1,6 @@
 > -   原文地址：[How to make your app's architecture secure right now: separation, configuration, and access](https://www.freecodecamp.org/news/secure-application-basics/)
 > -   原文作者：Victoria Drake
-> -   译者：
+> -   译者：ZivLi
 > -   校对者：
 
 ![How to make your app's architecture secure right now: separation, configuration, and access](https://www.freecodecamp.org/news/content/images/size/w2000/2019/09/cover-2.png)

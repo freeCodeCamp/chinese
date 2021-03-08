@@ -117,7 +117,6 @@ React 促成了包括代码复用、组件化开发在内的几种很好的开�
 
 ```sh
 npx create-react-app todolist
-
 ```
 
 ![cra-start](https://www.freecodecamp.org/news/content/images/2020/11/cra-start.png)
@@ -143,15 +142,15 @@ npx create-react-app todolist
 
 现在你就可以开始开发这个应用程序了！
 
-## React Components
+## React 组件
 
-In the last section you saw how to create your first React application.
+在上一节课程里，你学习了怎么创建你的第一个 React 应用。
 
-This application comes with a series of files that do various things, mostly related to configuration, but there's one file that stands out:  `App.js`.
+这个应用里包含了一系列执行各种操作的文件，大部分都与配置有关，但是有一个文件十分的不同：`App.js`。
 
-`App.js`  is the  **first React Component**  you meet.
+`App.js` 是你遇到的 **第一个 React 组件**。
 
-Its code is this:
+文件中含有如下代码：
 
 ```js
 import React from 'react'
@@ -181,9 +180,9 @@ function App() {
 
 ```
 
-An application built using React, or one of the other popular frontend frameworks like Vue and Svelte for example, is built using dozens of components.
+一个使用 React 或者其他的主流前端框架，如：Vue、Svelte，创建的应用，都是由很多的组件构成的。
 
-But let's start by analyzing this first component. I'm going to simplify this component code like this:
+不过，我们还是先分析这个组件吧。我计划像这样分割代码：
 
 ```js
 import React from 'react'
@@ -196,8 +195,10 @@ function App() {
 ```
 
 You can see a few things here. We  _import_  some things, and we  _export_  a function called  `App`.
+在这段代码中，你可以学习到几个事情。我们使用 _import_ 导入了一些东西，并且用 _export_ 导出了一个名为 `App` 的函数。
 
 The things we import in this case are a JavaScript library (the  `react`  npm package), an SVG image, and a CSS file.
+在这段示例代码中，我们导入了一个 JavaScript 库：(the  `react`  npm package)，一个 SVG 图片，和一个 CSS 文件。
 
 > `create-react-app`  is set up in a way that allows us to import images and CSS to use in our JavaScript, but this is not something you need to care about now. What you need to care about is the concept of a  **component**
 

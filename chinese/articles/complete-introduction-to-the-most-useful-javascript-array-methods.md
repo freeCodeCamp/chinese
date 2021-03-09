@@ -100,21 +100,21 @@ April 3 ["January", "February", "March", "April"]
 
 ### 在 for 循环中使用 forEach 的优势
 
--   使用 `forEach` Using a  `forEach`  loop makes your code shorter and easier to understand
--   When using a  `forEach`  loop, we don't need to keep track of how many elements are available in the array. So it avoids the creation of an extra counter variable.
--   Using a  `forEach`  loop makes code easy to debug because there are no extra variables for looping through the array
--   The  `forEach`  loop automatically stops when all the elements of the array are finished iterating.
+-   使用 `forEach` 能使你的代码更简洁易懂
+-   当使用 `forEach`  循环时，我们不需要跟踪数组里有多少available元素，因此可以避免创建额外的计数变量。
+-   使用 `forEach` 循环使代码更容易debug，因为没有额外的变量用于数组循环。Using a  `forEach`  loop makes code easy to debug because there are no extra variables for looping through the array
+-   当数组里所有的元素都迭代完之后，`forEach`  循环会自动停止。loop automatically stops when all the elements of the array are finished iterating.
 
-### Browser Support
+### 浏览器支持Browser Support
 
--   All modern browsers and Internet Explorer (IE) version 9 and above
--   Microsoft Edge version 12 and above
+-   所有主流浏览器和版本9及以上的IE               All modern browsers and Internet Explorer (IE) version 9 and above
+-   版本12及以上的Microsoft Edge                 Microsoft Edge version 12 and above
 
-## The Array.map Method
+## Array.map 方法
 
-The Array map method is the most useful and widely used array method among all other methods.
+Array map 方法是所有其他数组方法里最实用、最常用的方法。  The Array map method is the most useful and widely used array method among all other methods.
 
-The  `Array.map`  method has the following syntax:
+`Array.map` 方法的句法如下：
 
 ```js
 Array.map(function callback(currentValue[, index[, array]]) {
@@ -122,9 +122,9 @@ Array.map(function callback(currentValue[, index[, array]]) {
 }[, thisArg])
 ```
 
-The  `map`  method executes a provided function once for every element in the array and it  **returns a new transformed array.**
+`map` 方法对于数组中每一个元素，执行一次给定的函数，并**返回一个新的转换后的数组**。   method executes a provided function once for every element in the array and it  **returns a new transformed array.**
 
-Take a look at the below code:
+看下面这段代码:
 
 ```js
 const months = ['January', 'February', 'March', 'April'];
@@ -134,11 +134,11 @@ const transformedArray = months.map(function (month) {
 
 ```
 
-Here's a  [Code Pen Demo][5].
+[代码演示][5]在此.
 
-In the above code, inside the callback function, we’re converting each element to uppercase and returning it.
+在上述代码中，我们在回调函数内部把每个元素转换成大写，并返回它们。In the above code, inside the callback function, we’re converting each element to uppercase and returning it.
 
-The equivalent for loop code for the above example looks like this:
+上述例子的循环代码也可以写成这样：The equivalent for loop code for the above example looks like this:
 
 ```js
 const months = ['January', 'February', 'March', 'April'];
@@ -149,18 +149,18 @@ for(let i = 0; i < months.length; i++) {
 
 ```
 
-Here's a  [Code Pen Demo][6].
+[代码演示][6]在此.
 
-Using  `map`  helps to avoid creating a separate  `converted`  array beforehand for storing the converted elements. So it saves memory space and also the code looks much cleaner using array  `map`, like this:
+使用 `map` 方法使我们无需提前创建一个额外的 `converted` 数组来存储转换后的元素。因此它节约了内存空间，同时也使代码看上去更加简洁，像这样: Using  `map`  helps to avoid creating a separate  `converted`  array beforehand for storing the converted elements. So it saves memory space and also the code looks much cleaner using array  `map`, like this:
 
 ```js
 const months = ['January', 'February', 'March', 'April'];
 
 ```
 
-Here's a  [Code Pen Demo][7].
+[代码演示]在此[7].
 
-Note that the  `map`  method returns a new array that is of the exact same length as the original array.
+注意，`map` 方法会返回一个和原数组一样长度的新数组。Note that the  `map`  method returns a new array that is of the exact same length as the original array.
 
 The difference between the  `forEach`  and  `map`  methods is that  `forEach`  is only used for looping and does not return anything back. On the other hand, the  `map`  method returns a new array that is of the exact same length as the original array.
 

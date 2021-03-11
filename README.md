@@ -62,7 +62,7 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 ### 开放周会
 
 - 时间：每周六下午 13:00 - 15:00（北京时间）
-- 地点：会议室链接（请微信联系小助手 fcczhongguo 或邮件联系 chinese@freecodecamp.org 获得会议室链接）
+- 地点：会议室链接（请在[freeCodeCamp Chat 聊天室](https://chat.freecodecamp.org/channel/zhongwen)留言，获得会议室链接）
 
 参与者无需提前报名，在以上时间内直接进入会议室。请所有参与者务必遵守 [freeCodeCamp 社区行为规范](https://chinese.freecodecamp.org/news/code-of-conduct/)。
 

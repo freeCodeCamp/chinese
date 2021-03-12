@@ -1,31 +1,31 @@
 > * 原文地址：[The Kubernetes Handbook Kubernetes 完全手册](https://www.freecodecamp.org/news/the-kubernetes-handbook/)
 > * 原文作者：Farhan Hasin Chowdhury
-> * 译者：
+> * 译者：ZhichengChen
 > * 校对者：
 
 ![The Kubernetes Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/107889834_1307234906308429_6629041044900498480_n.png)
 
-[Kubernetes][1]  is an open-source container orchestration platform that automates the deployment, management, scaling, and networking of containers.
+[Kubernetes][1]  是一个开放源代码的容器编排平台，可自动执行容器的部署、管理、扩容伸缩和网络管理。
 
-It was developed by  [Google][2]  using the  [Go Programming Language][3], and this amazing technology has been open-source since 2014.
+它是由 [Google][2] 使用  [Go 语言][3] 开发的，这项了不起的技术从 2014 年开始一直是开源的。
 
-According to the  [Stack Overflow Developer Survey - 2020][4], Kubernetes is the  [#3 most loved platform][5]  and  [#3 most wanted platform][6].
+根据  [Stack Overflow 开发者调研报告 - 2020][4]，Kubernetes 是 [#3 最喜爱的平台][5]  以及  [#3 最想要的平台][6]。
 
-Apart from being very powerful, Kubernetes is known as quite hard to get started with. I won't say it's easy, but if you are equipped with the prerequisites and go through this guide attentively and with patience, you should be able to:
+除了功能强大之外，Kubernetes 是公认的难上手。入门确实不容易，但是只要你符合入门条件并且有足够的耐心完成该指南，你将可以：
 
--   Get a solid understanding of the fundamentals.
--   Create and manage Kubernetes clusters.
--   Deploy (almost) any application to a Kubernetes cluster.
+-   对基础知识有深入的了解。
+-   可以创建和管理 Kubernetes 集群。
+-   部署任意应用程序到 Kubernetes 集群上。
 
-## Prerequisites
+## 入门条件
 
--   Familiarity with JavaScript
--   Familiarity with the Linux Terminal
--   Familiarity with Docker (suggested read:  [The Docker Handbook][7])
+-   熟悉 JavaScript
+-   熟悉 Linux 终端
+-   熟悉 Docker (建议阅读:  [The Docker Handbook][7])
 
-## Project Code
+## 项目代码
 
-Code for the example projects can be found in the following repository:
+实例中的代码可以在下边的仓库中找到：
 
 [
 
@@ -39,114 +39,116 @@ Project codes used in “The Kubernetes Handbook” :notebook: - fhsinchy/kubern
 
 ][8]
 
-Spare a ⭐ to keep me motivated
+你的 ⭐ 是我动力的源泉
 
-You can find the complete code in the  `k8s`  branch.
+ `k8s`  分支包含完整的代码。
 
-## Table of Contents
 
--   [Introduction to Container Orchestration and Kubernetes][9]
--   [Installing Kubernetes][10]
--   [Hello World in Kubernetes][11]
-    -   [Kubernetes Architecture][12]
-    -   [Control Plane Components][13]
-    -   [Node Components][14]
-    -   [Kubernetes Objects][15]
+
+## 目录
+
+-   [容器编排和 Kubernetes 简介][9]
+-   [安装 Kubernetes][10]
+-   [Kubernetes 初体验][11]
+    -   [Kubernetes 的架构][12]
+    -   [Control Plane 组件][13]
+    -   [Node 组件][14]
+    -   [Kubernetes 对象][15]
     -   [Pods][16]
     -   [Services][17]
-    -   [The Full Picture][18]
-    -   [Getting Rid of Kubernetes Resources][19]
--   [Declarative Deployment Approach][20]
-    -   [Writing Your First Set of Configurations][21]
-    -   [The Kubernetes Dashboard][22]
--   [Working with Multi-Container Applications][23]
-    -   [Deployment Plan][24]
-    -   [Replication Controllers, Replica Sets, and Deployments][25]
-    -   [Creating Your First Deployment][26]
-    -   [Inspecting Kubernetes Resources][27]
-    -   [Getting Container Logs from Pods][28]
-    -   [Environment Variables][29]
-    -   [Creating The Database Deployment][30]
-    -   [Persistent Volumes and Persistent Volume Claims][31]
-    -   [Dynamic Provisioning of Persistent Volumes][32]
-    -   [Connecting Volumes with Pods][33]
-    -   [Wiring Everything Up][34]
--   [Working with Ingress Controllers][35]
-    -   [Setting-up NGINX Ingress Controller][36]
-    -   [Secrets and Config Maps in Kubernetes][37]
-    -   [Performing Update Rollouts in Kubernetes][38]
-    -   [Combining Configurations][39]
--   [Troubleshooting][40]
--   [Conclusion][41]
+    -   [全景图][18]
+    -   [清除 Kubernetes 相关资源][19]
+-   [声明式部署方法][20]
+    -   [编写您的第一套配置][21]
+    -   [Kubernetes 控制面板 ][22]
+-   [使用多容器应用程序][23]
+    -   [部署计划][24]
+    -   [复用 Controllers, Replica Sets 以及 Deployments][25]
+    -   [创建你的第一个部署][26]
+    -   [调试 Kubernetes 资源][27]
+    -   [从 Pods 获取容器日志][28]
+    -   [环境变量][29]
+    -   [创建数据库部署][30]
+    -   [Persistent Volumes 和 Persistent Volume Claims][31]
+    -   [Persistent Volumes 的动态预配置][32]
+    -   [通过 Pods 连接 Volumes][33]
+    -   [组装起来][34]
+-   [使用 Ingress Controllers][35]
+    -   [设置 NGINX Ingress Controller][36]
+    -   [Kubernetes 中的 Secret 和配置][37]
+    -   [在 Kubernetes 中执行更新发布][38]
+    -   [组合 Configurations][39]
+-   [答疑][40]
+-   [结论][41]
 
-## Introduction to Container Orchestration and Kubernetes
+## 容器编排和 Kubernetes 简介
 
-According to  [Red Hat][42]  —
+摘自  [Red Hat][42]  —
 
-> "Container orchestration is the process of automating the deployment, management, scaling, and networking tasks of containers.  
+> "容器编排是指自动化容器的部署、管理、扩展和联网。
 >   
-> It can be used in any environment where you use containers and can help you deploy the same application across different environments without requiring any redesigning".
+> 容器编排可以在使用容器的任何环境中使用。它可以帮助您在不同环境中部署相同的应用，而无需重新设计。"
 
-Let me show you an example. Assume that you have developed an amazing application that suggests to people what they should eat depending on the time of day.
+让我来给你看一个例子。假设您开发了一个很棒的应用，这个 应用可以根据时间向人们推荐他们应该吃什么。
 
-Now assume that you've containerized the application using Docker and deployed it on AWS.
+假设您已经使用 Docker 容器化了应用并将其部署在了 AWS 上 。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/food-suggestion-application-single-instance.svg)
 
-If the application goes down for any reason, the users lose access to your service immediately.
+如果应用因为某种原因宕机，用户马上就不能访问该服务了。
 
-To solve this issue, you can make multiple copies or replicas of the same application and make it highly available.
+要解决此问题，可以为同一应用程序制作多个副本，使其服务高可用。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/food-suggestion-application-multi-instance.svg)
 
-Even if one of the instances goes down, the other two will be available to the users.
+即使其中一台实例发生故障，其它两台实例也可以为用用户提供服务。
 
-Now assume that your application has become wildly popular among the night owls and your servers are being flooded with requests at night, while you're sleeping.
+假设您的应用程序在熬夜党中流行了起来，在你晚上睡觉的时候涌入大量的请求。
 
-What if all the instances go down due to overload? Who's going to do the scaling? Even if you scale up and make 50 replicas of your application, who's going to check on their health? How are going to set-up the networking so that requests hit the right endpoint? Load balancing is going to be a big concern as well, isn't it?
+如果所有的实例都因为过载而无法响应该怎么办？谁来进行自动伸缩？即使你扩容 了 50 个副本，谁来做健康检查？如何设置网络使使流量打到合适的端点上？负载均衡也是一个大问题，你说呢？
 
-Kubernetes can make things much easier for these kinds of situations. It's a container orchestration platform that consists of several components and it works tirelessly to keep your servers in the state that you desire.
+Kubernetes 可以很容易的搞定这些问题。Kubernetes 是一个由多个组件组成的容器编排平台，它可以一刻不眠的使是你的服务保持在理想状态。
 
-Assume that you want to have 50 replicas of your application running continuously. Even if there is a sudden rise in the user count, the server needs to be scaled up automatically.
+假设你要连续运行 50 个应用程序副本，如果请求量激增，服务器也能自动扩容。
 
-You just tell your needs to Kubernetes and it will do the rest of the heavy lifting for you.
+你只需把你的需求告诉 Kubernetes，它将为你完成其余的繁重工作。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/kube-representation.svg)
 
-Kubernetes will not only implement the state, it'll also maintain it. It will make additional replicas if any of the old ones dies, manage the networking and storage, rollout or rollback updates, or even upscale the server if ever necessary.
+Kubernetes 会实现并维护状态。如果有旧副本挂掉了，它将创建新的副本，管理网络和存储，推出或回滚更新，甚至在必要时升级服务。
 
-## Installing Kubernetes
+## 安装 Kubernetes
 
-Running Kubernetes in your local machine is actually a lot different than running Kubernetes on the cloud. To get Kubernetes up and running, you need two programs.
+实际上，在本地计算机上运行 Kubernetes 与在云平台上运行 Kubernetes 有很大不同。你需要下面两个程序，来启动和运行 Kubernetes。
 
--   [minikube][43]  \- it runs a single-node Kubernetes cluster inside a Virtual Machine (VM) on your local computer.
--   [kubectl][44]  \- The Kubernetes command-line tool, which allows you to run commands against Kubernetes clusters.
+-   [minikube][43]  \- 它可以在本地计算机的虚拟机（VM）上运行单节点 Kubernetes 集群。
+-   [kubectl][44]  \-  Kubernetes 命令行工具，可以在 Kubernetes 集群上执行命令。
 
-Apart from these two programs, you'll also need a hypervisor and a containerization platform.  [Docker][45]  is the obvious choice for the containerization platform. Recommended hypervisors are as follows:
+除了这两个程序之外，你还需要一个 管理程序和一个容器平台。显然 [Docker][45]  就是所需的容器平台。推荐的管理程序如下：
 
--   [Hyper-V][46]  for Windows
--   [HyperKit][47]  for Mac
--   [Docker][48]  for Linux
+-   [Hyper-V][46]  Windows 系统
+-   [HyperKit][47]  Mac 系统
+-   [Docker][48]  Linux 系统
 
-Hyper-V comes built into Windows 10 (Pro, Enterprise, and Education) as an optional feature and can be turned on from the control panel.
+Hyper-V 作为可选功能内置于  Windows 10（Pro、Enterprise、和 Education）中，可以从控制面板中打开。
 
-HyperKit comes bundled with Docker Desktop for Mac as a core component.
+HyperKit 是 Mac 平台 Docker Desktop 的核心组件。
 
-And on Linux, you can bypass the entire hypervisor layer by using Docker directly. It's much faster than using any hypervisor and is the recommended way to run Kubernetes on Linux.
+在 Linux 上，你可以直接通过 Docker 绕过整个管理程序层。它比任何管理程序都高效，是 Linux 上运行 Kubernetes 的推荐方法。
 
-You may go ahead and install any of the above mentioned hypervisors. Or if you want to keep things simple, just get  [VirtualBox][49].
+你可以继续安装上述任何管理程序。或者你想保持简单，只需要获取 [VirtualBox][49]。
 
-For the rest of the article, I'll assume that you're using VirtualBox. Don't worry though, even if you're using something else, there shouldn't be that much of a difference.
+文章的剩余部分，我们假设你正在使用 VirtualBox。别担心，即使你正在使用其他管理程序，区别也不会太大。
 
-> I'll be using  `minikube`  with the Docker driver on a  [Ubuntu][50]  machine throughout the entire article.
+> 整篇文章，我在装有 [Ubuntu][50] 的机器上使用带有 Docker 驱动程序的  `minikube` 完成。
 
-Once you have installed the hypervisor and the containerization platform, it's time to install the  `minikube`  and  `kubectl`  programs.
+安装了管理程序和容器化平台之后，就该安装 `minikube`  和 `kubectl` 程序了。
 
-`kubectl`  usually comes bundled with Docker Desktop on Mac and Windows. Installation instructions for Linux can be found  [here][51].
+如果你使用 Mac 或 Windows，安装完 Docker Desktop 后 `kubectl` 就已经安装了。可在[此处][51]找到 Linux 的安装说明。 
 
-`minikube`, on the other hand, has to be installed on all three of the systems. You can use  [Homebrew][52]  on Mac, and  [Chocolatey][53]  on Windows to install  `minikube`. Installation instructions for Linux can be found  [here][54].
+另外 `minikube` 也是必需要安装的，可以在 Mac 上使用 [Homebrew][52]，Windows 上使用 [Chocolatey][53] 来安装 `minikube`。可以在[此处][54]找到 Linux 的安装说明。 
 
-Once you've installed them, you can test out both programs by executing the following commands:
+安装完成后，可以通过执行以下命令来测试是否安装成功：
 
 ```bash
 minikube version
@@ -155,317 +157,353 @@ minikube version
 # commit: 5664228288552de9f3a446ea4f51c6f29bbdd0e0
 kubectl version
 
+# Client Version: version.Info{Major:"1", Minor:"18", GitVersion:"v1.18.6", GitCommit:"dff82dc0de47299ab66c83c626e08b245ab19037", GitTreeState:"clean", BuildDate:"2020-07-16T00:04:31Z", GoVersion:"go1.14.4", Compiler:"gc", Platform:"darwin/amd64"}
+# Server Version: version.Info{Major:"1", Minor:"18", GitVersion:"v1.18.3", GitCommit:"2e7996e3e2712684bc73f0dec0200d64eec7fe40", GitTreeState:"clean", BuildDate:"2020-05-20T12:43:34Z", GoVersion:"go1.13.9", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
-If you've downloaded the right versions for your operating system and have set up the paths properly, you should be ready to go.
+如果你已经为你的操作系统下载了正确的版本并且设置了正确路径，那么那你已经准备就绪啦。
 
-As I've already mentioned,  `minikube`  runs a single-node Kubernetes cluster inside a Virtual Machine (VM) on your local computer. I'll explain clusters and nodes in greater details in an upcoming section.
+正如我已经提到的，`minikube` 在本地计算机上的虚拟机（VM）中运行一个单节点 Kubernetes 集群。 我将在下一部分中更详细地解释集群和节点。 
 
-For now, understand that  `minikube`  creates a regular VM using your hypervisor of choice and treats that as a Kubernetes cluster.
+现在，可以理解为 `minikube` 使用你选择的管理程序创建常规 VM，并将其视为 Kubernetes 集群。 
 
-> If you face any problems in this section please have a look at the  [Troubleshooting][55]  section at the end of this article.
+> 如果您在本节中遇到任何问题，请查看本文结尾处的[答疑][55]部分。
 
-Before you start  `minikube`, you have to set the correct hypervisor driver for it to use. To set VirtualBox as the default driver, execute the following command:
+在启动 `minikube` 之前，必需正确设置管理程序才能使用。执行如下命令将 VirtualBox 设置为默认驱动程序：
 
 ```bash
 minikube config set driver virtualbox
 
+# ❗ These changes will take effect upon a minikube delete and then a minikube start
 ```
 
-You can replace  `virtualbox`  with  `hyperv`,  `hyperkit`, or  `docker`  as per your preference. This command is necessary for the first time only.
+可以根据需要将 `virtualbox` 替换为  `hyperv`、 `hyperkit`、或者  `docker`。这个命令只需运行一次。
 
-To start  `minikube`, execute the following command:
+执行下面的命令启动 `minikube`：
 
 ```bash
 minikube start
 
+# ? minikube v1.12.1 on Ubuntu 20.04
+# ✨ Using the virtualbox driver based on existing profile
+# ? Starting control plane node minikube in cluster minikube
+# ? Updating the running virtualbox "minikube" VM ...
+# ? Preparing Kubernetes v1.18.3 on Docker 19.03.12 ...
+# ? Verifying Kubernetes components...
+# ? Enabled addons: default-storageclass, storage-provisioner
+# ? Done! kubectl is now configured to use "minikube"
 ```
 
-You can stop  `minikube`  by executing the  `minikube stop`  command.
+可以通过 `minikube stop` 命令来停止  `minikube` 。
 
-## Hello World in Kubernetes
+## Kubernetes 初体验
 
-Now that you have Kubernetes on your local system, it's time to get your hands dirty. In this example you'll be deploying a very simple application to your local cluster and getting familiar with the fundamentals.
+现在已经在本地上安装了 Kubernetes，是时候动手啦。在此示例中，会向本地集群部署一个非常简单的应用，并熟悉一下基础知识。
 
-> There will be terminologies like  **pod**,  **service**,  **load balancer**, and so on in this section. Don't stress if you don't understand them right away. I'll go into great details explaining each of them in  [The Full Picture][56]  sub-section.
+> 本节中会涉及到诸如 **pod**,  **service**,  **负载均衡**等术语, 如果你没有搞懂他们，别急，我会在[全景图][56]小节中详细介绍它们。 
 
-If you've started  `minikube`  in the previous section then you're ready to go. Otherwise you'll have to start it now. Once  `minikube`  has started, execute the following command in your terminal:
+如果你在上一小节已经启动了 `minikube`，那么就可以开始啦，否则你需要先启动它哦。启动 `minikube` 后，在终端执行下面的命令：
 
 ```bash
 kubectl run hello-kube --image=fhsinchy/hello-kube --port=80
 
+# pod/hello-kube created
 ```
 
-You'll see the  `pod/hello-kube created`  message almost immediately. The  [run][57]  command runs the given container image inside a pod.
+你会立即看到 `pod/hello-kube created` 消息。 [run][57] 命令用来在 pod 中运行指定的容器映像。 
 
-Pods are like a box that encapsulates a container. To make sure the pod has been created and is running, execute the following command:
+Pods 就像是封装容器的盒子，执行以下命令确保 pod 已经成功创建并运行：
 
 ```bash
 kubectl get pod
 
+# NAME         READY   STATUS    RESTARTS   AGE
+# hello-kube   1/1     Running   0          3m3s
 ```
 
-You should see  `Running`  in the  `STATUS`  column. If you see something like  `ContainerCreating`, wait for a minute or two and check again.
+你应该在  `STATUS`  列看到 `Running` 信息。如果看到类似 `ContainerCreating` 的信息，等待一两分钟，然后再次检查。
 
-Pods by default are inaccessible from outside the cluster. To make them accessible, you have to expose them using a service. So, once the pod is up and running, execute the following command to expose the pod:
+默认情况下，从集群外部无法访问 Pod。若要使其可访问，必需使用 service 使其暴露。运行 pod 后，执行下面的命令暴露 pod：
 
 ```bash
 kubectl expose pod hello-kube --type=LoadBalancer --port=80
 
+# service/hello-kube exposed
 ```
 
-To make sure the load balancer service has been created successfully, execute the following command:
+执行以下命令确保负载均衡服务已经成功创建：
 
 ```bash
 kubectl get service
 
+# NAME         TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+# hello-kube   LoadBalancer   10.109.60.75   <pending>     80:30848/TCP   119s
+# kubernetes   ClusterIP      10.96.0.1      <none>        443/TCP        7h47m
 ```
 
-Make sure you see the  `hello-kube`  service in the list. Now that you have a pod running that is exposed, you can go ahead and access that. Execute the following command to do so:
+请确保在列表中可以看到 `hello-kube`  服务。现在已经有了一个公开的 pod 正在运行，执行下面的命令访问它。
 
 ```bash
 minikube service hello-kube
 
+# |-----------|------------|-------------|-----------------------------|
+# | NAMESPACE |    NAME    | TARGET PORT |             URL             |
+# |-----------|------------|-------------|-----------------------------|
+# | default   | hello-kube |          80 | http://192.168.99.101:30848 |
+# |-----------|------------|-------------|-----------------------------|
+# ? Opening service default/hello-kube in default browser...
 ```
 
-Your default web browser should open automatically and you should see something like this:
+默认的 web 浏览器应该会自动打开，显示类似如下的内容：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/image-85.png)
 
-This is a very simple JavaScript application that I've put together using  [vite][59]  and a little bit of CSS. To understand what you just did, you have to gain a good understanding of the Kubernetes architecture.
+这是一个非常简单的 JavaScript 应用程序，使用了 [vite][59]  和一点 CSS。如果要了解刚才执行的命令，需要熟悉一下 Kubernetes 的架构。
 
-### Kubernetes Architecture
+### Kubernetes 的架构
 
-In the world of Kubernetes, a  **node**  can be either a physical or a virtual machine with a given role. A collection of such machines or servers using a shared network to communicate between each other is called a  **cluster**.
+在 Kubernetes 的世界中，**node** 既可以是一台物理设备也可以是一台指定角色的虚拟机。这样的一组使用一个共享网络彼此通信的设备或者服务器的集合就叫做 **集群（cluster）**。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/nodes-cluster-1.svg)
 
-In your local setup,  `minikube`  is a single node Kubernetes cluster. So instead of having multiple servers like in the diagram above,  `minikube`  has only one that acts as both the main server and the node.
+在本地设置中， `minikube` 是单节点的 Kubernetes 集群。因此 `minikube` 没有像上图的多个服务器，而是只有一台服务器同时充当主服务器和 node。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/minikube-1.svg)
 
-Each server in a Kubernetes cluster gets a role. There are two possible roles:
 
--   **control-plane**  — Makes most of the necessary decisions and acts as sort of the brains of the entire cluster. This can be a single server or a group of server in larger projects.
--   **node**  — Responsible for running workloads. These servers are usually micro managed by the control plane and carries out various tasks following supplied instructions.
+Kubernetes 集群中的每台服务器都会获得一个角色。有两种不同的角色：
 
-Every server in you cluster will have a selected set of components. The number and type of those components can vary depending on the role a server has in your cluster. That means the nodes do not have all the components that the control plane has.
+-   **control-plane**  — 做出大部分必要的决定，并充当整个集群的大脑。它可以是单个服务器或者大型项目中的一组服务器。
+-   **node**  — 负责运行工作负载，这些服务器通常由 control-plane 进行细微管理，并按照提供的说明执行各种任务。
 
-In the upcoming subsections, you'll have a more detailed look into the individual components that make up a Kubernetes cluster.
+集群中每个服务器都将具有一组特定的组件。这些组件的数量和类型根据服务器在集群中承担的角色而有所不同。这意味着节点不必包含 control plane 中的所有的组件。
 
-### Control Plane Components
+在接下来的小节里，将更详细的了解组成 Kubernetes  集群的各个组件。
 
-The control plane in a Kubernetes cluster consists of  **five**  components. These are as follows:
+### Control Plane 组件
 
-1.  **kube-api-server:**  This acts as the entrance to the Kubernetes control plane, responsible for validating and processing requests delivered using client libraries like the  `kubectl`  program.
-2.  **etcd:**  This is a distributed key-value store which acts as the single source of truth about your cluster. It holds configuration data and information about the state of the cluster.  [etcd][60]  is an open-source project and is developed by the folks behind Red Hat. The source code of the project is hosted on the  [etcd-io/etcd][61]  GitHub repo.
-3.  **kube-controller-manager:**  The controllers in Kubernetes are responsible for controlling the state of the cluster. When you let Kubernetes know what you want in your cluster, the controllers make sure that your request is fulfilled. The  `kube-controller-manager`  is all the controller processes grouped into a single process.
-4.  **kube-scheduler:**  Assigning task to a certain node considering its available resources and the requirements of the task is known as scheduling. The  `kube-scheduler`  component does the task of scheduling in Kubernetes making sure none of the servers in the cluster is overloaded.
-5.  **cloud-controller-manager:**  In a real world cloud environment, this component lets you wire-up your cluster with your cloud provider's ([GKE][62]/[EKS][63]) API. This way, the components that interact with that cloud platform stays isolated from components that just interact with your cluster. In a local cluster like  `minikube`, this component doesn't exist.
+Kubernetes 集群中的 control plane 由如下**五**个组件组成：
 
-### Node Components
+1.  **kube-api-server:**  这是 Kubernetes control plane 的入口，负责验证和处理使用客户端库（如  `kubectl`  程序）传递的请求。
+2.  **etcd:**  这是一个分布式键值存储，是整个集群的唯一键值来源。它保存了配置数据和集群的状态信息。[etcd][60] 是一个开源项目，由来自 Red Hat 的人开发。 该项目的源代码托管在 [etcd-io/etcd][61] GitHub 仓库中。 
+3.  **kube-controller-manager:**  Kubernetes 中的 controller 负责控制集群的状态。当请求 Kubernetes 集群内容时，controller 会做出响应。`kube-controller-manager` 是通过一个进程管理所有 controller 进程的程序。
+4.  **kube-scheduler:**  调度就是根据节点的可用资源和任务需要的资源分配任务。`kube-scheduler` 组件执行 Kubernetes 的任务调度以确保集群中所有的服务都不过载。
+5.  **cloud-controller-manager:**  在真实的云环境中，此组件允许你通过 ([GKE][62]/[EKS][63]) API 连接集群。这样，与该云平台交互的组件就和与集群交互的组件隔离开了。在 `minikube` 这一类的组件中，该组件并不存在。
 
-Compared to the control plane, nodes have a very small number of components. These components are as follows:
+### Node 组件
 
-1.  **kubelet:**  This service acts as the gateway between the control plain and each of the nodes in a cluster. Every instructions from the control plain towards the nodes, passes through this service. It also interacts with the  `etcd`  store to keep the state information updated.
-2.  **kube-proxy:**  This small service runs on each node server and maintains network rules on them. Any network request that reaches a service inside your cluster, passes through this service.
-3.  **Container Runtime:**  Kubernetes is a container orchestration tool hence it runs applications in containers. This means that every node needs to have a container runtime like  [Docker][64]  or  [rkt][65]  or  [cri-o][66].
+与 control plane 相比，node 的组件数量非常少，如下：
 
-### Kubernetes Objects
+1.  **kubelet:**  该服务充当 control plane 和集群中每个节点之间的网关。从 control plane 到节点的每条指令都通过此服务。它还与  `etcd`  存储区进行交互以保持状态信息的更新。
+2.  **kube-proxy:**  这个小服务运行在每个节点上，并为其维护网络规则。到达集群内部服务的任何网络请求都将通过此服务。
+3.  **Container Runtime:**  Kubernetes 是一个容器编排工具，因此它最终在容器中运行应用程序。这意味着每个节点都需要一个容器环境，比如 [Docker][64]、[rkt][65]  或者  [cri-o][66]。
 
-According to the Kubernetes  [documentation][67]  —
+### Kubernetes 对象
 
-> "Objects are persistent entities in the Kubernetes system. Kubernetes uses these entities to represent the state of your cluster. Specifically, they can describe what containerized applications are running, the resources available to them, and the policies around their behaviour."
+摘自 Kubernetes  [文档][67]  —
 
-When you create a Kubernetes object, you're effectively telling the Kubernetes system that you want this object to exist no matter what and the Kubernetes system will constantly work to keep the object running.
+> "在 Kubernetes 系统中，*Kubernetes 对象* 是持久化的实体。 Kubernetes 使用这些实体去表示整个集群的状态。特别地，它们描述了如下信息：
+>
+> - 哪些容器化应用在运行（以及在哪些节点上）
+> - 可以被应用使用的资源
+> - 关于应用运行时表现的策略，比如重启策略、升级策略，以及容错策略
+
+当创建 Kubernetes 对象时，实际上是在告诉 Kubernetes 系统这个对象应该存在，任何时候 Kubernetes 系统都应该确保该对象的’
+
+运行。
 
 ### Pods
 
-According to the Kubernetes  [documentation][68]  —
+摘自 Kubernetes  [文档][68]  —
 
-> "Pods are the smallest deployable units of computing that you can create and manage in Kubernetes".
+> "*Pod* 是可以在 Kubernetes 中创建和管理的、最小的可部署的计算单元"。
 
-A pod usually encapsulates one or more containers that are closely related sharing a life cycle and consumable resources.
+pod 通常封装一个或多个紧密相关的容器，共享一个生命周期和消耗性资源。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/pods-1.svg)
 
-Although a pod can house more than one container, you shouldn't just put containers in a pod willy nilly. Containers in a pod must be so closely related, that they can be treated as a single application.
+尽管一个 pod 可以容纳多个容器，但是你不应该随意的把容器放到 pod 中。pod 中的容器必须紧密相关，以至于可以将它们视为单个应用程序。
 
-As an example, your back-end API may depend on the database but that doesn't mean you'll put both of them in the same pod. Throughout this entire article, you won't see any pod that has more than one container running.
+例如，后端的 API 可能依赖数据库，但这并不意味着需要把他们都放在同一个容器中。在整篇文章中，不会有任何 pod 放置多个容器。
 
-Usually, you should not manage a pod directly. Instead, you should work with higher level objects that can provide you much better manageability. You'll learn about these higher level objects in later sections.
+通常，你不应该直接管理 pod。相反，你应该使用可以提供更好的可管理的高级对象。将在后面的部分中介绍这些更高级别的对象。
 
 ### Services
 
-According to the Kubernetes  [documentation][69]  —
+摘自 Kubernetes  [文档][69]  —
 
-> "A service in Kubernetes is an abstract way to expose an application running on a set of pods as a network service".
+> "Kubernetes  的 service 是将运行在一组 [Pods](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/) 上的应用程序公开为网络服务的抽象方法"。
 
-Kubernetes pods are ephemeral in nature. They get created and after some time when they get destroyed, they do not get recycled.
+Kubernetes  pods 是非永久性资源。他们被创造出来，即使过一段时间被销毁了，也不会被回收。
 
-Instead new identical pods take the places of the old ones. Some higher level Kubernetes objects are even capable of creating and destroying pods dynamically.
+相反，新的 pod 取代了旧的 pod。一些更高级别的对象甚至能动态创建和销毁 pod。
 
-A new IP address is assigned to each pod at the time of their creation. But in case of a high level object that can create, destroy, and group together a number of pods, the set of pods running in one moment in time could be different from the set of pods running that application a moment later.
+在创建每个 pod 时，会为其分配一个新的 IP 地址。但是对于可以创建、销毁和组合多个 pod 的高级对象而言，在此刻运行的 pod 集合可能与稍后运行的 pod 集合并不相同。
 
-This leads to a problem: if some set of pods in your cluster depends on another set of pods within your cluster, how do they find out and keep track of each other's IP addresses?
+这就导致了一个问题：如果集群中的某些 pod 依赖于集群中的另一组 pod，怎样定位并跟踪彼此的 IP 地址呢？
 
-The Kubernetes  [documentation][70]  says —
+根据 Kubernetes [文档][70]  —
 
-> "a Service is an abstraction which defines a logical set of Pods and a policy by which to access them".
+> "Kubernetes Service 定义了这样一种抽象：逻辑上的一组 Pod，一种可以访问它们的策略 —— 通常称为微服务"。
 
-Which essentially means that a Service groups together a number of pods that perform the same function and presents them as a single entity.
+本质上讲，service 将执行相同功能的多个 pod 组合在一起，并将它们显示为单个实体。
 
-This way, the confusion of keeping track of multiple pods goes out of the window as that single Service now acts as a sort of communicator for all of them.
+这样一来，如何跟踪多个 Pod 的问题就消失了，因为单个 service 现在充当了所有 pod 的沟通器。
 
-In the  `hello-kube`  example, you created a  `LoadBalancer`  type of service which allows requests from outside the cluster connect to pods running inside the cluster.
+在 `hello-kube` 示例中，创建了一个 `LoadBalancer` 类型的服务，该服务可以将来自集群外部的请求连接到集群内部运行的 pod 上。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/load-balancer-3.svg)
 
-Any time you need to give access to one or more pods to another application or to something outside of the cluster, you should create a service.
+无论何时，在需要授予另一个应用程序或者集群外部某个对象一个或多个 pod 的访问权限时，就应该创建一个 service。
 
-For instance, if you have a set of pods running web servers that should be accessible from the internet, a service will provide the necessary abstraction.
+比如，如果你有一组运行 web 服务的 pod，需要从 internet 进行访问，那么就必需用 service 提供必要的抽象。
 
-### The Full Picture
+### 全景图
 
-Now that you have a proper understanding of the individual Kubernetes components, here is a visual representation of how they work together behind the scenes:
+现在你已经对 Kubernetes 的各个组件有了适当的了解，下图描述了他们是如何协作的：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/components-of-kubernetes.png)
 
 [https://kubernetes.io/docs/concepts/overview/components/][71]
 
-Before I get into explaining the individual details, have a look at what the Kubernetes  [documentation][72]  has to say —
+在解释各个细节之前，先看一下 Kubernetes [文档][72] --
 
-> "To work with Kubernetes objects – whether to create, modify, or delete them – you'll need to use the  [Kubernetes API][73]. When you use the  `kubectl`  command-line interface, the CLI makes the necessary Kubernetes API calls for you."
+> "操作 Kubernetes 对象 —— 无论是创建、修改，或者删除 —— 需要使用  [Kubernetes API][73]。 比如，当使用 `kubectl` 命令行接口时，CLI 会执行必要的 Kubernetes API 调用。"
 
-The first command that you ran was the  `run`  command. It was as follows:
+运行的第一个命令是 `run` 命令，如下：
 
 ```bash
 kubectl run hello-kube --image=fhsinchy/hello-kube --port=80
 ```
 
-The  `run`  command is responsible for creating a new pod that runs the given image. Once you've issued this command, following sets of events occur inside the Kubernetes cluster:
+ `run` 命令负责运行指定的镜像创建新的  pod。运行此命令后，Kubernetes 集群会执行下面的事件：
 
--   The  `kube-api-server`  component receives the request, validates it and processes it.
--   The  `kube-api-server`  then communicates with the  `kubelet`  component on the node and provides the instructions necessary for creating the pod.
--   The  `kubelet`  component then starts working on making the pod up and running and also keeps the state information updated in the  `etcd`  store.
+-    `kube-api-server`  组件接收请求，对其进行校验并进行处理。
+-    `kube-api-server`  接着与节点上的 `kubelet` 进行通信，并提供创建 pod 所需的指令。
+-    `kubelet` 组件开始启动运行 pod，并且在  `etcd`  存储中保持状态的更新。
 
-Generic syntax for the  `run`  command is as follows:
+`run` 命令的通用语法如下：
 
 ```bash
 kubectl run <pod name> --image=<image name> --port=<port to expose>
 ```
 
-You can run any valid container image inside a pod. The  [fhsinchy/hello-kube][74]  Docker image contains a very simple JavaScript application that runs on port 80 inside the container. The  `--port=80`  option allows the pod to expose port 80 from inside the container.
+可以在 pod 内运行任何有效的容器映像。 [fhsinchy/hello-kube][74] Docker 镜像包含了一个非常简单的 JavaScript 应用程序，该应用程序在容器内部的 80 端口上运行。 `--port=80` 选项允许容器从内部暴露 80 端口。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/pods-2.svg)
 
-The newly created pod runs inside the  `minikube`  cluster and is inaccessible from the outside. To expose the pod and make it accessible, the second command that you issued was as follows:
+新创建的 Pod 运行在 `minikube` 集群内部，并且无法从外部访问。要公开容器并使其可用，运行的第二个命令如下：
 
 ```bash
 kubectl expose pod hello-kube --type=LoadBalancer --port=80
 ```
 
-The  `expose`  command is responsible for creating a Kubernetes service of type  `LoadBalancer`  that allows users to access the application running inside the pod.
+ `expose` 命令负责创建类型为 `LoadBalancer` Kubernetes service，该服务允许用户访问 Pod 中运行的应用程序。
 
-Just like the  `run`  command, the  `expose`  command execution goes through same sort of steps inside the cluster. But instead of a pod, the  `kube-api-server`  provides instructions necessary for creating a service in this case to the  `kubelet`  component.
+和  `run`  命令一样， `expose`  命令的执行需要在集群内部运行相似的步骤。在这里， `kube-api-server` 向 `kubelet` 组件提供了创建 service （而不是 pod）所需的指令。
 
-Generic syntax for the  `expose`  command is as follows:
+ `expose`  命令的通用语法如下：
 
 ```bash
 kubectl expose <resource kind to expose> <resource name> --type=<type of service to create> --port=<port to expose>
 ```
 
-The object type can be any valid Kubernetes object type. The name has to match up with the object name you're trying to expose.
+对象类型可以是任意合法的 Kubernetes  对象类型。名称必需和要暴露的对象名称匹配。
 
-`--type`  indicates the type of service you want. There are four different types of services available for internal or external networking.
+`--type` 表示所需的 service 类型。在内部或外部网络中一共有四种不同的 service 类型。
 
-Lastly, the  `--port`  is the port number you want to expose from the running container.
+最后， `--port` 是要从容器中暴露的端口号。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/services-half.svg)
 
-Once the service has been created, the last piece of the puzzle was to access the application running inside the pod. To do that, the command you executed was as follows:
+创建完 service 后，最后一件事就是访问在 pod 的应用程序。为此，需要执行如下命令：
 
 ```bash
 minikube service hello-kube
 ```
 
-Unlike the previous ones, this last command doesn't go to the  `kube-api-server`. Rather it communicates with the local cluster using the  `minikube`  program. The  `service`  command for  `minikube`  returns a full URL for a given service.
+和之前的命令不同 ，最后一个命令没有用 `kube-api-server`。它使用  `minikube`  和本地集群通讯。  `minikube` 的 `service` 命令会返回给定服务的完整 URL。
 
-When you created the  `hello-kube`  pod with the  `--port=80`  option, you instructed Kubernetes to let the pod expose port 80 from inside the container but it wasn't accessible from outside the cluster.
+当使用  `--port=80` 选项创建  `hello-kube` 容器时，Kubernetes 会在容器内暴露 80 端口，但是无法在集群外部访问它。
 
-Then when you created the  `LoadBalancer`  service with the  `--port=80`  option, it mapped port 80 from that container to an arbitrary port in the local system making it accessible from outside the cluster.
+接着，使用  `--port=80` 选项创建 `LoadBalancer` 服务，它将 80 端口从该容器映射到本地系统中的任意端口，从而可以从集群外部访问它。
 
-On my system, the  `service`  command returns  `192.168.99.101:30848`  URL for the pod. The IP in this URL is actually the IP of the  `minikube`  virtual machine. You can verify this by executing the following command:
+在我的系统上， `service` 命令返回 pod 的 URL `192.168.99.101:30848`。该 URL 中的 IP 实际上是 `minikube`  虚拟机的真实 IP。可以通过下面的命令来验证：
 
 ```bash
 minikube ip
 
+# 192.168.99.101
 ```
 
-To verify that the  `30848`  port points to port 80 inside the pod, you can execute the following command:
+可以通过如下命令验证 `30848` 端口是否指向 pod 内部的 80 端口：
 
 ```bash
 kubectl get service hello-kube
 
+# NAME         TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+# hello-kube   LoadBalancer   10.109.60.75   <pending>     80:30848/TCP   119s
 ```
 
-On the  `PORT(S)`  column, you can see that port  `80`  indeed maps to port  `30484`  on the local system. So instead of running the  `service`  command you can just inspect the IP and port and then put it into your browser manually to access the  `hello-kube`  application.
+在  `PORT(S)` 列上，可以看到 80 端口实际上映射到本地系统的 30484 端口。因此，无需运行 `service` 命令，只需找到 IP 和端口号，然后就可以在浏览器内访问  `hello-kube` 应用程序。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/image-86.png)
 
-Now, the final state of the cluster can be visualized as follows:
+目前集群的状态如下所示：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/services-1.svg)
 
-If you're coming from Docker, then the significance of using a service in order to expose a pod may seem a bit too verbose to you at the moment.
+如果你了解 Docker，那么你可能觉得使用 service 来公开 pod 有点太麻烦了。
 
-But as you go into the examples that deal with more than one pod, you'll start to appreciate everything that Kubernetes has to offer.
+但是当你处理涉及多个 pod 的实例时，你就会了解 Kubernetes 这么做的便利了。
 
-## Getting Rid of Kubernetes Resources
+## 清除 Kubernetes 相关资源
 
-Now that you know how to create Kubernetes resources like pods and Services, you need to know how to get rid of them. The only way to get rid of a Kubernetes resource is to delete it.
+现在已经了解如何创建 pod 和 service 之类的 Kubernetes  资源，现在来学习如何清除它们。也就是删除它们。
 
-You can do that by using the  `delete`  command for  `kubectl`. Generic syntax of the command is as follows:
+执行  `kubectl` 的  `delete`  命令来删除资源，用法如下：
 
 ```bash
 kubectl delete <resource type> <resource name>
 ```
 
-To delete a pod named  `hello-kube`  the command will be as follows:
+使用下面的命令删除名为 `hello-kube`  的 pod：
 
 ```bash
 kubectl delete pod hello-kube
 
+# pod "hello-kube" deleted
 ```
 
-And to delete a service named  `hello-kube`  the command will be as follows:
+使用下面的命令删除名为 `hello-kube` 的 service：
 
 ```bash
 kubectl delete service hello-kube
 
+# service "hello-kube" deleted
 ```
 
-Or if you're in a destructive mood, you can delete all objects of a kind in one go using the  `--all`  option for the  `delete`  command. Generic syntax for the option is as follows:
+或者（现在不可用）使用 `delete`  命令的 `--all`  选项来一次性删除所有此类对象。该选项的通用语法如下：
 
 ```bash
 kubectl delete <object type> --all
 ```
 
-So to delete all pods and services you have to execute  `kubectl delete pod --all`  and  `kubectl delete service --all`  respectively.
+如果要删除所有的 pod 和 service，依次执行  `kubectl delete pod --all`  和`kubectl delete service --all`。
 
-## Declarative Deployment Approach
+## 声明式部署方法
 
-To be honest, the  `hello-kube`  example you just saw in the previous section is not an ideal way of performing deployment with Kubernetes.
+坦白讲，你在上一节看到的 `hello-kube` 例子并不是部署 Kubernetes 的最佳方式。
 
-The approach that you took in that section is an  **imperative approach**  which means you had to execute every command one after the another manually. Taking an imperative approach defies the entire point of Kubernetes.
+在之前章节采用的是**交互式途径（imperative approach）**，这意味着你必须手动逐个执行每个命令。采用交互式方法无法很好的工程化。
 
-An ideal approach to deployment with Kubernetes is the  **declarative approach**. In it you, as a developer, let Kubernetes know the state you desire your servers to be in and Kubernetes figures out a way to implement that.
+使用 Kubernetes 进行部署的理想方式是**声明式途径（declarative approach）**，作为开发人员，只需让 Kubernetes 知道服务需要达到的状态，其余的 Kubernetes 会搞定。
 
-In this section you'll be deploying the same  `hello-kube`  application in a declarative approach.
+在本节中，将会使用声明式部署相同的  `hello-kube` 应用程序。
 
-If you haven't already cloned the code repository linked above, then go ahead and grab that now.
+如果你尚未克隆上面链接的代码仓库，请立即进行操作。
 
-Once you have that, go inside the  `hello-kube`  directory. This directory contains the code for the  `hello-kube`  application as well as the  `Dockerfile`  for building the image.
+克隆完毕后，进入 `hello-kube` 目录，该目录包含 `hello-kube` 应用程序的代码以及用户构建镜像的  `Dockerfile` 。
 
 ```bash
 ├── Dockerfile
@@ -474,39 +512,45 @@ Once you have that, go inside the  `hello-kube`  directory. This directory conta
 ├── public
 └── src
 
+2 directories, 3 files
 ```
 
-The JavaScript code lives inside the  `src`  folder but that's not of interest to you. The file you should be looking at is the  `Dockerfile`  because it can give you insight into how you should plan your deployment. The contents of the  `Dockerfile`  are as follows:
+JavaScript 代码位于  `src`  文件夹下，无需关注，你应该看一下 `Dockerfile`，了解一下计划部署。`Dockerfile`  文件内容如下：
 
 ```dockerfile
 FROM node as builder
+
 WORKDIR /usr/app
+
 COPY ./package.json ./
 RUN npm install
 COPY . .
 RUN npm run build
+
 EXPOSE 80
 
+FROM nginx
+COPY --from=builder /usr/app/dist /usr/share/nginx/html
 ```
 
-As you can see, this is a  [multi-staged build][75]  process.
+如你所见，这是一个[多阶段 构建（multi-staged build）][75]。
 
--   The first stage uses  `node`  as the base image and compiles the JavaScript application into a bunch of production ready files.
--   The second stage copies the files built during the first stage, and pastes them inside the default NGINX document root. Given that the base image for the second phase is  `nginx`, the resulting image will be an  `nginx`  image serving the files built during the first phase on port 80 (default port for nginx).
+-   第一阶段使用 `node` 作为基本镜像，然后将 JavaScript 应用程序编译为生产状态。
+-   第二阶段复制第一阶段生成的文件，并将其粘贴到默认的 NGINX 文档根目录中。这里假设第二阶段的基本镜像是 `nginx`，会把第一阶段构建的文件运行在 80 端口（nginx 默认端口）。 
 
-Now to deploy this application on Kubernetes, you'll have to find a way to run the image as a container and make port 80 accessible from the outside world.
+要在 Kubernetes 上部署应用，需要找到一种方式把镜像运行在容器里，并使其能在外部世界通过 80 端口访问。
 
-### Writing Your First Set of Configurations
+### 编写您的第一套配置
 
-In the declarative approach, instead of issuing individual commands in the terminal, you instead write down the necessary configuration in a YAML file and feed that to Kubernetes.
+在声明式方式中，无需在终端中发送单个命令，只需在 YAML 文件中写下必要的配置，然后将其提供给 Kubernetes 即可。
 
-In the  `hello-kube`  project directory, create another directory named  `k8s`.  `k8s`  is short for k(ubernete = 8 character)s.
+在  `hello-kube` 工程目录下，创建另一个名为 `k8s` 的目录，`k8s` 是 k(ubernete = 8 个字符)s 的缩写。
 
-You don't need to name the folder this way, you can name it whatever you want.
+文件夹名不必一定是 k8s，可以任意命名。
 
-It's not even necessary to keep it within the project directory. These configuration files can live anywhere in your computer, as they have no relation to the project source code.
+甚至没有必要将其放在项目目录中，这些配置文件可以放在计算机中的任何位置，因为这些配置与项目源代码无关。
 
-Now inside that  `k8s`  directory, create a new file named  `hello-kube-pod.yaml`. I will go ahead and write the code for the file first and then I'll go line by line and explain it to you. The content for this file is as follows:
+在  `k8s`   目录中，创建一个名为  `hello-kube-pod.yaml` 的新文件。先看一下所有的代码，后面会逐行解释。文件内容如下：
 
 ```yaml
 apiVersion: v1
@@ -524,38 +568,41 @@ spec:
 
 ```
 
-Every valid Kubernetes configuration file has four required fields. They are as follows:
+每个有效的 Kubernetes 配置文件都有四个必填字段。如下：
 
--   `apiVersion`: Which version of the Kubernetes API you're using to create this object. This value may change depending on the kind of object you are creating. For creating a  `Pod`  the required version is  `v1`.
--   `kind`: What kind of object you want to create. Objects in Kubernetes can be of many kinds. As you go through the article, you'll learn about a lot of them, but for now, just understand that you're creating a  `Pod`  object.
--   `metadata`: Data that helps uniquely identify the object. Under this field you can have information like  `name`,  `labels`,  `annotation`  etc. The  `metadata.name`  string will show up on the terminal and will be used in  `kubectl`  commands. The key value pair under the  `metadata.labels`  field doesn't have to be  `components: web`. You can give it any label like  `app: hello-kube`. This value will be used as the selector when creating the  `LoadBalancer`  service very soon.
--   `spec`: contains the state you desire for the object. The  `spec.containers`  sub-field contains information about the containers that will run inside this  `Pod`. The  `spec.containers.name`  value is what the container runtime inside the node will assign to the newly created container. The  `spec.containers.image`  is the container image to be used for creating this container. And the  `spec.containers.ports`  field holds configuration regarding various ports configuration.  `containerPort: 80`  indicates that you want to expose port 80 from the container.
+-   `apiVersion`: 创建对象使用的 Kubernetes API 版本。该值可能会根据你创建的对象的类型而变化。对于 `Pod`  的创建，所需的版本是 `v1`。
+-   `kind`: 创建的对象的类型。Kubernetes 中有许多种对象。本文介绍了很多对象，目前只需知道要创建的对象是  `Pod`  即可。 
+-   `metadata`: 对象的唯一标识数据。在此字段下，可以有 `name`、 `labels`、 `annotation`  等信息。当使用 `kubectl` 命令时 `metadata.name` 会显示在终端上。`metadata.labels` 字段下的键值对不必一定是  `components: web` ，可以指定任意 label 比如 `app: hello-kube`。在接下来创建 `LoadBalancer` service 时会使用该值作为选择器。
+-   `spec`: 包含对象希望达成的状态。 `spec.containers` 子字段包含将要运行在 `Pod` 内的容器信息。 `spec.containers.name` 是节点内的容器运行时分配给新创建容器的值。`spec.containers.image` 是用来创建容器的镜像。`spec.containers.ports` 字段是各种端口的配置。`containerPort: 80` 表示容器对外暴露的端口是 80。
 
-Now to feed this configuration file to Kubernetes, you'll use the  `apply`  command. Generic syntax for the command is as follows:
+现在使用 `apply` 命令将这个文件提供给 Kubernetes，用法如下：
 
 ```bash
 kubectl apply -f <configuration file>
 ```
 
-To feed a configuration file named  `hello-kube-pod.yaml`, the command will be as follows:
+如下命令 apply 了名为  `hello-kube-pod.yaml` 的配置文件：
 
 ```bash
 kubectl apply -f hello-kube-pod.yaml
 
+# pod/hello-kube-pod created
 ```
 
-To make sure that the  `Pod`  is up and running, execute the following command:
+执行以下命令以确保  `Pod` 已经成功启动并且正在运行： 
 
 ```bash
 kubectl get pod
 
+# NAME         READY   STATUS    RESTARTS   AGE
+# hello-kube   1/1     Running   0          3m3s
 ```
 
-You should see  `Running`  in the  `STATUS`  column. If you see something like  `ContainerCreating`  wait for a minute or two and check again.
+在 `STATUS` 列中能看到 `Running`。如果显示的是类似 `ContainerCreating` 的内容，请等待一两分钟后再试。
 
-Once the  `Pod`  is up and running, it's time for you to write the configuration file for the  `LoadBalancer`  service.
+当 `Pod` 启动并运行后，就可以开始写 `LoadBalancer`  service 的配置文件了。
 
-Create another file inside the  `k8s`  directory called  `hello-kube-load-balancer-service.yaml`  and put following code in it:
+在 `k8s` 路径下创建一个名为 `hello-kube-load-balancer-service.yaml` 的文件内容如下：
 
 ```yaml
 apiVersion: v1
@@ -571,94 +618,110 @@ spec:
     component: web
 ```
 
-Like the previous configuration file,  `apiVersion`,  `kind`, and  `metadata`  fields serve the same purpose here. As you can see there are no  `labels`  field inside  `metadata`  here. That's because a service selects other objects using  `labels`, other objects don't select a service.
+和之前的配置文件一样，`apiVersion`、`kind`、 和  `metadata` 字段作用相同。如你所见，`metadata` 内没有 `labels` 字段，因为 service 使用 `labels` 选择其它对象，而其它对象无需选择 service。
 
-> Remember, services set-up an access policy for other objects, other objects don't set-up an access policy for a service.
+> 记住，service 为其他对象设置了访问策略，而其它对象无需为 service 设置访问策略。
 
-Inside the  `spec`  field you can see a new set of values. Unlike a  `Pod`, services have four types. These are  `ClusterIP`,  `NodePort`,  `LoadBalancer`, and  `ExternalName`.
+在  `spec` 字段内可以看到一组新的值。和 `Pod` 不同，service 有四种不同的类型，他们是 `ClusterIP`、 `NodePort`、 `LoadBalancer` 和`ExternalName`。
 
-In this example, you're using the type  `LoadBalancer`, which is the standard way for exposing a service outside the cluster. This service will give you an IP address that you can then use to connect to the applications running inside your cluster.
+在此例中，使用的是 `LoadBalancer` 类型，这是把 service 暴露给集群外的标准方法。该服务会给你提供一个 IP 地址，可以使用该 IP 地址连接到集群内运行的应用程序。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/load-balancer-4.svg)
 
-The  `LoadBalancer`  type requires two port values to work properly. Under the  `ports`  field, the  `port`  value is for accessing the pod itself and its value can be anything you want.
+`LoadBalancer` 类型需要两个端口值才能正常工作，在  `ports`  字段下，`port`  值用于访问 pod 本身，其值可以是任意值。
 
-The  `targetPort`  value is the one from inside the container and has to match up with the port that you want to expose from inside the container.
+ `targetPort` 值是容器内部的值，必需要与容器内部的 port 一致。
 
-I've already said that the  `hello-kube`  application runs on port 80 inside the container . You've even exposed this port in the  `Pod`  configuration file, so the  `targetPort`  will be  `80`.
+正如之前所说，`hello-kube` 应用运行在容器内部的 80 端口上，已经在 `Pod` 配置文件中暴露了该端口，因此 `targetPort`  的值应该为 80。
 
-The  `selector`  field is used to identify the objects that will be connected to this service. The  `component: web`  key-value pair has to match up with the key-value pair under the  `labels`  field in the  `Pod`  configuration file. If you've used some other key value pair like  `app: hello-kube`  in that configuration file, use that instead.
+`selector` 字段用于标识将要连接该 service 的对象。`component: web` 键值对必须与 `Pod` 配置文件中的 `labels` 字段相匹配。如果你之前在配置文件里使用了其它的键值对如 `app: hello-kube` ，那么就改成你的键值。
 
-To feed this file to Kubernetes you will again use the  `apply`  command. The command for feeding a file named  `hello-kube-load-balancer-service.yaml`  will be as follows:
+在次使用 `apply` 命令将这个文件提供给 Kubernetes。文件名为`hello-kube-load-balancer-service.yaml`， 命令如下：
 
 ```bash
 kubectl apply -f hello-kube-load-balancer-service.yaml
 
+# service/hello-kube-load-balancer-service created
 ```
 
-To make sure the load balancer has been created successfully execute the following command:
+执行以下命令以确保负载均衡器已经成功创建：
 
 ```bash
 kubectl get service
 
+# NAME                               TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+# hello-kube-load-balancer-service   LoadBalancer   10.107.231.120   <pending>     80:30848/TCP   7s
+# kubernetes                         ClusterIP      10.96.0.1        <none>        443/TCP        21h
 ```
 
-Make sure you see the  `hello-kube-load-balancer-service`  name in the list. Now that you have a pod running that is exposed, you can go ahead and access that. Execute the following command to do so:
+确保在列表中能看到  `hello-kube-load-balancer-service`。现在你已经运行了一个公有的 pod，执行下面的命令直接进行访问：
 
 ```bash
 minikube service hello-kube-load-balancer-service
 
+# |-----------|----------------------------------|-------------|-----------------------------|
+# | NAMESPACE |           NAME                   | TARGET PORT |             URL             |
+# |-----------|----------------------------------|-------------|-----------------------------|
+# | default   | hello-kube-load-balancer-service |          80 | http://192.168.99.101:30848 |
+# |-----------|----------------------------------|-------------|-----------------------------|
+# ?  Opening service default/hello-kube-load-balancer in default browser...
 ```
 
-Your default web browser should open automatically and you should see something like this:
+默认的浏览器应该会自动打开，如下所示：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/image-87.png)
 
-You can also feed both files together instead of feeding them individually. To do that you can replace the file name with the directory name as follows:
+也可以将两个文件一起提供，如下所示，将文件名替换成目录名即可：
 
 ```bash
 kubectl apply -f k8s
 
+# service/hello-kube-load-balancer-service created
+# pod/hello-kube-pod created
 ```
 
-In this case make sure your terminal is on the parent directory of the  `k8s`  directory.
+请确保终端在 `k8s`  目录的父目录中。
 
-If you're inside the  `k8s`  directory, you can use a dot (`.`) to refer to the current directory. When mass applying configurations, it can be a good idea to get rid of resources created previously. That way the possibility of conflicts becomes much lower.
+如果位于 `k8s`  目录中，可以使用点 (`.`)  引用当前目录。应用批量配置时，最好提前清除之前创建的资源，以防发生冲突。
 
-The declarative approach is the ideal one when working with Kubernetes. Except for some special cases, that you'll see near the end of the article.
+声明式方法是使用 Kubernetes 的理想方法，当然有一些例外情况，本文结尾会介绍。
 
-### The Kubernetes Dashboard
+### Kubernetes 控制面板
 
-In a previous section, you used the  `delete`  command to get rid of a Kubernetes object.
+在上一节中，使用  `delete`  命令清除了 Kubernetes  对象。
 
-In this section, however, I thought introducing the dashboard would be great idea. The Kubernetes Dashboard is a graphical UI that you can use to manage your workloads, services, and more.
+在本节中，会引入控制面板。Kubernetes 控制面板是一个图形用户界面，用于管理工作负载、service 等。
 
-To launch the Kubernetes Dashboard, execute the following command in your terminal:
+在终端中执行以下命令启动 Kubernetes  控制面板：
 
 ```bash
 minikube dashboard
 
+# ? Verifying dashboard health ...
+# ? Launching proxy ...
+# ? Verifying proxy health ...
+# ? Opening http://127.0.0.1:52393/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/ in your default browser...
 ```
 
-The dashboard should open automatically in your default browser:
+控制面板应该会在浏览器中自动打开：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/image-88.png)
 
-The UI is pretty user-friendly and you are free to roam around here. Although it's completely possible to create, manage, and delete objects from this UI, I'll be using the CLI for the rest of this article.
+控制面板界面很直观，你可以快速上手。虽然创建、管理和删除对象都能从控制面板进行，但是本文其余部分还是会使用 cli 来操作。
 
-Here in the  _Pods_  list, you can use the three dots menu on the right side to  _Delete_  the Pod. You can do the same with the  `LoadBalancer`  service as well. In fact the  _Services_  list is conveniently placed right after the  _Pods_  list.
+在 _Pods_ 列表中，可以使用右边的三个点菜单的 _Delete_ 来删除 Pod。`LoadBalancer` service 也可以如此操作，实际上 _Services_ 列表就位于  _Pods_  列表后。
 
-You can close the dashboard by hitting the  `Ctrl + C`  key combination or closing the terminal window.
+可以按 `Ctrl + C` 组合键或者关闭终端窗口来停止控制面板服务。
 
-## Working with Multi-Container Applications
+## 使用多容器应用程序
 
-So far you've worked with applications that run within a single container.
+目前为止，已经使用了单个容器运行了应用程序。
 
-In this section, you'll be working with an application consisting of two containers. You'll also get familiar with  `Deployment`,  `ClusterIP`,  `PersistentVolume`,  `PersistentVolumeClaim`  and some debugging techniques.
+在本节中，将会使用两个容器组成应用程序。你还会学习到 `Deployment`、`ClusterIP`、 `PersistentVolume`、`PersistentVolumeClaim` 以及一些调试技巧。  
 
-The application you'll be working with is a simple express notes API with full CRUD functionality. The application uses  [PostgreSQL][78]  as its database system. So you're not only going to deploy the application but also set-up internal networking between the application and the database.
+将使用的服务是一个具备完整 CRUD 功能的简单的基于 express 的日记 API。该应用使用 [PostgreSQL][78] 数据库。因此不仅需要部署应用程序，还需要建立应用程序和数据库服务的内部网络连接。
 
-The code for the application is inside the  `notes-api`  directory inside the project repo.
+该应用程序的代码位于项目仓库的 `notes-api` 目录中。
 
 ```bash
 .
@@ -668,80 +731,105 @@ The code for the application is inside the  `notes-api`  directory inside the pr
 
 ```
 
-The application source code resides inside the  `api`  directory and the  `postgres`  directory contains a  `Dockerfile`  for creating the custom  `postgres`  image. The  `docker-compose.yaml`  file contains the necessary configuration for running the application using  `docker-compose`.
+应用程序代码位于  `api`  目录中，`postgres` 目录包含了创建 `postgres` 镜像的 `Dockerfile`。 `docker-compose.yaml` 文件包含使用 `docker-compose` 运行应用程序的配置文件。
 
-Just like with the previous project, you can look into the individual  `Dockerfile`  for each service to get a sense of how the application runs inside the container.
+就像上一个项目一样，可以查看每个 service 单独的 `Dockerfile`，以了解应用程序是如何在容器中运行的。
 
-Or you can just inspect the  `docker-compose.yaml`  and plan your Kubernetes deployment using that.
+也可以只检查  `docker-compose.yaml` 并用它来规划 Kubernetes  部署。
 
 ```yaml
 version: "3.8"
 
+services: 
+    db:
+        build:
+            context: ./postgres
+            dockerfile: Dockerfile.dev
+        environment:
+            POSTGRES_PASSWORD: 63eaQB9wtLqmNBpg
+            POSTGRES_DB: notesdb
+    api:
+        build: 
+            context: ./api
+            dockerfile: Dockerfile.dev
+        ports: 
+            - 3000:3000
+        volumes: 
+            - /usr/app/node_modules
+            - ./api:/usr/app
+        environment: 
+            DB_CONNECTION: pg
+            DB_HOST: db
+            DB_PORT: 5432
+            DB_USER: postgres
+            DB_DATABASE: notesdb
+            DB_PASSWORD: 63eaQB9wtLqmNBpg
+
 ```
 
-Looking at the  `api`  service definition, you can see that the application runs on port 3000 inside the container. It also requires a bunch of environment variables to function properly.
+查看 `api` 服务定义，应该可以看到服务运行在内部容器的 3000 端口。它还需要一堆环境变量才能正常运行。
 
-The volumes can be ignored as they were necessary for development purposes only and the build configuration is Docker-specific. So the two sets of information that you can carry over to your Kubernetes configuration files almost unchanged are as follows:
+可以忽略 volumes，它在开发环境是必需的，并且构建配置是只针对于 Docker。因此可以保留 Kubernetes 配置文件几乎不变，如下：
 
--   Port mappings – because you'll have to expose the same port from the container.
--   Environment variables – because these variables are going to be the same across all environments (the values are going to change, though).
+-   Port 映射 – 必需从容器公开相同的端口。
+-   环境变量 – 这些变量在所有的环境中都是相同的（尽管值将发生变化）。
 
-The  `db`  service is even simpler. All it has is bunch of environment variables. You can even use the official  `postgres`  image instead of a custom one.
+`db` 服务更简单，它只是一堆环境变量。甚至可以用官方的   `postgres`   镜像代替自定义的镜像。
 
-But the only reason for a custom image is if you want the database instance to come with the  `notes`  table pre-created.
+使用自定义镜像的好处是数据库实例可以附带预先创建的 notes 表。
 
-This table is necessary for the application. If you look inside the  `postgres/docker-entrypoint-initdb.d`  directory, you'll see a file named  `notes.sql`  which is used for creating the database during initialization.
+该表对于应用程序是必需的，如果查看 `postgres/docker-entrypoint-initdb.d` 目录，会看到一个名为 `notes.sql` 的文件，该文件用于在初始化期间创建数据库。
 
-### Deployment Plan
+### 部署计划
 
-Unlike the previous project you deployed, this project is going to be a bit more complicated.
+和之前的项目部署不同，该项目将变的更加复杂。
 
-In this project, you'll create not one but three instances of the notes API. These three instances will be exposed outside of the cluster using a  `LoadBalancer`  service.
+在这个项目中，将会创建三个 notes API 实例。这三个实例使用  `LoadBalancer` service 暴露在集群外面。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/notes-api-1.svg)
 
-Apart from these three instances, there will be another instance of the PostgreSQL database system. All three instances of the notes API application will communicate with this database instance using a  `ClusterIP`  service.
+除了这个实例，还会有一个 PostgreSQL 系统实例。notes API 应用程序的三个实例都使用 `ClusterIP`  service 和数据库实例通讯。
 
-`ClusterIP`  service is another type of Kubernetes service that exposes an application within your cluster. That means no outside traffic can reach the application using a  `ClusterIP`  service.
+`ClusterIP` service 是另外一种 Kubernetes  service，它在集群内部使应用可见。也就是说即使没有外部流量，应用程序也可以使用  `ClusterIP`  service。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/cluster-ip-2.svg)
 
-In this project, the database has to be accessed by the notes API only, so exposing the database service within the cluster is an ideal choice.
+在此项目中，必需仅通过 Notes API 访问数据库，因此在集群中公开数据库服务是一个理想的选择。
 
-I've already mentioned in a previous section that you shouldn't create pods directly. So in this project, you'll be using a  `Deployment`  instead of a  `Pod`.
+上一节中已经提起到，不应该直接创建 pod。因此，在此项目中使用  `Deployment`  而不是 `Pod`。
 
-### Replication Controllers, Replica Sets, and Deployments
+### 复制 Controllers、Replica Sets 以及 Deployments
 
-According to the Kubernetes  [documentation][79]  \-
+根据 Kubernetes  [文档][79]  -
 
-> "In Kubernetes, controllers are control loops that watch the state of your cluster, then make or request changes where needed. Each controller tries to move the current cluster state closer to the desired state. A control loop is a non-terminating loop that regulates the state of a system."
+> "在 Kubernetes 中，控制器通过监控[集群](https://kubernetes.io/zh/docs/reference/glossary/?all=true#term-cluster) 的公共状态，并致力于将当前状态转变为期望的状态。 控制回路（Control Loop）是一个非终止回路，用于调节系统状态。"
 
-A  `ReplicationController`, as the name suggests allows you to easily create multiple replicas very easily. Once the desired number of replicas are created, the controller will make sure that the state stays that way.
+`ReplicationController` 可以很轻松的创建多个副本。当创建所需的副本后，控制器将保持当前状态。
 
-If after some time you decide to lower the number of replicas, then the  `ReplicationController`  will take actions immediately and get rid of the extra pods.
+如果过了一段时间你决定减少副本的数量，那么 `ReplicationController` 会立刻清除多余的 pods。
 
-Otherwise if the number of replicas becomes lower than what you wanted (maybe some of the pods have crashed) the  `ReplicationController`  will create new ones to match the desired state.
+否则，如果副本的数量少于预期数量（也许一些 pod 已经崩溃），`ReplicationController` 会创建新的副本以达到所需的状态。
 
-As useful as they may sound to you, the  `ReplicationController`  is not the recommended way of creating replicas nowadays. A newer API called a  `ReplicaSet`  has taken the place.
+尽管 `ReplicationController` 很强大，但目前已不是创建副本的推荐方式。它已经被较新的 API  `ReplicaSet` 取代。
 
-Apart from the fact that a  `ReplicaSet`  can provide you with a wider range of selection option, both  `ReplicationController`  and  `ReplicaSet`  are more or less the same thing.
+`ReplicaSet` 除了提供了更多选择外，`ReplicationController`  和 `ReplicaSet`  完成的几乎是同一件事。
 
-Having a wider range of selector options is good but what's even better is having more flexibility in terms of rolling out and rolling back updates. This is where another Kubernetes API called a  `Deployment`  comes in.
+拥有更多的选择器是件好事，但是更棒的是，能在发布和回滚更新方面具有更大的灵活性。这就该轮到另一个 Kubernetes  API `Deployment` 出场了。
 
-A  `Deployment`  is like an extension to the already nice  `ReplicaSet`  API.  `Deployment`  not only allows you to create replicas in no time, but also allows you to release updates or go back to a previous function with just one or two  `kubectl`  commands.
+`Deployment` 就像是 `ReplicaSet`  API 的一个扩展。`Deployment` 不但允许你立即创建新副本，还允许使用一个或两个 `kubectl` 命令发布或回滚更新。
 
 | REPLICATIONCONTROLLER | REPLICASET | DEPLOYMENT |
 | --- | --- | --- |
-| Allows the creation of multiple pods easily | Allows the creation of multiple pods easily | Allows the creation of multiple pods easily |
-| The original method of replication in Kubernetes | Has more flexible selectors | Extends ReplicaSets with easy update roll-out and roll-back |
+| 可以轻松创建多个 pod | 可以轻松创建多个 pod | 可以轻松创建多个 pod |
+| Kubernetes 中的原始复制方法 | 更灵活的选择器 | 扩展自 ReplicaSets，可以轻松更新和回滚 |
 
-In this project, you'll be using a  `Deployment`  to maintain the application instances.
+在这个项目里，会使用  `Deployment` 来维护应用程序实例。
 
-### Creating Your First Deployment
+### 创建你的第一个部署
 
-Let's begin by writing the configuration file for the notes API deployment. Create a  `k8s`  directory inside the  `notes-api`  project directory.
+首先，为 Notes API 部署编写配置文件，在 `notes-api` 目录中创建一个 `k8s` 目录。
 
-Inside that directory, create a file named  `api-deployment.yaml`  and put following content in it:
+在该目录中，创建一个名为  `api-deployment.yaml` 的文件，内容如下：
 
 ```yaml
 apiVersion: apps/v1
@@ -766,125 +854,202 @@ spec:
 
 ```
 
-In this file, the  `apiVersion`,  `kind`,  `metadata`  and  `spec`  fields serve the same purpose as the previous project. Notable changes in this file from the last one are as follows:
+在此文件中，`apiVersion`、 `kind`、  `metadata` 和  `spec` 字段作用与之前的项目相同。与上一个文件相比，不一样的地方如下：
 
--   For creating a Pod, the required  `apiVersion`  was  `v1`. But for creating a Deployment, the required version is  `apps/v1`. Kubernetes API versions can be a bit confusing at times, but as you keep working with Kubernetes you'll get the hang of them. Also you can consult the official  [docs][80]  for example YAML files to refer to. The kind is  `Deployment`  which is pretty self-explanatory.
--   `spec.replicas`  defines the number of running replicas. Setting this value to  `3`  means you let Kubernetes know that you want three instances of your application running at all times.
--   `spec.selector`  is where you let the  `Deployment`  know which pods to control. I've already mentioned that a  `Deployment`  is an extension to  `ReplicaSet`  and can control a set of Kubernetes objects. Setting  `selector.matchLabels`  to  `component: api`  means this  `Deployment`  will control the pods that have a label of  `component: api`. This line is letting Kubernetes know that you want this  `Deployment`  to control all the pods having the  `component: api`  label.
--   `spec.template`  is the template for configuring the pods. It's almost the same as the previous configuration file.
+-   创建 pod 时，`apiVersion`的值是 `v1`。但是创建部署时，需要的版本是  `apps/v1`。Kubernetes API 的版本有时会有些混乱，你可能会有些一头雾水。可以阅读一下官网[文档][80]对 `Deployment` YAML 文件的介绍。
+-   `spec.replicas` 定义了同时运行的副本数量。将此值设置为 3 意味着希望 Kubernetes 同时运行三个应用实例。
+-   在 `spec.selector` 中，可以让 `Deployment` 知道要控制那些 pods。之前已经提到，`Deployment` 是 `ReplicaSet` 的扩展，可以控制 Kubernetes  对象。将 `selector.matchLabels` 设置为  `component: api` 意味着 `Deployment` 会控制 label 为 `component: api` 的 pods。这行代码的意思就是让 Kubernetes  知道你希望  `Deployment` 来控制 label 为 `component: api` 的 pods。
+-   `spec.template` 是用于配置 pod 的模板，它与之前的配置文件几乎相同。
 
-Now to see this configuration in action, apply the file just like in the previous project:
+现在，要查看此配置效果，和之前一样 apply 该文件：
 
 ```bash
 kubectl apply -f api-deployment.yaml
 
+# deployment.apps/api-deployment created
 ```
 
-To make sure the  `Deployment`  has been created, execute the following command:
+执行下面的命令确保  `Deployment` 已经成功创建：
 
 ```bash
 kubectl get deployment
 
+# NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+# api-deployment   0/3     3            0           2m7s
 ```
 
-If you look at the  `READY`  column, you'll see  `0/3`. This means the pods have not been created yet. Wait a few minutes and try once again.
+如果查看  `READY` 列，会看到 `0/3`。这意味着容器尚未创建，等待几分钟，然后在试一次。
 
 ```bash
 kubectl get deployment
 
+# NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+# api-deployment   0/3     3            0           28m
 ```
 
-As you can see, I have waited nearly half an hour and still none of the pods are ready. The API itself is only a few hundred kilobytes. A deployment of this size shouldn't have taken this long. Which means there is a problem and we have to fix that.
+坦白讲，我已经等了将近半个小时，pod 还未准备就绪。API 本身只有几百 kb。这种规模的部署不应该花这么长的时间，这意味着有问题，我们来解决它。
 
-### Inspecting Kubernetes Resources
+### 调试 Kubernetes 资源
 
-Before you can solve a problem, you have to first find out the origin. A good starting point is the  `get`  command.
+开始之前，首先回到起点。`get` 命令是一个很基础的命令。
 
-You already know the  `get`  command that prints a table containing important information about one or more Kubernetes resources. Generic syntax of the command is as follows:
+`get` 命令可以打印一张包含一个或多个 Kubernetes 资源重要信息的表。用法如下：
 
 ```bash
 kubectl get <resource type> <resource name>
 ```
 
-To run the  `get`  command on your  `api-deployment`, execute the following line of code in your terminal:
+在终端执行如下代码，在 `api-deployment` 上运行 `get` 命令：
 
 ```bash
 kubectl get deployment api-deployment
 
+# NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+# api-deployment   0/3     3            0           15m
 ```
 
-You can omit the  `api-deployment`  name to get a list of all available deployments. You can also run the  `get`  command on a configuration file.
+可以省略 `api-deployment` 以获取所有可用的部署列表。也可以在配置文件上使用  `get` 命令。
 
-If you would like to get information about the deployments described in the  `api-deployment.yaml`  file, the command should be as follows:
+可以使用如下命令获取有关 `api-deployment.yaml` 文件中描述的部署信息：
 
 ```bash
 kubectl get -f api-deployment
 
+# NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+# api-deployment   0/3     3            0           18m
 ```
 
-By default, the  `get`  command shows a very small amount of information. You can get more out of it by using the  `-o`  option.
+默认情况下，`get` 命令显示的信息非常少，可以使用 `-o`  选项获取更多信息。
 
-The  `-o`  option sets the output format for the  `get`  command. You can use the  `wide`  output format to see more details.
+ `-o` 选项设置 `get` 命令的输出格式，可以使用 `wide` 输出格式查看更详细信息。
 
 ```bash
 kubectl get -f api-deployment.yaml
 
+# NAME             READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES               SELECTOR
+# api-deployment   0/3     3            0           19m   api          fhsinchy/notes-api   component=api
+
 ```
 
-As you can see, now the list contains more information than before. You can learn about the options for the  `get`  command from the official  [docs][81].
+现在列表包含了更多的信息，可以在官方[文档][81]了解有关  `get`  命令的选项。
 
-Running  `get`  on the  `Deployment`  doesn't spit out anything interesting, to be honest. In such cases, you have to get down to the lower level resources.
+老实说，仅仅是运行 `Deploymen` 的  `get`  命令没啥意思。还需要获取更底层资源的信息。
 
-Have a look at the pods list and see if you can find something interesting there:
+看一下 pod 列表，看看里面都有啥东西：
 
 ```bash
 kubectl get pod
 
+# NAME                             READY   STATUS             RESTARTS   AGE
+# api-deployment-d59f9c884-88j45   0/1     CrashLoopBackOff   10         30m
+# api-deployment-d59f9c884-96hfr   0/1     CrashLoopBackOff   10         30m
+# api-deployment-d59f9c884-pzdxg   0/1     CrashLoopBackOff   10         30m
 ```
 
-Now this is interesting. All the pods have a  `STATUS`  of  `CrashLoopBackOff`  which is new. Previously you've only seen  `ContainerCreating`  and  `Running`  statuses. You may see  `Error`  in place of  `CrashLoopBackOff`  as well.
+现在发现了一些有用的东西。所有的 pods 都有一个值为 `CrashLoopBackOff` 的 `STATUS`。之前只接触过  `ContainerCreating` 和 `Running` 状态。你可能还会在  `CrashLoopBackOff` 处看到 `Error`。
 
-Looking at the  `RESTARTS`  column you can see that the pods have been restarted 10 times already. This means for some reason the pods are failing to startup.
+看一下 `RESTARTS` 列，会发现 pod 已经重启 10 多次了，着意味着因为某些原因， pod 启动失败了。
 
-Now to get a more detailed look at one of the pods, you can use another command called  `describe`. It's a lot like the  `get`  command. Generic syntax of the command is as follows:
+现在，要查看一个 pod 的更详细信息，可以使用另一个名为 `describe` 的命令。它和 `get` 命令很像，用法如下：
 
 ```bash
 kubectl get <resource type> <resource name>
 ```
 
-To get details of the  `api-deployment-d59f9c884-88j45`  pod, you can execute the following command:
+执行下面的命令查看 `api-deployment-d59f9c884-88j4` pod 的详细信息：
 
 ```bash
 kubectl describe pod api-deployment-d59f9c884-88j45
 
+# Name:         api-deployment-d59f9c884-88j45
+# Namespace:    default
+# Priority:     0
+# Node:         minikube/172.28.80.217
+# Start Time:   Sun, 09 Aug 2020 16:01:28 +0600
+# Labels:       component=api
+#               pod-template-hash=d59f9c884
+# Annotations:  <none>
+# Status:       Running
+# IP:           172.17.0.4
+# IPs:
+#   IP:           172.17.0.4
+# Controlled By:  ReplicaSet/api-deployment-d59f9c884
+# Containers:
+#  api:
+#     Container ID:   docker://d2bc15bda9bf4e6d08f7ca8ff5d3c8593655f5f398cf8bdd18b71da8807930c1
+#     Image:          fhsinchy/notes-api
+#     Image ID:       docker-pullable://fhsinchy/notes-api@sha256:4c715c7ce3ad3693c002fad5e7e7b70d5c20794a15dbfa27945376af3f3bb78c
+#     Port:           3000/TCP
+#     Host Port:      0/TCP
+#     State:          Waiting
+#       Reason:       CrashLoopBackOff
+#     Last State:     Terminated
+#       Reason:       Error
+#       Exit Code:    1
+#       Started:      Sun, 09 Aug 2020 16:13:12 +0600
+#       Finished:     Sun, 09 Aug 2020 16:13:12 +0600
+#     Ready:          False
+#     Restart Count:  10
+#     Environment:    <none>
+#     Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-gqfr4 (ro)
+# Conditions:
+#   Type              Status
+#   Initialized       True
+#   Ready             False
+#   ContainersReady   False
+#   PodScheduled      True
+# Volumes:
+#   default-token-gqfr4:
+#     Type:        Secret (a volume populated by a Secret)
+#     SecretName:  default-token-gqfr4
+#     Optional:    false
+# QoS Class:       BestEffort
+# Node-Selectors:  <none>
+# Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+#                  node.kubernetes.io/unreachable:NoExecute for 300s
+# Events:
+#   Type     Reason     Age                         From               Message
+#   ----     ------     ----                        ----               -------
+#   Normal   Scheduled  <unknown>                   default-scheduler  Successfully assigned default/api-deployment-d59f9c884-88j45 to minikube
+#   Normal   Pulled     2m40s (x4 over 3m47s)       kubelet, minikube  Successfully pulled image "fhsinchy/notes-api"
+#   Normal   Created    2m40s (x4 over 3m47s)       kubelet, minikube  Created container api
+#   Normal   Started    2m40s (x4 over 3m47s)       kubelet, minikube  Started container api
+#   Normal   Pulling    107s (x5 over 3m56s)        kubelet, minikube  Pulling image "fhsinchy/notes-api"
+#   Warning  BackOff    <invalid> (x44 over 3m32s)  kubelet, minikube  Back-off restarting failed container
 ```
 
-The most interesting part in this entire wall of text is the  `Events`  section. Have a closer look:
+整个输出中最有用的部分是 `Events` 部分，如下：
 
 ```
 Events:
   Type     Reason     Age                         From               Message
-
-
+  ----     ------     ----                        ----               -------
+  Normal   Scheduled  <unknown>                   default-scheduler  Successfully assigned default/api-deployment-d59f9c884-88j45 to minikube
+  Normal   Pulled     2m40s (x4 over 3m47s)       kubelet, minikube  Successfully pulled image "fhsinchy/notes-api"
+  Normal   Created    2m40s (x4 over 3m47s)       kubelet, minikube  Created container api
+  Normal   Started    2m40s (x4 over 3m47s)       kubelet, minikube  Started container api
+  Normal   Pulling    107s (x5 over 3m56s)        kubelet, minikube  Pulling image "fhsinchy/notes-api"
+  Warning  BackOff    <invalid> (x44 over 3m32s)  kubelet, minikube  Back-off restarting failed container
 ```
 
-From these events, you can see that the container image was pulled succesfully. The container was created as well, but it's evident from the  `Back-off restarting failed container`  that the container failed to startup.
+从这些事件中，可以看到容器镜像已经成功 pulled，容器也已经创建，但是显然从 `Back-off restarting failed container` 中可以看出该容器无法启动。
 
-The describe command is very similar to the  `get`  command and has the same sort of options.
+describe 命令和  `get` 命令类似，并且具有相同的选项。
 
-You can omit the  `api-deployment-d59f9c884-88j45`  name to get information about all available pods. Or you can also use the  `-f`  option to pass a configuration file to the command. Visit the official  [docs][82]  to learn more.
+可以省略 `api-deployment-d59f9c884-88j45` 名字以获取所有 pods 的信息。或者也可以使用  `-f` 选项将配置文件传入命令。访问官方[文档][82]了解更多信息。
 
-Now that you know that there is something wrong with the container, you have to go down to the container level and see what's going on there.
+既然已经知道了是容器出了问题，那么就让我们到容器层面看看到底出了什么问题吧。
 
-### Getting Container Logs from Pods
+### 从 Pods 获取容器日志
 
-There is another  `kubectl`  command called  `logs`  that can help you to get the container logs from inside a pod. Generic syntax for the command is as follows:
+还有另一个名为 `logs` 的 `kubectl` 命令，可以从容器内部获取容器的日志，用法按如下：
 
 ```bash
 kubectl logs <pod>
 ```
 
-To view the logs inside the  `api-deployment-d59f9c884-88j45`  pod, the command should be as follows:
+使用如下命令 `api-deployment-d59f9c884-88j45` 查看 pod 内的日志：
 
 ```bash
 kubectl logs api-deployment-d59f9c884-88j45
@@ -914,11 +1079,11 @@ kubectl logs api-deployment-d59f9c884-88j45
 
 ```
 
-Now this is what you need to debug the problem. Looks like the  [knex.js][86]  library is missing a required value, which is preventing the application from starting. You can learn more about the  `logs`  command from the official  [docs][87].
+这正是出问题的地方，看起来是 [knex.js][86] 库缺少一个必要的值，导致程序启动失败。可以从官方[文档][87]了解更多关于 `logs` 命令的信息。
 
-This is happening because you're missing some required environment variables in the deployment definition.
+出现这个错误主要是因为在部署定义中缺少了一些必需的环境变量。
 
-If you take another look at the  `api`  service definition inside the  `docker-compose.yaml`  file, you should see something like this:
+如果在看一下 `docker-compose.yaml` 文件中的 api service 定义，应该会看到类似如下的内容：
 
 ```yaml
     api:
@@ -939,11 +1104,11 @@ If you take another look at the  `api`  service definition inside the  `docker-c
             DB_PASSWORD: 63eaQB9wtLqmNBpg
 ```
 
-These environment variables are required for the application to communicate with the database. So adding these to the deployment configuration should fix the issue.
+应用程序与数据库进行连接需要这些环境变量。所以，把这些数据添加到部署配置中就可以解决该问题。
 
-### Environment Variables
+### 环境变量
 
-Adding environment variables to a Kubernetes configuration file is very straightforward. Open up the  `api-deployment.yaml`  file and update its content to look like this:
+给 Kubernetes  配置文件添加环境变量非常简单。打开  `api-deployment.yaml` 文件并按如下更新内容：
 
 ```yaml
 apiVersion: apps/v1
@@ -965,42 +1130,51 @@ spec:
           image: fhsinchy/notes-api
           ports:
             - containerPort: 3000
-      <span class="token comment" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(112, 128, 144);"># these are the environment variables</span>
-      <span class="token key atrule" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(0, 119, 170);">env</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span>
-        <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">-</span> <span class="token key atrule" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(0, 119, 170);">name</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> DB_CONNECTION
-          <span class="token key atrule" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(0, 119, 170);">value</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">:</span> pg
+          
+          # these are the environment variables
+          env:
+            - name: DB_CONNECTION
+              value: pg
 ```
 
-The  `containers.env`  field contains all the environment variables. If you look closely, you'll see that I haven't added all the environment variables from the  `docker-compose.yaml`  file. I have added only one.
+`containers.env` 字段包含所有的环境变量，如果细心你会发现我还没有给 `docker-compose.yaml` 文件添加所有的环境变量，我只添加了一个。
 
-The  `DB_CONNECTION`  indicates that the application is using a PostgreSQL database. Adding this single variable should fix the problem.
+`DB_CONNECTION` 表示应用正在使用 PostgreSQL 数据库，添加这个变量就可以解决上述问题。
 
-Now apply the configuration file again by executing the following command:
+现在通过执行下面的命令在此 apply 配置文件：
 
 ```bash
 kubectl apply -f api-deployment.yaml
 
+# deployment.apps/api-deployment configured
 ```
 
-Unlike the other times, the output here says that a resource has been  `configured`. This is the beauty of Kubernetes. You can just fix issues and re-apply the same configuration file immediately.
+这次显示资源已经被 `configured`。这就是 Kubernetes 厉害的地方，apply 配置文件可以立即生效。
 
-Now use the  `get`  command once more to make sure everything is running properly.
+现在在次使用  `get`  命令确保一切运行正常。
 
 ```bash
 kubectl get deployment
+
 # NAME             READY   UP-TO-DATE   AVAILABLE   AGE
 # api-deployment   3/3     3            3           68m
+
 kubectl get pod
+
+# NAME                              READY   STATUS    RESTARTS   AGE
+# api-deployment-66cdd98546-l9x8q   1/1     Running   0          7m26s
+# api-deployment-66cdd98546-mbfw9   1/1     Running   0          7m31s
+# api-deployment-66cdd98546-pntxv   1/1     Running   0          7m21s
 
 ```
 
-All three pods are running and the  `Deployment`  is running fine as well.
+三个 pod 都在运行，并且  `Deployment` 也运行良好。
 
-### Creating the Database Deployment
+### 创建数据库部署
 
-Now that the API is up and running, it's time to write the configuration for the database instance.
+既然 API 已经启动并且运行，是时候为数据库实例编写配置了。
 
-Create another file called  `postgres-deployment.yaml`  inside the  `k8s`  directory and put the following content in it:
+在 k8s 目录中另创建一个名为 `postgres-deployment.yaml` 的文件，文件内容如下：
 
 ```yaml
 apiVersion: apps/v1
@@ -1030,60 +1204,66 @@ spec:
 
 ```
 
-The configuration itself is very similar to the previous one. I am not going to explain everything in this file – hopefully you understand it by yourself with the knowledge you've gained from this article so far.
+配置本身与上一次非常相似，我就不详细解释了，根据目前学到的知识你应该可以了解。
 
-PostgreSQL runs on port 5432 by default, and the  `POSTGRES_PASSWORD`  variable is required for running the  `postgres`  container. This password will also be used for connecting to this database by the API.
+PostgreSQL 默认运行在 5432 端口上，运行 `postgres` 容器需要 `POSTGRES_PASSWORD` 变量。该密码也会用于 API 连接数据库。
 
-The  `POSTGRES_DB`  variable is optional. But because of the way this project has been structured, it's necessary here – otherwise the initialization will fail.
+`POSTGRES_DB` 变量是可选的，但是在该项目里是必需的，否则会初始化失败。
 
-You can learn more about the official  [postgres][88]  Docker image from their Docker Hub page. For the sake of simplicity, I'm keeping the replica count to 1 in this project.
+可以在 Docker Hub 页面上了解 [postgres][88] Docker 镜像的更多信息。在此项目中，化繁为简，副本数量设置为 1。
 
-To apply this file, execute the following command:
+执行以下命令 apply 这个文件：
 
 ```bash
 kubectl apply -f postgres-deployment.yaml
 
+# deployment.apps/postgres-deployment created
 ```
 
-Use the  `get`  command to ensure that the deployment and the pods are running properly:
+通过 `get` 命令确保 pod 已经正常部署和运行：
 
 ```bash
 kubectl get deployment
+
 # NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
 # postgres-deployment   1/1     1            1           13m
+
 kubectl get pod
+
+# NAME                                   READY   STATUS    RESTARTS   AGE
+# postgres-deployment-76fcc75998-mwnb7   1/1     Running   0          13m
 
 ```
 
-Although the deployment and the pods are running properly, there is a big issue with the database deployment.
+尽管 pod 已经成功部署和运行，但是数据库部署还是有很大的问题。
 
-If you've worked with any database system before, you may already know that databases store data in the filesystem. Right now the database deployment looks like this:
+如果你以前使用过数据库系统，应该知道数据库是把数据存储在文件系统中。目前，数据库部署如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/postgres-1.svg)
 
-The  `postgres`  container is encapsulated by a pod. Whatever data is saved stays within the internal filesystem of the container.
+`postgres` 容器由 pod 封装，数据保留在容器内部的文件系统中。
 
-Now, if for some reason, the container crashes or the pod encapsulating the container goes down, all data persisted inside the filesystem will be lost.
+现在，如果由于某种原因，容器崩溃或者封装容器的 pod 发生故障，则保存在文件系统的所有数据都将丢失。
 
-Upon crashing, Kubernetes will create a new pod to maintain the desired state, but there is no data carry over mechanism between the two pods whatsoever.
+崩溃后，Kubernetes 会创建一个新的 pod 来维持状态，但是两个 pod 之间没有任何数据转移机制。
 
-To solve this issue, you can store the data in a separate space outside the pod within the cluster.
+为了解决这个问题，可以将数据存储在集群 pod 外部的单独空间中。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/volume.svg)
 
-Managing such storage is a distinct problem from managing compute instances. The  `PersistentVolume`  subsystem in Kubernetes provides an API for users and administrators that abstracts details of how storage is provided from how it is consumed.
+和管理计算实例相比，管理此类存储面临的是另一些问题。Kubernetes 中的 `PersistentVolume` 子系统为用户和管理员提供了一个 API，该 API 从存储的使用方式中抽象出如何提供存储的细节。
 
-### Persistent Volumes and Persistent Volume Claims
+### Persistent Volumes 和 Persistent Volume Claims
 
-According to the Kubernetes  [documentation][89]  —
+摘自 Kubernetes  [文档][89]  —
 
-> "A  `PersistentVolume`  (PV) is a piece of storage in the cluster that has been provisioned by an administrator or dynamically provisioned using a  `StorageClass`. It is a resource in the cluster just like a node is a cluster resource."
+> "持久卷（PersistentVolume，PV）是集群中的一块存储，可以由管理员事先供应，或者使用存储类（Storage Class）来动态供应。 持久卷是集群资源，就像节点也是集群资源一样。"
 
-Which essentially means that a  `PersistentVolume`  is a way to take a slice from your storage space and reserve that for a certain pod. Volumes are always consumed by pods and not some high level object like a deployment.
+实际上，`PersistentVolume` 是一种从存储空间获得切片并将其保留给特定 pod 的方法。Volumes 始终由 pod 占用，而不是像 deployment 这样的高级对象占用。
 
-If you want to use a volume with a deployment that has multiple pods, you'll have to go through some additional steps.
+如果要在具有多个 pod 的 deployment 中使用 volume，必须要执行一些附加步骤。
 
-Create a new file called  `database-persistent-volume.yaml`  inside the  `k8s`  directory and put following content in that file:
+在 `k8s` 目录中创建一个名为 `database-persistent-volume.yaml` 的新文件，内容如下：
 
 ```yaml
 apiVersion: v1
@@ -1101,45 +1281,48 @@ spec:
 
 ```
 
-The  `apiVersion`,  `kind`, and  `metadata`  serve the same purpose as any other configuration file. The  `spec`  field, however, contains some new fields.
+ `apiVersion`、 `kind` 和  `metadata` 与其它配置文件里的用法一致，在 `spec` 字段里，有一些新字段：
 
--   `spec.storageClassName`  indicates the class name for this volume. Assume that a cloud provider has three kinds of storage available. These can be  _slow_,  _fast_, and  _very fast_. The kind of storage you get from the provider will depend on the amount of money you're paying. If you ask for a very fast storage, you'll have to pay more. These different types of storage are the classes. I am using  `manual`  as an example here. You can use whatever you like in your local cluster.
--   `spec.capacity.storage`  is the amount of storage this volume will have. I am giving it 5 gigabytes of storage in this project.
--   `spec.accessModes`  sets the access mode for the volume. There are three possible access modes.  `ReadWriteOnce`  means the volume can be mounted as read-write by a single node.  `ReadWriteMany`  on the other hand means the volume can be mounted as read-write by many nodes.  `ReadOnlyMany`  means the volume can be mounted read-only by many nodes.
--   `spec.hostPath`  is something development specific. It indicates the directory in your local single node cluster that'll be treated as persistent volume.  `/mnt/data`  means that the data saved in this persistent volume will live inside the  `/mnt/data`  directory in the cluster.
+-   `spec.storageClassName` 指示 volume 的名称。假设云提供商有三种可用的存储。_slow_、  _fast_ 和  _very fast_ 。从云存储上获取的存储方式取决于支付的金额。如果需要 very fast 存储，则需要支付更多的费用。这些不同类型的存储就是 classes。在本例里我使用 `manual`，在本地集群里可以使用任何你喜欢的选项。 
+-   `spec.capacity.storage`  代表 volume 的存储大小。在此项目中设置了 5GB 的存储空间。
+-   `spec.accessModes`  设置卷的访问模式。一共有三种存储模式，`ReadWriteOnce`  代表该 volume  可以通过单个 node 以读写方式安装。`ReadWriteMany` 则代表该 volume  可以被多个 node 以读写的方式安装。`ReadOnlyMany` 意味着该 volume 可以被多个 node 以只读的方式安装。
+-   `spec.hostPath` 是特定于开发者的。它将本地单 node 集群的目录映射为 persistent volume。`/mnt/data` 意味着保存在持久卷（persistent volume）中的数据位于集群的 `/mnt/data`  文件夹内。
 
-To apply this file, execute the following command:
+执行下面的命令 apply 配置文件：
 
 ```bash
 kubectl apply -f database-persistent-volume.yaml
 
+# persistentvolume/database-persistent-volume created
 ```
 
-Now use the  `get`  command to verify that the volume has been created:
+现在使用  `get`  命令确定 volume 创建成功：
 
 ```bash
 kubectl get persistentvolume
 
+# NAME                         CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   REASON   AGE
+# database-persistent-volume   5Gi        RWO            Retain           Available           manual                  58s
 ```
 
-Now that the persistent volume has been created, you need a way to let the postgres pod access it. This is where a  `PersistentVolumeClaim`  (PVC) comes in.
+现在已经创建了 persistent volume，需要让 postgres  pod 访问它，可以通过`PersistentVolumeClaim`  (PVC) 。
 
-A persistent volume claim is a request for storage by a pod. Assume that in a cluster, you have quite a lot of volumes. This claim will define the characteristics that a volume must meet to be able to satisfy a pods' necessities.
+persistent volume 声明是 pod 对存储的要求。假设在集群中有很多 volumes。该声明将定义必需满足 pod 的需求的 volume  的特征。
 
-A real-life example can be you buying an SSD from a store. You go to the store and the salesperson shows you the following models:
+一个类似的的例子是从商店购买 SSD。销售员向你展示了如下模型：
 
 | MODEL 1 | MODEL 2 | MODEL 3 |
 | --- | --- | --- |
 | 128GB | 256GB | 512GB |
 | SATA | NVME | SATA |
 
-Now, you claim for a model that has at least 200GB of storage capacity and is an NVME drive.
+现在你和销售员要求至少 200GB 的存储容量，并且驱动器的型号是 NVME。
 
-The first one has less than 200GB and is SATA, so it doesn't match your claim. The third one has more than 200GB, but is not NVME. The second one however has more than 200GB and is also an NVME. So that's the one you get.
+MODEL1 是容量小于 200GB 的 SATA，与你的要求不符，MODEL 3 容量大于 200GB，但是不是 NVME 接口的。只有 MODEL2 是容量大于 200GB 并且接口是 NVME 的。正是需要的。
 
-The SSD models that the salesperson showed you are equivalent to persistent volumes and your requirements are equivalent to persistent volume claims.
+销售人员向你展示的 SSD models 就等同于 persistent volumes，你的要求就等同于 persistent volume 声明。
 
-Create another new file called  `database-persistent-volume-claim.yaml`  inside the  `k8s`  directory and put the following content in that file:
+在 `k8s` 目录下创建一个名为 `database-persistent-volume-claim.yaml`  的新文件，文件内容如下：
 
 ```yaml
 apiVersion: v1
@@ -1155,44 +1338,51 @@ spec:
       storage: 2Gi
 ```
 
-Again, the  `apiVersion`,  `kind`, and  `metadata`  serve the same purpose as any other configuration file.
+`apiVersion`、 `kind` 和  `metadata` 和之前的作用一致。
 
--   `spec.storageClass`  in a claim configuration file indicates the type of storage this claim wants. That means any  `PersistentVolume`  that has  `spec.storageClass`  set to  `manual`  is suitable to be consumed by this claim. If you have multiple volumes with the  `manual`  class, the claim will get any one of them and if you have no volume with  `manual`  class – a volume will be provisioned dynamically.
--   `spec.accessModes`  again sets the access mode here. This indicates that this claim wants a storage that has an  `accessMode`  of  `ReadWriteOnce`. Assume that you have two volumes with class set to  `manual`. One of them has its  `accessModes`  set to  `ReadWriteOnce`  and the other one to  `ReadWriteMany`. This claim will get the one with  `ReadWriteOnce`.
--   `resources.requests.storage`  is the amount of storage this claim wants.  `2Gi`  doesn't mean the given volume must have exactly 2 gigabytes of storage capacity. It means that it must have at least 2 gigabytes. I hope you remember that you set the capacity of the persistent volume to be 5 gigabytes, which is more than 2 gigabytes.
+-   `spec.storageClass`  表示存储类型的声明配置文件。 着意味着将任何设置为   `manual` 的 `spec.storageClass` 的  `PersistentVolume` 都适合此类声明。如果有多个设置为 `manual` 的 volumes ，那么将获得其中任意一个的声明。如果没有 class 为 `manual` 的 volume，那就动态配置一个。
+-   `spec.accessModes`  在此设置访问模式。这表明该声明希望使用具有 `ReadWriteOnce` 的  `accessMode`。假设有两个设置为  `manual` 的 volumes 。其中一个将其 `accessModes`  设置为 `ReadWriteOnce`，另一个设置为 `ReadWriteMany`。该声明将获取其中的 `ReadWriteOnce` 。
+-   `resources.requests.storage` 是此声明所需要的存储量 `2Gi` 并不意味着给定的卷必须恰好具有 2GB 的存储容量 。而是意味着它至少要有 2GB。你应该还记得之前将存储容量设置为 5GB，大于 2GB。
 
-To apply this file, execute the following command:
+执行下面的命令 apply 文件：
 
 ```bash
 kubectl apply -f database-persistent-volume-claim.yaml
 
+# persistentvolumeclaim/database-persistent-volume-claim created
 ```
 
-Now use the  `get`  command to verify that the volume has been created:
+使用 `get` 命令确定 volume  已经成功创建：
 
 ```bash
 kubectl get persistentvolumeclaim
 
+# NAME                               STATUS   VOLUME                       CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+# database-persistent-volume-claim   Bound    database-persistent-volume   5Gi        RWO            manual         37s
 ```
 
-Look at the  `VOLUME`  column. This claim is bound to the  `database-persistent-volume`  persistent volume that you created earlier. Also look at the  `CAPACITY`. It's  `5Gi`, because the claim requested a volume with at least 2 gigabytes of storage capacity.
+查看 `VOLUME` 列，这个声明与之前创建的 `database-persistent-volume`  持久卷绑定 ，在看一下 `CAPACITY`，它是 `5Gi`，因为该声明要求 volume  至少有 2GB 的存储容量。
 
-### Dynamic Provisioning of Persistent Volumes
+### Persistent Volumes 的动态预配置
 
-In the previous sub-section, you've made a persistent volume and then created a claim. But, what if there isn't any persistent volume previously provisioned?
+在上一小节，你已经创建了一个 persistent volume，然后创建了一个声明，但是如果以前没有设置任何 persistent volume 该怎么办呢？
 
-In such cases, a persistent volume compatible with the claim will be provisioned automatically.
+在这种情况下，将自动设置与声明兼容的持久卷。
 
-To begin this demonstration, remove the previously created persistent volume and the persistent volume claim with the following commands:
+开始之前，先执行如下命令删除之前创建的 persistent volume 和 persistent volume 声明：
 
 ```yaml
 kubectl delete persistentvolumeclaim --all
+
 # persistentvolumeclaim "database-persistent-volume-claim" deleted
+
 kubectl delete persistentvolumeclaim --all
+
+# persistentvolume "database-persistent-volume" deleted
 
 ```
 
-Open up the  `database-persistent-volume-claim.yaml`  file and update its content to be as follows:
+打开 `database-persistent-volume-claim.yaml` 文件将内容更新为如下内容：
 
 ```yaml
 apiVersion: v1
@@ -1208,29 +1398,32 @@ spec:
 
 ```
 
-I've removed the  `spec.storageClass`  field from the file. Now re-apply the  `database-persistent-volume-claim.yaml`  file without applying the  `database-persistent-volume.yaml`  file:
+我已经从文件中删除了 `spec.storageClass` 字段，现在重新 apply `database-persistent-volume-claim.yaml` 文件（无需应用 `database-persistent-volume.yaml`  文件）：
 
 ```yaml
 kubectl apply -f database-persistent-volume-claim.yaml
 
+# persistentvolumeclaim/database-persistent-volume-claim created
 ```
 
-Now use the  `get`  command to look at the claim information:
+现在使用  `get`  命令查看声明信息：
 
 ```yaml
 kubectl get persistentvolumeclaim
 
+# NAME                               STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+# database-persistent-volume-claim   Bound    pvc-525ae8af-00d3-4cc7-ae47-866aa13dffd5   2Gi        RWO            standard       2s
 ```
 
-As you can see, a volume with  `pvc-525ae8af-00d3-4cc7-ae47-866aa13dffd5`  name and storage capacity of  `2Gi`  has been provisioned and bound to the claim dynamically.
+正如你看到的，已经提供了名为 `pvc-525ae8af-00d3-4cc7-ae47-866aa13dffd5` 且存储容量为 `2Gi` 的 volume，将其动态绑定到了声明。
 
-You can either use a static or dynamically provisioned persistent volume for the rest of this project. I'll be using a dynamically provisioned one.
+该项目的剩余部分使用静态或者动态预配置 persistent volume  都可以。我会使用动态配置。
 
-### Connecting Volumes with Pods
+### 通过 Pods 连接 Volumes
 
-Now that you have created a persistent volume and a claim, it's time to let the database pod use this volume.
+现在你已经创建了一个 persistent volume 和声明，是时候让数据库 pod 使用该 volume 了。
 
-You do this by connecting the pod to the persistent volume claim you made in the previous sub-section. Open up the  `postgres-deployment.yaml`  file and update its content to be as follows:
+可以把之前小节创建的 persistent volume 声明连接到 pod 上。打开 `postgres-deployment.yaml` 文件，将内容更新如下：
 
 ```yaml
 apiVersion: apps/v1
@@ -1270,42 +1463,43 @@ spec:
 
 ```
 
-I've added two new fields in this configuration file.
+我在此配置文件中添加了两个字段。
 
--   `spec.volumes`  field contains the necessary information for the pod to find the persistent volume claim.  `spec.volumes.name`  can be anything you want.  `spec.volumes.persistentVolumeClaim.claimName`  has to match the  `metadata.name`  value from the  `database-persistent-volume-claim.yaml`  file.
--   `containers.volumeMounts`  contains information necessary for mounting the volume inside the container.  `containers.volumeMounts.name`  has to match the value from  `spec.volumes.name`.  `containers.volumeMounts.mountPath`  indicates the directory where this volume will be mounted.  `/var/lib/postgresql/data`  is the default data directory for PostgreSQL.  `containers.volumeMounts.subPath`  indicates a directory that will be created inside the volume. Assume that you're using the same volume with other pods as well. In that case you can put pod-specific data inside another directory inside that volume. All data saved inside the  `/var/lib/postgresql/data`  directory will go inside a  `postgres`  directory within the volume.
+-   `spec.volumes` 字段包含了供 pod 查找 persistent volume 申明的必要信息。  `spec.volumes.name`  可以是你想要的任何东西。`spec.volumes.persistentVolumeClaim.claimName` 必需与 `database-persistent-volume-claim.yaml` 文件中的 `metadata.name` 值相匹配。
+-   `containers.volumeMounts`  包含容器挂载的 volume  所必需的信息。`containers.volumeMounts.name` 必需与 `spec.volumes.name` 中的值相匹配。`containers.volumeMounts.mountPath` 代表 volume  挂载的目录。`/var/lib/postgresql/data` 是 PostgreSQL 的默认数据目录。`containers.volumeMounts.subPath` 表示将在 volume  创建的目录。假设你与其它的 pod 正在使用相同的 volume。保存在 `/var/lib/postgresql/data` 目录中的所有数据都将进入 volume 的  `postgres` 路径下。
 
-Now re-apply the  `postgres-deployment.yaml`  file by executing the following command:
+现在执行下面的命令重新 apply  `postgres-deployment.yaml` 文件：
 
 ```yaml
 kubectl apply -f postgres-deployment.yaml
 
+# deployment.apps/postgres-deployment configured
 ```
 
-Now you have a proper database deployment with a much smaller risk of data loss.
+现在，已经进行了正确的数据库部署，数据丢失的风险小了很多。
 
-One thing that I would like to mention here is that the database deployment in this project has only one replica. If there were more than one replica, things would have been different.
+想要在这里提及的是，目前数据库部署中只有一个副本，如果有多个副本，那么情况会有所不同，
 
-Multiple pods accessing the same volume without them knowing about each others' existence can bring catastrophic results. In such cases creating sub directories for the pods inside that volume can be a good idea.
+多个 pod 在不知道彼此存在情况下访问相同的 volume 会产生灾难性的后果 ，在 volume 内为 pod 创建子目录可以解决这个问题。
 
-### Wiring Everything Up
+### 组装起来
 
-Now that you have both the API and database running, it's time to finish some unfinished business and set-up the networking.
+现在已经运行了 API 和数据库，是时候建立网络并做一些后续工作了。
 
-You've already learned in previous sections that to set up networking in Kubernetes, you use services. Before you start writing the services, have a look at the networking plan that I have for this project.
+在前面的章节中已经了解到 Kubernetes 中的网络设置，在开始编写服务之前，先看看我为项目制定的联网计划。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/notes-api-2.svg)
 
--   The database will only be exposed within the cluster using a  `ClusterIP`  service. No external traffic will be allowed.
--   The API deployment, however, will be exposed to the outside world. Users will communicate with the API and the API will communicate with the database.
+-   数据库只使用 `ClusterIP` service 在集群内暴露，不允许任何外部流量访问。
+-   API 部署服务将暴露给外部世界，用户将与  API 通信，API 与数据库通信。
 
-You've previously worked with a  `LoadBalancer`  service that exposes an application to the outside world. The  `ClusterIP`  on the other hand exposes an application within the cluster and allows no outside traffic.
+之前通过 `LoadBalancer` service 将应用暴露给了外部世界，`ClusterIP` 则再集群中公开应用，并且不允许外部流量访问。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/cluster-ip-3.svg)
 
-Given that the database service should be available only within the cluster, a  `ClusterIP`  service is the perfect fit for this scenario.
+鉴于数据库服务应仅在集群内可用 ，因此 `ClusterIP` service 服务非常适合此方案。
 
-Create a new file called  `postgres-cluster-ip-service.yaml`  inside the  `k8s`  directory and put following content in it:
+在 `k8s` 目录下创建一个名为  `postgres-cluster-ip-service.yaml` 的文件，内容如下：
 
 ```yaml
 apiVersion: v1
@@ -1322,11 +1516,11 @@ spec:
 
 ```
 
-As you can see, the configuration file for a  `ClusterIP`  is identical to one for a  `LoadBalancer`. The only thing that differs is the  `spec.type`  value.
+`ClusterIP` 的配置文件与 `LoadBalancer` 的配置文件差不多，唯一的不同的是  `spec.type`  。
 
-You should be able to interpret this file without any trouble by now. 5432 is the default port that PostgreSQL runs on. That's why that port has to be exposed.
+现在，这个文件就清晰了。5432 是 PostgreSQL 运行的默认端口。所以也要集群内暴露 5432 。
 
-The next configuration file is for the  `LoadBalancer`  service, responsible for exposing the API to the outside world. Create another file called  `api-load-balancer-service.yaml`  and put the following content in it:
+接下来是 `LoadBalancer` service 的配置文件，负责将 API 暴露给外界。创建一个名为 `api-load-balancer-service.yaml` 的文件，内容如下：
 
 ```yaml
 apiVersion: v1
@@ -1343,9 +1537,9 @@ spec:
 
 ```
 
-This configuration is identical to the one you've written in a previous section. The API runs in port 3000 inside the container and that's why that port has to be exposed.
+此配置与上一节中的配置相同。API 运行在容器内的 3000 端口，所以也要在集群中暴露此端口。
 
-The last thing to do is to add the rest of the environment variables to the API deployment. So open up the  `api-deployment.yaml`  file and update its content like this:
+最后要做的是要将环境变量添加到 API deployment 中。打开 `api-deployment.yaml` 文件并按照如下更新其内容：
 
 ```yaml
 apiVersion: apps/v1
@@ -1383,90 +1577,109 @@ spec:
 
 ```
 
-Previously there was just the  `DB_CONNECTION`  variable under  `spec.containers.env`. The new variables are as follows:
+之前，`spec.containers.env` 下面只有 `DB_CONNECTION` 变量，新涉及到的字段如下：
 
--   `DB_HOST`  indicates the host address for the database service. In a non-containerized environment the value is usually  `127.0.0.1`. But in a Kubernetes environment, you don't know the IP address of the database pod. Hence you just use the service name that exposes the database instead.
--   `DB_PORT`  is the port exposed from the database service, which is 5432.
--   `DB_USER`  is the user for connecting to the database.  `postgres`  is the default username.
--   `DB_DATABASE`  is the database that the API will connect to. This has to match with the  `spec.containers.env.DB_DATABASE`  value from the  `postgres-deployment.yaml`  file.
--   `DB_PASSWORD`  is the password for connecting to the database. This has to match with the  `spec.containers.env.DB_PASSWORD`  value from the  `postgres-deployment.yaml`  file.
+-   `DB_HOST`  表示数据库服务的地址。在非容器化环境中，该值通常为 `127.0.0.1`。但是在  Kubernetes 环境中，并不知道数据库容器的  IP 地址。因此只需使用公开的数据库 service 的名字即可 。  
+-   `DB_PORT`  是数据库 service 公开的端口，即 5432。 
+-   `DB_USER`  用于连接数据库的用户，默认的用户名是  `postgres`。
+-   `DB_DATABASE`  API 将要连接的数据库，必须与  `postgres-deployment.yaml` 文件中的 `spec.containers.env.DB_DATABASE` 值相同。
+-   `DB_PASSWORD`  用于连接数据库的密码，必须与 `postgres-deployment.yaml` 文件中的 `spec.containers.env.DB_PASSWORD` 值相匹配。
 
-With that done, now you're ready to test out the API. Before you do that, I'll suggest applying all the configuration files once again by executing the following command:
+完成此操作后就可以测试 API 了。在执行操作之前，执行一下下面的命令 apply 所有的配置文件：
 
 ```bash
 kubectl apply -f k8s
 
+# deployment.apps/api-deployment created
+# service/api-load-balancer-service created
+# persistentvolumeclaim/database-persistent-volume-claim created
+# service/postgres-cluster-ip-service created
+# deployment.apps/postgres-deployment created
+
 ```
 
-If you face any errors, just delete all resources and re-apply the files. The services, the persistent volumes, and the persistent volume claims should be created instantly.
+如果遇到任何错误，只需删除所有的资源并重新 apply 文件即可。service、persistent volumes、persistent volume 声明会立即创建。
 
-Use the  `get`  command to make sure the deployments are all up and running:
+用  `get`  命令确保所有的部署都已经启动且运行：
 
 ```
 kubectl get deployment
-NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
-api-deployment        3/3     3            3           106s
 
+# NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+# api-deployment        3/3     3            3           106s
+# postgres-deployment   1/1     1            1           106s
 ```
 
-As you can see from the  `READY`  column, all the pods are up and running. To access the API, use the  `service`  command for  `minikube`.
+从 `READY` 列中可以看出，所有的 pod 都已经启动并且正在运行。执行  `minikube` 的    `service` 命令访问 API。
 
 ```
 minikube service api-load-balancer-service
-|-----------|---------------------------|-------------|-----------------------------|
-| NAMESPACE |           NAME            | TARGET PORT |             URL             |
-|-----------|---------------------------|-------------|-----------------------------|
-| default   | api-load-balancer-service |        3000 | http://172.19.186.112:31546 |
-|-----------|---------------------------|-------------|-----------------------------|
+
+# |-----------|---------------------------|-------------|-----------------------------|
+# | NAMESPACE |           NAME            | TARGET PORT |             URL             |
+# |-----------|---------------------------|-------------|-----------------------------|
+# | default   | api-load-balancer-service |        3000 | http://172.19.186.112:31546 |
+# |-----------|---------------------------|-------------|-----------------------------|
+# * Opening service default/api-load-balancer-service in default browser...
 
 ```
 
-The API should open automatically in your default browser:
+API 会在默认浏览器里立即打开：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/image-93.png)
 
-This is the default response for the API. You can also use  [`http://172.19.186.112:31546/`][91]  with some API testing tool like  [Insomnia][92]  or  [Postman][93]  to test out the API. The API has full CRUD functionality.
+这时 API 的默认响应，还可以通过 [Insomnia][92]  或者  [Postman][93]  来测试 [`http://172.19.186.112:31546/`][91] API 的完整  CRUD 功能。
 
-You can see the tests that come with the API source code as documentation. Just open up the  `api/tests/e2e/api/routes/notes.test.js`  file. You should be able to understand the file without much hassle if you have experience with JavaScript and  [express][94].
+可以将 API 源代码随附的测试作为文档查看。只需打开 `api/tests/e2e/api/routes/notes.test.js` 文件即可，如果你有 JavaScript 和[express][94] 的经验，那么理解这个文件会很容易。
 
-## Working with Ingress Controllers
+## 使用 Ingress Controller
 
-So far in this article, you've used  `ClusterIP`  to expose an application within the cluster and  `LoadBalancer`  to expose an application outside the cluster.
+目前为止，已经使用  `ClusterIP` 在集群内公开了的应用程序，使用 `LoadBalancer` 把应用暴露给集群外。
 
-Although I've cited  `LoadBalancer`  as the standard service kind for exposing an application outside the cluster, it has some cons.
+尽管我已经引用了  `LoadBalancer` 作为引用于集群外部公开应用程序的的标准 service，但是它还有一些缺点。
 
-When using  `LoadBalancer`  services to expose applications in cloud environment, you'll have to pay for each exposed services individually which can be expensive in case of huge projects.
+当使用 `LoadBalancer` services 在云环境中公开应用程序时，必需单独为每个公开的服务付费。这在大型项目下回非常昂贵。
 
-There is another kind of service called  `NodePort`  that can be used as an alternative to the  `LoadBalancer`  kind of services.
+还有另一种成为 `NodePort` 的 service，可以代替  `LoadBalancer`  service。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/node-port-2.svg)
 
-`NodePort`  opens a specific port on all the nodes in your cluster, and handles any traffic that comes through that open port.
+`NodePort`  在集群所有节点上打开一个特定的端口，并处理通过该打开端口的所有流量。
 
-As you already know, services group together a number of pods, and control the way they can be accessed. So any request that reaches the service through the exposed port will end up in the correct pod.
+你知道，service 将多个 pod 组合在一起，并控制他们的访问方式。通过公开端口到达 service 的任何请求都将最终在正确的容器中。
 
-An example configuration file for creating a  `NodePort`  can be as follows:
+用于创建  `NodePort` 的实例配置文件如下：
 
 ```yaml
 apiVersion: v1
-
+kind: Service
+metadata:
+  name: hello-kube-node-port
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 31515
+  selector:
+    component: web
 ```
 
-The  `spec.ports.nodePort`  field here must have a value between 30000 and 32767. This range is out of the well-known ports usually used by various services but is also unusual. I mean how many times do you see a port with so many digits?
+这里的  `spec.ports.nodePort` 字段值必须在 30000 和 32767 之间，此范围超出了各种服务通常所使用的常用端口。端口的数字位数很多。、
 
-> You can try to replace the  `LoadBalancer`  services you created in the previous sections with a  `NodePort`  service. This shouldn't be tough and can be treated as a test for what you've learned so far.
+> 尝试用 `NodePort` service 替换前面几节创建的 `LoadBalancer` service，这应该不难，算是对所学知识的简单测试。
 
-To solve the issues I've mentioned the  `Ingress`  API was created. To be very clear,  `Ingress`  is actually not a type of service. Instead, it sits in front of multiple services and acts as a router of sorts.
+ 创建 `Ingress` 可以解决此问题，澄清一下，`Ingress` 不是一种 service，相反，它位于各个 service 前面，充当路由器的角色。
 
-An  `IngressController`  is required to work with  `Ingress`  resources in your cluster. A list of avalable ingress controllers can be found in the Kubernetes  [documentation][95].
+在集群中使用 `Ingress` 资源用到了 `IngressController`。可以在 Kubernetes  [文档][95] 中找到可用 的 ingress  controllers 列表。
 
-### Setting up NGINX Ingress Controller
+### 设置 NGINX Ingress Controller
 
-In this example, you'll extend the notes API by adding a front end to it. And instead of using a service like  `LoadBalancer`  or  `NodePort`, you'll use  `Ingress`  to expose the application.
+在此例中，通过向其添加 front end 来扩展 notes API。使用 `Ingress` 来暴露应用，而不是使用诸如 `LoadBalancer` 或者 `NodePort` 之类的 service。
 
-The controller you'll be using is the  [NGINX Ingress Controller][96]  because  [NGINX][97]  will be used for routing requests to different services here. The NGINX Ingress Controller makes it very easy to work with NGINX configurations in a Kubernetes cluster.
+将要使用的而控制器是 [NGINX Ingress Controller][96]，在此 [NGINX][97]  将用于不同 service 请求的路由。NGINX Ingress Controller 使 Kubernetes  集群的 NGINX  配置变的更容易。
 
-The code for the project lives inside the  `fullstack-notes-application`  directory.
+项目代码在 `fullstack-notes-application` 路径下：
 
 ```bash
 .
@@ -1481,44 +1694,45 @@ The code for the project lives inside the  `fullstack-notes-application`  direct
 ├── nginx
 └── postgres
 
+5 directories, 1 file
 ```
 
-You'll see a  `k8s`  directory in there. It contains all the configuration files you wrote in the last sub-section, except the  `api-load-balancer-service.yaml`  file.
+你会看到  `k8s` 目录，包含在上一个小节中除了 `api-load-balancer-service.yaml` 文件的所有的配置文件。
 
-The reason for that is, in this project, the old  `LoadBalancer`  service will be replaced with an  `Ingress`. Also, instead of exposing the API, you'll expose the front-end application to the world.
+原因是，在该项目中，旧的 `LoadBalancer` service 将被 `Ingress` 代替。另外，无需公开 API，而是将前端应用程序公开即可。
 
-Before you start writing the new configuration files, have a look at how things are going to work behind the scenes.
+在开始编写新文件之前，先看看架构。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/fullstack-1.svg)
 
-A user visits the front-end application and submits the necessary data. The front-end application then forwards the submitted data to the back-end API.
+用户访问前端应用程序并提交必要的数据，然后前端应用程序将提交的数据转发到后端 API。
 
-The API then persists the data in the database and also sends it back to the front-end application. Then routing of the requests is achieved using NGINX.
+然后 API 将数据保留在数据库中，并将其发送回前端应用程序。然后使用 NGINX 实现请求的路由。
 
-You can have a look at the  `nginx/production.conf`  file to understand how this routing has been set-up.
+可以查看 `nginx/production.conf` 文件了解如何设置此路由。
 
-Now the necessary networking required to make this happen is as follows:
+现在实现目标所必需的网络如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/ingress.svg)
 
-This diagram can be explained as follows:
+具体如下：
 
--   The  `Ingress`  will act as the entry-point and router for this application. This is an  `NGINX`  type  `Ingress`  so the port will be the default nginx port which is 80.
--   Every request that comes to  `/`  will be routed towards the front-end application (the service on the left). So if the URL for this application is  `[https://kube-notes.test][98]`, then any request coming to  `[https://kube-notes.test/foo][99]`  or  `[https://kube-notes.test/bar][100]`  will be handled by the front-end application.
--   Every request that comes to  `/api`  will be routed towards the back-end API (the service on the right). So if the URL again is  `[https://kube-notes.test][101]`, then any request coming to  `[https://kube-notes.test/api/foo][102]`  or  `[https://kube-notes.test/api/bar][103]`  will be handled by the back-end API.
+-   `Ingress`  将充当此应用程序的入口点和路由器，这是一个 `NGINX` 类型的 `Ingress`，因此端口是 nginx 的默认端口 80。
+-   到 `/` 的每个请求都会被路由到前端应用（左侧的服务）处理。因此，如果应用程序的 URL  是 `https://kube-notes.test` ，那么所有的 `https://kube-notes.test/foo` 或者 `https://kube-notes.test/bar` 都会由前端应用程序处理。
+-   到 `/api` 的每个请求都会被路由到后端的 API （右侧的服务）处理。因此，如果 URL 是 `https://kube-notes.test`，那么所有的 `https://kube-notes.test/api/foo` 或者  `https://kube-notes.test/api/bar` 都会由后端 API 处理。
 
-It was totally possible to configure the  `Ingress`  service to work with sub-domains instead of paths like this, but I chose the path-based approach because that's how my application is designed.
+完全可以将 `Ingress` service  配置与子域名一起使用，而不是向这样的路径，这里的设计使用路径的方式。
 
-In this sub-section, you'll have to write four new configuration files.
+在本小节中，必需编写四个新的配置文件：
 
--   `ClusterIP`  configuration for the API deployment.
--   `Deployment`  configuration for the front-end application.
--   `ClusterIP`  configuration for the front-end application.
--   `Ingress`  configuration for the routing.
+-   `ClusterIP`  是 API deployment 的配置。
+-   `Deployment`  是 front-end 应用的配置。
+-   `ClusterIP`  是 front-end 应用的配置。
+-   `Ingress`  是路由的配置。
 
-I'll go through the first three files very quickly without spending much time explaining them.
+前三个文件我会快速的过一下。
 
-The first one is the  `api-cluster-ip-service.yaml`  configuration and the contents of the file are as follows:
+第一个文件是  `api-cluster-ip-service.yaml` 配置，内容如下：
 
 ```yaml
 apiVersion: v1
@@ -1534,11 +1748,11 @@ spec:
       targetPort: 3000
 ```
 
-Although in the previous sub-section you exposed the API directly to the outside world, in this one, you'll let the  `Ingress`  do the heavy lifting while exposing the API internally using a good old  `ClusterIP`  service.
+尽管在上一小节中，将 API 直接暴露给了外界，但在本小节中，`Ingress` 承担起了这个任务，同时使用 `ClusterIP`   在内部公开 API。
 
-The configuration itself should be pretty self-explanatory at this point, so I won't be spending any time explaining it.
+配置不言自明，无需过多解释。
 
-Next, create a file named  `client-deployment.yaml`  responsible for running the front-end application. Contents of the file are as follows:
+接下来创建一个名为 `client-deployment.yaml` 的文件来运行前端应用，内容如下：
 
 ```yaml
 apiVersion: apps/v1
@@ -1565,11 +1779,11 @@ spec:
               value: /api
 ```
 
-It's almost identical to the the  `api-deployment.yaml`  file and I'm assuming that you'll be able to interpret this configuration file by yourself.
+它几乎与 `api-deployment.yaml` 文件相同，很好理解。
 
-The  `VUE_APP_API_URL`  environment variable here indicates the path to which the API requests should be forwarded. These forwarded requests will be in turn handled by the  `Ingress`.
+`VUE_APP_API_URL` 环境变量表示 API 请求应该转发的路径。这些转发请求将依次由`Ingress` 处理。
 
-To expose this client application internally another  `ClusterIP`  service is necessary. Create a new file called  `client-cluster-ip-service.yaml`  and put the following content in it:
+需要另一个 `ClusterIP`   service 来公开客户端应用程序。创建一个名为 `client-cluster-ip-service.yaml` 的新文件，内容如下：
 
 ```yaml
 apiVersion: v1
@@ -1586,9 +1800,9 @@ spec:
 
 ```
 
-All this does is expose port 8080 within the cluster on which the front end application runs by default.
+描述的是运行在集群上默认暴露在 8080 端口上的前端应用。
 
-Now that the boring old configurations are done, the next configuration is the  `ingress-service.yaml`  file and the content of the file is as follows:
+在完成了旧配置之后，下一个配置是 `ingress-service.yaml` 文件，内容如下： 
 
 ```yaml
 apiVersion: extensions/v1beta1
@@ -1613,96 +1827,111 @@ spec:
 
 ```
 
-This configuration file may look quite a bit unfamiliar to you but it's actually pretty straightforward.
+该文件有一些新配置，也很好理解：
 
--   The  `Ingress`  API is still in beta phase thus the  `apiVersion`  is  `extensions/v1beta1`. Although in beta, the API is very stable and usable in production environments.
--   The  `kind`  and  `metadata.name`  fields serve the same purpose as any of the configurations you wrote earlier.
--   `metadata.annotations`  can contain information regarding the  `Ingress`  configuration. The  `kubernetes.io/ingress.class: nginx`  indicates that the  `Ingress`  object should be controlled by the  `ingress-nginx`  controller.  `nginx.ingress.kubernetes.io/rewrite-target`  indicates that you want to  [rewrite][104]  the URL target in places.
--   `spec.rules.http.paths`  contains configuration regarding the individual path routings you previously saw inside the  `nginx/production.conf`  file. The  `paths.path`  field indicates the path that should be routed.  `backend.serviceName`  is the service that the aforementioned path should be routed towards and  `backend.servicePort`  is the target port inside that service.
--   `/?(._)_` _and  `/api/?(.`_`)`  are simple regex which means that  `?(.*)`  part will be routed towards the designated services.
+-   `Ingress`  API 仍处于测试阶段，所以 `apiVersion` 是 `extensions/v1beta1`。尽管处于 beta 版本，该 API 很稳定，可以直接在生产环境中使用。
+-   `kind`  和 `metadata.name` 字段和之前配置相同。
+-   `metadata.annotations`  可以包含有关 `Ingress`  配置的信息。`kubernetes.io/ingress.class: nginx` 表示 `Ingress` 对象应该由 `ingress-nginx` 控制器控制。`nginx.ingress.kubernetes.io/rewrite-target` 表示[重写][104]目标 URL 的地方。
+-   `spec.rules.http.paths`  包含在 `nginx/production.conf` 文件中看到的各个路径的路由配置。 `paths.path`  表示路由的路径，`backend.serviceName` 是上述路径应该匹配的 service。`backend.servicePort` 是服务内部的端口。
+-   `/?(._)_` 和 `/api/?(.`_`)`  是简单的正则表达式，表示  `?(.*)`  部分会被路由到指定的服务。
 
-The way you configure rewrites can change from time to time, so checking out the official  [docs][105]  would be good idea.
+配置重写的方式会时不时发生变化，具体可以查看官方[文档][105]。
 
-Before you apply the new configurations, you'll have to activate the  `ingress`  addon for  `minikube`  using the  `addons`  command. The generic syntax is as follows:
+在 apply 新的配置之前，使用  `addons` 命令激活 `minikube` 的 `ingress` 插件，用法如下：
 
 ```bash
-minikube addons <option> <addon name>
+minikube addons <option> <addon name
 ```
 
-To activate the  `ingress`  addon, execute the following command:
+执行如下命令激活 `ingress` 插件：
 
 ```bash
 minikube addons enable ingress
 
+# ? Verifying ingress addon...
+# ? The 'ingress' addon is enabled
 ```
 
-You can use the  `disable`  option for the  `addon`  command to disable any addon. You can learn more about the  `addon`  command in the official  [docs][106].
+可以对 `addon`  命令使用  `disable` 选项来禁用插件，查看官网[文档][106]了解  `addon` 命令的更多信息。
 
-Once the addon has been activated, you may apply the configuration files. I would suggest deleting all resources (services, deployments, and persistent volume claims) before applying the new ones.
+插件激活后，可以 apply 配置文件，建议在 apply 新资源之前删除所有的资源（service、deployment 和 persistent volume claims）。
 
 ```
 kubectl delete ingress --all
-ingress.extensions "ingress-service" deleted
-kubectl delete service --all
-service "api-cluster-ip-service" deleted
-service "client-cluster-ip-service" deleted
-service "kubernetes" deleted
-service "postgres-cluster-ip-service" deleted
-kubectl delete deployment --all
-deployment.apps "api-deployment" deleted
-deployment.apps "client-deployment" deleted
-deployment.apps "postgres-deployment" deleted
-kubectl delete persistentvolumeclaim --all
-persistentvolumeclaim "database-persistent-volume-claim" deleted
-kubectl apply -f k8s
-service/api-cluster-ip-service created
-deployment.apps/api-deployment created
-service/client-cluster-ip-service created
-deployment.apps/client-deployment created
-persistentvolumeclaim/database-persistent-volume-claim created
-ingress.extensions/ingress-service created
-service/postgres-cluster-ip-service created
 
+# ingress.extensions "ingress-service" deleted
+
+kubectl delete service --all
+
+# service "api-cluster-ip-service" deleted
+# service "client-cluster-ip-service" deleted
+# service "kubernetes" deleted
+# service "postgres-cluster-ip-service" deleted
+
+kubectl delete deployment --all
+
+# deployment.apps "api-deployment" deleted
+# deployment.apps "client-deployment" deleted
+# deployment.apps "postgres-deployment" deleted
+
+kubectl delete persistentvolumeclaim --all
+
+# persistentvolumeclaim "database-persistent-volume-claim" deleted
+
+kubectl apply -f k8s
+
+# service/api-cluster-ip-service created
+# deployment.apps/api-deployment created
+# service/client-cluster-ip-service created
+# deployment.apps/client-deployment created
+# persistentvolumeclaim/database-persistent-volume-claim created
+# ingress.extensions/ingress-service created
+# service/postgres-cluster-ip-service created
+# deployment.apps/postgres-deployment created
 ```
 
-Wait until all the resources have been created. You can utilize the  `get`  command to ensure that. Once all of them are running, you can access the application at the IP address of the  `minikube`  cluster. To get the IP, you can execute the following command:
+使用  `get` 命令来确保所有的资源都已经创建成功。当全部运行后，可以通过 `minikube` 集群的 IP 地址访问该应用程序。执行如下命令获取 IP 地址：
 
 ```bash
 minikube ip
 
+# 172.17.0.2
 ```
 
-You can also get this IP address by running inspecting the  `Ingress`:
+还可以通过运行 `Ingress` 来获取此 IP 的地址：
 
 ```bash
 kubectl get ingress
 
+# NAME              CLASS    HOSTS   ADDRESS      PORTS   AGE
+# ingress-service   <none>   *       172.17.0.2   80      2m33s
 ```
 
-As you can see, the IP and port is visible under the  `ADDRESS`  and  `PORTS`  columns. By accessing  `127.17.0.2:80`, you should land directly on the notes application.
+IP 和 端口分别在 `ADDRESS` 和 `PORTS` 端口列下。访问 `127.17.0.2:80`，可以直接进入 notes 应用程序。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/image-84.png)
 
-You can perform simple CRUD operations in this application. Port 80 is the default port for NGINX, so you don't need to write the port number in the URL.
+可以在此应用中执行简单的 CRUD 操作，端口 80 是 NGINX 的默认端口，因此可以省略 URL 中的端口号。
 
-You can do a lot with this ingress controller if you know how to configure NGINX. After all, that's what this controller is used for – storing NGINX configurations on a Kubernetes  `ConfigMap`, which you'll be learning about in the next sub-section.
+如果你了解如何配置 NGINX，可以使用  ingress controller 执行很多操作。毕竟，这就是控制器的用途 - 将 NGINX 的配置存储在 Kubernetes  的 `ConfigMap` 上，将会在下一部分中学习。
 
-### Secrets and Config Maps in Kubernetes
+### Kubernetes 中的 Secret 和配置
 
-So far in your deployments, you've stored sensitive information such as  `POSTGRES_PASSWORD`  in plain text, which is not a very good idea.
+目前为止，部署中使用纯文本形式存储了敏感信息，如 `POSTGRES_PASSWORD`，这并不是最佳实践。
 
-To store such values in your cluster you can use a  `Secret`  which is a much more secure way of storing passwords, tokens, and so on.
+可以用 `Secret` 将值存储在集群中，这是存储密码、token 等的更安全的方法。
 
-> The next step may not work the same in the Windows command line. You can use  [git][107]  bash or  [cmder][108]  for the task.
+> 在 Windows 命令行中，下一步可能无法正常工作，可以使用 [git][107] 终端或者 [cmder][108] 完成此任务。
 
-To store information in a  `Secret`  you have to first pass your data through base64. If the plain text password is  `63eaQB9wtLqmNBpg`  then execute following command to get a base64 encoded version:
+需要将数据转换成 base64 数据才能将信息存储在 `Secret` 中。如果纯文本密码为  `63eaQB9wtLqmNBpg` ，执行以下命令获取 base64 版本。
 
 ```bash
 echo -n "63eaQB9wtLqmNBpg" | base64
 
+# NjNlYVFCOXd0THFtTkJwZw==
 ```
 
-This step is not optional, you have to run the plain text string through base64. Now create a file named  `postgres-secret.yaml`  inside the  `k8s`  directory and put following content in there:
+此步骤是必要的，参数必需是 base64 格式的，现在在  `k8s`   目录下创建一个  `postgres-secret.yaml` 文件，内容如下：
 
 ```yaml
 apiVersion: v1
@@ -1713,11 +1942,11 @@ data:
   password: NjNlYVFCOXd0THFtTkJwZw==
 ```
 
-The  `apiVersion`,  `kind`, and  `metadata`  fields are pretty self-explanatory. The  `data`  field holds the actual secret.
+ `apiVersion`、`kind`、和  `metadata` 的意义无需解释，`data` 字段就是真实的密文。
 
-As you can see, I've created a key-value pair where the key is  `password`  and the value is  `NjNlYVFCOXd0THFtTkJwZw==`. You'll be using the  `metadata.name`  value to identify this  `Secret`  in other configuration files and the key to access the password value.
+如上，创建了一个键值对，键是 `password`， 值是 `NjNlYVFCOXd0THFtTkJwZw==`。将使用 `metadata.name` 值在其他配置文件中作为获取密码值的 `Secret` 的标识。
 
-Now to use this secret inside your the database configuration, update the  `postgres-deployment.yaml`  file as follows:
+按如下更新 `postgres-deployment.yaml` 文件，以在数据库配置中使用此密码：
 
 ```yaml
 apiVersion: apps/v1
@@ -1759,13 +1988,13 @@ spec:
 
 ```
 
-As you can see, the entire file is the same except the  `spec.template.spec.continers.env`  field.
+如上，除了 `spec.template.spec.continers.env`  字段外，所有的字段介绍过。
 
-The  `name`  environment variable used to store the password value was in plain text before. But now there is a new  `valueFrom.secretKeyRef`  field.
+之前用于存储密码的 `name` 环境变量是纯文本。但是现在是 `valueFrom.secretKeyRef` 字段。
 
-The  `name`  field here refers to the name of the  `Secret`  you created moments ago, and the  `key`  value refers to the key from the key-value pair in that  `Secret`  configuration file. The encoded value will be decoded to plain text internally by Kubernetes.
+这里的 `name`  字段是指刚刚创建的 `Secret` 的名字，`key` 值是指 `Secret` 配置文件键值对中的键。Kubernetes  将在内部将编码后的值解码为纯文本。
 
-Apart from the database configuration, you'll also have to update the  `api-deployment.yaml`  file as follows:
+除了数据库配置，你还需按如下所示更新 `api-deployment.yaml` 文件：
 
 ```yaml
 apiVersion: apps/v1
@@ -1807,42 +2036,53 @@ spec:
 
 ```
 
-Now apply all these new configurations by executing the following command:
+现在执行下面的命令 apply  这些新的配置文件：
 
 ```bash
 kubectl apply -f k8s
 
+# service/api-cluster-ip-service created
+# deployment.apps/api-deployment created
+# service/client-cluster-ip-service created
+# deployment.apps/client-deployment created
+# persistentvolumeclaim/database-persistent-volume-claim created
+# secret/postgres-secret created
+# ingress.extensions/ingress-service created
+# service/postgres-cluster-ip-service created
+# deployment.apps/postgres-deployment created
 ```
 
-Depending on the state of your cluster, you may see a different set of output.
+取决于集群的状态不同，输出可能会不同。
 
-> In case you're having any issue, delete all Kubernetes resources and create them again by applying the configs.
+> 谨慎起见，先删除所有的资源然后在 apply 配置文件来创建他们。
 
-Use the  `get`  command to inspect and make sure all the pods are up and running.
+使用 `get`  命令检查并确保所有的 pod 都已经启动并且正在运行。
 
-Now to test out the new configuration, access the notes application using the  `minikube`  IP and try creating new notes. To get the IP, you can execute the following command:
+使用 `minikube`  IP 访问 notes 应用程序并尝试创建新的 notes， 来测试新的配置。
 
 ```bash
 minikube ip
 
+# 172.17.0.2
 ```
 
-By accessing  `127.17.0.2:80`, you should land directly on the notes application.
+访问  `127.17.0.2:80`，您应该会直接进入 Notes 应用程序。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/image-92.png)
 
-There is another way to create secrets without any configuration file. To create the same  `Secret`  using  `kubectl`, execute the following command:
+还有一种无需任何配置文件即可创建 secret  的方法，执行如下命令，使用 `kubectl` 创建相同的 `Secret`。
 
 ```bash
 kubectl create secret generic postgres-secret --from-literal=password=63eaQB9wtLqmNBpg
 
+# secret/postgres-secret created
 ```
 
-This is a more convenient approach as you can skip the whole base64 encoding step. The secret in this case will be encoded automatically.
+这是一种更方便的方法，因为可以跳过整个 base64 编码步骤。在这种情况下，secret 会被自动编码。
 
-A  `ConfigMap`  is similar to a  `Secret`  but is meant to be used with non sensitive information.
+ `ConfigMap` 和  `Secret` 类似，一般用于非隐私的的信息。
 
-To put all the other environment variables in the API deployment inside a  `ConfigMap`, create a new file called  `api-config-map.yaml`  inside the  `k8s`  directory and put following content in it:
+在  `k8s`  目录下创建一个名为 `api-config-map.yaml` 的文件，把 API deployment 里所有的其余的环境变量放在  `ConfigMap` 里：
 
 ```yaml
 apiVersion: v1 
@@ -1858,11 +2098,11 @@ data:
 
 ```
 
-`apiVersion`,  `kind`  and  `metadata`  are again self-explanatory. The  `data`  field can hold the environment variables as key-value pairs.
+`apiVersion`、  `kind`  和 `metadata` 无需解释。`data` 字段是以键值对形式的环境变量。
 
-Unlike the  `Secret`, the keys here have to match the exact key required by the API. Thus, I have sort of copied the variables from  `api-deployment.yaml`  file and pasted them here with a slight modification in the syntax.
+和 `Secret` 不同，此处的 key 必需与 API 所需的 key 匹配。因此，我从 `api-deployment.yaml` 文件中复制了一些变量，并稍作修改后粘贴到了此处。
 
-To make use of this secret in the API deployment, open up the  `api-deployment.yaml`  file and update its content as follows:
+要在 API deployment 中使用 secret，打开 `api-deployment.yaml`  文件并做如下修改：
 
 ```yaml
 apiVersion: apps/v1
@@ -1897,43 +2137,54 @@ spec:
 
 ```
 
-The entire file is almost unchanged except the  `spec.template.spec.containers.env`  field.
+文件除了 `spec.template.spec.containers.env`  字段外几乎没有改变。
 
-I have moved the environment variables to the  `ConfigMap`.  `spec.template.spec.containers.envFrom`  is used to get data from a  `ConfigMap`.  `configMapRef.name`  here indicates the  `ConfigMap`  from where the environment variables will be pulled.
+我已经将环境变量移到了 `ConfigMap` 中。`spec.template.spec.containers.envFrom`  用来从 `ConfigMap` 中获取数据。`configMapRef.name` 表示将从中 提取环境变量的 `ConfigMap`  。
 
-Now apply all these new configurations by executing the following command:
+然后执行下面的命令 apply 所有的配置：
 
 ```bash
 kubectl apply -f k8s
 
+# service/api-cluster-ip-service created
+# configmap/api-config-map created
+# deployment.apps/api-deployment created
+# service/client-cluster-ip-service created
+# deployment.apps/client-deployment created
+# persistentvolumeclaim/database-persistent-volume-claim created
+# ingress.extensions/ingress-service configured
+# service/postgres-cluster-ip-service created
+# deployment.apps/postgres-deployment created
+# secret/postgres-secret created
 ```
 
-Depending on the state of your cluster, you may see a different set of output.
+取决于集群的状态，输出可能会不同。
 
-> In case you're having any issue, delete all Kubernetes resources and create them again by applying the configs.
+> 谨慎起见，先删除所有的 Kubernetes  资源然后在 apply configs 创建他们。
 
-Upon making sure that the pods are up and running using the  `get`  command, access the notes application using the  `minikube`  IP and try creating new notes.
+使用 `get` 命令确保 pod 已经启动并运行，使用 `minikube` IP 访问 notes 应用并尝试创建新的 note。
 
-To get the IP, you can execute the following command:
+执行下面的命令获取 IP 地址。
 
 ```bash
 minikube ip
 
+# 172.17.0.2
 ```
 
-By accessing  `127.17.0.2:80`, you should land directly on the notes application.
+访问  `127.17.0.2:80` ，直接进入 notes 应用程序。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/image-92.png)
 
-`Secret`  and  `ConfigMap`  have a few more tricks up their sleeves that I'm not going to get into right now. But if you're curious, you may check out the official  [docs][109].
+`Secret`  和 `ConfigMap` 还有其它一些技巧，就不在这里展开了，如果想了解，可以查看官方[文档][109]。
 
-### Performing Update Rollouts in Kubernetes
+### 在 Kubernetes 中执行更新发布
 
-Now that you've successfully deployed an application consisting of multiple containers on Kubernetes, it's time to learn about performing updates.
+既然已经在 Kubernetes 上成功部署了一个包含多个容器的应用程序，是时候学习执行更新了。
 
-As magical as Kubernetes may seem to you, updating a container to a newer image version is a bit of a pain. There are multiple approaches that people often take to update a container, but I am not going to go through all of them.
+Kubernetes 很神奇，将容器更新为较新版本的镜像比较麻烦，有很多种方式更新容器，这里不会涉及到所有的方法。
 
-Instead, I'll jump right into the approach that I mostly take in updating my containers. If you open up the  `client-deployment.yaml`  file and look into the  `spec.template.spec.containers`  field, you'll find something that looks like this:
+相反，我将直接进入更新容器时主要采取的方法。如果打开  `client-deployment.yaml` 文件并查看 `spec.template.spec.containers` 字段，会看到下面的配置：
 
 ```yaml
 containers:
@@ -1941,56 +2192,60 @@ containers:
       image: fhsinchy/notes-client
 ```
 
-As you can see, in the  `image`  field I haven't used any image tag. Now if you think that adding  `:latest`  at the end of the image name will ensure that the deployment always pulls the latest available image, you'd be dead wrong.
+如上，在  `image`  字段中，没有使用任何镜像标签。现在，如果你认为在镜像尾部添加  `:latest`  将确保部署始终拉取最新的镜像，那你可就大错特错了。
 
-The approach that I usually take is an imperative one. I've already mentioned in a previous section that, in a few cases, using an imperative approach instead of a declarative one is a good idea. Creating a  `Secret`  or updating a container is such a case.
+我通常采用最简单的路径。之前提到过，在某些情况下，使用命令式而不是声明式是一个好主意，创建一个 `Secret` 或者更新容器就是这种情况。
 
-The command you can use to perform the update is the  `set`  command, and the generic syntax is as follows:
+可以用来执行更新的命令是 `set`  命令，其通用语法如下：
 
 ```bash
 kubectl set image <resource type>/<resource name> <container name>=<image name with tag>
 ```
 
-The resource type is  `deployment`  and resource name is  `client-deployment`. The container name can be found under the  `containers`  field inside the  `client-deployment.yaml`  file, which is  `client`  in this case.
+资源类型为 `deployment`，资源名称为 `client-deployment`。可以在 `client-deployment.yaml` 文件内的 `containers` 字段找到容器的名称，本例中为  `client`  。
 
-I have already build a version of the  `fhsinchy/notes-client`  image with a tag of  `edge`  that I'll be using to update this deployment.
+我已经构建了带有标签  `edge` 的 `fhsinchy/notes-client` 镜像，将使用它来更新 `fhsinchy/notes-client` 的版本。
 
-So the final command should be as follows:
+最终命令如下：
 
 ```bash
 kubectl set image deployment/client-deployment client=fhsinchy/notes-client:edge
 
+# deployment.apps/client-deployment image updated
 ```
 
-The update process may take a while, as Kubernetes will recreate all the pods. You can run the  `get`  command to know if all the pods are up and running again.
+由于 Kubernetes 将重新创建所有的 pod，执行此更新可能需要一段时间，可以运行 `get` 命令来了解是否所有的 pod 都已经启动并且成功运行。 
 
-Once they've all been recreated, access the notes application using the  `minikube`  IP and try creating new notes. To get the IP, you can execute the following command:
+重新创建后，使用 `minikube`  IP 访问 notes 应用并尝试创建新的 notes。可以执行下面的命令获取 IP：
 
 ```bash
 minikube ip
 
+# 172.17.0.2
 ```
 
-By accessing  `127.17.0.2:80`, you should land directly on the notes application.
+通过访问 `127.17.0.2:80` 应该可以直接进入 notes 应用程序。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/image-92.png)
 
-Given that I haven't made any actual changes to the application code, everything will remain the same. You can ensure that the pods are using the new image using the  `describe`  command.
+鉴于我还未对应用程序代码进行任何实际更改，因此所有的内容都将保持不变。你可以使用  `describe` 命令来确保 pod 正在使用新的镜像。
 
 ```bash
 kubectl describe pod client-deployment-849bc58bcc-gz26b | grep 'Image'
 
+# Image:          fhsinchy/notes-client:edge
+# Image ID:       docker-pullable://fhsinchy/notes-client@sha256:58bce38c16376df0f6d1320554a56df772e30a568d251b007506fd3b5eb8d7c2
 ```
 
-The  `grep`  command is available on Mac and Linux. If you're on Windows, use git bash instead of the windows command line.
+`grep` 命令在 Mac 和 Linux 可以直接使用，如果你使用的是 Windows，使用 git bash 而不是 Windows 命令行。
 
-Although the imperative update process is a bit tedious, but it can be made much easier by using a good CI/CD workflow.
+尽管强制性更新过程有些繁琐，但是通过好的 CI/CD 流程可以使其变得更加容易。
 
-### Combining Configurations
+### 组合 Configurations
 
-As you've already seen, the number of configuration files in this project is pretty huge despite only having three containers in it.
+尽管其中只有三个容器，但该项目中的配置文件数量已经非常庞大了。
 
-You can actually combine configuration files as follows:
+实际上可以按照如下方式组合配置文件：
 
 ```yaml
 apiVersion: apps/v1
@@ -2015,29 +2270,41 @@ spec:
           env:
             - name: VUE_APP_API_URL
               value: /api
+              
 ---
 
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-cluster-ip-service
+spec:
+  type: ClusterIP
+  selector:
+    component: client
+  ports:
+    - port: 8080
+      targetPort: 8080
 ```
 
-As you can see, I've combined the contents of the  `client-deployment.yaml`  and  `client-cluster-ip-service.yaml`  file using a delimiter (`---`). Although it's possible and can help in projects where the number of containers is very high, I recommend keeping them separate, clean, and concise.
+如上，我已经使用界定符（`---`）组合了 `client-deployment.yaml` 和 `client-cluster-ip-service.yaml` 文件。尽管有可能在容器数量很多的项目中减少文件，但我还是建议将他们分开，更简洁、更干净。
 
-## Troubleshooting
+## 答疑
 
-In this section, I'll be listing some common issues that you may face during your time with Kubernetes.
+在本节中，我将列出您使用 Kubernetes 时可能遇到的一些常见问题。
 
--   If you're on Windows or Mac and using the Docker driver for  `minikube`, the  `Ingress`  plugin will not work.
--   If you have  [Laravel Valet][110]  running on Mac and are using the HyperKit driver for  `minikube`, it'll fail to connect to the internet. Turning off the  `dnsmasq`  service will resolve the issue.
--   If you have a Ryzen (mine is R5 1600) PC and are running Windows 10, the VirtualBox driver may fail to start due to the lack of support for nested virtualization. You'll have to use the Hyper-V driver on Windows 10 (Pro, Enterprise, and Education). For the Home edition users, sadly there is no safe option on that hardware.
--   If you're running Windows 10 (Pro, Enterprise, and Education) with the Hyper-V driver for  `minikube`, the VM may fail to start with a message regarding insufficient memory. Don't panic, and execute the  `minikube start`  command once again to start the VM properly.
--   If you see some of the commands executed in this article missing or misbehaving in the Windows command line, use  [git][111]  bash or  [cmder][112]  instead.
+-   如果你在 Windows 或者 Mac 使用 Docker 的 `minikube`，`Ingress`  插件可能并没有生效。、
+-   如果您在 Mac 上运行了[Laravel Valet][110]，并且将 HyperKit 驱动程序用于`minikube`，会联网失败。关闭 `minikube` 服务可以解决此问题。
+-   如果你有一台 Ryzen (mine is R5 1600) PC，并且正在运行 Windows 10，由于缺少内嵌虚拟化支持 VirtualBox  可能会启动失败。必须在 Windows 10 （Pro、Enterprise 和 Education）上安装 Hyper-V 驱动程序，对于家庭版，很遗憾没有该选项。
+-   如果你在 Windows 10 (Pro, Enterprise 和 Education)  上使用用于 `minikube` 的 Hyper-V  驱动，VM 可能会启动失败，并显示 内存不足的消息。不要紧张，执行 `minikube start` 重新启动 VM。
+-   如果你在 Windows 命令行中看到本文执行的某些命令丢失，或者功能异常，请改用  [git][111] 命令行或者  [cmder][112] 。、
 
-I would suggest installing a good Linux distribution on your system and using the Docker driver for  `minikube`. This is by far the fastest and most reliable set-up.
+我建议在您的系统上安装一个 Linux 发行版，并将 Docker 驱动程序用于 `minikube`。目前为止，这是最快也是最可靠的设置。
 
-## Conclusion
+## 结论
 
-I would like to thank you from the bottom of my heart for the time you've spent reading this article. I hope you've enjoyed your time and have learned all the essentials of Kubernetes.
+衷心感谢你花了这么长时间阅读本文，希望你享受学习过程，并了解了 Kubernetes 的基础知识。
 
-You can follow me on Twitter  [@frhnhsin][113]  or connect with me on on LinkedIn at  [/in/farhanhasin][114]  if you prefer that.
+客户关注我的推特   [@frhnhsin][113]  或者在 LinkedIn [/in/farhanhasin][114]  上与我联系。
 
 [1]: https://kubernetes.io/
 [2]: https://opensource.google/projects/kubernetes

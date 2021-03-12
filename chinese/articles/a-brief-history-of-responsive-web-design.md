@@ -1,161 +1,161 @@
 > -   原文地址：[A Brief History of Responsive Web Design](https://www.freecodecamp.org/news/a-brief-history-of-responsive-web-design/)
 > -   原文作者：Kris Koishigawa
-> -   译者：
+> -   译者：ZhiChengChen
 > -   校对者：
 
 ![A Brief History of Responsive Web Design](https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDF8fHJlc3BvbnNpdmUlMjBkZXNpZ258ZW58MHx8fA&ixlib=rb-1.2.1&q=80&w=2000)
 
-These days, responsive web design is something we all take for granted. When we visit a website, we expect it to work and look good on all our devices, no matter what the screen size is.
+如今，网页响应式设计已成为理所当然的事情。 当访问网站时，无论屏幕大小，我们都预期它能在所有设备上正常运行并看起来不错。
 
-But it took us a long time to get to this point, and developers came up with a number of techniques to adapt sites to different screen sizes before settling on responsive web design.
+这并不是一蹴而就的，开发人员想出了许多技术来使网站适配不同的屏幕尺寸，最终才有了现在的响应式网页设计。
 
-In this article, we'll take a look at the early web, different ways developers would adapt a site to different screen sizes, and modern responsive design.
+本文将涉及早期的网络，开发人员适配不同屏幕尺寸的方式以及现代的响应式设计。
 
-## The first website
+## 第一个网站
 
-On August 6, 1991, the first website ever came online. The site was created by Tim Berners\-Lee, and detailed the World Wide Web (W3) project. It originally ran off of a NeXT computer at CERN, the European Organization for Nuclear Research.
+1991 年 8 月 6 日，第一个网站上线。 该站点由 Tim Berners \- Lee 创建，网站详细介绍了万维网（W3）项目。 它最初是在欧洲核研究组织 CERN 的 NeXT 计算机上运行的。
 
-Though the original site went offline, CERN [launched a project](https://first-website.web.cern.ch/first-website/) in 2013 to "preserve some of the digital assets that are associated with the birth of the web." Everything from the original machine names, IP addresses, and URL of the first website was restored to the best of their ability.
+尽管今天原始站点已经离线，但 CERN 于 2013 年 [启动了一个项目](https://first-website.web.cern.ch/first-website/)，以 “保留与 web 的诞生相关的一些数字资产” 。从最初的计算机名称、IP地址到第一个网站的 URL，所有内容均已恢复到可用状态。
 
-While the original 1991 version of the website was lost, they were able to restore a version from 1992. If you'd like to check out yourself, it now lives at [http://info.cern.ch/hypertext/WWW/TheProject.html](http://info.cern.ch/hypertext/WWW/TheProject.html).
+虽然该网站的原始 1991 年的版本丢失了，但是恢复了1992 年的版本。如果感兴趣，可以访问 [http://info.cern.ch/hypertext/WWW/TheProject.html](http://info.cern.ch/hypertext/WWW/TheProject.html)。
 
-## Early web design
+## 早期的 web 设计
 
-The web changed rapidly since Berners\-Lee's first website went online. Every year, thousands of websites were launched, and new design techniques developed as rapidly as web technology itself.
+自 Berners\-Lee 的第一个网站上线以来，web 迅速发展。 每年都有成千上万的网站开通，新的设计技术与 Web 技术本身一样发展迅猛。
 
-In the early 90s, web design was very simple. Most websites used simple header, paragraph, and early list tags like `<dl>`, `<dt>`, and `<dd>` tags to organize information.
+在 90 年代初期，网页设计非常简单。 大多数网站都使用简单的 header，paragraph 和 早期 list 标签（如`<dl>`，`<dt>` 和 `<dd>` 标签）来组织信息。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/yahoo-1994.png)
 
-Yahoo in 1994 ([Source](https://www.webdesignmuseum.org/web-design-history/yahoo-1994))
+1994 的 雅虎 ([地址](https://www.webdesignmuseum.org/web-design-history/yahoo-1994))
 
-More complex sites had to use tables to control the layout of the page, and create things like navigation and sidebars that are common today.
+更复杂的站点必须使用表格才能控制页面的布局，创建诸如导航和侧边栏之类的东西，这在当今已经很普遍。
 
-Though methods of styling websites existed in some form or another, Håkon Wium Lie first proposed CSS in 1994 while working at CERN. Then in 1996, the World Wide Web Consortium (W3C), also founded by Berners\-Lee, released the first formal specification for Cascading Style Sheets, level 1 (CSS1).
+如今网站样式可以通过各种方式设置，CSS 是由 Håkon Wium Lie 于 1994 年在 CERN 工作时首先提出。 在 1996 年，同样由 Berners\-Lee 创立的万维网联盟（W3C）发布了层叠样式表，level 1（CSS1）的正式规范。
 
-With CSS and other technologies like JavaScript and Flash, web developers could get more creative and playful with their designs.
+借助 CSS 和其他技术（如 JavaScript 和 Flash），Web 开发人员可以使设计更具创造性和趣味性。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/internet-archive-1997.png)
 
-Internet Archive in 1997 ([Source](https://www.webdesignmuseum.org/web-design-history/internet-archive-1996))
+1997 年的网站 ([地址](https://www.webdesignmuseum.org/web-design-history/internet-archive-1996))
 
-By the late 90s to early 2000s, patterns in web design and user experience had emerged, and websites started to look like the ones we use today:
+90 年代末 20 年代初，web 设计和用户体验的模式已经出现，网站看起来开始像我们今天使用的网站：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/deviant-art-2000.png)
 
-DeviantArt in 2000 ([Source](https://www.webdesignmuseum.org/web-design-history/deviantart-2000))
+2000 的 DeviantArt ([地址](https://www.webdesignmuseum.org/web-design-history/deviantart-2000))
 
-## Early responsive design methods
+## 初期的响应式设计方法
 
-With the wider adoption of CSS, developers had to spend a lot more time on things like layout, design, and typography. But one thing they didn't have to worry much about was adapting to different screen sizes. At the time, most people's monitors were either 640x480, 800x600, or 1024×768.
+随着 CSS 的广泛使用，开发人员不得不在布局、设计和排版等方面花费更多的时间。 但是他们不必担心的一件事是适应不同的屏幕尺寸。 当时，大多数人的显示器是 640x480、800x600 或 1024×768。
 
-Still, developers found a few different ways to work with these monitor or browser window sizes, which eventually lead to responsive web design as we know it today. Let's take a look at a few of them.
+尽管如此，开发人员仍然找到了兼容这些显示器或浏览器窗口大小的几种不同方法，最终发展出了当今我们所熟知的响应式 Web 设计。 让我们来看看其中的一部分。
 
-### Liquid layouts
+### 流式布局
 
-According to [MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design), the two main layout options developers had early on were either fixed\-width, where content was set to an exact, to\-the\-pixel width, or liquid, where content was sized using percentages.
+根据 [MDN](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)，开发人员早期采用的两个主要布局选项是 “固定宽度” 和流式布局，固定宽度是将其内容设置为固定的的像素宽度，流式布局内容使用百分比确定宽度。
 
-MDN has some good examples of both [fixed\-width](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html) and [liquid](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html) layouts.
+MDN 上有 [固定宽度](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html)  和 [流式布局](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html)  的一些不错的例子。
 
-Liquid layouts, first coined and popularized by Glenn Davis, were revolutionary at the time, and can be considered one of the first major methods of responsive web design.
+流式布局最早由 Glenn Davis 创造并推广，轰动一时，可以认为是初期响应式 Web 设计的主要方法之一。
 
-While fixed\-width layouts might break if your monitor wasn't the same resolution as the one the site was designed on, liquid layouts were much more flexible, and could adapt to different monitor resolutions or browser sizes.
+如果显示器的分辨率与固定宽度布局设计的分辨率不同，固定宽度布局可能只能显示一部分，但流式布局要灵活性的多，可以适应不同的显示器分辨率或浏览器尺寸。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/elastic.gif)
 
-An example of liquid design ([Source](https://thehistoryoftheweb.com/mostly-complete-history-layout-web-part-1-liquid-cool/))
+流式布局的一个例子 ([地址](https://thehistoryoftheweb.com/mostly-complete-history-layout-web-part-1-liquid-cool/))
 
-But it wasn't perfect. On liquid layout sites, content could overflow and text could break on smaller screens, and on larger screens there could be a lot of unnecessary white space.
+但是流式布局并不是完美的。 在流式布局的网站上，内容可能会溢出，在较小的屏幕上文字可能会换行，在较大的屏幕上可能会有很多不必要的空白。
 
-### Resolution dependent layouts
+### 分辨率相关的布局
 
-In 2004, Cameron Adams wrote a [blog post](https://www.themaninblue.com/writing/perspective/2004/09/21/) where he detailed a method of using JavaScript to swap out different stylesheets based on the size of the browser window.
+2004 年，卡梅隆·亚当斯（Cameron Adams）撰写了一篇[博客](https://www.themaninblue.com/writing/perspective/2004/09/21/)，详细地介绍了一种使用 JavaScript 根据浏览器窗口大小载入不同样式表的布局方法。
 
-This technique came to be known as resolution dependent layouts, named after Adams' blog post. Even though it was a bit of extra work for developers at the time, it allowed more fine\-grained control over the layout of the site, and functioned as an early version of CSS breakpoints before those were a thing.
+这种技术后来被称为分辨率相关的布局（以 Adams 的博客文章标题命名）。 即使当时对开发人员来说需要做额外的工作，但它可以对站点布局进行更细粒度的控制，并且可以在 CSS breakpoints 流行之前作为 CSS breakpoints 的早期方案。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/image-117.png)
 
-Adams' example of a resolution dependent layout ([Source](https://www.themaninblue.com/experiment/ResolutionLayout/))
+Adams 的分辨率相关的布局例子 ([地址](https://www.themaninblue.com/experiment/ResolutionLayout/))
 
-The downside of this method was that developers had to create different stylesheets for each target resolution, and ensure that the styling and JavaScript worked across all major browsers.
+这种方法的缺点是，开发人员必须为每个目标分辨率创建不同的样式表，并确保样式和 JavaScript 在所有主要浏览器上均能正常工作。
 
-There were a whole lot of browsers at the time, and sometimes they handled HTML, CSS, and JavaScript differently. In fact, that's one of the major reasons that jQuery first became so popular at the time – it abstracted a lot of the browser differences away so you only had to write your code once.
+当时有很多浏览器，有时它们对 HTML，CSS 和 JavaScript 的处理方式也不同。 实际上，这也是 jQuery 如此流行的主要原因之一 – 它抽象了许多浏览器差异，因此只需要编写一次代码。
 
-### Mobile subdomains
+### 移动子域名网站
 
-All this was happening right around the time that more mobile devices were going online. Nokia, Blackberry, and eventually, the iPhone, came with their own browsers. And suddenly developers had to come up with different ways to tailor the online experience to different screen sizes.
+随着越来越多的移动设备的出现， 诺基亚，黑莓以及 iPhone 都配备了自己的浏览器。 开发人员不得不想出其它方案来适应不同的屏幕尺寸。
 
-One clever way that developers came up with to handle all these new devices was to create a version of a site just for mobile and make it available on a subdomain.
+一种巧妙方法是创建一个仅适用于移动设备的网站版本，并使其在子域名中访问。
 
-Mobile subdomains, sometimes called m\-dots or m subdomains, are just that – a mobile specific version of a site that's hosted on a subdomain, typically `m`.
+移动子域名网站（有时称为 m\-dots 或 m子域名）就是 - 托管在网站子域名中的的移动特定版本，通常是 `m` 子域名。
 
-For example, the desktop version of Facebook is at `facebook.com`, or more specifically, at the `www` subdomain, `www.facebook.com`:
+例如，Facebook 的桌面版本是 `facebook.com`，或更具体地说，位于 `www` 子域名 `www.facebook.com` 下：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/image-119.png)
 
-The desktop version of Facebook
+Facebook 的桌面版本网站
 
-But the mobile version of Facebook is at `m.facebook.com`:
+而Facebook 的移动版本位于 `m.facebook.com` 下：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/image-118.png)
 
-The mobile version of Facebook
+Facebook 的移动版本网站
 
-If you sign in to both applications and look at them side\-by\-side, they look pretty similar. But under the hood, they're really two separate applications – the mobile version is quite a bit lighter, and is optimized to work on smaller screens and on most mobile browsers.
+如果您登录到两个应用程序并对比它们，会发现它们看起来非常相似。 它们实际上是两个独立的应用程序 - 移动版本要简洁一些，并且经过了优化，可以在较小的屏幕和大多数移动浏览器上运行。
 
-Mobile subdomains are still around today, and there are some definite advantages to this approach. With a separate version of a site on a mobile subdomain, developers can ensure the site loads quickly, and uses less mobile data.
+移动子域名网站今天仍然存在，并且这种方法具有一定的优势。 通过在移动子域名上使用单独的网站版本，开发人员可以确保网站快速加载，消耗更少的移动数据。
 
-Also, having a mobile subdomain allows developers to really tailor the SEO (search engine optimization) to mobile devices, and drive more traffic to the mobile version of the site.
+此外，拥有子域名网站可以使开发人员真正针对移动设备量身定制 SEO（搜索引擎优化），为该网站的移动版本吸引更多流量。
 
-But there are some definite downsides as well. Going with mobile subdomains means that developers have to maintain two, sometimes very different, websites instead of just one.
+但是它也有一些的缺点。 使用移动子域名网站意味着开发人员必须维护两个（有时非常不同）的网站，而不是仅维护一个。
 
-And mobile subdomains can sometimes be frustrating. I'm sure many of you know the pain of trying to visit the desktop version of a site only to get redirected to the mobile version.
+移动子域名网站有时可能会令人困惑。 我敢肯定，很多人都知道尝试访问网站的桌面版本时却被重定向到移动版本的痛苦。
 
-Not only that, but developers have to figure out which devices to redirect, and under what conditions.
+不仅如此，开发人员还必须弄清楚需要重定向的设备以及在什么条件下重定向。 
 
-Traditionally this was done by checking the user agent of the visitor's browser, but with the number of devices coming out at the time, it was a constant moving target. Eventually developers started checking the width of the browser window with JavaScript and redirecting based on that.
+传统上，这是通过检查访问者浏览器的 user agent 来完成的，但是随着设备的增加，user agent  越来越多。 最终，开发人员开始使用 JavaScript 检查浏览器窗口的宽度并基于此进行重定向。
 
-Now you might be thinking, that sounds a lot like responsive web design today. And it's true – in many ways, modern responsive web design is a, well, response, to past techniques. It takes a lot of the good ideas that developers came up with and builds on top of them.
+你可能正想，这听起来很像今天的响应式网页设计。 的确如此 - 在很多方面，现代的响应式 Web 设计是对过去技术的一种归纳。 开发人员已经想出了很多好的想法，可以在这些想法的基础上进行构建。
 
-## Responsive web design
+## 响应式 web 设计
 
-By the late 2000s, designing a site to work on different screen sizes was quickly becoming the norm. But to do this, developers had to come up with a lot of tricks.
+到 20 年代后期，设计一个可以在不同屏幕尺寸上运行的网站已迅速成为一种规范。 但是要做到这一点，开发人员必须想出很多技巧。
 
-Even for simple layouts, developers had to use things like the `max-width: 100%` trick for flexible images, and `float` with [clearfixes](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats#the_clearfix_hack) to keep things from breaking.
+即使是简单的布局，开发人员也必须使用  `max-width: 100%` 技巧来生成响应式的图像，使用 `float` 和 [clearfixes](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats#the_clearfix_hack) 来避免错乱。
 
-Then in 2010, a developer named Ethan Marcotte published an article in [A List Apart](https://alistapart.com/) where he outlined a new way of thinking about flexible web design. In the article, Marcotte listed three important components for creating a responsive website: fluid grids, flexible images, and media queries.
+然后在 2010 年，名为 Ethan Marcotte 的开发人员在 [A List Apart](https://alistapart.com/) 中发表了一篇文章，他概述了一种关于弹性 Web 设计的新思路。 在文章中，Marcotte 列出了创建响应式网站的三个重要组件：fluid grids、flexible images 和 media queries。
 
-Beyond outlining the major components of responsive web design, Marcotte is also credited for coining the term itself, which was named after the title of the [2010 article](https://alistapart.com/article/responsive-web-design/).
+除了概述响应式网页设计的主要组成部分之外，Marcotte 还因创造了该术语本身而闻名，响应式 web 设计以 [2010 年发布的文章](https://alistapart.com/article/responsive-web-design/) 的标题命名。 
 
 ### Fluid grids
 
-Fluid grids are the idea that a website should adopt a different number of flexible columns that grow or shrink depending on the current screen size. On mobile devices, there should be one or two flexible columns of content, and on desktops there can be more:
+Fluid grids 是网站应采用不同数量的弹性的列（根据当前屏幕大小而增长或收缩）的想法。 在移动设备上，应该有一两个弹性的内容列，而在台式机上则可以有更多的列：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/image-126.png)
 
-Ethan Marcott's website on a mobile device ([Source](https://ethanmarcotte.com/work/))
+移动设备上 Ethan Marcott 的网站 ([地址](https://ethanmarcotte.com/work/))
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/image-125.png)
 
-The same page on a desktop ([Source](https://ethanmarcotte.com/work/))
+相同网站在桌面上的效果 ([地址](https://ethanmarcotte.com/work/))
 
-You can read more of Marcott's thoughts on fluid grids in this [earlier article](https://alistapart.com/article/fluidgrids/).
+您可以在 [较早的文章](https://alistapart.com/article/fluidgrids/)中阅读更多 Marcott 关于 fluid grids 的思想。
 
 ### Flexible images
 
-Flexible images are the idea that images should grow or shrink along with the fluid grid they're in:
+Flexible images 是指图像应随其所在的 fluid grid 一起增大或缩小：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/image-127.png)
 
-Smaller photos on a mobile device ([Source](https://ethanmarcotte.com/work/))
+移动设备上的小图 ([地址](https://ethanmarcotte.com/work/))
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/image-128.png)
 
-Larger photos on a desktop ([Source](https://ethanmarcotte.com/work/))
+桌面网站上的大图 ([地址](https://ethanmarcotte.com/work/))
 
-A common way to do this is with the `max-width` trick mentioned above.
+一种常见的方法是使用上面提到的 `max-width` 技巧。
 
-If you have an image in a container, it could overflow, especially if the container is responsive. For example, if you have the following, the image could overflow like this:
+如果容器中有图像，则图像可能会溢出，尤其是在响应式容器中。 例如，如果满足以下条件，则图像可能会像这样溢出：
 
 ```html
 <style>
@@ -176,7 +176,7 @@ If you have an image in a container, it could overflow, especially if the contai
 
 ![An image overflowing its 250px wide container.](https://www.freecodecamp.org/news/content/images/2021/02/image-129.png)
 
-But if you set its `max-width` to `100%`, the image will not overflow:
+但是，如果将其  `max-width` 设置为  `100%`,，则图像不会溢出：
 
 ```html
 <style>
@@ -204,7 +204,7 @@ But if you set its `max-width` to `100%`, the image will not overflow:
 
 ![The same image contained in its 250px wide container.](https://www.freecodecamp.org/news/content/images/2021/02/image-130.png)
 
-And will even resize with the parent container:
+甚至可以调适配父容器大小：
 
 ```html
 <style>
@@ -234,9 +234,9 @@ And will even resize with the parent container:
 
 ### Media queries
 
-Media queries refer to CSS media queries that were available in 2010, but not widely adopted until its official release as a [W3 Recommendation](https://www.w3.org/TR/2012/REC-css3-mediaqueries-20120619/) in 2012.
+CSS 媒体查询 2010 年就已经可用，但直到 2012 年 [W3建议](https://www.w3.org/TR/2012/REC-css3-mediaqueries-20120619/ )正式发布后才被广泛采用。
 
-A media query is just a CSS rule that gets triggered based on options like the media type (`screen`, `print`, etc.) and media features (`width`, `height`, and so on):
+媒体查询只是一个 CSS 规则，它是根据诸如媒体类型（`screen`、`print`等）和媒体功能（`width`、 `height`等）之类的选项触发：
 
 ```css
 @media screen and (min-width: 500px) {
@@ -244,9 +244,9 @@ A media query is just a CSS rule that gets triggered based on options like the m
 }
 ```
 
-Even though they were a bit simpler back then, media queries allowed developers to implement breakpoints, which are still used in responsive web design today.
+即使当时媒体查询还比较简单，但可以通过它实现断点，如今断点仍在响应式 Web 设计中使用。
 
-A breakpoint is just when a website changes layouts or other styles based on the device or browser window's width. For example, here's the full code for the snippet above:
+断点是网站根据设备或浏览器窗口的宽度显示不同的布局或样式。 例如，上面代码片段的完整代码如下：
 
 ```html
 <!DOCTYPE html>
@@ -286,38 +286,38 @@ A breakpoint is just when a website changes layouts or other styles based on the
 
 ```
 
-Note that it's important to use a [viewport meta tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) for media queries to work the way you expect. This works in most cases:
+请注意，对媒体查询使用 [viewport 元标记](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) 很重要。 在大多数情况下都可以使用：
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 ```
 
-With the media query above, here's what the container looks like when the resolution is 500px wide or below:
+在上面的媒体查询中，这是分辨率为 500px 或以下时容器的外观：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/image-132.png)
 
-And here's what it looks like when the resolution is 501px or greater:
+这是分辨率为 501px 或更高时的外观：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/image-133.png)
 
-### Mobile\-first vs Desktop\-first
+### 移动优先 vs 桌面优先
 
-More recently, there are two main approaches to responsive web design: mobile\-first or desktop\-first. Both are totally valid options, and each has its pros and cons.
+最近，有两种主要的响应式 Web 设计方法：移动优先或桌面优先。 两者都是完全有效的选择，并且各有利弊。
 
-If you're designing a website from scratch, many developers today feel that mobile\-first is the way to go – mobile designs tend to be single column, and are much easier.
+如果你从头开始设计网站的，当今许多开发人员会认为以移动优先是最佳选择 – 移动设计往往是一栏式的，并且容易得多。
 
-If you want to go the mobile\-first route, you would write your styles normally, then create breakpoints like the one above with `min-width` once you start creating the tablet and desktop layouts.
+如果您想采用移动设备优先的方式，可以正常编写移动样式，然后在开始创建平板电脑和台式机布局时，使用 `min-width` 创建类似上述的断点。
 
-But maybe you're working on an older site that was designed with desktops in mind, and need to adapt it to smaller mobile devices. In this case you'd use media queries with `max-width` to target those lower resolutions.
+但是，也许你正在基于一个较旧的站点上进行设计，而该站点在设计时只考虑了台式机，因此需要使其适应较小的移动设备。 在这种情况下，可以使用具有 `max-width` 的媒体查询来定位那些较低的分辨率。
 
-You can read more about mobile\-first and desktop\-first design philosophies in [this article](https://www.freecodecamp.org/news/taking-the-right-approach-to-responsive-web-design/).
+您可以在[本文](https://www.freecodecamp.org/news/taking-the-right-approach-to-sensitive-web-design/)中了解有关移动优先和桌面优先的设计理念的更多信息。
 
-## In closing
+## 结语
 
-That's it! Now you know a bit about the history of responsive web design, and all the fits and starts that developers went through before everything we have today.
+现在，你对响应式 Web 设计的历史有了一点了解，以及开发人员在我们今天拥有的一切之前经历的点滴。
 
-If you'd like to take a deep dive into responsive web design, Flexbox, and other modern techniques, check out this 4 hour tutorial on our YouTube channel:
+如果您想深入研究响应式网页设计，Flexbox 和其他现代技术，请在我们的 YouTube 频道（Bilibili）上查看以下为时4小时的教程：
 
-And if you'd like to learn about CSS Grid, the new way to create complex, flexible layouts, check out one of our written tutorials [here](https://www.freecodecamp.org/news/search/?query=css%20grid).
+如果您想了解CSS Grid（创建复杂，灵活的布局的新方法）的方法，请查看我们的[教程](https://www.freecodecamp.org/news/search/?query=css％20grid)。
 
-What's your history with responsive web design? Did I miss something? Let me know over on [Twitter](https://twitter.com/kriskoishigawa).
+你的响应式网页设计的经历是怎么样的？ 如果哪里不准确，在 [Twitter](https://twitter.com/kriskoishigaw) 联系我。

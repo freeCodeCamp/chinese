@@ -766,10 +766,15 @@ Or from another Node.js running program, or any other app running in your system
 或者从另外一个正在运行的 Node.js 程序、或者系统中运行的任何其它应用程序知道要终止的进程的 PID。
 
 ### How to read environment variables from Node.js
+### 如何从 Node.js 读取环境变量
 
 The `process` core module of Node provides the `env`property which hosts all the environment variables that were set at the moment the process was started.
 
+Node 的 `process` 核心模块提供 `env` 属性，该属性设置在进程启动时设置的所有环境变量中。
+
 Here is an example that accesses the `NODE_ENV` environment variable, which is set to `development` by default.
+
+下面是一个访问环境变量 `NODE_ENV` 的例子，该变量默认设置为 `development`。
 
 ```plain
 process.env.NODE_ENV // "development"
@@ -777,60 +782,104 @@ process.env.NODE_ENV // "development"
 
 Setting it to `production` before the script runs will tell Node.js that this is a production environment.
 
+在脚本运行之前将其设置为 `production`，将告诉 Node.js 这是一个生产环境。
+
 In the same way you can access any custom environment variable you set.
+
+以同样的方式，你可以访问你设置的任何自定义环境变量。
 
 ### Where to host a Node.js app
 
+### Node.js 应用程序托管在哪里
+
 A Node.js application can be hosted in a lot of places, depending on your needs.
+
+Node.js 应用程序可以托管在很多地方，取决于你的需求。
 
 Here is a non-exhaustive list of the options you can explore when you want to deploy your app and make it publicly accessible.
 
+以下是一个非详细的选项列表，当你想要部署应用程序并让它可以公开访问时，你可以探索这些选项。
+
 I will list the options from simplest and constrained to more complex and powerful.
+
+我将列出从最简单和受约束的到更复杂和强大的选项。
 
 #### Simplest option ever: local tunnel
 
+#### 最简单的选择：本地隧道
+
 Even if you have a dynamic IP, or you’re under a NAT, you can deploy your app and serve the requests right from your computer using a local tunnel.
+
+即使你有一个动态 IP，或者你在 NAT 下，你也可以部署你的应用程序，并使用本地隧道来服务你的计算机的请求。
 
 This option is suited for some quick testing, demo a product or sharing of an app with a very small group of people.
 
+这个选项适用于一些快速测试、演示产品或与极少数人共享应用程序。
+
 A very nice tool for this, available on all platforms, is [ngrok][49].
+
+[ngrok][49] 是一个非常好的工具，在所有的平台都可以使用。
 
 Using it, you can just type `ngrok PORT` and the PORT you want is exposed to the internet. You will get a ngrok.io domain, but with a paid subscription you can get a custom URL as well as more security options (remember that you are opening your machine to the public Internet).
 
+使用它，你只需要键入 `ngrok PORT`，你想要的端口就会暴露在互联网上。你将会得到一个 ngrok.io 的域名，但是通过付费订阅，你可以获得自定义 URL 以及更多安全选项（请记住，你正在向公共 Internet 打开你的计算机）。
+
 Another service you can use is [localtunnel][50].
 
+你可以使用的另一个服务是 [localtunnel][50]。
+
 #### Zero configuration deployments
+
+#### 零配置部署
 
 #### Glitch
 
 [Glitch][51] is a playground and a way to build your apps faster than ever, and see them live on their own glitch.com subdomain. You cannot currently have a a custom domain, and there are a few [restrictions][52] in place, but it’s really great to prototype. It looks fun (and this is a plus), and it’s not a dumbed down environment — you get all the power of Node.js, a CDN, secure storage for credentials, GitHub import/export and much more.
 
+[Glitch][51] 是一个广场，是一种比以往任何时候都更快的构建应用程序的方法，并可以看到它们在 glitch.com 子域名运行。你现在不能拥有一个自定义域名，并且在一些地方有一些[限制][52]，但它真的是非常棒的典型。它看起来很有趣（这是一个优点），它不是一个简单的环境 - 你得到了 Node.js 所有的能力，CDN 用于凭据的安全存储。GitHub 的 import/export 等等。
+
 Provided by the company behind FogBugz and Trello (and co-creators of Stack Overflow).
 
+由 FogBugz 和 Trello 背后的公司（以及 Stack Overflow 的共同创建者）提供。
+
 I use it a lot for demo purposes.
+
+我经常用它来演示。
 
 #### Codepen
 
 [Codepen][53] is an amazing platform and community. You can create a project with multiple files, and deploy it with a custom domain.
 
+[Codepen][53] 是一个令人惊叹的平台和社区。你可以创建一个包含多个文件的项目，并使用自定义域名进行部署。
+
 #### Serverless
 
 A way to publish your apps, and have no server at all to manage, is Serverless. Serverless is a paradigm where you publish your apps as **functions**, and they respond on a network endpoint (also called FAAS — Functions As A Service).
 
+Serverless 是发布应用程序的一种方式，且无需管理任何服务器。Serverless 是一种规范，在这个规范中你可以将应用程序发布为 **functions**，他们在网络终端（也称为 FAAS — Functions As A Service）上响应。
+
 To very popular solutions are:
+
+非常受欢迎的解决方案：
 
 -   [Serverless Framework][54]
 -   [Standard Library][55]
 
 They both provide an abstraction layer to publishing on AWS Lambda and other FAAS solutions based on Azure or the Google Cloud offering.
 
+它们都为在 AWS Lambda 和其他基于 Azure 或者 Google Cloud 的 FAAS 解决方案上发布提供了一个抽象层。
+
 #### PAAS
 
 PAAS stands for Platform As A Service. These platforms take away a lot of things you should otherwise worry about when deploying your application.
 
+PAAS 表示 Platform As A Service（平台即服务）。这些平台带走了许多在部署应用程序时应该担心的事情。
+
 #### Zeit Now
 
 [Zeit][56] is an interesting option. You just type `now` in your terminal, and it takes care of deploying your application. There is a free version with limitations, and the paid version is more powerful. You simply forget that there’s a server, you just deploy the app.
+
+[Zeit][56] 是一个有趣的选择。你只需要在终端键入 `now`，它就会负责部署应用程序。有一个有限制的免费版本，付费版本更强大。你简单的忘了有一个服务器，你只是部署应用程序。
 
 #### Nanobox
 
@@ -840,37 +889,62 @@ PAAS stands for Platform As A Service. These platforms take away a lot of things
 
 [Heroku][58] is an amazing platform.
 
+[Heroku][58] 是一个令人惊异的平台。
+
 This is a great article on [getting started with Node.js on Heroku][59].
+
+[getting started with Node.js on Heroku][59] 这篇文章非常棒。
 
 #### Microsoft Azure
 
 [Azure][60] is the Microsoft Cloud offering.
 
+[Azure][60] 由 Microsoft Cloud 提供。
+
 Check out how to [create a Node.js web app in Azure][61].
+
+检查怎样[在 Azure 上创建 Node.js 网络应用程序][61]。
 
 #### Google Cloud Platform
 
+#### Google Cloud 平台
+
 [Google Cloud][62] is an amazing structure for your apps.
 
+[Google Cloud][62] 在你的应用程序中是一个神奇的构造。
+
 They have a good [Node.js Documentation Section][63].
+
+他们有一个好的 [Node.js Documentation Section][63]。
 
 #### Virtual Private Server
 
 In this section you find the usual suspects, ordered from more user friendly to less user friendly:
 
+在本节中，你可以找到常见 suspects ？？？，从更方便用户使用到不方便使用：
+
 -   [Digital Ocean][64]
 -   [Linode][65]
 -   [Amazon Web Services][66], in particular I mention Amazon Elastic Beanstalk as it abstracts away a little bit the complexity of AWS.
+-   [Amazon Web Services][66], 我特别提到了 Amazon Elastic Beanstalk，因为它稍微抽象了 AWS 的复杂性。
 
 Since they provide an empty Linux machine on which you can work, there is no specific tutorial for these.
 
+因为他们提供了一个空的 Linux 机器，你可以在上面工作，所以没有具体的教程来介绍这些。
+
 There are lots more options in the VPS category, those are just the ones I used and I would recommend.
+
+VBS 类别中有更多的选项，这些正是我使用的，我会推荐的。
 
 #### Bare metal
 
 Another solution is to get a [bare metal server][67], install a Linux distribution, connect it to the internet (or rent one monthly, like you can do using the [Vultr Bare Metal][68] service)
 
+另一个解决方案是获得一个 [bare metal server][67]，安装一个 Linux 发行版，将其连接到互联网（或者每月租用一个，就像使用 [Vultr bare metal][68] 服务一样）。
+
 ### How to use the Node.js REPL
+
+### 如何使用 Node.js REPL
 
 REPL stands for Read-Evaluate-Print-Loop, and it’s a great way to explore the Node.js features in a quick way.
 

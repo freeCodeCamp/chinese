@@ -1,6 +1,6 @@
 > * 原文地址：[How Hex Code Colors Work – and How to Choose Colors Without A Color Picker](https://www.freecodecamp.org/news/how-hex-code-colors-work-how-to-choose-colors-without-a-color-picker/)
 > * 原文作者：Nahla Davies
-> * 译者：
+> * 译者：Chengjun.L
 > * 校对者：
 
 ![How Hex Code Colors Work – and How to Choose Colors Without A Color Picker](https://images.unsplash.com/photo-1502691876148-a84978e59af8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fGNvbG9yfGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2000)

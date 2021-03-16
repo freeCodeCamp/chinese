@@ -823,13 +823,12 @@ wc -m test.txt
 
 ## Linux 中的 `grep` 命令
 
-The `grep` command is a very useful tool. When you master it, it will help you tremendously in your day to day coding.
+`grep` 命令是一个非常有用的工具。假若掌握了它，对日常的编码工作会有很大的帮助。
+> 如果你比较好奇， `grep` 的全写是 _global regular expression print_ （全局正则表达式打印）。
 
-> If you're wondering, `grep` stands for _global regular expression print_.
+你可以使用 `grep` 在文件中进行搜索，或者与管道符配合使用，将输出结果传递到其他命令。
 
-You can use `grep` to search in files, or combine it with pipes to filter the output of another command.
-
-For example here's how we can find the occurences of the `document.getElementById` line in the `index.md` file:
+例如，可以用以下命令在 `index.md` 文件里搜寻 `document.getElementById` 这一行出现的次数：
 
 ```bash
 grep -n document.getElementById index.md
@@ -838,7 +837,7 @@ grep -n document.getElementById index.md
 
 ![Screen-Shot-2020-09-04-at-09.42.10](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-09.42.10.png)
 
-Using the `-n` option it will show the line numbers:
+使用 `-n` 参数可以显示行号：
 
 ```bash
 grep -n document.getElementById index.md
@@ -847,7 +846,7 @@ grep -n document.getElementById index.md
 
 ![Screen-Shot-2020-09-04-at-09.47.04](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-09.47.04.png)
 
-One very useful thing is to tell grep to print 2 lines before and 2 lines after the matched line to give you more context. That's done using the `-C` option, which accepts a number of lines:
+一个非常有用的方法是告诉 grep 在相应行的前后各输出 2 行，以提供更多的上下文。这可以用参数 `-C` 来完成，它可以受取其后的若干行数：
 
 ```bash
 grep -nC 2 document.getElementById index.md
@@ -856,9 +855,9 @@ grep -nC 2 document.getElementById index.md
 
 ![Screen-Shot-2020-09-04-at-09.44.35](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-09.44.35.png)
 
-Search is case sensitive by default. Use the `-i` flag to make it insensitive.
+搜索默认是区分大小写的。使用参数 `-i` 可以使其不再区分。
 
-As mentioned, you can use grep to filter the output of another command. We can replicate the same functionality as above using:
+如上所述，你可以使用 grep 来过滤其他命令的输出。我们可以使用以下方法重现前述的功能：
 
 ```bash
 less index.md | grep -n document.getElementById
@@ -867,9 +866,9 @@ less index.md | grep -n document.getElementById
 
 ![Screen-Shot-2020-09-04-at-09.43.15](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-09.43.15.png)
 
-The search string can be a regular expression, and this makes `grep` very powerful.
+搜索字符串中可以使用正则表达式，这让 `grep` 变得非常强大。
 
-Another thing you might find very useful is to invert the result, excluding the lines that match a particular string, using the `-v` option:
+另一个你可能发现很有用的方法是——使用参数 `-v` 反转结果，排除与特定字符串匹配的行：
 
 ![Screen-Shot-2020-09-04-at-09.42.04](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-09.42.04.png)
 

@@ -200,7 +200,7 @@ You can see a few things here. We  _import_  some things, and we  _export_  a fu
 The things we import in this case are a JavaScript library (the  `react`  npm package), an SVG image, and a CSS file.
 在这段示例代码中，我们导入了一个 JavaScript 库：(the  `react`  npm package)，一个 SVG 图片，和一个 CSS 文件。
 
-> `create-react-app`  is set up in a way that allows us to import images and CSS to use in our JavaScript, but this is not something you need to care about now. What you need to care about is the concept of a  **component**
+> `create-react-app`  设置了一种方法，它允许我们导入图片和 CSS 并在 JavaScript 中使用它们,。但这不是我们你现在需要关心的内容，我们需要关心的是 **组件** 的概念。
 
 `App`  is a function that, in the original example, returns something that at first sight looks quite strange.
 

@@ -1,87 +1,87 @@
 > -   原文地址：[How to Build a Web App on Your Phone – Python & Pydroid Android App Tutorial](https://www.freecodecamp.org/news/how-to-code-on-your-phone-python-pydroid-android-app-tutorial/)
 > -   原文作者：Precious Oladele
-> -   译者：
+> -   译者：ZhichengChen
 > -   校对者：
 
-Hey there, how are you? I'm an 18 year old a backend developer and an aspiring Machine Learning Engineer. And in this article, I'm going to be writing about how to build a web app on your phone using Python 😁. Let's dive into it.
+嘿，你好吗？ 我今年18岁，是一名后端开发人员，希望成为机器学习工程师。 在本文中，我会介绍如何使用 Python😁在手机上构建 Web 应用程序。 开始吧。
 
 ![](https://lh3.googleusercontent.com/TW_PdXBpgeWY4mLcHjFisp8e7Lk7Zsn1aFarXBkmvhEMP0XR5xzTDxhKcCizsrJ25rkPeMeWp7ctlG0Wy7_WFUS0bzT-JVJfpe6X_3OqnuE_df2q5B3KIrhl3EG47w3Dik3nIZE "Placeholder image")
 
-## **Requirements**
+## **必要条件**
 
-The first thing we need here is an Android phone, at least version 6.0 and upward. But what if I told you that's all we need? Seems too good to be true.
+要满足的第一个条件是拥有一台 Android 手机，至少是 6.0 或更高版本。 这就是所需要全部，很简单。
 
-Now the next thing we need to do is install a mobile application on our phone called pydroid3.
+接下来，需要在手机上安装一个名为 pydroid 3 的移动应用程序。
 
 ![](https://lh6.googleusercontent.com/fwM9r46B-sTofVF6IybUOhCTYoM8vSAPfumfBIiiL_wWLQpgdQgeR2B_2-N28NtNLaA7HvTtsZxlXdX03anCGvbt4QAlhQ_wyb9_AIfqG9L4ZMCjQOrKLg5OFPeZgKrJdqKEeb8)
 
-As you can see, pydroid3 is a mobile application that lets you write Python on your mobile phone, so go ahead and install it.
+如你所见，pydroid3 是一个可在手机上编写 Python 的移动应用程序，因此请继续安装它。
 
-The next thing we need to do is install Django. If you're not familiar with Django, please check out the [Django docs here](https://www.djangoproject.com/).
+接下来需要安装 Django。 如果你不熟悉Django，请查看[此处的 Django 文档](https://www.djangoproject.com/)。
 
-To install Django we need to open up the side navigation in our pydroid3 and select Terminal:
+要安装 Django，在 pydroid3 中打开侧边栏，然后选择 Terminal：
 
 ![](https://lh6.googleusercontent.com/qO3djIyoXMZB8MzcIaFDmNddhB2t9XgLLgCzonR2CDkWJc0pXtap9gyGhqZfpv0uFCCvtYnynL6pAOfgactlDfpwoy03TfgqEoN2W_gAO7nOeoaLbySZEQkOSBuprhs67jc-Ens)
 
-Then click on it and we should see this:
+然后单击它，如下：
 
 ![](https://lh3.googleusercontent.com/fTwNrfhCQpxKBFbrsN3B6dt4kFWvDUEJElZ897o-d21XbiYj42gZBLhiLMt7ffvSp44OQBrubC9jK62WvzneTlF-7WxcZZygHEqo4hmQ_9V42Pw4FgvdKB75EA3fv4q5nGZiL7k)
 
-Once that is done all you need to do is type the following command:
+完成后，输入以下命令：
 
 ```python
 pip install django
 ```
 
-And you should get the below. I am getting a "requirements satisfied" message because I already have it installed.
+应该得到以下内容。 我的是 “requirements satisfied” 消息，因为我已经安装了它。
 
 ![](https://lh6.googleusercontent.com/vYhoSBXGgvq2EiX6iXQ1RBLrvUe8zQHM3Aq65ZDIDRKSOoLqOrW5QQWE5yQ-ThbhzYTb6kwKf_jHzVoQ79wTbz2KZNv32oEBX1LjAFeMYaiQb4bebYOWii-h1W3EKQkTWvgA2_Q)
 
-It has installed successfully, but let's confirm that. In the terminal type `django-admin` and hit enter.
+它已成功安装，让我们确认一下。 在终端中输入 `django-admin`，然后按回车键。
 
-You should get this:
+信息如下：
 
 ![](https://lh5.googleusercontent.com/jU17O6AVeFcy6rYMJ0mp_DEqnR9q51F-mhLZH1K7Ny8tixSeY7Xl8Jx27hBfxWfHPimt-1xCfO6x2AOlvYKYR92slC3sBwJNRg9uDJsJ6had0Yq1UTXZ5_CQvfCwwKneKCO_Gp4)
 
-This means that it's actually installed already.
+这意味着它实际上已经安装了。
 
-## How to Build our Project
+## 如何构建项目
 
-So let's get started with building our project. Open up your terminal and type in the following command:
+让我们开始构建项目。 打开终端并输入以下命令：
 
 `django-admin startproject myapp`
 
-This creates a Django application called myapp in your root folder.
+这会在根文件夹中创建一个名为 myapp 的 Django 应用程序。
 
-Change directory to it by typing `cd myapp` and type in `python manage.py runserver`. Then you should get this:
+通过输入 `cd myapp` 进入目录，然后输入 `python manage.py runserver`。 信息如下：
 
 ![](https://lh6.googleusercontent.com/fqO-uHACjoAXNQSrm5Pikjr-GQQkY3SbkE3G9Sgel1XZbePIf7hJaePd8yGxdrbYiyRdpeWCFUYBNo6iKMzTJqZg3s8j6CTGIoZYH-YJjT-tjHA0FCKtdGJEGzNy0Y8Qj5uTQrg)
 
-Now the server has started. Next, to test it in the browser visit [127.0.0.1:8000](http://127.0.0.1:8000).
+现在服务器已启动。 接下来，要在浏览器中对其进行测试，请访问 [127.0.0.1:8000](http://127.0.0.1:8000)。
 
 ![](https://lh3.googleusercontent.com/oqMFGPasUPLxuZoRqWHQ9mEhpitsg2XK8XPzLz_U-TvnFGzjkIaHVKUHXxwYkMDskLp_36F75BIAb-qv37bHccUESSZ9Jqa6XV7FGoWYk_IS8SfPYZfMTSNmo2ei-SMVa9cp_C8)
 
-And boom! You should see that Django has been setup successfully.
+Boom！ 您应该看到 Django 已成功安装。
 
-The next thing we need to do is create our Django app. In Django, the project folder serves as the root while the app serves as the application itself.
+我们需要做的下一件事是创建 Django 应用。 在 Django 中，项目文件夹就是根目录，而应用程序充当应用程序本身。
 
-To create a Django app, make sure you are still in the directory, then type `python manage.py startapp todo`. This creates a To\-do app in our myapp project like this:
+要创建 Django 应用，请确保仍在目录中，然后输入 `python manage.py startapp todo`。 这样会在 myapp 项目中创建一个 To\-do 应用程序，如下所示：
 
-![](https://lh5.googleusercontent.com/ycIZAg7VGJO4Auwc7z_bsx5CU19Ks-rfubo_3amBKgvO-HeHb2I7mQu_loWg6leR22dvlMGh0FPgO1_-anmVpEHO4O4dlQik-MfiqF7Dx9BmxuI6YBjqPMcv8S3czgVCyftBu80)
+![](https://lh5.googleusercontentc.com/ycIZAg7VGJO4Auwc7z_bsx5CU19Ks-rfubo_3amBKgvO-HeHb2I7mQu_loWg6leR22dvlMGh0FPgO1_-anmVpEHO4O4dlQik-MfiqF7Dx9BmxuI6YBjqPMcv8S3czgVCyftBu80)
 
-Then inside the todo folder we should see something like this:
+然后在 todo 文件夹中，我们应该看到类似以下内容：
 
 ![](https://lh6.googleusercontent.com/Fc60wk6pMuEQ8JvIwfOK2E1zezR9n_N-8o_X__F-yr1D1yD0BEuV62G9zoqG5GQnyA0shbI79JvNs3Z-YHunEoUyZw7LAt2eumkyKjj9M39sDbmDgzZ_axvjRyVeyLZC5ohVQmY)
 
-We will take a further look at the files when we begin working with them.
+当我们开始使用它们时，我们将进一步介绍这些文件。
 
-## How to Configure our Application
+## 怎样配置应用
 
-Now let's make it possible for the app to be served by the Django project. First of all, open up your `settings.py` file in the myapp folder and add `'todo'` to the installed apps like this:
+现在，让该应用程序可以由 Django 项目提供服务。 首先，在 myapp 文件夹中打开 `settings.py` 文件，然后将 `'todo'` 添加到已安装的应用中，如下所示：
 
 ![](https://lh4.googleusercontent.com/mxTcaRk-ON73sPH6XL31kvZmUJjfwn1knbhMgTJALeyx6l8A1umvtXjLazS34oTjbPZeivGGTe6w6zsEQ1QzhTjaYDJ5tHsbhpeyxAfrvABzGHrNsElcv7RR9kQZi_Tttt4PjIc)
 
-Next we need to open up our `urls.py` and add the following to your code:
+接下来，我们需要打开我们的 `urls.py` 并将以下内容添加到代码中：
 
 ```python
 from django.urls import path, include
@@ -91,9 +91,9 @@ path('', include('todo.urls'))
 
 ![](https://lh6.googleusercontent.com/VEWQQt84a9DSeqmuT-LrE9EMmYnDnDfwJQQtJhI21WDTJf4EDaE212wj7BLoBX85Vjm90gFb6KsB6yGJ6PDyfgdTT9BL5hcmDZzNfIdHlceR40qJNVubaNKduXjA2viT7yqLJ14)
 
-What actually happened was that I added `include` to the from the `django.urls` import path. And below the path (`admin`) , we created an empty path that points to or includes the `urls.py` file in the todo app directory. I hope that's clear.
+实际发生的是，在 `django.urls` 中添加 `include`。 在路径（`admin`）下方，创建了一个空路径，该路径指向包括 todo 应用程序目录中的 `urls.py` 文件。 我希望讲清楚了。
 
-Next we need to create a new file in the todo file directory named `urls.py` and add the following code in it:
+接下来，在 todo 文件目录中创建一个名为 `urls.py` 的新文件，并在其中添加以下代码：
 
 ```python
 from django.urls import path
@@ -106,15 +106,15 @@ urlpatterns = [
 
 ![](https://lh6.googleusercontent.com/cmxgwJ5PeIXW_yGgo9AKaVK10pDjGFl26gML6VicCQVLtsiCiorL5tBahCMOxHG-1HlrocwbaVod5SN6DFJFIZ5n1gidGOfJdaGW_p8holylN4aCUb-2ankvfIQygHz6cjT2tgc)
 
-We imported `path` from `Django.urls` and also imported `views` from the root directory. Then we created our `urlpatterns` with the first part as the root link. As you can see, the views.index just means that we're pointing this views to the index function in on `views.py` file. You will see how that works in a jiffy.
+我们从 `django.urls` 导入了 `path`，还从根目录中导入了 `views`。 然后，我们以第一部分为根链接创建了`urlpatterns`。 如你所见，views.index 只是意味着我们将这些视图指向 `views.py` 文件中的 index 函数。 一会会看到它如何工作。
 
-Let's go ahead to our `views.py` file and add some code.
+打开 todo 下的 `views.py` 文件并添加一些代码。
 
-At the top, import `HttpResponse` like this:
+在顶部，像这样导入`HttpResponse`：
 
 `from django.http import HttpResponse`
 
-And add this below it:
+并将其添加到它下面：
 
 ```python
 def index(request):
@@ -123,25 +123,25 @@ def index(request):
 
 ![](https://lh5.googleusercontent.com/QUpf-9cT8Z-dKXTkO1FTm2-IkjD3_NIfYSQCy_XlALUTnIg_XrrxKurZLAJ19DQCk1W5mqBx4Mo5IL9ycL5gGS_w4LyI4zXxSo8y23mNaZ2OodFg-qLEi3Dh2FN_m7ueYjPYrb4)
 
-As you can see, we created the index function we called in our `urls.py` and we passed in a request parameter into it. Then we returned an `HttpResponse`.
+如你所见，我们创建了在 `urls.py` 中调用的索引函数，并将一个请求参数传递给了它。 然后我们返回一个 `HttpResponse`。
 
-But before the `HttpResponse` can work, we have to import it from `django.http import HttpResponse` – as simple as ABC. Let's try this: open up your terminal and cd into myapp and type `python manage.py runserver` to test it.
+但是之前，需要用 `django.http import HttpResponse` 导入它 - 就像ABC一样简单。让我们尝试一下：打开终端并进入 myapp，然后输入 `python manage.py runserver` 进行测试。
 
 ![](https://lh3.googleusercontent.com/Tqb7c-adOuVHbyi-7XBQsv0HHJvxjUhcAZ3N4d5nkOEVNVwfSXxkENlD0l0UI3Jd4qLhO3k8ELDW6yG8yRiP0MmjkO0Q4TvGTYunQIBNgSMNrXxfI7ygMHeN2FtjoJc37mVIVr0)
 
-As you can see, it returned the response. So next we will load our template HTML files.
+如你所见，它返回了响应。 接下来我们将加载模板 HTML 文件。
 
-To load our HTML files we need to create a folder like this in the todo directory in this order:
+加载 HTML 文件前，需要按以下顺序在 todo 目录中创建一个这样的文件夹：
 
 `todo/templates/todo`
 
-In the todo directory, create a folder called templates. Inside that folder, create a folder called todo, as simple as that.
+在 todo 目录中，创建一个名为 templates 的文件夹。 在该文件夹内，创建一个名为 todo 的文件夹，就这么简单。
 
-Then go ahead and create a simple HTML file called index.html and write this in it:
+然后继续创建一个简单的 HTML 文件 index.html 并写入：
 
 `<h1>Hello world</h1>`
 
-To load it, make your `views.py` code look like this:
+在 `views.py` 中添加如下代码加载 HTML：
 
 ```python
 def index(request):
@@ -150,19 +150,19 @@ def index(request):
 
 ![](https://lh3.googleusercontent.com/mhirciumIf_FcO764txwH5MOMl40vkZ6f41c0oXFreX1UA2IiqQG9E42TfbUBCZto4xG6-vl0t5sQj3ID1FBk_gL074Rzm4pn5a8RmMsP7DuMZKYVi1KQg-Bk35yr1gJGiE2ukg)
 
-Now instead of returning response we returned a render view that allows us to render our HTML template now, save this open up your terminal cd into myapp and run it. We should have this
+现在，我们没有返回响应，而是返回了一个渲染视图，该视图可以渲染 HTML 模板，保存后打开终端 cd 进入到 myapp 中并运行它。 浏览器访问显示如下。
 
 ![](https://lh6.googleusercontent.com/NzW4_E80BNOtRq-E4qUg1GdvqHUUQQAxMAdUSGhxROCDkSUnzddSyX4E7Wz5_zPY29twa7D2PVmS85LYmCnzEAvgE-oU2MEk1mDeNhFW5FBuD2eAjDxpPkJfXiJAMEyk1uKZVkw)
 
-As you can see it works well \- on to the next step.
+很好，来继续。
 
-## How to Set Up the Static Files
+## 如何设置静态文件
 
-Now to set up the static files, create a new folder in your todo directory and name it static. Inside that folder, create a folder and name it todo.
+现在要设置静态文件，在 todo 目录中创建一个新文件夹并将其命名为 static。 在该文件夹内，创建一个文件夹并将其命名为todo。
 
-So it should be like this: `/static/todo/`.
+所以应该是这样的：`/static/todo/`。
 
-In the todo directory, create a file and name it `main.css`. Then let's write a little styling in it:
+在 todo 目录中，创建一个文件并将其命名为 `main.css`。 然后在其中编写一些样式：
 
 ```css
 body {
@@ -170,9 +170,9 @@ background-color: red;
 }
 ```
 
-And save it.
+并保存它。
 
-Now let's re\-edit our `index.html` file by writing this code:
+现在，通过编写以下代码来重新\编辑我们的`index.html`文件：
 
 ```django
 {% load static %}
@@ -190,35 +190,35 @@ Hello
 
 ![](https://lh5.googleusercontent.com/Luboze-gNbfQkpTZVwOChtQKrQpC2eWnsTAE41f9mDdWaqaKtk2yYAV0uP3ufKE_EDrpfCoRvOFlHmLCJKucPNB_kQmZoaAZB5reCcW2wrddbsDbRPoIe2iacGLpFfLEcGYZEnA)
 
-And now let's run it:
+现在运行它：
 
 ![](https://lh5.googleusercontent.com/ARWYir-7j8-yF9yCzc3bNuW1ZyLKOG30iljprX4AJsnyIdYLtK_0Of7Uu4WJLuufoyRkVL5LnG8J-bepoBcRzm1e57AuaLmbA5iIyO_RY_KsKRVrsc0OfGmDbLOkT-FIZECwIyY)
 
-If you've followed along with me, then you should have the above.
+如果一直按步骤操作，那么应该得到预期结果，。
 
-## How to Load the Models and Admin Panel
+## How to Load the Models and Admin Panel ## 如何加载模型和管理面板
 
-Now to load up our admin panel, we need to create a superuser. This is simple to do – just open up your terminal and cd into the myapp folder then type `python manage.py createsuperuser` and hit enter. You should see this:
+现在加载管理面板，先创建一个超级用户。这很简单 - 只需打开终端并 cd 到 myapp 文件夹中，然后键入 `python manage.py createsuperuser` 并按 Enter 键即可。显示内容如下：
 
 ![](https://lh3.googleusercontent.com/PBTNq4SLyU4xMFsxh8wXuP0fUCnNKqL0zPiAqclNSPc4J7j4izPVgikXXQpaPqcPeSfFhrlQgf2xwyuhWz-s4RJWn1ftc5icsi9bt2QwmjKxjp3reecfmCxQ3GdVvE04HUAc8po)
 
-We get an error because we haven't run `python manage.py migrate` yet. So type that and hit enter, and you should have something like this:
+收到一个错误消息，因为还没有运行 `python manage.py migrate`。键入该内容并按回车键，显示如下：
 
 ![](https://lh3.googleusercontent.com/_oEnoQWnv1VRtZf8W60ZyfFVGQV-nFzYKX4oj45SLCLUlPNNyZOefRkIj8ROdoNdkgECWr4OKmxRVUsRZy2c27XwsM7wQ4_7xeJWnlzPrBFZ79t7J8zZXFJLtfDqJf1vrvtShjc)
 
-Now type in `python manage.py createsuperuser` and hit enter:
+现在输入 `python manage.py createsuperuser`，然后按 Enter：
 
 ![](https://lh3.googleusercontent.com/t8Z8qo8Z3xNi9C86RjkiujHiS6en5b16eYPA5uMTfXAQYNpFjjuWaY_WEL0TrxLUlpaJJHzF143Vk0UuTQIzuD4GICQF4X1K2CF0vyb1ws33JN2W_FeyVu3xMOsn1posUZW0eFs)
 
-Just fill in the credentials. The next thing we need to do is to run our server and point to 127.0.0.1:8000/admin.
+只需填写凭据即可。接下来运行服务并访问 127.0.0.1:8000/admin。
 
 ![](https://lh6.googleusercontent.com/Uoen79EV8PaEDuhnt2eBaCnnJAEzHhLydikTi8BOxUSZ9DrGp9GbtUk-Um7TmMDW64Zd0RbAkXja8RjyqiX58hlWdFyrzHTUVN0NCx93e9BOx36Va4ysCX7JyJRlEmdUBnbltuA)
 
-Login and you will be directed to the dashboard:
+登录后，将被定向到仪表板：
 
 ![](https://lh3.googleusercontent.com/C8A8OermBdrvdB_6NEHg2mFgkkuVBsePdfdmlNhulSw2m7Jkdhea_jdDFNQnbvVgqxJcXj-ftbcNmdR6nYImJC2AV9edqcPB5pkhUm0zvImzzzAokHZ4bDwYe4BPPvnXsK18Ng0)
 
-Now that we have done the admin panel, let's work with the model (database). We'll create a model that collects contents. So open your `models.py` file and type in this code:
+现在已经搞定了管理面板，接下来来使用模型（数据库）。我们将创建一个收集内容的模型。 打开 `models.py` 文件并输入以下代码：
 
 ```python
 class Post(models.Model):
@@ -230,17 +230,17 @@ class Post(models.Model):
 
 ![](https://lh4.googleusercontent.com/pyZXf_3jSGzz-sciBxAvb-ry4_TbZMnuHWWWAOl17LQ5hCi55DoKxzq0iYu6wuv8UsQhn3-w27GOzlt2N_9mpdKoHcZza9mWoBgselVQXC6bPD-ev-uTjlW1RbN1c2OussUgEpg)
 
-We create a class that has the parameter `models.Model` and gives a variable `content` that holds a `CharField()`, more like a text field. Lastly we create a magic `str` that returns the name of the model instead of an object.
+我们创建一个具有参数 `models.Model` 的类，并定义了一个变量 `content`，该变量包含一个 `CharField()`，更像是一个文本字段。 最后，我们创建了一个神奇的 `str`，它返回模型的名称而不是对象。
 
-So next we need to run the migration. Open your terminal, cd into myapp, and type `python manage.py makemigrations`. You should see this:
+接下来需要运行 migration。 打开终端，进入myapp，然后输入`python manage.py makemigrations`。 应该会看到以下内容：
 
 ![](https://lh6.googleusercontent.com/UBbVNNg1d8jhPTusB-HRRoUsqFfxaZdJLzSIzNIt3P4kby8Tor4G8Bme1e-yq8mOLFgfrUh3nb6MC3BSaOUQDr68_tEmIRtQBS7N7Y66wTbXdMMg-0EJ0svM3tw3j9GLgquC_IU)
 
-That means it has created the Post table in our database. Then also run `python manage.py migrate` which will result in the following:
+这意味着它已经在数据库中创建了 Post 表。 运行 `python manage.py migrate`，结果如下：
 
 ![](https://lh6.googleusercontent.com/VyQYel1QFdxc2D5oSOdDD6QPth2jVC5_CTj8SVyDo8pAusvl6qjH7XQUhmhbfXNLjdUiAc566pYTj0O2c-AsRHwVLeDo2xeOv1HWsldCwH1oxu3sM5WJTNOj9-fpZEOfVHMYZ6k)
 
-This means that all is clear. Now to add it to the admin page, open up `admin.py` and type in this code:
+一切都清楚了。 现在将其添加到管理页面，打开 `admin.py` 并输入以下代码：
 
 ```python
 from .models import *
@@ -250,23 +250,23 @@ admin.site.register(Post)
 
 ![](https://lh3.googleusercontent.com/jzqRK8kVE6raStmHC8jJoqr8oYOXhygDpe8hoN_JdSRiF3Mpes3_Evw83U0nMczqgAobIY8zp_Z6ve-xb3jv6x7uChFzvdTyDqDZysD2j0pKxiGu2-V9pkvH02HKAzBA2HZr6WQ)
 
-We imported all model classes from the model and registered the post model in the admin panel. Now if we open the admin panel we should see the post and save some data.
+我们从模型中导入了所有模型类，并在管理面板中注册了 Post 模型。 现在，如果我们打开管理面板，我们应该看到 post，可以保存一些数据。
 
 ![](https://lh4.googleusercontent.com/E9gkvNmpFiCJg24zYj7GpLzsM8AsoGUkoZHcS1Z3bxMva_Z3Jov5Yy7UzbgU251laLwGGRWqaFK1iIrILblSyktYK42Q-fzgS6ihGf0LYxR0Zl9qvkmG7sneHM2KFRoSPDy2k3o)
 
-Notice that it's now in the todo app list:
+请注意，它现在位于 todo 应用程序列表中：
 
 ![](https://lh3.googleusercontent.com/BSyVagLKFGvtINW-jnuhrXRoFdB87S5lGksH37z5uewqVCn_WBHP-eI8gF6BUoG56Dz-SnKUtRonFhNX--c23V07WfXhOxHmCmJ460cXAr__NjTAkvXB4JnxIXlbsQcRtDO0uNU)
 
-After clicking on it you should see this:
+单击它之后，您应该看到以下内容：
 
 ![](https://lh3.googleusercontent.com/4zxSgdVcDnDrpr6aIquG854x59GQb0ZMJ3D-YnAs-9EDR0EYwHl_HBAbrpPGGr7YLfWn0PjJA19aukrUcBbUMURpn4ofEGCwWF4541ee_-OKZQj_cWuv_yxWvUGYGOZfdzu6C90)
 
-Then you can create a post if you like.
+然后，可以根据需要创建 post。
 
-## How to Render Data from DB to View
+## 如何从数据库渲染数据到视图
 
-Lastly we will fetch our data from the DB. To do so we need to update our `views.py` as follows:
+最后，我们将从数据库中获取数据。 为此，我们需要按如下更新 `views.py`：
 
 ```python
 from .models import *
@@ -279,7 +279,7 @@ def index(request):
 
 ![](https://lh4.googleusercontent.com/NHpq8LEAtu06ntzUodCuBZT86FS_u_TPphhlfZ-CiP5rFglQcjtRB0zUdK0jkz_udZeXRh8JNqdZOhRSfV9A69I63b8P5DtBGtQo44zmwufnGTaybAaWAL0yOn9T544_mdXaLN4)
 
-It's as simple as that: we imported all from `models.py`, created a variable called `content`, and retrieved all the data from the table Post. Then we passed it as a dictionary to our view. So in our index.html to make it work just add this:
+就这么简单：我们从 `models.py` 中导入所有内容，创建一个名为 `content` 的变量，然后从表 Post 中检索所有数据。 然后，我们将其作为字典传递给我们的视图。 因此，只需在 index.html 中使其生效即可，添加以下内容：
 
 ```django
 {% for contents in content %}
@@ -289,18 +289,18 @@ It's as simple as that: we imported all from `models.py`, created a variable cal
 
 ![](https://lh4.googleusercontent.com/4zgGmOcVBVa906mn0AVk0Vh9MbaFeYS0VUVoOC00Jw6wtR54S55BMPjz5t0_z2LTgbs9Ldpt3VOKcEjgxMhSE63xGu8XKSx2tWbKFYp2ndxHc31pcAMFdSturJqEy07ca_IYC1c)
 
-Here, we wrote a loop using the templates tag and fetched all the data content. Now open your terminal, cd into myapp, and run the server to see the magic happen:
+在这里，我们使用 template 标记编写了一个循环，并获取了所有数据内容。 现在，打开您的终端，进入 myapp，然后运行服务器以见证奇迹的时刻：
 
 ![](https://lh5.googleusercontent.com/gKJf7AGR-0ZxOCeD_QKGffg4d-wpK0Lk8Z0Fkdj39Rj1V6dpWGf_KA1iBDJ2xE-Lq_zsJQHq6eIywPujAVmEk_R7e-Ug7ox94Rk5x212Bk7cBm0fHaMnGtqQM9zscDELygE1LvI)
 
-It works, but let's confirm that it does:
+它可以工作，但是让我们双重检查一下：
 
 ![](https://lh5.googleusercontent.com/IVjbVn-_3Exnnoq2s0pvHTeL2paWcqogzg1mp_Aj15GtXKqUPerrFDGZ-SjYKqpUX8Es1KGo0fSWoAOACLgri_LcT5oV7tkG6dtL2OestlnQC25OzFdYEhcyb0KPH3b12BBdJTU)
 
-And the result should be the following:
+结果应为以下内容：
 
 ![](https://lh3.googleusercontent.com/jlYy4UCV3MJd-JytvGUBLgC20k3-cduvDQ2O3FIb9kAF7VgRyGxyqb_G1Mjiqis261HQS68uIJUk5I9ccFJBFL6Ht3LiePvprBcsqkSS9lZZzJ_cc2noxJm32GPp9ytsiYl7t2o)
 
-Violà – it works fine. Lastly you can just add a line break so you can read it more clearly. And we're done!
+Violà – 效果很好。 最后，您可以添加一个换行符，这样您可以更清晰地阅读它。 我们完成了！
 
-Thank you for reading. If you want to go through an in\-depth Django tutorial please visit my YouTube channel [Devstack](https://youtube.com/channel/UCLcHGKxbEO1XGVETXqzYXLA) and subscribe.
+感谢您的阅读。 如果您想深入了解 Django 教程，请访问并订阅我的 YouTube 频道 [Devstack](https://youtube.com/channel/UCLcHGKxbEO1XGVETXqzYXLA) 。

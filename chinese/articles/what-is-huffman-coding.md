@@ -2,7 +2,7 @@
 
 \> -  *原文作者：[Dave](https://www.twitter.com/davejsaunders)*
 
-\> -  *译者：* 
+\> -  *译者：* ZhichengChen
 
 \> -  *校对者：*
 

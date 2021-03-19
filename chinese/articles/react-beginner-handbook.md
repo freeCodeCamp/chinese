@@ -200,21 +200,21 @@ You can see a few things here. We  _import_  some things, and we  _export_  a fu
 The things we import in this case are a JavaScript library (the  `react`  npm package), an SVG image, and a CSS file.
 在这段示例代码中，我们导入了一个 JavaScript 库：(the  `react`  npm package)，一个 SVG 图片，和一个 CSS 文件。
 
-> `create-react-app`  设置了一种方法，它允许我们导入图片和 CSS 并在 JavaScript 中使用它们,。但这不是我们你现在需要关心的内容，我们需要关心的是 **组件** 的概念。
+> `create-react-app`  设置了一种方法，它允许我们导入图片和 CSS 并在 JavaScript 中使用它们。但这不是我们现在需要关心的内容，我们现在关心的是 **组件** 的概念。
 
-`App`  is a function that, in the original example, returns something that at first sight looks quite strange.
+`App` 是一个官方示例中的函数, 返回了一些初看之下很奇怪的东西。
 
-It looks like  **HTML**  but it has some JavaScript embedded into it.
+它看起来很像 **HTML**，但是内嵌了一些 JavaScript。
 
-That is  **JSX**, a special language we use to build a component's output. We'll talk more about JSX in the next section.
+这就是 **JSX**，一种我们用来构建组件输出的特殊语言。我们将会在下一节讨论 JSX。
 
-In addition to defining some JSX to return, a component has several other characteristics.
+除了可以返回 JSX，组件还具有一些其他特征。
 
-A component can have its own  **state**, which means it encapsulates some variables that other components can't access unless this component exposes this state to the rest of the application.
+一个组件可以有它自己的 **state（状态）**，这就是说它可以封装一些其他组件无法访问的属性，除非它把这些 **state** 暴露给应用中的其他组件。
 
-A component can also receive data from other components. In this case we're talking about  **props**.
+一个组件也可以接收来自其他组件的数据，我们称这些数据为 **props**。
 
-Don't worry, we're going to look in detail at all those terms (JSX, State and Props) soon.
+不必担心，我们很快就会详细学习所有的这些概念（JSX，State 和 Props）了。
 
 ## Introduction to JSX
 

@@ -832,7 +832,6 @@ wc -m test.txt
 
 ```bash
 grep -n document.getElementById index.md
-
 ```
 
 ![Screen-Shot-2020-09-04-at-09.42.10](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-09.42.10.png)
@@ -841,7 +840,6 @@ grep -n document.getElementById index.md
 
 ```bash
 grep -n document.getElementById index.md
-
 ```
 
 ![Screen-Shot-2020-09-04-at-09.47.04](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-09.47.04.png)
@@ -850,7 +848,6 @@ grep -n document.getElementById index.md
 
 ```bash
 grep -nC 2 document.getElementById index.md
-
 ```
 
 ![Screen-Shot-2020-09-04-at-09.44.35](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-09.44.35.png)
@@ -874,92 +871,88 @@ less index.md | grep -n document.getElementById
 
 ## Linux 中的 `sort` 命令
 
-Suppose you have a text file which contains the names of dogs:
+假定你有一份文本文件，里面包含一些狗狗的名字：
 
 ![Screen-Shot-2020-09-07-at-07.56.28](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-07.56.28.png)
 
-This list is unordered.
+这串名字并没有进行排序。
 
-The `sort` command helps you sort them by name:
+而 `sort` 命令会帮你按照名称顺序排列它们：
 
 ![Screen-Shot-2020-09-07-at-07.57.08](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-07.57.08.png)
 
-Use the `r` option to reverse the order:
+使用 `r` 参数倒转排序结果：
 
 ![Screen-Shot-2020-09-07-at-07.57.28](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-07.57.28.png)
 
-Sorting by default is case sensitive, and alphabetic. Use the `--ignore-case` option to sort case insensitive, and the `-n` option to sort using a numeric order.
+默认情况下，排序区分大小写，并且遵循英文字母顺序。使用 `--ignore-case` 参数进行不区分大小写的排序，使用 `-n` 参数可按数值大小顺序进行排序。
 
-If the file contains duplicate lines:
+如果文件包含重复的行：
 
 ![Screen-Shot-2020-09-07-at-07.59.03](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-07.59.03.png)
 
-You can use the `-u` option to remove them:
+你可以使用 `-u` 参数移除它们：
 
 ![Screen-Shot-2020-09-07-at-07.59.16](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-07.59.16.png)
 
-`sort` does not just work on files, as many UNIX commands do – it also works with pipes. So you can use it on the output of another command. For example you can order the files returned by `ls` with:
+`sort` 命令不像多数 UNIX 命令那样，只是用于操作文件，它还可以与管道符配合使用。因此你可以将它用在其他命令的输出上。例如，你可以用它排序 `ls` 命令传回的文件列表：
 
 ```bash
 ls | sort
-
 ```
 
-`sort` is very powerful and has lots more options, which you can explore by calling `man sort`.
+`sort` 的功能非常强大，它还支持更多的参数，你可以输入 `man sort` 来探索：
 
 ![Screen-Shot-2020-09-07-at-08.01.27](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-08.01.27.png)
 
 ## Linux 中的 `uniq` 命令
 
-`uniq` is a command that helps you sort lines of text.
+`uniq` 命令可以帮助你排序文本文件中的行。
 
-You can get those lines from a file, or using pipes from the output of another command:
+这些行可以通过文件获取，或用管道符从另一个命令的输出中得到：
 
 ```bash
 uniq dogs.txt
 ls | uniq
 ```
 
-You need to consider this key thing: `uniq` will only detect adjacent duplicate lines.
+此处需要考虑一个关键点： `uniq` 只会检测相邻的重复行。
 
-This implies that you will most likely use it along with `sort`:
+这意味着你可能会将它与 `sort` 配合使用：
 
 ```bash
 sort dogs.txt | uniq
-
 ```
 
-The `sort` command has its own way to remove duplicates with the `-u` (_unique_) option. But `uniq` has more power.
+`sort` 命令拥有自己的参数—— `-u` (_unique_) 来移除重复的行。但 `uniq` 更为强大。
 
-By default it removes duplicate lines:
+默认情况下，它会删除重复的行：
 
 ![Screen-Shot-2020-09-07-at-08.39.35](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-08.39.35.png)
 
-You can tell it to only display duplicate lines, for example, with the `-d` option:
+你可以告诉它只是显示重复的行，例如，使用 `-d` 参数：
 
 ```bash
 sort dogs.txt | uniq -d
-
 ```
 
 ![Screen-Shot-2020-09-07-at-08.36.50](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-08.36.50.png)
 
-You can use the `-u` option to only display non-duplicate lines:
+还可以使用 `-u` 参数，那样就只会显示不重复的行：
 
 ![Screen-Shot-2020-09-07-at-08.38.50](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-08.38.50.png)
 
-You can count the occurrences of each line with the `-c` option:
+使用 `-c` 参数计算每一行的出现次数：
 
 ![Screen-Shot-2020-09-07-at-08.37.15](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-08.37.15.png)
 
-Use the special combination:
+使用以下的特殊命令组合：
 
 ```bash
 sort dogs.txt | uniq -c | sort -nr
-
 ```
 
-to then sort those lines by most frequent:
+即可将文件内的行按最常见的频率排序：
 
 ![Screen-Shot-2020-09-07-at-08.37.49](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-08.37.49.png)
 
@@ -1137,7 +1130,6 @@ You can also just change the group of a file using the `chgrp` command:
 
 ```
 chgrp <group> <filename>
-
 ```
 
 ## Linux 中的 `chmod` 命令

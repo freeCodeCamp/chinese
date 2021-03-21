@@ -1,10 +1,7 @@
-\> -  *原文地址：*[What is Huffman Coding?  什么是霍夫曼编码？](https://www.baseclass.io/huffman-coding/)
-
-\> -  *原文作者：[Dave](https://www.twitter.com/davejsaunders)*
-
-\> -  *译者：* ZhichengChen
-
-\> -  *校对者：*
+> -   原文地址：[What is Huffman Coding?  什么是霍夫曼编码？](https://www.baseclass.io/huffman-coding/)
+> -   原文作者：[Dave](https://www.twitter.com/davejsaunders)*
+> -   译者： ZhichengChen
+> -   校对者：
 
 
 

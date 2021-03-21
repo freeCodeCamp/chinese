@@ -958,39 +958,39 @@ sort dogs.txt | uniq -c | sort -nr
 
 ## Linux 中的 `diff` 命令
 
-`diff` is a handy command. Suppose you have 2 files, which contain almost the same information, but you can't find the difference between the two.
+`diff` 是一个非常方便的命令。假定有两个文件，它们包含几乎相同的信息，你没有办法找出区别。
 
-`diff` will process the files and will tell you what's the difference.
+`diff` 会处理文件，然后告诉你有差异的地方。
 
-Suppose you have 2 files: `dogs.txt` and `moredogs.txt`. The difference is that `moredogs.txt` contains one more dog name:
+假定有两个文件： `dogs.txt` 和 `moredogs.txt`。它们的区别是： `moredogs.txt` 比前者多了一条狗狗的名字：
 
 ![Screen-Shot-2020-09-07-at-08.55.18](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-08.55.18.png)
 
-`diff dogs.txt moredogs.txt` will tell you the second file has one more line, line 3 with the line `Vanille`:
+`diff dogs.txt moredogs.txt` 会告诉你后者多了一行，在第 3 行有 `Vanille` 这一行：
 
 ![Screen-Shot-2020-09-07-at-08.56.05](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-08.56.05.png)
 
-If you invert the order of the files, it will tell you that the second file is missing line 3, whose content is `Vanille`:
+如果你改变两个文件的顺序，它会告诉你后者的第三行丢失了，也就是 `Vanille` 那一行： 
 
 ![Screen-Shot-2020-09-07-at-08.56.10](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-08.56.10.png)
 
-Using the `-y` option will compare the 2 files line by line:
+使用 `-y` 参数会逐行对比两个文件：
 
 ![Screen-Shot-2020-09-07-at-08.57.56](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-08.57.56.png)
 
-The `-u` option however will be more familiar to you, because that's the same used by the Git version control system to display differences between versions:
+你可能更熟悉 `-u` 参数，因为在 Git 版本管理系统中，它一样是用来显示不同版本文件差异的：
 
 ![Screen-Shot-2020-09-07-at-08.58.23](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-08.58.23.png)
 
-Comparing directories works in the same way. You must use the `-r` option to compare recursively (going into subdirectories):
+对于目录，比较的方式是一样的。你必须使用 `-r` 选项来进行递归比较（进入子目录）：
 
 ![Screen-Shot-2020-09-07-at-09.01.07](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-09.01.07.png)
 
-In case you're interested in which files differ, rather than the content, use the `r` and `q` options:
+如果你只对哪个文件存在差异感兴趣，而非关注文件的内容，可以使用 `r` 和 `q` 参数：
 
 ![Screen-Shot-2020-09-07-at-09.01.30](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-09.01.30.png)
 
-There are many more options you can explore in the man page by running `man diff`:
+它还支持更多参数，你可以用 man 页面来探索，只需键入 `man diff`：
 
 ![Screen-Shot-2020-09-07-at-09.02.32](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-09.02.32.png)
 

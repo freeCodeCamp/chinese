@@ -38,7 +38,7 @@ April
 ```
 
 
-[代码演示][1]在此.
+[代码演示][1]在此。
 
 在 `forEach` 循环回调函数中，数组中的每个元素都会自动作为第一个参数传参到函数中。
 Here, inside the  `forEach`  loop callback function, each element of the array is automatically passed as the first parameter of the function.
@@ -58,7 +58,7 @@ April
 
 ```
 
-[代码演示][2]在此.
+[代码演示][2]在此。
 
 需要注意的是，`forEach` 方法不返回任何值。
 
@@ -72,7 +72,7 @@ const returnedValue = months.forEach(function (month) {
 
 ```
 
-[代码演示][3]在此.
+[代码演示][3]在此。
 
 > _注意：_ _`_forEach_` _只用于循环数组和执行一些处理或日志记录。它不返回任何值，即使你想要从回调函数中显式地返回值也不行（这意味着在上述例子中返回的值是_`undefined`_）。_
 
@@ -94,7 +94,7 @@ April 3 ["January", "February", "March", "April"]
 
 ```
 
-[代码演示][4]在此.
+[代码演示][4]在此。
 
 有时候根据需要，`index` 和 `array` 参数可能会很有用。
 
@@ -134,7 +134,7 @@ const transformedArray = months.map(function (month) {
 
 ```
 
-[代码演示][5]在此.
+[代码演示][5]在此。
 
 在上述代码中，我们在回调函数内部把每个元素转换成大写，并返回它们。In the above code, inside the callback function, we’re converting each element to uppercase and returning it.
 
@@ -149,7 +149,7 @@ for(let i = 0; i < months.length; i++) {
 
 ```
 
-[代码演示][6]在此.
+[代码演示][6]在此。
 
 使用 `map` 方法使我们无需提前创建一个额外的 `converted` 数组来存储转换后的元素。因此它节约了内存空间，同时也使代码看上去更加简洁，像这样: Using  `map`  helps to avoid creating a separate  `converted`  array beforehand for storing the converted elements. So it saves memory space and also the code looks much cleaner using array  `map`, like this:
 
@@ -158,15 +158,15 @@ const months = ['January', 'February', 'March', 'April'];
 
 ```
 
-[代码演示]在此[7].
+[代码演示][7]在此。
 
-注意，`map` 方法会返回一个和原数组一样长度的新数组。Note that the  `map`  method returns a new array that is of the exact same length as the original array.
+注意，`map` 方法会返回一个和原数组等长的新数组。
 
-The difference between the  `forEach`  and  `map`  methods is that  `forEach`  is only used for looping and does not return anything back. On the other hand, the  `map`  method returns a new array that is of the exact same length as the original array.
+`forEach`和`map`方法的不同之处在于：`forEach`只用于循环，而不返回任何值，而`map`方法会返回一个和原数组等长的新数组。The difference between the  `forEach`  and  `map`  methods is that  `forEach`  is only used for looping and does not return anything back. On the other hand, the  `map`  method returns a new array that is of the exact same length as the original array.
 
-Also, note that  `map`  does not change the original array but returns a new array.
+同时也要注意`map`不会改变原数组，而是返回一个新的数组。Also, note that  `map`  does not change the original array but returns a new array.
 
-Take a look at the below code:
+看下面这段代码：Take a look at the below code:
 
 ```js
 const users = [
@@ -189,11 +189,11 @@ const usersList = users.map(function (user) {
 
 ```
 
-Here's a  [Code Pen Demo][8].
+[代码演示][8]在此.
 
-Here, by using the array of objects and  `map`  methods, we're easily generating a single array with first and last name concatenated.
+在这段代码中，通过使用`map`方法和一个包含对象的数组，我们可以轻松生成一个姓名联接在一起的新数组。Here, by using the array of objects and  `map`  methods, we're easily generating a single array with first and last name concatenated.
 
-In the above code, we're using the  `+`  operator to concatenate two values. But it's much more common to use ES6 template literal syntax as shown below:
+在上述代码中，我们使用`+`符号来联接两个值。但是更常见的用法是使用 ES6 模板文字语法。In the above code, we're using the  `+`  operator to concatenate two values. But it's much more common to use ES6 template literal syntax as shown below:
 
 ```js
 const users = [
@@ -216,9 +216,9 @@ const usersList = users.map(function (user) {
 
 ```
 
-Here's a  [Code Pen Demo][9].
+[代码演示][9]在此.
 
-The array  `map`  method is also useful, if you want to extract only specific data from the array like this:
+当你只想从数组中提取特定数据时，数组`map`方法也是有用的：
 
 ```js
 const users = [
@@ -244,12 +244,11 @@ const surnames = users.map(function (user) {
 
 ```
 
-Here's a  [Code Pen Demo][10].
+[代码演示][10]在此.
 
-In the above code, we're extracting only the last names of each user and storing them in an array.
+在上述代码中，我们只提取了每个用户的名，并将它们存储在一个新的数组中。In the above code, we're extracting only the last names of each user and storing them in an array.
 
-We can even use  `map`  to generate an array with dynamic content as shown below:
-
+我们也可以使用`map`来生成有动态内容的数组，如下所示：
 ```js
 const users = [
   {
@@ -271,18 +270,18 @@ const usersList = users.map(function (user) {
 
 ```
 
-Here's a  [Code Pen Demo][11].
+[代码演示][11]在此.
 
-Note that in the above code, we're not changing the original  `users`  array. We're creating a new array with dynamic content because  `map`  always returns a new array.
+上述代码中，我们没有改变原始的`users`数组，而是创建了一个有动态内容的新数组，因为`map`方法始终会返回一个新的数组。Note that in the above code, we're not changing the original  `users`  array. We're creating a new array with dynamic content because  `map`  always returns a new array.
 
-### Advantages of using the map method
+### 使用map方法的优势
 
--   It helps quickly generate a new array without changing the original array
--   It helps generate an array with dynamic content based on each element
--   It allows us to quickly extract any element of the array
--   It generates an array with the exact same length as the original array
+-   它可以在不改变原数组的情况下快速生成新的数组It helps quickly generate a new array without changing the original array
+-   它可以基于每个元素生成有动态内容的新数组It helps generate an array with dynamic content based on each element
+-   它可以快速提取数组中的任何元素It allows us to quickly extract any element of the array
+-   它生成和原数组等长的数组It generates an array with the exact same length as the original array
 
-**Browser Support:**
+**浏览器支持：**
 
 -   All modern browsers and Internet Explorer (IE) version 9 and above
 -   Microsoft Edge version 12 and above

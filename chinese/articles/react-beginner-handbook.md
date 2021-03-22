@@ -216,13 +216,14 @@ The things we import in this case are a JavaScript library (the  `react`  npm pa
 
 不必担心，我们很快就会详细学习所有的这些概念（JSX，State 和 Props）了。
 
-## Introduction to JSX
+## JSX 简介
 
-We can't talk about React without first explaining JSX.
+要想学习 React 就必须首先了解 JSX。
 
 In the last section you met your first React component, the  `App`  component defined in the default application built by  `create-react-app`.
+在上一节中，你见到了第一个 React 组件，即 `App`，它是由 `create-react-app` 构建的默认应用程序中定义的。
 
-Its code was this:
+它的代码如下：
 
 ```js
 import React from 'react'
@@ -251,9 +252,9 @@ function App() {
 
 ```
 
-We previously ignored everything that was inside the  `return`  statement, but in this section we're going to talk about it.
+之前我们忽略了 `return` 语句中的所有内容，但是我们将会在本节中讨论它们。
 
-We call JSX everything wrapped inside the parentheses returned by the component:
+我们将包含在组件返回语句后的括号内的所有内容称为 JSX：
 
 ```jsx
 <div className="App">
@@ -275,7 +276,7 @@ We call JSX everything wrapped inside the parentheses returned by the component:
 
 ```
 
-This  _looks_  like HTML, but it's not really HTML. It's a little different.
+这些内容 _看起来_ 很像 HTML，但是却又不是真正的 HTML。它们之间有一些不同点。
 
 And it's a bit strange to have this code inside a JavaScript file. This does not look like JavaScript at all!
 

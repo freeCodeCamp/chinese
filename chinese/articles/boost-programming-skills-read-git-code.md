@@ -1,6 +1,6 @@
 > -   原文地址：[Boost Your Programming Skills by Reading Git's Code](https://www.freecodecamp.org/news/boost-programming-skills-read-git-code/)
 > -   原文作者：Jacob Stopak
-> -   译者：
+> -   译者：weiqinglai
 > -   校对者：
 
 ![Boost Your Programming Skills by Reading Git's Code](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/Boost-Your-Programming-Skills-by-Reading-Git-s-Code.png)

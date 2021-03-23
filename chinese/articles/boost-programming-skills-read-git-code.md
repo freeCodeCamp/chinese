@@ -13,7 +13,7 @@ These days there are plenty of trendy ways to improve your programming skills an
 *   Following along with an online tutorial project
 *   Keeping up to date with relevant programming blogs
 
-现今有很多时新的方法可以帮你提升编程技能和认识，其中包括：
+现今有很多时新的方法可以帮你提升编程知识和技能，其中包括：
 
 * 参加免费或付费的在线编程课程
 * 读一本编程书
@@ -27,51 +27,71 @@ Each of these methods will appeal to different people, and each one has elements
 
 However, there is another method that the vast majority of developers overlook, which is a shame in my opinion because it has so much to offer. This method is to **learn by reading, analyzing, and understanding existing, high\-quality codebases!**
 
-但是，绝大多数开发人员都忽略了另一种方法，我认为这很可惜，因为它可以学到很多东西。这种方法就是“通过阅读，分析和理解现有的高质量代码库来学习！”
+但是，绝大多数开发人员都忽略了另一种方法，我认为这很可惜，因为它可以学到很多东西。这种方法就是**通过阅读，分析和理解现有的高质量代码库来学习！**
 
 We are lucky to live in a time where good code is often accessible for free via high\-quality, free\-and\-open\-source (FOSS) projects. And it takes less than a minute to clone down copies of these codebases to our local machines from sites like GitHub or BitBucket.
 
-我们很幸运地生活在这样一个时代，通常可以通过高质量，自由和开放源代码（FOSS）项目免费访问优质代码。 而且，从GitHub或BitBucket之类的网站上将这些代码库的副本克隆到我们的本地计算机上，只需不到一分钟的时间。
+我们很幸运地生活在这样一个时代，通常可以通过高质量，免费和开源（FOSS）项目免费访问优质代码。 而且，从 GitHub 或 BitBucket 之类的网站上将这些代码库的副本克隆到我们的本地计算机上，只需不到一分钟的时间。
 
 Furthermore, modern version control systems like Git allow us to view the code at any point in its development history. Clearly there is a wealth of information right in front of our noses!
 
-此外，像Git这样的现代版本控制系统使我们可以查看在其开发历史中任意节点的代码。显然，我们眼前有大量丰富的信息！
+此外，像 Git 这样的现代版本控制系统使我们可以查看在其开发历史中任意节点的代码。显然，我们眼前有大量丰富的信息！
 
 In this article, we will discuss the original version of Git's code in order to highlight how reading existing code can help boost your coding skills.
 
-在本文中，我们将讨论Git代码的原始版本，以突出显示如何通过阅读现有代码帮助提升您的编程技能。
+在本文中，我们将讨论 Git 代码的原始版本，以突出显示如何通过阅读现有代码帮助提升您的编程技能。
 
 We will cover why it's worth learning about Git's code, how to access Git's code, and review some related C programming concepts.
 
-我们将介绍有关Git的代码为什么值得学习，如何访问Git的代码以及回顾一些相关的C编程概念。
+我们将介绍有关 Git 的代码为什么值得学习，如何访问 Git 的代码以及回顾一些相关的C编程概念。
 
 We will provide an overview of Git's original codebase structure and learn how Git's core functionalities are implemented in code.
 
-我们将概述Git的原始代码库结构，并学习如何在代码中实现Git的核心功能。
+我们将概述 Git 的原始代码库结构，并学习如何在代码中实现 Git 的核心功能。
 
 Finally, we will recommend some next steps for curious developers to continue learning from Git's code and other projects.
 
-最后，我们将为好奇的开发人员推荐一些后续步骤，以便他们继续从Git的代码和其他项目中学习。
+最后，我们将为好奇的开发人员推荐一些后续步骤，以便他们继续从 Git 的代码和其他项目中学习。
 
 ## Why Learn About Git's Code?
 
+## 为什么要学习关于 Git 的代码呢？
+
 Git's codebase is an incredible resource for intermediate developers to further their programming knowledge and skills. Here are 7 reasons why it's worth digging into Git's code:
+
+对于中级开发人员来说，Git 的代码库是用来进一步提高他们的编程知识和技能的一个极好资源。以下是值得深入研究 Git 代码的 7 个原因：
 
 1) Git is probably the most popular software dev tool in use today. In short, if you're a developer, you probably use Git. Learning how Git's code works will give you a deeper understanding of an essential tool you work with every day.
 
+1) Git 可能是当今使用的最受欢迎的软件开发工具。简而言之，如果您是开发人员，则可能会使用 Git。学习 Git 的代码如何工作将使您对每天使用的基本工具有更深入的了解。
+
 2) Git is interesting! Git is a versatile tool that solves many interesting problems to allow developers to collaborate on code. As a curious human, I thoroughly enjoyed learning more about it.
+
+2) Git 很有趣！ Git 是一种多功能工具，可以解决许多有趣的问题，能帮助开发人员在代码上进行协作。作为一个好奇的人，我非常喜欢学习更多有关它的知识。
 
 3) Git's code is written in the **C** programming language, which offers a great opportunity for developers to branch out into an important language they may not have used much before.
 
+3) Git 的代码是用 **C** 语言编写的，这为开发人员提供了一个很好的机会，使他们可以了解一种以前可能很少使用的重要语言。
+
 4) Git makes use of many important programming concepts, including *content\-addressable databases, file compression/inflation, hash functions, caching,* and a *simple* *data model*. Git's code illustrates how these concepts can be implemented in a real project.
+
+4) Git 利用了许多重要的编程概念，包括*内容寻址数据库，文件压缩/解压缩，哈希函数，缓存*和*简单的数据模型*。 Git 的代码说明了如何在实际项目中实现这些概念。
 
 5) Git's code and design are *elegant.* It is a great example of a functional, minimalist codebase that accomplishes its goal in a clear, effective way.
 
+5) Git 的代码和设计非常*优雅*。这是一个功能强大的极简代码库的一个很好的示例，它可以清晰有效地实现其目标。
+
 6) Git's initial commit is small in size – it is made up of only 10 files, containing less than 1,000 total lines of code. This is very small compared to most other projects and is very manageable to understand in a reasonable amount of time.
+
+6) Git 的初始提交代码很小，它仅由 10 个文件组成，总共包含少于 1,000 行代码。与大多数其他项目相比这是非常小的，并且在合理的时间内可以很容易地理解。
 
 7) The code in Git's initial commit can be compiled and executed successfully. This means you can play with and test the original version of Git's code to see how it works.
 
+7) Git 的初始提交代码可以成功编译和执行。这意味着您可以使用并测试 Git 代码的原始版本，以了解其工作原理。
+
 Now, let's take a look at how to access the original version of Git's code.
+
+现在，让我们看一看要如何访问 Git 代码的原始版本。
 
 ## How to check out Git's initial commit?
 

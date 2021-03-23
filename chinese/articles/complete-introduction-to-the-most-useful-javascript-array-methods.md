@@ -296,9 +296,9 @@ Array.find(callback(element[, index[, array]])[, thisArg])
 
 > _ `_find_` _方法返回数组中第一个满足给定条件的元素的值。_ `_value_` _of the_  `_first element_` _in the array that satisfies the provided test condition._
 
-`find`方法第一个参数为回调函数，并且对每一个数组元素执行这个回调函数。每个数组元素的值作为第一个参数传入回调函数中。  method takes a callback function as the first argument and executes the callback function for every element of the array. Each array element value is passed as the first parameter to the callback function.
+`find`方法第一个参数为回调函数，并且对每一个数组元素执行这个回调函数。每个数组元素的值作为第一个参数传入回调函数中。  
 
-假设我们有一个员工列表：Suppose, we have a list of employees like this:
+假设我们有一个员工列表：
 
 ```js
 const employees = [
@@ -309,7 +309,7 @@ const employees = [
 ];
 ```
 
-我们可以使用`find`方法获取名为`John`的员工记录：and we want to get the record for the employee whose name is  `John`. In this case, we can use the  `find`  method as shown below:
+我们可以使用`find`方法获取名为`John`的员工记录：
 
 ```js
 const employee = employees.find(function (employee) {
@@ -320,7 +320,7 @@ const employee = employees.find(function (employee) {
 
 [代码演示][12]在此.
 
-即使列表中有`"John Carte"`,`find`方法在找到第一个匹配值后就会停止。因此，它不会返回名为`"John Carte"` 的记录。  method will stop when it finds the first match. So it will not return the object with the name  `"John Carte".`
+即使列表中有`"John Carte"`,`find`方法在找到第一个匹配值后就会停止。因此，它不会返回名为`"John Carte"` 的记录。 
 
 上述例子的循环代码也可以写成这样：
 
@@ -343,27 +343,27 @@ for(let i = 0; i < employees.length; i++) {
 
 [代码演示][13]在此.
 
-常规循环使代码看起来又冗长又难懂，使用`find`方法更简洁易懂。As you can see, using normal for loop makes the code much larger and harder to understand. But using the  `find`  method, we can write the same code in an easy to understand way.
+常规循环使代码看起来又冗长又难懂，使用`find`方法更简洁易懂。
 
 ### 使用find方法的优势
 
--   它可以简洁快速地找到任一元素It allows us to quickly find any element without writing a lot of code
--   它一找到匹配值就会停止循环，不需要额外的break语句It stops looping as soon as it finds a match so there is no need for an extra break statement
+-   它可以用简洁的代码快速地找到任一元素
+-   它一找到匹配值就会停止循环，不需要额外的break语句
 
 **浏览器支持：**
 
--   除了IE浏览器之外的所有主流浏览器All modern browsers except Internet Explorer (IE)
+-   除了IE浏览器之外的所有主流浏览器
 -   版本12及以上的Microsoft Edge浏览器
 
-## The Array.findIndex Method
+## Array.findIndex方法
 
-The  `Array.findIndex`  method has the following syntax:
+`Array.findIndex`方法的句法如下：
 
 ```js
 Array.findIndex(callback(element[, index[, array]])[, thisArg])
 ```
 
-The  `findIndex`  method returns the  **index**  of the first element in the array  **that satisfies the provided test condition**. Otherwise, it returns  `-1`, indicating that no element passed the test.
+`findIndex`方法返回数组中**满足给定条件**的第一个元素的**索引**。如果没有满足条件的元素，该方法会返回`-1`。
 
 ```js
 const employees = [
@@ -378,11 +378,11 @@ const index = employees.findIndex(function (employee) {
 
 ```
 
-Here's a  [Code Pen Demo][14].
+[代码演示][14]如下.
 
-Here we get the output as  **1**  which is the index of the first object with the name  `John`. Note that the index starts with zero.
+在这段代码中，我们得到的返回值是**1**，也就是名字为`John`的第一个元素的索引。注意索引是从0开始。
 
-The equivalent for loop code for the above example looks like this:
+上述例子的循环代码也可以写成这样：
 
 ```js
 const employees = [
@@ -401,30 +401,30 @@ for(let i = 0; i < employees.length; i++) {
 
 ```
 
-Here's a  [Code Pen Demo][15].
+[代码演示][15]在此.
 
-### Advantages of using the findIndex method
+### 使用 findIndex 方法的优势
 
--   It allows us to quickly find the index of an element without writing a lot of code
--   It stops looping as soon as it finds a match so there is no need for an extra break statement
--   We can find the index using the array  `find`  method also, but using  `findIndex`  makes it easy and avoids creating extra variables to store the index
+-   它可以用简洁的代码快速地找到任一元素的索引
+-   它一找到匹配值就会停止循环，不需要额外的break语句
+-   我们也可以使用数组的`find`方法找到索引，但是使用`findIndex`方法更简单，避免了创建额外的变量来存储索引
 
-**Browser Support:**
+**浏览器支持：**
 
--   All modern browsers except Internet Explorer (IE)
--   Microsoft Edge version 12 and above
+-   除了IE浏览器之外的所有主流浏览器
+-   版本12及以上的Microsoft Edge浏览器
 
-## The Array.filter Method
+## Array.filter 方法
 
-The  `Array.filter`  method has the following syntax:
+`Array.filter`方法的句法如下：
 
 ```js
 Array.filter(callback(element[, index[, array]])[, thisArg])
 ```
 
-The  `filter`  method returns  `a new array`  with all the elements that satisfy the provided test condition.
+`filter`方法返回新数组，包含所有满足给定条件的元素。
 
-The  `filter`  method takes a callback function as the first argument and executes the callback function for every element of the array. Each array element value is passed as the first parameter to the callback function.
+`filter`方法第一个参数为回调函数，并且对每一个数组元素执行这个回调函数。每个数组元素的值作为第一个参数传入回调函数中。
 
 ```js
 const employees = [
@@ -439,17 +439,17 @@ const employee = employees.filter(function (employee) {
 
 ```
 
-Here's a  [Code Pen Demo][16].
+[代码演示][16]在此.
 
-As can be seen in the above code, using  `filter`  helps to find all the elements from the array that match the specified test condition.
+上述代码中，使用`filter` 来找到数组中所有满足给定条件的元素。
 
-So using  `filter`  does not stop when it finds a particular match but keeps checking for other elements in the array that match the condition. Then it returns all the matching elements from the array.
+因此，`filter`方法在找到一个匹配值后不会停止，而是继续检查数组中的其他元素是否匹配，并最终返回数组中所有匹配的元素。
 
-> The main difference between  `find`  and  `filter`  is that  `find`  only returns the first matching element of the array, but using  `filter`  returns all the matching elements from the array.
+> `find` 和`filter`的主要区别在于，`find`只返回数组中第一个匹配的元素，而`filter` 返回数组中所有匹配的元素。
 
-Note that the  `filter`  method always returns an array. If no element passes the test condition, an empty array will be returned.
+注意，`filter`方法总是会返回一个数组。如果没有匹配的元素，则会返回一个空数组。
 
-The equivalent for loop code for the above example looks like this:
+上述例子的循环代码也可以写成这样：
 
 ```js
 const employees = [
@@ -467,30 +467,30 @@ for(let i = 0; i < employees.length; i++) {
 
 ```
 
-Here's a  [Code Pen Demo][17].
+[代码演示][17]在此.
 
-### Advantages of using the filter method
+### 使用 filter 方法的优势
 
--   It allows us to quickly find all the matching elements from the array
--   It always returns an array even if there is no match, so it avoids writing extra  `if`  conditions
--   It avoids the need of creating an extra variable to store the filtered elements
+-   它可以快速找到数组中的所有匹配元素
+-   即使没有满足条件的元素，它也始终会返回一个数组，因此不需要写额外的`if`条件
+-   它避免了创建额外的变量来存储匹配到的元素
 
-**Browser Support:**
+**浏览器支持：**
 
--   All modern browsers and Internet Explorer (IE) version 9 and above
--   Microsoft Edge version 12 and above
+-   所有主流浏览器和版本9及以上的IE浏览器
+-   版本12及以上的Microsoft Edge浏览器
 
-## The Array.every Method
+## Array.every 方法
 
-The  `Array.every`  method has the following syntax:
+`Array.every`方法的句法如下：
 
 ```js
 Array.every(callback(element[, index[, array]])[, thisArg])
 ```
 
-The  `every`  method tests whether all elements in the array pass the provided test conditions and returns a boolean  `true`  or  `false`  value.
+`every`方法检查数组中所有元素是否都满足给定条件，并返回`true`或`false`的布尔值。
 
-Suppose we have an array of numbers and we want to check if every element of the array is a positive number. We can use the  `every`  method to achieve it.
+假设我们有一组数字，如果我们想检查数组中是否所有值都是正数，就可以使用`every`方法。
 
 ```js
 let numbers = [10, -30, 20, 50];
@@ -502,7 +502,7 @@ numbers = [10, 30, 20, 50];
 
 ```
 
-Imagine you have a registration form, and you want to check if all of the required fields are entered or not before submitting the form. You can use the  `every`  method to check for each field value easily.
+假设你有一份注册表，你想在提交表单之前检查一下是否输入了所有所需的字段，使用`every`方法就可以很简单地做到。 You can use the  `every`  method to check for each field value easily.
 
 ```js
 window.onload = function () {
@@ -521,32 +521,32 @@ window.onload = function () {
 <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span>
 ```
 
-Here's a  [Code Pen Demo][18].
+[代码演示][18]在此.
 
-Here, inside the callback function of the  `every`  method, we’re checking if each field value is not empty and returning a boolean value.
+在`every`方法的回调函数内，我们检查了每个字段是否为空，并返回布尔值。
 
-In the above code, the  `every`  method returns  `true`  if, for all the elements in the  `fields`  array, the callback function returns a  `true`  value.
+上述代码中，如果对于`fields`数组里的所有元素，回调函数都返回`true`值，那么`every`方法返回`true`值。
 
-If the callback function returns a  `false`  value for any of the elements in the  `fields`  array, then the  `every`  method will return  `false`  as the result.
+如果对于`fields`数组中任一元素，回调函数返回了`false`值，那么`every`方法最终就会返回`false`值。
 
-### Advantage of using the every method
+### 使用every方法的优势
 
--   It allows us to quickly check if all the elements match certain criteria without writing a lot of code
+-   它可以用简洁的代码快速地检查所有元素是否符合特定的条件
 
-### Browser Support:
+### 浏览器支持
 
--   All modern browsers and Internet Explorer (IE) version 9 and above
--   Microsoft Edge version 12 and above
+-   所有主流浏览器和版本9及以上的IE浏览器
+-   版本12及以上的Microsoft Edge浏览器
 
-## The Array.some Method
+## Array.some方法
 
-The  `Array.some`  method has the following syntax:
+`Array.some`方法的句法如下：
 
 ```js
  Array.some(callback(element[, index[, array]])[, thisArg]
 ```
 
-The  `some`  method tests whether at least one element in the array passes the test condition given by the provided function and returns a boolean  `true`  or  `false`  value.
+`some`方法  method tests whether at least one element in the array passes the test condition given by the provided function and returns a boolean  `true`  or  `false`  value.
 
 It returns  `true`  once it finds the first match and returns  `false`  if there is no match.
 
@@ -588,7 +588,7 @@ const employee = employees.some(function (employee, index) {
 
 ```
 
-Here's a  [Code Pen Demo][19].
+[代码演示][19]在此.
 
 ### `Some`  method example 2:
 
@@ -634,7 +634,7 @@ const sum = numbers.reduce(function(accumulator, number) {
 
 ```
 
-Here's a  [Code Pen Demo][20].
+[代码演示][20]在此.
 
 The  `reduce`  method accepts a callback function that receives  `accumulator`,  `number`,  `index`  and  `array`  as the values. In the above code, we’re using only  `accumulator`  and  `number`.
 
@@ -663,7 +663,7 @@ const sum = numbers.reduce(function (accumulator, number) {
 
 ```
 
-Here's a  [Code Pen Demo][21].
+[代码演示][21]在此.
 
 Here, the  `accumulator`  will contain the first element of the array and  `number`  will contain the next element of the array (  `1 + 2 = 3`  during the first iteration and then `3 + 3 = 6`  during the next iteration, and so on).
 
@@ -679,7 +679,7 @@ const doublesSum = numbers.reduce(function (accumulator, number) {
 
 ```
 
-Here's a  [Code Pen Demo][22].
+[代码演示][22]在此.
 
 Here, we’re multiplying each element of the array by 2. We have provided an  `initialValue`  of 10 to the  `accumulator`  so 10 will be added to the final result of the sum like this:
 
@@ -701,19 +701,19 @@ const sum = coordinates.reduce(function (accumulator, currentValue) {
 
 ```
 
-Here's a  [Code Pen Demo][23].
+[代码演示][23]在此.
 
-### Advantages of using the reduce method
+### 使用reduce方法的优势
 
 -   Using  `reduce`  allows us to generate any type of simple or complex data based on the array
 -   It remembers the previously returns data from the loop so helps us avoid creating a global variable to store the previous value
 
-**Browser Support:**
+**浏览器支持：**
 
--   All modern browsers and Internet Explorer (IE) version 9 and above
--   Microsoft Edge version 12 and above
+-   所有主流浏览器和版本9及以上的IE浏览器
+-   版本12及以上的Microsoft Edge浏览器
 
-### Thanks for reading!
+### 感谢阅读！
 
 Want to learn all ES6+ features in detail including  `let`  and  `const`, promises, various promise methods, array and object destructuring, arrow functions, async/await, import and export and a whole lot more?
 

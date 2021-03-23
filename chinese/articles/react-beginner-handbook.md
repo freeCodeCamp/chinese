@@ -198,7 +198,7 @@ You can see a few things here. We  _import_  some things, and we  _export_  a fu
 在这段代码中，你可以学习到几个事情。我们使用 _import_ 导入了一些东西，并且用 _export_ 导出了一个名为 `App` 的函数。
 
 The things we import in this case are a JavaScript library (the  `react`  npm package), an SVG image, and a CSS file.
-在这段示例代码中，我们导入了一个 JavaScript 库：(the  `react`  npm package)，一个 SVG 图片，和一个 CSS 文件。
+在这段示例代码中，我们导入了一个 JavaScript 库(`react` npm 包)，一个 SVG 图片，和一个 CSS 文件。
 
 > `create-react-app`  设置了一种方法，它允许我们导入图片和 CSS 并在 JavaScript 中使用它们。但这不是我们现在需要关心的内容，我们现在关心的是 **组件** 的概念。
 
@@ -278,17 +278,17 @@ function App() {
 
 这些内容 _看起来_ 很像 HTML，但是却又不是真正的 HTML。它们之间有一些不同点。
 
-And it's a bit strange to have this code inside a JavaScript file. This does not look like JavaScript at all!
+而且将这样的代码包含在 JavaScript 文件中有点奇怪。它们看起来一点都不像 JavaScript！
 
-Under the hood, React will process the JSX and it will transform it into JavaScript that the browser will be able to interpret.
+在后台，React 将会处理 JSX，它们会被转换为浏览器可以识别的 JavaScript。
 
-So we're writing JSX, but in the end there's a translation step that makes it digestible to a JavaScript interpreter.
+因此，虽然我们编写了 JSX，但是最终会有一个转换的步骤，使它可以被 JavaScript 解析器所识别。
 
-React gives us this interface for one reason:  **it's easier to build UI interfaces using JSX**.
+React 为我们提供这个接口的一个原因：**使用 JSX 能更加轻松的开发 UI 界面**。
 
-Once you get more familiar with it, of course.
+当然了，前提是你必须非常熟悉它。
 
-In the next section we'll talk about how JSX lets you easily compose a UI, then we'll look at the differences with "normal HTML" that you need to know.
+在下一节中，我们将会讨论 JSX 是怎么使你能够很容易的开发 UI 的。再然后我们将会讨论它与“标准 HTML”的区别，这些差异是你必须知道的。
 
 ## Using JSX to compose a UI
 

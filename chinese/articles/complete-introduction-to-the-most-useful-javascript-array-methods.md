@@ -41,7 +41,6 @@ April
 [代码演示][1]在此。
 
 在 `forEach` 循环回调函数中，数组中的每个元素都会自动作为第一个参数传参到函数中。
-Here, inside the  `forEach`  loop callback function, each element of the array is automatically passed as the first parameter of the function.
 
 上述例子中的循环代码也可以写成这样：
 
@@ -74,7 +73,7 @@ const returnedValue = months.forEach(function (month) {
 
 [代码演示][3]在此。
 
-> _注意：_ _`_forEach_` _只用于循环数组和执行一些处理或日志记录。它不返回任何值，即使你想要从回调函数中显式地返回值也不行（这意味着在上述例子中返回的值是_`undefined`_）。_
+> _注意： _`_forEach_` _只用于循环数组和执行一些处理或日志记录。它不返回任何值，即使你想要从回调函数中显式地返回值也不行（这意味着在上述例子中返回的值是_`undefined`_）。_
 
 在上述所有例子中，我们只用了回调函数的第一个参数。但回调函数还可以有另外两个参数：
 
@@ -102,17 +101,17 @@ April 3 ["January", "February", "March", "April"]
 
 -   使用 `forEach` 能使你的代码更简洁易懂
 -   当使用 `forEach`  循环时，我们不需要跟踪数组里有多少available元素，因此可以避免创建额外的计数变量。
--   使用 `forEach` 循环使代码更容易debug，因为没有额外的变量用于数组循环。Using a  `forEach`  loop makes code easy to debug because there are no extra variables for looping through the array
--   当数组里所有的元素都迭代完之后，`forEach`  循环会自动停止。loop automatically stops when all the elements of the array are finished iterating.
+-   使用 `forEach` 循环使代码更容易调试，因为没有额外的变量用于数组循环。
+-   当数组里所有的元素都迭代完之后，`forEach`  循环会自动停止。
 
 ### 浏览器支持Browser Support
 
--   所有主流浏览器和版本9及以上的IE               All modern browsers and Internet Explorer (IE) version 9 and above
--   版本12及以上的Microsoft Edge                 Microsoft Edge version 12 and above
+-   所有主流浏览器和版本9及以上的IE浏览器
+-   版本12及以上的Microsoft Edge浏览器
 
 ## Array.map 方法
 
-Array map 方法是所有其他数组方法里最实用、最常用的方法。  The Array map method is the most useful and widely used array method among all other methods.
+Array map 方法是所有其他数组方法里最实用、最常用的方法。
 
 `Array.map` 方法的句法如下：
 
@@ -122,7 +121,7 @@ Array.map(function callback(currentValue[, index[, array]]) {
 }[, thisArg])
 ```
 
-`map` 方法对于数组中每一个元素，执行一次给定的函数，并**返回一个新的转换后的数组**。   method executes a provided function once for every element in the array and it  **returns a new transformed array.**
+`map` 方法对于数组中每一个元素，执行一次给定的函数，并**返回一个新的转换后的数组**。
 
 看下面这段代码:
 
@@ -136,9 +135,9 @@ const transformedArray = months.map(function (month) {
 
 [代码演示][5]在此。
 
-在上述代码中，我们在回调函数内部把每个元素转换成大写，并返回它们。In the above code, inside the callback function, we’re converting each element to uppercase and returning it.
+在上述代码中，我们在回调函数内部把每个元素转换成大写，并返回它们。
 
-上述例子的循环代码也可以写成这样：The equivalent for loop code for the above example looks like this:
+上述例子的循环代码也可以写成这样：
 
 ```js
 const months = ['January', 'February', 'March', 'April'];
@@ -151,7 +150,7 @@ for(let i = 0; i < months.length; i++) {
 
 [代码演示][6]在此。
 
-使用 `map` 方法使我们无需提前创建一个额外的 `converted` 数组来存储转换后的元素。因此它节约了内存空间，同时也使代码看上去更加简洁，像这样: Using  `map`  helps to avoid creating a separate  `converted`  array beforehand for storing the converted elements. So it saves memory space and also the code looks much cleaner using array  `map`, like this:
+使用 `map` 方法使我们无需提前创建一个额外的 `converted` 数组来存储转换后的元素。因此它节约了内存空间，同时也使代码看上去更加简洁:
 
 ```js
 const months = ['January', 'February', 'March', 'April'];
@@ -162,11 +161,11 @@ const months = ['January', 'February', 'March', 'April'];
 
 注意，`map` 方法会返回一个和原数组等长的新数组。
 
-`forEach`和`map`方法的不同之处在于：`forEach`只用于循环，而不返回任何值，而`map`方法会返回一个和原数组等长的新数组。The difference between the  `forEach`  and  `map`  methods is that  `forEach`  is only used for looping and does not return anything back. On the other hand, the  `map`  method returns a new array that is of the exact same length as the original array.
+`forEach`和`map`方法的不同之处在于：`forEach`只用于循环，而不返回任何值，而`map`方法会返回一个和原数组等长的新数组。
 
-同时也要注意`map`不会改变原数组，而是返回一个新的数组。Also, note that  `map`  does not change the original array but returns a new array.
+同时也要注意`map`不会改变原数组，而是返回一个新的数组。
 
-看下面这段代码：Take a look at the below code:
+看下面这段代码：
 
 ```js
 const users = [
@@ -191,9 +190,9 @@ const usersList = users.map(function (user) {
 
 [代码演示][8]在此.
 
-在这段代码中，通过使用`map`方法和一个包含对象的数组，我们可以轻松生成一个姓名联接在一起的新数组。Here, by using the array of objects and  `map`  methods, we're easily generating a single array with first and last name concatenated.
+在这段代码中，通过使用`map`方法和一个包含对象的数组，我们可以轻松生成一个姓名联接在一起的新数组。
 
-在上述代码中，我们使用`+`符号来联接两个值。但是更常见的用法是使用 ES6 模板文字语法。In the above code, we're using the  `+`  operator to concatenate two values. But it's much more common to use ES6 template literal syntax as shown below:
+在上述代码中，我们使用`+`符号来联接两个值。但是更常见的用法是使用 ES6 模板文字语法：
 
 ```js
 const users = [
@@ -246,7 +245,7 @@ const surnames = users.map(function (user) {
 
 [代码演示][10]在此.
 
-在上述代码中，我们只提取了每个用户的名，并将它们存储在一个新的数组中。In the above code, we're extracting only the last names of each user and storing them in an array.
+在上述代码中，我们只提取了每个用户的名，并将它们存储在一个新的数组中。
 
 我们也可以使用`map`来生成有动态内容的数组，如下所示：
 ```js
@@ -272,21 +271,21 @@ const usersList = users.map(function (user) {
 
 [代码演示][11]在此.
 
-上述代码中，我们没有改变原始的`users`数组，而是创建了一个有动态内容的新数组，因为`map`方法始终会返回一个新的数组。Note that in the above code, we're not changing the original  `users`  array. We're creating a new array with dynamic content because  `map`  always returns a new array.
+上述代码中，我们没有改变原始的`users`数组，而是创建了一个有动态内容的新数组，因为`map`方法始终会返回一个新的数组。
 
 ### 使用map方法的优势
 
--   它可以在不改变原数组的情况下快速生成新的数组It helps quickly generate a new array without changing the original array
--   它可以基于每个元素生成有动态内容的新数组It helps generate an array with dynamic content based on each element
--   它可以快速提取数组中的任何元素It allows us to quickly extract any element of the array
--   它生成和原数组等长的数组It generates an array with the exact same length as the original array
+-   它可以在不改变原数组的情况下快速生成新的数组
+-   它可以基于每个元素生成有动态内容的新数组
+-   它可以快速提取数组中的任何元素
+-   它生成和原数组等长的数组
 
 **浏览器支持：**
 
 -   所有主流浏览器和版本9及以上的IE浏览器
 -   版本12及以上的Microsoft Edge浏览器
 
-## Array.find方法The Array.find Method
+## Array.find方法
 
 `Array.find` 方法的句法如下：
 
@@ -294,7 +293,7 @@ const usersList = users.map(function (user) {
 Array.find(callback(element[, index[, array]])[, thisArg])
 ```
 
-> _ `_find_` _方法返回数组中第一个满足给定条件的元素的值。_ `_value_` _of the_  `_first element_` _in the array that satisfies the provided test condition._
+> _ `_find_`_ _方法返回数组中第一个满足给定条件的元素的值。_
 
 `find`方法第一个参数为回调函数，并且对每一个数组元素执行这个回调函数。每个数组元素的值作为第一个参数传入回调函数中。  
 
@@ -320,7 +319,7 @@ const employee = employees.find(function (employee) {
 
 [代码演示][12]在此.
 
-即使列表中有`"John Carte"`,`find`方法在找到第一个匹配值后就会停止。因此，它不会返回名为`"John Carte"` 的记录。 
+即使列表中有`"John Carte"`，`find`方法在找到第一个匹配值后就会停止。因此，它不会返回名为`"John Carte"` 的记录。 
 
 上述例子的循环代码也可以写成这样：
 
@@ -502,7 +501,7 @@ numbers = [10, 30, 20, 50];
 
 ```
 
-假设你有一份注册表，你想在提交表单之前检查一下是否输入了所有所需的字段，使用`every`方法就可以很简单地做到。 You can use the  `every`  method to check for each field value easily.
+假设你有一份注册表，你想在提交表单之前检查一下是否输入了所有所需的字段，使用`every`方法就可以很简单地做到。
 
 ```js
 window.onload = function () {
@@ -546,11 +545,11 @@ window.onload = function () {
  Array.some(callback(element[, index[, array]])[, thisArg]
 ```
 
-`some`方法  method tests whether at least one element in the array passes the test condition given by the provided function and returns a boolean  `true`  or  `false`  value.
+`some`方法检查数组中是否至少有一个元素满足给定条件，并返回`true`或`false`的布尔值。
 
-It returns  `true`  once it finds the first match and returns  `false`  if there is no match.
+当找到了第一个匹配值，它就会立刻返回`true`。如果整个数组没有匹配值，就返回`false`。
 
-Suppose we have an array of numbers and we want to check if the array contains at least one positive element. We can use the  `some`  method to achieve it.
+假设我们有一组数字，如果我们想检查数组中是否至少有一个数为正数，就可以使用`some`方法。
 
 ```js
 let numbers = [-30, 40, 20, 50];
@@ -562,13 +561,13 @@ numbers = [-10, -30, -20, -50];
 
 ```
 
-There are some useful scenarios for using the  `some`  method.
+以下是一些使用`some`方法的有效场景。
 
-### `Some`  method example 1:
+### `Some` 方法例1:
 
-Let's say we have a list of employees and we want to check if a particular employee is present in that array or not. We also want to get the index position of that employee if the employee is found.
+假设有一个员工列表，我们想要检查特定员工是否在该数组内，并且如果该员工在数组内，我们想得到他的索引位置。
 
-So instead of using the  `find`  and  `findIndex`  methods separately, we can use the  `some`  method to do both of these.
+我们可以使用`some`方法来达到这两个要求，而无需分别使用`find`和`findIndex`方法。
 
 ```js
 const employees = [
@@ -590,7 +589,7 @@ const employee = employees.some(function (employee, index) {
 
 [代码演示][19]在此.
 
-### `Some`  method example 2:
+### `Some` 方法例2:
 
 The array  `forEach`,  `map`, and  `filter`  methods run from start to finish until all of the elements of the array are processed. There is no way of stopping of breaking out of the loop, once a particular element is found.
 

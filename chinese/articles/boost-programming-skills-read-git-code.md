@@ -13,21 +13,45 @@ These days there are plenty of trendy ways to improve your programming skills an
 *   Following along with an online tutorial project
 *   Keeping up to date with relevant programming blogs
 
+现今有很多时新的方法可以帮你提升编程技能和认识，其中包括：
+
+* 参加免费或付费的在线编程课程
+* 读一本编程书
+* 挑选一个个人项目并不停地敲代码去学习
+* 跟随一个在线教程项目去学
+* 和相关的一些编程博客保持同步
+
 Each of these methods will appeal to different people, and each one has elements that will definitely make you a better programmer. If you are an intermediate or advanced coder, it is almost certain that you've tried each of these methods at least once.
+
+这些方法中的每一个都会吸引不同的人，并且每个方法里都有一些东西肯定会使您成为一个更好的程序员。如果您是一个中级或高级程序员，那几乎可以肯定这里的每种方法您已经尝试了至少一次。
 
 However, there is another method that the vast majority of developers overlook, which is a shame in my opinion because it has so much to offer. This method is to **learn by reading, analyzing, and understanding existing, high\-quality codebases!**
 
+但是，绝大多数开发人员都忽略了另一种方法，我认为这很可惜，因为它可以学到很多东西。这种方法就是“通过阅读，分析和理解现有的高质量代码库来学习！”
+
 We are lucky to live in a time where good code is often accessible for free via high\-quality, free\-and\-open\-source (FOSS) projects. And it takes less than a minute to clone down copies of these codebases to our local machines from sites like GitHub or BitBucket.
+
+我们很幸运地生活在这样一个时代，通常可以通过高质量，自由和开放源代码（FOSS）项目免费访问优质代码。 而且，从GitHub或BitBucket之类的网站上将这些代码库的副本克隆到我们的本地计算机上，只需不到一分钟的时间。
 
 Furthermore, modern version control systems like Git allow us to view the code at any point in its development history. Clearly there is a wealth of information right in front of our noses!
 
+此外，像Git这样的现代版本控制系统使我们可以查看在其开发历史中任意节点的代码。显然，我们眼前有大量丰富的信息！
+
 In this article, we will discuss the original version of Git's code in order to highlight how reading existing code can help boost your coding skills.
+
+在本文中，我们将讨论Git代码的原始版本，以突出显示如何通过阅读现有代码帮助提升您的编程技能。
 
 We will cover why it's worth learning about Git's code, how to access Git's code, and review some related C programming concepts.
 
+我们将介绍有关Git的代码为什么值得学习，如何访问Git的代码以及回顾一些相关的C编程概念。
+
 We will provide an overview of Git's original codebase structure and learn how Git's core functionalities are implemented in code.
 
+我们将概述Git的原始代码库结构，并学习如何在代码中实现Git的核心功能。
+
 Finally, we will recommend some next steps for curious developers to continue learning from Git's code and other projects.
+
+最后，我们将为好奇的开发人员推荐一些后续步骤，以便他们继续从Git的代码和其他项目中学习。
 
 ## Why Learn About Git's Code?
 

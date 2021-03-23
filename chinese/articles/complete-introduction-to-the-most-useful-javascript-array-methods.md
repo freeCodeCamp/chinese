@@ -283,22 +283,22 @@ const usersList = users.map(function (user) {
 
 **浏览器支持：**
 
--   All modern browsers and Internet Explorer (IE) version 9 and above
--   Microsoft Edge version 12 and above
+-   所有主流浏览器和版本9及以上的IE浏览器
+-   版本12及以上的Microsoft Edge浏览器
 
-## The Array.find Method
+## Array.find方法The Array.find Method
 
-The  `Array.find`  method has the following syntax:
+`Array.find` 方法的句法如下：
 
 ```js
 Array.find(callback(element[, index[, array]])[, thisArg])
 ```
 
-> _The_ `_find_` _method returns the_ `_value_` _of the_  `_first element_` _in the array that satisfies the provided test condition._
+> _ `_find_` _方法返回数组中第一个满足给定条件的元素的值。_ `_value_` _of the_  `_first element_` _in the array that satisfies the provided test condition._
 
-The  `find`  method takes a callback function as the first argument and executes the callback function for every element of the array. Each array element value is passed as the first parameter to the callback function.
+`find`方法第一个参数为回调函数，并且对每一个数组元素执行这个回调函数。每个数组元素的值作为第一个参数传入回调函数中。  method takes a callback function as the first argument and executes the callback function for every element of the array. Each array element value is passed as the first parameter to the callback function.
 
-Suppose, we have a list of employees like this:
+假设我们有一个员工列表：Suppose, we have a list of employees like this:
 
 ```js
 const employees = [
@@ -309,7 +309,7 @@ const employees = [
 ];
 ```
 
-and we want to get the record for the employee whose name is  `John`. In this case, we can use the  `find`  method as shown below:
+我们可以使用`find`方法获取名为`John`的员工记录：and we want to get the record for the employee whose name is  `John`. In this case, we can use the  `find`  method as shown below:
 
 ```js
 const employee = employees.find(function (employee) {
@@ -318,11 +318,11 @@ const employee = employees.find(function (employee) {
 
 ```
 
-Here's a  [Code Pen Demo][12].
+[代码演示][12]在此.
 
-Even though there is  `"John Carte"`  in the list, the  `find`  method will stop when it finds the first match. So it will not return the object with the name  `"John Carte".`
+即使列表中有`"John Carte"`,`find`方法在找到第一个匹配值后就会停止。因此，它不会返回名为`"John Carte"` 的记录。  method will stop when it finds the first match. So it will not return the object with the name  `"John Carte".`
 
-The equivalent for loop code for the above example looks like this:
+上述例子的循环代码也可以写成这样：
 
 ```js
 const employees = [
@@ -341,19 +341,19 @@ for(let i = 0; i < employees.length; i++) {
 
 ```
 
-Here's a  [Code Pen Demo][13].
+[代码演示][13]在此.
 
-As you can see, using normal for loop makes the code much larger and harder to understand. But using the  `find`  method, we can write the same code in an easy to understand way.
+常规循环使代码看起来又冗长又难懂，使用`find`方法更简洁易懂。As you can see, using normal for loop makes the code much larger and harder to understand. But using the  `find`  method, we can write the same code in an easy to understand way.
 
-### Advantages of using the find method
+### 使用find方法的优势
 
--   It allows us to quickly find any element without writing a lot of code
--   It stops looping as soon as it finds a match so there is no need for an extra break statement
+-   它可以简洁快速地找到任一元素It allows us to quickly find any element without writing a lot of code
+-   它一找到匹配值就会停止循环，不需要额外的break语句It stops looping as soon as it finds a match so there is no need for an extra break statement
 
-**Browser Support:**
+**浏览器支持：**
 
--   All modern browsers except Internet Explorer (IE)
--   Microsoft Edge version 12 and above
+-   除了IE浏览器之外的所有主流浏览器All modern browsers except Internet Explorer (IE)
+-   版本12及以上的Microsoft Edge浏览器
 
 ## The Array.findIndex Method
 

@@ -94,12 +94,20 @@ Now, let's take a look at how to access the original version of Git's code.
 现在，让我们看一看要如何访问 Git 代码的原始版本。
 
 ## How to check out Git's initial commit?
+## 如何查看Git的初始提交代码呢？
 
 The official copy of Git's codebase is hosted in [this public GitHub repository](https://github.com/git/git). However, I created a fork of Git's codebase and added extensive inline comments to the source code, to help developers easily read through it line by line.
 
+Git 代码库的正式副本托管在[GitHub公开资源库](https://github.com/git/git)中。但是，我创建了 Git 代码库的一个分支，并在源码中添加了大量的行内注释以帮助开发人员轻松地逐行阅读它。
+
 Since I worked off of the very first commit in Git's history, I named this project **Baby Git**. The Baby Git codebase is located in [this public BitBucket repository](https://bitbucket.org/jacobstopak/baby-git).
 
+由于这是我 Git 历史上的第一次工作，所以我把项目命名为 **Baby Git**。Baby Git 的代码库托管在[BitBucket 的公开资源库](https://bitbucket.org/jacobstopak/baby-git)中。
+
+
 I recommend cloning the Baby Git codebase to your local machine by running the following command in your terminal:
+
+我建议通过在终端中运行以下命令将 Baby Git 代码库 clone 到您本地计算机：
 
 ```sh
 git clone https://bitbucket.org/jacobstopak/baby-git.git
@@ -107,17 +115,27 @@ git clone https://bitbucket.org/jacobstopak/baby-git.git
 
 If you want to stick with Git's original codebase (without the extensive comments I added), use this command instead:
 
+如果您想坚持使用 Git 的原始代码库（即无需我所添加的大量注释），请改用以下命令：
+
 ```sh
 git clone https://github.com/git/git.git
 ```
 
 Browse into the new `git` directory by running the command `cd git`. Feel free to poke around the folders and files in here.
 
+通过运行命令 `cd git` 跳转到新生成的 `git` 目录，随意浏览下里面的文件夹和文件。
+
 You'll quickly notice that in the current version of Git – the version currently checked out in your working directory – that there are **a lot** of files containing a lot of very long and complicated\-looking code.
+
+您会很快注意到，在您工作目录 checked out 的 Git 当前版本中，有**大量**的文件包含许多非常长而且看起来很复杂的代码。
 
 Clearly this current version of Git is too big for a single developer to realistically get acquainted with in a reasonable amount of time.
 
+显然当前的 Git 版本代码库太大了，很难让单个开发人员在短时间内熟悉它。
+
 Let's simplify things by checking out Git's initial commit, using the command:
+
+让我们使用以下命令 checked out Git 的初始提交来简化这事情：
 
 ```sh
 git log --reverse
@@ -125,7 +143,11 @@ git log --reverse
 
 This shows a list of Git's commit log in reverse order, starting from Git's initial commit. Note that the first commit ID in the list is `e83c5163316f89bfbde7d9ab23ca2e25604af290`.
 
+列表逆序（即与最新日期在前相反）显示了从 Git 第一次提交代码到现在的提交日志。列表里第一次提交的 ID 是 `e83c5163316f89bfbde7d9ab23ca2e25604af290`。
+
 Check out the contents of this commit into the working directory by running the command:
+
+通过运行命令以下命令把第一次提交的内容 check out 到您的工作目录：
 
 ```sh
 git checkout e83c5163316f89bfbde7d9ab23ca2e25604af290

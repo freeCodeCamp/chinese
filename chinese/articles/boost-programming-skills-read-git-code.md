@@ -98,7 +98,9 @@ Now, let's take a look at how to access the original version of Git's code.
 
 The official copy of Git's codebase is hosted in [this public GitHub repository](https://github.com/git/git). However, I created a fork of Git's codebase and added extensive inline comments to the source code, to help developers easily read through it line by line.
 
-Git 代码库的正式副本托管在[GitHub公开资源库](https://github.com/git/git)中。但是，我创建了 Git 代码库的一个分支，并在源码中添加了大量的行内注释以帮助开发人员轻松地逐行阅读它。
+Git 代码库的正式副本托管在[GitHub公开
+
+](https://github.com/git/git)中。但是，我创建了 Git 代码库的一个分支，并在源码中添加了大量的行内注释以帮助开发人员轻松地逐行阅读它。
 
 Since I worked off of the very first commit in Git's history, I named this project **Baby Git**. The Baby Git codebase is located in [this public BitBucket repository](https://bitbucket.org/jacobstopak/baby-git).
 
@@ -155,25 +157,47 @@ git checkout e83c5163316f89bfbde7d9ab23ca2e25604af290
 
 This [puts Git into a *detached head state*](https://initialcommit.com/blog/what-is-git-head) and places Git's original code files into the working directory.
 
+这会让 [Git 进入 *分离头指针状态*](https://initialcommit.com/blog/what-is-git-head)，并把 Git 的源代码检出到您的工作目录。
+
 Now run the `ls` command to list these files, and note that there are only 10 that actually contain code! (The 11th is just a README). Understanding the code in these files is totally manageable for an intermediate developer!
+
+现在运行 'ls' 命令列出所有文件，注意里面只有 10 个文件真正包含代码（第 11 个只是自述文件）。对于中级开发人员来说理解这些文件中的代码是完全可预期的！
 
 **Note:** If you're using my Baby Git repository, you'll want to run the command `git checkout master` to abandon the detached head and move back to the tip of the master branch. This will enable you to see all the inline comments describing how Git's code works line by line!
 
+**注意：** 如果您使用的是 Baby Git 资源库，则需要运行命令 `git checkout master` 来放弃分离的头部，然后移回 master 分支。 这将使您能够查看所有描述 Git 的代码如何逐行工作的行内注释！
+
 ## Important C Concepts that Will Help You Understand Git's Code
+
+## 一些重要的 C 概念将帮助您理解 Git 的代码
 
 Before diving straight into Git's code, it helps to get a refresher on a few C programming concepts that appear throughout the codebase.
 
+在深入研究 Git 的代码之前，它有助于重新了解整个代码库中出现的一些 C 编程概念。
+
 ### C Header Files
+
+### C 头文件
 
 A C header file is a code file ending in the `.h` extension. Header files are used to store variables, functions, and other C objects that a developer wants to include in multiple `.c` source code files using the `#include "headerFile.h"` directive.
 
+C 头文件是一个扩展名为 `.h` 的代码文件。头文件用于存储开发人员希望使用 `#include "headerFile.h"` 指令将其包括在多个 `.c` 源代码文件中的变量，函数和其他 C 对象。
+
 If you're familiar with importing files in Python or Java, this is a comparable procedure.
+
+如果您熟悉用 Python 或 Java 导入文件，那么这是一个类似的过程。
 
 ### C Function Prototypes (or Function Signatures)
 
+### C 函数原型（或函数签名）
+
 A function prototype or signature tells the C compiler information about a function definition – the function's name, number of argument, types of arguments, and return type – without providing a function body. They help the C compiler identify function properties in situations where the function body appears after the function is called.
 
+一个函数原型或签名告诉 C 编译器有关函数定义的信息 —— 函数名称、参数数量、参数类型和返回值类型，但无需提供函数体。它们帮助 C 编译器在有函数体的情况下调用函数识别函数属性。
+
 Here is an example of a function prototype:
+
+下面是一个关于函数原型的例子：
 
 ```c
 int multiplyNumbers(int a, int b);
@@ -181,7 +205,11 @@ int multiplyNumbers(int a, int b);
 
 ### C Macros
 
+### C 语言的宏
+
 A macro in C is essentially a rudimentary variable that is processed before code compilation in a C program. Macros are created using the `#define` directive, such as:
+
+C 语言中的宏本质上是一个基本变量，在 C 程序中的代码编译之前先进行处理。宏是使用 `#define` 指令创建的，例如：
 
 ```c
 #define TESTMACRO asdf
@@ -189,13 +217,23 @@ A macro in C is essentially a rudimentary variable that is processed before code
 
 This creates a macro called `TESTMACRO` with a value of `asdf`. Wherever the placeholder `TESTMACRO` is used in the code, it will be replaced by the preprocessor (before code compilation) with the value `asdf`.
 
+这将创建一个名为 `TESTMACRO` 的宏，其值为 `asdf`。在代码中使用占位符 `TESTMACRO` 的任何地方，它将被预处理器（在代码编译之前）替换为值 `asdf`。
+
 Macros are commonly used in a few ways:
 
+宏通常在以下几种情况使用：
+
 *   As a true/false switch by checking whether a macro is defined
+*   作为一个 true/false 的开关检查宏是否定义
 *   To store a simple integer or string value to be replaced in the code in multiple locations
+*   替换在代码中的多个位置出现的简单整数或字符串值
 *   To store a simple (usually one\-line) code snippet to be replaced in the code in multiple locations
+*   替换在代码中的多个位置出现的简单（通常为单行）代码段
 
 Macros are convenient tools since they enable developers to update a single line of code which influences the behavior of the code in multiple locations.
+
+宏是方便的工具，因为它们使开发人员可以更新一行代码影响代码在多个位置的行为。
+
 
 ### C Structs
 

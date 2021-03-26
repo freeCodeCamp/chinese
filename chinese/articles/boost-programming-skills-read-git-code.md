@@ -237,9 +237,15 @@ Macros are convenient tools since they enable developers to update a single line
 
 ### C Structs
 
+### C 语言结构体
+
 A struct in C is a grouped set of properties that are related to a single object.
 
+C 语言中的结构体是一组属性的集合组成的单个对象。
+
 You are probably familiar with Classes in languages such as Java and Python. A struct is a predecessor to a class – it can be thought of as a primitive class with no methods.
+
+您可能熟悉 Java 和 Python 等语言中的类，结构体其实就是类的前身，它可以认为是一个不包含方法的原始类。
 
 ```c
 struct person {
@@ -253,11 +259,15 @@ struct person {
 
 This struct represents a person, by grouping together an ID field, along with the person's first and last names. A variable can be instantiated and initialized from this struct as follows:
 
+
+上面这个结构体代表一个由 ID 属性、名字属性、姓氏属性组成的人，可以通过以下方式实例化和初始化一个变量：
 ```c
 struct person jacob = { 1, "Jacob", "Stopak" };
 ```
 
 Struct properties can be retrieved using the dot operator:
+
+结构体属性取值通过 `.` 操作完成：
 
 ```c
 jacob.person_id
@@ -267,9 +277,15 @@ jacob.last_name
 
 ### C Pointers
 
+### C 语言中的指针
+
 A pointer is a memory address of a variable – it is the memory address at which the value of that variable is stored.
 
+指针就是变量的内存地址，该内存地址用于存储变量的值。
+
 A pointer to an existing variable can be obtained by using the `&` symbol, and stored in a pointer variable declared with the `*` symbol:
+
+可以使用 `＆` 符号获取指向现有变量的指针，并将其存储在以 `*` 符号声明的指针变量中：
 
 ```c
 int age = 21;
@@ -279,6 +295,8 @@ int* age_pointer = &age;
 
 This snippet defines the variable `age` and assigns it a value of 21. Then it defines a *pointer to an integer* called `age_pointer`, and uses the `&` to obtain the memory address that the value of the age variable is stored at.
 
+上面这段代码定义了一个`age` 变量，并给其赋值为 21 。然后定义了一个整型的指针变量叫 `age_pointer`，再使用 `&` 获得 `age` 变量的内存地址存储在指针 `age_pointer` 中。
+
 Pointers can be *dereferenced* (i.e. obtain the value stored at the memory address), using the `*` as well.
 
 ```c
@@ -287,22 +305,41 @@ int new_age = *age_pointer + 10;
 
 Continuing from our previous example, we use the `*age_pointer` syntax to fetch the value stored in the pointer (21), and add 10 to it. So the `new_age` variable would contain a value of 31.
 
+继续前面的示例， 我们使用 `*age_pointer` 的语法获取指针 `age_pointer` 内存地址存储的值（21），然后加上 10 把新值 31 赋值给变量 `new_age`。
+
 Now that our short segue into C programming is completed, let's get back to Git's code.
+
+现在我们对 C 语言的简单回顾就完成了，让我们回到 Git 的代码吧！
 
 ## Overview of Git's Codebase Structure
 
+## Git 代码库结构概述
+
 There are ten relevant code files that make up Git's initial commit. We'll start by briefly discussing these two:
+
+Git 初次提交的代码由 10 个相关的代码文件组成，让我们简要从下面两个文件开始讨论：
 
 *   Makefile
 *   cache.h
 
 We'll discuss `Makefile` and `cache.h` first because they are a bit special.
 
+我们首先讨论 `Makefile` 和 `cache.h`，因为它们有一点点特殊。
+
 `Makefile` is a build file that contains a set of commands used to build the other source code files into executables.
+
+`Makefile` 是一个构建文件，其中包含一组用于将其他源代码文件构建为可执行文件的命令。
+Makefile是一个构建文件，
 
 When you run the command `make all` from the command line, the Makefile will compile the source code files and spit out the relevant executables for Git's commands. If you're interested, I wrote an [in\-depth guide on Git's makefile](https://initialcommit.com/blog/Learn-Git-Makefile).
 
+
+当您从命令行运行 `make all` 命令时，这个 `Makefile` 文件将会编译源代码并生成 Git 命令的相关可执行文件。如果你感兴趣，我写了一份 [深入了解 Git 的 makefile 的指南](https://initialcommit.com/blog/Learn-Git-Makefile)。
+
 **Note:** If you actually want to compile Git's code locally, which I recommend you do, you'll need to use my Baby Git version of the code mentioned above. The reason is that I made some tweaks to allow Git's original code to compile on modern operating systems.
+
+**注意** 如果您确实像我推荐的那样想在本地编译 Git 的源码，那么您需要使用上面我提到的版本 Baby Git，因为我做了一些调整让 Git 的源代码可以在现代操作系统上编译。
+
 
 Next up is the `cache.h` file, which is Baby Git's only header file. As mentioned above, the header file defines many of the function signatures, structs, macros, and other settings that are used in the `.c` source code files. If you're curious, I wrote an [in\-depth guide on Git's header file](https://initialcommit.com/blog/Learn-Git-Header-Files).
 

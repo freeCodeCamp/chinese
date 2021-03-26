@@ -948,7 +948,11 @@ Another solution is to get a [bare metal server][67], install a Linux distributi
 
 REPL stands for Read-Evaluate-Print-Loop, and it’s a great way to explore the Node.js features in a quick way.
 
+REPL 代表 Read-Evaluate-Print-Loop，它是一种快速探索 JS 特性的好方法。
+
 The `node` command is the one we use to run our Node.js scripts:
+
+`node` 命令是我们用来运行 Node.js 的脚本：
 
 ```plain
 node script.js
@@ -956,59 +960,102 @@ node script.js
 
 If we omit the filename, we use it in REPL mode:
 
+如果省略文件名，则在 REPL 模式下使用：
+
+
 ```plain
 node
 ```
 
 If you try it now in your terminal, this is what happens:
 
+如果你在终端中尝试，会发生以下情况：
+
 ```
-❯ node&gt;
+>
 ```
 
 the command stays in idle mode and waits for us to enter something.
 
+命令保持在空闲模式，等待我们输入一些内容。
+
 **Tip**: if you are unsure how to open your terminal, Google “How to open terminal on <your operating system>”.
+
+**提示**：如果你不确定如何打开终端，请使用谷歌 “如何在 <你的操作系统> 上打开终端”。
 
 The REPL is waiting for us to enter some JavaScript code.
 
+REPL 正在等待我们输入一些 JavaScript 代码。
+
 Start simple and enter:
 
+简单启动并输入：
+
 ```plain
-> console.log('test')testundefined>
+> console.log('test')
+test
+undefined
+>
 ```
 
 The first value, `test`, is the output we told the console to print, then we get undefined which is the return value of running `console.log()`.
 
+第一个值 `test` 是我们告诉控制到打印的输出，然后我们得到 undefined，这是运行 `console.log()` 的返回值。
+
 We can now enter a new line of JavaScript.
+
+我们现在可以输入一行新的 JavaScript。
 
 #### Use the tab to autocomplete
 
+#### 使用 tab 自动完成
+
 The cool thing about the REPL is that it’s interactive.
+
+REPL 非常酷的是它是交互式的。
 
 As you write your code, if you press the `tab` key the REPL will try to autocomplete what you wrote to match a variable you already defined or a predefined one.
 
+在编写代码时，如果按 `tab` 键，REPL 将尝试自动完成所编写的内容，以匹配已定义的变量或预定义的变量。
+
 #### Exploring JavaScript objects
+
+#### 探索 JavaScript 对象
 
 Try entering the name of a JavaScript class, like `Number`, add a dot and press `tab`.
 
+尝试输入 JavaScript 类的名称，如 `Number`，添加一个点，然后按 `tab` 键。
+
 The REPL will print all the properties and methods you can access on that class:
+
+REPL 将打印你可以在该类上访问的所有属性和方法：
 
 ![](https://cdn-media-1.freecodecamp.org/images/MgYHCtgjD1rom1yKM43E-qBh7ansJuyglRWr)
 
 #### Explore global objects
 
+#### 探索全局对象
+
 You can inspect the globals you have access to by typing `global.` and pressing `tab`:
+
+你可以通过输入 `global` 并按 `tab` 来检查有权访问的全局变量：
 
 ![](https://cdn-media-1.freecodecamp.org/images/e2qWLuyjYC4DFZjEs2jYWK-NL9AXbpDiSdA7)
 
 #### The \_ special variable
 
+#### 特别的变量 \_
 If after some code you type `_`, that is going to print the result of the last operation.
+
+如果在某些代码之后输入 `_`，则将打印最后一次操作的结果。
 
 #### Dot commands
 
+#### dot 命令
+
 The REPL has some special commands, all starting with a dot `.`. They are
+
+REPL 有一些特殊的命令，都以一个点 `.` 开头。他们是
 
 -   `.help`: shows the dot commands help
 -   `.editor`: enables editor more, to write multiline JavaScript code with ease. Once you are in this mode, enter ctrl-D to run the code you wrote.
@@ -1018,9 +1065,21 @@ The REPL has some special commands, all starting with a dot `.`. They are
 -   `.save`: saves all you entered in the REPL session to a file (specify the filename)
 -   `.exit`: exists the repl (same as pressing ctrl-C two times)
 
+- `.help`：显示 dot 命令帮助
+- `.editor`：使编辑器更易于编写多行 JavaScript 代码。进入此模式后，输入 ctrl-D 以运行编写的代码。
+- `.break`：输入多行表达式时，输入 .break 命令将终止进一步的输入。与按 ctrl-C 相同。
+- `.clear`：将 REPL 上下文重置为空对象，并清除当前正在输入的多行表达式。
+- `.load`：相对于当前工作目录加载 JavaScript 文件。
+- `.save`：将在 REPL 会话中输入的所有内容保存到一个文件（指定文件名）
+- `.exit`：退出 repl（与按两次 ctrl-C 相同）
+
 The REPL knows when you are typing a multi-line statement without the need to invoke `.editor`.
 
+REPL 知道何时键入多行语句而不需要调用 `.editor`。
+
 For example if you start typing an iteration like this:
+
+例如，如果你开始键入如下迭代：
 
 ```
 [1, 2, 3].forEach(num =>; {
@@ -1028,17 +1087,27 @@ For example if you start typing an iteration like this:
 
 and you press `enter`, the REPL will go to a new line that starts with 3 dots, indicating you can now continue to work on that block.
 
+按 `回车` 键，REPL 将转到一个以3个点开始的新行，表示你现在可以继续处理该块。
+
 ```
 ... console.log(num)... })
 ```
 
 If you type `.break` at the end of a line, the multiline mode will stop and the statement will not be executed.
 
+如果在行位键入 `.break`，多行模式将停止，语句将不会执行。
+
 ### Node.js, accept arguments from the command line
+
+### Node.js，从命令行接收参数
 
 How to accept arguments in a Node.js program passed from the command line
 
+如何在从命令行传递的 Node.js 程序中接收参数。
+
 You can pass any number of arguments when invoking a Node.js application using:
+
+调用 Node.js 应用程序时，可以使用一下方法传递任意数量的参数：
 
 ```plain
 node app.js
@@ -1046,7 +1115,11 @@ node app.js
 
 Arguments can be standalone or have a key and a value.
 
+参数可以是独立的，也可以有 key 和 value。
+
 For example:
+
+例如：
 
 ```plain
 node app.js flavio
@@ -1054,23 +1127,39 @@ node app.js flavio
 
 or
 
+或者
+
 ```plain
 node app.js name=flavio
 ```
 
 This changes how you will retrieve this value in the Node.js code.
 
+这将改变在 Node.js 代码中检索该值的方式。
+
 The way you retrieve it is using the `process` object built into Node.js.
+
+检索它的方法是使用 Node.js 中内置的 `process` 对象。
 
 It exposes an `argv` property, which is an array that contains all the command line invocation arguments.
 
+它公开了一个 `argv` 属性，该属性是一个包含所有命令行调用参数的数组。
+
 The first argument is the full path of the `node` command.
+
+第一个参数是 `node` 命令的完整路径。
 
 The second element is the full path of the file being executed.
 
+第二个元素是正在执行的文件的完整路径。
+
 All the additional arguments are present from the third position going forward.
 
+所有额外的参数都是从第三个位置开始的。
+
 You can iterate over all the arguments (including the node path and the file path) using a loop:
+
+可以使用循环迭代所有参数（包括节点路径和文件路径）：
 
 ```
 process.argv.forEach((val, index) => {  console.log(`${index}: ${val}`)})
@@ -1078,11 +1167,15 @@ process.argv.forEach((val, index) => {  console.log(`${index}: ${val}`)})
 
 You can get only the additional arguments by creating a new array that excludes the first 2 params:
 
+通过创建排除前两个参数的新数组，只能获取附加参数：
+
 ```plain
 const args = process.argv.slice(2)
 ```
 
 If you have one argument without an index name, like this:
+
+如果有一个参数没有索引名，如下所示：
 
 ```
 node app.js flavio
@@ -1090,17 +1183,23 @@ node app.js flavio
 
 you can access it using
 
+你可以使用
+
 ```
 const args = process.argv.slice(2)args[0]
 ```
 
 In this case:
 
+在这种情况下：
+
 ```plain
 node app.js name=flavio
 ```
 
 `args[0]` is `name=flavio`, and you need to parse it. The best way to do so is by using the `minimist` [library][69], which helps dealing with arguments:
+
+`args[0]` 是 `name=flavio`，需要对其进行解析。最好的方法是使用 `minimist` [库][69]，这有助于处理参数：
 
 ```
 const args = require('minimist')(process.argv.slice(2))args['name'] //flavio

@@ -1070,63 +1070,59 @@ echo {1..5}
 
 ## Linux 中的 `chown` 命令
 
-Every file/directory in an Operating System like Linux or macOS (and every UNIX system in general) has an **owner**.
+在 Linux 或 macOS 操作系统（或是任一 UNIX 系统）中，每个文件或目录都有**所有者**。
 
-The owner of a file can do everything with it. It can decide the fate of that file.
+所有者可以对文件做任何事情。它可以决定文件的命运。
 
-The owner (and the `root` user) can change the owner to another user, too, using the `chown` command:
-
-```
-chown <owner> <file>
+使用 `chown` 命令，所有者（以及 `root` 用户）也可以将文件所有权转移给另一个用户：
 
 ```
+chown <所有者> <文件>
+```
 
-Like this:
+像这样：
 
 ```
 chown flavio test.txt
-
 ```
 
-For example if you have a file that's owned by `root`, you can't write to it as another user:
+例如，假设有一个为 `root` 所拥有的文件，作为其他用户，你无法对它进行写入：
 
 ![Screen-Shot-2020-09-03-at-18.40.49](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-18.40.49.png)
 
-You can use `chown` to transfer the ownership to you:
+你可以使用 `chown` 将文件所有权转移到你：
 
 ![Screen-Shot-2020-09-03-at-18.40.58](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-18.40.58.png)  
-It's rather common to need to change the ownership of a directory, and recursively all the files contained, plus all the subdirectories and the files contained in them, too.
+一种需求十分常见：改变目录的所有权，同时遍历修改其中包含的文件、子目录以及子目录中的文件的所有权。
 
-You can do so using the `-R` flag:
-
-```
-chown -R <owner> <file>
+你可以使用 `-R` 参数来完成：
 
 ```
-
-Files/directories don't just have an owner, they also have a **group**. Through this command you can change that simultaneously while you change the owner:
-
-```
-chown <owner>:<group> <file>
-
+chown -R <所有者> <文件>
 ```
 
-Example:
+文件和目录不仅属于所有者，同时还属于**用户组**。使用以下命令，你可以在变更所有者的同时，更改其所属用户组：
+
+```
+chown <所有者>:<用户组> <文件>
+```
+
+举例：
 
 ```
 chown flavio:users test.txt
 
 ```
 
-You can also just change the group of a file using the `chgrp` command:
+你还可以使用 `chgrp` 命令，只更改文件的所属用户组：
 
 ```
-chgrp <group> <filename>
+chgrp <用户组> <文件名>
 ```
 
 ## Linux 中的 `chmod` 命令
 
-Every file in the Linux / macOS Operating Systems (and UNIX systems in general) has 3 permissions: read, write, and execute.
+在 Linux 或 macOS 操作系统（或是任一 UNIX 系统）中，每个文件都有三种权限：读取、写入和执行。
 
 Go into a folder, and run the `ls -al` command.
 

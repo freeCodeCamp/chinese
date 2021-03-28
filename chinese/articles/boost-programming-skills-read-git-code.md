@@ -104,7 +104,7 @@ Git 代码库的正式副本托管在[GitHub公开
 
 Since I worked off of the very first commit in Git's history, I named this project **Baby Git**. The Baby Git codebase is located in [this public BitBucket repository](https://bitbucket.org/jacobstopak/baby-git).
 
-由于这是我 Git 历史上的第一次工作，所以我把项目命名为 **Baby Git**。Baby Git 的代码库托管在[BitBucket 的公开资源库](https://bitbucket.org/jacobstopak/baby-git)中。
+由于这是我 Git 历史上的第一次工作，所以我把项目命名为 **Baby Git**。Baby Git 的代码库托管在[BitBucket 的公开仓库](https://bitbucket.org/jacobstopak/baby-git)中。
 
 
 I recommend cloning the Baby Git codebase to your local machine by running the following command in your terminal:
@@ -165,7 +165,7 @@ Now run the `ls` command to list these files, and note that there are only 10 th
 
 **Note:** If you're using my Baby Git repository, you'll want to run the command `git checkout master` to abandon the detached head and move back to the tip of the master branch. This will enable you to see all the inline comments describing how Git's code works line by line!
 
-**注意：** 如果您使用的是 Baby Git 资源库，则需要运行命令 `git checkout master` 来放弃分离的头部，然后移回 master 分支。 这将使您能够查看所有描述 Git 的代码如何逐行工作的行内注释！
+**注意：** 如果您使用的是 Baby Git 仓库，则需要运行命令 `git checkout master` 来放弃分离的头部，然后移回 master 分支。 这将使您能够查看所有描述 Git 的代码如何逐行工作的行内注释！
 
 ## Important C Concepts that Will Help You Understand Git's Code
 
@@ -343,7 +343,12 @@ When you run the command `make all` from the command line, the Makefile will com
 
 Next up is the `cache.h` file, which is Baby Git's only header file. As mentioned above, the header file defines many of the function signatures, structs, macros, and other settings that are used in the `.c` source code files. If you're curious, I wrote an [in\-depth guide on Git's header file](https://initialcommit.com/blog/Learn-Git-Header-Files).
 
+接下来是 `cache.h` 文件，这是 Baby Git 唯一的头文件。如上所述，头文件定义了剩下 `.c` 源代码文件中使用的许多函数签名、结构体、宏以及其他设置。如果您感到好奇，我写了一篇 [深入了解 Git 头文件的指南](https://initialcommit.com/blog/Learn-Git-Header-Files)。
+
+
 The remaining eight code files are all `.c` source code files:
+
+其余 8 个代码文件都是 `.c` 源代码文件：
 
 *   `init-db.c`
 *   `update-cache.c`
@@ -356,35 +361,65 @@ The remaining eight code files are all `.c` source code files:
 
 Each file (except `read-cache.c`) is named after the Git command that it contains the code for – some probably look familiar to you. For example, the `init-db.c` file contains the code for the `init-db` command used to initialize a new Git repository. As you probably guessed, this was the precursor to the `git init` command.
 
+每个文件（`read-cache.c` 除外）均以包含该代码的 Git 命令命名，您可能对其中的某些文件很熟悉。比如 `init-db.c` 文件包含用于初始化新 Git 仓库的 `init-db` 命令的代码。您可能已经猜到了，这是 `git init` 命令的前身。
+
 In fact, each of these `.c` files (except `read-cache.c`) contains the code for one of the original eight Git commands. The build process compiles each of these files and creates an executable file (with matching name) for each one. Once these executables are added to the filesystem path, they can be executed similarly to any modern Git command.
+
+实际上每个 `.c` 文件（`read-cache.c` 除外）都包含原始的 8 个 Git 命令之一的代码，构建过程将编译每个文件并为每个文件创建一个可执行文件（具有匹配的名称）。将这些可执行文件添加到文件系统路径后，即可像执行任何现代 Git 命令一样执行它们。
 
 So after compiling the code using the `make all` command, the following executables are produced:
 
+因此使用 `make all` 命令编译代码后，将生成以下可执行文件：
+
 *   `init-db`: Initializes a new Git repository. Equivalent to `git init`.
+*    `init-db`：初始化一个新的 Git 仓库，相当于 `git init`
 *   `update-cache`: Add a file to the staging index. Equivalent to `git add`.
+*   `update-cache`：添加一个新文件到暂存区，相当于 `git add`
 *   `write-tree`: Creates a tree object in the Git repository from the current index contents.
+*   `write-tree`：根据当前索引内容在 Git 仓库中创建树对象（即目录结构）
 *   `commit-tree`: Creates a new commit object in the Git repository. Equivalent to `git commit`.
+*   `commit-tree`：在 Git 仓库中创建一个新的提交对象。相当于 `git commit`
 *   `read-tree`: Print out the contents of a tree from the Git repository.
+*   `read-tree`：从 Git 仓库中打印出树（即目录结构）的内容
 *   `cat-file`: Retrieve the the contents of an object from the Git repository, and store it in a temporary file in the current directory. Equivalent to `git show`.
+*   `cat-file`：从 Git 仓库中检索对象的内容，并将其存储在当前目录中的临时文件中。相当于 `git show`
 *   `show-diff`: Show the differences between files staged in the index and the current versions of those files as they exist in the filesystem. Equivalent to `git diff`.
+*   `show-diff`：显示索引中暂存的文件与文件系统中存在的这些文件的当前版本之间的差异。相当于 `git diff`。
 
 These commands are executed individually in sequence, similar to how modern Git commands are executed as a part of standard development workflows.
 
+这些命令按顺序分别执行，类似于现代 Git 命令作为标准开发工作流程的一部分执行的方式。
+
 The one file we haven't discussed yet is `read-cache.c`. This file contains a set of helper functions that the other `.c` source code files use to retrieve information from the Git repository.
+
+我们尚未讨论的一个文件是 `read-cache.c`。该文件包含一组其他 `.c` 源代码文件用于从 Git 仓库中检索信息的辅助函数。
 
 Now that we've touched on each of the important files in Git's initial commit, let's discuss some of the core programming concepts that allow Git to function.
 
+现在我们已经接触到了 Git 最初提交中的每个重要文件，让我们讨论一些让 Git 起作用的核心编程概念。
+
 ## Implementation of Git's Core Concepts
+
+## Git 核心概念的实现
 
 In this section, we'll discuss the following programming concepts that Git uses to work its magic, as well as how they were implemented in Git's original code:
 
+在这部分中，我们将讨论 Git 用于实现其魔力的以下编程概念，以及它们在 Git 的原始代码中是如何实现的：
+
 *   File compression
+*   文件压缩
 *   Hash function
+*   哈希函数
 *   Objects
+*   存放 Git 对象
 *   Current directory cache (staging area)
+*   当前目录缓存（暂存区）
 *   Content addressable database (object database)
+*   内容寻址数据库（object database）
 
 ### File Compression
+
+### 文件压缩
 
 File compression, also know as deflation, is used for storage and performance efficiency in Git. This reduces the size of the files that Git stores on disk and increases the speed of data retrieval when Git needs to transfer these files across a network.
 

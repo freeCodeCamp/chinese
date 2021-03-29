@@ -423,7 +423,11 @@ In this section, we'll discuss the following programming concepts that Git uses 
 
 File compression, also know as deflation, is used for storage and performance efficiency in Git. This reduces the size of the files that Git stores on disk and increases the speed of data retrieval when Git needs to transfer these files across a network.
 
+文件压缩（也称为缩放）用于 Git 中的存储和提高性能。当 Git 需要通过网络传输这些文件时，这会减小 Git 存储在磁盘上的文件的大小并提高数据检索的速度。
+
 This is important since Git's local and network operations need to be as fast as possible. As a part of the data retrieval process, Git decompresses, or inflates, the files to obtain their content.
+
+这很重要，因为 Git 的本地和网络操作需要尽可能快。作为数据检索过程的一部分，Git 对文件进行解压缩或扩展以获取其内容。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-37.png)
 
@@ -431,7 +435,11 @@ Source: https://initialcommit.com/blog/Learn\-Git\-Guidebook\-For\-Developers\-C
 
 File deflation and inflation were implemented in Git's original code using the popular `zlib.h` C library. This library contains functions, structures, and properties for compressing and decompressing content. Specifically, `Zlib` defines a `z_stream` struct that is used to hold the content that is to be deflated or inflated.
 
+在 Git 的原始代码中使用流行的 `zlib.h` C 语言库实现了文件压缩和解压缩，该库包含用于压缩和解压缩内容的函数、结构体和属性。具体来说，`Zlib` 库定义了一个结构体 `z_stream` 用于保存要压缩或扩展的内容。
+
 The following `zlib` functions are used to *initialize* a stream for deflation or inflation, respectively:
+
+下面的 `zlib` 库函数用于*初始化*一个流以进行压缩和解压缩，它们分别是：
 
 ```c
 /*
@@ -469,41 +477,76 @@ inflate(z_stream, flush);
 
 The actual deflation/inflation process is a bit more complex than this and involves setting several parameters of the compression stream, but we won't go into more detail here.
 
+实际的压缩、解压缩过程要比这复杂得多，并且涉及设置压缩流的几个参数，但是我们在这里不做更多详细介绍。
+
 Next, we'll discuss the concept of hash functions and how they are implemented in Git's original code.
+
+接下来，我们将讨论哈希函数的概念以及如何在 Git 的源代码中实现它们。
 
 ### Hash Functions
 
+### 哈希函数
+
 A hash function is a function that can easily transform an input into a unique output, but makes it very difficult or impossible to reverse that operation. In other words, it is a **one\-way function**. It is not possible with today's technology to use the output of a hash function to deduce the input that was used to generate that output.
+
+哈希函数是一种可以轻松将输入转换为唯一输出但反转该操作非常困难或不可能的函数。换句话说，它是一种 **单向函数**，在当今的技术下不可能使用哈希函数的输出来推断用于生成该输出的输入。
 
 Git uses a hash function – specifically the SHA\-1 hash function – to generate unique identifiers for the files we tell Git to track.
 
+Git 使用哈希函数，特别是用 SHA-1 哈希函数为我们让 Git 跟踪的文件生成唯一标识符。
+
 As developers, we make changes to the code files in the codebase we are working on using a text editor, and at some point we tell Git to track those changes. At this point, Git uses those file changes as inputs for the hash function.
+
+作为开发人员，我们使用文本编辑器对正在使用的代码库中的代码文件进行更改，并在某些时候告诉 Git 跟踪这些更改。此时，Git 使用这些文件更改信息作为哈希函数的输入。
 
 The output to the hash function is called a **hash***.* The hash is a hexadecimal value 40 characters in length, such as `47a013e660d408619d894b20806b1d5086aab03b`.
 
+哈希函数的输出称为一个 **哈希值**值。哈希值是一个长度为 40 个字符的十六进制值数，例如 `47a013e660d408619d894b20806b1d5086aab03b`。
+
+
 ![Git hash function](https://initialcommit.com/img/initialcommit/figure5.png "Git hash function")
+
 
 Source: https://initialcommit.com/blog/Learn\-Git\-Guidebook\-For\-Developers\-Chapter\-2
 
 Git uses these hashes for various purposes that we will see in the following sections.
 
+Git 将这些哈希用于各种目的，我们将在以下各节中看到它们。
+
 ### Objects
+
+### 对象
 
 Git uses a simple data model – a structured set of related objects – to implement its functionality. These objects are the nuggets of information that enable Git to track changes to the files of a codebase. The three types of objects that Git uses are:
 
+Git 使用一个简单的数据模型（结构化的相关对象集）来实现其功能。 这些对象是信息块，这些信息块使 Git 能够跟踪对代码库文件的更改。 Git 使用的三种对象类型是：
+
 *   Blob
+*   Blob 对象
 *   Tree
+*   Tree 对象
 *   Commit
+*   Commit 对象
 
 Let's discuss each one in turn.
 
+让我们按顺序逐个讨论。
+
 #### Blob
+
+#### Blob 对象
 
 A blob is short for a **B**inary **L**arge **OB**ject. When Git is told to track a file using the `update-cache <filename.ext>` command, (the predecessor to `git add`), Git creates a new blob using the compressed contents of that file.
 
+Blob 是 **B**inary **L**arge **OB**ject（即二进制大对象）的缩写形式，当使用 `update-cache <filename.ext>` 命令（`git add` 的前身）告诉 Git 跟踪文件时，Git 使用该文件的压缩内容创建一个新的 Blob 对象。
+
 Git takes the content of the file, compresses it using the `zlib` functions we described above, and uses this compressed content as input to the SHA\-1 hash function. This creates a 40 character hash that Git uses to identify the blob in question.
 
+Git 获取文件的内容并使用我们上面描述的 `zlib` 函数对其进行压缩，再将此压缩后的内容用作 SHA-1 哈希函数的输入，这会创建一个 40 个字符的哈希，Git 会使用该哈希来识别相关的 Blob
+
 Finally, Git saves the blob as a binary file in a special folder called the **object database** (more on this in a minute). The name of the blob file is the generated hash, and the contents of the blob file are the compressed file contents that were added using `update-cache`.
+
+最后，Git 将 blob 对象作为二进制文件保存在名为 **对象数据库** 的特殊文件夹中（稍后会详细介绍）。Blob 文件的名称是生成的哈希，Blob 文件的内容是使用 `update-cache` 命令添加的压缩文件内容。
 
 #### Tree
 

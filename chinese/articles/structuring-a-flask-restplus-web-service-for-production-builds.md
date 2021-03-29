@@ -1,95 +1,93 @@
--   原文地址：[How to structure a Flask-RESTPlus web service for production builds. Python Flask-RESTPlus 工程化实践](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/)
--   原文作者：Greg Obinna
--   译者：Zhicheng Chen
--   校对者：
+> -   原文地址：[How to structure a Flask-RESTPlus web service for production builds. Python Flask-RESTPlus 工程化实践](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/)
+> -   原文作者：Greg Obinna
+> -   译者：Zhicheng Chen
+> -   校对者：
 
-![](https://cdn-media-1.freecodecamp.org/images/1*TSbCf17bFXOYAb-l0HJ7rQ.jpeg)
 
-Image credit - frsjobs.co.uk
 
-In this guide I’ll show you a step by step approach for structuring a Flask RESTPlus web application for testing, development and production environments. I will be using a Linux based OS (Ubuntu), but most of the steps can be replicated on Windows and Mac.
+![How to structure a Flask-RESTPlus web service for production builds](https://cdn-media-1.freecodecamp.org/images/1*TSbCf17bFXOYAb-l0HJ7rQ.jpeg)
 
-Before continuing with this guide, you should have a basic understanding of the Python programming language and the Flask micro framework. If you are not familiar with those, I recommend taking a look at an introductory article - [How to use Python and Flask to build a web app.](https://medium.freecodecamp.org/how-to-use-python-and-flask-to-build-a-web-app-an-in-depth-tutorial-437dbfe9f1c6)
+在本指南中，将逐步介绍构建用于测试、开发和生产环境的 Flask RESTPlus Web 应用程序的方法。 将使用基于 Linux 的操作系统（Ubuntu），但是大多数步骤都可以在 Windows 和 Mac 上执行。
 
-#### How this guide is structured
+在继续阅读本指南之前，你应该对 Python 编程语言和 Flask 框架有基本的了解。 如果你不熟悉这些内容，建议阅读介绍性文章 - [如何使用 Python 和 Flask 构建 Web 应用程序。](https://medium.freecodecamp.org/how-to-use-python-and-flask-to-build-a-web-app-an-in-depth-tutorial-437dbfe9f1c6)
 
-This guide is divided into the following parts:
+#### 本指南的结构
 
--   [Features](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/#features)
--   [What is Flask-RESTPlus?](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/#what-is-flask-restplus)
--   [Setup and Installation](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/#setup-and-installation)
--   [Project Setup and Organization](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/#project-setup-and-organization)
--   [Configuration Settings](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/#configuration-settings)
--   [Flask Script](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/#flask-script)
--   [Database Models and Migration](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/#database-models-and-migration)
--   [Testing](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/#testing)
--   [Configuration](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/#configuration)
--   [User Operations](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/#user-operations)
--   [Security and Authentication](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/#security-and-authentication)
--   [Route protection and Authorization](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/#route-protection-and-authorization)
--   [Extra tips](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/#extra-tips)
--   [Extending the App & Conclusion](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/#extending-the-app-conclusion)
+本指南分为以下几部分：
 
-#### Features
+-   [功能](#features)
+-   [Flask-RESTPlus 是什么？](#what-is-flask-restplus)
+-   [安装和配置](#setup-and-installation)
+-   [项目配置和结构](#project-setup-and-organization)
+-   [配置设定](#configuration-settings)
+-   [Flask Script](#flask-script)
+-   [数据库 Model 和迁移](#database-models-and-migration)
+-   [测试](#testing)
+-   [配置](#configuration)
+-   [User 操作](#user-operations)
+-   [安全与认证](#security-and-authentication)
+-   [拓展 & 结论](#extending-the-app-conclusion)
 
-We’ll be using the following features and extensions within our project.
+#### 功能
 
--   [Flask-Bcrypt](https://flask-bcrypt.readthedocs.io/): A _Flask extension that provides bcrypt hashing utilities for your application_.
--   [Flask-Migrate](https://flask-migrate.readthedocs.io/): _An extension that handles SQLAlchemy database migrations for Flask applications using Alembic. The database operations are made available through the Flask command-line interface or through the Flask-Script extension._
--   [Flask-SQLAlchemy](http://flask-sqlalchemy.pocoo.org/): _An extension for [Flask](http://flask.pocoo.org/) that adds support for [SQLAlchemy](http://www.sqlalchemy.org/) to your application._
--   [PyJWT](https://pyjwt.readthedocs.io/): _A Python library which allows you to encode and decode JSON Web Tokens (JWT). JWT is an open, industry-standard ([RFC 7519](https://tools.ietf.org/html/rfc7519)) for representing claims securely between two parties._
--   [Flask-Script](https://flask-script.readthedocs.io/): _An extension that provides support for writing external scripts in Flask and other command-line tasks that belong outside the web application itself._
+项目将涉及以下功能和扩展。
+
+-   [Flask-Bcrypt](https://flask-bcrypt.readthedocs.io/):  _一个 Flask 扩展，提供了 bcrypt 散列功能。_
+-   [Flask-Migrate](https://flask-migrate.readthedocs.io/): _一个使用 Alembic 为 Flask 应用处理 SQLAlchemy 数据库迁移的扩展，可以通过 Flask 的命令行接口或者 Flask-Scripts 对数据库进行操作。_
+-   [Flask-SQLAlchemy](http://flask-sqlalchemy.pocoo.org/): _一个 [Flask](http://flask.pocoo.org) 扩展，给应用添加了 [SQLAlchemy](http://www.sqlalchemy.org) 支持。_
+-   [PyJWT](https://pyjwt.readthedocs.io/): _可以编码解码 JSON Web Tokens (JWT) 的 Python 库。JWT 是为了在网络应用环境间传递声明而执行的一种基于 JSON 的开放标准（(RFC 7519)。_
+-   [Flask-Script](https://flask-script.readthedocs.io/): _一个提供了向 Flask 插入外部脚本的功能的扩展，它可以运行除 web 应用之外的命令行任务。_
 -   [Namespaces](http://flask-restplus.readthedocs.io/en/stable/scaling.html) ([Blueprints](http://exploreflask.com/en/latest/blueprints.html))
 -   [Flask-restplus](https://flask-restplus.readthedocs.io/)
 -   UnitTest
 
-#### What is Flask-RESTPlus?
+#### Flask-RESTPlus 是什么？
 
-Flask-RESTPlus is an extension for Flask that adds support for quickly building REST APIs. Flask-RESTPlus encourages best practices with minimal setup. It provides a coherent collection of decorators and tools to describe your API and expose its documentation properly (using Swagger).
+Flask-RESTPlus 是 Flask 的扩展，可以通过它快速构建 REST API。 Flask-RESTPlus 最佳实践鼓励配置尽可能少。它提供了大量的装饰器和工具来描述 API，并以文档化的形式将这些接口展现出来（通过 Swagger 来实现）。
 
-#### Setup and Installation
+#### 安装和配置
 
-Check if you have pip installed, by typing the command `pip --version` into the Terminal , then press Enter.
+在 Terminal 中输入命令 `pip --version` 来检查是否已安装 pip，然后回车。
 
-```
+```shell
 pip --version
 ```
 
-If the terminal responds with the version number, this means that pip is installed, so go to the next step, otherwise [install pip](https://pip.pypa.io/en/latest/installing/) or using the Linux package manager, run the command below on the terminal and press enter. Choose either the Python 2.x OR 3.x version.
+如果终端输出版本号，表示已安装 pip，可以继续执行下一步，否则请[先安装 pip](https://pip.pypa.io/en/latest/installing/)，如果使用 Linux 包管理器，可以在终端上运行以下命令，回车。选择 Python 2.x 或 3.x 版本。
 
 -   Python 2.x
 
-```
+```shell
 sudo apt-get install python-pip
 ```
 
 -   Python 3.x
 
-```
+```shell
 sudo apt-get install python3-pip
 ```
 
-Set up virtual environment and virtual environment wrapper (you only need one of these, depending on the version installed above):
+设置 virtual  环境或 virtual 环境 wrapper（只需要其中之一，取决于上面安装的版本）：
 
-```
+```shell
 sudo pip install virtualenv
 
 sudo pip3 install virtualenvwrapper
 ```
 
-Follow [this link](https://medium.com/@gitudaniel/installing-virtualenvwrapper-for-python3-ad3dfea7c717) for a complete setup of virtual environment wrapper.
+请按照[此链接](https://medium.com/@gitudaniel/installing-virtualenvwrapper-for-python3-ad3dfea7c717)进行 virtual 环境 wrapper 的完整设置。
 
-Create a new environment and activate it by executing the following command on the terminal:
+通过在终端上执行以下命令来创建新环境并激活它：
 
-```
+```shell
 mkproject name_of_your_project
 ```
 
-#### Project Setup and Organization
+#### 项目配置和结构
 
-I will be using a [functional structure](http://exploreflask.com/en/latest/blueprints.html#functional-structure) to organize the files of the project by what they do. In a functional structure, templates are grouped together in one directory, static files in another and views in a third.
+这里使用[功能性结构](http://exploreflask.com/zh-CN/latest/blueprints.html#functional-structure)通过文件的功能来组织项目文件。在功能结构里，模板、静态文件、视图在三个不同的目录中。
 
-In the project directory, create a new package called `app`. Inside `app`, create two packages `main` and `test`. Your directory structure should look similar to the one below.
+在项目目录中，创建一个名为 `app` 的新包。 在 `app` 内部，创建两个包 ` main` 和 `test`。 目录结构如下。
 
 ```
 .
@@ -102,8 +100,9 @@ In the project directory, create a new package called `app`. Inside `app`, creat
 └── requirements.txt
 ```
 
-We are going to use a functional structure to modularize our application.  
-Inside the `main` package, create three more packages namely: `controller`, `service` and `model`. The `model` package will contain all of our database models while the `service` package will contain all the business logic of our application and finally the `controller` package will contain all our application endpoints. The tree structure should now look as follows:
+接下来使用功能结构来模块化应用程序。
+
+在 `main` 包中，再创建三个包，即：`controller`，`service` 和 `model`。 `model` 包将包含所有的数据库模型，而 `service` 包将包含应用程序的所有业务逻辑，最后 `controller` 包将包含所有的应用程序接口。 现在，树结构应如下所示：
 
 ```
 .
@@ -122,9 +121,9 @@ Inside the `main` package, create three more packages namely: `controller`, `ser
 └── requirements.txt
 ```
 
-Now lets install the required packages. Make sure the virtual environment you created is activated and run the following commands on the terminal:
+现在，来安装所需的软件包。 确保已激活创建的 virtual  环境，并在终端上运行以下命令：
 
-```
+```shell
 pip install flask-bcrypt
 
 pip install flask-restplus
@@ -138,13 +137,13 @@ pip install Flask-Script
 pip install flask_testing
 ```
 
-Create or update the `requirements.txt` file by running the command:
+通过运行以下命令来创建/更新 `requirements.txt` 文件：
 
-```
+```shell
 pip freeze > requirements.txt
 ```
 
-The generated `requirements.txt` file should look similar to the one below:
+生成的 `requirements.txt` 文件应该如下：
 
 ```
 alembic==0.9.8
@@ -174,11 +173,11 @@ SQLAlchemy==1.2.5
 Werkzeug==0.14.1
 ```
 
-#### Configuration Settings
+#### 配置设定
 
-In the `main` package create a file called `config.py` with the following content:
+在 `main` 包中创建一个名为 `config.py` 的文件，内容如下：
 
-```
+```python
 import os
 
 
@@ -222,13 +221,13 @@ config_by_name = dict(
 key = Config.SECRET_KEY
 ```
 
-The configuration file contains three environment setup classes which includes `testing`, `development`, and `production`.
+配置文件包含三个环境设置 class，其中包括 `testing`、`development` 和  `production`。
 
-We will be using the [application factory pattern](http://flask.pocoo.org/docs/0.12/patterns/appfactories/) for creating our Flask object. This pattern is most useful for creating multiple instances of our application with different settings. This facilitates the ease at which we switch between our testing, development and production environment by calling the `create_app` function with the required parameter.
+这里将使用[应用程序工厂模式](http://flask.pocoo.org/docs/0.12/patterns/appfactories/)创建 Flask 对象。在对不同的配置创建多个实例时这个模式很方便。通过传入必填参数调用 `create_app` 函数，可以方便地在测试、开发和生产环境之间进行切换。
 
-In the `__init__.py` file inside the `main` package, enter the following lines of code:
+在 `main` 包内的 `__init__.py` 文件中，输入以下代码：
 
-```
+```python
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
@@ -250,9 +249,9 @@ def create_app(config_name):
 
 #### Flask Script
 
-Now let’s create our application entry point. In the root directory of the project, create a file called `manage.py` with the following content:
+现在，创建应用程序入口点。在项目的根目录中，创建一个名为 `manage.py` 的文件，其内容如下：
 
-```
+```python
 import os
 import unittest
 
@@ -288,35 +287,35 @@ if __name__ == '__main__':
     manager.run()
 ```
 
-The above code within `manage.py` does the following:
+上面的 `manage.py` 中的代码做了以下操作：
 
--   `line 4` and `5` imports the migrate and manager modules respectively (we will be using the migrate command soon).
--   `line 9` calls the `create_app` function we created initially to create the application instance with the required parameter from the environment variable which can be either of the following - `dev`, `prod`, `test`. If none is set in the environment variable, the default `dev` is used.
--   `line 13` and `15` instantiates the manager and migrate classes by passing the `app` instance to their respective constructors.
--   In `line 17`,we pass the `db` and `MigrateCommand`instances to the `add_command` interface of the `manager`to expose all the database migration commands through Flask-Script.
--   `line 20` and `25` marks the two functions as executable from the command line.
+-   `line 4`和 `5` 分别导入 migration 和 manager 模块（很快会用到 migration 命令）。
+-   `line 9` 调用开始创建的 `create_app` 函数，使用环境变量中的必添参数创建应用程序实例，该参数可以是 - `dev`、`prod` 或 `test`。 如果环境变量中未设置任何值，则默认使用 `dev`。
+-   `line 13`  和 `15` 将 app 实例传递给它们各自的构造函数来实例化 manager 和 migrate class。
+-   在 `line 17` 中，将 `db` 和 `MigrateCommand` 实例传递给 `manager` 的 `add_command` 接口，以通过 Flask-Script 暴露所有数据库迁移命令。
+-   `line 20` 和 `25` 将这两个函数标记为可从命令行执行函数。
 
-> __Flask-Migrate exposes two classes, `Migrate` and `MigrateCommand`. The `Migrate`class contains all the functionality of the extension. The `MigrateCommand` class is only used when it is desired to expose database migration commands through the Flask-Script extension.__
+> _Flask-Migrate 暴露了两个 class，`Migrate` 和 `MigrateCommand`。 `Migrate` class 包含扩展的所有功能。 `MigrateCommand` class 仅在需要通过 Flask-Script 扩展公开数据库迁移命令时使用。_
 
-At this point, we can test the application by running the command below in the project root directory.
+此时，可以通过在项目根目录中运行以下命令来测试应用程序。
 
 ```
 python manage.py run
 ```
 
-If everything is okay, you should see something like this:
+如果一切正常，应该会看到类似以下内容：
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*5_9GQCi5Z7J13iUbp82bHw.png)
 
-#### Database Models and Migration
+#### 数据库 Model 和迁移
 
-Now let’s create our models. We will be using the `db` instance of the sqlalchemy to create our models.
+现在，开始创建模型。 这里使用 sqlalchemy 的 `db` 实例来创建模型。
 
-The `db` instance contains all the functions and helpers from both `****sqlalchemy****`and `[****sqlalchemy.orm****](http://docs.sqlalchemy.org/en/latest/orm/scalar_mapping.html#module-sqlalchemy.orm)` and it provides a class called `Model` that is a declarative base which can be used to declare models.
+`db` 实例包含 **sqlalchemy ** 和 **[sqlalchemy.orm](http://docs.sqlalchemy.org/en/latest/orm/scalar_mapping.html#module-sqlalchemy.orm)**，它提供了一个名为 Model 的 class，该 class 是用于声明 model 的基础性声明。
 
-In the `model` package, create a file called `user.py` with the following content:
+在 `model` 包中，创建一个名为 `user.py` 的文件，其内容如下：
 
-```
+```python
 from .. import db, flask_bcrypt
 
 class User(db.Model):
@@ -346,55 +345,54 @@ class User(db.Model):
         return "<User '{}'>".format(self.username)
 ```
 
-The above code within `user.py` does the following:
+上面的 `user.py` 代码执行以下操作：
 
--   `line 3:` The `user` class inherits from `db.Model` class which declares the class as a model for sqlalchemy.
--   `line 7` through `13` creates the required columns for the user table.
--   `line 21` is a setter for the field `password_hash` and it uses `flask-bcrypt`to generate a hash using the provided password.
--   `line 24` compares a given password with already saved`password_hash`.
+-   `line 3:` `user`  class 继承自 `db.Model` class，声明为 sqlalchemy 的模型。
+-   `line7` 行到 `13` 会为 user 表创建所需的列。
+-   `line 21` 是 `password_hash` 字段的 setter，它使用 `flask-bcrypt` 来使用提供的密码来生成哈希。
+-   `line 24` 将给定的密码和已经保存的 `password_hash` 进行比较。
 
-Now to generate the database table from the `user` model we just created, we will use `migrateCommand` through the `manager` interface. For `manager`to detect our models, we will have to import the`user` model by adding below code to `manage.py` file:
+现在要从刚刚创建的 `user` model 生成数据库表，将通过 `manager` 接口的 `migrateCommand` 来生成。 为了使 `manager` 能够检测到我们的 model，我们必须通过在 `manage.py` 文件中添加以下代码来导入 `user` 模型：
 
-```
+```python
 ...
 from app.main.model import user
 ...
 ```
 
-Now we can proceed to perform the **migration** by running the following commands on the project root directory:
+现在，可以通过在项目根目录上运行以下命令来继续执行 **migration**：
 
-1.  Initiate a migration folder using `init` command for alembic to perform the migrations.
+1\. 使用 `init` 命令启动一个迁移文件夹以使 Alembic 执行迁移。
 
-```
+```shell
 python manage.py db init
 ```
 
-2\. Create a migration script from the detected changes in the model using the `migrate` command. This doesn’t affect the database yet.
+2\. 使用 `migrate` 命令检测 model 的更改并创建迁移脚本。这不会影响数据库。
 
-```
+```python
 python manage.py db migrate --message 'initial database migration'
 ```
 
-3\. Apply the migration script to the database by using the `upgrade` command
+2\. 使用 `upgrade` 命令将迁移脚本应用于数据库
 
-```
+```python
 python manage.py db upgrade
 ```
 
-If everything runs successfully, you should have a new sqlLite database  
-`flask_boilerplate_main.db` file generated inside the main package.
+如果一切顺利运行，则应该创建了一个新的 sqlite 数据库，并在主包内生成一个`flask_boilerplate_main.db` 文件。
 
-> Each time the database model changes, repeat the `migrate` and `upgrade` commands
+> 每次数据库模型更改时，都执行一次 `migrate` 和 `upgrade` 命令
 
-### Testing
+### 测试
 
-#### Configuration
+#### 配置
 
-To be sure the setup for our environment configuration is working, let’s write a couple of tests for it.
+为确保的环境配置的设置没问题，来编写一些测试。
 
-Create a file called `test_config.py` in the test package with the content below:
+在测试包中创建一个名为 `test_config.py` 的文件，其内容如下：
 
-```
+```python
 import os
 import unittest
 
@@ -445,28 +443,28 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-Run the test using the command below:
+使用以下命令运行测试：
 
-```
+```shell
 python manage.py test
 ```
 
-You should get the following output:
+应该会看到以下输出：
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*6_E40FN6IFz5EtwL1JqQTw.png)
 
-#### User Operations
+#### User 操作
 
-Now let’s work on the following user related operations:
+现在，来做如下与 user 相关的操作：
 
--   creating a new user
--   getting a registered user with his `public_id`
--   getting all registered users.
+-   创建一个新 user
+-   通过 user 的 `public_id` 获取一个已注册的 user
+-   获取所有的注册 user
 
-**User Service class:** This class handles all the logic relating to the user model.  
-In the `service` package, create a new file `user_service.py` with the following content:
+**User Service class：**此 class 处理与 user model 有关的所有逻辑。
+在 `service` 包中，创建一个具有以下内容的新文件 `user_service.py`：
 
-```
+```python
 import uuid
 import datetime
 
@@ -511,19 +509,19 @@ def save_changes(data):
     db.session.commit()
 ```
 
-The above code within `user_service.py` does the following:
+上面的 `user_service.py` 中的代码执行以下操作：
 
--   `line 8` through `29` creates a new user by first checking if the user already exists; it returns a success `response_object` if the user doesn’t exist else it returns an error code `409` and a failure `response_object`.
--   `line 33` and `37` return a list of all registered users and a user object by providing the `public_id` respectively.
--   `line 40` to `42` commits the changes to database.
+-   `line 8` 到 `29` 首先检查该 user 是否已存在然后在创建新 user；如果 user 不存在，则返回成功的 `response_object`，否则返回错误代码 `409`  和失败的 `response_object`。
+-   `line 33` 和 `37` 分别通过提供 `public_id` 返回所有注册用户的列表和一个用户的对象。
+-   `line 40` 到 `42` 将更改提交到数据库。
 
-> No need to use [jsonify](http://flask.pocoo.org/docs/0.12/api/#module-flask.json) for formatting an object to JSON, Flask-restplus does it automatically
+> 无需在使用 [jsonify](http://flask.pocoo.org/docs/0.12/api/#module-flask.json) 将对象格式化为 JSON，Flask-restplus 会自动将其格式化
 
-In the `main` package, create a new package called `util` . This package will contain all the necessary utilities we might need in our application.
+在 `main` 包中，创建一个名为 `util` 的新包。 该软件包将包含我们在应用程序中可能需要的所有必要工具。
 
-In the `util` package, create a new file `dto.py`. As the name implies, the data transfer object ([DTO](https://en.wikipedia.org/wiki/Data_transfer_object)) will be responsible for carrying data between processes. In our own case, it will be used for marshaling data for our API calls. We will understand this better as we proceed.
+在 `util` 包中，创建一个新文件 `dto.py`。顾名思义，就是数据传输对象（[DTO](https://en.wikipedia.org/wiki/Data_transfer_object)）将负责在进程之间传递数据。在这里，它将用于封装 API 调用的数据。在使用中会更容易理解。
 
-```
+```python
 from flask_restplus import Namespace, fields
 
 
@@ -537,16 +535,16 @@ class UserDto:
     })
 ```
 
-The above code within `dto.py` does the following:
+上面的 `dto.py` 中代码执行以下操作：
 
--   `line 5` creates a new namespace for user related operations. Flask-RESTPlus provides a way to use almost the same pattern as [Blueprint](http://exploreflask.com/en/latest/blueprints.html#what-is-a-blueprint). The main idea is to split your app into reusable namespaces. A namespace module will contain models and resources declaration.
--   `line 6` creates a new user dto through the `model` interface provided by the `api` namespace in `line 5`.
+-   `line 5` 为与 user 相关的操作创建了一个新的命名空间。Flask-RESTPlus 提供了一种使用几乎与[蓝图](http://exploreflask.com/en/latest/blueprints.html#what-is-a-blueprint)模式相同的的方法。主要思想是将应用拆分为可重用的命名空间。命名空间模块将包含 models 和资源声明。
+-   `line 6` 通过 `line 5` 中的 `api` 命名空间提供的 `model` 接口创建了新用户的 dto。
 
-**User Controller:** The user controller class handles all the incoming HTTP requests relating to the user .
+**User Controller：** User Controller class 处理所有传入 HTTP 的与 user 有关的请求。
 
-Under the `controller` package, create a new file called `user_controller.py` with the following content:
+在  `controller` 包下，创建一个名为 `user_controller.py` 的新文件，其内容如下：
 
-```
+```python
 from flask import request
 from flask_restplus import Resource
 
@@ -589,27 +587,25 @@ class User(Resource):
             return user
 ```
 
-`line 1` through `8` imports all the required resources for the user controller.  
-We defined two concrete classes in our user controller which are  
-`userList` and `user`. These two classes extends the abstract flask-restplus resource.
+`line 1` 到 `8` 行会导入 user controller 所需的所有资源。在 user controller 中定义了两个具体的 class，分别是 `userList` 和 `user`。 这两个 class 扩展了抽象的 flask-restplus 资源。
 
-> _Concrete resources should extend from this class_ _and expose methods for each supported HTTP method._ _If a resource is invoked with an unsupported HTTP method,_ _the API will return a response with status 405 Method Not Allowed._ _Otherwise the appropriate method is called and passed all arguments_ _from the URL rule used when adding the resource to an API instance._
+> _具体资源应从此 class 扩展并暴露每个支持的 HTTP 方法。如果使用不支持的 HTTP 方法调用资源，则 API 将返回状态为 405 Method Not Allowe 的响应。否则，将调用适当的方法并在将资源添加到 API 实例时传递所有的 URL 参数_。
 
-The `api` namespace in `line 7` above provides the controller with several decorators which includes but is not limited to the following:
+上面 ` line 7`中的 `api` 命名空间为 controller 提供了多个装饰器，包括但不限于以下几种：
 
--   api.****route****: __A decorator to route resources__
--   api.****marshal\_with****: __A decorator specifying the fields to use for serialization (This is where we use the__ `__userDto__` __we created earlier)__
--   api.****marshal\_list\_with****: __A shortcut decorator for__ `__marshal_with__` __above with__`__as_list = True__`
--   api.****doc****: __A decorator to add some api documentation to the decorated object__
--   api.****response:**** __A decorator to specify one of the expected responses__
--   api.****expect:**** __A decorator to Specify the expected input model ( we still use the__ `__userDto__` __for the expected input)__
--   api.****param:**** __A decorator to specify one of the expected parameters__
+-   api.**route**: __route 资源的装饰器__
+-   api.**marshal\_with**: __一个用来指定需要序列化字段的装饰器 (就是用到的之前创建的 `__userDto__` )__
+-   api.**marshal\_list\_with**: __`as_list = True__` 上面的 `__marshal_with__` 的快捷装饰器__
+-   api.**doc**: __用于向装饰对象添加 api 文档的装饰器__
+-   api.**response:** __用于指定预期的一个响应的装饰器__
+-   api.**expect:**__一个装饰器，用于指定预期的输入 model（仍然使用__`__userDto__` __作为预期的输入）的装饰器__
+-   api.**param:** __指定一个预期参数的装饰器__
 
-We have now defined our namespace with the user controller. Now its time to add it to the application entry point.
+现在，已经使用 user controller 定义了命名空间。 现在是时候将其添加到应用程序入口了。
 
-In the `__init__.py` file of `app` package, enter the following:
+在 `app` 包的 `__init__.py` 文件中，输入以下内容：
 
-```
+```python
 
 from flask_restplus import Api
 from flask import Blueprint
@@ -627,15 +623,15 @@ api = Api(blueprint,
 api.add_namespace(user_ns, path='/user')
 ```
 
-The above code within `blueprint.py` does the following:
+上面的  `blueprint.py`  代码执行以下操作：
 
--   In `line 8`, we create a blueprint instance by passing `name` and `import_name.` `API` is the main entry point for the application resources and hence needs to be initialized with the `blueprint` in `line 10`.
--   In `line 16` , we add the user namespace `user_ns` to the list of namespaces in the `API` instance.
+-   在 `line 8` 中，通过传入 `name` 和 `import_name` 来创建一个蓝图实例。`API` 是应用程序资源的主要入口，因此需要在 `line 10` 中使用 `blueprint` 进行初始化。
+-   在 `line 16` 中，将 user 命名空间 `user_ns` 添加到 API 实例中的命名空间列表中。
 
-We have now defined our blueprint. It’s time to register it on our Flask app.  
-Update `manage.py` by importing `blueprint` and registering it with the Flask application instance.
+现在，已经定义了蓝图。 现在是时候在 Flask 应用中注册它了。
+更新 `manage.py`，导入 `blueprint` 并将其注册到 Flask 应用程序实例中。
 
-```
+```python
 from app import blueprint
 ...
 
@@ -647,29 +643,29 @@ app.app_context().push()
 ...
 ```
 
-We can now test our application to see that everything is working fine.
+现在测试一下的应用程序，看看是否一切正常。
 
-```
+```shell
 python manage.py run
 ```
 
-Now open the URL `[http://127.0.0.1:5000](http://127.0.0.1:5000/)` in your browser. You should see the swagger documentation.
+现在，在浏览器中打开URL [http://127.0.0.1:5000](http://127.0.0.1:5000/)。 应该可以看到 swagger 的文档。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*Us_S2WLR3AQAyfOvkzZ38Q.png)
 
-Let’s test the **create new user** endpoint using the swagger testing functionality.
+让我们使用 swagger 的测试功能来测试 **create new user** 接口。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*x3oZjCsUXVHjP4_YgndmFA.png)
 
-You should get the following response
+应该会得到如下响应
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*ITTWVn8rJbIG-muhQCXsWg.png)
 
-#### Security and Authentication
+#### 安全与认证
 
-Let’s create a model `blacklistToken` for storing blacklisted tokens. In the `models` package, create a `blacklist.py` file with the following content:
+创建一个 ` blacklistToken` model 来存储列入黑名单的 tokens。 在 `models` 包中，创建具有以下内容的 `blacklist.py`文件：
 
-```
+```python
 from .. import db
 import datetime
 
@@ -701,24 +697,24 @@ class BlacklistToken(db.Model):
             return False
 ```
 
-Lets not forget to migrate the changes to take effect on our database.  
-Import the `blacklist` class in `manage.py`.
+别忘了 migrate  所做的更改以对数据库生效。
+在 `manage.py` 中导入 `blacklist` 类。
 
 ```
 from app.main.model import blacklist
 ```
 
-Run the `migrate` and `upgrade` commands
+运行 `migrate` 和 `upgrade` 命令
 
-```
+```shell
 python manage.py db migrate --message 'add blacklist table'
 
 python manage.py db upgrade
 ```
 
-Next create `blacklist_service.py` in the service package with the following content for blacklisting a token:
+接下来，在服务包中创建内容如下的 `blacklist_service.py`，以将令牌列入黑名单：
 
-```
+```python
 from app.main import db
 from app.main.model.blacklist import BlacklistToken
 
@@ -742,16 +738,16 @@ def save_token(token):
         return response_object, 200
 ```
 
-Update the `user` model with two static methods for encoding and decoding tokens. Add the following imports:
+使用编码和解码令牌的静态方法来更新 `user` 模型。 添加以下导入：
 
-```
+```python
 import datetime
 import jwt
 from app.main.model.blacklist import BlacklistToken
 from ..config import key
 ```
 
--   Encoding
+-   编码
 
 ```
 def encode_auth_token(self, user_id):
@@ -774,9 +770,9 @@ def encode_auth_token(self, user_id):
             return e
 ```
 
--   Decoding: Blacklisted token, expired token and invalid token are taken into consideration while decoding the authentication token.
+-   解码：在对身份验证令牌进行解码时，会考虑列入黑名单的令牌、过期的令牌和无效的令牌。
 
-```
+```python
   @staticmethod  
   def decode_auth_token(auth_token):
         """
@@ -797,11 +793,11 @@ def encode_auth_token(self, user_id):
             return 'Invalid token. Please log in again.'
 ```
 
-Now let’s write a test for the `user` model to ensure that our `encode` and `decode` functions are working properly.
+现在，为 `user` model 编写一个测试，以确保 `encode` 和 `decode` 功能运行正常。
 
-In the `test` package, create `base.py` file with the following content:
+在 `test` 包中，创建内容如下的 `base.py` 文件：
 
-```
+```python
 from flask_testing import TestCase
 from app.main import db
 from manage import app
@@ -823,11 +819,11 @@ class BaseTestCase(TestCase):
         db.drop_all()
 ```
 
-The `BaseTestCase` sets up our test environment ready before and after every test case that extends it.
+`BaseTestCase` 在扩展它的每个测试用例之前和之后设置了测试环境。
 
-Create `test_user_medol.py` with the following test cases:
+使用以下测试用例创建 `test_user_medol.py`：
 
-```
+```python
 import unittest
 import datetime
 
@@ -866,13 +862,13 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-Run the test with `python manage.py test`. All the tests should pass.
+使用 `python manage.py test` 运行测试。 所有测试都应该通过。
 
-Let’s create the ****authentication endpoints**** for ****login**** and ****logout****.
+来为 `login` 和 `logout`  创建一个 **authentication endpoints**。
 
--   First we need a `dto` for the login payload. We will use the auth dto for the `@expect` annotation in `login` endpoint. Add the code below to the `dto.py`
+-   首先，我们需要一个 `dto` 作为登录 payload。 将在登录端点的 `@expect` 注解中使用 auth dto。 将下面的代码添加到 `dto.py` 中
 
-```
+```python
 class AuthDto:
     api = Namespace('auth', description='authentication related operations')
     user_auth = api.model('auth_details', {
@@ -881,11 +877,11 @@ class AuthDto:
     })
 ```
 
--   Next, we create an authentication helper class for handling all authentication related operations. This `auth_helper.py` will be in the service package and will contain two static methods which are `login_user` and `logout_user`
+-   接下来，创建一个身份验证 helper 类，以处理所有与身份验证相关的操作。 该 `auth_helper.py` 将包含在服务包中，并将包含两个静态方法，分别是 `login_user` 和 `logout_user`。
 
-> __When a user is logged out, the user’s token is blacklisted ie the user can’t log in again with that same token.__
+> __用户退出登录后，该用户的令牌将被列入黑名单，即该用户无法使用该令牌再次登录。__
 
-```
+```python
 from app.main.model.user import User
 from ..service.blacklist_service import save_token
 
@@ -946,11 +942,9 @@ class Auth:
             return response_object, 403
 ```
 
--   Let us now create endpoints for `login` and `logout` operations.  
-    In the controller package, create  
-    `auth_controller.py` with the following contents:
+-   现在让为 `login` 和 `logout` 操作创建 API。在 controller 包中，创建具有以下内容的 `auth_controller.py`：
 
-```
+```python
 from flask import request
 from flask_restplus import Resource
 
@@ -986,11 +980,11 @@ class LogoutAPI(Resource):
         return Auth.logout_user(data=auth_header)
 ```
 
--   At this point the only thing left is to register the auth `api` namespace with the application `Blueprint`
+-   此时，剩下的事情就是向应用程序 `Blueprint` 注册 auth `api`  命名空间。
 
-Update `__init__.py` file of `app` package with the following
+如下更新 `app` 软件包的 `__init __.py` 文件
 
-```
+```python
 
 from flask_restplus import Api
 from flask import Blueprint
@@ -1010,17 +1004,17 @@ api.add_namespace(user_ns, path='/user')
 api.add_namespace(auth_ns)
 ```
 
-Run the application with `python manage.py run` and open the url `[http://127.0.0.1:5000](http://127.0.0.1:5000/)` in your browser.
+使用 `python manage.py run` 运行应用程序，然后在浏览器中打开网址 [http://127.0.0.1:5000](http://127.0.0.1:5000/)。
 
-The swagger documentation should now reflect the newly created `auth` namespace with the `login` and `logout` endpoints.
+swagger 文档现在应该展示出新创建的带有 `login` 和 `logout` 接口的 `auth `命名空间。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*K4ZVMOwsOIIzBOV8bfqJew.png)
 
-Before we write some tests to ensure our authentication is working as expected, let’s modify our registration endpoint to automatically login a user once the registration is successful.
+在编写测试以确保身份验证能够正常工作之前，先修改注册接口，以在 user 注册成功后自动登录。
 
-Add the method `generate_token` below to `user_service.py`:
+将下面的方法 `generate_token` 添加到 `user_service.py` 中：
 
-```
+```python
 def generate_token(user):
     try:
         
@@ -1039,11 +1033,11 @@ def generate_token(user):
         return response_object, 401
 ```
 
-The `generate_token` method generates an authentication **token** by encoding the user `id.` This **token** is the returned as a response.
+`generate_token` 方法通过对用户 `id` 进行编码来生成身份验证**令牌**。此**令牌**作为响应返回。
 
-Next, replace the **return** block in `save_new_user` method below
+接下来，在下面的 `save_new_user` 方法中替换 **return** 代码块
 
-```
+```python
 response_object = {
     'status': 'success',
     'message': 'Successfully registered.'
@@ -1051,15 +1045,15 @@ response_object = {
 return response_object, 201
 ```
 
-with
+为
 
-```
+```python
 return generate_token(new_user)
 ```
 
-Now its time to test the `login` and `logout` functionalities. Create a new test file `test_auth.py` in the test package with the following content:
+现在该测试 `login` 和 `logout` 功能了。在测试包中创建一个具有以下内容的新测试文件 `test_auth.py`：
 
-```
+```python
 import unittest
 import json
 from app.test.base import BaseTestCase
@@ -1137,19 +1131,19 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-Visit the [github repo](https://github.com/cosmic-byte/flask-restplus-boilerplate) for a more exhaustive test cases.
+请访问 [github repo](https://github.com/cosmic-byte/flask-restplus-boilerplate) 以获得更详尽的测试用例。
 
-So far, we have successfully created our endpoints, implemented login and logout functionalities but our endpoints remains unprotected.
+到目前为止，我们已经成功创建了接口，实现了登录和注销功能，但是接口仍然不受保护。
 
-We need a way to define rules that determines which of our endpoint is open or requires authentication or even an admin privilege.
+我们需要一种定义规则的方法，该规则确定接口是开放的的还是需要身份验证甚至是管理员特权才能访问。
 
-We can achieve this by creating custom decorators for our endpoints.
+可以通过为接口创建自定义装饰器来实现。
 
-Before we can protect or authorize any of our endpoints, we need to know the currently logged in user. We can do this by pulling the `Authorization token` from the header of the current request by using the flask library `request.`We then decode the user details from the `Authorization token`.
+在可以保护或授权任何接口之前，需要知道当前登录的用户。为此，可以使用 flask 库的 `request` 从当前请求的 header 中提取 `Authorization token` 。然后，我们将从  `Authorization token` 中解码用户详细信息。
 
-In the `Auth` class of `auth_helper.py` file, add the following static method:
+在 `auth_helper.py` 文件的 `Auth` 类中，添加以下静态方法：
 
-```
+```python
 @staticmethod
 def get_logged_in_user(new_request):
         
@@ -1181,11 +1175,11 @@ def get_logged_in_user(new_request):
             return response_object, 401
 ```
 
-Now that we can retrieve the logged in user from the request, let’s go ahead and create the `decorators.`
+现在可以从请求中检索已登录的用户，来继续创建 `decorators`。
 
-Create a file `decorator.py` in the `util` package with the following content:
+在 `util` 包中创建一个文件 `decorator.py`，内容如下：
 
-```
+```python
 from functools import wraps
 from flask import request
 
@@ -1230,15 +1224,15 @@ def admin_token_required(f):
     return decorated
 ```
 
-For more information about **decorators** and how to create them, take a look at [this link](https://realpython.com/primer-on-python-decorators/).
+有关 **decorators** 及其创建方法的更多信息，请查看[这个链接](https://realpython.com/primer-on-python-decorators/)。
 
-Now that we have created the decorators `token_required` and `admin_token_required` for valid token and for an admin token respectively, all that is left is to annotate the endpoints which we wish to protect with the freecodecamp orgappropriate **decorator**.
+现在已经分别为有效令牌和管理员令牌创建了装饰器 `token_required` 和 `admin_token_required`，剩下的就是用 freecodecamp orgappropriate  **decorator** 为希望保护的接口添加注解。
 
-Currently to perform some tasks in our application, we are required to run different commands for starting the app, running tests, installing dependencies etc. We can automate those processes by arranging all the commands in one file using `Makefile.`
+当前，要在应用程序中执行某些任务，需要运行不同的命令来启动应用程序、运行测试、安装依赖项等。可以使用 `Makefile` 将所有命令放在一个文件中来批量执行。
 
-On the root directory of the application, create a `Makefile` with no file extension. The file should contain the following:
+在应用程序的根目录上，创建一个没有文件扩展名的 `Makefile`。 该文件应包含以下内容：
 
-```
+```makefile
 .PHONY: clean system-packages python-packages install tests run all
 
 clean:
@@ -1262,24 +1256,24 @@ run:
 all: clean install tests run
 ```
 
-Here are the options of the make file.
+这是 make file 的选项。
 
-1.  `make install` : installs both system-packages and python-packages
-2.  `make clean` : cleans up the app
-3.  `make tests` : runs the all the tests
-4.  `make run` : starts the application
-5.  `make all` : performs `clean-up`,`installation` , run `tests` , and `starts` the app.
+1.  `make install` : 安装 system-packages 以及 python-packages
+2.  `make clean` : 清理 app
+3.  `make tests` : 运行所有 tests
+4.  `make run` : 启动所有 application
+5.  `make all` : 执行 `clean-up`、`installation` 、 运行 `tests` ，并 `starts`  app.
 
-### Extending the App & Conclusion
+### 拓展 & 结论
 
-It’s pretty easy to copy the current application structure and extend it to add more functionalities/endpoints to the App. Just view any of the previous routes that have been implemented.
+复制当前应用程序架构并对其进行扩展，为该应用程序添加更多功能/接口非常容易。 只需查看之前已实施的路由即可。
 
-_Feel free to leave a comment have you any question, observations or recommendations. Also, if this post was helpful to you, click on the clap icon so others will see this here and benefit as well._
+如有任何问题，意见或建议，请随时发表评论。 另外，如果该帖子对您有所帮助，请单击"再看"图标，这样其他人也会看到并受益。
 
-Visit the [github repository](https://github.com/cosmic-byte/flask-restplus-boilerplate) for the complete project.
+请访问 [github 仓库](https://github.com/cosmic-byte/flask-restplus-boilerplate)，以获取完整的项目。
 
-Thanks for reading and good luck!
+感谢阅读，祝进步！
 
 ___
 
-Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. [Get started](
+免费学习编码。 freeCodeCamp 的开源课程已帮助 40,000 多人获得了开发人员的工作。 [开始使用](https://www.freecodecamp.org/learn/)

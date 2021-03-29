@@ -411,11 +411,11 @@ In this section, we'll discuss the following programming concepts that Git uses 
 *   Hash function
 *   哈希函数
 *   Objects
-*   存放 Git 对象
+*   Git 对象
 *   Current directory cache (staging area)
 *   当前目录缓存（暂存区）
 *   Content addressable database (object database)
-*   内容寻址数据库（object database）
+*   内容寻址数据库（对象数据库）
 
 ### File Compression
 
@@ -515,18 +515,18 @@ Git 将这些哈希用于各种目的，我们将在以下各节中看到它们�
 
 ### Objects
 
-### 对象
+### Git 对象
 
 Git uses a simple data model – a structured set of related objects – to implement its functionality. These objects are the nuggets of information that enable Git to track changes to the files of a codebase. The three types of objects that Git uses are:
 
 Git 使用一个简单的数据模型（结构化的相关对象集）来实现其功能。 这些对象是信息块，这些信息块使 Git 能够跟踪对代码库文件的更改。 Git 使用的三种对象类型是：
 
 *   Blob
-*   Blob 对象
+*   数据对象
 *   Tree
-*   Tree 对象
+*   树对象
 *   Commit
-*   Commit 对象
+*   提交对象
 
 Let's discuss each one in turn.
 
@@ -534,35 +534,51 @@ Let's discuss each one in turn.
 
 #### Blob
 
-#### Blob 对象
+#### 数据对象
 
 A blob is short for a **B**inary **L**arge **OB**ject. When Git is told to track a file using the `update-cache <filename.ext>` command, (the predecessor to `git add`), Git creates a new blob using the compressed contents of that file.
 
-Blob 是 **B**inary **L**arge **OB**ject（即二进制大对象）的缩写形式，当使用 `update-cache <filename.ext>` 命令（`git add` 的前身）告诉 Git 跟踪文件时，Git 使用该文件的压缩内容创建一个新的 Blob 对象。
+Blob 是 **B**inary **L**arge **OB**ject（数据对象）的缩写形式，当使用 `update-cache <filename.ext>` 命令（`git add` 的前身）告诉 Git 跟踪文件时，Git 使用该文件的压缩内容创建一个新的数据对象。
 
 Git takes the content of the file, compresses it using the `zlib` functions we described above, and uses this compressed content as input to the SHA\-1 hash function. This creates a 40 character hash that Git uses to identify the blob in question.
 
-Git 获取文件的内容并使用我们上面描述的 `zlib` 函数对其进行压缩，再将此压缩后的内容用作 SHA-1 哈希函数的输入，这会创建一个 40 个字符的哈希，Git 会使用该哈希来识别相关的 Blob
+Git 获取文件的内容并使用我们上面描述的 `zlib` 函数对其进行压缩，再将此压缩后的内容用作 SHA-1 哈希函数的输入，这会创建一个 40 个字符的哈希，Git 会使用该哈希来识别相关的数据对象。
 
 Finally, Git saves the blob as a binary file in a special folder called the **object database** (more on this in a minute). The name of the blob file is the generated hash, and the contents of the blob file are the compressed file contents that were added using `update-cache`.
 
-最后，Git 将 blob 对象作为二进制文件保存在名为 **对象数据库** 的特殊文件夹中（稍后会详细介绍）。Blob 文件的名称是生成的哈希，Blob 文件的内容是使用 `update-cache` 命令添加的压缩文件内容。
+最后，Git 将数据对象作为二进制文件保存在名为 **对象数据库** 的特殊文件夹中（稍后会详细介绍）。数据对象文件的名称是生成的哈希，数据对象文件的内容是使用 `update-cache` 命令添加的压缩文件内容。
 
 #### Tree
 
+#### 树对象
+
 Tree objects are used to link together multiple blobs that are added to Git at once. They are also used to correlate blobs with file names (and other file metadata like permissions), since blobs don't provide any information besides the hash and compressed binary file content.
+
+树对象用于把多个数据对象在添加到 Git 的时候就组织到一起，它们还用于将数据对象与文件名（以及其他文件元数据，如权限）相关联，因为数据对象除了提供哈希和压缩的二进制文件内容外不提供任何信息。
 
 For example, if two changed files are added using the `update-cache` command, a tree will be created containing the hashes of those files, along with the file name that each of those blobs corresponds to.
 
+比如说，如果使用 `update-cache` 命令添加了两个更改的文件，则将创建一棵包含这些文件的哈希值以及每个数据对象所对应的文件名的树。
+
 What Git does next is very interesting, so pay attention. Git uses **the content of the tree itself** as input to the SHA\-1 hash function, which generates a 40 character hash. This hash is used to identify the tree object, and Git saves this in the same special folder that blobs are saved in – the object database we'll touch on shortly.
+
+Git 接下来要做的事情非常有趣，因此请注意， Git 使用**树本身的内容**作为 SHA-1 哈希函数的输入生成 40 个字符的哈希。该哈希用于标识树对象，Git 将其保存在与保存数据对象相同的特殊文件夹，即我们将在稍后讨论的对象数据库中。
 
 #### Commit
 
+#### 提交对象
+
 You're probably more familiar with commit objects than with blobs and trees. A commit represents a set of file changes saved by Git, along with descriptive information about the change such as a commit message, the author's name, and the timestamp of the commit.
+
+比起数据对象和树对象您可能对提交对象更熟悉。一个提交对象表示由 Git 保存的一组文件更改，以及有关更改的描述性信息，例如提交消息，作者的姓名和提交的时间戳。
 
 In Git's original code, a commit object is the result of running the `commit-tree <tree-hash>` command. The resulting commit object includes the specified tree object (which remember, represents a collection of file changes via one or more blobs mapped to their file names), and the descriptive information mentioned in the previous paragraph.
 
+在 Git 的源代码中，提交对象是运行 `commit-tree <tree-hash>` 命令的结果，生成的提交对象包括指定的树对象（记住，该树对象表示通过映射到其文件名的一个或多个数据对象表示文件更改的集合），以及上一段中提到的描述性信息。
+
 Like blobs and trees, Git identifies the commit by hashing its content using the SHA\-1 hash function, and saving it in the object database. Importantly, each commit object also contains the hash of its parent commit. In this way, the commits form a chain that Git can use to represent the history of a project.
+
+像数据对象和树对象一样， Git 通过使用 SHA-1 哈希函数对提交的内容进行哈希处理并将其保存在对象数据库中。重要的是，每个提交对象还包含其父提交的哈希。 这样提交就形成了一条链，Git 可以使用它来表示项目的历史记录。
 
 ### Current Directory Cache (Staging Area)
 

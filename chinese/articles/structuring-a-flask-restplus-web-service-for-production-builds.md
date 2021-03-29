@@ -1,6 +1,6 @@
 -   原文地址：[How to structure a Flask-RESTPlus web service for production builds. Python Flask-RESTPlus 工程化实践](https://www.freecodecamp.org/news/structuring-a-flask-restplus-web-service-for-production-builds-c2ec676de563/)
 -   原文作者：Greg Obinna
--   译者：
+-   译者：Zhicheng Chen
 -   校对者：
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*TSbCf17bFXOYAb-l0HJ7rQ.jpeg)

@@ -1,78 +1,73 @@
-\> -  *原文地址：*[What is Huffman Coding?  什么是霍夫曼编码？](https://www.baseclass.io/huffman-coding/)
+> -   原文地址：[What is Huffman Coding?  什么是霍夫曼编码？](https://www.baseclass.io/huffman-coding/)
+> -   原文作者：[Dave](https://www.twitter.com/davejsaunders)*
+> -   译者： ZhichengChen
+> -   校对者：
 
-\> -  *原文作者：[Dave](https://www.twitter.com/davejsaunders)*
+许多压缩算法（例如 DEFLATE）的核心都是霍夫曼编码算法，DEPLATE 是 PNG 图像格式和 GZIP 的压缩算法。
 
-\> -  *译者：* ZhichengChen
+您是否也曾想过：
 
-\> -  *校对者：*
+-   如何压缩某些东西而不丢失任何数据？
+-   为什么有些算法压缩得比其他算法好？
+-   GZIP 是如何工作？
 
+假设我们要压缩一个字符串（霍夫曼编码可以用于任何数据，但是字符串是很好的例子）。
 
+不可避免地，在要压缩的文本中，某些字符会比其他字符出现得更频繁。 霍夫曼编码（Huffman Coding）基于这一事实，对文本进行了编码，以使**最常用的字符比不常用的字符占用更少的空间**。
 
-The Huffman Coding algorithm is a building block of many compression algorithms, such as DEFLATE - which is used by the PNG image format and GZIP.
+## 编码字符串
 
-Have you ever wanted to know:
-
--   How do we compress something, without losing any data?
--   Why do some things compress better than others?
--   How does GZIP work?
-
-Suppose we want to compress a string (Huffman coding can be used with any data, but strings makes good examples).
-
-Inevitably, some characters will appear more often than others in the text to be compressed. Huffman Coding takes advantage of that fact, and encodes the text so that **the most used characters take up less space than the less common ones**.
-
-## Encoding a string
-
-Let’s use Huffman Encoding to compress a (partial) quote from Yoda; “do or do not”.
+让我们使用霍夫曼编码来压缩星球大战中 Yoda 的口头禅： “do or do not”。
 
 ![Yoda](https://www.baseclass.io/huffman-coding/yoda.png)
 
-“do or do not” is 12 characters long. It has a few duplicate characters, so it should compress quite nicely.
+“do or do not” 的长度为 12 个字符。 它有几个重复的字符，因此应该可以压缩一下。
 
-For the sake of argument, we’ll assume that storing each character takes 8 bits (Character Encoding is another topic entirely). This sentence would cost us 96 bits, but we can do better with Huffman coding!
+为了便于讨论，假设存储每个字符需要 8 bits（字符编码完全是另一个主题）。这句话将占用 96 bits，但是使用霍夫曼编码可以做得更好！
 
-We begin by building a tree structure. The most common characters in our data will be closer to the root of the tree, while the nodes furthest away from the root represent the less common characters.
+先从建立树形结构开始。 数据中出现频率更高的字符更靠近树的根，而离根远的节点字符出现频率更低。
 
-Here’s the Huffman Tree for the string “do or do not”:
+这是字符串 “do or do not” 的霍夫曼树：
 
 ![Huffman Tree](https://www.baseclass.io/huffman-coding/1.png)
 
-The most common characters in our string are ‘o’s (4 occurrences) and spaces (3 occurrences). Notice that the path to those characters is only two steps away from the root, compared to three for the least common character (’t’).
+字符串中最常见的字符是 “ o”（出现 4 次）和空格（出现 3 次）。请注意，这些字符的路径离根只有两步，而最不常见的字符（"t"）则有三步。
 
-Now, instead of storing the character itself, we can store the **path to the character** instead.
+所以，可以不存储字符，而存储**指向字符的路径**。
 
-We start at the root node and work our way down the tree towards the character we want to encode. We’ll store a `0` if we take the left-hand path, and a `1` if we take the right.
+从根节点开始，然后沿着树一直向着要编码的字符前进。 如果向左走，则将存储一个 `0`，如果向右走，则将存储一个 `1`。
 
-Here’s how we would encode the first character, `d`, using this tree:
+这是使用这棵树编码第一个字符 d 的方法：
 
 ![Huffman Tree encoding 'd'](https://www.baseclass.io/huffman-coding/2.png)
 
-The end result is `1` `0` `0` - 3 bits instead of 8. That’s quite an improvement!
+最终结果是 `1` `0` `0` - 3 位而不是 8 位。这是一个很大的改进！
 
-The entire encoded string looks like this:
+编码后的全部字符串如下所示：
 
 !['do or do not' encoded using the tree](https://www.baseclass.io/huffman-coding/3.png)
 
-This is 29 bits instead of 96, with no data loss. Great!
+占用 29 位而不是 96 位，并且没有数据丢失。 优秀！
 
-## Decoding our string
+## 解码字符串
 
-To decode our text, we simply follow each `0` (left branch) or `1` (right branch) until we reach a character. We write that character down, and then start again from the top:
+要解码文本，只需根据 ` 0`（左分支）或 `1`（右分支）前进，直到获取到一个字符。 写下该字符，然后从顶部重新开始：
 
 ![Decoding using the tree'](https://www.baseclass.io/huffman-coding/4.png)
 
-## Sending the encoded text
+## 发送编码后的文本
 
-But wait.. when we send the encoded text to somebody else, don’t they need the tree too? Yes! **The other side needs the same Huffman tree in order to decode the text correctly**.
+但是等等，当我们将编码后的文本发送给其他人时，他们不是也需要这个编码树？ 是的！ **另一端需要相同的霍夫曼树才能正确解码文本**。
 
-The simplest, but least efficient way, is to simply send the tree along with the compressed text.
+最简单也是最低效的方法是将树与压缩文本一起发送。
 
-We could also agree on a tree first, and both use that tree when encoding or decoding any string. That works OK when we can predict the distribution of characters ahead of time, and could build a relatively efficient tree without seeing the specific thing we’re encoding first (as we could with English text, for example).
+当然也可以先约定同一棵树，然后使用该树对字符串进行编解码。 如果可以提前预测字符的分布，构建一个相对高效而无需每次都分析内容的树（例如，使用英文文本）也是可以的。
 
-Another option is to send just enough information to allow the other side to build the same tree as us (this is how GZIP works). We could send the total number of times that each character occurs, for example. We have to be careful though; **there is more than one possible Huffman tree for the same block of text**, so we have to make sure we both construct the tree in _exactly_ the same way.
+另一种选择是发送足够多的信息，以保证另一端与我们建立的是同一棵树（这也是 GZIP 的工作方式）。 例如，我们可以发送每个字符出现的总次数。 但是必须要小心；**对于相同的文本块，可能有不止一个霍夫曼树**，因此必须确保双方都以完全相同的方式构造树。
 
-## Want to know more?
+## 想要了解更多？
 
-Check out these links:
+查看以下链接：
 
 -   [How to build the Huffman tree (it’s easier than you think)](https://www.programiz.com/dsa/huffman-coding)
 -   [How this is used in GZIP](https://jvns.ca/blog/2015/02/22/how-gzip-uses-huffman-coding/)

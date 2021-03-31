@@ -1,29 +1,29 @@
 > -   原文地址：[Learn CSS Basics by Building a Card Component](https://www.freecodecamp.org/news/learn-css-basics-by-building-a-card-component/)
 > -   原文作者：Thu Nghiem
-> -   译者：
+> -   译者：Humilitas
 > -   校对者：
 
 ![Learn CSS Basics by Building a Card Component](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/ep13-cssbasic.jpg)
 
-If you want to make your website look attractive, you need to know CSS.
+想要让你的网站更有吸引力，你需要了解 CSS。
 
-CSS, or Cascading Style Sheets, is a style sheet language that is used to style your web content.
+CSS（层叠样式表，全称为 Cascading Style Sheets）是一种样式表语言，用于为网页内容增加样式。
 
-In this tutorial, we are going to learn about CSS basics by building a card component from scratch.
+在这个教程中，我们将会通过从头开始构建一个卡片组件来学习 CSS 基础。
 
-If you want to follow along, be sure to check out the design [here](https://www.figma.com/file/FLfQJbcKWGdy5poNWFgLnP/CSS-basics---devChallenges.io?node-id=0%3A1).
+如果你想跟着动手实践的话，务必先查看[设计稿](https://www.figma.com/file/FLfQJbcKWGdy5poNWFgLnP/CSS-basics---devChallenges.io?node-id=0%3A1) 。
 
-Here's a video you can watch if you want to supplement this article:
+这个视频的内容可以作为本文内容的补充：
 
-If you are ready, let's get started.
+准备好，我们开始。
 
-## How to build the skeleton with HTML
+## 如何使用 HTML 构建页面骨架
 
-Before we start to work with CSS, we need some content to work with. In this section, we will quickly build a skeleton with HTML. If you are new to HTML, you can check out a tutorial [here](https://www.freecodecamp.org/news/html-basics-for-beginners/).
+在与 CSS 打交道之前，需要先准备一些内容。在这一节，我们会使用 HTML 快速构建页面骨架。如果不熟悉 HTML，可以查看[这个教程](https://www.freecodecamp.org/news/html-basics-for-beginners/) 。
 
-Alright, open VS Code. Then in the folder of your choice, create a new file and name it `index.html`.
+打开 VS Code，在你选择的文件夹中创建一个名为 `index.html` 的文件。
 
-In the file, type `!` and press enter. Then you will have this HTML template:
+在这个文件中输入 `!`，回车，VS Code 会自动生成一个 HTML 模板：
 
 ```html
 <!DOCTYPE html>
@@ -40,11 +40,11 @@ In the file, type `!` and press enter. Then you will have this HTML template:
 
 ```
 
-Our job is to build a card component that has an image, tags, name, description, and a button like this:
+我们的任务是构建一个卡片组件，其中包含一个图片、一些标签、名称、描述和一个按钮，像这样：
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/o9yipv1bp9jv032twvol.png)
 
-In `index.html`, first, change the title content from `Document` to be `CSS Basics`. And in the `<body>` element, add in all the elements we'll need:
+首先，把标题（即 `<title>` 标签的内容）改为 `CSS Basics`，在 `<body>` 元素中加入以下内容：
 
 ```html
 ...
@@ -84,32 +84,32 @@ In `index.html`, first, change the title content from `Document` to be `CSS Basi
 
 ```
 
-Alright, now we have the skeleton for our component. If you want to see these changes live in the browser, you can use the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension.
+现在组件骨架已经准备好了，如果想在浏览器中实时查看页面效果，可以使用 [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) 插件。
 
-## Styling with CSS
+## 使用 CSS 增加样式
 
-Next, we need to style the component. This is the main part of the tutorial. While building the card component, I will also explain different concepts in this section.
+接下来，为组件增加样式，这是本教程的重点。在构建卡片组件的过程中，我也会介绍一些概念。
 
-### How to Apply CSS to HTML
+### 如何将 CSS 应用于 HTML
 
-First, let's look into 3 ways to apply CSS to HTML:
+首先，了解一下将 CSS 应用于 HTML 的三种方式：
 
-1.  **External stylesheets**
+**1\. 外部样式表**
 
-An external stylesheet is the most common and useful way. It contains CSS in a separate file, which has a `.css` extension.
+外部样式表示最常见、最有用的方式，它是包含了 CSS 规则的 `.css` 文件。
 
-You can add an external stylesheet by creating a new file, `style.css`, in the same folder with `index.html`. And inside `<head>` element, you can import the stylesheet with the following:
+可以在包含 `index.html` 文件的文件夹中创建一个 `style.css` 文件，然后在 `<head>` 元素中以如下方式将其引入： 
 
 ```html
 <link rel="stylesheet" href="style.css">
 
 ```
 
-With this method, the same stylesheet can be used to apply CSS to multiple pages.
+通过这种方式，同一个样式表可以应用在多个页面中。
 
-**2\. Internal stylesheets**
+**2\. 内部样式表**
 
-You can add an internal stylesheet by having CSS inside `<style>` element that is placed inside the `<head>`  element. For example:
+在 `<head>` 元素中添加 `<style>` 元素可以创建内部样式表，如：
 
 ```html
 <head>
@@ -120,32 +120,32 @@ You can add an internal stylesheet by having CSS inside `<style>` element that i
 
 ```
 
-This method is useful when you have to work with a system that blocks you from editing external stylesheets.
+当你处理一个不允许编辑外部样式表的系统时，这个方法非常有用。
 
-One downside to this method is that the styles cannot be applied to multiple pages.
+这个方法的缺点是无法在多个页面中复用这些样式。
 
-**3\. Inline styles (avoid using)**
+**3\. 内联样式（避免使用）**
 
-You can also add style directly to an element by using the `style` attribute. For example, if you want to change color of the paragraph's text to red:
+你也可以使用 `style` 属性直接为一个元素添加样式。例如，如果你想把段落文本的颜色改成红色：
 
 ```html
 <p style="color:red;">paragraph</p>
 
 ```
 
-This method is common when you have to work with a very restrictive system where you cannot edit the external or internal stylesheets.
+这个方法通常用于非常严格的系统中，此时你无法编辑外部样式表或内部样式表（所以只能使用内联样式）。
 
-Adding inline styling to your document is **not** a good practice – it is difficult to read and understand, therefore, you should avoid it when possible.
+在文档中加入内联样式是**不好**的做法——它难以阅读、难以理解，所以要尽可能避免。
 
-## How to add an external stylesheet to card component
+## 如何在卡片组件中加入外部样式表
 
-Alright, now you know how to apply CSS to HTML. For this exercise, let's use an external stylesheet.
+现在你懂得了如何将 CSS 应用于 HTML。在本次练习中，我们使用外部样式表。
 
-Create a new file named `style.css` and add `<link rel="stylesheet" href="style.css">` inside the `<head>` element.
+创建 `style.css` 文件，并在 `<head>` 元素中加入 `<link rel="stylesheet" href="style.css">`。
+ 
+### CSS 规则集（ruleset）
 
-### CSS ruleset
-
-If you want to give the image a width of 50%, you can do so by adding this:
+想要将图片宽度设置为 50%，可以增加以下代码：
 
 ```css
 img {
@@ -154,17 +154,17 @@ img {
 
 ```
 
-To select and style an element, you need to have a selector, the property that you want to style, and the value of the property.
+为了选中一个元素并为其增加样式，需要有一个选择器，并指定要设置样式的属性及属性值。
 
-The property should be inside the curly brackets and it should be separated by a colon and ended with a semicolon, this whole structure is called ruleset:
+属性要包含在一对大括号中，属性与值之间以冒号分隔，结尾以分号结束，这整个结构称为规则集（译注：准确定义请参考 [CSS 基础](https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics) ）：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/y6g4upcbymin9kyjl0lr-1.png)
 
-### Styling our elements
+### 为元素增加样式
 
-1.  **The `body` element**
+1.  **`body` 元素**
 
-For the `body` element, we want to change the background color and the font family:
+改变 `body` 元素的背景色和字体：
 
 ```css
 body {
@@ -174,20 +174,20 @@ body {
 
 ```
 
-But, in order to have the Raleway font work, we need to import the font. We can do so by putting this in the first line of the stylesheet.
+不过，为了正常使用 Raleway 字体，需要先引入它，将以下代码放在样式表的第一行即可：
 
 ```css
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap");
 
 ```
 
-To learn more about Google fonts, you can visit [fonts.google.com](https://fonts.google.com/).
+要了解更多有关 Google 字体的信息，可以访问 [fonts.google.com](https://fonts.google.com/) 。
 
-Alright, if the body background color and the font have changed, congratulations, you just added your first CSS 🎉
+如果 body 的背景颜色和字体已经改变，那么恭喜你，已经成功加入第一个 CSS 样式。
 
-**2\. `img` element**
+**2\. `img` 元素**
 
-At the moment the image is at its original width, but we want it to fit the screen. We can do so by giving it a width of 100%:
+目前图片的宽度还是它的原始宽度，但是我们想让它适应屏幕宽度，指定它的宽度值为 100% 即可：
 
 ```css
 img {
@@ -196,7 +196,7 @@ img {
 
 ```
 
-We also want to give it a rounded border and give it a smaller height than the original:
+我们还想为它设置圆角边框，并为它设置一个小于其原始高度的高度值：
 
 ```css
 img {
@@ -207,7 +207,7 @@ img {
 
 ```
 
-Now you might see the image is distorted. We can fix it by adding `object-fit: cover;`:
+现在你可能会看到图片变形了，添加 `object-fit: cover;` 来修复这个问题：
 
 ```css
 img {
@@ -217,13 +217,13 @@ img {
 
 ```
 
-Alright, now you should have a responsive image with a height of 214px. So let's move on.
+现在得到了一个高度为 214px 的自适应图片。我们继续。
 
-**3\. Styling the container**
+**3\. 为容器增加样式**
 
-Next, we need to style the `div` element that has the `id` attribute of `container`. This will be the element that decides the width of the card and places it in the middle of the view.
+接下来要为 `id` 为 `container` 的 `div` 元素增加样式，这个元素决定了卡片的宽度，我们将它放在水平居中的位置。
 
-To select the container, add:
+选择容器元素，增加样式：
 
 ```css
 #container {
@@ -238,13 +238,13 @@ To select the container, add:
 
 ```
 
-You can see that we use `margin: 0 auto;` to center the `div` element that has a `max-width` of `300px`.
+我们使用 `margin: 0 auto;` 来将 `max-width` 为 `300px` 的 `div` 元素水平居中。
 
-For now, you just need to remember this trick. In future tutorials we will go more into how margins work and how to center elements.
+目前你只需要记住这个小技巧就行了，后续教程中会深入探讨外边距（margin）的工作原理以及如何使元素居中。
 
-**4\. Styling the card**
+**4\. 为卡片增加样式**
 
-To style the card, we need to select the `div` element that has the class of `card`. We also want to give it a white background color, a border, and some space between the content and the border:
+我们需要选中包含 `card` 类（class）的 `div` 元素来为卡片增加样式。我们想将它的背景色设置为白色，为它增加边框，并在内容和边框之间增加一些空白区域：
 
 ```css
 .card {
@@ -262,7 +262,7 @@ To style the card, we need to select the `div` element that has the class of `ca
 
 ```
 
-Alright, now we are halfway through styling the complete component. Let's quickly style the rest of the elements:
+现在已经完成了组件样式的大半部分，我们快速设置一下剩余元素的样式：
 
 ```css
 
@@ -317,9 +317,9 @@ button {
 
 ```
 
-**5\. Styling the button when focused or hovered**
+**5\. 设置按钮在鼠标悬停或聚焦状态下的样式**
 
-When the button is focused or hovered, it's good have some indication for usability. You can do so by switching the text and background colors of the button:
+当按钮处于鼠标悬停或聚焦状态下时，最好能有样式变化以增强可用性，例如切换按钮文字颜色和背景色：
 
 ```css
 /* Add style when button is focused or hovered */
@@ -331,25 +331,25 @@ button:hover {
 
 ```
 
-Alright, now we are done with styling the component. Let's take a quick look at how margin, padding, and border work in the next section.
+现在组件样式已经完成了，下一节会介绍外边距、内边距和边框的工作原理。
 
-## The CSS Box Model
+## CSS 盒模型
 
-In CSS, every element is a box. Each box has the following properties:
+在 CSS 中，每一个元素都是一个盒子，每个盒子都有下列属性：
 
-*   **Padding**: Space outside the content
-*   **Border**: Lines outside the padding
-*   **Margin**: Space outside the border
+*   **内边距（Padding）**：内容之外（边框之内）的空间（[padding - CSS（层叠样式表） | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding) ）
+*   **边框（Border）**：内边距之外（外边距之内）的边线（[border - CSS（层叠样式表） | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/border) ）
+*   **外边距（Margin）**：元素外部（边框之外）空出的空间（[margin - CSS（层叠样式表） | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin) ）
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/acdnznf06c6qgoxid7xw.png)
 
-### Margin
+### 外边距（margin）
 
-We use margin to add invisible space outside an element that pushes other elements away.
+使用外边距在一个元素外部增加不可见的空间，来将其他元素推开。
 
-For our card component, we used margin to add empty space above the container, space between the name and tags, and to center the card on the horizontal axis.
+在卡片组件中，用到了外边距来增加容器上方的空间、增加名称和标签之间的空间以及使得卡片水平居中。
 
-You can set `margin-top`, `margin-bottom`, `margin-left` and `margin-right` individually. Or you can use this shorthand:
+可以分别设置 `margin-top`、`margin-bottom`、`margin-left` 和 `margin-right`，也可以使用简写：
 
 ```css
 margin: topValue rightValue bottomValue leftValue;
@@ -359,11 +359,11 @@ margin: verticalValue horizontalValue;
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/do4y57sxjpkf08o6o01y.png)
 
-### Border
+### 边框（border）
 
-The border property adds a border around an element. For our card component, we added a border around the card and each tag.
+边框属性可以在元素周围增加边框，我们的卡片组件中，为卡片和每个标签增加了边框。
 
-You can set `border-top`, `border-bottom`, `border-left`, `border-right`, `border-width`, `border-style` and `border-color`. Or you can also use the following shorthand:
+可以分别设置 `border-top`、`border-bottom`、`border-left`、`border-right`、`border-width`、`border-style` 和 `border-color`，也可以使用以下简写：
 
 ```css
 border: widthValue styleValue colorValue;
@@ -372,11 +372,11 @@ border: widthValue styleValue colorValue;
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/oybb0vi7djd1nlib543i.png)
 
-### Padding
+### 内边距（padding）
 
-Padding is used to add inner space between the border and its content. In our card component, we used padding in the card and button.
+内边距用于在边框和内容之间增加空间，在我们的卡片组件中，卡片和按钮都用到了内边距。
 
-You can set `padding-top`, `padding-bottom`, `padding-left` and `padding-right`. Or you can use this shorthand:
+可以分别设置 `padding-top`、`padding-bottom`、`padding-left` 和 `padding-right`，也可以使用简写：
 
 ```css
 padding: topValue rightValue bottomValue leftValue;
@@ -386,16 +386,16 @@ padding: verticalValue horizontalValue;
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/572lkbb2j8npxn7isifq.png)
 
-## Conclusion
+## 总结
 
-So that concludes the tutorial.
+教程到此就结束了。
 
-There are many other important CSS concepts to learn. But with this tutorial, you should be ready to use CSS in your next project to make it look great.
+依然有许多其它重要的 CSS 概念需要学习。经过这个教程的学习，你应该能够在以后的项目中使用 CSS 来制作更好的视觉效果了。
 
-You can follow me on [Twitter](https://twitter.com/thunghiemdinh) or [YouTube](https://www.youtube.com/c/thunghiem) for future videos and tutorials. But for now, happy coding and see you in future posts.
+你可以关注我的 [Twitter](https://twitter.com/thunghiemdinh) 或 [YouTube](https://www.youtube.com/c/thunghiem) ，以获取更多内容。Happy coding。
 
-\_\_\_\_\_\_\_\_\_\_ 👋 **About me** \_\_\_\_\_\_\_\_\_\_
+\_\_\_\_\_\_\_\_\_\_  **关于作者** \_\_\_\_\_\_\_\_\_\_
 
-I am a full\-stack developer, a UX/UI designer and a content creator.
+我是一个全栈开发者、UX/UI 设计师和内容创作者。
 
-I am also the founder of d[evChallenges](https://devchallenges.io/). You can find more of these video tutorials at [devchallenges.io/learn](https://devchallenges.io/learn).
+我也是 [devChallenges](https://devchallenges.io/) 的创始人，更多视频教程请访问 [devchallenges.io/learn](https://devchallenges.io/learn) 。

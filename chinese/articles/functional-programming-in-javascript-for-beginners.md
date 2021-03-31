@@ -1,4 +1,4 @@
-> -   原文地址：[Functional Programming in JavaScript for Beginners](https://www.freecodecamp.org/news/functional-programming-in-javascript-for-beginners/Nahla Davies
+> -   原文地址：[Functional Programming in JavaScript for Beginners](https://www.freecodecamp.org/news/functional-programming-in-javascript-for-beginners/)
 > -   原文作者：Nahla Davies
 > -   译者：
 > -   校对者：

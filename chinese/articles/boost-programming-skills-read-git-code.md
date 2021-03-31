@@ -582,36 +582,74 @@ Like blobs and trees, Git identifies the commit by hashing its content using the
 
 ### Current Directory Cache (Staging Area)
 
+### 当前目录缓存（暂存区）
+
 You probably know Git's staging area as the place your changed files go after using the `git add` command, patiently waiting to be committed using `git commit`. But what exactly is the staging area?
+
+您可能知道 Git 的暂存区就是使用 `git add` 命令后更改文件耐心地等待使用 `git commit` 提交所在的位置，但是暂存区到底是什么呢？
 
 In Git's original version, the staging area is called the **current directory cache**. The current directory cache is just a binary file stored in the repository at the path `.dircache/index`.
 
+在 Git 的原始版本中，暂存区被称为 **当前目录缓存**，当前目录缓存只是一个存储在资源库中的二进制文件，路径为 `.dircache/index`。
+
 As mentioned in the previous section, after changed files are added to Git using the `update-cache` (`git add`) command, Git calculates the blob and tree objects associated with those changes. The generated tree object associated with the staged files is added to the `index` file.
+
+如上一节所述，在使用 `update-cache` (`git add`) 命令将更改的文件添加到 Git 之后，Git 会计算与这些更改关联的数据对象和树对象，然后将与暂存文件关联的生成的树对象添加到 `index` 文件中。
+
 
 It is called a **cache** because it is just a temporary storage location for the staged changes to reside before being committed. When the user makes a commit by running the `commit-tree` command, the tree from the current directory cache can be supplied. It also includes other commit information like the commit message for Git to create a new commit object with.
 
+
+之所以称为 **缓存**，是因为它只是保留已进行的更改在提交之前的临时存储位置，当用户通过运行`commit-tree`命令进行提交时，当前目录缓存可以提供对应的树，和其他提交信息，比如用于 Git 创建新提交对象的提交消息。
+
 At that point the `index` file is simply removed to make room for new changes to be staged.
+
+这时候，只是删除了index文件，为新更改暂存腾出空间。
 
 ### Content Addressable Database (Object Database)
 
+### 内容寻址数据库（对象数据库）
+
 The object database is Git's primary storage location. This is where all the objects we discussed above – blobs, trees, and commits – are stored. In Git's original version, the object database is simply a directory at the path `.dircache/objects/`.
+
+对象数据库是 Git 的主要存储位置，我们上面讨论的所有对象（数据对象，树对象和提交对象）都存储在对象数据库中。在 Git 的原始版本中，对象数据库只是一个目录，路径是 `.dircache/objects/`。
 
 When Git creates objects through operations such as `update-cache`, `write-tree`, and `commit-tree`, (the predecessors of `git add` and `git commit`), these objects are compressed, hashed, and stored in the object database.
 
+当 Git 通过诸如 `update-cache`，`write-tree` 和 `commit-tree'（`git add` 和 `git commit` 的前身）之类的操作创建对象时，这些对象将被压缩，再进行哈希，然后存储在对象数据库中。
+
 The name of each object is the hash of its content, hence why the object database is also called a **content addressable database***.*  Each piece of content (blob, tree, or commit) is stored and retrieved based on an identifier generated from the content itself.
+
+每个对象的名称都是其内容的哈希值，这也是对象数据库为什么也叫作 **内容寻址数据库** 的原因。每块内容（数据对象、树对象或者提交对象）都基于从内容本身生成的标识符进行存储和检索。
 
 The modern version of Git works very much the same way. The difference is that storage formats have been optimized to use more efficient methods (especially related to data transfer over networks), but the basic principles are the same.
 
+现代版本的 Git 的工作方式几乎相同。不同之处在于现代版本的 Git 通过使用更有效的方法（尤其是与通过网络进行数据传输有关的方法）已经对存储格式进行了优化，但是基本原理是相同的。
+
 ## Summary
+
+## 总结
 
 In this article, we discussed the original version of Git's code in order to highlight how reading existing code can help boost your coding skills.
 
+在本文中我们讨论了 Git 代码的原始版本，以突出显示如何阅读现有代码可以帮助提高您的编码技能。
+
 We covered the reasons Git is a great project to learn from in this way, how to access Git's code, and reviewed some related C programming concepts. Finally, we provided an overview of Git's original codebase structure and dove into some concepts that Git's code relies on.
+
+我们介绍了以这种方式学习为什么 Git 是一个的好项目的原因，如何访问 Git 的代码，并回顾了一些相关的 C 编程概念。 最后，我们提供了 Git 原始代码库结构的概述，并深入探讨了 Git 代码所依赖的一些概念。
 
 ## Next Steps
 
+## 下一步
+
 If you're interested in learning more about Git's code, [we wrote a guidebook you can check out here](https://initialcommit.com/store/baby-git-guidebook-for-developers). This book dives into Git's original C code in detail and directly explains how the code works.
+
+如果您有兴趣了解有关 Git 代码的更多信息，[我们编写了一本指南，您可以在此处查看](https://initialcommit.com/store/baby-git-guidebook-for-developers)。 这本书详细介绍了 Git 的原始 C 代码，并直接说明了该代码是怎么工作的。
 
 I encourage any and all developers to explore the open\-source community to try and find quality projects that interest you. Those projects will have codebases that you can clone down in a matter of minutes.
 
+我鼓励所有开发人员探索开源社区去尝试找到您感兴趣的高质量项目，这些项目将具有您可以在几分钟内克隆的代码库。
+
 Take some time to poke around the code, and you might learn something you never expected to find.
+
+花一些时间来探究一下代码，您可能会学到一些从未想到的东西。

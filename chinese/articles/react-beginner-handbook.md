@@ -290,20 +290,27 @@ React 为我们提供这个接口的一个原因：**使用 JSX 能更加轻松�
 
 在下一节中，我们将会讨论 JSX 是怎么使你能够很容易的开发 UI 的。再然后我们将会讨论它与“标准 HTML”的区别，这些差异是你必须知道的。
 
-## Using JSX to compose a UI
+## 使用 JSX 构建 UI
 
+就像上一节中介绍的那样，JSX 的一个主要作用就是借助它可以非常容易的编写 UI。
 As introduced in the last section, one of the main benefits of JSX is that it makes it very easy to build a UI.
 
+特别的，在 React 组件中，你可以导入其他 React 组件，
 In particular, in a React component you can import other React components, and you can embed them and display them.
 
+一个 React 组件通常在它自己的的文件中，这就是我们可以非常容易的在其他组件中复用（通过导入的方式）它们。
 A React component is usually created in its own file, because that's how we can easily reuse it (by importing it) in other components.
 
+但是一个 React 组件
 But a React component can also be created in the same file of another component, if you plan to only use it in that component. There's no "rule" here, you can do what feels best to you.
 
+当一个文件中的代码行数过多时，我通常会把代码分开，放到单独的文件中。
 I generally use separate files when the number of lines in a file grows too much.
 
+为了方便起见，我们
 To keep things simple let's create a component in the same  `App.js`  file.
 
+我们计划创建一个 `WelcomeMessage` 组件：
 We're going to create a  `WelcomeMessage`  component:
 
 ```js
@@ -312,11 +319,13 @@ function WelcomeMessage() {
 }
 
 ```
-
+看到了吗？ 这是一个简单的函数，它返回了一行 JSX，表示一个 `p` 标签。
 See? It's a simple function that returns a line of JSX that represents a  `p`  HTML element.
 
+我们打算把这个函数添加到 `App.js` 文件中。
 We're going to add it to the  `App.js`  file.
 
+现在，我们可以通过将 `<WelcomeMessage />` 添加到 `App` 组件的 JSX 代码中，以在用户界面中展示这个组件。
 Now inside the  `App`  component JSX we can add  `<WelcomeMessage />`  to show this component in the user interface:
 
 ```js
@@ -350,16 +359,21 @@ function App() {
 
 ```
 
+下面是运行结果。你应该可以在屏幕中看到“Welcome!”信息。
 And here's the result. Can you see the "Welcome!" message in the screen?
 
 ![new-component](https://www.freecodecamp.org/news/content/images/2020/11/new-component.png)
 
+我们称 `WelcomeMessage` 为 `App` 的子组件，`App` 是父组件。
 We say that  `WelcomeMessage`  is a  **child component**  of App, and  `App`  is its parent componnet.
 
+我们像使用 HTML 语言一样，添加了 `<WelcomeMessage />` 组件。
 We're adding the  `<WelcomeMessage />`  component as if it was part of the HTML language.
 
+这就是 React 组件和 JSX 厉害的地方：我们可以构建应用程序界面，并且像写 HTML 一样使用它们。
 That's the beauty of React components and JSX: we can compose an application interface and use it like we're writing HTML.
 
+在下一节中，我们会学习 JSX 与 THML 的区别。
 With some differences, as we'll see in the next section.
 
 ## The difference between JSX and HTML

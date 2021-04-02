@@ -1,6 +1,6 @@
 > -   原文地址：[The Linux LS Command – How to List Files in a Directory + Option Flags](https://www.freecodecamp.org/news/the-linux-ls-command-how-to-list-files-in-a-directory-with-options/)
 > -   原文作者：Bolaji Ayodeji
-> -   译者：
+> -   译者：ZhichengChen
 > -   校对者：
 
 ![The Linux LS Command – How to List Files in a Directory + Option Flags](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/article-banner-7.png)

@@ -1,6 +1,6 @@
 > -   原文地址：[What is Git? A Beginner's Guide to Git Version Control](https://www.freecodecamp.org/news/what-is-git-learn-git-version-control/)
 > -   原文作者：Anna Skoulikari
-> -   译者：
+> -   译者：nemanjajoe
 > -   校对者：
 
 ![What is Git? A Beginner's Guide to Git Version Control](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/Artboard-2.png)

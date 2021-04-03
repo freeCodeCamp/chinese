@@ -81,6 +81,7 @@ For the rest of this article, we will share examples using Git in the terminal. 
 对于这篇文章的剩下部分，我会分享一些在命令行使用Git的例子。但如果你是在使用一个GUI，我们分享的步骤也是十分相似的。
 
 ### How to Prepare your Project Folder in Git
+### 如何在Git里准备你的项目文件夹
 
 To use Git we need to have a project that we want to version control. This can either be a new project or an existing project.
 

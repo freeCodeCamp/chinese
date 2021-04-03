@@ -568,7 +568,7 @@ Here we have a `_get_age_` _`non-public method` and a `show_age` `public method`
 
 **Let’s see another example and implement it in Python.**
 
-**Imagine a car. Number of wheels, seating capacity and maximum velocity are all attributes of a car. We can say that an**ElectricCar** class inherits these same attributes from the regular **Car** class.**
+**Imagine a car. Number of wheels, seating capacity and maximum velocity are all attributes of a car. We can say that an**ElectricCar**class inherits these same attributes from the regular**Car**class.**
 
 **`class Car:
 def**init*`*`(self, number_of_wheels, seating_capacity, maximum_velocity): self.number_of_wheels = number_of_wheels self.seating_capacity = seating_capacity self.maximum_velocity = maximum_velocity`\_

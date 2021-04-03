@@ -5,53 +5,54 @@
 
 ![What is npm? A Node Package Manager Tutorial for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2020/06/cover-4.png)
 
-This article should serve as an all-in-one essential guide for Node.js' favorite sidekick: npm.
+本篇文章可以作为 npm ( Node.js 最喜欢的伙伴)的一个基本指南。
 
-Node.js has been taking the world by storm since 2009. Hundreds of thousands of systems have been built using Node.js, prompting the developer community to claim that "JavaScript is eating software".
+自 2009 年以来，Node.js 一直席卷全球。数十万个系统被 Node.js 构建出来，促使开发人员在社区宣称“JavaScript 正在吞噬软件”。
 
-One of the major factors of Node's success is npm - its popular package manager, which allows JavaScript developers to share useful packages like [lodash][1] and [moment][2] quickly and easily.
+Node 成功的主要因素之一是它受欢迎的软件包管理器-npm，因为 npm 使 JavaScript 开发人员可以快速方便地共享有用的软件包，
+例如 [lodash][1] 和 [moment][2]。
 
-As of the moment I'm writing this post, npm has facilitated the publication of over 1.3 million packages with a weekly download rate of over 16 billion! These numbers are fantastic for any software tool. So now let's talk about what exactly npm is.
+在我撰写这篇文章时，npm 已帮助发布了 130 万个软件包，每周下载量超过 160 亿个！ 这些数字对于任何软件工具都非常有用。 因此，现在让我们讨论一下 npm 到底是什么。
 
 ## What is NPM
 
-NPM – or "Node Package Manager" – is the default package manager for JavaScript's runtime Node.js.
+NPM（“Node 包管理器”）是 JavaScript 运行时 Node.js 的默认程序包管理器。
 
-It's also known as "Ninja Pumpkin Mutants", "Nonprofit Pizza Makers", and a host of other random names that you can explore and probably contribute to over at [npm-expansions][3].
+它也被称为“Ninja Pumpkin Mutants”，“Nonprofit Pizza Makers”，以及许多其他随机名称，你可以在 [npm-expansions][3] 上探索这些名称。
 
-NPM consists of two main parts:
+NPM 由两个主要部分组成:
 
--   a CLI (command-line interface) tool for publishing and downloading packages, and
--   an [online repository][4] that hosts JavaScript packages
+-   用于发布和下载程序包的 CLI（命令行界面）工具
+-   托管 JavaScript 程序包的 [在线存储库][4]
 
-For a more visual explanation, we can think of the repository [npmjs.com][5] as a fulfillment center that receives packages of goods from sellers (npm package authors) and distributes these goods to buyers (npm package users).
+为了获得更直观的解释，我们可以将存储库 [npmjs.com][5] 视为一个物流集散中心，该中心从卖方（npm 包裹的作者）那里接收货物的包裹，并将这些货物分发给买方（npm 包裹的用户）。
 
-To facilitate this process, the [npmjs.com][6] fulfillment center employs an army of hardworking wombats (npm CLI) who will be assigned as personal assistants to each individual [npmjs.com][7] customer. So dependencies are delivered to JavaScript developers like this:
+为了促进此过程，[npmjs.com][6] 物流集散中心雇用了一群勤劳的袋熊（npm CLI），他们将被分配给每个 [npmjs.com][7] 用户作为私人助理。 因此，dependencies(依赖项)会如下传递给 JavaScript 开发人员：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/wombat-install.png)
 
-and the process of publishing a package for your JS mates would be something like this:
+发布 JS 软件包的过程如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/wombat-publish.png)
 
-Let's look at how this army of wombats assist developers who want to use JavaScript packages in their projects. We'll also see how they help open-source wizards get their cool libraries out into the world.
+让我们看看这只袋熊如何协助想要在项目中使用 JavaScript 包的开发人员。 下面我们还将看到它们(npm CLI)如何帮助开源向导将其出色的库推向世界。
 
 ## package.json
 
-Every project in JavaScript – whether it's Node.js or a browser application – can be scoped as an npm package with its own package information and its `package.json` job to describe the project.
+每个 JavaScript 项目（无论是 Node.js 还是浏览器应用程序）都可以被当做 npm 软件包，并且通过 `package.json` 来描述项目和软件包信息。
 
-We can think of `package.json` as stamped labels on those npm good boxes that our army of Wombats delivers around.
+我们可以将 `package.json` 视为快递盒子上的运输信息。
 
-`package.json` will be generated when `npm init` is run to initialise a JavaScript/Node.js project, with these basic metadata provided by developers:
+当运行 `npm init` 初始化 JavaScript/Node.js 项目时，将生成 `package.json` 文件，文件内的内容(基本元数据)由开发人员提供：
 
--   `name`: the name of your JavaScript library/project
--   `version`: the version of your project. Often times, for application development, this field is often neglected as there's no apparent need for versioning opensource libraies. But still, it can come handy as a source of the deployment's version.
--   `description`: the project's description
--   `license`: the project's license
+-   `name`: JavaScript 项目或库的名称
+-   `version`: 项目的版本.项目的版本。 通常，在应用程序开发中，由于显然没有必要对开源库进行版本控制，因此经常忽略该领域。 但是，它仍然可以作为部署版本的来源方便使用。
+-   `description`: 项目的描述
+-   `license`: 项目的许可证
 
 ### npm scripts
 
-`package.json` also supports a `scripts` property that can be defined to run command-line tools that are installed in the project's local context. For example, the `scripts` portion of an npm project can look something like this:
+`package.json` 还支持一个 `scripts` 属性，可以把它当做在项目本地运行的命令行工具。 例如，一个 npm 项目的 `scripts`部分可能看起来像这样：
 
 ```json
 {
@@ -67,13 +68,13 @@ We can think of `package.json` as stamped labels on those npm good boxes that ou
 }
 ```
 
-with `eslint`, `prettier`, `ncc`, `jest` not necessarily installed as global executables but rather as local to your project inside `node_modules/.bin/`.
+使用 `eslint`，`prettier`，`ncc`，`jest` 不一定安装为全局可执行文件，还可以安装在项目本地的 node_modules/.bin/ 中。
 
-The recent introduction of [npx][8] allows us to run these `node_modules` project-scoped commands just like a globally installed program by prefixing `npx ...` (i.e. `npx prettier --write **/*.ts`).
+最新引入的 [npx][8] 使我们可以像在全局安装程序一样运行这些 `node_modules` 项目作用域命令，方法是在其前面加上 `npx ...`（即`npx prettier --write ** / *。ts`）。
 
 ### dependencies vs devDependencies
 
-These two come in form of key-value objects with npm libraries' names as the key and their [semantic-formatted][9] versions as the value. This is an example from [Github's TypeScript Action template][10]:
+这两个以键值对象的形式出现，其中 npm 库的名称为键，其[语义格式][9]版本为值。 大家可以看看[Github 的 TypeScript 操作模板][10]中的示例：
 
 ```json
 {
@@ -99,86 +100,84 @@ These two come in form of key-value objects with npm libraries' names as the key
 }
 ```
 
-These dependencies are installed via the `npm install` command with `--save` and `--save-dev` flags. They're meant to be used for production and development/test environments respectively. We will drill deeper into the installation of these packages in the next section.
+这些依赖通过带有 `--save` 或 `--save-dev` 标志的 `npm install` 命令安装。 它们分别用于生产和开发/测试环境。 在下一节中，我们将更深入地研究这些软件包的安装。
 
-Meanwhile, it's important to understand the possible signs that come before the semantic versions (assuming you have read up on `major.minor.patch` model of [semver][11]):
+同时，理解语义版本前面的符号非常重要（假设你已经阅读[semver][11]的 `major.minor.patch` 模型）：
 
--   `^`: latest minor release. For example, a `^1.0.4` specification might install version `1.3.0` if that's the latest minor version in the `1` major series.
--   `~`: latest patch release. In the same way as `^` for minor releases, `~1.0.4` specification might install version `1.0.7` if that's the latest minor version in the `1.0` minor series.
+-   `^`：最新的次要版本。例如，如果 `^1.0.4` 规范是版本 `1` 系列的最新次要版本，则可能会安装版本 `1.3.0`。
+-   `〜`：最新的补丁程序版本。与次要版本中的 `^` 相同，如果 `〜1.0.4` 规范是 `1.0` 系列中的最新次要版本，则可能会安装版本`1.0.7`。
 
-All of these exact package versions will be documented in a generated `package-lock.json` file.
+所有这些确切的软件包版本都将记录在 `package-lock.json` 文件中。
 
 ### package-lock.json
 
-This file describes the exact versions of the dependencies used in an npm JavaScript project. If `package.json` is a generic descriptive label, `package-lock.json` is an ingredient table.
+该文件描述了 npm JavaScript 项目中使用的依赖项的确切版本。 如果 `package.json` 是通用的描述性标签，则 `package-lock.json` 是成分表。
 
-And just like how we don't usually read the ingredient table of a product (unless you are too bored or need to know), `package-lock.json` is not meant to be read line-by-line by developers (unless we're desperate to resolve "works in my machine" issues).
+就像我们通常不会读取食品包装袋上的成分表（除非您太无聊或需要知道）一样，`package-lock.json` 并不意味着会被开发人员一行一行进行读取（除非 我们迫切希望解决“在我的机器上工作”的问题）。
 
-`package-lock.json` is usually generated by the `npm install` command, and is also read by our NPM CLI tool to ensure reproduction of build environments for the project with `npm ci`.
+`package-lock.json` 通常是由 `npm install` 命令生成的，也可以由我们的 NPM CLI 工具读取，以确保使用 `npm ci` 重现项目的构建环境。
 
-## How to effectively command NPM Wombats as a "buyer"
+## 作为用户，如何有效得使用 NPM
 
-As inferred from the 1.3 million published packages vs 16 billion downloads mentioned earlier, the majority of npm users use npm in this direction. So it's good to know how to wield this powerful tool.
+从前面提到的 130 万个发布的软件包中，有 160 亿次下载，可以推断出，大多数 npm 用户都朝这个方向使用 npm 。
 
 ### npm install
 
-This is the most commonly used command as we develop JavaScript/Node.js applications nowadays.
+这是当今我们开发 JavaScript/Node.js 应用程序时最常用的命令。
 
-By default, `npm install <package-name>` will install the latest version of a package with the `^` version sign. An `npm install` within the context of an npm project will download packages into the project's `node_modules` folder according to `package.json` specifications, upgrading the package version (and in turn regenerating `package-lock.json`) wherever it can based on `^` and `~` version matching.
+默认情况下，`npm install <package-name>` 将安装带有 `^` 版本号的软件包的最新版本。 npm 项目上下文中的 `npm install` 将根据 `package.json` 规范将软件包下载到项目的 `node_modules` 文件夹中，从而升级软件包的版本（并重新生成 `package-lock.json` ）。 `npm install <package-name>` 可以基于 `^` 和 `〜` 版本匹配。
 
-You can specify a global flag `-g` if you want to install a package in the global context which you can use anywhere across your machine (this is common for command-line tooling packages like [live-server][12]).
+如果要在全局上下文中安装程序包，可以在机器的任何地方使用它，则可以指定全局标志 `-g`（例如 [live-server][12]）。
 
-npm has made installing JavaScript packages so easy that this command is often used incorrectly. This results in npm being the butt of a lot of programmers' jokes like these:
+npm 使安装 JavaScript 软件包非常容易，以至于经常错误地使用此命令。 导致一些程序员对 NPM 开这样的玩笑：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/npm-jokes.png)
 
-This is where the `--production` flag comes to the rescue! In the previous section, we discussed `dependencies` and `devDependencies` meant for usage in production and development/test environment respectively. This `--production` flag is how the differences in `node_modules` are made.
+但是，NPM 包太大，太深这样的问题可以通过 `--production` 标志来拯救！在上一节中，我们讨论了分别用于生产和开发/测试环境的 `dependencies` 和 `devDependencies` 。 这个 `--production` 标志是如何在 `node_modules` 中进行区别的。
 
-By attaching this flag to the `npm install` command, we will only install packages from `dependencies`, thus drastically reducing the size of our `node_modules` to whatever is absolutely necessary for our applications to be up and running.
-
-Just like how as boy and girl scouts we didn't bring lemon squeezers to our lemonade booth, we shouldn't bring `devDependencies` to production!
+通过将此标志附加到 `npm install` 命令，我们将仅从 `dependencies` 安装软件包，从而将 `node_modules` 的大小大大减小到应用程序正常运行所必需的大小。--不应该将 `devDependencies` 引入生产环境！
 
 ### npm ci
 
-So if `npm install --production` is optimal for a production environment, must there be a command that's optimal for my local development, testing setup?
+因此，如果 `npm install --production` 对于生产环境是最佳选项，那么是否必须有一个对本地环境，测试环境最合适的选项？
 
-The answer is `npm ci`.
+答案是 `npm ci`。
 
-Just like how if `package-lock.json` doesn't already exist in the project it's generated whenever `npm install` is called, `npm ci` consumes this file to download the exact version of each individual package that the project depends on.
+就像如果 `package_lock.json` 尚不存在于项目中一样，无论何时调用 `npm install` 都会生成它，`npm ci` 会消耗该文件来下载项目所依赖的每个软件包的确切版本。 。
 
-This is how we can make sure that the our project's context stays exactly the same across different machines, whether it's our laptops used for development or CI (Continuous Integration) build environments like Github Actions.
+这样，无论是用于本地开发的笔记本电脑还是 Github Actions 等 CI（持续集成）构建环境，我们都可以确保项目上下文在不同机器上保持完全相同。
 
 ### npm audit
 
-With the humongous number of packages that have been published and can easily be installed, npm packages are susceptible to bad authors with malicious intentions like [these][13].
+随着越来越多的软件包发布，并且易于安装，因此 npm 软件包容易受到恶意作者的恶意攻击，例如[这些][13]。
 
-Realising that there was an issue in the ecosystem, the npm.js organisation came up with the [idea][14] of `npm audit`. They maintain a list of security loopholes that developers can audit their dependencies against using the `npm audit` command.
+意识到生态系统存在问题，npm.js 组织提出了 `npm audit` 的[idea][14]。 他们维护了一个安全漏洞列表，开发人员可以使用 `npm audit` 命令来审核项目中的依赖项。
 
-`npm audit` gives developers information about the vulnerabilities and whether there're versions with remediations to upgrade to. For example,
+`npm audit` 为开发人员提供了有关漏洞以及是否有要修复的版本的信息。 例如，
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/npm-audit-result.png)
 
-If the remediations are available in the next non-breaking version upgrades, `npm audit fix` can be used to upgrade the affected dependencies' versions automatically.
+如果补救措施在下一个不间断的版本升级中可用，则可以使用 `npm audit fix` 来自动升级受影响的依赖项的版本。
 
-## How to effectively command NPM wombats as "seller"
+## 作为作者，如何有效得使用 NPM
 
-We have gone through how to wield the NPM CLI tool as a consumer, but what about effectively using it as an author (and potentially becoming a JavaScript open source wizard 🥳)?
+我们已经了解了作为用户，如何通过 NPM CLI 有效得使用 NPM，但是作为作者又如何使用 🥳 呢？
 
 ### npm publish
 
-Sending a package to our [npmjs.com][15] fulfillment centre is super easy as we only need to run `npm publish`. The tricky part, which is **not** specific to npm package authors, is determining the version of the package.
+将软件包发送到 [npmjs.com][15] 非常容易，因为我们只需要运行 `npm publish` 。 棘手的部分（并非专门针对 npm 软件包作者）是确定软件包的版本。
 
-The rule of thumb according to [semver.org][16]:
+根据 [semver.org][16] 的经验法则：
 
-1.  MAJOR version when you make incompatible API changes,
-2.  MINOR version when you add functionality in a backwards compatible manner, and
-3.  PATCH version when you make backwards compatible bug fixes.
+1. 当你进行不兼容的 API 更改时的 MAJOR 版本，
+2. 以向后兼容的方式添加功能时的 MINOR 版本，并且
+3. 进行向后兼容的 bug 修复时的 PATCH 版本。
 
-It's even more important to follow the above rule when publishing your packages to ensure that you're not breaking anyone's code as the default version matching in npm is `^` (aka the next minor version).
+在发布软件包时，遵循上述规则尤为重要，以确保您不会破坏任何人的代码，因为 npm 中匹配的默认版本是`^`（又称下一个次要版本）。
 
 ## ❤️ npm ❤️ JavaScript ❤️ Node.js ❤️
 
-That's all we need to know to start wielding npm effectively and command our lovely army of wombats!
+以上就是我们开始有效地使用 npm 并指挥我们可爱的袋熊大军所需要的一切！
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/wombats.png)
 

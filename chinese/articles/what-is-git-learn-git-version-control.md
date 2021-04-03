@@ -6,53 +6,79 @@
 ![What is Git? A Beginner's Guide to Git Version Control](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/Artboard-2.png)
 
 Git is a version control system that developers use all over the world. It helps you track different versions of your code and collaborate with other developers.
+Git 是一个全世界开发者都在用的版本控制系统。它会帮助你与其他开发者合作，以及跟踪你不同版本的代码。
 
 If you are working on a project over time, you may want to keep track of which changes were made, by whom, and when those changes were made. This becomes increasingly important if you end up having a bug in your code! Git can help you with this.
+如果你长时间在一个项目工作，你也许会想对那些有改动的地方保持跟踪：是谁，以及什么时候改动的。要是在你完成时，发现你代码里有bug，这跟踪就变得越来越重要了。
 
 But Git can also be a bit scary and confusing when you first start learning it, so in this article I will introduce Git in a humanly understandable way. We'll cover topics such as repositories, commits, branches and much more, so let's get started!
+当你第一次学它的时候，Git也会变得有点小可怕和小迷惑。所以在这篇文章里，我会以一种人们易于理解的方式来介绍它。
+我们将覆盖像仓库、提交、分支等等这样的话题，所以我们开始吧！
 
 Here's what we'll go over in this article:
-
+这是我们在这篇文章所要完成的：
 *   What is Git?
+*   什么是Git？
 *   What is GitHub?
+*   什么是GitHub？
 *   How to get started using Git
+*   如何开始使用Git？
 *   How does Git track changes?
+*   Git是如何跟踪改动的？
 *   A typical Git workflow
+*   一个典型的Git工作流。
 *   Online course to learn Git version control
+*   用来学习Git版本控制的线上课程。
 
 ## What is Git?
+## 什么是Git？
 
 **Git** is a version control system that you download onto your computer. It is essential that you use Git if you want to collaborate with other developers on a coding project or work on your own project.
+**Git** 是一个你可以下载到你电脑上的版本控制系统。如果你想在一个编码项目里和其他开发者合作，或者是你自己的项目里，那么使用Git是必不可少的。
 
 In order to check if you already have Git installed on your computer you can type the command `git --version` in the terminal.
+为了检查你的电脑是否早就安装好了Git，你可以在命令行上输入 `git --version`。
 
 If you already have Git installed then you will see what version you have. If you don’t have Git installed you can visit the [Git website](https://git-scm.com/) and easily follow the download instructions to install the correct version for your operating system.
+如果你早就装好了Git，你就会看到你所在的版本。如果你没装好Git，你可以访问[Git website](https://git-scm.com/)。只需简单地循着下载指示，去给你的操作系统安装正确的版本。
 
 ## What is GitHub?
+## 什么是GitHub？
 
 **GitHub** is a product that allows you to host your Git projects on a remote server somewhere (or in other words, in the cloud).
+**GitHub** 是一个允许你在一个你不知道的远程服务器上（换句话说，就是在云上）管控你的Git项目的产品。
 
 It's important to remember that GitHub is not Git. GitHub is just a hosting service. There are other companies who offer hosting services that do the same thing as GitHub, such as Bitbucket and GitLab.
+Github不是Git，记住，这很重要。Github只提供托管服务。这也有其他提供托管服务的公司，像Bitbucket和GitLab。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/1_JL0fpMQTlDNbyQ5GlLdA_g.png)
 
 The difference between GitHub and Git
+GitHub和Git之间的不同之处。
 
 ## How to Get Started with Git
+## 如何开始使用Git？
 
 ### Terminal vs GUI
+### 命令行 VS 图形用户界面
 
 You can either use Git by typing commands in the terminal or you can use a graphical user interface (GUI) such as Sourcetree or GitKraken.
+你可在命令行里通过输入指令来使用Git，也可以使用一个图形用户界面（GUI），例如Sourcetree或者GitKraken。
 
 If you choose the terminal, you will have to look up which Git commands you will need.
+如果你选择命令行，你得去找找你将需要哪些Git指令。
 
 Luckily you don’t have to learn these by heart. Other than a handful of commands that you will use most often, the rest you can look up whenever you need them (this is what most developers do, even those with decades of experience). Git offers in\-depth [documentation on their website](https://git-scm.com/docs).
+幸运的是，你不需要用心的去学习这些。除了少数几个你将要最常使用的指令外，剩下的你可以查，在任何你需要它们的时候（这也是大多数开发者所做的，即使是那些有几十年开发经验的人）。Git在它的[网站](https://git-scm.com/docs)上提供了详细的文档。
 
 If you choose to use a GUI, then the various actions you need to take will be displayed in a more visual manner.
+如果你选择使用一个GUI，那么你需要用到的，多方面的功能，会以一个更加视觉化的方式展现出来。
 
 Whether you choose to use the terminal or a GUI, you will need to understand the basics of how Git works in order to use it confidently.
+无论你选择使用命令行，亦或是一个GUI。为了去自信去使用它，你都将需要理解Git工作的基本要素。
 
 For the rest of this article, we will share examples using Git in the terminal. But the steps we share are very similar if you are using a GUI.
+对于这篇文章的剩下部分，我会分享一些在命令行使用Git的例子。但如果你是在使用一个GUI，我们分享的步骤也是十分相似的。
 
 ### How to Prepare your Project Folder in Git
 

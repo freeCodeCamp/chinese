@@ -1124,78 +1124,78 @@ chgrp <用户组> <文件名>
 
 在 Linux 或 macOS 操作系统（或是任一 UNIX 系统）中，每个文件都有三种权限：读取、写入和执行。
 
-Go into a folder, and run the `ls -al` command.
+进入一个文件夹，并运行 `ls -al` 命令。
 
 ![Screen-Shot-2020-09-03-at-18.49.22](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-18.49.22.png)  
-The weird strings you see on each file line, like `drwxr-xr-x`, define the permissions of the file or folder.
+你在文件列表每一行见到的，像是 `drwxr-xr-x` 这样的奇怪字符串，定义了文件或文件夹的权限。
 
-Let's dissect it.
+让我们来剖析一下。
 
-The first letter indicates the type of file:
+第一个字母表示文件的类型：
 
--   `-` means it's a normal file
--   `d` means it's a directory
--   `l` means it's a link
+-   `-` 表示这是一个常规的文件
+-   `d` 表示这是一个目录
+-   `l` 表示这是一个链接
 
-Then you have 3 sets of values:
+之后你就有了三组值：
 
--   The first set represents the permissions of the **owner** of the file
--   The second set represents the permissions of the members of the **group** the file is associated to
--   The third set represents the permissions of the **everyone else**
+-   第一组代表文件**所有者**拥有的权限
+-   第二组代表文件所关联的**用户组**成员拥有的权限
+-   第三组代表**其他人**拥有的权限
 
-Those sets are composed by 3 values. `rwx` means that specific _persona_ has read, write and execution access. Anything that is removed is swapped with a `-`, which lets you form various combinations of values and relative permissions: `rw-`, `r--`, `r-x`, and so on.
+这些组由三个值组成。`rwx` 代表特定 _角色_ 拥有读取、写入和执行访问权限。任何被移除的权限会被替换为 `-` ，因此你可以将不同的值，及其代表的相关权限进行组合：例如 `rw-`、r--`、`r-x` 等等。
 
-You can change the permissions given to a file using the `chmod` command.
+你可以使用 `chmod` 命令来改变一个文件的权限。
 
-`chmod` can be used in 2 ways. The first is using symbolic arguments, the second is using numeric arguments. Let's start with symbols first, which is more intuitive.
+`chmod` 有两种用法。其一是使用符号参数，其二是使用数字参数。首先来试试更为直观的符号参数。
 
-You type `chmod` followed by a space, and a letter:
+终端输入 `chmod` ，空格，之后加上一个字母：
 
--   `a` stands for _all_
--   `u` stands for _user_
--   `g` stands for _group_
--   `o` stands for _others_
+-   `a` 表示 _all_，即全体
+-   `u` 表示 _user_，即用户
+-   `g` 表示 _group_，即用户组
+-   `o` 表示 _others_，即其他人
 
-Then you type either `+` or `-` to add a permission, or to remove it. Then you enter one or more permission symbols (`r`, `w`, `x`).
+然后输入 `+` 或 `-` 并加上一个或多个权限符号（`r`、`w`、`x`），来添加或删除任意权限。
 
-All followed by the file or folder name.
+键入以上所有命令和参数之后，都要加上文件或文件夹名称。
 
-Here are some examples:
-
-```
-chmod a+r filename #everyone can now read
-chmod a+rw filename #everyone can now read and write
-chmod o-rwx filename #others (not the owner, not in the same group of the file) cannot read, write or execute the file
+以下是一些例子：
 
 ```
-
-You can apply the same permissions to multiple personas by adding multiple letters before the `+`/`-`:
-
-```
-chmod og-r filename #other and group can't read any more
+chmod a+r filename #每个人都可以读取
+chmod a+rw filename #每个人都可以读取和写入
+chmod o-rwx filename #其他人（非文件所有者，也不在文件所属用户组中的用户）无法读取、写入或执行文件
 
 ```
 
-In case you are editing a folder, you can apply the permissions to every file contained in that folder using the `-r` (recursive) flag.
+只需要在 `+`/`-` 前添加多个字母，即可将相同的权限批量应用到不同的身份：
 
-Numeric arguments are faster but I find them hard to remember when you are not using them day to day. You use a digit that represents the permissions of the persona. This number value can be a maximum of 7, and it's calculated in this way:
+```
+chmod og-r filename #其他人，和用户组无法读取文件。
 
--   `1` if has execution permission
--   `2` if has write permission
--   `4` if has read permission
+```
 
-This gives us 4 combinations:
+如果你正在编辑一个文件夹，你可以使用 `-r`（递归）参数将权限应用到该文件夹中的每个文件。
 
--   `0` no permissions
--   `1` can execute
--   `2` can write
--   `3` can write, execute
--   `4` can read
--   `5` can read, execute
--   `6` can read, write
--   `7` can read, write and execute
+使用数字参数速度更快，但我认为当你不是每天都使用的话，是很难记住它们的。数字在此代表任一角色的权限。这个数字值最大可以是7，它是这样计算的：
 
-We use them in pairs of 3, to set the permissions of all the 3 groups altogether:
+-   拥有执行权限，记为 `1` 
+-   拥有写入权限，记为 `2` 
+-   拥有读取权限，记为 `4` 
+
+这又给我们带来四种组合：
+
+-   `0` 代表无权限
+-   `1` 代表可以执行
+-   `2` 代表可以写入
+-   `3` 代表可以写入和执行
+-   `4` 代表可以读取
+-   `5` 代表可以读取和执行
+-   `6` 代表可以读取和写入
+-   `7` 代表可以读取、执行和写入
+
+我们使用三组数字，来同时设置所有 3 个用户身份的全部权限：
 
 ```
 chmod 777 filename

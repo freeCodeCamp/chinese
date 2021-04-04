@@ -8,7 +8,17 @@ jobs:
         steps:
             - name: Does the issue need to be converted to markdown
               run: |
-                  ./script/toMarkdown/DoIssueContinue.sh "${{ github.event.issue.title }}" "${{ github.event.issue.body }}"
+                  if [ "${{ github.event.issue.body }}" ]; then
+                    if [[ "${{ github.event.issue.title }}" =~ ^\[Auto\]* ]]; then
+                      :
+                    else
+                      echo "This issue does not need to generate a markdown file." 1>&2
+                      exit 1;
+                    fi;
+                  else
+                    echo "The description of the issue is empty." 1>&2
+                    exit 1;
+                  fi;
               shell: bash
             - name: Checkout
               uses: actions/checkout@v2

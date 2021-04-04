@@ -26,7 +26,7 @@ const {
     const req = await nodeFetch(URL, options);
     const htmlString = await req.text();
     const articleText = await HTMLtoMarkdown(htmlString);
-    fsPromises.writeFile(Path_ArticleFolder_R + articleFileName, articleText);
+    await fsPromises.writeFile(Path_ArticleFolder_R + articleFileName, articleText);
   } catch(e) {
     console.log("ERR:", e);
     process.exitCode = 1;

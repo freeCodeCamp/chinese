@@ -3,7 +3,8 @@ const nodeFetch = require("node-fetch");
 const fsPromises = require('fs/promises');
 const {
   hostURL_EN,
-  options
+  options,
+  Path_ArticleFolder_R
 } = require("./toMarkdownConstant.js");
 const {
   getThirdParam,

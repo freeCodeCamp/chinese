@@ -1,5 +1,6 @@
 const https = require('https');
 const nodeFetch = require("node-fetch");
+const fsPromises = require('fs/promises');
 const {
   hostURL_EN,
   options
@@ -8,8 +9,7 @@ const {
   getThirdParam,
   getRouteAddr,
   haveRouterAddrmd,
-  HTMLtoMarkdown,
-  writetoFile
+  HTMLtoMarkdown
 } = require("./toMarkdownSubfun.js");
 
 // cd ./news-translation
@@ -26,7 +26,7 @@ const {
     const req = await nodeFetch(URL, options);
     const htmlString = await req.text();
     const articleText = await HTMLtoMarkdown(htmlString);
-    writetoFile(articleText, articleFileName);
+    fsPromises.writeFile(Path_ArticleFolder_R + articleFileName, articleText);
   } catch(e) {
     console.log("ERR:", e);
     process.exitCode = 1;

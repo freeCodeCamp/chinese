@@ -6,7 +6,7 @@
 
 根据 freeCodeCamp 的 news 站点上文章的网页自动生成 Markdown 文件。可以 [在 GitHub 上提交 issue](#submit-an-issue) 或 [在本地执行脚本](#execute-script-locally) 自动生成 Markdown 文件。
 
-**项目结构**
+#### 项目结构
  
 ```
 news-translate
@@ -27,35 +27,34 @@ news-translate
 |-node_modules
 │
 |-script
-│  |-toMarkdown
-│      index.js  /** 脚本的入口文件 **/
-│      README.md
-│      toMarkdownConstant.js  /** 配置文件 **/
-│      toMarkdownSubfun.js  /** 函数库文件 **/
-│
-|-test
-    |-unit
-        toMarkdownSubfun.test.js  /** 测试文件 **/
+   |-toMarkdown
+      |  index.js  /** 脚本的入口文件 **/
+      |  README.md
+      |  toMarkdownConstant.js  /** 配置文件 **/
+      |  toMarkdownSubfun.js  /** 函数库文件 **/
+      |
+      |-__tests__
+         toMarkdownSubfun.test.js  /** 测试文件 **/
 ```
-<hr />
+---
 
 <h3 id="submit-an-issue">通过 GitHub 的 issue 运行脚本</h3>
 
 **Issues** >> **New issue** >> 翻译任务(自动爬取) **Get stared** >> 填写 issue 的标题和描述 >> **Submit new issue**
 
-**标题（Title）：**
+#### 标题（Title）：
 ```
 [Auto]（此处替换为翻译的中文标题）
 ```
 翻译后的原文标题替换 `（此处替换为翻译的中文标题）`。
-**描述（Description）：**
+#### 描述（Description）：
 ```
 - 原文网址：[原文标题](https://www.freecodecamp.org/news/路由/)
 - MarkDown 文件：https://github.com/freeCodeCamp/news-translation/edit/master/chinese/articles/文章文件名称.md
 ```
 用原文标题替换 `原文标题`，用文章的路由地址替换 `路由` 和 `文章文件名称`。
 
-**示例：**
+#### 示例：
 如果文章的 URL 是 `https://www.freecodecamp.org/news/Example/`，标题是 `Example Title`。
 
 *标题（Title）：*
@@ -75,7 +74,7 @@ news-translate
 
 如果脚本执行**失败**，您需要确认问题，解决问题，然后根据前面的步骤发布**新 issue**。 [*常见错误消息*](#CommonErrorMessages) 和 [*Actions 的日志*](https://github.com/freeCodeCamp/news-translation/actions) 将为您提供一些可靠的提示。如果找不到问题或不知道如何解决，请在 [issue](https://github.com/freeCodeCamp/news-translation/issues/new) 中留言或与我们联系 [freeCodeCamp 聊天室](https://chat.freecodecamp.org/channel/zhongwen)。
 
-<hr />
+---
 
 <h3 id="execute-script-locally">本地运行脚本</h3>
 
@@ -97,14 +96,14 @@ node ./script/toMarkdown/index.js <String>
 
 **提示：** `<String>` 必须包含以下形式的字符串：`- 原文网址：[原文标题](https://www.freecodecamp.org/news/路由/)`。需要用文章的原始标题替换 `原文标题`，需要用文章的路由替换 `路由`。如果该形式的字符串出现多次，则只会匹配第一个。
 
-**示例：**
+#### 示例：
 如果文章的 URL 是 `https://www.freecodecamp.org/news/Example/`，标题是 `Example Title`。
 你可以运行：
 ```shell
 node ./script/toMarkdown/index.js "- 原文网址：[Example Title](https://www.freecodecamp.org/news/Example/)"
 ```
 
-<hr />
+---
 
 <h3 id="CommonErrorMessages">常见错误消息</h3>
 
@@ -122,6 +121,8 @@ node ./script/toMarkdown/index.js "- 原文网址：[Example Title](https://www.
   在 `./chinese/articles` 文件夹下有一个同名文件。请确认该文章之前是否已被其他人翻译或处于待翻译状态。如果不是上述情况，请在 [issue](https://github.com/freeCodeCamp/news-translation/issues/new) 中留言，或通过 [freeCodeCamp 聊天室](https://chat.freecodecamp.org/channel/zhongwen)联系我们。
 - **The DOM of the website has been modified, or there is a problem with loading, please confirm.**
   网站的 DOM 结构可能更改，并且脚本需要修改。请在 [issue](https://github.com/freeCodeCamp/news-translation/issues/new) 中留言，或通过 [freeCodeCamp 聊天室](https://chat.freecodecamp.org/channel/zhongwen)联系我们。
+
+---
 
 ### 许可证
 

@@ -5,14 +5,13 @@ const {
   Err_NoPath,
   Err_DOMWrong,
   options
-} = require("./../../script/toMarkdown/toMarkdownConstant.js");
+} = require("../toMarkdownConstant.js");
 const {
   getThirdParam,
   getRouteAddr,
   haveRouterAddrmd,
-  HTMLtoMarkdown,
-  writetoFile
-} = require("./../../script/toMarkdown/toMarkdownSubfun.js");
+  HTMLtoMarkdown
+} = require("../toMarkdownSubfun.js");
 
 describe("1. test getThirdParam(Get the URL of the article from command line parameters.)", () => {
   test("1-1. Number string.", () => {

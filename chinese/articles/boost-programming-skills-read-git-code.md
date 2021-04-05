@@ -7,35 +7,34 @@
 
 These days there are plenty of trendy ways to improve your programming skills and knowledge, including:
 
+现今有很多时新的方法可以帮您提升编程知识和技能，其中包括：
+
 *   Taking a free or paid online programming course
+*   参加一个免费或付费的在线编程课程
 *   Reading a programming book
+*   读一本编程书
 *   Picking a personal project and hacking away to learn as you code
+*   选择一个个人项目并在编写代码时动手学习
 *   Following along with an online tutorial project
+*   跟随一个在线教程项目去学
 *   Keeping up to date with relevant programming blogs
-
-现今有很多时新的方法可以帮你提升编程知识和技能，其中包括：
-
-* 参加免费或付费的在线编程课程
-* 读一本编程书
-* 挑选一个个人项目并不停地敲代码去学习
-* 跟随一个在线教程项目去学
-* 和相关的一些编程博客保持同步
+*   多关注一些编程博客的最新动态并保持同步
 
 Each of these methods will appeal to different people, and each one has elements that will definitely make you a better programmer. If you are an intermediate or advanced coder, it is almost certain that you've tried each of these methods at least once.
 
-这些方法中的每一个都会吸引不同的人，并且每个方法里都有一些东西肯定会使您成为一个更好的程序员。如果您是一个中级或高级程序员，那几乎可以肯定这里的每种方法您已经尝试了至少一次。
+这些方法中的每一个都会吸引不同的人，并且每个方法里都有些东西肯定会使您成为一个更好的程序员。如果您是一个中级或高级程序员，那几乎可以肯定这里的每种方法您已经尝试了至少一次。
 
 However, there is another method that the vast majority of developers overlook, which is a shame in my opinion because it has so much to offer. This method is to **learn by reading, analyzing, and understanding existing, high\-quality codebases!**
 
-但是，绝大多数开发人员都忽略了另一种方法，我认为这很可惜，因为它可以学到很多东西。这种方法就是**通过阅读，分析和理解现有的高质量代码库来学习！**
+但是，绝大多数开发人员都忽略了另一种方法，我认为这很可惜，因为它可以学到很多东西。这种方法就是 **通过阅读，分析和理解现有的高质量代码库来学习！**
 
 We are lucky to live in a time where good code is often accessible for free via high\-quality, free\-and\-open\-source (FOSS) projects. And it takes less than a minute to clone down copies of these codebases to our local machines from sites like GitHub or BitBucket.
 
-我们很幸运地生活在这样一个时代，通常可以通过高质量，免费和开源（FOSS）项目免费访问优质代码。 而且，从 GitHub 或 BitBucket 之类的网站上将这些代码库的副本克隆到我们的本地计算机上，只需不到一分钟的时间。
+我们很幸运地生活在这样一个经常可以通过高质量，免费和开源（FOSS）项目免费访问优质代码的时代， 而且从 GitHub 或 BitBucket 之类的网站上将这些代码库的副本克隆到我们的本地计算机上，只需不到一分钟的时间。
 
 Furthermore, modern version control systems like Git allow us to view the code at any point in its development history. Clearly there is a wealth of information right in front of our noses!
 
-此外，像 Git 这样的现代版本控制系统使我们可以查看在其开发历史中任意节点的代码。显然，我们眼前有大量丰富的信息！
+此外，像 Git 这样的现代版本控制系统让我们可以查看软件开发历史中任意节点的代码。显然，我们眼前能看到大量丰富的信息！
 
 In this article, we will discuss the original version of Git's code in order to highlight how reading existing code can help boost your coding skills.
 
@@ -43,7 +42,7 @@ In this article, we will discuss the original version of Git's code in order to 
 
 We will cover why it's worth learning about Git's code, how to access Git's code, and review some related C programming concepts.
 
-我们将介绍有关 Git 的代码为什么值得学习，如何访问 Git 的代码以及回顾一些相关的C编程概念。
+我们将介绍为什么有关 Git 的代码值得学习，如何访问 Git 的代码以及回顾一些相关的C编程概念。
 
 We will provide an overview of Git's original codebase structure and learn how Git's core functionalities are implemented in code.
 
@@ -71,15 +70,15 @@ Git's codebase is an incredible resource for intermediate developers to further 
 
 3) Git's code is written in the **C** programming language, which offers a great opportunity for developers to branch out into an important language they may not have used much before.
 
-3) Git 的代码是用 **C** 语言编写的，这为开发人员提供了一个很好的机会，使他们可以了解一种以前可能很少使用的重要语言。
+3) Git 的代码是用 **C** 语言编写的，这给开发人员提供了一个很好的机会，使他们可以了解一种以前可能很少使用的重要语言。
 
 4) Git makes use of many important programming concepts, including *content\-addressable databases, file compression/inflation, hash functions, caching,* and a *simple* *data model*. Git's code illustrates how these concepts can be implemented in a real project.
 
-4) Git 利用了许多重要的编程概念，包括*内容寻址数据库，文件压缩/解压缩，哈希函数，缓存*和*简单的数据模型*。 Git 的代码说明了如何在实际项目中实现这些概念。
+4) Git 利用了许多重要的编程概念，包括 *内容寻址数据库，文件压缩/解压缩，哈希函数，缓存* 和 *简单数据模型* 。 Git 的代码说明了如何在实际项目中实现这些概念。
 
 5) Git's code and design are *elegant.* It is a great example of a functional, minimalist codebase that accomplishes its goal in a clear, effective way.
 
-5) Git 的代码和设计非常*优雅*。这是一个功能强大的极简代码库的一个很好的示例，它可以清晰有效地实现其目标。
+5) Git 的代码和设计非常 *优雅* 。这是一个功能强大的极简代码库的一个很好的示例，它可以清晰有效地实现其目标。
 
 6) Git's initial commit is small in size – it is made up of only 10 files, containing less than 1,000 total lines of code. This is very small compared to most other projects and is very manageable to understand in a reasonable amount of time.
 
@@ -98,18 +97,16 @@ Now, let's take a look at how to access the original version of Git's code.
 
 The official copy of Git's codebase is hosted in [this public GitHub repository](https://github.com/git/git). However, I created a fork of Git's codebase and added extensive inline comments to the source code, to help developers easily read through it line by line.
 
-Git 代码库的正式副本托管在[GitHub公开
-
-](https://github.com/git/git)中。但是，我创建了 Git 代码库的一个分支，并在源码中添加了大量的行内注释以帮助开发人员轻松地逐行阅读它。
+Git 代码库的正式副本托管在[GitHub 公开仓库](https://github.com/git/git)中。但是，我创建了 Git 代码库的一个分支，并在源码中添加了大量的行内注释以帮助开发人员轻松地逐行阅读它。
 
 Since I worked off of the very first commit in Git's history, I named this project **Baby Git**. The Baby Git codebase is located in [this public BitBucket repository](https://bitbucket.org/jacobstopak/baby-git).
 
-由于这是我 Git 历史上的第一次工作，所以我把项目命名为 **Baby Git**。Baby Git 的代码库托管在[BitBucket 的公开仓库](https://bitbucket.org/jacobstopak/baby-git)中。
+由于这是我 Git 历史上的第一次工作，所以我把项目命名为 **Baby Git**。Baby Git 的代码库托管在[BitBucket 公开仓库](https://bitbucket.org/jacobstopak/baby-git)中。
 
 
 I recommend cloning the Baby Git codebase to your local machine by running the following command in your terminal:
 
-我建议通过在终端中运行以下命令将 Baby Git 代码库 clone 到您本地计算机：
+我建议通过在终端中运行以下命令将 Baby Git 代码库克隆到您本地计算机：
 
 ```sh
 git clone https://bitbucket.org/jacobstopak/baby-git.git
@@ -129,7 +126,7 @@ Browse into the new `git` directory by running the command `cd git`. Feel free t
 
 You'll quickly notice that in the current version of Git – the version currently checked out in your working directory – that there are **a lot** of files containing a lot of very long and complicated\-looking code.
 
-您会很快注意到，在您工作目录 checked out 的 Git 当前版本中，有**大量**的文件包含许多非常长而且看起来很复杂的代码。
+您会很快注意到，在您工作目录检出的 Git 当前版本代码中，有**大量**的文件并且包含许多非常长看起来很复杂的代码。
 
 Clearly this current version of Git is too big for a single developer to realistically get acquainted with in a reasonable amount of time.
 
@@ -137,7 +134,7 @@ Clearly this current version of Git is too big for a single developer to realist
 
 Let's simplify things by checking out Git's initial commit, using the command:
 
-让我们使用以下命令 checked out Git 的初始提交来简化这事情：
+让我们使用以下命令检出 Git 的初始提交代码来简化这事情：
 
 ```sh
 git log --reverse
@@ -149,7 +146,7 @@ This shows a list of Git's commit log in reverse order, starting from Git's init
 
 Check out the contents of this commit into the working directory by running the command:
 
-通过运行命令以下命令把第一次提交的内容 check out 到您的工作目录：
+通过运行命令以下命令把第一次提交的内容检出到您的工作目录：
 
 ```sh
 git checkout e83c5163316f89bfbde7d9ab23ca2e25604af290
@@ -169,19 +166,19 @@ Now run the `ls` command to list these files, and note that there are only 10 th
 
 ## Important C Concepts that Will Help You Understand Git's Code
 
-## 一些重要的 C 概念将帮助您理解 Git 的代码
+## 一些重要的 C 语言概念将帮助您理解 Git 的代码
 
 Before diving straight into Git's code, it helps to get a refresher on a few C programming concepts that appear throughout the codebase.
 
-在深入研究 Git 的代码之前，它有助于重新了解整个代码库中出现的一些 C 编程概念。
+在深入研究 Git 的代码之前，它有助于重新了解整个代码库中出现的一些 C 语言编程概念。
 
 ### C Header Files
 
-### C 头文件
+### C 语言头文件
 
 A C header file is a code file ending in the `.h` extension. Header files are used to store variables, functions, and other C objects that a developer wants to include in multiple `.c` source code files using the `#include "headerFile.h"` directive.
 
-C 头文件是一个扩展名为 `.h` 的代码文件。头文件用于存储开发人员希望使用 `#include "headerFile.h"` 指令将其包括在多个 `.c` 源代码文件中的变量，函数和其他 C 对象。
+C 语言头文件是一个扩展名为 `.h` 的代码文件。头文件用于存储开发人员希望使用 `#include "headerFile.h"` 指令将其包括在多个 `.c` 源代码文件中的变量，函数和其他 C 语言对象。
 
 If you're familiar with importing files in Python or Java, this is a comparable procedure.
 
@@ -189,11 +186,11 @@ If you're familiar with importing files in Python or Java, this is a comparable 
 
 ### C Function Prototypes (or Function Signatures)
 
-### C 函数原型（或函数签名）
+### C 语言函数原型（或函数签名）
 
 A function prototype or signature tells the C compiler information about a function definition – the function's name, number of argument, types of arguments, and return type – without providing a function body. They help the C compiler identify function properties in situations where the function body appears after the function is called.
 
-一个函数原型或签名告诉 C 编译器有关函数定义的信息 —— 函数名称、参数数量、参数类型和返回值类型，但无需提供函数体。它们帮助 C 编译器在有函数体的情况下调用函数识别函数属性。
+一个函数原型或签名告诉 C 语言编译器有关函数定义的信息 —— 函数名称、参数数量、参数类型和返回值类型，但无需提供函数体。它们帮助 C 语言编译器在有函数体的情况下调用函数识别函数属性。
 
 Here is an example of a function prototype:
 
@@ -209,7 +206,7 @@ int multiplyNumbers(int a, int b);
 
 A macro in C is essentially a rudimentary variable that is processed before code compilation in a C program. Macros are created using the `#define` directive, such as:
 
-C 语言中的宏本质上是一个基本变量，在 C 程序中的代码编译之前先进行处理。宏是使用 `#define` 指令创建的，例如：
+C 语言中的宏本质上是一个基本变量，在 C 语言程序中的代码编译之前先进行处理。宏是使用 `#define` 指令创建的，例如：
 
 ```c
 #define TESTMACRO asdf
@@ -329,12 +326,10 @@ We'll discuss `Makefile` and `cache.h` first because they are a bit special.
 `Makefile` is a build file that contains a set of commands used to build the other source code files into executables.
 
 `Makefile` 是一个构建文件，其中包含一组用于将其他源代码文件构建为可执行文件的命令。
-Makefile是一个构建文件，
 
 When you run the command `make all` from the command line, the Makefile will compile the source code files and spit out the relevant executables for Git's commands. If you're interested, I wrote an [in\-depth guide on Git's makefile](https://initialcommit.com/blog/Learn-Git-Makefile).
 
-
-当您从命令行运行 `make all` 命令时，这个 `Makefile` 文件将会编译源代码并生成 Git 命令的相关可执行文件。如果你感兴趣，我写了一份 [深入了解 Git 的 makefile 的指南](https://initialcommit.com/blog/Learn-Git-Makefile)。
+当您从命令行运行 `make all` 命令时，这个 `Makefile` 文件将会编译源代码并生成 Git 命令的相关可执行文件。如果您感兴趣，我写了一份 [深入了解 Git 构建的指南](https://initialcommit.com/blog/Learn-Git-Makefile)。
 
 **Note:** If you actually want to compile Git's code locally, which I recommend you do, you'll need to use my Baby Git version of the code mentioned above. The reason is that I made some tweaks to allow Git's original code to compile on modern operating systems.
 
@@ -423,7 +418,7 @@ In this section, we'll discuss the following programming concepts that Git uses 
 
 File compression, also know as deflation, is used for storage and performance efficiency in Git. This reduces the size of the files that Git stores on disk and increases the speed of data retrieval when Git needs to transfer these files across a network.
 
-文件压缩（也称为缩放）用于 Git 中的存储和提高性能。当 Git 需要通过网络传输这些文件时，这会减小 Git 存储在磁盘上的文件的大小并提高数据检索的速度。
+文件压缩（也称为缩放）用于 Git 中的存储和提高性能。当 Git 需要通过网络传输这些文件时，这会减小 Git 存储在磁盘上文件的大小并提高数据检索的速度。
 
 This is important since Git's local and network operations need to be as fast as possible. As a part of the data retrieval process, Git decompresses, or inflates, the files to obtain their content.
 
@@ -501,7 +496,7 @@ As developers, we make changes to the code files in the codebase we are working 
 
 The output to the hash function is called a **hash***.* The hash is a hexadecimal value 40 characters in length, such as `47a013e660d408619d894b20806b1d5086aab03b`.
 
-哈希函数的输出称为一个 **哈希值**值。哈希值是一个长度为 40 个字符的十六进制值数，例如 `47a013e660d408619d894b20806b1d5086aab03b`。
+哈希函数的输出称为一个 **哈希值**。哈希值是一个长度为 40 个字符的十六进制值数，例如 `47a013e660d408619d894b20806b1d5086aab03b`。
 
 
 ![Git hash function](https://initialcommit.com/img/initialcommit/figure5.png "Git hash function")
@@ -519,7 +514,7 @@ Git 将这些哈希用于各种目的，我们将在以下各节中看到它们�
 
 Git uses a simple data model – a structured set of related objects – to implement its functionality. These objects are the nuggets of information that enable Git to track changes to the files of a codebase. The three types of objects that Git uses are:
 
-Git 使用一个简单的数据模型（结构化的相关对象集）来实现其功能。 这些对象是信息块，这些信息块使 Git 能够跟踪对代码库文件的更改。 Git 使用的三种对象类型是：
+Git 使用简单数据模型（一个结构化的相关对象集）来实现其功能。 这些对象是信息块，这些信息块使 Git 能够跟踪对代码库文件的更改。 Git 使用的三种对象类型是：
 
 *   Blob
 *   数据对象
@@ -586,7 +581,7 @@ Like blobs and trees, Git identifies the commit by hashing its content using the
 
 You probably know Git's staging area as the place your changed files go after using the `git add` command, patiently waiting to be committed using `git commit`. But what exactly is the staging area?
 
-您可能知道 Git 的暂存区就是使用 `git add` 命令后更改文件耐心地等待使用 `git commit` 提交所在的位置，但是暂存区到底是什么呢？
+您可能知道 Git 的暂存区就是使用 `git add` 命令后更改文件等待使用 `git commit` 提交所在的位置，但是暂存区到底是什么呢？
 
 In Git's original version, the staging area is called the **current directory cache**. The current directory cache is just a binary file stored in the repository at the path `.dircache/index`.
 
@@ -636,7 +631,7 @@ In this article, we discussed the original version of Git's code in order to hig
 
 We covered the reasons Git is a great project to learn from in this way, how to access Git's code, and reviewed some related C programming concepts. Finally, we provided an overview of Git's original codebase structure and dove into some concepts that Git's code relies on.
 
-我们介绍了以这种方式学习为什么 Git 是一个的好项目的原因，如何访问 Git 的代码，并回顾了一些相关的 C 编程概念。 最后，我们提供了 Git 原始代码库结构的概述，并深入探讨了 Git 代码所依赖的一些概念。
+我们介绍了以这种方式学习为什么 Git 是一个的好项目的原因，以及如何访问 Git 的代码，并回顾了一些相关的 C 语言编程概念。 最后，我们提供了 Git 原始代码库结构的概述，并深入探讨了 Git 代码所依赖的一些概念。
 
 ## Next Steps
 
@@ -644,11 +639,11 @@ We covered the reasons Git is a great project to learn from in this way, how to 
 
 If you're interested in learning more about Git's code, [we wrote a guidebook you can check out here](https://initialcommit.com/store/baby-git-guidebook-for-developers). This book dives into Git's original C code in detail and directly explains how the code works.
 
-如果您有兴趣了解有关 Git 代码的更多信息，[我们编写了一本指南，您可以在此处查看](https://initialcommit.com/store/baby-git-guidebook-for-developers)。 这本书详细介绍了 Git 的原始 C 代码，并直接说明了该代码是怎么工作的。
+如果您有兴趣了解有关 Git 代码的更多信息，[我们编写了一本指南，您可以在此处查看](https://initialcommit.com/store/baby-git-guidebook-for-developers)。 这本书详细介绍了 Git 的原始 C 语言代码，并直接说明了该代码是怎么工作的。
 
 I encourage any and all developers to explore the open\-source community to try and find quality projects that interest you. Those projects will have codebases that you can clone down in a matter of minutes.
 
-我鼓励所有开发人员探索开源社区去尝试找到您感兴趣的高质量项目，这些项目将具有您可以在几分钟内克隆的代码库。
+我鼓励所有开发人员探索开源社区去尝试找到您感兴趣的高质量项目，这些项目的代码库您可以在几分钟内克隆完。
 
 Take some time to poke around the code, and you might learn something you never expected to find.
 

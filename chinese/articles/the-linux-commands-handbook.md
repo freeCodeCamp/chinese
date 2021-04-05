@@ -1206,48 +1206,48 @@ chmod 644 filename
 
 ## Linux 中的 `umask` 命令
 
-When you create a file, you don't have to decide permissions up front. Permissions have defaults.
+创建一个文件时，不需要事先决定权限。权限有默认值。
 
-Those defaults can be controlled and modified using the `umask` command.
+这些默认值可以使用 `umask` 命令来控制和修改。
 
-Typing `umask` with no arguments will show you the current umask, in this case `0022`:
+不带参数输入 `umask` ，它会显示当前的 umask 值，本例中为 `0022`：
 
 ![Screen-Shot-2020-09-04-at-09.04.19](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-09.04.19.png)
 
-What does `0022` mean? That's an octal value that represents the permissions.
+`0022` 是什么意思？ 这是一个代表权限的八进制数值。
 
-Another common value is `0002`.
+另一个常见的数值是 `0002`.
 
-Use `umask -S` to see a human-readable notation:
+使用 `umask -S` 查看更具可读性的注释：
 
 ![Screen-Shot-2020-09-04-at-09.08.18](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-09.08.18.png)  
-In this case, the user (`u`), owner of the file, has read, write and execution permissions on files.
+在这里，用户（`u`），也就是文件的所有者，拥有对文件的读取、写入和执行的权限。
 
-Other users belonging to the same group (`g`) have read and execution permission, same as all the other users (`o`).
+和所有者位于同一用户组的用户（`g`）拥有对文件的读取和执行权限，除此之外的其他用户（`o`）也一样。
 
-In the numeric notation, we typically change the last 3 digits.
+在数字符号中，我们通常会改变最后3位数字。
 
-Here's a list that gives a meaning to the number:
+以下列表给出了这些数字的含义：
 
--   `0` read, write, execute
--   `1` read and write
--   `2` read and execute
--   `3` read only
--   `4` write and execute
--   `5` write only
--   `6` execute only
--   `7` no permissions
+-   `0` 代表读取、写入与执行
+-   `1` 代表读取与写入
+-   `2` 代表读取与执行
+-   `3` 代表只读
+-   `4` 代表写入与执行
+-   `5` 代表仅写入
+-   `6` 代表仅执行
+-   `7` 代表没有权限
 
-Note that this numeric notation differs from the one we use in `chmod`.
+注意，这里的数字含义与前述 `chmod` 命令中用到的并不同。
 
-We can set a new value for the mask setting the value in numeric format:
+可以用数值格式，为权限掩码设置一个新的值：
 
 ```
 umask 002
 
 ```
 
-or you can change a specific role's permission:
+也可以更改特定角色的权限：
 
 ```
 umask g+r
@@ -1256,89 +1256,86 @@ umask g+r
 
 ## Linux 中的 `du` 命令
 
-The `du` command will calculate the size of a directory as a whole:
+`du` 命令会计算整个目录的大小：
 
 ```
 du
-
 ```
 
 ![Screen-Shot-2020-09-04-at-08.11.30](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-08.11.30.png)
 
-The `32` number here is a value expressed in bytes.
+这里的 `32` 是一个单位为字节（Byte）的值。
 
-Running `du *` will calculate the size of each file individually:
+运行 `du *` 会单独计算每个文件的大小：
 
 ![Screen-Shot-2020-09-04-at-08.12.35](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-08.12.35.png)
 
-You can set `du` to display values in MegaBytes using `du -m`, and GigaBytes using `du -g`.
+你也可以执行 `du -m` 或 `du -g`，以兆字节（MB）或千兆字节（GB）为单位显示文件大小。
 
-The `-h` option will show a human-readable notation for sizes, adapting to the size:
+使用 `-h` 选项，会显示更为可读的，适应大小的数值：
 
 ![Screen-Shot-2020-09-04-at-08.14.40](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-08.14.40.png)
 
-Adding the `-a` option will print the size of each file in the directories, too:
+添加 `-a` 选项同样会输出文件夹中每一个文件的大小：
 
 ![Screen-Shot-2020-09-04-at-08.20.12](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-08.20.12.png)
 
-A handy thing is to sort the directories by size:
+一个方便的做法是按大小对目录进行排序：
 
 ```
 du -h <directory> | sort -nr
-
 ```
 
-and then piping to `head` to only get the first 10 results:
+然后通过管道输出到 `head` ，从而仅获取前 10 个结果：
 
 ![Screen-Shot-2020-09-04-at-08.22.25](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-08.22.25.png)
 
 ## Linux 中的 `df` 命令
 
-The `df` command is used to get disk usage information.
+`df` 命令用来获取磁盘的使用情况信息。
 
-Its basic form will print information about the volumes mounted:
+它的基础形式会输出当前挂载的磁盘卷信息：
 
 ![Screen-Shot-2020-09-08-at-08.40.39](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-08-at-08.40.39.png)
 
-Using the `-h` option (`df -h`) will show those values in a human-readable format:
+使用 `-h` 参数 （`df -h`）会将值以更为可读的方式显示：
 
 ![Screen-Shot-2020-09-08-at-08.40.50](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-08-at-08.40.50.png)
 
-You can also specify a file or directory name to get information about the specific volume it lives on:
+你也可以指定任一文件或目录名，以获取其所在的特定卷的信息：
 
 ![Screen-Shot-2020-09-08-at-08.41.27](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-08-at-08.41.27.png)
 
 ## Linux 中的 `basename` 命令
 
-Suppose you have a path to a file, for example `/Users/flavio/test.txt`.
+假设有一个文件路径，比如 `/Users/flavio/test.txt`。
 
-`Running`
+执行
 
 ```
 basename /Users/flavio/test.txt
-
 ```
 
-will return the `text.txt` string:
+会返回 `text.txt` 字符串：
 
 ![Screen-Shot-2020-09-10-at-08.27.52](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-10-at-08.27.52.png)
 
-If you run `basename` on a path string that points to a directory, you will get the last segment of the path. In this example, `/Users/flavio` is a directory:
+如果你在任一指向目录的路径字符串上执行 `basename` ，你会得到路径的最后一节。在以下例子中，`/Users/flavio` 是一个目录：
 
 ![Screen-Shot-2020-09-10-at-08.28.11](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-10-at-08.28.11.png)
 
 ## Linux 中的 `dirname` 命令
 
-Suppose you have a path to a file, for example `/Users/flavio/test.txt`.
+假设有一个文件路径，比如 `/Users/flavio/test.txt`。
 
-Running
+执行
 
 ```
 dirname /Users/flavio/test.txt
 
 ```
 
-will return the `/Users/flavio` string:
+会返回 `/Users/flavio` 字符串：
 
 ![Screen-Shot-2020-09-10-at-08.31.08-1](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-10-at-08.31.08-1.png)
 

@@ -1,6 +1,6 @@
 > -   原文地址：[How to Beat Coder's Block – Five Tips to Help You Stay Productive](https://www.freecodecamp.org/news/how-to-beat-coders-block-and-stay-productive/)
 > -   原文作者：Andrej Kovacevic
-> -   译者：
+> -   译者：weiqinglai
 > -   校对者：
 
 ![How to Beat Coder's Block – Five Tips to Help You Stay Productive](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/coders-block-tips.jpg)

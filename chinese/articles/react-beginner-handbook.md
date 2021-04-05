@@ -376,49 +376,67 @@ That's the beauty of React components and JSX: we can compose an application int
 在下一节中，我们会学习 JSX 与 THML 的区别。
 With some differences, as we'll see in the next section.
 
-## The difference between JSX and HTML
+## JSX 与 HTML 的区别
 
 JSX kind of looks like HTML, but it's not.
+JSX 看起来像 HTML，但事实并不是这样。
 
 In this section I want to introduce you to some of the most important things you need to keep in mind when using JSX.
+在这节课程里，我会介绍一些在使用 JSX 时，你必须要知道的东西。
 
 One of the differences might be quite obvious if you looked at the  `App`  component JSX: there's a strange attribute called  `className`.
+如果你查看过 `App` 组件的 JSX 代码，会发现一个很明显的不同点：组件中有一个名为 `className` 的属性。
 
 In HTML we use the  `class`  attribute. It's probably the most widely used attribute, for various reasons. One of those reasons is CSS. The  `class`  attribute allows us to style HTML elements easily, and CSS frameworks like Tailwind put this attribute to the center of the CSS user interface design process.
+在 HTML 中，我们使用的是 `class` 属性。由于各种原因，这是一个使用最广泛的属性。其中一个原因是 CSS。`class` 属性使我们可以轻松的设置 HTML 样式，并且 Tailwind 之类的 CSS 框架将这个属性放在 CSS 用户界面设计过程的核心。 
 
 But there's a problem. We are writing this UI code in a JavaScript file, and  `class`  in the JavaScript programming language is a reserved word. This means we can't use this reserved word as we want. It serves a specific purpose (defining JavaScript classes) and the React creators had to choose a different name for it.
+但是这里有个问题。我们正在 JavaScript 文件中编写 UI 代码，而 `class` 是 JavaScript 语言的保留字。这意味着我们不能使用这个保留字。它有特殊的作用（定义 JavaScript 类），由于这个原因 React 的作者们不得不选择一个其他的名称。
 
 That's how we ended up with  `className`  instead of  `class`.
+这就是我们为什么用 `className` 替代了 `class`。
 
 You need to remember this especially when you're copy/pasting some existing HTML.
+当你将一些现有的 HTML 代码改为 JSX 时，需要牢记这点。
 
 React will try its best to make sure things don't break, but it will raise a lot of warnings in the Developer Tools:
+React 会
 
 ![className](https://www.freecodecamp.org/news/content/images/2020/11/className.png)
 
 This is not the only HTML feature that suffers from this problem, but it's the most common one.
 
+
 Another big difference between JSX and HTML is that HTML is very  _relaxed_, we can say. Even if you have an error in the syntax, or you close the wrong tag, or you have a mismatch, the browser will try its best to interpret the HTML without breaking.
+JSX 与 HTML 的另一个非常大的不同点是 HTML 是很 _relaxed_ 。当你有语法错误，或者标签没有正确闭合或者没有匹配，浏览器不会中断，而是尽可能的解析 HTML。
 
 It's one of the core features of the Web. It is very forgiving.
+这是 Web 的一个核心特点。它非常宽松。
 
 JSX is not forgiving. If you forget to close a tag, you will have a clear error message:
+JSX 并不宽松。如果你忘记将一个标签闭合，你将会得到一条错误信息：
 
 ![jsx-error](https://www.freecodecamp.org/news/content/images/2020/11/jsx-error.png)
 
 > React usually gives very good and informative error messages that point you in the right direction to fix the problem.
+> React 会给出非常友好的错误信息，提示你解决问题的正确方向。
 
 Another big difference between JSX and HTML is that in JSX we can embed JavaScript.
+第三个 JSX 与 HTML 的不同点在于：在 JSX 中，我们可以内嵌 JavaScript。
 
 Let's talk about this in the next section.
+我们会在下节讨论这点。
 
-## Embedding JavaScript in JSX
+## 在 JSX 嵌入 JavaScript
 
 One of the best features of React is that we can easily embed JavaScript into JSX.
+React 的一个最好特点就是我们可以非常容易的在 JSX 中嵌入 JavaScript。
 
 Other frontend frameworks, for example Angular and Vue, have their own specific ways to print JavaScript values in the template, or perform things like loops.
+其他的前端框架，如 Angular 和 Vue，有自己的特殊方法来在模板中显示 JavaScript 值，或者执行类似循环的操作。
 
 React doesn't add new things. Instead, it lets us use JavaScript in the JSX, by using curly brackets.
+React 并没有添加类似的新特性。相反的，通过使用大括号，React 容许我们在 JSX 中使用 JavaScript。
 
 The first example of this that I will show you comes directly from the  `App`  component we've studied so far.
 

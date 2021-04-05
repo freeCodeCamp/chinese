@@ -1,45 +1,45 @@
 {
-    "name": "news-translation",
-    "version": "1.0.0",
-    "license": "CC-BY-NC-SA-4.0",
-    "homepage": "https://github.com/freeCodeCamp/news-translation#readme",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/freeCodeCamp/news-translation.git"
-    },
-    "bugs": {
-        "url": "https://github.com/freeCodeCamp/news-translation/issues"
-    },
-    "dependencies": {
-        "cheerio": "^1.0.0-rc.5",
-        "node-fetch": "^2.6.1",
-        "turndown": "^7.0.0",
-        "turndown-plugin-gfm": "^1.0.2"
-    },
-    "devDependencies": {
-        "husky": "^4.3.0",
-        "jest": "^26.6.3",
-        "lint-md-cli": "^0.1.2",
-        "lint-staged": "^10.4.0",
-        "prettier": "^2.1.2"
-    },
-    "prettier": {
-        "singleQuote": true,
-        "tabWidth": 4
-    },
-    "lint-staged": {
-        "*.{json,yml}": "prettier --write",
-        "*.md": "lint-md --fix"
-    },
-    "scripts": {
-        "lint": "lint-md chinese/**/*.md",
-        "format": "lint-md chinese/**/*.md --fix",
-        "test": "lint-staged",
-        "jest": "jest"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm test"
-        }
+  "name": "news-translation",
+  "version": "1.0.0",
+  "license": "CC-BY-NC-SA-4.0",
+  "homepage": "https://github.com/freeCodeCamp/news-translation#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freeCodeCamp/news-translation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/freeCodeCamp/news-translation/issues"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "node-fetch": "^2.6.1",
+    "turndown": "^7.0.0",
+    "turndown-plugin-gfm": "^1.0.2"
+  },
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "jest": "^26.6.3",
+    "lint-md-cli": "^0.1.2",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "none"
+  },
+  "lint-staged": {
+    "*.{json,yml,js}": "prettier --write",
+    "*.md": "lint-md --fix"
+  },
+  "scripts": {
+    "lint": "lint-md chinese/**/*.md",
+    "format": "lint-md chinese/**/*.md --fix",
+    "test": "lint-staged",
+    "jest": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
     }
+  }
 }

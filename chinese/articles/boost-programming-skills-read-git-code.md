@@ -26,7 +26,7 @@ Each of these methods will appeal to different people, and each one has elements
 
 However, there is another method that the vast majority of developers overlook, which is a shame in my opinion because it has so much to offer. This method is to **learn by reading, analyzing, and understanding existing, high\-quality codebases!**
 
-但是，绝大多数开发人员都忽略了另一种方法，我认为这很可惜，因为它可以学到很多东西。这种方法就是 **通过阅读，分析和理解现有的高质量代码库来学习！**
+但是，绝大多数开发人员都忽略了另一种方法，我认为这很可惜，因为它可以学到很多东西。这种方法就是 **通过阅读、分析和理解现有的高质量代码库来学习！**
 
 We are lucky to live in a time where good code is often accessible for free via high\-quality, free\-and\-open\-source (FOSS) projects. And it takes less than a minute to clone down copies of these codebases to our local machines from sites like GitHub or BitBucket.
 
@@ -42,7 +42,7 @@ In this article, we will discuss the original version of Git's code in order to 
 
 We will cover why it's worth learning about Git's code, how to access Git's code, and review some related C programming concepts.
 
-我们将介绍为什么有关 Git 的代码值得学习，如何访问 Git 的代码以及回顾一些相关的C编程概念。
+我们将介绍为什么有关 Git 的代码值得学习，如何访问 Git 的代码以及回顾一些相关的 C 语言编程概念。
 
 We will provide an overview of Git's original codebase structure and learn how Git's core functionalities are implemented in code.
 
@@ -74,11 +74,11 @@ Git's codebase is an incredible resource for intermediate developers to further 
 
 4) Git makes use of many important programming concepts, including *content\-addressable databases, file compression/inflation, hash functions, caching,* and a *simple* *data model*. Git's code illustrates how these concepts can be implemented in a real project.
 
-4) Git 利用了许多重要的编程概念，包括 *内容寻址数据库，文件压缩/解压缩，哈希函数，缓存* 和 *简单数据模型* 。 Git 的代码说明了如何在实际项目中实现这些概念。
+4) Git 利用了许多重要的编程概念，包括 *内容寻址数据库、文件压缩/解压缩、哈希函数、缓存* 和 *简单数据模型* 。 Git 的代码说明了如何在实际项目中实现这些概念。
 
 5) Git's code and design are *elegant.* It is a great example of a functional, minimalist codebase that accomplishes its goal in a clear, effective way.
 
-5) Git 的代码和设计非常 *优雅* 。这是一个功能强大的极简代码库的一个很好的示例，它可以清晰有效地实现其目标。
+5) Git 的代码和设计非常*优雅*。这是一个功能强大的极简代码库的一个很好的示例，它可以清晰有效地实现其目标。
 
 6) Git's initial commit is small in size – it is made up of only 10 files, containing less than 1,000 total lines of code. This is very small compared to most other projects and is very manageable to understand in a reasonable amount of time.
 
@@ -97,11 +97,11 @@ Now, let's take a look at how to access the original version of Git's code.
 
 The official copy of Git's codebase is hosted in [this public GitHub repository](https://github.com/git/git). However, I created a fork of Git's codebase and added extensive inline comments to the source code, to help developers easily read through it line by line.
 
-Git 代码库的正式副本托管在[GitHub 公开仓库](https://github.com/git/git)中。但是，我创建了 Git 代码库的一个分支，并在源码中添加了大量的行内注释以帮助开发人员轻松地逐行阅读它。
+Git 代码库的正式副本托管在 [GitHub 公开仓库](https://github.com/git/git) 中。但是，我创建了 Git 代码库的一个分支，并在源码中添加了大量的行内注释以帮助开发人员轻松地逐行阅读它。
 
 Since I worked off of the very first commit in Git's history, I named this project **Baby Git**. The Baby Git codebase is located in [this public BitBucket repository](https://bitbucket.org/jacobstopak/baby-git).
 
-由于这是我 Git 历史上的第一次工作，所以我把项目命名为 **Baby Git**。Baby Git 的代码库托管在[BitBucket 公开仓库](https://bitbucket.org/jacobstopak/baby-git)中。
+由于这是我 Git 历史上的第一次工作，所以我把项目命名为 **Baby Git**。Baby Git 的代码库托管在 [BitBucket 公开仓库](https://bitbucket.org/jacobstopak/baby-git) 中。
 
 
 I recommend cloning the Baby Git codebase to your local machine by running the following command in your terminal:
@@ -154,11 +154,11 @@ git checkout e83c5163316f89bfbde7d9ab23ca2e25604af290
 
 This [puts Git into a *detached head state*](https://initialcommit.com/blog/what-is-git-head) and places Git's original code files into the working directory.
 
-这会让 [Git 进入 *分离头指针状态*](https://initialcommit.com/blog/what-is-git-head)，并把 Git 的源代码检出到您的工作目录。
+这会让 [Git 进入 *分离头指针状态*](https://initialcommit.com/blog/what-is-git-head) ，并把 Git 的源代码检出到您的工作目录。
 
 Now run the `ls` command to list these files, and note that there are only 10 that actually contain code! (The 11th is just a README). Understanding the code in these files is totally manageable for an intermediate developer!
 
-现在运行 'ls' 命令列出所有文件，注意里面只有 10 个文件真正包含代码（第 11 个只是自述文件）。对于中级开发人员来说理解这些文件中的代码是完全可预期的！
+现在运行 `ls` 命令列出所有文件，注意里面只有 10 个文件真正包含代码（第 11 个只是自述文件）。对于中级开发人员来说理解这些文件中的代码是完全可预期的！
 
 **Note:** If you're using my Baby Git repository, you'll want to run the command `git checkout master` to abandon the detached head and move back to the tip of the master branch. This will enable you to see all the inline comments describing how Git's code works line by line!
 
@@ -282,7 +282,7 @@ A pointer is a memory address of a variable – it is the memory address at whic
 
 A pointer to an existing variable can be obtained by using the `&` symbol, and stored in a pointer variable declared with the `*` symbol:
 
-可以使用 `＆` 符号获取指向现有变量的指针，并将其存储在以 `*` 符号声明的指针变量中：
+可以使用 `&` 符号获取指向现有变量的指针，并将其存储在以 `*` 符号声明的指针变量中：
 
 ```c
 int age = 21;
@@ -454,6 +454,8 @@ inflateInit(z_stream);
 
 The following `zlib` functions are used to perform the actual deflation and inflation operations:
 
+下面的 `zlib` 库函数用于执行实际的压缩和解压缩操作
+
 ```c
 /*
  * Compresses as much data as possible and stops
@@ -506,7 +508,7 @@ Source: https://initialcommit.com/blog/Learn\-Git\-Guidebook\-For\-Developers\-C
 
 Git uses these hashes for various purposes that we will see in the following sections.
 
-Git 将这些哈希用于各种目的，我们将在以下各节中看到它们。
+Git 将这些哈希值用于各种目的，我们将在以下各节中看到它们。
 
 ### Objects
 
@@ -557,7 +559,7 @@ For example, if two changed files are added using the `update-cache` command, a 
 
 What Git does next is very interesting, so pay attention. Git uses **the content of the tree itself** as input to the SHA\-1 hash function, which generates a 40 character hash. This hash is used to identify the tree object, and Git saves this in the same special folder that blobs are saved in – the object database we'll touch on shortly.
 
-Git 接下来要做的事情非常有趣，因此请注意， Git 使用**树本身的内容**作为 SHA-1 哈希函数的输入生成 40 个字符的哈希。该哈希用于标识树对象，Git 将其保存在与保存数据对象相同的特殊文件夹，即我们将在稍后讨论的对象数据库中。
+Git 接下来要做的事情非常有趣，因此请注意， Git 使用 **树本身的内容** 作为 SHA-1 哈希函数的输入生成 40 个字符的哈希。该哈希用于标识树对象，Git 将其保存在与保存数据对象相同的特殊文件夹，即我们将在稍后讨论的对象数据库中。
 
 #### Commit
 
@@ -599,7 +601,7 @@ It is called a **cache** because it is just a temporary storage location for the
 
 At that point the `index` file is simply removed to make room for new changes to be staged.
 
-这时候，只是删除了index文件，为新更改暂存腾出空间。
+这时候，只是删除了 `index` 文件，为新更改暂存腾出空间。
 
 ### Content Addressable Database (Object Database)
 
@@ -611,7 +613,7 @@ The object database is Git's primary storage location. This is where all the obj
 
 When Git creates objects through operations such as `update-cache`, `write-tree`, and `commit-tree`, (the predecessors of `git add` and `git commit`), these objects are compressed, hashed, and stored in the object database.
 
-当 Git 通过诸如 `update-cache`，`write-tree` 和 `commit-tree'（`git add` 和 `git commit` 的前身）之类的操作创建对象时，这些对象将被压缩，再进行哈希，然后存储在对象数据库中。
+当 Git 通过诸如 `update-cache`，`write-tree` 和 `commit-tree`（`git add` 和 `git commit` 的前身）之类的操作创建对象时，这些对象将被压缩，再进行哈希，然后存储在对象数据库中。
 
 The name of each object is the hash of its content, hence why the object database is also called a **content addressable database***.*  Each piece of content (blob, tree, or commit) is stored and retrieved based on an identifier generated from the content itself.
 

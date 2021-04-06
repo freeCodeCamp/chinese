@@ -439,8 +439,10 @@ React doesn't add new things. Instead, it lets us use JavaScript in the JSX, by 
 React 并没有添加类似的新特性。相反的，通过使用大括号，React 容许我们在 JSX 中使用 JavaScript。
 
 The first example of this that I will show you comes directly from the  `App`  component we've studied so far.
+我向你展示的第一个示例，来自于我们前面学习过的 `App` 组件。
 
 We import the  `logo`  SVG file using
+我们可以使用下面的方法导入 `logo` SVG 文件：
 
 ```js
 import logo from './logo.svg'
@@ -448,6 +450,7 @@ import logo from './logo.svg'
 ```
 
 and then in the JSX we assign this SVG file to the  `src`  attribute of an  `img`  tag:
+然后在 JSX 中我们将这个 SVG 文件赋值给 `img` 标签的 `src` 属性。
 
 ```js
 <img src={logo} class="App-logo" alt="logo" />
@@ -455,6 +458,7 @@ and then in the JSX we assign this SVG file to the  `src`  attribute of an  `img
 ```
 
 Let's do another example. Suppose the  `App`  component has a variable called  `message`:
+我们来展示另一个示例。假设 `App` 组件有一个变量，名为 `message`：
 
 ```js
 function App() {
@@ -465,12 +469,15 @@ function App() {
 ```
 
 We can print this value in the JSX by adding  `{message}`  anywhere in the JSX.
+我们可以通过在 JSX 的任意位置添加 `{message}`，来在 JSX 中显示这个变量的值。
 
 Inside the curly brackets  `{ }`  we can add any JavaScript statement, but  _just one_  statement for every curly bracket block.
+我们可以在 `{ }` 中添加任何 Javscript 语句，但是每对大括号中只能有 _一个_ 语句，并且这个语句必须有返回值。
 
 And the statement must return something.
 
 For example this is a common statement you will find in JSX. We have a ternary operator where we define a condition (`message === 'Hello!'`), and we print one value if the condition is true, or another value (the content of  `message`  in this case) if the condition is false:
+如下所示，这是一个在 JSX 中非常常见的语句。我们有一个三元运算符，并在其中定义了一个条件语句（`message === 'Hello!'`），当条件为真时，我们输出一个值（`The message was "Hello!"`）；条件为假时，输出另一个值（当前示例中为变量 `message` 的值）：
 
 ```js
 {

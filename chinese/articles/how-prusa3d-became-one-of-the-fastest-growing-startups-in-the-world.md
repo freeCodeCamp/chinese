@@ -13,7 +13,7 @@ Today, I’m going to show you exactly how Prusa3D became one of the fastest-gro
 
 Josef Prusa, Prusa Research’s founder, is a superstar in the 3D printers industry.
 
-You might have already heard about him but if you haven’t…
+You might have already heard about him but if you haven’t……
 
 -   Prusa Research was founded as a one-man startup in 2012 by Josef Prusa.
 -   His goal with Prusa Research was to create a kind of Thermomix, Europe's favourite all-in-one, easy-to-use kitchen appliance, for 3D printing. He wanted to make a 3D printer that was easy enough that anyone could use it, with guidance on steps and materials.

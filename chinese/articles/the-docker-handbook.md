@@ -144,7 +144,7 @@ If you're looking for the complete and stable version of the book, then freeCode
 
 The Docker Handbook
 
-The concept of containerization itself is pretty old, but the emergence of the Docker Engine \[https://docs.docker.com/get-started/overview/#docker-engine\] in2013 has made it much easier to containerize your applications. According to the Stack Overflow Developer Survey - 2020\[https://insights.stackoverflow.com/survey/2020#overview…
+The concept of containerization itself is pretty old, but the emergence of the Docker Engine \[https://docs.docker.com/get-started/overview/#docker-engine\] in2013 has made it much easier to containerize your applications. According to the Stack Overflow Developer Survey - 2020\[https://insights.stackoverflow.com/survey/2020#overview……
 
 ![](https://www.freecodecamp.org/news/favicon.png)Farhan Hasin ChowdhuryfreeCodeCamp.org
 
@@ -1305,7 +1305,7 @@ As you can see, the code inside the `Dockerfile` reflects the seven steps I talk
 -   The `RUN` instruction installs standard packages necessary for building NGINX from source.
 -   The `COPY` instruction here is something new. This instruction is responsible for copying the the `nginx-1.19.2.tar.gz` file inside the image. The generic syntax for the `COPY` instruction is `COPY <source> <destination>` where source is in your local filesystem and the destination is inside your image. The `.` as the destination means the working directory inside the image which is by default `/` unless set otherwise.
 -   The second `RUN` instruction here extracts the contents from the archive using `tar` and gets rid of it afterwards.
--   The archive file contains a directory called `nginx-1.19.2` containing the source code. So on the next step, you'll have to `cd` inside that directory and perform the build process. You can read the [How to Install Software from Source Code… and Remove it Afterwards](https://itsfoss.com/install-software-from-source-code/) article to learn more on the topic.
+-   The archive file contains a directory called `nginx-1.19.2` containing the source code. So on the next step, you'll have to `cd` inside that directory and perform the build process. You can read the [How to Install Software from Source Code…… and Remove it Afterwards](https://itsfoss.com/install-software-from-source-code/) article to learn more on the topic.
 -   Once the build and installation is complete, you remove the `nginx-1.19.2` directory using `rm` command.
 -   On the final step you start NGINX in single process mode just like you did before.
 

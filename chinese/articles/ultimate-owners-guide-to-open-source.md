@@ -67,7 +67,7 @@ As you can imagine, one of the main reasons for opening something to the wider a
 
 At the moment of writing this article, Wikipedia [has](https://en.wikipedia.org/wiki/Wikipedia:Wikipedians) 37,899,499 registered accounts of which 134,022 are actively editing.
 
-Just think of it… ****134,022 active collaborators.**** Oh, and it [has 6M content pages](https://en.wikipedia.org/wiki/Special:Statistics)!
+Just think of it…… ****134,022 active collaborators.**** Oh, and it [has 6M content pages](https://en.wikipedia.org/wiki/Special:Statistics)!
 
 Would the numbers have been the same if Nupedia didn’t move to an open source model? I highly doubt it.
 
@@ -158,7 +158,7 @@ First you have to separate this code from the rest of your code base.
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/idigomnotoya-refactoring.jpg)
 
-…which will eventually mean that all the code that is going to be opened will reside in a separate directory.
+……which will eventually mean that all the code that is going to be opened will reside in a separate directory.
 
 ### Make the code generic
 
@@ -519,7 +519,7 @@ Remember: it’s vital to appreciate your contributors’ work. If someone just 
 
 If someone created a PR that doesn’t meet your high standards — thank them. Thank them and ask politely to make code changes/write tests/add documentation and so on. Give them a link to one of your PRs for reference or provide them with a link to the contribution guide.
 
-A constructive and positive conversation will give those contributors additional incentive to continue their work. Or it won’t…
+A constructive and positive conversation will give those contributors additional incentive to continue their work. Or it won’t……
 
 #### Quality Versus Quantity
 
@@ -801,7 +801,7 @@ You’ll learn about version notations, breaking changes, back\-ports, and more.
 
 Let’s see what Wikipedia has to say about software versioning.
 
-> ******Software upgrade versioning**** is the process of assigning either unique *version names* or unique *version numbers* to unique states of [computer software](https://en.wikipedia.org/wiki/Computer_software).**
+> ******Software upgrade versioning***is the process of assigning either unique *version names* or unique *version numbers* to unique states of [computer software](https://en.wikipedia.org/wiki/Computer_software).**
 >
 > **Modern computer software is often tracked using two different software versioning schemes — [internal version number](https://en.wikipedia.org/wiki/Software_versioning#Internal_version_numbers) that may be incremented many times in a single day, such as a revision control number, and a *release version* that typically changes far less often, such as semantic versioning[\[1\]](https://en.wikipedia.org/wiki/Software_versioning#cite_note-semver-1) or a [project code name](https://en.wikipedia.org/wiki/Code_name#Project_code_name).**
 
@@ -830,7 +830,7 @@ However, unlike standalone software products that don’t expose APIs, software 
 
 For example, if we used a simple numbers sequence for versioning, how would the user distinguish between a bug fix and a change that is breaking the existing API?
 
-The answer is…semantic versioning.
+The answer is……semantic versioning.
 
 ### What is Semantic Versioning?
 

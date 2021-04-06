@@ -84,78 +84,85 @@ For the rest of this article, we will share examples using Git in the terminal. 
 ### 如何在Git里准备你的项目文件夹
 
 To use Git we need to have a project that we want to version control. This can either be a new project or an existing project.
-
+去使用Git，我们得有一个需要进行版本控制的项目，这可以是一个新的项目，也可以是一个已经存在的项目。
 If it is a new project, then we need to create a new project folder (hint: we can use the `mkdir` command) and then navigate into that project folder in the terminal.
-
+如果它是一个新的项目，那么我们需要创建一个新的项目文件夹（小提示：可以使用`mkdir`命令），然后在命令行中导航进入这个文件夹。
 If we were to choose an existing project then we simply navigate into that project folder in the terminal.
-
+如果我们选择的是一个已经存在的项目，那么我们只需在命令行中简单导航进去就行了。
 In our example, we will create a new project folder called `novel`.
-
+在我们的例子里，会创建一个新的项目文件夹叫做`novel`。
 ![](https://www.freecodecamp.org/news/content/images/2021/03/1_GwzrUZNrMWv_MfZaoudhIg.png)
 
 Creating our project folder
+创建我们的项目文件夹。
 
 ### How to Create a Git Repository
-
+### 如何创建一个Git仓库
 Once we are in our project folder, in order to start using Git we will need to create (or initialize) a repository using the `git init` command.
-
+一旦我们进入了项目文件夹，为了开始使用Git，我们将使用`git init`命令去创建（或 初始化）一个仓库。
 Once we execute the command by typing it in the terminal and pressing enter, it will probably seem like not much happened. But don’t be deceived, Git can be sneaky sometimes and it carries out a lot of actions behind the scenes.
-
+一旦我们在命令行中，输入，按下回车，执行了这个指令，它可能看上去没有什么多大变化。但别被骗了！Git可以变得很卑鄙，它在这背后完成了大量动作。
 In order to see what Git did behind the scenes we will have to view our hidden files. Make sure to open your project folder in your file system. Then, if you are on a mac you can select **Command** + **Shift** + **Dot** in order to see hidden files in your file system. If you are on a windows OS then you can change your view settings in order to view hidden files in your file system.
-
+为了看看Git在这背后干了什么，我们来瞧瞧我们的隐藏文件。确保在你的文件系统中打开了项目文件夹，然后，如果是Mac用户，为了在你的文件系统中查看隐藏文件，可以选用**Command**+**Shift**+**.** ；如果你在Windows系统上，可以更改查看里的设置来查看隐藏文件夹。
 In order to view hidden files in the terminal we can use the command `ls -a`.
-
+为了在命令行中查看隐藏文件，我们可以使用命令`ls -a`。
 What we should see now is a `.git` folder inside our project folder. This is generally what represents our repository.
-
+在我们的项目文件夹里，应该看到一个`.git`文件夹。这就是通常意义上我们的仓库。
 ![](https://www.freecodecamp.org/news/content/images/2021/03/1_fUAS61mZR44MwNeWRpnm2w.png)
 
 Creating our repository
+创建我们的仓库。
 
 ### What is a Git Repository?
+### 什么是一个Git仓库？
 
 The **repository** is the `.git` folder inside our project folder. It will track all the changes made to the files in our project and record that history over time.
-
+在我们项目文件夹里，**仓库**就是`.git`文件夹。随着时间流逝，它会在我们项目里面，跟踪所有对文件的改动和记录这个历史。
 The repository that we have on our computer is referred to as the **local repository**.
-
+在我们电脑上拥有的这个仓库，指的是**本地仓库** 。
 Earlier we mentioned hosting services such as GitHub, GitLab and Bitbucket. When we push (in other words upload) our local repository to one of these services, then the repository that resides in these service in the cloud is referred to as the **remote repository**.
-
+先前，我们提到了像GitHub、GitLab和Bitbucket这样的托管服务。当我们push（也就是 上传）我们的本地文件夹到其中一家服务里面，那么归属在这些云上的服务里的仓库就被叫做**远程仓库** 。
 It is important to use a remote repository in order to be able to collaborate with other people as well as to backup our projects in case something happens to our laptop or computer.
-
+使用一个远程仓库是很重要的，目的是能够与其他人合作，也备份一下我们的项目，以防我们的笔记本或电脑会发生什么。
 ### How to Collaborate with Other Developers Using Git
-
+### 如何使用Git与其他开发者合作？
 If another developer wants to collaborate with us on our project then they can clone (or in other words download) the remote repository from the hosting service you uploaded it to their computer.
-
+如果其他开发者想在项目里与我们合作，那么他们可以在你所上传的托管服务中clone（克隆；也即是 下载）这个远程仓库到他们的电脑。
 This allows them to have the project on their computer as well. The project on their computer is then also referred to as a local repository.
-
+这允许他们在自己的电脑里也可以有这个项目。然后，在他们电脑里的这个项目也被指作本地仓库。
 In a project with multiple developers, each one has a local repository on their computer. And there is one remote repository that they all contribute to and they use it to share their work.
-
+在一个有多个开发者的项目里，每个人都在电脑上有一个本地仓库。而且这有一个所有人都可以贡献和分享他们工作的远程仓库。
 ![](https://www.freecodecamp.org/news/content/images/2021/03/1_BdQ8MuiohcSVp20163pEig.png)
 
 Remote repository and local repositories
+远程仓库和本地仓库
 
 ## How Does Git Track Changes?
+## Git 是如何跟踪改动的？
 
 In order to save different versions of our project in Git we will make commits.
-
+为了在Git中保存我们项目的不同版本，我们就使用commits（提交）。
 ### What is a Git Commit?
-
+### 什么是一个Git commit？
 A **commit** is a version of your project. It represents a standalone version of your project and has a reference to all the files and folders that are a part of that version.
-
+一个**commit**就是你项目的一个版本。它代表你项目的一个独立版本， 和有一个对所有文件和文件夹的参考引用，这些也是该版本的一部分。
 ### How Do I Make a Commit in Git?
-
+### 我该如何在Git中用个Commit？
 In order to understand how we make a commit we need to learn about three different spaces inside Git — the working directory, staging area, and commit history.
-
+为了理解我们如何使用Commit，我们得了解Git里面的三个不同空间——工作目录、暂存区和commit历史。
 The **working directory** is basically represented by the contents of our project folder (hint: a directory is the same thing as a folder). It is sort of like a work bench, where we can add, edit, and delete files in our project.
-
+**工作目录**基本上就是被我们项目文件夹里的内容代表了（提示：一个目录和一个文件夹是同一件事）。它有点像一个工作分支，在这分支上，我们可以在项目里增加、编辑和删除文件
 The staging area and commit history are part of our repository.
-
+暂存区和commit历史是我们仓库的一部分。
 The **staging area** is sort of like a rough draft space. It is where we can add updated versions of files or remove files in order to choose what we want to include in our next commit (version of our project). In the `.git` folder the staging area is represented by a file called `index`.
-
+这个**暂存区**就有点像一个粗略的打草稿的空间。在这，我们可以增加更新了的文件，或为了选中那些我们要在下一次commit中所包括的而移除些文件。
 And finally the **commit history** is basically where our commits live after they’ve been made. In the `.git` folder the commit history is represented by a folder called `objects`.
+最后，**commit 历史** 基本上就是我们提交的commits所存在的地方了。在`.git`文件夹里，一个叫做`objects`的文件夹代表了commit历史。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/1_V8i09C2Q9xK0u1y7531t3Q--1-.png)
 
 Working directory, repository, staging area, and commit history
+工作目录、仓库、暂存区和commit历史。
 
 ## A Typical Git Workflow
 

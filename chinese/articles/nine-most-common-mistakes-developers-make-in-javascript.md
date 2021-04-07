@@ -1,17 +1,17 @@
 > -   原文地址：[The Nine Most Common Mistakes Developers Make in JavaScript (and How to Fix Them) JavaScript 编程中最常见的 9 个错误](https://www.freecodecamp.org/news/nine-most-common-mistakes-developers-make-in-javascript/)
 > -   原文作者：Dipto Karmakar
-> -   译者：
+> -   译者：AlexWong258
 > -   校对者：
 
-JavaScript is a [scripting language][1] used in webpages to add functionality and interactivity. For a beginner coming from a different programming language, JavaScript is quite easy to understand. With a few tutorials, you should be able to get started with it right away.
+JavaScript 是一种在网页中使用的[脚本语言][1]，它可以增加网页的功能和交互性。对熟悉其他编程语言的编程者来说，JavaScript 很容易理解。跟着一些教程，你应该立刻就能够开始使用它。
 
-However, there are a few common mistakes that many beginner programmers make. In this article, we’ll address nine common mistakes (or bad practices) and their solutions to help you become a better JS developer.
+然而，很多初学者还是会犯一些常见的错误。为了帮助你成为一个更好的 JS 编程者，在本文中，我们将展示九种常见的错误（或不好的实践）及相应的解决办法。
 
-## Confusing the assignment (=) and equality (==, ===) operators
+## 混淆赋值运算符（=）和相等比较运算符（==, ===）
 
-Like its name implies, the [assignment operator][2](=) is used to assign values to variables. Developers often confuse it with the equality operator.
+从名字可以看出来，[赋值运算符][2]是用来给变量赋值的。开发者经常会把它和相等比较运算符混淆。
 
-Here's an example:
+来看一个例子：
 
 ```javascript
 const name = 'javascript';
@@ -21,11 +21,11 @@ if ((name = 'nodejs')) {
 // output - nodejs
 ```
 
-The name variable and ‘nodejs' string are not compared in this case. Instead, 'nodejs' is assigned to name and 'nodejs' is printed to the console.
+在这个例子里，它其实并没有比较变量 name 和字符串 'nodejs' ，而是把 'nodejs' 分配给了 name，因此最后打印出来的是 'nodejs'。
 
-In JavaScript, the double equal sign(==) and triple equal sign(===) are called comparison operators.
+在 JavaScript 里，双等号（==）和三个等号（===）都叫作比较运算符。
 
-For the code above, this is the appropriate way of comparing values:
+对上面的代码来说，下面才是比较两个值正确的做法：
 
 ```javascript
 const name = 'javascript';
@@ -40,11 +40,11 @@ if (name === 'nodejs') {
 // no output
 ```
 
-The difference between these comparison operators is that the double equals performs a **loose** comparison while triple equals performs a **strict** comparison.
+这两个比较运算符的区别是：两个等号是**宽松**的比较，三个等号是**严格**的比较。
 
-In a loose comparison, only the values are compared. But in a strict comparison, the values and datatype are compared.
+宽松的比较只比较值，严格比较会同时比较值和数据类型。
 
-The following code explains it better:
+下面的代码能解释得更清楚：
 
 ```javascript
 const number = '1';
@@ -54,17 +54,15 @@ console.log(number === 1);
 // false
 ```
 
-The variable number was assigned a string value of 1. When compared with 1 (of number type) using double equals, it returns true because both values are 1.
+给变量number分配一个字符串类型的值 1。如果用双等号去比较它和一个数值类型的 1 的话，会返回 true，因为两个值都是 1。但是如果用三个等号去比较，就会返回 false，因为两个值是不同的数据类型。
 
-But when compared using triple equals, it returns false because each value has a different data type.
+## 以为回调函数是同步的
 
-## Expecting callbacks to be synchronous
+回调函数可以用来处理 JavaScript 的异步操作，但是选用 Promise、async/await 更好，因为多重回调函数会导致[回调地狱][3]。
 
-Callbacks are one way that JavaScript handles asynchronous operations. Promises and async/await, however, are preferable methods for handling asynchronous operations because multiple callbacks lead to [callback hell][3].
+回调函数不是\***\*同步的\*\***，它是延时操作执行完毕后会被调用的一个函数。
 
-Callbacks are not \***\*synchronous\*\***. They are used as a function to be called after an operation when a delayed execution completes.
-
-An example is the global `setTimeout​` function which receives a callback function as its first argument and a duration (in ms) as a second argument like so:
+比如全局方法 "setTimeout" ，它第一个参数就是一个回调函数，第二个参数是等待的时间（以毫秒为单位），如下：
 
 ```javascript
 function callback() {
@@ -77,11 +75,11 @@ function callback() {
 ​​// I am the first
 ```
 
-After 300 milliseconds, the callback function is called. But before it completes, the rest of the code runs. This is the reason why the last console.log was run first.​​
+300毫秒之后，回调函数 callback 会被调用。但是在它完成前，剩下的代码会继续往下运行，所以 "I am the last" 会被先打印出来。
 
-A common mistake developers make is to misinterpret callbacks as synchronous. For example, a callback which returns a value that would be used for other operations.
+开发者常犯的一个错误是误以为回调函数是同步的。比如，他们会把回调函数的返回值用在其他操作上。
 
-​​Here's that mistake:
+例如下面这个错误：
 
 ```javascript
 function addTwoNumbers() {
@@ -96,9 +94,9 @@ function addTwoNumbers() {
 ​​// NaN
 ```
 
-`NaN`​ is the output because `secondNumber​` is undefined​. At the time of running `firstNumber + secondNumber`, `secondNumber` is still undefined because the `setTimeout` function would execute the callback after `200ms`.
+会输出 "NaN" ，因为 "secondNumber" 还未被赋值。在 "firstNumber + secondNumber" 被执行的时候，"secondNumber" 还没有被赋值，因为 "setTimeout" 函数要在 "200毫秒" 后才调用回调函数。
 
-The best way to approach this is to execute the rest of the code in the callback function:
+最好的解决办法是把剩下的代码放在回调函数里去执行：
 
 ```javascript
 function addTwoNumbers() {
@@ -113,11 +111,11 @@ function addTwoNumbers() {
 ​​// 15
 ```
 
-## Wrong references to `this​`
+## 对 "this" 错误的引用
 
-`this​` is a commonly [misunderstood concept][4] in JavaScript. To use `this`​ in JavaScript, you really need to understand how it works because it operates a bit differently compared to other languages.
+"this" 是 JavaScript 中经常[被误解的一个概念][4]。在 JavaScript 里使用 "this"，你得真正理解它的运行原理，因为它跟在别的语言中的表现稍微有些不同。
 
-Here's an example of a common mistake when using `this​`:
+下面是一个使用 "this" 时常犯的错误：
 
 ```javascript
 const obj = {
@@ -137,19 +135,19 @@ const obj = {
 ​​// undefined
 ```
 
-​​The first result is **`JavaScript`** because `this.name`​ correctly points to the object's name property. The second result is `**undefined**​` because `this​` has lost reference to the object's properties (including name).
+第一个输出结果是**"JavaScript"**，因为 "this.name" 正确地指向了对象的 name 属性。第二个输出结果是 "**undefined**​"，因为 "this" 已经失去了对对象的属性的引用（包括 name）。
 
-This is because `this​` depends on the object calling the function which it lives in. There is a `this`​ variable in every function but the object it points to is determined by the object calling it.
+这是因为 "this" 取决于调用了它所在函数的那个对象。每个函数都有一个 "this"，但是它指向哪个对象取决于哪个对象调用了该函数。
 
-The `this​` in `obj.printName()`​ points directly to `obj`​. The `this`​ in `obj.printNameIn2Secs​` points directly to `obj​`. But the `this​` in the callback function of `setTimeout​` does not point to any object because no object called it.
+"obj.printName()" 里的 "this" 直接指向 "obj"；"obj.printNameIn2Secs​" 里的 "this" 直接指向 "obj"；但是回调函数 "setTimeout" 里的 "this" 不指向任何对象，因为它没被任何对象调用。
 
-For an object to have called `setTimeout​`, something like `obj.setTimeout...​` would be executed. Since there is no object calling that function, the default object (which is `window`​) is used.
+如果有对象调用了 "setTimeout"，会执行类似 "obj.setTimeout..." 这样的语句。既然没有任何对象调用那个函数，就会使用默认对象（也就是 "window" ）。
 
-​​ `name`​ does not exist on window​, resulting in `undefined`​.
+window 里没有 "name"，所以就会导致 "undefined"。
 
-The best ways to go about retaining the reference to `this`​ in `setTimeout` is to use `bind​`, `call​`, `apply`​ or arrow functions (introduced in ES6). Unlike normal functions, arrow functions do not create their own `this`​.
+如果想在 setTimeout 函数里把引用保留在 "this" 里，最好的办法是使用 "bind"、"call"、"apply" 或者箭头函数（ES6中引入）。跟普通的函数不一样，箭头函数不创造它们自己的 "this"。
 
-​​So, the following will retain its reference to `this​`:​​
+所以，下面的代码就可以把引用保留在 "this" 里：
 
 ```javascript
 ​​const obj = {
@@ -169,9 +167,9 @@ The best ways to go about retaining the reference to `this`​ in `setTimeout` i
 ​​// JavaScript
 ```
 
-## Disregarding object mutability
+## 忽视对象的易变性
 
-Unlike primitive data types like string, number and so on, in JavaScript objects are reference data types. For example, in key-value objects:
+跟字符串类型、数值类型等这类简单类型不一样，JavaScript 的对象是引用数据类型。比如，在 key-value 型对象中：
 
 ```javascript
 const obj1 = {
@@ -183,9 +181,9 @@ const obj1 = {
 ​​// programming
 ```
 
-`obj1​` and `obj2`​ possess the same reference to the location in memory where the object is stored.
+"obj1" 和 "obj2" 持有相同的引用，都指向该对象在内存中的存储位置。
 
-In arrays:
+在数组中：
 
 ```javascript
 const arr1 = [2, 3, 4];
@@ -195,13 +193,13 @@ const arr1 = [2, 3, 4];
 ​​// ['javascript', 3, 4]
 ```
 
-A common mistake developers make is they disregard this nature of JavaScript and this results in unexpected errors. For instance, if 5 objects have the same reference to the same object, one of the object may interfere with the properties in a large-scale code base.
+开发者常犯的一个错误是他们会忽略 JavaScript 的本质，然后就会导致一些意想不到的错误。比如，如果五个对象持有同一个对象的引用，那么某个对象就可能会在大范围的代码库里干扰到一些属性。
 
-When this happens, any attempt to access the original properties would return undefined​ or possibly throw an error.
+当这种情况发生的时候，任何试图去访问原始属性的操作都会返回 undefined 或者可能会抛出异常。
 
-The best practice for this is to always create new references for new objects when you want to duplicate an object. To do this, the rest operator ( `...​` introduced in ES6) is a perfect solution.
+最好的实践是，当你想要复制对象的时候，永远给新的对象创建新的引用。剩余操作符（"..." ES6中引入）可以很好地做到这一点。
 
-​​For example, in key-value objects:
+比如，在 key-value 型对象中：
 
 ```javascript
 ​​const obj1 = {
@@ -215,7 +213,7 @@ The best practice for this is to always create new references for new objects wh
 ​​// 'JavaScript'
 ```
 
-​​In arrays:
+在数组中：
 
 ```javascript
 const arr1 = [2, 3, 4];
@@ -227,13 +225,13 @@ const arr1 = [2, 3, 4];
 ​​// [2, 3, 4]
 ```
 
-## Saving arrays and objects to browser storage
+## 在浏览器中存储数组和对象
 
-Sometimes, while working with JavaScript, developers may want to take advantage of the `localStorage` for saving values. But a common mistake is trying to save [arrays and objects][5] as-is in the `localStorage`. `localStorage` only accepts strings.
+有时候在使用 JavaScript 的时候，开发者可能会想使用 "localStorage" 来方便地存储数据。但一个常见的错误是试图按原样把[数组和对象][5]存到 "localStorage" 里。"localStorage" 只接受字符串。
 
-In an attempt to save objects, JavaScript converts the object to a string. The result is `[Object Object]` for objects and a comma-separated string for array elements.
+为了存储对象，JavaScript 会把对象转成字符串。结果就是 object 会变成 "[Object Object]"，数组元素会变成用逗号分隔的字符串。
 
-For example:
+例如：
 
 ```javascript
 ​​const obj = { name: "JavaScript" };
@@ -246,11 +244,11 @@ For example:
 ​​// JavaScript, programming, 45
 ```
 
-When objects are saved like this, it becomes difficult to access them. For the object example, accessing the object like `.name​` would result in an error. This is because `[Object Object]` is a string now, without a `​name` property.
+对象被这样存储起来的话，就会很难访问它们。以 object 为例，用 ".name" 的方式去访问 object 就会导致异常。这是因为 "[Object Object]" 已经是一个字符串了，它并没有 "name" 属性。
 
-A better way to save objects and arrays in local storage is by using `JSON.stringify​`(for converting objects to strings) and `JSON.parse​` (for converting strings to objects). This way, accessing the objects becomes easy.
+想要在 localStorage 里存储对象和数组，更好的方式是使用 "JSON.stringify"（用于把对象转换成字符串）和 "JSON.parse"（用于把字符串转换成对象）。这样就可以很容易地访问对象了。
 
-The correct version of the code above would be:
+上面的代码正确的版本应该是：
 
 ```javascript
 ​​const obj = { name: "JavaScript" };
@@ -265,9 +263,9 @@ The correct version of the code above would be:
 ​​// JavaScript, programming, 45
 ```
 
-## Not using default values
+## 不设默认值
 
-Setting [default values][6] in dynamic variables is a very good practice for preventing unexpected errors. Here's an example of a common mistake:​​
+给动态变量设置[默认值][6]是一个非常好的实践，可以预防发生意想不到的错误。下面是一个常见错误的例子：
 
 ```javascript
 function addTwoNumbers(a, b) {
@@ -277,7 +275,7 @@ function addTwoNumbers(a, b) {
 ​​// NaN
 ```
 
-The result is `NaN​` because `a`​ is `undefined`​ and `b`​ is `undefined​`. By using default values, errors like this can be prevented. For example:
+结果是 "NaN"，因为 a 是未赋值 "undefined"，b 也是未赋值 "undefined"。如果设置了默认值，就可以避免这样的错误。比如：
 
 ```javascript
 function addTwoNumbers(a, b) {
@@ -289,7 +287,7 @@ function addTwoNumbers(a, b) {
 ​​// 0
 ```
 
-Alternatively, the default value feature introduced in ES6 can be used like so:
+或者，可以像下面这样，使用ES6中引入的默认值特性：
 
 ```javascript
 ​​function addTwoNumbers(a = 0, b = 0) {
@@ -299,13 +297,13 @@ Alternatively, the default value feature introduced in ES6 can be used like so:
 ​​// 0
 ```
 
-This example, though minimal, emphasizes the importance of default values. Additionally, developers can provide errors or warning messages when expected values are not provided.
+这个例子虽然很小，但是强调了默认值的重要性。另外，当预期的值没有出现时，开发者可以提供错误信息或警告信息。
 
-## Improper naming of variables
+## 变量命名不够恰当
 
-Yes, developers still make this mistake. Naming is hard, but developers really have no choice. Comments are good practice in programming, and so is naming [variables][7].
+是的，开发者们还是会犯这种错误。命名很难，但开发者别无选择。恰当的[变量][7]命名和注释一样，都是编程中很好的实践。
 
-For example:
+例如：
 
 ```javascript
 function total(discount, p) {
@@ -313,7 +311,7 @@ function total(discount, p) {
 ​​}
 ```
 
-The variable `discount`​ is okay, but what about `p`​ or `total​`? Total of what? A better practice for above would be:
+变量 "discount" 可以，但是 "p" 和 "total" 呢？什么的 total（总和）？更好的实践应该是这样的：
 
 ```javascript
 function totalPrice(discount, price) {
@@ -321,11 +319,11 @@ function totalPrice(discount, price) {
 ​​}
 ```
 
-​​Properly naming variables is important because a developer may never be the only developer on a codebase at a particular time or in the future.
+恰当的变量命名很重要，因为这个代码库可能不会只有一个开发者。
 
-Naming variables properly will allow contributors easily understand how a project works.
+恰当的命名变量就可以让其他开发者很容易地理解这个项目的工作原理。
 
-## Check-up for boolean values
+## 检查 boolean 类型的值
 
 ```javascript
 const isRaining = false
@@ -337,11 +335,11 @@ const isRaining = false
 ​​// It is not raining
 ```
 
-It is common practice to check [boolean values][8] as seen in the above code. While this is okay, errors set in when testing some values.
+像上面的代码这样检查[boolean类型的值][8]是一种常见的编程习惯。虽然这样是可以的，但是在测试某些值的时候就会出现错误。
 
-​​In JavaScript, a loose comparison of `0`​ and `false`​ returns `true` and `1`​ and `true​` returns `true`. This means that if `isRaining`​ was `1`​, `isRaining`​ would be `true`.
+在 JavaScript 里，宽松地比较 "0" 和 "false" 的话，会返回 "true"；宽松地比较 "1" 和 "true" 的话，也返回 "true"。也就是说，如果 "isRaining" 是 "1"，"isRaining" 就会是 "true"。
 
-This is also a mistake often made in objects. For example:
+这也是在对象里经常犯的错误。比如：
 
 ```javascript
 const obj = {
@@ -356,20 +354,20 @@ const obj = {
 ​​// number property does not exist
 ```
 
-Although the `number`​ property exists, `obj.number`​ returns `0`, which is a `falsy` value, therefore the `else​` block is executed.
+虽然 "number" 属性存在，但 "obj.number" 返回 "0"，也就是返回 "false"，因此else代码块会被执行。
 
-So unless you're sure of the range of values that would be used, boolean values and properties in objects should be tested like this:
+所以，除非你很确定会出现的值的范围，不然 boolean 类型的值和对象属性应该这样来检查：
 
 ```javascript
 if(a === false)...
 if(object.hasOwnProperty(property))...
 ```
 
-## Confusing Addition and Concatenation
+## 混淆相加和拼接
 
-The plus sign `(+)` has two functions in JavaScript: addition and concatenation. Addition is for numbers and Concatenation is for strings. Some developers often misuse this operator.
+JavaScript 中的加号 "(+)" 有两个功能：相加和拼接。也就是数字的相加和字符串的拼接。一些开发者经常会误用这个操作符。
 
-For example:
+比如：
 
 ```javascript
 const num1 = 30;
@@ -386,13 +384,13 @@ const num1 = 30;
 ​​
 ```
 
-​​When adding strings and numbers, JavaScript converts the numbers to strings, and concatenates all values. For addition of numbers, a mathematical operation is performed.​​
+把字符串和数值相加时，JavaScript 会把数值转换成字符串，然后把值拼接在一起。数值和数值相加时，会进行数学的相加操作。
 
-## Conclusion
+## 总结
 
-There are, of course, more mistakes (some trivial, some serious) than the ones listed above. So just make sure you stay up to date with developments in the language.
+当然，除了上面列出来的这些，还有更多的错误（有些琐碎细微，有些严重）。所以确保你自己跟紧语言最新的发展。
 
-Studying and avoiding these mistakes will help you build better and more reliable web applications and tools.
+学习和避免这些错误可以帮助你开发出更好的、更可靠的 web 应用和工具。
 
 [1]: https://en.wikipedia.org/wiki/Scripting_language
 [2]: https://www.w3resource.com/javascript/operators/assignment-operator.php#:~:text=Assignment%20Operators,value%20of%20its%20right%20operand.&text=That%20is%2C%20a%20%3D%20b%20assigns,shown%20in%20the%20following%20table.

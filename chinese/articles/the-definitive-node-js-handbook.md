@@ -1207,19 +1207,35 @@ const args = require('minimist')(process.argv.slice(2))args['name'] //flavio
 
 ### Output to the command line using Node.js
 
+### 使用 Node.js 输出到命令行
+
 How to print to the command line console using Node.js, from the basic console.log to more complex scenarios
+
+如何使用 Node.js 打印到命令行控制台，从基本的 console.log 到更复杂的场景。
 
 #### Basic output using the console module
 
+#### 使用控制台模块的基本输出
+
 Node.js provides a `console` [module][70] which provides tons of very useful ways to interact with the command line.
+
+Node.js 提供一个 `console` [模块][70]，它提供了大量与命令行交互非常有用的方法。
 
 It is basically the same as the `console` object you find in the browser.
 
+它与你在浏览器中找到的 `console` 对象基本相同。
+
 The most basic and most used method is `console.log()`, which prints the string you pass to it to the console.
+
+最基本和最常用的方法是 `console.log()`，将传递给它的字符串打印到控制台。
 
 If you pass an object, it will render it as a string.
 
+如果你传递了一个对象，它将把它呈现为一个字符串。
+
 You can pass multiple variables to `console.log`, for example:
+
+你可以将多个变量传递给  `console.log`，例如：
 
 ```plain
 const x = 'x'const y = 'y'console.log(x, y)
@@ -1227,9 +1243,15 @@ const x = 'x'const y = 'y'console.log(x, y)
 
 and Node.js will print both.
 
+Node.js 将把两个都打印出来。
+
 We can also format pretty phrases by passing variables and a format specifier.
 
+我们还可以通过传递变量和格式说明符来格式化漂亮的短语。
+
 For example:
+
+例如：
 
 ```
 console.log('My %s has %d years', 'cat', 2)
@@ -1240,7 +1262,14 @@ console.log('My %s has %d years', 'cat', 2)
 -   `%f` format a variable as a floating point number
 -   `%O` used to print an object representation
 
+-   `%s` 将变量格式化为字符串
+-   `%d` 或 `%i` 将变量格式化为整数
+-   `%f` 将变量格式化为浮点数
+-   `%O` 用于打印对象表示
+
 Example:
+
+例如：
 
 ```plain
 console.log('%O', Number)
@@ -1248,63 +1277,128 @@ console.log('%O', Number)
 
 #### Clear the console
 
+#### 清理控制台
+
 `console.clear()` clears the console (the behavior might depend on the console used)
+
+`console.clear()` 清理控制台（行为可能取决于使用的控制台）
 
 #### Counting elements
 
+#### 计数元素
+
 `console.count()` is a handy method.
+
+`console.count()` 是一个灵活的方法。
 
 Take this code:
 
+使用以下代码：
+
 ```
-const x = 1const y = 2const z = 3console.count(  'The value of x is ' + x + ' and has been checked .. how many times?')console.count(  'The value of x is ' + x + ' and has been checked .. how many times?')console.count(  'The value of y is ' + y + ' and has been checked .. how many times?')
+const x = 1
+const y = 2
+const z = 3
+console.count(  'The value of x is ' + x + ' and has been checked .. how many times?')
+console.count(  'The value of x is ' + x + ' and has been checked .. how many times?')
+console.count(  'The value of y is ' + y + ' and has been checked .. how many times?')
 ```
 
 What happens is that `count` will count the number of times a string is printed, and print the count next to it.
 
+所要发生的是 `count` 将计算字符串打印次数，并打印旁边的计数。
+
 You can just count apples and oranges:
 
+你可以数苹果和橘子：
+
 ```
-const oranges = ['orange', 'orange']const apples = ['just one apple']oranges.forEach(fruit => {  console.count(fruit)})apples.forEach(fruit => {  console.count(fruit)})
+const oranges = ['orange', 'orange']
+const apples = ['just one apple']
+oranges.forEach(fruit => {
+  console.count(fruit)
+})
+apples.forEach(fruit => {
+  console.count(fruit)
+})
 ```
 
 #### Print the stack trace
+#### 打印堆栈跟踪
 
 There might be cases where it’s useful to print the call stack trace of a function, maybe to answer the question: “How did you reach that part of the code?”
 
+在某些情况下，打印函数的调用堆栈跟踪可能很有用，也许可以回答这样一个问题：“你是如何到达代码的那一部分的？”
+
 You can do so using `console.trace()`:
 
+你可以这样使用 `console.trace()`:
+
 ```
-const function2 = () => console.trace()const function1 = () => function2()function1()
+const function2 = () => console.trace()
+const function1 = () => function2()
+function1()
 ```
 
 This will print the stack trace. This is what’s printed if I try this in the Node REPL:
 
+这将要打印堆栈跟踪，如果我在 Node REPL 中尝试，就会打印这个。
+
 ```plain
-Trace    at function2 (repl:1:33)    at function1 (repl:1:25)    at repl:1:1    at ContextifyScript.Script.runInThisContext (vm.js:44:33)    at REPLServer.defaultEval (repl.js:239:29)    at bound (domain.js:301:14)    at REPLServer.runBound [as eval] (domain.js:314:12)    at REPLServer.onLine (repl.js:440:10)    at emitOne (events.js:120:20)    at REPLServer.emit (events.js:210:7)
+Trace
+    at function2 (repl:1:33)    
+    at function1 (repl:1:25)    
+    at repl:1:1    
+    at ContextifyScript.Script.runInThisContext (vm.js:44:33)    
+    at REPLServer.defaultEval (repl.js:239:29)    
+    at bound (domain.js:301:14)    
+    at REPLServer.runBound [as eval] (domain.js:314:12)    
+    at REPLServer.onLine (repl.js:440:10)    
+    at emitOne (events.js:120:20)    
+    at REPLServer.emit (events.js:210:7)
 ```
 
 #### Calculate the time spent
 
-You can easily calculate how much time a function takes to run, using `time()` and `timeEnd()`
+#### 计算花费的时间
 
+You can easily calculate how much time a function takes to run, using `time()` and `timeEnd()`
+你可以使用 `time()` 和 `timeEnd()` 轻松计算函数运行所需时间。
 ```
-const doSomething = () => console.log('test')const measureDoingSomething = () => {  console.time('doSomething()')  //do something, and measure the time it takes  doSomething()  console.timeEnd('doSomething()')}measureDoingSomething()
+const doSomething = () => console.log('test')
+const measureDoingSomething = () => {
+    console.time('doSomething()')  //do something, and measure the time it takes
+    doSomething()
+    console.timeEnd('doSomething()')
+}
+measureDoingSomething()
 ```
 
 #### stdout and stderr
 
 As we saw console.log is great for printing messages in the Console. This is what’s called the standard output, or `stdout`.
 
+如我们所见 console.log 非常适合在控制台中打印消息。这就是所谓的标准输出，或 `stdout`。
+
 `console.error` prints to the `stderr` stream.
+
+`console.error` 打印 `stderr` 流。
 
 It will not appear in the console, but it will appear in the error log.
 
+它不会出现在控制台中，但会出现在错误日志中。
+
 #### Color the output
+
+#### 为输出着色
 
 You can color the output of your text in the console by using escape sequences. An escape sequence is a set of characters that identifies a color.
 
+你可以使用转义符在控制台中为文本的输出着色。转义符是标识颜色的一组字符。
+
 Example:
+
+例如：
 
 ```
 console.log('\x1b[33m%s\x1b[0m', 'hi!')
@@ -1312,17 +1406,28 @@ console.log('\x1b[33m%s\x1b[0m', 'hi!')
 
 You can try that in the Node REPL, and it will print `hi!` in yellow.
 
+你可以在 Node REPL 中尝试，他将打印黄色的 `hi!`。
+
 However, this is the low-level way to do this. The simplest way to go about coloring the console output is by using a library. [Chalk][71] is such a library, and in addition to coloring it also helps with other styling facilities, like making text bold, italic or underlined.
+
+然而，这是一种低级的方法。为控制台输出着色最简单的方法是使用库。[Chalk][71] 就是这样一个库，除了着色之外，它还可以帮助其他样式设置，比如使文本加粗、斜体或下划线。
 
 You install it with `npm install chalk`, then you can use it:
 
+你可以使用 `npm install chalk` 安装它，然后可以使用它：
+
 ```plain
-const chalk = require('chalk')console.log(chalk.yellow('hi!'))
+const chalk = require('chalk')
+console.log(chalk.yellow('hi!'))
 ```
 
 Using `chalk.yellow` is much more convenient than trying to remember the escape codes, and the code is much more readable.
 
+使用 `chal.yellow` 比试图记住转移码方便得多，而且代码的可读性更高。
+
 Check the project link I posted above for more usage examples.
+
+查看我在上面发布的项目链接以获取更多的用法示例。
 
 #### Create a progress bar
 

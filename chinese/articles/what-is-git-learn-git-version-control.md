@@ -165,29 +165,29 @@ Working directory, repository, staging area, and commit history
 工作目录、仓库、暂存区和commit历史。
 
 ## A Typical Git Workflow
-
+## 一个典型的Git工作流
 ### Step 1 — Edit Files
-
+### 步骤一：编辑文件
 If you have a new project, you will create the very first file in your new project. In our `novel` project folder we will make a simple text file called `chapter1`. We can either do this using a text editor or directly in the terminal. In our example we do it directly in the terminal by typing `touch chapter1.txt`.
-
+如果你有一个新的项目，你会在新项目里创建第一个文件。在我们的`novel`项目文件夹里，做一个简单的文本文件叫做`chapter1`。我们可以用文本编辑器做这个，也可以在命令行直接做。此例子中，我们通过在命令行直接输入`touch chapter1.txt`来做。
 If you have an existing project then you will edit some of your existing files, add new files, or delete files.
-
+如果你有一个已存在的项目，你将编辑一些已存在的文件，增加新文件或删除文件。
 Next, we can use the `git status` command. This command will tell us the state of our working directory and staging area and will tell us if there are any differences between the two.
-
+接下来，我们使用`git status`命令。该命令会告诉我们，工作目录和暂存区的状态，也会告诉我们这两者是否有何不同。
 ![](https://www.freecodecamp.org/news/content/images/2021/03/1_jHl7OaAsZBBa-6fuyK8Esw.png)
 
 Adding a file to our project
-
+增加一个文件到我们的项目。
 In our example, we added just one new file to our new project. When we use the `git status` command, Git tells us that we have an untracked file in our working directory and that we need to use the `git add` command to include it in what will be committed. Which takes us to step 2.
-
+在我们的例子中，只加了一个新文件到我们的新项目中。当我们使用`git status`命令，Git告诉我们，工作目录中有一个未跟踪的文件，我们需要在要提交的地方用`git add`命令去包括它。这把我们带到了步骤二。
 ![](https://www.freecodecamp.org/news/content/images/2021/03/1_r3tL0x5-6x60uycPkIQxbg.png)
 
 Our file is in the working directory
-
+我们的文件在工作目录。
 ### Step 2 — Add Files to the Staging Area
-
+### 步骤二：增加文件到暂存区。
 We can use the `git add` command in order to add new or updated files to the staging area. If we decide we don’t want to include some of the files we changed in our next commit then we simply make sure not to add those particular files to the staging area.
-
+我们可以使用`git add`命令去增加或更新文件到暂存区。
 ![](https://www.freecodecamp.org/news/content/images/2021/03/updated.png)
 
 Adding a file to the staging area

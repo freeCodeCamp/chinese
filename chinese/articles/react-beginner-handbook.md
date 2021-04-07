@@ -472,7 +472,7 @@ We can print this value in the JSX by adding  `{message}`  anywhere in the JSX.
 我们可以通过在 JSX 的任意位置添加 `{message}`，来在 JSX 中显示这个变量的值。
 
 Inside the curly brackets  `{ }`  we can add any JavaScript statement, but  _just one_  statement for every curly bracket block.
-我们可以在 `{ }` 中添加任何 Javscript 语句，但是每对大括号中只能有 _一个_ 语句，并且这个语句必须有返回值。
+我们可以在 `{ }` 中添加任何 Javscript 语句，但是每对大括号中只能有 _一个_ 语句，并且这个语句必须是可求值的。
 
 And the statement must return something.
 
@@ -486,23 +486,26 @@ For example this is a common statement you will find in JSX. We have a ternary o
 
 ```
 
-## Managing state in React
+## 在 React 中管理 state
 
-Every React component can have its own  **state**.
+每一个 React 组件都可以有它自己的 **state**。
 
-What do we mean by  _state_? The state is the  **set of data that is managed by the component**.
+那么什么是 _state_ ？state 就是 **由组件管理的数据的集合**。
 
 Think about a form, for example. Each individual input element of the form is responsible for managing its state: what is written inside it.
+例如，对于表单来说，它的每一个独立的 input 元素都管理着它自己的 state：它的输入值。
 
 A button is responsible for knowing if it's being clicked, or not. If it's on focus.
+当一个按钮获得焦点时，它负责管理自己是否被点击。
 
 A link is responsible for knowing if the mouse is hovering over it.
+一个链接负责管理鼠标是否悬停在它上面。
 
-In React, or in any other components-based framework/library, all our applications are based on and make heavy use of components' state.
+在 React 或者其他组件化的框架、库中，我们所有的应用都是以大量使用 state 的组件为基础的。
 
-We manage state using the  `useState`  utility provided by React. It's technically a  **hook**  (you don't need to know the details of hooks right now, but that's what it is).
+我们使用由 React 提供的高效管理工具 `useState` 来管理 state。从技术上来说，它是个 **钩子** （这是事实，但是现在我们不需要知道钩子的详细信息）。
 
-You import  `useState`  from React in this way:
+你可以使用这种方法来从 React 中导入 `useState`：
 
 ```js
 import React, { useState } from 'react'

@@ -1431,23 +1431,43 @@ Check the project link I posted above for more usage examples.
 
 #### Create a progress bar
 
+#### 创建进度条
+
 [Progress][72] is an awesome package to create a progress bar in the console. Install it using `npm install progress`.
 
-This snippet creates a 10-step progress bar, and every 100 ms one step is completed. When the bar completes we clear the interval:
+[Progress][72] 是一个很棒的包，可以在控制台中创建进度条。使用 `npm install progress` 安装它。
+
+This snippet creates a 10-step progress bar, and every 100 ms one step is  completed. When the bar completes we clear the interval:
+
+这个片段创建了一个 10步的进度条，每 100 毫秒完成一步。当进度完成时，我们清除 interval：
 
 ```
 const ProgressBar = require('progress')
 ```
 
 ```
-const bar = new ProgressBar(':bar', { total: 10 })const timer = setInterval(() => {  bar.tick()  if (bar.complete) {    clearInterval(timer)  }}, 100)
+const bar = new ProgressBar(':bar', {
+    total: 10
+  })
+const timer = setInterval(() => {
+  bar.tick()
+  if (bar.complete) {
+    clearInterval(timer)
+  }
+}, 100)
 ```
 
 ### Accept input from the command line in Node.js
 
+### 在 Node.js 中接受来自命令行的输入
+
 How to make a Node.js CLI program interactive?
 
+如何使 Node.js CLI 程序具有交互性？
+
 Node since version 7 provides the `readline` [module][73] to perform exactly this: get input from a readable stream such as the `process.stdin` stream, which during the execution of a Node program is the terminal input, one line at a time.
+
+自从 7 版本以来的 Node 提供了 `readline` [模块][73]
 
 ```plain
 const readline = require('readline').createInterface({  input: process.stdin,  output: process.stdout})

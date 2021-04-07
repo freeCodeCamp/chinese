@@ -1,173 +1,171 @@
-> -   原文地址：[The Linux LS Command – How to List Files in a Directory + Option Flags](https://www.freecodecamp.org/news/the-linux-ls-command-how-to-list-files-in-a-directory-with-options/)
+> -   原文地址：[The Linux LS Command – How to List Files in a Directory + Option Flags Linux LS命令 – 如何列出目录中的文件 + 选项标志](https://www.freecodecamp.org/news/the-linux-ls-command-how-to-list-files-in-a-directory-with-options/)
 > -   原文作者：Bolaji Ayodeji
-> -   译者：
+> -   译者：ZhichengChen
 > -   校对者：
 
 ![The Linux LS Command – How to List Files in a Directory + Option Flags](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/article-banner-7.png)
 
-Since the creation of Unix in the 1970s, a lot of operating systems have used it as their foundation. Many of these operating systems failed, while others succeeded.
+自 1970 年代 Unix 发明以来，许多操作系统都以它为基础。这些操作系统中有许多失败了，也有一些大获成功。
 
-Linux is one of the most popular Unix based operating systems. It's open source, and is used all over the world across many industries.
+Linux 是最流行的基于 Unix 的操作系统之一。它是开源的，并在世界各地的许多行业中广泛应用。
 
-One amazing feature of the Linux operating system is the Command Line Interface (CLI) which allows users to interact with their computer from a shell. The Linux shell is a REPL (**R**ead, **E**valuate, **P**rint, **L**oop) environment where users can enter a command and the shell runs it and returns a result.
+Linux 操作系统的一项重要功能是命令行界面（CLI），它允许用户通过 Shell 与计算机进行交互。Linux Shell 是一个 REPL（**R**ead，**E**valuate，**P**rint，**L**oop）环境，用户可以在其中输入命令，然后 Shell 执行该命令并返回一个结果。
 
-The `ls` command is one of the many Linux commands that allow a user to list files or directories from the CLI.
+`ls` 命令是可以从 CLI 列出文件或目录的众多 Linux 命令之一。
 
-In this article, we'll go in depth on the `ls` command and some of the most important flags you'll need day\-to\-day.
+在本文中，我们将深入探讨 `ls` 命令以及常用的一些选项。
 
-## Prerequisites
+## 先决条件
 
-*   A computer with directories and files
-*   Have one of the Linux distros installed
-*   Basic knowledge of navigating around the CLI
-*   A smile on your face :)
+* 具有目录和文件的计算机
+* 安装一个 Linux 发行版
+* 在 CLI 上导航的基本知识
+* 你脸上的笑容 :)
 
-## The Linux ls Command
+## Linux ls 命令
 
-The `ls` command is used to list files or directories  in Linux and other Unix\-based operating systems.
+`ls` 命令用于在 Linux 和其他基于 Unix 的操作系统中列出文件或目录。
 
-Just like you navigate in your *File explorer* or *Finder* with a GUI, the `ls` command allows you to list all files or directories in the current directory by default, and further interact with them via the command line.
+就像使用 GUI 在*文件浏览器*或*文件夹*中导航一样，默认情况下，`ls` 命令可以列出当前目录中的所有文件或目录，并通过命令行进一步操作它们。
 
-Launch your terminal and type `ls` to see this in action:
+启动终端并输入 `ls` 以查看实际效果：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/Screenshot-2020-08-20-at-9.40.29-PM.png)
 
-## How to list Files in a Directory with Options
+## 如何使用选项列出目录中的文件
 
-The `ls` command also accepts some flags (also known as options) which are additional information that changes how files or directories are listed in your terminal.
+`ls` 命令还接受一些标志（也称为选项），这些标志是更改终端中文件或目录的展示方式的附加信息。
 
-In other words, flags change how the `ls` command works:
+换句话说，标志改变了 `ls` 命令的工作方式：
 
 ```
  ls [flags] [directory]
 ```
 
-> PS: The word **contents** used in throughout the article refers to the **files and directories** being listed, not the actual contents of the files/directories ?
+> PS：整篇文章中使用的**内容**一词是指列出的**文件和目录**，而不是文件/目录的实际内容。
 
-### List files in the current working directory
+### 列出当前工作目录中的文件
 
-Type the `ls` command to list the contents of the current working directory:
+输入 `ls` 命令以列出当前工作目录的内容：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/Screenshot-2020-08-20-at-9.40.29-PM.png)
 
-### List files in another directory
+### 列出另一个目录中的文件
 
-Type the `ls [directory path here]` command to list the contents of another directory:
+键入 `ls [directory path here]` 命令以列出另一个目录的内容：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/Screenshot-2020-08-20-at-10.32.52-PM.png)
 
-### List files in the root directory
+### 列出根目录中的文件
 
-Type the `ls /` command to list the contents of the root directory:
+输入 `ls /` 命令以列出根目录的内容：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/Screenshot-2020-08-20-at-10.46.10-PM.png)
 
-### List files in the parent directory
+### 列出父目录中的文件
 
-Type the `ls ..` command to list the contents of the parent directory one level above. Use `ls ../..` for contents two levels above:
+键入`ls ..` 命令以列出上一级父目录的内容。 使用 `ls ../..` 表示列出父目录的父目录的内容：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/Screenshot-2020-08-20-at-10.48.22-PM.png)
 
-### List files in the user's home directory (/home/user)
+### 列出用户主目录（/home/user）中的文件
 
-Type the `ls ~` command to list the contents in the users's home directory:
+键入`ls ~` 命令以列出用户主目录中的内容：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/Screenshot-2020-08-20-at-10.51.19-PM.png)
 
-### List only directories
+### 仅列出目录
 
-Type the `ls -d */` command to list only directories:
+输入 `ls -d * /` 命令仅列出目录：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/Screenshot-2020-08-21-at-12.53.05-PM.png)
 
-### List files with subdirectories
+### 列出带有子目录的文件
 
-Type the `ls *` command to list the contents of the directory with it's subdirectories:
+键入  `ls *`  命令以列出目录及其子目录的内容：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/Screenshot-2020-08-21-at-1.07.54-PM.png)
 
-### List files recursively
+### 递归列出文件
 
-Type the `ls -R` command to list all files and directories with their corresponding subdirectories down to the last file:
+输入 `ls -R` 命令以列出所有文件和目录并逐级展示子目录内的目录和文件：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/09/Screenshot-2020-09-01-at-9.04.56-AM.png)
 
-> If you have a lot of files, this can take a very long time to complete as every single file in each directory will be printed out. You can instead specify a directory to run this command in, like so: `ls Downloads -R`
+> 如果有很多文件，这可能需要很长时间才能完成，因为将打印出每个目录中的每个文件。可以改为指定一个目录来运行此命令，如：`ls Downloads -R`
 
-### List files with their sizes
+### 列出文件的大小
 
-Type the `ls -s` command (the **s** is lowercase) to list files or directories with their sizes:
+键入`ls -s` 命令（**s** 为小写字母）以列出文件或目录的大小：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/Screenshot-2020-08-21-at-12.30.19-PM.png)
 
-### List files in long format
+###  以长格式列出文件
 
-Type the `ls -l` command to list the contents of the directory in a table format with columns including:
+键入`ls -l` 命令以表格格式列出目录的内容，其列包括：
 
-*   content permissions
-*   number of links to the content
-*   owner of the content
-*   group owner of the content
-*   size of the content in bytes
-*   last modified date / time of the content
-*   file or directory name
+* 内容权限
+* 内容链接数
+* 内容的所有者
+* 内容组的所有者
+* 内容大小（以字节为单位）
+* 内容的最后修改日期/时间
+* 文件或目录名称
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/Screenshot-2020-08-20-at-10.52.37-PM.png)
 
-### List files in long format with readable file sizes
+### 以可读的文件大小长格式列出文件
 
-Type the `ls -lh` command to list the files or directories in the same table format above, but with another column representing the size of each file/directory:
+键入`ls -lh` 命令以上面相同的表格格式列出文件或目录，但用另一列表示每个文件/目录的大小：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/Screenshot-2020-08-21-at-12.14.33-PM.png)
 
-Note that sizes are listed in bytes (B), megabytes (MB), gigabytes (GB), or terabytes (TB) when the file or directory's size is larger than 1024 bytes.
+请注意，当文件或目录的大小大于 1024 字节时，大小以字节（B）、兆字节（MB）、千兆字节（GB）或 TB（TB）列出。
 
-### List files including hidden files
+### 列出文件，包括隐藏文件
 
-Type the `ls -a` command to list files or directories including hidden files or directories. In Linux, anything that begins with a `.` is considered a hidden file:
+键入 `ls -a`  命令以列出包括隐藏的文件或目录。在 Linux 中，任何以 `.` 开头的文件都被视为隐藏文件：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/Screenshot-2020-08-21-at-11.12.26-AM.png)
 
-### List files in long format including hidden files
+### 以长格式列出包括隐藏文件的文件
 
-Type the `ls -l -a` or `ls -a -l` or `ls -la` or `ls -al` command to list files or directories in a table format with extra information including hidden files or directories:
+输入 `ls -l -a` 或 `ls -a -l` 或  `ls -la` 或 `ls -al` 命令以表格格式列出文件或目录，并提供包括隐藏文件或目录在内的更多信息：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/Screenshot-2020-08-21-at-12.17.01-PM.png)
 
-### List files and sort by date and time
+### 列出文件并按日期和时间排序
 
-Type the `ls -t` command to list files or directories and sort by last modified date and time in descending order (biggest to smallest).
+键入`ls -t` 命令以列出文件或目录，并按降序（从最大到最小）按上次修改的日期和时间排序。
 
-You can also add a `-r` flag to reverse the sorting order like so: `ls -tr`:
+还可以添加 `-r` 标志来反转排序顺序，如下所示：`ls -tr`：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/Screenshot-2020-08-21-at-12.20.09-PM.png)
 
-### List files and sort by file size
+### 列出文件并按文件大小排序
 
-Type the `ls -S` (the **S** is uppercase) command to list files or directories and sort by date or time in descending order (biggest to smallest).
+键入`ls -S`（**S** 为大写）命令以列出文件或目录，并按日期或时间降序排列（从大到小）。
 
-You can also add a `-r` flag to reverse the sorting order like so: `ls -Sr`:
+还可以添加 `-r` 标志来反转排序顺序，如下所示：`ls -Sr`：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/Screenshot-2020-08-21-at-12.20.38-PM.png)
 
-### List files and output the result to a file
+###  列出文件并将结果输出到文件
 
-Type the `ls > output.txt` command to print the output of the preceding command into an `output.txt` file. You can use any of the flags discussed before like `-la` — the key point here is that the result will be outputted into a file and not logged to the command line.
+输入`ls> output.txt` 命令，将前一个命令的输出打印到 `output.txt` 文件中。可以使用前面讨论过的任何标志，例如 `-la` －这里的关键是结果将输出到文件中而不记录到命令行中。
 
-Then you can use the file as you see fit, or log the contents of the file with `cat output.txt`:
+然后，可以根据需要使用该文件，也可以使用 `cat output.txt` 展示该文件的内容：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/09/Screenshot-2020-09-01-at-9.12.59-AM.png)
 
-.
+# 总结
 
-# Conclusion
+还有很多命令可以和 `ls` 组合使用，以根据需要列出文件和目录。 要记住，可以一次将多个命令组合在一起。
 
-There are tons of other commands and combinations you can explore to list out files and directories based on your needs. One thing to remember is the ability to combine multiple commands together at once.
+假设要以长格式列出文件（包括隐藏文件），然后按文件大小排序。 命令是 `ls -alS`，这是 `ls -l`，`ls -a` 和 `ls -S` 的组合。
 
-Imagine you want to list a file in long format, including hidden files, and sort by file size. The command would be `ls -alS`, which is a combination of `ls -l`, `ls -a`, and `ls -S`.
-
-If you forget any command or are unsure about what to do, you can run `ls --help` or `man ls` which will display a manual with all possible options for the `ls` command:
+如果忘记了任何命令或不确定该怎么做，则可以运行 `ls --help` 或 `man ls`，这将显示一本手册，包含了 `ls` 命令的所有选项：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/09/Screenshot-2020-09-01-at-9.57.37-AM.png)
 
-Thanks for reading!
+感谢阅读！

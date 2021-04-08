@@ -1467,47 +1467,81 @@ How to make a Node.js CLI program interactive?
 
 Node since version 7 provides the `readline` [module][73] to perform exactly this: get input from a readable stream such as the `process.stdin` stream, which during the execution of a Node program is the terminal input, one line at a time.
 
-自从 7 版本以来的 Node 提供了 `readline` [模块][73]
+自从 7 版本以来的 Node 提供了 `readline` [模块][73] 来执行以下操作：从诸如 `process.stdin` 流之类的可读流获取输入，在执行 Node 程序时，它在终端输入，一次一行。
 
 ```plain
-const readline = require('readline').createInterface({  input: process.stdin,  output: process.stdout})
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
 ```
 
 ```
-readline.question(`What's your name?`, (name) => {  console.log(`Hi ${name}!`)  readline.close()})
+readline.question(`What's your name?`, (name) => {
+  console.log(`Hi ${name}!`)
+  readline.close()
+})
 ```
 
 This piece of code asks the username, and once the text is entered and the user presses enter, we send a greeting.
 
+这段代码询问用户名，一旦输入了文本，用户按回车键，我们就发送一个问候语。
+
 The `question()` method shows the first parameter (a question) and waits for the user input. It calls the callback function once enter is pressed.
+
+`question()` 方法显示第一个参数（一个问题）并等待用户输入。一旦按下回车键，它就会调用回调函数。
 
 In this callback function, we close the readline interface.
 
+在这个回调函数中，我们关闭 readline 接口。
+
 `readline` offers several other methods, and I’ll let you check them out on the package documentation I linked above.
+
+`readline` 提供了其它集中方法，我将让你在上面链接的包文档中查看它们。
 
 If you need to require a password, it’s best to now echo it back, but instead showing a `*`symbol.
 
+如果你需要密码，最好现在回显它，而不是显示 `*` 符号。
+
 The simplest way is to use the readline-sync [package][74] which is very similar in terms of the API and handles this out of the box.
+
+最简单的方法是使用 readline-sync [package][74]，它在 API 方面非常相似，开箱即用。
 
 A more complete and abstract solution is provided by the [Inquirer.js package][75].
 
+一个更完整和抽象的解决方案是由 [Inquirer.js package][75] 提供。
+
 You can install it using `npm install inquirer`, and then you can replicate the above code like this:
+
+你可以使用 `npm install inquirer` 安装它，然后可以这样复制上面的代码：
 
 ```plain
 const inquirer = require('inquirer')
 ```
 
 ```
-var questions = [{  type: 'input',  name: 'name',  message: "What's your name?",}]
+var questions = [
+  {
+    type: 'input',
+    name: 'name',
+    message: "What's your name?"
+  }
+]
 ```
 
 ```
-inquirer.prompt(questions).then(answers => {  console.log(`Hi ${answers['name']}!`)})
+inquirer.prompt(questions).then(answers => {
+  console.log(`Hi ${answers['name']}!`)
+})
 ```
 
 Inquirer.js lets you do many things like asking multiple choices, having radio buttons, confirmations, and more.
 
+Inquirer.js 让你可以做很多的事情，比如多项选择，单选按钮，确认等。
+
 It’s worth knowing all the alternatives, especially the built-in ones provided by Node.js, but if you plan to take CLI input to the next level, Inquirer.js is an optimal choice.
+
+了解所有的备选方案都是值得的，尤其是 Node.js 提供的内置选项，但是如果你计划将 CLI 输入提升到下一个级别，Inquirer.js 是最佳的选择。
 
 ### Expose functionality from a Node.js file using exports
 

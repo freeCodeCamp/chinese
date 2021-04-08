@@ -187,83 +187,83 @@ Our file is in the working directory
 ### Step 2 — Add Files to the Staging Area
 ### 步骤二：增加文件到暂存区。
 We can use the `git add` command in order to add new or updated files to the staging area. If we decide we don’t want to include some of the files we changed in our next commit then we simply make sure not to add those particular files to the staging area.
-我们可以使用`git add`命令去增加或更新文件到暂存区。
+我们可以使用`git add`命令去增加或更新文件到暂存区。如果我们决定不想在下一次提交中包括一些改动了的文件，那么简单地确保不把这些特殊的文件加到暂存区就行了。
 ![](https://www.freecodecamp.org/news/content/images/2021/03/updated.png)
 
 Adding a file to the staging area
-
+增加一个文件到暂存区。
 In our example, we add the only file we have in our project to the staging area using the `git add` command and passing in the name of the file. Then if we use the `git status` command we will see that Git will tell us that we have added our file to the staging area.
-
+在我们例子中，使用`git add`命令和传入文件名，只加了我们项目中仅有的文件到暂存区。然后，我们使用`git status`命令，会看到我们的文件已经加到了暂存区。
 ![](https://www.freecodecamp.org/news/content/images/2021/03/1_90QUPov6WsHjkokIzJw10g.png)
 
 Our file is in the staging area
-
+我们的文件在暂存区内。
 It is also important to note that files **do not** **move** from the working directory to the staging area. Files are **copied over** from the working directory to the staging area.
-
+注意该文件**并没有**从工作目录移到了暂存区，而是从工作目录复制到了该区域。
 ### Step 3 — Make the Commit
-
+### 步骤3：完成提交（commit)
 Finally, to make the commit we use the `git commit` command with `-m` option and pass in a commit message, for example `git commit -m "this is the first commit"`.
-
+最后，我们用`git commit`和`-m`选项传入一个提交信息来完成提交。例如：`git commit -m "this is the first commit"`。
 ![](https://www.freecodecamp.org/news/content/images/2021/03/1_KoPfPCVxlsOI3qqQLfd9Dw.png)
 
 Making our first commit
-
+完成我们第一个提交
 We can then use the `git log` command in order to list all the commits we have in our project in reverse chronological order. In our example we only have one commit.
-
+为了以时间顺序的倒序列出项目中所有的提交，那么使用`git log`命令。
 ![](https://www.freecodecamp.org/news/content/images/2021/03/1_O8tbeMHOrjCGNajx2chxHQ.png)
 
 We have made our first commit
-
+我们完成了第一个提交
 Now we have made our first commit in our project! In other words we have saved the first version of our project.
-
+现在，我们已经在项目中完成了第一个提交！换句话说，我们已经保存了项目的第一个版本。
 The commit has a 40 character commit hash. A **commit hash** is 40 letters and numbers that act as a name for the commit or a way to refer to it.
-
+这个提交有个40个字符的提交哈希值。一个**提交哈希值**是40个字和数字，他们作为一个为了该提交的名字，或作为一种方式去引用它
 We can also see information such as who made the commit, when the commit was made, and the commit message.
-
+我们也可以看到这样的信息，像谁完成的提交，提交什么时候完成的，和提交信息。
 ## What is a Commit History in Git?
-
+## 在Git里什么是一个提交历史?
 A repository consists of multiple commits, and in the simplest case each commit has one parent commit which is the commit that came before it. That is why one commit points back to the commit that came before it in the image below.
-
+一个仓库由许多提交组成。在最简单的例子里，每一个提交都有一个父提交，它是在本提交之前的一个提交。这就是为什么在下面的图片中，提交后面跟着一个它之前的提交。
 There are more complex cases when we get into the realm of multiple branches and merges, but that is out of the scope of this article.
-
+当我们进入到多项分支与合并的领域时，会有更多复杂的例子，但这已经超出了这篇文章的范围了。
 ![](https://www.freecodecamp.org/news/content/images/2021/03/1_pZBMf1JSUf0feoe-fst0Lg.png)
 
 A simple commit history
-
+一个简单的提交历史。
 ## Finally, What is a Branch in Git?
-
+## 最后，在Git里，什么是一个分支（branch）？
 A **branch** is a pointer to a commit. The default branch in Git is called **master** or **main**.
-
+一个**分支**就是一个指向提交的指针。在Git里，默认的分支叫作**master**或者**main**。
 We can see that a branch is a pointer to a commit by going into the `.git` folder and then opening the `refs` folder, opening the `heads` folder, and finally opening the file called `master`. Inside this file we will find that there is a hash. This is the hash of the commit that our master branch is pointing to.
-
+进入到`.git`文件夹，打开`refs`文件夹，打开`heads`文件夹，最后打开叫做`master`的文件，我们可以看到一个分支就是以一个指向提交的指针。
 We can once again use the `git log` command to list all the commits in our repository and we will find that that hash lines up with the commit that has the `master` label next to it in parentheses.
-
+我们可以再一次的用`git log`命令列出项目中的所有提交，会发现和提交（commit）同行的哈希值旁边括号里有一个`master`标签。
 ![](https://www.freecodecamp.org/news/content/images/2021/03/1_4yV_t7acLQZBMwkpXkZyBg.png)
 
 Showing the master branch in our .git folder
-
+在我们`.git`文件夹里展示master分支。
 In the terminal, we can see a list of all the branches by typing in the command `git branch`.
-
+在命令行上，通过输入`git branch`命令，我们可以看到所有分支的列表。
 ![](https://www.freecodecamp.org/news/content/images/2021/03/1_88nz0tfYI77kjBzQvCDF9Q.png)
 
 Showing the master branch pointing to our commit
-
+展示这个指向我们提交的master分支。
 Branches are really important because they make it a lot easier to collaborate with other people and to work on multiple features or different parts of your project at the same time.
-
+分支真的很重要，因为他们使得与他人合作，和同时在多个特征或你项目的不同部分工作变得大大简化。
 As we make more commits, the branch we are on will update to point to our latest commit.
-
+随着我们完成更多的提交，我们所在的分支会更新到指向我们最近一次的提交。
 ![](https://www.freecodecamp.org/news/content/images/2021/03/1_iBdgErtar3XDmVQGRyT_9A.png)
 
 Showing our commit history and the master branch pointing to our latest commit
-
+展示我们的提交历史和指向我们最近一次提交的master分支。
 ## Conclusion
-
+## 总结
 If you’ve made it this far, congratulations! There is a whole bunch more to learn about Git, and in this article we only scratched the surface. Feel free to check out some more resources to learn Git down below!
-
+如果你已经成功读到这了，恭喜！关于Git，你还有一大堆更多的东西要去学，在本文中我们只揭开了冰山一角。在下面免费去查看更多学习Git的资源吧！
 ### Online course to learn Git version control
 
 This article is based on an [**online course I created that teaches Git version control called Git Learning Journey**](https://www.udemy.com/course/git-learning-journey/?referralCode=3FA102A7FD43300B5BC2). It teaches the basics of Git version control which covers all of the above in much more depth and much more, including working with remote repositories, merging and rebasing.
-
+这篇文章基于教程[**online course I created that teaches Git version control called Git Learning Journey**](https://www.udemy.com/course/git-learning-journey/?referralCode=3FA102A7FD43300B5BC2)。它教Git版本控制的基础内容，更深入更详细的覆盖上面所讲的内容，包括工作于远程仓库，合并和变基。
 It is specifically designed for people transitioning into tech from non\-technical backgrounds and it has become a **highest rated** course on Udemy with a 4.8 star ⭐️ rating and more than 600 satisfied students (check out the student review, they speak for themselves). And the first eight lessons are a free preview so feel free to take a peek!
-
+它是特别为那些从非科技背景转换过来的人们设计的，在Udemy它已经变成了一个**高分**课程，有着4.8颗星和超过600个满意的学生（查看学生的回顾，他们对自己说的）。刚开始的八节课是免费的，所以放心去看看吧！
 ![](https://cdn-images-1.medium.com/max/1600/1*wc4fSBxpGKNX5kZZSMHFhA.png)

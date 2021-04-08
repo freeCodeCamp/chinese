@@ -512,9 +512,9 @@ import React, { useState } from 'react'
 
 ```
 
-Calling  `useState()`, you will get back a new state variable, and a function that we can call to alter its value.
+通过调用 `useState()`，你将会得到一个 state 变量以及一个供我们调用以修改 state 变量值的函数。
 
-`useState()`  accepts the initial value of the state item and returns an array containing the state variable, and the function you call to alter the state.
+`useState()` 接收一个用于初始化 state 变量的值，并返回一个数组，这个数组包含了 state 变量和修改 state 变量值的函数。
 
 Example:
 

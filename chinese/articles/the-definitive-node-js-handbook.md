@@ -1545,13 +1545,23 @@ It’s worth knowing all the alternatives, especially the built-in ones provided
 
 ### Expose functionality from a Node.js file using exports
 
+### 使用 exports 从 Node.js 中暴露功能
+
 How to use the `module.exports` API to expose data to other files in your application, or to other applications as well
+
+如何使用 `module.exports` API 暴露数据给应用程序中的其它文件，或者公开给其它应用程序。
 
 Node.js has a built-in module system.
 
+Node.js 有一个内置模块系统。
+
 A Node.js file can import functionality exposed by other Node.js files.
 
+Node.js 文件可以导入其它 Node.js 文件暴露的功能。
+
 When you want to import something you use:
+
+当想要导入你要用的内容时：
 
 ```
 const library = require('./library')
@@ -1559,11 +1569,19 @@ const library = require('./library')
 
 to import the functionality exposed in the `library.js` file that resides in the current file folder.
 
+导入位于当前文件夹中的 `library.js` 文件中暴露的功能。
+
 In this file, functionality must be exposed before it can be imported by other files.
+
+在这个文件中，必须先暴露功能，然后才能由其它文件导入。
 
 Any other object or variable defined in the file by default is private and not exposed to the outer world.
 
+默认情况下，文件中定义任何其它对象或变量都是私有的，不对外公开。
+
 This is what the `module.exports` API offered by the `module` [system][76] allows us to do.
+
+这就是 通过 `module` [system][76] 提供的 `module.exports` API 允许我们做的事情。
 
 When you assign an object or a function as a new `exports` property, that is the thing that’s being exposed. As such, it can be imported in other parts of your app, or in other apps as well.
 
@@ -1572,7 +1590,9 @@ You can do so in 2 ways.
 The first is to assign an object to `module.exports`, which is an object provided out of the box by the module system, and this will make your file export **just that object**:
 
 ```
-const car = {  brand: 'Ford',  model: 'Fiesta'}
+const car = {
+  brand: 'Ford',  model: 'Fiesta'
+}
 ```
 
 ```

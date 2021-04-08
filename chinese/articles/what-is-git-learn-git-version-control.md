@@ -5,10 +5,8 @@
 
 ![What is Git? A Beginner's Guide to Git Version Control](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/Artboard-2.png)
 
-Git is a version control system that developers use all over the world. It helps you track different versions of your code and collaborate with other developers.
 Git 是一个全世界开发者都在用的版本控制系统。它会帮助你与其他开发者合作，以及跟踪你不同版本的代码。
 
-If you are working on a project over time, you may want to keep track of which changes were made, by whom, and when those changes were made. This becomes increasingly important if you end up having a bug in your code! Git can help you with this.
 如果你长时间在一个项目工作，你也许会想对那些有改动的地方保持跟踪：是谁，以及什么时候改动的。要是在你完成时，发现你代码里有bug，这跟踪就变得越来越重要了。
 
 But Git can also be a bit scary and confusing when you first start learning it, so in this article I will introduce Git in a humanly understandable way. We'll cover topics such as repositories, commits, branches and much more, so let's get started!

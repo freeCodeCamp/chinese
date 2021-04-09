@@ -1,6 +1,6 @@
 > -   原文地址：[Everything You Need to Know About Cookies for Web Development](https://www.freecodecamp.org/news/everything-you-need-to-know-about-cookies-for-web-development/)
 > -   原文作者：Kris Koishigawa
-> -   译者：
+> -   译者：ZhichengChen
 > -   校对者：
 
 ![Everything You Need to Know About Cookies for Web Development](https://images.unsplash.com/photo-1506452819137-0422416856b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDI5fHx3ZWIlMjBkZXZlbG9wbWVudHxlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)

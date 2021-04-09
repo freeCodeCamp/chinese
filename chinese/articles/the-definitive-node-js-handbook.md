@@ -1585,13 +1585,20 @@ This is what the `module.exports` API offered by the `module` [system][76] allow
 
 When you assign an object or a function as a new `exports` property, that is the thing that’s being exposed. As such, it can be imported in other parts of your app, or in other apps as well.
 
+当你将一个对象或函数指定为新的 `exports` 属性时，这就是要暴露的内容。因此，可以在应用程序的其它部分导入，也可以在其它应用程序中导入。
+
 You can do so in 2 ways.
+
+你可以用两种方法来实现。
 
 The first is to assign an object to `module.exports`, which is an object provided out of the box by the module system, and this will make your file export **just that object**:
 
+第一种是将对象分配给 `module.exports`，这是模块系统提供的现成对象，这将使你的文件输出 **就是那个对象**。
+
 ```
 const car = {
-  brand: 'Ford',  model: 'Fiesta'
+  brand: 'Ford',
+  model: 'Fiesta'
 }
 ```
 
@@ -1600,7 +1607,7 @@ module.exports = car
 ```
 
 ```
-//..in the other file
+// ..in the other file
 ```
 
 ```
@@ -1609,8 +1616,13 @@ const car = require('./car')
 
 The second way is to add the exported object as a property of `exports`. This way allows you to export **multiple** objects, functions or data:
 
+第二种方法是将导出的对象添加为 `exports` 的属性。这样可以输出 **多个** 对象、函数或数据：
+
 ```
-const car = {  brand: 'Ford',  model: 'Fiesta'}
+const car = {
+  brand: 'Ford',
+  model: 'Fiesta'
+}
 ```
 
 ```
@@ -1619,17 +1631,27 @@ exports.car = car
 
 or directly
 
+或者直接
+
 ```
-exports.car = {  brand: 'Ford',  model: 'Fiesta'}
+exports.car = {
+  brand: 'Ford',
+  model: 'Fiesta'
+}
 ```
 
 And in the other file, you’ll use it by referencing a property of your import:
 
+在另外一个文件中，你将通过引用导入的属性来使用它：
+
 ```
-const items = require('./items')items.car
+const items = require('./items')
+items.car
 ```
 
 or
+
+或者
 
 ```
 const car = require('./items').car
@@ -1637,31 +1659,53 @@ const car = require('./items').car
 
 What’s the difference between `module.exports` and `exports`?
 
+`module.exports` 和 `exports` 两者有什么区别？
+
 The first exposes **the object** it points to. The latter exposes **the properties** of the object it points to.
+
+第一个暴露指向它的 **对象**
 
 ### Introduction to npm
 
+### npm 简介
+
 `npm` means **node package manager**.
+
+`npm` 表示 **node 包管理器**
 
 In January 2017 over 350,000 packages were reported as being listed in the npm registry, making it the biggest single language code repository on Earth, and you can be sure there is a package for (almost!) everything.
 
+截止2021年4月，官方显示它有超过100万个包，这使它成为地球上最大的单一语言代码库，你可以确定（几乎）所有的东西都有一个包。
+
 It started as a way to download and manage dependencies of Node.js packages, but it has since become a tool used also in front-end JavaScript.
 
+它最初是一种下载和管理 Node.js 包依赖关系的方法，但是后来也成为了一种在前端 Javascript 中使用的工具。
+
 There are many things that `npm` does.
+
+`npm` 做了很多事。
 
 #### Downloads
 
 `npm` manages downloads of dependencies of your project.
 
+`npm` 管理项目依赖项的下载
+
 #### Installing all dependencies
 
+#### 安装所有依赖项
+
 If a project has a `packages.json` file, by running
+
+如果一个项目有 `packages.json` 文件，通过运行
 
 ```
 npm install
 ```
 
 it will install everything the project needs, in the `node_modules` folder, creating it if it’s not existing already.
+
+它会将项目所需的一切安装在 `node_modules` 文件夹中，如果它还不存在，就会创建它。
 
 #### Installing a single package
 

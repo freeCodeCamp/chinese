@@ -1709,7 +1709,11 @@ it will install everything the project needs, in the `node_modules` folder, crea
 
 #### Installing a single package
 
+#### 安装单个包
+
 You can also install a specific package by running
+
+另外你可以安装指定的包，通过运行
 
 ```
 npm install <package-name>
@@ -1717,14 +1721,23 @@ npm install <package-name>
 
 Often you’ll see more flags added to this command:
 
--   `--save` installs and adds the entry to the `package.json` file `dependencies`
--   `--save-dev` installs and adds the entry to the `package.json` file `devDependencies`
+通常，你会看到此命令中添加了更多标识：
 
+-   `--save` installs and adds the entry to the `package.json` file `dependencies`
+-   `--save` 安装该条目并将其加入到 `package.json` 文件的 `dependencies` 中
+-   `--save-dev` installs and adds the entry to the `package.json` file `devDependencies`
+-   `--save-dev` 安装该条目并将其加入到 `package.json` 文件的 `devDependencies` 中
+-   
 The difference is mainly that `devDependencies` are usually development tools, like a testing library, while `dependencies` are bundled with the app in production.
 
+区别主要在于 `devDependencies` 通常在开发工具，如测试库，而 `dependencies` 则与生产中的应用捆绑在一起。
+
 #### Updating packages
+#### 更新包
 
 Updating is also made easy, by running
+
+更新也很容易，通过运行：
 
 ```
 npm update
@@ -1732,7 +1745,11 @@ npm update
 
 `npm` will check all packages for a newer version that satisfies your versioning constraints.
 
+`npm` 将检查所有包是否有满足版本控制约束的更新版本。
+
 You can specify a single package to update as well:
+
+也可以指定要更新的单个包：
 
 ```plain
 npm update <package-name>

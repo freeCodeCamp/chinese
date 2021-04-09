@@ -1,41 +1,41 @@
 > -  原文地址：[What is Glassmorphism? Create This New Design Effect Using Only HTML and CSS](https://www.freecodecamp.org/news/glassmorphism-design-effect-with-html-css/)
 > -  原文作者：[Zoltán SzőgyényiZoltán Szőgyényi](https://www.freecodecamp.org/news/author/zoltan/)
-> -  译者：
+> -  译者：Humilitas
 > -  校对者：
 
 ![What is Glassmorphism? Create This New Design Effect Using Only HTML and CSS](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/freecodecamp-glass.png)
 
-Glassmorphism is a new design trend that is currently very popular. You'll see it all over websites such as Dribbble, and even big companies like Apple and Microsoft are using it.
+毛玻璃效果（Glassmorphism）是目前非常流行的设计新趋势，你可以在 Dribbble 等网站上看到毛玻璃效果，甚至像 Apple 和 Microsoft 这样的大公司也在使用它。
 
-Let me introduce you to this new design trend of **glassmorphism**. After last year's [neumorphism design trend](https://demo.themesberg.com/neumorphism-ui/), which was a controversial style and lacked accessibility, this trend seems a lot more promising.
+让我来介绍一下新的设计趋势：**毛玻璃效果**。经历了去年饱受争议、缺乏可用性的[新拟物设计（neumorphism design trend）](https://demo.themesberg.com/neumorphism-ui/)之后，这种设计似乎更有前景。
 
-## What is glassmorphism?
+## 什么是毛玻璃效果
 
-Essentially, the main aspect of this trend is a semi-transparent background, with a sublime shadow and border.
+基本上，它的主要特征就是半透明的背景，以及阴影和边框。
 
-But you also have a blur added to the background itself so that whatever is behind the background is beautifully "morphed" into the element itself. Does that make sense?
+同时还要为背景加上模糊效果，使得背景之后的元素根据自身内容产生漂亮的“变形”效果。
 
-Here's an example:
+示例：
 
 [![Glassmorphism](https://www.freecodecamp.org/news/content/images/2021/03/glassmorphism-ui.png)](https://ui.glass/)
 
-This is a real world example of glassmorphism in action, which you can also check out on the [ui.glass](https://ui.glass/) website (it's an upcoming CSS UI library).
+这是一个应用毛玻璃效果的真实示例，可以在 [ui.glass](https://ui.glass/) 网站上查看（它是一个即将推出的 UI 库）。
 
-The blur effect that I've been talking about is what you can see behind the code on the right side of the above image. See how beautifully it morphs into the background, but at the same time still remains readable and pleasing to the eye?
+你可以在上图中右侧代码后面看到我所说的模糊效果，后方的内容产生了漂亮的变形效果，同时还保持了可读性，赏心悦目。
 
-This is the effect that I want to show you how to create in this tutorial. We'll see how to apply it using only HTML and CSS.
+这就是本教程要构建出的效果。我们将看到如何仅用 HTML 和 CSS 来实现它。
 
-## Getting started
+## 起步
 
-All you will need for this tutorial is a browser and a code editor, because we're only going to use good old HTML and CSS.
+学习本教程，你只需要一个浏览器和一个代码编辑器，因为我们只会用到 HTML 和 CSS。
 
-The final element that we're going to build will look like this:
+我们将要构建的元素的最终效果如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-24-at-17.35.18.png)
 
-Glassmorphism example
+毛玻璃效果示例
 
-First things first, let's create a basic HTML file with the following markup:
+首先，创建一个 HTML 文件，写入如下内容：
 
 ```HTML
 <!DOCTYPE html>
@@ -52,7 +52,7 @@ First things first, let's create a basic HTML file with the following markup:
 </html>
 ```
 
-I don't really fancy the default font family, so let's use something prettier from Google Fonts. I really like the Inter font, so let's include that in our project inside the `head` tag:
+我不太喜欢默认的字体，让我们使用更好看的 Google Fonts 字体。我很喜欢 Inter 字体，在 `head` 标签中将其引入：
 
 ```HTML
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -61,7 +61,7 @@ I don't really fancy the default font family, so let's use something prettier fr
 
 Google Fonts
 
-Now, let's add some basic styles to our `body` tag and also create a background using vivid colors and gradients:
+现在，为 `body` 标签添加一些样式，并使用鲜艳的颜色和渐变作为背景：
 
 ```CSS
 body {
@@ -73,7 +73,7 @@ body {
 }
 ```
 
-Great! Now that we have some of the basic markup and styles set up, let's create a card element inside the `body` tag:
+很好！现在基本的标签和样式做好了，接下来在 `body` 标签里创建一个卡片元素：
 
 ```HTML
 <div class="card">
@@ -83,9 +83,9 @@ Great! Now that we have some of the basic markup and styles set up, let's create
 </div>
 ```
 
-The content inside the card doesn't really matter – you can add extra buttons, icons, and other elements.
+卡片中的内容是什么无关紧要——你可以加入一些按钮、图标或者其他元素。
 
-Before applying the **glassmorphism** effect to the card, let's first apply some spacing and styles to the typography by adding the following CSS:
+在卡片上应用**毛玻璃效果**之前，先添加一些排版样式，加入以下 CSS：
 
 ```CSS
 .card {
@@ -111,11 +111,11 @@ a {
 }
 ```
 
-Great job so far! Next up, I'm going to show you how to actually apply the special effect.
+很好！接下来将会演示如何应用这个特殊的效果。
 
-## How to apply the glassmorphism effect using CSS
+## 如何使用 CSS 制作毛玻璃效果
 
-All you need to do is apply a semi-transparent background color and apply a blur using the `backdrop-filter` property. Add the following styles to the `.card` element using CSS:
+你要做的只是设置一个半透明背景颜色，并使用 `backdrop-filter` 属性设置模糊效果。在 `.card` 元素的样式中加入以下 CSS：
 
 ```CSS
 .card {
@@ -126,23 +126,23 @@ All you need to do is apply a semi-transparent background color and apply a blur
 }
 ```
 
-Glassmorphism using CSS
+使用 CSS 制作毛玻璃效果
 
-So we now have successfully applied the glassmorphism style to the card – but where's the effect?
+现在我们已经为卡片加上了毛玻璃效果的样式，可是为什么看起来没效果？
 
-We still need to have something behind the card, such as a shape or an image, in order to see it in action.
+我们还需要在卡片后面加上一些元素，如一些形状或者图片，以便看到它的实际效果。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-24-at-12.57.00.png)
 
-Example without the shape
+后方没有形状时的效果
 
-Let's add a shape using an `img` tag element just after the opening of the `body` tag:
+让我们使用 `img` 标签在 `body` 起始标签之后加入一个形状图片：
 
 ```HTML
 <img class="shape" src="https://s3.us-east-2.amazonaws.com/ui.glass/shape.svg" alt="">
 ```
 
-And apply the following CSS styles to the `.shape` element to properly position it in the page:
+并为 `.shape` 元素添加以下样式，将其定位在页面的合适位置：
 
 ```CSS
 .shape {
@@ -153,32 +153,32 @@ And apply the following CSS styles to the `.shape` element to properly position 
 }
 ```
 
-You should now see the full effect of the new glassmorphism design trend. Congratulations!
+现在你应该能看到完整的毛玻璃效果了，恭喜！
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-24-at-17.35.18.png)
 
-Glassmorphism example
+毛玻璃效果示例
 
-You can check out this [codepen](https://codepen.io/themesberg/pen/RwKNMeY) to get the code and styles directly from this guide.
+可以在[这里](https://codepen.io/themesberg/pen/RwKNMeY)查看本教程的完整代码。
 
-## Browser support
+## 浏览器支持
 
-One of the major downsides of glassmorphism is that the `backdrop-filter` property is not supported by Internet Explorer 11, and it is also disabled by default by Firefox.
+毛玻璃效果的主要缺点之一就是 `backdrop-filter` 属性在 Internet Explorer 11 上不被支持，而且 Firefox 默认禁用了这个属性。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/glassmorphism-browser-support.png)
 
-Browser support for backdrop-filter
+backdrop-filter 的浏览器支持情况
 
-However, according to the [caniuse.com](https://caniuse.com/css-backdrop-filter) website, more than 88.2% of browsers worldwide will support the styling. If Firefox decides to enable this property by default, and as usage for older browsers (such as IE 11) drops, I believe that in the coming years glassmorphism will be able to be used on a much larger scale.
+然而，根据 [caniuse.com](https://caniuse.com/css-backdrop-filter) 网站的数据，全世界超过 88.2% 的浏览器支持这个样式。如果 Firefox 决定默认启用这个属性，并且随着过时浏览器（如 IE 11）的使用率下降，我相信未来几年毛玻璃效果会得到更广泛的应用。
 
-Until then, feel free to use it for your personal projects, or just have fun creating some pages with this awesome new design trend.
+在此之前，尽管在你的个人项目中使用它吧，或者使用这个神奇的设计来创建一些页面玩一玩。
 
-## Conclusion
+## 总结
 
-I hope that this tutorial has helped you learn more about this new design trend.
+希望这个教程能帮助你了解毛玻璃效果这个新设计趋势。
 
-If you want to explore it further, I'd like to introduce to you a project that I've been working on with my friend.
+如果你想更进一步地探索，可以了解一下我和朋友一直在做的一个项目。
 
-It's called [Glassmorphism UI](https://ui.glass/), and it will be a free and open source CSS UI library based on the new design trend. Feel free to sign up with your email to get updates about progress and be one of the first to find out when it has launched.
+它叫做 [Glassmorphism UI](https://ui.glass/)，它是一个基于这个新设计趋势的开源 CSS UI 库。欢迎使用你的邮件地址注册，以便第一时间获取开发进度信息以及正式发布的通知。
 
-The library will be available via NPM, but it will be also posted on GitHub under the MIT License.
+这个库未来将能够通过 NPM 下载，同时也会发布在 Github 上（基于 MIT 协议）。

@@ -13,14 +13,14 @@ Each language translation is available in their own directories at the root of t
 
 ## freeCodeCamp 文章翻译计划
 
-freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后端、 Android、iOS、产品、设计、区块链、人工智能等领域的深度教程，以及学习编程的经历和求职经验。我们一起把这些文章翻译成中文，分享给更多读者。
+freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后端、产品、设计等领域的深度教程，以及学习编程的经历和求职经验。我们一起把这些文章翻译成中文，分享给更多读者。
 
 ### 参与收获
 
 -   持续提升你的英文水平和多人协作的经验
 -   快速提高你的 Git 操作熟练度
 -   收获 GitHub 认可的 contributions
--   受邀成为 freeCodeCamp 社区作者，文章发表在[官网][7]
+-   受邀成为 freeCodeCamp 社区作者，文章发表在[官网专栏][7]
 -   有机会受邀参与 freeCodeCamp 城市社区举办的技术交流活动
 -   在社区中结识优秀的小伙伴，拥抱更多技术成长与职业发展的可能性
 
@@ -35,7 +35,9 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 
 **除了在 [Translation-needed](https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3ATranslation-needed) 列表认领文章来翻译，你也可以从[英文专栏](https://www.freecodecamp.org/news)选择自己喜欢的文章，自己[发起 New issue](https://github.com/freeCodeCamp/news-translation/issues/new/choose) 进行翻译。**
 
-如果你对指南有疑问，请在 [freeCodeCamp Chat 中文社区聊天室](https://chat.freecodecamp.org/channel/zhongwen)提问，我们随时在线和你交流:)
+点击 Get started，根据提示填写 issue 的内容。
+
+![image](https://user-images.githubusercontent.com/19358186/114123554-1e87fb80-9925-11eb-9dab-18f8a4964782.png)
 
 在翻译过程中，你可能会需要参考以下资料（强烈建议你花十分钟浏览这些资料后，再开始翻译，当然你也可以在翻译过程中随时回来查看）：
 
@@ -45,7 +47,6 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 ### 如何参与校对
 
 每一篇翻译好的文章，我们会有一位贡献者对其进行校对。如果你希望参与校对，请在 [Review-awaiting][13] 列表选取文章并留言“认领校对”。
-
 
 ### 发布译文
 
@@ -57,6 +58,8 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 
 - 微信公众号发布：翻译者如有自己的公众号，可在自己的公众号首发译文，可给 freeCodeCamp 公众号设置白名单转载权限。
 
+对于以上内容，如果你有疑问，请在 [freeCodeCamp Chat 中文社区聊天室](https://chat.freecodecamp.org/channel/zhongwen)提问，我们随时在线和你交流:)
+
 ## 译者交流
 
 ### 开放周会
@@ -66,11 +69,7 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 
 参与者无需提前报名，在以上时间内直接进入会议室。请所有参与者务必遵守 [freeCodeCamp 社区行为规范](https://chinese.freecodecamp.org/news/code-of-conduct/)。
 
-**周会流程：**
-- 自我介绍（10min）
-- 介绍 freeCodeCamp 社区概况和文章、课程、视频翻译计划概况（20min）
-- 反馈在翻译、校对过程中遇到的问题和提出建议（30min）
-- 自由讨论&翻译（60min）
+点击[此处](https://chinese.freecodecamp.org/forum/t/topic/1981)了解周会详情。
 
 ### 日常讨论
 

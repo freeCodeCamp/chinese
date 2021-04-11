@@ -505,31 +505,31 @@ A link is responsible for knowing if the mouse is hovering over it.
 
 我们使用由 React 提供的高效管理工具 `useState` 来管理 state。从技术上来说，它是个 **钩子** （这是事实，但是现在我们不需要知道钩子的详细信息）。
 
-你可以使用这种方法来从 React 中导入 `useState`：
+你可以使用下面的方法来从 React 中导入 `useState`：
 
 ```js
 import React, { useState } from 'react'
 
 ```
 
-通过调用 `useState()`，你将会得到一个 state 变量以及一个供我们调用以修改 state 变量值的函数。
+通过调用 `useState()`，我们将会得到一个 state，以及一个供我们调用以修改 state 值的函数。
 
-`useState()` 接收一个用于初始化 state 变量的值，并返回一个数组，这个数组包含了 state 变量和修改 state 变量值的函数。
+`useState()` 可以传入一个参数，用来初始化 state。它会返回一个数组，这个数组包含一个 state 和一个修改 state 的函数。
 
-Example:
+如下所示:
 
 ```js
 const [count, setCount] = useState(0)
 
 ```
 
-This is important. We can't just alter the value of a state variable directly. We must call its modifier function. Otherwise the React component will not update its UI to reflect the changes of the data.
+这一点非常重要。我们不能直接修改 state，只能通过调用修改函数来修改它，否则，React 组件无法及时将数据的变化反映在用户界面中。
 
-Calling the modifier is the way we can tell React that the component state has changed.
+调用修改函数是一种将组件 state 的变化告知 React 的方法。
 
-The syntax is a bit weird, right? Since  `useState()`  returns an array we use array destructuring to access each individual item, like this:  `const [count, setCount] = useState(0)`
+这个语法是不是看起来有点奇怪？这是因为 `useState()` 返回的是数组，所以我们使用了数组解构的方法来获取每个数组成员，就像这样：`const [count, setCount] = useState(0)`
 
-Here's a practical example:
+下面是一个实例：
 
 ```js
 import { useState } from 'react'
@@ -545,7 +545,7 @@ const Counter = () => {
 
 ```
 
-You can add as many  `useState()`  calls as you want, to create as many state variables as you want:
+我们也可以调用多次调用 `useState()`，来创建多个 state：
 
 ```js
 const [count, setCount] = useState(0)

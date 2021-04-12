@@ -1757,17 +1757,31 @@ npm update <package-name>
 
 #### Versioning
 
+#### 版本控制
+
 In addition to plain downloads, `npm` also manages **versioning**, so you can specify any specific version of a package, or require a version higher or lower than what you need.
+
+除了普通的下载外， `npm` 还可以管理 **版本控制**，因此你可以指定任何特定版本的包，或者要求比你需要的版本高或者低的版本。
 
 Many times you’ll find that a library is only compatible with a major release of another library.
 
+很多时候，你会发现一个库只与另外一个库的是主要版本兼容。
+
 Or a bug in the latest release of a lib, still unfixed, is causing an issue.
+
+或者 lib 的最新版本中的一个 bug 仍然没有修复，导致了一个问题。
 
 Specifying an explicit version of a library also helps to keep everyone on the same exact version of a package, so that the whole team runs the same version until the `package.json` file is updated.
 
+指定一个库的明确版本也有助于使每个人都使用相同的包的版本，这样整个团队就可以运行相同的版本，直到 `package.json` 文件更新。
+
 In all those cases, versioning helps a lot, and `npm` follows the semantic versioning (semver) standard.
 
+在所有这些情况下，版本控制的帮助很大， `npm` 遵循语义版本控制(semver)标准。
+
 #### Running Tasks
+
+#### 运行中的任务
 
 The package.json file supports a format for specifying command line tasks that can be run by using
 

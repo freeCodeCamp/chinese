@@ -553,11 +553,12 @@ const [anotherCounter, setAnotherCounter] = useState(0)
 
 ```
 
-## Component Props in React
+## React 组件中的 Props
 
 We call  `props`  the initial values passed to a component.
-
+我们称传入组件的初始值为 props。
 We previously created a  `WelcomeMessage`  component
+我们之前创建了一个 `WelcomeMessage` 组件。
 
 ```js
 function WelcomeMessage() {
@@ -566,7 +567,7 @@ function WelcomeMessage() {
 
 ```
 
-and we used it like this:
+我们这样使用它：
 
 ```js
 <WelcomeMessage />
@@ -574,8 +575,10 @@ and we used it like this:
 ```
 
 This component does not have any initial value. It does not have props.
+这个组件没有初始值，所以它没有 props。
 
 Props can be passed as attributes to the component in the JSX:
+在 JSX 中，props 可以作为属性传给组件。
 
 ```js
 <WelcomeMessage myprop={'somevalue'} />
@@ -583,6 +586,7 @@ Props can be passed as attributes to the component in the JSX:
 ```
 
 and inside the component we receive the props as arguments:
+在组件中，我们以参数的形式接收 props：
 
 ```js
 function WelcomeMessage(props) {
@@ -592,6 +596,7 @@ function WelcomeMessage(props) {
 ```
 
 It's common to use object destructuring to get the props by name:
+通常以对象解构的形式获取 props 的名称：
 
 ```js
 function WelcomeMessage({ myprop }) {
@@ -601,6 +606,7 @@ function WelcomeMessage({ myprop }) {
 ```
 
 Now that we have the prop, we can use it inside the component. For example we can print its value in the JSX:
+我们现在取得了 props，我们可以在组件中使用它了。例如，我们可以在 JSX 中输出它的值：
 
 ```js
 function WelcomeMessage({ myprop }) {
@@ -609,24 +615,22 @@ function WelcomeMessage({ myprop }) {
 
 ```
 
-Curly brackets here have various meanings. In the case of the function argument, curly brackets are used as part of the object destructuring syntax.
+这里的大括号有很多种含义。对于函数参数来说，大括号是对象解构语法的一部分。我们也可以用它来定义函数代码块。最后，在 JSX 中，我们还用它来输出 JavaScript 值。
 
-Then we use them to define the function code block, and finally in the JSX to print the JavaScript value.
+将 props 传递给组件是一种在你的应用中传递值的好方法。
 
-Passing props to components is a great way to pass values around in your application.
+一个组件既可以有自己的数据（state），也可以通过 props 来接收数据。
 
-A component either holds data (has state) or receives data through its props.
+当将函数作为 props 时，子组件就可以调用父组件中定义的函数。
 
-We can also send functions as props, so a child component can call a function in the parent component.
-
-A special prop is called  `children`. That contains the value of anything that is passed between the opening and closing tags of the component, for example:
+有一种被称为 `children` 的特殊 props，它代表了包含在组件的开始标签和结束标签之间的所有东西的值，例如：
 
 ```html
 <WelcomeMessage> Here is some message </WelcomeMessage>
 
 ```
 
-In this case, inside  `WelcomeMessage`  we could access the value  `Here is some message`  by using the  `children`  prop:
+这种情况下，在 `WelcomeMessage` 中，我们可以通过使用名为 `children` 的 props 来获取 `Here is some message`。
 
 ```js
 function WelcomeMessage({ children }) {

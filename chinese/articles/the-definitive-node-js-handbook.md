@@ -1785,36 +1785,65 @@ In all those cases, versioning helps a lot, and `npm` follows the semantic versi
 
 The package.json file supports a format for specifying command line tasks that can be run by using
 
+package.json 文件支持指定命令行任务的格式，可以通过使用：
+
 ```plain
 npm <task-name>
 ```
 
 For example:
 
+例如：
+
 ```plain
-{  "scripts": {    "start-dev": "node lib/server-development",    "start": "node lib/server-production"  }}
+{
+  "scripts": {
+    "start-dev": "node lib/server-development",
+    "start": "node lib/server-production"
+  }
+}
 ```
 
 It’s very common to use this feature to run Webpack:
 
+使用此功能运行 Webpack 非常常见：
+
 ```
-{  "scripts": {    "watch": "webpack --watch --progress --colors --config webpack.conf.js",    "dev": "webpack --progress --colors --config webpack.conf.js",    "prod": "NODE_ENV=production webpack -p --config webpack.conf.js",  }}
+{
+  "scripts": {
+    "watch": "webpack --watch --progress --colors --config webpack.conf.js",
+    "dev": "webpack --progress --colors --config webpack.conf.js",
+    "prod": "NODE_ENV=production webpack -p --config webpack.conf.js"
+  }
+}
 ```
 
 So instead of typing those long commands, which are easy to forget or mistype, you can run
 
+所以不要输入那些很长的命令，它们很容易忘记或忘记输入，你可以运行
+
 ```
-$ npm watch$ npm dev$ npm prod
+$ npm watch
+$ npm dev
+$ npm prod
 ```
 
 ### Where does npm install the packages?
 
+### npm 在哪里安装包？
+
 When you install a package using `npm` (or [yarn][77]), you can perform 2 types of installation:
+
+使用 `npm` （或[yarn][77]）安装包时，可以执行两种类型的安装：
 
 -   a local install
 -   a global install
+- 本地安装
+- 全局安装
 
 By default, when you type an `npm install` command, like:
+
+默认情况下，输入 `npm install` 命令时，如：
 
 ```
 npm install lodash
@@ -1822,9 +1851,15 @@ npm install lodash
 
 the package is installed in the current file tree, under the `node_modules` subfolder.
 
+该包安装在当前文件夹下的 `node_modules` 子文件夹下。
+
 As this happens, `npm` also adds the `lodash` entry in the `dependencies` property of the `package.json` file present in the current folder.
 
+与此同时，`npm` 也会在当前文件夹中的 `package.json` 文件的 `dependencies` 属性中添加 `lodash` 项。
+
 A global installation is performed using the `-g` flag:
+
+全局安装使用 `-g` 标识：
 
 ```
 npm install -g lodash
@@ -1832,15 +1867,27 @@ npm install -g lodash
 
 When this happens, npm won’t install the package under the local folder, but instead, it will use a global location.
 
+发生这种情况时，npm 不会将包安装在本地文件夹下，而是使用全局位置。
+
 Where, exactly?
+
+确切地说，在哪里？
 
 The `npm root -g` command will tell you where that exact location is on your machine.
 
+`npm root -g` 命令将告诉你该位置在你的计算机上的确切位置。
+
 On macOS or Linux this location could be `/usr/local/lib/node_modules`. On Windows it could be `C:\Users\YOU\AppData\Roaming\npm\node_modules`
+
+在 macOS 或 Linux 上，此位置可以是 `/usr/local/lib/node_modules`。在 Windows 上，它可以是 `C:\Users\YOU\AppData\Roaming\npm\node_modules`。
 
 If you use `nvm` to manage Node.js versions, however, that location would differ.
 
+如果你使用 `nvm` 管理 Node.js 版本，然而不同的版本位置会有所不同。
+
 I for example use `nvm` and my packages location was shown as`/Users/flavio/.nvm/versions/node/v8.9.0/lib/node_modules`.
+
+例如，我使用 `nvm`，包的位置显示为 `/Users/flavio/.nvm/versions/node/v8.9.0/lib/node_modules`。
 
 ### How to use or execute a package installed using npm
 

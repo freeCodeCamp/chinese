@@ -639,16 +639,16 @@ function WelcomeMessage({ children }) {
 
 ```
 
-## Data flow in a React application
+## React 应用中的数据流
 
-In a React application, data typically flows from a parent component to a child component, using props as we saw in the previous section:
+在一个 React 应用中，数据通常以 props 的方式从父组件流向子组件，就像我们在上一节看到的那样：
 
 ```js
 <WelcomeMessage myprop={'somevalue'} />
 
 ```
 
-If you pass a function to the child component, you can however change the state of the parent component from a child component:
+如果给子组件传递一个函数，你就可以在子组件中修改父组件的 state：
 
 ```js
 const [count, setCount] = useState(0)
@@ -656,6 +656,7 @@ const [count, setCount] = useState(0)
 ```
 
 Inside the Counter component we can now grab the  `setCount`  prop and call it to update the  `count`  state in the parent component, when something happens:
+现在，在 Counter 组件内部，我们捕获了 `setCount`，然后在某些情况发生时，调用它来修改父组件中的 `count`：
 
 ```js
 function Counter({ setCount }) {
@@ -665,14 +666,17 @@ function Counter({ setCount }) {
 ```
 
 You need to know that there are more advanced ways to manage data, which include the Context API and libraries like Redux. But those introduce more complexity, and 90% of the times using those 2 ways I just explained are the perfect solution.
+其实还有很多更高级的方法来管理数据，比如 Context API 和 Redux 之类的库。但是这些方法会增加复杂性，而在大约 90% 的时间里，我刚刚介绍的两种方法都是完美的解决方案。
 
-## Handling user events in React
+## 在 React 中处理用户事件
 
 React provides an easy way to manage events fired from DOM events like clicks, form events, and more.
+React 提供了一种简单的方法来管理从 DOM 触发的形如点击、表单事件等事件。
 
-Let's talk about click events, which are pretty simple to digest.
+这里我们以最容易理解的单机事件为例来进行说明。
 
 You can use the  `onClick`  attribute on any JSX element:
+你可以在任意的 JSX 元素上使用 `onClick` 属性。
 
 ```js
 <button
@@ -684,10 +688,9 @@ You can use the  `onClick`  attribute on any JSX element:
 </button>
 
 ```
+_每元素被点击的时候，传递给 `onClick` 属性的函数就会被触发。_
 
-_When the element is clicked, the function passed to the  `onClick`  attribute is fired._
-
-_You can define this function outside of the JSX:_
+_你也可以在 JSX 的外部定义这些函数：_
 
 _`const handleClickEvent = (event) => {
   /`_ `handle the event */
@@ -697,17 +700,18 @@ _`const handleClickEvent = (event) => {
   return <button onClick={handleClickEvent}>Click here</button>
 }` 
 
-When the  `click`  event is fired on the button, React calls the event handler function.
+当点击 button 时，就会触发 `click` 事件，此时，React 就会调用 `click` 事件的处理函数。
 
-React supports a vast amount of types of events, like  `onKeyUp`,  `onFocus`,`onChange`,  `onMouseDown`,  `onSubmit`  and many more.
+React 支持非常多的事件类型，如：`onKeyUp`，`onFocus`，`onChange`，`onMouseDown`，`onSubmit` 等等等等.
 
-## Lifecycle events in a React component
+## React 组件的生命周期事件
 
-So far we've seen how to manage state with the  `useState`  hook.
+到目前为止，我们已经学习了怎么使用 `useState` 勾子来管理 state。
 
-There's another hook I want to introduce in this book:  `useEffect`.
+在本节中，我想介绍另外一个勾子：`userEffect`。
 
 The  `useEffect`  hook allows components to have access to the lifecycle events of a component.
+`useEffect` 勾子允许组件访问它的生命周期事件。
 
 When you call the hook, you pass it a function. The function will be run by React when the component is first rendered, and on every subsequent re-render/update.
 

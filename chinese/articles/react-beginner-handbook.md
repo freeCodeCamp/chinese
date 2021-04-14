@@ -673,7 +673,7 @@ You need to know that there are more advanced ways to manage data, which include
 React provides an easy way to manage events fired from DOM events like clicks, form events, and more.
 React 提供了一种简单的方法来管理从 DOM 触发的形如点击、表单事件等事件。
 
-这里我们以最容易理解的单机事件为例来进行说明。
+这里我们以最容易理解单击事件为例来进行说明。
 
 You can use the  `onClick`  attribute on any JSX element:
 你可以在任意的 JSX 元素上使用 `onClick` 属性。
@@ -710,16 +710,16 @@ React 支持非常多的事件类型，如：`onKeyUp`，`onFocus`，`onChange`�
 
 在本节中，我想介绍另外一个勾子：`userEffect`。
 
-The  `useEffect`  hook allows components to have access to the lifecycle events of a component.
 `useEffect` 勾子允许组件访问它的生命周期事件。
 
-When you call the hook, you pass it a function. The function will be run by React when the component is first rendered, and on every subsequent re-render/update.
+当你调用这个勾子时，你需要传入一个函数。在组件第一次被渲染的时候，以及在随后的每次重新渲染/更新时，React 都会调用这个函数。
 
-React first updates the DOM, then calls any function passed to  `useEffect()`.
+React 首先更新 DOM，然后调用任何传递给 `useEffect()` 的函数。
 
 All without blocking the UI rendering, even on blocking code.
+所有这些都不会阻塞 UI 的渲染，即使是阻塞代码。
 
-Here is an example:
+这里是一个示例：
 
 ```js
 const { useEffect, useState } = React
@@ -731,9 +731,7 @@ const CounterWithNameAndSideEffect = () => {
 
 ```
 
-Since the useEffect() function is run on every subsequent re-render/update of the component, we can tell React to skip it, for performance purposes. We do this by adding a second parameter which is an array that contains a list of state variables to watch for.
-
-React will only re-run the side effect if one of the items in this array changes.
+因为在随后的每次重新渲染/更新时，传递给 useEffect() 的函数都会被执行，所以出于性能上的考虑，我们可以告诉 React 在某些时候不要执行这个函数。为了实现这个目的，我们可以为 useEffect() 传入第二个参数，这个参数是一个数组，它的成员是需要监视的 state 变量。只有在这些 state 发生变化的时候，React 才会执行这个函数。
 
 ```js
 useEffect(() => {
@@ -742,7 +740,7 @@ useEffect(() => {
 
 ```
 
-Similarly, you can tell React to only execute the side effect once (at mount time), by passing an empty array:
+类似的，你可以传入一个空数组，这会使 React 只在组件挂载的时候才执行这个函数。
 
 ```js
 useEffect(() => {
@@ -751,19 +749,20 @@ useEffect(() => {
 
 ```
 
-You migth find yourself using this option a lot.
+你可能会发现自己经常使用这个技巧。
 
-useEffect() is great for adding logs, accessing 3rd party APIs, and much more.
+useEffect() 非常适合添加日志，访问第三方 API 等。
 
-## Where to go from here
+## 接下来做什么？
 
-Mastering the topics explained in this article is a great step towards your goal of learning React.
+熟练掌握在这篇文章中提到主题是朝着学习 React 目标迈出的重要一步。
 
-I want to give you some pointers now, because it's easy to get lost in the sea of tutorials and courses about React.
+在这里我想给出一些指导，防止你在有关 React 教程和课程的海洋中迷失方法。
 
-What should you learn next?
+接下来改学习什么呢？
 
 Learn more theory about the  [Virtual DOM][31],  [writing declarative code][32],  [unidirectional data flow][33],  [immutability][34],  [composition][35].
+了解有关 [虚拟 DOM][31]，[编写声明式代码][32]，[单向数据流][33]，[不变性][34]，[组合][35]的更多理论。
 
 Start building some simple React applications. For example  [build a simple counter][36]  or a  [interact with a public API][37].
 

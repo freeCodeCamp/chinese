@@ -761,22 +761,21 @@ useEffect() 非常适合添加日志，访问第三方 API 等。
 
 接下来改学习什么呢？
 
-Learn more theory about the  [Virtual DOM][31],  [writing declarative code][32],  [unidirectional data flow][33],  [immutability][34],  [composition][35].
 了解有关 [虚拟 DOM][31]，[编写声明式代码][32]，[单向数据流][33]，[不变性][34]，[组合][35]的更多理论。
 
-Start building some simple React applications. For example  [build a simple counter][36]  or a  [interact with a public API][37].
+构建一些简单的 React 应用。例如：[一个简单的计数器][36] 或者 [与公共 API 交互][37]
 
-Learn how to perform  [conditional rendering][38], how to perform  [loops in JSX][39], how to use the  [React Developer Tools][40].
+学习如何使用 [条件渲染][38]，如何在 [JSX 中使用循环][39]，如何使用 [React 开发者工具][40]
 
-Learn how to apply CSS in a React application, with  [plain CSS][41]  or  [Styled Components][42].
+通过 [plain CSS][41] 或者 [Styled Components][42] 学习如何在 React 应用中使用 CSS。
 
 Learn how to manage state using the  [Context API][43], useContext and  [Redux][44].
 
 Learn how to interact with  [forms][45].
 
-Learn how to use  [React Router][46].
+学习如何使用 [React 路由][46]。
 
-Learn  [how to test React applications][47].
+学习 [如何测试 React 应用][47]。
 
 Learn an application framework built on top of React, like  [Gatsby][48]  or  [Next.js][49].
 

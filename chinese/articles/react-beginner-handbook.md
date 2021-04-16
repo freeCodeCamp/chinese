@@ -769,29 +769,30 @@ useEffect() 非常适合添加日志，访问第三方 API 等。
 
 通过 [plain CSS][41] 或者 [Styled Components][42] 学习如何在 React 应用中使用 CSS。
 
-Learn how to manage state using the  [Context API][43], useContext and  [Redux][44].
+学习如何使用 [Context API][43]，useContext 与 [Redux][44] 来管理 state。
 
-Learn how to interact with  [forms][45].
+学习如何与 [forms][45] 交互。
 
 学习如何使用 [React 路由][46]。
 
 学习 [如何测试 React 应用][47]。
 
-Learn an application framework built on top of React, like  [Gatsby][48]  or  [Next.js][49].
+了解基于 React 构建的应用程序框架，如 [Gatsby][48] 或者 [Next.js][49]。
 
-Most of all, make sure you practice by building sample applications to apply everything you've learned.
+当然，最重要的是，请确保在构建实例应用中实践你所学习的每一个知识点。
 
-## Conclusion
+## 结语
 
-Thanks a lot for reading this handbook.
+非常感谢阅读这篇入门指导。
 
-I hope it will inspire you to learn more about React and everything you can do with it!
+我希望这篇指导可以激发你去学习更多关于 React 的知识以及了解 React 能做的每一件事。
 
 Remember that you can  [download this handbook in PDF / ePub / Mobi format for free][50]  if you want.
+请记得如果需要的话，你可以 [免费下载 PDF / ePub / Mobi 格式的这篇指导][50]
 
-I publish programming tutorials every day on my website  [flaviocopes.com][51]  if you want to check out more great content like this.
+每天我都会在我的网站 [flaviocopes.com][51] 上发布编程教程，你可以在那里看到更多类似的精彩内容。
 
-You can reach me on Twitter  [@flaviocopes][52].
+你也可以在 Twitter 上与我交流 [@flaviocopes][52]。
 
 [1]: https://flaviocopes.com/page/react-handbook/
 [2]: https://www.freecodecamp.org/news/react-beginner-handbook/#howmuchjavascriptyouneedtoknowtousereact

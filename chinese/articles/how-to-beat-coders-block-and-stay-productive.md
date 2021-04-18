@@ -7,19 +7,35 @@
 
 As programmers, we all share a certain number of universal experiences.
 
+作为程序员，我们每个人都有一些普遍经验。
+
 One is an enduring hatred of semicolons, brackets, and parentheses (who hasn't wasted hours looking for the one of these they misplaced or omitted?).
+
+一个是对分号（;）、方括号（[]）和括号（{}）的长期厌恶仇，谁没浪费过时间去寻找它们放错位置或者哪里遗漏的时候呢？
 
 And another is learning to use compile\-time for a convenient break when we don't feel like getting anything done (I won't tell if you don't).
 
+另一个是当我们不想完成任何事情时（我不会告诉你是否做不到），学习使用编译时间来方便地休息。
+
 But the most universal programming experience of them all is what is now known as coder's block. That's when you end up unable to produce any usable code for no discernible reason.
+
+但是它们当中最普遍的编程经验就是现在被称为程序员的障碍的内容，那就是你最终无缘无故无法产出任何可用代码的时候。
 
 Like writer's block, it can afflict programmers suddenly and can be near\-impossible to overcome. I know, because it used to happen to me. A lot. So often, in fact, that I developed a self\-defeating habit of [taking career quizzes](https://www.training.com.au/ed/career-quiz/) because I thought for sure I was in the wrong line of work.
 
+就像作家的障碍一样，它可能会突然困扰程序员，并且几乎是不可能克服的。我知道，因为在我身上这曾经发生过很多次。实际上，我养成了经常[参加职业测验]（https://www.training.com.au/ed/career-quiz/）来自欺欺人的习惯，因为我想自己确实在工作路线上犯了错。
+
 Fortunately, I've picked up several ways to deal with coder's block that have kept me working smoothly ever since. And I think that they'd work for anyone prone to running into coding roadblocks.
+
+幸运的是，我找到了几种方法来克服程序员的障碍，它们让我之后的工作一直很顺利，我想它们适用于任何容易陷入到编码障碍的人。
 
 Here are the five best tactics you can use every day to stay productive and free from coder's block.
 
+这是你每天使用可以让你保持生产力并摆脱程序员的障碍的五种最佳策略。
+
 ## 1\. Start Every Project on Paper
+
+## 1\.在纸上开始每个项目
 
 Almost every time I've run into trouble while working on a coding project, I've been able to trace it back to one specific cause. It's that I tried to approach the project by wrapping my head around the totality of what needed to be done.
 

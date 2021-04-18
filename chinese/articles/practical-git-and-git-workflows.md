@@ -5,9 +5,9 @@
 
 ![How to Use Git and Git Workflows – a Practical Guide](https://images.unsplash.com/photo-1543674892-7d64d45df18b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxwaXBlc3xlbnwwfHx8fDE2MTcyMjM0Mzc&ixlib=rb-1.2.1&q=80&w=2000)
 
-Everyone says you should learn Git—and you should—but let's be honest: Git is kind of hard.
+每个人都说你应该学习 Git——你确实应该——但是说实话：Git 有点难。
 
-Even almost ten years into my software development career, I am still learning about the underlying Git fundamentals and how to use Git more effectively.
+甚至在我近10年的软件开发生涯后，我还在学习 Git 的基本原理和如何更有效地使用 Git。
 
 It wasn't too long ago that I realized [I had a fundamental misunderstanding](https://twitter.com/johnmosesman/status/1306255666718310401) of a key command I'd used countless times.
 

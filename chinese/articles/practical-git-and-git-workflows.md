@@ -1,6 +1,6 @@
 > -  原文地址：[How to Use Git and Git Workflows – a Practical Guide](https://www.freecodecamp.org/news/practical-git-and-git-workflows/)
 > -  原文作者：[John MosesmanJohn Mosesman](https://www.freecodecamp.org/news/author/johnmosesman/)
-> -  译者：
+> -  译者：frankflx
 > -  校对者：
 
 ![How to Use Git and Git Workflows – a Practical Guide](https://images.unsplash.com/photo-1543674892-7d64d45df18b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxwaXBlc3xlbnwwfHx8fDE2MTcyMjM0Mzc&ixlib=rb-1.2.1&q=80&w=2000)

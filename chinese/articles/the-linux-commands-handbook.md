@@ -1341,31 +1341,31 @@ dirname /Users/flavio/test.txt
 
 ## Linux 中的 `ps` 命令
 
-Your computer is running tons of different processes at all times.
+电脑每时每刻都在运行大量不同的进程。
 
-You can inspect them all using the `ps` command:
+你可以用 `ps` 命令检查它们：
 
 ![Screen-Shot-2020-09-02-at-12.25.08](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-02-at-12.25.08.png)
 
-This is the list of user-initiated processes currently running in the current session.
+这是当前会话中运行的，由用户发起的进程列表。
 
-Here I have a few `fish` shell instances, mostly opened by VS Code inside the editor, and an instance of Hugo running the development preview of a site.
+此处我打开了一些 `fish` Shell 实例，大多数是在 VS Code 编辑器内部启动的，还运行了一个 Hugo 实例，用来生成网站的开发预览。
 
-Those are just the commands assigned to the current user. To list **all** processes we need to pass some options to `ps`.
+这些只是分配给当前用户的命令。要列出**所有**进程，我们需要给 `ps` 传递一些参数。
 
-The most common one I use is `ps ax`:
+我最常使用的命令是 `ps ax`：
 
 ![Screen-Shot-2020-09-02-at-12.26.00](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-02-at-12.26.00.png)
 
-> The `a` option is used to also list other users' processes, not just your own. `x` shows processes not linked to any terminal (not initiated by users through a terminal).
+> `a` 参数用来同时列出其他用户的进程。`x` 显示那些未与终端相连的进程（不是由用户通过终端发起的）。
 
-As you can see, the longer commands are cut. Use the command `ps axww` to continue the command listing on a new line instead of cutting it:
+如你所见，较长的命令被截断了。使用 `ps axww` 继续在新的行上列出命令，而非截断。
 
 ![Screen-Shot-2020-09-02-at-12.30.22](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-02-at-12.30.22.png)
 
-> We need to specify `w` 2 times to apply this setting (it's not a typo).
+> 我们需要输入 `w` 两次来应用这个设置（这不是笔误）。
 
-You can search for a specific process combining `grep` with a pipe, like this:
+你可以配合使用 `grep` 和管道符来搜索特定的进程，比如像这样：
 
 ```
 ps axww | grep "Visual Studio Code"
@@ -1373,20 +1373,20 @@ ps axww | grep "Visual Studio Code"
 ```
 
 ![Screen-Shot-2020-09-02-at-12.33.45](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-02-at-12.33.45.png)  
-The columns returned by `ps` represent some key information.
+`ps` 返回的列表达了一些重要信息。
 
-The first information is `PID`, the process ID. This is key when you want to reference this process in another command, for example to kill it.
+第一个信息是 `PID`，也就是进程 ID。当你想在另一个命令中引用这个进程时，比如说要杀死它，这是关键的。
 
-Then we have `TT` that tells us the terminal id used.
+然后是 `TT`，它告诉我们进程所使用的终端 ID。
 
-Then `STAT` tells us the state of the process:
+接下来 `STAT` 告诉我们进程的状态：
 
-`I` a process that is idle (sleeping for longer than about 20 seconds)  
-`R` a runnable process  
-`S` a process that is sleeping for less than about 20 seconds  
-`T` a stopped process  
-`U` a process in uninterruptible wait  
-`Z` a dead process (a _zombie_)
+`I` 代表闲置的进程（睡眠时间超过约 20 秒）
+`R` 代表可运行的进程
+`S` 代表睡眠时间少于 20 秒的进程 
+`T` 代表已停止的进程  
+`U` 代表处于不间断等待中的进程 
+`Z` 代表已死亡的进程（_zombie_，即僵尸进程）
 
 If you have more than one letter, the second represents further information, which can be very technical.
 

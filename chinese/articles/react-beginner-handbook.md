@@ -5,29 +5,29 @@
 
 ![React for Beginners – A React.js Handbook for Front End Developers](https://www.freecodecamp.org/news/content/images/size/w2000/2020/11/book-2.jpg)
 
-React 是有史以来最受欢迎的 JavaScript 框架之一，我认为它也是目前最好用的开发工具之一。
+React 是目前为止最受欢迎的 JavaScript 框架之一，而且我相信它也是目前最好用的开发工具之一。
 
-希望这篇文章可以为 React 初学者提供一些帮助。
+这篇文章的目的在于为 React 初学者提供一些指导。
 
 在学习完这篇文章后，你就可以对 React 有初步的了解：
 
--   什么是 React 以及为什么 React 这么受欢迎
--   怎么安装 React
+-   React 是什么，它为什么这么受欢迎
+-   如何安装 React
 -   React 组件
 -   React State
 -   React Props
--   处理 React 中的用户事件
--   Lifecycle events in a React component
+-   在 React 中处理用户事件
+-   React 组件的生命周期事件
 
-这些主题将是你构建其他高级 React 教程的基础。
+以上这些内容是你构建其他高级 React 应用的基础。
 
-这篇文章专门为刚接触 React 的 JavaScript 程序员而写的。现在，让我们开始吧。
+这篇文章是专门为刚接触 React 的 JavaScript 程序员写的。让我们现在就开始学习吧。
 
-## 什么是 React？
+## React 是什么？
 
-React 是一个 JavaScript 库，旨在简化可视界面（visual interfaces）的开发。
+React 是一个 JavaScript 库，旨在简化用户界面的开发。
 
-React 诞生在 Facebook，于 2013 年发布，并为 Facebook 和 Instagram 提供了大量的应用程序，其中的一些 app 有着最广泛的使用。
+2013 年，Facebook 首次向全世界发布了 React，以其为基础，Facebook 和 Instagram 开发了大量的 APP，其中的一些 APP 有着最广泛的使用。
 
 它的主要目的是在任何时间点都可以轻松的推断接口及其状态。它通过将 UI 划分为组件的集合来实现这个目的。
 

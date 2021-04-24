@@ -1,128 +1,128 @@
 > -   原文地址：[How to Be a Good Open Source Project Owner – The Ultimate Guide](https://www.freecodecamp.org/news/ultimate-owners-guide-to-open-source/)
 > -   原文作者：JeB Barabanov
-> -   译者：
+> -   译者：Humilitas
 > -   校对者：
 
 ![How to Build a Weather Application with React and React Hooks](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/Pink-Cute-Chic-Vintage-90s-Virtual-Trivia-Quiz-Presentations--39-.png)
 
-React is a super\-awesome front\-end library that you can use to build user interfaces.
+React 是一个很棒的前端框架，可以用来构建用户界面。
 
-One of the best things about React is that the components we create are encapsulated. In other words, they can't be seen.
+使用 React 的优势之一是：我们创建的组件会被封装起来，换句话说，组件是不可见的。
 
-Let's learn more about how all this works by building a weather application using React.
+我们通过构建一个天气应用来学习 React。
 
-## How to Install Node and npm
+## 如何安装 Node 和 npm
 
-To build our React application, we need a run\-time environment called Node. It is mainly used to execute JavaScript code.
+为了构建 React 应用，我们需要安装 Node 运行时环境，它主要是用来执行 JavaScript 代码。
 
-To download it, go to [https://nodejs.org/en/](https://nodejs.org/en/).
+点击 [https://nodejs.org/en/](https://nodejs.org/en/)，下载安装包。
 
-You'll also need **npm**, which is a package manager built on Node. You can use it to install packages for your JavaScript apps. Fortunately it comes with Node, so you don't need to download it separately.
+还需要安装 **npm**，它是用 Node 构建的一个包管理器，可以在 JavaScript 应用中用它来安装依赖包。幸运的是，**npm** 包含在 Node 中，所以不必另外安装它。
 
-Once both of them are finished, open your terminal or command prompt and type `node -v`. This checks which version of Node you have.
+安装完成后，打开终端（terminal）或命令提示符（command prompt），输入 `node -v` 命令，查看当前系统中的 Node 版本。
 
-## How to Create a React App
+## 如何创建 React 应用
 
-To create our react application, type **`npx create-react-app <Your app name>`**  in your terminal, or **`npx create-react-app my-weather-app`** in this case.
+要创建 react 应用，可以在终端输入 **`npx create-react-app <Your app name>`** 命令（此例中命令为 **`npx create-react-app my-weather-app`**）。
 
-You'll see that the packages are being installed.
+可以看到相关依赖包正在自动安装。
 
-Once the packages are done, go into the project folder and type **`npm start`**.
+依赖包安装完成之后，进入项目根目录（通过 `cd` 命令），执行 **`npm start`** 命令。
 
-You'll see the default React template, like this:
+可以看到默认的 React 模板页面：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-12-12-07-22.png)
 
-The default React Boilerplate Template
+默认的 React 代码模板：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-12-12-08-28.png)
 
-App.js
+<div style="text-align: center; margin-bottom: 2em;">App.js</div>>
 
-We don't need all of this right now. So, let's clear out some code.
+我们不需要这些，所以要清理一些无用代码。
 
-In your **app.js** file, clear everything inside the `div` tag. Remove the logo import.
+在 **app.js** 中，删除 `div` 标签内的内容，删除导入 logo 的代码。
 
-You will receive a blank screen on the output once you have done that.
+完成之后，页面内容会变成空白。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-12-12-12-25.png)
 
-App.js after cleanup
+<div style="text-align: center; margin-bottom: 2em;">清理之后的 app.js</div>
 
-## How to Install the Packages We Need
+## 如何安装我们需要的依赖包
 
-To make this application more attractive, we need some external packages. So, let's install them.
+为了让这个应用更有吸引力，我们需要安装一些外部依赖包。
 
-We need the [Semantic React UI](https://react.semantic-ui.com/usage/) library. To install it, type the following command in the terminal:
+我们需要用到 [Semantic React UI](https://react.semantic-ui.com/usage/) 库，执行以下命令来安装：
 
 ```bash
 npm install semantic-ui-react semantic-ui-css
 ```
 
-Once it has been installed, open **index.js** and import the library. Just copy and paste the following command in your **index.js** file:
+安装完成后，在 **index.js** 中引入这个库，将以下代码复制到 **index.js** 中即可：
 
 ```
 import 'semantic-ui-css/semantic.min.css'
 ```
 
-We also need [moment.js](https://momentjs.com/) to format our time. Install it using the following command:
+还需要安装 [moment.js](https://momentjs.com/) 来格式化时间，执行以下命令：
 
 ```
 npm install moment --save
 ```
 
-You can check your package.json file to keep track of all the installed packages.
+可以查看 package.json 文件来了解安装了哪些包：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-12-12-21-01.png)
 
-package.json
+<div style="text-align: center; margin-bottom: 2em;">package.json</div>
 
-Here, you can see all the packages you have so far.
+在这里，可以看到目前安装的所有依赖包。
 
-## How to Create Our Weather Application
+## 如何创建我们的天气应用
 
-To make our weather application work, we need OpenWeatherMap, a third\-party API that'll let us fetch the weather data.
+为了让我们的天气应用正常工作，需要使用 OpenWeatherMap 提供的 API 来获取天气信息。
 
-Go to [https://home.openweathermap.org/users/sign\_up](https://home.openweathermap.org/users/sign_up) and create your own account.
+访问 [https://home.openweathermap.org/users/sign\_up](https://home.openweathermap.org/users/sign_up) 页面，创建自己的账号。
 
-After you are done, click on the API option on the Navigation bar. You'll see different options like Current Weather Data, Hourly 4 hour forecasts, 16 day forecasts, and others. These are API endpoints that you'll need to fetch the data.
+完成之后，点击导航栏上的 API 选项，可以看到不同类型的天气数据，如当前天气、未来 4 天逐小时预报、未来 16 天预报等。这些就是用来获取天气信息的 API 端点。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-12-12-30-10.png)
 
-You also need an API key to call these APIs. To get your API key, click on your username in the top right corner, and then on "my API keys".
+调用这些 API 需要用到 API key，点击右上角的用户名，接着点击 “My API Keys”，可以查看自己的 API key。
 
-Create an API key if it doesn't already exist.
+如果没有的话就创建一个。
 
-In your main app folder, create a file called **.env.**
+在项目根目录新建一个 **.env.** 文件。
 
-This is an environment variable file that will contain all your API endpoints and keys.
+这是一个环境变量文件，保存所有 API 端点和 key 信息。
 
 ```
 REACT_APP_API_URL = 'https://api.openweathermap.org/data/2.5'
-REACT_APP_API_KEY = Paste your API key here.
+REACT_APP_API_KEY = 【把你的 API key 粘贴在这里】
 REACT_APP_ICON_URL = 'https://openweathermap.org/img/w'
 ```
 
-Paste your copied API key in the REACT\_APP\_API\_KEY variable.
+把你的 API key 粘贴在 REACT\_APP\_API\_KEY 变量中。
 
-## How to Use React Hooks
+## 如何使用 React Hooks
 
-React Hooks lets us use and manage state in our functional components.
+React Hooks 让我们能够在函数组件中使用、管理 state。
 
-We will use the `useState` hook and the `useEffect` hook. Let's import them at the top.
+我们会用到 `useState` 和 `useEffect` 两个 hook，在顶部引入它们：
 
 ```
 import React, { useEffect, useState } from "react";
 ```
 
-Let's create two states. One is for latitude and another is for longitude.
+创建两个 state，一个是纬度（lat），一个是经度（long）。
 
 ```
 const [lat, setLat] = useState([]);
 const [long, setLong] = useState([]);
 ```
 
-Now, create the `useEffect` function. Its goal is to load the functions when the application is loaded and reloaded.
+创建一个 `useEffect` 函数，在应用加载及刷新时会执行它。
 
 ```
 useEffect(() => {
@@ -136,7 +136,7 @@ useEffect(() => {
   }, [lat, long]);
 ```
 
-We get our latitude and longitude using `navigator.geolocation` and we use **setLong**  and **setLat**  to set our longitude and latitude states.
+使用 `navigator.geolocation` 获取纬度和经度，并使用 **setLong** 和 **setLat** 来设置纬度和经度 state。
 
 ```
 import './App.css';
@@ -165,26 +165,26 @@ export default function App() {
 
 ```
 
-app.js
+<div style="text-align: center; margin-bottom: 2em;">app.js</div>
 
-This is how our app.js file looks like now. You can check the console for the latitude and longitude values.
+现在 app.js 的内容如上。可以在浏览器控制台中查看纬度和经度的值：
 
 ```
 Latitude is: 25.5922166
 Longitude is: 85.12761069999999
 ```
 
-Our latitude and longitude
+<div style="text-align: center; margin-bottom: 2em;">纬度和经度值</div>
 
-## How to Get Our Current Location Using Latitude and Longitude.
+## 如何利用纬度和经度来获取当前位置的天气
 
-Let's create another function **getWeather** that will fetch the weather data from the Weather API, based on our latitude and longitude.
+创建 **getWeather** 函数，基于我们的纬度和经度从 API 中获取天气数据。
 
-In this function, we are using a fetch call to get the data from the API. The **process.env.REACT\_APP\_API\_URL** gets your API address  and **process.env.REACT\_APP\_API\_KEY** gets your API Key from the **.env** file. The lat and long are the latitude and longitude that we got previously.
+这个函数中，使用 fetch 方法调用 API 获取天气数据。**process.env.REACT\_APP\_API\_URL** 和 **process.env.REACT\_APP\_API\_KEY** 分别获取了 **.env** 文件中配置的 API 地址和 API key，lat 和 long 是之前获取到的纬度和经度。
 
-And then we convert the data into **JSON** format.
+接着将数据转换为 **JSON** 格式。
 
-In the next step, we use **setData** to store our result into the **data** object.
+再接着，使用 **setData** 将结果存储在 **data** 对象中。
 
 ```
 await fetch(`${process.env.REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`)
@@ -195,13 +195,13 @@ await fetch(`${process.env.REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&un
       });
 ```
 
-And we log the data in the console.
+然后把数据打印在控制台：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-12-13-36-26.png)
 
-Here, you can see all the weather data based on our Latitude and Longitude.
+现在可以看到基于纬度和经度获取到的天气数据。
 
-Here is our new app.js file that fetches the weather data based on Longitude and Latitude:
+现在，app.js 文件的内容如下：
 
 ```
 import './App.css';
@@ -239,15 +239,15 @@ export default function App() {
 
 ```
 
-app.js
+<div style="text-align: center; margin-bottom: 2em;">app.js</div>
 
-### How to Create the Weather Components
+### 如何创建天气组件
 
-Let's create our weather components where we will display our weather data.
+创建展示天气数据的组件。
 
-In your src folder, create a folder called **components**, and in that folder, create a file called **weather.js.**
+在 src 文件夹中，创建 **components** 文件夹，并在其中创建 **weather.js** 文件。
 
-Now, let's call our weather component in our main **app.js** file.
+在 **app.js** 中使用天气组件：
 
 ```
 import './App.css';
@@ -290,21 +290,21 @@ export default function App() {
 
 ```
 
-Importing Weather Component in app.js file
+<div style="text-align: center; margin-bottom: 2em;">在 app.js 文件中引入天气组件（Weather）</div>
 
-You can see that I've included a check in the return statement. If the type of data we are getting is undefined, it will show us an empty div. And since the fetch data is an async function, it's mandatory to include this check. It loads the function after all other functions are done executing. So, if you remove this check, you will get an error.
+我在 return 语句加了一个判断，如果 data.main 的值为 undefined 则展示一个空的 div。因为 fetch 函数是异步的，所以必须加入这个检查。所有其他函数（除了异步的 fetch 函数）执行完毕之后，就会执行这个 return 语句，如果没有这个判断就会报错：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-13-05-19-29-1.png)
 
-This is because our application renders the return statement before the API call is made, and there is nothing to show in that case so it throws an undefined error.
+这是由于我们的应用在 API 调用完成之前渲染了 return 语句中返回的内容，而此时没有数据可以展示，所以抛出了 undefined 错误。
 
-To learn more about async/await, check out [this article](https://www.freecodecamp.org/news/async-await-in-javascript/).
+关于 async/await 的更多信息，可以查看[这篇文章](https://www.freecodecamp.org/news/async-await-in-javascript/)。
 
-### How to Create our Weather Body
+### 如何创建天气组件的主体部分
 
-For this part, we are going to use the Semantic UI library to design our interface.
+这个部分我们将会使用 Semantic UI 来设计界面。（译注：Semantic UI 使用了严格模式下已经弃用的 findDOMNode() 方法，会在控制台抛出警告，不必理会。) 
 
-Let's create a card that will display our weather information.
+创建展示天气信息的卡片：
 
 ```
 import React from 'react';
@@ -322,21 +322,21 @@ const CardExampleCard = ({weatherData}) => (
 export default CardExampleCard;
 ```
 
-Weather.js
+<div style="text-align: center; margin-bottom: 2em;">Weather.js</div>
 
-Here, we import a card from semantic\-ui\-react, and inside that card, a header that will show the name of your city.
+我们引入了并使用了 semantic\-ui\-react 的 Card 组件，在卡片中还有一个 Header 用来展示当前城市。
 
-But the question is, how do we get data from our app.js to the weather.js component?
+现在问题是，怎么把 app.js 中的数据传给 weather.js 组件？
 
-The answer is simple. We can use props in React to send data from a parent component to a child component. In our case, our parent component is app.js and our child component is weather.js.
+答案很简单，可以使用 props 从父组件向子组件传递数据。本例中，父组件是 app.js，子组件是 weather.js。
 
-And to do that, just add the props in the component in **app.js.**
+只要在 **app.js** 中使用 Weather 组件的地方加上 props 即可：
 
 ```
 <Weather weatherData={data}/>
 ```
 
-Here, we are passing the data with the props name as weatherData. And we will receive the weatherData props in **Weather.js.**
+我们在这里通过名为 weatherData 的 props 传入数据，就可以在 **weather.js.** 中接收到。
 
 ```
 import React from 'react';
@@ -356,9 +356,9 @@ export default CardExampleCard;
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-12-17-36-56.png)
 
-You can see we get the name of the city according to the location.
+可以看到，我们基于位置获取到了城市名。
 
-Similarly, we can add more fields to our weather component.
+同样的，我们可以为天气组件加入更多字段：
 
 ```
 import React from 'react';
@@ -380,19 +380,19 @@ const CardExampleCard = ({weatherData}) => (
 export default CardExampleCard;
 ```
 
-We can get the Temperature, Sunrise, Sunset, and Description from the API.
+我们可以通过 API 获取温度、日出时间、日落时间以及描述信息。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-12-17-45-36-1.png)
 
-You can add any other fields you want, like Humdity, Windspeed, Visibility, and more.
+可以任意添加其他字段，比如湿度、风速、能见度等。
 
-### How to Format the Data and Add Today's Day and Date
+### 如何格式化数据和日期
 
-Let's format the data so that it's easy to understand. We will add some more fields.
+格式化数据，使其更易读。我们会增加一些字段。
 
-To start, add the unit of temperature. You can do this by adding **&deg;C** after the temperature.
+首先，为温度加上单位，在温度后面加上 **&deg;C**。
 
-Also, let's change sunrise and sunset to local time.
+并把日出日落时间转换为本地时间。
 
 ```
 import React from 'react';
@@ -415,7 +415,7 @@ const CardExampleCard = ({weatherData}) => (
 export default CardExampleCard;
 ```
 
-Now, let's add today's day and date using **moment.js.**
+使用 **moment.js.** 计算出当天的礼拜日期和公历日期：
 
 ```
 import moment from 'moment';
@@ -424,11 +424,11 @@ import moment from 'moment';
 <p>Date: {moment().format('LL')}</p>
 ```
 
-Using moment.js
+<div style="text-align: center; margin-bottom: 2em;">使用 moment.js</div>
 
-We import the **moment** package at the top and display today's day and date respectively. The great thing about this package is that it automatically updates the date and the day.
+在顶部引入 **moment** 包，并分别展示当天的礼拜日期和公历日期。这个包的好处在于，它会自动更新公历日期和礼拜日期。
 
-This is how our **weather.js** look like now:
+现在 **weather.js** 内容如下：
 
 ```
 import React from 'react';
@@ -454,17 +454,17 @@ const CardExampleCard = ({weatherData}) => (
 export default CardExampleCard;
 ```
 
-weather.js
+<div style="text-align: center; margin-bottom: 2em;">weather.js</div>
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-13-12-16-14.png)
 
-And the above is our output.
+上图是现在的页面效果。
 
-## Let's Do Some Styling
+## 加上一些样式
 
-Now that we have all our data, let's style them to make it more attractive.
+现在已经得到了所有数据，我们加一些样式来让它更有吸引力。
 
-First of all, let's make the card bigger, change the border\-radius, add a cooler font and a color, and remove the text alignment.
+首先，让卡片变大一点、改变 border\-radius、加入更酷的字体和颜色、删除文本对齐（译注：文中 css 代码没有涉及文本对齐）。
 
 ```
 import React from 'react';
@@ -488,7 +488,7 @@ const CardExampleCard = ({weatherData}) => (
 export default CardExampleCard;
 ```
 
-weather.js
+<div style="text-align: center; margin-bottom: 2em;">weather.js</div>
 
 ```
 @import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
@@ -524,13 +524,13 @@ weather.js
 }
 ```
 
-styles.css
+<div style="text-align: center; margin-bottom: 2em;">styles.css</div>
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-13-12-48-03.png)
 
-This is how our app looks now.
+现在我们的应用效果如上。
 
-Let's use **flexbox** to arrange the data column\-wise.
+使用 **flexbox** 来排列数据：
 
 ```
 <div className="flex">
@@ -542,7 +542,7 @@ Let's use **flexbox** to arrange the data column\-wise.
 </div>
 ```
 
-Name the divs as 'flex' and add the following property in ***styles.css.***
+给 div 元素加上“flex”类，并在 ***styles.css.*** 中加入以下样式：
 
 ```
 .flex{
@@ -551,7 +551,7 @@ Name the divs as 'flex' and add the following property in ***styles.css.***
 }
 ```
 
-Our weather.js will now look something like this.
+现在 weather.js 内容如下：
 
 ```
 import React from 'react';
@@ -579,7 +579,7 @@ export default CardExampleCard;
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-13-12-56-27.png)
 
-Similarly, add the remaining fields.
+同样的，加入剩下的字段：
 
 ```
 import React from 'react';
@@ -610,7 +610,7 @@ const WeatherCard = ({weatherData}) => (
 export default WeatherCard;
 ```
 
-weather.js
+<div style="text-align: center; margin-bottom: 2em;">weather.js</div>
 
 ```
 @import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
@@ -677,15 +677,15 @@ weather.js
 }
 ```
 
-styles.css
+<div style="text-align: center; margin-bottom: 2em;">styles.css</div>
 
-This is how our application looks now:
+现在我们的应用效果如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-13-13-37-46.png)
 
-### How to Add a Refresh Button.
+### 如何加入刷新按钮
 
-Let's add a refresh button at the top of our page.
+在页面顶部增加一个刷新按钮：
 
 ```
 import React from 'react';
@@ -725,7 +725,7 @@ const WeatherCard = ({weatherData}) => (
 export default WeatherCard;
 ```
 
-weather.js
+<div style="text-align: center; margin-bottom: 2em;">weather.js</div>
 
 ```
 .button{
@@ -734,17 +734,17 @@ weather.js
 }
 ```
 
-styles.css
+<div style="text-align: center; margin-bottom: 2em;">styles.css</div>
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-13-13-51-37.png)
 
-You can see a button that will trigger the refresh function. When you push it, it will refresh the page.
+可以看到，页面上多了一个刷新按钮，点击它就会触发 refresh 函数、刷新页面。
 
-### How to Add a Loader When Our Application is Loading.
+### 如何加入页面加载动画
 
-Let's add a loader to make the app even more amazing.
+加入加载动画，增强应用的用户体验。
 
-Import Loader from Semantic UI and add it in the return function, where we check for undefined data.
+引入 Semantic UI 的 Loader 组件，并在数据尚未加载完成的情况下显示：
 
 ```
 import { Dimmer, Loader } from 'semantic-ui-react';
@@ -762,34 +762,34 @@ import { Dimmer, Loader } from 'semantic-ui-react';
  </div>
 ```
 
-app.js
+<div style="text-align: center; margin-bottom: 2em;">app.js</div>
 
-## Let's Recap What We've Done
+## 回顾一下
 
-We have created a React application that shows the current weather based on your location.
+我们创建了一个基于地理位置展示当前天气信息的 React 应用。
 
-Let's go through everything we have done so far.
+一起回顾一下我们所做的东西。
 
-### We Learned about State and Props
+### 我们学习了 State 和 Props
 
-State and Props are very powerful features in React. They are used to manage data and control its flow within different components.
+State 和 Props 是 React 提供的非常强大的特性，可以用来管理数据、控制不同组件之间的数据流。
 
-In our application, we are managing the state which the state of the application. For example, the name of the city, the temperature, the date, humidity, and all. They vary from user to user, depending on their location.
+在我们的应用中，使用 State 管理应用程序的状态，比如城市名称、温度、日期、湿度等。这些数据因人而异，取决于用户所处的位置。
 
-Props, on the other hand, are used to pass data between components. We are getting the data in our **app.js** file, but we are reading it in **weather.js.** Remember, props can only be used to pass data from the parent component to the child component.
+另一方面，使用 Props 在不同组件之间传递数据。我们在 **app.js** 中获取天气数据，又在 **weather.js** 中读取这些数据。记住，使用 props 只能从父组件向子组件传递数据。
 
-### We Used React Hooks
+### 我们使用了 React Hooks
 
-If you have used class components, then you must know about life\-cycle methods. If not, they are the methods that are called when our page renders or re\-renders. But we can't use life\-cycle methods in functional components, as they are specially built for class components.
+如果使用过类组件（class component），那么你肯定了解生命周期方法（life\-cycle methods）。如果没用过的话，可以把它们理解为一些在页面渲染或重新渲染是执行的方法。但是我们不能在函数组件（functional component）中使用生命周期方法，因为它们是专门为类组件设计的。
 
-So, React Hooks is the alternative. We have used two hooks in our application. One is useState, used to manage the state of the application. The other is the useEffect, which loads when the page is rendered or loaded.
+所以，使用 React Hooks 来替代。在我们的应用中用到了两个 hook，一个是用来管理应用 state 的 useState，另一个是用来在页面渲染或加载时执行一些任务的 useEffect。
 
-### We Tried Out Semantic UI
+### 我们尝试了 Semantic UI
 
-Semantic UI is a library for React which has predefined awesome components.
+Semantic UI 是为 React 设计的库，它提供了许多出色的组件。
 
-That's all, folks. You can add more features to the app, like a five\-day forecast, icons, and more.
+朋友们，以上就是本文的全部内容了。你可以试着为这个应用添加更多特性，比如未来 5 天预报、图标说明等。
 
-You can [find the code on Github](https://github.com/nishant-666/React-weather) if you want to experiment further.
+想要进一步了解的话，可以查看[项目代码](https://github.com/nishant-666/React-weather)。
 
-> Try and experiment, happy learning.
+> 不断尝试，快乐学习。

@@ -1,4 +1,4 @@
-> -   原文地址：[How to Be a Good Open Source Project Owner – The Ultimate Guide](https://www.freecodecamp.org/news/ultimate-owners-guide-to-open-source/)
+> -   原文地址：[How to Build a Weather Application with React and React Hooks](https://www.freecodecamp.org/news/learn-react-by-building-a-weather-app/)
 > -   原文作者：JeB Barabanov
 > -   译者：Humilitas
 > -   校对者：

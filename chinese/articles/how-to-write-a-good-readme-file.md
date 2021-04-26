@@ -1,6 +1,6 @@
 > -  原文地址：[How to Write a Good README File for Your GitHub Project](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
 > -  原文作者：[Hillary NyakundiHillary Nyakundi](https://www.freecodecamp.org/news/author/larymak/)
-> -  译者：
+> -  译者：sevvse
 > -  校对者：
 
 ![How to Write a Good README File for Your GitHub Project](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/uide-to-writting-a-good-readme-file--1-.png)

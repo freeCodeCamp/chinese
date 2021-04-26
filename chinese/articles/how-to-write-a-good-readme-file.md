@@ -6,11 +6,11 @@
 ![How to Write a Good README File for Your GitHub Project](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/uide-to-writting-a-good-readme-file--1-.png)
 
 If you are reading this article, it probably means that you are already pushing repositories to GitHub and maybe even contributing to open source.
-
+如果你正在阅读这篇文章，那可能说明你正在准备将代码仓库上传到GitHub上，甚至对开源做出贡献。
 And if you're using GitHub, it means that you will need to write good documentation for your projects to help others understand them.
-
+还有如果你在用GitHub，这意味着你需要编写一个好的文档来帮助他人了解你的项目。
 If you are just getting started using version control, don't feel left out – this guide is also for you. It'll help you learn how to get started writing helpful documentation.
-
+如果你刚开始使用版本控制，不要失落——这篇指南也是为你准备的。会帮助你学会如何开始写
 When I started to pushing my projects on [Github](https://github.com/larymak), honestly I had no idea what a README file was (even though I could see it in other people's projects).
 
 As time went by I started following other developers. They all had cool projects and had contributed to open source, and they all had one thing in common: their projects had detailed **README files**.

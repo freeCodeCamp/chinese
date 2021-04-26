@@ -37,7 +37,7 @@ React 是一个很棒的前端框架，可以用来构建用户界面。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-12-12-08-28.png)
 
-<div style="text-align: center; margin-bottom: 2em;">App.js</div>>
+<div style="text-align: center; margin-bottom: 2em;">App.js</div>
 
 我们不需要这些，所以要清理一些无用代码。
 
@@ -93,7 +93,7 @@ npm install moment --save
 
 如果没有的话就创建一个。
 
-在项目根目录新建一个 **.env.** 文件。
+在项目根目录新建一个 **.env** 文件。
 
 这是一个环境变量文件，保存所有 API 端点和 key 信息。
 

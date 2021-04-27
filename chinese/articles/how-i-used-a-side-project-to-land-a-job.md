@@ -1,6 +1,6 @@
 > -   原文地址：[How I Built a Web Scraper with Beautiful Soup and Used it to Land My First Job](https://www.freecodecamp.org/news/how-i-used-a-side-project-to-land-a-job/)
 > -   原文作者：Daniel Chae
-> -   译者：
+> -   译者：17gttk
 > -   校对者：
 
 ![How I Built a Web Scraper with Beautiful Soup and Used it to Land My First Job](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/alvaro-reyes-6avV9oeHxfo-unsplash.jpg)

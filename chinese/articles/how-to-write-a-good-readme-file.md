@@ -6,22 +6,40 @@
 ![How to Write a Good README File for Your GitHub Project](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/uide-to-writting-a-good-readme-file--1-.png)
 
 If you are reading this article, it probably means that you are already pushing repositories to GitHub and maybe even contributing to open source.
+
 如果你正在阅读这篇文章，那可能说明你正在准备将代码仓库上传到GitHub上，甚至对开源做出贡献。
+
 And if you're using GitHub, it means that you will need to write good documentation for your projects to help others understand them.
+
 还有如果你在用GitHub，这意味着你需要编写一个好的文档来帮助他人了解你的项目。
+
 If you are just getting started using version control, don't feel left out – this guide is also for you. It'll help you learn how to get started writing helpful documentation.
-如果你刚开始使用版本控制，不要失落——这篇指南也是为你准备的。会帮助你学会如何开始写
+
+如果你刚开始使用版本控制，不要失落——这篇指南也是为你准备的。会帮助你学会如何开始写有用的文档。
+
 When I started to pushing my projects on [Github](https://github.com/larymak), honestly I had no idea what a README file was (even though I could see it in other people's projects).
+
+当我刚开始在[Github](https://github.com/larymak)里上传我的项目时，老实说我还没有意识到到底什么是readme文件（即使我经常在他人的项目里看到）。
 
 As time went by I started following other developers. They all had cool projects and had contributed to open source, and they all had one thing in common: their projects had detailed **README files**.
 
+随着时间的推移我开始关注其他的开发者。他们都拥有很酷的项目并且对开源有所贡献，同时他们有一件事很统一，就是他们的项目都有详尽的 **README 文件** 。
+
 So my interest in what a README was grew, and I decided to try and add one in my projects, too.
+
+所以我对一个readme文档怎么发展产生了好奇心，同时我决定尝试并且在我自己的项目中也添加一个。
 
 In this article, we'll learn more about what a README file is and how to write one.
 
+在这篇文章当中，我们将学习很多关于什么是readme文件以及如何动手编写。
+
 ## First, Why Do I need a Good README File?
 
+## 首先，为什么我需要一个好的readme文件？
+
 A README file is a guide that gives users a detailed description of a project that you have pushed to your repository.
+
+
 
 Perhaps you are wondering why you should spend time writing a good README. Well are some reasons to help convince you that it's a good idea:
 

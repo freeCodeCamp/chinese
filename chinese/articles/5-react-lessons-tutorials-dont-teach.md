@@ -5,11 +5,11 @@
 
 ![5 Key React Lessons the Tutorials Don't Teach You](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/5-key-lessons-react-tutorials-dont-teach.png)
 
-There are many essential concepts and lessons that React developers need to know that simply aren't covered in most tutorials.
+本文将会介绍React开发人员需要知道的许多基本知识点，这在大多数教程中都没有涉及到。
 
-I have handpicked the topics I believe are some of the most important for you to know, but that few articles have dedicated the time to cover in detail.
+我挑选了一些我认为非常重要的知识点，很少有文章专门花时间进行详细介绍这些知识点。
 
-Let's take a look at five key React lessons worth knowing which you might not find elsewhere.
+让我们来看一下5个值得了解的React知识点，这些在其他地方可能无法遇到的。
 
 > Want to learn all the skills you need to become a highly-paid React developer? Check out the [**React Bootcamp**](https://reactbootcamp.com).
 

@@ -1,6 +1,6 @@
 > -  原文地址：[5 Key React Lessons the Tutorials Don't Teach You](https://www.freecodecamp.org/news/5-react-lessons-tutorials-dont-teach/)
 > -  原文作者：[Reed BargerReed Barger](https://www.freecodecamp.org/news/author/reed/)
-> -  译者：
+> -  译者：3Alan
 > -  校对者：
 
 ![5 Key React Lessons the Tutorials Don't Teach You](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/5-key-lessons-react-tutorials-dont-teach.png)

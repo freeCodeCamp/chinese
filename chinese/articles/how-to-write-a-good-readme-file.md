@@ -39,32 +39,57 @@ In this article, we'll learn more about what a README file is and how to write o
 
 A README file is a guide that gives users a detailed description of a project that you have pushed to your repository.
 
-
+README文件是给使用者一个对于你上传到仓库的项目做详细描述的说明。
 
 Perhaps you are wondering why you should spend time writing a good README. Well are some reasons to help convince you that it's a good idea:
+
+你大概会疑惑为什么你要花时间写一个好的README。这里有一些理由来帮助说服你这是个好主意
 
 1.  A good README helps your projects stand out from a bunch of other projects. It should be as good as the project itself.
 2.  It is the first file a person will see when they encounter your project, so it should be fairly brief but detailed.
 3.  It will help you focus on what your project needs to deliver and how.
 
+1.  一个好的README可以帮助你的项目从同类型的其他项目中脱颖而出。它应该像项目本身一样优秀。
+2.  当别人访问你的项目时它将会是第一个被看到的文件，所以它应该是简短精炼的。
+3.  它会帮助你专注在你的项目需要实现什么以及怎样实现。
+
 > Just as Friedrich Nietzsche said:  
 > A good writer possesses not only his own spirit but also the spirit of his friends.
 
+> 就像弗里德里希.尼采所说：
+> 一个好的作者不仅要拥有自己的精神还要有他朋友们的精神
+
 When writing a README, always keep in mind that you will need your friends, or in this case other developers, to understand your code.
+
+当编写一个README时，要一直记得你需要让你的朋友或者在这个实例中其他的开发者能理解你的代码。
 
 For instance have a look at this [project](https://github.com/larymak/GitIntro). As you can see it does not have a detailed README, a description, or any guidance.
 
+譬如拿这个来说[project](https://github.com/larymak/GitIntro)。正如你所见，它没有一个详细的README文件，一个说明，或者一个导航。
+
 With a project like this on GitHub no one will be able to understand what it does no matter how much time you took creating it, right?
+
+在github里一个像这样的项目，不管花费多少时间去引用它，都不会有人能理解它的功能，对吗
 
 Now have a look at this [project](https://github.com/larymak/Html-Css-Recap). Here, you are able to understand what the project does, what it entails, and how to get started if you need to use or want to contribute to the project.
 
+现在看一眼这个实例[project](https://github.com/larymak/Html-Css-Recap)。这样，你大概能理解这个项目的功能，它的依赖，以及如果你需要使用如何去开始或者对项目改进作出贡献。
+
 You see, that's the power of writing a good README.
+
+看，这就是写好一个README 文件的力量。
 
 #### So let's get started
 
+#### 让我们开始吧
+
 There's not one right way to structure a good README. But there is one very wrong way, and that is to not include a README at all.
 
+正确编写一个好的README 文件的方式不止一种。但是只有一种非常错误的方法就是项目中完全没有包含一个README文件。
+
 These steps are among the best practices I've found. As you progress in your career, you will develop your own ideas about what makes a good README and how to improve on it.
+
+
 
 A README needs to answer the following what, why, and how:
 

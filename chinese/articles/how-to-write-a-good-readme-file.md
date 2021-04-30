@@ -89,9 +89,11 @@ There's not one right way to structure a good README. But there is one very wron
 
 These steps are among the best practices I've found. As you progress in your career, you will develop your own ideas about what makes a good README and how to improve on it.
 
-
+这些步骤是我发现的最佳实践之一。随着你职业生涯的进步，你将形成自己的想法，了解什么是好的自述以及如何改进自述。
 
 A README needs to answer the following what, why, and how:
+
+readme 需要回答以下问题：
 
 -   What was your motivation?
 -   Why did you build this project?
@@ -99,17 +101,35 @@ A README needs to answer the following what, why, and how:
 -   What did you learn?
 -   What makes your project stand out? If your project has a lot of features, consider adding a "Features" section and listing them here.
 
+-  你的动机是什么？
+-  为什么你要建立这个项目？
+-  它解决了什么问题？
+-  通过项目经验你学到了什么？
+-  什么让你的项目脱颖而出？如果你的项目有很多特性，可以考虑添加一个“特性”部分并在这里列出它们。
+
 ## How to Writing a Good README file
+
+## 怎样编写一个好的readme文件
 
 Here are the steps you should take to write your README.
 
+下面是编写readme文件的步骤。
+
 ### Include Your Project's Title
+
+### 包含你项目的标题
 
 This is the name of the project. It describes the whole project in one sentence, and helps people understand **what** the main goal and aim of the project is.
 
+这是项目的名称。它用一句话描述了整个项目，帮助人们理解项目的主要目标和目的是 **什么** 。
+
 ### Write a Description
 
+### 写一个简单的描述
+
 Your description is an extremely important aspect of your project. A well-crafted description allows you to show off your work to other developers as well as potential employers.
+
+
 
 This is an important component of your project that many new developers often overlook.
 

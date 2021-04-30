@@ -1,51 +1,51 @@
 > -  原文地址：[How to Build a URL Shortener in Deno](https://www.freecodecamp.org/news/build-a-url-shortener-in-deno/)
 > -  原文作者：[Akash JoshiAkash Joshi](https://www.freecodecamp.org/news/author/akash/)
-> -  译者：
+> -  译者：[hylerrix](https://github.com/hylerrix)
 > -  校对者：
 
 ![How to Build a URL Shortener in Deno](https://cdn-media-2.freecodecamp.org/w1280/5f9c9848740569d1a4ca192c.jpg)
 
-In this article, we’re going to learn the basics of Deno, like how to run a program and embrace security.
+在本文中，我们将要学习 Deno 的基础，比如如何运行一个程序并且拥抱 Deno 的安全特性。
 
-Deno is the new JavaScript and TypeScript runtime written in Rust. It offers tight security, TypeScript support out-of-the-box, a single executable to run it, and a set of reviewed and audited standard modules.
+Deno 是用 Rust 编写的一个全新 JavaScript 和 TypeScript 运行时。它提供了严格的安全性、开箱即用的 TypeScript、一个单个可运行的执行文件，以及一组经过代码审查的标准模块。
 
-Like [npm](https://npmjs.com) in Node.js, packages in Deno are managed in a centralized package repository called [X](https://deno.land/x/). We'll be using one of these libraries, Oak, to build a REST API-based server in Deno.
+像 Node.js 下的 npm 一样，Deno 的生态库被管理在 [X](https://deno.land/x/) 中心库下。我们将使用其中的一个库——Oak，在 Deno 中构建基于 REST API 的服务器。
 
-After learning the basics by using the Express-like router package [Oak](https://deno.land/x/oak@v6.3.0), we will jump into the deep end of Deno and build a complete application.
+通过使用类似 Express 的路由管理库 [Oak](https://deno.land/x/oak@v6.3.0) 的基础知识后，我们将深入探讨 Deno 并构建一个完整的应用程序。
 
-Here's what we will set up in this application:
+这是我们将构建此应用程序的步骤：
 
-1.  Mapping URL shortcodes to endpoints using a JSON-based config file.
-2.  Have expiration dates attached to each URL so that these redirects are only valid for a limited period of time.
+1. 使用基于 JSON 的配置文件来将 URL 短链映射到端口上
+2. 在每个 URL 上附加有效期，以便这些重定向仅在有效的时间内生效。
 
-## 0\. Prerequisites
+## 0\. 前置准备
 
-1.  Install Deno from [this link](https://deno.land/#installation).
-2.  Make sure you know the basics of JavaScript.
+1.  从[这个链接](https://deno.land/#installation)中安装 Deno。
+2.  确保你知道一些 JavaScript 基础。
 
-Although not really required to follow along with this article, you can check out the YouTube video below to get an intro to Deno in video-format.
+尽管并不是本文所需，但你还是可以通过以下视频的形式看看 Deno 的基础介绍。
 
 A video tutorial for setting up Deno
 
-So, let’s get started. ?
+那么，让我们来正式开始？
 
-## 1\. How to Build the Router
+## 1\. 如何构建路由
 
-To write the server-side code for our application, we'll use the Oak module. It has an Express-like syntax for defining API routes.
+要为我们的应用编写服务端代码，我们将使用 Oak 模块。它具有类似于 Express 定义 API 路由的语法。
 
-If we look at its [documentation here](https://deno.land/x/oak), the "[Basic Usage](https://deno.land/x/oak#basic-usage)" section pretty much covers all the use cases we will need in our router. So, we will expand on that code to build our application.
+如果我们在[这个文档](https://deno.land/x/oak)中，“[基础用法](https://deno.land/x/oak)”部分几乎涵盖了我们会在本文中用到的一切路由。因此，我们直接拓展这段代码来构建我们的应用。
 
-To test this code, you can create a file called `index.ts` in a folder, and copy the "Basic Usage" code into it.
+要直接用到这段代码，可以在文件夹中创建一个名为 index.ts 的文件，然后将“基本用法”里的代码复制到其中。
 
-To understand how to run TypeScript or JavaScript files in Deno, you first need to understand how Deno runs files.
+要了解如何在 Deno 中运行 TypeScript 或 JavaScript 文件，你首先需要理解 Deno 是如何运行文件的。
 
-You run a file by running the command `deno run file_name.ts` or `file_name.js`, followed by a set of flags providing certain system permissions to your application.
+你可以通过运行 `deno run file_name.ts` 或 `file_name.js` 命令来运行文件，后面可以跟一组参数标志，这些标志将为你的应用程序提供某些系统权限。
 
-To test this, run the file we just created, containing the "Basic Usage" code, by using the command `deno run index.ts`.
+为了测试刚刚粘贴的“基础用法”代码能否跑通，使用如下命令：`deno run index.ts`。
 
-You will see that Deno complains that you haven't given network access to your application. So, to do that, you add the `-allow-net` to the run command. The command will look like `deno run index.ts -allow-net`.
+你会看到 Deno 警示你没有授予该代码访问网络的权限。所以你需要添加 `-allow-net` 到刚才的 run 命令中。该命令最终会像这样：`deno run index.ts -allow-net`。
 
-The router written down in the "Basic Usage” code looks like this:
+“基础用法”中的路由代码会如下所示：
 
 ```jsx
 router
@@ -62,11 +62,11 @@ router
   });
 ```
 
-To break down the above code, first a `router` object has been defined. Then the `get` function is called on the router, to define the various endpoints for our application. The respective logic is defined inside the callback functions.
+拆解上面的代码：首先定义了一个 `router` 对象，然后在路由器上调用 get 函数，以定义应用程序的各种端口。端口相应的逻辑在回调函数中定义。
 
-For example, for the "/" endpoint, a callback function which returns "Hello World" in the response body has been defined. We can keep this endpoint unchanged to test whether our application server is running by receiving this response.
+例如，对于 "/" 端口，已定义了在响应体重返回 “Hello World” 的回调函数。我们可以先保持此端口不变，以通过接收响应来测试我们的应用程序服务器是否正在运行。
 
-We don’t need the “/book” URL which has been defined, so its definition can be safely removed. At this point, your router should have the below structure:
+我们不需要已定义的 “/book” URL，因此可以安全地删除其定义。此时，你的路由应具有如下结构：
 
 ```
 router
@@ -80,15 +80,15 @@ router
   });
 ```
 
-In the next section, we'll be focussing on starting to build the actual application.
+在下一节中，我们将着手于开始实战构建应用程序。
 
 ## 2\. How to Build the URL Shortener
 
-Now let's get started with building the actual URL shortener.
+现在让我们开始实战构建 URL 短链生成器。
 
-It should redirect to a destination (`dest`), based on a `shortcode`. The redirect should also only be valid up to an `expiryDate`, which can be provided in the Year-Month-Day format.
+它应该根据 `shortcode` 来重定向到目的地（`dest`）。重定向还应仅在有效期到期之前有效，可以以年-月-日格式提供。
 
-Based on these assumptions, let's create the config file, named `urls.json`. The format of the file will be:
+基于这些假设，让我们创建一个名为 `urls.json` 的配置文件。该文件的格式为：
 
 ```jsx
 {
@@ -99,9 +99,9 @@ Based on these assumptions, let's create the config file, named `urls.json`. The
 }
 ```
 
-You can [check out the JSON file here](https://github.com/akash-joshi/deno-url-shortener/blob/master/urls.json).
+你可以[参考这个 JSON 文件](https://github.com/akash-joshi/deno-url-shortener/blob/master/urls.json)。
 
-To read this JSON file in your code, add the following to the top of your `index.ts`:
+要在你的代码中读取这个 JSON 文件，请在 `index.ts` 顶部添加以下内容：
 
 ```jsx
 import { Application, Router } from "<https://deno.land/x/oak/mod.ts>";
@@ -111,15 +111,15 @@ const urls = JSON.parse(Deno.readTextFileSync("./urls.json"));
 console.log(urls);
 ```
 
-Now, to run your `index.ts`, you will need another flag `—allow-read`, otherwise Deno will throw a "read permissions not provided" error. Your final command becomes `deno run —allow-net —allow-read index.ts`.
+现在，要运行 `index.ts`，你需要另一个标志 `-allow-read`，否则 Deno 将抛出“未提供读取权限”错误。你的最终命令应该是 `deno run —allow-net —allow-read index.ts`。
 
-After running this command, you'll see the JSON file being printed in your terminal window. This means that your program is able to read the JSON file correctly.
+运行此命令后，你将在终端窗口中看到打印的 JSON 文件。这意味着你的程序能够正确读取 JSON 文件。
 
-If we go back to the "Basic Usage" example that we saw above, the route “/book/:id” is exactly what we need.
+如果我们回到上面看到的“基本用法”示例，则路由 “/book/:id” 风格正是我们接下来所需要的。
 
-Instead of "/book/:id", we can use "/shrt/:urlid", where we will get the individual URLs based on the URL ID (`:urlid`).
+将 "/book/:id" 替换为 "/shrt/:urlid"，此时我们将基于 URL ID（`:urlid`）获得各个 URL。
 
-Replace the existing code present inside the "/book/:id" route with this:
+用以下代码替换 "/book/:id" 路由中存在的现有代码：
 
 ```jsx
 .get("/shrt/:urlid", (context) => {
@@ -131,15 +131,15 @@ Replace the existing code present inside the "/book/:id" route with this:
   });
 ```
 
-The `if` condition in the route does the following:
+路由中的 `if` 条件执行以下操作：
 
-1.  Checks if parameters are attached to the route
-2.  Checks if the parameter `urlid` is in the parameter list.
-3.  Checks whether the `urlid` matches with any URL in our JSON.
+1. 检查参数是否存在于路由中
+2. 检查参数 `urlid` 是否在参数列表中
+3. 检查 `urlid` 是否与我们 JSON 中的任何 URL 匹配。
 
-If it matches with all these, the user is redirected to the correct URL. If it doesn't, a 404 response on the body is returned.
+如果有所匹配，用户将重定向到正确的 URL。如果无所匹配，则返回 404 响应。
 
-To test this, copy this route into `index.ts`. The router will now look like this:
+想要测试这段代码，请将如下代码复制到 `index.ts` 中。路由现在长这个样子：
 
 ```jsx
 router
@@ -155,13 +155,13 @@ router
 	  });
 ```
 
-And run the file using `deno run —allow-net —allow-read index.ts`.
+接下来使用 `deno run —allow-net —allow-read index.ts` 运行文件。
 
-If you copied the JSON file from the example, and if you go to `http://localhost:8000/shrt/g`, you'll be redirected to Google's homepage.
+如果你从示例中复制了 JSON 文件，此时打开 `http://localhost:8000/shrt/g`，你会正常重定向到 Google 主页上。
 
-On the other hand, if you use a random shortcode that doesn't work in our URL's config, it brings you to the 404 page.
+另一方面，如果你使用的随机 shortcode 在我们网址配置中不起作用，则会进入到 404 页面上。
 
-However, you'll see that our shortener doesn't react live to changes in the JSON file. To test this, try adding a new redirect to `urls.json` in the same format as:
+但是，你会看到我们的短链器不会实时响应 JSON 文件中的变更。想要增加更多的配置，请以如下相同格式向 `urls.json` 中添加新的重定向。
 
 ```
 "shortcode": {
@@ -170,11 +170,11 @@ However, you'll see that our shortener doesn't react live to changes in the JSON
   }
 ```
 
-The reason for this is that `urls.json` is only read once at that start. So, now we will add live-reloading to our server.
+这是因为 `urls.json` 仅在刚开始时被读取一次。现在，我们需要将实时更新功能添加到服务端上。
 
 ## 3\. How to Add Live-Reloading
 
-To make the `urls` object react live to changes in the JSON file, we simply move the read statement inside our route. This should look like the following:
+为了使 **urls** 对象能够实时响应 JSON 文件中的更改，我们只需将 read 语句移动到路由中即可。会长这样：
 
 ```jsx
 .get("/shrt/:urlid", (context) => {
@@ -188,15 +188,15 @@ To make the `urls` object react live to changes in the JSON file, we simply move
 });
 ```
 
-Note how we have moved the URLs object inside our router. Now in this case, the config file is read every time that route is called, so it can react live to any changes made in the `urls.json` file. So even if we add or remove other redirects on the fly, our code reacts to it.
+请注意我们如何是路由内部移动 URL 对象的。此时，每次调用该路由时都会读取配置文件，因此它可以实时响应 `urls.json` 文件中所做的任何更改。即使我们现在添加或删除其他重定向，我们的代码也会做出新的响应。
 
 ## 4\. How to Add an Expiration to the URLs
 
-To make our URLs expire at a certain date, we will be using the popular Moment.js library, which makes it easy to work with dates.
+为了使我们的 URL 在某个时间点上过期，我们将使用流行的 Moment.js 库，该库使处理日期变得更容器。
 
-Luckily, it has also been [ported for Deno](https://deno.land/x/moment). To understand how it works, check out its documentation in the previous link.
+幸运的是，它已经被[良好移植到了 Deno 上](https://deno.land/x/moment)。要了解其工作原理，请在上一句的链接中查看其文档。
 
-To use it in our code, import it directly through its URL like this:
+要在代码中使用到，请直接通过 URL 导入：
 
 ```jsx
 import { Application, Router } from "<https://deno.land/x/oak/mod.ts>";
@@ -205,7 +205,7 @@ import { moment } from "<https://deno.land/x/moment/moment.ts>";
 const router = new Router();
 ```
 
-To check the date for when the URL will expire, we check the `expiryDate` key on our `urls` object. This will make the code look like this:
+为了检查 URL 什么时候过期，我们检查 urls 对象上的 expiryDate 键值。如下所示：
 
 ```jsx
 if (context.params && context.params.urlid && urls[context.params.urlid]) {
@@ -221,31 +221,33 @@ if (context.params && context.params.urlid && urls[context.params.urlid]) {
 }
 ```
 
-In `moment().format("YYYY-MM-DD")`, we get the current date and time using `moment()`. We can convert it to the "YYYY-MM-DD" (Year-Month-Date) format using the function `.format("YYYY-MM-DD")`.
+在 `moment().format("YYYY-MM-DD")` 中，我们使用 moment() 来获取当前的时间。然后使用 `.format("YYYY-MM-DD")` 将其格式化为 "YYYY-MM-DD"（年-月-日）格式。
 
-By comparing it against our `expiryDate` key, we can check whether the URL has expired or not.
+通过将其与我们的 **expiryDate** 键进行比较，我们可以检查当前的 URL 是否已过期。
 
-That's it! You have built a fully functional URL shortener in Deno. You can find the final code [in the GitHub repo here](https://github.com/akash-joshi/deno-url-shortener).
+就是这样！你已经在 Deno 中构建了功能齐全的 URL 短链器。你可以[在这个 Github 库](https://github.com/akash-joshi/deno-url-shortener)中找打最终的代码。
 
-Test it out by setting `expiryDate` as the current date and by making other changes to `urls.json` and our code.
+通过将 `expiryDate` 设置为当前日期并对 `urls.json` 和我们的代码进行其它更改可以测试更多功能。
 
-### My Thoughts on Deno
+### 我对 Deno 的看法
 
-To wrap the article up, I'll put my forward final thoughts on deno.land.
+为了总结这篇文章，我将谈谈我对 deno.land 的思考。
 
-While it's refreshing to see a server-side language which takes security into consideration and supports TypeScript out-of-the-box, Deno still has a long way to go before being ready for use in production systems.
+当看到一种考虑安全性并支持 TypeScript 的服务端运行时令人耳目一新，但 Deno 在应用到生产环境之前还有很长的路要走。
 
-For example, the TypeScript compilation is still very slow, with compilation times ~20 seconds, even for simple programs like the one we just developed.
+例如，即使对于像我们刚开发的那样简单的程序，使用 TypeScript 编译也得需要约为 20 秒的时间，这非常的慢。
 
-On the error-reporting front, it still is pretty bad with describing the errors. For example, while embedding the code to read `urls.json` in the function itself, Deno isn't able to report that the `-allow-read` flag hasn't been set. Instead, it just throws an internal server error without a proper error printed on the terminal.
+在错误报告方面，描述错误的地方还很糟糕。比如，当在函数本身中嵌入代码以读取 `urls.json` 时，Deno 无法报告未设置 `-allow-read` 标志。相反，它只会引发内部错误，而不会在终端上打印正确的错误。
 
-### What Next?
+> 译者注：现 Deno 1.9 版本已经很好地支持权限提示了，其它的也在逐步支持中。
 
-You can improve your Deno or Typescript skills by building more complex applications like a [Chatting Application](https://css-tricks.com/build-a-chat-app-using-react-hooks-in-100-lines-of-code/) or a [Wikipedia Clone](https://auth0.com/blog/building-a-wikipedia-app-using-react-hooks-and-auth0/).
+### 接下来是什么？
 
-You can also go through the Deno documentation at [deno.land](http://deno.land/) to get more familiar with the basics.
+你可以通过构建更复杂的应用程序（比如[聊天应用程序](https://css-tricks.com/build-a-chat-app-using-react-hooks-in-100-lines-of-code/)或 [Wikipedia 克隆版](https://auth0.com/blog/building-a-wikipedia-app-using-react-hooks-and-auth0/)）来提高你的 Deno 或 TypeScript 的技能。
 
-Thank you for reading this far and happy programming ? !!
+你也可以浏览 deno.land 上的 Deno 文档，来更熟悉基础知识。
+
+感谢你阅读本文，祝你编程愉快！
 
 ### Important Links
 

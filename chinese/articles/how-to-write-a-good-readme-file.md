@@ -7,7 +7,7 @@
 
 If you are reading this article, it probably means that you are already pushing repositories to GitHub and maybe even contributing to open source.
 
-如果你正在阅读这篇文章，那可能说明你正在准备将代码仓库上传到GitHub上，甚至对开源做出贡献。
+如果你正在阅读这篇文章，那可能说明你正在准备将代码仓库上传到GitHub上，甚至为开源做出贡献。
 
 And if you're using GitHub, it means that you will need to write good documentation for your projects to help others understand them.
 
@@ -249,7 +249,7 @@ Now that we have gone through the steps, I believe you are ready to add READMEs 
 
 If still need a bit more guidance, you might also check out these examples:
 
-如果你还需要更多的指导，你也可以看看这些例子
+如果你还需要更多的指导，你也可以看看这些例子：
 
 -   [Make README](https://www.makeareadme.com/)
 -   [README Generator](https://rahuldkjain.github.io/gh-profile-readme-generator/)
@@ -257,20 +257,20 @@ If still need a bit more guidance, you might also check out these examples:
 
 Also check out this guide by [navendu-pottekkat](https://github.com/navendu-pottekkat/awesome-readme/blob/master/README-template.md)
 
-也可以看看这个指南
+也可以看看这个指南[navendu-pottekkat](https://github.com/navendu-pottekkat/awesome-readme/blob/master/README-template.md)
 
 If you have read this far I really appreciate it.  
 
-如果你读到现在，我真的很感激。
+我真的很感激你能读到这里。
 
 Connect With me at [Twitter](https://twitter.com/larymak1) | [Insta](https://www.instagram.com/nextgencoders/) | [YouTube](https://www.youtube.com/channel/UCrT1ARRZfLOuf6nc_97eXEg) | [LinkedIn](https://www.linkedin.com/in/hillary-nyakundi-3a64b11ab/) | [GitHub](https://github.com/larymak)
 
-通过。。。联系我
+可以通过这些途径联系作者[Twitter](https://twitter.com/larymak1) | [Insta](https://www.instagram.com/nextgencoders/) | [YouTube](https://www.youtube.com/channel/UCrT1ARRZfLOuf6nc_97eXEg) | [LinkedIn](https://www.linkedin.com/in/hillary-nyakundi-3a64b11ab/) | [GitHub](https://github.com/larymak)
 
 Do share your valuable opinion, I appreciate your honest feedback!
 
-请分享您的宝贵意见，我感谢您诚实的反馈！
+请分享您的宝贵意见，我很感谢您真诚的反馈！
 
 Enjoy Coding ❤
 
-享受编程
+尽情享受你的编程之旅吧 ❤

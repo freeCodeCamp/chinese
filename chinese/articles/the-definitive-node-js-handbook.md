@@ -1211,7 +1211,7 @@ const args = require('minimist')(process.argv.slice(2))args['name'] //flavio
 
 How to print to the command line console using Node.js, from the basic console.log to more complex scenarios
 
-如何使用 Node.js 打印到命令行控制台，从基本 console.log 到更复杂的场景。
+如何使用 Node.js 打印到命令行控制台，从基本的 console.log 到更复杂的场景。
 
 #### Basic output using the console module
 
@@ -1219,7 +1219,7 @@ How to print to the command line console using Node.js, from the basic console.l
 
 Node.js provides a `console` [module][70] which provides tons of very useful ways to interact with the command line.
 
-Node.js 提供了一个 `console` [模块][70]，它提供了大量与命令行交互的非常有用的方法。
+Node.js 提供一个 `console` [模块][70]，它提供了大量与命令行交互非常有用的方法。
 
 It is basically the same as the `console` object you find in the browser.
 
@@ -1231,25 +1231,23 @@ The most basic and most used method is `console.log()`, which prints the string 
 
 If you pass an object, it will render it as a string.
 
-如果你传递一个对象，它将把它呈现为一个字符串。
+如果你传递了一个对象，它将把它呈现为一个字符串。
 
 You can pass multiple variables to `console.log`, for example:
 
-可以将多个变量传递给 `console.log`，例如：
+你可以将多个变量传递给  `console.log`，例如：
 
 ```plain
-const x = 'x'
-const y = 'y'
-console.log(x, y)
+const x = 'x'const y = 'y'console.log(x, y)
 ```
 
 and Node.js will print both.
 
-Node.js 会同时打印。
+Node.js 将把两个都打印出来。
 
 We can also format pretty phrases by passing variables and a format specifier.
 
-我们还可以通过传递变量和格式修饰符来格式化漂亮的短语。
+我们还可以通过传递变量和格式说明符来格式化漂亮的短语。
 
 For example:
 
@@ -1264,14 +1262,14 @@ console.log('My %s has %d years', 'cat', 2)
 -   `%f` format a variable as a floating point number
 -   `%O` used to print an object representation
 
-- `%s` 将变量格式化为字符串
-- `%d` 或 `%i` 将变量格式化为整数
-- `%f` 将变量格式化为浮点数
-- `%O` 用于打印对象存储结构
+-   `%s` 将变量格式化为字符串
+-   `%d` 或 `%i` 将变量格式化为整数
+-   `%f` 将变量格式化为浮点数
+-   `%O` 用于打印对象表示
 
 Example:
 
-示例：
+例如：
 
 ```plain
 console.log('%O', Number)
@@ -1279,16 +1277,19 @@ console.log('%O', Number)
 
 #### Clear the console
 
+#### 清理控制台
+
 `console.clear()` clears the console (the behavior might depend on the console used)
 
-清除控制台（行为可能取决于使用的控制台）
+`console.clear()` 清理控制台（行为可能取决于使用的控制台）
 
 #### Counting elements
+
 #### 计数元素
 
 `console.count()` is a handy method.
 
-`console.count()` 是一种方便的方法。
+`console.count()` 是一个灵活的方法。
 
 Take this code:
 
@@ -1298,42 +1299,40 @@ Take this code:
 const x = 1
 const y = 2
 const z = 3
-console.count('The value of x is ' + x + ' and has been checked .. how many times?')
-console.count('The value of x is ' + x + ' and has been checked .. how many times?')
-console.count('The value of y is ' + y + ' and has been checked .. how many times?')
+console.count(  'The value of x is ' + x + ' and has been checked .. how many times?')
+console.count(  'The value of x is ' + x + ' and has been checked .. how many times?')
+console.count(  'The value of y is ' + y + ' and has been checked .. how many times?')
 ```
 
 What happens is that `count` will count the number of times a string is printed, and print the count next to it.
 
-实际情况是，`count` 将计算一个字符串被打印的次数，并在它旁边打印这个计数。
+所要发生的是 `count` 将计算字符串打印次数，并打印旁边的计数。
 
 You can just count apples and oranges:
 
 你可以数苹果和橘子：
 
-
 ```
 const oranges = ['orange', 'orange']
 const apples = ['just one apple']
 oranges.forEach(fruit => {
-    console.count(fruit)
+  console.count(fruit)
 })
 apples.forEach(fruit => {
-    console.count(fruit)
+  console.count(fruit)
 })
 ```
 
 #### Print the stack trace
-
 #### 打印堆栈跟踪
 
 There might be cases where it’s useful to print the call stack trace of a function, maybe to answer the question: “How did you reach that part of the code?”
 
-在某些情况下，打印函数的调用堆栈跟踪可能很有用，也许可以回答这样一个问题：“你是如何到达代码的那一部分的？“
+在某些情况下，打印函数的调用堆栈跟踪可能很有用，也许可以回答这样一个问题：“你是如何到达代码的那一部分的？”
 
 You can do so using `console.trace()`:
 
-你可以使用 `console.trace()`：
+你可以这样使用 `console.trace()`:
 
 ```
 const function2 = () => console.trace()
@@ -1343,20 +1342,20 @@ function1()
 
 This will print the stack trace. This is what’s printed if I try this in the Node REPL:
 
-这将打印堆栈跟踪。如果在 Node REPL 中尝试操作，将打印以下内容：
+这将要打印堆栈跟踪，如果我在 Node REPL 中尝试，就会打印这个。
 
 ```plain
 Trace
-at function2 (repl:1:33)
-at function1 (repl:1:25)
-at repl:1:1
-at ContextifyScript.Script.runInThisContext (vm.js:44:33)
-at REPLServer.defaultEval (repl.js:239:29)
-at bound (domain.js:301:14)
-at REPLServer.runBound [as eval] (domain.js:314:12)
-at REPLServer.onLine (repl.js:440:10)
-at emitOne (events.js:120:20)
-at REPLServer.emit (events.js:210:7)
+    at function2 (repl:1:33)    
+    at function1 (repl:1:25)    
+    at repl:1:1    
+    at ContextifyScript.Script.runInThisContext (vm.js:44:33)    
+    at REPLServer.defaultEval (repl.js:239:29)    
+    at bound (domain.js:301:14)    
+    at REPLServer.runBound [as eval] (domain.js:314:12)    
+    at REPLServer.onLine (repl.js:440:10)    
+    at emitOne (events.js:120:20)    
+    at REPLServer.emit (events.js:210:7)
 ```
 
 #### Calculate the time spent
@@ -1364,23 +1363,22 @@ at REPLServer.emit (events.js:210:7)
 #### 计算花费的时间
 
 You can easily calculate how much time a function takes to run, using `time()` and `timeEnd()`
-
-你可以使用 `time()` 和 `timeEnd` 轻松计算函数运行所需的时间。
-
+你可以使用 `time()` 和 `timeEnd()` 轻松计算函数运行所需时间。
 ```
 const doSomething = () => console.log('test')
-const measureDoingSomething = () => {  console.time('doSomething()') // do something, and measure the time it takes  doSomething()
-console.timeEnd('doSomething()')}
+const measureDoingSomething = () => {
+    console.time('doSomething()')  //do something, and measure the time it takes
+    doSomething()
+    console.timeEnd('doSomething()')
+}
 measureDoingSomething()
 ```
 
 #### stdout and stderr
 
-#### 标准输出和标准错误
-
 As we saw console.log is great for printing messages in the Console. This is what’s called the standard output, or `stdout`.
 
-如我们所见 console.log 非常适合在控制台打印消息。这就是所谓的标准输出，或 `stdout`。
+如我们所见 console.log 非常适合在控制台中打印消息。这就是所谓的标准输出，或 `stdout`。
 
 `console.error` prints to the `stderr` stream.
 
@@ -1392,9 +1390,15 @@ It will not appear in the console, but it will appear in the error log.
 
 #### Color the output
 
+#### 为输出着色
+
 You can color the output of your text in the console by using escape sequences. An escape sequence is a set of characters that identifies a color.
 
+你可以使用转义符在控制台中为文本的输出着色。转义符是标识颜色的一组字符。
+
 Example:
+
+例如：
 
 ```
 console.log('\x1b[33m%s\x1b[0m', 'hi!')
@@ -1402,87 +1406,162 @@ console.log('\x1b[33m%s\x1b[0m', 'hi!')
 
 You can try that in the Node REPL, and it will print `hi!` in yellow.
 
+你可以在 Node REPL 中尝试，他将打印黄色的 `hi!`。
+
 However, this is the low-level way to do this. The simplest way to go about coloring the console output is by using a library. [Chalk][71] is such a library, and in addition to coloring it also helps with other styling facilities, like making text bold, italic or underlined.
+
+然而，这是一种低级的方法。为控制台输出着色最简单的方法是使用库。[Chalk][71] 就是这样一个库，除了着色之外，它还可以帮助其他样式设置，比如使文本加粗、斜体或下划线。
 
 You install it with `npm install chalk`, then you can use it:
 
+你可以使用 `npm install chalk` 安装它，然后可以使用它：
+
 ```plain
-const chalk = require('chalk')console.log(chalk.yellow('hi!'))
+const chalk = require('chalk')
+console.log(chalk.yellow('hi!'))
 ```
 
 Using `chalk.yellow` is much more convenient than trying to remember the escape codes, and the code is much more readable.
 
+使用 `chal.yellow` 比试图记住转移码方便得多，而且代码的可读性更高。
+
 Check the project link I posted above for more usage examples.
+
+查看我在上面发布的项目链接以获取更多的用法示例。
 
 #### Create a progress bar
 
+#### 创建进度条
+
 [Progress][72] is an awesome package to create a progress bar in the console. Install it using `npm install progress`.
 
-This snippet creates a 10-step progress bar, and every 100 ms one step is completed. When the bar completes we clear the interval:
+[Progress][72] 是一个很棒的包，可以在控制台中创建进度条。使用 `npm install progress` 安装它。
+
+This snippet creates a 10-step progress bar, and every 100 ms one step is  completed. When the bar completes we clear the interval:
+
+这个片段创建了一个 10步的进度条，每 100 毫秒完成一步。当进度完成时，我们清除 interval：
 
 ```
 const ProgressBar = require('progress')
 ```
 
 ```
-const bar = new ProgressBar(':bar', { total: 10 })const timer = setInterval(() => {  bar.tick()  if (bar.complete) {    clearInterval(timer)  }}, 100)
+const bar = new ProgressBar(':bar', {
+    total: 10
+  })
+const timer = setInterval(() => {
+  bar.tick()
+  if (bar.complete) {
+    clearInterval(timer)
+  }
+}, 100)
 ```
 
 ### Accept input from the command line in Node.js
 
+### 在 Node.js 中接受来自命令行的输入
+
 How to make a Node.js CLI program interactive?
+
+如何使 Node.js CLI 程序具有交互性？
 
 Node since version 7 provides the `readline` [module][73] to perform exactly this: get input from a readable stream such as the `process.stdin` stream, which during the execution of a Node program is the terminal input, one line at a time.
 
+自从 7 版本以来的 Node 提供了 `readline` [模块][73] 来执行以下操作：从诸如 `process.stdin` 流之类的可读流获取输入，在执行 Node 程序时，它在终端输入，一次一行。
+
 ```plain
-const readline = require('readline').createInterface({  input: process.stdin,  output: process.stdout})
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
 ```
 
 ```
-readline.question(`What's your name?`, (name) => {  console.log(`Hi ${name}!`)  readline.close()})
+readline.question(`What's your name?`, (name) => {
+  console.log(`Hi ${name}!`)
+  readline.close()
+})
 ```
 
 This piece of code asks the username, and once the text is entered and the user presses enter, we send a greeting.
 
+这段代码询问用户名，一旦输入了文本，用户按回车键，我们就发送一个问候语。
+
 The `question()` method shows the first parameter (a question) and waits for the user input. It calls the callback function once enter is pressed.
+
+`question()` 方法显示第一个参数（一个问题）并等待用户输入。一旦按下回车键，它就会调用回调函数。
 
 In this callback function, we close the readline interface.
 
+在这个回调函数中，我们关闭 readline 接口。
+
 `readline` offers several other methods, and I’ll let you check them out on the package documentation I linked above.
+
+`readline` 提供了其它集中方法，我将让你在上面链接的包文档中查看它们。
 
 If you need to require a password, it’s best to now echo it back, but instead showing a `*`symbol.
 
+如果你需要密码，最好现在回显它，而不是显示 `*` 符号。
+
 The simplest way is to use the readline-sync [package][74] which is very similar in terms of the API and handles this out of the box.
+
+最简单的方法是使用 readline-sync [package][74]，它在 API 方面非常相似，开箱即用。
 
 A more complete and abstract solution is provided by the [Inquirer.js package][75].
 
+一个更完整和抽象的解决方案是由 [Inquirer.js package][75] 提供。
+
 You can install it using `npm install inquirer`, and then you can replicate the above code like this:
+
+你可以使用 `npm install inquirer` 安装它，然后可以这样复制上面的代码：
 
 ```plain
 const inquirer = require('inquirer')
 ```
 
 ```
-var questions = [{  type: 'input',  name: 'name',  message: "What's your name?",}]
+var questions = [
+  {
+    type: 'input',
+    name: 'name',
+    message: "What's your name?"
+  }
+]
 ```
 
 ```
-inquirer.prompt(questions).then(answers => {  console.log(`Hi ${answers['name']}!`)})
+inquirer.prompt(questions).then(answers => {
+  console.log(`Hi ${answers['name']}!`)
+})
 ```
 
 Inquirer.js lets you do many things like asking multiple choices, having radio buttons, confirmations, and more.
 
+Inquirer.js 让你可以做很多的事情，比如多项选择，单选按钮，确认等。
+
 It’s worth knowing all the alternatives, especially the built-in ones provided by Node.js, but if you plan to take CLI input to the next level, Inquirer.js is an optimal choice.
+
+了解所有的备选方案都是值得的，尤其是 Node.js 提供的内置选项，但是如果你计划将 CLI 输入提升到下一个级别，Inquirer.js 是最佳的选择。
 
 ### Expose functionality from a Node.js file using exports
 
+### 使用 exports 从 Node.js 中暴露功能
+
 How to use the `module.exports` API to expose data to other files in your application, or to other applications as well
+
+如何使用 `module.exports` API 暴露数据给应用程序中的其它文件，或者公开给其它应用程序。
 
 Node.js has a built-in module system.
 
+Node.js 有一个内置模块系统。
+
 A Node.js file can import functionality exposed by other Node.js files.
 
+Node.js 文件可以导入其它 Node.js 文件暴露的功能。
+
 When you want to import something you use:
+
+当想要导入你要用的内容时：
 
 ```
 const library = require('./library')
@@ -1490,20 +1569,37 @@ const library = require('./library')
 
 to import the functionality exposed in the `library.js` file that resides in the current file folder.
 
+导入位于当前文件夹中的 `library.js` 文件中暴露的功能。
+
 In this file, functionality must be exposed before it can be imported by other files.
+
+在这个文件中，必须先暴露功能，然后才能由其它文件导入。
 
 Any other object or variable defined in the file by default is private and not exposed to the outer world.
 
+默认情况下，文件中定义任何其它对象或变量都是私有的，不对外公开。
+
 This is what the `module.exports` API offered by the `module` [system][76] allows us to do.
+
+这就是 通过 `module` [system][76] 提供的 `module.exports` API 允许我们做的事情。
 
 When you assign an object or a function as a new `exports` property, that is the thing that’s being exposed. As such, it can be imported in other parts of your app, or in other apps as well.
 
+当你将一个对象或函数指定为新的 `exports` 属性时，这就是要暴露的内容。因此，可以在应用程序的其它部分导入，也可以在其它应用程序中导入。
+
 You can do so in 2 ways.
+
+你可以用两种方法来实现。
 
 The first is to assign an object to `module.exports`, which is an object provided out of the box by the module system, and this will make your file export **just that object**:
 
+第一种是将对象分配给 `module.exports`，这是模块系统提供的现成对象，这将使你的文件输出 **就是那个对象**。
+
 ```
-const car = {  brand: 'Ford',  model: 'Fiesta'}
+const car = {
+  brand: 'Ford',
+  model: 'Fiesta'
+}
 ```
 
 ```
@@ -1511,7 +1607,7 @@ module.exports = car
 ```
 
 ```
-//..in the other file
+// ..in the other file
 ```
 
 ```
@@ -1520,8 +1616,13 @@ const car = require('./car')
 
 The second way is to add the exported object as a property of `exports`. This way allows you to export **multiple** objects, functions or data:
 
+第二种方法是将导出的对象添加为 `exports` 的属性。这样可以输出 **多个** 对象、函数或数据：
+
 ```
-const car = {  brand: 'Ford',  model: 'Fiesta'}
+const car = {
+  brand: 'Ford',
+  model: 'Fiesta'
+}
 ```
 
 ```
@@ -1530,17 +1631,27 @@ exports.car = car
 
 or directly
 
+或者直接
+
 ```
-exports.car = {  brand: 'Ford',  model: 'Fiesta'}
+exports.car = {
+  brand: 'Ford',
+  model: 'Fiesta'
+}
 ```
 
 And in the other file, you’ll use it by referencing a property of your import:
 
+在另外一个文件中，你将通过引用导入的属性来使用它：
+
 ```
-const items = require('./items')items.car
+const items = require('./items')
+items.car
 ```
 
 or
+
+或者
 
 ```
 const car = require('./items').car
@@ -1548,25 +1659,45 @@ const car = require('./items').car
 
 What’s the difference between `module.exports` and `exports`?
 
+`module.exports` 和 `exports` 两者有什么区别？
+
 The first exposes **the object** it points to. The latter exposes **the properties** of the object it points to.
+
+第一个暴露指向它的 **对象**
 
 ### Introduction to npm
 
+### npm 简介
+
 `npm` means **node package manager**.
+
+`npm` 表示 **node 包管理器**
 
 In January 2017 over 350,000 packages were reported as being listed in the npm registry, making it the biggest single language code repository on Earth, and you can be sure there is a package for (almost!) everything.
 
+截止2021年4月，官方显示它有超过100万个包，这使它成为地球上最大的单一语言代码库，你可以确定（几乎）所有的东西都有一个包。
+
 It started as a way to download and manage dependencies of Node.js packages, but it has since become a tool used also in front-end JavaScript.
 
+它最初是一种下载和管理 Node.js 包依赖关系的方法，但是后来也成为了一种在前端 Javascript 中使用的工具。
+
 There are many things that `npm` does.
+
+`npm` 做了很多事。
 
 #### Downloads
 
 `npm` manages downloads of dependencies of your project.
 
+`npm` 管理项目依赖项的下载
+
 #### Installing all dependencies
 
+#### 安装所有依赖项
+
 If a project has a `packages.json` file, by running
+
+如果一个项目有 `packages.json` 文件，通过运行
 
 ```
 npm install
@@ -1574,9 +1705,15 @@ npm install
 
 it will install everything the project needs, in the `node_modules` folder, creating it if it’s not existing already.
 
+它会将项目所需的一切安装在 `node_modules` 文件夹中，如果它还不存在，就会创建它。
+
 #### Installing a single package
 
+#### 安装单个包
+
 You can also install a specific package by running
+
+另外你可以安装指定的包，通过运行
 
 ```
 npm install <package-name>
@@ -1584,14 +1721,23 @@ npm install <package-name>
 
 Often you’ll see more flags added to this command:
 
--   `--save` installs and adds the entry to the `package.json` file `dependencies`
--   `--save-dev` installs and adds the entry to the `package.json` file `devDependencies`
+通常，你会看到此命令中添加了更多标识：
 
+-   `--save` installs and adds the entry to the `package.json` file `dependencies`
+-   `--save` 安装该条目并将其加入到 `package.json` 文件的 `dependencies` 中
+-   `--save-dev` installs and adds the entry to the `package.json` file `devDependencies`
+-   `--save-dev` 安装该条目并将其加入到 `package.json` 文件的 `devDependencies` 中
+-   
 The difference is mainly that `devDependencies` are usually development tools, like a testing library, while `dependencies` are bundled with the app in production.
 
+区别主要在于 `devDependencies` 通常在开发工具，如测试库，而 `dependencies` 则与生产中的应用捆绑在一起。
+
 #### Updating packages
+#### 更新包
 
 Updating is also made easy, by running
+
+更新也很容易，通过运行：
 
 ```
 npm update
@@ -1599,7 +1745,11 @@ npm update
 
 `npm` will check all packages for a newer version that satisfies your versioning constraints.
 
+`npm` 将检查所有包是否有满足版本控制约束的更新版本。
+
 You can specify a single package to update as well:
+
+也可以指定要更新的单个包：
 
 ```plain
 npm update <package-name>
@@ -1607,19 +1757,35 @@ npm update <package-name>
 
 #### Versioning
 
+#### 版本控制
+
 In addition to plain downloads, `npm` also manages **versioning**, so you can specify any specific version of a package, or require a version higher or lower than what you need.
+
+除了普通的下载外， `npm` 还可以管理 **版本控制**，因此你可以指定任何特定版本的包，或者要求比你需要的版本高或者低的版本。
 
 Many times you’ll find that a library is only compatible with a major release of another library.
 
+很多时候，你会发现一个库只与另外一个库的是主要版本兼容。
+
 Or a bug in the latest release of a lib, still unfixed, is causing an issue.
+
+或者 lib 的最新版本中的一个 bug 仍然没有修复，导致了一个问题。
 
 Specifying an explicit version of a library also helps to keep everyone on the same exact version of a package, so that the whole team runs the same version until the `package.json` file is updated.
 
+指定一个库的明确版本也有助于使每个人都使用相同的包的版本，这样整个团队就可以运行相同的版本，直到 `package.json` 文件更新。
+
 In all those cases, versioning helps a lot, and `npm` follows the semantic versioning (semver) standard.
+
+在所有这些情况下，版本控制的帮助很大， `npm` 遵循语义版本控制(semver)标准。
 
 #### Running Tasks
 
+#### 运行中的任务
+
 The package.json file supports a format for specifying command line tasks that can be run by using
+
+package.json 文件支持指定命令行任务的格式，可以通过使用：
 
 ```plain
 npm <task-name>
@@ -1627,30 +1793,57 @@ npm <task-name>
 
 For example:
 
+例如：
+
 ```plain
-{  "scripts": {    "start-dev": "node lib/server-development",    "start": "node lib/server-production"  }}
+{
+  "scripts": {
+    "start-dev": "node lib/server-development",
+    "start": "node lib/server-production"
+  }
+}
 ```
 
 It’s very common to use this feature to run Webpack:
 
+使用此功能运行 Webpack 非常常见：
+
 ```
-{  "scripts": {    "watch": "webpack --watch --progress --colors --config webpack.conf.js",    "dev": "webpack --progress --colors --config webpack.conf.js",    "prod": "NODE_ENV=production webpack -p --config webpack.conf.js",  }}
+{
+  "scripts": {
+    "watch": "webpack --watch --progress --colors --config webpack.conf.js",
+    "dev": "webpack --progress --colors --config webpack.conf.js",
+    "prod": "NODE_ENV=production webpack -p --config webpack.conf.js"
+  }
+}
 ```
 
 So instead of typing those long commands, which are easy to forget or mistype, you can run
 
+所以不要输入那些很长的命令，它们很容易忘记或忘记输入，你可以运行
+
 ```
-$ npm watch$ npm dev$ npm prod
+$ npm watch
+$ npm dev
+$ npm prod
 ```
 
 ### Where does npm install the packages?
 
+### npm 在哪里安装包？
+
 When you install a package using `npm` (or [yarn][77]), you can perform 2 types of installation:
+
+使用 `npm` （或[yarn][77]）安装包时，可以执行两种类型的安装：
 
 -   a local install
 -   a global install
+- 本地安装
+- 全局安装
 
 By default, when you type an `npm install` command, like:
+
+默认情况下，输入 `npm install` 命令时，如：
 
 ```
 npm install lodash
@@ -1658,9 +1851,15 @@ npm install lodash
 
 the package is installed in the current file tree, under the `node_modules` subfolder.
 
+该包安装在当前文件夹下的 `node_modules` 子文件夹下。
+
 As this happens, `npm` also adds the `lodash` entry in the `dependencies` property of the `package.json` file present in the current folder.
 
+与此同时，`npm` 也会在当前文件夹中的 `package.json` 文件的 `dependencies` 属性中添加 `lodash` 项。
+
 A global installation is performed using the `-g` flag:
+
+全局安装使用 `-g` 标识：
 
 ```
 npm install -g lodash
@@ -1668,15 +1867,27 @@ npm install -g lodash
 
 When this happens, npm won’t install the package under the local folder, but instead, it will use a global location.
 
+发生这种情况时，npm 不会将包安装在本地文件夹下，而是使用全局位置。
+
 Where, exactly?
+
+确切地说，在哪里？
 
 The `npm root -g` command will tell you where that exact location is on your machine.
 
+`npm root -g` 命令将告诉你该位置在你的计算机上的确切位置。
+
 On macOS or Linux this location could be `/usr/local/lib/node_modules`. On Windows it could be `C:\Users\YOU\AppData\Roaming\npm\node_modules`
+
+在 macOS 或 Linux 上，此位置可以是 `/usr/local/lib/node_modules`。在 Windows 上，它可以是 `C:\Users\YOU\AppData\Roaming\npm\node_modules`。
 
 If you use `nvm` to manage Node.js versions, however, that location would differ.
 
+如果你使用 `nvm` 管理 Node.js 版本，然而不同的版本位置会有所不同。
+
 I for example use `nvm` and my packages location was shown as`/Users/flavio/.nvm/versions/node/v8.9.0/lib/node_modules`.
+
+例如，我使用 `nvm`，包的位置显示为 `/Users/flavio/.nvm/versions/node/v8.9.0/lib/node_modules`。
 
 ### How to use or execute a package installed using npm
 

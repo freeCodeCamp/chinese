@@ -1,43 +1,43 @@
 > -  原文地址：[CSS Scrollbar Styling Tutorial – How to Make a Custom Scrollbar](https://www.freecodecamp.org/news/css-scrollbar-tutorial/)
 > -  原文作者：[Charles MahlerCharles Mahler](https://www.freecodecamp.org/news/author/charles-mahler/)
-> -  译者：
+> -  译者：Humilitas
 > -  校对者：
 
 ![CSS Scrollbar Styling Tutorial – How to Make a Custom Scrollbar](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/CSS-scrollbar-thumbnail.png)
 
-Have you ever visited a website with a custom scrollbar and wondered how they did it? After reading this article you will understand just about everything there is to know about customizing and styling scrollbars using CSS.
+你见过自定义滚动条样式的网站吗，是不是很想知道它们是怎么实现的？读完这篇文章，你会了解到使用 CSS 自定义滚动条样式的所有知识。
 
-In this tutorial you will:
+在本教程中，你将：
 
--   Learn the native CSS properties available for styling a scrollbar in the browser
--   Create four unique scrollbars using CSS
--   Learn about some external libraries that give cross-browser support for custom scrollbars
+-   学习能用来自定义滚动条样式的原生 CSS 属性
+-   使用 CSS 创建 4 种独特的滚动条
+-   了解一些自定义滚动条样式的外部库，它们提供了跨浏览器的支持
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/crazy-scrollbar.PNG)
 
-Peak scrollbar design
+<div style="text-align:center">特色滚动条</div>
 
-## Video Tutorial
+## 视频教程
 
-If you prefer video tutorials to reading, you can watch instead. You can also use the video to leave comments/questions and post links to your own custom scrollbars using something like CodePen so others can see your work.
+如果你更喜欢看视频教程，可以观看下面的视频。欢迎在视频页面留下你的评论或提出疑问，也欢迎留下你的作品链接（如 CodePen 链接），这样其他人也可以看到你设计的自定义滚动条。
 
-## Pros and Cons of a Custom Scrollbar
+## 自定义滚动条的利弊
 
-Before jumping into the code, I think it's worth looking at some potential tradeoffs that come with creating a custom scrollbar for your website or app.
+在编码之前，我觉得有必要先了解一下在网站或应用中使用自定义滚动条所带来的影响。
 
-The upside is that it can give your website a chance to standout compared to the millions of websites using the browser default scrollbar. Anything that can make your website even a little bit more memorable to visitors will benefit you long term.
+好的方面在于它能让你的网站在无数使用默认滚动条的网站中脱颖而出，任何能加深网站访问者印象的东西都能让你长期受益。
 
-On the other hand, many UI designers believe that you should never interfere with "standardized" UI components like the scrollbar. If you modify your scrollbar too much, it may confuse people using your website or app.
+另一方面，许多 UI 设计师认为绝不应该干涉滚动条等“标准化” UI 组件的表现。如果过度修改滚动条，可能会给网站/应用的用户造成困扰。
 
-If you are doing this for your own personal website you probably don't need to worry about it as long as you like how it looks.
+如果是自己的个人网站，就不必担心这些了，只要你自己看着喜欢就行。
 
-On the other hand if you are thinking about implementing a custom scrollbar at work or some project where you want to make money, you should try A/B testing and make a data driven decision based on the results.
+如果想要在工作项目或者用来获利的项目中实现自定义滚动条，则需要进行对照测试，基于结果数据来做决定。
 
-At the end of the day most of us are writing code to drive revenue for a business, so you always need to keep that in mind.
+归根结底，大多数人写代码是为了增加业务收入，你需要牢记这一点。
 
-## Getting Started
+## 起步
 
-The first thing you need to do is create a basic layout so the page is large enough to actually show a scrollbar in your web browser:
+首先要做的是创建一个基本的页面布局，页面要足够大，使浏览器出现滚动条：
 
 ```html
 <!DOCTYPE html>
@@ -87,9 +87,9 @@ The first thing you need to do is create a basic layout so the page is large eno
 </html>
 ```
 
-Nothing fancy here, just a basic div container with the class name `container` for our layout, a header for a title, and a bunch of paragraphs with the class name `para` to fill out our page.
+没什么好看的内容，只有一个用来构建页面布局的 div 容器、一个标题、一些用来填充页面的段落。
 
-Here's the CSS to make things look a little fancier:
+以下是一些 CSS 样式，它们能让页面好看一点：
 
 ```css
 body {
@@ -97,62 +97,62 @@ body {
     margin: 0;
     
   }
-  .para {
-    font-size: 16px;
-    padding: 20px;
-    width: 70%;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.para {
+  font-size: 16px;
+  padding: 20px;
+  width: 70%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 ```
 
-Your page should look something like this:
+页面效果如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/layout-preview.PNG)
 
-## How to Create Custom Scrollbars with CSS
+## 如何使用 CSS 创建自定义滚动条
 
-With our setup out of the way, we can jump into the fun part of the tutorial. The first part of this section will be learning the various CSS properties available to use for styling.
+准备工作做好了，接下来进入本教程中有趣的部分。本节内容的第一部分会学习一些滚动条样式相关的 CSS 属性。
 
-In the second part we'll implement four different types of scrollbars to give you some ideas for making your own scrollbars.
+第二部分我们会实现 4 中不同类型的滚动条，能为你之后制作自己的滚动条提供一些思路。
 
-### CSS properties available for styling scrollbars
+### 滚动条样式相关的 CSS 属性
 
-Unfortunately we still don't have any standardized cross-browser support for styling scrollbars with CSS. Firefox and Webkit-based browsers like Chrome, Edge, and Safari have different properties for styling.
+很不幸，现在还没有对这些 CSS 属性的标准化跨浏览器支持。Firefox 和一些基于 Webkit 内核的浏览器（如 Chrome、Edge、Safari）各自提供了不同的属性。
 
-This tutorial will mainly focus on Webkit browsers, because they offer more options for styling, but we will briefly cover Firefox as well.
+本教程主要针对 Webkit 内核的浏览器，因为它们提供了更多样式属性，不过我也会简单介绍一下 Firefox。
 
-### Webkit CSS styling properties for scrollbars
+### Webkit 滚动条样式属性
 
--   `::-webkit-scrollbar` – the entire scrollbar
--   `::-webkit-scrollbar-track` – the entire progress bar area of the scrollbar
--   `::-webkit-scrollbar-thumb` – the draggable section of the scrollbar
+-   `::-webkit-scrollbar` – 整个滚动条
+-   `::-webkit-scrollbar-track` – 滚动条的滚动区域（轨道）
+-   `::-webkit-scrollbar-thumb` – 滚动条的可拖拽部分（滑块）
 
-The below properties are available but are less commonly used:
+以下是可用但不常用的属性：
 
--   `::-webkit-scrollbar-button` – the up/down buttons at each end of the scrollbar
--   `::-webkit-scrollbar-track-piece` – part of scrollbar not covered by the thumb
--   `::-webkit-scrollbar-corner` – bottom corner where horizontal and vertical scrollbars meet
+-   `::-webkit-scrollbar-button` – 滚动条两端的上/下（或左/右）按钮
+-   `::-webkit-scrollbar-track-piece` – 滚动条轨道未被滑块覆盖的部分
+-   `::-webkit-scrollbar-corner` – 垂直滚动条和水平滚动条交汇的部分
 
-### Firefox CSS styling properties for scrollbars
+### Firefox 滚动条样式属性
 
-There are currently two available CSS properties for styling scrollbars in Firefox
+Firefox 中当前可用的两个滚动条样式属性： 
 
--   `scrollbar-width` – controls width of scrollbar, with only two options available being `auto` or `thin`
--   `scrollbar-color` – takes two colors which are used for the coloring of the thumb and track of the scrollbar in that order
+-   `scrollbar-width` – 控制滚动条的宽度，只有两个可选项：`auto` 或 `thin`
+-   `scrollbar-color` – 接收两个颜色，依次指定滑块和轨道的颜色
 
-Now that you know your options for customizing scrollbars, let's put it into practice with some examples.
+了解了自定义滚动条的样式属性，我们通过几个例子将它们付诸实践。
 
-### Dark Theme Scrollbar
+### 暗色主题滚动条
 
-Dark theme websites are all the rage right now. Sticking with the default browser scrollbar could come off as jarring to users because it doesn't fit all that well with a dark themed website.
+现在暗色主题的网站非常流行。坚持使用默认的滚动条可能会惹恼用户，因为它与整个网站的暗色主题不搭。
 
-Let's use our newfound knowledge of CSS to create a dark theme scrollbar with a rounded border inspired by CSS Tricks' website:
+用我们新学的知识创建一个暗色主题的滚动条，它的边框是圆形的（灵感来自 CSS Tricks 网站）：
 
 ```css
 html::-webkit-scrollbar {
@@ -169,15 +169,15 @@ html::-webkit-scrollbar-thumb {
   }
 ```
 
-The result is a little hard to see in the screenshot, but the track is black and the thumb is a darkish gray color.
+最终效果在截图中比较难看清，不过可以看到轨道是黑色的、滑块是深灰色的。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/dark-theme.PNG)
 
-### Minimalist Scrollbar
+### 极简滚动条
 
-For this example you'll be making a minimalist scrollbar. This type of scrollbar would work well if you are going for a simple, elegant style for your website.
+这个示例中将会制作一个极简的滚动条。如果你的网站追求简单优雅的风格，这种滚动条会很适合。
 
-The most important thing to note is that you have the ability to use `hover` and `active` pseudo-elements from CSS to further style your scrollbar. In this case the scrollbar will turn a darker gray when you hover and drag on the thumb.
+需要注意的重点是，你可以使用 `hover` 和 `active` 伪元素来进一步设置滚动条样式。本例中，当你把鼠标悬停在滑块上以及拖动滑块时它的颜色会变成更深的灰色。
 
 ```css
 html::-webkit-scrollbar {
@@ -205,15 +205,15 @@ html::-webkit-scrollbar-thumb:active {
   }
 ```
 
-The result:
+最终效果：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/minimalist.PNG)
 
-### Patterned Scrollbar
+### 图案滚动条
 
-In this section, the focus is on using a repeating linear gradient to create a pattern effect on our scrollbar track. The same could be done for the scrollbar thumb as well.
+这个部分的重点是使用重复的线性渐变在滚动条轨道中创建图案效果，这个方法也可以运用在滑块上。
 
-Another thing to notice is that you can style the scrollbar thumb with a border, which you can use to create a number of cool effects. In this case I made the background color of the thumb transparent so that you can see the scrollbar track pattern as we scroll.
+另外一点需要注意的是，你也可以为滑块设置边框样式，利用边框样式可以创建许多有趣的效果。本例中，我把滑块的背景颜色设为透明，这样就可以在滚动的同时看到轨道中的图案。
 
 ```css
 html::-webkit-scrollbar {
@@ -231,15 +231,15 @@ html::-webkit-scrollbar-thumb {
    }
 ```
 
-The result:
+最终效果：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/patterned.PNG)
 
-### "Animated" Gradient Scrollbar
+### “动态”渐变滚动条
 
-This example uses a linear gradient and a trick with box shadow to make it look like the scrollbar is changing color as you move up and down the page. What's really happening is that the background of the scrollbar track is being revealed beneath the thumb.
+这个例子用到了线性渐变，并使用了一个小技巧：利用滑块的阴影使得滚动条在页面滚动时看起来像是在变换颜色。实际上是轨道的背景透过滑块显示了出来。
 
-It works because the box-shadow takes up all the space of the scrollbar except for where the thumb is. Because the thumb is transparent the gradient color of the background shows through.
+阴影遮盖住了滑块之外的所有轨道空间，又由于滑块是透明的，所以轨道背景的渐变颜色透过它显示出来。
 
 ```css
 html::-webkit-scrollbar {
@@ -256,56 +256,40 @@ html::-webkit-scrollbar-thumb {
   }
 ```
 
-The result:
+最终效果：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/animated.PNG)
 
-## Custom Scrollbar Limitations and Alternatives
+## 自定义滚动条的限制及备选方案
 
-There are clearly some problems with creating custom scrollbars. The first would be the lack of cross-browser support. Other issues would be the lack of ability to add transitions or animations to the scrollbar and the fact your custom scrollbar won't appear on mobile devices.
+显然，创建自定义滚动条存在一些问题。首先是缺少跨浏览器支持。其他可能问题包括：无法为滚动条增加过渡和动画效果、移动设备不支持自定义滚动条。
 
-An alternative is hiding the default scrollbar and using a library, but this may effect performance when used as main scrollbar for your page. And there are other potential usability issues because these libraries rely on JavaScript to imitate the native scrollbar behavior.
+一个备选方案是：隐藏默认的滚动条，并使用外部库来实现，但这可能会影响页面性能。而且可能还有其他潜在的可用性问题，因为这些库依赖 JavaScript 来模拟原生的滚动条行为。
 
-Below I'll go over two popular open-source libraries for making scrollbars.
+下面我会介绍两个用于制作滚动条的流行开源库。
 
-### SimpleBar Library
+### SimpleBar 库
 
-[
+使用原生滚动行为的自定义滚动条 JavaScript 库：操作简单、轻量、易用、跨浏览器。- Grsmto/simplebar
 
-Grsmto/simplebar
+[![](https://opengraph.githubassets.com/a3236d200e4fa9e299d00a79c560678cfeaf07d684bc6ec998bd25f3ebe12efb/Grsmto/simplebar)](https://github.com/Grsmto/simplebar)
 
-Custom scrollbars vanilla javascript library with native scroll, done simple, lightweight, easy to use and cross-browser. - Grsmto/simplebar
+顾名思义，SimpleBar 旨在简化创建自定义滚动条的过程。唯一的缺点是它不能作为网站的主滚动条（译注：即根元素的滚动条）来使用，也不支持表格元素、文本输入区域和下拉选择框。
 
-![](https://github.githubassets.com/favicons/favicon.svg)GrsmtoGitHub
+SimpleBar 主要适用于诸如动态聊天应用或一些在页面内部元素中有滚动行为的场景。
 
-![](https://opengraph.githubassets.com/a3236d200e4fa9e299d00a79c560678cfeaf07d684bc6ec998bd25f3ebe12efb/Grsmto/simplebar)
+### Overlay Scrollbars 库
 
-](https://github.com/Grsmto/simplebar)
+一个隐藏原生滚动条、提供自定义样式滚动条的插件，保留了原生的功能和体验。- KingSora/OverlayScrollbars
 
-As the name tells you, SimpleBar is all about making it easy to create custom scrollbars. The only real downside here is that it doesn't support usage as the main scrollbar for your website or for table, text area, or select HTML elements.
+[![](https://opengraph.githubassets.com/ad151bf617e4361235fd3bc54163fab57fea0c0552703c89100ebc063483e341/KingSora/OverlayScrollbars)](https://github.com/KingSora/OverlayScrollbars)
 
-The main purpose of SimpleBar would be for creating custom scrollbars for things like dynamic chat applications or any other type of internal page element where you want scrolling.
+Overlay Scrollbars 与 SimpleBar 很相似，但是它提供了对 HTML body 元素的支持。这意味着除了跨浏览器支持和移动端支持等特性，还可以把它作为网站的主滚动条来使用。
 
-### Overlay Scrollbars Library
+## 总结
 
-[
+希望本文能让你深入理解使用 CSS 自定义滚动条样式的工作原理。
 
-KingSora/OverlayScrollbars
+如果有任何疑问，你可以在 YouTube 视频下方留下评论，我会尽力解答。也欢迎留下你自己的作品链接，与大家分享。
 
-A javascript scrollbar plugin which hides native scrollbars, provides custom styleable overlay scrollbars and keeps the native functionality and feeling. - KingSora/OverlayScrollbars
-
-![](https://github.githubassets.com/favicons/favicon.svg)KingSoraGitHub
-
-![](https://opengraph.githubassets.com/ad151bf617e4361235fd3bc54163fab57fea0c0552703c89100ebc063483e341/KingSora/OverlayScrollbars)
-
-](https://github.com/KingSora/OverlayScrollbars)
-
-Overlay Scrollbars is very similar to SimpleBar but has the added benefit of supporting the HTML body element. This means that you can use it for the main scrollbar of your website in addition to all the other features you would expect like cross-browser and mobile support.
-
-## Conclusion
-
-Hopefully this article gave you a solid understanding of how styling CSS scrollbars works.
-
-If you have any questions you can leave a comment on the YouTube video and I'll try to help you out. Also feel free to leave links to your own designs so other people can check them out.
-
-Link to GitHub repo: [https://github.com/renaissanceengineer/css-scrollbar-tutorial](https://github.com/renaissanceengineer/css-scrollbar-tutorial)
+Github 仓库链接：[https://github.com/renaissanceengineer/css-scrollbar-tutorial](https://github.com/renaissanceengineer/css-scrollbar-tutorial)

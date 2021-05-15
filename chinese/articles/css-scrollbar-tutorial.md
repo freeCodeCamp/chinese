@@ -268,7 +268,7 @@ html::-webkit-scrollbar-thumb {
 
 下面我会介绍两个用于制作滚动条的流行开源库。
 
-### SimpleBar 库
+### SimpleBar
 
 使用原生滚动行为的自定义滚动条 JavaScript 库：操作简单、轻量、易用、跨浏览器。- Grsmto/simplebar
 
@@ -278,7 +278,7 @@ html::-webkit-scrollbar-thumb {
 
 SimpleBar 主要适用于诸如动态聊天应用或一些在页面内部元素中有滚动行为的场景。
 
-### Overlay Scrollbars 库
+### Overlay Scrollbars
 
 一个隐藏原生滚动条、提供自定义样式滚动条的插件，保留了原生的功能和体验。- KingSora/OverlayScrollbars
 

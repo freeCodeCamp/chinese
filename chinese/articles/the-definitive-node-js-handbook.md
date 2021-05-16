@@ -1891,11 +1891,17 @@ I for example use `nvm` and my packages location was shown as`/Users/flavio/.nvm
 
 ### How to use or execute a package installed using npm
 
+### 如何使用或执行使用 npm 安装的包
+
 #### How to include and use in your code a package installed in your node_modules folder
 
 When you install using `npm` a package into your `node_modules` folder, or also globally, how do you use it in your Node code?
 
+当你使用 `npm` 将包安装到 `node_modules` 文件夹或全局安装时，如何在 Node 代码中使用它？
+
 Say you install `lodash`, the popular JavaScript utility library, using
+
+假如你安装了流行的 Javascript 实用程序库 `loadash`，使用
 
 ```
 npm install lodash
@@ -1903,7 +1909,11 @@ npm install lodash
 
 This is going to install the package in the local `node_modules` folder.
 
+这将在本地 `node_modules` 文件夹中安装程序包。
+
 To use it in your code, you just need to import it into your program using `require`:
+
+要在代码中使用它，只需要使用 `require` 将其导入到程序中：
 
 ```
 const _ = require('lodash)
@@ -1911,19 +1921,35 @@ const _ = require('lodash)
 
 What if your package is an executable?
 
+如果你的包是可执行的呢？
+
 In this case, it will put the executable file under the `node_modules/.bin/` folder.
+
+在这种情况下，它会将可执行文件放在 `node_moduels/.bin` 文件夹下。
 
 One easy way to demonstrate this is [cowsay][78].
 
+证明这一点的一个简单方法是 [cowsay][78].
+
 The cowsay package provides a command line program that can be executed to make a cow say something (and other animals as well).
+
+cowsay 包提供了一个命令行程序，可以执行该程序使奶牛（以及其它动物）说些什么。
 
 When you install the package using `npm install cowsay`, it will install itself and a few dependencies in the node_modules folder:
 
+当你使用 `npm instail cowsay` 安装包时，它将在 node_modules 文件夹中安装自身和一些依赖项：
+
 There is a hidden .bin folder, which contains symbolic links to the cowsay binaries.
+
+有一个隐藏的 .bin 文件夹，其中包含指向 cowsay 二进制文件的符号链接。
 
 How do you execute those?
 
+你怎么执行这些？
+
 You can of course type `./node_modules/.bin/cowsay` to run it, and it works, but [npx][79], included in the recent versions of npm (since 5.2), is a much better option. You just run:
+
+当然，你可以输入 `./node_modules/.bin/cowsay` 来运行它，但是 npm 最新版本（从 5.2 以后）中包含的 [npx][79] 是一个更好的选择。你只要运行：
 
 ```
 npx cowsay
@@ -1931,7 +1957,10 @@ npx cowsay
 
 and npx will find the package location.
 
+npx 会找到包的位置。
+
 ### The package.json guide
+### package.json 指南
 
 The package.json file is a key element in lots of app codebases based on the Node.js ecosystem.
 

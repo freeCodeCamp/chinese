@@ -119,7 +119,7 @@ I have this complete list of tasks that you can read on training ML models:
 
 Task Cheatsheet for Almost Every Machine Learning Project
 
-As I am working on creating a range of portfolio-worthy projects for all of you, I thought of documenting practices that I’ve either learned from someone or developed while working. In this blog…
+As I am working on creating a range of portfolio-worthy projects for all of you, I thought of documenting practices that I’ve either learned from someone or developed while working. In this blog……
 
 ![](https://miro.medium.com/fit/c/152/152/1*sHhtYhaCe2Uc3IU0IgKwIQ.png)Harshit TyagiTowards Data Science
 

@@ -10,15 +10,8 @@
   "bugs": {
     "url": "https://github.com/freeCodeCamp/news-translation/issues"
   },
-  "dependencies": {
-    "cheerio": "^1.0.0-rc.5",
-    "node-fetch": "^2.6.1",
-    "turndown": "^7.0.0",
-    "turndown-plugin-gfm": "^1.0.2"
-  },
   "devDependencies": {
     "husky": "^4.3.0",
-    "jest": "^26.6.3",
     "lint-md-cli": "^0.1.2",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1"
@@ -34,8 +27,7 @@
   "scripts": {
     "lint": "lint-md chinese/**/*.md",
     "format": "lint-md chinese/**/*.md --fix",
-    "test": "lint-staged",
-    "jest": "jest"
+    "test": "lint-staged"
   },
   "husky": {
     "hooks": {

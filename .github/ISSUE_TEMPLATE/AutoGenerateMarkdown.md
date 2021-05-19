@@ -1,11 +1,6 @@
 ---
-<<<<<<< HEAD
-name: 翻译任务(自动爬取)
-about: "新增待翻译文章，使用自动 github Actions 自动爬取。"
-=======
 name: 翻译任务（自动爬取）
 about: "新增待翻译文章，使用自动 GitHub Actions 自动爬取。"
->>>>>>> 7b97248a1c644d7260370040dd5188abd4b3cb6c
 title: "[Auto]（此处替换为翻译的中文标题）"
 labels: Translation-needed
 assignees: ''

@@ -1388,30 +1388,30 @@ ps axww | grep "Visual Studio Code"
 `U` 代表处于不间断等待中的进程 
 `Z` 代表已死亡的进程（_zombie_，即僵尸进程）
 
-If you have more than one letter, the second represents further information, which can be very technical.
+如果出现一个以上的字母，那么第二个字母代表进一步的、可能非常有技术性的信息。
 
-It's common to have `+` which indicates that the process is in the foreground in its terminal. `s` means the process is a [session leader][69].
+常见的是 `+` ，它代表相应进程在终端中处于前台。而 `s` 代表相应进程是一个 [会话领头进程（session leader）][69].
 
-`TIME` tells us how long the process has been running.
+`TIME` 则告诉我们进程已经运行了多长时间。
 
 ## Linux 中的 `top` 命令
 
-The `top` command is used to display dynamic real-time information about running processes in the system.
+`top` 命令用来显示系统中正在运行的进程的动态实时信息。
 
-It's really handy to understand what is going on.
+如果要了解系统发生了什么，这条命令真的很方便。
 
-Its usage is simple – you just type `top`, and the terminal will be fully immersed in this new view:
+它的用法很简单。你只需要输入 `top` ，终端会完全沉浸到新的视图中：
 
 ![Screen-Shot-2020-09-03-at-11.39.53](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-11.39.53.png)  
-The process is long-running. To quit, you can type the `q` letter or `ctrl-C`.
+这个进程是持续运行的。要退出，你可以输入字母 `q` 或按下 `ctrl-C`。
 
-There's a lot of information being given to us: the number of processes, how many are running or sleeping, the system load, the CPU usage, and a lot more.
+它给出了很多信息：进程数量、有多少进程在运行或休眠、系统负载、CPU 使用率，还有更多信息。
 
-Below, the list of processes taking the most memory and CPU is constantly updated.
+在下方，占用 CPU 和内存资源最多的进程列表不断刷新。
 
-By default, as you can see from the `%CPU` column highlighted, they are sorted by the CPU used.
+默认情况下，进程按 CPU 使用率排列，正如你在高亮标记的 `%CPU` 列中看到的那样。
 
-You can add a flag to sort processes by memory utilized:
+你可以添加一个参数，要求进程列表按内存利用率排列：
 
 ```
 top -o mem

@@ -1964,15 +1964,27 @@ npx 会找到包的位置。
 
 The package.json file is a key element in lots of app codebases based on the Node.js ecosystem.
 
+在许多基于 Node.js 生态系统的应用程序代码库中，package.json 文件是一个关键元素。
+
 If you work with JavaScript, or you’ve ever interacted with a JavaScript project, Node.js or a front-end project, you surely met the `package.json` file.
+
+如果你使用 JavaScript，或者你曾经与 JavaScript 项目、Node.js 或前端项目进行过交互，那么你肯定会遇到 `package.json` 文件。
 
 What’s that for? What should you know about it, and what are some of the cool things you can do with it?
 
+那是干什么的？你应该知道什么，你能用它做什么?
+
 The `package.json` file is kind of a manifest for your project. It can do a lot of things, completely unrelated. It’s a central repository of configuration for tools, for example. It’s also where `[npm][80]`and `[yarn][81]`store the names and versions of the package it installed.
+
+`packcage.json` 文件是项目的清单。它可以做很多事情，完全不相关。例如，它是工具配置的中央存储库。它也是 `npm][80]` 和 `[yarn][81]` 存储它安装的包的名称和版本的地方。
 
 #### The file structure
 
+#### 文件结构
+
 Here’s an example package.json file:
+
+下面是一个 package.json 文件示例：
 
 ```
 {
@@ -1984,23 +1996,114 @@ Here’s an example package.json file:
 
 It’s empty! There are no fixed requirements of what should be in a `package.json` file, for an application. The only requirement is that it respects the JSON format, otherwise it cannot be read by programs that try to access its properties programmatically.
 
+它是空的！对于应用程序，`packcae.json` 文件中应包含你的内容没有固定的要求。唯一的要求是它尊重 JSON 格式，否则试图以编程方式访问其属性的程序无法读取它。
+
 If you’re building a Node.js package that you want to distribute over `npm` things change radically, and you must have a set of properties that will help other people use it. We’ll see more about this later on.
+
+如果你正在构建 Node.js 包，并希望将其分发到 `npm` 上，那么情况会发生根本性的变化，你必须有一组有助于其他人使用它的属性。稍后我们会看到更多关于这方面的内容。
 
 This is another package.json:
 
+这是另一个 package.json:
+
 ```
-{  "name": "test-project"}
+{
+    "name": "test-project"
+}
 ```
 
 It defines a `name` property, which tells the name of the app, or package, that’s contained in the same folder where this file lives.
 
+它定义了一个 `name` 属性，该属性告诉此文件所在的文件夹中包含应用程序或包的名称。
+
 Here’s a much more complex example, which I extracted this from a sample Vue.js application:
 
+下面是一个更复杂的示例，我从一个示例 Vue.js 应用程序中提取了这个示例：
+
 ```
-{  "name": "test-project",  "version": "1.0.0",  "description": "A Vue.js project",  "main": "src/main.js",  "private": true,  "scripts": {    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",    "start": "npm run dev",    "unit": "jest --config test/unit/jest.conf.js --coverage",    "test": "npm run unit",    "lint": "eslint --ext .js,.vue src test/unit",    "build": "node build/build.js"  },  "dependencies": {    "vue": "^2.5.2"  },  "devDependencies": {    "autoprefixer": "^7.1.2",    "babel-core": "^6.22.1",    "babel-eslint": "^8.2.1",    "babel-helper-vue-jsx-merge-props": "^2.0.3",    "babel-jest": "^21.0.2",    "babel-loader": "^7.1.1",    "babel-plugin-dynamic-import-node": "^1.2.0",    "babel-plugin-syntax-jsx": "^6.18.0",    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",    "babel-plugin-transform-runtime": "^6.22.0",    "babel-plugin-transform-vue-jsx": "^3.5.0",    "babel-preset-env": "^1.3.2",    "babel-preset-stage-2": "^6.22.0",    "chalk": "^2.0.1",    "copy-webpack-plugin": "^4.0.1",    "css-loader": "^0.28.0",    "eslint": "^4.15.0",    "eslint-config-airbnb-base": "^11.3.0",    "eslint-friendly-formatter": "^3.0.0",    "eslint-import-resolver-webpack": "^0.8.3",    "eslint-loader": "^1.7.1",    "eslint-plugin-import": "^2.7.0",    "eslint-plugin-vue": "^4.0.0",    "extract-text-webpack-plugin": "^3.0.0",    "file-loader": "^1.1.4",    "friendly-errors-webpack-plugin": "^1.6.1",    "html-webpack-plugin": "^2.30.1",    "jest": "^22.0.4",    "jest-serializer-vue": "^0.3.0",    "node-notifier": "^5.1.2",    "optimize-css-assets-webpack-plugin": "^3.2.0",    "ora": "^1.2.0",    "portfinder": "^1.0.13",    "postcss-import": "^11.0.0",    "postcss-loader": "^2.0.8",    "postcss-url": "^7.2.1",    "rimraf": "^2.6.0",    "semver": "^5.3.0",    "shelljs": "^0.7.6",    "uglifyjs-webpack-plugin": "^1.1.1",    "url-loader": "^0.5.8",    "vue-jest": "^1.0.2",    "vue-loader": "^13.3.0",    "vue-style-loader": "^3.0.1",    "vue-template-compiler": "^2.5.2",    "webpack": "^3.6.0",    "webpack-bundle-analyzer": "^2.9.0",    "webpack-dev-server": "^2.9.1",    "webpack-merge": "^4.1.0"  },  "engines": {    "node": ">= 6.0.0",    "npm": ">= 3.0.0"  },  "browserslist": [    "> 1%",    "last 2 versions",    "not ie &lt;= 8"  ]}
+{
+    "name":"test-project",
+    "version":"1.0.0",
+    "description":"A Vue.js project",
+    "main":"src/main.js",
+    "private":true,
+    "scripts":{
+        "dev":"webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+        "start":"npm run dev",
+        "unit":"jest --config test/unit/jest.conf.js --coverage",
+        "test":"npm run unit",
+        "lint":"eslint --ext .js,.vue src test/unit",
+        "build":"node build/build.js"
+    },
+    "dependencies":{
+        "vue":"^2.5.2"
+    },
+    "devDependencies":{
+        "autoprefixer":"^7.1.2",
+        "babel-core":"^6.22.1",
+        "babel-eslint":"^8.2.1",
+        "babel-helper-vue-jsx-merge-props":"^2.0.3",
+        "babel-jest":"^21.0.2",
+        "babel-loader":"^7.1.1",
+        "babel-plugin-dynamic-import-node":"^1.2.0",
+        "babel-plugin-syntax-jsx":"^6.18.0",
+        "babel-plugin-transform-es2015-modules-commonjs":"^6.26.0",
+        "babel-plugin-transform-runtime":"^6.22.0",
+        "babel-plugin-transform-vue-jsx":"^3.5.0",
+        "babel-preset-env":"^1.3.2",
+        "babel-preset-stage-2":"^6.22.0",
+        "chalk":"^2.0.1",
+        "copy-webpack-plugin":"^4.0.1",
+        "css-loader":"^0.28.0",
+        "eslint":"^4.15.0",
+        "eslint-config-airbnb-base":"^11.3.0",
+        "eslint-friendly-formatter":"^3.0.0",
+        "eslint-import-resolver-webpack":"^0.8.3",
+        "eslint-loader":"^1.7.1",
+        "eslint-plugin-import":"^2.7.0",
+        "eslint-plugin-vue":"^4.0.0",
+        "extract-text-webpack-plugin":"^3.0.0",
+        "file-loader":"^1.1.4",
+        "friendly-errors-webpack-plugin":"^1.6.1",
+        "html-webpack-plugin":"^2.30.1",
+        "jest":"^22.0.4",
+        "jest-serializer-vue":"^0.3.0",
+        "node-notifier":"^5.1.2",
+        "optimize-css-assets-webpack-plugin":"^3.2.0",
+        "ora":"^1.2.0",
+        "portfinder":"^1.0.13",
+        "postcss-import":"^11.0.0",
+        "postcss-loader":"^2.0.8",
+        "postcss-url":"^7.2.1",
+        "rimraf":"^2.6.0",
+        "semver":"^5.3.0",
+        "shelljs":"^0.7.6",
+        "uglifyjs-webpack-plugin":"^1.1.1",
+        "url-loader":"^0.5.8",
+        "vue-jest":"^1.0.2",
+        "vue-loader":"^13.3.0",
+        "vue-style-loader":"^3.0.1",
+        "vue-template-compiler":"^2.5.2",
+        "webpack":"^3.6.0",
+        "webpack-bundle-analyzer":"^2.9.0",
+        "webpack-dev-server":"^2.9.1",
+        "webpack-merge":"^4.1.0"
+    },
+    "engines":{
+        "node":"&gt;= 6.0.0",
+        "npm":"&gt;= 3.0.0"
+    },
+    "browserslist":[
+        "&gt; 1%",
+        "last 2 versions",
+        "not ie &lt;= 8"
+    ]
+}
 ```
 
 there are **lots** of things going on here:
+
+这里发生了许多事情：
 
 -   `name` sets the application/package name
 -   `version` indicates the current version
@@ -2013,7 +2116,20 @@ there are **lots** of things going on here:
 -   `engines` sets which versions of Node this package/app works on
 -   `browserslist` is used to tell which browsers (and their versions) you want to support
 
+- `name` 设置应用程序/包名称
+- `version` 表示当前版本
+- `description` 应用程序包的简要说明
+- `main` 设置应用程序的入口
+- `private` 如果设置为 `true`，则可以防止在 `npm` 上意外发布应用程序/包
+- `scripts` 定义一组可以运行的 node 脚本
+- `dependencies` 设置作为依赖项安装的 `npm` 包的列表
+- `devDependencies` 设置作为开发依赖项安装的 `npm` 包的列表
+- `engines` 设置此包/应用在哪个版本的 Node 上工作
+- `browserslist` 用于讲述你想要支持哪些版本的浏览器（及其版本）
+
 All those properties are used by either `npm` or other tools that we can use.
+
+所有这些属性都由 `npm` 或其它我们可以使用的工具使用。
 
 #### Properties breakdown
 

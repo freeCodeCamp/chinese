@@ -11,7 +11,7 @@ React 是目前为止最受欢迎的 JavaScript 框架之一，而且我相信�
 
 在学习完这篇文章后，你就可以对 React 有初步的了解：
 
--   什么是React ，它为什么这么受欢迎
+-   什么是 React，它为什么这么受欢迎
 -   如何安装 React
 -   React 组件
 -   React State
@@ -19,9 +19,9 @@ React 是目前为止最受欢迎的 JavaScript 框架之一，而且我相信�
 -   在 React 中处理用户事件
 -   React 组件的生命周期事件
 
-以上这些内容是你构建其他高级 React 应用的基础。
+以上这些内容是你构建其它高级 React 应用的基础。
 
-这篇文章是专门为刚接触 React 的 JavaScript 程序员写的。让我们现在就开始学习吧。
+这篇文章是专门为刚接触 React 的 JavaScript 程序员写的。现在就让我们开始学习吧。
 
 ## 什么是 React？
 
@@ -29,9 +29,9 @@ React 是一个 JavaScript 库，旨在简化用户界面的开发。
 
 2013 年，Facebook 首次向全世界发布了 React，Facebook 和 Instagram 以它为基础开发了大量的 APP，其中的一些 APP 有着最广泛的使用。
 
-React 最初是为了使开发者可以在任意时间点都能轻松的追踪用户界面及它的状态。它通过将 UI 划分为组件的集合来达到这个目的。
+React 最初是为了使开发者可以在任意时间点都能轻松的追踪用户界面及它的状态。它通过将 UI 划分为多个组件的集合来达到这个目的。
 
-在学习 React 的时候，你可能遇到一些小困难，但是只要解决了它们，我保证这将会是你最美好的经历。React 可以使很多事情变的更加简单，而且它的生态里有很多好用的库和工具。
+在学习 React 的时候，你可能遇到一些小困难，但是只要解决了它们，我保证这将会是你最美好的经历。React 可以使很多事情变的更加简单，而且它的生态里还有很多好用的库和工具。
 
 React 自身有一套易于使用的 API，当你开始学习的时候，需要先明白以下 4 个基本概念：
 
@@ -40,11 +40,11 @@ React 自身有一套易于使用的 API，当你开始学习的时候，需要�
 -   State
 -   Props
 
-我们将在这篇指导中学习以上几个基本概念，那些高级的概念我们会留给其他的教程，我也会在文章的末尾给出深入学习 React 的资料。
+我们将在这篇指导中学习以上几个基本概念，那些高级的概念我们会留给其它的教程，我也会在文章的末尾给出深入学习 React 的资料。
 
 你可以[免费下载 PDF / ePub / Mobi 格式的本篇指导][1]
 
-## 手册目录
+## 学习目录
 
 -   [学习 React 需要知道多少 JavaScript][2]
 -   [为什么要学习 React][3]
@@ -53,13 +53,13 @@ React 自身有一套易于使用的 API，当你开始学习的时候，需要�
 -   [JSX 简介][6]
 -   [使用 JSX 实现 UI][7]
 -   [JSX 与 HTML 的区别][8]
--   [Embedding JavaScript in JSX][9]
+-   [在 JSX 中嵌入 JavaScript][9]
 -   [React 中的状态管理][10]
 -   [React 组件中的 Props][11]
--   [Data flow in a React application][12]
+-   [React 应用中的数据流][12]
 -   [在 React 中处理用户事件][13]
--   [Lifecycle events in a React component][14]
--   [Where to go from here][15]
+-   [React 组件中的生命周期事件][14]
+-   [参考资料][15]
 
 ## 学习 React 需要了解多少 JavaScript
 
@@ -75,11 +75,11 @@ React 自身有一套易于使用的 API，当你开始学习的时候，需要�
 -   [回调函数][21]
 -   [ES 模块化][22]
 
-如果你对这些概念不熟悉，我为你提供了一些学习这些概念的资料。
+如果你对这些概念不熟悉，我为你提供了一些资料来学习这些概念。
 
 ## 为什么要学习 React?
 
-我强烈建议每一位 Web 开发者至少对 React 有基本的了解。
+我强烈建议每一位 Web 开发者都可以对 React 有基本的了解。
 
 那是因为以下几个原因：
 
@@ -89,7 +89,7 @@ React 自身有一套易于使用的 API，当你开始学习的时候，需要�
 
 这些都是很好的理由，但是我希望你学习 React 的一个主要原因是它真的非常棒。
 
-React 促成了包括代码复用、组件化开发在内的几种很好的开发实践。它高效、轻量，并且它使你关注应用中数据流的开发方法非常适合很多常见的场景。
+React 促成了包括代码复用、组件化开发在内的几种很好的开发实践。它高效、轻量，并且它使开发者更加关注应用中数据流，这种开发思想适用于非常多常见的场景。
 
 ## 如何安装 React
 
@@ -125,8 +125,7 @@ npx create-react-app todolist
 
 ![create-react-app-finished](https://www.freecodecamp.org/news/content/images/2020/11/create-react-app-finished.png)
 
-`create-react-app`  created a file structure in the folder you told it to (`todolist`  in this case), and initialized a  [Git][26]  repository.
-`create-react-app` 会在你指定的文件夹下创建文件结构（本示例中为 `todolist`），并且初始化为一个 [Git][26] 仓库。
+`create-react-app` 会在你指定的文件夹下创建项目的目录结构（本示例中为 `todolist`），同时将它初始化为一个 [Git][26] 仓库。
 
 它也会在 `package.json` 文件中添加几个命令：
 
@@ -136,7 +135,7 @@ npx create-react-app todolist
 
 ![cra-running](https://www.freecodecamp.org/news/content/images/2020/11/cra-running.png)
 
-默认情况下，这个命令会你本地的 3000 端口启动 app，并打开浏览器，为你展示欢迎界面：
+默认情况下，这个命令会在你本地的 3000 端口启动 app，并打开浏览器，为你展示欢迎界面：
 
 ![cra-browser](https://www.freecodecamp.org/news/content/images/2020/11/cra-browser.png)
 

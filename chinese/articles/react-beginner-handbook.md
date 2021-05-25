@@ -111,7 +111,7 @@ React 促成了包括代码复用、组件化开发在内的几种很好的开�
 
 当你执行 `npx create-react-app <app-name>` 命令时，`npx` 首先会 _下载_ 最新版的 `create-react-app`，然后再运行它，运行结束后会把它从你的系统中删除。
 
-这点很不错，因为你的系统上永远不会有旧的版本，并且每次运行的时候，你都会获得最新、最全的代码。
+这点很不错，因为你的系统上永远不会有旧的版本，并且每次运行的时候，你都会获得最新、最全的可用版本。
 
 让我们开始吧：
 
@@ -145,11 +145,11 @@ npx create-react-app todolist
 
 在上一节课程里，你学习了怎么创建你的第一个 React 应用。
 
-这个应用里包含了一系列执行各种操作的文件，大部分都与配置有关，但是有一个文件十分的不同：`App.js`。
+在这个应用中，包含了一系列执行各种操作的文件，大部分都与配置有关，但是有一个文件十分的不同：`App.js`。
 
 `App.js` 是你遇到的 **第一个 React 组件**。
 
-文件中含有如下代码：
+文件中的代码如下：
 
 ```js
 import React from 'react'
@@ -181,7 +181,7 @@ function App() {
 
 一个使用 React 或者其他的主流前端框架，如：Vue、Svelte，创建的应用，都是由很多的组件构成的。
 
-不过，我们还是先分析这个组件吧。我计划像这样分割代码：
+不过，我们还是先分析这个组件吧。我把这个组件代码简化如下：
 
 ```js
 import React from 'react'
@@ -193,19 +193,17 @@ function App() {
 
 ```
 
-You can see a few things here. We  _import_  some things, and we  _export_  a function called  `App`.
-在这段代码中，你可以学习到几个事情。我们使用 _import_ 导入了一些东西，并且用 _export_ 导出了一个名为 `App` 的函数。
+现在你可以看到几件事情：我们使用 _import_ 导入了一些东西，并且 _导出_ 了一个名为 `App` 的函数。
 
-The things we import in this case are a JavaScript library (the  `react`  npm package), an SVG image, and a CSS file.
-在这段示例代码中，我们导入了一个 JavaScript 库(`react` npm 包)，一个 SVG 图片，和一个 CSS 文件。
+在这段示例代码中，我们导入了一个 JavaScript 库（`react` npm 包），一个 SVG 图片，和一个 CSS 文件。
 
-> `create-react-app`  设置了一种方法，它允许我们导入图片和 CSS 并在 JavaScript 中使用它们。但这不是我们现在需要关心的内容，我们现在关心的是 **组件** 的概念。
+> `create-react-app`  设置了一种方法，它允许我们导入图片和 CSS，然后在 JavaScript 中使用它们。但这不是我们现在需要关心的内容，我们现在关心的是 **组件** 的概念。
 
-`App` 是一个官方示例中的函数, 返回了一些初看之下很奇怪的东西。
+`App` 是一个官方示例中的函数, 返回了一些初看之下非常怪异的内容。
 
 它看起来很像 **HTML**，但是内嵌了一些 JavaScript。
 
-这就是 **JSX**，一种我们用来构建组件输出的特殊语言。我们将会在下一节讨论 JSX。
+其实这就是 **JSX**，一种我们构建组件时输出的特殊语言。我们将会在下一节讨论 JSX。
 
 除了可以返回 JSX，组件还具有一些其他特征。
 
@@ -213,14 +211,13 @@ The things we import in this case are a JavaScript library (the  `react`  npm pa
 
 一个组件也可以接收来自其他组件的数据，我们称这些数据为 **props**。
 
-不必担心，我们很快就会详细学习所有的这些概念（JSX，State 和 Props）了。
+先不要着急，我们很快就会详细学习所有的这些概念（JSX，State 和 Props）了。
 
 ## JSX 简介
 
 要想学习 React 就必须首先了解 JSX。
 
-In the last section you met your first React component, the  `App`  component defined in the default application built by  `create-react-app`.
-在上一节中，你见到了第一个 React 组件，即 `App`，它是由 `create-react-app` 构建的默认应用程序中定义的。
+在上一节中，你见到了第一个 React 组件，即 `App`，它定义在由 `create-react-app` 构建的默认应用程序中。
 
 它的代码如下：
 
@@ -277,39 +274,36 @@ function App() {
 
 这些内容 _看起来_ 很像 HTML，但是却又不是真正的 HTML。它们之间有一些不同点。
 
-而且将这样的代码包含在 JavaScript 文件中有点奇怪。它们看起来一点都不像 JavaScript！
+而且将这样的代码包含在 JavaScript 文件中有点奇怪：它们看起来一点都不像 JavaScript！
 
-在后台，React 将会处理 JSX，它们会被转换为浏览器可以识别的 JavaScript。
+在后台，React 会处理 JSX，它们会被转换为浏览器可以识别的 JavaScript。
 
 因此，虽然我们编写了 JSX，但是最终会有一个转换的步骤，使它可以被 JavaScript 解析器所识别。
 
-React 为我们提供这个接口的一个原因：**使用 JSX 能更加轻松的开发 UI 界面**。
+React 这样做的一个主要原因就是：**使用 JSX 能更加轻松的开发 UI 界面**。
 
 当然了，前提是你必须非常熟悉它。
 
-在下一节中，我们将会讨论 JSX 是怎么使你能够很容易的开发 UI 的。再然后我们将会讨论它与“标准 HTML”的区别，这些差异是你必须知道的。
+在下一节中，我们将会讨论 JSX 是怎么使你能够很容易的开发 UI 的。再然后我们将会讨论它与“标准 HTML”的区别，而这些差异是你必须知道的。
 
 ## 使用 JSX 构建 UI
 
 就像上一节中介绍的那样，JSX 的一个主要作用就是借助它可以非常容易的编写 UI。
-As introduced in the last section, one of the main benefits of JSX is that it makes it very easy to build a UI.
 
-特别的，在 React 组件中，你可以导入其他 React 组件，
-In particular, in a React component you can import other React components, and you can embed them and display them.
+特别的，在 React 组件中，你可以导入其他 React 组件，然后将它们嵌入当前组件以展示它们。
 
-一个 React 组件通常在它自己的的文件中，这就是我们可以非常容易的在其他组件中复用（通过导入的方式）它们。
-A React component is usually created in its own file, because that's how we can easily reuse it (by importing it) in other components.
+通常情况下，一个文件就是一个 React 组件，这是我们可以非常容易的在其它组件中复用（通过导入的方式）它们的原因。
 
-但是一个 React 组件
+但是同一个文件中也可以定义其它的 React 组件，这些组件只会在当前文件中用到。这里并没有明确的规则来规定一个文件中是否需要定义多个组件，选择最适合你的那种方式即可。
 But a React component can also be created in the same file of another component, if you plan to only use it in that component. There's no "rule" here, you can do what feels best to you.
 
 当一个文件中的代码行数过多时，我通常会把代码分开，放到单独的文件中。
 I generally use separate files when the number of lines in a file grows too much.
 
-为了方便起见，我们
+为了方便起见，我们在 `App.js` 文件中再定义一个组件。
 To keep things simple let's create a component in the same  `App.js`  file.
 
-我们计划创建一个 `WelcomeMessage` 组件：
+我们计划创建一个名为 `WelcomeMessage` 的组件：
 We're going to create a  `WelcomeMessage`  component:
 
 ```js
@@ -318,11 +312,10 @@ function WelcomeMessage() {
 }
 
 ```
-看到了吗？ 这是一个简单的函数，它返回了一行 JSX，表示一个 `p` 标签。
+看到了吗？ 这个组件就是是一个简单的函数，它返回了一行 JSX，表示一个 `p` 标签。
 See? It's a simple function that returns a line of JSX that represents a  `p`  HTML element.
 
-我们打算把这个函数添加到 `App.js` 文件中。
-We're going to add it to the  `App.js`  file.
+我们将这个函数添加到 `App.js` 文件中。
 
 现在，我们可以通过将 `<WelcomeMessage />` 添加到 `App` 组件的 JSX 代码中，以在用户界面中展示这个组件。
 Now inside the  `App`  component JSX we can add  `<WelcomeMessage />`  to show this component in the user interface:

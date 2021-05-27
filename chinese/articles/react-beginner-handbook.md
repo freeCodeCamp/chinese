@@ -399,36 +399,29 @@ JSX 与 HTML 的另一个非常大的不同点是 HTML 是很 _宽松_。当出�
 
 ## 在 JSX 嵌入 JavaScript
 
-One of the best features of React is that we can easily embed JavaScript into JSX.
-React 的一个最好特点就是我们可以非常容易的在 JSX 中嵌入 JavaScript。
+React 的一大特点就是我们可以非常容易的在 JSX 中嵌入 JavaScript。
 
-Other frontend frameworks, for example Angular and Vue, have their own specific ways to print JavaScript values in the template, or perform things like loops.
 其他的前端框架，如 Angular 和 Vue，有自己的特殊方法来在模板中显示 JavaScript 值，或者执行类似循环的操作。
 
-React doesn't add new things. Instead, it lets us use JavaScript in the JSX, by using curly brackets.
-React 并没有添加类似的新特性。相反的，通过使用大括号，React 容许我们在 JSX 中使用 JavaScript。
+React 并没有添加类似的新特性。React 通过使用大括号的方式，容许我们在 JSX 中嵌入 JavaScript。
 
-The first example of this that I will show you comes directly from the  `App`  component we've studied so far.
-我向你展示的第一个示例，来自于我们前面学习过的 `App` 组件。
+我们展示的第一个示例，来自于我们之前学习过的 `App` 组件。
 
-We import the  `logo`  SVG file using
-我们可以使用下面的方法导入 `logo` SVG 文件：
+我们可以使用下面的方法导入 `logo` 的 SVG 文件：
 
 ```js
 import logo from './logo.svg'
 
 ```
 
-and then in the JSX we assign this SVG file to the  `src`  attribute of an  `img`  tag:
-然后在 JSX 中我们将这个 SVG 文件赋值给 `img` 标签的 `src` 属性。
+然后在 JSX 中，我们将这个 SVG 文件赋值给 `img` 标签的 `src` 属性。
 
 ```js
 <img src={logo} class="App-logo" alt="logo" />
 
 ```
 
-Let's do another example. Suppose the  `App`  component has a variable called  `message`:
-我们来展示另一个示例。假设 `App` 组件有一个变量，名为 `message`：
+我们再来展示一个示例。假设 `App` 组件有一个变量，名为 `message`：
 
 ```js
 function App() {
@@ -438,16 +431,11 @@ function App() {
 
 ```
 
-We can print this value in the JSX by adding  `{message}`  anywhere in the JSX.
 我们可以通过在 JSX 的任意位置添加 `{message}`，来在 JSX 中显示这个变量的值。
 
-Inside the curly brackets  `{ }`  we can add any JavaScript statement, but  _just one_  statement for every curly bracket block.
-我们可以在 `{ }` 中添加任何 Javscript 语句，但是每对大括号中只能有 _一个_ 语句，并且这个语句必须是可求值的。
+我们可以在 `{ }` 中添加任何 Javscript 表达式，但是每对大括号中只能有 _一个_ 表达式，并且这个表达式必须是可正确求值的。
 
-And the statement must return something.
-
-For example this is a common statement you will find in JSX. We have a ternary operator where we define a condition (`message === 'Hello!'`), and we print one value if the condition is true, or another value (the content of  `message`  in this case) if the condition is false:
-如下所示，这是一个在 JSX 中非常常见的语句。我们有一个三元运算符，并在其中定义了一个条件语句（`message === 'Hello!'`），当条件为真时，我们输出一个值（`The message was "Hello!"`）；条件为假时，输出另一个值（当前示例中为变量 `message` 的值）：
+如下所示，这是一个在 JSX 中非常常见的表达式。我们有一个三元运算符，并在其中定义了一个条件语句（`message === 'Hello!'`），当条件为真时，我们输出一个值（`The message was "Hello!"`）；条件为假时，输出另一个值（当前示例中为变量 `message` 的值）：
 
 ```js
 {
@@ -460,20 +448,17 @@ For example this is a common statement you will find in JSX. We have a ternary o
 
 每一个 React 组件都可以有它自己的 **state**。
 
-那么什么是 _state_ ？state 就是 **由组件管理的数据的集合**。
+那么什么是 _state_ ？state 就是 **由组件管理的状态的集合**。
 
-Think about a form, for example. Each individual input element of the form is responsible for managing its state: what is written inside it.
 例如，对于表单来说，它的每一个独立的 input 元素都管理着它自己的 state：它的输入值。
 
-A button is responsible for knowing if it's being clicked, or not. If it's on focus.
-当一个按钮获得焦点时，它负责管理自己是否被点击。
+一个按钮负责处理自己是否被点击；是否获得焦点。
 
-A link is responsible for knowing if the mouse is hovering over it.
 一个链接负责管理鼠标是否悬停在它上面。
 
-在 React 或者其他组件化的框架、库中，我们所有的应用都是以大量使用 state 的组件为基础的。
+在 React 或者其他组件化的框架、库中，我们所有的应用都是以大量使用含有 state 的组件为基础构建的。
 
-我们使用由 React 提供的高效管理工具 `useState` 来管理 state。从技术上来说，它是个 **钩子** （这是事实，但是现在我们不需要知道钩子的详细信息）。
+我们使用由 React 提供的高效管理工具 `useState` 来管理 state。从技术上来说，它是个 **钩子** （尽管事实就是这样，但是现在我们还不需要知道钩子的详细信息）。
 
 你可以使用下面的方法来从 React 中导入 `useState`：
 
@@ -482,9 +467,9 @@ import React, { useState } from 'react'
 
 ```
 
-通过调用 `useState()`，我们将会得到一个 state，以及一个供我们调用以修改 state 值的函数。
+通过调用 `useState()`，我们将会得到一个 state，以及一个供我们调用，用来修改 state 值的函数。
 
-`useState()` 可以传入一个参数，用来初始化 state。它会返回一个数组，这个数组包含一个 state 和一个修改 state 的函数。
+`useState()` 可以传入一个参数，用来初始化 state。它会返回一个数组，这个数组包含一个 state 和一个修改 state 值的函数。
 
 如下所示:
 
@@ -499,7 +484,7 @@ const [count, setCount] = useState(0)
 
 这个语法是不是看起来有点奇怪？这是因为 `useState()` 返回的是数组，所以我们使用了数组解构的方法来获取每个数组成员，就像这样：`const [count, setCount] = useState(0)`
 
-下面是一个实例：
+下面是一个示例：
 
 ```js
 import { useState } from 'react'
@@ -525,10 +510,9 @@ const [anotherCounter, setAnotherCounter] = useState(0)
 
 ## React 组件中的 Props
 
-We call  `props`  the initial values passed to a component.
 我们称传入组件的初始值为 props。
-We previously created a  `WelcomeMessage`  component
-我们之前创建了一个 `WelcomeMessage` 组件。
+
+我们之前创建了一个 `WelcomeMessage` 组件：
 
 ```js
 function WelcomeMessage() {
@@ -544,10 +528,8 @@ function WelcomeMessage() {
 
 ```
 
-This component does not have any initial value. It does not have props.
-这个组件没有初始值，所以它没有 props。
+这个组件没有任何初始值，所以它没有 props。
 
-Props can be passed as attributes to the component in the JSX:
 在 JSX 中，props 可以作为属性传给组件。
 
 ```js
@@ -555,7 +537,6 @@ Props can be passed as attributes to the component in the JSX:
 
 ```
 
-and inside the component we receive the props as arguments:
 在组件中，我们以参数的形式接收 props：
 
 ```js
@@ -565,8 +546,7 @@ function WelcomeMessage(props) {
 
 ```
 
-It's common to use object destructuring to get the props by name:
-通常以对象解构的形式获取 props 的名称：
+通常情况下，我们用对象解构的形式来获取 props 的名称：
 
 ```js
 function WelcomeMessage({ myprop }) {
@@ -575,8 +555,7 @@ function WelcomeMessage({ myprop }) {
 
 ```
 
-Now that we have the prop, we can use it inside the component. For example we can print its value in the JSX:
-我们现在取得了 props，我们可以在组件中使用它了。例如，我们可以在 JSX 中输出它的值：
+现在我们获得了 props，并可以在组件中使用它了。如下所示，我们可以在 JSX 中输出它的值：
 
 ```js
 function WelcomeMessage({ myprop }) {
@@ -585,15 +564,15 @@ function WelcomeMessage({ myprop }) {
 
 ```
 
-这里的大括号有很多种含义。对于函数参数来说，大括号是对象解构语法的一部分。我们也可以用它来定义函数代码块。最后，在 JSX 中，我们还用它来输出 JavaScript 值。
+这里的大括号有多种含义。对于函数参数来说，大括号是对象解构语法的一部分。我们也可以用它来定义函数代码块；而在 JSX 中，我们用它来输出 JavaScript 值。
 
-将 props 传递给组件是一种在你的应用中传递值的好方法。
+将 props 传递给组件是一种在应用中传递值的好方法。
 
-一个组件既可以有自己的数据（state），也可以通过 props 来接收数据。
+一个组件既可以有自己的状态（state），也可以通过 props 来接收数据。
 
 当将函数作为 props 时，子组件就可以调用父组件中定义的函数。
 
-有一种被称为 `children` 的特殊 props，它代表了包含在组件的开始标签和结束标签之间的所有东西的值，例如：
+有一种被称为 `children` 的特殊 props，它代表了包含在组件的开始标签和结束标签之间的所有内容，例如：
 
 ```html
 <WelcomeMessage> Here is some message </WelcomeMessage>
@@ -625,8 +604,7 @@ const [count, setCount] = useState(0)
 
 ```
 
-Inside the Counter component we can now grab the  `setCount`  prop and call it to update the  `count`  state in the parent component, when something happens:
-现在，在 Counter 组件内部，我们捕获了 `setCount`，然后在某些情况发生时，调用它来修改父组件中的 `count`：
+如下所示，在 Counter 组件内部，我们取得了 `setCount`，然后在适当情况下，可以调用它来修改父组件中的 `count`：
 
 ```js
 function Counter({ setCount }) {
@@ -635,18 +613,15 @@ function Counter({ setCount }) {
 
 ```
 
-You need to know that there are more advanced ways to manage data, which include the Context API and libraries like Redux. But those introduce more complexity, and 90% of the times using those 2 ways I just explained are the perfect solution.
-其实还有很多更高级的方法来管理数据，比如 Context API 和 Redux 之类的库。但是这些方法会增加复杂性，而在大约 90% 的时间里，我刚刚介绍的两种方法都是完美的解决方案。
+其实还有很多更高级的方法来管理数据，比如 Context API 和 Redux 之类的库。但是这些方法会增加复杂性，而在大约 90% 的时间里，我们刚刚介绍的两种方法都是完美的解决方案。
 
 ## 在 React 中处理用户事件
 
-React provides an easy way to manage events fired from DOM events like clicks, form events, and more.
-React 提供了一种简单的方法来管理从 DOM 触发的形如点击、表单事件等事件。
+React 提供了一种简单的方法来管理从 DOM 触发的事件，如点击事件、表单事件等。
 
 这里我们以最容易理解单击事件为例来进行说明。
 
-You can use the  `onClick`  attribute on any JSX element:
-你可以在任意的 JSX 元素上使用 `onClick` 属性。
+你可以在任意的 JSX 元素上使用 `onClick` 属性：
 
 ```js
 <button
@@ -658,7 +633,7 @@ You can use the  `onClick`  attribute on any JSX element:
 </button>
 
 ```
-_每元素被点击的时候，传递给 `onClick` 属性的函数就会被触发。_
+_每当元素被点击的时候，传递给 `onClick` 属性的函数就会被触发。_
 
 _你也可以在 JSX 的外部定义这些函数：_
 
@@ -672,7 +647,7 @@ _`const handleClickEvent = (event) => {
 
 当点击 button 时，就会触发 `click` 事件，此时，React 就会调用 `click` 事件的处理函数。
 
-React 支持非常多的事件类型，如：`onKeyUp`，`onFocus`，`onChange`，`onMouseDown`，`onSubmit` 等等等等.
+React 支持非常多的事件类型，如：`onKeyUp`，`onFocus`，`onChange`，`onMouseDown`，`onSubmit` 等。
 
 ## React 组件的生命周期事件
 
@@ -682,12 +657,11 @@ React 支持非常多的事件类型，如：`onKeyUp`，`onFocus`，`onChange`�
 
 `useEffect` 勾子允许组件访问它的生命周期事件。
 
-当你调用这个勾子时，你需要传入一个函数。在组件第一次被渲染的时候，以及在随后的每次重新渲染/更新时，React 都会调用这个函数。
+当你调用这个勾子时，你需要传入一个函数。在组件第一次被渲染的时候，以及在随后的每次重新渲染 / 更新时，React 都会调用这个函数。
 
 React 首先更新 DOM，然后调用任何传递给 `useEffect()` 的函数。
 
-All without blocking the UI rendering, even on blocking code.
-所有这些都不会阻塞 UI 的渲染，即使是阻塞代码。
+所有这些都不会阻塞 UI 的渲染，即使是同步函数。
 
 这里是一个示例：
 
@@ -701,7 +675,7 @@ const CounterWithNameAndSideEffect = () => {
 
 ```
 
-因为在随后的每次重新渲染/更新时，传递给 useEffect() 的函数都会被执行，所以出于性能上的考虑，我们可以告诉 React 在某些时候不要执行这个函数。为了实现这个目的，我们可以为 useEffect() 传入第二个参数，这个参数是一个数组，它的成员是需要监视的 state 变量。只有在这些 state 发生变化的时候，React 才会执行这个函数。
+因为在随后的每次重新渲染 / 更新时，传递给 useEffect() 的函数都会被执行，所以出于性能上的考虑，我们可以告诉 React 在某些时候不要执行这个函数。为了实现这个目的，我们可以为 useEffect() 传入第二个参数，这个参数是一个数组，它的成员是需要监视的 state 变量。只有在这些 state 发生变化的时候，React 才会执行这个函数。
 
 ```js
 useEffect(() => {
@@ -719,7 +693,7 @@ useEffect(() => {
 
 ```
 
-你可能会发现自己经常使用这个技巧。
+这是一个非常有用的技巧。
 
 useEffect() 非常适合添加日志，访问第三方 API 等。
 

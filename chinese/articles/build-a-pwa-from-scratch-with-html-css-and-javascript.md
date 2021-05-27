@@ -1,206 +1,201 @@
 > -   原文地址：[How to build a PWA from scratch with HTML, CSS, and JavaScript](https://www.freecodecamp.org/news/build-a-pwa-from-scratch-with-html-css-and-javascript/)
 > -   原文作者：Ibrahima Ndaw
-> -   译者：
+> -   译者：Assone
 > -   校对者：
 
 ![How to build a PWA from scratch with HTML, CSS, and JavaScript](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/Group-1.png)
 
-Progressive web apps are a way to bring that native app feeling to a traditional web app. With PWAs we can enhance our website with mobile app features which increase usability and offer a great user experience.
+渐进式 Web 应用是一种能给传统 Web 应用带来原生应用体验的方式。使用 PWA ，我们能够使用移动应用的特性来增强我们的网站，从而提高可用性并提供良好的用户体验。
 
-In this article, we are going to build a PWA from scratch with HTML, CSS, and JavaScript. Here are the topics we'll cover:
+在这篇文章中，我们将使用 HTML、CSS 和 JavaScript 从零开始构建 PWA。我们要讨论的主题有：
 
--   [What is a Progressive Web App ?][1]
--   [Markup][2]
--   [Styling][3]
--   [Show data with JavaScript][4]
--   [Web App Manifest][5]
--   [What is a Service Worker?][6]
--   [Cache the assets][7]
--   [Fetch the assets][8]
--   [Register the Service Worker][9]
--   [Final thoughts][10]
--   [Next steps][11]
+-   [什么是渐进式 Web App ?][1]
+-   [标记][2]
+-   [样式][3]
+-   [用 JavaScript 显示数据][4]
+-   [Web 应用 Manifest][5]
+-   [什么是 Service Worker?][6]
+-   [缓存资源][7]
+-   [获取资源][8]
+-   [注册 Service Worker][9]
+-   [最后的想法][10]
+-   [下一步][11]
 
-So, let's get started with an important question: What the heck is a PWA?
+那么，让我们从一个重要的问题开始：PWA 到底是什么？
 
-## What is a Progressive Web App ?
+## 什么是渐进式 Web App ?
 
-A Progressive Web App is a web app that delivers an app-like experience to users by using modern web capabilities. In the end, it's just your regular website that runs in a browser with some enhancements. It gives you the ability:
+渐进式 Web 应用是一种通过使用现代 Web 能力向用户提供类似于应用程序的体验的 Web 应用程序。总而言之，它只是一个运行在浏览器上且使用了一些增强特性的普通网站。它赋予你以下的能力：
 
--   To install it on a mobile home screen
--   To access it when offline
--   To access the camera
--   To get push notifications
--   To do background synchronization
+-   安装到你的手机桌面上
+-   离线访问
+-   使用摄像头
+-   通知推送
+-   后台同步
 
-And so much more.
+还有更多等等。
 
-However, to be able to transform our traditional web app to a PWA, we have to adjust it a little bit by adding a web app manifest file and a service worker.
+但是，为了将传统的 Web 应用转换成 PWA，我们必须对其做出一些小调整，添加一个 manifest 文件和 service worker。
 
-Don't worry about these new terms – we'll cover them below.
+别担心这些新术语，我们将会在下面介绍它们。
 
-First, we have to build our traditional web app. So let's start with the markup.
+首先，我们必须要构建传统的 Web 应用，所以让我们从编写结构开始吧。
 
-## Markup
+## 标记
 
-The HTML file is relatively simple. We wrap everything in the  `main`  tag.
+这个 HTML 文件十分简单，我们只需要将所有内容放置在 `main` 标签内即可
 
--   In  `index.html`
+-   在 `index.html`
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Dev'Coffee PWA</title>
-  </head>
-  <body>
-    <main>
-      <nav>
-        <h1>Dev'Coffee</h1>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Blog</li>
-        </ul>
-      </nav>
-      <div class="container"></div>
-    </main>
-    <script src="js/app.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Dev'Coffee PWA</title>
+    </head>
+    <body>
+        <main>
+            <nav>
+                <h1>Dev'Coffee</h1>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Blog</li>
+                </ul>
+            </nav>
+            <div class="container"></div>
+        </main>
+        <script src="js/app.js"></script>
+    </body>
 </html>
-
 ```
 
-And create a navigation bar with the  `nav`  tag. Then, the  `div`  with the class  `.container`  will hold our cards that we add later with JavaScript.
+然后用 `nav` 标签来创建一个导航栏。用 `div` 标签来创建一个 class 为 `container` 的元素来放置剩下的卡片，稍后我们将使用 Javascript 来添加它们。
 
-Now that we've gotten that out of the way, let's style it with CSS.
+现在我们把这些都弄好了，让我们用 CSS 来给它加点样式。
 
-## Styling
+## 样式
 
-Here, as usual, we start by importing the fonts we need. Then we'll do some resets to prevent the default behavior.
+向往常一样，我们需要先引入一些字体。然后我们再重置某些默认样式。
 
--   In  `css/style.css`
+-   在 `css/style.css`
 
 ```css
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
-  background: #fdfdfd;
-  font-family: "Nunito", sans-serif;
-  font-size: 1rem;
+    background: #fdfdfd;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
 }
 main {
-  max-width: 900px;
-  margin: auto;
-  padding: 0.5rem;
-  text-align: center;
+    max-width: 900px;
+    margin: auto;
+    padding: 0.5rem;
+    text-align: center;
 }
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 ul {
-  list-style: none;
-  display: flex;
+    list-style: none;
+    display: flex;
 }
-
-
 ```
 
-Then, we limit the  `main`  element's maximum width to  `900px`  to make it look good on a large screen.
+然后我们限制 `main` 元素的最大宽度为 `900px`让它在大屏幕上看起来有更好的呈现方式。
 
-For the navbar, I want the logo to be at the left and the links at the right. So for the  `nav`  tag, after making it a flex container, we use  `justify-content: space-between;`  to align them.
+对于导航栏 ，我希望 logo 在左边，链接在右边。所以对于 `nav` 标签，将其设为 flex 容器后，我们使用 `justify-content: space-between;` 将其对齐。
 
--   In  `css/style.css`
+-   在 `css/style.css`
 
 ```css
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  padding: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1rem 0;
 }
 .card {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 15rem auto;
-  height: 15rem;
-  background: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 10px;
-  margin: auto;
-  overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 15rem auto;
+    height: 15rem;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 10px;
+    margin: auto;
+    overflow: hidden;
 }
 .card--avatar {
-  width: 100%;
-  height: 10rem;
-  object-fit: cover;
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
 }
 .card--title {
-  color: #222;
-  font-weight: 700;
-  text-transform: capitalize;
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
+    color: #222;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
 }
 .card--link {
-  text-decoration: none;
-  background: #db4938;
-  color: #fff;
-  padding: 0.3rem 1rem;
-  border-radius: 20px;
+    text-decoration: none;
+    background: #db4938;
+    color: #fff;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
 }
-
 ```
 
-We'll have several cards, so for the container element it will be displayed as a grid. And, with  `grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr))`, we can now make our cards responsive so that they use at least  `15rem`  width if there is enough space (and  `1fr`  if not).
+我们有几个卡片，所以 container 元素将使用 grid 布局来显示。然后添加属性 `grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr))`，我们现在能够使卡片具有响应式。这样的话如果有足够空间它们将最少具有 `15rem` 的宽度（如果没有则足够的空间则使用 `1fr`）。
 
-And to make them look nice we double the shadow effect on the  `.card`  class and use  `object-fit: cover`  on  `.card--avatar`  to prevent the image from stretching.
+然后为了使它们更加好看，我们在 `.card` 类上添加了双倍的阴影效果，并在 `.card--avatar` 上使用 `object-fit: cover` 属性为了防止图像的拉伸
 
-Now it looks much better – but we still don't have data to show.
+现在它看起来更好看了，但是我们仍然没有数据显示。
 
-Let's fix it in the next section
+让我们在下一节来解决这个问题。
 
-## Show data with JavaScript
+## 使用 JavaScript 显示数据
 
-Notice that I used large images that take some time to load. This will show you in the best way the power of service workers.
+请注意，我使用了较大的图片，加载它会需要一些时间。这将以最好的方式向你展示 service workers 的能力。
 
-As I said earlier, the  `.container`  class will hold our cards. Therefore, we need to select it.
+正如我之前说过用 Class 名为 `.container` 的元素保存我们的卡片，因此我们需要选择它。
 
--   In  `js/app.js`
+-   在 `js/app.js`
 
 ```javascript
-const container = document.querySelector(".container")
+const container = document.querySelector('.container');
 const coffees = [
-  { name: "Perspiciatis", image: "images/coffee1.jpg" },
-  { name: "Voluptatem", image: "images/coffee2.jpg" },
-  { name: "Explicabo", image: "images/coffee3.jpg" },
-  { name: "Rchitecto", image: "images/coffee4.jpg" },
-  { name: " Beatae", image: "images/coffee5.jpg" },
-  { name: " Vitae", image: "images/coffee6.jpg" },
-  { name: "Inventore", image: "images/coffee7.jpg" },
-  { name: "Veritatis", image: "images/coffee8.jpg" },
-  { name: "Accusantium", image: "images/coffee9.jpg" },
-]
-
+    { name: 'Perspiciatis', image: 'images/coffee1.jpg' },
+    { name: 'Voluptatem', image: 'images/coffee2.jpg' },
+    { name: 'Explicabo', image: 'images/coffee3.jpg' },
+    { name: 'Rchitecto', image: 'images/coffee4.jpg' },
+    { name: ' Beatae', image: 'images/coffee5.jpg' },
+    { name: ' Vitae', image: 'images/coffee6.jpg' },
+    { name: 'Inventore', image: 'images/coffee7.jpg' },
+    { name: 'Veritatis', image: 'images/coffee8.jpg' },
+    { name: 'Accusantium', image: 'images/coffee9.jpg' },
+];
 ```
 
-Then, we create an array of cards with names and images.
+然后，我们创建一个包含名字和图片的卡片数组。
 
--   In  `js/app.js`
+-   在 `js/app.js`
 
 ```javascript
 const showCoffees = () => {
@@ -218,19 +213,19 @@ const showCoffees = () => {
 
 ```
 
-With this code above, we can now loop through the array and show them on the HTML file. And to make everything work, we wait until the DOM (Document Object Model) content finishes loading to run the  `showCoffees`  method.
+有了上面的代码，我们现在能够通过遍历数组并将其显示在 HTML 上。为了保证工作正常，我们等待 DOM （文档对象模型）内容加载完成再执行 `showCoffees` 方法。
 
-We've done a lot, but for now, we just have a traditional web app. So, let's change that in the next section by introducing some PWA features.
+我们已经做了很多了，但现在我们只有一个传统的 Web 应用。所以，让我们在下一节通过引入一些 PWA 的特性来改变这种情况。
 
 ![super-excited](https://media.giphy.com/media/l3V0dy1zzyjbYTQQM/source.gif)
 
-## Web App Manifest
+## Web 应用 Manifest
 
-The web app manifest is a simple JSON file that informs the browser about your web app. It tells how it should behave when installed on the user's mobile device or desktop. And to show the Add to Home Screen prompt, the web app manifest is required.
+web 应用 manifest 是一个简单的 JSON 文件，它向浏览器告知你的 web 应用。它告诉浏览器在移动设备或桌面安装时该如何表现。而要显示”添加到主屏幕“的提示，则需要 web 应用 manifest。
 
-Now that we know what a web manifest is, let's create a new file named  `manifest.json`  (you have to name it like that) in the root directory. Then add this code block below.
+现在我们知道 web manifest 是什么了，让我们在根目录创建一个名为 `manifest.json` 的新文件（你得这样命名）。然后在里面添加这些代码。
 
--   In  `manifest.json`
+-   在 `manifest.json`
 
 ```javascript
 {
@@ -279,27 +274,27 @@ Now that we know what a web manifest is, let's create a new file named  `manifes
 
 ```
 
-In the end, it's just a JSON file with some mandatory and optional properties.
+最后，这个 JSON 文件具有一些可填和必填的属性。
 
-name: When the browser launches the splash screen, it will be the name displayed on the screen.
+name: 当浏览器显示启动画面时，在屏幕上显示的名称。
 
-short\_name: It will be the name displayed underneath your app shortcut on the home screen.
+short_name: 你的 app 在主屏幕上显示的快捷方式的名称。
 
-start\_url: It will be the page shown to the user when your app is open.
+start_url: 当你的 app 打开时，所要显示的页面。
 
-display: It tells the browser how to display the app. There are several modes like  `minimal-ui`,  `fullscreen`,  `browser`  etc. Here, we use the  `standalone`  mode to hide everything related to the browser.
+display: 告诉浏览器如何显示你的 app。有几种模式可以选择，如`minimal-ui`、`fullscreen`、`browser`等等。这里我们使用`standalone`模式来隐藏与浏览器有关的任何内容。
 
-background\_color: When the browser launches the splash screen, it will be the background of the screen.
+background_color: 当浏览器显示启动画面时，指定屏幕的背景颜色。
 
-theme\_color: It will be the background color of the status bar when we open the app.
+theme_color: 当我们打开 app 的时候指定状态栏的背景颜色。
 
-orientation: It tells the browser the orientation to have when displaying the app.
+orientation: 告诉浏览器显示 app 时的方向。
 
-icons: When the browser launches the splash screen, it will be the icon displayed on the screen. Here, I used all sizes to fit any device's preferred icon. But you can just use one or two. It's up to you.
+icons： 当浏览器显示启动画面时，在屏幕上显示的图标。我们在这里使用了所有尺寸以及任何设备的首选图标，但是你只能选择一到两个，由你决定。
 
-Now that we have a web app manifest, let's add it to the HTML file.
+现在我们有了一个 web 应用的 manifest，让我们来将它添加到 html 文件中。
 
--   In  `index.html`  (head tag)
+-   在 `index.html` (head 标签中)
 
 ```html
 <link rel="manifest" href="manifest.json" />
@@ -314,153 +309,151 @@ Now that we have a web app manifest, let's add it to the HTML file.
 <link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
 <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
 <meta name="theme-color" content="#db4938" />
-
 ```
 
-As you can see, we linked our  `manifest.json`  file to the head tag. And add some other links which handle the iOS support to show the icons and colorize the status bar with our theme color.
+如你所看到的，我们在 head 标签里引入了`manifest.json`文件。并且还引入了一些其他文件来处理 IOS 上的图标显示、状态栏颜色和主题色。
 
-With that, we can now dive into the final part and introduce the service worker.
+现在我们可以深入探讨最后一步并介绍 service worker。
 
-## What is a Service Worker?
+## 什么是 Service Worker?
 
-Notice that PWAs run only on https because the service worker can access the request and handle it. Therefore security is required.
+需要注意的是，由于 service worker 能够访问并处理请求，所以 PWA 仅在 https 上运行。因此安全是必须的。
 
-A service worker is a script that your browser runs in the background in a separate thread. That means it runs in a different place and is completely separate from your web page. That's the reason why it can't manipulate your DOM element.
+service worker 是浏览器在后台的独立线程中运行的脚本。这意味着它将在不同的地方运行，并且与你的页面完全隔离，这就是为什么它不能操纵你的 DOM 元素的原因。
 
-However, it's super powerful. The service worker can intercept and handle network requests, manage the cache to enable offline support or send push notifications to your users.
+不过，它的功能超级强大。service worker 能拦截并处理网络请求，管理缓存以实现离线访问或者向你的用户推送通知。
 
 ![wow](https://media.giphy.com/media/5VKbvrjxpVJCM/source.gif)
 
-S0 let's create our very first service worker in the root folder and name it  `serviceWorker.js`  (the name is up to you). But you have to put it in the root so that you don't limit its scope to one folder.
+所以让我们在根目录下创建第一个 service worker，并命名为`serviceWorker.js`(名称由你决定)。但是你必须将它放在根目录上，这样你就不会把它的范围限制在一个文件夹里。
 
-### Cache the assets
+### 资源缓存
 
--   In  `serviceWorker.js`
+-   在 `serviceWorker.js`
 
 ```javascript
-const staticDevCoffee = "dev-coffee-site-v1"
+const staticDevCoffee = 'dev-coffee-site-v1';
 const assets = [
-  "/",
-  "/index.html",
-  "/css/style.css",
-  "/js/app.js",
-  "/images/coffee1.jpg",
-  "/images/coffee2.jpg",
-  "/images/coffee3.jpg",
-  "/images/coffee4.jpg",
-  "/images/coffee5.jpg",
-  "/images/coffee6.jpg",
-  "/images/coffee7.jpg",
-  "/images/coffee8.jpg",
-  "/images/coffee9.jpg",
-]
-
+    '/',
+    '/index.html',
+    '/css/style.css',
+    '/js/app.js',
+    '/images/coffee1.jpg',
+    '/images/coffee2.jpg',
+    '/images/coffee3.jpg',
+    '/images/coffee4.jpg',
+    '/images/coffee5.jpg',
+    '/images/coffee6.jpg',
+    '/images/coffee7.jpg',
+    '/images/coffee8.jpg',
+    '/images/coffee9.jpg',
+];
 ```
 
-This code looks intimidating first but it just JavaScript (so don't worry).
+这段代码看起来有点吓人，但它只是 JavaScript 而已（所以别担心）。
 
-We declare the name of our cache  `staticDevCoffee`  and the assets to store in the cache. And to perform that action, we need to attach a listener to  `self`.
+我们声明了缓存的名称`staticDevCoffee`和要储存在缓存中的资源。为了执行这些操作，我们需要给`self`添加一个监听器。
 
-`self`  is the service worker itself. It enables us to listen to life cycle events and do something in return.
+`self`就是 service worker 本身。它能够让我们监听生命周期中的事件并做一些对应的事情。
 
-The service worker has several life cycles, and one of them is the  `install`  event. It runs when a service worker is installed. It's triggered as soon as the worker executes, and it's only called once per service worker.
+service worker 有几个生命周期，其中之一是 `install` 事件。当 service worker 被安装时，它就会运行。它在 worker 执行后立即触发，而且每个 service worker 只调用一次。
 
-When the  `install`  event is fired, we run the callback which gives us access to the  `event`  object.
+当`install`事件触发时，回调函数将被调用，通过这个回调函数我们可以访问`event`对象。
 
-Caching something on the browser can take some time to finish because it's asynchronous.
+在浏览器上缓存某些内容的时候可能需要一些时间才能完成，因为它是异步的。
 
-So to handle it, we need to use  `waitUntil()`  which, as you might guess, waits for the action to finish.
+为了处理这个问题，我们需要使用`waitUntil()`。正如你所猜的这样，它会等待操作完成。
 
-Once the cache API is ready, we can run the  `open()`  method and create our cache by passing its name as an argument to  `caches.open(staticDevCoffee)`.
+一旦 cache API 准备就绪，我们可以执行`open()`方法，并通过将缓存名称当作参数传递给`caches.open(staticDevCoffee)`来创建我们的缓存。
 
-Then it returns a promise, which helps us store our assets in the cache with  `cache.addAll(assets)`.
+它会返回一个 promise，将帮助我们使用`cache.addAll(assets)`将我们的资源储存在缓存中。
 
 ![image-cache](https://drive.google.com/uc?id=1ynBQRQ00wHo5J6CnjfLCX3b3UNiSrGqZ)
 
-Hopefully, you're still with me.
+希望你还能听懂我的话。
 
 ![desesperate](https://media.giphy.com/media/OQEcw90jACeU8/source.gif)
 
-Now, we've successfully cached our assets in the browser. And the next time we load the page, the service worker will handle the request and fetch the cache if we are offline.
+现在，我们已经顺利的把资源缓存到浏览器中。而下次我们加载页面时，如果我们处于离线状态， service worker 将会处理该请求并获取缓存。
 
-So, let's fetch our cache.
+所以，让我们取回我们的缓存吧。
 
-### Fetch the assets
+### 获取资源
 
--   In  `serviceWorker.js`
+-   在 `serviceWorker.js`
 
 ```javascript
-self.addEventListener("fetch", fetchEvent => {
-  fetchEvent.respondWith(
-    caches.match(fetchEvent.request).then(res => {
-      return res || fetch(fetchEvent.request)
-    })
-  )
-})
-
+self.addEventListener('fetch', (fetchEvent) => {
+    fetchEvent.respondWith(
+        caches.match(fetchEvent.request).then((res) => {
+            return res || fetch(fetchEvent.request);
+        })
+    );
+});
 ```
 
-Here, we use the  `fetch`  event to, well, get back our data. The callback gives us access to  `fetchEvent`. Then we attach  `respondWith()`  to prevent the browser's default response. Instead it returns a promise because the fetch action can take time to finish.
+Here, we use the `fetch` event to, well, get back our data. The callback gives us access to `fetchEvent`. Then we attach `respondWith()` to prevent the browser's default response. Instead it returns a promise because the fetch action can take time to finish.
 
-And once the cache ready, we apply the  `caches.match(fetchEvent.request)`. It will check if something in the cache matches  `fetchEvent.request`. By the way,  `fetchEvent.request`  is just our array of assets.
+这里，我们使用`fetch`事件来获取我们的数据，通过回调函数我们可以访问`fetchEvent`。我们添加`respondWith()` 来阻止浏览器的默认响应。然后返回一个 promise，因为 fetch 操作可能需要一些时间才能完成。
 
-Then, it returns a promise. And finally, we can return the result if it exists or the initial fetch if not.
+当一个缓存准备就绪时，我们将使用 `caches.match(fetchEvent.request)`。它将检查缓存中是否有与`fetchEvent.request`匹配的内容。顺便一提，`fetchEvent.request`只是我们的 assets 数组。
 
-Now, our assets can be cached and fetched by the service worker which increases the load time of our images quite a bit.
+然后，它会返回一个 promise。如果缓存存在，我们可以直接返回它，否则则返回最初的 fetch。
 
-And most important, it makes our app available in offline mode.
+现在， 我们的资源可以被 service worker 缓存并获取，这将大大的优化了我们的图片的加载时间。
 
-But a service worker alone can't do the job. We need to register it in our project.
+最重要的是，它使我们的应用可以在离线模式下使用。
+
+但现在 service worker 还不能工作，我们还需要在我们的项目中注册它。
 
 ![let-s-do-it](https://media.giphy.com/media/Z9EvIRmLEOS3JNFeVb/source.gif)
 
-## Register the Service Worker
+## 注册 Service Worker
 
--   In  `js/app.js`
+-   在 `js/app.js`
 
 ```javascript
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function() {
-    navigator.serviceWorker
-      .register("/serviceWorker.js")
-      .then(res => console.log("service worker registered"))
-      .catch(err => console.log("service worker not registered", err))
-  })
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+        navigator.serviceWorker
+            .register('/serviceWorker.js')
+            .then((res) => console.log('service worker registered'))
+            .catch((err) => console.log('service worker not registered', err));
+    });
 }
-
 ```
 
-Here, we start by checking if the  `serviceWorker`  is supported by the current browser (as it's still not supported by all browsers).
+在这里，我们先检查当前浏览器是否支持`serviceWorker`（因为并未所有的浏览器都支持它）。
 
-Then, we listen to the page load event to register our service worker by passing the name of our file  `serviceWorker.js`  to  `navigator.serviceWorker.register()`  as a parameter to register our worker.
+然后，我们将监听页面的 load 事件来注册我们的 service worker。通过传递文件名`serviceWorker.js`作为参数给`navigator.serviceWorker.register()`来作为注册 service worker 的参数。
 
-With this update, we have now transformed our regular web app to a PWA.
+通过上述步骤，我们现在已经将传统的 web 应用转换成为 PWA。
 
 ![we-did-it](https://media.giphy.com/media/3o6ZtlGkjeschymLNm/source.gif)
 
-## Final thoughts
+## 最后的想法
 
-Throughout this article, we have seen how amazing PWAs can be. By adding a web app manifest file and a service worker, it really improves the user experience of our traditional web app. This is because PWAs are fast, secure, reliable, and – most importantly – they support offline mode.
+在本文中，我们已经看到了 PWA 的神奇之处。通过添加一个 web 应用 manifest 和一个 service worker，确实提高了我们传统 web 应用的用户体验。这是因为 PWA 快速、安全、可靠，更重要的是它支持离线模式。
 
-Many frameworks out there now come with a service worker file already set-up for us. But knowing how to implement it with Vanilla JavaScript can help you understand PWAs.
+现在很多的框架都已经为我们设置了好了 service worker 文件。但是知道如何用 Vanilla JavaScript 来实现它可以帮你理解 PWA。
 
-And you can go even further with service workers by caching assets dynamically or limiting the size of your cache and so on.
+而且你还可通过动态缓存资源或者限制缓存大小等方法更进一步的使用 service worker。
 
-Thanks for reading this article.
+感谢你阅读本文。
 
-You can check it out live  [here][12]  and the source code is  [here][13].
+你可以在线上[浏览][12]，源代码在[这里][13]。
 
-Read more of my articles on  [my blog][14]
+在我的博客上阅读我的更多文章。
 
-## Next steps
+## 下一步
 
-[Web Manifest Documentation][15]
+[Web Manifest 文档][15]
 
-[Service Worker Documentation][16]
+[Service Worker 文档][16]
 
-[Web Manifest Generator][17]
+[Web Manifest 生成器][17]
 
-[Browser Support][18]
+[浏览器支持][18]
 
 [1]: https://www.freecodecamp.org/news/build-a-pwa-from-scratch-with-html-css-and-javascript/#what-is-a-progressive-web-app
 [2]: https://www.freecodecamp.org/news/build-a-pwa-from-scratch-with-html-css-and-javascript/#markup

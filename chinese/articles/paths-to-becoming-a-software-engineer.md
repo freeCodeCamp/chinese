@@ -34,19 +34,19 @@ It was the best thing I had ever done.
   这是我做过最棒的事了。
 
 Fast forward five years and I’m a senior software engineer. I speak at conferences all the time, I’ve worked at big public companies such as Eventbrite and Pandora. I’ve been interviewed for newspapers and on television several times. I’ve been paid to consult at cutting edge companies, and I’m a published author with the biggest engineering publisher in the world. A coding bootcamp completely changed my life.
-  五年后，我成为了一名高级软件工程师。我经常待在会议室里讲话，在Eventbrite和Pandra这样的巨头上市公司里工作过，被报纸和电视上采访过几次，被顶尖公司聘请去做顾问，在世界上最大的工程出版社做出版作者。一个编程训练营完全的改变了我的命运！
+  五年后，我成为了一名高级软件工程师。我经常待在会议室里讲话，在 Eventbrite 和 Pandra 这样的巨头上市公司里工作过，被报纸和电视上采访过几次，被顶尖公司聘请去做顾问，在世界上最大的工程出版社做出版作者。一个编程训练营完全的改变了我的命运！
 
 But it didn’t work out for everyone that attended with me. I started out with 50–60 students in my cohort. By the time we graduated, about ten graduated with us. Some had stayed behind a cohort to learn a little more. Some dropped out early, while they still got a significant refund. Others decided that engineering wasn’t for them partway through the program when the financial loss was high. Others were asked to leave because they couldn’t keep up.
-  但是，不是所有和我参加了训练营的人都会这样。刚开始进去的时候我们这帮人有50-60个学生，等到毕业的时候就只有十个了。有些人要留级去学习更多，有些早早辍学了，不过他们仍然得到了一大笔退学费；当财务损失太高时，有些人在中途认为工程师不适合他们；其他人因为跟不上而被劝退。
+  但是，不是所有和我参加了训练营的人都会这样。刚开始进去的时候我们这帮人有 50-60 个学生，等到毕业的时候就只有十个了。有些人要留级去学习更多，有些早早辍学了，不过他们仍然得到了一大笔退学费；当财务损失太高时，有些人在中途认为工程师不适合他们；其他人因为跟不上而被劝退。
 
 A coding bootcamp is one of the largest purchases you’ll make in your life. Do your research. Many horror stories exist online of people who paid \$10–20k only to find out the bootcamp was a scam or the teachers were inadequate.
-  一个编程训练营是你人生中最大的花销之一了。做调查，网上有许多吓人的故事：有人支付了6、7万却发现训练营是诈骗或老师不合格。
+  一个编程训练营是你人生中最大的花销之一了。做调查，网上有许多吓人的故事：有人支付了 6、7 万却发现训练营是诈骗或老师不合格。
 
 A good bootcamp will start with an online phase first, where you’ll learn from your home. It will teach you the basic concepts of programming so that when you get to the onsite portion of the program, you can focus on the tougher engineering concepts with teachers around to answer your questions.
   一个好的训练营会在线上开始第一阶段，你会在家学习，会教你基本的编程概念，所以当你到编程现场的时候，你能够专注于更难的工程概念，旁边的老师会回答你的问题。
 
 Make sure that you find a program that also has a phase focused on interviewing prep and that supplies you with a career team. This was one of the most beneficial parts of my bootcamp. I got my first engineering job because the bootcamp helped me write out my LinkedIn and make my profile stand out. My first company actually found me on LinkedIn — I didn’t even have to apply.
-  确保你找到一个程序，有一个阶段面试你的准备，并且有职业生涯团队给你提供帮助。这是我在训练营最受益的部分。我能得到第一份工程师工作是因为训练营帮我写好了LinkedIn并且让我的描述变的优秀。我的第一个公司实际上在LinkedIn上找到了我，我甚至都没有申请过这公司。
+  确保你找到一个程序，有一个阶段面试你的准备，并且有职业生涯团队给你提供帮助。这是我在训练营最受益的部分。我能得到第一份工程师工作是因为训练营帮我写好了 LinkedIn 并且让我的描述变的优秀。我的第一个公司实际上在 LinkedIn 上找到了我，我甚至都没有申请过这公司。
 
 If you do decide to research coding bootcamps, I recommend you start with the following. bootcamps: HackReactor, App Academy, and Hackbright.
   如果你决定要做个编程训练营的调查，我建议你从这几个开始：HackReactor, App Academy 和 Hackbright.
@@ -98,7 +98,7 @@ Since these openings are still highly competitive, it’s very important to make
   因为刚起步的竞争极其激烈，所以当你申请工作的时候能拿出你的闪光点就非常重要。如果你没有参加训练营或者没有一个计算机学位，你就需要做一份很棒的作品集和简历。
 
 Here's a great blog post on freeCodeCamp about building a great portfolio by Ali Spittel.
-  Ali Spittel 在FreeCodeCamp上发布了一个关于建造优秀作品集的博客。
+  Ali Spittel 在 FreeCodeCamp 上发布了一个关于建造优秀作品集的博客。
   
 Transitioning to Engineering at Your Current Company
 At a large public company I worked at previously, many individuals transferred to the engineering team from different teams. Some worked in customer support or in QA.
@@ -123,10 +123,10 @@ I didn’t pursue engineering in college because I thought I wasn’t smart enou
   我在大学没有选择工程类专业是因为认为自己不够聪明，认为工程师是男人的领域，我会遭到排挤。
 
 I've now worked as a senior Blockchain engineer, an iOS engineer, a senior frontend engineer, and a senior full-stack engineer. I'm a published author and I've spoken at tech conferences. I have recruiters from Facebook, Google, Twitter, LinkedIn, and Apple reaching out constantly.
-  现在我作为一名高级区块链工程师、iOS工程师、高级前端工程师、高级全栈工程师工作着。我也是一名出版作者并且在科技座谈会上演讲。有从谷歌、Facebook、LinkedIn和Apple的猎头时常向我招手。
+  现在我作为一名高级区块链工程师、iOS 工程师、高级前端工程师、高级全栈工程师工作着。我也是一名出版作者并且在科技座谈会上演讲。有从谷歌、Facebook、LinkedIn 和 Apple 的猎头时常向我招手。
 
 If you can stay determined, you can get a job in engineering.
   如果你能下定决心，你就能得到一份工程师工作。
   
 If you enjoyed this post, sign up to my email list here and get my free guide to becoming a software engineer.
-  如果你喜欢我的帖子，向我发Email，得到我的免费指导去成为一名软件工程师。
+  如果你喜欢我的帖子，向我发 Email，得到我的免费指导去成为一名软件工程师。

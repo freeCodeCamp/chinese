@@ -437,7 +437,7 @@ impl Todo {
 让我们看看上面代码发生了什么：
 
 - 我们声明了方法的返回类型：一个空的 `Option`。
-- 整个方法返回 `Match` 表达式的结果，该结果将为空 `Some() `或 `None`。
+- 整个方法返回 `Match` 表达式的结果，该结果将为空 `Some()`或 `None`。
 - 我们使用 `*` [[文档]](https://doc.rust-lang.org/book/appendix-02-operators.html) 运算符来取消引用该值，并将其设置为 false。
 
 ### 如何使用 complete 方法
@@ -481,7 +481,7 @@ if action == "add" {
 $ rm db.txt
 ```
 
-然后在 todos中进行新增和修改操作：
+然后在 todos 中进行新增和修改操作：
 
 ```bash
 $ cargo run -- add "make coffee"
@@ -600,7 +600,7 @@ fn save(self) -> Result<(), Box<dyn std::error::Error>> {
 
 在结束前，我想向你分享一些其他技巧和资源，以帮助你在 Rust 的旅途中继续前行：
 
-- [Rust fmt ](https://github.com/rust-lang/rustfmt)是一个非常方便的工具，你可以按照一致的模式运行以格式化代码。不必再浪费时间配置你喜欢的 linter 插件。
+- [Rust fmt](https://github.com/rust-lang/rustfmt)是一个非常方便的工具，你可以按照一致的模式运行以格式化代码。不必再浪费时间配置你喜欢的 linter 插件。
 - `cargo check` [[文档]](https://doc.rust-lang.org/cargo/commands/cargo-check.html) 将尝试在不运行的情况下编译代码：这在你只想在不实际运行时检查代码正确性的情况下，会变得很有用。
 - Rust 带有集成的测试套件和生成文档的工具：[cargo test](https://doc.rust-lang.org/cargo/commands/cargo-test.html) 和 [cargo doc](https://doc.rust-lang.org/cargo/commands/cargo-rustdoc.html)。这次我们没有涉及它们，因为本教程内容量已经足够多了，或许未来会有所涉及。
 

@@ -1,174 +1,174 @@
 > -   原文地址：[How I Went from Civil Engineer to Web Developer Using freeCodeCamp to Learn to Code](https://www.freecodecamp.org/news/from-civil-engineer-to-web-developer-with-freecodecamp/)
 > -   原文作者：Eduardo Vedes
-> -   译者：
+> -   译者：newdegen
 > -   校对者：
 
 ![How I Went from Civil Engineer to Web Developer Using freeCodeCamp to Learn to Code](https://www.freecodecamp.org/news/content/images/size/w2000/2021/01/yasmine-arfaoui-G40jEUyEsEk-unsplash.jpg)
 
-Hey everyone! 👋
+大家好! 👋
 
-2020 was a very tough year.
+过去的2020年是艰难的一年。
 
-The COVID-19 pandemic is still going strong. Some people are sick or recovering from the virus, some are grieving family or friends, some have lost their jobs, and others have seen their businesses fall apart.
+新冠病毒的疫情越来越严重，很多人被感染、正在治疗中、丧失亲人朋友、丢掉工作、或者眼看着自己的生意失败了。
 
-At times like these, we're put to the test in situations we've never imagined we'd be. And this always means there's an opportunity to grow.
+在这样的时刻，我们会面临从未想象过的考验，也会有成长的机会。
 
-Let me share with you the story of how I learned to code, which feels meaningful to me at this point in time.
+让我分享一个关于学习编程的类似“时刻”，一个对我来说很有意义的故事给你。
 
-## My Life as a Civil Engineer
+## 我曾经是土木工程师
 
-It was January 2015 and I was traveling by car, moving from Huambo to Cubal (two Angolan towns) to start a new project: we were building a 100 km road to create a shortcut between two distant municipalities, Cubal and Chongoroi.
+2015年一月，为了一个新项目，我在安哥拉坐车从万博去库巴尔。工程的内容是：建设100公里长的道路，直接连通两个遥远的城市（库巴尔和雄戈罗伊）
 
-At my side was Pedro, an experienced soils and concrete lab technician. He was my co-pilot, my friend, and also a great professional which helped me make sure all technical aspects of the construction were under control. I myself, as a Sr. Civil Engineer, was occupied managing and tracking the contract between the government and the contractor.
+坐在我旁边的是一位经验丰富的混泥土工程师，Pedro。作为副驾驶员的他既是我的朋友，也是一名极其专业的工程师，有他在，所有的建筑问题都能解决。而作为高级土建工程师的我，主要负责在政府与承建方之间协调，管理项目进度。
 
-Two Portuguese expats in the middle of nowhere. We had just left Huambo and were well out of town when we stopped at a level crossing waiting for a train to pass.
+两个葡萄牙人驾车驶出万博城区，来到一个荒无人烟的地方，停在铁轨和公路的交叉口，等待火车过去。
 
-The radio was playing African fusion hits of the moment, and out of the blue I told him:
+汽车收音机正播放着非洲的流行歌曲，我突然和他说：
 
-> "It's January again... A New Year has begun and my life, you know, is completely turned upside down like I never imagined it to be. A complete mess. My relationship is dead, almost have no money, my daughter (firstborn) is far away from me and, above all,  **I'm completely tired of this job**."
+> “新的一年开始了，又是一月份，我的生活简直是一塌糊涂。我的那段感情没了，钱也没了，大女儿也跟我很疏远，总之，我很反感这份工作”。
 
-We were both forced to work abroad, running away from the GFC (Global Financial Crisis of 2007-2008) and the subsequent Portuguese Financial Crisis. It had drowned the construction market and sent it into a big recession and we quickly got into the Angolan oil crisis in 2015.
+为了减少GFC（2007-2008年的全球金融危机）和后续的葡萄牙经济危机对我们的影响，我们不得不努力工作。金融危机导致建筑行业市场大萧条，而到了2015年，我们又陷入了安哥拉的石油危机。
 
-That was the beginning of a big change in my life which I only realized later in time.
+后面我才意识到：那段时间是我生活巨变的开端。
 
-We were living in Cubal, a small former colonial town destroyed by the 1975-2002 independence and civil wars. There was nothing to do besides work by day, drink beer by night, and wander through the baobab trees in the fields.
+我们住在库巴尔的一个小镇，这里之前是前殖民地，也被1975年-2002的独立战争和内战严重摧毁过。在这个地方，除了白天工作，晚上喝酒，就是在猴面包树林里瞎晃悠。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/baobab.jpg)
 
-Baobab tree near Cubal
+库巴尔附近的猴面包树
 
-In the meantime I started to manage other contracts, and traveling became like an intense sport. I was doing almost 10,000 km a month, almost coast to coast, from the beaches of Benguela to the inner parts of Africa, Kuito Kuanavale, near the Zambian western frontier.
+处理这个项目的同时，我还要安排其他的项目合同，使得我经常要开很远的车，几乎达到1万公里每个月：从这个海岸到另一端的海岸，从本格拉的海滩到Kuito Kuanavale（一个靠近赞比亚西部边疆的非洲中部城市）。
 
-This time was precious and helped trigger my desire for a change. From day to day this outburst I had with Pedro started to mingle in my mind, and my need to change my life grew stronger and stronger.
+这是一段宝贵的时光，他开启了我改变现状的欲望。随着时间流逝，这种欲望在Pedro和我的脑袋开始联结，想要自我改变的欲望越来越强烈。
 
-## The Need for a Change
+## 为什么要改变自我
 
-My first change was to better occupy my time with activities that stimulated my brain. I started to read a lot, to watch movies on my computer, and to design the master plan which would change my life forever.
+我的改变从利用自己的时间刺激大脑开始，因此我开始在电脑上阅读、看电影、为永远改变自己的生过设计宏伟的计划。
 
-In April I returned to Portugal and separated from my lifemate with whom I'd shared my life for 13 years. Soon after that I went back to Angola to work some more.
+4月份，我回到葡萄牙，并且和生活了13年的妻子离婚了。很快，我又回到安哥拉工作。
 
-But I kept on improving. I started to play lots of sports to keep my life filled with good habits.
+但我仍在保持进步，通过大量的运动来保持生活健康。
 
-A little while later I met the one who would be my future wife. She was a bank accountant in Cubal and we started to date sooner than I had expected.
+不久后，我遇到了我未来的妻子，她是库巴尔的一名银行会计。我们很块开始约会。
 
-I continued to improve my life, always reading, always searching for a variety of knowledge. Then things started to change.
+我通过阅读、查阅大量知识，以达到继续提高自我的目的。随后，生活的进展发生新的变化了。
 
-One year passed, it was September 2016, and suddenly things got much worse. The economic oil crisis grew from day to day, with oil prices per barrel plummeting below 40 USD. The Kwanza (Angola's currency) fell to about a fifth of its typical value in USD.
+一年后，也就是2016年9月，生活突然变得很糟糕。经济石油危机日益增强，导致石油价格暴跌到低于40美元一桶。而Kwanza（安哥拉的货币）兑换美元汇率大约下跌到原来的五分之一。
 
-Some salaries were delayed and we were almost running out of money. At that time, besides my firstborn Maria, I already had my new partner (now wife) Benvinda, my stepdaughter Teresa, and our young baby Benedita to care for as well.
+工资被拖欠，手上的钱也用得差不多了。那个时候，除了我的第一个孩子Maria，我还有新的伴侣Benvinda（现在是我的妻子），我的继女Teresa，我们小宝宝Benedita需要照顾。
 
-I had to change something in our lives. My wife was struggling to keep her job (banks were closing branches every day) and it was impossible to transfer money from Angola to Portugal, as Kwanza became very unstable and was a blocked currency (not convertible outside the country).
+我不得不在生活上有所调整，而我的妻子也有失业危险，因为银行每天都在关闭分支机构。钱无法从安哥拉转到葡萄牙，因为Kwanza下跌太快，现在是一种封闭的货币，也就是无法在安哥拉之外交易。
 
-Christmas 2016 arrived and I traveled to Portugal.
+2016年圣诞节的时候，我去了葡萄牙。
 
-I was tired of running out of ideas on how to rise above my current situation. I sat at the computer and tried to build a small website to help me manage my team and expenses at work, in Angola.
+我疲于想尽各种办法去改善我的现状。我坐在电脑前，尝试通过建立一个小网站来帮助管理我的团队和在安哥拉的工作花费。
 
-I always loved computers, and once upon a time I had dived into a bit of HTML, CSS and the LAMP stack. It was difficult, but it I know it wouldn't be impossible to learn more. And that would help me to stop thinking about how hard our situation was at that time and how we were running out of money.
+我一直喜欢电脑，以前也学过一些HTML，CSS，LAMP技术。即使很难学，我也相信我能够学更多，并且，这种学习能让我忘记当时糟糕的处境和贫穷。
 
-Soon I discovered that what I knew about programming was not enough to do what I wanted. So, as a hobby, I started to study a bit. I tried to solve each of the individual problems I needed to get things working.
+很快我就发现仅凭已有的编程知识无法满足我的需要，因此，我习惯性地去一点点地学，试着去解决工作中遇到的每一个问题。
 
-I found some sites and some tutorials but I was a bit confused. I didn't know what to learn first. Should I learn MySQL? PHP? Ruby on Rails?
+我找到了一些网站和辅导资料，却陷入了困惑，因为我不知道从哪开始学：MySQL？ PHP？还是Ruby on Rails？
 
-## Finding freeCodeCamp
+## 发现 freeCodeCamp
 
-In early 2017 I discovered freeCodeCamp and started to investigate it immediately ([here][1]). I read a lot about what people were doing with freeCodeCamp, about career change, programming, job interviews and salaries. I couldn't believe what I was seeing. This could be a solution to my job situation.
+在2017年年初，我发现并开始摸索freeCodeCamp([here][1])，我在freeCodeCamp不断的阅读文章，发现了不少人因此改变了职业、编写程序、面试、获得报酬等。发现的这些事让我难以置信，因为它就是我工作困境的解药。
 
-On the 3rd of January I started going through the freeCodeCamp curriculum with all the strength I had.
+从1月3号开始，我全身心地投入到freeCodeCamp的课程中。
 
-At that time, I found Alex Kallaway's #100DaysOfCode very motivational and I immediately felt that I'd need that kind of energy in my life.
+当时，我找到了Alex Kallaway的#100DaysOfCode（挑战编程100天），它是如此鼓舞人心，以至于我立马感觉它就是我生命中的动力。
 
-Through the freeCodeCamp community I quickly met João Henrique, who was also starting freeCodeCamp "just for fun". João lived near me (60km) and soon we became study partners and started to support each other. Without him it would have been much harder to stand up.
+在freeCodeCamp社区我发现了João Henrique，freeCodeCamp中“兴趣编程”活动的组织者。João的住处离我60公里，我们很快成为学习伙伴，并相互帮助。如果没有他陪伴，我的学习很难坚持下来。
 
-Together we started our first freeCodeCamp local meet up (freeCodeCamp Algarve was born)! We didn't know at the beginning, and it was only us. Soon-ish we'd be gathering 10-20 peeps to chit chat and code with us (but that's another story).
+我们组织了第一次freeCodeCamp本地聚会（阿尔加维的freeCodeCamp组织也因此诞生了）。刚开始的时候，我们并不知道本地聚会只有我们两，不过，很快就聚集了10多个伙伴一起交流和编程（当然，这是后话了）。
 
-I quickly surpassed the first obstacles and reached the JavaScript section. In the meanwhile, I'd started to read a lot about programming and started grokking things very quickly.
+我快速地完成第一项挑战，进入JavaScript学习模块，同时，我也阅读了大量编程的知识，一切开始向着好的方向发展。
 
-An old passion was revived. The freeCodeCamp road map helped a lot. We just followed the proposed challenges without questioning the process.
+freeCodeCamp的学习路线帮助我重拾对编程的热情，因为我们只需要毫无顾虑地跟着学习路线的建议一项项去完成。
 
-Somehow I could see a future, a change, an improvement in my life and in the lives of my family. I kept reading posts on the freeCodeCamp forum as it was my biggest source of faith. Everyday someone was publishing a "Got my first job!" post.
+我有种感觉：我家人和我的生活将来会变得好起来。这种信心主要来自freeCodeCamp论坛上看到的大量文章：几乎每天都有人发布“找到第一份编程工作”的文章。
 
-I kept my job in Angola for a while. In February I returned there and explained to my wife how this could be a great change in our lives. We would be able to live in Portugal as soon as I could find a job as a programmer. Working as a Civil Engineer by day and studying by night I had reached the end of the front end certification.
+我在安哥拉又工作了一段时间。在二月份的时候，我回到安哥拉，向妻子解释编程将如何改变我们的生活，并且一旦我找到编程工作，我们就能去葡萄牙生活。通过白天工作（土木工程师），晚上学习的方式，我拿到了前端认证。
 
-The Simon Game almost killed me but I was able to do it in the end!
+西蒙游戏很难，但我最终完成了挑战！
 
-Thanks to Miguel Coquet (my former mentor and later first employer) who guided me through the intricacies of JavaScript's async nature I was able to do it. And it felt goooood. It was a great victory, in the middle of the night, on that construction site where I was working and living temporarily.
+感谢我的导师、我的第一个老板Miguel Coquet指导我弄懂复杂的JavaScript 异步编程。在那个曾经工作并临时居住的工地上，即使是三更半夜了，我依然感觉很兴奋，因为那项挑战是一个伟大的胜利。
 
-I had made my decision. I was going to be a programmer, no matter what.
+我下定决心，一定要当程序员。
 
-## Life Back in Portugal
+## 回到葡萄牙
 
-In May 2017 I left Angola and settled in my parents' house, with the few savings my wife and I had, studying night and day. I would sleep for a few hours when I couldn't keep my eyes open anymore. It wasn't easy. But it was possible, and I was very passionate about what I was doing.
+2017年五月，带着妻子和我仅有的一点点存款，我离开安哥拉，搬进父母的房子，不分昼夜的学习编程。每天学习到眼睛睁不开，我才休息几个小时，虽然艰难，但我还是挺过来了，因为我对编程的热爱简直到了狂热的地步。
 
-My wife and kids stayed in Angola for a while. It was painful. Month after month we wondered when could we be together again. That was a big lesson for us: to be patient and believe that we would soon be together and well. We didn't know when, but we believed in it with all our hearts.
+当时我的老婆孩子都住在安哥拉，每天对他们的思念让我很难受。我们最终又聚到一起，这事告诉了我：耐心地相信我们终将重聚。虽然我们不知道何时能重聚，但我们始终坚信。
 
-When you really commit yourself to something, you can achieve it. Believing it's possible is the first main factor to achieve it and to manifest it.
+有志者，事竟成。决心是成功的第一要素。
 
-In Portugal I had a lot more opportunities than in Angola. There was a local community -  [Geek Sessions][2]  \- and some kewl guys organizing events like talks and workshops (such as nodeschool).
+葡萄牙的机会比安哥拉多，我在这发现一个本地社区[Geek Sessions][2]  ，并且有一些小伙伴组织研讨会（比如：nodeschool）。
 
-I started to meet and get to know the community.
+我开始参与到研讨会，并慢慢融入社区。
 
-For the first time, I met people who lived and breathed programming - real developers - and got three great official mentors:  [Miguel Coquet][3],  [Nelson Neves][4], and  [André Jonas][5].  _Thanks once again folks, for everything you've done for me._
+在参加社区的过程中，我第一次遇到了真正的程序员，并得到三位好导师： [Miguel Coquet][3],  [Nelson Neves][4], and  [André Jonas][5]，_再次感谢你们给我的帮助_
 
-My learning speed increased a lot. I quickly got into Node.js and MongoDB. In a few months I was able to build a minimal full stack app (a front end, a back end and a database).
+我的学习进步很快，并投入到Node.js和MongoDB的学习中。几个月后，我搭建了一个小的全栈应用（包括前端、后端和数据库）
 
-## Getting My First Developer Job
+## 找到第一份开发工作
 
-Then the  _voilà_  moment happened. freeCodeCamp supplied me all the ingredients to become an entry-level full stack dev.
+到freeCodeCamp的最后一个学习挑战完成后，我从freeCodeCamp学到了作为初级全栈工程师的所有知识。
 
-In September 2017 I was hired by Miguel Coquet. I never expected it to happen so soon. He was starting to get the ball rolling with his own consultancy company and saw something in me. The vulnerability, the courage, the strength, the ability to bet all my life on the job that I so much wanted and needed.
+2017年9月，万万没想到，我会快被Miguel Coquet录用了。他当时正在创建咨询公司，并且看中了我的脆弱、勇气、实力，以及为了理想工作全力以赴的能力。
 
-My first job was already a remote one - with his mentoring and guidance - working for a mid-sized company in Amsterdam.
+我的第一份工作就是远程工作，在他的监督和指导下，为阿姆斯特丹的一家中型企业工作。
 
-I couldn't believe I was making money as a programmer. I was SURVIVING!!
+我自己都不敢相信：我通过编程挣钱了。我成功了！
 
-Computers and programming had always been an hobby of mine, and all of a sudden I was buying food with it. It started with a very nice salary, which helped me quickly reunite with my family in Portugal.
+电脑和编程技术一直是我的爱好，感觉很突然，我现在通过它养家活口了。我一开始的薪资就不低，让我很快把老婆孩子都接到葡萄牙来与我团聚。
 
-Just before Summer 2018 my wife, kids, and I were all together just in time to celebrate Benedita's second birthday in Portugal.
+2018年的春天，我和我的老婆、孩子们一起在葡萄牙庆祝Benedita的周岁。
 
-## Life as a Developer
+## 作为开发者的我
 
-Since those days I've kept studying and reading at a fast pace. Being a programmer makes you a lifelong learner, and that is one of the greatest hidden values of doing freeCodeCamp.
+尽管前面那段时间我疯狂地学习和大量的阅读，但终生学习态度是程序员必备的，这也是freeCodeCamp带给我的隐藏财富。
 
-You quickly learn to be autonomous. But it also provides you all the support you need from its community. The general rule of thumb is to "Read, Search, Ask".
+很快你就能自主学习，不过freeCodeCamp的社区依然能提供很多帮助，第一要领就是：“阅读、探索、提问”。
 
-Nowadays I work as a remote frontend developer for a Swedish company - developing an agile remote collaboration and production solution for broadcasters. I make more money than 95% of the people in Portugal do, all without leaving home.
+目前我是一家瑞典公司的前端工程师，通过敏捷远程协作为广播公司提供产品解决方案。我不用出门，薪水却超过葡萄牙95%的人。
 
-If you told me this in 2015, I wouldn't have believed it was possible. Five years have passed, and that's a lot of time. But things happen faster than you think.
+如果2015年你告诉我这些，我根本不会相信。五年过去，时间很长，事物的变化也超乎想象。
 
-My career reboot was very fast (8 months, 3 of which I worked during the day). If only I had known about freeCodeCamp before! 🙈
+我的事业转变很快（8个月，其中3个月我白天还需要工作）。假如我更早了解freeCodeCamp🙈
 
-So...
+情况可能更不一样...
 
-## Take Those Next Steps
+## 尝试以下几个步骤
 
-Maybe you're feeling like I was in 2015, without hope, without motivation, without strength, without faith.
+也许你和2015年的我一样，失望、麻木、佛系、自卑。
 
-If you've found this article, maybe you're searching for something but you don't know what exactly.
+假如你遇到这篇文章，可能你正在搜索你不知道的东西。
 
-Maybe life is sending you a message that there's hope for you, there's a path, there's a solution.
+也许生活在告诉你：这里有希望，一条新路，一个改变现状的方案。
 
-Maybe you don't know that the right time for a change is NOW.
+也许你并不知道，“现在”是改变自己的最好的时间
 
-Just believe, put in all the effort, put in the hours, work day and night, talk to people, find a "traveling mate", find a mentor, study, grow, expose your vulnerabilities with honesty, fail, ask all the questions you have (there's no dumb questions), and make it happen. ❤️
+❤️请相信，全力以赴，夜以继日的努力，和他人交流，找一个伙伴，找一个导师去学习和成长，真诚地抛出你的弱点，尝试失败，提出你遇到的各种问题（所有的问题都有意义），然后实现你的目标。❤️
 
-## Why You Should Start  [freeCodeCamp][6]
+## 在 [freeCodeCamp][6] 上学习编程的原因
 
-These are the main advantages of freeCodeCamp as I see it:
+我觉得freeCodeCamp 主要有以下几个优点：
 
--   It's  **completely free**. In times where you're running out of money this is very important. And believe me, paid bootcamps aren't better than freeCodeCamp. All it requires is that you put in the effort, to be the driver of your learning. In paid bootcamps you have to do exactly the same.
--   It provides a  **user-friendly**  environment for beginners, with a baby steps approach to code.
--   It provides you with a great  **road map**: you don't have to get confused about what should you learn first. If you want to work on the web, this is it.
--   It provides you with a simple rule:  **"Read, Search, Ask"**  which, if you apply it correctly, will help you get really good at searching Google for what you need. And in the end, if you're still stuck, backs you with community support. And believe me, this is the best community in which you can expect to learn how to code.
--   It provides you with  **challenging projects**. In the end what we want is to  **learn by doing**. This will make you read through the challenges carefully, investigate how to solve them, learn the technologies, and  **discuss with other students or mentors**. Through this process you'll find  **everything you need to be successful "on the job".**
--   freeCodeCamp is a  **serious thing**. Don't think that you need a certificate from an expensive paid bootcamp or university. I've done dozens of interviews and people already know freeCodeCamp. I've already been interviewed by someone who had done freeCodeCamp. Everybody knows someone who's a great developer in a kewl company that did freeCodeCamp. Moreover, companies know that you're a self-starter, a lifelong learner, someone who, in the middle of an issue, has the tools to strive and figure out those problems. And this is what companies want. People that drive their success, that come up with solutions instead of problems.
+-   freeCodeCamp是免费的，即使你手头紧张也能学习，而且，花钱的培训班也不一定比freeCodeCamp的质量更好。因为，freeCodeCamp和花钱的培训班一样需要个人自律、努力学习。
+-   freeCodeCamp的学习环境属于**用户友好型**，帮助你从零开始。
+-   freeCodeCamp有很好的学习路线，保证你不会为如何学而烦恼。如果你想从事web相关工作，选择freeCodeCamp准没错。
+-   freeCodeCamp有一个简单的准则：**浏览，搜索，提问**，正确地使用这个准则能帮助你在Google上搜索你需要的内容，假如你依然没找到答案，那就去社区里寻求帮助。相信我，学习编程， freeCodeCamp的社区是最棒的。
+-   freeCodeCamp提供**挑战性的项目**，帮助你**边做边学**。这个过程会帮助你了解项目、思索解决方案、学习技术以及**和其他学生或者导师讨论**。通过这个过程你会获得**工作所需的所有技能。**
+-   freeCodeCamp是一个权威的平台。不要觉得昂贵学费的培训班证书或者大学文凭才能帮你找工作，我采访过很多了解freeCodeCamp的人，也被freeCodeCamp毕业的人采访过，freeCodeCamp的学习帮助不少人成为厉害的开发者，在很棒的公司找到工作。而且，公司知道你是自学者、终身学习的人、一个在问题中有能力且乐意寻找答案的人。公司需要的是解决问题的员工，而不是带来麻烦的员工，通过freeCodeCamp自学成才的人正是他们需要的。
 
-Don't think you're too old, or that your current job has nothing to do with code. I was 37 when I rebooted and brought a lot of soft skills with me. Everyone that has working experience brings a set of skills that are very useful and admired.
+学习编程这事与年龄无关，与你现在从事的工作无关。我37岁的时候开始重新学习编程，这个年龄为我带来很多软实力，因为每一份工作经历都会给我们有用的，令人钦佩的软实力。
 
-If you're passionate about computers, programming, the web, and nerdy stuff, you won't regret it at all.  **It will definitely change your life for the better.**
+如果你渴望电脑、编程、互联网之类书呆子式的知识，freeCodeCamp不会让你失望，**它绝对会给你带来更好的生活**。
 
-Cheers everyone, Happy New Year, and don't forget to code, code, code.
+新年快乐，为大家干杯！别忘了写代码、写代码、写代码。
 
-Hey, and one of these days reach out to me on  [twitter][7]  and tell me how it's going! ♥️
+嘿，哪天有空了来 [twitter][7] 上找我，告诉你的体会！ ♥️
 
   
 

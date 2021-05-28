@@ -25,11 +25,11 @@ React 是目前为止最受欢迎的 JavaScript 框架之一，而且我相信�
 
 ## 什么是 React？
 
-React 是一个 JavaScript 库，旨在简化用户界面的开发。
+React 是一个 JavaScript 库，旨在简化 UI 的开发。
 
 2013 年，Facebook 首次向全世界发布了 React，Facebook 和 Instagram 以它为基础开发了大量的 APP，其中的一些 APP 有着最广泛的使用。
 
-React 最初是为了使开发者可以在任意时间点都能轻松的追踪用户界面及它的状态。它通过将 UI 划分为多个组件的集合来达到这个目的。
+React 最初是为了使开发者可以在任意时间点都能轻松的追踪 UI 及它的状态。它通过将 UI 划分为多个组件的集合来达到这个目的。
 
 在学习 React 的时候，你可能遇到一些小困难，但是只要解决了它们，我保证这将会是你最美好的经历。React 可以使前端开发工作变的更加简单，而且它的生态里还有很多好用的库和工具。
 
@@ -143,9 +143,9 @@ npx create-react-app todolist
 
 ## React 组件
 
-在上一节课程里，你学习了怎么创建你的第一个 React 应用。
+在上一节课程里，我们创建了我们的第一个 React 应用。
 
-在这个应用中，包含了一系列执行各种操作的文件，大部分都与配置有关，但是有一个文件十分的不同：`App.js`。
+在这个应用中，包含了一系列执行各种操作的文件，大部分文件都与配置有关，但是有一个文件十分的不同：`App.js`。
 
 `App.js` 是你遇到的 **第一个 React 组件**。
 
@@ -203,7 +203,7 @@ function App() {
 
 它看起来很像 **HTML**，但是内嵌了一些 JavaScript。
 
-其实这就是 **JSX**，一种我们构建组件时输出的特殊语言。我们将会在下一节讨论 JSX。
+其实这就是 **JSX**，一种我们构建组件时使用的特殊语言。我们将会在下一节讨论 JSX。
 
 除了可以返回 JSX，组件还具有一些其他特征。
 
@@ -217,7 +217,7 @@ function App() {
 
 要想学习 React 就必须首先了解 JSX。
 
-在上一节中，你见到了第一个 React 组件，即 `App`，它定义在由 `create-react-app` 构建的默认应用程序中。
+在上一节中，我们创建了第一个 React 组件，即 `App`，它定义在由 `create-react-app` 构建的默认应用程序中。
 
 它的代码如下：
 
@@ -248,7 +248,7 @@ function App() {
 
 ```
 
-之前我们忽略了 `return` 语句中的所有内容，但是我们将会在本节中讨论它们。
+当时我们忽略了 `return` 语句中的所有内容，但是在本节中我们将会讨论它们。
 
 我们将包含在组件返回语句后的括号内的所有内容称为 JSX：
 
@@ -284,7 +284,7 @@ React 这样做的一个主要原因就是：**使用 JSX 能更加轻松的开�
 
 当然了，前提是你必须非常熟悉它。
 
-在下一节中，我们将会讨论 JSX 是怎么使你能够很容易的开发 UI 的。再然后我们将会讨论它与“标准 HTML”的区别，而这些差异是你必须知道的。
+在下一节中，我们将会学习 JSX 是怎么使 UI 开发变容易的。再然后我们将会讨论它与“标准 HTML”的区别，而这些差异是你必须知道的。
 
 ## 使用 JSX 构建 UI
 
@@ -295,16 +295,12 @@ React 这样做的一个主要原因就是：**使用 JSX 能更加轻松的开�
 通常情况下，一个文件就是一个 React 组件，这是我们可以非常容易的在其它组件中复用（通过导入的方式）它们的原因。
 
 但是同一个文件中也可以定义其它的 React 组件，这些组件只会在当前文件中用到。这里并没有明确的规则来规定一个文件中是否需要定义多个组件，选择最适合你的那种方式即可。
-But a React component can also be created in the same file of another component, if you plan to only use it in that component. There's no "rule" here, you can do what feels best to you.
 
-当一个文件中的代码行数过多时，我通常会把代码分开，放到单独的文件中。
-I generally use separate files when the number of lines in a file grows too much.
+当一个文件中的代码行数过多时，我通常会将代码进行拆分，放到单独的文件中。
 
-为了方便起见，我们在 `App.js` 文件中再定义一个组件。
-To keep things simple let's create a component in the same  `App.js`  file.
+为了方便学习，我们在 `App.js` 文件中再定义一个组件。
 
 我们计划创建一个名为 `WelcomeMessage` 的组件：
-We're going to create a  `WelcomeMessage`  component:
 
 ```js
 function WelcomeMessage() {
@@ -316,7 +312,7 @@ function WelcomeMessage() {
 
 我们将这个函数添加到 `App.js` 文件中。
 
-现在，我们将 `<WelcomeMessage />` 添加到 `App` 组件的 JSX 代码中，就可以在用户界面中展示这个组件：
+现在，我们将 `<WelcomeMessage />` 添加到 `App` 组件的 JSX 代码中，就可以在 UI 中展示这个组件：
 
 ```js
 import React from 'react'
@@ -357,7 +353,7 @@ function App() {
 
 我们像使用 HTML 标签一样，添加 `<WelcomeMessage />` 组件。
 
-这就是 React 组件和 JSX 优雅的地方：我们构建应用程序界面，并且像使用 HTML 标签一样使用它们。
+这就是 React 组件和 JSX 优雅的地方：我们构建应用程序组件，并且像使用 HTML 标签一样使用它们。
 
 关于 JSX 与 THML 的区别，我们将会在下一节中学习。
 
@@ -369,7 +365,7 @@ JSX 看起来像 HTML，但事实并不是这样。
 
 如果你仔细阅读过 `App` 组件的 JSX 代码，会发现一个很明显的不同点：组件中有一个名为 `className` 的属性。
 
-在 HTML 中，我们使用的是 `class` 属性。出于各种原因，它可能是使用最广泛的属性，而 CSS 就是其中一个原因。`class` 属性使我们可以轻松的设置 HTML 样式，并且在用户界面设计时，Tailwind 之类的 CSS 框架就是以这个属性为核心的。 
+在 HTML 中，我们使用的是 `class` 属性。出于各种原因，它可能是使用最广泛的属性，而 CSS 就是其中一个原因。`class` 属性使我们可以轻松的设置 HTML 样式，并且在设计 UI 时，Tailwind 之类的 CSS 框架就是以这个属性为核心的。 
 
 但是这里有个问题。我们在 JavaScript 文件中编写 UI 代码，而 `class` 是 JavaScript 语言的保留字，这就意味着我们不能使用它，它有特殊的作用（定义 JavaScript 类）。由于这个原因，React 的作者们不得不选择一个其它的名称。
 
@@ -435,7 +431,7 @@ function App() {
 
 我们可以在 `{ }` 中添加任何 Javscript 表达式，但是每对大括号中只能有 _一个_ 表达式，并且这个表达式必须是可正确求值的。
 
-如下所示，这是一个在 JSX 中非常常见的表达式。我们有一个三元运算符，并在其中定义了一个条件语句（`message === 'Hello!'`），当条件为真时，我们输出一个值（`The message was "Hello!"`）；条件为假时，输出另一个值（当前示例中为变量 `message` 的值）：
+如下所示，这是一个在 JSX 中非常常见的表达式。我们编写了一个三元运算符，在其中定义了一个条件语句（`message === 'Hello!'`），当条件为真时，我们输出一个值（`The message was "Hello!"`）；条件为假时，输出另一个值（当前示例中为变量 `message` 的值）：
 
 ```js
 {
@@ -478,7 +474,7 @@ const [count, setCount] = useState(0)
 
 ```
 
-这一点非常重要。我们不能直接修改 state，只能通过调用修改函数来修改它，否则，React 组件无法及时将数据的变化反映在用户界面中。
+这一点非常重要。我们不能直接修改 state，只能通过调用修改函数来修改它，否则，React 组件无法及时将数据的变化反映在 UI 中。
 
 调用修改函数是一种将组件 state 的变化告知 React 的方法。
 
@@ -537,7 +533,7 @@ function WelcomeMessage() {
 
 ```
 
-在组件中，我们以参数的形式接收 props：
+在组件中，我们以函数参数的形式接收 props：
 
 ```js
 function WelcomeMessage(props) {
@@ -651,13 +647,13 @@ React 支持非常多的事件类型，如：`onKeyUp`，`onFocus`，`onChange`�
 
 ## React 组件的生命周期事件
 
-到目前为止，我们已经学习了怎么使用 `useState` 勾子来管理 state。
+到目前为止，我们已经学习了怎么使用 `useState` 钩子来管理 state。
 
-在本节中，我想介绍另外一个勾子：`userEffect`。
+在本节中，我想介绍另外一个钩子：`userEffect`。
 
-`useEffect` 勾子允许组件访问它的生命周期事件。
+`useEffect` 钩子允许组件访问它的生命周期事件。
 
-当你调用这个勾子时，你需要传入一个函数。在组件第一次被渲染的时候，以及在随后的每次重新渲染 / 更新时，React 都会调用这个函数。
+当你调用这个钩子时，你需要传入一个函数。在组件第一次被渲染的时候，以及在随后的每次重新渲染 / 更新时，React 都会调用这个函数。
 
 React 首先更新 DOM，然后调用任何传递给 `useEffect()` 的函数。
 
@@ -701,9 +697,9 @@ useEffect() 非常适合添加日志，访问第三方 API 等。
 
 熟练掌握在这篇文章中提到主题是朝着学习 React 目标迈出的重要一步。
 
-在这里我想给出一些指导，防止你在有关 React 教程和课程的海洋中迷失方法。
+在这里我想给出一些指导，防止你在有关 React 教程和课程的海洋中迷失方向。
 
-接下来改学习什么呢？
+接下来该学习什么呢？
 
 了解有关 [虚拟 DOM][31]，[编写声明式代码][32]，[单向数据流][33]，[不变性][34]，[组合][35]的更多理论。
 
@@ -723,13 +719,13 @@ useEffect() 非常适合添加日志，访问第三方 API 等。
 
 了解基于 React 构建的应用程序框架，如 [Gatsby][48] 或者 [Next.js][49]。
 
-当然，最重要的是，请确保在构建实例应用中实践你所学习的每一个知识点。
+当然，最重要的是，请确保在构建应用的过程中实践你所学习的每一个知识点。
 
 ## 结语
 
 非常感谢阅读这篇入门指导。
 
-我希望这篇指导可以激发你去学习更多关于 React 的知识以及了解 React 能做的每一件事。
+我希望这篇指导可以激发你去学习更多关于 React 知识的兴趣以及了解 React 能做的每一件事。
 
 不要忘了你可以 [免费下载 PDF / ePub / Mobi 格式的本篇指导][50]
 

@@ -2,11 +2,11 @@
 
 ## 翻译步骤
 
-1. 从[待翻译列表][1]选择一篇原文
+1. 从[待翻译列表][1]选择一篇文章
 
-2. 在点开的**翻译任务页面**，点击**译文链接**
+2. 在点开的页面，点击 **MarkDown 文件链接**
 
-![image](https://user-images.githubusercontent.com/19969570/62818115-fc007680-bb74-11e9-957b-08a695c760c6.png)
+![image](https://user-images.githubusercontent.com/19358186/120214069-89d7b500-c266-11eb-9c39-8d6729e84cae.png)
 
 3. 在打开的**译文编辑器**开头“译者”处写上自己的 GitHub ID
 
@@ -32,7 +32,7 @@
 
 ![image](https://user-images.githubusercontent.com/19969570/62818137-65808500-bb75-11e9-98d9-7ba710c003b5.png)
 
-9. 每翻译几段文字想**暂时保存**时，就在编辑器最下方 Commit changes 处提交一次
+9. 每翻译几段文字想**暂时保存**时，就在编辑器最下方 Commit changes 处提交一次。注意，最终译文只需要中文，请把英文原文删掉。
 
 10. 翻译团队核心成员会定期查看翻译进度，在你翻译完后便开始校对，请注意查收 **GitHub 账号下的邮箱**
 

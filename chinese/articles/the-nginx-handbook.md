@@ -1,6 +1,6 @@
 > -  原文地址：[The NGINX Handbook](https://www.freecodecamp.org/news/the-nginx-handbook/)
 > -  原文作者：[Farhan Hasin ChowdhuryFarhan Hasin Chowdhury](https://www.freecodecamp.org/news/author/farhanhasin/)
-> -  译者：
+> -  译者：ZhichengChen
 > -  校对者：
 
 ![The NGINX Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/Copy-of-docker-1280x612.png)

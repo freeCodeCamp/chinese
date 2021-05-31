@@ -1,6 +1,6 @@
 > -  原文地址：[How to Use CSS Selectors to Style Your Web Page](https://www.freecodecamp.org/news/use-css-selectors-to-style-webpage/)
 > -  原文作者：[Peter LynchPeter Lynch](https://www.freecodecamp.org/news/author/peter-lynch/)
-> -  译者：
+> -  译者：Assone
 > -  校对者：
 
 ![How to Use CSS Selectors to Style Your Web Page](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/CSS-Selectors.png)

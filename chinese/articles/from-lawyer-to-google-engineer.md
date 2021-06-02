@@ -1,6 +1,6 @@
 > -  原文地址：[From Lawyer to Engineer at Google – How to Switch Careers and Learn New Skills](https://www.freecodecamp.org/news/from-lawyer-to-google-engineer/)
 > -  原文作者：[Zubin PratapZubin Pratap](https://www.freecodecamp.org/news/author/zubin/)
-> -  译者：
+> -  译者：Haku96
 > -  校对者：
 
 ![From Lawyer to Engineer at Google – How to Switch Careers and Learn New Skills](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/from-lawyer-to-engineer-at-google.png)

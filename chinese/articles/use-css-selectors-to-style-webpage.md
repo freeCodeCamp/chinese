@@ -4,24 +4,34 @@
 > -  校对者：
 
 ![How to Use CSS Selectors to Style Your Web Page](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/CSS-Selectors.png)
+![如何使用CSS选择器设计网页样式](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/CSS-Selectors.png)
 
 CSS selectors are one of the most important parts of CSS. They give you the ability to target HTML elements on your web page that you want to style.
+CSS选择器是是CSS最重要的部分之一。它们能够使你在网页上针对你想要的HTML元素进行设置样式的能力。
 
 Without CSS selectors, you wouldn't be able to style your page to look how you want.
+如果没有CSS选择器，你就无法将页面设置成你想要的样子。
 
 Thankfully CSS selectors have been around for a while, and you can style elements on your however you want.
+值得庆幸的是CSS选择器已经存在一段时间了，你可以随心所欲地对你的元素进行样式设计。
 
 But if you to really want to unlock the power of CSS and create amazing elements, then you need to understand what you can do with CSS selectors. Namely, you need to understand the basic CSS selectors before you work your way up to the advanced CSS selectors.
+但如果你真的想要释放CSS的力量并创建令人惊叹的元素，那么你需要了解你能用CSS选择器做什么。也就是说，你需要先了解基本的CSS选择器，然后再学习高级的CSS选择器。
 
 This post will look into both. By the end, it will have you well on your way to unlocking the power of CSS selectors to create your own incredible elements. So let's get started by looking at what CSS selectors are.
+这篇文章将对这两方面进行研究。到最后，你会发现，你已经开始释放CSS选择器的力量并创造自己的不可思议的元素。所以，让我们从什么是CSS选择器开始吧。
 
 ## What are CSS Selectors?
+## 什么是CSS选择器？
 
 If you've written any CSS before, then you've likely seen a CSS selector. They are the first part of a CSS rule. You use CSS selectors to select the HTML elements you want to style.
+如果你之前写过任何CSS，那么你可能已经见过CSS选择器了。它们是CSS规则的第一部分。你可以使用CSS选择器来选择你要设置样式的HTML元素。
 
 In CSS, selectors are defined by the CSS selector specification. This means that each selector must be [supported](https://www.w3.org/TR/selectors-3/#selectors) by the browser for it to actually work.
+在CSS里，选择器由CSS选择器规范来定义。这意味着每个选择器必须得到浏览器的[支持](https://www.w3.org/TR/selectors-3/#selectors)才能发挥作用。
 
 CSS selectors tend to be split into five different categories. This post is going to look at them in two key categories of basic and advanced. Below are the five categories.
+CSS选择器通常分为五个不同的种类。这篇文章将从基础和高级两个关键类别来研究它们。以下是这五个类别。
 
 1.  Simple selectors
 2.  Combinator selectors

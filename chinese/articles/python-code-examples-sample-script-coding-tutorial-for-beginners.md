@@ -1,6 +1,6 @@
 > -  原文地址：[Python Code Examples – Sample Script Coding Tutorial for Beginners](https://www.freecodecamp.org/news/python-code-examples-sample-script-coding-tutorial-for-beginners/)
 > -  原文作者：[Estefania Cassingena NavoneEstefania Cassingena Navone](https://www.freecodecamp.org/news/author/estefaniacn/)
-> -  译者：
+> -  译者：ywxgod
 > -  校对者：
 
 ![Python Code Examples – Sample Script Coding Tutorial for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2020/11/Code-Examples-Image.png)

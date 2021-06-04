@@ -3,44 +3,44 @@
 > -  译者：ywxgod
 > -  校对者：
 
-![Python Code Examples – Sample Script Coding Tutorial for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2020/11/Code-Examples-Image.png)
+![Python 代码示例——面向初学者的示例脚本编程教程](https://www.freecodecamp.org/news/content/images/size/w2000/2020/11/Code-Examples-Image.png)
 
-Hi! Welcome. If you are learning Python, then this article is for you. You will find a thorough description of Python syntax and lots of code examples to guide you during your coding journey.
+Hi! 欢迎。您是否正在学习Python，如果是的，那这篇文章就是为您而准备的，在文中你将会找到Python语法的详尽描述以及大量的Python代码示例，它将会指导你的Python编程之旅。
 
-### What we will cover:
+### 涵盖的内容：
 
--   [Variable Definitions in Python](#-variable-definitions-in-python)
--   [Hello, World! Program in Python](#-hello-world-program-in-python)
--   [Data Types and Built-in Data Structures in Python](#-data-types-and-built-in-data-structures-in-python)
--   [Python Operators](#-python-operators)
--   [Conditionals in Python](#-conditionals-in-python)
--   [For Loops in Python](#-for-loops-in-python)
--   [While Loops in Python](#-while-loops-in-python)
--   [Nested Loops in Python](#-nested-loops-in-python)
--   [Functions in Python](#-functions-in-python)
--   [Recursion in Python](#-recursion-in-python)
--   [Exception Handling in Python](#-exception-handling-in-python)
--   [Object-Oriented Programming in Python](#-object-oriented-programming-in-python)
--   [How to Work with Files in Python](#-how-to-work-with-files-in-python)
--   [Import Statements in Python](#-import-statements-in-python)
--   [List and Dictionary Comprehension in Python](#-list-and-dictionary-comprehension-in-python)
--   and more...
+-   [Python中的变量定义](#-variable-definitions-in-python)
+-   [Python中的Hello, World!](#-hello-world-program-in-python)
+-   [Python中的数据类型和内建数据结构](#-data-types-and-built-in-data-structures-in-python)
+-   [Python中的操作符](#-python-operators)
+-   [Python中的条件语句](#-conditionals-in-python)
+-   [Python中的for循环](#-for-loops-in-python)
+-   [Python中while循环](#-while-loops-in-python)
+-   [Python中的循环嵌套](#-nested-loops-in-python)
+-   [Python中的函数](#-functions-in-python)
+-   [Python中的递归](#-recursion-in-python)
+-   [Python中的异常处理](#-exception-handling-in-python)
+-   [Python中的面向对象编程](#-object-oriented-programming-in-python)
+-   [Python中如何处理文件](#-how-to-work-with-files-in-python)
+-   [Python中的导入(import)语句](#-import-statements-in-python)
+-   [Python的列表(List)和字典(Dict)推导](#-list-and-dictionary-comprehension-in-python)
+-   ...
 
-Are you ready? Let's begin! 🔅
+准备好了吗？让我们开始吧！🔅
 
-💡 **Tip:** throughout this article, I will use `<>` to indicate that this part of the syntax will be replaced by the element described by the text. For example, `<var>` means that this will be replaced by a variable when we write the code.
+💡 **提示:** 在文章中, 我会用`<>`表示这一整块会被其中间的文本描述的元素所取代。例如，`<var>`表示我们写代码时，它会被一个变量所替换。
 
-## 🔹 Variable Definitions in Python
+## 🔹 Python中的变量定义
 
-The most basic building-block of any programming language is the concept of a variable, a name and place in memory that we reserve for a value.
+变量的概念都是任何编程语言中的一个最基本的构件, 变量有一个名称和一个内存中用于存储其值得位置。
 
-In Python, we use this syntax to create a variable and assign a value to this variable:
+在Python中，我们使用这种语法来创建一个变量并为这个变量赋值：
 
 ```Python
 <var_name> = <value>
 ```
 
-For example:
+例如:
 
 ```
 age = 56
@@ -58,9 +58,9 @@ color = "Blue"
 grades = [67, 100, 87, 56]
 ```
 
-If the name of a variable has more than one word, then the [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) recommends separating words with an underscore "as necessary to improve readability."
+如果变量名不止一个单词, 在[Python代码的风格指南](https://www.python.org/dev/peps/pep-0008/)中的建议是要用下划线将单词分开，“根据需要提高代码的可读性”。
 
-For example:
+例如:
 
 ```
 my_list = [1, 2, 3, 4, 5]

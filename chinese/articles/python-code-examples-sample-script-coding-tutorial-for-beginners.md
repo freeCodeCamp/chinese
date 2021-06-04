@@ -28,7 +28,7 @@ Hi! 欢迎。您是否正在学习Python，如果是的，那这篇文章就是�
 
 准备好了吗？让我们开始吧！🔅
 
-💡 **提示:** 在文章中, 我会用`<>`表示这一整块会被其中间的文本描述的元素所取代。例如，`<var>`表示我们写代码时，它会被一个变量所替换。
+💡 **提示：** 在文章中, 我会用`<>`表示这一整块会被其中间的文本描述的元素所取代。例如，`<var>`表示我们写代码时，它会被一个变量所替换。
 
 ## 🔹 Python中的变量定义
 
@@ -40,7 +40,7 @@ Hi! 欢迎。您是否正在学习Python，如果是的，那这篇文章就是�
 <var_name> = <value>
 ```
 
-例如:
+例如：
 
 ```
 age = 56
@@ -60,47 +60,47 @@ grades = [67, 100, 87, 56]
 
 如果变量名不止一个单词, 在[Python代码的风格指南](https://www.python.org/dev/peps/pep-0008/)中的建议是要用下划线将单词分开，“根据需要提高代码的可读性”。
 
-例如:
+例如：
 
 ```
 my_list = [1, 2, 3, 4, 5]
 ```
 
-💡 **Tip:** The Style Guide for Python Code (PEP 8) has great suggestions that you should follow to write clean Python code.
+💡 **提示：** Python代码风格指南(PEP 8)有很好的建议，你应该遵循这些建议来编写整洁的Python代码。
 
-## 🔸 Hello, World! Program in Python
+## 🔸 Hello, World!
 
-Before we start diving into the data types and data structures that you can use in Python, let's see how you can write your first Python program.
+在我们开始深入了解Python的数据类型与数据结构之前，让我们看看如何编写第一个Python程序。
 
-You just need to call the `print()` function and write `"Hello, World!"` within parentheses:
+你只需要调用`print()`函数，并且在括号里写上`"Hello, World!"`即可：
 
 ```python
 print("Hello, World!")
 ```
 
-You will see this message after running the program:
+程序执行后，你会看到下面的信息:
 
 ```
 "Hello, World!"
 ```
 
-💡 **Tip:** Writing a `"Hello, World!"` program is a tradition in the developer community. Most developers start learning how to code by writing this program.
+💡 **提示：** 写一个`"Hello, World!"`程序是开发者社区的一个传统。大多数开发者都是从编写这个程序开始学习编程的。
 
-Great. You just wrote your first Python program. Now let's start learning about the data types and built-in data structures that you can use in Python.
+很好，你刚刚写了你的第一个Python程序。 现在让我们开始学习Python中的数据类型和内建的数据结构。
 
-## 🔹 Data Types and Built-in Data Structures in Python
+## 🔹 Python中的数据类型与内建数据结构
 
-We have several basic data types and built-in data structures that we can work with in our programs. Each one has its own particular applications. Let's see them in detail.
+我们有几种基本的数据类型和内建的数据结构可以使用，每一个都有各自特殊的应用场景，让我们来看看具体的使用细节。
 
-### Numeric Data Types in Python: Integers, Floats, and Complex
+### Python中的数字类型：整数(Integers)，浮点数(Floats)，复数(Complex)
 
-These are the numeric types that you can work with in Python:
+Python可以使用的数字类型有下面几种：
 
-#### Integers
+#### 整数
 
-Integers are numbers without decimals. You can check if a number is an integer with the `type()` function. If the output is `<class 'int'>`, then the number is an integer.
+整数就是没有小数的数字，你可以用`type()`函数来检查一个数字是否是一个整数。如果`type()`函数的输出是`<class 'int'>`，则说明这个数字是一个整数。
 
-For example:
+例如：
 
 ```python
 >>> type(1)
@@ -116,15 +116,15 @@ For example:
 <class 'int'>
 ```
 
-#### Floats
+#### 浮点数
 
-Floats are numbers with decimals. You can detect them visually by locating the decimal point. If we call `type()` to check the data type of these values, we will see this as the output:
+浮点数就是带有小数的数字，你可以通过定位小数点来直观的检测他们。如果我们用`type()`来检测这些值得类型，你会看到下面这样的输出:
 
 ```
 <class 'float'>
 ```
 
-Here we have some examples:
+一些例子：
 
 ```python
 >>> type(4.5)
@@ -146,11 +146,11 @@ Here we have some examples:
 <class 'float'>
 ```
 
-#### Complex
+#### 复数
 
-Complex numbers have a real part and an imaginary part denoted with `j`. You can create complex numbers in Python with `complex()`. The first argument will be the real part and the second argument will be the imaginary part.
+复数有一个实部和一个带有`j`的虚部。 你可以通过`complex()`来创建复数。`complex()`的第一个参数是实部，第二个参数是虚部。
 
-These are some examples:
+一些例子：
 
 ```python
 >>> complex(4, 5)
@@ -172,11 +172,11 @@ These are some examples:
 4j
 ```
 
-### Strings in Python
+### Python中的字符串
 
-Strings incredibly helpful in Python. They contain a sequence of characters and they are usually used to represent text in the code.
+Python中的字符串非常有用，它们包含一连串的字符，通常用于表示代码中的文本。
 
-For example:
+例如:
 
 ```
 "Hello, World!"
@@ -186,13 +186,13 @@ For example:
 'Hello, World!'
 ```
 
-We can use both single quotes `''` or double quotes `""` to define a string. They are both valid and equivalent, but you should choose one of them and use it consistently throughout the program.
+我们可以使用单引号`''`或双引号`""`来定义一个字符串。不管哪一种，它们都是有效的、等同的定义，但在程序中你应该始终保持选择其中的一种。
 
-**💡 Tip:** Yes! You used a string when you wrote the `"Hello, World!"` program. Whenever you see a value surrounded by single or double quotes in Python, that is a string.
+**💡 提示：** 是的！你在写`"Hello, World!"`程序的时候就已经使用过字符串了。无论何时，当你在Python中看到一个被单引号或双引号包围的值时，那它就是一个字符串。
 
-Strings can contain any character that we can type in our keyboard, including numbers, symbols, and other special characters.
+字符串可以包含我们从键盘上输入的任何字符，包括数字、符号和其他特殊字符。
 
-For example:
+例如：
 
 ```
 "45678"
@@ -206,36 +206,36 @@ For example:
 "#IlovePython"
 ```
 
-**💡 Tip:** Spaces are also counted as characters in a string.
+**💡 提示：** 空格也被算作字符串中的字符。
 
-#### Quotes Within Strings
+#### 字符串中的引号
 
-If we define a string with double quotes `""`, then we can use single quotes within the string. For example:
+如果我们用双引号`""`定义字符串，那我们可以在字符串中使用单引号。例如：
 
 ```
 "I'm 20 years old"
 ```
 
-If we define a string with single quotes `''`, then we can use double quotes within the string. For example:
+如果我们使用单引号`''`定义字符串，那我们可以在字符串中使用双引号。例如：
 
 ```
 'My favorite book is "Sense and Sensibility"'
 ```
 
-#### String Indexing
+#### 字符串索引
 
-We can use indices to access the characters of a string in our Python program. An index is an integer that represents a specific position in the string. They are associated to the character at that position.
+Python程序中我们可以使用索引来访问字符串中的字符。索引是一个整数，表示字符串中的一个特定位置。
 
-This is a diagram of the string `"Hello"`:
+下面是字符串`"Hello"`的图示:
 
 ```
 String:  H e l l o
 Index:   0 1 2 3 4
 ```
 
-**💡 Tip:** Indices start from `0` and they are incremented by `1` for each character to the right.
+**💡 提示：** 索引从`0`开始，每向右增加一个字符，就增加`1`。
 
-For example:
+例如：
 
 ```python
 >>> my_string = "Hello"
@@ -256,7 +256,7 @@ For example:
 'o'
 ```
 
-We can also use negative indices to access these characters:
+我们还可以用负的索引来访问字符串中字符:
 
 ```python
 >>> my_string = "Hello"
@@ -277,30 +277,30 @@ We can also use negative indices to access these characters:
 'H'
 ```
 
-**💡 Tip:** we commonly use `-1` to access the last character of a string.
+**💡 提示：** 通常用`-1`来访问字符串中的最后一个字符。
 
-#### String Slicing
+#### 字符串切片
 
-We may also need to get a slice of a string or a subset of its characters. We can do so with string slicing.
+我们可能需要获取字符串的切片或其子集。我们可以使用字符串切片来实现。
 
-This is the general syntax:
+切片的一般语法:
 
 ```python
 <string_variable>[start:stop:step]
 ```
 
-`start` is the index of the first character that will be included in the slice. By default, it's `0`.
+`start`是切片中第一个字符的索引，默认值是`0`。
 
--   `stop` is the index of the last character in the slice (this character will **not** be included). By default, it is the last character in the string (if we omit this value, the last character will also be included).
--   `step` is how much we are going to add to the current index to reach the next index.
+-   `stop`是切片的最后一个字符的索引(这个字符**并不**包含在切片中)，默认值是字符串中的最后一个字符(如果我们省略这个值，最后一个字符也将被包含在内)。
+-   `step`是我们从当前索引到下一个索引所要增加的数量。
 
-We can specify two parameters to use the default value of `step`, which is `1`. This will include all the characters between `start` and `stop` (not inclusive):
+我们可以指定两个参数，然后第三个参数`step`使用默认值`1`，这样就会获取到`start`到`stop`(不包含)之间的所有字符：
 
 ```python
 <string_variable>[start:stop]
 ```
 
-For example:
+例如:
 
 ```python
 >>> freecodecamp = "freeCodeCamp"
@@ -330,11 +330,11 @@ For example:
 'Camp'
 ```
 
-**💡 Tip:** Notice that if the value of a parameter goes beyond the valid range of indices, the slice will still be presented. This is how the creators of Python implemented this feature of string slicing.
+**💡 提示：** 注意，如果某个参数值超出了索引的范围, 并不会影响切片的展示。这就是Python的发明者在考虑如何实现字符串切片功能时所考虑到的。
 
-If we customize the `step`, we will "jump" from one index to the next according to this value.
+如果我们给`step`赋值, 我们将会根据这个值从一个索引"跳到"另一个索引.
 
-For example:
+例如:
 
 ```python
 >>> freecodecamp = "freeCodeCamp"
@@ -358,7 +358,7 @@ For example:
 'rd'
 ```
 
-We can also use a **negative** step to go from right to left:
+我们还可以用一个**负的**step值来从右向左取值:
 
 ```python
 >>> freecodecamp = "freeCodeCamp"
@@ -373,7 +373,7 @@ We can also use a **negative** step to go from right to left:
 'o'
 ```
 
-And we can omit a parameter to use its default value. We just have to include the corresponding colon (`:`) if we omit `start`, `stop`, or both:
+并且我们可以省略任意一个参数而使用其默认值。如果我们省略`start`，`stop`，或者两者，那么我们只需要一个对应的冒号(`:`)：
 
 ```python
 >>> freecodecamp = "freeCodeCamp"
@@ -403,15 +403,15 @@ And we can omit a parameter to use its default value. We just have to include th
 'pmaCedoCeerf'
 ```
 
-**💡 Tip:** The last example is one of the most common ways to reverse a string.
+**💡 提示：** 最后的一个是最常用的反转字符串的例子。
 
-#### f-Strings
+#### f-字符串
 
-In Python 3.6 and more recent versions, we can use a type of string called f-string that helps us format our strings much more easily.
+在Python 3.6或以上版本中，我们可以是使用一种被称为f-string的字符串，它能帮助我们处理字符串格式化更加方便。
 
-To define an f-string, we just add an `f` before the single or double quotes. Then, within the string, we surround the variables or expressions with curly braces `{}`. This replaces their value in the string when we run the program.
+定义一个f-string，我们只需要将字符`f`放到单引号或双引号的前面，然后在字符串里面，我们将变量或者表达式用`{}`包含起来。当程序执行的时候，他们会被替换为变量或者表达式的值。
 
-For example:
+例如:
 
 ```python
 first_name = "Nora"
@@ -426,7 +426,7 @@ The output is:
 Hi, I'm Nora. I'm learning Python.
 ```
 
-Here we have an example where we calculate the value of an expression and replace the result in the string:
+下面我们有一个例子，展示了计算一个表达式的值并将结果替换到字符串中。
 
 ```python
 value = 5
@@ -434,7 +434,7 @@ value = 5
 print(f"{value} multiplied by 2 is: {value * 2}")
 ```
 
-The values are replaced in the output:
+它们的值在输出中被替换:
 
 ```python
 5 multiplied by 2 is: 10

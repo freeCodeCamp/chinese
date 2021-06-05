@@ -12,7 +12,7 @@ Hi! 欢迎。您是否正在学习Python，如果是的，那这篇文章就是�
 -   [Python中的变量定义](#-variable-definitions-in-python)
 -   [Python中的Hello, World!](#-hello-world-program-in-python)
 -   [Python中的数据类型和内建数据结构](#-data-types-and-built-in-data-structures-in-python)
--   [Python中的操作符](#-python-operators)
+-   [Python中的运算符](#-python-operators)
 -   [Python中的条件语句](#-conditionals-in-python)
 -   [Python中的for循环](#-for-loops-in-python)
 -   [Python中while循环](#-while-loops-in-python)
@@ -440,7 +440,7 @@ print(f"{value} multiplied by 2 is: {value * 2}")
 5 multiplied by 2 is: 10
 ```
 
-We can also call methods within the curly braces and the value returned will be replaced in the string when we run the program:
+我们还可以在大括号中调用方法，当程序执行后，返回的值会替换掉原字符串中的函数调用:
 
 ```python
 freecodecamp = "FREECODECAMP"
@@ -448,23 +448,23 @@ freecodecamp = "FREECODECAMP"
 print(f"{freecodecamp.lower()}")
 ```
 
-The output is:
+输出:
 
 ```python
 freecodecamp
 ```
 
-#### String Methods
+#### 字符串方法
 
-Strings have methods, which represent common functionality that has been implemented by Python developers, so we can use it in our programs directly. They are very helpful to perform common operations.
+字符串的方法，都是被Python开发者实现的一些常见的功能，所以我们可以在代码中直接使用它们。这些字符串方法对执行一些常见的操作非常有用。
 
-This is the general syntax to call a string method:
+下面是调用字符串方法的一般语法：
 
 ```python
 <string_variable>.<method_name>(<arguments>)
 ```
 
-For example:
+例如：
 
 ```python
 >>> freecodecamp = "freeCodeCamp"
@@ -539,15 +539,15 @@ False
 'FREECODECAMP'
 ```
 
-To learn more about Python methods, I would recommend reading [this article](https://docs.python.org/3/library/stdtypes.html#string-methods) from the Python documentation.
+想了解更多Python方法，建议去Python官方网站阅读[这篇](https://docs.python.org/3/library/stdtypes.html#string-methods)。
 
-💡 **Tip:** All string methods return copies of the string. They do not modify the string because strings are immutable in Python.
+💡 **提示：** 所有字符串方法返回的都是一个字符串的副本。它们不会对原始字符串做修改，因为在Python中字符串时不可修改的.
 
-### Booleans in Python
+### Python中的布尔类型
 
-Boolean values are `True` and `False` in Python. They must start with an uppercase letter to be recognized as a boolean value.
+Python中布尔类型的值就只有`True`和`False`。它们必须已大写字母开头，这样Python才能识别到是布尔类型的值。
 
-For example:
+例如:
 
 ```python
 >>> type(True)
@@ -557,7 +557,7 @@ For example:
 <class 'bool'>
 ```
 
-If we write them in lowercase, we will get an error:
+如果写成了小写，会报错：
 
 ```python
 >>> type(true)
@@ -573,15 +573,15 @@ Traceback (most recent call last):
 NameError: name 'false' is not defined
 ```
 
-### Lists in Python
+### Python中的列表
 
-Now that we've covered the basic data types in Python, let's start covering the built-in data structures. First, we have lists.
+到此我们已经说完了Python的基本数据类型，现在我们来看看内置的数据结构。首先，来看列表。
 
-To define a list, we use square brackets `[]` with the elements separated by a comma.
+定义列表, 我们要用中括号`[]`，然后中括号里面是用逗号分隔的元素。
 
-**💡 Tip:** It's recommended to add a space after each comma to make the code more readable.
+**💡 提示：** 建议在每个逗号后面加一个空格，以增加代码的可读性。
 
-For example, here we have examples of lists:
+例如，下面是一些列表的例子：
 
 ```
 [1, 2, 3, 4, 5]
@@ -595,13 +595,13 @@ For example, here we have examples of lists:
 [3.4, 2.4, 2.6, 3.5]
 ```
 
-Lists can contain values of different data types, so this would be a valid list in Python:
+列表可以包含不同类型的数据，所以下面是一个合法的列表:
 
 ```
 [1, "Emily", 3.4]
 ```
 
-We can also assign a list to a variable:
+我们还可以将一个列表赋值给一个变量:
 
 ```python
 my_list = [1, 2, 3, 4, 5]
@@ -611,17 +611,17 @@ my_list = [1, 2, 3, 4, 5]
 letters = ["a", "b", "c", "d"]
 ```
 
-#### Nested Lists
+#### 列表嵌套
 
-Lists can contain values of any data type, even other lists. These inner lists are called **nested lists**.
+列表可以包含任何类型的数据，甚至包含其他的列表。 这些被包含在内部的列表叫做**嵌套列表**。
 
 ```python
 [[1, 2, 3], [4, 5, 6]]
 ```
 
-In this example, `[1, 2, 3]` and `[4, 5, 6]` are nested lists.
+上面的例子, `[1, 2, 3]`与`[4, 5, 6]`是两个嵌套的列表.
 
-Here we have other valid examples:
+再看看另外一个有效的例子:
 
 ```python
 [["a", "b", "c"], ["d", "e", "f"], ["g", "h", "i"]]
@@ -631,7 +631,7 @@ Here we have other valid examples:
 [1, [2, 3, 4], [5, 6, 7], 3.4]
 ```
 
-We can access the nested lists using their corresponding index:
+我们可以使用相应的索引来访问嵌套的列表：
 
 ```python
 >>> my_list = [[1, 2, 3], [4, 5, 6]]
@@ -643,7 +643,7 @@ We can access the nested lists using their corresponding index:
 [4, 5, 6]
 ```
 
-Nested lists could be used to represent, for example, the structure of a simple 2D game board where each number could represent a different element or tile:
+嵌套列表可以用于表示简单2D游戏板的结构，其中每个数字可以表示不同的元素或图块:
 
 ```python
 # Sample Board where: 
@@ -656,11 +656,11 @@ board = [[0, 0, 1],
          [1, 0, 3]]
 ```
 
-#### List Length
+#### 列表的长度
 
-We can use the `len()` function to get the length of a list (the number of elements it contains).
+我们可以用`len()`方法来获取列表的长度(包含的元素的个数)。
 
-For example:
+例如:
 
 ```python
 >>> my_list = [1, 2, 3, 4]
@@ -669,15 +669,15 @@ For example:
 4
 ```
 
-#### Update a Value in a List
+#### 更新列表中的元素
 
-We can update the value at a particular index with this syntax:
+更新列表中某个索引出的值，可以用下面的语法：
 
 ```python
 <list_variable>[<index>] = <value>
 ```
 
-For example:
+例如:
 
 ```python
 >>> letters = ["a", "b", "c", "d"]
@@ -688,11 +688,11 @@ For example:
 ['z', 'b', 'c', 'd']
 ```
 
-#### Add a Value to a List
+#### 向列表中添加一个值
 
-We can add a new value to the end of a list with the `.append()` method.
+我们可以用`.append()`方法向列表的尾部添加一个值。
 
-For example:
+例如：
 
 ```python
 >>> my_list = [1, 2, 3, 4]
@@ -703,11 +703,11 @@ For example:
 [1, 2, 3, 4, 5]
 ```
 
-#### Remove a Value from a List
+#### 从列表中删除一个值
 
-We can remove a value from a list with the `.remove()` method.
+我们可以使用`.remove()`方法从列表中删除一个值。
 
-For example:
+例如：
 
 ```python
 >>> my_list = [1, 2, 3, 4]
@@ -718,7 +718,7 @@ For example:
 [1, 2, 4]
 ```
 
-💡 **Tip:** This will only remove the first occurrence of the element. For example, if we try to remove the number 3 from a list that has two number 3s, the second number will not be removed:
+💡 **提示：** 这个方法只会删除找到的第一个元素。例如，假设我们想从列表中删除数字3，但列表中包含两个3，那么第二个3将不会被删除。
 
 ```python
 >>> my_list = [1, 2, 3, 3, 4]
@@ -729,9 +729,9 @@ For example:
 [1, 2, 3, 4]
 ```
 
-#### List Indexing
+#### 列表索引
 
-We can index a list just like we index strings, with indices that start from `0`:
+列表索引跟字符串的索引一样，也是从`0`开始的：
 
 ```python
 >>> letters = ["a", "b", "c", "d"]
@@ -749,15 +749,15 @@ We can index a list just like we index strings, with indices that start from `0`
 'd'
 ```
 
-#### List Slicing
+#### 列表切片
 
-We can also get a slice of a list using the same syntax that we used with strings and we can omit the parameters to use their default values. Now, instead of adding characters to the slice, we will be adding the elements of the list.
+我们还可以使用跟字符串切片相同的语法来处理列表的切片，包括省略参数来使用索引的默认值。现在，我们要做的是向列表中添加元素，而不是像字符串切片中添加字符了。
 
 ```python
 <list_variable>[start:stop:step]
 ```
 
-For example:
+例如:
 
 ```python
 >>> my_list = ["a", "b", "c", "d", "e", "f", "g", "h", "i"]
@@ -784,9 +784,9 @@ For example:
 ['i', 'h', 'g', 'f', 'e', 'd', 'c']
 ```
 
-#### List Methods
+#### 列表方法
 
-Python also has list methods already implemented to help us perform common list operations. Here are some examples of the most commonly used list methods:
+Python同样也实现了一些常用的列表方法，供我们处理一些常用的操作。下面是一些常用列表方法的使用示例：
 
 ```python
 >>> my_list = [1, 2, 3, 3, 4]
@@ -829,11 +829,11 @@ Python also has list methods already implemented to help us perform common list 
 []
 ```
 
-To learn more about list methods, I would recommend reading [this article](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists) from the Python documentation.
+想了解更多列表方法，建议去Python官网阅读[这篇](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)。
 
-### Tuples in Python
+### Python中的元组
 
-To define a tuple in Python, we use parentheses `()` and separate the elements with a comma. It is recommended to add a space after each comma to make the code more readable.
+定义元组，我们使用小括号`()`，然后小括号里面的元素用逗号分隔。建议在每个逗号后面加一个空格，以增加代码的可读性。
 
 ```python
 (1, 2, 3, 4, 5)
@@ -847,15 +847,15 @@ To define a tuple in Python, we use parentheses `()` and separate the elements w
 (3.4, 2.4, 2.6, 3.5)
 ```
 
-We can assign tuples to variables:
+我们可以将元组赋值给一个变量：
 
 ```python
 my_tuple = (1, 2, 3, 4, 5)
 ```
 
-#### Tuple Indexing
+#### 元组的索引
 
-We can access each element of a tuple with its corresponding index:
+我们可以通过元组的索引来访问它的元素：
 
 ```python
 >>> my_tuple = (1, 2, 3, 4)
@@ -873,7 +873,7 @@ We can access each element of a tuple with its corresponding index:
 4
 ```
 
-We can also use negative indices:
+我们同样可以使用负的索引：
 
 ```python
 >>> my_tuple = (1, 2, 3, 4)
@@ -891,9 +891,9 @@ We can also use negative indices:
 1
 ```
 
-#### Tuple Length
+#### 元组长度
 
-To find the length of a tuple, we use the `len()` function, passing the tuple as argument:
+为了获取元组的长度，我们可以将元组本身传入`len()`函数：
 
 ```python
 >>> my_tuple = (1, 2, 3, 4)
@@ -902,17 +902,17 @@ To find the length of a tuple, we use the `len()` function, passing the tuple as
 4
 ```
 
-#### Nested Tuples
+#### 嵌套元组
 
-Tuples can contain values of any data type, even lists and other tuples. These inner tuples are called **nested tuples**.
+元组可以包含任意数据类型，包括列表和其他的元组。这些包含在里面的元组被称为**嵌套元组**.
 
 ```python
 ([1, 2, 3], (4, 5, 6))
 ```
 
-In this example, we have a nested tuple `(4, 5, 6)` and a list. You can access these nested data structures with their corresponding index.
+下面的例子, 我们有一个被嵌套的元组`(4, 5, 6)`和一个列表。你可以通过他们相应的索引来访问它们。
 
-For example:
+例如:
 
 ```python
 >>> my_tuple = ([1, 2, 3], (4, 5, 6))
@@ -924,17 +924,17 @@ For example:
 (4, 5, 6)
 ```
 
-#### Tuple Slicing
+#### 元组切片
 
-We can slice a tuple just like we sliced lists and strings. The same principle and rules apply.
+对元组进行切片操作，就像列表和字符串一样，都是相同的原理与规则。
 
-This is the general syntax:
+下面是一般的语法：
 
 ```python
 <tuple_variable>[start:stop:step]
 ```
 
-For example:
+例如：
 
 ```python
 >>> my_tuple = (4, 5, 6, 7, 8, 9, 10)
@@ -970,9 +970,9 @@ For example:
 (8, 7, 6)
 ```
 
-#### Tuple Methods
+#### 元组方法
 
-There are two built-in tuple methods in Python:
+元组有两个内建的方法：
 
 ```python
 >>> my_tuple = (4, 4, 5, 6, 6, 7, 8, 9, 10)
@@ -984,15 +984,15 @@ There are two built-in tuple methods in Python:
 5
 ```
 
-💡 **Tip:** tuples are immutable. They cannot be modified, so we can't add, update, or remove elements from the tuple. If we need to do so, then we need to create a new copy of the tuple.
+💡 **提示：** 元组是不可变的，不可被修改，所以我们不能向元组中添加、更新、删除元素。如果你确实需要修改元组的元素，我们可以将其复制一份。
 
-#### Tuple Assignment
+#### 元组解包
 
-In Python, we have a really cool feature called Tuple Assignment. With this type of assignment, we can assign values to multiple variables on the same line.
+Python中有一个很酷的功能叫做元组解包。 利用解包操作，我们可以在一行同时向多个变量赋值。
 
-The values are assigned to their corresponding variables in the order that they appear. For example, in `a, b = 1, 2` the value `1` is assigned to the variable `a` and the value `2` is assigned to the variable `b`.
+这些值会根据其出现的顺序被赋给相对应的变量。例如，`a, b = 1, 2`中的值`1`会被赋给变量`a`，`2`会被赋给变量`b`。
 
-For example:
+例如:
 
 ```python
 # Tuple Assignment
@@ -1005,7 +1005,7 @@ For example:
 2
 ```
 
-**💡 Tip:** Tuple assignment is commonly used to swap the values of two variables:
+**💡 提示：** 元组解包常被用于交换两个变量的值：
 
 ```python
 >>> a = 1
@@ -1022,31 +1022,31 @@ For example:
 1
 ```
 
-### Dictionaries in Python
+### Python中的字典
 
-Now let's start diving into dictionaries. This built-in data structure lets us create pairs of values where one value is associated with another one.
+现在让我们开始深入字典类型。字典类型允许我们创建值对，一个值关联另外一个值。
 
-To define a dictionary in Python, we use curly brackets `{}` with the key-value pairs separated by a comma.
+定义字典, 我们通常使用大括号`{}`，大括号里面是用逗号分隔的键-值对。
 
-The key is separated from the value with a colon `:`, like this:
+键与值之间用冒号`:`分隔，像这样：
 
 ```python
 {"a": 1, "b": 2, "c"; 3}
 ```
 
-You can assign the dictionary to a variable:
+你可以将字典赋给一个变量：
 
 ```python
 my_dict = {"a": 1, "b": 2, "c"; 3}
 ```
 
-The keys of a dictionary must be of an immutable data type. For example, they can be strings, numbers, or tuples but not lists since lists are mutable.
+字典的键必须是一种不可变的数据类型。例如，它们可以是字符串、数字和元组，但不能是列表，因为列表时可变的类型。
 
--   Strings: `{"City 1": 456, "City 2": 577, "City 3": 678}`
--   Numbers: `{1: "Move Left", 2: "Move Right", 3: "Move Up", 4: "Move Down"}`
--   Tuples: `{(0, 0): "Start", (2, 4): "Goal"}`
+-   字符串类型的键: `{"City 1": 456, "City 2": 577, "City 3": 678}`
+-   数字类型的键: `{1: "Move Left", 2: "Move Right", 3: "Move Up", 4: "Move Down"}`
+-   元组类型的键: `{(0, 0): "Start", (2, 4): "Goal"}`
 
-The values of a dictionary can be of any data type, so we can assign strings, numbers, lists, tuple, sets, and even other dictionaries as the values. Here we have some examples:
+字典的值可以是任意数据类型，所以它可以被赋值为字符串、数字、列表、元组、集合，甚至其他字典也可以作为它的值。下面是一些例子：
 
 ```
 {"product_id": 4556, "ingredients": ["tomato", "cheese", "mushrooms"], "price": 10.67}
@@ -1060,9 +1060,9 @@ The values of a dictionary can be of any data type, so we can assign strings, nu
 {"id": 567, "name": "Emily", "grades": {"Mathematics": 80, "Biology": 74, "English": 97}}
 ```
 
-#### Dictionary Length
+#### 字典的长度
 
-To get the number of key-value pairs, we use the `len()` function:
+我们可以调用`len()`方法来获取键-值对的个数：
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
@@ -1071,17 +1071,17 @@ To get the number of key-value pairs, we use the `len()` function:
 4
 ```
 
-#### Get a Value in a Dictionary
+#### 从字典中获取一个值
 
-To get a value in a dictionary, we use its key with this syntax:
+要从字典中获取一个，我们可以利用它的键，语法如下：
 
 ```python
 <variable_with_dictionary>[<key>]
 ```
 
-This expression will be replaced by the value that corresponds to the key.
+上面的表达式将会被key(键)对应的值所替换。
 
-For example:
+例如：
 
 ```python
 my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
@@ -1089,21 +1089,21 @@ my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
 print(my_dict["a"])
 ```
 
-The output is the value associated to `"a"`:
+输出的是`"a"`关联的值：
 
 ```
 1
 ```
 
-#### Update a Value in a Dictionary
+#### 更新字典中的一个值
 
-To update the value associated with an existing key, we use the same syntax but now we add an assignment operator and the value:
+要更新一个已存在的键对应的值，跟获取键的值类似，只是我们需要在后面增加一个值的赋值操作：
 
 ```python
 <variable_with_dictionary>[<key>] = <value>
 ```
 
-For example:
+例如：
 
 ```
 >>> my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
@@ -1111,21 +1111,21 @@ For example:
 >>> my_dict["b"] = 6
 ```
 
-Now the dictionary is:
+现在字典是这样子了:
 
 ```python
 {'a': 1, 'b': 6, 'c': 3, 'd': 4}
 ```
 
-#### Add a Key-Value Pair to a Dictionary
+#### 向字典中增加一个键-值对
 
-The keys of a dictionary have to be unique. To add a new key-value pair we use the same syntax that we use to update a value, but now the key has to be new.
+字典的键需要是唯一的。要添加键值对，我们可以使用跟更新值相同的语法，不过只是使用一个新的键而已。
 
 ```python
 <variable_with_dictionary>[<new_key>] = <value>
 ```
 
-For example:
+例如：
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
@@ -1133,21 +1133,21 @@ For example:
 >>> my_dict["e"] = 5
 ```
 
-Now the dictionary has a new key-value pair:
+现在我们的字典有了一个新的键-值对：
 
 ```python
 {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
 ```
 
-#### Delete a Key-Value Pair in a Dictionary
+#### 从字典中删除键-值对
 
-To delete a key-value pair, we use the `del` statement:
+我们可以使用`del`语句来删除字典中的键-值对：
 
 ```python
 del <dictionary_variable>[<key>]
 ```
 
-For example:
+例如：
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
@@ -1155,15 +1155,15 @@ For example:
 >>> del my_dict["c"]
 ```
 
-Now the dictionary is:
+现在的字典如下：
 
 ```python
 {'a': 1, 'b': 2, 'd': 4}
 ```
 
-#### Dictionary Methods
+#### 字典的方法
 
-These are some examples of the most commonly used dictionary methods:
+下面是一些字典常用方法的使用示例：
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
@@ -1206,17 +1206,17 @@ dict_values([1, 2, 25, 3, 4, 5])
 {}
 ```
 
-To learn more about dictionary methods, I recommend [reading this article](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict) from the documentation.
+想了解更多字典的方法，建议去Python的官网[读这篇](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict)。
 
-## 🔸 Python Operators
+## 🔸 Python中的运算符
 
-Great. Now you know the syntax of the basic data types and built-in data structures in Python, so let's start diving into operators in Python. They are essential to perform operations and to form expressions.
+很好。 现在我们已经知道了Python中的基本数据类型与内建的数据结构，那么接下来我们来深入了解一下Python中的运算符，他们对于执行一些操作和构建表达式至关重要。
 
-### Arithmetic Operators in Python
+### Python中的算法运算符
 
-These operators are:
+算术运算符有以下这些：
 
-#### Addition: +
+#### 加法运算: +
 
 ```python
 >>> 5 + 6
@@ -1235,13 +1235,13 @@ These operators are:
 1
 ```
 
-💡 **Tip:** The last two examples are curious, right? This operator behaves differently based on the data type of the operands.
+💡 **提示：** 最后的两个示例有些奇怪，是吗？运算符的行为会根据操作数类型的不同而不同。
 
-When they are strings, this operator concatenates the strings and when they are Boolean values, it performs a particular operation.
+当它们都是字符串的时候，该操作符会将字符串相连，当它们是布尔值时，它将执行一个特定的操作。
 
-In Python, `True` is equivalent to `1` and `False` is equivalent to `0`. This is why the result is `1 + 0 = 1`
+在Python中，`True`等于`1`，`False`等于`0`。这就是为什么`1 + 0 = 1`的原因。
 
-#### Subtraction: -
+#### 减法运算: -
 
 ```python
 >>> 5 - 6
@@ -1263,7 +1263,7 @@ In Python, `True` is equivalent to `1` and `False` is equivalent to `0`. This is
 -14.0
 ```
 
-#### Multiplication: \*
+#### 乘法运算: \*
 
 ```python
 >>> 5 * 6
@@ -1297,9 +1297,9 @@ In Python, `True` is equivalent to `1` and `False` is equivalent to `0`. This is
 ''
 ```
 
-**💡 Tip:** you can "multiply" a string by an integer to repeat the string a given number of times.
+**💡 提示：** 你可以用一个数字与一个字符串"相乘"，结果会让字符串重复与相乘的这个数字相同的次数。
 
-#### Exponentiation: \*\*
+#### 指数运算: \*\*
 
 ```python
 >>> 6 ** 8
@@ -1327,7 +1327,7 @@ In Python, `True` is equivalent to `1` and `False` is equivalent to `0`. This is
 0.3333333333333333
 ```
 
-#### Division: /
+#### 除法运算: /
 
 ```python
 >>> 25 / 5
@@ -1361,9 +1361,9 @@ In Python, `True` is equivalent to `1` and `False` is equivalent to `0`. This is
 -0.75
 ```
 
-💡 **Tip:** this operator returns a `float` as the result, even if the decimal part is `.0`
+💡 **提示：** 该运算会返回一个`float`类型的结果，即时数字的小数部分是`.0`。
 
-If you try to divide by `0`, you will get a `ZeroDivisionError`:
+如果你尝试除`0`，你将会得到一个`ZeroDivisionError`错误：
 
 ```python
 >>> 5 / 0
@@ -1373,9 +1373,9 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 ```
 
-#### Integer Division: //
+#### 整除运算: //
 
-This operator returns an integer if the operands are integers. If they are floats, the result will be a float with `.0` as the decimal part because it truncates the decimal part.
+如果操作数是整数，结果将会是整数。如果操作数是浮点数，结果将会是一个带`.0`的浮点数，因为小数部分会被截断。
 
 ```python
 >>> 5 // 6
@@ -1397,7 +1397,7 @@ This operator returns an integer if the operands are integers. If they are float
 440
 ```
 
-#### Modulo: %
+#### 模运算: %
 
 ```
 >>> 1 % 5
@@ -1446,16 +1446,16 @@ This operator returns an integer if the operands are integers. If they are float
 2.3
 ```
 
-#### Comparison Operators
+#### 比较操作符
 
-These operators are:
+有以下几种比较操作:
 
--   Greater than: `>`
--   Greater than or equal to: `>=`
--   Less than: `<`
--   Less than or equal to: `<=`
--   Equal to: `==`
--   Not Equal to: `!=`
+-   大于: `>`
+-   大于等于: `>=`
+-   小于: `<`
+-   小于等于: `<=`
+-   等于: `==`
+-   不等于: `!=`
 
 These comparison operators make expressions that evaluate to either `True` or `False`. Here we have are some examples:
 

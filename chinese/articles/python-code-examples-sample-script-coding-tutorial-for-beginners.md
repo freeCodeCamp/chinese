@@ -1457,7 +1457,7 @@ ZeroDivisionError: division by zero
 -   等于: `==`
 -   不等于: `!=`
 
-These comparison operators make expressions that evaluate to either `True` or `False`. Here we have are some examples:
+这些比较运算符使表达式的计算结果为`True`或`False`。下面是一些例子：
 
 ```
 >>> 5 > 6
@@ -1506,7 +1506,7 @@ True
 False
 ```
 
-We can also use them to compare strings based on their alphabetical order:
+我们还可以使用它们根据字母顺序来比较字符串：
 
 ```python
 >>> "Hello" > "World"
@@ -1523,7 +1523,7 @@ False
 True
 ```
 
-We typically use them to compare the values of two or more variables:
+我们通常使用它们来比较两个或多个变量的值：
 
 ```python
 >>> a = 1
@@ -1548,19 +1548,19 @@ False
 True
 ```
 
-💡 **Tip:** notice that the comparison operator is `==` while the assignment operator is `=`. Their effect is different. `==` returns `True` or `False` while `=` assigns a value to a variable.
+💡 **提示：** 注意，比较运算符是`==`，而赋值运算符是`=`。它们的效果是不一样的。`==`返回`True`或`False`而`=`是将值赋值给变量。
 
-#### Comparison Operator Chaining
+#### 链式比较运算符
 
-In Python, we can use something called "comparison operator chaining" in which we chain the comparison operators to make more than one comparison more concisely.
+在Python中，我们可以使用被称为“比较运算符链”的功能。这种链接比较可以让我们更简洁的进行多个表达式的比较。
 
-For example, this checks if `a` is less than `b` and if `b` is less than `c`:
+例如，下面的语句时检查`a`是否小于`b`且`b`是否又小于`c`：
 
 ```
 a < b < c
 ```
 
-Here we have some examples:
+下面是一些例子：
 
 ```
 >>> a = 1
@@ -1586,11 +1586,11 @@ False
 True
 ```
 
-#### Logical Operators
+#### 逻辑运算符
 
-There are three logical operators in Python: `and`, `or`, and `not`. Each one of these operators has its own truth table and they are essential to work with conditionals.
+Python中有三种逻辑运算符：`与`，`或`，与`非`。这些运算符中的每一个都有自己的真值表，它们对于处理条件语句至关重要。
 
-The `and` operator:
+`与`运算:
 
 ```python
 >>> True and True
@@ -1606,7 +1606,7 @@ False
 False
 ```
 
-The `or` operator:
+`或`运算:
 
 ```python
 >>> True or True
@@ -1622,7 +1622,7 @@ True
 False
 ```
 
-The `not` operator:
+`非`运算:
 
 ```python
 >>> not True
@@ -1632,9 +1632,9 @@ False
 True
 ```
 
-These operator are used to form more complex expressions that combine different operators and variables.
+这些逻辑运算符结合不同的其他运算符或变量，来产生更复杂的表达式：
 
-For example:
+例如：
 
 ```python
 >>> a = 6
@@ -1653,16 +1653,16 @@ True
 False
 ```
 
-#### Assignment Operators
+#### 赋值操作符
 
-Assignment operators are used to assign a value to a variable.
+赋值运算符用于将值赋给一个变量。
 
-They are: `=`, `+=`, `-=`, `*=`, `%=`, `/=`, `//=`, `**=`
+赋值运算符有：`=`, `+=`, `-=`, `*=`, `%=`, `/=`, `//=`, `**=`
 
--   The `=` operator assigns the value to the variable.
--   The other operators perform an operation with the current value of the variable and the new value and assigns the result to the same variable.
+-   `=` 将值赋给一个变量。
+-   其他的运算符对变量的当前值与新值进行运算，并将结果重新赋值给变量。
 
-For example:
+例如：
 
 ```python
 >>> x = 3
@@ -1698,13 +1698,13 @@ For example:
 1.0
 ```
 
-💡 **Tips:** these operators perform bitwise operations before assigning the result to the variable: `&=`, `|=`, `^=`, `>>=`, `<<=`.
+💡 **提示：** 这些运算符在将结果赋值给变量之前会进行位运算：`&=`，`|=`，`^=`，`>>=`，`<<=`。
 
-#### Membership Operators
+#### 成员操作符
 
-You can check if an element is in a sequence or not with the operators: `in` and `not in`. The result will be either `True` or `False`.
+你可以运用操作符：`in` and `not in`来检查一个元素是否在一个序列之中。成员操作符的运算结果，要么是`True`要么是`False`。
 
-For example:
+例如：
 
 ```python
 >>> 5 in [1, 2, 3, 4, 5]
@@ -1750,7 +1750,7 @@ True
 False
 ```
 
-We typically use them with variables that store sequences, like in this example:
+我们通常将它们与存储序列的变量一起使用，比如这个例子：
 
 ```python
 >>> message = "Hello, World!"
@@ -1759,26 +1759,26 @@ We typically use them with variables that store sequences, like in this example:
 True
 ```
 
-## 🔹 Conditionals in Python
+## 🔹 Python中的条件语句
 
-Now let's see how we can write conditionals to make certain parts of our code run (or not) based on whether a condition is `True` or `False`.
+现在我们看看如何编写一个条件语句，让它使我们程序中的某些部分根据条件的`True`或`False`来执行(或者不执行)。
 
-### `if` statements in Python
+### Python中的`if`语句
 
-This is the syntax of a basic `if` statement:
+`if`语句的基本语法：
 
 ```
 if <condition>:
     <code>
 ```
 
-If the condition is `True`, the code will run. Else, if it's `False`, the code will not run.
+如果条件是`True`，代码就会执行。 相反，如果是`False`，代码不会执行。
 
-**💡 Tip:** there is a colon (`:`) at the end of the first line and the code is indented. This is essential in Python to make the code belong to the conditional.
+**💡 提示：** 第一行结尾有一个冒号(`:`)并且代码块是有缩进的。缩进在Python中是必不可少的，它能让代码块属于某个条件的范畴。
 
-Here we have some examples:
+下面是一些例子：
 
-#### False Condition
+#### False的情况
 
 ```
 x = 5
@@ -1787,13 +1787,13 @@ if x > 9:
     print("Hello, World!")
 ```
 
-The condition is `x > 9` and the code is `print("Hello, World!")`.
+条件判断是`x > 9`，代码块是`print("Hello, World!")`。
 
-In this case, the condition is `False`, so there is no output.
+上面的例子, 条件判断结果是`False`，所以不会有输出。
 
-#### True Condition
+#### True的情况
 
-Here we have another example. Now the condition is `True`:
+看另外一个例子，条件判断结果是`True`：
 
 ```
 color = "Blue"
@@ -1802,15 +1802,15 @@ if color == "Blue":
     print("This is my favorite color")
 ```
 
-The output is:
+输出：
 
 ```
 "This is my favorite color"
 ```
 
-#### Code After the Conditional
+#### 条件语句后面的代码块
 
-Here we have an example with code that runs after the conditional has been completed. Notice that the last line is not indented, which means that it doesn't belong to the conditional.
+下面的例子中，代码块会在条件判断后执行。注意最后一行代码没有缩进，这就表示它并不属于条件语句的代码块。
 
 ```python
 x = 5
@@ -1821,13 +1821,13 @@ if x > 9:
 print("End")
 ```
 
-In this example, the condition `x > 9` is `False`, so the first print statement doesn't run but the last print statement runs because it is not part of the conditional, so the output is:
+上面的例子中, 判断条件`x > 9`是`False`，所以第一个print语句不会执行，但是最后一个print语句会被执行，因为它并不属于上面条件语句的代码块，所以最终的输出会是：
 
 ```python
 End
 ```
 
-However, if the condition is `True`, like in this example:
+然而，如果条件是`True`，像下面的例子:
 
 ```python
 x = 15
@@ -1838,16 +1838,16 @@ if x > 9:
 print("End")
 ```
 
-The output will be:
+输出：
 
 ```
 Hello!
 End
 ```
 
-#### Examples of Conditionals
+#### 条件语句的例子
 
-This is another example of a conditional:
+条件语句的另外一个例子：
 
 ```python
 favorite_season = "Summer"
@@ -1856,13 +1856,13 @@ if favorite_season == "Summer":
     print("That is my favorite season too!")
 ```
 
-In this case, the output will be:
+输出：
 
 ```python
 That is my favorite season too!
 ```
 
-But if we change the value of `favorite_season`:
+如果我们改变`favorite_season`的值：
 
 ```python
 favorite_season = "Winter"
@@ -1871,13 +1871,13 @@ if favorite_season == "Summer":
     print("That is my favorite season too!")
 ```
 
-There will be no output because the condition will be `False`.
+将不会有输出，因为条件是`False`.
 
-### `if/else` statements in Python
+### Python中的`if/else`语句
 
-We can add an `else` clause to the conditional if we need to specify what should happen when the condition is `False`.
+如果我们需要指定当条件为`False`时应该做些什么，那么我们可以在条件语句中增加一个`else`字句。
 
-This is the general syntax:
+这是一般语法：
 
 ```python
 if <condition>:
@@ -1886,11 +1886,11 @@ else:
     <code>
 ```
 
-**💡 Tip:** notice that the two code blocks are indented (`if` and `else`). This is essential for Python to be able to differentiate between the code that belongs to the main program and the code that belongs to the conditional.
+**💡 提示：** 注意上面的两个代码块都有缩进(`if`与`else`)。这些缩进对于Python能区分代码块是属于if还是else语句至关重要。
 
-Let's see an example with the `else` clause:
+让我们看一个`else`子语的例子：
 
-#### True Condition
+#### True的情况
 
 ```python
 x = 15
@@ -1903,18 +1903,18 @@ else:
 print("End")
 ```
 
-The output is:
+输出:
 
 ```
 Hello!
 End
 ```
 
-When the condition of the `if` clause is `True`, this clause runs. The `else` clause doesn't run.
+当`if`的条件判断是`True`时，if子句被执行，`else`子句不会执行。
 
-#### False Condition
+#### False的情况
 
-Now the `else` clause runs because the condition is `False`.
+这次`else`子句会被执行，因为条件判断是`False`。
 
 ```python
 x = 5
@@ -1927,20 +1927,20 @@ else:
 print("End")
 ```
 
-Now the output is:
+输出:
 
 ```
 Bye!
 End
 ```
 
-### `if/elif/else` statements in Python
+### Python中的`if/elif/else`语句
 
-To customize our conditionals even further, we can add one or more `elif` clauses to check and handle multiple conditions. Only the code of the first condition that evaluates to `True` will run.
+为了进一步定制我们的条件语句，我们还可以添加一个或多个`elif`子句，用来处理多个条件判断。 只有第一个条件为`True`的子句会被执行。
 
-**💡 Tip:** `elif` has to be written after `if` and before `else`.
+**💡 提示：** `elif`必须写在`if`与`else`之间。
 
-#### First Condition True
+#### 第一个条件为True的情况
 
 ```python
 x = 5
@@ -1955,22 +1955,22 @@ else:
 print("End")
 ```
 
-We have two conditions `x < 9` and `x < 15`. Only the code block from the first condition that is `True` from top to bottom will be executed.
+这里有两个条件判断`x < 9`与`x < 15`。从上到下，只有第一个条件为`True`的代码块会被执行。
 
-In this case, the output is:
+这种情况的输出：
 
 ```
 Hello!
 End
 ```
 
-Because the first condition is `True`: `x < 9`.
+因为第一个条件为`True`：`x < 9`。
 
-#### Second Condition True
+#### 第二个条件为True的情况
 
-If the first condition is `False`, then the second condition will be checked.
+如果第一个条件为`False`，接着会检查第二个条件。
 
-In this example, the first condition `x < 9` is `False` but the second condition `x < 15` is `True`, so the code that belongs to this clause will run.
+下面的例子中，第一个条件`x < 9`是`False`，但是第二个条件`x < 15`是`True`，所以属于第二个条件的代码块会被执行。
 
 ```python
 x = 13
@@ -1985,16 +1985,16 @@ else:
 print("End")
 ```
 
-The output is:
+输出：
 
 ```
 It's great to see you
 End
 ```
 
-#### All Conditions are False
+#### 所有条件为False的情况
 
-If all conditions all `False`, then the `else` clause will run:
+如果所有条件为`False`，然后`else`子句会被执行：
 
 ```python
 x = 25
@@ -2009,16 +2009,16 @@ else:
 print("End")
 ```
 
-The output will be:
+输出：
 
 ```
 Bye!
 End
 ```
 
-#### Multiple elif Clauses
+#### 多个elif子句的情况
 
-We can add as many `elif` clauses as needed. This is an example of a conditional with two `elif` clauses:
+我们可以根据需要添加任意多的`elif`子句。下面是一个具有两个`elif`子句的例子：
 
 ```python
 if favorite_season == "Winter":

@@ -2031,54 +2031,54 @@ else:
     print("Fall is my mom's favorite season")
 ```
 
-Each condition will be checked and only the code block of the first condition that evaluates to `True` will run. If none of them are `True`, the `else` clause will run.
+每一个条件都会被检查，但只有第一个条件为`True`的代码块会被执行。如果没有为`True`的，`else`子句将会被执行。
 
-## 🔸 For Loops in Python
+## 🔸 Python中的for循环
 
-Now you know how to write conditionals in Python, so let's start diving into loops. For loops are amazing programming structures that you can use to repeat a code block a specific number of times.
+我们已经了解如何写条件语句, 现在我们来看看for循环。 For循环是一种神奇的代码结构，你可以用它来将代码重复执行你所指定的次数。
 
-This is the basic syntax to write a for loop in Python:
+Python中for循环基本语法:
 
 ```
 for <loop_variable> in <iterable>:
     <code>
 ```
 
-The iterable can be a list, tuple, dictionary, string, the sequence returned by range, a file, or any other type of iterable in Python. We will start with `range()`.
+iterable表示可迭代对象，它可以是一个列表，元组，字典，字符串，range返回的一个序列，一个文件，或者其他任意的可迭代类型的数据。下面我们就从`range()`开始。
 
-### The `range()` function in Python
+### `range()`函数
 
-This function returns a sequence of integers that we can use to determine how many iterations (repetitions) of the loop will be completed. The loop will complete one iteration per integer.
+这个函数返回一个整数序列，我们可以用它来确定循环的迭代次数。循环对每一个整数执行一次迭代。
 
-**💡 Tip:** Each integer is assigned to the loop variable one at a time per iteration.
+**💡 提示：** 每个整数在每次迭代中都会被赋给一个循环变量。
 
-This is the general syntax to write a for loop with `range()`:
+使用`range()`来创建for循环的基本语法：
 
 ```
 for <loop_variable> in range(<start>, <stop>, <step>):
     <code>
 ```
 
-As you can see, the range function has three parameters:
+就像你看到的，range函数有三个参数：
 
--   `start`: where the sequence of integers will start. By default, it's `0`.
--   `stop`: where the sequence of integers will stop (without including this value).
--   `step`: the value that will be added to each element to get the next element in the sequence. By default, it's `1`.
+-   `start`: 整数序列开始的数字，默认值是`0`。
+-   `stop`: 整数序列结束的数字(不包含)。
+-   `step`: 序列中从当前数字到下一个数字需要增加的值，默认值是`1`。
 
-You can pass 1, 2, or 3 arguments to `range()`:
+你可以传1个，2个或3个参数给`range()`：
 
--   With 1 argument, the value is assigned to the `stop` parameter and the default values for the other two parameters are used.
--   With 2 arguments, the values are assigned to the `start` and `stop` parameters and the default value for `step` is used.
--   With 3 arguments, the values are assigned to the `start`, `stop`, and `step` parameters (in order).
+-   1个参数，它会赋值给`stop`参数，其他两个参数取默认值。
+-   2个参数，会分别赋值给`start`和`stop`参数，`step`取默认值。
+-   3个参数，会根据顺序分别赋值给`start`，`stop`与`step`。
 
-Here we have some examples with **one parameter**:
+**1个参数**的例子：
 
 ```python
 for i in range(5):
     print(i)
 ```
 
-Output:
+输出：
 
 ```
 0
@@ -2088,14 +2088,14 @@ Output:
 4
 ```
 
-💡 **Tip:** the loop variable is updated automatically.
+💡 **提示：** 循环变量会被自动更新。
 
 ```python
 >>> for j in range(15):
     print(j * 2)
 ```
 
-Output:
+输出：
 
 ```python
 0
@@ -2115,14 +2115,14 @@ Output:
 28
 ```
 
-In the example below, we repeat a string as many times as indicated by the value of the loop variable:
+下面的例子中，每次迭代我们将字符串重复了跟循环变量值一样多的次数。
 
 ```python
 >>> for num in range(8):
 	print("Hello" * num)
 ```
 
-Output:
+输出：
 
 ```python
 Hello
@@ -2134,7 +2134,7 @@ HelloHelloHelloHelloHelloHello
 HelloHelloHelloHelloHelloHelloHello
 ```
 
-We can also use for loops with built-in data structures such as lists:
+我们还可以将for循环用于内置数据结构，比如列表：
 
 ```python
 >>> my_list = ["a", "b", "c", "d"]
@@ -2143,7 +2143,7 @@ We can also use for loops with built-in data structures such as lists:
 	print(my_list[i])
 ```
 
-Output:
+输出：
 
 ```
 a
@@ -2152,16 +2152,16 @@ c
 d
 ```
 
-💡 **Tip:** when you use `range(len(<seq>))`, you get a sequence of numbers that goes from `0` up to `len(<seq>)-1`. This represents the sequence of valid indices.
+💡 **提示：** 当你使用`range(len(<seq>))`，你会得到一个从`0`到`len(<seq>)-1`的整数序列。下面的例子展示了序列的有效的索引范围。
 
-These are some examples with **two parameters**:
+**2个参数**的例子：
 
 ```python
 >>> for i in range(2, 10):
 	print(i)
 ```
 
-Output:
+输出：
 
 ```python
 2
@@ -2174,14 +2174,14 @@ Output:
 9
 ```
 
-**Code:**
+**代码：**
 
 ```python
 >>> for j in range(2, 5):
 	print("Python" * j)
 ```
 
-Output:
+输出：
 
 ```python
 PythonPython
@@ -2189,7 +2189,7 @@ PythonPythonPython
 PythonPythonPythonPython
 ```
 
-**Code:**
+**代码：**
 
 ```python
 >>> my_list = ["a", "b", "c", "d"]
@@ -2198,14 +2198,14 @@ PythonPythonPythonPython
 	print(my_list[i])
 ```
 
-Output:
+输出：
 
 ```python
 c
 d
 ```
 
-**Code:**
+**代码：**
 
 ```python
 >>> my_list = ["a", "b", "c", "d"]
@@ -2214,16 +2214,16 @@ d
 	my_list[i] *= i
 ```
 
-Now the list is: `['a', 'b', 'cc', 'd']`
+现在的列表时：`['a', 'b', 'cc', 'd']`
 
-These are some examples with **three parameters**:
+**3个参数**的例子：
 
 ```python
 >>> for i in range(3, 16, 2):
 	print(i)
 ```
 
-Output:
+输出：
 
 ```python
 3
@@ -2235,14 +2235,14 @@ Output:
 15
 ```
 
-**Code:**
+**代码：**
 
 ```
 >>> for j in range(10, 5, -1):
 	print(j)
 ```
 
-Output:
+输出：
 
 ```python
 10
@@ -2252,7 +2252,7 @@ Output:
 6
 ```
 
-**Code:**
+**代码：**
 
 ```python
 >>> my_list = ["a", "b", "c", "d", "e", "f", "g"]
@@ -2261,7 +2261,7 @@ Output:
 	print(my_list[i])
 ```
 
-Output:
+输出：
 
 ```python
 g
@@ -2270,15 +2270,15 @@ e
 d
 ```
 
-### How to Iterate over Iterables in Python
+### Python中如何迭代所有可迭代对象
 
-We can iterate directly over iterables such as lists, tuples, dictionaries, strings, and files using for loops. We will get each one of their elements one at a time per iteration. This is very helpful to work with them directly.
+我们可以使用for循环直接迭代可迭代对象，例如列表、元组、字典、字符串和文件。 在每一次迭代中我们可以获取到它们元素中的一个，这对能直接使用这些对象非常有帮助。
 
-Let's see some examples:
+让我们看一些例子：
 
-#### Iterate Over a String
+#### 迭代一个字符串
 
-If we iterate over a string, its characters will be assigned to the loop variable one by one (including spaces and symbols).
+如果我们迭代一个字符串，那么它的每一个字符(包括空格和符号)都会一个一个地赋值给循环变量。
 
 ```python
 >>> message = "Hello, World!"
@@ -2302,7 +2302,7 @@ d
 !
 ```
 
-We can also iterate over modified copies of the string by calling a string method where we specify the iterable in the for loop. This will assign the copy of the string as the iterable that will be used for the iterations, like this:
+我们还可以在for循环中迭代通过调用字符串方法修改后返回的字符串副本，就像这样:
 
 ```python
 >>> word = "Hello"
@@ -2332,7 +2332,7 @@ L
 O
 ```
 
-#### Iterate Over Lists and Tuples
+#### 迭代列表和元组
 
 ```python
 >>> my_list = [2, 3, 4, 5]
@@ -2341,7 +2341,7 @@ O
 	print(num)
 ```
 
-The output is:
+输出：
 
 ```python
 2
@@ -2350,7 +2350,7 @@ The output is:
 5
 ```
 
-**Code:**
+**代码：**
 
 ```python
 >>> my_list = (2, 3, 4, 5)
@@ -2362,7 +2362,7 @@ The output is:
 		print("Odd")
 ```
 
-Output:
+输出：
 
 ```python
 Even
@@ -2371,22 +2371,22 @@ Even
 Odd
 ```
 
-### Iterate Over the Keys, Values, and Key-Value Pairs of Dictionaries
+### 迭代字典所有的键、所有的值以及所有的键值对
 
-We can iterate over the keys, values, and key-value pairs of a dictionary by calling specific dictionary methods. Let's see how.
+我们可以通过调用字典特定的方法来对其所有的键、值以及键值对进行迭代，让我们看看是怎么做到的：
 
-To **iterate over the** **keys**, we write:
+要**迭代** **所有键**，可以这样：
 
 ```python
 for <var> in <dictionary_variable>:
     <code>
 ```
 
-We just write the name of the variable that stores the dictionary as the iterable.
+我们只要将可迭代对象换成字典变量的名称即可。
 
-**💡 Tip:** you can also write `<dictionary_variable>.keys()` but writing the name of the variable directly is more concise and it works exactly the same.
+**💡 提示：** 你还可以写成`<dictionary_variable>.keys()`，但直接使用字典对象的变量名称会更方便，且它们的效果是一样的。
 
-For example:
+例如：
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3}
@@ -2400,16 +2400,16 @@ b
 c
 ```
 
-**💡 Tip:** you can assign any valid name to the loop variable.
+**💡 提示：** 你可以给循环变量赋一个任意有效的名称。
 
-To **iterate over the** **values**, we use:
+要**迭代** **所有值**，我们可以：
 
 ```python
 for <var> in <dictionary_variable>.values():
     <code>
 ```
 
-For example:
+例如：
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3}
@@ -2423,14 +2423,14 @@ For example:
 3
 ```
 
-To **iterate over the** **key-value pairs**, we use:
+要**迭代** **所有键值对**，我们可以：
 
 ```python
 for <key>, <value> in <dictionary_variable>.items():
     <code>
 ```
 
-💡 **Tip:** we are defining two loop variables because we want to assign the key and the value to variables that we can use in the loop.
+💡 **提示：** 我们需要定义两个循环变量，因为循环中一个对应键，一个对应值。
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3}
@@ -2444,7 +2444,7 @@ b 2
 c 3
 ```
 
-If we define only one loop variable, this variable will contain a tuple with the key-value pair:
+如果我们只定义了一个循环变量，它的值将会是一个包含键和值的元组：
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3}
@@ -2457,17 +2457,17 @@ If we define only one loop variable, this variable will contain a tuple with the
 ('c', 3)
 ```
 
-### Break and Continue in Python
+### 循环中断(break)和跳过(continue)
 
-Now you know how to iterate over sequences in Python. We also have loop control statements to customize what happens when the loop runs: `break` and `continue`.
+现在我们已经知道如何对序列进行了，我们还有循环控制语句来自定义循环运行时发生的情况：`break`与`continue`。
 
-#### The Break Statement
+#### Break语句
 
-The `break` statement is used to stop the loop immediately.
+`break`用于立即停止循环。
 
-When a `break` statement is found, the loop stops and the program returns to its normal execution beyond the loop.
+当发现一个`break`语句，循环会停止，程序会回到循环之外正常执行。
 
-In the example below, we stop the loop when an even element is found.
+下面的例子中，当我找到一个元素时终止了循环。
 
 ```python
 >>> my_list = [1, 2, 3, 4, 5]
@@ -2486,13 +2486,13 @@ Even: 2
 break
 ```
 
-#### The Continue Statement
+#### Continue语句
 
-The `continue` statement is used to skip the rest of the current iteration.
+`continue`用于跳过当前迭代。
 
-When it is found during the execution of the loop, the current iteration stops and a new one begins with the updated value of the loop variable.
+当循环执行时遇到`continue`语句，当前迭代会被停止，新的迭代会以更新后的循环变量值开始。
 
-In the example below, we skip the current iteration if the element is even and we only print the value if the element is odd:
+下面的例子中，当元素时偶数的时候我们跳过当前迭代，奇数的时候我们输出元素的值：
 
 ```python
 >>> my_list = [1, 2, 3, 4, 5]
@@ -2511,13 +2511,13 @@ continue
 Odd: 5
 ```
 
-### The zip() function in Python
+### Python中的zip()函数
 
-`zip()` is an amazing built-in function that we can use in Python to iterate over multiple sequences at once, getting their corresponding elements in each iteration.
+`zip()`是一个神奇的内置函数，我们可以使用它一次迭代多个序列，并且在每次迭代中我们可以获取到每个序列中对应的元素。
 
-We just need to pass the sequences as arguments to the `zip()` function and use this result in the loop.
+我们只需要将各个序列作为参数传给`zip()`函数，并且将其返还的结果作为可迭代对象放到循环中即可。
 
-For example:
+例如：
 
 ```python
 >>> my_list1 = [1, 2, 3, 4]
@@ -2533,13 +2533,13 @@ For example:
 4 8
 ```
 
-### The enumerate() Function in Python
+### Python中的enumerate()函数
 
-You can also keep track of a counter while the loop runs with the `enum()` function. It is commonly used to iterate over a sequence and get the corresponding index.
+你还可以在循环中使用`enum()`函数来对循环进行跟踪和计数。它通常被用于迭代一个序列，并获取元素相应的索引。
 
-**💡 Tip:** By default, the counter starts at `0`.
+**💡 提示：** 默认情况下，计数器的开始值时`0`。
 
-For example:
+例如：
 
 ```python
 >>> my_list = [5, 6, 7, 8]
@@ -2568,7 +2568,7 @@ For example:
 4 o
 ```
 
-If you start the counter from `0`, you can use the index and the current value in the same iteration to modify the sequence:
+如果你从`0`开始计数，那么你可以在同一迭代中使用索引和当前值来修改序列。
 
 ```python
 >>> my_list = [5, 6, 7, 8]
@@ -2580,7 +2580,7 @@ If you start the counter from `0`, you can use the index and the current value i
 [15, 18, 21, 24]
 ```
 
-You can start the counter from a different number by passing a second argument to `enumerate()`:
+给`enumerate()`函数传入第二个参数，可以让我们从不同的起始值开始计数：
 
 ```python
 >>> word = "Hello"
@@ -2596,13 +2596,13 @@ You can start the counter from a different number by passing a second argument t
 6 o
 ```
 
-#### The else Clause
+#### else子句
 
-For loops also have an `else` clause. You can add this clause to the loop if you want to run a specific block of code when the loop completes all its iterations without finding the `break` statement.
+For循环还有一个`else`子句。你可以在`else`子句中添加额外的代码附加到for循环的后面，只有当for循环的break语句没有被执行到的时候它才会被执行。
 
-**💡 Tip:** if `break` is found, the `else` clause doesn't run and if `break` is not found, the `else` clause runs.
+**💡 提示：** 如果`break`语句被执行，`else`子句不会执行；如果`break`没有被执行，`else`子句就会被执行。
 
-In the example below, we try to find an element greater than 6 in the list. That element is not found, so `break` doesn't run and the `else` clause runs.
+下面的例子中，我们尝试在列表中找到一个大于6的元素，但是没找到，所以`break`语句没有被执行，而`else`语句被执行了。
 
 ```python
 my_list = [1, 2, 3, 4, 5]
@@ -2615,13 +2615,13 @@ else:
     print("Not Found")
 ```
 
-The output is:
+输出：
 
 ```
 Not Found
 ```
 
-However, if the `break` statement runs, the `else` clause doesn't run. We can see this in the example below:
+但是，如果`break`语句执行了，`else`不会被执行。从下面的例子中我们可以看到这一点：
 
 ```python
 my_list = [1, 2, 3, 4, 5, 8] # Now the list has the value 8
@@ -2634,28 +2634,28 @@ else:
     print("Not Found")
 ```
 
-The output is:
+输出：
 
 ```
 Found
 ```
 
-## 🔹 While Loops in Python
+## 🔹 Python中的While循环
 
-While loops are similar to for loops in that they let us repeat a block of code. The difference is that while loops run while a condition is `True`.
+While循环跟for循环一样，都是让我们可以重复执行一个代码块。 不同之处是while与执行之前有一个条件判断要为`True`。
 
-In a while loop, we define the condition, not the number of iterations. The loop stops when the condition is `False`.
+在while循环中，我们要定义一个条件语句，它不是数字的迭代。当条件为`False`时终止循环。
 
-This is the general syntax of a while loop:
+while循环的通用语法：
 
 ```python
 while <condition>:
     <code>
 ```
 
-💡 **Tip:** in while loops, you must update the variables that are part of the condition to make sure that the condition will eventually become `False`.
+💡 **提示：** 在while循环中, 循环变量会作为条件语句的一部分，我们必须要更新这个循环变量，以确保条件语句最终会变为`False`。
 
-For example:
+例如：
 
 ```python
 >>> x = 6
@@ -2703,14 +2703,14 @@ Hello
 *
 ```
 
-#### Break and Continue
+#### Break与Continue
 
-We can also use `break` and `continue` with while loops and they both work exactly the same:
+在while循环中我们同样可以使用`break`和`continue`，它们工作的原理跟for循环是完全一样的：
 
--   `break` stops the while loop immediately.
--   `continue` stops the current iteration and starts the next one.
+-   `break` 立即停止while循环.
+-   `continue` 停止当前迭代并开始下一个迭代.
 
-For example:
+例如：
 
 ```python
 >>> x = 5
@@ -2745,11 +2745,11 @@ Odd: 11
 Odd: 13
 ```
 
-#### The `else` Clause
+#### `else`子句
 
-We can also add an `else` clause to a while loop. If `break` is found, the `else` clause doesn't run but if the `break` statement is not found, the `else` clause runs.
+我们同样可以给while循环添加一个`else`子句。如果`break`被执行，`else`子句不会执行，如果`break`没有被执行，`else`子句就会被执行。
 
-In the example below, the `break` statement is not found because none of the numbers are even before the condition becomes `False`, so the `else` clause runs.
+看下面的例子：
 
 ```python
 x = 5
@@ -2764,7 +2764,7 @@ else:
 	print("All numbers were odd")
 ```
 
-This is the output:
+输出：
 
 ```python
 5
@@ -2775,7 +2775,7 @@ This is the output:
 All numbers were odd
 ```
 
-But in this version of the example, the `break` statement is found and the `else` clause doesn't run:
+但是下面的例子中，`break`会被执行，`else`不会被执行：
 
 ```
 x = 5
@@ -2790,22 +2790,22 @@ else:
 	print("All numbers were odd")
 ```
 
-The output is:
+输出：
 
 ```python
 5
 Even number found
 ```
 
-#### Infinite While Loops
+#### 无限While循环
 
-When we write and work with while loops, we can have something called an "infinite loop." If the condition is never `False`, the loop will never stop without external intervention.
+当我们在处理循环的时候，可能会遇到“无限循环”。 如果条件永远不为`False`，在无外部干扰的情况下，循环将永远不会停止。
 
-This usually happens when the variables in the condition are not updated properly during the execution of the loop.
+这种情况通常发生在我们没能正确的更新条件语句中的循环变量。
 
-**💡 Tip:** you must make the necessary updates to these variables to make sure that the condition will eventually evaluate to `False`.
+**💡 提示：** 你必须对这些变量进行必要的更新，以确保条件语句最终的结果为`False`。
 
-For example:
+例如：
 
 ```python
 >>> x = 5
@@ -2829,15 +2829,15 @@ For example:
 # The output continues indefinitely
 ```
 
-💡 **Tip:** to stop this process, type `CTRL + C`. You should see a `KeyboardInterrupt` message.
+💡 **提示：** 要结束这个进程，你可以按`CTRL + C`，你将会看到一个`KeyboardInterrupt`消息。
 
-## 🔸 Nested Loops in Python
+## 🔸 循环嵌套
 
-We can write for loops within for loops and while loops within while loops. These inner loops are called nested loops.
+我们可以在for循环里面再写一个for循环，或者在while循环里面再写一个while循环。这种循环里面的循环就叫做嵌套的循环。
 
-💡 **Tip:** the inner loop runs for each iteration of the outer loop.
+💡 **提示：** 外部循环的每一次迭代，内部循环都会执行一次。
 
-### Nested For Loops in Python
+### 嵌套的For循环
 
 ```python
 >>> for i in range(3):
@@ -2853,7 +2853,7 @@ We can write for loops within for loops and while loops within while loops. Thes
 2 1
 ```
 
-If we add print statements, we can see what is happening behind the scenes:
+如果我们添加print语句，我们将会发现这里背后发生了什么：
 
 ```python
 >>> for i in range(3):
@@ -2884,9 +2884,9 @@ Inner Loop
 j = 1
 ```
 
-The inner loop completes two iterations per iteration of the outer loop. The loop variables are updated when a new iteration starts.
+外部循环每迭代一次，内部循环会迭代两次。 内部和外部循环的循环变量在各自迭代一次后都会被更新。
 
-This is another example:
+另外一个例子：
 
 ```python
 >>> num_rows = 5
@@ -2904,9 +2904,9 @@ This is another example:
 *
 ```
 
-### Nested While Loops in Python
+### 嵌套的While循环
 
-Here we have an example of nested while loops. In this case, we have to update the variables that are part of each condition to guarantee that the loops will stop.
+下面是一个while循环嵌套的例子。 在这种情况下，我们必须更新作为条件语句的一部分的循环变量，以保证循环的终止。
 
 ```python
 >>> i = 5
@@ -2931,22 +2931,22 @@ Here we have an example of nested while loops. In this case, we have to update t
 1 1
 ```
 
-💡 **Tip:** we can also have for loops within while loops and while loops within for loops.
+💡 **提示：** 我们同样可以将fow循环写在while循环里面，或者将while循环写到for循环里面。
 
-## 🔹 Functions in Python
+## 🔹 Python的函数
 
-In Python, we can define functions to make our code reusable, more readable, and organized. This is the basic syntax of a Python function:
+在Python中，我们可以定义函数来使我们的代码可重用、更具可读性和组织性。下面是函数的基本语法：
 
 ```python
 def <function_name>(<param1>, <param2>, ...):
     <code>
 ```
 
-**💡 Tip:** a function can have zero, one, or multiple parameters.
+**💡 提示：** 函数可以有0个，1个或多个参数。
 
-### Function with No Parameters in Python
+### 无参数函数
 
-A function with no parameters has an empty pair of parentheses after its name in the function definition. For example:
+函数定义时，函数名后跟一对空的括号，那它就是无参数函数。例如：
 
 ```python
 def print_pattern():
@@ -2955,7 +2955,7 @@ def print_pattern():
         print("*" * size)
 ```
 
-This is the output when we call the function:
+调用函数时的输出：
 
 ```python
 >>> print_pattern()
@@ -2965,25 +2965,25 @@ This is the output when we call the function:
 ****
 ```
 
-**💡 Tip:** You have to write an empty pair of parentheses after the name of the function to call it.
+**💡 提示：** 在调用的时候，你必须在函数名后加一对空括号。
 
-### Function with One Parameter in Python
+### 有1个参数的函数
 
-A function with one or more parameters has a list of parameters surrounded by parentheses after its name in the function definition:
+函数定义时，函数名后的括号中是一个或多个参数的列表。
 
 ```python
 def welcome_student(name):
     print(f"Hi, {name}! Welcome to class.")
 ```
 
-When we call the function, we just need to pass one value as argument and that value will be replaced where we use the parameter in the function definition:
+当调用函数时，我们只需要传递一个值作为参数，该值会被函数定义中使用参数的地方替代：
 
 ```python
 >>> welcome_student("Nora")
 Hi, Nora! Welcome to class.
 ```
 
-Here we have another example – a function that prints a pattern made with asterisks. You have to specify how many rows you want to print:
+再看另外一个例子 – 一个打印由星号构成的图案的函数。你需要指定所要打印的行数：
 
 ```python
 def print_pattern(num_rows):
@@ -2993,7 +2993,7 @@ def print_pattern(num_rows):
         print()
 ```
 
-You can see the different outputs for different values of `num_rows`:
+你可以看到不同的`num_rows`值，输出不同的结果：
 
 ```
 >>> print_pattern(3)
@@ -3019,16 +3019,16 @@ You can see the different outputs for different values of `num_rows`:
 *
 ```
 
-### Functions with Two or More Parameters in Python
+### 2个或多个参数的函数
 
-To define two or more parameters, we just separate them with a comma:
+为了定义2个或多个参数，我们只需要将它们用逗号进行分割：
 
 ```
 def print_sum(a, b):
     print(a + b)
 ```
 
-Now when we call the function, we must pass two arguments:
+当调用上面的函数时，我们必须得传2个参数：
 
 ```python
 >>> print_sum(4, 5)
@@ -3044,7 +3044,7 @@ Now when we call the function, we must pass two arguments:
 8
 ```
 
-We can adapt the function that we just saw with one parameter to work with two parameters and print a pattern with a customized character:
+我们可以将刚刚看到的带有一个参数的函数调整为使用两个参数并打印带有自定义字符的图案：
 
 ```python
 def print_pattern(num_rows, char):
@@ -3054,7 +3054,7 @@ def print_pattern(num_rows, char):
 		print()
 ```
 
-You can see the output with the customized character is that we call the function passing the two arguments:
+你可以看到下面带有自定义字符的输出，是通过我们传了2个参数的调用输出的。
 
 ```
 >>> print_pattern(5, "A")
@@ -3087,26 +3087,26 @@ A
 #
 ```
 
-### How to Return a Value in Python
+### 如何返回一个值
 
-Awesome. Now you know how to define a function, so let's see how you can work with return statements.
+很好。现在你已经知道了如何定义一个函数，那么让我们看看如何使用return语句。
 
-We will often need to return a value from a function. We can do this with the `return` statement in Python. We just need to write this in the function definition:
+我们经常需要从函数中返回一个值，而`return`语句可以做到。我们只需要将return语句加到函数的定义中。
 
 ```python
 return <value_to_return>
 ```
 
-**💡 Tip:** the function stops immediately when `return` is found and the value is returned.
+**💡 提示：** 当发现`return`语句时，函数会立即停止执行并返回值。
 
-Here we have an example:
+例如：
 
 ```python
 def get_rectangle_area(length, width):
     return length * width
 ```
 
-Now we can call the function and assign the result to a variable because the result is returned by the function:
+现在我们可以调用该函数并将结果赋给一个变量，因为结果是由该函数返回的。
 
 ```python
 >>> area = get_rectangle_area(4, 5)
@@ -3114,9 +3114,9 @@ Now we can call the function and assign the result to a variable because the res
 20
 ```
 
-We can also use `return` with a conditional to return a value based on whether a condition is `True` or `False`.
+我们也可以用条件语句跟`return`语句一起使用，return会根据条件是`True`还是`False`来返回一个值。
 
-In this example, the function returns the first even element found in the sequence:
+下面的例子中，函数返回序列中找到的第一个元素：
 
 ```python
 def get_first_even(seq):
@@ -3127,7 +3127,7 @@ def get_first_even(seq):
             return None
 ```
 
-If we call the function, we can see the expected results:
+如果我们调用函数，你将会看到预期的结果：
 
 ```python
 >>> value1 = get_first_even([2, 3, 4, 5])
@@ -3141,9 +3141,9 @@ If we call the function, we can see the expected results:
 None
 ```
 
-💡 **Tip:** if a function doesn't have a `return` statement or doesn't find one during its execution, it returns `None` by default.
+💡 **提示：** 如果函数没有`return`语句，函数将会返回默认值`None`。
 
-The [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/#programming-recommendations) recommends using return statements consistently. It mentions that we should:
+[Python代码的风格指南](https://www.python.org/dev/peps/pep-0008/#programming-recommendations) 建议我们一贯第使用返回语句。我们应该：
 
 > Be consistent in return statements. Either all return statements in a function should return an expression, or none of them should. If any return statement returns an expression, any return statements where no value is returned should explicitly state this as return None, and an explicit return statement should be present at the end of the function (if reachable)
 
@@ -4390,13 +4390,13 @@ According to the [Style Guide for Python Code](https://www.python.org/dev/peps/p
 
 > **Wildcard imports** (from <module> import \*) should be avoided, as they make it unclear which names are present in the namespace, confusing both readers and many automated tools.
 
-## 🔹 List and Dictionary Comprehension in Python
+## 🔹 Python中的列表与字典推导
 
-A really nice feature of Python that you should know about is list and dictionary comprehension. This is just a way to create lists and dictionaries more compactly.
+Python中你应该知道的一个很棒的功能特性是列表与字典推导功能。它们是一种更加紧凑地创建列表和字典的方法。
 
-### List Comprehension in Python
+### 列表推导
 
-The syntax used to define list comprehensions usually follows one of these four patterns:
+要定义列表推导，我们可以使用下面四种语法模式中的任意一种：
 
 ```
 [<value_to_include> for <var> in <sequence>]
@@ -4414,9 +4414,9 @@ The syntax used to define list comprehensions usually follows one of these four 
 [<value> for <var1> in <sequence1> for <var2> in <sequence2> if <condition>]
 ```
 
-**💡 Tip:** you should only use them when they do not make your code more difficult to read and understand.
+**💡 提示：** 列表推导一般使用在一些简单逻辑的情形，就是说使用它们时，我们不应该让我们的代码变得难以阅读和理解。
 
-Here we have some examples:
+下面是一些例子：
 
 ```python
 >>> [i for i in range(4, 15)]
@@ -4438,14 +4438,14 @@ Here we have some examples:
 [9, 16, 25]
 ```
 
-### List Comprehensions vs. Generator Expressions in Python
+### 列表推导 vs. 生成器表达式
 
-List comprehensions are defined with square brackets `[]`. This is different from generator expressions, which are defined with parentheses `()`. They look similar but they are quite different. Let's see why.
+列表推导使用的是中括号`[]`。而生成器表达式用的是括号`()`。它们看上去相似，但却有很大的不同。让我们看看为啥。
 
--   **List comprehensions** generate the entire sequence at once and store it in memory.
--   **Generator expressions** yield the elements one at a time when they are requested.
+-   **列表推导** 一次产生整个序列且整个序列都存储在内存中。
+-   **生成器表达式** 当元素被要求时，一次产生一个元素。
 
-We can check this with the `sys` module. In the example below, you can see that their size in memory is very different:
+我们可以通过`sys`模块来检查上述不同。在下面的例子中，你可以看到他们的大小在内存中差别很大。
 
 ```
 >>> import sys
@@ -4455,9 +4455,9 @@ We can check this with the `sys` module. In the example below, you can see that 
 56
 ```
 
-We can use generator expressions to iterate in a for loop and get the elements one at a time. But if we need to store the elements in a list, then we should use list comprehension.
+我们可以使用生成器表达式在for循环中迭代并一次获取一个元素。但如果你需要将元素存储到列表中，你应该使用列表推导。
 
-### Dictionary Comprehension in Python
+### 字典推导
 
 Now let's dive into dictionary comprehension. The basic syntax that we need to use to define a dictionary comprehension is:
 
@@ -4490,6 +4490,6 @@ This is an example with a conditional where we take an existing dictionary and c
 {'Nora': 78, 'Gino': 100, 'Lulu': 67}
 ```
 
-****I** really **hope you liked this article and found it helpful.**** Now you know how to write and work with the most important elements of Python.
+****I** really **hope you liked this article and found it helpful.** ** Now you know how to write and work with the most important elements of Python.
 
 ⭐ [Subscribe to my YouTube channel](https://www.youtube.com/channel/UCng0h8WiHLmT57JJ8At4LfQ) and follow me on [Twitter](https://twitter.com/EstefaniaCassN) to find more coding tutorials and tips. Check out my online course [Python Exercises for Beginners: Solve 100+ Coding Challenges](https://www.udemy.com/course/python-exercises-for-beginners-solve-coding-challenges/?referralCode=804D1EFAF779D07914D2)

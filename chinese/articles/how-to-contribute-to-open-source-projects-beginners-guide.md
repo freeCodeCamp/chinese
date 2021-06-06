@@ -1,6 +1,6 @@
 > -  原文地址：[How to Contribute to Open Source  Projects – A Beginner's Guide](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-projects-beginners-guide/)
 > -  原文作者：[Hillary NyakundiHillary Nyakundi](https://www.freecodecamp.org/news/author/larymak/)
-> -  译者：
+> -  译者：Blank-Grid
 > -  校对者：
 
 ![How to Contribute to Open Source  Projects – A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/uide-to-writting-a-good-readme-file--1-.png)

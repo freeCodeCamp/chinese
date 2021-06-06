@@ -3145,40 +3145,40 @@ None
 
 [Python代码的风格指南](https://www.python.org/dev/peps/pep-0008/#programming-recommendations) 建议我们一贯第使用返回语句。我们应该：
 
-> Be consistent in return statements. Either all return statements in a function should return an expression, or none of them should. If any return statement returns an expression, any return statements where no value is returned should explicitly state this as return None, and an explicit return statement should be present at the end of the function (if reachable)
+> 返回语句要保持一致。 函数中的return语句，要么所有的都返回一个表达式，要么都不要返回。如果确定让所有返回语句都返回一个表达式，那么对于那些没有返回值的函数应该明确地说明返回值为None, 且在函数的结尾要有一个显式的return语句(如果可以执行到return语句)。
 
-### Default Arguments in Python
+### 默认参数
 
-We can assign default arguments for the parameters of our function. To do this, we just need to write `<parameter>=<value>` in the list of parameters.
+对于函数，我们可以使用参数的默认值作为参数，你只需要在参数列表中使用`<parameter>=<value>`这样的语法。
 
-**💡 Tip:** The [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/#other-recommendations) mentions that we shouldn't "use spaces around the = sign when used to indicate a keyword argument."
+**💡 提示：** [Python代码的风格指南](https://www.python.org/dev/peps/pep-0008/#other-recommendations) 中说到“我们不应该在关键字参数赋值的 = 两边使用空格”。
 
-In this example, we assign the default value 5 to the parameter `b`. If we omit this value when we call the function, the default value will be used.
+下面的例子中，我们给参数`b`赋了一个默认值5。当函数调用时，如果我们省略参数`b`，`b`的默认值5将会被使用。
 
 ```
 def print_product(a, b=5):
     print(a * b)
 ```
 
-If we call the function without this argument, you can see the output:
+省略参数`b`的调用, 我们看到的输出:
 
 ```python
 >>> print_product(4)
 20
 ```
 
-We confirm that the default argument 5 was used in the operation.
+从上面的结果可以确定的是，运算中确实使用了默认值5。
 
-But we can also assign a custom value for `b` by passing a second argument:
+我们还可以给参数`b`赋一个自定义的值：
 
 ```python
 >>> print_product(3, 4)
 12
 ```
 
-💡 **Tip:** parameters with default arguments have to be defined at the end of the list of parameters. Else, you will see this error: `SyntaxError: non-default argument follows default argument`.
+💡 **提示：** 带有默认值的参数，需要放在参数列表的最后面。 否则，你会看到一个错误：`语法错误：非默认值参数放到了默认值参数后面了`。
 
-Here we have another example with the function that we wrote to print a pattern. We assign the default value `"*"` to the `char` parameter.
+下面是用来打印图案函数的另外的一个例子。我们将`"*"`作为默认值赋值给`char`参数。
 
 ```
 def print_pattern(num_rows, char="*"):
@@ -3188,7 +3188,7 @@ def print_pattern(num_rows, char="*"):
 		print()
 ```
 
-Now we have the option to use the default value or customize it:
+现在我们可以选择用默认值或者自己赋一个值：
 
 ```python
 >>> print_pattern(5)
@@ -3207,11 +3207,11 @@ Now we have the option to use the default value or customize it:
 &
 ```
 
-## 🔸 Recursion in Python
+## 🔸 Python中的递归
 
-A recursive function is a function that calls itself. These functions have a base case that stops the recursive process and a recursive case that continues the recursive process by making another recursive call.
+一个递归函数就是能调用自己的函数。 这些递归函数都有一个用于结束递归过程的基本情况，还有通过进行另一个递归调用来继续递归过程的递归情况。
 
-Here we have some examples in Python:
+下面是一些例子：
 
 ```python
 def factorial(n):
@@ -3221,7 +3221,7 @@ def factorial(n):
         return n * factorial(n-1)
 ```
 
-Recursive Factorial Function
+递归实现的阶乘函数
 
 ```python
 def fibonacci(n):
@@ -3231,7 +3231,7 @@ def fibonacci(n):
         return fibonacci(n-1) + fibonacci(n-2)
 ```
 
-The Fibonacci Function
+斐波那契函数
 
 ```python
 def find_power(a, b):
@@ -3241,9 +3241,9 @@ def find_power(a, b):
         return a * find_power(a, b-1)
 ```
 
-Find a Power Recursively
+递归求幂
 
-## 🔹 Exception Handling in Python
+## 🔹 Python中的异常处理
 
 An error or unexpected event that that occurs while a program is running is called an **exception**. Thanks to the elements that we will see in just a moment, we can avoid terminating the program abruptly when this occurs.
 

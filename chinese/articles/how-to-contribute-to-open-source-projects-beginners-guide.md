@@ -6,19 +6,20 @@
 ![How to Contribute to Open Source  Projects – A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/uide-to-writting-a-good-readme-file--1-.png)
 
 If you're a developer, you've probably come across the term "open source." If you've ever wondered what it's all about and how to contribute, you are in exactly the right place.
-
+如果您是一名开发者，您可能会遇到“开源”这个词。 如果您曾想知道它的全部内容以及如何为其做贡献，那么您来对地方了。
 I put aside all my fears about how and what to contribute during Hacktoberfest 2020, and made my ever first contribution to the open source world. Since it was my first time, I started with some beginner friendly projects and slowly got more advanced.
-
+在 Hacktoberfest 2020 期间，我抛开了所有我对如何以及贡献什么的恐惧，并为开源世界做出了我的第一个贡献。 由于这是我第一次，我从一些对初学者友好的项目开始，然后慢慢提高。
 Now, if you're a new developer you are probably wondering what exactly is open source? How can you get started? What should you expect? Well, in this article we will cover all this and more.
-
+现在，如果您是一名新开发人员，您可能想知道开源到底是什么？ 如何开始？ 你应该期待什么？ 好的，在本文中，我们将涵盖所有这些内容甚至更多。
 ## What is Open Source?
-
+##什么是开源？
 Open source refers to source code that is made available to the public to view, use, modify, and distribute under a permissive license.
-
+开源是指在许可证许可下向公众提供可以查看、使用、修改和分发的源代码。
 It's often in a company's or person's best interest to open-source their code, whether they're an individual, a corporation, a small business, a non-profit, or a government agency.
+开源代码通常符合公司或个人的最大利益，无论他们是个人、公司、小型企业、非营利组织还是政府机构。
 
 Contributing to open source projects can be a rewarding way to learn, teach, share, and build experience. There are plenty of reasons why you should contribute to an open source project, such as:
-
+为开源项目做出贡献是一种学习、教授、分享和积累经验的有益方式。 您应该为开源项目做出贡献的原因有很多，例如：
 -   To improve the software you rely on daily
 -   To find a mentor if you need one
 -   To learn new skills
@@ -26,13 +27,20 @@ Contributing to open source projects can be a rewarding way to learn, teach, sha
 -   To gain a much deeper knowledge about the software you're using
 -   To build up your reputation and help grow your career
 -   Plus, it's fun and gives you personal satisfaction
+- 改进您每天使用的软件
+- 如果需要，可以找一位导师
+- 学习新技能
+- 分享你的技能
+- 更深入地了解您正在使用的软件
+- 建立声誉并帮助发展您的事业
+- 另外，它很有趣，让您感觉很棒
 
 _What is your motivation to contribute to open source projects? Let me know by responding to this post or via [larymak1](https://twitter.com/larymak1)._
-
+您为开源项目做出贡献的动机是什么？ 通过回复这篇文章或通过 [larymak 1](https://twitter.com/larymak1) 告诉我。
 ## How to Contribute to Open Source
-
+## 如何为开源做贡献
 Contributing to an open source project does not necessarily mean that you have to contribute to the codebase. You can contribute to open source in many different ways, like:
-
+为开源项目做贡献并不一定意味着您必须为代码库做贡献。 您可以通过多种不同方式为开源做出贡献，例如：
 -   You can add a description to a project's documentation to elaborate on a certain point
 -   You can give guidance on a specific project
 -   You can add examples to show how the code works
@@ -41,14 +49,26 @@ Contributing to an open source project does not necessarily mean that you have t
 -   You can answer questions about a project (like on Stack Overflow or Reddit)
 -   You can offer to mentor another contributor
 -   You can fix typos and arrange the project's work folder correctly
+- 您可以在项目文档中添加描述以详细说明某一点
+- 您可以针对特定项目提供指南
+- 您可以添加示例来展示代码的工作原理
+- 您可以为项目编写教程
+- 您可以为项目添加翻译
+- 您可以回答有关项目的问题（比如在 Stack Overflow 或 Reddit 上）
+- 您可以对另一位贡献者提供建议
+- 您可以修复错误并正确地安排项目的工作文件夹
 
 All of these ways and more count towards contributing to an open-source project.
+所有这些以及更多的方式都可以为开源项目做贡献。
 
 ## What to Know Before You Contribute to an Open Source Project
+## 为开源项目做出贡献之前需要了解的内容
 
 Every open source community is different. Each community has different people in it with different roles and rewards offered. They also each have their own rules and expectations for contributing.
+每个开源社区都是不同的。 每个社区都有不同的人，有着不同的角色和奖励。 他们每个人都有自己的职责和预期贡献。
 
 ### A typical open source project will have these people:
+###一个典型的开源项目会有这些人：
 
 -   **Author** - This is the person who created the project. They have the power to assign new roles to other members to help with the project's maintenance.
 -   **Owner** - The ownder has administrative ownership of the project (and _can be the same person as the author_)
@@ -56,9 +76,17 @@ Every open source community is different. Each community has different people in
 -   **Contributors** - Contributors add to the project in one way or another. They follow the same code review process, are subject to the same requirements on code style, and so on.
 -   **Community Members/Users** - These valuable members of the community can provide feedback about features, bug reports, and more.
 
+- **作者** - 这是创建项目的人。 他们有权为其他成员分配角色以帮助维护项目。
+- **所有者** - 所有者拥有项目的管理所有权（_可以与作者为同一人_）
+- **维护者** - 这些人负责推动项目的愿景和目标。 他们通常是对项目方向负责并致力于改进项目的人
+- **贡献者** - 贡献者以一种或其他方式加入到项目中。 他们遵循相同的代码审查流程，遵守相同的代码风格要求等等。
+- **社区成员/用户** - 这些有价值的社区成员可以提供相关功能、错误报告等反馈。
+
 ### Important elements all open source projects should have
+### 所有开源项目都应该具备的重要元素
 
 Every open source project should have the following guidelines and information:
+每个开源项目都应该有以下指南和信息：
 
 -   [License](https://choosealicense.com/) - If a project does not have an open source license, then it is not open source. The license helps protect contributors and users. Businesses and savvy developers usually won't touch a project without this protection. If you're wondering how to get one, click [Here](https://choosealicense.com/) to read more.
 -   README - This is a manual that explains how to get started with the project. A good README should contain different everything a potential contributor would want to know about the project. You can read more about how to write a good README file [HERE](/news/how-to-write-a-good-readme-file/).

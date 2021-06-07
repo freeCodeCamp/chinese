@@ -184,7 +184,7 @@ git commit -m "<initial commit> "
 ```
 
 - 将更改推送到 GitHub
-     你可以使用 \`git push 命令轻松完成此操作：
+     你可以使用 `git push` 命令轻松完成此操作：
 ```
 git push origin <add-your-branch-name>
 ```

@@ -12,7 +12,7 @@ I put aside all my fears about how and what to contribute during Hacktoberfest 2
 Now, if you're a new developer you are probably wondering what exactly is open source? How can you get started? What should you expect? Well, in this article we will cover all this and more.
 现在，如果您是一名新开发人员，您可能想知道开源到底是什么？ 如何开始？ 你应该期待什么？ 好的，在本文中，我们将涵盖所有这些内容甚至更多。
 ## What is Open Source?
-##什么是开源？
+## 什么是开源？
 Open source refers to source code that is made available to the public to view, use, modify, and distribute under a permissive license.
 开源是指在许可证许可下向公众提供可以查看、使用、修改和分发的源代码。
 It's often in a company's or person's best interest to open-source their code, whether they're an individual, a corporation, a small business, a non-profit, or a government agency.
@@ -68,7 +68,7 @@ Every open source community is different. Each community has different people in
 每个开源社区都是不同的。 每个社区都有不同的人，有着不同的角色和奖励。 他们每个人都有自己的职责和预期贡献。
 
 ### A typical open source project will have these people:
-###一个典型的开源项目会有这些人：
+### 一个典型的开源项目会有这些人：
 
 -   **Author** - This is the person who created the project. They have the power to assign new roles to other members to help with the project's maintenance.
 -   **Owner** - The ownder has administrative ownership of the project (and _can be the same person as the author_)
@@ -176,7 +176,7 @@ The most fundamental technology behind any application is the programming langua
 There is a multitude of projects that might suit your skills and interests. So just find one that you'd feel comfortable working on.
 有许多项目可能对应您的技能和兴趣。 所以只要找到一个你觉得做起来很舒服的项目即可。
 ### Type of project
-###项目类型
+### 项目类型
 After you've chosen the language you want to work in, you need to choose the type of project you prefer. Just have a look around and pick a project on a topic that interests you.
 在您选择了您想要使用的语言后，您需要选择您喜欢的项目类型。 只需环顾四周并选择一个您感兴趣的主题的项目。
 Once you've found a project, you'll want to actually make contributions. And you'll do that by submitting pull requests. Let's talk about that now.
@@ -278,28 +278,36 @@ Now find a project and make some more contributions. And be sure to watch out fo
 ## Benefits of Contributing to Open Source
 ## 为开源做贡献的好处
 Now that you have seen how you can contribute to OS, what are some of the benefits of contributing?
-
+既然您已经了解了如何为操作系统做出贡献，那么做贡献的好处有什么呢？
 -   People that contribute to an open-source project get to know the technology at a much deeper level than they would be simply using the technology
 -   You can focus efforts on adding and leveraging features that will benefit businesses based on experience with what works and doesn't work in the real world.
 -   It builds your morale and reputation. People who contribute to open source projects have access to other community members' insight and experience.
 -   Contributing to open source provides a clear view into the future of a project
 -   If you're on GitHub, a large portion of the things you do on that platform are public. Use this to your advantage by always doing your best when contributing and communicating with fellow contributors. You never know who is looking, your next employer might be there 😊
-
+- 为开源项目做出贡献的人可以比仅仅使用该技术更深入地了解该技术。
+- 您可以根据在现实世界中有效和无效的经验，专注于添加和利用对企业有益的功能。
+- 它可以建立您的士气和声誉。 为开源项目做贡献的人可以访问其他社区成员的见解和经验。
+- 对开源的贡献可以清晰地了解一个项目的未来
+- 如果您使用 GitHub ，您在该平台上所做的大部分事情都是公开的。 通过在贡献和与其他贡献者沟通时始终尽最大努力来利用这一点。 你永远不知道谁在找，你的下一个雇主可能在那里😊
 ### Why You Should Contribute to Open Source
-
+### 为什么你应该为开源做贡献
 As a developer, this is why I think you should contribute to open source:
-
+作为一名开发者，这就是为什么我认为您应该为开源做出贡献的原因：
 -   It helps you write cleaner code
 -   It helps the community and your peers get to know you. This recognition can bring you a lot of opportunities in your career.
 -   It helps you learn more about a project
 -   It improves your coding skills
-
+- 它可以帮助您编写更清晰的代码
+- 它可以帮助社区和您的同龄人了解您。 这种认可可以为您的职业生涯带来很多机会。
+- 它可以帮助您了解有关项目的更多信息
+- 它提高了您的编码技能
 For more information, read [freeCodeCamp's guide](https://github.com/freeCodeCamp/how-to-contribute-to-open-source).
-
+有关更多信息，请阅读 [freeCodeCamp 的指南](https://github.com/freeCodeCamp/how-to-contribute-to-open-source)。
 If you have read this far, I really appreciate it!
-
+如果你读到这里，我真的很感激！
 Connect With me at [Twitter](https://twitter.com/larymak1) | [Insta](https://www.instagram.com/nextgencoders/) | [YouTube](https://www.youtube.com/channel/UCrT1ARRZfLOuf6nc_97eXEg) | [LinkedIn](https://www.linkedin.com/in/hillary-nyakundi-3a64b11ab/) | [GitHub](https://github.com/larymak)
-
+与我联系 [Twitter](https://twitter.com/larymak1) | [Insta](https://www.instagram.com/nextgencoders/) | [YouTube](https://www.youtube.com/channel/UCrT1ARRZfLOuf6nc_97eXEg) | [LinkedIn](https://www.linkedin.com/in/hillary-nyakundi-3a64b11ab/) | [GitHub](https://github.com/larymak)
 Do share your valuable opinion, I appreciate your honest feedback!
-
+请分享您的宝贵意见，我很感谢您的诚实反馈！
 Enjoy Coding ❤
+请享受编程❤

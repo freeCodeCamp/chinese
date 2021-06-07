@@ -3245,15 +3245,15 @@ def find_power(a, b):
 
 ## 🔹 Python中的异常处理
 
-An error or unexpected event that that occurs while a program is running is called an **exception**. Thanks to the elements that we will see in just a moment, we can avoid terminating the program abruptly when this occurs.
+程序运行过程中发生的错误或意外事件被称为**异常**。多亏有了后面我们将看到的这些对异常的处理，才让我们的程序在发出异常时不至于突然终止。
 
-Let's see the types of exceptions in Python and how we can handle them.
+让我们看看Python中的异常类型，以及如何处理它们。
 
-### Common Exceptions in Python
+### Python中的常见异常
 
-This is a list of common exceptions in Python and why they occur:
+下面是常见异常的一个列表，以及它们发生的原因：
 
--   **ZeroDivisionError:** raised when the second argument of a division or modulo operation is zero.
+-   **ZeroDivisionError:** 当除法或模运算的第二个参数为0时，会抛出这个异常。
 
 ```python
 >>> 5 / 0
@@ -3275,7 +3275,7 @@ Traceback (most recent call last):
 ZeroDivisionError: integer division or modulo by zero
 ```
 
--   **IndexError:** raised when we try to use an invalid index to access an element of a sequence.
+-   **IndexError:** 当我们试图使用一个无效的索引来访问序列的元素时，会抛出这个异常。
 
 ```python
 >>> my_list = [3, 4, 5, 6]
@@ -3287,7 +3287,7 @@ Traceback (most recent call last):
 IndexError: list index out of range
 ```
 
--   **KeyError:** raised when we try to access a key-value pair that doesn't exist because the key is not in the dictionary.
+-   **KeyError:** 当我们试图访问一个不存在的键值对时，就会抛出这个异常，因为这个键不在字典中。
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3}
@@ -3299,7 +3299,7 @@ Traceback (most recent call last):
 KeyError: 'd'
 ```
 
--   **NameError:** raised when we use a variable that has not been defined previously.
+-   **NameError:** 当访问一个前文没有定义的变量名称时会抛出此异常。
 
 ```python
 >>> b
@@ -3309,9 +3309,9 @@ Traceback (most recent call last):
 NameError: name 'b' is not defined
 ```
 
--   **RecursionError:** raised when the interpreter detects that the maximum recursion depth is exceeded. This usually occurs when the process never reaches the base case.
+-   **RecursionError:** 当解释器检测到超过了最大递归深度时抛出，通常发生在递归过程始终无法达到基本情形的时候。
 
-In the example below, we will get a `RecursionError`. The `factorial` function is implemented recursively but the argument passed to the recursive call is `n` instead of `n-1`. Unless the value is already `0` or `1`, the base case will not be reached because the argument is not being decremented, so the process will continue and we will get this error.
+在下面的例子中，会抛出一个`RecursionError`错误。`factorial`是一个递归函数，但在每次的递归过程中传递给它的是`n`，而不是`n-1`。除非n的值是`0`或`1`否则不会达到基本的情形，因为参数没有被递减，所以递归过程会一直持续下去，然后就会发生这个递归错误。
 
 ```python
 >>> def factorial(n):
@@ -3337,13 +3337,13 @@ Traceback (most recent call last):
 RecursionError: maximum recursion depth exceeded in comparison
 ```
 
-💡 **Tip:** to learn more about these exceptions, I recommend reading [this article](https://docs.python.org/3/library/exceptions.html) from the documentation.
+💡 **提示：** 想了解更多关于异常的知识, 建议阅读来自Python官网的[这篇](https://docs.python.org/3/library/exceptions.html)。
 
-### `try` / `except` in Python
+### Python中的`try` / `except`
 
-We can use try/except in Python to catch the exceptions when they occur and handle them appropriately. This way, the problem can terminate appropriately or even recover from the exception.
+Python中我们可以用try/except来捕获异常的发生，并适当得处理它们。 这样，异常中的错误就可以被适当的终止，甚至还可以从异常中恢复。
 
-This is the basic syntax:
+这是基本语法：
 
 ```python
 try:
@@ -3352,7 +3352,7 @@ except:
     <code_to_handle_the_exception_if_it_occurs>
 ```
 
-For example, if we take user input to access an element in a list, the input might not be a valid index, so an exception could be raised:
+例如，如果我们接受用户的输入来访问一个列表的元素，而这个输入可能是一个无效的索引，所以可能会导致一个异常：
 
 ```python
 index = int(input("Enter the index: "))
@@ -3364,15 +3364,15 @@ except:
     print("Please enter a valid index.")
 ```
 
-If we enter an invalid value like 15, the output will be:
+假设我们输入无效值，比如15，输出会是：
 
 ```python
 Please enter a valid index.
 ```
 
-Because the `except` clause runs. However, if the value is valid, the code in `try` will run as expected.
+因为`except`语句被执行了。然而，如果该值是有效的，`try`中的代码将会按预期运行。
 
-Here we have another example:
+下面是另外一个例子：
 
 ```
 a = int(input("Enter a: "))
@@ -3385,7 +3385,7 @@ except:
     print("Please enter valid values.")
 ```
 
-The output is:
+输出：
 
 ```
 Enter a: 5
@@ -3394,9 +3394,9 @@ Enter b: 0
 Please enter valid values.
 ```
 
-### How to Catch a Specific Type of Exception in Python
+### Python中如何捕获一个特定类型的异常
 
-Instead of catching and handling all possible exceptions that could occur in the `try` clause, we could catch and handle a specific type of exception. We just need to specify the type of the exception after the `except` keyword:
+在`try`子句中，我们不想捕捉和处理所有可能发生的异常，而是想要捕捉和处理一种特定类型的异常。我们只需要在`except`关键字后面指定异常的类型：
 
 ```python
 try:
@@ -3405,7 +3405,7 @@ except <exception_type>:
     <code_to_handle_an_exception_if_it_occurs>
 ```
 
-For example:
+例如：
 
 ```python
 index = int(input("Enter the index: "))
@@ -3428,11 +3428,11 @@ except ZeroDivisionError: # specify the type
     print("Please enter valid values.")
 ```
 
-### How to Assign a Name to the Exception Object in Python
+### 如何给Python中的异常对象指定一个名称
 
-We can specify a name for the exception object by assigning it to a variable that we can use in the `except` clause. This will let us access its description and attributes.
+我们可以在`except`子句中将异常对象赋值给一个变量，这样可以让我们访问到它的描述和属性。
 
-We only need to add `as <name>`, like this:
+我们只需要添加`as <name>`，像这样：
 
 ```python
 try:
@@ -3441,7 +3441,7 @@ except <exception_type> as <name>:
     <code_to_handle_an_exception_if_it_occurs>
 ```
 
-For example:
+例如：
 
 ```python
 index = int(input("Enter the index: "))
@@ -3453,14 +3453,14 @@ except IndexError as e:
     print("Exception raised:", e)
 ```
 
-This is the output if we enter `15` as the index:
+如果我们输入的索引值为`15`：
 
 ```
 Enter the index: 15
 Exception raised: list index out of range
 ```
 
-This is another example:
+另一个例子：
 
 ```python
 a = int(input("Enter a: "))
@@ -3473,15 +3473,15 @@ except ZeroDivisionError as err:
     print("Please enter valid values.", err)
 ```
 
-This is the output if we enter the value `0` for `b`:
+`b`的输入为`0`时：
 
 ```python
 Please enter valid values. division by zero
 ```
 
-### `try` / `except` / `else` in Python
+### `try` / `except` / `else`
 
-We can add an `else` clause to this structure after `except` if we want to choose what happens when no exceptions occur during the execution of the `try` clause:
+如果我们想选择在执行`try`子句期间没有发生异常时的情况，我们可以在`except`后面添加一个`else`子句。
 
 ```python
 try:
@@ -3492,7 +3492,7 @@ else:
     <code_that_only_runs_if_no_exception_in_try>
 ```
 
-For example:
+例如：
 
 ```python
 a = int(input("Enter a: "))
@@ -3507,24 +3507,24 @@ else:
     print("Both values were valid.")
 ```
 
-If we enter the values `5` and `0` for `a` and `b` respectively, the output is:
+如果我们给`a`和`b`分别输入为`5`和`0`：
 
 ```
 Please enter valid values. division by zero
 ```
 
-But if both values are valid, for example `5` and `4` for `a` and `b` respectively, the `else` clause runs after `try` is completed and we see:
+但是，如果`a`，`b`的值都是有效的, 比如是：`5`和`4`，那么`else`会在`try`子句执行完成之后执行：
 
 ```python
 1.25
 Both values were valid.
 ```
 
-### `try` / `except` / `else` / `finally` in Python
+### `try` / `except` / `else` / `finally`
 
-We can also add a `finally` clause if we need to run code that should always run, even if an exception is raised in `try`.
+我们可以添加`finally`子句来执行一直运行的代码，即使在`try`中出现了异常。
 
-For example:
+例如：
 
 ```python
 a = int(input("Enter a: "))
@@ -3541,29 +3541,29 @@ finally:
     print("Finally!")
 ```
 
-If both values are valid, the output is the result of the division and:
+如果输入的值都是有效的，除法的输出：
 
 ```
 Both values were valid.
 Finally!
 ```
 
-And if an exception is raised because `b` is `0`, we see:
+如果由于`b`是`0`而发生异常，那么：
 
 ```python
 Please enter valid values. division by zero
 Finally!
 ```
 
-The `finally` clause always runs.
+`finally`子句都会被执行。
 
-**💡 Tip:** this clause can be used, for example, to close files even if the code throws an exception.
+**💡 提示：** 这个子句可以用来关闭文件，比如, 当你处理文件时抛出了异常。
 
-## 🔸 Object-Oriented Programming in Python
+## 🔸 Python中的面向对象编程
 
-In Object-Oriented Programming (OOP), we define classes that act as blueprints to create objects in Python with attributes and methods (functionality associated with the objects).
+在面向对象编程中(OOP), 我们可以定义类作为蓝图，用于在Python中创建具有属性和方法(与对象相关的功能)的对象。
 
-This is a general syntax to define a class:
+定义类的一般语法：
 
 ```
 class <className>:
@@ -3584,13 +3584,13 @@ class <className>:
    # As many methods as needed
 ```
 
-**💡 Tip:** `self` refers to an instance of the class (an object created with the class blueprint).
+**💡 提示：** `self`是类的实例(用类创建的对象)的引用。
 
-As you can see, a class can have many different elements so let's analyze them in detail:
+如你所见，类可以有很多不同的元素，让我们来分析一下他们的细节：
 
-### Class Header
+### 类的头部
 
-The first line of the class definition has the `class` keyword and the name of the class:
+类定义的第一行是`class`关键字和类名：
 
 ```
 class Dog:
@@ -3604,7 +3604,7 @@ class House:
 class Ball:
 ```
 
-**💡 Tip:** If the class inherits attributes and methods from another class, we will see the name of the class within parentheses:
+**💡 提示：** 如果一个类继承了另外一个类的属性和方法，我们会在括号中看到该类的名称：
 
 ```
 class Poodle(Dog):
@@ -3618,15 +3618,15 @@ class Truck(Vehicle):
 class Mom(FamilyMember):
 ```
 
-In Python, we write class name in Upper Camel Case (also known as Pascal Case), in which each word starts with an uppercase letter. For example: `FamilyMember`
+Python中, 类名用大驼峰(也称为Pascal Case)，名称中的每个一个单词都是以大写字母开头。例如：`FamilyMember`
 
-### `__init__` and instance attributes
+### `__init__`和实例属性
 
-We are going to use the class to create object in Python, just like we build real houses from blueprints.
+接下来，我们将使用类在Python中创建对象，就像我们根据图纸建造真正的房屋一样。
 
-The objects will have attributes that we define in the class. Usually, we initialize these attributes in `__init__`. This is a method that runs when we create an instance of the class.
+对象中的属性来自于我们在类中定义，而这些属性通常是在`__init__`方法中被初始化，而`__init__`方法会在创建类的实例时被执行。
 
-This is the general syntax:
+这是一般语法：
 
 ```python
 def __init__(self, <parameter1>, <parameter2>, ...):
@@ -3638,9 +3638,9 @@ def __init__(self, <parameter1>, <parameter2>, ...):
         # As many instance attributes as needed
 ```
 
-We specify as many parameters as needed to customize the values of the attributes of the object that will be created.
+我们可以根据需要来给类指定尽可能多的属性。
 
-Here is an example of a `Dog` class with this method:
+`Dog`类的一个` __init__`方法例子：
 
 ```python
 class Dog:
@@ -3650,19 +3650,19 @@ class Dog:
         self.age = age
 ```
 
-💡 **Tip:** notice the double leading and trailing underscore in the name `__init__`.
+💡 **提示：** 注意名称`__init__`中的前后的双下划线。
 
-### How to Create an Instance
+### 如何创建类的实例
 
-To create an instance of `Dog`, we need to specify the name and age of the dog instance to assign these values to the attributes:
+要创建`Dog`类的实例，我们需要指定name和age属性。
 
 ```python
 my_dog = Dog("Nora", 10)
 ```
 
-Great. Now we have our instance ready to be used in the program.
+很好。现在我们已经准备好了一个可以在代码中使用的Dog实例了。
 
-Some classes will not require any arguments to create an instance. In that case, we just write empty parentheses. For example:
+有些类，可以不需要任何参数来创建实例。 这种情况我们只需要一个空括号，例如：
 
 ```
 class Circle:
@@ -3671,21 +3671,21 @@ class Circle:
         self.radius = 1
 ```
 
-To create an instance:
+创建实例：
 
 ```python
 >>> my_circle = Circle()
 ```
 
-💡 **Tip:** `self` is like a parameter that acts "behind the scenes", so even if you see it in the method definition, you shouldn't consider it when you pass the arguments.
+💡 **提示：** `self`像是一个"幕后"的参数，即使我们在方法的定义中看到它，但你传参数时可以不用考虑它。
 
-### Default Arguments
+### 默认参数
 
-We can also assign default values for the attributes and give the option to the user if they would like to customize the value.
+我们可以为类的属性指定默认值，但如果使用者想自己赋值，也是可以的。
 
-In this case, we would write `<attribute>=<value>` in the list of parameters.
+这种情况下, 我们可以在参数列表中写上形如：`<attribute>=<value>`
 
-This is an example:
+例如：
 
 ```
 class Circle:
@@ -3694,7 +3694,7 @@ class Circle:
         self.radius = radius
 ```
 
-Now we can create a `Circle` instance with the default value for the radius by omitting the value or customize it by passing a value:
+现在我们创建`Circle`实例，你可以通过忽略radius参数使用它的默认值，也可以传入一个自己的值： 
 
 ```python
 # Default value
@@ -3704,15 +3704,15 @@ Now we can create a `Circle` instance with the default value for the radius by o
 >>> my_circle2 = Circle(5)
 ```
 
-### How to Get an Instance Attribute
+### 如何获取实例的属性
 
-To access an instance attribute, we use this syntax:
+访问实例属性，可以用下面的语法：
 
 ```python
 <object_variable>.<attribute>
 ```
 
-For example:
+例如：
 
 ```python
 # Class definition
@@ -3733,15 +3733,15 @@ For example:
 10
 ```
 
-### How to Update an Instance Attribute
+### 如何更新实例的属性
 
-To update an instance attribute, we use this syntax:
+更新实例的属性，我们可以用下面的语法：
 
 ```
 <object_variable>.<attribute> = <new_value>
 ```
 
-For example:
+例如：
 
 ```python
 >>> class Dog:
@@ -3763,15 +3763,15 @@ For example:
 'Norita'
 ```
 
-### How to Remove an Instance Attribute
+### 如何删除实例属性
 
-To remove an instance attribute, we use this syntax:
+要删除实例属性，可以用下面的语法：
 
 ```
 del <object_variable>.<attribute>
 ```
 
-For example:
+例如：
 
 ```python
 >>> class Dog:
@@ -3796,9 +3796,9 @@ Traceback (most recent call last):
 AttributeError: 'Dog' object has no attribute 'name'
 ```
 
-### How to Delete an Instance
+### 如何删除一个示例
 
-Similarly, we can delete an instance using `del`:
+同样的，删除实例我们也可以用`del`：
 
 ```
 >>> class Dog:
@@ -3823,13 +3823,13 @@ Traceback (most recent call last):
 NameError: name 'my_dog' is not defined
 ```
 
-### Public vs. Non-Public Attributes in Python
+### 公开 vs. 非公开 的属性
 
-In Python, we don't have access modifiers to functionally restrict access to the instance attributes, so we rely on naming conventions to specify this.
+Python中，我们没有用访问修饰符来限制对实例属性的访问，而是依靠命名惯例来做到这一点。
 
-For example, by adding a leading underscore, we can signal to other developers that an attribute is meant to be non-public.
+例如，在属性前添加一个前导下划线，就可以告诉开发者这是一个非公开的属性。
 
-For example:
+例如：
 
 ```python
 class Dog:
@@ -3839,21 +3839,21 @@ class Dog:
         self._age = age   # Non-Public attribute
 ```
 
-The Python documentation mentions:
+Python文档中提到：
 
-> Use one leading underscore only for non-public methods and instance variables.  
+> 一个前导下划线仅用于非公开的方法和实例变量。  
 >   
-> Always decide whether a class's methods and instance variables (collectively: "attributes") should be public or non-public. If in doubt, choose non-public; it's easier to make it public later than to make a public attribute non-public.  
+> 你需要决定实例的哪些方法和变量("属性")是需要公开或不公开的。如果有疑惑，可以选择不公开；将一个不公开的属性改为公开，要比将其从公开改为不公开要容易得多。
 >   
-> Non-public attributes are those that are not intended to be used by third parties; you make no guarantees that non-public attributes won't change or even be removed. - [source](https://www.python.org/dev/peps/pep-0008/#designing-for-inheritance)
+> 非公开属性是那些不打算被第三方使用的属性，我们无法保证非公开属性不会被第三方使用者改变甚至被删除。 - [源](https://www.python.org/dev/peps/pep-0008/#designing-for-inheritance)
 
-However, as the documentation also mentions:
+然而，如文档中还提到的：
 
-> We don't use the term "private" here, since no attribute is really private in Python (without a generally unnecessary amount of work). - [source](https://www.python.org/dev/peps/pep-0008/#designing-for-inheritance)
+> 我们在这里不使用"私有"一词，因为在Python中没有任何属性是真正的私有的(省去一些不必要的工作)。 - [源](https://www.python.org/dev/peps/pep-0008/#designing-for-inheritance)
 
-**💡 Tip:** technically, we can still access and modify the attribute if we add the leading underscore to its name, but we shouldn't.
+**💡 提示：** 从技术上讲，如果我们在属性的名称中加入前导下划线，我们仍然可以访问和修改该属性，但我们不应该这样做。
 
-### Class Attributes in Python
+### Python中类的属性
 
 Class attributes are shared by all instances of the class. They all have access to this attribute and they will also be affected by any changes made to these attributes.
 

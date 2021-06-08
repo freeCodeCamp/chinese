@@ -3855,7 +3855,7 @@ Python文档中提到：
 
 ### Python中类的属性
 
-Class attributes are shared by all instances of the class. They all have access to this attribute and they will also be affected by any changes made to these attributes.
+类的属性由类的所有实例共享。所有实例都可以访问这些属性，如果这些属性被修改，这些实例将都会受到影响。
 
 ```python
 class Dog:
@@ -3869,17 +3869,17 @@ class Dog:
         self.age = age
 ```
 
-**💡 Tip:** usually, they are written before the `__init__` method.
+**💡 提示：** 通常，它们写在`__init__`方法的前面。
 
-### How to Get a Class Attribute
+### 如何获取一个类属性
 
-To get the value of a class attribute, we use this syntax:
+要获取类属性，我们使用下面的方法：
 
 ```
 <class_name>.<attribute>
 ```
 
-For example:
+例如：
 
 ```
 >>> class Dog:
@@ -3895,17 +3895,17 @@ For example:
 'Animalia'
 ```
 
-**💡 Tip:** You can use this syntax within the class as well.
+**💡 提示：** 你可以使用同样的语法在类里面获取它的值。
 
-### How to Update a Class Attribute
+### 如何更新一个类属性
 
-To update a class attribute, we use this syntax:
+要更新一个类属性，我们使用下面的语法：
 
 ```
 <class_name>.<attribute> = <value>
 ```
 
-For example:
+例如：
 
 ```python
 >>> class Dog:
@@ -3926,9 +3926,9 @@ For example:
 'New Kingdom'
 ```
 
-### How to Delete a Class Attribute
+### 如何删除一个类属性
 
-We use `del` to delete a class attribute. For example:
+我们使用`del`一个类属性。例如：
 
 ```python
 >>> class Dog:
@@ -3952,13 +3952,13 @@ Traceback (most recent call last):
 AttributeError: type object 'Dog' has no attribute 'kingdom'
 ```
 
-### How to Define Methods
+### 如何定义方法
 
-Methods represent the functionality of the instances of the class.
+方法用于表示类实例的功能。
 
-**💡 Tip:** Instance methods can work with the attributes of the instance that is calling the method if we write `self.<attribute>` in the method definition.
+**💡 提示：** 如果我们在实例方法的定义中写上`self.<attribute>`，那么实例方法就可以调用实例属性。
 
-This is the basic syntax of a method in a class. They are usually located below `__init__`:
+下面是定义方法的基本语法，这些方法一般定义在`__init__`方法后面：
 
 ```python
 class <ClassName>:
@@ -3971,9 +3971,9 @@ class <ClassName>:
         <code>
 ```
 
-They may have zero, one, or more parameters if needed (just like functions!) but instance methods must always have `self` as the first parameter.
+这些实例方法可能有0个、1个或多个参数(就像函数!)，但`self`必须是第一个参数。
 
-For example, here is a `bark` method with no parameters (in addition to `self`):
+例如，下面的`bark`方法没有参数(除了`self`):
 
 ```python
 class Dog:
@@ -3986,13 +3986,13 @@ class Dog:
         print(f"woof-woof. I'm {self.name}")
 ```
 
-To call this method, we use this syntax:
+要调用这个方法，我们用下面的语法：
 
 ```
 <object_variable>.<method>(<arguments>)
 ```
 
-For example:
+例如：
 
 ```python
 # Create the instance
@@ -4003,7 +4003,7 @@ For example:
 woof-woof. I'm Nora
 ```
 
-Here we have a `Player` class with an `increment_speed` method with one parameter:
+`Player`类里定义了只有一个参数的`increment_speed`方法：
 
 ```python
 class Player:
@@ -4016,7 +4016,7 @@ class Player:
         self.speed += value
 ```
 
-To call the method:
+调用此方法：
 
 ```
 # Create instance        
@@ -4034,11 +4034,11 @@ To call the method:
 55
 ```
 
-💡 **Tip:** to add more parameters, just separate them with a comma. It is recommended to add a space after the comma.
+💡 **提示：** 要添加更多参数，只需要将多个参数用逗号分隔。建议在每个逗号后面加一个空格。
 
-### Properties, Getters and Setters in Python
+### 属性, Getters与Setters
 
-Getters and setters are methods that we can define to get and set the value of an instance attribute, respectively. They work as intermediaries to "protect" the attributes from direct changes.
+定义getters与setters方法可以用于获取和设置实例的属性值。Getters与setters方法充当一种中介，以"保护"属性免受直接更改。
 
 In Python, we typically use properties instead of getters and setters. Let's see how we can use them.
 

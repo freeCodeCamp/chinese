@@ -114,26 +114,36 @@ git clone git@github.com:freeCodeCamp/freeCodeCamp.git
 ## 简介 Git 分支
 
 When working on a project, you will likely have different features. And multiple contributors will be working on this project and its features.
+在做项目时，你可能会有不同的功能。并且有多个贡献者会做该项目及其功能。
 
 Branches allow you to create a "playground" with the same files in the  `master`  branch. You can use this branch to build independent features, test new features, make breaking changes, create fixes, write docs or try out ideas without breaking or affecting the production code. When you're done, you merge the branch into the production  `master`  branch.
+分支允许你在 `master` 分支中使用相同的文件创建一个 “playground（游乐场）” 。你可以使用这个分支构建独立的功能，测试新功能，做重大改动，修复代码，写文档、或者在不中断的情况下尝试自己的想法、或者优化生产代码。
 
 Branching is a core concept in Git which is also used in GitHub to manage workflows of different versions of one project. The  `master`  branch is always the default branch in a repository that is most often considered "production and deployable code". New branches like  `passwordless-auth`  or  `refactor-signup-ux`  can be created from the  `master`  branch.
+分支是 Git 中的一个核心概念，在 Github 中也用于管理一个项目不同版本的工作流。  `master`  分支始终是仓库中的默认分支，通常被认为是 “生产和可部署代码”。 新分支如  `passwordless-auth`  或  `refactor-signup-ux` 可以从  `master`  分支中创建。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-22-at-2.47.53-AM.png)
 
 All branches in freeCodeCamp's repository
+freeCodeCamp 仓库中的所有分支
 
 ## How to Clone Git Branches
+如何克隆 Git 分支
 
 While you can clone repositories with the  `git clone`  command, keep in mind that this clones the branch and the remote  `HEAD`. This is usually  `master`  by default and includes all other branches in the repository.
+当你使用  `git clone`  指令克隆仓库时，请记住这会克隆分支和远程  `HEAD` 。默认情况下通常是  `master`  分支，并包括仓库中的所有其他分支。
 
 So when you clone a repository, you clone the  `master`  and all other branches. This means you will have to checkout another branch yourself.
+所以当你克隆一个仓库时，你克隆了  `master`  分支和所有其他分支。这意味着你可以随意切换到另一个分支。
 
 Let's say your task on a project is to work on a feature to add passwordless authentication to a user dashboard. And this feature is in the  `passwordless-auth`  branch.
+假设你在项目上的任务是开发一项功能，将无密码身份验证添加到用户仪表板。这个功能位于  `passwordless-auth`  分支上。
 
 You really don't need the  `master`  branch since your "feature branch" will be merged into  `master`  afterward. How then do you clone this  `passwordless-auth`  branch without fetching all other branches with "a bunch of files you don't need"?
+你不需要 `master` 分支，因为你的 “功能分支” 之后会被合并到 `master` 中。那么你如何克隆  `passwordless-auth`  分支，而无需获取所有其他分支的 “一堆你不需要的文件” ？
 
 I created this sample repository to explain this. This repository holds a simple blog built with Nextjs and has four dummy branches:
+我创建了示例仓库来解释这一点。 此仓库包含一个使用 NextJS 构建的简单博客，有四个虚拟分支机构：
 
 -   master
 -   dev
@@ -141,16 +151,20 @@ I created this sample repository to explain this. This repository holds a simple
 -   passwordless-auth
 
 In Nextjs, any file inside the folder  `pages/api`  is mapped to the  `/api/*`  path and will be treated as an API endpoint instead of a  `page`. In our repository, I have created different dummy APIs  [in this directory][4]  to make each branch different.
+在 Nextjs 中，文件加   `pages/api`  内的任何文件都被映射到  `/api/*` 路径，并将被视为替代  `page`  的 API 端点。在我的仓库中，我还创建了不同的虚拟 APIs  [in this directory][4] 以使每个分支都不同。
 
 The  `master`  branch holds the file  **pages/api/hello.js**  while  `passwordless-auth`  holds the file  **pages/api/auth.js**. Each file just returns a dummy text response. See  `master`'s hello API response  [here][5]  (with a special message for you ?).
+ `master`  分支保存  **pages/api/hello.js**  文件，而  `passwordless-auth`  分支保存  **pages/api/auth.js** 文件。每个文件仅返回一个伪文本响应。查看  `master`  分支的 API 响应 [here][5] （给你一个特别的消息？）。
 
 Let's clone the repository:
+让我们克隆仓库：
 
 ```
 git clone git@github.com:BolajiAyodeji/nextjs-blog.git
 ```
 
 This gives us access to all branches in this repository and you can easily toggle between each to see each version and its files.
+使我们可以访问此仓库中的所有分支，你可以在每个版本之间轻松切换，以查看每个版本及其文件。
 
 ```
 git branch -a
@@ -159,89 +173,111 @@ git branch -a
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-22-at-4.51.56-AM.png)
 
 Wondering where the  **remotes/origin/..**  branches came from?  
+想下  **remotes/origin/..**  分支来自哪里？
   
 When you clone a repository, you pull data from a repository on the internet or an internal server known as the  **remote**. The word origin is an alias created by your Git to replace the remote URL (you can change or specify another alias if you want).
+当你克隆仓库时，你是从互联网或内部服务器上的  **remote**  仓库提取数据。Origin 是你的 Git 创建的别名，用于替换远程 URL (如果你愿意，你可以更改或指定其他别名)。
 
 These  **remotes/origin/..** branches point you back to the origin repository you cloned from the internet so you can still perform pull/push from the origin.
+ **remotes/origin/..** 分支指向从 Internet 克隆的源仓库，因此你仍然可以从源执行 pull/push 。 
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-23-at-5.24.43-AM.png)
 
   
 So when you clone  `master`  onto your machine,  `remotes/origin/master`  is the original  `master`  branch on the internet, and  `master`  is on your local machine. So you will pull/push from and to the  `remotes/origin/master`.  
+所以当你克隆  `master`  分支到你的机器上时，  `remotes/origin/master`  是  `master`  在网络上的源分支， `master`  是你本机的分支。因此，你将从  `remotes/origin/master`  中 pull/push。
   
 In summary  **Remote**  is the URL that points you to the repository on the internet while  **Origin**  is an alias for this remote URL.
+总的来说  **Remote**  是指向互联网上仓库的 URL，而  **Origin**  是这个远程 URL 的别名。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-23-at-5.28.06-AM.png)
 
 ## How to Clone a Specific Branch
+如何可能一个指定的分支
 
 Now let's clone a specific branch from our demo repository. There are two ways to clone a specific branch. You can either:
+现在从我们的演示仓库中克隆一个指定的分支。有两种方法克隆一个特定的分支。你可以：
 
 -   Clone the repository, fetch all branches, and checkout to a specific branch immediately.
+-   克隆仓库，获取所有分支，立即切换到指定的分支。
 -   Clone the repository and fetch only a single branch.
+-   克隆仓库并仅获取一个分支。
 
 ### Option One
+方案一
 
 ```
 git clone --branch <branchname> <remote-repo-url>
 ```
 
-or
+或
 
 ```
 git clone -b <branchname> <remote-repo-url>
 ```
 
 Here  **\-b**  is just an alias for  **\--branch**
-
+这里  **\-b**  只是  **\--branch**  的别名。
   
 With this, you fetch all the branches in the repository, checkout to the one you specified, and the specific branch becomes the configured local branch for  `git push`  and  `git pull`  . But you still fetched all files from each branch. This might not be what you want right? ?
+这样，你就可以获取仓库中的所有分支，切换到你指定的分支，指定的分支成为本地分支用于  `git push`  和  `git pull`  。但你仍然从每个分支中获取了所有文件。 这可能不是你想要的吧？
 
 Let's test it:
+让我们测试看看：
 
 ```
  git clone -b passwordless-auth git@github.com:BolajiAyodeji/nextjs-blog.git
 ```
 
 This automatically configures  `passwordless-auth`  as the local branch but still tracks other branches.
+这会自动将  `passwordless-auth`  配置为本地分支，但仍会跟踪其他分支。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-23-at-5.30.01-AM.png)
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-30-at-3.27.31-AM.png)
 
 ### Option Two
+方案二
 
 ```
 git clone --branch <branchname> --single-branch <remote-repo-url>
 ```
 
-or
+或
 
 ```
 git clone -b <branchname> --single-branch <remote-repo-url>
 ```
 
 Here  **\-b**  is just an alias for  **\--branch**
+这里  **\-b**  只是  **\--branch**  的别名。
 
 This performs the same action as option one, except that the  `--single-branch`  option was introduced in Git version 1.7.10 and later. It allows you to only fetch files from the specified branch without fetching other branches.
+这与方案一的操作相同，除了  `--single-branch`  选项，它是在 Git 版本 1.7.10 及更高版本中引入的。这个选项允许你仅从指定的分支中获取文件而不获取其他分支。
 
 Let's test it:
+让我们测试看看：
 
 ```
 git clone -b passwordless-auth --single-branch git@github.com:BolajiAyodeji/nextjs-blog.git
 ```
 
 This automatically configures  `passwordless-auth`  as the local branch and only tracks this branch.
+这会自动将  `passwordless-auth`  配置为本地分支，且只能跟踪此分支。
+
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-23-at-5.31.12-AM.png)
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-30-at-3.29.07-AM.png)
 
 If you run  `cd pages/api`  you'll find the  `auth.js`  file in the  `passwordless-auth`  branch as expected from the previous setup.
+如果你执行  `cd pages/api`  ，你会在  `passwordless-auth`  分支中找到之前设置的  `auth.js`  文件。
 
 ## Conclusion
+总结
 
 You might be running out of internet or storage space but you need to work on a task in a specific branch. Or you might want to clone a specific branch with limited files for various reasons. Fortunately, Git provides you the flexibility to do this. Flex your muscles and try it out, there's much more "Git" to learn.  
+你可能无法使用互联网或没有足够的存储空间，但你需要在指定的分支中工作。或者你可能出于各种原因希望克隆具有有限文件的指定分支。幸运的是， Git 为你提供了执行此操作的灵活性。锻炼你的新知识并尝试一下，还有更多的 "Git" 知识去学习。
   
 One at a time, yeah? ✌?
 

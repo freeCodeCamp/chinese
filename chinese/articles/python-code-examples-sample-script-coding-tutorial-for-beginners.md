@@ -4040,9 +4040,9 @@ class Player:
 
 定义getters与setters方法可以用于获取和设置实例的属性值。Getters与setters方法充当一种中介，以"保护"属性免受直接更改。
 
-In Python, we typically use properties instead of getters and setters. Let's see how we can use them.
+在Python中，我们通常使用属性而不是getter和setter。让我们看看如何使用它们。
 
-To define a property, we write a method with this syntax:
+要定义一个属性，我们可以用下面的语法编写一个方法：
 
 ```
 @property
@@ -4050,9 +4050,9 @@ def <property_name>(self):
     return self.<attribute>
 ```
 
-This method will act as a getter, so it will be called when we try to access the value of the attribute.
+这个方法会充当一个getter，它在我们访问属性时被调用。
 
-Now, we may also want to define a setter:
+我们可能还想定义一个setter：
 
 ```
 @<property_name>.setter
@@ -4060,7 +4060,7 @@ def <property_name>(self, <param>):
     self.<attribute> = <param>
 ```
 
-And a deleter to delete the attribute:
+还有一个删除器来删除属性：
 
 ```
 @<property_name>.deleter
@@ -4068,9 +4068,9 @@ def <property_name>(self):
     del self.<attribute>
 ```
 
-**💡 Tip:** you can write any code that you need in these methods to get, set, and delete an attribute. It is recommended to keep them as simple as possible.
+**💡 提示：** 你可以在这些方法中编写你需要的任何代码来读取、设置和删除属性。建议让这些方法尽可能简单。
 
-This is an example:
+下面是一个例子：
 
 ```python
 class Dog:
@@ -4091,7 +4091,7 @@ class Dog:
         del self._name
 ```
 
-If we add descriptive print statements, we can see that they are called when we perform their operation:
+如果我们添加描述性的print语句，我们可以看到当执行其操作时，print语句会被调用。
 
 ```python
 >>> class Dog:
@@ -4132,31 +4132,31 @@ Calling getter
 Calling deleter
 ```
 
-## 🔹 How to Work with Files in Python
+## 🔹 Python中如何处理文件
 
-Working with files is very important to create powerful programs. Let's see how you can do this in Python.
+处理文件对于创建强大的程序非常重要。下面让我们看看如何在Python中执行此操作。
 
-### How to Read Files in Python
+### Python中如何读取文件
 
-In Python, it's recommended to use a `with` statement to work with files because it opens them only while we need them and it closes them automatically when the process is completed.
+Python中，建议使用`with`语句来处理文件，因为它只在我们需要的时候打开文件，并且在处理完后会自动关闭文件。
 
-To read a file, we use this syntax:
+要读取文件，我们使用下面的语法：
 
 ```python
 with open("<file_path>") as <file_var>:
     <code>
 ```
 
-We can also specify that we want to open the file in read mode with an `"r"`:
+我们还可以在打开文件的时候，指定`"r"`以只读模式打开：
 
 ```python
 with open("<file_path>", "r") as <file_var>:
     <code>
 ```
 
-But this is already the default mode to open a file, so we can omit it like in the first example.
+不过这已经是打开文件的默认模式了，所以我们可以忽略它，例如下面的例子：
 
-This is an example:
+例子：
 
 ```python
 with open("famous_quotes.txt") as file:
@@ -4164,7 +4164,7 @@ with open("famous_quotes.txt") as file:
         print(line)
 ```
 
-or...
+或者……
 
 ```python
 with open("famous_quotes.txt", "r") as file:
@@ -4172,20 +4172,20 @@ with open("famous_quotes.txt", "r") as file:
         print(line)
 ```
 
-**💡 Tip:** that's right! We can iterate over the lines of the file using a for loop. The file path can be relative to the Python script that we are running or it can be an absolute path.
+**💡 提示：** 是的！我们可以通过for循环来遍历文件所有的行。文件路径可以是一个相对于当前正在运行的Python脚本的相对路径，也可以是绝对路径。
 
-### How to Write to a File in Python
+### Python中如何写文件
 
-There are two ways to write to a file. You can either replace the entire content of the file before adding the new content, or append to the existing content.
+写文件有两种方法。你可以将要添加的内容退换掉现有的内容，或者追加到现有内容中。
 
 ```python
 with open("<file_path>", "w") as <file_var>:
     <code>
 ```
 
-To replace the content completely, we use the `"w"` mode, so we pass this string as the second argument to `open()`. We call the `.write()` method on the file object passing the content that we want to write as argument.
+要完全替换现有内容，我们可以用`"w"`模式，可以将“w”作为`open()`第二个参数来调用。我们在文件对象上调用`.write()`方法，将我们想写的内容作为参数传给该对象。
 
-For example:
+例如：
 
 ```python
 words = ["Amazing", "Green", "Python", "Code"]
@@ -4195,9 +4195,9 @@ with open("famous_quotes.txt", "w") as file:
         file.write(word + "\n")
 ```
 
-When you run the program, a new file will be created if it doesn't exist already in the path that we specified.
+当你运行程序时，如果指定路径中的文件不存在，它会被创建。
 
-This will be the content of the file:
+这是文件内容：
 
 ```python
 Amazing
@@ -4206,16 +4206,16 @@ Python
 Code
 ```
 
-### How to Append to a File in Python
+### 如何向文件中追加内容
 
-However, if you want to append the content, then you need to use the `"a"` mode:
+然而，如果你想向文件中追加内容，那么需要使用`"a"`模式：
 
 ```
 with open("<file_path>", "a") as <file_var>:
     <code>
 ```
 
-For example:
+例如：
 
 ```python
 words = ["Amazing", "Green", "Python", "Code"]
@@ -4225,9 +4225,9 @@ with open("famous_quotes.txt", "a") as file:
         file.write(word + "\n")
 ```
 
-This small change will keep the existing content of the file and it will add the new content to the end.
+这个小改动将会保留文件的现有内容，它将新的内容加到最后。
 
-If we run the program again, these strings will be added to the end of the file:
+如果我们再次运行程序，这些字符串将会被添加到文件的末尾：
 
 ```python
 Amazing
@@ -4240,9 +4240,9 @@ Python
 Code
 ```
 
-### How to Delete a File in Python
+### 如何删除文件
 
-To delete a file with our script, we can use the `os` module. It is recommended to check with a conditional if the file exists before calling the `remove()` function from this module:
+要在我们的脚本中删除文件，得用`os`模块。建议在调用os模块的`remove()`方法之前，先检查文件是否存在。
 
 ```import
 import os
@@ -4253,7 +4253,7 @@ else:
   <code>
 ```
 
-For example:
+例如：
 
 ```python
 import os
@@ -4264,31 +4264,31 @@ else:
   print("This file doesn't exist")
 ```
 
-You might have noticed the first line that says `import os`. This is an import statement. Let's see why they are helpful and how you can work with them.
+你可能注意到了第一行代码`import os`，这是一个导入语句。下面我们看看它们有什么用，以及如何使用。
 
-## 🔸 Import Statements in Python
+## 🔸 Python中的导入语句
 
-Organizing your code into multiple files as your program grows in size and complexity is good practice. But we need to find a way to combine these files to make the program work correctly, and that is exactly what import statements do.
+一个较好的做法是，随着程序规模和复杂性的增加，我们要将代码组织成多个文件。但我们需要找到一种方法来组合这些文件以使程序正常工作，而这正是导入语句的作用。
 
-By writing an import statement, we can import a module (a file that contains Python definitions and statements) into another file.
+通过导入语句，我们可以将一个模块(包含Python定义和语句的文件)导入导另一个文件中。
 
-These are various alternatives for import statements:
+下面是各种形式的导入语句：
 
-### First Alternative:
+### 第一种选择：
 
 ```
 import <module_name>
 ```
 
-For example:
+例如：
 
 ```
 import math
 ```
 
-💡 **Tip:** `math` is a built-in Python module.
+💡 **提示：** `math`是Python的一个内置模块。
 
-If we use this import statement, we will need to add the name of the module before the name of the function or element that we are referring to in our code:
+如果我们使用这个导入语句，我们需要在代码中引用的函数或元素的名称前添加模块的名称。
 
 ```python
 >>> import math
@@ -4296,21 +4296,21 @@ If we use this import statement, we will need to add the name of the module befo
 5.0
 ```
 
-We explicitly mention in our code the module that the element belongs to.
+我们在代码中明确的指明该元素所属的模块。
 
-### Second Alternative:
+### 第二中选择：
 
 ```
 import <module> as <new_name>
 ```
 
-For example:
+例如：
 
 ```
 import math as m
 ```
 
-In our code, we can use the new name that we assigned instead of the original name of the module:
+在代码中，我们可以使用我们指定的新名称，而不是模块的原始名称：
 
 ```python
 >>> import math as m
@@ -4318,19 +4318,19 @@ In our code, we can use the new name that we assigned instead of the original na
 5.0
 ```
 
-### Third Alternative:
+### 第三种选择：
 
 ```
 from <module_name> import <element>
 ```
 
-For example:
+例如：
 
 ```
 from math import sqrt
 ```
 
-With this import statement, we can call the function directly without specifiying the name of the module:
+使用这个导入语句，我们可以直接调用函数，而不必指定模块的名称。
 
 ```
 >>> from math import sqrt
@@ -4338,19 +4338,19 @@ With this import statement, we can call the function directly without specifiyin
 5.0
 ```
 
-### Fourth Alternative:
+### 第四种选择：
 
 ```
 from <module_name> import <element> as <new_name>
 ```
 
-For example:
+例如：
 
 ```python
 from math import sqrt as square_root
 ```
 
-With this import statement, we can assign a new name to the element imported from the module:
+使用这种导入语句，我们可以给从模块中导出的元素指定一个新的名字。
 
 ```python
 >>> from math import sqrt as square_root
@@ -4358,15 +4358,15 @@ With this import statement, we can assign a new name to the element imported fro
 5.0
 ```
 
-### Fifth Alternative:
+### 第五种选择：
 
 ```
 from <module_name> import *
 ```
 
-This statement imports all the elements of the module and you can refer to them directly by their name without specifying the name of the module.
+上面的导入语句导入了模块的所有元素，我们可以通过名称来直接引用这些元素，而不用指定模块名称。
 
-For example:
+例如：
 
 ```python
 >>> from math import *
@@ -4384,11 +4384,11 @@ For example:
 1
 ```
 
-💡 **Tip:** this type of import statement can make it more difficult for us to know which elements belong to which module, particularly when we are importing elements from multiple modules.
+💡 **提示：** 这种类型的导入语句会使我们很难知道哪些元素属于哪个模块，特别是当我们从多个模块导入元素的时候。
 
-According to the [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/#imports):
+根据[Python代码的风格指南](https://www.python.org/dev/peps/pep-0008/#imports):
 
-> **Wildcard imports** (from <module> import \*) should be avoided, as they make it unclear which names are present in the namespace, confusing both readers and many automated tools.
+> **有通配符的导入** (from <module> import \*) 应该避免使用，因为他们会让你搞不清楚哪些元素是属于哪个模块, 对读者和一些自动化工具都具有迷惑性。
 
 ## 🔹 Python中的列表与字典推导
 
@@ -4459,7 +4459,7 @@ Python中你应该知道的一个很棒的功能特性是列表与字典推导�
 
 ### 字典推导
 
-Now let's dive into dictionary comprehension. The basic syntax that we need to use to define a dictionary comprehension is:
+现在让我们深入字典推导。定义字典推导的基本语法：
 
 ```
 {<key_value>: <value> for <var> in <sequence>}
@@ -4469,7 +4469,7 @@ Now let's dive into dictionary comprehension. The basic syntax that we need to u
 {<key_value>: <value> for <var> in <sequence> if <condition>}
 ```
 
-Here we have some examples of dictionary comprehension:
+字典推导的一些例子：
 
 ```
 >>> {num: num**3 for num in range(3, 15)}
@@ -4479,7 +4479,7 @@ Here we have some examples of dictionary comprehension:
 {4: 10, 5: 11, 6: 12, 7: 13}
 ```
 
-This is an example with a conditional where we take an existing dictionary and create a new dictionary with only the students who earned a passing grade greater than or equal to 60:
+这是一个带有条件的例子，我们从一个现有的字典中提取，并创建一个新的字典，其中只有获得成绩大于或等于60分的学生：
 
 ```
 >>> grades = {"Nora": 78, "Gino": 100, "Talina": 56, "Elizabeth": 45, "Lulu": 67}
@@ -4490,6 +4490,6 @@ This is an example with a conditional where we take an existing dictionary and c
 {'Nora': 78, 'Gino': 100, 'Lulu': 67}
 ```
 
-****I** really **hope you liked this article and found it helpful.** ** Now you know how to write and work with the most important elements of Python.
+****I** 真的 **希望你喜欢这篇文章，且能对你有帮助** ** 现在你已经知道了如何编写和使用Python中最重要的元素了。
 
-⭐ [Subscribe to my YouTube channel](https://www.youtube.com/channel/UCng0h8WiHLmT57JJ8At4LfQ) and follow me on [Twitter](https://twitter.com/EstefaniaCassN) to find more coding tutorials and tips. Check out my online course [Python Exercises for Beginners: Solve 100+ Coding Challenges](https://www.udemy.com/course/python-exercises-for-beginners-solve-coding-challenges/?referralCode=804D1EFAF779D07914D2)
+⭐ [订阅我的YouTube](https://www.youtube.com/channel/UCng0h8WiHLmT57JJ8At4LfQ) 和关注我的[Twitter](https://twitter.com/EstefaniaCassN)以便找到更多的编程教程和技巧。 查看我的在线教程[Python Exercises for Beginners: Solve 100+ Coding Challenges](https://www.udemy.com/course/python-exercises-for-beginners-solve-coding-challenges/?referralCode=804D1EFAF779D07914D2)

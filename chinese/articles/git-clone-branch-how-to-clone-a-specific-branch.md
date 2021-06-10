@@ -156,7 +156,7 @@ git branch -a
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-23-at-5.28.06-AM.png)
 
-## 如何可能一个指定的分支
+## 如何克隆一个指定的分支
 
 现在从我们的演示仓库中克隆一个指定的分支。有两种方法克隆一个特定的分支。你可以：
 

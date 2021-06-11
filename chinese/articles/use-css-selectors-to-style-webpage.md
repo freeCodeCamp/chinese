@@ -39,17 +39,29 @@ CSS选择器通常分为五个不同的种类。这篇文章将从基础和高�
 4.  Pseudo-element selectors
 5.  Attribute selectors
 
+1. 简单选择器
+2. 组合选择器
+3. 伪类选择器
+4. 伪元素选择器
+5. 属性选择器
+
 In order to get good at something you have to understand the basics so let's start there.
+想要做好一件事，你必须了解基础知识，所以让我们从这里开始。
 
 # Basic CSS Selectors
+# 基础选择器
 
 You've likely seen many types of CSS selectors – the fundamental CSS selectors that are enough to get you building stylish web pages. Let's look at each of the basic CSS selectors to ensure we understand what they do.
+你可能见过许多类型的选择器 - 这些基本的CSS选择器足以让你构建时尚的网页。让我们来看看每个基本的CSS选择器，以确保我们了解它们的作用。
 
 ## CSS Element (type) selector
+## CSS 元素（标签）选择器
 
 The CSS element selector selects HTML elements based on the element name. In HTML element names are things like `h1`, `p`, or semantic names like `article` or `footer`. Therefore, element selectors select all the HTML elements with the name you select.
+CSS元素选择器根据元素名来选择HTML元素。在HTML中，元素名就是类似于`h1`、 `p`的东西，或者类似于`article`或`footer`之类有意义的名字。因此，元素选择器选择所有具有你选择的名称的HTML元素。
 
 Let's look a CSS selector example for element selectors:
+让我们来看看元素选择器的例子吧：
 
 ```css
 /* selecting all h3 elements */
@@ -66,8 +78,10 @@ article {
 ```
 
 In the example above, we have selected all elements on the page that are of the type `h3` and `article` and applied styles to those elements.
+在以上的例子，我们选择器页面上标签名为`h3`和`article`的所有元素，并对这些元素应用了样式。
 
 Element selectors help you keep your code simple by applying the styling to all elements on a page of that type. This means you only have to keep track of your styles for those elements in one place.
+元素选择器帮助你保持你代码的简洁，并将样式应用页面上这种类型的所有元素上。
 
 ## CSS id selector
 

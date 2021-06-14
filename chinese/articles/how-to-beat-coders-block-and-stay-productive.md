@@ -39,41 +39,79 @@ Here are the five best tactics you can use every day to stay productive and free
 
 Almost every time I've run into trouble while working on a coding project, I've been able to trace it back to one specific cause. It's that I tried to approach the project by wrapping my head around the totality of what needed to be done.
 
+几乎每次我在编码项目中遇到麻烦的时候，我都能将其追溯到一个特定的原因上。这是我试图通过将我的头脑围绕需要完成的全部工作来接近该项目。
+
 When you do that, it's easy to get overwhelmed by the sheer enormity of even a run\-of\-the\-mill coding project. Plus, starting to write code without a concrete idea of where you need to take it is always a recipe for disaster.
+
+当你这样做时，即使是一个普通的编码项目也很容易被庞大的规模所淹没。另外，在没有具体想法的情况下开始编写代码总是会导致灾难。
 
 Instead, make it a point to sketch out the rough outlines of your project on paper first. It's something that old\-school programmers do by habit, but that younger programmers tend to skip over.
 
+相反，首先要在纸上勾勒出项目的粗略轮廓。这是老派程序员习惯做的事情，但年轻的程序员往往会跳过。
+
 All you have to do is to write out the purpose of the program you're trying to create, followed by a list of sub\-functions that you think will make everything work.
+
+你所要做的就是写出你尝试创建的程序的目的，然后是列一个你认为满足所有需求的子功能列表。
 
 This simple act helps you to break the project down into smaller logical chunks that don't seem as daunting. Also, it gives you a chance to pre\-discover obvious issues that might slow you down later.
 
+这个简单的动作可以帮助你将项目分解为看起来并不令人生畏的较小的逻辑块。此外，它让你有机会预先发现可能会在以后减慢你速度的明显问题。
+
 Once you've done this, you can translate your work outline into the online calendar solution of your choice. That will help you visualize all of the small mini\-tasks that make up your project.
+
+完成此操作后，你可以将工作大纲转换为你选择的在线日历解决方案。这将帮助你可视化构成项目的所有小任务。
 
 In my case, just seeing the timeline of a project from beginning to end makes it far easier for me to focus on one logical chunk of the work at a time.
 
+就我而言，只需从头到尾查看项目的时间表，我就可以更轻松地一次专注于工作的一个逻辑部分。
+
 Maybe it's because it takes away the overwhelming sense of scale of a project, or maybe it relieves the perception of time pressure to get each portion done. Either way, it's a far less anxiety\-ridden way to work.
+
+也许是因为它消除了项目压倒性的规模感，或者它减轻了完成每个部分的时间压力。无论哪种方式，这是一种远没有那么焦虑的工作方式。
 
 ## 2\. Play in a Sandbox
 
+## 2. 建立沙箱
+
 Sometimes the best way to overcome coder's block is to build something – anything – that works. So, if I run into a rough patch where it feels like I'm getting nowhere fast, I'll head over to a sandbox platform and try to build something fun.
+
+有时，克服编码障碍的最佳方法是做出一些东西——任何有效的东西。 所以，如果我遇到了一个粗糙的补丁感觉不知道放哪里，我会放在沙盒平台并尝试构建一些有趣的东西。
 
 Because I tend to deal with web front ends, my go\-to sites are [CodeSandbox](https://codesandbox.io/) and [CodePen](https://codepen.io/), but there are others that might suit your needs a little better.
 
+因为我倾向于处理 Web 前端，所以我的首选站点是 [CodeSandbox](https://codesandbox.io/) 和 [CodePen](https://codepen.io/)，但可能还有其他站点更适合你的需求。
+
 For example, [Replit](https://repl.it/) will let you live code in over 50 languages, and you can even turn to their built\-in community to ask for help if you get stuck on something.
+
+例如，[Replit](https://repl.it/) 可以让你以 50 多种语言编写代码，如果你遇到困难，你甚至可以求助于他们的内置社区寻求帮助。
 
 Sometimes throwing ideas back and forth with another programmer will be enough to help you break the mental logjam that's keeping you from moving forward with your work.
 
+有时，与其他程序员来回提出想法就足以帮助你打破阻碍你继续工作的精神僵局。
+
 ## 3\. Maintain a Task Backlog
+
+## 3. 维护一个任务待办事项
 
 One thing that contributes to my own coder's block is not having a list of simple tasks that I can turn to when I want to keep making forward progress on a project.
 
+对克服我自己编码障碍有帮助的一件事是一个不包含简单任务的列表，当我想继续在项目上取得进展时，我可以转向这些任务。
+
 In other words, when you're working on something particularly challenging and you get stuck, you don't want the alternative to that challenging thing to be nothing at all. That's how you end up banging your head against intractable problems and getting nowhere fast.
+
+换句话说，当你在做一些特别具有挑战性的事情而你陷入困境时，你不希望那个具有挑战性的事情的替代品一无所有。这就是你最终如何面对棘手的问题而一事无成。
 
 To avoid that, you should always maintain a running task backlog list for the duration of every project. I use one similar to a standard [Scrum product backlog](https://www.scrum.org/resources/what-is-a-product-backlog) (even when I'm not working with a team).
 
+为避免这种情况，你应该始终在每个项目的持续时间内维护一个正在运行的任务待办事项列表。我使用类似于标准的 [Scrum 产品待办列表](https://www.scrum.org/resources/what-is-a-product-backlog)（即使我不与团队合作）。
+
 Fill it with things like code refactoring and cosmetic changes – in other words, simple low\-priority tasks. Then, when you get stuck, you can tackle those simple things as a means of continuing to move [forward](https://www.neliti.com/publications/236745/software-release-management-evolution-comparative-analysis-across-agile-and-devo) with your project.
 
+用代码重构和外观更改之类的东西填充它——换句话说，简单的低优先级任务。然后，当你陷入困境时，你可以解决这些简单的事情，作为继续[前进](https://www.neliti.com/publications/236745/software-release-management-evolution-comparative-analysis-跨敏捷和开发）与你的项目。
+
 Sometimes, completing even the simplest task will be enough to get you back on track and churning out meaningful code again.
+
+有时，即使完成最简单的任务也足以让你重回正轨并再次编写有意义的代码。
 
 ## 4\. Use Breaks Strategically
 

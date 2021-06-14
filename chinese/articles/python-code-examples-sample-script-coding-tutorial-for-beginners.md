@@ -1,46 +1,46 @@
 > -  原文地址：[Python Code Examples – Sample Script Coding Tutorial for Beginners](https://www.freecodecamp.org/news/python-code-examples-sample-script-coding-tutorial-for-beginners/)
 > -  原文作者：[Estefania Cassingena NavoneEstefania Cassingena Navone](https://www.freecodecamp.org/news/author/estefaniacn/)
-> -  译者：
+> -  译者：ywxgod
 > -  校对者：
 
-![Python Code Examples – Sample Script Coding Tutorial for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2020/11/Code-Examples-Image.png)
+![Python 代码示例——面向初学者的示例脚本编程教程](https://www.freecodecamp.org/news/content/images/size/w2000/2020/11/Code-Examples-Image.png)
 
-Hi! Welcome. If you are learning Python, then this article is for you. You will find a thorough description of Python syntax and lots of code examples to guide you during your coding journey.
+Hi! 欢迎。您是否正在学习Python，如果是的，那这篇文章就是为您而准备的，在文中你将会找到Python语法的详尽描述以及大量的Python代码示例，它将会指导你的Python编程之旅。
 
-### What we will cover:
+### 涵盖的内容：
 
--   [Variable Definitions in Python](#-variable-definitions-in-python)
--   [Hello, World! Program in Python](#-hello-world-program-in-python)
--   [Data Types and Built-in Data Structures in Python](#-data-types-and-built-in-data-structures-in-python)
--   [Python Operators](#-python-operators)
--   [Conditionals in Python](#-conditionals-in-python)
--   [For Loops in Python](#-for-loops-in-python)
--   [While Loops in Python](#-while-loops-in-python)
--   [Nested Loops in Python](#-nested-loops-in-python)
--   [Functions in Python](#-functions-in-python)
--   [Recursion in Python](#-recursion-in-python)
--   [Exception Handling in Python](#-exception-handling-in-python)
--   [Object-Oriented Programming in Python](#-object-oriented-programming-in-python)
--   [How to Work with Files in Python](#-how-to-work-with-files-in-python)
--   [Import Statements in Python](#-import-statements-in-python)
--   [List and Dictionary Comprehension in Python](#-list-and-dictionary-comprehension-in-python)
--   and more...
+-   [Python中的变量定义](#-variable-definitions-in-python)
+-   [Python中的Hello, World!](#-hello-world-program-in-python)
+-   [Python中的数据类型和内建数据结构](#-data-types-and-built-in-data-structures-in-python)
+-   [Python中的运算符](#-python-operators)
+-   [Python中的条件语句](#-conditionals-in-python)
+-   [Python中的for循环](#-for-loops-in-python)
+-   [Python中while循环](#-while-loops-in-python)
+-   [Python中的循环嵌套](#-nested-loops-in-python)
+-   [Python中的函数](#-functions-in-python)
+-   [Python中的递归](#-recursion-in-python)
+-   [Python中的异常处理](#-exception-handling-in-python)
+-   [Python中的面向对象编程](#-object-oriented-programming-in-python)
+-   [Python中如何处理文件](#-how-to-work-with-files-in-python)
+-   [Python中的导入(import)语句](#-import-statements-in-python)
+-   [Python的列表(List)和字典(Dict)推导](#-list-and-dictionary-comprehension-in-python)
+-   ...
 
-Are you ready? Let's begin! 🔅
+准备好了吗？让我们开始吧！🔅
 
-💡 **Tip:** throughout this article, I will use `<>` to indicate that this part of the syntax will be replaced by the element described by the text. For example, `<var>` means that this will be replaced by a variable when we write the code.
+💡 **提示：** 在文章中, 我会用`<>`表示这一整块会被其中间的文本描述的元素所取代。例如，`<var>`表示我们写代码时，它会被一个变量所替换。
 
-## 🔹 Variable Definitions in Python
+## 🔹 Python中的变量定义
 
-The most basic building-block of any programming language is the concept of a variable, a name and place in memory that we reserve for a value.
+变量的概念都是任何编程语言中的一个最基本的构件, 变量有一个名称和一个内存中用于存储其值得位置。
 
-In Python, we use this syntax to create a variable and assign a value to this variable:
+在Python中，我们使用这种语法来创建一个变量并为这个变量赋值：
 
 ```Python
 <var_name> = <value>
 ```
 
-For example:
+例如：
 
 ```
 age = 56
@@ -58,49 +58,49 @@ color = "Blue"
 grades = [67, 100, 87, 56]
 ```
 
-If the name of a variable has more than one word, then the [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) recommends separating words with an underscore "as necessary to improve readability."
+如果变量名不止一个单词, 在[Python代码的风格指南](https://www.python.org/dev/peps/pep-0008/)中的建议是要用下划线将单词分开，“根据需要提高代码的可读性”。
 
-For example:
+例如：
 
 ```
 my_list = [1, 2, 3, 4, 5]
 ```
 
-💡 **Tip:** The Style Guide for Python Code (PEP 8) has great suggestions that you should follow to write clean Python code.
+💡 **提示：** Python代码风格指南(PEP 8)有很好的建议，你应该遵循这些建议来编写整洁的Python代码。
 
-## 🔸 Hello, World! Program in Python
+## 🔸 Hello, World!
 
-Before we start diving into the data types and data structures that you can use in Python, let's see how you can write your first Python program.
+在我们开始深入了解Python的数据类型与数据结构之前，让我们看看如何编写第一个Python程序。
 
-You just need to call the `print()` function and write `"Hello, World!"` within parentheses:
+你只需要调用`print()`函数，并且在括号里写上`"Hello, World!"`即可：
 
 ```python
 print("Hello, World!")
 ```
 
-You will see this message after running the program:
+程序执行后，你会看到下面的信息:
 
 ```
 "Hello, World!"
 ```
 
-💡 **Tip:** Writing a `"Hello, World!"` program is a tradition in the developer community. Most developers start learning how to code by writing this program.
+💡 **提示：** 写一个`"Hello, World!"`程序是开发者社区的一个传统。大多数开发者都是从编写这个程序开始学习编程的。
 
-Great. You just wrote your first Python program. Now let's start learning about the data types and built-in data structures that you can use in Python.
+很好，你刚刚写了你的第一个Python程序。 现在让我们开始学习Python中的数据类型和内建的数据结构。
 
-## 🔹 Data Types and Built-in Data Structures in Python
+## 🔹 Python中的数据类型与内建数据结构
 
-We have several basic data types and built-in data structures that we can work with in our programs. Each one has its own particular applications. Let's see them in detail.
+我们有几种基本的数据类型和内建的数据结构可以使用，每一个都有各自特殊的应用场景，让我们来看看具体的使用细节。
 
-### Numeric Data Types in Python: Integers, Floats, and Complex
+### Python中的数字类型：整数(Integers)，浮点数(Floats)，复数(Complex)
 
-These are the numeric types that you can work with in Python:
+Python可以使用的数字类型有下面几种：
 
-#### Integers
+#### 整数
 
-Integers are numbers without decimals. You can check if a number is an integer with the `type()` function. If the output is `<class 'int'>`, then the number is an integer.
+整数就是没有小数的数字，你可以用`type()`函数来检查一个数字是否是一个整数。如果`type()`函数的输出是`<class 'int'>`，则说明这个数字是一个整数。
 
-For example:
+例如：
 
 ```python
 >>> type(1)
@@ -116,15 +116,15 @@ For example:
 <class 'int'>
 ```
 
-#### Floats
+#### 浮点数
 
-Floats are numbers with decimals. You can detect them visually by locating the decimal point. If we call `type()` to check the data type of these values, we will see this as the output:
+浮点数就是带有小数的数字，你可以通过定位小数点来直观的检测他们。如果我们用`type()`来检测这些值得类型，你会看到下面这样的输出:
 
 ```
 <class 'float'>
 ```
 
-Here we have some examples:
+一些例子：
 
 ```python
 >>> type(4.5)
@@ -146,11 +146,11 @@ Here we have some examples:
 <class 'float'>
 ```
 
-#### Complex
+#### 复数
 
-Complex numbers have a real part and an imaginary part denoted with `j`. You can create complex numbers in Python with `complex()`. The first argument will be the real part and the second argument will be the imaginary part.
+复数有一个实部和一个带有`j`的虚部。 你可以通过`complex()`来创建复数。`complex()`的第一个参数是实部，第二个参数是虚部。
 
-These are some examples:
+一些例子：
 
 ```python
 >>> complex(4, 5)
@@ -172,11 +172,11 @@ These are some examples:
 4j
 ```
 
-### Strings in Python
+### Python中的字符串
 
-Strings incredibly helpful in Python. They contain a sequence of characters and they are usually used to represent text in the code.
+Python中的字符串非常有用，它们包含一连串的字符，通常用于表示代码中的文本。
 
-For example:
+例如:
 
 ```
 "Hello, World!"
@@ -186,13 +186,13 @@ For example:
 'Hello, World!'
 ```
 
-We can use both single quotes `''` or double quotes `""` to define a string. They are both valid and equivalent, but you should choose one of them and use it consistently throughout the program.
+我们可以使用单引号`''`或双引号`""`来定义一个字符串。不管哪一种，它们都是有效的、等同的定义，但在程序中你应该始终保持选择其中的一种。
 
-**💡 Tip:** Yes! You used a string when you wrote the `"Hello, World!"` program. Whenever you see a value surrounded by single or double quotes in Python, that is a string.
+**💡 提示：** 是的！你在写`"Hello, World!"`程序的时候就已经使用过字符串了。无论何时，当你在Python中看到一个被单引号或双引号包围的值时，那它就是一个字符串。
 
-Strings can contain any character that we can type in our keyboard, including numbers, symbols, and other special characters.
+字符串可以包含我们从键盘上输入的任何字符，包括数字、符号和其他特殊字符。
 
-For example:
+例如：
 
 ```
 "45678"
@@ -206,36 +206,36 @@ For example:
 "#IlovePython"
 ```
 
-**💡 Tip:** Spaces are also counted as characters in a string.
+**💡 提示：** 空格也被算作字符串中的字符。
 
-#### Quotes Within Strings
+#### 字符串中的引号
 
-If we define a string with double quotes `""`, then we can use single quotes within the string. For example:
+如果我们用双引号`""`定义字符串，那我们可以在字符串中使用单引号。例如：
 
 ```
 "I'm 20 years old"
 ```
 
-If we define a string with single quotes `''`, then we can use double quotes within the string. For example:
+如果我们使用单引号`''`定义字符串，那我们可以在字符串中使用双引号。例如：
 
 ```
 'My favorite book is "Sense and Sensibility"'
 ```
 
-#### String Indexing
+#### 字符串索引
 
-We can use indices to access the characters of a string in our Python program. An index is an integer that represents a specific position in the string. They are associated to the character at that position.
+Python程序中我们可以使用索引来访问字符串中的字符。索引是一个整数，表示字符串中的一个特定位置。
 
-This is a diagram of the string `"Hello"`:
+下面是字符串`"Hello"`的图示:
 
 ```
 String:  H e l l o
 Index:   0 1 2 3 4
 ```
 
-**💡 Tip:** Indices start from `0` and they are incremented by `1` for each character to the right.
+**💡 提示：** 索引从`0`开始，每向右增加一个字符，就增加`1`。
 
-For example:
+例如：
 
 ```python
 >>> my_string = "Hello"
@@ -256,7 +256,7 @@ For example:
 'o'
 ```
 
-We can also use negative indices to access these characters:
+我们还可以用负的索引来访问字符串中字符:
 
 ```python
 >>> my_string = "Hello"
@@ -277,30 +277,30 @@ We can also use negative indices to access these characters:
 'H'
 ```
 
-**💡 Tip:** we commonly use `-1` to access the last character of a string.
+**💡 提示：** 通常用`-1`来访问字符串中的最后一个字符。
 
-#### String Slicing
+#### 字符串切片
 
-We may also need to get a slice of a string or a subset of its characters. We can do so with string slicing.
+我们可能需要获取字符串的切片或其子集。我们可以使用字符串切片来实现。
 
-This is the general syntax:
+切片的一般语法:
 
 ```python
 <string_variable>[start:stop:step]
 ```
 
-`start` is the index of the first character that will be included in the slice. By default, it's `0`.
+`start`是切片中第一个字符的索引，默认值是`0`。
 
--   `stop` is the index of the last character in the slice (this character will **not** be included). By default, it is the last character in the string (if we omit this value, the last character will also be included).
--   `step` is how much we are going to add to the current index to reach the next index.
+-   `stop`是切片的最后一个字符的索引(这个字符**并不**包含在切片中)，默认值是字符串中的最后一个字符(如果我们省略这个值，最后一个字符也将被包含在内)。
+-   `step`是我们从当前索引到下一个索引所要增加的数量。
 
-We can specify two parameters to use the default value of `step`, which is `1`. This will include all the characters between `start` and `stop` (not inclusive):
+我们可以指定两个参数，然后第三个参数`step`使用默认值`1`，这样就会获取到`start`到`stop`(不包含)之间的所有字符：
 
 ```python
 <string_variable>[start:stop]
 ```
 
-For example:
+例如:
 
 ```python
 >>> freecodecamp = "freeCodeCamp"
@@ -330,11 +330,11 @@ For example:
 'Camp'
 ```
 
-**💡 Tip:** Notice that if the value of a parameter goes beyond the valid range of indices, the slice will still be presented. This is how the creators of Python implemented this feature of string slicing.
+**💡 提示：** 注意，如果某个参数值超出了索引的范围, 并不会影响切片的展示。这就是Python的发明者在考虑如何实现字符串切片功能时所考虑到的。
 
-If we customize the `step`, we will "jump" from one index to the next according to this value.
+如果我们给`step`赋值, 我们将会根据这个值从一个索引"跳到"另一个索引.
 
-For example:
+例如:
 
 ```python
 >>> freecodecamp = "freeCodeCamp"
@@ -358,7 +358,7 @@ For example:
 'rd'
 ```
 
-We can also use a **negative** step to go from right to left:
+我们还可以用一个**负的**step值来从右向左取值:
 
 ```python
 >>> freecodecamp = "freeCodeCamp"
@@ -373,7 +373,7 @@ We can also use a **negative** step to go from right to left:
 'o'
 ```
 
-And we can omit a parameter to use its default value. We just have to include the corresponding colon (`:`) if we omit `start`, `stop`, or both:
+并且我们可以省略任意一个参数而使用其默认值。如果我们省略`start`，`stop`，或者两者，那么我们只需要一个对应的冒号(`:`)：
 
 ```python
 >>> freecodecamp = "freeCodeCamp"
@@ -403,15 +403,15 @@ And we can omit a parameter to use its default value. We just have to include th
 'pmaCedoCeerf'
 ```
 
-**💡 Tip:** The last example is one of the most common ways to reverse a string.
+**💡 提示：** 最后的一个是最常用的反转字符串的例子。
 
-#### f-Strings
+#### f-字符串
 
-In Python 3.6 and more recent versions, we can use a type of string called f-string that helps us format our strings much more easily.
+在Python 3.6或以上版本中，我们可以是使用一种被称为f-string的字符串，它能帮助我们处理字符串格式化更加方便。
 
-To define an f-string, we just add an `f` before the single or double quotes. Then, within the string, we surround the variables or expressions with curly braces `{}`. This replaces their value in the string when we run the program.
+定义一个f-string，我们只需要将字符`f`放到单引号或双引号的前面，然后在字符串里面，我们将变量或者表达式用`{}`包含起来。当程序执行的时候，他们会被替换为变量或者表达式的值。
 
-For example:
+例如:
 
 ```python
 first_name = "Nora"
@@ -426,7 +426,7 @@ The output is:
 Hi, I'm Nora. I'm learning Python.
 ```
 
-Here we have an example where we calculate the value of an expression and replace the result in the string:
+下面我们有一个例子，展示了计算一个表达式的值并将结果替换到字符串中。
 
 ```python
 value = 5
@@ -434,13 +434,13 @@ value = 5
 print(f"{value} multiplied by 2 is: {value * 2}")
 ```
 
-The values are replaced in the output:
+它们的值在输出中被替换:
 
 ```python
 5 multiplied by 2 is: 10
 ```
 
-We can also call methods within the curly braces and the value returned will be replaced in the string when we run the program:
+我们还可以在大括号中调用方法，当程序执行后，返回的值会替换掉原字符串中的函数调用:
 
 ```python
 freecodecamp = "FREECODECAMP"
@@ -448,23 +448,23 @@ freecodecamp = "FREECODECAMP"
 print(f"{freecodecamp.lower()}")
 ```
 
-The output is:
+输出:
 
 ```python
 freecodecamp
 ```
 
-#### String Methods
+#### 字符串方法
 
-Strings have methods, which represent common functionality that has been implemented by Python developers, so we can use it in our programs directly. They are very helpful to perform common operations.
+字符串的方法，都是被Python开发者实现的一些常见的功能，所以我们可以在代码中直接使用它们。这些字符串方法对执行一些常见的操作非常有用。
 
-This is the general syntax to call a string method:
+下面是调用字符串方法的一般语法：
 
 ```python
 <string_variable>.<method_name>(<arguments>)
 ```
 
-For example:
+例如：
 
 ```python
 >>> freecodecamp = "freeCodeCamp"
@@ -539,15 +539,15 @@ False
 'FREECODECAMP'
 ```
 
-To learn more about Python methods, I would recommend reading [this article](https://docs.python.org/3/library/stdtypes.html#string-methods) from the Python documentation.
+想了解更多Python方法，建议去Python官方网站阅读[这篇](https://docs.python.org/3/library/stdtypes.html#string-methods)。
 
-💡 **Tip:** All string methods return copies of the string. They do not modify the string because strings are immutable in Python.
+💡 **提示：** 所有字符串方法返回的都是一个字符串的副本。它们不会对原始字符串做修改，因为在Python中字符串时不可修改的.
 
-### Booleans in Python
+### Python中的布尔类型
 
-Boolean values are `True` and `False` in Python. They must start with an uppercase letter to be recognized as a boolean value.
+Python中布尔类型的值就只有`True`和`False`。它们必须已大写字母开头，这样Python才能识别到是布尔类型的值。
 
-For example:
+例如:
 
 ```python
 >>> type(True)
@@ -557,7 +557,7 @@ For example:
 <class 'bool'>
 ```
 
-If we write them in lowercase, we will get an error:
+如果写成了小写，会报错：
 
 ```python
 >>> type(true)
@@ -573,15 +573,15 @@ Traceback (most recent call last):
 NameError: name 'false' is not defined
 ```
 
-### Lists in Python
+### Python中的列表
 
-Now that we've covered the basic data types in Python, let's start covering the built-in data structures. First, we have lists.
+到此我们已经说完了Python的基本数据类型，现在我们来看看内置的数据结构。首先，来看列表。
 
-To define a list, we use square brackets `[]` with the elements separated by a comma.
+定义列表, 我们要用中括号`[]`，然后中括号里面是用逗号分隔的元素。
 
-**💡 Tip:** It's recommended to add a space after each comma to make the code more readable.
+**💡 提示：** 建议在每个逗号后面加一个空格，以增加代码的可读性。
 
-For example, here we have examples of lists:
+例如，下面是一些列表的例子：
 
 ```
 [1, 2, 3, 4, 5]
@@ -595,13 +595,13 @@ For example, here we have examples of lists:
 [3.4, 2.4, 2.6, 3.5]
 ```
 
-Lists can contain values of different data types, so this would be a valid list in Python:
+列表可以包含不同类型的数据，所以下面是一个合法的列表:
 
 ```
 [1, "Emily", 3.4]
 ```
 
-We can also assign a list to a variable:
+我们还可以将一个列表赋值给一个变量:
 
 ```python
 my_list = [1, 2, 3, 4, 5]
@@ -611,17 +611,17 @@ my_list = [1, 2, 3, 4, 5]
 letters = ["a", "b", "c", "d"]
 ```
 
-#### Nested Lists
+#### 列表嵌套
 
-Lists can contain values of any data type, even other lists. These inner lists are called **nested lists**.
+列表可以包含任何类型的数据，甚至包含其他的列表。 这些被包含在内部的列表叫做**嵌套列表**。
 
 ```python
 [[1, 2, 3], [4, 5, 6]]
 ```
 
-In this example, `[1, 2, 3]` and `[4, 5, 6]` are nested lists.
+上面的例子, `[1, 2, 3]`与`[4, 5, 6]`是两个嵌套的列表.
 
-Here we have other valid examples:
+再看看另外一个有效的例子:
 
 ```python
 [["a", "b", "c"], ["d", "e", "f"], ["g", "h", "i"]]
@@ -631,7 +631,7 @@ Here we have other valid examples:
 [1, [2, 3, 4], [5, 6, 7], 3.4]
 ```
 
-We can access the nested lists using their corresponding index:
+我们可以使用相应的索引来访问嵌套的列表：
 
 ```python
 >>> my_list = [[1, 2, 3], [4, 5, 6]]
@@ -643,7 +643,7 @@ We can access the nested lists using their corresponding index:
 [4, 5, 6]
 ```
 
-Nested lists could be used to represent, for example, the structure of a simple 2D game board where each number could represent a different element or tile:
+嵌套列表可以用于表示简单2D游戏板的结构，其中每个数字可以表示不同的元素或图块:
 
 ```python
 # Sample Board where: 
@@ -656,11 +656,11 @@ board = [[0, 0, 1],
          [1, 0, 3]]
 ```
 
-#### List Length
+#### 列表的长度
 
-We can use the `len()` function to get the length of a list (the number of elements it contains).
+我们可以用`len()`方法来获取列表的长度(包含的元素的个数)。
 
-For example:
+例如:
 
 ```python
 >>> my_list = [1, 2, 3, 4]
@@ -669,15 +669,15 @@ For example:
 4
 ```
 
-#### Update a Value in a List
+#### 更新列表中的元素
 
-We can update the value at a particular index with this syntax:
+更新列表中某个索引出的值，可以用下面的语法：
 
 ```python
 <list_variable>[<index>] = <value>
 ```
 
-For example:
+例如:
 
 ```python
 >>> letters = ["a", "b", "c", "d"]
@@ -688,11 +688,11 @@ For example:
 ['z', 'b', 'c', 'd']
 ```
 
-#### Add a Value to a List
+#### 向列表中添加一个值
 
-We can add a new value to the end of a list with the `.append()` method.
+我们可以用`.append()`方法向列表的尾部添加一个值。
 
-For example:
+例如：
 
 ```python
 >>> my_list = [1, 2, 3, 4]
@@ -703,11 +703,11 @@ For example:
 [1, 2, 3, 4, 5]
 ```
 
-#### Remove a Value from a List
+#### 从列表中删除一个值
 
-We can remove a value from a list with the `.remove()` method.
+我们可以使用`.remove()`方法从列表中删除一个值。
 
-For example:
+例如：
 
 ```python
 >>> my_list = [1, 2, 3, 4]
@@ -718,7 +718,7 @@ For example:
 [1, 2, 4]
 ```
 
-💡 **Tip:** This will only remove the first occurrence of the element. For example, if we try to remove the number 3 from a list that has two number 3s, the second number will not be removed:
+💡 **提示：** 这个方法只会删除找到的第一个元素。例如，假设我们想从列表中删除数字3，但列表中包含两个3，那么第二个3将不会被删除。
 
 ```python
 >>> my_list = [1, 2, 3, 3, 4]
@@ -729,9 +729,9 @@ For example:
 [1, 2, 3, 4]
 ```
 
-#### List Indexing
+#### 列表索引
 
-We can index a list just like we index strings, with indices that start from `0`:
+列表索引跟字符串的索引一样，也是从`0`开始的：
 
 ```python
 >>> letters = ["a", "b", "c", "d"]
@@ -749,15 +749,15 @@ We can index a list just like we index strings, with indices that start from `0`
 'd'
 ```
 
-#### List Slicing
+#### 列表切片
 
-We can also get a slice of a list using the same syntax that we used with strings and we can omit the parameters to use their default values. Now, instead of adding characters to the slice, we will be adding the elements of the list.
+我们还可以使用跟字符串切片相同的语法来处理列表的切片，包括省略参数来使用索引的默认值。现在，我们要做的是向列表中添加元素，而不是像字符串切片中添加字符了。
 
 ```python
 <list_variable>[start:stop:step]
 ```
 
-For example:
+例如:
 
 ```python
 >>> my_list = ["a", "b", "c", "d", "e", "f", "g", "h", "i"]
@@ -784,9 +784,9 @@ For example:
 ['i', 'h', 'g', 'f', 'e', 'd', 'c']
 ```
 
-#### List Methods
+#### 列表方法
 
-Python also has list methods already implemented to help us perform common list operations. Here are some examples of the most commonly used list methods:
+Python同样也实现了一些常用的列表方法，供我们处理一些常用的操作。下面是一些常用列表方法的使用示例：
 
 ```python
 >>> my_list = [1, 2, 3, 3, 4]
@@ -829,11 +829,11 @@ Python also has list methods already implemented to help us perform common list 
 []
 ```
 
-To learn more about list methods, I would recommend reading [this article](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists) from the Python documentation.
+想了解更多列表方法，建议去Python官网阅读[这篇](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)。
 
-### Tuples in Python
+### Python中的元组
 
-To define a tuple in Python, we use parentheses `()` and separate the elements with a comma. It is recommended to add a space after each comma to make the code more readable.
+定义元组，我们使用小括号`()`，然后小括号里面的元素用逗号分隔。建议在每个逗号后面加一个空格，以增加代码的可读性。
 
 ```python
 (1, 2, 3, 4, 5)
@@ -847,15 +847,15 @@ To define a tuple in Python, we use parentheses `()` and separate the elements w
 (3.4, 2.4, 2.6, 3.5)
 ```
 
-We can assign tuples to variables:
+我们可以将元组赋值给一个变量：
 
 ```python
 my_tuple = (1, 2, 3, 4, 5)
 ```
 
-#### Tuple Indexing
+#### 元组的索引
 
-We can access each element of a tuple with its corresponding index:
+我们可以通过元组的索引来访问它的元素：
 
 ```python
 >>> my_tuple = (1, 2, 3, 4)
@@ -873,7 +873,7 @@ We can access each element of a tuple with its corresponding index:
 4
 ```
 
-We can also use negative indices:
+我们同样可以使用负的索引：
 
 ```python
 >>> my_tuple = (1, 2, 3, 4)
@@ -891,9 +891,9 @@ We can also use negative indices:
 1
 ```
 
-#### Tuple Length
+#### 元组长度
 
-To find the length of a tuple, we use the `len()` function, passing the tuple as argument:
+为了获取元组的长度，我们可以将元组本身传入`len()`函数：
 
 ```python
 >>> my_tuple = (1, 2, 3, 4)
@@ -902,17 +902,17 @@ To find the length of a tuple, we use the `len()` function, passing the tuple as
 4
 ```
 
-#### Nested Tuples
+#### 嵌套元组
 
-Tuples can contain values of any data type, even lists and other tuples. These inner tuples are called **nested tuples**.
+元组可以包含任意数据类型，包括列表和其他的元组。这些包含在里面的元组被称为**嵌套元组**.
 
 ```python
 ([1, 2, 3], (4, 5, 6))
 ```
 
-In this example, we have a nested tuple `(4, 5, 6)` and a list. You can access these nested data structures with their corresponding index.
+下面的例子, 我们有一个被嵌套的元组`(4, 5, 6)`和一个列表。你可以通过他们相应的索引来访问它们。
 
-For example:
+例如:
 
 ```python
 >>> my_tuple = ([1, 2, 3], (4, 5, 6))
@@ -924,17 +924,17 @@ For example:
 (4, 5, 6)
 ```
 
-#### Tuple Slicing
+#### 元组切片
 
-We can slice a tuple just like we sliced lists and strings. The same principle and rules apply.
+对元组进行切片操作，就像列表和字符串一样，都是相同的原理与规则。
 
-This is the general syntax:
+下面是一般的语法：
 
 ```python
 <tuple_variable>[start:stop:step]
 ```
 
-For example:
+例如：
 
 ```python
 >>> my_tuple = (4, 5, 6, 7, 8, 9, 10)
@@ -970,9 +970,9 @@ For example:
 (8, 7, 6)
 ```
 
-#### Tuple Methods
+#### 元组方法
 
-There are two built-in tuple methods in Python:
+元组有两个内建的方法：
 
 ```python
 >>> my_tuple = (4, 4, 5, 6, 6, 7, 8, 9, 10)
@@ -984,15 +984,15 @@ There are two built-in tuple methods in Python:
 5
 ```
 
-💡 **Tip:** tuples are immutable. They cannot be modified, so we can't add, update, or remove elements from the tuple. If we need to do so, then we need to create a new copy of the tuple.
+💡 **提示：** 元组是不可变的，不可被修改，所以我们不能向元组中添加、更新、删除元素。如果你确实需要修改元组的元素，我们可以将其复制一份。
 
-#### Tuple Assignment
+#### 元组解包
 
-In Python, we have a really cool feature called Tuple Assignment. With this type of assignment, we can assign values to multiple variables on the same line.
+Python中有一个很酷的功能叫做元组解包。 利用解包操作，我们可以在一行同时向多个变量赋值。
 
-The values are assigned to their corresponding variables in the order that they appear. For example, in `a, b = 1, 2` the value `1` is assigned to the variable `a` and the value `2` is assigned to the variable `b`.
+这些值会根据其出现的顺序被赋给相对应的变量。例如，`a, b = 1, 2`中的值`1`会被赋给变量`a`，`2`会被赋给变量`b`。
 
-For example:
+例如:
 
 ```python
 # Tuple Assignment
@@ -1005,7 +1005,7 @@ For example:
 2
 ```
 
-**💡 Tip:** Tuple assignment is commonly used to swap the values of two variables:
+**💡 提示：** 元组解包常被用于交换两个变量的值：
 
 ```python
 >>> a = 1
@@ -1022,31 +1022,31 @@ For example:
 1
 ```
 
-### Dictionaries in Python
+### Python中的字典
 
-Now let's start diving into dictionaries. This built-in data structure lets us create pairs of values where one value is associated with another one.
+现在让我们开始深入字典类型。字典类型允许我们创建值对，一个值关联另外一个值。
 
-To define a dictionary in Python, we use curly brackets `{}` with the key-value pairs separated by a comma.
+定义字典, 我们通常使用大括号`{}`，大括号里面是用逗号分隔的键-值对。
 
-The key is separated from the value with a colon `:`, like this:
+键与值之间用冒号`:`分隔，像这样：
 
 ```python
 {"a": 1, "b": 2, "c"; 3}
 ```
 
-You can assign the dictionary to a variable:
+你可以将字典赋给一个变量：
 
 ```python
 my_dict = {"a": 1, "b": 2, "c"; 3}
 ```
 
-The keys of a dictionary must be of an immutable data type. For example, they can be strings, numbers, or tuples but not lists since lists are mutable.
+字典的键必须是一种不可变的数据类型。例如，它们可以是字符串、数字和元组，但不能是列表，因为列表时可变的类型。
 
--   Strings: `{"City 1": 456, "City 2": 577, "City 3": 678}`
--   Numbers: `{1: "Move Left", 2: "Move Right", 3: "Move Up", 4: "Move Down"}`
--   Tuples: `{(0, 0): "Start", (2, 4): "Goal"}`
+-   字符串类型的键: `{"City 1": 456, "City 2": 577, "City 3": 678}`
+-   数字类型的键: `{1: "Move Left", 2: "Move Right", 3: "Move Up", 4: "Move Down"}`
+-   元组类型的键: `{(0, 0): "Start", (2, 4): "Goal"}`
 
-The values of a dictionary can be of any data type, so we can assign strings, numbers, lists, tuple, sets, and even other dictionaries as the values. Here we have some examples:
+字典的值可以是任意数据类型，所以它可以被赋值为字符串、数字、列表、元组、集合，甚至其他字典也可以作为它的值。下面是一些例子：
 
 ```
 {"product_id": 4556, "ingredients": ["tomato", "cheese", "mushrooms"], "price": 10.67}
@@ -1060,9 +1060,9 @@ The values of a dictionary can be of any data type, so we can assign strings, nu
 {"id": 567, "name": "Emily", "grades": {"Mathematics": 80, "Biology": 74, "English": 97}}
 ```
 
-#### Dictionary Length
+#### 字典的长度
 
-To get the number of key-value pairs, we use the `len()` function:
+我们可以调用`len()`方法来获取键-值对的个数：
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
@@ -1071,17 +1071,17 @@ To get the number of key-value pairs, we use the `len()` function:
 4
 ```
 
-#### Get a Value in a Dictionary
+#### 从字典中获取一个值
 
-To get a value in a dictionary, we use its key with this syntax:
+要从字典中获取一个，我们可以利用它的键，语法如下：
 
 ```python
 <variable_with_dictionary>[<key>]
 ```
 
-This expression will be replaced by the value that corresponds to the key.
+上面的表达式将会被key(键)对应的值所替换。
 
-For example:
+例如：
 
 ```python
 my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
@@ -1089,21 +1089,21 @@ my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
 print(my_dict["a"])
 ```
 
-The output is the value associated to `"a"`:
+输出的是`"a"`关联的值：
 
 ```
 1
 ```
 
-#### Update a Value in a Dictionary
+#### 更新字典中的一个值
 
-To update the value associated with an existing key, we use the same syntax but now we add an assignment operator and the value:
+要更新一个已存在的键对应的值，跟获取键的值类似，只是我们需要在后面增加一个值的赋值操作：
 
 ```python
 <variable_with_dictionary>[<key>] = <value>
 ```
 
-For example:
+例如：
 
 ```
 >>> my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
@@ -1111,21 +1111,21 @@ For example:
 >>> my_dict["b"] = 6
 ```
 
-Now the dictionary is:
+现在字典是这样子了:
 
 ```python
 {'a': 1, 'b': 6, 'c': 3, 'd': 4}
 ```
 
-#### Add a Key-Value Pair to a Dictionary
+#### 向字典中增加一个键-值对
 
-The keys of a dictionary have to be unique. To add a new key-value pair we use the same syntax that we use to update a value, but now the key has to be new.
+字典的键需要是唯一的。要添加键值对，我们可以使用跟更新值相同的语法，不过只是使用一个新的键而已。
 
 ```python
 <variable_with_dictionary>[<new_key>] = <value>
 ```
 
-For example:
+例如：
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
@@ -1133,21 +1133,21 @@ For example:
 >>> my_dict["e"] = 5
 ```
 
-Now the dictionary has a new key-value pair:
+现在我们的字典有了一个新的键-值对：
 
 ```python
 {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
 ```
 
-#### Delete a Key-Value Pair in a Dictionary
+#### 从字典中删除键-值对
 
-To delete a key-value pair, we use the `del` statement:
+我们可以使用`del`语句来删除字典中的键-值对：
 
 ```python
 del <dictionary_variable>[<key>]
 ```
 
-For example:
+例如：
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
@@ -1155,15 +1155,15 @@ For example:
 >>> del my_dict["c"]
 ```
 
-Now the dictionary is:
+现在的字典如下：
 
 ```python
 {'a': 1, 'b': 2, 'd': 4}
 ```
 
-#### Dictionary Methods
+#### 字典的方法
 
-These are some examples of the most commonly used dictionary methods:
+下面是一些字典常用方法的使用示例：
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
@@ -1206,17 +1206,17 @@ dict_values([1, 2, 25, 3, 4, 5])
 {}
 ```
 
-To learn more about dictionary methods, I recommend [reading this article](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict) from the documentation.
+想了解更多字典的方法，建议去Python的官网[读这篇](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict)。
 
-## 🔸 Python Operators
+## 🔸 Python中的运算符
 
-Great. Now you know the syntax of the basic data types and built-in data structures in Python, so let's start diving into operators in Python. They are essential to perform operations and to form expressions.
+很好。 现在我们已经知道了Python中的基本数据类型与内建的数据结构，那么接下来我们来深入了解一下Python中的运算符，他们对于执行一些操作和构建表达式至关重要。
 
-### Arithmetic Operators in Python
+### Python中的算法运算符
 
-These operators are:
+算术运算符有以下这些：
 
-#### Addition: +
+#### 加法运算: +
 
 ```python
 >>> 5 + 6
@@ -1235,13 +1235,13 @@ These operators are:
 1
 ```
 
-💡 **Tip:** The last two examples are curious, right? This operator behaves differently based on the data type of the operands.
+💡 **提示：** 最后的两个示例有些奇怪，是吗？运算符的行为会根据操作数类型的不同而不同。
 
-When they are strings, this operator concatenates the strings and when they are Boolean values, it performs a particular operation.
+当它们都是字符串的时候，该操作符会将字符串相连，当它们是布尔值时，它将执行一个特定的操作。
 
-In Python, `True` is equivalent to `1` and `False` is equivalent to `0`. This is why the result is `1 + 0 = 1`
+在Python中，`True`等于`1`，`False`等于`0`。这就是为什么`1 + 0 = 1`的原因。
 
-#### Subtraction: -
+#### 减法运算: -
 
 ```python
 >>> 5 - 6
@@ -1263,7 +1263,7 @@ In Python, `True` is equivalent to `1` and `False` is equivalent to `0`. This is
 -14.0
 ```
 
-#### Multiplication: \*
+#### 乘法运算: \*
 
 ```python
 >>> 5 * 6
@@ -1297,9 +1297,9 @@ In Python, `True` is equivalent to `1` and `False` is equivalent to `0`. This is
 ''
 ```
 
-**💡 Tip:** you can "multiply" a string by an integer to repeat the string a given number of times.
+**💡 提示：** 你可以用一个数字与一个字符串"相乘"，结果会让字符串重复与相乘的这个数字相同的次数。
 
-#### Exponentiation: \*\*
+#### 指数运算: \*\*
 
 ```python
 >>> 6 ** 8
@@ -1327,7 +1327,7 @@ In Python, `True` is equivalent to `1` and `False` is equivalent to `0`. This is
 0.3333333333333333
 ```
 
-#### Division: /
+#### 除法运算: /
 
 ```python
 >>> 25 / 5
@@ -1361,9 +1361,9 @@ In Python, `True` is equivalent to `1` and `False` is equivalent to `0`. This is
 -0.75
 ```
 
-💡 **Tip:** this operator returns a `float` as the result, even if the decimal part is `.0`
+💡 **提示：** 该运算会返回一个`float`类型的结果，即时数字的小数部分是`.0`。
 
-If you try to divide by `0`, you will get a `ZeroDivisionError`:
+如果你尝试除`0`，你将会得到一个`ZeroDivisionError`错误：
 
 ```python
 >>> 5 / 0
@@ -1373,9 +1373,9 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 ```
 
-#### Integer Division: //
+#### 整除运算: //
 
-This operator returns an integer if the operands are integers. If they are floats, the result will be a float with `.0` as the decimal part because it truncates the decimal part.
+如果操作数是整数，结果将会是整数。如果操作数是浮点数，结果将会是一个带`.0`的浮点数，因为小数部分会被截断。
 
 ```python
 >>> 5 // 6
@@ -1397,7 +1397,7 @@ This operator returns an integer if the operands are integers. If they are float
 440
 ```
 
-#### Modulo: %
+#### 模运算: %
 
 ```
 >>> 1 % 5
@@ -1446,18 +1446,18 @@ This operator returns an integer if the operands are integers. If they are float
 2.3
 ```
 
-#### Comparison Operators
+#### 比较操作符
 
-These operators are:
+有以下几种比较操作:
 
--   Greater than: `>`
--   Greater than or equal to: `>=`
--   Less than: `<`
--   Less than or equal to: `<=`
--   Equal to: `==`
--   Not Equal to: `!=`
+-   大于: `>`
+-   大于等于: `>=`
+-   小于: `<`
+-   小于等于: `<=`
+-   等于: `==`
+-   不等于: `!=`
 
-These comparison operators make expressions that evaluate to either `True` or `False`. Here we have are some examples:
+这些比较运算符使表达式的计算结果为`True`或`False`。下面是一些例子：
 
 ```
 >>> 5 > 6
@@ -1506,7 +1506,7 @@ True
 False
 ```
 
-We can also use them to compare strings based on their alphabetical order:
+我们还可以使用它们根据字母顺序来比较字符串：
 
 ```python
 >>> "Hello" > "World"
@@ -1523,7 +1523,7 @@ False
 True
 ```
 
-We typically use them to compare the values of two or more variables:
+我们通常使用它们来比较两个或多个变量的值：
 
 ```python
 >>> a = 1
@@ -1548,19 +1548,19 @@ False
 True
 ```
 
-💡 **Tip:** notice that the comparison operator is `==` while the assignment operator is `=`. Their effect is different. `==` returns `True` or `False` while `=` assigns a value to a variable.
+💡 **提示：** 注意，比较运算符是`==`，而赋值运算符是`=`。它们的效果是不一样的。`==`返回`True`或`False`而`=`是将值赋值给变量。
 
-#### Comparison Operator Chaining
+#### 链式比较运算符
 
-In Python, we can use something called "comparison operator chaining" in which we chain the comparison operators to make more than one comparison more concisely.
+在Python中，我们可以使用被称为“比较运算符链”的功能。这种链接比较可以让我们更简洁的进行多个表达式的比较。
 
-For example, this checks if `a` is less than `b` and if `b` is less than `c`:
+例如，下面的语句时检查`a`是否小于`b`且`b`是否又小于`c`：
 
 ```
 a < b < c
 ```
 
-Here we have some examples:
+下面是一些例子：
 
 ```
 >>> a = 1
@@ -1586,11 +1586,11 @@ False
 True
 ```
 
-#### Logical Operators
+#### 逻辑运算符
 
-There are three logical operators in Python: `and`, `or`, and `not`. Each one of these operators has its own truth table and they are essential to work with conditionals.
+Python中有三种逻辑运算符：`与`，`或`，与`非`。这些运算符中的每一个都有自己的真值表，它们对于处理条件语句至关重要。
 
-The `and` operator:
+`与`运算:
 
 ```python
 >>> True and True
@@ -1606,7 +1606,7 @@ False
 False
 ```
 
-The `or` operator:
+`或`运算:
 
 ```python
 >>> True or True
@@ -1622,7 +1622,7 @@ True
 False
 ```
 
-The `not` operator:
+`非`运算:
 
 ```python
 >>> not True
@@ -1632,9 +1632,9 @@ False
 True
 ```
 
-These operator are used to form more complex expressions that combine different operators and variables.
+这些逻辑运算符结合不同的其他运算符或变量，来产生更复杂的表达式：
 
-For example:
+例如：
 
 ```python
 >>> a = 6
@@ -1653,16 +1653,16 @@ True
 False
 ```
 
-#### Assignment Operators
+#### 赋值操作符
 
-Assignment operators are used to assign a value to a variable.
+赋值运算符用于将值赋给一个变量。
 
-They are: `=`, `+=`, `-=`, `*=`, `%=`, `/=`, `//=`, `**=`
+赋值运算符有：`=`, `+=`, `-=`, `*=`, `%=`, `/=`, `//=`, `**=`
 
--   The `=` operator assigns the value to the variable.
--   The other operators perform an operation with the current value of the variable and the new value and assigns the result to the same variable.
+-   `=` 将值赋给一个变量。
+-   其他的运算符对变量的当前值与新值进行运算，并将结果重新赋值给变量。
 
-For example:
+例如：
 
 ```python
 >>> x = 3
@@ -1698,13 +1698,13 @@ For example:
 1.0
 ```
 
-💡 **Tips:** these operators perform bitwise operations before assigning the result to the variable: `&=`, `|=`, `^=`, `>>=`, `<<=`.
+💡 **提示：** 这些运算符在将结果赋值给变量之前会进行位运算：`&=`，`|=`，`^=`，`>>=`，`<<=`。
 
-#### Membership Operators
+#### 成员操作符
 
-You can check if an element is in a sequence or not with the operators: `in` and `not in`. The result will be either `True` or `False`.
+你可以运用操作符：`in` and `not in`来检查一个元素是否在一个序列之中。成员操作符的运算结果，要么是`True`要么是`False`。
 
-For example:
+例如：
 
 ```python
 >>> 5 in [1, 2, 3, 4, 5]
@@ -1750,7 +1750,7 @@ True
 False
 ```
 
-We typically use them with variables that store sequences, like in this example:
+我们通常将它们与存储序列的变量一起使用，比如这个例子：
 
 ```python
 >>> message = "Hello, World!"
@@ -1759,26 +1759,26 @@ We typically use them with variables that store sequences, like in this example:
 True
 ```
 
-## 🔹 Conditionals in Python
+## 🔹 Python中的条件语句
 
-Now let's see how we can write conditionals to make certain parts of our code run (or not) based on whether a condition is `True` or `False`.
+现在我们看看如何编写一个条件语句，让它使我们程序中的某些部分根据条件的`True`或`False`来执行(或者不执行)。
 
-### `if` statements in Python
+### Python中的`if`语句
 
-This is the syntax of a basic `if` statement:
+`if`语句的基本语法：
 
 ```
 if <condition>:
     <code>
 ```
 
-If the condition is `True`, the code will run. Else, if it's `False`, the code will not run.
+如果条件是`True`，代码就会执行。 相反，如果是`False`，代码不会执行。
 
-**💡 Tip:** there is a colon (`:`) at the end of the first line and the code is indented. This is essential in Python to make the code belong to the conditional.
+**💡 提示：** 第一行结尾有一个冒号(`:`)并且代码块是有缩进的。缩进在Python中是必不可少的，它能让代码块属于某个条件的范畴。
 
-Here we have some examples:
+下面是一些例子：
 
-#### False Condition
+#### False的情况
 
 ```
 x = 5
@@ -1787,13 +1787,13 @@ if x > 9:
     print("Hello, World!")
 ```
 
-The condition is `x > 9` and the code is `print("Hello, World!")`.
+条件判断是`x > 9`，代码块是`print("Hello, World!")`。
 
-In this case, the condition is `False`, so there is no output.
+上面的例子, 条件判断结果是`False`，所以不会有输出。
 
-#### True Condition
+#### True的情况
 
-Here we have another example. Now the condition is `True`:
+看另外一个例子，条件判断结果是`True`：
 
 ```
 color = "Blue"
@@ -1802,15 +1802,15 @@ if color == "Blue":
     print("This is my favorite color")
 ```
 
-The output is:
+输出：
 
 ```
 "This is my favorite color"
 ```
 
-#### Code After the Conditional
+#### 条件语句后面的代码块
 
-Here we have an example with code that runs after the conditional has been completed. Notice that the last line is not indented, which means that it doesn't belong to the conditional.
+下面的例子中，代码块会在条件判断后执行。注意最后一行代码没有缩进，这就表示它并不属于条件语句的代码块。
 
 ```python
 x = 5
@@ -1821,13 +1821,13 @@ if x > 9:
 print("End")
 ```
 
-In this example, the condition `x > 9` is `False`, so the first print statement doesn't run but the last print statement runs because it is not part of the conditional, so the output is:
+上面的例子中, 判断条件`x > 9`是`False`，所以第一个print语句不会执行，但是最后一个print语句会被执行，因为它并不属于上面条件语句的代码块，所以最终的输出会是：
 
 ```python
 End
 ```
 
-However, if the condition is `True`, like in this example:
+然而，如果条件是`True`，像下面的例子:
 
 ```python
 x = 15
@@ -1838,16 +1838,16 @@ if x > 9:
 print("End")
 ```
 
-The output will be:
+输出：
 
 ```
 Hello!
 End
 ```
 
-#### Examples of Conditionals
+#### 条件语句的例子
 
-This is another example of a conditional:
+条件语句的另外一个例子：
 
 ```python
 favorite_season = "Summer"
@@ -1856,13 +1856,13 @@ if favorite_season == "Summer":
     print("That is my favorite season too!")
 ```
 
-In this case, the output will be:
+输出：
 
 ```python
 That is my favorite season too!
 ```
 
-But if we change the value of `favorite_season`:
+如果我们改变`favorite_season`的值：
 
 ```python
 favorite_season = "Winter"
@@ -1871,13 +1871,13 @@ if favorite_season == "Summer":
     print("That is my favorite season too!")
 ```
 
-There will be no output because the condition will be `False`.
+将不会有输出，因为条件是`False`.
 
-### `if/else` statements in Python
+### Python中的`if/else`语句
 
-We can add an `else` clause to the conditional if we need to specify what should happen when the condition is `False`.
+如果我们需要指定当条件为`False`时应该做些什么，那么我们可以在条件语句中增加一个`else`字句。
 
-This is the general syntax:
+这是一般语法：
 
 ```python
 if <condition>:
@@ -1886,11 +1886,11 @@ else:
     <code>
 ```
 
-**💡 Tip:** notice that the two code blocks are indented (`if` and `else`). This is essential for Python to be able to differentiate between the code that belongs to the main program and the code that belongs to the conditional.
+**💡 提示：** 注意上面的两个代码块都有缩进(`if`与`else`)。这些缩进对于Python能区分代码块是属于if还是else语句至关重要。
 
-Let's see an example with the `else` clause:
+让我们看一个`else`子语的例子：
 
-#### True Condition
+#### True的情况
 
 ```python
 x = 15
@@ -1903,18 +1903,18 @@ else:
 print("End")
 ```
 
-The output is:
+输出:
 
 ```
 Hello!
 End
 ```
 
-When the condition of the `if` clause is `True`, this clause runs. The `else` clause doesn't run.
+当`if`的条件判断是`True`时，if子句被执行，`else`子句不会执行。
 
-#### False Condition
+#### False的情况
 
-Now the `else` clause runs because the condition is `False`.
+这次`else`子句会被执行，因为条件判断是`False`。
 
 ```python
 x = 5
@@ -1927,20 +1927,20 @@ else:
 print("End")
 ```
 
-Now the output is:
+输出:
 
 ```
 Bye!
 End
 ```
 
-### `if/elif/else` statements in Python
+### Python中的`if/elif/else`语句
 
-To customize our conditionals even further, we can add one or more `elif` clauses to check and handle multiple conditions. Only the code of the first condition that evaluates to `True` will run.
+为了进一步定制我们的条件语句，我们还可以添加一个或多个`elif`子句，用来处理多个条件判断。 只有第一个条件为`True`的子句会被执行。
 
-**💡 Tip:** `elif` has to be written after `if` and before `else`.
+**💡 提示：** `elif`必须写在`if`与`else`之间。
 
-#### First Condition True
+#### 第一个条件为True的情况
 
 ```python
 x = 5
@@ -1955,22 +1955,22 @@ else:
 print("End")
 ```
 
-We have two conditions `x < 9` and `x < 15`. Only the code block from the first condition that is `True` from top to bottom will be executed.
+这里有两个条件判断`x < 9`与`x < 15`。从上到下，只有第一个条件为`True`的代码块会被执行。
 
-In this case, the output is:
+这种情况的输出：
 
 ```
 Hello!
 End
 ```
 
-Because the first condition is `True`: `x < 9`.
+因为第一个条件为`True`：`x < 9`。
 
-#### Second Condition True
+#### 第二个条件为True的情况
 
-If the first condition is `False`, then the second condition will be checked.
+如果第一个条件为`False`，接着会检查第二个条件。
 
-In this example, the first condition `x < 9` is `False` but the second condition `x < 15` is `True`, so the code that belongs to this clause will run.
+下面的例子中，第一个条件`x < 9`是`False`，但是第二个条件`x < 15`是`True`，所以属于第二个条件的代码块会被执行。
 
 ```python
 x = 13
@@ -1985,16 +1985,16 @@ else:
 print("End")
 ```
 
-The output is:
+输出：
 
 ```
 It's great to see you
 End
 ```
 
-#### All Conditions are False
+#### 所有条件为False的情况
 
-If all conditions all `False`, then the `else` clause will run:
+如果所有条件为`False`，然后`else`子句会被执行：
 
 ```python
 x = 25
@@ -2009,16 +2009,16 @@ else:
 print("End")
 ```
 
-The output will be:
+输出：
 
 ```
 Bye!
 End
 ```
 
-#### Multiple elif Clauses
+#### 多个elif子句的情况
 
-We can add as many `elif` clauses as needed. This is an example of a conditional with two `elif` clauses:
+我们可以根据需要添加任意多的`elif`子句。下面是一个具有两个`elif`子句的例子：
 
 ```python
 if favorite_season == "Winter":
@@ -2031,54 +2031,54 @@ else:
     print("Fall is my mom's favorite season")
 ```
 
-Each condition will be checked and only the code block of the first condition that evaluates to `True` will run. If none of them are `True`, the `else` clause will run.
+每一个条件都会被检查，但只有第一个条件为`True`的代码块会被执行。如果没有为`True`的，`else`子句将会被执行。
 
-## 🔸 For Loops in Python
+## 🔸 Python中的for循环
 
-Now you know how to write conditionals in Python, so let's start diving into loops. For loops are amazing programming structures that you can use to repeat a code block a specific number of times.
+我们已经了解如何写条件语句, 现在我们来看看for循环。 For循环是一种神奇的代码结构，你可以用它来将代码重复执行你所指定的次数。
 
-This is the basic syntax to write a for loop in Python:
+Python中for循环基本语法:
 
 ```
 for <loop_variable> in <iterable>:
     <code>
 ```
 
-The iterable can be a list, tuple, dictionary, string, the sequence returned by range, a file, or any other type of iterable in Python. We will start with `range()`.
+iterable表示可迭代对象，它可以是一个列表，元组，字典，字符串，range返回的一个序列，一个文件，或者其他任意的可迭代类型的数据。下面我们就从`range()`开始。
 
-### The `range()` function in Python
+### `range()`函数
 
-This function returns a sequence of integers that we can use to determine how many iterations (repetitions) of the loop will be completed. The loop will complete one iteration per integer.
+这个函数返回一个整数序列，我们可以用它来确定循环的迭代次数。循环对每一个整数执行一次迭代。
 
-**💡 Tip:** Each integer is assigned to the loop variable one at a time per iteration.
+**💡 提示：** 每个整数在每次迭代中都会被赋给一个循环变量。
 
-This is the general syntax to write a for loop with `range()`:
+使用`range()`来创建for循环的基本语法：
 
 ```
 for <loop_variable> in range(<start>, <stop>, <step>):
     <code>
 ```
 
-As you can see, the range function has three parameters:
+就像你看到的，range函数有三个参数：
 
--   `start`: where the sequence of integers will start. By default, it's `0`.
--   `stop`: where the sequence of integers will stop (without including this value).
--   `step`: the value that will be added to each element to get the next element in the sequence. By default, it's `1`.
+-   `start`: 整数序列开始的数字，默认值是`0`。
+-   `stop`: 整数序列结束的数字(不包含)。
+-   `step`: 序列中从当前数字到下一个数字需要增加的值，默认值是`1`。
 
-You can pass 1, 2, or 3 arguments to `range()`:
+你可以传1个，2个或3个参数给`range()`：
 
--   With 1 argument, the value is assigned to the `stop` parameter and the default values for the other two parameters are used.
--   With 2 arguments, the values are assigned to the `start` and `stop` parameters and the default value for `step` is used.
--   With 3 arguments, the values are assigned to the `start`, `stop`, and `step` parameters (in order).
+-   1个参数，它会赋值给`stop`参数，其他两个参数取默认值。
+-   2个参数，会分别赋值给`start`和`stop`参数，`step`取默认值。
+-   3个参数，会根据顺序分别赋值给`start`，`stop`与`step`。
 
-Here we have some examples with **one parameter**:
+**1个参数**的例子：
 
 ```python
 for i in range(5):
     print(i)
 ```
 
-Output:
+输出：
 
 ```
 0
@@ -2088,14 +2088,14 @@ Output:
 4
 ```
 
-💡 **Tip:** the loop variable is updated automatically.
+💡 **提示：** 循环变量会被自动更新。
 
 ```python
 >>> for j in range(15):
     print(j * 2)
 ```
 
-Output:
+输出：
 
 ```python
 0
@@ -2115,14 +2115,14 @@ Output:
 28
 ```
 
-In the example below, we repeat a string as many times as indicated by the value of the loop variable:
+下面的例子中，每次迭代我们将字符串重复了跟循环变量值一样多的次数。
 
 ```python
 >>> for num in range(8):
 	print("Hello" * num)
 ```
 
-Output:
+输出：
 
 ```python
 Hello
@@ -2134,7 +2134,7 @@ HelloHelloHelloHelloHelloHello
 HelloHelloHelloHelloHelloHelloHello
 ```
 
-We can also use for loops with built-in data structures such as lists:
+我们还可以将for循环用于内置数据结构，比如列表：
 
 ```python
 >>> my_list = ["a", "b", "c", "d"]
@@ -2143,7 +2143,7 @@ We can also use for loops with built-in data structures such as lists:
 	print(my_list[i])
 ```
 
-Output:
+输出：
 
 ```
 a
@@ -2152,16 +2152,16 @@ c
 d
 ```
 
-💡 **Tip:** when you use `range(len(<seq>))`, you get a sequence of numbers that goes from `0` up to `len(<seq>)-1`. This represents the sequence of valid indices.
+💡 **提示：** 当你使用`range(len(<seq>))`，你会得到一个从`0`到`len(<seq>)-1`的整数序列。下面的例子展示了序列的有效的索引范围。
 
-These are some examples with **two parameters**:
+**2个参数**的例子：
 
 ```python
 >>> for i in range(2, 10):
 	print(i)
 ```
 
-Output:
+输出：
 
 ```python
 2
@@ -2174,14 +2174,14 @@ Output:
 9
 ```
 
-**Code:**
+**代码：**
 
 ```python
 >>> for j in range(2, 5):
 	print("Python" * j)
 ```
 
-Output:
+输出：
 
 ```python
 PythonPython
@@ -2189,7 +2189,7 @@ PythonPythonPython
 PythonPythonPythonPython
 ```
 
-**Code:**
+**代码：**
 
 ```python
 >>> my_list = ["a", "b", "c", "d"]
@@ -2198,14 +2198,14 @@ PythonPythonPythonPython
 	print(my_list[i])
 ```
 
-Output:
+输出：
 
 ```python
 c
 d
 ```
 
-**Code:**
+**代码：**
 
 ```python
 >>> my_list = ["a", "b", "c", "d"]
@@ -2214,16 +2214,16 @@ d
 	my_list[i] *= i
 ```
 
-Now the list is: `['a', 'b', 'cc', 'd']`
+现在的列表时：`['a', 'b', 'cc', 'd']`
 
-These are some examples with **three parameters**:
+**3个参数**的例子：
 
 ```python
 >>> for i in range(3, 16, 2):
 	print(i)
 ```
 
-Output:
+输出：
 
 ```python
 3
@@ -2235,14 +2235,14 @@ Output:
 15
 ```
 
-**Code:**
+**代码：**
 
 ```
 >>> for j in range(10, 5, -1):
 	print(j)
 ```
 
-Output:
+输出：
 
 ```python
 10
@@ -2252,7 +2252,7 @@ Output:
 6
 ```
 
-**Code:**
+**代码：**
 
 ```python
 >>> my_list = ["a", "b", "c", "d", "e", "f", "g"]
@@ -2261,7 +2261,7 @@ Output:
 	print(my_list[i])
 ```
 
-Output:
+输出：
 
 ```python
 g
@@ -2270,15 +2270,15 @@ e
 d
 ```
 
-### How to Iterate over Iterables in Python
+### Python中如何迭代所有可迭代对象
 
-We can iterate directly over iterables such as lists, tuples, dictionaries, strings, and files using for loops. We will get each one of their elements one at a time per iteration. This is very helpful to work with them directly.
+我们可以使用for循环直接迭代可迭代对象，例如列表、元组、字典、字符串和文件。 在每一次迭代中我们可以获取到它们元素中的一个，这对能直接使用这些对象非常有帮助。
 
-Let's see some examples:
+让我们看一些例子：
 
-#### Iterate Over a String
+#### 迭代一个字符串
 
-If we iterate over a string, its characters will be assigned to the loop variable one by one (including spaces and symbols).
+如果我们迭代一个字符串，那么它的每一个字符(包括空格和符号)都会一个一个地赋值给循环变量。
 
 ```python
 >>> message = "Hello, World!"
@@ -2302,7 +2302,7 @@ d
 !
 ```
 
-We can also iterate over modified copies of the string by calling a string method where we specify the iterable in the for loop. This will assign the copy of the string as the iterable that will be used for the iterations, like this:
+我们还可以在for循环中迭代通过调用字符串方法修改后返回的字符串副本，就像这样:
 
 ```python
 >>> word = "Hello"
@@ -2332,7 +2332,7 @@ L
 O
 ```
 
-#### Iterate Over Lists and Tuples
+#### 迭代列表和元组
 
 ```python
 >>> my_list = [2, 3, 4, 5]
@@ -2341,7 +2341,7 @@ O
 	print(num)
 ```
 
-The output is:
+输出：
 
 ```python
 2
@@ -2350,7 +2350,7 @@ The output is:
 5
 ```
 
-**Code:**
+**代码：**
 
 ```python
 >>> my_list = (2, 3, 4, 5)
@@ -2362,7 +2362,7 @@ The output is:
 		print("Odd")
 ```
 
-Output:
+输出：
 
 ```python
 Even
@@ -2371,22 +2371,22 @@ Even
 Odd
 ```
 
-### Iterate Over the Keys, Values, and Key-Value Pairs of Dictionaries
+### 迭代字典所有的键、所有的值以及所有的键值对
 
-We can iterate over the keys, values, and key-value pairs of a dictionary by calling specific dictionary methods. Let's see how.
+我们可以通过调用字典特定的方法来对其所有的键、值以及键值对进行迭代，让我们看看是怎么做到的：
 
-To **iterate over the** **keys**, we write:
+要**迭代** **所有键**，可以这样：
 
 ```python
 for <var> in <dictionary_variable>:
     <code>
 ```
 
-We just write the name of the variable that stores the dictionary as the iterable.
+我们只要将可迭代对象换成字典变量的名称即可。
 
-**💡 Tip:** you can also write `<dictionary_variable>.keys()` but writing the name of the variable directly is more concise and it works exactly the same.
+**💡 提示：** 你还可以写成`<dictionary_variable>.keys()`，但直接使用字典对象的变量名称会更方便，且它们的效果是一样的。
 
-For example:
+例如：
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3}
@@ -2400,16 +2400,16 @@ b
 c
 ```
 
-**💡 Tip:** you can assign any valid name to the loop variable.
+**💡 提示：** 你可以给循环变量赋一个任意有效的名称。
 
-To **iterate over the** **values**, we use:
+要**迭代** **所有值**，我们可以：
 
 ```python
 for <var> in <dictionary_variable>.values():
     <code>
 ```
 
-For example:
+例如：
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3}
@@ -2423,14 +2423,14 @@ For example:
 3
 ```
 
-To **iterate over the** **key-value pairs**, we use:
+要**迭代** **所有键值对**，我们可以：
 
 ```python
 for <key>, <value> in <dictionary_variable>.items():
     <code>
 ```
 
-💡 **Tip:** we are defining two loop variables because we want to assign the key and the value to variables that we can use in the loop.
+💡 **提示：** 我们需要定义两个循环变量，因为循环中一个对应键，一个对应值。
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3}
@@ -2444,7 +2444,7 @@ b 2
 c 3
 ```
 
-If we define only one loop variable, this variable will contain a tuple with the key-value pair:
+如果我们只定义了一个循环变量，它的值将会是一个包含键和值的元组：
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3}
@@ -2457,17 +2457,17 @@ If we define only one loop variable, this variable will contain a tuple with the
 ('c', 3)
 ```
 
-### Break and Continue in Python
+### 循环中断(break)和跳过(continue)
 
-Now you know how to iterate over sequences in Python. We also have loop control statements to customize what happens when the loop runs: `break` and `continue`.
+现在我们已经知道如何对序列进行了，我们还有循环控制语句来自定义循环运行时发生的情况：`break`与`continue`。
 
-#### The Break Statement
+#### Break语句
 
-The `break` statement is used to stop the loop immediately.
+`break`用于立即停止循环。
 
-When a `break` statement is found, the loop stops and the program returns to its normal execution beyond the loop.
+当发现一个`break`语句，循环会停止，程序会回到循环之外正常执行。
 
-In the example below, we stop the loop when an even element is found.
+下面的例子中，当我找到一个元素时终止了循环。
 
 ```python
 >>> my_list = [1, 2, 3, 4, 5]
@@ -2486,13 +2486,13 @@ Even: 2
 break
 ```
 
-#### The Continue Statement
+#### Continue语句
 
-The `continue` statement is used to skip the rest of the current iteration.
+`continue`用于跳过当前迭代。
 
-When it is found during the execution of the loop, the current iteration stops and a new one begins with the updated value of the loop variable.
+当循环执行时遇到`continue`语句，当前迭代会被停止，新的迭代会以更新后的循环变量值开始。
 
-In the example below, we skip the current iteration if the element is even and we only print the value if the element is odd:
+下面的例子中，当元素时偶数的时候我们跳过当前迭代，奇数的时候我们输出元素的值：
 
 ```python
 >>> my_list = [1, 2, 3, 4, 5]
@@ -2511,13 +2511,13 @@ continue
 Odd: 5
 ```
 
-### The zip() function in Python
+### Python中的zip()函数
 
-`zip()` is an amazing built-in function that we can use in Python to iterate over multiple sequences at once, getting their corresponding elements in each iteration.
+`zip()`是一个神奇的内置函数，我们可以使用它一次迭代多个序列，并且在每次迭代中我们可以获取到每个序列中对应的元素。
 
-We just need to pass the sequences as arguments to the `zip()` function and use this result in the loop.
+我们只需要将各个序列作为参数传给`zip()`函数，并且将其返还的结果作为可迭代对象放到循环中即可。
 
-For example:
+例如：
 
 ```python
 >>> my_list1 = [1, 2, 3, 4]
@@ -2533,13 +2533,13 @@ For example:
 4 8
 ```
 
-### The enumerate() Function in Python
+### Python中的enumerate()函数
 
-You can also keep track of a counter while the loop runs with the `enum()` function. It is commonly used to iterate over a sequence and get the corresponding index.
+你还可以在循环中使用`enum()`函数来对循环进行跟踪和计数。它通常被用于迭代一个序列，并获取元素相应的索引。
 
-**💡 Tip:** By default, the counter starts at `0`.
+**💡 提示：** 默认情况下，计数器的开始值时`0`。
 
-For example:
+例如：
 
 ```python
 >>> my_list = [5, 6, 7, 8]
@@ -2568,7 +2568,7 @@ For example:
 4 o
 ```
 
-If you start the counter from `0`, you can use the index and the current value in the same iteration to modify the sequence:
+如果你从`0`开始计数，那么你可以在同一迭代中使用索引和当前值来修改序列。
 
 ```python
 >>> my_list = [5, 6, 7, 8]
@@ -2580,7 +2580,7 @@ If you start the counter from `0`, you can use the index and the current value i
 [15, 18, 21, 24]
 ```
 
-You can start the counter from a different number by passing a second argument to `enumerate()`:
+给`enumerate()`函数传入第二个参数，可以让我们从不同的起始值开始计数：
 
 ```python
 >>> word = "Hello"
@@ -2596,13 +2596,13 @@ You can start the counter from a different number by passing a second argument t
 6 o
 ```
 
-#### The else Clause
+#### else子句
 
-For loops also have an `else` clause. You can add this clause to the loop if you want to run a specific block of code when the loop completes all its iterations without finding the `break` statement.
+For循环还有一个`else`子句。你可以在`else`子句中添加额外的代码附加到for循环的后面，只有当for循环的break语句没有被执行到的时候它才会被执行。
 
-**💡 Tip:** if `break` is found, the `else` clause doesn't run and if `break` is not found, the `else` clause runs.
+**💡 提示：** 如果`break`语句被执行，`else`子句不会执行；如果`break`没有被执行，`else`子句就会被执行。
 
-In the example below, we try to find an element greater than 6 in the list. That element is not found, so `break` doesn't run and the `else` clause runs.
+下面的例子中，我们尝试在列表中找到一个大于6的元素，但是没找到，所以`break`语句没有被执行，而`else`语句被执行了。
 
 ```python
 my_list = [1, 2, 3, 4, 5]
@@ -2615,13 +2615,13 @@ else:
     print("Not Found")
 ```
 
-The output is:
+输出：
 
 ```
 Not Found
 ```
 
-However, if the `break` statement runs, the `else` clause doesn't run. We can see this in the example below:
+但是，如果`break`语句执行了，`else`不会被执行。从下面的例子中我们可以看到这一点：
 
 ```python
 my_list = [1, 2, 3, 4, 5, 8] # Now the list has the value 8
@@ -2634,28 +2634,28 @@ else:
     print("Not Found")
 ```
 
-The output is:
+输出：
 
 ```
 Found
 ```
 
-## 🔹 While Loops in Python
+## 🔹 Python中的While循环
 
-While loops are similar to for loops in that they let us repeat a block of code. The difference is that while loops run while a condition is `True`.
+While循环跟for循环一样，都是让我们可以重复执行一个代码块。 不同之处是while与执行之前有一个条件判断要为`True`。
 
-In a while loop, we define the condition, not the number of iterations. The loop stops when the condition is `False`.
+在while循环中，我们要定义一个条件语句，它不是数字的迭代。当条件为`False`时终止循环。
 
-This is the general syntax of a while loop:
+while循环的通用语法：
 
 ```python
 while <condition>:
     <code>
 ```
 
-💡 **Tip:** in while loops, you must update the variables that are part of the condition to make sure that the condition will eventually become `False`.
+💡 **提示：** 在while循环中, 循环变量会作为条件语句的一部分，我们必须要更新这个循环变量，以确保条件语句最终会变为`False`。
 
-For example:
+例如：
 
 ```python
 >>> x = 6
@@ -2703,14 +2703,14 @@ Hello
 *
 ```
 
-#### Break and Continue
+#### Break与Continue
 
-We can also use `break` and `continue` with while loops and they both work exactly the same:
+在while循环中我们同样可以使用`break`和`continue`，它们工作的原理跟for循环是完全一样的：
 
--   `break` stops the while loop immediately.
--   `continue` stops the current iteration and starts the next one.
+-   `break` 立即停止while循环.
+-   `continue` 停止当前迭代并开始下一个迭代.
 
-For example:
+例如：
 
 ```python
 >>> x = 5
@@ -2745,11 +2745,11 @@ Odd: 11
 Odd: 13
 ```
 
-#### The `else` Clause
+#### `else`子句
 
-We can also add an `else` clause to a while loop. If `break` is found, the `else` clause doesn't run but if the `break` statement is not found, the `else` clause runs.
+我们同样可以给while循环添加一个`else`子句。如果`break`被执行，`else`子句不会执行，如果`break`没有被执行，`else`子句就会被执行。
 
-In the example below, the `break` statement is not found because none of the numbers are even before the condition becomes `False`, so the `else` clause runs.
+看下面的例子：
 
 ```python
 x = 5
@@ -2764,7 +2764,7 @@ else:
 	print("All numbers were odd")
 ```
 
-This is the output:
+输出：
 
 ```python
 5
@@ -2775,7 +2775,7 @@ This is the output:
 All numbers were odd
 ```
 
-But in this version of the example, the `break` statement is found and the `else` clause doesn't run:
+但是下面的例子中，`break`会被执行，`else`不会被执行：
 
 ```
 x = 5
@@ -2790,22 +2790,22 @@ else:
 	print("All numbers were odd")
 ```
 
-The output is:
+输出：
 
 ```python
 5
 Even number found
 ```
 
-#### Infinite While Loops
+#### 无限While循环
 
-When we write and work with while loops, we can have something called an "infinite loop." If the condition is never `False`, the loop will never stop without external intervention.
+当我们在处理循环的时候，可能会遇到“无限循环”。 如果条件永远不为`False`，在无外部干扰的情况下，循环将永远不会停止。
 
-This usually happens when the variables in the condition are not updated properly during the execution of the loop.
+这种情况通常发生在我们没能正确的更新条件语句中的循环变量。
 
-**💡 Tip:** you must make the necessary updates to these variables to make sure that the condition will eventually evaluate to `False`.
+**💡 提示：** 你必须对这些变量进行必要的更新，以确保条件语句最终的结果为`False`。
 
-For example:
+例如：
 
 ```python
 >>> x = 5
@@ -2829,15 +2829,15 @@ For example:
 # The output continues indefinitely
 ```
 
-💡 **Tip:** to stop this process, type `CTRL + C`. You should see a `KeyboardInterrupt` message.
+💡 **提示：** 要结束这个进程，你可以按`CTRL + C`，你将会看到一个`KeyboardInterrupt`消息。
 
-## 🔸 Nested Loops in Python
+## 🔸 循环嵌套
 
-We can write for loops within for loops and while loops within while loops. These inner loops are called nested loops.
+我们可以在for循环里面再写一个for循环，或者在while循环里面再写一个while循环。这种循环里面的循环就叫做嵌套的循环。
 
-💡 **Tip:** the inner loop runs for each iteration of the outer loop.
+💡 **提示：** 外部循环的每一次迭代，内部循环都会执行一次。
 
-### Nested For Loops in Python
+### 嵌套的For循环
 
 ```python
 >>> for i in range(3):
@@ -2853,7 +2853,7 @@ We can write for loops within for loops and while loops within while loops. Thes
 2 1
 ```
 
-If we add print statements, we can see what is happening behind the scenes:
+如果我们添加print语句，我们将会发现这里背后发生了什么：
 
 ```python
 >>> for i in range(3):
@@ -2884,9 +2884,9 @@ Inner Loop
 j = 1
 ```
 
-The inner loop completes two iterations per iteration of the outer loop. The loop variables are updated when a new iteration starts.
+外部循环每迭代一次，内部循环会迭代两次。 内部和外部循环的循环变量在各自迭代一次后都会被更新。
 
-This is another example:
+另外一个例子：
 
 ```python
 >>> num_rows = 5
@@ -2904,9 +2904,9 @@ This is another example:
 *
 ```
 
-### Nested While Loops in Python
+### 嵌套的While循环
 
-Here we have an example of nested while loops. In this case, we have to update the variables that are part of each condition to guarantee that the loops will stop.
+下面是一个while循环嵌套的例子。 在这种情况下，我们必须更新作为条件语句的一部分的循环变量，以保证循环的终止。
 
 ```python
 >>> i = 5
@@ -2931,22 +2931,22 @@ Here we have an example of nested while loops. In this case, we have to update t
 1 1
 ```
 
-💡 **Tip:** we can also have for loops within while loops and while loops within for loops.
+💡 **提示：** 我们同样可以将fow循环写在while循环里面，或者将while循环写到for循环里面。
 
-## 🔹 Functions in Python
+## 🔹 Python的函数
 
-In Python, we can define functions to make our code reusable, more readable, and organized. This is the basic syntax of a Python function:
+在Python中，我们可以定义函数来使我们的代码可重用、更具可读性和组织性。下面是函数的基本语法：
 
 ```python
 def <function_name>(<param1>, <param2>, ...):
     <code>
 ```
 
-**💡 Tip:** a function can have zero, one, or multiple parameters.
+**💡 提示：** 函数可以有0个，1个或多个参数。
 
-### Function with No Parameters in Python
+### 无参数函数
 
-A function with no parameters has an empty pair of parentheses after its name in the function definition. For example:
+函数定义时，函数名后跟一对空的括号，那它就是无参数函数。例如：
 
 ```python
 def print_pattern():
@@ -2955,7 +2955,7 @@ def print_pattern():
         print("*" * size)
 ```
 
-This is the output when we call the function:
+调用函数时的输出：
 
 ```python
 >>> print_pattern()
@@ -2965,25 +2965,25 @@ This is the output when we call the function:
 ****
 ```
 
-**💡 Tip:** You have to write an empty pair of parentheses after the name of the function to call it.
+**💡 提示：** 在调用的时候，你必须在函数名后加一对空括号。
 
-### Function with One Parameter in Python
+### 有1个参数的函数
 
-A function with one or more parameters has a list of parameters surrounded by parentheses after its name in the function definition:
+函数定义时，函数名后的括号中是一个或多个参数的列表。
 
 ```python
 def welcome_student(name):
     print(f"Hi, {name}! Welcome to class.")
 ```
 
-When we call the function, we just need to pass one value as argument and that value will be replaced where we use the parameter in the function definition:
+当调用函数时，我们只需要传递一个值作为参数，该值会被函数定义中使用参数的地方替代：
 
 ```python
 >>> welcome_student("Nora")
 Hi, Nora! Welcome to class.
 ```
 
-Here we have another example – a function that prints a pattern made with asterisks. You have to specify how many rows you want to print:
+再看另外一个例子 – 一个打印由星号构成的图案的函数。你需要指定所要打印的行数：
 
 ```python
 def print_pattern(num_rows):
@@ -2993,7 +2993,7 @@ def print_pattern(num_rows):
         print()
 ```
 
-You can see the different outputs for different values of `num_rows`:
+你可以看到不同的`num_rows`值，输出不同的结果：
 
 ```
 >>> print_pattern(3)
@@ -3019,16 +3019,16 @@ You can see the different outputs for different values of `num_rows`:
 *
 ```
 
-### Functions with Two or More Parameters in Python
+### 2个或多个参数的函数
 
-To define two or more parameters, we just separate them with a comma:
+为了定义2个或多个参数，我们只需要将它们用逗号进行分割：
 
 ```
 def print_sum(a, b):
     print(a + b)
 ```
 
-Now when we call the function, we must pass two arguments:
+当调用上面的函数时，我们必须得传2个参数：
 
 ```python
 >>> print_sum(4, 5)
@@ -3044,7 +3044,7 @@ Now when we call the function, we must pass two arguments:
 8
 ```
 
-We can adapt the function that we just saw with one parameter to work with two parameters and print a pattern with a customized character:
+我们可以将刚刚看到的带有一个参数的函数调整为使用两个参数并打印带有自定义字符的图案：
 
 ```python
 def print_pattern(num_rows, char):
@@ -3054,7 +3054,7 @@ def print_pattern(num_rows, char):
 		print()
 ```
 
-You can see the output with the customized character is that we call the function passing the two arguments:
+你可以看到下面带有自定义字符的输出，是通过我们传了2个参数的调用输出的。
 
 ```
 >>> print_pattern(5, "A")
@@ -3087,26 +3087,26 @@ A
 #
 ```
 
-### How to Return a Value in Python
+### 如何返回一个值
 
-Awesome. Now you know how to define a function, so let's see how you can work with return statements.
+很好。现在你已经知道了如何定义一个函数，那么让我们看看如何使用return语句。
 
-We will often need to return a value from a function. We can do this with the `return` statement in Python. We just need to write this in the function definition:
+我们经常需要从函数中返回一个值，而`return`语句可以做到。我们只需要将return语句加到函数的定义中。
 
 ```python
 return <value_to_return>
 ```
 
-**💡 Tip:** the function stops immediately when `return` is found and the value is returned.
+**💡 提示：** 当发现`return`语句时，函数会立即停止执行并返回值。
 
-Here we have an example:
+例如：
 
 ```python
 def get_rectangle_area(length, width):
     return length * width
 ```
 
-Now we can call the function and assign the result to a variable because the result is returned by the function:
+现在我们可以调用该函数并将结果赋给一个变量，因为结果是由该函数返回的。
 
 ```python
 >>> area = get_rectangle_area(4, 5)
@@ -3114,9 +3114,9 @@ Now we can call the function and assign the result to a variable because the res
 20
 ```
 
-We can also use `return` with a conditional to return a value based on whether a condition is `True` or `False`.
+我们也可以用条件语句跟`return`语句一起使用，return会根据条件是`True`还是`False`来返回一个值。
 
-In this example, the function returns the first even element found in the sequence:
+下面的例子中，函数返回序列中找到的第一个元素：
 
 ```python
 def get_first_even(seq):
@@ -3127,7 +3127,7 @@ def get_first_even(seq):
             return None
 ```
 
-If we call the function, we can see the expected results:
+如果我们调用函数，你将会看到预期的结果：
 
 ```python
 >>> value1 = get_first_even([2, 3, 4, 5])
@@ -3141,44 +3141,44 @@ If we call the function, we can see the expected results:
 None
 ```
 
-💡 **Tip:** if a function doesn't have a `return` statement or doesn't find one during its execution, it returns `None` by default.
+💡 **提示：** 如果函数没有`return`语句，函数将会返回默认值`None`。
 
-The [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/#programming-recommendations) recommends using return statements consistently. It mentions that we should:
+[Python代码的风格指南](https://www.python.org/dev/peps/pep-0008/#programming-recommendations) 建议我们一贯第使用返回语句。我们应该：
 
-> Be consistent in return statements. Either all return statements in a function should return an expression, or none of them should. If any return statement returns an expression, any return statements where no value is returned should explicitly state this as return None, and an explicit return statement should be present at the end of the function (if reachable)
+> 返回语句要保持一致。 函数中的return语句，要么所有的都返回一个表达式，要么都不要返回。如果确定让所有返回语句都返回一个表达式，那么对于那些没有返回值的函数应该明确地说明返回值为None, 且在函数的结尾要有一个显式的return语句(如果可以执行到return语句)。
 
-### Default Arguments in Python
+### 默认参数
 
-We can assign default arguments for the parameters of our function. To do this, we just need to write `<parameter>=<value>` in the list of parameters.
+对于函数，我们可以使用参数的默认值作为参数，你只需要在参数列表中使用`<parameter>=<value>`这样的语法。
 
-**💡 Tip:** The [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/#other-recommendations) mentions that we shouldn't "use spaces around the = sign when used to indicate a keyword argument."
+**💡 提示：** [Python代码的风格指南](https://www.python.org/dev/peps/pep-0008/#other-recommendations) 中说到“我们不应该在关键字参数赋值的 = 两边使用空格”。
 
-In this example, we assign the default value 5 to the parameter `b`. If we omit this value when we call the function, the default value will be used.
+下面的例子中，我们给参数`b`赋了一个默认值5。当函数调用时，如果我们省略参数`b`，`b`的默认值5将会被使用。
 
 ```
 def print_product(a, b=5):
     print(a * b)
 ```
 
-If we call the function without this argument, you can see the output:
+省略参数`b`的调用, 我们看到的输出:
 
 ```python
 >>> print_product(4)
 20
 ```
 
-We confirm that the default argument 5 was used in the operation.
+从上面的结果可以确定的是，运算中确实使用了默认值5。
 
-But we can also assign a custom value for `b` by passing a second argument:
+我们还可以给参数`b`赋一个自定义的值：
 
 ```python
 >>> print_product(3, 4)
 12
 ```
 
-💡 **Tip:** parameters with default arguments have to be defined at the end of the list of parameters. Else, you will see this error: `SyntaxError: non-default argument follows default argument`.
+💡 **提示：** 带有默认值的参数，需要放在参数列表的最后面。 否则，你会看到一个错误：`语法错误：非默认值参数放到了默认值参数后面了`。
 
-Here we have another example with the function that we wrote to print a pattern. We assign the default value `"*"` to the `char` parameter.
+下面是用来打印图案函数的另外的一个例子。我们将`"*"`作为默认值赋值给`char`参数。
 
 ```
 def print_pattern(num_rows, char="*"):
@@ -3188,7 +3188,7 @@ def print_pattern(num_rows, char="*"):
 		print()
 ```
 
-Now we have the option to use the default value or customize it:
+现在我们可以选择用默认值或者自己赋一个值：
 
 ```python
 >>> print_pattern(5)
@@ -3207,11 +3207,11 @@ Now we have the option to use the default value or customize it:
 &
 ```
 
-## 🔸 Recursion in Python
+## 🔸 Python中的递归
 
-A recursive function is a function that calls itself. These functions have a base case that stops the recursive process and a recursive case that continues the recursive process by making another recursive call.
+一个递归函数就是能调用自己的函数。 这些递归函数都有一个用于结束递归过程的基本情况，还有通过进行另一个递归调用来继续递归过程的递归情况。
 
-Here we have some examples in Python:
+下面是一些例子：
 
 ```python
 def factorial(n):
@@ -3221,7 +3221,7 @@ def factorial(n):
         return n * factorial(n-1)
 ```
 
-Recursive Factorial Function
+递归实现的阶乘函数
 
 ```python
 def fibonacci(n):
@@ -3231,7 +3231,7 @@ def fibonacci(n):
         return fibonacci(n-1) + fibonacci(n-2)
 ```
 
-The Fibonacci Function
+斐波那契函数
 
 ```python
 def find_power(a, b):
@@ -3241,19 +3241,19 @@ def find_power(a, b):
         return a * find_power(a, b-1)
 ```
 
-Find a Power Recursively
+递归求幂
 
-## 🔹 Exception Handling in Python
+## 🔹 Python中的异常处理
 
-An error or unexpected event that that occurs while a program is running is called an **exception**. Thanks to the elements that we will see in just a moment, we can avoid terminating the program abruptly when this occurs.
+程序运行过程中发生的错误或意外事件被称为**异常**。多亏有了后面我们将看到的这些对异常的处理，才让我们的程序在发出异常时不至于突然终止。
 
-Let's see the types of exceptions in Python and how we can handle them.
+让我们看看Python中的异常类型，以及如何处理它们。
 
-### Common Exceptions in Python
+### Python中的常见异常
 
-This is a list of common exceptions in Python and why they occur:
+下面是常见异常的一个列表，以及它们发生的原因：
 
--   **ZeroDivisionError:** raised when the second argument of a division or modulo operation is zero.
+-   **ZeroDivisionError:** 当除法或模运算的第二个参数为0时，会抛出这个异常。
 
 ```python
 >>> 5 / 0
@@ -3275,7 +3275,7 @@ Traceback (most recent call last):
 ZeroDivisionError: integer division or modulo by zero
 ```
 
--   **IndexError:** raised when we try to use an invalid index to access an element of a sequence.
+-   **IndexError:** 当我们试图使用一个无效的索引来访问序列的元素时，会抛出这个异常。
 
 ```python
 >>> my_list = [3, 4, 5, 6]
@@ -3287,7 +3287,7 @@ Traceback (most recent call last):
 IndexError: list index out of range
 ```
 
--   **KeyError:** raised when we try to access a key-value pair that doesn't exist because the key is not in the dictionary.
+-   **KeyError:** 当我们试图访问一个不存在的键值对时，就会抛出这个异常，因为这个键不在字典中。
 
 ```python
 >>> my_dict = {"a": 1, "b": 2, "c": 3}
@@ -3299,7 +3299,7 @@ Traceback (most recent call last):
 KeyError: 'd'
 ```
 
--   **NameError:** raised when we use a variable that has not been defined previously.
+-   **NameError:** 当访问一个前文没有定义的变量名称时会抛出此异常。
 
 ```python
 >>> b
@@ -3309,9 +3309,9 @@ Traceback (most recent call last):
 NameError: name 'b' is not defined
 ```
 
--   **RecursionError:** raised when the interpreter detects that the maximum recursion depth is exceeded. This usually occurs when the process never reaches the base case.
+-   **RecursionError:** 当解释器检测到超过了最大递归深度时抛出，通常发生在递归过程始终无法达到基本情形的时候。
 
-In the example below, we will get a `RecursionError`. The `factorial` function is implemented recursively but the argument passed to the recursive call is `n` instead of `n-1`. Unless the value is already `0` or `1`, the base case will not be reached because the argument is not being decremented, so the process will continue and we will get this error.
+在下面的例子中，会抛出一个`RecursionError`错误。`factorial`是一个递归函数，但在每次的递归过程中传递给它的是`n`，而不是`n-1`。除非n的值是`0`或`1`否则不会达到基本的情形，因为参数没有被递减，所以递归过程会一直持续下去，然后就会发生这个递归错误。
 
 ```python
 >>> def factorial(n):
@@ -3337,13 +3337,13 @@ Traceback (most recent call last):
 RecursionError: maximum recursion depth exceeded in comparison
 ```
 
-💡 **Tip:** to learn more about these exceptions, I recommend reading [this article](https://docs.python.org/3/library/exceptions.html) from the documentation.
+💡 **提示：** 想了解更多关于异常的知识, 建议阅读来自Python官网的[这篇](https://docs.python.org/3/library/exceptions.html)。
 
-### `try` / `except` in Python
+### Python中的`try` / `except`
 
-We can use try/except in Python to catch the exceptions when they occur and handle them appropriately. This way, the problem can terminate appropriately or even recover from the exception.
+Python中我们可以用try/except来捕获异常的发生，并适当得处理它们。 这样，异常中的错误就可以被适当的终止，甚至还可以从异常中恢复。
 
-This is the basic syntax:
+这是基本语法：
 
 ```python
 try:
@@ -3352,7 +3352,7 @@ except:
     <code_to_handle_the_exception_if_it_occurs>
 ```
 
-For example, if we take user input to access an element in a list, the input might not be a valid index, so an exception could be raised:
+例如，如果我们接受用户的输入来访问一个列表的元素，而这个输入可能是一个无效的索引，所以可能会导致一个异常：
 
 ```python
 index = int(input("Enter the index: "))
@@ -3364,15 +3364,15 @@ except:
     print("Please enter a valid index.")
 ```
 
-If we enter an invalid value like 15, the output will be:
+假设我们输入无效值，比如15，输出会是：
 
 ```python
 Please enter a valid index.
 ```
 
-Because the `except` clause runs. However, if the value is valid, the code in `try` will run as expected.
+因为`except`语句被执行了。然而，如果该值是有效的，`try`中的代码将会按预期运行。
 
-Here we have another example:
+下面是另外一个例子：
 
 ```
 a = int(input("Enter a: "))
@@ -3385,7 +3385,7 @@ except:
     print("Please enter valid values.")
 ```
 
-The output is:
+输出：
 
 ```
 Enter a: 5
@@ -3394,9 +3394,9 @@ Enter b: 0
 Please enter valid values.
 ```
 
-### How to Catch a Specific Type of Exception in Python
+### Python中如何捕获一个特定类型的异常
 
-Instead of catching and handling all possible exceptions that could occur in the `try` clause, we could catch and handle a specific type of exception. We just need to specify the type of the exception after the `except` keyword:
+在`try`子句中，我们不想捕捉和处理所有可能发生的异常，而是想要捕捉和处理一种特定类型的异常。我们只需要在`except`关键字后面指定异常的类型：
 
 ```python
 try:
@@ -3405,7 +3405,7 @@ except <exception_type>:
     <code_to_handle_an_exception_if_it_occurs>
 ```
 
-For example:
+例如：
 
 ```python
 index = int(input("Enter the index: "))
@@ -3428,11 +3428,11 @@ except ZeroDivisionError: # specify the type
     print("Please enter valid values.")
 ```
 
-### How to Assign a Name to the Exception Object in Python
+### 如何给Python中的异常对象指定一个名称
 
-We can specify a name for the exception object by assigning it to a variable that we can use in the `except` clause. This will let us access its description and attributes.
+我们可以在`except`子句中将异常对象赋值给一个变量，这样可以让我们访问到它的描述和属性。
 
-We only need to add `as <name>`, like this:
+我们只需要添加`as <name>`，像这样：
 
 ```python
 try:
@@ -3441,7 +3441,7 @@ except <exception_type> as <name>:
     <code_to_handle_an_exception_if_it_occurs>
 ```
 
-For example:
+例如：
 
 ```python
 index = int(input("Enter the index: "))
@@ -3453,14 +3453,14 @@ except IndexError as e:
     print("Exception raised:", e)
 ```
 
-This is the output if we enter `15` as the index:
+如果我们输入的索引值为`15`：
 
 ```
 Enter the index: 15
 Exception raised: list index out of range
 ```
 
-This is another example:
+另一个例子：
 
 ```python
 a = int(input("Enter a: "))
@@ -3473,15 +3473,15 @@ except ZeroDivisionError as err:
     print("Please enter valid values.", err)
 ```
 
-This is the output if we enter the value `0` for `b`:
+`b`的输入为`0`时：
 
 ```python
 Please enter valid values. division by zero
 ```
 
-### `try` / `except` / `else` in Python
+### `try` / `except` / `else`
 
-We can add an `else` clause to this structure after `except` if we want to choose what happens when no exceptions occur during the execution of the `try` clause:
+如果我们想选择在执行`try`子句期间没有发生异常时的情况，我们可以在`except`后面添加一个`else`子句。
 
 ```python
 try:
@@ -3492,7 +3492,7 @@ else:
     <code_that_only_runs_if_no_exception_in_try>
 ```
 
-For example:
+例如：
 
 ```python
 a = int(input("Enter a: "))
@@ -3507,24 +3507,24 @@ else:
     print("Both values were valid.")
 ```
 
-If we enter the values `5` and `0` for `a` and `b` respectively, the output is:
+如果我们给`a`和`b`分别输入为`5`和`0`：
 
 ```
 Please enter valid values. division by zero
 ```
 
-But if both values are valid, for example `5` and `4` for `a` and `b` respectively, the `else` clause runs after `try` is completed and we see:
+但是，如果`a`，`b`的值都是有效的, 比如是：`5`和`4`，那么`else`会在`try`子句执行完成之后执行：
 
 ```python
 1.25
 Both values were valid.
 ```
 
-### `try` / `except` / `else` / `finally` in Python
+### `try` / `except` / `else` / `finally`
 
-We can also add a `finally` clause if we need to run code that should always run, even if an exception is raised in `try`.
+我们可以添加`finally`子句来执行一直运行的代码，即使在`try`中出现了异常。
 
-For example:
+例如：
 
 ```python
 a = int(input("Enter a: "))
@@ -3541,29 +3541,29 @@ finally:
     print("Finally!")
 ```
 
-If both values are valid, the output is the result of the division and:
+如果输入的值都是有效的，除法的输出：
 
 ```
 Both values were valid.
 Finally!
 ```
 
-And if an exception is raised because `b` is `0`, we see:
+如果由于`b`是`0`而发生异常，那么：
 
 ```python
 Please enter valid values. division by zero
 Finally!
 ```
 
-The `finally` clause always runs.
+`finally`子句都会被执行。
 
-**💡 Tip:** this clause can be used, for example, to close files even if the code throws an exception.
+**💡 提示：** 这个子句可以用来关闭文件，比如, 当你处理文件时抛出了异常。
 
-## 🔸 Object-Oriented Programming in Python
+## 🔸 Python中的面向对象编程
 
-In Object-Oriented Programming (OOP), we define classes that act as blueprints to create objects in Python with attributes and methods (functionality associated with the objects).
+在面向对象编程中(OOP), 我们可以定义类作为蓝图，用于在Python中创建具有属性和方法(与对象相关的功能)的对象。
 
-This is a general syntax to define a class:
+定义类的一般语法：
 
 ```
 class <className>:
@@ -3584,13 +3584,13 @@ class <className>:
    # As many methods as needed
 ```
 
-**💡 Tip:** `self` refers to an instance of the class (an object created with the class blueprint).
+**💡 提示：** `self`是类的实例(用类创建的对象)的引用。
 
-As you can see, a class can have many different elements so let's analyze them in detail:
+如你所见，类可以有很多不同的元素，让我们来分析一下他们的细节：
 
-### Class Header
+### 类的头部
 
-The first line of the class definition has the `class` keyword and the name of the class:
+类定义的第一行是`class`关键字和类名：
 
 ```
 class Dog:
@@ -3604,7 +3604,7 @@ class House:
 class Ball:
 ```
 
-**💡 Tip:** If the class inherits attributes and methods from another class, we will see the name of the class within parentheses:
+**💡 提示：** 如果一个类继承了另外一个类的属性和方法，我们会在括号中看到该类的名称：
 
 ```
 class Poodle(Dog):
@@ -3618,15 +3618,15 @@ class Truck(Vehicle):
 class Mom(FamilyMember):
 ```
 
-In Python, we write class name in Upper Camel Case (also known as Pascal Case), in which each word starts with an uppercase letter. For example: `FamilyMember`
+Python中, 类名用大驼峰(也称为Pascal Case)，名称中的每个一个单词都是以大写字母开头。例如：`FamilyMember`
 
-### `__init__` and instance attributes
+### `__init__`和实例属性
 
-We are going to use the class to create object in Python, just like we build real houses from blueprints.
+接下来，我们将使用类在Python中创建对象，就像我们根据图纸建造真正的房屋一样。
 
-The objects will have attributes that we define in the class. Usually, we initialize these attributes in `__init__`. This is a method that runs when we create an instance of the class.
+对象中的属性来自于我们在类中定义，而这些属性通常是在`__init__`方法中被初始化，而`__init__`方法会在创建类的实例时被执行。
 
-This is the general syntax:
+这是一般语法：
 
 ```python
 def __init__(self, <parameter1>, <parameter2>, ...):
@@ -3638,9 +3638,9 @@ def __init__(self, <parameter1>, <parameter2>, ...):
         # As many instance attributes as needed
 ```
 
-We specify as many parameters as needed to customize the values of the attributes of the object that will be created.
+我们可以根据需要来给类指定尽可能多的属性。
 
-Here is an example of a `Dog` class with this method:
+`Dog`类的一个` __init__`方法例子：
 
 ```python
 class Dog:
@@ -3650,19 +3650,19 @@ class Dog:
         self.age = age
 ```
 
-💡 **Tip:** notice the double leading and trailing underscore in the name `__init__`.
+💡 **提示：** 注意名称`__init__`中的前后的双下划线。
 
-### How to Create an Instance
+### 如何创建类的实例
 
-To create an instance of `Dog`, we need to specify the name and age of the dog instance to assign these values to the attributes:
+要创建`Dog`类的实例，我们需要指定name和age属性。
 
 ```python
 my_dog = Dog("Nora", 10)
 ```
 
-Great. Now we have our instance ready to be used in the program.
+很好。现在我们已经准备好了一个可以在代码中使用的Dog实例了。
 
-Some classes will not require any arguments to create an instance. In that case, we just write empty parentheses. For example:
+有些类，可以不需要任何参数来创建实例。 这种情况我们只需要一个空括号，例如：
 
 ```
 class Circle:
@@ -3671,21 +3671,21 @@ class Circle:
         self.radius = 1
 ```
 
-To create an instance:
+创建实例：
 
 ```python
 >>> my_circle = Circle()
 ```
 
-💡 **Tip:** `self` is like a parameter that acts "behind the scenes", so even if you see it in the method definition, you shouldn't consider it when you pass the arguments.
+💡 **提示：** `self`像是一个"幕后"的参数，即使我们在方法的定义中看到它，但你传参数时可以不用考虑它。
 
-### Default Arguments
+### 默认参数
 
-We can also assign default values for the attributes and give the option to the user if they would like to customize the value.
+我们可以为类的属性指定默认值，但如果使用者想自己赋值，也是可以的。
 
-In this case, we would write `<attribute>=<value>` in the list of parameters.
+这种情况下, 我们可以在参数列表中写上形如：`<attribute>=<value>`
 
-This is an example:
+例如：
 
 ```
 class Circle:
@@ -3694,7 +3694,7 @@ class Circle:
         self.radius = radius
 ```
 
-Now we can create a `Circle` instance with the default value for the radius by omitting the value or customize it by passing a value:
+现在我们创建`Circle`实例，你可以通过忽略radius参数使用它的默认值，也可以传入一个自己的值： 
 
 ```python
 # Default value
@@ -3704,15 +3704,15 @@ Now we can create a `Circle` instance with the default value for the radius by o
 >>> my_circle2 = Circle(5)
 ```
 
-### How to Get an Instance Attribute
+### 如何获取实例的属性
 
-To access an instance attribute, we use this syntax:
+访问实例属性，可以用下面的语法：
 
 ```python
 <object_variable>.<attribute>
 ```
 
-For example:
+例如：
 
 ```python
 # Class definition
@@ -3733,15 +3733,15 @@ For example:
 10
 ```
 
-### How to Update an Instance Attribute
+### 如何更新实例的属性
 
-To update an instance attribute, we use this syntax:
+更新实例的属性，我们可以用下面的语法：
 
 ```
 <object_variable>.<attribute> = <new_value>
 ```
 
-For example:
+例如：
 
 ```python
 >>> class Dog:
@@ -3763,15 +3763,15 @@ For example:
 'Norita'
 ```
 
-### How to Remove an Instance Attribute
+### 如何删除实例属性
 
-To remove an instance attribute, we use this syntax:
+要删除实例属性，可以用下面的语法：
 
 ```
 del <object_variable>.<attribute>
 ```
 
-For example:
+例如：
 
 ```python
 >>> class Dog:
@@ -3796,9 +3796,9 @@ Traceback (most recent call last):
 AttributeError: 'Dog' object has no attribute 'name'
 ```
 
-### How to Delete an Instance
+### 如何删除一个示例
 
-Similarly, we can delete an instance using `del`:
+同样的，删除实例我们也可以用`del`：
 
 ```
 >>> class Dog:
@@ -3823,13 +3823,13 @@ Traceback (most recent call last):
 NameError: name 'my_dog' is not defined
 ```
 
-### Public vs. Non-Public Attributes in Python
+### 公开 vs. 非公开 的属性
 
-In Python, we don't have access modifiers to functionally restrict access to the instance attributes, so we rely on naming conventions to specify this.
+Python中，我们没有用访问修饰符来限制对实例属性的访问，而是依靠命名惯例来做到这一点。
 
-For example, by adding a leading underscore, we can signal to other developers that an attribute is meant to be non-public.
+例如，在属性前添加一个前导下划线，就可以告诉开发者这是一个非公开的属性。
 
-For example:
+例如：
 
 ```python
 class Dog:
@@ -3839,23 +3839,23 @@ class Dog:
         self._age = age   # Non-Public attribute
 ```
 
-The Python documentation mentions:
+Python文档中提到：
 
-> Use one leading underscore only for non-public methods and instance variables.  
+> 一个前导下划线仅用于非公开的方法和实例变量。  
 >   
-> Always decide whether a class's methods and instance variables (collectively: "attributes") should be public or non-public. If in doubt, choose non-public; it's easier to make it public later than to make a public attribute non-public.  
+> 你需要决定实例的哪些方法和变量("属性")是需要公开或不公开的。如果有疑惑，可以选择不公开；将一个不公开的属性改为公开，要比将其从公开改为不公开要容易得多。
 >   
-> Non-public attributes are those that are not intended to be used by third parties; you make no guarantees that non-public attributes won't change or even be removed. - [source](https://www.python.org/dev/peps/pep-0008/#designing-for-inheritance)
+> 非公开属性是那些不打算被第三方使用的属性，我们无法保证非公开属性不会被第三方使用者改变甚至被删除。 - [源](https://www.python.org/dev/peps/pep-0008/#designing-for-inheritance)
 
-However, as the documentation also mentions:
+然而，如文档中还提到的：
 
-> We don't use the term "private" here, since no attribute is really private in Python (without a generally unnecessary amount of work). - [source](https://www.python.org/dev/peps/pep-0008/#designing-for-inheritance)
+> 我们在这里不使用"私有"一词，因为在Python中没有任何属性是真正的私有的(省去一些不必要的工作)。 - [源](https://www.python.org/dev/peps/pep-0008/#designing-for-inheritance)
 
-**💡 Tip:** technically, we can still access and modify the attribute if we add the leading underscore to its name, but we shouldn't.
+**💡 提示：** 从技术上讲，如果我们在属性的名称中加入前导下划线，我们仍然可以访问和修改该属性，但我们不应该这样做。
 
-### Class Attributes in Python
+### Python中类的属性
 
-Class attributes are shared by all instances of the class. They all have access to this attribute and they will also be affected by any changes made to these attributes.
+类的属性由类的所有实例共享。所有实例都可以访问这些属性，如果这些属性被修改，这些实例将都会受到影响。
 
 ```python
 class Dog:
@@ -3869,17 +3869,17 @@ class Dog:
         self.age = age
 ```
 
-**💡 Tip:** usually, they are written before the `__init__` method.
+**💡 提示：** 通常，它们写在`__init__`方法的前面。
 
-### How to Get a Class Attribute
+### 如何获取一个类属性
 
-To get the value of a class attribute, we use this syntax:
+要获取类属性，我们使用下面的方法：
 
 ```
 <class_name>.<attribute>
 ```
 
-For example:
+例如：
 
 ```
 >>> class Dog:
@@ -3895,17 +3895,17 @@ For example:
 'Animalia'
 ```
 
-**💡 Tip:** You can use this syntax within the class as well.
+**💡 提示：** 你可以使用同样的语法在类里面获取它的值。
 
-### How to Update a Class Attribute
+### 如何更新一个类属性
 
-To update a class attribute, we use this syntax:
+要更新一个类属性，我们使用下面的语法：
 
 ```
 <class_name>.<attribute> = <value>
 ```
 
-For example:
+例如：
 
 ```python
 >>> class Dog:
@@ -3926,9 +3926,9 @@ For example:
 'New Kingdom'
 ```
 
-### How to Delete a Class Attribute
+### 如何删除一个类属性
 
-We use `del` to delete a class attribute. For example:
+我们使用`del`一个类属性。例如：
 
 ```python
 >>> class Dog:
@@ -3952,13 +3952,13 @@ Traceback (most recent call last):
 AttributeError: type object 'Dog' has no attribute 'kingdom'
 ```
 
-### How to Define Methods
+### 如何定义方法
 
-Methods represent the functionality of the instances of the class.
+方法用于表示类实例的功能。
 
-**💡 Tip:** Instance methods can work with the attributes of the instance that is calling the method if we write `self.<attribute>` in the method definition.
+**💡 提示：** 如果我们在实例方法的定义中写上`self.<attribute>`，那么实例方法就可以调用实例属性。
 
-This is the basic syntax of a method in a class. They are usually located below `__init__`:
+下面是定义方法的基本语法，这些方法一般定义在`__init__`方法后面：
 
 ```python
 class <ClassName>:
@@ -3971,9 +3971,9 @@ class <ClassName>:
         <code>
 ```
 
-They may have zero, one, or more parameters if needed (just like functions!) but instance methods must always have `self` as the first parameter.
+这些实例方法可能有0个、1个或多个参数(就像函数!)，但`self`必须是第一个参数。
 
-For example, here is a `bark` method with no parameters (in addition to `self`):
+例如，下面的`bark`方法没有参数(除了`self`):
 
 ```python
 class Dog:
@@ -3986,13 +3986,13 @@ class Dog:
         print(f"woof-woof. I'm {self.name}")
 ```
 
-To call this method, we use this syntax:
+要调用这个方法，我们用下面的语法：
 
 ```
 <object_variable>.<method>(<arguments>)
 ```
 
-For example:
+例如：
 
 ```python
 # Create the instance
@@ -4003,7 +4003,7 @@ For example:
 woof-woof. I'm Nora
 ```
 
-Here we have a `Player` class with an `increment_speed` method with one parameter:
+`Player`类里定义了只有一个参数的`increment_speed`方法：
 
 ```python
 class Player:
@@ -4016,7 +4016,7 @@ class Player:
         self.speed += value
 ```
 
-To call the method:
+调用此方法：
 
 ```
 # Create instance        
@@ -4034,15 +4034,15 @@ To call the method:
 55
 ```
 
-💡 **Tip:** to add more parameters, just separate them with a comma. It is recommended to add a space after the comma.
+💡 **提示：** 要添加更多参数，只需要将多个参数用逗号分隔。建议在每个逗号后面加一个空格。
 
-### Properties, Getters and Setters in Python
+### 属性, Getters与Setters
 
-Getters and setters are methods that we can define to get and set the value of an instance attribute, respectively. They work as intermediaries to "protect" the attributes from direct changes.
+定义getters与setters方法可以用于获取和设置实例的属性值。Getters与setters方法充当一种中介，以"保护"属性免受直接更改。
 
-In Python, we typically use properties instead of getters and setters. Let's see how we can use them.
+在Python中，我们通常使用属性而不是getter和setter。让我们看看如何使用它们。
 
-To define a property, we write a method with this syntax:
+要定义一个属性，我们可以用下面的语法编写一个方法：
 
 ```
 @property
@@ -4050,9 +4050,9 @@ def <property_name>(self):
     return self.<attribute>
 ```
 
-This method will act as a getter, so it will be called when we try to access the value of the attribute.
+这个方法会充当一个getter，它在我们访问属性时被调用。
 
-Now, we may also want to define a setter:
+我们可能还想定义一个setter：
 
 ```
 @<property_name>.setter
@@ -4060,7 +4060,7 @@ def <property_name>(self, <param>):
     self.<attribute> = <param>
 ```
 
-And a deleter to delete the attribute:
+还有一个删除器来删除属性：
 
 ```
 @<property_name>.deleter
@@ -4068,9 +4068,9 @@ def <property_name>(self):
     del self.<attribute>
 ```
 
-**💡 Tip:** you can write any code that you need in these methods to get, set, and delete an attribute. It is recommended to keep them as simple as possible.
+**💡 提示：** 你可以在这些方法中编写你需要的任何代码来读取、设置和删除属性。建议让这些方法尽可能简单。
 
-This is an example:
+下面是一个例子：
 
 ```python
 class Dog:
@@ -4091,7 +4091,7 @@ class Dog:
         del self._name
 ```
 
-If we add descriptive print statements, we can see that they are called when we perform their operation:
+如果我们添加描述性的print语句，我们可以看到当执行其操作时，print语句会被调用。
 
 ```python
 >>> class Dog:
@@ -4132,31 +4132,31 @@ Calling getter
 Calling deleter
 ```
 
-## 🔹 How to Work with Files in Python
+## 🔹 Python中如何处理文件
 
-Working with files is very important to create powerful programs. Let's see how you can do this in Python.
+处理文件对于创建强大的程序非常重要。下面让我们看看如何在Python中执行此操作。
 
-### How to Read Files in Python
+### Python中如何读取文件
 
-In Python, it's recommended to use a `with` statement to work with files because it opens them only while we need them and it closes them automatically when the process is completed.
+Python中，建议使用`with`语句来处理文件，因为它只在我们需要的时候打开文件，并且在处理完后会自动关闭文件。
 
-To read a file, we use this syntax:
+要读取文件，我们使用下面的语法：
 
 ```python
 with open("<file_path>") as <file_var>:
     <code>
 ```
 
-We can also specify that we want to open the file in read mode with an `"r"`:
+我们还可以在打开文件的时候，指定`"r"`以只读模式打开：
 
 ```python
 with open("<file_path>", "r") as <file_var>:
     <code>
 ```
 
-But this is already the default mode to open a file, so we can omit it like in the first example.
+不过这已经是打开文件的默认模式了，所以我们可以忽略它，例如下面的例子：
 
-This is an example:
+例子：
 
 ```python
 with open("famous_quotes.txt") as file:
@@ -4164,7 +4164,7 @@ with open("famous_quotes.txt") as file:
         print(line)
 ```
 
-or...
+或者……
 
 ```python
 with open("famous_quotes.txt", "r") as file:
@@ -4172,20 +4172,20 @@ with open("famous_quotes.txt", "r") as file:
         print(line)
 ```
 
-**💡 Tip:** that's right! We can iterate over the lines of the file using a for loop. The file path can be relative to the Python script that we are running or it can be an absolute path.
+**💡 提示：** 是的！我们可以通过for循环来遍历文件所有的行。文件路径可以是一个相对于当前正在运行的Python脚本的相对路径，也可以是绝对路径。
 
-### How to Write to a File in Python
+### Python中如何写文件
 
-There are two ways to write to a file. You can either replace the entire content of the file before adding the new content, or append to the existing content.
+写文件有两种方法。你可以将要添加的内容退换掉现有的内容，或者追加到现有内容中。
 
 ```python
 with open("<file_path>", "w") as <file_var>:
     <code>
 ```
 
-To replace the content completely, we use the `"w"` mode, so we pass this string as the second argument to `open()`. We call the `.write()` method on the file object passing the content that we want to write as argument.
+要完全替换现有内容，我们可以用`"w"`模式，可以将“w”作为`open()`第二个参数来调用。我们在文件对象上调用`.write()`方法，将我们想写的内容作为参数传给该对象。
 
-For example:
+例如：
 
 ```python
 words = ["Amazing", "Green", "Python", "Code"]
@@ -4195,9 +4195,9 @@ with open("famous_quotes.txt", "w") as file:
         file.write(word + "\n")
 ```
 
-When you run the program, a new file will be created if it doesn't exist already in the path that we specified.
+当你运行程序时，如果指定路径中的文件不存在，它会被创建。
 
-This will be the content of the file:
+这是文件内容：
 
 ```python
 Amazing
@@ -4206,16 +4206,16 @@ Python
 Code
 ```
 
-### How to Append to a File in Python
+### 如何向文件中追加内容
 
-However, if you want to append the content, then you need to use the `"a"` mode:
+然而，如果你想向文件中追加内容，那么需要使用`"a"`模式：
 
 ```
 with open("<file_path>", "a") as <file_var>:
     <code>
 ```
 
-For example:
+例如：
 
 ```python
 words = ["Amazing", "Green", "Python", "Code"]
@@ -4225,9 +4225,9 @@ with open("famous_quotes.txt", "a") as file:
         file.write(word + "\n")
 ```
 
-This small change will keep the existing content of the file and it will add the new content to the end.
+这个小改动将会保留文件的现有内容，它将新的内容加到最后。
 
-If we run the program again, these strings will be added to the end of the file:
+如果我们再次运行程序，这些字符串将会被添加到文件的末尾：
 
 ```python
 Amazing
@@ -4240,9 +4240,9 @@ Python
 Code
 ```
 
-### How to Delete a File in Python
+### 如何删除文件
 
-To delete a file with our script, we can use the `os` module. It is recommended to check with a conditional if the file exists before calling the `remove()` function from this module:
+要在我们的脚本中删除文件，得用`os`模块。建议在调用os模块的`remove()`方法之前，先检查文件是否存在。
 
 ```import
 import os
@@ -4253,7 +4253,7 @@ else:
   <code>
 ```
 
-For example:
+例如：
 
 ```python
 import os
@@ -4264,31 +4264,31 @@ else:
   print("This file doesn't exist")
 ```
 
-You might have noticed the first line that says `import os`. This is an import statement. Let's see why they are helpful and how you can work with them.
+你可能注意到了第一行代码`import os`，这是一个导入语句。下面我们看看它们有什么用，以及如何使用。
 
-## 🔸 Import Statements in Python
+## 🔸 Python中的导入语句
 
-Organizing your code into multiple files as your program grows in size and complexity is good practice. But we need to find a way to combine these files to make the program work correctly, and that is exactly what import statements do.
+一个较好的做法是，随着程序规模和复杂性的增加，我们要将代码组织成多个文件。但我们需要找到一种方法来组合这些文件以使程序正常工作，而这正是导入语句的作用。
 
-By writing an import statement, we can import a module (a file that contains Python definitions and statements) into another file.
+通过导入语句，我们可以将一个模块(包含Python定义和语句的文件)导入导另一个文件中。
 
-These are various alternatives for import statements:
+下面是各种形式的导入语句：
 
-### First Alternative:
+### 第一种选择：
 
 ```
 import <module_name>
 ```
 
-For example:
+例如：
 
 ```
 import math
 ```
 
-💡 **Tip:** `math` is a built-in Python module.
+💡 **提示：** `math`是Python的一个内置模块。
 
-If we use this import statement, we will need to add the name of the module before the name of the function or element that we are referring to in our code:
+如果我们使用这个导入语句，我们需要在代码中引用的函数或元素的名称前添加模块的名称。
 
 ```python
 >>> import math
@@ -4296,21 +4296,21 @@ If we use this import statement, we will need to add the name of the module befo
 5.0
 ```
 
-We explicitly mention in our code the module that the element belongs to.
+我们在代码中明确的指明该元素所属的模块。
 
-### Second Alternative:
+### 第二中选择：
 
 ```
 import <module> as <new_name>
 ```
 
-For example:
+例如：
 
 ```
 import math as m
 ```
 
-In our code, we can use the new name that we assigned instead of the original name of the module:
+在代码中，我们可以使用我们指定的新名称，而不是模块的原始名称：
 
 ```python
 >>> import math as m
@@ -4318,19 +4318,19 @@ In our code, we can use the new name that we assigned instead of the original na
 5.0
 ```
 
-### Third Alternative:
+### 第三种选择：
 
 ```
 from <module_name> import <element>
 ```
 
-For example:
+例如：
 
 ```
 from math import sqrt
 ```
 
-With this import statement, we can call the function directly without specifiying the name of the module:
+使用这个导入语句，我们可以直接调用函数，而不必指定模块的名称。
 
 ```
 >>> from math import sqrt
@@ -4338,19 +4338,19 @@ With this import statement, we can call the function directly without specifiyin
 5.0
 ```
 
-### Fourth Alternative:
+### 第四种选择：
 
 ```
 from <module_name> import <element> as <new_name>
 ```
 
-For example:
+例如：
 
 ```python
 from math import sqrt as square_root
 ```
 
-With this import statement, we can assign a new name to the element imported from the module:
+使用这种导入语句，我们可以给从模块中导出的元素指定一个新的名字。
 
 ```python
 >>> from math import sqrt as square_root
@@ -4358,15 +4358,15 @@ With this import statement, we can assign a new name to the element imported fro
 5.0
 ```
 
-### Fifth Alternative:
+### 第五种选择：
 
 ```
 from <module_name> import *
 ```
 
-This statement imports all the elements of the module and you can refer to them directly by their name without specifying the name of the module.
+上面的导入语句导入了模块的所有元素，我们可以通过名称来直接引用这些元素，而不用指定模块名称。
 
-For example:
+例如：
 
 ```python
 >>> from math import *
@@ -4384,19 +4384,19 @@ For example:
 1
 ```
 
-💡 **Tip:** this type of import statement can make it more difficult for us to know which elements belong to which module, particularly when we are importing elements from multiple modules.
+💡 **提示：** 这种类型的导入语句会使我们很难知道哪些元素属于哪个模块，特别是当我们从多个模块导入元素的时候。
 
-According to the [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/#imports):
+根据[Python代码的风格指南](https://www.python.org/dev/peps/pep-0008/#imports):
 
-> **Wildcard imports** (from <module> import \*) should be avoided, as they make it unclear which names are present in the namespace, confusing both readers and many automated tools.
+> **有通配符的导入** (from <module> import \*) 应该避免使用，因为他们会让你搞不清楚哪些元素是属于哪个模块, 对读者和一些自动化工具都具有迷惑性。
 
-## 🔹 List and Dictionary Comprehension in Python
+## 🔹 Python中的列表与字典推导
 
-A really nice feature of Python that you should know about is list and dictionary comprehension. This is just a way to create lists and dictionaries more compactly.
+Python中你应该知道的一个很棒的功能特性是列表与字典推导功能。它们是一种更加紧凑地创建列表和字典的方法。
 
-### List Comprehension in Python
+### 列表推导
 
-The syntax used to define list comprehensions usually follows one of these four patterns:
+要定义列表推导，我们可以使用下面四种语法模式中的任意一种：
 
 ```
 [<value_to_include> for <var> in <sequence>]
@@ -4414,9 +4414,9 @@ The syntax used to define list comprehensions usually follows one of these four 
 [<value> for <var1> in <sequence1> for <var2> in <sequence2> if <condition>]
 ```
 
-**💡 Tip:** you should only use them when they do not make your code more difficult to read and understand.
+**💡 提示：** 列表推导一般使用在一些简单逻辑的情形，就是说使用它们时，我们不应该让我们的代码变得难以阅读和理解。
 
-Here we have some examples:
+下面是一些例子：
 
 ```python
 >>> [i for i in range(4, 15)]
@@ -4438,14 +4438,14 @@ Here we have some examples:
 [9, 16, 25]
 ```
 
-### List Comprehensions vs. Generator Expressions in Python
+### 列表推导 vs. 生成器表达式
 
-List comprehensions are defined with square brackets `[]`. This is different from generator expressions, which are defined with parentheses `()`. They look similar but they are quite different. Let's see why.
+列表推导使用的是中括号`[]`。而生成器表达式用的是括号`()`。它们看上去相似，但却有很大的不同。让我们看看为啥。
 
--   **List comprehensions** generate the entire sequence at once and store it in memory.
--   **Generator expressions** yield the elements one at a time when they are requested.
+-   **列表推导** 一次产生整个序列且整个序列都存储在内存中。
+-   **生成器表达式** 当元素被要求时，一次产生一个元素。
 
-We can check this with the `sys` module. In the example below, you can see that their size in memory is very different:
+我们可以通过`sys`模块来检查上述不同。在下面的例子中，你可以看到他们的大小在内存中差别很大。
 
 ```
 >>> import sys
@@ -4455,11 +4455,11 @@ We can check this with the `sys` module. In the example below, you can see that 
 56
 ```
 
-We can use generator expressions to iterate in a for loop and get the elements one at a time. But if we need to store the elements in a list, then we should use list comprehension.
+我们可以使用生成器表达式在for循环中迭代并一次获取一个元素。但如果你需要将元素存储到列表中，你应该使用列表推导。
 
-### Dictionary Comprehension in Python
+### 字典推导
 
-Now let's dive into dictionary comprehension. The basic syntax that we need to use to define a dictionary comprehension is:
+现在让我们深入字典推导。定义字典推导的基本语法：
 
 ```
 {<key_value>: <value> for <var> in <sequence>}
@@ -4469,7 +4469,7 @@ Now let's dive into dictionary comprehension. The basic syntax that we need to u
 {<key_value>: <value> for <var> in <sequence> if <condition>}
 ```
 
-Here we have some examples of dictionary comprehension:
+字典推导的一些例子：
 
 ```
 >>> {num: num**3 for num in range(3, 15)}
@@ -4479,7 +4479,7 @@ Here we have some examples of dictionary comprehension:
 {4: 10, 5: 11, 6: 12, 7: 13}
 ```
 
-This is an example with a conditional where we take an existing dictionary and create a new dictionary with only the students who earned a passing grade greater than or equal to 60:
+这是一个带有条件的例子，我们从一个现有的字典中提取，并创建一个新的字典，其中只有获得成绩大于或等于60分的学生：
 
 ```
 >>> grades = {"Nora": 78, "Gino": 100, "Talina": 56, "Elizabeth": 45, "Lulu": 67}
@@ -4490,6 +4490,6 @@ This is an example with a conditional where we take an existing dictionary and c
 {'Nora': 78, 'Gino': 100, 'Lulu': 67}
 ```
 
-****I** really **hope you liked this article and found it helpful.**** Now you know how to write and work with the most important elements of Python.
+****I** 真的 **希望你喜欢这篇文章，且能对你有帮助** ** 现在你已经知道了如何编写和使用Python中最重要的元素了。
 
-⭐ [Subscribe to my YouTube channel](https://www.youtube.com/channel/UCng0h8WiHLmT57JJ8At4LfQ) and follow me on [Twitter](https://twitter.com/EstefaniaCassN) to find more coding tutorials and tips. Check out my online course [Python Exercises for Beginners: Solve 100+ Coding Challenges](https://www.udemy.com/course/python-exercises-for-beginners-solve-coding-challenges/?referralCode=804D1EFAF779D07914D2)
+⭐ [订阅我的YouTube](https://www.youtube.com/channel/UCng0h8WiHLmT57JJ8At4LfQ) 和关注我的[Twitter](https://twitter.com/EstefaniaCassN)以便找到更多的编程教程和技巧。 查看我的在线教程[Python Exercises for Beginners: Solve 100+ Coding Challenges](https://www.udemy.com/course/python-exercises-for-beginners-solve-coding-challenges/?referralCode=804D1EFAF779D07914D2)

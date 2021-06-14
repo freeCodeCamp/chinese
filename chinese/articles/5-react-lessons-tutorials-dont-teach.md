@@ -1,25 +1,25 @@
 > -  原文地址：[5 Key React Lessons the Tutorials Don't Teach You](https://www.freecodecamp.org/news/5-react-lessons-tutorials-dont-teach/)
 > -  原文作者：[Reed BargerReed Barger](https://www.freecodecamp.org/news/author/reed/)
-> -  译者：
+> -  译者：Humilitas
 > -  校对者：
 
 ![5 Key React Lessons the Tutorials Don't Teach You](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/5-key-lessons-react-tutorials-dont-teach.png)
 
-There are many essential concepts and lessons that React developers need to know that simply aren't covered in most tutorials.
+有些概念和知识是每个 React 开发者都需要知道的，然而大多数教程都没有涉及到。
 
-I have handpicked the topics I believe are some of the most important for you to know, but that few articles have dedicated the time to cover in detail.
+我为你们挑选了几个我认为最重要的、很少文章会详细介绍的主题。
 
-Let's take a look at five key React lessons worth knowing which you might not find elsewhere.
+一起来看一下这五个关键的 React 知识点，你在别处可能看不到这些内容。
 
-> Want to learn all the skills you need to become a highly-paid React developer? Check out the [**React Bootcamp**](https://reactbootcamp.com).
+> 想要成为高薪 React 开发者吗？请查看 [**React Bootcamp**](https://reactbootcamp.com)。
 
-## 1\. How React state is actually updated
+## 1\. React state 是如何更新的
 
-As a React developer, you know that state can be created and updated with the `useState` and `useReducer` hooks.
+作为 React 开发者，你知道可以通过 `useState` 和 `useReducer` 钩子来创建和更新 state。
 
-But what happens exactly when you update a component's state with either of these hooks? Is the state updated immediately or is it done at some later time?
+当你使用这两个钩子更新组件 state 时到底发生了什么呢？state 是立即更新还是在一段时间之后才会更新呢？
 
-Let's look at the following code, which is a very simple counter application. As you would expect, you can click on the button and our counter increases by 1.
+一起来看下面的代码，它是一个简单的计数器应用。正如你所想，点击其中的按钮，计数器就会加 1。
 
 ```js
 import React from 'react';
@@ -41,9 +41,9 @@ export default function App() {
 }
 ```
 
-But what if we attempt to add an additional line, which also updates our count by one – what do you think will happen?
+如果再加一行代码，它同样尝试让计数器加 1——会发生什么？
 
-When you click on the button, will our displayed count increase by one or two?
+点击按钮的时候，计数会增加 1 还是增加 2 呢？
 
 ```js
 import React from 'react';
@@ -66,17 +66,17 @@ export default function App() {
 }
 ```
 
-If we run this code we see it's incremented only by one! Despite attempting to increment the count by one twice, with two separate state updates.
+运行这个代码会发现，它只增加了 1！尽管执行了两次 state 更新操作。
 
-_Why does our counter display 1, despite clearly incrementing state by 1 two times?_
+_尽管明确执行了两次加 1 的操作，为什么计数器显示为 1？_
 
-The reason for this is that React schedules a state update to be performed when we update state the first time. Because it is just scheduled and is not performed immediately (it is asynchronous and not synchronous), our `count` variable is not updated before we attempt to update it a second time.
+原因在于我们第一次执行更新操作的时候 React 只是计划了一次 state 更新。因为它只是做计划而不是立即执行（它是异步的），所以我们第二次尝试更新时 `count` 变量还是原来的值（两次 `setCount()` 中 `count` 的值是相同的）。
 
-In other words, because the state update is scheduled, not performed immediately, the second time we called `setCount`, `count` is still just `0`, not `1`.
+换句话说，由于 state 更新是计划性的而不是立即执行的，第二次调用 `setCount` 时，`count` 还是 `0`，而不是 `1`。
 
-The way that we can fix this to update state reliably, despite state updates being asynchronous, is to use the inner function that's available within the `useState` setter function.
+尽管 state 更新是异步的，我们可以在 `useState` 的 setter 函数中使用内部函数来更可靠地更新 state。
 
-This allows us to get the previous state and return the value that we want it to be in the body of the inner function. When we use this pattern, we see that it's incremented by two like we originally wanted:
+这个内部函数允许我们获取前一个 state 的值，使用这种方式，我们可以看到计数器如我们期望的那样增加了 2：
 
 ```js
 import React from 'react';
@@ -98,11 +98,11 @@ export default function App() {
 }
 ```
 
-## 2\. It's better to use multiple effects instead of one
+## 2\. 最好使用多个 effect 而不是使用单个
 
-When performing a side effect, most React developers will `useEffect` just once and attempt to perform multiple side effects within the same effect function.
+在执行副作用（side effect）时，很多 React 开发者会试图在单次 `useEffect` 调用中执行多个副作用。
 
-What does that look like? Below you can see where we are fetching both post and comment data in one useEffect hook to be put in their respective state variables:
+那看起来像什么样呢？可以看到，下面的代码在一个 useEffect 钩子里同时获取了帖子和评论，并分别更新了对应的 state 变量：
 
 ```js
 import React from "react";
@@ -112,12 +112,12 @@ export default function App() {
   const [comments, setComments] = React.useState([]);
 
   React.useEffect(() => {
-    // fetching post data
+    // 获取帖子数据
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((res) => res.json())
       .then((data) => setPosts(data));
 
-    // fetching comments data
+    // 获取评论数据
     fetch("https://jsonplaceholder.typicode.com/comments")
       .then((res) => res.json())
       .then((data) => setComments(data));
@@ -132,15 +132,15 @@ export default function App() {
 }
 ```
 
-Instead of attempting to cram all of your side effects into a single effect hook, just as you can use the state hook more than once, you can use several effects.
+与其把所有副作用都挤在一个 effect 钩子里，不如通过多次调用把它们放在独立的钩子里。
 
-Doing so allows us to separate our different actions into different effects for a better separation of concerns.
+这种做法允许我们把不同的操作分离到不同的 effect 中，更好地做到关注点分离。
 
-A better separation of concerns is a major benefit that React hooks provide as compared to using lifecycle methods within class components.
+比起类组件中的生命周期函数，React hooks 的一个主要优势就是更好的关注点分离。
 
-In methods like `componentDidMount`, for example, it was necessary to include any action that we want to be performed after our component mounted. You could not break up your side effects into multiple methods – each lifecycle method in classes can be used once and only once.
+类组件中每个生命周期函数只能调用一次，所以无法将副作用分离到多个函数里。例如，只能把组件挂载后要执行的所有操作都包含在一个 `componentDidMount` 函数里。
 
-The major benefit of React hooks is that we are able to break up our code based upon what it's doing. Not only can we separate actions that we are performing after rendering into multiple effects, but we can also co-locate our state:
+React hooks 的主要优势就是能够让我们根据功能来组织代码。我们不仅能够将组件渲染之后要执行的操作分离到多个 effect，还可以移动 state 相关代码的位置。
 
 ```js
 import React from "react";
@@ -169,21 +169,21 @@ export default function App() {
 }
 ```
 
-This means we can put the state hook with the effect hook that it is related to. This helps to organize our code much better and better understand what it's doing at a glance.
+这意味着我们可以把 state 钩子和相关的 effect 钩子放在一起，使得代码结构清晰、功能一目了然。
 
-## 3\. Don't optimize functions that update state (useState, useReducer)
+## 3\. 不要优化更新 state 的函数（useState, useReducer）
 
-A common task whenever we pass down a callback function from a parent component to a child component is to prevent it from being recreated, unless its arguments have changed.
+从父组件向子组件传递一个回调函数时有一个常见问题要处理，即避免它被重新创建，除非它的参数发生了变化。
 
-We can perform this optimization with the help of the `useCallback` hook.
+我们可以借助于 `useCallback` 钩子来完成这个优化。
 
-useCallback was created specifically for callback functions that are passed to child components to make sure that they are not recreated needlessly, which incurs a performance hit on our components whenever there is a re-render.
+useCallback 钩子是专门为传递给子组件的回调函数设计的，可以避免不必要地重新创建这些函数，重新创建这些函数的过程会在每次重渲染时引起性能问题。
 
-This is because whenever our parent component re-renders, it will cause all child components to re-render as well. This is what causes our callback functions to be recreated on every re-render.
+因为每次父组件重渲染时，会引起它所有子组件也重新渲染，这就导致了回调函数在每次重渲染时都被重新创建。
 
-However, if we are using a setter function to update state that we've created with the useState or useReducer hooks, we do not need to wrap that with useCallback.
+然而，如果我们使用 setter 函数来更新由 useState 或 useReducer 钩子创建的 state，则不需要用到 useCallback。
 
-In other words, there is no need to do this:
+换句话说，下面这种做法是不必要的：
 
 ```js
 import React from "react";
@@ -191,7 +191,7 @@ import React from "react";
 export default function App() {
   const [text, setText] = React.useState("")
 
-  // Don't wrap setText in useCallback (it won't change as is)
+  // 不要使用 useCallback 包裹 setText（因为 setText 是不会变化的）
   const handleSetText = React.useCallback((event) => {
     setText(event.target.value);
   }, [])
@@ -211,29 +211,29 @@ function Input({ text, handleSetText }) {
 }
 ```
 
-The reason comes directly from the React documentation:
+React 文档中说明了其原因：
 
-> React guarantees that setState function identity is stable and won't change on re-renders. This is why it's safe to omit from the useEffect or useCallback dependency list.
+> React 保证了 setState 函数标识是稳定的，并且不会在重渲染时改变，因此在 useEffect 和 useCallback 的依赖列表中忽略它是安全的。
 
-Therefore, not only do we not need to optimize it unnecessarily with useCallback, but we also do not need to include it as a dependency within useEffect because it will not change.
+所以说，不仅不需要用 useCallBack 优化它们，也不需要在 useEffect 的依赖列表中包含它们，因为它们是稳定不变的。
 
-This is important to note because in many cases, it can cut down the code that we need to use. And most importantly, it is an unproductive attempt to optimize your code as it can incur performance problems of its own.
+这一点很重要，因为在许多情况下，它能精简代码。最重要的是，这种优化是徒劳的，因为它自身就有可能导致性能问题。
 
-## 4\. The useRef hook can preserve state across renders
+## 4\. useRef 钩子能够在重渲染过程中保存 state
 
-As React developers, it's very helpful sometimes to be able to reference a given React element with the help of a ref.  We create refs in React with the help of the `useRef` hook.
+作为 React 开发者，利用 ref 来获取指定 React 元素的引用有时是非常有用的。我们使用 `useRef` 钩子来创建 ref。
 
-It's important to note, however, that `useRef` isn't just helpful for referencing to a certain DOM element. The React documentation says so itself:
+记住，`useRef` 的用处并不仅限于引用某个 DOM 元素。React 文档中说明了这一点：
 
-> The ref object that's created by useRef is a generic container with a current property that's mutable and can hold any value.
+> useRef 创建的 ref 对象是一个带有 current 属性的通用容器，current 属性可以保存任意类型的值，并且它的值是可变的。
 
-There are certain benefits to be able to store and update values with `useRef`. It allows us to store a value that will not be in memory that will not be erased across re-renders.
+使用 `useRef` 保存和更新一些数据是有一定好处的，它可以不通过内存来保存数据，使得这些数据在重渲染时不会被清除掉。
 
-If we wanted to keep track of a value across renders with the help of a simple variable, it would be reinitialized each time the component renders. However, if you use a ref, the value stored in it will remain constant across renders of your component.
+如果我们想利用普通的变量在重渲染过程中追踪数据变化是不可行的，因为每次组件渲染时它都会被重新初始化。然而，如果使用 ref 的话，其中的数据能在每次组件渲染时保持不变。
 
-_What is a use case for leveraging useRef in this way?_
+_useRef 的这种用法的使用场景是什么？_
 
-This could be helpful in the event that we wanted to perform a given side effect on the initial render only, for example:
+如果只想在初始渲染时执行某些副作用，它就派上用场了：
 
 ```js
 import React from "react";
@@ -257,15 +257,15 @@ export default function App() {
 }
 ```
 
-Try running this code yourself.
+你可以自己尝试运行一下这段代码。
 
-As you will see, no matter how many times the button is clicked, state is updated, and a re-render takes place, the action we want to perform (see `console.log`) is only performed once.
+如你所见，不管点击按钮多少次、state 如何更新、重新渲染多少次，我们想要执行的操作（`console.log`）只会执行一次。
 
-## 5\. How to prevent your React app from crashing
+## 5\. 如何防止 React 应用崩溃
 
-One of the most important lessons for React developers to know, especially if they haven't pushed a React application to the web, is what to do with uncaught errors.
+React 开发者需要知道的最重要的一点——尤其是在还没把应用发布出去的时候——就是如何处理未捕获的错误。
 
-In the example below, we are attempting to display a Header component in our app, but are performing an action that results in an error. Namely, attempting to get a property from a null value:
+下面的例子中，我们尝试在应用中展示一个 Header 组件，同时执行了一个将会抛出错误的操作，即试图从 null 值中读取属性：
 
 ```js
 import React from "react";
@@ -285,25 +285,25 @@ function Header() {
 }
 ```
 
-If we push this code to production, we will see a blank screen exactly like this:
+如果我们把这些代码推送到生产中，就会看到如下空白内容：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/5-key-lessons-1.png)
 
-_Why do we see nothing?_
+_为什么我们什么也看不到？_
 
-Again, we can find the answer for this within the React documentation:
+我们依然能够在 React 文档中找到答案：
 
-> As of React 16, errors that were not caught by any error boundary will result in unmounting of the whole React component tree.
+> 在 React 16 中，未被任何错误边界捕获的错误将会导致整个 React 组件树的卸载。
 
-While in development, you see a big red error message with a stack trace that tells you where the error can be found. When your application is live, however, you're just going to see a blank screen.
+在开发过程中，你会看到一大片红色的包含栈追踪信息的错误消息，告诉你哪里产生了错误。然而，当线上应用出错时，你只会看到一片空白。
 
-This is not the desired behavior that you want for your application.
+这并不是你期望的行为。
 
-But there is a way to fix it, or at least show your users something that tells them that an error took place if the application accidentally crashes. You can wrap your component tree in what's called an error boundary.
+有一个办法可以修复这个问题，即应用意外崩溃时向用户展示一些内容，告诉他们应用出错了。可以把组件树包含在一个错误边界中。
 
-Error boundaries are components that allow us to catch errors and show users a fallback message that tells them that something wrong occurred. That might include instructions on how to dismiss the error (like reloading the page).
+错误边界是一种能够捕获错误并展示后备内容的组件，后备内容中可以展示消除错误的步骤（如刷新页面）。
 
-We can use an error boundary with the help of the package `react-error-boundary`. We can wrap it around the component we believe is error-prone. It can also be wrapped around our entire app component tree:
+可以借助于 `react-error-boundary` 包来使用错误边界。可以将那些易于出错的组件包含在错误边界中，也可以把整个组件树都包含在错误边界中：
 
 ```js
 import React from "react";
@@ -333,17 +333,17 @@ function ErrorFallback({ error }) {
 }
 ```
 
-You can also display the error message however you like and style it just like you would any normal component.
+可以以任意形式来展示这些错误信息，就像编写普通组件那样。
 
-The result that we get when an error does occur is much better:
+现在，发生错误时展现的结果好多了：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/5-key-lessons-2.png)
 
-## Enjoy this post? Join The React Bootcamp
+## 喜欢这篇文章吗？欢迎加入 React Bootcamp
 
-**[The React Bootcamp](http://bit.ly/join-react-bootcamp)** takes everything you should know about learning React and bundles it into one comprehensive package, including videos, cheatsheets, plus special bonuses.
+**[The React Bootcamp](http://bit.ly/join-react-bootcamp)** 打包了学习 React 所需的所有资料，包括视频、速查表，还有特别奖励。
 
-Gain the insider information hundreds of developers have already used to master React, find their dream jobs, and take control of their future:
+获取帮助过许多人掌握 React、找到理想工作、掌控未来的内部资料：
 
 [![The React Bootcamp](https://reedbarger.nyc3.digitaloceanspaces.com/react-bootcamp-banner.png)](http://bit.ly/join-react-bootcamp)  
-_Click here to be notified when it opens_
+_单击此处以在其开放时收到通知_

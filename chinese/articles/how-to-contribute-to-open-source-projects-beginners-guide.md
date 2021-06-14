@@ -1,86 +1,82 @@
 > -  原文地址：[How to Contribute to Open Source  Projects – A Beginner's Guide](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-projects-beginners-guide/)
 > -  原文作者：[Hillary NyakundiHillary Nyakundi](https://www.freecodecamp.org/news/author/larymak/)
-> -  译者：
+> -  译者：Blank-Grid
 > -  校对者：
 
 ![How to Contribute to Open Source  Projects – A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/uide-to-writting-a-good-readme-file--1-.png)
 
-If you're a developer, you've probably come across the term "open source." If you've ever wondered what it's all about and how to contribute, you are in exactly the right place.
+如果你是一名开发者，你可能会遇到“开源”这个词。如果你曾想知道它的全部内容以及如何为其做贡献，那么你来对地方了。
 
-I put aside all my fears about how and what to contribute during Hacktoberfest 2020, and made my ever first contribution to the open source world. Since it was my first time, I started with some beginner friendly projects and slowly got more advanced.
+在 2020 年的 Hacktoberfest 期间，我抛开了所有我对如何以及贡献什么的恐惧，并为开源世界做出了我的第一个贡献。 由于对我来说是第一次，我从一些对初学者友好的项目开始，然后慢慢提高。
 
-Now, if you're a new developer you are probably wondering what exactly is open source? How can you get started? What should you expect? Well, in this article we will cover all this and more.
+而现在，如果你是新手，你可能想知道开源到底是什么？ 如何开始？ 你应该期待什么？ 在本文中，我们将涵盖所有这些内容甚至更多。
 
-## What is Open Source?
+## 什么是开源？
 
-Open source refers to source code that is made available to the public to view, use, modify, and distribute under a permissive license.
+开源是指在许可证的许可下向公众提供可以查看、使用、修改和分发的源代码。
 
-It's often in a company's or person's best interest to open-source their code, whether they're an individual, a corporation, a small business, a non-profit, or a government agency.
+无论是个人、公司、小型企业、非营利组织还是政府机构，开源代码通常符合企业或个人的最大利益。
 
-Contributing to open source projects can be a rewarding way to learn, teach, share, and build experience. There are plenty of reasons why you should contribute to an open source project, such as:
+为开源项目做出贡献是一种学习、教授、分享和积累经验的有益方式。 你应该为开源项目做出贡献的原因有很多，例如：
+- 改进你每天使用的软件
+- 如果需要，可以找一位导师
+- 学习新技能
+- 分享你的技能
+- 更深入地了解你正在使用的软件
+- 建立声誉并帮助你发展你的事业
+- 另外，它本身很有趣，会让你感觉很棒
 
--   To improve the software you rely on daily
--   To find a mentor if you need one
--   To learn new skills
--   To share your skills
--   To gain a much deeper knowledge about the software you're using
--   To build up your reputation and help grow your career
--   Plus, it's fun and gives you personal satisfaction
+_你为开源项目做贡献的原因是什么？ 回复这篇文章或通过 [larymak 1](https://twitter.com/larymak1) 告诉我。_
 
-_What is your motivation to contribute to open source projects? Let me know by responding to this post or via [larymak1](https://twitter.com/larymak1)._
+## 如何为开源做贡献
 
-## How to Contribute to Open Source
+为开源项目做贡献并不一定意味着你必须为代码库做贡献。 你可以通过多种不同方式为开源做贡献，例如：
+- 你可以在项目文档中添加描述以详细说明某一点
+- 你可以针对特定的项目提供指南
+- 你可以添加示例来展示代码的工作原理
+- 你可以为项目编写教程
+- 你可以为项目添加翻译
+- 你可以回答有关项目的问题（比如在 Stack Overflow 或 Reddit 上）
+- 你可以对其他贡献者提供建议
+- 你可以修复错误并正确地安排项目的工作文件夹
 
-Contributing to an open source project does not necessarily mean that you have to contribute to the codebase. You can contribute to open source in many different ways, like:
+所有包括但不限于这些方式都可以为开源项目做贡献。
 
--   You can add a description to a project's documentation to elaborate on a certain point
--   You can give guidance on a specific project
--   You can add examples to show how the code works
--   You can write tutorials for the project
--   You can add a translation for a project
--   You can answer questions about a project (like on Stack Overflow or Reddit)
--   You can offer to mentor another contributor
--   You can fix typos and arrange the project's work folder correctly
+## 为开源项目做贡献之前需要了解的内容
 
-All of these ways and more count towards contributing to an open-source project.
+每个开源社区都是不同的。 每个社区都有不同的人，有着不同的角色和奖励。 他们每个人都有自己的职责和预期贡献。
 
-## What to Know Before You Contribute to an Open Source Project
+### 一个典型的开源项目会有这些人：
 
-Every open source community is different. Each community has different people in it with different roles and rewards offered. They also each have their own rules and expectations for contributing.
+- **作者** - 创建项目的人。 他们有权为其他成员分配角色以帮助维护项目。
+- **所有者** - 所有者拥有项目的管理所有权（_可以与作者为同一人_）
+- **维护者** - 这些人负责推动项目的愿景和目标。他们通常是对项目方向负责并致力于改进项目的人
+- **贡献者** - 贡献者以一种或多种方式加入到项目中。他们遵循相同的代码审查流程，遵守相同的代码风格要求等等。
+- **社区成员/用户** - 这些有价值的社区成员可以提供相关功能、错误报告等反馈。
 
-### A typical open source project will have these people:
+### 所有开源项目都应该具备的重要元素
 
--   **Author** - This is the person who created the project. They have the power to assign new roles to other members to help with the project's maintenance.
--   **Owner** - The ownder has administrative ownership of the project (and _can be the same person as the author_)
--   **Maintainers** - These people are responsible for driving the vision and goals of the project. They're usually people who feel responsible for the direction of the project and who are committed to improving it
--   **Contributors** - Contributors add to the project in one way or another. They follow the same code review process, are subject to the same requirements on code style, and so on.
--   **Community Members/Users** - These valuable members of the community can provide feedback about features, bug reports, and more.
+每个开源项目都应该有以下指南和信息：
 
-### Important elements all open source projects should have
+- [License](https://choosealicense.com/) - 如果一个项目没有开源许可证，那它就不是开源的。许可证有助于保护开源贡献者和用户。没有这种保护，企业和精明的开发者通常不会接触该项目。如果你想知道如何获得开源许可证，请单击 [此处](https://choosealicense.com/) 以了解更多信息。
+- README - 这是一本说明如何开始项目的手册。一个好的 README 应该包含潜在的贡献者想要了解的有关项目的所有不同内容。你可以阅读更多关于如何编写一个好的 README 文件 [点击这里](/news/how-to-write-a-good-readme-file/)。
+- How to Contribute - 这些指南帮助人们做出贡献并展示需要什么类型的贡献者（_这个文件不是必须的_）
+- [CODE\_OF\_CONDUCT](https://opensource.guide/code-of-conduct/) - 这是一份文件，用于确定你对贡献者和参与者的行为方式的期望。采纳并遵守行为准则有助于为你的社区创造一个积极的环境。
 
-Every open source project should have the following guidelines and information:
+要创建一个开源项目，你需要创建一个环境，可以让人们分享他们的挑战并进行深入讨论。这个可以通过以下工具实现：
+- Issue Tracker（问题追踪器） - 人们在这里讨论与项目相关的问题
+- Pull Requests（拉取请求） - 这是人们审查正在进行更改的地方
+- Synchronous Chat Channel（同步聊天频道） - 这是专门供人们分享他们的想法并进行对话的地方（如 Slack、Discord 等）
 
--   [License](https://choosealicense.com/) - If a project does not have an open source license, then it is not open source. The license helps protect contributors and users. Businesses and savvy developers usually won't touch a project without this protection. If you're wondering how to get one, click [Here](https://choosealicense.com/) to read more.
--   README - This is a manual that explains how to get started with the project. A good README should contain different everything a potential contributor would want to know about the project. You can read more about how to write a good README file [HERE](/news/how-to-write-a-good-readme-file/).
--   How to Contribute - These guidelines help people contribute and show what type of contributors are needed (_this file is not a must_)
--   [CODE\_OF\_CONDUCT](https://opensource.guide/code-of-conduct/) - A code of conduct is a document that establishes your expectations for how your contributors and participants behave. Adopting and enforcing a code of conduct can help create a positive environment for your community.
+## 如何找到你想要贡献的开源项目？
 
-To create an open-source project you will want to create an environment where people can share their challenges and have in-depth discussions. This is made possible by the following tools:
+既然知道了开源项目如何运作，那么是时候找到一个可贡献的开源项目了。
 
--   Issue Tracker - This is where people discuss issues related to the project
--   Pull Requests - This is where people review changes in progress
--   Synchronous Chat Channel - This is specifically meant for people to share their ideas and have conversations (like Slack, Discord, and so on)
+贡献在各个层面都有效——不要过分思考你将如何去做，而是想想你已经使用过的一些项目，如何对它们进行改进提高。
 
-## How to Find a Project to Contribute to
+> 研究表明，大约 30% 的贡献是文档、错别字修复甚至是翻译。
 
-Now that know how an open-source project works, it's time to find a project to contribute to.
-
-Contributing works on all levels – don't over think how you're gonna do it. Instead think of some of the projects you already use and how you can make a change to them or improve on them.
-
-> Research has shown that around 30% of casual contributions are documentation, typo fixes, or even translations.
-
-If you are a first-time contributor – which everybody was at some point – here are some links that will get you started in the open source world:
-
+如果你是第一次贡献（每个人在某个时候都是这样），这儿有一些网址可以让你开始拥抱开源世界：
 -   [Python Project Scripts](https://github.com/larymak/Python-project-Scripts)
 -   [Open Source Friday](https://opensourcefriday.com/)
 -   [Hebatica](https://habitica.com/static/front)
@@ -91,165 +87,152 @@ If you are a first-time contributor – which everybody was at some point – he
 -   [Contributor Ninja](https://contributor.ninja/)
 -   [First Contribution](https://github.com/firstcontributions/first-contributions)
 
-_In the world of open-source software, issues get reported and fixed pretty quickly. So, if you want to take on an issue, be sure to try to work on it promptly._
+_在开源软件的世界中，问题会很快得到报告和修复。 所以，如果你想解决一个问题，一定要尽快解决它。_
 
-### How to Choose an Open Source Project
+### 如何选择开源项目？
 
-After you have found the project you want to help out, make sure it meets the following criteria to be sure it's a good candidate:
+找到你想要贡献的项目后，让它符合以下标准，以确保它是一个不错的选择：
 
-First, you will have to check:
+首先，你需要检查：
+- 它有许可文件吗？
+- 最新提交是什么时候完成的？ 是最近的吗？ （也就是说，项目是否在积极维护/工作？）
+- 它有多少贡献？
+- 人们多久提交一次？
 
--   Does it have a license file?
--   When was the latest commit done? Was it recent? (That is, is the project actively maintained/worked on?)
--   How many contributions does it have?
--   How often do people make commits?
+如果你看到最近有很多活动，那很好，这意味着它有一个活跃的社区来维护它。
 
-If you see lots of recent activity, that's good – it means it has an active community maintaining it.
+其次，你应该继续检查以下内容：
+- 有多少未解决的问题？
+- 维护者需要多长时间才能做出回应？ 回应及时吗？
+- 是否对某个问题进行了积极的讨论？
+- 问题是否会定期关闭？
+- 有多少开放的拉取请求？
+- 最新的拉取请求最近多久合并？ 是最近吗？
+- 是否首先审查拉取请求？ （他们应该是）
+- 维护者是否感谢人们的贡献？
 
-Now you should move on to check the following:
+如果上述所有条件都满足你的需求，那就去做吧，开始为这些项目做贡献。
 
--   How many open issues are there?
--   How long does it take for maintainers to respond? Are they prompt?
--   Is there an active discussion on an issue?
--   Are the issues getting closed regularly?
--   How many open pull requests are there?
--   How recently were the latest pull requests merged? Recently?
--   Do the pull requests get reviewed first? (They should be.)
--   Do the maintainers thank people for contributing?
+## 在进行开源项目之前需要考虑什么？
 
-If all the above conditions satisfy your needs then go for it and start contributing to those projects.
+所以你迫不及待地要开始致力于自己的第一个开源项目了。让我们来了解一些可能会帮助你选择项目的方法。
 
-## What to Consider Before You Go Open Source
+### 项目使用什么编程语言？
 
-Okay, so you can't wait to start contributing to your first OS project. Let's go through a few tips that might help you choose what to work on.
+任何应用程序背后最基本的技术都是它使用的编程语言。GitHub 上一些最流行的语言包括但不限于JavaScript、Python、Java、Ruby 和 PHP。
 
-### What Programming Language Does the Project Use?
+你的能力和兴趣也许会契合众多项目，所以选择一个你感觉舒服的项目即可。
 
-The most fundamental technology behind any application is the programming language it uses. Some of the most popular languages on GitHub are JavaScript, Python, Java, Ruby, and PHP – but there are many more.
+### 项目类型
 
-There is a multitude of projects that might suit your skills and interests. So just find one that you'd feel comfortable working on.
+在你确定了你想要使用的语言后，你需要选择你喜欢的项目类型。只需概览一圈并选择一个你感兴趣的主题的项目即可。
 
-### Type of project
+项目一旦确定，你一定想要有一番作为。你将通过提交拉取请求来做到这一点。现在让我们来详细说说这个。
 
-After you've chosen the language you want to work in, you need to choose the type of project you prefer. Just have a look around and pick a project on a topic that interests you.
+## 如何提交拉取请求（Pull Request）？
 
-Once you've found a project, you'll want to actually make contributions. And you'll do that by submitting pull requests. Let's talk about that now.
+如果你处于这个阶段，已经找到了一个项目，你就可以继续了。让我们来谈谈如何实际提交拉取请求。
 
-## How to Submit a Pull Request
+首先，什么是拉取请求？ 这是你在 GitHub 中请求更新的方式，也是你将代码合并到另一个分支之前让某人检查你的代码的方式。
 
-If you are at this stage, you have found a project and you are good to go. So let's talk about how to actually submit a pull request.
+### 提交 PR 的步骤
 
-First, what is a pull request? It's the way that you request an update in GitHub, and it's how you get someone to check your code before merging it into another branch
-
-### Steps to Submit a PR
-
--   Fork the repository  
-    At the top right corner, you will see the term "fork". All you need to do is click it and you will have created a copy of the same project in your account. The URL will change to:
-
+- Fork 存储库
+     在右上角，你将看到“fork”一词。 单击它，将在你的帐户中创建同一个项目的副本。 URL 将更改为：
 ```
 https://github.com/<YourUserName>/projectname
 ```
 
--   Clone it to your local machine  
-    On your computer, if you have Git installed open the CMD and run this command. If you don't have Git already, refer [Here](https://git-scm.com/) which will show you how to get started with Git. Then proceed with the steps below:
-
+- 将其 Clone 到你的本地
+     在你的电脑上，如果安装了 Git，请打开 CMD 并运行此命令。 如果你还没有 Git，请参阅 [此处](https://git-scm.com/)，它将向你展示如何开始使用 Git。 然后继续执行以下步骤：
 ```
 git clone https://github.com/<YourUserName>/<projectname>
 ```
 
-This will create a copy of the project on your local machine. Now that you have cloned the repo we will need to do two things:
+这会在你的本地电脑上创建项目的副本。现在你已经克隆了存储库，我们需要做两件事：
 
-First, you'll need to create a branch. Change to the repository directory on your computer (if you are not already there): You can do that by:
-
+首先，你需要创建一个分支。切换到你电脑上的存储库目录（如果你还没切换的话）：你可以通过以下方式执行此操作：
 ```
 cd project folder name
 ```
 
-Now create a branch using the git checkout command:
-
+使用 git checkout 命令创建一个分支：
 ```
 git checkout -b your-new-branch-name
 ```
 
-For example:
-
+比如：
 ```
 git checkout -b lary-mak-blog
 ```
 
-Next, you'll need to make the necessary changes and commit those changes. After making your changes and adding new files, its time to add those changes to the branch you created.
+接下来，你需要进行必要的更改并提交这些更改。 在进行更改和添加新文件之后，将这些更改添加到你创建的分支中了。
 
-To see all the changes you made, run the `git status` command:
-
+要查看你做的所有更改，请运行 `git status` 命令：
 ```
 git status
 ```
 
-This shows all the recent changes you made. Now to add them, use the `git add *` command:
-
+这会显示你最近做的所有更改。现在添加它们，使用 `git add *` 命令：
 ```
 git add *
 ```
 
-Now commit those changes using the `git commit` command:
-
+现在使用 `git commit` 命令提交这些更改：
 ```
 git commit -m "<initial commit> "
 ```
 
--   Pushing Changes to GitHub  
-    You can do this easily using the \`git push command:
-
+- 将更改推送到 GitHub
+     你可以使用 `git push` 命令轻松完成此操作：
 ```
 git push origin <add-your-branch-name>
 ```
 
-replacing `<add-your-branch-name>` with the name of the branch you created earlier.
+用你之前创建的分支的名称替换 `<add-your-branch-name>`。
 
--   Submit Your Changes for Review  
-    If you go to your repository on GitHub and refresh the page,you'll see a Compare and pull request button. Click on that button.
+- 提交你的更改以供审核
+     如果你转到 GitHub 上的存储库并刷新页面，你将看到“Compare and pull request”按钮。 单击该按钮。
 
-Soon the maintainer will merge all your changes into the master branch of this project (unless they need changes from you). You will get a notification email once the changes have been merged.
+很快，维护者会将你的所有更改合并到该项目的主分支中（除非他们需要你的更改）。 合并更改后，你将收到一封通知电子邮件。
 
-A pull request to another repo is similar to a “push”. However, it allows for a few things:
+对其他存储库的拉取请求类似于“Push”。 但是，它允许做一些事情：
 
-First, it allows you to contribute to another repo without needing administrative privileges to make changes to the repo.
+首先，它允许你为其他存储库做贡献，而无需管理权限来对存储库进行更改。
 
-Second, it allows others to review your changes and suggest corrections, additions, edits, and so on.
+其次，它允许其他人查看你的更改并提出更正、添加、编辑等建议。
 
-Third, it gives repo administrators control over what gets added to their project repo.
+第三，它让管理员可以控制添加到他们项目存储库中的内容。
 
-### What Next After Your First Pull Request?
+### 在完成第一个拉取请求后，下一步做什么？
 
-Congrats! You just completed the standard fork -> clone -> edit -> pull request workflow that you'll encounter often as a contributor!
+恭喜你！ 刚刚完成了作为开源贡献者经常遇到的标准工作流程！fork -> clone -> edit -> pull request
 
-Now find a project and make some more contributions. And be sure to watch out for open source month held by [Digital Ocean](https://www.digitalocean.com/) so you can participate in [Hacktoberfest](https://hacktoberfest.digitalocean.com/) and get a chance to win some cool stuff.
+现在，你可以继续寻找其他项目并做出更多的贡献。 并且一定要留意[Digital Ocean](https://www.digitalocean.com/)举办的开源月，这样你就可以参加[Hacktoberfest](https://hacktoberfest.digitalocean.com/)并有机会赢取一些很有意思的东西。
 
-## Benefits of Contributing to Open Source
+## 为开源做贡献的好处
 
-Now that you have seen how you can contribute to OS, what are some of the benefits of contributing?
+既然你已经了解了如何为开源做出贡献，那么做贡献有好处有什么呢？
+- 为开源项目做贡献的人比仅仅使用该技术的人更深入地了解该技术
+- 你可以根据在现实世界中有效和无效的经验，专注于添加和利用对企业有益的功能
+- 它可以建立你的士气和声誉。 为开源项目做贡献的人得到其他社区成员的见解和经验
+- 对开源的贡献可以清晰地了解一个项目的未来
+- 如果你使用 GitHub ，你在该平台上做的很大一部分事情都是公开的。利用这一点来发挥你的优势，在贡献和与其他贡献者交流时，始终做到最好。因为你永远不知道谁在看着你，你的下一个雇主可能就在那里😊
 
--   People that contribute to an open-source project get to know the technology at a much deeper level than they would be simply using the technology
--   You can focus efforts on adding and leveraging features that will benefit businesses based on experience with what works and doesn't work in the real world.
--   It builds your morale and reputation. People who contribute to open source projects have access to other community members' insight and experience.
--   Contributing to open source provides a clear view into the future of a project
--   If you're on GitHub, a large portion of the things you do on that platform are public. Use this to your advantage by always doing your best when contributing and communicating with fellow contributors. You never know who is looking, your next employer might be there 😊
+### 为什么你应该为开源做贡献？
 
-### Why You Should Contribute to Open Source
+作为一名开发者，以下我认为你应该为开源做出贡献的原因：
+- 它可以帮助你编写更清晰的代码
+- 它可以帮助社区和同行了解你。这种认可可以为你的职业生涯带来很多机会
+- 它可以帮助你了解有关项目的更多信息
+- 它提高了你的编码技能
 
-As a developer, this is why I think you should contribute to open source:
+更多有关信息，请阅读 [freeCodeCamp 的指南](https://github.com/freeCodeCamp/how-to-contribute-to-open-source)。
 
--   It helps you write cleaner code
--   It helps the community and your peers get to know you. This recognition can bring you a lot of opportunities in your career.
--   It helps you learn more about a project
--   It improves your coding skills
+感谢你读到这里！
 
-For more information, read [freeCodeCamp's guide](https://github.com/freeCodeCamp/how-to-contribute-to-open-source).
+与我联系 [Twitter](https://twitter.com/larymak1) | [Insta](https://www.instagram.com/nextgencoders/) | [YouTube](https://www.youtube.com/channel/UCrT1ARRZfLOuf6nc_97eXEg) | [LinkedIn](https://www.linkedin.com/in/hillary-nyakundi-3a64b11ab/) | [GitHub](https://github.com/larymak)
 
-If you have read this far, I really appreciate it!
+请分享你的宝贵意见，感谢你的诚实反馈！
 
-Connect With me at [Twitter](https://twitter.com/larymak1) | [Insta](https://www.instagram.com/nextgencoders/) | [YouTube](https://www.youtube.com/channel/UCrT1ARRZfLOuf6nc_97eXEg) | [LinkedIn](https://www.linkedin.com/in/hillary-nyakundi-3a64b11ab/) | [GitHub](https://github.com/larymak)
-
-Do share your valuable opinion, I appreciate your honest feedback!
-
-Enjoy Coding ❤
+享受编程吧❤

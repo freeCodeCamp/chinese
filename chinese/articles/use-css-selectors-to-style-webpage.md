@@ -151,16 +151,12 @@ h1, h2, h3 {
 }
 ```
 
-Because their style definitions are the same, we now only have to write it once.
 因为它们的样式是一样的，我们现在只需要写一次。
 
-Note that grouping selectors can be used for all of the selectors mentioned in this article, meaning the selectors don't have to match.
 请注意，组合选择器可用于本文中所提及的所有选择器，也就是说，选择器不一定是要和上述代码一样的，也可以是其他的。
 
-We could group a class selector with an id selector if we want them to share style definitions. And we could group the style property and values that match and then define different definitions on each element.
 如果我们想让它们共享样式定义，我们可以把一个类选择器和一个ID选择器分组。而我们可以把匹配的样式属性和值分组，然后在每个元素上定义不同的定义。
 
-Let's extend our example to understand this concept.
 让我们拓展我们的例子来理解这个概念。
 
 ```css
@@ -187,47 +183,29 @@ h3 {
 }
 ```
 
-There you have it, these are all the basic CSS selectors. If you want to get good at CSS you need to understand what each of these do. With that knowledge in had, you should now be well on your way to doing that.
 这就是所有的基本选择器，如果你想学好CSS，你需要了解每个选择器的作用。有了这些知识，你现在应该可以做到这一点了。
 
-If you want to level up your CSS, then you will want to understand advanced CSS selectors.
 如果你想提高你的CSS水平，那么你将要了解高级的CSS选择器。
 
-# Advanced CSS Selectors
 # 高级CSS选择器
 
-Advanced CSS selectors allow you to push the boundaries of CSS. They help you get highly specific in what elements you want to target and what state that element is in when targeting it.
 高级CSS选择器允许你突破CSS的界限，它们可以高度具体的确定你要选择哪些元素，以及选择该元素时它处于什么状态。
 
-Let's get straight into some advanced CSS selectors by looking at attribute selectors.
 让我们直接进入一些高级选择器，看看属性选择器。
 
-## CSS attribute selectors
 ## CSS属性选择器
 
-Attribute selectors let you select elements based on whether a certain attribute is present or not. To put it another way, this CSS selector will match any element on your page if it has a certain attribute.
 属性选择器允许你根据某个属性是否存在来选择元素。换句话来说，这个CSS选择器将匹配页面上的任何元素，如果它有某个属性的话。
 
-An attribute is content added to the opening tag of a HTML element. It can be things like `id`, `name` or `value`.
 属性是添加到HTML元素开始标签中的内容，它可以是`id`、`name`或`value`等内容。
 
 ```HTML
 <a title="Learn to code for free!" href="https://www.freecodecamp.org/">Learn to code</a>
 ```
 
-The title is an attribute of the a element.
 title是a元素中的一个属性。
 
-There are seven attribute selectors that each allow you to find elements based on whether an attribute is present and what the value may contain.
 有七个属性选择器，它们分别允许你根据一个属性是否存在以及值可能包含的内容来查找元素。
-
-1.  Present selector
-2.  Equals selector (`=`)
-3.  Begins with selector (`^`)
-4.  Ends with selector (`$`)
-5.  Contains selector (`*`)
-6.  White space selector (`~`)
-7.  Hypen selector (`|`)
 
 1. 当前选择器
 2. 等于选择器（`=`）
@@ -237,22 +215,21 @@ There are seven attribute selectors that each allow you to find elements based o
 6. 空白选择器（`~`）
 7. 连字符选择器（`|`）
 
-The common syntax for these selectors is the selector followed by `[ ]` (square brackets) in which you state what you are looking for. The selector could be anything like a class selector or even a universal selector.
 这些选择器的通用语法是选择器后跟`[]`（方括号），你可以在里面说明要查找的内容。选择器可以是类选择器，甚至是通用选择器。
 
 ```css
 selector[attribute] 
 ```
 
-Today we are going to look at the five most common attribute selectors. In order to understand these five attribute selectors, let's look at each of them with examples.
 今天我们将看看五个最常用的属性选择器，为了了解这五个属性选择器，让我们用例子来看看它们中的每一个。
 
 ### Present attribute selector
-当前属性选择器
+### 当前属性选择器
 
 This attribute selector finds any element based on where it includes an attribute.
+这个属性选择器根据元素是否存在该属性来查找任何元素。
 
-Let's look at an example of a present selector to explain.
+让我们来看看当前属性选择器的例子吧。
 
 ```css
 a[title] {
@@ -262,8 +239,10 @@ a[title] {
 ```
 
 In the example above, our present selector will find any `a` element that has a `title` attribute and apply the style definition to them. All other `a` elements that don't have a title attribute will not be styled as per above.
+在上述的例子中，我们的当前属性选择器查找了任何包含`title`属性的`a`元素，并对它们应用样式。其他所有没有包含title属性的a元素则不会应用这些样式。
 
 ### Equals attribute selector
+### 等于属性选择器
 
 This attribute selector finds an element with an exact match attribute value. To use this selector, you state the attribute name followed by an `=` (equals) to find the exact match of the value.
 

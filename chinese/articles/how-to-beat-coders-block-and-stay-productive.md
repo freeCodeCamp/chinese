@@ -173,15 +173,27 @@ In my case, I ended up making up for taking fewer breaks by building some time i
 
 ## 5\. Always Leave a Breadcrumb Trail
 
+## 5. 总是留下面包屑痕迹
+
 When it comes to coder's block, the old saying that an ounce of prevention is worth a pound of cure couldn't be truer. That's why I've picked up the habit of controlling when and how I leave off my work in the middle of a coding project.
+
+当谈到编码障碍的时候，有句老话叫一盎司的预防胜过一磅的治疗再正确不过了。这就是我养成了在编码项目中控制何时以及如何停止工作的习惯的原因。
 
 I do this because I found that getting interrupted and failing to complete whatever I was in the middle of caused nothing but headaches when I tried to pick up where I left off.
 
+我这样做是因为我发现当我试图从中断的地方开始时，我正在做的那些被打断和未能完成的事情只会让我感觉头痛。
+
 Instead, if I need to stop working on something, I'll leave specific and detailed notes telling me what I was about to work on next. Even if I'm in a hurry, I leave that trail of breadcrumbs so I don't have to backtrack my work when I return.
+
+相反，如果我需要停止做某事，我会留下具体而详细的笔记，告诉我接下来要做什么。即使我很匆忙，我也会留下面包屑的痕迹，这样我回来时就不必从头回溯我的工作了。
 
 First, it saves me the trouble involved in getting back into 'programming mode' because I don't have to think too hard to pick up where I left off. And it also means I won't fall down the rabbit\-hole of overanalyzing code that's already complete while I look to find my place.
 
+首先，它为我省去了重新进入“编程模式”的麻烦，因为我不必费力地想从上次中断的地方在哪。这也意味着我不会在寻找我的位置时陷入过度分析已经完成的代码的兔子洞。
+
 Both issues can slow you down and contribute to you falling into a case of coder's block. And once I started making a point of leaving myself a trail of breadcrumbs to follow, I never had either problem happen again.
+
+这两个问题都会让你慢下来，并导致你陷入编码障碍。一旦我开始强调给自己留下一堆面包屑的痕迹，我就再也没有发生过任何问题。
 
 ## Become an Unstoppable Coder
 

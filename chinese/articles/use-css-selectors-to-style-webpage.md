@@ -111,9 +111,9 @@ ID选择器选择具有匹配的ID属性的HTML元素。由于在一个HTML文�
 
 上述的例子中，通过使用通用选择器，它将整个页面的margin和padding清零。
 
-# 什么是CSS组合选择器
+# 什么是CSS分組选择器
 
-在我们讨论高级CSS选择器之前，我们需要快速了解一下组合选择器。这是一种常见的做法，你会在外面经常看到，它有助于使你的代码干净和可读。
+在我们讨论高级CSS选择器之前，我们需要快速了解一下分組选择器。这是一种常见的做法，你会在外面经常看到，它有助于使你的代码干净和可读。
 
 分组允许你一次选择多个HTML元素，并且只声明一次它们的样式。
 
@@ -153,7 +153,7 @@ h1, h2, h3 {
 
 因为它们的样式是一样的，我们现在只需要写一次。
 
-请注意，组合选择器可用于本文中所提及的所有选择器，也就是说，选择器不一定是要和上述代码一样的，也可以是其他的。
+请注意，分組选择器可用于本文中所提及的所有选择器，也就是说，选择器不一定是要和上述代码一样的，也可以是其他的。
 
 如果我们想让它们共享样式定义，我们可以把一个类选择器和一个ID选择器分组。而我们可以把匹配的样式属性和值分组，然后在每个元素上定义不同的定义。
 
@@ -223,10 +223,8 @@ selector[attribute]
 
 今天我们将看看五个最常用的属性选择器，为了了解这五个属性选择器，让我们用例子来看看它们中的每一个。
 
-### Present attribute selector
 ### 当前属性选择器
 
-This attribute selector finds any element based on where it includes an attribute.
 这个属性选择器根据元素是否存在该属性来查找任何元素。
 
 让我们来看看当前属性选择器的例子吧。
@@ -238,10 +236,8 @@ a[title] {
 }
 ```
 
-In the example above, our present selector will find any `a` element that has a `title` attribute and apply the style definition to them. All other `a` elements that don't have a title attribute will not be styled as per above.
 在上述的例子中，我们的当前属性选择器查找了任何包含`title`属性的`a`元素，并对它们应用样式。其他所有没有包含title属性的a元素则不会应用这些样式。
 
-### Equals attribute selector
 ### 等于属性选择器
 
 This attribute selector finds an element with an exact match attribute value. To use this selector, you state the attribute name followed by an `=` (equals) to find the exact match of the value.

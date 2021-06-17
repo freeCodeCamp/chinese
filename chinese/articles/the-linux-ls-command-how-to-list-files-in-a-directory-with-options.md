@@ -1,4 +1,4 @@
-> -   原文地址：[The Linux LS Command – How to List Files in a Directory + Option Flags Linux LS命令 – 如何列出目录中的文件 + 选项标志](https://www.freecodecamp.org/news/the-linux-ls-command-how-to-list-files-in-a-directory-with-options/)
+> -   原文地址：[The Linux LS Command – How to List Files in a Directory + Option Flags Linux LS 命令 – 如何列出目录中的文件 + 选项标志](https://www.freecodecamp.org/news/the-linux-ls-command-how-to-list-files-in-a-directory-with-options/)
 > -   原文作者：Bolaji Ayodeji
 > -   译者：ZhichengChen
 > -   校对者：

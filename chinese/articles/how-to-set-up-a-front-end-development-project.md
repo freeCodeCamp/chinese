@@ -358,7 +358,7 @@ And that's it! Thank you for reading :)
 
 Hunor Márton Borbély
 
-Game development with JavaScript, creative coding tutorials, HTML canvas, SVG, Three.js, and some React and Vue https://twitter.com/HunorBorbelyhttps://codepen.io/HunorMarton…
+Game development with JavaScript, creative coding tutorials, HTML canvas, SVG, Three.js, and some React and Vue https://twitter.com/HunorBorbelyhttps://codepen.io/HunorMarton……
 
 ![](https://www.youtube.com/s/desktop/a2ac178f/img/favicon_144x144.png)YouTube
 

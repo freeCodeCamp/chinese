@@ -7,7 +7,7 @@
 
 容器化的概念很早就有了。2013 年 [Docker 引擎](https://docs.docker.com/get-started/overview/#docker-engine)的出现使应用程序容器化变得更加容易。
 
-根据 [Stack Overflow开发人员调查-2020](https://insights.stackoverflow.com/survey/2020#overview)，[Docker](https://docker.com/) 是 [#1 最想要的平台 ](https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-platforms-wanted5)，[#2 最喜欢的平台](https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-platforms-loved5)，以及[#3 最流行的平台](https://insights.stackoverflow.com/survey/2020#technology-platforms)。
+根据 [Stack Overflow 开发人员调查-2020](https://insights.stackoverflow.com/survey/2020#overview)，[Docker](https://docker.com/) 是 [#1 最想要的平台](https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-platforms-wanted5)，[#2 最喜欢的平台](https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-platforms-loved5)，以及[#3 最流行的平台](https://insights.stackoverflow.com/survey/2020#technology-platforms)。
 
 尽管 Docker 功能强大，但上手确并不容易。 因此，本书将介绍从基础知识到更高层次容器化的的所有内容。 读完整本书之后，你应该能够：
 
@@ -144,7 +144,7 @@ The Docker Handbook
 
 The Docker Handbook
 
-The concept of containerization itself is pretty old, but the emergence of the Docker Engine \[https://docs.docker.com/get-started/overview/#docker-engine\] in2013 has made it much easier to containerize your applications. According to the Stack Overflow Developer Survey - 2020\[https://insights.stackoverflow.com/survey/2020#overview…
+The concept of containerization itself is pretty old, but the emergence of the Docker Engine \[https://docs.docker.com/get-started/overview/#docker-engine\] in2013 has made it much easier to containerize your applications. According to the Stack Overflow Developer Survey - 2020\[https://insights.stackoverflow.com/survey/2020#overview……
 
 ![](https://www.freecodecamp.org/news/favicon.png)Farhan Hasin ChowdhuryfreeCodeCamp.org
 
@@ -204,7 +204,7 @@ The concept of containerization itself is pretty old, but the emergence of the D
 
 这就是容器化背后的想法：将应用程序放在一个独立的程序包中，使其在各种环境中都可移植且可回溯。
 
-**现在的问题是“ Docker在这里扮演什么角色？” **
+**现在的问题是“ Docker 在这里扮演什么角色？”**
 
 正如我之前讲的，容器化是一种将一切统一放入盒子中来解决软件开发过程中的问题的思想。
 
@@ -218,7 +218,7 @@ The concept of containerization itself is pretty old, but the emergence of the D
 
 Docker 的安装因使用的操作系统而异。 但这整个过程都非常简单。
 
-Docker可在 Mac、Windows 和 Linux 这三个主要平台上完美运行。在这三者中，在 Mac 上的安装过程是最简单的，因此我们从这里开始。
+Docker 可在 Mac、Windows 和 Linux 这三个主要平台上完美运行。在这三者中，在 Mac 上的安装过程是最简单的，因此我们从这里开始。
 
 ### 怎样在 macOS 里安装 Docker
 
@@ -262,7 +262,7 @@ Windows 或 Mac 上的 Docker Desktop 软件包是一系列工具的集合，例
 
 - 如果你使用的是 Ubuntu，则可以遵循官方文档中的[在 Ubuntu 上安装 Docker 引擎](https://docs.docker.com/engine/install/ubuntu/)部分。
 - 对于其他发行版，官方文档中提供了 _不同发行版的安装指南_。
-    - [在 Debian上安装 Docker Engine](https://docs.docker.com/engine/install/debian/)
+    - [在 Debian 上安装 Docker Engine](https://docs.docker.com/engine/install/debian/)
     - [在 Fedora 上安装 Docker Engine](https://docs.docker.com/engine/install/fedora/)
     - [在 CentOS 上安装 Docker Engine](https://docs.docker.com/engine/install/centos/)
 - 如果你使用的发行版未在文档中列出，则可以参考[从二进制文件安装 Docker 引擎](https://docs.docker.com/engine/install/binaries/)指南。
@@ -586,7 +586,7 @@ docker container ls --all
 
 基于这两个随机标识符来引用容器非常不方便。如果可以使用自定义的名称来引用容器，那就太好了。
 
-可以使用 `--name` 选项来命名容器。要使用名为 `hello-dock-container` 的 ` fhsinchy/hello-dock` 镜像运行另一个容器，可以执行以下命令：
+可以使用 `--name` 选项来命名容器。要使用名为 `hello-dock-container` 的 `fhsinchy/hello-dock` 镜像运行另一个容器，可以执行以下命令：
 
 ```
 docker container run --detach --publish 8888:80 --name hello-dock-container fhsinchy/hello-dock
@@ -594,7 +594,7 @@ docker container run --detach --publish 8888:80 --name hello-dock-container fhsi
 # b1db06e400c4c5e81a93a64d30acc1bf821bed63af36cab5cdb95d25e114f5fb
 ```
 
-本地网络上的 8080 端口被 `gifted_sammet` 容器（在上一小节中创建的容器）占用了。这就是为什么必须使用其他端口号（例如 8888）的原因。要进行验证，执行 ` container ls` 命令：
+本地网络上的 8080 端口被 `gifted_sammet` 容器（在上一小节中创建的容器）占用了。这就是为什么必须使用其他端口号（例如 8888）的原因。要进行验证，执行 `container ls` 命令：
 
 ```
 docker container ls
@@ -763,7 +763,7 @@ docker container ls --all
 # 128ec8ceab71        hello-world           "/hello"                 12 minutes ago      Exited (0) 12 minutes ago                          exciting_chebyshev
 ```
 
-从输出中可以看到，ID为 `6cf52771dde1` 和 `128ec8ceab71` 的容器未运行。 要删除 `6cf52771dde1`，可以执行以下命令：
+从输出中可以看到，ID 为 `6cf52771dde1` 和 `128ec8ceab71` 的容器未运行。 要删除 `6cf52771dde1`，可以执行以下命令：
 
 ```
 docker container rm 6cf52771dde1
@@ -1125,7 +1125,7 @@ docker container ls
 
 repository 通常指镜像名称，而 tag 指特定的构建或版本。
 
-以官方 [mysql](https://hub.docker.com/_/mysql) 镜像为例。 如果想使用特定版本的MySQL（例如5.7）运行容器，则可以执行 `docker container run mysql:5.7`，其中 `mysql` 是镜像 repository，`5.7` 是 tag。
+以官方 [mysql](https://hub.docker.com/_/mysql) 镜像为例。 如果想使用特定版本的 MySQL（例如 5.7）运行容器，则可以执行 `docker container run mysql:5.7`，其中 `mysql` 是镜像 repository，`5.7` 是 tag。
 
 为了用  `custom-nginx:packaged` 标签标记自定义 NGINX 镜像，可以执行以下命令：
 
@@ -1236,7 +1236,7 @@ docker image history custom-nginx:packaged
 
 现在，让我们仔细看看从镜像 `d70eaf7277ea` 到镜像 `7f16387f7307` 的所有镜像。我将忽略 `IMAGE` 是 `<missing>` 的最下面的四层，因为它们与我们无关。
 
--  `d70eaf7277ea`  是由 `/bin/sh -c #(nop)  CMD ["/bin/bash"]` 创建的，它指示Ubuntu 内的默认 shell 已成功加载。
+-  `d70eaf7277ea`  是由 `/bin/sh -c #(nop)  CMD ["/bin/bash"]` 创建的，它指示 Ubuntu 内的默认 shell 已成功加载。
 -  `6fe4e51e35c1` 是由 `/bin/sh -c #(nop)  EXPOSE 80` 创建的，这是代码中的第二条指令。
 - `587c805fe8df` 是由 `/bin/sh -c apt-get update && apt-get install nginx -y && apt-get clean && rm -rf /var/lib/apt/lists/*` 创建的，这是代码中的第三条指令。如果在执行此指令期间安装了所有必需的软件包，可以看到该镜像的大小为  `60MB`。
 - 最后，最上层的 `7f16387f7307` 是由 `/bin/sh -c #(nop)  CMD ["nginx", "-g", "daemon off;"]` 创建的，它为该镜像设置了默认命令。
@@ -1308,7 +1308,7 @@ CMD ["nginx", "-g", "daemon off;"]
 - `RUN`  指令安装了从源代码构建 NGINX 所需的标准软件包。
 - 这里的  `COPY`  指令是新的东西。该指令负责在映像内复制 `nginx-1.19.2.tar.gz` 文件。 `COPY` 指令的通用语法是  `COPY <source> <destination>`，其中 source 在本地文件系统中，而 destination 在镜像内部。 作为目标的 `.` 表示镜像内的工作目录，除非另有设置，否则默认为 `/`。
 - 这里的第二条 `RUN` 指令使用 `tar` 从压缩包中提取内容，然后将其删除。
-- 存档文件包含一个名为 `nginx-1.19.2` 的目录，其中包含源代码。因此，下一步，将 `cd`  进入该目录并执行构建过程。 可以阅读 [How to Install Software from Source Code… and Remove it Afterwards](https://itsfoss.com/install-software-from-source-code/) 文章，以了解有关该主题的更多信息。
+- 存档文件包含一个名为 `nginx-1.19.2` 的目录，其中包含源代码。因此，下一步，将 `cd`  进入该目录并执行构建过程。 可以阅读 [How to Install Software from Source Code…… and Remove it Afterwards](https://itsfoss.com/install-software-from-source-code/) 文章，以了解有关该主题的更多信息。
 - 构建和安装完成后，使用  `rm`  命令删除 `nginx-1.19.2` 目录。
 - 在最后一步，像以前一样以单进程模式启动 NGINX。
 
@@ -1395,7 +1395,7 @@ CMD ["nginx", "-g", "daemon off;"]
 
 -  `ARG` 指令可以像其他语言一样声明变量。以后可以使用 `${argument name}` 语法访问这些变量或参数。在这里，我将文件名 `nginx-1.19.2` 和文件扩展名 `tar.gz` 放在了两个单独的参数中。这样，我只需在一个地方进行更改就可以在 NGINX 的较新版本或存档格式之间进行切换。在上面的代码中，我向变量添加了默认值。变量值也可以作为 `image build` 命令的选项传递。 您可以查阅[官方参考](https://docs.docker.com/engine/reference/builder/#arg)了解更多详细信息。
 - 在 `ADD` 指令中，我使用上面声明的参数动态形成了下载 URL。 在 `https://nginx.org/download/${FILENAME}.${EXTENSION}`  行将在生成期间生成类似于 `https://nginx.org/download/nginx-1.19.2.tar.gz` 的内容。 构建过程。 可以通过一次更改文件版本或扩展名的方式来更改文件版本或扩展名，这要感谢 `ARG` 指令。
-- 默认情况下，`ADD` 指令不会提取从互联网获取的文件，因此在第18行使用了 `tar`。
+- 默认情况下，`ADD` 指令不会提取从互联网获取的文件，因此在第 18 行使用了 `tar`。
 
 其余代码几乎不变。 现在应该可以自己理解参数的用法。 最后，让我们尝试从此更新的代码构建镜像。
 
@@ -1682,7 +1682,7 @@ CMD ["nginx", "-g", "daemon off;"]
 
 - 我们不使用 `apt-get install` 来安装软件包，而是使用 `apk add`。`--no-cache` 选项意味着下载的软件包将不会被缓存。同样，我们将使用 `apk del` 代替 `apt-get remove` 来卸载软件包。
 - `apk add` 命令的 `--virtual` 选项用于将一堆软件包捆绑到单个虚拟软件包中，以便于管理。仅用于构建程序所需的软件包被标记为  `.build-deps`，然后通过执行 `apk del .build-deps` 命令在第 29 行将其删除。 可以在官方文档中了解有关 [virtuals](https://docs.alpinelinux.org/user-handbook/0.1a/Working/apk.html#_virtuals) 的更多信息。
-- 软件包名称在这里有些不同。通常，每个 Linux 发行版都有其软件包仓库，可供在其中搜索软件包的每个人使用。如果你知道某项任务所需的软件包，则可以直接转到指定发行版的仓库的并进行搜索。可以 [在此处了解 Alpine Linux软件包](https://pkgs.alpinelinux.org/packages)。
+- 软件包名称在这里有些不同。通常，每个 Linux 发行版都有其软件包仓库，可供在其中搜索软件包的每个人使用。如果你知道某项任务所需的软件包，则可以直接转到指定发行版的仓库的并进行搜索。可以 [在此处了解 Alpine Linux 软件包](https://pkgs.alpinelinux.org/packages)。
 
 现在使用此 `Dockerfile` 构建一个新镜像，并查看文件大小的差异：
 
@@ -2496,7 +2496,7 @@ docker container ls
 
 `container run`  和 `container create` 命令的 `--env` 选项可用于向容器提供环境变量。如你所见，数据库容器已成功创建并且正在运行。
 
-尽管容器正在运行，但是存在一个小问题。 PostgreSQL、MongoDB 和 MySQL 等数据库将其数据保留在目录中。 PostgreSQL使用容器内的 `/var/lib/postgresql/data` 目录来持久化数据。
+尽管容器正在运行，但是存在一个小问题。 PostgreSQL、MongoDB 和 MySQL 等数据库将其数据保留在目录中。 PostgreSQL 使用容器内的 `/var/lib/postgresql/data` 目录来持久化数据。
 
 现在，如果容器由于某种原因被破坏怎么办？ 将丢失所有数据。为了解决此问题，可以使用命名卷。
 
@@ -2682,7 +2682,7 @@ CMD [ "node", "bin/www" ]
 
 这是一个多阶段构建。第一阶段用于使用 `node-gyp` 构建和安装依赖项，第二阶段用于运行应用程序。我将简要介绍以下步骤：
 
-- 阶段1使用 `node：lts-alpine` 作为基础，并使用 `builder` 作为阶段名称。
+- 阶段 1 使用 `node：lts-alpine` 作为基础，并使用 `builder` 作为阶段名称。
 - 在第 5 行，安装了  `python`、`make` 和 `g++`。`node-gyp` 工具需要这三个软件包才能运行。
 -  在第 7 行，我们将 `/app`  目录设置为 `WORKDIR`。
 - 在第 9 和 10 行，将 `package.json` 文件复制到 `WORKDIR` 并安装所有依赖项。
@@ -2879,7 +2879,7 @@ docker container run \
 `notes-api` 应用程序需要设置三个环境变量。 它们如下：
 
 - `DB_HOST` - 这是数据库服务的主机。假定数据库服务和 API 都连接到同一用户定义的桥接网络，则可以使用其容器名称（在这种情况下为 `notes-db`）引用数据库服务。
-- `DB_DATABASE` - 此API将使用的数据库。 在[运行数据库服务](https://www.freecodecamp.org/news/@fhsinchy/s/the-docker-handbook/~/drafts/-MS2MtB5zjVVjK3Ujaz4/containerizing-a-multi-container-javascript-application#running-the-database-server)小节，使用环境变量 `POSTGRES_DB` 将默认数据库名称设置为 `notesdb`。 将在这里使用它。
+- `DB_DATABASE` - 此 API 将使用的数据库。 在[运行数据库服务](https://www.freecodecamp.org/news/@fhsinchy/s/the-docker-handbook/~/drafts/-MS2MtB5zjVVjK3Ujaz4/containerizing-a-multi-container-javascript-application#running-the-database-server)小节，使用环境变量 `POSTGRES_DB` 将默认数据库名称设置为 `notesdb`。 将在这里使用它。
 - `DB_PASSWORD` - 连接数据库的密码。 这也在[运行数据库服务](https://www.freecodecamp.org/news/@fhsinchy/s/the-docker-handbook/~/drafts/-MS2MtB5zjVVjK3Ujaz4/containerizing-a-multi-container- javascript-application#running-the-database-server)小节涉及，使用环境变量`POSTGRES_PASSWORD`。
 
 要检查容器是否正常运行，可以使用 `container ls` 命令：
@@ -2892,7 +2892,7 @@ docker container ls
 # 37755e86d627   postgres:12   "docker-entrypoint.s…"   17 hours ago     Up 14 minutes   5432/tcp                 notes-db
 ```
 
-容器正在运行。 可以访问 `http://127.0.0.1:3000/` 来查看正在使用的API。
+容器正在运行。 可以访问 `http://127.0.0.1:3000/` 来查看正在使用的 API。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/bonjour-mon-ami.png)
 
@@ -2949,7 +2949,7 @@ docker container exec -it notes-api sh
 
 ### 如何在 Docker 中编写管理脚本
 
-管理多容器项目以及网络，卷和内容意味着编写大量命令。为了简化过程，我通常会从简单的 [shell脚本](https://opensource.com/article/17/1/getting-started-shell-scripting)和 [Makefile](https://opensource.com/article/18/8/what-how-makefile) 来提高效率。
+管理多容器项目以及网络，卷和内容意味着编写大量命令。为了简化过程，我通常会从简单的 [shell 脚本](https://opensource.com/article/17/1/getting-started-shell-scripting)和 [Makefile](https://opensource.com/article/18/8/what-how-makefile) 来提高效率。
 
 可以在 `notes-api` 目录中找到四个 shell 脚本。 它们如下：
 

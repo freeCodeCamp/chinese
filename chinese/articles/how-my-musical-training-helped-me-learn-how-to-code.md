@@ -10,7 +10,7 @@
 下面我将通过一些事例来说明学习音乐的经历是如何帮助我学习编程的。
 ## 做就完了
 ![#做就完了](https://images.unsplash.com/photo-1523309375637-b3f4f2347f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDN8fG5pa2V8ZW58MHx8fA&ixlib=rb-1.2.1&q=80&w=2000)
-图片由乔治·帕甘III拍摄[2]  /  [Unsplash][3]
+图片由乔治·帕甘 III 拍摄[2]  /  [Unsplash][3]
 
 上大学那会儿，我有好些时间在上课、排练、或是考试前都准备欠佳。
 可我非但没有反思到是因为自己准备不够充分，反而会去找各种借口，比如，
@@ -24,7 +24,7 @@
 “我在算法上的确需要多加练习，但要不明天再练吧”，
 或是，
 “我必须得要开始着手那个新项目了，但我真的很忙。”
-大多数人在生活中都不会具备连续24小时不被打扰的空闲时间去做我们想做的事，总有别的事情在半路跳出来需要我们处理。
+大多数人在生活中都不会具备连续 24 小时不被打扰的空闲时间去做我们想做的事，总有别的事情在半路跳出来需要我们处理。
 但残酷的现实是，我们只有保持自律、完成我们的工作，才能成为更优秀的程序员。
 因此，当你再度为拖延找寻借口时，记住，无论如何也要做完手中的工作！
 ## 熟能生巧，一定能吗？
@@ -43,9 +43,9 @@
 等到你巧于练习时，就更能理解我说的这些话了。
 ## 持之以恒是关键
 ![](https://images.unsplash.com/photo-1593642532400-2682810df593?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDI0fHxvZmZpY2V8ZW58MHx8fA&ixlib=rb-1.2.1&q=80&w=2000)
-图片由XPS拍摄[6]  /  [Unsplash][7]
+图片由 XPS 拍摄[6]  /  [Unsplash][7]
 
-和一些人一样，我也从7岁就开始学钢琴，头几年我还蛮喜欢弹钢琴的。
+和一些人一样，我也从 7 岁就开始学钢琴，头几年我还蛮喜欢弹钢琴的。
 可自从我开始学一些难点的曲子后，我就没有练习的动力了。
 当时的我可谓三天打鱼，两天晒网，结果就是我的琴艺豪无长进。我报的课程也完全成了一种浪费，因为我们每周几乎都在重复同样的事情。
 如今，围绕如何居家学习编程的宣传铺天盖地，很多人带着一份初期的振奋加入其中，在课堂上按照教程学习并制作了一些小项目。
@@ -53,14 +53,14 @@
 这体现为从一开始越来越少编程到最后丧失兴趣并放弃。
 在学习编程的路上，你必须制定一份持久的日程安排，否则你将无法成长为一名程序员。
 你将总是陷入对一些基础内容的困惑，而永远没有能力去制作更加复杂的项目。
-你每天并不一定要投入12个小时才能成功，但你需要制定一份适合自己的日程安排。
-倘若你每天只有2个小时的学习时间，那就制定一个每天2小时的日程。
-但你如果每天计划学习8个小时，可过了一段时间就中断了2周，那结果只能是成效甚微。
+你每天并不一定要投入 12 个小时才能成功，但你需要制定一份适合自己的日程安排。
+倘若你每天只有 2 个小时的学习时间，那就制定一个每天 2 小时的日程。
+但你如果每天计划学习 8 个小时，可过了一段时间就中断了 2 周，那结果只能是成效甚微。
 持之以恒是学好一切的关键。
 ## 练习你不懂的东西
 ![Microsoft Surface Platinum Laptop <p>Shot by : Christiann Koepke " srcset="<a href=](https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2000)https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=600 600w, [https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=1000][8] 1000w, [https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=1600][9] 1600w, [https://images.unsplash.com/photo-1587613863965-74d82b39ef79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDh8fHN0dWR5fGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=2400][10] 2400w" sizes="(min-width: 720px) 720px" style="box-sizing: inherit; margin: 0px auto; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: middle; max-width: 100%; display: block; height: auto;">
 
-图片由Surface拍摄[11]  /  [Unsplash][12]
+图片由 Surface 拍摄[11]  /  [Unsplash][12]
 
 大三那年，我们的风月合奏指挥曾对我们讲过一句话，我至今仍为忘怀。
 他说，“要敢于去练习你不懂的东西。”
@@ -73,7 +73,7 @@
 又或许你苦于学不好递归，但它不会因为你不喜欢就不存在了。
 即便当下的一切会很困难，但你必须自律，静下心来去学习自己所需的知识。
 
-希望大家喜欢这篇文章。如果你想了解更多有关我的信息，请在Twitter上关注我@ codergirl1991。
+希望大家喜欢这篇文章。如果你想了解更多有关我的信息，请在 Twitter 上关注我@ codergirl1991。
 祝大家编程愉快哦！
 
 [1]: https://en.wikipedia.org/wiki/Oboe

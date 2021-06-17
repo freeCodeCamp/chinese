@@ -6,10 +6,10 @@
 ![Git Clone Branch – How to Clone a Specific Branch](https://www.freecodecamp.org/news/content/images/size/w2000/2020/06/article-banner--1-.gif)
 
 
-Git是分布式的, 不同于 SVN 和 CVS 等旧的集中式版本控制系统。 每个开发者都能在本地和远程查看记录和控制代码。
+Git 是分布式的, 不同于 SVN 和 CVS 等旧的集中式版本控制系统。 每个开发者都能在本地和远程查看记录和控制代码。
 他们也可以视情况从不同位置访问或操纵不同部分的代码。
 
-自从 Linus Torvalds （Linux 操作系统内核的著名作者） 在2005年为 Linux 内核开发了 Git，它就开始成为世界上使用最广泛的现代版本控制系统。
+自从 Linus Torvalds （Linux 操作系统内核的著名作者） 在 2005 年为 Linux 内核开发了 Git，它就开始成为世界上使用最广泛的现代版本控制系统。
 
 在本篇文章中，我会介绍 Git 克隆和 Git 分支工作流，并且展示如何根据需求克隆一个指定的分支。让我们开始吧！
 
@@ -82,13 +82,13 @@ brew install git
 
 ## 简介 Git 克隆
 
-Git 允许你在“仓库”中版本化管理项目。该仓库是基于 Web 的托管服务进行版本控制，和 GitHub一样。
+Git 允许你在“仓库”中版本化管理项目。该仓库是基于 Web 的托管服务进行版本控制，和 GitHub 一样。
 
 你可以克隆仓库到你本地的机器，并且得到所有的文件和分支。（我稍后会讲解更多关于分支）
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-23-at-5.47.48-AM.png)
 
-例如，可以通过SSH克隆 freeCodeCamp 的仓库，如下：
+例如，可以通过 SSH 克隆 freeCodeCamp 的仓库，如下：
 
 ```
 git clone git@github.com:freeCodeCamp/freeCodeCamp.git

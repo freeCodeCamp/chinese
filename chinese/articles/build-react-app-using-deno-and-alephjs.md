@@ -119,7 +119,7 @@ export default function DateImport() {
 
 进入 `./lib/useCounter.ts`，你将找到在页面中用于计数器自定义钩子的代码。
 
-由于我在本文中将重点介绍 Aleph 和 React 本身，因此，要查看在 Aleph 中导入 CSS文件的所有不同方法，请访问[官方文档中的相关页面](https://alephjs.org/docs/basic-features/built-in-css-support)。
+由于我在本文中将重点介绍 Aleph 和 React 本身，因此，要查看在 Aleph 中导入 CSS 文件的所有不同方法，请访问[官方文档中的相关页面](https://alephjs.org/docs/basic-features/built-in-css-support)。
 
 ## 如何使用 Deno 和 AlephJS 构建示例应用
 

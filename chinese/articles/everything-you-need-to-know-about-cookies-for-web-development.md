@@ -15,7 +15,7 @@
 
 HTTP 超文本传输协议是一种无状态协议。根据 Wikipedia，它之所以无状态，是因为它“不需要 HTTP 服务器在不同请求期间保留用户的信息或状态”。
 
-今天，网站服务依然是如此实现的 – 输入浏览器的URL，浏览器向某处的服务器发出请求，然后服务器返回文件以呈现页面，然后关闭连接。
+今天，网站服务依然是如此实现的 – 输入浏览器的 URL，浏览器向某处的服务器发出请求，然后服务器返回文件以呈现页面，然后关闭连接。
 
 现在，假设需要登录网站以查看某些内容，例如使用 LinkedIn。该过程与上述过程基本相同，会看到一个表单，用于输入电子邮件地址和密码。
 
@@ -291,13 +291,13 @@ document.cookie = 'dark_mode=false; Secure; HttpOnly; SameSite=Strict';
 * `Strict`：仅当你单击链接或从设置了 cookie 的来源发送请求时，才会发送 cookie。 例如，只会在你位于 `test.com` 及其附近时发送 `test.com` cookie，而不会来自 `testing.com` 之类的其他网站。
 * `None`：Cookie 会随每个请求发送，无论上下文如何。 如果将 `SameSite` 设置为 `None`，则还必须添加 `Secure` 属性。如果可能，最好避免使用此值。
 
-主流浏览器对 `SameSite` 的处理方式略有不同。例如，如果未在 cookie上设置 `SameSite`，则 Google Chrome 默认将其设置为  `Lax` 。
+主流浏览器对 `SameSite` 的处理方式略有不同。例如，如果未在 cookie 上设置 `SameSite`，则 Google Chrome 默认将其设置为  `Lax` 。
 
 ## cookie 的替代品
 
 你可能想知道，如果 cookie 有这么多潜在的安全漏洞，为什么我们仍在使用它们？ 当然，必须有更好的选择。
 
-这些天来，你可以使用 `sessionStorage` 或 `localStorage` 来存储最初使用 cookie 的信息。对于有状态会话，还可以使用基于令牌的身份验证以及诸如 JWT（JSON Web令牌）之类的东西。
+这些天来，你可以使用 `sessionStorage` 或 `localStorage` 来存储最初使用 cookie 的信息。对于有状态会话，还可以使用基于令牌的身份验证以及诸如 JWT（JSON Web 令牌）之类的东西。
 
 虽然似乎你必须在基于 cookie 的身份验证或基于令牌的身份验证之间进行选择，但也可以同时使用两者。 例如，当某人通过浏览器登录时，你可能要使用基于 cookie 的身份验证，而当某人通过电话应用程序登录时，则要使用基于令牌的身份验证。
 

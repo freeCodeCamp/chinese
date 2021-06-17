@@ -113,7 +113,7 @@ Rather than quit, take a break. When I was learning to code, I would sometimes s
 
 In fact I found a rule from an olympic gymnast that I adopted for myself. I even [wrote about it when I found it](https://www.linkedin.com/pulse/you-can-give-upif-follow-one-rule-zubin-pratap/), as a way to ensure I followed her advice.
 
-> _You can give up any time you like….as long as you’re having a good day. But you cannot give up when you’re having a bad day._
+> _You can give up any time you like…….as long as you’re having a good day. But you cannot give up when you’re having a bad day._
 
 ### DON’T Assume Your Results Reflect Your Ability
 

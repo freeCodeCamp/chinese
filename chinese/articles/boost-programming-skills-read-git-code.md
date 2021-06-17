@@ -93,7 +93,7 @@ Now, let's take a look at how to access the original version of Git's code.
 现在，让我们看一看要如何访问 Git 代码的原始版本。
 
 ## How to check out Git's initial commit?
-## 如何查看Git的初始提交代码呢？
+## 如何查看 Git 的初始提交代码呢？
 
 The official copy of Git's codebase is hosted in [this public GitHub repository](https://github.com/git/git). However, I created a fork of Git's codebase and added extensive inline comments to the source code, to help developers easily read through it line by line.
 

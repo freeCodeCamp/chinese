@@ -54,7 +54,7 @@ console.log(number === 1);
 // false
 ```
 
-给变量number分配一个字符串类型的值 1。如果用双等号去比较它和一个数值类型的 1 的话，会返回 true，因为两个值都是 1。但是如果用三个等号去比较，就会返回 false，因为两个值是不同的数据类型。
+给变量 number 分配一个字符串类型的值 1。如果用双等号去比较它和一个数值类型的 1 的话，会返回 true，因为两个值都是 1。但是如果用三个等号去比较，就会返回 false，因为两个值是不同的数据类型。
 
 ## 以为回调函数是同步的
 
@@ -75,7 +75,7 @@ function callback() {
 ​​// I am the first
 ```
 
-300毫秒之后，回调函数 callback 会被调用。但是在它完成前，剩下的代码会继续往下运行，所以 "I am the last" 会被先打印出来。
+300 毫秒之后，回调函数 callback 会被调用。但是在它完成前，剩下的代码会继续往下运行，所以 "I am the last" 会被先打印出来。
 
 开发者常犯的一个错误是误以为回调函数是同步的。比如，他们会把回调函数的返回值用在其他操作上。
 
@@ -94,7 +94,7 @@ function addTwoNumbers() {
 ​​// NaN
 ```
 
-会输出 "NaN" ，因为 "secondNumber" 还未被赋值。在 "firstNumber + secondNumber" 被执行的时候，"secondNumber" 还没有被赋值，因为 "setTimeout" 函数要在 "200毫秒" 后才调用回调函数。
+会输出 "NaN" ，因为 "secondNumber" 还未被赋值。在 "firstNumber + secondNumber" 被执行的时候，"secondNumber" 还没有被赋值，因为 "setTimeout" 函数要在 "200 毫秒" 后才调用回调函数。
 
 最好的解决办法是把剩下的代码放在回调函数里去执行：
 
@@ -145,7 +145,7 @@ const obj = {
 
 window 里没有 "name"，所以就会导致 "undefined"。
 
-如果想在 setTimeout 函数里把引用保留在 "this" 里，最好的办法是使用 "bind"、"call"、"apply" 或者箭头函数（ES6中引入）。跟普通的函数不一样，箭头函数不创造它们自己的 "this"。
+如果想在 setTimeout 函数里把引用保留在 "this" 里，最好的办法是使用 "bind"、"call"、"apply" 或者箭头函数（ES6 中引入）。跟普通的函数不一样，箭头函数不创造它们自己的 "this"。
 
 所以，下面的代码就可以把引用保留在 "this" 里：
 
@@ -197,7 +197,7 @@ const arr1 = [2, 3, 4];
 
 当这种情况发生的时候，任何试图去访问原始属性的操作都会返回 undefined 或者可能会抛出异常。
 
-最好的实践是，当你想要复制对象的时候，永远给新的对象创建新的引用。剩余操作符（"..." ES6中引入）可以很好地做到这一点。
+最好的实践是，当你想要复制对象的时候，永远给新的对象创建新的引用。剩余操作符（"..." ES6 中引入）可以很好地做到这一点。
 
 比如，在 key-value 型对象中：
 
@@ -287,7 +287,7 @@ function addTwoNumbers(a, b) {
 ​​// 0
 ```
 
-或者，可以像下面这样，使用ES6中引入的默认值特性：
+或者，可以像下面这样，使用 ES6 中引入的默认值特性：
 
 ```javascript
 ​​function addTwoNumbers(a = 0, b = 0) {
@@ -335,7 +335,7 @@ const isRaining = false
 ​​// It is not raining
 ```
 
-像上面的代码这样检查[boolean类型的值][8]是一种常见的编程习惯。虽然这样是可以的，但是在测试某些值的时候就会出现错误。
+像上面的代码这样检查[boolean 类型的值][8]是一种常见的编程习惯。虽然这样是可以的，但是在测试某些值的时候就会出现错误。
 
 在 JavaScript 里，宽松地比较 "0" 和 "false" 的话，会返回 "true"；宽松地比较 "1" 和 "true" 的话，也返回 "true"。也就是说，如果 "isRaining" 是 "1"，"isRaining" 就会是 "true"。
 
@@ -354,7 +354,7 @@ const obj = {
 ​​// number property does not exist
 ```
 
-虽然 "number" 属性存在，但 "obj.number" 返回 "0"，也就是返回 "false"，因此else代码块会被执行。
+虽然 "number" 属性存在，但 "obj.number" 返回 "0"，也就是返回 "false"，因此 else 代码块会被执行。
 
 所以，除非你很确定会出现的值的范围，不然 boolean 类型的值和对象属性应该这样来检查：
 

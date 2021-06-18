@@ -241,8 +241,10 @@ a[title] {
 ### 等于属性选择器
 
 This attribute selector finds an element with an exact match attribute value. To use this selector, you state the attribute name followed by an `=` (equals) to find the exact match of the value.
+这个属性选择器可以找到一个完全匹配属性值的元素。要使用这个选择器，你要在属性名后跟一个`=`（等号）来寻找完全匹配的值。
 
 Let's look at an example of an equals selector to explain.
+让我们来看看等于选择器的例子吧。
 
 ```css
 a[href="<https://peterlunch.com/>"] {
@@ -251,12 +253,16 @@ a[href="<https://peterlunch.com/>"] {
 ```
 
 In the example above, the equals selector will find any `a` element that has an `href` attribute with the exact value of "[https://peterlunch.com/](https://peterlunch.com/)".
+在上述的例子中，等于选择器选择了所有`a`元素中有`href`属性且值为 "[https://peterlunch.com/](https://peterlunch.com/)" 的元素。
 
 ### Begins with attribute selector
+### 以开头选择器
 
 This attribute selector finds any element that begins with a value you specify. To use this selector you state the attribute you are looking for, followed by the `^` and `=` characters and then the value you are looking to match.
+这个属性选择器查找指定属性中以你指定的值开头的元素。要使用这个选择器，请先说明你要查找的属性，紧接着跟一个 `^` 和 `=` 符号，然后是你要匹配的值。
 
 Let's look at an example of a begins with selector to explain.
+让我们来看看以开头选择器的例子吧。
 
 ```css
 a[href^="https"] {
@@ -266,14 +272,19 @@ a[href^="https"] {
 ```
 
 In the example above the begins with selector finds any `a` element that has an `href` attribute and that begins with "https".
+上述这个例子中，以开头选择器查找了任何有`href`属性且值为“https”开头的`a`元素。
 
 ### Ends with attribute selector
+### 以结束属性选择器
 
 Much like the begin with selector, this attribute selector does the opposite and finds any element that ends with a value you specify.
+与以开头选择器非常相似，这个属性选择器正好相反，它可以找到任何已你指定的值结束的元素。
 
 To use this selector you state the attribute you are looking for, followed by the `$` and `=` characters and then the value you are looking to match.
+要使用这个属性选择器，请先说明你要查找的属性，紧接着一个 `$` 和 `=` 符号，然后是你要匹配的值。
 
 Let's look at an example of an ends with selector to explain.
+让我们来看看以结束选择器的例子吧。
 
 ```css
 img[src$="/blog-imgs"] {
@@ -283,14 +294,19 @@ img[src$="/blog-imgs"] {
 ```
 
 In the above example the ends with selector finds any `img` element that has an `src` ending with "/blog-imgs". This is one I actually use for my website.
+在上述的例子中，以结束选择器查找了任何有`src`属性且以"/blog-imgs"结束的`img`元素。这是我实际用于我的网站中的一个。
 
 ### Contains attribute selector
+### 包含属性选择器
 
 This attribute selector finds any element that contains the value you are looking for somewhere in the attributes value. This means that the value must contain at least one occurrence of the value.
+这个属性选择器查找任何属性值某处包含你要找的值的元素。这意味着该值至少包含一个出现的值。
 
 To use this selector you state the attribute you are looking for, followed by the `*` and `=` characters and then the value you are looking for an occurrence of.
+要使用这个选择器，请先说明你要查找的元素，紧接着一个 `*` 和 `=` 符号，然后是你要找的一个出现的值。
 
 Let's look at an example of a contains selector to explain.
+让我们来看看包含属性选择器的例子吧。
 
 ```css
 a[href*="peterlunch"] {
@@ -299,19 +315,29 @@ a[href*="peterlunch"] {
 ```
 
 In the above example the contains attribute selector finds any `a` element that has an `href` that contains the value "peterlunch".
+在上述的例子中，包含属性选择器查找了任意`href`属性中包含"peterlunch"的值的`a`元素。
 
 That's it for attribute selectors, let's move onto the next advanced CSS selector.
+属性选择器就到此为止，让我们进入下一个高级选择器。
 
 ## Combination selectors
+## 组合选择器
 
 The next advanced CSS selectors are combination selectors. These selectors can combine more than one CSS selector. There are four types of combination selectors in CSS:
+下一个高级选择器是组合选择器。这个选择器可以结合一个或以上的CSS选择器。在CSS中，有四种类型的组合选择器。
 
 1.  Descendant selectors
 2.  Child selectors
 3.  Adjacent sibling selectors
 4.  General sibling selectors
 
+1. 后代选择器
+2. 直接子代选择器
+3. 相邻兄弟选择器
+4. 通用兄弟选择器
+
 To understand how these selectors work, you must first understand that HTML follows a family tree hierarchy. This means that there is a parent element which can contain children, and the children can have children, and so on and so forth like a family tree.
+要理解这些选择器如何工作，你必须首先理解HTML遵循一个家族树的层级结构。这意味着有一个父元素，它可以包含子元素，而子元素可以有子元素。以此类推，就像一颗家庭树。
 
 ```html
 <div> <!--parent-->
@@ -331,8 +357,10 @@ To understand how these selectors work, you must first understand that HTML foll
 ```
 
 In the example above, the `div` is the parent, its children are the `article` elements, and the articles are parents to the `h1` and `p` children.
+在上述的例子中，`div`是父元素，它的子元素是`article`，而`article`是`h1`和`p`子元素的父元素。
 
 With that knowledge front of mind, let's explore each of these combination selectors one by one with examples to understand how they work.
+有了这些知识铺垫，让我们通过实践逐一探讨这些组合选择器，以了解它们的工作原理。
 
 ### Descendant combination selector
 
@@ -395,6 +423,7 @@ article ~ h1 {
 In the example above it selects all `h1` elements that are siblings of `article` elements.
 
 ### Pseudo-selectors
+### 伪类选择器
 
 Pseudo-selectors fall into two buckets. The first is [pseudo-class selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) and the second is [pseudo-element selectors](https://peterlunch.com/css-pseudo-elements/).
 
@@ -438,7 +467,10 @@ p::first-letter {
 ```
 
 ## Summary
+## 总结
 
 Now you should have a good understanding of CSS selectors and how you can use them to find HTML elements on your web pages.
+现在你应该
 
 I hope you enjoyed reading this article. If you learnt something from this post then checkout the rest of my posts [here](https://bit.ly/2Re6Vdf) or [sign up to my newsletter](ttps://mailchi.mp/bfaa8a288d7c/7o1pve3bv9) to get ridiculously good and super exclusive newbie content.
+我希望你喜欢阅读这篇文章。如果你

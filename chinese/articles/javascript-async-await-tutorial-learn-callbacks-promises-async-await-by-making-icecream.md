@@ -1,11 +1,12 @@
 > -  原文地址：[JavaScript Async/Await Tutorial – Learn Callbacks, Promises, and Async/Await in JS by Making Ice Cream 🍧🍨🍦](https://www.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/)
 > -  原文作者：[Joy Shaheb](https://www.freecodecamp.org/news/author/joy/)
-> -  译者：
+> -  译者：Miever1
 > -  校对者：
 
 ![JavaScript Async/Await Tutorial – Learn Callbacks, Promises, and Async/Await in JS by Making Ice Cream 🍧🍨🍦](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/FCC-Thumbnail--3-.png)
 
 Today we're going to build and run an **ice cream shop** and learn **asynchronous JavaScript** at the same time. Along the way, you'll learn how to use:
+今天我们将在学习 **异步 JavaScript** 的同时建立并运行一个 ** 冰淇淋店 **，在此过程中，您将学习如何使用:
 
 -   Callbacks
 -   Promises
@@ -14,82 +15,114 @@ Today we're going to build and run an **ice cream shop** and learn **asynchronou
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/b1j935dg72g9u8zvh2oi.png)
 
 # Here's what we'll cover in this article:
+# 以下是我们将在本文中介绍的内容:
 
 -   What is Asynchronous JavaScript?
+-   什么是异步JavaScript？
 -   Synchronous vs Asynchronous JavaScript
+-   同步与异步JavaScript
 -   How Callbacks Work in JavaScript
+-   Callbacks如何在JavaScript中运作
 -   How Promises Work in JavaScript
+-   Promises如何在JavaScript中运作
 -   How Async / Await Works in JavaScript
+-   Async / Await 如何在JavaScript中运作
 
 So let's dive in!
+让我们开始吧!
 
 ## You can watch this tutorial on YouTube as well if you like:
+## 如果你喜欢，也可以在YouTube上观看本教程
 
 # What is Asynchronous JavaScript?
+# 什么是异步JavaScript？
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7yd96tgxvuowqmfgcx6b.png)
 
 If you want to build projects efficiently, then this concept is for you.
+如果您想高效地构建项目，那么这个概念很适合您。
 
 The theory of async JavaScript helps you break down big complex projects into smaller tasks.
+异步JavaScript理论可以帮助您将大型复杂的项目分解为较小的任务。
 
 Then you can use any of these three techniques – **callbacks, promises or Async/await** – to run those small tasks in a way that you get the best results.
+然后你可以使用这三种技巧 – **callbacks, promises or Async/await** – 中的任何一种来运行这些小任务。
 
 Let's dive in!🎖️
+让我们开始吧!🎖️
 
 # Synchronous vs Asynchronous JavaScript
+# 同步与异步JavaScript
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/arzbf1rc3pi4yi6u8wup.png)
 
 ## What is a Synchronous System?
+## 什么是同步系统
 
 In a synchronous system, tasks are completed one after another.
+在同步系统中，任务一个接一个地完成。
 
 Think of this as if you have just one hand to accomplish 10 tasks. So, you have to complete one task at a time.
+想象一下，如果你有10项任务, 每次只能完成一个任务，那么在同一个时间你只能做一个任务。
 
 Take a look at the GIF 👇 – one thing is happening at a time here:
+看看这个动图👇 – 这里会发生一件事:
 
 ![Synchronous System](https://media.giphy.com/media/ICIS16DkE9qB9HVxtq/giphy.gif)
 
 You'll see that until the first image is loaded completely, the second image doesn't start loading.
+您将看到，直到第一个图像完全加载，第二个图像才开始加载。
 
 Well, JavaScript is by default Synchronous **\[single threaded\]**. Think about it like this – one thread means one hand with which to do stuff.
+JavaScript默认是同步的  **\[单线程\]**。你可以这样想 ——— 单线意味着一次只能做一件事。
 
 ## What is an Asynchronous System?
+## 什么是异步系统?
 
 In this system, tasks are completed independently.
+在这个系统中，任务是独立完成的。
 
 Here, imagine that for 10 tasks, you have 10 hands. So, each hand can do each task independently and at the same time.
+假设你有十个任务以及十只手。那么在同一时间，每只手都可以同时独立完成每一项任务。
 
 Take a look at the GIF 👇 – you can see that each image loads at the same time.
+看看这张动图 👇 - 你可以看到每个图像都是同时加载的。
 
 ![Asynchronous System](https://media.giphy.com/media/MMDnmJnE7uhX6KtcKc/giphy.gif)
 
 Again, all the images are loading at their own pace. None of them is waiting for any of the others.
+同样，所有的图像都以自己的速度加载。它们都没在等待其他任务。
 
 ## To Summarize Synchronous vs Asynchronous JS:
+## 总结一下同步JS和异步JS:
 
 When three images are on a marathon, in a:
+当三张图片在马拉松上，在一个:
 
 -   **Synchronous** system, three images are in the same lane. One can't overtake the other. The race is finished one by one. If image number 2 stops, the following image stops.
+-   **同步** 系统，三个图像在同一条跑道上。一个不能超过另外一个。赛跑一个接一个地结束。如果2号图像停止，剩下的图像也会停止。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w1r9y4ghhq0t8wjb1u9h.png)
 
 -   **Asynchronous system,** the three images are in different lanes. They'll finish the race on their own pace. Nobody stops for anybody:
-
+-   ** 异步系统 ** 这三张图片在不同的跑道上。 它们会在自己的跑道上完成比赛。不会受其他图片影像：
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ehknx5shc4orh32s0ktk.png)
 
 ## Synchronous and Asynchronous Code Examples
+##  同步和异步代码示例
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pzbnpcza9rbj8xgiby95.png)
 
 Before starting our project, let's look at some examples and clear up any doubts.
+在开始我们的项目之前，让我们看一些例子来消除一些疑问。
 
 ### Synchronous Code Example
+### 同步的代码示例
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5m6p1qy522lj3auvl5ty.png)
 
 To test a synchronous system, write this code in JavaScript:
+为了测试同步系统，用JavaScript写以下代码：
 
 ```javascript
 console.log(" I ");
@@ -100,6 +133,7 @@ console.log(" Ice Cream ");
 ```
 
 Here's the result in the console: 👇
+控制台的结果如下：👇
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/54izy7zyo52j2z6netls.png)
 

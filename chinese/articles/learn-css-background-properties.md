@@ -1,6 +1,6 @@
 > -  原文地址：[Every CSS Background Property Illustrated and Explained with Code Examples 🎖️](https://www.freecodecamp.org/news/learn-css-background-properties/)
 > -  原文作者：[Joy Shaheb](https://www.freecodecamp.org/news/author/joy/)
-> -  译者：
+> -  译者：Miever1
 > -  校对者：
 
 ![Every CSS Background Property Illustrated and Explained with Code Examples 🎖️](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/FreeCodeCamp--1-.png)

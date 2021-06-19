@@ -6,7 +6,7 @@
 ![JavaScript Async/Await Tutorial – Learn Callbacks, Promises, and Async/Await in JS by Making Ice Cream 🍧🍨🍦](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/FCC-Thumbnail--3-.png)
 
 Today we're going to build and run an **ice cream shop** and learn **asynchronous JavaScript** at the same time. Along the way, you'll learn how to use:
-今天我们将在学习 **异步 JavaScript** 的同时建立并运行一个 ** 冰淇淋店 **，在此过程中，您将学习如何使用:
+今天我们将在学习 **异步 JavaScript** 的同时建立并运行一个 **冰淇淋店** ，在此过程中，您将学习如何使用:
 
 -   Callbacks
 -   Promises
@@ -125,11 +125,11 @@ To test a synchronous system, write this code in JavaScript:
 为了测试同步系统，用JavaScript写以下代码：
 
 ```javascript
-console.log(" I ");
+console.log(" 我 ");
 
-console.log(" eat ");
+console.log(" 吃 ");
 
-console.log(" Ice Cream ");
+console.log(" 冰激凌 ");
 ```
 
 Here's the result in the console: 👇
@@ -138,112 +138,142 @@ Here's the result in the console: 👇
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/54izy7zyo52j2z6netls.png)
 
 ### Asynchronous code example
+###  异步代码示例
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/y5d0o8unbe8c67qeqz0w.png)
 
 Let's say it takes two seconds to eat some ice cream. Now, let's test out an asynchronous system. Write the below code in JavaScript.
+ 我们假设吃冰淇淋需要两秒钟。现在，让我们测试一个异步系统。用JavaScript编写下面的代码。
 
 **Note:** Don't worry, we'll discuss the `setTimeout()` function later in this article.
+**注意:** 不用担心,我们将在本文后面讨论' setTimeout() '函数。
 
 ```javascript
-console.log("I");
+console.log("我");
 
 // This will be shown after 2 seconds
+// 这将在2秒后显示
 
 setTimeout(()=>{
-  console.log("eat");
+  console.log("吃");
 },2000)
 
-console.log("Ice Cream")
+console.log("冰激凌")
 ```
 
 And here's the result in the console: 👇
+控制台的结果如下：👇
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/o44c2t0r7bknkadoumgx.png)
 
 Now that you know the difference between synchronous and async operations, let's build our ice cream shop.
+既然我们已经了解了同步操作和异步操作之间的区别，那么让我们来创建我们的冰淇淋商店。
 
 ## How to Setup our Project
+## 如何设置我们的项目
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2mzbtcnm67v2iys7cix7.png)
 
 For this project you can just open [Codepen.io](https://codepen.io/) and start coding. Or, you can do it in VS code or the editor of your choice.
+对于这个项目，你只需要打开[Codepen.io](https://codepen.io/)直接开始编码。或者，你可以用VS code编辑器来做。
 
 Open the JavaScript section, and then open your developer console. We'll write our code and see the results in the console.
+打开JavaScript部分，然后打开开发人员控制台。我们将编写代码并在控制台中查看结果。
 
 # What are Callbacks in JavaScript?
+# 什么是JavaScript中的回调函数？
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/s5iloofqsv3lcdl4flsi.png)
 
 When you nest a function inside another function as an argument, that's called a callback.
+当你将一个函数作为参数嵌套到另一个函数中时，这叫做回调。
 
 Here's an illustration of a callback:
+下面是一个回调的例子:
 
 ![](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uz3pl56lmoc2pq7wzi2s.png)
 
 **An example of a callback**
+**一个回调的例子**
 
 Don't worry, we'll see some examples of callbacks in a minute.
+别担心，我们马上就会看到一些回调的例子。
 
 ### Why do we use callbacks?
+### 为什么要使用回调?
 
 When doing a complex task, we break that task down into smaller steps. To help us establish a relationship between these steps according to time (optional) and order, we use callbacks.
+当我们做一个复杂的任务时，我们把它分解成更小的步骤。 为了帮助我们根据时间(可选)和顺序在这些步骤之间建立关系时我们会使用回调。
 
 Take a look at this example:👇
+看看这个例子:👇
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/o05q7ortgctx2oeyntfn.png)
 
 **Chart contains steps to make ice cream**
+**图表包含制作冰淇淋的步骤**
 
 These are the small steps you need to take to make ice cream. Also note that in this example, the order of the steps and timing are crucial. You can't just chop the fruit and serve ice cream.
+ 这些是制作冰淇淋需要的小步骤。 还要注意，在本例中，步骤的顺序和计时是至关重要的。你不能只把水果切了就端上冰淇淋。
 
 At the same time, if a previous step is not completed, we can't move on to the next step.
+同时，如果前一个步骤没有完成，我们就不能进入下一个步骤。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2v1rn50smjul9arkneza.png)
 
 To explain that in more detail, let's start our ice cream shop business.
+为了更详细地解释这一点，让我们开始冰淇淋店的生意。
 
 ## But Wait...
+## 等等。。。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cq8exwor5aiciu2j6jwu.png)
 
 The shop will have two parts:
+该店将分为两部分:
 
 -   The storeroom will have all the ingredients \[Our Backend\]
+-   储藏室里有所有的原料[我们的后台]
 -   We'll produce ice cream in our kitchen \[The frontend\]
+-    我们将在厨房里制作冰淇淋 \[前端\]
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/i69bws707m5rvsj34i9o.png)
 
 ## Let's store our data
+## 让我们存储我们的数据
 
 Now, we're gonna store our ingredients inside an object. Let's start!
+现在，我们要把原料存储在一个对象中。让我们开始!
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ihezrht8dgg9xn8lm2k9.png)
 
 You can store the ingredients inside objects like this: 👇
+你可以像这样在对象中存储成分:👇
 
 ```javascript
 let stocks = {
-    Fruits : ["strawberry", "grapes", "banana", "apple"]
+    Fruits : ["草莓", "葡萄", "香蕉", "苹果"]
  }
 ```
 
 Our other ingredients are here: 👇
+我们的其他食材在这里:👇
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6dcwr770l0ubupv0r2gj.png)
 
 You can store these other ingredients in JavaScript objects like this: 👇
-
+您可以像这样将这些其他成分存储在JavaScript对象中:👇
+ 
 ```javascript
 let stocks = {
-    Fruits : ["strawberry", "grapes", "banana", "apple"],
-    liquid : ["water", "ice"],
-    holder : ["cone", "cup", "stick"],
-    toppings : ["chocolate", "peanuts"],
+    Fruits : ["草莓", "葡萄", "香蕉", "苹果"],
+    liquid : ["水", "冰"],
+    holder : ["盘子", "被子", "棍子"],
+    toppings : ["巧克力", "花生"],
  };
 ```
 
-The entire business depends on what a customer **orders**. Once we have an order, we start production and then we serve ice cream. So, we'll create two functions ->
+整个业务取决于客户的 **订单**。一接到订单，我们就开始生产，然后供应冰淇淋。 因此我们将创建两个函数 ->
 
 -   `order`
 -   `production`
@@ -251,12 +281,15 @@ The entire business depends on what a customer **orders**. Once we have an order
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3bnzniiyamo0b9l7e806.png)
 
 This is how it all works: 👇
+ 这就是它的工作原理:👇
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r8h8ra9wor8cs3dgddpb.png)
 
 Get order from customer, fetch ingredients, start production, then serve.
+从客户处获取订单，取食材，开始生产，然后上桌。
 
 Let's make our functions. We'll use arrow functions here:
+我们来写一下函数。我们将在这里使用箭头函数:
 
 ```javascript
 let order = () =>{};
@@ -265,6 +298,7 @@ let production = () =>{};
 ```
 
 Now, let's establish a relationship between these two functions using a callback, like this: 👇
+现在，让我们使用回调建立这两个函数之间的关系，如下所示:👇
 
 ```javascript
 let order = (call_production) =>{
@@ -276,141 +310,166 @@ let production = () =>{};
 ```
 
 ### Let's do a small test
+### 让我们做个小测试
 
 We'll use the `console.log()` function to conduct tests to clear up any doubts we might have regarding how we established the relationship between the two functions.
+ 我们将使用' console.log() '函数进行测试，以消除关于如何建立这两个函数之间的关系的任何疑问。
 
 ```javascript
 let order = (call_production) =>{
 
-console.log("Order placed. Please call production")
+console.log("下了订单。请打电话给生产")
 
 // function 👇 is being called 
+//函数👇被调用
   call_production();
 };
 
 let production = () =>{
 
-console.log("Production has started")
+console.log("生产已经开始")
 
 };
 ```
 
 To run the test, we'll call the **`order`** function. And we'll add the second function named `production` as its argument.
+要运行测试，我们将调用 **`order`** 函数。我们将添加第二个函数名为“production”作为它的参数。
 
 ```javascript
 // name 👇 of our second function
+// 将第二个函数命名为 👇
 order(production);
 ```
 
 Here's the result in our console 👇
+下面是我们控制中的结果 👇
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u41ugdxxed1q8coz5hol.png)
 
 ## Take a break
+## 休息一下
 
 So far so good – take a break!
+到目前为止一切都很好，休息一下吧!
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tnr74waq6noc0djln3qx.png)
 
 ## Clear out the console.log
+## 清除console.log日志
 
 Keep this code and remove everything \[don't delete our stocks variable\]. On our first function, pass another argument so that we can receive the order \[Fruit name\]:
+保留这段代码并删除所有的东西\[不要删除我们的 stocks 变量\]。在我们的第一个函数中，传递另一个参数，以便我们可以接收订单\[水果名\]:
 
 ```javascript
-// Function 1
+// 函数 1
 
 let order = (fruit_name, call_production) =>{
 
   call_production();
 };
 
-// Function 2
+// 函数 2
 
 let production = () =>{};
 
 
-// Trigger 👇
+// 触发 👇
 
 order("", production);
 ```
 
 Here are our steps, and the time each step will take to execute.
+下面是我们的步骤，以及执行每个步骤所需的时间。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rphpp2lqjnk7f0tv5g3d.png)
 
 **Chart contains steps to make ice cream**
+**图表包含制作冰淇淋的步骤**
 
 In this chart, you can see that step 1 is to place the order, which takes 2 seconds. Then step 2 is cut the fruit (2 seconds), step 3 is add water and ice (1 second), step 4 is to start the machine (1 second), step 5 is to select the container (2 seconds), step 6 is to select the toppings (3 seconds) and step 7, the final step, is to serve the ice cream which takes 2 seconds.
+在这个图表中，您可以看到第一步是下订单，这需要2秒。第二步是切水果(2秒)，第三步是加水和冰(1秒)，步骤4启动机器(1秒)，第5步是选择容器(2秒)，第六步是选择配料(3秒)，以及第七步，也就是最后一步，端上冰淇淋，这需要2秒。
 
 To establish the timing, the function `setTimeout()` is excellent as it is also uses a callback by taking a function as an argument.
+要建立计时，函数 `setTimeout()` 非常好，因为它也使用一个回调函数作为参数。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qwrg1taugyhvjnkx8xpp.png)
 
 **Syntax of a setTimeout() function**
+**setTimeout() 函数的语法**
 
 Now, let's select our fruit and use this function:
-
+ 现在，让我们使用这个函数来选择的水果:
 ```javascript
 // 1st Function
+// 功能1
 
 let order = (fruit_name, call_production) =>{
 
   setTimeout(function(){
 
-    console.log(`${stocks.Fruits[fruit_name]} was selected`)
+    console.log(`${stocks.Fruits[fruit_name]} 被选中`)
 
 // Order placed. Call production to start
+// 下完订单。调用 production 开始生产
    call_production();
   },2000)
 };
 
 // 2nd Function
+// 功能2
 
 let production = () =>{
   // blank for now
+  // 暂时空白
 };
 
-// Trigger 👇
+// 触发 👇
 order(0, production);
 ```
 
 And here's the result in the console: 👇
+下面是控制台中的结果:👇
 
 **Note** that the result is displayed after 2 seconds.
+**注意**  2秒后显示结果。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/edwji5vauypoezj3bxdk.png)
 
 If you're wondering how we picked strawberry from our stock variable, here's the code with the format 👇
+如果您想知道我们是如何从stock变量中采摘草莓的，下面是格式化的代码 👇
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ia38z3x6b96xpq3aid91.png)
 
 Don't delete anything. Now we'll start writing our production function with the following code.👇 We'll use arrow functions:
+不删除任何代码。现在，我们将使用以下代码开始编写生产函数。我们将使用箭头函数: 👇
 
 ```javascript
 let production = () =>{
 
   setTimeout(()=>{
-    console.log("production has started")
+    console.log("生产已经开始")
   },0000)
 
 };
 ```
 
 And here's the result 👇
+结果如下 👇
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5yskzvg7rezo2sg4lklq.png)
 
 We'll nest another `setTimeout` function in our existing `setTimeout` function to chop the fruit. Like this: 👇
+我们将在现有的 `setTimeout` 函数中嵌套另一个 `setTimeout` 函数来切水果。如:👇
 
 ```javascript
 let production = () =>{
   
   setTimeout(()=>{
-    console.log("production has started")
+    console.log("生产已经开始")
 
 
     setTimeout(()=>{
-      console.log("The fruit has been chopped")
+      console.log("水果已经切好了")
     },2000)
 
 
@@ -419,34 +478,38 @@ let production = () =>{
 ```
 
 And here's the result 👇
+结果如下 👇
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4659l1mua0rv40rwyem7.png)
 
 If you remember, here are our steps:
+如果你还记得，这是我们的步骤:
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rphpp2lqjnk7f0tv5g3d.png)
 
 **Chart contains steps to make ice cream**
+**图表包含制作冰淇淋的步骤**
 
 Let's complete our ice cream production by nesting a function inside another function – this is also known as a callback, remember?
+让我们通过在另一个函数中嵌套一个函数来完成我们的冰淇淋生产 - 这也称为回调，还记得吗？
 
 ```javascript
 let production = () =>{
 
   setTimeout(()=>{
-    console.log("production has started")
+    console.log("生产已经开始")
     setTimeout(()=>{
-      console.log("The fruit has been chopped")
+      console.log("水果已经切好了")
       setTimeout(()=>{
-        console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} Added`)
+        console.log(`${stocks.liquid[0]} 和 ${stocks.liquid[1]} 被添加`)
         setTimeout(()=>{
-          console.log("start the machine")
+          console.log("开启机器")
           setTimeout(()=>{
-            console.log(`Ice cream placed on ${stocks.holder[1]}`)
+            console.log(`冰淇淋放在上面 ${stocks.holder[1]}`)
             setTimeout(()=>{
-              console.log(`${stocks.toppings[0]} as toppings`)
+              console.log(`${stocks.toppings[0]} 作为调料`)
               setTimeout(()=>{
-                console.log("serve Ice cream")
+                console.log("冰激凌上桌！")
               },2000)
             },3000)
           },2000)
@@ -459,77 +522,106 @@ let production = () =>{
 ```
 
 And here's the result in the console 👇
+控制台结果如下👇
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5mq9bg6fqrc8apj7nu7b.png)
 
 Feeling confused?
+是否感到疑惑？
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/man5l5pwavp9prio1wc0.png)
 
 This is called callback hell. It looks something like this (remember that code just above?): 👇
+ 这叫做回调地狱。它看起来像这样(还记得上面的代码吗?):👇
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d5rk7f8d920jzn22smjh.png)
 
 **Illustration of Callback hell**
+**回调地狱图解**
 
 What's the solution to this?
+解决方案是什么?
 
 # How to Use Promises to Escape Callback Hell
+# 如何使用承诺来避免回调地狱
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/x3neys1hxsrifgg5qm6x.png)
 
 Promises were invented to solve the problem of callback hell and to better handle our tasks.
+Promises的发明是为了解决回调地狱的问题和更好地处理我们的任务。
 
 ## Take a break
+## 休息一下
 
 But first, take a break!
+首先，休息一下!
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/bwfvel7kvm422gqvj0os.png)
 
 This is how a promise looks:
+这就是 promise 的样子
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7qo1zheuin2825osozvc.png)
 
 **illustration of a promise format**
+**promised的格式说明**
 
 Let's dissect promises together.
+ 让我们一起来剖析promises。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gozy5r1nfubzeq5t5t25.png)
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ezi9ogz0ergprgkmu68a.png)
 
 **An illustration of the life of a promise**
+**promise 周期的图解**
 
 As the above charts show, a promise has three states:
+如上图所示，一个promise有三种状态
 
 -   **Pending:** This is the initial stage. Nothing happens here. Think of it like this, your customer is taking their time giving you an order. But they haven't ordered anything yet.
+-   **Pending:** 这是初始阶段。这里什么也没有发生。 你可以这样想，你的客户正在慢慢地给你下订单。但是他们还没有点任何东西。
 -   **Resolved:** This means that your customer has received their food and is happy.
+-   **Resolved:** 这意味着你的顾客已经收到了他们的食物并且很高兴。
 -   **Rejected:** This means that your customer didn't receive their order and left the restaurant.
+-   **Rejected:** 这意味着你的顾客没有收到他们点的菜并离开了餐厅。
 
 Let's adopt promises to our ice cream production case study.
+让我们将 promise 应用到我们的冰淇淋生产案例研究中。
 
 ## But wait...
+## 等等
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/634b6oyglkyoccsvr8l7.png)
 
 We need to understand four more things first ->
+首先，我们需要了解另外四件事 ->
 
 -   Relationship between time and work
+-   时间和工作的关系
 -   Promise chaining
+-   Promise 链
 -   Error handling
+-   错误处理
 -   The `.finally` handler
+-   最后的处理程序
 
 Let's start our ice cream shop and understand each of these concepts one by one by taking baby steps.
+让我们开始我们的冰淇淋店，一步一步地理解这些概念。
 
 ## Relationship between time and work
+## 时间和工作的关系
 
 If you remember, these are our steps and the time each takes to make ice cream"
-
+如果你还记得，这就是我们制作冰淇淋的步骤和时间
+ 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rphpp2lqjnk7f0tv5g3d.png)
 
 **Chart contains steps to make ice cream**
+** 图表包含制作冰淇淋的步骤**
 
 For this to happen, let's create a variable in JavaScript: 👇
+为了实现这一点，让我们在JavaScript中创建一个变量:👇
 
 ```javascript
 let is_shop_open = true;

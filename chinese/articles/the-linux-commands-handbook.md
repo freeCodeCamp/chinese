@@ -1420,24 +1420,24 @@ top -o mem
 
 ## Linux 中的 `kill` 命令
 
-Linux processes can receive **signals** and react to them.
+Linux 进程可以接收**信号**并做出反应。
 
-That's one way we can interact with running programs.
+这是我们与运行中进程打交道的一种方式。
 
-The `kill` program can send a variety of signals to a program.
+`kill` 程序可以向任一程序发送多种信号。
 
-It's not just used to terminate a program, like the name would suggest, but that's its main job.
+虽然这个命令的名字暗示了它的主要功能，但它不只是用来终止程序的。
 
-We use it in this way:
+它的用法是：
 
 ```
 kill <PID>
 
 ```
 
-By default, this sends the `TERM` signal to the process id specified.
+默认情况下，它会向指定的进程 ID 发送 `TERM` 信号。
 
-We can use flags to send other signals, including:
+我们可以使用参数来发送其它信号，包括以下这些：
 
 ```
 kill -HUP <PID>
@@ -1449,41 +1449,41 @@ kill -STOP <PID>
 
 ```
 
-`HUP` means **hang up**. It's sent automatically when a terminal window that started a process is closed before terminating the process.
+`HUP` 代表 **hang up（挂起）**。 如果在终止进程之前，先关闭了启动它的终端窗口，这一信号将被自动发送。
 
-`INT` means **interrupt**, and it sends the same signal used when we press `ctrl-C` in the terminal, which usually terminates the process.
+`INT` 代表 **interrupt（干扰）**，这个信号和在终端中按下 `ctrl-C` 组合键的作用一样，常常用来终结进程。
 
-`KILL` is not sent to the process, but to the operating system kernel, which immediately stops and terminates the process.
+`KILL` 信号并不直接发送给进程，而是发送到操作系统内核，内核会让指定进程立刻停止并终结。
 
-`TERM` means **terminate**. The process will receive it and terminate itself. It's the default signal sent by `kill`.
+`TERM` 代表 **terminate（终结）**。这是本命令的默认信号，进程收到它会自主终结。
 
-`CONT` means **continue**. It can be used to resume a stopped process.
+`CONT` 代表 **continue（继续）**。它可以用来恢复一个被停止的进程。
 
-`STOP` is not sent to the process, but to the operating system kernel, which immediately stops (but does not terminate) the process.
+`STOP` 信号并不直接发送给进程，而是发送到操作系统内核，内核会让指定进程立刻停止（但不终结）。
 
-You might see numbers used instead, like `kill -1 <PID>`. In this case,
+有时你也会见到用数字表示状态的情况，例如 `kill -1 <PID>`。在这种情况下，
 
-`1` corresponds to `HUP`.  
-`2` corresponds to `INT`.  
-`9` corresponds to `KILL`.  
-`15` corresponds to `TERM`.  
-`18` corresponds to `CONT`.  
-`15` corresponds to `STOP`.
+`1` 对应 `HUP`.  
+`2` 对应 `INT`.  
+`9` 对应 `KILL`.  
+`15` 对应 `TERM`.  
+`18` 对应 `CONT`.  
+`15` 对应 `STOP`.
 
 ## Linux 中的 `killall` 命令
 
-Similar to the `kill` command, `killall` will send the signal to multiple processes at once instead of sending a signal to a specific process id.
+与 `kill` 命令类似， `killall` 也向进程发送状态信号，但区别是后者可以同时向多个进程发送信号，而非前者只能向单个进程 ID 发送信号。
 
-This is the syntax:
+这是它的命令语法：
 
 ```
 killall <name>
 
 ```
 
-where `name` is the name of a program. For example you can have multiple instances of the `top` program running, and `killall top` will terminate them all.
+`name` 也就是进程的名字。例如，假设有多个 `top` 程序的实例在运行， `killall top` 命令将完全终结它们。
 
-You can specify the signal, like with `kill` (and check the `kill` tutorial to read more about the specific kinds of signals we can send), for example:
+你可以指定某一个信号，就像使用 `kill` 命令那样（请向上查阅 `kill` 命令的指南以了解更多具体可以发送的信号），例如：
 
 ```
 killall -HUP top

@@ -196,6 +196,7 @@ Both issues can slow you down and contribute to you falling into a case of coder
 这两个问题都会让你慢下来，并导致你陷入编码障碍。一旦我开始强调给自己留下一堆面包屑的痕迹，我就再也没有发生过任何问题。
 
 ## Become an Unstoppable Coder
+## 成为一个势不可挡的程序员
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/cheerful-positive-coder.jpg)
 
@@ -203,7 +204,11 @@ Both issues can slow you down and contribute to you falling into a case of coder
 
 I can't promise you that these five tactics will keep you from ever suffering from coder's block. But what I can tell you is that they will help you stay away from some of the common situations that lead to it.
 
+我不能向你保证这五种策略会让你远离编码障碍。 但我可以告诉你的是，它们会帮助你远离导致它的一些常见情况。
+
 Since I made them a part of my coding routine, I haven't managed to stay stuck on anything for more than an hour or two here or there. And that's coming from someone that came close to giving up and finding a new career on more than one occasion.
+
+自从我将它们作为我编码程序惯例的一部分以来，我没有设法在这里或那里停留超过一两个小时。 这是来自一个不止一次接近放弃并寻找新职业的人。
 
 And if they work even half as well for you – you'll be unstoppable! Just make sure to take a vacation every now and then so there will be some work left for the rest of us.
 

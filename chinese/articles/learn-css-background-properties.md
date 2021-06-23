@@ -3,13 +3,14 @@
 > -  译者：Miever1
 > -  校对者：
 
-![Every CSS Background Property Illustrated and Explained with Code Examples 🎖️](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/FreeCodeCamp--1-.png)
+![ 每个CSS背景属性说明和解释的代码示例 🎖️](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/FreeCodeCamp--1-.png)
 
 Today we're gonna learn about every single CSS **background** property with every possible **value**. We'll learn the **short-hand**, too. Let's go !🏅
+今天我们将学习每一个单独的CSS **background** 属性以及其对应的  **value**。我们也会学习 **简写**。让我们开始吧！🏅
 
-# Table of Contents
+# 目录
 
--   [All properties](#all-properties)
+-   [所有属性](#all-properties)
 -   [background-image](#background-image)
 -   [background-size](#background-size)
 -   [background-repeat](#background-repeat)
@@ -18,46 +19,63 @@ Today we're gonna learn about every single CSS **background** property with ever
 -   [background-clip](#background-clip)
 -   [background-attachment](#background-attachment)
 -   [background-color](#background-color)
--   [Short hand](#short-hand)
--   [Conclusion](#conclusion)
+-   [简写](#short-hand)
+-   [总结](#conclusion)
 
 You can watch this tutorial on YouTube as well if you like:
+ 如果你喜欢，也可以在YouTube上观看本教程:
 
 # All Properties
+# 所有属性
 
 This is a list of **All the properties** we're gonna discuss today. The red text at the end is the **shorthand**.
+这是我们今天要讨论的 **所有属性** 的列表。 末尾的红色文本是 **简写**。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/l25y304vndphll4795hr.png)
 
 ## What Are CSS Background Properties?
+## 什么是CSS背景属性?
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/iic3rs5ewx8c9xp6vryq.png)
 
 CSS background properties let us to control the size and properties of images so that we can make **responsive images** for both smaller and larger screens. This in turn helps us create responsive websites.
+CSS背景属性让我们可以控制图片的大小和属性，这样我们就可以为更小和更大的屏幕制作 **响应性强的** 图片。
 
 For example,
+例如，
 
 -   The property **background-size** allows us to reset the width and height of our image according to screen size.
+-   **background-size** 属性允许我们根据屏幕大小重置图像的宽度和高度。
 -   **background-position** allows us to tell the browser where to put the image on the screen.
+-   **background-position** 属性允许我们告诉浏览器将图像放在屏幕上的何处。
 
 And many more!
+以及其他的一些功能！
 
 ## How to Set Up the Project
+## 如何设置项目
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u72rvfe5181640ikqa32.png)
 
 Before coding, you need to know little bit of HTML, CSS, and how to use VS code.
+在编码之前，你需要知道一点HTML, CSS的相关知识，以及如何使用 VS code。
 
 To test out the properties and their values, follow these steps 👇
+要测试属性及其值，请遵循以下步骤👇
 
 1.  Create a new folder named 'BACKGROUND-PROJECT'. Open it in VS code.
-2.  Create `index.html` and `style.css` files.
-3.  Install 'live server' on VS code.
-4.  Start live server.
+2.  创建一个名为 'BACKGROUND-PROJECT' 的文件夹并在VS code中打开。
+3.  Create `index.html` and `style.css` files.
+4.  创建 `index.html` 和 `style.css` 文件。
+5.  Install 'live server' on VS code.
+6.  在 VS code 中安装 'live server'
+7.  Start live server.
+8.  开启 live server。
 
 ## HTML
 
 Create one div with the class name 'container' inside the **body tag** in the HTML file.
+在HTML文件的 **body标签** 中创建一个类名为 'container' 的div。
 
 ```html
    <div class="container"></div>
@@ -66,6 +84,7 @@ Create one div with the class name 'container' inside the **body tag** in the HT
 ## CSS
 
 In CSS, you **MUST** include a height for the container, otherwise we won't be able to see the image. In our case, we will set it to 100vh, like this:
+在CSS中，你 **必须** 为容器提供一个高度，否则不会看到照片。 在我们的例子中，我们将它设置为100vh，像这样:
 
 ```css
 .container{
@@ -74,20 +93,27 @@ In CSS, you **MUST** include a height for the container, otherwise we won't be a
 ```
 
 ## Download the images for the project.
+## 下载项目的图像。
 
 The images are on my **[GitHub repository](https://github.com/JoyShaheb/Project-image-repo/tree/main/Background-property-images)**. Here's how to get them:
+图片在我的 **[GitHub repository](https://github.com/JoyShaheb/Project-image-repo/tree/main/Background-property-images)** 中。 以下是如何获得它们:
 
 1.  Visit and copy the link above ☝️
-2.  Go to [downgit](https://minhaskamal.github.io/DownGit/#/home) and paste the link you copied
-3.  Follow the steps in this video 👇
+2.  请复制并访问以上链接☝️
+3.  Go to [downgit](https://minhaskamal.github.io/DownGit/#/home) and paste the link you copied
+4.  点击[downgit](https://minhaskamal.github.io/DownGit/#/home)，然后粘贴你复制的链接
+5.  Follow the steps in this video 👇
+6.  按照视频中的步骤👇
 
 ![Down Git Video](https://cloud.githubusercontent.com/assets/5456665/17822364/940bded8-6678-11e6-9603-b84d75bccec1.gif)
 
 And..... we're all set!
+然后我们就准备好了!
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nmf39ig7wzdiunfje9lr.png)
 
 Let's start coding 😊
+让我们开始编码
 
 # The CSS background-image property
 

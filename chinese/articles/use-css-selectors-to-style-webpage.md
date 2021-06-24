@@ -334,14 +334,11 @@ a[href*="peterlunch"] {
 
 有了这些知识铺垫，让我们通过实践逐一探讨这些组合选择器，以了解它们的工作原理。
 
-### Descendant combination selector
-### 后代组合选择器
+### 后代选择器
 
-The descendant combination selector matches all elements that are descendants of a specified element.
-后代组合选择器匹配所有指定元素的后代的所有元素
+后代选择器匹配所有指定元素的后代的所有元素
 
-Let's look at an example of a descendant combination to explain.
-让我们来看看后代组合选择器的例子吧。
+让我们来看看后代选择器的例子吧。
 
 ```css
 div p {
@@ -349,19 +346,14 @@ div p {
 }
 ```
 
-The above example selects all `p` elements inside of `div` elements.
 上述的例子中选择了`div`元素里的所有`p`元素。
 
-### Child combination selector
-### 直接后代组合选择器
+### 直接后代选择器
 
-The child combination selector matches all elements that are children of a specific element. This is different to the descendant combination selector, as it only selects direct children of the parent element.
 直接后代选择器匹配指定的元素的后代的所有元素。这与后代选择器不同，因为它只选择副元素的直接子元素。
 
-Child selectors are denoted with a `>` character.
 子选择器用`>`字符来表示。
 
-Let's look at an example of a child combination selector to explain.
 让我们来看看直接后代选择器的例子吧。
 
 ```css
@@ -370,14 +362,13 @@ div > p {
 }
 ```
 
-Referring to our HTML hierarchy example above, this selector will only find the first `p` tag and not the `p` tags within the `article` tags. It does this as they are not direct children of the parent `div` element.
 参照上面的HTML层级结构的例子，这个选择器将将只找到第一个`p`标签，而不是`article`标签中的`p`标签，因为它们不是父元素`div`的直接子元素。
 
-### Adjacent sibling combination selector
+### 相邻兄弟选择器
 
-Adjacent Sibling selectors are denoted using a `+` which separates two selectors and matches the second selector element only if it immediately follows the first element.
+相邻兄弟选择器用`+`来表示，它将两个选择器分开，只有在第二个选择器元素紧跟随第一个元素时才与之匹配。
 
-A good real world example of this is having the text that immediately follows an image to be styled like a caption.
+一个很好的现实例子是，将紧跟在图片后面的文本设置为标题样式。
 
 ```css
 img + p {
@@ -387,13 +378,13 @@ img + p {
 }
 ```
 
-In the example above, any `p` element that follows an image will be styled with the above definition.
+在上述的例子中，`img`元素后面的任何`p`元素都将使用上述定义来进行样式处理。
 
-### General sibling combination selector
+### 通用兄弟选择器
 
-The general sibling selector selects any elements that are siblings of an element. General sibling selectors are denoted with a `~` character.
+通用兄弟选择器选择某一元素的任意兄弟元素，通用兄弟选择器使用`~`字符来表示。
 
-Let's look at an example of a general sibling selector to explain.
+让我们来看看通用兄弟选择器的例子吧。
 
 ```css
 article ~ h1 {
@@ -401,14 +392,15 @@ article ~ h1 {
 }
 ```
 
-In the example above it selects all `h1` elements that are siblings of `article` elements.
+在上述例子中，它选择了所有`h1`元素，这些元素是`article`元素的同级别的。
 
-### Pseudo-selectors
-### 伪类选择器
+### 伪选择器
 
 Pseudo-selectors fall into two buckets. The first is [pseudo-class selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) and the second is [pseudo-element selectors](https://peterlunch.com/css-pseudo-elements/).
+伪选择器可分为两类。第一个是[伪类选择器](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)，第二个是[伪元素选择器](https://peterlunch.com/css-pseudo-elements/)。
 
 These selectors are complex and have a lot of options. To understand them it is worth reading some separate posts on them as they are complex topics on their own. But, I'll briefly touch on both here.
+这些选择器很复杂，有很多选项。为了理解它们，值得单独阅读一些关于它们的文章，因为它们本身就是复杂的主题。但是，我在这里简要的介绍一下两者。
 
 Firstly pseudo-class selectors select elements based on a certain state. You might have seen things like `:hover` or `:active`. These are the states of elements on your page. You can select elements based on whether that element is in the specified state.
 

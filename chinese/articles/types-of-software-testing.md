@@ -1,6 +1,6 @@
 > -  原文地址：[What is Software Testing? The 10 Most Common Types of Tests Developers Use in Projects](https://www.freecodecamp.org/news/types-of-software-testing/)
 > -  原文作者：[Nahla DaviesNahla Davies](https://www.freecodecamp.org/news/author/nahla/)
-> -  译者：
+> -  译者：seanbei
 > -  校对者：
 
 ![What is Software Testing? The 10 Most Common Types of Tests Developers Use in Projects](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/pexels-thisisengineering-3861969.jpg)

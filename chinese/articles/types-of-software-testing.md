@@ -5,35 +5,37 @@
 
 ![What is Software Testing? The 10 Most Common Types of Tests Developers Use in Projects](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/pexels-thisisengineering-3861969.jpg)
 
-Software development and testing go hand in hand. And in the era of agile software development, with quick releases of small iterations, you should do testing more and more frequently.
+软件开发和软件测试密不可分。在敏捷软件开发中，迭代小，释放快，你必须非常频繁的做测试。
 
-In order to perform effective testing, you need to know about the different types of testing and when you should use them.
+如果你想更高效的做测试，就需要知道不同的测试类型，以及在什么时候使用它们。
 
-In this article, I'll discuss some of the tests available to you to help you ensure the operability, integrity, and security of your products and apps.
+在这篇文章中，我想谈谈其中的一些测试类型，它们能帮助你确保产品或者应用的可操作性，可集成性和安全性。
 
-## The Software Testing Pyramid
+## 软件测试金字塔
 
 ![The Software Testing Pyramid](https://www.freecodecamp.org/news/content/images/2021/05/Instagram-Square-Pyramid-Chart---CC.png)
 
-The Software Testing Pyramid. Enjoy this free graphic and share it on your blog or Twitter.
+（《软件测试金字塔》 如果觉得这张图片很赞，可以随意分享到你的博客或者推特。）
 
-The software testing pyramid covers all stages [of the software development life cycle](/news/get-a-basic-understanding-of-the-life-cycles-of-software-development/) (SDLC). It extends from unit testing at the base, through to integration testing, and concludes with functional testing at the apex.
+软件测试金字塔覆盖了整个[软件开发生命周期](/news/get-a-basic-understanding-of-the-life-cycles-of-software-development/) (SDLC)。它从底层的单元测试开始延伸，穿过集成测试，到顶部的功能性测试结束。
 
-There is no set distribution among these types of testing. Instead, you should determine which tests best suit your individual needs. In order to make these decisions about the types of testing you need, you should balance their cost, how long they'll take, and how many resources they'll require.
+然而，这些测试类型并没有固定的套路，相反，你需要自己来决定哪种才最适合你的需求。为了决定选哪一种，你需要综合考虑使用它们所需的费用，时间以及资源。
 
-Agile software developers [also use software testing quadrants](https://www.kaizenko.com/what-is-the-agile-testing-quadrant/) that categorize tests based on whether they are business-facing or technology-facing, and whether they critique the product or support the team.
 
-Unit testing, for example, is a technology-facing test that supports the team, whereas usability testing is a business-facing test that critiques the product.
+敏捷软件开发者也常使用[软件测试四象限](https://www.kaizenko.com/what-is-the-agile-testing-quadrant/)，这个法则根据是面向业务还是面向技术，是评论产品还是支持团队这两个维度来对测试进行归类。
 
-Let's go over some important types of testing now.
+举例来说，单元测试就是一种面向技术、支持团队的测试，而可用性测试则是一种面向业务、评论产品的测试。
 
-## Unit Testing Definition
+现在让我们一起来看看一些重要的测试类型。
 
-Unit testing [involves testing individual code components](/news/unit-tests-explained/) rather than the code as a whole. It verifies the operation of all your component logic to identify bugs early in the SDLC, which allows you to correct errors before further development.
+## 单元测试定义
 
-Unit testing is known as “white box” testing, because testing occurs with full knowledge of the application's structure and environment.
+单元测试[是指测试单个代码组件](/news/unit-tests-explained/)，而不是整块代码。它验证所有组件逻辑的可操作性，以便在软件开发生命周期的早期阶段就发现缺陷，在进一步开发之前，对其进行修复。 
 
-One example of unit testing is to create mock objects for testing sections of code, such as functions with variables that have not yet been made.
+单元测试也叫做“白盒”测试，因为需要完全掌握应用程序的结构和环境才能进行。
+
+下面这个单元测试的例子，创建了模拟对象用于测试代码块，如还未生成参数变量的函数。
+
 
 ```JavaScript
 const mocha = require('mocha')
@@ -45,21 +47,21 @@ describe('Test to check add function', function(){
 });
 ```
 
-Unit Test example from [Unit Tests Explained](/news/unit-tests-explained/)
+单元测试范例 来自[Unit Tests Explained](/news/unit-tests-explained/)
 
-## Integration Testing Definition
+## 集成测试定义
 
-A step up from unit testing is integration testing, which combines individual components and tests them as groups. Integration testing identifies issues in how the individual components interact with each other to see if the code meets all its functional specifications.
+单元测试往上一步就是集成测试，它把各个组件联合起来，作为一个组来进行测试。集成测试用于识别各个组件之间交互时出现的问题，以检验代码是否符合功能说明书。
 
-Integration testing differs from unit testing in that it focuses on modules and components working independently in relation to the overall group. On the other hand, unit testing focuses on isolating the modules or components before testing.
+集成测试区别于单元测试的一个点是，它关注独立工作在整个组里面的模块和组件。而另外一边，单元测试关注于在测试前隔离模块或组件。
 
-The point of integration testing is to expose any issues or vulnerabilities in the software between integrated modules or components.
+集成测试的关键是，在集成后的模块或组件之间，暴露任何软件缺陷或漏洞。
 
-As a more simplified example, if you were to perform an integration test of an email service you’re building, you would need to test the individual components such as Composing Mail, Saving Drafts, Sending, Moving to Inbox, Logging Out, and so on.
+拿一个更为简单的例子来说，如果你正在对刚创建的邮箱服务进行一项集成测试，那么你需要测试各个组件，如撰写邮件、保存草稿、发件、移动到收件箱、登出等等。
 
-You would perform a unit test of the individual features first, followed with the integration test for each of the functions that are related.
+在这之前，你得先对单个特性进行一次单元测试，主要是跟集成测试中相关的每个功能函数。
 
-## End-to-end Testing Definition
+## 端到端测试定义
 
 At the top of the pyramid is end-to-end (E2E) testing. As its name suggests, end-to-end testing [replicates the full operation of the application](/news/end-to-end-testing-tutorial/) in order to test all of the application’s connections and dependencies. This includes network connectivity, database access, and external dependencies.
 

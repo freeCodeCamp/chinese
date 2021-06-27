@@ -9,7 +9,7 @@
 
 如果你想更高效的做测试，就需要知道不同的测试类型，以及在什么时候使用它们。
 
-在这篇文章中，我想谈谈其中的一些测试类型，它们能帮助你确保产品或者应用的可操作性，可集成性和安全性。
+在这篇文章中，我想谈谈其中的一些测试类型，它们能帮助你确保产品或者应用的可操作性，完整性和安全性。
 
 ## 软件测试金字塔
 
@@ -63,57 +63,57 @@ describe('Test to check add function', function(){
 
 ## 端到端测试定义
 
-At the top of the pyramid is end-to-end (E2E) testing. As its name suggests, end-to-end testing [replicates the full operation of the application](/news/end-to-end-testing-tutorial/) in order to test all of the application’s connections and dependencies. This includes network connectivity, database access, and external dependencies.
+金字塔的顶部是端到端测试。如名所示，端到端测试[重复应用程序的所有操作](/news/end-to-end-testing-tutorial/)，以测试应用程序的连接性和依赖性的方方面面。这包括网络连接、数据访问和外部依赖。
 
-You conduct E2E testing in an environment that simulates the actual user environment.
+端到端测试在模拟真实用户的环境下进行。
 
-You can determine the success of an E2E test using several metrics, including a Status of Test (to be tracked with a visual, such as a graph), and a Status and Report (which must display the execution status and any vulnerabilities or defects discovered).
+你可以通过某些指标来定义端到端测试是否成功，包括测试状态（用可视化图表来跟踪）和报告状态（用于展示测试执行的状态和已发现的漏洞或缺陷）。
 
-## Types of Software Testing
+## 软件测试类型
 
-Within the levels of the testing pyramid are a wide variety of specific processes for testing various application functions and features, as well as application integrity and security.
+测试金字塔的每个层级都包含了各式各样的具体流程，用于测试各种应用程序功能和特性，也包括应用程序的完整性和安全性。
 
-### Application Security Testing Definition
+### 应用程序安全性测试定义
 
-One of the most important types of testing for applications is application security testing. Security testing helps you identify application vulnerabilities that could be exploited by hackers and correct them before you release your product or app.
+应用程序安全性测试是应用程序各种测试类型中最重要的一个。它帮助你识别应用程序漏洞，这些漏洞很有可能被黑客利用，所以要在释放产品或应用之前把它们修复掉。
 
-There are a [range of application security tests](https://securityboulevard.com/2020/03/application-security-testing-trends-in-2020/) available to you with different tests that are applicable at different parts of the software development life cycle.
+有很多[应用程序安全性测试](https://securityboulevard.com/2020/03/application-security-testing-trends-in-2020/)供你使用，它们可应用于软件开发生命周期中的不同部分。
 
-You can find different types of application security testing at different levels of the testing pyramid. Each test has its own strengths and weaknesses. You should use the different types of testing together to ensure their overall integrity.
+你可以在测试金字塔的不同层级找到不同类型的应用安全性测试。每种测试都有其自己的优点和缺点。你应该同时使用不同的测试类型，以确保它们整体上的完整性。
 
-### Static Application Security Testing (SAST) Definition
+### 静态应用程序安全性测试（SAST）定义
 
-You should use static application security testing (SAST) early in the SDLC. This is an example of unit testing.
+你应该在软件开发生命周期早期使用静态应用程序安全性测试（SAST）。它是单元测试的一个例子。
 
-SAST reflects the developer’s knowledge, including the general design and implementation of the application, and it is therefore white box, or inside out, testing.
+SAST反映了开发人员的能力，包括应用程序的通用设计和实现，因此它是白盒测试，或者叫由内而外的测试。
 
-SAST analyzes the code itself rather than the final application, and you can run it without actually executing the code.
+SAST分析代码本身而不是最终的应用程序，你不需要执行代码就可以运行起来。
 
 ![](https://lh4.googleusercontent.com/R4aFSAcHZcrpNNzFnLlYk-vtXFq7QnjIJKzx_jvqmt-ycGE8CcMozgirFIxfXVXKkjYs1dV_nIQrhCFRC809_Kzp3FLvMqRw519XnDQHX8VEV0065Scw-SzxQlJg44xWeggZx2-e)
 
-[Image source](https://www.seciq.in/static-application-security-testing/)
+[图片来源](https://www.seciq.in/static-application-security-testing/)
 
-According to the security analysts at [Cloud Defense](https://www.clouddefense.ai/sast-static-application-security-testing),
+[云防御](https://www.clouddefense.ai/sast-static-application-security-testing)的安全分析师说，
 
-> “SAST checks your code for violation of security rules and compares the found vulnerabilities between the source and target branches...you'll then get notified if your project’s dependencies are affected by newly disclosed vulnerabilities.”
+> “SAST检查你的代码是否违反安全性规则，同时在源分支和目标分支之间比较已发现的漏洞……一旦项目新发现的漏洞会影响项目依赖性，你就会被通知到。”
 
-Once you're aware of vulnerabilities, you can resolve them before the final application build.
+一旦发现漏洞，你就可以在最终应用程序构建之前把它们解决掉。
 
-You should apply SAST in the development phase of your software projects. A good approach for you will be to design and write your applications to include SAST scans into your development workflow.
+你应该在软件项目的开发阶段将SAST应用进去。在设计和编写应用程序时就将SAST扫描包含到开发流程中，不失为一个好方法。
 
-### Dynamic Application Security Testing (DAST) Definition
+### 动态应用程序安全性测试（DAST）定义
 
-On the other end of the spectrum is dynamic application security testing (DAST), which tests the fully compiled application. You design and run these tests without any knowledge of the underlying structures or code.
+处于另一端的是动态应用程序安全性测试（DAST），它测试完整编译好的应用程序。你设计和运行这些测试时，不需要知道潜在的结构或代码。
 
-Because DAST applies the hacker’s perspective, it is known as black box, or outside in, testing.
+因为DAST采用黑客视角，它被称为黑盒测试，或由外向内的测试。
 
-DAST operates by attacking the running code and seeking to exploit potential vulnerabilities. DAST may employ such common attack techniques as cross-site scripting and SQL injection.
+DAST通过攻击运行中的代码以及寻找可利用的潜在漏洞来进行测试。DAST可能采用跨站点脚本和SQL注入等常见攻击技术。
 
-DAST is used late in the SDLC and is an example of integration security testing. While slow (a complete DAST test of a complete application can take five to seven days on average), it will reveal to you the most likely vulnerabilities in your applications that hackers would exploit.
+DAST在软件开发生命周期后面才进行，它是集成安全性测试的一个例子。由于很慢（一整个完整的应用程序的DAST测试平均可能需要花5到7天），它会为你揭示应用程序中黑客最有可能攻击的漏洞。
 
-### Interactive Application Security Testing Definition
+### 交互式应用程序安全性测试定义
 
-Interactive application security testing (IAST) is a newer testing methodology that [combines the effectiveness of SAST and DAST](https://developer.ibm.com/recipes/tutorials/what-is-interactive-application-security-testing/) while overcoming the issues associated with these more established tests.
+交互式应用程序安全性测试 (IAST) is a newer testing methodology that [combines the effectiveness of SAST and DAST](https://developer.ibm.com/recipes/tutorials/what-is-interactive-application-security-testing/) while overcoming the issues associated with these more established tests.
 
 IAST conducts continuous real-time scanning of an application for errors and vulnerabilities using an inserted monitoring agent. Even though IAST operates in a running application, it is considered an early SDLC test process.
 

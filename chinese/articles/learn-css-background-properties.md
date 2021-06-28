@@ -116,32 +116,42 @@ Let's start coding 😊
 让我们开始编码
 
 # The CSS background-image property
+# CSS 的 background-image 属性
 
 Using this property, we can add images **throughout our stylesheet.**
+使用这个属性，我们可以为元素添加背景图像。
+
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rhoch2auowlf2xdf4h8f.png)
 
 We write the syntax after writing the selector name, like this:👇
+在写完选择器名之后再写如下语法:👇
 
 ```CSS
 .container{
 // We'll put image path/URL 👇 inside quotes
+// 将图像路径/URL 写到如下引号内
    background-image  :  url(' ');
 }
 ```
 
 We can use background-image in **2 ways:**
+我们可以用 **两种方式** 使用 background-image 属性
 
 -   By locating **image path** in the directory
+-   通过项目中相对路径
 -   By specifying the **image URL**
+-   通过具体的 **图像URL**
 
 ### How to Use `background-image` through the Directory Path
+### 项目中相对路径如何使用 `background-image` 属性
 
 Here's the syntax for background-image when using the directory path 👇
+下面是使用项目相对路径时的background-image语法 👇
 
 ```CSS
 .container{
-//  Put  image  path  👇 inside quotes
+// 引号中填入图片的相对路径 👇
   background-image: url(' ');
 }
 ```
@@ -149,31 +159,40 @@ Here's the syntax for background-image when using the directory path 👇
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1jfuda4p0ki1hish775o.png)
 
 There are three cases when you'll want to specify an image path in our CSS:
+当你想在CSS中指定一个图像路径时，有三种情况:
 
 1.  When `image` and `style.css` are in the same folder
-2.  When `image` is in the next folder
-3.  When `image` is in the previous folder
+2.  当 `image` 和 `style.css` 在同一文件夹下
+3.  When `image` is in the next folder
+4.  当 `image` 在下一级文件夹中
+5.  When `image` is in the previous folder
+6.  当 `image` 上一级文件夹中
 
 When `image` and `style.css` are in the **Same Folder**, it looks something like the below. 👇
+当 `image` 和 `style.css` 在 **同一文件夹** 时, 它看起来像下面这样。👇
+
 
 Notice that **`kitty.png`** and **`style.css`** are in the same parent folder named **Background-project**:
+注意 **`kitty.png`** 和 **`style.css`** 在同一父级文件夹 **Background-project** 下:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/Frame-25--1--1.png)
 
 To locate the file path of the `kitty.png`, write the following code in `style.css`:
+要找到 `kitty.png` 的文件路径，在 `style.css` 中编写以下代码:
 
 ```css
  .container{
    background-image : url("kitty.png");
    
    height: 100vh;
-// set size & stop image repetition 
+// 设置大小和停止图像拉伸
    background-repeat : no-repeat;
    background-size : contain;
  }
 ```
 
 When the image is in the **Next Folder**, `style.css` is in previous folder. Notice on the image below that `kitty.png` is in the Assets folder while `style.css` is in the previous folder.
+当图像在 **下一级文件夹**，`style.css` 在前一级文件夹时。注意，在下图中，`kitty.png` 在Assets文件夹中，而 `style.css` 在前一个文件夹中。
 
 ![Alt Text](https://www.freecodecamp.org/news/content/images/2021/04/Frame-26.png)
 
@@ -184,7 +203,7 @@ To go forward and locate the file path of `kitty.png`, we write one dot and slas
    background-image : url("./Assets/kitty.png");
 
    height: 100vh;
-// set size & stop image repetition 
+// 设置大小和停止图像拉伸
    background-repeat : no-repeat;
    background-size : contain;
  }
@@ -201,7 +220,7 @@ To go back and locate the file path of `kitty.png`, we write two dots and a slas
    background-image : url("../kitty.png");
 
    height: 100vh;
-// set size & stop image repetition 
+// 设置大小和停止图像拉伸
    background-repeat : no-repeat;
    background-size : contain;
  }
@@ -221,36 +240,44 @@ To work with an image which is a **direct link,** we need to write the following
     background-image : url("https://dev-to-uploads.s3.amazonaws.com/uploads/articles/szxp3jqyjyksrep1ep82.png");
 
   height: 100vh;
-// set size & stop image repetition 
+// 设置大小和停止图像拉伸
    background-repeat : no-repeat;
    background-size : contain;
  }
 ```
 
 ### Take a Break
+### 休息一下
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4diremjrrbvcm2o4l77m.png)
 
 # The CSS background-size property
+# CSS background-size 属性
 
 We can adjust the size of an image using the `background-size` property.
+我们可以通过调整图像的 `background-size` 来调整图像大小。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xxbrgckb20fy8tmrg9ik.png)
 
 We write the syntax after writing the selector name, like this  👇
+在写完选择器名之后再写如下语法， 像这样👇
 
 ```CSS
 .container{
-// We'll write values 👇 here
+// 我们将在这里写下值👇
   background-size  : cover;
 }
 ```
 
 You can use background-size in **3 ways**:
+你可以用 **3种方式** 使用 background-size 属性
 
 -   use the Cover / Contain value
+-   
 -   set the image width and height
+-   设置图像宽度和高度
 -   use auto
+-   使用 auto
 
 Let's start by discussing the **cover & contain values**.  
 Bear size : \[718px X 614px\]
@@ -803,12 +830,15 @@ The code snippet looks like this:
 ```
 
 # The short-hand for these CSS properties
+# CSS 属性的简写
 
 This is the order of the shorthand for the background properties:
+下面是 background 属性的简写顺序:
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/newvcc4rvegnbkblwzyb.png)
 
 For this experiment, let's put `kitty.png` in our browser with a blue background at 200px on the X-Axis and 200px on the Y-axis. The code snippet looks like this:
+对于这个案例，我们将图像 `kitty.png` 放在长和宽都为200px，蓝色背景的容器中。代码如下所示:
 
 ```css
 .container{
@@ -824,6 +854,7 @@ For this experiment, let's put `kitty.png` in our browser with a blue background
 ```
 
 And here's the code snippet using the shorthand:
+下面是使用简写的代码:
 
 ```css
 .container{
@@ -835,12 +866,16 @@ And here's the code snippet using the shorthand:
 ```
 
 This shorthand really saves us time. If you want to skip one value, you can do it as long as you maintain the order of these properties.
+这个简写确实节省了我们的时间。如果你想要跳过某个属性，你只需要保持这些属性的顺序就可以了。
 
 # Conclusion
+# 总结 
 
 Here's your medal for reading till the the end ❤️
+这是你读到最后的奖励 ❤️
 
 Suggestions and criticisms are highly appreciated ❤️
+欢迎提出建议和批评 ❤️
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/usxsz1lstuwry3jlly4d.png)
 

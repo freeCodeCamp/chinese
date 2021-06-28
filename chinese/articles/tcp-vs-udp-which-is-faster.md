@@ -1,6 +1,6 @@
 > -  原文地址：[TCP vs UDP – Which Protocol is Faster?](https://www.freecodecamp.org/news/tcp-vs-udp-which-is-faster/)
 > -  原文作者：[Prashanth](https://www.freecodecamp.org/news/author/prashanth/)
-> -  译者：
+> -  译者：seanbei
 > -  校对者：
 
 ![TCP vs UDP – Which Protocol is Faster?](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/TCP-VS-UDP.jpg)

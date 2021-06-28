@@ -99,7 +99,7 @@ SAST分析代码本身而不是最终的应用程序，你不需要执行代码�
 
 一旦发现漏洞，你就可以在最终应用程序构建之前把它们解决掉。
 
-你应该在软件项目的开发阶段将SAST应用进去。在设计和编写应用程序时就将SAST扫描包含到开发流程中，不失为一个好方法。
+你应该在软件项目的开发阶段就将SAST应用进去。在设计和编写应用程序时就将SAST扫描包含到开发流程中，不失为一个好方法。
 
 ### 动态应用程序安全性测试（DAST）定义
 
@@ -113,54 +113,54 @@ DAST在软件开发生命周期后面才进行，它是集成安全性测试的�
 
 ### 交互式应用程序安全性测试定义
 
-交互式应用程序安全性测试 (IAST) is a newer testing methodology that [combines the effectiveness of SAST and DAST](https://developer.ibm.com/recipes/tutorials/what-is-interactive-application-security-testing/) while overcoming the issues associated with these more established tests.
+交互式应用程序安全性测试 (IAST)是一种比较新的测试方法，它[结合了SAST和DAST的高效性](https://developer.ibm.com/recipes/tutorials/what-is-interactive-application-security-testing/)，同时克服了与这些确立的测试相关联的问题。
 
-IAST conducts continuous real-time scanning of an application for errors and vulnerabilities using an inserted monitoring agent. Even though IAST operates in a running application, it is considered an early SDLC test process.
+IAST使用一种插入式的监控代理，来对应用程序进行持续实时扫描，从而发现错误和漏洞。尽管IAST是在应用程序运行时进行的, 它仍然被当作是一个SDLC早期的测试过程。
 
-Regardless of what type of software you’re looking to test, IAST is best used in a QA (Quality Assurance) environment, or an environment that is designed to replicate production as closely as possible without your clients or customers actually accessing it.
+不管你在寻找什么样的软件进行测试，IAST最适合在QA（质量保证）环境中使用，同样，也很适合专门设计出来用于复制客户或者顾客真实使用产品的场景。
 
-### Compatibility Testing Definition
+### 兼容性测试定义
 
-Compatibility testing assesses how your application operates and how secure it is on various devices and environments, including mobile devices and on different operating systems.
+兼容性测试评估你的应用程序如何运行，以及它在各种设备和环境（包括移动设备和不同操作系统）上的安全性。
 
-Compatibility testing can also assess whether a current version of software is compatible with other software versions. Version testing can be backward or forward facing.  
+兼容性测试还可以评估当前版本的软件是否与其他软件版本兼容。版本测试可以是朝后或者朝前的。 
 
 ![](https://lh6.googleusercontent.com/SDElGdbGkactASCRfFSfWXcdOM36IiAQnDZ3uofeiYAeaxzvwvaQzB9cEqEcUFu7L6Z3GxjoC_nCMy0NhgANP8XdjP3s9MKcxvvMdrZsIsmq3kuIJMYbmViDsbAQpBrvyGZscgm0)
 
-[Image Source](https://www.testrigtechnologies.com/service/compatibility-testing/)
+[图片来源](https://www.testrigtechnologies.com/service/compatibility-testing/)
 
-Examples of compatibility testing include:
+兼容性测试的例子包括：
 
--   browser testing (checking to make sure your website or mobile site is fully compatible with different browsers)
--   mobile testing (making sure your application is compatible with iOS and Android)
--   or software testing (if you’re going to be creating multiple software applications that need to be interacting with one another, you’ll need to conduct compatibility testing to ensure that they actually do so).
+-   浏览器测试 (检查以确保你的网站或移动网址与不同的浏览器完全兼容)
+-   移动测试 (确保您的应用程序与iOS和Android兼容)
+-   或软件测试 (如果你要创建多个需要彼此交互的软件应用程序，那么需要进行兼容性测试以确保它们正常运行)。
 
-## Beyond the Software Testing Pyramid
+## 软件测试金字塔之外
 
-Modified versions of the testing pyramid can include a level that's next to or above end-to-end testing. This level consists of tests focused on the application user.
+测试金字塔的修改版本可以包括与端到端测试相邻或之上的层级。此层级包括针对应用程序用户的测试。
 
-### Performance Testing Definition
+### 性能测试定义
 
-You need to know how the application will work in a variety of different conditions, and this is the purpose of performance testing. Performance testing can model various loads and stresses to assess the robustness of the application. The type of performance testing is based on the applied conditions.
+你需要知道应用程序将如何在各种不同的条件下工作，这就是性能测试的目的。性能测试可以对各种负载和压力进行建模，以评估应用程序的稳健性。性能测试的类型基于所应用的条件。
 
-An example of performance sting is load testing, which [determines the maximum load](/news/practical-guide-to-load-testing/) applied to the system at the time of a crash.
+性能测试的一个例子是负载测试，用于[确定最大负载](/news/practical-guide-to-load-testing/)，即系统何时会崩溃。
 
-Another example like scalability testing, on the other hand, applies a gradually increasing load to the system to assess ways to accommodate the added system stresses.
+另一方面，另一个例子，如可扩展性测试，将逐渐增加的负载应用于系统，以评估适应增加的系统压力的方法。
 
-And spike testing assesses the effect of applying sudden large load changes to the system.
+尖峰测试用于评估对系统突然施加大负载变化所带来的影响。
 
-You should conduct performance testing on any software system before you put it to market. Test it against stability, scalability, and speed so you can identify what to fix before going live.
+在任何软件系统面向市场之前，你都应该对其进行性能测试。测试其稳定性、可扩展性和速度，这样你才可以在上线之前就识别要修复的内容。
 
-### Usability Testing Definition
+### 可用性测试定义
 
-Testing the actual use of the application interface is an important task. It is one thing to understand if the application functions as designed. It is another thing to understand if the design itself is acceptable to users. This is where usability testing comes in.
+测试应用程序接口的实际使用是一项重要的任务。理解应用的功能是否按设计运行是一回事，而这个设计本身是否为用户所接受又是另一回事了。这就是可用性测试的出发点。 
 
-With usability testing, developers can assess user reactions to specific application features and functions. This includes features that you may know in advance will be less desirable from the user perspective but are [necessary for strong security](https://privacycanada.net/programming-security-for-beginners/) and proper operation (like strong password requirements).
+通过可用性测试，开发人员可以评估用户对特定应用程序特性和功能的反应。这包括你可能事先知道从用户角度来看不太理想的功能，但是这些功能是[强安全性](https://privacycanada.net/programming-security-for-beginners/)和正确操作所必需的(像强密码这种要求)。
 
-Usability testing is not so much about cosmetic issues or fixing grammar errors in any written text (although both of those issues are certainly important in their own right). Instead it's about how easy the completed application is to use by the end user.
+可用性测试与外观问题或修复任何书面文本中的语法错误无关（尽管这两个问题本身当然很重要）。相反，它与终端用户使用应用程序的难易程度有关。
 
-## Conclusion
+## 结论
 
-Testing is not just something the QA division should do after you have finished developing an application. It's also important part of the [software development process](/news/software-quality-assurance-guide/).
+测试不仅仅是应用程序开发结束后QA部门应该做的事情。它也是[软件开发过程](/news/software-quality-assurance-guide/)的重要组成部分。
 
-Knowing what tests are available to you and how they work will help you ensure your application functions well, is secure, and is acceptable to the end user.
+了解你可以使用哪些测试以及它们如何工作，将帮助你保证应用程序运行良好、安全并且为最终用户所接受。

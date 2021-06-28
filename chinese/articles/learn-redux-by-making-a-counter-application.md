@@ -1,35 +1,36 @@
 > -  原文地址：[Learn Redux by Making a Counter Application](https://www.freecodecamp.org/news/learn-redux-by-making-a-counter-application/)
 > -  原文作者：[Kayode, Kolade Christopher](https://www.freecodecamp.org/news/author/kayode/)
-> -  译者：
+> -  译者：Humilitas
 > -  校对者：
 
 ![Learn Redux by Making a Counter Application](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/reduxpic.png)
 
-Redux is a state management library for front end applications. Developers commonly use it with React through the react-redux package, but it can also stand alone – so you can use it in any front end framework or library, including Vanilla JavaScript.
+Redux 是前端应用的状态管理库。开发者通常会通过 react-redux 包来使用它，不过它也可以在任意前端框架或库中单独使用，如 Vanilla JavaScript。
 
-Redux can really be intimidating at first. It might take you a while to get used to it and you might end up checking your previous projects to figure out how to get things done.
+刚接触 Redux 可能会被吓到，你可能需要一段时间才能适应它，而且可能最终要翻看以前的代码才能找到解决问题的办法。
 
-Redux is also often criticized because it has so much boilerplate to manage application state. And it's true – using Redux in small applications is like shooting an ant with a cannon. There are walkarounds you can use in React, for example, like prop drilling and context, while Vue JS has VueX and Angular has NGRX.
+常遭人诟病的是，Redux 需要使用很多样板代码来管理应用状态。确实如此——在小型应用中使用 Redux 犹如拿大炮打蚂蚁。在 React 项目中，还有其他可用方案，如属性（prop）钻取和上下文（context）；Vue项目中可以使用 VueX；Angular 项目中可以使用 NGRX。
 
-In a React app, the major problem Redux solves is that, instead of managing the state of the app by passing down props (which is unidirectional) the entire state is saved in a globalized store. This gives you the ability to bring it in anywhere you need it. So it's quite multidimensional!
+在 React 应用中，Redux 解决的主要问题是，将应用的所有状态保存在一个全局的 store 中，而不是通过（单向的）属性传递来管理状态。这样就可以在任意需要的地方访问到全局状态了，非常方便！
 
-In this article, I teach you how to make a counter application with Redux in a React app, so you'll have enough basic knowledge to start using Redux in your projects.
+本文会教你使用 Redux 实现一个 React 计数器应用，让你有足够的基础知识在项目中使用 Redux。
 
-## How to Set Up the Project
+## 项目设置
 
-First of all, you need to install the redux and react-redux packages from NPM by running the command `npm i redux react-redux`. Redux is stand-alone and react-redux gives us access to several hooks that make life easier.
+首先，运行 `npm i redux react-redux` 命令，安装 redux 和 react-redux。Redux 是独立的包，react-redux 则提供了一些方便使用的钩子（hook）。
 
-## How to Create the Folders and Files
+## 创建目录和文件
 
-Next, we need to create the actions and reducers. Actions are what the name implies – they are objects that determine what will be done. Reducers, on the other hand, check which action is performed and update the state based on the action. It takes in the state and the action.
+接下来，创建 action 和 reducer。顾名思义，action 就是决定要干什么的对象。另一方面，reducer 会检查执行了哪个 action 并根据 action 更新 state，它接收 state 和 action 作为参数。
 
-I like to create both of them in an actions and reducers folder, then I put them in a folder I name `Redux` for clarity.
+我喜欢创建一个名为 `Redux` 的目录，再在其中创建创建 actions 和 reducers 目录，分别保存 action 和 reducer 文件。
 
-In the reducers folder, I create a file named `counterReducer.js`. A lot of people typically create the reducer with a switch statement, but it is also possible to use an if statement. In this example, I will be going with switch.
+在 reducers 目录中创建 `counterReducer.js` 文件。很多人通常会使用 switch 语句来实现 reducer，不过你也可以使用 if 语句。示例中会使用 switch。
 
-So, in the counter reducer, I will put in the following snippet of code:
+所以，在 `counterReducer.js` 中写入以下代码：
 
 ```js
+// src/Redux/reducers/counterReducer.js
 const counterReducer = (state = 1, action) => {
   switch (action.type) {
     case "INCREMENT":
@@ -45,17 +46,18 @@ const counterReducer = (state = 1, action) => {
 export default counterReducer;
 ```
 
-Here I hardcoded the state to 1. You can start from 0 if you want.
+这里我将 state 初始值硬编码为 1，你也可以选择从 0 开始计数。
 
-In the switch statement, I have a case of `INCREMENT` that will increase the counter by 1, `DECREMENT` to decrease the counter by 1, and `RESET` to reset the counter to a state of 0.
+在 switch 语句中，`INCREMENT` 表示让计数器加 1，`DECREMENT` 表示让计数器减 1，`RESET` 表示将计数器重置为 0。
 
-It is conventional to use type in the cases in UPPERCASE, but you don't have to – use whichever case you prefer. But you do need to to export the counter reducer in order to use it in another file.
+按照惯例会将 action 的类型（action.type）全部大写，但不作强制要求——大小写都行。需要把 counterReducer 导出，以便在其他文件中使用它。
 
-## How to Add Dummy Authentication to the Project
+## 加入虚拟的身份验证
 
-I’m going to take this a little bit further by adding a dummy authentication to the counter app. There, I will show you a secret about me. So, in addition to the `counterReducer`, I’m also going to create an `authReducer` where I will paste in the following code:
+为计数器应用添加虚拟的身份验证，让应用功能更进一步。我会在那里向你展示一个关于我的小秘密。所以，除了 `counterReducer`，还要创建一个 `authReducer`，其代码如下：
 
 ```javascript
+// src/Redux/reducers/authReducer.js
 const authReducer = (state = false, action) => {
   switch (action.type) {
     case "LOG_IN":
@@ -69,46 +71,51 @@ const authReducer = (state = false, action) => {
 export default authReducer;
 ```
 
-In the `authReducer`, the state is initialized to false. `LOG_IN` will set it back to true and `LOG_OUT` returns it to false to complete the toggling action.
+在 `authReducer` 中，state 被初始化为 false，`LOG_IN` 会将它设置为 true，`LOG_OUT` 会将它设置为 false。
 
-## How to USe the `combineReducer` Helper Function
+## 如何使用 `combineReducer` 辅助函数
 
-Since we have more than one reducer, we need to import the `combineReducer` helper function from Redux. This function turns our reducers into a single reducer that we can pass to the `createStore` API. Don't worry about what the `createStor`e API is, for now – I will explain it soon.
+因为有多个 reducer，所以需要引入 Redux 提供的 `combineReducer` 辅助函数。这个函数可以将多个 reducer 合并成单个 reducer，以便传入 `createStore` API。不必为不了解 `createStore` API 而困惑——我稍后会介绍。
 
-So we pass in the reducers like so:  
+`combineReducer` 使用方式如下：
+
 `combineReducer({reducer-a, reducer-b, reducer-c})`
 
-In the reducer folder, we have to create another file named `index` so we can import the `combineReducer` helper function, alongside the reducers, and combine them inside.
+在 reducer 目录中创建 `index` 文件（译注：文中提及的默认都是 JavaScript 文件，此处指的是 `index.js`），引入 `combineReducer` 和 reducer，并把这些 reducer 组合在一起。
 
-In the index file, I have the following code:
+其代码如下：
 
 ```js
-import counter from "./counter";
-import auth from "./auth";
-import { combineReducers } from "redux";
+// src/Redux/reducers/index.js
+import counterReducer from "./counterReducer";
+import authReducer from "./authReducer";
+import {combineReducers} from "redux";
 
 const allReducers = combineReducers({
-  counter,
-  auth,
+    counter: counterReducer,
+    auth: authReducer,
 });
 export default allReducers;
 ```
 
-## How to Create the Global Store
+## 如何创建全局 Store
 
-The next thing to do is to create a store. I like to create it in React's `index` file.
+接下来要做的是创建一个 store，我喜欢在 React 的 `index` 文件中创建它。
 
-To do this, you need to import the `createStore` API from Redux like this: `import { createStore } from "redux";`.
+需要先从 Redux 中引入 `createStore` API：
 
-We also have to bring in our reducers that have already been combined and then create the store in their instance.
+`import { createStore } from "redux";`
 
-To bring our counter app functionality to life, we must connect everything we’ve done with Redux to the app.
+还需要引入已经组合好的 reducer，然后就可以使用它们来创建 store 了。
 
-First of all, we need to import `Provider` from react-redux and wrap it around the entire app in our index file. The provider connects the global state to the app. `Provider` takes in an argument called store in which we must pass the created store.
+为了让我们的计数器功能可用，必须把 Redux 连接到应用中。
 
-In the index file, I now have the following snippets of code:
+在 index 文件里，首先从 react-redux 引入 `Provider`，并用它包裹整个组件树。Provider 将全局的 state 连接到应用中。`Provider` 接收一个名为 store 的参数，我们在其中传入之前创建的 store。
+
+index 文件的代码如下：
 
 ```js
+// src/index.js
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
@@ -117,7 +124,7 @@ import { createStore } from "redux";
 import allReducers from "./redux/reducers";
 import { Provider } from "react-redux";
 
-//The created store
+// 创建 store
 const store = createStore(
   allReducers,
 );
@@ -131,21 +138,16 @@ ReactDOM.render(
 );
 ```
 
-## How to Extract the Reducers and Set up Actions
+## 如何定义 Action
 
-The next line of action is to extract the `counterReducer` by importing `useSelector` from `react-redux` so we can access the entire state in it.
+为了实现增加计数、减少计数、登入、登出，我们必须回到 actions 目录，定义相应的 action，并将它们导出。dispatch 函数可以执行我们定义的 action。
 
-To see the secret I said I was going to show you about me, we have to extract `authReducer` too. I will be doing this in the app.js file:
+我在 reducer 文件中实现了 `INCREMENT`、`DECREMENT`、`RESET`、`LOG_IN` 和 `LOG_OUT` action 的逻辑。actions 目录中的 index 文件里要以同样的标识符（即 `type`）来使用它们。
 
-```
-import { useSelector } from "react-redux";
-```
-
-To start incrementing and decrementing, and also login and log out, we must head back to the actions folder, set up actions to dispatch in the app, and export them as well. Dispatch is the function that helps make our actions a reality.
-
-So in the index file of the actions folder, I have the code below:
+actions 目录中，index 文件的代码如下：
 
 ```js
+// src/Redux/actions/index.js
 export const increment = () => {
   return {
     type: "INCREMENT",
@@ -178,22 +180,28 @@ export const logOut = () => {
 
 ```
 
-## How to Import and Dispatch the Actions
+## 如何获取 Reducer 以及 Dispatch Action
 
-Remember I set the `INCREMENT`, `DECREMENT`, `RESET`, `LOG_IN` and `LOG_OUT` actions in the reducer files. We need to bring them into the actions that same way. The object identifier can be in any case.
+从 `react-redux` 中引入 `useSelector`（在其中可以访问整个 state），以便获取 `counterReducer`。为了看到我之前说过的关于我的小秘密，我们还需要获取 `authReducer`。
 
-This means we have to import the actions we set up, and also the `useDispatch` hook from react-redux, so we can dispatch any action we want.
-
-```
-import { useDispatch } from "react-redux";
-
-```
-
-Since we can use the `useDispatch` hook and every other thing now, we have to set up the increment, decrement, reset, and login/logout buttons.
-
-Right inside our buttons, we need to set up a click event handler to put in the dispatch. The whole code in the ap.js file now looks like this:
+我会在 App.js 文件中操作：
 
 ```js
+import { useSelector } from "react-redux";
+```
+
+我们需要引入定义好的 action，并从 react-redux 引入 `useDispatch` 钩子，以便 dispatch action。
+
+```js
+import { useDispatch } from "react-redux";
+```
+
+现在 `useDispatch` 钩子和其它东西都是可用的，我们需要设置“增加”、“减少”、“重置”、“登入”和“登出”按钮。
+
+需要为每个按钮绑定点击事件处理程序，来 dispatch 相应的 action。现在 app.js 的完整代码如下：
+
+```js
+// src/App.js
 import "./App.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -227,7 +235,7 @@ function App() {
       {auth ? (
         <div>
           <p>
-            I don't more than 50% of redux. But if you know 50% of it, you're like a Superman.
+            I don't know more than 50% of redux. But if you know 50% of it, you're like a Superman.
           </p>
         </div>
       ) : (
@@ -240,13 +248,13 @@ function App() {
 export default App;
 ```
 
-At the end of it all, this is what you'll have:  
+最终结果如下：
 ![redux](https://www.freecodecamp.org/news/content/images/2021/06/redux.gif)
 
-I hope you can find the secret about me.
+希望你能找到那个关于我的小秘密。
 
-## Conclusion
+## 总结
 
-Thank you for reading this tutorial. I hope it gives you a basic understanding of Redux so you can start making something with it on your own.
+感谢你的阅读，希望你通过本文能够对 Redux 有基本的了解，进而使用它开发一些自己的东西。
 
-To connect with me, follow me on [Twitter](http://twitter.com/koladechris), where I spend most of my time engaging in coding and web development-related discussions.
+想和我联系的话，可以关注我的 [Twitter](http://twitter.com/koladechris)，我经常会在上面讨论编码以及 web 开发相关的话题。

@@ -5,49 +5,49 @@
 
 ![TCP vs UDP – Which Protocol is Faster?](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/TCP-VS-UDP.jpg)
 
-## What is TCP?
+## 什么是TCP？
 
-**TCP** is an acronym for **Transmission Control Protocol**. It is a transport layer protocol that **allows packets** to be sent from one location to another.
+**TCP**是**Transmission Control Protocol**的首字母缩写词，它是一种传输层协议，**允许数据包**从一个位置发送到另一个位置。
 
-TCP is a connection-oriented protocol, which means it establishes the connection before any communication between the network’s computer units. Because we use this protocol in conjunction with an IP protocol, we call it **TCP/ IP.**
+TCP是面向连接的协议，也就是说它在网络计算机单元之间的任何通信之前建立连接。由于我们把这个协议与IP协议结合使用，我们称其为**TCP/ IP**。
 
-### How does TCP work?
+### TCP是怎么工作的?
 
-TCP’s primary job is to collect data from the application layer. It then separates the data into multiple packets, assigns a number to each packet, and sends the packets to their destination.
+TCP的主要任务是从应用层收集数据。它将数据拆分成多个数据包，为每个数据包分配一个编号，然后将这些数据包发送到它们的目的地。
 
-It also reassembles the packets before sending them to the application layer. Given that TCP is a connection-oriented protocol, the connection will be maintained until the sender and receiver have completed their exchange.
+同样，在将数据包发送到应用层之前，它会重新组合数据包。鉴于TCP是面向连接的协议，这个连接将一直保持，直到发送方和接收方完成数据交换。
 
-It is a reliable protocol. That is, the receiver always provides the sender either a positive or negative acknowledgment regarding the data packet, so the sender always knows if the data packet has arrived at its destination or if it needs to be resent.
+它是一种可靠的协议。因为，接收方总是会给发送方提供一条关于数据包的确认消息，要么肯定要么否定，因此，发送方总是能知道数据包是否到达它的目的地，还是说需要被重新发送。
 
-It guarantees that data arrives at its destination in the same sequence that it was sent. It has a built-in error-checking and recovery system. and is responsible for providing end-to-end communication. TCP also gives access to flow control and quality of service.
+它保证了数据能到达其目的地，而且到达的顺序与发送时相同。它有一套内置的错误检查和恢复体系，负责提供端到端通信。TCP还提供对流量控制和服务质量的访问。
 
-TCP supports a **full-duplex server**, which means it can act as both a receiver and a sender. It operates in a point-to-point Client/ Server manner.
+TCP支持**全双工服务器**，既可以当接收者，也可以当发送者。它以点对点的客户端/服务器方式运行。
 
-## What is UDP?
+## 什么是UDP？
 
-**UDP** is an acronym for **User Datagram Protocol**. The User Datagram Protocol (UDP) is the most basic of the TCP/IP protocol suite’s Transport Layer communication protocols. It uses the bare minimum of communication mechanisms.
+**UDP**是**User Datagram Protocol**的首字母缩写词。用户数据报协议（UDP）是TCP/IP协议套件的最基本的传输层通信协议。它使用最低限度的通信机制。
 
-### How does UDP work?
+### UDP是怎么工作的？
 
-Although UDP is considered an unreliable transport protocol, it does its job by using IP services, which provide a best-effort delivery method.
+尽管UDP被认为是一种不可靠的传输协议，但它通过使用IP服务来完成其工作，提供了一种尽力而为的传递方法。
 
-In UDP, the receiver does not generate a packet acknowledgment, and the sender does not wait for a packet acknowledgment. Because of this vulnerability, the protocol is both unreliable and easier to process.
+在UDP中，接收方不生成数据包确认，发送方也不等待数据包确认。正是由于这个不足，该协议虽不可靠但是易于处理。
 
-We use UDP in cases where it's not as important to acknowledge the data being received. It works well for cases where data flows in one direction and it is most appropriate for query-based communication.
+如果确认是否接收到数据并不那么重要，这种情况下，我们使用UDP。它很适用于单向数据流的场景，最适合基于查询的通信。
 
-UDP does not assure the ordered delivery of the data packets. It's stateless and it does not provide for any congestion control mechanism.
+UDP不保证数据包的有序传递。它是无状态的，不提供任何拥塞控制机制。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-31-at-10.54.01-AM.png)
 
 TCP Vs UDP
 
-## Differences Between TCP and UDP
+## TCP和UDP的区别
 
-UDP is a connectionless protocol, whereas TCP is a connection-oriented protocol. TCP is slower than UDP, which is one of the main differences between the two protocols.
+UDP是一种无连接协议，而TCP是一种面向连接的协议。TCP比UDP要慢，这是两种协议的主要区别之一。
 
-Overall, UDP is a much faster, simpler, and more efficient protocol. But only TCP allows for the retransmission of lost data packets.
+总的来说，UDP是一种更快、更简单、更高效的协议。但是只有TCP允许对丢失的数据包进行重新传输。
 
-Another difference between TCP and UDP is that TCP ensures the orderly transfer of data from the user to the server (and vice versa). UDP is not designed for end-to-end communication and does not check the receiver’s readiness so it requires less overhead and takes up less space.
+TCP和 UDP的另一个区别是TCP可以确保数据从用户到服务器的有序传输（反之亦然）。UDP不是为端到端通信而设计的，并不会检查接收方的准备情况，因此它需要更少的开销并占用更少的空间。
 
 ### Summary of TCP vs UDP
 

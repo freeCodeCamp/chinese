@@ -1,7 +1,7 @@
-> -  原文地址：[How to Use CSS Selectors to Style Your Web Page](https://www.freecodecamp.org/news/use-css-selectors-to-style-webpage/)
-> -  原文作者：[Peter LynchPeter Lynch](https://www.freecodecamp.org/news/author/peter-lynch/)
-> -  译者：Assone
-> -  校对者：
+> - 原文地址：[How to Use CSS Selectors to Style Your Web Page](https://www.freecodecamp.org/news/use-css-selectors-to-style-webpage/)
+> - 原文作者：[Peter LynchPeter Lynch](https://www.freecodecamp.org/news/author/peter-lynch/)
+> - 译者：Assone
+> - 校对者：
 
 ![如何使用CSS选择器设计网页样式](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/CSS-Selectors.png)
 
@@ -44,14 +44,14 @@ CSS元素选择器根据元素名来选择HTML元素。在HTML中，元素名就
 ```css
 /* selecting all h3 elements */
 h3 {
-	text-align: center;
-	color: blue;
+ text-align: center;
+ color: blue;
 }
 
 /* selecting all article elements */
 article {
-	font-size: 14px;
-	line-height: 1.1px;
+ font-size: 14px;
+ line-height: 1.1px;
 }
 ```
 
@@ -69,8 +69,8 @@ ID选择器选择具有匹配的ID属性的HTML元素。由于在一个HTML文�
 
 ```css
 #projects-flex-container {
-	width: 90vw;
-	display: flex;
+ width: 90vw;
+ display: flex;
 }
 ```
 
@@ -88,9 +88,9 @@ ID选择器选择具有匹配的ID属性的HTML元素。由于在一个HTML文�
 
 ```css
 .project-card {
-	color: #badA55;
-	padding: 5px;
-	border-radius: 5px;
+ color: #badA55;
+ padding: 5px;
+ border-radius: 5px;
 }
 ```
 
@@ -104,8 +104,8 @@ ID选择器选择具有匹配的ID属性的HTML元素。由于在一个HTML文�
 
 ```css
 * {
-	margin: 0;
-	padding: 0;
+ margin: 0;
+ padding: 0;
 }
 ```
 
@@ -121,21 +121,21 @@ ID选择器选择具有匹配的ID属性的HTML元素。由于在一个HTML文�
 
 ```css
 h1 {
-	text-align: left;
-	letter-spacing: 3px;
-	color: #111111;
+ text-align: left;
+ letter-spacing: 3px;
+ color: #111111;
 }
 
 h2 {
-	text-align: left;
-	letter-spacing: 3px;
-	color: #111111;
+ text-align: left;
+ letter-spacing: 3px;
+ color: #111111;
 }
 
 h3 {
-	text-align: left;
-	letter-spacing: 3px;
-	color: #111111;
+ text-align: left;
+ letter-spacing: 3px;
+ color: #111111;
 }
 ```
 
@@ -145,9 +145,9 @@ h3 {
 
 ```css
 h1, h2, h3 {
-	text-align: left;
-	letter-spacing: 3px;
-	color: #111111;
+ text-align: left;
+ letter-spacing: 3px;
+ color: #111111;
 }
 ```
 
@@ -163,23 +163,23 @@ h1, h2, h3 {
 /*group the selectors and state definitions that are the same*/
 
 h1, h2, h3 {
-	text-align: left;
-	letter-spacing: 3px;
-	color: #111111;
+ text-align: left;
+ letter-spacing: 3px;
+ color: #111111;
 }
 
 /*apply individual styles to selectors*/
 
 h1 {
-	font-size: 72px;
+ font-size: 72px;
 }
 
 h2 {
-	font-size: 48px;
+ font-size: 48px;
 }
 
 h3 {
-	font-size: 32px;
+ font-size: 32px;
 }
 ```
 
@@ -231,8 +231,8 @@ selector[attribute]
 
 ```css
 a[title] {
-	color: khaki;
-	background: grey; 
+ color: khaki;
+ background: grey; 
 }
 ```
 
@@ -246,7 +246,7 @@ a[title] {
 
 ```css
 a[href="<https://peterlunch.com/>"] {
-	color: purple;
+ color: purple;
 } 
 ```
 
@@ -260,8 +260,8 @@ a[href="<https://peterlunch.com/>"] {
 
 ```css
 a[href^="https"] {
-	color: yellow;
-	text-decoration: none;
+ color: yellow;
+ text-decoration: none;
 }
 ```
 
@@ -277,8 +277,8 @@ a[href^="https"] {
 
 ```css
 img[src$="/blog-imgs"] {
-	border-radius: 4px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ border-radius: 4px;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 ```
 
@@ -294,7 +294,7 @@ img[src$="/blog-imgs"] {
 
 ```css
 a[href*="peterlunch"] {
-	color: green;
+ color: green;
 }
 ```
 
@@ -315,18 +315,18 @@ a[href*="peterlunch"] {
 
 ```html
 <div> <!--parent-->
-	<p> <!--div child-->
-	<article> <!--div child, parent to h1 & p-->	 
-		<h1>
-			<p></p>
-		</h1>
-	</article>
-	<article>	
-		<h1>
-			<p></p>
-			<p></p>
-		</h1>
-	</article>
+ <p> <!--div child-->
+ <article> <!--div child, parent to h1 & p-->  
+  <h1>
+   <p></p>
+  </h1>
+ </article>
+ <article> 
+  <h1>
+   <p></p>
+   <p></p>
+  </h1>
+ </article>
 </div>
 ```
 
@@ -342,7 +342,7 @@ a[href*="peterlunch"] {
 
 ```css
 div p {
-	line-height: 2em;
+ line-height: 2em;
 }
 ```
 
@@ -358,7 +358,7 @@ div p {
 
 ```css
 div > p {
-	color: aquamarine;
+ color: aquamarine;
 }
 ```
 
@@ -372,9 +372,9 @@ div > p {
 
 ```css
 img + p {
-	font-size: 10px;
-	color: grey;
-	font-style: italic;
+ font-size: 10px;
+ color: grey;
+ font-style: italic;
 }
 ```
 
@@ -388,7 +388,7 @@ img + p {
 
 ```css
 article ~ h1 {
-	font-weight: 900;
+ font-weight: 900;
 }
 ```
 
@@ -396,29 +396,27 @@ article ~ h1 {
 
 ### 伪选择器
 
-Pseudo-selectors fall into two buckets. The first is [pseudo-class selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) and the second is [pseudo-element selectors](https://peterlunch.com/css-pseudo-elements/).
 伪选择器可分为两类。第一个是[伪类选择器](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)，第二个是[伪元素选择器](https://peterlunch.com/css-pseudo-elements/)。
 
-These selectors are complex and have a lot of options. To understand them it is worth reading some separate posts on them as they are complex topics on their own. But, I'll briefly touch on both here.
 这些选择器很复杂，有很多选项。为了理解它们，值得单独阅读一些关于它们的文章，因为它们本身就是复杂的主题。但是，我在这里简要的介绍一下两者。
 
-Firstly pseudo-class selectors select elements based on a certain state. You might have seen things like `:hover` or `:active`. These are the states of elements on your page. You can select elements based on whether that element is in the specified state.
+首先，伪类选择器根据某种状态选择元素。你可能已经见过`:hover`或`:active`这样的东西，这些是页面上的元素的状态。你可以根据该元素是否处于指定的状态来选择元素。
 
-A quick example would be:
+一个简单的例子是：
 
 ```css
 button:hover {
-	background: red;
+ background: red;
 }
 ```
 
-In the example above, when a user hovers over a button the background color will change to red.
+在上述的例子中，当用户在一个按钮上悬停时，背景颜色将会变为红色。
 
-If you want to better understand pseudo-class selectors I encourage you to read [this post](/news/explained-css-pseudo-classes-cef3c3177361/) by Nash Vail, who does a fantastic job of explaining them.
+如果你想要更好的理解伪类选择器，我推荐你阅读Nash Vail的[这篇文章](/news/explained-css-pseudo-classes-cef3c3177361/)，他对伪类的解释非常好。
 
-Next are pseudo-element selectors which I have written about [here](https://peterlunch.com/css-pseudo-elements/). These selectors select parts of an element. A part of an element might be the first letter of the element or the content before and after the element.
+接下来是我在[这篇文章](https://peterlunch.com/css-pseudo-elements/)中写过的伪元素选择器。这些选择器选择元素中的一部分，一个元素中的一部分可能是元素的第一个字母或者是该元素前后的内容。
 
-With pseudo-element selectors it is important to note that they use `::` (double colons) vs. `:` (single colons) like pseudo classes.
+对于伪类选择器，值得注意的是它们像伪类一样使用 `::`（双冒号）与`:`单冒号。
 
 ```CSS
 p {
@@ -439,11 +437,8 @@ p::first-letter {
 }
 ```
 
-## Summary
 ## 总结
 
-Now you should have a good understanding of CSS selectors and how you can use them to find HTML elements on your web pages.
-现在你应该
+现在你应该对CSS选择器有了很好的理解，以及如何使用它们来查找网页上的HTML元素。
 
-I hope you enjoyed reading this article. If you learnt something from this post then checkout the rest of my posts [here](https://bit.ly/2Re6Vdf) or [sign up to my newsletter](ttps://mailchi.mp/bfaa8a288d7c/7o1pve3bv9) to get ridiculously good and super exclusive newbie content.
-我希望你喜欢阅读这篇文章。如果你
+希望你喜欢阅读这篇文章。如果你在这篇文章中学到了什么，那么请查看我的[其他文章](https://bit.ly/2Re6Vdf)或订阅[我的频道](https://mailchi.mp/bfaa8a288d7c/7o1pve3bv9)以获得非常好的新手教程。

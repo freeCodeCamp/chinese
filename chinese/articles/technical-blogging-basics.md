@@ -1,6 +1,6 @@
 > -  原文地址：[Technical Blogging Basics – How to Write Articles as a Developer](https://www.freecodecamp.org/news/technical-blogging-basics/)
 > -  原文作者：[TAPAS ADHIKARYTAPAS ADHIKARY](https://www.freecodecamp.org/news/author/tapas/)
-> -  译者：
+> -  译者：seanbei
 > -  校对者：
 
 ![Technical Blogging Basics – How to Write Articles as a Developer](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/freeCodeCamp-Cover-3.png)

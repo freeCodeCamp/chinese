@@ -5,41 +5,41 @@
 
 ![Technical Blogging Basics – How to Write Articles as a Developer](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/freeCodeCamp-Cover-3.png)
 
-Software developers work on designing, coding, testing, and delivering the software we use every day. And whatever that developer's particular specialty, they know a lot about a lot of things – which means they should share that knowledge.
+软件开发人员致力于设计、编码、测试和交付我们每天使用的软件。不管那个开发人员的专长是什么，他们对很多事情基本都了如指掌——这也就意味着他们应该分享这些知识。
 
-Publishing articles and creating video content are great ways to share what we learn as developers. You may have your own blog or you may write for a publication. In either case, you should follow specific processes to write well and feel great about it.
+作为开发者，将我们所学到的知识通过发布文章和创建视频内容的形式分享出去，是一个很棒的方法。您可以拥有自己的博客，也可以为出版物撰稿。不管是哪种，你都应该遵循特定的流程来好好写作，并引以为豪。
 
-This article will cover the fundamentals of blogging to help you write great articles while not dropping the ball as a developer.
+本文将介绍博客写作的基础知识，以帮助你撰写出色的文章，同时又不舍弃开发者的角色。
 
 # TL;DR
 
-This tweet summarizes most of the points at a high level. However, we will talk about some real-life experiences and learning how to blog in more detail. Please keep reading and enjoy.
+这条推文在很高的层次上总结了大部分要点。但是，我们将更详细地讨论一些现实生活中的经验以及学习如何写博客。请继续往下看并好好享受。
 
-> Quality content writing is a process. It needs,  
+> 高质量的内容写作是一个过程。它需要， 
 >   
-> 👉 Planning  
-> 👉 Content Research  
-> 👉 Review(s)  
-> 👉 Time to publish  
-> 👉 Most importantly, the intent to write.  
+> 👉 计划 
+> 👉 研究内容  
+> 👉 审查 
+> 👉 发布时间 
+> 👉 最重要的，写作的意图。 
 >   
-> It's perfectly fine to take time to deliver a quality content. No rush.
+> 花时间在交付高质量内容上是完全没问题的。不能着急。
 > 
-> — Tapas Adhikary (@tapasadhikary) [April 3, 2021](https://twitter.com/tapasadhikary/status/1378224989288062982?ref_src=twsrc%5Etfw)
+> — Tapas Adhikary (@tapasadhikary) [2021.04.03](https://twitter.com/tapasadhikary/status/1378224989288062982?ref_src=twsrc%5Etfw)
 
-# Know your purpose
+# 了解你的目的
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/intent.png)
 
-Know your purpose
+了解你的目的
 
-We all need a purpose when we start something and the motivation to continue it. The intent behind our actions and our motivation may be different for everyone. You need to find your intent or purpose that explains why you want to start a blog or share your content.
+当我们开始做某事时，我们都需要一个目的，以及继续做它的动力。我们行动背后的意图和动机，因人而异。你需要找到你的意图或目的，能够解释为什么你要开始创建一个博客或分享内容。
 
-In most cases, the simple answer could be `Passion`. Fair enough! It could also be a business strategy, or perhaps you want to teach others. Maybe you want to keep learning – practically anything that gets you started will work.
+在大多数情况下，简单的答案可能是“激情”。很有道理！它也可能是一种商业策略，或者你想教别人。也许你想持续学习——几乎任何能让你开始的东西都会奏效。
 
-As a developer, we learn something new all the time. It is close to impossible to memorize every piece of what we've learned. When we document those lessons and bits of information, we might as well make that knowledge reusable.
+作为一个开发者，我们一直在学习新东西。记住我们所学的每一部分知识几乎是不可能的。当我们记录那些教训和信息时，这些知识也就可以被重用了。
 
-This is why writing an article about something you've learned recently is an excellent idea, and gives you very clear intent for your progressive documentation.
+这就是为什么写一篇关于你最近学到的东西的文章，是一个很好的主意，并且为你渐进式的文档提供了非常清晰的意图。
 
 💡 **Tips:** Create a private GitHub repo with a markdown file. When you encounter something new, add a note about it (with code, if needed) in the file.
 

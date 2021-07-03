@@ -17,12 +17,17 @@
 
 > 高质量的内容写作是一个过程。它需要， 
 >   
-> 👉 计划 
-> 👉 研究内容  
-> 👉 审查 
-> 👉 发布时间 
-> 👉 最重要的，写作的意图。 
->   
+> 👉 计划
+> 
+> 👉 研究内容
+> 
+> 👉 审查
+> 
+> 👉 发布时间
+> 
+> 👉 最重要的，写作的意图。
+> 
+> 
 > 花时间在交付高质量内容上是完全没问题的。不能着急。
 > 
 > — Tapas Adhikary (@tapasadhikary) [2021.04.03](https://twitter.com/tapasadhikary/status/1378224989288062982?ref_src=twsrc%5Etfw)
@@ -41,25 +46,25 @@
 
 这就是为什么写一篇关于你最近学到的东西的文章，是一个很好的主意，并且为你渐进式的文档提供了非常清晰的意图。
 
-💡 **Tips:** Create a private GitHub repo with a markdown file. When you encounter something new, add a note about it (with code, if needed) in the file.
+💡 **小提示：** 创建一个私人 GitHub 仓库，以及一个 markdown 文件。当你遇到新事物时，在这个文件中添加注释（如果需要的话还可以加代码）。
 
-The contents of this file will then become an excellent source for your future articles. I maintain a file called TIL\_2021.md (Things I Learned in the year 2021) for the same purpose.
+这个文件的内容将作为你今后文章的优秀资源。出于这个目的，我在维护一个名为 TIL\_2021.md 的文件（记录了我2021年学到的东西）。
 
-When I decided on blogging, I intended to learn by sharing knowledge. If you want to learn something deeply, start teaching it. Blogging is a great way to do that.
+当决定写博客时，我打算通过分享知识来学习。如果你想深入学习一些东西，请开始教别人。写博客就是一个很棒的方式。
 
-# Find Your Motivation
+# 找到你的动机
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/motivation.png)
 
-Do not give up, stay motivated
+不要放弃，保持动力
 
-Motivation can do wonders when you have it, but it can be hard to continue without it. As a content creator, your biggest motivation is likely to hear feedback from your readers. Positive feedback and constructive criticism always help you improve the content you create.
+拥有动机可以创造奇迹，但是没有它就很难继续做下去。作为内容创作者，最大的动力无疑是听到读者的反馈。积极的反馈和建设性的批评总是可以帮助你改进创造的内容。
 
-But there is a problem. Initially, you may not have very many readers to give you feedback. The chances of disappointment are higher if you are an individual blogger. So it helps to have a lot of self-motivation to sustain and continue your work.  
+但是有个问题。刚开始，很少有人会给你反馈。如果你是一个个人博主，失望的概率会很高。因此，拥有自我激励，对维持和继续你的工作是有很帮助的。
 
-Remember – do not give up, stay motivated. As a developer, you have plenty to learn, share, and write about.
+记住——不要放弃，保持动力。作为开发人员，你有很多东西要学习、分享和撰写。
 
-💡 **Tips:** If you want to start blogging as a developer, the developer community is helpful to stay connected and motivated. There are many incredible communities around like [Hashnode](https://hashnode.com/@atapas/joinme), [Dev.to](https://dev.to/), [Codenewbie](https://community.codenewbie.org/), [Hackernoon](https://hackernoon.com/), [freeCodeCamp](https://forum.freecodecamp.org/), [GirlsWhoCode](https://girlswhocode.com/), and many more.
+💡 **小提示：** 如果你想以开发者的身份开始写博客，开发者社区有助于你保持联系，保持动力。有很多极其精彩的社区，如 [Hashnode](https://hashnode.com/@atapas/joinme)，[Dev.to](https://dev.to/)，[Codenewbie](https://community.codenewbie.org/)，[Hackernoon](https://hackernoon.com/)，[freeCodeCamp](https://forum.freecodecamp.org/)，[GirlsWhoCode](https://girlswhocode.com/)等，还有很多。
 
 # Do Your Research
 

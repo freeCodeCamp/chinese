@@ -197,6 +197,7 @@ When the image is in the **Next Folder**, `style.css` is in previous folder. Not
 ![Alt Text](https://www.freecodecamp.org/news/content/images/2021/04/Frame-26.png)
 
 To go forward and locate the file path of `kitty.png`, we write one dot and slash like this (./) after the quote in `style.css`. Then we write the name of the folder then slash (/) and finally we write the name of image, like this:👇
+要继续查找 `kitty.png` 的文件路径，我们在 `style.css` 中的引号后面写一个点和斜杠，就像这样(./)。然后我们写入文件夹的名称，然后斜杠(/)，最后我们写入image的名称，像这样:👇
 
 ```css
  .container{
@@ -210,10 +211,14 @@ To go forward and locate the file path of `kitty.png`, we write one dot and slas
 ```
 
 If the image is in the **Previous Folder**, then we need to go back. Notice in the image below👇 that `style.css` is in the **src** folder and `kitty.png` is **outside the src folder.**
+如果图像是在 **前一个文件夹** 中，我们需要返回。注意，在下图👇中，`style.css` 在 **src** 文件夹中，`kitty.png` 在**src文件夹外**。
+
 
 ![Alt Text](https://www.freecodecamp.org/news/content/images/2021/04/Frame-27.png)
 
 To go back and locate the file path of `kitty.png`, we write two dots and a slash (../) after the quote in `style.cs`. Then we write the name of the image, like this: 👇
+返回并定位 `kitty.png` 文件路径，我们在 `style.cs` 中的引号后面写两个点和一个斜杠(../)。然后我们写下图像的名称，像这样:👇
+
 
 ```css
  .container{
@@ -227,12 +232,16 @@ To go back and locate the file path of `kitty.png`, we write two dots and a slas
 ```
 
 ### How to Use `background-image` by Direct Link
+### 如何通过链接使用 `background-image` 属性
 
 This is pretty easy. Write the property and insert the link inside `url()`.
+这个非常简单。正确的链接插入到 `url()` 中即可。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/szxp3jqyjyksrep1ep82.png)
 
 To work with an image which is a **direct link,** we need to write the following code:
+ 要使用一个是 **链接** 的图像，我们需要写以下代码:
+
 
 ```css
 //example ->
@@ -260,7 +269,7 @@ We can adjust the size of an image using the `background-size` property.
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xxbrgckb20fy8tmrg9ik.png)
 
 We write the syntax after writing the selector name, like this  👇
-在写完选择器名之后再写如下语法， 像这样👇
+在写完选择器名之后再写如下语法，像这样👇
 
 ```CSS
 .container{
@@ -273,20 +282,25 @@ You can use background-size in **3 ways**:
 你可以用 **3种方式** 使用 background-size 属性
 
 -   use the Cover / Contain value
--   
+-   使用 Cover / Contain 值
 -   set the image width and height
 -   设置图像宽度和高度
 -   use auto
 -   使用 auto
 
 Let's start by discussing the **cover & contain values**.  
+让我们从讨论 **cover 和 contain 值** 开始
+
 Bear size : \[718px X 614px\]
+Bear 大小： \[718px X 614px\]
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uixn5c8mrafpmlhth9iy.png)
 
 ### Cover value
+### Cover 值
 
 For this to work, we must include an image, set the height, and stop image repetition. We do that like this in CSS: 👇
+ 为此，我们必须包含一个图像，为其设置高度，并禁止图像重复。我们在CSS中这样做:👇
 
 ```css
 .container{
@@ -294,18 +308,21 @@ For this to work, we must include an image, set the height, and stop image repet
   background-repeat: no-repeat;
   background-size : cover;
 
-// Must include the height
+// 我们必须包含一个图像，设置它的高度，并像这样停止图像重复:👇
   height : 100vh;
 }
 ```
 
 When we use this property, it will stretch the image to the whole screen even when we resize the window. Watch the video below to see how it looks:👇
+ 当我们使用这个属性时，即使我们调整窗口的大小，它也会将图像拉伸到整个屏幕。请看下面的视频:👇
 
 ![Cover](https://media.giphy.com/media/9OdZ0B1wjO1kdofBBu/giphy.gif)
 
 ### The contain value
+### contain 值
 
 Same steps here – we must include an image, set its height, and stop image repetition like this:👇
+步骤相同 - 我们必须包含一个图像，设置它的高度，并停止图像重复，如下:👇
 
 ```css
 .container{
@@ -313,67 +330,77 @@ Same steps here – we must include an image, set its height, and stop image rep
   background-repeat: no-repeat;
   background-size : contain;
 
-// Must include the height
+// 在此必须设置高度
   height : 100vh;
 }
 ```
 
 This value will preserve the image size \[Responsive Image\] even when we resize the window. Check out this video below to see how it works: 👇
+他的值将保持对应图像的大小，即使我们调整窗口的大小。 看看下面的视频，它是这样工作的:👇
 
 ![Contain](https://media.giphy.com/media/VaqDcSh38DTz7YbV6p/giphy.gif)
 
 ### Image width and height
+### 图像宽度和高度
 
 We can set the width and height of the image using the background-size property.
+通过 background-size 属性我们可以调整图像的宽度和高度。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/36p9azoztkvawbvy6244.png)
 
 Here's the syntax in CSS: 👇
+以下是CSS中的语法:👇
 
 ```css
 .container{
-// here, we see  width👇  &  👇 height
+// 这我们可以看到宽度 👇  和  👇 高度
   background-size : 200px   200px;
 }
 ```
 
 Also, don't forget to insert the image, set its height, and stop image repetition. The code snippet looks like this:
+当然，不要忘记插入一张图片， 设置其高度，禁止重复。代码如下：
 
 ```css
 .container{
   background-image : url('cute-bear.png');
   background-repeat: no-repeat;
 
-// here, we see  width👇 &  👇 height
+// 这我们可以看到宽度 👇  和  👇 高度
   background-size : 200px  200px;
 
-// Must include the height
+// 必须包含高度
   height : 100vh;
 }
 ```
 
 ### Auto sizing
+### 自适应
 
 When using this value, the image will stay at its original size. It won't change when we resize the window. It looks like this:
+当我们使用这个值的时候，图片会保持其原来的大小。其不会随着我们调整窗口大小而改变。如下：
 
 ![](https://media.giphy.com/media/hHc7ZhU7BB4NX8gLRR/giphy.gif)
 
 # The CSS background-repeat property
+# CSS background-repeat 属性
 
 This property allows us to repeat the same image multiple times.
+这个属性允许我们多次重复相同的图像。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/629rnxirqrdr8p5fapcd.png)
 
-We write the syntax after writing the selector name, like this  👇
+我们在编写选择器名称之后编写如下CSS语法 👇
 
 ```CSS
 .container{
-// we'll change values 👇 here
+// 在这里改变值 👇
   background-repeat : repeat;
 }
 ```
 
 This property has six values:
+这个属性有6个值：
 
 -   repeat
 -   repeat-x
@@ -383,6 +410,8 @@ This property has six values:
 -   round
 
 Here are the results of each of these six values at a glance. Note that the kitty size in these examples is \[200px X 200px\].
+在选择器后我们可以写如下CSS。注意在这个例子中 kitty 的大小是 \[200px X 200px\]。
+
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jj2jwfwh0pboqpylkeq0.png)
 
@@ -391,24 +420,28 @@ Here are the results of each of these six values at a glance. Note that the kitt
 ![Space](https://media.giphy.com/media/cO0jNSpVi0I3FWD62G/giphy.gif)
 
 Now, Let's investigate what's happening with each value. BUT, before that, note that we need to insert an image using the `background-image` property, like this:
+现在，我们来研究一下每个值会发生什么。但在此之前，我们需要插入一张图片并使用了 `background-image` 属性，像这样：
 
 ```css
 .container{
    background-image : url('kitty.png');
    background-size : 200px 200px;
-   background-repeat :  ; //we will play with values here 
+   background-repeat :  ; // 我们在这里写对应属性值
 
    height : 100vh;
 }
 ```
 
 ### The repeat value
+### repeat 值
 
 By using this value, we can repeat the same image multiple times along **both the X and Y axes** as long as the screen space doesn't end. Here, the kitty size is 200px x 200px.
+通过使用这个值，我们可以沿着 **X轴和Y轴** 重复相同的图片多次，知道容器被填充满。这里，kitty 的大小是 200px x 200px。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/26zsa1dn161pawjqxuqp.png)
 
 To duplicate this result, we write ->
+为了复制此结果，我们会这么写 ->
 
 ```CSS
 .container{
@@ -421,12 +454,15 @@ To duplicate this result, we write ->
 ```
 
 ### The repeat-x value
+### repeat-x 值
 
 This value allows us to repeat the same image multiple times along the **X-Axis** as long as the screen space doesn't end. Kitty size: 200px X 200px.
+顾名思义，我们可以使用这个值在容器X轴上重复相同的图片，直到容器被填充满。 Kitty的大小：  200px X 200px。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pl4znzrwcevpr5w1a4i5.png)
 
 to make this happen, we write ->
+为了实现这一点，我们这么写 ->
 
 ```CSS
 .container{
@@ -439,12 +475,15 @@ to make this happen, we write ->
 ```
 
 ### The repeat-y value
+### repeat-y 值
 
 This one works the same way as "repeat-x", but works along the **Y-Axis** as long as the screen space doesn't end. Kitty size: 200px X 200px.
+与 "repeat-x" 同理，但是只作用在 **Y轴上** 。Kitty 的大小: 200px X 200px.
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7yo3i3bp8cw2r6zqhtvm.png)
 
 for this outcome, we write ->
+为了实现这一点，我们这么写 ->
 
 ```CSS
 .container{
@@ -457,12 +496,15 @@ for this outcome, we write ->
 ```
 
 ### The no-repeat value
+### no-repeat 值
 
 We can have our original image without repetition using this value. Kitty size: 200px X 200px.
+我们使用这个值可以禁止图像重复。 Kitty 大小： 200px X 200px。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/p2okgurnuakrnqbyv6kr.png)
 
 For this result, we write ->
+为了实现这一点，我们这么写 ->
 
 ```CSS
 .container{
@@ -475,12 +517,15 @@ For this result, we write ->
 ```
 
 ### The space value
+### space 值
 
 This works both along the X and Y axes. We can see the main difference between the values **space and round** when we resize the window. Notice that we have **empty spaces** when we resize the window:
+这个值在 X 轴和 Y 轴都起作用。当我们调整窗口大小时，我们可以看到值 **space和round** 之间的主要区别。 注意，当我们调整窗口大小时，我们有 **空得空间**:
 
 ![Space](https://media.giphy.com/media/cO0jNSpVi0I3FWD62G/giphy.gif)
 
 to experiment with this value, write ->
+为了测试这个值，我们可以这么写
 
 ```CSS
 .container{
@@ -493,12 +538,15 @@ to experiment with this value, write ->
 ```
 
 ### The round value
+### round 值
 
 This works both along the X and Y axes. Notice that the image is **stretching** when we resize the window.
+这个值在 X 轴和 Y 轴都起作用。在调整窗口大小时注意图像 **拉伸**。
 
 ![Round](https://media.giphy.com/media/3BUBxpCxmcDrBN4aZF/giphy.gif)
 
 Follow along & write ->
+跟着写 ->
 
 ```CSS
 .container{
@@ -511,21 +559,25 @@ Follow along & write ->
 ```
 
 # The CSS background-position property
+# background-position 属性
 
 This property is used to change the position of an image on the screen.
+此属性用于更改图像在屏幕上的位置
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/j4ndvr71f0yl9c44kbc7.png)
 
 Here's the syntax: 👇
+语法如下： 👇
 
 ```css
 .container{
-// This is       X-Axis👇  &  👇 Y-Axis
+// 这是       X 轴👇  和  👇 Y 轴
 background-position : 300px  200px;
 }
 ```
 
 Also, don't forget to insert the image, set its height, and stop image repetition. We've set the kitty size to 200px X 200px using the `background-size` property:
+当然不要忘记插入一张图片，设置高度，禁止图像重复。我们使用 `background-size` 属性设置 kitty 的大小到 200px X 200px ：
 
 ```css
 .container{
@@ -533,17 +585,19 @@ Also, don't forget to insert the image, set its height, and stop image repetitio
   background-size: 200px 200px;
   background-repeat: no-repeat;
 
-// This is         X-Axis👇  & 👇 Y-Axis
+// 这是       X 轴👇  和  👇 Y 轴
   background-position : 300px 200px;
   height: 100vh;
 }
 ```
 
 And here's the result:
+结果如下：
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/65p2htkztmijbm1hxlug.png)
 
 You can also use a combination of these values:
+你也可以使用这些值的组合:
 
 -   top
 -   left
@@ -552,6 +606,7 @@ You can also use a combination of these values:
 -   percentage values
 
 For an example, let's set our kitty at the very bottom right. Here's the code snippet for this:
+例如，让我们将 kitty 设置到 屏幕右下侧。代码如下：
 
 ```css
 .container{
@@ -559,13 +614,14 @@ For an example, let's set our kitty at the very bottom right. Here's the code sn
   background-size: 200px 200px;
   background-repeat: no-repeat;
 
-// This is         X-Axis👇  & 👇 Y-Axis
+// 这是       X 轴👇  和  👇 Y 轴
   background-position : bottom right;
   height: 100vh;
 }
 ```
 
 And here's the result:
+结果如下
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ga6veuh8ea3yzq7nend2.png)
 

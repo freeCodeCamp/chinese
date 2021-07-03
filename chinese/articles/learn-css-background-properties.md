@@ -626,6 +626,8 @@ And here's the result:
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ga6veuh8ea3yzq7nend2.png)
 
 Calculating the available space of the screen, the % values determine the position of the image. Here's what it looks like in code:
+计算屏幕的可用空间，%值决定了图像的位置。代码如下：
+
 
 ```css
 .container{
@@ -633,23 +635,27 @@ Calculating the available space of the screen, the % values determine the positi
   background-size: 200px 200px;
   background-repeat: no-repeat;
 
-// This is         X-Axis👇  & 👇 Y-Axis
+// 这是       X 轴👇  和  👇 Y 轴
   background-position : 25% 15%;
   height: 100vh;
 }
 ```
 
 And here's the result:
+结果如下：
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fazbxgdpkqeomum02qv7.png)
 
 # The CSS background-origin property
+# CSS background-origin 属性
 
 This property allows us to set the origin of our image across the CSS box model.
+这个属性允许我们在CSS盒子模型中设置图像的原点。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wc2b6ypgcfdtol6am14g.png)
 
 We write the syntax after writing the selector name, like this  👇
+我们在编写选择器名称之后编写语法，如👇
 
 ```CSS
 .container{
@@ -659,6 +665,7 @@ We write the syntax after writing the selector name, like this  👇
 ```
 
 Its four values are:
+它的四个值分别是： 
 
 -   border-box
 -   padding-box
@@ -666,21 +673,28 @@ Its four values are:
 -   inherit
 
 In the standard CSS box model, the outermost part is the border. Then comes the padding and finally we have the content itself at the center.
+在标准 CSS 盒子模型中，最外侧是border。然后是padding，最后是在中间的内容本身。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/p3mdn6hpd1u892akrkj5.png)
 
 Here's the result of every property at a glance:
+ 下面是每个属性的结果:
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/27ptyulhvxqi4idrw68n.png)
 
 To recreate these results:
+为了重现这些结果:
 
 -   First we need an image, we need to stop image repetition, and set the height and width of **both the container and the image.**
+-   首先我们需要一张图片，禁止重复，为 **容器本身及图片** 设置宽度和高度。
 -   Once done, we will insert 40px of padding, otherwise we can't see the difference between the padding box and the content box.
+-   完成后，我们设置 40px 的 padding，否则我们无法看到 padding 容器 和 content 容器的区别。
 -   Then, insert a 25px red border. Set the border-style to dashed to get a **dashed border** on the screen.
 -   set the background-size to 400px & 400px
+-   设置 background-size 到 400px & 400px
 
 Here's what that looks like in code:
+代码如下：
 
 ```css
 .container{
@@ -688,29 +702,33 @@ Here's what that looks like in code:
   background-repeat: no-repeat;
   background-size: 400px 400px;
 
-// Change  values here  👇  to see difference 
+// 在这里改变值来看有何不同 👇
   background-origin: border-box;
   padding: 40px;
   border: 25px solid red;
   border-style: dashed;
 
-// Width & height for container 👇
+// 容器的宽度和高度 👇
   width : 400px;
   height : 400px;
 }
 ```
 
 ### Take A Break
+### 休息一下
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yahewko7hckdgp7p4xux.png)
 
 # The CSS background-clip property
+# CSS background-clip 属性
 
 This is the same as the `background-origin` property. The main difference is that `background-clip` **CUTS** the image to fit inside the box, while `background-origin` **PUSHES** the content inside the box to fit.
+其与 `background-origin` 属性类似，最主要的区别就是 `background-clip` 会将图像 **剪切** 到对应的容器中，然而 `background-origin` 会 **推动** 到容器的的 content 中。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r4ga97rke3kgppd7qlxn.png)
 
 We write the syntax after writing the selector name, like this  👇
+我们在编写选择器名称之后编写如下语法 👇
 
 ```CSS
 .container{
@@ -720,6 +738,7 @@ We write the syntax after writing the selector name, like this  👇
 ```
 
 Its four values are:
+其四个值分别为：
 
 -   border-box
 -   padding-box
@@ -727,17 +746,24 @@ Its four values are:
 -   inherit
 
 Here's the result of every property at a glance:
+下面是每个值的结果:
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xgd6sh8237bmvpnujl8r.png)
 
 To recreate these results:
+为了重现这些结果:
 
 -   First we need an image, we need to stop image repetition, and we need to set the height and width of **both the container and the image.**
+-   首先我们需要一张图片，禁止重复，为 **容器本身及图片** 设置宽度和高度。
 -   Once done, we will insert 40px padding, otherwise we won't be able to see the **difference** between the padding box and content box.
+-   完成后，我们设置 40px 的 padding，否则我们无法看到 padding 容器 和 content 容器的区别。
 -   Then, insert a 25px red border. Set the border-style to dashed to see the **dashed border** on screen.
+-   然后我们设置 25px 的红色边框。 设置 border-style 为虚线，这样我们可以在屏幕中看到虚线边框。
 -   Set the background-size to 400px & 400px
+-   设置 background-size 到 400px & 400px
 
 The code looks like this:
+代码如下：
 
 ```css
 .container{
@@ -745,52 +771,61 @@ The code looks like this:
   background-repeat: no-repeat;
   background-size: 400px 400px;
 
-// Change  values here  👇  to see difference 
+// 改变这里的值来看其变化
   background-clip: border-box;
   padding: 40px;
   border: 25px solid red;
   border-style: dashed;
 
-// Width & height for container 👇
+// 容器宽度和高度 👇
   width : 400px;
   height : 400px;
 }
 ```
 
 # The CSS background-attachment property
+# CSS background-attachment 属性
 
 This property allows us to control the behavior of our content and image **when we scroll.**
+这个属性允许我们在 **滚动时** 控制内容和图像的行为。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n1xx67vtt5w3c861sskx.png)
 
 We write the syntax after writing the selector name, like this  👇
+们在编写选择器名称之后编写如下语法 👇
 
 ```CSS
 .container{
-// We'll  change  values 👇  here
+// 我们在这里改变其值 👇
 background-attachment: scroll;
 }
 ```
 
 Its three values are:
+其三个值如下：
 
 -   scroll
 -   fixed
 -   local
 
 When we use **scroll**, the image is fixed and we can freely scroll our content. The **fixed** value gives us a parallax effect on mouse scroll and **local** produces multiple images as long as our content doesn't end.
+当我们使用 **scroll**，图像是固定的，我们可以自由滚动我们的内容。 **fixed** 值会给我们鼠标滚动的视差效果，**local** 值产生多个图像，只要我们的内容没有结束
 
 You can see the results live here 👇
+你可以在下面照看到结果 👇
 
 [Here's where I got this pen](https://dev.to/hadrysmateusz/learn-all-8-background-css-properties-in-5-minutes-2lk4).
 
 # The CSS background-color property
+# CSS background-color 属性
 
 You can use this property to fill your background with color.
+你可以使用这个属性填充背景颜色
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/mh7pe7phpj2vrvz304ma.png)
 
 We write the syntax after writing the selector name, like this  👇
+我们在编写选择器名称之后编写如下语法： 👇
 
 ```CSS
 .container{
@@ -800,14 +835,20 @@ We write the syntax after writing the selector name, like this  👇
 ```
 
 Out of the many options, the most popular ones are:
+在众多值中，最受欢迎的是:
 
 -   Solid color by name or hex value
+-   通过名称或者十六进制值对应的颜色
 -   Using the `RGB()` color function
+-   使用 `RGB()` 颜色函数
 -   Using the `linear-gradient()` function
+-   使用 `linear-gradient()` 函数
 
 ### How to get a solid background color by name or hex value
+如何通过名称或者十六进制获得一个纯的背景颜色
 
 You can use color names to set the background color, like this:
+你可以使用颜色的名称来设置背景颜色， 像这样： 
 
 ```css
 .container{
@@ -818,6 +859,7 @@ You can use color names to set the background color, like this:
 ```
 
 Or, you can use a hex color code like this:
+或者，你也可以使用十六进制来设置颜色，像这样：
 
 ```css
 .container{
@@ -828,17 +870,20 @@ Or, you can use a hex color code like this:
 ```
 
 You can check out these resources for more colors:
+你可以查看这些资源获得更多颜色:
 
 -   [coolors.co](https://coolors.co/)
 -   [flatuicolors.com](https://flatuicolors.com/)
 
 ### How to use the RBG() color function to set background color
+### 如何使用 RBG() 函数来设置背景颜色
 
 You can use `RGB()` color function to set the background color like this:
+我们使用 `RGB()` 颜色颜色函数来设置背景颜色， 像这样：
 
 ```css
 .container{
-// color name is "American River"
+// 颜色名称是 "American River"
    background-color : rgb(99, 110, 114);
 
    height : 100vh;
@@ -846,10 +891,11 @@ You can use `RGB()` color function to set the background color like this:
 ```
 
 Or, you can use `RGBA()` to set both color and opacity like this:
+或者你也可以使用 `RGBA()` 来设置颜色和透明度，像这样：
 
 ```css
 .container{
-// The 0.5 at last represents        50% 👇 opacity 
+// 0.5 代表50%的透明度 👇 
    background-color :  rgba(99, 110, 114, 0.5);
 
    height : 100vh;
@@ -857,24 +903,31 @@ Or, you can use `RGBA()` to set both color and opacity like this:
 ```
 
 This is an experiment with the color named 'Eton blue' with various opacity levels: 👇
+这是一个用颜色命名为 'Eton blue' 的不同不透明度级别的实验:👇
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yzc82sudq8es7ocok12g.png)
 
 ### How to set the background color with the linear-gradient() function
+如何通过 linear-gradient() 函数 来设置背景颜色
 
 You can use this function to create a gradient color of more than 1 color. Here are some examples of gradient colors:
+您可以使用此函数创建一个超过一种颜色的渐变颜色。以下是一些渐变颜色的例子:
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/f0j3e3r6kobycowckdxg.png)
 
 You can visit [this website](https://uigradients.com/#Summer) for more color resources with CSS code snippets.
+你可以浏览 [这个网站](https://uigradients.com/#Summer) 获得更多颜色相关的 CSS 代码。
 
 Let's recreate this background color:
-
+让我们重新创建这个背景色:
+ 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jkf21o97m7gqzpme810k.png)
 
 '#22c1c3' represents the color on the left, and '#fdbb2d' represents color on right. '90deg' tells us how the two colors will be angled to create a gradient.
+'#22c1c3'表示左边的颜色，'#fdbb2d'表示右边的颜色。 '90deg' 告诉我们如何将这两种颜色的梯度创建一个渐变。
 
 The code snippet looks like this:
+代码如下：
 
 ```css
 .container{

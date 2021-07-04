@@ -40,7 +40,7 @@
 
 当我们开始做某事时，我们都需要一个目的，以及继续做它的动力。我们行动背后的意图和动机，因人而异。你需要找到你的意图或目的，能够解释为什么你要开始创建一个博客或分享内容。
 
-在大多数情况下，简单的答案可能是“激情”。很有道理！它也可能是一种商业策略，或者你想教别人。也许你想持续学习——几乎任何能让你开始的东西都会奏效。
+在大多数情况下，简单的答案可能是`激情`。很有道理！它也可能是一种商业策略，或者你想教别人。也许你想持续学习——几乎任何能让你开始的东西都会奏效。
 
 作为一个开发者，我们一直在学习新东西。记住我们所学的每一部分知识几乎是不可能的。当我们记录那些教训和信息时，这些知识也就可以被重用了。
 
@@ -74,14 +74,14 @@
 
 在博客中，内容统治一切。作为开发者，我们有各种各样的想法，解决问题的步骤，以及想要掌握的新知识。但是最重要的是能把它们转化为优质的内容。通常，花时间把你的话题彻底研究明白，是很有必要的。
 
-现在我来举一个关于内容研究的例子。假设你用“链表”解决了一个问题，而且是你第一次使用。你非常激动，想把学到的分享出来。以下是需要考虑的点：
+现在我来举一个关于内容研究的例子。假设你用`链表`解决了一个问题，而且是你第一次使用。你非常激动，想把学到的分享出来。以下是需要考虑的点：
 
--   你需要大致理解“链表”以及已经被解决的问题的上下文。
--   你需要理解“链表”的优缺点。
+-   你需要大致理解`链表`以及已经被解决的问题的上下文。
+-   你需要理解`链表`的优缺点。
 -   你需要创建几个例子来演示如何用好它。
 -   你需要确保清楚地解释了你解决问题的方法，这样读者才能在他们自己的案例中使用。
 
-💡 **小提示：** 一旦明白了你需要知道什么，你就可以从任何完备的资源中进行学习。你可以在“Google”，“Quora”，“Reddit”等上面进行搜索。“Stackoverflow” 同样也是一个优秀的平台，你可以用它来检索你的话题。
+💡 **小提示：** 一旦明白了你需要知道什么，你就可以从任何完备的资源中进行学习。你可以在 `Google`，`Quora`，`Reddit` 等上面进行搜索。`Stackoverflow` 同样也是一个优秀的平台，你可以用它来检索你的话题。
 
 确保在取得进步时记下所学的内容。这些笔记最终将转化成你要撰写和发布的文章。
 
@@ -98,105 +98,105 @@
 -   **文章标题：** 一个引人注目的标题可以吸引很多读者来访问你的文章。不管怎样，人们很难错过阅读文章的标题。保持标题悦耳易记，能提升文章的流量。
 -   **封面图片：** 一张相关的封面图片使得文章更加具有吸引力。当你在社交媒体如推特，领英，红迪网上分享文章时，一张创意十足的封面将吸引你的读者。
 -   **简介：** 这部分高度概括了你的文章内容。它可以是第一段，也可以是一个 [Tl;DR](https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read)，用以解释你打算在文章中介绍的内容。
--   **段落标题和子标题：** 你应该将内容分解成几个关联的子话题。为了达到这个目的，创建几个区块，并提供与之相关的标题和子标题。例如，在这篇文章中，我创建了多个区块，给每个区块配上了标题，如“了解你的目的”，“找到你的动机”等。
+-   **段落标题和子标题：** 你应该将内容分解成几个关联的子话题。为了达到这个目的，创建几个区块，并提供与之相关的标题和子标题。例如，在这篇文章中，我创建了多个区块，给每个区块配上了标题，如`了解你的目的`，`找到你的动机`等。
 -   **图形：** “一张图片胜过千言万语”。这通常是正确的，因此请考虑用一些图表、图片等来支持你的内容。
 -   **总结：** 最后的总结部分，可帮助你的读者回顾到目前为止他们从文章中学到的东西。同样，对于有些读者，再次过来收集内容时，只要通过快速阅览总结部分就可以了，这很有帮助。
 -   **重要的链接：** 你可能希望以一个参考链接的列表来结束文章，以供读者进一步阅读。你也可以在这一部分列出你以前发布的文章的链接。
 
-💡 Tips: Try to use a consistent content structure for your articles. Your readers will get used to it and find it easy to follow.
+💡 小提示：尝试在你的文章中使用一个统一的内容结构，这样你的读者会习惯它，然后会发现很容易理解。
 
-# Writing Tools
+# 写作工具
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/Tools.png)
 
-Using tools to make you efficient and smarter
+使用工具让你更高效更灵活
 
-Creating quality content takes time. You can make yourself a productive and efficient content creator by using some of the tools available for free. Here are a few that you may find helpful,
+创造优质内容很花时间。你可以使用一些免费可用的工具，使自己成为一个多产和高效的内容创造者。这里有一些你可能觉得有用的工具，
 
-⚒️ [Notion](https://www.notion.so/): this tool can help you manage your personal and professional work TODOs in an efficient manner. Anytime an article idea occurs to you or you solve an interesting problem, create a task in the tool. You can prioritize, schedule, and assign tasks with ease.
+⚒️ [Notion](https://www.notion.so/)：这个工具可以帮助你以高效的方式，管理个人和专业的工作代办事项。任何时候产生一篇文章的想法或者你解决了一个有趣的问题，在这个工具中创建一项任务。你可以轻松排序，安排时间，分配任务。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/image-29.png)
 
-Task planner with Notion
+Notion 中的任务计划
 
-⚒️ [Grammarly](http://grammarly.com): If you are a non-native English speaker like me, there are times when you might not be familiar enough with the language's grammar rules.
+⚒️ [Grammarly](http://grammarly.com)：如果你跟我一样，是一个非英语母语者，有时可能会对语言的语法规则不够熟悉。
 
-In this case, a tool like `Grammarly` is a life-saver in many ways. It detects grammatical and spelling mistakes, suggests re-phrasing for complex sentences, corrects passive to active voice, and more. You can start with the free version and go for the premium based on your usage.
+在这种情况下，像 `Grammarly` 这样的工具在各个方面扮演拯救者。它检查语法和拼写错误，建议对复杂句子重新措辞，纠正被动语态为主动语态，等等。你可以先使用试用版本，之后根据你的使用情况来升级到付费。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/image-30.png)
 
-Correction suggestion with Grammarly
+Grammarly 的修正建议
 
-⚒️ [Hemingway Editor](https://hemingwayapp.com/): This is another excellent tool to support you with your English writing. You can use this editor along with `Grammarly` if you want. I love the way it indicates inadequate use of adverbs, active/passive voice, and complicated words and phrases.
+⚒️ [Hemingway Editor](https://hemingwayapp.com/)：这是另一个优秀的工具，用于协助你进行英语写作。如果你愿意，可以连同 `Grammarly` 一起来使用这个编辑器。副词、主动/被动语态，以及复杂的单词和短语，这些如果使用不当，它都能指出，这一点我很喜欢。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/image-31.png)
 
-Categorized suggestions with the Hemmingway Editor
+Hemmingway Editor 的分类建议
 
-⚒️ [Canva](https://www.canva.com/): Canva is a tool where you make designs, art, and unleash your creativity. You can create cover images, article graphics, animated gifs, and more without any prior experience with `Canva`. The generous free plan is sufficient to get started.
+⚒️ [Canva](https://www.canva.com/)：Canva 是进行设计、艺术和释放创造力的工具。在没有任何 `Canva` 经验的情况下，你依然可以用它来创建封面图像、文章图形、动画 gif 等。它慷慨的免费计划足以让你开始使用。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/image-32.png)
 
-Create and organize your creativity using Canva
+使用 Canva 创造和组织你的创意
 
-⚒️ [Pixteller](https://pixteller.com/): This is an alternate suggestion for creating cover images, graphics, and so on.
+⚒️ [Pixteller](https://pixteller.com/)：这是用于创建封面图像、图形等的另一个建议。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/image-33.png)
 
-Pixteller to create images
+使用 Pixteller 创建图片
 
-⚒️ [ShareX](https://getsharex.com/downloads/): It is a super cool productivity tool for screen captures, making animated images, file sharing, and so on.
+⚒️ [ShareX](https://getsharex.com/downloads/)：它是一款超酷的生产力工具，用于截屏、制作动画图片、文件共享等。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/image-34.png)
 
-Create, gifs, screenshots, videos
+创建 gif，截屏，视频
 
-⚒️ [OBS Studio](https://obsproject.com/download): this is a free, open-source video recording and streaming tool. You may be wondering, why do I need this for blogging?
+⚒️ [OBS Studio](https://obsproject.com/download)：这是一个免费的开源视频录制和流媒体工具。你可能会疑惑，为什么我写博客需要它？
 
-At times, you may want to create a video, upload it to YouTube or Vimeo, and link to it from your articles. You can use the OBS Studio tool to create quality videos with lots of customization options.
+有时，你可能想要创建一段视频，上传到 YouTube 或 Vimeo，并从你的文章中链接到该视频。你可以使用 OBS Studio 创建优质视频，它有很多自定义选项。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/image-35.png)
 
-Create high quality videos 
+创建高质量视频 
 
-⚒️ [SERP Snippet Generator](https://serpsim.com/): SERP (Search Engine Result Page) is the page we see after entering a query into search engines like Google or Bing. A SERP snippet generator helps you finalizing a suitable title and meta description of your article post before you publish it.
+⚒️ [SERP 片段生成器](https://serpsim.com/)：SERP（搜索引擎结果页）是我们在 Google 或 Bing 等搜索引擎输入查询后看到的页面。SERP 片段生成器可帮助你在发布文章之前确定合适的标题和元描述。
 
-See the image below to figure out a title and description within a limit to show the search result correctly.
+请参阅下图以找出限制范围内的标题和描述，以正确显示搜索结果。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/serpsim_snapshot-1.png)
 
-SERP Generator
+SERP 生成器
 
-# Do Lots of Proofreading
+# 进行大量校对
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/reading.png)
 
-Review, re-review, re-re-review, and so on...
+评审，评审，再评审……
 
-When you write something, you need to check for errors and get your article reviewed before publishing or sharing it. This process of checking and making sure your content is ready to publish is called proofreading. In general, you should check for:
+你写了一些东西，在发布或分享之前，你需要检查错误并评审你的文章。这个检查及确保你的内容已经准备好进行发布的过程叫校对。通常，你应该检查：
 
--   Spelling errors
--   Grammatical mistakes
--   Formatting issues
--   Punctuation
--   Accuracy
--   Language Consistency
+-   拼写错误
+-   语法错误
+-   格式问题
+-   标点符号
+-   准确性
+-   语言一致性
 
-When it comes to proofreading and reviewing, here is a famous quote for some inspiration:
+在校对和审查方面，有一句名言可以激发灵感：
 
-> “I've found the best way to revise your own work is to pretend that somebody else wrote it and then to rip the living sh\*t out of it.” ― Don Roff
+> “我发现修改你自己的作品的最好方法是假装是别人写的，然后把它活生生撕掉。” - Don Roff
 
-# Publish Your Article
+# 发布你的文章
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/publish.png)
 
-Don't keep it to yourself, just publish it
+不要只把它留给自己，请发布它
 
-If you are happy with the article after your proofreading, the next logical step is to publish it. You may want to schedule it to publish on a particular day of the week, or you may want to publish right then – it is up to you.
+如果在校对之后，你对文章很满意，接下来一步自然就是发布它。你可能希望将其安排在一周中的特定日期进行发布，或者你想立即发布——这取决于你自己。
 
-As a general principle, it is better to publish when an article is ready from your side. Similarly, you should never rush to publish an article to meet a deadline.
+一般而言，最好是在你准备好文章时就发布。同样，你不应该赶着最后期限去匆忙发布。
 
-💡 **Tips:** Publishing your article should be part of the entire plan. If you have to publish an article by a specific date, work backward to plan the content accordingly. Do not compromise the quality of the content in the rush of publishing it.
+💡 **小提示：** 发布你的文章必须是整个计划的一部分。如果你不得不在一个特定日期发布文章，那就要你想规划相应的内容。千万不要为了匆忙发布，而妥协文章内容的质量。
 
 # Share Your Article on Social Media
 

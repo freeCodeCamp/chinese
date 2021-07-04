@@ -198,25 +198,25 @@ SERP 生成器
 
 💡 **小提示：** 发布你的文章必须是整个计划的一部分。如果你不得不在一个特定日期发布文章，那就要你想规划相应的内容。千万不要为了匆忙发布，而妥协文章内容的质量。
 
-# Share Your Article on Social Media
+# 在社交媒体分享你的文章
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/socialize.png)
 
-Social media platforms are a big booster
+社交媒体平台是一个巨大的助推器
 
-Social media is an extremely powerful tool. And you should make positive use of it as a blogger.
+社交媒体是一个极其强大的工具。作为博主，你应该积极利用它。
 
-Publishing your article may not be enough if you want it to reach as many potential readers as it can. It's therefore a good idea to share your article on various social media platforms.
+如果你希望文章尽可能多地吸引潜在读者，发表文章可能还不够。因此，在各种社交媒体平台上分享你的文章是个好主意。
 
-Here a few platforms where you should share your article links:
+你应该分享文章的链接到以下几个平台：
 
--   [Twitter](https://twitter.com/)
--   [LinkedIn](https://www.linkedin.com/feed/)
--   [Reddit](https://www.reddit.com/)
--   [HackerNews](https://news.ycombinator.com/)
--   [FaceBook](https://facebook.com/)
+-   [推特](https://twitter.com/)
+-   [领英](https://www.linkedin.com/feed/)
+-   [红迪网](https://www.reddit.com/)
+-   [黑客新闻](https://news.ycombinator.com/)
+-   [脸书](https://facebook.com/)
 
-There are a few more platforms where link sharing alone may not work very well. You can create a cover image/graphic suitable to the topic and upload the image (and share the link) to places like [Instagram](https://www.instagram.com/) and [Pinterest](https://in.pinterest.com/) using the right hashtags.
+还有一些平台，单独分享链接并不会有什么效果。你可以创建适合主题的封面照片或图表，然后把它和链接上传到像 [Instagram](https://www.instagram.com/) 和 [Pinterest](https://in.pinterest.com/) 这样的地方，记得使用正确的主题标签。
 
 💡 Tips: Make sure you follow the policies and guidelines specified by each social media platform when you share your blog link. If you don't, your account could be flagged or banned.
 

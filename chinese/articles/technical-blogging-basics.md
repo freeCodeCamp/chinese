@@ -13,7 +13,7 @@
 
 # TL;DR
 
-这条推文在很高的层次上总结了大部分要点。但是，我们将更详细地讨论一些现实生活中的经验以及学习如何写博客。请继续往下看并好好享受。
+这条推文高度总结了大部分要点。但是，我们将更详细地讨论一些现实生活中的经验以及学习如何写博客。请继续往下看并好好享受。
 
 > 高质量的内容写作是一个过程。它需要， 
 >   
@@ -218,21 +218,21 @@ SERP 生成器
 
 还有一些平台，单独分享链接并不会有什么效果。你可以创建适合主题的封面照片或图表，然后把它和链接上传到像 [Instagram](https://www.instagram.com/) 和 [Pinterest](https://in.pinterest.com/) 这样的地方，记得使用正确的主题标签。
 
-💡 Tips: Make sure you follow the policies and guidelines specified by each social media platform when you share your blog link. If you don't, your account could be flagged or banned.
+💡 小提示：分享博客链接时，请确保你遵守了每个社交媒体平台各自的政策和指导方针。如果不这么做，你的账号可能会被标记或者禁掉。
 
-Another exciting way to share your content is by republishing it. You can republish your article on another blogging platform if you are allowed to do so. For example, an article written on the `Hashnode` platform can be republished on the `Dev.to` platform and vice-versa.
+还有另一种令人兴奋的方式来分享你的内容，那就是重新发布它。如果允许的话，你可以在其他博客平台上重新发布你的文章。例如，一篇发布在 `Hashnode` 平台上的文章，可以重新发布在 `Dev.to` 平台上，反之亦然。
 
-💡 **Tips:** You can set the `Canonical URL` to the link of the original article when you republish it. This is a way to tell the search engines like Google which is the original copy of the content and eliminate duplicate content.
+💡 **小提示：** 重新发布文章时，你可以在原始文章的链接上设置 `Canonical URL`。这种方式告诉像谷歌这样的搜索引擎，哪个是原始的副本，同时消除重复的内容。
 
 # Good Blogging Platforms
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/paltform.png)
 
-A Blogging platform to get you started
+一个让你入门的博客平台
 
-Alright, now we know how to write an article and share it so others can read it. Now let's learn about a few blogging platforms where you can get started.
+好了，现在我们已经知道了如何写一篇文章并进行分享，以便他人可以阅读。接下来我们来了解一些你可以开始入门的博客平台。
 
-Here are a few platforms to start blogging and grow as part of the community.
+以下是一些平台，你可以开始在上面写博客，进而成为社区的一份子。
 
 -   [Hashnode](https://hashnode.com/@atapas/joinme)
 -   [DEV Community](https://dev.to/)
@@ -243,32 +243,32 @@ Here are a few platforms to start blogging and grow as part of the community.
 -   [Educative Edpresso Shorts](https://www.educative.io/edpresso)
 -   [CoFoundersTown](https://cofounderstown.com/)
 
-There are many publications and organizations who hire and pay content creators. As a developer-blogger, this may open up many freelancing opportunities and let you get compensated for sharing your content. You can also contribute to open-source documentation and other projects.
+很多出版社和组织会雇佣并支付报酬给内容创作者。作为一个开发者博主，这可能会带来很多自由职业者的机会，你会因为分享你的内容而获得报酬。你还可以为开源文档和其他项目做出贡献。
 
-# In Summary
+# 总结
 
-To summarize,
+总结来说，
 
--   Blogging as a developer is manageable as a side activity without compromising your work output.
--   Problems you've solved and your searches on Google, Quora, and Stackoverflow could be a helpful source of writing ideas.
--   Find your purpose before you start a blog and write articles. The intent behind your work can be trivial or more significant – either way is fine.
--   Stay motivated.
--   Use the right tools to make you a productive writer.
--   Plan your content structure, proofread your articles, and publish them.
--   Use social media as a tool to share your articles.
--   There are some fantastic blogging platforms out there. Give them a try and be part of the developer communities.
--   Keep learning, keep writing, and keep sharing.
+-   作为一个开发者，写博客作为一项业余活动，是可以管理的，并不会影响你的工作输出。
+-   你已经解决的问题，以及你 Google，Quora 和 Stackoverflow 上的搜索，很可能成为你的写作灵感来源。
+-   在开始一个博客写文章之前，找到你的目标。你工作背后的意图可以是琐碎的，也可以是很重要的——无论哪种都可以。
+-   保持动力。
+-   使用合适的工具，使你成为一个多产的作家。
+-   规划你的内容结构，校对你的文章，然后发表它们。
+-   使用社交媒体工具来分享你的文章。
+-   有一些很棒的博客平台，尝试一下，成为开发者社区的一份子。
+-   保持学习，保持写作，以及保持分享。
 
-# Before We End...
+# 在我们结束之前……
 
-I hope you've found this article insightful, and that it helps you start using these concepts more effectively in blogging.
+我希望你已经发现这篇文章很有见地，它可以帮助你在博客中更有效地使用这些概念。
 
-Let's connect. You will find me active on [Twitter (@tapasadhikary)](https://twitter.com/tapasadhikary). Please feel free to give a follow.
+让我们保持联系。你在可以在 [推特 (@tapasadhikary)](https://twitter.com/tapasadhikary) 上面找到我，请随时关注。
 
-You may also like these articles:
+你也许还会喜欢以下文章：
 
--   [How to find blog content ideas effortlessly?](https://blog.greenroots.info/how-to-find-blog-content-ideas-effortlessly-ckghrjv5200o7rhs1ewn40102)
--   [Where to begin? Some practical tips from a beginner](https://blog.greenroots.info/where-to-begin-some-practical-tips-from-a-beginner-ckcu5llil00ncw8s11dr1fh2w)
--   [Why do you need to do Side Projects as A Developer?](https://blog.greenroots.info/why-do-you-need-to-do-side-projects-as-a-developer-ckhn5m5km05teajs1fvjd7u5f)
--   [16 side project GitHub repositories you may find useful](https://blog.greenroots.info/16-side-project-github-repositories-you-may-find-useful-ckk50hic406quhls1dui2d6sd)
--   [How to Learn Something New Every Day as a Software Developer](/news/learn-something-new-every-day-as-a-software-developer/)
+-   [如何毫不费力地找到博客内容创意？](https://blog.greenroots.info/how-to-find-blog-content-ideas-effortlessly-ckghrjv5200o7rhs1ewn40102)
+-   [从哪里开始？给新手的一些实用技巧](https://blog.greenroots.info/where-to-begin-some-practical-tips-from-a-beginner-ckcu5llil00ncw8s11dr1fh2w)
+-   [作为开发者，你为什么需要做业余项目？](https://blog.greenroots.info/why-do-you-need-to-do-side-projects-as-a-developer-ckhn5m5km05teajs1fvjd7u5f)
+-   [你可能觉得有用的16个业余项目的 GitHub 仓库](https://blog.greenroots.info/16-side-project-github-repositories-you-may-find-useful-ckk50hic406quhls1dui2d6sd)
+-   [作为一个软件开发者，如何每天学点新东西](/news/learn-something-new-every-day-as-a-software-developer/)

@@ -1,6 +1,6 @@
 > -  原文地址：[Interaction Design – How to Evaluate Interaction Costs and Improve User Experience](https://www.freecodecamp.org/news/interaction-design-evaluate-interaction-costs-improve-ux/)
 > -  原文作者：[Richard Yang](https://www.freecodecamp.org/news/author/richardux/)
-> -  译者：
+> -  译者：Assone
 > -  校对者：
 
 ![Interaction Design – How to Evaluate Interaction Costs and Improve User Experience](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/1_WzkvMd3sZRb6BCwKEsoHjA.png)

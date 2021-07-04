@@ -66,42 +66,42 @@
 
 💡 **小提示：** 如果你想以开发者的身份开始写博客，开发者社区有助于你保持联系，保持动力。有很多极其精彩的社区，如 [Hashnode](https://hashnode.com/@atapas/joinme)，[Dev.to](https://dev.to/)，[Codenewbie](https://community.codenewbie.org/)，[Hackernoon](https://hackernoon.com/)，[freeCodeCamp](https://forum.freecodecamp.org/)，[GirlsWhoCode](https://girlswhocode.com/)等，还有很多。
 
-# Do Your Research
+# 做好你的研究
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/research.png)
 
-Research is the key. Content rules all.
+研究是关键。内容决定一切。
 
-In blogging, content rules all. As developers, we may have multiple ideas, problem-solving steps, and new learnings we want to get down. But the most crucial part is being able to turn it into quality content. It's usually necessary to take the time required to research your topic thoroughly.
+在博客中，内容统治一切。作为开发者，我们有各种各样的想法，解决问题的步骤，以及想要掌握的新知识。但是最重要的是能把它们转化为优质的内容。通常，花时间把你的话题彻底研究明白，是很有必要的。
 
-Let me take an example of content research here. Say you have solved a problem using `Linked List`, and it is the first time you have used one. You are so excited that want to share what you've learned. Here are a few points to consider:
+现在我来举一个关于内容研究的例子。假设你用“链表”解决了一个问题，而且是你第一次使用。你非常激动，想把学到的分享出来。以下是需要考虑的点：
 
--   You need to understand `Linked List` generically and beyond the context of the problem you have solved.
--   You need to understand both the pros and cons of using `Linked List`.
--   You need to set up a few examples that demonstrate how best to use it.
--   You need to make sure you explain the way you've solved the problem clearly so people can use it in their own use cases.
+-   你需要大致理解“链表”以及已经被解决的问题的上下文。
+-   你需要理解“链表”的优缺点。
+-   你需要创建几个例子来演示如何用好它。
+-   你需要确保清楚地解释了你解决问题的方法，这样读者才能在他们自己的案例中使用。
 
-💡 **Tips:** Once you figure out what you need to know, you can learn about it from any well-established resource. Perform a search wionth `Google`, `Quora`, `Reddit`, and so on. `Stackoverflow` is another excellent platform to check for info on the topic as well.
+💡 **小提示：** 一旦明白了你需要知道什么，你就可以从任何完备的资源中进行学习。你可以在“Google”，“Quora”，“Reddit”等上面进行搜索。“Stackoverflow” 同样也是一个优秀的平台，你可以用它来检索你的话题。
 
-Make sure you note down what you learn as you make progress. These notes will eventually turn into the article you write and publish.
+确保在取得进步时记下所学的内容。这些笔记最终将转化成你要撰写和发布的文章。
 
-# Plan the Content Structure
+# 规划你的内容结构
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/plan.png)
 
-Plan the content structure
+规划内容结构
 
-Once you have your content research done, the next thing is to plan the structure of the article. Excellent article content can go ignored by readers if you have an inadequate and messy content structure.
+一旦完成了内容研究，下一步就是规划文章的结构。如果你的文章结构不完整而且混乱，那么再好的内容也会被读者忽略。
 
-Here are a few tips to help you structure your article content in a readable way:
+以下是一些小提示，帮助你用一种可读的方式来构建文章内容：
 
--   **Title:** A compelling title can help influence many readers to visit your article. No matter what, people hardly miss reading the title of the article. Keeping it catchy will increase the traffic to your content.
--   **Cover Image:** A relevant cover image makes your article very attractive. When you share your articles on social media like Twitter, Linkedin, or Reddit, a creative cover image may attract your readers.
--   **Introduction:** this section describes the content at a high level. It can be an initial paragraph or a [Tl;DR](https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read) section explaining what you plan to cover in the article.
--   **Headings and Sub Headings:** You should break the content into logical sub-topics. To do that, create sections and provide relevant headings and sub-headings. For example, I have created multiple sections with headings like `Know Your Purpose`, `Find Your Motivation`, and so on in this article.
--   **Graphics: "**A picture is worth a thousand words." This is often true, so think of supporting your content with some graphs, pictures, and so on.
--   **Summary:** A summary section at the end helps your reader recap what they have learned from the article so far. It is also helpful for a returning reader to recollect the content by going through the summary.
--   **Important Links:** You may want to end your article with a list of related links for further reading. You can use the same section to list the links to your previously published articles as well.
+-   **文章标题：** 一个引人注目的标题可以吸引很多读者来访问你的文章。不管怎样，人们很难错过阅读文章的标题。保持标题悦耳易记，能提升文章的流量。
+-   **封面图片：** 一张相关的封面图片使得文章更加具有吸引力。当你在社交媒体如推特，领英，红迪网上分享文章时，一张创意十足的封面将吸引你的读者。
+-   **简介：** 这部分高度概括了你的文章内容。它可以是第一段，也可以是一个 [Tl;DR](https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read)，用以解释你打算在文章中介绍的内容。
+-   **段落标题和子标题：** 你应该将内容分解成几个关联的子话题。为了达到这个目的，创建几个区块，并提供与之相关的标题和子标题。例如，在这篇文章中，我创建了多个区块，给每个区块配上了标题，如“了解你的目的”，“找到你的动机”等。
+-   **图形：** “一张图片胜过千言万语”。这通常是正确的，因此请考虑用一些图表、图片等来支持你的内容。
+-   **总结：** 最后的总结部分，可帮助你的读者回顾到目前为止他们从文章中学到的东西。同样，对于有些读者，再次过来收集内容时，只要通过快速阅览总结部分就可以了，这很有帮助。
+-   **重要的链接：** 你可能希望以一个参考链接的列表来结束文章，以供读者进一步阅读。你也可以在这一部分列出你以前发布的文章的链接。
 
 💡 Tips: Try to use a consistent content structure for your articles. Your readers will get used to it and find it easy to follow.
 

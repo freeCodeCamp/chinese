@@ -1,6 +1,6 @@
 > -  原文地址：[How the CSS Position Property Works – Explained with Code Examples](https://www.freecodecamp.org/news/css-position-property-explained/)
 > -  原文作者：[Joy Shaheb](https://www.freecodecamp.org/news/author/joy/)
-> -  译者：
+> -  译者：Miever1
 > -  校对者：
 
 ![How the CSS Position Property Works – Explained with Code Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/FCC-Thumbnail--4-.png)

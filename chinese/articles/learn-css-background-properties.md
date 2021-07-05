@@ -5,7 +5,7 @@
 
 ![每个CSS背景属性说明和解释的代码示例 🎖️](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/FreeCodeCamp--1-.png)
 
-今天我们将学习 CSS 中 **background** 属性的各属性及其对应的  **值**。我们也会学习其 **简写**。让我们开始吧！🏅
+今天我们将学习 CSS 中 **background** 的各个属性及其对应的  **值**。我们也会学习其 **简写**。让我们开始吧！🏅
 
 # 目录
 

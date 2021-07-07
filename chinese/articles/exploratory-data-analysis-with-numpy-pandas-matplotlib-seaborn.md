@@ -1,5 +1,5 @@
 > -  原文地址：[What is Data Analysis? How to Visualize Data with Python, Numpy, Pandas, Matplotlib & Seaborn Tutorial](https://www.freecodecamp.org/news/exploratory-data-analysis-with-numpy-pandas-matplotlib-seaborn/)
-> -  原文作者：[Aakash NS](https://www.freecodecamp.org/news/404/)
+> -  原文作者：[Aakash NS](https://www.freecodecamp.org/news/author/aakash-n-s/)
 > -  译者：
 > -  校对者：
 

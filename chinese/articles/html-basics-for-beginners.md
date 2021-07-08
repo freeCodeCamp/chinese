@@ -1,6 +1,6 @@
 > -   原文地址：[Learn HTML Basics for Beginners in Just 15 Minutes](https://www.freecodecamp.org/news/html-basics-for-beginners/)
 > -   原文作者：Thu Nghiem
-> -   译者：
+> -   译者：Meloodiee
 > -   校对者：
 
 ![Learn HTML Basics for Beginners in Just 15 Minutes](https://www.freecodecamp.org/news/content/images/size/w2000/2021/01/Ep10_html.png)

@@ -91,49 +91,49 @@ But not every attribute has the same pattern. Some can exist without values, and
 <button onclick=“alert('Submit')" disabled>Button</button>
 ```
 
-In this example, if we want to disable the button, all we have to do is pass a `disabled` attribute without any values. This means that the presence of the attribute represents the true value, otherwise, the absence represents the false value.
+In this example, if we want to disable the button, all we have to do is pass a `disabled` attribute without any values. This means that the presence of the attribute represents the true value, otherwise, the absence represents the false value.在这个例子中，如果我们想禁用这个按钮（button），我们所要做的就是传递一个不带任何值的 `disabled` 属性。 也就是说，这个属性的存在代表真值，不存在则代表假值。
 
-### Common HTML elements
+### 常见HTML元素
 
-There are in total more than 100 elements. But 90% of the time you will only use around 20 of the most common. I have put them into 5 groups:
+HTML总共有超过100个元素。 但是在 90% 的情况下，最常用的大约只有20个。 我把它们分成5种：
 
-#### Section elements
+#### 节元素
 
 ```html
   <div>, <span>, <header>, <footer>, <nav>, <main>, <section>
 
 ```
 
-These elements are used to organize the content into different sections. They are usually self\-explanatory, for example, `<header>` usually represents a group of the introduction and navigation section, `<nav>` represents the section that contains navigation links, and so on.
+这些元素用于将内容整理成不同的部分。 它们的用途通常是很明朗的，例如，`<header>` 通常表示一组介绍和导航部分，`<nav>` 表示包含导航链接的部分，等等。
 
-#### Text content
+#### 文本内容
 
 ```html
   <h1> to <h6>, <p>, <div>, <span>, <ul>, <ol>, <li>
 
 ```
 
-These elements are used to organize content or text blocks. They are important to accessibility and SEO. They tell the browser the purpose or structure of the content.
+这些元素用于整理内容或文本块。 它们对可访问性和 SEO 很重要。 它们告诉浏览器内容的目的或结构。
 
-#### Forms
+#### 表单
 
 ```html
   <form>, <input>, <button>, <label>, <textarea>
 
 ```
 
-These elements can be used together to create forms that users can fill out and submit. Forms might be the trickiest part of HTML.
+这些元素可以一起使用来创建用户可以填写和提交的表单。 表单可能是 HTML 中最棘手的部分。
 
-#### Images and Links
+#### 图像（Images）和 链接（Links）
 
 ```html
   <img>, <a>
 
 ```
 
-These elements are used to insert an image or create a hyperlink.
+这些元素用于嵌入图像和创造超链接。
 
-#### Others
+#### 其他
 
 ```html
   <br>, <hr>

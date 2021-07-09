@@ -3,47 +3,47 @@
 > -   译者：Meloodiee
 > -   校对者：
 
-![Learn HTML Basics for Beginners in Just 15 Minutes](https://www.freecodecamp.org/news/content/images/size/w2000/2021/01/Ep10_html.png)
+![十五分钟零基础HTML入门](https://www.freecodecamp.org/news/content/images/size/w2000/2021/01/Ep10_html.png)
 
-If you want to build a website, the first language that you need to learn is HTML.
+如果你想建立一个网站，你需要学的第一个编程语言就是HTML。
 
-In this article, we are going to go through the basics of HTML. At the end, we are going to build a basic website using only HTML.
+这篇文章里，我们会介绍HTML语言的基础。看完文章后，我们会只使用HTML建立一个简单的网站。
 
-Here's a video you can watch if you want to supplement this article:
+如果你想了解更多，可以看这个视频：
 
-If you prefer video, you can watch it here
+如果你更喜欢视频，你也可以观看这个视频
 
-## What Is HTML?
+## 什么是 HTML?
 
-HTML, which stands for Hypertext Markup Language, is a pretty simple language. It consists of different elements which we use to structure a web page.
+作为超文本标记语言的代表，HTML是一个较为简单的语言。它包含了用来搭建一个网站页面的不同元素。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/Screen-Shot-2021-01-11-at-1.16.17-PM.png)
 
-What is HTML?
+什么是 HTML?
 
-## What Are HTML Elements?
+## 什么是 HTML 元素?
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/Screen-Shot-2021-01-11-at-1.16.34-PM.png)
 
-HTML elements
+HTML元素
 
-The element usually starts with an opening tag, which consists of the name of the element. It's wrapped in opening and closing angle brackets. The opening tag indicates where the element begins.
+元素的开头通常是一个包含元素名称的开始标签。它被尖括号包围。开始标签代表着元素开始的地方。
 
-Similar to the opening tag, the closing tag is also wrapped in opening and closing angle brackets. But it also includes a forward slash before the element's name.
+和开始标签类似，结束标签也在一组尖括号中间。但在元素名称之前有一个正斜杠。
 
-Everything inside the opening and closing tags is the content.
+所有在开始标签和结束标签中间的都是内容。
 
-But not all elements follow this pattern. We call those that don't empty elements. They only consist of a single tag or an opening tag that cannot have any content. These elements are typically used to insert or embed something in the document.
+但并不是所有元素都遵循这个格式。我们称这些为非空内容。他们只有一个标签或者一个开始标签但没有任何内容。这些元素通常用于在文档中插入或嵌入某些内容。
 
-For example, the `<img>` element is used to embed an image file, or the `<input>` element is used to insert an input onto the page.
+比如说， `<img>` 标签用于嵌入一个图像件， `<input>`标签用于嵌入一个输入。
 
 ```html
 <img src="https://images.unsplash.com/photo-1610447847416-40bac442fbe6" width="50">
 ```
 
-In the example above, the `<img>` element only consists of one tag that does not have any content. This element is used to insert an image file from [Unsplash](https://unsplash.com/) in the document.
+在上面的例子中，`<img>` 元素只包含一个没有任何内容的标签。 此元素用于在文档中插入来自 [Unsplash](https://unsplash.com/) 的图像文件。
 
-## How to Nest HTML Elements
+## 如何嵌套HTML元素?
 
 ```html
 <div class="my-list">
@@ -58,34 +58,34 @@ In the example above, the `<img>` element only consists of one tag that does not
 
 ```
 
-Elements can be placed inside other elements. This is called Nesting. In the example above, inside the `<div>` element we have an `<h4>` element and an `<ul>` or unordered list element. And Similarly inside the `<ul>` element, there are 3 `<li>` or list item elements.
+元素可以放置在其他元素内。 这称为嵌套。 在上面的例子中，在 `<div>` 元素中，我们有一个 `<h4>` 元素和一个 `<ul>` 或无序列表元素。 类似地，在 `<ul>` 元素内部，有 3 个 `<li>` 或列表项元素。
 
-Basic nesting is quite straight\-forward to understand. But when the page gets larger, nesting can become complicated.
+基本嵌套很容易理解。 但是如果页面很大，嵌套会变得复杂。
 
-Therefore, before working with HTML, think about the layout structure you would like to have. You can draw it out on a piece of paper or in your mind. It will help a lot.
+因此，在使用 HTML 之前，先考虑布局结构。 你可以把它画在一张纸上或在你的脑海里。这非常有用。
 
-![How to Nest HTML Elements](https://www.freecodecamp.org/news/content/images/2021/01/Screen-Shot-2021-01-12-at-10.45.05-AM.png)
+![如何嵌套HTML元素](https://www.freecodecamp.org/news/content/images/2021/01/Screen-Shot-2021-01-12-at-10.45.05-AM.png)
 
-## What are HTML Attributes?
+## 什么是HTML属性？
 
-Elements also have attributes, which contain extra information about the element that will not appear in the content.
+元素也有属性，这些属性包含关于不会出现在内容中的元素的额外信息。
 
 ```html
 <img src="https://images.unsplash.com/photo" width="50">
 ```
 
-In the example above, the `<img>` element has 2 attributes: `src` or source to specify the path of the image, and `width` to specify the width of the image in pixels.
+在上面的例子中，`<img>` 元素有 2 个属性：`src` 或 source 用于指定图像的路径，以及 `width` 用于指定图像的宽度（以像素为单位）。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/Screen-Shot-2021-01-12-at-10.45.17-AM.png)
 
-With this example, you can see the following characteristics of attributes:
+通过这个例子，可以看出属性有以下特征：
 
-*   There is a space between attributes and the element name
-*   Attributes are added in the opening tag
-*   Elements can have many attributes
-*   Attributes usually have a name and a value: name=“value”
+* 属性和元素名称之间有一个空格
+* 属性是添加在在开始标签中的
+* 元素可以有很多属性
+* 属性通常有一个名称和一个值：name="value"
 
-But not every attribute has the same pattern. Some can exist without values, and we call them Boolean Attributes.
+But not every attribute has the same pattern. Some can exist without values, and we call them Boolean Attributes.但并非每个属性都用相同的格式。 有些属性可以没有值，我们称它们为布尔属性。
 
 ```html
 <button onclick=“alert('Submit')" disabled>Button</button>

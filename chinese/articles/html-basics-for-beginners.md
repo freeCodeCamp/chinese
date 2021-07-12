@@ -139,105 +139,104 @@ HTML总共有超过100个元素。 但是在 90% 的情况下，最常用的大�
   <br>, <hr>
 
 ```
+这些元素用于向网页添加间隔。
 
-These elements are used to add a break to the webpage.
+[developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)上可以找到所有元素。 但是对于初学者来说，只需要知道最常见的就足够了。
 
-You can find all the elements on [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). But for beginners, you just need to know the most common ones.
+## 块\级 vs 内联HTML元素
 
-## Block\-level vs inline HTML elements
+一个元素默认是块\级元素。
 
-By default, an element can be either block\-level or an inline element.
+块\级元素是总是从新行开始并所有可以用的宽度。
 
-Block\-level elements are the elements that always start on a new line and take up the full width available.
-
-Inline elements are the elements that do not start on a new line and it only take up as much width as necessary.
+内联元素不从新行开始的元素，而且它只占用必要的宽度。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/Screen-Shot-2021-01-11-at-1.17.22-PM.png)
 
-Block level vs. Inline HTML elements
+块级 vs. 内联HTML元素
 
-Two elements that represent block\-level and inline elements, respectively, are `<div>` and `<span>`. In this example, you can see that the `<div>` elements takes 3 lines, whereas the `<span>` element only takes up 1 line.
+`<div>` 和`<span>`分别代表块\级元素和内联元素。 在这个例子中，`<div>` 元素占用 3 行，而 `<span>` 元素只占用 1 行。
 
-But the question is: how do we know which ones are block\-level elements and which ones are inline elements? Well, unfortunately you need to remember them. The easiest way is to remember which are inline elements – and the rest are block elements.
+但问题是：我们怎么知道哪些是块\级元素，哪些是行内元素呢？糟糕的是你需要记住它们。最简单的方法是记住哪些是行内元素——其余的是块元素。
 
-If we look back at the most common HTML elements, inline elements include: `<span>, <input>, <button>, <label>, <textarea>, <img>, <a>, <br>`.
+如果我们回顾最常见的 HTML 元素，内联元素有：`<span>、<input>、<button>、<label>、<textarea>、<img>、<a>、<br>`。
 
-## How to comment in HTML
+## 如何在HTML中添加注释
 
 ```html
-<p>This is a paragraph.</p>
+<p>这是一个段落.</p>
 
-<!-- <p>I am not showing.</p> -->
+<!-- <p>看不见我！</p> -->
 
 ```
 
-The purpose of comments is to include notes in the code to explain your logic or simply to organize your code.
+注释的目的是在代码中间解释逻辑或仅仅是组织代码。
 
-HTML comments are wrapped in the special markers: `<!-- and -->` and they are ignored in the browser.
+HTML注释被包裹在特殊标记`<!-- 和 -->`中，并且它们在浏览器中被忽略。
 
-## How to use HTML entities
+## 如何使用HTML实体
 
-What if you want to show the text: `the <p> tag defines a paragraph.`, but the browser interprets `<p>` as an opening tag for a new element? In this case, we can use HTML entities like in the following example:
+如果您想显示文本：`<p> 标签定义了一个段落。`，但浏览器将 `<p>` 解释为新元素的开始标签怎么办？ 在这种情况下，我们可以像下面的一样使用 HTML 实体：
 
 ```html
-<p>the <p> tag defines a paragraph.</p>
+<p>这个 <p> 标签定义了一个段落.</p>
 
-<p>the &lt;p&gt; define a paragraph.</p>
+<p>这个 &lt;p&gt; 定义了一个段落.</p>
 
 ```
 
-## How to use emoji in HTML
+## 如何在HTML中使用表情符号
 
-In the modern web, we can display emoji in HTML pretty easily, like this: 👻
+在现代网络中，我们可以很容易地在HTML中显示表情符号，像这样：👻
 
 ```html
-<p>😀 Grinning Face.</p>
+<p>😀 咧嘴笑.</p>
 
-<p>🎂 Birthday</p>
+<p>🎂 生日</p>
 
 ```
 
-## Common beginner mistakes in HTML
+## HTML中初学者常见错误
 
-### 1\. Tags/Element names
+### 1\. 标签/元素名称
 
-Tags/Element names are cAse\-inSensitive. This means that they can be written in lowercase or uppercase, but it is recommended that you write everything in lowercase: `<button>` not `<ButTon>`.
+标签/元素名称不区分大小写。也就是说它们可以写成小写或大写，但建议将所有内容都写成小写：`<button>` 而不是 `<ButTon>`。
 
-### 2\. Closing tag
+### 2\. 结束标签
 
-Failing to include a closing tag is a common beginner error. Therefore, whenever you create an opening tag, immediately put in a closing tag.
+忘记包含结束标签是初学者常见的错误。 因此，每次创建开始标记的时候，都应该立即写结束标签。
 
-### 3\. Nesting
+### 3\. 嵌套
 
-This is wrong:
+错误示范:
 
 ```html
 <div>Div 1 <span> Span 2 </div></span>
 
 ```
 
-The tags have to open and close in a way that they are inside or outside one another.
+标签必须以都在内部或外部的方式打开和结束。
 
-### 4\. Single quotes and Double quotes
+### 4\. 单引号和双引号
 
-This is wrong:
+错误示范:
 
 ```html
 <img src="https://images.unsplash.com/'>
 
 ```
 
-You cannot mix single quotes and double\-quotes. You should always use double quotes and use HTML entities if needed.
+单双引号不可以混用。你应该始终使用双引号。如果需要的话，使用HTML实体。
 
-## How to build a simple website with HTML
+## 如何用HTML搭建一个简单的网站
 
-Individual HTML elements are not enough to create a website. So let's see what more we need to build a simple website from scratch.
+单个HTML元素不足以创建一个网站。因此，让我们看看从头开始构建一个简单的网站还需要什么。
 
-### How to create an HTML document
+### 如何创建一个HTML文件
 
-First, let's open [Visual Studio Code](https://code.visualstudio.com/) (or your favorite code editor). In the folder of your choice, create a new file and name it index.html.
+首先，让我们打开 [Visual Studio Code](https://code.visualstudio.com/)（或你最喜欢的代码编辑器）。 在选择的文件夹中，创建一个新文件并将其命名为 index.html。
 
-In the index.html file, type ! (exclamation mark) and press enter. You will see something like this:
+在 index.html 文件中，输入!（感叹号）并按回车键。你会看到：
 
 ```html
 <!DOCTYPE html>
@@ -254,21 +253,21 @@ In the index.html file, type ! (exclamation mark) and press enter. You will see 
 
 ```
 
-This is the minimal code that an HTML document should have to make up a website. And here we have:
+这是HTML文档组成网站所需的最少代码。文件里有：
 
-1.  `<!DOCTYPE html>`: First we have Doctype. For some weird historical reason in HTML we have to include the doctype for everything to work correctly.
-2.  `<html lang="en"></html>`: The `<html>` element wraps all the content on the page, also known as the root element. And we should always include the `lang` attribute to declare the language of the page.
-3.  `<head></head>`: The `<head>` element is a container for everything you want to include, but not content that you show to your users.
-4.  `<meta charset="UTF-8" />`: The first meta element is used to set the character set to be UTF\-8, which includes most characters from written languages.
-5.  `<meta name="viewport" content="width=device-width, initial-scale=1.0" />`: The second meta element specifies the browser viewport. This setting is for a mobile\-optimized site.
-6.  `<title>Document</title>`: This is the `<title>` element. It sets the title of the page.
-7.  `<body></body>`: The `<body>` element contains all the content on the page.
+1. `<!DOCTYPE html>`：首先我们有 Doctype。出于一些奇怪的历史原因，我们必须在HTML中包含文档类型。
+2. `<html lang="en"></html>`：`<html>` 元素包装了页面上的所有内容，也称为根元素。我们应该始终包含 `lang` 属性来声明页面的语言。
+3. `<head></head>`：`<head>` 元素是用来包含所有内容的容器，但不是向用户显示的内容。
+4. `<meta charset="UTF-8" />`：第一个meta元素用于设置字符集为UTF\-8。UTF\-8包括大部分书面语言字符。
+5.`<meta name="viewport" content="width=device-width, initial-scale=1.0" />`：第二个meta元素指定浏览器视口。此设置适用于移动\优化站点。
+6.  `<title>Document</title>`: 这是`<title>` 元素。它设置页面的标题。
+7.  `<body></body>`:`<body>` 元素包含页面上的所有内容。
 
-### How to build a pancake recipe page
+### 如何搭建一个煎饼菜谱页面
 
-Alright, now that we have the starter code, let's build a pancake recipe page. We are going to use the content from this [AllRecipes Page](https://www.allrecipes.com/recipe/21014/good-old-fashioned-pancakes/).
+现在我们有初始代码了，让我们搭建一个煎饼菜谱页面吧。页面的内容来自：[AllRecipes Page](https://www.allrecipes.com/recipe/21014/good-old-fashioned-pancakes/).
 
-First, let's give the `<title>` element content of the pancakes recipe. You will see the text on the web page tab change. In the `<body>` element, let's create 3 elements: `<header>`, `<main>` and `<footer>` representing 3 sections.
+首先，让我们给出煎饼食谱的`<title>` 元素内容。 这会改变网页标签页上的文本。在 `<body>` 元素中，我们创建 3 个元素：`<header>`、`<main>` 和 `<footer>`，分别代表 3 个部分。
 
 #### 1\. Build the header section
 

@@ -269,11 +269,11 @@ HTML注释被包裹在特殊标记`<!-- 和 -->`中，并且它们在浏览器�
 
 首先，让我们给出煎饼食谱的`<title>` 元素内容。 这会改变网页标签页上的文本。在 `<body>` 元素中，我们创建 3 个元素：`<header>`、`<main>` 和 `<footer>`，分别代表 3 个部分。
 
-#### 1\. Build the header section
+#### 1\. Build the header section构建页头部分
 
-In the header, we want to have the logo and the navigation. Therefore, let's create a `div` with the content `ALL RECIPE` for the logo.
+在页头中，我们想要标志和导航。 因此，让我们为标志创建一个内容为`ALL RECIPE`的`div`。
 
-For the navigation, let's use the `<nav>` element. Within the `<nav>` element, we can use `<ul>` to create an unordered list. We want to have 3 `<li>` elements for 3 links: Ingredients, Steps, and Subscribe. The header code looks like this:
+对于导航，我们使用 `<nav>` 元素。 在 `<nav>` 元素中，我们可以使用 `<ul>` 创建一个无序列表。 我们用 3 个 `<li>` 元素代表 3 个链接：成分（ingredients）、步骤(steps)和订阅(subscribe)。 标题代码如下所示：
 
 ```html
 ...
@@ -291,9 +291,9 @@ For the navigation, let's use the `<nav>` element. Within the `<nav>` element, w
 
 ```
 
-#### 2\. Build the Main Section
+#### 2\. Build the Main Section构建主干部分
 
-In the main section, first, we want to have a title and an image. We can use `h1` for the title and `<img>` for the image (we can use an image from [Unsplash](https://images.unsplash.com/) for free):
+在主体部分里，我们先加一个标题和一个图像。 我们可以使用 `h1` 作为标题，使用 `<img>` 作为图像（免费使用来自 [Unsplash](https://images.unsplash.com/) 的图像）：
 
 ```html
 ...
@@ -309,9 +309,9 @@ In the main section, first, we want to have a title and an image. We can use `h1
 
 ```
 
-Next, we want to list all the ingredients. We can use `<ol>` to create an ordered list and `<input type="checkbox" />` to create a checkbox.
+接下来，我们要列出所有成分。 可以使用 `<ol>` 创建一个有序列表，然后使用 `<input type="checkbox" />` 创建一个复选框。
 
-But before that, we can use `<h2>` to start a new content block. We also want to add the `id` attribute for `<h2>` so that the link in the navigation knows where to go:
+But before that, we can use `<h2>` to start a new content block. We also want to add the `id` attribute for `<h2>` so that the link in the navigation knows where to go:但在此之前，我们可以使用 `<h2>` 来开始一个新的内容块。 还可以为 `<h2>` 添加 `id` 属性，这样导航中的链接就知道要去哪里：
 
 ```html
 ...

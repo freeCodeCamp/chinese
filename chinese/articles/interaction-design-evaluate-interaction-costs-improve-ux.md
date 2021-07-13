@@ -12,13 +12,16 @@ There are three core skills that every modern product designer must master: prod
 ![图中显示了产品设计的三个核心技能: 产品思维、视觉设计 (UI) 和交互设计 (IxD).](https://www.freecodecamp.org/news/content/images/2021/02/image-146.png)
 
 The “table-stakes” for all modern product designers.
-
+所有现代产品设计师的“赌桌”。
 
 In general, you should be good at all three, but you should be really good at two. Most designers can teach themselves visual design and product thinking through online resources, practice, and shipping real products.
+一般来说，你应该在这三个方面都很擅长，但你应该真正擅长其中两个方面。大多数设计师可以通过在线资源、实践和交付真实产品来自学视觉设计和产品思维。
 
 As a product design lead at a FAANG company that has mentored hundreds of aspiring designers, I find that interaction design tends to be the most challenging core skill for designers to self-learn.
+作为一家FAANG公司的产品设计负责人，我已经指导了数百名有抱负的设计师，我发现交互设计往往是设计师自我学习的最具有挑战性的核心技能。
 
 In this article, I provide a foundation and framework for learning and improving your interaction design skills.
+在本文中，我提供了学习和提高交互设计技能的基础和框架。
 
 ![Diagram showing the overlap and difference between UX and IxD. IxD is a sub-domain of UX.](https://www.freecodecamp.org/news/content/images/2021/02/image-148.png)
 

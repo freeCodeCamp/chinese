@@ -3,13 +3,16 @@
 > -  译者：Assone
 > -  校对者：
 
-![Interaction Design – How to Evaluate Interaction Costs and Improve User Experience](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/1_WzkvMd3sZRb6BCwKEsoHjA.png)
+![交互式设计 – 如何评估交互成本并改善用户体验](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/1_WzkvMd3sZRb6BCwKEsoHjA.png)
 
 There are three core skills that every modern product designer must master: product thinking, visual design, and interaction design.
+有三个核心技能是每个现代产品设计师必须掌握的：产品思维、视觉设计和交互设计。
 
 ![Diagram showing the three core product design skills: product thinking, visual design (UI), and interaction design (IxD).](https://www.freecodecamp.org/news/content/images/2021/02/image-146.png)
+![图中显示了产品设计的三个核心技能: 产品思维、视觉设计 (UI) 和交互设计 (IxD).](https://www.freecodecamp.org/news/content/images/2021/02/image-146.png)
 
 The “table-stakes” for all modern product designers.
+
 
 In general, you should be good at all three, but you should be really good at two. Most designers can teach themselves visual design and product thinking through online resources, practice, and shipping real products.
 

@@ -3,37 +3,51 @@
 > -  译者：Miever1
 > -  校对者：
 
-![How the CSS Position Property Works – Explained with Code Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/FCC-Thumbnail--4-.png)
+![CSS 的 Position 属性是如何工作的 –  用代码示例解释](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/FCC-Thumbnail--4-.png)
 
 Today we're gonna learn everything you need to know about the CSS position property along with examples. Let's get started 🎖️
+今天我们将学习所有你需要知道的关于 CSS position 属性的例子。让我们开始吧 🎖️
 
 # Table of contents
+# 目录
 
 -   [What is CSS Position Property?](#what-is-the-position-property-in-css)
+-   [什么是 CSS Position 属性?](#what-is-the-position-property-in-css)
 -   [What is the **Static Position** in CSS?](#what-is-the-static-position-in-css)
+-   [CSS 中的 **Static Position**](#what-is-the-static-position-in-css)
+-   [CSS 中的 **Relative and Absolute**](#what-are-the-relative-and-absolute-positions-in-css)
 -   [What are the R**elative and Absolute** Positions in CSS?](#what-are-the-relative-and-absolute-positions-in-css)
 -   [What is the **Fixed P**osition in CSS?](#what-is-the-fixed-position-in-css)
+-   [CSS 中的 **Fixed Position**](#what-is-the-fixed-position-in-css)
 -   [What is the **Sticky P**osition in CSS?](#what-is-the-sticky-position-in-css)
+-   [CSS 中的 **Sticky Position**](#what-is-the-sticky-position-in-css)
 
 ## **You can watch this tutorial on YouTube as well if you like:**
+## **如果你喜欢，你可以在 YouTube 上观看本教程：**
 
 # What is the position property in CSS?
+# 什么是 CSS 中的 position 属性？
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-3--6-.png)
 
 If you want to make **stunning websites that looks artistic, unique, and beautiful,** then you should definitely learn how to use the CSS position property. Let's see how it works.
+如果你想要制作 **独特、美丽、有艺术风格的网站**，那么你绝对应该学习如何使用 CSS 的 position 属性。让我们看看它是如何工作的。
 
 Using **Flexbox or Grid**, you can make a **symmetrical website** like this: 👇
+使用  **Flexbox 或者 Grid**, 你可以制作一个 **对称的网站**, 像这样：👇
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-35--2-.png)
 
 **Website made w/ Flexbox**
+**w/ Flexbox制作的网站**
 
 With the **position property**, you can make an **asymmetrical website** like this:👇
+通过 **position 属性**, 你可以制作一个 **非对称的网站**，像这样：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/A-1-1--2-.png)
 
 **Website made w/ Grid & position properties**
+** w/ Grid 和 position 属性 制作的网站**
 
 You can't place your content anywhere you wish using Flexbox and Grid. You're limited around the **X and Y Axis**. Look at this drawing to see what I mean: 👇
 

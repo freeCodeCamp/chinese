@@ -271,19 +271,19 @@ HTML注释被包裹在特殊标记`<!-- 和 -->`中，并且它们在浏览器�
 
 #### 1\. Build the header section构建页头部分
 
-在页头中，我们想要标志和导航。 因此，让我们为标志创建一个内容为`ALL RECIPE`的`div`。
+在页头中，我们想要标志和导航。 因此，让我们为标志创建一个内容为`所有食谱`的`div`。
 
-对于导航，我们使用 `<nav>` 元素。 在 `<nav>` 元素中，我们可以使用 `<ul>` 创建一个无序列表。 我们用 3 个 `<li>` 元素代表 3 个链接：成分（ingredients）、步骤(steps)和订阅(subscribe)。 标题代码如下所示：
+对于导航，我们使用 `<nav>` 元素。 在 `<nav>` 元素中，我们可以使用 `<ul>` 创建一个无序列表。 我们用 3 个 `<li>` 元素代表 3 个链接：食材（ingredients）、步骤(steps)和订阅(subscribe)。 标题代码如下所示：
 
 ```html
 ...
     <header>
-      <div>ALL RECIPE</div>
+      <div>所有食谱</div>
       <nav>
         <ul>
-          <li><a href="#ingredients">Ingredients</a></li>
-          <li><a href="#steps">Steps</a></li>
-          <li><a href="#subsribe">Subscribe</a></li>
+          <li><a href="#食材">食材</a></li>
+          <li><a href="#步骤">步骤</a></li>
+          <li><a href="#订阅">订阅</a></li>
         </ul>
       </nav>
     </header>
@@ -291,14 +291,14 @@ HTML注释被包裹在特殊标记`<!-- 和 -->`中，并且它们在浏览器�
 
 ```
 
-#### 2\. Build the Main Section构建主干部分
+#### 2\. 构建主干部分
 
 在主体部分里，我们先加一个标题和一个图像。 我们可以使用 `h1` 作为标题，使用 `<img>` 作为图像（免费使用来自 [Unsplash](https://images.unsplash.com/) 的图像）：
 
 ```html
 ...
     <main>
-      <h1>Good Old Fashioned Pancakes</h1>
+      <h1>美味传统煎饼</h1>
       <img
         src="https://images.unsplash.com/photo-1575853121743-60c24f0a7502"
         alt="pancake"
@@ -311,71 +311,71 @@ HTML注释被包裹在特殊标记`<!-- 和 -->`中，并且它们在浏览器�
 
 接下来，我们要列出所有成分。 可以使用 `<ol>` 创建一个有序列表，然后使用 `<input type="checkbox" />` 创建一个复选框。
 
-But before that, we can use `<h2>` to start a new content block. We also want to add the `id` attribute for `<h2>` so that the link in the navigation knows where to go:但在此之前，我们可以使用 `<h2>` 来开始一个新的内容块。 还可以为 `<h2>` 添加 `id` 属性，这样导航中的链接就知道要去哪里：
+但在此之前，我们可以使用 `<h2>` 来开始一个新的内容块。 还可以为 `<h2>` 添加 `id` 属性，这样导航中的链接就知道要去哪里：
 
 ```html
 ...
     <main>
     ...
-      <h2 id="ingredients">Ingredients</h2>
+      <h2 id="食材">食材</h2>
       <ol>
-        <li><input type="checkbox" /> 1 ½ cups all-purpose flour</li>
-        <li><input type="checkbox" /> 3 ½ teaspoons baking powder</li>
-        <li><input type="checkbox" /> 1 teaspoon salt</li>
-        <li><input type="checkbox" /> 1 tablespoon white sugar</li>
-        <li><input type="checkbox" /> 1 ¼ cups milk</li>
-        <li><input type="checkbox" /> 1 egg</li>
+        <li><input type="checkbox" /> 1 ½ 杯中筋面粉</li>
+        <li><input type="checkbox" /> 3 ½ 茶匙发酵粉</li>
+        <li><input type="checkbox" /> 1 茶匙盐</li>
+        <li><input type="checkbox" /> 1 大勺白糖</li>
+        <li><input type="checkbox" /> 1 ¼ 杯牛奶</li>
+        <li><input type="checkbox" /> 1 个鸡蛋</li>
       </ol>
     </main>
 ...
 
 ```
 
-After the ingredients, we want to list all the steps. We can use `<h4>` for the step heading and `<p>` for the step content:
+在搞定成分之后，我们要列出所有步骤。我们用`<h4>`作为步骤标题，`<p>`作为步骤内容：
 
 ```html
 ...
     <main>
     ...
-      <h2 id="steps">Steps</h2>
+      <h2 id="步骤">步骤</h2>
 
-      <h4>Step 1</h4>
+      <h4>第一步</h4>
       <p>
-        In a large bowl, sift together the flour, baking powder, salt and sugar.
-        Make a well in the center and pour in the milk, egg and melted butter;
-        mix until smooth.
+        在一个大碗里，将面粉、发酵粉、盐和糖筛在一起。
+         在中间挖一个洞，倒入牛奶、鸡蛋和融化的黄油；
+         搅拌至光滑。
       </p>
 
-      <h4>Step 2</h4>
+      <h4>第二步</h4>
       <p>
-        Heat a lightly oiled griddle or frying pan over medium-high heat. Pour
-        or scoop the batter onto the griddle, using approximately 1/4 cup for
-        each pancake. Brown on both sides and serve hot.
+       用中高温加热抹了少许油的煎锅或煎锅。 倒
+         或将面糊舀到烤盘上，每个煎饼使用大约
+        1/4 杯。 当两面都是棕色，趁热食用。
       </p>
     </main>
 ...
 
 ```
 
-Alright, now that we are done with the main section, let's move on to the footer section.
+现在我们已经完成了主要部分，让我们继续进行页脚部分。
 
-#### 3\. Build the Footer Section
+#### 3\. 构建页脚部分
 
-In the footer, we want to have a subscribe form and copyright text.
+页脚里有一个订阅表单和版权文本。
 
-For the subscribe form, we can use the `<form>` element. Inside it, we can have an `<input type="text">` for text input and a `<button>` for the submit button.
+订阅表单可以使用 `<form>` 元素。 在里面， `<input type="text">` 用于文本输入和一个 `<button>`用于提交按钮。
 
-For the copyright text, we can simply use a `<div>`. Notice here, we can use the HTML entity `$copy;` for the copyright symbol.
+版权文本可以直接用 `<div>`。 注意这里 HTML 实体 `$copy;` 可以作为版权符号使用。
 
-We can add `<br>` to add some space between the subscribe form and the copyright text:
+我们可以在订阅表单和版权文本之间用 `<br>` 添加一些空格：
 
 ```html
 ...
     <footer>
-      <h6 id="subscribe">Subscribe</h6>
-      <form onsubmit="alert('Subscribed')">
-        <input type="text" placeholder="Enter Email Address" />
-        <button>Submit</button>
+      <h6 id="订阅">订阅</h6>
+      <form onsubmit="alert('已订阅')">
+        <input type="text" placeholder="输入邮箱地址" />
+        <button>提交</button>
       </form>
       <br />
       <div>&copy; dakota kelly at Allrecipe.com</div>
@@ -384,7 +384,7 @@ We can add `<br>` to add some space between the subscribe form and the copyright
 
 ```
 
-Alright now we are done! Here is the full code for reference:
+全部搞定！下面是所有的代码:
 
 ```html
 <!DOCTYPE html>
@@ -392,55 +392,56 @@ Alright now we are done! Here is the full code for reference:
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pancake Recipe</title>
+    <title>煎饼配方</title>
   </head>
   <body>
     <header>
-      <div>ALL RECIPE</div>
+      <div>所有食谱</div>
       <nav>
         <ul>
-          <li><a href="#ingredients">Ingredients</a></li>
-          <li><a href="#steps">Steps</a></li>
-          <li><a href="#subsribe">Subscribe</a></li>
+          <li><a href="#食材">食材</a></li>
+          <li><a href="#步骤">步骤</a></li>
+          <li><a href="#订阅">订阅</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h1>Good Old Fashioned Pancakes</h1>
+      <h1>美味传统煎饼</h1>
       <img
         src="https://images.unsplash.com/photo-1575853121743-60c24f0a7502?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGFuY2FrZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
         alt="pancake"
         width="250"
       />
-      <h2 id="ingredients">Ingredients</h2>
+      <h2 id="食材">Ingredients</h2>
       <ol>
-        <li><input type="checkbox" /> 1 ½ cups all-purpose flour</li>
-        <li><input type="checkbox" /> 3 ½ teaspoons baking powder</li>
-        <li><input type="checkbox" /> 1 teaspoon salt</li>
-        <li><input type="checkbox" /> 1 tablespoon white sugar</li>
-        <li><input type="checkbox" /> 1 ¼ cups milk</li>
-        <li><input type="checkbox" /> 1 egg</li>
+        <li><input type="checkbox" /> 1 ½ 杯中筋面粉</li>
+        <li><input type="checkbox" /> 3 ½ 茶匙发酵粉</li>
+        <li><input type="checkbox" /> 1 茶匙盐</li>
+        <li><input type="checkbox" /> 1 大勺白糖</li>
+        <li><input type="checkbox" /> 1 ¼ 杯牛奶</li>
+        <li><input type="checkbox" /> 1 个鸡蛋</li>
       </ol>
-      <h2 id="steps">Steps</h2>
-      <h4>Step 1</h4>
+      <h2 id="步骤">步骤</h2>
+      <h4>第一步</h4>
       <p>
-        In a large bowl, sift together the flour, baking powder, salt and sugar.
-        Make a well in the center and pour in the milk, egg and melted butter;
-        mix until smooth.
+        在一个大碗里，将面粉、发酵粉、盐和糖筛在一起。
+         在中间挖一个洞，倒入牛奶、鸡蛋和融化的黄油；
+         搅拌至光滑。
       </p>
-      <h4>Step 2</h4>
+
+      <h4>第二步</h4>
       <p>
-        Heat a lightly oiled griddle or frying pan over medium-high heat. Pour
-        or scoop the batter onto the griddle, using approximately 1/4 cup for
-        each pancake. Brown on both sides and serve hot.
+       用中高温加热抹了少许油的煎锅或煎锅。 倒
+         或将面糊舀到烤盘上，每个煎饼使用大约
+        1/4 杯。 当两面都是棕色，趁热食用。
       </p>
     </main>
     <hr />
     <footer>
-      <h6 id="subscribe">Subscribe</h6>
-      <form onsubmit="alert('Subscribed')">
-        <input type="text" placeholder="Enter Email Address" />
-        <button>Submit</button>
+      <h6 id="订阅">订阅</h6>
+      <form onsubmit="alert('已订阅')">
+        <input type="text" placeholder="输入邮箱地址" />
+        <button>提交</button>
       </form>
       <br />
       <div>&copy; dakota kelly at Allrecipe.com</div>
@@ -450,17 +451,16 @@ Alright now we are done! Here is the full code for reference:
 
 ```
 
-## Conclusion
+## 总结
+仅仅使用HTML就可以构建一个简单的网站。但如果要构建一个美观实用的网站，我们需要学习CSS和JavaScript。
 
-You can build a simple website with just HTML. But to be able to build beautiful and functional websites, you need to study CSS and JavaScript.
+你可以在社交媒体或 Youtube 上关注我，并获取有关这些主题的未来更新。 同时，你可以查看 [freeCodeCamp Curriculum](https://www.freecodecamp.org/learn) 通过解决小题目来练习HTML。
 
-You can follow me on social media or Youtube for future updates on these topics. But meanwhile, you can check out the [freeCodeCamp Curriculum](https://www.freecodecamp.org/learn) to practice HTML by solving small tasks.
+除此之外，希望你可以继续享受编程，期待在未来的帖子中见到你👋.
 
-Otherwise, stay happy coding and see you in future posts 👋.
+\_\_\_\_\_\_\_\_\_\_ 🐣 关于我 \_\_\_\_\_\_\_\_\_\_
 
-\_\_\_\_\_\_\_\_\_\_ 🐣 About me \_\_\_\_\_\_\_\_\_\_
-
-*   I am the founder of [DevChallenges](https://devchallenges.io/)
-*   Subscribe to [my Channel](https://www.youtube.com/c/thunghiem)
-*   Follow [my Twitter](https://twitter.com/thunghiemdinh)
-*   Join [Discord](https://discord.com/invite/3R6vFeM)
+*   我是 [DevChallenges](https://devchallenges.io/) 的创建者
+*   订阅我的频道 [my Channel](https://www.youtube.com/c/thunghiem)
+*   关注我的推特 [my Twitter](https://twitter.com/thunghiemdinh)
+*   加入我 [Discord](https://discord.com/invite/3R6vFeM)

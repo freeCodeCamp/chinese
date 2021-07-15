@@ -1,75 +1,75 @@
 > -  原文地址：[The JavaScript Array Handbook – JS Array Methods Explained with Examples](https://www.freecodecamp.org/news/the-javascript-array-handbook/)
 > -  原文作者：[TAPAS ADHIKARYTAPAS ADHIKARY](https://www.freecodecamp.org/news/author/tapas/)
-> -  译者：
+> -  译者：Humilitas
 > -  校对者：
 
 ![The JavaScript Array Handbook – JS Array Methods Explained with Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/freeCodeCamp-Cover-1.png)
 
-In programming, an `array` is a collection of elements or items. Arrays store data as elements and retrieve them back when you need them.
+在编程世界中，`数组`是指元素的集合。数组将数据作为元素进行存储，并在需要时将其取出。
 
-The array data structure is widely used in all programming languages that support it.
+在支持数组的编程语言中广泛地采用了这个数据结构。
 
-In this handbook, I'll teach you all about arrays in JavaScript. You'll learn about complex data handling, destructuring, the most commonly used array methods, and more.
+这个手册会介绍 JavaScript 数组的所有知识。你将会学到复杂数据处理、解构、常用数组方法等内容。
 
-# Why Did I Write this Article?
+# 我为什么写这篇文章？
 
-There are many great articles on JavaScript arrays already available around the internet. So why did I write yet another article on the same subject? What's the motivation?
+网上已经有很多介绍 JavaScript 数组的优秀文章，那我为什么还要写一篇相同主题的文章呢？动机是什么？
 
-Well, over the years of interacting with my mentees, I realized that most beginners need a tutorial that covers arrays thoroughly from beginning to end with examples.
+多年来，通过和学员的交流，我意识到大多数初学者都需要这样一个教程：通过示例从头到尾彻底地介绍数组。
 
-So I decided to create such an article chock full of meaningful examples. If you are a beginner at JavaScript, I hope you'll find it very helpful.
+所以我决定编写这样一篇包含大量示例的文章。如果你是初学者，希望这篇文章对你有所帮助。
 
-But even as an experienced developer, this handbook may come in handy to help you brush up on things as you need. I'm also learning the whole thing again while writing about it. So let's dive in.
+不过，这个手册也能帮助有经验的开发者梳理知识。我在写作这篇文章的过程中，也重新学习了相关知识。我们开始吧。
 
-# What is an Array in JavaScript?
+# JavaScript 中的数组是什么？
 
-A pair of `square brackets []` represents an array in JavaScript. All the elements in the array are `comma(,)` separated.
+在 JavaScript 中，一对方括号`（[]）` 表示一个数组，其中的所有元素以逗号`（,）` 分隔。
 
-In JavaScript, arrays can be a collection of elements of any type. This means that you can create an array with elements of type String, Boolean, Number, Objects, and even other Arrays.
+在 JavaScript 中，数组可以是任意类型元素组成的集合。这意味着，创建一个数组，它的元素类型可以是 String、Boolean、Number、Object，甚至是另一个数组。
 
-Here is an example of an array with four elements: type Number, Boolean, String, and Object.
+示例中的数组包含 4 个元素，类型分别是：Number、Boolean、String 和 Object。
 
 ```js
 const mixedTypedArray = [100, true, 'freeCodeCamp', {}];
 ```
 
-The position of an element in the array is known as its `index`. In JavaScript, the array index starts with `0`, and it increases by one with each element.
+元素在数组中的位置称为`索引（index）`，JavaScript 中的数组索引是从 0 开始计数的，每加入一个新元素，其对应的索引加 1。
 
-So, for example, in the above array, the element 100 is at `index 0`, true is at `index 1`, 'freeCodeCamp' is at `index 2`, and so on.
+例如，上面的数组中，`100` 这个元素的位置是 `索引 0`，`true` 的位置是`索引 1`，`'freeCodeCamp'` 的位置是`索引 2`，以此类推。
 
-The number of elements in the array determines its length. For example, the length of the above array is four.
+数组中的元素数量决定了数组长度（length）。比如说，上面的数组长度是 4。
 
-Interestingly, JavaScript arrays are not of fixed length. You can change the length anytime by assigning a positive numeric value. We will learn more about that in a while.
+有趣的是，JavaScript 数组的长度是可变的，你可以随时将它指定为一个非负整数值。我们稍后会学习更多相关知识。
 
-# How to Create an Array in JavaScript
+# 如何创建数组
 
-You can create an array in multiple ways in JavaScript. The most straightforward way is by assigning an array value to a variable.
+在 JavaScript 中有多种方式可以创建数组，最直接的方式是把数组字面量赋值给一个变量。
 
 ```js
 const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
 ```
 
-You can also use the `Array` constructor to create an array.
+也可以使用 `Array` 构造函数来创建数组。
 
 ```js
 const salad = new Array('🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑');
 ```
 
-> Please Note: `new Array(2)` will create an array of length two and none of the elements are defined in it. However, `new Array(1,2)` will create an array of length two with the elements 1 and 2 in it.
+> 注意：`new Array(2)` 会创建一个长度为 2 的空数组，然而 `new Array(1,2)` 则会创建一个包含两个元素（1 和 2）的数组。
 
-There are other methods like `Array.of()` and `Array.from()`, and the `spread` operator( `...`) helps you create arrays, too. We will learn about them later in this article.
+另外，`Array.of()` 和 `Array.from()` 方法，以及`展开`运算符（`...`）也可以创建数组。我们后面会学习它们。
 
-## How to Get Elements from an Array in JS
+## 如何访问数组元素
 
-You can access and retrieve elements from an array using its index. You need to use the `square bracket` syntax to access array elements.
+可以使用数组索引来获取数组元素，访问数组元素需要用到方括号 `[]`。
 
 ```js
 const element = array[index];
 ```
 
-Based on your use-cases, you may choose to access array elements one by one or in a loop.
+根据使用场景，你可能需要一个一个地访问数组元素或者使用循环来遍历。
 
-When you're accessing elements using index like this:
+可以像这样使用索引来访问数组元素：
 
 ```js
 const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
@@ -78,7 +78,7 @@ salad[2]; // '🥦'
 salad[5]; // '🥕'
 ```
 
-You can use the length of an array to traverse backward and access elements.
+也可以利用数组长度（length 属性）值，反向遍历访问数组元素。
 
 ```js
 const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
@@ -87,7 +87,7 @@ salad[len - 1]; // '🥑'
 salad[len - 3]; // '🌽'
 ```
 
-You can also loop through the array using a regular `for` or `forEach` loop, or any other loop.
+可以使用一般的 `for` 循环或 `forEach` 方法来遍历数组，也可以使用其它方式来遍历。
 
 ```js
 const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
@@ -97,37 +97,37 @@ for(let i=0; i<salad.length; i++) {
 }
 ```
 
-And here's the output:
+结果如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/image-30.png)
 
-## How to Add Elements to an Array in JS
+## 如何向数组中添加元素
 
-Use the `push()` method to insert an element into an array. The `push()` method adds an element at the end of the array. How about we add some peanuts to the salad, like this:
+可以使用 `push()` 方法向数组中插入一个元素，它会将元素追加到数组的末尾。我们往沙拉中加入一些花生：
 
 ```js
 const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
 salad.push('🥜');
 ```
 
-Now the salad array is:
+现在沙拉数组看起来像这样：
 
 \["🍅", "🍄", "🥦", "🥒", "🌽", "🥕", "🥑", "🥜"\]
 
-Note that the `push()` method adds an element to the end of the array. If you want to add an element to the beginning of the array, you'll need to use the `unshift()` method.
+注意，`push()` 方法会把元素追加到数组末尾，如果想要在数组头部插入一个元素，需要使用 `unshift()` 方法。
 
 ```js
 const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
 salad.unshift('🥜');
 ```
 
-Now the salad array is:
+现在沙拉数组看起来像这样：
 
 \["🥜", "🍅", "🍄", "🥦", "🥒", "🌽", "🥕", "🥑"\]
 
-## How to Remove Elements from an Array in JS
+## 如何移除数组元素
 
-The easiest way to remove a single element from an array is using the `pop()` method. Every time you call the `pop()` method, it removes an element from the end of the array. Then it returns the removed element and changes the original array.
+移除单个数组元素的最简单方式是使用 `pop()` 方法。每次调用 `pop()` 方法，都会移除数组末尾的那个元素。`pop()` 方法的返回值是那个被移除的元素，这个方法会改变原始数组。
 
 ```js
 const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
@@ -136,7 +136,7 @@ salad.pop(); // 🥑
 console.log(salad); // ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕']
 ```
 
-Use the `shift()` method to remove an element from the beginning of an array. Like the `pop()` method, `shift()` returns the removed element and changes the original array.
+使用 `shift()` 方法可以移除数组头部的一个元素。与 `pop()` 方法类似，`shift()` 方法会返回那个被移除的元素，并且会改变原始数组。
 
 ```js
 const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
@@ -145,9 +145,9 @@ salad.shift(); // 🍅
 console.log(salad); // ['🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
 ```
 
-## How to Copy and Clone an Array in JS
+## 如何克隆数组
 
-You can copy and clone an array to a new array using the `slice()` method. Note that the `slice()` method doesn't change the original array. Instead, it creates a new shallow copy of the original array.
+可以使用 `slice()` 方法来克隆数组。注意，`slice()` 方法不改变原始数组，而是创建一个原始数组的浅拷贝副本。
 
 ```js
 const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
@@ -158,11 +158,11 @@ console.log(saladCopy); // ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '�
 salad === saladCopy; // returns false
 ```
 
-Alternatively, you can use the `spread` operator to create a copy of the array. We will learn about that soon.
+也可以使用`展开`运算符来创建数组副本，我们很快会学到。
 
-## How to Determine if a Value is an Array in JS
+## 如何判断某个值是不是数组
 
-You can determine if a value is an array using the `Array.isArray(value)` method. The method returns true if the passed value is an array.
+可以使用 `Array.isArray(value)` 方法来判断某个值是不是数组，如果传入的值是一个数组的话，它会返回 true。
 
 ```js
 Array.isArray(['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑']); // returns true
@@ -171,23 +171,23 @@ Array.isArray({ 'tomato': '🍅'}); // returns false
 Array.isArray([]); // returns true
 ```
 
-# Array Destructuring in JavaScript
+# 数组解构
 
-With ECMAScript 6 (ES6), we have some new syntax to extract multiple properties from an array and assign them to variables in one go. It is handy to help you keep your code clean and concise. This new syntax is called destructuring syntax.
+ECMAScript 6（ES6）提供了一些新语法，可以一次性从数组中获取多个元素并赋值给多个变量。它有助于保持代码简洁明了。这个新语法被称为解构语法。
 
-Here is an example of extracting the values from an array using the destructuring syntax:
+下面是使用解构语法从数组中获取多个元素的例子：
 
 ```js
 let [tomato, mushroom, carrot] = ['🍅', '🍄', '🥕'];
 ```
 
-Now you can use the variables in your code:
+现在就可以使用这些变量了：
 
 ```js
 console.log(tomato, mushroom, carrot); // Output, 🍅 🍄 🥕
 ```
 
-To do the same thing without the destructuring, it would look like this:
+如果不使用解构语法的话，代码会是这样：
 
 ```js
 let vegetables = ['🍅', '🍄', '🥕'];
@@ -196,13 +196,13 @@ let mushroom= vegetables[1];
 let carrot= vegetables[2];
 ```
 
-So, the destructuring syntax saves you from writing lots of code. This gives you a massive boost in productivity.
+所以，解构语法能够有助于减少代码量、极大地提高生产力。
 
-## How to Assign a Default Value to a Variable
+## 如何为变量指定默认值
 
-You can assign a default value using destructuring when there is no value or `undefined` for the array element.
+使用解构语法时，可以为变量指定默认值，当数组中没有对应的元素或者元素的值为 `undefined` 时，就会使用默认值。
 
-In the example below, we assign a default value for the mushroom variable.
+下面的例子中，我们为 mushroom 变量指定了一个默认值。
 
 ```js
 let [tomato , mushroom = '🍄'] = ['🍅'];
@@ -210,11 +210,11 @@ console.log(tomato); // '🍅'
 console.log(mushroom ); // '🍄'
 ```
 
-## How to Skip a Value in an Array
+## 如何跳过某个数组元素
 
-With destructuring, you can skip an array element to map to a variable. For example, you may not be interested in all the elements in an array. In that case, skipping a value comes in handy.
+使用解构获取数组元素时，可以跳过某个元素。比如说，你可能只关注数组的部分元素，这时候这个语法就派上用场了。
 
-In the example below, we skip the mushroom element. Notice the space in the variable declaration at the left side of the expression.
+下面的例子中，我们跳过了“蘑菇”元素。注意表达式左边变量声明中的空格。
 
 ```js
 let [tomato, , carrot] = ['🍅', '🍄', '🥕'];
@@ -223,47 +223,47 @@ console.log(tomato); // '🍅'
 console.log(carrot); // '🥕'
 ```
 
-## Nested Array Destructuring in JS
+## 嵌套数组解构
 
-In JavaScript, arrays can be nested. This means that an array can have another array as an element. Array nesting can go to any depth.
+JavaScript 中，数组是可以嵌套的。这意味着一个数组的元素可以是另一个数组。数组可以嵌套任意深度。
 
-For example, let's create a nested array for fruits. It has a few fruits and an array of vegetables in it.
+例如，我们创建一个嵌套数组 `fruits`，其元素包含一些水果和一个“蔬菜”数组。
 
 ```js
 let fruits = ['🍈', '🍍', '🍌', '🍉', ['🍅', '🍄', '🥕']];
 ```
 
-How would you access the '🥕' from the above array? Again, you could do this without destructuring, like this:
+要如何获取以上数组中的 '🥕' 呢？同样的，不使用解构的话，可以这样做：
 
 ```js
 const veg = fruits[4]; // returns the array ['🍅', '🍄', '🥕']
 const carrot = veg[2]; // returns '🥕'
 ```
 
-Alternatively, you could use this short-hand syntax:
+或者，也可以使用简写语法：
 
 ```js
 fruits[4][2]; // returns '🥕'
 ```
 
-You can also access it using the destructuring syntax, like this:
+还可以使用解构语法：
 
 ```js
 let [,,,,[,,carrot]] = ['🍈', '🍍', '🍌', '🍉', ['🍅', '🍄', '🥕']];
 ```
 
-# How to Use the Spread Syntax and Rest Parameter in JavaScript
+# 如何使用展开语法（Spread Syntax）和剩余参数（Rest Parameter）
 
-Since ES6, we can use the `...` (yes, three consecutive dots) as spread syntax and the rest parameter in array destructuring.
+从 ES6 开始，通过 `...`（连续的三个点）可以在数组解构中使用展开语法和剩余参数。
 
--   For the rest parameter, the `...` appears on the left side of the destructuring syntax.
--   For the spread syntax, the `...` appears on the right side of the destructuring syntax.
+- 使用剩余参数时，`...` 出现在解构语法表达式的左边。
+- 使用展开语法时，`...` 出现在解构语法表达式的右边。
 
-## How to Use the Rest Parameter in JS
+## 如何使用剩余参数
 
-With `Rest Parameter`, we can map out the left elements of an array in a new array. The rest parameter must be the last variable in the destructuring syntax.
+通过`剩余参数`，可以将剩下的元素映射到一个新的数组中。剩余参数必须是解构语法中的最后一个变量。
 
-In the example below, we have mapped the first two of the array elements to the tomato and mushroom variables. The remaining elements are mapped to the `rest` variable using the `...`. The `rest` variable is a new array containing the leftover elements.
+下面的例子中，我们把数组的前两个参数分别映射到了 tomato 和 mushroom 变量中，剩下的元素则使用 `...` 映射到了 `rest` 变量中。`rest` 是一个新数组，其中包含了剩下的元素。
 
 ```js
 const [tomato, mushroom, ...rest] = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
@@ -273,9 +273,9 @@ console.log(mushroom); // '🍄'
 console.log(rest); // ["🥦", "🥒", "🌽", "🥕", "🥑"]
 ```
 
-## How to Use the Spread Operator in JS
+## 如何使用展开运算符
 
-With the spread operator, we can create a clone/copy of an existing array like this:
+使用展开运算符，可以这样来克隆现有的数组：
 
 ```js
 const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
@@ -286,13 +286,13 @@ console.log(saladCloned); // ["🍅", "🍄", "🥦", "🥒", "🌽", "🥕", "�
 salad === saladCloned // false
 ```
 
-# Destructuring Use Cases in JavaScript
+# 解构的使用场景
 
-Let's look at a few exciting use-cases of array destructuring, the spread operator, and the rest parameter.
+我们一起来看看数组解构、展开运算符和剩余参数的一些激动人心的使用场景。
 
-## How to Swap Values with Destructuring
+## 使用解构交换变量值
 
-We can swap the value of two variables easily using the array destructuring syntax.
+使用数组解构语法可以很轻松地交换两个变量的值。
 
 ```js
 let first = '😔';
@@ -303,45 +303,45 @@ console.log(first);  // '🙂'
 console.log(second); // '😔'
 ```
 
-## How to Merge Arrays
+## 合并数组
 
-We can merge two arrays and create a new array with all the elements from both arrays. Let's take two arrays — one with a couple of smiley faces and another with a few veggies.
+我们可以通过合并两个数组的所有元素来创建一个新数组（不改变原始数组）。假设现在有两个数组——一个包含一些笑脸，另一个包含一些蔬菜。
 
 ```js
 const emotion = ['🙂', '😔'];
 const veggies = ['🥦', '🥒', '🌽', '🥕'];
 ```
 
-Now, we will merge them to create a new array.
+现在，我们要把它们合并成一个新数组。
 
 ```js
 const emotionalVeggies = [...emotion, ...veggies];
 console.log(emotionalVeggies); // ["🙂", "😔", "🥦", "🥒", "🌽", "🥕"]
 ```
 
-# JavaScript Array Methods
+# JavaScript 数组方法
 
-So far, we have seen a few array properties and methods. Let's do a quick recap of the ones we've looked at:
+到目前为止，我们已经了解了一些数组属性和方法。我们做一个简单的回顾：
 
--   `push()` – Insert an element at the end of the array.
--   `unshift()` – Insert an element at the beginning of the array.
--   `pop()` – Remove an element from the end of the array.
--   `shift()` – Remove an element from the beginning of the array.
--   `slice()` – Create a shallow copy of an array.
--   `Array.isArray()` – Determine if a value is an array.
--   `length` – Determine the size of an array.
+-   `push()` – 在数组末尾插入一个元素。
+-   `unshift()` – 在数组头部插入一个元素。
+-   `pop()` – 移除数组末尾的最后一个元素。
+-   `shift()` – 移除数组头部的第一个元素。
+-   `slice()` – 创建数组的浅拷贝副本。
+-   `Array.isArray()` – 判断某个值是不是数组。
+-   `length` – 数组的长度。
 
-Now we'll learn about other important JS array methods with examples.
+现在我们将通过示例来学习其它重要的数组方法。
 
-## How to Create, Remove, Update, and Access Arrays in JavaScript
+## 如何创建数组、删除数组元素、更新数组元素以及访问数组元素
 
-In this section, we will learn about methods you can use to create a new array, remove elements to make the array empty, access elements, and many more.
+这一节，我们要学习用于创建新数组、移除数组元素及清空数组、访问数组元素等操作的方法。
 
-### The `concat()` array method
+### `concat()` 方法
 
-The `concat()` method merges one or more arrays and returns a merged array. It is an immutable method. This means it doesn't change (mutate) existing arrays.
+`concat()` 方法可以将多个数组合并在一起并返回合并后的数组。这是一个不可变方法，意味着它不会改变现有的数组。
 
-Let's concat two arrays.
+拼接两个数组：
 
 ```js
 const first = [1, 2, 3];
@@ -354,13 +354,13 @@ console.log(first); // [1, 2, 3]
 console.log(second); // [4, 5, 6]
 ```
 
-Using the `concat()` method we can merge more than two arrays. We can merge any number of arrays with this syntax:
+使用 `concat()` 方法也可以拼接两个以上的数组。我们可以这样拼接任意数量的数组：
 
 ```js
 array.concat(arr1, arr2,..,..,..,arrN);
 ```
 
-Here is an example:
+示例如下：
 
 ```js
 const first = [1, 2, 3];
@@ -372,9 +372,9 @@ const merged = first.concat(second, third);
 console.log(merged); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-### The `join()` array method
+### `join()` 方法
 
-The `join()` method joins all the elements of the array using a separator and returns a string. The default separator used for joining is `comma(,)`.
+`join()` 方法使用一个分隔符将数组的所有元素拼接成一个字符串，并返回这个字符串。默认的分隔符是逗号（`,`）。
 
 ```js
 const emotions = ['🙂', '😍', '🙄', '😟'];
@@ -383,22 +383,22 @@ const joined = emotions.join();
 console.log(joined); // "🙂,😍,🙄,😟"
 ```
 
-You can pass a separator of your choice to join the elements. Here is an example of joining the elements with a custom separator:
+可以传入一个自定义分隔符用于拼接数组元素。下面是一个使用自定义分隔符拼接数组元素的例子：
 
 ```js
 const joined = emotions.join('<=>');
 console.log(joined); // "🙂<=>😍<=>🙄<=>😟"
 ```
 
-Invoking the `join()` method on an empty array returns an empty string:
+在空数组上调用 `join()` 方法，返回一个空字符串：
 
 ```js
 [].join() // returns ""
 ```
 
-### The `fill()` array method
+### `fill()` 方法
 
-The `fill()` method fills an array with a static value. You can change all the elements to a static value or change a few selected items. Note that the `fill()` method changes the original array.
+`fill()` 方法使用一个固定值填充数组。可以使用这个固定值填充整个数组，也可以只覆盖选定的元素。注意，`fill()` 方法会改变原始数组。
 
 ```js
 const colors = ['red', 'blue', 'green'];
@@ -407,7 +407,7 @@ colors.fill('pink');
 console.log(colors); // ["pink", "pink", "pink"]
 ```
 
-Here is an example where we are changing only the last two elements of the array using the `fill()` method:
+下面是一个使用 `fill()` 方法覆盖数组的最后两个元素的例子：
 
 ```js
 const colors = ['red', 'blue', 'green'];
@@ -415,19 +415,15 @@ const colors = ['red', 'blue', 'green'];
 colors.fill('pink', 1,3); // ["red", "pink", "pink"]
 ```
 
-In this case, the first argument of the `fill()` method is the value we change with. The second argument is the start index to change. It starts with `0`. The last argument is to determine where to stop filling. The max value of it could be `colors.length`.
+这个例子中，`fill()` 方法的第一个参数是用来填充数组的值，第二个参数是替换的起始索引（从 `0` 开始计算），最后一个参数是终止索引（最大值可以是 `colors.length`）。
 
-Please check out this Twitter thread for a practical use of the `fill()` method.
+请查看这个 [Twitter 主题](https://twitter.com/tapasadhikary/status/1360185996768251904?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1360185996768251904%7Ctwgr%5E%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Fthe-javascript-array-handbook%2F)以了解 `fill()` 方法的实际用法。
 
-> Have you used the [#JavaScript](https://twitter.com/hashtag/JavaScript?src=hash&ref_src=twsrc%5Etfw) array fill() method in practice yet? It fills all the array elements with a static value. 🧵 👇[#DEVCommunity](https://twitter.com/hashtag/DEVCommunity?src=hash&ref_src=twsrc%5Etfw) [#100DaysOfCode](https://twitter.com/hashtag/100DaysOfCode?src=hash&ref_src=twsrc%5Etfw) [pic.twitter.com/ahfsJBOacT](https://t.co/ahfsJBOacT)
-> 
-> — Tapas Adhikary (@tapasadhikary) [February 12, 2021](https://twitter.com/tapasadhikary/status/1360185996768251904?ref_src=twsrc%5Etfw)
+你也可以查看这个示例项目：[https://github.com/atapas/array-fill-color-cards](https://github.com/atapas/array-fill-color-cards)。
 
-Also, you may find this demo project helpful: [https://github.com/atapas/array-fill-color-cards](https://github.com/atapas/array-fill-color-cards).
+### `includes()` 方法
 
-### The `includes()` array method
-
-You can determine the presence on an element in an array using the `includes()` method. If the element is found, the method returns `true`, and `false` otherwise.
+可以使用 `includes()` 方法来判断一个数组中是否包含某个元素，如果包含则返回 `true`，否则返回 `false`。
 
 ```js
 const names = ['tom', 'alex', 'bob', 'john'];
@@ -436,9 +432,9 @@ names.includes('tom'); // returns true
 names.includes('july'); // returns false
 ```
 
-### The `indexOf()` array method
+### `indexOf()` 方法
 
-You may want to know the index position of an element in array. You can use the `indexOf()` method to get that. It returns the index of the first occurrence of an element in the array. If an element is not found, the `indexOf()` method returns `-1`.
+可以使用 `indexOf()` 方法找到某个元素在数组中的索引位置。它返回这个元素在数组中首次出现的索引，如果没有找到这个元素则返回 `-1`。
 
 ```js
 const names = ['tom', 'alex', 'bob', 'john'];
@@ -447,7 +443,7 @@ names.indexOf('alex'); // returns 1
 names.indexOf('rob'); // returns -1
 ```
 
-There is another method `lastIndexOf()` that helps you find the index of the last occurrence of an element in the array. Like `indexOf()`, `lastIndexOf()` also returns `-1` if the element is not found.
+还有一个 `lastIndexOf()` 方法，可以找出某个元素在数组中最后出现的位置。与 `indexOf()` 类似，`lastIndexOf()` 在找不到这个元素时也返回 `-1`。
 
 ```js
 const names = ['tom', 'alex', 'bob', 'tom'];
@@ -456,9 +452,9 @@ names.indexOf('tom'); // returns 0
 names.lastIndexOf('tom'); // returns 3
 ```
 
-### The `reverse()` array method
+### `reverse()` 方法
 
-As the name suggests, the `reverse()` method reverses the elements' positions in the array so that the last element goes into the first position and the first one to the last.
+顾名思义，`reverse()` 方法将数组中元素的位置颠倒，最后一个元素变成第一个、第一个元素变成最后一个。
 
 ```js
 const names = ['tom', 'alex', 'bob'];
@@ -466,11 +462,11 @@ const names = ['tom', 'alex', 'bob'];
 names.reverse(); // returns ["bob", "alex", "tom"]
 ```
 
-The `reverse()` method modifies the original array.
+`reverse()` 方法会改变原始数组。
 
-### The `sort()` array method
+### `sort()` 方法
 
-The `sort()` method is probably one of the most often used array methods. The default `sort()` method converts the element types into strings and then sorts them. The default sorting order is ascending. The `sort()` method changes the original array.
+`sort()` 方法可能是最常用的数组方法之一。`sort()` 方法默认会把元素转换为字符串再对它们进行排序。默认的排序方式是升序排列。`sort()` 方法会改变原始数组。
 
 ```js
 const names = ['tom', 'alex', 'bob'];
@@ -478,23 +474,23 @@ const names = ['tom', 'alex', 'bob'];
 names.sort(); // returns ["alex", "bob", "tom"]
 ```
 
-The `sort()` method accepts an optional comparator function as an argument. You can write a comparator function and pass to the `sort()` method to override the default sorting behavior.
+`sort()` 方法接收一个可选的比较器函数作为参数，可以编写一个比较器函数传入 `sort()` 方法来覆盖默认的排序行为。
 
-Let's now take an array of numbers and sort them in ascending and descending order using a comparator function:
+假设现在有一个数字数组，我们使用比较器函数将它按升序和降序排序：
 
 ```js
 const numbers = [23, 5, 100, 56, 9, 13, 37, 10, 1]
 ```
 
-First, we'll invoke the default `sort()` method and see the output:
+首先，调用 `sort()` 方法，并观察结果：
 
 ```js
 numbers.sort();
 ```
 
-Now the sorted array is, \[1, 10, 100, 13, 23, 37, 5, 56, 9\]. Well, that's not the output we expect. But it happens because the default `sort()` method converts the elements to a string and then compares them based on the `UTF-16` code unit values.
+现在，排序后的数组为 \[1, 10, 100, 13, 23, 37, 5, 56, 9\]。这并不是我们预期的结果。得到这个结果是因为 `sort()` 方法默认会将元素转换为字符串，再基于字符串诸个字符对应的 `UTF-16` 编码值进行比较。
 
-To solve this, let's write a comparator function. Here is one for the ascending order:
+为了解决这个问题，我们编写一个比较器函数。这是用于升序排序的：
 
 ```js
 function ascendingComp(a, b){
@@ -502,43 +498,43 @@ function ascendingComp(a, b){
 }
 ```
 
-Now pass this to the `sort()` method:
+把比较器函数传入 `sort()` 方法：
 
 ```js
 numbers.sort(ascendingComp); // retruns [1, 5, 9, 10, 13, 23, 37, 56, 100]
 
 /* 
 
-We could also code it like,
+也可以使用行内函数：
 
 numbers.sort(function(a, b) {
   return (a-b);
 });
 
-Or, with the arrow function,
+或者使用箭头函数的写法：
 
 numbers.sort((a, b) => (a-b));
 
 */
 ```
 
-For descending order, do this:
+降序排序：
 
 ```js
 numbers.sort((a, b) => (b-a));
 ```
 
-Check out this GitHub repository for more sorting examples and tips: [https://github.com/atapas/js-array-sorting](https://github.com/atapas/js-array-sorting)
+查看这个 GitHub 仓库以获取更多排序示例和技巧：[https://github.com/atapas/js-array-sorting](https://github.com/atapas/js-array-sorting)。
 
-### The `splice()` array method
+### `splice()` 方法
 
-The `splice()` method helps you add, update, and remove elements in an array. This method may be a bit confusing at the beginning, but once you know how to use it properly, you will get it right.
+`splice()` 方法可以帮助你向数组中添加元素、更新数组元素以及移除数组元素。刚开始接触这个方法可能会令人困惑，不过只要你理解了它的正确用法，就能够掌握。
 
-The main purpose of the `splice()` method is to delete elements from array. It returns an array of the elements deleted and modifies the original array. But you can add and replace elements using it as well.
+`splice()` 方法的主要目标是从数组中移除元素。它会返回由被移除的元素组成的数组，并且会改变原始数组。你也可以用它来向数组中添加元素或者替换数组中的元素。
 
-To add an element using the `splice()` method, we need to pass the position where we want to add, how many elements to delete starting with the position, and the element to add.
+使用 `splice()` 方法向数组中添加一个元素，需要传入插入的目标位置、从目标位置算起想要删除的元素数量以及要插入的元素。
 
-In the example below, we are adding an element `zack` at the index `1` without deleting any elements.
+下面的例子中，我们在索引为 `1` 的位置上插入了一个元素 `zack`，没有删除任何元素。
 
 ```js
 const names = ['tom', 'alex', 'bob'];
@@ -548,7 +544,7 @@ names.splice(1, 0, 'zack');
 console.log(names); // ["tom", "zack", "alex", "bob"]
 ```
 
-Have a look at the following example. Here we are removing one element from the `index 2` (the 3rd element) and adding a new element, `zack`. The `splice()` method returns an array with the deleted element, `bob`.
+看看下面的例子，我们移除了索引 `2` 位置之后的一个元素（即第三个元素），并添加了一个元素 `zack`。`splice()` 方法返回一个由移除掉的元素——`bob`——组成的数组。
 
 ```js
 const names = ['tom', 'alex', 'bob'];
@@ -559,27 +555,15 @@ console.log(deleted); // ["bob"]
 console.log(names); // ["tom", "alex", "zack"]
 ```
 
-Check out this Twitter thread to learn how the `splice()` method helps you make an array empty.
+查看这个 [Twitter 主题](https://twitter.com/tapasadhikary/status/1313112900085579776?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1313112900085579776%7Ctwgr%5E%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Fthe-javascript-array-handbook%2F)以了解如何使用 `splice()` 方法清空数组。
 
-> How do you prefer to remove one, many, or all the elements from a [#javascript](https://twitter.com/hashtag/javascript?src=hash&ref_src=twsrc%5Etfw) array in a native way?  
->   
-> \- 🗑️arr.length = 0  
-> \- 🗑️arr = \[\]  
-> \- 🗑️arr.shift()  
-> \- 🗑️arr.pop()  
-> \- 🗑️arr.splice()  
->   
-> This is a thread to talk about it. 🧵[#CodeNewbie](https://twitter.com/hashtag/CodeNewbie?src=hash&ref_src=twsrc%5Etfw) [#100DaysOfCode](https://twitter.com/hashtag/100DaysOfCode?src=hash&ref_src=twsrc%5Etfw) [#DevCommunityIN](https://twitter.com/hashtag/DevCommunityIN?src=hash&ref_src=twsrc%5Etfw) [#DEVCommunity](https://twitter.com/hashtag/DEVCommunity?src=hash&ref_src=twsrc%5Etfw)
-> 
-> — Tapas Adhikary (@tapasadhikary) [October 5, 2020](https://twitter.com/tapasadhikary/status/1313112900085579776?ref_src=twsrc%5Etfw)
+## 静态数组方法
 
-## Static Array Methods in JavaScript
+在 JavaScript 中，数组有三个静态方法。我们已经讨论过 `Array.isArray()`，接下来要探讨其余两个方法。
 
-In JavaScript, arrays have three static methods. We have discussed `Array.isArray()` already. Let's discuss the other two now.
+### `Array.from()` 方法
 
-### The `Array.from()` array method
-
-Let's take a simple HTML code snippet that contains a div and a few list elements:
+假设有以下 HTML 代码片段，其中包含一个 div 和一些列表元素：
 
 ```html
 <div id="main">
@@ -600,19 +584,19 @@ Let's take a simple HTML code snippet that contains a div and a few list element
 </div>
 ```
 
-Now we'll query the DOM using the `getElementsByTagName()` method.
+我们使用 `getElementsByTagName()` 方法获取这些列表元素。
 
 ```js
 document.getElementsByTagName('li');
 ```
 
-It returns a `HTMLCollection` that looks like this:
+它返回如下 `HTMLCollection` 对象：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/htmlCollec.png)
 
-HTMLCollection is an Array-Like Object
+<div style='text-align: center; margin-bottom: 1.5em;'>HTMLCollection 是类数组对象</div>
 
-So it is like an array. Now let's try iterating over it using `forEach`:
+它和数组类似，我们试着使用 `forEach` 来遍历它：
 
 ```js
 document.getElementsByTagName('li').forEach(() => {
@@ -620,51 +604,51 @@ document.getElementsByTagName('li').forEach(() => {
 })
 ```
 
-Guess what the output is? It's an error like this:
+猜猜会输出什么？会报出以下错误：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/htmlcolc_error.png)
 
-Error while using forEach on the Array-Like object
+<div style='text-align: center; margin-bottom: 1.5em;'>在类数组对象上调用 forEach 发生错误</div>
 
-But why? Because the `HTMLCollection` is not an array. It is an `Array-Like` object. So you can not iterate over it using `forEach`.
+为什么会这样？这是因为 `HTMLCollection` 并不是数组，而是 `类数组` 对象，所以不能使用 `forEach` 来遍历它。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/htmlCollec_object.png)
 
-The proto is Object
+<div style='text-align:center; margin-bottom: 1.5em;'>其原型（proto）是 Object</div>
 
-This is where you should use the `Array.from()` method. It converts an array-like object to an array so that you can perform all the array operations on it.
+这里就需要用到 `Array.from()` 方法了，`Array.from()` 能将类数组对象转换为数组，进而能够在它上面执行所有数组操作。
 
 ```js
 const collection = Array.from(document.getElementsByTagName('li'))
 ```
 
-Here the `collection` is an array:
+这里的 `collection` 是一个数组：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/collection.png)
 
-The proto is Array
+<div style='text-align:center; margin-bottom: 1.5em;'>其原型为 Array</div>
 
-### The `Array.of()` array method
+### `Array.of()` 方法
 
-The `Array.of()` method creates a new array using any number of elements of any type.
+`Array.of()` 可以使用任意数量任意类型的元素创建一个新数组。
 
 ```js
 Array.of(2, false, 'test', {'name': 'Alex'})
 ```
 
-The output looks like this:
+输出如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/image-49.png)
 
-Output of the Array.of() method
+<div style='text-align:center; margin-bottom: 1.5em;'>Array.of() 方法的输出结果</div>
 
-## Array Iterator Methods in JavaScript
+## 数组迭代器方法
 
-Now we're gonna learn about array iterator methods. These are very useful methods for iterating through array and performing computations, making decisions, filtering out stuff, and more.
+现在我们要学习数组迭代器方法。这些方法在执行数组迭代、计算、做判断、过滤元素等操作时很有用。
 
-So far, we have not seen an example of an array of objects. In this section, we will use the following array of objects to explain and demonstrate the methods below.
+到目前为止，我们还没见过对象数组的示例。在这一节，我们将会使用下面的对象数组来解释和演示这些迭代器方法。
 
-This array contains the information for some students subscribed to various paid courses:
+这个数组包含了一些订阅各种付费课程的学生的信息：
 
 ```js
 let students = [
@@ -711,11 +695,11 @@ let students = [
 ];
 ```
 
-Alright, let's get started. All the array iterator methods take a function as an argument. You need to specify the logic to iterate and apply in that function.
+让我们开始吧。所有数组迭代器方法都接收一个函数作为参数，需要在这个函数中声明迭代逻辑。
 
-### The `filter()` array method
+### `filter()` 方法
 
-The `filter()` method creates a new array with all the elements that satisfies the condition mentioned in the function. Let's find the student who is female. So the filter condition should be that the gender is equal to 'F'.
+`filter()` 方法用所有满足过滤条件的元素来创建一个新数组。我们要找出女学生，所以过滤条件应该是 `gender === 'F'`。
 
 ```js
 const femaleStudents = students.filter((element, index) => {
@@ -725,18 +709,17 @@ const femaleStudents = students.filter((element, index) => {
 console.log(femaleStudents);
 ```
 
-The output is this:
+输出如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/image-50.png)
 
-That's right. The student with name `Rubi` is the only female student we have got so far.
+结果是正确的，名为 `Rubi` 的学生是目前唯一的女学生。
 
-### The `map()` array method
+### `map()`方法
 
-The `map()` method creates a new array by iterating through the elements and applying logic we provided in the function as an argument. We'll create a new array of full names of all the students in the `students` array.
+`map()` 方法遍历整个数组，依次对数组元素执行回调函数并用这些返回值创建一个新数组。我们将会创建一个由 `students` 数组中所有学生的全名组成的新数组。
 
 ```js
-
 const fullNames = students.map((element, index) => {
   return {'fullName': element['f_name'] + ' ' + element['l_name']}
 });
@@ -744,15 +727,15 @@ const fullNames = students.map((element, index) => {
 console.log(fullNames);
 ```
 
-The output looks like this:
+输出如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/image-51.png)
 
-Here we see a new array with the `fullName` properties that is computed using the `f_name` and `l_name` properties of each student object.
+这里我们可以看到由包含 `fullName` 属性的对象组成的数组，`fullName` 是由 student 对象的 `f_name` 和 `l_name` 属性计算得到的。
 
-### The `reduce()` array method
+### `reduce()` 方法
 
-The `reduce()` method applies a reducer function on each of the array elements and returns an output value. We'll apply a reducer function on the `students` array to compute the total amount paid by all the students.
+`reduce()` 方法对每个数组元素执行 reducer 函数，并将其结果汇总为单个返回值。我们将会在 `students` 数组中应用一个 reducer 函数来计算所有学生支付的总额。
 
 ```js
 const total = students.reduce(
@@ -765,15 +748,15 @@ const total = students.reduce(
 console.log(total); // 1000
 ```
 
-In the above code,
+在上面的代码中，
 
--   We initialize the `accumulator` with `0`.
--   We apply the `reduce` method on each of the student objects. We access the `paid` property and add it to the accumulator.
--   Finally, we return the accumulator.
+-   我们将`累加器（accumulator）`初始化为 `0`。
+-   我们对每个 student 对象执行 `reduce` 方法，读取 `paid` 属性值并把它累加在累加器上。
+-   最后，返回累加器。
 
-### The `some()` array method
+### `some()` 方法
 
-The `some()` method returns a boolean value (true/false) based on at least one element in the array passing the condition in the function. Let's see if there are any students below the age 30.
+`some()` 方法返回一个布尔值（true/false），其返回值取决于数组中是否至少有一个元素符合回调函数中的判断条件。我们来看看是否有学生的年龄小于 30 岁。
 
 ```js
 let hasStudentBelow30 = students.some((element, index) => {
@@ -783,17 +766,17 @@ let hasStudentBelow30 = students.some((element, index) => {
 console.log(hasStudentBelow30); // true
 ```
 
-Yes, we see there is at least one student younger than 30.
+是的，我们看到至少有一个学生的年龄是小于 30 岁的。
 
-### The `find()` array method
+### `find()` 方法
 
-Using the `some()` method, we have seen that there is a student below age 30. Let's find out who that student is.
+使用 `some()` 方法，我们已经看到有一个 30 岁以下的学生。让我们找出这个学生。
 
-To do that, we will use the `find()` method. It returns the first matched element from the array that satisfies the condition in the function.
+为此，我们会用到 `find()` 方法，它会返回数组中第一个满足判断条件的元素。
 
-Arrays have another related method, `findIndex()`, that returns the index of the element we find using the `find()` method. If no elements match the condition, the `findIndex()` method returns `-1`.
+还有另一个相关的方法 `findIndex()`，这个方法返回我们使用 `find()` 方法找到的元素的索引，如果没有符合条件的元素则返回 `-1`。
 
-In the example below, we pass a function to the `find()` method that checks for the age of each of the student. It returns the matched student when the condition satisfies.
+下面的例子中，我们向 `find()` 方法中传入了一个函数用来判断学生的年龄，它会返回满足判断条件的学生。
 
 ```js
 const student = students.find((element, index) => {
@@ -803,15 +786,15 @@ const student = students.find((element, index) => {
 console.log(student);
 ```
 
-The output is this:
+输出如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/image-52.png)
 
-As we see, it is Alex who is 22 years old. We found him.
+可以看到，他就是 22 岁的 Alex，我们找到他了。
 
-### The `every()` array method
+### `every()` 方法
 
-The `every()` method detects if every element of the array satisfies the condition passed in the function. Let's find if all the students have subscribed to at least two courses.
+`every()` 方法检查是否数组的每个元素都满足给定的判断条件。让我们检查一下是不是所有学生都订阅了至少两门课程。
 
 ```js
 const atLeastTwoCourses = students.every((elements, index) => {
@@ -821,17 +804,17 @@ const atLeastTwoCourses = students.every((elements, index) => {
 console.log(atLeastTwoCourses); // true
 ```
 
-As expected, we see that the output is `true`.
+正如预期，我们看到结果为 `true`。
 
-## Proposed Array Methods
+## 提案中的方法
 
-As of May, 2021, ECMAScript has a [method in proposal](https://tc39.es/proposal-relative-indexing-method/#sec-array-prototype-additions), the `at()` method.
+截至 2021 年 5 月，ECMAScript 提案中有一个[新的数组方法](https://tc39.es/proposal-relative-indexing-method/#sec-array-prototype-additions)，即 `at()` 方法。
 
-### The `at()` Method
+### `at()` 方法
 
-The proposed `at()` method would help you access the elements of an array using a negative index number. As of now, this is not possible. You can access elements only from the beginning of the array using a positive index number.
+提案中的 `at()` 方法可以让你使用负数索引来访问数组元素（译注：使用负数索引即从数组末尾开始访问元素，`-1` 表示最后一个元素、`-2` 表示倒数第二个元素……以此类推）。截至目前，这个方法还不可用。现在只能使用正数索引从数组开头访问元素。
 
-Accessing elements from the back of the array is possible using the length value. With the inclusion of the `at()` method, you would be able to access the elements using both positive and negative indexes using a single method.
+目前想从数组末尾开始访问数组元素要借助 length 属性。通过引入 `at()` 方法，就可以在单个方法里面使用正数索引或者负数索引来访问元素。
 
 ```js
 const junkFoodILove = ['🥖', '🍔', '🍟', '🍕', '🌭', '🥪', '🌮', '🍿'];
@@ -844,24 +827,24 @@ junkFoodILove.at(-8); // 🥖
 junkFoodILove.at(10); // undefined
 ```
 
-Here is a quick demo of it:
+这是一个简单示例：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/demo.gif)
 
-JavaScript Array at() method Demo
+<div style='text-align:center; margin-bottom: 1.5em;'>JavaScript at() 方法示例</div>
 
-You can use [this polyfill](https://github.com/es-shims/Array.prototype.at) to achieve the functionality of the `at()` method until this method gets added to the JavaScript language. Please checkout this GitHub repository for the `at()` method examples: [https://github.com/atapas/js-array-at-method](https://github.com/atapas/js-array-at-method)
+在 `at()` 方法加入 JavaScript 语言之前，你可以使用这个 [polyfill](https://github.com/es-shims/Array.prototype.at) 来获得它的功能。查看这个 GitHub 仓库以获取 `at()` 方法的示例：[https://github.com/atapas/js-array-at-method](https://github.com/atapas/js-array-at-method)。
 
-# Before We End...
+# 结束之前...
 
-I hope you've found this article insightful, and that it helps you understand JavaScript arrays more clearly. Please practice the examples multiple times to get a good grip on them. You can find all the [code examples in my GitHub repository](https://github.com/atapas/js-handbook-examples#%EF%B8%8F-list-of-content).
+希望你觉得这篇文章有价值，也希望它能够帮助你更好地理解 JavaScript 数组。请多多练习文中的示例，以便更好地掌握它们。你可以在[我的 GitHub 仓库](https://github.com/atapas/js-handbook-examples#%EF%B8%8F-list-of-content)中找到所有代码示例。
 
-Let's connect. You will find me active on [Twitter (@tapasadhikary)](https://twitter.com/tapasadhikary). Please feel free to give a follow.
+保持联系，我平时活跃在 [Twitter (@tapasadhikary)](https://twitter.com/tapasadhikary)，欢迎关注我。
 
-You may also like these articles:
+推荐阅读：
 
--   [Why do you need to know about Array-like Objects?](https://blog.greenroots.info/why-do-you-need-to-know-about-array-like-objects-ckgsynazh07er06s18ppn32n0)
--   [5 useful tips about the JavaScript array sort method](https://blog.greenroots.info/5-useful-tips-about-the-javascript-array-sort-method-ckfs2cifq00eju9s17dfy3jq8)
--   [Ways to Empty an Array in JavaScript and the Consequences](https://blog.greenroots.info/ways-to-empty-an-array-in-javascript-and-the-consequences-cjwt45q9d002h2fs1kz5a77a2)
--   [Build your JavaScript Muscles with map, reduce, filter and other array iterators](https://blog.greenroots.info/build-your-javascript-muscles-with-map-reduce-filter-and-other-array-iterators-cjyo22miw000xzss1ydfqveib)
--   [Why do you need to know about the JavaScript Array at() method?](https://blog.greenroots.info/why-do-you-need-to-know-about-the-javascript-array-at-method-ckoskkkee0ftmbws1ag0b4udt)
+-   [为什么需要了解类数组对象？](https://blog.greenroots.info/why-do-you-need-to-know-about-array-like-objects-ckgsynazh07er06s18ppn32n0)
+-   [关于 JavaScript 排序方法（sort）的 5 个实用技巧](https://blog.greenroots.info/5-useful-tips-about-the-javascript-array-sort-method-ckfs2cifq00eju9s17dfy3jq8)
+-   [JavaScript 中清空数组的各种方式及其后果](https://blog.greenroots.info/ways-to-empty-an-array-in-javascript-and-the-consequences-cjwt45q9d002h2fs1kz5a77a2)
+-   [使用 map、reduce、filter 和其它数组迭代器增强你的 JavaScript 水平](https://blog.greenroots.info/build-your-javascript-muscles-with-map-reduce-filter-and-other-array-iterators-cjyo22miw000xzss1ydfqveib)
+-   [为什么需要了解 JavaScript 数组的 at() 方法？](https://blog.greenroots.info/why-do-you-need-to-know-about-the-javascript-array-at-method-ckoskkkee0ftmbws1ag0b4udt)

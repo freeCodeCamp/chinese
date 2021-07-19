@@ -24,12 +24,16 @@ In this article, I provide a foundation and framework for learning and improving
 在本文中，我提供了学习和提高交互设计技能的基础和框架。
 
 ![Diagram showing the overlap and difference between UX and IxD. IxD is a sub-domain of UX.](https://www.freecodecamp.org/news/content/images/2021/02/image-148.png)
+![图表显示了UX 和 IxD 之间的相同部分和不同部分。 IxD 是 UX 的子集。](https://www.freecodecamp.org/news/content/images/2021/02/image-148.png)
 
 The difference between UX (user experience) and IxD (interaction design).
+UX (用户体验) 和 IxD (交互设计) 之间的区别.
 
 ## What is Interaction Cost?
+## 什么是交互成本？
 
 The foundational concept behind interaction design is “interaction cost,” which is often used to measure a product’s usability. Nielsen Norman defines “interaction costs” as the [sum of mental and physical efforts](https://www.nngroup.com/articles/interaction-cost-definition/) that users must exert to reach their goals.
+交互设计背后的基础概念是“交互成本”，它经常被用来衡量一个产品的可行性。Nielsen Norman 将“交互成本”定义为用户为达到目标而必须付出的精神和体力的总和。
 
 In general, we want to keep interaction costs as low as possible. However, this is difficult, as the more use cases your product covers, the harder this becomes.
 

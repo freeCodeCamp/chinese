@@ -36,18 +36,25 @@ The foundational concept behind interaction design is “interaction cost,” wh
 交互设计背后的基础概念是“交互成本”，它经常被用来衡量一个产品的可行性。Nielsen Norman 将“交互成本”定义为用户为达到目标而必须付出的精神和体力的总和。
 
 In general, we want to keep interaction costs as low as possible. However, this is difficult, as the more use cases your product covers, the harder this becomes.
+一般来说，我们希望尽可能降低交互成本。但是，这很困难。因为随着你的产品覆盖的用例越多，这将变得困难。
 
 Supporting more use cases and functionality adds complexity to your product’s information architecture (IA) and navigation. A use case is a sequence of steps, starting with a user’s goal and the result when that goal is achieved.
+支持更多的用例和功能会增加产品信息架构（IA）和导航的复杂度。一个用例是一连串的步骤，从用户的目标和实现目标后的结果开始。
 
 A more complex IA will inherently increase the number of clicks required to accomplish a user’s goal. For example, an iOS clock app has the following alarm use case goals: turn on the alarm, create a new alarm, and edit the alarm.
+更复杂的IA本质上会增加完成用户目标所需的点击次数。例如iOS时钟应用具有以下闹钟用例目标：开启或关闭闹钟，创建一个新的闹钟和编辑闹钟。
 
 ![An information architecture (IA) diagram.](https://www.freecodecamp.org/news/content/images/2021/02/image-149.png)
+![信息架构 (IA) 图示。](https://www.freecodecamp.org/news/content/images/2021/02/image-149.png)
 
-The more complex the IA, the more the user has to click to get to their desired screen. [Credits: Topta](https://dribbble.com/shots/4406909-The-Comprehensive-Guide-to-Information-Architecture)l
+The more complex the IA, the more the user has to click to get to their desired screen. [Credits: Topta](https://dribbble.com/shots/4406909-The-Comprehensive-Guide-to-Information-Architecture)
+IA越是复杂，用户就越需要点击才能进入他们想要的屏幕。[鸣谢: Topta](https://dribbble.com/shots/4406909-The-Comprehensive-Guide-to-Information-Architecture)
 
 The rule of thumb focuses on reducing the interaction costs for your target user’s primary use cases. Whenever a product accommodates too many use cases (for example, enterprise products with a million dropdown menus and features), it becomes harder to use.
+经验法则的重点是减少用户的主要用例的交互成本。每当一个产品容纳了太多的用例（例如，有一百万个下拉菜单和功能的企业产品），它就变得更难使用。
 
 To avoid this over-complication, choose a specific user and use case to focus on when building a brand new product.
+为了避免这种过度复杂化，在建立一个全新的产品时，应该选择一个特定的用户和用例来关注。
 
 ### Physical and Mental Interaction Costs
 

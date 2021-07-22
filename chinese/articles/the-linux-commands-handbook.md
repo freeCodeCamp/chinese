@@ -1483,7 +1483,7 @@ killall <name>
 
 `name` 也就是进程的名字。例如，假设有多个 `top` 程序的实例在运行， `killall top` 命令将完全终结它们。
 
-你可以指定某一个信号，就像使用 `kill` 命令那样（请向上查阅 `kill` 命令的指南以了解更多具体可以发送的信号），例如：
+你可以指定某一个信号，就像使用 `kill` 命令那样（请向上翻阅 `kill` 命令的指南以了解更多具体可以发送的信号），例如：
 
 ```
 killall -HUP top
@@ -1492,31 +1492,31 @@ killall -HUP top
 
 ## Linux 中的 `jobs` 命令
 
-When we run a command in Linux / macOS, we can set it to run in the background using the `&` symbol after the command.
+当我们在 Linux / macOS 中运行命令时，我们可以在末尾加入 `&` 符号，使其在后台运行。
 
-For example we can run `top` in the background:
+例如，让 `top` 命令在后台运行：
 
 ```
 top &
 
 ```
 
-This is very handy for long-running programs.
+这对于需要长时间运行的程序来说很方便。
 
-We can get back to that program using the `fg` command. This works fine if we just have one job in the background, otherwise we need to use the job number: `fg 1`, `fg 2` and so on.
+要返回切入后台的程序，可以使用 `fg` 命令。如果后台只有一个作业进程，那么直接使用就好；否则要在后面加上作业进程的号码，如： `fg 1`、`fg 2` ，以此类推。
 
-To get the job number, we use the `jobs` command.
+要获取作业进程号，我们可以使用 `jobs` 命令。
 
-Say we run `top &` and then `top -o mem &`, so we have 2 top instances running. `jobs` will tell us this:
+假设我们运行了 `top &`，之后再运行 `top -o mem &` ，因而我们有两个 top 实例在运行。此时 `jobs` 命令会这样告诉我们：
 
 ![Screen-Shot-2020-09-03-at-11.49.42](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-11.49.42.png)  
-Now we can switch back to one of those using `fg <jobid>`. To stop the program again we can hit `cmd-Z`.
+现在我们可以利用 `fg <作业号>` 切回任意一个实例。要再次终止程序，可以按下 `cmd-Z` 。
 
-Running `jobs -l` will also print the process id of each job.
+运行 `jobs -l` 也会列出每一个作业的进程 ID。
 
 ## Linux 中的 `bg` 命令
 
-When a command is running you can suspend it using `ctrl-Z`.
+当命令执行时，你可以按下 `ctrl-Z` 暂停它When a command is running you can suspend it using `ctrl-Z`.
 
 The command will immediately stop, and you get back to the shell terminal.
 

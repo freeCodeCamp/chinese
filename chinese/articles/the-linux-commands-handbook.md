@@ -1516,82 +1516,82 @@ top &
 
 ## Linux 中的 `bg` 命令
 
-当命令执行时，你可以按下 `ctrl-Z` 暂停它When a command is running you can suspend it using `ctrl-Z`.
+当命令执行时，你可以按下 `ctrl-Z` 暂停它。
 
-The command will immediately stop, and you get back to the shell terminal.
+按下后，命令会即刻停止，并将你带回到 Shell 终端。
 
-You can resume the execution of the command in the background, so it will keep running but it will not prevent you from doing other work in the terminal.
+你可以恢复命令在后台的执行，这样既可以使命令保持运行，同时又不会妨碍你在终端中做其他工作。
 
-In this example I have 2 commands stopped:
+在这一例子中，有 2 个命令停止了：
 
 ![Screen-Shot-2020-09-03-at-16.06.18](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-16.06.18.png)  
-I can run `bg 1` to resume in the background the execution of the job #1.
+运行 `bg 1` 即可在后台恢复作业 #1 的执行。
 
-I could have also said `bg` without any option, as the default is to pick the job #1 in the list.
+我也可以不带任何参数执行 `bg` 命令，它会默认选取作业列表中的 #1 项。
 
 ## Linux 中的 `fg` 命令
 
-When a command is running in the background, because you started it with `&` at the end (example: `top &` or because you put it in the background with the `bg` command), you can put it to the foreground using `fg`.
+当命令在后台运行时，由于此前你已经在命令末尾加上了 `&` （例如 `top &` ，或是使用了 `bg` 命令将命令放到后台），此时你可以用 `fg` 命令将其切换回前台。
 
-Running
+执行
 
 ```
 fg
 
 ```
 
-will resume in the foreground the last job that was suspended.
+它将在前台恢复最后被暂停的作业。
 
-You can also specify which job you want to resume to the foreground passing the job number, which you can get using the `jobs` command.
+你也可以加上作业号，即可指定任一你想在前台恢复的作业，作业号可以使用 `jobs` 命令获得。
 
 ![Screen-Shot-2020-09-03-at-16.12.46](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-16.12.46.png)
 
-Running `fg 2` will resume job #2:
+执行 `fg 2` 将恢复作业 #2：
 
 ![Screen-Shot-2020-09-03-at-16.12.54](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-16.12.54.png)
 
 ## Linux 中的 `type` 命令
 
-A command can be one of those 4 types:
+命令可分为以下四种类型：
 
--   an executable
--   a shell built-in program
--   a shell function
--   an alias
+-   可执行程序
+-   Shell 内置程序
+-   Shell 功能
+-   命令别名
 
-The `type` command can help figure this out, in case we want to know or we're just curious. It will tell you how the command will be interpreted.
+如果你很想知道或只是很好奇，`type` 命令可以帮你分清这些。它会告诉你某一命令如何被解析。
 
-The output will depend on the shell used. This is Bash:
+输出根据 Shell 的类型而有所不同，这是在 Bash 中的样子：
 
 ![Screen-Shot-2020-09-03-at-16.32.50](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-16.32.50.png)
 
-This is Zsh:
+这是在 Zsh 中的样子：
 
 ![Screen-Shot-2020-09-03-at-16.32.57](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-16.32.57.png)
 
-This is Fish:
+这是在 Fish 中的样子：
 
 ![Screen-Shot-2020-09-03-at-16.33.06](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-16.33.06.png)  
-One of the most interesting things here is that for aliases it will tell you what it is aliasing to. You can see the `ll` alias, in the case of Bash and Zsh, but Fish provides it by default, so it will tell you it's a built-in shell function.
+其中一个有趣的现象是：对于别名，它会告诉你某个别名将被解析到何处。例如，在 Bash 和 Zsh 中， `ll` 显示为一个别名，而在 Fish 中，由于 `ll` 是默认提供的，所以它会告诉你这是内置的 Shell 功能。 
 
 ## Linux 中的 `which` 命令
 
-Suppose you have a command you can execute, because it's in the shell path, but you want to know where it is located.
+假定你有一个可直接执行的命令，因为它处在 Shell 路径中，但你想知道它的具体位置。
 
-You can do so using `which`. The command will return the path to the command specified:
+你可以用 `which` 来做这件事。这个命令会返回指定命令的路径。
 
 ![Screen-Shot-2020-09-03-at-17.22.47](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-17.22.47.png)  
-`which` will only work for executables stored on disk, not aliases or built-in shell functions.
+`which` 只对存储在磁盘上的可执行文件起作用，对别名或内置 Shell 功能无效。
 
 ## Linux 中的 `nohup` 命令
 
-Sometimes you have to run a long-lived process on a remote machine, and then you need to disconnect.
+有时你必须在远程机器上运行一个长时间活跃的进程，但之后你需要断开连接。
 
-Or you simply want to prevent the command from being halted if there's any network issue between you and the server.
+或者，你只是想防止当本地和服务器之间有任何网络问题时，命令被停止执行。
 
-The way to make a command run even after you log out or close the session to a server is to use the `nohup` command.
+要让任一命令在登出或关闭服务器会话后继续运行，可以使用 `nohup` 命令。
 
-Use `nohup <command>` to let the process continue working even after you log out.
+执行 `nohup <命令>` 可以让某个进程在你登出后继续工作。
 
 ## Linux 中的 `xargs` 命令
 

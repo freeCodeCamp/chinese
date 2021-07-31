@@ -1,6 +1,6 @@
 > -  原文地址：[JavaScript Modules – Explained with Examples](https://www.freecodecamp.org/news/javascript-modules-explained-with-examples/)
 > -  原文作者：[Kingsley Ubah](https://www.freecodecamp.org/news/author/ubahthebuilder/)
-> -  译者：
+> -  译者：seanbei
 > -  校对者：
 
 ![JavaScript Modules – Explained with Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/what-is-a-module.png)

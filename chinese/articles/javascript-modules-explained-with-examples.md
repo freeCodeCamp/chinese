@@ -5,7 +5,7 @@
 
 ![JavaScript 模块——用例子来阐述](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/what-is-a-module.png)
 
-模块是一个函数或一组相似的函数。它们组合起来放在一个文件里，其代码被大型应用程序调到时，可以执行一项具体的任务。
+模块是一个函数或一组相似的函数。它们组合起来放在一个文件里，其代码被大型应用程序调用时，能够执行一项具体的任务。
 
 创建模块可以更好地组织并结构化你的代码库。你可以使用模块来拆解大型程序，拆成更小、更好管理、更独立的代码块，这些代码块执行单一的任务，或者多个相关的任务。
 
@@ -13,13 +13,13 @@
 
 1.  **独立的/自我包含的：** 模块必须尽可能与其他依赖项分离。
 2.  **具体的：** 模块要能执行单个或一组相关的任务。最初创建它们的核心本质是创建单独的功能块。一个模块，对应于一个（种）任务。
-3.  **可重用的** 模块必须能很容易地集成到各种各样的程序来执行其任务。
+3.  **可重用的：** 模块必须能很容易地集成到各种各样的程序来执行其任务。
 
 为了更好地阐述，我给你打个比方：
 
 假设我们想从头开始建造一座大房子。建造房子所需的所有工具都堆放在一个房间里。
 
-在这种情况下，以正确的方式组织这些工具，以便我们开始建造，将会很困难。
+在这种情况下，如果想以正确的方式组织这些工具，以便我们开始建造，将会很困难。
 
 不同于将独立的依赖项全部堆放在一个房间里，我们应该将每一系列相关的工具组合，分组放到不同的房间里。每个房间都是独立的，只包含其解决指定任务的工具。
 
@@ -151,9 +151,9 @@ filepath/warn.js
 
 > **提示**: 如果要导入一个模块的全部函数，你应该使用星号，而不是把所有函数逐个显式地写出来。
 
-你可能注意到 `as` 关键字。我们用它来导入We use this to import the public functions into a new object, which in our case is the `mainfunctions` object. We then access and call the functions we want to use in our program.
+你可能注意到 `as` 关键字。我们用它将公共函数导入到新的对象中，在我们的例子中，这个对象是 `mainfunctions`。然后就可以在我们的程序中访问和调用这些需要用到的函数了。
 
-So far, we have only considered examples where the export happens at the end of the file. But you can equally export a function, variable, or class by registering the `export` keyword just in front of its definition, like so:
+到现在为止，我们只考虑了在文件末尾导出的例子。其实你可以在函数、变量或类的定义前注册 `export` 关键字，这同样可以导出它们。像这样：
 
 ```js
 function getPower(decimalPlaces) {
@@ -172,17 +172,17 @@ export function roundToDecimalPlace(number, decimalPlaces = 2) {
 
 filepath/anothermain.js
 
-If you compare this with the first example, you will notice this syntactic difference:
+如果和第一个例子进行比较，你会注意到这种语法差异：
 
--   In the first example, the `export` keyword was used to export two functions at the end of the script. In the above example, the `export` keyword is attached to both functions when they are being defined.
+-   在第一个例子中，`export` 关键字用于在脚本的末尾导出两个函数。而在上面的例子中，`export` 关键字在定义两个函数时被依附在前面。
 
-However, they both deliver the same outcome: `capitalize` and `roundToDecimalPlace` will both get exported.
+不过，它们的结果是一样的：`capitalize` 和 `roundToDecimalPlace` 都将被导出。
 
-## Default Exports
+## 默认导出
 
-If you want to export all three functions but intend to make one of them a default (perhaps because you are most likely to use that single function), you simply use the `default` keyword.
+如果你要导出全部三个函数，但是想让其中一个作为默认值（也许是因为你最有可能使用那个函数），你只需使用 `default` 关键字。
 
-The default keyword makes importing a function easier. Let's consider the following example:
+默认关键字使得导入一个函数变得更加容易，让我们来考虑下面的例子：
 
 ```js
 export function getPower(decimalPlaces) {
@@ -201,9 +201,9 @@ export function roundToDecimalPlace(number, decimalPlaces = 2) {
 
 filepath/default.js
 
-As you can see, we have made `capitalize` our default function. This essentially means we have given it some sort of privilege.
+可以看到，我们把 `capitalize` 作为我们的默认函数。这实质上意味着我们赋予了它某种特权。
 
-Say we want to import the `capitalize` function from the module into another program. The syntax for that will be very similar, except you don't have to import the function into curly braces:
+现在我们想将模块中的 `capitalize` 函数导入到另一个程序中。语法非常相似，只是导入的函数不再需要用花括号括起来：
 
 ```js
 import capitalize from './main';
@@ -220,7 +220,7 @@ export { warn };
 
 filepath/warndefault.js
 
-If you want to import the default function along with any other functions, you mix the bare 'default' function with other functions in curly braces:
+如果要将默认函数与任何其他函数一起导入，就将裸露的“默认”函数与花括号中的其他函数混合在一起导入：
 
 ```js
 import capitalize, { getPower } from './main';
@@ -237,20 +237,20 @@ export { warn };
 
 filepath/mixed.js
 
-## Wrapping Up
+## 总结
 
-Modules are independent and self-contained chunks of code. You create them by splitting up a larger program into logical parts or dependencies.
+模块是独立且自包含的代码块。将较大的程序拆分为逻辑部分或依赖项，从而创建模块。
 
-Modules should be independent, specialized, and reusable.
+模块应该是独立的、专门的和可重用的。
 
-You use the `import` and `export` keywords to interchange functionalities between modules in JavaScript.
+使用 `import` 和 `export` 关键字来交换 JavaScript 模块间的功能。
 
-You use the `default` keyword to specify a function, object, variable, or class that you want to be a first-choice import.
+使用 `default` 关键字来指定那些你要作为首选导入的函数、对象、变量或类。
 
-With this, we have covered the basics of modules in JavaScript.
+至此，我们已经涵盖了 JavaScript 模块的基础知识。
 
-I hope you got something valuable from this article. I write programming-related articles every week on my [personal blog](https://ubahthebuilder.tech)
+希望你能从这篇文章中得到一些有价值的东西。我每周都会在我的网站上写与编程相关的文章[个人博客](https://ubahthebuilder.tech)
 
-Thank you for reading.
+感谢您的阅读。
 
-> **P/S**: If you are learning JavaScript, I created an eBook which teaches 50 topics in JavaScript with hand-drawn digital notes. [Check it out here](https://ubahthebuilder.gumroad.com/l/js-50).
+> **附言**: 如果你正在学习 JavaScript，我创建了一本电子书，用手绘数字笔记的方式教授了 JavaScript 的 50 个主题。[点这里查看](https://ubahthebuilder.gumroad.com/l/js-50)。

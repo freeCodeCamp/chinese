@@ -57,18 +57,25 @@ To avoid this over-complication, choose a specific user and use case to focus on
 为了避免这种过度复杂化，在建立一个全新的产品时，应该选择一个特定的用户和用例来关注。
 
 ### Physical and Mental Interaction Costs
+### 身体和精神的交互成本
 
 Many junior designers have the misconception that interaction cost equals the number of clicks required for a user to complete a task.
+许多初级设计师都有一种误区，认为交互成本等于用户完成一项任务所需的点击次数。
 
 ![A diagram showing PIC and MIC.](https://www.freecodecamp.org/news/content/images/2021/02/image-150.png)
+![显示PIC和MIC的图表](https://www.freecodecamp.org/news/content/images/2021/02/image-150.png)
 
 However, it goes much deeper than that. Interaction cost can be classified as mental interaction costs (MIC) and physical interaction costs (PIC), which I’ll explain below.
+然而，它比这要深得多。交互成本分为精神交互成本 (MIC) 和物理交互成本 (PIC) ，我将在下面解释。
 
 ## How to Evaluate Interaction Cost – Find the Critical User Flows First
+## 如何评估交互成本 - 首先找到关键的用户流程
 
 A best practice is to identify the primary use cases (that is, the red routes) and reduce their interaction costs at the expense of secondary and tertiary use cases if necessary.
+最佳实践是确定主要用例（即核心任务），并在必要时以牺牲二级和三级用例为代价降低其交互成本。
 
 You can use a [Red Route Analysis (RRA)](https://medium.muz.li/red-routes-critical-design-paths-that-make-or-break-your-app-a642ebe0940a) to assess which use case interaction flows are most important to your primary users.
+你可以使用[核心任务分析（RRA）](https://medium.muz.li/red-routes-critical-design-paths-that-make-or-break-your-app-a642ebe0940a)评估哪些用例交互流对你对主要用户最重要。
 
 Red routes tend to be critical, encompass end-to-end tasks with multiple steps, are often used, are built for high volume usage, provide the most value, have clear success criteria, and tie to product metrics.
 

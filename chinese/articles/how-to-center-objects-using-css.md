@@ -1,6 +1,6 @@
 > -  原文地址：[How to Center Anything in CSS Using Flexbox and Grid ✨](https://www.freecodecamp.org/news/how-to-center-objects-using-css/)
 > -  原文作者：[Joy Shaheb](https://www.freecodecamp.org/news/author/joy/)
-> -  译者：
+> -  译者：Miever
 > -  校对者：
 
 ![How to Center Anything in CSS Using Flexbox and Grid ✨](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/FCC--center.png)

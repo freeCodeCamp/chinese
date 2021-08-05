@@ -1,73 +1,74 @@
 > -  原文地址：[How the CSS Position Property Works – Explained with Code Examples](https://www.freecodecamp.org/news/css-position-property-explained/)
 > -  原文作者：[Joy Shaheb](https://www.freecodecamp.org/news/author/joy/)
-> -  译者：
+> -  译者：Miever1
 > -  校对者：
 
-![How the CSS Position Property Works – Explained with Code Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/FCC-Thumbnail--4-.png)
+![CSS 的 Position 属性是如何工作的 –  用代码示例解释](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/FCC-Thumbnail--4-.png)
 
-Today we're gonna learn everything you need to know about the CSS position property along with examples. Let's get started 🎖️
+今天我们将学习所有你需要知道的关于 CSS position 属性的例子。让我们开始吧 🎖️
 
-# Table of contents
+# 目录
 
--   [What is CSS Position Property?](#what-is-the-position-property-in-css)
--   [What is the **Static Position** in CSS?](#what-is-the-static-position-in-css)
--   [What are the R**elative and Absolute** Positions in CSS?](#what-are-the-relative-and-absolute-positions-in-css)
+-   [什么是 CSS Position 属性?](#what-is-the-position-property-in-css)
+-   [CSS 中的 **静态定位**](#what-is-the-static-position-in-css)
 -   [What is the **Fixed P**osition in CSS?](#what-is-the-fixed-position-in-css)
--   [What is the **Sticky P**osition in CSS?](#what-is-the-sticky-position-in-css)
+-   [CSS 中的 **固定定位**](#what-is-the-fixed-position-in-css)
+-   [CSS 中的 **粘性定位**](#what-is-the-sticky-position-in-css)
 
-## **You can watch this tutorial on YouTube as well if you like:**
+## **你可以在 YouTube 上观看本教程：**
 
-# What is the position property in CSS?
+# CSS 中的 position 属性
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-3--6-.png)
 
-If you want to make **stunning websites that looks artistic, unique, and beautiful,** then you should definitely learn how to use the CSS position property. Let's see how it works.
+如果你想要制作一个 **独特、漂亮、有艺术风格的网页**，那么你绝对应该学习如何使用 CSS 的 position 属性。让我们来看看它是如何工作的。
 
-Using **Flexbox or Grid**, you can make a **symmetrical website** like this: 👇
+使用  **Flexbox 或者 Grid**, 你可以制作一个 **对称的网站**, 像这样：👇
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-35--2-.png)
 
-**Website made w/ Flexbox**
+**Flexbox制作的网站**
 
-With the **position property**, you can make an **asymmetrical website** like this:👇
+通过 **position 属性**, 你可以制作一个 **非对称的网站**，像这样：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/A-1-1--2-.png)
 
-**Website made w/ Grid & position properties**
+** Grid 和 position 属性 制作的网站**
 
-You can't place your content anywhere you wish using Flexbox and Grid. You're limited around the **X and Y Axis**. Look at this drawing to see what I mean: 👇
+你不能使用Flexbox和Grid把你的内容放在所有你想要的地方。你会受限于 X 轴和 Y 轴。看看这幅图你就会明白我的意思了:👇
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-1--6-.png)
 
-**Symmetrical content layout showing elements placed respective to the x and y axis**
+**对称的内容布局显示元素分别放置在x轴和y轴**
 
-Your boxes will follow these exact measurements. 👆
+你的盒子会遵循这些衡量因素。👆
 
 But, using the **position property**, you can place your content anywhere you wish by **detaching** each element from the other elements.
+但是当使用 **position 属性** 时，你可以将内容放置到任何你想要的地方。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-2--4-.png)
 
-**Asymmetrical content layout showing elements placed irrespective of x and y axis.**
+**不对称的内容布局，不需要考虑x轴和y轴的位置。**
 
-You can place your boxes **anywhere** you wish with this sort of layout. 👆 In other words, you will have **free movement** around your screen.
+你可以用这种布局把你的盒子放在任何你想要的地方。👆换句话说，你可以在屏幕上将元素 **自由移动**。
 
-Here's another example of what you can make using the position property:
+下面是另一个使用position属性的例子:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-3--8-.png)
 
-**An Asymmetrical Website**
+**一个非对称的网页**
 
-You can place or move those little dots and waves patterns and donut image all around the page **☝** anywhere you wish using the position property.
+你可以使用 position 属性在整个页面来放置或移动那些小点和波浪图案和甜甜圈图像 **☝** 至任何你想要的地方。
 
-# Project Setup
+# 项目搭建
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-4--7-.png)
 
-For this project, you can use any code editor that has the **emmet plugin** installed. I'm gonna use [CodePen.io](https://codepen.io).
+对于这个项目，你可以使用任何安装了 **emmet插件** 的代码编辑器。我将使用 [CodePen.io](https://codepen.io).
 
 ### HTML
 
-Inside the body tag, write this code: 👇
+body 标签内部，写如下代码：👇
 
 ```HTML
 <div class="box-1"> </div>
@@ -75,7 +76,7 @@ Inside the body tag, write this code: 👇
 
 ### CSS
 
-Clear your default browser settings and add this CSS:👇
+清除默认浏览器设置并添加如下 CSS:👇
 
 ```CSS
 *{
@@ -85,7 +86,7 @@ Clear your default browser settings and add this CSS:👇
 }
 ```
 
-Style the box-1 class like this:👇
+设置 box-1 类样式：👇
 
 ```CSS
 .box-1{
@@ -96,7 +97,7 @@ Style the box-1 class like this:👇
 }
 ```
 
-Our position property has 5 values:
+position 属性有5个值：
 
 1.  relative
 2.  absolute
@@ -104,66 +105,66 @@ Our position property has 5 values:
 4.  fixed
 5.  sticky
 
-To move our box, we'll use 4 properties:
+为了移动我们的容器，我们使用以下四个属性：
 
 -   **Top, Bottom**
 -   **Left, Right**
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-12--1-.png)
 
-# What is the Static Position in CSS?
+# CSS 中的静态定位
 
-This has **no use cases**. This is the **default value** of every element.
+其是每个元素定位的 **默认值**。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-10--3-.png)
 
-Default position of every element
+每个元素的默认位置
 
-# What are the Relative and Absolute Positions in CSS?
+# CSS 中的相对定位和绝对定位
 
-Both the **relative position** and **absolute position** work in the same way except in one field. We use `relative` to identify the parent class. And we use `absolute` to identify the children classes.
+**relative 属性** 和 **absolute 属性** 的工作原理是一样的，不同在于，我们使用 `relative` 来标识父类。使用 `absolute` 来标识子类。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-11--2-.png)
 
-**Position VS relative position**
+**相对定位和绝对定位**
 
-### Let's look at 2 examples 👇
+### 看如下2个例子 👇
 
-First, let's experiment with the **`relative`** value. Try out this code:
+我们先尝试一下 **`relative`** 值。写如下代码：
 
 ```CSS
 .box-1{
-/* Other codes are here*/
+/* 在此写其他代码*/
 
    position: relative;
    left: 100px;
 }
 ```
 
-This is the result you'll get:👇
+得到的结果如下：👇
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-13--1-.png)
 
-We can duplicate the same result using the **`absolute`** value like this: 👇
+我们可以使用 **`absolute`** 值得到相同的结果，如👇
 
 ```CSS
 .box-1{
-/* Other codes are here*/
+/* 在此写其他代码*/
 
    position: absolute;
    left: 100px;
 }
 ```
 
-Let's investigate the main difference between **relative and absolute** positions.
-
-### Relative vs Absolute Position in CSS
+让我们研究一下相对定位和绝对定位的主要区别。
+ 
+### CSS 中的相对定位和绝对定位
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/BEM-1--1-.png)
 
 ### HTML
 
-Write this code inside your HTML: 👇
+在 HTML 中编写如下代码：👇
 
 ```HTML
 <body>
@@ -177,7 +178,7 @@ Write this code inside your HTML: 👇
 
 ### CSS
 
-Style the boxes with the following CSS:👇
+设置如下 CSS 样式：👇
 
 ```CSS
 .box-1{
@@ -196,13 +197,13 @@ Style the boxes with the following CSS:👇
 }
 ```
 
-It should look like this:👇
+应该会是这样：👇
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/dd-2.png)
 
-**The result is a blue box with a smaller pink box in the upper left**
+**结果是左上方有一个蓝色盒子和一个较小的粉色盒子**
 
-Now, we'll select our classes like this: 👇
+现在，我们设置一下类样式：👇
 
 ```CSS
 body{ }
@@ -212,7 +213,7 @@ body{ }
 .box-2{ }
 ```
 
-Now, write this code in your CSS: 👇
+现在，在 CSS 中写如下类样式：
 
 ```CSS
 body{
@@ -220,31 +221,32 @@ body{
 }
 
 .box-1{
-/* This is the  👇 parent */
+/* 这是父元素  👇 */
 	position: relative;
 }
 .box-2{
-/* This is the  👇 child */
+/* 这是子元素  👇 */
 	position: absolute;
 	left: 100px;
 }
 ```
 
-Here's the result: 👇
+结果如下：👇
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-14.png)
 
-**The result is that the pink box has moved right 100px**
+**结果是粉色盒子右移了100px**
 
-Notice that .box-2 has moved **100px** from .box-1.
+注意 .box-2 相对于 .box-1 移动了 100px。
 
 This is because .box-1 is the **parent** and .box-2 is the **child**.
+这是因为 .box-1 是 **父元素**，.box-2 是 **子元素**。
 
-Let's change it again. Write this code in your CSS:
+再做一些改变，在 CSS 中写如下代码：
 
 ```CSS
 body{
-/* This is the  👇 parent */
+/* 这是  👇 父元素 */
    position: relative;	
 }
 
@@ -252,31 +254,31 @@ body{
 
 }
 .box-2{
-/* This is the  👇 child */
+/* 这是  👇 子元素 */
    position: absolute;
     left: 100px;
 }
 ```
 
-Now here's the result: 👇
+结果是这样的：👇
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-15.png)
 
-**The result is that the pink box has moved 100px from the body**
+**结果是粉色盒子相对于 body 移动了100px**
 
-Notice that .box-2 has moved **100px** from the **body** element.
+注意是 .box-2 相对于 **body** 标签移动了 **100px** 。
 
-This is because the **body** is the **parent** and .box-2 is the **child**.
+这是因为 **body** 是 **父元素**，.box-2 是 **子元素**。
 
-# What is the Fixed Position in CSS?
+# 固定定位（Fixed）
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-16--1-.png)
 
-This value will **fix the position** of your element on the screen even when you **scroll** in the browser. Let's look at some examples to see how it works.
+这个值会将元素固定在屏幕上的某一位置，即使浏览器发生滚动。让我们看几个例子，看看它是如何工作的。
 
-### Fixed position example
+### 固定定位的例子
 
-Write this code in your HTML. 👇 Once you write `lorem200`, make sure to hit the **Tab** key on your keyboard:
+在 HTML 中写如下代码。
 
 ```HTML
 <div class="container">
@@ -290,7 +292,7 @@ Write this code in your HTML. 👇 Once you write `lorem200`, make sure to hit t
 </div>
 ```
 
-And here's the CSS:
+CSS 如下：
 
 ```CSS
 .container{
@@ -308,7 +310,7 @@ And here's the CSS:
 }
 ```
 
-Then add this CSS at the bottom:
+在底部添加如下 CSS：
 
 ```CSS
 .box-1{
@@ -319,50 +321,50 @@ Then add this CSS at the bottom:
 }
 ```
 
-Here's the result:👇
+结果如下：👇
 
 ![](https://media.giphy.com/media/J6hbBulobEQz6HftRv/giphy.gif)
 
-You can see that the element remains fixed even when we scroll our browser.
+可以看到，即使在滚动浏览器时，该元素仍然是固定的。
 
-# What is the Sticky Position in CSS?
+# 粘性定位（Sticky）
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-17.png)
 
-After scrolling to a certain point on our screen, this value will **fix the position** of our element on the screen so it doesn't move.
+当滚动到屏幕某个点后，这个值会将元素 **固定在** 屏幕上，不再移动。
 
-### Sticky position example
+### 粘性定位示例
 
-Don't change anything in your current HTML and CSS except this one value:
+无需改变你当前的HTML和CSS中的任何东西，只需改变这个值:
 
 ```CSS
 .box-1{
-/*  Play with  👇 this value */
+/*  使用这个值  👇 */
    position: sticky;
    top: 30px;
    left: 200px;
 }
 ```
 
-Here's the result: 👇
+结果如下：👇
 
 ![](https://media.giphy.com/media/175hkevbKC3yUfiLQc/giphy.gif)
 
-You can see that after a **certain scroll point**, the element remains fixed at the exact top of our browser screen.
+你会发现，当滚动到屏幕某一 ***特定点** 后，该元素会仍然固定在浏览器屏幕的顶端。
 
-You can check out these websites to see how the sticky position works on actual websites.
+你可以查看这些网站，看看粘性定位在实际网站上是如何工作的。
 
 -   [AwakeBoards](https://awakeboards.com/)
 -   [Ferme](https://ferme.shop/)
 -   [LATORRE](https://www.ascensionlatorre.com/)
 
-# Conclusion
+# 总结
 
-Now, you can confidently make beautiful websites and solve simple layout problems using the position property.
+现在，你可以自信地制作漂亮的网站，并使用 position 属性解决简单的布局问题。
 
-Here's your medal for reading till the end. ❤️
+这是你读到最后的奖章。❤️
 
-### Suggestions and Criticisms Are Highly Appreciated ❤️
+### 欢迎提出建议和批评 ❤️
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/usxsz1lstuwry3jlly4d.png)
 
@@ -374,7 +376,7 @@ Here's your medal for reading till the end. ❤️
 
 **Instagram [/ JoyShaheb](https://www.instagram.com/joyshaheb/)**
 
-## Credits
+## 感谢
 
 -   [Cute Girl Illustration](https://www.freepik.com/free-vector/young-girl-holding-pile-papers-cartoon-illustration_12566300.htm)
 -   [Kitty Avatar](https://www.flaticon.com/packs/kitty-avatars-3)

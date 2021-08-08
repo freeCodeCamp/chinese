@@ -3,15 +3,15 @@
 > -  译者：seanbei
 > -  校对者：
 
-![CSS Background Color – How to Change the Background Color in HTML](https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/html-background-color.png)
+![CSS Background Color —— 如何更改 HTML 中的背景颜色](https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/html-background-color.png)
 
-You have started creating your HTML page, and you want to give it some color – maybe change the color of the text or set a nice background. So how do you do that?
+假设你已经创建了 HTML 网页，现在想给它加点颜色——可能是更改字体颜色，又或是设置一个漂亮的背景色。你会怎么做呢？
 
-In this article I'll show you how you can change the background color of a page in a few different ways.
+在这篇文章中，我将向你展示，如何用几种不同的方式更改页面的背景颜色。
 
-# How to Change the Background Color of an HTML Element
+# 如何更改一个 HTML 元素的背景色
 
-You can change the background color of an HTML element using the `background-color` CSS property and giving it a value of a color.
+想要改变一个 HTML 元素的背景色，你可以使用 `background-color` 这个 CSS 属性，给它赋上一个颜色值。
 
 ```CSS
 p {
@@ -19,43 +19,43 @@ p {
 }
 ```
 
-With this code, the paragraphs are given a pink background.
+上面的代码给段落设置了粉色的背景。
 
-For example, this code will make all paragraph elements in your HTML file have a pink background because the `background-color` property has a value of `pink`.
+例如，这份代码将使得 HTML 页面中的所有段落元素拥有一个粉色的背景，因为 `background-color` 属性的值是 `pink`。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-16.png)
 
-There are about 140 color names that you can use, like `teal`, `hotpink`, `indigo` and many others.
+你可以使用大约 140 种颜色，例如 `teal`、`hotpink`、`indigo` 等等。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-23.png)
 
-A few of the possible color names you can use
+你可以使用的一些可能的颜色名称
 
-Note: if you give a background-color to an element and don't see it change, it can be a syntax error, or it can also be that the element does not have a width or height. Try to put some content in it, or give it a width and an height using the CSS properties `width` and `height`.
+注意：如果你给一个元素设置了 background-color，但是没有看到变化，很可能是一个语法错误，也可能是因为没有给这个元素设置宽和高。尝试放一些内容进去，或者通过 CSS 属性 `width` 和 `height` 给它设置宽和高。
 
-There are actually almost 16.8 million colors that you can use. You can use all these colors using RGB values. There are also HSL colors where you have about 3.7 million colors to choose from. In the next section you will learn about all these different ways of creating colors.
+实际上大概有 1680 万种颜色可供你使用。你可以通过 RGB 值来使用它们。还有 HSL 颜色，大约有 370 万种可供你选择。在下一节中，你将了解所有这些创建颜色的不同方法。
 
-# Different Color Notations
+# 不同的颜色表示
 
-The `background-color` property accepts colors as possible values. Here you will see four different notations for color values.
+`background-color` 属性接受颜色作为可能的值。这里，你将看到四种不同的颜色值表示法。
 
-The first will be color names, and there are around 140 keywords that you can use. This is the easiest way to choose a color as it doesn't require understanding special notations – but it has a limited range of options.
+第一种是颜色名称，差不多有 140 个关键字可供你使用。这是最简单的一种选择颜色的方式，因为它不要求掌握特殊符号——但它的选择范围有限。
 
-The second and third ways to name or choose colors are RGB values and hexadecimal values. In these notations, colors are identified by the amount of red, green, and blue that they contain.
+第二种、第三种命名或者选择颜色的方式分别是用 RGB 值和十六进制值。这两种方式里，颜色由它们包含的红色、绿色和蓝色的数量来标识。
 
-This comes from how a screen produces color. A screen is made of pixels, and each pixel is lighted by LEDs of three different colors, green, blue and red, that can shine at different intensities.
+这源自于屏幕显示颜色的工作原理。屏幕由像素组成，每个像素由绿、蓝和红三种不同颜色的 LED 点亮，它们可以发出不同强度的光。
 
-The fourth notation is HSL colors, or Hue-Saturation-Lightness. This notation comes from Graphic Design, as it reflects a more natural way for humans to think about color: a pure color (hue), of which saturation and lightness can be varied.
+第四种表示法是 HSL 颜色，或者 Hue-Saturation-Lightness。这种表示来自平面设计，因为它反映了人类思考颜色的一种更自然的方式：纯色（色调），其饱和度和亮度可以变化。
 
-You can use any of these color notations to give a color to the background, but let's see them in more details, so you can choose the one you prefer.
+你可以使用任意一种方式来给背景设置颜色，但是让我们来看更多的细节，以便你选择你中意的方式。
 
-## HTML Color Names
+## HTML 颜色名称
 
-There are 16 basic colors recognised in the first version of HTML. Now there are 140+ named colors you can use.
+HTML 的第一个版本中能识别出 16 种基本颜色。现在你可以使用 140 多种命名颜色。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-24.png)
 
-The 16 basic colors
+16 种基本颜色
 
 ```CSS
 body {
@@ -63,27 +63,27 @@ body {
 }
 ```
 
-WIth this CSS, the `body` is given a black background
+这条 CSS 将 `body` 赋予黑色背景
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-17.png)
 
-An example of an HTML page with the `body` being given a `background-color` of `black`
+一个 HTML 页面的例子，其中 `body` 被赋予了 `black` 的 `background-color`
 
-You can see all the named colors in the appendix at the end of the article.
+你可以在文章末尾的附录中看到所有命名的颜色。
 
-## RGB Colors
+## RGB 颜色
 
-RGB stands for Red-Green-Blue. The colors in this format are written `rgb(0,0,0)`, where each value is a number between `0` and `255` representing the amount of red, green, and blue used to make each color, respectively.
+RGB 代表 Red-Green-Blue。在这种格式下，颜色被写成 `rgb(0,0,0)`，其中每个值都是介于 `0` 和 `255` 之间的数字，分别表示用于组成每种颜色的红色、绿色和蓝色的数量。
 
-For example, if you have `rgb(0,0,0)` you get black.
+例如，`rgb(0,0,0)` 表示黑色。
 
-To get red, you write `rgb(255,0,0)`, where there is as much red as possible with `255`, `0` for blue, and `0` for green.
+要获得红色，你可以写成 `rgb(255,0,0)`，使得红色最大化为 `255`，绿色为 `0`，蓝色为 `0`。
 
-You can get other variations of red with small amounts of green and/or blue, and a bit less red. For example you can get an orange red with `rgb(255,69,0)` or a dark red with `rgb(139,0,0)`.
+通过较小数值的绿色和（或）蓝色，以及少一点的红色，你可以得到红色的其他变种。例如，用 `rgb(255,69,0)` 可以得到橘红色，用 `rgb(139,0,0)` 可以得到深红色。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-25.png)
 
-The colors of the rgb values presented above.
+上面提到的 rgb 值的颜色。
 
 ```CSS
 div {
@@ -91,29 +91,29 @@ div {
 }
 ```
 
-The `div` elements are given a dark red background.
+给 `div` 元素设置深红色背景。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-18.png)
 
-An example of an HTML page with the `div` element being given a `background-color` of `rgb(139,0,0)`
+一个 HTML 页面的例子，其中 `div` 元素被赋予了 `rgb(139,0,0)` 的 `background-color`
 
-Below an example of how the color changes when you adjust two of the RGB values: the top left corner of the colored square is equal to `rgb(0,0,0)`, the top right is equal to `rgb(0,0,255)`, the bottom left corner to `rgb(0,255,0)` and the bottom right corner to `rgb(0,255,255)`.
+下面的例子展示了，当调整其中两个 RGB 值时，颜色是如何变化的：彩色方块的左上角等于 `rgb(0,0,0)`，右上角等于 `rgb(0,0,255)`，左下角等于 `rgb(0,255,0)`，右下角等于 `rgb(0,255,255)`。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-28.png)
 
-Fortunately, you don't need to guess the numbers to get the color you want. You can find various color pickers online that let you choose the color with sliders (or other methods) and give you the RGB color value you want to use.
+幸运的是，你不需要靠猜测数值来获得你想要的颜色。你可以在网上找到各种各样的颜色选取器，让你使用滑块（或其他方法）选择颜色并提供给你要使用的 RGB 颜色值。
 
-## Hexadecimal Colors
+## 十六进制颜色
 
-Hexadecimal colors are a different way to write RGB colors. With hexadecimals you also have three numbers, one for each color, with 256 possible values.
+十六进制颜色是编写 RGB 颜色的另一种方式。对于十六进制，依然有三个数字，每种颜色对应一个，每一个数字有 256 种可能的值。
 
-In this case, though, each color has two digits that go from `0` to `F` (that is,  `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, and `A`, `B`, `C`, `D`, `E`, `F`). One single digit has 16 possible values, and two digits have 256 possible values, from `00`, to `FF` (255).
+但是，在这种情况下，每种颜色有两个数字，分别从 `0` 到 `F`（也就是，`0`，`1`，`2`，`3`，`4`，`5`，`6`，`7`，`8`，`9`，`A`，`B`，`C`，`D`，`E`，`F`)。一位数字有 16 个可能的值，两位数字有 256 个可能的值，从 `00` 到 `FF`（255）。
 
-Hexadecimal colors are written with a `#` in front of the value. Red is written as `#FF0000`, dark red as `#8B0000`, and orange red as `#FF4500`, for example.
+用十六进制颜色编写时，要在数值的前面加一个 `#`。例如，红色写成 `#FF0000`，深红色写成 `#8B0000`，橘红色写成 `#FF4500`。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-2.png)
 
-The colors mentioned in the section above.
+上一节中提到的颜色。
 
 ```
 h1 {
@@ -121,69 +121,69 @@ h1 {
 }
 ```
 
-The `h1` elements are given a background of orange red.
+给 `h1` 元素设置橘红色背景。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-19.png)
 
-An example of an HTML page with the `h1` element being given a `background-color` of `#FF4500`
+一个 HTML 页面的例子，其中 `h1` 元素被赋予了 `#FF4500` 的 `background-color`
 
-You can also use color pickers to generate hexadecimal values.
+你也可以用颜色选取器来生成十六进制值。
 
-### Hexadecimal shorthand
+### 十六进制简写
 
-You can write hexadecimal numbers in shorthand form, using only three digits instead of six. For example, you can write red like `#F00`. This reduces the number of possible colors to just above 4,000, but it is shorter to write, and sometimes that is what is important.
+你可以用简写的形式来写十六进制数值，只用三位数而不是六位数。例如，你可以将红色写成 `#F00`。这将可能的颜色数量减少到略高于 4000，但写入时间较短，有时这很重要。
 
-Each digit is in place of two identical digits, so we can't write `#8B0000` in shorthand form, as `8` and `B` are not identical. But we can write `#800` which is equal to `#880000`, pretty similar to the other dark red. And orange red can be `#F40` (equal to `#FF4400`).
+每个数字代替两个相同的数字，所以我们无法将 `#8B0000` 简写，因为 `8` 和 `B` 不一样。但是我们可以写 `#800`，这等价于 `#880000`，非常接近深红色。橘红色可以写成 `#F40`（等价于 `#FF4400`）。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-8.png)
 
-The colors mentioned in the section above.
+上一节中提到的颜色。
 
-## HSL Colors
+## HSL 颜色
 
-HSL means Hue-Saturation-Lightness, and it is a completely different way of writing colors than what we have seen so far.
+HSL 表示 Hue-Saturation-Lightness，这是一种目前为止我们看到的完全不同的颜色书写方式。
 
-HSL colors are represented with three numbers: the hue goes from `0` to `360`, and saturation and lightness from `0` to `100`.
+HSL 颜色用三个数字表示：色调从 `0` 到 `360`，饱和度和亮度从 `0` 到 `100`。
 
-The hue determines the base color, and its value is an angle, a degree on the color wheel. In this case, red is `0`, green is `120`, blue is `240`, and `360` is again red.
+色调决定了基色，它的值是一个角度，色轮上的度数。在这种情况下，红色是 `0`，绿色是 `120`，蓝色是 `240`，然后 `360` 依然还是红色。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-11.png)
 
-All possible colors changing only the hue, with hue of 0 to the left and hue of 360 on the right.
+所有可能的颜色仅改变色调，左侧色调为 0，右侧色调为 360。
 
-Saturation goes from `0`, which makes the color gray, to `100`, which shows the full color.
+饱和度从 `0` 开始，也就是灰色，到 `100`，也就是全色。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-9.png)
 
-Variation of saturation for red, 0% on the left, 100% on the right.
+红色饱和度变化，左侧为 0%，右侧为 100%。
 
-Lightness is the amount of black or white added to the color. `0` is black, `50` is the color itself, and `100` is white.
+亮度是添加到颜色中的黑色或白色的数量。`0` 表示黑色，`50` 是颜色其本身，`100` 表示白色。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-10.png)
 
-Variation of lightness, with 0% on the left, and 100% on the right.
+亮度变化，左侧为 0%，右侧为 100%。
 
-For example, you'd write red as `hsl(0,100%,50%)`, orange red as `hsl(16,100%,50%)`, and dark red as `hsl(0,100%,27%)`.
+例如，你要将红色写成 `hsl(0,100%,50%)`，橘红色写成 `hsl(16,100%,50%)`，深红色写成 `hsl(0,100%,27%)`。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-26.png)
 
-It can be easier to find similar colors using HSL than with the other color schemes. With red and its variations you have seen that to get a darker red you can just change the lightness percentage, and mixing red with an other color is enough to change its hue value a bit.
+相比其他配色方案，使用 HSL 更容易找到相似的颜色。从红色以及它的变种色，你已经看到，要获取更深的红色，你只需要改变亮度的百分比就可以了，而将红色与其他颜色相混，足以改变其色调。
 
-Let's see it in action with a mixed color in hexadecimal, like orange (`#FFA500` or `rgb(255,166,0)`), written in HSL as `hsl(39,100%,50%)`. You can get a lighter orange just by increasing the lightness.
+让我们用十六进制的混合颜色来看看它的效果，如橙色（`#FFA500` 或 `rgb(255,166,0)`），写成 HSL 就是 `hsl(39,100%,50%)`。通过提高亮度，你可以得到一个更亮的橙色。
 
-So for example you can write `hsl(39,100%,65%)` to get this lighter orange. With the other notations you would have needed to write `rgb(255,193,77)` or `#FFC14D`.
+例如，写成 `hsl(39,100%,65%)` 就能得到更亮的橙色，而用其他表示法，你需要写成 `rgb(255,193,77)` 或者 `#FFC14D`。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-27.png)
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-20.png)
 
-An example of an HTML page with the `main` element being given a `background-color` of `hsl(39, 100%, 65%)`
+一个 HTML 页面的例子，其中 `main` 元素被赋予了 `hsl(39, 100%, 65%)` 的 `background-color`
 
-You can also find color pickers online for HSL colors.
+你也可以在网上找到用于 HSL 颜色的选取器。
 
-# Property name short-hand
+# 属性名简写
 
-You can also set the background color using the short-hand `background` property.
+你也可以使用简写的 `background` 属性来设置背景色.
 
 ```CSS
 p {
@@ -207,28 +207,28 @@ main {
 }
 ```
 
-The same CSS properties seen before, but with the `background` shorthand property.
+与前面看到的 CSS 属性一样，只是换成了 `background` 简写属性。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-21.png)
 
-An example of an HTML page with all the elements being given a background color.
+一个 HTML 页面的例子，其中所有元素都被赋予了一种背景色。
 
-This is a more versatile property, [as it is shorthand for various `background` properties](/news/learn-css-background-properties/), like `background-image` and `background-position`. When you use it with a color value it works exactly the same as `background-color`.
+这是一个更通用的属性，[因为它是各种 `background` 属性的简写](/news/learn-css-background-properties/)，如 `background-image` 和 `background-position`。当你将它与颜色值一起使用时，它的作用与 `background-color` 完全一样。
 
-# Conclusion
+# 总结
 
-You have learned how to give a background color to your HTML elements using the `background-color` property and its shorthand `background`, and using different color notations.
+你已经学习了如何给 HTML 元素设置背景色，可以用 `background-color` 属性以及它的简写属性 `background`，也学习了不同的颜色表示法。
 
-Now you have all the tools you need to add whatever colors you want to your web pages. Enjoy!
+现在你拥有了为网页添加任何颜色所需的所有工具。好好享受吧！
 
-# Appendix
+# 附录
 
-## All 140+ named colors
+## 全部 140 多种命名颜色
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/CodePen-colored-squares-2.png)
 
-## Spelling Variations
+## 拼写的变体
 
-The color names containing the word "Gray" can also be written with the spelling "Grey" as shown below.
+包含单词 “Gray” 的颜色名称，也可以写成像下面这样，拼写成 “Grey”。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/image-22.png)

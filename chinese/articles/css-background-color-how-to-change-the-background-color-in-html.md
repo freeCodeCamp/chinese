@@ -1,6 +1,6 @@
 > -  原文地址：[CSS Background Color – How to Change the Background Color in HTML](https://www.freecodecamp.org/news/css-background-color-how-to-change-the-background-color-in-html/)
 > -  原文作者：[Ilenia Magoni](https://www.freecodecamp.org/news/author/ilenia/)
-> -  译者：
+> -  译者：seanbei
 > -  校对者：
 
 ![CSS Background Color – How to Change the Background Color in HTML](https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/html-background-color.png)

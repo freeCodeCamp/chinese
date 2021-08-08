@@ -78,12 +78,16 @@ You can use a [Red Route Analysis (RRA)](https://medium.muz.li/red-routes-critic
 你可以使用[核心任务分析（RRA）](https://medium.muz.li/red-routes-critical-design-paths-that-make-or-break-your-app-a642ebe0940a)评估哪些用例交互流对你对主要用户最重要。
 
 Red routes tend to be critical, encompass end-to-end tasks with multiple steps, are often used, are built for high volume usage, provide the most value, have clear success criteria, and tie to product metrics.
+核心任务往往很重要，包括多个步骤的端对端任务、经常使用、为大量使用而构建、提供最大价值，具有明确的成功标准，并与产品指标挂钩。
 
 ![An example of a RRA.](https://www.freecodecamp.org/news/content/images/2021/02/image-151.png)
+![RRA的一个例子。](https://www.freecodecamp.org/news/content/images/2021/02/image-151.png)
 
 You can create an RRA from user interviews or with data if the product is live.
+如果产品已经上线，你可以根据用户访谈或数据来创建一个RRA。
 
 For instance, in the Uber app, the rider’s red route would be requesting a ride, while their normal route would be adding a payment method.
+比如说，在Uber应用中，乘客的关键路线是叫车，而他们的正常路线是添加支付方式。
 
 ## How Tesler’s Law Helps Reduce Interaction Costs
 

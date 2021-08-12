@@ -90,10 +90,13 @@ For instance, in the Uber app, the rider’s red route would be requesting a rid
 比如说，在Uber应用中，乘客的关键路线是叫车，而他们的正常路线是添加支付方式。
 
 ## How Tesler’s Law Helps Reduce Interaction Costs
+## 特斯勒定律怎么帮助你降低交互成本
 
-According to [Tesler’s Law](https://lawsofux.com/laws/teslers-law/) of Conservation of Complexity, all systems have an inherent complexity that cannot be removed or hidden.
+Accorditrng to [Tesler’s Law](https://lawsofux.com/laws/teslers-law/) of Conservation of Complexity, all systems have an inherent complexity that cannot be removed or hidden.
+根据[特斯勒定律](https://lawsofux.com/laws/teslers-law/)的复杂性守恒定律，所有系统都具有无法消除或隐藏的内在复杂性。
 
 Good design ensures that as much of the complexity burden is on the system as possible, rather than on the user.
+好的设计可以确保尽可能多的复杂性负担在系统上，而不是在用户身上。
 
 ![A diagram illustrating Tesler's law, where the burden of complexity is shifted between the user and the product.](https://www.freecodecamp.org/news/content/images/2021/02/image-152.png)
 

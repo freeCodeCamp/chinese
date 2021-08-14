@@ -3,55 +3,55 @@
 > -  译者：seanbei
 > -  校对者：
 
-![What is Data Analysis? How to Visualize Data with Python, Numpy, Pandas, Matplotlib & Seaborn Tutorial](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/blog-cover-4.png)
+![什么是数据分析？如何用 Python，Numpy，Pandas，Matplotlib 和 Seaborn 教程可视化数据](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/blog-cover-4.png)
 
-Data Analysis is the process of exploring, investigating, and gathering insights from data using statistical measures and visualizations.
+数据分析是一个通过统计测量和可视化，从数据中探索、研究和收集洞见的过程。
 
-The objective of data analysis is to develop an understanding of data by uncovering trends, relationships, and patterns.
+数据分析的目标是通过揭示趋势、关系和模式来开发一种对数据的理解。
 
-Data analysis is both a science and an art. On the one hand it requires that you know statistics, visualization techniques, and data analysis tools like Numpy, Pandas, and Seaborn.
+数据分析既是一门科学，也是一门艺术。一方面，它需要你了解统计、可视化技术和数据分析工具，如 Numpy、Pandas 和 Seaborn。
 
-On the other hand, it requires that you ask interesting questions to guide the investigation, and then interpret the numbers and figures to generate useful insights.
+另一方面，它需要你提出有趣的问题来指导研究，然后解释数字和图表以产生有用的见解。
 
-This tutorial on data analysis covers the following topics:
+本数据分析教程涵盖以下主题：
 
-1.  [What is Numerical Computation? Python and Numpy for Beginners](#what-is-numerical-computation-python-and-numpy-for-beginners)
-2.  [How to Analyze Tabular Data using Python and Pandas](#how-to-analyze-tabular-data-using-python-and-pandas)
-3.  [Data Visualization using Python, Matplotlib, and Seaborn](#data-visualization-using-python-matplotlib-and-seaborn)
+1.  [什么是数值计算？Python 和 Numpy 入门](#what-is-numerical-computation-python-and-numpy-for-beginners)
+2.  [如何使用 Python 和 Pandas 分析表格数据](#how-to-analyze-tabular-data-using-python-and-pandas)
+3.  [使用 Python、Matplotlib 和 Seaborn 进行数据可视化](#data-visualization-using-python-matplotlib-and-seaborn)
 
-## What is Numerical Computation? Python and Numpy for Beginners
+## 什么是数值计算？Python 和 Numpy 入门
 
 ![](https://i.imgur.com/mg8O3kd.png)
 
-Source: [Elegant Scipy](https://github.com/elegant-scipy/elegant-scipy/blob/master/figures/NumPy_ndarrays_v2.png)
+源自: [Elegant Scipy](https://github.com/elegant-scipy/elegant-scipy/blob/master/figures/NumPy_ndarrays_v2.png)
 
-You can follow along with the tutorial and run the code here: [https://jovian.ai/aakashns/python-numerical-computing-with-nump](https://jovian.ai/aakashns/python-numerical-computing-with-numpy)y
+你可以跟随教程操作并在此处运行代码：[https://jovian.ai/aakashns/python-numerical-computing-with-nump](https://jovian.ai/aakashns/python-numerical-computing-with-numpy)y
 
-This section covers the following topics:
+本节涵盖以下主题：
 
--   How to work with numerical data in Python
--   How to turn Python lists into Numpy arrays
--   Multi-dimensional Numpy arrays and their benefits
--   Array operations, broadcasting, indexing, and slicing
--   How to work with CSV data files using Numpy
+-   如何在 Python 中处理数值数据
+-   如何将 Python 列表转换为 Numpy 数组
+-   多维 Numpy 数组及其优点
+-   数组操作、广播、索引和切片
+-   如何使用 Numpy 处理 CSV 数据文件
 
-### How to Work with Numerical Data in Python
+### 如何在 Python 中处理数值数据
 
-The "data" in __Data Analysis__ typically refers to numerical data, like stock prices, sales figures, sensor measurements, sports scores, database tables, and so on.
+__数据分析__ 中的“数据”通常是指数值数据，如股票价格、销售数据、传感器测量值、体育得分、数据库表等。
 
-The [Numpy](https://jovian.ai/outlink?url=https%3A%2F%2Fnumpy.org) library provides specialized data structures, functions, and other tools for numerical computing in Python. Let's work through an example to see why and how to use Numpy to work with numerical data.
+[Numpy](https://jovian.ai/outlink?url=https%3A%2F%2Fnumpy.org) 库为 Python 中的数值计算提供专门的数据结构、函数和其他工具。让我们通过一个例子来看看为何以及如何使用 Numpy 处理数值数据。
 
-Suppose we want to use climate data like the temperature, rainfall, and humidity to determine if a region is well suited for growing apples.
+假设我们想使用温度、降雨量和湿度这些气象数据来考察一个区域是否适合种苹果。
 
-A simple approach to do this would be to formulate the relationship between the annual yield of apples (tons per hectare) and the climatic conditions like the average temperature (in degrees Fahrenheit), rainfall (in millimeters), and average relative humidity (in percentage) as a linear equation.
+一个简单的方法是制定苹果的年产量（每公顷吨）与气候条件之间的线性关系，如平均温度（以华氏度为单位）、降雨量（以毫米为单位）和平均相对湿度（以百分比为单位）。
 
-`yield_of_apples = w1 * temperature + w2 * rainfall + w3 * humidity`
+`苹果产量 = w1 * 温度 + w2 * 降雨量 + w3 * 湿度`
 
-We're expressing the yield of apples as a weighted sum of the temperature, rainfall, and humidity.
+我们将苹果的产量表示为温度、降雨量和湿度的加权和。
 
-This equation is an approximation, since the actual relationship may not necessarily be linear, and there may be other factors involved. But a simple linear model like this often works well in practice.
+这个方程是一个近似值，因为实际关系不一定是线性的，可能还涉及其他因素。但像这样的简单线性模型用在练习中效果较好。
 
-Based on some statistical analysis of historical data, we might come up with reasonable values for the weights `w1`, `w2`, and `w3`. Here's an example set of values:
+基于一些历史数据的统计分析，我们大致可以为权重`w1`，`w2` 和 `w3` 提供合理的值。下面例举了一组值：
 
 Given some climate data for a region, we can now predict the yield of apples. Here's some sample data:
 

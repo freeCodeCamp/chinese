@@ -53,44 +53,44 @@ __数据分析__ 中的“数据”通常是指数值数据，如股票价格、
 
 基于一些历史数据的统计分析，我们大致可以为权重`w1`，`w2` 和 `w3` 提供合理的值。下面例举了一组值：
 
-Given some climate data for a region, we can now predict the yield of apples. Here's some sample data:
+给定一个地区的一些气候数据，我们就可以预测苹果的产量了。以下是一些示例数据：
 
 ![](https://i.imgur.com/TXPBiqv.png)
 
-To begin, we can define some variables to record climate data for a region.
+首先，我们定义一些变量来记录一个地区的气候数据。
 
-We can now substitute these variables into the linear equation to predict the yield of apples.
+然后，我们就可以将这些变量代入线性方程来预测苹果的产量了。
 
-To make it slightly easier to perform the above computation for multiple regions, we can represent the climate data for each region as a vector, that is a list of numbers.
+为了能更容易地对多个区域执行上述的计算，我们可以将每个区域的气候数据表示为向量，即数字列表。
 
-The three numbers in each vector represent the temperature, rainfall, and humidity data, respectively.
+每个向量中的三个数字分别代表温度、降雨量和湿度数据。
 
-We can also represent the set of weights used in the formula as a vector.
+我们还可以将公式中使用的权重集表示为一个向量。
 
-We can now write a function `crop_yield` to calculate the yield of apples (or any other crop) given the climate data and the respective weights.
+现在我们就可以编写一个函数 `crop_yield`，通过给定的气候数据和相应权重，来计算苹果（或任何其他作物）的产量了。
 
-### How to Turn Python Lists into Numpy Arrays
+### 如何将 Python 列表转换为 Numpy 数组
 
-The calculation performed by the `crop_yield` (element-wise multiplication of two vectors and taking a sum of the results) is also called the __dot product__. Learn more about dot products [here](https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/dot-cross-products/v/vector-dot-product-and-vector-length ).
+`crop_yield` 执行的计算（两个向量的元素相乘并对结果求和）也称为 __点积__。从 [这里](https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/dot-cross-products/v/vector-dot-product-and-vector-length ) 了解更多点积的信息。
 
-The Numpy library provides a built-in function to compute the dot product of two vectors. However, we must first convert the lists into Numpy arrays.
+Numpy 库提供了一个内置函数来计算两个向量的点积。但是，我们必须先将列表转换为 Numpy 数组才行。
 
-Let's install the Numpy library using the `pip` package manager.
+我们使用 `pip` 包管理器安装 Numpy 库。
 
-### How to Operate on Numpy arrays
+### 如何操作 Numpy 数组
 
-We can now compute the dot product of the two vectors using the `np.dot` function.
+我们可以使用 `np.dot` 函数来计算两个向量的点积。
 
-### What are the Benefits of Using Numpy Arrays?
+### 使用 Numpy 数组有什么好处？
 
-Numpy arrays offer the following benefits over Python lists for operating on numerical data:
+与 Python 的列表相比，Numpy 数组在操作数值数据方面具有以下优势：
 
--   **They're easy to **use****: You can write small, concise, and intuitive mathematical expressions like `(kanto * weights).sum()` rather than using loops and custom functions like `crop_yield`.
--   ****Performance****: Numpy operations and functions are implemented internally in C++, which makes them much faster than using Python statements and loops that are interpreted at runtime
+-   **它们很容易 **使用****：你可以编写像 `(kanto * weights).sum()` 这样的小型、简洁和直观的数学表达式，而不是使用循环和自定义函数（如 `crop_yield`）。
+-   ****性能****：Numpy 的操作和函数由 C++ 内部实现，这使得它们比使用 Python 的语句和循环快得多，因为后者是在运行时解释的。
 
-Here's a comparison of dot products performed using Python loops vs. Numpy arrays on two vectors with a million elements each.
+以下是对 Python 循环和 Numpy 数组执行的点积的比较，使用两个向量，每个都有一百万个元素。
 
-As you can see, using `np.dot` is 100 times faster than using a `for` loop. This makes Numpy especially useful while working with really large datasets with tens of thousands or millions of data points.
+如你所见，使用 `np.dot` 比使用 `for` 循环快 100 倍。这使得 Numpy 处理非常大的数据集时非常有用，特别是那些具有数万或数百万个数据点时。
 
 ### Multi-Dimensional Numpy Arrays
 

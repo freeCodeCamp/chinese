@@ -1,35 +1,28 @@
-> -  原文地址：[Interaction Design – How to Evaluate Interaction Costs and Improve User Experience](https://www.freecodecamp.org/news/interaction-design-evaluate-interaction-costs-improve-ux/)
-> -  原文作者：[Richard Yang](https://www.freecodecamp.org/news/author/richardux/)
-> -  译者：Assone
-> -  校对者：
+> - 原文地址：[Interaction Design – How to Evaluate Interaction Costs and Improve User Experience](https://www.freecodecamp.org/news/interaction-design-evaluate-interaction-costs-improve-ux/)
+> - 原文作者：[Richard Yang](https://www.freecodecamp.org/news/author/richardux/)
+> - 译者：Assone
+> - 校对者：
 
 ![交互式设计 – 如何评估交互成本并改善用户体验](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/1_WzkvMd3sZRb6BCwKEsoHjA.png)
 
-There are three core skills that every modern product designer must master: product thinking, visual design, and interaction design.
 有三个核心技能是每个现代产品设计师必须掌握的：产品思维、视觉设计和交互设计。
 
-![Diagram showing the three core product design skills: product thinking, visual design (UI), and interaction design (IxD).](https://www.freecodecamp.org/news/content/images/2021/02/image-146.png)
 ![图中显示了产品设计的三个核心技能: 产品思维、视觉设计 (UI) 和交互设计 (IxD).](https://www.freecodecamp.org/news/content/images/2021/02/image-146.png)
 
-The “table-stakes” for all modern product designers.
 所有现代产品设计师的“赌桌”。
 
-In general, you should be good at all three, but you should be really good at two. Most designers can teach themselves visual design and product thinking through online resources, practice, and shipping real products.
 一般来说，你应该在这三个方面都很擅长，但你应该真正擅长其中两个方面。大多数设计师可以通过在线资源、实践和交付真实产品来自学视觉设计和产品思维。
 
-As a product design lead at a FAANG company that has mentored hundreds of aspiring designers, I find that interaction design tends to be the most challenging core skill for designers to self-learn.
-作为一家FAANG公司的产品设计负责人，我已经指导了数百名有抱负的设计师，我发现交互设计往往是设计师自我学习的最具有挑战性的核心技能。
+作为一家 FAANG 公司的产品设计负责人，我已经指导了数百名有抱负的设计师，我发现交互设计往往是设计师自我学习的最具有挑战性的核心技能。
 
-In this article, I provide a foundation and framework for learning and improving your interaction design skills.
 在本文中，我提供了学习和提高交互设计技能的基础和框架。
 
-![Diagram showing the overlap and difference between UX and IxD. IxD is a sub-domain of UX.](https://www.freecodecamp.org/news/content/images/2021/02/image-148.png)
 ![图表显示了UX 和 IxD 之间的相同部分和不同部分。 IxD 是 UX 的子集。](https://www.freecodecamp.org/news/content/images/2021/02/image-148.png)
 
-The difference between UX (user experience) and IxD (interaction design).
 UX (用户体验) 和 IxD (交互设计) 之间的区别.
 
 ## What is Interaction Cost?
+
 ## 什么是交互成本？
 
 The foundational concept behind interaction design is “interaction cost,” which is often used to measure a product’s usability. Nielsen Norman defines “interaction costs” as the [sum of mental and physical efforts](https://www.nngroup.com/articles/interaction-cost-definition/) that users must exert to reach their goals.
@@ -42,13 +35,13 @@ Supporting more use cases and functionality adds complexity to your product’s 
 支持更多的用例和功能会增加产品信息架构（IA）和导航的复杂度。一个用例是一连串的步骤，从用户的目标和实现目标后的结果开始。
 
 A more complex IA will inherently increase the number of clicks required to accomplish a user’s goal. For example, an iOS clock app has the following alarm use case goals: turn on the alarm, create a new alarm, and edit the alarm.
-更复杂的IA本质上会增加完成用户目标所需的点击次数。例如iOS时钟应用具有以下闹钟用例目标：开启或关闭闹钟，创建一个新的闹钟和编辑闹钟。
+更复杂的 IA 本质上会增加完成用户目标所需的点击次数。例如 iOS 时钟应用具有以下闹钟用例目标：开启或关闭闹钟，创建一个新的闹钟和编辑闹钟。
 
 ![An information architecture (IA) diagram.](https://www.freecodecamp.org/news/content/images/2021/02/image-149.png)
 ![信息架构 (IA) 图示。](https://www.freecodecamp.org/news/content/images/2021/02/image-149.png)
 
 The more complex the IA, the more the user has to click to get to their desired screen. [Credits: Topta](https://dribbble.com/shots/4406909-The-Comprehensive-Guide-to-Information-Architecture)
-IA越是复杂，用户就越需要点击才能进入他们想要的屏幕。[鸣谢: Topta](https://dribbble.com/shots/4406909-The-Comprehensive-Guide-to-Information-Architecture)
+IA 越是复杂，用户就越需要点击才能进入他们想要的屏幕。[鸣谢: Topta](https://dribbble.com/shots/4406909-The-Comprehensive-Guide-to-Information-Architecture)
 
 The rule of thumb focuses on reducing the interaction costs for your target user’s primary use cases. Whenever a product accommodates too many use cases (for example, enterprise products with a million dropdown menus and features), it becomes harder to use.
 经验法则的重点是减少用户的主要用例的交互成本。每当一个产品容纳了太多的用例（例如，有一百万个下拉菜单和功能的企业产品），它就变得更难使用。
@@ -57,6 +50,7 @@ To avoid this over-complication, choose a specific user and use case to focus on
 为了避免这种过度复杂化，在建立一个全新的产品时，应该选择一个特定的用户和用例来关注。
 
 ### Physical and Mental Interaction Costs
+
 ### 身体和精神的交互成本
 
 Many junior designers have the misconception that interaction cost equals the number of clicks required for a user to complete a task.
@@ -69,6 +63,7 @@ However, it goes much deeper than that. Interaction cost can be classified as me
 然而，它比这要深得多。交互成本分为精神交互成本 (MIC) 和物理交互成本 (PIC) ，我将在下面解释。
 
 ## How to Evaluate Interaction Cost – Find the Critical User Flows First
+
 ## 如何评估交互成本 - 首先找到关键的用户流程
 
 A best practice is to identify the primary use cases (that is, the red routes) and reduce their interaction costs at the expense of secondary and tertiary use cases if necessary.
@@ -84,12 +79,13 @@ Red routes tend to be critical, encompass end-to-end tasks with multiple steps, 
 ![RRA的一个例子。](https://www.freecodecamp.org/news/content/images/2021/02/image-151.png)
 
 You can create an RRA from user interviews or with data if the product is live.
-如果产品已经上线，你可以根据用户访谈或数据来创建一个RRA。
+如果产品已经上线，你可以根据用户访谈或数据来创建一个 RRA。
 
 For instance, in the Uber app, the rider’s red route would be requesting a ride, while their normal route would be adding a payment method.
-比如说，在Uber应用中，乘客的关键路线是叫车，而他们的正常路线是添加支付方式。
+比如说，在 Uber 应用中，乘客的关键路线是叫车，而他们的正常路线是添加支付方式。
 
 ## How Tesler’s Law Helps Reduce Interaction Costs
+
 ## 特斯勒定律怎么帮助你降低交互成本
 
 Accorditrng to [Tesler’s Law](https://lawsofux.com/laws/teslers-law/) of Conservation of Complexity, all systems have an inherent complexity that cannot be removed or hidden.
@@ -99,10 +95,13 @@ Good design ensures that as much of the complexity burden is on the system as po
 好的设计可以确保尽可能多的复杂性负担在系统上，而不是在用户身上。
 
 ![A diagram illustrating Tesler's law, where the burden of complexity is shifted between the user and the product.](https://www.freecodecamp.org/news/content/images/2021/02/image-152.png)
+![说明特斯勒定律的图表，其中的复杂性负担在用户与产品之间转移。](https://www.freecodecamp.org/news/content/images/2021/02/image-152.png)
 
 You should begin by reducing the interaction costs within the primary use cases and shift the complexity burden towards the least important use cases.
+你应该首先减低主要用例中的交互成本，并将复杂性负担转移到最不重要的用例上。
 
 Tesler argued that a designer and engineer should spend an extra week reducing an application’s complexity rather than making millions of users spend an additional minute.
+特斯勒认为，设计师和工程师应该多花一周时间来降低应用的复杂度，而不是让数百万用户多花一分钟时间。
 
 Be careful not to simplify interfaces to the point of abstraction, though. A common pitfall is reducing the PIC at the expense of the MIC (I’m looking at you, Apple).
 
@@ -192,13 +191,13 @@ TA and usability metrics are advanced topics that warrant an entirely separate n
 
 According to Nielsen Norman Group, some of the most common aspects of a product that result in increased interaction costs include the following:
 
--   Excessive reading and scrolling
--   Looking around to find relevant information user
--   Comprehending information presented to the user
--   Physical user inputs
--   Page loads and waiting times
--   Attention switches
--   Memory load
+- Excessive reading and scrolling
+- Looking around to find relevant information user
+- Comprehending information presented to the user
+- Physical user inputs
+- Page loads and waiting times
+- Attention switches
+- Memory load
 
 ### Situational Interaction Costs
 
@@ -238,6 +237,6 @@ Of course, we should strive to reduce the interaction costs as much as possible.
 
 An excellent first step is to create a mental model of laws, frameworks, and tests to evaluate your design’s interaction costs.
 
-If you liked this article, [****join my free newsletter****](https://theambitiousdesigner.substack.com/) “The Ambitious Designer” for more career & design insights.
+If you liked this article, [\***\*join my free newsletter\*\***](https://theambitiousdesigner.substack.com/) “The Ambitious Designer” for more career & design insights.
 
 I also run a [private mentorship group](https://www.facebook.com/groups/richarduxmentorship) on Facebook and a design [Instagram](https://www.instagram.com/richard.ux/) account.

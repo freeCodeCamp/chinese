@@ -1,133 +1,133 @@
 > -  原文地址：[Symlink Tutorial in Linux – How to Create and Remove a Symbolic Link](https://www.freecodecamp.org/news/symlink-tutorial-in-linux-how-to-create-and-remove-a-symbolic-link/)
 > -  原文作者：[Dillion Megida](https://www.freecodecamp.org/news/author/dillionmegida/)
-> -  译者：
+> -  译者：Humilitas
 > -  校对者：
 
 ![Symlink Tutorial in Linux – How to Create and Remove a Symbolic Link](https://cdn-media-2.freecodecamp.org/w1280/5f9c9b4f740569d1a4ca2b02.jpg)
 
-A symlink (also called a symbolic link) is a type of file in Linux that points to another file or a folder on your computer. Symlinks are similar to shortcuts in Windows.
+符号链接（symbolic link）是 Linux 系统中的一种文件，它指向系统中的另一个文件或目录。符号链接类似于 Windows 系统中的快捷方式。
 
-Some people call symlinks "soft links" – a type of link in Linux/UNIX systems – as opposed to "hard links."
+也有人称它 “软链接（soft links）”——Linux/UNIX 系统中的一种链接形式——与之对应的是 “硬链接（hard links）”。
 
-## Difference Between a Soft Link and a Hard Link
+## 软链接和硬链接的区别
 
-Soft links are similar to shortcuts, and can point to another file or directory in any file system.
+软链接类似于快捷方式，它可以指向任意文件系统中的一个文件或目录。
 
-Hard links are also shortcuts for files and folders, but a hard link cannot be created for a folder or file in a different file system.
+硬链接也可以看作是文件或目录的快捷方式，但是无法在两个不同文件系统之间创建硬链接。
 
-Let's look at the steps involved in creating and removing a symlink. We'll also see what broken links are, and how to delete them.
+我们将会学习如何创建及删除符号链接，还会了解什么是失效链接，以及如何删除它们。
 
-## How to Create a Symlink
+## 如何创建符号链接
 
-The syntax for creating a symlink is:
+创建符号链接的语法：
 
 ```shell
 ln -s <path to the file/folder to be linked> <the path of the link to be created>
 ```
 
-`ln` is the link command. The `-s` flag specifies that the link should be soft. `-s` can also be entered as `-symbolic`.
+`ln` 是链接命令，`-s` 指定此链接为软链接，`-s` 也可以写为 `-symbolic`。
 
-By default, `ln` command creates hard links. The next argument is `path to the file (or folder)` that you want to link. (That is, the file or folder you want to create a shortcut for.)
+`ln` 命令默认会创建硬链接。`path to the file (or folder)` 声明了链接目标，即想要为其创建快捷方式的文件或目录。
 
-And the last argument is the `path to link` itself (the shortcut).
+`path to link` 即链接（快捷方式）名称。
 
-## How to Create a Symlink for a File – Example Command
+## 如何为一个文件创建符号链接——命令示例
 
 ```shell
 ln -s /home/james/transactions.txt trans.txt
 ```
 
-After running this command, you will be able to access the `/home/james/transactions.txt` with `trans.txt`. Any modification to `trans.txt` will also be reflected in the original file.
+执行这个命令之后，就可以通过 `trans.txt` 来访问 `/home/james/transactions.txt`。对于 `trans.txt` 的修改会体现到源文件上。
 
-Note that this command above would create the link file `trans.txt` in your current directory. You can as well create a linked file in a folder link this:
+注意，以上命令会在当前目录创建链接文件 `trans.txt`。你也可以使用以下命令在其它目录中创建链接文件：
 
 ```shell
 ln -s /home/james/transactions.txt my-stuffs/trans.txt
 ```
 
-There must be a directory already called "my-stuffs" in your current directory – if not the command will throw an error.
+以上命令要求当前目录必须存在一个名为 "my-stuffs" 的目录——否则会抛出错误。
 
-## How to Create a Symlink for a Folder – Example Command
+## 如何为目录创建符号链接——命令示例
 
-Similar to above, we'd use:
+与上面的命令类似：
 
 ```shell
 ln -s /home/james james
 ```
 
-This would create a symlinked folder called 'james' which would contain the contents of `/home/james`. Any changes to this linked folder will also affect the original folder.
+这会创建一个名为 "james" 的符号链接文件夹，其中包含了 `/home/james` 目录中的内容。对于链接文件夹的操作也会体现到原始文件夹。
 
-## How to remove a symlink
+## 如何删除符号链接
 
-Before you'd want to remove a symlink, you may want to confirm that a file or folder is a symlink, so that you do not tamper with your files.
+在删除符号链接之前，需要确认这个文件或文件夹确实是符号链接，以免误删源文件。
 
-One way to do this is:
+可以这样做：
 
 ```shell
 ls -l <path-to-assumed-symlink>
 ```
 
-Running this command on your terminal will display the properties of the file. In the result, if the first character is a small letter L ('l'), it means the file/folder is a symlink.
+在终端运行以上命令会打印出这个文件的属性信息。如果第一个字符是小写的 "L"（`l`）的话，即表明这个文件（或文件夹）是一个符号链接。
 
-You'd also see an arrow (->) at the end indicating the file/folder the simlink is pointing to.
+你还可以看到末尾有一个箭头（->），指向这个符号链接的目标文件（或文件夹）。
 
-There are two methods to remove a symlink:
+有两种方式可以删除符号链接：
 
-### How to Use Unlink to Remove a Symlink
+### 使用 unlink 删除符号链接
 
-The syntax is:
+语法如下：
 
 ```shell
 unlink <path-to-symlink>
 ```
 
-This deletes the symlink if the process is successful.
+如果命令成功执行的话，将会删除指定的符号链接。
 
-Even if the symlink is in the form of a folder, do not append '/', because Linux will assume it's a directory and `unlink` can't delete directories.
+即使符号链接是文件夹形式的，也不要在前面加 "/"，如果加了 "/"，Linux 会把它当成是一个目录，然而 `unlink` 是无法删除目录的。
 
-### How to use rm to Remove a Symlink
+### 使用 rm 删除符号链接
 
-As we've seen, a symlink is just another file or folder pointing to an original file or folder. To remove that relationship, you can remove the linked file.
+正如我们所见，符号链接只是一种指向源文件（或目录）的文件（或目录）。只要删除链接文件就可以解除这种关系。
 
-Hence, the syntax is:
+语法如下：
 
 ```shell
 rm <path-to-symlink>
 ```
 
-For example:
+例如：
 
 ```shell
 rm trans.txt
 rm james
 ```
 
-Note that trying to do `rm james/` would result an error, because Linux will assume 'james/' is a directory, which would require other options like `r` and `f`. But that's not what we want. A symlink may be a folder, but we are only concerned with the name.
+注意，试图执行 `rm james/` 会引发错误，因为 Linux 会把 `james/` 当成目录来处理，要想删除目录还需要提供 `r` 和 `f` 等参数，然而这并不是我们想要的。虽然符号链接有可能是文件夹形式的，但我们只需要关心它的名字。
 
-The main benefit of `rm` over `unlink` is that you can remove multiple symlinks at once, like you can with files.
+比起 `unlink`，`rm` 的主要优势在于可以一次性删除多个符号链接，就像删除多个文件那样。
 
-## How to Find and Delete Broken Links
+## 如何找出失效链接并将其删除
 
-Broken links occur when the file or folder that a symlink points to changes path or is deleted.
+当源文件（或目录）被移动或者被删除时，指向它的符号链接就会失效。
 
-For example, if 'transactions.txt' moves from `/home/james` to `/home/james/personal`, the 'trans.txt' link becomes broken. Every attempt to access to the file will result in a 'No such file or directory' error. This is because the link has no contents of its own.
+如果把 "transactions.txt" 从 `/home/james` 移动到 `/home/james/personal`，"trans.txt" 这个链接就会失效。之后尝试访问 "trans.txt" 会引发错误："No such file or directory"。
 
-When you discover broken links, you can easily delete the file. An easy way to find broken symlinks is:
+如果发现失效的链接，可以很轻松地将其删除。以下方法可以很方便地找出失效链接：
 
 ```shell
 find /home/james -xtype l
 ```
 
-This will list all broken symlinks in the `james` directory – from files to directories to sub-directories.
+这个命令会列出 `james` 目录下各种类型（如：文件、目录及子目录）的所有失效链接。
 
-Passing the `-delete` option will delete them like so:
+传入 `-delete` 参数就可以将它们删除：
 
 ```shell
 find /home/james -xtype l -delete
 ```
 
-## Wrapping up
+## 总结
 
-Symbolic link are an interesting feature of Linux and UNIX systems.
+符号链接是 Linux/UNIX 系统的有趣特性。
 
-You can create easily accessible symlinks to refer to a file or folder that would otherwise not be convenient to access. With some practice, you will understand how these work on an intuitive level, and they will make you much more efficient at managing file systems.
+可以为不方便访问的文件或文件夹创建符号链接，以便于访问。多加练习，你就能对它的工作方式有一个直观的理解，符号链接能够帮助你更高效地管理文件系统。

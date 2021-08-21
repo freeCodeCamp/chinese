@@ -92,29 +92,29 @@ Numpy 库提供了一个内置函数来计算两个向量的点积。但是，�
 
 如你所见，使用 `np.dot` 比使用 `for` 循环快 100 倍。这使得 Numpy 处理非常大的数据集时非常有用，特别是那些具有数万或数百万个数据点时。
 
-### Multi-Dimensional Numpy Arrays
+### 多维 Numpy 数组
 
-We can now go one step further and represent the climate data for all the regions using a single 2-dimensional Numpy array.
+现在让我们更进一步，使用单个二维 Numpy 数组来表示所有地区的气候数据。
 
-If you've taken a linear algebra class in high school, you may recognize the above 2-d array as a matrix with five rows and three columns. Each row represents one region, and the columns represent temperature, rainfall, and humidity, respectively.
+如果你在高中时学过线性代数课，你会把上面的二维数组看作是一个五行三列的矩阵。每一行代表一个区域，列分别代表温度、降雨量和湿度。
 
-Numpy arrays can have any number of dimensions and different lengths along each dimension. We can inspect the length along each dimension using the `.shape` property of an array.
+Numpy 数组可以有任意数量的维度，每个维度可以有不同的长度。可以通过数组的 `.shape` 属性来检查每个维度的长度。
 
 ![](https://fgnt.github.io/python_crashkurs_doc/_images/numpy_array_t.png)
 
-Source: [Elegant Scipy](https://github.com/elegant-scipy/elegant-scipy/blob/master/figures/NumPy_ndarrays_v2.png)
+来源：[Elegant Scipy](https://github.com/elegant-scipy/elegant-scipy/blob/master/figures/NumPy_ndarrays_v2.png)
 
-We can now compute the predicted yields of apples in all the regions, using a single matrix multiplication between `climate_data` (a 5x3 matrix) and `weights` (a vector of length 3). Here's what it looks like visually:
+通过 `climate_data` （一个 5x3 的矩阵）和 `weights` （一个长度为 3 的向量）之间的单一矩阵乘法，我们就可以计算出所预测的苹果产量了。看起来就像下面这样：
 
 ![](https://i.imgur.com/LJ2WKSI.png)
 
-You can learn about matrices and matrix multiplication by watching the first 3-4 videos of [this YouTube playlist](https://www.youtube.com/watch?v=xyAuNHPsq-g&list=PLFD0EB975BA0CC1E0&index=1).
+通过观看[这个 YouTube 播放列表](https://www.youtube.com/watch?v=xyAuNHPsq-g&list=PLFD0EB975BA0CC1E0&index=1)的前 3-4 个视频，你可以学到矩阵及矩阵乘法。
 
-We can use the `np.matmul` function or the `@` operator to perform matrix multiplication.
+我们可以使用 `np.matmul` 函数或者 `@` 操作符来执行矩阵乘法。
 
-### How to Work with CSV Data Files
+### 如何处理 CSV 数据文件
 
-Numpy also provides helper functions reading from and writing to files. Let's download a file `climate.txt`, which contains 10,000 climate measurements (temperature, rainfall, and humidity) in the following format:
+Numpy 同样提供辅助函数来对文件进行读写。我们来下载一个文件 `climate.txt`，它包含了 10,000 个气候测量结果（温度、降雨量和湿度），格式如下：
 
 ```
 temperature,rainfall,humidity
@@ -130,47 +130,47 @@ temperature,rainfall,humidity
 ...
 ```
 
-This format of storing data is known as __comma-separated values__ or CSV.
+这种存储数据的格式称为 __comma-separated values__ 或者 CSV。
 
-> ****CSVs****: A comma-separated values (CSV) file is a delimited text file that uses a comma to separate values. Each line of the file is a data record. Each record consists of one or more fields, separated by commas. A CSV file typically stores tabular data (numbers and text) in plain text, in which case each line will have the same number of fields. (Wikipedia)
+> ****CSVs****：逗号分隔值（CSV）文件是使用逗号分隔值的分隔文本文件。文件的每一行就是一条数据记录。每条记录包括一个或多个字段，以逗号隔开。CSV 文件通常以纯文本形式存储表格数据（数字和文本），因此每行都有相同数量的字段。（维基百科）
 
-To read this file into a numpy array, we can use the `genfromtxt` function.
+我们使用 `genfromtxt` 函数来把这个文件读入一个到 numpy 数组中。
 
-There are a couple of subtleties here:
+这里有几个微妙之处：
 
--   Since we wish to add new columns, we pass the argument `axis=1` to `np.concatenate`. The `axis` argument specifies the dimension for concatenation.
--   The arrays should have the same number of dimensions, and the same length along each except the dimension used for concatenation. We use the [`np.reshape`](https://jovian.ai/outlink?url=https%3A%2F%2Fnumpy.org%2Fdoc%2Fstable%2Freference%2Fgenerated%2Fnumpy.reshape.html) function to change the shape of `yields` from `(10000,)` to `(10000,1)`.
+-   由于我们希望添加新列，我们把参数 `axis=1` 传给 `np.concatenate`。`axis` 参数指定了串联的维度。
+-   数组必须有相同数量的维度，每个维度长度要相同，除了用于串联的维度。我们使用 [`np.reshape`](https://jovian.ai/outlink?url=https%3A%2F%2Fnumpy.org%2Fdoc%2Fstable%2Freference%2Fgenerated%2Fnumpy.reshape.html) 函数来将 `yields` 的形状从 `(10000,)` 改到 `(10000,1)`。
 
-Here's a visual explanation of `np.concatenate` along `axis=1` (can you guess what `axis=0` results in?):
+以下是在 `axis=1` 时 `np.concatenate` 的一个直观解释（你能猜出 `axis=0` 的结果是什么吗？）：
 
 ![](https://www.w3resource.com/w3r_images/python-numpy-image-exercise-58.png)
 
-Source: [w3resource.com](w3resource.com)
+来源：[w3resource.com](w3resource.com)
 
-The best way to understand what a Numpy function does is to experiment with it and read the documentation to learn about its arguments and return values. Use the cells below to experiment with `np.concatenate` and `np.reshape`.
+理解 Numpy 函数的最好方式是是对其进行试验并阅读文档以了解其参数和返回值。使用下面的单元格来试验 `np.concatenate` 和 `np.reshape`。
 
-Let's write the final results from our computation above back to a file using the `np.savetxt` function.
+让我们使用 `np.savetxt` 函数来将上面计算的最终结果写回到文件中。
 
-Numpy provides hundreds of functions for performing operations on arrays. Here are some commonly used functions:
+Numpy 提供了数百个用于对数组执行操作的函数。以下是一些常用的函数：
 
--   Mathematics: `np.sum`, `np.exp`, `np.round`, arithmetic operators
--   Array manipulation: `np.reshape`, `np.stack`, `np.concatenate`, `np.split`
--   Linear Algebra: `np.matmul`, `np.dot`, `np.transpose`, `np.eigvals`
--   Statistics: `np.mean`, `np.median`, `np.std`, `np.max`
+-   数学：`np.sum`、`np.exp`、`np.round`，以及算术运算符
+-   数组操作：`np.reshape`、`np.stack`、`np.concatenate`、`np.split`
+-   线性代数：`np.matmul`、`np.dot`、`np.transpose`、`np.eigvals`
+-   统计：`np.mean`、`np.median`、`np.std`、`np.max`
 
-**So how do you **find the function you need?**** The easiest way to find the right function for a specific operation or use-case is to do a web search. For instance, searching for "How to join numpy arrays" leads to [this tutorial on array concatenation](https://jovian.ai/outlink?url=https%3A%2F%2Fcmdlinetips.com%2F2018%2F04%2Fhow-to-concatenate-arrays-in-numpy%2F).
+**那么如何 **找到你需要的函数呢？**** 要找到特定操作或用例的正确函数，最简单的方法就是网络搜索。例如，搜索“如何连接 numpy 数组”，就会找到[数组连接教程](https://jovian.ai/outlink?url=https%3A%2F%2Fcmdlinetips.com%2F2018%2F04%2Fhow-to-concatenate-arrays-in-numpy%2F)。
 
-You can find a [full list of array functions here](https://numpy.org/doc/stable/reference/routines.html).
+你可以在这里找到[数组函数的完整列表](https://numpy.org/doc/stable/reference/routines.html).
 
-### Numpy Arithmetic Operations, Broadcasting, and Comparison
+### Numpy 算术运算、广播和比较
 
-Numpy arrays support arithmetic operators like `+`, `-`, `*`, etc. You can perform an arithmetic operation with a single number (also called a scalar) or with another array of the same shape.
+Numpy 数组支持像 `+`，`-`，`*` 等的算术运算。你可以对一个单一的数字（也称为标量）或者具有同样形状的数组进行算术运算。
 
-Operators make it easy to write mathematical expressions with multi-dimensional arrays.
+运算符让编写具有多维数组的数学表达式变得很容易。
 
-#### **Numpy Array Broadcasting**
+#### **Numpy 数组广播**
 
-Numpy arrays also support __broadcasting__, allowing arithmetic operations between two arrays with different numbers of dimensions but compatible shapes. Let's look at an example to see how it works.
+Numpy 数组也支持 __广播__，允许在具有不同维数但形状兼容的两个数组之间进行算术运算。让我们通过一个例子来看看它是如何工作的。
 
 When the expression `arr2 + arr4` is evaluated, `arr4` (which has the shape `(4,)`) is replicated three times to match the shape `(3, 4)` of `arr2`. Numpy performs the replication without actually creating three copies of the smaller dimension array, thus improving performance and using lower memory.
 
@@ -230,12 +230,12 @@ Check out the following resources for learning more about Numpy:
 -   [Numpy course on freeCodeCamp](/news/the-ultimate-guide-to-the-numpy-scientific-computing-library-for-python/)
 -   [Advanced Numpy (exploring the internals)](http://scipy-lectures.org/advanced/advanced_numpy/index.html)
 
-### Review Questions to Check Your Comprehension
+### 回顾问题以检验你的掌握程度
 
-Try answering the following questions to test your understanding of the topics covered in this notebook:
+尝试回答以下问题来测试你对本文前面话题的掌握程度：
 
-1.  What is a vector?
-2.  How do you represent vectors using a Python list? Give an example.
+1.  什么是向量？
+2.  如何用 Python 列表来表示向量？请举例。
 3.  What is a dot product of two vectors?
 4.  Write a function to compute the dot product of two vectors.
 5.  What is Numpy?

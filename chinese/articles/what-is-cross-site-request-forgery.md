@@ -1,6 +1,6 @@
 > -  原文地址：[Cross Site Request Forgery – What is a CSRF Attack and How to Prevent It](https://www.freecodecamp.org/news/what-is-cross-site-request-forgery/)
 > -  原文作者：[Megan KaczanowskiMegan Kaczanowski](https://www.freecodecamp.org/news/author/megansdoingfine/)
-> -  译者：
+> -  译者：ilam0x
 > -  校对者：
 
 ![Cross Site Request Forgery – What is a CSRF Attack and How to Prevent It](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/megan-article-image.jpg)

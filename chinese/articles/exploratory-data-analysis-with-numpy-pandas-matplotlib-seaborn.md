@@ -172,63 +172,63 @@ Numpy 数组支持像 `+`，`-`，`*` 等的算术运算。你可以对一个单
 
 Numpy 数组也支持 __广播__，允许在具有不同维数但形状兼容的两个数组之间进行算术运算。让我们通过一个例子来看看它是如何工作的。
 
-When the expression `arr2 + arr4` is evaluated, `arr4` (which has the shape `(4,)`) is replicated three times to match the shape `(3, 4)` of `arr2`. Numpy performs the replication without actually creating three copies of the smaller dimension array, thus improving performance and using lower memory.
+当计算表达式 `arr2 + arr4` 时，`arr4` (形状为 `(4,)`）被复制了三次以匹配 `arr2` 的形状 `(3, 4)`。Numpy 执行复制时，并不真实地去创建较小维度数组的三个副本，这样就提高了性能，并使用更少的内存。
 
 ![](https://jakevdp.github.io/PythonDataScienceHandbook/figures/02.05-broadcasting.png)
 
-Source: [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/02.05-computation-on-arrays-broadcasting.html)
+来源：[Python 数学科学手册](https://jakevdp.github.io/PythonDataScienceHandbook/02.05-computation-on-arrays-broadcasting.html)
 
-Broadcasting only works if one of the arrays can be replicated to match the other array's shape.
+只有当一个数组可以复制以匹配另一个数组的形状时，广播才有效。
 
-In the above example, even if `arr5` is replicated three times, it will not match the shape of `arr2`. So `arr2 + arr5` cannot be evaluated successfully. [Learn more about broadcasting here](https://numpy.org/doc/stable/user/basics.broadcasting.html).
+在上面的例子中，即使 `arr5` 被复制三次，它并不能匹配 `arr2` 的形状。所以无法成功计算 `arr2 + arr5`。[在此处学习有关广播的更多信息](https://numpy.org/doc/stable/user/basics.broadcasting.html).
 
-#### **Numpy Array Comparison**
+#### **Numpy 数组比较**
 
-Numpy arrays also support comparison operations like `==`, `!=`, `>` and so on. The result is an array of booleans.
+Numpy 数组也支持像 `==`、`!=`、`>` 等这样的比较操作符。比较结果是一个布尔值数组。
 
-Array comparison is frequently used to count the number of equal elements in two arrays using the `sum` method. Remember that `True` evaluates to `1` and `False` evaluates to `0` when you use booleans in arithmetic operations.
+数组比较经常使用 `sum` 方法来计算两个数组中相等元素的数量。请记住，在算术运算中使用布尔值时，`True` 被视为 `1`，而`False` 被视为 `0`。
 
-### Numpy Array Indexing and Slicing
+### Numpy 数组索引和切片
 
-Numpy extends Python's list indexing notation using `[]` to multiple dimensions in an intuitive fashion. You can provide a comma-separated list of indices or ranges to select a specific element or a subarray (also called a slice) from a Numpy array.
+Numpy 以一种直观的方式，将 Python 的列表索引符号 `[]` 扩展到多个维度。你可以提供一个以逗号分隔的索引或范围列表，来从 Numpy 数组中选择一个指定的元素或者一个子数组（也称为切片）。
 
-The notation and its results can seem confusing at first, so take your time to experiment and become comfortable with it.
+符号及其结果起初看起来会有点困惑，因此请花点时间进行实验并适应它。
 
-Use the cells below to try out some examples of array indexing and slicing, with different combinations of indices and ranges. Here are some more examples demonstrated visually:
+请用下面的单元格，使用不同的索引和范围组合，尝试进行数组索引和切片的一些示例。以下是一些直观演示的示例：
 
 ![](https://scipy-lectures.org/_images/numpy_indexing.png)
 
-Source: [Scipy Lectures](https://scipy-lectures.org/intro/numpy/array_object.html)
+来源：[Scipy 讲座](https://scipy-lectures.org/intro/numpy/array_object.html)
 
-### How to Create Numpy Arrays – Other Methods
+### 如何用其他方法创建 Numpy 数组
 
-Numpy also provides some handy functions to create arrays of desired shapes with fixed or random values. Check out the [official documentation](https://jovian.ai/outlink?url=https%3A%2F%2Fnumpy.org%2Fdoc%2Fstable%2Freference%2Froutines.array-creation.html) or use the `help` function to learn more.
+Numpy 还提供了一些简便的函数来创建具有固定或随机形状的数组。查阅[官方文档](https://jovian.ai/outlink?url=https%3A%2F%2Fnumpy.org%2Fdoc%2Fstable%2Freference%2Froutines.array-creation.html)或者使用 `help` 函数来了解更多。
 
-### Exercises
+### 练习
 
-Try the following exercises to become familiar with Numpy arrays and practice your skills:
+尝试以下练习来熟悉 Numpy 数组，锻炼你的技能：
 
--   Assignment on Numpy array functions: [https://jovian.ml/aakashns/numpy-array-operations](https://jovian.ai/outlink?url=https%3A%2F%2Fjovian.ml%2Faakashns%2Fnumpy-array-operations)
--   (Optional) 100 numpy exercises: [https://jovian.ml/aakashns/100-numpy-exercises](https://jovian.ai/outlink?url=https%3A%2F%2Fjovian.ml%2Faakashns%2F100-numpy-exercises)
+-   Numpy 数组函数的赋值：[https://jovian.ml/aakashns/numpy-array-operations](https://jovian.ai/outlink?url=https%3A%2F%2Fjovian.ml%2Faakashns%2Fnumpy-array-operations)
+-   （选做）100个 Numpy 小练习：[https://jovian.ml/aakashns/100-numpy-exercises](https://jovian.ai/outlink?url=https%3A%2F%2Fjovian.ml%2Faakashns%2F100-numpy-exercises)
 
-### Summary and Further Reading
+### 总结和进一步阅读
 
-With this, we complete our discussion of numerical computing with Numpy. We've covered the following topics in this part of the tutorial:
+到此，我们完成了用 Numpy 进行数值计算的讨论。本教程的这一部分，我们介绍了以下主题：
 
--   How to go from Python lists to Numpy arrays
--   How to operate on Numpy arrays
--   The benefits of using Numpy arrays over lists
--   Multi-dimensional Numpy arrays
--   How to work with CSV data files
--   Arithmetic operations and broadcasting
--   Array indexing and slicing
--   Other ways of creating Numpy arrays
+-   如何从 Python 列表转到 Numpy 数组
+-   如何操作 Numpy 数组
+-   相对列表而言，使用 Numpy 数组的优势
+-   多维 Numpy 数组
+-   如何处理 CSV 数据文件
+-   算术运算与广播
+-   数组索引和切片
+-   创建 Numpy 的其他方法
 
-Check out the following resources for learning more about Numpy:
+查阅以下资源以学习更多 Numpy 知识:
 
--   [Official tutorial](https://numpy.org/devdocs/user/quickstart.html)
--   [Numpy course on freeCodeCamp](/news/the-ultimate-guide-to-the-numpy-scientific-computing-library-for-python/)
--   [Advanced Numpy (exploring the internals)](http://scipy-lectures.org/advanced/advanced_numpy/index.html)
+-   [官方文档](https://numpy.org/devdocs/user/quickstart.html)
+-   [freeCodeCamp 上的 Numpy 教程](/news/the-ultimate-guide-to-the-numpy-scientific-computing-library-for-python/)
+-   [高级 Numpy（探索内部结构）](http://scipy-lectures.org/advanced/advanced_numpy/index.html)
 
 ### 回顾问题以检验你的掌握程度
 
@@ -236,74 +236,74 @@ Check out the following resources for learning more about Numpy:
 
 1.  什么是向量？
 2.  如何用 Python 列表来表示向量？请举例。
-3.  What is a dot product of two vectors?
-4.  Write a function to compute the dot product of two vectors.
-5.  What is Numpy?
-6.  How do you install Numpy?
-7.  How do you import the `numpy` module?
-8.  What does it mean to import a module with an alias? Give an example.
-9.  What is the commonly used alias for `numpy`?
-10.  What is a Numpy array?
-11.  How do you create a Numpy array? Give an example.
-12.  What is the type of Numpy arrays?
-13.  How do you access the elements of a Numpy array?
-14.  How do you compute the dot product of two vectors using Numpy?
-15.  What happens if you try to compute the dot product of two vectors which have different sizes?
-16.  How do you compute the element-wise product of two Numpy arrays?
-17.  How do you compute the sum of all the elements in a Numpy array?
-18.  What are the benefits of using Numpy arrays over Python lists for operating on numerical data?
-19.  Why do Numpy array operations have better performance compared to Python functions and loops?
-20.  Illustrate the performance difference between Numpy array operations and Python loops using an example.
-21.  What are multi-dimensional Numpy arrays?
-22.  Illustrate how you'd create Numpy arrays with 2, 3, and 4 dimensions.
-23.  How do you inspect the number of dimensions and the length along each dimension in a Numpy array?
-24.  Can the elements of a Numpy array have different data types?
-25.  How do you check the data types of the elements of a Numpy array?
-26.  What is the data type of a Numpy array?
-27.  What is the difference between a matrix and a 2D Numpy array?
-28.  How do you perform matrix multiplication using Numpy?
-29.  What is the `@` operator used for in Numpy?
-30.  What is the CSV file format?
-31.  How do you read data from a CSV file using Numpy?
-32.  How do you concatenate two Numpy arrays?
-33.  What is the purpose of the `axis` argument of `np.concatenate`?
-34.  When are two Numpy arrays compatible for concatenation?
-35.  Give an example of two Numpy arrays that can be concatenated.
-36.  Give an example of two Numpy arrays that cannot be concatenated.
-37.  What is the purpose of the `np.reshape` function?
-38.  What does it mean to “reshape” a Numpy array?
-39.  How do you write a numpy array into a CSV file?
-40.  Give some examples of Numpy functions for performing mathematical operations.
-41.  Give some examples of Numpy functions for performing array manipulation.
-42.  Give some examples of Numpy functions for performing linear algebra.
-43.  Give some examples of Numpy functions for performing statistical operations.
-44.  How do you find the right Numpy function for a specific operation or use case?
-45.  Where can you see a list of all the Numpy array functions and operations?
-46.  What are the arithmetic operators supported by Numpy arrays? Illustrate with examples.
-47.  What is array broadcasting? How is it useful? Illustrate with an example.
-48.  Give some examples of arrays that are compatible for broadcasting.
-49.  Give some examples of arrays that are not compatible for broadcasting.
-50.  What are the comparison operators supported by Numpy arrays? Illustrate with examples.
-51.  How do you access a specific subarray or slice from a Numpy array?
-52.  Illustrate array indexing and slicing in multi-dimensional Numpy arrays with some examples.
-53.  How do you create a Numpy array with a given shape containing all zeros?
-54.  How do you create a Numpy array with a given shape containing all ones?
-55.  How do you create an identity matrix of a given shape?
-56.  How do you create a random vector of a given length?
-57.  How do you create a Numpy array with a given shape with a fixed value for each element?
-58.  How do you create a Numpy array with a given shape containing randomly initialized elements?
-59.  What is the difference between `np.random.rand` and `np.random.randn`? Illustrate with examples.
-60.  What is the difference between `np.arange` and `np.linspace`? Illustrate with examples.
+3.  什么是两个向量的点积？
+4.  写一个函数来计算两个向量的点积。
+5.  什么是 Numpy？
+6.  如何安装 Numpy？
+7.  如何导入 `numpy` 模块？
+8.  用别名导入一个模块意味着什么？请举例。
+9.  通常使用的 `numpy` 别名是什么？
+10.  什么是 Numpy 数组？
+11.  如何创建 Numpy 数组？请举例。
+12.  什么是 Numpy 数组的类型？
+13.  如何访问 Numpy 数组的元素？
+14.  如何使用 Numpy 计算两个向量的点积？
+15.  如果尝试计算具有不同大小的两个向量的点积，会怎么样？
+16.  如何计算两个 Numpy 数组的元素乘积？
+17.  如何计算 Numpy 数组中所有元素的总和？
+18.  相对 Python 列表，使用 Numpy 数组处理数值数据的优势是什么？
+19.  为什么 Numpy 数组操作比 Python 函数和循环具有更好的性能？
+20.  举例说明 Numpy 数组操作和 Python 循环之间的性能差异。
+21.  什么是多维 Numpy 数组？
+22.  举例说明如何创建 2、3 和 4 维的 Numpy 数组。
+23.  如何查看 Numpy 数组的维度数量以及每个维度的长度？
+24.  Numpy 数组中的元素可以有不同的数据类型吗？
+25.  如何查看 Numpy 数组中元素的数据类型？
+26.  Numpy 数组的数据类型是什么？
+27.  矩阵和二维 Numpy 数组的区别是什么？
+28.  如何用 Numpy 执行矩阵乘法？
+29.  Numpy 中的 `@` 操作符用于做什么？
+30.  什么是 CSV 文件格式？
+31.  如何使用 Numpy 从 CSV 文件中读取数据？
+32.  如何连接两个 Numpy 数组？
+33.  `np.concatenate` 的 `axis` 参数的作用是什么？
+34.  什么时候两个 Numpy 数组可以兼容连接？
+35.  给出一个能进行连接的两个 Numpy 数组的例子。
+36.  给出一个不能进行连接的两个 Numpy 数组的例子。
+37.  `np.reshape` 函数的作用是什么？
+38.  “reshape”一个 Numpy 数组是什么意思？
+39.  如何将 numpy 数组写入 CSV 文件？
+40.  给出一些用于执行数学运算的 Numpy 函数示例。
+41.  给出一些用于执行数组操作的 Numpy 函数示例。
+42.  给出一些用于执行线性代数的 Numpy 函数示例。
+43.  给出一些用于执行统计运算的 Numpy 函数示例。
+44.  如何为特定操作或用例找到正确的 Numpy 函数？
+45.  在哪里可以看到所有 Numpy 数组函数和操作的列表？
+46.  Numpy 数组支持哪些算术运算符？举例说明。
+47.  什么是数组广播？它如何有用？举例说明。
+48.  给出一些兼容广播的数组的例子。
+49.  给出一些不兼容广播的数组的例子。
+50.  Numpy 数组支持哪些比较运算符？举例说明。
+51.  如何从 Numpy 数组访问特定的子数组或切片？
+52.  通过一些示例说明多维 Numpy 数组中的数组索引和切片。
+53.  如何创建一个全为0的给定形状的 Numpy 数组？
+54.  如何创建一个全为1的给定形状的 Numpy 数组？
+55.  如何创建给定形状的单位矩阵？
+56.  如何创建一个给定长度的随机向量？
+57.  如何创建给定形状且每个元素具有固定值的Numpy数组？
+58.  如何创建给定形状且每个元素具有随机初始值的Numpy数组？
+59.  `np.random.rand` 与 `np.random.randn` 的区别是什么？举例说明。
+60.  `np.arange` 与 `np.linspace` 的区别是什么？举例说明。
 
-You are ready to move on to the next section of this tutorial.
+你已经准备好进入本教程的下一节了。
 
-## How to Analyze Tabular Data using Python and Pandas
+## 如何用 Python 和 Pandas 分析表格数据
 
 ![](https://i.imgur.com/zfxLzEv.png)
 
-Follow along and run the code here: [https://jovian.ai/aakashns/python-pandas-data-analysis](https://jovian.ai/aakashns/python-pandas-data-analysis).
+按照下面的步骤运行代码：[https://jovian.ai/aakashns/python-pandas-data-analysis](https://jovian.ai/aakashns/python-pandas-data-analysis).
 
-This section covers the following topics:
+本节包含以下主题：
 
 -   How to read a CSV file into a Pandas data frame
 -   How to retrieve data from Pandas data frames

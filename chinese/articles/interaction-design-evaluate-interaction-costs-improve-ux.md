@@ -104,22 +104,33 @@ Tesler argued that a designer and engineer should spend an extra week reducing a
 特斯勒认为，设计师和工程师应该多花一周时间来降低应用的复杂度，而不是让数百万用户多花一分钟时间。
 
 Be careful not to simplify interfaces to the point of abstraction, though. A common pitfall is reducing the PIC at the expense of the MIC (I’m looking at you, Apple).
+但是，请注意不要将接口简化到抽象的地步。常见的陷阱是牺牲 MIC 为代价来减少 PIC（就是你，苹果）。
 
 When the system has handled as much of the inherent complexity as possible, you should shift the rest of the complexity away from the primary use cases to the secondary and tertiary use cases.
+当系统已经尽可能多地处理了固有的复杂性，你应该将其其余的复杂性从主要用例转移到第二和第三用例。
 
 Most digital products have complicated settings for this reason. In most cases, settings are usually a tertiary use case and are very rarely used.
+多数的数字产品都有复杂的设置，原因就在于此。在大多数情况下，设置通常是第三级用例，很少使用。
 
 Imagine if you always saw the settings screen instead of the home screen and needed to click several times to get to the screen you needed instead. You’d probably be frustrated at the unreasonable interaction costs.
+想象一下，如果你总是看到设置屏幕而不是主屏幕，并且需要点击几下才能到达你需要的屏幕。你可能会对这种不合理的交互成本感到沮丧。
 
 ## Mental Interaction Costs (MIC)
 
+## 心理交互成本（MIC）
+
 [Mental interaction costs (MICs)](https://www.researchgate.net/publication/23456170_A_Framework_of_Interaction_Costs_in_Information_Visualization) are often overlooked by new designers who only pay attention to physical interaction costs (PIC).
+[心理交互成本（MICs）](https://www.researchgate.net/publication/23456170_A_Framework_of_Interaction_Costs_in_Information_Visualization)经常被新的设计师而忽略，他们只关注物理交互成本（PIC）。
 
 Common MICs that you may have noticed in products with poor usability include complex navigation, dense instructions, unconventional mental models and interaction patterns, and so on.
+你可能已经注意到，在可用性差的产品中，常见的 MIC 包括复杂的导航、密集的指示、非常规的心智模型和交互模式等。
 
 ### Attention and Memory
 
+### 注意力和记忆力
+
 The two most important components of MIC are attention and memory.
+MIC 的两个最重要的组成部分是注意力和记忆力。
 
 When a task requires excessive attention or memory to complete, it will have a proportionally high MIC — decreasing usability.
 

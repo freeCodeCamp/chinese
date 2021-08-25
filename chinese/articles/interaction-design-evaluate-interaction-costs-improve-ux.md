@@ -133,14 +133,20 @@ The two most important components of MIC are attention and memory.
 MIC 的两个最重要的组成部分是注意力和记忆力。
 
 When a task requires excessive attention or memory to complete, it will have a proportionally high MIC — decreasing usability.
+当一个任务需要过多的注意力或记忆力完成时，它的 MIC 就会成比例地高 - 降低了实用性。
 
 Some common elements that increase attention costs or divert attention include pop-up banners, models, attention-grabbing visuals, and motion unrelated to the user’s current task.
+一些增长注意力成本或转移注意力的常见元素包括弹出式横幅、模型、吸引注意力的视觉效果，以及用户当前任务无关的运动。
 
 Users are easily distracted. Make sure you’re not pulling their attention elsewhere when they are trying to complete a task.
+用户是容易分心的，确保在他们试图完成一项任务时，你不会把他们的注意力分散到其他地方。
 
 ### Evaluating Attention
 
+### 评估注意力
+
 If you want to evaluate how much attention MIC your interface has, consider doing an [eye-tracking study (ETS)](https://uxplanet.org/uxers-quick-guide-to-eye-tracking-edf70bffd03d). You can use an ETS to infer not only where users look but what they’re thinking.
+如果你想要评估你的界面有多少注意力，可以考虑做一个[眼动追踪研究（ETS）](https://uxplanet.org/uxers-quick-guide-to-eye-tracking-edf70bffd03d)。你不仅可以用 ETS 来推断用户观察的地方，还有推断他们在想些什么。
 
 ![An example of an ETS.](https://www.freecodecamp.org/news/content/images/2021/02/image-153.png)
 

@@ -1,49 +1,49 @@
 > -  原文地址：[Fetch API – How to Make a GET Request and POST Request in JavaScript](https://www.freecodecamp.org/news/how-to-make-api-calls-with-fetch/)
 > -  原文作者：[Kingsley Ubah](https://www.freecodecamp.org/news/author/ubahthebuilder/)
-> -  译者：
+> -  译者：Humilitas
 > -  校对者：
 
 ![Fetch API – How to Make a GET Request and POST Request in JavaScript](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/Fetch-API.png)
 
-Often times you might want your system to communicate with other web servers to get information.
+你的系统经常会通过与其它服务器通信来获取信息。
 
-For example, let's say a new user wants to sign up for an account on your website. And instead of having to manually fill out a form to send their information to your system, they want to use their information that's already in another service or platform (that is, **3rd party authentication**) to sign up.
+比如说，一个新用户想要在你的网站注册一个账号，比起手动地填写个人信息表单，他们更希望使用其它服务或平台（即**第三方认证**）上已经保存的信息来注册。
 
-In such a case, your system has to communicate with the third party's system to get that user's information. And it does that through an **API**.
+这样，你的系统需要和第三方系统通信来获取用户信息。这将通过 **API** 调用来完成。
 
-> An API, or Application Programming Interface, is just a set of rules that guide how one software or system communicates with another.
+> API（Application Programming Interface，应用程序接口），就是一组定义软件或系统之间如何通信的规则。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/IMG_20210530_115853.jpg)
 
-My hand-drawn explanation of an API
+<div style="text-align:center">我手绘的 API 示意图</div>
 
-If your application is a single-page application built with an asynchronous programming language like JavaScript, you have a helpful tool to carry out that function: `fetch()`.
+在异步编程语言（如 Javascript）编写的单页应用中，有一个很有用的工具可以实现这个功能：`fetch()`。
 
-## What is the Fetch API?
+## 什么是 Fetch API？
 
-`fetch()` is a mechanism that lets you make simple AJAX (Asynchronous JavaScript and XML) calls with JavaScript.
+`fetch()` 是一种可以发起 AJAX（异步 JavaScript 和 XML）请求的机制。
 
-**Asynchronous** means that you can use fetch to make a call to an external API without halting the execution of other instructions. That way, other functions on the site will continue to run even when an API call has not been resolved.
+**异步**意味着你可以使用 fetch 调用外部 API 而不会阻塞其它指令的执行。这样，即使 API 调用还没有完成，其它函数也可以继续执行。
 
-When a response (data) is sent back from the API, the asynchronous tasks (fetch) resume. If it still sounds difficult, you can read my detailed introduction into [Asynchronous code here](https://ubahthebuilder.tech/introduction-to-asynchronous-programming-with-javascript).
+API 返回响应（数据）的时候，会接着执行异步任务（fetch）。如果还是难以理解的话，可以查看我的[这篇文章](https://ubahthebuilder.tech/introduction-to-asynchronous-programming-with-javascript)，其中详细介绍了异步代码的概念。
 
-It is important to note, though, that fetch is not part of the JavaScript spec, but the WWTAG. As a result, you will not be able to use it in a Node.js environment (unless you install a special module).
+然而，需要注意的是，fetch 并不是 JavaScript 规范的一部分，所以不能在 Node.js 环境中使用它（除非安装了相应模块）。
 
-## How to Use `fetch()` in JavaScript
+## 如何在 JavaScript 中使用 `fetch()`
 
-When we talk about APIs, we also need to talk about **endpoints**. An endpoint is simply a unique URL you call to interact with another system.
+谈到 API，就需要谈到**端点（endpoint）**，端点是一个唯一的 URL，可以通过调用它来与其它系统交互。
 
-Let's assume that we are making a request to an external API to get some data (like a blog post). For this, we'll use a simple GET request.
+假设我们要请求一个外部 API 来获取一些数据（如博客）。这里我们使用 GET 请求。
 
-Simply call `fetch()` with the endpoint URL as the argument:
+以端点 URL 作为参数，调用 `fetch()`：
 
 ```js
 fetch('https://ubahthebuilder.tech/posts/1');
 ```
 
-Trying to fetch blog post from external API
+<div style="text-align:center">从外部 API 获取博客内容</div>
 
-The response body for this endpoint will be information about a blog post:
+这个端点的响应体是一篇博客的信息：
 
 ```js
 {
@@ -54,11 +54,11 @@ body: 'Brilliant post on fetch...',
 };
 ```
 
-Ultimately, you'll want to get the response body. But the response object contains quite a bit of information beyond the body, including the status code, headers, and more information.
+我们的最终目的是要获取响应体，但是除了响应体之外，响应对象还包含很多其它信息，包括状态码、响应头等。
 
-> Note that the fetch API returns a promise. Because of this, you need to nest a then() method to handle the resolution. Learn more about promises [here](https://ubahthebuilder.tech/introduction-to-asynchronous-programming-with-javascript).
+> 注意，fetch API 返回一个 promise。因此，需要使用 then() 函数来处理决议（resolution）。[点击此处](https://ubahthebuilder.tech/introduction-to-asynchronous-programming-with-javascript)了解更多关于 promise 的内容。
 
-The data returned from the API is not usually in a useable form. So you'll need to convert the data to a form which your JavaScript can operate with. Thankfully, you can use the `json()` method to do just that:
+fetch API 返回的数据通常不是可用的格式，所以需要把它转换为 JavaScript 代码方便操作的格式。幸好，可以使用 `json()` 方法来做：
 
 ```js
 fetch('https://ubahthebuilder.tech/posts/1')
@@ -70,21 +70,22 @@ console.log(post.title);
 });
 ```
 
-Retrieving blog post from API and extracting only the title property
+<div style="text-align:center">从 API 获取博客信息，取出博客标题</div>
 
-As you can see in the above code, you can nest a subsequent `then()` method to parse the data (I pulled out just the title in our case)
 
-In this example, we simply wanted to get a blog post from the API. But what if we wanted to post a story instead?
+如上方代码所示，可以在后续的 `then()` 方法中解析数据（例中我只取出了标题）。
 
-## How to Make a POST Request
+这个示例中，我们只是从 API 中获取了一篇博客，如果我们想要发布一篇博客呢？
 
-Once you move beyond GET requests, you'll need to set a few more options. So far, you have only supplied a single argument to `fetch()` — the URL endpoint.
+## 如何发起 POST 请求
 
-For a post request, you'll need to pass an object of configuration options as a second argument. The optional object can take a lot of different parameters. In this case, include only the most necessary information.
+跳出 GET 请求，要发起 POST 请求还需要设置一些选项参数。到目前为止，只为 `fetch()` 提供了一个参数——URL 端点。
 
-Because you're sending a POST request, you'll need to declare that you're using the POST method.
+对于 post 请求，需要传入一个选项配置对象作为第二个参数。这个对象中可以包含许多参数，示例中只包含了一些必要信息。
 
-You'll also need to pass some data to actually create the new blog post. Since you're sending JSON data, you'll need to set a header of _Content-Type_ set to _application/json_. Finally, you'll need the body, which will be a single string of JSON data.
+由于要发送 POST 请求，所以需要声明请求方法是 POST。
+
+还需要传入一些博客信息来创建一个新博客。因为发送的是 JSON 格式的数据，所以需要在请求头中将 _Content-Type_ set 设置为 _application/json_。最后，设置请求体，它是一个 JSON 字符串。
 
 ```js
 const update = {
@@ -102,7 +103,7 @@ body: JSON.stringify(update),
 };
 ```
 
-And then, the API call:
+调用 API：
 
 ```js
 fetch('https://jsonplaceholder.typicode.com/posts', options)
@@ -115,33 +116,33 @@ fetch('https://jsonplaceholder.typicode.com/posts', options)
       console.log(update);
       // {
       //
-      title: 'A blog post by Kingsley',
+      // title: 'A blog post by Kingsley',
       //
-      body: 'Brilliant post on fetch API',
+      // body: 'Brilliant post on fetch API',
       //
-      userId: 1,
+      // userId: 1,
       //
-      id: 101
+      // id: 101
       // };
       }).catch(e => {
       console.log(e);
       });
 ```
 
-If your request is successful, you'll get a response body containing the blog post object along with a new ID. The response will vary depending on how the API is set up.
+如果请求成功，会得到一个响应，其中包含了刚刚创建的博客信息。响应的具体内容取决于 API 的实现方式。
 
-Finally, you should note that endpoints may change with time and API's may be restructured. So you should put all your fetch calls together for easier access.
+最后要注意的是，随着时间的推移，端点可能会改变、API 也可能会重构，所以应该把所有 fetch 调用放在一起以便于后续调整。
 
-## Conclusion
+## 总结
 
-Here are some points to summarize this article:
+本文要点如下：
 
--   Computer systems like software communicate with each other and share information through a layer called an API.
--   An API contains the set of rules and protocols guiding how two or more systems interact. For example, Facebook's system may interact with Google's system to get information on a user though an API.
--   In front end JavaScript, you can make simple API calls with the `fetch()` utility.
--   To make a simple GET request with fetch, you just need to pass in the URL endpoint as an argument.
--   To make a POST request, you'll need to pass along certain other parameters including a configuration object.
+-   计算机系统、软件通过 API 来互相通信。
+-   API 包含了系统之间交互的规则集和协议。例如，Facebook 可能会调用 Google 的 API 来获取用户信息。
+-   在前端 JavaScript 代码中，可以使用 `fetch` 来调用 API。
+-   使用 fetch 发起 GET 请求，只需要传入一个 URL 端点作为参数。
+-   要发起 POST 请求，还需传入配置对象作为参数。
 
-If you liked my article and want to offer your support, kindly visit my [Buy Me A Coffee page](https://buymeacoffee.com/ubahthebuilder).
+如果你喜欢我的文章，可以[为我买一杯咖啡](https://buymeacoffee.com/ubahthebuilder)以示支持。
 
-Thank you and see you soon.
+谢谢，再见。

@@ -305,19 +305,19 @@ Numpy 还提供了一些简便的函数来创建具有固定或随机形状的�
 
 本节包含以下主题：
 
--   How to read a CSV file into a Pandas data frame
--   How to retrieve data from Pandas data frames
--   How to query, sort, and analyze data
--   How to merge, group, and aggregate data
--   How to extract useful information from dates
--   Basic plotting using line and bar charts
--   How to write data frames to CSV files
+-   如何将 CSV 文件读入到 Pandas 数据帧
+-   如何从 Pandas 数据帧中获得数据
+-   如何查询、排序和分析数据
+-   如何合并、分组和汇总数据
+-   如何从日期中提取有用信息
+-   使用直线图和条形图进行基本绘图
+-   如何将数据帧写到 CSV 文件中
 
-### How to Read a CSV File Using Pandas
+### 如何用 Pandas 读取 CSV 文件
 
-[Pandas](https://jovian.ai/outlink?url=https%3A%2F%2Fpandas.pydata.org%2F) is a popular Python library used for working in tabular data (similar to the data stored in a spreadsheet). It provides helper functions to read data from various file formats like CSV, Excel spreadsheets, HTML tables, JSON, SQL, and more.
+[Pandas](https://jovian.ai/outlink?url=https%3A%2F%2Fpandas.pydata.org%2F) 是一个非常流行的 Python 库，用于处理表格数据（类似于存在电子表格中的数据）。 它提供了辅助函数，用以从各种文件格式（如CSV、Excel电子表格、HTML表格、JSON、SQL等）中读取数据。
 
-Let's download a file `italy-covid-daywise.txt` which contains day-wise Covid-19 data for Italy in the following format:
+我们下载一个文件 `italy-covid-daywise.txt`，里面包含了意大利每日的 Covid-19 数据，格式如下：
 
 ```
 date,new_cases,new_deaths,new_tests
@@ -332,21 +332,21 @@ date,new_cases,new_deaths,new_tests
 ...
 ```
 
-This format of storing data is known as __comma-separated values__ or CSV. Here's a reminder in case you need a definition of what the CSV format is:
+这种存储数据的格式被称为 __comma-separated values__ 或者 CSV。如果你需要 CSV 格式的定义，可以参考以下：
 
-> ****CSVs****: A comma-separated values (CSV) file is a delimited text file that uses a comma to separate values. Each line of the file is a data record. Each record consists of one or more fields, separated by commas. A CSV file typically stores tabular data (numbers and text) in plain text, in which case each line will have the same number of fields. (Wikipedia)
+> ****CSVs****: 逗号分隔值（CSV）文件是一种用逗号分隔数值的分隔文本文件。文件中的每一行都是一条数据记录。每一条记录包含一个或多个字段，以逗号隔开。CSV 文件通常以纯文本形式存储表格数据（数字和文本），每一行拥有相同数量的字段。（维基百科）
 
-We'll download this file using the `urlretrieve` function from the `urllib.request` module.
+我们使用 `urlretrieve` 函数从 `urllib.request` 模块中下载这个文件。
 
-Data from the file is read and stored in a `DataFrame` object – one of the core data structures in Pandas for storing and working with tabular data. We typically use the `_df` suffix in the variable names for dataframes.
+文件中的数据被读取并存到 `DataFrame` 对象——它是 Pandas 中的一个核心数据结构，用于存储和处理表格数据。通常我们在数据帧的变量名称中使用 `_df` 后缀。
 
-Here's what we can tell by looking at the dataframe:
+以下是我们通过查看数据帧可以得知的信息：
 
--   The file provides four day-wise counts for COVID-19 in Italy
--   The metrics reported are new cases, deaths, and tests
--   Data is provided for 248 days: from Dec 12, 2019, to Sep 3, 2020
+-   该文件提供了意大利新冠肺炎的四项每日计数
+-   报告的指标是确诊病例、死亡人数和测试人数
+-   提供了248天的数据：从2019年12月12日到2020年9月3日
 
-Keep in mind that these are officially reported numbers. The actual number of cases and deaths may be higher, as not all cases are diagnosed.
+请记住，这些是官方报告的数字。实际病例和死亡人数可能更高，因为并非所有病例都被诊断出来。
 
 We can view some basic information about the data frame using the `.info` method.
 

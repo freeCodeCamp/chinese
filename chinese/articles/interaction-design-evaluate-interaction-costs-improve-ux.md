@@ -149,14 +149,18 @@ If you want to evaluate how much attention MIC your interface has, consider doin
 如果你想要评估你的界面有多少注意力，可以考虑做一个[眼动追踪研究（ETS）](https://uxplanet.org/uxers-quick-guide-to-eye-tracking-edf70bffd03d)。你不仅可以用 ETS 来推断用户观察的地方，还有推断他们在想些什么。
 
 ![An example of an ETS.](https://www.freecodecamp.org/news/content/images/2021/02/image-153.png)
+![ETS的一个例子。](https://www.freecodecamp.org/news/content/images/2021/02/image-153.png)
 
-An example of an ETS.
+ETS 的一个例子。
 
 The ETS examines two relevant eye movements in particular: “fixation” and “saccade.”
+ETS 特别研究了两个相关的眼球运动：“注视” 和 “扫视”。
 
 Fixation occurs when a user’s pupils linger over an interface element long enough to process it. A Saccade occurs when the eye is in motion — darting between various areas within your interface.
+当用户的瞳孔在界面元素上停留足够长的时间以处理它，就会发生注视。当眼睛处于运动状态 - 在界面中的不同区域之间游走时，就会发生扫视。
 
 If your ETS reveals many task-irrelevant saccadic movements, it’s likely due to a distracting interface. Your ETS results can help you understand if users are missing critical elements within the interface, what’s distracting, and what’s unnecessary.
+如果你的 ETS 显示许多与任务无关的扫视移动，这可能是由于一个分散注意力的界面。你的 ETS 结果能帮助你了解用户是否遗漏了界面中的关键元素，哪些是分散注意力的，哪些是不必要的。
 
 ### Working memory
 

@@ -348,55 +348,55 @@ date,new_cases,new_deaths,new_tests
 
 请记住，这些是官方报告的数字。实际病例和死亡人数可能更高，因为并非所有病例都被诊断出来。
 
-We can view some basic information about the data frame using the `.info` method.
+我们可以通过 `.info` 方法来查看数据帧的一些基本信息。
 
-It appears that each column contains values of a specific data type. You can view statistical information for numerical columns (mean, standard deviation, minimum/maximum values, and the number of non-empty values) using the `.describe` method.
+看起来每一列都包含了一种特定数据类型的值。你可以通过 `.describe` 方法来查看数值列的统计信息（平均值、标准偏差、最小值/最大值和非空值的数量）。
 
-Here's a summary of the functions and methods we've looked at so far:
+下面是我们到目前为止所研究的函数和方法的总结：
 
--   `pd.read_csv` – Read data from a CSV file into a Pandas `DataFrame` object
--   `.info()` – View basic information about rows, columns, and data types
--   `.describe()` – View statistical information about numeric columns
--   `.columns` – Get the list of column names
--   `.shape` – Get the number of rows and columns as a tuple
+-   `pd.read_csv` – 将数据从 CSV 文件中读入到 Pandas 的 `DataFrame` 对象中
+-   `.info()` – 查看关于行、列和数据类型的基本信息
+-   `.describe()` – 查看数值列的统计信息
+-   `.columns` – 获取一个包含列名的列表
+-   `.shape` – 获取行数和列数作为一个数组
 
-### How to Retrieve Data from a Data Frame in Pandas
+### 如何从 Pandas 数据帧中检索数据
 
-The first thing you might want to do is retrieve data from this data frame, like the counts of a specific day or the list of values in a particular column.
+你想做的首件事可能是从这个数据帧中检索数据，如一个指定日的计数，或者一个特定列的值列表。
 
-To do this, you should understand the internal representation of data in a data frame. Conceptually, you can think of a dataframe as a dictionary of lists: keys are column names, and values are lists/arrays containing data for the respective columns.
+为此，你应该了解数据帧中数据的内部表示方法。从概念上讲，你可以将数据帧视为一个字典列表：键是列名，值是包含相应列数据的列表或数组。
 
-Representing data in the above format has a few benefits:
+用上面的格式来表示数据具有以下几个好处：
 
--   All values in a column typically have the same type of value, so it's more efficient to store them in a single array.
--   Retrieving the values for a particular row simply requires extracting the elements at a given index from each column array.
--   The representation is more compact (column names are recorded only once) compared to other formats that use a dictionary for each row of data (see the example below).
+-   列中的所有值通常具有相同类型的值，因此将它们存储在单个数组中更有效。
+-   检索特定行的值只需要从每个列数组中提取给定索引处的元素。
+-   与其他格式相比，如对每行数据使用字典，这种表示形式更加紧凑（列名只记录一次）（参见下面的示例）。
 
-With the dictionary of lists analogy in mind, you can now guess how to retrieve data from a data frame. For example, we can get a list of values from a specific column using the `[]` indexing notation.
+与字典列表进行类比，你大概可以猜到如何从数据帧中检索数据。例如，我们可以使用 `[]` 索引符号来从一个指定列中获取值列表。
 
-Each column is represented using a data structure called `Series`, which is essentially a numpy array with some extra methods and properties.
+每一列都用名为 `Series` 的数据结构来表示，它本质上是一个包含额外方法和属性的 numpy 数组。
 
-Instead of using the indexing notation `[]`, Pandas also allows accessing columns as properties of the dataframe using the `.` notation. However, this method only works for columns whose names do not contain spaces or special characters.
+除了使用索引符号 `[]`, Pandas 也允许使用 `.` 符号来将列作为数据帧的属性进行访问。但是，这个方法仅限于那些不包含空字符或者特殊字符的列。
 
-Further, you can also pass a list of columns within the indexing notation `[]` to access a subset of the data frame with just the given columns.
+更进一步，你可以传递一个列的列表到索引符号 `[]` 中，用来访问这些列的数据帧的子集。
 
-The new data frame `cases_df` is simply a "view" of the original data frame `covid_df`. Both point to the same data in the computer's memory. Changing any values inside one of them will also change the respective values in the other.
+新的数据帧 `cases_df` 只是原始数据帧 `covid_df` 的“视图”。两者都指向计算机内存中相同的数据。在其中一个更改值，另一个相应的值也会被更改。
 
-Sharing data between data frames makes data manipulation in Pandas blazing fast. You needn't worry about the overhead of copying thousands or millions of rows every time you want to create a new data frame by operating on an existing one.
+在数据帧之间共享数据使得 Pandas 中的数据操作速度非常快。每次想要操作现有数据帧来创建新数据帧时，你都不必担心复制数千或数百万行导致的性能开销。
 
-Sometimes you might need a full copy of the data frame, in which case you can use the `copy` method.
+有些时候你需要数据帧的完整副本，这时你可以使用 `copy` 方法。
 
-The data within `covid_df_copy` is completely separate from `covid_df`, and changing values inside one of them will not affect the other.
+`covid_df_copy` 中的数据与 `covid_df` 的是完全分开的，改变其中一个的值并不会影响另一个。
 
-To access a specific row of data, Pandas provides the `.loc` method.
+要访问特定的数据行，Pandas 提供了`.loc` 方法。
 
-Notice above that while the first few values in the `new_cases` and `new_deaths` columns are `0`, the corresponding values within the `new_tests` column are `NaN`. That is because the CSV file does not contain any data for the `new_tests` column for specific dates (you can verify this by looking into the file). These values may be missing or unknown.
+要注意的是，在 `new_cases` 和 `new_deaths` 列中，刚开始的一些值是 `0`，但是在 `new_tests` 列中对应的值是 `NaN`。那是因为这个 CSV 文件本身并没有特定日期的 `new_tests` 列的数据（你可以通过查看文件来验证这一点）。这些值可能缺失或未知。
 
-The distinction between `0` and `NaN` is subtle but important. In this dataset, it represents that daily test numbers were not reported on specific dates. Italy started reporting daily tests on Apr 19, 2020. They'd already conducted 935,310 tests before Apr 19.
+`0` 和 `NaN` 之间的区别很微妙但很重要。在此数据集中，它表示在指定日期没有报告每日测试数量。意大利从 2020 年 4 月 19 日开始报告每日测试数据。在 4 月 19 日之前，他们已经进行了 935,310 次测试。
 
-We can find the first index that doesn't contain a `NaN` value using a column's `first_valid_index` method.
+我们可以使用列的 `first_valid_index` 方法找到不包含 `NaN` 值的第一个索引。
 
-Let's look at a few rows before and after this index to verify that the values change from `NaN` to actual numbers. We can do this by passing a range to `loc`.
+让我们查看此索引前后的几行，以验证值是否从 `NaN` 更改为实际数字。我们可以通过向`loc`传递一个范围来实现。
 
 Notice that even though we have taken a random sample, each row's original index is preserved. This is a useful property of data frames.
 

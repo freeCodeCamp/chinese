@@ -396,57 +396,57 @@ date,new_cases,new_deaths,new_tests
 
 我们可以使用列的 `first_valid_index` 方法找到不包含 `NaN` 值的第一个索引。
 
-让我们查看此索引前后的几行，以验证值是否从 `NaN` 更改为实际数字。我们可以通过向`loc`传递一个范围来实现。
+让我们查看此索引前后的几行，以验证值是否从 `NaN` 更改为实际数字。我们可以向`loc`传递一个范围来实现查看。
 
-Notice that even though we have taken a random sample, each row's original index is preserved. This is a useful property of data frames.
+注意，尽管我们采取了随机样品，每一行的原始索引都被保留了。这是数据帧非常有用的一个属性。
 
-Here's a summary of the functions and methods we looked at in this section:
+下面是本节我们看到的函数和方法的总结：
 
--   `covid_df['new_cases']` – Retrieving columns as a `Series` using the column name
--   `new_cases[243]` – Retrieving values from a `Series` using an index
--   `covid_df.at[243, 'new_cases']` – Retrieving a single value from a data frame
--   `covid_df.copy()` – Creating a deep copy of a data frame
--   `covid_df.loc[243]` - Retrieving a row or range of rows of data from the data frame
--   `head`, `tail`, and `sample` – Retrieving multiple rows of data from the data frame
--   `covid_df.new_tests.first_valid_index` – Finding the first non-empty index in a series
+-   `covid_df['new_cases']` – 使用列名将列当作 `Series` 来检索 
+-   `new_cases[243]` – 使用索引从 `Series` 中检索值
+-   `covid_df.at[243, 'new_cases']` – 从数据帧中检索单个值
+-   `covid_df.copy()` – 创建数据帧的深度副本
+-   `covid_df.loc[243]` - 从数据帧中检索数据行或数据行范围
+-   `head`、`tail` 和 `sample` – 从数据帧中检索多行数据
+-   `covid_df.new_tests.first_valid_index` – 查找序列中的第一个非空索引
 
-### How to Analyze Data from Data Frames in Pandas
+### 如何分析 Pandas 数据帧中的数据
 
-Let's try to answer some questions about our data.
+让我们尝试回答这些数据的一些问题。
 
-****Q: What are the total number of reported cases and deaths related to Covid-19 in Italy?****
+****问：关于意大利新冠肺炎，总的确诊病例和死亡人数是多少？****
 
-Similar to Numpy arrays, a Pandas series supports the `sum` method to answer these questions.
+与 Numpy 数组类似，Pandas 序列支持 `sum` 方法，这个问题也就回答了。
 
-****Q: What is the overall death rate (ratio of reported deaths to reported cases)?****
+****问：总的死亡率是多少（报告的死亡数除以确诊病例）？****
 
-****Q: What is the overall number of tests conducted? A total of 935**,**310 tests were conducted before daily test numbers were reported.****
+****问：进行测试的总人数是多少？在报告每日测试数量之前，共进行了 935**，**310 次测试。****
 
-****Q: What fraction of tests returned a positive result?****
+****问：哪些部分测试结果为阳性？****
 
-Try asking and answering some more questions about the data.
+尝试提问回答关于这些数据更多的问题。
 
-### How to Query and Sort Rows in Pandas
+### 如何在 Pandas 中对行进行查询和排序
 
-Let's say we only want to look at the days which had more than 1,000 reported cases. We can use a boolean expression to check which rows satisfy this criterion.
+假设我们只想查看确诊病例大于 1，000 的日子。那么可以使用布尔表达式来检查哪些行满足此条件。
 
-The boolean expression returns a series containing `True` and `False` boolean values. You can use this series to select a subset of rows from the original dataframe, corresponding to the `True` values in the series.
+布尔表达式返回一个包含 `True` 和 `False` 布尔值的序列。你可以使用这个序列从原始数据帧中选择行的子集，对应于这个序列中的 `True` 值。
 
-The data frame contains 72 rows, but only the first and last five rows are displayed by default with Jupyter for brevity. We can change some display options to view all the rows.
+这个数据帧包含 72 行，但是为了简洁起见，默认情况下 Jupyter 只显示前五行和后五行。我们可以更改一些显示选项，来查看所有行。
 
-We can also formulate more complex queries that involve multiple columns. As an example, let's try to determine the days when the ratio of cases reported to tests conducted is higher than the overall `positive_rate`.
+我们还可以制定涉及多个列的更复杂的查询。例如，尝试确定确诊病例除以测试数量的比例高于总的 `positive_rate` 的日子。
 
-However, keep in mind that sometimes it takes a few days to get the results for a test, so we can't compare the number of new cases with the number of tests conducted on the same day. Any inference based on this `positive_rate` column is likely to be incorrect.
+但是，请记住，有时需要一些日子才能获得测试结果，因此，我们不能对同一天的新增病例数和测试数量进行比较。基于 `positive_rate` 列的任何推断都可能是不正确的。
 
-It's essential to watch out for such subtle relationships that are often not conveyed within the CSV file and require some external context. It's always a good idea to read through the documentation provided with the dataset or ask for more information.
+注意这些微妙的联系是非常重要的，通常 CSV 文件中不会传达这些关系，而需要外部的上下文环境。通读数据集附带的文档或询问更多的信息，不失为一个好主意。
 
-For now, let's remove the `positive_rate` column using the `drop` method.
+现在，让我们使用 `drop` 方法来移除 `positive_rate` 列。
 
-Can you figure the purpose of the `inplace` argument?
+你能指出 `inplace` 参数的目的吗？
 
-#### **How to Sort Rows Using Column Values in Pandas**
+#### **如何在 Pandas 中使用列值对行进行排序**
 
-You can also sort the rows by a specific column using `.sort_values`. Let's sort to identify the days with the highest number of cases, then chain it with the `head` method to list just the first ten results.
+你可以使用 `.sort_values` 通过一个指定的列来对行进行排序。让我们排序以确定病例数最多的天数，然后使用 `head` 方法将其链接起来，只列出前十个结果。
 
 It looks like the last two weeks of March had the highest number of daily cases. Let's compare this to the days where the highest number of deaths were recorded.
 

@@ -1,6 +1,6 @@
 > -  原文地址：[Why Learning to Code is Hard – And How to Make it Easier](https://www.freecodecamp.org/news/why-learning-to-code-is-hard-and-how-to-make-it-easier/)
 > -  原文作者：[Ogundiran Ayobami](https://www.freecodecamp.org/news/author/codingnninja/)
-> -  译者：
+> -  译者：frankflx
 > -  校对者：
 
 ![Why Learning to Code is Hard – And How to Make it Easier](https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/danial-igdery-FCHlYvR5gJI-unsplash.jpg)

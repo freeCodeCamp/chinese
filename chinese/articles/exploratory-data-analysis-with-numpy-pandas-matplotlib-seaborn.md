@@ -295,7 +295,7 @@ Numpy 还提供了一些简便的函数来创建具有固定或随机形状的�
 59.  `np.random.rand` 与 `np.random.randn` 的区别是什么？举例说明。
 60.  `np.arange` 与 `np.linspace` 的区别是什么？举例说明。
 
-你已经准备好进入本教程的下一节了。
+现在，你已经准备好进入本教程的下一节了。
 
 ## 如何用 Python 和 Pandas 分析表格数据
 
@@ -448,39 +448,39 @@ date,new_cases,new_deaths,new_tests
 
 你可以使用 `.sort_values` 通过一个指定的列来对行进行排序。让我们排序以确定病例数最多的天数，然后使用 `head` 方法将其链接起来，只列出前十个结果。
 
-It looks like the last two weeks of March had the highest number of daily cases. Let's compare this to the days where the highest number of deaths were recorded.
+看起来 3 月最后两周的每日病例数最多。让我们来对比所记录的死亡人数最多的日子。
 
-It appears that daily deaths hit a peak just about a week after the peak in daily new cases.
+可以发现，每日死亡人数的顶峰出现在每日病例达到顶峰之后的一周。
 
-Let's also look at the days with the smallest number of cases. We might expect to see the first few days of the year on this list.
+我们也来看看病例数最少的日子。我们也许会想到一年中最开始的几天会出现在列表上。
 
-It seems like the count of new cases on Jun 20, 2020, was `-148`, a negative number! Not something we might have expected, but that's the nature of real-world data. It could be a data entry error, or the government may have issued a correction to account for miscounting in the past.
+2020 年 6 月 20 日的新病例数似乎是 `-148`，一个负数！这跟我们预想的不一样，但这就是现实世界数据的本质。这可能是一个数据输入的错误，或者政府可能为了解决过去的计算错误而作的一个更正。
 
-Can you dig through news articles online and figure out why the number was negative?
+你能在网上挖掘新闻文章并找出这个数字为什么是负数吗？
 
-Let's look at some days before and after Jun 20, 2020.
+让我们再来看看 2020 年 6 月 20 日前后的几天。
 
-For now, let's assume this was indeed a data entry error. We can use one of the following approaches for dealing with the missing or faulty value:
+现在，我们假设这实际上是一个数据输入错误。我们可以使用以下的其中一个方法来处理缺失值或错误值：
 
-1.  Replace it with `0`.
-2.  Replace it with the average of the entire column
-3.  Replace it with the average of the values on the previous and next date
-4.  Discard the row entirely
+1.  将其替换为 `0`
+2.  将其替换为整列的平均值
+3.  将其替换为前后两个日期的平均值
+4.  删除该行
 
-Which approach you pick requires some context about the data and the problem. In this case, since we are dealing with data ordered by date, we can go ahead with the third approach.
+选择哪种方法需要有关数据和问题的一些背景信息。在本例中，由于我们正在处理按日期排序的数据，我们可以继续使用第三种方法。
 
-You can use the `.at` method to modify a specific value within the dataframe.
+你可以使用 `.at` 方法来修改数据帧中指定的值。
 
-Here's a summary of the functions and methods we looked at in this section:
+以下是我们在本节中看到的函数和方法的汇总：
 
--   `covid_df.new_cases.sum()` – Computing the sum of values in a column or series
--   `covid_df[covid_df.new_cases > 1000]` – Querying a subset of rows satisfying the chosen criteria using boolean expressions
--   `df['pos_rate'] = df.new_cases/df.new_tests` – Adding new columns by combining data from existing columns
--   `covid_df.drop('positive_rate')` – Removing one or more columns from the data frame
--   `sort_values` – Sorting the rows of a data frame using column values
--   `covid_df.at[172, 'new_cases'] = ...` – Replacing a value within the data frame
+-   `covid_df.new_cases.sum()` – 计算列或系列中值的总和
+-   `covid_df[covid_df.new_cases > 1000]` – 使用布尔表达式查询满足所选条件的行子集
+-   `df['pos_rate'] = df.new_cases/df.new_tests` – 通过合并现有列中的数据来添加新列
+-   `covid_df.drop('positive_rate')` – 从数据帧中删除一列或多列
+-   `sort_values` – 使用列值对数据帧的行进行排序
+-   `covid_df.at[172, 'new_cases'] = ...` – 替换数据帧中的值
 
-### How to Work with Dates in Pandas
+### 如何处理 Pandas 中的日期
 
 While we've looked at overall numbers for the cases, tests, positive rate, and more, it would also be useful to study these numbers on a month-by-month basis.
 

@@ -482,172 +482,172 @@ date,new_cases,new_deaths,new_tests
 
 ### 如何处理 Pandas 中的日期
 
-While we've looked at overall numbers for the cases, tests, positive rate, and more, it would also be useful to study these numbers on a month-by-month basis.
+虽然我们已经查看了病例、测试、阳性率等这些总体的数字，但按月研究这些数字也很有用。
 
-The `date` column might come in handy here, as Pandas provides many utilities for working with dates.
+`date` 列在这里可能会派上用场，因为 Pandas 提供了许多用于处理日期的实用程序。
 
-The data type of date is currently `object`, so Pandas does not know that this column is a date. We can convert it into a `datetime` column using the `pd.to_datetime` method.
+当前日期的数据类型是 `object`，因此 Pandas 不知道这一列是日期。我们用 `pd.to_datetime` 方法将它转成 `datetime` 列。
 
-You can see that it now has the datatype `datetime64`. We can now extract different parts of the data into separate columns, using the `DatetimeIndex` class ([view docs](https://jovian.ai/outlink?url=https%3A%2F%2Fpandas.pydata.org%2Fpandas-docs%2Fversion%2F0.23.4%2Fgenerated%2Fpandas.DatetimeIndex.html)).
+现在你可以看到它的数据类型是 `datetime64`。我们用 `DatetimeIndex` 类将数据的不同部分提取到单独的列中。([查看文档](https://jovian.ai/outlink?url=https%3A%2F%2Fpandas.pydata.org%2Fpandas-docs%2Fversion%2F0.23.4%2Fgenerated%2Fpandas.DatetimeIndex.html)).
 
-Let's check the overall metrics for May. We can query the rows for May, choose a subset of columns, and use the `sum` method to aggregate each selected column's values.
+我们来看一下 5 月份的整体指标。通过查询五月的行，选择其列的子集，并使用 `sum` 方法来合计每个选定列的值。
 
-It seems like more cases were reported on Sundays compared to other days.
+与其他日子相比，星期天所报告的病例看起来更多。
 
-Try asking and answering some more date-related questions about the data.
+尝试提问回答更多的数据中有关日期的问题。
 
-### How to Group and Aggregate Data in Pandas
+### 如何在 Pandas 中分组和聚合数据
 
-As a next step, we might want to summarize the day-wise data and create a new dataframe with month-wise data. We can use the `groupby` function to create a group for each month, select the columns we wish to aggregate, and aggregate them using the `sum` method.
+下一步，如果我们想要汇总逐日的数据，还要创建一个包含逐月数据的新数据帧。我们可以用 `groupby` 函数来为每一个月创建一个组，然后选择我们想要聚合的列，并用 `sum` 方法来聚合。
 
-The result is a new data frame that uses unique values from the column passed to `groupby` as the index. Grouping and aggregation is a powerful method for progressively summarizing data into smaller data frames.
+结果是一个新的数据帧，它使用传递给 `groupby` 的列中的唯一值作为索引。分组与聚合是非常有用的方法，用于逐步将数据汇总为更小的数据帧。
 
-Instead of aggregating by sum, you can also aggregate by other measures like mean. Let's compute the average number of daily new cases, deaths, and tests for each month.
+除了按总和聚合之外，还可以按平均值等其他方式进行聚合。让我们分别来计算每个月每日新增病例、死亡人数和检测数的平均值。
 
-Apart from grouping, another form of aggregation is the running or cumulative sum of cases, tests, or deaths up to each row's date. We can use the `cumsum` method to compute the cumulative sum of a column as a new series.
+除了分组之外，另一种聚合形式是计算截止到每行日期的病例、测试或死亡的累积总和。我们可以使用 `cumsum` 方法计算某一列的累积总和并作为一个新的系列。
 
-Let's add three new columns: `total_cases`, `total_deaths`, and `total_tests`.
+我们来添加新的三列：`total_cases`，`total_deaths` 和 `total_tests`。
 
-Notice how the `NaN` values in the `total_tests` column remain unaffected.
+注意 `total_tests` 列中的 `NaN` 值是如何保持不被影响的。
 
-### How to Merge Data from Multiple Sources in Pandas
+### 如何在 Pandas 中合并来自多个来源的数据
 
-To determine other metrics like test per million, cases per million, and so on, we require some more information about the country, namely its population.
+要确定其他指标，例如每百万人口的测试人数、每百万人口的确诊病例数等，我们需要该国家/地区的更多信息，即其人口。
 
-Let's download another file `locations.csv` that contains health-related information for many countries, including Italy.
+让我们来下载另一个文件 `locations.csv`，它包含了包括意大利在内的许多国家的健康相关信息。
 
-We can merge this data into our existing data frame by adding more columns. However, to merge two data frames, we need at least one common column. Let's insert a `location` column in the `covid_df` dataframe with all values set to `"Italy"`.
+通过添加更多的列，我们可以将这些数据合并到先前的数据中。但是，要合并两个数据帧，我们至少需要一个共同的列。因此，我们在 `covid_df` 数据帧中插入 `location` 列，并将该列的所有值设为 `“Italy”`。
 
-The location data for Italy is appended to each row within `covid_df`. If the `covid_df` data frame contained data for multiple locations, then the respective country's location data would be appended for each row.
+在 `covid_df` 中，每一行都附加上了意大利的位置信息。如果 `covid_df` 数据帧中包含了多个地区的数据，那么每一行应该附加上相应国家的位置信息。
 
-We can now calculate metrics like cases per million, deaths per million, and tests per million.
+现在，我们就可以计算每百万人口的病例数、死亡人数以及测试人数这些指标了。
 
-### How to Write Data Back to Files in Pandas
+### 如何用 Pandas 将数据写回到文件中
 
-After completing your analysis and adding new columns, you should write the results back to a file. Otherwise, the data will be lost when the Jupyter notebook shuts down.
+在完成分析，添加新列之后，你需要将结果写回到文件中。否则，一旦 Jupter notebook 关闭后，数据就会丢失。
 
-Before writing to file, let's first create a data frame containing just the columns we wish to record.
+在写入文件之前，让我们先创建一个只包含我们希望记录的列的数据帧。
 
-### Bonus: Basic Plotting with Pandas
+### 奖励：使用 Pandas 进行基本绘图
 
-We generally use a library like `matplotlib` or `seaborn` to plot graphs within a Jupyter notebook. However, Pandas dataframes and series provide a handy `.plot` method for quick and easy plotting.
+通常在 Jupyter notebook 中，我们使用像 `matplotlib` 或 `seaborn` 这样的库来绘图。但是，Pandas 数据帧和序列提供了便利的 `.plot` 方法来进行快速简单地绘图。
 
-Let's plot a line graph showing how the number of daily cases varies over time.
+我们来绘制一个折线图，显示每日病例数如何随时间变化。
 
-While this plot shows the overall trend, it's hard to tell where the peak occurred, as there are no dates on the X-axis. We can use the `date` column as the index for the data frame to address this issue.
+虽然此图显示了整体趋势，但很难判断峰值发生的位置，因为 X 轴上没有日期。我们可以使用 `date` 列作为数据帧的索引来解决这个问题。
 
-Notice that the index of a data frame doesn't have to be numeric. Using the date as the index also allows us to get the data for a specific data using `.loc`.
+注意数据帧的索引并非必须是数值，使用日期作为索引，同样可以通过 `.loc` 获取指定日期的数据。
 
-Let's plot the new cases and new deaths per day as line graphs.
+下面我们将每天的新病例和新死亡人数绘制为折线图。
 
-We can also compare the total cases vs. total deaths.
+我们还可以比较总病例数和总死亡人数。
 
-Let's see how the death rate and positive testing rates vary over time.
+让我们看看死亡率和阳性检测率如何随时间变化的。
 
-Finally, let's plot some month-wise data using a bar chart to visualize the trend at a higher level.
+最后，我们来绘制逐月数据的条形图，以在更高的层次上查看趋势。
 
-### Pandas Exercises
+### Pandas 练习
 
-Try the following exercises to become familiar with Pandas dataframes and practice your skills:
+尝试以下练习，以熟悉 Pandas 数据帧，并锻炼你的技术：
 
--   [Assignment on Pandas dataframes](https://jovian.ml/aakashns/pandas-practice-assignment)
--   [Additional exercises on Pandas](https://github.com/guipsamora/pandas_exercises)
--   [Try downloading and analyzing some data from Kaggle](https://www.kaggle.com/datasets)
+-   [Pandas 数据帧任务](https://jovian.ml/aakashns/pandas-practice-assignment)
+-   [Pandas 附加练习](https://github.com/guipsamora/pandas_exercises)
+-   [尝试从 Kaggle 下载并分析数据](https://www.kaggle.com/datasets)
 
-### Summary and Further Reading
+### 总结及延展阅读
 
-We've covered the following topics in this tutorial:
+在本教程中，我们涵盖了以下主题：
 
--   How to read a CSV file into a Pandas data frame
--   How to retrieve data from Pandas data frames
--   How to query, sort, and analyze data
--   How to merge, group, and aggregate data
--   How to extract useful information from dates
--   Basic plotting using line and bar charts
--   How to write data frames to CSV files
+-   如何将 CSV 文件读入到 Pandas 数据帧中
+-   如何从 Pandas 数据帧中检索数据
+-   如何查询、排序和分析数据
+-   如何合并、分组和聚合数据
+-   如何从日期中提取有用的信息
+-   使用折线图和条形图进行基本绘图
+-   如何将数据帧写入到 CSV 文件中
 
-Check out the following resources to learn more about Pandas:
+查看以下资源以了解 Pandas 的更多信息：
 
--   [User guide for Pandas](https://pandas.pydata.org/docs/user_guide/index.html)
--   [Python for Data Analysis (book by Wes McKinney - creator of Pandas)](https://www.oreilly.com/library/view/python-for-data/9781491957653/)
+-   [Pandas 用户指南](https://pandas.pydata.org/docs/user_guide/index.html)
+-   [Python 数据分析（Wes McKinney 的书 —— 他是 Pandas 的创建者）](https://www.oreilly.com/library/view/python-for-data/9781491957653/)
 
-### Review Questions to Check Your Comprehension
+### 查看问题以检验你对 Pandas 的理解
 
-Try answering the following questions to test your understanding of the topics covered in this notebook:
+尝试回答以下问题，来测验你对本章所涵盖的主题的理解：
 
-1.  What is Pandas? What makes it useful?
-2.  How do you install the Pandas library?
-3.  How do you import the `pandas` module?
-4.  What is the common alias used while importing the `pandas` module?
-5.  How do you read a CSV file using Pandas? Give an example.
-6.  What are some other file formats you can read using Pandas? Illustrate with examples.
-7.  What are Pandas dataframes?
-8.  How are Pandas dataframes different from Numpy arrays?
-9.  How do you find the number of rows and columns in a dataframe?
-10.  How do you get the list of columns in a dataframe?
-11.  What is the purpose of the `describe` method of a dataframe?
-12.  How are the `info` and `describe` dataframe methods different?
-13.  Is a Pandas dataframe conceptually similar to a list of dictionaries or a dictionary of lists? Explain with an example.
-14.  What is a Pandas `Series`? How is it different from a Numpy array?
-15.  How do you access a column from a dataframe?
-16.  How do you access a row from a dataframe?
-17.  How do you access an element at a specific row and column of a dataframe?
-18.  How do you create a subset of a dataframe with a specific set of columns?
-19.  How do you create a subset of a dataframe with a specific range of rows?
-20.  Does changing a value within a dataframe affect other dataframes created using a subset of the rows or columns? Why is it so?
-21.  How do you create a copy of a dataframe?
-22.  Why should you avoid creating too many copies of a dataframe?
-23.  How do you view the first few rows of a dataframe?
-24.  How do you view the last few rows of a dataframe?
-25.  How do you view a random selection of rows of a dataframe?
-26.  What is the "index" in a dataframe? How is it useful?
-27.  What does a `NaN` value in a Pandas dataframe represent?
-28.  How is `Nan` different from `0`?
-29.  How do you identify the first non-empty row in a Pandas series or column?
-30.  What is the difference between `df.loc` and `df.at`?
-31.  Where can you find a full list of methods supported by Pandas `DataFrame` and `Series` objects?
-32.  How do you find the sum of numbers in a column of a dataframe?
-33.  How do you find the mean of numbers in a column of a dataframe?
-34.  How do you find the number of non-empty numbers in a column of a dataframe?
-35.  What is the result obtained by using a Pandas column in a boolean expression? Illustrate with an example.
-36.  How do you select a subset of rows where a specific column's value meets a given condition? Illustrate with an example.
-37.  What is the result of the expression `df[df.new_cases > 100]` ?
-38.  How do you display all the rows of a pandas dataframe in a Jupyter cell output?
-39.  What is the result obtained when you perform an arithmetic operation between two columns of a dataframe? Illustrate with an example.
-40.  How do you add a new column to a dataframe by combining values from two existing columns? Illustrate with an example.
-41.  How do you remove a column from a dataframe? Illustrate with an example.
-42.  What is the purpose of the `inplace` argument in dataframe methods?
-43.  How do you sort the rows of a dataframe based on the values in a particular column?
-44.  How do you sort a pandas dataframe using values from multiple columns?
-45.  How do you specify whether to sort by ascending or descending order while sorting a Pandas dataframe?
-46.  How do you change a specific value within a dataframe?
-47.  How do you convert a dataframe column to the `datetime` data type?
-48.  What are the benefits of using the `datetime` data type instead of `object`?
-49.  How do you extract different parts of a date column like the month, year, month, weekday, and so on into separate columns? Illustrate with an example.
-50.  How do you aggregate multiple columns of a dataframe together?
-51.  What is the purpose of the `groupby` method of a dataframe? Illustrate with an example.
-52.  What are the different ways in which you can aggregate the groups created by `groupby`?
-53.  What do you mean by a running or cumulative sum?
-54.  How do you create a new column containing the running or cumulative sum of another column?
-55.  What are other cumulative measures supported by Pandas dataframes?
-56.  What does it mean to merge two dataframes? Give an example.
-57.  How do you specify the columns that should be used for merging two dataframes?
-58.  How do you write data from a Pandas dataframe into a CSV file? Give an example.
-59.  What are some other file formats you can write to from a Pandas dataframe? Illustrate with examples.
-60.  How do you create a line plot showing the values within a column of a dataframe?
-61.  How do you convert a column of a dataframe into its index?
-62.  Can the index of a dataframe be non-numeric?
-63.  What are the benefits of using a non-numeric dataframe? Illustrate with an example.
-64.  How you create a bar plot showing the values within a column of a dataframe?
-65.  What are some other types of plots supported by Pandas dataframes and series?
+1.  Pandas 是什么？有用在哪里？
+2.  如何安装 Pandas 库？
+3.  如何导入 `pandas` 模块？
+4.  导入 `pandas` 模块后，它的常用别名是什么？
+5.  如果用 Pandas 读入 CSV 文件？请举例。
+6.  用 Pandas 还可以读入哪些文件格式？举例说明。
+7.  Pandas 数据帧是什么？
+8.  Pandas 数据帧与 Numpy 数组的区别是什么？
+9.  在数据帧中如何找到行数和列数？
+10.  如何在数据帧中获取列的列表？
+11.  数据帧中`describe` 方法的作用是什么？
+12.  `info` 和 `describe` 这两个数据帧方法的区别是什么？
+13.  Pandas 数据帧在概念上与字典列表或列表字典相似吗？举例解释。
+14.  Pandas 中的 `Series` 是什么？它跟 Numpy 数组的区别是什么？
+15.  如何访问数据帧中的列？
+16.  如何访问数据帧中的行？
+17.  如何访问数据帧中指定的行和列中的元素？
+18.  如何创建具有特定列集的数据帧子集？
+19.  如何创建具有特定行范围的数据帧子集？
+20.  更改数据帧内的值，是否会影响使用行或列的子集所创建的其他数据帧？为什么？
+21.  如何创建数据帧的副本？
+22.  为什么要避免创建太多的数据帧副本？
+23.  如何查看数据帧中的开头几行？
+24.  如何查看数据帧中的末尾几行？
+25.  如何在数据帧中选择随机行？
+26.  数据帧中的“索引”是什么？如何有用？
+27.  Pandas 数据帧中的 `NaN` 值代表什么意思？
+28.  `Nan` 和 `0` 的区别是什么？
+29.  在 Pandas 序列或列中，如何识别第一个非空行？
+30.  `df.loc` and `df.at` 的区别是什么？
+31.  在哪里可以找到 Pandas 中 `DataFrame` 和 `Series` 对象所支持的全部方法列表？
+32.  如何在数据帧的列中找到数字的总和？
+33.  如何找到数据帧列中数字的平均值？
+34.  如何找到数据帧列中非空数字的数量？
+35.  在布尔表达式中使用 Pandas 列可以得到什么结果？举例说明。
+36.  如何选择行子集，使得其指定的列值满足给定的条件？举例说明。
+37.  表达式 `df[df.new_cases > 100]` 的结果是什么？
+38.  如何在 Jupyter 单元格输出中显示 pandas 数据帧的所有行？
+39.  对数据帧中的两列执行算术运算，会得到什么结果？举例说明。
+40.  如何通过组合两个现有列的值，在数据帧中添加新列？举例说明。
+41.  如何删除数据帧中的列？举例说明。
+42.  在数据帧方法中 `inplace` 参数的作用是什么？
+43.  如何基于一个特定列中的值来对数据帧的行进行排序？
+44.  如果利用多个列中的值来对 pandas 数据帧进行排序？
+45.  在对 Pandas 数据帧排序时，如何指定是按升序还是降序来排序？
+46.  如何修改数据帧中指定的值？
+47.  如何将数据帧的列转换成 `datetime` 数据类型？
+48.  使用 `datetime` 数据类型而不用 `object` 的好处是什么？
+49.  如何将日期列的不同部分（如月、年、月、工作日等）提取到单独的列中？举例说明。
+50.  如何聚合数据帧的多个列？
+51.  数据帧的 `groupby` 方法的作用是什么？举例说明。
+52.  聚合用 `groupby` 创建的组有哪些不同的方式？
+53.  运行或累积总和是什么意思？
+54.  如何创建一个新列，包含另一列的运行或累积总和？
+55.  Pandas 数据帧还支持哪些其他的累积方法？
+56.  合并两个数据帧是什么意思？举例说明。
+57.  如何指定用于合并两个数据帧的列？
+58.  如何将 Pandas 数据帧的数据写入到 CSV 文件中？请举个例子。
+59.  还可以将 Pandas 数据帧写入到哪些文件格式中？举例说明。
+60.  如何创建折线图，用于显示数据帧中列的值？
+61.  如何将数据帧的列转换为其索引？
+62.  数据帧的索引可以是非数字吗？
+63.  使用非数字数据帧的好处是什么？举例说明。
+64.  如何创建条形图，用于显示数据帧中列的值？
+65.  Pandas 数据帧和系列还支持哪些其他类型的绘图方法？
 
-You are ready to move on to the next section of the tutorial.
+你已经准备好进入本教程的下一部分了。
 
-## Data Visualization using Python, Matplotlib, and Seaborn
+## 使用 Python、Matplotlib 和 Seaborn 进行数据可视化
 
 ![](https://i.imgur.com/9i806Rh.png)
 
-Notebook link: [https://jovian.ai/aakashns/python-matplotlib-data-visualization](https://jovian.ai/aakashns/python-matplotlib-data-visualization)
+Notebook 链接：[https://jovian.ai/aakashns/python-matplotlib-data-visualization](https://jovian.ai/aakashns/python-matplotlib-data-visualization)
 
 Data visualization is the graphic representation of data. It involves producing images that communicate relationships among the represented data to viewers.
 

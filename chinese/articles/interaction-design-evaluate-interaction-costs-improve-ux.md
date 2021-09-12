@@ -25,28 +25,20 @@ UX (用户体验) 和 IxD (交互设计) 之间的区别.
 
 ## 什么是交互成本？
 
-The foundational concept behind interaction design is “interaction cost,” which is often used to measure a product’s usability. Nielsen Norman defines “interaction costs” as the [sum of mental and physical efforts](https://www.nngroup.com/articles/interaction-cost-definition/) that users must exert to reach their goals.
-交互设计背后的基础概念是“交互成本”，它经常被用来衡量一个产品的可行性。Nielsen Norman 将“交互成本”定义为用户为达到目标而必须付出的精神和体力的总和。
+交互设计背后的基础概念是“交互成本”，它经常被用来衡量一个产品的可行性。Nielsen Norman 将“交互成本”定义为用户为达到目标而必须付出的[脑力和体力的总和](https://www.nngroup.com/articles/interaction-cost-definition/)。
 
-In general, we want to keep interaction costs as low as possible. However, this is difficult, as the more use cases your product covers, the harder this becomes.
 一般来说，我们希望尽可能降低交互成本。但是，这很困难。因为随着你的产品覆盖的用例越多，这将变得困难。
 
-Supporting more use cases and functionality adds complexity to your product’s information architecture (IA) and navigation. A use case is a sequence of steps, starting with a user’s goal and the result when that goal is achieved.
 支持更多的用例和功能会增加产品信息架构（IA）和导航的复杂度。一个用例是一连串的步骤，从用户的目标和实现目标后的结果开始。
 
-A more complex IA will inherently increase the number of clicks required to accomplish a user’s goal. For example, an iOS clock app has the following alarm use case goals: turn on the alarm, create a new alarm, and edit the alarm.
 更复杂的 IA 本质上会增加完成用户目标所需的点击次数。例如 iOS 时钟应用具有以下闹钟用例目标：开启或关闭闹钟，创建一个新的闹钟和编辑闹钟。
 
-![An information architecture (IA) diagram.](https://www.freecodecamp.org/news/content/images/2021/02/image-149.png)
 ![信息架构 (IA) 图示。](https://www.freecodecamp.org/news/content/images/2021/02/image-149.png)
 
-The more complex the IA, the more the user has to click to get to their desired screen. [Credits: Topta](https://dribbble.com/shots/4406909-The-Comprehensive-Guide-to-Information-Architecture)
 IA 越是复杂，用户就越需要点击才能进入他们想要的屏幕。[鸣谢: Topta](https://dribbble.com/shots/4406909-The-Comprehensive-Guide-to-Information-Architecture)
 
-The rule of thumb focuses on reducing the interaction costs for your target user’s primary use cases. Whenever a product accommodates too many use cases (for example, enterprise products with a million dropdown menus and features), it becomes harder to use.
 经验法则的重点是减少用户的主要用例的交互成本。每当一个产品容纳了太多的用例（例如，有一百万个下拉菜单和功能的企业产品），它就变得更难使用。
 
-To avoid this over-complication, choose a specific user and use case to focus on when building a brand new product.
 为了避免这种过度复杂化，在建立一个全新的产品时，应该选择一个特定的用户和用例来关注。
 
 ### Physical and Mental Interaction Costs
@@ -163,12 +155,16 @@ If your ETS reveals many task-irrelevant saccadic movements, it’s likely due t
 如果你的 ETS 显示许多与任务无关的扫视移动，这可能是由于一个分散注意力的界面。你的 ETS 结果能帮助你了解用户是否遗漏了界面中的关键元素，哪些是分散注意力的，哪些是不必要的。
 
 ### Working memory
+### 工作记忆
 
 There is an extensive classification for all the different types of memory.
+所有不同类型的记忆，都有一个广泛的分类。
 
 For our purposes as designers, working memory (part of short-term memory) is the most relevant. The shortest type of memory is known as working memory, which typically only lasts a couple of seconds during a task.
+对于设计师而言，工作记忆（短期记忆的一部分）是最相关的。最短的记忆类型被称为工作类型，这在一个任务中通常只持续几秒钟的时间。
 
 In other words, our working memory is responsible for the information we can hold in our heads while we engage with other cognitive processes.
+换句话说，我们的工作记忆负责在我们参与其他认知过程时，我们可以在脑海中保存信息。
 
 [Miller’s Law](https://lawsofux.com/laws/millers-law/) states that the average person can only keep 5–11 items in their working memory at a time. The working memory required to complete a task within your product is proportional to the MIC burden you impose on your users.
 

@@ -167,10 +167,13 @@ In other words, our working memory is responsible for the information we can hol
 换句话说，我们的工作记忆负责在我们参与其他认知过程时，我们可以在脑海中保存信息。
 
 [Miller’s Law](https://lawsofux.com/laws/millers-law/) states that the average person can only keep 5–11 items in their working memory at a time. The working memory required to complete a task within your product is proportional to the MIC burden you impose on your users.
+[米勒定律](https://lawsofux.com/laws/millers-law/) 指出，一般人在工作记忆中一次只能保留 5-11 个项目。在你的产品中完成一项任务所需的工作记忆与你强加给用户的MIC负担成正比。
 
 ![A poster illustration of Miller's Law.](https://www.freecodecamp.org/news/content/images/2021/02/image-154.png)
+![米勒定律的海报插图。](https://www.freecodecamp.org/news/content/images/2021/02/image-154.png)
 
 Conversely, at no point should your task require the user to hold more than seven items in their working memory at any moment.
+反过来说，在任何时候，你的任务都不应该要求用户在工作记忆中保留七个以上的项目。
 
 In rare scenarios where you require the user to hold more than 11 items in their memory, use “chunking” to reduce their mental burden. Chunking is when individual pieces of an information set are broken down and then grouped in a meaningful whole.
 

@@ -1,6 +1,6 @@
 > -  原文地址：[React Tutorial – How to Build the 2048 Game in React](https://www.freecodecamp.org/news/how-to-make-2048-game-in-react/)
 > -  原文作者：[Matt Sokola](https://www.freecodecamp.org/news/author/matt-sokola/)
-> -  译者：
+> -  译者：lanxisama
 > -  校对者：
 
 ![React Tutorial – How to Build the 2048 Game in React](https://www.freecodecamp.org/news/content/images/size/w2000/2021/09/thumb.png)

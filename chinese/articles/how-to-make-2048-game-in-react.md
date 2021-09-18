@@ -5,8 +5,7 @@
 
 ![React Tutorial – How to Build the 2048 Game in React](https://www.freecodecamp.org/news/content/images/size/w2000/2021/09/thumb.png)
 
-Today you will learn how to build your own clone of the 2048 game in React.
-
+今天我们将要学习如果使用React来复刻制作2048这款游戏。
 What makes this article unique is that we will focus on creating delightful animations. Aside from React, we will use TypeScript and we'll make some CSS transitions using LESS.
 
 We are only going to use modern React interfaces such as hooks and the Context API.

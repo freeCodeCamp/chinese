@@ -2133,15 +2133,25 @@ All those properties are used by either `npm` or other tools that we can use.
 
 #### Properties breakdown
 
+#### 属性细分
+
 This section describes the properties you can use in detail. I refer to “package” but the same thing applies to local applications which you do not use as packages.
 
+本节详细介绍可以使用的属性。我指的是 "package"，但是同样的情况也适用于你不作为包使用的应用程序。
+
 Most of those properties are only used on the npm [website][82], other by scripts that interact with your code, like `npm` or others.
+
+这些属性中的大多数只在 npm[website][82] 上使用，其它的由与代码交互的脚本使用，比如 `npm` 或其它脚本。
 
 #### `name`
 
 Sets the package name.
 
+设置包名。
+
 Example:
+
+例如：
 
 ```
 "name": "test-project"
@@ -2149,67 +2159,117 @@ Example:
 
 The name must be less than 214 characters, must not have spaces, it can only contain lowercase letters, hyphens (`-`) or underscores (`_`).
 
+名称必须少于214个字符，不能有空格，只能包含小写字母、连字符（'-'）或下划线（'_'）。
+
 This is because when a package is published on `npm`, it gets its own URL based on this property.
 
+这是因为在 `npm` 上发布包时，它会根据此属性获取自己的 URL。
+
 If you published this package publicly on GitHub, a good value for this property is the GitHub repository name.
+
+如果你在 GitHub 上公开发布了这个包，那么 GitHub 存储库名称就是这个属性的一个很好的值。
 
 #### `author`
 
 Lists the package author name
 
+列出包作者名字。
+
 Example:
 
+例如：
+
 ```plain
-{  "author": "Flavio Copes <flavio@flaviocopes.com> (https://flaviocopes.com)"}
+{
+    "author":"Flavio Copes <flavio@flaviocopes.com> (https://flaviocopes.com)"
+}
 ```
 
 Can also be used with this format:
 
+也可用此格式：
+
 ```
-{  "author": {    "name": "Flavio Copes",    "email": "flavio@flaviocopes.com",    "url": "https://flaviocopes.com"  }}
+{
+    "author":{
+        "name":"Flavio Copes",
+        "email":"flavio@flaviocopes.com",
+        "url":"https://flaviocopes.com"
+    }
+}
 ```
 
 #### `contributors`
 
 As well as the author, the project can have one or more contributors. This property is an array that lists them.
 
+和作者一样，项目也可以有一个或多个贡献者。此属性是列出它们的数组。
+
 Example:
 
 ```
-{  "contributors": [    "Flavio Copes <flavio@flaviocopes.com> (https://flaviocopes.com)"  ]}
+{
+    "contributors":[
+        "Flavio Copes <flavio@flaviocopes.com> (https://flaviocopes.com)"
+    ]
+}
 ```
 
 Can also be used with this format:
 
+也可用此格式：
+
 ```
-{  "contributors": [    {      "name": "Flavio Copes",      "email": "flavio@flaviocopes.com",      "url": "https://flaviocopes.com"    }  ]}
+{
+    "contributors":[
+        {
+            "name":"Flavio Copes",
+            "email":"flavio@flaviocopes.com",
+            "url":"https://flaviocopes.com"
+        }
+    ]
+}
 ```
 
 #### `bugs`
 
 Links to the package issue tracker, most likely a GitHub issues page
 
+指向包问题跟踪的链接，很可能是 GitHub issues 页面。
+
 Example:
 
+例如：
+
 ```plain
-{  "bugs": "https://github.com/flaviocopes/package/issues"}
+{
+    "bugs":"https://github.com/flaviocopes/package/issues"
+}
 ```
 
 #### `homepage`
 
 Sets the package homepage
 
+设置包主页。
+
 Example:
+例如：
 
 ```
-{  "homepage": "https://flaviocopes.com/package"}
+{
+    "homepage": "https://flaviocopes.com/package"
+}
 ```
 
 #### `version`
 
 Indicates the current version of the package.
 
+指示包的当前版本。
+
 Example:
+例如：
 
 ```plain
 "version": "1.0.0"
@@ -2217,15 +2277,25 @@ Example:
 
 This property follows the semantic versioning (semver) notation for versions, which means the version is always expressed with 3 numbers: `x.x.x`.
 
+此属性遵循版本的语义版本控制（semver）表示法，这意味着版本始终用哪个三个数字表示： `x.x.x`。
+
 The first number is the major version, the second the minor version and the third is the patch version.
 
+第一个数字是主要版本呢，第二个是次要版本，第三个是补丁版本。
+
 There is a meaning in these numbers: a release that only fixes bugs is a patch release, a release that introduces backward-compatible changes is a minor release, a major release can have breaking changes.
+
+这些数字有一个含义：只修复 bug 的版本是补丁版本，引入向侯建内容更改的版本是次要版本，主要版本可以有突破性的更改。
 
 #### `license`
 
 Indicates the license of the package.
 
+表明 package 的许可证。
+
 Example:
+
+例如：
 
 ```
 "license": "MIT"
@@ -2235,19 +2305,28 @@ Example:
 
 This property contains an array of keywords that associate with what your package does.
 
+此属性包含一个关键字数组，这些关键字与 package 的功能相关。
+
 Example:
+例如：
 
 ```plain
-"keywords": [  "email",  "machine learning",  "ai"]
+"keywords": ["email", "machine learning", "ai"]
 ```
 
 This helps people find your package when navigating similar packages, or when browsing the npm website.
+
+这有助于人们在浏览类似软件包或浏览 npm 网站时找到你的软件包。
 
 #### `description`
 
 This property contains a brief description of the package.
 
+此属性包含 package 的简要说明。
+
 Example:
+
+例如：
 
 ```plain
 "description": "A package to work with strings"
@@ -2255,17 +2334,24 @@ Example:
 
 This is especially useful if you decide to publish your package to `npm` so that people can find out what the package is about.
 
+如果你决定将包发布到 `npm` 以便人们可以了解包的内容，这一点尤其有用。
+
 #### `repository`
 
 This property specifies where this package repository is located.
 
+此属性指定此包存储库的位置。
+
 Example:
+例如：
 
 ```plain
 "repository": "github:flaviocopes/testing",
 ```
 
 Notice the `github` prefix. There are other popular services baked in:
+
+注意 `github` 前缀。还有其它受欢迎的服务：
 
 ```plain
 "repository": "gitlab:flaviocopes/testing",
@@ -2277,23 +2363,37 @@ Notice the `github` prefix. There are other popular services baked in:
 
 You can explicitly set the version control system:
 
+可以显式设置版本控制系统：
+
 ```plain
-"repository": {  "type": "git",  "url": "https://github.com/flaviocopes/testing.git"}
+"repository":{
+    "type":"git",
+    "url":"https://github.com/flaviocopes/testing.git"
+}
 ```
 
 You can use different version control systems:
 
+你可以使用不同的版本控制系统
+
 ```
-"repository": {  "type": "svn",  "url": "..."}
+"repository": {
+    "type": "svn",
+    "url": "..."
+}
 ```
 
 #### `main`
 
 Sets the entry point for the package.
 
+设置包的入口点。
+
 When you import this package in an application, that’s where the application will search for the module exports.
 
 Example:
+
+在应用程序中导入此包时，应用程序将在其中搜索模块导出。
 
 ```
 "main": "src/main.js"
@@ -2302,6 +2402,8 @@ Example:
 #### `private`
 
 if set to `true` prevents the app/package to be accidentally published on `npm`
+
+如果设置为 `true`，将防止在 `npm` 上意外发布 app/package。
 
 Example:
 
@@ -2313,13 +2415,26 @@ Example:
 
 Defines a set of node scripts you can run
 
+定义一组可以运行的 node 脚本
+
 Example:
 
+例如：
+
 ```
-"scripts": {  "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",  "start": "npm run dev",  "unit": "jest --config test/unit/jest.conf.js --coverage",  "test": "npm run unit",  "lint": "eslint --ext .js,.vue src test/unit",  "build": "node build/build.js"}
+"scripts":{
+    "dev":"webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start":"npm run dev",
+    "unit":"jest --config test/unit/jest.conf.js --coverage",
+    "test":"npm run unit",
+    "lint":"eslint --ext .js,.vue src test/unit",
+    "build":"node build/build.js"
+}
 ```
 
 These scripts are command line applications. You can run them by calling `npm run XXXX`or `yarn XXXX`, where `XXXX` is the command name.
+
+这些脚本是命令行应用程序。你可以通过调用 `npm run XXXX` 或 `yarn XXXX` 来运行他们，其中 `XXXX` 是命令名。
 
 Example:  
 `npm run dev`

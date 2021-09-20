@@ -176,8 +176,10 @@ Conversely, at no point should your task require the user to hold more than seve
 反过来说，在任何时候，你的任务都不应该要求用户在工作记忆中保留七个以上的项目。
 
 In rare scenarios where you require the user to hold more than 11 items in their memory, use “chunking” to reduce their mental burden. Chunking is when individual pieces of an information set are broken down and then grouped in a meaningful whole.
+在极少数情况下，如果你要求用户在他们的记忆中持有超过11个项目，可以使用 "分块 "来减少他们的心理负担。分块是指将一个信息集的单个片段分解，然后归纳为一个有意义的整体。
 
 For example, we remember phone numbers as XXX-XXXX rather than XXXXXXX. It’s easier to remember the number in two chunks rather than a series of seven individual units.
+例如，我们记住电话号码是XXX-XXXX，而不是XXXXXX。把数字分成两块，而不是一系列的七个独立单位，这样更容易记住。
 
 Another factor to consider related to attention and memory is [“Hick’s Law.”](https://lawsofux.com/laws/hicks-law/) The law states, “the time it takes to make a decision increases with the number and complexity of choices.
 

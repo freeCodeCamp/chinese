@@ -6,20 +6,18 @@
 ![React Tutorial – How to Build the 2048 Game in React](https://www.freecodecamp.org/news/content/images/size/w2000/2021/09/thumb.png)
 
 今天我们将要学习如果使用React来复刻制作2048这款游戏。
-What makes this article unique is that we will focus on creating delightful animations. Aside from React, we will use TypeScript and we'll make some CSS transitions using LESS.
-
-We are only going to use modern React interfaces such as hooks and the Context API.
-
-This article contains a few external resources such as:
+这篇文章的独特之处在于我们将专注于制作令人愉快的动画。 除了 React，我们将使用 TypeScript，我们将使用 LESS 编写 CSS。
+我们将会使用React的一些新特性，比如React Hook和 Context API。
+本文包含一些外部资源，例如：
 
 -   [2048 Game (GitHub Pages)](https://mateuszsokola.github.io/2048-in-react/)
 -   [Animation Examples for 2048 (GitHub Pages)](https://mateuszsokola.github.io/2048-animation-examples/)
 -   [Source Code (GitHub)](https://github.com/mateuszsokola/2048-in-react)
--   ...and a YouTube video. It took me more than a month to prepare this tutorial, so it would mean the world to me if you watch it, smash the like button, and subscribe to my channel.
+-   以及Youtube的视频。我花了一个多月来准备这个教程，所以如果你正在看它，请猛戳喜欢按钮，订阅我的频道，这对我来说意味着整个世界。
 
-Thank you!
+谢谢！
 
-## 2048 Game Rules
+## 2048 游戏规则
 
 In this game, the player must combine tiles containing the same numbers until they reach the number 2048. The tiles can contain only integer values starting from 2, and that are a power of two, like 2, 4, 8, 16, 32, and so on.
 

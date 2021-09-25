@@ -649,82 +649,82 @@ date,new_cases,new_deaths,new_tests
 
 Notebook 链接：[https://jovian.ai/aakashns/python-matplotlib-data-visualization](https://jovian.ai/aakashns/python-matplotlib-data-visualization)
 
-Data visualization is the graphic representation of data. It involves producing images that communicate relationships among the represented data to viewers.
+数据可视化是对数据的图形化呈现。它生成图片，将要呈现的数据之间的关系传递给读者。
 
-Visualizing data is an essential part of data analysis and machine learning. We'll use Python libraries [Matplotlib](https://jovian.ai/outlink?url=https%3A%2F%2Fmatplotlib.org) and [Seaborn](https://jovian.ai/outlink?url=https%3A%2F%2Fseaborn.pydata.org) to learn and apply some popular data visualization techniques. We'll use the words __chart__, __plot__, and __graph__ interchangeably in this tutorial.
+可视化数据是数据分析和机器学习的重要部分。我们将使用 Python 库 [Matplotlib](https://jovian.ai/outlink?url=https%3A%2F%2Fmatplotlib.org) 和 [Seaborn](https://jovian.ai/outlink?url=https%3A%2F%2Fseaborn.pydata.org) 来学习和应用一些常用的数据可视化技术。在本教程中，我们会交替使用 __chart__，__plot__ 和 __graph__ 这三个词。
 
-To begin, let's install and import the libraries. We'll use the `matplotlib.pyplot` module for basic plots like line and bar charts. It is often imported with the alias `plt`. We'll use the `seaborn` module for more advanced plots. It is commonly imported with the alias `sns`.
+开始前，我们需要先安装并导入这些库。`matplotlib.pyplot` 模块用于基本的绘图，如折线图和条形图，导入后通常使用别名 `plt` 。`seaborn` 模块用于更高级的绘图，导入后通常使用别名 `sns`。
 
-Notice this we also include the special command `%matplotlib inline` to ensure that our plots are shown and embedded within the Jupyter notebook itself. Without this command, sometimes plots may show up in pop-up windows.
+注意我们还包含了特殊命令 `%matplotlib inline`，确保所绘的图内嵌在 Jupyter notebook 中显示。如果不使用这条命令，有时图形会以弹窗显示。
 
-### How to Create a Line Chart in Python
+### 如何在 Python 中创建折线图
 
-The line chart is one of the simplest and most widely used data visualization techniques. A line chart displays information as a series of data points or markers connected by straight lines.
+折线图是最简单、应用最广泛的数据可视化技术之一。折线图将信息显示为由直线连接的一系列数据点或标记。
 
-You can customize the shape, size, color, and other aesthetic elements of the lines and markers for better visual clarity.
+你可以自定义线条和标记的形状、大小、颜色和其他美学元素，以获得更好的视觉清晰度。
 
-Here's a Python list showing the yield of apples (tons per hectare) over six years in an imaginary country called Kanto.
+下面是一个 Python 列表，显示了一个名为 Kanto 的虚构国家在六年内的苹果产量（吨/公顷）。
 
-We can visualize how the yield of apples changes over time using a line chart. To draw a line chart, we can use the `plt.plot` function.
+我们可以使用折线图来可视化苹果的产量如何随时间变化。我们使用 `plt.plot` 函数来绘制折线图。
 
-Calling the `plt.plot` function draws the line chart as expected. It also returns a list of plots drawn `[<matplotlib.lines.Line2D at 0x7ff70aa20760>]`, shown within the output. We can include a semicolon (`;`) at the end of the last statement in the cell to avoiding showing the output and display just the graph.
+调用 `plt.plot` 函数就能绘制预期的折线图，同时它还返回了绘制的绘图列表 `[<matplotlib.lines.Line2D at 0x7ff70aa20760>]`，会显示在输出区域。我们可以在单元格中最后一条语句的末尾添加分号（`;`），使得只显示图形而不显示输出内容。
 
-Let's enhance this plot step-by-step to make it more informative and beautiful.
+让我们一步一步来增强这个图形，使它更具信息性和美感。
 
-#### **How to Customize the X-axis in MatPlotLib**
+#### **如何在 MatPlotLib 中自定义 X 轴**
 
-The X-axis of the plot currently shows list element indices 0 to 5. The plot would be more informative if we could display the year for which we're plotting the data. We can do this by two arguments `plt.plot`.
+当前图形的 X 轴显示了列表元素的索引 0 到 5。如果我们可以显示数据中的年份，这个图形将更具信息性。通过 `plt.plot` 中的两个参数即可实现。
 
-#### **Axis Labels in MatPlotLib**
+#### **MatPlotLib 中的坐标标签**
 
-We can add labels to the axes to show what each axis represents using the `plt.xlabel` and `plt.ylabel` methods.
+通过 `plt.xlabel` 和 `plt.ylabel` 这两个函数，我们可以为坐标添加标签，来显示坐标代表的意义。
 
-#### **How to Plot Multiple Lines in MatPlotLib**
+#### **如何在 MatPlotLib 中绘制多条折线**
 
-You can invoke the `plt.plot` function once for each line to plot multiple lines in the same graph. Let's compare the yields of apples vs. oranges in Kanto.
+你可以为每条线调用一次 `plt.plot` 函数，这样就可以在同一个图形中绘制多条折线。让我们来比较 Kanto 苹果与橘子的产量。
 
-#### **Chart Title and Legend in MatPlotLib**
+#### **MatPlotLib 中的图表标题和图例**
 
-To differentiate between multiple lines, we can include a legend within the graph using the `plt.legend` function. We can also set a title for the chart using the `plt.title` function.
+为了区分不同的线条，我们可以使用 `plt.legend` 函数在图形中添加一个图例。我们还可以使用 `plt.title` 函数来设置图表的标题。
 
-#### **How to Use Line Markers in MatPlotLib**
+#### **如何在 MatPlotLib 中使用线条标记**
 
-We can also show markers for the data points on each line using the `marker` argument of `plt.plot`.
+通过使用 `plt.plot` 的`marker` 参数，我们还可以为每条线上的数据点增添标记。
 
-Matplotlib provides many different markers like a circle, cross, square, diamond, and more. You can find the full list of marker types here: [https://matplotlib.org/3.1.1/api/markers\_api.html](https://jovian.ai/outlink?url=https%3A%2F%2Fmatplotlib.org%2F3.1.1%2Fapi%2Fmarkers_api.html) .
+Matplotlib 提供许多不同的标记，如圆圈、叉号、方块和菱形等。你可以从这个链接找到所有标记类型的列表：[https://matplotlib.org/3.1.1/api/markers\_api.html](https://jovian.ai/outlink?url=https%3A%2F%2Fmatplotlib.org%2F3.1.1%2Fapi%2Fmarkers_api.html) .
 
-#### **How to Style Lines and Markers in MatPlotLib**
+#### **如何在 MatPlotLib 中设置线条和标记的样式**
 
-The `plt.plot` function supports many arguments for styling lines and markers:
+`plt.plot` 函数提供很多参数用于设置线条和标记的样式：
 
--   `color` or `c` – Set the color of the line ([supported colors](https://jovian.ai/outlink?url=https%3A%2F%2Fmatplotlib.org%2F3.1.0%2Fgallery%2Fcolor%2Fnamed_colors.html))
--   `linestyle` or `ls` – Choose between a solid or dashed line
--   `linewidth` or `lw` – Set the width of a line
--   `markersize` or `ms` – Set the size of markers
--   `markeredgecolor` or `mec` – Set the edge color for markers
--   `markeredgewidth` or `mew` – Set the edge width for markers
--   `markerfacecolor` or `mfc` – Set the fill color for markers
--   `alpha` – Opacity of the plot
+-   `color` 或 `c` – 设置线条颜色 ([支持的颜色](https://jovian.ai/outlink?url=https%3A%2F%2Fmatplotlib.org%2F3.1.0%2Fgallery%2Fcolor%2Fnamed_colors.html))
+-   `linestyle` 或 `ls` – 选择是实线还是虚线
+-   `linewidth` 或 `lw` – 设置线条宽度
+-   `markersize` 或 `ms` – 设置标记尺寸
+-   `markeredgecolor` 或 `mec` – 设置标记的边缘颜色
+-   `markeredgewidth` 或 `mew` – 设置标记的边缘宽度
+-   `markerfacecolor` 或 `mfc` – 设置标记的填充颜色
+-   `alpha` – 图形的不透明度
 
-Check out the documentation for `plt.plot` to learn more: [https://matplotlib.org/api/\_as\_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot](https://jovian.ai/outlink?url=https%3A%2F%2Fmatplotlib.org%2Fapi%2F_as_gen%2Fmatplotlib.pyplot.plot.html%23matplotlib.pyplot.plot) .
+查阅 `plt.plot` 的文档以学习更多内容：[https://matplotlib.org/api/\_as\_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot](https://jovian.ai/outlink?url=https%3A%2F%2Fmatplotlib.org%2Fapi%2F_as_gen%2Fmatplotlib.pyplot.plot.html%23matplotlib.pyplot.plot) .
 
-The `fmt` argument provides a shorthand for specifying the marker shape, line style, and line color. You can provide it as the third argument to `plt.plot`.
+`fmt` 参数提供了便捷的方法来设置标记的颜色、线条样式和颜色。你可以将它作为 `plt.plot` 的第三参数。
 
 ```
 fmt = '[marker][line][color]'
 ```
 
-#### **How to Change the Figure Size in MatPlotLib**
+#### **H如何在 MatPlotLib 中更改图形的尺寸**
 
-You can use the `plt.figure` function to change the size of the figure.
+你可以使用 `plt.figure` 函数来更改图形的尺寸。
 
-#### **How to Improve Default Styles using Seaborn**
+#### **如何使用 Seaborn 改进默认样式**
 
-An easy way to make your charts look beautiful is to use some default styles from the Seaborn library. You can apply them globally using the `sns.set_style` function. You can see a full list of predefined styles here: [https://seaborn.pydata.org/generated/seaborn.set\_style.html](https://jovian.ai/outlink?url=https%3A%2F%2Fseaborn.pydata.org%2Fgenerated%2Fseaborn.set_style.html) .
+使用 Seaborn 库中的一些默认样式，很容易让你的图表看起来更加漂亮。你可以全局使用 `sns.set_style` 函数。以下是预定义样式的完整列表：[https://seaborn.pydata.org/generated/seaborn.set\_style.html](https://jovian.ai/outlink?url=https%3A%2F%2Fseaborn.pydata.org%2Fgenerated%2Fseaborn.set_style.html) .
 
-### Scatter Plots **in MatPlotLib**
+### **MatPlotLib** 中的散点图
 
-In a scatter plot, the values of 2 variables are plotted as points on a 2-dimensional grid. Additionally, you can also use a third variable to determine the size or color of the points. Let's try out an example.
+在散点图中，两个变量的值被绘成二维网格上的一个点。此外，你还可以使用第三个变量来确定这些点的大小和颜色。让我们来试一个例子。
 
 The [Iris flower dataset](https://jovian.ai/outlink?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FIris_flower_data_set) provides sample measurements of sepals and petals for three species of flowers. The Iris dataset is included with the Seaborn library and you can load it as a Pandas data frame.
 
@@ -833,17 +833,17 @@ In this tutorial we've covered some of the fundamental concepts and popular tech
 
 Try answering the following questions to test your understanding of the topics covered in this notebook:
 
-1.  What is data visualization?
-2.  What is Matplotlib?
-3.  What is Seaborn?
-4.  How do you install Matplotlib and Seaborn?
-5.  How you import Matplotlib and Seaborn? What are the common aliases used while importing these modules?
-6.  What is the purpose of the magic command `%matplotlib inline`?
-7.  What is a line chart?
-8.  How do you plot a line chart in Python? Illustrate with an example.
-9.  How do you specify values for the X-axis of a line chart?
-10.  How do you specify labels for the axes of a chart?
-11.  How do you plot multiple line charts on the same axes?
+1.  数据可视化是什么？
+2.  Matplotlib是什么？
+3.  Seaborn是什么？
+4.  如何安装 Matplotlib 和 Seaborn？
+5.  如何导入 Matplotlib 和 Seaborn？导入这两个模块时常用的别名是什么？
+6.  神奇命令 `%matplotlib inline` 的作用是什么？
+7.  什么是折线图？
+8.  如何在 Python 中绘制折线图？举例说明。
+9.  如何指定折线图 X 轴的值？
+10.  如何为图表的轴指定标签？
+11.  如何在同一轴上绘制多个折线图？
 12.  How do you show a legend for a line chart with multiple lines?
 13.  How you set a title for a chart?
 14.  How do you show markers on a line chart?

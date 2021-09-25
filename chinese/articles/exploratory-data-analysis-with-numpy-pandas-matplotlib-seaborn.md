@@ -722,29 +722,29 @@ fmt = '[marker][line][color]'
 
 使用 Seaborn 库中的一些默认样式，很容易让你的图表看起来更加漂亮。你可以全局使用 `sns.set_style` 函数。以下是预定义样式的完整列表：[https://seaborn.pydata.org/generated/seaborn.set\_style.html](https://jovian.ai/outlink?url=https%3A%2F%2Fseaborn.pydata.org%2Fgenerated%2Fseaborn.set_style.html) .
 
-### **MatPlotLib** 中的散点图
+### **MatPlotLib 中的散点图**
 
 在散点图中，两个变量的值被绘成二维网格上的一个点。此外，你还可以使用第三个变量来确定这些点的大小和颜色。让我们来试一个例子。
 
-The [Iris flower dataset](https://jovian.ai/outlink?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FIris_flower_data_set) provides sample measurements of sepals and petals for three species of flowers. The Iris dataset is included with the Seaborn library and you can load it as a Pandas data frame.
+[鸢尾花卉数据集](https://jovian.ai/outlink?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FIris_flower_data_set) 提供了三种花的花萼和花瓣的样本测量。该数据集包含了 Seaborn 库，你可以把它当作 Pandas 数据帧来加载。
 
-The output is not very informative as there are too many combinations of the two properties within the dataset. There doesn't seem to be simple relationship between them.
+由于数据集中有太多两个属性的组合，因此输出的信息不是很丰富。它们之间看上去并不是简单的关系。
 
-We can use a scatter plot to visualize how sepal length and sepal width vary using the `scatterplot` function from the `seaborn` module (imported as `sns`).
+通过 `seaborn` 模块（以别名 `sns` 导入）中的 `scatterplot` 函数，我们用散点图可视化花萼长度和宽度是如何变化的。
 
-#### **How to Add Hues in MatPlotLib**
+#### **如何在 MatPlotLib 中添加色调**
 
-Notice how the points in the above plot seem to form distinct clusters with some outliers. We can color the dots using the flower species as a `hue`. We can also make the points larger using the `s` argument.
+注意，上图中有些点形成了一些异常值的不同簇。我们可以将这三个花的品种各自当作一个`色调`来给这些点上色，还可以用 `s` 参数来放大这些点。
 
-Adding hues makes the plot more informative. We can immediately tell that Setosa irises have a smaller sepal length but higher sepal widths. In contrast, the opposite is true for Virginica irises.
+添加色调使得图形更具信息性。我们可以立刻看出，刚毛鸢尾的花萼较短，但是较宽。而弗吉尼亚鸢尾正好相反。
 
-#### **How to **Customiz**e **Seaborn Figures****
+#### **如何自定义 Seaborn 图形**
 
-Since Seaborn uses Matplotlib's plotting functions internally, we can use functions like `plt.figure` and `plt.title` to modify the figure.
+由于 Seaborn 内部用的是 Matplotlib 的绘图函数，我们可以使用像 `plt.figure` 和 `plt.title` 这样的函数来修改图形。
 
-#### **How to Plot Data using Pandas Data Frames with Seaborn**
+#### **如何使用带有 Seaborn 的 Pandas 数据帧绘制数据**
 
-Seaborn has built-in support for Pandas data frames. Instead of passing each column as a series, you can provide column names and use the `data` argument to specify a data frame.
+Seaborn 内置了对 Pandas 数据帧的支持。你可以提供列名并使用 `data` 参数来指定数据帧，无需将每一列作为序列来传递。
 
 ### Histograms **in MatPlotLib**
 
@@ -844,9 +844,9 @@ Try answering the following questions to test your understanding of the topics c
 9.  如何指定折线图 X 轴的值？
 10.  如何为图表的轴指定标签？
 11.  如何在同一轴上绘制多个折线图？
-12.  How do you show a legend for a line chart with multiple lines?
-13.  How you set a title for a chart?
-14.  How do you show markers on a line chart?
+12.  如何显示包含多个线条的折线图的图例？
+13.  如何设置图表的标题？
+14.  如何显示折线图的标记？
 15.  What are the different options for styling lines and markers in line charts? Illustrate with examples.
 16.  What is the purpose of the `fmt` argument to `plt.plot`?
 17.  Where can you see a list of all the arguments accepted by `plt.plot`?

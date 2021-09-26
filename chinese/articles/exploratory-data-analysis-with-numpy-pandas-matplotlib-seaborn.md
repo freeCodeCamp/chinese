@@ -746,29 +746,29 @@ fmt = '[marker][line][color]'
 
 Seaborn 内置了对 Pandas 数据帧的支持。你可以提供列名并使用 `data` 参数来指定数据帧，无需将每一列作为序列来传递。
 
-### Histograms **in MatPlotLib**
+### **MatPlotLib 中的**直方图
 
-A histogram represents the distribution of a variable by creating bins (intervals) along the range of values and showing vertical bars to indicate the number of observations in each bin.
+直方图通过沿值的范围创建组距（间隔）并显示垂直条来表示每个组距中的观察数，从而表示变量的分布。
 
-For example, let's visualize the distribution of values of sepal width in the Iris dataset. We can use the `plt.hist` function to create a histogram.
+例如，我们要可视化鸢尾花数据集中花萼宽度值的分布。我们可以使用 `plt.hist` 函数来创建直方图。
 
-We can immediately see that the sepal widths lie in the range 2.0 - 4.5, and around 35 values are in the range 2.9 - 3.1, which seems to be the most populous bin.
+我们能立马发现花萼的宽度在 2.0 - 4.5 范围内，大约有 35 个落在 2.9 - 3.1 之间，它们似乎是最多的组距。
 
-#### **How to C**ontrol the** S**ize and** N**umber of** B**ins****
+#### **如何控制组距的大小和数量**
 
-We can control the number of bins or the size of each one using the bins argument.
+我们可以使用组距参数来控制组距的数量以及每个组距的大小。
 
-#### **How to Manage Multiple Histograms in MatPlotLib**
+#### **如何在 MatPlotLib 中管理多个直方图**
 
-Similar to line charts, we can draw multiple histograms in a single chart. We can reduce each histogram's opacity so that one histogram's bars don't hide the others'.
+与折线图类似，我们可以在一个图表里绘制多个直方图。我们可以降低每个直方图的不透明度，这样每个直方图里的柱条不会遮住其他的。
 
-Let's draw separate histograms for each species of flowers.
+让我们来为每一个花的品种绘制自己的直方图。
 
-### Bar Charts **in MatPlotLib**
+### **MatPlotLib 中的**条形图
 
-Bar charts are quite similar to line charts, that is they show a sequence of values. However, a bar is shown for each value, rather than points connected by lines. We can use the `plt.bar` function to draw a bar chart.
+条形图与折线图很像，都显示一系列的值。只不过，每个值都会显示一个条形，而不是由线连接的点。我们可以使用 `plt.bar` 函数来绘制条形图。
 
-#### **Bar Plots with Averages in Seaborn**
+#### **Seaborn 中包含平均值的条形图**
 
 Let's look at another sample dataset included with Seaborn called `tips`. The dataset contains information about the sex, time of day, total bill, and tip amount for customers visiting a restaurant over a week.
 
@@ -847,33 +847,33 @@ Try answering the following questions to test your understanding of the topics c
 12.  如何显示包含多个线条的折线图的图例？
 13.  如何设置图表的标题？
 14.  如何显示折线图的标记？
-15.  What are the different options for styling lines and markers in line charts? Illustrate with examples.
-16.  What is the purpose of the `fmt` argument to `plt.plot`?
-17.  Where can you see a list of all the arguments accepted by `plt.plot`?
-18.  How do you change the size of the figure using Matplotlib?
-19.  How do you apply the default styles from Seaborn globally for all charts?
-20.  What are the predefined styles available in Seaborn? Illustrate with examples.
-21.  What is a scatter plot?
-22.  How is a scatter plot different from a line chart?
-23.  How do you draw a scatter plot using Seaborn? Illustrate with an example.
-24.  How do you decide when to use a scatter plot vs a line chart?
-25.  How do you specify the colors for dots on a scatter plot using a categorical variable?
-26.  How do you customize the title, figure size, legend, and son on for Seaborn plots?
-27.  How do you use a Pandas dataframe with `sns.scatterplot`?
-28.  What is a histogram?
-29.  When should you use a histogram vs a line chart?
-30.  How do you draw a histogram using Matplotlib? Illustrate with an example.
-31.  What are "bins" in a histogram?
-32.  How do you change the sizes of bins in a histogram?
-33.  How do you change the number of bins in a histogram?
-34.  How do you show multiple histograms on the same axes?
-35.  How do you stack multiple histograms on top of one another?
-36.  What is a bar chart?
-37.  How do you draw a bar chart using Matplotlib? Illustrate with an example.
-38.  What is the difference between a bar chart and a histogram?
-39.  What is the difference between a bar chart and a line chart?
-40.  How do you stack bars on top of one another?
-41.  What is the difference between `plt.bar` and `sns.barplot`?
+15.  折线图中线条和标记的样式有哪些不同的选项？举例说明。
+16.  `plt.plot` 中 `fmt` 参数的作用是什么？
+17.  在哪能找到可以被 `plt.plot` 接受的所有参数的列表？
+18.  如何使用 Matplotlib 更改图形的大小？
+19.  如何将 Seaborn 的默认样式应用于全局所有的图表？
+20.  Seaborn 中可用的预定义样式有哪些？举例说明。
+21.  什么是散点图？
+22.  散点图与折线图有何不同？
+23.  如何使用 Seaborn 绘制散点图？举例说明。
+24.  如何判断什么时候使用散点图和折线图？
+25.  如何使用分类变量为散点图上的点指定颜色？
+26.  如何为 Seaborn 绘图自定义标题、图形大小、图例等？
+27.  如何使用带有 `sns.scatterplot` 的 Pandas 数据框？
+28.  什么是直方图？
+29.  什么时候应该使用直方图和折线图？
+30.  如何使用 Matplotlib 绘制直方图？举例说明。
+31.  直方图中的“组距”是什么？
+32.  如何更改直方图中组距的数量？
+33.  如何更改直方图中组距的大小？
+34.  如何在同一轴上显示多个直方图？
+35.  如何将多个直方图堆叠在一起？
+36.  什么是条形图？
+37.  如何使用 Matplotlib 绘制条形图？举例说明。
+38.  条形图和直方图的区别是什么？
+39.  条形图和折线图的区别是什么？
+40.  你如何将条形堆叠在一起？
+41.  `plt.bar` 和 `sns.barplot` 的区别是什么？
 42.  What do the lines cutting the bars in a Seaborn bar plot represent?
 43.  How do you show bar plots side-by-side?
 44.  How do you draw a horizontal bar plot?

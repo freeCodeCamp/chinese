@@ -182,10 +182,13 @@ For example, we remember phone numbers as XXX-XXXX rather than XXXXXXX. It’s e
 例如，我们记住电话号码是XXX-XXXX，而不是XXXXXX。把数字分成两块，而不是一系列的七个独立单位，这样更容易记住。
 
 Another factor to consider related to attention and memory is [“Hick’s Law.”](https://lawsofux.com/laws/hicks-law/) The law states, “the time it takes to make a decision increases with the number and complexity of choices.
+[特斯勒定律](https://lawsofux.com/laws/hicks-law/)另一个需要考虑的因素是注意力和记忆相关的。该定律规定，随着决策的时间随着选择的数量和复杂性增加。
 
 ![A graph of Hick's Law with time x number of options.](https://www.freecodecamp.org/news/content/images/2021/02/image-155.png)
+![特斯勒定律与时间x数量的关系图](https://www.freecodecamp.org/news/content/images/2021/02/image-155.png)。
 
 The more choices there are, the longer it takes the user to make a decision.
+选择越多，用户做出决策的时间就越长。
 
 Avoid overwhelming users with excessive choices, highlight the best option for them whenever possible. Break complex tasks into smaller steps, that is using progressive disclosure when appropriate.
 

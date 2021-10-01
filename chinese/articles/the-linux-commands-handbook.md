@@ -1595,55 +1595,56 @@ fg
 
 ## Linux 中的 `xargs` 命令
 
-The `xargs` command is used in a UNIX shell to convert input from standard input into arguments to a command.
+在 UNIX Shell 中，`xargs` 命令用来将标准输入的数据转换成命令的参数。
 
-In other words, through the use of `xargs` the output of a command is used as the input of another command.
+换句话说，使用 `xargs` ，可以将一条命令的输出，用作另一条命令的输入。
 
-Here's the syntax you will use:
+下面是你将会用到的语法：
 
 ```
 command1 | xargs command2
 
 ```
 
-We use a pipe (`|`) to pass the output to `xargs`. That will take care of running the `command2` command, using the output of `command1` as its argument(s).
+我们使用管道符（`|`）将输出传递给 `xargs`。它将负责运行 `command2` 命令，使用 `command1` 的输出作为参数。
 
-Let's do a simple example. You want to remove some specific files from a directory. Those files are listed inside a text file.
+我们来做个简单的例子。假设你要删除某个目录下的一些特定文件。这些文件列在一个文本文件中。
 
-We have 3 files: `file1`, `file2`, `file3`.
+我们有三个文件： `file1`、 `file2`、 `file3`。
 
-In `todelete.txt` we have a list of files we want to delete, in this example `file1` and `file3`:
+在 `todelete.txt` 中，我们有一份想要删除的文件列表，在这一例子中是 `file1` 和 `file3`：
 
 ![Screen-Shot-2020-09-08-at-07.45.28](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-08-at-07.45.28.png)
 
-We will channel the output of `cat todelete.txt` to the `rm` command, through `xargs`.
+我们将通过 `xargs` 把 `cat todelete.txt` 的输出引向 `rm` 命令。
 
-In this way:
+就像这样：
 
 ```
 cat todelete.txt | xargs rm
 
 ```
 
-That's the result, the files we listed are now deleted:
+以下是执行结果，我们列出的文件现在已经被删除：
 
 ![Screen-Shot-2020-09-08-at-07.46.39](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-08-at-07.46.39.png)
 
-The way it works is that `xargs` will run `rm` 2 times, one for each line returned by `cat`.
+它的工作方式是：`xargs` 会运行 `rm` 2次，为 `cat` 返回的每一行运行一次。
 
-This is the simplest usage of `xargs`. There are several options we can use.
+这是 `xargs` 最简单的用法。我们还可以使用以下的一些参数。
 
-One of the most useful, in my opinion (especially when starting to learn `xargs`), is `-p`. Using this option will make `xargs` print a confirmation prompt with the action it's going to take:
+在我看来，其中最有用的是 `-p`（特别是刚开始学习 `xargs` 时）。使用这个选项将使 `xargs` 打印出一个确认提示，说明它要采取的行动：
 
 ![Screen-Shot-2020-09-08-at-08.19.09](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-08-at-08.19.09.png)
 
-The `-n` option lets you tell `xargs` to perform one iteration at a time, so you can individually confirm them with `-p`. Here we tell `xargs` to perform one iteration at a time with `-n1`:
+`-n` 选项令 `xargs` 每次执行若干个迭代，因此你可以用 `-p` 单独确认它们。这里我们用 `-n1` 告诉 `xargs` 一次执行一个迭代:
 
 ![Screen-Shot-2020-09-08-at-08.32.58](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-08-at-08.32.58.png)
 
 The `-I` option is another widely used one. It allows you to get the output into a placeholder, and then you can do various things.
+另一个广泛应用的参数是 `-I`。它可以将输出内容放入占位符，之后你可以用来做各种事。
 
-One of them is to run multiple commands:
+其中一件事是同时运行多个命令，例如：
 
 ```
 command1 | xargs -I % /bin/bash -c 'command2 %; command3 %'
@@ -1652,19 +1653,19 @@ command1 | xargs -I % /bin/bash -c 'command2 %; command3 %'
 
 ![Screen-Shot-2020-09-08-at-08.35.37](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-08-at-08.35.37.png)
 
-> You can swap the `%` symbol I used above with anything else – it's a variable.
+> 你可以将上方的 `%` 符号换成其他任何东西——它只是个变量。
 
 ## Linux 中的 `vim` 编辑器命令
 
-`vim` is a **very** popular file editor, especially among programmers. It's actively developed and frequently updated, and there's a big community around it. There's even a [Vim conference][70]!
+`vim` 是一个**非常**流行的文件编辑器，特别是在程序员中。 它被积极开发且经常更新，且有巨大的社区力量围绕着。甚至还有一个 [Vim 会议][70]！
 
-`vi` in modern systems is just an alias for `vim`, which means `vi` i`m`proved.
+在现代系统中，`vi` 只是 `vim` 的一个别名，意思是“改进的 `vi`”（即 “`vi` i`m`proved”）。
 
-You start it by running `vi` on the command line.
+你可以在命令行运行 `vi` 启动它。
 
 ![Screenshot-2019-02-10-at-11.44.36](https://www.freecodecamp.org/news/content/images/2020/10/Screenshot-2019-02-10-at-11.44.36.png)
 
-You can specify a filename at invocation time to edit that specific file:
+调用时指定一个文件名，你就可以编辑对应的文件：
 
 ```
 vi test.txt
@@ -1673,48 +1674,48 @@ vi test.txt
 
 ![Screenshot-2019-02-10-at-11.36.21](https://www.freecodecamp.org/news/content/images/2020/10/Screenshot-2019-02-10-at-11.36.21.png)
 
-You have to know that Vim has 2 main modes:
+你需要了解的是，Vim 有两个主要的模式：
 
--   _command_ (or _normal_) mode
--   _insert_ mode
+-   _命令（command）_ 模式，也称为 _普通（normal）_ 模式
+-   _插入（insert）_ 模式
 
-`When you start the editor, you are in command mode. You can't enter text like you expect from a GUI-based editor. You have to enter **insert mode**.
+当你启动编辑器时，默认处于命令模式。这时你无法像期望的那样，在基于图形界面的编辑器中输入文本。你需要进入**插入模式**。
 
-You can do this by pressing the `i` key. Once you do so, the `-- INSERT --` word appears at the bottom of the editor:
+可以按下 `i` 键进入插入模式。当你这样做之后， 在编辑器下方会出现 `-- 插入 --` （或 INSERT）字样：
 
 ![Screenshot-2019-02-10-at-11.47.39](https://www.freecodecamp.org/news/content/images/2020/10/Screenshot-2019-02-10-at-11.47.39.png)
 
-Now you can start typing and filling the screen with the file contents:
+现在你可以开始输入了，用文件内容来填充终端屏幕：
 
 ![Screenshot-2019-02-10-at-11.48.39](https://www.freecodecamp.org/news/content/images/2020/10/Screenshot-2019-02-10-at-11.48.39.png)
 
-You can move around the file with the arrow keys, or using the `h` - `j` - `k` - `l` keys. `h-l` for left-right, `j-k` for down-up.
+你可以用方向键在文件中移动光标，或者使用 `h` - `j` - `k` - `l` 四个键。 `h-l` 代表左和右，`j-k` 代表上和下。
 
-Once you are done editing you can press the `esc` key to exit insert mode and go back to **command mode**.
+当完成编辑时，按下 `esc` 键即可退出插入模式，回到**命令模式**。
 
 ![Screenshot-2019-02-10-at-11.48.44](https://www.freecodecamp.org/news/content/images/2020/10/Screenshot-2019-02-10-at-11.48.44.png)  
-At this point you can navigate the file, but you can't add content to it (and be careful which keys you press, as they might be commands).
+此时你可以浏览文件，但无法向其添加内容（要注意按下了哪个键，某些键可能是编辑器的命令）。
 
-One thing you might want to do now is **save the file**. You can do so by pressing `:` (colon), then `w`.
+现在你可能想知道如何**保存文件**。可以按下 `:` （冒号），然后输入 `w`，即 `:w`
 
-You can **save and quit** by pressing `:` then `w` and `q`: `:wq`
+要**保存并退出**，可以按下 `:` 然后输入 `w` 和 `q`，即 `:wq`
 
-You can **quit without saving** by pressing `:` then `q` and `!`: `:q!`
+要**退出但不保存文件**，可以按下 `:` 然后输入 `q` 和 `!`，即 `:q!`
 
-You can **undo** and edit by going to command mode and pressing `u`. You can **redo** (cancel an undo) by pressing `ctrl-r`.
+要**撤销**某一个更改并再次编辑，可以在命令模式中按下 `u`。 如果要**重做** （取消上次的撤销操作），可以按下 `ctrl-r`。
 
-`Those are the basics of working with Vim. From here starts a rabbit hole we can't go into in this little introduction.
+以上是使用 Vim 工作的基本操作。接下来是一个无底洞，这篇简短的介绍是无法讲完的。
 
-I will only mention those commands that will get you started editing with Vim:
+下面我只会提到那些能让你入门 Vim 编辑的命令：
 
--   pressing the `x` key deletes the character currently highlighted
--   pressing `A` goes to the end of the currently selected line
--   press `0` to go to the start of the line
--   go to the first character of a word and press `d` followed by `w` to delete that word. If you follow it with `e` instead of `w`, the white space before the next word is preserved
--   use a number between `d` and `w` to delete more than 1 word, for example use `d3w` to delete 3 words forward
--   press `d` followed by `d` to delete a whole entire line. Press `d` followed by `$` to delete the entire line from where the cursor is, until the end
+-   按下 `x` 键，删除当前光标高亮的字符
+-   按下 `A` 跳转到当前选择行的末尾
+-   按下 `0` 跳转到行的开头
+-   定位到任一单词的首字母，按下 `d` ，然后按 `w` 即可删除相应单词。如果输入 `e` 而非 `w`，后一个单词前的空白处将被保留
+-   在 `d` 和 `w` 之间加入一个数字，即可删除多个单词，例如使用 `d3w` 来向前删除 3 个单词
+-   按下 `d` 然后再按一次 `d` ，即可删除整行。按下 `d` 然后再按 `$` ，即可删除以光标为开头，直至当前行末尾的整行内容。
 
-To find out more about Vim I can recommend the [Vim FAQ][71]. You can also run the `vimtutor` command, which should already be installed in your system and will greatly help you start your `vim` exploration.
+如需了解更多 Vim 的内容，我推荐参考 [Vim 常见问题][71]。你还可以运行 `vimtutor` 命令，它应该已经安装到系统中，可以对你开始探索 `vim`  有很大帮助。
 
 ## Linux 中的 `emacs` editor 命令
 

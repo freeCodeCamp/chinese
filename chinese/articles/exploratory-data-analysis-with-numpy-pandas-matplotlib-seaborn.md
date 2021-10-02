@@ -770,38 +770,38 @@ Seaborn 内置了对 Pandas 数据帧的支持。你可以提供列名并使用 
 
 #### **Seaborn 中包含平均值的条形图**
 
-Let's look at another sample dataset included with Seaborn called `tips`. The dataset contains information about the sex, time of day, total bill, and tip amount for customers visiting a restaurant over a week.
+我们来看另一个包含 Seaborn 的样本数据集，名为 `tips`。这个数据集包含有关一周内访问餐厅的客户的性别、时间、总账单和小费金额的信息。
 
-We might want to draw a bar chart to visualize how the average bill amount varies across different days of the week. One way to do this would be to compute the day-wise averages and then use `plt.bar` (try it as an exercise).
+我们可能想要绘制一个条形图来可视化平均账单金额在一周中的不同天数之间的变化。实现的一种方式是计算每日的平均值，然后使用`plt.bar`（请当做练习来尝试）。
 
-However, since this is a very common use case, the Seaborn library provides a `barplot` function which can automatically compute averages.
+然而，由于这是一个非常普遍的用例，Seaborn 库提供了 `barplot` 函数，可以自动计算平均值。
 
-The lines cutting each bar represent the amount of variation in the values. For instance, it seems like the variation in the total bill is relatively high on Fridays and low on Saturdays.
+切割每个条形的线表示值的变化量。例如，看起来总账单的变化在周五相对较高，而在周六较低。
 
-We can also specify a `hue` argument to compare bar plots side-by-side based on a third feature, for example sex.
+我们还可以指定一个 `hue` 参数来并排比较基于第三个特征的条形图，例如性别。
 
-### Heatmaps in Seaborn
+### Seaborn 中的热度
 
-A heatmap is used to visualize 2-dimensional data like a matrix or a table using colors. The best way to understand it is by looking at an example.
+热图用于可视化二维数据，如使用颜色的矩阵或表格。理解它的最好方式就是具体看一个例子。
 
-We'll use another sample dataset from Seaborn, called `flights`, to visualize monthly passenger footfall at an airport over 12 years.
+我们将使用另一个 Seaborn 的样本数据集，叫做 `flights`，来可视化机场在过去12年中的乘客流量。
 
-`flights_df` is a matrix with one row for each month and one column for each year. The values show the number of passengers (in thousands) that visited the airport in a specific month of a year. We can use the `sns.heatmap` function to visualize the footfall at the airport.
+`flights_df` 是一个矩阵，一行表示一月，一列为一年。值显示了在一年中具体某个月到访机场的乘客数量（以千为计）。我们可以使用 `sns.heatmap` 函数来可视化机场的客流。
 
-The brighter colors indicate a higher footfall at the airport. By looking at the graph, we can infer two things:
+颜色越明亮，表示机场客流量越大。通过这个图，我们可以推断两件事：
 
--   The footfall at the airport in any given year tends to be the highest around July and August.
--   The footfall at the airport in any given month tends to grow year by year.
+-   在所有给定的年份中，机场客流总是在七八月份达到最高。
+-   每个月机场的客流量都会逐年增加。
 
-We can also display the actual values in each block by specifying `annot=True` and using the `cmap` argument to change the color palette.
+我们还可以通过指定 `annot=True` 来显示每个块的实际值，使用 `cmap` 参数来改变调色板。
 
-### Images **in MatPlotLib**
+### **MatPlotLib** 中的图片
 
-We can also use Matplotlib to display images. Let's download an image from the internet.
+我们还可以用 Matplotlib 来显示图片。我们先从网上下载一张图片。
 
-### How to Plot Multiple Charts in a Grid **in MatPlotLib and Seaborn**
+### **MatPlotLib 和 Seaborn 中** 如何绘制多个图表
 
-Matplotlib and Seaborn also support plotting multiple charts in a grid, using `plt.subplots`, which returns a set of axes for plotting.
+Matplotlib 和 Seaborn 还支持在网格中绘制多个图表，通过使用 `plt.subplots`，返回用于绘图的轴的系列。
 
 Here's a single grid showing the different types of charts we've covered in this tutorial.
 

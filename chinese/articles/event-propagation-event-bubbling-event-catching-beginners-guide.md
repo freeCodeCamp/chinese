@@ -5,32 +5,31 @@
 
 ![Event Bubbling and Event Catching in JavaScript and React – A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2021/09/pexels-anthony-132477.jpg)
 
-In this article, I'll help you understand event bubbling and event catching like a pro. I created this resource to help you understand event propagation and how it works in JavaScript and React in a clear and comprehensible way. ❤
+这篇文章将帮助你像一位专业程序员一样理解事件冒泡和事件捕获。我将用简单、清晰的语言帮助你了解事件传播在JavaScript和React中的工作机制。❤
 
-Once you've gone through this thorough introduction to event bubbling and event caching, you should be able to start applying what you've learned here in your projects right away.
+阅读完从事件冒泡到事件捕获的完整介绍，你就可以在项目练习中学以致用。
 
-Here's what you’ll learn:
 
--   **✨** [What is Event Delegation?](#what-is-event-delegation)
--   ✨ [What is Event Bubbling?](#what-is-event-bubbling)
--   ✨ [How Event Bubbling Happens in JavaScript](#how-event-bubbling-happens-in-javascript)
--   ✨ [How Event Bubbling Happens in React](#how-event-bubbling-happens-in-react)
--   ✨ [How to Stop Event Bubbling in Your Components](#how-to-stop-event-bubbling-in-your-components)
--   ✨ [Event.target vs Event.currentTarget](#event-target-vs-event-currenttarget)
--   ✨ [Updated Event Firing Order and useCapture Param in JavaScript](#updated-event-firing-order-and-usecapture-param-in-javascript)
--   ✨ [Which Events Do Not Bubble and How Are They Handled?](#which-events-do-not-bubble-and-how-are-they-handled)
--   ✨ [Event Listeners In React Version 16 and before VS Version 17+](#event-listeners-in-react-version-16-and-before-vs-version-17-)
--   ✨ [Special Edge Case: What If You Need an Outer Parent to Fire too?](#special-edge-case-what-if-you-need-an-outer-parent-to-fire-too)
+你将学习到：
+-   **✨** [何为事件委托？](#what-is-event-delegation)
+-   ✨ [事件冒泡](#what-is-event-bubbling)
+-   ✨ [在JavaScript中事件冒泡是如何产生的？](#how-event-bubbling-happens-in-javascript)
+-   ✨ [在React中事件冒泡是如何产生的？](#how-event-bubbling-happens-in-react)
+-   ✨ [如何在你的组件中终止事件冒泡](#how-to-stop-event-bubbling-in-your-components)
+-   ✨ [对比Event.target和Event.currentTarget](#event-target-vs-event-currenttarget)
+-   ✨ [更新后的事件执行顺序以及JavaScript中的useCapture参数](#updated-event-firing-order-and-usecapture-param-in-javascript)
+-   ✨ [哪些事件不冒泡，如何处理这些事件？](#which-events-do-not-bubble-and-how-are-they-handled)
+-   ✨ [React 16及过往版本中的事件监听器对比React 17及以上](#event-listeners-in-react-version-16-and-before-vs-version-17-)
+-   ✨ [特殊情况：当需要执行父元素的时候怎么办？](#special-edge-case-what-if-you-need-an-outer-parent-to-fire-too)
 
-## What is Event Delegation?
+## 何为事件委托
+长话短说，事件委托是一种强大的JavaScript技术，这种技术使得事件监听更加高效。
 
-Long story short, event delegation is simply put a powerful JavaScript technique that allows more efficient event handling.
+### 👍 优点 (下文更多补充)
 
-### 👍 Pros (more later)
+-   因为仅有一个事件监听添加在顶层的父元素，而不是在每一个子元素上都添加监听器，所以这个技术效率高。
 
--   This technique is generally considered performant since only one event listener function is being used at the top-level parent rather than one for every child element.
-
-### 👎 Cons (more later)
+### 👎 缺点 (下午更多补充)
 
 -   Once an inner child element’s event is called, all elements above/below it will also be called (bubbling/capturing). To stop this from happening ,  a method on the `event` object must be called.
 

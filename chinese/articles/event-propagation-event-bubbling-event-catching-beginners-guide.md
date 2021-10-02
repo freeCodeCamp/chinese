@@ -1,6 +1,6 @@
 > -  原文地址：[Event Bubbling and Event Catching in JavaScript and React – A Beginner's Guide](https://www.freecodecamp.org/news/event-propagation-event-bubbling-event-catching-beginners-guide/)
 > -  原文作者：[Mariya Diminsky](https://www.freecodecamp.org/news/author/mariya-diminsky/)
-> -  译者：
+> -  译者：PapayaHUANG
 > -  校对者：
 
 ![Event Bubbling and Event Catching in JavaScript and React – A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2021/09/pexels-anthony-132477.jpg)

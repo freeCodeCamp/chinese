@@ -803,35 +803,35 @@ Seaborn 内置了对 Pandas 数据帧的支持。你可以提供列名并使用 
 
 Matplotlib 和 Seaborn 还支持在网格中绘制多个图表，通过使用 `plt.subplots`，返回用于绘图的轴的系列。
 
-Here's a single grid showing the different types of charts we've covered in this tutorial.
+以下单个网格中显示了本教材涵盖的各种不同类型的图表。
 
-See this page for a full list of supported functions: [https://matplotlib.org/3.3.1/api/axes\_api.html#the-axes-class](https://jovian.ai/outlink?url=https%3A%2F%2Fmatplotlib.org%2F3.3.1%2Fapi%2Faxes_api.html%23the-axes-class) .
+通过该网页查看支持函数的完整列表：[https://matplotlib.org/3.3.1/api/axes\_api.html#the-axes-class](https://jovian.ai/outlink?url=https%3A%2F%2Fmatplotlib.org%2F3.3.1%2Fapi%2Faxes_api.html%23the-axes-class) 。
 
-#### ****Pair** P**lots with Seaborn****
+#### ****用 Seaborn 来配对绘图****
 
-Seaborn also provides a helper function `sns.pairplot` to automatically plot several different charts for pairs of features within a dataframe.
+Seaborn 还提供了一个助手函数 `sns.pairplot`，用于在一个数据帧内自动绘制多个不同的图表，以显示多个特征对。
 
-### Summary and Further Reading
+### 总结及扩展阅读
 
-We have covered the following topics in this tutorial:
+本教程涵盖了以下主题：
 
--   How to create and customize line charts using Matplotlib
--   How to visualize relationships between two or more variables using scatter plots
--   How to study distributions of variables using histograms and bar charts
--   How to visualize two-dimensional data using heatmaps
--   How to display images using Matplotlib's `plt.imshow`
--   How to plot multiple Matplotlib and Seaborn charts in a grid
+-   如何使用 Matplotlib 来创建和自定义折线图
+-   如何使用散点图可视化两个或多个变量之间的关系
+-   如何使用直方图和条形图研究变量的分布
+-   如何使用热图可视化二维数据
+-   如何使用 Matplotlib 的 `plt.imshow` 显示图像
+-   如何在一个网格中显示多个 Matplotlib 和 Seaborn 图表
 
-In this tutorial we've covered some of the fundamental concepts and popular techniques for data visualization using Matplotlib and Seaborn. Data visualization is a vast field and we've barely scratched the surface here. Check out these references to learn and discover more:
+在本章中，我们学习了使用 Matplotlib 和 Seaborn 进行数据可视化的一些基本概念和常用技术。数据可视化是一个很宽泛的领域，我们在这里几乎还没有触及其表层。查阅以下参考文献来学习探索更多内容：
 
--   Data Visualization cheat sheet: [https://jovian.ml/aakashns/dataviz-cheatsheet](https://jovian.ai/outlink?url=https%3A%2F%2Fjovian.ml%2Faakashns%2Fdataviz-cheatsheet)
--   Seaborn gallery: [https://seaborn.pydata.org/examples/index.html](https://jovian.ai/outlink?url=https%3A%2F%2Fseaborn.pydata.org%2Fexamples%2Findex.html)
--   Matplotlib gallery: [https://matplotlib.org/3.1.1/gallery/index.html](https://jovian.ai/outlink?url=https%3A%2F%2Fmatplotlib.org%2F3.1.1%2Fgallery%2Findex.html)
--   Matplotlib tutorial: [https://github.com/rougier/matplotlib-tutorial](https://jovian.ai/outlink?url=https%3A%2F%2Fgithub.com%2Frougier%2Fmatplotlib-tutorial)
+-   数据可视化备忘单：[https://jovian.ml/aakashns/dataviz-cheatsheet](https://jovian.ai/outlink?url=https%3A%2F%2Fjovian.ml%2Faakashns%2Fdataviz-cheatsheet)
+-   Seaborn 资料：[https://seaborn.pydata.org/examples/index.html](https://jovian.ai/outlink?url=https%3A%2F%2Fseaborn.pydata.org%2Fexamples%2Findex.html)
+-   Matplotlib 资料：[https://matplotlib.org/3.1.1/gallery/index.html](https://jovian.ai/outlink?url=https%3A%2F%2Fmatplotlib.org%2F3.1.1%2Fgallery%2Findex.html)
+-   Matplotlib 教程：[https://github.com/rougier/matplotlib-tutorial](https://jovian.ai/outlink?url=https%3A%2F%2Fgithub.com%2Frougier%2Fmatplotlib-tutorial)
 
-### Review Questions to Check Your Comprehension
+### 回顾问题来检验你的掌握程度
 
-Try answering the following questions to test your understanding of the topics covered in this notebook:
+尝试回答以下问题来测试你对本文所涵盖的主题的理解程度：
 
 1.  数据可视化是什么？
 2.  Matplotlib是什么？
@@ -874,42 +874,42 @@ Try answering the following questions to test your understanding of the topics c
 39.  条形图和折线图的区别是什么？
 40.  你如何将条形堆叠在一起？
 41.  `plt.bar` 和 `sns.barplot` 的区别是什么？
-42.  What do the lines cutting the bars in a Seaborn bar plot represent?
-43.  How do you show bar plots side-by-side?
-44.  How do you draw a horizontal bar plot?
-45.  What is a heat map?
-46.  What type of data is best visualized with a heat map?
-47.  What does the `pivot` method of a Pandas dataframe do?
-48.  How do you draw a heat map using Seaborn? Illustrate with an example.
-49.  How do you change the color scheme of a heat map?
-50.  How do you show the original values from the dataset on a heat map?
-51.  How do you download images from a URL in Python?
-52.  How do you open an image for processing in Python?
-53.  What is the purpose of the `PIL` module in Python?
-54.  How do you convert an image loaded using PIL into a Numpy array?
-55.  How many dimensions does a Numpy array for an image have? What does each dimension represent?
-56.  What are "color channels" in an image?
-57.  What is RGB?
-58.  How do you display an image using Matplotlib?
-59.  How do you turn off the axes and gridlines in a chart?
-60.  How do you display a portion of an image using Matplotlib?
-61.  How do you plot multiple charts in a grid using Matplotlib and Seaborn? Illustrate with examples.
-62.  What is the purpose of the `plt.subplots` function?
-63.  What are pair plots in Seaborn? Illustrate with an example.
-64.  How do you export a plot into a PNG image file using Matplotlib?
-65.  Where can you learn about the different types of charts you can create using Matplotlib and Seaborn?
+42.  在 Seaborn 条形图中，分割柱状条的线条代表了什么？
+43.  如何并排显示条形图？
+44.  如何绘制水平条形图？
+45.  什么是热图？
+46.  什么类型的数据最好用热图来进行可视化？
+47.  Pandas 数据帧中的 `pivot` 方法是干什么用的？
+48.  如何用 Seaborn 来绘制热图？举例说明。
+49.  如何更改热图的颜色方案？
+50.  如何显示热图中数据集的原始值？
+51.  如何用 Python 从 URL 下载图片？
+52.  如何用 Python 打开图片以用于处理？
+53.  Python 中 `PIL` 模块的作用是什么？
+54.  如何将 PIL 下载的图片转换成 Numpy 数组？
+55.  图片的 Numpy 数组有几维？每个维度代表什么？
+56.  图片中的“颜色通道”是什么意思？
+57.  什么是 RGB？
+58.  如何用 Matplotlib 显示图片？
+59.  如何关闭图表中的轴和网格线？
+60.  如何使用 Matplotlib 显示部分图片？
+61.  如何用 Matplotlib 和 Seaborn 在单个网格中绘制多个图表？举例说明。
+62.  `plt.subplots` 函数的作用是什么？
+63.  什么是 Seaborn 的配对绘图？举例说明。
+64.  如何用 Matplotlib 将图表导出到 PNG 图片？
+65.  在哪里可以学到能用 Matplotlib 和 Seaborn创建的不同类型的图表？
 
-Congratulations on making it to the end of this tutorial! You can now apply these skills to analyze real world datasets from sources like [Kaggle](https://kaggle.com/datasets).
+祝贺您完成本教程的学习！现在，您可以应用这些技能来分析来自以下来源的真实世界数据集：[Kaggle](https://kaggle.com/datasets).
 
-If you're pursuing a career in data science and machine learning, consider joining the [Zero to Data Science Bootcamp by Jovian](https://zerotodatascience.com). It's a 20-week part-time program where you'll complete 7 courses, 12 coding assignments and 4-real world projects. You will also receive 6 months of career support to help you find your first data science job.
+如果你想从事数据科学和机器学习的工作，可以考虑加入 [从零开始数据科学训练营（约维安）](https://zerotodatascience.com)。这是一个为期20周的业余课程，你将完成7门课程、12个编码作业和4个真实的项目。你还将获得6个月的职业支持，以帮助你找到第一份数据科学工作。
 
 [
 
-Part-Time Data Science Bootcamp - Money Back Guarantee - Jovian
+业余数据科学训练营——退款保证——约维安
 
-Learn industry-relevant skills from Silicon Valley engineers, build real-world projects, and start your data science career. Get hired or get your money back.
+从硅谷工程师那里学习与行业相关的技能，构建真实世界的项目，并开始您的数据科学职业生涯。找到工作或者挣回属于你的钱。
 
-![](https://uploads-ssl.webflow.com/5f853acc1d8f7c5cbc3cda0d/5f8cf00b4cdcc3434cfa71d5_jovian_logo_256_square.png)Jovian
+![](https://uploads-ssl.webflow.com/5f853acc1d8f7c5cbc3cda0d/5f8cf00b4cdcc3434cfa71d5_jovian_logo_256_square.png)约维安
 
 ![](https://uploads-ssl.webflow.com/5f853acc1d8f7c5cbc3cda0d/60920cd3dcd3ce02eb03101f_bootcamp-1200x628.png)
 

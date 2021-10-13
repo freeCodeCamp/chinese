@@ -109,19 +109,22 @@ You can define a promise in your JavaScript by calling the `Promise` class and c
 const myPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve('this is the eventual value the promise will return');
-  }, 300);
+  }, 3000);
 });
 
 console.log(myPromise);
 ```
 
 Code sample one
+示例1
 
 Running this in the console will return a `Promise` object:
+在控制台运行将返回一个`Promise`对象：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/promise-console-1.png)
 
 Constructing an object is not the only way you can define a promise, though. You can also use the built-in `Promise` API to achieve the same thing:
+除了通过构造函数声明一个promise对象外，还可以使用`Promise`内置的API进行声明：
 
 ```js
 const anotherPromise = Promise.resolve("this is the eventual value the promise will return")
@@ -130,41 +133,50 @@ console.log(anotherPromise);
 ```
 
 Code sample two
+示例2
 
 While the promise in the first code sample will wait for 3 seconds before fulfilling the promise with the `this is the eventual...` message, the promise in the second code sample will immediately fulfill it with the same message.
+示例1中的promise等待3s后获取到成功返回的信息：`this is the eventual...`，而示例2中将立即获取到成功返回的信息。
 
 ## Rejected Promises in JavaScript
+## JavaScript Promise中的错误处理
 
 A Promise can also be rejected. Most of the time, rejections occur because JS encountered some kind of error while running the Asynchronous code. In such a scenario, it calls the `reject()` function instead.
+Promise对象也可能被*rejected*。大多数时候，**rejected**的发生是因为执行异步任务的时候js触发了某种错误，此时就会调用`reject()`方法。
 
 Here is simple and contrived example of how a promise can get rejected:
+如下示例展示了一个promise对象是如何执行reject: 
 
 ```js
 const myPromise = new Promise((resolve, reject) => {
   let a = false;
   setTimeout(() => {
     return (a) ? resolve('a is found!'): reject('sorry, no a');
-  }, 300);
+  }, 3000);
 }); 
-
-
-
 
 ```
 
 Code example three
+示例3
 
 Can you think of the reason why this promise gets rejected? If you said "because `a` is not false", congratulations!
+你能想到promise被rejected的原因吗？如果你的答案是：`a`的值是false，那么恭喜你答对了。
 
 The promise in the third code sample will resolve to a rejection after a timeout of three seconds, because the `(a)?` statement resolves to false, which will trigger `reject`.
+在示例3中 3s后将执行reject方法，因为`(a)?`表达式的值是false，将触发`reject`方法。
 
 ## How to Chain Promises with `then()`
+## Promise的链式调用
 
 When the promise finally returns a value, you will typically want to do something with that return value.
+当promise返回了某个值，通常你都会对返回值进行处理。
 
 For example, if you were making a network request, you might want to access the value and display it on the page for the user.
+比如，你发送了一个网络请求，你可能期望获取值并展示在页面上。
 
 You can define two callback functions which you want to get called when a promise is either fulfilled or rejected. These functions are defined inside a nested `then()` method:
+
 
 ```JS
 const anotherPromise = new Promise((resolve, reject) => {

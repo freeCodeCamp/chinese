@@ -176,13 +176,13 @@ For example, if you were making a network request, you might want to access the 
 比如，你发送了一个网络请求，你可能期望获取值并展示在页面上。
 
 You can define two callback functions which you want to get called when a promise is either fulfilled or rejected. These functions are defined inside a nested `then()` method:
-
+你可以定义两个回调函数，当promise返回成功或失败时进行回调。这两个回调函数定义在`then()`内：
 
 ```JS
 const anotherPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve('this is the eventual value the promise will return');
-  }, 300);
+  }, 3000);
 });
 
 // CONTINUATION
@@ -191,18 +191,21 @@ anotherPromise
 ```
 
 Code example four
+示例4
 
 Running this code will display the fulfillment message after three seconds in the console:
+示例4代码在3s后返回成功信息：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/EVENTAL-RETURN.png)
 
 Note that you can nest as many promises as you want. Each step will execute after the previous step, taking in the return value of that previous step:
+原则上你可以无限链式调用，调用链会依次执行，而且前一个then的返回值作为参数传入后一个then。
 
 ```js
 const anotherPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve('this is the eventual value the promise will return');
-  }, 300);
+  }, 3000);
 });
 
 anotherPromise
@@ -212,25 +215,32 @@ anotherPromise
 ```
 
 Code example five
+示例5
 
 But we have missed something important.
+但我们还是遗漏了重要的内容。
 
 Always keep in mind that a `then()` method must take both the fulfillment hander and a rejection handler. This way, the first is called if the promise is fulfilled and the second is called if the promise is rejected with an error.
+要时刻记住，`then()`方法必须有两个回调函数：一个是成功回调，一个是错误回调。而且第一个参数是成功回调，第二个参数是错误回调。
 
 The promises in code samples four and five does not include a second handler. So, assuming that an error is encountered, there would be no rejection handler to handle the error.
+在示例4和示例5中都没有传入第二个回调函数。因此，如果代码报错，就没有错误回调捕捉到错误信息。
 
 If you are only going to define a single callback function (aka a fulfillment handler) in `then()`, then you will need to nest a `catch()` method at the bottom of the promise chain to catch any possible errors.
+如果你执意要在`then()`中只定义一个回调函数（即成功回调），那么你就需要在promise调用链的末端调用`catch()`方法捕获任何可能的报错信息。
 
 ### How to Use the `catch()` Method in JS
+### 如何在JS中使用`catch()`方法
 
 The `catch()` method will always get called whenever an error is encountered at any point along the promise chain:
+在promise调用链上，无论哪个环节报错，`catch()`方法都会被调用。
 
 ```js
 const myPromise = new Promise((resolve, reject) => {
   let a = false;
   setTimeout(() => {
     return (a) ? resolve('a is found!'): reject('sorry, no a');
-  }, 300);
+  }, 3000);
 }); 
 
 myPromise
@@ -241,19 +251,28 @@ myPromise
 ```
 
 Code example six
+示例6
 
 Since `myPromise` will eventually resolve to a rejection, the function defined in the nested `then()` will be ignored. Instead, the error handler in `catch()` will run, which should log the following error message to the console:
+因为`myPromise`最终状态是rejected，`then()`方法中的成功回调被忽略。而`catch()`方法中的错误回调被调用，并在控制台打印如下错误信息：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/Catch.png)
 
 ## Wrapping Up
+## 写在最后
 
 JavaScript promises are a very powerful feature that help you run asynchronous code in JavaScript. In most, if not all, interviews for roles which use JavaScript, your interviewer will probably ask a question about promises.
+JavaScript中的Promise是一个非常强大的，运行异步脚本的功能。大部分情况下，在前端面试时，面试官都会问一些关于promise的问题。
 
 In this article, I have explained what a promise is in simple terms, and I've shown its basic practical usage with some code examples.
+在这片文章中，我已经解释了promise的简单应用场景，也通过示例的方式展示了基本用法。
 
 I hope you got something useful from this article. If you like programming-related tutorials like this, you should [check out my blog](https://ubahthebuilder.tech/user-authentication-vs-user-authorization-what-do-they-mean-in-back-end-web-development). I regularly publish articles on software development there.
+希望你能从文章中获取有用的知识。如果你喜欢编程教程，点击查看[我的博客](https://ubahthebuilder.tech/user-authentication-vs-user-authorization-what-do-they-mean-in-back-end-web-development)。我会经常发布一些有关软件开发的文章。
 
 Thank you for reading and see you soon.
+再次感谢您的阅读，有机会再见。
 
 ********P/S********: If you are learning JavaScript, I created an eBook which teaches 50 topics in JavaScript with hand-drawn digital notes. [Check it out here](https://ubahthebuilder.gumroad.com/l/js-50).
+
+如果你也在学习JavaScript，我也创建了一个电子书，上面有50个关于js的主题，而且都是我亲自手绘的哦~~ [点此查看](https://ubahthebuilder.gumroad.com/l/js-50).

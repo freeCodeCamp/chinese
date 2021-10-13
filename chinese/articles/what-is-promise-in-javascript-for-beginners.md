@@ -6,10 +6,13 @@
 ![What is a Promise? JavaScript Promises for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/JS-Promises-Expl.png)
 
 If you're a JavaScript beginner, you might be struggling to understand what a promise really is.
+如果你还是一个Javascript小白，你可能要纠结一下`promise`到底是什么。
 
 I recently published this as a thread on Twitter and was blown away by the responses. So I decided to expand this into an introductory tutorial on JavaScript promises.
+最近我发了一条推特，描述了这个问题，我被大家的反馈震惊到了。所以我决定写一篇关于`JavaScript promise`的教程。
 
 I have read a lot of articles on promises and the problem is that many of these guides don't explain them in a relatable way. People don't understand what a promise is in JavaScript is because they don't really know what it is about and how it behaves in simple and relatable terms.
+我看过很多关于`promise`的文章，大部分都没有
 
 So in this article, I will be telling you a short story which explains what promises are and how exactly they work. I will also show you how to use promises in your JavaScript with some examples.
 

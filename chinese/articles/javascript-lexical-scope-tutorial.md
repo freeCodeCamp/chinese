@@ -1,6 +1,6 @@
 > -  原文地址：[Lexical Scope in JavaScript – What Exactly Is Scope in JS?](https://www.freecodecamp.org/news/javascript-lexical-scope-tutorial/)
 > -  原文作者：[Oluwatobi Sofela](https://www.freecodecamp.org/news/author/oluwatobiss/)
-> -  译者：
+> -  译者：byself
 > -  校对者：
 
 ![Lexical Scope in JavaScript – What Exactly Is Scope in JS?](https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/kristina-tripkovic-EGmwwDzme6s-unsplash-javascript-lexical-scope-codesweetly.jpg)

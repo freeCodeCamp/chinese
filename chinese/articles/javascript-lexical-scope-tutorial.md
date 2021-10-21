@@ -159,7 +159,7 @@ console.log(profile())
 
 ## 你做对了吗？
 
-在上面脚本中定义的三个`fullName`中，编译器将首先调用并返回定义在`sayName()`函数中的`fullName`变量。
+在上面脚本中定义的三个`fullName`中，编译器将调用并返回定义在`sayName()`函数中的`fullName`变量。
 
 `sayName()`中定义的`fullName`之所以会被调用，是因为编译器查找作用域链时最先在`sayName()`的作用域中找到`fullName`。
 

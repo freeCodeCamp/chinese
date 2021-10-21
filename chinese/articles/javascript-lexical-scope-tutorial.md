@@ -180,21 +180,25 @@ So, here are the sequential steps the computer must take to locate `fullName`'s 
 3.  Thirdly, the computer will search for `fullName`'s definition in the `profile()` function. Yet still, `fullName` is not found there. So the computer goes forward to seek `fullName`'s lexical scope in the next region of the scope chain.
 4.  Fourthly, the computer goes to the _global scope_ (the following scope after `profile()`). Fortunately, it finds fullName's definition there! Therefore, it gets its content (`"Oluwatobi Sofela"`) and returns it.
 
-1. 首先
-2. 奥德赛f
-3. 阿斯蒂芬
-4. 阿斯蒂芬
+1. 首先，编译器会检查`writeName()`的函数作用域是否定义了`fullName`变量。发下没有后，向上查找下一个作用域。
+2. 第二步，编译器会在`sayName()`的函数作用域中查找，依然没找到，继续向上查找下一个作用域。
+3. 第三步，编译器会在`profile()`的函数作用域中查找，还是没找到，继续向上查找下一个作用域。
+4. 第四步，编译器查找到了全局作用域。幸运的是，在全局作用域下找到了`fullName`变量，并将其值（`"Oluwatobi Sofela"`）返回。
 
 
 ## Time to Practice with Scope 🤸‍♂️🏋️‍♀️🏊‍♀️
 
+## 是时候实践一下了🤸‍♂️🏋️‍♀️🏊‍
+
 Consider the script below. Which of the three `fullName` variables will the computer call?
 
+考虑以下代码，并思考编译器将如何调用3个`fullName`变量？
+
 ```js
-// First fullName variable defined in the global scope:
+// 在全局作用域中定义fullName:
 const fullName = "Oluwatobi Sofela";
 
-// Nested functions containing two more fullName variables:
+// 嵌套函数包含2个fullName变量
 function profile() {
   const fullName = "Tobi Sho";
   function sayName() {
@@ -206,27 +210,46 @@ function profile() {
   }
   return sayName();
 }
+
+console.log(profile())
 ```
 
 Will the computer call the first, second, or third `fullName` variable?
 
+编译器将如何依次调用三个`fullName`变量？
+
 **Note:** You will benefit much more from this tutorial if you attempt the exercise yourself.
+
+**注意：** 如果你尝试多多练习，你讲从这个教程中收益多多。
 
 If you get stuck, don’t be discouraged. Instead, review the lesson and give it another try.
 
+如果你卡住了，不要气馁。重新温习以上知识，然后在试一次。
+
 Once you’ve given it your best shot (you’ll only cheat yourself if you don’t!), go ahead to see the correct answer below.
+
+如果你用尽了全力（除非你自欺欺人）还是不会，那就继续往下看正确答案吧。
 
 ## Did you get it right?
 
+## 你做对了吗？
+
 Out of the three `fullName` _definitions_ present in the script above, the computer will call and return the one defined in the `sayName()` function.
+
+在上面脚本中定义的三个`fullName`中，编译器将首先调用并返回`sayName()`函数中定义的`fullName`变量。
 
 `sayName()`’s `fullName` variable will get called because `sayName()` is the scope inside which the computer will first find a `fullName` definition.
 
+`sayName()`中定义的`fullName`之所以会被调用，是因为编译器查找作用域链时最先在`sayName()`的作用域中找到`fullName`的定义。
+
 Therefore, when `profile()` gets invoked, the returned value will be `"Oluwa Sofe"`.
 
-[**Try it on StackBlitz**](https://stackblitz.com/edit/web-platform-9mpvfv?file=script.js)
+因此，当`profile()`被调用时，返回值是`"Oluwa Sofe"`。
+
+[**点击查看源代码**](https://stackblitz.com/edit/web-platform-9mpvfv?file=script.js)
 
 **Some things to keep in mind:**
+**强调3点：**
 
 -   Suppose the computer did not find `fullName`'s definition in any of the scopes. In such a case, the computer will return `Uncaught ReferenceError: fullName is not defined`.
 -   The global scope is always the last scope of any JavaScript scope chain. In other words, the global scope is where all searches will end.
@@ -234,149 +257,245 @@ Therefore, when `profile()` gets invoked, the returned value will be `"Oluwa Sof
     For instance, in the snippet above, `writeName()` can access codes inside any of its parent scope (`sayName()`, `profile()`, or the _global scope_).  
     However, neither `sayName()`, `profile()`, nor the _global scope_ can access any of `writeName()`'s codes.
 
+-   假如编译器没有在任何作用域中找到`fullName`，那么编译器将返回一个引用错误`Uncaught ReferenceError: fullName is not defined`。
+-   全局作用域是Javascript作用域链的最后一个作用域，换言之，全局作用域是查找的终点。
+-   一个内部作用域（子作用域）可以访问它的外部作用域（父作用域），但是外部作用域不能访问它的子作用域。
+    举个例子，在上面代码中，`writeName()`可以访问它的任何父级作用域（比如`sayName()`的局部作用域，`profile()`的局部作用域，或者全局作用域）。
+    然而，无论是`sayName()`和`profile()`局部作用域，还是全局作用域都不能访问`writeName()`的作用域。
+
 ## Quick Review of Scope So Far
+
+## 对Scope的小结
 
 JavaScript scope is all about space.
 
+Javascript中所有的作用域都是范围。
+
 So next time your partner calls you to their private scope, remember they are inviting you to their private space 😜!
+
+因此，下次你女（男）朋友打电话让你去他们的私人作用域时，切记他们是在要邀请你去他们的私人空间 😜!
 
 When you get there, be sure to ask them about their best lexical game...
 
+你一旦去了，就要问他们最好的词法游戏是什么...
+
 But what does lexical mean, I hear you ask? Let’s find out below.
+
+但是词法（lexical）究竟是什么意思，让我们一起往下看。
 
 ## What Does Lexical Mean?
 
+## 什么是词法（Lexical）?
+
 **Lexical** refers to the definition of things.
+
+**词法（Lexical）** 意味着定义某个事物。
 
 Anything related to creating words, expressions, or variables is termed _lexical_.
 
+任何创建文字，表达式，或变量的语句都叫词法。
+
 For instance, a [scrabble](https://en.wikipedia.org/wiki/Scrabble) game is a lexical activity because it relates to the creation of words.
+
+比如，拼字游戏就是一种词法活动，因为这个游戏涉及到文字的创造。
 
 Also, someone whose job relates to linguistics (the study of languages) has a lexical career.
 
+语言学家的工作也是一种词法事业。
+
 **Note:** Another name for a dictionary is a _lexicon_. In other words, a lexicon is a dictionary where words are listed and defined.
+
+**注意：** 字典（dictionary）又叫词典（lexicon），也就是说，词典（lexicon）就是一部罗列并定义文字的字典（dictionary）。
 
 So now that we know what scope and lexical mean, we can talk about lexical scope.
 
+现在我们知道了作用域和词法的意思，那就可以讨论 **词法作用域** 了。
+
 ## What is Lexical Scope in JavaScript?
+
+## 什么是词法作用域（Lexical Scope）？
 
 **Lexical scope** is the _definition_ area of an expression.
 
+**词法作用域（Lexical Scope）** 是表达式被定义时的作用域范围。
+
 In other words, an item's lexical scope is the place in which the item got _created_.
 
+换言之，一个声明（定义变量，函数等）的词法作用域就是它被定义时的作用域。
+
 **Note:**
+
+**注意：**
 
 -   Another name for lexical scope is _static scope_.
 -   The place an item got invoked (or called) is not necessarily the item's lexical scope. Instead, an item's _definition space_ is its lexical scope.
 
+-   词法作用域又叫静态作用域。
+-   一个声明 **被调用时的作用域** 不一定是它的词法作用域。相反的，**定义时的作用域** 才是词法作用域
+
 ### Example of Lexical Scope
+### 一个词法作用域的小示例
 
 Consider the code below:
 
+考虑如下代码：
+
 ```js
-// Define a variable in the global scope:
+// 定义一个全局作用域变量:
 const myName = "Oluwatobi";
 
-// Call myName variable from a function:
+// 在函数体内调用myName变量
 function getName() {
   return myName;
 }
+
+console.log(getName()) // 'Oluwatobi'
 ```
 
 In the snippet above, notice that we _defined_ the `myName` variable in the global scope and _called_ it in the `getName()` function.
 
+在上面代码中，我们在全局作用域定义了`myName`变量，并在`getName()`函数作用域内调用了该变量。
+
 **Question:** Which of the two spaces is `myName`’s lexical scope? Is it the _global scope_ or the `getName()` function’s local scope?
+
+**问题：** `myName`的词法作用域是谁？ 全局作用域 还是 `getName()`的局部作用域？
 
 **Answer:** Remember that _lexical scope_ means _definition space_ — not _invocation space_. Therefore, `myName`’s lexical scope is the _global scope_ because we defined `myName` in the global environment.
 
+**答案：** 切记 **词法作用域** 意味着 **定义时的作用域**，并不是**调用时的作用域** 。因此`myName`的词法作用域是全局作用域，因为我们在全局环境下定义了`myName`变量。
+
 ### Another example of lexical scope
+### 再来一个小例子
 
 ```js
 function getName() {
   const myName = "Oluwatobi";
   return myName;
 }
+
+console.log(getName())  // 'Oluwatobi'
 ```
 
 **Question:** Where is `myName`’s lexical scope?
 
+**问题：** `myName`的词法作用域是谁？
+
 **Answer:** Notice that we created and called `myName` within `getName()`. Therefore, `myName`’s lexical scope is `getName()`’s local environment because `getName()` is `myName`’s definition space.
+
+**答案：** 我们在`getName()`内部定义并调用了`myName`。因此，`myName`的词法作用域是`getName()`的局部作用域，因为`getName()`是`myName`的定义区间。
 
 ## How Does Lexical Scope Work?
 
+## 词法作用域如何工作？
+
 A JavaScript expression’s definition environment determines the [code](https://www.codesweetly.com/document-vs-data-vs-code/) permitted to access it.
+
+Javascript表达式定义时的环境决定哪些代码可以访问它。
 
 In other words, only code within an item's lexical scope can access it.
 
-For instance, consider the code below:
+换言之，只有词法作用域内的代码才可以访问它。
+
+考虑如下代码:
 
 ```js
-// Define a function:
+// 定义一个函数:
 function showLastName() {
   const lastName = "Sofela";
   return lastName;
 }
 
-// Define another function:
+// 再定义一个函数:
 function displayFullName() {
   const fullName = "Oluwatobi " + lastName;
   return fullName;
 }
 
-// Invoke displayFullName():
+// 调用 displayFullName():
 console.log(displayFullName());
 
-// The invocation above will return:
+// 返回值:
 Uncaught ReferenceError: lastName is not defined
 ```
 
 Notice that the invocation of `displayFullName()` in the snippet above returned an `Uncaught ReferenceError`. The error returned because only code within an item's lexical scope can access the item.
 
+上述代码中，调用`displayFullName()`时报错`Uncaught ReferenceError`。这是因为只有在变量的词法作用域内的代码才能访问该变量。
+
 Therefore, neither the `displayFullName()` function nor its internal code can access the `lastName` variable because `lastName` got defined in a different scope.
+
+因此，不管是`displayFullName()`函数，还是它内部的代码都不能访问`lastName`变量，因为`lastName`定义在不同的作用域中。
 
 In other words, `lastName`’s lexical scope is different from that of `displayFullName()`.
 
+换言之，`lastName`的词法作用域和`displayFullName()`不相同。
+
 `lastName`’s definition space is `showLastName()` while `displayFullName()`’s lexical scope is the global environment.
+
+`lastName`定义区间是在`showLastName()`， 而`displayFullName()`的词法作用域是全局环境。
 
 Now, consider this other code below:
 
+现在，考虑另一段代码：
+
 ```js
+// 定义一个函数:
 function showLastName() {
   const lastName = "Sofela";
   return lastName;
 }
 
-// Define another function:
+// 再定义一个函数:
 function displayFullName() {
   const fullName = "Oluwatobi " + showLastName();
   return fullName;
 }
 
-// Invoke displayFullName():
+// 调用 displayFullName():
 console.log(displayFullName());
 
-// The invocation above will return:
+// 返回值:
 "Oluwatobi Sofela"
 ```
 
 In the snippet above, `displayFullName()` successfully returned `"Oluwatobi Sofela"` because `displayFullName()` and `showLastName()` are in the same lexical scope.
 
+在上述代码中，`displayFullName()`成功返回`"Oluwatobi Sofela"`，因为`displayFullName()`和`showLastName()`在相同的词法作用域中。
+
 In other words, `displayFullName()` could invoke `showLastName()` because the two functions are both defined in the global scope.
 
+换言之，`displayFullName()`可以调用`showLastName()`，因为这两个函数都定义在全局环境中。
+
 **Note:**
+
+**注意：**
 
 -   In example 2 above, `displayFullName()` did not gain access to `showLastName()`'s `lastName` variable.  
     Instead, `displayFullName()` invoked `showLastName()` — which then returned the content of its `lastName` variable.
 -   An alternative to the lexical scope is the [dynamic scope](https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scope_vs._dynamic_scope_2) — but it rarely gets used in programming. Only a few languages, like bash, use dynamic scope.
 
+-   上述2个示例中，`displayFullName()`不能访问`showLastName()`中`lastName`变量。
+    但`displayFullName()`可以调用`showLastName()`，而`showLastName()`返回了`lastName`变量的值。
+-   词法作用域的替换方案是[态作用域](https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scope_vs._dynamic_scope_2)，但是除了在极少的开发语言（比如bash脚本）中使用动态作用域外，很少使用它。
+
 ## Wrapping it up
+
+## 总结
 
 Any time you hear lexical, think definition.
 
+只要你听到词法，就要想到定义区间。
+
 So, the lexical scope of a car, variable, phone, function, or swimsuit refers to its definition region.
+
+因此，一辆车，一个变量，一部手机，一个函数，一件泳衣等，这些事物的词法作用域指的就是定义区间。
 
 ## Overview
 
+## 写在最后
+
 This article discussed what lexical scope means in [JavaScript](https://www.codesweetly.com/html-css-javascript/). We also looked at why it is an important programming concept.
+
+这篇讨论了在Javascript中什么是词法作用域，以及为什么它时一个很重要的编程概念。 感谢你的阅读！
 
 Thanks for reading!

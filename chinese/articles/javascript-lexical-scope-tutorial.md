@@ -175,7 +175,7 @@ console.log(profile())
     举个例子，在上面代码中，`writeName()`可以访问它的任何父级作用域（比如`sayName()`的局部作用域，`profile()`的局部作用域，或者全局作用域）。
     但是，无论是`sayName()`和`profile()`的局部作用域，还是全局作用域都不能访问`writeName()`的作用域。
 
-## 对Scope的小结
+## 作用域小结
 
 Javascript中所有的作用域都是区间。
 

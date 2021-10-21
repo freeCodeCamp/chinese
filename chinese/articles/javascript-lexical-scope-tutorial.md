@@ -170,7 +170,7 @@ console.log(profile())
 **特别强调3点：**
 
 -   假如编译器没有在任何作用域中找到`fullName`，那么编译器将返回一个引用错误`Uncaught ReferenceError: fullName is not defined`。
--   全局作用域是Javascript作用域链的最后一个作用域，换言之，全局作用域是查找的终点。
+-   全局作用域是Javascript作用域链的最后一个作用域，即全局作用域是查找的终点。
 -   一个内部作用域（子作用域）可以访问它的外部作用域（父作用域），但是外部作用域不能访问它的子作用域。
     举个例子，在上面代码中，`writeName()`可以访问它的任何父级作用域（比如`sayName()`的局部作用域，`profile()`的局部作用域，或者全局作用域）。
     但是，无论是`sayName()`和`profile()`的局部作用域，还是全局作用域都不能访问`writeName()`的作用域。

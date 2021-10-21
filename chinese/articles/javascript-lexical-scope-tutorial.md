@@ -5,7 +5,7 @@
 
 ![Lexical Scope in JavaScript – What Exactly Is Scope in JS?](https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/kristina-tripkovic-EGmwwDzme6s-unsplash-javascript-lexical-scope-codesweetly.jpg)
 
-**词法作用域（ lexical scope ）** 的概念不好理解，也很难掌握。但如果我们可以搞清楚概念里每一个词的意思，对于理解概念将大有帮助。
+**词法作用域（ lexical scope ）** 的概念不好理解，也很难掌握。但如果我们可以搞清楚概念里每一个词的意思，对于理解词法作用域将大有帮助。
 
 因此本文将分别解释“词法（lexical）”和“作用域（scope）”这两个概念，然后在解释什么是词法作用域。
 

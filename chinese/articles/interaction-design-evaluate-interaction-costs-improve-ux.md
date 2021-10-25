@@ -155,6 +155,7 @@ If your ETS reveals many task-irrelevant saccadic movements, it’s likely due t
 如果你的 ETS 显示许多与任务无关的扫视移动，这可能是由于一个分散注意力的界面。你的 ETS 结果能帮助你了解用户是否遗漏了界面中的关键元素，哪些是分散注意力的，哪些是不必要的。
 
 ### Working memory
+
 ### 工作记忆
 
 There is an extensive classification for all the different types of memory.
@@ -167,7 +168,7 @@ In other words, our working memory is responsible for the information we can hol
 换句话说，我们的工作记忆负责在我们参与其他认知过程时，我们可以在脑海中保存信息。
 
 [Miller’s Law](https://lawsofux.com/laws/millers-law/) states that the average person can only keep 5–11 items in their working memory at a time. The working memory required to complete a task within your product is proportional to the MIC burden you impose on your users.
-[米勒定律](https://lawsofux.com/laws/millers-law/) 指出，一般人在工作记忆中一次只能保留 5-11 个项目。在你的产品中完成一项任务所需的工作记忆与你强加给用户的MIC负担成正比。
+[米勒定律](https://lawsofux.com/laws/millers-law/) 指出，一般人在工作记忆中一次只能保留 5-11 个项目。在你的产品中完成一项任务所需的工作记忆与你强加给用户的 MIC 负担成正比。
 
 ![A poster illustration of Miller's Law.](https://www.freecodecamp.org/news/content/images/2021/02/image-154.png)
 ![米勒定律的海报插图。](https://www.freecodecamp.org/news/content/images/2021/02/image-154.png)
@@ -176,10 +177,10 @@ Conversely, at no point should your task require the user to hold more than seve
 反过来说，在任何时候，你的任务都不应该要求用户在工作记忆中保留七个以上的项目。
 
 In rare scenarios where you require the user to hold more than 11 items in their memory, use “chunking” to reduce their mental burden. Chunking is when individual pieces of an information set are broken down and then grouped in a meaningful whole.
-在极少数情况下，如果你要求用户在他们的记忆中持有超过11个项目，可以使用 "分块 "来减少他们的心理负担。分块是指将一个信息集的单个片段分解，然后归纳为一个有意义的整体。
+在极少数情况下，如果你要求用户在他们的记忆中持有超过 11 个项目，可以使用 "分块 "来减少他们的心理负担。分块是指将一个信息集的单个片段分解，然后归纳为一个有意义的整体。
 
 For example, we remember phone numbers as XXX-XXXX rather than XXXXXXX. It’s easier to remember the number in two chunks rather than a series of seven individual units.
-例如，我们记住电话号码是XXX-XXXX，而不是XXXXXX。把数字分成两块，而不是一系列的七个独立单位，这样更容易记住。
+例如，我们记住电话号码是 XXX-XXXX，而不是 XXXXXX。把数字分成两块，而不是一系列的七个独立单位，这样更容易记住。
 
 Another factor to consider related to attention and memory is [“Hick’s Law.”](https://lawsofux.com/laws/hicks-law/) The law states, “the time it takes to make a decision increases with the number and complexity of choices.
 [特斯勒定律](https://lawsofux.com/laws/hicks-law/)另一个需要考虑的因素是注意力和记忆相关的。该定律规定，随着决策的时间随着选择的数量和复杂性增加。
@@ -191,26 +192,37 @@ The more choices there are, the longer it takes the user to make a decision.
 选择越多，用户做出决策的时间就越长。
 
 Avoid overwhelming users with excessive choices, highlight the best option for them whenever possible. Break complex tasks into smaller steps, that is using progressive disclosure when appropriate.
+避免过多的选择压倒用户，尽可能突出最适合他们的选项。将复杂的任务分解成较小的步骤，也就是在适当的时候使用渐进式披露。
 
 ## Physical Interaction Costs (PIC)
 
+## 物理交互成本（PIC）
+
 I won’t go into too much detail on PICs because most designers understand them well.
+我不会详细介绍 PIC，因为多数的设计师都非常了解它们。
 
 Common PIC factors include reaching distance and target width ([Fitt’s Law](https://lawsofux.com/laws/fittss-law/)), number of user inputs and actions required to complete a task, and so on.
+常见的 PIC 因素包含到达距离和目标宽度（[费茨法则](https://lawsofux.com/laws/fittss-law/)），完成一项任务所需要的用户输入和操作的数量等等。
 
 [Fitt’s Law](https://lawsofux.com/laws/fittss-law/) states that the time to hit a target (that is, clicking on a button) is a function of the distance from your input device and the target’s hit-box width.
+[费茨法则](https://lawsofux.com/laws/fittss-law/)指出，击中一个目标（即点击一个按钮）的时间是你的输入设备的距离和目标命中框宽度的函数。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/image-156.png)
 
 A diagram for Fitt's Law.
+费茨法则的图示。
 
 For example, clicking on a button on the desktop would take much longer if your mouse cursor was far away and the button was tiny.
+例如，如果你的鼠标光标离得很远，而按钮又很小，那么点击桌面上的一个按钮就需要更长的时间。
 
 An excellent method to assess PIC is [“task analysis”](https://www.nngroup.com/articles/task-analysis/) and examining [usability metrics](https://usabilitygeek.com/usability-metrics-a-guide-to-quantify-system-usability/) such as “task time (TT).”
+评估 PIC 的一个很好的方法就是[任务分析](https://www.nngroup.com/articles/task-analysis/)和检查[可用性指标](https://usabilitygeek.com/usability-metrics-a-guide-to-quantify-system-usability/)，如“任务时间（TT）”。
 
 The root of TA is looking at the number of tasks required to complete the user’s goal, the frequency of those tasks, the physical requirements, and the task time.
+TA 的根源是查看完成用户目标所需要的任务数量、频率、物理要求以及任务时间。
 
 TA and usability metrics are advanced topics that warrant an entirely separate note, so I’ll save it for next time.
+TA 和可用性指标是进阶话题，完全可以另起炉灶，所以我把它留到下次再讲。
 
 ## Common Pitfalls to Avoid
 

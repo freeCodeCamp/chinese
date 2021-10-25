@@ -226,15 +226,25 @@ TA 和可用性指标是进阶话题，完全可以另起炉灶，所以我把�
 
 ## Common Pitfalls to Avoid
 
+## 避免常见的陷阱
+
 According to Nielsen Norman Group, some of the most common aspects of a product that result in increased interaction costs include the following:
+根据 NN/g 的调查，产品中最常见的导致交互成本增加的一些方面包括以下内容：
 
 - Excessive reading and scrolling
+- 过度的阅读和滚动
 - Looking around to find relevant information user
+- 四处寻找相关信息的用户
 - Comprehending information presented to the user
+- 理解呈现给用户的信息
 - Physical user inputs
+- 用户的物理输入
 - Page loads and waiting times
+- 页面加载和等待时间
 - Attention switches
+- 注意力切换
 - Memory load
+- 记忆负荷
 
 ### Situational Interaction Costs
 

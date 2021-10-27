@@ -334,7 +334,6 @@ Now when we click the `Cook Eggs` button what do we see?
 
 好，我们再深入一些。
 如果我们将`console.log`编写到按钮的事件处理器中，会发生什么呢？
-🤔 What would we see now?
 🤔 我们将看到什么？
 ```javascript
 import React, { Component } from "react";
@@ -373,31 +372,28 @@ export default Molly;
 
 图片源于 Mariya Diminsky(本文作者)
 
-Notice that since we are now checking inside the button’s event handler ,  we see that the `currentTarget` has changed to the button.
-注意此处我们实在
-And of course, since we are clicking the button, we already know the `target` will once again be the `button`.
+注意此处我们是在监视按钮的事件处理器内部发生了什么，发现`currentTarget`出现在了按钮。
 
-Considering what you just learned, now you know that the:
+当然，因为我们点击的是按钮，所以`target`在这里也会落在`button`节点。
 
--   `event.target` is the most deeply nested element that caused the event.
--   `event.currentTarget` is the element that listens to the event (where the event listener is attached to).
+自此我们学到的内容可以总结为：
+-   `event.target` 是事件流中最底部的元素。
+-   `event.currentTarget` 是监听事件的元素（事件监听器绑定的地方）。
+## 更新后的事件执行顺序以及JavaScript中的useCapture参数
 
-## Updated Event Firing Order and useCapture Param in JavaScript
 
-In JavaScript the `EventTarget.addEventListener` will be used to add a handler to an event.
+在JavaScrip中`EventTarget.addEventListener`被用作添加事件处理器。
 
-When we take a look at the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) we see that either you can set optionally `capture` within the `options` object or via the `useCapture` parameter (also now optional), which does the same thing.
-
+[MDN文档](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)中表示即可以选择性地使用`options`对象中的`capture`也可以使用`useCapture`参数（也是可选的），两者效果相同。
 ```javascript
-// So you can do this:
+// 你可以这样写:
 yourElement.addEventListener(type, listener, { capture: true });
 
-// or this:
+// 也可以这样写:
 yourElement.addEventListener(type, listener, useCapture: true);
 ```
 
-⚠️ The reason for this is that unless you specifically set it, the Capturing Phase will be ignored and instead, only the Bubbling Phase (after the Target phase) will be triggered natively in JavaScript. MDN also explains this:
-
+⚠️ 之所以可以这样操作，是因为在JavaScript中除非有特别设置，捕获阶段会被忽略，仅有冒泡阶段会被触发（在目标阶段之后），MDN是这样解释的：
 > For event listeners attached to the event target, the event is in the target phase, rather than the capturing and bubbling phases. Event listeners in the “capturing” phase are called before event listeners in any non-capturing phases.
 
 Note that the `useCapture` parameter has not always been optional in older browsers. Make sure to check [caniuse.com](https://caniuse.com/?search=usecapture) before implementing it.

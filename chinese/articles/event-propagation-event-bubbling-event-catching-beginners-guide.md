@@ -394,87 +394,84 @@ yourElement.addEventListener(type, listener, useCapture: true);
 ```
 
 ⚠️ 之所以可以这样操作，是因为在JavaScript中除非有特别设置，捕获阶段会被忽略，仅有冒泡阶段会被触发（在目标阶段之后），MDN是这样解释的：
-> For event listeners attached to the event target, the event is in the target phase, rather than the capturing and bubbling phases. Event listeners in the “capturing” phase are called before event listeners in any non-capturing phases.
 
-Note that the `useCapture` parameter has not always been optional in older browsers. Make sure to check [caniuse.com](https://caniuse.com/?search=usecapture) before implementing it.
+> 绑定在事件目标的事件监听器，事件处在目标阶段，而非捕获或冒泡阶段。事件监听器的捕获阶段在其他任何非捕获阶段之间被调用。
 
-## Which Events Do Not Bubble and How Are They Handled?
+注意`useCapture`参数并不兼容一些老的浏览器。在使用前可以先查阅[caniuse.com](https://caniuse.com/?search=usecapture)。
+## 哪些事件不冒泡，如何处理这些事件？
 
-Although most events bubble ,  did you know several do not?
+即便大多数事件冒泡，但是你知道有些事件其实不冒泡？
 
-Here are some examples in native JavaScript:
-
--   [blur](https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event) ([focusout](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusout_event) is the same but it actually bubbles).
--   [focus](https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event) ([focusin](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusin_event) is the same but it actually bubbles).
--   [mouseleave](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseleave_event) ([mouseout](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseout_event) is the same but it actually bubbles).
--   [mouseenter](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseenter_event) ([mouseover](https://transang.me/everything-about-event-bubbling/mouseover) is the same but it actually bubbles).
+以下是原生JavaScript中的一些例子：
+-   [blur](https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event) ([focusout](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusout_event) 区别在于后者冒泡).
+-   [focus](https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event) ([focusin](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusin_event) 区别在于后者冒泡).
+-   [mouseleave](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseleave_event) ([mouseout](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseout_event) 区别在于后者冒泡).
+-   [mouseenter](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseenter_event) ([mouseover](https://transang.me/everything-about-event-bubbling/mouseover) 区别在于后者冒泡).
 -   [load](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event), [unload](https://developer.mozilla.org/en-US/docs/Web/API/Window/unload_event), [abort](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/abort_event), [error](https://developer.mozilla.org/en-US/docs/Web/API/Element/error_event), [beforeunload](https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event).
 
-⚠️ The events that do bubble have `true` set on the `bubbles` option [when the](https://developer.mozilla.org/en-US/docs/Web/API/Event/Event) `[Event](https://developer.mozilla.org/en-US/docs/Web/API/Event/Event)` [is created](https://developer.mozilla.org/en-US/docs/Web/API/Event/Event)  –  although they still go through the Capturing phase.
 
-## Event Listeners In React Version 16 and before VS Version 17+
+⚠️ 当[事件](https://developer.mozilla.org/en-US/docs/Web/API/Event/Event)被创造时，可以冒泡的事件可以通过设定`bubbles`选项为`true`，当然这些事件仍然会经历捕获阶段。
+## React 16及过往版本中的事件监听器对比React 17及以上
 
-As you learned, React’s SyntheticEvent does not always act the same as its native JavaScript equivalents.
+如上文所述，React中的事件合成并不总是和原生JavaScript对应的概念一样。
 
-Let’s learn about some of these differences as well as changes made between React versions.
+我们将在下文中学习其中一些差异点，以及React不同版本之间的差异。
 
-### Events You Wouldn’t Expect to Bubble In React
+### 你不希望在React中出现事件冒泡
 
-For example, you would expect React’s `onBlur` and `onFocus` to not bubble since JavaScript’s native equivalent does not, correct? Yet React has intentionally had these events among others continue bubbling.
+比方说，你可能希望React中的`onBlur`和`onFocus`和原生JavaScript中一样，不冒泡。但在React这两个事件也冒泡。
 
-⚠️ While React Version 17 has [made some changes](https://reactjs.org/blog/2020/08/10/react-v17-rc.html#aligning-with-browsers) to certain events like `onScroll`  –  which no longer bubbles  –  most events still continue to bubble.
+⚠️  在React版本17中已经对一些特定事件做了[调整](https://reactjs.org/blog/2020/08/10/react-v17-rc.html#aligning-with-browsers)，如`onScroll`,但大多数事件仍会冒泡。
+更多话题内容可以参考[这个答案](https://stackoverflow.com/questions/34926910/onfocus-bubble-in-react)和[这篇文章](https://www.quirksmode.org/blog/archives/2008/04/delegating_the.html) 
+### `event.target.value` 在异步函数中曾作为无效值（Nullfied）
 
-See [this answer](https://stackoverflow.com/questions/34926910/onfocus-bubble-in-react) and [this article](https://www.quirksmode.org/blog/archives/2008/04/delegating_the.html) for more details on this topic.
 
-### `event.target.value` Used to be Nullified in Async Functions
+在React17之前，如果你想在异步函数中获取一个事件，你会获得未定义。
 
-Prior to React Version 17, if you tried to access an event in an async function you’d notice it would be undefined.
-
-This is because React’s SyntheticEvent objects were pooled  –  meaning that after the event handlers had been called, you would no longer have access to them since they would be reset and put back in the pool.
-
+这是因为React的合成事件被纳入的事件池，即事件处理器被调用后，你将无法再次获取事件，因为这些事件会被重置并放入事件池。
 ![](https://www.freecodecamp.org/news/content/images/2021/09/image-25.png)
 
-Image from [React](https://reactjs.org/docs/legacy-event-pooling.html)
+图片源于[React](https://reactjs.org/docs/legacy-event-pooling.html)
 
-This causes issues for async functions that need access to the information within that event at a later time.
 
-⚠️ The only way to persist this information within async functions was to call `event.persist()`:
+如果要在异步函数中稍后再获取事件信息，这样就会出现问题。
 
+⚠️ 唯一可以在异步函数中保留信息的的方式时调用`event.persist()`的方法：
 ![](https://www.freecodecamp.org/news/content/images/2021/09/image-26.png)
 
-Image from [React](https://reactjs.org/docs/legacy-event-pooling.html)
+图片源于 [React](https://reactjs.org/docs/legacy-event-pooling.html)
 
-The intention of this was to improve performance. But upon closer inspection, React’s team discovered that it only confused developers and actually did not really boost performance much, so it was completely scraped.
 
-⚠️ With the release of React Version 17, React no longer pools SyntheticEvent objects. So you can expect to receive the intended `event.target.value` within your async functions without needing `event.persist()`.
+设定这样机制的初衷时为了提升性能，但是React团队通过进一步观察，发现这样做不仅没有提升性能，反而让程序员感到困惑，所以他们废置了这个机制。
 
-Be sure to read more about this update [here](https://reactjs.org/blog/2020/08/10/react-v17-rc.html#no-event-pooling).
+⚠️ 在React17之后，React不再将合成事件对象纳入事件池。所以你可以在不借助`event.persisit()`方法的前提下在异步函数中获取`event.target.value`的值。
 
-## Special Edge Case: What If You Need an Outer Parent to Fire too?
+在使用之前确保你阅读[这篇文章](https://reactjs.org/blog/2020/08/10/react-v17-rc.html#no-event-pooling)。
+## 特殊情况：当需要执行父元素的时候怎么办？
 
-Let’s take everything you learned and fix a special edge case so you can apply it in your next (or current) React app!
 
-🤔 Say we want to have both of these work in our app:
+让我们利用所学一起解决一个特殊情况，并将这一技巧运用到你下一个（或者现在的）React应用
 
-1.  When a user clicks the inner div/button/etc. element, we want that event to trigger only (or in our example below, changing channels on the TV).
-2.  When a user clicks the outer parent div, that parent’s event is triggered (this could be useful for a popup modal. When a user clicks outside the modal, you want the popup to close  –  or in our example below, a TV being turned back on).
+🤔 假设我们希望我们的应用具备以下功能：
 
+1. 当用户点击内部`div`或者按钮元素，仅被点击的元素被触发（或如下文例子，改变电视的频道）。
+2. 当用户点击外部的父元素`div`，父元素被触发（这在弹出模型中常见，当用户点击模型外部，淡出关闭，或如下文例子，电视重新打开）。
 Currently, you know that if you click either the parent/child element, React’s SyntheticEvent system would trigger bubbling.
+目前你所知的是不论是点击子还是父元素，React的合成事件会触发冒泡。
 
-You also know to stop this we can use `event.stopPropagation()`.
+你同时知道可以使用`event.stopPropagation()`来阻止冒泡。
 
-But we’re left with a dilemma.
+于是我们进入一个两难的境地。
 
-What if you want one event handler to trigger in one situation (our #1), and another event handler to trigger in another situation (#2)?
+如果你想要一个事件处理去可以在一个情景下被触发（上述功能1），另一个事件处理器在另一个情景下触发（上述功能2），该怎么办？
 
-⚠️ If we use `event.stopPropagation()`, it would stop one event handler from triggering – but then you would never be able to call the other event handler in another situation. How can we fix this?
+⚠️ 若使用`event.stopPropagation()`可以阻止一个事件处理器触发，但是就再也不能在另一个场景内触发另一个事件处理器，如何处理这个问题？
 
-To solve this issue, let’s utilize React’s state pattern!
+可以使用React的状态模型！
 
-Note that I’m utilizing arrow functions here so `bind`ing state isn’t necessary. If you aren’t sure what this means, feel free to [read another article I wrote about this topic here](/news/learn-es6-the-dope-way-part-ii-arrow-functions-and-the-this-keyword-381ac7a32881/).
+注意此处我使用了箭头函数，所以没必要使用`bind`,如果你不熟悉这个方法，可以查看[我写的这篇文章](/news/learn-es6-the-dope-way-part-ii-arrow-functions-and-the-this-keyword-381ac7a32881/)。
 
-ℹ️ Below I’ve included a React Class Component version and a React Hooks version  –  use whichever you prefer. Make sure to read through the comments carefully:
-
+ℹ️ 下文包括了React的class组件版本和React Hooks版本任君选择。确保你仔细阅读了注解。
 ```javascript
 import React, { Fragment, Component } from "react";
 
@@ -565,7 +562,7 @@ class TV extends Component {
 export default TV;
 ```
 
-Example written as a Component Class
+用class组件的例子
 
 ```javascript
 import React, { Fragment, useState } from "react";
@@ -650,28 +647,22 @@ const TV = () => {
 export default TV;
 ```
 
-Example written as a Functional Component utilizing React Hooks
+用React Hooks写的例子
 
-🤔 And here’s what happens when we run the code:
+🤔 运行代码会出现以下情况：
+1.  当点击 `Change Channel`, 频道增加。 注意其他两个事件处理器并没有运行。
+2.  当点击 `Turn Off TV`, UI发生变化，当我们点击父元素`div`外部，其他两个事件监听器并没有运行。
+3.  当电视关闭时点击外部父元素`div`内部，只有这个事件处理器运行。
 
-1.  When we click `Change Channel`, the channel is increased. Notice that the other two event handlers do not run.
-2.  When we click `Turn Off TV`, the UI changes and if we try to click anywhere outside the parent div, the other two event handlers do not run.
-3.  When we click inside the outer parent div when the TV is turned off, only one event handler is run.
-
-Please note: In my example above I’m using `state = {}` instead of `constructor(){...}`. This is because when `Babel` (a JavaScript compiler) converts your React code, it spits out a `constructor` with everything inside. If you know this, feel free to skip the image below:
-
+请注意：我在例子中用了`state ={}`而不是`constructor(){...}`因为`Babel`（一种JavaScript的编译器）会转移React代码，在内部添加`constructor`,如果你知道这个信息，可以跳过下图：
 ![](https://www.freecodecamp.org/news/content/images/2021/09/image-27.png)
 
-Screenshot by Mariya Diminsky taken from [Babel](https://babeljs.io/)
+截图自 Mariya Diminsky 图片来源于[Babel](https://babeljs.io/)
 
-### An Even Simpler Fix
+### 更简单的方法
 
-So that’s one way to go about it  – but there’s an even simpler fix!
-
-Simply check inside the event handler if the `target` (what was clicked) is the same as the `eventTarget` (the event handler listening to the event).
-
-If it’s the same, then you can just call `stopPropagation`. Here’s a quick example below:
-
+以上是一种处理方法，还有一种更简单的方法。
+只需检查事件处理器中`target`是否和`eventTarget`（事件处理器绑定的地方）一致，如果是,调用`stopPropagation`。如下面的例子：
 ```javascript
 ...
 
@@ -712,23 +703,22 @@ const Modal = ({ header, content, cancelButtonText, confirmButtonText, history, 
 }
 ```
 
-## You did it! ✨🎉✨
+## 你成功了！✨🎉✨
 
-You’ve made it through this article and now hopefully you understand event bubbling and event catching like a pro. Yay!
 
-Now you know:
+你完成了这篇文章的阅读，希望你已经像一个专业人士一样理解事件冒泡和事件捕获。撒花！
 
--   What Event Delegation means and how Event Bubbling and Event Capturing work.
--   How Event Propagation works differently in JavaScript and React.
--   You have a better understanding of both the benefits and caveats with event handling in React.
--   Several methods you can use to fix issues that may come up for your particular case.
--   The difference between `Event.target` and `Event.currentTarget` as well as that the event triggered is not always the same as the one with the event listener attached to it.
--   How Event Propagation happens in modern JavaScript and how to use `useCapture` parameter if you need to use the Capturing Phase.
--   You learned that not all Events bubble in native JavaScript as well as some of their aliases that do Bubble.
--   You also learned that almost all React’s SyntheticEvents (other than some updates in React Version 17) do bubble.
--   Lastly, you now have a better understanding on how to handle the edge case of an outer parent needing to fire without stopping other event handlers by utilizing React state.
-
-### More Resources / Further reading:
+至此你学习到了：
+-   事件委托的定义以及事件冒泡和事件捕获如何运作。
+-   JavaScript和React中事件传播的不同。
+-   进一步了解了React中事件处理的优缺点。
+-   特殊情况的一些处理问题的办法。
+-   `Event.target`和`Event.currentTarget` 的区别以及事件监听器绑定的地方不一定是事件被触发的地方。
+-   在现代JavaScript中事件传播是如何运行的，如果需要使用捕获阶段如何使用`useCapture`参数。
+-   并不是所有原生JavaScript中的事件以及与他们功能类似的事件会冒泡。
+-   几乎所有React合成事件会冒泡（一些React17中的事件除外）。
+-   使用React状态组件来处理特殊情况，使得在触发父元素事件的同时不影响其他的事件处理器。
+### 更多资源/ 拓展阅读:
 
 -   [https://www.youtube.com/watch?v=Q6HAJ6bz7bY](https://www.youtube.com/watch?v=Q6HAJ6bz7bY)
 -   [https://javascript.info/bubbling-and-capturing](https://javascript.info/bubbling-and-capturing)
@@ -736,6 +726,7 @@ Now you know:
 -   [https://chrisrng.svbtle.com/event-propagation-and-event-delegation](https://chrisrng.svbtle.com/event-propagation-and-event-delegation)
 -   [https://jsbin.com/hilome/edit?js,output](https://jsbin.com/hilome/edit?js,output)
 
-👋🏻Hi there! 👩🏻‍💻I'm Mariya Diminsky, a passionate self-taught [Software Engineer](https://github.com/maariyadiminsky). I've worked as a Full Stack Engineer, a Frontend Developer (I 💖 React), and a Unity/C# developer. I'm also the Founder of [TrinityMoon Studios](https://trinitymoonstudios.com/) and creator of [The Girl Who Knew Time](https://play.google.com/store/apps/details?id=com.trinitymoonstudios.thegirlwhoknewtime).
+👋🏻你好！ 👩🏻‍💻我是 Mariya Diminsky, 一位充满热情的自学[软件工程师](https://github.com/maariyadiminsky). 我是一个全栈工程师, 也专注于前端开发 (我 💖 React), 也是Unity/C# 开发。 我是 [TrinityMoon Studios](https://trinitymoonstudios.com/) 的创始人，我创造了 [The Girl Who Knew Time](https://play.google.com/store/apps/details?id=com.trinitymoonstudios.thegirlwhoknewtime).
 
-✨🥰 If you enjoyed the read and would like to learn more about various React/System Design topics and more, consider following to get the latest updates. 🎉
+
+✨🥰 如果你喜欢这篇文章，并且想要了解更多有关React和系统设计的话题，可以关注我最近的更新。 🎉

@@ -53,21 +53,62 @@ This equation is an approximation, since the actual relationship may not necessa
 
 Based on some statistical analysis of historical data, we might come up with reasonable values for the weights `w1`, `w2`, and `w3`. Here's an example set of values:
 
+```py
+w1, w2, w3 = 0.3, 0.2, 0.5
+```
+
 Given some climate data for a region, we can now predict the yield of apples. Here's some sample data:
 
 ![](https://i.imgur.com/TXPBiqv.png)
 
 To begin, we can define some variables to record climate data for a region.
 
+```py
+kanto_temp = 73
+kanto_rainfall = 67
+kanto_humidity = 43
+```
+
 We can now substitute these variables into the linear equation to predict the yield of apples.
+```py
+kanto_yield_apples = kanto_temp * w1 + kanto_rainfall * w2 + kanto_humidity * w3
+kanto_yield_apples
+# 56.8
+
+
+```
 
 To make it slightly easier to perform the above computation for multiple regions, we can represent the climate data for each region as a vector, that is a list of numbers.
+
+```py
+kanto = [73, 67, 43]
+johto = [91, 88, 64]
+hoenn = [87, 134, 58]
+sinnoh = [102, 43, 37]
+unova = [69, 96, 70]
+```
 
 The three numbers in each vector represent the temperature, rainfall, and humidity data, respectively.
 
 We can also represent the set of weights used in the formula as a vector.
+```py
+weights = [w1, w2, w3]
+```
 
 We can now write a function `crop_yield` to calculate the yield of apples (or any other crop) given the climate data and the respective weights.
+```py
+def crop_yield(region, weights):
+    result = 0
+    for x, w in zip(region, weights):
+        result += x * w
+    return result
+
+crop_yield(kanto, weights)
+# 56.8
+crop_yield(johto, weights)
+# 76.9
+
+```
 
 ### How to Turn Python Lists into Numpy Arrays
 
@@ -76,6 +117,9 @@ The calculation performed by the `crop_yield` (element-wise multiplication of tw
 The Numpy library provides a built-in function to compute the dot product of two vectors. However, we must first convert the lists into Numpy arrays.
 
 Let's install the Numpy library using the `pip` package manager.
+```py
+!pip install numpy --upgrade --quiet
+```
 
 ### How to Operate on Numpy arrays
 

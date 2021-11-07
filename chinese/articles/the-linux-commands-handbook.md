@@ -1715,84 +1715,84 @@ vi test.txt
 -   在 `d` 和 `w` 之间加入一个数字，即可删除多个单词，例如使用 `d3w` 来向前删除 3 个单词
 -   按下 `d` 然后再按一次 `d` ，即可删除整行。按下 `d` 然后再按 `$` ，即可删除以光标为开头，直至当前行末尾的整行内容。
 
-如需了解更多 Vim 的内容，我推荐参考 [Vim 常见问题][71]。你还可以运行 `vimtutor` 命令，它应该已经安装到系统中，可以对你开始探索 `vim`  有很大帮助。
+如需了解更多 Vim 的内容，我推荐参阅 [Vim 常见问题][71]。你还可以运行 `vimtutor` 命令，它应该已经安装到系统中，可以对你开始探索 `vim`  有很大帮助。
 
-## Linux 中的 `emacs` editor 命令
+## Linux 中的 `emacs` 编辑器命令
 
-`emacs` is an awesome editor and it's historically regarded as _the_ editor for UNIX systems. Famously, `vi` vs `emacs` flame wars and heated discussions have caused many unproductive hours for developers around the world.
+`emacs` 是一个很棒的编辑器，它在历史上被认作是专为 UNIX 系统而生的。更著名的是：围绕 `vi` 与 `emacs` 之间的火热纷争与激烈论战曾给全世界的开发者带来许多无益的时光。
 
-`emacs` is very powerful. Some people use it all day long as a kind of operating system ([https://news.ycombinator.com/item?id=19127258][72]). We'll just talk about the basics here.
+`emacs` 非常强大。一些人将其当作一种操作系统，全天候都在使用它 （[https://news.ycombinator.com/item?id=19127258][72]）。我们在此处只谈及一些基础的用法。
 
-You can open a new emacs session simply by invoking `emacs`:
+你可以调用 `emacs` 来开启新的 emacs 会话：
 
 ![Screenshot-2019-02-10-at-12.14.18](https://www.freecodecamp.org/news/content/images/2020/10/Screenshot-2019-02-10-at-12.14.18.png)
 
-macOS users, stop a second now. If you are on Linux there are no problems, but macOS does not ship applications using GPLv3, and every built-in UNIX command that has been updated to GPLv3 has not been updated.
+macOS 用户们，现在请停一下。如果你当前在使用 Linux，那就没有什么问题，但 macOS 并未搭载使用 GPLv3 协议的应用程序，且每个内置的 UNIX 命令也没有更新到 GPLv3 版本。
 
-While there is a little problem with the commands I listed up to now, in this case using an emacs version from 2007 is not exactly the same as using a version with 12 years of improvements and change.
+虽然这对于我以上已经列出的命令来说，只是个小问题，但就本例而言，使用 2007 年的 emacs 版本与使用经过十余年改进和变化的版本，体验并不完全相同。
 
-This is not a problem with Vim, which is up to date. To fix this, run `brew install emacs` and running `emacs` will use the new version from Homebrew (make sure you have [Homebrew][73] installed).
+对于时常更新的 Vim 来说，这也不算什么。但想要解决 emacs 的问题，你需要运行 `brew install emacs` ，之后再运行 `emacs`，即可使用 Homebrew 提供的新版本（确保 [Homebrew][73] 已安装）。
 
-You can also edit an existing file by calling `emacs <filename>`:
+与 Vim 类似，你也可以调用 `emacs <文件名>` 来编辑已有的文件：
 
 ![Screenshot-2019-02-10-at-13.12.49](https://www.freecodecamp.org/news/content/images/2020/10/Screenshot-2019-02-10-at-13.12.49.png)
 
-You can now start editing. Once you are done, press `ctrl-x` followed by `ctrl-w`. You confirm the folder:
+现在你可以开始编辑。当你完成编辑，先按下 `ctrl-x`，然后按下 `ctrl-w`。先确认文件夹：
 
 ![Screenshot-2019-02-10-at-13.14.29](https://www.freecodecamp.org/news/content/images/2020/10/Screenshot-2019-02-10-at-13.14.29.png)
 
-and Emacs tells you the file exists, asking you if it should overwrite it:
+而 Emacs 会告诉你这个文件已存在，并询问是否要覆盖它：
 
 ![Screenshot-2019-02-10-at-13.14.32](https://www.freecodecamp.org/news/content/images/2020/10/Screenshot-2019-02-10-at-13.14.32.png)
 
-Answer `y`, and you get a confirmation of success:
+回答 `y`，你会得到一条操作成功的确认信息：
 
 ![Screenshot-2019-02-10-at-13.14.35](https://www.freecodecamp.org/news/content/images/2020/10/Screenshot-2019-02-10-at-13.14.35.png)  
-You can exit Emacs by pressing `ctrl-x` followed by `ctrl-c`.  
-Or `ctrl-x` followed by `c` (keep `ctrl` pressed).
+要退出 Emacs ，可以按下 `ctrl-x` ，然后再按 `ctrl-c`。
+或者先按下 `ctrl-x` 之后再按 `c` （期间按住 `ctrl` 不放）。
 
-There is a lot to know about Emacs, certainly more than I am able to write in this little introduction. I encourage you to open Emacs and press `ctrl-h` `r` to open the built-in manual and `ctrl-h` `t` to open the official tutorial.
+Emacs 还有很多要了解的地方，限于篇幅，我在这篇简短教程中不便展开。我鼓励诸位按下 `ctrl-h` `r` 打开内置参考手册，或按下 `ctrl-h` `t` 打开官方教程以继续学习。
 
-## Linux 中的 `nano` editor 命令
+## Linux 中的 `nano` 编辑器命令
 
-`nano` is a beginner friendly editor.
+`nano` 是一个对初学者友好的编辑器。
 
-Run it using `nano <filename>`.
+输入 `nano <文件名>` 即可运行。
 
-`You can directly type characters into the file without worrying about modes.
+你可以直接向文件中输入字符，而不必担心所在的模式。
 
-You can quit without editing using `ctrl-X`. If you edited the file buffer, the editor will ask you for confirmation and you can save the edits, or discard them.
+想退出而不修改，你可以直接按下 `ctrl-X`。如果你已经编辑了文件缓冲区，编辑器会弹出确认提示，你可以选择保存或放弃更改。
 
-The help at the bottom shows you the keyboard commands that let you work with the file:
+底部的帮助栏为你显示了一部分用于处理文件的键盘命令：
 
 ![Screenshot-2019-02-10-at-11.03.51](https://www.freecodecamp.org/news/content/images/2020/10/Screenshot-2019-02-10-at-11.03.51.png)  
-`pico` is more or less the same, although `nano` is the GNU version of `pico` which at some point in history was not open source. The `nano` clone was made to satisfy the GNU operating system license requirements.
+另一条命令 `pico` 与它大致相同，不过 `nano` 其实是 `pico` 的 GNU 版本，后者在一段历史时期内并未开源。 于是人们克隆出 `nano` 以满足 GNU 操作系统的许可要求。
 
 ## Linux 中的 `whoami` 命令
 
-Type `whoami` to print the user name currently logged in to the terminal session:
+键入 `whoami` 即可将当前登录终端会话的用户名打印出来：
 
 ![Screen-Shot-2020-09-03-at-18.08.05](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-18.08.05.png)
 
-> Note: this is different from the `who am i` command, which prints more information
+> 注意：这和可以输出更多信息的 `who am i` 命令并不一样。
 
 ## Linux 中的 `who` 命令
 
-The `who` command displays the users logged in to the system.
+`who` 命令显示当前已登录系统的用户。
 
-Unless you're using a server multiple people have access to, chances are you will be the only user logged in, multiple times:
+除非你在使用多人访问的服务器，否则你可能是唯一的登录用户，并且登录了多次：
 
 ![Screen-Shot-2020-09-03-at-18.03.05](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-18.03.05.png)
 
-Why multiple times? Because each shell opened will count as an access.
+为什么说是多次呢？因为每打开一次 Shell，都会被算作一次访问。
 
-You can see the name of the terminal used, and the time/day the session was started.
+你可以在此看到使用的终端名，以及会话的起始时间/日期。
 
-The `-aH` flags will tell `who` to display more information, including the idle time and the process ID of the terminal:
+参数 `-aH` 将使 `who` 显示更多的信息，包括空载的时间与终端的进程 ID：
 
 ![Screen-Shot-2020-09-03-at-18.05.29](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-18.05.29.png)
 
-The special `who am i` command will list the current terminal session details:
+特殊的 `who am i` 命令会列出当前终端会话的详情：
 
 ![Screen-Shot-2020-09-03-at-18.06.35](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-18.06.35.png)
 
@@ -1800,25 +1800,25 @@ The special `who am i` command will list the current terminal session details:
 
 ## Linux 中的 `su` 命令
 
-While you're logged in to the terminal shell with one user, you might need to switch to another user.
+当你用一个用户登录到终端 Shell 时，可能需要切换到另一个用户。
 
-For example you're logged in as root to perform some maintenance, but then you want to switch to a user account.
+例如，你以 root 身份登录，进行了维护工作，但之后你想切换到别的用户账户。
 
-You can do so with the `su` command:
-
-```
-su <username>
+你可以用 `su` 命令来完成：
 
 ```
+su <用户名>
 
-For example: `su flavio`.
+```
 
-If you're logged in as a user, running `su` without anything else will prompt you to enter the `root` user password, as that's the default behavior.
+例如： `su flavio`.
+
+如果你以用户身份登录，且不带参数运行 `su` 命令，它会遵从默认行为——提示你输入 `root` 用户的密码。
 
 ![Screen-Shot-2020-09-03-at-18.18.09](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-18.18.09.png)  
-`su` will start a new shell as another user.
+`su` 会以另一个用户的身份，开启新的 Shell。
 
-When you're done, typing `exit` in the shell will close that shell, and will return you back to the current user's shell.
+当你完成操作，执行 `exit`即可关闭新开的 Shell，并回到当前用户的 Shell。
 
 ## Linux 中的 `sudo` 命令
 

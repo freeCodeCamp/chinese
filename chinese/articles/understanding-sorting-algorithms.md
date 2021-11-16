@@ -1,6 +1,6 @@
 > -  原文地址：[Understanding Sorting Algorithms](https://www.freecodecamp.org/news/understanding-sorting-algorithms/)
 > -  原文作者：[Beau Carnes](https://www.freecodecamp.org/news/author/beau/)
-> -  译者：
+> -  译者：sunnysly
 > -  校对者：
 
 ![Understanding Sorting Algorithms](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/sorting.png)

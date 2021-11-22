@@ -1,6 +1,6 @@
 > -  原文地址：[JavaScript Array Methods Tutorial – The Most Useful Methods Explained with Examples](https://www.freecodecamp.org/news/complete-introduction-to-the-most-useful-javascript-array-methods/)
 > -  原文作者：[Yogesh Chavan](https://www.freecodecamp.org/news/author/yogesh/)
-> -  译者：
+> -  译者：sunnysly123
 > -  校对者：
 
 ![JavaScript Array Methods Tutorial – The Most Useful Methods Explained with Examples](https://cdn-media-2.freecodecamp.org/w1280/602b49ef0a2838549dcc6285.jpg)

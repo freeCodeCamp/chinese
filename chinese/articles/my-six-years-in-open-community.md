@@ -1,34 +1,42 @@
-你好，我是 Miya 刘于瑜，来自  [freeCodeCamp][1]  社区。freeCodeCamp.org 是全球最大的开源公益编程教育社区，也是 GitHub star 数长期排在第一的开源项目。
+Hello, I’m Yuyu Liu (Miya) from the [freeCodeCamp][1] community.
+freeCodeCamp.org is the world's largest open source non-profit programming education community, and it is also an open source project that has long been ranked number one on GitHub.
 
-在这篇文章里，你会看到一个来自农村、毕业于普通二本大学的无竞争力的文科专业、从传统行业转行、没有大厂工作背景的普通人是如何一步步探索和发现生命的意义，在开放社区中找到自己喜欢并且擅长的事情的。如果你和我一样普通，在怀疑自己可不可以、能不能做某些事，那么我的故事应该能给你一些鼓励。
+In this article, you will see how an ordinary person who came from a rural area, graduated from an ordinary second tier university with an uncompetitive liberal arts major, switched from a traditional industry, and has no working background in a large factory. 
+You will see how I explores and discovers life meaning step by step and find out what I like and excel in in the open community. 
+If you are as ordinary as me, wondering if you can do certain things, then my story should give you some encouragement.
 
-这六年有太多故事可以写。我会以一些启发自己思考和沉淀的关键词或者问题作为标题，来讲述令我个人感受最深的几个故事。关于 freeCodeCamp 社区的各方面，这篇文章里不会深入讲，最近有些学术界的朋友在策划相关研究报告，欢迎大家关注。
+There are too many stories to write in these six years.
+I will use some keywords or questions that inspired my thinking and precipitation as titles to tell the stories that make me feel the most.
+Regarding all aspects of the freeCodeCamp community, this article will not go into depth. 
+Recently, some friends in the academic field are planning relevant research reports. Feel free to follow them if you are interested.
 
-## 建议谁阅读这篇文章
 
-如果你：
+## Who Should Read This Article
 
--   正在思考或探索成为更好的自己，同时给世界带来美好改变，或者
--   想了解开放社区、开放协作会给人带来什么影响，又或者
--   喜欢有温度的人和故事
+If you:
 
-那么不妨抽出一个小时，我们聊聊天:)
+-   are thinking or exploring to be a better version of yourself and bring a beautiful change to the world at the same time, or
+-   want to understand the impact of open communities and open collaboration on people, or
+-   like people and stories with warmth
 
-## 写在前面
+Then why not take an hour, let’s chat :)
 
-在前几天的[中国开源年会][2]（COSCon'21）圆满结束后，我和一同组织成都场活动的朋友们熬夜打着哈欠进行了深入的复盘。
+## Write in Front
+
+After the successful conclusion of the [China Open Source Conference][2] (COSCon'21) a few days ago, my friends and I who organized the Chengdu event stayed up all night for an in-depth review.
 
 ![](https://chinese.freecodecamp.org/news/content/images/2021/11/image-21.png)
 
-2021 中国开源年会成都场合影
+2021 China Open Source Conference Chengdu Scene
 
-第二天，我进行自我复盘，在朋友圈发了这段话：
+The next day, I conducted a self-review and posted this statement in the Moments:
 
-> 如今自己想得最多、说得做多的东西，以及最容易给我感动的东西，和我在几年前进入这个领域的 pre day 1 时依然相同，于是感到欣慰且平静。初心可贵，共勉。
+> Now the things I think about the most, talk about the most, and touch me the most are still the same as when I entered this field on the first day a few years ago. So I feel relieved and calm. The original intention is precious, and we encourage each other.
 
-其实我的初心很简单，就是希望自己能给别人带去好的影响，同时容易被那些因为拥有纯粹的、或大或小的梦想而充满活力闪闪发光的人们感动。
+In fact, my original intention was simple - I hope that I can have a good influence on others, and at the same time, that I can easily be moved by those who have pure, big or small dreams and are full of energy and sparkle.
 
-我相信所有能传递善意的内容都值得被推荐，所以我在各种场合推荐过很多朋友们的或者陌生人们的故事。此次借着开源社“开源故事集”栏目征稿的机会，我第一次完整地回顾和记录自己的故事，并公开分享出来。
+I believe that all content that can convey goodwill is worthy of recommendation, so I have talked about many stories of friends or strangers on various occasions. 
+This time, taking advantage of the opportunity to solicit contributions from the "Open Source Story Collection" column of the Open Source Society, I reviewed and recorded my own story for the first time, and shared it publicly.
 
 ### 关于主题
 
@@ -388,19 +396,19 @@ ChangemakerXchange 的官方介绍是“世界上首屈一指的跨越欧洲、�
 
 **嗯，这个世界挺好的，我们不必忧心忡忡地要去改变什么，放松一点去体验和感受就好。**
 
-故事讲完了。
+The story is over.
 
 所以，我不去想“为什么而生”那么深奥的问题了。以前和一位好朋友讨论说生命本没有意义，早睡早起、天气好的时候去晒晒太阳、上班路上看看花儿、有活力地度过每一天......经历、体验，这就是意义了。哦，对了，前两天我在路上看到一条胖胖的小狗欢快地跳起来，好可爱。第二天又遇到它，我就不由自主地笑了。
 
 实务学堂的一位学生描述他的编程课志愿者陈一帅老师像是“一条活泼善良的鱼”，我很喜欢这个描述，觉得很灵动，一定是很美好的学生和很美好的老师，才能有这样的句子。我也希望自己具有那种状态。正好我的名字里有两个 yu，双鱼座，也爱吃鱼，和鱼挺有缘的;)
 
-但行好事，莫问前程，如同乔布斯所说：
+Do good things, and don’t ask about your future, as Steve Jobs said:
 
 > You can’t connect the dots looking forward; you can only connect them looking backward. So you have to trust that the dots will somehow connect in your future.
 
-也许，当我们老年的时候，回顾自己的一生，将点点滴滴串连起来，就能很好地回答这一生是为什么而活了。
+Perhaps, when we are old, looking back on our life and connecting the bits and pieces together, we can answer very well why we lived in this life.
 
-谢谢阅读。
+Thanks for reading.
 
 [1]: http://freecodecamp.org/
 [2]: https://www.bagevent.com/event/7685233

@@ -38,39 +38,50 @@ In fact, my original intention was simple - I hope that I can have a good influe
 I believe that all content that can convey goodwill is worthy of recommendation, so I have talked about many stories of friends or strangers on various occasions. 
 This time, taking advantage of the opportunity to solicit contributions from the "Open Source Story Collection" column of the Open Source Society, I reviewed and recorded my own story for the first time, and shared it publicly.
 
-### 关于主题
+### About the Topic
 
-社区，英文是 community。
+Community (社区). Some people translate it as "community group (社群)". This word is easy to think as of "community economy (社群经济)" or something similiar. I think it is a bit utilitarian, so I never like it.
+And recently, I am reading the book "The Crowd", which talks about "group psychology". I am a little bit repulsed to be included in any group, hoping to live a little more freely and smartly within the scope of my ability, with fewer labels.
 
-有些人把它翻译为“社群”。这个词容易让人联想到“社群经济”什么的，我觉得有些功利，一直不太喜欢。而且，最近在读讲“群体心理学”的《乌合之众》，我有些排斥被归纳到任何群体中，希望在能力范围内活得自由一点灵动一点，少一点标签。
+Some friends also translate it as "community (共同体)" and study it in combination with anthropology, sociology, and economics. I find it is very interesting, but I haven't done so much research yet, so I don't use this word for now.
 
-也有朋友把它翻译为“共同体”，结合人类学、社会学、经济学来研究它，我觉得很有趣，可是自己现在还没有进行那么厚重的研究，所以就先不用这个词吧。
+In addition, although this article is submitted to the "Open Source Storybook" column, I don't want to use the "Open Source Community (开源社区)". Because, in fact, my feelings about the term "Open Source" are not as deep as those of friends who have been exposed to it from the campus and the early days of work. 
+My "community" enlightenment does not come from "open source".
+Moreover, I believe that the "open source community" is included in the "open community", specifically referring to the "open community" built around software and hardware technologies.
 
-此外，虽然这篇文章是投稿给“开源故事集”栏目的，但是我也不想使用“开源社区”，因为事实上我对“开源”这个词的感受并不像很多从校园、工作初期就接触它的朋友感受那样深，我的“社区”启蒙不是来自于“开源”。而且，我认为，“开源社区”是包括在“开放社区”中的，特指围绕软硬件技术构建的“开放社区”。
+Let us get start!
 
-我们开始吧！
+## "Are you Miya"
 
-## “是 Miya 吗”
+The first story is the prologue of all the stories, so I will look back a little far.
 
-第一个故事是所有故事的序幕，所以会回顾得久远一点。
+I come from rural area of Sichuan.
+Before high school, I was a top student in my hometown. Most of my self-confidence in life was cultivated at that time.
+Later, I entered the best class in the best high school in the county. For various reasons, I got worse and worse. Fortunately, I graduated before my confidence was completely worn away.
 
-我来自四川农村。读高中之前，在我们那个小地方，我也算是出了名的学霸，我人生的大部分自信都是在那时候培养起来的。后来，进入县里最好高中的最好理科班，鉴于种种原因，我越学越差，还好在自信被完全磨掉之前毕业了。
+Due to age and geographical constraints, when filling up the college application, I, like many classmates, didn't know anything about what I wanted to do in the future. So the schools and majors I reported were not satisfactory.
+In the first semester, in a large literature class with one or two hundred people, I wanted to show off and asked the teacher a question about the book "The Ordinary World". 
+The teacher did not answer the question but changed the topic immediately and ask other students to read the articles he prepared, just like we did in high school.
+After sitting down and feeling awkwardly, I was thinking this is very different from the university atmosphere I imagined. I thought teachers and students would talke and explore the truth. What could I gain from this school?
 
-因为年代和地域的限制，在高考填志愿的时候，我和很多同学一样对自己以后想干嘛一无所知，所以报的学校和专业都不如人意。我记得在大一上学期，在一堂一两百人的文学大课上，我出于有些想出风头的心理，跟老师提了一个关于《平凡的世界》这本书的问题，老师没有回答，糊弄过去了，然后继续请同学一段段阅读他讲的文章，就像我们在中学里读课文一样。略有些尴尬地坐下后，我就在想这跟我想象中的师生侃侃而谈探索真理的大学氛围很不一样，自己在这所学校里能收获什么？
-
-于是，在那堂课结束后，走在阳光灿烂的大道上，我就觉得自己要开始逃课去自学了。也是从那时候开始，一直到在传统行业工作的几年，我一直在思考和探索自己以后应该做什么、适合做什么、做什么事情会真的开心。
+So, after the class was over, walking on the sunny street, I decided that I would skip class and study on my own.
+From then on, until a few years in the traditional industry, I have been thinking and exploring what I should do, what I suitable for, and what I will be really happy about in the future.
 
 ![](https://chinese.freecodecamp.org/news/content/images/2021/11/image-15.png)
 
-苏州 Toastmasters 俱乐部六周年庆祝活动现场
+The 6th Anniversary Celebration of Suzhou Toastmasters Club
 
-2015 年 5 月，我偶然参加了一次 Toastmasters 国际演讲协会的活动，初次接触开放社区的形态，初次见到一些互联网行业创业者，被他们的活力感染，以为自己如果成为他们中的一员就会很开心。
+In May 2015, I accidentally participated in an event of the Toastmasters International Speaking Association. 
+It was the first time I came into the open community.
+When I first met some entrepreneurs in the Internet industry, I was infected by their vitality and thought that I would be very happy if I could became one of them.
 
-7 月，偶然遇到一位特别的公交车司机。
+In July, I came across a special bus driver by chance.
 
 ![](https://chinese.freecodecamp.org/news/content/images/2021/11/image-18.png)
 
-我当时发的朋友圈
+Moment I posted at that time
+
+(Text in picture: TBD)
 
 我想，像公交车司机、保安、农民工......他们可能很少很少会去 Toastmasters 这样的活动，但是他们也有打动人的故事可以分享，也有拥有更好的工作和生活的愿望。我突然意识到自己很想把普通人的美好故事传播出去，或者说给普通人打造一个展示的舞台。
 

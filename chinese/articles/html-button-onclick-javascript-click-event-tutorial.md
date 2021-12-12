@@ -1,43 +1,43 @@
 > -  原文地址：[HTML Button onclick – JavaScript Click Event Tutorial](https://www.freecodecamp.org/news/html-button-onclick-javascript-click-event-tutorial/)
 > -  原文作者：[Kolade Chris](https://www.freecodecamp.org/news/author/kolade/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
 ![HTML Button onclick – JavaScript Click Event Tutorial](https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/javascript-onclick.png)
 
-Whenever you visit a website, you'll probably click on something like a link or button.
+当你访问一个网站时，你可能点击一些东西，像链接或者按键。
 
-Links take you to a certain part of the page, another page of the website, or another website entirely. Buttons, on the other hand, are usually manipulated by JavaScript events so they can trigger certain functionality.
+链接可能跳转到当前网页的某一部分，也可能该网站的另一个网页，更或者是另一个网站。按键由Javascrpt各种事件控制，触发某些函数
 
-In this tutorial, we are going to explore the two different ways of executing click events in JavaScript using two different methods.
+在本教程中，我们将探索在JavaScript中使用两种不同的方式触发点击事件。
 
-First, we'll look at the traditional `onclick` style that you do right from the HTML page. Then we'll see how the more modern "click" `eventListner` works, which lets you separate the HTML from the JavaScript.
+首先，我们将看传统的 `onclick` 风格 ，你可以在HTML里添加。然后我们将看到更现代的 "click" `eventListner` 是如何工作的, 它可以让HTML和JavaScript分离。
 
-## How to Use the `onclick` event in JavaScript
+## 如何使用`onclick`事件
 
-The `onclick` event executes a certain functionality when a button is clicked. This could be when a user submits a form, when you change certain content on the web page, and other things like that.
+当一个按键被点击时，对应的`onclick`事件会执行里面的函数。这可能发生在用户提交一个表单，也可能在你修改网页里的内容，以及其他类似的事情。
 
-You place the JavaScript function you want to execute inside the opening tag of the button.
+你把想执行的函数名放到按键标签里。
 
-### Basic `onclick` syntax
+### 基础 `onclick` 语法
 
 ```html
 <element onclick="functionToExecute()">Click</element>
 ```
 
-For example
+例如
 
 ```html
 <button onclick="functionToExecute()">Click</button>
 ```
 
-Note that the `onclick` attribute is purely JavaScript. The value it takes, which is the function you want to execute, says it all, as it is invoked right within the opening tag.
+请注意 `onclick`属性值是你想执行的函数名，它会调用该函数。
 
-In JavaScript, you invoke a function by calling its name, then you put a parenthesis after the function identifier (the name).
+在JavaScript中，它会通过函数名调用函数，当你在函数名后加上括号。
 
-## `onclick` event example
+## `onclick` 事件例子
 
-I have prepared some basic HTML with a little bit of styling so we can put the `onclick` event into real-world practice.
+我已经准备好了一些基本的HTML和样式，我们练习怎样把 `onclick` 事件加入进去。
 
 ```html
 <div>
@@ -46,7 +46,7 @@ I have prepared some basic HTML with a little bit of styling so we can put the `
 </div>
 ```
 
-And here's the CSS to make it look good, along with all the rest of the example code:
+让它好看些的CSS，以及所有其他的示例代码:
 
 ```css
  body {
@@ -79,7 +79,7 @@ button.orange {
 }
 ```
 
-So, on the web page, this is what we have:  
+这是我们看到的网页:  
 ![changeColor](https://www.freecodecamp.org/news/content/images/2021/08/changeColor.png)
 
 Our aim is to change the color of the text to blue when we click the button. So we need to add an `onclick` attribute to our button, then write the JavaScript function to change the color.

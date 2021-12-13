@@ -1822,27 +1822,26 @@ su <用户名>
 
 ## Linux 中的 `sudo` 命令
 
-`sudo` is commonly used to run a command as root.
+`sudo` 通常用来以 root 身份运行命令。
 
-You must be enabled to use `sudo`, and once you are, you can run commands as root by entering your user's password (_not_ the root user password).
+你必须先启用当前身份才能使用 `sudo`，启用之后，你可以直接输入你自己的登录密码（ _而非_ root 用户的密码）来以 root 身份运行命令。
 
-The permissions are highly configurable, which is great especially in a multi-user server environment. Some users can be granted access to running specific commands through `sudo`.
+这种权限是高度可配置的，在多用户的服务器环境中尤其有用。一些用户可以通过 `sudo` 被授予运行特定命令的权限。
 
-For example you can edit a system configuration file:
+例如，你可以用它编辑任一系统配置文件：
 
 ```
 sudo nano /etc/hosts
 
 ```
 
-which would otherwise fail to save since you don't have the permissions  
-for it.
+这在普通模式下是无法实现的，因为你没有相应的权限。
 
-You can run `sudo -i` to start a shell as root:
+你可以执行 `sudo -i` ，以 root 身份启动一个 Shell：
 
 ![Screen-Shot-2020-09-03-at-18.25.50](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-18.25.50.png)
 
-You can use `sudo` to run commands as any user. `root` is the default, but use the `-u` option to specify another user:
+还可以使用 `sudo` 以其他任何用户身份运行命令。 默认情况是 `root` ， 但加上 `-u` 参数即可指定使用其他用户：
 
 ```
 sudo -u flavio ls /Users/flavio
@@ -1851,89 +1850,89 @@ sudo -u flavio ls /Users/flavio
 
 ## Linux 中的 `passwd` 命令
 
-Users in Linux have a password assigned. You can change the password using the `passwd` command.
+在 Linux 中，用户都有一个指定的密码。你可以使用 `passwd` 命令修改这个密码。
 
-There are two situations here.
+这里有两种情况。
 
-The first is when you want to change your password. In this case you type:
+第一种情况是：你想要修改自己的密码，此时你可以输入：
 
 ```
 passwd
 
 ```
 
-and an interactive prompt will ask you for the old password, then it will ask you for the new one:
+交互式提示会先询问你的旧密码，之后要求你输入新密码：
 
 ![Screen-Shot-2020-09-04-at-07.32.05](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-07.32.05.png)
 
-When you're `root` (or have superuser privileges) you can set the username for which you want to change the password:
+当你处于 `root` 身份（或是其他具有超级用户权限的用户）时，你可以设置你想要更改密码的用户名：
 
 ```
 passwd <username> <new password>
 
 ```
 
-`In this case you don't need to enter the old one.
+此时你无需输入旧密码。
 
 ## Linux 中的 `ping` 命令
 
-The `ping` command pings a specific network host, on the local network or on the Internet.
+`ping` 命令可以在本地网络或互联网上探测一个特定的网络主机。
 
-You use it with the syntax `ping <host>` where `<host>` could be a domain name, or an IP address.
+它的语法是 `ping <host>`，其中 `<host>` 可以是域名或 IP 地址。
 
-Here's an example pinging `google.com`:
+以下是探测 `google.com` 的例子：
 
 ![Screen-Shot-2020-09-09-at-15.21.46](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-15.21.46.png)  
-The command sends a request to the server, and the server returns a response.
+这个命令向服务器发送一个请求，服务器则返回其响应信息。The command sends a request to the server, and the server returns a response.
 
-`ping` keeps sending the request every second, by default. It will keep running until you stop it with `ctrl-C`, unless you pass the number of times you want to try with the `-c` option: `ping -c 2 google.com`.
+`ping` 在默认情况下，每秒持续发送请求，只有按下 `ctrl-C` 时才会停止。你可以用 `-c` 参数指定想要的尝试次数：`ping -c 2 google.com`。
 
-Once `ping` is stopped, it will print some statistics about the results: the percentage of packages lost, and statistics about the network performance.
+一旦 `ping` 结束运行，它将输出一些结果：例如数据包丢失的百分比，以及其他关于网络性能的统计数据。
 
-`As you can see the screen prints the host IP address, and the time that it took to get the response back.
+你可以看到，屏幕上输出了主机的 IP 地址，以及得到响应所花的时间。
 
-Not all servers support pinging, in case the request times out:
+并不是所有的服务器都可以探测，此时会出现请求超时：
 
 ![Screen-Shot-2020-09-09-at-15.21.27](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-15.21.27.png)
 
-`Sometimes this is done on purpose, to "hide" the server, or just to reduce the load. The ping packets can also be filtered by firewalls.
+有时这是为了“隐藏”服务器，或是减低服务器负载而故意设置的。为了探测所发送的数据包也可以被防火墙过滤。
 
-`ping` works using the **ICMP protocol** (_Internet Control Message Protocol_), a network layer protocol just like TCP or UDP.
+`ping` 使用 **ICMP 协议** （全称 _Internet Control Message Protocol_ ，互联网控制报文协议）工作。ICMP 与 TCP 和 UDP 一样，是网络层协议。
 
-The request sends a packet to the server with the `ECHO_REQUEST` message, and the server returns a `ECHO_REPLY` message. I won't go into details, but this is the basic concept.
+探测请求向服务器发送一个含有 `ECHO_REQUEST` 信息的数据包，服务器则会返回 `ECHO_REPLY` 信息。此处我将不展开讲述，但这是最基本的概念。
 
-`Pinging a host is useful to know if the host is reachable (supposing it implements ping), and how distant it is in terms of how long it takes to get back to you.
+用 Ping 探测，在测试主机是否可以访问时非常有用（此处假设主机支持探测），还可以从主机返回信息的时长，获知它的距离有多远。
 
-`Usually the nearer the server is geographically, the less time it will take to return back to you. Simple physical laws cause a longer distance to introduce more delay in the cables.
+通常，服务器在地理上离你越近，它向你返回信息的时间就越短。简单的物理规律则告诉我们：电缆越长，数据延迟越高。
 
 ## Linux 中的 `traceroute` 命令
 
-`When you try to reach a host on the Internet, you go through your home router. Then you reach your ISP network, which in turn goes through its own upstream network router, and so on, until you finally reach the host.
+当你想要在互联网上到访某个主机时，数据首先会经过家庭路由器，然后到达你的运营商网络，再穿过上层的网络路由器，以此类推，直到最终连通主机。
 
-Have you ever wanted to know what steps your packets go through to do that?
+你是否曾想过：数据包需要经过哪些步骤才能做到这一点？
 
-The `traceroute` command is made for this.
+`traceroute` 命令就是为此而生的。
 
-You invoke
+你可以调用
 
 ```
 traceroute <host>
 
 ```
 
-`and it will (slowly) gather all the information while the packet travels.
+它将会（缓慢地）在数据包旅行时收集所有相关信息。
 
-In this example I tried reaching for my blog with `traceroute flaviocopes.com`:
+以下的例子中，我将尝试用 `traceroute flaviocopes.com` 到访我的博客：
 
 ![Screen-Shot-2020-09-09-at-16.32.01](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-16.32.01.png)
 
-Not every router travelled returns us information. In this case, `traceroute` prints `* * *`. Otherwise, we can see the hostname, the IP address, and some performance indicator.
+通常，我们可以看到主机名、IP 地址以及一些性能指标。但并不是所有经过的路由器都会向我们返回信息，此时，`traceroute` 会输出 `* * *`。
 
-`For every router we can see 3 samples, which means traceroute tries by default 3 times to get you a good indication of the time needed to reach it.
+每个路由器都可以看到 3 个样本，这意味着 traceroute 默认尝试了 3 次，让你很好地了解到达主机所需的时间。
 
-This is why it takes this long to execute `traceroute` compared to simply doing a `ping` to that host.
+这就是对服务器执行 `traceroute` 比简单地执行 `ping` 要花更多时间的原因。
 
-You can customize this number with the `-q` option:
+你可以用 `-q` 参数自定义尝试的次数：
 
 ```
 traceroute -q 1 flaviocopes.com
@@ -1944,38 +1943,38 @@ traceroute -q 1 flaviocopes.com
 
 ## Linux 中的 `clear` 命令
 
-Type `clear` to clear all the previous commands that were run in the current terminal.
+输入 `clear` 来清除当前终端之前执行的所有命令。
 
-The screen will clear and you will just see the prompt at the top:
+此时屏幕会被清理，你将只看到顶部的提示：
 
 ![Screen-Shot-2020-09-03-at-18.10.32](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-03-at-18.10.32.png)
 
-> Note: this command has a handy shortcut: `ctrl-L`
+> 提示：这个命令有个好用的快捷键： `ctrl-L`
 
-`Once you do that, you will lose access to scrolling to see the output of the previous commands entered.
+不过，一旦使用了这个命令，你将不能用鼠标滚轮查看此前输入的命令。
 
-So you might want to use `clear -x` instead, which still clears the screen, but lets you go back to see the previous work by scrolling up.
+因此你可能更想使用 `clear -x`，这个参数可以在清理屏幕的同时，保留之前的终端输入，向上滚动鼠标即可回溯查看。
 
 ## Linux 中的 `history` 命令
 
-`Every time you run a command, it's memorized in the history.
+每次运行命令，都会在历史中保存一条记录。
 
-You can display all the history using:
+你可以输入下面的命令来查看所有历史记录：
 
 ```
 history
 
 ```
 
-This shows the history with numbers:
+这会显示带有序号的历史记录：
 
 ![Screen-Shot-2020-09-04-at-08.03.10](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-08.03.10.png)
 
-You can use the syntax `!<command number>` to repeat a command stored in the history. In the above example typing `!121` will repeat the `ls -al | wc -l` command.
+你可以使用 `!<命令序号>` 重现已经储存在历史记录中的命令。以上的例子中，输入 `!121` 会重现 `ls -al | wc -l` 命令。
 
-`Typically the last 500 commands are stored in the history.
+通常，历史记录会保留最后执行的 500 条命令。
 
-You can combine this with `grep` to find a command you ran:
+你可以将这个命令与 `grep` 结合使用，以找到之前运行的命令：
 
 ```
 history | grep docker
@@ -1983,7 +1982,7 @@ history | grep docker
 ```
 
 ![Screen-Shot-2020-09-04-at-08.04.50](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-08.04.50.png)  
-To clear the history, run `history -c`.
+如果要清除历史记录，执行 `history -c`。
 
 ## Linux 中的 `export` 命令
 

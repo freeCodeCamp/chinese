@@ -1982,7 +1982,7 @@ history | grep docker
 ```
 
 ![Screen-Shot-2020-09-04-at-08.04.50](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-08.04.50.png)  
-如果要清除历史记录，执行 `history -c`。
+如果要清除历史记录，运行 `history -c` 即可。
 
 ## Linux 中的 `export` 命令
 

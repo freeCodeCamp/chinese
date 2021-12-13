@@ -1986,128 +1986,128 @@ history | grep docker
 
 ## Linux 中的 `export` 命令
 
-The `export` command is used to export variables to child processes.
+`export` 命令用来向子进程输出变量。
 
-What does this mean?
+这是什么意思呢？
 
-Suppose you have a variable TEST defined in this way:
+假设你像下面这样定义一个 TEST 变量：
 
 ```
 TEST="test"
 
 ```
 
-You can print its value using `echo $TEST`:
+你可以用 `echo $TEST` 输出它的值：
 
 ![Screen-Shot-2020-09-09-at-17.32.49](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-17.32.49.png)
 
-But if you try defining a Bash script in a file `script.sh` with the above command:
+但如果你尝试用以上命令，定义一个名为 `script.sh` 的 Bash 脚本：
 
 ![Screen-Shot-2020-09-09-at-17.35.23](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-17.35.23.png)
 
-Then when you set `chmod u+x script.sh` and you execute this script with `./script.sh`, the `echo $TEST` line will print nothing!
+然后设定 `chmod u+x script.sh`，并输入 `./script.sh` 执行脚本。此时，再执行 `echo $TEST` 将不会输出任何内容！
 
-This is because in Bash the `TEST` variable was defined local to the shell. When executing a shell script or another command, a subshell is launched to execute it, which does not contain the current shell local variables.
+这是因为在 Bash 中，`TEST` 被定义为局部变量。当执行一个 Shell 脚本或其他命令时，Bash 会为其单独启动一个子 Shell，这个子 Shell 不会包含当前 Shell 的局部变量。
 
-To make the variable available there we need to define `TEST` not in this way:
+如果想让变量在子 Shell 中仍然起作用，则不能使用以下命令定义 `TEST` ：
 
 ```
 TEST="test"
 
 ```
 
-but in this way:
+而是要这样：
 
 ```
 export TEST="test"
 
 ```
 
-Try that, and running `./script.sh` now should print "test":
+尝试以上命令，然后执行 `./script.sh`，现在 "test" 应该可以输出了：
 
 ![Screen-Shot-2020-09-09-at-17.37.56](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-17.37.56.png)  
-Sometimes you need to append something to a variable. It's often done with the `PATH` variable. You use this syntax:
+有时你需要在变量上附加一些内容。这常用于 `PATH` 变量。此时就需要像下面这样：
 
 ```
 export PATH=$PATH:/new/path
 
 ```
 
-It's common to use `export` when you create new variables in this way. But you can also use it when you create variables in the `.bash_profile` or `.bashrc` configuration files with Bash, or in `.zshenv` with Zsh.
+当你在终端中直接建立新变量时，通常会使用 `export`。此外，当你在 Bash 的 `.bash_profile` 或 `.bashrc` 配置文件，或 Zsh 的 `.zshenv` 配置文件中定义变量时，也可以使用它
 
-To remove a variable, use the `-n` option:
+要想删除一个变量，使用 `-n` 参数即可：
 
 ```
 export -n TEST
 
 ```
 
-Calling `export` without any option will list all the exported variables.
+不带参数调用 `export`，会列举当前已经输出的所有变量。
 
 ## Linux 中的 `crontab` 命令
 
-Cron jobs are jobs that are scheduled to run at specific intervals. You might have a command perform something every hour, or every day, or every 2 weeks. Or on weekends.
+Cron 作业通常指定期运行的作业。凭借它们，你可以让任一命令在每小时、每天、每两周或是周末执行。
 
-They are very powerful, especially when used on servers to perform maintenance and automations.
+它们非常强大，特别是在服务器上执行维护或自动化任务时。
 
-The `crontab` command is the entry point to work with cron jobs.
+`crontab` 命令是处理 Cron 作业的入口。
 
-The first thing you can do is to explore which cron jobs are defined by you:
+你能够做的第一件事是探索你定义了哪些 Cron 作业：
 
 ```
 crontab -l
 
 ```
 
-You might have none, like me:
+此处你可能像我一样，什么都没见到：
 
 ![Screen-Shot-2020-09-09-at-17.54.31](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-17.54.31.png)
 
-Run
+运行
 
 ```
 crontab -e
 
 ```
 
-`to edit the cron jobs, and add new ones.
+来编辑已有的 Cron 作业，或是添加新的作业。
 
-By default this opens with the default editor, which is usually `vim`. I like `nano` more. You can use this line to use a different editor:
+默认情况下，它会用系统默认编辑器（通常是  `vim` ）打开。我更喜欢 `nano`。你可以用下面这条命令切换不同的编辑器：
 
 ```
 EDITOR=nano crontab -e
 
 ```
 
-`Now you can add one line for each cron job.
+现在，你可以为每个 Cron 作业添加一行配置。
 
-The syntax to define cron jobs is kind of scary. This is why I usually use a website to help me generate it without errors: [https://crontab-generator.org/][74]
+定义作业的语法有些吓人。因此我常用一个网站来帮助我生成配置而不出错：[https://crontab-generator.org/][74]
 
 ![Screen-Shot-2020-09-09-at-18.03.57](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-18.03.57.png)
 
-`You pick a time interval for the cron job, and you type the command to execute.
+此处，你为 Cron 作业选择一个时间间隔，之后输入要执行的命令。
 
-I chose to run a script located in `/Users/flavio/test.sh` every 12 hours. This is the crontab line I need to run:
+我选择每 12 小时运行来自 `/Users/flavio/test.sh` 的脚本。以下是我需要执行的 crontab 配置行：
 
 ```
 * */12 * * * /Users/flavio/test.sh >/dev/null 2>&1
 
 ```
 
-I run `crontab -e`:
+我运行 `crontab -e`:
 
 ```
 EDITOR=nano crontab -e
 
 ```
 
-and I add that line, then I press `ctrl-X` and press `y` to save.
+然后添加以上配置行，之后按下 `ctrl-X` 然后再按 `y` 保存。
 
-If all goes well, the cron job is set up:
+如果一切顺利，那么 Cron 作业就设置好了：
 
 ![Screen-Shot-2020-09-09-at-18.06.19](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-18.06.19.png)
 
-Once this is done, you can see the list of active cron jobs by running:
+一旦完成，你可以运行以下命令查看当前激活的 Cron 作业列表：
 
 ```
 crontab -l
@@ -2116,7 +2116,7 @@ crontab -l
 
 ![Screen-Shot-2020-09-09-at-18.07.00](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-18.07.00.png)
 
-You can remove a cron job running `crontab -e` again, removing the line and exiting the editor:
+要删除 Cron 作业，只需再一次运行 `crontab -e` ，删除相应配置行，保存并退出编辑器即可。
 
 ![Screen-Shot-2020-09-09-at-18.07.40](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-18.07.40.png)
 
@@ -2124,62 +2124,62 @@ You can remove a cron job running `crontab -e` again, removing the line and exit
 
 ## Linux 中的 `uname` 命令
 
-Calling `uname` without any options will return the Operating System codename:
+不带任何参数执行 `uname` 将会返回当前操作系统的代号：
 
 ![Screen-Shot-2020-09-07-at-07.37.41](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-07.37.41.png)
 
-The `m` option shows the hardware name (`x86_64` in this example) and the `p` option prints the processor architecture name (`i386` in this example):
+参数 `m` 可以显示硬件名称（本例中为 `x86_64`），而参数 `p` 会输出处理器架构名称（本例中为 `i386`）：
 
 ![Screen-Shot-2020-09-07-at-07.37.51](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-07.37.51.png)
 
-The `s` option prints the Operating System name. `r` prints the release, and `v` prints the version:
+参数 `s` 输出操作系统名称，参数 `r` 输出当前发布版本的名称，而参数 `v` 输出版本号：
 
 ![Screen-Shot-2020-09-07-at-07.37.56](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-07.37.56.png)
 
-The `n` option prints the node network name:
+参数 `n` 输出网络节点，也就是当前主机的名称：
 
 ![Screen-Shot-2020-09-07-at-07.38.01](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-07.38.01.png)
 
-The `a` option prints all the information available:
+参数 `a` 则会输出所有可用的信息：
 
 ![Screen-Shot-2020-09-07-at-07.38.06](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-07.38.06.png)
 
-On macOS you can also use the `sw_vers` command to print more information about the macOS Operating System. Note that this differs from the Darwin (the Kernel) version, which above is `19.6.0`.
+在 macOS 上，你还可以使用 `sw_vers` 命令，输出更多关于操作系统的信息。注意这和上方 Darwin （内核）的版本 `19.6.0` 不同。
 
-> `Darwin is the name of the kernel of macOS. The kernel is the "core" of the Operating System, while the Operating System as a whole is called macOS. In Linux, Linux is the kernel, and GNU/Linux would be the Operating System name (although we all refer to it as "Linux").
+> Darwin 是 macOS 内核的名称。内核是操作系统的“核心”，而操作系统作为一个整体称为 macOS。在 Linux 中，Linux 是内核名称，而 GNU/Linux 才是操作系统名称（尽管我们会习惯性称其为 "Linux"）。
 
 ## Linux 中的 `env` 命令
 
-The `env` command can be used to pass environment variables without setting them on the outer environment (the current shell).
+`env` 命令可以用来传递环境变量，而不需要在外部环境（例如当前 Shell 中）设置它们。
 
-Suppose you want to run a Node.js app and set the `USER` variable to it.
+假设你想运行一个 Node.js 应用，同时要为它设置名为 `USER` 的变量。
 
-`You can run`
+你可以运行
 
 ```
 env USER=flavio node app.js
 
 ```
 
-and the `USER` environment variable will be accessible from the Node.js app via the Node `process.env` interface.
+此时，Node.js 应用可以通过 Node 的 `process.env` 接口访问 `USER` 这个环境变量。
 
-You can also run the command clearing all the environment variables already set, using the `-i` option:
+你也可以通过附加 `-i` 参数，清除所有已经设置的环境变量：
 
 ```
 env -i node app.js
 
 ```
 
-In this case you will get an error saying `env: node: No such file or directory` because the `node` command is not reachable, as the `PATH` variable used by the shell to look up commands in the common paths is unset.
+这种情况下，你有可能得到一个错误提示 `env: “node”: 没有那个文件或目录`，这是由于 Shell 用来查找共用命令路径的 `PATH` 变量已被卸除，导致 `node` 命令无法找到。
 
-So you need to pass the full path to the `node` program:
+因此你需要把完整的路径传递给 `node` 程序：
 
 ```
 env -i /usr/local/bin/node app.js
 
 ```
 
-Try with a simple `app.js` file with this content:
+我们用带有以下内容的 `app.js` 文件来试试：
 
 ```
 console.log(process.env.NAME)
@@ -2187,21 +2187,21 @@ console.log(process.env.PATH)
 
 ```
 
-You will see the output as
+你将会看到这样的输出：
 
 ```
 undefined
 
 ```
 
-You can pass an env variable:
+此时你可以传递一个 env 变量：
 
 ```
 env -i NAME=flavio node app.js
 
 ```
 
-and the output will be
+然后输出会变成：
 
 ```
 flavio
@@ -2209,18 +2209,18 @@ undefined
 
 ```
 
-Removing the `-i` option will make `PATH` available again inside the program:
+去掉 `-i` 参数会让 `PATH` 变量在应用中再次可用：
 
 ![Screen-Shot-2020-09-10-at-16.55.17](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-10-at-16.55.17.png)
 
-The `env` command can also be used to print out all the environment variables. If run with no options:
+如果不带参数运行 `env` 命令，它还可以用来列出所有环境变量：
 
 ```
 env
 
 ```
 
-it will return a list of the environment variables set, for example:
+它会返回已设置的环境变量的列表，例如：
 
 ```
 HOME=/Users/flavio
@@ -2231,7 +2231,7 @@ SHELL=/usr/local/bin/fish
 
 ```
 
-You can also make a variable inaccessible inside the program you run, using the `-u` option. For example this code removes the `HOME` variable from the command environment:
+你还可以使用 `-u` 参数，即可让某个变量在你运行的应用中无法访问。例如，下面的命令移除了当前环境中的 `HOME` 变量：
 
 ```
 env -u HOME node app.js
@@ -2240,11 +2240,11 @@ env -u HOME node app.js
 
 ## Linux 中的 `printenv` 命令
 
-Here's a quick guide to the `printenv` command, used to print the values of environment variables
+以下是 `printenv` 命令的快速指南，他可以用来输出环境变量对应的值。
 
-In any shell there are a good number of environment variables, set either by the system, or by your own shell scripts and configuration.
+任何 Shell 中都有大量的环境变量，有的是系统设置的，有的是你自己的 Shell 脚本或配置所产生的。
 
-You can print them all to the terminal using the `printenv` command. The output will be something like this:
+你可以使用 `printenv` 命令，将它们全部打印到终端中。输出大概就像下面这样：
 
 ```
 HOME=/Users/flavio
@@ -2255,9 +2255,9 @@ SHELL=/usr/local/bin/fish
 
 ```
 
-with a few more lines, usually.
+通常还会多几行。
 
-You can append a variable name as a parameter, to only show that variable value:
+你可以传递一个变量名作为参数，只显示指定变量的值：
 
 ```
 printenv PATH
@@ -2268,15 +2268,15 @@ printenv PATH
 
 ## `结语`
 
-Thanks a lot for reading this handbook.
+感谢你阅读这份命令指南。
 
-I hope it will inspire you to learn more about Linux and its capabilities. It's evergreen knowledge that will not be out of date any time soon.
+我希望它会激发你去学习更多关于 Linux 及其能力的知识。这些知识就像是一棵常青树，不会很快过时。
 
-Remember that you can [download this handbook in PDF / ePUB / Mobi format][75] if you want!
+请记住，如果你愿意，随时可以[免费下载这本书的 PDF、ePUB、Mobi 版本][75]！
 
-I **publish programming tutorials** every day on my website [flaviocopes.com][76] if you want to check out more great content like this.
+如果想查看更多类似的精彩内容，我每天会在我的网站 [flaviocopes.com][76] 上 **发布编程教程** 。
 
-You can reach me on Twitter [@flaviocopes][77].
+你还可以在 Twitter [@flaviocopes][77] 上找到我。
 
 [1]: https://flaviocopes.com/page/linux-commands-handbook/
 [2]: https://www.freecodecamp.org/news/the-linux-commands-handbook/#introductiontolinuxandshells

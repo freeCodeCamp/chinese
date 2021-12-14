@@ -168,10 +168,10 @@ Bash 的全称是 _Bourne-again shell_。 `sh` 是专有软件，并不开放源
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-07-04-at-18.42.40.png)
 
-这是一个 man （取自 \_\_manual\_\_ 的缩写）页面。Man 页面是你学习开发时的必备工具。它通常包含非常多的信息（有时几乎可以说太多了！）。
+这是一个 man （取自 _manual_ 的缩写）页面。Man 页面是你学习开发时的必备工具。它通常包含非常多的信息（有时几乎可以说太多了！）。
 上方的屏幕截图，实际上只是 `ls` 命令的 14 页用法指南中的第 1 页。
 
-大多数时候，如果我需要快速了解某个命令的用法，我会访问一个叫做** tldr pages **的网站（[https://tldr.sh][66]）。 它也可以作为一条命令安装在你的电脑上。比如，你可以运行 `tldr <命令名>` ，它就会快速提供这条命令的概述，以及一些常见的使用场景和用法指引：
+大多数时候，如果我需要快速了解某个命令的用法，我会访问一个叫做 **tldr pages** 的网站（[https://tldr.sh][66]）。 它也可以作为一条命令安装在你的电脑上。比如，你可以运行 `tldr <命令名>` ，它就会快速提供这条命令的概述，以及一些常见的使用场景和用法指引：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-07-at-07.35.41.png)
 
@@ -1332,7 +1332,6 @@ basename /Users/flavio/test.txt
 
 ```
 dirname /Users/flavio/test.txt
-
 ```
 
 会返回 `/Users/flavio` 字符串：
@@ -1369,7 +1368,6 @@ dirname /Users/flavio/test.txt
 
 ```
 ps axww | grep "Visual Studio Code"
-
 ```
 
 ![Screen-Shot-2020-09-02-at-12.33.45](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-02-at-12.33.45.png)  
@@ -1415,7 +1413,6 @@ ps axww | grep "Visual Studio Code"
 
 ```
 top -o mem
-
 ```
 
 ## Linux 中的 `kill` 命令
@@ -1432,7 +1429,6 @@ Linux 进程可以接收**信号**并做出反应。
 
 ```
 kill <PID>
-
 ```
 
 默认情况下，它会向指定的进程 ID 发送 `TERM` 信号。
@@ -1446,7 +1442,6 @@ kill -KILL <PID>
 kill -TERM <PID>
 kill -CONT <PID>
 kill -STOP <PID>
-
 ```
 
 `HUP` 代表 **hang up（挂起）**。 如果在终止进程之前，先关闭了启动它的终端窗口，这一信号将被自动发送。
@@ -1478,7 +1473,6 @@ kill -STOP <PID>
 
 ```
 killall <name>
-
 ```
 
 `name` 也就是进程的名字。例如，假设有多个 `top` 程序的实例在运行， `killall top` 命令将完全终结它们。
@@ -1487,7 +1481,6 @@ killall <name>
 
 ```
 killall -HUP top
-
 ```
 
 ## Linux 中的 `jobs` 命令
@@ -1498,7 +1491,6 @@ killall -HUP top
 
 ```
 top &
-
 ```
 
 这对于需要长时间运行的程序来说很方便。
@@ -1537,7 +1529,6 @@ top &
 
 ```
 fg
-
 ```
 
 它将在前台恢复最后被暂停的作业。
@@ -1603,7 +1594,6 @@ fg
 
 ```
 command1 | xargs command2
-
 ```
 
 我们使用管道符（`|`）将输出传递给 `xargs`。它将负责运行 `command2` 命令，使用 `command1` 的输出作为参数。
@@ -1622,7 +1612,6 @@ command1 | xargs command2
 
 ```
 cat todelete.txt | xargs rm
-
 ```
 
 以下是执行结果，我们列出的文件现在已经被删除：
@@ -1648,7 +1637,6 @@ The `-I` option is another widely used one. It allows you to get the output into
 
 ```
 command1 | xargs -I % /bin/bash -c 'command2 %; command3 %'
-
 ```
 
 ![Screen-Shot-2020-09-08-at-08.35.37](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-08-at-08.35.37.png)
@@ -1669,7 +1657,6 @@ command1 | xargs -I % /bin/bash -c 'command2 %; command3 %'
 
 ```
 vi test.txt
-
 ```
 
 ![Screenshot-2019-02-10-at-11.36.21](https://www.freecodecamp.org/news/content/images/2020/10/Screenshot-2019-02-10-at-11.36.21.png)
@@ -1808,7 +1795,6 @@ Emacs 还有很多要了解的地方，限于篇幅，我在这篇简短教程�
 
 ```
 su <用户名>
-
 ```
 
 例如： `su flavio`.
@@ -1832,7 +1818,6 @@ su <用户名>
 
 ```
 sudo nano /etc/hosts
-
 ```
 
 这在普通模式下是无法实现的，因为你没有相应的权限。
@@ -1845,7 +1830,6 @@ sudo nano /etc/hosts
 
 ```
 sudo -u flavio ls /Users/flavio
-
 ```
 
 ## Linux 中的 `passwd` 命令
@@ -1858,7 +1842,6 @@ sudo -u flavio ls /Users/flavio
 
 ```
 passwd
-
 ```
 
 交互式提示会先询问你的旧密码，之后要求你输入新密码：
@@ -1869,7 +1852,6 @@ passwd
 
 ```
 passwd <username> <new password>
-
 ```
 
 此时你无需输入旧密码。
@@ -1917,7 +1899,6 @@ passwd <username> <new password>
 
 ```
 traceroute <host>
-
 ```
 
 它将会（缓慢地）在数据包旅行时收集所有相关信息。
@@ -1936,7 +1917,6 @@ traceroute <host>
 
 ```
 traceroute -q 1 flaviocopes.com
-
 ```
 
 ![Screen-Shot-2020-09-09-at-16.36.07](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-16.36.07.png)
@@ -1963,7 +1943,6 @@ traceroute -q 1 flaviocopes.com
 
 ```
 history
-
 ```
 
 这会显示带有序号的历史记录：
@@ -1978,7 +1957,6 @@ history
 
 ```
 history | grep docker
-
 ```
 
 ![Screen-Shot-2020-09-04-at-08.04.50](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-04-at-08.04.50.png)  
@@ -1994,7 +1972,6 @@ history | grep docker
 
 ```
 TEST="test"
-
 ```
 
 你可以用 `echo $TEST` 输出它的值：
@@ -2013,14 +1990,12 @@ TEST="test"
 
 ```
 TEST="test"
-
 ```
 
 而是要这样：
 
 ```
 export TEST="test"
-
 ```
 
 尝试以上命令，然后执行 `./script.sh`，现在 "test" 应该可以输出了：
@@ -2030,7 +2005,6 @@ export TEST="test"
 
 ```
 export PATH=$PATH:/new/path
-
 ```
 
 当你在终端中直接建立新变量时，通常会使用 `export`。此外，当你在 Bash 的 `.bash_profile` 或 `.bashrc` 配置文件，或 Zsh 的 `.zshenv` 配置文件中定义变量时，也可以使用它
@@ -2039,7 +2013,6 @@ export PATH=$PATH:/new/path
 
 ```
 export -n TEST
-
 ```
 
 不带参数调用 `export`，会列举当前已经输出的所有变量。
@@ -2056,7 +2029,6 @@ Cron 作业通常指定期运行的作业。凭借它们，你可以让任一命
 
 ```
 crontab -l
-
 ```
 
 此处你可能像我一样，什么都没见到：
@@ -2067,7 +2039,6 @@ crontab -l
 
 ```
 crontab -e
-
 ```
 
 来编辑已有的 Cron 作业，或是添加新的作业。
@@ -2076,7 +2047,6 @@ crontab -e
 
 ```
 EDITOR=nano crontab -e
-
 ```
 
 现在，你可以为每个 Cron 作业添加一行配置。
@@ -2091,14 +2061,12 @@ EDITOR=nano crontab -e
 
 ```
 * */12 * * * /Users/flavio/test.sh >/dev/null 2>&1
-
 ```
 
 我运行 `crontab -e`:
 
 ```
 EDITOR=nano crontab -e
-
 ```
 
 然后添加以上配置行，之后按下 `ctrl-X` 然后再按 `y` 保存。
@@ -2111,7 +2079,6 @@ EDITOR=nano crontab -e
 
 ```
 crontab -l
-
 ```
 
 ![Screen-Shot-2020-09-09-at-18.07.00](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-09-at-18.07.00.png)
@@ -2158,7 +2125,6 @@ crontab -l
 
 ```
 env USER=flavio node app.js
-
 ```
 
 此时，Node.js 应用可以通过 Node 的 `process.env` 接口访问 `USER` 这个环境变量。
@@ -2167,7 +2133,6 @@ env USER=flavio node app.js
 
 ```
 env -i node app.js
-
 ```
 
 这种情况下，你有可能得到一个错误提示 `env: “node”: 没有那个文件或目录`，这是由于 Shell 用来查找共用命令路径的 `PATH` 变量已被卸除，导致 `node` 命令无法找到。
@@ -2176,7 +2141,6 @@ env -i node app.js
 
 ```
 env -i /usr/local/bin/node app.js
-
 ```
 
 我们用带有以下内容的 `app.js` 文件来试试：
@@ -2184,21 +2148,17 @@ env -i /usr/local/bin/node app.js
 ```
 console.log(process.env.NAME)
 console.log(process.env.PATH)
-
 ```
 
 你将会看到这样的输出：
 
 ```
 undefined
-
 ```
 
 此时你可以传递一个 env 变量：
-
 ```
 env -i NAME=flavio node app.js
-
 ```
 
 然后输出会变成：
@@ -2206,7 +2166,6 @@ env -i NAME=flavio node app.js
 ```
 flavio
 undefined
-
 ```
 
 去掉 `-i` 参数会让 `PATH` 变量在应用中再次可用：
@@ -2217,7 +2176,6 @@ undefined
 
 ```
 env
-
 ```
 
 它会返回已设置的环境变量的列表，例如：
@@ -2228,14 +2186,12 @@ LOGNAME=flavio
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
 PWD=/Users/flavio
 SHELL=/usr/local/bin/fish
-
 ```
 
 你还可以使用 `-u` 参数，即可让某个变量在你运行的应用中无法访问。例如，下面的命令移除了当前环境中的 `HOME` 变量：
 
 ```
 env -u HOME node app.js
-
 ```
 
 ## Linux 中的 `printenv` 命令
@@ -2252,7 +2208,6 @@ LOGNAME=flavio
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
 PWD=/Users/flavio
 SHELL=/usr/local/bin/fish
-
 ```
 
 通常还会多几行。
@@ -2261,12 +2216,11 @@ SHELL=/usr/local/bin/fish
 
 ```
 printenv PATH
-
 ```
 
 ![Screen-Shot-2020-09-10-at-16.31.20](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-10-at-16.31.20.png)
 
-## `结语`
+## 结语
 
 感谢你阅读这份命令指南。
 

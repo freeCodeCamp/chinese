@@ -2228,7 +2228,7 @@ printenv PATH
 
 请记住，如果你愿意，随时可以[免费下载这本书的 PDF、ePUB、Mobi 版本][75]！
 
-如果想查看更多类似的精彩内容，我每天会在我的网站 [flaviocopes.com][76] 上 **发布编程教程** 。
+如果想查看更多类似的精彩内容，我每天会在我的网站 [flaviocopes.com][76] 上**发布编程教程**。
 
 你还可以在 Twitter [@flaviocopes][77] 上找到我。
 

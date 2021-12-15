@@ -82,9 +82,9 @@ button.orange {
 这是我们看到的网页:  
 ![changeColor](https://www.freecodecamp.org/news/content/images/2021/08/changeColor.png)
 
-Our aim is to change the color of the text to blue when we click the button. So we need to add an `onclick` attribute to our button, then write the JavaScript function to change the color.
+我们的目标是当我们点击这个按键时，文本的颜色变成蓝色。所以我们需要添加一个 `onclick`属性到按键上，然后白编写JavaScript函数来改变颜色。
 
-So we need to make a slight change in our HTML:
+我们需要在HTML做一些小小的改变.
 
 ```html
 <div>
@@ -93,15 +93,15 @@ So we need to make a slight change in our HTML:
 </div>
 ```
 
-The function we want to execute is `changeColor()`. So we need to write it in a JavaScript file, or in the HTML file inside a `<script>` tag.
+我们要执行的函数是`changeColor()`,所以我们需要把它写到一个JavaScript文件里，或者写再HTML文件的`<script>`标签里。
 
-If you want to write your script in a JavaScript file, you need to link it in the HTML using the syntax below:
+如果你想把你的脚本写在一个JavaScript文件中，你需要在HTML里用下面的语法引用它。
 
 ```html
 <script src="path-to-javascript-file"></script>
 ```
 
-If you want to write the script in an HTML file, just put it inside the script tag:
+如果你想在HTML里写脚本，把它放在script标签里。
 
 ```html
 <script>
@@ -109,19 +109,19 @@ If you want to write the script in an HTML file, just put it inside the script t
 </script>
 ```
 
-Now, let’s write our `changeColor()` function.
+现在让我们来写`changeColor()`函数
 
-First of all, we need to select the element we want to manipulate, which is the freeCodeCamp text inside the `<p>` tag.
+首先，我们需要选择我们想操作的元素，也就是在`<p>`标签内的 `freeCodeCamp ` 文本
 
-In JavaScript, you do that with the DOM’s `getElementById()`, `getElementsByClassName()`, or the `querySelector()` methods. Then you store the value in a variable.
+在JavaScript中，你可以用DOM的 getElementById()，getElementsByClassName()，或者querySelector()方法把DOM对象存储在变量中。
 
-In this tutorial, I will be using `querySelector()` because it is more modern and it's faster. I will also be using `const` to declare our variables instead of `let` and `var`, because with `const`, things are safer as the variable becomes read-only.
+在本教程中，我将使用`querySelector()` ，因为它更现代，而且运行更快。我还将使用 `const`来声明我们的变量，而不用`let`和`var`。因为使用`const`，事情将变得更安全，变量是只读的。
 
 ```js
 const name = document.querySelector(".name");
 ```
 
-Now that we have the text selected, let's write our function. In JavaScript, the basic function syntax looks like this:
+现在我们已经选定了文本，让我们来编写自己函数。在JavaScript中，函数的基本语法是这样的。
 
 ```js
 function funcctionName () {
@@ -129,7 +129,7 @@ function funcctionName () {
 } 
 ```
 
-So let’s write our function:
+这就是我们的函数
 
 ```js
 function changeColor() {
@@ -137,21 +137,21 @@ function changeColor() {
 }
 ```
 
-What’s going on?
+发生了什么事情？
 
-Remember from the HTML that `changeColor()` is the function we are going to execute. That’s why our function identifier (name) is set to `changeColor`. If the name doesn’t correlate with what’s in the HTML, it won’t work.
+HTML中的`changeColor()`是我们要执行的函数，如果的这个名字与HTML中的函数名不一样，它就不会起作用。所以我们的函数名写成  `changeColor`。
 
-In the DOM (Document Object Model, refers to all of the HTML), to change anything that relates to style, you need to write “style” then a dot (.). This is followed by what you want to change, which might be the color, background color, font size, and so on.
+在DOM(文档对象模型，指所有的HTML)中，要改变任何有关`style`的东西，你需要写上`style`，然后加上一个`.`。后面是你想要改变的东西，这可以是颜色(color)，背景颜色(background)，字体大小(fontsize)等。
 
-So, inside our function, we take the name variable we declared to get our freeCodeCamp text, then we change the color to blue.
+因此，在我们的函数中，我们声明了变量来获取`freeCodeCamp`文本，然后我们把颜色改为蓝色。
 
-The color of our the text turns blue any time the button is clicked:
+点击按键时，文本的颜色会变成蓝色。
 
 ![changeColor](https://www.freecodecamp.org/news/content/images/2021/08/changeColor.gif)
 
-Our code is working!
+我们的起作用了！！！
 
-We could take things a little bit further by changing our text to be more colors:
+我们可以把事情做得更进一步，把我们的文字有更多的颜色变化。
 
 ```html
 <div>
@@ -162,15 +162,15 @@ We could take things a little bit further by changing our text to be more colors
 </div>
 ```
 
-So, what we want to do is change the text to blue, green, and orange-red.
+我们要把文本颜色改成蓝色，橙色和橙红色。
 
-This time around, the `onclick` functions in our HTML take the values of the color we want to change the text to. These are called parameters in JavaScript. The function we'll write takes its own too, which we will call “color”.
 
-Our web page changed a little:
+
+我们的网页稍微变化一下：
 
 ![changeColors](https://www.freecodecamp.org/news/content/images/2021/08/changeColors.png)
 
-So, let's select our freeCodeCamp text and write the function to change its color to blue, green, and orange-red:
+让`freeCodeCamp`文本通过我们写的函数可以变成蓝色，绿色，和橙红。
 
 ```js
 const name = document.querySelector(".name");
@@ -180,7 +180,8 @@ function changeColor(color) {
 }
 ```
 
-The block of code in the function takes the name variable (where we stored our freeCodeCamp text), then set the color to whatever we passed into the `changeColor()` functions in the HTML buttons.  
+ name变量获取了`name`的DOM对象(我们在这里存储了`freeCodeCamp`文本),然后颜色会根据我们传入`changeColor()`的颜色值变化。
+
 ![changeColors](https://www.freecodecamp.org/news/content/images/2021/08/changeColors.gif)
 
 ## How to Use the click `eventListener` in JavaScript

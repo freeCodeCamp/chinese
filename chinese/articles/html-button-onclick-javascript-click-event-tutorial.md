@@ -184,21 +184,21 @@ function changeColor(color) {
 
 ![changeColors](https://www.freecodecamp.org/news/content/images/2021/08/changeColors.gif)
 
-## How to Use the click `eventListener` in JavaScript
+## 如何使用 `eventListener`在JavaScript中  
 
-In JavaScript, there are multiple ways of doing the same thing. As JavaScript itself evolved over time, we started needing to separate the HTML, CSS, and JavaScript code in order to comply with best practices.
+在JacaScript中，有多种方法做同一件事。随着JavaScirpt本身发展，我们开始需要将HTML，CSS和JavaScript代码分开，以达到最佳实践。
 
-Event listeners make this possible as they let you separate the JavaScript from the HTML. You can also do this with onclick, but lets take another approach here.
+事件监听器使JavaScript和HTML分离成为可能。你也可以用`onclick`做到这一点，但是在这里采取另一种方法。
 
-### Basic `eventListener` syntax
+### 基本 `eventListener` 语法 
 
 ```js
  element.addEventListener("type-of-event", functionToExecute)
 ```
 
-Now, let's change the freeCodeCampt text to blue by using the click eventListner
+现在让我们使用`ckick eventListner`将`freeCodeCamp`文本变成蓝色。
 
-This is our new HTML:
+这是我们新的HTML：
 
 ```html
  <div>
@@ -207,13 +207,13 @@ This is our new HTML:
  </div>
 ```
 
-And this is what it looks like:
+这是网页效果。
 
 ![colorChange](https://www.freecodecamp.org/news/content/images/2021/08/colorChange.png)
 
-This time around in our script, we need to select the button too (not just the freeCodeCamp text). That’s because there’s nothing JavaScript in the opening tag of our button, which is cool.
+这次在我们的脚本中，我们也需要选择按键(而不仅是`freeCodeCamp`文本)。因为在我们的按键的标签里没有任何JavaScript，这很酷。
 
-So, our script looks like this:
+这是我们的脚本的样子。
 
 ```js
 const name = document.querySelector(".name");
@@ -224,7 +224,7 @@ const btn = document.querySelector("button");
  });
 ```
 
-We can also separate our function totally from the `eventListener` and our functionality will still remain the same:
+我们也可以将我们的函数与`eventListener` 完全分开，我们的功能保持一样。
 
 ```js
 btn.addEventListener("click", changeColor);
@@ -235,13 +235,13 @@ btn.addEventListener("click", changeColor);
 
 ![changeColorWithEvents](https://www.freecodecamp.org/news/content/images/2021/08/changeColorWithEvents.gif)
 
-## How to Build a " Show More" and "Show Less" Button with JavaScrpit
+## 如何通过JavaScript建立一个 `Show More` 和 `Show Less` 按键。
 
-One of the best ways to learn is by making projects, so let's take what we've learned about the `onclick` and "click" `eventListner` to do build something.
+学习的最好办法之一是去动手创建一个项目，用到我们已经学到的`onclick` 和 `click eventLister`，去做一些事情。
 
-When you visit a blog, you often see excerpts of articles first. Then you can click on a "read more" button to show the rest. Let's try to do that.
+当你访问一个博客，你往往先看到文章的招录，然后你可以点击 `read more`按键，显示剩余内容。让我们尝试实现这个。
 
-This is the HTML we are dealing with:
+这是我们要处理的HTML:
 
 ```html
  <article id="content">
@@ -273,12 +273,12 @@ This is the HTML we are dealing with:
 <button onclick="showMore()">Show more</button>
 ```
 
-It’s simple HTML with some facts about freeCodeCamp. And there's a button we already attach an `onclick` to. The function we want to execute is `showMore()`, which we will write soon.
+这是简单的HTML，是有关freeCodeCamp的事情。有个按键，我们已经给它加上了`onClick`。我们要执行的函数是`showMore()`，等下我们会写上。
 
-Without a CSS, this is what we have:  
+没有CSS，是下面的效果:  
 ![articleunstyled](https://www.freecodecamp.org/news/content/images/2021/08/articleunstyled.png)
 
-It's not super ugly, but we can make it look better and act the way we want it to. So we have some CSS which I will explain below:
+它不是很难看，但是我们可以让它更美观，通过下面的CSS:
 
 ```css
 <style>
@@ -332,45 +332,46 @@ It's not super ugly, but we can make it look better and act the way we want it t
 </style>
 ```
 
-What's the CSS doing?
+CSS做了什么？
 
-With the universal selector (`*`), we are removing the default margin and padding assigned to elements so we can add our own margin and padding.
+通过选择器(`*`)，我们删除了分配给元素的默认 `margin`和`padding`，这样我们可以添加自己的`margin`和`padding`。
 
-We also have box sizing set to border-box so we can include the padding and border in our elements’ total width and height.
+我们还将`box sizing` 设置为`border-box`，这样我们就可以在元素的总宽度和总高度中包含`padding`和`border`。
 
-We centered everything in the body with Flexbox and gave it a light grey background.
+我们用`Flexbox`将文字内容全部居中，并给它一个浅灰色的背景。
 
-Our `<article>` element, which contains the text, has a width of `400px`, a white background (#fff), and has a padding of 20px at the top, 20 on the left and right, and 0 at the bottom.
+我们的`<article>`元素，是文本的容器，宽为400px，白色背景(#fff)，顶部有20px的padding，左右各20px的padding，底部为0px 的padding。
 
-The paragraph tags inside of it have a font-size of 18px, and then we gave them a maximum height of `270px`. Due to the max height of the article element, all the text won't be contained and will overflow. To fix this, we set overflow to hidden in order not to show that text at first.
+段落里的字体的标签大小为18px(font-size: 18px)，然后我们给它们的最大高度为270px(max-height: 270px)。由于设置了最大高度，所有的文字不能包含进来，就会溢出，为了解决这个问题，我们将溢出设置为隐藏（overflow: hidden），这样一开始就不会显示这些文字。
 
-The transition property ensures that every change happens after 1 second. All text inside the `article` are justified and have a margin top of 20 pixels so it doesn’t stay too attached to the top of the page.
+过渡属性设置为每个变化在1秒后发生(transition: max-height 1s)，所有的文本都是两端对齐(text-align: justify)，并且有20px 的顶部边距(margin-top: 20px)
 
-Because we removed the default margin, our paragraphs got all pushed together. So we set a bottom margin of 16 pixels in order to separate them from one another.
+因为我们去掉默认的`margin`，我们的段落将会挤到一起。避免这个，我们设置了`p`元素16px的底边距(margin-bottom: 16px)，让段落彼此分开。
 
-Our selector, `article.open`, has a property of `max-height` set to `1000px`. This means that any time the article element has a class of `open` attached to it, the maximum height will change from `270px` to `1000px` to show the rest of the article. This is possible with JavaScript – our game changer.
+我们的选择器 `article.open` 有个属性`max-height` 设置为 1000px。这意味着任何一个`aritcle`元素有个`class` open，`maximum height` 将从270px 变为1000px，去显示文章的其余部分。这是用JavaScript实现的。
 
-We styled our button with a darkish background and made it white. We set its border to none to remove HTML’s default border on buttons, and we gave it a border radius of `4px` so it has a slightly rounded border.
+我们设置按键，使用深色背景(background: #0e0b22)，白色按键(color: #fff)，无边框(border: none)，半径为4px(border-radius: 4px)。
 
-Finally, we used the `hover` pseudo-class in CSS to change the button cursor to a pointer. The background color slightly changes when a user hovers their cursor over it.
+最后，我们使用CSS中的伪类`hover`将按键的光标改为指针(pointer)，当用户将光标悬停在按键上时，背景颜色会发生轻微的变化。
 
-There we go – that’s the CSS.
+这就是CSS。
 
-Our page now looks better:
+我们的页面更好看了:
 
 ![articlestyled](https://www.freecodecamp.org/news/content/images/2021/08/articlestyled.png)
 
-The next thing we need to do is to write our JavaScript so we can see the rest of the article that is hidden.
+下一件我们需要要做的事，编写我们的JavaScript，这样我们可以看到被隐藏的文章部分了。
 
-We have an `onclick` attribute inside our button opening tag ready to execute a `showMore()` function, so let's write the function.
 
-We need to select our article first, because we have to show the rest of it:
+我们有一个`onclick`属性在我们的按键内，去调用 `showMore()`函数， 让我们写这个函数。
+
+我们首先需要选择我们的`article`，因为我们要展示它的其余部分。
 
 ```js
 const article = document.querySelector("#content");
 ```
 
-The next thing we need to do is write the function `showMore()` so we can toggle between seeing the rest of the article and hiding it.
+接下来，我们要写函数`showMore()`，这样我们能在`Show More` 和 `Show Less` 间进行切换。
 
 ```js
 function showMore() {
@@ -386,11 +387,11 @@ function showMore() {
   }
 ```
 
-What is the function doing?
+函数做了什么？
 
-We use an `if…else` statement here. This is a crucial part of JavaScript that helps you make decisions in your code if a certain condition is met.
+我们使用`if...else`语句，这是JavaScript的一个重要语句。它根据某个条件进行切换。
 
-The basic syntax looks like this:
+这是它的基本语法:
 
 ```js
 if (condition == "something") {
@@ -400,14 +401,14 @@ if (condition == "something") {
 }
 ```
 
-Here, if the class name of the article equals open (that is, we want to add the class of open to it, which was set to a maximum height of 1000px in the CSS), then we want to see the rest of the article. Else, we want the article to return to the initial state where a part of it is hidden.
+如果`article.className` 为`open`时(也就是说，我们想给它加上open的类，在CSS中被设置为最大高度为1000px),然后我们可以看到文件的其余部分。 如果不为`open`，文章回到初始状态，即它的一部分被隐藏。
 
-We do this by assigning it a class of open in the else block, which makes it show the rest of the article. Then we set the class to an empty string (none) in the if block, which makes it return to the initial state.
+我们在`else`语句中给它设置`open`的`class`，它显示文章其余部分。在`if` 语句中把 `open`的`class`去掉，这使它恢复初始状态。
 
-Our code is working fine with a smooth transition:  
+我们的代码能在`Show More` 和 `Show Less` 间进行切换:  
 ![article](https://www.freecodecamp.org/news/content/images/2021/08/article.gif)
 
-We can separate the HTML and JavaScript and still use `onclick`, because onclick is JavaScript. So it's possible to write this in a JavaScript file instead of starting from the HTML.
+我们可以把HTML和JavaScript分离的前提下，接着使用`onclick` ，因为`onclick`是JavaScript。所以把它写到一个JavaScript文件里，而不是写在HTML。
 
 ```js
  button.onclick = function () {
@@ -425,7 +426,7 @@ We can separate the HTML and JavaScript and still use `onclick`, because onclick
 
 ![articleonclick](https://www.freecodecamp.org/news/content/images/2021/08/articleonclick.gif)
 
-We can also do this using an eventListner:
+我们也可以用`eventListner`实现:
 
 ```html
 <article id="content">
@@ -475,10 +476,10 @@ function readMore() {
 }
 ```
 
-Our functionality remains the same!
+我们的功能是一样的!
 
-## Conclusion
+## 总结
 
-I hope this tutorial helps you understand how the click event works in JavaScript. We explored two different methods here, so now you can start using them in your coding projects.
+我希望本教程帮助你了解点击事件在JavaScript中是怎么工作的。我们探讨了两种不同的方法，所以你可以在编码中使用它们。
 
-Thank you for reading, and keep coding.
+感谢你的阅读，跟随教程进行编程。

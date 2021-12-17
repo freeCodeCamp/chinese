@@ -1,33 +1,33 @@
 > -  原文地址：[How to Use Small and Sustainable Habits to Get Your First Dev Job](https://www.freecodecamp.org/news/how-to-use-small-sustainable-habits-to-get-your-first-dev-job/)
 > -  原文作者：[Ken RogersKen Rogers](https://www.freecodecamp.org/news/author/ken-rogers/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
 ![How to Use Small and Sustainable Habits to Get Your First Dev Job](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/FCC-Article-Cover--1-.png)
 
-Achieving a big goal like transitioning into a new career can be extremely challenging and overwhelming.
+过渡到新职业是极具挑战性和要承受很大的压力的事。
 
-The amount of information isn't the problem. We have access to more information than we ever have. The problem is knowing how to effectively execute on the information available to us.
+信息的数量不是问题。我们可以获取比以往更多的信息。但问题是如何有效利用我们获取的信息。
 
-The more I progress in my life and career, the more convinced I am that the path to success does not lie in setting massive goals, and then cranking every day to reach them.
+我在生活和事业获得的收获越大，我越相信，通往成功的道路不是设定巨大的目标，然后每天都为实现这些目标而努力。
 
-The path lies in choosing your goals, then designing simple systems built with small habits that will facilitate achieving those goals.
+路径在于你选择的目标，然后设计简单的系统，用于小习惯促进实现这些目标。
 
-But one crucial component is to not measure your success when you reach your goal, but measure your success each time you successfully execute on your system.
+但是一个关键的部分，不要在达到目标时衡量你的成功，而是在每次成功执行在你的系统内。
 
-This means that you are in a constant state of success instead of being in a state of failure 99% of the time with brief spurts of success.
+这意味着你处在持续成功的状态，而不是在99%时间内处于失败状态，只有短暂的成功。
 
-This not only is better psychologically but leads to a higher likelihood of you actually achieving your goals.
+这不仅在心理上更好，而且提高了你实现目标的可能性。
 
-In this article we'll go over how to apply this philosophy to the goal of getting your first developer job. Although I should note that even if you are already working as a developer, these strategies will still apply to anyone looking to build a more fulfilling, robust career.
+在这篇文章中，我们将讨论如何将这一理念应用于获得你的第一份开发工作的目标。我也注意到，即使你已经从事开发工作，这些策略依然适用于任何一个希望建立一个更充实，更健全的职业生涯的人。
 
-This note is important, so I'll reiterate. We are not looking for short-term wins here, we are looking to design a system and build a collection of habits that you will continue throughout the life of your career as a developer.
+这一点很重要，所以我要重申一下。我们在这里不是寻找短期的胜利，我们是在设计一个系统，建立一个习惯的集合，你将在你的职业生涯中作为一名开发者。 
 
-These habits will allow you to not only land your first job, but as you progress further and further, they will help you grow your network, influence, and skills. The byproduct of this is finding work you enjoy that pays well, and having abundant opportunities at your disposal.
+这些习惯不仅能让你找到第一份工作，而且随着你的进步，它们将帮助你扩大你的人脉，影响力和技能。这能帮助你找到你喜欢，报酬丰厚的工作，并有丰富的机会供你选择。
 
-Most of the ideas here have been adapted from Tiny Habits by BJ Fogg, Atomic Habits by James Clear, and my own personal experience getting my first dev job without any experience or education.
+这里的大部分想法源泉是`BJ Fogg`的《小习惯》，`James Clear`的《原子习惯》，以及我在没有任何经验或教育下获得第一份开发工作的经历。
 
-I'm currently reading Tiny Habits right now and I really like the focus on simplicity here, so we'll focus a lot on Fogg's technique for this article.
+我现在在阅读《微小的习惯》，我非常喜欢书中对简单性的关注，所以我们在这篇文件中关注`Fogg`的技巧。
 
 Let's get to it.
 

@@ -29,81 +29,81 @@
 
 我现在在阅读《微小的习惯》，我非常喜欢书中对简单性的关注，所以我们在这篇文件中关注`Fogg`的技巧。
 
-Let's get to it.
+让我们开始吧.
 
-## Overview of the Tiny Habits Method
+## 小习惯的的概述
 
-Very briefly, let's go over the philosophy and methodology of Tiny Habits. At its core, the system follows the idea that the best way to make consistent, lasting change is to make that change tiny – embarrassingly so.
+非常简单，让我们看看小习惯的理念和方法，在其核心部分，该系统遵循的理念是，最佳方法是做出持续的小改变。
 
-Fogg argues that motivation is a poor tool to rely on when making lasting change. It fools us into thinking we can make significant change, because significant change is possible for a short time when we feel motivated.
+Fogg 认为在进行持续的改变时，动力是可怜的工具。它让我们认为我们可以在短时间内发生重大改变。
 
-The problem is that motivation doesn't last. So when the motivation wanes, you don't stick to the large, ambitious goal you set for yourself. Then you feel like a failure, so your motivation tanks more, and the cycle repeats itself for most of the big changes you want to make.
+问题是动力并不持续。因此，动力减弱时，你不会坚持你为自己设定的大的，雄心勃勃的目标，然后你会觉得自己是个失败者，于是你的动力就会消耗更多。对于你想做的大多数的大的改变，这个循环会重复。
 
-Instead, you should create the smallest possible action you can in working towards your goals.
+相反，你应该在实现你的目标的过程中，通过尽可能小的行动来实现。
 
-So instead of trying to create a habit of doing 50 pushups per day, set a habit to do two.
+因此，与其试图养成每天做50个俯卧撑的习惯， 不如设定一天做两个的习惯。
 
-Again, the idea rests on the habits being very very small. The point is that it should take almost no effort at all to do it. Then you instill the habit, and gradually increase the amount that you do.
+同样，这个想法对习惯的依赖是非常非常小的，关键是做这些事情几乎不需要任何努力。然后你灌输这个习惯，并逐渐增加你所做的数量。
 
-As a general rule, the habit should take less than 30 seconds to complete.
+一般来说，这个习惯应该在30秒内完成。
 
-Another crucial concept focuses on celebrating your wins immediately. You want to make the connection in your brains between successfully completing the habit and positive emotions.
+另一个关键的概念是要立即庆祝你的胜利，你要在你大脑中建立起成功习惯的和积极情绪的联系。
 
-It's cheesy, but I do a little mini dance every time I complete mine, a little something like this:
+这很俗气，但是我每次完成我的工作时都会跳个小舞，像这样。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/image-55.png)
 
-The other key component of creating Tiny Habits is the recipe. Tiny Habit recipes follow this formula:
+建立小习惯的另一个关键组成部分是各个公式。小习惯的遵循这个公式。
 
-After I \[anchor action\], I will \[tiny habit\].
+我在 \[某个动作后\], 我会 \[有某小习惯\].
 
-This anchor action is crucial. This is a task that you already complete and that is already a solid part of your schedule that you anchor your new habit to.
+这个锚定动作是最重要的。这是你已经完成一项任务，而且已经是你的日常安排中的一个坚实的部分，你要把你的新习惯固定在上面。
 
-It should be in the same location and have the same context as your new tiny habit.
+它应该与你的新的小习惯在同一地点，有相同的背景。
 
-So here's an example of a bad anchor and tiny habit:
+这里有一个坏的锚定动作和小习惯的例子。
 
-After I take the dog out, I will floss one tooth.
+当我带狗出去后，我会用牙线清洁一颗牙齿。
 
-Because the location and context are so different, this is unlikely to stick. Here's a better option:
+因为地点和背景相差太大，这不太可能坚持。这里有一个更好的选择。
 
-After I brush my teeth, I will floss one tooth.
+在刷完牙后，我会用牙线清洁一颗牙齿。
 
-Again, I highly recommend you check out Fogg's book, Tiny Habits, for a much more thorough exploration of this method.
+我再次推荐你看Fogg的书《小习惯》，会对这种方法有更深入的探索。
 
-For now, let's look at how we can apply this method to launching a successful dev career.
+现在，让我们看看如何将这种方法用于成功转型为一名开发者。
 
-## Tasks to Focus On
+## 需要关注的事
 
-We want to focus on three main components for building out our dev career:
+我们想把重点放在建立我们的开发工作的三个主要组成部分:
 
-1.  Develop your skills
-2.  Establish an online presence
-3.  Start networking
+1.  你的开发技能
+2.  建立一个线上的东西
+3.  启动网络
 
-Let's briefly go over these, and then we'll cover how to translate them into the Tiny Habit methodology.
+让我们简单介绍这些内容，然后我们将它们转化为小习惯的方法。
 
-### Develop Your Skills
+### 你的开发技能
 
-This one is pretty self-explanatory. You need to grow your development skills if you want to be a developer. The key here is to make sure you [don't get stuck in tutorial hell forever](/news/how-to-learn-from-coding-tutorials-and-avoid-tutorial-hell/).
+这一条是不言自明的，如果你想成为一名开发者，你的开发技能要成长 [不要永远陷在教程的地狱里](/news/how-to-learn-from-coding-tutorials-and-avoid-tutorial-hell/).
 
-Tutorial hell is appealing because following tutorials and courses does not take nearly as much mental or creative energy as building something from scratch does.
+教程地狱这样吸引人，是因为遵循教程和课程，并不像从头开始创建东西那样要花费大量的精力。
 
-So you fool yourself into thinking you are learning when all you are really doing is copying what someone else did.
+因此，你欺骗自己，以为自己在学习，而实际上你做的东西是在复制别人的东西。
 
-But building that out, having it work smoothly, and then seeing the finished product makes your brain feel good, so the habit solidifies and the cycle continues.
+但是，你把它建立起来，让它顺利工作，然后看到成品，让你的大脑感觉很良好，所以这个习惯巩固了，循环继续。
 
-Here you want to start building the tiny habit of writing your own code and building your own things so you can replace that feedback loop with a more useful one.
+你要开始养成自己写代码，自己造东西的小习惯，这样会有一个更有用的反馈代替学习教程的反馈。
 
-### Establish an Online Presence
+### 建立一个线上的东西
 
-Building an online presence encompasses a few different things. The most important are social media and your portfolio site. When I say social media I mean Twitter and LinkedIn.
+建立一个线上包含了一些不同的东西，最重要的是社交媒体和你的个人网站。我的说的社交媒体是指`Twitter`和`LinkeIn`。
 
-Say what you want about them – and I definitely have my issues – but they are invaluable when trying to start and grow a career.
+说出的你对线上的想法， 我也有我的想法。但是它们对你的职业生涯来说是无价的。
 
-As with most things, the key to growing on these platforms is to be consistent. So this is a perfect fit for the Tiny Habits framework, too.
+与大多数事情一样，在这些平台上的发展的关键是要保持一致的。因此也是跟`小习惯`框架是完美结合。
 
-Engagement on these platforms is huge, especially at the beginning when your account is still small, so you really want to make sure you are showing up every day.
+这些平台很大，特别是在开始时，你的账号影响力很小时，你要保证你的账号每天活跃。
 
 ### Start Networking
 

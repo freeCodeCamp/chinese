@@ -79,7 +79,7 @@ Fogg 认为在进行持续的改变时，动力是可怜的工具。它让我们
 
 1.  你的开发技能
 2.  建立一个线上的东西
-3.  启动网络
+3.  网络影响力
 
 让我们简单介绍这些内容，然后我们将它们转化为小习惯的方法。
 
@@ -103,58 +103,58 @@ Fogg 认为在进行持续的改变时，动力是可怜的工具。它让我们
 
 与大多数事情一样，在这些平台上的发展的关键是要保持一致的。因此也是跟`小习惯`框架是完美结合。
 
-这些平台很大，特别是在开始时，你的账号影响力很小时，你要保证你的账号每天活跃。
+这些平台很大，特别是在开始时，你的账号影响力很小，你要保证你的账号每天活跃。
 
-### Start Networking
+### 网络影响力
 
-Finally we have networking. Although there is some networking included in our online presence component because of interacting with other people, the [networking we want to focus on here is more direct](/news/networking-for-aspiring-developers/).
+最后，我们有网络，虽然在我们的在线存在包含了一些网络,因为要与其他人互动， [但是网络关注是更直接的](/news/networking-for-aspiring-developers/).
 
-When you are first starting out, it can be very helpful to start reaching out to companies you admire directly, telling them so, and introducing yourself.
+当你刚开始的时候，直接联系你欣赏的公司，向他们介绍自己，这是非常有用的。
 
-This is a bit of a secret weapon because very few people do it, but it's very powerful.
+这点像秘密武器，因为很少人这样做，但它非常强大。
 
-Let's look at how we can create some Tiny Habits around these three main goals. Remember, the goal is to start embedding the habit in your brain. Then you can increase the amount of each of these things over time.
+让我们看看我们如何围绕这三个主要目标创造一些小习惯。记住，目标是在我们的大脑中建立习惯。然后，你可以随着时间推移增加这些事情中每一件的数量。
 
-## How to Develop Tiny Habits
+## 如何培养小习惯
 
-You'll need to come up with the anchor actions on your own. Anchor actions are specific to each person, because they consist of things you already do as part of your routine.
+你需要想出锚定动作，锚定行动是针对每个人，因为它们是由你已经作为日常工作的一部分的事情组成的。
 
-So I'll give you recommended Tiny Habits, along with my anchors, but ultimately you'll need to come up with your own.
+所以，我向你推荐养成小习惯，以及锚定动作，但需要你养成自己的小习惯。
 
-For skill development, I recommend something very simple:
+对应技能发展，我推荐一些非常简单的事情。
 
-**After I take my first sip of coffee, I will write one line of code in my own project.**
+**在我喝完第一口咖啡后，我将在自己的项目写一行代码**
 
-Remember, the anchor action should be specific to you. I already make coffee before I start working in the morning, so the first sip is my anchor.
+记住，锚定动作应该针对你的，我在早上工作之前已经泡好了咖啡，所以第一口咖啡就是我的锚定。
 
-Don't discount this because of the simplicity and ease of the task. That's the point. Make it ridiculously easy to start and the snowball will grow as you gradually increase the task.
+不要因为这个任务简单容易，就打折扣。这是问题的关键，让它开始的时候容易得令人发指，随着你逐渐增加任务，雪球会越来越大。
 
-Now, for online presence:
+现在，对于线上。
 
-**After I check my email, I will write one thoughtful reply on Twitter.**
+**在检查完我的电子邮件，我会在推特上写个深思熟虑的回复。**
 
-Again, I'm using what is an existing part of my routine and then anchoring my habit to that.
+同样，我在日常工作中，将自己的习惯固定下来。
 
-Finally, for networking:
+最后，在网络方面:
 
-**After I check Twitter, I will write down one person I want to reach out to.**
+**在我查看推特后，我会写下一个我想联系的人。**
 
-Same concept here.
+相同的概念。
 
-These are just examples, and I recommend you start with just these three for a few days while you get used to how this works. Then you can gradually start to expand the habits and start to add more for the particular tasks you have.
+这些只是例子，我建议你从这三个开始，过几天，当你习惯这种工作方式。然后你可以逐渐扩展这些习惯，并开始为你的特定任务增加更多的内容。
 
-Please don't overcomplicate this or try to add anything more. The goal is to make it so small and so easy that it feels stupid and pointless to not do it. These will begin to compound as you begin to build that habit and execute on it every day.
+请不要过分复杂化或试图增加任何东西。我们的目标是使它变得如此之小，如此之容易，以至不会感到愚蠢和毫无意义。当你开始养成这种习惯并每天执行时，从中获得复利。
 
-And don't forget the celebration! That part is crucial for forming the pathways in your brain that will make executing on these actions sustainable and fun.
+不要忘了庆祝！这一部分对于在你大脑中形成路径是至关重要，这将使这些行动具有可持续性和乐趣。
 
-## Wrapping up
+## 收尾工作
 
-So much of why people struggle to make progress on their goals is because they go too big too fast or struggle with information overload.
+人们在为目标获得进展而挣扎，是因为他们的目标过大或者时间紧。或者信息过载。
 
-This simple system solves both of those problems, but we naturally resist it because it seems too small to make a difference.
+这个简单的系统解决这个两个问题，但我们自然会抵制它，因为它似乎太小了，无法产生影响。
 
-In reality, when we go overboard for a day or two, then burn out for a week or two, we are taking one step forward and two steps back. No matter how big the steps are, we aren't making progress.
+在现实中，我们会全力以赴一两天，然后倦怠一两个星期。我们是前一步，退了两步。无论这一步有多大， 我们都没取得进展。
 
-But when we implement the Tiny Habits method, we might be taking miniature little baby steps, but we're taking them every day and always forward.
+但是，当我们实施小习惯的方法时，我们可能采取的是微型的小步骤，但是我们每天都在采取这些步骤，而且一直在前进。
 
-Finally, if you would like a step-by-step walkthrough on how to land that first web developer job, I have a free 10-day email course at [LaunchYourDevCareer.com](https://LaunchYourDevCareer.com). It covers a lot of what we talked about here plus a lot more in order to give you a concrete path to that first job.
+ 最后，如果你想一步步了解如何找到第一份`web`开发工作,我有一个免费10电子邮件课程[LaunchYourDevCareer.com](https://LaunchYourDevCareer.com).它涵盖我们在这里谈到的很多内容，以及更多内容，为你提供找到第一份工作的路径。

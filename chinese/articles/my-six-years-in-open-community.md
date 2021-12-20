@@ -79,39 +79,45 @@ In July, I came across a special bus driver by chance.
 
 ![](https://chinese.freecodecamp.org/news/content/images/2021/11/image-18.png)
 
-Moment I posted at that time
+The moment story I posted at that time
 
-(Text in picture: TBD)
+(Text in picture: I met a young bus driver of Suzhou Bus 178, who was discharged from the army and has been driving the bus for a year. He decorates the little area in front of him very interestingly. I asked him if I can take photos because good things should be shared~ Everyone who can be positive with their current position deserves a better future. 🌞 The most handsome bus driver in Suzhou, please spread!)
 
-我想，像公交车司机、保安、农民工......他们可能很少很少会去 Toastmasters 这样的活动，但是他们也有打动人的故事可以分享，也有拥有更好的工作和生活的愿望。我突然意识到自己很想把普通人的美好故事传播出去，或者说给普通人打造一个展示的舞台。
+I think people like bus drivers, security guards, migrant workers, etc., may never get chance to attend events like Toastmasters, but they also have touching stories to share, and they also desire a better jobs and lifes. better jobs and lives.
+I suddenly realized that I wanted to spread the good stories of ordinary people, or to create a stage for ordinary people to show.
 
-于是，我跑去公交总站花了一个下午等这辆 178 路公交车，找到这位司机，跟他说我以后可能会做一些活动，邀请他参加。我们加了微信。
+So I ran to the bus terminal and spent an afternoon waiting for the Bus 178, found the driver, told him that I might do some activities in the future, and invited him. We exchanged WeChat IDs.
 
 ![](https://chinese.freecodecamp.org/news/content/images/2021/11/image-19.png)
 
-帅气爱笑的司机
+The bus driver who is handsome and likes to laugh
 
-接着，我和朋友尝试围绕“阅读、演讲和交友”营造一个社区，邀请他来分享，他还给我们捐了一些书。后来，他告诉我他开上了“苏州十佳公交示范车”——我在 2015 年底苏州首届跨年演讲晚会的舞台上讲了这个故事：**“苏州公交车的总数是一万辆，而这样的车只有十辆”。**再后来，他转行去了博世汽车做项目管理。
+Later, my friend and I tried to build a community around "reading, speaking and making friends." We invited him to share his story. He also donated some books to the community.
+Soon, he told me that he started to drive the "Suzhou Top Ten Demonstration Bus."
+I told this story on the stage of Suzhou's first New Year's Eve speech party at the end of 2015: **Suzhou has more than 10,000 buses, but there are only 10 Demonstration Bus.** In the end, he switched careers to Bosch Automotive for project management.
 
-写这篇文章的时候，我又联系了他，他说自己现在过得很好。联系的时候我都忍不住感动得哭了哈哈，六年啦，还是那么感性~
+When writing this article, I contacted him again, and he said that he is doing well now. 
+I couldn’t help but cried. Haha, it has been six years, and I am still so emotional~
 
-有一天晚上，挺晚了，我坐在公交站台上等车。一辆车开过站，停下，司机从乘客上车门探身出来，正是那位司机！
+One night, it was quite late, and I was sitting on the bus stop waiting for the bus. A car drove past the station and stopped. The driver leaned out from the passenger's door. It was the driver!
 
-> \-是 Miya 吗？
+> \-Are you Miya?
 
-> \-是啊，你不在这个站停吧？
+> \-Yeah, but you are not supposed to stop here, right?
 
-> \-我已经收车了，带你一程吧。
+> \-My shift has already ended. Do you need a ride?
 
-> \-好啊！
+> \-Sure!
 
-我很少和人们讲起这个场景。后来每次想起他探身出来招呼和两个人朴实的笑容与对话，我都觉得温暖而感动。作为公交司机和乘客，我们除了刷卡投币那一秒的眼神接触，本来不会再有什么交集。可是在社区中，当我们去掉职业身份，只是作为两个人平等坦诚地去表达和交流，我们是可以成为朋友的。
+I rarely tell people about this scene. Later, whenever I think of him leaning out to greet me with the simple smiles and the dialogues between us, I feel warm and moved.
+As bus drivers and passengers, we wouldn't have any communication, except the eye contact while we are swiping the cards or insert the coins.
+But in the community, when we remove our professional identity and just express and communicate as two people on an equal footing, we can become friends.
 
-就像我在离开待了十年的苏州回成都前，请一位三年不见的老朋友——八十多岁的孙教授——吃饭时，他说的：
+Just like when I invited an old friend who I had not seen for three years, Professor Sun who is in his 80s, to dinner before leaving Suzhou, where I had stayed for ten years, and returning to Chengdu, he said:
 
-> 我喜欢人和人之间淡淡的关系，就像 Miya 突然请我吃饭，我觉得很开心，这是很真挚的感情，像珍珠一样宝贵，提醒我们这个世界上除了坏的东西还存在着真。所以我就来了，顺其自然。
+> I like the light relationship between people, just like Miya suddenly invited me to dinner. I feel very happy, this is a very sincere feeling, as precious as a pearl. It reminds us that there are good things in this world besides bad things. So I came, let it be.
 
-**我非常喜欢这种不刻意修饰的清澈的感觉。所以，我明白了自己在社区中的状态是最满足最开心的。**
+**I really like this clear feeling without deliberate modification. Therefore, I understand that my state in the community is the most satisfying and happiest.**
 
 ## 自我意识觉醒
 

@@ -1,63 +1,63 @@
 > -  原文地址：[How to Build a Portfolio Website with React](https://www.freecodecamp.org/news/build-portfolio-website-react/)
 > -  原文作者：[Reed Barger](https://www.freecodecamp.org/news/author/reed/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![How to Build a Portfolio Website with React](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/react-portfolio-2021.png)
+![如何使用React创建一个作品集网站](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/react-portfolio-2021.png)
 
-Today you're going to create one of the most important apps you can build for yourself: your developer portfolio.
+今天，你将为自己创建一个最重要的应用程序，你的作品集。
 
-Every React developer or web developer in general needs to be able to show off what they can do to any potential client or employer.
+每个React开发者或者Web开发者通常需要向潜在的客户或者雇主，展示他们能做什么。
 
-That's exactly what we're going to be building right now, with the help of a number of industry standard tools, including React, Tailwind CSS, and Netlify.
+这是我们现在要做的，在一些行业标准工具帮助下，包括React，Tailwind CSS，和Netlify。
 
-Let's get started!
+开始吧!
 
-## What Will the Portfolio Look Like?
+## 这些组合是怎样的？
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/portfolio-1-min.gif)
 
-This is the final version of the portfolio you will be building.
+这是你将要建立的最终版本。
 
-It will feature information about yourself, what projects you have made, what skills you've used in making those projects, and will include a contact form for clients or employers to reach out to you.
+它的作用是展示你自己，你做过什么项目，你在做这些项目的时用了什么技能，还有一个联系列表，以便客户或者雇主联系上你。
 
-## What Tools Will We Be Using?
+## 我们将使用什么工具？
 
--   We will use React to create the app's user interface. It will allow us to compose each part of our landing page through reusable components and extend our app if we want to add additional features, such as a blog.
--   To style our application, we will use Tailwind CSS. To give our app a professional appearance, Tailwind will allow us to easily apply multiple styles through combining classnames on our React elements.
--   For pushing our app to the web, we will use the free service Netlify. It will serve our project on a custom domain to users very quickly with the help of a CDN (content delivery network).
+-   我们将用React来创建应用程序的用户界面。它将允许我们通过可重复使用的组件来组成登录页面的每一部分，和添加我们想要的功能，如果博客。
+-   为了设计我们的应用程序， 我们将使用Tailwind CSS。为了给我们的应用程序一个专业的外观，Tailwind允许我们通过在React元素上组合类名(classnames)。
+-   为了把我们的应用程序部署收到网络上，我们将使用免费的Netlify。通过CDN的帮助下，用户可以通过我们自己的的域名，快速访问到我们的项目。
 
-## How to Get Started
+## 怎样开始
 
-**[You can download the starting files for our project here.](https://reedbarger.com/resources/react-portfolio-2021)**
+**[你可以在这里下载我们项目的开始文件](https://reedbarger.com/resources/react-portfolio-2021)**
 
-When you grab the code, all you will have to do is drag your (unzipped) project folder into your code editor and run the command:
+当你获取到代码，你要做的是把你的(解压好)的项目文件夹拖到你的代码编辑器中然后在终端运行命令。
 
 ```bash
 npm install
 ```
 
-And you're good to go!
+然后可以开始了！
 
-## What Tools Do I Need to Build my Portfolio?
+## 我需要什么工具来构建我的作品集？
 
-To go through the entire process of creating our app from start to deployment, you will need to have the following:
+创建我们的应用程序从开始到部署，需要以下的条件。
 
-1.  Node.js installed on your computer. You can download it at nodejs.org.
-2.  Git installed on your computer. You can download it at git-scm.com.
-3.  I would recommend using VS Code as your code editor. You can download it at code.visualstudio.com.
-4.  A free Netlify account at netlify.com.
-5.  A free GitHub account at github.com.
+1.  你的电脑安装Node.js。 你可以在nodejs.org下载安装程序。
+2.  在你的电脑安装Git，你可以在git-scm.com下载。
+3.  我建议使用VS Code作为你的代码编辑器。你可以在code.visualstudio.com下载它。
+4.  一个在Netlify.com上的免费的Netlify账户。
+5.  一个免费的 GitHub账号。
 
-## How to Build the Portfolio Structure
+## 如何建立作品集的结构
 
-The benefit of using React is that we could expand our app to as many pages as we like, very simply, and add a lot of additional content.
+使用React的好处是，我们可以将我们的应用程序扩展到任意多的页面，并添加大量的内容，这是非常容易的。
 
-However, since we're just working with one page, we can within our app component figure out the different components that we need very quickly. We will have a Navbar on top with all of the links to jump to different sections of our portfolio.
+在我们只是在处理一个页面，我们可以在我们的应用程序组件中非常迅速找到需要的不同组件。我们将在顶部有一个导航栏，上面有所有的链接，可以跳转到我们作品集的不同部分。
 
-After that, we will include an about section, a section for our projects, testimonials, and finally our contact form.
+在此之后，我们将包含一个部分，这是关于我们的项目，推荐书，最后是我们的联系表格。
 
-This quick planning allows us to figure out what our components should be named and in what order. We can go ahead and add all of them to our App.js file (in src):
+这种快速的规划使我们能够弄清楚我们的组件怎样命名，以什么顺序命名。下一步，把它们全部添加到我们的App.js文件中(在src文件夹):
 
 ```js
 // src/App.js
@@ -78,12 +78,11 @@ export default function App() {
 }
 ```
 
-## How to Create our Components
+## 如何创建我们的组件
 
-Now that we have all these components listed out we need to go ahead and create them.
+现在我们已经列出这些我们创建的组件，
 
-Within our source (src) folder, we're going to create a folder called components with all of the files that we need:
-
+在我们的源代码(src)文件夹中，我们将创建一个`components`的文件夹，里面有我们需要的所有文件。
 ```
 my-portfolio
 ├── README.md
@@ -108,17 +107,17 @@ my-portfolio
         └── Testimonials.js
 ```
 
-Then we will create the basic structure of each React component and export it from that file with `export default`:
+ 然后我们将创建每个React组件的基本结构，并从该文件导出,通过使用`export default`:
 
 ```js
 // src/components/About.js
 
 export default function About() {}
 
-// repeat the same basic structure for all 6 components
+// repeat the same basic structure for all 6 components (在所有的6个组件中重复相同的结构)
 ```
 
-And finally make sure to import it back in App.js:
+最后在App.js中导入它:
 
 ```js
 // src/App.js
@@ -145,15 +144,13 @@ export default function App() {
 }
 ```
 
-_Note that there should be six components in total._
+_请注意，总共应该有个6个组件_
 
-## Intro to Tailwind CSS
+## Tailwind CSS介绍
 
-Once that's done, we can start working with Tailwind CSS, in order to start to give our app a basic appearance.
+做完上面的，我们可以开始使用Tailwind CSS，给我们的应用程序一个基本的外观。
 
-The benefit of using Tailwind CSS is that we don't have to write any styles manually in a CSS stylesheet. All we have to do is combine multiple classes to create the appearance that we want.
-
-For example, to give our portfolio a dark background with gray text applied to all of our child components, you can add the following classes to our `main` element:
+使用Tailwind CSS的好处，我们不必在CSS样式中手工编写任何样式。我们所做的就是组合多个类(class)来创建我们想要的外观。
 
 ```js
 // src/App.js
@@ -180,14 +177,14 @@ export default function App() {
 }
 ```
 
-## How to Build the About Component
+## 如何构建 `About` 组件
 
-Let's start on our first section, the about section. This will consist of a basic introduction to ourselves and what skills we specialize in.
+从我们的第一部分开始，在`about`部分，这包含对我们的基本介绍和我们的擅长的技能。
 
-It's also going to include some links to the contact form as well as our past projects. Since these links will be to different parts of the same page, we can use the hashes: "/#projects" and "/#contact".
+它还将包含联系表格的链接，以及我们过去的项目。由于这些链接将指向同一页面的不同部分，我们能使用哈希值
+"/#projects "和"/#contact"。
 
-To make these links work and to be able to jump to each section, we will set the `id` attribute of the projects section to "projects" and those of the contact section to "contact".
-
+为了使这些链接，能跳转到每个部分，我们把项目部分`id`的属性设置为`projects`，把联系部分的`id` 属性设置为`contact`。
 ```js
 // src/components/About.js
 
@@ -234,15 +231,13 @@ export default function About() {
 }
 ```
 
-For the image on the righthand side of the section, I am using an svg file from the `public` folder, coding.svg.
+对于本节右侧的图片，我使用的`public`文件夹中的一个svg文件(coding.svg)。
 
-This image serves merely as a temporary placeholder. I would highly recommend using an actual image of yourself.
+这个图片只是作为一个临时的占位符，我强烈建议使用你自己的图片。
 
-## How to Build the Projects Component
+## 如何构建`projects`组件。
 
-Our projects section will consist of a `section` element with an `id` of "projects". This will feature a gallery of all the projects that we've built, which will include images.
-
-It'll have the title of the project, along with the technologies we use to make it, and a link to it (if it is deployed).
+我们的项目部分是由一个`section`元素组成，id为`prpjects`。这将是包含所有项目的图片组成的画廊。
 
 ```js
 // src/components/Projects.js
@@ -297,9 +292,9 @@ export default function Projects() {
 }
 ```
 
-Note that we are also going to use the library `@heroicons/react` in order to be able to write some SVG icons as React components.
+注意，我们还将使用库`@heroicons/react`，以便将SVG图片写成React组件。
 
-We are importing an array of projects from a data.js file in the same folder. There we are exporting an array of objects which each include an individual project's data:
+我们从同一个文件夹中的`data.js`文件导入一个项目数组。在那里，我们导出一个对象数组，每个对象包含项目的数据。
 
 ```js
 // src/data.js

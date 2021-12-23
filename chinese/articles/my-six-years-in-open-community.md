@@ -119,27 +119,46 @@ Just like when I invited an old friend who I had not seen for three years, Profe
 
 **I really like this clear feeling without deliberate modification. Therefore, I understand that my state in the community is the most satisfying and happiest.**
 
-## 自我意识觉醒
+## The Awakening of Self-awareness
 
-我的计算机教育启蒙来自我的体育老师，听起来像个笑话，但确实是这样。初中毕业后的夏天，在一间狭小的培训室里，面对笨重而神秘的台式电脑，他教我如何使用 Word、Excel 以及百度。好像还教了别的，我想不起来了。课间休息的时候我会迫不及待地玩玩马里奥或者采蘑菇等等小游戏，他玩的好像叫《红警》。
+My first computer lesson came from my PE teacher. I know it sounds like a joke, but it is.
+In the summer after graduating from junior high school, in a small training room, facing a heavy and mysterious desktop computer, he taught me how to use Word, Excel and Baidu. He might also teach me something else, but I can't remember.
+During the break between classes, I can't wait to play Mario or mushroom picking or other small games. And he was playing "Red Alert".
 
-对于高中的计算机课我几乎没印象了，那时候计算机老师常常突然有事，只好让理综老师们来看着我们。不过我记得高一时我拥有了第一个 QQ 账号，逐渐不再打理 UC。
+I have almost no memory of the computer class in high school. At that time, computer teachers often had unexpected errands, so Science teachers often came and kept an eye on us.
+But I remember that I had my first QQ account in my freshman year and gradually stopped taking care of UC.
 
-接着就是大学，学校“贴心”地没有给我们文科专业生安排高数课，甚至计算机课我们学的也是最简单的 Visual FoxPro——毕业后我再也没有在任何地方看到这两个单词的组合。VFP 我学得很轻松，写程序的初体验让我觉得挺好玩。常常听到理工科的学生们讨论高数和 C 语言考试不好过，我很羡慕他们有机会啃这么有意思的东西。
+Then there is the university, which "kindly" did not assign Advanced Mathematics for liberal arts students like me. Even the computer class we learned was the simplest Visual FoxPro. After graduation, I never heared these two words again.
+VFP is very easy for me, and the first experience of writing programs made me feel very fun.
+I often hear science and engineering students discuss that Advanced Mathematics and C Programming Language exams are difficult. I envy them having the opportunity to study on such interesting things.
 
-大二那年，我决定报名参加全国计算机二级 C 语言考试。我从图书馆借了一本教材来自学，很抽象，然后就在网上搜历年考试题目以及当年题目预测，做题，对答案，感觉考及格是没问题了。是的，我是用学习“毛邓三”的方式来学习 C 语言的。那时候学校有提前为考生进行几次集中的上机培训，习惯性逃课的我只去了一次，了解考试基本流程。最后，考试那天，我“唰唰唰”做完题目，测试运行，通过，然后胸有成竹地提交了。谁能想到因为缺席考前培训，我的提交方式不对，最后与证书擦肩而过，也没再继续考了。
+In my sophomore year, I decided to sign up for the National Computer Rank Examination: Level 2  C Language Programming.
+I borrowed a textbook from the library for self-learning, which was very abstract for me, and then searched online for the previous year's test questions and the predictions of the current year's questions. I worked on the questions, compared the answers, and I felt that I can pass the exam.
+Yes, I learned C language like I was learning other literature subjects.
+At that time, the school conducted several training on the computer before the exam, and I only went to the training once to understand the basic procedures of the exam, since I often skipped classes.
+Finally, on the day of the exam, I finished the questions very fast, ran the code and passed the test, and then submitted the code with confidence.
+However, because of my absence from the pre-exam training, the way I submitted the code was wrong, and I did not get the certificate. I never attend the exam again.
 
-2012 年我开始使用微信，可是依然感觉互联网离我很远。我一边跟着前辈们学做我觉得价值不大的工作，适应职场的人情世故，一边思考人生的意义，不甘心在封闭的圈子里消磨激情，却又完全不知道应该去向哪里，甚至不知道在我所居住的城市的另一头，互联网、创业、科技…...那么多充满活力的事情正在发生。那时候，他们离我只是半小时车程而已，却是一个完全不同的世界。
+In 2012, I started to use WeChat, but I was still far from the Internet.
+I followed my predecessors to learn to do jobs that I think have little value and adapt to the different stuff in the workplace. 
+At the same time, I was thinking about the meaning of life. I was unwilling to kill my passion in a closed circle, yet I didn’t know where I should go.
+I don't even know that on the other side of the city, the Internet, entrepreneurship, technology, and so many dynamic things are happening.
+At that time, they were only a half-hour drive away from me, but it was a completely different world.
 
-可是，我始终对未来怀抱憧憬，连微信账号都取作 Hello MrT，并且沿用至今——T，代表 tomorrow 明天，参考了牛奶咖啡的一首歌《明天你好》。这首歌很好地代表了我在大部分青春岁月里的心境，现在听到，也很有感觉：
+However, I always have a longing for the future, even my WeChat ID is Hello MrT. T stands for tomorrow. And I am still using it today.
+It referred to a song called "Tomorrow, Hello" by Milk Coffee (a pop group in China).
+This song is a good representation of my state of mind in most of my youth age, and now when I hear it, I can still feel it:
 
-> 当我朝着反方向走去 在楼梯的角落找勇气 抖着肩膀哭泣 问自己在哪里......每一次哭 又笑着奔跑 一边失去一边在寻找 明天你好 声音多渺小 却提醒我勇敢是什么
+> When I walk in the opposite direction / Huddled in the corner of the stairway I seek courage / Shoulders visibly shaking as I weep / I ask myself, where am I?
+> 
+> After every cry, I will smile running forward / Losing and finding something as I go along / To tomorrow, hello. Even in a small voice / But it jolts me awake to the meaning of courage
 
-2016 年，在当时的创业合伙人的介绍下，我知道了 freeCodeCamp，惊讶于草根发起的社区竟能如此有活力。感谢曾经的搭档。
+In 2016, the entrepreneurial partner at the time introduced freeCodeCamp to me. 
+I was surprised that the community could be so energy. Thanks to the former partner.
 
 ![](https://chinese.freecodecamp.org/news/content/images/2021/11/image-28.png)
 
-世界各地的 freeCodeCamp 学员在当地组织技术交流活动
+FreeCodeCamp students from all over the world organize locally tech events
 
 于是，我连续两个晚上做题目，做到 160 多分，那是我第一次感受到原来我的代码也可能变成产品。用一句我们熟悉的话来说——这为我打开了新世界的大门：我开始去理解已经用了 4 年的微信究竟是怎样的产品，也不断理解其他的产品，而不只是做一个机械的使用者；我透过网络去和一个更大的世界联结，慢慢接触开源、教育公益、社会创新、社会企业…...这些名词以及各个国家的在这些领域深耕的人们；我逐渐深入地理解这个世界运行的规则，学会接纳他人和自己，也看到了自己的未来可以有许多可能性。
 

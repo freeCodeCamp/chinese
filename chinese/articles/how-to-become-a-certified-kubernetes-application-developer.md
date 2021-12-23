@@ -1,78 +1,72 @@
 > -  原文地址：[How to Become a Certified Kubernetes Application Developer](https://www.freecodecamp.org/news/how-to-become-a-certified-kubernetes-application-developer/)
 > -  原文作者：[Sergio Fuentes NavarroSergio Fuentes Navarro](https://www.freecodecamp.org/news/author/serfuenav/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![How to Become a Certified Kubernetes Application Developer](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/kubernetes-ckad-color-1024x1003.png)
+![如何成为K8S认证开发者](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/kubernetes-ckad-color-1024x1003.png)
 
-This guide is a summary of my study notes for the Certified Kubernetes Application Developer (CKAD) exam that I recently passed.
+本指南是我对最近通过的K8S认证开发者考试的学习笔记总结。
 
-Even if you're not interested in the certification, consider this as your **one-stop shop** for Kubernetes: you have all the main technical concepts explained along with a myriad of examples in one place.
+即使你对认证不感兴趣，你可以把K8S看作`一站式商店`：你了解的主要技术概念的解释，已经无数的例子在集合在一起。
 
-Furthermore, it has some **extras that come from my experience preparing for and taking the exam**.
 
-At the time of this writing, the CKAD curriculum (areas of study and weight of each area) is as follows:
+此外，它还有一些来自我准备和参加考试经验和附加内容。
 
--   13% – Core Concepts
--   18% – Configuration
--   10% – Multi-Container Pods
--   18% – Observability
--   20% – Pod Design
--   13% – Services & Networking
--   8% – State Persistence
 
-This guide covers the curriculum, just in a different order.
+在写本文时，CKAD的课程(研究领域和每个领域的比重)如下：
+-   13% – 核心概念
+-   18% – 配置
+-   10% – 多容器 Pods
+-   18% – 可观察性
+-   20% – Pod 设计
+-   13% – 服务 & 网络
+-   8% – 状态持久性
 
-I am going to assume you know already the very basics of Kubernetes (basically containers and pods) and are looking to take your skills to the next level. Passing this exam will make your CV stand out as it's a highly sought-after certification.
+本指南涵盖了这些课程，只是顺序不同。
 
-## Contents
+我假设你已经知道K8S的基础知识(基本的containers和pods)，并希望将你的技能提高一个新的水平。通过这个考试将你的简历脱颖而出，因为它是一个非常抢手的认证。
 
--   [Introduction to Kubernetes](#intro-to-kubernetes)
--   [How to Manage Clusters in Kubernetes](#how-to-manage-clusters-in-kubernetes)
--   [Beyond Pods and Deployments](#beyond-pods-and-deployments)
--   [How to Configure Pods and Containers](#how-to-configure-pods-and-containers)
--   [How to Schedule Pods in Kubernetes](#how-to-schedule-pods-in-kubernetes)
--   [Storage in Kubernetes](#storage-in-kubernetes)
--   [Network and Security in Kubernetes](#network-and-security-in-kubernetes)
--   [Observability and Debugging in Kubernetes](#observability-and-debugging-in-kubernetes)
--   [Tips and Tricks](#tips-and-tricks)
--   [Practice Time](#practice-time)
--   [Conclusions](#conclusions)
+## 内容
 
-## Intro to Kubernetes
+-   [Kubernetes简介](#intro-to-kubernetes)
+-   [如何管理Kubernetes的集群](#how-to-manage-clusters-in-kubernetes)
+-   [超越 Pods 和 Deployments](#beyond-pods-and-deployments)
+-   [如何配置Pods和Containers](#how-to-configure-pods-and-containers)
+-   [如何在Kubernetes调度Pods](#how-to-schedule-pods-in-kubernetes)
+-   [Kubernetes的存储](#storage-in-kubernetes)
+-   [Kubernetes的网络和安全](#network-and-security-in-kubernetes)
+-   [Kubernetes中的观察性和调试](#observability-and-debugging-in-kubernetes)
+-   [技巧和窍门](#tips-and-tricks)
+-   [实践时间](#practice-time)
+-   [结论](#conclusions)
 
-Kubernetes is a technology that allows for easy deployment and management of containerized applications across multiple nodes. Some of its most prominent features are:
+## 介绍Kubernetes
 
--   Container configuration and deployment
--   System monitoring
--   Persistent storage
--   Automated scheduling
--   Auto-scaling and auto-healing
+Kubernetes是一项技术，允许在多个节点上轻松部署和管理容器化程序。它的一些最突出的特点是:
 
-And much more.
+-   Container 配置和部署
+-   系统监控
+-   持久性存储
+-   自动调度
+-   自动扩展和自动修复
 
-Kubernetes works in a **declarative** fashion: you define the state you want in your cluster and Kubernetes works to make sure the cluster is always on that state.
+还有更多。
 
-To define or modify this state, you need to interact with the API server. This can be done via:
+Kubernetes的工作方式是声明式的：你在集群中定义你想要的状态，Kubernetes是确保集群始终处于这种状态。
 
--   REST calls
--   The command line tool `kubectl`. You can find instructions to install it on your machine [here](https://kubernetes.io/docs/tasks/tools/).
+-   REST 调用
+-   命令行工具`kubectl`。你可以通过这个教程，在你的机器上安装它[ 点击这里](https://kubernetes.io/docs/tasks/tools/).
 
-If you don't have access to a Kubernetes cluster, I suggest installing [minikube](https://minikube.sigs.k8s.io/docs/start/) on your local machine to follow along. Once installed and started, run the following command to create your first pod.
-
+如果你不能访问一个Kubernetes集群,我建议在你的本地机器上安装[minikube](https://minikube.sigs.k8s.io/docs/start/)。一旦完成安装并启动，允许以下命令来创建你的第一个Pod。
 ```yaml
 kubectl run --image=busybox --restart=Never --rm -it -- echo "Welcome to Kubernetes!!"
 ```
 
-This pod will be deleted automatically once it prints its welcome message.
+这个pod一旦打印出欢迎消息，它将被自动删除。
 
-## How to Manage Clusters in Kubernetes
+## 如果管理Kubernetes集群
 
-Cluster management is not part of the curriculum to become a CKAD. For the purposes of the exam, you don't need to know how to create a cluster, manage nodes, and so on.
-
-And unless you're planning to become a cluster administrator, chances you will just be a user of a managed version of Kubernetes in the cloud, like GKE on GCP or EKS on AWS.
-
-However, you must familiarize yourself with the concepts of namespace, labels, and annotations.
+管理集群不是成为CKAD的课程的一部分。就考试而言，你不需要知道如何如何创建一个集群，管理nodes等。
 
 ### Namespaces
 

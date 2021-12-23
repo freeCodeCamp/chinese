@@ -335,13 +335,13 @@ export const projects = [
 ];
 ```
 
-## How to Build the Skills Component
+## 怎么构建`Skills`组件
 
-Let's fill out the section for all the skills and technologies that we know.
+让我们填写我们的会的技能和技术的部分。
 
-This will consist of a simple list of all of the major tools that we're familiar with and can use in our employers or clients projects.
+这将包含一个简单的清单，列出在我们的雇主或客户的项目中，使用的主要工具。
 
-Once again, we are going to import an array from our data folder. But this array consists of number of strings which represent each of the skills that we know such as JavaScript, React, and Node:
+再一次，我们将从`data`文件夹导入一个数组。但是这个数组是由字符串组成，是我们所知道的技能，如JavaScript，React和Node。
 
 ```js
 // src/components/Skills.js
@@ -383,14 +383,13 @@ export default function Skills() {
 }
 ```
 
-## How to Build the Testimonials Component
+## 怎么构建 `Testimonials` 组件
 
-In the Testimonials component, we are going to list a couple of testimonials maybe from past clients or people who are familiar with our work.
+在`Testimonials`组件中，我们将列出一些过去的比较熟悉的客户的推荐信。
 
-These are going to consist of a couple of cards that feature the testimonial itself as well as who it's from and the company that this person is from.
+这些将由几个卡片组成，里面有推荐人和推荐人所在的公司。
 
-We are also importing a testimonials array with a number of objects that feature the quote, image, name, and company.
-
+我们将导入一个含推荐信息的数组，里面的对象包含了评价，图片和公司。
 ```js
 // src/components/Testimonials
 
@@ -437,13 +436,13 @@ export default function Testimonials() {
 }
 ```
 
-## How to Build the Contact Component
+## 怎样构建`Contact`组件
 
-At the end of our landing page, we're going to include our contact form to allow potential employers to reach out to us.
+在登录页的尾部，我们将加入我们的联系表格，以便潜在的雇主能联系到我们。
 
-This form will have 3 inputs: a name, email, and message input.
+这个表格包含3个输入：姓名、电子邮件和输入信息。
 
-To receive these form submissions, we will use the tool Netlify Forms to very easily take care of saving those messages.
+为了接收这些表格所提交的信息，我们将使用Netlify表格工具，非常容易保存处理这些信息。
 
 ```js
 // src/components/Contact.js
@@ -547,17 +546,16 @@ export default function Contact() {
 }
 ```
 
-## How to Embed a Google Maps Location
+## 如何潜入`Google Maps` 位置
 
-To the left of the form we will include a Google Maps embedded Google map of where we are located.
+在表格的左边，我们将一个`Google Maps`嵌入，显示我们的所在位置。
 
-We can do so with the help of an online tool: embed-map.com. All you have to do is just enter your location and hit "Generate HTML code".
+我们可以在一个在线工具(embed-map.com)的帮助下这样做。你所要做的事只是输入你的位置并点击`Generate HTML code`
 
-In the code we are given, don't copy all of the code, just the `src` attribute from the iframe element. We will replace that value with the default `src` value we have for our iframe.
-
+在给我们生成的代码中，不要复制所有的代码，只要复制ifame中的`src`属性，然后替换掉`src`的默认值。
 ![](https://www.freecodecamp.org/news/content/images/2021/06/portfolio-2.png)
 
-To send over any submitted form data to Netlify, Netlify Forms needs to recognize a form as static HTML. Because our React app is controlled by JavaScript and doesn't consist of plain HTML, we need to add a hidden form to our index.html file in the public folder.
+向Netlify发送任何提交的表单数据，Netlify Forms需要将从静态HTML中识别表单。因为的我们的React应用是由Javascript控制的，而不是普通的HTML组成，所以我们需要在`public`文件夹下的index.html文件中添加一个隐藏的表单。
 
 ```html
 <!-- public/index.html -->
@@ -581,15 +579,11 @@ To send over any submitted form data to Netlify, Netlify Forms needs to recogniz
 </html>
 ```
 
-We need to hide this form, because it doesn't need to be seen by the user, just Netlify.
+我们需要隐藏这个表单，因为它不需要被用户看到，它只需要被Netlify看到。
 
-We'll give it the attribute of `hidden` as well as a `name` attribute that matches the JSX form in Contact.js. We also need to give it the `netlify` attribute so that Netlify Forms recognizes it. Finally, we need to include all of the same inputs as our JSX form: for name, email, message.
+## 如何从联系表单提交
 
-## How to Submit the Contact Form
-
-Once that's done, we'll head back to Contact.js. We're going to use JavaScript in order to submit this form.
-
-First of all, we're going to create some dedicated state for each of the values that are typed in the form for name, email, and message:
+完成上面这些，我们将回到Contact.js。我们将使用Javascript提交这个表单。
 
 ```js
 const [name, setName] = React.useState("");
@@ -597,11 +591,7 @@ const [email, setEmail] = React.useState("");
 const [message, setMessage] = React.useState("");
 ```
 
-We will store what the user types in to each of the inputs in state with the help of the `onChange` handler.
-
-To handle submission of the form, we will add the `onSubmit` prop to it. The function that will be called, `handleSubmit`, will make a post request to the endpoint "/" with all of our form data.
-
-We will set the headers of the request to indicate that we are sending over form data. For the request body, we will include the form name as well as all of the form data from the `name`, `email`, and `message` state variables.
+我们将在`onChange`处理程序的帮助下，将用户在每个输入项的信息存储在`state`。
 
 ```js
 // src/components/Contact.js
@@ -732,17 +722,11 @@ export default function Contact() {
 }
 ```
 
-As you can see above, we are encoding the form data with a special `encode` function that you see here.
+正如你在上面看到的，我们正在用一个特殊的`encode`(编码)函数对表单数据进行编码。
 
-If the message is sent correctly, we will display an alert that says "Message sent". Otherwise if there is an error, we are going to alert the user of that error.
+## 如何构建`Navbar`组件
 
-## How to Build the Navbar Component
-
-The last step is to build out our Navbar component.
-
-We want this navbar to stick to the top of our app on large devices and not be sticky on mobile devices.
-
-Additionally, we want to include links to each of our relevant sections for our project skills testimonials and our contact form:
+最后一步是构建我们的`Navbar`组件。
 
 ```js
 // src/components/Navbar.js
@@ -782,39 +766,36 @@ export default function Navbar() {
 }
 ```
 
-How does this stick to top of the page on a larger device? With the help of the class `md:sticky` on our `header` element.
+如何在较大的设备上将`Navbar`组件在页面的顶部显示？我们将使用`md:sticky`类添加到`header`元素。
 
-This class means that it will have the style rule `position: sticky;` applied starting on a medium-sized breakpoint (768px).
+## 如何部署的你作品集
 
-## How to Deploy Your Portfolio
+现在为了使我们的作品集上线，我们需要把我们的应用程序推送到Github。
 
-Now to make our portfolio live, we need to push our application to GitHub.
+一旦你熟悉了这个流程，我们可以首先创建一个新的Github仓库。之后，我们将运行`git add .`，`git commit -m "Deploy"`，创建我们的git 远程，然后`git push -u orgin master`。
 
-If you're not familiar with Git and GitHub, I would take a little while just to learn how to push your code to your GitHub account for the first time. It's an essential skill for any developer to know.
-
-Once you're familiar with this process, we can first create a new Github repository. After that, we will run `git add .`, `git commit -m "Deploy"`, create our git remote, and `git push -u origin master`.
-
-Once our project is on GitHub, we can head over to Netlify and select the option "Choose Site from Git". Then we will choose GitHub for our continuous deployment, and pick the GitHub repository to which we just pushed our code.
+一旦我们的项目建立在Github上，我们就可以去Netlify，选择`Choose Site from Git`。然后选择Github作为我们的持续部署，并选择我们刚刚推送代码的Github仓库。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/portfolio-3-min.gif)
 
-After that, our project will be automatically deployed to the web!
+之后，我们的项目将自动部署到网络上！
 
-## What's Next
+## 下一步是什么？
 
-Congratulations! You now have a portfolio app live on the web that shows off all of your projects and skills to potential employers.
+祝贺你！你现在在网上由一个作品集的应用程序，向潜在雇主展示你的所有的项目和技能。
 
-The next step to take would be to set up a custom domain, preferably with your name (i.e. [reedbarger.com](https://reedbarger.com/)). Since Netlify includes a DNS you can easily set up a custom domain with them.
+下一步要做的事设置一个自己的域名，最好用你的名字(i.e. [reedbarger.com](https://reedbarger.com/)). 
+由于Netlify包含一个DNS，你可以很容易在他们那里设置一个自己的域名。
 
-Look into maybe adding a blog to your React app to show off even more of your developer knowledge to potential employers.
+可以考虑在你的React应用程序中，添加一个博客，向潜在的雇主展示你更多的开发知识。
 
-Make your personal portfolio an expression of yourself and what you are passionate about as a developer and you'll have success!
+个人作品集是作为一个开发者所热衷表达自己的方式，你会从中获得成就。
 
-## Want the #1 Way to Learn React?
+## 想获得学习React的方法？
 
-**[The React Bootcamp](http://bit.ly/join-react-bootcamp)** takes everything you should know about learning React and bundles it into one comprehensive package, including videos, cheatsheets, plus special bonuses.
+**[The React Bootcamp](http://bit.ly/join-react-bootcamp)** 本书有你应该学习React的所有知识，里面有视频、手册，还有特别的奖金。
 
-Gain the insider information **100s** of developers have already used to master React, find their dream jobs, and take control of their future:
+ 获得内幕信息 **100s** ，开发人员通过已经掌握React，找到他们梦想的工作，并掌握他们的未来
 
 [![The React Bootcamp](https://reedbarger.nyc3.digitaloceanspaces.com/react-bootcamp-banner.png)](http://bit.ly/join-react-bootcamp)  
-_Click here to be notified when it opens_
+_点击这里，将得到通知，当它开放时_

@@ -13,7 +13,7 @@
 
 开始吧!
 
-## 这些组合是怎样的？
+## 作品集是怎样的？
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/portfolio-1-min.gif)
 

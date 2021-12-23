@@ -246,35 +246,48 @@ According to Nielsen Norman Group, some of the most common aspects of a product 
 - Memory load
 - 记忆负荷
 
-### Situational Interaction Costs
+### 情景交互成本
 
 The pitfalls mentioned above may be more or less critical depending on the user. For example, dyslexic users find reading more challenging than the average user (pro-tip: use a dyslexic friendly font like [“Dyslexie”](https://www.dyslexiefont.com/en/typeface/)).
+根据用户的不同，上述陷阱可能或多或少是严重的。例如，有阅读障碍的用户认为阅读比普通用户更有挑战性（建议：使用对阅读障碍者友好的字体，如[“Dyslexie”](https://www.dyslexiefont.com/en/typeface/)）。
 
 ![A 3D animation of the Dyslexie font.](https://www.freecodecamp.org/news/content/images/2021/02/image-157.png)
+![Dyslexie字体的3D动画。](https://www.freecodecamp.org/news/content/images/2021/02/image-157.png)
 
-[Source](https://www.dyslexiefont.com/)
+[来源](https://www.dyslexiefont.com/)
 
 Users with motor impairments might find clicking much harder than reading. Even the user’s device can play an important role. For instance, a page load on a mobile device may take forever if the cellular coverage is slow.
+有运动障碍的用户可能会发现点击比阅读难得多，甚至用户的设备也可能发挥重要作用。例如，如果手机的网速很慢，在移动设备上加载页面可能需要很长时间。
 
 ![A standard loading spinner.](https://www.freecodecamp.org/news/content/images/2021/02/image-158.png)
+![一个标准的Loading。](https://www.freecodecamp.org/news/content/images/2021/02/image-158.png)
 
 ### Interaction Paths and Motivation
 
+### 交互路径与动机
+
 In some situations, there are multiple possible paths a user can take to accomplish their goal. Users decide which path to take based on the concept of “expected utility,” defined as expected utility = expected benefits — expected interaction costs.
+在某些情况下，用户可以采取多种可能的路径来完成他们的目标。用户根据“预期效用”的概念来决定采取哪条路径，其定义为：预期效用 = 预期收益 - 预期互动成本。
 
 In other words, users weigh the benefits and costs of each action and choose the path that has the best balance of benefits versus cost.
+换句话说，用户会权衡每个动作的收益和成本，并选择收益与成本最平衡的路径。
 
 Users will gravitate towards the path that has the lowest estimated interaction cost. Even if there’s a lower-cost path, if that path is unintuitive or unfamiliar, they will end up choosing the path they are more familiar with due to lower MIC.
+用户会倾向于具有最低预期交互成本的路径。即使有一个成本较低的路径，如果这个路径不直观或不熟悉，他们最终会选择他们更熟悉的路径，因为MIC较低。
 
 Users with a high motivation (for example, due to your marketing or branding efforts) are more likely to put up high interaction costs to complete their goal. For example, if Apple’s website had high interaction costs, users may still be motivated enough to complete their task.
+具有高动机的用户（例如，由于您的营销或品牌推广）更有可能为完成他们的目标付出高昂的互动成本。 例如，如果苹果公司的网站有很高的交互成本，但用户可能仍然有足够的动力来完成他们的任务。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/image-159.png)
 
 Apple is the world’s most valuable brand for a reason.
+苹果是世界上最有价值的品牌是有原因的。
 
 However, if users wanted to purchase a generic product, and the checkout process had a high interaction cost, they will buy it from a competitor instead.
+但是，如果用户想购买一个普通产品，并且结账过程有很高的交互成本，他们就会改从竞争对手那里购买。
 
 For more details, take a look at Nielsen Norman Group’s [example of how to assess the interaction cost of a use case](https://www.nngroup.com/articles/interaction-cost-definition/), “finding out where the word ‘ceremony’ comes from.”
+有关更多详细信息，请查看 Nielsen Norman Group 的[如何评估用例的交互成本的示例](https://www.nngroup.com/articles/interaction-cost-definition/)，"找出'仪式'一词的来源"。
 
 ## Conclusion
 

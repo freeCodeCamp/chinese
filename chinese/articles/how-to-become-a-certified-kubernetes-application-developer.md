@@ -70,23 +70,23 @@ kubectl run --image=busybox --restart=Never --rm -it -- echo "Welcome to Kuberne
 
 ### Namespaces
 
-Namespaces allow you to create _virtual clusters_, this is, to segregate resources in different sections of the same physical cluster. For example:
+Namespaces 允许你创建虚拟集群，也就是说将资源隔离在同一物理集群的不同部分。比如说:
 
--   To separate different environments like development, stage, QA, and production
--   To break down a complex system into smaller subsystems. You can create a namespace for front-end components, another for back-end components, and so on.
--   To avoid name collision: the same resource can be created with the same name in different namespaces. This make it easy to create different environments (think stage and prod) that look identical.
+-   将以下不同的环境隔开 development, stage, QA, and production
+-   将一个复杂的系统分解成更小的子系统，你可以为前端组件创建一个Namespace,也可以为后端组件创建另一个Namespace，以此类推。
+-   避免了名称冲突: 同一资源可以在不同的Namespace中以相同的名称创建。这使得创建不同的环境 (think stage and prod)，看起来相同。
 
-You can create a namespace by running the following command:
+你可以通过运行以下命令创建一个Namespace:
 
 ```bash
 kubectl create ns my-namespace
 ```
 
-### Resource Quotas
+### 资源分配
 
-If you want to limit the amount of resources that developers can create in a namespace (both physical resources and Kubernetes objects like pods) you can use [Resource Quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/).
+如果你想限制开发者在Namespace中可以创建的资源数量(包括物理资源和Kubernetes对象，如pods) [资源分配](https://kubernetes.io/docs/concepts/policy/resource-quotas/).
 
-For instance, you can limit the number of Kubernetes _secrets_ that users can create on your cluster by defining the following `ResourceQuota`:
+例如，你可以通过`ResourceQuota`下的Kubernetes _secrets_ 的数量来限制用户在集群上创建:
 
 ```yaml
 apiVersion: v1
@@ -98,46 +98,45 @@ spec:
     secrets: "2"
 ```
 
-in a file – let's call it `my-quota.yaml` – and then running `kubectl apply -f my-quota.yaml` or simply running
+在一个文件中，我们称之为`my-qouta.yaml`，可以简单运行`kubectl apply -f my-quota.yaml`
 
 ```bash
 kubectl create quota my-quota --hard="secrets=2"
 ```
 
-More on _secrets_ later on in the guide.
+更多的 _秘密_ 在这个指南的后面。
 
 ### Labels
 
-Labels allow you to organize resources inside your Kubernetes cluster. A label is a key-value pair that you attach to a resource, either when you create it or by labeling an existing resource. You can then use labels to filter resources.
+Labels(标签)允许你在Kubernetes集群组织资源，label是一个键值对，你可以在创建资源时，添加到资源上，也可以添加到现有资源。你能使用labels过滤资源。
 
-For example:
+例如:
 
--   You want to display only your `backend` pods. You can attach the label `tier=backed` to the pods (both the key and the value are arbitrary, you can use whatever you want) and then run `kubectl get pods -l tier=backend` to retrieve the desired pods.
--   You want to define a deployment or a service associated with certain pods. The way to tell the deployment/service which pods it needs to keep an eye on is by using labels to select them.
+-   你想只显示 `backend` pods。你将label `tier=backed`添加到pods (键和值都是任意的，你可以使用任何你想的)，然后运行 `kubectl get pods -l tier=backend`去检索需要的pods.
+-   你想定义一个部署或服务的相关pods。告诉 deployment/service，它需要关注通过labels选择pods.
 
-Here are some common label-related actions:
+以下时一些常见的label-related的命令:
 
 ```bash
-# Labeling a pod, but similar syntax for nodes, etc
+# 给Pods 添加一个label, 等等
 kubectl label pods pod-name key=value
-# Removing a label by podname
+# 通过podname 删除pods上的label
 kubectl label pods pod-name label_key-
 
-# Removing a pod using the label as selector
+# 删除一个pod，通过label选择器
 kubectl label po -l app app-
 
-# Display labels
+# 显示 label
 kubectl get pods --show-labels
 
-# Select pods based on their labels (assume we've defined)
+# 通过lables选择pods
 kubect get pods -l 'tier in (frontend,backend)'
 kubect get pods -l tier=frontend,deployer=coolest-team
 ```
 
-Annotations are similar to labels in that they're key-value pairs, but they cannot be used to select resources. They have a different purpose.
+Annotations和labels相似，都是键值对，但Annotations不能用于选择资源，它们的目的是不同的。
 
-Annotations are normally added to be processed by other tools. For example, if you're running Prometheus to gather metrics, you could add this configuration to your descriptor:
-
+Annotations通常为其他工具添加。比如，如果你运行Prometheus来收集指标，你可以把这个配置添加到你的描述符中。
 ```yaml
 metadata:
 	labels:

@@ -146,51 +146,46 @@ metadata:
         prometheus.io/port: '9102'
 ```
 
-It tells Prometheus to override the default values for _scrape_ and _port_ with `true` and `9102` respectively.
+它让Prometheus将 _scrape_ 和 _port_ 的默认值分别改为 `true`和 `9102`。
 
-## Beyond Pods and Deployments
+## 超越 Pods和部署
 
-As you know by now, a **pod** is the basic unit in Kubernetes. In most cases, you can think of it as a container but a pod can consist of multiple containers. Since pods are ephemeral in nature, we need a mechanism to make sure new pods are created when our existing pods die.
+ Multi-container pods是Kubernetes的基本单元。在大多数情况下，你可以认为它是一个容器，但是一个pod可以由多个容器组成。由于pod是短暂的，我们需要一种机制确保当我们现有的pod死亡时，新的pod被创建。
 
-With deployments you can define a desired state, for example having 3 replicas of your application always running. Kubernetes will work towards achieving and keeping this state in the cluster at all times.
+ 通过部署，你的可以定义一个理想的状态，例如，有三个应用程序的副本一直在运行，Kubernetes将努力实现并在集群中保持这种状态。
 
-Deployments can also be used to easily manage the number of replicas running at any time, perform rolling updates, roll back to previous versions, and so on.
+也可以轻松管理任何时候运行的副本数量，执行滚动更新，回滚到以前的版本等等。
 
-However, there are many more workloads.
+还有很多工作负荷。
+### 多容器 pod
 
-### Multi-container pods
+一个pod可以运行一个以上的容器。容器间可以无缝通讯，因为它们在同一网络和而且它们可以使用 _volumes_ 共享数据。
 
-A pod can run more than one container. Containers can talk to each other seamlessly, because they are in the same network and they can use _volumes_ to share data.
+现在，让我们深入了解一些多容器pod设计模式，在本指南后面，我们将详细介绍volumes(卷),以及如何部署这些模式中的一些。
+#### Sidecar(边车)
 
-For now, let's dive into some common design patterns for multi-container pods. Later in this guide we'll see volumes in detail and how to deploy some of these patterns.
+在这个模式中，我们有一个运行主程序的容器，同时还有另一个容器，运行次要任务 ***以增强主容器的功能***。
 
-#### Sidecar
+一个经典的例子是，在运行Web服务(主容器)的同时，还有一个处理日志、监控、刷新pod volume(卷)的数据，终端TLS等任务的`side` 容器
+#### 适配器
 
-In this pattern we have a container that runs your main application along with another container that **runs secondary tasks to enhance your main container**.
+同样，你可以有你的主容器和一个次要容器， **转换主容器的输出**
 
-A classical example is running a web server (main container) along with a side container that handles tasks like logging, monitoring, refreshing data in the pod volume, terminating TLS, and so on.
-
-#### Adapter
-
-Similarly, you can have your main container and a secondary container that **transforms the output of the main one**.
-
-For example, imagine your main container runs a service that outputs a lot of complex logs. You can use an adapter container to simplify this output before it gets sent to your logging service, offloading the main container (and the developers of the service) from this task.
-
+例如，想象一些你的主容器运行一个输出大量复杂日志的服务。你可以使用一个适配容器来简化这个输出，然后再发送给你的日志服务器，把主容器(以及服务的开发者)从这个服务中解放出来。
 #### Ambassador
 
-Another common option is to use a secondary container **to act as a proxy** between your main container and the external world.
+另外一个常见选择是使用以辅助容器， **作为一个代理**，在你的主容器和外部之间充当代理。
 
-For instance, you probably have different databases for different environments, like testing and production. When your main container needs a connection to a database, it can offload to the ambassador container the task of figuring out the appropriate database depending on the environment.
+例如，你可能有不同的数据库用于不同的容器，比如测试和生产。当你的主容器需要连接到一个数据库时，它可以根据环境确定适合的数据库给 `ambassador`容器。
 
-### Services
+### 服务
 
-Pods can connect other pods using their IP addresses. However, pods are ephemeral by nature. When they die, assuming you have a replication controller, a new pod will be created with a new IP address. This makes it hard use IPs to connect to pods directly.
+Pods 可以通过其他的Pods的IP地址，连接其他的Pods。然而，pods是短暂的，当它们死亡时，假设你有个复控制器，一个新的pod将被创建，有一个新的IP地址。这使人们很难直接使用IP连接到pods。
 
-Kubernetes offers an abstraction called Service that creates **a resource with a fixed IP address** and send requests to the appropriate pods.
+Kubernetes提供了一个名为服务的抽象，**一个资源有固定的IP地址** ，并将请求发送到对应的pod。
 
-Instead of connecting to the pods directly, you can reach their service via its IP address or even better using its fully qualified name thanks to the DNS service. Furthermore, some types of services expose you application outside the cluster too.
-
-#### Types of Services
+而不是直接连接到pods，你可以通过它的IP地址到达它们的服务。或者通过DNS服务使用完整限定名称查找，这样会更好。此外，一些服务类型也将你的应用程序暴露在集群外面。
+#### 服务类型
 
 The main type of services you can create are:
 

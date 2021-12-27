@@ -187,31 +187,31 @@ Kubernetes提供了一个名为服务的抽象，**一个资源有固定的IP地
 而不是直接连接到pods，你可以通过它的IP地址到达它们的服务。或者通过DNS服务使用完整限定名称查找，这样会更好。此外，一些服务类型也将你的应用程序暴露在集群外面。
 #### 服务类型
 
-The main type of services you can create are:
+你可以创建的主要服务类型:
 
--   **ClusterIP –** To expose your application inside the cluster. This is the default service that Kubernetes creates if you don't specify a type.
--   **NodePort –** It opens a port on every node in the cluster to expose your applications to the world.
--   **LoadBalancer –** Exposes a service externally using a cloud provider load balancer.
+-   **ClusterIP –** 在集群内暴露你的应用。如果你不指定类型，这就是Kubernetes创建的默认服务。
+-   **NodePort –**  它会在集群中的每一个node打开一个端口，将你的应用程序暴露给世界。
+-   **LoadBalancer –**  使用云服务提供商的负载均衡器向外部暴露服务。
 
-#### How to expose your application inside the cluster
+#### 如何在集群内部暴露你的应用程序
 
-Let's say you want to expose your application `my-app` to other nodes in the cluster on port 80. You could you create a _deployment_ that deploys your application with this command:
+假设你想把你的应用程序`my-app`暴露给集群中的其他节点，端口为80。你可以创建一个命令部署你的应用程序。
 
 ```bash
 kubectl create deploy my-app --image=my-app --port=80
 ```
 
-This will create pods that can only be accessed from other resources inside the cluster by their IP, which will change if the pods restart.
+这将创建集群内部其他的Pod只能通过IP访问的pod，如果pod重新启动，其IP将改变。
 
-The next step is to create a ClusterIP service for these pods. The following command creates a service that can be reached at port 80 and will forward the requests to your application (also at port 80).
+下一步是为这些pod创建一个ClusterIP服务。下面的命令创建一个可以通过80端口的服务，并将请求转发到的你的应用程序(80端口)。
 
 ```bash
 kubectl expose deploy my-app --port=80
 ```
 
-#### How to expose your application outside the cluster
+#### 如何将你的应用程序暴露在集群之外
 
-If you wanted to expose you application to the world instead, you could use this configuration to create a NodePort service:
+如果你想把你的应用服务暴露给世界，你可以使用这个配置创建一个NodePort服务。
 
 ```yaml
 kind: Service
@@ -224,8 +224,8 @@ spec:
 	    app: nginx
     ports:
     - protocol: TCP
-    	port: 80 # The port where you can reach this service
-    	targetPort: 80 # The port that you opened in the pod
+    	port: 80 # 你可以到达该服务的端口
+    	targetPort: 80 # 你在pod打开的端口
 ```
 
 ### [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)

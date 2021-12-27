@@ -230,33 +230,34 @@ spec:
 
 ### [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 
-Services are not the only way to expose your applications to the world. You can also use an **Ingress object** as an entry point for your cluster.
+服务并不是将你的应用程序给世界的唯一方法。你也可以用 **Ingress对象**作为你的集群的一个入口点。
 
-In addition to this, you need an **Ingress Controller**, like Nginx, to implement the rules defined in the Ingress object.
+除此之外，你还需要一个 **Ingress控制器**，比如Nginx,来实现对Ingress对象中定义的规则。
 
-Since ingresses are out of the scope of the CKAD, we will move onto other topics.
+由于Ingresses不在CKAD的范围内，我们将转到其他的主题。
 
 ### [Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/)
 
-A Job will create one or several pods that will **not be restarted if they complete successfully**. You can use a them to perform batch jobs, that is, **one-off tasks** like carrying out a calculation, backing up some files, transforming and exporting some data, and so on.
+一个Job将创建一个或多个pods  **如果它们成功，将不会被重启启动**。你可以使用它们来执行批处理, **一次性任务** ，如并行计算，备份一些文件，转换和导出一些数据等等。
 
-Unless stated otherwise, the pod will run once. You can specify how many times a job needs to be run to be considered COMPLETED, using the parameter `completions`. By default, pods will run sequentially but you can set up the Job so that they run in parallel.
+除非另有说明, pod 将运行一次。你可以使用参数 `completions`来指定一项工作需要运行多少次才能被认为已经完成。默认情况下, pods将按照顺序运行，但你可以设置job，使它们并行运行。
 
-In case they don't complete successfully, you can configure them to either `Never` restart (try again) or to restart `OnFailure` up to `backoffLimit` times before Kubernetes considers that the job has failed.
+如果它们没有成功运行, 你将它们配置为 `Never` 重启 (重试)。或者重启失败最多的`backoffLimit` 次数，
+然后Kubernetes认为job已经失败。
 
-Here's how to create a simple job from the command line:
+下面是如何从命令行中创建一个简单的job:
 
 ```bash
  kubectl create job my-job --image=busybox -- echo "Hello World"
 ```
 
-If they job ran successfully, its state will be COMPLETED and its pod(s) won't be deleted so that you can access their logs. You can see them using:
+如果它们的job运行成功，其状态是`COMPLETED`,其pod(s)不会被删除，这样你就可以访问它们的日志。你可以通过以下方式看到它们。
 
 ```bash
 kubectll get pods --show-all
 ```
 
-since by default they won't be visible in they default list of pods after 2 minutes.
+在默认情况下，2分钟后它们在默认的pod列表中是不可见的。
 
 ### [Cronjobs](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
 

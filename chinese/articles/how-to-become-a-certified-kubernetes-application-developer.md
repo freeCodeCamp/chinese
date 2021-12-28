@@ -313,7 +313,7 @@ Kubernetes将创建pod的镜像，这是Kubernetes API服务器中的一个副�
 
 例如，你可以让一个pod在启动前等待另一个服务的容器完成启动和运行。
 
-你可以通过在pod的定义的 `spec`部分添加类似的这样的内容定义init 容器。
+你可以通过在pod的定义的 `spec`部分添加类似的这样的内容定义init容器。
 
 ```yaml
 spec:
@@ -326,27 +326,25 @@ spec:
 
 ### [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)
 
-Keeping you application configuration separate from the source code is a practice you should follow. ConfigMaps allow you to do this in Kubernetes.
+将你的应用程序与代码分开是你应该遵循的实践。ConfigMaps 允许你在Kubernetes这样做。
 
-ConfigMaps are used to **store key-value pairs of non-confidential data**. We will see how to store confidential data (for example, passwords) in _Secrets_ in the next section.
-
-You can create a ConfigMap from the command line:
+ConfigMaps 是使用 **存储非机密数据的键值对**， 我们将在下一节看到  _Secrects_ 存储机密数据(如密码)。
 
 ```bash
-# Passing the values as arguments
+# 通过参数传递数值
 kubectl create configmap my-map --from-literal=db_url=my-url --from-literal=username=username
 
-# Passing the values from a file
+# 通过文件获取数值
 kubectl create configmap another-map --from-file=my-file
 ```
 
-Once created, your application can use it in a pod that is in the same namespace in multiple ways:
+一旦创建，你的应用程序可以在同一个namespace的pod以多种方式使用ConfigMaps。
 
--   As command line arguments
--   As environment variables
--   From a file in a read-only volume
+-   作为命令行参数
+-   作为环境变量
+-   从只读卷中的一个文件
 
-Let's see a pod definition that reads values from a ConfigMap using these approaches:
+让我们看看一个pod的定义使用这些办法从ConfigMap中读取。
 
 ```yaml
 apiVersion: v1
@@ -385,18 +383,18 @@ spec:
 
 ### [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
 
-Secrets are very similar to ConfigMaps, but you use them to store **confidential data**. Creating and managing secrets is a sensitive topic. Be sure to read the documentation. Here we'll see the basics.
+`Secrets`跟ConfigMaps很相似，但你用它们来存储 **机密数据**。创建和管理`Secrets`是一个敏感的话题。请务必阅读文档。在这里，我们将学习基础知识。
 
-The simplest way to create a secret is:
+创建`Secrets`的最简单方法是:
 
 ```bash
-#To create a secret from a literal
+#从一个字面量创建 secret
 kubectl create secret generic secret-name --from-literal=password=password
-#To create a secret from the content of a file
+#从文件内容来创建 secret
 kubectl create secret generic secret-name --from-file=path-to-file
 ```
 
-Then, you can mount your secrets into the pod as environment variables or files:
+然后，你可以将你的secrets导入pod，以环境变量或者文件的形式:
 
 ```yaml
 apiVersion: v1

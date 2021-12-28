@@ -261,59 +261,59 @@ kubectll get pods --show-all
 
 ### [Cronjobs](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
 
-Kubernetes offers Conjobs to create jobs that need to run periodically or at a specific time in the future: periodical cleanup and backup tasks, renewal of TLS certificates, and so on.
+Kubernetes提供了`Conjobs`来创建需要定期或者在未来特定时间运行的`jobs`：定时清理和备份任务，更新TLS证书等等。
 
-Kubernetes will try its best to run only one Job to perform the task you specified in the Cronjob configuration. However, there are 3 common issues that you should be aware of:
+Kubernetes会尽力只运行另一个`job`来执行你在`Cronjob`配置中指定的任务。然而，有3个常见的问题你应该注意。
 
--   It is not guaranteed that the job will run **exactly at the desired time**. Imagine you need your job to run at 09:00:00. You can set the `startingDeadlineSeconds` property to X seconds so that, if the job has not started by 09:00:00 + X seconds, it will be marked as failed and not run.
--   **2 Jobs might be scheduled at the same time** to perform the task. In this case, you need to make sure that the tasks are _idempotent_, this is, the result of executing the task won't change if the task is carried out multiple times.
--   **No jobs might be scheduled**. To overcome this issue, make sure the Cronjob picks up any work undone by the previous run.
+-   不能保证job会 **准确地在所需的时间运行**。想象一下，你需要你的工作在 上午9点运行，你可以将`startingDeadlineSeconds`属性设置为x秒。这样，如果job没在上午9点x秒之后开始， 它将标记为失败，不会再运行。
+-  **2个job可能被安排在同一时间** 执行任务。在这种情况下，你需要确保任务是 _idempotent_ ，如果任务被多次执行，执行的任务的结果也不会改变。
+-  **没有job可以安排**。 为了克服这个问题，请确保Cronjob能运行前一次未完成的job。
 
-This is how you create a simple cronjob that prints "Hello World" every minute:
+这是创建一个简单的Cronjob，每分钟打印出"Hello World"
 
 ```bash
 kubectl create cronjob my-job --image=busybox --schedule="*/1 * * * *" -- echo "Hello World"
 ```
 
-I recommend this [website](https://crontab.guru/) to get your cron schedule expressions right.
+我推荐这个 [网站](https://crontab.guru/) 帮助你写出正确的cron定时任务。
 
-The next 3 resources are not part of the CKAD exam, but I think you should have a basic understanding of them at least.
+接下的3个资源不是CKAD考试的一部分，但我认为你至少应该对它们有一个基本的了解。
 
 ### [Daemon sets](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)
 
-Daemon sets ensure that a pod is scheduled in every **node** of your cluster. In addition to this, the pod is always up and running: if it dies or if someone deletes it, the pod will be recreated.
+Daemon sets(守护设置)确保在你的集群的每一个 **node** 都有一个pod 调度。除此以外，pod总是在运行:如果pod死了或者有人删除了它，pod将被重新创建。
 
-A common use case for Daemon sets is to collect logs and metrics that come from each node. But even if you don't create any, they are already some daemon sets running in your cluster: Kubernetes creates a daemon set to run a component called `kube-proxy` in every node!
+一个常见的使用场景是，Daemon sets(守护设置)用来收集每个node的日志和指标。但是，即使你不创建任何东西，它们已经在你的集群中运行了一些Daemo sets(守护设置): Kubernetese创建一个 Daemon set(守护设置)，在每个node上运行`kube-proxy` 组件。
 
-If you remove a node from the cluster, Kubernetes will not recreate its daemon in another node, because this node will already be running the daemon set. If you add a new node to the cluster, it will automatically run the daemon set.
+如果你从集群中移除一个node，Kubernetes不会在别的node上创建它的守护进程，因为这个这个node已经在运行Daemon set(守护设置)。如果你在集群中添加一个node，它会自动运行 Daemon set(守护设置)。
 
 ### [Stateful set](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
 
-So far, we have seen tools to deploy stateless applications or pods that have their own persistent storage that will outlive them. To deploy stateful applications you can use stateful sets.
+到目前为止，我们应该看到部署无状态的应用或者pods的工具，它们有自己的持久性储存，不随工具停止运行而消失。为了部署有状态的应用，你可以是使用 Stateful set(状态设置)
 
-Since this is not part of the CKAD exam, we will not get into more details.
+由于这不是CKAD考试的一部分，我们就不多讲了。
 
-### [Static pods](https://kubernetes.io/docs/tasks/configure-pod-container/static-pod/)
+### [静态 pods](https://kubernetes.io/docs/tasks/configure-pod-container/static-pod/)
 
-Static pods are pods managed by `kubelet`, not by the Kubernetes API.
+静态pods是由`kubelet`管理的颇多，而不是由Kubernetes API管理的。
 
-To create them, you just need to create a regular pod configuration file and configure kubelet to scan that directory. After you restart `kubelet` , it will create the pod and restart it if it fails.
+要创建它们，你只需要创建一个普通的pod的配置文件和配置kubelet 扫描该目录。如何你重启`kubelet`后，它将创建pod，并在失败时重启pod。
 
-Kubernetes will create a mirror pod, this is, a copy of the pod in the Kubernetes API server. You can see that this pod appears when you run `kubectl get pods`, but if you try to delete it using `kubectl delete podName` it will show up in the pod list immediately, created by the `kubelet` that runs in the node where you created the static pod.
+Kubernetes将创建pod的镜像，这是Kubernetes API服务器中的一个副本。当你运行`kubectl get pods`，这个pod会出现，但是如果你试图用`kubectl delete podName`删除它，通过`kubelet`创建的静态pod 运行在这个node上，它将直接出现在pod列表中。
 
-## How to Configure Pods and Containers
+## 如何配置 Pods和Containers(容器)
 
-We have just seen different workloads that you can deploy on your Kubernetes cluster. Let's spend some time now learning how to configure the pods and containers that run these workloads.
+我们刚刚看到在可以在Kubernetes集群上部署不同的工作负载。现在让我们花些时间学习如何配置工作负载中的pods和containers(容器)。
 
-### [Init Containers](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-initialization/)
+### [初始化容器](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-initialization/)
 
-You can use _init containers_ to set the initial state your pod: by writing some data to the pod's volume, downloading some files, and so on.
+你可以使用  _init containers_ 来设置你的pod初始状态: 向pod的卷写入一些数据，下载些文件等等。
 
-You can define one or more init containers for the same pod. They will be executed sequentially and the pod will only start running after all containers are done. Therefore, init containers can also be used to make the pod wait for a certain condition before it is executed.
+你可以定义一个或者多个init容器，它们将按顺序执行，只在所有的容器完成后，pod才会运行，因此，init容器也可以用来让pod在执行前等待某个条件。
 
-For instance, you can make a pod wait for another service to be up and running before it can start.
+例如，你可以让一个pod在启动前等待另一个服务的容器完成启动和运行。
 
-You can define an init container by add the something like this under the `spec` section of your pod description:
+你可以通过在pod的定义的 `spec`部分添加类似的这样的内容定义init 容器。
 
 ```yaml
 spec:

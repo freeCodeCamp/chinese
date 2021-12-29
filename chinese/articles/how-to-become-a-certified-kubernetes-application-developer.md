@@ -528,27 +528,27 @@ kubectl get pods --watch
 kubectl describe pods my-pod
 ```
 
-### [Container Resources](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
+### [容器资源](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
 
-When you create a pod, you can define:
+你可以通过定义创建一个pod:
 
--   The minimum amount of resources it needs to run, known as _requests_.
--   The maximum amount of resources the pod should use, known as _limits_.
+-   它运行所需的最小资源量，被称为 _requests_.
+-   pod可以使用的最大资源量，被称为 _limits_.
 
-Kubernetes will take into account the resources you requested when it tries to schedule the pod. It will not schedule the pod in a node that hasn't got enough capacity, regardless of the current resource consumption.
+Kubernetes在调度pod时，会考虑到你请求的资源。它不会在一个没有足够容量的节点上调度pod，不管当前资源的消耗情况如何。
 
-For instance, if pods A and B are running in node N, Kubernetes will calculate if the new pod C can fit in N by doing something like:
+例如， pod A和podB 在node N上运行，Kubernetes将通过下面的方法计算新的pod C 是否可以在node N上运行:
 
-`Total capacity of N - (resources requested by A + resources requested by B) <= resources requested by C`
+`Total capacity of N - (resources requested by A + resources requested by B) <= resources requested by C`( node N的总资源减去 A B需要的最小资源后，是否少于pod C需要的最小资源量)
 
-Even if pods A and B are not using all the resources they requested, Kubernetes **promised** they would have those resources available on that pod. That's why the current resource usage is not part of the previous formula.
+即使pod A和B没有使用它们请求的最小资源， Kubernetes **承诺** A和B会有它们所请求的最小资源可使用。这是为什么当前的资源使用情况不在前面的公式表达。
 
-If a pod goes over its resource limits, two things can happen:
+如果一个pod超过它的资源限制(它可以使用的最大资源量时)，会发生两种情况:
 
--   If it goes over its CPU limits, it will get throttled
--   If it goes over its memory limits, it will be restarted
+-   如果它超过CPU限制，它将被杀掉
+-   如果它超过内存限制，它将会被重新启动
 
-Let's now create a pod that requests some memory and CPU and limits the resources it is allowed to use:
+现在让我们创建一个pod，设置好它的最小内存和cpu和最大内存和cpu使用:
 
 ```yaml
 apiVersion: v1
@@ -573,47 +573,47 @@ spec:
           cpu: 0.5
 ```
 
-As an exercise, set some ridiculously high values for the requested memory (and or CPU) and _try_ to create the pod. You'll see that the pod never becomes ready. The output of
+作为一个练习，设置分配的内存和cpu高得离谱一些的值，去创建pod。你会看到pod从未准备好，将有输出
 
 ```bash
 kubectl describe pods resource-limited-pod
 ```
 
-will tell you why.
+会告诉你为什么.
 
-## [How to Schedule Pods in Kubernetes](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node)
+## [怎样在Kubernetes中调度Pods](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node)
 
-This section is not part of the curriculum for the CKAD exam. But I believe you should have at least some basic understanding of the concepts I'll expose here because they're likely to come up as you work with Kubernetes.
+这一部分不是CKAD考试教程的一部分。但我相信，你应该对我在这样阐述的概念有一些基本的了解，因为你在使用Kubernetes的过程中，它们很可能会出现。
 
-Kubernetes allows you to specify in which nodes you want your pods to be scheduled via multiple mechanisms.
+Kubernetes允许你通过多种机制来指定你希望的pods，被安排到哪个nodes。
 
-The simplest one is to use the **nodeSelector** field to pick a node based on a label. However, other features have been introduced to allow for more complex setups.
+最简单的是使用 **nodeSelector** 字段，根据一个label选择一个node。其他功能的使用，允许更复杂的设置。
 
 ### [Taints and tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)
 
-You can **taint a node to prevent pods from being scheduled in it**, without modifying the pods themselves. When you taint a node, the only pods that Kubernetes will schedule in that node will be the pods that **tolerate** that taint.
+你可以 **taint(污损) 一个node 去防止在其中的pods被调度**, 不用去修改pods本身。 当你 taint(污损)一个node,  Kubernetes 会调度 这个node 中的 pods，**容忍** taint(污损)。
 
-You can see this in action if you run:
+你可以看到这个动作，如果你运行:
 
 ```bash
 kubectl describe node master.Kubernetes
 ```
 
-In the output of the previous command, you will see the line:
+在前一个命令的输出中，你会看到这样一行字:
 
 ```bash
 Taints: node-role.kubernetes.io/master:NoSchedule
 ```
 
-This taint prevents pods from being scheduled in the master node (unless the pods tolerate this taint).
+这种污损会阻止pods在master node中被调度 (除非pods能容忍这种taint).
 
-There are three types of taint:
+ 有三种类型的taint:
 
--   NoSchedule: Kubernetes will not schedule pods in a node if they cannot tolerate the taint.
--   PreferNoSchedule: pods that don't tolerate the taint won't be scheduled in a node unless they cannot be scheduled somewhere else.
--   NoExecute: if the pods _already running in the node_ cannot tolerate the taint, evict them from the node.
+-   NoSchedule: 如果node不能容忍taint，Kubernetes不会在node中调度pod。
+-   PreferNoSchedule: pods不能容忍taint，不会调度在一个node中，除非pods不能调度到其他地方。
+-   NoExecute: 如果已经在node中运行的pods不容忍taint，就把pods从node中移除出去。
 
-**Taints don't guarantee that pods will be scheduled in specific nodes**. To achieve that, you need the concept of _Node affinity_ that we will explore now.
+**Taints 并不保证 pods 会被调度到特定的nodes**。 为了实现这一点,你需要探索 _Node affinity_ (node亲和性) 概念.
 
 ### Node affinity
 

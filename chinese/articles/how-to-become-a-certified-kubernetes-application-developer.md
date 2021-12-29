@@ -433,38 +433,38 @@ spec:
 
 ### [Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
 
-Probes allow you set rules to decide if a pod is healthy, if it is ready to serve traffic and if it is ready to start. At the end of this section I will present a sample descriptor with these some probes.
+Probes(探针)允许你设置判断pod是否健康的规则，是否为服务流量做好准备，是否准备好启动。在本节的最后，我将介绍一个带有这些Probes(探针)的样本。
 
-#### Liveness probes
+#### Liveness probes(活性探针)
 
-Kubernetes will automatically restart _crashed containers_. However, this will not account for situations like bugs (imagine an infinite loop in your application), deadlocks, and so on. You can define liveness probes to **detect whether your application is healthy**. Kubernetes uses this probe to decide if it needs to restart the container.
+Kubernetes 会自动重启 _crashed containers_ (崩溃的容器)。然而,这不会考虑到下面的bug (像你的应用程序的无限循环), 死锁等等。 你可以定义 `Liveness probes`(活性探针) **检测你的应用程序是否健康**。 Kubernetes 使用这探针来决定是否要重启容器。
 
-There are three types of liveness probes you can define:
+你可以定义三种Liveness probes(活性探针):
 
--   HTTP Get, where you define an endpoint in your application (for example /health) that Kubernetes can hit to determine if the application is healthy.
--   TCP socket probe, that tries to establish a TCP connection to a specific port. If the connection cannot be established, the applications is restarted.
--   Exec probe, that runs a command inside the container and restarts it if the exit status code is different from 0.
+-   HTTP Get, 在你的应用程序中定义一个HTTP路由(如/health)，Kubernetes可以通过HTTP请求获取应用程序是否健康
+-   TCP socket 探针，尝试建立一个TCP连接到一个特定的端口。如果连接不能建立，应用程序将重启。
+-   Exec 探针,  在容器内运行一个命令，如果退出状态码不是0，将重启容器。
 
-#### Readiness probes
+#### Readiness probes(准备就绪探针)
 
-Imagine a service that needs to load a large configuration file during startup. The container itself might be healthy (this can be checked using liveness probes described above) but not ready to start accepting requests.
+想象一下，一个服务在启动时需要加载一个大的配置文件。容器本身是健康的(这可以用上面的Liveness probes检查)，但是没有启动完，接收请求。
 
-Kubernetes uses readiness probes to determine if your application is ready to start serving traffic.
+Kubernetes使用Readiness probes(准备就绪探针)来确定你的应用程序是否准备好，处理请求。
 
-Many of the ideas discussed for liveness probes apply to readiness probes too:
+关于Liveness probes(活性探针)的东西也适用于Readiness probes(准备就绪探针):
 
--   They can be configured with an initial delay, timeout, threshold, period, and so on
--   They can be based on HTTP get calls, TCP socket connections, or Execution of commands inside the container
+-   它们可以被配置为初始延迟，超时，阈值，周期等等。
+-   它们可以基于HTTP get调用，TCP socket连接，或者在容器内执行命令。
 
-However, while liveness probes tell Kubernetes to restart the container if it is not healthy, readiness probes are used to remove the container from the pool of containers that can accept requests. Once the container is ready, it can start serving requests.
+然而，当Liveness probes(活性探针)告诉Kubernetes信息，Kubernetes让不健康的容器重启。Readiness probes(准备就绪探针)用来从可以接收请求的容器池移除没准备好的容器。一旦容器准备好了，它就可以为请求提供服务。
 
-#### Startup probes
+#### Startup probes(启动探针)
 
-Startup probes are used only during startup, for example for applications that are slow to start. If the startup probe succeeds, the liveness and readiness probes (if configured) will start running periodically.
+Startup probes(启动探针)只能在启动期间使用，例如应用程序启动缓慢。如果Startup probes(启动探针)返回成功，liveness and readiness 探针(如果已经配置)，将定期运行。
 
-### Example
+### 例如
 
-This pod is going to execute the following commands:
+这个pod 将执行以下命令:
 
 -   sleep 20
 -   touch /tmp/healthy
@@ -472,16 +472,15 @@ This pod is going to execute the following commands:
 -   rm -rf /tmp/healthy
 -   sleep 600
 
-The most basic parameters you should be aware of when configuring your probes are:
+在配置探针时，你应该注意的最基本参数是:
 
--   **initialDelaySeconds** before starting to probe
--   **periodSeconds** to define how often to probe
--   **timeoutSeconds** after which the probe times out
--   **failureThreshold** to determine the number of tries after which Kubernetes gives up
+-   **initialDelaySeconds** 开始探针延迟秒数
+-   **periodSeconds** 探针频率
+-   **timeoutSeconds**   探针的超时时间
+-   **failureThreshold** Kubernetes尝试次数，超过这个，将放弃尝试
+根据我们的配置, 这些探针将在pod创建后10秒后开始。在前20秒内, 文件 `/tmp/healthy`是不存在。因此, readiness probe(准备就绪探针)返回失败。 在接下30秒内readiness probe(准备就绪探针)返回成功，直到我们删除`/tmp/healthy`文件。
 
-With our configuration, the probes will start 10 seconds after the pod is created. During the first 20 seconds, the file `/tmp/healthy` does not exist. Therefore, the readiness probe will fail. We'll then create that file and for the next 30 seconds the readiness probe will succeed, until we remove the file again.
-
-The liveness probe is a simple `echo "I'm healthy"` command. If it can be run, the pod is healthy. Otherwise, it needs to be restarted.
+liveness probe(活性探针) 是简单的`echo "I'm healthy"`命令。如果它能运行，说明这个pod是健康的，否则，这个pod 要重启。
 
 ```yaml
 apiVersion: v1
@@ -515,15 +514,15 @@ spec:
 status: {}
 ```
 
-Execute this command to see the pod going through these states:
+执行这个命令可以看到pods的状态:
 
 ```bash
 kubectl get pods --watch
 ```
 
-See how the `Ready` column goes from `0/1`, to `1/1` and back to `0/.1`?
+看到`Ready` 列的值 从 `0/1`, 到 `1/1` 和回到 `0/.1`?
 
-Run this command to get a list of events and see how the probes were failing, as we expected.
+运行这个命令，以获得一个事件列表和探针如何失败的，正如我们期待的。
 
 ```bash
 kubectl describe pods my-pod

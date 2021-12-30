@@ -743,17 +743,17 @@ kubectl exec -it communicating-containers -c container-2 -- tail -f /etc/a-diffe
 
 尽管`container-1`写东西到 `log`,但由于`log`在一个共享卷中，`container-2`可以看到这个文件。
 
-### [Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
+### [Persistent Volumes(持久化卷)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
 
-Persistent Volumes (PVs) and Persistent Volume Claims (PVCs) decouple pods from storage technology. PVs are created by cluster administrators or dynamically based on [Storage Classes](https://kubernetes.io/docs/concepts/storage/storage-classes/).
+Persistent Volumes (PVs 持久化卷) 和 Persistent Volume Claims (PVCs  持久化卷声明) 通过存储技术跟pod解耦。 PVs是通过集群管理员创建 或者动态根据 [存储类型](https://kubernetes.io/docs/concepts/storage/storage-classes/).
 
-As opposed to the volumes we created earlier, defined at the pod level, PVs that have their own life cycle, independent from any pod.
+相对我们之前创建的卷，在pod层定义的，PV(持久化卷)有自己的生命周期，独立于任何pod。
 
-After creating PVs, _users_ can create Persistent Volume Claims to get the storage they need, _without needing to care about the actual infrastructure that is backing their storage_.
+在创建PVs 后, _用户_ 能创建 Persistent Volume Claims (持久化卷声明)来获得它们需要的存储, _而不需要关心其存储的实际基础设施_.
 
-#### Example
+#### 例如
 
-First, we define a Persistent Volume in pv.yaml:
+首先, 我们定义一个 Persistent Volume（持久化卷）在pv.yaml 文件:
 
 ```yaml
 apiVersion: v1
@@ -771,7 +771,7 @@ spec:
     path: /etc/foo
 ```
 
-For the Persistent Volume Claim, this is the descriptor (in pvc.yaml):
+对于 Persistent Volume Claim(持久化卷声明), 在文件pvc.yaml描述:
 
 ```yaml
 apiVersion: v1
@@ -787,29 +787,29 @@ spec:
       storage: 4Gi
 ```
 
-Now, let's create the resources in our cluster
+现在, 让我们在集群中创建资源。
 
 ```bash
-# First, the Persistent Volume
+# 首先, 创建Persistent Volume(持久化卷)
 kubectl apply -f pv.yaml
-# Then, the Persistent Volume Claim
+# 然后, 创建the Persistent Volume Claim(持久化卷声明)
 kubectl apply -f pvc.yaml
 ```
 
-We can take the pod definition from the previous example and with a little tweak start using this Persistent Volume instead of the hostPath we had defined. This is the only thing we need to change:
+我们可以从前面的例子获取pod的定义，稍作调整，开始使用这个持久化卷，代替我们定义的hostPath，这是我们唯一要改的地方。
 
 ```yaml
 volumes:
-  - name: mypd # To refer to this volume when we configure the pod
-    persistentVolumeClaim: # Instead of hostPath
-      claimName: mypvc # The name of the pvc we just created
+  - name: mypd # 当我们配置pod时，要参考这个卷
+    persistentVolumeClaim: # 替换掉hostPath
+      claimName: mypvc # 名称是我们刚才创建的pvc 
 ```
 
-## Network and Security in Kubernetes
+## Kubernetes中的网络和安全
 
-Regarding security, these concepts are the bare minimum that you should be familiar with to be able to clear the CKAD exam.
+关于安全问题, 这些概念是你应该熟悉的最低限度，以便通过CKAD考试。
 
-### [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+### [Network Policies(网络策略)](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 
 By default, all ingress traffic (that is, traffic flowing into your application) and egress traffic (that is, traffic flowing from your application) is allowed. Any pod can connect to any other pod, even if they're in different namespaces.
 

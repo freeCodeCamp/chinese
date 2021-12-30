@@ -615,38 +615,38 @@ Taints: node-role.kubernetes.io/master:NoSchedule
 
 **Taints 并不保证 pods 会被调度到特定的nodes**。 为了实现这一点,你需要探索 _Node affinity_ (node亲和性) 概念.
 
-### Node affinity
+### Node亲和性
 
-Node affinity tells Kubernetes to **schedule pods to specific nodes**.
+Node 亲和性 告诉 Kubernetes 去 **调度pods到特定的nodes 上**.
 
-Imagine you have a service S that needs special hardware to run. You want to dedicate the hardware to this service and only want pods from S to run on it. How can you achieve this?
+想象一下，你有一个服务S，需要特定硬件去运行。你像把专用硬件用于这个服务，并希望S的pod在上面运行。你怎样才能实现？
 
-You can taint the nodes that have this type of equipment so that only pods from service S can be scheduled in these nodes. However, Kubernetes can still deploy these pods in other nodes that don't have the required hardware.
+你可以taint这种设备上的nodes，以便只有来自服务S的pod可以在这些node上被调度。但是，Kubernetes可以在其他不不具备的所需硬件上的nodes部署这些pods。
 
-We can see how the combination of taints and node affinity ensures that only pods from service S run in our specialized nodes:
+我们可以看到: 组合taints和node 亲和性来确保只有来自服务S的pod 在我们的专门的nodes运行。
 
--   Node affinity schedules pods from S into the specialized nodes (and nowhere else).
--   Taints ensure that no other pods will be scheduled in the specialized nodes, only pods from service S.
+-   Node 亲和性调度将S的pods安排到专门的nodes(而不是其他节点)。
+-   Taints 确保没有其他的pod会被安排在专门的nodes，只有来自服务S的pod。
 
-## Storage in Kubernetes
+## Kubernetes的存储
 
-By default, when the container inside a pod restarts, all the data inside the container is lost. This is by design.
+默认情况下，当一个pod内的容器重启，容器内的数据会丢失，设计上是这样的(无状态)。
 
-If you want the data to outlive the container, pod, and even node, you need to use **volumes**. Also, if a pod is composed of multiple containers, then the pod's volumes can be used by all of the containers.
+如果你想让数据比容器，pod，甚至是node都持久，你需要用 **卷**。另外，如果一个pod是由多个容器组成的，那么这个pod 的卷可以被所有的容器使用。
 
-### [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/)
+### [卷](https://kubernetes.io/docs/concepts/storage/volumes/)
 
-After you define the volume, at the pod level, you need to mount it in each container that needs access to it.
+在你定义了卷后，在pod层，你需要在每个访问的容器装载它。
 
-There are many types of volumes to account for different use cases (usually, depending on what you want to happen when the _pod_ is destroyed). Some common types of volumes are:
+有很多类型的卷，以满足不同的使用情况(通常，取决于你想在 _pod_ 被销毁时发生什么)。一些常见的卷类型:
 
--   emptyDir: creates a directory that is initially empty. Easy way to share files between different containers in a pod.
--   hostPath: mounts a file or directory from the node's filesystem into the pod. After the pod is deleted, the files will remain in the host.
--   Volumes that live on AWS, GCP, or Azure clouds.
+-   emptyDir: 创建一个初始是空的目录。这是在pod不同容器之间共享文件的简单方法。
+-   hostPath: 将一个文件或者目录从node的文件系统挂载到pod，在pod被删除后，这些文件将保留在主机种。
+-   在AWS, GCP, 或者 Azure云上的卷.
 
-For more information about these and other type of volumes, refer to the documentation.
+关于这些和其他类型的卷的更多信息，请参考文档。
 
-To mount a volume in a container, your pod descriptor (let's call this file `with-mounted-volume.yaml`) should look something like this:
+在容器种挂载一个卷，你的pod的描述符(我们把这个文件称为 `with-mounted-volume.yaml`),应该是这样的。
 
 ```yaml
 apiVersion: v1
@@ -671,33 +671,32 @@ spec:
   restartPolicy: Never
 ```
 
-Since we have created a `hostPath` volume, its content will outlive the pod. Let's test this:
+由于我们已经创建了一个`hostPath`的卷，它的内容寿命将超过pod。让我们试一下。
 
 ```bash
-# Create a pod
+# 创建一个 pod
 kubectl apply -f with-mounted-volume.yaml
-# Create a file at the mounted location
+# 创建一个文件 并挂载到本地
 kubectl exec -it with-mounted-volume -- sh -c "echo 'Inside the pod' > /tmp/my-volume-path/newfile"
-# Try to read the file
+# 尝试去读取一个文件
 kubectl exec -it with-mounted-volume -- cat /tmp/my-volume-path/newfile
-# Delete the pod
+# 删除 pod
 kubectl delete pods with-mounted-volume
-# Create a new pod
+# 创建一个pod
 kubectl apply -f with-mounted-volume.yaml
-# Explore the content of `/tmp/my-volume-path`  to see if it persisted
+# 查看 `/tmp/my-volume-path` 下的内容，看它是否存在
 kubectl exec -it with-mounted-volume -- cat /tmp/my-volume-path/newfile
 ```
 
-#### Revisiting multi-container pods
+#### Revisiting 多容器的pods
 
-Now that we're familiar with volumes, let's create a multi-container pod that will use a mounted volume to share date between the containers.
+现在我们熟悉了卷，让我们创建一个多容器的pod，它将用在一个挂载了卷的容器间共享日期。
 
--   Our pod descriptor will be called `communicating-containers.yaml`
--   We'll have a pod with 2 `busybox` containers.
--   One of them will append `Hello World` to a file every second.
--   The other container has access to the content of this file (and anything that is placed in this shared volume). We'll tail the shared file and see how the other container appends `Hello World` to it.
-
-This is the definition of our pod:
+-   我们的 pod 描述定义 在文件`communicating-containers.yaml`
+-   我们将会一个带有2个 `busybox` 容器的pod。
+-   其中一个容器将"Hello World" 追加到一个文件中。
+-   另一个容器可以访问这个文件的内容(以及放在这个共享卷的任何东西)。我们将查看这个共享文件夹，看另一个容器是如何将`Hello World`追加到文件里的。
+这就是我们定义的pod:
 
 ```yaml
 apiVersion: v1
@@ -730,19 +729,19 @@ spec:
   restartPolicy: Never
 ```
 
-Let's create the pod:
+让我们创建pod:
 
 ```bash
 kubectl apply -f communicating-containers.yaml
 ```
 
-Once the pod is running, we can tail the file from `container-2`:
+ 一旦pod运行起来，我们就可以tail`container-2`文件，查看文件尾部内容:
 
 ```bash
 kubectl exec -it communicating-containers -c container-2 -- tail -f /etc/a-different-location/log
 ```
 
-Even though it is `container-1` that writes to `log`, since it is in a shared volume, `container-2` can see this file too.
+尽管`container-1`写东西到 `log`,但由于`log`在一个共享卷中，`container-2`可以看到这个文件。
 
 ### [Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
 

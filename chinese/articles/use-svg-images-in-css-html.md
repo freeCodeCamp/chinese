@@ -1,6 +1,6 @@
 > -  原文地址：[How to Use SVG Images in CSS and HTML – A Tutorial for Beginners](https://www.freecodecamp.org/news/use-svg-images-in-css-html/)
 > -  原文作者：[Edidiong Asikpo](https://www.freecodecamp.org/news/author/edidiong/)
-> -  译者：
+> -  译者：lzzlzz
 > -  校对者：
 
 ![How to Use SVG Images in CSS and HTML – A Tutorial for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2020/11/Screen-Shot-2020-11-15-at-3.59.07-PM.png)

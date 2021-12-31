@@ -935,47 +935,47 @@ kubectl logs -f pod-name [-c container-name] [-n namespace]
 
 这对认证来讲是足够了。然而, 在真实的生产环境中，手动检查日志是很麻烦和低效的。 如果你在用GCP(谷歌云)，你会希望用其他技术来管理你的日志和服务，像StackDriver技术。如果你想了解更多的有关StackDriver和GCP的信息，请务必查看我的[GCP指南](/news/google-cloud-platform-from-zero-to-hero/).
 
-### Troubleshooting Tips
+### 处理故障的小技巧
 
-While there are no one-size-fit-all solutions when it comes to troubleshooting, it is usually a good idea to start at the pod level to get an idea of what might be the root cause of the issue.
+虽然在排除故障时没有灵丹妙药, 但从pod层开始通常是一个好注意，可以从可以找到问题的根本原因。
 
-You basic tools should be the commands we've covered above. In addition to this, you can always open a terminal inside the pod:
+你的基本工具是我们上面提供的命令，除此之外，你可以随时在pod里打开一个终端。
 
 ```bash
-# Assuming you container image uses sh
+# 假设你的容器镜像使用 sh
 kubectl exec -it my-pod -c container -n namespace -- sh
 ```
 
-It is **not recommended** to solve problems inside the pod this way, since by design pods are ephemeral and after they are restarted, your changes will be lost and the problem will manifest itself again. However, it's a good idea to gain good insight into the problem.
+**不建议** 用这种方式去解决pod的内部问题, 因为根据设计，pods是短暂的，在pods重启后，你的修改会丢失, 问题会复现。 当然, 这是一个好的方法去很好地了解问题。
 
-To retrieve your pod or node metrics, you can run the following command:
+获取你的pod或者node的指标，你可以运行以下命令。
 
 ```bash
 kubectl top pod pod-name
 ```
 
-These tools should help you solve the most common problems in your daily operations. There are too many things that can go wrong to cover here. If you face something you can't fix, I recommend that you visit this entry to get help [debugging your applications.](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/)
+这些工具帮助你解决日常操作中最常见的问题。有太多的事件会出差，在这里不做解释了。如果你面对一些你无法解决的事情，我建议你访问这个，[调试你的应用程序](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/)
 
-## Tips and Tricks
+## 技巧和窍门
 
-These are some "tricks" and I have found useful in my daily work with Kubernetes and especially to pass the CKAD exam. **The exam is about speed and efficiency**. With this in mind, let's see what we can do to perform better.
+这是我发现的一些技巧，在我日常的Kubernetes工作中，特别是在通过CKAD考试时很有用。 **提高考试速度和效率部分** 。考虑到这点，让我们来看看可以做些什么来表现得更好。
 
-### Set Aliases
+### 设置别名
 
-You will be typing the same commands over and over. As soon as you start the exam, create the following aliases:
+你将反复输入相同的命令。一旦开始考试，请创建以下别名。
 
 ```bash
-# Essential aliases. I strongly recommend setting them
+# 重要的别名，我强烈建议设置它们
 alias k='kubectl'
 alias kg='k get'
 alias kgpo='k get pods'
 alias kdpo='k describe pod'
 alias kd='k describe'
 
-# I also found this one very useful
+# 我还发现这个非常有用
 alias kap='k apply -f'
 
-# I have this for work only
+# 我设置这个，只为工作需要
 alias kgpoa='kgpo --all-namespaces'
 alias kgpol='kgpo --show-labels'
 alias kgpow='kgpo -o wide'
@@ -985,66 +985,64 @@ alias kdd='kd deploy'
 alias kds='kd svc'
 ```
 
-### Search Your Command History Faster
+### 更快搜索你的命令历史
 
-I've seen a lot of engineers, many of them seniors, clumsily hitting the arrow up key 20 times to find something in their command history.
+我见过很多工程师，其中很多是高级工程师(seniors)，笨拙按了20次以上的箭头键，在他们的命令历史中找东西。
 
-Instead, make sure you're comfortable using `Ctrl + r`. Just press it and start typing some part of the command you are looking for. Then, keep pressing `Ctrl + r` until you find it. Now you can press `Enter` to run it or simply start typing to modify it.
+不同的是，确保你自如地使用`Ctrl + r`，只有按下它并开始输入你要输入的命令的某些部分。然后，继续按`Ctrl + r`，直到你找到它。现在你可以按`Enter`运行它，或者简单开始修改后再运行。
 
-It is a huge time saver that not everyone is aware of.
+这是一个节省大量时间的方法，并不是每个人都知道的。
+### 熟悉文档
 
-### Familiarize Yourself With the Documentation
+你可以在考试期间查阅文档，然而，这不是学习新东西的时候。访问文档获得yaml的模板，检查特定的参数等等。
 
-You can consult the documentation during the exam. However, it's not the time to learn new things. Visit the documentation to get templates for yaml, to check specific parameters, and so on.
+确保你对 **文档的结构** 很熟悉和知道去哪里找东西。 使用 **搜索功能** ，更快找到.
 
-Make sure you have a good idea of the **structure of the documentation** and where to find things. Use the **search functionality** to go even faster.
+这份 [Kubectl cheat sheet(简明手册)](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) 是金子和 **在考试期间可以为你你所用**.
 
-Finally, this [Kubectl cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) is gold and **will be available for you during the exam**.
+### 你不需要记住所有的东西
 
-### You Don't Need to Memorize Everything
+除了文档, `kubectl` 有 `--help` 关于大多数命令的查看 (`-h` 是简写)。大多数时候，你会在那里找到问题的答案。
 
-In addition to the documentation, `kubectl` has a `--help` flag for most commands (`-h` is the short version). Most of the time you will find the answer to your question there.
+事实上，我建议你在查阅文档之前这样做，因为这要快得多。
 
-In fact, I recommend that you do this before going to the documentation, since it is much faster.
-
-Imagine that you want to create a resource quota object. You don't remember the yaml you need to write or the command to create it. However, you know the `kubectl command` and the `--help` flag. Then, you should try this before going to the docs:
+想象一下，你想创建一个资源配额对象。你不记得你需要写的yaml或者创建它的命令。你知道 `kubectl command` 和 `--help` 参数。那么在查阅文档之前，你应该先试一试这个:
 
 ```bash
-# From this, we can get what we need to create our resource quota object
+# 我们可以创建得到创建资源配额对象所需要的东西
 kubeclt create quota -h
-# For example
+# 例子
 kubeclt create quota my-quota --hard="secrets=2"
 ```
 
-You have plenty of sources of information and therefore you don't need to memorize many commands or any descriptors.
+你有大量的信息来源，因此你不需要记得住这么多的命令或者参数。
 
-However, given that time is very limited during the exam, I think it's worth knowing some of the following commands by heart and how to leverage them.
+然而，考试期间时间非常有限，我认为值得熟记一些命令和任何使用它们。
+### 快速生成一个基本的pod
 
-### Generate a basic pod specification quickly
-
-**This is extremely important**. Instead of copying and pasting from the documentation every time you need a pod, use the following command to get a descriptor that you can modify later to meet your requirements:
+**这一点尤为重要**。与其每一次需要一个pod时从文档中复制和粘贴，不如使用下面的命令获得一个描述符，你可以在以后修改它以满足你的需求。
 
 ```bash
-# Run pod nginx and write its spec into a file called pod.yaml
+# 运行一个pod nginx，并将其参数写入一个pod.yaml文件中
 kubectl run nginx --image=nginx --restart=Never --dry-run=client -o yaml > pod.yaml
-# Some of these flags can be useful, depending on the problem
+# 可以指定一些参数写入pod.yaml文件中
 kubectl run nginx --image=nginx --restart=Never  --port=80 --labels=key=val --dry-run=client -o yaml > pod.yaml
 ```
 
-Other useful parameters:
+别的有用的参数:
 
 ```bash
---rm # to remove the pod as soon as it's finished
--it # Enter the interactive terminal, to run commands directly inside the pod
+--rm # 在运行完成后立即删除pod
+-it # 进入交换式终端，直接在pod中有运行命令
 ```
 
-For example, you can use this to create a temporary pod and use it to verify your work:
+例如，你可以用它创建一个临时的pod，用它验证你的工作:
 
 ```bash
 kubectl run tmp --image=busybox --restart=Never --rm -it -- /bin/sh
 ```
 
-Now you could  `wget -O- svc:port` to see if your service is running, if network policies are working, and so on.
+现在你可以运行命令 `wget -O- svc:port` ，看看你的服务是否在运行，网络策略是否在工作等等。
 
 ##### Note:
 

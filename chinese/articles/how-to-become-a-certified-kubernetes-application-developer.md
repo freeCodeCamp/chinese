@@ -811,58 +811,58 @@ volumes:
 
 ### [Network Policies(网络策略)](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 
-By default, all ingress traffic (that is, traffic flowing into your application) and egress traffic (that is, traffic flowing from your application) is allowed. Any pod can connect to any other pod, even if they're in different namespaces.
+默认情况下，所有的ingress流量(即流入你的应用程序的流量)和egress流量(即你的应用程序流出的流量)都是允许的。如何pod都可以连接到其他的pod，即使它们在不同的namespaces。
 
-You can define network policies to control ingress and egress traffic based on different criteria.
+你可以定义网络策略，根据不同的标准控制ingress流量和egress流量
 
-To illustrate this, let's create a Network policy that allows traffic to our database only from pods with the label `access: allowed`:
+为了说明这一点,我们创建一个网络策略，只允许带有label `access: allowed`的pod访问的我们的数据库:
 
 ```yaml
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
-  name: access-db-policy # pick a name
+  name: access-db-policy # 起个名称
 spec:
   podSelector:
     matchLabels:
-      app: db # selector for the databse pods
-  ingress: # allow ingress traffic
+      app: db # 数据库pods选择
+  ingress: # 允许的 ingress 流量
   - from:
     - podSelector: 
         matchLabels: 
-          access: allowed # Only the pods with this label will be able to send traffic to the database
+          access: allowed # 只有具有该label的pod才能向数据库发送流量
 ```
 
-### [Security Context](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
+### [Security Context(安全背景)](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
 
-When configuring a Security Context, you can enable security features like preventing the container from running as root, choosing as what user the pod is running, and so on. Here's an example:
+当配置一个Security Context(安全背景), 你可以启用一些安全功能，比如防止容器以root身份运行, 选择什么用户运行pod等等，下面是一个例子:
 
 ```bash
 spec:
   securityContext:
-    runAsUser: 1000 #This sets the user for every container in this pod, but can be overriden
+    runAsUser: 1000 #这将为这个pod层的每个容器设置用户，但可以被覆盖。
   containers:
   - name: my-container
      image: alpine
      securityContext:
-     	runAsUser: 1001 # This overrides the user set at the pod level     	
+     	runAsUser: 1001 #    这覆盖在pod层上的用户设置 	
   - name: another-container
 	....
 ```
 
-### [Services Accounts](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
+### [Services Accounts(服务账号)](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
 
-Your applications can connect to the API server and interact with it. For example, to retrieve information about the pods in a namespace. Service accounts allow applications to _authenticate_ against the API server so that they can operate on it.
+你的应用程序可以连接到API 服务器进行数据交换。例如, 检索有关pod信息在一个namespace。Service accounts(服务账号) 允许应用服务对API服务器进行认证，以便它们进行数据交互。
 
-There is a _default service account_, but it is not a good practice to have all pods use it since not every application needs to be able to perform the same operations on the API server.
+这是一个 _default service account_ (默认的服务账号), 但是这不一个好的实践，因为不是每个应用程序都需要在API服务器上执行相同的操作。
 
-The simplest way to create a service account is via the command line:
+创建service account(服务账号)的最简单的方法是通过命令行:
 
 ```bash
 kubectl create serviceaccount my-sa
 ```
 
-Once created, you can assign it to a pod using the `serviceAccountName` field in the pod descriptor:
+一旦创建, 你一个分配 `serviceAccountName` 字段 (pod 描述符)分配给一个pod:
 
 ```bash
 spec:
@@ -872,68 +872,68 @@ spec:
   ...
 ```
 
-Once the application has been authenticated, the next step is to see if it has the appropriate permissions for the action it is trying to accomplish, that is, to see if the application is _authorized_.
+一旦应用程序被认证,下一步看它是否有适当的权限来完成它所要的操作,也就是说, 查看应用程序是否被授权。
 
-### [Role Based Access Control](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
+### [Role Based Access Control(基于角色的访问控制)](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
 
-A common method to manage authorization is **Role Based Access Control (RBAC)**. Service accounts are linked to one or more roles. Each role has permissions to perform a specific action on a certain resource.
+管理授权的一个常见办法是 **Role Based Access Control (RBAC)** (基于角色的访问控制)。 Service accounts(服务账号) 被链接到一个或者多个role(角色)。 每个role(角色)都有在某个资源上执行特定操作的权限。
 
-RBAC authorization is defined in two separate steps:
+RBAC 授权是通过两个独立的步骤来定义的:
 
--   Role creation, using Role and ClusterRole resources, to specify the actions can be performed on certain resources
--   The binding of the roles to the accounts, using RoleBinding and ClusterRoleBinding resources.
+-   Role 创建, 使用 Role和ClusterRole 资源, 以指定在某些资源上可以执行的操作。
+-   绑定 roles到账号上, 通过使用 RoleBinding 和 ClusterRoleBinding 。
 
-As you can imagine, the resources that contain the prefix Cluster are available cluster-wide, whereas the others are only defined in a particular namespace.
+正如你所想，包含前缀`Cluster`的资源在整个集群范围内可用，而其他的资源只在特定的namespace中定义。
 
-Since this is out of the scope of the CKAD exam, we will not get into the details of how to create and configure RBAC in your cluster.
+由于这不属于CKAD考试的范围，我们将不讨论如何在你的集群中创建和配置RBAC的细节。
 
-## Observability and Debugging in Kubernetes
+## Kubernetes中的可观察性和调试
 
-Once you have deployed your applications, how do you know what's going on in your cluster?
+一旦你部署你的应用程序, 你如何知道你的集群发生了什么?
 
-We've already introduced Probes as a mechanism to decide if pods need to be restarted and if pods are ready to serve traffic. Here we will see more mechanisms to get a better understanding of the state of our cluster and troubleshoot any issues.
+我们已经介绍了Probes作为一种机制决定是否重启pod，以及pod是否为网络流量做好了准备。在这里，我们将看到更多的机制来更好地了解我们的集群状态，并对任何问题故障排除。
 
-#### Getting Basic Pod information
+#### 获取Pod的基本信息
 
-To access the current state of the pods, there are two basic options. This is the first one:
+访问pods的当前状态，有两个基本选项。这是第一选项:
 
 ```bash
 kubect get pods
 ```
 
-This will show you the pods' `STATUS`, `AGE`, number of `RESTARTS` and how many containers inside the pods are `READY`.  You can pass flags to this command so that it displays the pods' IP address, labels, and more.
+这将显示你的pods `STATUS`, `AGE`,  `RESTARTS`的数量和多少pods内的容器处于 `READY`状态. 你可以用这个命令去显示pod的ip地址、labels等等。
 
-The second option provides more detailed information:
+第二个选项提供了更详细的信息:
 
 ```bash
 kubectl describe pods my-pod
 ```
 
-At the very bottom of the output of this command, you'll find a list of events that will give you hints in case something goes wrong:
+在这个命令的输出的最底部，你会发现一个事件列表，在出差的情况下会给你提示:
 
--   Liveness/readiness probes are failing
--   There was an error pulling an image
--   Insufficient memory to schedule a pod
+-   Liveness/readiness probes 失败
+-   拉取镜像出现错误
+-   没有足够的内存分配给pod
 
-And so on.
+等等。
 
-### How to Get a Container's Logs
+### 如何获取容器的日志
 
-If a pod is running, you can access its logs using the following command:
+如果一个pod正在运行，你可以使用以下命令访问它的日志。
 
 ```bash
 kubectl logs pod-name [-c container-name] [-n namespace]
 ```
 
-You only need to pass the container name if there's more than one container in your pod. Similarly, the namespace flag is only needed to retrieve logs from pods in a different namespace.
+如果你的pod有不止一个容器，你只需传递容器名称。同样，从不同的namespace中检索日志要用namespace 标志符(-n) 
 
-You can even tail the logs with the `-f` flag:
+你甚至tail日志 `-f` 标志符，看到日志尾部，获取最新的变化:
 
 ```
 kubectl logs -f pod-name [-c container-name] [-n namespace]
 ```
 
-This will be enough for the certification. However, manually checking logs is cumbersome and inefficient in a real production environment. You will want to user other technologies to manage your logs or services like StackDriver if you're on GCP. If you want to learn more about StackDriver and GCP in general, be sure to check out my [GCP guide](/news/google-cloud-platform-from-zero-to-hero/).
+这对认证来讲是足够了。然而, 在真实的生产环境中，手动检查日志是很麻烦和低效的。 如果你在用GCP(谷歌云)，你会希望用其他技术来管理你的日志和服务，像StackDriver技术。如果你想了解更多的有关StackDriver和GCP的信息，请务必查看我的[GCP指南](/news/google-cloud-platform-from-zero-to-hero/).
 
 ### Troubleshooting Tips
 

@@ -1044,45 +1044,45 @@ kubectl run tmp --image=busybox --restart=Never --rm -it -- /bin/sh
 
 现在你可以运行命令 `wget -O- svc:port` ，看看你的服务是否在运行，网络策略是否在工作等等。
 
-##### Note:
+##### 注意:
 
-The `--dry-run=client -o yaml` is not just for pods, but for many resources. If we come back to the previous section where we created a resource quota, we could get a descriptor like this:
+ `--dry-run=client -o yaml`不仅适用于pod,也适用于很多资源。如果我们回到上一节，我们创建一个资源配额，我们可以得到这样描述符:
 
 ```bash
 kubeclt create quota my-quota --hard="secrets=2" --dry-run=client -o yaml
 ```
 
-### Use grep
+### 使用 grep
 
-You don't need to know regular expressions in depth. Just pass keywords. For instance, to retrieve information fast from the lengthy `kubectl describe pods my-pod`:
+你不需要深入了解正则表达式。只要使用关键词。例如，从冗长的`kubectl describe pods my-pod` 快速检索信息:
 
 ```bash
-# -i makes the search case-insensitive. It's a bit slower but for very short texts it won't make a difference
-# -C 2 will display the matched line as well as the 2 lines before and after the match (the "context")
+# -i 参数使搜索不区分大小写。有点慢，但对于非常短的文本来讲，这不会有什么影响。 
+# -C 2 参数将显示匹配的最前2行和最后2行 (C 是 context的缩写)
 kubectl describe pods my-pod | grep -i -C 2 labels
 kubectl describe pods my-pod | grep -i -C 2 ip
 ...
 ```
 
-### Watch Pods as Their Status Changes
+### 观察pods 的状态变化
 
-Instead of manually running `kubeclt get pods` every few seconds to see changes, pass the `watch` flag to see how your pods are doing:
+与其每隔几秒手动运行`kubeclt get pods`来查看变化，不如通过`watch` 参数来查看你的pods是如何变化:
 
 ```bash
 kubectl get pods --watch
 ```
 
-### Delete Pods Fast
+### 快速删除Pods
 
-Making mistakes is part of the learning process. You'll make them also during the exam. Since the clock is ticking, we need to make sure we don't have to wait long when deleting resources. Add these flags to delete pods immediately:
+犯错是学习过程的一部分。在考试中你也会犯错。由于时间紧迫，我们需要确保在删除资源时不要等待很长时间，通过这些参数可以快速删除pods:
 
 ```bash
 k delete pods my-pod --force --grace-period=0
 ```
 
-### Run a Pod With a Particular Command
+### 用一个特定命令运行Pod
 
-I found it useful to learn how to pass commands to pods, jobs, cronjobs, and so on from the command line, like this example:
+我发现学习如何用命令行想pod、job、cronjobs等传递命令很有用，比如这个例子:
 
 ```bash
 kubectl run loop --image=busybox -o yaml --dry-run=client --restart=Never \
@@ -1090,7 +1090,7 @@ kubectl run loop --image=busybox -o yaml --dry-run=client --restart=Never \
 > pod.yaml
 ```
 
-This would generate the file pod.yaml:
+这会产生一个文件pod.yaml:
 
 ```bash
 apiVersion: v1
@@ -1114,46 +1114,46 @@ spec:
 status: {}
 ```
 
-You can run a single command or chain multiple commands, like a mini bash script:
+你可以运行一个命令，也可以运行多个命令链，就像一个小型的bash脚本一样:
 
 ```bash
-# Run a particular executable
+# 运行一个特定的可执行文件
 kubectl run busybox --image=busybox -it --restart=Never -- echo 'hello world'
-# Run commands inside a shell (useful to run multiple commands)
+# 在shell内运行(对运行多个命令很有用)
 kubectl run busybox --image=busybox -it --restart=Never -- /bin/sh -c 'echo hello world'
 ```
 
-It is not a huge difference but you don't need to remember how to write it in the pod descriptor or to waste time opening the documentation. **You just need to use what you already know.**
+这不是一个巨大的区别，但你不需要记住如何在pod的描述符中写，也不需要浪费时间去打开文档。 **你只需要使用你已经知道的东西**
 
-### Roll out
+### roll out(展开)
 
-Familiarize yourself with the `rollout` command to get information about the status of your deployments.
+熟悉`rollout`命令，以获得关于你的部署状态的信息。
 
-I always start with the `--help` flag to remember how to do what I wanted to do.
+我总是使用 `--help` 参数，来记住如何做我想做的事。
 
 ```bash
 kubectl rollout -h
 ```
 
-### Bonus
+### Bonus(奖励)
 
-These final tips are not for the certification, but for daily work:
+最后这些提示不是针对认证的，而是针对日常工作的:
 
--   This [kube-ps1 module](https://github.com/jonmosco/kube-ps1) makes it easy to always know in which cluster and namespace you're operating, to prevent mistakes like messing with prod resources when you're not supposed to.
--   Also, I recommend having a look at [Helm](https://helm.sh/). Helm is a package manager that can be used to deploy applications easily (think of it as `npm`). Helm also allows you to write templates that you can reuse to create objects based on different values (name, resource requests and limits, and so on).
+-   这个[kube-ps1 模块](https://github.com/jonmosco/kube-ps1) 让你很容易知道你是在那个集群和namespace中操作的, 以防止犯错误，比如你不应该乱用 prod(生产环境)资源。
+-  另外，我推荐你看一下[Helm](https://helm.sh/)。Helm 是一个软件包管理器，可以用来轻松部署应用程序 (像`npm`)。 Helm还允许你编写模板，你可以根据不同的值 (name, resource requests and limits, and so on)重复使用，创建对象。
 
-## Practice Time
+## 练习时间
 
-**You will always learn more by doing than by reading.** So I have left some problems here that I solved during my preparation for you to practice. Check out [this repo](https://github.com/dgkanatsios/CKAD-exercises) and [this article](https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552).
+**做事永远比读书学得多**。所以我在这里留下一些我在准备考试已经解决的问题，供你练习。 查看[项目地址](https://github.com/dgkanatsios/CKAD-exercises) 和 [这篇文章](https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552).
 
-I recommend solving all of them on your own before you check the proposed solution. Also, verify your work: check logs, create a pod to connect to your services, and so on. This will also help build your muscle memory for the exam.
+我建议在你先解决自己的所有问题，再看我上面提到资料。同时验证你做的东西: 检查日志，创建一个pod来连接你的服务等等。这也将有助建立你在考试中肌肉记忆。
 
-Try to follow my tips and solve the exercises as if you really were in the exam: no distractions, only one tab open - with the official Kubernetes documentation.
+尝试根据我的提示来练习这些练习，就像你真的在考试中一样，不分心，在浏览器里只打开一个标签--Kubernetes 的官方文档。
 
-## Conclusions
+## 结论
 
-This guide contains all you need to take your skills to the next level, to ace the CKAD exam, and to become an effective Kubernetes developer. It's all in your hands. You just need to put in some work. Good luck!
+本指南包含了将提高你的技能到新的水平，通过CKAD考试以及成为一名真正的Kubernetes开发者所需要的一切。这一切在你手中，你只需要付出一些努力，祝你好运！
 
-You can visit my blog [www.yourdevopsguy.com](https://www.yourdevopsguy.com/) and [follow me on Twitter](https://twitter.com/CodingLanguages) for more high-quality technical content.
+你可以访问到我的博客[www.yourdevopsguy.com](https://www.yourdevopsguy.com/) 和 [在推特上关注我](https://twitter.com/CodingLanguages) 获得更多高质量的技术内容。
 
-If you liked this article, please share it because you could help someone pass their exam or get a job.
+如果你喜欢这篇文章，请分享它，因为你可以帮助别人通过考试或者找到工作。

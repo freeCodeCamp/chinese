@@ -6,55 +6,77 @@
 ![How to Use SVG Images in CSS and HTML – A Tutorial for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2020/11/Screen-Shot-2020-11-15-at-3.59.07-PM.png)
 
 SVG stands for Scalable Vector Graphics. It is a unique type of image format for vector-based graphics written in Extensible Markup Language (XML).
-
+SVG是指可缩放的向量图形。这是一种可以使用可扩展标记语言（XML)进行编写的基于向量的图像类型。
 In this tutorial, I will explain why you'd want to use SVG images and how you can use them in CSS and HTML.
+在本教程中，我将解释为什么需要使用SVG图像，以及如何在CSS和HTML中使用它们。
 
 # Why should you use SVG images?
+# 为什么需要使用SVG图像？
 
 There are a number of reasons to use SVG images, some of which are:
+使用SVG图像的原因有很多，其中一些原因如下所示：
 
 -   SVG images do not lose their quality when zoomed or resized.
+-   当放大或缩小的时候，SVG图像不会失真。
 -   They can be created and edited with an IDE or text editor.
+-   可以使用IDE和文本编辑器创建和编辑SVG图像。
 -   They are accessible and animatable.
+-   SVG图像可以获取并支持动画。
 -   They have a small file size and are highly scalable.
+-   SVG图像文件小并且具有高扩展性。
 -   And they can be searched, indexed, scripted, and compressed.
+-   SVG图像可以被搜索、索引、脚本化以及压缩。
 
 Now let's see how you can actually work with SVG images.
+现在来看如何实际使用SVG图像。
 
 # How to download the SVG image used in this tutorial
+# 如何下载本教程中使用的SVG图像
 
 If you want to work with the SVG image I've used in this tutorial, follow the steps (and diagram) below to download it.
+如果你想使用本教程中使用的SVG图像范例，可以根据以下步骤下载。
 
 -   Go to [unDraw](https://undraw.co).
+-   访问 [unDraw](https://undraw.co)。
 -   Change the background color to yellow.
+-   将背景色改为黄色。
 -   In the search box, search for the word **happy**.
+-   在搜索框中搜索关键词**happy**。
 
 ![unDraw's Homepage](https://i.imgur.com/ncSY7Rn.png)
 
 -   Click on the image named **Happy news**.
+-   点击图像名称 **Happy news**。
 -   On the pop-up window, click on the **Download SVG to your projects** button.
+-   在弹出框中，点击 **Download SVG to your projects** 按钮。
 
 ![Download the SVG file](https://i.imgur.com/qGrT73n.png)
 
 If you followed the steps above correctly, the SVG image should be on your computer now.  
+如果正确操作了以上步骤，本教程中的SVG图像应该已经在你的电脑中了。
 
 ![](https://i.imgur.com/3uCGy6B.png)
 
 Now, open the SVG image in your favorite IDE or text editor. Rename it to **happy.svg** or whatever name you prefer.
+现在，使用你喜欢的IDE或者文本编辑器打开这个SVG图像，并将它重命名为**happy.svg**或者任何你喜欢的名字。
 
 # How to use SVG images in CSS and HTML
+# 如何在CSS和HTML中使用SVG图像
 
 There are several different ways to use SVG images in CSS and HTML. We will explore six different methods in this tutorial.
+在CSS和HTML中使用SVG图像有几种不同的方式。接下来，本文将介绍6种不同的方式。
 
 ## 1\. How to use an SVG as an `<img>`
+## 1\. 如何把SVG当作`<img>`来使用
 
 This method is the simplest way to add SVG images to a webpage. To use this method, add the `<img>` element to your HTML document and reference it in the `src` attribute, like this:
-
+这是将SVG图像加入网页当中最简单的方式。为了使用这种方法，需要在HTML文档中添加一个`<img>`元素，并且在该元素的`src`属性中指定该SVG图像的引用，代码如下所示：
 ```html
 <img src = "happy.svg" alt="My Happy SVG"/>
 ```
 
 Assuming you downloaded the SVG image from unDraw and renamed it to **happy.svg**, you can go ahead and add the code snippet above into your HTML document.
+
 
 If you did everything correctly, your webpage should look exactly like the demo below. 👀
 

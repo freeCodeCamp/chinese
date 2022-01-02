@@ -28,19 +28,19 @@
 
 ## 内容
 
--   [Kubernetes简介](#intro-to-kubernetes)
--   [如何管理Kubernetes的集群](#how-to-manage-clusters-in-kubernetes)
--   [超越 Pods 和 Deployments](#beyond-pods-and-deployments)
--   [如何配置Pods和Containers](#how-to-configure-pods-and-containers)
--   [如何在Kubernetes调度Pods](#how-to-schedule-pods-in-kubernetes)
--   [Kubernetes的存储](#storage-in-kubernetes)
--   [Kubernetes的网络和安全](#network-and-security-in-kubernetes)
--   [Kubernetes中的观察性和调试](#observability-and-debugging-in-kubernetes)
--   [技巧和窍门](#tips-and-tricks)
--   [实践时间](#practice-time)
--   [结论](#conclusions)
+-   [Kubernetes简介](#Kubernetes简介)
+-   [如何管理Kubernetes的集群](#如何管理Kubernetes集群)
+-   [超越 Pods 和 Deployments](#超越Pods和部署)
+-   [如何配置Pods和Containers](#如何配置 Pods和Containers(容器))
+-   [如何在Kubernetes调度Pods](#怎样在Kubernetes中调度Pods)
+-   [Kubernetes的存储](#Kubernetes的存储)
+-   [Kubernetes的网络和安全](#Kubernetes中的网络和安全)
+-   [Kubernetes中的观察性和调试](#Kubernetes中的可观察性和调试)
+-   [技巧和窍门](#技巧和窍门)
+-   [练习时间](#练习时间)
+-   [结论](#结论)
 
-## 介绍Kubernetes
+## Kubernetes简介
 
 Kubernetes是一项技术，允许在多个节点上轻松部署和管理容器化程序。它的一些最突出的特点是:
 
@@ -64,7 +64,7 @@ kubectl run --image=busybox --restart=Never --rm -it -- echo "Welcome to Kuberne
 
 这个pod一旦打印出欢迎消息，它将被自动删除。
 
-## 如果管理Kubernetes集群
+## 如何管理Kubernetes集群
 
 管理集群不是成为CKAD的课程的一部分。就考试而言，你不需要知道如何如何创建一个集群，管理nodes等。
 

@@ -31,7 +31,7 @@
 -   [Kubernetes简介](#Kubernetes简介)
 -   [如何管理Kubernetes的集群](#如何管理Kubernetes集群)
 -   [超越 Pods 和 Deployments](#超越Pods和部署)
--   [如何配置Pods和Containers](#如何配置 Pods和Containers(容器))
+-   [如何配置Pods和Containers](#如何配置Pods和Containers)
 -   [如何在Kubernetes调度Pods](#怎样在Kubernetes中调度Pods)
 -   [Kubernetes的存储](#Kubernetes的存储)
 -   [Kubernetes的网络和安全](#Kubernetes中的网络和安全)
@@ -301,7 +301,7 @@ Daemon sets(守护设置)确保在你的集群的每一个 **node** 都有一个
 
 Kubernetes将创建pod的镜像，这是Kubernetes API服务器中的一个副本。当你运行`kubectl get pods`，这个pod会出现，但是如果你试图用`kubectl delete podName`删除它，通过`kubelet`创建的静态pod 运行在这个node上，它将直接出现在pod列表中。
 
-## 如何配置 Pods和Containers(容器)
+## 如何配置Pods和Containers
 
 我们刚刚看到在可以在Kubernetes集群上部署不同的工作负载。现在让我们花些时间学习如何配置工作负载中的pods和containers(容器)。
 

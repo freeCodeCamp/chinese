@@ -9,13 +9,13 @@ Next.js和静态 web应用的好处是，你将它们储存在对象储存里，
 
 我们如何用Github Actions来自动持续部署我们的应用程序到S3?
 
--   [什么是GitHub Actions?](#what-are-github-actions)
--   [什么是持续部署?](#what-is-continuous-deployment)
--   [我们怎么去构建?](#what-are-we-going-to-build)
--   [Step 0: 在Gihub上建立一个新的Next.js项目](#step-0-setting-up-a-new-next-js-project-on-github)
--   [Step 1: 手工创建一个用于部署next.js项目的新S3桶 ](#step-1-manually-creating-and-deploying-a-next-js-project-to-a-new-s3-bucket)
--   [Step 2: 创建一个新的Github Action工作流来自动化构建一个Next.js项目](#step-2-creating-a-new-github-action-workflow-to-automatically-build-a-next-js-project)
--   [Step 3: 配置一个Github Action，部署静态网站到S3上](#step-3-configuring-a-github-action-to-deploy-a-static-website-to-s3)
+-   [什么是GitHub Actions?](#什么是Gtihub-Actions)
+-   [什么是持续部署?](#什么使持续部署)
+-   [我们怎么去构建?](#我们怎样去构建)
+-   [第一步: 在Gihub上建立一个新的Next.js项目](#第一步：在Github上创建一个新的Next.js项目)
+-   [第二步: 手工创建一个用于部署next.js项目的新S3桶 ](#第二步:手动创建新的S3桶，并将Next.js项目部署到上面)
+-   [第三步: 创建一个新的Github Action工作流来自动化构建一个Next.js项目](#第三步:创建一个新的Github-Action工作流来自动构建一个Next.js项目)
+-   [第四步: 配置一个Github Action，部署静态网站到S3上](#第四步:配置一个Github-Action，将静态网站部署到S3上)
 
 ## 什么是Gtihub Actions?
 
@@ -139,7 +139,7 @@ S3桶上的静态应用
 
 AWS S3托管Next.js应用程序
 
-## 第三步: 创建一个新的Github Action工作流来自动构建一个Next.js项目。
+## 第三步: 创建一个新的Github Action工作流来自动构建一个Next.js项目
 
 首先，我们需要创建一个新的工作流程(workflow)。
 

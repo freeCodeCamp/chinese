@@ -113,55 +113,55 @@ Github中的新repo
 
 ## 第二步: 手动创建新的S3桶，并将Next.js项目部署到上面。
 
-To get started with our new S3 Bucket, first log in to your AWS account and navigate to the S3 service.
+要开始使用我们的新S3桶，首先登录你的AWS账号，并进入到S3服务。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/aws-s3-console.jpg)
 
-No buckets in S3
+发现没有桶
 
-We’ll want to create a new bucket, using the name of our choice, which will be used for the S3 endpoint where our website is hosted. We’ll also want to configure our S3 bucket to be able to host a website.
+我们要创建一个新桶，使用我们选择的名字命名，用于我们网址托管的S3，我们还要配置我们的S3桶，使其能够托管一个网站。
 
-_Note: this tutorial will not walk you through how to host a website on S3, but you can check out my other tutorial that will [walk you through hosting a website on S3](/news/how-to-host-and-deploy-a-static-website-or-jamstack-app-to-s3-and-cloudfront/) step-by-step._
+_注意: 本教程步会指导你如何在S3上托管网站，但是你可以查看我的另一个教程，该教程将一步步地 [指导你在S3上托管网站](/news/how-to-host-and-deploy-a-static-website-or-jamstack-app-to-s3-and-cloudfront/)。_
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/s3-bucket-website-hosting.jpg)
 
-Static website hosting in AWS S3
+静态网站在AWS S3上托管
 
-Once we have our S3 bucket configure as a website, we can go back to our Next.js project folder, run our build command, and then upload all of our files from the `out` directory into our new S3 bucket.
+当我们把S3桶配置成一个网站，我们就可以回到Next.js项目文件夹，运行我们的构建命令，然后把`out`文件夹中的所有文件上传到我们的新建的S3桶。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/website-files-in-s3.jpg)
 
-S3 Bucket with Static App
+S3桶上的静态应用
 
-And once those files are uploaded and we’ve configured our S3 bucket for website hosting, we should now be able to see our project live on the web!
+当这些文件被上传，并且我们已经为网站托管配置了S3桶，我们现在应该能看到我们的项目在网络上线运行！
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/nextjs-s3-website.jpg)
 
-AWS S3 hosted Next.js app
+AWS S3托管Next.js应用程序
 
-## Step 2: Creating a new GitHub Action workflow to automatically build a Next.js project
+## 第三步: 创建一个新的Github Action工作流来自动构建一个Next.js项目。
 
-To get started, we’re going to need to create a new workflow.
+首先，我们需要创建一个新的工作流程(workflow)。
 
-If you’re familiar with GitHub Actions, you could create one manually, but we’ll quickly walk through how to do this in the UI.
+如果你熟悉Github Actions，你可以手动创建一个，单我们将通过用户界面快速创建一个。
 
-Navigate to the Actions tab of your GitHub repository and click on "set up a workflow yourself."
+进入Github的仓库中的`Action`标签，点击`set up a workflow yourself`,来自行设置工作流。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/github-actions-new-workflow.jpg)
 
-New GitHub Action Workflow
+新的Github Action工作流
 
-GitHub provides a starting template that we can use for our workflow, though we’ll want to make some changes.
+Github提供了一个模板，我们可以在工作流程中使用，不过我们要做一些修改。
 
-Let’s do the following:
+让我们做以下工作。
 
--   Optional: rename the file to deploy.yml
--   Optional: rename the workflow to CD (as it’s a bit different from CI)
--   Optional: remove all of the comments to make it a bit easier to read
--   Remove the `pull_request` definition in the `on` property
--   Remove all `steps` except for `uses: actions/checkout@v2`
+-   可选: 将文件重名为deploy.yml
+-   可选: 将workflow重名为CD (因为它与CI不同)
+-   可选: 删除所有的注释，使其更容易阅读
+-   删除`on` 属性中的`pull_request`
+-   删除所有的 `steps` 除了`uses: actions/checkout@v2`
 
-So at this point we should be left with:
+因此，在这一点上，我们应该剩下的是:
 
 ```yaml
 name: CD
@@ -177,13 +177,13 @@ jobs:
       - uses: actions/checkout@v2
 ```
 
-This code alone will trigger a process that spins up a new instance of Ubuntu and simply checks out the code from GitHub any time there’s a new change pushed to the `main` branch.
+仅仅这段代码会触发一个流程，会启动一个新的Ubuntu实例，并在Github上有新的改动推送到主分支后，拉取代码到Ubuntu上。
 
-Next, once we have our code checked out, we want to build it. This will allow us to take that output and sync it to S3.
+接下来， 当我们获取我们的代码后，我们要构建它。然后将输出文件同步到S3。
 
-This step will differ slightly depending on if you are using yarn or npm for your project.
+这一步将不同，取决于你的项目使用yarn还是npm。
 
-If you’re using yarn, under the `steps` definition, add the following:
+如果你使用yarn，在 `steps`定义下，添加以下内容。
 
 ```yaml
 - uses: actions/setup-node@v1
@@ -194,7 +194,7 @@ If you’re using yarn, under the `steps` definition, add the following:
 - run: yarn build
 ```
 
-If you’re using npm, add the following:
+如果是使用npm，添加以下内容:
 
 ```yaml
 - uses: actions/setup-node@v1
@@ -204,40 +204,40 @@ If you’re using npm, add the following:
 - run: npm run build
 ```
 
-Between both of these sets of steps, what we’re doing is:
+在这两个步骤之间，我们要做的是:
 
--   Setting up node: this is so that we can use npm and node to install and run our scripts
--   Install Yarn (Yarn Only): if we’re using yarn, we install it as a global dependency so that we can use it
--   Install Dependencies: we install our dependencies and we use a specific command that makes sure we use the lock file available to avoid any unexpected package upgrades
--   Build: finally, we run our build command which will compile our Next.js project into the `out` directory!
+-   设置 node: 这是为了我们能够使用npm 和node 来安装和运行的脚本
+-   安装Yarn (仅对使用Yarn): 如果我们使用Yarn，我们将为其安装全局依赖，以便我们使用它
+-   安装依赖: 我们安装我们的依赖，我们使用一个特定命令，确保我们使用`lock`文件，以避免任何意外的软件包升级
+-   构建: 最后, 我们运行我们的构建命令，将我们的Next.js项目编译到`out`目录中。
 
-And now we can commit that file right to our `main` branch which will kick off a new run of our workflow that we can see in our Actions tab.
+现在我们可以将该该文件直接提交到我们的`main`分支，这触发我们的workflow的运行，我们可以子啊`Actions`标签里看到。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/github-action-run-workflow.jpg)
 
-New workflow in GitHub Actions
+在Github Actions中新的workflow
 
-To see that it works, we can navigate into that run, select our workflow, and see that all of our steps ran including building our project!
+为了看到它的运行状态，我们进入运行的`workflow`，选择我们的`workflow`，看到所有我们的项目包含的步骤。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/github-action-successful-build.jpg)
 
-Successful build logs for a GitHub Action workflow
+Github Action成功构建日志
 
-[Follow along with the commit!](https://github.com/colbyfayock/my-static-website/commit/59e0a5158d6afbf54793d826d05455f5205c98fb)
+[随着提交!](https://github.com/colbyfayock/my-static-website/commit/59e0a5158d6afbf54793d826d05455f5205c98fb)
 
-## Step 3: Configuring a GitHub Action to deploy a static website to S3
+## 第四步: 配置一个Github Action，将静态网站部署到S3上
 
-Now that we’re building our project automatically, we want to automatically update our website in S3.
+现在我们正在自动构建我们的项目，我们想在S3中自动更新我们的网站。
 
-To do that, we’re going to use the GitHub Action [aws-actions/configure-aws-credentials](https://github.com/aws-actions/configure-aws-credentials) and the AWS CLI.
+ 为了做到这一点，我们将使用Github Action [aws-actions/configure-aws-credentials(配置aws凭证)](https://github.com/aws-actions/configure-aws-credentials) 和 the AWS CLI(AWS提供的命令行)。
 
-The GitHub Action that we’re using will take in our AWS credentials and configuration and make it available to use throughout the lifecycle of the workflow.
+我们使用Github Action 将接收我们的AWS凭证和配置，并在workflow的生命周期内使用。
 
-As of now, the Ubuntu instance that GitHub Actions provides allows us to use the AWS CLI as it comes included. So we’ll be able to use the CLI commands right in our workflow.
+目前，Github Action中的Ubuntu实例允许使用AWS CLI，因为它包含在其中。因此，我们将能够在workflow中使用CLI命令。
 
-Alternatively, we could use the [S3 Sync action](https://github.com/jakejarvis/s3-sync-action). But by using the AWS CLI, we gain more flexibility to customize our setup, we can use it for additional CLI commands, and it’s also generally nice to get familiar with the AWS CLI.
+另外，我们也可以使用[S3 Sync action](https://github.com/jakejarvis/s3-sync-action)。但是通过使用AWS CLI，我们可以获得更多的灵活性来定制我们的设置，我们可以使用它来获得额外的CLI命令，一般来说，熟悉AWS CLI也是不错的。
 
-So to get started, let’s add the following snippet as additional steps in our workflow:
+为了开始，让我们在workflow添加以下片段作为附加步骤。
 
 ```yaml
 - uses: aws-actions/configure-aws-credentials@v1
@@ -247,68 +247,67 @@ So to get started, let’s add the following snippet as additional steps in our 
     aws-region: us-east-1
 ```
 
-What the above will do is use the AWS credentials configuration action to set up our AWS Access Key, Secret Key, and region based on our settings.
+上面要做的是使用AWS凭证配置action，根据我们的设置来设置我们的AWS的Access Key和Secret Key还有region(区域)。
 
-The AWS Region can be customized to whatever region you typically use with your AWS account. I’m in the northeast United States, So I’ll keep `us-east-1`.
+AWS Region可以自定义为你通常使用的AWS账号的任何区域，我在美国东北部，所以我设置为`us-east-1`。
 
-The Access Key and Secret Key are credentials that you’ll need to generate with your AWS account. The way our code is set up is that we’ll store those values inside of GitHub Secrets, which will prevent those keys from being leaked. When the action runs, Github changes those values to stars (`***`) so people can't access those keys.
+Access Key和Secret Key是你需要你的AWS账号生成的凭证。我们的代码设置方式是，我们将这些值存储在Github Secrets里，要防止这些密钥被泄。当action运行时，Github会将这些值改为星星(`***`)，这样人们就无法访问这些密钥。
 
-So to set up those secrets, we first want to generate Access Keys in AWS.
+为了设置这些secrets,我们首先要在AWS生成 `Access Keys`。
 
-Navigate to the AWS console. Under the user menu, select **My Security Credentials**, and then select **Create access key**.
+进入了AWS控制台。在用户菜单下，选择 **My Security Credentials**，然后选择 **Create access key**。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/aws-console-create-access-key.jpg)
 
-Creating an Access Key in AWS
+在AWS创建一个 `Access Key`
 
-This will provide you with two values: the **Access key ID** and the **Secret access key**. Save these values, as you won’t be able to access the Secret key ID again.
+这会生成两个值  **Access key ID** 和**Secret access key**。必须保存好这些值，因为你将无法再次访问`Secret key ID `。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/aws-secret-access-keys.jpg)
 
-Finding Secret and Access Key in AWS
+在AWS中寻找 `Secret Key` 和 `Access Key`
 
-_Note: remember to NOT include the Access Key and Secret Key inside of your code. This could lead to someone compromising your AWS credentials._
+_注意: 记住不要再你的代码中包含`Access Key`和`Secret Key`。这可能导致有人破坏你的AWS凭证。_
 
-Next, inside of the GitHub repo, navigate to Settings, Secrets, then select New secret.
+下一步, 再Github repo中, 进入到 Settings -> Secrets, 然后选择 `New secret`。
 
-Here we’ll want to add our AWS keys using the following secrets:
+在这里，我们要使用AWS keys添加到下面的secrets:
 
 -   AWS\_ACCESS\_KEY\_ID: your AWS Access key ID
 -   AWS\_SECRET\_ACCESS\_KEY: your AWS Secret key
 
-And once saved you should have your two new secrets.
+当保存下来，你就应该记住这两个新的`secrets`。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/github-secrets-access-keys.jpg)
 
-Creating Secrets in GitHub
+在Github中创建`Secrets`
 
-Now that we have our credentials configured, we should be ready to run the command to sync our project to S3.
+现在我们已经配置好了我们的凭证，我们应该为运行命令，将我们的项目同步到S3，做好准备。
 
-Inside of the GitHub Action, add the following step:
-
+在Github Action，添加以下步骤:
 ```yaml
 - run: aws s3 sync ./out s3://[bucket-name]
 ```
 
-_Note: be sure to replace `[bucket-name]` with the name of your S3 Bucket._
+_注意: 请确保`[bucket-name]` 替换为你的S3桶的名称。_
 
-This command will trigger a sync with our specified S3 bucket, using the contents of the `out` directory, which is where our project builds to.
+这个命令会触发与我们的S3桶的同步(sync)，使用`out`目录的文件，也就是我们项目构建的地方。
 
-And now, if we commit our changes, we can see that our action is automatically triggered once committed to the `main` branch, where we build our project and sync it to S3!
+现在，如果我们提交我们的修改，我们可以看到，一旦提交到`main`分支，我们的actions会自动触发，我们构建我们的项目并同步到S3！
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/github-action-sync-s3-bucket.jpg)
 
-Successful AWS S3 sync in GitHub Action workflow
+成功通过GitHub Action workflow 同步到AWS S3
 
-_Note: Make sure that before setting up this action you’ve configured the S3 bucket to host a website (including unblocking permissions on S3 bucket) – otherwise this action may fail._
+_注意: 请确保在设置这个action之前，你已经将S3桶配置为网站托管(包括解除S3桶权限) --否则这个action可能失败。_
 
-At this point, our project probably looks the same, as we didn’t make any changes to the code.
+在这一点上，我们的项目可能看起来是一样的，因为我们对代码进行任何修改。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/nextjs-s3-website.jpg)
 
-Next.js app on AWS S3
+AWS S3的Next.js应用程序
 
-But if you make a code change, such as changing the title of the homepage inside of `pages/index.js` and commit that change:
+但如果你做了一个代码修改，比如在`pages/index.js`中改变主页的标题，并提交该修改:
 
 ```jsx
 <h1 className={styles.title}>
@@ -316,50 +315,50 @@ But if you make a code change, such as changing the title of the homepage inside
 </h1>
 ```
 
-We can see that our change triggers the workflow to kick off:
+我们可以看到，我们的修改触发了workflow的启动:
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/github-action-commit-workflow.jpg)
 
-New GitHub Action workflow from code change
+新的Github Action workflow的触发来自代码改变
 
-And once our workflow finishes, we can see that our content is now automatically updated on our website:
+一旦我们的workflow完成，我们可以看到我们的内容已经在我们的网站上自动更新。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/updated-nextjs-site-title.jpg)
 
-AWS S3 hosted app with updated code changes
+AWS S3托管的应用程序，代码已经更新
 
-Follow along with the commits:
+随着内容的提交
 
--   [Adding AWS configuration and S3 sync command](https://github.com/colbyfayock/my-static-website/commit/f891412b827aca4b06e9bf3de8e4e5b4c5704fc8)
--   [Title update to test workflow](https://github.com/colbyfayock/my-static-website/commit/bb9b981416645e35c6d3442e02d6b61f2ba032d2)
+-   [添加ASW的配置和S3 sync命令](https://github.com/colbyfayock/my-static-website/commit/f891412b827aca4b06e9bf3de8e4e5b4c5704fc8)
+-   [测试workflow的标题的更新](https://github.com/colbyfayock/my-static-website/commit/bb9b981416645e35c6d3442e02d6b61f2ba032d2)
 
-## What else can we do?
+## 我们还能做什么?
 
-### Setting up CloudFront
+### 设置CloudFront
 
-The goal of this post wasn’t to go through the entire process of configuring a website for AWS, but if you’re serving a website on S3,  you might want to also include CloudFront in front of it.
+这个篇文章的目的不是要经历AWS配置网站的整个过程，但是你在S3上运行网站服务，你可能在之前考虑过CloudFront。
 
-You can check out [my other guide](/news/how-to-host-and-deploy-a-static-website-or-jamstack-app-to-s3-and-cloudfront/) here which walks you through setting up CloudFront as well as a step-by-step guide through creating the site in S3.
+你可以查看以下[我的另一个指南](/news/how-to-host-and-deploy-a-static-website-or-jamstack-app-to-s3-and-cloudfront/)，它指导你如何设置CloudFront，以及如何在S3中创建网站的手把手指南。
 
-### Invaliding CloudFront cache
+### CloudFront的缓存失效
 
-If your S3 website is behind CloudFront, chances are, you’ll want to make sure CloudFront isn’t caching the new changes.
+如果你的S3网站在CloudFront后面，有可能你会确保CloudFront没有缓存新的变化。
 
-With the AWS CLI, we can also trigger a cache invalidation with CloudFront to make sure it’s grabbing the latest changes.
+通过AWS CLI，我们也可以触发CloudFront的缓存失效，以确保它正在抓取最新的变化。
 
-[Check out the docs here](https://docs.aws.amazon.com/cli/latest/reference/cloudfront/create-invalidation.html) to learn more.
+[请看这里的文档](https://docs.aws.amazon.com/cli/latest/reference/cloudfront/create-invalidation.html)学习更多的知识.
 
-### Pull request deployments
+### pull request部署
 
-If you’re constantly working on website changes in a pull request, sometimes it can be easier to see the changes live.
+如果你不断地在pull request中的网站修改，有时候更容易看到网站的修改。
 
-You can set up a new workflow that only runs on pull requests, where the workflow can dynamically create a new bucket based on the branch or environment and add a comment to the pull request with that URL.
+你可以设置一个新的workflow，只在pull request上运行，workflow可以根据分支或者环境动态创建一个新的桶，并在pull request上添加一个带有该URL的comment。
 
-You might be able to find a GitHub Action that exists to manage the comments on the pull request for you or you can check out the [GitHub Actions docs](https://docs.github.com/en/free-pro-team@latest/rest/reference/actions).
+你也许能找到一个GitHub Action 作为你管理你pull request上带的comments,你可以查询[GitHub Actions文档](https://docs.github.com/en/free-pro-team@latest/rest/reference/actions).
 
- [![Follow me for more Javascript, UX, and other interesting things!](https://res.cloudinary.com/fay/image/upload/w_2000,h_400,c_fill,q_auto,f_auto/w_1020,c_fit,co_rgb:007079,g_north_west,x_635,y_70,l_text:Source%20Sans%20Pro_64_line_spacing_-10_bold:Colby%20Fayock/w_1020,c_fit,co_rgb:383f43,g_west,x_635,y_6,l_text:Source%20Sans%20Pro_44_line_spacing_0_normal:Follow%20me%20for%20more%20JavaScript%252c%20UX%252c%20and%20other%20interesting%20things!/w_1020,c_fit,co_rgb:007079,g_south_west,x_635,y_70,l_text:Source%20Sans%20Pro_40_line_spacing_-10_semibold:colbyfayock.com/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_68,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_145,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_222,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_295,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/v1/social-footer-card)](https://twitter.com/colbyfayock) 
+ [![关注我，了解更多的Javascript、UX和其他有趣的事情!](https://res.cloudinary.com/fay/image/upload/w_2000,h_400,c_fill,q_auto,f_auto/w_1020,c_fit,co_rgb:007079,g_north_west,x_635,y_70,l_text:Source%20Sans%20Pro_64_line_spacing_-10_bold:Colby%20Fayock/w_1020,c_fit,co_rgb:383f43,g_west,x_635,y_6,l_text:Source%20Sans%20Pro_44_line_spacing_0_normal:Follow%20me%20for%20more%20JavaScript%252c%20UX%252c%20and%20other%20interesting%20things!/w_1020,c_fit,co_rgb:007079,g_south_west,x_635,y_70,l_text:Source%20Sans%20Pro_40_line_spacing_-10_semibold:colbyfayock.com/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_68,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_145,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_222,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_295,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/v1/social-footer-card)](https://twitter.com/colbyfayock) 
 
--   [🐦 Follow Me On Twitter](https://twitter.com/colbyfayock)
--   [🎥 Subscribe To My Youtube](https://youtube.com/colbyfayock)
--   [✉️ Sign Up For My Newsletter](https://www.colbyfayock.com/newsletter/)
--   [💝 Sponsor Me](https://github.com/sponsors/colbyfayock)
+-   [🐦 在推特上关注我](https://twitter.com/colbyfayock)
+-   [🎥 在油管上订阅我](https://youtube.com/colbyfayock)
+-   [✉️ 订阅我的Newsletter](https://www.colbyfayock.com/newsletter/)
+-   [💝 赞助我](https://github.com/sponsors/colbyfayock)

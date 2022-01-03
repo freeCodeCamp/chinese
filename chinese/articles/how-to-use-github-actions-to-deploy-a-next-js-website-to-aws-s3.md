@@ -1,67 +1,67 @@
 > -  原文地址：[How to Use Github Actions to Deploy a Next.js Website to AWS S3](https://www.freecodecamp.org/news/how-to-use-github-actions-to-deploy-a-next-js-website-to-aws-s3/)
 > -  原文作者：[Colby Fayock](https://www.freecodecamp.org/news/author/colbyfayock/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![How to Use Github Actions to Deploy a Next.js Website to AWS S3](https://www.freecodecamp.org/news/content/images/size/w2000/2020/10/actions-s3.jpg)
+![如何使用Github Actions将Next.js网站部署到AWS S3](https://www.freecodecamp.org/news/content/images/size/w2000/2020/10/actions-s3.jpg)
 
-The beauty of Next.js and static web apps is that they let you run the project pretty much anywhere using object storage, like on AWS S3. But it can be a pain to manually update those files each time.
+Next.js和静态 web应用的好处是，你将它们储存在对象储存里，几乎可以在任何地方运行, 比如AWS S3。但是每次手动更新这些文件可能是一件痛苦的事.
 
-How can we use GitHub Actions to automate and continuously deploy our app to S3?
+我们如何用Github Actions来自动持续部署我们的应用程序到S3?
 
--   [What are GitHub Actions?](#what-are-github-actions)
--   [What is Continuous Deployment?](#what-is-continuous-deployment)
--   [What are we going to build?](#what-are-we-going-to-build)
--   [Step 0: Setting up a new Next.js project on GitHub](#step-0-setting-up-a-new-next-js-project-on-github)
--   [Step 1: Manually creating and deploying a Next.js project to a new S3 Bucket](#step-1-manually-creating-and-deploying-a-next-js-project-to-a-new-s3-bucket)
--   [Step 2: Creating a new GitHub Action workflow to automatically build a Next.js project](#step-2-creating-a-new-github-action-workflow-to-automatically-build-a-next-js-project)
--   [Step 3: Configuring a GitHub Action to deploy a static website to S3](#step-3-configuring-a-github-action-to-deploy-a-static-website-to-s3)
+-   [什么是GitHub Actions?](#what-are-github-actions)
+-   [什么是持续部署?](#what-is-continuous-deployment)
+-   [我们怎么去构建?](#what-are-we-going-to-build)
+-   [Step 0: 在Gihub上建立一个新的Next.js项目](#step-0-setting-up-a-new-next-js-project-on-github)
+-   [Step 1: 手工创建一个用于部署next.js项目的新S3桶 ](#step-1-manually-creating-and-deploying-a-next-js-project-to-a-new-s3-bucket)
+-   [Step 2: 创建一个新的Github Action工作流来自动化构建一个Next.js项目](#step-2-creating-a-new-github-action-workflow-to-automatically-build-a-next-js-project)
+-   [Step 3: 配置一个Github Action，部署静态网站到S3上](#step-3-configuring-a-github-action-to-deploy-a-static-website-to-s3)
 
-## What are GitHub Actions?
+## 什么是Gtihub Actions?
 
-GitHub Actions is a free service from GitHub that allows us to automate code tasks.
+Github Actions是Github的一项免费服务，它允许我们用代码实现任务自动化。
 
-I [previously wrote about](/news/what-are-github-actions-and-how-can-you-automate-tests-and-slack-notifications/) how we can use them to automate tasks like running tests on our code and sending notifications to Slack.
+我[之前写个](/news/what-are-github-actions-and-how-can-you-automate-tests-and-slack-notifications/) 我们任何用它来自动化任务，比如在运行代码中的测试，并向Slack发送通知。
 
-They provide a flexible way to automatically run code based on our existing workflows. This provides a lot of possibilities like even deploying our website!
+它们提供一种灵活的方式，在我们现有的工作流基础上为自动化运行代码。这提供了很多的可能性，比如部署我们的网站。
 
-## What is AWS S3?
+## 什么是 AWS S3？
 
-[S3](https://aws.amazon.com/s3/) (Simple Storage Service) is an object storage service from AWS. It allows you to store files in the cloud easily making them available around the world.
+[S3](https://aws.amazon.com/s3/) (简单存储服务)是AWS的一个对象存储服务。它允许你在云上轻松存储文件，使它们在世界各地都可以使用。
 
-It also allows you to use these files as a website. Because we can upload an HTML file as an object, we can also configure S3 to access that file as an HTTP request. This means that we can [host an entire website right in S3](/news/how-to-host-and-deploy-a-static-website-or-jamstack-app-to-s3-and-cloudfront/).
+它还允许你将这些文件作为一个网站使用。因为我们可以把HTML文件作为一个对象上传，我们也可以配置S3，让一个HTTP请求访问该文件。 这意味着，我们可以[在S3中直接托管整个网站](/news/how-to-host-and-deploy-a-static-website-or-jamstack-app-to-s3-and-cloudfront/).
 
-## What is Continuous Deployment?
+## 什么使持续部署？
 
-Continuous Deployment, often referred to by its acronym CD, is the practice of maintaining code in a releasable state and deploying that code automatically or in short cycles.
+持续部署(Continuous Deployment),通常是指将代码处在可发布的状态，自动化部署代码，缩短部署部署时间。
 
-Particularly in our use case, we’re going to configure our project so that any time a new update is pushed or merged to the primary Git branch, our website will deploy.
+特别是在我们的情况中，我们将配置我们的项目，以便任何有更新的更新被推送或者合并到git主分支，我们的网站将被部署。
 
-## What are we going to build?
+## 我们怎样去构建?
 
-We’re first going to bootstrap a simple [Next.js](https://nextjs.org/) app using the default Next.js starting template and configure it to compile to static files.
+我们首先要使用默认的Next.js起始模板初始化一个简单的[Next.js](https://nextjs.org/)应用，并配置将其编译成静态文件。
 
-If you don’t want to create a Next.js project, you can follow along with even a simple HTML file and not run any of the build commands. But Next.js is a modern way to build dynamic web apps, so we’ll start there.
+如果你不向创建一个Next.js项目，你甚至用一个简单的HTML文件跟着做，并不运行任何构建命令。但Next.js是构建动态网站应用的一种现代化方式，所以我将从这里开始。
 
-With our website files ready to go, we’ll create and configure an S3 bucket in AWS where we’ll host our website.
+随着我们的网站文件准备就绪，我们将在AWS中创建和配置一个S3桶，在S3桶上托管我们的网站。
 
-Finally, we’ll create a new GitHub Action workflow that will automatically update the website files in S3 any time a new change occurs on our primary branch (`main`).
+最后，我们将创建一个新的Github Action工作流，当我们的主分支(`main`)发生新的变化时，它将自动更新S3中网站文件。
 
-## Step 0: Setting up a new Next.js project on GitHub
+## 第一步：在Github上创建一个新的Next.js项目
 
-We’re going to get started with the default template with Next.js.
+我们将从Next.js的默认模板开始。
 
-After navigating to the directory you want to create your project in, run:
+在创建你像创建项目的目录后，运行:
 
 ```
 yarn create next-app my-static-website
-# or
+# 或者
 npx create-next-app my-static-website
 ```
 
-Note: Feel free to replace `my-static-website` with the name of your choice. We’ll use that for the rest of this tutorial.
+注意： 请注意将`my-static-website`替换为你想选择的名称。我们将在本教程的其余部分使用这个名字。
 
-If you navigate to that directory and run the development command, you should be able to successfully start up your development server.
+如果进入到该目录并运行开发命令，你应该能够成功启动你的开发服务器。
 
 ```
 cd my-static-website
@@ -74,46 +74,44 @@ npm run dev
 
 New Next.js App
 
-Next, let’s configure our project to statically compile.
+接下来，让我们把我们的项目配置为静态编译。
 
-Inside the `package.json` file, update the `build` script to:
+在 `package.json`文件, 把`build` 脚本改为 :
 
 ```json
 "build": "next build && next export",
 ```
 
-What this will do is tell Next to take the website and export it to static files, which we’ll use to host the site.
-
-We can test this out by running the command:
+这样做的目的时告诉Next将网站导出为静态文件，我们将它用于托管网站。
 
 ```
 yarn build
-# or
+# 或者
 npm run build
 ```
 
-And once finished, we can look inside of the `out` directory and see all of the files of our new website.
+一旦完成, 我们将查看 `out`目录，看到我们新网站的所有文件。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/nextjs-build-export-output.jpg)
 
-Static output from Next.js
+Next.js 的静态输出
 
-Finally, we want to host this on GitHub.
+最后，我们要把它推送到github上。
 
-Inside of your GitHub account, [create a new repository](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo). This will then provide instructions on how you can [add an existing project](https://docs.github.com/en/free-pro-team@latest/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line) to that repo.
+在你的Github账号中 [创建一个新的仓库](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo)。然后会提供如何 [添加现有项目](https://docs.github.com/en/free-pro-team@latest/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line)到该仓库的说明。
 
-And once you push our your project to GitHub, we should be ready to set up our new website project!
+一旦把你的项目推送到Github上，我们就做好了建立我的新网站项目的准备。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/10/project-on-github.jpg)
 
-New repo in GitHub
+Github中的新repo
 
-Follow along with the commits:
+有下面的提交内容
 
--   [Adding the initial Next.js project](https://github.com/colbyfayock/my-static-website/commit/ca9e4bca3c37fbd8553b0b183890c32836c35296) via [Create Next App](https://nextjs.org/docs/api-reference/create-next-app)
--   [Configuring Next.js to export the project](https://github.com/colbyfayock/my-static-website/commit/7907f4a0fac5f0aed2922202c5f0070dfc055f83)
+-   [添加初始Next.js项目](https://github.com/colbyfayock/my-static-website/commit/ca9e4bca3c37fbd8553b0b183890c32836c35296) 通过 [创建Next引用](https://nextjs.org/docs/api-reference/create-next-app)
+-   [配置Next.js导出](https://github.com/colbyfayock/my-static-website/commit/7907f4a0fac5f0aed2922202c5f0070dfc055f83)
 
-## Step 1: Manually creating and deploying a Next.js project to a new S3 Bucket
+## 第二步: 手动创建新的S3桶，并将Next.js项目部署到上面。
 
 To get started with our new S3 Bucket, first log in to your AWS account and navigate to the S3 service.
 

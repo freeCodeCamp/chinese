@@ -2437,35 +2437,53 @@ These scripts are command line applications. You can run them by calling `npm ru
 这些脚本是命令行应用程序。你可以通过调用 `npm run XXXX` 或 `yarn XXXX` 来运行他们，其中 `XXXX` 是命令名。
 
 Example:  
+例如：
 `npm run dev`
 
 You can use any name you want for a command, and scripts can do literally anything you want.
+
+你可以使用任何你想要作为命令的名字，scripts 可以执行任何你想要的操作。
 
 #### `dependencies`
 
 Sets a list of `npm` packages installed as dependencies.
 
+设置作为依赖项安装的 `npm` 包的列表。
+
 When you install a package using npm or yarn:
+
+当你想要安装一个包的时候使用 npm 或者 yarn:
 
 ```
 npm install <PACKAGENAME>yarn add <PACKAGENAME>
 ```
 
 that package is automatically inserted in this list.
+该包会自动插入到这个列表中。
 
 Example:
+例如
 
 ```
-"dependencies": {  "vue": "^2.5.2"}
+"dependencies": {
+    "vue": "^2.5.2"
+}
 ```
 
 #### `devDependencies`
 
 Sets a list of `npm` packages installed as development dependencies.
 
+设置作为开发依赖项安装的 `npm` 包的列表。
+
+
 They differ from `dependencies` because they are meant to be installed only on a development machine, not needed to run the code in production.
 
+它们和 `dependencies` 不同，因为它们只安装在开发机器上，不需要在生产中运行这些代码。
+
 When you install a package using `npm` or `yarn`:
+
+当你使用 `npm` 或者 `yarn` 安装一个包的时候：
 
 ```
 npm install --dev <PACKAGENAME>yarn add --dev <PACKAGENAME>
@@ -2473,47 +2491,75 @@ npm install --dev <PACKAGENAME>yarn add --dev <PACKAGENAME>
 
 that package is automatically inserted in this list.
 
+该包会自动插入到这个列表中。
+
 Example:
 
+例如
+
 ```plain
-"devDependencies": {  "autoprefixer": "^7.1.2",  "babel-core": "^6.22.1"}
+"devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-core": "^6.22.1"
+}
 ```
 
 #### `engines`
 
 Sets which versions of Node.js and other commands this package/app works on.
 
+设置此包适用于哪些 Node.js 的版本和其它命令。
+
 Example:
+例如
 
 ```plain
-"engines": {  "node": ">= 6.0.0",  "npm": ">= 3.0.0",  "yarn": "^0.13.0"}
+"engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0",
+    "yarn": "^0.13.0"
+}
 ```
 
 #### `browserslist`
 
 Is used to tell which browsers (and their versions) you want to support. It’s referenced by Babel, Autoprefixer, and other tools, to only add the polyfills and fallbacks needed to the browsers you target.
 
+用于说明你想要支持哪些浏览器（及其版本）。Babel、Autoprefixer 和其它工具引用了它，以便只向目标浏览器添加所需的 polyfills 和 fallback。
+
 Example:
 
 ```
-"browserslist": [  "> 1%",  "last 2 versions",  "not ie <= 8"]
+"browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
 ```
 
 This configuration means you want to support the last 2 major versions of all browsers with at least 1% of usage (from the [CanIUse.com][83] stats), except IE8 and lower ([see more][84]on browserslist).
 
+此配置意味着你希望支持所有浏览器的最后两个主要版本，使用率至少为 1%（来自[CanIUse.com][83] 的统计数据），IE8 及更低版本除外（[查看更多][84] 浏览器列表）。
+
 #### Command-specific properties
+#### 命令特定的属性
 
 The `package.json` file can also host command-specific configuration, for example for Babel, ESLint, and more.
+该 `package.json` 文件还可以托管特定命令的配置，例如 Babel、ESLint 等。
 
 Each has a specific property, like `eslintConfig`, `babel` and others. Those are command-specific, and you can find how to use those in the respective command/project documentation.
 
+每个都有一个特定的属性，如 `eslintConfig`、`babel` 和其它属性。这些都是特定命令，你可以在各自的命令、项目文档中找到如何使用它们。
+
 #### Package versions
+#### Package 版本
 
 You have seen in the description above version numbers like these: `~3.0.0` or `^0.13.0`. What do they mean, and which other version specifiers can you use?
 
+在上面的描述中，你已经看到了如下版本号：`~3.0.0` 或者 `^0.13.0`。它们是什么意思？你可以使用哪些其它版本？
+
 That symbol specifies which updates you package accepts, from that dependency.
+该符号指定你的哪些包允许更新依赖。
 
 Given that using semver (semantic versioning) all versions have 3 digits, the first being the major release, the second the minor release and the third is the patch release, you have these rules:
+ 
+假设使用 semver（语义版本控制），所有版本都有 3 位数字，第一位是主要版本，第二位是次要版本，第三位是补丁版本，你需要以下规则：
 
 -   `~`: if you write `~0.13.0`, you want to only update patch releases: `0.13.1` is ok, but `0.14.0` is not.
 -   `^`: if you write `^0.13.0`, you want to update patch and minor releases: `0.13.1`, `0.14.0`and so on.
@@ -2523,44 +2569,92 @@ Given that using semver (semantic versioning) all versions have 3 digits, the fi
 -   `&l`t;=: you accept any version equal or lower to the one you specify
 -   `&`lt;: you accept any version lower to the one you specify
 
+
+- `~`：如果你写 `~0.13.0`，你只想更新补丁版本：`0.13.1`可以，但是 `0.14.0` 不行
+- `~`：如果你写 `^0.13.0`，你只想更新补丁和次要版本：`0.13.1`, `0.14.0`等等。
+- `*`：如果你写了 *，那意味着你要接受所有更新，包括主要版本升级。
+- `>`：你接受任何高于你的版本。
+- `>=`： 你接受任何等于或高于你指定版本的任何版本。
+- `<=`： 你接受任何等于或低于你指定的版本。
+- `<`：你接受任何低于你指定的任何版本。
+
 There are other rules, too:
+
+还有其他规则：
 
 -   no symbol: you accept only that specific version you specify
 -   `latest`: you want to use the latest version available
 
+- 无符号：只接受你指定的版本。
+- `latest`： 你想使用可用的最新版本。
+
 and you can combine most of the above in ranges, like this: `1.0.0 || >=1.1.0 <`;1.2.0, to either use 1.0.0 or one release from 1.1.0 up, but lower than 1.2.0.
+
+并且你可以在范围内组合以上大部分内容，例如：`1.0.0 || >=1.1.0 <`;1.2.0, 以使用 1.0.0 或从 1.1.0 开始但低于 1.2.0 的一个版本。
 
 ### The package-lock.json file
 
+### package-lock.json 文件
+
 The package-lock.json file is automatically generated when installing node packages.
+
+package-lock.json 文件是安装 node 包时自动生成的。
 
 In version 5, npm introduced the `package-lock.json` file.
 
+在第五版中，npm 引入了该 `package-lock.json` 文件。
+
 What’s that? You probably know about the `package.json` file, which is much more common and has been around for much longer.
+
+那是什么？你可能知道该 `package.json` 文件，这是一个更常见并且存在的时间更长。
 
 The goal of the file is to keep track of the exact version of every package that is installed so that a product is 100% reproducible in the same way even if packages are updated by their maintainers.
 
+该文件的目标是跟踪安装的每个软件包的确切版本，以便即使软件包由其维护人员更新，产品也能以相同的方式 100% 再现。
+
 This solves a very specific problem that `package.json` left unsolved. In package.json you can set which versions you want to upgrade to (patch or minor), using the **semver**notation, for example:
+
+这解决了一个 `package.json` 尚未解决的非常具体的问题。在 package.json 中，你可以使用 **semver** 表示法设置要升级到的版本（补丁或次要版本），例如：
 
 -   if you write `~0.13.0`, you want to only update patch releases: `0.13.1` is ok, but `0.14.0`is not.
 -   if you write `^0.13.0`, you want to update patch and minor releases: `0.13.1`, `0.14.0`and so on.
 -   if you write `0.13.0`, that is the exact version that will be used, always
 
+- 如果你写 `~0.13.0`，你只想要更新补丁版本：`0.13.1` 可以，但是 `0.14.0` 不是。
+- 如果你写 `^0.13.0`，你要更新补丁版本和次要版本：`0.13.1`，`0.14.0`等等。
+- 如果你写 `0.13.0`，那将总是使用确切版本。
+
 You don’t commit to Git your node_modules folder, which is generally huge, and when you try to replicate the project on another machine by using the `npm install` command, if you specified the `~` syntax and a patch release of a package has been released, that one is going to be installed. Same for `^` and minor releases.
+
+你不需要将 node_modules 文件夹提交到 Git，因为它通常很大。当你尝试使用 `npm install` 命令在另一台计算机上复制项目时，如果你指定了 `~` 语法，并且发布了包的修补程序版本，则将安装该包。对于 `^` 和次要版本也是如此。
 
 If you specify exact versions, like `0.13.0` in the example, you are not affected by this problem.
 
+如果指定精确版本，如示例中的 `0.13.0`，则不会受到此问题的影响。
+
 It could be you, or another person trying to initialize the project on the other side of the world by running `npm install`.
+
+可能是你，也可能是另一个人试图通过运行 `npm install` 在世界的另一端初始化项目。
 
 So your original project and the newly initialized project are actually different. Even if a patch or minor release should not introduce breaking changes, we all know bugs can (and so, they will) slide in.
 
+所以你的原始项目和新初始化项目实际上是不同的。即使补丁或小版本不应该引入突破性的更改，我们都知道 bug 可能（因为如此，它们会）滑入。
+
 The `package-lock.json` sets your currently installed version of each package **in stone**, and `npm` will use those exact versions when running `npm install`.
+
+在 `package-lock.json` 设置当前安装的每个包的版本都 **一成不变**，并且运行 `npm install` 时，`npm` 将使用这些精确的版本。
 
 This concept is not new, and other programming languages package managers (like Composer in PHP) use a similar system for years.
 
+这些概念并不新鲜，其它编程语言的包管理器，（如 PHP 的 Composer）多年来一直使用类似的系统。
+
 The `package-lock.json` file needs to be committed to your Git repository, so it can be fetched by other people, if the project is public or you have collaborators, or if you use Git as a source for deployments.
 
+`package-lock.json` 文件需要提交到你的 Git 仓库，这样，如果项目是公开的，或者你有协作者，或你使用 Git 作为部署源，他们都可以获取它。
+
 The dependencies versions will be updated in the `package-lock.json` file when you run `npm update`.
+
+当你运行 `npm update` 时， `package-lock.json` 中的依赖版本将被更新。
 
 #### An example
 

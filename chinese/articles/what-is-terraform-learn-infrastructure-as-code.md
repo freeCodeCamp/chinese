@@ -1,35 +1,35 @@
 > -  原文地址：[What is Terraform? Learn Terraform and Infrastructure as Code](https://www.freecodecamp.org/news/what-is-terraform-learn-infrastructure-as-code/)
 > -  原文作者：[Sumeet NinaweSumeet Ninawe](https://www.freecodecamp.org/news/author/letsdotech/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![What is Terraform? Learn Terraform and Infrastructure as Code](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/terraform-article.jpeg)
+![什么是Terraform？学习Terraform和基础设施即代码](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/terraform-article.jpeg)
 
-Terraform is a tool that helps you manage various cloud infrastructure services in the form of code. You codify your infrastructure, and so it's also known as Infrastructure as Code (IaC).
+Terraform使用一个帮助你以代码形式管理各种云基础设施服务的工具。你把你的基础设施代码化，所以它也被称为基础设施即代码(IaC)。
 
-The cloud has become important to more and more companies. It not only helps reduce time and costs but also lets customers focus on their core business.
+云对越来越多的公司来说已经非常重要。它不仅有助于减少花销和节省时间，还能让客户专注于他们的核心业务。
 
-## Why Infrastructure as Code?
+## 为什么要基础设施即代码?
 
-As the number of cloud providers increases and their services become more flexible, it's becoming more important to be able to manage your cloud infrastructure resources.
+随着云服务商数量的增加和他们的他们的服务更加灵活，能够管理你的云基础设施变的越来越重要。
 
-Terraform works on the concept of Infrastructure as Code (IaC). In simple terms, IaC is the ability to represent your infrastructure in the form code.
+Terraform的出于基础设施即代码（IaC）的概念。简单来说，laC 是通过代码来管理你的基础设施。
 
-Let's take as an example any computing resource on a given cloud, like EC2 on AWS. Requesting an EC2 instance from AWS is a matter of signing up with AWS, providing a bunch of values, and clicking on the “Launch” button. The "resource" will be ready in a few minutes.
+让我们以某个云上的任何计算资源为例，比如AWS的EC2。向AWS申请一个EC2实例，只需要在AWS 注册，提供一堆数值，然后点击 `Launch`(启动)按键。该资源将会在几分钟内准备好。
 
-As long as we can provide those values to AWS, they'll live on that cloud provider. Of course, this is the traditional way to do this.
+只要我们向AWS提供这些值，它们就会在AWS上生成。当然，这样是传统的方式。
 
-Terraform provides a way to take these credentials and inputs in the form of _configurations_ and process them to create a resource in the target cloud.
+Terraform提供了一种方法，使用这些`credentials`完成认证和以  _configurations_ 的输入信息，在目标云上创建一个资源。
 
-These configurations describe the resource in a language that Terraform understands. Configurations are how you can declare the desired state of your infrastructure – basically, "Declarative" syntax.
+这些配置以Terraform的语法进行资源的描述。 配置化是你声明你的基础设施的理想状态的方法--基本上是声明式的语法。
 
-Terraform uses cloud provider APIs to create the resource.
+Terraform使用云服务商提供的API来创建资源。
 
-## Advantages of Terraform
+## Terraform的好处
 
-Terraform is a product from [Hashicorp](https://www.hashicorp.com/), and uses [Hashicorp Configuration Language](https://github.com/hashicorp/hcl) (HCL) syntax to represent the configurations.
+Terraform 是[Hashicorp](https://www.hashicorp.com/)的一个产品, 使用 [Hashicorp 配置语法](https://github.com/hashicorp/hcl) (HCL)来表示配置 .
 
-In the example below, you can see the representation of the EC2 instance in its simplest form:
+在下面的例子中，你可以看到EC2实例的最简单的形式的描述:
 
 ```
 provider “aws” {
@@ -42,38 +42,37 @@ resource “aws_instance” “myec2” {
 }
 ```
 
-This simple example is enough for us to understand the capabilities of Terraform.
+这个简单的例子足以让我们了解Terraform的能力。
 
-The code contains two blocks – the `provider` and `resource`.  The `provider` block lets Terraform know that we want to use `aws` provider in the region “us-west-1”.
+这个代码包含两个部分`provider`和`resource`。`provider` 是Terraform告诉AWS，我们想在`us-west-1`区使用AWS的服务。
 
-The `resource` block lets Terraform know that out of all the infrastructure resources offered by AWS, we want to create a resource of type “instance” (EC2).
+ `resource` 让Terraform告诉AWS，在AWS提供的所有基础设施资源中，我们想创建一个实例(EC2)。
 
-The first parameter represents this to the resource block as “aws\_instance”. The second parameter is what we've named the resource – in this case, “myec2”.
+`resource`第一个参数为 `aws_instance`,第二个参数资源的命名,在本例中是`myec2`。
 
-The resource block has a couple of arguments that state the AWS machine image and the type of instance used to create this resource.
+`resource`有几个参数，说明AWS机器镜像和用于创建该资源的实例类型。
 
-Here, we have managed to express our infrastructure in the form of code. Let's go through some of the advantages of IaC.
+在这里，我们已经用代码的形式来表示我们的基础设施，让我们看laC的一些优势。
 
-1.  Since infrastructure creation is now condensed in config/code files, it is **easier to maintain** since we can now leverage version control systems like Git to collaborate and maintain it.
-2.  The time required for the planning phase of the infrastructure is reduced as we can write the configurations in a **short amount of time**. These configs are readily consumed by Terraform to create cloud resources in the matter for few minutes.
-3.  **Changes** to the infrastructure **are easier** and are comparable to application code changes.
-4.  The advantages for application management lifecycle in the case of software development are also applicable for infrastructure. This makes it **more efficient**.
+1.  由于基础设施的创建现在被浓缩在配置/代码文件中， 它 **更容易维护**， 因为我们现在可以利用Git等版本控制软件来进行协作和维护。
+2.  基础设施的规划阶段所需的时间减少了，因为可以在 **短时间内** 编写配置。这些配置很容易被Terraform使用，几分钟就可以创建云资源。
+3.  **改变** 基础设施 **是更容易了** 和 改代码一样了.
+4.  软件开发中的应用管理生命周期的优势也适用于基础设施。这让它 **更有效率**.
 
-## Features of Terraform
+## Terraform的功能
 
-### Orchestration
+### 协调工作
 
-When deploying various end-to-end services, Terraform acts as the core of the orchestration process when it comes to creating cloud resources.
+当部署各种端到端服务事，涉及到创建云资源时，Terraform作为协调过程的核心。
 
-### Cloud agnostic
+### 不与特定云服务商绑定
 
-Since Terraform supports most of the clouds including AWS, MS Azure, and GCP, you don't have to worry as much about vendor lock-in issues. The Terraform registry provides the documentation for all the supported cloud providers.
+由于Terraform支持大多数云，包括AWS、MS Azure和GCP，所以你不必担心厂商的锁定问题。Terraform的`registry provides` 提供了所支持的云服务商的文档。
 
-Syntax patterns used to code infrastructure on various clouds are the same, so the learning curve related to provider-specific APIs is on a back burner, but not forgotten.
+在各种云上的描述基础设施的语法是相同的，因此与云服务商的特定的API的学习曲线是一样的，但不会被遗忘。
+### 声明式语法
 
-### Declarative syntax
-
-Infrastructure expressed in Terraform files is declarative – so as developers, we don’t need to worry about making Terraform understand the steps required to create a resource. Rather, all we need to do is let Terraform know about the desired state and Terraform takes care of the steps internally.
+Terraform文件中基础设施是声明性的--所以作为开发者，我们不需要担心让Terraform理解创建资源所需的步骤，相反，我们需要让Terraform知道所需的状态，Terraform会在内部处理这些步骤。
 
 ### Modules
 

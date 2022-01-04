@@ -160,55 +160,82 @@ I was surprised that the community could be so energy. Thanks to the former part
 
 FreeCodeCamp students from all over the world organize locally tech events
 
-于是，我连续两个晚上做题目，做到 160 多分，那是我第一次感受到原来我的代码也可能变成产品。用一句我们熟悉的话来说——这为我打开了新世界的大门：我开始去理解已经用了 4 年的微信究竟是怎样的产品，也不断理解其他的产品，而不只是做一个机械的使用者；我透过网络去和一个更大的世界联结，慢慢接触开源、教育公益、社会创新、社会企业…...这些名词以及各个国家的在这些领域深耕的人们；我逐渐深入地理解这个世界运行的规则，学会接纳他人和自己，也看到了自己的未来可以有许多可能性。
+As a result, I spent two consecutive nights to work on problems and achieved more than 160 points. That was the first time I felt that my code might become a product.
+In a phrase that we are familiar with - this opened the door to a new world for me: 
+I started to understand what kind of product WeChat is, and I also started to understand other products, instead of just being a normal user;
+I connected with a larger world through the Internet, and gradually got in touch with open source, education and public welfare, social innovation, social enterprise ... These terms and the people in various countries who are deeply cultivated in these fields;
+I gradually understood the rules of the world, learned to accept others and myself, and saw many possibilities in my future.
 
 ![](https://chinese.freecodecamp.org/news/content/images/2021/11/image-20.png)
 
-中文官网：http://chinese.freecodecamp.org/
+freeCodeCamp Chinese Site: http://chinese.freecodecamp.org/
 
-记得 2019 年初我和胡落阳一起散步的时候聊到一个观点：**在这个复杂多变的世界里，人最难得的是自我意识觉醒。**那时候，我回头看，很惊讶自己居然是在 2015 年才开始逐渐拥抱互联网，如果没有这个改变，我还会封闭多久？这几年中我的觉醒比以往二十多年都更深刻！
+I remember that when I walked with Luoyang Hu in early 2019, I talked about a point: **In this complex and changeable world, the most rare thing for people is the awakening of self-awareness.**
+At that time, I looked back and was surprised that I started to embrace the Internet gradually in 2015. Without this change, how long would I remain in the closed circle?
+My awakening in the past few years has been more profound than in the past two decades!
 
-可是，在我初中毕业刚接触电脑的时候，如果有人告诉我眼前这台机器不止可以打字、点一下鼠标不止可以采蘑菇、百度不是互联网的全部；
+When I graduated from junior high school and just started to use the computer, if someone told me that the machine in front of me can not only type, click the mouse, pick mushrooms, but also do much more things, and Baidu is not the entire Internet;
 
-在我大学时期刚开始对编程萌生兴趣的时候，如果有 freeCodeCamp 这样的学习资源和开源社区；
+When I first became interested in programming in college, if there were learning resources and open source communities like freeCodeCamp;
 
-在我工作的前几年努力寻找人生意义的时候，如果能了解到这个时代有许多平凡的热血的年轻人正在被大众所忽视的领域默默贡献，无关名利，只希望让这个世界变得更好一点，以及，心安，
+In the first few years of my work, when I was trying to find the meaning of life, if I could understand that there are many ordinary, passionate young people in this era who are making contributions to areas that are ignored by the public. It has nothing to do with fame and wealth, they just hope to make this world a little better, and, peace of mind,
 
-这些的觉醒会不会来得更早一点？
+Will these awakenings come earlier?
 
-或者，还有多少孩子、年轻人和曾经的我一样，因为种种条件的限制，渴望改变却无从做起呢？我能为他们做些什么呢？
+Or, how many children and young people are like me who are eager to change but unable to start because of various constraints? What can I do for them?
 
-> 教育的本质是一棵树摇动另一棵树，一朵云推动另一朵云，一个灵魂召唤另一个灵魂。—— 出处不详
+> Education is a tree shaking a tree, a cloud to promote a cloud, a soul awaken another soul. - Unknown Source
 
-曾经看过这样一句话，“**我们读大学，是为了那些没有读大学的人**”，深以为然。
+I once read the sentence, "**We go to college for those who didn't go to college**", I think it's true.
 
-于是，**我明确了自己现阶段想去发光发热的领域：教育公益**，将自己这些年所习得的知识、所沉淀的体悟转化成教育资源，在社区中传递给那些需要帮助的人们，希望为他们的生活带来好的改变。坚持并明确了“初心”，我的生活也因此坦然明朗起来。
+Therefore, **I clarified the field that I want to shine at this stage: education for public**, and transform the knowledge and insights I have acquired over the years into educational resources, and pass them on to those in need in the community and hope to bring good changes to their lives. Persevering and clarifying the "initial intention", my life became calmer and clearer.
 
 ![](https://chinese.freecodecamp.org/news/content/images/2021/11/image-22.png)
 
-freeCodeCamp 团队部分成员 2019 年在香港一起工作一周，从左至右：Miya、Mrugesh，Quincy、Kris、Ahmad
+Some members of the freeCodeCamp team worked together in Hong Kong for a week in 2019, from left to right: Miya, Mrugesh, Quincy, Kris, Ahmad
 
-也是在 2019 年，我正式加入 freeCodeCamp 团队，和广大贡献者协作。我喜欢介绍自己是 freeCodeCamp 贡献者，在正式场合会介绍自己是 freeCodeCamp 中文社区大使。其实 freeCodeCamp 团队是扁平化组织，没有上下级的概念，大家都没有 title，即职位名称。Quincy 通常介绍自己是 freeCodeCamp 的老师，必要的时候会说自己是创始人。关于我的 title，当时我和 Quincy 说在国内要对接合作啥的总是需要一个 title 的，我们都不喜欢“负责人”这种称呼，有些老派，然后他就给我建议了“大使”。我知道在 TEDx 等社区中也有“大使”这样的称呼，所以就用这个了。
+Also in 2019, I officially joined the freeCodeCamp team to collaborate with contributors.
+I like to introduce myself as a freeCodeCamp contributor or a freeCodeCamp Chinese community ambassador on formal occasions.
+In fact, the freeCodeCamp team is a flat organization, and there is no concept of subordinates, and no one has a title.
+Quincy usually introduces himself as a teacher of freeCodeCamp, and when necessary, he will say that he is the founder.
+Regarding my title, I told Quincy at the time that I need a title to cooperate with others in China.
+We don't like the term "person in charge (负责人)", which is a bit old-fashioned, and then he suggested to use "ambassador (大使)". I know there are also names like "ambassador" in communities such as TEDx, so I accpeted it.
 
-## “在深圳这座城市，有**那么几个一起过节的朋友**，真的很重要”
+## "In Shenzhen, it is really important to **find a few friends to spend the holidays together**."
 
-今年 9 月，我为宣传中国开源年会录了一个[视频][3]，再次提起这个故事。
+In September 2021, I recorded a [video][3] to promote the China Open Source Conference, and I mentioned this story again.
 
-从 2016 年起，我时常跟来自成都、广州、西安、深圳、天津、郑州......各个城市的年轻朋友们打电话聊天。他们大部分是程序员，想要在自己的城市组织 freeCodeCamp 线下技术交流活动，帮助大家学习编程，也认识志同道合的朋友。很多时候我们一聊就是一两个小时。
+Since 2016, I have often called and chatted with friends from various cities including Chengdu, Guangzhou, Xi'an, Shenzhen, Tianjin, Zhengzhou, etc. 
+Most of them are programmers who want to organize freeCodeCamp offline technical events in their cities to help everyone to learn programming and also meet like-minded friends. Many times we talk for one or two hours.
 
-我也会介绍他们相互认识。我在 2016 年社区年度总结中写道：
+I will also introduce them to know each other. 
+I wrote in the 2016 community annual summary:
 
-> 在我眼中，这些人呀，就像是一颗颗散落在这个世界各个角落的珍珠，我能感受到他们各自独特的美；但是，我没想到的是，作为 Miya 姐，我会把他们聚集起来，彼此吸引，连成一串熠熠发光的项链。这是我在过去的人生中，为数不多的自我觉得做得特别有价值的事情。2017，我会努力做更好的 Miya 姐。
+> In my views, these people are like pearls scattered in every corner of the world. I can feel their unique beauty.
+> However, what I did not expect is that as Sister Miya, I helped to gather them, attract each other, and connect them into a string of sparkling necklaces. This is one of the few things I have done in my life that I feel is particularly valuable. 
+> In 2017, I will work hard to be a better Sister Miya.
 
-直到我偶然看到多愁善感的油条在他朋友圈发了一篇文章，感性如我，瞬间泪目。文章大概是说他为啥要在刚辍学转前端开发一年不到、团队老大寄予重望、工作忙到飞起、虽然身为群草但是仍然单身的情况下，还要坚持带领一群汉子运营 freeCodeCamp 深圳社区：
+And then, I happened to see sentimental You Tiao (油条) posting an article in his circle of friends, as sensitive as me, tears instantly.
+The article explained why he had to continue to lead a group of people to operate the freeCodeCamp Shenzhen Community, even when he had just dropped out of school and switched to front-end development for less than a year, the boss of the team has high hopes, and the work is super busy:
 
-> 我周遭的所有人包括我在内正在面对的可能是人生最艰难的阶段了......20 多岁的年纪，孤身一人来到这座城市。而深圳高得离谱的房租让大家都龟缩在可能 10 平不到的房间里，或者是租到离公司一个小时外的生活区。人生很艰难，大家都变得独来独往。外向的人还好点，内向的人就处境很糟糕......我常常说 freeCodeCamp 深圳社区想要做一个线下知识分享的平台，其实是不准确的。**在线下活动里找到那么几个能够在节日里陪你一起过节的朋友真的很重要。**
+> Everyone around me, including me, is facing perhaps the most difficult stage of life:
+> At the age of 20, we came to this city alone. And Shenzhen’s ridiculously high rents have caused almost everyone to stay in a room that is smaller than 10 square meters (107.64 square foot), or live in an area that is an hour away from the company.
+> Life is difficult and everyone starts to do everything alone. Extroverts may be better, but introverts are always in a bad situation.
+> I often say that the freeCodeCamp Shenzhen community wants to be an offline knowledge sharing platform, but it is actually inaccurate.
+> **It is really important to find a few friends to spend the holidays together through the offline events.**
 
-> 有些时候，朋友的对话让我很心疼。记得那一天晚上，有朋友趁着酒意，和我说，“你知道吗？我已经没有家”。我不知道，如果朋友你不愿提起的话，我当然永远也不会知道。我当时看见到他眼里的那种落寞，我知道他需要人去关怀，但是深圳那么大，又有谁会去在乎这样一个不善言语的人说出来的话？有一天，freeCodeCamp 的小伙伴吃完饭留下来送我回家，我大概就猜到他想找我谈谈。后来，我们聊得挺晚的。他和我聊着他的工作，聊着他的恋爱，聊着他的社交恐惧。在我家昏黄的灯光下，我能感受到他眼里深切的担忧。就是这样，不善表达的人如果不是在合适的时间里，又怎么和别人袒露他的想法，甚至很久了也不知道自己有些想法略显幼稚。
+> Sometimes, my friends’ conversations make me feel sorry.
+> I remember one night, while drunk, a friend said to me, "Did you know? I no longer have a home."
+> I don't know. If he didn't mention it, I will never know it. I saw the kind of loneliness in his eyes.
+> I know he needs someone to help him, but Shenzhen is so big, who cares a person who usually does not talk?
+> One day, a friend from freeCodeCamp stayed after dinner and took me home. I guessed that he wanted to talk to me. We talked quite late that night.
+> He talked to me about his work, his love, and his social fears. Under the dim light of my house, I could feel the deep concern in his eyes.
+> That's it! If a person who is not good at expressing is not at the right time, how can he expose his thoughts to others? After a long time, he won't even know that some of his thoughts are naive.
 
-我太理解这种感受了！我曾经孤身到苏州找工作，没有同伴，连想买衣服都不知道应该去哪儿逛街。那个年纪，“孤独”也许是我们最亲密的朋友。那是我第一次知道，freeCodeCamp 对这群男孩女孩来说，有这样的意义。如果每一座城市都有这样有温度的社区，该有多好。
+I too understand this feeling! I once went to Suzhou to look for a job alone. Without a companion, I didn't even know where to go shopping if I wanted to buy clothes. 
+At that age, "loneliness" may be our closest friend. That was the first time I knew that freeCodeCamp has such a meaning to these people. It would be great if every city had such a warm community.
 
-油条的文章提醒了我：**去见面、去面对面聊天、去用心感受和倾听**。
+You Tiao’s article reminded me: **To meet, to chat face to face, and to feel and listen attentively**.
 
 就像最近看到罗翔老师讲述的陀思妥耶夫斯基的《卡拉马佐夫兄弟》中一个观点：
 

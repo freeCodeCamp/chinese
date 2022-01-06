@@ -74,47 +74,45 @@ resource “aws_instance” “myec2” {
 
 Terraform文件中基础设施是声明性的--所以作为开发者，我们不需要担心让Terraform理解创建资源所需的步骤，相反，我们需要让Terraform知道所需的状态，Terraform会在内部处理这些步骤。
 
-### Modules
+### 模块化
 
-Terraform provides modules which help us reuse our Terraform code. A complex infrastructure is broken into multiple modules and each module is reusable in different projects.
+Terraform 提供的模块可以帮助我们重复使用Terraform的代码。一个复杂的基础设施被分解成多个模块，每个模块都可以在不同的项目中重复使用。
 
-It is very easy to convert a given Terraform configuration into modules and Terraform has its eco-system for pre-built modules.
+将给定的Terraform配置转换为模块是非常容易的，Terraform有它的预建模块的生态体系。
+### 状态管理
 
-### State management
+在Terraform创建和规划基础设施的同时，维护状态。这可以与其他团队成员分享，以达到协作的目的。
 
-While Terraform is creating and planning the infrastructure, state is maintained. This can be shared with other team members for collaboration purposes.
+Terraform让你可以远程管理状态，这有助于防止团队成员在尝试重新创建基础设施时出现混乱。
 
-Terraform lets you manage state remotely, which helps prevent confusion amongst team members in case they attempt to recreate the infrastructure.
+###  提供者
 
-### Provisioning
+Terraform不是一个完整的配置工具，但它有助于`provisioning`活动。Terraform的 _local-exec_ 和 _remote-exec_ 模块让你运行内联脚本。内联脚本有助于在成功创建资源后安装软件组件。
 
-Terraform is not a full-blown provisioning tool, but it helps with day one provisioning activities. Terraform’s _local-exec_ and _remote-exec_ blocks let you run inline scripts. Inline scripts help install software components upon the successful creation of the resource.
+这在Chef、Ansible和Salt Stack等配置管理工具安装它们各自的代理时特别有用。当它们安装成功，就直接发送一个`UP`信号。
+### 开源
 
-This is especially useful when helping configuration management tools like Chef, Ansible, and Salt Stack install their respective agents. They can just send an “UP” signal once they are installed successfully.
+Terraform 是开源软件。 当然它也有一个企业版.
 
-### Open Source
+## Terraform 的工作流程 \[初始化 - 执行计划 - 投入使用 - 销毁\]
 
-Terraform is available for use as open-source software. It also has an Enterprise version.
+你需要采取一些简单的步骤来运行你的Terraform代码。这些步骤与云平台上的资源的生命周期密切相关。
 
-## Terraform Workflow \[init - plan - apply - destroy\]
+同样，这些步骤跟云平台无关，这意味着同样的步骤/命令可以在任何给定的云平台上 **创建,更新，和销毁** 资源都是有效的。
 
-There are some simple steps you need to take to execute your Terraform code. These steps are closely related to the lifecycle of resources on cloud platforms.
+**注意:**，本文不涉及 Terraform的安装步骤，我假设你已经在系统中安装了Terraform CLI。
 
-Again, these steps are cloud-agnostic, meaning the same steps/commands are valid to **create, update, and destroy** resources on any given cloud provider.
+### 运行 `init` 命令
 
-**Note:** This blog post doesn’t cover installation steps for Terraform, and I assume you already have the Terraform CLI installed on your system.
+当我们准备好了配置文件，我们需要运行的第一个命令是 `terraform init`。Terraform的安装二进制并不包含对所有云服务商的支持。
 
-### Run the `init` command
+相反，根据云供应商，在Terraform运行代码前，会下载适当的插件。在我们的例子中，运行`terraform init`将下载`AWS`提供插件。这个命令帮助 _initialize_ 这个给定的 Terraform目录。
 
-Once we have the configuration files ready, the very first command we need to run is `terraform init`. The Terraform binary installation does not include support for all the cloud providers at once.
+### 生成一个执行计划
 
-Instead, based on the provider, appropriate **plugins are downloaded** before Terraform executes the code. In our example, running `terraform init` would download the `aws` provider plugin. This command helps _initialize_ the backend for a given Terraform directory.
+`terraform plan`，命令 **生成一个执行计划**。根据你提供的配置，Terraform会生成一个执行计划。在这个阶段，Terraform会在语法错误、API认证、状态验证等方面进行可行性检查。
 
-### Generate an execution plan
-
-The `terraform plan` command helps **generate an execution plan**. Based on the configuration you provide, Terraform generates an execution plan. In this phase, Terraform performs **feasibility checks** in terms of syntax errors, API authentication, state verification, and more.
-
-`plan` highlights any fixes in the Terraform script before actual execution. If it's successful, it outputs a **summary of potential changes** in the infrastructure. You should run this before _apply_, as it makes you aware of any risks before modifying the infrastructure.
+`plan` 在实际执行前高亮显示Terraform 脚本中的任何修改。如果它成功了，它会输出基础设施中潜在变化的摘要。你应该在 _apply_ 命令之前运行它。因为它能让你在修改基础设施之前意识到风险。
 
 ### `Apply` the changes
 

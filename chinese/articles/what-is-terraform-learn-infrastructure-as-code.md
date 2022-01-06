@@ -70,6 +70,7 @@ resource “aws_instance” “myec2” {
 由于Terraform支持大多数云，包括AWS、MS Azure和GCP，所以你不必担心厂商的锁定问题。Terraform的`registry provides` 提供了所支持的云服务商的文档。
 
 在各种云上的描述基础设施的语法是相同的，因此与云服务商的特定的API的学习曲线是一样的，但不会被遗忘。
+
 ### 声明式语法
 
 Terraform文件中基础设施是声明性的--所以作为开发者，我们不需要担心让Terraform理解创建资源所需的步骤，相反，我们需要让Terraform知道所需的状态，Terraform会在内部处理这些步骤。
@@ -79,6 +80,7 @@ Terraform文件中基础设施是声明性的--所以作为开发者，我们不
 Terraform 提供的模块可以帮助我们重复使用Terraform的代码。一个复杂的基础设施被分解成多个模块，每个模块都可以在不同的项目中重复使用。
 
 将给定的Terraform配置转换为模块是非常容易的，Terraform有它的预建模块的生态体系。
+
 ### 状态管理
 
 在Terraform创建和规划基础设施的同时，维护状态。这可以与其他团队成员分享，以达到协作的目的。

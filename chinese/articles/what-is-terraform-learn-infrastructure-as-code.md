@@ -92,6 +92,7 @@ Terraform让你可以远程管理状态，这有助于防止团队成员在尝�
 Terraform不是一个完整的配置工具，但它有助于`provisioning`活动。Terraform的 _local-exec_ 和 _remote-exec_ 模块让你运行内联脚本。内联脚本有助于在成功创建资源后安装软件组件。
 
 这在Chef、Ansible和Salt Stack等配置管理工具安装它们各自的代理时特别有用。当它们安装成功，就直接发送一个`UP`信号。
+
 ### 开源
 
 Terraform 是开源软件。 当然它也有一个企业版.

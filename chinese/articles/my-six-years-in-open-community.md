@@ -237,125 +237,157 @@ At that age, "loneliness" may be our closest friend. That was the first time I k
 
 You Tiao’s article reminded me: **To meet, to chat face to face, and to feel and listen attentively**.
 
-就像最近看到罗翔老师讲述的陀思妥耶夫斯基的《卡拉马佐夫兄弟》中一个观点：
+It's like the point in Fyodor Dostoevsky's "Brothers Karamazov" described by Prof. Luo Xiang (A famous Chinese jurist) recently:
 
-> 要爱一个具体的人，不要爱一个抽象的人。
+> Love a specific person, not an abstract person.
 
-也是从那时候起，我不再那么喜欢站在台上在聚光灯下，更喜欢在台下听别人的故事，鼓励大家去分享，为她们鼓掌。
+Since then, I no longer like to stand on stage in the spotlight. I prefer to listen to other people’s stories off stage, encourage everyone to share and applaud for them.
 
 ![](https://chinese.freecodecamp.org/news/content/images/2021/11/image-27.png)
 
-2020 年中国开源年会，我和两位志愿者小妹妹交流社区的概念
+During 2020 China Open Source Conference, I exchanged the concept of community with two volunteers
 
-最近和一位朋友聊天，他说最有感触的是有些朋友告诉他“参加你们组织的社区活动，缓解了我的抑郁症”。
+I recently chatted with a friend. The most touching thing he said was that some friends told him that "participating in the community activities organized by you relieved my depression."
 
-是啊，**社区对人的影响远比我们想象得大**。很开心有朋友跟我有同样的发现，并且持续通过社区传递温度和善意^\_^
+Yes, **the impact of the community on people is far greater than we thought**. I am happy to have friends who have made the same discovery like me, and continue to pass on warmth and kindness through the community ^\_^
 
-在今年的开源年会第二天结束时，一个女孩跟我说：“我观察你一天了，发现你能够把‘开源’这个词用不同的人能理解的方式说出来，也就是结合她们各自的经历，让她们明白‘哦，原来这就是开源’，并且鼓励大家去分享，每个人在这里都不会感觉活动和自己无关，我喜欢你的温度。”
+At the end of the second day of this year’s open source conference, a girl said to me: 
+"I have been observing you for a day and found that you can say the word 'open source' in different ways that different people can understand. That is, you can combine with their own experience and make them understand - "Oh, it turns out that this is open source." 
+You also encouraged everyone to share. Nobody will feel that the activity has nothing to do with them here. I like your temperature."
 
-我说：“谢谢你这么直率地表达对我的认可。‘温度’这个词，就是我想表达的！”
+I said, "Thank you for expressing your approval for me so bluntly. The word 'temperature' is what I want to express!"
 
-其实我特别理解“感觉活动和自己无关、感觉自己格格不入”是什么样的感受。
+In fact, I understand what it is like to "feel that the activity has nothing to do with me and feel out of place."
 
-在转行进入互联网行业前，我在一家国际项目管理公司工作，职务是项目助理，后来慢慢接触合约管理和业务拓展。我那时候工作非常努力，得到了总经理、上司、同事、客户所有人的认可。
+Before switching to the Internet industry, I worked in an international project management company as a project assistant. 
+Later, I also started to work on contract management and business development. At that time, I worked very hard and got the approval of the general manager, superiors, colleagues, and customers.
 
-有一次，总经理 Michael 去参加一个大型会议，特地叫我的上司 Jessie 通知我一起去，目的是让我长长见识。那天早上，我穿着唯一的一套正装，笨拙地踩着高跟鞋，跟在 Jessie 身后走进酒店里一间又大又豪华的会议室。第一次参加这么盛大的活动，我有些激动，正在想我会坐在哪里呢，Jessie 跟我说：“他们只给我们计划了两个位置，你先去旁边找个地方坐一下。”
+Once, the general manager Michael went to a large meeting and specifically asked my boss Jessie to inform me to go with him. 
+The purpose for letting me attend the event was to let me gain insight. 
+That morning, I was wearing my only formal suit, awkwardly stepping on high heels, and following Jessie into a large and luxurious meeting room in the hotel. 
+It is the first time that I participated in such a grand event, and I was excited. 
+I was thinking about where I would sit, when Jessie told me, "They only planned two seats for us. You should go and find somewhere else to sit."
 
-于是，我走到会议室侧面的角落服务员休息的区域坐着，听那一两百位学术界、商业界的人们讨论我似懂非懂的议题。我根本听不进去，觉得自己精心着装，却连个位置也没有，与那些成功人士格格不入，很讽刺。很快我就脸颊滚烫，心里想着：我讨厌这里，我想出去。
+As I result, I went to the corner of the conference room and sat in the staff resting area. I was trying to listen to those one or two hundred people in academia and business area discussing topics that I did not understand. I couldn't listen at all. I felt that even though I was well-dressed, I did not even have a seat. 
+It was ironic that, even though I was well-dressed, I did not even have a seat, and I didn't fit in with those successful people. Soon, I was flushed, and I thought to myself: I hate this place, I want to leave.
 
-感谢 Michael，他是一位很有情怀的老板。也感谢我的上司 Jessie，她总是像一个大姐姐一样照顾我。他俩似乎注意到了我的窘迫，于是 Jessie 走过来跟我说：“Miya 你去 Michael 旁边坐吧，我有事要先回公司。”
+Thanks to Michael, he is a very caring boss. Thanks also to my boss Jessie, she always takes care of me like a big sister.
+They seemed to notice my embarrassment, so Jessie walked over to me and said, "Miya, go sit next to Michael. I have to go back to the company."
 
-那场会议上人们讨论了什么，我完全没印象了。只记得 Michael 低下头，非常温和地跟我说了这么一段话：“其实他们讲的东西没什么价值。你现在是 nobody，没人会听你说话。但是有一天，当你成为 somebody，在上面讲话，别人就会觉得你讲的东西很重要。”
+I have no impression at all what people discussed in that meeting.
+But I remember that Michael lowered his head and said to me very gently: "To be honst, what they said have no value. You are nobody now, and no one will listen to you. But one day, when you become somebody, you will speak on it. Others will think what you are talking about is very important."
 
-这段话给我的印象非常深刻。我当时只是点点头，暗暗地想：
+I was impressed by his message. I just nodded and thought secretly:
 
-> 如果有一天我真的成为 somebody，我不会在意自己坐哪里，不会在意有多少人听我讲话，我只会关注角落里有没有一个女孩，因为与人群格格不入而显得局促不安。我会走过去笑着跟她说：“请问怎么称呼你？你对大家在聊的话题有什么想法要分享吗？”
+> If one day I really become somebody, I won't care where I sit or how many people listen to me. But I will pay attention to whether there is a girl in the corner, who looks embarrassed because of incompatible with the crowd. 
+> I would walk over and smile and ask her: "What is your name? Do you have any thoughts on the topic everyone is talking about?"
 
-就像我后来愿意去倾听一位容易被忽略的公交车司机——**我相信，每一个普通人都有值得被倾听的故事。如果没有人给他们提供这样的舞台，那就我来提供。**
+Just like I am willing to listen to a bus driver who is easily to be ignored - **I believe that everyone has a story that is worth to be listened. If no one provides them with such a stage, I will.**
 
-## 虚幻的泡泡
+## Bubble
 
-在 Quincy 的一场  [AMA][4]  里，我最喜欢他对于下面这个问题的回答。AMA，即 ask me anything，在活动中提问者可以问任何问题。
+In Quincy's [AMA][4], I liked his answer to the following question. AMA stands for ask me anything.
 
-你以后会让你的小孩不去上学，而是在家里教她们吗？
+How do you plan to teach/educate your kids? Did you ever consider homeschooling?
 
-> 如果家里有很多小孩，并且家长能够在家教学的话，那么家庭学校是一个不错的选择。但是，在公立学校学习对提升小孩的社交能力和情商很重要。即使公立学校有一些不足之处，但是我自己从那里学到很多。 如果我当初就读于私立学校，我可能接触不到很多社会现实。我不希望我的孩子们在虚幻的泡泡中长大。
+> Homeschooling is a good alternative if you have a lot of kids, and a parent at home who can teach. But socialization and building up EQ is important, and you kind of get that built in to the public school experience.
 
-在虚幻的泡泡中长大，这是什么意思呢？可能她的每一位同学都是家庭条件优渥的小王子或小公主，她没有机会遇到一位交不起学费、午餐时间躲在角落里吃馒头的同桌，她会以为这个世界所有人都和她一样享有便利、富足的生活资源与教育资源。可是这个世界的现实不是这样呀，当她成年之后，能够处理好现实带给她的冲击吗？
+> I learned a lot from going to public school. There were short-comings. But if I had just gone to a private school, I would have been insulated from reality. I don’t want my kids to grow up in a bubble.
 
-现在，试着回想一下，有没有一些瞬间，让你觉得一个虚幻泡泡被戳破了呢？
+What does it mean to grow up in a bubble? Maybe all her friends are a little prince or princess with good family conditions. She has no chance to meet someone who can't pay the tuition and has to eat buns in the corner during lunch time. She will think everyone in this world are like her. They all enjoy convenient and abundant living resources and educational resources. But the reality of this world is not like this. When she grow up, can she handle the impact of the reality?
 
-我先分享一些吧：
+Now, try to think about it. Are there any moments that make you feel that an bubble has broken?
 
-2018 年 12 月，在北京，Quincy 跟我说尼日利亚农村的一位小伙子因为买不起电脑而在一部老式诺基亚手机上学习编程，后来他成为了一名安卓工程师，与哈佛、MIT 的人们一起远程工作——并且这个世界上有很多人都是这样学习编程的。那时候我刚买了自己的第二台 MacBook。
+Let me share some:
 
-2019 年 5 月，我在杭州参加  [ChangemakerXchange 亚洲峰会][5]，主办方每年会从近 1000 个申请人中选拔 20 名参加这个活动，这些参与者都是关心世界的很善良的年轻人。在一次讨论中，一个正在缅甸运营非营利组织的泰国男生问我们是怎么学习英语的。两个新加坡朋友和一个北京小姑娘说她们从小学三年级开始就有英语课了，我说我在四川，是从初一开始学的。我以为那个男生会说他是从高中或者大学开始学，然后他告诉我们他是一年前在一个难民营里面初次学习英语。
+In December 2018, in Beijing, Quincy told me that a young man in rural Nigeria was learning to program on an old Nokia phone because he couldn’t afford a computer.
+Later, he became an Android engineer and is working remotely with people from Harvard and MIT. In fact, many people in the world learn to program like this.
+At that time, I just bought my second MacBook.
+
+In May 2019, I participated in the [ChangemakerXchange Asia Summit][5] in Hangzhou. The organizer will select 20 people from nearly 1,000 applicants to participate in this event every year. These participants are very kind young people who care about the world.
+
+In a discussion, a guy from Thailand who is running a non-profit organization in Myanmar asked us how we learned English. Two participants from Singapore and a girl from Beijing said that they had English classes since the third grade of elementary school. I said, in Sichuan, I started to learn it in junior high school. I thought that guy would say that he started learning English in high school or university, but he told us he was learning English for the first time in a refugee camp a year ago.
 
 ![](https://chinese.freecodecamp.org/news/content/images/2021/11/image-23.png)
 
-2019 年 ChangemakerXchange 亚洲峰会部分参与者和深受大家喜爱的小熊
+Participants of the 2019 ChangemakerXchange Asia Summit and the beloved bear
 
-2019 年 6 月，我和团队在香港工作，每天晚上我们会在晚饭后去维多利亚港暴走，尽情感受这座城市。有一天晚上，我回到酒店，吹着空调，打开 Facebook，看到一条新闻：一对难民父女在试图游到美国的时候不幸溺亡，孩子才一岁多，她的妈妈当时就站在岸边看着这一切却毫无办法。
+In June 2019, my team and I were working in Hong Kong. Every night we would have a walk at Victoria Harbor after dinner and explore the city. One night, I went back to the hotel, turned on the air conditioner, open Facebook, and saw a piece of news: A refugee father and daughter drowned while trying to swim to the United States. The child was only one year old. Her mother was standing at the shore, looked at her, but could not help.
 
-同样是 2019 年，我从实务学堂创始人的一篇文章里读到：根据 REAP 乡村教育行动项目的统计，贫困地区的农村学生，63% 从来没有迈进过高中的门，更不要说大学；而国统局的数据显示有近千万的 16-18 岁的孩子，已经成为了新生代农民工，构成农民工群体的 3%。我曾经是一名留守儿童，5 月我回老家看望初中时的一位老师，他跟我说快 20 年过去了，老家的小孩们依然大部分都是留守儿童。
+Also in 2019, I read from an article by the founder of the Kedou School :
+According to the statistics of Stanford Rural Education Action Program (REAP), 63% of rural students in poverty-stricken areas of China have never entered a high school, let alone a university. 
+According to statistics from the National Bureau of Statistics of China, there are nearly 10 million children aged 16-18 become a new generation of migrant workers, constituting 3% of the migrant worker group.
+I used to be a left-behind child. In May, I returned to my hometown to visit a teacher in junior high school. He told me that almost 20 years have passed, and most of the children in my hometown are still left-behind children.
 
-2021 年 9 月，我坐在路边等一位老朋友来吃火锅，一位外卖小哥在我面前停下电瓶车，神情有些焦急无奈。我问他是不是赶不上送外卖了，劝他不要着急，可以和顾客打电话说明，顾客应该会理解的。他说自己送货超时，被客人退单，50 多杯奶茶，平台罚了他 500 多块钱。一向少喝饮料的我买了两杯，顺便聊聊天。小伙子今年 18 岁，刚从高中辍学，为了爱情从大连老家来到成都，这段时间找各种工作，被骗钱。现在又要找工作，又担心以后结不了婚，很焦虑。于是我给他推荐到 freeCodeCamp 学编程，加微信，把网址发给他。他说太好了，我听过编程，我想学！他要出发的时候，我跟他说你的人生才刚刚开始，安全最重要，不要学坏，好好学个技能，坚持不了可以回家去。那晚回家的路上，我想：我们不是一开始就有这么好的状态的，我 18 岁的时候，好像也是这样急着想看未来的人生是什么样。这座城市里有那么多年轻的外卖员从我们身边匆匆经过，他们有机会停下来和谁聊聊自己的焦虑吗？
+In September 2021, I was sitting on the side of the road waiting for an old friend to have hot pot together. A takeaway courier stopped his car in front of me, looking a little worried and helpless.
+I asked him if he couldn't keep up with the delivery, and advised him not to worry, he could call the customer to explain, the customer should understand.
+He said that he already missed the deadline, and the customer canceled the order for more than 50 cups of milk tea. The platform punished him for more than 500 yuan.
+Even though I usually did not drink milk tea, I bought two cups from him and chatted with him. 
+The young man is 18 years old and just dropped out of high school. He came to Chengdu from his hometown in Dalian for love.
+During the time, he was looking for various jobs and was scammed for money.
+Now that he is looking for the next job, he is worried that he will not be able to get married in the future, and he is very anxious.
+So I recommended him to freeCodeCamp to learn programming. I added his WeChat ID and sent him the website.
+He said it was great, and he had heard of programming and wanted to learn!
+When he was about to set off, I told him that his life has just begun, and safety is the most important thing. Don't learn bad things, learn a skill. If you can't persist, you can go back to your hometwon.
+On the way home that night, I thought: We weren't in such a good state at the beginning. When I was 18, I seemed to be so anxious to see what my future life would be like. With so many young couriers hurried past us in this city, do they have a chance to stop and talk about their anxiety?
 
-在看到、听到这些事情的时候，我总是觉得难过而无奈：这个世界上有很多需要帮助的人们，我可以倾听一些人、支持一些人，可是无法帮助所有人。
+When I see and hear these things, I always feel sad and helpless: there are many people in this world who need help. I can listen to some people and support some of them, but I can't help everyone.
 
-在[《一诺：我们看到的，往往是片面的事实》][6]这篇文章里，[一土学校][7]创始人、曾任比尔和梅琳达·盖茨基金会北京代表处首席代表的李一诺写道：
+In the article [Yi Nuo: What We See Is Often a One-Sided Fact][6], Li Yinuo (李一诺), founder of [ETUSchool][7] and former chief representative of the Beijing Representative Office of the Bill and Melinda Gates Foundation, wrote:
 
-> 我们听到的都是谁的声音？我认为是那些能发声者的声音。但是大量社会问题所冲击的，往往是那些无法发声的人。
+> Whose voice are we hearing? I think it is the voice of those who can speak. However, a large number of social problems are often impacted by those who cannot speak up.
 
-好在，在世界各地那么多角落，我们有那么多善良的朋友愿意去倾听那些没有机会发声的人的声音，然后义无反顾投身于关心难民、农民工、孤寡老人、留守儿童…...
+Fortunately, in so many corners of the world, we have so many kind friends who are willing to listen to the voices of those who have no chance to speak up, and then devote themselves to caring for refugees, migrant workers, longly old people, and left-behind children...
 
-在讨论我的工作重心的时候，Quincy 曾经问过我一句话：你是只想帮助成都的人、四川的人，还是想帮助世界各地的人？
+When discussing the focus of my work, Quincy once asked me: Do you want to help only people in Chengdu, Sichuan, or people all over the world?
 
-我很赞同 Quincy 说的：
+I agree with what Quincy said:
 
-> freeCodeCamp will help people at scale. 我们的资源有限，我们希望帮助很多人一点点，而不是帮助很少人很多。
+> freeCodeCamp will help people at scale. Our resources are limited, and we want to help many people a little bit, not a few people a lot.
 
-事实上，一个真正渴望改变的人，只需要我们给她一点点帮助、指引，她就会沿着改变的路走下去，并且，有时候她还会转过身来指引别的人。
+In fact, a person who really desires to change, only needs a little help and guidance from us. And they will follow the path to change. Sometimes, they will also turn around to guide others.
 
-我很喜欢这篇文章[《 从客服到社会企业家丨尼日利亚女孩的自学编程之旅》][8]。主人公出生在资源匮乏的尼日利亚东部的农村，那里常年没有供电，人们也没有机会接触互联网。她的母亲很清楚一个农村女孩的唯一出路就是接受教育，所以艰辛地供她接受了高等教育。她毕业后在一家企业里做客服代表。公司改组，她面临被解雇，于是她决定学习编程。因为支付不起学费，她搜索到可以在 freeCodeCamp 免费学习。后来，她成为开发者，改善了自己的工作和生活，并且创办了一家社会企业 GreyAfricaHub，帮助其他年轻人学习编程，降低国家的失业率。
+I like this article: [How I became a programmer with the #100DaysofCode challenge][8]. The protagonist was born in a rural village in eastern Nigeria where resources are scarce, where electricity is not available all the year round, and people have no access to the Internet. Her mother knew that the only way out for a rural girl was to get an education, so she worked hard for her to receive higher education. After graduation, she worked as a customer service representative in a company. The company was reorganized and she had been fired, so she decided to learn programming. Because she could not afford the tuition, she found that she could study for free at freeCodeCamp. Later, she became a developer, improved her work and life, and founded a social enterprise, GreyAfricaHub, to help other young people learn programming and reduce the country's unemployment rate.
 
 ![](https://chinese.freecodecamp.org/news/content/images/2021/11/image-13.png)
 
-GreyAfricaHub 为当地年轻人提供免费的 Web 设计培训课程
+GreyAfricaHub provides free web design training courses for local young people
 
-这样的学员故事，在 freeCodeCamp 社区里有很多。比如这位大学校园里的保安，[通过自学编程转行成为后端开发者][9]，给家人创造了更好的生活，并且创办了一个编程社区 Open Source Weekends 帮助更多人。
+There are many such student stories in the freeCodeCamp community.
+For example, a security guard on the university campus [switched his career to become a back-end developer through self-taught programming][9], created a better life for his family, and founded a programming community Open Source Weekends to help more people.
 
 ![](https://chinese.freecodecamp.org/news/content/images/2021/11/image-14.png)
 
-马德里校园的社交媒体账号发消息祝贺这位保安成功转行
+The social media account of the Madrid campus sent a message to congratulate the security guard for his successful career change
 
-**当我们想要帮助一个庞大的社区的时候，work smart（有智慧地工作）比 work hard（努力地工作）更重要。**
+**When we want to help a large community, work smart is more important than work hard.**
 
-有意义的事情太多了，比如写一篇文章、录制一个视频教程、在论坛回答一位学员的问题、在 GitHub 提交一个 issue 或者 pull request、和一位志愿贡献者聊天、跟合作伙伴讨论活动策划、向一位大学老师介绍我们在做什么......
+There are too many meaningful things to do. Writing an article, recording a video tutorial, answering a question on the forum, submitting an issue or pull request on GitHub, chatting with a volunteer contributor, discussing activities with partners, and introducing to a university teacher what we are doing...
 
-如何从千丝万缕的细节中整理出事务的优先级，做当下最正确的事情？这是一位社区 leader 需要训练的能力。
+How to sort out the priority of all affairs from the inexhaustible details and do the most correct thing at the moment? This is the ability that a community leader needs to be trained.
 
-**而持续做正确的事情，就会有越来越多的伙伴给我们支持，路也越来越开阔。**
+**And if we continue to do the right thing, more and more people will support us, and the road will become wider and wider.**
 
-特别想感谢华东师范大学王伟老师邀请我们参加[第一届“中国开源教育研讨会][10]。我们很荣幸能作为唯一来自草根社区的代表与来自全国十多所大学、科研院所以及国内外大企业的老师们交流，受益匪浅。
+Thanks Mr. Wang Wei from East China Normal University for inviting us to participate in the [First Symposium on Open Source Education in China (SOSEC)][10]. 
+We are honored to be the only representative from the grassroots community to communicate with people from more than a dozen universities, scientific research institutes, and large domestic and foreign companies across the country and benefit a lot.
 
 ![](https://chinese.freecodecamp.org/news/content/images/2021/11/image-24.png)
 
-水歌从 2018 年起带领 freeCodeCamp 成都社区，在会议上分享开放社群如何帮助青年成长
+Shui Ge (水歌), who has led the freeCodeCamp Chengdu community since 2018, was sharing at the meeting how open communities can help young people to grow
 
 ![](https://chinese.freecodecamp.org/news/content/images/2021/11/image-25.png)
 
-我在会议上介绍 freeCodeCamp
+I was introducing freeCodeCamp at the conference
 
-会议是在位于康定的四川民族学院举办的。我看到会场有很多学生，非常开心，因为总是希望自己的分享能给年轻人们一些启发。一些朋友跟我说他们喜欢我说的一句话：
+The conference was held at the Sichuan Nationalities Institute in Kangding. I am happy to see that there are many students in the conference, because I always hope that my sharing can inspire young people. Some friends told me one thing I said that they liked most:
 
-> 给世界带来美好改变，不是一个人做很多，而是每个人都做一点点。
+> Bringing a beautiful change to the world is not about one person doing a lot, but everyone doing a little bit.
 
-晚餐时分，华东师范大学周校长引用了我们社区水歌在演讲中的话：
+At dinner, President Zhou of East China Normal University quoted the words of our community Shui Ge in his speech:
 
-> 开放社群是在家庭、学校、社会教育之外，青年人自我教育的空间。
+> The open community is a space for young people to educate themselves in addition to family, school, and social education.
 
-周校长说高校应该积极配合给青年人提供这样的空间。感谢认可！
+President Zhou said that colleges and universities should cooperate to provide such space for young people. Thanks for the recognition!
 
 ## “实务学堂就是离我们最近的开源社区”
 
@@ -403,35 +435,33 @@ GreyAfricaHub 为当地年轻人提供免费的 Web 设计培训课程
 
 我们已经在和一些关注从小学、初中、高中到大学不同阶段的青年发展的个人或组织协作去策划一些美好行动。这一切需要长期的投入，不急，我们用很多年去做这件事。
 
-## 我是为什么而生
+## What I Was Born For
 
-最近，在和一位努力“让音乐离生活更近一点”的音乐人朋友聊天时，我说“你就是为 ‘music for good 音乐向善’这件事而生的”。
+Recently, I was chatting with a musician friend who is trying to "bring music closer to life". I said to him, "You were born for 'music for good'."
 
-然后我就想：我是为什么而生呢？
+Then I thought: What I was born for?
 
-这是本文的最后一个故事，我们终于绕到了这个终极问题。
+This is the last story of this article, and we finally reach to this ultimate question.
 
 洋洋洒洒写了几千字，到这里我就卡住了，不知道怎么写下去，于是翻书、刷知乎、思考......三个小时后，突然明白：想这个问题，就还挺耽误事儿的（微笑脸）。
 
 我知道很多来到社区中的年轻朋友是抱着这个问题来的，那我说说现在想到的一些关键词吧。
 
-### 从做中学
+### Learning by Doing
 
-2015 年，我在一位创业者朋友的办公室看到维珍品牌的创始人说的一段话：
+In 2015, in the office of an entrepreneur friend, I saw a message from the founder of Virgin:
 
 > If somebody offers you an amazing opportunity, but you are not sure you can do it, say yes – then learn how to do it later! —— Richard Branson
 
-“如果有人给你提供一个很棒的机会，你不知道自己是否能胜任，那就先接受它——然后再去学如何胜任。”
+I stood by that wall and watched it for a long time, and then I kept this sentence in my heart and practiced it in the same way. This is similar to the learning philosophy advocated by our freeCodeCamp community—learning by doing.
 
-我当时站在那堵墙边看了好久，后来一直把这句话放在心里，也这么去实践。这和我们 freeCodeCamp 社区倡导的学习理念——learning by doing 从做中学——类似。
-
-**如果我们总是感到迷茫，那可能是因为我们做得还不够多。**
+**If we always feel confused, it may be because we have not done enough.**
 
 ![](https://chinese.freecodecamp.org/news/content/images/2021/11/WechatIMG3515.jpeg)
 
-我喜欢自己的这张照片，它令我感觉平静，2019 年拍摄于成都，我给它取名为“芳·华”
+I like this photo of myself. It makes me feel calm. It was taken in Chengdu in 2019 and I named it "Fang Hua (芳·华)"
 
-### 接纳自己
+### Accept Yourself
 
 2019 年，在五天的 ChangemakerXchange 峰会结束前的分享会上，我说：
 
@@ -441,13 +471,13 @@ ChangemakerXchange 的官方介绍是“世界上首屈一指的跨越欧洲、�
 
 在互相交换 sugar cube 临别赠言的时候，我收到的其中两条是：
 
-> 你是我见过的最可爱的人，你教会我做自己，在脆弱中寻找勇气。
+> You are the cutest person I have ever seen, and you taught me to be myself and find courage in fragility.
 
-> 你是这届峰会最出色的成员，你就像绽放了一样美丽。
+> You are the most outstanding member of this summit, and you are as beautiful as blooming.
 
-**接纳自己，是人生的必修课。**
+**Accepting yourself is a required course in life.**
 
-### 这个世界挺好的
+### This World Is Pretty Good
 
 2019 年，我看到[这篇文章][19]讲述了发生在美国底特律的一个故事：
 
@@ -457,7 +487,7 @@ ChangemakerXchange 的官方介绍是“世界上首屈一指的跨越欧洲、�
 
 > 越来越觉得这个世界已经很好，不需要所谓的“改变世界的人”，而且也没有人能改变世界。我们需要改变的是自己。当我们更习惯于把对他人的喜爱、感激真诚自然地表达出来，就是在向美好世界更进一步。这样的行动很简单，但是又好像很难。愿我们都温柔地对待这个世界，也被世界温柔以待。
 
-**嗯，这个世界挺好的，我们不必忧心忡忡地要去改变什么，放松一点去体验和感受就好。**
+**Well, the world is pretty good. We don't have to worry about what we are going to change, just relax and experience and feel it.**
 
 The story is over.
 
@@ -480,8 +510,8 @@ Thanks for reading.
 [5]: https://changemakerxchange.org/
 [6]: https://mp.weixin.qq.com/s/1mmgOjWHIBmJtFOHxqwonQ
 [7]: https://www.etuschool.org/
-[8]: https://chinese.freecodecamp.org/news/from-a-customer-service-representative-my-self-taught-coding-journey/
-[9]: https://chinese.freecodecamp.org/news/a-security-guard-from-self-taught-coder-to-professional-backend-developer/
+[8]: https://www.freecodecamp.org/news/how-i-became-a-programmer-with-the-100daysofcode-challenge-19b01f17bca1/
+[9]: https://www.freecodecamp.org/news/from-self-taught-coder-to-professional-backend-developer-my-long-winding-road-d8f7c428b637/
 [10]: https://mp.weixin.qq.com/s/Epgz0GeiAbDlDXgkh8Sw9w
 [11]: http://www.ginkgofoundation.org/
 [12]: http://mp.weixin.qq.com/s?__biz=MzAxNDUyMzcwMQ==&mid=2651402903&idx=1&sn=335209bbbf2546fadfc002545f557102&chksm=806f9ecdb71817db95183dd5afb64d2b5c777eacb9a8c2f843006f12edcfa82628eb2d4087cc&scene=21#wechat_redirect

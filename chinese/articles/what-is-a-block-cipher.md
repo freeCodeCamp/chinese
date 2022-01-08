@@ -1,71 +1,69 @@
 > -  原文地址：[Cipher Definition – What is a Block Cipher and How Does it Work to Protect Your Data?](https://www.freecodecamp.org/news/what-is-a-block-cipher/)
 > -  原文作者：[Megan KaczanowskiMegan Kaczanowski](https://www.freecodecamp.org/news/author/megansdoingfine/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![Cipher Definition – What is a Block Cipher and How Does it Work to Protect Your Data?](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/block-and-stream-cipher.jpg)
+![密码的订阅-什么是区块密码，它是如果保护你的数据](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/block-and-stream-cipher.jpg)
 
-Cryptography is the science of using codes and ciphers to protect messages. And encryption involves encoding messages so that only the intended recipient can understand the meaning of the message. It's often used to protect data in transit.
+密码学是使用代码和密码来保护信息的学科。加密涉及对信息进行编码，以便预定的接收者能够知道信息的含义。它经常被用来保护传输的数据。
 
-Encryption is a two way function – that is, you need to be able to undo whatever scrambling you’ve done to the message.
+加密是一个双向的功能-也就是说，你能消除任何对信息进行扰乱。
 
-Today, there are two basic types of algorithms — symmetric and asymmetric.
+今天，有两种基本类型的基本算法-对此和非对称。
 
-Symmetric algorithms are also known as ‘secret key’ algorithms, and asymmetric algorithms are known as ‘public key’ algorithms.
+对此算法也被称为`secret key`(秘钥) 算法，而非对称算法则被称为`public key`(公钥)算法。
 
-The key difference between the two is that symmetric algorithms use the same key for encryption and decryption, while asymmetric algorithms use different keys for encryption and decryption.
+两者的关键区别在于，对称算法使用相同的密钥进行加密和解密，而非对称算法使用不同的密钥进行加密和解密。
 
-For a general overview of cryptography and the difference between symmetric and asymmetric ciphers, check out [this article](/news/how-to-send-secret-messages/).
+关于密码学的一般概述以及对称和非对称密码的区别，请查看[本文](/news/how-to-send-secret-messages/).
 
-## What Principles are Important When You're Developing a Cipher?
+## 当你开发一个密码时，哪些原则时重要的？
 
-Kerckhoff's principle states that a cryptographic system should be secure, even if all the details (other than the key) are known publicly. Claude Shannon later rewrote this message as 'The enemy knows the system.'
+克尔克霍夫原则指出，一个加密系统应该是安全的，即使所有的细节(key除外)都是公开的。克劳德-香农后来将这一说成 `敌人知道系统`。
 
-Essentially, a very well designed system should be able to send secret messages even if an attacker can encrypt and decrypt their own messages using the same algorithm (with a different key). The security of the encrypted message should depend entirely on the key.
+从本质上讲，一个设计得非常好得系统应该能够发送加密信息，即使攻击者能使用相同得算法(用不同得密钥)加密和解密自己的消息。加密信息的安全性应该完全取决于密钥。
 
-Additionally, in order to hinder statistical analysis (attempts to break an encryption algorithm), a good cryptographic system should employ the principles of confusion and diffusion.
+此外，为了阻碍统计分析(试图破解加密算法)，一个好的密码系统应该采用混乱和扩散的原则。
 
-Confusion requires that the key does not relate to the ciphertext in a simple manner. Each character of the ciphertext should depend on multiple parts of the key. The goal is to make it very difficult for an attacker to determine the key from the ciphertext.
+混乱要求密钥不能以简单的方式与加密后产生的文本相关联性。加密后产生的文本的每个字符都应取决于密钥的多个部分。其目的是使攻击者很难从加密后产生的文本中确定密钥。
 
-Diffusion means that if a single character of the plaintext is changed, then several characters of the ciphertext should change. And if a single character of the ciphertext is changed, then several characters of the plaintext should change.
+扩散的意思是，如果明文中的一个字符被改变，那么加密后产生的文本中几个字符也应该改变。如果加密后产生的文本中一个字符改变，那么明文中的几个字符也应该改变。
 
-Ideally, the relationship between the ciphertext and the plaintext is hidden. No diffusion is perfect (all will have some patterns), but the best diffusion scatters patterns widely, even scrambling several patterns together.
+理想情况下，加密后产生的文本和明文之间的关系是隐藏的。没有任何扩散是完美的(都会有一些模式)，但最好的扩散是将模式广泛扩散，甚至是几个模式一起使用。
 
-Diffusion makes patterns hard for an attacker to spot, and requires the attacker to have more data in order to mount a successful attack.
+扩散使攻击者难以发现模式，并要求攻击者拥有更多的数据，以发起成功的攻击。
 
-If you want to read up on this a bit more, check out [A Mathematical Theory of Cryptography](https://www.iacr.org/museum/shannon/shannon45.pdf).
+如果你想多读一点这方面的内容，可以查看[密码学的数学理论](https://www.iacr.org/museum/shannon/shannon45.pdf).
 
-## What are Block and Stream Ciphers?
+## 什么是块和流加密(Stream Ciphers)？
 
-Both block and stream ciphers are symmetric key ciphers (like DES, RCx, Blowfish, and Rijndael AES). Block ciphers convert plaintext to ciphertext block by block, while stream ciphers convert one byte at a time.
+块和流加密都是对称密钥密码(如DES、RCx、Blowfish和Rijndael AES)。块加密将明文逐块转换为密文，而流加密则每次转换为一个字节。
 
-Most modern symmetric algorithms are block ciphers, though the block sizes vary (such as DES (64 bits), AES (128, 192, and 256 bits), and so on).
+大多数现代对称算法都是`block ciphers`(块加密)，尽管块大小不同(如EDS(64位)，AES(128,192和256位)，等等)。
 
-### What is the advantage of a stream cipher?
+### 流加密的优势是什么？
 
-Stream encryption is faster (linear in time) and constant in space. It is unlikely to propagate errors, as an error in one byte's translation won't impact the next byte.
+流加密的速度更快(时间上是线性的)，在空间上是恒定的。它不太可能发生传输错误，因为一个字节的转换错误不会影响下一个字节。
 
-However, there's little diffusion as one plaintext symbol is directly translated to one ciphertext symbol. Also, the ciphertext is susceptible to insertions or modifications. If an attacker is able to break the algorithm, they may be able to insert text which looks authentic.
+当明文的数量未知时(如音频或视频流)，或者极端的性能要求下(如非常高速的连接，或者需要非常有效的和紧凑的设备，如智能卡)，你通常会使用流加密。
 
-You typically use a stream cipher when the amount of plaintext is unknown (like audio or video streaming), or when extreme performance is important (like with very high speed connections, or for devices which need to be very efficient and compact, like smart cards).
+流加密的工作原理是由密钥生成一系列的伪随机字节(对于给定的密钥，加密和解密过程中的使用相同的伪随机字节)。不同的密钥会产生不同的字节串。
 
-A stream cipher works by generating a series of pseudorandom bytes which depend on the key (for any given key, the series of bytes is the same for encryption and decryption). Different keys will produce different strings of bytes.
+为了加密数据，明文字节与伪随机字节串进行XOR(异或操作)。为了解密，将加密后产生的文本与相同的伪随机字节串进行XOR(异或操作)，就可以看到明文。
 
-In order to encrypt data the plaintext bytes are XORed with the string of pseudorandom bytes. To decrypt, the ciphertext is XORed with the same string in order to see the plaintext.
+### 块加密的优势是什么？
 
-### What is the advantage of a block cipher?
+块加密有很高的扩散性(一个明文符合被扩散到几个密码文本符号中)。攻击者要插入符号而不被发现是很困难的，因为他们不可能轻易将符号插入到块的中间。
 
-A block cipher has high diffusion (information from one plaintext symbol is spread into several cipher-text symbols). It is also fairly difficult for an attacker to insert symbols without detection, because they can't easily insert them into the middle of a block.
+然而，它比流加密慢(加密/解密之前需要传输整个块)，如果发生错误，它可以传染到这个块，破坏整个块。
 
-However, it is slower than a stream cipher (an entire block needs to be transmitted before encryption/decryption can happen) and if an error does occur, it can propagate throughout the block, corrupting the entire section.
+当你知道传输数据规模时，块加密是一个更好的选择，例如在传输文件。
 
-Block ciphers are a better choice when you know the transmission size – such as in file transfer.
+## 块加密的常见模式是什么？
 
-## What are the common modes of Block Ciphers?
+为了对多块的数据进行加密，有几种`模式`已经被开发出来。这些模块将单块原则用于更长的消息。
 
-In order to encrypt data which is longer than a single block, there are several 'modes' which have been developed. These describe how to apply the single block principles to longer messages.
-
-There are 5 confidentiality modes for block ciphers. Some of these modes require an initialization vector (IV) in order to function.
+块加密有5种保密模式。其中一些模式需要一个初始化向量(IV) 才能发挥作用。
 
 ### What is an Initialization Vector (IV)?
 

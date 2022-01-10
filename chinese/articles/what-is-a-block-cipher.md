@@ -65,49 +65,48 @@
 
 块加密有5种保密模式。其中一些模式需要一个初始化向量(IV) 才能发挥作用。
 
-### What is an Initialization Vector (IV)?
+###  什么是Initialization Vector (IV  初始化变量)?
 
-An IV is essentially just another input (in addition to the plaintext and the key) used to create ciphertext. It's a data block, used by several modes of block ciphers to randomize encryption so that different cipher text is created even if the same plain text is repeatedly encrypted.
+IV的本质只是用于创建密文的另一个输入(除了明文和密钥)。它是一个数据块，被几种模式的块加密用来随机化加密，这样即使相同的明文被重复加密，也会产生不同的密文。
 
-It usually does not need to be secret, though it cannot be re-used. Ideally, it should be random, unpredictable, and single-use.
+它通常不是秘密，尽管它不会被重复使用。在理想情况下，它应该是随机的，不可预测和一次性使用。
 
-Two of the same messages encrypted with the same key, but different IVs, will result in different ciphertext. This makes an attacker's job more difficult.
+两个相同的信息用相同的密钥加密，但不同的IV，将导致不同的密文。 这使进行攻击更加困难。
 
-### Electronic Code Book Mode (ECB)
+### Electronic Code Book Mode (ECB 电子代码本模式)
 
-There is a fixed mapping between input blocks of plaintext and output blocks of ciphertext (essentially like an actual code book where ciphertext words directly relate to plaintext words).
+在明文的输入块和密文输出块有一个固定的映射(基本上就像一个实际的密码本，密文的字与明文直接相关)。
 
-ECB applies the cipher function independently to each block of plaintext to encrypt it (and the inverse function to each block of ciphertext to decrypt it). This means that CBC can encrypt and decrypt multiple blocks in parallel (since they don't depend on each other), speeding up the process.
+ECD对每个明文块应用加密函数进行加密(对每个密文块应用逆向函数进行解密)。这意味着CBC可以并行地加密和解密多个块(因为它们相互不依赖)，加快了处理进程。
 
 ![](https://megankaczanowski.com/content/images/2020/12/Screen-Shot-2020-12-31-at-8.22.20-PM.png)
 
 https://en.wikipedia.org/wiki/Block\_cipher\_mode\_of\_operation
 
-For this mode to work correctly, either the message length needs to be a multiple of the block size or you need to use padding for the length condition to be met.
+要使这种模式正常工作，要么信息长度是块大小的整数倍，要么你需要使用填充来满足长度条件。
 
-Padding is essentially extra data that's added in order to ensure that the block size is met. With this mode, given the same key, the same plaintext block will always result in the same ciphertext block. That makes it vulnerable to attack, so this mode is rarely used (and should be avoided).
+填充实质上为了满足块大小而添加的额外数据。在这种模式下，给定相同的密钥，相同的明文块将总是导致相同的密文块。这是它很容易受到攻击，所以这种模式很少使用(应该避免使用)。
+### Cipher Block Chaining Mode (CBC  加密块链模式)
 
-### Cipher Block Chaining Mode (CBC)
+这种加密模式将新的明文块与前一个加密区`关联(chains)`或者结合起来，这需要为第一个块提供一个IV。IV不需要加密，但它要不可预测。
 
-This mode 'chains' or combines new plaintext blocks with the previous ciphertext block when encrypting them which requires an IV for the first block. The IV doesn't need to be secret, but it needs to be unpredictable.
+CBC将第一个明文块与IV密文块进行XOR(异或)，以创建第一个密文块。使用ECB模式将IV作为一个短消息单独发送。
 
-CBC exclusive ors (XORs) the first block of plaintext with the IV ciphertext block to create the first ciphertext block. The IV is sent separately as a short message using ECB Mode.
+然后，CBD对该块使用加密算法，产生第一个密文块。然后，CBC将此密文块与第一个文明块进行XOR(异或)，并应用加密算法产生第二个密文块，如果反复，直到消息的最后。
 
-Then, CBC applies the encryption algorithm to the block, creating the first block of ciphertext. CBC then XORs this block with the second plaintext block and the applies the encryption algorithm to produce the second ciphertext block, and so on until the end of the message.
+为了解密，CBC做了想法的工作--第一个密文块使用反向的加密算法，然后将该块与IV进行XOR(异或),得到第一个明文块。
 
-In order to decrypt the message, CBC does the reverse - applies the inverse of the encryption algorithm to the first ciphertext block and then XORs the block with the IV to obtain the first plaintext block.
-
-CBC then applies the inverse of the encryption algorithm to the second ciphertext block and XORs the block with the first ciphertext block to obtain the second plaintext block. This process continues until the message is decrypted.
+然后，CBC将加密算法的逆运算应用于第二个密文块，并将该块与第一密文块进行XOR，得到第二个明文块。这个过程将一直持续到消息被解密。
 
 ![](https://megankaczanowski.com/content/images/2020/12/Screen-Shot-2020-12-31-at-8.22.37-PM.png)
 
 https://en.wikipedia.org/wiki/Block\_cipher\_mode\_of\_operation
 
-Because each input block (except the first) relies on the previous block being encrypted, CBC can't perform encryption in parallel. However, since the decryption requires XORing with the (immediately available) ciphertext blocks, it can be done in parallel. CBC is one of the most commonly used modes.
+因为每个输入块(除了第一个)都依赖于前一个块被加密，CBC不能并行地进行加密。然而，由于解密需要(立即可用)密文块进行XOR，所以它可以并行进行。CBC是最常用的模式之一。
 
-Similarly to ECB, for this mode to work correctly, either the message length needs to be a multiple of the block size or you need to use padding for the length condition to be met.
+于ECB相似，要使用这种模式正常工作，消息的长度需要是块大小的两倍，不足要进行填充来满足长度。
 
-### Cipher Feedback Mode (CFB)
+### Cipher Feedback Mode (CFB 加密反馈模式)
 
 CFB is similar to CBC, but instead of using the entire previous ciphertext block to compute the next block, CFB uses a fraction of the previous block.
 

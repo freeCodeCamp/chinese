@@ -26,7 +26,9 @@
 -   服务关闭，或软件成为废弃软件。
 
 
+
 例如:
+
 -   LastPass将免费用户限制在一种类型的设备上。([更多信息](https://wikipedia.org/wiki/LastPass#Reception))
 -   ArtStation被Epic Games收购。([更多信息](https://wikipedia.org/wiki/Epic_Games#Acquisitions))
 -   Adobe转向软件即服务的商业模式(SaaS)。([更多信息](https://wikipedia.org/wiki/Adobe_Creative_Cloud#Criticism))

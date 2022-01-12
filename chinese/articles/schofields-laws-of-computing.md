@@ -113,7 +113,6 @@ GDPR的第20条是 "数据可迁移性权利"，即有办法将你的个人数�
 
 加强安全往往是不方便的，但这些是别人在寻找破坏账户时也不方便。
 
-
 -   [暴力破解](https://wikipedia.org/wiki/Brute-force_attack) – 猜短密码，因为它破解得更快。
 -   [伪造凭证](https://wikipedia.org/wiki/Credential_stuffing) – 押注于密码的重复使用，因为这让密码使用者比管理多个密码更方便。
 -   [字典攻击](https://wikipedia.org/wiki/Dictionary_attack) – 猜常用密码，因为它对于密码使用者更容易回忆。

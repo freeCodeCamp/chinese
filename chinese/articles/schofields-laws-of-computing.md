@@ -25,14 +25,15 @@
 -   涨价或转变为一个不太有利的商业模式。
 -   服务关闭，或软件成为废弃软件。
 
-例如:
 
+例如:
 -   LastPass将免费用户限制在一种类型的设备上。([更多信息](https://wikipedia.org/wiki/LastPass#Reception))
 -   ArtStation被Epic Games收购。([更多信息](https://wikipedia.org/wiki/Epic_Games#Acquisitions))
 -   Adobe转向软件即服务的商业模式(SaaS)。([更多信息](https://wikipedia.org/wiki/Adobe_Creative_Cloud#Criticism))
 -   Megaupload被关闭并被管理机构查封。([更多信息](https://wikipedia.org/wiki/Megaupload#2012_indictments_by_the_United_States))
 
 数据可移植性是软件和服务的一个基本特征。你的主要解决方案需要避免供应商的锁定或必须为迁移过程做昂贵的预算的。
+
 
 ## 什么是供应商锁定？
 

@@ -1,77 +1,77 @@
 > -  原文地址：[How to Perform CRUD Operations using React, React Hooks, and Axios](https://www.freecodecamp.org/news/how-to-perform-crud-operations-using-react/)
 > -  原文作者：[Nishant Kumar](https://www.freecodecamp.org/news/author/nishant-kumar/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![How to Perform CRUD Operations using React, React Hooks, and Axios](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/React-CRUD-Operations-using-React-and-React-Hooks.png)
+![如何使用 React、React Hooks 和 Axios 执行 CRUD 操作](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/React-CRUD-Operations-using-React-and-React-Hooks.png)
 
-If you're working with React, it can be quite difficult to understand and implement API Requests.
+如果你正在使用React，理解和实现API请求可能是相当困难的
 
-So in this article, we'll learn how it all works by implementing CRUD Operations using React, React Hooks, React Router, and Axios.
+所以在这篇文章中，我们将通过使用React、React Hooks、React Router和Axios实现CRUD操作来学习这一切。
 
-Let's dive in.
+让我们深入了解一下。
 
-## **How to Install Node and npm**
+## **如何安装Node和npm**
 
-First of all, let's install Node in our system. We'll mainly use it to execute our JavaScript code.
+首先，让我们在系统中安装Node。我们将主要用它来执行我们的JavaScript代码。
 
-To download Node, go to [https://nodejs.org/en/](https://nodejs.org/en/).
+去官方网站下载Node,  [https://nodejs.org/en/](https://nodejs.org/en/).
 
-You'll also need **the node package manager**, or npm, which is built on Node. You can use it to install packages for your JavaScript apps. Fortunately it comes with Node, so you don't need to download it separately.
+你还需要**node包管理器**，如npm，它是内建在Node上的。你可以用它来为你的JavaScript应用程序安装包。幸运的是，Node自带npm，所以你不需要单独下载它。
 
-Once both of them are finished, open your terminal or command prompt and type `node -v`. This checks which version of Node you have.
+一旦它们都完成了，打开你的终端或命令提示符，输入`node -v`。这将检查你有哪个版本的Node。
 
-## **How to Create your React Application**
+## **如何创建你的React应用**
 
-To create your React application, type ****`npx create-react-app <Your app name>`**** in your terminal, or **`**npx create-react-app**react-crud`** in this case.
+为了创建你的React应用，在终端输入 ****`npx create-react-app <你的应用程序名称>`****， 或者**`npx create-react-app**react-crud`**在本例中。
 
-You'll see that the packages are being installed.
+你会看到软件包正在被安装。
 
-Once the packages are done, go into the project folder and type ****`npm start`****.
+一旦软件包安装完毕，进入项目文件夹，输入`npm start`。
 
-You'll see the default React template, like this:
+你会看到默认的React模板，像这样。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-124754.png)
 
-The default React Boilerplate Template
+默认的 React Boilerplate 模板
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-124858.png)
 
-Our App.js file
+我们的 App.js文件
 
-## **How to Install the Semantic UI Package for React**
+## **如何为React 安装 Semantic UI 包(库)**
 
-Let's install the Semantic UI React package in our project. Semantic UI is an UI library made for React that has pre-built UI components like tables, buttons, and many features.
+让我们在我们的项目中安装Semantic UI React软件包。Semantic UI是一个为React制作的UI库，它有预建的UI组件，比如表格、按钮和许多功能。
 
-You can install it using one of the commands below, depending on your package manager.
+你可以使用下面的一个命令来安装它，这取决于你的包管理器。
 
 ```bash
 yarn add semantic-ui-react semantic-ui-css
 ```
 
-For Yarn Package Manager
+对于使用 Yarn 包管理器
 
 ```bash
 npm install semantic-ui-react semantic-ui-css
 ```
 
-For NPM package Manager
+对于使用 NPM 包管理器
 
-Also, import the library in your app's main entry file, which is index.js.
 
+同时，在你的应用程序的主入口文件中导入该库，也就是index.js。
 ```js
 import 'semantic-ui-css/semantic.min.css'
 ```
 
-Paste this in your index.js file
+在你的index.js文件中粘贴上面一行内容。
 
-## **How to Build your CRUD Application**
+## **如何构建你的CRUD应用**
 
-Now, let's start building our CRUD Application using React.
+现在，让我们开始使用React构建我们的CRUD应用。
 
-First, we'll add a heading to our application.
+首先，我们要给我们的应用程序添加一个标题。
 
-In our app.js file, add a heading like this:
+在我们的app.js文件中，添加一个标题，像这样。
 
 ```
 import './App.css';
@@ -87,11 +87,11 @@ function App() {
 export default App;
 ```
 
-Adding a heading to our application
+在我们的应用程序中添加一个标题
 
-Now, let's make sure it's in the center.
+现在，让我们确保它居中。
 
-Give the parent div a classname of main. And in the App.css file, we will use Flexbox to center the header.
+给父级div一个classname，即main。在App.css文件中，我们将使用Flexbox来使标题居中。
 
 ```
 import './App.css';
@@ -107,7 +107,7 @@ function App() {
 export default App;
 ```
 
-app.js with className of main in the parent div
+app.js文件，在父 div 中的 className 为main的css定义。
 
 ```
 .main{
@@ -118,13 +118,13 @@ app.js with className of main in the parent div
 }
 ```
 
-Our app.css file
+我们的 app.css 文件
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-130340.png)
 
-Now our heading in perfectly centered.
+现在我们的标题已经完全居中了。
 
-So it looks a bit better, we need to make it bolder and add some cool fonts. To do this, we'll use heading tags around our header like this:
+为了让它看起来更好一些，我们需要使它更大胆，并添加一些很酷的字体。要做到这一点，我们将在我们的标题周围使用标题标签，像这样。
 
 ```
 import './App.css';
@@ -140,17 +140,17 @@ function App() {
 export default App;
 ```
 
-Let's import a font from Google Font. Bead over to [https://fonts.google.com/](https://fonts.google.com/) to pick one.
+让我们从 Google Font导入一种字体. 从 [https://fonts.google.com/](https://fonts.google.com/)选择一种。
 
-Choose any font of your liking, but I will use the Montserrat font-family.
+选择任何你喜欢的字体，但我将使用Montserrat字体家族。
 
-Import the font of your choice in the App.css file, like this:
+在App.css文件中导入你选择的字体，像这样。
 
 ```
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 ```
 
-Now, let's change the font of the header.
+现在，让我们改变标题的字体。
 
 ```
 <div className="main">

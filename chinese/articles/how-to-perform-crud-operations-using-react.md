@@ -157,10 +157,9 @@ export default App;
       <h2 className="main-header">React Crud Operations</h2>
     </div>
 ```
+给 `h2`一个 `lassName` 为 `main-header`，就像上面。
 
-Give the heading tag a `lassName` of `main-header`, just like this.
-
-Then, in your App.css, add the font family:
+然后, 在你的 App.css文件, 添加font family:
 
 ```
 .main-header{
@@ -170,67 +169,67 @@ Then, in your App.css, add the font family:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-132749.png)
 
-Now you will see the changed heading.
+现在你会看到改变后的标题。
 
-## How to Create your CRUD Components
+## 如何创建你的CRUD组件
 
-Let's create four CRUD Components, which will be Create, Read, Update and Delete.
+让我们创建四个CRUD组件，它们将是创建、读取、更新和删除。
 
-In our src folder, create a folder called components. And inside this folder, create three files – create, read and update. For delete, we don't need any extra component.
+在我们的src文件夹中，创建一个名为组件的文件夹。在这个文件夹中，创建三个文件--创建、读取和更新。对于删除，我们不需要任何额外的组件。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-133242.png)
 
-Now, let's implement the Create operation.
+现在，让我们来实现这些。
 
-But for that, we need to use Mock API's. These API's will send data to the fake server that we will create, just for learning purposes.
+但为此，我们需要使用Mock API。这些API将向我们将要创建的假服务器发送数据，这只是为了学习的目的。
 
-So, head to [https://mockapi.io/](https://mockapi.io/) and create your account.
+所以, 请前往 [https://mockapi.io/](https://mockapi.io/)，创建账号。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-133456.png)
 
 MockAPI
 
-Create a project by clicking the plus button.
+通过点击`(plus)加号`按钮创建一个项目。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-133553.png)
 
-Click the plus button to create a new project
+点击`(plus)加号`按钮，创建一个新的项目。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-133702.png)
 
-Add your project name, and click the Create button.
+添加你的项目名称，然后点击`(create)创建`按钮。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-133748.png)
 
-Now, create a new resource by clicking on the NEW RESOURCE button.
+现在，通过点击 `(NEW RESOURCE)新资源` 按钮创建一个新资源。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-133847.png)
 
-It will ask you for the Resource Name, so enter the name you'd like to use.
+它将要求你提供`(RESOURCE name)资源名称`，所以输入你想使用的名称。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-134009.png)
 
-Remove the extra fields like name, avatar, or createdAt, because we won't be needing those. Then, click Create.
+删除额外的字段，`如姓名(name)、头像(avatar)或创建时间(createdAt）`，因为我们将不需要这些。然后，点击`创建(create)`。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-134140.png)
 
-Now, we have created our fake API, which I named fakeData.
+现在，我们已经创建了我们的 `fake API(假API)`，我把它命名为fakeData。
 
-Click on fakeData, and you will see the API opening up in a new tab. The database is empty right now.
+点击fakeData，你会看到API在一个新的标签中打开。现在的数据库是空的。
 
-## How to Create a Form for the Create Component
+## 如何为(create Component)创建组件创建一个表格
 
-Let's use a form from the Semantic UI library.
+让我们使用Semantic UI库中的一个表单。
 
-Head to Semantic React, and search for Form in the search bar on the left.
+前往Semantic React，在左边的搜索栏中搜索Form。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-134532.png)
 
-You will see a form like this, so click on Try it at the top left to get the code.
+你会看到一个像这样的表格，点击左上方的 `试试(Try it)`，就可以得到代码。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-134654.png)
 
-Copy this code and paste it into your Create.js file like this:
+复制这段代码并将其粘贴到你的Create.js文件中，像这样。
 
 ```
 import React from 'react'
@@ -256,7 +255,7 @@ const Create = () => (
 export default Create;
 ```
 
-Import the Create Component in your app.js file.
+在你的app.js文件中导入创建组件(Create Component)。
 
 ```
 import './App.css';
@@ -276,13 +275,13 @@ function App() {
 export default App;
 ```
 
-Just like this:
+就像这样。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-135249.png)
 
-But there is a problem here – the items are not properly aligned and the text input label colors are black. So, let's change it.
+但这里有一个问题--项目没有正确对齐，文本输入标签颜色是黑色的。所以，让我们来改变它。
 
-In the create.js file, give **Form** a className of `create-form`.
+在create.js文件中，给**Form**一个`create-form`的className。
 
 ```
 import React from 'react'
@@ -310,7 +309,7 @@ export default Create;
 
 app.js
 
-And add the following class in your App.css file:
+并在你的App.css文件中添加以下类。
 
 ```
 .create-form label{
@@ -322,9 +321,9 @@ And add the following class in your App.css file:
 
 App.css
 
-This class will target all the form field labels and apply the color whitesmoke. It will also change the font and increase the font-size.
+这个类将针对所有的表格字段标签并应用白烟的颜色。它还将改变字体并增加字体大小。
 
-Now, in our main `className`, add a flex-direction property. This property will set the direction to column, so each element in the main `className` will be horizontally aligned.
+现在，在我们的主`className`中，添加一个flex-direction属性。这个属性将设置方向为列，所以主`className`中的每个元素都将水平对齐。
 
 ```
 .main{
@@ -342,17 +341,17 @@ App.css
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-140141.png)
 
-You can see that our form looks much better now.
+你可以看到，我们的表单现在看起来好多了。
 
-Next, let's get data from the form fields into our console. For that, we will use the `useState` hook in React.
+接下来，让我们从表单字段中获取数据到我们的控制台(console)。为此，我们将使用React的`useState`钩子。
 
-In our create.js file, import `useState` from React.
+在我们的create.js文件中，从React中导入`useState`。
 
 ```
 import React, { useState } from 'react';
 ```
 
-Then, create states for first name, last name, and the checkbox. We are initializing the states as empty or false.
+然后，为名字(first name)、姓氏(last name)和复选框(checkbox)创建状态。我们将这些状态初始化为空或假。
 
 ```
 import React, { useState } from 'react';
@@ -383,9 +382,9 @@ export default function Create() {
 }
 ```
 
-You can see that this is now acting as a functional component. So, we need to change the component into a functional component. This is because we can only use hooks in functional components.
+你可以看到，这现在是作为一个功能组件。所以，我们需要把这个组件改成一个功能组件。这是因为我们只能在功能组件中使用钩子。
 
-Now, let's set up the first name, the last name, and the checkbox using the `setFirstName`, `setLastName`, and `setCheckbox` properties, respectively.
+现在，让我们分别使用`setFirstName`、`setLastName`和`setCheckbox`属性来设置名字、姓氏和复选框。
 
 ```
 <input placeholder='First Name' onChange={(e) => setFirstName(e.target.value)}/>
@@ -395,9 +394,9 @@ Now, let's set up the first name, the last name, and the checkbox using the `set
 <Checkbox label='I agree to the Terms and Conditions' onChange={(e) => setCheckbox(!checkbox)}/>
 ```
 
-We are capturing the states of first name, last name, and the checkbox.
+我们正在获得名字(first name)、姓氏(last name)和复选框(checkout)的状态。
 
-Create a function called `postData` that we'll use to send data to the API. Inside the function, write this code:
+创建一个名为`postData`的函数，我们将用它来向API发送数据。在该函数中，写下这段代码。
 
 ```
 const postData = () => {
@@ -407,15 +406,15 @@ const postData = () => {
 }
 ```
 
-We are logging the first name, last name, and the checkbox values in the console.
+我们在控制台中打印出名字(firstName)、姓氏(lastName)和复选框(checkbox)的值。
 
-On the Submit button, assign this function using an onClick event so that whenever we press the Submit Button, this function will be called.
+在(Submit button)提交按钮上，使用onClick事件调用这个函数，这样，每当我们按下提交按钮，这个函数就会被调用。
 
 ```
 <Button onClick={postData} type='submit'>Submit</Button>
 ```
 
-Here is the whole code for the _create_ file:
+这里是 _create_ 文件的全部代码。
 
 ```
 import React, { useState } from 'react';
@@ -451,31 +450,31 @@ export default function Create() {
 }
 ```
 
-Type some value in the first name and last name, and check the checkbox. Then, click the Submit button. You will see the data popping up in the console like this:
+在名字和姓氏中输入一些数值，并勾选复选框。然后，点击提交按钮。你会看到控制台中打印出的数据是这样的。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-142717.png)
 
-## How to Use Axios to Send API Requests to the Mock APIs
+## 如何使用Axios向Mock APIs发送请求
 
-Let's use Axios to send our form data to the mock server.
+让我们使用Axios来发送我们的表单数据到模拟服务器。
 
-But first, we need to install it.
+但首先，我们需要安装它。
 
-Just type `npm i axios` to install this package.
+只要输入`npm i axios`来安装这个包。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-174213.png)
 
-After the package has been installed, let's start the create operation.
+软件包安装完毕后，让我们开始(create)创建操作。
 
-Import Axios at the top of the file.
+在文件的顶部导入Axios。
 
 ```
 import axios from 'axios';
 ```
 
-Importing Axios
+导入Axios
 
-In the `postData` function, we will use Axios to send the POST request.
+在`postData`函数中，我们将使用Axios来发送POST请求。
 
 ```
 const postData = () => {
@@ -487,21 +486,21 @@ const postData = () => {
     }
 ```
 
-Sending Post Request
+发送 Post 请求
 
-As you can see, we are using axios.post. And inside axios.post, we have the API endpoint, which we created earlier. Then, we have the form fields wrapped in curly brackets.
+如你所见，我们正在使用axios.post。在axios.post中, 我们有 API endpoint(接入点 请求地址), 这是我们之前创建的。然后，我们有被大括号包裹的表单字段。
 
-When we click Submit, this function will be called and it will post data to the API server.
+当我们点击提交时，这个函数将被调用，它将向API服务器发布数据。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-174834.png)
 
-Enter your first name, last name, and check the checkbox. Click submit.
+输入你的名字(first name)，姓氏(last name)，并勾选复选框。点击提交。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-174930.png)
 
-Then if you check the API, you will get your first name, last name, and the checkbox as true, wrapped in an object.
+然后，你检查这个API的返回值，你会得到你的名字、姓氏，复选框为真的值，被包裹在一个对象中。
 
-## How to Implement the Read and Update Operations
+## 如何实现读取和更新操作
 
 To start the read operation, we need to create a Read Page. We also need the React Router package to navigate to different pages.
 

@@ -819,25 +819,25 @@ import { Link } from 'react-router-dom';
 </Link>
 ```
 
-Link for Update Button
+为更新按钮添加链接(Link)
 
-So, if we click update button, we will be redirected to the update page.
+因此，如果我们点击更新按钮，我们将被重定向到更新页面。
 
-In order to update the column data, we need their respective ID's, which comes from the APIs.
+为了更新列的数据，我们需要它们各自的ID，这从APIs获得。
 
-Create a function called `setData`. Bind it to the Update button.
+创建一个名为 "setData "的函数。将其绑定到更新按钮上。
 
 ```
  <Button onClick={() => setData()}>Update</Button>
 ```
 
-Now, we need to pass the data as a parameter to the top function.
+现在，我们需要将数据作为参数传递给上面的函数。
 
 ```
  <Button onClick={() => setData(data)}>Update</Button>
 ```
 
-And in the function at the top, log this data in the console:
+并在上面的的函数中，在控制台中打印这些数据。
 
 ```
 const setData = (data) => {
@@ -849,9 +849,9 @@ const setData = (data) => {
 
 Data in the console
 
-Click the update button in the table, and check the console. You will get the data of the respective table field.
+点击表中的更新按钮，并查看控制台。你会得到相应表字段的数据。
 
-Let's set this data into the localStorage.
+让我们把这些数据设置到localStorage中。
 
 ```
 const setData = (data) => {
@@ -863,11 +863,11 @@ const setData = (data) => {
 }
 ```
 
-Setting data in the Local Storage
+在本地存储中(Local Storage)设置数据
 
-We are destructuring our data into id, firstName, lastName, and checkbox, and then we are setting this data into local storage. You can use local storage to store data locally in the browser.
+我们正在将我们的数据解构为id、firstName、lastName和checkbox，然后我们将这些数据设置到本地存储(Local Storage)。你可以使用本地存储(Local Storage)来在浏览器中的存储数据。
 
-Now, in the Update component, we need one form for the update operation. Let's reuse the form from our Create component. Just change the name of the function from Create to Update.
+现在，在更新组件中，我们需要一个表单来进行更新操作。让我们复制(reate component)创建组件中的表单。只要把函数的名称从Create改为Update。
 
 ```
 import React, { useState } from 'react';
@@ -902,7 +902,7 @@ export default function Update() {
 
 Our update Page
 
-Create a `useEffect` hook in the Update component. We will use it to get data we previously stored in Local Storage. Also, create one more state for the ID field.
+在Update组件中创建一个`useEffect'钩子(hook)。我们将用它来获取我们之前存储在本地存储的数据。同时，为ID字段再创建一个状态(state)。
 
 ```
 const [id, setID] = useState(null);
@@ -915,7 +915,7 @@ useEffect(() => {
 }, []);
 ```
 
-Set the respective data according to your keys from Local Storage. We need to set these values in form fields. It will automatically populate the fields when the Update page loads.
+根据你的keys(字典，map 数据结构)从本地存储设置相应的数据。我们需要在表格字段中设置这些值。当更新页面加载时，它将自动填入这些字段。
 
 ```
 <Form className="create-form">
@@ -934,17 +934,17 @@ Set the respective data according to your keys from Local Storage. We need to se
             </Form>
 ```
 
-Setting the values in Form fields
+设置表格字段的值
 
-Now, if we click the Update button in Read Page, we will be redirected to the update page, where we will see all the auto populated form data.
+现在，如果我们点击阅读页面中的更新按钮，我们将被重定向到更新页面，在那里我们将看到所有根据数据自动填充的表单。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-193521.png)
 
 Update Page
 
-Now, let's create the Update request to update the data.
+现在，让我们创建更新请求来更新数据。
 
-Create a function called `updateAPIData`. Inside this function, we are going to use axios.put to send a PUT request that will update our data.
+创建一个名为`updateAPIData`的函数。在这个函数中，我们将使用axios.put来发送一个PUT请求，以更新我们的数据。
 
 ```
 const updateAPIData = () => {
@@ -956,27 +956,27 @@ const updateAPIData = () => {
 }
 ```
 
-Here, you can see we are appending the API endpoint with an id field.
+在这里，你可以看到我们在API端点上附加了一个id字段。
 
-When we click the field in the table, its ID is getting stored into Local Storage. And in the Update page, we are retrieving it. Then, we are storing that ID in the _`id`_ state.
+当我们点击表中的字段时，它的ID会被存储到本地存储器(Local Storage)中。而在更新页面，我们正在检索它。然后，我们将该ID存储在_`id`_状态中。
 
-After that, we pass the id to the endpoint. This allows us to update the field of which we are passing the ID.
+之后，我们将ID传递给端点。这使我们能够更新我们传递ID的字段。
 
-Bind the `updateAPIData` function to the Update button.
+将`updateAPIData`函数绑定到更新按钮上。
 
 ```
 <Button type='submit' onClick={updateAPIData}>Update</Button>
 ```
 
-Binding the updateAPIData to Update Button
+将updateAPIData绑定到更新按钮上
 
-Click the Update button in the table in Read page, change your last name, and then click the Update button in the Update page.
+点击读取页面中表格的更新按钮，改变你的姓氏（last name），然后点击更新页面中的更新按钮。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-194627.png)
 
 Updating the fields
 
-Go back to the Read page, or check the API. You will see your last name has been changed.
+回到 "阅读 "页面，或查看API。你会看到你的姓氏(last name)已被改变。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-194756.png)
 
@@ -986,9 +986,9 @@ The Mock API
 
 Our Read Table
 
-### The Delete Operation
+### 删除操作
 
-Add one more Button in the Read table, which we'll use for the Delete operation.
+在读取表(read table)中再添加一个Button，我们将用它来进行删除操作。
 
 ```
 <Table.Cell>
@@ -996,9 +996,9 @@ Add one more Button in the Read table, which we'll use for the Delete operation.
 </Table.Cell>
 ```
 
-Delete Button in Read Table
+读取表中的删除按钮
 
-Create a function called `onDelete`, and bind this function to the Delete button. This function will receive an ID parameter on the Delete button click.
+创建一个名为 "onDelete "的函数，并将此函数绑定到删除按钮上。这个函数将在点击删除按钮时接收一个ID参数。
 
 ```
 const onDelete = (id) => {
@@ -1016,13 +1016,13 @@ const onDelete = (id) => {
 }
 ```
 
-Deleting fields from the API
+从API中删除字段
 
-Click the Delete button and check the API. You will see the data has been deleted.
+点击删除按钮并检查API。你会看到数据已经被删除。
 
-We need to load the table data after it has been deleted.
+我们需要在表被删除后获得该表的数据。
 
-So, create a function to load the API data.
+因此，创建一个函数来获得API数据。
 
 ```
 const getData = () => {
@@ -1033,9 +1033,9 @@ const getData = () => {
 }
 ```
 
-Getting the API data
+获取API数据
 
-Now, in the `onDelete` function, we need to load the updated data after we delete a field.
+现在，在`onDelete`函数中，我们需要在删除一个字段后获得更新的数据。
 
 ```
 const onDelete = (id) => {
@@ -1046,37 +1046,37 @@ const onDelete = (id) => {
 }
 ```
 
-Loading Updated Data after Delete a field
+删除一个字段后获得更新数据
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-201047.png)
 
-Read table
+读取表格
 
-So, now if we click Delete on any field, it will delete that field and refresh the table automatically.
+因此，现在如果我们在任何字段上点击Delete，它将删除该字段并自动刷新表格。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-201423.png)
 
-Read table after deleting one field
+删除一个字段后读表
 
-## Let's Make Some Improvements to our CRUD App
+## 让我们对我们的CRUD应用程序做一些改进吧
 
-So, when we post our data in the Create page, we are just getting the data in the mock database. We need to redirect to the Read page when our data is created in the Create page.
+因此，当我们在Create页面发布我们的数据时，我们只是在模拟(mock)数据库中获得数据。当我们的数据在创建页面中被创建时，我们需要重定向到读取页面。
 
-Import `useHistory` from React Router.
+从React Router导入`useHistory'。
 
 ```
 import { useHistory } from 'react-router';
 ```
 
-Importing useHistory from React Router
+从React Router导入useHistory
 
-Create a variable called `let`, and set the `useHistory` inside that `let`.
+创建变量`history`使用 `let`。
 
 ```
 let history = useHistory();
 ```
 
-Then, use the history.push function to push to the Read page just after the post API gets called.
+然后，使用history.push函数，在post API被调用后推送到阅读页面。
 
 ```
 const postData = () => {
@@ -1090,11 +1090,11 @@ const postData = () => {
     }
 ```
 
-Pushing to the Read page after Post API is successful
+在发布API成功后推送到阅读页面
 
-It will push to the Read page using the `useHistory` hook.
+它将使用`useHistory`钩子(hook)推送到阅读页面。
 
-Do the same for the Update page.
+对更新页面做同样的处理。
 
 ```
 import React, { useState, useEffect } from 'react';
@@ -1148,10 +1148,8 @@ export default function Update() {
 
 Update.js
 
-And now you know how to perform CRUD operations using React and React Hooks!
+现在你知道如何使用React和React Hooks进行CRUD操作了吧!
 
-Alternatively, you can watch my Youtube video on [React CRUD Operations](https://youtu.be/-ZMP8ZladIQ) if you want to supplement your learning.
+另外，如果你想补充学习，你可以观看我在Youtube上的[React CRUD操作]视频（https://youtu.be/-ZMP8ZladIQ）。
 
-You can [find the code on GitHub](https://github.com/nishant-666/React-CRUD-Operation-V2) if you want to experiment further.
-
-> __Happy Learning.__
+> __学习愉快__

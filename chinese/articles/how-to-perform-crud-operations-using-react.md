@@ -502,19 +502,19 @@ const postData = () => {
 
 ## 如何实现读取和更新操作
 
-To start the read operation, we need to create a Read Page. We also need the React Router package to navigate to different pages.
+为了开始(read)读取操作，我们需要创建一个读取页面。我们还需要React Router包来导航到不同的页面。
 
-Go to [https://reactrouter.com/web/guides/quick-start](https://reactrouter.com/web/guides/quick-start) and install the package using `npm i react-router-dom`.
+前往[https://reactrouter.com/web/guides/quick-start](https://reactrouter.com/web/guides/quick-start)查看文档，同时运行 `npm i react-router-dom`进行安装。
 
-After it has been installed, import a few things from React Router:
+安装完毕后，从React Router导入一些东西:
 
 ```
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 ```
 
-Importing Router and Route from React Router
+从`React Router`中导入`Router`和`Route`。
 
-In our App.js, wrap the whole return into a Router. This basically means that whatever is inside this Router will be able to use routing in React.
+在我们的App.js中，把整个返回包成一个Router。这基本上意味着，无论这个Router里面有什么，都能在React中使用。
 
 ```
 import './App.css';
@@ -537,9 +537,9 @@ function App() {
 export default App;
 ```
 
-Our App.js will look like the above now.
+我们的App.js现在看起来会像上面的样子。
 
-Replace the Create inside the return and add the following code:
+替换掉返回里面的Create，并添加以下代码。
 
 ```
 import './App.css';
@@ -562,9 +562,9 @@ function App() {
 export default App;
 ```
 
-Here, we are using the Route component as Create. We have set the path of Create to '/create'. So, if we go [http://localhost:3000/create](http://localhost:3000/create), we will see the create page.
+在这里，我们使用Route组件作为Create。我们已经将Create的路径设置为'/create'。因此，如果我们进入[http://localhost:3000/create](http://localhost:3000/create)，我们将看到创建页面。
 
-Similarly, we need routes for read and update.
+同样地，我们需要(read)读取和(update)更新的路由。
 
 ```
 import './App.css';
@@ -594,21 +594,21 @@ function App() {
 export default App;
 ```
 
-So create the read and update routes just like you see above.
+因此，(read)读取和(update)更新路由，类似你上面看到的。
 
-And if you go to [http://localhost:3000/read](http://localhost:3000/read), you will see the following:
+如果你前往 [http://localhost:3000/read](http://localhost:3000/read), 会看到下面的:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-180318.png)
 
 Read Route
 
-And on [http://localhost:3000/update](http://localhost:3000/update), we will see Update Component like this:
+在[http://localhost:3000/update](http://localhost:3000/update) 网址,我们可以看到 (更新组件)Update Component 像这样:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-180440.png)
 
-### The Read Operation
+### 读取操作
 
-For the Read operation, we will need a Table component. So, head over to React Semantic UI and use a table from the library.
+对于读取操作，我们将需要一个表组件。因此，前往React Semantic UI，并使用库中的一个表。
 
 ```
 import React from 'react';
@@ -654,7 +654,7 @@ export default function Read() {
 
 Read.js
 
-Here, you can see we have a table with some dummy data. But we only need one Table Row. So, let's remove the rest.
+在这里，你可以看到我们有一个带有一些假数据(dummy data)的表。但我们只需要一个表行。所以，让我们删除其他的。
 
 ```
 import React from 'react';
@@ -690,13 +690,13 @@ Read.js
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-182905.png)
 
-This is the output of the Read page. We have a table with four columns, but we only need three.
+这是 "阅读 "页面的输出。我们有一个有四列的表，但我们只需要三列。
 
-Remove the extra field columns and rename the fields like this:
+删除多余的字段列，并像这样重新命名字段。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-183105.png)
 
-This is how our Read Page looks now:
+这就是我们的阅读页面现在的样子:
 
 ```
 import React from 'react';
@@ -728,9 +728,9 @@ export default function Read() {
 
 Read.js
 
-Now, let's send the GET Request to get the data from the API.
+现在，让我们发送GET请求，从API获得数据。
 
-We need the data when our application loads. So, we are going to use the `useEffect` Hook.
+当我们的应用程序加载时，我们需要这些数据。所以，我们要使用`useEffect`钩子(hook)。
 
 ```
 import React, { useEffect } from 'react';
@@ -740,9 +740,9 @@ import React, { useEffect } from 'react';
  }, [])
 ```
 
-The useEffect Hook
+useEffect钩子(hook)
 
-Create one state that will contain the incoming data. This will be an array.
+创建一个包含传入数据的状态。这将是一个数组。
 
 ```
 import React, { useEffect, useState } from 'react';
@@ -753,9 +753,9 @@ useEffect(() => {
 }, [])
 ```
 
-APIData state to store API incoming data
+APIData state 来存储API传入的数据
 
-In the `useEffect` Hook, let's send the GET Request.
+在`useEffect`钩子(hook)中，让我们发送GET请求。
 
 ```
  useEffect(() => {
@@ -766,11 +766,11 @@ In the `useEffect` Hook, let's send the GET Request.
     }, [])
 ```
 
-So, we are using axios.get to send the GET request to the API. Then, if the request is fulfilled, we are setting the response data in our _APIData_ state.
+因此，我们使用axios.get来向API发送GET请求。然后，如果请求被满足，我们就在我们的_APIData_状态中设置响应数据。
 
-Now, let's map our Table rows according to the API Data.
+现在，让我们根据API数据来映射我们的表行。
 
-We are going to use the Map function to do this. It will iterate over the array and display the data in the output.
+我们将使用Map函数来做这件事。它将对数组进行迭代，并在输出中显示数据。
 
 ```
 <Table.Body>
@@ -785,15 +785,15 @@ We are going to use the Map function to do this. It will iterate over the array 
 </Table.Body>
 ```
 
-We are mapping our firstName, lastName, and checkbox according the data in the API. But our checkbox is a little bit different. I have used a Ternary Operator ('?') here. If the data.checkbox is true, the output will be Checked, or else it will be Unchecked.
+我们根据API中的数据来映射firstName、lastName和checkbox。但我们的复选框有一点不同。我在这里使用了一个三元操作符（'?'）。如果data.checkbox为真，输出将是Checked，否则将是Unchecked。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-184955.png)
 
 Read.js Output
 
-### The Update Operation
+### 更新(Update)操作
 
-Create one more header for Update and one column in the table row for an update button. Use the button from Semantic UI React.
+再为更新创建一个标题，并在表行中为更新按钮创建一列。使用Semantic UI React的按钮。
 
 ```
 <Table.HeaderCell>Update</Table.HeaderCell>
@@ -803,11 +803,11 @@ Create one more header for Update and one column in the table row for an update 
 </Table.Cell>
 ```
 
-Creating Update Button
+创建(Update)更新按钮
 
-Now, when we click this button, we should be redirected to the update page. For that, we need Link from React Router.
+现在，当我们点击这个按钮，我们应该被重定向到更新页面。为此，我们需要React Router的链接。
 
-Import Link from React Router. And wrap the table cell for the update button into Link tags.
+从React Router导入Link。并将更新按钮的表格单元格包装成Link标签。
 
 ```
 import { Link } from 'react-router-dom';

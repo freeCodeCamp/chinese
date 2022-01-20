@@ -1,44 +1,44 @@
 > -  原文地址：[How to Create a React App with a Node Backend: The Complete Guide](https://www.freecodecamp.org/news/how-to-create-a-react-app-with-a-node-backend-the-complete-guide/)
 > -  原文作者：[Reed Barger](https://www.freecodecamp.org/news/author/reed/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![How to Create a React App with a Node Backend: The Complete Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/how-to-build-a-react-app-with-a-node-backend-alt.png)
+![如何使用 Node 后端创建 React 应用程序：完整指南](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/how-to-build-a-react-app-with-a-node-backend-alt.png)
 
-A React frontend connected to a Node backend is a rock-solid combination for any application you want to build.
+React前端与Node后端相配合，对于你想建立的任何应用程序来说都是一个坚如磐石的组合。
 
-This guide is designed to help you create full-stack projects with React as easily as possible.
+本指南旨在帮助你尽可能容易地用React创建全栈项目。
 
-Let's see how to set up an entire project using React and Node from scratch and deploy it to the web.
+让我们看看如何使用React和Node从头开始建立一个完整的项目，并将其部署到网络上。
 
-> Want to build and deploy React and Node apps of your own? [Check out my course series](http://bit.ly/12-react-projects) that shows you how to build your own full-stack React projects, like this one.
+> 想建立和部署你自己的React和Node应用程序吗？ [查看我的课程系列](http://bit.ly/12-react-projects)，它告诉你如何建立你自己的全栈React项目，比如这个项目。
 
-## Tools You Will Need
+## 你需要的工具
 
-1.  Make sure Node and NPM are installed on your computer. You can download both at [nodejs.org](https://nodejs.org) (NPM is included in your Node installation)
-2.  Use a code editor of your choice. I am using and would personally recommend using VSCode. You can download VSCode at [code.visualstudio.com](https://code.visualstudio.com).
-3.  Make sure you have Git installed on your computer. This is necessary for deploying our application with Heroku. You can get it at [git-scm.com](https://git-scm.com)
-4.  An account at [heroku.com](https://heroku.com). We will use Heroku to publish our app to the web entirely for free.
+1. 确保Node和NPM已经安装在你的电脑上。你可以在以下网站下载这两样东西[nodejs.org](https://nodejs.org) (NPM包含在你安装的Node中，不需要另外安装)。
+2. 使用你选择的代码编辑器。我正在使用并且个人推荐使用VSCode。你可以在以下网址下载VSCode [code.visualstudio.com](https://code.visualstudio.com).
+3.  确保你的电脑上安装了Git。这对于用Heroku部署我们的应用程序是必要的。你可以在以下网站上得到它 [git-scm.com](https://git-scm.com)
+4.  一个在[heroku.com](https://heroku.com)的账号。我们将使用Heroku将我们的应用程序完全免费地发布到网上。
 
-## Step 1: Create your Node (Express) backend
+## 第1步：创建你的Node（Express）后端
 
-First create a folder for your project, called `react-node-app` (for example).
+首先为你的项目创建一个文件夹，命名为`react-node-app`（例如）。
 
-Then, drag that folder into your code editor.
+然后，将该文件夹拖入你的代码编辑器。
 
-To create our Node project, run the following command in your terminal:
+为了创建我们的Node项目，在你的终端运行以下命令。
 
 ```bash
 npm init -y
 ```
 
-This will create a package.json file which will allow us to keep track of all our app scripts and manage any dependencies our Node app needs.
+这将创建一个package.json文件，这将使我们能够跟踪我们所有的应用程序脚本，并管理我们的Node应用程序需要的任何依赖。
 
-Our server code will live in a folder of the same name: `server`. Let's create that folder.
+我们的服务器代码将放在一个同名的文件夹中：`server`。让我们来创建这个文件夹。
 
-In it, we'll place a single file, out of which we'll run our server: `index.js`.
+在这个文件夹中，我们将放置一个文件，我们将从这个文件中运行我们的服务。`index.js`。
 
-We'll use Express to create a simple web server for us which runs on port 3001 if no value is given for the environment variable `PORT` (Heroku will set this value when we deploy our app).
+我们将使用Express为我们创建一个简单的Web服务器，如果环境变量`PORT`没有给定值，则运行在3001端口（Heroku将在我们部署应用程序时设置这个值）。
 
 ```js
 // server/index.js
@@ -54,13 +54,13 @@ app.listen(PORT, () => {
 });
 ```
 
-Then in our terminal, we will install Express as a dependency to use it:
+然后在我们的终端，我们将安装Express作为一个依赖项来使用它。
 
 ```bash
 npm i express
 ```
 
-After that, we will create a script in package.json that will start our web server when we run it with `npm start`:
+之后，我们将在package.json中创建一个脚本，当我们用`npm start`运行它时，将启动我们的web服务。
 
 ```json
 // server/package.json
@@ -72,7 +72,7 @@ After that, we will create a script in package.json that will start our web serv
 ...
 ```
 
-Finally, we can run our app using this script by running npm start in our terminal and we should see that it is running on port 3001:
+最后，我们可以通过在终端运行npm start来运行我们的应用程序，我们应该看到它正在3001端口上运行。
 
 ```bash
 npm start
@@ -82,17 +82,17 @@ npm start
 Server listening on 3001
 ```
 
-![Clip 1](https://reedbarger.nyc3.digitaloceanspaces.com/how-to-create-a-react-app-with-a-node-backend/clip-1.gif)
+![代码片段  1](https://reedbarger.nyc3.digitaloceanspaces.com/how-to-create-a-react-app-with-a-node-backend/clip-1.gif)
 
-## Step 2: Create an API Endpoint
+## 第2步：创建一个API
 
-We want to use our Node and Express server as an API, so that it can give our React app data, change that data, or do some other operation only a server can do.
+我们想把我们的Node和Express服务器提供一个API，这样它就可以给我们的React应用提供数据，改变这些数据，或者做一些其他只有服务才能做的操作。
 
-In our case, we will simply send our React app a message that says "Hello from server!" in a JSON object.
+在我们的案例中，我们将简单地给我们的React应用发送一个JSON对象中的 "Hello from server!"消息。
 
-The code below creates an endpoint for the route `/api`.
+下面的代码为路由`/api`创建了一个endpoint。
 
-If our React app makes a GET request to that route, we respond (using `res`, which stands for response) with our JSON data:
+如果我们的React应用向该路由发出一个GET请求，我们就会用我们的JSON数据进行响应（使用`res`，代表响应）。
 
 ```js
 // server/index.js
@@ -107,31 +107,31 @@ app.listen(PORT, () => {
 });
 ```
 
-_Note: Make sure to place this above the `app.listen` function._
+_注意：请确保将其放在`app.listen`函数之前。_
 
-Since we've made changes to our Node code, we need to restart our server.
+由于我们已经对Node代码进行了修改，我们需要重新启动我们的服务器。
 
-To do that, end your start script in the terminal by pressing Command/Ctrl + C. Then restart it by running `npm start` again.
+要做到这一点，在终端按Command/Ctrl+C结束你的启动脚本，然后再次运行`npm start`重新启动它。
 
-And to test this, we can simply visit `http://localhost:3001/api` in our browser and see our message:
+为了测试这一点，我们可以简单地在浏览器中访问`http://localhost:3001/api`，看看我们获得的信息。
 
-![Clip 2](https://reedbarger.nyc3.digitaloceanspaces.com/how-to-create-a-react-app-with-a-node-backend/clip-2.gif)
+![代码片段 2](https://reedbarger.nyc3.digitaloceanspaces.com/how-to-create-a-react-app-with-a-node-backend/clip-2.gif)
 
-## Step 3: Create your React frontend
+## 第3步：创建你的React前端
 
-After creating our backend, let's move to the frontend.
+在创建了我们的后端之后，让我们转到前端。
 
-Open another terminal tab and use create-react-app to create a new React project with the name `client`:
+打开另一个终端标签，使用create-react-app创建一个新的React项目，名称为`client`。
 
 ```bash
 npx create-react-app client
 ```
 
-After that, we will have a React app with all of its dependencies installed.
+之后，我们将拥有一个安装了所有依赖项的React应用。
 
-The only change we have to make is to add a property called `proxy` to our package.json file.
+我们要做的唯一改变是在package.json文件中添加一个名为`proxy`的属性(`client`文件夹下的package.json文件)。
 
-This will allow us to make requests to our Node server without having to provide the origin it is running on (http://localhost:3001) every time we make a network request to it:
+这将允许我们向我们的Node服务器发出请求，而不必在每次向它发出网络请求时提供它所运行的原点（http://localhost:3001）。
 
 ```bash
 // client/package.json
@@ -141,9 +141,9 @@ This will allow us to make requests to our Node server without having to provide
 ...
 ```
 
-Then we can start up our React app by running its start script, which is the same as our Node server. First make sure to `cd` into the newly-created client folder.
+然后我们可以通过运行它的启动脚本来启动我们的React应用，这和我们的Node服务器一样。首先确保`cd`进入新创建的`client`文件夹。
 
-After that, will start up on `localhost:3000`:
+之后，将在`localhost:3000`上启动(其实启动两个Node的进程，一个是React开发使用，一个是Express开发使用)。
 
 ```bash
 cd client
@@ -156,21 +156,21 @@ You can now view client in the browser.
 Local:            http://localhost:3000
 ```
 
-![Clip 3](https://reedbarger.nyc3.digitaloceanspaces.com/how-to-create-a-react-app-with-a-node-backend/clip-3.gif)
+![代码片段 3](https://reedbarger.nyc3.digitaloceanspaces.com/how-to-create-a-react-app-with-a-node-backend/clip-3.gif)
 
-## Step 4: Make HTTP Requests from React to Node
+## 第4步：从React向Node发出HTTP请求
 
-Now that we have a working React app, we want to use it to interact with our API.
+现在我们有了一个工作的React应用，我们想用它来与我们的API进行交互。
 
-Let's see how to fetch data from the `/api` endpoint that we created earlier.
+让我们看看如何从我们之前创建的`/api`endpoint获取数据。
 
-To do so, we can head to the `App.js` component in our `src` folder and make an HTTP request using useEffect.
+要做到这一点，我们可以前往`src`文件夹中的`App.js`组件，使用`useEffect`进行HTTP请求。
 
-We will make a simple GET request using the Fetch API to our backend and then have our data returned as JSON.
+我们将使用Fetch API向我们的后端发出一个简单的GET请求，然后将我们的数据以JSON格式返回。
 
-Once we have the data returned to us, we will get the message property (to grab our greeting that we sent from the server) and then put it in a state variable called `data`.
+一旦我们得到了返回的数据，我们将得到消息属性（抓取我们从服务器发送的问候语），然后把它放在一个叫做`data`的状态变量中。
 
-This will allow us to display that message in our page if we have it. We are using a conditional in our JSX to say that if our data is not there yet, show the text "Loading...".
+这将使我们能够在我们的页面中显示该消息，如果我们有的话。我们在JSX中使用一个条件，说如果我们的数据还没有，就显示文本 `Loading...`。
 
 ```js
 // client/src/App.js
@@ -201,26 +201,26 @@ function App() {
 export default App;
 ```
 
-![Clip 5](https://reedbarger.nyc3.digitaloceanspaces.com/how-to-create-a-react-app-with-a-node-backend/clip-4.gif)
+![代码片段 5](https://reedbarger.nyc3.digitaloceanspaces.com/how-to-create-a-react-app-with-a-node-backend/clip-4.gif)
 
-## Step 5: Deploy your app to the web with Heroku
+## 用Heroku将你的应用程序部署到网上
 
-Finally, let's deploy our application to the web.
+最后，让我们把我们的应用程序部署到网络上。
 
-First, within our client folder, make sure to remove the Git repo that is automatically initialized by create-react-app.
+首先，在我们的`client`文件夹中，确保删除由create-react-app自动初始化的Git repo(rm -rf .git, `.git` 是隐藏文件夹，不能直接看到)。
 
-This is essential to deploy our app, because we are going to set up a Git repo in the root folder of our project (`react-node-app`), not in `client`:
+这对部署我们的应用程序至关重要，因为我们要在我们项目的根文件夹（`react-node-app`）中建立Git repo，而不是在`client`中。
 
 ```bash
 cd client
 rm -rf .git
 ```
 
-When we deploy, both our Node backend and React frontend are going to be served on the same domain (i.e. mycoolapp.herokuapp.com).
+当我们部署时，我们的Node后端和React前端都将在同一个域名（即mycoolapp.herokuapp.com）提供服务。
 
-We see how our requests are being handled by our Node API, so we need to write some code that will display our React app when it is requested by our user (for example, when we go to the home page of our app).
+我们看到我们的请求是如何被我们的Node API处理的，所以我们需要写一些代码，当我们的React应用被用户请求时（例如，当我们进入我们的应用的主页时）显示我们的React应用。
 
-We can do this back in `server/index.js` by adding the following code:
+我们可以在`server/index.js`中加入以下代码来完成这个工作。
 
 ```js
 // server/index.js
@@ -243,13 +243,13 @@ app.get('*', (req, res) => {
 });
 ```
 
-This code will first allow Node to access our built React project using the `express.static` function for static files.
+这段代码将首先允许Node使用`express.static`函数来访问我们建立的React项目的静态文件。
 
-And if a GET request comes in that is not handled by our `/api` route, our server will respond with our React app.
+如果有一个GET请求进来，而这个请求没有被我们的`/api`路由处理后，我们的服务器将用我们的React应用来响应。
 
-**This code allows our React and Node app to be deployed together on the same domain.**
+**这段代码允许我们的React和Node应用一起部署在同一个域名。**
 
-Then we can tell our Node App how to do that by adding a `build` script to our server package.json file that builds our React app for production:
+然后我们可以告诉我们的Node App如何做，在我们的服务器package.json文件中添加一个`build`脚本，为生产构建我们的React应用。
 
 ```json
 // server/package.json
@@ -262,9 +262,9 @@ Then we can tell our Node App how to do that by adding a `build` script to our s
 ...
 ```
 
-I would also recommend providing a field called "engines", where you want to specific the Node version you are using to build your project. This will be used for deployment.
+我还建议提供一个名为`engines`的字段，在这里你要指定你用来构建项目的Node版本。这将被用于部署。
 
-You can get your Node version by running `node -v` and you can put the result in "engines" (i.e. 14.15.4):
+你可以通过运行`node -v`来获得你的Node版本，你可以把结果放在`engines`中（例如14.15.4）。
 
 ```json
 // server/package.json
@@ -274,17 +274,15 @@ You can get your Node version by running `node -v` and you can put the result in
 }
 ```
 
-After this, we're ready to deploy using Heroku, so make sure you have an account at [Heroku.com](https://heroku.com).
+在这之后，我们准备使用Heroku进行部署，所以请确保你在[Heroku.com](https://heroku.com)有一个账户。
 
-Once you are signed in and are looking at your dashboard, you'll select New > Create New App and provide a unique app name.
-
-After that, you'll want to install the Heroku CLI on your computer so you can deploy your app whenever you make any changes using Git. We can install the CLI by running:
+当你登录并查看你的仪表板(dashboard)，你将选择新建(New)>创建新的应用程序(Create New App)，并提供一个唯一的应用程序名称。
 
 ```bash
 sudo npm i -g heroku
 ```
 
-Once that's installed, you will log in to Heroku through the CLI using the `heroku login` command:
+当安装完毕，你将通过CLI使用`heroku login`命令登录到Heroku。
 
 ```bash
 heroku login
@@ -292,9 +290,9 @@ heroku login
 Press any key to login to Heroku
 ```
 
-Once you have logged in, just need to follow the deployment instructions for our created app in the "Deploy" tab.
+登录后，只需在 "Deploy "选项卡中为我们创建的应用程序遵循部署说明。
 
-The following four commands will initialize a new Git repo for our project, add our files to it, commit them, and add a Git remote for Heroku.
+以下四个命令将为我们的项目初始化一个新的Git repo，将我们的文件添加到其中，提交它们，并为Heroku添加一个Git远程。
 
 ```
 git init
@@ -303,17 +301,17 @@ git add .
 git commit -am "Deploy app to Heroku"
 ```
 
-Then the very last step is to publish our app by pushing the Heroku Git remote we just added using:
+然后，最后一步是通过推送我们刚刚添加的Heroku Git远程地址(heroku git:remote -a insert-your-app-name-here) ，来发布我们的应用程序。
 
 ```bash
 git push heroku master
 ```
 
-Congratulations! Our full-stack React and Node app is live! 🎉
+ 恭喜！我们的全栈式React和Node应用已经上线。🎉
 
-![Clip 5](https://reedbarger.nyc3.digitaloceanspaces.com/how-to-create-a-react-app-with-a-node-backend/clip-5.gif)
+![代码片段 5](https://reedbarger.nyc3.digitaloceanspaces.com/how-to-create-a-react-app-with-a-node-backend/clip-5.gif)
 
-When you want to make changes to your app going forward (and deploy them), you just have to use Git to add your files, commit them and then push to our Heroku remote:
+当你想对你的应用程序进行修改时（并进行部署），你只需要用Git来添加你的文件(git add)，提交它们(git commit)，然后推送到我们的Heroku远程(git push)。
 
 ```bash
 git add .
@@ -321,8 +319,8 @@ git commit -m "my commit message"
 git push heroku master
 ```
 
-## Want to build real-world apps like YouTube, Instagram, and Twitter with React? Here's how.
+## 想用React建立像YouTube、Instagram和Twitter这样的真实世界的应用程序吗？这就是怎么做。
 
-At the end of every month, I will be releasing an exclusive course, showing you exactly how to build a complete app clone with React from start to finish.
+在每个月的月底，我将发布一个独家课程，准确地告诉你如何复现从头到尾用React建立一个完整的应用程序。
 
-Want to be notified when the next course drops? **[Join the waitlist here](http://bit.ly/12-react-projects).**
+ 想在下一个课程出现时得到通知吗？**[在这里加入等候名单](http://bit.ly/12-react-projects).**

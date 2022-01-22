@@ -1,6 +1,6 @@
 > -  原文地址：[How to Get Headings and IDs for Your freeCodeCamp Blog Post Table of Contents](https://www.freecodecamp.org/news/how-to-get-headings-and-ids-for-your-freecodecamp-blog-posts/)
 > -  原文作者：[Scott Spence](https://www.freecodecamp.org/news/author/scott/)
-> -  译者：
+> -  译者：gyf11069
 > -  校对者：
 
 ![How to Get Headings and IDs for Your freeCodeCamp Blog Post Table of Contents](https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/brett-jordan-M9NVqELEtHU-unsplash-1.jpg)

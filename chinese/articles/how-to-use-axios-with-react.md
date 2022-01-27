@@ -1,37 +1,37 @@
 > -  原文地址：[How To Use Axios With React: The Definitive Guide (2021)](https://www.freecodecamp.org/news/how-to-use-axios-with-react/)
 > -  原文作者：[Reed Barger](https://www.freecodecamp.org/news/author/reed/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![How To Use Axios With React: The Definitive Guide (2021)](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/how-to-use-axios-with-react.png)
+![如何在 React 中使用 Axios：2021 年完全指南](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/how-to-use-axios-with-react.png)
 
-In this guide, you will see exactly how to use Axios.js with React using tons of real-world examples featuring React hooks.
+在本指南中，你将看到如何使用Axios.js和React，并使用大量具有React hook的真实世界的例子。
 
-You'll see why you should use Axios as a data fetching library, how to set it up with React, and perform every type of HTTP request with it.
+你会看到为什么你应该使用Axios作为数据获取库，如何用React设置它，并使用它执行各种类型的HTTP请求。
 
-Then we'll touch on more advanced features like creating an Axios instance for reusability, using async-await with Axios for simplicity, and how to use Axios as a custom hook.
+然后，我们将触及更多的高级功能，如创建Axios实例以实现可重用性，使用async-await来简化Axios，以及如何将Axios作为一个自定义hook。
 
-Let's dive right in!
+让我们直接开始吧!
 
-### **Want Your Own Copy?‬ 📄**
+### **想要自己的副本?‬ 📄**
 
-****[Click here to download the cheatsheet in PDF format](https://reedbarger.com/resources/react-axios-2021)**** (it takes 5 seconds).
+****[点击这里下载PDF格式的小册子](https://reedbarger.com/resources/react-axios-2021)**** (它需要5秒下载完).
 
-It includes all of the essential information here as a convenient PDF guide.
+它包括这里所有的基本信息，作为一个方便的PDF指南。
 
-## Table of Contents
+## 目录
 
--   [What is Axios?](#what-is-axios)
--   [Why Use Axios in React?](#why-use-axios-in-react)
--   [How to Set Up Axios with React](#how-to-set-up-axios-with-react)
--   [How to Make a GET Request (Retrieve Data)](#how-to-make-a-get-request)
--   [How to Make a POST Request (Create Data)](#how-to-make-a-post-request)
--   [How to Make a PUT Request (Update Data)](#how-to-make-a-put-request)
--   [How to Make a DELETE Request (Delete Data)](#how-to-make-a-delete-request)
--   [How to Handle Errors with Axios](#how-to-handle-errors-with-axios)
--   [How to Create an Axios Instance](#how-to-create-an-axios-instance)
--   [How to Use the Async-Await Syntax with Axios](#how-to-use-the-async-await-syntax-with-axios)
--   [How to Create a Custom `useAxios` Hook](#how-to-create-a-custom-useaxios-hook)
+-   [什么是Axios?](#what-is-axios)
+-   [为什么在React中使用Axios](#why-use-axios-in-react)
+-   [如何用React设置Axios](#how-to-set-up-axios-with-react)
+-   [如何进行GET请求(检索数据)](#how-to-make-a-get-request)
+-   [如何进行POST请求(创建数据)](#how-to-make-a-post-request)
+-   [如何进行PUT请求(更新数据)](#how-to-make-a-put-request)
+-   [如何提出DELETE请求(删除数据)](#how-to-make-a-delete-request)
+-   [如何处理Axios的错误](#how-to-handle-errors-with-axios)
+-   [如何创建一个Axios实例](#how-to-create-an-axios-instance)
+-   [如何使用Axios的Async-Await语法](#how-to-use-the-async-await-syntax-with-axios)
+-   [如何创建一个自定义的 `useAxios` hook](#how-to-create-a-custom-useaxios-hook)
 
 ## What is Axios?
 

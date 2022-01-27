@@ -9,7 +9,7 @@
 
 你会看到为什么你应该使用Axios作为数据获取库，如何用React设置它，并使用它执行各种类型的HTTP请求。
 
-然后，我们将触及更多的高级功能，如创建Axios实例以实现可重用性，使用async-await来简化Axios，以及如何将Axios作为一个自定义hook。
+然后，我们将触及更多的高级功能，如创建Axios实例以实现可重用性，使用async-await来简化Axios，以及如何将Axios作为一个自定义Hook。
 
 让我们直接开始吧!
 
@@ -31,7 +31,7 @@
 -   [如何处理Axios的错误](#how-to-handle-errors-with-axios)
 -   [如何创建一个Axios实例](#how-to-create-an-axios-instance)
 -   [如何使用Axios的Async-Await语法](#how-to-use-the-async-await-syntax-with-axios)
--   [如何创建一个自定义的 `useAxios` hook](#how-to-create-a-custom-useaxios-hook)
+-   [如何创建一个自定义的 `useAxios` Hook](#how-to-create-a-custom-useaxios-hook)
 
 ## What is Axios?
 

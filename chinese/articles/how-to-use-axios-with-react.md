@@ -175,11 +175,11 @@ export default function App() {
 
 ## How to Make a PUT Request
 
-To update a given resource, make a PUT request.
+要更新一个给定的资源，要提出一个PUT请求。
 
-In this case, you'll update the first post.
+在这种情况下，你将更新第一个帖子。
 
-To do so, you'll once again create a button. But this time, the button will call a function to update a post:
+为了做到这一点，你将再次创建一个按钮。但这一次，该按钮将调用一个函数来更新一个帖子:
 
 ```js
 import axios from "axios";
@@ -219,9 +219,9 @@ export default function App() {
 }
 ```
 
-In the code above, you use the PUT method from Axios. And like with the POST method, you include the properties that you want to be in the updated resource.
+在上面的代码中，你使用了Axios的PUT方法。和POST方法一样，你包括了你想在更新资源中的属性。
 
-Again, using the `.then()` callback, you update the JSX with the data that is returned.
+同样，使用`.then()`回调，你用返回的数据更新JSX。
 
 ## How to Make a DELETE Request
 

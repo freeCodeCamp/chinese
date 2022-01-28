@@ -225,11 +225,11 @@ export default function App() {
 
 ## How to Make a DELETE Request
 
-Finally, to delete a resource, use the DELETE method.
+最后，要删除一个资源，使用DELETE方法
 
-As an example, we'll delete the first post.
+作为一个例子，我们将删除第一个帖子。
 
-Note that you do not need a second argument whatsoever to perform this request:
+注意，你不需要第二个参数来执行这个请求。
 
 ```js
 import axios from "axios";

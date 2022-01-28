@@ -1,55 +1,55 @@
 > -  原文地址：[What's New in React 18? Concurrency, Batching, the Transition API and More](https://www.freecodecamp.org/news/whats-new-in-react-18/)
 > -  原文作者：[Akash Joshi](https://www.freecodecamp.org/news/author/akash/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![What's New in React 18? Concurrency, Batching, the Transition API and More](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/SUSPENSE-BATCHING-TRANSITION.png)
+![React 18 有什么新特性？? 并发、批处理、过渡API等](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/SUSPENSE-BATCHING-TRANSITION.png)
 
-Hey everyone! In this article, I'm going to show you what's new in the latest of version of React – React 18 – in under 8 minutes.
+大家好！在这篇文章中，我将在8分钟内向你展示React的最新版本--React 18。在这篇文章中，我将在8分钟内向你展示React的最新版本--React 18的新内容。
 
-First, you might be wondering whether the latest set of changes will break anything with your current setup, or whether you will have to learn new completely unrelated concepts.
+首先，你可能想知道最新的变化是否会破坏你目前的代码，或者你是否必须学习完全不相关的新概念。
 
-Well, don't worry – you can continue with your present work or continue learning your current React course as it is, as React 18 doesn't break anything.
+好吧，不用担心--你可以继续你现在的工作，或者继续学习你目前的React课程，因为React 18不会破坏任何东西。
 
-If you want to watch a video to supplement your reading, check it out here:
+如果你想看一个视频来补充你的阅读，请在这里查看。
 
-For those of you who really want to learn what's happening, here's the breakdown.
+对于那些真正想了解发生了什么的人，这里有详细的介绍。
 
-## What is Concurrency in React?
+## 什么是React的并发性？
 
-The major theme for this release is **concurrency**. To start with, let's look at what concurrency is.
+这个版本的主要主题是**并发**。首先，让我们看看什么是并发性。
 
-Concurrency is the ability to execute multiple tasks simultaneously. Taking the example of a standard React app, let's consider that an animation is playing in a component, and at the same time a user is able to click or type in other React components.
+并发是指同时执行多个任务的能力。以一个标准的React应用为例，让我们考虑在一个组件中播放一个动画，同时用户能够在其他React组件中点击或输入。
 
 ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f5a65bda-b76b-466f-abe3-3d8fbb232655/firefox_PJSGkv5qWX.png](https://www.freecodecamp.org/news/content/images/2021/07/firefox_juLm49pOIQ.png)
 
-Here, while the user is typing and clicking on buttons, an animation is also rendering there within the context of React.
+当用户在打字和点击按钮的时候，在React的上下文中，一个动画也在那里渲染。
 
-React has to manage all the function calls, hook calls, and event callbacks, several of which can even occur at the same time. If React spends all its time rendering animation frames, the user will feel like the app is "stuck", since it won't react to their inputs.
+React必须管理所有的函数调用、Hook调用和事件回调，其中几个甚至可能同时发生。如果React把所有时间都花在渲染动画帧上，用户就会觉得应用程序被 "卡住 "了，因为它不会对他们的输入做出反应。
 
-Now React, running on a single threaded process, has to combine, reorder and prioritize these events and functions so that it can give users an optimum and performant experience.
+现在，在单线程进程上运行的React必须对这些事件和功能进行组合、重新排序和优先处理，以便给用户一个最佳的、高性能的体验。
 
-To do this, React uses a "dispatcher" internally which is responsible for prioritizing and invoking these callbacks.
+为了做到这一点，React在内部使用了一个 "调度器"，负责对这些回调进行优先排序和调用。
 
-Before React 18, the user had no way to control the invocation order of these functions. But now, React is giving some control of this event loop to the user via the Transition API.
+在React 18之前，用户没有办法控制这些函数的调用顺序。但现在，React通过Transition API将这个事件循环的一些控制权交给了用户。
 
-You can read more about this in this article by Dan Abramov: [An ELI5 of concurrency](https://github.com/reactwg/react-18/discussions/46#discussioncomment-846786).
+你可以在Dan Abramov的这篇文章中读到更多关于这方面的内容。: [An ELI5 of concurrency](https://github.com/reactwg/react-18/discussions/46#discussioncomment-846786).
 
-## The Transition API
+## 过渡API
 
-The developers of React have exposed a few APIs which allow React users to have some control over concurrency.
+React的开发者已经公开了一些API，允许React用户对并发性进行一些控制。
 
-One of these APIs is `startTransition`, which allows developers to indicate to React which actions may block the thread and cause lag on screen.
+其中一个API是 `startTransition`，它允许开发者向React指出哪些动作可能会阻塞线程并导致屏幕上的滞后。
 
-Typically, these actions are the ones you might have previously used debounce for, like network calls via a search API, or render-heavy processes like searching through an array of 1000 strings.
+通常情况下，这些动作是你以前可能使用过的去抖(debounce)，比如通过搜索API的网络调用，或者像搜索1000个字符串的数组这样的重渲染过程。
 
-Updates wrapped in `startTransition` are marked as non-urgent and are interrupted if more urgent updates like clicks or key presses come in.
+被`startTransition`装饰器(wrapped)的更新被标记为非紧急的，如果有更紧急的更新，如点击或按键，则会被打断。
 
-If a transition gets interrupted by the user (for example, by typing multiple letters into a search field), React will throw out the stale rendering work that wasn’t finished and render only the latest update.
+如果一个过渡被用户打断（例如，在搜索字段中输入多个字母），React会扔掉未完成的陈旧的渲染工作，只渲染最新的更新。
 
-### Transition API example
+### 过渡API例子
 
-To understand this in more detail, let's consider a component with a search field. Let's say it has 2 functions to control the state:
+为了更详细地理解这一点，让我们考虑一个带有搜索字段的组件。假设它有两个函数来控制状态:
 
 ```jsx
 // Update input value
@@ -59,14 +59,14 @@ setInputValue(input)
 setSearchQuery(input);
 ```
 
-`setInputValue` is responsible for updating the input field, while `setSearchQuery` is responsible for performing search based on the present input value. Now, if these function calls happened synchronously every time the user started typing, either of 2 things would happen:
+`setInputValue`负责响应更新输入字段，而`setSearchQuery`负责根据当前输入值进行搜索。现在，如果这些函数调用在用户每次开始输入时都同步发生，就会发生2种情况:
 
-1.  Several search calls would be made, which would delay or slow down other network calls.
-2.  Or, more likely, the search operation would turn out to be very heavy and would lock up the screen on each keystroke.
+1.  几个搜索调用将被进行，这将延迟或减慢其他网络调用。
+2.  或者，更有可能的是，搜索操作会变得非常繁重，并且会在每次按键时锁定屏幕。
 
-One way to solve this problem would've been using debounce, which would space out the network calls or search operations. But, the problem with debounce is that we have to play with and optimize the debounce timer quite frequently.
+解决这个问题的一个方法是使用去抖(debounce)，这将使网络调用或搜索操作的时间间隔缩短。但是，去抖的问题是，我们必须经常折腾和优化去抖的计时器。
 
-So in this case, we can wrap setSearchQuery in `startTransition`, allowing it to handle it as non-urgent and to be delayed as long as the user is typing.
+所以在这种情况下，我们可以把 setSearchQuery 包(wrap)在 `startTransition` 中，让它作为非紧急事件处理，只要用户在打字，它就会被延迟。
 
 ```jsx
 import { startTransition } from 'react';
@@ -81,9 +81,9 @@ startTransition(() => {
 });
 ```
 
-Transitions let you keep most interactions snappy even if they lead to significant UI changes. They also let you avoid wasting time rendering content that's no longer relevant.
+过渡让你保持大多数互动的流畅性，即使它们引起了重大的UI变化。它们还可以让你避免浪费时间来渲染不再相关的内容。
 
-React also provides a new hook called `useTransition` , so you can show a loader while the transition is pending. This helps in indicating to the user that the app is processing their input and will display the results shortly.
+React还提供了一个新的Hook，叫做`useTransition`，所以你可以在过渡期内显示一个加载器。这有助于向用户表明，应用程序正在处理他们的输入，并将很快显示结果。
 
 ```jsx
 import { useTransition } from'react';
@@ -104,15 +104,15 @@ const callback = () => {
 {isPending && <Spinner />}
 ```
 
-As a rule of thumb, you can use the transition API wherever network calls or render-blocking processes are present.
+作为一条经验法则，只要有网络调用或渲染阻塞进程存在，你就可以使用过渡API。
 
-You can read more about the API in this article, [An explanation of startTransition](https://github.com/reactwg/react-18/discussions/41) by Ricky from the Core React team.
+你可以在这篇文章中阅读更多关于API的信息, [对startTransition的解释](https://github.com/reactwg/react-18/discussions/41)，由React核心团队的Ricky负责维护。
 
-### Demos of the Transition API
+### 过渡API的演示
 
-Use `useTransition` and Suspense in an app: [https://codesandbox.io/s/sad-banach-tcnim?file=/src/App.js:664-676](https://codesandbox.io/s/sad-banach-tcnim?file=/src/App.js:664-676)
+在应用程序中使用 "useTransition "和Suspense: [https://codesandbox.io/s/sad-banach-tcnim?file=/src/App.js:664-676](https://codesandbox.io/s/sad-banach-tcnim?file=/src/App.js:664-676)
 
-Demo of `startTransition` with a complex rendering algorithm: [https://react-fractals-git-react-18-swizec.vercel.app/](https://react-fractals-git-react-18-swizec.vercel.app/)
+复杂渲染算法下的 "startTransition "演示: [https://react-fractals-git-react-18-swizec.vercel.app/](https://react-fractals-git-react-18-swizec.vercel.app/)
 
 ## Batching in React
 

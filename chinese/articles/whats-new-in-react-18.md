@@ -114,11 +114,11 @@ const callback = () => {
 
 复杂渲染算法下的 "startTransition "演示: [https://react-fractals-git-react-18-swizec.vercel.app/](https://react-fractals-git-react-18-swizec.vercel.app/)
 
-## Batching in React
+## 在React中进行批处理
 
-Next up is batching. Batching is something that the developer generally doesn't have to care about, but it's good to know what's happening behind the scenes.
+接下来是批处理。批处理是开发者一般不需要关心的事情，但知道幕后发生的事情是很好的。
 
-Whenever you are using setState to change a variable inside any function, instead of making a render at each setState, React instead collects all setStates and then executes them together. This is known as batching.
+每当你使用`setState`来改变任何函数中的变量时，React不是在每个`setState`上进行渲染，而是收集所有的`setStates`，然后一起执行它们。这就是所谓的批处理。
 
 ```jsx
 function App() {
@@ -140,9 +140,9 @@ function App() {
 }
 ```
 
-This is great for performance because it avoids unnecessary re-renders. It also prevents your component from rendering “half-finished” states where only one state variable was updated, which may cause UI glitches and bugs within your code.
+这对性能来说是很好的，因为它避免了不必要的重新渲染。它还可以防止你的组件呈现 `半成品`状态，即只有一个状态变量被更新，这可能导致你的代码中出现UI故障和错误。
 
-However, React didn't used to be consistent about when it performed batching. This was because React used to only batch updates _during_ browser events (like a click), but here we’re updating the state _after_ the event has already been handled (in a fetch callback):
+然而，React过去在执行批处理的时间上并不一致。这是因为React过去只在浏览器事件中（如点击）进行批处理更新，但在这里，我们是在事件`处理后`（在一个获取回调中）更新状态。:
 
 ```jsx
 function App() {
@@ -167,38 +167,38 @@ function App() {
 }
 ```
 
-Starting in React 18 with `[createRoot](<https://github.com/reactwg/react-18/discussions/5>)`, all state updates will be automatically batched, no matter where they originate from.
+在React 18中开始使用 `[createRoot](<https://github.com/reactwg/react-18/discussions/5>)`, 所有的状态更新将被自动批处理，无论它们来自哪里。
 
-This means that updates inside of timeouts, promises, native event handlers or any other event will batch the same way as updates inside of React events. This will result in less rendering work by React, and therefore better performance in applications.
+这意味着在超时、promises、本地事件处理程序或任何其他事件中的更新将以与React事件中的更新相同的方式进行批处理。这将导致React的渲染工作减少，从而提高应用程序的性能。
 
-You can read more about batching here in [An explanation of Batching](https://github.com/reactwg/react-18/discussions/21) by Dan Abramov.
+你可以在Dan Abramov的 [批处理的解释](https://github.com/reactwg/react-18/discussions/21)，
+阅读更多关于批处理的信息。
+### 批处理演示
 
-### Demos of batching
+在React 18之前: [https://codesandbox.io/s/hopeful-fire-ge4t2?file=/src/App.tsx](https://codesandbox.io/s/hopeful-fire-ge4t2?file=/src/App.tsx)
 
-Before React 18: [https://codesandbox.io/s/hopeful-fire-ge4t2?file=/src/App.tsx](https://codesandbox.io/s/hopeful-fire-ge4t2?file=/src/App.tsx)
-
-After React 18: [https://codesandbox.io/s/morning-sun-lgz88?file=/src/index.js](https://codesandbox.io/s/morning-sun-lgz88?file=/src/index.js)
+在React 18之后: [https://codesandbox.io/s/morning-sun-lgz88?file=/src/index.js](https://codesandbox.io/s/morning-sun-lgz88?file=/src/index.js)
 
 ## The Suspense API
 
-React 18 includes a lot of changes to improve React performance in a [Server-Side Rendered](/news/server-side-rendering-your-react-app-in-three-simple-steps-7a82b95db82e/) context. Server-side rendering is a way of rendering the JS data to HTML on the server to save computation on the frontend. This results in a faster initial page load in most cases.
+React 18包含了很多变化，以改善React在服务端渲染(SSR)下的性能[Server-Side Rendered](/news/server-side-rendering-your-react-app-in-three-simple-steps-7a82b95db82e/)。 服务器端渲染是一种在服务器上将JS数据渲染成HTML的方式，以节省前端的计算。在大多数情况下，获得更快的初始页面加载。
 
-React performs Server Side Rendering in 4 sequential steps:
+React以4个连续的步骤执行服务器端渲染。
 
--   On the server, data is fetched for each component.
--   On the server, the entire app is rendered to HTML and sent to the client.
--   On the client, the JavaScript code for the entire app is fetched.
--   On the client, the JavaScript connects React to the server-generated HTML, which is known as Hydration.
+-   在服务器上，为每个组件获取数据。
+-   在服务器上，整个应用程序被渲染成HTML并发送给客户端。
+-   在客户端，整个应用程序的JavaScript代码被提取出来
+-   在客户端，JavaScript将React连接到服务器生成的HTML，这就是所谓的Hydration。
 
-React 18 introduces the `Suspense` API, which allows you to break down your app into **smaller independent units**, which will go through these steps independently and won’t block the rest of the app. As a result, your app’s users will see the content sooner and be able to start interacting with it much faster.
+React 18引入了`Suspense`API，它允许你将你的应用程序分解成**小的独立单元**，这些单元将独立完成这些步骤，并且不会阻碍应用程序的其他部分。因此，你的应用程序的用户将更快地看到内容，并能更快地开始与它互动。
 
-### How does the Suspense API work?
+### Suspense API是如何工作的
 
-#### Streaming HTML
+#### 流式HTML
 
-With today’s SSR, rendering HTML and hydration are “all or nothing”. The client has to fetch and hydrate all of the app at once.
+在今天的SSR中，渲染HTML和hydration是 "全有或全无"。客户端必须一次性地获取和hydration所有的应用程序。
 
-But React 18 gives you a new possibility. You can wrap a part of the page with `<Suspense>`.
+但是React 18给了你一个新的可能性。你可以用`<Suspense>`来包装(wrap)页面的一部分。
 
 ```jsx
 <Suspense fallback={<Spinner />}>
@@ -206,34 +206,34 @@ But React 18 gives you a new possibility. You can wrap a part of the page with `
 </Suspense>
 ```
 
-By wrapping the component in `<Suspense>`, we tell React that it doesn’t need to wait for comments to start streaming the HTML for the rest of the page. Instead, React will send the placeholder (a spinner) instead.
+通过用`<Suspense>`包装(warp)组件，我们告诉React，它不需要等待评论来开始为页面的其他部分传输HTML。相反，React将发送占位符（一个旋转器spinner）。
 
-When the data for the comments is ready on the server, React will send additional HTML into the same stream, as well as a minimal inline `<script>` tag to put that HTML in the “right place”.
+当服务器上的评论数据准备好了，React将发送额外的HTML到同一个流中，以及一个最小的内联`<script>`标签来把HTML放在 "正确的地方"。
 
-#### Selective Hydration
+#### 选择Hydration
 
-Before React 18, hydration couldn't start if the complete JavaScript code for the app hadn't loaded in. For larger apps, this process can take a while.
+在React 18之前，如果应用程序的完整JavaScript代码没有加载进来，hydration就无法启动。对于较大的应用程序，这个过程可能需要一段时间。
 
-But in React 18, `<Suspense>` lets you hydrate the app before the child components have loaded in.
+但在React 18中，`<Suspense>`可以让你在子组件加载之前就对应用进行hydration。
 
-By wrapping components in `<Suspense>`, you can tell React that they shouldn’t block the rest of the page from streaming—and even hydration. This means that you no longer have to wait for all the code to load in order to start hydrating. React can hydrate parts as they’re being loaded.
+通过用`<Suspense>`包装(warp)组件，你可以告诉React，它们不应该阻止页面的其他部分，甚至是hydration。这意味着你不再需要等待所有的代码加载，以便开始hydration。React可以在加载部分时进行hydration。
 
-These 2 features of `Suspense` and several other changes introduced in React 18 speed up initial page loads tremendously.
+这2个`Suspense`的功能和React 18中引入的其他几个变化极大地加快了初始页面的加载。
 
-You can read more in this article [An explanation of Suspense SSR](https://github.com/reactwg/react-18/discussions/37) and related changes by Dan Abramov
+你可以在这篇文章中阅读更多内容  [Suspense SSR的解释](https://github.com/reactwg/react-18/discussions/37) 和Dan Abramov做的相关修改。
 
-### Demo of Suspense
+### Suspense的演示
 
 [https://codesandbox.io/s/recursing-mclaren-1ireo?file=/src/index.js:458-466](https://codesandbox.io/s/recursing-mclaren-1ireo?file=/src/index.js:458-466)
 
-## Summary
+## 总结
 
-So to summarize, the features that React 18 brings are:
+因此，总结起来，React 18所带来的功能是:
 
--   Concurrency control with the Transition API,
--   Automatic Batching of function calls and events to improve in-app performance, and
--   Much faster page loads for SSR with Suspense.
+-   用Transition API进行并发控制,
+-   函数调用和事件的自动批处理，以提高应用内的性能，以及
+-   用Suspense为SSR提供更快的页面加载。
 
-Although not a very large departure from the previous version of React, all of these changes are making React a trend-setter for all the frameworks out there.
+虽然与上一版本的React没有很大的区别，但所有这些变化都使React成为所有框架的潮流引领者。
 
-Thanks for reading this! You can check out my previous posts and tutorials on React here on freeCodeCamp. You can also follow me on Twitter [@thewritingdev](https://twitter.com/thewritingdev), where I post daily content on React and web development.
+谢谢你阅读这篇文章! 你可以在freeCodeCamp这里查看我以前关于React的帖子和教程。你也可以在Twitter上关注我[@thewritingdev](https://twitter.com/thewritingdev),在那里我每天发布关于React和Web开发的内容。

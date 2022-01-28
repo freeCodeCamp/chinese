@@ -267,23 +267,23 @@ export default function App() {
 }
 ```
 
-In most cases, you do not need the data that's returned from the `.delete()` method.
+在大多数情况下，你不需要从`.delete()`方法中返回的数据。
 
-But in the code above, the `.then()` callback is still used to ensure that your request is successfully resolved.
+但在上面的代码中，`.then()`回调仍被用来确保你的请求被成功处理。
 
-In the code above, after a post is deleted, the user is alerted that it was deleted successfully. Then, the post data is cleared out of the state by setting it to its initial value of `null`.
+在上面的代码中，一个帖子被删除后，用户会被提醒它被成功删除。然后，帖子数据被清除出状态，将其设置为初始值`null`。
 
-Also, once a post is deleted, the text "No post" is shown immediately after the alert message.
+另外，一旦一个帖子被删除，文本 "没有帖子 "就会在警告信息后立即显示。
 
 ## How to Handle Errors with Axios
 
-What about handling errors with Axios?
+如何处理Axios的错误？
 
-What if there's an error while making a request? For example, you might pass along the wrong data, make a request to the wrong endpoint, or have a network error.
+如果在发出请求时出现了错误怎么办？例如，你可能传递了错误的数据，向错误的端点(endpoint)发出了请求，或者出现了网络错误。
 
-To simulate an error, you'll send a request to an API endpoint that doesn't exist: `/posts/asdf`.
+为了模拟一个错误，你将向一个不存在的API端点(endpoint)发送一个请求: `/posts/asdf`.
 
-This request will return a `404` status code:
+这个请求将返回一个`404`状态代码。
 
 ```js
 import axios from "axios";
@@ -316,21 +316,21 @@ export default function App() {
 }
 ```
 
-In this case, instead of executing the `.then()` callback, Axios will throw an error and run the `.catch()` callback function.
+在这种情况下，Axios不会执行`.then()`回调函数，而是抛出一个错误并运行`.catch()`回调函数。
 
-In this function, we are taking the error data and putting it in state to alert our user about the error. So if we have an error, we will display that error message.
+在这个函数中，我们正在获取错误数据，并将其放入状态，以提醒我们的用户注意错误。因此，如果我们有一个错误，我们将显示该错误信息。
 
-In this function, the error data is put in state and used to alert users about the error. So if there's an error, an error message is displayed.
+在这个函数中，错误数据被放在状态中，用来提醒用户注意错误。所以，如果有一个错误，就会显示一个错误信息。
 
-When you run this code code, you'll see the text, "Error: Request failed with status code 404".
+当你运行这段代码的时候，你会看到这样的文字, "Error: Request failed with status code 404".
 
 ## How to Create an Axios Instance
 
-If you look at the previous examples, you'll see that there's a `baseURL` that you use as part of the endpoint for Axios to perform these requests.
+如果你看一下前面的例子，你会发现有一个`baseURL`，你用它作为Axios执行这些请求的端点(endpoint)的一部分。
 
-However, it gets a bit tedious to keep writing that `baseURL` for every single request. Couldn't you just have Axios remember what `baseURL` you're using, since it always involves a similar endpoint?
+然而，为每一个请求不断地编写`baseURL`是有点乏味的。你能不能让Axios记住你使用的`baseURL`？因为它总是涉及一个类似的端点。
 
-In fact, you can. If you create an instance with the `.create()` method, Axios will remember that `baseURL`, plus other values you might want to specify for every request, including headers:
+事实上，你可以。如果你用`.create()`方法创建一个实例，Axios会记住`baseURL`，以及你可能想为每个请求指定的其他值，包括消息头(header)。
 
 ```js
 import axios from "axios";
@@ -370,21 +370,21 @@ export default function App() {
 }
 ```
 
-The one property in the config object above is `baseURL`, to which you pass the endpoint.
+上述配置对象中的一个属性是`baseURL`，你把端点(endpoint)传给它。
 
-The `.create()` function returns a newly created instance, which in this case is called `client`.
+`.create()`函数返回一个新创建的实例，在本例中它被称为`client`。
 
-Then in the future, you can use all the same methods as you did before, but you don't have to include the `baseURL` as the first argument anymore. You just have to reference the specific route you want, for example, `/`, `/1`, and so on.
+然后在未来，你可以使用所有与之前相同的方法，但你不必再将`baseURL`作为第一个参数。你只需要引用你想要的特定路由，例如，`/`，`/1`，等等。
 
 ## How to Use the Async-Await Syntax with Axios
 
-A big benefit to using promises in JavaScript (including React applications) is the async-await syntax.
+在JavaScript（包括React应用程序）中使用promises的一大好处是async-await语法。
 
-Async-await allows you to write much cleaner code without `then` and `catch` callback functions. Plus, code with async-await looks a lot like synchronous code, and is easier to understand.
+Async-await允许你不使用`then`和`catch`回调函数的情况下写出更简洁的代码。另外，使用async-await的代码看起来很像同步代码，而且更容易理解。
 
-But how do you use the async-await syntax with Axios?
+但你如何使用Axios的async-await语法呢？
 
-In the example below, posts are fetched and there's still a button to delete that post:
+在下面的例子中，获取了帖子，但仍有一个按钮可以删除该帖子:
 
 ```js
 import axios from "axios";
@@ -423,35 +423,35 @@ export default function App() {
 }
 ```
 
-However in `useEffect`, there's an `async` function called `getPost`.
+然而在`useEffect`中，有一个`async`函数，叫做`getPost`。
 
-Making it `async` allows you to use the `await` keword to resolve the GET request and set that data in state on the next line without the `.then()` callback.
+让它成为`async`允许你使用`await`关键字来解决(resolve)GET请求，并在下一行将该数据设置为状态，而不需要`.then()`回调。
 
-Note that the `getPost` function is called immediately after being created.
+注意，`getPost`函数在被创建后立即被调用。
 
-Additionally, the `deletePost` function is now `async`, which is a requirement to use the `await` keyword which resolves the promise it returns (every Axios method returns a promise to resolve).
+此外，`deletePost`函数现在是`async`，这是使用`await`关键字的要求，它可以解决(resolve)它返回的promise（每个Axios方法都会返回一个promise来解决(resolve)）。
 
-After using the `await` keyword with the DELETE request, the user is alerted that the post was deleted, and the post is set to `null`.
+在使用`await`关键字和DELETE请求后，用户会被提醒帖子被删除，并且帖子被设置为`null`。
 
-As you can see, async-await cleans up the code a great deal, and you can use it with Axios very easily.
+正如你所看到的，async-await极大地简化了代码，你可以非常容易地将其用于Axios。
 
 ## How to Create a Custom `useAxios` Hook
 
-Async-await is a great way to simplify your code, but you can take this a step further.
+Async-await是一个简化代码的好方法，但你可以更进一步。
 
-Instead of using `useEffect` to fetch data when the component mounts, you could create your own custom hook with Axios to perform the same operation as a reusable function.
+你可以用Axios创建你自己的自定义Hook，作为一个可重用的函数执行同样的操作，而不是使用`useEffect`在组件挂载时获取数据。
 
-While you can make this custom hook yourself, there's a very good library that gives you a custom `useAxios` hook called use-axios-client.
+虽然你可以自己制作这个自定义Hook，但是有一个非常好的库可以给你一个自定义的`useAxios`钩子，叫做use-axios-client。
 
-First, install the package:
+首先，安装该软件包:
 
 ```
 npm install use-axios-client
 ```
 
-To use the hook itself, import `useAxios` from use-axios-client at the top of the component.
+要使用Hook本身，请在组件的顶部从use-axios-client导入`useAxios`。
 
-Because you no longer need `useEffect`, you can remove the React import:
+因为你不再需要`useEffect`，你可以删除React的导入。
 
 ```js
 import { useAxios } from "use-axios-client";
@@ -473,27 +473,27 @@ export default function App() {
 }
 ```
 
-Now you can call `useAxios` at the top of the app component, pass in the URL you want to make a request to, and the hook returns an object with all the values you need to handle the different states: `loading`, `error` and the resolved `data`.
+现在你可以在应用程序组件的顶部调用`useAxios`，传入你想要请求的URL，钩子会返回一个对象，其中包含你需要处理不同状态的所有值。`loading`, `error`和解决(resolved)的`data`。
 
-In the process of performing this request, the value `loading` will be true. If there's an error, you'll want to display that error state. Otherwise, if you have the returned data, you can display it in the UI.
+在执行这个请求的过程中，值`loading`将为真。如果有一个错误，你会想显示这个错误状态。否则，如果你有返回的数据，你可以在用户界面中显示它。
 
-The benefit of custom hooks like this is that it really cuts down on code and simplifies it overall.
+像这样的自定义Hook的好处是，它确实减少了代码，并从整体上简化了代码
 
-If you're looking for even simpler data fetching with Axios, try out a custom `useAxios` hook like this one.
+如果你想用Axios获取更简单的数据，可以试试像这样的自定义`useAxios`钩子。
 
 ## What's Next?
 
-Congratulations! You now know how to use one of the most powerful HTTP client libraries to power your React applications.
+恭喜你！你现在知道如何使用一个最强大的HTTP客户端库来支持你的React应用了。你现在知道如何使用最强大的HTTP客户端库之一来支持你的React应用程序。
 
-I hope you got a lot out of this guide.
+我希望你从本指南中得到了很多。
 
-[Remember that you can download this guide as a PDF cheatsheet to keep for future reference.](https://reedbarger.com/resources/react-axios-2021)
+[记住，你可以将本指南下载为PDF格式的手册，以备将来参考。](https://reedbarger.com/resources/react-axios-2021)
 
 ## Want Even More? Join The React Bootcamp
 
-**[The React Bootcamp](http://bit.ly/join-react-bootcamp)** takes everything you should know about learning React and bundles it into one comprehensive package, including videos, cheatsheets, plus special bonuses.
+**[The React Bootcamp](http://bit.ly/join-react-bootcamp)** 这本书把你应该知道的关于学习React的所有知识，捆绑在一个综合包里，包括视频、手册，还有特别的奖金。
 
-Gain the insider information **100s of developers** have already used to become a React pro, find their dream job, and take control of their future:
+获得**已经成为React专家百名开发者**的内幕信息。他们已经找到自己的梦想工作，并掌控他们的未来。
 
 [![The React Bootcamp](https://reedbarger.nyc3.digitaloceanspaces.com/react-bootcamp-banner.png)](http://bit.ly/join-react-bootcamp)  
-_Click here to be notified when it opens_
+_点击这里，当它开放时，将得到通知_

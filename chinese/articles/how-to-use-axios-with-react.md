@@ -35,59 +35,59 @@
 
 ## What is Axios?
 
-Axios is an HTTP client library that allows you to make requests to a given endpoint:
+Axios是一个HTTP客户端库，它允许你向一个给定的端点(endpoint)发出请求。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screen-Shot-2021-07-12-at-1.14.41-PM.png)
 
-This could be an external API or your own backend Node.js server, for example.
+例如，这可能是一个外部API或你自己的后端Node.js服务器。
 
-By making a request, you expect your API to perform an operation according to the request you made.
+通过提出请求，你希望你的API能根据你提出的请求执行操作。
 
-For example, if you make a GET request, you expect to get back data to display in your application.
+例如，如果你提出一个GET请求，你希望得到的数据能在你的应用程序中显示。
 
 ## Why Use Axios in React
 
-There are a number of different libraries you can use to make these requests, so why choose Axios?
+有许多不同的库可以用来提出这些请求，那么为什么选择Axios呢？
 
-Here are **five reasons** why you should use Axios as your client to make HTTP requests:
+以下 **五个理由** ,为什么你应该使用Axios作为你的客户端来进行HTTP请求:
 
-1.  It has good defaults to work with JSON data. Unlike alternatives such as the Fetch API, you often don't need to set your headers. Or perform tedious tasks like converting your request body to a JSON string.
-2.  Axios has function names that match any HTTP methods. To perform a GET request, you use the `.get()` method.
-3.  Axios does more with less code. Unlike the Fetch API, you only need one `.then()` callback to access your requested JSON data.
-4.  Axios has better error handling. Axios throws 400 and 500 range errors for you. Unlike the Fetch API, where you have to check the status code and throw the error yourself.
-5.  Axios can be used on the server as well as the client. If you are writing a Node.js application, be aware that Axios can also be used in an environment separate from the browser.
+1.  它有很好的默认值来处理JSON数据。与Fetch API等替代品不同，你通常不需要设置你的头文件。或执行繁琐的任务，如将你的请求体转换为JSON字符串
+2.  Axios有与任何HTTP方法相匹配的函数名称。要执行一个GET请求，你可以使用`.get()`方法。
+3.  Axios用更少的代码做更多的事情。与Fetch API不同，你只需要一个`.then()`回调来访问你请求的JSON数据。
+4.  Axios有更好的错误处理。Axios为你抛出400和500范围的错误。不像Fetch API，你必须检查状态代码并自己抛出错误。
+5.  Axios既可以在服务器上使用，也可以在客户端使用。如果你正在写一个Node.js应用程序，请注意Axios也可以在独立于浏览器的环境中使用。
 
 ## How to Set Up Axios with React
 
-Using Axios with React is a very simple process. You need three things:
+在React中使用Axios是一个非常简单的过程。你需要三样东西:
 
-1.  An existing React project
-2.  To install Axios with npm/yarn
-3.  An API endpoint for making requests
+1.  一个现有的React项目
+2.  用npm/yarn来安装Axios
+3.  一个用于发出请求的API端点(endpoint)
 
-The quickest way to create a new React application is by going to [react.new](https://react.new).
+创建一个新的React应用程序的最快捷的方法是去 [react.new](https://react.new)网站。
 
-If you have an existing React project, you just need to install Adios with npm (or any other package manager):
+如果你有一个现有的React项目，你只需要用npm（或任何其他包管理器）安装Adios。
 
 ```bash
 npm install axios
 ```
 
-In this guide, you'll use the JSON Placeholder API to get and change post data.
+在本指南中，你将使用JSON Placeholder API来获取和改变帖子数据。
 
-Here is a list of all the different routes you can make requests to, along with the appropriate HTTP method for each:
+下面是你可以提出请求的所有不同路由(routes)的列表，以及每个路线的相应HTTP方法:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screen-Shot-2021-07-10-at-12.21.28-PM.png)
 
-Here is a quick example of all of the operations you'll be performing with Axios and your API endpoint — retrieving, creating, updating, and deleting posts:
+下面是一个快速的例子，说明你将使用Axios和你的API端点进行的所有操作--检索、创建、更新和删除帖子:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/axios-react.gif)
 
 ## How to Make a GET Request
 
-To fetch data or retrieve it, make a GET request.
+要获取数据或检索数据，要提出一个GET请求。
 
-First, you're going to make a request for individual posts. If you look at the endpoint, you are getting the first post from the `/posts` endpoint:
+首先，你要对单个帖子进行请求。如果你看一下端点，你将从`/posts`端点(endpoint)获得第一个帖子。
 
 ```js
 import axios from "axios";
@@ -115,17 +115,17 @@ export default function App() {
 }
 ```
 
-To perform this request when the component mounts, you use the `useEffect` hook. This involves importing Axios, using the `.get()` method to make a GET request to your endpoint, and using a `.then()` callback to get back all of the response data.
+为了在挂载组件时执行这个请求， 你可以使用`useEffect`Hook。这涉及到导入Axios，使用`.get()`方法向你的端点(endpoint)发出GET请求， 并使用`.then()`回调获得所有的响应数据。
 
-The response is returned as an object. The data (which is in this case a post with `id`, `title`, and `body` properties) is put in a piece of state called `post` which is displayed in the component.
+响应被作为一个对象返回。数据（这里是一个带有`id`,`title`和`body`属性的帖子）被放在一个叫做`post`的状态中，在组件中显示。
 
-Note that you can always find the requested data from the `.data` property in the response.
+请注意，你总是可以从响应中的`.data`属性中找到请求的数据。
 
 ## How to Make a POST Request
 
-To create new data, make a POST request.
+要创建新的数据，要发出一个POST请求。
 
-According to the API, this needs to be performed on the `/posts` endpoint. If you look at the code below, you'll see that there's a button to create a post:
+根据API，这需要在`/posts`端点(endpoint)上执行。如果你看一下下面的代码，你会发现点击一个按钮可以创建一个帖子。
 
 ```js
 import axios from "axios";
@@ -165,13 +165,13 @@ export default function App() {
 }
 ```
 
-When you click on the button, it calls the `createPost` function.
+当你点击按钮时，它会调用`createPost`函数。
 
-To make that POST request with Axios, you use the `.post()` method. As the second argument, you include an object property that specifies what you want the new post to be.
+为了用Axios进行POST请求，你使用`.post()`方法。作为第二个参数，你包括一个对象属性，指定你希望新的帖子是什么。
 
-Once again, use a `.then()` callback to get back the response data and replace the first post you got with the new post you requested.
+再一次，使用`.then()`回调来获取响应数据，用你请求的新帖子替换你得到的第一个帖子。
 
-This is very similar to the `.get()` method, but the new resource you want to create is provided as the second argument after the API endpoint.
+这与`.get()`方法非常相似，但你想要创建的新资源是作为API端点(endpoint)之后的第二个参数提供的。
 
 ## How to Make a PUT Request
 

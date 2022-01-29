@@ -45,29 +45,29 @@ Supabase将强大的后端服务与易于使用的客户端库和SDK结合起来
 
 客户端SDK提供了易于使用的[filters](https://supabase.io/docs/reference/javascript/using-filters) 和[modifiers](https://supabase.io/docs/reference/javascript/using-modifiers)，以实现几乎无限的数据访问模式的组合。
 
-因为数据库是SQL，关系型数据很容易配置和查询，而且客户库把它作为第一等公民来考虑。
+因为数据库是SQL，关系型数据很容易配置和查询，而且客户端库把它作为第一等公民来考虑。
 
 ### 权限
 
-当你通过 "hello world "时，许多类型的框架和服务很快就会被淘汰。这是因为大多数真实世界的需要远远超出了你经常看到的这些工具所提供的基本CRUD功能。
+当你写好 "hello world "时，许多类型的框架和服务很快就会被淘汰。这是因为大多数真实世界的需要远远超出了你经常看到的这些工具所提供的基本CRUD功能。
 
-The problem with some frameworks and managed services is that the abstractions they create are not extensible enough to enable easy to modify configurations or custom business logic. These restrictions often make it difficult to take into account the many one-off use cases that come up with building an app in the real-world.
+一些框架和管理服务的问题是，它们创建的抽象没有足够的扩展性，无法轻松修改配置或定制业务逻辑。这些限制往往使其难以考虑到在现实世界中构建应用程序时出现的许多一次性的用例。
 
-In addition to enabling a wide array of data access patterns, Supabase makes it easy to configure authorization and fine grained access controls. This is because it is simply Postgres, enabling you implement whatever [row-level security policies](https://www.postgresql.org/docs/10/ddl-rowsecurity.html) you would like directly from the built-in SQL editor (something we will cover here).
+除了实现广泛的数据访问模式外，Supabase还使配置授权和精细的访问控制变得容易。这是因为它是简单的Postgres，使你能够直接从内置的SQL编辑器中实现任何你想要的[row-level security policies(行级安全策略)](https://www.postgresql.org/docs/10/ddl-rowsecurity.html) 你可以直接从内置的SQL编辑器中获取你想要的信息(我们将在这里讨论这个问题)。
 
-### UI components
+### UI 组件
 
-In addition to the client-side libraries maintained by the same team building the other Supabase tooling, they also maintain a [UI component library](https://ui.supabase.io/) (beta) that allows you to get up and running with various UI elements.
+除了由构建其他Supabase工具的同一个团队维护的客户端库之外，他们还维护了一个[UI 组件库](https://ui.supabase.io/) (beta)使你能够使用各种UI元素来启动和运行。
 
-The most powerful is [Auth](https://ui.supabase.io/components/auth) which integrates with your Supabase project to quickly spin up a user authentication flow (which I'll be using in this tutorial).
+最强大的是[Auth](https://ui.supabase.io/components/auth)，它与你的Supabase项目集成，以快速启动一个用户认证流程(我将在本教程中使用它)。
 
-### Multiple authentication providers
+### 多种认证方式
 
 Supabase enables all of the following types of authentication mechanisms:
 
-1.  Username & password
-2.  Magic email link
-3.  Google
+1.  用户名和密码
+2.  电子邮件链接
+3.  谷歌
 4.  Facebook
 5.  Apple
 6.  GitHub
@@ -76,44 +76,43 @@ Supabase enables all of the following types of authentication mechanisms:
 9.  GitLab
 10.  Bitbucket
 
-### Open Source
+### 开源
 
-One of the biggest things it has going for it is that it is [completely open source](https://github.com/supabase) (yes the back end too). This means that you can choose either the Serverless hosted approach or to host it yourself.
+它最大的优点之一是[完全开源](https://github.com/supabase) (是的，后端也是)。 这意味着，你可以选择无服务器托管的方式，也可以自己托管。
 
-That means that if you wanted to, you could [run Supabase with Docker and host your app](https://supabase.io/docs/guides/self-hosting) on AWS, GCP, or Azure. This would eliminate the vendor lock-in issue you may run into with Supabase alternatives.
+这意味着，如果你愿意，你可以[用Docker运行Supabase，托管自己的应用程序](https://supabase.io/docs/guides/self-hosting) 在 AWS, GCP, or Azure上。这将消除你在使用Supabase时，避免云服务商锁定问题。
+## 如何开始使用Supabase
 
-## How to Get Started with Supabase
+### 项目设置
 
-### Project setup
-
-To get started, let's first create the Next.js app.
+为了开始，让我们首先创建Next.js应用程序。
 
 ```sh
 npx create-next-app next-supabase
 ```
 
-Next, change into the directory and install the dependencies we'll be needing for the app using either NPM or Yarn:
+接下来，进入目录并使用NPM或Yarn安装我们的应用程序所需的依赖。
+
 
 ```sh
 npm install @supabase/supabase-js @supabase/ui react-simplemde-editor easymde react-markdown uuid
 npm install tailwindcss@latest @tailwindcss/typography postcss@latest autoprefixer@latest
 ```
 
-Next, create the necessary Tailwind configuration files:
+接下来，创建必要的Tailwind配置文件:
 
 ```sh
 npx tailwindcss init -p
 ```
 
-Now update **tailwind.config.js** to add the Tailwind typography plugin to the array of plugins. We'll be using this plugin to style the markdown for our blog:
-
+现在更新**tailwind.config.js**，将Tailwind typography插件添加到插件数组中。我们将使用这个插件来为我们的博客设计标记。
 ```
 plugins: [
   require('@tailwindcss/typography')
 ]
 ```
 
-Finally, replace the styles in **styles/globals.css** with the following:
+最后，将**styles/globals.css**中的样式替换为以下内容。
 
 ```
 @tailwind base;
@@ -121,25 +120,25 @@ Finally, replace the styles in **styles/globals.css** with the following:
 @tailwind utilities;
 ```
 
-### Supabase project initialization
+### Supabase项目初始化
 
-Now that the project is created locally, let's create the Supabase project.
+现在项目已经在本地创建，让我们来创建Supabase项目。
 
-To do so, head over to [Supabase.io](https://supabase.io/) and click on **Start Your Project**. Authenticate with GitHub and then create a new project under the organization that is provided to you in your account.
+为此，请前往[Supabase.io](https://supabase.io/)，点击**Start Your Project**。通过GitHub账号完成认证，然后在账户中提供给你的组织下创建一个新项目。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/myaccountsorg.jpg)
 
-Give the project a **Name** and **Password** and click **Create new project**.
+给项目一个**Name**和**Password**，然后点击**Create new project**。
 
-It will take approximately 2 minutes for your project to be created.
+你的项目将需要大约2分钟的时间来创建。
 
-### How to create a database table in Supabase
+### 如何在Supabase中创建一个数据库表
 
-Once you've created your project, let's go ahead and create the table for our app along with all of the permissions we'll need. To do so, click on the **SQL** link in the left hand menu.
+当你创建了你的项目，让我们继续为我们的应用程序创建表，以及我们需要的所有权限。要做到这一点，请点击左边菜单中的**SQL**链接。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Screen-Shot-2021-06-06-at-6.07.00-PM.png)
 
-In this view, click on **Query-1** under **Open queries** and paste in the following SQL query and click **RUN**:
+在这个视图中，点击**Query-1**下的 **Open queries**，粘贴以下SQL查询，并点击 **RUN**。
 
 ```
 CREATE TABLE posts (
@@ -166,19 +165,19 @@ create policy "Posts are public." on posts for
     select using (true);
 ```
 
-This will create the `posts` table that we'll be using for the app. It also enabled some row level permissions:
+这将创建我们将在应用程序中使用的`posts`表。它还启用了一些行级(row)权限:
 
--   All users can query for posts
--   Only signed in users can create posts, and their user ID must match the user ID passed into the arguments
--   Only the owner of the post can update or delete it
+-   所有用户都可以查询帖子
+-   只有已登录的用户可以创建帖子，他们的用户ID必须与传入参数的用户ID一致
+-   只有帖子的主人可以更新或删除它
 
-Now, if we click on the **Table editor** link, we should see our new table created with the proper schema.
+现在，如果我们点击**Table editor**链接，我们应该看到我们的新表以适当的模式创建。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Screen-Shot-2021-06-06-at-6.11.49-PM.png)
 
-That's it! Our back end is ready to go now and we can start building out the UI. Username + password authentication is already enabled by default, so all we need to do now is wire everything up on the front end.
+这这样! 我们的后端已经准备好了，我们可以开始建立用户界面了。用户名+密码认证已经默认启用，所以我们现在需要做的就是在前端把一切都连接起来。
 
-### Next.js Supabase configuration
+### Next.js Supabase 配置
 
 Now that the project has been created, we need a way for our Next.js app to know about the back end services we just created for it.
 

@@ -1,55 +1,55 @@
 > -  原文地址：[Full Stack Development with Next.js and Supabase – The Complete Guide](https://www.freecodecamp.org/news/the-complete-guide-to-full-stack-development-with-supabas/)
 > -  原文作者：[Nader Dabit](https://www.freecodecamp.org/news/author/nader/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![Full Stack Development with Next.js and Supabase – The Complete Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/supanext.png)
+![使用 Next.js 和 Supabase 进行全栈开发](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/supanext.png)
 
-[Supabase](https://twitter.com/supabase_io) is an open source Firebase alternative that lets you create a real-time backend in less than two minutes.
+[Supabase](https://twitter.com/supabase_io) 是一个Firebase的开源替代品，让你在不到两分钟的时间内创建一个实时后台。
 
-Supabase has continued to gain hype and adoption with developers in my network over the past few months. And a lot of the people I've talked to about it prefer the fact that it leverages a SQL-style database, and they like that it's open source, too.
+在过去的几个月里，Supabase继续通过我的网站获得开发人员的宣传和采用。和我交流过的很多人都喜欢它利用 SQL 风格的数据库这一事实，他们也喜欢它是开源的。
 
-When you create a project Supabase automatically gives you a Postgres SQL database, user authentication, and API. From there you can easily implement additional features like realtime subscriptions and file storage.
+当你创建一个项目时，Supabase会自动给你一个Postgres SQL数据库、用户认证和API。从那里你可以很容易地实现额外的功能，如实时订阅和文件存储。
 
-In this guide, you will learn how to build a full stack app that implements the core features that most apps require – like routing, a database, API, authentication, authorization, realtime data, and fine grained access control. We'll be using a modern stack including [React](https://reactjs.org/docs/getting-started.html), [Next.js](https://nextjs.org/), and [TailwindCSS](https://tailwindcss.com/).
+在本指南中，你将学习如何构建一个全栈应用程序，实现大多数应用程序需要的核心功能--如路由、数据库、API、认证、授权、实时数据和细粒度访问控制。我们将使用一个现代堆栈，包括[React](https://reactjs.org/docs/getting-started.html), [Next.js](https://nextjs.org/), 和 [TailwindCSS](https://tailwindcss.com/).
 
-I've tried to distill everything I've learned while myself getting up to speed with Supabase in as short of a guide as possible so you too can begin building full stack apps with the framework.
+我试图把我自己在使用Supabase的过程中所学到的东西提炼成一个尽可能简短的指南，这样你也可以开始用这个框架构建全栈应用。
 
-The app that we will be building is a multi-user blogging app that incorporates all of the types of features you see in many modern apps. This will take us beyond basic CRUD by enabling things like file storage as well as authorization and fine grained access control.
+我们将建立的应用程序是一个多用户博客应用程序，其中包含了你在许多现代应用程序中看到的所有类型的功能。这将使我们超越基本的CRUD，实现文件存储以及授权和细粒度的访问控制等功能。
 
-> You can find the code for the app we will be building [here](https://github.com/dabit3/supabase-next.js).
+>  你可以找到我们将要建立的应用程序的代码，[在这里](https://github.com/dabit3/supabase-next.js)。
 
-By learning how to incorporate all of these features together you should be able to take what you learn here and build out your own ideas. Understanding the basic building blocks themselves allows you to then take this knowledge with you in the future to put it to use in any way you see fit.
+通过学习如何将所有这些功能结合在一起，你应该能够利用你在这里学到的东西，建立你自己的想法。了解基本结构本身，你就可以在将来带着这些知识，以你认为合适的方式使用它。
 
-## Supabase Overview
+## Supabase概述
 
-### How to Build Full Stack Apps
+### 如何构建全栈式应用程序
 
-I'm fascinated by full stack Serverless frameworks because of the amount of power and agility they give to developers looking to build complete applications.
+我对全栈式无服务器框架非常着迷，因为它们为希望构建完整应用的开发者提供了大量的支持和敏捷性。
 
-Supabase brings to the table the important combination of powerful back end services and easy to use client-side libraries and SDKs for an end to end solution.
+Supabase将强大的后端服务与易于使用的客户端库和SDK结合起来，提供了一个端到端的解决方案。
 
-This combination lets you not only build out the individual features and services necessary on the back end, but easily integrate them together on the front end by leveraging client libraries maintained by the same team.
+这种组合使你不仅可以在后端建立起必要的个别功能和服务，而且可以通过利用同一团队维护的客户端库，在前端轻松地将它们整合在一起。
 
-Because Supabase is open source, you have the option to self-host or deploy your backend as a managed service. And as you can see, this will be easy for us to do on a free tier that does not require a credit card to get started with.
+由于Supabase是开源的，你可以选择自我托管或将你的后端部署为托管服务。而且，正如你所看到的，这对我们来说将很容易在一个不需要信用卡的，免费的基础设施上开始做。
 
-## Why Use Supabase?
+## 为什么使用Supabase?
 
-I've led the Front End Web and Mobile Developer Advocacy team at AWS, and written a book on building these types of apps. So I've had quite a bit of experience building in this space.
+我曾在AWS领导前端Web和移动开发者倡导团队，并写了一本关于构建这些类型的应用程序的书。所以我在这个领域有相当多的建设经验。
 
-And I think that Supabase brings to the table some really powerful features that immediately stood out to me when I started to build with it.
+我认为Supabase带来了一些非常强大的功能，当我开始使用它进行构建时，这些功能立即让我感到震惊。
 
-### Data access patterns
+### 数据访问方式
 
-One of the biggest limitations of some of the tools and frameworks I've used in the past is the lack of querying capabilities. What I like a lot about Supabase is that, since it's built on top of Postgres, it enables an extremely rich set of performant querying capabilities out of the box without having to write any additional back end code.
+我过去使用的一些工具和框架的最大限制之一是缺乏查询功能。我非常喜欢Supabase，因为它是建立在Postgres之上的，它能够实现一套极其丰富的、开箱即用的高性能查询功能，而不需要编写任何额外的后端代码。
 
-The client-side SDKs provide easy to use [filters](https://supabase.io/docs/reference/javascript/using-filters) and [modifiers](https://supabase.io/docs/reference/javascript/using-modifiers) to enable an almost infinite combination of data access patterns.
+客户端SDK提供了易于使用的[filters](https://supabase.io/docs/reference/javascript/using-filters) 和[modifiers](https://supabase.io/docs/reference/javascript/using-modifiers)，以实现几乎无限的数据访问模式的组合。
 
-Because the database is SQL, relational data is easy to configure and query, and the client libraries take it into account as a first class citizen.
+因为数据库是SQL，关系型数据很容易配置和查询，而且客户库把它作为第一等公民来考虑。
 
-### Permissions
+### 权限
 
-When you get past "hello world" many types of frameworks and services fall over very quickly. This is because most real-world use cases extend far beyond the basic CRUD functionality you often see made available by these tools.
+当你通过 "hello world "时，许多类型的框架和服务很快就会被淘汰。这是因为大多数真实世界的需要远远超出了你经常看到的这些工具所提供的基本CRUD功能。
 
 The problem with some frameworks and managed services is that the abstractions they create are not extensible enough to enable easy to modify configurations or custom business logic. These restrictions often make it difficult to take into account the many one-off use cases that come up with building an app in the real-world.
 

@@ -179,20 +179,20 @@ create policy "Posts are public." on posts for
 
 ### Next.js Supabase 配置
 
-Now that the project has been created, we need a way for our Next.js app to know about the back end services we just created for it.
+现在项目已经创建，我们需要一种方法让我们的Next.js应用程序知道我们刚刚为它创建的后端服务。
 
-The best way for us to configure this is using environment variables. Next.js allows environment variables to be set by creating a file called **.env.local** in the root of the project and storing them there.
+对我们来说，配置的最好方法是使用环境变量。Next.js允许通过在项目根部创建一个名为 **.env.local** 的文件来设置环境变量，并将它们存储在那里。
 
-In order to expose a variable to the browser you have to prefix the variable with `NEXT_PUBLIC_`.
+为了向浏览器暴露一个变量，你必须在变量前加上 `NEXT_PUBLIC_`。
 
-Create a file called **.env.local** at the root of the project, and add the following configuration:
+在项目的根部创建一个名为**.env.local**的文件，并添加以下配置。
 
 ```
 NEXT_PUBLIC_SUPABASE_URL=https://app-id.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-public-api-key
 ```
 
-You can find the values of your API URL and API Key in the Supabase dashboard settings:
+你可以在Supabase仪表板的设置中找到你的API URL和API密钥的值:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/appurls.jpg)
 
@@ -207,11 +207,11 @@ export const supabase = createClient(
 )
 ```
 
-Now we will be able to import the `supabase` instance and use it anywhere in our app.
+现在我们将能够导入`supabase`实例并在我们的应用程序中的任何地方使用它。
 
-Here's an overview of what it looks like to interact with the API using the Supabase JavaScript client.
+下面是使用Supabase JavaScript客户端与API互动的概况。
 
-**Querying for data:**
+**查询数据:**
 
 ```javascript
 import { supabase } from '../path/to/api'
@@ -221,7 +221,7 @@ const { data, error } = await supabase
   .select()
 ```
 
-**Creating new items in the database:**
+**在数据库中创建新条目:**
 
 ```javascript
 const { data, error } = await supabase
@@ -236,9 +236,9 @@ const { data, error } = await supabase
   ])
 ```
 
-As I mentioned earlier, the [filters](https://supabase.io/docs/reference/javascript/using-filters) and [modifiers](https://supabase.io/docs/reference/javascript/using-modifiers) make it really easy to implement various data access patterns and selection sets of your data.
+正如我前面提到的,[filters](https://supabase.io/docs/reference/javascript/using-filters) 和 [modifiers](https://supabase.io/docs/reference/javascript/using-modifiers)使得实现各种数据访问模式和你的数据的选择集变得非常容易。
 
-**Authentication – signing up:**
+**认证 – 注册:**
 
 ```javascript
 const { user, session, error } = await supabase.auth.signUp({
@@ -247,7 +247,7 @@ const { user, session, error } = await supabase.auth.signUp({
 })
 ```
 
-**Authentication – signing in:**
+**认证 – 登录:**
 
 ```javascript
 const { user, session, error } = await supabase.auth.signIn({
@@ -256,19 +256,20 @@ const { user, session, error } = await supabase.auth.signIn({
 })
 ```
 
-In our case we won't be writing the main authentication logic by hand, we'll be using the Auth component from [Supabase UI](https://ui.supabase.io/components/auth).
+在我们的案例中，我们不会手工编写主要的认证逻辑，我们将使[Supabase UI](https://ui.supabase.io/components/auth)中的Auth组件。
 
-## How to Build the App
+## 如何构建应用程序
 
-Now let's start building out the UI!
+现在，让我们开始构建用户界面吧！
 
-To get started, let's first update the app to implement some basic navigation and layout styling.
+为了开始，让我们首先更新应用程序，实现一些基本的导航和布局风格。
 
-We will also configure some logic to check if the user is signed in, and show a link for creating new posts if they are.
+我们还将配置一些逻辑，以检查用户是否已经登录，并在他们登录后显示一个创建新帖子的链接。
 
-Finally we'll implement a listener for any `auth` events. And when a new `auth` event occurs, we'll check to make sure there is currently a signed in user in order to show or hide the **Create Post** link.
+最后，我们将为任何`auth'事件实现一个监听器。当一个新的 "Auth "事件发生时，我们将检查以确保当前有一个登录的用户，以便显示或隐藏 **Create Post** 的链接。
 
-Open **\_app.js** and add the following code:
+
+打开文件 **\_app.js**，添加以下代码:
 
 ```javascript
 // pages/_app.js
@@ -319,9 +320,9 @@ function MyApp({ Component, pageProps }) {
 export default MyApp
 ```
 
-### How to make a user profile page
+### 如何制作一个用户资料页
 
-Next, let's create the **profile** page. In the pages directory, create a new file named **profile.js** and add the following code:
+接下来，让我们创建**profile**页面。在页面目录中，创建一个名为**profile.js**的新文件，并添加以下代码:
 
 ```javascript
 // pages/profile.js
@@ -354,9 +355,10 @@ export default function AuthProfile() {
 }
 ```
 
-The profile page uses the [`Auth`](https://ui.supabase.io/components/auth) component from the [Supabase UI library](https://ui.supabase.io/components/auth). This component will render a "sign up" and "sign in" form for **unauthenticated** users, and a basic user profile with a "sign out" button for **authenticated** users. It will also enable a magic sign in link.
+简介页使用了[`Auth`](https://ui.supabase.io/components/auth)组件，源自[Supabase UI library](https://ui.supabase.io/components/auth)。 这组件将渲染出一个有"sign up" 和 "sign in" 表单(form)为 **未认证** 用户, 一个带有"sign out" 按钮的基本用户资料为**已认证**用户。 它还将启用一个有随机数(magic)的登录链接。
 
-### How to create new posts
+
+### 如何创建新的帖子
 
 Next, let's create the **create-post** page. In the pages directory, create a page named **create-post.js** with the following code:
 
@@ -418,23 +420,23 @@ function CreatePost() {
 export default CreatePost
 ```
 
-This component renders a Markdown editor, allowing users to create new posts.
+这个组件渲染了一个Markdown编辑器，允许用户创建新的帖子。
 
-The `createNewPost` function will use the `supabase` instance to create new posts using the local form state.
+`createNewPost`函数将使用`supabase`实例，使用本地表单状态创建新的帖子。
 
-You may notice that we are not passing in any headers. This is because if a user is signed in, the Supabase client libraries automatically include the access token in the headers for a signed in user.
+你可能注意到，我们没有传入任何消息头(headers)。这是因为如果用户已经登录，Supabase客户端库会自动将访问令牌包含在已登录用户的消息头(headers)中。
 
-### How to view a single post
+### 如何查看单个帖子
 
-We need to configure a page to view a single post.
+我们需要配置一个页面来查看单个帖子。
 
-This page uses `getStaticPaths` to dynamically create pages at build time based on the posts coming back from the API.
+这个页面使用`getStaticPaths`来在构建时根据从API回来的帖子动态地创建页面。
 
-We also use the `fallback` flag to enable fallback routes for dynamic SSG page generation.
+我们还使用`fallback`标志来启用动态SSG页面生成的返回路径。
 
-We use `getStaticProps` to enable the Post data to be fetched and then passed into the page as props at build time.
+我们使用`getStaticProps`使帖子数据被获取，然后在构建时作为props传入页面。
 
-Create a new folder in the **pages** directory called **posts** and a file called **\[id\].js** within that folder. In **pages/posts/\[id\].js**, add the following code:
+在**pages**目录下创建一个名为**posts**的新文件夹， 并在该文件夹中创建一个名为 **[id\].js**的文件。在**pages/posts/[id\].js**，添加以下代码。
 
 ```javascript
 // pages/posts/[id].js

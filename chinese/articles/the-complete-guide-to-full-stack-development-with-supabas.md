@@ -486,9 +486,9 @@ export async function getStaticProps ({ params }) {
 }
 ```
 
-### How to query for and render the list of posts
+### 如何查询和渲染帖子列表
 
-Next, let's update **index.js** to fetch and render a list of posts:
+接下来，让我们更新**index.js**，以获取并渲染一个帖子的列表:
 
 ```javascript
 // pages/index.js
@@ -529,37 +529,37 @@ export default function Home() {
 }
 ```
 
-### Let's test it out
+### 让我们来测试一下
 
-We now have all of the pieces of our app ready to go, so let's try it out.
+现在我们的应用程序的所有部分都准备好了，所以让我们来试试。
 
-To run the local server, run the `dev` command from your terminal:
+要运行本地服务器，从你的终端运行`dev`命令。
 
 ```sh
 npm run dev
 ```
 
-When the app loads, you should see the following screen:
+当应用程序加载时，你应该看到以下画面:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/SS1-1.png)
 
-To sign up, click on **Profile** and create a new account. You should receive an email link to confirm your account after signing up.
+要注册，请点击**Profile**并创建一个新账户。你应该在注册后收到一个电子邮件链接，以确认你的账户。
 
-You can also create a new account by using the magic link.
+你也可以通过使用随机数(magic)的链接创建一个新账户。
 
-Once you're signed in, you should be able to create new posts:
+当你登录后，你应该能够创建新的帖子:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/SS2.png)
 
-Navigating back to the home page, you should be able to see a list of the posts that you've created and be able to click on a link to the post to view it:
+回到主页，你应该能够看到你已经创建的帖子的列表，并能够点击帖子的链接来查看它。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/SS3.png)
 
-## How to Edit Posts
+## 如何编辑帖子
 
-Now that we have the app up and running, let's learn how to edit posts. To get started with this, let's create a new view that will fetch only the posts that the signed in user has created.
+现在我们已经启动并运行了应用程序，让我们来学习如何编辑帖子。为了开始学习，让我们创建一个新的视图(view)，它将只获取已登录用户创建的帖子。
 
-To do so, create a new file named **my-posts.js** in the root of the project with the following code:
+为此，在项目的根目录创建一个名为**my-posts.js**的新文件，代码如下。
 
 ```javascript
 // pages/my-posts.js
@@ -610,13 +610,13 @@ export default function MyPosts() {
 }
 ```
 
-In the query for the `posts`, we use the user `id` to select only the posts created by the signed in user.
+在对 `post` 的查询中，我们使用用户 `id`，选择由登录用户创建的帖子。
 
-Next, create a new folder named **edit-post** in the **pages** directory. Then, create a file named **\[id\].js** in this folder.
+接下来，在**pages**目录下创建一个名为**edit-post**的新文件夹。然后，在这个文件夹中创建一个名为 **[id\].js** 的文件。
 
-In this file, we'll be accessing the `id` of the post from a route parameter. When the component loads, we will then use the post id from the route to fetch the post data and make it available for editing.
+在这个文件中，我们将从一个路由参数中获取访问帖子的`id'。当组件加载时，我们将使用来自路由的帖子ID来获取帖子数据，并使其可用于编辑。
 
-In this file, add the following code:
+在这个文件中，添加以下代码:
 
 ```javascript
 // pages/edit-post/[id].js
@@ -681,7 +681,7 @@ function EditPost() {
 export default EditPost
 ```
 
-Now, add a new link to our navigation located in **pages/\_app.js**:
+现在，在位于**pages/\_app.js**的导航中添加一个新链接。:
 
 ```javascript
 // pages/_app.js
@@ -694,17 +694,17 @@ Now, add a new link to our navigation located in **pages/\_app.js**:
 }
 ```
 
-When running the app, you should be able to view your own posts, edit them, and delete them from the updated UI.
+当运行应用程序时，你应该能够查看你自己的帖子，编辑它们，并从更新用户界面删除它们。
 
-### How to enable real-time updates
+### 如何启用实时更新
 
-Now that we have the app running it's trivial to add real-time updates.
+现在，我们已经运行了应用程序，添加实时更新是很容易的。
 
-By default, Realtime is disabled on your database. Let's turn on Realtime for the **posts** table.
+默认情况下，数据库中的Realtime是禁用的。让我们为**posts**表打开Realtime。
 
-To do so, open the app dashboard and click on **Databases** -> **Replication** -> **0 Tables** (under Source). Toggle on Realtime functionality for the **posts** table. [Here](https://supabase.io/docs/guides/api#managing-realtime) is a video walkthrough of how you can do this for clarity.
+要做到这一点，打开应用程序仪表板并点击 **Databases** -> **Replication** -> **0 Tables** (Source下面)。 打开 **posts** 表Realtime功能。 [这里](https://supabase.io/docs/guides/api#managing-realtime) 是一个关于如何做的视频演练，以使其清晰明了。
 
-Next, open **src/index.js** and update the `useEffect` hook with the following code:
+接下来，打开 **src/index.js**，用以下代码更新 `useEffect` hook:
 
 ```
   useEffect(() => {
@@ -717,21 +717,21 @@ Next, open **src/index.js** and update the `useEffect` hook with the following c
   }, [])
 ```
 
-Now, we will be subscribed to realtime changes in the **posts** table.
+现在，我们将订阅**posts**表中的实时变化。
 
-> The code for the app is located [here](https://github.com/dabit3/supabase-next.js).
+> 该应用程序的代码位于[这里](https://github.com/dabit3/supabase-next.js).
 
-## Next Steps
+## 下一步
 
-By now you should have a good understanding of how to build full stack apps with Supabase and Next.js.
+现在你应该对如何用Supabase和Next.js构建全栈应用有了一定的了解。
 
-If you'd like to learn more about building full stack apps with Supabase, I'd check out the following resources.
+如果你想了解更多关于用Supabase构建全栈应用的信息，我建议查看以下资源。
 
--   [Supabase docs](https://supabase.io/docs)
--   [Supabase example projects](https://github.com/supabase/supabase/tree/master/examples)
+-   [Supabase 文档](https://supabase.io/docs)
+-   [Supabase 示例项目](https://github.com/supabase/supabase/tree/master/examples)
 -   [Is Supabase Legit? Firebase Alternative Breakdown](https://www.youtube.com/watch?v=WiwfiVdfRIc)
--   [Supabase Auth Deep Dive Part 1: JWTs](https://www.youtube.com/watch?v=v3Exg5YpJvE)
--   [Build in Public 001 - Building a Next.js + Supabase Tutorial](https://www.youtube.com/watch?v=p561ogKZ63o)
--   [Auth Deep Dive](https://supabase.io/docs/learn/auth-deep-dive/auth-deep-dive-jwts)
--   [Supabase and Sveltekit](https://www.youtube.com/watch?v=j4AV2Liojk0)
--   [Using Supabase in Replit with node.js](https://www.youtube.com/watch?v=lQ5iIxaYduI)
+-   [Supabase Auth 深入探讨第 1 部分：JWT](https://www.youtube.com/watch?v=v3Exg5YpJvE)
+-   [Build in Public 001 - 构建 Next.js + Supabase 教程](https://www.youtube.com/watch?v=p561ogKZ63o)
+-   [身份验证深入了解](https://supabase.io/docs/learn/auth-deep-dive/auth-deep-dive-jwts)
+-   [Supabase 和 Sveltekit](https://www.youtube.com/watch?v=j4AV2Liojk0)
+-   [ 在Replit上使用Supabase和nodejs](https://www.youtube.com/watch?v=lQ5iIxaYduI)

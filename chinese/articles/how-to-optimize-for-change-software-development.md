@@ -1,6 +1,6 @@
 > -  原文地址：[How to Optimize for Change in Software Development](https://www.freecodecamp.org/news/how-to-optimize-for-change-software-development/)
 > -  原文作者：[swyx](https://www.freecodecamp.org/news/author/swyx/)
-> -  译者：
+> -  译者：guhuaijin
 > -  校对者：
 
 ![How to Optimize for Change in Software Development](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/change-article-image.jpg)

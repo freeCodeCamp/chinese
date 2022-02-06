@@ -1,63 +1,63 @@
 > -  原文地址：[How to Build a Portfolio Website with React](https://www.freecodecamp.org/news/build-portfolio-website-react/)
 > -  原文作者：[Reed Barger](https://www.freecodecamp.org/news/author/reed/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![How to Build a Portfolio Website with React](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/react-portfolio-2021.png)
+![如何使用React创建一个作品集网站](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/react-portfolio-2021.png)
 
-Today you're going to create one of the most important apps you can build for yourself: your developer portfolio.
+今天，你将为自己创建一个最重要的应用程序，你的作品集。
 
-Every React developer or web developer in general needs to be able to show off what they can do to any potential client or employer.
+每个React开发者或者Web开发者通常需要向潜在的客户或者雇主，展示他们能做什么。
 
-That's exactly what we're going to be building right now, with the help of a number of industry standard tools, including React, Tailwind CSS, and Netlify.
+这是我们现在要做的，在一些行业标准工具帮助下，包括React，Tailwind CSS，和Netlify。
 
-Let's get started!
+开始吧!
 
-## What Will the Portfolio Look Like?
+## 作品集是怎样的？
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/portfolio-1-min.gif)
 
-This is the final version of the portfolio you will be building.
+这是你将要建立的最终版本。
 
-It will feature information about yourself, what projects you have made, what skills you've used in making those projects, and will include a contact form for clients or employers to reach out to you.
+它的作用是展示你自己，你做过什么项目，你在做这些项目的时用了什么技能，还有一个联系列表，以便客户或者雇主联系上你。
 
-## What Tools Will We Be Using?
+## 我们将使用什么工具？
 
--   We will use React to create the app's user interface. It will allow us to compose each part of our landing page through reusable components and extend our app if we want to add additional features, such as a blog.
--   To style our application, we will use Tailwind CSS. To give our app a professional appearance, Tailwind will allow us to easily apply multiple styles through combining classnames on our React elements.
--   For pushing our app to the web, we will use the free service Netlify. It will serve our project on a custom domain to users very quickly with the help of a CDN (content delivery network).
+-   我们将用React来创建应用程序的用户界面。它将允许我们通过可重复使用的组件来组成登录页面的每一部分，和添加我们想要的功能，如果博客。
+-   为了设计我们的应用程序， 我们将使用Tailwind CSS。为了给我们的应用程序一个专业的外观，Tailwind允许我们通过在React元素上组合类名(classnames)。
+-   为了把我们的应用程序部署收到网络上，我们将使用免费的Netlify。通过CDN的帮助下，用户可以通过我们自己的的域名，快速访问到我们的项目。
 
-## How to Get Started
+## 怎样开始
 
-**[You can download the starting files for our project here.](https://reedbarger.com/resources/react-portfolio-2021)**
+**[你可以在这里下载我们项目的开始文件](https://reedbarger.com/resources/react-portfolio-2021)**
 
-When you grab the code, all you will have to do is drag your (unzipped) project folder into your code editor and run the command:
+当你获取到代码，你要做的是把你的(解压好)的项目文件夹拖到你的代码编辑器中然后在终端运行命令。
 
 ```bash
 npm install
 ```
 
-And you're good to go!
+然后可以开始了！
 
-## What Tools Do I Need to Build my Portfolio?
+## 我需要什么工具来构建我的作品集？
 
-To go through the entire process of creating our app from start to deployment, you will need to have the following:
+创建我们的应用程序从开始到部署，需要以下的条件。
 
-1.  Node.js installed on your computer. You can download it at nodejs.org.
-2.  Git installed on your computer. You can download it at git-scm.com.
-3.  I would recommend using VS Code as your code editor. You can download it at code.visualstudio.com.
-4.  A free Netlify account at netlify.com.
-5.  A free GitHub account at github.com.
+1.  你的电脑安装Node.js。 你可以在nodejs.org下载安装程序。
+2.  在你的电脑安装Git，你可以在git-scm.com下载。
+3.  我建议使用VS Code作为你的代码编辑器。你可以在code.visualstudio.com下载它。
+4.  一个在Netlify.com上的免费的Netlify账户。
+5.  一个免费的 GitHub账号。
 
-## How to Build the Portfolio Structure
+## 如何建立作品集的结构
 
-The benefit of using React is that we could expand our app to as many pages as we like, very simply, and add a lot of additional content.
+使用React的好处是，我们可以将我们的应用程序扩展到任意多的页面，并添加大量的内容，这是非常容易的。
 
-However, since we're just working with one page, we can within our app component figure out the different components that we need very quickly. We will have a Navbar on top with all of the links to jump to different sections of our portfolio.
+在我们只是在处理一个页面，我们可以在我们的应用程序组件中非常迅速找到需要的不同组件。我们将在顶部有一个导航栏，上面有所有的链接，可以跳转到我们作品集的不同部分。
 
-After that, we will include an about section, a section for our projects, testimonials, and finally our contact form.
+在此之后，我们将包含一个部分，这是关于我们的项目，推荐书，最后是我们的联系表格。
 
-This quick planning allows us to figure out what our components should be named and in what order. We can go ahead and add all of them to our App.js file (in src):
+这种快速的规划使我们能够弄清楚我们的组件怎样命名，以什么顺序命名。下一步，把它们全部添加到我们的App.js文件中(在src文件夹):
 
 ```js
 // src/App.js
@@ -78,12 +78,11 @@ export default function App() {
 }
 ```
 
-## How to Create our Components
+## 如何创建我们的组件
 
-Now that we have all these components listed out we need to go ahead and create them.
+现在我们已经列出这些我们创建的组件，
 
-Within our source (src) folder, we're going to create a folder called components with all of the files that we need:
-
+在我们的源代码(src)文件夹中，我们将创建一个`components`的文件夹，里面有我们需要的所有文件。
 ```
 my-portfolio
 ├── README.md
@@ -108,17 +107,17 @@ my-portfolio
         └── Testimonials.js
 ```
 
-Then we will create the basic structure of each React component and export it from that file with `export default`:
+ 然后我们将创建每个React组件的基本结构，并从该文件导出,通过使用`export default`:
 
 ```js
 // src/components/About.js
 
 export default function About() {}
 
-// repeat the same basic structure for all 6 components
+// repeat the same basic structure for all 6 components (在所有的6个组件中重复相同的结构)
 ```
 
-And finally make sure to import it back in App.js:
+最后在App.js中导入它:
 
 ```js
 // src/App.js
@@ -145,15 +144,13 @@ export default function App() {
 }
 ```
 
-_Note that there should be six components in total._
+_请注意，总共应该有个6个组件_
 
-## Intro to Tailwind CSS
+## Tailwind CSS介绍
 
-Once that's done, we can start working with Tailwind CSS, in order to start to give our app a basic appearance.
+做完上面的，我们可以开始使用Tailwind CSS，给我们的应用程序一个基本的外观。
 
-The benefit of using Tailwind CSS is that we don't have to write any styles manually in a CSS stylesheet. All we have to do is combine multiple classes to create the appearance that we want.
-
-For example, to give our portfolio a dark background with gray text applied to all of our child components, you can add the following classes to our `main` element:
+使用Tailwind CSS的好处，我们不必在CSS样式中手工编写任何样式。我们所做的就是组合多个类(class)来创建我们想要的外观。
 
 ```js
 // src/App.js
@@ -180,14 +177,14 @@ export default function App() {
 }
 ```
 
-## How to Build the About Component
+## 如何构建 `About` 组件
 
-Let's start on our first section, the about section. This will consist of a basic introduction to ourselves and what skills we specialize in.
+从我们的第一部分开始，在`about`部分，这包含对我们的基本介绍和我们的擅长的技能。
 
-It's also going to include some links to the contact form as well as our past projects. Since these links will be to different parts of the same page, we can use the hashes: "/#projects" and "/#contact".
+它还将包含联系表格的链接，以及我们过去的项目。由于这些链接将指向同一页面的不同部分，我们能使用哈希值
+"/#projects "和"/#contact"。
 
-To make these links work and to be able to jump to each section, we will set the `id` attribute of the projects section to "projects" and those of the contact section to "contact".
-
+为了使这些链接，能跳转到每个部分，我们把项目部分`id`的属性设置为`projects`，把联系部分的`id` 属性设置为`contact`。
 ```js
 // src/components/About.js
 
@@ -234,15 +231,13 @@ export default function About() {
 }
 ```
 
-For the image on the righthand side of the section, I am using an svg file from the `public` folder, coding.svg.
+对于本节右侧的图片，我使用的`public`文件夹中的一个svg文件(coding.svg)。
 
-This image serves merely as a temporary placeholder. I would highly recommend using an actual image of yourself.
+这个图片只是作为一个临时的占位符，我强烈建议使用你自己的图片。
 
-## How to Build the Projects Component
+## 如何构建`projects`组件。
 
-Our projects section will consist of a `section` element with an `id` of "projects". This will feature a gallery of all the projects that we've built, which will include images.
-
-It'll have the title of the project, along with the technologies we use to make it, and a link to it (if it is deployed).
+我们的项目部分是由一个`section`元素组成，id为`prpjects`。这将是包含所有项目的图片组成的画廊。
 
 ```js
 // src/components/Projects.js
@@ -297,9 +292,9 @@ export default function Projects() {
 }
 ```
 
-Note that we are also going to use the library `@heroicons/react` in order to be able to write some SVG icons as React components.
+注意，我们还将使用库`@heroicons/react`，以便将SVG图片写成React组件。
 
-We are importing an array of projects from a data.js file in the same folder. There we are exporting an array of objects which each include an individual project's data:
+我们从同一个文件夹中的`data.js`文件导入一个项目数组。在那里，我们导出一个对象数组，每个对象包含项目的数据。
 
 ```js
 // src/data.js
@@ -340,13 +335,13 @@ export const projects = [
 ];
 ```
 
-## How to Build the Skills Component
+## 怎么构建`Skills`组件
 
-Let's fill out the section for all the skills and technologies that we know.
+让我们填写我们的会的技能和技术的部分。
 
-This will consist of a simple list of all of the major tools that we're familiar with and can use in our employers or clients projects.
+这将包含一个简单的清单，列出在我们的雇主或客户的项目中，使用的主要工具。
 
-Once again, we are going to import an array from our data folder. But this array consists of number of strings which represent each of the skills that we know such as JavaScript, React, and Node:
+再一次，我们将从`data`文件夹导入一个数组。但是这个数组是由字符串组成，是我们所知道的技能，如JavaScript，React和Node。
 
 ```js
 // src/components/Skills.js
@@ -388,14 +383,13 @@ export default function Skills() {
 }
 ```
 
-## How to Build the Testimonials Component
+## 怎么构建 `Testimonials` 组件
 
-In the Testimonials component, we are going to list a couple of testimonials maybe from past clients or people who are familiar with our work.
+在`Testimonials`组件中，我们将列出一些过去的比较熟悉的客户的推荐信。
 
-These are going to consist of a couple of cards that feature the testimonial itself as well as who it's from and the company that this person is from.
+这些将由几个卡片组成，里面有推荐人和推荐人所在的公司。
 
-We are also importing a testimonials array with a number of objects that feature the quote, image, name, and company.
-
+我们将导入一个含推荐信息的数组，里面的对象包含了评价，图片和公司。
 ```js
 // src/components/Testimonials
 
@@ -442,13 +436,13 @@ export default function Testimonials() {
 }
 ```
 
-## How to Build the Contact Component
+## 怎样构建`Contact`组件
 
-At the end of our landing page, we're going to include our contact form to allow potential employers to reach out to us.
+在登录页的尾部，我们将加入我们的联系表格，以便潜在的雇主能联系到我们。
 
-This form will have 3 inputs: a name, email, and message input.
+这个表格包含3个输入：姓名、电子邮件和输入信息。
 
-To receive these form submissions, we will use the tool Netlify Forms to very easily take care of saving those messages.
+为了接收这些表格所提交的信息，我们将使用Netlify表格工具，非常容易保存处理这些信息。
 
 ```js
 // src/components/Contact.js
@@ -552,17 +546,16 @@ export default function Contact() {
 }
 ```
 
-## How to Embed a Google Maps Location
+## 如何潜入`Google Maps` 位置
 
-To the left of the form we will include a Google Maps embedded Google map of where we are located.
+在表格的左边，我们将一个`Google Maps`嵌入，显示我们的所在位置。
 
-We can do so with the help of an online tool: embed-map.com. All you have to do is just enter your location and hit "Generate HTML code".
+我们可以在一个在线工具(embed-map.com)的帮助下这样做。你所要做的事只是输入你的位置并点击`Generate HTML code`
 
-In the code we are given, don't copy all of the code, just the `src` attribute from the iframe element. We will replace that value with the default `src` value we have for our iframe.
-
+在给我们生成的代码中，不要复制所有的代码，只要复制ifame中的`src`属性，然后替换掉`src`的默认值。
 ![](https://www.freecodecamp.org/news/content/images/2021/06/portfolio-2.png)
 
-To send over any submitted form data to Netlify, Netlify Forms needs to recognize a form as static HTML. Because our React app is controlled by JavaScript and doesn't consist of plain HTML, we need to add a hidden form to our index.html file in the public folder.
+向Netlify发送任何提交的表单数据，Netlify Forms需要将从静态HTML中识别表单。因为的我们的React应用是由Javascript控制的，而不是普通的HTML组成，所以我们需要在`public`文件夹下的index.html文件中添加一个隐藏的表单。
 
 ```html
 <!-- public/index.html -->
@@ -586,15 +579,11 @@ To send over any submitted form data to Netlify, Netlify Forms needs to recogniz
 </html>
 ```
 
-We need to hide this form, because it doesn't need to be seen by the user, just Netlify.
+我们需要隐藏这个表单，因为它不需要被用户看到，它只需要被Netlify看到。
 
-We'll give it the attribute of `hidden` as well as a `name` attribute that matches the JSX form in Contact.js. We also need to give it the `netlify` attribute so that Netlify Forms recognizes it. Finally, we need to include all of the same inputs as our JSX form: for name, email, message.
+## 如何从联系表单提交
 
-## How to Submit the Contact Form
-
-Once that's done, we'll head back to Contact.js. We're going to use JavaScript in order to submit this form.
-
-First of all, we're going to create some dedicated state for each of the values that are typed in the form for name, email, and message:
+完成上面这些，我们将回到Contact.js。我们将使用Javascript提交这个表单。
 
 ```js
 const [name, setName] = React.useState("");
@@ -602,11 +591,7 @@ const [email, setEmail] = React.useState("");
 const [message, setMessage] = React.useState("");
 ```
 
-We will store what the user types in to each of the inputs in state with the help of the `onChange` handler.
-
-To handle submission of the form, we will add the `onSubmit` prop to it. The function that will be called, `handleSubmit`, will make a post request to the endpoint "/" with all of our form data.
-
-We will set the headers of the request to indicate that we are sending over form data. For the request body, we will include the form name as well as all of the form data from the `name`, `email`, and `message` state variables.
+我们将在`onChange`处理程序的帮助下，将用户在每个输入项的信息存储在`state`。
 
 ```js
 // src/components/Contact.js
@@ -737,17 +722,11 @@ export default function Contact() {
 }
 ```
 
-As you can see above, we are encoding the form data with a special `encode` function that you see here.
+正如你在上面看到的，我们正在用一个特殊的`encode`(编码)函数对表单数据进行编码。
 
-If the message is sent correctly, we will display an alert that says "Message sent". Otherwise if there is an error, we are going to alert the user of that error.
+## 如何构建`Navbar`组件
 
-## How to Build the Navbar Component
-
-The last step is to build out our Navbar component.
-
-We want this navbar to stick to the top of our app on large devices and not be sticky on mobile devices.
-
-Additionally, we want to include links to each of our relevant sections for our project skills testimonials and our contact form:
+最后一步是构建我们的`Navbar`组件。
 
 ```js
 // src/components/Navbar.js
@@ -787,39 +766,36 @@ export default function Navbar() {
 }
 ```
 
-How does this stick to top of the page on a larger device? With the help of the class `md:sticky` on our `header` element.
+如何在较大的设备上将`Navbar`组件在页面的顶部显示？我们将使用`md:sticky`类添加到`header`元素。
 
-This class means that it will have the style rule `position: sticky;` applied starting on a medium-sized breakpoint (768px).
+## 如何部署的你作品集
 
-## How to Deploy Your Portfolio
+现在为了使我们的作品集上线，我们需要把我们的应用程序推送到Github。
 
-Now to make our portfolio live, we need to push our application to GitHub.
+一旦你熟悉了这个流程，我们可以首先创建一个新的Github仓库。之后，我们将运行`git add .`，`git commit -m "Deploy"`，创建我们的git 远程，然后`git push -u orgin master`。
 
-If you're not familiar with Git and GitHub, I would take a little while just to learn how to push your code to your GitHub account for the first time. It's an essential skill for any developer to know.
-
-Once you're familiar with this process, we can first create a new Github repository. After that, we will run `git add .`, `git commit -m "Deploy"`, create our git remote, and `git push -u origin master`.
-
-Once our project is on GitHub, we can head over to Netlify and select the option "Choose Site from Git". Then we will choose GitHub for our continuous deployment, and pick the GitHub repository to which we just pushed our code.
+一旦我们的项目建立在Github上，我们就可以去Netlify，选择`Choose Site from Git`。然后选择Github作为我们的持续部署，并选择我们刚刚推送代码的Github仓库。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/portfolio-3-min.gif)
 
-After that, our project will be automatically deployed to the web!
+之后，我们的项目将自动部署到网络上！
 
-## What's Next
+## 下一步是什么？
 
-Congratulations! You now have a portfolio app live on the web that shows off all of your projects and skills to potential employers.
+祝贺你！你现在在网上由一个作品集的应用程序，向潜在雇主展示你的所有的项目和技能。
 
-The next step to take would be to set up a custom domain, preferably with your name (i.e. [reedbarger.com](https://reedbarger.com/)). Since Netlify includes a DNS you can easily set up a custom domain with them.
+下一步要做的事设置一个自己的域名，最好用你的名字(i.e. [reedbarger.com](https://reedbarger.com/)). 
+由于Netlify包含一个DNS，你可以很容易在他们那里设置一个自己的域名。
 
-Look into maybe adding a blog to your React app to show off even more of your developer knowledge to potential employers.
+可以考虑在你的React应用程序中，添加一个博客，向潜在的雇主展示你更多的开发知识。
 
-Make your personal portfolio an expression of yourself and what you are passionate about as a developer and you'll have success!
+个人作品集是作为一个开发者所热衷表达自己的方式，你会从中获得成就。
 
-## Want the #1 Way to Learn React?
+## 想获得学习React的方法？
 
-**[The React Bootcamp](http://bit.ly/join-react-bootcamp)** takes everything you should know about learning React and bundles it into one comprehensive package, including videos, cheatsheets, plus special bonuses.
+**[The React Bootcamp](http://bit.ly/join-react-bootcamp)** 本书有你应该学习React的所有知识，里面有视频、手册，还有特别的奖金。
 
-Gain the insider information **100s** of developers have already used to master React, find their dream jobs, and take control of their future:
+ 获得内幕信息 **100s** ，开发人员通过已经掌握React，找到他们梦想的工作，并掌握他们的未来
 
 [![The React Bootcamp](https://reedbarger.nyc3.digitaloceanspaces.com/react-bootcamp-banner.png)](http://bit.ly/join-react-bootcamp)  
-_Click here to be notified when it opens_
+_点击这里，将得到通知，当它开放时_

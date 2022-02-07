@@ -5,62 +5,64 @@
 
 ![How to Write Helpful Error Messages to Improve Your App's User Experience](https://images.unsplash.com/photo-1594322436404-5a0526db4d13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fGVycm9yfGVufDB8fHx8MTYxNzI2MTMwNw&ixlib=rb-1.2.1&q=80&w=2000)
 
-Gone are the days of useless and generic error messaging.
-
+应用程序中只显示无用和通用报错信息的日子已经一去不复返了。
 ![A generic error message displaying: "Oops, something went wrong. Please try again later"](https://www.freecodecamp.org/news/content/images/2021/03/ykhg3yuzq8931--1-.png)
-
+图片为通用报错信息：哎呀，出错了，请稍后再试
 _Screenshot taken moments before a rage-quit_
 
-If you're here, you're likely concerned with making your user-facing products as delightful as possible. And error messaging plays an important role in that.
 
-Having useful error messages can go a long way toward making a frustrating scenario for an end-user as pleasant as possible.
+如果你正在阅读这篇文章，你大概关心如何让用户获得尽可能愉悦的使用体验，报错信息就起着重要的作用。有用的报错信息从长远来看，能避免用户在无法正常使用应用程序的时刻少点抓狂，多点快乐。
 
-This article is split into two parts. The first builds context around error messages and why they're important. This section should be useful, regardless of whether you're a JavaScript developer or not.
 
-The second part is a short follow-along to help get you started managing your own error messages.
+这篇文章分为两个部分。第一部分介绍报错信息的背景和它们如此重要的原因，不管你是否是一名 JavaScript 开发者，了解这部分的内容都是大有助益的。
 
-## **The current state of error messaging**
+第二部分有一则简短的跟帖，可以指导你开始管理自己的报错信息。
 
-In a perfect world, error messages would be redundant and users would be able to use anything you've built a-okay, no problem-o. But errors will happen, and your end-users will run into them.
+## **报错信息的现状**
 
-These errors can stem from:
+在完美世界中，报错信息根本不毋需存在，用户能毫无障碍地你搭建的环境中畅游。然而，现实中错误会发生，而你的用户一定会碰到这些错误。
 
--   Failing validation
--   Server-side failures
--   Rate limiting
--   Borked code
--   Acts of god
+错误可能来自于：
+-   验证失败
+-   服务器端故障
+-   速率限制
+-   错误代码
+-   上帝的玩笑
 
-And when things go wrong, often the client-facing error messaging takes shape in one of two ways:
+当错误发生时，客户看到的报错信息可能是以下的其中一类：
 
--   Generic errors with no meaningful information, e.g. `Something went wrong, please try again later`
--   Hyper specific messages from the stack trace sent by the server, e.g. `Error 10x29183: line 26: error mapping Object -> Int32`
+-   通用且无有用信息的报错，例如： `出错了，稍后再试`
 
-Neither are helpful for our end-users.
+-   从服务器发送的堆栈跟踪中获取的过于具体的信息，例如：`Error 10x29183: line 26: error mapping Object -> Int32`
 
-For our users, the generic error can create a feeling of helplessness and frustration. If they get such a message, they can't complete an action, and have no way of knowing why the error happened and how (or if) they can resolve it. This can result in loss of end-user trust, loss of customer, or an angry review.
 
-On the other hand, hyper-specific error messages are a leaky abstraction and shouldn't be seen by our end-user's eyes.
+以上两种对用户来说都没什么用。
 
-For one, these kind of errors provide implementation information about our server-side logic. Is this a security concern? probably? I'm no pen-tester.
+对于用户来说，看到通用报错信息只能让他们感到无助和挫败。他们无法根据这样的报错信息完成指令，进而了解错误如何发生且应该如何解决。这只会使得用户失去对产品的信任，而你则可能失去客户，或得到一条充满怒火的产品评价。
 
-Secondly, if we're in the business of crafting engaging user experiences, (and why wouldn't you be?) our error messages should feel human and be service-oriented. This is a sentiment shared in a number of resource I've come across, many of which of I've included in a further reading section at the end.
+而过于具体的报错信息，是泄漏的抽象信息，不应该出现在用户面前。
 
-## **Why should I create sane error messaging?**
+首先，这类错误显示了服务器端的实现逻辑。这将会是个安全问题吗？也许？的确我也不是一个安全测试员。
 
-### To help maintain developer sanity
+其次，如果我们是在打造吸引人的用户体验（你为什么不呢？），产品的报错信息就该让用户感到人性化，并以服务用户为导向。我在许多地方看到了与这个观点类似的看法，并在文末的延伸阅读中对它们进行了标注。
 
-Hunting bugs is hard, and scanning logs is tedious. Sometimes we're provided with context about why things failed, and other times we aren't. If an end-user reports a bug it's important they can present to us as much useful information as possible.
+## **为什么我应该构建合乎逻辑（sane message）的报错信息**
 
-A report from a user that says:
+### 维持开发者 sanity
 
-`Hi, I was using the app sometime last night updating my profile and all of a sudden it stopped working. The error said something about a validation error, but I don't know what that means`
+其次，如果我们是在打造吸引人的用户体验（你为什么不呢？），产品的报错信息就该让用户感到人性化，并以服务用户为导向。我在许多地方看到了与这个观点类似的看法，并在文末的延伸阅读中对它们进行了标注。
 
-is much less useful than:
+抓取 bug 很困难，扫描日志很乏味。有时我们能理解产品失败的前因后果，有时我们却无法掌握线索。因此当用户向我们报错时，我们需要他们提供尽可能多而有用信息。
 
-`Hi, I was using the app sometime last night updating my profile and all of a sudden it stopped working. The error said "We had trouble updating your details. Your address must be located within the EU" but I live in England`
+一条用户发来的错误报告如下：
 
-This saves us time and cuts down on red herrings. A clear and specific error message may also help an end-user understand what they themselves have done wrong, and can allow them to fix their mistake.
+`你好，我昨晚使用 app 的时候更新了账户信息， app 突然无法运行了。错误信息显示验证失败，但我不知道这是什么意思。`
+
+改成下面这条就有用得多：
+
+`你好，我昨晚使用 app 的时候更新了账户信息，app 突然无法运行了。错误报告显示“我们无法更新你的信息。你的地址必须位于欧盟”。但我目前居住在英国。`
+
+这样的反馈节约时间也减少逻辑谬误。清晰而具体的报错信息也能帮助用户理解哪里做错了，如何修正这些错误。
 
 ### To help maintain organisation sanity
 

@@ -48,9 +48,9 @@ _Screenshot taken moments before a rage-quit_
 
 ## **为什么我应该构建合乎逻辑（sane message）的报错信息**
 
-### 维持开发者 sanity
+### 维持开发者头脑清醒
 
-其次，如果我们是在打造吸引人的用户体验（你为什么不呢？），产品的报错信息就该让用户感到人性化，并以服务用户为导向。我在许多地方看到了与这个观点类似的看法，并在文末的延伸阅读中对它们进行了标注。
+其次，如果我们是在打造吸引人的用户体验（何乐而不为呢？），产品的报错信息就该让用户感到人性化，并以服务用户为导向。我在许多地方看到了与这个观点类似的看法，并在文末的延伸阅读中对它们进行了标注。
 
 抓取 bug 很困难，扫描日志很乏味。有时我们能理解产品失败的前因后果，有时我们却无法掌握线索。因此当用户向我们报错时，我们需要他们提供尽可能多而有用信息。
 
@@ -64,9 +64,11 @@ _Screenshot taken moments before a rage-quit_
 
 这样的反馈节约时间也减少逻辑谬误。清晰而具体的报错信息也能帮助用户理解哪里做错了，如何修正这些错误。
 
-### To help maintain organisation sanity
+### 保持组织头脑清醒
 
 Sane error messages also yield benefits on an organisation level. For those working in larger companies, copy/messaging may be the responsibility of an entirely separate department. The more places in the code that require copy changes, the easier it is for the copy to get out of sync with your company's brand guidelines.
+合理的报错信息也能给组织整体带来好处。在大公司，副本/信息可能由某个独立部门全权负责。代码中需要修改的文本量越多，文案就越容易与公司的品牌准则脱节。
+
 
 Conversely, keeping all of your error messages in a single source makes it much easier for those owning copy to adhere to those brand guidelines.
 

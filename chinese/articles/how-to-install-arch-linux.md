@@ -1,10 +1,6 @@
 > -  原文地址：[The Arch Linux Handbook](https://www.freecodecamp.org/news/how-to-install-arch-linux/)
-> -  原文作者：[
-                    
-                        Farhan Hasin Chowdhury
-                    
-                ](https://www.freecodecamp.org/news/author/farhanhasin/)
-> -  译者：
+> -  原文作者：[Farhan Hasin Chowdhury](https://www.freecodecamp.org/news/author/farhanhasin/)
+> -  译者：ZhichengChen
 > -  校对者：
 
 ![The Arch Linux Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/Arch-Linux-Handbook-1280x612.png)

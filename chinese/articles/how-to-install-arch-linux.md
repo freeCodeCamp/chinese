@@ -5,638 +5,630 @@
 
 ![The Arch Linux Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/Arch-Linux-Handbook-1280x612.png)
 
-If you ask a group of developers what Linux is, most of them will probably say it's an open-source operating system. Those with more technical knowledge will probably call it a kernel.
+如果问开发人员 Linux 是什么，大多数人的回答可能是 Linux 是一个开源操作系统。也有人会站在技术角度称它为内核。
 
-For me, though, Linux is not just an operating system or a kernel. For me, it's freedom. The freedom of putting together an operating system according to my needs, and that's where Arch Linux comes in.
+不过，对我来说，Linux 不仅仅是一个操作系统或内核。Linux 代表着自由。可以根据需求自由组合各个部分组成最适合自己的操作系统，这也是 Arch Linux 吸引人的地方。
 
-According to their [wiki](https://wiki.archlinux.org/title/Arch_Linux),
+摘自 arch [wiki](https://wiki.archlinux.org/title/Arch_Linux),
 
-> Arch Linux is an independently developed, x86-64 general-purpose GNU/Linux distribution that strives to provide the latest stable versions of most software by following a rolling-release model.  
->   
-> The default installation is a minimal base system, configured by the user to only add what is purposely required.
+> Arch Linux 是通用 x86-64 [GNU](https://wiki.archlinux.org/title/GNU)/Linux 发行版。Arch采用滚动升级模式，尽全力提供最新的稳定版软件。
+>
+> 初始安装的 Arch 只是一个基本系统，随后用户可以根据自己的喜好安装需要的软件并配置成符合自己理想的系统.
 
-In other words, Arch Linux is a distribution optimized for x86-64 architecture targeted at experienced Linux users. It lets you have full responsibility and control over your system.
+换句话说，Arch Linux 是针对有经验 Linux 用户的基于 x86-64 架构的优化发行版。它让你对系统拥有完全的选择权和控制权。
 
-You'll get to choose what packages you want, the kernel (yes there are multiple), the boot-loader, the desktop environment, and so on.
+可以自主选择所需要的软件包、内核（是的，内核有很多）、boot-loader、桌面环境等等。
 
-Have you ever heard someone say,
+你有没有听过有人说，
 
-> Oh – by the way, I use Arch Linux!
+> 嗯——顺便说一句，我用的是 Arch Linux！
 
-This is because installing Arch Linux on a machine requires you to have proper knowledge of how different parts of a Linux distribution work. So running Arch Linux on your system is kind of a testament to your understanding of Linux.
+这是因为如果想要在机器上安装 Arch Linux，需要先了解 Linux 发行版的每个部分是如何工作的。所以如果使用的是 Arch Linux，证明已经很熟悉 Linux。
 
-Speaking from experience, installing Arch Linux is not very different from installing something like Fedora or Ubuntu. It's just that you have to go through the individual steps manually instead of having an installer do the things for you. But once you've gone through the process, you'll start to understand how the other distributions work in general.
+安装 Arch Linux 与安装 Fedora 或 Ubuntu 之类的系统并没有太大不同。区别是 Arch Linux 必须手动完成各个步骤，而不是交给安装程序。完成了这个过程，自然了解了其他发行版的安装步骤。
 
-In this article, I'll walk you through the entire process of installing and configuring Arch Linux on your machine. I'll also discuss some common tasks and troubleshooting tips near the end.
+在本文中，将介绍在电脑上安装和配置 Arch Linux 的整个过程。最后，还会讨论一些常见任务操作和故障排除技巧。
 
-So come with me and I'll show you how deep the rabbit hole goes.
+跟我来，带你深入浅出了解 Arch Linux。
 
-## Table of Contents
+## 目录
 
--   [Some Assumptions I'm Making](#some-assumptions-i-m-making)
--   [How to Create a Bootable Arch Linux USB Drive](#how-to-create-a-bootable-arch-linux-usb-drive)
--   [How to Prepare Your Computer for Installing Arch Linux](#how-to-prepare-your-computer-for-installing-arch-linux)
--   [How To Install Arch Linux](#how-to-install-arch-linux)
-    -   [How To Set the Console Keyboard Layout and Font](#how-to-set-the-console-keyboard-layout-and-font)
-    -   [How To Verify the Boot Mode](#how-to-verify-the-boot-mode)
-    -   [How To Connect to the Internet](#how-to-connect-to-the-internet)
-    -   [How To Update the System Clock](#how-to-update-the-system-clock)
-    -   [How To Partition the Disks](#how-to-partition-the-disks)
-    -   [How To Format the Partitions](#how-to-format-the-partitions)
-    -   [How To Mount the File Systems](#how-to-mount-the-file-systems)
-    -   [How To Configure the Mirrors](#how-to-configure-the-mirrors)
-    -   [How To Install Arch Linux Base System](#how-to-install-arch-linux-base-system)
--   [How To Configure Arch Linux](#how-to-configure-arch-linux)
-    -   [How To Generate the Fstab File](#how-to-generate-the-fstab-file)
-    -   [How To Login to The Newly Installed System Using Arch-Chroot](#how-to-login-to-the-newly-installed-system-using-arch-chroot)
-    -   [How To Configure the Time Zone](#how-to-configure-the-time-zone)
-    -   [How To Configure the Localization](#how-to-configure-the-localization)
-    -   [How To Configure the Network](#how-to-configure-the-network)
-    -   [How To Set the Root Password](#how-to-set-the-root-password)
-    -   [How To Create a Non-root User](#how-to-create-a-non-root-user)
-    -   [How To Install Microcode](#how-to-install-microcode)
-    -   [How To Install and Configure a Boot Loader](#how-to-install-and-configure-a-boot-loader)
--   [How To Install Xorg](#how-to-install-xorg)
--   [How To Install Graphics Drivers](#how-to-install-graphics-drivers)
--   [How To Install a Desktop Environment](#how-to-install-a-desktop-environment)
-    -   [How To Install GNOME](#how-to-install-gnome)
-    -   [How To Install Plasma](#how-to-install-plasma)
--   [How To Finalize The Installation](#how-to-finalize-the-installation)
--   [How To Switch Between Desktop Environments](#how-to-switch-between-desktop-environments)
--   [How To Manage Packages Using Pacman](#how-to-manage-packages-using-pacman)
-    -   [How To Install Packages Using Pacman](#how-to-install-packages-using-pacman)
-    -   [How To Remove Packages Using Pacman](#how-to-remove-packages-using-pacman)
-    -   [How To Upgrade Packages Using Pacman](#how-to-upgrade-packages-using-pacman)
-    -   [How To Search for Packages Using Pacman](#how-to-search-for-packages-using-pacman)
--   [How To Use AUR in Arch Linux](#how-to-use-aur-in-arch-linux)
-    -   [How To Install Packages Using a Helper](#how-to-install-packages-using-a-helper)
-    -   [How To Install Packages Manually](#how-to-install-packages-manually)
--   [How To Troubleshoot Common Problems](#how-to-troubleshoot-common-problems)
--   [How To Use the Live Arch ISO as a Rescue Media](#how-to-use-the-live-arch-iso-as-a-rescue-media)
--   [Further Reading](#further-reading)
--   [Conclusion](#conclusion)
+-   [一些预设](./#some-assumptions-i-m-making)
+-   [如何创建可引导的 Arch Linux U 盘](./#how-to-create-a-bootable-arch-linux-usb-drive)
+-   [准备安装 Arch Linux](./#how-to-prepare-your-computer-for-installing-arch-linux)
+-   [如何安装 Arch Linux](./#how-to-install-arch-linux)
+    -   [如何设置控制台键盘布局和字体](./#how-to-set-the-console-keyboard-layout-and-font)
+    -   [如何验证引导模式](./#how-to-verify-the-boot-mode)
+    -   [如何连接到互联网](./#how-to-connect-to-the-internet)
+    -   [如何更新系统时钟](./#how-to-update-the-system-clock)
+    -   [如何对磁盘进行分区](./#how-to-partition-the-disks)
+    -   [如何格式化分区](./#how-to-format-the-partitions)
+    -   [如何挂载文件系统](./#how-to-mount-the-file-systems)
+    -   [如何配置镜像源](./#how-to-configure-the-mirrors)
+    -   [如何安装 Arch Linux 基础系统](./#how-to-install-arch-linux-base-system)
+-   [如何配置 Arch Linux](./#how-to-configure-arch-linux)
+    -   [如何生成 Fstab 文件](./#how-to-generate-the-fstab-file)
+    -   [如何使用 Arch-Chroot 登录新安装的系统](./#how-to-login-to-the-newly-installed-system-using-arch-chroot)
+    -   [如何配置时区](./#how-to-configure-the-time-zone)
+    -   [如何配置本地化](./#how-to-configure-the-localization)
+    -   [如何配置网络](./#how-to-configure-the-network)
+    -   [如何设置 root 密码](./#how-to-set-the-root-password)
+    -   [如何创建非 root 用户](./#how-to-create-a-non-root-user)
+    -   [如何安装 Microcode](./#how-to-install-microcode)
+    -   [如何安装和配置 Boot Loader](./#how-to-install-and-configure-a-boot-loader)
+-   [如何安装 Xorg](./#how-to-install-xorg)
+-   [如何安装图形驱动程序](./#how-to-install-graphics-drivers)
+-   [如何安装桌面环境](./#how-to-install-a-desktop-environment)
+    -   [如何安装 GNOME 桌面](./#how-to-install-gnome)
+    -   [如何安装 Plasma 桌面](./#how-to-install-plasma)
+-   [如何完成安装](./#how-to-finalize-the-installation)
+-   [如何在桌面环境之间切换](./#how-to-switch-between-desktop-environments)
+-   [使用 Pacman 管理包](./#how-to-manage-packages-using-pacman)
+    -   [如何使用 Pacman 安装软件包](./#how-to-install-packages-using-pacman)
+    -   [如何使用 Pacman 删除软件包](./#how-to-remove-packages-using-pacman)
+    -   [如何使用 Pacman 升级软件包](./#how-to-upgrade-packages-using-pacman)
+    -   [如何使用 Pacman 搜索软件包](./#how-to-search-for-packages-using-pacman)
+-   [如何在 Arch Linux 使用 AUR](./#how-to-use-aur-in-arch-linux)
+    -   [如何使用 Helper 安装软件包](./#how-to-install-packages-using-a-helper)
+    -   [如何手动安装软件包](./#how-to-install-packages-manually)
+-   [如何解决常见问题](./#how-to-troubleshoot-common-problems)
+-   [如何使用 Live Arch ISO 作为恢复媒介](./#how-to-use-the-live-arch-iso-as-a-rescue-media)
+-   [拓展阅读](./#further-reading)
+-   [结论](./#conclusion)
 
-## Some Assumptions I’m Making
+## 一些预设
 
-Before I jump into the core of the tutorial, I want to clarify a few things. To make this entire article approachable, I'm making the following assumptions about you and your system:
+在进入本教程的核心之前，先澄清一些事情。为了使本文通俗易懂，我对你和你的系统做了以下假设：
 
--   You know about Arch Linux at a basic level
+-   对 Arch Linux 有基本的了解
     -   [Arch Linux](https://wiki.archlinux.org/title/Arch_Linux)
-    -   [Frequently asked questions](https://wiki.archlinux.org/title/Frequently_asked_questions)
-    -   [Arch compared to other distributions](https://wiki.archlinux.org/title/Arch_compared_to_other_distributions)
--   Your computer is using UEFI and not BIOS
--   You have a USB drive large enough (4GB) to boot Linux from
--   You have some previous experience installing Linux (Ubuntu/Fedora)
--   You have enough space to install linux on your HDD or SSD
+    -   [常见问题](https://wiki.archlinux.org/title/Frequently_asked_questions)
+    -   [Arch 与其他发行版的比较](https://wiki.archlinux.org/title/Arch_compared_to_other_distributions)
+-   你的电脑使用的是 UEFI，而不是 BIOS
+-   你有一个足够大（4GB）的 U 盘，可以用它来启动 Linux
+-   有安装 Linux（Ubuntu/Fedora）的经验
+-   有足够的空间在硬盘或 SSD上安装 linux
 
-That's pretty much it. If you have all of the above, you're good to go.
+差不多就是这样。如果你具备以上所有条件，可以开始了。
 
-## How to Create a Bootable Arch Linux USB Drive
+## 如何创建可引导的 Arch Linux U 盘
 
-To download Arch Linux, head to [https://archlinux.org/download/](https://archlinux.org/download/) and download the latest release (2022.01.01 as of this writing). The ISO should be around 870 megabytes in size.
+要下载 Arch Linux，请访问 [https://archlinux.org/download/](https://archlinux.org/download/) 并下载最新版本（本文撰写时为 2022.01.01）。ISO的大小应该在870兆字节左右。
 
-Once downloaded, you'll need to put it in your USB. You can use the [Fedora Media Writer](https://getfedora.org/en/workstation/download/) program to do that. Download and install the application on your system. Now connect your USB drive and open the application:
+下载后，需要将其写入 U 盘。可以使用 [Fedora Media Writer](https://getfedora.org/en/workstation/download/)。在系统上下载并安装应用程序。连接 U 盘打开应用程序：
 
-![image-48](https://www.freecodecamp.org/news/content/images/2022/01/image-48.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/image-48.png)
 
-Click on "Custom image" and use the file browser to pick the downloaded Arch Linux ISO file.
+单击“自定义镜像”，并使用文件浏览器选择下载的 Arch Linux ISO 文件。
 
-![image-49](https://www.freecodecamp.org/news/content/images/2022/01/image-49.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/image-49.png)
 
-The application will now let you pick one of your connected USB drives. Be very careful in selecting the right one if you have multiple USB drives connected to your machine. Now hit the "Write to Disk" button and wait until the process is finished.
+程序现在可以选择一个连接的 U 盘。如果电脑连接了多个 USB 存储设备，请务必小心选择正确的 U 盘。现在点击“写入磁盘”按钮，等待进程完成。
 
-## How to Prepare Your Computer for Installing Arch Linux
+## 准备安装 Arch Linux
 
-In this step you'll have to make a few changes to your system, otherwise Arch Linux may fail to boot or run properly.
+在此步骤中，必须对系统进行一些更改，否则 Arch Linux 可能无法启动或正常运行。
 
-The first change that you'll have to make is disabling secure boot in your UEFI configuration. This feature helps prevent malware attacks during boot but it also prevents the Arch Linux installer from booting.
+第一个要改的是禁用 UEFI 配置中的安全启动。此功能有助于启动期间防止恶意软件攻击，但也会阻止 Arch Linux 安装程序的启动。
 
-Detailed instructions on how you can disable this vary depending on your motherboard or laptop brand. You'll have to search the internet yourself to find the right way this time.
+如何禁用此功能的详细说明因主板或笔记本电脑品牌而异。需要你自己在互联网中搜索来找到相应的方法。
 
-The second thing that you should disable is only relevant if you're installing Arch Linux alongside Windows. There is a Windows feature called fast startup that reduces the boot time of your computer by partially hibernating it.
+第二个操作仅在安装和 Windows 共存的 Arch Linux 双系统时才适用。Windows有一个名为“快速启动”的功能，它通过部分休眠来缩短计算机的启动时间。
 
-This is generally a nice feature to have but it prevents any other operating system in a dual boot configuration from accessing the hard disk in the process.
+通常这是一个很好的特性，它可以防止双引导配置中的任何其他操作系统在此过程中访问硬盘。
 
-To disable this feature, open the start menu and search for "Choose a power plan" as follows:
+要禁用此功能，请打开“开始”菜单并搜索“选择电源计划”，如下所示：
 
-![choose-a-power-plan](https://www.freecodecamp.org/news/content/images/2022/01/choose-a-power-plan.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/choose-a-power-plan.png)
 
-Then on the next window, click on "Choose what the power buttons do" from the left sidebar:
+然后在下一个窗口中，单击左侧边栏中的“选择电源按钮的功能”：
 
-![image-54](https://www.freecodecamp.org/news/content/images/2022/01/image-54.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/image-54.png)
 
-Then on the next window you'll see a list of "Shutdown settings" and the "Turn on fast startup (recommended)" option should be shown as read only there.
+然后在下一个窗口中，将看到“关机设置”列表，“启用快速启动（推荐）”选项应显示为只读。
 
-![image-55](https://www.freecodecamp.org/news/content/images/2022/01/image-55.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/image-55.png)
 
-Click the "Change settings that are currently unavailable" at the top and you should then be able to change the settings.
+单击顶部的“更改当前不可用的设置”，然后更改设置。
 
-![image-56](https://www.freecodecamp.org/news/content/images/2022/01/image-56.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/image-56.png)
 
-Untick the "Turn on fast startup (recommended)" option and press the "Save changes" button at the bottom. From now on the boot process may take a few moments extra but it's all worth it.
+取消勾选“启用快速启动（推荐）”选项，然后按下底部的“保存修改”按钮。从现在开始，启动过程可能需要一些额外的时间，但这一切都是值得的。
 
-In this article, I'll install Arch Linux as my default operating system. So I'll allocate my entire disk space to it.
+在本文中，我将安装 Arch Linux 作为默认操作系统。所以我将把我的整个磁盘空间分配给它。
 
-If you're trying to install it alongside Windows, however, I have a dedicated [article](https://www.freecodecamp.org/news/how-to-dual-boot-any-linux-distribution-with-windows/) on the topic. And in that article, there is a [section](https://www.freecodecamp.org/news/how-to-dual-boot-any-linux-distribution-with-windows/#how-to-create-additional-partitions-for-installing-linux) that discusses the partitioning process in great detail.
+如果想让 Arch Linux 和 Windows 并存，这里有一篇专门的[文章](https://www.freecodecamp.org/news/how-to-dual-boot-any-linux-distribution-with-windows/)介绍这个话题。在那篇文章中，有一个[章节](https://www.freecodecamp.org/news/how-to-dual-boot-any-linux-distribution-with-windows/)，详细讨论了分区过程。
 
-## How To Install Arch Linux
+## 如何安装 Arch Linux
 
-Assuming that you have a bootable USB drive and your computer is configured properly, you'll have to boot from the USB drive. The process of booting from a USB drive differs from machine to machine.
+假设已经准备好可启动的 U 盘并且计算机配置正确，就可以开始从 U 盘启动了。开启从 U 盘启动的方法因机器而异。
 
-On my machine, hitting the F12 key during boot takes me to the list of bootable devices. From there I can pick my bootable USB drive. You may already know the appropriate technique for your computer or you may have to research a bit.
+在我的机器上，在启动过程中按 F12 键会将会进入到可启动设备列表。从那里可以选择可启动 U 盘。可能你已经知道适合你的电脑的方式，或者可能需要进行一些研究。
 
-Once you've managed to land on the list of connected bootable devices, select your USB drive to boot from and the following menu should show up:
+进入所有的可启动设备列表，选择要启动的 U 盘，会显示以下菜单：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_12_01_2022_18_39_29](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_12_01_2022_18_39_29.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_12_01_2022_18_39_29.png)
 
-Choose the first one from the list and wait until the Arch installer finishes booting up. Once fully booted up, you'll see something like this:
+从列表中选择第一个并等待 Arch 安装程序完成启动。完全启动后，会看到如下内容：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_12_01_2022_18_50_39](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_12_01_2022_18_50_39.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_12_01_2022_18_50_39.png)
 
-That's it. That's all you'll get. Unlike other operating systems that you maybe familiar with, the Arch installer doesn't have any graphical user interface to automate the installation.
+就这样。与你熟悉的其他操作系统不同，Arch 安装程序没有任何可以自动安装的图形用户界面。
 
-It rather requires you to invest your time and effort and configure each part of the distribution piece by piece. It may sound daunting but, to be honest, if you understand what you're doing, installing Arch Linux is quite fun.
+它需要你投入时间和精力并逐个配置每个部分。这听起来可能有点难，但老实说，如果弄清楚每一步，安装 Arch Linux 会很有趣。
 
-### How To Set the Console Keyboard Layout and Font
+### 如何设置控制台键盘布局和字体
 
-As I've already said, the Arch installer doesn't have a graphical user interface so there's going to be a lot of typing. Configuring your keyboard layout and a nice looking font can make the installation process a lot less frustrating.
+正如我已经说过的，Arch 安装程序没有图形用户界面，因此需要输入大量指令。配置键盘布局和漂亮的字体可以使安装过程不那么令人沮丧。
 
-By default, the console assumes that you have a standard US keyboard layout. This should be fine for most people but just in case if you happen to have a different one, you can change to that.
+默认情况下，控制台是标准的美式键盘布局。这对大多数人来说应该没问题，但如果碰巧你有一个不同的键盘，可以改变它。
 
-All the available keymaps are usually kept inside the `/usr/share/kbd/keymaps` directory in the form of `map.gz` files. You can see the list of them by using the `ls` command:
+所有可用的键盘映射通常以 `map.gz` 文件的形式保存在 `/usr/share/kbd/keymaps` 目录中。可以使用 `ls` 命令查看列表：
 
-```bash
+```
 ls /usr/share/kbd/keymaps/**/*.map.gz
 ```
 
-This will list out all the available key maps:
+这将列出所有可用的键盘映射：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_15_58_28-1](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_15_58_28-1.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_15_58_28-1.png)
 
-Now for example, if you have the Mac-US keyboard layout, locate the corresponding `map.gz` file from this list which is the `mac-us.map.gz` one.
+假如你的是 Mac-US 键盘布局，从该列表中找到相应的 `map.gz` 文件，即 `mac-us.map.gz` 文件。
 
-You can use the `loadkeys` command to load the desired keymap. To set `mac-us.map.gz` as default, execute the following command:
+可以使用 `loadkeys` 命令加载所需的键盘映射。要将 `mac-us.map.gz` 设置为默认值，请执行以下命令：
 
-```bash
+```
 loadkeys mac-us
 ```
 
-You can also change the console font if you don't like the default one. Just like the keymaps, the console fonts are kept inside the `/usr/share/kbd/consolefonts` which you can list out using the `ls` command:
+如果不喜欢默认字体，也可以更改控制台字体。就像键盘映射一样，控制台字体保存在 `/usr/share/kbd/consolefonts` 中，可以使用 `ls` 命令列出：
 
-```bash
+```
 ls /usr/share/kbd/consolefonts
 ```
 
-This will list out all the available fonts:
+这将列出所有可用的字体：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_16_08_01](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_16_08_01.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_16_08_01.png)
 
-You can now use the `setfont` command for setting one of these. For example, if you want to set the `drdos8x16` as default, execute the following command:
+可以使用 `setfont` 命令设置。例如，如果要将 `drdos8x16` 设置为默认值，请执行以下命令：
 
-```bash
+```
 setfont drdos8x16
 ```
 
-Both the `loadkeys` and `setfont` commands are part of the `kbd` package containing essential Linux keyboard tools. They have great [documentation](https://kbd-project.org/#documentation) so if you'd like to learn more, feel free to check it out.
+`loadkeys` 和 `setfont` 命令都是包含基本 Linux 键盘工具的 `kbd` 包的一部分。他们都有很棒的 [文档](https://kbd-project.org/#documentation)，所以如果想了解更多信息，请随时查看。
 
-### How To Verify the Boot Mode
+### 如何验证引导模式
 
-Now that you have your console configured, the next step is to make sure that you've booted in UEFI mode and not in BIOS mode.
+现在已配置好控制台，下一步是确保已在 UEFI 模式下启动，而不是在 BIOS 模式下启动。
 
-To be honest, this step seems unnecessary to me since it literally says `x86_64 UEFI` in the live boot menu. But let's do it for the sake of the official Arch [installation guide](https://wiki.archlinux.org/title/installation_guide#Verify_the_boot_mode).
+老实说，这一步对我来说似乎没有必要，因为它在实时启动菜单中字面意思是“x86_64 UEFI”。但是官方的 Arch [安装指南](https://wiki.archlinux.org/title/installation_guide#Verify_the_boot_mode)建议我们验证一下。
 
-To verify the boot mode, execute the following command:
+要验证引导模式，请执行以下命令：
 
-```bash
+```
 ls /sys/firmware/efi/efivars
 ```
 
-If you're in UEFI mode then, it will list out a bunch of files on your screen:
+如果你处于 UEFI 模式，它会在你的屏幕上列出一堆文件：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_17_18_34](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_17_18_34.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_17_18_34.png)
 
-In case of a BIOS boot, the `efi` directory won't even exist inside the `/sys/firmware` directory. If you're in UEFI mode, (which you should be if you've followed everything properly) continue to the next step.
+在 BIOS 引导的情况下，`/sys/firmware` 目录中甚至不存在`efi` 目录。如果处于 UEFI 模式，（如果正确地遵循了一切，应该是）继续下一步。
 
-### How To Connect to the Internet
+### 如何连接到互联网
 
-Unlike a lot of other live distributions, the Arch live environment doesn't come with all necessary packages built into it. It contains a number of bare minimum packages that you can use to install the rest of the system. So, a working internet connection is a must.
+与许多其他实时发行版不同，Arch 实时环境并没有内置所有必要的软件包。它包含许多可用于安装系统其余部分的最低限度的软件包。所以，一个有效的互联网连接是必须的。
 
-If you're using a wired network then you should have a working internet connection from the get go. To test it out, ping any of the public addresses out there:
+如果使用的是有线网络，那么从一开始应该就有了有效的互联网连接。要对其进行测试，请 ping 任何公共地址：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_17_40_04](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_17_40_04.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_17_40_04.png)
 
-I'm making these screenshots using VirtualBox, so the internet connection works perfectly with the wired connection. But if you have a wireless connection, things can get a bit tricky.
+我正在使用 VirtualBox 制作这些屏幕截图，因此已经通过有线连接连接了互联网。但如果使用的是无线连接，事情会变得有点棘手。
 
-The live environment comes with the `iwd` or [iNet wireless daemon](https://wiki.archlinux.org/title/Iwd) package. You can use this package to connect to a nearby wireless network.
+实时环境带有 `iwd` 或 [iNet wireless daemon](https://wiki.archlinux.org/title/Iwd) 包。可以使用此软件包连接到附近的无线网络。
 
-To begin with, execute the following command:
+首先，执行以下命令：
 
-```bash
+```
 iwctl
 ```
 
-This will start an interactive prompt as follows:
+这将启动一个交互式提示，如下所示：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_17_59_34](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_17_59_34.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_17_59_34.png)
 
-Now execute the following command to see the list of available wireless devices:
+现在执行以下命令以查看可用无线设备的列表：
 
-```bash
+```
 device list
 ```
 
-This will spit out a list of available wireless devices. By wireless devices I mean any wireless adapter connected to your computer. Let's assume `wlan0` is the device name.
+这将打印出所有可用的无线设备列表。无线设备是指连接到你计算机的任何无线适配器。这里假设设备名称是 `wlan0` 。
 
-To scan for nearby wireless networks using the found device, execute the following command:
+要使用找到的设备扫描附近的无线网络，请执行以下命令
 
-```bash
-# station <device> scan
-
+```
 station wlan0 scan
 ```
 
-You may think that this command will print out a list of all the nearby networks, but that's not the case. To see the list of networks, execute the following command:
+你可能认为此命令将打印出所有附近网络的列表，但事实并非如此。要查看网络列表，请执行以下命令：
 
-```bash
-# station <device> get-networks
-
+```
 station wlan0 get-networks
 ```
 
-Now assuming the name of your home network is called `Skynet`, you can connect to it by executing the following command:
+现在假设你的 WI-FI 网络名称为“Skynet”，可以通过执行以下命令连接到它：
 
-```bash
-# station <device> connect <SSID>
-
+```
 station wlan0 connect Skynet
 ```
 
-The `iwctl` program will prompt you for the wi-fi password. Put it in carefully and, once connected to the network, exit the program by writing `exit` and hitting enter. Try pinging a public address once again and make sure that the internet is working fine.
+`iwctl` 程序会提示输入 wi-fi 密码。输入密码，一旦连接到网络，输入`exit` 按 Enter 退出程序。再次尝试 ping 公共地址并确保 Internet 工作正常。
 
-### How To Update the System Clock
+### 如何更新系统时钟
 
-In Linux, NTP or Network Time Protocol is used for synchronizing computer system clocks over a network. You can use the `timedatectl` command to enable NTP on your Arch live environment:
+在 Linux 中，NTP 或网络时间协议用于通过网络同步计算机系统时钟。可以使用 `timedatectl` 命令在 Arch 实时环境中启用 NTP：
 
-```bash
+```
 timedatectl set-ntp true
 ```
 
-This command will start outputting some output and after a few seconds. If you do not see the command cursor show up again, try pressing Enter. I've faced this inconvenience a few times in the past.
+该命令将会卡住几秒。如果没有看到命令光标再次出现，请尝试按 Enter。过去我曾多次遇到过这种情况。
 
-### How To Partition the Disks
+### 如何对磁盘进行分区
 
-This is probably the most sensitive step of the entire installation process – because if you mess up your partitions, you lose your precious data. So my advice would be to not immediately follow along with this section. Instead, read the whole section first and then follow along.
+这可能是整个安装过程中最危险的一步——因为如果弄乱了分区，数据就会丢失。所以我建议不要立即执行本节内容。相反，请先阅读整个部分，然后再回到这里。
 
-To begin the partitioning process, you'll have to first know about the different disks connected to your computer. You can use `fdisk` which is a dialog-driven program for creation and manipulation of partition tables.
+要开始分区，必须了解连接到计算机的磁盘。可以使用 `fdisk`，它是一个对话驱动的程序，用于创建和操作分区表。
 
-```bash
+```
 fdisk -l
 ```
 
-This command will list the partition tables for all the available devices on your computer.
+此命令将列出计算机上所有可用设备的分区表。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_19_53_34](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_19_53_34.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_19_53_34.png)
 
-As you can see, there are two devices connected to my computer (virtual machine actually). Depending on the number of devices you have, this list can be longer so ignore any device ending with `rom`, `loop`, or `airoot` when reviewing the list. You can not use those devices for the installation.
+如你所见，有两个设备连接到我的计算机上（实际上是虚拟机）。根据你的设备数量，此列表可能会更长，在查看列表时忽略任何以`rom`、`loop` 或 `airoot` 结尾的设备。不能使用这些设备进行安装。
 
-So that leaves us with the `/dev/sda` device. Keep in mind that this can be completely different on your machine. For example, if you have an NVME drive, you may see `/dev/nvme0n1` instead.
+所以只剩下了 `/dev/sda` 设备。记住，在你的机器上可能完全不同。例如，如果你有 NVME 驱动器，可能会看到 `/dev/nvme0n1`。
 
-Once you've decided which device to use, it's a good idea to check if there are any existing partitions inside that device. To do so, you can use the following variation of the same `fdisk` command:
+一旦决定使用哪个设备，最好检查该设备内是否存在任何现有分区。可以使用 `fdisk` 命令：
 
-```bash
+```
 fdisk /dev/sda -l
 ```
 
-Remember to replace `/dev/sda` with what you have. This command will list out all the partitions inside the given device.
+记得用你的设备名的替换`/dev/sda`。此命令将列出给定设备内的所有分区。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_13_14](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_13_14.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_13_14.png)
 
-Although there are no partitions in this device, in a real life situation you may have previously created partitions. Those partitions will show up as `/dev/sda1`, `/dev/sda2` or in the case of a NVME drive `/dev/nvme0n1p1`, `/dev/nvme0n1p2` and so on.
+尽管此设备中没有分区，但在实际中，之前可能已经创建了分区。这些分区将显示为 `/dev/sda1`、`/dev/sda2` 或在有 NVME 驱动器的情况下显示为 `/dev/nvme0n1p1`、`/dev/nvme0n1p2` 等等。
 
-The `fdisk` program can do a lot more than just listing partitions. Consult the [corresponding ArchWiki page](https://wiki.archlinux.org/title/Fdisk) to know about the tasks you can perform using this program.
+`fdisk` 程序可以做的不仅仅是列出分区。查阅 [相应的 ArchWiki 页面](https://wiki.archlinux.org/title/Fdisk) 以了解可以使用该程序执行的操作。
 
-There is another program `cfdisk` which is a [curses- (programming library)](https://en.wikipedia.org/wiki/Curses_(programming_library)) based disk partition table manipulator for Linux. It's similar in functionality with `fdisk` but being curses-based means it has an interface which makes it easier to work with.
+还有另一个程序 `cfdisk`，它是一个基于 [curses- (programming library)](https://en.wikipedia.org/wiki/Curses_(programming_library)) 的 Linux 磁盘分区表操作工具。在功能上与 `fdisk` 相似，基于 curses 意味着它有一个界面，更易于使用。
 
-Execute the following command to start `cfdisk` on your preferred device:
+执行以下命令在设备上启动 `cfdisk`：
 
-```bash
+```
 cfdisk /dev/sda
 ```
 
-Remember to replace `/dev/sda` with what you have. If the device has a previously created partition table, then `cfdisk` will directly show the list of partitions. Otherwise you'll get to choose a partition table type to begin with:
+记得用你的设备替换`/dev/sda`。如果设备有以前创建的分区表，那么 `cfdisk` 将直接显示分区列表。否则，将开始选择分区表类型：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_22_55](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_22_55.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_22_55.png)
 
-Choose `gpt` for your UEFI based system. Next, you'll land on the list of partitions and free space on the device:
+为基于 UEFI 的系统选择 `gpt`。接下来，将显示设备上的分区和可用空间列表：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_24_09](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_24_09.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_24_09.png)
 
-You can move vertically along the list of devices using your up/down arrow keys and move horizontally along the different actions using the left/right arrow keys.
+可以使用向上/向下箭头键沿设备列表上下移动，使用向左/向右箭头键沿不同操作左右移动。
 
-To install Arch, or any other Linux distribution, you'll need three separate partitions. They are as follows:
+要安装 Arch 或任何其他 Linux 发行版，需要三个独立的分区。如下：
 
--   EFI system partition – for storing files required by the UEFI firmware.
--   ROOT – for installing the distribution itself.
--   SWAP – for serving as the overflow space for your RAM.
+-   EFI 系统分区——用于存储 UEFI 固件所需的文件。
+-   ROOT – 用于安装发行版本身。
+-   SWAP – 用作内存交换分区。
 
-Make sure the right partition/free space is highlighted in the list and select the `[ New ]` action.
+确保正确的分区/可用空间在列表中突出显示，然后选择 `[ New ]` 操作。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_37_04](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_37_04.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_37_04.png)
 
-Put the desired partition size. You can use M to denote megabytes, G for gigabytes, and T for terabytes.
+填写所需的分区大小。可以使用 M 表示兆字节，G 表示吉字节，T 表示太字节。
 
-For an EFI system partition, you should allocate at least 500MB. Once you've put your desire size, press Enter to finalize. The updated list of partitions may look as follows:
+对于 EFI 系统分区，应该至少分配 500MB。输入所需空间后，按 Enter 完成。更新后的分区列表可能如下所示：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_37_29](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_37_29.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_37_29.png)
 
-The EFI system partition is a special type of partition. It has to be in a specific type and format. To change the default type, keep the newly created partition highlighted and select `[ Type ]` from the list of actions.
+EFI 系统分区是一种特殊类型的分区。它必须采用特定的类型和格式。要更改默认类型，请保持新创建的分区突出显示并从操作列表中选择 `[ Type ]` 。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_39_24](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_39_24.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_39_24.png)
 
-From this long list of types, highlight `EFI System` and press Enter. The type of the partition in the list should update accordingly:
+从这个长长的类型列表中，突出显示 `EFI System` 并按 Enter。列表中的分区类型会相应更新：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_40_37](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_40_37.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_40_37.png)
 
-Next is the root partition. Highlight the remaining free space and select `[ New ]` once again. This time assign 10GB to this partition. The ideal size of the root partition depends on your necessities. Personally I allocate at least 100GB to the root partition of all my Linux installations.
+接下来是 root 分区。突出显示剩余的可用空间并再次选择 `[ New ]` 。这次分配 10GB 给这个分区。root 分区的理想大小取决于个人需要。就我而言，我为所有 Linux 安装的 root 分区分配了至少 100GB 的空间。
 
-You don't need to change the type of this partition. The default `Linux filesystem` will do.
+无需更改此分区的类型。默认的 `Linux filesystem` 就可以了。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_43_14](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_43_14.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_43_14.png)
 
-Create one last partition with the remaining space and change its type to `Linux swap` from the menu:
+使用剩余空间创建最后一个分区，并从菜单中将其类型更改为  `Linux swap`：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_45_57](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_45_57.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_45_57.png)
 
-The ideal size of a swap partition is a matter of debate. Personally I don't have swap partitions on my machines. The amount of physical RAM I have is more than enough. But if I ever feel the need for one later on, I use a `swapfile` instead. Anyways, the final state of your device should be as follows:
+交换分区的理想大小是一个有争议的问题。就我个人而言，我的机器上没有交换分区。我的内存足够大。但如果以后有需要，可以使用 `swapfile` 来代替。无论如何，设备的最终状态应如下所示：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_48_49](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_48_49.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_20_48_49.png)
 
-If you're happy with the set-up, highlight `[ Write ]` from the action list and hit Enter. The program will ask whether you want to persist these changes or not. You'll have to write `yes` and press enter if you agree. Once the partition table has been altered, select `[ Quit ]` to exit from the program.
+如果对设置感到满意，请从操作列表中突出显示 [ Write ]，然后按 Enter。该程序将询问是否要保留这些更改。如果同意，必须输入  `yes`  并按 Enter。更改分区表后，选择 `[ Quit ]` 退出程序。
 
-One thing that I would like to mention for those trying to install Arch Linux alongside Windows is, in that case, the EFI system partition should already exist in your device. So don't touch that. Just create the other partitions and move on.
+对于那些尝试将 Arch Linux 与 Windows 一起安装的人，我想提一提的是，在这种情况下，EFI 系统分区应该已经存在于设备中。所以不要碰那个。只需创建其他分区并继续。
 
-### How To Format the Partitions
+### 如何格式化分区
 
-Now that you've created the necessary partitions, you'll have to format them accordingly. You can use the `mkfs` and `mkswap` programs to do that. Before the formatting, take a final look at your partition list by executing the following command:
+现在已经创建了分区，需要格式化它们。可以使用 `mkfs` 和 `mkswap` 程序。在格式化之前，执行以下命令查看分区列表：
 
-```bash
+```
 fdisk /dev/sda -l
 ```
 
-This time you'll see the three newly created partitions with their details:
+这次将看到三个新创建的分区及其详细信息：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_21_02_23](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_21_02_23.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_21_02_23.png)
 
-Take note of the device names, like `/dev/sda1`, `/dev/sda2`, `/dev/sda3` and so on. The EFI system partition has to be in FAT32 format. Execute the following command to format a partition in FAT32 format:
+记住设备名称，例如 `/dev/sda1`、`/dev/sda2`、`/dev/sda3` 等。EFI 系统分区必须为 FAT32 格式。执行以下命令将分区格式化为 FAT32 格式：
 
-```bash
+```
 mkfs.fat -F32 /dev/sda1
 ```
 
-The next one is the root partition. It can be in a number of formats, but I prefer using EXT4 for all of my Linux filesystems. Use the following command to format the partition in EXT4:
+下一个是 root 分区。它可以有多种格式，但我习惯使用 EXT4 。使用以下命令格式化为 EXT4 分区：
 
 ```
 mkfs.ext4 /dev/sda2
 ```
 
-This operation may take a few moments to finish depending on your partition size. Finally, the swap partition. Use the following command to format that:
+此操作可能需要一些时间才能完成，具体取决于分区大小。最后是交换分区。使用以下命令对其进行格式化：
 
-```bash
+```
 mkswap /dev/sda3
 ```
 
-With that, you've finished the process of preparing your partitions for the installation.
+这样，就完成了为安装准备分区的过程。
 
-### How To Mount the File Systems
+### 如何挂载文件系统
 
-Now that you've created and formatted your partitions, you're ready mount them. You can use the `mount` command with appropriate mount points to mount any partition:
+现在已经创建并格式化了分区，可以挂载它们了。可以使用 `mount` 命令来挂载分区：
 
-```bash
-# mount <device> <mount point>
-
+```
 mount /dev/sda2 /mnt
 ```
 
-I hope you remember that the `/dev/sda2` partition was created to be the root partition. The `/mnt` mount point in Linux is for mounting a storage device temporarily. As we only need to mount the partition for installing Arch Linux on it, the `/mnt` mount point is perfect.
+希望记得之前 `/dev/sda2` 分区被创建为 root 分区。Linux 中的 `/mnt` 挂载点用于临时挂载存储设备。由于我们只需要挂载安装 Arch Linux 的分区，所以使用 `/mnt` 挂载点。
 
-In the case of a swap partition, you won't mount it like the other ones. You'll have to tell Linux to use this partition as swap explicitly. To do so, execute the following command:
+而对于交换分区，不能像其他分区一样挂载它。需要明确告诉 Linux 将此分区用作交换。执行以下命令：
 
-```bash
+```
 swapon /dev/sda3
 ```
 
-As you may have guessed, the `swapon` command tells the system to swap on this device. We'll work with the EFI system partition in a later section. For now, mounting these two partitions will suffice.
+可能已经猜到了，`swapon` 命令告诉系统在此设备上进行交换。我们将在后面的部分中使用 EFI 系统分区。目前，安装这两个分区就足够了。
 
-### How To Configure the Mirrors
+### 如何配置镜像源
 
-There is one last step before you can install Arch Linux on your machine, and that is configuring the mirrors. Mirrors are servers located at different pointes around the world for serving the nearby population.
+在安装 Arch Linux 之前还有最后一步，那就是配置镜像源。镜像源是位于世界各地不同地点的服务器，用于为附近的人提供服务。
 
-The installer comes with Reflector, a Python script written for retrieving the latest mirror list the [Arch Linux Mirror Status](https://archlinux.org/mirrors/status/) page. To print out the latest mirror list, simply execute the following command:
+安装程序附带 Reflector，这是一个 Python 脚本，用于检索 [Arch Linux 镜像状态](https://archlinux.org/mirrors/status/) 页面的最新镜像列表。要打印出最新的镜像列表，执行以下命令：
 
-```bash
+```
 reflector
 ```
 
-If you have a slow internet connection, you may encounter an error message as follows:
+如果网速较慢，可能会遇到如下错误消息：
 
-```bash
+```
 failed to rate http(s) download (https://arch.jensgutermuth.de/community/os/x86_64/community.db): Download timed out after 5 second(s).
 ```
 
-This happens when the default timeout (5 seconds) is lower than the actual time it's taking to download the information.
+当下载信息的时间超过默认超时（5 秒）时，就会发生这种情况。
 
-You can remedy to this problem by using the `--download-timeout` option:
+可以使用 `--download-timeout` 选项来解决此问题：
 
-```bash
+```
 reflector --download-timeout 60
 ```
 
-Now reflector will wait for a whole minute before starting to scream. A long list of mirrors should show up on your screen:
+现在 reflector 将等待整整一分钟，才会失败。一长串镜像源地址会出现在屏幕上：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_21_36_15-1](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_21_36_15-1.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_21_36_15-1.png)
 
-Going through the entire list to find nearby mirrors would be a pain. That's why reflector can do that for you.
+遍历整个列表以找到附近的 mirrors 会很麻烦。可以用 reflector 来搞定。
 
-Reflector can generate a list of mirrors based on a plethora of given constraints. For example, I want a list of mirrors that were synchronized within the last 12 hours and that are located either in India or Singapore (these two are closest to my location), and sort the mirrors by download speed.
+Reflector 可以根据的给定约束生成 mirrors 列表。例如，想要一个最近 12 小时内同步过的 mirrors 列表，这些 mirrors 位于印度或新加坡（这两个离我的位置最近），并按下载速度对镜像进行排序。
 
-Turns out, reflector can do that:
+可以用 reflector 这样做：
 
-```bash
+```
 reflector --download-timeout 60 --country India,Singapore --age 12 --protocol https --sort rate
 ```
 
-The found servers will be listed like before:
+找到的服务器将像以前一样列出：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_21_45_25](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_21_45_25.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_21_45_25.png)
 
-Printing out a mirror list like this is not enough. You'll have to persist the list in the `/etc/pacman.d/mirrorlist` location. Pacman, the default package manager for Arch Linux, uses this file to learn about the mirrors.
+像这样打印出 mirror 列表是不够的。必须将列表保存在 `/etc/pacman.d/mirrorlist` 位置。Pacman，是 Arch Linux 的默认包管理器，可以使用这个文件来查找 mirror。
 
-Before overwriting the default mirror list, make a copy of it:
+在覆盖默认 mirror 列表之前，先对其进行复制：
 
-```bash
+```
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 ```
 
-Now execute the reflector command with the `--save` option as follows:
+现在使用 `--save` 选项执行 reflector 命令，如下所示：
 
-```bash
+```
 reflector --download-timeout 60 --country India,Singapore --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 ```
 
-This command will generate the mirror list and overwrite the default one. Now you're ready to install the base Arch Linux system.
+此命令将生成 mirror 列表并覆盖默认列表。现在已准备好安装基本的 Arch Linux 系统。
 
-### How To Install Arch Linux Base System
+### 如何安装 Arch Linux 基础系统
 
-Before installing the base system, it's a good idea to update the package cache according to the new mirror list. To do so, execute the following command:
+在安装基础系统之前，最好根据新的 mirror 列表更新包缓存。请执行以下命令：
 
-```bash
+```
 pacman -Sy
 ```
 
-The `pacman` program to Arch Linux is what `apt` is to Ubuntu or `dnf` is to Fedora. The `-S` option means sync which is equivalent to `install` in `apt` or `dnf` package managers.
+Arch Linux 的 pacman 程序就像 Ubuntu 的 `apt` 或 Fedora 的 `dnf` 程序。`-S` 选项表示同步，相当于 `apt` 或 `dnf` 包管理器中的 `install`。
 
-Once the update process is finished, you can use the `pacstrap` script to install the Arch Linux system. Execute the following command to start the installation process:
+更新过程完成后，可以使用 `pacstrap` 脚本安装 Arch Linux 系统。执行以下命令开始安装：
 
-```bash
+```
 pacstrap /mnt base base-devel linux linux-firmware sudo nano ntfs-3g networkmanager
 ```
 
-The `pacstrap` script can install packages to a specified new root directory. As you may remember, the root partition was mounted on the `/mnt` mount point, so that's what you'll use with this script. Then you'll pass the package names you want to install:
+`pacstrap` 脚本可以将软件包安装到指定的新 root 目录。你可能还记得，root 分区被挂载在 `/mnt` 挂载点上，所以这个脚本使用了 `/mnt` 参数。然后，传入要安装的软件包名称：
 
--   `base` – Minimal package set to define a basic Arch Linux installation.
--   `base-devel` – Group of packages required for building software from source.
--   `linux` – The kernel itself.
--   `linux-firmware` – Drivers for common hardware.
--   `sudo` – You want to run commands as root right?
--   `nano` – A pico editor clone with some enhancements.
--   `ntfs-3g` – NTFS filesystem driver and utilities required for working with NTFS drives.
--   `networkmanager` – Provides detection and configuration for systems to automatically connect to networks.
+-   `base` - 定义基本 Arch Linux 安装的最小软件包集。
+-   `base-devel`——从源代码构建软件所需的软件包组。
+-   `linux`——内核本身。
+-   `linux-firmware`——通用硬件的驱动程序。
+-   `sudo` - 以 root 身份运行命令
+-   `nano` - 具有一些增强功能的 pico 编辑器克隆。
+-   `ntfs-3g` – 使用 NTFS 驱动器所需的 NTFS 文件系统驱动程序和实用程序。
+-   `networkmanager` - 为系统提供检测和配置以自动连接到网络。
 
-I would like to clarify that this list of seven packages is not something mandatory. To have a functional Arch Linux installation, you just need the `base`, `linux`, and `linux-firmware` packages. But considering you'll need the other ones anyway, why not catch 'em all in one go.
+我想澄清一下，这七个包的不是强制性的。要安装功能正常的 Arch Linux，只需要 `base`、`linux` 和 `linux-firmware` 包。但是考虑到其他包也是必需的，为什么不一起装完它们。
 
-Depending on your internet connection, the installation process may take a while. Sit back and relax until `pacstrap` does its thing. Once it's done, you'll see something as follows:
+根据网速快慢，安装过程可能需要一段时间。坐下来放松一下，直到 pacstrap 完成它的工作。完成后，将看到如下内容：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_22_57_54](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_22_57_54.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_22_57_54.png)
 
-Congratulations, you've successfully installed Arch Linux on your computer. All that is left to do now is configuring the system.
+恭喜，你已经成功地在你的电脑上安装了 Arch Linux。现在剩下要做的就是配置系统。
 
-## How To Configure Arch Linux
+## 如何配置 Arch Linux
 
-Installing Arch Linux wasn't that hard right? In fact in my opinion, installing it is way more straightforward than configuring it. There is a lot to do here. So let's get started.
+安装 Arch Linux 没那么难吧？ 事实上，在我看来，安装比配置更简单。这里有很多事情要做。所以让我们开始吧。
 
-### How To Generate the Fstab File
+### 如何生成 Fstab 文件
 
-According to the [ArchWiki](https://wiki.archlinux.org/title/Fstab),
+根据 [ArchWiki](https://wiki.archlinux.org/title/Fstab),
 
-> The `fstab` file can be used to define how disk partitions, various other block devices, or remote file systems should be mounted into the file system.
+> [fstab(5)](https://man.archlinux.org/man/fstab.5) 文件可用于定义磁盘分区，各种其他块设备或远程文件系统应如何装入文件系统。
 
-In other distributions like Ubuntu or Fedora this gets generated automatically during the installation. On Arch however, you'll have to do it manually. To do so, execute the following command:
+在 Ubuntu 或 Fedora 等其他发行版中，它会在安装过程中自动生成。但是，在 Arch 上，必须手动完成。执行以下命令：
 
-```bash
+```
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
-The `genfstab` program can detect all the current mounts below a given mount point and print them in fstab-compatible format to standard output. So `genfstab -U /mnt` will output all current mounts under the `/mnt` mount point. We can save that output to the `/mnt/etc/fstab` file using the `>>` operator.
+`genfstab` 程序可以检测给定挂载点以下的所有当前挂载，并以兼容 fstab 的格式将它们打印到标准输出。所以 `genfstab -U /mnt` 将输出 `/mnt` 挂载点下的所有当前挂载。可以使用 `>>` 操作符将该输出保存到 `/mnt/etc/fstab` 文件中。
 
-### How To Login to The Newly Installed System Using Arch-Chroot
+### 如何使用 Arch-Chroot 登录新安装的系统
 
-Right now you're logged into the live environment and and not into your newly installed system.
+现在登录的是实时环境，而不是新安装的系统。
 
-To continue configuring your newly installed system, you'll have to first log into it. To do so, execute the following command:
+要继续配置新安装的系统，必须先登录。执行以下命令：
 
-```bash
+```
 arch-chroot /mnt
 ```
 
-The `arch-chroot` bash script is part of the `arch-install-scripts` package and lets you change to the newly installed system's `root` user without any reboot. How cool is that!
+`arch-chroot` bash 脚本是 `arch-install-scripts` 软件包的一部分，可以无需重新启动即可更改为新安装系统的 `root` 用户。酷！
 
-### How To Configure the Time Zone
+### 如何配置时区
 
-Once you've switched root, the first thing to configure is the time zone. To see a list of all the available zones, execute the following command:
+切换 root 后，首先要配置的是时区。要查看所有可用时区的列表，请执行以下命令：
 
-```bash
+```
 ls /usr/share/zoneinfo
 ```
 
-All the major zones should be in the directory.
+所有主要时区都在目录中。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_23_45_19](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_23_45_19.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_23_45_19.png)
 
-I live in Dhaka, Bangladesh which resides inside the Asia zone. If I list out the content of Asia, I should see Dhaka there:
+我住在位于亚洲区的孟加拉国达卡。如果列出亚洲的内容，可以看到达卡：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_23_45_44](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_23_45_44.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_23_45_44.png)
 
-To set Asia/Dhaka as my default time zone, I'll have to make a symbolic link of the file at the `/etc/localtime` location:
+在 `/etc/localtime` 位置创建文件的符号链接，将 Asia/Dhaka 设置为我的默认时区：
 
-```bash
+```
 ln -sf /usr/share/zoneinfo/Asia/Dhaka /etc/localtime
 ```
 
-The `ln` command is used for creating symbolic links. The `-sf` options indicate soft and force, respectively.
+`ln` 命令用于创建符号链接。`-sf` 选项分别表示软链接和强制执行。
 
-### How To Configure the Localization
+### 如何配置本地化
 
-Now you'll have to configure your languages. Arch Linux has an easy way to set that up as well.
+现在需要配置语言。Arch Linux 也有一个简单的设置方法。
 
-First, you'll have to edit the `etc/locale.gen` file according to your localization. Open the file in the nano text editor:
+首先，根据本地化信息编辑 `etc/locale.gen` 文件。在 nano 文本编辑器中打开文件：
 
-```bash
+```
 nano /etc/locale.gen
 ```
 
-You'll see a long list of languages:
+会看到一长串语言列表：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_23_46_29](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_23_46_29.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_23_46_29.png)
 
-You'll have to uncomment the languages that you want to enable. I usually only need English and Bengali. So I'll locate the `en_US.UTF-8 UTF-8`, `bn_BD UTF-8`, and `bn_IN UTF-8` languages. Save the file by pressing Ctrl + O and exit nano by pressing the Ctrl + X key combination.
+需要取消要启用的语言的注释。我通常只需要英语和孟加拉语。因此，我将找到 `en_US.UTF-8 UTF-8`、`bn_BD UTF-8` 和 `bn_IN UTF-8` 语言。按 Ctrl + O 保存文件，然后按 Ctrl + X 组合键退出 nano。
 
-Now you'll have to execute the following command:
+现在执行以下命令：
 
-```bash
+```
 locale-gen
 ```
 
-The `locale-gen` command will read your `/etc/locale.gen` file and generate the locales accordingly.
+`locale-gen` 命令将读取 `/etc/locale.gen` 文件并生成相应地语言环境。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_23_57_55](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_23_57_55.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_13_01_2022_23_57_55.png)
 
-Now that you've enabled multiple languages, you'll have to tell Arch Linux which one to use by default. To do so, open the `/etc/locale.conf` file and add the following line to it:
+现在已经启用了多种语言，需要告诉 Arch Linux 默认使用哪一种。打开 `/etc/locale.conf` 文件并向其中添加以下行：
 
-```conf
+```
 LANG=en_US.UTF-8
 ```
 
-That's all you gotta do to configure your locale. You can always go back to the `/etc/locale.gen` file and add or remove languages from it. Just remember to run `locale-gen` whenever you do that.
+至此，配置语言环境操作完毕。可以随时返回到 `/etc/locale.gen` 文件并从中添加或删除语言。只要记住在执行此操作时运行 `locale-gen` 即可。
 
-Apart from the locales, if you've made any changes to your console keymaps in the first step of installation, you may want to persist them now. To do so, open the `/etc/vconsole.conf` file and add your preferred keymaps there.
+如果在安装的第一步中对控制台键盘映射进行了更改，现在也需要保留它们。打开 `/etc/vconsole.conf` 文件并在其中添加你需要的键盘映射。
 
-For example, if you changed the default keymaps to `mac-us` in the first step, then you may want to add the following line to the `vconsole.conf` file:
+例如，如果在第一步中将默认键盘映射更改为 `mac-us`，那么需要将以下行添加到 `vconsole.conf` 文件中：
 
-```bash
+```
 KEYMAP=mac-us
 ```
 
-Now every time you use the virtual console, it'll have the correct keymap and you will not have to configure it every time.
+现在，每次使用虚拟控制台时，它都会有正确的键盘映射，而不必每次都对其进行配置。
 
-### How To Configure the Network
+### 如何配置网络
 
-Configuring a network manually in any Linux distribution can be tricky. That's why I advised you to install the `networkmanager` package during the system installation. If you did as I said, you're good to go. Otherwise, use `pacman` to install the package now:
+在任何 Linux 发行版中手动配置网络都非常棘手。这就是为什么我建议在系统安装过程中安装 `networkmanager` 软件包的原因。如果之前安装过了，就可以跳过安装步骤。否则，现在使用 `pacman` 安装软件包：
 
-```bash
+```
 pacman -S networkmanager
 ```
 
-Pacman is a package manager. You'll learn more about it later. Let's set the host name for your computer now. A host name is a unique name created to identify a machine on a network, written in the `/etc/hostname` file.
+Pacman 是一个包管理器。稍后将了解更多有关它的信息。现在让先为计算机设置主机名。主机名是为识别网络上的机器而创建的唯一名称，写入`/etc/hostname` 文件中。
 
-Open the file with nano and write your host name in it. You can use anything to identify your machine. I usually use my device brand or model as my hostname and as I'm on a legion laptop, I'll simply write the following:
+使用 nano 打开文件并在其中写入主机名。可以使用任何字符来标识机器。我通常使用我的设备品牌或型号作为我的主机名，并且由于我使用的是 legion 笔记本电脑，所以我将简单地写下以下内容：
 
 ```
 legion
 ```
 
-Local host name resolution is provided by `nss-myhostname` (an NSS module provided by systemd) without having to edit `/etc/hosts` file. It is enabled by default.
+本地主机名解析由 `nss-myhostname`（systemd 提供的 NSS 模块）提供，无需编辑 `/etc/hosts` 文件。已默认启用。
 
-But some software may still read the `/etc/hosts` file directly. Open the file in nano and add the following lines to it:
+但有些软件可能仍会直接读取`/etc/hosts` 文件。在 nano 中打开文件并添加以下行：
 
 ```
 127.0.0.1        localhost
@@ -644,564 +636,544 @@ But some software may still read the `/etc/hosts` file directly. Open the file i
 127.0.1.1        legion
 ```
 
-Make sure to replace `legion` with your host name. Now you may install the aforementioned package:
+确保将 `legion` 替换为你的主机名。现在可以安装上述软件包：
 
-```bash
+```
 pacman -S networkmanager
 ```
 
-Enable the `NetworkManager` service by executing the following command:
+通过执行以下命令启用 `NetworkManager` 服务：
 
-```bash
+```
 systemctl enable NetworkManager
 ```
 
-Make sure to write `NetworkManager` and not `networkmanager` as the service name. If the command succeeds, network manager will start automatically on boot from now on and do its thing.
+确保将 `NetworkManager` 而不是 `networkmanager` 作为服务名称。如果命令成功，网络管理器将从现在开始在启动时自动启动并执行其操作。
 
-### How To Set the Root Password
+### 如何设置 root 密码
 
-You may want to set a password for the root user because why not? To do so, execute the following command:
+你可能想为 root 用户设置密码，执行以下命令：
 
-```bash
+```
 passwd
 ```
 
-The `passwd` command lets you change the password for a user. By default it affects the current user's password which is the `root` right now.
+`passwd` 命令允许更改用户的密码。默认情况下，它会更改当前用户的密码，即 `root`。
 
-It'll ask for a new password and confirmation password. Input them carefully and make sure you don't forget the password.
+它会要求输入新密码和确认密码。仔细输入，确保密码不会被忘记。
 
-### How To Create a Non-root User
+### 如何创建非 root 用户
 
-Using your Linux system as the root user for long is not a good idea. So creating a non-root user is important. To create a new user, execute the following command:
+长期以 root 用户身份使用 Linux 系统并不是一个好主意。所以创建一个非 root 用户很重要。要创建新用户，请执行以下命令：
 
-```bash
+```
 useradd -m -G wheel farhan
 ```
 
-The `useradd` command lets you create a new user. Make sure to replace my name with the one you want to use. The `-m` option indicates that you also want it to create the corresponding home directory. The `-G` option will add the new user to the `wheel` group which is the administration user group in Arch Linux.
+`useradd` 命令允许创建一个新用户。确保将 farhan 替换为你要使用的名字。`-m` 选项表示还希望它创建相应的主目录。`-G` 选项会将新用户添加到 Arch Linux 中的管理用户组 `wheel` 组。
 
-Now you can use the `passwd` command once again to set the password for the newly created user:
+现在可以再次使用 `passwd` 命令为新创建的用户设置密码：
 
-```bash
+```
 passwd farhan
 ```
 
-The program will prompt you for a new password and a password confirmation. Again, don't forget to replace my name with the one you've used.
+该程序将提示输入新密码和密码确认。再说一次，别忘了把 farhan 换成你用过的名字。
 
-Finally, you'll have to enable `sudo` privilege for this new user. To do so, open the `/etc/sudoers` file using nano. Once open, locate the following line and uncomment it:
+最后，需要为这个新用户启用 `sudo` 权限。使用 nano 打开 `/etc/sudoers` 文件。打开后，找到以下行并取消注释：
 
 ```
 # %wheel ALL=(ALL) ALL
 ```
 
-This file essentially means that all users in the `wheel` group can use `sudo` by providing their password. Save the file by hitting Ctrl + O and exit nano by hitting Ctrl + X. Now the new user will be able to use `sudo` when necessary.
+该文件实质上意味着 `wheel` 组中的所有用户都可以通过提供密码来使用 `sudo`。按 Ctrl + O 保存文件并按 Ctrl + X 退出 nano。现在新用户将能够在必要时使用 `sudo`。
 
-### How To Install Microcode
+### 如何安装 Microcode
 
-According to [PCMag](https://www.pcmag.com/encyclopedia/term/microcode),
+摘自 [PCMag](https://www.pcmag.com/encyclopedia/term/microcode),
 
-> A set of elementary instructions in a complex instruction set computer (CISC). The microcode resides in a separate high-speed memory and functions as a translation layer between the machine instructions and the circuit level of the computer. Microcode enables the computer designer to create machine instructions without having to design electronic circuits.
+> 复杂指令集计算机 (CISC) 中的一组基本指令。Microcode 驻留在单独的高速存储器中，用作机器指令和计算机电路级之间的翻译层。Microcode 使计算机设计人员能够创建机器指令，而无需设计电子电路。
 
-Processor manufacturers such as Intel and AMD often release stability and security updates to the processor. These updates are crucial for the system's stability.
+英特尔和 AMD 等处理器制造商经常会发布处理器的稳定性和安全性更新。这些更新对于系统的稳定性至关重要。
 
-In Arch Linux, microcode updates are available through official packages that every user should install on their systems.
+在 Arch Linux 中，Microcode 更新可以通过官方软件包获得，每个用户都应该在他们的系统上安装这些软件包。
 
-```bash
-# for amd processors
+```
 pacman -S amd-ucode
 
-# for intel processors
+
 pacman -S intel-ucode
 ```
 
-Just installing these packages is not enough though. You'll have to make sure that your bootloader is loading them. You'll learn about it in the next section.
+仅仅安装这些软件包是不够的。必须确保你的引导加载程序正在加载它们。具体将在下一节中介绍。
 
-### How To Install and Configure a Boot Loader
+### 如何安装和配置 Boot Loader
 
-According to [Wikipedia](https://en.wikipedia.org/wiki/Bootloader),
+摘自[维基百科](https://en.wikipedia.org/wiki/Bootloader)，
 
-> A bootloader, also spelled as boot loader or called boot manager and bootstrap loader, is a computer program that is responsible for booting a computer.
+> bootloader，也拼写为 boot loader 或称为 boot manager 和 bootstrap loader，是负责引导计算机的计算机程序。
 
-The internals of bootloader is out of scope of this article so I'll just go on with the installation process. If you've used any other Linux distribution in the past you may have encountered the GRUB menu.
+bootloader 的细节超出了本文的范围，所以只涉及安装过程。如果过去使用过任何其他 Linux 发行版，可能了解过 GRUB 菜单。
 
-GRUB is one of the most popular bootloaders out there. Although there are a number of options available, I'll demonstrate the installation of GRUB because it is what most people will likely use.
+GRUB 是目前最流行的 bootloaders 之一。尽管有很多功能，这里将只演示 GRUB 的安装，因为大多数人只需安装即可。
 
-To install GRUB, you'll have to first install two packages.
+要安装 GRUB，必须首先安装如下两个软件包。
 
-```bash
+```
 pacman -S grub efibootmgr
 ```
 
-If you're installing alongside other operating systems, you'll also need the `os-prober` package:
+如果与其他操作系统一起安装，还需要 `os-prober` 包：
 
-```bash
+```
 pacman -S os-prober
 ```
 
-This program will search for already installed operating systems on your system and will make them a part of the GRUB configuration file.
+该程序将搜索系统上已安装的操作系统，并将它们作为 GRUB 配置文件的一部分。
 
-Now, you'll have to mount the EFI system partition you created a few sections ago. To do so, you'll have to first create an `efi` directory:
+现在，需要挂载之前创建的 EFI 系统分区。为此，首先创建一个 `efi` 目录：
 
-```bash
+```
 mkdir /boot/efi
 ```
 
-According to [Wikipedia](https://en.wikipedia.org/wiki//boot/),
+摘自维基百科，
 
-> In Linux, and other Unix-like operating systems, the `/boot/` directory holds files used in booting the operating system.
+> 在 Linux 和其他类 Unix 操作系统中，`/boot/` 目录包含用于引导操作系统的文件。
 
-This directory is present in all Unix-like operating systems. The above mentioned command creates a directory called `efi` inside the `/boot` directory. After creating the directory, you'll have to mount your EFI system partition in that directory.
+该目录存在于所有类 Unix 操作系统中。上面提到的命令在 `/boot` 目录中创建了一个名为 `efi` 的目录。创建目录后，需要在该目录中安装  EFI  系统分区。
 
-```bash
+```
 mount /dev/sda1 /boot/efi
 ```
 
-I hope you remember that we formatted the `/dev/sda1` device as the EFI system partition during the partitioning phase. Make sure to use the correct one for your device.
+希望你还记得我们在分区阶段将`/dev/sda1`设备格式化为EFI系统分区。确保为你的设备使用正确的设备。
 
-Now, we'll use the `grub-install` command to install GRUB in the newly mounted EFI system partition:
+现在，我们将使用 `grub-install` 命令在新挂载的 EFI 系统分区中安装 GRUB：
 
-```bash
+```
 grub-install --target=x86_64-efi --bootloader-id=grub
 ```
 
-You can more or less use this command verbatim. You can change the `--bootloader-id` to something more expressive like `arch` or something else. If the installation finishes without any errors, you'll then have to generate the GRUB configuration file.
+可以或多或少地逐字使用此命令。可以将 `--bootloader-id` 更改为你想要展示的任何更贴切的文字，例如 `arch` 或其他内容。如果安装完成且没有任何错误，则需要生成 GRUB 配置文件。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_18_34_01](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_18_34_01.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_18_34_01.png)
 
-If you're installing alongside other operating systems, you'll have to enable `os-prober` before generating the configuration file. To do so, open the `/etc/default/grub` file in nano text editor. Locate the following line and uncomment it:
+如果与其他操作系统一起安装，则必须在生成配置文件之前启用 `os-prober`。在 nano 文本编辑器中打开 `/etc/default/grub` 文件。找到以下行并取消注释：
 
 ```
 #GRUB_DISABLE_OS_PROBER=false
 ```
 
-This should be the last line in the aforementioned file so just scroll to the bottom and uncomment it.
+这是上述文件中的最后一行，只需滚动到底部并取消注释即可。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_18_31_41](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_18_31_41.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_18_31_41.png)
 
-Now execute the following command to generate the configuration file:
+现在执行以下命令生成配置文件：
 
-```bash
+```
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-The `grub-mkconfig` command generates the GRUB configuration file and saves it to a given target location. In this case `/boot/grub/grub.cfg` is the target location.
+`grub-mkconfig` 命令生成 GRUB 配置文件并将其保存到指定的目标位置。在这里，是 `/boot/grub/grub.cfg` 。
 
-The command will also take into account the microcode you installed earlier and any other existing operating system on your machine.
+该命令还会检测之前安装的 microcode 以及机器上的任何其他现有操作系统。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_18_35_45](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_18_35_45.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_18_35_45.png)
 
-Congratulations, you now have a working Arch Linux installation. At this point, you can exit the Arch-Chroot environment, unmount the partition, and reboot. But I would suggest you to stay a bit longer and set-up the graphical user interface as well.
+恭喜，现在已经安装了 Arch Linux。此时，可以退出 Arch-Chroot 环境，卸载分区，然后重新启动。但我建议你多呆一会儿，一起设置好图形用户界面。
 
-## How To Install Xorg
+## 如何安装 Xorg
 
-To run programs with graphical user interfaces on your system, you'll have to install an X Window System implementation. The most common one is Xorg.
+要在系统上运行带有图形用户界面的程序，需要安装 X Window System 实现。最常见的是 Xorg。
 
-To install Xorg, execute the following command:
+要安装 Xorg，请执行以下命令：
 
-```bash
+```
 pacman -S xorg-server
 ```
 
-Wait until the installation is done and then move on to installing the necessary graphics drivers.
+等到安装完成，然后继续安装必要的图形驱动程序。
 
-## How To Install Graphics Drivers
+## 如何安装图形驱动程序
 
-Installing graphics drivers on Arch Linux is very straightforward. You just install the packages required by your graphics processing unit and call it a day.
+在 Arch Linux 上安装图形驱动程序非常简单。只需安装图形处理单元所需的软件包，然后就可以收工了。
 
-```bash
-# for nvidia graphics processing unit
+```
 pacman -S nvidia nvidia-utils
 
-# for amd discreet and integrated graphics processing unit
+
 pacman -S xf86-video-amdgpu
 
-# for intel integrated graphics processing unit
+
 pacman -S xf86-video-intel
 ```
 
-If you need further assistance, feel free to check the [ArchWiki](https://wiki.archlinux.org/title/Xorg) page.
+如果需要进一步的帮助，请随时查看 [ArchWiki](https://wiki.archlinux.org/title/Xorg) 页面。
 
-## How To Install a Desktop Environment
+## 如何安装桌面环境
 
-Now that you've installed Xorg and the necessary graphics drivers, you're ready to install a desktop environment like GNOME, Plasma, or XFCE.
+现在已经安装了 Xorg 和必要的图形驱动程序，可以继续安装桌面环境，如 GNOME、Plasma 或 XFCE。
 
-Arch Linux supports a long list of desktop environments but I've only tried out GNOME and Plasma. I'll demonstrate how you can install either of these two.
+Arch Linux 支持很多的桌面环境，但我只尝试过 GNOME 和 Plasma。我将演示如何安装这两个。
 
-### How To Install GNOME
+### 如何安装 GNOME 桌面
 
-To install GNOME, you'll have to install the `gnome` package. To do so, execute the following command:
+要安装 GNOME，需要安装 `gnome` 包。执行以下命令：
 
-```bash
+```
 pacman -S gnome
 ```
 
-During the installation, you'll be offered multiple choices for `pipwire-session-manager` and `emoji-font` packages. Accept the defaults by hitting Enter in both prompts. The installation may take some time to finish.
+在安装过程中，会提供 `pipwire-session-manager` 和 `emoji-font` 软件包的多种选择。在两个提示中按 Enter 接受默认值。安装可能需要一些时间才能完成。
 
-The `gnome` package comes with GDM or Gnome Display Manager. You can enable the service by executing the following command:
+`gnome` 软件包带有 GDM 或 Gnome 显示管理器。可以通过执行以下命令来启用该服务：
 
-```bash
+```
 systemctl enable gdm
 ```
 
-That's all you need to do to get GNOME up and running on your Arch system.
+到这里，在 Arch 系统上启动和运行 GNOME 的准备工作已经全部完成。
 
-### How To Install Plasma
+### 如何安装 Plasma 桌面
 
-The KDE Plasma installation is not that different from GNOME. You'll need to install Plasma related packages instead of GNOME.
+KDE Plasma 安装与 GNOME 没有什么不同。需要安装 Plasma 相关的包而不是 GNOME。
 
-```bash
+```
 pacman -S plasma plasma-wayland-session
 ```
 
-If you have an NVIDIA graphics card, then avoid installing the `plasma-wayland-session` and use plain old X11. I own two devices with NVIDIA GPUs and both of them have shown instability when using Wayland.
+如果电脑是 NVIDIA 显卡，请不要安装 `plasma-wayland-session`，使用普通的旧 X11。我拥有两台配备 NVIDIA GPU 的设备，并且在使用 Wayland 时它们都表现出不稳定。
 
-During the installation, you'll get multiple choices for `ttf-font`, `pipwire-session-manager`, and `phonon-qt5-backend` packages. Make sure to pick `noto-fonts` as your `ttf-font` and accept the defaults for the other two.
+在安装过程中，将出现 `ttf-font`、`pipwire-session-manager` 和 `phonon-qt5-backend` 包的多种选择。确保选择 `noto-fonts` 作为 `ttf-font` 并接受其他两个的默认值。
 
-Like `gdm` in GNOME, Plasma comes with `sddm` as the default display manager. Execute the following command to enable the service:
+与 GNOME 中的 `gdm` 一样，Plasma 带有 `sddm` 作为默认显示管理器。执行以下命令启用服务：
 
-```bash
+```
 systemctl enable sddm
 ```
 
-And that's all you need to do to get Plasma up and running on your Arch Linux system.
+到这里，在 Arch Linux 系统上启动和运行 Plasma 的准备工作已经全部完成。
 
-## How To Finalize The Installation
+## 如何完成安装
 
-Now that you've installed Arch Linux and gone through all necessary configuration steps, you can reboot to your newly installed system. To do so, first come out of the Arch-Chroot environment:
+现在已经安装了 Arch Linux 并完成了所有必要的配置步骤，可以重新启动到新安装的系统。首先要退出 Arch-Chroot 环境：
 
-```bash
+```
 exit
 ```
 
-Next, unmount the root partition to make sure there are no pending operations:
+接下来，卸载 root 分区以确保没有挂起的操作：
 
-```bash
+```
 umount -R /mnt
 ```
 
-Now reboot the machine:
+现在重新启动机器：
 
-```bash
+```
 reboot
 ```
 
-Wait until you see the GRUB menu.
+等到看到 GRUB 菜单。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_10_25](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_10_25.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_10_25.png)
 
-Choose Arch Linux from the list and wait until the system finishes booting up.
+从列表中选择 Arch Linux 并等待系统完成启动。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_11_15](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_11_15.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_11_15.png)
 
-Log in with your user credentials and voilà!
+使用你的用户凭据登录，如下！
 
-![VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_15_41](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_15_41.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_15_41.png)
 
-Your shiny new Arch Linux system is ready to do wonders.
+全新 Arch Linux 系统已准备好。
 
-## How To Switch Between Desktop Environments
+## 如何在桌面环境之间切换
 
-Unlike other distributions coupled tightly with their default desktop environment, Arch is flexible. You can switch to another desktop environment whenever you feel like it.
+与其他与默认桌面环境紧密耦合的发行版不同，Arch 非常灵活。可以随时切换到另一个桌面环境。
 
-To do so, first logout of your current session.
+为此，请先注销当前会话。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_11_15](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_11_15.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_11_15.png)
 
-As you can see, I'm currently using Plasma. Now switch to TTY2 press Ctrl + Alt + F2 key combination. You'll see a console login prompt:
+如你所见，我目前正在使用 Plasma。现在切换到 TTY2 按 Ctrl + Alt + F2 组合键。将看到控制台登录提示：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_18_54](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_18_54.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_18_54.png)
 
-Login with the root credentials and disable the `sddm` display manager.
+使用 root 凭据登录并禁用 `sddm` 显示管理器。
 
-```bash
+```
 systemctl disable sddm
 ```
 
-Then uninstall the Plasma related packages you installed earlier:
+然后卸载之前安装的 Plasma 相关包：
 
-```bash
+```
 sudo pacman -Rns plasma plasma-wayland-session
 ```
 
-Once the packages have been uninstalled, install the packages needed for GNOME:
+卸载软件包后，安装 GNOME 所需的软件包：
 
-```bash
+```
 pacman -S gnome
 ```
 
-Then perform the installation according to the section you read earlier. After the `gnome` package has been installed, enable the `gdm` display manager:
+然后根据你之前阅读的部分执行安装。安装 `gnome` 包后，启用 `gdm` 显示管理器：
 
-```bash
+```
 systemctl enable gdm
 ```
 
-Restart the computer.
+重新启动计算机。
 
-```bash
+```
 reboot
 ```
 
-Wait until the Arch Linux system finishes booting.
+等到 Arch Linux 系统完成启动。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_24_11](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_24_11.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_20_24_11.png)
 
-Lo and behold, the gorgeous Gnome Display Manager. Login with your credentials.
+哇哦，漂亮的 Gnome 显示管理器。使用你的凭据登录。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_19_53_31](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_19_53_31.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_19_53_31.png)
 
-You can switch between the desktop environments as much as you want to, but I would suggest on settling down with one of them. Also, I wouldn't recommend having multiples of them installed at the same time.
+可以根据需要在桌面环境之间切换，但建议在其中一个环境下安顿下来。另外，不建议同时安装多个。
 
-## How To Manage Packages Using Pacman
+## 使用 Pacman 管理包
 
-You've already installed a number of packages using pacman. It's equivalent to package managers like apt in Ubuntu and dnf in Fedora.
+已经使用 pacman 安装了许多软件包。它相当于 Ubuntu 中的 apt 和 Fedora 中的 dnf 等软件包管理器。
 
-In this section, I'll introduce you to some of the common pacman commands that you may need on a daily basis.
+在本节中，将介绍一些每天都可能用到的常用 pacman 命令。
 
-### How To Install Packages Using Pacman
+### 如何使用 Pacman 安装软件包
 
-To install a package using pacman, you can use the following command syntax:
+可以使用以下 pacman 命令语法安装软件包：
 
-```bash
-# sudo pacman -S <package name>
-
+```
 sudo pacman -S rust
 ```
 
-You can install multiple packages as follows:
+可以按如下方式安装多个软件包：
 
-```bash
-# sudo pacman -S <package name> <package name>
-
+```
 sudo pacman -S rust golang
 ```
 
-You can also specify the repository you want to install the package from like this:
+还可以指定软件包的位置，如下所示：
 
-```bash
-# sudo pacman -S <package repository>/<package name>
-
+```
 sudo pacman -S extra/rust
 ```
 
-In this command, the `-S` option means synchronize which is equivalent to install in the case of apt or dnf package managers.
+在此命令中，`-S` 选项表示同步，相当于在 apt 或 dnf 包管理器的安装。
 
-### How To Remove Packages Using Pacman
+### 如何使用 Pacman 删除软件包
 
-To remove a package using pacman you can use the following syntax:
+可以使用以下 pacman 语法删除软件包：
 
-```bash
-# sudo pacman -R <package name>
-
+```
 sudo pacman -R rust
 ```
 
-This will remove the package but will leave the dependencies. You can remove the package with dependencies if they're not required by any other package by executing the following command:
+这将删除包，但会留下依赖项。如果其他包也不需要它们，则可以通过执行以下命令删除不在需要的包：
 
-```bash
-# sudo pacman -Rs <package name>
-
+```
 sudo pacman -Rs rust
 ```
 
-Pacman often saves important configuration files when removing certain applications. You can override this behavior by using the following syntax:
+Pacman 在删除某些应用程序时通常会保存重要的配置文件。可以使用以下语法覆盖此行为：
 
-```bash
-# sudo pacman -Rn <package name>
-
+```
 sudo pacman -Rn rust
 ```
 
-I usually use `sudo pacman -Rns` whenever I want to uninstall something. One last thing that I want to show is how to remove orphan packages.
+当卸载某些包时，通常会使用`sudo pacman -Rns`。要展示的最后一件事是如何删除孤立包。
 
-In Ubuntu the `sudo apt autoremove` command uninstalls any unnecessary package. The equivalent command in Arch is:
+在 Ubuntu 中，`sudo apt autoremove` 命令会卸载任何不必要的软件包。Arch 中的等效命令是：
 
-```bash
+```
 sudo pacman -Qdtq | pacman -Rs -
 ```
 
-This will cleanup any leftover package from previously installed packages.
+这将清除以前安装的软件包中的残余软件包。
 
-### How To Upgrade Packages Using Pacman
+### 如何使用 Pacman 升级软件包
 
-To upgrade all the packages in your system, you can use the following syntax:
+可以使用以下语法升级系统中的所有软件包：
 
-```bash
+```
 sudo pacman -Syu
 ```
 
-In this command, the `S` option synchronizes the packages, `y` refreshes the local package cache, and `u` updates the system. This is like the ultimate upgrade command and I run it at least once everyday.
+在这个命令中，`S` 选项同步包，`y` 刷新本地包缓存，`u` 更新系统。这就像终极升级命令，我基本每天都会运行一次。
 
-### How To Search for Packages Using Pacman
+### 如何使用 Pacman 搜索软件包
 
-To search for a package in the database, you can use the following syntax:
+要在数据库中搜索包，可以使用以下语法：
 
-```bash
-# sudo pacman -Ss <package name>
-
+```
 sudo pacman -Ss rust
 ```
 
-This will print out all the packages found in the database with that search term and will also indicate if any of those are already installed.
+这将打印出在数据库中找到的所有包含该搜索词的包，并且还会标识是否已经安装。
 
-If you would like to check if a package is already installed or not, you can use the following command:
+如果想检查一个包是否已经安装，可以使用以下命令：
 
-```bash
-# sudo pacman -Qs <package name>
-
+```
 sudo pacman -Qs rust
 ```
 
-This is useful when you want to uninstall a package but do not know its exact name.
+当想卸载软件包但不知道其确切名称时，这很有用。
 
-## How To Use AUR in Arch Linux
+## 如何在 Arch Linux 中使用 AUR
 
-According to [It's FOSS](https://itsfoss.com/aur-arch-linux/),
+摘自 [It's FOSS](https://itsfoss.com/aur-arch-linux/)
 
-> AUR stands for Arch User Repository. It is a community-driven repository for Arch-based Linux distributions users. It contains package descriptions named PKGBUILDs that allow you to compile a package from source with makepkg and then install it via pacman (package manager in Arch Linux).
+> AUR 代表 Arch 用户存储库。它是基于 Arch 的 Linux 发行版用户的社区驱动存储库。它包含名为 PKGBUILDs 的包描述，允许使用 makepkg 从源代码编译包，然后通过 pacman（Arch Linux 中的包管理器）安装它。
 
-AUR is one of the most attractive features of Arch Linux. It's due to AUR that Arch Linux has a package count almost equal to Debian. You've already used `pacman` to install various packages. Sadly, you can not use that to install packages from AUR.
+AUR 是 Arch Linux 最吸引人的特性之一。有了 AUR，Arch Linux 的软件包数量几乎与 Debian 相当。之前使用 `pacman` 安装了各种软件包。遗憾的是，不能使用它从 AUR 安装软件包。
 
-You'll have to install one of the AUR helpers instead. Arch Linux doesn't support any of these helpers and advises you to learn how to build packages manually. I'll explain both techniques here. If you understand how a helper works, you'll be able to do it manually as well.
+需要安装一个 AUR helper。Arch Linux 默认不支持这些 helpers，它更倾向让开发者自己手动构建包。在这里会介绍这两种技术。如果了解 helper 的工作原理，手动完成会很顺手。
 
-### How To Install Packages Using a Helper
+### 如何使用 Helper 安装软件包
 
-Among the available and currently maintained AUR helpers, I like the `yay` or yet another yogurt package. It's written in Go and is quite solid.
+在可用且当前维护的 AUR helper 中，我喜欢 `yay` 或另一个 yogurt 包。它是用 Go 编写的，非常可靠。
 
-You can not install `yay` like other packages. You'll have to get the source code and compile the program. You'll need `git` and the `base-devel` package to do so. Assuming you've already installed `base-devel` during Arch Linux installation:
+不能像其他软件包一样安装`yay`。需要获取源代码并编译程序。需要 `git` 和 `base-devel` 包来执行此操作。这里假设在 Arch Linux 安装期间已经安装了 `base-devel`：
 
-```bash
+```
 pacman -S git
 ```
 
-Clone the yay repository from GitHub and `cd` into it:
+从 GitHub 克隆 yay 仓库并 `cd` 进入到目录里：
 
-```bash
+```
 git clone https://aur.archlinux.org/yay.git && cd yay
 ```
 
-To build and install yay from source, execute the following command:
+执行以下命令，从源代码构建和安装 yay：
 
-```bash
+```
 makepkg -si
 ```
 
-The makepkg script automates the build process of packages. The `-si` options stand for sync dependencies and install. The first option will install required dependencies (Golang in this case) and the later option will install the built package.
+makepkg 脚本自动执行包的构建过程。`-si` 选项代表同步依赖项和安装。第一个选项将安装所需的依赖项（在本例中为 Golang），后一个选项将安装构建的包。
 
-After the build process finishes, makepkg will ask for installation confirmation and your password. Input your password carefully and let the installation finish.
+构建过程完成后，makepkg 将要求输入密码。输入密码，完成安装。
 
-Check if yay has been installed properly or not:
+检查 yay 是否已正确安装：
 
-```bash
+```
 yay --version
-
-# yay v11.1.0 - libalpm v13.0.1
 ```
 
-Now let's install something using yay. One of the common packages you may want to install is the [visual-studio-code-bin](https://aur.archlinux.org/packages/visual-studio-code-bin/) package. To do so, execute the following command:
+现在让我们使用 yay 安装一些东西。比较常见软件包如 [visual-studio-code-bin](https://aur.archlinux.org/packages/visual-studio-code-bin/) 软件包。要安装它，执行以下命令：
 
-```bash
+```
 yay -S visual-studio-code-bin
 ```
 
-Unlike pacman, you shouldn't run yay with sudo. Yay will look for the given package and will ask whether you would like to see the diff or not:
+与 pacman 不同，不应该使用 sudo 运行 yay。Yay 将查找给定的包并询问是否想查看差异：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_21_07_26](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_21_07_26.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_21_07_26.png)
 
-All the repositories over at AUR comes with a PKGBUILD file which contains the instructions for building this package. Yay has this nice feature where it shows you what has changed in the PKGBUILD file since the last time.
+AUR 上的所有仓库都带有一个 PKGBUILD 文件，其中包含构建此包的说明。Yay 有这个不错的功能，它可以显示自上次以来 PKGBUILD 文件中发生了什么变化。
 
-For now, I'll pick `N` for none and hit enter. Yay will now look for the dependencies and ask for your password to install them.
+现在，选择 `N` 表示无，然后按 Enter。Yay 现在将查找依赖项并输入密码来执行安装。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_21_19_58](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_21_19_58.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_21_19_58.png)
 
-Confirm the installation and provide your password. Yay will then install the dependencies and start building the package. Once built, yay will install the package and prompt for your password where necessary.
+确认安装并提供密码。Yay 将安装依赖项并开始构建包。构建完成后，yay 将安装该软件包并在必要时提示输入密码。
 
-After the installation finishes, search for Visual Studio Code in the application launcher:
+安装完成后，在应用程序启动器中搜索 Visual Studio Code：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_21_28_42](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_21_28_42.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_14_01_2022_21_28_42.png)
 
-Congratulations on installing your first package from AUR. Yay commands are almost identical to pacman, so if you can do something with pacman, you should be able to do that with yay as well.
+恭喜你从 AUR 安装了你的第一个包。Yay 命令与 pacman 几乎相同，所以如果可以用 pacman 做某事，也可以用 yay 做。
 
-In fact, yay can also install packages from official Arch Linux repositories like pacman. But I would suggest you to use yay only for installing packages from AUR when necessary and pacman for everything else.
+事实上，yay 也可以安装来自 Arch Linux 官方仓库的软件包，比如 pacman。建议仅在必要时使用 yay 从 AUR 安装软件包，使用 pacman 安装其他所有软件包。
 
-### How To Install Packages Manually
+### 如何手动安装软件包
 
-Like I said in the previous section, the ArchWiki suggests avoiding any AUR helper and installing packages from AUR manually. I'll now show you how to do it.
+就像我在上一节中所说的，ArchWiki 建议避免使用任何 AUR helper，而是手动从 AUR 安装包。现在将展示如何做。
 
-Make sure you have `git` and `base-devel` packages installed. If not, use `pacman` to install them.
+确保安装了 `git` 和 `base-devel` 包。如果没有，使用 pacman 安装它们。
 
-For the demonstration, let's install Spotify this time. First visit the AUR page for the spotify package - [https://aur.archlinux.org/packages/spotify/](https://aur.archlinux.org/packages/spotify/) and copy the "Git Clone URL" from there.
+做为演示，这次来安装 Spotify。首先访问 spotify 包的 AUR 页面 - [https://aur.archlinux.org/packages/spotify/](https://aur.archlinux.org/packages/spotify/) 并复制“Git Clone URL”。
 
-![image-68](https://www.freecodecamp.org/news/content/images/2022/01/image-68.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/image-68.png)
 
-The page even lists all the dependencies you'll need. Clone the repository to your machine:
+该页面甚至列出了需要的所有依赖项。将仓库克隆到计算机：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_16_01_2022_21_16_43](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_16_01_2022_21_16_43.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_16_01_2022_21_16_43.png)
 
-Every AUR repository comes with a PKGBUILD file containing the instructions for building the package. Whenever you're installing a package from AUR, it's a great idea to checkout the PKGBUILD file using something like the `cat` command:
+每个 AUR 仓库都附带一个 PKGBUILD 文件，其中包含构建包的说明。当从 AUR 安装软件包时，可以使用类似 `cat` 命令检查 PKGBUILD 文件：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_16_01_2022_21_22_37](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_16_01_2022_21_22_37.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_16_01_2022_21_22_37.png)
 
-Make sure there's nothing harmful in the file. Once you're satisfied, use `makepkg` to install any dependencies, build the package, and install it. Ideally there shouldn't be any issues but sometimes, things can take an unexpected turn.
+确保文件中没有任何有害内容。使用 `makepkg` 安装任何依赖项，构建包并安装它。理想情况下不应该有任何问题，但有时，可能会出现异常情况。
 
-![VirtualBox_archlinux-2022.01.01-x86_64_16_01_2022_21_34_29](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_16_01_2022_21_34_29.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_16_01_2022_21_34_29.png)
 
-In these cases, go back to the corresponding AUR page and check the user comments. Like in this case, I found the following pinned comment:
+这时，可以返回相应的 AUR 页面并查看用户评论。在这里，找到了以下固定评论：
 
-![image-69](https://www.freecodecamp.org/news/content/images/2022/01/image-69.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/image-69.png)
 
-Turns out the package requires you to add the Spotify for Linux gpg key to the user kyechain. This command downloads the gpg key using `curl` and pipes it as the input of the `gpg --import` command:
+原来该软件包要求将 Spotify for Linux gpg 密钥添加到用户 kyechain。此命令使用 `curl` 下载 gpg 密钥并将其作为 `gpg --import` 命令的输入：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_16_01_2022_21_37_50](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_16_01_2022_21_37_50.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_16_01_2022_21_37_50.png)
 
-Try executing `makepkg -si` once again and everything should work fine this time:
+尝试再次执行`makepkg -si`，这次一切都正常了：
 
-![VirtualBox_archlinux-2022.01.01-x86_64_16_01_2022_21_39_33](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_16_01_2022_21_39_33.png)
+![](https://www.freecodecamp.org/news/content/images/2022/01/VirtualBox_archlinux-2022.01.01-x86_64_16_01_2022_21_39_33.png)
 
-See, told ya! Manually installing packages often involves such troubleshooting but help is almost always around the comment corner. Let's enjoy some music now.
+看，事实上！ 手动安装软件包经常会出现此类故障，一般在评论里就可以找到解法。现在让我们来欣赏音乐吧。
 
-## How To Troubleshoot Common Problems
+## 如何解决常见问题
 
-Look, I've been using Arch as my primary on all my devices for some years now but I still run into issues. Fortunately there are some great places to look for help when you're stuck:
+我多年来一直使用 Arch 作为我所有主力机的操作系统，但仍然会遇到一些问题。幸运的是，当遇到困难时，有一些很棒的地方可以寻求帮助：
 
 -   [ArchWiki](https://wiki.archlinux.org/)
 -   [Arch Linux Forum](https://bbs.archlinux.org/)
 -   [r/archlinux](https://www.reddit.com/r/archlinux/)
 
-For the most part, the wiki should have the information you're looking for. In fact, if you're on a laptop and having difficulty getting something to work, there is an entire wiki [category](https://wiki.archlinux.org/title/Category:Laptops) dedicated to different laptops. So look around the wiki.
+在大多数情况下，wiki 可以找到想要找的内容。事实上，如果使用的是笔记本电脑，执行某些操作时卡住了，有一个完整的 wiki [类别](https://wiki.archlinux.org/title/Category:Laptops)专门按不同的笔记本型号分类。建议看看 wiki。
 
-If the wiki fails to solve your problem, then ask other fellow users at the forum as well as the subreddit. But whenever you're doing that, make sure to do your research first and include as much description as you can in the post. It's really annoying if other users have to keep asking you for more information and it'll also lower the chance that you'll get an answer.
+如果 wiki 未能解决你的问题，请在论坛和 subreddit 上询问其他用户。但是，无论何时，请务必先进行研究，并在帖子中包含尽可能多的描述。如果其他用户不得不不断地向你询问更多信息，这真的很烦人，这也会降低你得到答案的机会。
 
-## How To Use the Live Arch ISO as a Rescue Media
+## 如何使用 Live Arch ISO 作为恢复媒介
 
-Whatever people may say, Arch Linux is very stable as long as you know what you're doing. If you go about installing every funky package you come across in the AUR or keep switching different kernels without knowing what they're for, your system may fail to boot.
+不要理会别人怎么说，只要你知道自己在做什么，Arch Linux 就很少出问题。如果在 AUR 中安装较新的包，或者在不知道它们用途的情况下不断切换不同的内核，系统可能无法启动。
 
-In those cases, you can use your live USB drive as a rescue media. To do so, reconnect the bootable USB to your computer and boot into the live environment. Once there, configure the time, keymaps, and fonts if you want to.
+在这些情况下，可以将 Live U 盘用作应急媒介。为此，请将可启动 U 盘重新连接到计算机并启动到实时环境。在那里，如果愿意，可以配置时间、键盘映射和字体。
 
-Then use `fdisk` to list out all your partitions and locate the one holding your Arch Linux installation. In my case it's the `/dev/sda2` partition. Mount the partition like you did before:
+然后使用 `fdisk` 列出所有分区并找到保存 Arch Linux 安装的分区。在我的例子中，它是 `/dev/sda2` 分区。像以前一样挂载分区：
 
-```bash
+```
 mount /dev/sda2 /mnt
 ```
 
-Now use Arch-Chroot to log in as the root user.
+现在使用 Arch-Chroot 以 root 用户身份登录。
 
-```bash
+```
 arch-chroot /mnt
 ```
 
-Now uninstall the bad package you installed or go back to a kernel version that used to work in the past and so on. Once done, exit the Arch-Chroot environment, unmount the partition, and reboot:
+现在卸载安装的坏包或回到过去曾经工作的内核版本等等。完成后，退出 Arch-Chroot 环境，卸载分区，然后重新启动：
 
-```bash
+```
 exit
 umount -R /mnt
 reboot
 ```
 
-If the computer boots fine then congratulations. Otherwise try the wiki, forum, or the subreddit. If nothing works, you may have to do a fresh install.
+如果计算机启动正常，那么恭喜。否则，请尝试 wiki、论坛或 subreddit。如果没有任何效果，可能需要重新安装。
 
-## Further Reading
+## 拓展阅读
 
-If you've come this far then you've done a lot of reading already – but that's not all. This entire handbook was written by combining information from the wiki, forum, and subreddit. I'm listing out some wiki pages that I think you should read.
+如果已经走到了这一步，那么已经接触了很多资料——但这还不是全部。整本手册是通过结合来自 wiki、论坛和 subreddit 的信息编写的。我列出了一些拓展的 wiki 页面。
 
 -   [Installation guide](https://wiki.archlinux.org/title/Installation_guide)
 -   [Network configuration](https://wiki.archlinux.org/title/Network_configuration)
@@ -1212,22 +1184,22 @@ If you've come this far then you've done a lot of reading already – but that's
 -   [makepkg](https://wiki.archlinux.org/title/makepkg)
 -   [List of applications](https://wiki.archlinux.org/title/List_of_applications)
 
-Couldn't think of any more at the moment but I'll keep this list updated.
+目前想到这些，我会更新这个列表。
 
-## Conclusion
+## 结论
 
-I would like to thank you from the bottom of my heart for the time you've spent on reading this article. I hope you've enjoyed your time and have learned a lot about not only Arch but Linux in general
+衷心感谢你花时间阅读本文。希望你享受学习过程，能学到一些关于 Arch 和 Linux 的知识。
 
-Apart from this one, I've written full-length handbooks on other complicated topics available for free on [freeCodeCamp](https://www.freecodecamp.org/news/the-docker-handbook/freecodecamp.org/news/author/farhanhasin/).
+除了本文，我还编写了关于其他复杂主题的手册，可在以下网站免费获得 [freeCodeCamp](https://www.freecodecamp.org/news/the-docker-handbook/freecodecamp.org/news/author/farhanhasin/)。
 
-These handbooks are part of my mission to simplify hard to understand technologies for everyone. Each of these handbooks takes a lot of time and effort to write.
+这些手册是我践行“为大家简化难以理解的技术”使命的一部分。每一本手册都花费了大量时间和精力。
 
-If you've enjoyed my writing and want to keep me motivated, consider leaving starts on [GitHub](https://github.com/fhsinchy/) and endorse me for relevant skills on [LinkedIn](https://www.linkedin.com/in/farhanhasin/).
+如果你喜欢我的写作并想鼓励我，请考虑 star [GitHub](https://github.com/fhsinchy/) 并在 [LinkedIn](https://www. linkedin.com/in/farhanhasin/) 上关注我。
 
-I'm always open to suggestions and discussions. Follow me on [Twitter](https://twitter.com/frhnhsin) or [LinkedIn](https://www.linkedin.com/in/farhanhasin/) and hit me with direct messages.
+我总是乐于接受建议和讨论。欢迎在 [Twitter](https://twitter.com/frhnhsin) 或 [LinkedIn](https://www.linkedin.com/in/farhanhasin/) 上关注我，直接向我发送消息。
 
-In the end, consider sharing the resources with others, because
+最后，欢迎分享给你的朋友，因为
 
-> In open source, we feel strongly that to really do something well, you have to get a lot of people involved. — Linus Torvalds
+> 在开源领域，我们强烈认为要真正做好某件事，就必须让更多人参与进来。—  Linus Torvalds
 
-Till the next one, stay safe and keep learning.
+接下来，保持严谨并持续学习。

@@ -1,51 +1,51 @@
 > -  原文地址：[React Best Practices – Tips for Writing Better React Code in 2022](https://www.freecodecamp.org/news/best-practices-for-react/)
 > -  原文作者：[Jean-Marc Möckel](https://www.freecodecamp.org/news/author/jeanmarcmoeckel/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
 ![React Best Practices – Tips for Writing Better React Code in 2022](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/React-Best-Practices-Thumbnail.png)
 
-Two years ago, I started to learn and use React. And today I'm still using it at my day job as a Software Developer and in my own side projects.
+两年前，我开始学习和使用React。今天，我仍然在我的日常工作中使用它，作为一个软件开发人员和我自己的业余项目。
 
-During that time I've come across a lot of "typical" issues. So I searched around and found some best practices that I've integrated into my workflow, and I've come up with things that have made my life or my team members' lives easier.
+在这段时间里，我遇到了很多典型的问题。所以我四处搜寻，找到了一些最佳实践，并将其整合到我的工作流程中，我想出了一些让我的生活或我的团队成员的生活更轻松的东西。
 
-I also faced challenges along the way that I didn't solve in the best way at the time, and I want to approach them in a better way in the future.
+一路走来，我也遇到了一些挑战，当时我没有以最好的方式来解决，我希望将来能以更好的方式来处理这些问题。
 
-That's the reason I wrote this guide. I think of it like a collection of tips I'd have given myself two years ago when I started out.
+这就是我写这个指南的原因。我认为它就像两年前我开始工作时给自己的技巧收集。
 
-## Table of contents:
+## 目录:
 
--   [Three Major Challenges React Developers Face](#three-major-challenges-react-developers-face)
--   [Learn The Building Blocks of React](#learn-the-building-blocks-of-react)
--   [Learn How to Build Clean, Performant and Maintainable React Components](#learn-how-to-build-clean-performant-and-maintainable-react-components)
--   [Tips to Help You Write Better React Code – The Cherries on Top](#tips-to-help-you-write-better-react-code-the-cherries-on-top)
--   [Final Words](#final-words)
+-   [React开发者面临的三大挑战](#three-major-challenges-react-developers-face)
+-   [学习React的构建模块](#learn-the-building-blocks-of-react)
+-   [学习如何构建简洁、性能良好、可维护的React组件](#learn-how-to-build-clean-performant-and-maintainable-react-components)
+-   [帮助你写出更好的React代码的技巧 – The Cherries on Top](#tips-to-help-you-write-better-react-code-the-cherries-on-top)
+-   [结束语](#final-words)
 
-First and foremost, you'll get to know the **three major challenges** every React developer has to face. This is important because when you are aware of potential challenges, you'll understand the reasons behind these best practices in a deeper way. Having this mindset from the beginning also helps you when designing your components or organizing your project.
+首先，你会了解到每个React开发者必须面对的 **三个主要挑战** ，这很重要，因为当你意识到潜在的挑战时，你会更深入地理解这些最佳实践背后的原因。从一开始就有这种心态，也有助于你在设计你的组件或组织你的项目。
 
-After that first important step, I'll introduce you to the **three best practices**. They're a mixture of theoretical and practical tips with code examples. I try to minimize _hello world problems_ and come up with code I've seen in the _real world_.
+在这第一个重要步骤之后，我将向你介绍**的三个最佳实践**。它们是理论和实践技巧的混合体，带有代码实例。我尽量减少 _hello world_ 的问题，并拿出我在 _真实世界_ 看到的代码。
 
 ## Three Major Challenges React Developers Face
 
 ![christian-erfurt-sxQz2VfoFBE-unsplash](https://www.freecodecamp.org/news/content/images/2022/01/christian-erfurt-sxQz2VfoFBE-unsplash.jpg)
 
-During my two years of using React on a daily basis, I've recognized three major challenges that React developers face when building their apps. Ignoring these challenges might bring hard times that harm the growth of your app.
+在我日常使用React的两年时间里，我认识到React开发者在构建他们的应用时面临的三大挑战。忽视这些挑战可能会带来困难，损害你的应用程序的发展。
 
-So keep these challenges in mind when orchestrating your app, as it'll save you time and energy.
+因此，在协调你的应用程序时要记住这些挑战,这将节省你的时间和精力。
 
-### ⚙️ Maintainability
+### ⚙️ 可维护性
 
-This goes hand in hand with _reusability._ At the beginning when the application and the components are very lightweight, they're easy to maintain. But once the requirements start growing, components tend to become very complex and therefore less maintainable.
+这与 _可重用性_ 是相辅相成的。一开始，当应用程序和组件非常轻巧时，它们很容易维护。但是，一旦需求开始增长，组件就会变得非常复杂，因此可维护性就会降低。
 
-I've often seen a component that has many different cases, each representing a different outcome. The JSX is flooded with conditional renderings (ternary operators and simple `&&` operators), classnames are applied conditionally, or the component uses a huge `switch` statement. There are many possible prop and state values, each responsible for a different outcome.
+我经常看到一个组件有很多不同的情况，每个都代表不同的结果。JSX中充斥着条件渲染（三元运算符和简单的`&&`运算符），`classnames`被有条件地应用，或者组件使用巨大的`switch`语句。有许多可能的`props`和`state`值，每个都负责不同的结果。
 
-There's nothing wrong with those techniques in and of themselves, in my opinion. But I think everyone should develop a feeling for when a component starts to become less maintainable and when these techniques become overused. We'll learn how to control this better later on in the article.
+在我看来，这些技术本身并没有错。但我认为每个人都应该培养一种感觉，知道什么时候一个组件开始变得不那么可维护，什么时候这些技术被过度使用。我们将在文章的后面学习如何更好地控制这个问题。
 
-The problem (and I've been guilty of this as well) is that the more complexity and different outcomes a component has (polymorphism), the more difficult it becomes to maintain.
+问题是（我也曾犯过这样的错误），一个组件的复杂性和不同结果越多（polymorphism），它就越难维护。
 
-To be honest, the root cause is often laziness, not enough experience, or time pressure to refactor a component properly in order to make it more maintainable and cleaner.
+说实话，其根本原因往往是懒惰，没有足够的经验，或时间压力，无法正确地重构一个组件，以使其更可维护和更简洁。
 
-Another key factor I've seen is no or little testing. I know, testing is not a type of work many developers love, but it can really help you on the long run. Testing itself won't be a major topic in this post, so keep your eyes open for another blog post of mine about it.
+我看到的另一个关键因素是没有或很少进行测试。我知道，测试并不是很多开发人员喜欢的工作，但从长远来看，它确实可以帮助你。测试本身不会是这篇文章的一个主要话题，所以请留意我的另一篇关于测试的博文。
 
 ### 🧠 Solid Understanding of React
 

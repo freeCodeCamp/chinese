@@ -47,43 +47,43 @@
 
 我看到的另一个关键因素是没有或很少进行测试。我知道，测试并不是很多开发人员喜欢的工作，但从长远来看，它确实可以帮助你。测试本身不会是这篇文章的一个主要话题，所以请留意我的另一篇关于测试的博文。
 
-### 🧠 Solid Understanding of React
+### 🧠 对React的深刻理解
 
-Another root cause for problems React devs have is a poor basic understanding of how React works under the hood. I've been there, too.
+React开发者出现问题的另一个根本原因是对React在工作底层原理缺乏基本了解。我也遇到过这种情况。
 
-I've seen many people jumping too fast into intermediate or advanced concepts without having a solid foundation. But this isn't only particular to React. It's a general problem in programming.
+我见过很多人在没有坚实基础的情况下过快地进入中级或高级概念。但这并不仅仅是React的问题。这也是编程中的一个普遍问题。
 
-Not having a solid understanding of React can also cause issues for you as a developer. I remember having headaches when I wanted to use different component lifecycles but didn't know how to actually use them. So I had to take a few steps back and go deeper into that topic.
+对React没有扎实的了解也会给你这个开发者带来问题。我记得当我想使用不同的组件生命周期，但不知道如何真正使用它们时，我很头疼。所以我不得不退回去，深入了解这个话题。
 
-Because I think it's one of the most important things, I've dedicated a whole chapter to it in this blog post below.
+因为我认为这是最重要的事情之一，所以我在下面这篇博文中专门用了一整章来介绍。
 
-### 📈 Scalability
+### 📈 可扩展性
 
-This challenge goes hand in hand with _maintainability_. It is not only specific to React, but applies generally in software.
+这个挑战与 _可维护性_ 并驾齐驱。它不仅是React所特有的，而且普遍适用于软件中。
 
-I've learned that crafting excellent software is not only about UX, clean code patterns, or clever architecture, for example. For me, the quality of a software also rises or falls with its ability to scale.
+我已经了解到，制作优秀的软件不仅仅是用户体验、干净的代码模式或聪明的架构，例如。对我来说，一个软件的质量也随着它的扩展能力而上升或下降。
 
-To me, many things come into play that increase the scalability of software. You'll learn my most important tips in this article.
+对我来说，很多东西都能提高软件的可扩展性。在这篇文章中，你会学到我最重要的技巧。
 
-I think when you keep _maintainability_ and _scalability_ in mind when orchestrating your components and organizing your project structure, you'll less likely end up with a mess of source code that needs major refactoring.
+我认为，当你在调整你的组件和组织你的项目结构时，把 _可维护性_ 和 _可扩展性_ 放在心上，你就不太可能以需要重大重构的混乱的源代码。
 
-# How to Learn React
+# 如何学习React
 
-Alright, now let's dive deeper into some best practices for learning React.
+好了，现在让我们深入了解学习React的一些最佳实践。
 
 ## Learn the Building Blocks of React
 
 ![brett-jordan-Lzfxzip-pNI-unsplash](https://www.freecodecamp.org/news/content/images/2022/01/brett-jordan-Lzfxzip-pNI-unsplash.jpg)
 
-As we discussed briefly above, manifesting the building blocks is not only relevant to learning React, but to other technologies or programming languages as well. You can't build a skyscraper on a sandy foundation and expect it to be solid.
+正如我们在上面简单讨论的那样，building blocks不仅与学习React有关，而且与其他技术或编程语言也有关。你不能在浮沙上建造一座摩天大楼，并期望它是牢固的。
 
-This might seem obvious to many of you, but I've seen developers who jumped into the intermediate or advanced concepts of React without really understanding the basics.
+这对你们中的许多人来说可能是显而易见的，但我见过一些开发者在没有真正理解基础知识的情况下就跳进React的中级或高级概念。
 
-This also true for Javascript in general. I'm a huge believer that learning React doesn't make sense if you don't have a solid foundation in Vanilla Javascript.
+这对一般的Javascript来说也是如此。我非常相信，如果你没有坚实的Vanilla Javascript基础，学习React是没有意义的。
 
-So, if that sounds familiar to you and you're thinking about learning React but not feeling very comfortable with Vanilla Javascript already, spend some more time on strengthening Javascript first. It will save you a lot of headaches and time in the future.
+所以，如果这听起来很熟悉，而且你正在考虑学习React，但对Vanilla Javascript已经感觉不是很舒服，那就先多花些时间加强Javascript。这将为你在未来节省大量的头痛和时间。
 
-Here's a helpful guide to the [top JavaScript concepts you need to know before diving into React](https://www.freecodecamp.org/news/top-javascript-concepts-to-know-before-learning-react/) if you want to review.
+如果你想回顾一下，这里有一份关于[学习React之前你需要知道的核心JavaScript概念](https://www.freecodecamp.org/news/top-javascript-concepts-to-know-before-learning-react/) 
 
 But knowing the basics alone is not enough for me. It's kind of mandatory to know how React works under the hood. If you want to become a good React developer (which I assume you do, because you're reading this article), you have to know the tool you're using. This is beneficial for you as a developer and for your clients as well.
 

@@ -1,9 +1,5 @@
 > -  原文地址：[React Best Practices – Tips for Writing Better React Code in 2022](https://www.freecodecamp.org/news/best-practices-for-react/)
-> -  原文作者：[
-                    
-                        Jean-Marc Möckel
-                    
-                ](https://www.freecodecamp.org/news/author/jeanmarcmoeckel/)
+> -  原文作者：[Jean-Marc Möckel](https://www.freecodecamp.org/news/author/jeanmarcmoeckel/)
 > -  译者：
 > -  校对者：
 

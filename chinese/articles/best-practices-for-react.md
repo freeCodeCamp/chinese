@@ -85,80 +85,80 @@ React开发者出现问题的另一个根本原因是对React在工作底层原�
 
 如果你想回顾一下，这里有一份关于[学习React之前你需要知道的核心JavaScript概念](https://www.freecodecamp.org/news/top-javascript-concepts-to-know-before-learning-react/) 
 
-But knowing the basics alone is not enough for me. It's kind of mandatory to know how React works under the hood. If you want to become a good React developer (which I assume you do, because you're reading this article), you have to know the tool you're using. This is beneficial for you as a developer and for your clients as well.
+但仅仅了解基础知识对我来说是不够的。知道React的底层是如何工作的，这有点强制性。如果你想成为一个优秀的React开发者（我想你是这样想的，因为你正在阅读这篇文章），你必须了解你所使用的工具。这对作为开发者的你和你的客户来说都是有益的。
 
-On the one hand it can save you a lot of time debugging your application. On the other hand it makes you more efficient because you don't have to take some steps back to re-learn the basics again and again. You basically know what you're talking about.
+一方面，它可以为你节省大量的时间来调试你的应用程序。另一方面，它使你更有效率，因为你不必一次又一次地来重新学习基本知识。你基本上知道你在说什么。
 
-Of course, you can't know it all and you shouldn't stress yourself out on that topic. You'll learn more and more as you go through practical problems and build more projects. But with a good solid knowledge you are equipped well from the beginning.
+当然，你不可能知道所有的东西，你不应该在这个话题上给自己压力。当你通过实际问题和建立更多项目时，你会学到越来越多的东西。但是，有了良好扎实的知识，你可以事半功倍。
 
-Okey, that makes sense. But you might be wondering what exactly you need to know in order to have a solid foundation in React?
+好的，这很有意义。但你可能想知道，为了在React方面有一个坚实的基础，你到底需要知道什么？
 
-As a bare minimum, you should understand all the topics inside the [**Main Concepts** Chapter](https://reactjs.org/docs/hello-world.html) inside the official React Docs.
+作为一个最低要求，你应该了解所有的主题。 在官方的React Docs里面的[**主要概念** 章节](https://reactjs.org/docs/hello-world.html)。
 
-Another [chapter you should be very familiar with is the one on **Hooks**](https://reactjs.org/docs/hooks-intro.html) because they've become a convention and are used everywhere, especially in third party React packages.
+另一个 [你应该非常熟悉的章节是关于 **Hooks**](https://reactjs.org/docs/hooks-intro.html)，因为它们已经成为一种惯例，并且到处都在使用，特别是在第三方React包中。
 
-Of course there are some you might use more often like `useState` and `useEffect`, but understanding the other ones like `useMemo`, `useCallback` or `useRef` is also essential.
+当然，有一些你可能更经常使用，如`useState`和`useEffect`，但了解其他的如`useMemo`、`useCallback`或`useRef`也是必不可少的。
 
-There's also [another chapter called **Advanced Guides**](https://reactjs.org/docs/accessibility.html) that I wouldn't consider to be mandatory at the beginning, but I'd highly recommend that you grasp those concepts during your React journey.
+还有[另一章叫做**高级指南**](https://reactjs.org/docs/accessibility.html)，我不认为这是开始时的必修课，但我强烈建议你在React旅程中掌握这些概念。
 
-As always, it's often easier to understand advanced topics when you already have some practical experience. But the more of those things you understand early on, the better.
+一如既往，当你已经有一些实践经验时，往往更容易理解高级主题。但你在早期了解的那些东西越多越好。
 
-Of course you shouldn't limit yourself to just only following the React docs. Working through an online course that covers those building blocks, watching tutorials or reading other blog posts is also part of building a solid foundation. So, test what works best for you.
+当然，你不应该把自己限制在只遵循React文档上。通过涵盖这些构件的在线课程，观看教程或阅读其他博客文章也是打下坚实基础的一部分。所以，测试一下什么对你最有效。
 
-If I had to choose the most important concepts to know at a bare minimum, I'd suggest these:
+如果我不得不选择最重要的概念来了解，我会建议这些:
 
--   what is "state"?
--   ups and downs of class and functional components
--   what are component re-renderings and how do they work?
--   how to trigger re-renderings
--   different component lifecycles and how to interact with them
--   Virtual DOM
--   Benefits of CSR (Client Side Rendering) and SSR (Server Side Rendering) in general and in React
--   Controlled vs. Uncontrolled Components
--   State Lifting
--   at least one global state management technology (Context API, Redux/Toolkit, Recoil)
--   Component Patterns (especially how to choose the right pattern)
+-   什么是 "state"?
+-   类(class)和功能部件(functional components)的起伏变化
+-   什么是组件重新渲染，它们是如何工作的?
+-   如何触发重新渲染
+-   不同组件的生命周期以及如何交互
+-   虚拟DOM
+-   CSR（客户端渲染）和SSR（服务器端渲染）在一般情况下和React中的好处
+-   受控组件 VS 非受控组件
+-   State 提升
+-   至少一种全局状态管理技术（Context API, Redux/Toolkit, Recoil）。
+-   组件模式（特别是如何选择正确的模式）。
 
 ## Learn How to Build Clean, Performant and Maintainable React Components
 
 ![wesley-tingey-mvLyHPRGLCs-unsplash](https://www.freecodecamp.org/news/content/images/2022/01/wesley-tingey-mvLyHPRGLCs-unsplash.jpg)
 
-I know – this is the dream of every programmer (or at least I hope it is). And for me, this ability separates a good programmer from a great programmer. The fun part is that it's never really completed because there's always something to learn and to improve.
+我知道--这是每个程序员的梦想（或者至少我希望是这样）。而对我来说，这种能力将一个好的程序员和一个伟大的程序员分开。有趣的是，它从未真正完成，因为总有一些东西需要学习和改进。
 
-Following these best practices won't only make it easier for you, but also for your teammates. I've seen development teams who created a _style guide_ where they defined important cornerstones about how they're writing code. Very smart idea if you'd ask me.
+遵循这些最佳实践不仅会让你更轻松，也会让你的队友更轻松。我见过一些开发团队创建了一个 _代码风格指南_，他们在其中定义了关于他们如何编写代码的重要基石。如果你问我，这是一个非常聪明的想法。
 
-Some of them were:
+他们中的一些人是:
 
--   use functional components (like arrow-functions)
--   don't use inline-styles
--   maintain a proper import structure (third-party imports first --> internal imports below)
--   format your code before committing
+-   使用功能组件（如箭头函数）
+-   不要使用内联风格(inline-styles)
+-   保持适当的导入结构(首先是第三方导入-->下面是内部导入)
+-   在提交之前格式化你的代码
 
-And so on.
+以此类推。
 
-Of course you can get very detailed about it. This depends on your team. I personally don't like very detailed style guides because I think you should have some type of freedom as a skilled developer and shouldn't be restricted too much.
+当然，你可以把它说得很详细。这取决于你的团队。我个人不喜欢非常详细的风格指南，因为我认为作为一个熟练的开发者，你应该有某种自由，不应该受到太多的限制。
 
-But a style guide in general is a good way to outline and keep up best practices and makes sure your team is on the same page regarding some important areas. I think this increases teamwork and output tremendously.
+但一般来说，代码风格指南是概述和保持最佳实践的好方法，并确保你的团队在一些重要领域有相同的看法。我认为这能极大地提高团队合作和产出。
 
-Let's take a look what those best practices actually are to create components that are clean, performant, and maintainable. Make yourself comfortable, grab something to take a notes with, and enjoy!
+让我们来看看这些最佳实践到底是什么，以创建干净、性能好、可维护的组件。让自己舒服一点，拿上东西做个笔记，然后享受吧
 
-### 📁 Create a good folder-structure
+### 📁 创建一个良好的文件夹结构
 
-Organizing your files and folders inside your React application is mandatory for maintainability and scalability.
+在你的React应用程序中组织你的文件和文件夹对于可维护性和可扩展性是必须的。
 
-A **good** folder structure depends on the size of your application and your team. So there's no general answer to that. Especially because this is a highly opinionated topic and depends also on personal preferences.
+一个**好的**文件夹结构取决于你的应用程序的大小和你的团队。所以，这没有一个普遍的答案。特别是因为这是一个非常有讨论性的话题，也取决于个人的喜好。
 
-But over the time, some best practices for different sizes of an application have evolved.
+但随着时间的推移，针对不同规模的应用程序的一些最佳实践已经发展起来。
 
-[This great blog post](https://www.robinwieruch.de/react-folder-structure/) goes through five different application sizes and introduces good ideas of how to organize your files and folders. Having this in mind when planning or starting your application can make a huge difference on the long run.
+[这篇很好的博文](https://www.robinwieruch.de/react-folder-structure/)介绍了五种不同的应用程序规模，并介绍了如何组织你的文件和文件夹的好想法。在计划或开始你的应用程序时，考虑到这一点，从长远来看会有很大的不同。
 
-Don't over-engineer it, but try your best maintain a proper structure that is best suited for your current application and your team size.
+不要过度设计，但要尽力保持一个适当的结构，最适合你目前的应用和你的团队规模。
 
-### 👇 Maintain a structured import order
+### 👇 保持结构化的导入顺序
 
-If you've already got some experience in React, you might have seen files that are bloated with a lot of import statements. They might also be mixed up with external imports from third-party packages and internal imports like other components, util functions, styles and many more.
+如果你已经有了一些React的经验，你可能已经看到了有很多导入语句的臃肿文件。它们可能还混杂着来自第三方包的外部导入和内部导入，如其他组件、util函数、styles等等。
 
-Real World Example (cut):
+真实世界的例子(截取部分):
 
 ```javascript
 import React, { useState, useEffect, useCallback } from "react";
@@ -180,11 +180,11 @@ import CustomButton from "../components/CustomButton";
 ...
 ```
 
-In reality the imports span over 55 lines.
+实际上，这些导入语句跨越了55行。
 
-You probably recognize the deal here. It's difficult to distinguish what are all the third-party and the local (internal) imports. They are not grouped and seem to be all over the place.
+你可能认识到这里的问题。很难区分什么是所有的第三方和本地（内部）导入。它们没有被分组，似乎到处都是。
 
-Better Version:
+更好的版本:
 
 ```javascript
 import React, { useState, useEffect, useCallback } from "react";
@@ -207,13 +207,13 @@ import Paragraph from "../components/Paragraph";
 ...
 ```
 
-The structure is clearer and it's very easy to distinguish where the external and internal imports are. Of course you can optimize it more if you are using more named imports (if that's possible! :) ). That allows you to import all the components that are coming from material-ui all on one line.
+结构更清晰了，而且非常容易区分外部和内部导入的位置。当然，如果你使用更多的命名导入，你可以对它进行更多的优化（如果有可能的话！:) ）。这样你就可以在一行中导入所有来自 material-ui 的组件。
 
-I've seen other developers who like to split the import structure up in three different parts:
+我见过其他开发者喜欢把导入结构分成三个不同的部分:
 
-Built-In (like 'react') --> External (third-party node modules) --> Internal.
+内置的（如'react'）-->外部（第三方node模块）-->内部。
 
-You can manage it every time by yourself or let a **linter** do the job. [Here's](https://dev.to/otamnitram/sorting-your-imports-correctly-in-react-213m) a great article about how to configure your linter for your React app to maintain a proper import structure.
+你可以每次都自己管理，或者让**linter**做这个工作。[这里是](https://dev.to/otamnitram/sorting-your-imports-correctly-in-react-213m)一篇关于如何为你的React应用配置linter以保持正确的导入结构的好文章。
 
 ### 📔 Learn different component patterns
 

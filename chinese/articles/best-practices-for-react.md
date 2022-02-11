@@ -119,7 +119,6 @@ React开发者出现问题的另一个根本原因是对React在工作底层原�
 -   至少一种全局状态管理技术（Context API, Redux/Toolkit, Recoil）。
 -   组件模式（特别是如何选择正确的模式）。
 
-
 ## Learn How to Build Clean, Performant and Maintainable React Components
 
 ![wesley-tingey-mvLyHPRGLCs-unsplash](https://www.freecodecamp.org/news/content/images/2022/01/wesley-tingey-mvLyHPRGLCs-unsplash.jpg)

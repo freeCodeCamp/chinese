@@ -119,6 +119,7 @@ React开发者出现问题的另一个根本原因是对React在工作底层原�
 -   至少一种全局状态管理技术（Context API, Redux/Toolkit, Recoil）。
 -   组件模式（特别是如何选择正确的模式）。
 
+
 ## Learn How to Build Clean, Performant and Maintainable React Components
 
 ![wesley-tingey-mvLyHPRGLCs-unsplash](https://www.freecodecamp.org/news/content/images/2022/01/wesley-tingey-mvLyHPRGLCs-unsplash.jpg)
@@ -662,7 +663,7 @@ const SeasonScores = ({ seasonScoresData, currentRoster }) => {
 
 If you want to go into more depth, feel free to check out [this great post](https://medium.com/swlh/understanding-the-importance-of-the-key-prop-in-react-f2b92ce65f45) about that topic.
 
-## Tips to Help You Write Better React Code – The Cherries on Top
+## Tips to Help You Write Better React Code,  The Cherries on Top
 
 ![joanna-kosinska-_xN7UbcZ33I-unsplash](https://www.freecodecamp.org/news/content/images/2022/01/joanna-kosinska-_xN7UbcZ33I-unsplash.jpg)
 

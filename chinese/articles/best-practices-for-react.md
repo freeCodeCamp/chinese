@@ -299,17 +299,17 @@ linter观察你正在编写的JavaScript代码，并提醒你在执行代码时�
 
 我认为重要的是要意识到在你的应用程序成长过程中可能出现的潜在挑战，而且有一些技术在手，可以摆脱这些问题。进一步阅读请查看[有关code splitting的React文档.](https://reactjs.org/docs/code-splitting.html)
 
-### 🗄️ Extract reusable logic into custom hooks
+### 🗄️ 将可重复使用的逻辑提取到自定义hooks
 
-According to the React docs,
+根据React的文档,
 
-> _Hooks allow us to reuse stateful logic without changing our component hierarchy._
+_Hook允许我们在不改变组件层次结构的情况下重用有状态的逻辑。_
 
-Basically they're a better solution to the techniques that were used before in combination with class components. If you've been coding for a while, you might remember the use of **Higher Order Components** or **render props.**
+基本上，它们是以前与类组件结合使用的技术的一个更好的解决方案。如果你已经写了一段时间的代码，你可能还记得**高级组件(Higher Order Components)**或**render props**的使用。
 
-Whenever you find yourself in a situation where you have to reuse the same stateful logic that is already used in another functional component, that's a great time to create a custom hook. Inside it you encapsulate the logic and just have to call the hook as a function inside your components.
+每当你发现自己必须重复使用已经在另一个功能组件中使用的相同的有状态逻辑时，这就是创建一个自定义Hook的好时机。在它里面，你封装了逻辑，只需要在你的组件中作为一个函数调用这个Hook。
 
-Let's take a look at a quick example where we need to update our UI according to the screen size and want to keep track of the current window size when resizing the browser window manually.
+让我们来看一个简单的例子，我们需要根据屏幕的大小来更新我们的用户界面，并希望在手动调整浏览器窗口的大小时跟踪当前窗口的大小。
 
 ```jsx
 const ScreenDimensions = () => {
@@ -339,17 +339,17 @@ const ScreenDimensions = () => {
 }
 ```
 
-Thanks to: https://usehooks.com/useWindowSize/
+感谢这个例子: https://usehooks.com/useWindowSize/
 
-As you can see, the solution is pretty straightforward and there's nothing wrong with defining it like this.
+正如你所看到的，解决方案是非常直接的，这样定义也没有错。
 
-Now comes the tricky part. Imagine we'd like to use the exact logic in another component, where we'll render a different UI (one for smartphones and one for desktops) based on the current screen size.
+现在，棘手的部分来了。想象一下，我们想在另一个组件中使用确切的逻辑，在那里我们将根据当前的屏幕尺寸渲染一个不同的用户界面（一个用于智能手机，一个用于台式机）。
 
-Of course we could just copy the logic, paste it in and we're done. But this is not a good practice, as you might know from the DRY principle.
+当然，我们可以直接复制这个逻辑，把它粘贴进去就可以了。但这并不是一个好的做法，正如你可能从DRY原则中知道的那样。
 
-If we'd like to adjust our logic, we have to do it in both components. And when we paste our logic in even more components, it becomes less maintainable and more error prone.
+如果我们想调整我们的逻辑，我们必须在两个组件中进行调整。而当我们把我们的逻辑粘贴到更多的组件中时，它的可维护性就会降低，而且更容易出错。
 
-So, what would you normally do in a vanilla JavaScript project? You'd most likely define a function that encapsulates the logic and can be used in many different places. That's exactly what we'll achieve with hooks. They are nothing more than JavaScript functions but with some React specialities because they're using React hooks.
+那么，在一个普通的JavaScript项目中，你通常会怎么做？你很可能会定义一个封装了逻辑的函数，可以在许多不同的地方使用。这正是我们要用Hook实现的。它们只不过是JavaScript函数，但有一些React的特点，因为它们使用了React Hook。
 
 Let's see how our custom hook would look:
 
@@ -376,7 +376,7 @@ const useWindowSize = () => {
 }
 ```
 
-Now let's simply call it inside our **ScreenDimensions** component:
+现在让我们简单地在我们的**ScreenDimensions**组件中调用它:
 
 ```jsx
 const ScreenDimensions = () => {
@@ -391,7 +391,7 @@ const ScreenDimensions = () => {
 }
 ```
 
-This enables us to just call the custom hook in any other component and save the return value (which is the current window size) in a variable that we can use inside the component.
+这使我们能够在任何其他组件中调用自定义Hook，并将返回值（即当前窗口大小）保存在一个变量中，以便我们在组件中使用。
 
 ```jsx
 const ResponsiveView = () => {

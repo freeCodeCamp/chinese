@@ -409,23 +409,23 @@ const ResponsiveView = () => {
 }
 ```
 
-### 🖥️ Handle errors effectively
+### 🖥️ 有效地处理错误
 
-Handling errors effectively is often overlooked and underestimated by many developers. Like many other best practices this seems to be an afterthought at the beginning. You want to make the code work and don't want to "waste" time thinking much about errors.
+有效地处理错误往往被许多开发者所忽视和低估。像许多其他的最佳实践一样，这在开始时似乎是一个事后的想法。你想让代码工作，不想 "浪费 "时间去考虑错误。
 
-But once you've become more experienced and have been in nasty situations where better error handling could have saved you a lot of energy (and valuable time of course), you realize that it's mandatory in the long run to have a solid error handling inside your application. Especially when the application is deployed to production.
+但是，一旦你变得更有经验，并且在一些讨厌的情况下，更好的错误处理可以为你节省大量的精力（当然还有宝贵的时间），你就会意识到，从长远来看，在你的应用程序中拥有一个可靠的错误处理是必须的。特别是当应用程序被部署到生产中时。
 
-But what exactly does _error handling_ mean in the React world? There are some different parts that play a role. One is to **catch** errors, another one to **handle** the UI accordingly, and the last one to **log** them properly.
+但在React世界里，`错误处理`到底是什么意思？有一些不同的部分在起作用。一个是**捕获错误**，另一个是处理相应的UI，最后一个是正确地 **记录** 错误。
 
-#### React Error Boundary
+#### React 错误边界
 
-This is a custom class component that is used as a wrapper of your entire application. Of course you can wrap the ErrorBoundary component also around components that are deeper in the component tree to render a more specific UI, for example. Basically it's also a best practice to wrap the ErrorBoundary around a component that is error prone.
+这是一个自定义的类组件，被用作你整个应用程序的包装器。当然，你也可以将ErrorBoundary(错误边界)组件包裹在组件树中更深的组件里，以呈现一个更具体的用户界面，例如。基本上，将ErrorBoundary(错误边界)包在容易出错的组件里也是一种最佳做法。
 
-With the lifecycle method `componentDidCatch()` you're able to catch errors during the rendering phase or any other lifecycles of the child components. So when an error arises during that phase, it bubbles up and gets caught by the ErrorBoundary component.
+通过生命周期方法`componentDidCatch()`，你能够在渲染阶段或子组件的任何其他生命周期中捕获错误。因此，当该阶段出现错误时，它就会冒出来，被ErrorBoundary(错误边界)组件捕捉。
 
-If you're using a logging service (which I also highly recommend), this is a great place to connect to it.
+如果你正在使用一个日志服务（我也强烈推荐），这是一个连接它的好地方。
 
-The static function `getDerivedStateFromError()` is called during the render phase and is used to update the state of your ErrorBoundary Component. Based on your state, you can conditionally render an error UI.
+静态函数`getDerivedStateFromError()`在渲染阶段被调用，用于更新ErrorBoundary组件的状态。基于你的状态，你可以有条件地渲染一个错误的用户界面。
 
 ```jsx
 class ErrorBoundary extends React.Component {
@@ -452,11 +452,11 @@ class ErrorBoundary extends React.Component {
 }
 ```
 
-The big drawback of this approach is that it doesn't handle errors in asynchronous callbacks, on server-side-rendering, or in event-handlers because they're outside the boundary.
+这种方法的最大缺点是，它不能处理异步回调、服务器端渲染或事件处理程序中的错误，因为它们在边界之外。
 
-#### Use try-catch to handle errors beyond boundaries
+#### 使用try-catch来处理超出边界的错误
 
-This technique is effective to catch errors that might occur inside asynchronous callbacks. Let's imagine we're fetching a user's profile data from an API and want to display it inside a Profile Component.
+这种技术对于捕捉异步回调中可能出现的错误非常有效。让我们想象一下，我们正在从API中获取用户的个人资料数据，并希望在个人资料组件中显示它。
 
 ```jsx
 const UserProfile = ({ userId }) => {
@@ -505,11 +505,11 @@ const UserProfile = ({ userId }) => {
 }
 ```
 
-When the component gets mounted, it starts a GET request to our API to receive the user data for the corresponding userId that we'll get from the props.
+当组件被加载后，它开始向我们的API发出GET请求，以接收我们将从道具中获得的相应用户ID的用户数据。
 
-Using try-catch helps us catch any error that might occur during that API call. For example this could be a 404 or a 500 response from the API.
+使用 try-catch 可以帮助我们捕捉在 API 调用过程中可能发生的任何错误。例如，这可能是一个来自API的404或500响应。
 
-Once an error gets caught, we're inside the catch block and receive the error as a parameter. Now we're able to log it in our logging service and update the state accordingly to display a custom error UI.
+一旦错误被捕捉到，我们就会在catch块中接收错误作为一个参数。现在我们能够在我们的日志服务中记录它，并相应地更新状态以显示一个自定义的错误用户界面。
 
 #### Use the react-error-boundary library (personal recommendation)
 
@@ -545,37 +545,37 @@ const App = () => {
 }
 ```
 
-The library exports a component that is made up of the ErrorBoundary functionality we already know and adds some nuances to it. It allows you to pass a `FallbackComponent` as a prop that should be rendered once an error got caught.
+该库导出了一个由我们已经知道的ErrorBoundary功能组成的组件，并在其中添加了一些细微的差别。它允许你传递一个 "FallbackComponent "作为prop，一旦发现错误，就应该呈现出来。
 
-It also exposes a prop `onError` which provides a callback function when an error arises. It's great for using it to log the error to a logging service.
+它还公开了一个prop `onError`，在出现错误时提供一个回调函数。这对于使用它将错误记录到日志服务中是非常好的。
 
-There are some other props that are quite useful. If you'd like to know more, feel free to checkout [the docs.](https://www.npmjs.com/package/react-error-boundary?activeTab=readme)
+还有一些其他的prop是相当有用的。如果你想了解更多，请随时查看[这个文档。](https://www.npmjs.com/package/react-error-boundary?activeTab=readme)
 
-This library also provides a hook called `useErrorHandler()` that is meant to catch any errors that are outside the boundaries like event-handlers, in asynchronous code and in server-side-rendering.
+这个库还提供了一个名为`useErrorHandler()`的Hook，旨在捕捉任何在事件处理程序等边界之外的错误，在异步代码和服务器端的渲染中。
 
-#### Logging errors
+#### 记录错误
 
-Catching and handling errors effectively is one part, logging them properly is another. Once you've set up your error handling inside your application, you need to log them persistently.
+有效地捕捉和处理错误是一个部分，正确地记录它们是另一个部分。一旦你在你的应用程序中设置了错误处理，你需要持久地记录它们。
 
-The most frequently used way is the good old **console.log**. This might be good during development when you want a quick log, but once your application is deployed to production it becomes useless. This is because you only see the error inside the user's browser, which is not effective at all.
+最经常使用的方法是老式的**console.log**。在开发过程中，当你想要一个快速的日志时，这可能是好的，但一旦你的应用程序被部署到生产中，它就变得毫无用处了。这是因为你只能在用户的浏览器中看到错误，这一点都不有效。
 
-When logging errors in production, **you** as the developer want to see the errors in one dedicated place in order to fix them.
+当在生产中记录错误时，***你作为开发者希望在一个专门的地方看到错误，以便修复它们。
 
-For that reason we need a logging service created by our own or a third-party one.
+出于这个原因，我们需要一个由我们自己或第三方创建的日志服务。
 
-When using third-party logging services my personal recommendations is definitely **Sentry.** So I highly encourage you to check it out.
+当使用第三方日志服务时，我个人推荐的肯定是**Sentry**，所以我非常鼓励你去看看。
 
-### ☝️ Keep your key prop unique across your whole app
+### ☝️ 在你的整个应用程序中保持你的关键prop的唯一性
 
-When mapping over an Array to render its data, you always have to define a **key** property for each element. A common practice I've seen and used myself as well is to use simply the **index** of each element as the key prop.
+当对数组进行映射以渲染其数据时，你总是要为每个元素定义一个**key**属性。我见过的一个常见的做法，也是我自己使用的，就是简单地使用每个元素的**index**作为key道具。
 
-Using the key prop is important because it helps React to identify the exact element that has changed, is added or is removed. Imagine the state of your component changes and the UI needs to be re-rendered with the new state. React needs to figure out the differences between the previous UI and new UI in order to update it.
+使用key prop是很重要的，因为它可以帮助React识别已经改变的、被添加或被移除的确切元素。想象一下，你的组件的状态改变了，用户界面需要用新的状态重新渲染。React需要弄清楚以前的UI和新的UI之间的差异，以便更新它。
 
-"What elements are added/removed or have changed?"
+"哪些元素被添加/删除或发生了变化？"
 
-Therefore the key prop has to be unique. Using the index of the current element makes sure that it is only unique in this particular map function.
+因此，关键道具必须是唯一的。使用当前元素的索引可以确保它只在这个特定的地图函数中是唯一的。
 
-It could look like this, if we'd pretend to show a score history of a football team from the current season:
+如果我们假装要显示一个足球队在当前赛季的得分历史，它可以是这样的。
 
 ```jsx
 const SeasonScores = ({ seasonScoresData }) => {
@@ -594,9 +594,9 @@ const SeasonScores = ({ seasonScoresData }) => {
 }
 ```
 
-While this is only unique inside this map function here, this could lead to potential issues. It's pretty common to have more than one map function inside your React application or even in one component.
+虽然这只是在这里的地图函数中是唯一的，但这可能导致潜在的问题。在你的React应用程序中，甚至在一个组件中，有一个以上的map函数是很常见的。
 
-Let's assume we've got another map-function in our component to display the current roster:
+让我们假设我们的组件中有另一个map函数来显示当前的名册:
 
 ```jsx
 const SeasonScores = ({ seasonScoresData, currentRoster }) => {

@@ -215,89 +215,89 @@ import Paragraph from "../components/Paragraph";
 
 你可以每次都自己管理，或者让**linter**做这个工作。[这里是](https://dev.to/otamnitram/sorting-your-imports-correctly-in-react-213m)一篇关于如何为你的React应用配置linter以保持正确的导入结构的好文章。
 
-### 📔 Learn different component patterns
+### 📔 学习不同的组件模式
 
-To ensure you don't end up with unmaintainable and unscalable spaghetti code, learning different component patterns is essential as you become more experienced in React.
+为了确保你不会以不可维护和不可扩展的意大利面条代码而告终，随着你在React中的经验增加，学习不同的组件模式是必不可少的。
 
-But this is not all. Knowing the different patterns is a good foundation. But the most important aspect about it is that you know **when** to use which pattern for your problem.
+但这并不是全部。了解不同的模式是一个良好的基础。但关于它最重要的一点是，你知道**什么时候**使用哪种模式来解决你的问题。
 
-Every pattern serves a certain purpose. For example the **compound component pattern** avoids unnecessary _prop-drilling_ of many component levels. So, the next time you begin to do pass props through five component levels to finally reach the component that is interested in the props, you start to orchestrate the components differently.
+每个模式都有一定的作用。例如，**复合组件模式**避免了不必要的许多组件级别的 _prop-drilling_。所以，下一次你开始做通过五个组件层来传递道具，最后到达对道具感兴趣的组件时，你就开始以不同的方式来协调这些组件。
 
-One quick side note here about props-drilling, because I've had many discussions about it in the past. There're many opinions out there as to whether it's bad or not. As for me, I like to try to think about a different way / pattern if I start to pass props through more than two component levels.
+这里有一个关于`props-drilling`的简短的附带说明，因为我过去曾有过许多关于它的讨论。外面有很多关于它是否不好的意见。就我而言，如果我开始通过两个以上的组件级别来传递`props`，我喜欢尝试思考不同的方式/模式。
 
-This fact makes you more efficient as a developer and makes the components you write more maintainable or scalable. Having those patterns in your toolkit makes you also stand out from other React developers. I highly encourage you to do your own research, but [this](https://www.udemy.com/course/the-complete-guide-to-advanced-react-patterns/) Udemy course helped me very much.
+这个事实让你作为一个开发者更有效率，让你写的组件更可维护或可扩展。在你的工具包中拥有这些模式，也让你从其他React开发者中脱颖而出。我非常鼓励你做你自己的研究，但 [这](https://www.udemy.com/course/the-complete-guide-to-advanced-react-patterns/)Udemy课程对我帮助非常大。
 
-### 🔒Use a linter and follow its rules
+### 🔒用linter并遵守其规则
 
-A linter doesn't only help you in terms of maintaining a distinguishable import order of your dependencies. It helps you write better code in general.
+linter不仅可以帮助你保持你的依赖关系的可区分的导入顺序。它可以帮助你写出更好的代码。
 
-When you're using _create-react-app_, there's already ESLint configured, but you can also set it up completely on your own or extend the rules of a pre-configured ruleset.
+当你使用_create-react-app_时，已经配置了ESLint，但你也可以完全自己设置，或者扩展预先配置的规则集的规则。
 
-A linter basically observes the JavaScript code you're writing and reminds you of errors you'd more likely catch when executing the code. It took a while for me to really value the use of a linter, but today I can't imagine working without it.
+linter观察你正在编写的JavaScript代码，并提醒你在执行代码时更有可能发现的错误。我花了一段时间才真正重视linter的使用，但今天我无法想象没有它怎么工作。
 
-Having the linter is one thing, but following its rules is another. Of course you can disable it. Either for a specific line of code or for the whole file itself. There may be cases where this makes sense, but from my experience they're pretty rare.
+使用linter是一回事，但遵守其规则是另一回事。当然，你可以禁用它。无论是对某一行代码还是对整个文件本身。但根据我的经验，这是很罕见的。
 
-Another great benefit is that you can also adjust style checking. This is especially helpful for teams. Once you agreed upon certain conventions of how you write your code and how it should be formatted, you can easily combine ESLint with something like JSPrettify.
+另一个很大的好处是，你也可以调整样式检查。这对团队来说特别有帮助。一旦你接受了如何写你的代码以及它应该如何格式化的某些约定，你就可以很容易地将ESLint与JSPrettify这样的东西结合起来。
 
-### 🧪 Test your code
+### 🧪 测试你的代码
 
-I know, testing is likely not your favorite task as a developer. I used to be like that. At the beginning it seemed to be an unnecessary and disturbing task. This might be true for the short run. But in the long run – and when the application grows – it is vital.
+我知道，作为一个开发者，测试可能不是你最喜欢的任务。我曾经也是这样。开始时，它似乎是一项不必要的、令人不安的任务。这在短期内可能是真的。但从长远来看--以及当应用程序增长时--它是至关重要的。
 
-For me, testing has become a practice that ensures I'm doing my job more professionally and delivering higher quality software.
+对我来说，测试已经成为一种实践，确保我更专业地完成工作，并提供更高质量的软件。
 
-Basically there's nothing wrong with manual testing by a human and that shouldn't be avoided completely. But imagine you're integrating a new feature and want to make sure that nothing is broken. This can be a time consuming task and is prone to human error.
+基本上，由人进行手动测试没有错，不应该完全避免。但是，想象一下，你正在集成一个新的功能，并想确保没有任何问题。这可能是一个耗时的任务，而且容易出现人为错误。
 
-During the time you're writing tests you're already in the thinking process of how to organize your code in order to pass this test. For me this is always helpful because I recognize what pitfalls might arise and that I have to keep an eye on them.
+在你写测试的时候，你已经在思考如何组织你的代码，以便通过这个测试。对我来说，这总是很有帮助的，因为我认识到可能会出现哪些陷阱，而且我必须要注意这些陷阱。
 
-You're not directly jumping into writing your code either (which I wouldn't recommend at all), but you're thinking first about the goal.
+你也不是直接跳着写你的代码（我一点也不建议这样做），而是先思考目标。
 
-For example "What should that particular component do? What important edge cases might arise that I have to test? Can I make the component more pure that it only serves one purpose? ..."
+比如说 "那个特定的组件应该做什么？可能会出现哪些重要的边缘情况，我必须要测试？我可以让这个组件更加纯粹，只为一个目的服务吗？ ..."
 
-Having a vision for the code you're about to write also helps you to maintain a sharp focus on serving that vision.  
+对你要写的代码有一个愿景，也有助于你保持对服务于这个愿景的敏锐关注。 
 
-Tests can also serve as a kind of documentation, because for a new developer who is new to the codebase it can be very helpful to understand the different parts of the software and how they're expected to work.
+测试也可以作为一种文档，因为对于一个刚接触代码库的新开发者来说，了解软件的不同部分以及它们应该如何工作是非常有帮助的。
 
-So, don't avoid testing because it seems to be _extra work._ The reality is that it can save you extra work in the future when you set it up properly.
+所以，不要因为测试似乎是`额外的工作`而回避它。现实是，当你正确地设置它时，它可以在未来为你节省额外的工作。
 
-Take a look at the ["Testing" chapter inside the React Docs](https://reactjs.org/docs/testing.html), go through a few tutorials on testing in React, and just start writing your first small TDD application or implement tests into an app you're currently working on.
+看看[React文档中的 "测试 "章节](https://reactjs.org/docs/testing.html),通过一些关于React测试的教程，然后开始编写你的第一个小型TDD应用，或者在你目前正在开发的应用中实施测试。
 
-### 🧰 Integrate Typescript (or at least use default props and prop types)
+### 🧰 整合Typescript(或至少使用默认的props和prop类型)
 
-I remember my first React project as a software developer where our team received a project that was already basically written by another company. Then we had to build the client's project upon it, and Typescript had already been integrated.
+我记得我作为软件开发者的第一个React项目，我们的团队收到了一个基本上已经由其他公司写好的项目。然后我们不得不在此基础上建立客户的项目，而Typescript已经被集成了。
 
-Up to that point, my teammates and I hadn't had much experience in TypeScript since we all came from a vanilla JavaScript background.
+在那之前，我和我的队友们对TypeScript并没有什么经验，因为我们都是来自于普通的JavaScript背景。
 
-After a few weeks of working with that project, we felt that TypeScript wasn't a benefit, but more an obstacle that blocked us in our workflow. We also weren't really using the benefits of it because we defined everything with type _any_ to suppress the Typescript warnings.
+在与该项目合作的几周后，我们觉得TypeScript并不是一个好处，而是一个阻碍我们工作流程的障碍。我们也没有真正使用它的好处，因为我们用`any`类型定义了所有东西，以抑制Typescript的警告。
 
-That led us to the decision to remove TypeScript from the project and to work on our known terrain with vanilla JavaScript. This went well at first, but the more complex our project became, the more type errors emerged. So we doubted our decision a lot of getting completely rid of TypeScript. But those things can happen and gave us valuable experiences for the future.
+这导致我们决定将TypeScript从项目中移除，用vanilla JavaScript来处理我们已知的地形。起初这很顺利，但我们的项目变得越复杂，出现的类型错误就越多。所以我们很怀疑自己完全摆脱TypeScript的决定。但这些事情可能会发生，并为我们的未来提供了宝贵的经验。
 
-This circumstance led me to give TypeScript another chance, and I learned it in my spare time. After building some side projects with it, I can't imagine a life without it anymore.
+这种情况使我又给了TypeScript一个机会，我在业余时间学习了它。在用它构建了一些业余项目后，我再也无法想象没有它的生活了。
 
-Using TypeScript has many upsides like static type checking, better code completion in your IDE (intellisense), improved developer experience, and catching type errors while you write the code – just to name a few.
+使用TypeScript有很多好处，比如静态类型检查，在你的IDE中更好地完成代码（intellisense），改善开发者体验，以及在你写代码时捕捉类型错误--仅举几例。
 
-On the other hand it can have some challenges of course, because if you're not coming from a background with strongly typed languages (like Java or C#) it might be harder at the beginning to grasp it.
+另一方面，它当然也有一些挑战，因为如果你不是来自强类型语言（如Java或C#）的背景，在开始时可能更难掌握它。
 
-But I can say that it's really worth it to learn and to integrate it. [Here's](https://blog.bitsrc.io/5-strong-reasons-to-use-typescript-with-react-bc987da5d907) a nice article that can help you out of getting an overview of the ups and downs using Typescript in React applications. And [here's a tutorial](https://www.freecodecamp.org/news/how-to-code-your-react-app-with-typescript/) on how to code your React apps in TypeScript.
+但我可以说，它真的值得你去学习和整合。[这里有](https://blog.bitsrc.io/5-strong-reasons-to-use-typescript-with-react-bc987da5d907)一篇不错的文章，可以帮助你了解在React应用中使用Typescript的历程。还有[这里有一个教程](https://www.freecodecamp.org/news/how-to-code-your-react-app-with-typescript/)是关于如何在TypeScript中编写你的React应用。
 
-There may be reasons you don't want to use TypeScript inside your React application. That's fine. But at a bare minimum I'd recommend that you use **prop-types** and **default-props** for your components to ensure you don't mess up your props.
+你可能有理由不想在你的React应用程序中使用TypeScript。这很好。但至少我建议你为你的组件使用**prop-types**和**default-props**，以确保你不会弄乱你的props。
 
-### 💎 Use lazy-loading / code splitting
+### 💎 使用懒加载/代码拆分
 
-If you've spent some time in the JavaScript and React universe, you've most likely stumbled across **bundling**. For those of you who are hearing this term for the first time, let's see what the official React docs say:
+如果你在JavaScript和React领域花了一些时间，你很可能已经偶然发现了**bundling**。对于那些第一次听到这个术语的人，让我们看看React官方文档是怎么说的:
 
-> Most React apps will have their files “bundled” using tools like Webpack, Rollup or Browserify. Bundling is the process of following imported files and merging them into a single file: a “bundle”. This bundle can then be included on a webpage to load an entire app at once.
+大多数React应用会使用Webpack、Rollup或Browserify等工具对其文件进行 "bundling"。"bundling"是跟随导入的文件并将它们合并成一个文件的过程：一个 "bundling"。然后，这个捆绑文件可以包含在一个网页上，以便一次性加载整个应用程序。
 
-Basically this is a great technique, but with the growth of your app comes a challenge. Your bundle starts growing as well. Especially when you're using big third-party libraries like three.js.
+基本上这是个很好的技术，但随着你的应用程序的增长，就会出现一个挑战。你的"bundling"程序也开始增长。特别是当你使用像three.js这样的大型第三方库时。
 
-The pitfall is that this bundle needs to be always loaded completely, even when the user needs only a fraction of the code. This leads to performance issues because it can take an unnecessarily long time to load up your app.
+隐患在于，即使用户只需要一小部分的代码，这个"bundling"也需要一直完全加载。这导致了性能问题，因为它可能需要不必要的时间来加载你的应用程序。
 
-To avoid this, there's a technique called **code splitting** where you split up your bundle into the pieces of the code your user needs. This is supported by the most common bundlers like Webpack, Rollup, and Browserify. The great benefit of it is that you can create multiple bundles and load them dynamically.
+为了避免这种情况，有一种叫做代码拆分(code splitting)的技术，你把你的捆绑程序分割成用户需要的代码片段。最常见的捆绑器如Webpack、Rollup和Browserify都支持这种做法。它的最大好处是，你可以创建多个捆绑包并动态加载它们。
 
-Splitting up your bundle helps you to **lazy load** only the things that are needed by the user.
+拆分你的"bundling"程序可以帮助你通过懒加载(lazy load)用户需要的东西。
 
-To illustrate this, imagine you're going into a grocery store and just want to grab some bananas, apples, and bread. In that case you aren't buying the whole range of the store and then grab your bananas, apples and bread out of it. You're just interested in a fraction of the range. So why would you buy everything? It would take way longer and is of course more expensive.
+为了说明这一点，想象一下你进入一家杂货店，只想拿一些香蕉、苹果和面包。在这种情况下，你并不是买下整个商店的范围，然后从里面抓出你的香蕉、苹果和面包。你只是对其中的一小部分感兴趣。那么，你为什么要买所有的东西呢？这将花费更长的时间，当然也更昂贵。
 
-I think it's important to be aware of the potential challenges that can arise as your app grows, and that there are certain techniques at hand to get rid of those issues. For further reading checkout the [React docs.](https://reactjs.org/docs/code-splitting.html)
+我认为重要的是要意识到在你的应用程序成长过程中可能出现的潜在挑战，而且有一些技术在手，可以摆脱这些问题。进一步阅读请查看[有关code splitting的React文档.](https://reactjs.org/docs/code-splitting.html)
 
 ### 🗄️ Extract reusable logic into custom hooks
 

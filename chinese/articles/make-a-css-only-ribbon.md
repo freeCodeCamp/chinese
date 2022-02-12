@@ -1,29 +1,25 @@
 > -  原文地址：[How to Create a CSS-Only Ribbon for Your Website](https://www.freecodecamp.org/news/make-a-css-only-ribbon/)
-> -  原文作者：[
-                    
-                        Temani Afif
-                    
-                ](https://www.freecodecamp.org/news/author/temani-afif/)
-> -  译者：
+> -  原文作者：[Temani Afif](https://www.freecodecamp.org/news/author/temani-afif/)
+> -  译者：Humilitas
 > -  校对者：
 
-![How to Create a CSS-Only Ribbon for Your Website](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/final-header-ribbon.png)
+ ![How to Create a CSS-Only Ribbon for Your Website](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/final-header-ribbon.png)
 
-Have you ever noticed those fancy ribbons on websites that alert users to some special feature or event? They're great to have, but for many developers, it's a nightmare to create them.
+你注意过网站上那些漂亮的丝带效果吗？它们可以用来提醒用户关注一些新特性或者大事件。这个效果很棒，不过对于很多开发者来说，创建这种效果却并不简单。
 
-You can easily find a lot of ready-to-use code for such a component, but they are not easy to update. You also have to deal with a lot of trial and error until you get them to work correctly.
+网上有很多现成的组件，很容易就能找到开箱即用的代码，不过很难对它们做自定义的修改。还需要做很多调试工作并处理报错，直到它们满足需求为止。
 
-In this post, I will show you how to create two types of ribbons with some simple CSS code where you don't need to bother yourself with tweaking a lot of values.
+本文会介绍如何使用 CSS 创建两种不同类型的丝带效果，使用这种方式就不再需要浪费时间去一直调试了。
 
-Here's what we'll create in this article:
+这是我们将要创建的效果：
 
 ![Rotated Ribbon & Folder Ribbon](https://www.freecodecamp.org/news/content/images/2022/02/image-18.png)
 
-Rotated Ribbon & Folded Ribbon
+旋转丝带 & 折叠丝带
 
-Below is the full code for both ribbons so you can see how simple it is:
+下面是两种丝带效果的完整代码，看得出来它们非常简洁：
 
-Click to see the full code
+点击查看完整代码
 
 ```html
   <div class="box">
@@ -31,6 +27,7 @@ Click to see the full code
   </div>
   <div class="ribbon-1 left">Rotated Ribbon</div>
   <div class="ribbon-1 right">Rotated Ribbon</div>
+
 ```
 
 ```css
@@ -52,21 +49,20 @@ Click to see the full code
   }
 
   .ribbon-2 {
-    --f: 10px; /* control the folded part*/
-    --r: 15px; /* control the ribbon shape */
-    --t: 10px; /* the top offset */
+    --f: 10px; /* 控制折叠部分*/
+    --r: 15px; /* 控制丝带形状 */
+    --t: 10px; /* 上方偏移距离 */
 
     position: absolute;
     inset: var(--t) calc(-1*var(--f)) auto auto;
     padding: 0 10px var(--f) calc(10px + var(--r));
-    clip-path: 
+    clip-path:
       polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
         calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
         var(--r) calc(50% - var(--f)/2));
     background: #BD1550;
     box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
   }
-
 
   .box {
     max-width:500px;
@@ -75,19 +71,20 @@ Click to see the full code
     background:lightblue;
     position:relative;
   }
-``` 
 
-## How to create a Rotated Ribbon with CSS
+```
 
-This type of ribbon is, in most cases, used to place a piece of fixed information on the top of the screen. But we can also use it inside an element within the page.
+## 如何创建旋转丝带效果
 
-To understand how to create such a ribbon, let's look at a step-by-step illustration:
+这种丝带通常用来在屏幕顶部展示固定的信息，当然也可以用在页面元素上。
+
+为了理解旋转丝带的创建过程，我们来看下面的步骤示意图：
 
 ![Step-by-Step illustration of the Rotated Ribbon](https://www.freecodecamp.org/news/content/images/2022/02/image-19.png)
 
-Step-by-Step illustration of the Rotated Ribbon
+旋转丝带实现步骤示意图
 
-First, we start by placing our element on the top left corner of the screen. The red borders in the illustration are the boundaries of the screen (or the element where you want to place the Ribbon).
+首先，将丝带元素置于屏幕左上角，红色边框表示屏幕（或者想要在其上添加丝带的页面元素）的边界。
 
 ```css
 .ribbon {
@@ -97,39 +94,39 @@ First, we start by placing our element on the top left corner of the screen. The
 }
 ```
 
-Nothing complex so far. If you are not familiar with the `inset` property, it's nothing but the shorthand for `top`, `right`, `bottom`, and `left`.
+目前没什么复杂的。也许你不太了解 `inset` 属性，它其实是 `top`、`right`、`bottom` 和 `left` 属性的简写。
 
-Next, we perform a translation to the left by using `translate(-29.3%)`.
+接下来，将元素向左偏移：`translate(-29.3%)`。
 
-After the translation, we rotate our element using `rotate(-45deg)` and the code becomes this:
+之后，旋转元素：`rotate(-45deg)`，现在完整代码如下：
 
 ```css
 .ribbon {
   position: fixed;
   inset: 0 auto auto 0;
   background: #08769b;
-  transform-origin: 100% 0; /* or top left */
+  transform-origin: 100% 0; /* 或 top right */
   transform: translate(-29.3%) rotate(-45deg);
 }
 ```
 
-You are probably wondering what is the secret of the strange value `29.3%`? Well, it's equal to `100% * (1 - cos(45deg))`.
+也许你会很好奇，这个 `29.3%` 是怎么得来的？它的计算公式为：`100% * (1 - cos(45deg))`。
 
-I will avoid starting a "boring" math explanation, but you can see that after we did the rotation, the element is perfectly placed (both its top corners are touching the edges). The translation is the key to having that perfect placement.
+这里就不做枯燥的数学解释了，总之结果就是旋转之后完美地放置了这个元素（它的左上角和右上角正好处于边界位置）。
 
-You can also notice the use of `transform-origin: top left`. In the third step, I had to rotate the element from its top left corner.
+你可能还注意到了 `transform-origin: top right`，这个步骤是将旋转的参考点指定为右上角。
 
-Now our element is correctly placed but we have a few gaps to fill. I will use a "big" `box-shadow` to do that. In the figure, I used a green color to illustrate but you should consider it as the same color as the background.
+现在元素已经正确地放置了，还需要填充边界的空白。我用一个很大的阴影（`box-shadow`）来实现，在示意图中用绿色来表示以便区分，实际上它的颜色应该和背景色（`background`）一致。
 
-Next we need to clip the shadow to only show the left and right parts of it. To do this I will be using `clip-path`. I will use `inset(0 -100%)` which means clip the top and bottom shadow (the value `0`) and show some of the left right shadow (`-100%`).
+接着需要裁切这个阴影，让它只显示左右两边的部分。我会用到 `clip-path`，`inset(0 -100%)` 表示将上下两边的阴影裁切掉（值为 `0`），只显示左右两边（值为 `-100%`）。
 
-`100%` is a random value that needs to be very big. It can be for example `999px` or `100vmax` – any value to make sure we keep the left and right part of the shadow.
+这里的 `999px` 也可以是别的值，只要它足够大，比如 `100vmax`——能确保正确显示出左右两边的阴影就行。
 
-Now we'll see the final result in the sixth step. We still have some overflowing shadows but no one can see them since we are placing our element at the corner of the screen.
+现在可以看到最终结果了，其实还有一些溢出的阴影，但是由于元素放在了屏幕左上角边界，所有没人看得见。
 
-If you will be placing the ribbon inside another element don't forget to use `overflow: hidden` on the parent element and also replace `fixed` with `absolute`
+如果想把丝带用在页面中的元素上，别忘了给它的父元素设置 `overflow: hidden`，还要把 `fixed` 改成 `absolute`。
 
-Our final code will be:
+最终代码如下：
 
 ```css
 .ribbon-1 {
@@ -143,9 +140,9 @@ Our final code will be:
 }
 ```
 
-With only 7 declarations we have our rotated ribbon. You will note that our code is generic and doesn't depend on the text content. Whatever the content of the ribbon, it will always get placed correctly. You can even have multi-lines of text.
+我们只用了 7 个样式声明就实现了旋转丝带效果。我们的代码是通用的，并不依赖于其中的文字内容。不论丝带中的内容是什么，它都能正确的展示，甚至可以展示多行文本。
 
-To place the ribbon at the top right corner, we just need to update a few values. Even better, let's have two classes to easily control the placement:
+想要把丝带放在右上角的话，只需要修改几个属性值。更好的做法是使用两个样式来分别控制：
 
 ```css
 .ribbon-1 {
@@ -155,88 +152,88 @@ To place the ribbon at the top right corner, we just need to update a few values
   clip-path: inset(0 -100%);
 }
 .left {
-  inset: 0 auto auto 0; /* top and left equal to 0 */
-  transform-origin: 100% 0; /* OR top right */
+  inset: 0 auto auto 0; /* top 和 left 的值为 0 */
+  transform-origin: 100% 0; /* 或 top right */
   transform: translate(-29.3%) rotate(-45deg);
 }
 .right {
-  inset: 0 0 auto auto; /* top and right equal to 0 */
-  transform-origin: 0 0; /* OR top left */
+  inset: 0 0 auto auto; /* top 和 right 的值 0 */
+  transform-origin: 0 0; /* 或 top left */
   transform: translate(29.3%) rotate(45deg);
 }
 ```
 
-I think the code is self-explanatory and the changes between right and left are simple to understand.
+我觉得上面的代码是自解释的，`.left` 和 `.right` 两个样式之间的区别也不难理解。
 
-## How to Create a Folded Ribbon with CSS
+## 如何创建折叠丝带
 
-Let's tackle the second type of ribbon the same way we did with the previous one using a step-by-step illustration.
+同样的，一起来看示意图：
 
 ![Step-by-Step illustration of the Folded Ribbon](https://www.freecodecamp.org/news/content/images/2022/02/image-20.png)
 
-Step-by-Step illustration of the Folded Ribbon
+折叠丝带实现步骤示意图
 
-First, we'll start by placing our element at the right side of the parent element.
+首先，将元素放置在父元素的右边
 
 ```css
 .ribbon-2 {
-  --t: 10px; /* the top offset */
-  
+  --t: 10px; /* 上方偏移距离 */
+
   position: absolute;
   inset: var(--t) 0 auto auto;
   padding:0 10px;
   background: #BD1550;
-  
+
 }
 ```
 
-I will consider a variable to control the offset from the top which means that we can easily control the position of the Ribbon by adjusting that variable. Since we are using `position: absolute`, we should not forget to add `position: relative` to the parent element of the Ribbon.
+我定义了一个变量来控制元素上方的偏移距离，以便通过这个变量来调整丝带的位置。因为用到了 `position: absolute`，所以别忘了给丝带的父元素指定 `position: relative`。
 
-I will also add some padding on the left and right sides. There is no particular logic behind the `10px` – you can choose the value you want.
+我还在左右两边增加了一些内边距（padding），这里指定的 `10px` 并没有什么特殊含义——你想指定其他值也可以。
 
-Now I will introduce another variable that will control the folded part. I will be using this variable to define an inset shadow `box-shadow: 0 calc(-1*var(--f)) 0 #0005`.
+现在要引入另一个变量来控制折叠的部分，我用这个变量来定义一个内嵌的阴影：`box-shadow: 0 calc(-1*var(--f)) 0 #0005`。
 
-As you can see in the figure above, this shadow will add a semi-transparent black overlay on the bottom having a height equal to the variable `--f`. I will also increase the bottom padding to contain that shadow `padding: 0 10px var(--f)`.
+正如你在上图中看到的，这个阴影在元素底部生成了一个半透明的黑色色块，高度由 `--f` 变量指定。我增加了底部内边距，留出展示阴影的空间：`padding: 0 10px var(--f)`。
 
-Next, using the same variable `--f` I will move the ribbon a bit to the right by replacing `right:0` with `right: calc(-1*var(--f))`.
+接着，继续使用 `--f` 变量，将丝带往右偏移：把 `right:0` 更改为 `right: calc(-1*var(--f))`。
 
-The code so far looks like this:
+现在代码如下：
 
 ```css
 .ribbon-2 {
-  --t: 10px; /* the top offset */
-  --f :10px /* control the folded part */
-  
+  --t: 10px; /* 上方偏移距离 */
+  --f :10px /* 控制折叠部分 */
+
   position: absolute;
-  inset: var(--t) calc(-1*var(--f)) auto auto; /* the right value is here*/
+  inset: var(--t) calc(-1*var(--f)) auto auto; /* right 属性合并到这里了*/
   padding:0 10px var(--f);
   background: #BD1550;
-  box-shadow: 0 calc(-1*var(--f)) 0 inset #0005; 
+  box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
 }
 ```
 
-The code may look strange (and the result as well) but everything will make sense in the next step when we create the final shape.
+代码看起来可能有点奇怪（实现的效果也是），不过下一步我们会创建出最终的形状，到时一切就都能说得通了。
 
-In the fourth step (the last one), we will introduce `clip-path` to cut our element. I will also add another variable `--r` to control the arrow shape of the ribbon.
+最后一步，我们要引入 `clip-path` 来裁切元素。我加入了一个变量 `--r` 来控制丝带箭头的形状。
 
-Before adding the clip-path, I will first increase the left padding to have the necessary space for the arrow shape:
+在加入 clip-path 之前，首先增加左内边距，为箭头形状留出充足空间：
 
 ```css
 padding: 0 10px var(--f) calc(10px + var(--r));
 ```
 
--   The top padding is equal to `0`.
--   The right padding is equal to `10px` (a random value)
--   The bottom padding is defined by `--f`
--   The left padding is equal to `10px` (same as right) plus a value defined by the new variable `--r`
+*   上内边距为 `0`
+*   右内边距为 `10px`（一个随机值）
+*   下内边距由 `--f` 指定
+*   左内边距为 `10px`（与右内边距相同）与变量 `--r` 的值之和
 
-Now let's add the `clip-path`. Here is an illustration to understand the path that will lead us to the final shape.
+现在加入 `clip-path`，下图可以帮助我们理解如何通过裁切路径得到最终的形状。
 
 ![image-22](https://www.freecodecamp.org/news/content/images/2022/02/image-22.png)
 
-Illustration of the clip-path
+裁切路径示意图
 
-The path is defined using 7 points. Starting for point (1) and following the arrow we have the following code:
+路径由 7 个点组成，从点 (1) 开始，跟随箭头方向，可以得到以下代码：
 
 ```css
 clip-path: polygon(
@@ -250,22 +247,22 @@ clip-path: polygon(
 )
 ```
 
-Don't worry if you are not familiar with `clip-path` – this may look a bit strange to you. You don't need to manipulate that path. All you need to update the CSS variables to control the overall shape.
+如果不熟悉 `clip-path` 也无需担心——虽然看着可能有点陌生。你并不需要操作这个路径，只需要改动 CSS 变量来控制形状就行了。
 
-This said it's good to play with that path by changing some values in order to better understand how it works.
+当然，试着改动一些数值来调整路径能够帮助你更好地理解它的原理。
 
-We are done. Our final code is:
+完工了。最终代码如下：
 
 ```css
 .ribbon-2 {
-  --f: 10px; /* control the folded part*/
-  --r: 15px; /* control the ribbon shape */
-  --t: 10px; /* the top offset */
-  
+  --f: 10px; /* 控制折叠部分*/
+  --r: 15px; /* 控制丝带形状 */
+  --t: 10px; /* 上方偏移距离 */
+
   position: absolute;
   inset: var(--t) calc(-1*var(--f)) auto auto;
   padding: 0 10px var(--f) calc(10px + var(--r));
-  clip-path: 
+  clip-path:
     polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
       calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
       var(--r) calc(50% - var(--f)/2));
@@ -274,21 +271,21 @@ We are done. Our final code is:
 }
 ```
 
-You can adjust the values of the variables to get different results:
+可以通过调整变量数值来获取不同的效果：
 
 ![right-ribbon](https://www.freecodecamp.org/news/content/images/2022/02/right-ribbon.png)
 
-Like we did with the rotated ribbon, we can update a few values to change the position of this one from right to left – but this time I will not give you the code. I will let you try to find it alone 😉
+与旋转丝带类似，我们也可以通过修改几个属性值，从而将丝带位置从右边移到左边——不过这里我就不给出代码了，留给你自己去尝试。
 
-It's a good exercise to figure out which value you have to update especially for the `clip-path`. You can always [reach out to me](https://twitter.com/ChallengesCss) if you have any questions.
+尝试理解需要调整的各个参数（尤其是 `clip-path`）是很好的做法。有任何问题都可以[随时找我](https://twitter.com/ChallengesCss)。
 
-## Wrapping Up
+## 总结
 
-Now you know how to create beautiful ribbons for your websites using just CSS.
+现在你学会了如何使用 CSS 制作漂亮的丝带效果了。
 
-I have [another article about creating ribbons](https://dev.to/this-is-learning/fully-responsive-css-folded-ribbon-11h5) if you want a follow-up to this one. I detail how to create a rotated and folded ribbon – a kind of mix of what we learned here.
+我还写了[另外一篇关于制作丝带效果的文章](https://dev.to/this-is-learning/fully-responsive-css-folded-ribbon-11h5)，有兴趣的话可以看看。其中详细介绍了如何制作旋转的折叠丝带——它结合了本文介绍的两种效果。
 
-Thank you for reading!
+感谢阅读！
 
-For more CSS tips, follow me on [Twitter](https://twitter.com/ChallengesCss).  
-Want to support me? You can [buy me a coffee](https://www.buymeacoffee.com/afif) or [become a patron](https://www.patreon.com/temani)
+想要了解更多 CSS 技巧，可以关注我的 [Twitter](https://twitter.com/ChallengesCss)。
+可以[为我买杯咖啡](https://www.buymeacoffee.com/afif)或[赞助我](https://www.patreon.com/temani)以表达对我的支持。

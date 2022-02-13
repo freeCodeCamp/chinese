@@ -859,9 +859,10 @@ const IndexPage = () => {
 }
 ```
 
-So all props above will be added as an attribute to the h1 because we're using **{...restProps}** on it. No matter what, props we are adding and NOT extracting will be added to the h1 tag.
+所以上面所有的props都会作为属性添加到h1中，因为我们在上面使用了**{...restProps}**。无论怎样，我们正在添加而不是提取的props都会被添加到h1标签中。
 
-This is great for many use cases but can be a problem at the same time:
+
+这对很多用例来说是很好的，但同时也是一个问题:
 
 ```jsx
 // Page Component
@@ -894,13 +895,13 @@ const MainTitle = ({ isBold, children, ...restProps }) => {
 }
 ```
 
-In the code above we were adding a new prop called `hasPadding` to the `MainTitle` component, that is optional. Inside the component we are not extracting it from the props and call it via `restProps.hasPadding`.
+在上面的代码中，我们为`MainTitle`组件添加了一个新的prop `hasPadding`，这是可选的。在组件内部，我们没有从prop中获取它，而是通过`restProps.hasPadding`调用它。
 
-The code works, but when you open your browser you'll receive a warning that `hasPadding` is a non-HTML attribute you're trying to apply on the h1 tag. This is because of `{...restProps}` on the h1 tag and not extracting `hasPadding` like `isBold` for example.
+这段代码是有效的，但是当你打开浏览器时，你会收到一个警告：`hasPadding`是一个非HTML属性，你试图在h1标签上应用。这是因为h1标签上的`{...restProps}`没有像`isBold`那样获取`hasPadding`。
 
-To avoid this, always extract all non-HTML attributes from the props first, to make sure that there are only valid HTML attributes in `restProps` that you're spreading onto a JSX element.
+为了避免这种情况，总是先从props中提取所有非HTML属性，以确保在`restProps`中只有有效的HTML属性被你传播到JSX元素中。
 
-In our example it would look like this:
+在我们的例子中，它看起来像这样:
 
 ```jsx
 // Page Component
@@ -933,15 +934,15 @@ const MainTitle = ({ isBold, children, hasPadding, ...restProps }) => {
 }
 ```
 
-Many of those warnings can unnecessary flood your browser's console, which can be very nasty. Especially when you're debugging.
+许多警告会不必要地充斥你的浏览器的控制台，这可能是非常讨厌的。特别是在你调试的时候。
 
-To get more information about this topic and some other ways to solve this, check out [this part of the React docs](https://reactjs.org/warnings/unknown-prop.html).
+要获得关于这个话题的更多信息和其他一些解决方法，请查看[React有关unknown-prop的文档](https://reactjs.org/warnings/unknown-prop.html).
 
-### 🔥 Use snippet extensions
+### 🔥 使用片段扩展
 
-In Visual Studio Code, for example, there are certain extensions available that increase your productivity a lot. One type of these extensions are **snippet extensions.**
+例如，在Visual Studio Code中，有一些可用的扩展，可以极大地提高你的工作效率。这些扩展的一种类型是**片段扩展**。
 
-The great benefit about them is that you don't have to write all that boilerplate code again. Imagine you're building many new components and have to type it all out again and again:
+它们的最大好处是，你不必再写那些模板代码了。想象一下，你在构建许多新的组件时，不得不再次输入所有的代码。:
 
 ```jsx
 import React from 'react'
@@ -953,13 +954,13 @@ const GoogleMap = () => {
 export default GoogleMap
 ```
 
-With these snippets you just have to type **`rafce`,** for example, hit tab and you have the same boilerplate code. It is a real time saver and makes development faster.
+有了这些片段，你只需输入 **`rafce`**，按下tab，你就能得到同样的模板代码。节省时间，使开发更快。
 
-**But use them with caution!** I wouldn't recommend using snippets to all developers. In my opinion, beginners shouldn't use any snippets and should type the boilerplate out by hand. When you're doing that, you'll get muscle memory which manifests the stuff you learn.
+**但要谨慎使用它们！**我不会向所有的开发者推荐使用片段。在我看来，初学者不应该使用任何代码段，应该用手打出模板。当你这样做的时候，你会得到肌肉记忆，表现出你所学的东西。
 
-If you have done it so often that you can type it out in your sleep and it becomes boring, that's the right time to use snippets.
+如果你经常这样做，以至于你可以在睡梦中把它打出来，而且变得很无聊，这就是使用代码段的正确时机。
 
-Here are my recommendations:
+这是我的推荐:
 
 ![Bildschirmfoto-2022-02-01-um-14.55.02](https://www.freecodecamp.org/news/content/images/2022/02/Bildschirmfoto-2022-02-01-um-14.55.02.png)
 
@@ -967,9 +968,9 @@ Here are my recommendations:
 
 ![Bildschirmfoto-2022-02-01-um-15.06.59](https://www.freecodecamp.org/news/content/images/2022/02/Bildschirmfoto-2022-02-01-um-15.06.59.png)
 
-### ❌ Write a fragment when a div is not needed
+### ❌ 在不需要div的情况下写一个片段
 
-A React component can only render one single HTML tag at its root. So if you'd like to render two adjacent elements, you'll get the famous error called **Adjacent JSX elements must be wrapped in an enclosing tag**.
+一个React组件在其根部只能渲染一个单一的HTML标签。因此，如果你想渲染两个相邻的元素，你会得到一个著名的错误，即**Adjacent JSX elements must be wrapped in an enclosing tag(相邻的JSX元素必须被包裹在一个封闭的标签中)**。
 
 ```jsx
 const InfoText = () => {
@@ -982,7 +983,7 @@ const InfoText = () => {
 }
 ```
 
-So, what can you do? You just wrap the rendered output into a fragment, which satisfies React and doesn't render an extra HTML element in the browser.
+那么，你能做什么呢？你只需将渲染后的输出包成一个片段，这样既满足了React的要求，又不会在浏览器中渲染一个额外的HTML元素。
 
 ```jsx
 const InfoText = () => {
@@ -996,17 +997,17 @@ const InfoText = () => {
 }
 ```
 
-Of course you could have solved this with a div tag as well. But using div after div will create something I like to call **div hell** in the browser where you got many deep nested div tags without any sense.
+当然，你也可以用一个div标签来解决这个问题。但是，在浏览器中使用一个又一个的div会产生我称之为**div地狱**的东西，在那里你会得到许多没有任何意义的深度嵌套div标签。
 
-So whenever you have to use a wrapper tag in React but don't necessarily need an HTML tag, then simply use a fragment.
+所以只要你在React中必须使用包装标签，但不一定需要HTML标签，那么就简单地使用片段。
 
-### 👈 Integrate self closing tags when no children are needed
+### 👈 在不需要children(子级)的时候，整合自我关闭的标签
 
-From my experience, this tip right here is often overlooked, but could make your code so much cleaner with little effort.
+根据我的经验，这个小窍门经常被忽视，但可以让你的代码变得更干净，而且不费吹灰之力。
 
-In React you've got the opportunity to pass children elements to a component, which are then available to the component via its children property. Those components are often called **composite components.**
+在React中，你有机会将子元素传递给一个组件，然后通过其子属性提供给该组件。这些组件通常被称为**复合组件(composite components)**。
 
-In that case you have to use an opening tag and a closing tag of course:
+在这种情况下，你当然要使用一个开头标签和一个结尾标签:
 
 ```jsx
 <NavigationBar>
@@ -1017,27 +1018,27 @@ In that case you have to use an opening tag and a closing tag of course:
 </NavigationBar>
 ```
 
-But when there are no children needed, there isn't any sense in using an opening and closing tag, right?
+但是，当不需要有children(子级)的时候，使用开头和结尾标签就没有任何意义了，对吗？
 
 ```jsx
 <NavigationBar></NavigationBar>
 ```
 
-Instead of doing this, I recommend that you just use the component as a self closing element like the input tag in HTML, that doesn't take children as well.
+我建议你不要这样做，而是把这个组件作为一个自我封闭的元素，就像HTML中的输入标签一样，它也不接受children(子级)。
 
 ```jsx
 <NavigationBar />
 ```
 
-Looks much cleaner right away, doesn't it?
+看起来马上就整洁多了，不是吗？
 
-### ✅ Follow common naming conventions
+### ✅ 遵循通用的命名惯例
 
-The sense behind naming conventions is to more easily recognize what type of element you're dealing with and to have something in your code that is common in the community.
+命名约定背后的意义是为了更容易识别你所处理的元素类型，并在你的代码中拥有一些在社区中常见的东西。
 
-From my standpoint, there are two major naming conventions involved in React and JavaScript that you should follow:
+从我的角度来看，在React和JavaScript中，有两个主要的命名惯例是你应该遵循的:
 
-#### Use PascalCase in components, interfaces, or type aliases
+#### 在组件、接口或类型别名中使用PascalCase(帕斯卡拼写法,将描述变量作用所有单词的首字母大写，然后直接连接起来，单词之间没有连接符)
 
 ```jsx
 // React component
@@ -1061,7 +1062,7 @@ type TodoList = {
 
 ```
 
-#### Use camelCase for JavaScript data types like variables, arrays, objects, functions, and so on
+#### 对JavaScript数据类型如变量、数组、对象、函数等使用camelCase(驼峰写法,第一个单词首字母小写，后面的每个单词首字母大写)
 
 ```jsx
 const getLastDigit = () => { ... }
@@ -1070,17 +1071,17 @@ const userTypes = [ ... ]
 
 ```
 
-Naming React components in PascalCase is especially important. Because when you've got a linter configured for React, but you named the component in camelCase and you're using hooks inside it, you'll get a warning message all the time that hooks are only allowed in components. That's because the linter recognizes a React components if it's written in PascalCase or not.
+用PascalCase来命名React组件是特别重要的。因为当你为React配置了一个linter，但你用camelCase命名组件，并在里面使用Hook时，你会一直收到一个警告信息：Hook只允许在组件中使用。这是因为linter会识别React组件是否用PascalCase书写。
 
-This can be nasty, but is fixed quickly with sticking to the established naming conventions.
+这可能很讨厌，但只要坚持既定的命名惯例就能很快解决。
 
-### 🧨 Sanitize your code to prevent XSS Attacks
+### 🧨 整理您的代码以防止 XSS 攻击
 
-Maybe you've found yourself in a scenario where you have to use the property `dangerouslySetInnerHTML` on an element in React. Basically it's React's equivalent to `innerHTML` you might know from Javascript.
+也许你已经发现自己处于这样的情景中：你必须在React的一个元素上使用`dangerouslySetInnerHTML`属性。基本上，它相当于你在Javascript中可能知道的`innerHTML'的React属性。
 
-So using it, you can set HTML directly from React.
+所以使用它，你可以直接从React设置HTML。
 
-Let's consider the following example, where we'd like to render an HTML string inside a div. The string could come from a rich text editor where it's already formatted HTML.
+让我们考虑下面的例子，我们想在一个div里面渲染一个HTML字符串。这个字符串可能来自一个富文本编辑器，它已经被格式化为HTML。
 
 ```jsx
 const Markup = () => {
@@ -1092,16 +1093,16 @@ const Markup = () => {
 }
 ```
 
-The term **dangerously** is chosen with intention. Using this property can open you up to a cross-site-scripting (XSS) attack. So it's mandatory that the code that gets set is sanitized first.
+术语**dangerously**是有意选择的。使用这个属性会让你受到跨站脚本（XSS）攻击。因此，必须先对被设置的代码进行防御处理。
 
-A great library is **[dompurify](https://www.npmjs.com/package/dompurify)** that can help you out with this.
+一个很好的库是 **[dompurify](https://www.npmjs.com/package/dompurify)**，可以帮助你解决这个问题。
 
-## Final words
+## 结语
 
-Wow, that was fun right? I tried my best to let everything out that got piled up over the past in my head. My motivation behind this guide is to share my experience with you so you can avoid some harder times during your React learning and development.
+哇，这很有趣吧？我尽力把过去堆积在我脑子里的东西都整理出来。我做这个指南的动机是与你分享我的经验，这样你就可以在学习和开发React的过程中避免一些困难。
 
-Of course there might be best practices you consider more important that I've missed here. That's great. I'd love to hear what you'd like to add to this guide.
+当然，可能会有一些你认为更重要的最佳实践，而我在这里错过了。这很好。我很乐意听到你想在本指南中添加什么。
 
-Remember, it's always all about adapting what's useful for you. So, don't take it all for granted and think about what might be helpful in your situation. Then you can just add it to your own stack of best practices.
+记住，这总是关于调整对你有用的东西。因此，不要认为这一切是理所当然的，想想哪些东西可能对你的情况有帮助。然后你就可以把它添加到你自己的最佳实践堆中。
 
-You can also follow my developer journey and get many more useful insights about the life of a developer on my [Instagram Profile](https://www.instagram.com/jean_marc.dev/). I'm always there to help you and happy about every feedback I can get. So, feel free to reach out.
+你也可以在我的[Instagram简介](https://www.instagram.com/jean_marc.dev/)上关注我的开发者之旅，并获得更多关于开发者生活的有用见解。我总是在那里给你提供帮助，并对我能得到的每一个反馈感到高兴。所以，请随时联系我。

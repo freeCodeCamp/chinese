@@ -116,7 +116,7 @@ React开发者出现问题的另一个根本原因是对React在工作底层原�
 -   CSR（客户端渲染）和SSR（服务器端渲染）在一般情况下和React中的好处
 -   受控组件 VS 非受控组件
 -   State 提升
--   至少一种全局状态管理技术（Context API, Redux/Toolkit, Recoil）。
+-   至少一种全局状态(state)管理技术（Context API, Redux/Toolkit, Recoil）。
 -   组件模式（特别是如何选择正确的模式）。
 
 ## Learn How to Build Clean, Performant and Maintainable React Components
@@ -625,13 +625,13 @@ const SeasonScores = ({ seasonScoresData, currentRoster }) => {
 }
 ```
 
-Now we end up in the situation where we used many keys twice inside our component. Let's assume we got **14** elements inside `seasonScoresData` and **30** in `currentRoaster`. We have used the numbers 0-13 two times as a key prop. Now we're not serving the purpose anymore to have unique key props.
+现在我们的情况是，我们在组件中使用了许多keys两次。让我们假设我们在 `seasonScoresData` 里有**14**个元素，在 `currentRoaster`里有**30**个。我们已经两次使用数字0-13作为key props。现在我们没有达到拥有唯一key props目的了。
 
-This could lead to potential problems because React might only re-render only one item and omit the other one. Or it can lead to inefficiencies with updating the UI tree. Check out the recommended blog post at the end of this tip to get a more in depth example.
+这可能导致潜在的问题，因为React可能只重新渲染一个item而省略另一个item。或者它可能导致更新UI树的效率低下。请看本提示末尾的推荐博文，以获得更深入的例子。
 
-To avoid this unwanted behavior, make sure to always use **unique keys across your whole application.** Ideally each item in the Array has got its own unique id that you can use. But this isn't always the case, so you can use an external library like **uuidv4** for generating unique id's.
+为了避免这种不必要的行为，请确保在你的整个应用程序中始终使用**唯一的key**,理想情况下，数组中的每个item都有自己的唯一id。但这并不总是如此，所以你可以使用一个外部库，如**uuidv4**来生成唯一的ID。
 
-With that in mind and with the assumption that every item in both Arrays has an id property, the component would look like this:
+考虑到这一点，并假设两个数组中的每个项目都有一个id属性，该组件将看起来像这样:
 
 ```jsx
 const SeasonScores = ({ seasonScoresData, currentRoster }) => {
@@ -660,21 +660,21 @@ const SeasonScores = ({ seasonScoresData, currentRoster }) => {
 }
 ```
 
-If you want to go into more depth, feel free to check out [this great post](https://medium.com/swlh/understanding-the-importance-of-the-key-prop-in-react-f2b92ce65f45) about that topic.
+如果你想更深入地了解，请随时查看[这个好帖子](https://medium.com/swlh/understanding-the-importance-of-the-key-prop-in-react-f2b92ce65f45)，获得关于该主题的内容.
 
-## Tips to Help You Write Better React Code,  The Cherries on Top
+## Tips to Help You Write Better React Code, The Cherries on Top
 
 ![joanna-kosinska-_xN7UbcZ33I-unsplash](https://www.freecodecamp.org/news/content/images/2022/01/joanna-kosinska-_xN7UbcZ33I-unsplash.jpg)
 
-I'd like to compare this guide to the process of building a house. The first part, _Learn the Building Blocks of React_, is the solid foundation you build your application on. The second one, _How to Build Clean, Performant and Maintainable React Components_, is for building the walls.
+我想把这个指南比作建造房子的过程。第一部分，_学习React的构件_，是你建立应用程序的坚实基础。第二部分，_如何构建干净的、可执行的和可维护的React组件_，是用来建墙。
 
-This section is basically the roof that comes on top to complete the house. That's the reason I'd like to call it _Cherries on Top_. These tips here are more granular.
+这一节基本上是顶部的屋顶，用来完成房子。这就是我想把它称为 _Cherries on Top_ 的原因。这里的这些提示更加细化。
 
-Most of these practices are more optional than those before, but can make a difference if you use them properly.
+这些做法大多比之前的那些更可有可无，但如果你使用得当，也会有所作为。
 
-### 🪄 Implement the useReducer hook earlier
+###  提前实施useReducer Hook
 
-Probably one of the most frequently used hooks in React is **useState**. I've created and seen components over the time that have got a lot of different states. So it's natural that they become flooded with a lot of useState hooks.
+React中最常使用的Hook之一是**useState**。在过去的时间里，我创建和看到的组件都有很多不同的状态。所以很自然地，它们会被大量的useState Hook所淹没。
 
 ```jsx
 const CustomersMap = () => {
@@ -693,19 +693,19 @@ const CustomersMap = () => {
 }
 ```
 
-Having a lot of different useState hooks is always a great sign that the size and therefore the complexity of your component is growing.
+有很多不同的useState Hook总是一个很好的信号，说明你的组件的规模和复杂性正在增长。
 
-If you can create some smaller sub components where you can transfer some state and JSX in, then this is a great way to go. So you're cleaning up your useState hooks and your JSX in one step.
+如果你能创建一些较小的子组件，在那里你可以转换一些state和JSX，那么这是一个很好的方法。这样你就可以一步到位地清理你的useState Hook和你的JSX。
 
-In our example above, we could put the last two states into a separate component that handles all state and JSX that has to do with a form.
+在我们上面的例子中，我们可以把最后两个状态(states)放到一个单独的组件中，这个组件处理所有与表单有关的状态(state)和JSX。
 
-But there are scenarios where this doesn't make sense, and you have to keep those many different states inside one component. To increase the legibility of your component, there is the **useReducer** hook.
+但在有些情况下，这样做是没有意义的，你必须把这些不同的状态(states)放在一个组件里。为了提高你的组件的可读性，有一个**useReducer**钩。
 
-The official React docs say this about it:
+React的官方文档是这样说的:
 
-> `useReducer` is usually preferable to `useState` when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one. useReducer also lets you optimize performance for components that trigger deep updates because you can pass dispatch down instead of callbacks.
+> `useReducer` 当你有复杂的状态逻辑(state logic)，涉及到多个子值，或者下一个状态(state)取决于上一个状态(state)时，通常比`useState`更可取。useReducer还可以让你优化触发深度更新的组件的性能，因为你可以把调度(dispatch)传递下去而不是回调(callbacks)。
 
-With that in mind, the component would like this when using `useReducer`:
+考虑到这一点，该组件在使用`useReducer`时就会变成这样:
 
 ```jsx
 // INITIAL STATE
@@ -752,47 +752,46 @@ const CustomersMap = () => {
 }
 ```
 
-The component itself looks cleaner and comes along with some great benefits as you can see inside the docs. If you're used to Redux, the concept of a reducer and how it is built isn't new to you.
+该组件本身看起来更干净，并伴随着一些巨大的好处，你可以在文档中看到。如果你已经习惯了Redux，减速器的概念和它的构建方式对你来说并不陌生。
 
-My personal rule is to implement the useReducer hook if my component exceeds four useState hooks, or if the state itself is more complex than just a boolean, for example. It might be an object for a form with some deeper levels inside.
+我个人的规则是，如果我的组件超过了四个useState Hook，或者状态(state)本身比布尔值更复杂，例如，就使用useReducer Hook。它可能是一个表单的对象，里面有一些更深的层次。
+### 🔌 使用布尔型props的速记
 
-### 🔌 Use shorthand for boolean props
-
-Often there are scenarios where you pass boolean props to a component. I've seen a lot of developers doing it like this:
+经常会有这样的情况，你把布尔props传递给一个组件。我见过很多开发者是这样做的。:
 
 ```jsx
 <RegistrationForm hasPadding={true} withError={true} />
 ```
 
-But you don't need to do it necessarily like this because the occasion of the prop itself is either truthy (if the prop is passed) or falsy (if the prop is missing).
+但你不需要一定要这样做，因为prop本身的场合要么是truthy的（如果prop被传递），要么是falsy的（如果prop丢失）。
 
-A cleaner approach would be:
+一个更简洁的方法是:
 
 ```jsx
 <RegistrationForm hasPadding withError />
 ```
 
-### 👎 Avoid curly braces for string props
+### 👎 避免用大括号来表示字符串props
 
-A similar use case like we've seen in the tip before is using string props:
+像我们之前在提示中看到的一个类似的用例是使用字符串props:
 
 ```jsx
 <Paragraph variant={"h5"} heading={"A new book"} />
 ```
 
-You don't need the curly braces in that case because you're allowed to directly use strings inside your props. When you want to attach a className to a JSX Element you're most likely using it also directly as a string.
+在这种情况下，你不需要大括号，因为你被允许在你的props中直接使用字符串。当你想把className附加到一个JSX元素时，你很可能也是直接使用字符串。
 
-When you'd like use a JavaScript expression different from a string, you need to use the curly braces. For example if you want to use a number or an object. This is also true for template strings (don't get caught up like I did many times, haha).
+当你想使用一个不同于字符串的JavaScript表达式时，你需要使用大括号。例如，如果你想使用一个数字或一个对象。这对于模板字符串也是如此（不要像我一样被抓到很多次，哈哈）。
 
-With plain strings, like in the example, it would look like this:
+对于普通的字符串，就像例子中的那样，它看起来是这样的:
 
 ```jsx
 <Paragraph variant="h5" heading="A new book" />
 ```
 
-### 🧹 Erase non-html attributes when spreading props
+### 🧹 在传递props时擦除非html属性
 
-Let's take a look at a quick example:
+让我们来看看一个简单的例子:
 
 ```jsx
 const MainTitle = ({ isBold, children, ...restProps }) => {
@@ -808,9 +807,9 @@ const MainTitle = ({ isBold, children, ...restProps }) => {
 }
 ```
 
-We've just created a component that will render a h1 tag, extracted some props, and spread out all other potential props on the h1 tag. So far, so good.
+我们刚刚创建了一个组件，它将渲染一个h1标签，提取一些props，并将所有其他潜在的props(potential props)传递到h1标签上。到目前为止，一切都很好。
 
-Now, we're able to use it in other components and can trigger manually if the h1 should be bold or not:
+现在，我们能够在其他组件中使用它，并且可以手动触发h1是否应该加粗:
 
 ```jsx
 // WITH BOLD TITLE
@@ -842,7 +841,7 @@ const AboutPage = () => {
 }
 ```
 
-Up to now, everything works perfectly without any errors or warnings. The interesting part starts now when we're using other props that are directly spread onto the h1 tag.
+到现在为止，一切工作都很完美，没有任何错误或警告。有趣的部分从现在开始，当我们使用其他的props直接传递到h1标签上的时候。
 
 When you're using valid HTML attributes like id or a class, everything works without any error (remember --> "className" will become "class"):
 

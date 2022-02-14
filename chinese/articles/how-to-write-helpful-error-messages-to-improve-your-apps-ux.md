@@ -124,32 +124,33 @@ _出离愤怒退出程序前的截图_
 我开源了一个简单的工具，叫做`sane-error-messages`。运行该工具将生成一个全新的 repo，用于存放默认报错信息。你可以调整默认值，添加或删除信息，然后将其发布到面向客户的应用程序中使用。
 
 `sane-error-messages`的工作原理是将所有的报错信息整合到单一的 JavaScript 对象中。键对应错误代码，值对应报错消息。
-The error codes should be the same codes you receive from your server, such as  `POSTS_NOT_FOUND` or `CONFLICTING_USER_RECORD`. Your error messaging repo exposes a function to get your error message from an error code.
-错误代码应该与你从服务器上接收到的代码相同，如`POSTS_NOT_FOUND`或`CONFLICTING_USER_RECORD`。你的报错信息 repo 暴露了一个函数，从错误代码中获取报错信息。
-This approach was inspired by how tools like [Cypress](/news/p/009d4c55-b3e6-4e48-b186-541f5959af8c/*https://github.com/cypress-io/cypress/blob/develop/packages/server/lib/errors.js*) handle their error messaging.
 
-As long as your server returns predictable error codes, the server-side implementation doesn't matter. The following sequence is just one way of implementing __`sane-error-messages`__
+错误代码应该与你从服务器上接收到的代码相同，如`POSTS_NOT_FOUND`或`CONFLICTING_USER_RECORD`。报错信息 repo 调用暴露函数从错误代码中获取报错信息。
+这个灵感源于[Cypress](/news/p/009d4c55-b3e6-4e48-b186-541f5959af8c/*https://github.com/cypress-io/cypress/blob/develop/packages/server/lib/errors.js*) 处理报错信息的方法。
+
+只要你的服务器返回可预测的错误代码，服务器端的实现并不重要。下面的序列只是实现__`sane-error-messages`__的一种方式
 
 ![A sequence diagram showing the process of displaying a sane error message.](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-15-at-21.41.28.png)
 
-Having a separate repo becomes more important the more user-facing apps you have.
+你开发的面向用户的应用程序越多，拥有一个专门的 repo 就越重要。
 
-In short:
+总而言之：
 
--   The user "views all products"
--   The frontend makes a network request
--   The network request fails and returns an error code "USER\_NOT FOUND"
--   The frontend requests the corresponding error message from your `error-messages` package.
--   The frontend applies any relevant contextual information
--   The frontend displays this information to the end user.
+-   用户“查看所有产品”
+-   前端发出一个网络请求
+-   网络请求失败并返回错误代码 "USER/_NOT FOUND"
+-   前端从你的`error-messages`包中请求相应的报错信息。
+-   前端应用所有与上下文相关的信息
+-   前端将这些信息显示给终端用户。
 
-If you want to try something hands on, you can play with this [CodeSandbox](https://codesandbox.io/s/amazing-platform-dxtjc?file=/src/App.js). The CodeSandbox fires off a request to a mock server which returns 1 of 12 error codes at random.
+你可以在 [CodeSandbox](https://codesandbox.io/s/amazing-platform-dxtjc?file=/src/App.js)亲自上手体验一下。 CodeSandbox 向一个虚拟服务器发出请求，随机返回12个错误代码中的一个。
 
-The client side will use the error code to retrieve a sane error message from the error messages repo. The client side then displays the error message to the user. If the code doesn't have a specified message, the generic fallback gets shown (and it sucks).
+客户端将使用错误代码，从报错信息库中检索一个合理的报错信息。接着，客户端向用户显示报错信息。如果代码中没有指定的信息，就会显示通用的报错信息（它们通常都很糟糕）。
+
 
 ![A gif of relevant error messages displaying on a code sandbox](https://www.freecodecamp.org/news/content/images/2021/03/ezgif.com-gif-maker--2-.gif)
 
-Some sane error messages in the wild
+一些未经调整的报错信息
 
 ## How to set up your error messages
 

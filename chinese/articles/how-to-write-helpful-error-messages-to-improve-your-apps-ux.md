@@ -100,27 +100,26 @@ _出离愤怒退出程序前的截图_
 
 使用合理的报错信息可以帮助抵消程序运行不畅的挫败感。令人惊讶的是，一个如此有用的报错信息只需要包含少量要素。
 
-## What makes a good error message?
+## 好的报错信息是怎样的?
 
-Taken from [Microcopy: A complete guide](https://www.microcopybook.com/). A useful error message should satisfy these qualities:
+摘自 [微副本：完整指南](https://www.microcopybook.com/)。一条有用的报错信息应该具备以下要素:
 
--   Explain clearly that there is a problem
--   Explain what the problem is
--   If possible, provide a solution so that the user can complete the process, or
--   Point them to where they can go for help
--   Make a frustrating scenario as pleasant as possible
+-   清楚说明问题发生了
+-   解释问题是什么
+-   如可能，提供解决方案让用户能继续进程，或者
+-   引导他们去寻求帮助
+-   尽量让这个令人抓狂的场景变得愉悦
 
-This might sound like a lot to cover with just a couple of sentences, but here are some examples of what I deem to be good error messages:
+以上这简单的几个句子看上去包含了非常多的工作量，那么在下文我将提供几个很不错的报错信息案例让上述说明更具体：
+-   我们已经限制了你每小时可以重置密码的次数。你可以稍后再试。
+-   请登录再查看此档案
+-   我们无法创建你的档案，只有英国居民可以使用我们的应用程序。
 
--   We've limited how many times you can reset your password every hour. You can try again later.
--   Please log in to view this profile
--   We couldn't create your profile, only UK residents can use our app.
+需要特别说明的是，我不是一个用户体验研究员或设计师，只是一个对用户体验有浓厚兴趣的前端开发人员。上述例子可能不符合你开发项目或所处组织的需求。
 
-It's worth noting that I'm not a UX researcher/designer, just a frontend developer with a keen interest in UX. It may be that my above examples miss the mark on what's required within your project or organisation.
+话说回来，如果你是一个前端工程师，改善你所在组织的报错信息，是一个提升技能并与负责用户体验的同事协作的好机会。
 
-Saying that, if you're a frontend engineer, improving your organisation's error messaging makes for an excellent opportunity to upskill and collaborate with your UXer colleagues.
-
-## How can I start writing sane error messages?
+## 我如何开始创建合理的报错信息?
 
 I've open-sourced a simple tool called `sane-error-messages`. Running the tool will generate a brand new repo designed to house your default error messaging. You can tweak the default values, add or remove messages, and then publish it to consume within your client facing apps.
 

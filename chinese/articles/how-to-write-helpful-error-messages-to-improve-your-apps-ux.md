@@ -110,7 +110,7 @@ _出离愤怒退出程序前的截图_
 -   引导他们去寻求帮助
 -   尽量让这个令人抓狂的场景变得愉悦
 
-以上这简单的几个句子看上去包含了非常多的工作量，那么在下文我将提供几个很不错的报错信息案例让上述说明更具体：
+以上这简单的几个句子看上去包含了非常多的工作量，为了让它们更具体，我在下文提供了几个很不错的报错信息案例：
 -   我们已经限制了你每小时可以重置密码的次数。你可以稍后再试。
 -   请登录再查看此档案
 -   我们无法创建你的档案，只有英国居民可以使用我们的应用程序。
@@ -123,9 +123,9 @@ _出离愤怒退出程序前的截图_
 
 我开源了一个简单的工具，叫做`sane-error-messages`。运行该工具将生成一个全新的 repo，用于存放默认报错信息。你可以调整默认值，添加或删除信息，然后将其发布到面向客户的应用程序中使用。
 
-`sane-error-messages`的工作原理是将所有的信息整合到单一的JavaScript对象中。键对应错误代码，值对应报错消息。
+`sane-error-messages`的工作原理是将所有的报错信息整合到单一的 JavaScript 对象中。键对应错误代码，值对应报错消息。
 The error codes should be the same codes you receive from your server, such as  `POSTS_NOT_FOUND` or `CONFLICTING_USER_RECORD`. Your error messaging repo exposes a function to get your error message from an error code.
-错误代码应该是你从服务器上收到的相同代码，如`POSTS_NOT_FOUND`或`CONFLICTING_USER_RECORD`。你的错误信息 repo 暴露了一个函数，从错误代码中获得错误信息。
+错误代码应该与你从服务器上接收到的代码相同，如`POSTS_NOT_FOUND`或`CONFLICTING_USER_RECORD`。你的报错信息 repo 暴露了一个函数，从错误代码中获取报错信息。
 This approach was inspired by how tools like [Cypress](/news/p/009d4c55-b3e6-4e48-b186-541f5959af8c/*https://github.com/cypress-io/cypress/blob/develop/packages/server/lib/errors.js*) handle their error messaging.
 
 As long as your server returns predictable error codes, the server-side implementation doesn't matter. The following sequence is just one way of implementing __`sane-error-messages`__

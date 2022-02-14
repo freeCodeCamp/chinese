@@ -121,12 +121,11 @@ _出离愤怒退出程序前的截图_
 
 ## 我如何开始创建合理的报错信息?
 
-I've open-sourced a simple tool called `sane-error-messages`. Running the tool will generate a brand new repo designed to house your default error messaging. You can tweak the default values, add or remove messages, and then publish it to consume within your client facing apps.
+我开源了一个简单的工具，叫做`sane-error-messages`。运行该工具将生成一个全新的 repo，用于存放默认报错信息。你可以调整默认值，添加或删除信息，然后将其发布到面向客户的应用程序中使用。
 
-`sane-error-messages` works by aggregating all of your messaging in to a single JavaScript object. The key is an error code, and the value is a corresponding message.
-
+`sane-error-messages`的工作原理是将所有的信息整合到单一的JavaScript对象中。键对应错误代码，值对应报错消息。
 The error codes should be the same codes you receive from your server, such as  `POSTS_NOT_FOUND` or `CONFLICTING_USER_RECORD`. Your error messaging repo exposes a function to get your error message from an error code.
-
+错误代码应该是你从服务器上收到的相同代码，如`POSTS_NOT_FOUND`或`CONFLICTING_USER_RECORD`。你的错误信息 repo 暴露了一个函数，从错误代码中获得错误信息。
 This approach was inspired by how tools like [Cypress](/news/p/009d4c55-b3e6-4e48-b186-541f5959af8c/*https://github.com/cypress-io/cypress/blob/develop/packages/server/lib/errors.js*) handle their error messaging.
 
 As long as your server returns predictable error codes, the server-side implementation doesn't matter. The following sequence is just one way of implementing __`sane-error-messages`__

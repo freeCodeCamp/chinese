@@ -66,37 +66,37 @@ _Screenshot taken moments before a rage-quit_
 
 ### 保持组织头脑清醒
 
-Sane error messages also yield benefits on an organisation level. For those working in larger companies, copy/messaging may be the responsibility of an entirely separate department. The more places in the code that require copy changes, the easier it is for the copy to get out of sync with your company's brand guidelines.
-合理的报错信息也能给组织整体带来好处。在大公司，副本/信息可能由某个独立部门全权负责。代码中需要修改的文本量越多，文案就越容易与公司的品牌准则脱节。
+
+合理的报错信息也能给组织整体带来好处。在大公司，由品牌信息衍生的副本及品牌信息的创建可能由一个完全独立的部门负责。代码中需要修改的文本量越多，副本就越容易与公司的品牌准则脱节。
+
+相反，保证所有的报错信息都同源，能让副本更易遵循品牌准则。
+
+其他部门如支持团队，可能会疲于应付用户发出的支持请求。如果你是一名工程师，可以主动与支持团队配合，通过改进报错信息减少用户发送的支持请求。
 
 
-Conversely, keeping all of your error messages in a single source makes it much easier for those owning copy to adhere to those brand guidelines.
+修复改进报错信息可以降低用户错误填写表格、缺失数据，或缺乏特定行为权限的可能性，这将为支持团队的工作生活带来积极改变。
 
-Other departments, like the support team, may be inundated with support tickets from users. If you're an engineer, why not reach out to your support team to see how many support tickets could be avoided with improved error messaging.
+### 保持终端用户头脑清醒
 
-Fixing the problems with your messaging when a user incorrectly fills out a form, has missing data, or doesn't have permissions for a specific action could positively impact the lives of the support team.
+我们希望通过合理的报错信息，让我们的终端用户不再感到无助。
 
-### To help maintain end-user sanity
+如上文所述，我们传递的信息结构应该是__服务_\-_导向__。它们应该指导用户走完既定程序，或至少在他们遇到超出控制的问题，知道去哪里寻求帮助。
 
-By providing sane error messaging we hope to not leave our end users feeling helpless.
+在Jon Yablonski的《用户体验法则》一书中，他描述了一个心理学概念，称为 "峰值规则"：
+> __人们判断一次体验的好坏，取决于他们在这段体验中感情最强烈的时刻或是结束时的感受，而不是这段体验中每一时刻的感受总和或感受的平均值。__
 
-As described earlier, our messaging should be __service_\-_oriented__. They should guide our user on how to complete their process, or at least let them know where they can go and get help if the problem is beyond their control.
 
-In Jon Yablonski's book, the Laws of UX, he describes a psychological concept called the Peak-end Rule:
+在本文描述的背景下，如果用户受挫到愤怒地退出你的网站，你的程序给他们留下的印象就是——它很难用。
 
-> __People judge an experience largely based on how they felt at its peak and at its end rather than the total sum or average of every moment of the experience__
+错误信息在防止这种情况的发生方面起着很大的作用，因为它们就像守门员，避免那些仅是卡在程序中某一步的用户因过于沮丧而退出程序。
 
-In the context of this article, if people become so frustrated that they rage quit your site, their lasting memory of your application is of how frustrating it is to use.
+当用户使用你的产品进行线上交易，如购买飞机票或网上购物，而在选购时卡在系统某处没法继续，他/她很可能会退出并换另一个网站购买。这就是你失去的又一位客户。
 
-Error messages play a large part in preventing this, as they can act as the final gatekeeper preventing a user who is simply stuck from turning to one so frustrated they quit your app.
+虽然这完全是传闻，但我经常因为不知道如何完成一项进程愤而退出网站：点击一个按钮时，要么什么都没发生，要么就是一直收到模糊的报错信息。
 
-If someone is using your product for a transactional purpose like buying an airplane ticket or shopping online, and they've been stopped dead in their tracks during a task with no way to continue, the likelihood of them leaving your site for another skyrockets. Another lost customer.
+除非这些网站/应用程序是那几个无处不在的平台之一（如谷歌、Instagram、苹果），否则我很大概率再也没有用过它们。我相信你也经历过类似的情况。我将在 [Twitter](https://twitter.com/andricokaroulla?lang=en) 上更新可怕的报错信息，欢迎投稿。
 
-While this is wholly anecdotal, I've rage quit sites often from not knowing how to complete a process – either nothing happened when I clicked a button, or I just kept getting vague error messages.
-
-Unless these sites/apps are one of those few ubiquitous platforms (like Google, Instagram, Apple), I likely haven't have used them since. I'm sure you can even remember a time this happened to you. In fact, I'll openly welcome pictures of awful error messages via [Twitter](https://twitter.com/andricokaroulla?lang=en)
-
-Using sane error messaging can help offset this frustration if something doesn't go right. Surprisingly, creating a useful error message only requires a handful of qualities.
+使用合理的报错信息可以帮助抵消程序运行不畅的挫败感。令人惊讶的是，一个如此有用的报错信息只需要包含少量要素。
 
 ## What makes a good error message?
 

@@ -5,10 +5,12 @@
 
 ![How to Write Helpful Error Messages to Improve Your App's User Experience](https://images.unsplash.com/photo-1594322436404-5a0526db4d13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fGVycm9yfGVufDB8fHx8MTYxNzI2MTMwNw&ixlib=rb-1.2.1&q=80&w=2000)
 
-应用程序中只显示无用和通用报错信息的日子已经一去不复返了。
+程序运行过程中只显示无用和通用报错信息的日子已经一去不复返了。
+
 ![A generic error message displaying: "Oops, something went wrong. Please try again later"](https://www.freecodecamp.org/news/content/images/2021/03/ykhg3yuzq8931--1-.png)
+
 图片为通用报错信息：哎呀，出错了，请稍后再试
-_Screenshot taken moments before a rage-quit_
+_出离愤怒退出程序前的截图_
 
 
 如果你正在阅读这篇文章，你大概关心如何让用户获得尽可能愉悦的使用体验，报错信息就起着重要的作用。有用的报错信息从长远来看，能避免用户在无法正常使用应用程序的时刻少点抓狂，多点快乐。
@@ -80,7 +82,7 @@ _Screenshot taken moments before a rage-quit_
 
 我们希望通过合理的报错信息，让我们的终端用户不再感到无助。
 
-如上文所述，我们传递的信息结构应该是__服务_\-_导向__。它们应该指导用户走完既定程序，或至少在他们遇到超出控制的问题，知道去哪里寻求帮助。
+如上文所述，我们传递的信息结构应该是_服务_\-_导向_的。它们应该指导用户走完既定程序，或至少在他们遇到超出控制的问题，知道去哪里寻求帮助。
 
 在Jon Yablonski的《用户体验法则》一书中，他描述了一个心理学概念，称为 "峰值规则"：
 > __人们判断一次体验的好坏，取决于他们在这段体验中感情最强烈的时刻或是结束时的感受，而不是这段体验中每一时刻的感受总和或感受的平均值。__

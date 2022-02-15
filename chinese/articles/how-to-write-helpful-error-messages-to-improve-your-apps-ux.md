@@ -259,7 +259,7 @@ function riskyFunction() {
 
 ****《微副本：完整指南》****  
 在上文我已经提到过这本书。在讨论如何让面向用户的产品更加人性化方面，它是我最喜欢的书之一。
-这本书的作者 Kinneret Yifrah 慷慨地提供了一张9折的优惠券，你可以在[here](https://www.microcopybook.com/)购买。
+这本书的作者 Kinneret Yifrah 慷慨地提供了一张9折的优惠券，你可以在[这里](https://www.microcopybook.com/)购买。
 
 电子书折扣码：andrico-ebook
 
@@ -278,4 +278,4 @@ function riskyFunction() {
 这篇[深入的文章](https://docs.microsoft.com/en-us/windows/win32/uxguide/mess-error)既包含设计指南也讲解报错信息的实际案例。
 
 ****《用户体验法则》****  
-这本[短小精悍的书籍](https://www.amazon.co.uk/gp/product/149205531X/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=149205531X&linkCode=as2&tag=calistheni02b-21&linkId=3f089ce27d59c4eeb48522be9ac52fb2) 介绍了如何利用少量的心理学概念来改善你产品的用户体验。
+这本[短小精悍的书](https://www.amazon.co.uk/gp/product/149205531X/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=149205531X&linkCode=as2&tag=calistheni02b-21&linkId=3f089ce27d59c4eeb48522be9ac52fb2) 介绍了如何利用少量的心理学概念来改善你产品的用户体验。

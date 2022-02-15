@@ -255,44 +255,43 @@ function riskyFunction() {
 为了研究报错信息，我做了许多功课，下面想分享一些我最喜欢的资源。有的是书籍，有的是短文，但它们都值得花时间阅读和学习。
 
 如果你对以上教程有任何疑问或是认为它有可精简的地方，欢迎联系我。感谢阅读。
+
 ## 常见问题
 
-### Why can't the server-side just return these messages?
+### 为什么服务器端不能直接返回报错信息？
 
-The server shouldn't be concerned with any client-facing logic. But if you're fortunate enough to work with an API that gives useful error codes with each failed request, then you're nearly there.
+服务器不应涉及任何面向客户端的逻辑。但如果你够走运，与每次请求失败时都给出有用错误代码的API协同工作，你很快就会成功。
 
-### Will I need to create an instance of error-messages for every API consumer?
+### 我是否需要为每个API消费者创建一个报错信息实例？
 
-Not necessarily. Because this package can take a list of default messages and codes, as long as it's in sync with the APIs, your frontends will be able to consume the same package.
+不一定。因为这个包可以接收默认信息和代码的列表，只要它与API同步，你的前端就可以共用一个包。
 
-In each client-side instance, you can pass through additional error codes, or override existing messages to tailor your frontend messaging.
+在每个客户端实例中，你可以通过额外的错误代码，或覆盖现有信息来定制你的前端报错信息。
 
-### I think this package should have X or do Y differently
+### 我认为这个包中应该有 X 或 实现 Y
 
-I'm dogfooding this internally at my job, and this is a problem space I'm very new to. I would love to hear of any suggestions, or improvements to the overall architecture or feature-set of __`sane-error-messages`.__
+我正在处理这个问题，这对于我还是个很新的领域。我希望听到更多建议，或是对于__`sane-error-messages`整体架构或功能集的改进建议。
 
-## **Further Reading**
+## **延伸阅读**
 
-****Microcopy: A Complete Guide****  
-I mentioned this book a little earlier, and it's one of my favourites when it comes to making my user-facing products a lot more personable.
+****《微副本：完整指南》****  
+之前我就提到过这本书。在讨论如何让面向用户的产品更人性化的方面，它是我最喜欢的书之一。
+这本书的作者 Kinneret Yifrah 慷慨地提供了一张9折的优惠券，你可以在[here](https://www.microcopybook.com/)购买。
 
-The book's author Kinneret Yifrah, has graciously provided a coupon for 10% off, you can purchase it [here](https://www.microcopybook.com/).
+电子书优惠码：andrico-ebook
 
-Coupon code for the eBook: andrico-ebook
+捆绑销售优惠码：andrico-bundle
+****报错信息指南: NN Group****  
+这篇[短文](https://www.nngroup.com/articles/error-message-guidelines/) 主要阐释了合理报错信息的重要性，同时还分享了一些指导如何创建合理报错信息的干货。
 
-Coupon code for the bundle: andrico-bundle
+简而言之：
 
-****Error messaging guidelines: NN Group****  
-A [short article](https://www.nngroup.com/articles/error-message-guidelines/) on the importance of sane error messaging which shares some very useful tips on how to create sane error messaging.
+-   错误应该用通俗的语言描述
+-   说明问题是什么
+-   提供解决方案
 
-In short:
+****报错信息（设计基础），微软****  
+这篇[深入的文章](https://docs.microsoft.com/en-us/windows/win32/uxguide/mess-error)既包含设计指南也讲解报错信息的实际案例。
 
--   Errors should be expressed in plain language
--   Indicate what the problem is
--   Suggest a solution
-
-****Error Messages (Design basics): Microsoft****  
-An [in-depth article](https://docs.microsoft.com/en-us/windows/win32/uxguide/mess-error) that covers both design guidelines messaging practices
-
-****Laws of UX****  
-A [short book](https://www.amazon.co.uk/gp/product/149205531X/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=149205531X&linkCode=as2&tag=calistheni02b-21&linkId=3f089ce27d59c4eeb48522be9ac52fb2) that introduces how a handful of psychology concepts can be used to improve your products UX.
+****用户体验法则****  
+这本[短小精悍的书籍](https://www.amazon.co.uk/gp/product/149205531X/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=149205531X&linkCode=as2&tag=calistheni02b-21&linkId=3f089ce27d59c4eeb48522be9ac52fb2) 介绍了如何利用少量的心理学概念来改善你产品的用户体验。

@@ -1,9 +1,5 @@
 > -  原文地址：[How to Build a Logging Web App with Server-Sent Events, RxJS, and Express](https://www.freecodecamp.org/news/build-a-logging-web-app-with-server-sent-events-rxjs-and-express/)
-> -  原文作者：[
-                    
-                        Shayan
-                    
-                ](https://www.freecodecamp.org/news/author/shayan/)
+> -  原文作者：[Shayan](https://www.freecodecamp.org/news/author/shayan/)
 > -  译者：
 > -  校对者：
 

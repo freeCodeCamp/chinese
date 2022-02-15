@@ -9,7 +9,6 @@
 
 ![A generic error message displaying: "Oops, something went wrong. Please try again later"](https://www.freecodecamp.org/news/content/images/2021/03/ykhg3yuzq8931--1-.png)
 
-图片为通用报错信息：哎呀，出错了，请稍后再试
 _出离愤怒退出程序前的截图_
 
 
@@ -150,17 +149,17 @@ _出离愤怒退出程序前的截图_
 
 ![A gif of relevant error messages displaying on a code sandbox](https://www.freecodecamp.org/news/content/images/2021/03/ezgif.com-gif-maker--2-.gif)
 
-一些未经调整的报错信息
+一些随机产生的报错信息
 
-## How to set up your error messages
+## 如何设置你的报错信息
 
-Note: You can find the [repo here](https://github.com/andrico1234/sane-error-messages#readme). If you come across any problems during the tutorial process you can file a GitHub issue.
+注：你可以在这里找到 [repo](https://github.com/andrico1234/sane-error-messages#readme)。如果你在教程过程中遇到任何问题，可以在GitHub上提出。
 
-Begin by running
+开始时运行
 
 `yarn global add sane-error-message`
 
-then
+然后运行
 
 `sane-error-messages create <dirName>`
 

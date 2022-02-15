@@ -234,13 +234,28 @@ function riskyFunction() {
 准备工作一切就绪后，你就可以把工具包发布到NPM，然后在面向客户的应用程序中使用它。
 ## **总结**
 
-I hope you've enjoyed learning about an often overlooked aspect of web development.
+我希望上述对于报错信息——网站开发中一个经常被忽视的方面的介绍对你有所帮助。
 
-I've done a bunch of reading to learn about error messaging and I've shared some of my favourite resources below. Some are books and others are short articles, but they're all worth your time.
+为了了解报错信息，我做了很多功课，下面分享一些我最喜欢的资源。有些是书，有些是短文，它们都值得花时间去阅读和学习。
 
-You can also reach out if any part of the tutorial wasn't clear, or if you feel I can streamline things. Thanks for reading.
+如果教程有任何令人困惑的地方，或你觉得可以精简的部分，也欢迎你联系我。感谢你的阅读。
+## 常见问题
 
-## FAQs
+### 为什么服务器端不能直接返回报错信息？
+
+服务器不应涉及任何面向客户端的逻辑。但如果你够走运，与每次请求失败时都给出有用错误代码的API协同工作，你很快就会成功。
+
+### 我是否需要为每个API消费者创建一个报错信息实例？
+
+不一定。因为这个包可以接收默认信息和代码的列表，只要它与API同步，你的前端就可以共用一个包。
+
+在每个客户端实例中，你可以通过额外的错误代码，或覆盖现有信息来定制你的前端报错信息。
+我希望上述介绍的这一很容易在网页开发中被忽视的内容能让你有所收获。
+
+为了研究报错信息，我做了许多功课，下面想分享一些我最喜欢的资源。有的是书籍，有的是短文，但它们都值得花时间阅读和学习。
+
+如果你对以上教程有任何疑问或是认为它有可精简的地方，欢迎联系我。感谢阅读。
+## 常见问题
 
 ### Why can't the server-side just return these messages?
 

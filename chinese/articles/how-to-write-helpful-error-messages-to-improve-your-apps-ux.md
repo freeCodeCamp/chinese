@@ -261,10 +261,11 @@ function riskyFunction() {
 在上文我已经提到过这本书。在讨论如何让面向用户的产品更加人性化方面，它是我最喜欢的书之一。
 这本书的作者 Kinneret Yifrah 慷慨地提供了一张9折的优惠券，你可以在[here](https://www.microcopybook.com/)购买。
 
-电子书优惠码：andrico-ebook
+电子书折扣码：andrico-ebook
 
-捆绑销售优惠码：andrico-bundle
-****NN Group《报错信息指南》****  
+整套（平装书 + 电子书）购买折扣码：andrico-bundle
+
+**** NN Group《报错信息指南》****  
 这篇[短文](https://www.nngroup.com/articles/error-message-guidelines/) 主要阐释了合理报错信息的重要性，同时还分享了一些指导如何创建合理报错信息的干货。
 
 简而言之，包含如下内容：

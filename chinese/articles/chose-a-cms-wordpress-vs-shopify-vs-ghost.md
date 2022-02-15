@@ -1,11 +1,7 @@
 > -  原文地址：[How to Choose a CMS – WordPress vs Ghost vs Shopify](https://www.freecodecamp.org/news/chose-a-cms-wordpress-vs-shopify-vs-ghost/)
-> -  原文作者：[
-                    
-                        Edan Ben-Atar
-                    
-                ](https://www.freecodecamp.org/news/author/edan/)
-> -  译者：
-> -  校对者：
+> - 原文作者：[Edan Ben-Atar](https://www.freecodecamp.org/news/author/edan/)
+> - 译者：
+> - 校对者：
 
 ![How to Choose a CMS – WordPress vs Ghost vs Shopify](https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/WordPress-vs-Ghost-vs-Shopify.jpg)
 
@@ -69,10 +65,10 @@ Things get interesting as you start using third-party apps on Ghost. There are n
 
 Some other pros include:
 
--   **It has a clean, minimalistic design**. If you want your blog to be beautiful, then Ghost CMS is great for that.
--   **Complete tools**. You get all the tools that are required in creating a blog, starting from the installation to setting up the theme with the drag and drop features.
--   **Customizable themes**. The themes can be customized using the built-in theme editor that makes it really easy for anyone to modify them as per their needs.
--   **Ghost community**. If you’re stuck, you can find help from other Ghost users by going over their forums and asking questions.
+- **It has a clean, minimalistic design**. If you want your blog to be beautiful, then Ghost CMS is great for that.
+- **Complete tools**. You get all the tools that are required in creating a blog, starting from the installation to setting up the theme with the drag and drop features.
+- **Customizable themes**. The themes can be customized using the built-in theme editor that makes it really easy for anyone to modify them as per their needs.
+- **Ghost community**. If you’re stuck, you can find help from other Ghost users by going over their forums and asking questions.
 
 ## If You Want to Take Your Website to the Next Level – Use WordPress
 
@@ -106,11 +102,11 @@ The downside is that sooner or later you will need a developer’s help. This is
 
 Some other pros include:
 
--   **Extremely cheap to get started with**. You can get a WordPress website up and running for free, and basic hosting plans start as low as $18.96 per year.
--   **Ability to assign user roles**. At some point during your business growth cycle, you might need to bring in extra people to help you create, edit and publish content. WordPress comes with built-in user roles which will make your life a whole lot easier.
--   **Best marketing plugins on the market**. You can install one of the many SEO plugins available in the plugin directory. Some examples include Yoast or Rank Math. These plugins help you optimize your content (like articles, pages, and even product pages) and increase your chances of outranking your competitors.
--   **A vast array of integrations**. Chances are you will be using 3rd party SaaS products like Mailchimp or ActiveCampaign. Regardless of the service, you will find it extremely easy to integrate them with your website as almost all have created a WordPress plugin.
--   **The biggest online library of resources**. The WordPress community is by far the largest which makes it easy to find answers to all your questions regarding your installation. There are tens of thousands of websites and forums focused solely on WordPress websites featuring tons of information.
+- **Extremely cheap to get started with**. You can get a WordPress website up and running for free, and basic hosting plans start as low as $18.96 per year.
+- **Ability to assign user roles**. At some point during your business growth cycle, you might need to bring in extra people to help you create, edit and publish content. WordPress comes with built-in user roles which will make your life a whole lot easier.
+- **Best marketing plugins on the market**. You can install one of the many SEO plugins available in the plugin directory. Some examples include Yoast or Rank Math. These plugins help you optimize your content (like articles, pages, and even product pages) and increase your chances of outranking your competitors.
+- **A vast array of integrations**. Chances are you will be using 3rd party SaaS products like Mailchimp or ActiveCampaign. Regardless of the service, you will find it extremely easy to integrate them with your website as almost all have created a WordPress plugin.
+- **The biggest online library of resources**. The WordPress community is by far the largest which makes it easy to find answers to all your questions regarding your installation. There are tens of thousands of websites and forums focused solely on WordPress websites featuring tons of information.
 
 ## If You Want the Fastest Way to Start an eCommerce Business – Use Shopify
 
@@ -126,17 +122,17 @@ But Shopify is also used by some of the biggest online stores on the Internet, w
 
 Some of Shopify’s advantages:
 
--   **Extremely easy to get started with**. The CMS was built with ease of use in mind. Anyone can get a store up and running in no time. You don’t have to know how to code or even how to connect a domain to your website as Shopify does all that for you.
--   **Compatible with most major third-party services**. Shopify connects out of the box with the biggest third-party services, like Klaviyo for email marketing or Facebook Ads for paid advertising.
--   **Plenty of apps in the app store**. If you feel that your store needs additional functionality, like bundle discounts, for example, you will be happy to hear that there are tons of apps that can help you achieve this. Just be careful and look at their cost as they can go up rather quickly.
+- **Extremely easy to get started with**. The CMS was built with ease of use in mind. Anyone can get a store up and running in no time. You don’t have to know how to code or even how to connect a domain to your website as Shopify does all that for you.
+- **Compatible with most major third-party services**. Shopify connects out of the box with the biggest third-party services, like Klaviyo for email marketing or Facebook Ads for paid advertising.
+- **Plenty of apps in the app store**. If you feel that your store needs additional functionality, like bundle discounts, for example, you will be happy to hear that there are tons of apps that can help you achieve this. Just be careful and look at their cost as they can go up rather quickly.
 
 Some of Shopify’s disadvantages:
 
--   **Can get pretty expensive**. Shopify is extremely easy to start with, but that comes with a cost. The cheapest plan (Basic) starts at $29 per month, while the most expensive one (Advanced) reaches $299 per month. The main difference is the commission applied by Shopify on payments.
--   **High payment fees**. You have to take into account that Shopify charges up to a 2% fee on your transactions (on the Basic plan). This commission decreases with the plan to a minimum of 0.5% (on the Advance plan). In comparison, WooCommerce doesn’t charge you a percentage of your sales.
--   **Shopify developers are expensive**. If you want to customize your store beyond basic functionalities you will need the help of a developer, and they are not cheap. However, there are a multitude of apps available that can help you achieve your goals.
--   **Most Shopify Apps have a monthly cost**. You can find free apps in the app store, but most of them have a monthly cost (compared to a fixed one-time fee charged by the vast majority of WordPress plugins).
--   **The blog functionality isn't great**. Shopify is an eCommerce-centric platform so there’s no wonder that they haven’t spent too much time optimizing their blog functionality. Big stores choose to host their blogs on WordPress while keeping their storefront on Shopify.
+- **Can get pretty expensive**. Shopify is extremely easy to start with, but that comes with a cost. The cheapest plan (Basic) starts at $29 per month, while the most expensive one (Advanced) reaches $299 per month. The main difference is the commission applied by Shopify on payments.
+- **High payment fees**. You have to take into account that Shopify charges up to a 2% fee on your transactions (on the Basic plan). This commission decreases with the plan to a minimum of 0.5% (on the Advance plan). In comparison, WooCommerce doesn’t charge you a percentage of your sales.
+- **Shopify developers are expensive**. If you want to customize your store beyond basic functionalities you will need the help of a developer, and they are not cheap. However, there are a multitude of apps available that can help you achieve your goals.
+- **Most Shopify Apps have a monthly cost**. You can find free apps in the app store, but most of them have a monthly cost (compared to a fixed one-time fee charged by the vast majority of WordPress plugins).
+- **The blog functionality isn't great**. Shopify is an eCommerce-centric platform so there’s no wonder that they haven’t spent too much time optimizing their blog functionality. Big stores choose to host their blogs on WordPress while keeping their storefront on Shopify.
 
 In conclusion, you can use Ghost to start your blog almost instantly, or Shopify to configure a fast and secure online store. And, if you want to get the best out of both worlds, you might want to go with WordPress.
 

@@ -164,7 +164,9 @@ _出离愤怒退出程序前的截图_
 `sane-error-messages create <dirName>`
 
 to scaffold your project. Doing so will create a brand new module for you to customise with your default error messages.
+来支撑你的项目。这样一来，你将创建一个全新的模块，并在模块中修改默认报错信息。
 
+你的新模块使用 `tsdx` 处理内部所有模块管理脚本，如运行、创建和测试。 
 Your new module uses `tsdx` under-the-hood to handle all of the module management scripts, such as running, building, and testing.
 
 You can learn more about [tsdx here](/news/p/009d4c55-b3e6-4e48-b186-541f5959af8c/*https://tsdx.io/*).

@@ -72,68 +72,68 @@ Ghost是一个免费的、易于使用的CMS，不需要任何种类的编码技
 
 ## 如果你想让你的网站更上一层楼--使用WordPress
 
-You can use [WordPress](https://wordpress.org/) as a simple blogging platform, but it is also a fully-featured content management system (CMS). It allows you to build custom websites and blogs if you want to take your business to the next level.
+你可以使用[WordPress](https://wordpress.org/)作为一个简单的博客平台，但它也是一个功能齐全的内容管理系统（CMS）。如果你想让你的业务更上一层楼，它允许你建立定制网站和博客。
 
-Because of its popularity, there is an active support community and lots of free training materials.
+由于其受欢迎程度，有一个活跃的支持社区和大量的免费培训材料。
 
-Tutorials for the basic functionality and more advanced features are widely available online.
+基本功能和更高级功能的教程在网上广泛提供。
 
-WordPress is free, but if you need help installing it or customizing it for your needs, you can purchase web hosting from a reputable company. Hosting costs vary depending on the type of hosting service you choose.
+WordPress是免费的，但如果你需要帮助安装它或根据你的需要定制它，你可以从一个有信誉的公司购买虚拟主机。托管费用因你选择的托管服务类型而异。
 
-[You can install WordPress yourself](https://www.freecodecamp.org/news/how-to-get-started-with-wordpress/) or pay someone to do it for you. The WordPress website provides instructions on how to install the software on different server platforms.
+[你可以自己安装WordPress](https://www.freecodecamp.org/news/how-to-get-started-with-wordpress/)或付钱给别人帮你做。WordPress网站提供了如何在不同的服务器平台上安装该软件的说明。
 
-Once installed on your server, WordPress will allow you to create your own blog page. You have complete control over the look and feel of your site through the use of themes, which are pre-built designs for the layout of your pages.
+一旦安装在你的服务器上，WordPress将允许你创建你自己的博客页面。通过使用主题，你可以完全控制你的网站的外观和感觉，这些主题是为你的页面布局预先建立的设计。
 
-Themes are available for purchase or free download from the WordPress website. You can also [design your own custom theme](https://www.freecodecamp.org/news/learn-how-to-create-your-own-wordpress-theme-from-scratch/) if you're up to the challenge.
+主题可以从WordPress网站购买或免费下载。如果你愿意挑战自己，你也可以[设计你自己的自定义主题](https://www.freecodecamp.org/news/learn-how-to-create-your-own-wordpress-theme-from-scratch/)。
 
-You might want a more complicated site than what is provided by the basic WordPress installation. In that case, you can hire a designer to build you a customized theme or using an existing theme as a framework and add your own custom features through plugins. Plugins extend the features of themes with special design elements and programming functions.
+你可能想要一个比基本WordPress安装所提供的更复杂的网站。在这种情况下，你可以雇用一个设计师为你建立一个定制的主题，或者使用一个现有的主题作为框架，并通过插件添加你自己的定制功能。插件通过特殊的设计元素和编程功能来扩展主题的功能。
 
 ![Screenshot of WordPress themes in the admin UI](https://www.freecodecamp.org/news/content/images/2022/01/WordPress-screen-themes.png)
 
-### Advantages of using WordPress
+### 使用WordPress的优势
 
-WordPress is by far the most customizable option in this list. It features the most comprehensive library of themes and plugins, allows you to edit the source code quite easily, and even write your own custom functionalities.
+到目前为止，WordPress是这个列表中最可定制的选项。它具有最全面的主题和插件库，允许你很容易地编辑源代码，甚至可以编写你自己的自定义功能。
 
-You can think of WordPress as the CMS that falls between Ghost and Shopify, as it allows you to run an eCommerce store and a blog at the same time by simply installing a compatible theme.
+你可以把WordPress看作是介于Ghost和Shopify之间的CMS，因为它允许你通过简单地安装一个兼容的主题来同时运行一个电子商务商店和一个博客。
 
-WordPress lets you take your blog to the next level and scale your eCommerce store as your business grows.
+WordPress让你的博客更上一个水平，并随着你的业务增长而扩展你的电子商务商店。
 
-The downside is that sooner or later you will need a developer’s help. This is because the more plugins you install, the slower your website will get, and users hate slow websites (not to mention search engines).
+缺点是，你迟早会需要一个开发人员的帮助。这是因为你安装的插件越多，你的网站就越慢，而用户讨厌慢的网站（更不用说搜索引擎）。
 
-Some other pros include:
+其他一些优点包括:
 
-- **Extremely cheap to get started with**. You can get a WordPress website up and running for free, and basic hosting plans start as low as $18.96 per year.
-- **Ability to assign user roles**. At some point during your business growth cycle, you might need to bring in extra people to help you create, edit and publish content. WordPress comes with built-in user roles which will make your life a whole lot easier.
-- **Best marketing plugins on the market**. You can install one of the many SEO plugins available in the plugin directory. Some examples include Yoast or Rank Math. These plugins help you optimize your content (like articles, pages, and even product pages) and increase your chances of outranking your competitors.
-- **A vast array of integrations**. Chances are you will be using 3rd party SaaS products like Mailchimp or ActiveCampaign. Regardless of the service, you will find it extremely easy to integrate them with your website as almost all have created a WordPress plugin.
-- **The biggest online library of resources**. The WordPress community is by far the largest which makes it easy to find answers to all your questions regarding your installation. There are tens of thousands of websites and forums focused solely on WordPress websites featuring tons of information.
+- **极度便宜，可以开始使用**。你可以免费建立和运行一个WordPress网站，基本的托管计划每年低至18.96美元。
+- **能够分配用户角色**。在你的业务增长周期的某个时候，你可能需要引入额外的人帮助你创建、编辑和发布内容。WordPress带有内置的用户角色，这将使你的生活变得更加容易。
+- **市场上最好的营销插件**。你可以安装插件目录中的许多SEO插件之一。一些例子包括Yoast或Rank Math。这些插件帮助你优化你的内容（如文章，页面，甚至产品页面），并增加你超过竞争对手的机会。
+- *大量的集成**。你有可能会使用第三方SaaS产品，如Mailchimp或ActiveCampaign。不管是哪种服务，你会发现将它们与你的网站整合起来非常容易，因为几乎所有的服务都创建了一个WordPress插件。
+- **最大的在线资源库**。到目前为止，WordPress社区是最大的，这使得你很容易找到关于你安装的所有问题的答案。有数以万计的网站和论坛只专注于WordPress网站，有大量的信息。
 
-## If You Want the Fastest Way to Start an eCommerce Business – Use Shopify
+## 如果你想以最快的方式开展电子商务业务--使用Shopify
 
-[Shopify](https://www.shopify.com/) started in 2006 as an online store for snowboarding equipment. Back then, the CMS ecosystem was lacking a robust and easy-to-use solution, so the Shopify creators decided to code their own.
+[Shopify](https://www.shopify.com/)于2006年作为一个滑雪板设备的网上商店开始。那时，CMS生态系统缺乏一个强大的、易于使用的解决方案，所以Shopify的创建者们决定自己编程实现。
 
-Needless to say, this was a hit. In the years that followed more and more stores have started to use the Shopify CMS. As of May 2021, more than 1.7 million businesses from some 175 countries use Shopify to run their businesses.
+不用说，这很受欢迎。在随后的几年里，越来越多的商店开始使用Shopify CMS。截至2021年5月，来自约175个国家的170多万企业使用Shopify来经营他们的业务。
 
-By far the simplest and fastest way to start an eCommerce business, Shopify is mainly used by nontechnical people that want to bring their brick and mortar stores online. In no more than a few minutes you can have your own website up and running and start accepting online payments.
+到目前为止，Shopify是启动电子商务业务的最简单和最快速的方式，主要用于非技术人员，他们想把他们的实体店带到网上。在不超过几分钟的时间内，你就可以建立和运行自己的网站，并开始接受在线支付。
 
-But Shopify is also used by some of the biggest online stores on the Internet, which makes it a great option if you want to scale your business to the next level, and have the funds to do so.
+但Shopify也被互联网上一些最大的网店所使用，这使得它成为一个很好的选择，如果你想将你的业务扩展到一个新的水平，并有资金这样做。
 
 ![Screenshot of Shopify UI](https://www.freecodecamp.org/news/content/images/2022/01/Shopify-screenshot.png)
 
-Some of Shopify’s advantages:
+Shopify的一些优势:
 
-- **Extremely easy to get started with**. The CMS was built with ease of use in mind. Anyone can get a store up and running in no time. You don’t have to know how to code or even how to connect a domain to your website as Shopify does all that for you.
-- **Compatible with most major third-party services**. Shopify connects out of the box with the biggest third-party services, like Klaviyo for email marketing or Facebook Ads for paid advertising.
-- **Plenty of apps in the app store**. If you feel that your store needs additional functionality, like bundle discounts, for example, you will be happy to hear that there are tons of apps that can help you achieve this. Just be careful and look at their cost as they can go up rather quickly.
+- **极易上手**。该内容管理系统是在考虑到易于使用的情况下建立的。任何人都可以在短时间内建立和运行一个商店。你不需要知道如何编码，甚至不需要知道如何将域名连接到你的网站，因为Shopify为你做这一切。
+- **与大多数主要的第三方服务兼容**。Shopify开箱即与最大的第三方服务连接，如Klaviyo的电子邮件营销或Facebook Ads的付费广告。
+- **应用商店里有大量的应用程序**。如果你觉得你的商店需要额外的功能，例如捆绑折扣，你会很高兴听到有大量的应用程序可以帮助你实现这个目标。只是要小心，看看他们的成本，因为他们可能会上升得很快。
 
-Some of Shopify’s disadvantages:
+Shopify的一些劣势:
 
-- **Can get pretty expensive**. Shopify is extremely easy to start with, but that comes with a cost. The cheapest plan (Basic) starts at $29 per month, while the most expensive one (Advanced) reaches $299 per month. The main difference is the commission applied by Shopify on payments.
-- **High payment fees**. You have to take into account that Shopify charges up to a 2% fee on your transactions (on the Basic plan). This commission decreases with the plan to a minimum of 0.5% (on the Advance plan). In comparison, WooCommerce doesn’t charge you a percentage of your sales.
-- **Shopify developers are expensive**. If you want to customize your store beyond basic functionalities you will need the help of a developer, and they are not cheap. However, there are a multitude of apps available that can help you achieve your goals.
-- **Most Shopify Apps have a monthly cost**. You can find free apps in the app store, but most of them have a monthly cost (compared to a fixed one-time fee charged by the vast majority of WordPress plugins).
-- **The blog functionality isn't great**. Shopify is an eCommerce-centric platform so there’s no wonder that they haven’t spent too much time optimizing their blog functionality. Big stores choose to host their blogs on WordPress while keeping their storefront on Shopify.
+- **可以变得相当昂贵**。Shopify非常容易上手，但这也是有代价的。最便宜的计划（基本）每月29美元起，而最贵的计划（高级）每月达到299美元。主要的区别是Shopify在付款时应用的佣金。
+- **高支付费用**。你必须考虑到，Shopify对你的交易收取高达2%的费用（在基本计划中）。这种佣金随着计划的减少而减少，最低为0.5%（在高级计划中）。相比之下，WooCommerce不会对你的销售额收取一定比例的费用。
+- **Shopify的开发人员是昂贵的**。如果你想在基本功能之外定制你的商店，你将需要一个开发人员的帮助，而他们并不便宜。然而，有大量的应用程序可以帮助你实现你的目标。
+- **大多数Shopify应用程序都有月费**。你可以在应用商店里找到免费的应用程序，但它们中的大多数都有月费（相比之下，绝大多数WordPress的插件都是一次性收取固定费用）。
+- **博客的功能不是很好**。Shopify是一个以电子商务为中心的平台，所以难怪他们没有花太多的时间来优化他们的博客功能。大商店选择在WordPress上托管他们的博客，而将他们的店面保留在Shopify上。
 
-In conclusion, you can use Ghost to start your blog almost instantly, or Shopify to configure a fast and secure online store. And, if you want to get the best out of both worlds, you might want to go with WordPress.
+总之，你可以用Ghost几乎立即开始你的博客，或者用Shopify配置一个快速和安全的网上商店。而且，如果你想获得两个世界的最佳效果，你可能想用WordPress。
 
-[The ultimate WordPress guide](https://www.weblime.com/stories/the-ultimate-wordpress-guide) is a free resource that will help you understand the basics and help you launch your new website in no time, so be sure to give it a read before you make the big decision of choosing a specific platform.
+终极WordPress指南](https://www.weblime.com/stories/the-ultimate-wordpress-guide)是一个免费资源，将帮助你了解基础知识，并帮助你在短时间内启动你的新网站，所以在你做出选择特定平台的重大决定之前，一定要阅读它。

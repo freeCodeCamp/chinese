@@ -165,9 +165,9 @@ _出离愤怒退出程序前的截图_
 
 来支撑你的项目。这样一来，你将创建一个全新的模块，并在模块中修改默认报错信息。
 
-你的新模块使用 `tsdx` 处理内部所有模块管理脚本，如运行、创建和测试。 
+新模块使用 `tsdx` 处理内部所有模块管理脚本，如运行、创建和测试。 
 
-点击[tsdx](/news/p/009d4c55-b3e6-4e48-b186-541f5959af8c/*https://tsdx.io/*)浏览更多资料。
+如需了解更多信息，可点击[tsdx](/news/p/009d4c55-b3e6-4e48-b186-541f5959af8c/*https://tsdx.io/*)。
 
 简而言之，新包将包含如下内容：
 ```typescript
@@ -198,9 +198,9 @@ class ErrorMessages {
 type ErrorCode = ValueOf<errorCodes>
 ```
 
-## How to consume your error messages
+## 如何使用你的报错信息
 
-If you created a repo with the name `custom-error-messages` and published it to npm, you'd be able to consume it within your apps by doing the following:
+如果你创建了一个名为 "custom-error-messages "的 repo，并将其发布到npm，你就可以通过以下方式在你的应用程序中使用它。
 
 ```typescript
 import { ErrorMessages } from 'custom-error-messages';
@@ -229,11 +229,10 @@ function riskyFunction() {
 }
 ```
 
-You can then take all of the error codes that your server-side returns and apply corresponding messages to them.
+然后，你可以获取从服务器端返回的所有错误代码，将报错信息与之一一对应。
 
-Once you're ready, you can publish your tool to NPM, and then consume it from your client-facing apps.
-
-## **Conclusion**
+准备工作一切就绪后，你就可以把工具包发布到NPM，然后在面向客户的应用程序中使用它。
+## **总结**
 
 I hope you've enjoyed learning about an often overlooked aspect of web development.
 

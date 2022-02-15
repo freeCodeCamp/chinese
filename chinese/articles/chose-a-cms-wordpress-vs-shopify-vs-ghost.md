@@ -136,4 +136,4 @@ Shopify的一些劣势:
 
 总之，你可以用Ghost几乎立即开始你的博客，或者用Shopify配置一个快速和安全的网上商店。而且，如果你想获得两个世界的最佳效果，你可能想用WordPress。
 
-终极WordPress指南](https://www.weblime.com/stories/the-ultimate-wordpress-guide)是一个免费资源，将帮助你了解基础知识，并帮助你在短时间内启动你的新网站，所以在你做出选择特定平台的重大决定之前，一定要阅读它。
+[终极WordPress指南](https://www.weblime.com/stories/the-ultimate-wordpress-guide)是一个免费资源，将帮助你了解基础知识，并帮助你在短时间内启动你的新网站，所以在你做出选择特定平台的重大决定之前，一定要阅读它。

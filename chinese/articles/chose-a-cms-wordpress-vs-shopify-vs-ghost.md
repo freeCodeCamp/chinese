@@ -1,76 +1,76 @@
-> -  原文地址：[How to Choose a CMS – WordPress vs Ghost vs Shopify](https://www.freecodecamp.org/news/chose-a-cms-wordpress-vs-shopify-vs-ghost/)
+> - 原文地址：[How to Choose a CMS – WordPress vs Ghost vs Shopify](https://www.freecodecamp.org/news/chose-a-cms-wordpress-vs-shopify-vs-ghost/)
 > - 原文作者：[Edan Ben-Atar](https://www.freecodecamp.org/news/author/edan/)
-> - 译者：
+> - 译者：luojiyin
 > - 校对者：
 
 ![How to Choose a CMS – WordPress vs Ghost vs Shopify](https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/WordPress-vs-Ghost-vs-Shopify.jpg)
 
-WordPress, Shopify, and Ghost are some of the most powerful and popular CMS platforms out there.
+WordPress、Shopify和Ghost是最强大和最流行的CMS平台之一。
 
-And you might wonder why so many people use them. Well, it's because they're easy to use, cost-effective, and highly efficient.
+你可能想知道为什么这么多人使用它们。嗯，这是因为它们易于使用，成本效益高，而且效率高。
 
-With WordPress, Shopify, and Ghost, you can create a website from scratch in a matter of minutes.
+使用WordPress、Shopify和Ghost，你可以在几分钟内从头开始创建一个网站。
 
-Tailored to your needs, these [powerful website builders](https://www.weblime.com/stories/top-website-builders) can help you achieve anything from building an e-commerce website to starting your own blog or showcasing your portfolio.
+根据你的需要，这些[强大的网站建设工具](https://www.weblime.com/stories/top-website-builders)可以帮助你实现从建立电商网站到开始你自己的博客或展示你的投资组合的任何目标。
 
-It's no wonder why so many businesses choose these platforms. But which one should you choose?
+这么多企业选择这些平台。但你应该选择哪一个？
 
-We can't simply say that one is better than the other, because there's no single solution that will work in every situation.
+我们不能简单地说，一个比另一个好，因为没有一个解决方案能在所有情况下发挥作用。
 
-So in this article, we'll cover the three platforms and look at their strengths and weaknesses so that you can figure out what will work best for your particular situation.
+因此，在这篇文章中，我们将介绍这三个平台，并看看它们的优点和缺点，以便你能弄清楚什么会对你的特定情况最有效。
 
-## If you Want to Build a Blog From Scratch – Use Ghost
+## 如果你想从头开始建立一个博客--使用Ghost
 
-If you are a blogger who is looking for an open-source platform, [Ghost](https://ghost.org/) might be the perfect choice for you.
+如果你是一个正在寻找开源平台的博主，[Ghost](https://ghost.org/)可能是你的完美选择。
 
-The fact that it’s open-source enables you to alter the code of the platform, customize it, and make it more suitable to your writing needs.
+它是开源的,使你能够改变平台的代码，对其进行定制，使其更适合你的写作需要。
 
-And even if you’re not a coder, you can get help from other users who are willing to contribute to the community by fixing bugs or adding new features.
+即使你不是一个程序员，你也可以从其他用户那里得到帮助，他们愿意通过修复错误或增加新功能来为社区做出贡献。
 
-Tutorials on how to install Ghost on your own web server are available online. You can also choose to go with a hosted plan, which allows you to use themes created by other users instead of relying on the default theme.
+网上有关于如何在自己的服务器上安装Ghost的教程。你也可以选择使用托管计划，这允许你使用其他用户创建的主题，而不是依赖默认主题。
 
-Ghost is a platform that is based on Node.js, and it runs using Node.js servers. It comes with a rich plugin system, allowing you to customize your blog to suit your own needs.
+Ghost是一个基于Node.js的平台，它使用Node.js服务器运行。它有一个丰富的插件系统，允许你定制你的博客以满足你自己的需求。
 
-Ghost lets you to use Markdown instead of HTML for writing. This makes it easy for you to write directly in the browser window.
+Ghost让你使用Markdown而不是HTML进行写作。这使你很容易直接在浏览器窗口中写作。
 
-If you don’t know about Markdown, it is a lightweight markup language that allows you to write in rich text but with simpler code, as opposed to HTML.
+如果你不了解Markdown，它是一种轻量级的标记语言，允许你用富文本写作，但代码更简单，与HTML相对应。
 
-In fact, one of the benefits of Ghost over other platforms is that your posts are written in Markdown rather than HTML or text files, which results in much cleaner code.
+事实上，与其他平台相比，Ghost的好处之一是你的文章是用Markdown写的，而不是HTML或文本文件，这导致代码更简洁。
 
-### You Can Use Ghost as a Headless CMS
+### 你可以将Ghost作为一个无头CMS使用
 
-Ghost has a flexible architecture, which means it can be used as a headless CMS. In fact, it's one of the most popular headless content management systems in the JAMStack.
+Ghost有一个灵活的架构，这意味着它可以作为一个无头CMS使用。事实上，它是JAMStack中最受欢迎的无头内容管理系统之一。
 
-A [headless CMS](https://www.freecodecamp.org/news/what-is-headless-cms-explained/) allows you to build a front-end website or application, such as a mobile app, with an API that calls the CMS for its data. You can deploy the API and your website or app to separate servers or environments without having to change anything within your content.
+一个[无头CMS](https://www.freecodecamp.org/news/what-is-headless-cms-explained/)允许你建立一个前端网站或应用程序，如一个移动应用程序，有一个调用CMS的数据的API。你可以将API和你的网站或应用程序部署到不同的服务器或环境中，而不必改变你内容中的任何东西。
 
-Since the API delivers data from the CMS, you will have full control over that data, including permissions, tags, and categories. If you need to make changes to your content, you will only have to make those changes on one end rather than both.
+由于API从CMS提供数据，你将完全控制这些数据，包括权限、标签和类别。如果你需要对你的内容进行修改，你将只需要在一端进行修改，而不是在两端。
 
-Headless CMSs are often used for building websites and applications with JavaScript frameworks such as AngularJS and React.js​. However, if you need to render a dynamic site with multiple pages using a single API call, this type of CMS can be beneficial as well.
+无头CMS通常用于使用AngularJS和React.js等JavaScript框架构建网站和应用程序。然而，如果你需要用一个API调用来渲染一个有多个页面的动态网站，这种类型的CMS也是有益的。
 
-To use a headless CMS, you will need to learn how it works and how to utilize it through its API. This may require additional development resources, depending on your skill level.
+要使用无头CMS，你需要学习它的工作原理，以及如何通过其API来利用它。这可能需要额外的开发资源，这取决于你的技能水平。
 
-This approach is gaining popularity among startups and agencies who want more control over the display of content while still retaining the ability to make updates through a central interface.
+这种方法在初创企业和机构中越来越受欢迎，他们希望对内容的显示有更多的控制，同时仍然保留通过中央界面(central interface)进行更新的能力。
 
 ![Screenshot of Ghost admin interface](https://www.freecodecamp.org/news/content/images/2022/01/ghost-screenshot-admin.png)
 
-### Advantages of Using Ghost
+### 使用Ghost的优势
 
-Ghost is a free, easy-to-use CMS that doesn’t require any kind of coding skills.
+Ghost是一个免费的、易于使用的CMS，不需要任何种类的编码技能。
 
-Along with simplicity, Ghost CMS comes with lots of out-of-the-box features which make it really appealing to bloggers and small businesses.
+除了简单之外，Ghost CMS还具有很多开箱即用的功能，这使它对博主和小企业非常有吸引力。
 
-You can add multiple authors, set up collaborative writing, track analytics, create polls, customer support forums, manage templates, and much more using drag and drop features.
+你可以添加多个作者，设置合作写作，跟踪分析，创建民意调查，客户支持论坛，管理模板，以及更多使用拖放功能的功能。
 
-Things get interesting as you start using third-party apps on Ghost. There are numerous integrations available for installing apps like Google Analytics and Disqus comments.
+当你开始在Ghost上使用第三方应用程序时，事情变得很有趣。有许多集成可用于安装谷歌分析和Discuz评论等应用程序。
 
-Some other pros include:
+其他一些优点包括:
 
-- **It has a clean, minimalistic design**. If you want your blog to be beautiful, then Ghost CMS is great for that.
-- **Complete tools**. You get all the tools that are required in creating a blog, starting from the installation to setting up the theme with the drag and drop features.
-- **Customizable themes**. The themes can be customized using the built-in theme editor that makes it really easy for anyone to modify them as per their needs.
-- **Ghost community**. If you’re stuck, you can find help from other Ghost users by going over their forums and asking questions.
+- **它有一个干净、简约的设计**。如果你想让你的博客变得漂亮，那么Ghost CMS就很适合。
+- **完整的工具**。你可以得到创建博客所需的所有工具，从安装开始到用拖放功能设置主题。
+- **可定制的主题**。主题可以使用内置的主题编辑器进行定制，这使得任何人都可以根据自己的需要修改它们。
+- **Ghost社区**。如果你被卡住了，你可以通过翻阅Ghost的论坛和提问，从其他Ghost用户那里找到帮助。
 
-## If You Want to Take Your Website to the Next Level – Use WordPress
+## 如果你想让你的网站更上一层楼--使用WordPress
 
 You can use [WordPress](https://wordpress.org/) as a simple blogging platform, but it is also a fully-featured content management system (CMS). It allows you to build custom websites and blogs if you want to take your business to the next level.
 

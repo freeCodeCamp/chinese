@@ -200,7 +200,7 @@ type ErrorCode = ValueOf<errorCodes>
 
 ## 如何使用你的报错信息
 
-如果你创建了一个名为 "custom-error-messages "的 repo，并将其发布到 NPM，你就可以通过以下方式在你的应用程序中使用它。
+如果你创建了一个名为 "custom-error-messages "的 repo，并将其发布到 npm，你就可以通过以下方式在你的应用程序中使用它。
 
 ```typescript
 import { ErrorMessages } from 'custom-error-messages';
@@ -231,7 +231,7 @@ function riskyFunction() {
 
 然后，你可以获取从服务器端返回的所有错误代码，将报错信息与之一一对应。
 
-准备工作一切就绪后，你就可以把工具包发布到 NPM，然后在面向客户的应用程序中使用它。
+准备工作一切就绪后，你就可以把工具包发布到 npm，然后在面向客户的应用程序中使用它。
 ## **总结**
 
 我希望上述对于网站开发中一个经常被忽视的方面——报错信息的介绍对你有所帮助。

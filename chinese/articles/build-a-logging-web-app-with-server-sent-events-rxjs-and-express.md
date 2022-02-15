@@ -1,29 +1,29 @@
-> -  原文地址：[How to Build a Logging Web App with Server-Sent Events, RxJS, and Express](https://www.freecodecamp.org/news/build-a-logging-web-app-with-server-sent-events-rxjs-and-express/)
-> -  原文作者：[Shayan](https://www.freecodecamp.org/news/author/shayan/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Build a Logging Web App with Server-Sent Events, RxJS, and Express](https://www.freecodecamp.org/news/build-a-logging-web-app-with-server-sent-events-rxjs-and-express/)
+> - 原文作者：[Shayan](https://www.freecodecamp.org/news/author/shayan/)
+> - 译者：luojiyin
+> - 校对者：
 
 ![How to Build a Logging Web App with Server-Sent Events, RxJS, and Express](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/Frame-11.png)
 
-Say you're working on your new great idea – a web or mobile app, and a back end server. Nothing too complicated so far. Until you realize that you need to stream data from your server to these clients.
+假设你正在研究你的新的伟大想法--一个网络或移动应用程序，以及一个后端服务器。到目前为止，没有什么太复杂的东西。直到你意识到你需要将数据从你的服务器流向这些客户端。
 
-Usually, when working on this, the first thing that comes to mind is to use one of the cool kids on the block, like WebSockets, SocketIO, or even a paid service that takes care of it for you.
+通常，在处理这个问题时，首先想到的是使用社区里的一个很酷的工具，如WebSockets、SocketIO，甚至是一个付费服务，为你处理这个问题。
 
-But there's another method that's usually left out, and you might not have heard about it yet. It's called SSE, short for Server-Sent Events.
+但是，还有一种方法通常被遗漏了，你可能还没有听说过它。它叫做SSE，是服务器发送事件的简称。
 
-SSE has a special place in my heart because of its simplicity. It's lightweight, efficient, and very powerful.
+SSE在我心中有一个特殊的位置，因为它很简单。它是轻量级的，高效的，而且非常强大。
 
-To explain SSE in detail and how I use it, I will go over a small side project of mine that I think is an excellent showcase of SSE. I'll be using Typescript, Express, and RxJS, so get your environment ready and buckle up as we are about to dive into some code.
+为了详细解释SSE以及我如何使用它，我将介绍我的一个小项目，我认为这是SSE的一个很好的展示。我将使用Typescript、Express和RxJS，所以请准备好你的环境并系好安全带，因为我们即将进入一些代码
 
-Before we get started, there is something that you should know about SSE. As its name suggests, Server-Sent Events is uni-directional from your server to the client. This may be a deal-breaker if your client needs to stream back data to the server. But this is not the case in many scenarios, and we can just rely on REST to send data to the server.
+在我们开始之前，你应该知道一些关于SSE的事情。顾名思义，服务器发送的事件是单向的，从你的服务器到客户端。如果你的客户需要把数据流回给服务器，这可能是个大问题。但在很多情况下不是这样的，我们可以直接依靠REST来向服务器发送数据。
 
-## What's the Project?
+## 项目是怎样的?
 
-The idea of this project is simple: I have a bunch of scripts running around on Raspberry Pis, droplets on Digital Ocean, and other places that are not easily accessible to me. So I want a way to print out logs and view them from anywhere.
+这个项目的想法很简单。我有一堆脚本在树莓派上运行，还有部署在Digital Ocean上的，以及其他一些我不容易访问的地方。因此，我希望有一种方法可以打印出日志，并从任何地方查看它们。
 
-As a solution, I would like a basic web app to push my logs and have a direct link to my session that I can open on any device or even share with others.
+作为一个解决方案，我希望有一个基本的网络应用程序来推送我的日志，并有一个直接链接到我的会话，我可以在任何设备上打开，甚至与其他人分享。
 
-There are a couple of things to keep in mind before we proceed.
+在我们开始之前，有几件事情需要记住。
 
 First, logs coming from my scripts are not that frequent, and the overhead of using HTTP is negligible for my use case. Because of this, I decided to publish my logs over a basic REST API and use SSE on the client-side to subscribe the incoming logs.
 

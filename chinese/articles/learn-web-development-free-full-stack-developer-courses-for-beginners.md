@@ -1,11 +1,7 @@
-> -  原文地址：[Learn Web Development – Free Full Stack Developer Courses for Beginners](https://www.freecodecamp.org/news/learn-web-development-free-full-stack-developer-courses-for-beginners/)
-> -  原文作者：[
-                    
-                        Jessica Wilkins
-                    
-                ](https://www.freecodecamp.org/news/author/jessica-wilkins/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Learn Web Development – Free Full Stack Developer Courses for Beginners](https://www.freecodecamp.org/news/learn-web-development-free-full-stack-developer-courses-for-beginners/)
+> - 原文作者：[Jessica Wilkins](https://www.freecodecamp.org/news/author/jessica-wilkins/)
+> - 译者：
+> - 校对者：
 
 ![Learn Web Development – Free Full Stack Developer Courses for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/ferenc-almasi-L8KQIPCODV8-unsplash.jpg)
 
@@ -15,16 +11,16 @@ The frontend is what the user interacts with, while the backend is the logic for
 
 In this article, I will cover some resources that can help you become a full stack developer:
 
--   [freeCodeCamp](https://www.freecodecamp.org/learn/)
--   [CS50's Web Programming with Python and JavaScript](https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript)
--   [The Odin Project](https://www.theodinproject.com/)
+- [freeCodeCamp](https://www.freecodecamp.org/learn/)
+- [CS50's Web Programming with Python and JavaScript](https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript)
+- [The Odin Project](https://www.theodinproject.com/)
 
 I will also provide additional links to YouTube courses where you can continue to practice your skills by building more projects.
 
--   [freeCodeCamp](#freecodecamp)
--   [The Odin Project](#the-odin-project)
--   [CS50's Web Programming with Python and JavaScript](#cs50-s-web-programming-with-python-and-javascript)
--   [Suggested YouTube full stack project tutorials](#suggested-youtube-full-stack-project-tutorials)
+- [freeCodeCamp](#freecodecamp)
+- [The Odin Project](#the-odin-project)
+- [CS50's Web Programming with Python and JavaScript](#cs50-s-web-programming-with-python-and-javascript)
+- [Suggested YouTube full stack project tutorials](#suggested-youtube-full-stack-project-tutorials)
 
 ## freeCodeCamp
 
@@ -36,11 +32,11 @@ The first four courses cover front end technologies including HTML, CSS, Vanilla
 
 Here is a list of some of the projects you will build.
 
--   Product landing page
--   Random quote machine
--   25 +5 clock
--   World cup database
--   Sudoku solver
+- Product landing page
+- Random quote machine
+- 25 +5 clock
+- World cup database
+- Sudoku solver
 
 After completing those certifications, you will know how to build full stack web applications. From there you can build your own projects for your portfolio and start applying for entry level jobs.
 
@@ -58,9 +54,9 @@ You will first go through the [Foundations curriculum](https://www.theodinprojec
 
 Here is a list of some of the projects you will build in the [Foundations curriculum](https://www.theodinproject.com/paths/foundations/courses/foundations):
 
--   Rock Paper Scissors
--   Etch-a-Sketch
--   Landing page
+- Rock Paper Scissors
+- Etch-a-Sketch
+- Landing page
 
 From there you can choose between the JavaScript or Ruby on Rails curriculum.  If you need help deciding on which one to choose, please read [this guide from The Odin Project](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/choose-your-path-forward).
 
@@ -68,17 +64,17 @@ The [Ruby on Rails curriculum](https://www.theodinproject.com/paths/full-stack-r
 
 Here are some of the projects that you will build in the [Ruby on Rails curriculum](https://www.theodinproject.com/paths/full-stack-ruby-on-rails?).
 
--   Tic Tac Toe
--   SQL Zoo
--   Personal Portfolio
+- Tic Tac Toe
+- SQL Zoo
+- Personal Portfolio
 
 The [JavaScript curriculum](https://www.theodinproject.com/paths/full-stack-javascript?) covers intermediate to advanced HTML and CSS, JavaScript, MongoDB, Node, Express and more. They have also included a helpful guide on [how to get hired](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/getting-hired) for your first job.
 
 Here are some of the projects that you will build in the [JavaScript curriculum](https://www.theodinproject.com/paths/full-stack-javascript?):
 
--   restaurant page
--   weather app
--   blog API
+- restaurant page
+- weather app
+- blog API
 
 If you need help with the course, please reach out on [The Odin Project discord channel](https://discord.com/invite/fbFCkYabZB).
 
@@ -98,10 +94,10 @@ If you need help with either of the CS50 courses, please reach out on any of the
 
 After you have built up a basic foundation in full stack web development, you can look into these additional resources for building more projects to strengthen your skills.
 
--   [Flutter & Firebase Course - Build a Full Stack Instagram Clone](https://www.youtube.com/watch?v=mEPm9w5QlJM)
--   [Full Stack Web Development in the Cloud Course - Svelte, Postgres, Vercel, Gitpod](https://www.youtube.com/watch?v=OUzaUJ3gEug)
--   [Full Stack MERN Project - Build and Deploy an App | React + Redux, Node, Express, MongoDB \[Part 1/2\]](https://www.youtube.com/watch?v=ngc9gnGgUdA)
--   [Full Stack MERN Project - Build and Deploy an App | React + Redux, Node, Express, MongoDB \[Part 2/2\]](https://www.youtube.com/watch?v=aibtHnbeuio)
--   [E-commerce Website With Django and Vue Tutorial (Django Rest Framework)](https://www.youtube.com/watch?v=Yg5zkd9nm6w)
--   [Python Microservices Web App (with React, Django, Flask) - Full Course](https://www.youtube.com/watch?v=0iB5IPoTDts)
--   [PERN Stack Course - Build a Yelp clone (Postgres, Express, React, Node.js)](https://www.youtube.com/watch?v=J01rYl9T3BU)
+- [Flutter & Firebase Course - Build a Full Stack Instagram Clone](https://www.youtube.com/watch?v=mEPm9w5QlJM)
+- [Full Stack Web Development in the Cloud Course - Svelte, Postgres, Vercel, Gitpod](https://www.youtube.com/watch?v=OUzaUJ3gEug)
+- [Full Stack MERN Project - Build and Deploy an App | React + Redux, Node, Express, MongoDB \[Part 1/2\]](https://www.youtube.com/watch?v=ngc9gnGgUdA)
+- [Full Stack MERN Project - Build and Deploy an App | React + Redux, Node, Express, MongoDB \[Part 2/2\]](https://www.youtube.com/watch?v=aibtHnbeuio)
+- [E-commerce Website With Django and Vue Tutorial (Django Rest Framework)](https://www.youtube.com/watch?v=Yg5zkd9nm6w)
+- [Python Microservices Web App (with React, Django, Flask) - Full Course](https://www.youtube.com/watch?v=0iB5IPoTDts)
+- [PERN Stack Course - Build a Yelp clone (Postgres, Express, React, Node.js)](https://www.youtube.com/watch?v=J01rYl9T3BU)

@@ -113,7 +113,7 @@ var id = 5;
 
 `tsc index.ts --outfile file-name.js`
 
-如果你想让TSC自动编译你的代码，每当你做了一个改动，请添加 "watch "(缩写 w)标志:
+如果你想让TSC自动编译你的代码，每当你做了一个改动，请添加 "watch "（缩写 w）标志:
 
 `tsc index.ts -w`
 
@@ -186,7 +186,7 @@ ts 配置文件应该在你项目的根目录下。在这个文件中，我们�
 - null
 - symbol
 
-基元(Primitives)是不可变的(immutable)：它们不能被改变。重要的是，不要将基元本身与分配给基元值的变量相混淆。变量可以被重新分配一个新值，但现有值不能像对象、数组和函数那样被改变。
+基元（Primitives）是不可变的（immutable）：它们不能被改变。重要的是，不要将基元本身与分配给基元值的变量相混淆。变量可以被重新分配一个新值，但现有值不能像对象、数组和函数那样被改变。
 
 这是一个例子:
 
@@ -215,7 +215,7 @@ let unit: number; // Declare variable without assigning a value
 unit = 5;
 ```
 
-但通常最好不要明确说明类型，因为TypeScript会自动推断变量的类型(类型推理):
+但通常最好不要明确说明类型，因为TypeScript会自动推断变量的类型（类型推理）:
 
 ```js
 let id = 5; // TS knows it's a number
@@ -351,7 +351,7 @@ person = {
 // ERROR: missing the isProgrammer property
 ```
 
-当定义一个对象的签名时，你通常会使用一个 **接口(interface)**。如果我们需要检查多个对象是否具有相同的特定属性和价值类型，这一点很有用 **:**
+当定义一个对象的签名时，你通常会使用一个 **接口（interface）**。如果我们需要检查多个对象是否具有相同的特定属性和价值类型，这一点很有用 **:**
 
 ```ts
 interface Person {
@@ -604,7 +604,7 @@ console.log(person1.sayHello()); // Hi, my name is Danny and I have 1 pets
 let People: Person[] = [person1, person2];
 ```
 
-我们可以在类的属性中添加访问修饰语。TypeScript也提供了一个新的访问修饰符，叫做`只读(readonly)`。
+我们可以在类的属性中添加访问修饰语。TypeScript也提供了一个新的访问修饰符，叫做`只读（readonly）`。
 
 ```ts
 class Person {
@@ -633,7 +633,7 @@ console.log(person1.email); // Error: protected property - only accessible withi
 console.log(person1.pets); // Public property - so no problem
 ```
 
-我们可以通过这样构建类(constructing class)的属性来使我们的代码更加简洁:
+我们可以通过这样构建类（constructing class）的属性来使我们的代码更加简洁:
 
 ```ts
 class Person {
@@ -655,9 +655,9 @@ console.log(person1.name); // Danny
 
 以上述方式编写，属性会在构造函数中自动分配--省去了我们把它们全部写出来的麻烦。
 
-注意，如果我们省略了访问修饰符，默认情况下，该属性将是公共的(public)。
+注意，如果我们省略了访问修饰符，默认情况下，该属性将是公共的（public）。
 
-类也可以被扩展(extend)，就像在普通的JavaScript中一样。:
+类也可以被扩展（extend），就像在普通的JavaScript中一样。:
 
 ```ts
 class Programmer extends Person {
@@ -692,7 +692,7 @@ TypeScript也支持模块。TypeScript文件将被编译成多个JavaScript文�
  "module": "es2015"
 ```
 
-(不过，对于Node项目来说，你很可能需要`"模块": "CommonJS"` - Node还不支持现代的导入/导出。)
+（不过，对于Node项目来说，你很可能需要`"模块": "CommonJS"` - Node还不支持现代的导入/导出。）
 
 现在，在你的HTML文件中，将脚本的导入改为模块类型:
 
@@ -1051,6 +1051,7 @@ logLength(howMany); // Error: numbers don't have length properties
 我们也可以写一个函数，参数是一个元素数组，这些元素都有一个长度属性:
 
 ```ts
+
 interface hasLength {
   length: number;
 }

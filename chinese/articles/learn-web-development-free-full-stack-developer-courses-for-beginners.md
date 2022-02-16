@@ -97,7 +97,7 @@
 - [Flutter & Firebase课程--建立一个全栈式的仿Instagram](https://www.youtube.com/watch?v=mEPm9w5QlJM)
 - [云计算中的全栈网络开发课程 - Svelte, Postgres, Vercel, Gitpod](https://www.youtube.com/watch?v=OUzaUJ3gEug)
 - [全栈MERN项目 - 构建和部署一个应用程序 | React + Redux, Node, Express, MongoDB\[Part 1/2\]](https://www.youtube.com/watch?v=ngc9gnGgUdA)
-- [全堆MERN项目 - 构建和部署一个应用程序 | React + Redux, Node, Express, MongoDB\[Part 2/2\]](https://www.youtube.com/watch?v=aibtHnbeuio)
+- [全栈MERN项目 - 构建和部署一个应用程序 | React + Redux, Node, Express, MongoDB\[Part 2/2\]](https://www.youtube.com/watch?v=aibtHnbeuio)
 - [使用Django和Vue的电子商务网站教程（Django Rest 框架）](https://www.youtube.com/watch?v=Yg5zkd9nm6w)
 - [Python微服务网络应用（使用React、Django、Flask）--完整课程](https://www.youtube.com/watch?v=0iB5IPoTDts)
 - [PERN Stack 课程 - 仿 Yelp(Postgres, Express, React, Node.js)](https://www.youtube.com/watch?v=J01rYl9T3BU)

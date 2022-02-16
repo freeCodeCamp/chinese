@@ -5,32 +5,32 @@
 
 ![Learn TypeScript – The Ultimate Beginners Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/Cheat-Sheet-Poster--1-.png)
 
-TypeScript has become increasingly popular over the last few years, and many jobs are now requiring developers to know TypeScript.
+在过去的几年里，TypeScript变得越来越流行，许多工作现在都要求开发人员了解TypeScript。
 
-But don't be alarmed – if you already know JavaScript, you will be able to pick up TypeScript quickly.
+但不要惊慌--如果你已经了解JavaScript，你将能够迅速掌握TypeScript。
 
-Even if you don't plan on using TypeScript, learning it will give you a better understanding of JavaScript – and make you a better developer.
+即使你不打算使用TypeScript，学习它也会让你对JavaScript有更好的理解--让你成为更好的开发者。
 
-In this article, you will learn:
+在本文中，您将了解到:
 
-- What is TypeScript and why should I learn it?
-- How to set up a project with TypeScript
-- All of the main TypeScript concepts (types, interfaces, generics, type-casting, and more...)
-- How to use TypeScript with React
+- 什么是TypeScript，为什么要学习它？
+- 如何使用 TypeScript 设置项目
+- TypeScript的所有主要概念（类型、接口、泛型、类型转换，以及更多...)
+- 如何在React中使用TypeScript
 
-I also made a [TypeScript cheat sheet PDF](https://doabledanny.gumroad.com/l/typescript-cheat-sheet-pdf) and [poster](https://doabledanny.gumroad.com/l/typescript-cheat-sheet-poster) that summarizes this article down to one page. This makes it easy to look up and revise concepts/syntax quickly.
+我还制作了一个[PDF 格式TypeScript手册](https://doabledanny.gumroad.com/l/typescript-cheat-sheet-pdf)和[海报](https://doabledanny.gumroad.com/l/typescript-cheat-sheet-poster)，将这篇文章总结为一页。这使得它易于快速查找和修改概念/语法。
 
 ![TypeScript cheat sheet PDF](https://www.freecodecamp.org/news/content/images/2022/01/TypeScript-Cheat-Sheet--DARK-.png)
 
-TypeScript cheat sheet PDF
+PDF 格式TypeScript手册
 
-## What is TypeScript?
+## 什么是TypeScript？
 
-TypeScript is a superset of JavaScript, meaning that it does everything that JavaScript does, but with some added features.
+TypeScript是JavaScript的超集，意味着它能做JavaScript所做的一切，但有一些附加功能。
 
-The main reason for using TypeScript is to add static typing to JavaScript. Static typing means that the type of a variable cannot be changed at any point in a program. It can prevent a LOT of bugs!
+使用TypeScript的主要原因是为JavaScript添加静态类型。静态类型意味着变量的类型在程序中的任何时候都不能被改变。它可以防止大量的bug!
 
-On the other hand, JavaScript is a dynamically typed language, meaning variables can change type. Here's an example:
+另一方面，JavaScript是一种动态类型的语言，意味着变量可以改变类型。这里有一个例子:
 
 ```ts
 // JavaScript
@@ -42,53 +42,53 @@ let foo = "hello";
 foo = 55; // ERROR - foo cannot change from string to number
 ```
 
-TypeScript cannot be understood by browsers, so it has to be compiled into JavaScript by the TypeScript Compiler (TSC) – which we'll discuss soon.
+TypeScript不能被浏览器理解，所以它必须由TypeScript编译器（TSC）编译成JavaScript,我们很快会讨论这个问题。
 
-## Is TypeScript worth it?
+## TypeScript值得吗？
 
-### Why you should use TypeScript
+### 为什么要使用TypeScript
 
-- Research has shown that TypeScript can spot 15% of common bugs.
-- Readability – it is easier to see what the code it supposed to do. And when working in a team, it is easier to see what the other developers intended to.
-- It's popular – knowing TypeScript will enable you to apply to more good jobs.
-- Learning TypeScript will give you a better understanding, and a new perspective, on JavaScript.
+- 研究表明，TypeScript可以发现15%的常见错误。
+- 可读性--更容易看到代码应该做什么。而在团队中工作时，更容易看到其他开发人员的意图。
+- 它很受欢迎--了解TypeScript将使你能够申请到更多好工作。
+- 学习TypeScript会让你对JavaScript有更好的理解，并有新的视角。
 
-[Here's a short article I wrote demonstrating how TypeScript can prevent irritating bugs](https://www.doabledanny.com/why-typescript-over-javascript).
+[下面是我写的一篇短文，展示了TypeScript如何防止烦人的Bug](https://www.doabledanny.com/why-typescript-over-javascript).
 
-### Drawbacks of TypeScript
+### TypeScript的缺点
 
-- TypeScript takes longer to write than JavaScript, as you have to specify types, so for smaller solo projects it might not be worth using it.
-- TypeScript has to be compiled – which can take time, especially in larger projects.
+- TypeScript的编写时间比JavaScript长，因为你必须指定类型，所以对于较小的单独项目，可能不值得使用它。
+- TypeScript必须进行编译--这可能需要时间，特别是在大型项目中
 
-But the extra time that you have to spend writing more precise code and compiling will be more than saved by how many fewer bugs you'll have in your code.
+但是，你必须花更多的时间来写更精确的代码和编译，这将使你的代码中的错误减少得更多。
 
-For many projects – especially medium to large projects – TypeScript will save you lots of time and headaches.
+对于许多项目--尤其是中大型项目--TypeScript将为你节省大量的时间和麻烦。
 
-And if you already know JavaScript, TypeScript won't be too hard to learn. It's a great tool to have in your arsenal.
+如果你已经知道JavaScript，TypeScript也不会太难学。它是你武库中的一个伟大工具。
 
-## How to Set Up a TypeScript Project
+## 如何设置TypeScript项目
 
-### Install Node and the TypeScript Compiler
+### 安装Node和TypeScript编译器
 
-First, ensure you have [Node](https://nodejs.org/en/download/) installed globally on your machine.
+首先，确保你的机器上全局安装了[Node](https://nodejs.org/en/download/)。
 
-Then install the TypeScript compiler globally on your machine by running the following command:
+然后通过运行以下命令在你的机器上全局安装TypeScript编译器。
 
 ```bash
 npm i -g typescript
 ```
 
-To check if the installation is successful (it will return the version number if successful):
+检查安装是否成功（如果成功，它将返回版本号:
 
 ```bash
 tsc -v
 ```
 
-### How to Compile TypeScript
+### 如何编译TypeScript
 
-Open up your text editor and create a TypeScript file (for example, index.ts).
+打开你的文本编辑器，创建一个TypeScript文件（例如，index.ts）。
 
-Write some JavaScript or TypeScript:
+编写一些JavaScript或TypeScript。
 
 ```ts
 let sport = 'football';
@@ -96,32 +96,32 @@ let sport = 'football';
 let id = 5;
 ```
 
-We can now compile this down into JavaScript with the following command:
+现在我们可以用以下命令将其编译成JavaScript:
 
 ```bash
 tsc index
 ```
 
-TSC will compile the code into JavaScript and output it in a file called index.js:
+TSC将把代码编译成JavaScript，并在一个名为index.js的文件中输出。:
 
 ```js
 var sport = 'football';
 var id = 5;
 ```
 
-If you want to specify the name of the output file:
+如果你想指定输出文件的名称:
 
 `tsc index.ts --outfile file-name.js`
 
-If you want TSC to compile your code automatically, whenever you make a change, add the "watch" flag:
+如果你想让TSC自动编译你的代码，每当你做了一个改动，请添加 "watch "(缩写 w)标志:
 
 `tsc index.ts -w`
 
-An interesting thing about TypeScript is that it reports errors in your text editor whilst you are coding, but it will always compile your code – whether there are errors or not.
+TypeScript的一个有趣之处在于，当你在编码时，它会在文本编辑器中报告错误，但它总是会编译你的代码,无论是否有错误。
 
-For example, the following causes TypeScript to immediately report an error:
+例如，下面的内容会使TypeScript立即报告错误:
 
-```js
+```ts
 var sport = 'football';
 var id = 5;
 
@@ -129,21 +129,21 @@ id = '5'; // Error: Type 'string' is not assignable to
 type 'number'.
 ```
 
-But if we try to compile this code with `tsc index`, the code will still compile, despite the error.
+但如果我们尝试用`tsc index`来编译这段代码，尽管有错误，但代码仍然可以编译。
 
-This is an important property of TypeScript: it assumes that the developer knows more. Even though there's a TypeScript error, it doesn't get in your way of compiling the code. It tells you there's an error, but it's up to you whether you do anything about it.
+这是TypeScript的一个重要特性：它假定开发者知道的更多。即使有一个TypeScript错误，它也不会妨碍你编译代码。它告诉你有一个错误，但这取决于你是否对它做了什么。
 
-### How to Set Up the ts config File
+### 如何设置ts配置文件
 
-The ts config file should be in the root directory of your project. In this file we can specify the root files, compiler options, and how strict we want TypeScript to be in checking our project.
+ts 配置文件应该在你项目的根目录下。在这个文件中，我们可以指定根文件，编译器选项，以及我们希望 TypeScript 在检查我们项目时有多严格。
 
-First, create the ts config file:
+首先，创建 ts 配置文件:
 
 `tsc --init`
 
-You should now have a `tsconfig.json` file in the project root.
+你现在应该在项目根部有一个`tsconfig.json`文件。
 
-Here are some options that are good to be aware of (if using a frontend framework with TypeScript, most if this stuff is taken care of for you):
+这里有一些需要注意的选项（如果使用带有TypeScript的前端框架，这些东西大部分都是为你准备的）。
 
 ```json
 {
@@ -166,17 +166,17 @@ Here are some options that are good to be aware of (if using a frontend framewor
 }
 ```
 
-To compile everything and watch for changes:
+编译所有内容并观察变化:
 
 `tsc -w`
 
-Note: when input files are specified on the command line (for example, `tsc index`), `tsconfig.json` files are ignored.
+>注意：当输入文件在命令行中被指定时（例如，`tsc index`），`tsconfig.json`文件被忽略。
 
-## Types in TypeScript
+## TypeScript中的类型
 
-### Primitive types
+### 原始类型
 
-In JavaScript, a primitive value is data that is not an object and has no methods. There are 7 primitive data types:
+在JavaScript中，原始值是指不属于对象且没有方法的数据。有7种原始数据类型。
 
 - string
 - number
@@ -186,9 +186,9 @@ In JavaScript, a primitive value is data that is not an object and has no method
 - null
 - symbol
 
-Primitives are immutable: they can't be altered. It is important not to confuse a primitive itself with a variable assigned a primitive value. The variable may be reassigned a new value, but the existing value can't be changed in the ways that objects, arrays, and functions can be altered.
+基元(Primitives)是不可变的(immutable)：它们不能被改变。重要的是，不要将基元本身与分配给基元值的变量相混淆。变量可以被重新分配一个新值，但现有值不能像对象、数组和函数那样被改变。
 
-Here's an example:
+这是一个例子:
 
 ```js
 let name = 'Danny';
@@ -202,9 +202,9 @@ console.log(arr); // [1, 3, 5] - the array method mutated the array
 name = 'Anna' // Assignment gives the primitive a new (not a mutated) value
 ```
 
-In JavaScript, all primitive values (apart from null and undefined) have object equivalents that wrap around the primitive values. These wrapper objects are String, Number, BigInt, Boolean, and Symbol. These wrapper objects provide the methods that allow the primitive values to be manipulated.
+在JavaScript中，所有的原始值（除了null和undefined）都有对应的对象，这些对象包裹着原始值。这些包装对象是String、Number、BigInt、Boolean和Symbol。这些包装对象提供了允许原始值被操纵的方法。
 
-Back to TypeScript, we can set the type we want a variable to be be adding `: type` (called a "type annotation" or a "type signature") after declaring a variable. Examples:
+回到TypeScript，我们可以在声明一个变量后添加`: type`（称为 "类型注解 "或 "类型签名"）来设置我们希望变量的类型。例子。
 
 ```ts
 let id: number = 5;
@@ -215,7 +215,7 @@ let unit: number; // Declare variable without assigning a value
 unit = 5;
 ```
 
-But it's usually best to not explicitly state the type, as TypeScript automatically infers the type of a variable (type inference):
+但通常最好不要明确说明类型，因为TypeScript会自动推断变量的类型(类型推理):
 
 ```js
 let id = 5; // TS knows it's a number
@@ -225,38 +225,38 @@ let hasDog = true; // TS knows it's a boolean
 hasDog = 'yes'; // ERROR
 ```
 
-We can also set a variable to be able to be a union type. **A union type is a variable that can be assigned more than one type**:
+我们也可以将一个变量设定为能够成为联合类型。**联合类型是一个可以被分配到多个类型的变量**:
 
-```js
+```ts
 let age: string | number;
 age = 26;
 age = '26';
 ```
 
-### Reference Types
+### 引用类型
 
-In JavaScript, almost "everything" is an object. In fact (and confusingly), strings, numbers and booleans can be objects if defined with the `new` keyword:
+在JavaScript中，几乎 "所有东西 "都是一个对象。事实上（而且令人困惑的是），如果用`new`关键字定义的话，字符串、数字和布尔都可以成为对象:
 
 ```javascript
 let firstname = new String('Danny');
 console.log(firstname); // String {'Danny'}
 ```
 
-But when we talk of reference types in JavaScript, we are referring to arrays, objects and functions.
+但是，当我们谈论JavaScript中的引用类型时，我们指的是数组、对象和函数。
 
-#### Caveat: primitive vs reference types
+#### 注意事项：原始类型与引用类型
 
-For those that have never studied primitive vs reference types, let's discuss the fundamental difference.
+对于那些从未研究过原始类型与引用类型的人来说，让我们来讨论一下其根本区别。
 
-If a primitive type is assigned to a variable, we can think of that variable as **containing** the primitive value. Each primitive value is stored in a unique location in memory.
+如果一个基元类型被分配给一个变量，我们可以认为该变量是**包含**基元值的。每个基元值都存储在内存中的一个唯一位置。
 
-If we have two variables, x and y, and they both contain primitive data, then they are completely independent of each other:
+如果我们有两个变量x和y，并且它们都包含原始数据，那么它们就完全相互独立。
 
-![Primitive data are stored in unique memory locations](https://www.freecodecamp.org/news/content/images/2022/01/image-66.png)
+![原始数据被存储在唯一的内存位置](https://www.freecodecamp.org/news/content/images/2022/01/image-66.png)
 
-X and Y both contain unique independent primitive data
+X和Y都包含唯一的独立原始数据
 
-```javascript
+```js
 let x = 2;
 let y = 1;
 
@@ -265,27 +265,27 @@ y = 100;
 console.log(x); // 1 (even though y changed to 100, x is still 1)
 ```
 
-This isn't the case with reference types. Reference types refer to a memory location where the object is stored.
+而引用类型则不是这样。引用类型指向的是存储对象的一个内存位置。
 
 ![Reference types memory locations](https://www.freecodecamp.org/news/content/images/2022/01/image-67.png)
 
-point1 and point2 contain a reference to the address where the object is stored
+point1和point2包含一个对存储对象的地址的引用。
 
-```ts
+```js
 let point1 = { x: 1, y: 1 };
 let point2 = point1;
 
 point1.y = 100;
-console.log(point2.y); // 100 (point1 and point2 refer to the same memory address where the point object is stored)
+console.log(point2.y); // 100 (point1和point2多指向的是存储点对象的同一个内存地址)
 ```
 
-That was a quick overview of primary vs reference types. Check out this article if you need a more thorough explanation: [Primitive vs reference types](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0).
+这是对主要类型与参考类型的一个快速概述。如果你需要更深入的解释，请看这篇文章。[原始类型与引用类型](https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)。
 
 #### Arrays in TypeScript
 
-In TypeScript, you can define what type of data an array can contain:
+在TypeScript中，你可以定义一个数组可以包含哪些类型的数据:
 
-```js
+```ts
 let ids: number[] = [1, 2, 3, 4, 5]; // can only contain numbers
 let names: string[] = ['Danny', 'Anna', 'Bazza']; // can only contain strings
 let options: boolean[] = [true, false, false]; can only contain true or false
@@ -299,7 +299,7 @@ ids.push(6);
 ids.push('7'); // ERROR: Argument of type 'string' is not assignable to parameter of type 'number'.
 ```
 
-You can use union types to define arrays containing multiple types:
+你可以使用联合类型来定义包含多种类型的数组:
 
 ```ts
 let person: (string | number | boolean)[] = ['Danny', 1, true];
@@ -307,7 +307,7 @@ person[0] = 100;
 person[1] = {name: 'Danny'} // Error - person array can't contain objects
 ```
 
-If you initialise a variable with a value, it's not necessary to explicitly state the type, as TypeScript will infer it:
+如果你用一个值初始化一个变量，没有必要明确说明类型，因为TypeScript会推断出它的类型:
 
 ```ts
 let person = ['Danny', 1, true]; // This is identical to above example
@@ -315,16 +315,16 @@ person[0] = 100;
 person[1] = { name: 'Danny' }; // Error - person array can't contain objects
 ```
 
-There is a special type of array that can be defined in TypeScript: Tuples. **A tuple is an array with fixed size and known datatypes.** They are stricter than regular arrays.
+一种特殊类型的数组可以在TypeScript中定义。元组（Tuples）。**元组是一个具有固定大小和已知数据类型的数组，** 它们比普通数组更严格。
 
 ```js
 let person: [string, number, boolean] = ['Danny', 1, true];
 person[0] = 100; // Error - Value at index 0 can only be a string
 ```
 
-#### Objects in TypeScript
+#### TypeScript中的对象
 
-Objects in TypeScript must have all the correct properties and value types:
+TypeScript中的对象必须有所有正确的属性和值类型:
 
 ```ts
 // Declare a variable called person with a specific object type annotation
@@ -351,7 +351,7 @@ person = {
 // ERROR: missing the isProgrammer property
 ```
 
-When defining the signature of an object, you will usually use an **interface**. This is useful if we need to check that multiple objects have the same specific properties and value types**:**
+当定义一个对象的签名时，你通常会使用一个 **接口(interface)**。如果我们需要检查多个对象是否具有相同的特定属性和价值类型，这一点很有用 **:**
 
 ```ts
 interface Person {

@@ -373,7 +373,7 @@ let person2: Person = {
 };
 ```
 
-We can also declare function properties with function signatures. We can do this using old-school common JavaScript functions (`sayHi`), or ES6 arrow functions (`sayBye`):
+我们也可以用函数签名来声明函数属性。我们可以使用老式的普通JavaScript function(`sayHi`)，或者ES6的箭头函数（`sayBye`）来做这件事:
 
 ```ts
 interface Speech {
@@ -392,11 +392,11 @@ console.log(sayStuff.sayHi('Heisenberg')); // Hi Heisenberg
 console.log(sayStuff.sayBye('Heisenberg')); // Bye Heisenberg
 ```
 
-Note that in the `sayStuff` object, `sayHi` or `sayBye` could be given an arrow function or a common JavaScript function – TypeScript doesn't care.
+注意在`sayStuff`对象中，`sayHi`或`sayBye`可以被赋予一个箭头函数或一个普通的JavaScript函数--TypeScript并不关心。
 
-#### Functions in TypeScript
+#### TypeScript中的函数
 
-We can define what the types the function arguments should be, as well as the return type of the function:
+我们可以定义函数参数的类型，以及函数的返回类型:
 
 ```ts
 // Define a function called circle that takes a diam variable of type number, and returns a string
@@ -407,7 +407,7 @@ function circle(diam: number): string {
 console.log(circle(10)); // The circumference is 31.41592653589793
 ```
 
-The same function, but with an ES6 arrow function:
+同样的函数，但使用ES6箭头函数:
 
 ```ts
 const circle = (diam: number): string => {
@@ -417,7 +417,7 @@ const circle = (diam: number): string => {
 console.log(circle(10)); // The circumference is 31.41592653589793
 ```
 
-Notice how it isn't necessary to explicitly state that `circle` is a function; TypeScript infers it. TypeScript also infers the return type of the function, so it doesn't need to be stated either. Although, if the function is large, some developers like to explicitly state the return type for clarity.
+请注意，没有必要明确说明`circle'是一个函数；TypeScript会推断它。TypeScript也会推断出函数的返回类型，所以也不需要说明。不过，如果函数很大，有些开发者喜欢明确说明返回类型，以使其清晰明了。
 
 ```ts
 // Using explicit typing 
@@ -431,7 +431,7 @@ const circle = (diam: number) => {
 };
 ```
 
-We can add a question mark after a parameter to make it optional. Also notice below how `c` is a union type that can be a number or string:
+我们可以在一个参数后面加一个问号，使其成为可选参数，不一定需要传入此参数。还注意到下面`c`是一个联合类型，可以是数字或字符串:
 
 ```ts
 const add = (a: number, b: number, c?: number | string) => {
@@ -445,7 +445,7 @@ console.log(add(5, 4, 'I could pass a number, string, or nothing here!'));
 // 9
 ```
 
-A function that returns nothing is said to return void – a complete lack of any value. Below, the return type of void has been explicitly stated. But again, this isn't necessary as TypeScript will infer it.
+一个不返回任何东西的函数被说成是返回void--完全没有任何返回值。下面，已经明确说明了void的返回类型。但是，这也是没有必要的，因为TypeScript会推断出它。
 
 ```ts
 const logMessage = (msg: string): void => {
@@ -455,7 +455,7 @@ const logMessage = (msg: string): void => {
 logMessage('TypeScript is superb'); // This is the message: TypeScript is superb
 ```
 
-If we want to declare a function variable, but not define it (say exactly what it does), **then use a function signature.** Below, the function `sayHello` must follow the signature after the colon:
+如果我们想声明一个函数变量，但不定义它（说清楚它的作用），**就使用一个函数签名。** 下面，函数`sayHello`必须跟在冒号后面的签名:
 
 ```ts
 // Declare the varible sayHello, and give it a function signature that takes a string and returns nothing.
@@ -469,9 +469,9 @@ sayHello = (name) => {
 sayHello('Danny'); // Hello Danny
 ```
 
-### Dynamic (any) types
+### 动态(任意)类型
 
-Using the `any` type, we can basically revert TypeScript back into JavaScript:
+使用`any`类型，我们基本上可以将TypeScript还原成JavaScript:
 
 ```ts
 let age: any = '100';
@@ -482,11 +482,11 @@ age = {
 };
 ```
 
-It's recommended to avoid using the `any` type as much as you can, as it prevents TypeScript from doing its job – and can lead to bugs.
+建议尽量避免使用 "any "类型，因为它妨碍了TypeScript的工作--并可能导致错误。
 
-### Type Aliases
+### 类型别名
 
-Type Aliases can reduce code duplication, keeping our code DRY. Below, we can see that the `PersonObject` type alias has prevented repetition, and acts as a single source of truth for what data a person object should contain.
+类型别名可以减少代码的重复，使我们的代码保持干燥。下面，我们可以看到`PersonObject`类型别名已经防止了重复，并且作为一个单一的真理来源，说明一个人的对象应该包含哪些数据。
 
 ```ts
 type StringOrNumber = string | number;
@@ -515,11 +515,11 @@ const sayGoodbye = (person: PersonObject) => {
 };
 ```
 
-### The DOM and type casting
+### DOM和类型转换
 
-TypeScript doesn't have access to the DOM like JavaScript. This means that whenever we try to access DOM elements, TypeScript is never sure that they actually exist.
+TypeScript并不像JavaScript那样可以访问DOM。这意味着，每当我们试图访问DOM元素时，TypeScript从不确定它们是否真的存在。
 
-The below example shows the problem:
+下面的例子显示了这个问题:
 
 ```ts
 const link = document.querySelector('a');
@@ -527,18 +527,18 @@ const link = document.querySelector('a');
 console.log(link.href); // ERROR: Object is possibly 'null'. TypeScript can't be sure the anchor tag exists, as it can't access the DOM
 ```
 
-With the non-null assertion operator (!) we can tell the compiler explicitly that an expression has value other than `null` or `undefined`. This is can be useful when the compiler cannot infer the type with certainty, but we have more information than the compiler.
+通过非空断言操作符（！），我们可以明确地告诉编译器，一个表达式的值不是 "空 "或 "未定义"。当编译器不能确定地推断出类型，但我们比编译器拥有更多的信息时，这就很有用。
 
 ```ts
-// Here we are telling TypeScript that we are certain that this anchor tag exists
+//  在这里，我们告诉TypeScript，我们确定这个锚点标签存在
 const link = document.querySelector('a')!;
 
 console.log(link.href); // www.freeCodeCamp.org
 ```
 
-Notice how we didn't have to state the type of the `link` variable. This is because TypeScript can clearly see (via Type Inference) that it is of type `HTMLAnchorElement`.
+请注意，我们不必说明`link`变量的类型。这是因为TypeScript可以清楚地看到（通过类型推理）它是`HTMLAnchorElement`类型。
 
-But what if we needed to select a DOM element by its class or id? TypeScript can't infer the type, as it could be anything.
+但是，如果我们需要通过它的类或id来选择一个DOM元素呢？ TypeScript不能推断出类型，因为它可能是任何东西。
 
 ```ts
 const form = document.getElementById('signup-form');
@@ -548,7 +548,7 @@ console.log(form.method);
 // ERROR: Property 'method' does not exist on type 'HTMLElement'.
 ```
 
-Above, we get two errors. We need to tell TypeScript that we are certain `form` exists, and that we know it is of type `HTMLFormElement`. We do this with type casting:
+以上，我们得到了两个错误。我们需要告诉TypeScript，我们确定`form`存在，而且我们知道它是`HTMLFormElement`的类型。我们通过类型转换来实现这一点:
 
 ```ts
 const form = document.getElementById('signup-form') as HTMLFormElement;
@@ -556,9 +556,9 @@ const form = document.getElementById('signup-form') as HTMLFormElement;
 console.log(form.method); // post
 ```
 
-And TypeScript is happy!
+使用TypeScript，感到工作上的愉悦!
 
-TypeScript also has an Event object built in. So, if we add a submit event listener to our form, TypeScript will give us an error if we call any methods that aren't part of the Event object. Check out how cool TypeScript is – it can tell us when we've made a spelling mistake:
+TypeScript也有一个内置的事件对象。所以，如果我们在表单中添加一个提交事件监听器，如果我们调用任何不属于Event对象的方法，TypeScript会给我们一个错误。看看TypeScript有多酷--它可以在我们犯了拼写错误时告诉我们:
 
 ```ts
 const form = document.getElementById('signup-form') as HTMLFormElement;
@@ -571,9 +571,9 @@ form.addEventListener('submit', (e: Event) => {
 
 ```
 
-## Classes in TypeScript
+## TypeScript中的类
 
-We can define the types that each piece of data should be in a class:
+我们可以在一个类中定义每一块数据具体的类型:
 
 ```ts
 class Person {
@@ -598,13 +598,13 @@ const person2 = new Person('Sarah', 'yes', 6); // ERROR: Argument of type 'strin
 console.log(person1.sayHello()); // Hi, my name is Danny and I have 1 pets
 ```
 
-We could then create a `people` array that only includes objects constructed from the `Person` class:
+然后我们可以创建一个`people`数组，其中只包括由`Person`类构建的对象:
 
 ```ts
 let People: Person[] = [person1, person2];
 ```
 
-We can add access modifiers to the properties of a class. TypeScript also provides a new access modifier called `readonly`.
+我们可以在类的属性中添加访问修饰语。TypeScript也提供了一个新的访问修饰符，叫做`只读(readonly)`。
 
 ```ts
 class Person {
@@ -633,7 +633,7 @@ console.log(person1.email); // Error: protected property - only accessible withi
 console.log(person1.pets); // Public property - so no problem
 ```
 
-We can make our code more concise by constructing class properties this way:
+我们可以通过这样构建类(constructing class)的属性来使我们的代码更加简洁:
 
 ```ts
 class Person {
@@ -653,11 +653,11 @@ const person1 = new Person('Danny', false, 'dan@e.com', 1);
 console.log(person1.name); // Danny
 ```
 
-Writing it the above way, the properties are automatically assigned in the constructor – saving us from having to write them all out.
+以上述方式编写，属性会在构造函数中自动分配--省去了我们把它们全部写出来的麻烦。
 
-Note that if we omit the access modifier, by default the property will be public.
+注意，如果我们省略了访问修饰符，默认情况下，该属性将是公共的(public)。
 
-Classes can also be extended, just like in regular JavaScript:
+类也可以被扩展(extend)，就像在普通的JavaScript中一样。:
 
 ```ts
 class Programmer extends Person {
@@ -679,28 +679,28 @@ class Programmer extends Person {
 
 [For more on classes, refer to the official TypeScript docs](https://www.typescriptlang.org/docs/handbook/2/classes.html).
 
-## Modules in TypeScript
+## TypeScript中的模块
 
-In JavaScript, a module is  just a file containing related code. Functionality can be imported and exported between modules, keeping the code well organized.
+在JavaScript中，一个模块只是一个包含相关代码的文件。功能可以在模块之间被导入和导出，使代码保持良好的组织。
 
-TypeScript also supports modules. The TypeScript files will compile down into multiple JavaScript files.
+TypeScript也支持模块。TypeScript文件将被编译成多个JavaScript文件。
 
-In the `tsconfig.json` file, change the following options to support modern importing and exporting:
+在`tsconfig.json`文件中，改变以下选项以支持现代的导入和导出:
 
 ```ts
  "target": "es2016",
  "module": "es2015"
 ```
 
-(Although, for Node projects you very likely want `"module": "CommonJS"` – Node doesn't  yet support modern importing/exporting.)
+(不过，对于Node项目来说，你很可能需要`"模块": "CommonJS"` - Node还不支持现代的导入/导出。)
 
-Now, in your HTML file, change the script import to be of type module:
+现在，在你的HTML文件中，将脚本的导入改为模块类型:
 
 ```html
 <script type="module" src="/public/script.js"></script>
 ```
 
-We can now import and export files using ES6:
+我们现在可以使用ES6导入和导出文件了:
 
 ```ts
 // src/hello.ts
@@ -714,11 +714,11 @@ import { sayHi } from './hello.js';
 sayHi(); // Hello there!
 ```
 
-Note: always import as a JavaScript file, even in TypeScript files.
+注意：总是作为一个JavaScript文件导入，即使在TypeScript文件中。
 
-## Interfaces in TypeScript
+## TypeScript中的接口
 
-Interfaces define how an object should look:
+接口定义了一个对象:
 
 ```ts
 interface Person {
@@ -736,7 +736,7 @@ sayHi({
 }); // Hi John
 ```
 
-You can also define an object type using a type alias:
+你也可以使用一个类型别名来定义一个对象类型:
 
 ```ts
 type Person = {
@@ -754,7 +754,7 @@ sayHi({
 }); // Hi John
 ```
 
-Or an object type could be defined anonymously:
+或者可以匿名地定义一个对象类型:
 
 ```ts
 function sayHi(person: { name: string; age: number }) {
@@ -767,11 +767,11 @@ sayHi({
 }); // Hi John
 ```
 
-Interfaces are very similar to type aliases, and in many cases you can use either. The key distinction is that type aliases cannot be reopened to add new properties, vs an interface which is always extendable.
+接口与类型别名非常相似，在许多情况下，你可以使用这两者。关键的区别是，类型别名不能被重新打开以添加新的属性，而接口总是可以扩展的。
 
-The following examples are taken from the [TypeScript docs](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces).
+下面的例子取自[TypeScript docs](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces)。
 
-Extending an interface:
+扩展一个接口:
 
 ```ts
 interface Animal {
@@ -788,7 +788,7 @@ const bear: Bear = {
 }
 ```
 
-Extending a type via intersections:
+通过交集扩展一个类型:
 
 ```ts
 type Animal = {
@@ -805,7 +805,7 @@ const bear: Bear = {
 }
 ```
 
-Adding new fields to an existing interface:
+在现有接口上添加新字段:
 
 ```ts
 interface Animal {
@@ -823,7 +823,7 @@ const dog: Animal = {
 }
 ```
 
-Here's the key difference: a type cannot be changed after being created:
+这里有一个关键的区别：一个类型在被创建后不能被改变。:
 
 ```ts
 type Animal = {
@@ -836,9 +836,9 @@ type Animal = {
 // ERROR: Duplicate identifier 'Animal'.
 ```
 
-As a rule of thumb, the TypeScript docs recommend using interfaces to define objects, until you need to use the features of a type.
+作为一条经验法则，TypeScript文档推荐使用接口来定义对象，直到你需要使用一个类型的功能。
 
-Interfaces can also define function signatures:
+接口也可以定义函数签名:
 
 ```ts
 interface Person {
@@ -854,17 +854,17 @@ const person1: Person = {
 }
 ```
 
-You may be wondering why we would use an interface over a class in the above example.  
+你可能想知道为什么在上面的例子中我们要使用一个接口而不是一个类。
 
-One advantage of using an interface is that it is only used by TypeScript, not JavaScript. This means that it won't get compiled and add bloat to your JavaScript. Classes are features of JavaScript, so it would get compiled.
+使用接口的一个好处是，它只被TypeScript使用，而不是JavaScript。这意味着它不会被编译，也不会给你的JavaScript增加臃肿。类是JavaScript的特性，所以它会被编译。
 
-Also, a class is essentially an **object factory** (that is, a blueprint of what an object is supposed to look like and then implemented), whereas an interface is a structure used solely for **type-checking**.
+另外，类本质上是一个**对象工厂**（也就是说，一个对象应该是什么样子的蓝图(blueprint)，然后实现），而接口是一个仅用于**类型检查的结构**。
 
-While a class may have initialized properties and methods to help create objects, an interface essentially defines the properties and type an object can have.
+虽然一个类可能有初始化的属性和方法来帮助创建对象，但一个接口基本上定义了一个对象可以拥有的属性和类型。
 
-### Interfaces with classes
+### 有类的接口
 
-We can tell a class that it must contain certain properties and methods by implementing an interface:
+我们可以通过实现一个接口来告诉一个类，它必须包含某些属性和方法:
 
 ```ts
 interface HasFormatter {
@@ -889,7 +889,7 @@ person2 = new Person('Jane', 'TypeScripter1990');
 console.log(person1.format()); // danny
 ```
 
-Ensure that `people` is an array of objects that implement `HasFormatter` (ensures that each person has the format method):
+确保`people`是一个实现`HasFormatter`的对象数组（确保每个人都有一样的 format method）:
 
 ```ts
 let people: HasFormatter[] = [];
@@ -897,9 +897,9 @@ people.push(person1);
 people.push(person2);
 ```
 
-## Literal types in TypeScript
+## TypeScript中的字面类型
 
-In addition to the general types `string` and `number`, we can refer to specific strings and numbers in type positions:
+除了一般的类型`string`和`number`之外，我们还可以在类型位置上引用特定的字符串和数字:
 
 ```js
 // Union type with a literal type in each position
@@ -909,13 +909,13 @@ favouriteColor = 'blue';
 favouriteColor = 'crimson'; // ERROR: Type '"crimson"' is not assignable to type '"red" | "blue" | "green" | "yellow"'.
 ```
 
-## Generics
+## 泛型
 
-Generics allow you to create a component that can work over a variety of types, rather than a single one, **which helps to make the component more reusable.**
+泛型允许你创建一个可以在多种类型上工作的组件，而不是单一的类型，**这有助于使组件更容易重复使用**。
 
-Let's go through an example to show you what that means...
+让我们通过一个例子来告诉你这意味着什么...
 
-The `addID` function accepts any object, and returns a new object with all the properties and values of the passed in object, plus an `id` property with random value between 0 and 1000. In short, it gives any object an ID.
+addID "函数接受任何对象，并返回一个新的对象，该对象具有所有的属性和值，加上一个 "id "属性，其值在0到1000之间。简而言之，它给任何对象一个ID。
 
 ```ts
  const addID = (obj: object) => {
@@ -930,9 +930,9 @@ console.log(person1.id); // 271
 console.log(person1.name); // ERROR: Property 'name' does not exist on type '{ id: number; }'.
 ```
 
-As you can see, TypeScript gives an error when we try to access the `name` property. This is because when we pass in an object to `addID`, we are not specifying what properties this object should have – so TypeScript has no idea what properties the object has (it hasn't "captured" them). So, the only property that TypeScript knows is on the returned object is `id`.
+正如你所看到的，当我们试图访问`name`属性时，TypeScript给出了一个错误。这是因为当我们传入一个对象到`addID`时，我们没有指定这个对象应该有什么属性,所以TypeScript不知道这个对象有什么属性（它没有 "捕获 "它们）。所以，TypeScript知道返回的对象的唯一属性是`id'。
 
-So, how can we pass in any object to `addID`, but still tell TypeScript what properties and values the object has? We can use a _generic_, `<T>` – where `T` is known as the _type parameter_:
+那么，我们怎样才能向`addID`传递任何对象，但仍然告诉TypeScript这个对象有哪些属性和值呢？我们可以使用一个 _generic_,  其中`T`被称为 _type parameter_ :
 
 ```ts
 // <T> is just the convention - e.g. we could use <X> or <A>
@@ -943,9 +943,9 @@ const addID = <T>(obj: T) => {
 };
 ```
 
-What does this do? Well, now when we pass an object into `addID`, we have told TypeScript to capture the type – so `T` becomes whatever type we pass in. `addID` will now know what properties are on the object we pass in.
+这有什么作用？现在，当我们把一个对象传给`addID`时，我们已经告诉TypeScript捕捉类型--所以`T`变成我们传入的任何类型。`addID`现在会知道我们传入的对象有哪些属性。
 
-But, we now have a problem: anything can be passed into `addID` and TypeScript will capture the type and report no problem:
+但是，我们现在有一个问题：任何东西都可以被传入`addID`，TypeScript将捕获类型，并报告没有问题:
 
 ```ts
 let person1 = addID({ name: 'John', age: 40 });
@@ -958,7 +958,7 @@ console.log(person2.id);
 console.log(person2.name); // ERROR: Property 'name' does not exist on type '"Sally" & { id: number; }'.
 ```
 
-When we passed in a string, TypeScript saw no issue. It only reported an error when we tried to access the `name` property. So, we need a constraint: we need to tell TypeScript that only objects should be accepted, by making our generic type, `T`, an extension of `object`:
+当我们传入一个字符串时，TypeScript没有发现问题。它只在我们试图访问`name`属性时报告了一个错误。因此，我们需要一个约束：我们需要告诉TypeScript只接受对象，通过使我们的通用类型`T`成为`object`的扩展。:
 
 ```ts
 const addID = <T extends object>(obj: T) => {
@@ -971,7 +971,7 @@ let person1 = addID({ name: 'John', age: 40 });
 let person2 = addID('Sally'); // ERROR: Argument of type 'string' is not assignable to parameter of type 'object'.
 ```
 
-The error is caught straight away – perfect... well, not quite. In JavaScript, arrays are objects, so we can still get away with passing in an array:
+这个错误被直接抓住了--完美......好吧，不完全是。在JavaScript中，数组是对象，所以我们仍然可以通过传入数组来解决这个问题:
 
 ```ts
 let person2 = addID(['Sally', 26]); // Pass in an array - no problem
@@ -980,7 +980,7 @@ console.log(person2.id); // 824
 console.log(person2.name); // Error: Property 'name' does not exist on type '(string | number)[] & { id: number; }'.
 ```
 
-We could solve this by saying that the object argument should have a name property with string value:
+我们可以通过说对象参数应该有一个带有字符串值的名称属性来解决这个问题:
 
 ```ts
 const addID = <T extends { name: string }>(obj: T) => {
@@ -992,18 +992,18 @@ const addID = <T extends { name: string }>(obj: T) => {
 let person2 = addID(['Sally', 26]); // ERROR: argument should have a name property with string value
 ```
 
-The type can also be passed in to `<T>`, as below – but this isn't necessary most of the time, as TypeScript will infer it.
+类型也可以传递给`<T>`，如下所示 - 但这在大多数情况下是不必要的，因为TypeScript会推断出它。
 
 ```ts
 // Below, we have explicitly stated what type the argument should be between the angle brackets.
 let person1 = addID<{ name: string; age: number }>({ name: 'John', age: 40 });
 ```
 
-**Generics allow you to have type-safety in components where the arguments and return types are unknown ahead of time.**
+**在参数和返回类型提前未知的情况下，泛型允许你在组件中实现类型安全。**
 
-**In TypeScript, generics are used when we want to describe a correspondence between two values.** In the above example, the return type was related to the input type. We used a _generic_ to describe the correspondence.
+**在TypeScript中，当我们想描述两个值之间的对应关系时，可以使用泛型。** 在上面的例子中，返回类型与输入类型相关。我们用一个_generic_来描述这个对应关系。
 
-Another example: If we need a function that accepts multiple types, it is better to use a generic than the `any` type. Below shows the issue with using `any`:
+另一个例子。如果我们需要一个接受多种类型的函数，使用泛型比使用`any`类型更好。下面显示了使用`any'的问题:
 
 ```ts
 function logLength(a: any) {
@@ -1018,7 +1018,7 @@ let howMany = 8;
 logLength(howMany); // undefined (but no TypeScript error - surely we want TypeScript to tell us we've tried to access a length property on a number!)
 ```
 
-We could try using a generic:
+我们可以尝试使用泛型:
 
 ```ts
 function logLength<T>(a: T) {
@@ -1027,9 +1027,9 @@ function logLength<T>(a: T) {
 }
 ```
 
-At least we are now getting some feedback that we can use to tighten up our code.
+至少我们现在得到了一些反馈，我们可以用它来约束我们的代码。
 
-Solution: use a generic that extends an interface that ensures every argument passed in has a length property:
+解决方案：使用一个扩展了接口的泛型，确保传入的每个参数都有一个长度属性:
 
 ```ts
 interface hasLength {
@@ -1048,7 +1048,7 @@ let howMany = 8;
 logLength(howMany); // Error: numbers don't have length properties
 ```
 
-We could also write a function where the argument is an array of elements that all have a length property:
+我们也可以写一个函数，参数是一个元素数组，这些元素都有一个长度属性:
 
 ```ts
 interface hasLength {
@@ -1073,9 +1073,9 @@ logLengths(arr);
 // 30
 ```
 
-Generics are an awesome feature of TypeScript!
+泛型是TypeScript的一个很好的功能!
 
-### Generics with interfaces
+### 带有接口的泛型
 
 When we don't know what type a certain value in an object will be ahead of time, we can use a generic to pass in the type:
 

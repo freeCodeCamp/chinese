@@ -25,27 +25,27 @@ SSE在我心中有一个特殊的位置，因为它很简单。它是轻量级�
 
 在我们开始之前，有几件事情需要记住。
 
-First, logs coming from my scripts are not that frequent, and the overhead of using HTTP is negligible for my use case. Because of this, I decided to publish my logs over a basic REST API and use SSE on the client-side to subscribe the incoming logs.
+首先，来自我的脚本的日志不是那么频繁，而且对于我的使用情况来说，使用HTTP的开销可以忽略不计。正因为如此，我决定通过一个基本的REST API发布我的日志，并在客户端使用SSE来订阅传入的日志。
 
 ![Frame-8-1](https://www.freecodecamp.org/news/content/images/2022/02/Frame-8-1.png)
 
-Logging Example
+日志实例
 
-Second, this tool is mainly for quickly debugging things I'm working on. There are many production-ready and enterprise tools out there that I could use instead. But I wanted something very light and easy to use.
+第二，这个工具主要用于快速调试我正在做的事情。外面有很多生产用的和企业用的工具，我可以用它们代替。但我想要一个非常轻巧和容易使用的工具。
 
-## Let's Write Some Server-side Code
+## 我们来写一些服务器端的代码
 
-The server-side setup is straightforward. So let's start with a diagram to give you an idea of the setup before explaining everything in detail.
+服务器端的设置是很简单的。因此，在详细解释一切之前，让我们从一张图开始，让你对设置有一个概念。
 
 ![Frame-10-1](https://www.freecodecamp.org/news/content/images/2022/02/Frame-10-1.png)
 
-Server Diagram
+服务器图示
 
-If we think of our backend server as a pipeline, on one end we have a series of publishers – in our case, the scripts publishing logs. On the other end, we have some clients subscribing to these logs.
+如果我们把我们的后端服务器看作是一个管道，在一端我们有一系列的发布者--在我们的例子中，是发布日志的脚本。在另一端，我们有一些客户在订阅这些日志。
 
-To connect these two ends, I will be using an RxJS Subject. It will allow me to publish anything from the publishers over REST and then subscribe to these events and forward the messages to the clients over SSE.
+为了连接这两端，我将使用RxJS。它将允许我通过REST发布来自发布者的任何信息，然后订阅这些事件并通过SSE将消息转发给客户端
 
-To get started, let's define our Log interface. To keep things simple, I will only define a content field that will hold our log information.
+为了开始，让我们定义我们的日志接口。为了保持简单，我将只定义一个内容字段，用来保存我们的日志信息。
 
 ```ts
 interface Log {
@@ -53,11 +53,11 @@ interface Log {
 }
 ```
 
-### How to set up RxJS
+### 如何设置RxJS
 
-Let's import RxJS, create a new Subject for our Logs, and define a function to publish our logs to this Subject.
+让我们导入RxJS，为我们的日志创建一个新的Subject，并定义一个函数来发布我们的日志到这个Subject。
 
-Of course, we could export our Subject and directly call it from our router, but I prefer to abstract away the implementation and only provide the emit function to the rest of my code.
+当然，我们可以导出我们的Subject并直接从我们的路由中调用它，但我更喜欢抽象实现，只向我的代码的其他部分提供函数调用。
 
 ```ts
 import { Subject } from 'rxjs';
@@ -74,7 +74,7 @@ export function emitNewLog(log: Log): void {
 }
 ```
 
-Finally, let's define a new route on our Express server that would accept new logs from our client and publish them to the emitNewLog method that we have just created.
+最后，让我们在我们的Express服务器上定义一个新的路由，它将接受来自客户端的新日志，并将它们发布到我们刚刚创建的emitNewLog方法。
 
 ```ts
 app.post('/', (req: Request, res: Response) => {
@@ -85,15 +85,15 @@ app.post('/', (req: Request, res: Response) => {
 });
 ```
 
-We are now done with the publishing side. What's left is to define our SSE route, subscribe to the RxJS Subject, and deliver the logs to our client.
+我们现在已经完成了发布方面的工作。剩下的就是定义我们的SSE路由，订阅RxJS Subject，并将日志交付给我们的客户端。
 
-### How to set up the SSE Route
+### 如何设置SSE路由
 
-Let's define a new route for our SSE connection. To enable SSE, we need to flush a couple of headers back to our client.
+让我们为我们的SSE连接定义一个新的路由。为了启用SSE，我们需要将一些头信息(headers)返回给我们的客户。
 
-We want the **‘Connection’** set to **‘keep-alive’**, **‘Cache-Control’** set to ‘**no-cache**’, and **‘Content-Type’** set to **‘text/event-stream’**. This way our client will understand that this is an SSE route.
+我们希望**'Connection'**设置为**'keep-alive'**，**'Cache-Control'**设置为'**no-cache**'，并且**'Content-Type'**设置为**'text/event-stream'**。这样，我们的客户就会明白这是一个SSE路由。
 
-In addition, I have added **‘Access-Control-Allow-Origin’** for CORS and **‘X-Accel-Buffering’** set to **‘no’** to keep [Nginx](https://www.nginx.com/) from messing with this route. Finally, we can flush the headers back to our client to kickstart the event stream.
+此外，我还为CORS添加了**'Access-Control-Allow-Origin'**，并将**'X-Accel-Buffering'**设置为**'no'**，以防止[Nginx](https://www.nginx.com/)干扰这个路由。最后，我们可以将头信息冲回给我们的客户端，以启动事件流。
 
 ```ts
 app.get('/', (req: Request, res: Response) => {
@@ -106,16 +106,16 @@ app.get('/', (req: Request, res: Response) => {
 });
 ```
 
-We can now start streaming data by writing something into our response.
+我们现在可以通过在我们的响应(response)中写一些东西来开始流式数据(streaming data)。
 
-SSE provides a text-based protocol that we can use to help our clients differentiate between the event types. Each one of our events should look like the following:
+SSE提供了一个基于文本的协议，我们可以用它来帮助我们的客户区分事件的类型。我们的每一个事件都应该看起来像下面这样。
 
 ```ts
 event: ${event name}\n
 data: ${event data}\n\n
 ```
 
-To make my life a bit easier, I have created a helper function to take care of serialization for us.
+为了让我的生活更轻松一些，我创建了一个辅助函数来为我们处理序列化问题。
 
 ```ts
 /**
@@ -129,7 +129,7 @@ function serializeEvent(event: string, data: any): string {
 }
 ```
 
-We can now subscribe to the RxJS Subject we created earlier, serialize each new log, and write it as a **NEW\_LOG** event to our connection.
+我们现在可以订阅我们先前创建的RxJS Subject，序列化每个新的日志，并将其作为一个**NEW/_LOG**事件写入我们的连接。
 
 ```ts
 app.get('/', (req: Request, res: Response) => {
@@ -147,7 +147,7 @@ app.get('/', (req: Request, res: Response) => {
 }
 ```
 
-Finally, we have to make sure to unsubscribe from our observer when the SSE connection is closed. Putting all of these together, we should have something like this:
+最后，我们必须确保在SSE连接关闭时取消对观察者的订阅。把所有这些放在一起，我们应该有这样的东西。
 
 ```ts
 app.get('/', (req: Request, res: Response) => {
@@ -168,17 +168,17 @@ app.get('/', (req: Request, res: Response) => {
 });
 ```
 
-That’s it! We are done with our backend server and it’s time to move to the frontend code.
+这就是了! 我们已经完成了后端服务器的工作，现在是时候进入前台代码了。
 
-## Write the Client Code
+## 编写客户端代码
 
-Subscribing to our SSE route on the browser is very straightforward. First, let’s move to our client code and create a new instance of the **EventSource** interface and pass our endpoint to the constructor.
+在浏览器上订阅我们的SSE路由是非常简单的。首先，让我们移动到我们的客户端代码，创建一个**EventSource**接口的新实例，并将我们的端点传递给构造函数。
 
 ```js
 const eventSource = new EventSource("/");
 ```
 
-Then, we can add event listeners for the events we want to subscribe to (in our case, **NEW\_LOG**) and define a callback method to handle our log.
+然后，我们可以为我们想要订阅的事件添加事件监听器（在我们的例子中，**NEW_LOG**），并定义一个回调方法来处理我们的日志。
 
 ```js
 eventSource.addEventListener(
@@ -189,19 +189,19 @@ eventSource.addEventListener(
 );
 ```
 
-And finally, we can close the connection whenever we are done listening to these events.
+最后，只要我们听完了这些事件，我们就可以关闭连接。
 
 ```js
 eventSource.close();
 ```
 
-## Conclusion
+## 结语
 
-As you can see, Server-Sent Events make it very easy to stream content from the server to the client. They are specifically helpful because we get a built-in interface in most modern browsers, and we can easily poly-fill for those that do not provide the interface.
+正如你所看到的，服务器发送事件使得从服务器到客户端的内容流变得非常容易。它们特别有帮助，因为我们在大多数现代浏览器中得到了一个内置的接口，对于那些不提供接口的浏览器，我们可以很容易地进行降级处理。
 
-In addition, SSE automatically handles re-connect for us in case the client loses connection with the server. Therefore, it is a valid alternative to SocketIO and WebSockets in various scenarios where we need a uni-directional event streaming from the server.
+此外，在客户端与服务器失去连接的情况下，SSE自动为我们处理重新连接。因此，它是SocketIO和WebSockets的有效替代方案，在各种情况下，我们需要从服务器获得单向的事件流。
 
-If you are further interested in this project, I have added a couple of extra functionalities to the code that we just went over and a web GUI that you can check out here: [LogSnag Console](https://logsnag.com/console).
+如果你对这个项目进一步感兴趣，我在刚才的代码中增加了一些额外的功能，还有一个web GUI，你可以在这里查看。[LogSnag Console](https://logsnag.com/console)。
 
 ![Frame-9-1](https://www.freecodecamp.org/news/content/images/2022/02/Frame-9-1.png)
 

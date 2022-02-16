@@ -1,11 +1,7 @@
-> -  原文地址：[Learn TypeScript – The Ultimate Beginners Guide](https://www.freecodecamp.org/news/learn-typescript-beginners-guide/)
-> -  原文作者：[
-                    
-                        Danny Adams
-                    
-                ](https://www.freecodecamp.org/news/author/danny-adams/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Learn TypeScript – The Ultimate Beginners Guide](https://www.freecodecamp.org/news/learn-typescript-beginners-guide/)
+> - 原文作者：[Danny Adams](https://www.freecodecamp.org/news/author/danny-adams/)
+> - 译者：luojiyin
+> - 校对者：
 
 ![Learn TypeScript – The Ultimate Beginners Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/Cheat-Sheet-Poster--1-.png)
 
@@ -17,10 +13,10 @@ Even if you don't plan on using TypeScript, learning it will give you a better u
 
 In this article, you will learn:
 
--   What is TypeScript and why should I learn it?
--   How to set up a project with TypeScript
--   All of the main TypeScript concepts (types, interfaces, generics, type-casting, and more...)
--   How to use TypeScript with React
+- What is TypeScript and why should I learn it?
+- How to set up a project with TypeScript
+- All of the main TypeScript concepts (types, interfaces, generics, type-casting, and more...)
+- How to use TypeScript with React
 
 I also made a [TypeScript cheat sheet PDF](https://doabledanny.gumroad.com/l/typescript-cheat-sheet-pdf) and [poster](https://doabledanny.gumroad.com/l/typescript-cheat-sheet-poster) that summarizes this article down to one page. This makes it easy to look up and revise concepts/syntax quickly.
 
@@ -52,17 +48,17 @@ TypeScript cannot be understood by browsers, so it has to be compiled into JavaS
 
 ### Why you should use TypeScript
 
--   Research has shown that TypeScript can spot 15% of common bugs.
--   Readability – it is easier to see what the code it supposed to do. And when working in a team, it is easier to see what the other developers intended to.
--   It's popular – knowing TypeScript will enable you to apply to more good jobs.
--   Learning TypeScript will give you a better understanding, and a new perspective, on JavaScript.
+- Research has shown that TypeScript can spot 15% of common bugs.
+- Readability – it is easier to see what the code it supposed to do. And when working in a team, it is easier to see what the other developers intended to.
+- It's popular – knowing TypeScript will enable you to apply to more good jobs.
+- Learning TypeScript will give you a better understanding, and a new perspective, on JavaScript.
 
 [Here's a short article I wrote demonstrating how TypeScript can prevent irritating bugs](https://www.doabledanny.com/why-typescript-over-javascript).
 
 ### Drawbacks of TypeScript
 
--   TypeScript takes longer to write than JavaScript, as you have to specify types, so for smaller solo projects it might not be worth using it.
--   TypeScript has to be compiled – which can take time, especially in larger projects.
+- TypeScript takes longer to write than JavaScript, as you have to specify types, so for smaller solo projects it might not be worth using it.
+- TypeScript has to be compiled – which can take time, especially in larger projects.
 
 But the extra time that you have to spend writing more precise code and compiling will be more than saved by how many fewer bugs you'll have in your code.
 
@@ -125,7 +121,7 @@ An interesting thing about TypeScript is that it reports errors in your text edi
 
 For example, the following causes TypeScript to immediately report an error:
 
-```
+```js
 var sport = 'football';
 var id = 5;
 
@@ -149,7 +145,7 @@ You should now have a `tsconfig.json` file in the project root.
 
 Here are some options that are good to be aware of (if using a frontend framework with TypeScript, most if this stuff is taken care of for you):
 
-```
+```json
 {
     "compilerOptions": {
         ...
@@ -182,19 +178,19 @@ Note: when input files are specified on the command line (for example, `tsc inde
 
 In JavaScript, a primitive value is data that is not an object and has no methods. There are 7 primitive data types:
 
--   string
--   number
--   bigint
--   boolean
--   undefined
--   null
--   symbol
+- string
+- number
+- bigint
+- boolean
+- undefined
+- null
+- symbol
 
 Primitives are immutable: they can't be altered. It is important not to confuse a primitive itself with a variable assigned a primitive value. The variable may be reassigned a new value, but the existing value can't be changed in the ways that objects, arrays, and functions can be altered.
 
 Here's an example:
 
-```
+```js
 let name = 'Danny';
 name.toLowerCase();
 console.log(name); // Danny - the string method didn't mutate the string
@@ -221,7 +217,7 @@ unit = 5;
 
 But it's usually best to not explicitly state the type, as TypeScript automatically infers the type of a variable (type inference):
 
-```
+```js
 let id = 5; // TS knows it's a number
 let firstname = 'danny'; // TS knows it's a string
 let hasDog = true; // TS knows it's a boolean
@@ -231,7 +227,7 @@ hasDog = 'yes'; // ERROR
 
 We can also set a variable to be able to be a union type. **A union type is a variable that can be assigned more than one type**:
 
-```
+```js
 let age: string | number;
 age = 26;
 age = '26';
@@ -241,7 +237,7 @@ age = '26';
 
 In JavaScript, almost "everything" is an object. In fact (and confusingly), strings, numbers and booleans can be objects if defined with the `new` keyword:
 
-```
+```javascript
 let firstname = new String('Danny');
 console.log(firstname); // String {'Danny'}
 ```
@@ -252,7 +248,7 @@ But when we talk of reference types in JavaScript, we are referring to arrays, o
 
 For those that have never studied primitive vs reference types, let's discuss the fundamental difference.
 
-If a primitive type is assigned to a variable, we can think of that variable as __containing__ the primitive value. Each primitive value is stored in a unique location in memory.
+If a primitive type is assigned to a variable, we can think of that variable as **containing** the primitive value. Each primitive value is stored in a unique location in memory.
 
 If we have two variables, x and y, and they both contain primitive data, then they are completely independent of each other:
 
@@ -260,7 +256,7 @@ If we have two variables, x and y, and they both contain primitive data, then th
 
 X and Y both contain unique independent primitive data
 
-```
+```javascript
 let x = 2;
 let y = 1;
 
@@ -321,7 +317,7 @@ person[1] = { name: 'Danny' }; // Error - person array can't contain objects
 
 There is a special type of array that can be defined in TypeScript: Tuples. **A tuple is an array with fixed size and known datatypes.** They are stricter than regular arrays.
 
-```
+```js
 let person: [string, number, boolean] = ['Danny', 1, true];
 person[0] = 100; // Error - Value at index 0 can only be a string
 ```
@@ -844,7 +840,7 @@ As a rule of thumb, the TypeScript docs recommend using interfaces to define obj
 
 Interfaces can also define function signatures:
 
-```
+```ts
 interface Person {
   name: string
   age: number
@@ -862,7 +858,7 @@ You may be wondering why we would use an interface over a class in the above exa
 
 One advantage of using an interface is that it is only used by TypeScript, not JavaScript. This means that it won't get compiled and add bloat to your JavaScript. Classes are features of JavaScript, so it would get compiled.
 
-Also, a class is essentially an __object factory__ (that is, a blueprint of what an object is supposed to look like and then implemented), whereas an interface is a structure used solely for __type-checking__.
+Also, a class is essentially an **object factory** (that is, a blueprint of what an object is supposed to look like and then implemented), whereas an interface is a structure used solely for **type-checking**.
 
 While a class may have initialized properties and methods to help create objects, an interface essentially defines the properties and type an object can have.
 
@@ -905,7 +901,7 @@ people.push(person2);
 
 In addition to the general types `string` and `number`, we can refer to specific strings and numbers in type positions:
 
-```
+```js
 // Union type with a literal type in each position
 let favouriteColor: 'red' | 'blue' | 'green' | 'yellow';
 
@@ -1322,9 +1318,9 @@ console.log(getSpeedRatio(bigTrain)); // 5
 
 TypeScript has full support for React and JSX. This means we can use TypeScript with the three most common React frameworks:
 
--   create-react-app ([TS setup](https://create-react-app.dev/docs/adding-typescript/))
--   Gatsby ([TS setup](https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/))
--   Next.js ([TS setup](https://nextjs.org/learn/excel/typescript))
+- create-react-app ([TS setup](https://create-react-app.dev/docs/adding-typescript/))
+- Gatsby ([TS setup](https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/))
+- Next.js ([TS setup](https://nextjs.org/learn/excel/typescript))
 
 If you require a more custom React-TypeScript configuration, you could setup [Webpack](https://webpack.js.org/) (a module bundler) and configure the `tsconfig.json` yourself. But most of the time, a framework will do the job.
 
@@ -1457,15 +1453,15 @@ For more information on React with TypeScript, checkout these [awesome React-Typ
 
 ## Useful resources & further reading
 
--   [The official TypeScript docs](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
--   [The Net Ninja's TypeScript video series](https://www.youtube.com/watch?v=2pZmKW9-I_k&list=PL4cUxeGkcC9gUgr39Q_yD6v-bSyMwKPUI&ab_channel=TheNetNinja) (awesome!)
--   [Ben Awad's TypeScript with React video](https://www.youtube.com/watch?v=Z5iWr6Srsj8&ab_channel=BenAwad)
--   [Narrowing in TypeScript](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) (a very interesting feature of TS that you should learn)
--   [Function overloads](https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads)
--   [Primitive values in JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
--   [JavaScript objects](https://www.w3schools.com/js/js_object_definition.asp)
+- [The official TypeScript docs](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
+- [The Net Ninja's TypeScript video series](https://www.youtube.com/watch?v=2pZmKW9-I_k&list=PL4cUxeGkcC9gUgr39Q_yD6v-bSyMwKPUI&ab_channel=TheNetNinja) (awesome!)
+- [Ben Awad's TypeScript with React video](https://www.youtube.com/watch?v=Z5iWr6Srsj8&ab_channel=BenAwad)
+- [Narrowing in TypeScript](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) (a very interesting feature of TS that you should learn)
+- [Function overloads](https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads)
+- [Primitive values in JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
+- [JavaScript objects](https://www.w3schools.com/js/js_object_definition.asp)
 
-## Thanks for reading!
+## Thanks for reading
 
 Hope that was useful. If you made it to here, you now know the main fundamentals of TypeScript and can start using it in your projects.
 

@@ -1,11 +1,7 @@
-> -  原文地址：[The React Cheatsheet for 2022](https://www.freecodecamp.org/news/the-react-cheatsheet/)
-> -  原文作者：[
-                    
-                        Reed Barger
-                    
-                ](https://www.freecodecamp.org/news/author/reed/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[The React Cheatsheet for 2022](https://www.freecodecamp.org/news/the-react-cheatsheet/)
+> - 原文作者：[Reed Barger](https://www.freecodecamp.org/news/author/reed/)
+> - 译者：
+> - 校对者：
 
 ![The React Cheatsheet for 2022](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/mugshotbot.com_customize_theme-two_up-mode-light-color-pink-pattern-bubbles-image-9129875b-url-https___freecodecamp.org.png)
 
@@ -17,23 +13,23 @@ Let’s get started!
 
 ## Table of Contents
 
--   [React Elements](#react-elements)
--   [React Element Attributes](#react-element-attributes)
--   [React Element Styles](#react-element-styles)
--   [React Fragments](#react-fragments)
--   [React Components](#react-components)
--   [React Props](#react-props)
--   [React Children Props](#react-children-props)
--   [React Conditionals](#react-conditionals)
--   [React Lists](#react-lists)
--   [React Context](#react-context)
--   [React Hooks](#react-hooks)
--   [React useState Hook](#react-usestate-hook)
--   [React useEffect Hook](#react-useeffect-hook)
--   [React useRef Hook](#react-useref)
--   [React useContext Hook](#react-usecontext)
--   [React useCallback Hook](#react-usecallback)
--   [React useMemo Hook](#react-usememo)
+- [React Elements](#react-elements)
+- [React Element Attributes](#react-element-attributes)
+- [React Element Styles](#react-element-styles)
+- [React Fragments](#react-fragments)
+- [React Components](#react-components)
+- [React Props](#react-props)
+- [React Children Props](#react-children-props)
+- [React Conditionals](#react-conditionals)
+- [React Lists](#react-lists)
+- [React Context](#react-context)
+- [React Hooks](#react-hooks)
+- [React useState Hook](#react-usestate-hook)
+- [React useEffect Hook](#react-useeffect-hook)
+- [React useRef Hook](#react-useref)
+- [React useContext Hook](#react-usecontext)
+- [React useCallback Hook](#react-usecallback)
+- [React useMemo Hook](#react-usememo)
 
 ## React Elements
 
@@ -87,7 +83,7 @@ React requires that all returned elements be returned within a single “parent�
 
 For example, we can’t return two sibling elements, like an h1 and a paragraph from a component:
 
-```
+```ts
 // this syntax is invalid
 function MyComponent() {
   return (
@@ -99,7 +95,7 @@ function MyComponent() {
 
 If we don’t want to wrap our elements in a container element like a div, we can use a fragment:
 
-```
+```ts
 // valid syntax
 function MyComponent() {
   return (
@@ -119,12 +115,12 @@ We can organized groups of elements into React components.
 
 A basic function component is written similarly to a regular JavaScript function with a couple of differences.
 
-1.  Component names must start with a capital letter (that is, MyComponent, instead of myComponent)
-2.  Components, unlike JavaScript functions, must return JSX.
+1. Component names must start with a capital letter (that is, MyComponent, instead of myComponent)
+2. Components, unlike JavaScript functions, must return JSX.
 
 Here is the basic syntax of a React function component:
 
-```
+```ts
 function App() {
   return (
      <div>Hello world!</div>
@@ -140,7 +136,7 @@ Props are passed from the parent component to a child component.
 
 Here we are passing a prop `name` from App to the User component.
 
-```
+```ts
 function App() {
   return <User name="John Doe" />
 }
@@ -156,7 +152,7 @@ Props is an object, so we can select the `name` prop within `User` to get its va
 
 Since we are only using the `name` property on the props object, we can make our code simpler with object destructuring:
 
-```
+```ts
 function App() {
   return <User name="John Doe" />
 }
@@ -174,7 +170,7 @@ Props can also be passed by placing data between the opening and closing tags of
 
 Props that are passed this way are placed on the `children` property.
 
-```
+```ts
 function App() {
   return (
    <User>
@@ -194,9 +190,9 @@ React components and elements can be conditionally displayed.
 
 One approach is to create a separate return with an if-statement.
 
-```
+```ts
 function App() {
-	const isAuthUser = useAuth();
+ const isAuthUser = useAuth();
 
   if (isAuthUser) {
     // if our user is authenticated, let them use the app
@@ -212,9 +208,9 @@ If you want to write a conditional within a return statement, however, you must 
 
 To use the ternary operator, wrap the entire conditional in curly braces.
 
-```
+```ts
 function App() {
-	const isAuthUser = useAuth();
+ const isAuthUser = useAuth();
 
   return (
     <>
@@ -233,7 +229,7 @@ Lists of React components can be output using the `.map()` function.
 
 Here we are outputting a list of soccer players using the SoccerPlayer component.
 
-```
+```ts
 function SoccerPlayers() {
   const players = ["Messi", "Ronaldo", "Laspada"];
 
@@ -261,7 +257,7 @@ The problem with props is that sometimes we pass them through components that do
 
 Here is a oversimplified example of passing props through a `Body` component that doesn’t need it:
 
-```
+```ts
 function App() {
   return (
     <Body name="John Doe" />
@@ -325,12 +321,12 @@ Additionally, we can create our own custom hooks that give our app custom functi
 
 Many React hooks were added to the core React library as well. We are going to cover the 6 essential hooks you absolutely need to know:
 
--   useState
--   useEffect
--   useRef
--   useContext
--   useCallback
--   useMemo
+- useState
+- useEffect
+- useRef
+- useContext
+- useCallback
+- useMemo
 
 ## React useState Hook
 
@@ -342,7 +338,7 @@ Like all hooks, we call `useState` at the top of our component and can pass it a
 
 We use array destructuring on the value returned from `useState` to access (1) the stored state and (2) a function to update that state.
 
-```
+```ts
 import { useState } from 'react';
 
 function MyComponent() {
@@ -354,7 +350,7 @@ A basic example of using `useState` is to increment a counter.
 
 We can see the current count from the `count` variable and can increment the state by passing `count + 1` to the `setCount` function.
 
-```
+```ts
 import { useState } from 'react';
 
 function Counter() {
@@ -376,7 +372,7 @@ useEffect is used to perform a side effect, which means to perform an operation 
 
 The basic syntax of useEffect requires a function as a first argument and an array as the second argument.
 
-```
+```ts
 import { useEffect } from 'react';
 
 function MyComponent() {
@@ -388,14 +384,14 @@ function MyComponent() {
 
 If we want to fetch data, we would use `useEffect`, such as in fetching and displaying a list of posts:
 
-```
+```ts
 import { useEffect } from 'react';
 
 function PostList() {
-	 const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([]);
 
    useEffect(() => {
-	   fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('https://jsonplaceholder.typicode.com/posts')
        .then(response => response.json())
        .then(posts => setPosts(posts));
    }, []);
@@ -410,7 +406,7 @@ If that value changes, the effect function will be re-executed.
 
 For example, here is a bit of code that adds or removes the class “overflow-hidden” to the body element whenever the mobile menu is opened or closed.
 
-```
+```ts
 function Mobile({ open }) {
   useEffect(() => {
     const body = document.querySelector("#__next");
@@ -436,7 +432,7 @@ To use `useRef`, call it, get the returned value, and put it on the `ref` prop f
 
 Here is the basic syntax for `useRef`:
 
-```
+```ts
 import { useRef } from 'react';
 
 function MyComponent() {
@@ -450,12 +446,12 @@ Once a ref is attached to a given element, we can use the value stored on `ref.c
 
 For example, if we wanted to write some code that focuses a search input when the users use the key combination Control + K.
 
-```
+```ts
 import { useWindowEvent } from "@mantine/hooks";
 import { useRef } from "react";
 
 function Header() {
-	const inputRef = useRef();
+ const inputRef = useRef();
 
   useWindowEvent("keydown", (event) => {
     if (event.code === "KeyK" && event.ctrlKey) {
@@ -474,7 +470,7 @@ function Header() {
 
 The syntax involves passing the entire Context object that we want to consume into `useContext`. The returned value is the value passed down to Context.
 
-```
+```ts
 import { useContext } from 'react';
 
 function MyComponent() {
@@ -504,7 +500,7 @@ function Body() {
 } 
 
 function Greeting() {
-	const name = useContext(NameContext);
+ const name = useContext(NameContext);
 
   return (
     <h1>Welcome, {name}</h1>
@@ -522,7 +518,7 @@ If we go back to our `PlayerList` example from earlier and add the ability to ad
 
 The way to fix this is to wrap our callback function in `useCallback` and to include its one argument `player` in the dependencies array:
 
-```
+```ts
 function App() {
   const [player, setPlayer] = React.useState("");
   const [players, setPlayers] = React.useState(["Messi", "Ronaldo", "Laspada"]);
@@ -606,9 +602,9 @@ If you enjoyed this cheatsheet and are looking for the ultimate resource to lear
 
 It will give you all the training you need to:
 
--   Go from absolute beginner to React professional in just 30 minutes a day
--   Build 4 full-stack React projects from scratch to deployment
--   Learn a powerful stack of technologies to build any app you like
+- Go from absolute beginner to React professional in just 30 minutes a day
+- Build 4 full-stack React projects from scratch to deployment
+- Learn a powerful stack of technologies to build any app you like
 
 [![Click to join the React Bootcamp](https://reedbarger.nyc3.digitaloceanspaces.com/react-bootcamp-banner.png)](https://reactbootcamp.com)  
 _Click to join the React Bootcamp_

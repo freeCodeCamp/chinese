@@ -1078,7 +1078,7 @@ logLengths(arr);
 
 ### 带有接口的泛型
 
-When we don't know what type a certain value in an object will be ahead of time, we can use a generic to pass in the type:
+当我们不知道一个对象中的某个值会是什么类型时，我们可以使用一个泛型来传递类型:
 
 ```ts
 // The type, T, will be passed in
@@ -1103,9 +1103,9 @@ const person2: Person<string> = {
 };
 ```
 
-## Enums in TypeScript
+## TypeScript中的枚举（Enums）
 
-Enums are a special feature that TypeScript brings to JavaScript. Enums allow us to define or declare a collection of related values, that can be numbers or strings, as a set of named constants.
+枚举（Enums）是TypeScript带给JavaScript的一个特殊功能。枚举允许我们定义或声明相关值的集合，可以是数字或字符串，作为一组命名的常量。
 
 ```ts
 enum ResourceType {
@@ -1132,7 +1132,7 @@ console.log(ResourceType.BOOK); // 1
 console.log(ResourceType.AUTHOR); // 2
 ```
 
-By default, enums are number based – they store string values as numbers. But they can also be strings:
+默认情况下，枚举（enums）是基于数字的--它们将字符串值存储为数字。但是它们也可以是字符串:
 
 ```ts
 enum Direction {
@@ -1146,24 +1146,24 @@ console.log(Direction.Right); // Right
 console.log(Direction.Down); // Down
 ```
 
-Enums are useful when we have a set of related constants. For example, instead of using non-descriptive numbers throughout your code, enums make code more readable with descriptive constants.
+当我们有一组相关的常量时，枚举（Enums）很有用。例如，与其在整个代码中使用非描述性的数字，枚举可以通过描述性的常量使代码更具可读性。
 
-Enums can also prevent bugs, as when you type the name of the enum, intellisense will pop up and give you the list of possible options that can be selected.
+枚举（Enums）也可以防止bug，因为当你输入枚举的名称时，智能感知（intellisense）会弹出，并给出可以选择的可能选项列表。
 
-## TypeScript strict mode
+## TypeScript严格模式
 
-It is recommended to have all strict type-checking operations enabled in the `tsconfig.json` file. This will cause TypeScript to report more errors, but will help prevent many bugs from creeping into your application.
+建议在`tsconfig.json`文件中启用所有严格的类型检查操作。这将导致TypeScript报告更多的错误，但将有助于防止许多错误悄悄进入你的应用程序。
 
 ```ts
  // tsconfig.json
  "strict": true
 ```
 
-Let's discuss a couple of the things that strict mode does: no implicit any, and strict null checks.
+让我们讨论一下严格模式所做的几件事：没有隐含的any类型定义，以及严格的空值检查（null checks）。
 
-### No implicit any
+### 没有隐含的any
 
-In the function below, TypeScript has inferred that the parameter `a` is of `any` type. As you can see, when we pass in a number to this function, and try to log a `name` property, no error is reported. Not good.
+在下面的函数中，TypeScript已经推断出参数`a`是`any`类型。正如你所看到的，当我们传入一个数字到这个函数，并试图通过打印`name`属性值时，没有报告错误。这不太好。
 
 ```ts
 function logName(a) {
@@ -1174,7 +1174,7 @@ function logName(a) {
 logName(97);
 ```
 
-With the `noImplicitAny` option turned on, TypeScript will instantly flag an error if we don't explicitly state the type of `a`:
+在打开 "noImplicitAny "选项的情况下，如果我们没有明确说明`a`的类型，TypeScript将立即标记一个错误:
 
 ```ts
 // ERROR: Parameter 'a' implicitly has an 'any' type.
@@ -1183,11 +1183,11 @@ function logName(a) {
 }
 ```
 
-### Strict null checks
+### 严格的空值检查（null checks）
 
-When the `strictNullChecks` option is false, TypeScript effectively ignores `null` and `undefined`. This can lead to unexpected errors at runtime.
+当 "strictNullChecks "选项为`false`时，没有启用，TypeScript会忽略 `null`和 `undefined`。这可能在运行时出现意外的错误。
 
-With `strictNullChecks` set to true, `null` and `undefined` have their own types, and you'll get a type error if you assign them to a variable that expects a concrete value (for example, `string`).
+当`strictNullChecks`设置为 `true`时，变量被定义为`null`和`undefined`类型，如果你把它们赋给一个期望有具体数值的变量（例如，`string`），你会得到一个类型错误（type error）。
 
 ```ts
 let whoSangThis: string = getSong();
@@ -1202,9 +1202,9 @@ const single = singles.find((s) => s.song === whoSangThis);
 console.log(single.artist);
 ```
 
-Above, `singles.find` has no guarantee that it will find the song – but we have written the code as though it always will.
+上面，`singles.find`不能保证它能找到这`song`，但我们写的代码就好像它总是能找到。
 
-By setting `strictNullChecks` to true, TypeScript will raise an error because we haven't made a guarantee that `single` exists before trying to use it:
+通过设置`strictNullChecks`为true，TypeScript将引发一个错误，因为我们在尝试使用`single`之前没有保证它的存在:
 
 ```ts
 const getSong = () => {
@@ -1223,7 +1223,7 @@ const single = singles.find((s) => s.song === whoSangThis);
 console.log(single.artist); // ERROR: Object is possibly 'undefined'.
 ```
 
-TypeScript is basically telling us to ensure `single` exists before using it. We need to check if it isn't `null` or `undefined` first:
+TypeScript基本上是在告诉我们在使用`single`之前要确保它的存在。我们需要先检查它是否为 `null`或 `undefined`:
 
 ```ts
 if (single) {
@@ -1231,11 +1231,11 @@ if (single) {
 }
 ```
 
-## Narrowing in TypeScript
+## TypeScript中的type narrowing
 
-In a TypeScript program, **a variable can move from a less precise type to a more precise type.** This process is called type narrowing.
+在TypeScript程序中，**变量可以从一个不太精确的类型转移到一个更精确的类型。** 这个过程称为类型缩小（type narrowing）。
 
-Here's a simple example showing how TypeScript narrows down the less specific type of `string | number` to more specific types when we use if-statements with `typeof`:
+下面是一个简单的例子，显示了当我们使用if语句和`typeof`时，TypeScript如何将不太具体的`string | number`的类型缩小到更具体的类型:
 
 ```ts
 function addAnother(val: string | number) {
@@ -1252,7 +1252,7 @@ console.log(addAnother('Woooo')); // Woooo Woooo
 console.log(addAnother(20)); // 40
 ```
 
-Another example: below, we have defined a union type called `allVehicles`, which can either be of type `Plane` or `Train`.
+另一个例子：下面，我们定义了一个名为 `allVehicles`的联合类型，它可以是 `Plane`或 `Train`的类型。
 
 ```ts
 interface Vehicle {
@@ -1275,7 +1275,7 @@ function getSpeedRatio(v: PlaneOrTrain) {
 }
 ```
 
-Since the function `getSpeedRatio` is working with multiple types, we need a way of distinguishing whether `v` is a `Plane` or `Train`. We could do this by giving both types a common distinguishing property, with a literal string value:
+由于函数`getSpeedRatio`要处理多种类型，我们需要一种方法来区分`v`是`Plane`还是`Train`。我们可以通过给这两种类型一个共同的区分属性来做到这一点，该属性有一个字面的字符串值:
 
 ```ts
 // All trains must now have a type property equal to 'Train'
@@ -1293,7 +1293,7 @@ interface Plane extends Vehicle {
 type PlaneOrTrain = Plane | Train;
 ```
 
-Now we, and TypeScript, can narrow down the type of `v`:
+现在，我们和TypeScript可以缩小`v`的类型了:
 
 ```ts
 function getSpeedRatio(v: PlaneOrTrain) {
@@ -1315,17 +1315,17 @@ let bigTrain: Train = {
 console.log(getSpeedRatio(bigTrain)); // 5
 ```
 
-## Bonus: TypeScript with React
+## 奖金：TypeScript与React
 
-TypeScript has full support for React and JSX. This means we can use TypeScript with the three most common React frameworks:
+TypeScript 完全支持 React 和 JSX。这意味着我们可以在三个最常见的React框架中使用TypeScript:
 
 - create-react-app ([TS setup](https://create-react-app.dev/docs/adding-typescript/))
 - Gatsby ([TS setup](https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/))
 - Next.js ([TS setup](https://nextjs.org/learn/excel/typescript))
 
-If you require a more custom React-TypeScript configuration, you could setup [Webpack](https://webpack.js.org/) (a module bundler) and configure the `tsconfig.json` yourself. But most of the time, a framework will do the job.
+如果你需要更多定制的React-TypeScript配置，你可以设置[Webpack](https://webpack.js.org/)（一个模块打包器--module bundler）并自己配置`tsconfig.json`。但大多数时候，一个框架会完成这项工作。
 
-To setup up create-react-app with TypeScript, for example, simply run:
+例如，要用TypeScript设置create-react-app，只需运行:
 
 ```ts
 npx create-react-app my-app --template typescript
@@ -1335,11 +1335,11 @@ npx create-react-app my-app --template typescript
 yarn create react-app my-app --template typescript
 ```
 
-In the src folder, we can now create files with `.ts` (for regular TypeScript files) or `.tsx` (for TypeScript with React) extensions and write our components with TypeScript. This will then compile down into JavaScript in the public folder.
+在src文件夹中，我们现在可以创建以`.ts`（普通TypeScript文件）或`.tsx`（TypeScript with React）为扩展名的文件，用TypeScript编写我们的组件。然后，这将编译成JavaScript文件存储在public文件夹中。
 
-### React props with TypeScript
+### 使用 TypeScript 的 React props
 
-Below, we are saying that `Person` should be a React functional component that accepts a props object with the props `name`, which should be a string, and `age`, which should be a number.
+下面，我们说`Person`应该是一个React功能组件（functional component），它接收一个props对象，其props `name` 应该是一个字符串，`age`应该是一个数字。
 
 ```tsx
 // src/components/Person.tsx
@@ -1360,7 +1360,7 @@ const Person: React.FC<{
 export default Person;
 ```
 
-But most developers prefer to use an interface to specify prop types:
+但大多数开发者更愿意使用一个接口（interface ）来指定`prop type`:
 
 ```tsx
 interface Props {
@@ -1378,7 +1378,7 @@ const Person: React.FC<Props> = ({ name, age }) => {
 };
 ```
 
-We can then import this component into `App.tsx`. If we don't provide the necessary props, TypeScript will give an error.
+然后我们可以把这个组件（component）导入到`App.tsx`中。如果我们没有提供必要的props，TypeScript会给出一个错误。
 
 ```tsx
 import React from 'react';
@@ -1395,7 +1395,7 @@ const App: React.FC = () => {
 export default App;
 ```
 
-Here are a few examples for what we could have as prop types:
+下面是几个例子，说明我们可以有哪些prop types:
 
 ```tsx
 interface PersonInfo {
@@ -1412,11 +1412,11 @@ interface Props {
 }
 ```
 
-### React hooks with TypeScript
+### 使用TypeScript编写React hooks
 
 #### useState()
 
-We can declare what types a state variable should be by using angle brackets. Below, if we omitted the angle brackets, TypeScript would infer that `cash` is a number. So, if want to enable it to also be null, we have to specify:
+我们可以通过使用角括号声明一个状态变量应该是什么类型。下面，如果我们省略了角括号，TypeScript会推断出`cash`是一个数字（number）。所以，如果想让它也成为空值，我们必须指定:
 
 ```tsx
 const Person: React.FC<Props> = ({ name, age }) => {
@@ -1435,7 +1435,7 @@ const Person: React.FC<Props> = ({ name, age }) => {
 
 #### useRef()
 
-`useRef` returns a mutable object that persists for the lifetime of the component. We can tell TypeScript what the ref object should refer to – below we say the prop should be a `HTMLInputElement`:
+`useRef`返回一个可变的对象（mutable object），在组件的生命周期内存在。我们可以告诉TypeScript这个ref对象应该指向什么，下面我们说这个prop应该是一个`HTMLInputElement`:
 
 ```tsx
 const Person: React.FC = () => {
@@ -1450,24 +1450,24 @@ const Person: React.FC = () => {
 };
 ```
 
-For more information on React with TypeScript, checkout these [awesome React-TypeScript cheatsheets](https://react-typescript-cheatsheet.netlify.app/).
+关于React与TypeScript的更多信息，请查看这些[awesome React-TypeScript cheatsheets](https://react-typescript-cheatsheet.netlify.app/)。
 
-## Useful resources & further reading
+## 有用的资源和进一步阅读
 
 - [The official TypeScript docs](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
 - [The Net Ninja's TypeScript video series](https://www.youtube.com/watch?v=2pZmKW9-I_k&list=PL4cUxeGkcC9gUgr39Q_yD6v-bSyMwKPUI&ab_channel=TheNetNinja) (awesome!)
 - [Ben Awad's TypeScript with React video](https://www.youtube.com/watch?v=Z5iWr6Srsj8&ab_channel=BenAwad)
-- [Narrowing in TypeScript](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) (a very interesting feature of TS that you should learn)
+- [Narrowing in TypeScript](https://www.typescriptlang.org/docs/handbook/2/narrowing.html) (TS的一个非常有趣的功能，你应该学习一下)
 - [Function overloads](https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads)
 - [Primitive values in JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
 - [JavaScript objects](https://www.w3schools.com/js/js_object_definition.asp)
 
-## Thanks for reading
+## 感谢您的阅读
 
-Hope that was useful. If you made it to here, you now know the main fundamentals of TypeScript and can start using it in your projects.
+希望这对你有用。如果你走到这里，你现在知道了TypeScript的主要基础知识，可以开始在你的项目中使用它。
 
-Again, you can also download my [one-page TypeScript cheat sheet PDF](https://doabledanny.gumroad.com/l/typescript-cheat-sheet-pdf) or [order a physical poster](https://doabledanny.gumroad.com/l/typescript-cheat-sheet-poster).
+同样，你也可以下载我的[one-page TypeScript cheat sheet PDF](https://doabledanny.gumroad.com/l/typescript-cheat-sheet-pdf) 或者 [订购实物海报](https://doabledanny.gumroad.com/l/typescript-cheat-sheet-poster).
 
-For more from me, you can find me on [Twitter](https://mobile.twitter.com/doabledanny) and [YouTube](https://www.youtube.com/channel/UC0URylW_U4i26wN231yRqvA).
+更多关于我的信息，你可以在[推特](https://mobile.twitter.com/doabledanny) and [油管](https://www.youtube.com/channel/UC0URylW_U4i26wN231yRqvA)上关注我.
 
-Cheers!
+干杯!

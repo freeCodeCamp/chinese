@@ -5,13 +5,13 @@
 
 ![The React Cheatsheet for 2022](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/mugshotbot.com_customize_theme-two_up-mode-light-color-pink-pattern-bubbles-image-9129875b-url-https___freecodecamp.org.png)
 
-Do you want to get up to speed with React as quickly as possible?
+你想尽快掌握React吗？
 
-I’ve put together a super helpful cheatsheet to give you a complete overview of all of the React concepts you need to know in 2022.
+我整理了一份超级有用的手册，让你在2022年对所有你需要知道的React概念有一个完整的概述。
 
-Let’s get started!
+让我们开始吧!
 
-## Table of Contents
+## 目录
 
 - [React Elements](#react-elements)
 - [React Element Attributes](#react-element-attributes)
@@ -33,21 +33,21 @@ Let’s get started!
 
 ## React Elements
 
-React elements are written just like regular HTML elements. You can write any valid HTML element in React.
+React elements 的编写就像普通的HTML元素一样。你可以在React中编写任何有效的HTML elements。
 
-```js
+```jsx
 <h1>My Header</h1>
 <p>My paragraph>
 <button>My button</button>
 ```
 
-We write React elements using a feature called _JSX_.
+我们使用一种叫做 _JSX_ 的功能来编写React elements。
 
-However, because JSX is really just JavaScript functions (and not HTML), the syntax is a bit different.
+然而，由于JSX实际上只是JavaScript函数（而不是HTML），其语法有点不同。
 
-Unlike HTML, single-tag elements (like the img element), must be self-closing. They must end in a forward slash `/`:
+与HTML不同，单标签元素（如img元素），必须是自闭的。它们必须以正斜杠`/`结尾。
 
-```js
+```jsx
 <img src="my-image.png" />
 <br />
 <hr />
@@ -55,11 +55,11 @@ Unlike HTML, single-tag elements (like the img element), must be self-closing. T
 
 ## React Element Attributes
 
-Additionally, JSX requires a different syntax for its attributes.
+此外，JSX要求其属性使用不同的语法。
 
-Since JSX is really JavaScript and JavaScript uses a camelcase naming convention (that is, “camelCase”), attributes are written differently than HTML.
+因为JSX实际上是JavaScript，而JavaScript使用骆峰的命名惯例（即 "camelCase"），属性的写法与HTML不同。
 
-The most common example is the `class` attribute, which we write as `className`.
+最常见的例子是`class`属性，我们写成`className`。
 
 ```js
 <div className="container"></div>
@@ -67,9 +67,9 @@ The most common example is the `class` attribute, which we write as `className`.
 
 ## React Element Styles
 
-To apply inline styles, instead of using double quotes (“”), we use two sets of curly braces.
+为了应用内联样式，我们不使用双引号（""），而使用两组大括号。
 
-Inline styles are not written as plain strings, but as properties on objects:
+内联样式不是写成普通字符串，而是写成对象的属性:
 
 ```js
 <h1 style={{ fontSize: 24, margin: '0 auto', textAlign: 'center' }}>My header</h1>
@@ -77,11 +77,11 @@ Inline styles are not written as plain strings, but as properties on objects:
 
 ## React Fragments
 
-React also gives us an element called a _fragment_.
+RReact还为我们提供了一个叫做 _fragment_ 的元素。
 
-React requires that all returned elements be returned within a single “parent” component.
+React要求所有返回的元素都要在一个 "父（parent）"组件中返回。
 
-For example, we can’t return two sibling elements, like an h1 and a paragraph from a component:
+例如，我们不能从一个组件中返回两个同级别的元素，比如一个h1和一个段落（paragraph）:
 
 ```ts
 // this syntax is invalid
@@ -93,7 +93,7 @@ function MyComponent() {
 } 
 ```
 
-If we don’t want to wrap our elements in a container element like a div, we can use a fragment:
+如果我们不想把我们的元素包裹在像div这样的容器元素中，我们可以使用一个片段:
 
 ```ts
 // valid syntax
@@ -107,18 +107,18 @@ function MyComponent() {
 } 
 ```
 
-We can write fragments in a regular or shorthand syntax: <React.Fragment></React.Fragment> or <></>.
+我们可以用常规或速记的语法来写片段: <React.Fragment></React.Fragment> 或者 <></>.
 
 ## React Components
 
-We can organized groups of elements into React components.
+我们可以将各组元素（elements）组织成React组件。
 
-A basic function component is written similarly to a regular JavaScript function with a couple of differences.
+一个基本的函数组件的写法与普通的JavaScript函数类似，但有一些区别。
 
-1. Component names must start with a capital letter (that is, MyComponent, instead of myComponent)
-2. Components, unlike JavaScript functions, must return JSX.
+1. 组件名称必须以大写字母开头（即MyComponent，而不是myComponent）。
+2. 组件，与JavaScript函数不同，必须返回JSX。
 
-Here is the basic syntax of a React function component:
+下面是一个React函数组件的基本语法:
 
 ```ts
 function App() {
@@ -130,11 +130,11 @@ function App() {
 
 ## React Props
 
-React components can accept data passed to them called _props_.
+React组件可以接受传递给它们的数据，称为_props_。
 
-Props are passed from the parent component to a child component.
+Props从父组件传递给子组件。
 
-Here we are passing a prop `name` from App to the User component.
+在这里，我们从App向User组件传递一个道具`name`。
 
 ```ts
 function App() {

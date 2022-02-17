@@ -1,11 +1,7 @@
-> -  原文地址：[How to Use PropTypes in React](https://www.freecodecamp.org/news/how-to-use-proptypes-in-react/)
-> -  原文作者：[
-                    
-                        Ateev Duggal
-                    
-                ](https://www.freecodecamp.org/news/author/ateev-duggal/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Use PropTypes in React](https://www.freecodecamp.org/news/how-to-use-proptypes-in-react/)
+> - 原文作者：[Ateev Duggal](https://www.freecodecamp.org/news/author/ateev-duggal/)
+> - 译者：
+> - 校对者：
 
 ![How to Use PropTypes in React](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/props.png)
 
@@ -288,6 +284,6 @@ PropTypes are a great way to catch errors at run time and act as the first line 
 
 You can also go through some of my other blogs:
 
-1.  [What do you mean by the term **Virtual DOM** in React](https://tekolio.com/react-virtual-dom-explained-in-simple-words/)
-2.  [What are Hooks in React?](https://tekolio.com/what-are-hooks-in-react/)
-3.  [How to make a portfolio in React](https://tekolio.com/how-i-made-my-portfolio-in-react/)
+1. [What do you mean by the term **Virtual DOM** in React](https://tekolio.com/react-virtual-dom-explained-in-simple-words/)
+2. [What are Hooks in React?](https://tekolio.com/what-are-hooks-in-react/)
+3. [How to make a portfolio in React](https://tekolio.com/how-i-made-my-portfolio-in-react/)

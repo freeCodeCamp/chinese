@@ -146,11 +146,11 @@ function User(props) {
 }
 ```
 
-Props is an object, so we can select the `name` prop within `User` to get its value.
+Props是一个对象，所以我们可以选择`User`中的`name` prop 来获得其值。
 
-> To embed any dynamic value (that is, a variable or expression) within JSX, you must wrap it in curly braces.
+> 要在JSX中嵌入任何动态值（即一个变量或表达式），你必须用大括号把它包起来。
 
-Since we are only using the `name` property on the props object, we can make our code simpler with object destructuring:
+由于我们只使用props对象上的`name`属性，我们可以通过对象重构使我们的代码更加简单:
 
 ```ts
 function App() {
@@ -162,13 +162,13 @@ function User({ name }) {
 }
 ```
 
-Any JavaScript value can be passed as a prop, including other elements and components.
+任何JavaScript值都可以作为一个prop传递，包括其他元素和组件。
 
 ## React Children Props
 
-Props can also be passed by placing data between the opening and closing tags of a component.
+props也可以通过在组件的开端（opening）和结束（closing）标记之间放置数据来传递。
 
-Props that are passed this way are placed on the `children` property.
+props以这种方式传递被放置在 `子（children）`属性上。
 
 ```ts
 function App() {
@@ -186,9 +186,9 @@ function User({ children }) {
 
 ## React Conditionals
 
-React components and elements can be conditionally displayed.
+React组件和元素可以有条件地（conditionally）显示。
 
-One approach is to create a separate return with an if-statement.
+一种方法是用if语句创建一个单独的返回。
 
 ```ts
 function App() {
@@ -204,9 +204,9 @@ function App() {
 }
 ```
 
-If you want to write a conditional within a return statement, however, you must use a conditional that resolves to a value.
+然而，如果你想在返回语句中写条件，你必须判断值的条件。
 
-To use the ternary operator, wrap the entire conditional in curly braces.
+要使用三元操作符，请将整个条件包在大括号内。
 
 ```ts
 function App() {
@@ -223,11 +223,11 @@ function App() {
 
 ## React Lists
 
-Lists of React components can be output using the `.map()` function.
+React组件的列表可以使用`.map()`函数来输出。
 
-`.map()` allows us to loop over arrays of data and output JSX.
+`.map()`允许我们在数据的数组上循环并输出JSX。
 
-Here we are outputting a list of soccer players using the SoccerPlayer component.
+这里我们使用SoccerPlayer组件输出一个足球运动员的列表。
 
 ```ts
 function SoccerPlayers() {
@@ -243,19 +243,19 @@ function SoccerPlayers() {
 }
 ```
 
-Whenever you are looping over an array of data, you must include the _key_ prop on the element or component over which you are looping.
+每当你在一个数据数组上循环时，你必须在你要循环的元素或组件上包含 _key_ prop。
 
-Additionally, this key prop must be given a unique value, not just an element index.
+此外，这个键（key）prop必须被赋予一个唯一的值，而不仅仅是一个元素索引（element index）。
 
-In the example above, we are using a value which we know to be unique, which is the `playerName`.
+在上面的例子中，我们使用了一个我们知道是唯一的值，也就是`playerName`。
 
 ## React Context
 
-React context allows us to pass data to our component tree without using props.
+React context 允许我们在不使用props的情况下向我们的组件树传递数据。
 
-The problem with props is that sometimes we pass them through components that don’t need to receive them. This problem is called _props drilling_.
+使用props的问题是，有时我们会通过那些不需要接收props的组件来传递他们（中间层组件并不需要这些props，再下级组件需要这些props，只是做向下转发）。这个问题被称为 _props drilling_。
 
-Here is a oversimplified example of passing props through a `Body` component that doesn’t need it:
+下面是一个最简单的例子，通过一个不需要props的`Body`组件传递prop:
 
 ```ts
 function App() {
@@ -275,15 +275,15 @@ function Greeting({ name }) {
 }
 ```
 
-> Before using Context, its best to see if our components can be better organized to avoid passing props through components that don’t need it.
+> 在使用Context之前，最好先看看我们的组件是否可以更好地组织起来，以避免向不需要props的组件传递props。
 
-To use Context, we use the `createContext` function from React.
+为了使用Context，我们使用React的`createContext`函数。
 
-We can call it with an initial value to be put on context.
+我们可以用一个初始值来调用它，放在context上。
 
-The created context includes a `Provider` and a `Consumer` property, which are each components.
+创建的context包括一个`Provider`和一个`Consumer`属性,它们都是组件。
 
-We wrap the Provider around the component tree that we want to pass the given value down. Next, we place the Consumer in the component we want to consume the value.
+我们将提供者（Provider）包裹在我们想要向下传值的组件树上。接下来，我们把消费者（Consumer）放在我们想要消费的组件中。
 
 ```js
 import { createContext } from 'react';
@@ -313,13 +313,13 @@ function Greeting() {
 
 ## React Hooks
 
-React hooks were introduced in React version 16.8 as a way to easily add reusable, stateful logic to React function components.
+React Hooks是在React 16.8版本中引入的，作为一种向React功能组件轻松添加可重用的、有状态的逻辑的方式。
 
-Hooks let us use all the features that were previously only available in class components.
+Hook让我们使用所有以前只在类组件中可用的功能。
 
-Additionally, we can create our own custom hooks that give our app custom functionality.
+此外，我们还可以创建自己的自定义Hook，赋予我们的应用程序自定义功能。
 
-Many React hooks were added to the core React library as well. We are going to cover the 6 essential hooks you absolutely need to know:
+许多React Hook也被添加到核心React库中。我们将介绍你绝对需要知道的6个基本钩子:
 
 - useState
 - useEffect

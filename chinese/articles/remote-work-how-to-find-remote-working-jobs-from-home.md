@@ -5,53 +5,53 @@
 
 ![Remote Work – How to Find Remote Working Jobs from Home](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/kornel-mahl-mV4GwTDD8Tw-unsplash.jpg)
 
-Remote work is becoming more common and more popular, as an increasing number of people want to have a flexible working schedule.
+远程工作正变得越来越普遍，越来越受欢迎，因为越来越多的人希望有一个灵活的工作时间。
 
-There is no better time than now to find a remote job and to work from home.
+没有比现在更好的时机来寻找一份远程工作，在家里工作。
 
-There are plenty of roles that can be done remotely, especially in the technology sector.
+有很多角色可以远程工作，特别是在技术领域。
 
-From product design and product management, to graphic design, marketing, sales and web development – web development jobs are one of the most popular and highly sought after roles.
+从产品设计和产品管理，到平面设计、市场营销、销售和web开发。web开发工作是最受欢迎的,备受追捧的角色之一。
 
-In this article you'll see some of the ways you can find a remote **developer** role, when you're still early in your career.
+在这篇文章中，你将看到一些可以找到远程**开发员角色**的方法，当你的职业生涯还处于早期阶段。
 
-We'll first go over how this shift towards remote work has occured in the last few years, as well as some of the pros and cons of working remotely.
+我们将首先讨论在过去几年里这种向远程工作的转变是如何发生的，以及远程工作的一些优点和缺点。
 
-Then, we'll see some strategies to help you land a remote developer role and some ways to stand out to future employers.
+然后，我们将看到一些帮助你获得远程开发角色的策略，以及一些让你在未来雇主面前脱颖而出的方法。
 
-If you only want to just see some of the most popular remote job boards, skip to [this part](#jobs)
+如果你只想看一些最受欢迎的远程招聘网站，请跳到[这一部分](#jobs)
 
-## The Shift Towards Remote Work
+## 向远程工作转变
 
-The Covid-19 pandemic took the world by surprise in the beginning of 2020.
+2020年初，Covid-19大流行病让世界措手不及。
 
-As everything started to shut down, a lot of workers were required and encouraged to work from home, making many companies remote overnight.
+由于一切都开始关闭（shut down），很多工人被要求和鼓励在家工作，使许多公司一夜之间变成了偏远地区。
 
-It's safe to say that the pandemic completely changed working life. What initially was a forced pivot is turning out to be a new world and a new way of working which is likely here to stay.
+可以说，这场大流行病完全改变了工作生活。最初是一个被迫的转折，现在变成了一个新的世界和一种新的工作方式，而这种工作方式很可能会在这里停留。
 
-People's relationship with work has started to change. The view on fixed work spaces and workers needing to gather under the same office roof – something that has been considered the norm since the Industrial Revolution – has started to change.
+人们与工作的关系已经开始改变。对固定工作场所和工人需要聚集在同一办公室内的看法，自工业革命以来一直被认为是规范的东西，已经开始改变。
 
-With electronic means of communication such as e-mail and chat services widely available, along with communication platforms and shared documents, there doesn't seem to be an urgent need for many types of workers to be in the same building anymore.
+随着电子通信手段，如电子邮件和聊天服务的广泛使用，以及通信平台和共享文件，许多类型的工人似乎不再迫切需要在同一建筑物内。
 
-Many people are now also reconsidering the idea of clocking in and out of work at set, fixed days and hours and becoming more aware of their time and what matters the most to them. After all, some may be more productive during the weekends and get more done on those days, instead of solely during a strict Monday to Friday and 9 - 5 schedule.
+许多人现在也在重新考虑在固定的日子和时间打卡上班和下班的想法，并变得更加了解自己的时间和对自己最重要的事情。毕竟，有些人可能在周末更有效率，在那些日子里完成更多的工作，而不是仅仅在严格的周一到周五和朝九晚五的时间表中。
 
-## The Pros and Cons of Remote Work
+## 远程工作的利与弊
 
-The Pros and Cons of remote work are relative to every individual.
+远程工作的优点和缺点是因人而异的。
 
-But in general, some **pros** of working remote that benefit both the companies and the people working at the companies, are the following:
+但总的来说，远程工作的一些**优点**，对公司和在公司工作的人都有好处，具体如下:
 
-- Flexible working schedules and locations typically increase productivity and performance.
-- The above point leads to employees having more autonomy and independence which in turn leads to a happier workforce. Employees that feel trusted by their employers and have that level of freedom are more content with their jobs, efficient with their time, and more motivated to get their work done.
-- Remote work allows you to travel and work from any part of the globe and become a digital nomad, making your own work schedule. When working in tech specifically, all you need is a good internet connection, a laptop, and good skills.
-- With remote work you also place emphasis on producing quality work where you are highly focused on the task for a set amount of time that works for you. In a 9 - 5 job the bulk of the work for the day may be finished before 5 o'clock, but you'll still need to remain at the office and possibly not be as productive as you were during the remaining time.
-- Office space is expensive, with companies paying thousands of dollars for office space every year per employee. Remote work would cut those costs, saving significant amounts of money.
-- Remote work also means that long commutes to get into office everyday are no longer needed. Commuting often means spending a lot of time stuck in traffic, spending money on gas, or using crowded public transportation systems everyday. People can spend a lot of time can commuting - it's not uncommon for commuters to spend more than two hours each day getting to the office and going back home. This is often a cause of major stress. Not commuting to and from work can save a significant amount of time and money.
-- With remote work, there is the opportunity to form distributed teams and hire people from all around the globe. This is more representative of the world as it is. Having people with diverse perspectives and backgrounds, with each having a wealth of different experiences to draw from, would in turn result in creating better products and services.
-- With remote work you also get to spend more time with your family and loved ones.
-- "With great freedom comes great responsibility" is a phrase that stands true when it comes to remote work. Often remote workers have a greater connection to the company's mission, which leads to greater motivation and sense of purpose. If you are not aligned with the company's values and don't find the work rewarding, it may be tempting to not put in the effort when there is no one watching you like there is in a 9 - 5 traditional office job.
+- 灵活的工作时间和地点通常会提高生产力和业绩。
+- 上述观点基于员工拥有更多的自主权和独立性，这反过来又导致了更快乐的员工队伍。感到被雇主信任并拥有这种自由度的员工对他们的工作更满意，对他们的时间更有效率，对完成他们的工作更有动力。
+- 远程工作允许你在全球任何地方旅行和工作，成为一个数字游民，制定自己的工作时间表。具体从事技术工作时，你只需要一个良好的网络连接，一台笔记本电脑和良好的技能。
+- 在远程工作中，你也会强调产生高质量的工作，在对你有用的固定时间内高度集中于任务。在朝九晚五的工作中，一天的大部分工作可能会在5点前完成，但你仍然需要留在办公室，而且在剩下的时间里，你的工作效率可能会降低。
+- 办公空间是昂贵的，公司每年为每个员工支付数千美元的办公空间。远程工作将削减这些成本，节省大量的资金。
+- 远程工作也意味着不再需要每天长途跋涉去办公室了。通勤往往意味着每天花大量时间堵在路上，花钱买汽油，或使用拥挤的公共交通系统。人们可以花很多时间在通勤上--通勤者每天花两个多小时去办公室和回家是很常见的。这往往是造成重大压力的一个原因。不上下班可以节省大量的时间和金钱。
+- 有了远程工作，就有机会组建分布式团队，雇用来自全球各地的人员。这更能代表世界的本来面目。拥有不同观点和背景的人，每个人都有丰富的不同经验可以借鉴，反过来会创造出更好的产品和服务。
+- 通过远程工作，你还可以花更多时间与你的家人和爱人在一起。
+- "巨大的自由伴随着巨大的责任"，这句话在远程工作方面是正确的。通常情况下，远程工作者与公司的使命有更大的联系，这导致更大的动力和目的感。如果你与公司的价值观不一致，也不觉得工作有意义，在没有人像传统办公室工作那样盯着你的情况下，你可能很想不付出努力。
 
-There are also some potential **cons** of remote working:
+远程工作也有一些潜在的**弊端**:
 
 - There are concerns around productivity. For example, a lack of a dedicated space and set up in your home where you can work comfortably and quietly could potentially lead to a decrease in productivity.
 - A lack of a good Wifi connection, Internt speed, and decent voice quality could lead to troubles in communication. When a connection is not consistent and there are frequent disconnections, it makes communicating with team members difficult. Similarly, having poor voice quality, a microphone that doesn't work properly, or a lot of background noise can be distraction for others and make communicating over meetings harder.

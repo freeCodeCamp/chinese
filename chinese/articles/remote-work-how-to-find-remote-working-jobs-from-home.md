@@ -1,6 +1,6 @@
 > - 原文地址：[Remote Work – How to Find Remote Working Jobs from Home](https://www.freecodecamp.org/news/remote-work-how-to-find-remote-working-jobs-from-home/)
 > - 原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
-> - 译者：
+> - 译者：luojiyin
 > - 校对者：
 
 ![Remote Work – How to Find Remote Working Jobs from Home](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/kornel-mahl-mV4GwTDD8Tw-unsplash.jpg)

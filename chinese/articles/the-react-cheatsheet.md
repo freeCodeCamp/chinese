@@ -330,13 +330,13 @@ Hook让我们使用所有以前只在类组件中可用的功能。
 
 ## React useState Hook
 
-`useState` does exactly what it says—it allows us to use stateful values in function components.
+`useState`的作用正如它所说的--它允许我们在函数组件中使用有状态的值（stateful values）。
 
-useState is used instead of a simple variable because when state is updated, our component re-renders, usually to display that updated value.
+useState被用来代替一个简单的变量，因为当状态被更新时，我们的组件会重新渲染，通常是为了显示更新的值。
 
-Like all hooks, we call `useState` at the top of our component and can pass it an initial value to put on its state variable.
+像所有的Hook一样，我们在组件的顶部调用`useState'，并可以传递一个初始值给它的状态变量（state variable）。
 
-We use array destructuring on the value returned from `useState` to access (1) the stored state and (2) a function to update that state.
+我们在`useState`返回的值上使用数组析构，以访问（1）存储的状态（stored state）和（2）更新该状态的函数。
 
 ```ts
 import { useState } from 'react';
@@ -346,9 +346,9 @@ function MyComponent() {
 }
 ```
 
-A basic example of using `useState` is to increment a counter.
+一个使用`useState'的基本例子是让一个计数器自增。
 
-We can see the current count from the `count` variable and can increment the state by passing `count + 1` to the `setCount` function.
+我们可以从`count`变量中看到当前的计数，并可以通过向`setCount`函数传递`count + 1`来增加状态。
 
 ```ts
 import { useState } from 'react';
@@ -366,11 +366,11 @@ function Counter() {
 
 ## React useEffect Hook
 
-If we want to interact with the “outside world”, such as using an API, we use the `useEffect` hook.
+如果我们想与 "外部世界 "互动，例如使用API，我们使用`useEffect Hook`。
 
-useEffect is used to perform a side effect, which means to perform an operation that exists outside of our app that doesn’t have a predictable result.
+useEffect用于执行一个副作用（side effect），这意味着执行一个存在于我们的应用程序之外的操作，没有一个可预测的结果。
 
-The basic syntax of useEffect requires a function as a first argument and an array as the second argument.
+useEffect的基本语法需要一个函数作为第一个参数，一个数组作为第二个参数。
 
 ```ts
 import { useEffect } from 'react';
@@ -382,7 +382,7 @@ function MyComponent() {
 }
 ```
 
-If we want to fetch data, we would use `useEffect`, such as in fetching and displaying a list of posts:
+如果我们想获取数据，我们会使用`useEffect`，例如在获取和显示帖子列表时:
 
 ```ts
 import { useEffect } from 'react';
@@ -400,11 +400,11 @@ function PostList() {
 }
 ```
 
-If we need to use a value that comes from outside the effect function, it must be included in the dependencies array.
+如果我们需要使用一个来自 effect function之外的值，它必须被包含在依赖关系数组中。
 
-If that value changes, the effect function will be re-executed.
+如果该值发生变化，效果函数将被重新执行。
 
-For example, here is a bit of code that adds or removes the class “overflow-hidden” to the body element whenever the mobile menu is opened or closed.
+例如，这里有一段代码，每当移动菜单被打开或关闭时，都会在body元素上添加或删除 "overflow-hidden "类。
 
 ```ts
 function Mobile({ open }) {
@@ -424,13 +424,13 @@ function Mobile({ open }) {
 
 ## React useRef
 
-`useRef` allows us to get direct access to a JSX element.
+`useRef`允许我们直接访问一个JSX元素。
 
-To use `useRef`, call it, get the returned value, and put it on the `ref` prop for a given React element.
+要使用`useRef`，调用它，得到返回的值，并把它放在给定React元素的`ref` prop上。
 
-> Refs do not have a built-in prop on components, only React elements.
+> Refs在组件上没有内置道具，只有React元素。
 
-Here is the basic syntax for `useRef`:
+下面是`useRef`的基本语法:
 
 ```ts
 import { useRef } from 'react';
@@ -442,9 +442,9 @@ function MyComponent() {
 }
 ```
 
-Once a ref is attached to a given element, we can use the value stored on `ref.current` to access the element itself.
+当ref被附加到一个给定的元素，我们可以使用存储在`ref.current`上的值来访问元素本身。
 
-For example, if we wanted to write some code that focuses a search input when the users use the key combination Control + K.
+例如，如果我们想写一些代码，当用户使用组合键Control + K时，集中搜索输入。
 
 ```ts
 import { useWindowEvent } from "@mantine/hooks";
@@ -466,9 +466,9 @@ function Header() {
 
 ## React useContext
 
-`useContext` provides an easier way of consuming context than using the standard Context.Consumer component.
+`useContext`提供了一种比使用标准的Context.Consumer组件更简单的消费上下文（consuming context）的方法。
 
-The syntax involves passing the entire Context object that we want to consume into `useContext`. The returned value is the value passed down to Context.
+其语法包括将我们想要消费的整个Context对象传入`useContext`。返回的值是传给Context的值。
 
 ```ts
 import { useContext } from 'react';
@@ -480,7 +480,7 @@ function MyComponent() {
 }
 ```
 
-To rewrite our example from earlier, using the `useContext` hook:
+重写我们前面的例子，使用`useContext` Hook:
 
 ```js
 import { createContext, useContext } from 'react';
@@ -510,13 +510,13 @@ function Greeting() {
 
 ## React useCallback
 
-`useCallback` is a hook that we use to help with our app's performance.
+`useCallback`是一个hook，我们用它来帮助我们的应用程序的性能。
 
-Specifically, it prevents functions from being recreated every time our component re-renders, which can hurt the performance of our app.
+具体来说，它可以防止我们的组件重新渲染时都要重新创建函数，减少损害我们应用程序的性能的可能性。
 
-If we go back to our `PlayerList` example from earlier and add the ability to add players to our array, when we pass down a function to remove them (`handleRemovePlayer`) via props, the function will be recreated every time.
+如果我们回到前面的`PlayerList`的例子，并增加向我们的数组添加球员的能力，当我们通过props传递一个函数来删除他们（`handleRemovePlayer`）时，这个函数将每次都被重新创建。
 
-The way to fix this is to wrap our callback function in `useCallback` and to include its one argument `player` in the dependencies array:
+解决这个问题的方法是将我们的回调函数包裹在`useCallback`中，并将其一个参数`player`纳入依赖数组:
 
 ```ts
 function App() {
@@ -557,19 +557,19 @@ function PlayerList({ players, handleRemovePlayer }) {
 
 ## React useMemo
 
-`useMemo` is another performance hook that allows us to ‘memoize’ a given operation.
+`useMemo`是另一个性能 hook，它允许我们 "记忆"一个特定的操作。
 
-Memoization makes it possible to remember the result of expensive calculations when they have already been made so we don’t have to make them again.
+记忆使我们有可能记住已经进行的昂贵的计算结果，这样我们就不必再进行计算了。
 
-Like `useEffect` and `useCallback`, `useMemo` accepts a callback function and a dependencies array.
+像`useEffect`和`useCallback`一样，`useMemo`接受一个回调函数和一个依赖性数组。
 
-Unlike both of these functions, however, `useMemo` is intended to return a value.
+然而，与这两个函数不同的是，`useMemo'的目的是返回一个值。
 
-> You must return the value either explicitly with the `return` keyword or implicitly but using the arrow function shorthand (seen below).
+> 你必须用`return`关键字显式地返回数值，或者隐式地使用箭头函数速记（shorthand）（见下文）。
 
-A real-world example of `useMemo` comes from the mdx-bundler documentation. `mdx-bundler` is a library for converting .mdx files into React components.
+`useMemo`的一个来自mdx-bundler文档的真实例子。`mdx-bundler`是一个将.mdx文件转换为React组件的库。
 
-Here it uses `useMemo` to convert a raw string of code into a React component.
+这里它使用`useMemo`将一个原始的代码字符串转换为React组件。
 
 ```js
 import * as React from 'react'
@@ -592,19 +592,19 @@ function Post({code, frontmatter}) {
 }
 ```
 
-The reason for doing so is to prevent the `Component` value from being recreated unnecessarily when the component re-renders.
+这样做的原因是为了防止在组件重新渲染时不必要地重新创建`Component`值。
 
-`useMemo` therefore will only execute its callback function if the `code` dependency changes.
+因此，`useMemo`只会在`代码`依赖关系改变时执行其回调函数。
 
-## Want To Take The Next Step?
+## 想更进一步？
 
-If you enjoyed this cheatsheet and are looking for the ultimate resource to learn React, check out the **[React Bootcamp](https://reactbootcamp.com)**.
+如果你喜欢这个手册，并且正在寻找学习React的终极资源，请查看 **[React Bootcamp](https://reactbootcamp.com)**。
 
-It will give you all the training you need to:
+它将为你提供所有你需要的培训:
 
-- Go from absolute beginner to React professional in just 30 minutes a day
-- Build 4 full-stack React projects from scratch to deployment
-- Learn a powerful stack of technologies to build any app you like
+- 每天只需30分钟，从纯新手变成React专家
+- 构建4个全栈的React项目，从零开始到部署
+- 学习强大的技术堆栈来构建你喜欢的任何应用程序
 
-[![Click to join the React Bootcamp](https://reedbarger.nyc3.digitaloceanspaces.com/react-bootcamp-banner.png)](https://reactbootcamp.com)  
+[![点击加入React训练营](https://reedbarger.nyc3.digitaloceanspaces.com/react-bootcamp-banner.png)](https://reactbootcamp.com)  
 _Click to join the React Bootcamp_

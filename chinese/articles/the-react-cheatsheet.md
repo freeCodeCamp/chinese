@@ -1,6 +1,6 @@
 > - 原文地址：[The React Cheatsheet for 2022](https://www.freecodecamp.org/news/the-react-cheatsheet/)
 > - 原文作者：[Reed Barger](https://www.freecodecamp.org/news/author/reed/)
-> - 译者：
+> - 译者：luojiyin
 > - 校对者：
 
 ![The React Cheatsheet for 2022](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/mugshotbot.com_customize_theme-two_up-mode-light-color-pink-pattern-bubbles-image-9129875b-url-https___freecodecamp.org.png)

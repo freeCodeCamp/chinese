@@ -1,11 +1,7 @@
-> -  原文地址：[Remote Work – How to Find Remote Working Jobs from Home](https://www.freecodecamp.org/news/remote-work-how-to-find-remote-working-jobs-from-home/)
-> -  原文作者：[
-                    
-                        Dionysia Lemonaki
-                    
-                ](https://www.freecodecamp.org/news/author/dionysia/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Remote Work – How to Find Remote Working Jobs from Home](https://www.freecodecamp.org/news/remote-work-how-to-find-remote-working-jobs-from-home/)
+> - 原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
+> - 译者：
+> - 校对者：
 
 ![Remote Work – How to Find Remote Working Jobs from Home](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/kornel-mahl-mV4GwTDD8Tw-unsplash.jpg)
 
@@ -45,25 +41,25 @@ The Pros and Cons of remote work are relative to every individual.
 
 But in general, some **pros** of working remote that benefit both the companies and the people working at the companies, are the following:
 
--   Flexible working schedules and locations typically increase productivity and performance.
--   The above point leads to employees having more autonomy and independence which in turn leads to a happier workforce. Employees that feel trusted by their employers and have that level of freedom are more content with their jobs, efficient with their time, and more motivated to get their work done.
--   Remote work allows you to travel and work from any part of the globe and become a digital nomad, making your own work schedule. When working in tech specifically, all you need is a good internet connection, a laptop, and good skills.
--   With remote work you also place emphasis on producing quality work where you are highly focused on the task for a set amount of time that works for you. In a 9 - 5 job the bulk of the work for the day may be finished before 5 o'clock, but you'll still need to remain at the office and possibly not be as productive as you were during the remaining time.
--   Office space is expensive, with companies paying thousands of dollars for office space every year per employee. Remote work would cut those costs, saving significant amounts of money.
--   Remote work also means that long commutes to get into office everyday are no longer needed. Commuting often means spending a lot of time stuck in traffic, spending money on gas, or using crowded public transportation systems everyday. People can spend a lot of time can commuting - it's not uncommon for commuters to spend more than two hours each day getting to the office and going back home. This is often a cause of major stress. Not commuting to and from work can save a significant amount of time and money.
--   With remote work, there is the opportunity to form distributed teams and hire people from all around the globe. This is more representative of the world as it is. Having people with diverse perspectives and backgrounds, with each having a wealth of different experiences to draw from, would in turn result in creating better products and services.
--   With remote work you also get to spend more time with your family and loved ones.
--   "With great freedom comes great responsibility" is a phrase that stands true when it comes to remote work. Often remote workers have a greater connection to the company's mission, which leads to greater motivation and sense of purpose. If you are not aligned with the company's values and don't find the work rewarding, it may be tempting to not put in the effort when there is no one watching you like there is in a 9 - 5 traditional office job.
+- Flexible working schedules and locations typically increase productivity and performance.
+- The above point leads to employees having more autonomy and independence which in turn leads to a happier workforce. Employees that feel trusted by their employers and have that level of freedom are more content with their jobs, efficient with their time, and more motivated to get their work done.
+- Remote work allows you to travel and work from any part of the globe and become a digital nomad, making your own work schedule. When working in tech specifically, all you need is a good internet connection, a laptop, and good skills.
+- With remote work you also place emphasis on producing quality work where you are highly focused on the task for a set amount of time that works for you. In a 9 - 5 job the bulk of the work for the day may be finished before 5 o'clock, but you'll still need to remain at the office and possibly not be as productive as you were during the remaining time.
+- Office space is expensive, with companies paying thousands of dollars for office space every year per employee. Remote work would cut those costs, saving significant amounts of money.
+- Remote work also means that long commutes to get into office everyday are no longer needed. Commuting often means spending a lot of time stuck in traffic, spending money on gas, or using crowded public transportation systems everyday. People can spend a lot of time can commuting - it's not uncommon for commuters to spend more than two hours each day getting to the office and going back home. This is often a cause of major stress. Not commuting to and from work can save a significant amount of time and money.
+- With remote work, there is the opportunity to form distributed teams and hire people from all around the globe. This is more representative of the world as it is. Having people with diverse perspectives and backgrounds, with each having a wealth of different experiences to draw from, would in turn result in creating better products and services.
+- With remote work you also get to spend more time with your family and loved ones.
+- "With great freedom comes great responsibility" is a phrase that stands true when it comes to remote work. Often remote workers have a greater connection to the company's mission, which leads to greater motivation and sense of purpose. If you are not aligned with the company's values and don't find the work rewarding, it may be tempting to not put in the effort when there is no one watching you like there is in a 9 - 5 traditional office job.
 
 There are also some potential **cons** of remote working:
 
--   There are concerns around productivity. For example, a lack of a dedicated space and set up in your home where you can work comfortably and quietly could potentially lead to a decrease in productivity.
--   A lack of a good Wifi connection, Internt speed, and decent voice quality could lead to troubles in communication. When a connection is not consistent and there are frequent disconnections, it makes communicating with team members difficult. Similarly, having poor voice quality, a microphone that doesn't work properly, or a lot of background noise can be distraction for others and make communicating over meetings harder.
--   With remote work, some workers may be more prone than others to procrastination, getting easily distracted and managing their time efficiently. A good answer to that could be the [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) and time blocking tasks.
--   Remote working may prove challenging for workers that have family members to frequently tend to and who need their attention.
--   With remote work, work-life balance can be tricky at times. For this reason, some workers may enjoy the commute, the travelling to work and the removal from their home as they see it as a physical separation between work and social life. It can be a way to divide work from personal life and whatever issues are associated with that.
--   Another potential issue is the difficulty in making connections and networking. This can be a challenge especially for juniors and folks that are early in their careers, and not so much for senior staff members who have developed their network over the years. Offices can be a good place for networking, but there are plenty of online communities available now, with new ones being created frequently, that can help you form connections in the industry.
--   Differences in communication skills between team members can also be challenging. Communicating your thoughts in a clear and concice manner is sometimes tricky over email or a Zoom call. It can also be tough to break down problems, explain your thought process, and explain complex technical topics in simple words to technical and non-technical members of a team. And all this is necessary when working remotely. Remote work involves a lot of collaboration, so getting messages across clearly is vital, otherwise there will be frequent misunderstandings.
+- There are concerns around productivity. For example, a lack of a dedicated space and set up in your home where you can work comfortably and quietly could potentially lead to a decrease in productivity.
+- A lack of a good Wifi connection, Internt speed, and decent voice quality could lead to troubles in communication. When a connection is not consistent and there are frequent disconnections, it makes communicating with team members difficult. Similarly, having poor voice quality, a microphone that doesn't work properly, or a lot of background noise can be distraction for others and make communicating over meetings harder.
+- With remote work, some workers may be more prone than others to procrastination, getting easily distracted and managing their time efficiently. A good answer to that could be the [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) and time blocking tasks.
+- Remote working may prove challenging for workers that have family members to frequently tend to and who need their attention.
+- With remote work, work-life balance can be tricky at times. For this reason, some workers may enjoy the commute, the travelling to work and the removal from their home as they see it as a physical separation between work and social life. It can be a way to divide work from personal life and whatever issues are associated with that.
+- Another potential issue is the difficulty in making connections and networking. This can be a challenge especially for juniors and folks that are early in their careers, and not so much for senior staff members who have developed their network over the years. Offices can be a good place for networking, but there are plenty of online communities available now, with new ones being created frequently, that can help you form connections in the industry.
+- Differences in communication skills between team members can also be challenging. Communicating your thoughts in a clear and concice manner is sometimes tricky over email or a Zoom call. It can also be tough to break down problems, explain your thought process, and explain complex technical topics in simple words to technical and non-technical members of a team. And all this is necessary when working remotely. Remote work involves a lot of collaboration, so getting messages across clearly is vital, otherwise there will be frequent misunderstandings.
 
 ## How to Appeal to Remote Companies as a Developer
 
@@ -111,9 +107,9 @@ A good place to start contributing is by checking out the [freeCodeCamp reposito
 
 Below are some resources to help you learn more about contributing to Open Source:
 
--   [The Ultimate Guide to Open Source](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/)
--   [The Definitive Guide to Contributing to Open Source](https://www.freecodecamp.org/news/the-definitive-guide-to-contributing-to-open-source-900d5f9f2282/)
--   [How to Contribute to Open Source Projects – A Beginner's Guide](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-projects-beginners-guide/)
+- [The Ultimate Guide to Open Source](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/)
+- [The Definitive Guide to Contributing to Open Source](https://www.freecodecamp.org/news/the-definitive-guide-to-contributing-to-open-source-900d5f9f2282/)
+- [How to Contribute to Open Source Projects – A Beginner's Guide](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-projects-beginners-guide/)
 
 ### Create a Personal Website
 
@@ -127,9 +123,9 @@ Include an up to date CV/résumé and a way to contact you - preferably a profes
 
 Below are some resources to help you with creating a portfolio website:
 
--   [Create a Portfolio Website Using HTML, CSS, JavaScript, and Bootstrap 5](https://www.freecodecamp.org/news/how-to-create-a-portfolio-website-using-html-css-javascript-and-bootstrap/)
--   [Build Your Own Developer Portfolio Website with HTML, CSS, and JavaScript](https://www.freecodecamp.org/news/how-to-build-a-developer-portfolio-website/)
--   [Create a Portfolio Website – A Beginner Developer's Guide](https://www.freecodecamp.org/news/beginners-guide-to-creating-a-portfolio-website/)
+- [Create a Portfolio Website Using HTML, CSS, JavaScript, and Bootstrap 5](https://www.freecodecamp.org/news/how-to-create-a-portfolio-website-using-html-css-javascript-and-bootstrap/)
+- [Build Your Own Developer Portfolio Website with HTML, CSS, and JavaScript](https://www.freecodecamp.org/news/how-to-build-a-developer-portfolio-website/)
+- [Create a Portfolio Website – A Beginner Developer's Guide](https://www.freecodecamp.org/news/beginners-guide-to-creating-a-portfolio-website/)
 
 ### Learn in Public
 
@@ -145,9 +141,9 @@ You can share your findings, explain how you solved a specific problem in a blog
 
 Below are some resources to help you get started with technical writing:
 
--   [Writing Tips for Software Developers – How to Become a Better Tech Writer](https://www.freecodecamp.org/news/writing-tips-software-developers/)
--   [Technical Writing for Beginners – An A-Z Guide to Tech Blogging Basics](https://www.freecodecamp.org/news/technical-writing-for-beginners/)
--   [How to Become a Technical Writer](https://www.freecodecamp.org/news/how-to-become-a-technical-writer/)
+- [Writing Tips for Software Developers – How to Become a Better Tech Writer](https://www.freecodecamp.org/news/writing-tips-software-developers/)
+- [Technical Writing for Beginners – An A-Z Guide to Tech Blogging Basics](https://www.freecodecamp.org/news/technical-writing-for-beginners/)
+- [How to Become a Technical Writer](https://www.freecodecamp.org/news/how-to-become-a-technical-writer/)
 
 ### Gain Experience Working Remotely
 
@@ -285,12 +281,12 @@ It includes an advanced filter that helps you really tailor your search to best 
 
 Here are some examples of what is available with the advanced filter:
 
--   You can include up to ten tags of technologies you like working with and ten technologies you dislike working with.
--   You can include companies you like and companies you want to avoid and exclude from your job search.
--   You can include a minimum salary range you're expecting to get.
--   You can enter your level of seniority and experience.
--   You can select wether you require a visa sponsorship and want to relocate to a different country.
--   Also, you can select what job type you're looking for, whether it's contract work, a full time position, or an internship.
+- You can include up to ten tags of technologies you like working with and ten technologies you dislike working with.
+- You can include companies you like and companies you want to avoid and exclude from your job search.
+- You can include a minimum salary range you're expecting to get.
+- You can enter your level of seniority and experience.
+- You can select wether you require a visa sponsorship and want to relocate to a different country.
+- Also, you can select what job type you're looking for, whether it's contract work, a full time position, or an internship.
 
 You don't need to create a profile. When you apply for a position, you'll be redirected to the company's website.
 
@@ -310,8 +306,8 @@ Often if your profile is impressive, recruiters will reach out to you and direct
 
 Here are some resources for you to create a stand-out LinkedIn profile:
 
--   [How To Build An Amazing LinkedIn Profile 15+ Proven Tips](https://www.freecodecamp.org/news/how-to-build-an-amazing-linkedin-profile-15-proven-tips/)
--   [How to Use LinkedIn to Get Your First Developer Job – A Step-by-Step Guide](https://www.freecodecamp.org/news/linkedin-handbook-get-your-first-dev-job/)
+- [How To Build An Amazing LinkedIn Profile 15+ Proven Tips](https://www.freecodecamp.org/news/how-to-build-an-amazing-linkedin-profile-15-proven-tips/)
+- [How to Use LinkedIn to Get Your First Developer Job – A Step-by-Step Guide](https://www.freecodecamp.org/news/linkedin-handbook-get-your-first-dev-job/)
 
 ## Conclusion
 

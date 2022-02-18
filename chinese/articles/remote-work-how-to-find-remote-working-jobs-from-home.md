@@ -53,268 +53,268 @@
 
 远程工作也有一些潜在的**弊端**:
 
-- There are concerns around productivity. For example, a lack of a dedicated space and set up in your home where you can work comfortably and quietly could potentially lead to a decrease in productivity.
-- A lack of a good Wifi connection, Internt speed, and decent voice quality could lead to troubles in communication. When a connection is not consistent and there are frequent disconnections, it makes communicating with team members difficult. Similarly, having poor voice quality, a microphone that doesn't work properly, or a lot of background noise can be distraction for others and make communicating over meetings harder.
-- With remote work, some workers may be more prone than others to procrastination, getting easily distracted and managing their time efficiently. A good answer to that could be the [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) and time blocking tasks.
-- Remote working may prove challenging for workers that have family members to frequently tend to and who need their attention.
-- With remote work, work-life balance can be tricky at times. For this reason, some workers may enjoy the commute, the travelling to work and the removal from their home as they see it as a physical separation between work and social life. It can be a way to divide work from personal life and whatever issues are associated with that.
-- Another potential issue is the difficulty in making connections and networking. This can be a challenge especially for juniors and folks that are early in their careers, and not so much for senior staff members who have developed their network over the years. Offices can be a good place for networking, but there are plenty of online communities available now, with new ones being created frequently, that can help you form connections in the industry.
-- Differences in communication skills between team members can also be challenging. Communicating your thoughts in a clear and concice manner is sometimes tricky over email or a Zoom call. It can also be tough to break down problems, explain your thought process, and explain complex technical topics in simple words to technical and non-technical members of a team. And all this is necessary when working remotely. Remote work involves a lot of collaboration, so getting messages across clearly is vital, otherwise there will be frequent misunderstandings.
+- 围绕着生产力有一些担忧。例如，如果你的家里缺乏一个专门的空间和设置，让你可以舒适和安静地工作，有可能导致生产力下降。
+- 缺乏良好的Wifi连接、网速和良好的语音质量可能会导致沟通上的麻烦。当连接不稳定，经常断开连接时，就会使与团队成员的沟通变得困难。同样，如果语音质量差，麦克风不能正常工作，或有大量的背景噪音，就会分散他人的注意力，使会议的沟通更加困难。
+- 对于远程工作，一些工作人员可能比其他人更容易拖延，容易分心和有效地管理他们的时间。一个很好的答案可能是[番茄工作法](https://en.wikipedia.org/wiki/Pomodoro_Technique)和固定时间内工作，不做别的（time blocking tasks）。
+- 对于那些有家庭成员需要经常照顾，并且需要他们关注的工作人员来说，远程工作可能是有挑战性。
+- 在远程工作中，工作与生活的平衡有时会很棘手。出于这个原因，一些工作人员可能会喜欢通勤、上班和离开家，因为他们认为这是工作和社会生活之间的一种物理隔离。这可能是一种将工作与个人生活之间相关的任何问题分开的方式。
+- 另一个潜在的问题是在建立影响力的困难。这可能是一个挑战，特别是对于刚开始工作的年轻人来说，而对于工作多年，高级工作人员来说就不是那么回事了。办公室可能是一个建立与同事关系的好地方，但现在有很多在线社区，而且经常有新的社区出现，可以帮助你在这个行业形成影响力。
+- 团队成员之间沟通技巧的差异也可能是一个挑战。通过电子邮件或Zoom电话，以清晰和简洁的方式传达你的想法有时是很棘手的。拆分问题，解释你的思维过程，用简单的语言向团队中的技术和非技术成员解释复杂的技术话题也是很困难的。而这一切在远程工作时是必要的。远程工作涉及大量的合作，所以清楚地传达信息是至关重要的，否则会经常出现误解。
 
-## How to Appeal to Remote Companies as a Developer
+## 作为一名开发人员，如何获得远程公司的青睐
 
-Not all jobs can be done remotely.
+不是所有的工作都可以远程完成。
 
-It's no surprise that tech companies are paving the way and leading this shift towards remote work.
+科技公司正在铺平道路，引领这种向远程工作的转变，这并不奇怪。
 
-That being said, these tech roles are highly skilled - they are what are known as "knowledge jobs".
+科技公司正在铺平道路，引领这种向远程工作的转变，这并不奇怪。
 
-Most companies ask for a couple of years of experience, but how do you get that experience when you have none and no one will hire you because you lack that vital experience?
+大多数公司要求有几年的工作经验，但如果你没有经验，又没有人愿意雇用你，因为你缺乏这种重要的经验，你怎么能得到这种经验呢？
 
-It's like a chicken and egg problem, and this can be even more of a problem when applying for a remote position.
+这就像一个鸡和蛋的问题，在申请远程职位时，这可能是一个更大的问题。
 
-How do you showcase your skills in an affective way when you are still early on in your career?
+当你还在职业生涯的早期，你如何以一种有效的方式展示你的技能？
 
-Companies want to know that you have the skills required and that you are capable of doing the job.
+公司想知道你是否具备所需的技能，以及你是否有能力完成这项工作。
 
-Not only that, but getting a remote role involves a lot more competition. The talent pool for selecting candidates is larger than ever, compared to what it typically is for traditional office jobs.
+不仅如此，获得一个远程职位涉及更多的竞争。与传统的办公室工作相比，选择候选人的人才库比以往更大。
 
-There are many people applying from all over the world just for one single position, since there are a lot of people wanting to work remotely and have that flexible schedule.
+有很多人从世界各地申请，只是为了一个职位，因为有很多人想远程工作，有那种灵活的时间表。
 
-Listed below are some of the things you can do that may help you stand out in your remote job search as an early career developer.
+下面列出了一些你可以做的事情，这些事情可能会帮助你在作为早期职业开发者的远程工作搜索中脱颖而出。
 
-There is the aspect of luck that plays role in every job search, but these points can help showcase your skills to prospective employers when you don't have that much experience.
+运气在每一次求职中都起着作用，但在你没有那么多经验的时候，这些要点可以帮助你向潜在的雇主展示你的技能。
 
-### Prep your GitHub Account for the Job
+### 为你的GitHub账户做好准备工作
 
-Include projects that you are proud of and are the most excited about.
+包括你感到自豪和最兴奋的项目。
 
-Also, by showcasing projects that are related to the position you are applying to, you can discuss the different challenges you faced, the problems that arose, how you went about solving those problems and what you learned overall.
+此外，通过展示与你申请的职位相关的项目，你可以讨论你面临的不同挑战，出现的问题，你如何去解决这些问题，以及你总体上学到了什么。
 
-Make sure that your projects are well documented by creating [README files](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/) for each one.
+通过为每个项目创建[README文件](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)，确保你的项目有良好文档记录。
 
-This way you can document your thought process and intentions while also showcasing your written communication skills which are important when working in tech.
+这样，你可以记录你的思想过程和意图，同时也展示你的书面沟通能力，这在技术工作中很重要。
 
-### Contribute to Open Source
+### 为开源做贡献
 
-Contributing to Open Source can be intimidating as a beginner, but it is worthwhile and does make a difference when applying to jobs. It's something that many employers appreciate.
+作为一个初学者，为开放源码做贡献可能会让人望而生畏，但这是值得的，而且在申请工作时确实会有不同的效果。这也是许多雇主欣赏的东西。
 
-You can start off by making small contributions. For example, you can correct grammar errors and typos and create sufficient documentation for projects that lack it.
+你可以从做出小贡献开始。例如，你可以纠正语法错误和错别字，为缺乏文档的项目创建足够的文档。
 
-This shows that you are able to communicate well and collaborate with other developers remotely and asynchronously to solve a problem. And all that is done in public.
+这表明你能够很好地沟通，并与其他开发人员进行远程和异步的合作，以解决一个问题。而所有这些都是在公开进行的。
 
-A good place to start contributing is by checking out the [freeCodeCamp repository](https://github.com/freeCodeCamp/freeCodeCamp/issues) for issues with the label "fist timers only".
+一个开始贡献的好地方是查看[freeCodeCamp repository](https://github.com/freeCodeCamp/freeCodeCamp/issues)中查看带有 "fist timers only "标签的问题。
 
-Below are some resources to help you learn more about contributing to Open Source:
+以下是一些资源，可以帮助你了解更多关于对开源的贡献:
 
-- [The Ultimate Guide to Open Source](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/)
-- [The Definitive Guide to Contributing to Open Source](https://www.freecodecamp.org/news/the-definitive-guide-to-contributing-to-open-source-900d5f9f2282/)
-- [How to Contribute to Open Source Projects – A Beginner's Guide](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-projects-beginners-guide/)
+- [开源的终极指南](https://www.freecodecamp.org/news/the-ultimate-guide-to-open-source/)
+- [为开源做贡献的权威指南](https://www.freecodecamp.org/news/the-definitive-guide-to-contributing-to-open-source-900d5f9f2282/)
+- [如何为开源项目做贡献--初学者的指南](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-projects-beginners-guide/)
 
-### Create a Personal Website
+### 创建个人网站
 
-A personal website is your own personal corner on the Internet and a way to show the world – including potential employers – who you are on a more personal level.
+个人网站是你在互联网上的个人角落，是向世界--包括潜在的雇主--展示你的个人形象的一种方式。
 
-Include some information about yourself and the projects you are most proud of. Make sure all links are working and there are no typos.
+包括一些关于你自己和你最自豪的项目的信息。确保所有的链接是有效的，没有错别字。
 
-The important information that employers are looking for needs to stand out clearly and easily at first sight.
+雇主们正在寻找的重要信息需要在第一时间清楚而容易地突出出来。
 
-Include an up to date CV/résumé and a way to contact you - preferably a professional e-mail address.
+包括一份最新的简历/履历表和联系你的方式，最好是一个专业的电子邮件地址。
 
-Below are some resources to help you with creating a portfolio website:
+以下是一些帮助你创建作品集网站的资源:
 
-- [Create a Portfolio Website Using HTML, CSS, JavaScript, and Bootstrap 5](https://www.freecodecamp.org/news/how-to-create-a-portfolio-website-using-html-css-javascript-and-bootstrap/)
-- [Build Your Own Developer Portfolio Website with HTML, CSS, and JavaScript](https://www.freecodecamp.org/news/how-to-build-a-developer-portfolio-website/)
-- [Create a Portfolio Website – A Beginner Developer's Guide](https://www.freecodecamp.org/news/beginners-guide-to-creating-a-portfolio-website/)
+- [使用HTML、CSS、JavaScript和Bootstrap 5创建一个组合网站](https://www.freecodecamp.org/news/how-to-create-a-portfolio-website-using-html-css-javascript-and-bootstrap/)
+- [用HTML、CSS和JavaScript建立你自己的开发者组合网站](https://www.freecodecamp.org/news/how-to-build-a-developer-portfolio-website/)
+- [创建作品集网站 - 初学者开发指南](https://www.freecodecamp.org/news/beginners-guide-to-creating-a-portfolio-website/)
 
-### Learn in Public
+### 公开学习过程
 
-Learning in public and getting involved with the developer community can accelarate your career and help you make valuable connections.
+公开学习和参与开发者社区可以加速你的职业生涯并帮助你建立有价值的联系。
 
-It's a way to showcase that you have those communication skills that employers are looking for.
+这是一种展示你有那些雇主正在寻找的沟通技巧的方式。
 
-Wether it be blogging, writing about your coding journey, documenting what you are currently learning, or giving a talk at a local meetup, all help create your own sort of personal brand. People get an insight into who you are on a more personal level.
+无论是写博客，写你的编码之旅，记录你目前正在学习的东西，还是在当地聚会上发表演讲，都有助于创建你自己的个人品牌。人们可以在更多的个人层面上了解你是谁。
 
-Including links of all the ways in which you are learning in public and engaging with the community shows a level of dedication and that you're serious about getting into tech.
+包括你在公共场合学习和参与社区活动的所有方式的链接，显示了你的奉献程度和你对进入技术领域的认真态度。
 
-You can share your findings, explain how you solved a specific problem in a blog post, or craft lists of helpful resources to share. These activities not only help you understand everything better, but will help others that are also learning.
+你可以分享你的发现，解释你如何在博文中解决一个特定的问题，或精心设计有用的资源清单来分享。这些活动不仅帮助你更好地理解一切，而且会帮助其他也在学习的人。
 
-Below are some resources to help you get started with technical writing:
+以下是一些帮助你开始技术写作的资源:
 
-- [Writing Tips for Software Developers – How to Become a Better Tech Writer](https://www.freecodecamp.org/news/writing-tips-software-developers/)
-- [Technical Writing for Beginners – An A-Z Guide to Tech Blogging Basics](https://www.freecodecamp.org/news/technical-writing-for-beginners/)
-- [How to Become a Technical Writer](https://www.freecodecamp.org/news/how-to-become-a-technical-writer/)
+- [软件开发人员的写作技巧--如何成为一个更好的技术作家](https://www.freecodecamp.org/news/writing-tips-software-developers/)
+- [技术写作初学者--技术博客基础知识入门指南](https://www.freecodecamp.org/news/technical-writing-for-beginners/)
+- [如何成为一名技术作家](https://www.freecodecamp.org/news/how-to-become-a-technical-writer/)
 
-### Gain Experience Working Remotely
+### 获得远程工作经验
 
-Having prior experience working remotely will likely increase your chances of getting another remote job, compared to someone who doesn't have that experience and know-how.
+与没有这种经验和诀窍的人相比，以前有远程工作的经验可能会增加你获得另一份远程工作的机会。
 
-It shows that you are productive in remote settings.
+这表明你在远程环境下是有生产力的。
 
-Even if you are working in a different field and are not a remote worker, but want to transition into a remote tech role, you can negotiate a hybrid role at your current company. You might be able to work remotely 1 - 2 days a week, and the rest of the week to work from the office.
+即使你在不同的领域工作，不是一个远程工作者，但想过渡到一个远程技术角色，你可以在你目前的公司协商一个混合角色。你也许可以每周远程工作1-2天，其余时间在办公室工作。
 
-### Gain Experience Working as a Developer
+### 获得作为开发者的工作经验
 
-If you want to get a remote developer job as your first tech job, it may be more difficult than getting an traditional office job. Getting your foot in the door as a junior is hard enough, without the remote aspect.
+如果你想找一份远程开发的工作作为你的第一份技术工作，这可能比找一份传统的办公室工作更难。如果没有远程工作，你作为初学者进入公司已经很困难了。
 
-Although this is in no way impossible to achieve, it may be more realistic to have a couple of years of experience under your belt. This can make the possibility of working remotely more likely.
+虽然这绝不是不可能实现的，但如果你有几年的经验，可能更现实。这可以使获得远程工作的可能性更大。
 
-It's easier for intermediate and senior level developers to land a remote role, compared to those searching for their first job in tech.
+与那些寻找第一份技术工作的人相比，中级和高级水平的开发人员更容易找到一个远程职位。
 
-Onboarding a junior member on the team remotely and training them can prove to be challenging. This is especially true when you don't have much direct supervision and mentorship and they end up spending a lot of time alone.
+事实证明，远程录用团队中的初级成员并对其进行培训是一项挑战。当你没有太多的直接被监督和指导，而他们最终花了很多时间。
 
-Focus on learning the skills needed and building them to the point where you can market yourself well and stand out from the crowd. The more well-developed your skills are, the higher the chances.
+专注于学习所需的技能，并将其培养到可以很好地推销自己并在人群中脱颖而出的程度。你的技能发展得越好，机会就越大。
 
-### Show Genuine Interest in the Remote Company you're Applying to
+### 对你所申请的远程公司表现出真正的兴趣
 
-Taking the extra time and putting in that extra effort to craft a high-quality application will help you stand out. Make sure your application is tailored towards the company you're applying to and lay out what you have to offer and why you're the right fit.
+花费额外的时间和精力来制作一份高质量的申请书将帮助你脱颖而出。确保你的申请是针对你所申请的公司的，并说明你能提供什么以及为什么你是合适的人选。
 
-Hiring managers can tell when you've copied and pasted your application to several other positions and when it's not tailored to that individual company.
+招聘经理可以看出你的申请是复制和粘贴在其他几个职位上的，而不是为该公司量身定做的。
 
-So make sure you customize your application for the position and show that you've researched the company's website and/or blog to understand what they are doing and what their mission is. This will make a better impression and make you stand out more.
+因此，请确保你为该职位定制你的申请，并表明你已经研究了该公司的网站和/或博客，以了解他们正在做什么，他们的使命是什么。这将给人留下更好的印象，使你更加突出。
 
-## Where to Find Companies that Hire Remotely?
+## 哪里可以找到雇用远程人员的公司？
 
-There are plenty of remote job boards where you can browse through hundreds of job postings and apply to any you see fit.
+有很多远程招聘网站，你可以浏览数以百计的职位信息，并申请任何你认为合适的职位。
 
-This section showcases some of the most popular job boards that advertise remote-friendly positions.
+本节展示了一些最受欢迎的招聘会，这些招聘会刊登了适合远程工作的职位。
 
-To see a complete list of remote-friendly companies, [check out this comprehensive GitHub repository](https://github.com/remoteintech/remote-jobs)
+查看远程友好型公司的完整列表, [请查看这个全面的GitHub仓库](https://github.com/remoteintech/remote-jobs)
 
 ### Remote Ok
 
 ![Screenshot-2022-02-16-at-11.32.22-AM](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-16-at-11.32.22-AM.png)
 
-On [Remote Ok](https://remoteok.com/) you will find different kind of jobs listed, such as product designer, product manager, copywriter and copy editor, to name a few.
+在 [Remote Ok](https://remoteok.com/)上，你会发现列出了不同种类的工作，如产品设计师、产品经理、文案和文案编辑，仅此而已。
 
-The majority of jobs, though, are software development jobs.
+不过，大多数工作都是软件开发工作。
 
-The website consists of hundreds of job postings and it's updated daily.
+该网站由数百个工作岗位组成，每天更新。
 
-It's easy to use, without needing to sign-up anywhere or upload a CV in order to submit an application.
+它很容易使用，不需要在任何地方注册，也不需要为了提交申请而上传简历。
 
-You can just click on the search bar at the top of the page. When you do so, you'll see a dropdown menu with a filter for the different job categories you can choose from and the number of jobs available in each category.
+你可以直接点击页面顶部的搜索栏。当你这样做时，你会看到一个下拉菜单，上面有你可以选择的不同工作类别和每个类别的工作数量的过滤器。
 
 ![Screenshot-2022-02-16-at-11.34.32-AM](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-16-at-11.34.32-AM.png)
 
-When you click on a link of a job posting, you'll see the full job description and then a button that says "Apply now".
+当你点击一个招聘信息的链接时，你会看到完整的工作描述，然后是一个写着 "Apply now"的按钮。
 
-When you click that button to apply for the job, you'll be redirected to the company's website.
+当你点击这个按钮申请工作时，你会被转到该公司的网站。
 
-This job board is more of a place to take a look at the different remote jobs that are available in the world. It's not meant for creating a profile of your own or submitting an application directly from the job board.
+这个招聘网站更像是一个看一看世界上不同的远程工作的地方。它不是用来创建你自己的档案或直接从招聘网站上提交申请的。
 
-It's also one of the most impersonal job boards out there, since there is no information or a way to find out more about Remote Ok as a company, or a way to contact customer service.
+这也是最没有人情味的招聘网站之一，因为没有任何关于Remote Ok公司的信息或方法，也没有联系客服的方法。
 
 ### Remote.co
 
 ![Screenshot-2022-02-16-at-12.11.07-PM](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-16-at-12.11.07-PM.png)
 
-[Remote.co](https://remote.co/remote-jobs/developer/) is another remote job board with all kind of jobs listings available. There are editing jobs, customer service and marketing jobs, and many more.
+[Remote.co](https://remote.co/remote-jobs/developer/)是另一个远程招聘网站，提供各种类型的工作列表。有编辑工作、客户服务和营销工作，以及更多的工作。
 
-There is also a wide selection of jobs in front-end development, back-end development, and full-stack development.
+前端开发、后端开发和全栈开发方面的工作也有很多选择。
 
-In the search bar at the top of the page, enter the type of position you're searching for or the name of a company you want to work at.
+在页面顶部的搜索栏中，输入你要搜索的职位类型或你想工作的公司名称。
 
-You can also sign up to their newsletter to receive daily job alerts, but other than that you don't need to sign up anywhere is order to view jobs or apply to jobs.
+你还可以订阅他们的新闻通讯，接收每日工作提醒，除此之外，你不需要在任何地方注册，就可以查看工作或申请工作。
 
-When you apply for a job, you'll be redirected to the company's website to apply directly from there.
+当你申请工作时，你会被转到该公司的网站，直接从那里申请。
 
-This remote job is more personable compared to Remote Ok, since it has more information about it and different resources available.
+与Remote Ok相比，这份远程工作更加人性化，因为它有更多的相关信息和不同的资源。
 
-There are articles on remote work, remote worker's rights, and even different online courses you can take.
+这里有关于远程工作的文章，远程工作者的权利，甚至还有你可以参加的不同的在线课程。
 
 ### We Work Remotely
 
 ![Screenshot-2022-02-16-at-2.29.32-PM](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-16-at-2.29.32-PM.png)
 
-On [We Work Remotely](https://weworkremotely.com/) you'll find lists of jobs in sales, marketing, software development and more.
+在[We Work Remotely](https://weworkremotely.com/)上，你会发现销售、营销、软件开发等方面的工作清单。
 
-There are jobs available in front-end development, back-end development, full-stack development, and in DevOps and Systems administration.
+在前端开发、后端开发、全栈开发以及DevOps和系统管理方面都有工作机会。
 
-You can create an account by providing your email address and setting a password. This way you'll be notified about new job openings and specifically jobs that are tailored to your area of interest.
+你可以通过提供你的电子邮件地址和设置密码来创建一个账户。这样你就会收到新的工作机会的通知，特别是针对你感兴趣的领域的工作。
 
-The site also provides advanced search filters, where you enter the job title, the region where you want to work, and the time zone you're in, as well as the job type you're looking for. From there you can choose either contract work or full-time work.
+该网站还提供高级搜索过滤器，你可以输入职位名称、你想工作的地区和你所在的时区，以及你要找的工作类型。从那里你可以选择合同工作或全职工作。
 
-When you apply for a position you will be redirected to the company's website you're applying to.
+当你申请一个职位时，你会被转到你所申请的公司的网站。
 
 ### Remotive
 
 ![Screenshot-2022-02-16-at-4.17.00-PM](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-16-at-4.17.00-PM.png)
 
-On [Remotive](https://remotive.io/) there are a variety of different remote tech roles available.
+[Remotive](https://remotive.io/)有各种不同的远程技术角色可供选择。
 
-There are listings for developer roles, customer support, customer service, sales, management, product design, product management, and more.
+这里有开发者角色、客户支持、客户服务、销售、管理、产品设计、产品管理等方面的列表。
 
-This job board is also focused on tech and there are filters available where you can view the different job categories available.
+这个招聘网站也专注于技术领域，有过滤器，你可以查看不同的工作类别。
 
-A new feature of theirs is the ability to hide the jobs that require applicants to be US-based and work remotely from a US timezone.
+他们的一个新功能是能够隐藏那些需要申请人在美国工作并在美国时区远程工作的职位。
 
-You can also use keywords, such as a specific skill or job title, to filter through all the different posts.
+你还可以使用关键词，如特定的技能或工作职位，来过滤所有不同的职位。
 
-It also has a mailing list where you can receive daily job updates.
+它还有一个邮件列表，你可以收到每日工作更新。
 
 ### AngelList
 
 ![Screenshot-2022-02-16-at-4.31.37-PM](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-16-at-4.31.37-PM.png)
 
-[AngelList](https://angel.co/candidates/overview) lists mostly tech startup jobs.
+[AngelList](https://angel.co/candidates/overview) 列出的主要是科技创业公司的工作。
 
-There, you can create your own profile where you'll be able to inlcude your skills and information about yourself.
+在那里，你可以创建你自己的个人资料，在那里你可以加入你的技能和关于你的信息。
 
-You can also set your desired salary and the kind of culture you want a company to have.
+你也可以设定你所期望的薪金和你希望公司拥有的文化。
 
-Then, once your profile is set up you'll be able to apply to jobs directly from AngelList, without being redirected to the company's website.
+然后，一旦你的个人资料建立起来，你就可以直接从AngelList上申请工作，而不用转到公司的网站上。
 
-Companies will be able to connect you with by finding you through your profile and contacting you.
+公司将能够通过你的个人资料找到你并与你联系。
 
-There are advanced search filters, to filter through the different jobs available.
+有先进的搜索过滤器，以过滤不同的工作。
 
-When browsing though jobs on AngelList, you can also view the salary and stock options of jobs.
+当浏览AngelList上的工作时，您还可以查看工作的工资和股票期权。
 
 ### Stack Overflow
 
 ![Screenshot-2022-02-16-at-4.44.59-PM](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-16-at-4.44.59-PM.png)
 
-[Stack Overflow Remote Developer Jobs](https://stackoverflow.com/jobs/remote-developer-jobs) lists only developer roles that are done remotely.
+[Stack Overflow Remote Developer Jobs](https://stackoverflow.com/jobs/remote-developer-jobs)只列出了远程完成的开发者角色。
 
-It includes an advanced filter that helps you really tailor your search to best fit your needs and what you are looking for.
+它包括一个高级过滤器，帮助你真正定制你的搜索，以最适合你的需求和你正在寻找的东西。
 
-Here are some examples of what is available with the advanced filter:
+以下是高级过滤器的一些例子。
 
-- You can include up to ten tags of technologies you like working with and ten technologies you dislike working with.
-- You can include companies you like and companies you want to avoid and exclude from your job search.
-- You can include a minimum salary range you're expecting to get.
-- You can enter your level of seniority and experience.
-- You can select wether you require a visa sponsorship and want to relocate to a different country.
-- Also, you can select what job type you're looking for, whether it's contract work, a full time position, or an internship.
+- 你最多可以包括十个你喜欢工作的技术标签和十个你不喜欢工作的技术标签。
+- 你可以包括你喜欢的公司和你想避免的公司，并排除在你的工作搜索之外。
+- 你可以包括你期望得到的最低工资范围。
+- 你可以输入你的资历和经验水平。
+- 你可以选择你是否需要签证担保，是否想搬迁到不同的国家。
+- 此外，你还可以选择你正在寻找的工作类型，无论是合同工作、全职工作还是实习工作。
 
-You don't need to create a profile. When you apply for a position, you'll be redirected to the company's website.
+你不需要创建一个简历。当你申请一个职位时，你会被转到该公司的网站。
 
 ### LinkedIn Jobs
 
-On [LinkedIn](https://www.linkedin.com/jobs/) you get to create your own profile where you include your work history, highlight your skills, and write a headline that summarizes your achievements and past job experiences.
+在[LinkedIn](https://www.linkedin.com/jobs/)上，你可以创建自己的个人资料，其中包括你的工作经历，突出你的技能，并写一个标题，总结你的成就和过去的工作经验。
 
-A good way to stand out is to share any articles you've written, and share other interesting and informative content.
+脱颖而出的一个好方法是分享你写的任何文章，并分享其他有趣和有信息的内容。
 
-LinkedIn is a way to connect directly with companies by reaching out to recruiters.
+LinkedIn是一种通过接触招聘人员直接与公司联系的方式。
 
-You can also let recruiters know you are available for hire. Specifially, you can inform them on what kind of postion you're looking for and whether you prefer to work remotely.
+你也可以让招聘人员知道你可以被雇用。特别是，你可以告知他们你在寻找什么样的职位，以及你是否喜欢远程工作。
 
-This is a feature you can add to your profile but it's private and is only visible to them.
+这是一个你可以添加到你的个人资料的功能，但它是私人的，只有他们可以看到。
 
-Often if your profile is impressive, recruiters will reach out to you and direct message you.
+通常情况下，如果你的个人资料令人印象深刻，招聘人员会主动联系你并直接给你发信息。
 
-Here are some resources for you to create a stand-out LinkedIn profile:
+这里有一些资源，供你创建一个印象深刻的LinkedIn资料:
 
-- [How To Build An Amazing LinkedIn Profile 15+ Proven Tips](https://www.freecodecamp.org/news/how-to-build-an-amazing-linkedin-profile-15-proven-tips/)
-- [How to Use LinkedIn to Get Your First Developer Job – A Step-by-Step Guide](https://www.freecodecamp.org/news/linkedin-handbook-get-your-first-dev-job/)
+- [如何建立一个令人惊奇的LinkedIn简介 15+ 证实的技巧](https://www.freecodecamp.org/news/how-to-build-an-amazing-linkedin-profile-15-proven-tips/)
+- [如何使用LinkedIn获得你的第一份开发工作，手把手的指南](https://www.freecodecamp.org/news/linkedin-handbook-get-your-first-dev-job/)
 
-## Conclusion
+## 结语
 
-The work landscape is starting to change and remote work is increasing in popularity and demand.
+工作环境开始改变，远程工作越来越受欢迎，需求也越来越大。
 
-In this article, you saw some ways to stand out to remote companies as an early career developer.
+在这篇文章中，你看到了一些作为早期职业开发者在远程公司中脱颖而出的方法。
 
-You also saw some of the most popular job boards that feature remote-friendly companies.
+你还看到了一些最受欢迎的招聘网站，它们都有对远程工作友好的公司。
 
-Thanks for reading and good luck with your remote job search!
+谢谢您的阅读，祝你在寻找远程工作时好运!

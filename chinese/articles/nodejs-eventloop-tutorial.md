@@ -1,11 +1,8 @@
-> -  原文地址：[Event Loops in NodeJS – Beginner's Guide to Synchronous and Asynchronous Code](https://www.freecodecamp.org/news/nodejs-eventloop-tutorial/)
-> -  原文作者：[
-                    
-                        Tejan Singh
-                    
-                ](https://www.freecodecamp.org/news/author/tejan/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Event Loops in NodeJS – Beginner's Guide to Synchronous and Asynchronous Code](https://www.freecodecamp.org/news/nodejs-eventloop-tutorial/)
+> - 原文作者：[Tejan Singh](https://www.freecodecamp.org/news/author/tejan/)
+>
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Event Loops in NodeJS – Beginner's Guide to Synchronous and Asynchronous Code](https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/oliver-hale-2cYueJxEDz8-unsplash.jpg)
 

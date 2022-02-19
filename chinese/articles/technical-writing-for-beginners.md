@@ -1,11 +1,8 @@
-> -  原文地址：[Technical Writing for Beginners – An A-Z Guide to Tech Blogging Basics](https://www.freecodecamp.org/news/technical-writing-for-beginners/)
-> -  原文作者：[
-                    
-                        Amarachi Emmanuela Azubuike
-                    
-                ](https://www.freecodecamp.org/news/author/amarachukwu/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Technical Writing for Beginners – An A-Z Guide to Tech Blogging Basics](https://www.freecodecamp.org/news/technical-writing-for-beginners/)
+> - 原文作者：[Amarachi Emmanuela Azubuike](https://www.freecodecamp.org/news/author/amarachukwu/)
+>
+> - 译者：
+> - 校对者：
 
 ![Technical Writing for Beginners – An A-Z Guide to Tech Blogging Basics](https://www.freecodecamp.org/news/content/images/size/w2000/2020/11/etienne-boulanger-aafOjsh-9jU-unsplash.jpg)
 
@@ -19,15 +16,15 @@ Let's dive into the fundamentals and learn about what you should know and consid
 
 In this article, we’ll be looking at:
 
--   [What Technical writing is](#what-technical-writing-is)
--   [Benefits of Technical Writing](#benefits)
--   [Necessary skills to have as a Technical Writer](#some-necessary-skills)
--   [The Technical Writing Process](#the-technical-writing-process)
--   [Platforms for publishing your articles](#platforms-for-publishing-your-articles)
--   [Technical Writing Courses](#technical-writing-courses)
--   [Technical Writing forums and communities](#technical-writing-forums-and-communities)
--   [Some amazing technical writers to follow](#Some-amazing-technical-writers-to-follow)
--   [Final Words and references](#final-words)
+- [What Technical writing is](#what-technical-writing-is)
+- [Benefits of Technical Writing](#benefits)
+- [Necessary skills to have as a Technical Writer](#some-necessary-skills)
+- [The Technical Writing Process](#the-technical-writing-process)
+- [Platforms for publishing your articles](#platforms-for-publishing-your-articles)
+- [Technical Writing Courses](#technical-writing-courses)
+- [Technical Writing forums and communities](#technical-writing-forums-and-communities)
+- [Some amazing technical writers to follow](#Some-amazing-technical-writers-to-follow)
+- [Final Words and references](#final-words)
 
 ## What is Technical Writing?
 
@@ -95,12 +92,12 @@ Your readers will also have their own expectations and needs. You must determine
 
 To understand your reader, ask yourself the following questions before you start writing:
 
--   Who are my readers?
--   What do they need?
--   Where will they be reading?
--   When will they be reading?
--   Why will they be reading?
--   How will they be reading?
+- Who are my readers?
+- What do they need?
+- Where will they be reading?
+- When will they be reading?
+- Why will they be reading?
+- How will they be reading?
 
 These questions also help you think about your reader's experience while reading your writing, which we'll talk about more now.
 
@@ -242,9 +239,9 @@ Taking a course on technical writing will help guide you through every thing you
 
 Here are some technical writing courses you can check out:
 
--   [Google Technical Writing Course](https://developers.google.com/tech-writing) (Free)
--   [Udemy Technical Writing Course](https://www.udemy.com/topic/technical-writing/) (Paid)
--   [Hashnode Technical Writing Bootcamp](https://hashnode.com/bootcamp/batch-2) (Free)
+- [Google Technical Writing Course](https://developers.google.com/tech-writing) (Free)
+- [Udemy Technical Writing Course](https://www.udemy.com/topic/technical-writing/) (Paid)
+- [Hashnode Technical Writing Bootcamp](https://hashnode.com/bootcamp/batch-2) (Free)
 
 ## Technical Writing Forums and Communities
 
@@ -254,11 +251,11 @@ Being part of a community or forum along with people who share same passion as y
 
 Here are some communities and forums for you to join:
 
--   [Hashnode](https://hashnode.com)
--   [Dev.to](https://dev.to)
--   [Technical Writing World](http://technicalwritingworld.com/forum)
--   [Technical Writer Forum](https://www.linkedin.com/groups/112571/profile)
--   [Write the Docs Forum](http://forum.writethedocs.org/)
+- [Hashnode](https://hashnode.com)
+- [Dev.to](https://dev.to)
+- [Technical Writing World](http://technicalwritingworld.com/forum)
+- [Technical Writer Forum](https://www.linkedin.com/groups/112571/profile)
+- [Write the Docs Forum](http://forum.writethedocs.org/)
 
 ## Some Amazing Technical Writers to follow
 
@@ -268,14 +265,14 @@ These are the writers whom I look up to and consider virtual mentors on technica
 
 Here are some of those writers (hyperlinked with their twitter handles):
 
--   [Quincy Larson](https://twitter.com/ossia)
--   [Edidiong Asikpo](https://twitter.com/didicodes)
--   [Catalin Pit](https://twitter.com/catalinmpit)
--   [Victoria Lo](https://twitter.com/lo_victoria2666)
--   [Bolaji Ayodeji](https://twitter.com/iambolajiayo)
--   [Amruta Ranade](https://twitter.com/amrutaranade)
--   [Chris Bongers](https://twitter.com/dailydevtips1)
--   [Colby Fayock](https://twitter.com/colbyfayock)
+- [Quincy Larson](https://twitter.com/ossia)
+- [Edidiong Asikpo](https://twitter.com/didicodes)
+- [Catalin Pit](https://twitter.com/catalinmpit)
+- [Victoria Lo](https://twitter.com/lo_victoria2666)
+- [Bolaji Ayodeji](https://twitter.com/iambolajiayo)
+- [Amruta Ranade](https://twitter.com/amrutaranade)
+- [Chris Bongers](https://twitter.com/dailydevtips1)
+- [Colby Fayock](https://twitter.com/colbyfayock)
 
 ## Final words
 

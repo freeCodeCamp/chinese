@@ -207,49 +207,49 @@ This process includes a number of steps, which we'll go over now.
 
 ## Where to Publish Your Articles
 
-Now that you've decided to take up technical writing, here are some good platforms where you can start putting up technical content for free. They can also help you build an appealing portfolio for future employers to check out.
+既然你已经决定从事技术写作，这里有一些好的平台，你可以开始免费发布技术内容。它们还可以帮助你建立一个有吸引力的作品集，供未来的雇主查看。
 
-[**Dev.to**](https://dev.to) is a community of thousands of techies where both writers and readers get to meaningfully engage and share ideas and resources.
+[**Dev.to**](https://dev.to)是一个由成千上万的技术人员组成的社区，作者和读者都可以有意义地参与并分享想法和资源。
 
 ![devto](https://www.freecodecamp.org/news/content/images/2020/11/devto.PNG)
 
-[**Hashnode**](https://hashnode.com) is my go-to blogging platform with awesome perks such as custom domain mapping and an interactive community. Setting up a blog on this platform is also easy and fast.
+[**Hashnode**](https://hashnode.com)是我的首选博客平台，它有令人羡慕的福利，如自定义域名映射和互动社区。在这个平台上建立一个博客也很容易和快速。
 
 ![hashnode](https://www.freecodecamp.org/news/content/images/2020/11/hashnode.PNG)
 
-**[freeCodeCamp](https://freecodecamp.org)** has a very large community and audience reach and is a great place to publish your articles. However, you'll need to apply to write for their publication with some previous writing samples.
+**[freeCodeCamp](https://freecodecamp.org)** 有一个非常大的社区和受众范围，是一个发表文章的好地方。然而，你需要申请为他们的出版物写作，并提供一些以前的写作样本。
 
-Your application could either be accepted or rejected, but don't be discouraged. You can always reapply later as you get better, and who knows? You could get accepted.
+你的申请可能被接受或拒绝，但不要灰心。你总是可以在以后变得更好时重新申请，谁知道呢？你可能会被接受。
 
-If you do write for them, they'll review and edit your articles before publishing, to make sure you publish the most polished article possible. They'll also share your articles on their social media platforms to help more people read them.
+如果你真的为他们写作，他们会在发表前审查和编辑你的文章，以确保你发表最精炼的文章。他们还将在其社交媒体平台上分享你的文章，以帮助更多的人阅读它们。
 
 ![freecodecamp](https://www.freecodecamp.org/news/content/images/2020/11/freecodecamp.PNG)
 
-**[Hackernoon](https://hackernoon.com)** has over 7,000 writers and could be a great platform for you to start publishing your articles to the over 200,000 daily readers in the community.
+**[Hackernoon](https://hackernoon.com)** 有超过7000名作家，可能是一个伟大的平台，让你开始向社区中每天超过20万的读者发布你的文章。
 
-Hacker Noon supports writers by proofreading their articles before publishing them on the platform, helping them avoid common mistakes.
+Hacker Noon为作家提供帮助，在他们的文章在平台上发布之前进行校对，帮助他们避免常见错误。
 
 ![hackernoon](https://www.freecodecamp.org/news/content/images/2020/11/hackernoon.PNG)
 
 ## Technical Writing Courses
 
-Just like in every other field, there are various processes, rules, best practices, and so on in Technical Writing.
+就像其他领域一样，技术写作也有各种流程、规则、最佳实践等等
 
-Taking a course on technical writing will help guide you through every thing you need to learn and can also give you a major confidence boost to kick start your writing journey.
+参加技术写作课程将有助于指导你完成你需要学习的每一件事，也可以给你一个重大的信心提升，以启动你的写作之旅。
 
-Here are some technical writing courses you can check out:
+以下是一些技术写作课程，你可以去看看:
 
-- [Google Technical Writing Course](https://developers.google.com/tech-writing) (Free)
-- [Udemy Technical Writing Course](https://www.udemy.com/topic/technical-writing/) (Paid)
-- [Hashnode Technical Writing Bootcamp](https://hashnode.com/bootcamp/batch-2) (Free)
+- [谷歌技术写作课程](https://developers.google.com/tech-writing) (Free)
+- [Udemy技术写作课程](https://www.udemy.com/topic/technical-writing/) (Paid)
+- [Hashnode技术写作训练营](https://hashnode.com/bootcamp/batch-2) (Free)
 
 ## Technical Writing Forums and Communities
 
-> Alone we can do so little, together, we can do so much ~ Helen Keller
+> 独自一人，我们能做的太少，一起努力，我们能做的太多。--海伦 凯勒
 
-Being part of a community or forum along with people who share same passion as you is beneficial. You can get feedback, corrections, tips and even learn some style tips from other writers in the community.
+成为社区或论坛的一部分，与那些与你有同样激情的人在一起是有益的。你可以从社区中的其他作家那里得到反馈、纠正、提示，甚至学习一些写作风格提示。
 
-Here are some communities and forums for you to join:
+这里有一些社区和论坛供你加入:
 
 - [Hashnode](https://hashnode.com)
 - [Dev.to](https://dev.to)
@@ -259,11 +259,11 @@ Here are some communities and forums for you to join:
 
 ## Some Amazing Technical Writers to follow
 
-In my technical writing journey, I've come and followed some great technical writers whose writing journey, consistency, and style inspire me.
+在我的技术写作历程中，我来到了一些伟大的技术作家身边，他们的写作历程、一致性和风格给我带来了灵感。
 
-These are the writers whom I look up to and consider virtual mentors on technical writing. Sometimes, they drop technical writing tips that I find helpful and have learned a lot from.
+这些作家是我仰望的对象，被我视为技术写作的虚拟导师。有时，他们传授的技术写作技巧让我觉得很有帮助，并从中学到了很多。
 
-Here are some of those writers (hyperlinked with their twitter handles):
+以下是这些作家中的一些人(他们的twitter账号):
 
 - [Quincy Larson](https://twitter.com/ossia)
 - [Edidiong Asikpo](https://twitter.com/didicodes)
@@ -274,25 +274,25 @@ Here are some of those writers (hyperlinked with their twitter handles):
 - [Chris Bongers](https://twitter.com/dailydevtips1)
 - [Colby Fayock](https://twitter.com/colbyfayock)
 
-## Final words
+## 结语
 
-You do not need a degree in technical writing to start putting out technical content. You can start writing on your personal blog and public GitHub repositories while building your portfolio and gaining practical experience.
+你不需要有技术写作的学位就可以开始发布技术内容。你可以开始在你的个人博客和公共GitHub项目上写作，同时建立你的作品集并获得实践经验。
 
-**Really – Just Start Writing.**
+**真的--只要开始写作。**
 
-Practice by creating new documents for existing programs or projects. There are a number of open source projects on GitHub that you can check out and add to their documentation.
+通过为现有的程序或项目创建新的文档来练习。在GitHub上有许多开源项目，你可以查看并添加到他们的文档中。
 
-Is there an app that you love to use, but its documentation is poorly written? Write your own and share it online for feedback. You can also quickly set up your blog on [hashnode](https://hashnode.com) and start writing.
+是否有一个你喜欢使用的应用，但其文档写得很差？写下你自己的，并在网上分享以获得反馈。你也可以在[hashnode](https://hashnode.com)上快速建立你的博客并开始写作。
 
-> _You learn to write by writing, and by reading and thinking about how writers have created their characters and invented their stories. If you are not a reader, don't even think about being a writer. - Jean M. Auel_
+> _你通过写作来学习写作，通过阅读和思考作家如何创造他们的人物和发明他们的故事。如果你不是一个读者，就别想成为一个作家。- Jean M. Auel_
 
-**Technical writers are always learning**. By diving into new subject areas and receiving external feedback, a good writer never stops honing their craft.
+**技术作家总是在学习**。通过潜心研究新的主题领域和接受外部反馈，一个好的作家永远不会停止磨练自己的技艺。
 
-Of course, good writers are also voracious readers. By reviewing highly-read or highly-used documents, your own writing will definitely improve.
+当然，好的作家也是贪婪的读者。通过回顾深入阅读或频繁使用的文档，你自己的写作肯定会提高。
 
-Can't wait to see your technical articles!
+迫不及待地想看到你的技术文章!
 
-### References
+### 参考文献
 
 [Introduction to Technical Writing](https://www.bittbox.com/advice/introduction-technical-writing)‌‌
 
@@ -302,4 +302,4 @@ Can't wait to see your technical articles!
 
 ‌‌[Technical Writing template](https://github.com/BolajiAyodeji/technical-writing-template)
 
-I hope this was helpful. If so, follow me on [Twitter](https://twitter.com/msamarachukwu) and let me know!
+我希望这是有帮助的。如果是这样，请在[Twitter](https://twitter.com/msamarachukwu)上关注我，并给我反馈!

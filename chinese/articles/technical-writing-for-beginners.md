@@ -1,30 +1,30 @@
 > - 原文地址：[Technical Writing for Beginners – An A-Z Guide to Tech Blogging Basics](https://www.freecodecamp.org/news/technical-writing-for-beginners/)
 > - 原文作者：[Amarachi Emmanuela Azubuike](https://www.freecodecamp.org/news/author/amarachukwu/)
 >
-> - 译者：
+> - 译者：luojiyin
 > - 校对者：
 
 ![Technical Writing for Beginners – An A-Z Guide to Tech Blogging Basics](https://www.freecodecamp.org/news/content/images/size/w2000/2020/11/etienne-boulanger-aafOjsh-9jU-unsplash.jpg)
 
-If you love writing and technology, technical writing could be a suitable career for you. It's also something else you can do if you love tech but don’t really fancy coding all day long.
+如果你喜欢写作和技术，技术写作可能是一个适合你的职业。如果你喜欢技术，但又不喜欢整天编码，你也可以做这个工作。
 
-Technical writing might also be for you if you love learning by teaching others, contributing to open source projects and teaching others how to do so, too, or basically enjoy explaining complex concepts in simple ways through your writing.
+如果你喜欢通过教别人学习，为开源项目做贡献并教别人如何做，或者基本上喜欢通过写作以简单的方式解释复杂的概念，技术写作也可能适合你。
 
-Let's dive into the fundamentals and learn about what you should know and consider when getting started with technical writing.
+让我们深入了解基本原理，了解在开始技术写作时你应该知道和考虑什么。
 
-## Table of Contents
+## 目录
 
-In this article, we’ll be looking at:
+在这篇文章中，我们将关注:
 
-- [What Technical writing is](#what-technical-writing-is)
-- [Benefits of Technical Writing](#benefits)
-- [Necessary skills to have as a Technical Writer](#some-necessary-skills)
-- [The Technical Writing Process](#the-technical-writing-process)
-- [Platforms for publishing your articles](#platforms-for-publishing-your-articles)
-- [Technical Writing Courses](#technical-writing-courses)
-- [Technical Writing forums and communities](#technical-writing-forums-and-communities)
-- [Some amazing technical writers to follow](#Some-amazing-technical-writers-to-follow)
-- [Final Words and references](#final-words)
+- [技术写作是什么](#what-is-technical-writing)
+- [技术写作的益处](#benefits-of-technical-writing)
+- [作为一个技术作家所必须具备的技能](#some-necessary-skills)
+- [技术写作流程](#the-technical-writing-process)
+- [发布文章的平台](#where-to-publish-your-articles)
+- [技术写作课](#technical-writing-courses)
+- [技术写作论坛和社区](#technical-writing-forums-and-communities)
+- [一些值得关注的技术作家](#some-amazing-technical-writers-to-follow)
+- [结束语和参考资料](#final-words)
 
 ## What is Technical Writing?
 

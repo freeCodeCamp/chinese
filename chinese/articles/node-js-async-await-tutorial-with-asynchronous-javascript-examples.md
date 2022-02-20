@@ -120,11 +120,11 @@ API returned status: 200
 
 现在你对异步执行和Node.js事件循环的内部工作有了很好的理解，让我们深入了解JavaScript中的async/await。我们将看看它是如何工作的，从最初的回调驱动（callback-driven）的实现到最新闪目耀人的async/await关键字。
 
-### JavaScript中的回调（Callbacks） 
+### JavaScript中的回调（Callbacks）
 
-The OG way of handling the asynchronous nature of JavaScript engines was through callbacks. Callbacks are basically functions which will be executed, **usually**, at the end of synchronous or I/O blocking operations.
+OG处理JavaScript引擎的异步性的方法是通过回调。回调基本上是在同步或I/O阻塞操作结束后执行的函数。
 
-A straightforward example of this pattern is the built-in `setTimeout` function that will wait for a certain number of milliseconds before executing the callback.
+这种模式的一个直接例子是内置的`setTimeout`函数，它将在执行回调之前等待一定数量的毫秒。
 
 ```js
 setTimeout(2000, () => {
@@ -132,14 +132,14 @@ setTimeout(2000, () => {
 });
 ```
 
-While it's convenient to just attach callbacks to blocking operations, this pattern also introduces a couple of problems:
+虽然将回调加到阻塞操作上很方便，但这种模式也带来了一些问题:
 
-- Callback hell
-- Inversion of control (not the good kind!)
+- 回调地狱（Callback hell）
+- 控制反转（不是好的那种！）。
 
-#### What is callback hell?
+#### 什么是回调地狱？
 
-Let's look at an example with Santa and his elves again. To prepare a present, Santa's workshop would have to carry out a few different steps (with each taking different amounts of time simulated using `setTimeout`):
+让我们再看看圣诞老人和他的精灵们的例子。为了准备一份礼物，圣诞老人的工作室必须进行几个不同的步骤（每个步骤都要用`setTimeout`模拟不同的时间）:
 
 ```js
 function translateLetter(letter, callback) {
@@ -167,7 +167,7 @@ function wrapPresent(toy, callback) {
 }
 ```
 
-These steps need to be carried out in a specific order:
+这些步骤需要按照特定的顺序进行:
 
 ```js
 translateLetter("wooden truck", (instruction) => {
@@ -178,13 +178,13 @@ translateLetter("wooden truck", (instruction) => {
 // This will produced a "wrapped polished wooden truck" as the final result
 ```
 
-As we do things this way, adding more steps to the process would mean pushing the inner callbacks to the right and ending up in callback hell like this:
+由于我们这样做，在这个过程中增加更多的步骤将意味着把内部的回调推到右边，并最终进入回调地狱，如图所示:
 
 ![Callback Hell](https://www.freecodecamp.org/news/content/images/2021/05/callback-hell.jpeg)
 
-Callbacks look sequential, but at times the execution order doesn't follow what is shown on your screen. With multiple layers of nested callbacks, you can easily lose track of the big picture of the whole program flow and produce more bugs or just become slower when writing your code.
+回调看起来是有顺序的，但有时执行的顺序并不遵循你屏幕上显示的内容。有了多层嵌套的回调，你很容易失去对整个程序流程的大局观，产生更多的错误，或者只是在写代码时变得更慢。
 
-So how do you solve this problem? Simply modularise the nested callbacks into named functions and you will have a nicely left-aligned program that's easy to read.
+那么你如何解决这个问题呢？简单地将嵌套的回调模块化为命名的函数，你将有一个很好的左对齐的程序，很容易阅读。
 
 ```js
 function assembleCb(toy) {
@@ -196,26 +196,26 @@ function translateCb(instruction) {
 translateLetter("wooden truck", translateCb);
 ```
 
-#### Inversion of Control
+#### 控制反转（Inversion of Control）
 
-Another problem with the callback pattern is that you don't decide how the higher-order functions will execute your callbacks. They might execute it at the end of the function, which is conventional, but they could also execute it at the start of the function or execute it multiple times.
+回调模式的另一个问题是，你并没有决定高阶函数如何执行你的回调。他们可能在函数的结尾处执行，这是传统的做法，但他们也可能在函数的开始处执行，或者多次执行。
 
-Basically, you are at the mercy of your dependency owners, and you might never know when they will break your code.
+基本上，你处于依赖关系所有者的摆布之下，你可能永远不知道他们何时会破坏你的代码。
 
-To solve this problem, as a dependency user, there's not much you can do about it. However, if you're ever a dependency owner yourself, please always:
+为了解决这个问题，作为一个依赖性用户，你能做的并不多。然而，如果你自己曾经是一个依赖关系的所有者，请一定要:
 
-- Stick to the conventional callback signature with error as the first argument
-- Execute a callback only once at the end of your higher-order function
-- Document anything out-of-convention that is absolutely required and always aim for backward compatibility
+- 坚持传统的回调签名，将错误作为第一个参数
+- 只在高阶函数的末尾执行一次回调
+- 记录绝对需要的任何不合常规的东西，并始终以向后兼容为目标
 
-### Promises in JavaScript
+### JavaScript中的Promises
 
-[Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) were created to solve these above mentioned problems with callbacks. Promises make sure that JavaScript users:
+[Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 是为了解决上述回调的问题而创建的。Promises确保了JavaScript用户:
 
-- Stick to a specific convention with their signature `resolve` and `reject` functions.
-- Chain the callback functions to a well-aligned and top-down flow.
+- 坚持用他们的签名`resolve`和`reject`函数进行特定的约定。
+- 将回调函数链接到一个排列整齐的、自上而下的流程。
 
-Our previous example with Santa's workshop preparing presents can be rewritten with promises like so:
+我们之前关于圣诞老人工作室准备礼物的例子可以用这样的承诺来重写:
 
 ```js
 function translateLetter(letter) {
@@ -249,7 +249,7 @@ function wrapPresent(toy) {
 }
 ```
 
-with the steps being carried out nicely in a chain:
+顺利地进行了一系列的步骤:
 
 ```js
 translateLetter("wooden truck")
@@ -263,9 +263,9 @@ translateLetter("wooden truck")
 // This would produce the exact same present: wrapped polished wooden truck
 ```
 
-However, promises are not without problems either. Data in each eye of our chain have a different scope and only have access data passed from the immediate previous step or parent scope.
+然而，promises 也不是没有问题的。我们链条上的每一个眼的数据都有不同的范围，并且只能访问从紧邻的前一个步骤或父级范围传递过来的数据。
 
-For example, our gift-wrapping step might want to use data from the translation step:
+例如，我们的礼物包装步骤可能想使用翻译步骤的数据。:
 
 ```js
 function wrapPresent(toy, instruction) {
@@ -277,7 +277,7 @@ function wrapPresent(toy, instruction) {
 }
 ```
 
-This is rather [a classic "memory sharing" problem with threading](https://livebook.manning.com/book/c-plus-plus-concurrency-in-action/chapter-3/1). To solve this, instead of using variables in the parent's scope, we should use `Promise.all` and ["share data by communicating, rather than communicate by sharing data"](https://blog.golang.org/codelab-share).
+这倒是[一个典型的 "内存共享 "的线程问题](https://livebook.manning.com/book/c-plus-plus-concurrency-in-action/chapter-3/1)。 为了解决这个问题，我们应该使用`Promise.all`和["通过通信共享数据，而不是通过共享数据进行通信"](https://blog.golang.org/codelab-share)，而不是使用父级范围内的变量。
 
 ```js
 translateLetter("wooden truck")
@@ -291,11 +291,11 @@ translateLetter("wooden truck")
 // This would produce the present: wrapped polished wooden truck with instruction: "kcurt nedoow"
 ```
 
-### Async/Await in JavaScript
+### JavaScript中的Async/Await
 
-Last but definitely not least, the shiniest kid around the block is async/await. It is very easy to use but it also has some risks.
+最后但绝对不是最不重要的，最靓的仔是async/await。它非常容易使用，但也有一些风险。
 
-Async/await solves the memory sharing problems of promises by having everything under the same scope. Our previous example can be rewritten easily like so:
+Async/await解决了Promise的内存共享问题，把所有的东西都放在同一个范围内。我们之前的例子可以很容易地改写成这样:
 
 ```js
 (async function main() {
@@ -307,9 +307,9 @@ Async/await solves the memory sharing problems of promises by having everything 
 // This would produce the present: wrapped polished wooden truck with instruction: "kcurt nedoow"
 ```
 
-However, as much as it's easy to write asynchronous code with async/await, it's also easy to make mistakes that create performance loopholes.
+然而，尽管用async/await写异步代码很容易，但也很容易犯错误，造成性能漏洞。
 
-Let's now localise our example Santa's workshop scenario to wrapping presents and loading them on the sleigh.
+现在让我们把我们的例子圣诞老人工作室的场景本地化，以包装礼物并把它们装到雪橇上。
 
 ```js
 function wrapPresent(toy) {
@@ -331,7 +331,7 @@ function loadPresents(presents) {
 }
 ```
 
-A common mistake you might make is carrying out the steps this way:
+你可能犯的一个常见错误是这样执行步骤:
 
 ```js
 (async function main() {
@@ -344,9 +344,9 @@ A common mistake you might make is carrying out the steps this way:
 })();
 ```
 
-But does Santa need to `await` for each of the presents to be wrapped one by one before loading? Definitely not! The presents should be wrapped concurrently. You might make this mistake often as it's so easy to write `await` without thinking about the blocking nature of the keyword.
+但是，圣诞老人是否需要 `等待`每件礼物被逐一包装好后再装车？当然不需要。礼物应该是同时包装的。你可能会经常犯这个错误，因为你很容易写出`await`，而没有考虑到这个关键字的阻塞性（blocking nature）。
 
-To solve this problem, we should bundle the gift wrapping steps together and execute them all at once:
+为了解决这个问题，我们应该把礼物包装的步骤捆绑在一起，一次性执行:
 
 ```js
 (async function main() {
@@ -360,26 +360,25 @@ To solve this problem, we should bundle the gift wrapping steps together and exe
 })();
 ```
 
-Here are some recommended steps to tackle concurrency performance issue in your Node.js code:
+以下是一些建议的步骤，以解决你的Node.js代码中的并发性能问题:
 
-- Identify hotspots with multiple consecutive awaits in your code
-- Check if they are dependent on each other (that is one function uses data returned from another)
-- Make independent function calls concurrent with `Promise.all`
+- 在你的代码中找出有多个连续等待的hotspots
+- 检查它们是否相互依赖（即一个函数使用另一个函数返回的数据）
+- 用`Promise.all`使独立的函数调用同时进行
 
-## Wrapping up (the article, not Christmas presents 😂)
+## 收拾（文章，而不是圣诞礼物😂）
 
-Congratulations on reaching the end of this article, I tried my best to make  
-this post shorter, but the async topic in JavaScript is just so broad.
+祝贺你读到了本文的结尾，我已经尽力让这篇文章变得更短。这篇文章，但JavaScript中的异步话题实在是太广泛了。
 
-Here are some key takeaways:
+下面是一些关键的收获:
 
-- Modularise your JavaScript callbacks to avoid callback hell
-- Stick to [the convention for JS callbacks](https://gist.github.com/sunnycmf/b2ad4f80a3b627f04ff2)
-- Share data by communicating through `Promise.all` when using promises
-- Be careful about the performance implication of async/await code
+- 将你的JavaScript回调模块化以避免回调地狱
+- 坚持使用[JS回调的惯例](https://gist.github.com/sunnycmf/b2ad4f80a3b627f04ff2)
+- 在使用promises的时候，通过`Promise.all`来共享数据
+- 要注意async/await代码的性能影响
 
 We ❤️ JavaScript :)
 
-## Thank you for reading
+## 谢谢您的阅读
 
-Last but not least, if you like my writings, please head over to [my blog](https://blog.stanleynguyen.me/) for similar commentaries and follow [me on Twitter](https://twitter.com/stanley_ngn). 🎉
+最后，如果你喜欢我的文章，请到[我的博客](https://blog.stanleynguyen.me/)了解类似的评论，并关注[我的推特](https://twitter.com/stanley_ngn). 🎉

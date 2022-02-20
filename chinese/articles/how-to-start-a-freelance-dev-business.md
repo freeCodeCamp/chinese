@@ -1,11 +1,8 @@
-> -  原文地址：[How to Start a Freelance Dev Business](https://www.freecodecamp.org/news/how-to-start-a-freelance-dev-business/)
-> -  原文作者：[
-                    
-                        Andrej Kovacevic
-                    
-                ](https://www.freecodecamp.org/news/author/andrej/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Start a Freelance Dev Business](https://www.freecodecamp.org/news/how-to-start-a-freelance-dev-business/)
+> - 原文作者：[Andrej Kovacevic](https://www.freecodecamp.org/news/author/andrej/)
+>
+> - 译者：(luojiyin)[https://github.com/luojiyin1987]
+> - 校对者：
 
 ![How to Start a Freelance Dev Business](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/freelance-dev-business-article-image.jpg)
 

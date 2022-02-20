@@ -1,11 +1,8 @@
-> -  原文地址：[Build a 100 Days of Code Discord Bot with TypeScript, MongoDB, and Discord.js 13](https://www.freecodecamp.org/news/build-a-100-days-of-code-discord-bot-with-typescript-mongodb-and-discord-js-13/)
-> -  原文作者：[
-                    
-                        Naomi Carrigan
-                    
-                ](https://www.freecodecamp.org/news/author/nhcarrigan/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Build a 100 Days of Code Discord Bot with TypeScript, MongoDB, and Discord.js 13](https://www.freecodecamp.org/news/build-a-100-days-of-code-discord-bot-with-typescript-mongodb-and-discord-js-13/)
+> - 原文作者：[Naomi Carrigan](https://www.freecodecamp.org/news/author/nhcarrigan/)
+>
+> - 译者：
+> - 校对者：
 
 ![Build a 100 Days of Code Discord Bot with TypeScript, MongoDB, and Discord.js 13](https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/pexels-kindel-media-8566473.jpg)
 
@@ -17,16 +14,16 @@ Today I am going to show you how to build your own 100 Days of Code bot.
 
 Contents
 
--   [Create a Discord Bot Application](#create-a-discord-bot-application)
--   [Set Up Your Project](#set-up-your-project)
--   [Create the Discord Bot](#create-the-discord-bot)
--   [Gateway Events in Discord](#gateway-events-in-discord)
--   [Connect to the Database](#connect-to-the-database)
--   [Environment Variable Validation](#environment-variable-validation)
--   [The "interaction" Event](#the-interaction-event)
--   [Prepare for Commands](#prepare-for-commands)
--   [Database Model](#database-model)
--   [Write Bot Commands](#write-bot-commands)
+- [Create a Discord Bot Application](#create-a-discord-bot-application)
+- [Set Up Your Project](#set-up-your-project)
+- [Create the Discord Bot](#create-the-discord-bot)
+- [Gateway Events in Discord](#gateway-events-in-discord)
+- [Connect to the Database](#connect-to-the-database)
+- [Environment Variable Validation](#environment-variable-validation)
+- [The "interaction" Event](#the-interaction-event)
+- [Prepare for Commands](#prepare-for-commands)
+- [Database Model](#database-model)
+- [Write Bot Commands](#write-bot-commands)
 
 ## Create a Discord Bot Application
 
@@ -52,9 +49,9 @@ Under "Scopes", select `bot` and `application.commands`. The `bot` scope allows 
 
 When you select `bot`, a new section for "Bot Permissions" will appear. Select the following permissions:
 
--   Send Messages
--   Embed Links
--   Read Messages/View Channels
+- Send Messages
+- Embed Links
+- Read Messages/View Channels
 
 ![image-78](https://www.freecodecamp.org/news/content/images/2022/01/image-78.png)
 
@@ -109,17 +106,17 @@ Adding the `-r dotenv/config` here will dynamically import and run the `config` 
 
 Speaking of packages, your next step is to install dependencies. Using `npm install`, install these dependencies:
 
--   `discord.js` – this is the library that will handle connecting to the gateway and managing the Discord API calls.
--   `@discordjs/builders` – the discord.js package for constructing application commands
--   `@discordjs/rest` – a custom API client for interacting with the Discord REST API.
--   `discord-api-types` – Type definitions and handlers for the Discord REST API.
--   `dotenv` – a package that loads `.env` values into the Node process.
--   `mongoose` – A wrapper for the MongoDB connection which offers tools for structuring your data.
+- `discord.js` – this is the library that will handle connecting to the gateway and managing the Discord API calls.
+- `@discordjs/builders` – the discord.js package for constructing application commands
+- `@discordjs/rest` – a custom API client for interacting with the Discord REST API.
+- `discord-api-types` – Type definitions and handlers for the Discord REST API.
+- `dotenv` – a package that loads `.env` values into the Node process.
+- `mongoose` – A wrapper for the MongoDB connection which offers tools for structuring your data.
 
 Finally, install the development dependencies with `npm install --save-dev`. Development dependencies are packages that are required for working on your project in a development environment, but not required for running the codebase in production.
 
--   `typescript` – This is the package for the TypeScript language, which includes everything needed to write code in TypeScript and compile it into JavaScript.
--   `@types/node` – TypeScript relies on type definitions to understand the code you write. This package defines the types for the Node.js runtime environment, such as the `process.env` object.
+- `typescript` – This is the package for the TypeScript language, which includes everything needed to write code in TypeScript and compile it into JavaScript.
+- `@types/node` – TypeScript relies on type definitions to understand the code you write. This package defines the types for the Node.js runtime environment, such as the `process.env` object.
 
 With these packages installed, you should now have a `package.json` similar to this:
 
@@ -513,10 +510,10 @@ The `extends` keyword tells TypeScript we are adding properties on top of the `D
 
 Your database model will have four properties. Add these to your interface:
 
--   `discordId: string;` – Every user object in Discord has a unique identifier, called a Snowflake, which is used to distinguish them from other users. Unlike a username or discriminator (the four digit number after the username), the `id` value cannot be changed. This makes it the ideal value for linking your stored data to a Discord user.
--   `round: number;` – This will represent the "round" the user is on in the challenge. When someone completes 100 days of the challenge, they may choose to undertake the challenge again. When they do, they often refer to it as "round 2", for example.
--   `day: number;` – This represents the day the user is on in the challenge.
--   `timestamp: number;` – You will use this value to track when the user last submitted a 100 Days of Code post.
+- `discordId: string;` – Every user object in Discord has a unique identifier, called a Snowflake, which is used to distinguish them from other users. Unlike a username or discriminator (the four digit number after the username), the `id` value cannot be changed. This makes it the ideal value for linking your stored data to a Discord user.
+- `round: number;` – This will represent the "round" the user is on in the challenge. When someone completes 100 days of the challenge, they may choose to undertake the challenge again. When they do, they often refer to it as "round 2", for example.
+- `day: number;` – This represents the day the user is on in the challenge.
+- `timestamp: number;` – You will use this value to track when the user last submitted a 100 Days of Code post.
 
 Great! Now you need to define the Schema for your database entries. `mongoose` uses a Schema object to define the shape of the documents that go in to your database collection. The `Schema` import has a constructor, which you will assign to a variable.
 

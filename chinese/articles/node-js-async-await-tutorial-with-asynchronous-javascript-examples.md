@@ -1,79 +1,74 @@
-> -  原文地址：[Node.js Async Await Tutorial – With Asynchronous JavaScript Examples](https://www.freecodecamp.org/news/node-js-async-await-tutorial-with-asynchronous-javascript-examples/)
-> -  原文作者：[
-                    
-                        Stanley Nguyen
-                    
-                ](https://www.freecodecamp.org/news/author/stanley/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Node.js Async Await Tutorial – With Asynchronous JavaScript Examples](https://www.freecodecamp.org/news/node-js-async-await-tutorial-with-asynchronous-javascript-examples/)
+> - 原文作者：[Stanley Nguyen](https://www.freecodecamp.org/news/author/stanley/)
+>
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Node.js Async Await Tutorial – With Asynchronous JavaScript Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/yoda.jpeg)
 
-One of the hardest concepts to wrap your head around when you're first learning JavaScript is the asynchronous processing model of the language. For the majority of us, learning asynchronous programming looks pretty much like this
+当你第一次学习JavaScript时，最难理解的概念之一是该语言的异步处理（asynchronous processing）模式。对于我们大多数人来说，学习异步编程看起来差不多是这样的
 
 ![async](https://www.freecodecamp.org/news/content/images/2021/05/async.png)
 
-If your first time working with async wasn't like this, please consider yourself a genius
+如果你第一次使用async时不是这样，请认为自己是个天才。
 
-As hard as it is to pick up, async programming is critical to learn if you want to use JavaScript and Node.js to build web applications and servers – because JS code is **asynchronous by default**.
+尽管它很难学，但如果你想使用JavaScript和Node.js构建网络应用程序和服务器，异步编程是至关重要的，因为JS代码**默认是异步的**。
 
-## Asynchronous Programming Fundamentals
+## 异步编程基础知识
 
-So what exactly is the asynchronous processing model, or the `non-blocking I/O` model (which you've likely heard of if you're a Node.js user)?
+那么，究竟什么是异步处理模型，或 "非阻塞I/O "模型（如果你是Node.js用户，你可能已经听说过）？
 
-Here's a TL;DR description: in an async processing model, when your application engine interacts with external parties (like a file system or network), it doesn't wait until getting a result from those parties. Instead, it continues on to subsequent tasks and only comes back to those previous external parties once it's gotten a signal of a result.
+这里有一个很长的，请不要看的描述：在异步处理模型中，当你的应用程序引擎与外部各方（如文件系统或网络）进行交互时，它不会等到从这些各方得到一个结果，才做下一步。相反，它继续进行后续的任务，只有在得到结果的信号后才回到之前的外部各方进行处理。
 
-To understand the default async processing model of Node.js, let's have a look at a hypothetical Santa's workshop. Before any work can begin, Santa will have to read each of the lovely letters from kids around the world.
+为了理解Node.js的默认异步处理模型，我们来看看一个假设的圣诞老人工作室。在任何工作开始之前，圣诞老人将不得不阅读来自世界各地的孩子们的每一封可爱的信。
 
 ![Santa reading letter for workshop](https://www.freecodecamp.org/news/content/images/2021/05/santa-01.png)
 
-He will then figure out the requested gift, translate the item name into [the Elvish language](https://en.wikipedia.org/wiki/Elvish_languages), and then pass the instruction to each of our hard working elves who have different specialisations: wooden toys for Red, stuffed toys for Blue, and robotic toys for Green.
+然后，他将弄清所要求的礼物，将物品名称翻译成[精灵语](https://en.wikipedia.org/wiki/Elvish_languages)，然后将指令传递给我们每个勤劳的精灵，他们有不同的专长：红色的擅长木制玩具，蓝色的擅长填充玩具，绿色的精通做机器人玩具。
 
 ![Santa passing instruction to Red](https://www.freecodecamp.org/news/content/images/2021/05/santa-02.png)
 
-This year, due to [the COVID-19 pandemic](https://en.wikipedia.org/wiki/COVID-19_pandemic), only half Santa's elves can come to his workshop to help. Still, because he's wise, Santa decides that instead of waiting for each elf to finish preparing a gift (that is, working synchronously), he will continue translating and passing out instructions from his pile of letters.
+今年，由于[COVID-19大流行](https://en.wikipedia.org/wiki/COVID-19_pandemic)，只有一半的圣诞老人的精灵可以到他的车间来帮忙。不过，因为他很聪明，圣诞老人决定不等每个精灵准备完礼物（也就是同步工作），而是继续翻译和传递他那堆信中的指示。
 
 ![Santa passing instruction to Blue](https://www.freecodecamp.org/news/content/images/2021/05/santa-03.png)
 
-So on and so forth...
+诸如此类...
 
 ![Santa continue passing out instructions](https://www.freecodecamp.org/news/content/images/2021/05/santa-04.png)
 
-As he is just about to read another letter, Red informs Santa that he has completed  
-preparing the first gift. Santa then receives the present from Red, and puts it to one side.
+当他正准备读另一封信时，红色精灵通知圣诞老人，他已经完成了准备好了第一份礼物。然后，圣诞老人从红色精灵手中接过礼物，并把它放在一边。
 
 ![Santa receiving Red's present](https://www.freecodecamp.org/news/content/images/2021/05/santa-05.png)
 
-And then he continues translating and passing instructions from the next letter.
+然后他继续翻译和传递下一封信。
 
 ![Santa passing instruction to Green](https://www.freecodecamp.org/news/content/images/2021/05/santa-06.png)
 
-As he only needs to wrap a pre-made flying robot, Green can quickly finish preparation and pass the present to Santa.
+由于他只需要包装一个预先制作好的飞行机器人，绿精灵可以迅速完成准备工作并将礼物交给圣诞老人。
 
 ![Santa receiving Green's present](https://www.freecodecamp.org/news/content/images/2021/05/santa-07.png)
 
-After a whole day of hard and asynchronous work, Santa and the elves manage to complete all present preparation. With his improved asynchronous model of working, Santa's workshop is finished in record time despite being hard-hit by the pandemic.
+经过一整天艰苦的异步工作，圣诞老人和精灵们设法完成了所有的礼物准备工作。由于他改进了异步工作模式，尽管受到大流行病的重创，圣诞老人的工作室还是在创纪录的时间内完成了工作。
 
 ![Santa's gotten all the presents](https://www.freecodecamp.org/news/content/images/2021/05/santa-08.png)
 
-So that's the basic idea of an asynchronous or non-blocking I/O processing model. Now let's see how it's done in Node.js specifically.
+这就是异步或非阻塞I/O处理模型的基本思想。现在让我们看看它在Node.js中是如何具体完成的。
 
-## The Node.js Event Loop
+## Node.js的事件循环
 
-You might have heard that Node.js is single-threaded. However, to be exact, only the event loop in Node.js, which interacts with a pool of background C++ worker threads, is single-threaded. There are four important components to the Node.js processing model:
+你可能听说过Node.js是单线程的。然而，确切地说，只有Node.js中的事件循环是单线程的，它与后台C++工作线程池交互。Node.js的处理模式有四个重要组成部分:
 
--   Event Queue: Tasks that are declared in a program, or returned from the processing thread pool via [callbacks](https://nodejs.org/en/knowledge/getting-started/control-flow/what-are-callbacks/). (The equivalent of this in our Santa's workshop is the pile of letters for Santa.)
--   Event Loop: The main Node.js thread that facilitates event queues and worker thread pools to carry out operations – both async and synchronous. (This is Santa. 🎅)
--   Background thread pool: These threads do the actual processing of tasks, which  
-    might be I/O blocking (for example calling and waiting for a response from an external API). (These are the hardworking elves 🧝🧝‍♀️🧝‍♂️ from our workshop.)
+- 事件队列（Event Queue）: 在程序中声明的任务，或通过[回调 callbacks](https://nodejs.org/en/knowledge/getting-started/control-flow/what-are-callbacks/)从处理线程池中返回. (在我们的圣诞老人工作室里，相当于给圣诞老人的那堆信)
+- 事件循环（Event Loop）: Node.js的主线程，促进事件队列和工人线程池进行操作--包括异步和同步。(这里是圣诞老人 🎅)
+- （后台线程池）Background thread pool: 这些线程做任务的实际处理，这可能是I/O阻塞（例如调用和等待外部API的响应）。(这些是我们车间里勤奋的精灵 🧝🧝‍♀️🧝‍♂️。)
 
-You can visualize this processing model as below:
+你可以将这种处理模式可视化，如下所示:
 
 ![processing-model](https://www.freecodecamp.org/news/content/images/2021/05/processing-model.png)
 
-Diagram courtesy of c-sharpcorner.com
+图片来源：c-sharpcorner.com
 
-Let's look at an actual snippet of code to see these in action:
+让我们看看一个实际的代码片段，看看这些代码的作用:
 
 ```js
 console.log("Hello");
@@ -83,7 +78,7 @@ https.get("https://httpstat.us/200", (res) => {
 console.log("from the other side");
 ```
 
-If we execute the above piece of code, we would get this in our standard output:
+如果我们执行上面这段代码，我们会在标准输出中得到这个结果:
 
 ```bash
 Hello
@@ -91,27 +86,27 @@ from the other side
 API returned status: 200
 ```
 
-So how does the Node.js engine carry out the above snippet of code? It starts with three functions in the call stack:
+那么Node.js引擎是如何执行上述代码片段的呢？它从调用栈中的三个函数开始:
 
 ![Processing starts with 3 functions in the call stack](https://www.freecodecamp.org/news/content/images/2021/05/execution-01-1.png)
 
-"Hello" is then printed to the console with the corresponding function call removed from the stack.
+然后，"Hello "被打印到控制台，相应的函数调用从堆栈中删除。
 
 ![Hello console log removed from stack](https://www.freecodecamp.org/news/content/images/2021/05/execution-02-1.png)
 
-The function call to `https.get` (that is, making a get request to the corresponding URL) is then executed and delegated to the worker thread pool with a callback attached.
+然后，对`https.get`的函数调用（即对相应的URL进行获取请求）被执行，并被委托给工人线程池，并附加一个回调。
 
 ![https.get delegated to worker pool](https://www.freecodecamp.org/news/content/images/2021/05/execution-03.png)
 
-The next function call to `console.log` gets executed, and "from the other side" is printed to the console.
+对`console.log`的下一个函数调用被执行，`来自另一边`被打印到控制台。
 
 ![Next console.log get executed](https://www.freecodecamp.org/news/content/images/2021/05/execution-04.png)
 
-Now that the network call has returned a response, the callback function call will then get queued inside the callback queue. Note that this step could happen before the immediate previous step (that is, "from the other side" getting printed), though normally that's not the case.
+现在网络调用已经返回了一个响应，然后回调函数的调用将进入回调队列（callback queue）中。请注意，这一步可能发生在紧接着的上一步之前（即 `从另一边`得到打印），尽管通常情况下不是这样的。
 
 ![Network call completes and callback queued](https://www.freecodecamp.org/news/content/images/2021/05/execution-05.png)
 
-The callback then gets put inside our call stack:
+然后回调被放在我们的调用栈（call stack）中:
 
 ![Callback put inside call stack](https://www.freecodecamp.org/news/content/images/2021/05/execution-06.png)
 
@@ -139,8 +134,8 @@ setTimeout(2000, () => {
 
 While it's convenient to just attach callbacks to blocking operations, this pattern also introduces a couple of problems:
 
--   Callback hell
--   Inversion of control (not the good kind!)
+- Callback hell
+- Inversion of control (not the good kind!)
 
 #### What is callback hell?
 
@@ -209,16 +204,16 @@ Basically, you are at the mercy of your dependency owners, and you might never k
 
 To solve this problem, as a dependency user, there's not much you can do about it. However, if you're ever a dependency owner yourself, please always:
 
--   Stick to the conventional callback signature with error as the first argument
--   Execute a callback only once at the end of your higher-order function
--   Document anything out-of-convention that is absolutely required and always aim for backward compatibility
+- Stick to the conventional callback signature with error as the first argument
+- Execute a callback only once at the end of your higher-order function
+- Document anything out-of-convention that is absolutely required and always aim for backward compatibility
 
 ### Promises in JavaScript
 
 [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) were created to solve these above mentioned problems with callbacks. Promises make sure that JavaScript users:
 
--   Stick to a specific convention with their signature `resolve` and `reject` functions.
--   Chain the callback functions to a well-aligned and top-down flow.
+- Stick to a specific convention with their signature `resolve` and `reject` functions.
+- Chain the callback functions to a well-aligned and top-down flow.
 
 Our previous example with Santa's workshop preparing presents can be rewritten with promises like so:
 
@@ -367,9 +362,9 @@ To solve this problem, we should bundle the gift wrapping steps together and exe
 
 Here are some recommended steps to tackle concurrency performance issue in your Node.js code:
 
--   Identify hotspots with multiple consecutive awaits in your code
--   Check if they are dependent on each other (that is one function uses data returned from another)
--   Make independent function calls concurrent with `Promise.all`
+- Identify hotspots with multiple consecutive awaits in your code
+- Check if they are dependent on each other (that is one function uses data returned from another)
+- Make independent function calls concurrent with `Promise.all`
 
 ## Wrapping up (the article, not Christmas presents 😂)
 
@@ -378,13 +373,13 @@ this post shorter, but the async topic in JavaScript is just so broad.
 
 Here are some key takeaways:
 
--   Modularise your JavaScript callbacks to avoid callback hell
--   Stick to [the convention for JS callbacks](https://gist.github.com/sunnycmf/b2ad4f80a3b627f04ff2)
--   Share data by communicating through `Promise.all` when using promises
--   Be careful about the performance implication of async/await code
+- Modularise your JavaScript callbacks to avoid callback hell
+- Stick to [the convention for JS callbacks](https://gist.github.com/sunnycmf/b2ad4f80a3b627f04ff2)
+- Share data by communicating through `Promise.all` when using promises
+- Be careful about the performance implication of async/await code
 
 We ❤️ JavaScript :)
 
-## Thank you for reading!
+## Thank you for reading
 
 Last but not least, if you like my writings, please head over to [my blog](https://blog.stanleynguyen.me/) for similar commentaries and follow [me on Twitter](https://twitter.com/stanley_ngn). 🎉

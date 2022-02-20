@@ -110,17 +110,17 @@ API returned status: 200
 
 ![Callback put inside call stack](https://www.freecodecamp.org/news/content/images/2021/05/execution-06.png)
 
-and then we will see "API returned status: 200" in our console, like this:
+然后我们会在控制台（console）看到 "API返回状态：200"，像这样:
 
 ![Status code printed out](https://www.freecodecamp.org/news/content/images/2021/05/execution-07.png)
 
-By facilitating the callback queue and call stack, the event loop in Node.js efficiently executes our JavaScript code in an asynchronous way.
+通过促进回调队列（callback queue）和调用栈（call stack），Node.js中的事件循环以异步方式有效地执行我们的JavaScript代码。
 
-## A synchronous history of JavaScript & Node.js async/await
+## JavaScript和Node.js的同步编程的发展历史 async/await
 
-Now that you have good understanding of asynchronous execution and the inner-workings of the Node.js event loop, let's dive into async/await in JavaScript. We'll look at how it's worked through time, from the original callback-driven implementation to the latest shiny async/await keywords.
+现在你对异步执行和Node.js事件循环的内部工作有了很好的理解，让我们深入了解JavaScript中的async/await。我们将看看它是如何工作的，从最初的回调驱动（callback-driven）的实现到最新闪目耀人的async/await关键字。
 
-### Callbacks in JavaScript
+### JavaScript中的回调（Callbacks） 
 
 The OG way of handling the asynchronous nature of JavaScript engines was through callbacks. Callbacks are basically functions which will be executed, **usually**, at the end of synchronous or I/O blocking operations.
 

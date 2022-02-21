@@ -53,25 +53,25 @@
 
 ![image-78](https://www.freecodecamp.org/news/content/images/2022/01/image-78.png)
 
-Screenshot of the OAuth screen with the required settings.
+带有所需设置的OAuth屏幕截图。
 
-Copy the generated URL, and paste it into your browser. This will take you through Discord's process to add your new bot to a server.
+复制生成的URL，并将其粘贴到你的浏览器。这将使你通过Discord的程序，将你的新机器人添加到一个服务器。
 
-Note that you must have the Manage Server permission in the server you want to add the bot to. If you do not have this permission, you can create a server to test your bot in.
+注意，你必须在你想添加机器人的服务器中拥有管理服务器的权限。如果你没有这个权限，你可以创建一个服务器来测试你的机器人。
 
-Now you are ready to write some code!
+现在你已经准备好写一些代码了!
 
 ## Set Up Your Project
 
-You will first need to set up the infrastructure and tooling for your project.
+你首先需要为你的项目建立基础设施和工具。
 
-Ensure that you have Node.js **version 16** and `npm` installed. Note that the packages you will use do not support earlier versions of Node.
+确保你有Node.js **版本16**和`npm`安装。注意，你将使用的软件包不支持早期版本的Node。
 
-### Prepare the `package.json`
+### 准备`package.json`文件
 
-Create a directory, or folder, for your project. Open your terminal pointing to that new folder. Run the command `npm init` to set up your `package.json` file. For this tutorial, the default values are sufficient, but feel free to edit them as you wish.
+为你的项目创建一个目录，或文件夹。打开你的终端，指向这个新文件夹。运行命令`npm init`来设置你的`package.json`文件。在本教程中，默认值就足够了，但可以根据你的需要自由编辑。
 
-You should end up with a `package.json` similar to this:
+你最终应该得到一个类似于以下的`package.json`:
 
 ```json
 {
@@ -87,22 +87,22 @@ You should end up with a `package.json` similar to this:
 }
 ```
 
-Now you need to make a couple of changes to get ready for the TypeScript implementation.
+现在你需要做一些改变，为TypeScript的实现做好准备。
 
-First, replace the `main` value of `index.js` with `./prod/index.js` – you will be setting your TypeScript to compile to a `prod` directory.
+首先，将`index.js`的`main`值替换为`./prod/index.js`--你将设置你的TypeScript编译到`prod`目录。
 
-Then remove the `test` script and add the following two scripts:
+然后删除`test`脚本，添加以下两个脚本。
 
 ```json
 "build": "tsc",
 "start": "node -r dotenv/config ./prod/index.js"
 ```
 
-The `build` script will compile your TypeScript into JavaScript so Node can run it, and the `start` script will run the `index.js` entrypoint file.
+`build`脚本将把你的TypeScript编译成JavaScript，以便Node可以运行它，`start`脚本将运行`index.js`入口文件。
 
-Adding the `-r dotenv/config` here will dynamically import and run the `config` method in the `dotenv` package, which loads your environment variables from the `.env` file.
+在这里添加`-r dotenv/config`将动态导入并运行`dotenv`包中的`config`方法，它从`.env`文件中加载你的环境变量。
 
-Speaking of packages, your next step is to install dependencies. Using `npm install`, install these dependencies:
+你的下一步是安装依赖性。使用`npm install`，安装这些依赖项。
 
 - `discord.js` – this is the library that will handle connecting to the gateway and managing the Discord API calls.
 - `@discordjs/builders` – the discord.js package for constructing application commands

@@ -1,5 +1,9 @@
 > -  原文地址：[Python Read JSON File – How to Load JSON from a File and Parse Dumps](https://www.freecodecamp.org/news/python-read-json-file-how-to-load-json-from-a-file-and-parse-dumps/)
-> -  原文作者：[Estefania Cassingena Navone](https://www.freecodecamp.org/news/author/estefaniacn/)
+> -  原文作者：[
+                    
+                        Estefania Cassingena Navone
+                    
+                ](https://www.freecodecamp.org/news/author/estefaniacn/)
 > -  译者：
 > -  校对者：
 
@@ -24,7 +28,7 @@ Are you ready? Let's begin! ✨
 
 ## 🔹 Introduction: What is JSON?
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-98.png)
+![image-98](https://www.freecodecamp.org/news/content/images/2020/10/image-98.png)
 
 The JSON format was originally inspired by the syntax of JavaScript (a programming language used for web development). But since then it has become a **language-independent data format** and most of the programming languages that we use today can generate and read JSON.
 
@@ -36,11 +40,11 @@ Let's see why:
 
 -   **Web Development:** JSON is commonly used to send data from the server to the client and vice versa in web applications.
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-65.png)
+![image-65](https://www.freecodecamp.org/news/content/images/2020/10/image-65.png)
 
 -   **Configuration files:** JSON is also used to store configurations and settings. For example, to create a [Google Chrome App](https://developer.chrome.com/apps/first_app#one), you need to include a JSON file called `manifest.json` to specify the name of the app, its description, current version, and other properties and settings.  
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-99.png)
+![image-99](https://www.freecodecamp.org/news/content/images/2020/10/image-99.png)
 
 ## 🔸 JSON Structure and Format
 
@@ -112,7 +116,7 @@ JSON is a file format used to represent and store data whereas a Python Dictiona
 
 ### How JSON and Python Dictionaries Work Together
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-100.png)
+![image-100](https://www.freecodecamp.org/news/content/images/2020/10/image-100.png)
 
 When we work with JSON files in Python, we can't just read them and use the data in our program directly. This is because the entire file would be represented as a single string and we would not be able to access the key-value pairs individually.
 
@@ -136,13 +140,13 @@ To use `json` in our program, we just need to write an import statement at the t
 
 Like this:
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-73.png)
+![image-73](https://www.freecodecamp.org/news/content/images/2020/10/image-73.png)
 
 With this line, you will have access to the functions defined in the module. We will use several of them in the examples.
 
 **💡 Tip:** If you write this import statement, you will need to use this syntax to call a function defined in the `json` module:
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-76.png)
+![image-76](https://www.freecodecamp.org/news/content/images/2020/10/image-76.png)
 
 ## 🔹 Python and JSON Strings
 
@@ -182,7 +186,7 @@ To do this, we will use the `loads()` function of the `json` module, passing the
 
 This is the basic syntax:
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-77.png)
+![image-77](https://www.freecodecamp.org/news/content/images/2020/10/image-77.png)
 
 Here is the code:
 
@@ -253,7 +257,7 @@ When you use `loads()` to create a Python dictionary from a JSON string, you wil
 
 This table presented in the [Python Documentation](https://docs.python.org/3/library/json.html#encoders-and-decoders) for the `json` module summarizes the correspondence from JSON data types and values to Python data types and values:
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-79.png)
+![image-79](https://www.freecodecamp.org/news/content/images/2020/10/image-79.png)
 
 Table presented in the official [documentation of the json module](https://docs.python.org/3/library/json.html#encoders-and-decoders) 
 
@@ -267,7 +271,7 @@ But sometimes we might need to do exactly the opposite, creating a string with J
 
 To do that, we can use the `dumps` function of the `json` module, passing the object as argument:
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-80.png)
+![image-80](https://www.freecodecamp.org/news/content/images/2020/10/image-80.png)
 
 **💡 Tip:** This function will return a string.
 
@@ -316,7 +320,7 @@ So the return value of this function was definitely a string.
 
 A process of type conversion occurs as well when we convert a dictionary into a JSON string. This table from the [Python Documentation](https://docs.python.org/3/library/json.html#json.JSONEncoder) illustrates the corresponding values:
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-81.png)
+![image-81](https://www.freecodecamp.org/news/content/images/2020/10/image-81.png)
 
 Table from the [official documentation of the json module](https://docs.python.org/3/library/json.html#json.JSONEncoder).
 
@@ -334,7 +338,7 @@ We can improve the readability of the JSON string by adding **indentation**.
 
 To do this automatically, we just need to pass a second argument to specify the number of spaces that we want to use to indent the JSON string:
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-111.png)
+![image-111](https://www.freecodecamp.org/news/content/images/2020/10/image-111.png)
 
 **💡 Tip:** the second argument has to be a non-negative integer (number of spaces) or a string. If indent is a string (such as `"\t"`), that string is used to indent each level ([source](https://docs.python.org/3/library/json.html#json.dump)).
 
@@ -362,7 +366,7 @@ That's great, right? Now our string is nicely formatted. This will be very helpf
 
 You can also sort the keys in alphabetical order if you need to. To do this, you just need to write the name of the parameter `sort_keys` and pass the value `True`:
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-84.png)
+![image-84](https://www.freecodecamp.org/news/content/images/2020/10/image-84.png)
 
 💡 **Tip:** The value of `sort_keys` is `False` by default if you don't pass a value.
 
@@ -382,7 +386,7 @@ Returns this string with the keys sorted in alphabetical order:
 
 To generate a JSON string that is sorted alphabetically and indented, you just need to pass the two arguments:
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-104.png)
+![image-104](https://www.freecodecamp.org/news/content/images/2020/10/image-104.png)
 
 In this case, the output is:
 
@@ -406,7 +410,7 @@ Typically, JSON is used to store data in files, so Python gives us the tools we 
 
 **💡 Tip:** a JSON file has a `.json` extension:
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-62.png)
+![image-62](https://www.freecodecamp.org/news/content/images/2020/10/image-62.png)
 
 Let's see how we can work with `.json` files in Python.
 
@@ -456,7 +460,7 @@ Here are some quick tips:
 
 If we want to read this file in Python, we just need to use a `with` statement:
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-87.png)
+![image-87](https://www.freecodecamp.org/news/content/images/2020/10/image-87.png)
 
 💡 **Tip:** In the syntax above, we can assign any name to `file` (green box). This is a variable that we can use within the `with` statement to refer to the file object.
 
@@ -497,7 +501,7 @@ data["orders"][0]["toppings"]
 
 You can see this "path" graphically in the diagram:
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-101.png)
+![image-101](https://www.freecodecamp.org/news/content/images/2020/10/image-101.png)
 
 If we print this value, the output is:
 
@@ -515,7 +519,7 @@ Let's see how you can write to a JSON file.
 
 The first line of the `with` statement is very similar. The only change is that you need to open the file in `'w'` (write) mode to be able to modify the file.
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-105.png)
+![image-105](https://www.freecodecamp.org/news/content/images/2020/10/image-105.png)
 
 **💡 Tip:** If the file doesn't exist already in the current working directory (folder), it will be created automatically. By using the `'w'` mode, we will be replacing the entire content of the file if it already exists.
 
@@ -533,7 +537,7 @@ This is a function that takes two arguments:
 -   The object that will be stored in JSON format (for example, a dictionary).
 -   The file where it will be stored (a file object).
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-91.png)
+![image-91](https://www.freecodecamp.org/news/content/images/2020/10/image-91.png)
 
 Let's say that the pizza shop wants to remove the clients' data from the JSON file and create a new JSON file called `orders_new.json` with this new version.
 
@@ -608,7 +612,7 @@ Indentation, of course!
 
 The file doesn't really look like a JSON file, but we can easily fix this by passing the argument `indentation=4` to `dump()`.
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-92.png)
+![image-92](https://www.freecodecamp.org/news/content/images/2020/10/image-92.png)
 
 Now the content of the file looks like this:
 
@@ -647,7 +651,7 @@ Now you know how to read and write to JSON files using `load()` and `dump()`. Le
 
 This table summarizes the key differences between these two functions:
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-110.png)
+![image-110](https://www.freecodecamp.org/news/content/images/2020/10/image-110.png)
 
 💡 **Tip:** Think of `loads()` as "load string" and that will help you remember which function is used for which purpose.
 
@@ -655,7 +659,7 @@ This table summarizes the key differences between these two functions:
 
 Here we have a table that summarizes the key differences between these two functions:
 
-![](https://www.freecodecamp.org/news/content/images/2020/10/image-109.png)
+![image-109](https://www.freecodecamp.org/news/content/images/2020/10/image-109.png)
 
 💡 **Tip:** Think of `dumps()` as a "dump string" and that will help you remember which function is used for which purpose.
 

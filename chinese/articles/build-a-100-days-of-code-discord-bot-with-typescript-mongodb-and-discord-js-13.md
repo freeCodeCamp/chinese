@@ -1,53 +1,51 @@
 > - 原文地址：[Build a 100 Days of Code Discord Bot with TypeScript, MongoDB, and Discord.js 13](https://www.freecodecamp.org/news/build-a-100-days-of-code-discord-bot-with-typescript-mongodb-and-discord-js-13/)
 > - 原文作者：[Naomi Carrigan](https://www.freecodecamp.org/news/author/nhcarrigan/)
 >
-> - 译者：
+> - 译者： [luojiyin](https://github.com/luojiyin1987)
 > - 校对者：
 
 ![Build a 100 Days of Code Discord Bot with TypeScript, MongoDB, and Discord.js 13](https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/pexels-kindel-media-8566473.jpg)
 
-The [100 Days of Code challenge](https://www.freecodecamp.org/news/the-crazy-history-of-the-100daysofcode-challenge-and-why-you-should-try-it-for-2018-6c89a76e298d/) is very popular among new coders and developers looking to level up their skills. It's so popular that our [Discord server](https://www.freecodecamp.org/news/freecodecamp-discord-chat-room-server/) has an entire channel dedicated to it.
+[100天代码挑战](https://www.freecodecamp.org/news/the-crazy-history-of-the-100daysofcode-challenge-and-why-you-should-try-it-for-2018-6c89a76e298d/) 在希望提高技能水平的新代码员和开发人员中非常流行。它是如此受欢迎，以至于我们的[Discord服务器](https://www.freecodecamp.org/news/freecodecamp-discord-chat-room-server/)有一个完整的频道专门讨论它。
 
-By popular demand, we built a Discord bot that helps people track their progress in the challenge.
+应大众要求，我们建立了一个Discord机器人，帮助人们跟踪他们在挑战中的进展。
 
-Today I am going to show you how to build your own 100 Days of Code bot.
+今天我将向你展示如何建立你自己的 "100天代码 "机器人。
 
-Contents
+目录
 
-- [Create a Discord Bot Application](#create-a-discord-bot-application)
-- [Set Up Your Project](#set-up-your-project)
-- [Create the Discord Bot](#create-the-discord-bot)
-- [Gateway Events in Discord](#gateway-events-in-discord)
-- [Connect to the Database](#connect-to-the-database)
-- [Environment Variable Validation](#environment-variable-validation)
-- [The "interaction" Event](#the-interaction-event)
-- [Prepare for Commands](#prepare-for-commands)
-- [Database Model](#database-model)
-- [Write Bot Commands](#write-bot-commands)
+- [创建一个Discord机器人应用程序](#create-a-discord-bot-application)
+- [设置你的项目](#set-up-your-project)
+- [创建Discord机器人](#create-the-discord-bot)
+- [Discord中的网关事件](#gateway-events-in-discord)
+- [连接到数据库](#connect-to-the-database)
+- [环境变量验证](#environment-variable-validation)
+- ["交互 "事件](#the-interaction-event)
+- [准备命令](#prepare-for-commands)
+- [数据库模型](#database-model)
+- [编写机器人命令](#write-bot-commands)
 
 ## Create a Discord Bot Application
 
-Your first step is to set up a Discord bot application. Head over to the [Discord Developer Portal](https://discord.dev), sign in if needed, and select "Applications" from the sidebar.
+你的第一步是设置一个 Discord 机器人应用程序。前往[Discord Developer Portal](https://discord.dev)，如果需要，请登录，并从侧边栏选择 "Applications"。
 
 ![image-76](https://www.freecodecamp.org/news/content/images/2022/01/image-76.png)
 
-Screenshot of the Developer Portal. If this is your first bot, you will not have any applications here.
+开发者门户网站的屏幕截图。如果这是你的第一个机器人，你将不会在这里截图里的任何应用程序。
 
-Click the "New Application" button. Give it a name, and set it as a "Personal" application. You will now be taken to the application's settings. Here you can change the name, or give it an avatar.
-
-Select "Bot" from the side bar, then click the "Add Bot" button. This will create a Discord Bot account for your application.
+从侧边栏选择"Bot"，然后点击 "Add Bot"按钮。这将为你的应用程序创建一个 Discord Bot 账户。
 
 ![image-77](https://www.freecodecamp.org/news/content/images/2022/01/image-77.png)
 
-Screenshot of the Bot settings page. If you did not set an avatar, you will see a default based on your bot's name.
+这是机器人设置页面的屏幕截图。如果你没有设置头像，你会看到一个基于你的机器人名称的默认头像。
 
-This is the screen where you will get the bot token. It is _very_ important to keep this token secret, as the token allows your code to connect to your bot. Keep it safe and do not share it with anyone.
+这是你将获得机器人令牌（token）的截图。不要让别人知道这个令牌（token）是非常重要的，因为这个令牌（token）允许你的代码连接到你的机器人。保持它的安全，不要与任何人分享。
 
-Now you need to add the bot to a server to interact with it. Click the "OAuth2" option on the sidebar, then select "URL Generator".
+现在你需要将机器人添加到一个服务器上，与它进行交互。点击侧边栏上的 "OAuth2 "选项，然后选择 "URL Generator"。
 
-Under "Scopes", select `bot` and `application.commands`. The `bot` scope allows your bot account to join the server, and the `application.commands` scope allows you to update the slash commands (more on this later).
+在 "Scopes"下，选择`bot`和`application.command`。`bot`范围允许你的机器人账户加入服务器，而`application.command`范围允许你更新斜线命令（slash commands 后面会有更多介绍）。
 
-When you select `bot`, a new section for "Bot Permissions" will appear. Select the following permissions:
+当你选择`bot`时，会出现一个新的 "Bot Permissions "部分。选择以下权限:
 
 - Send Messages
 - Embed Links

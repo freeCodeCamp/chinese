@@ -104,19 +104,19 @@
 
 你的下一步是安装依赖性。使用`npm install`，安装这些依赖项。
 
-- `discord.js` – this is the library that will handle connecting to the gateway and managing the Discord API calls.
-- `@discordjs/builders` – the discord.js package for constructing application commands
-- `@discordjs/rest` – a custom API client for interacting with the Discord REST API.
-- `discord-api-types` – Type definitions and handlers for the Discord REST API.
-- `dotenv` – a package that loads `.env` values into the Node process.
-- `mongoose` – A wrapper for the MongoDB connection which offers tools for structuring your data.
+- `discord.js` – 这是一个处理连接到网关和管理Discord API调用的库。
+- `@discordjs/builders` –  用于构建应用程序命令的discord.js包。
+- `@discordjs/rest` –  用于与Discord REST API互动的自定义API客户端。
+- `discord-api-types` – Discord REST API的类型定义和处理程序。
+- `dotenv` – 一个将`.env'值加载到Node进程的包。
+- `mongoose` – MongoDB连接的驱动，提供了结构化数据的工具。
 
-Finally, install the development dependencies with `npm install --save-dev`. Development dependencies are packages that are required for working on your project in a development environment, but not required for running the codebase in production.
+最后，用`npm install --save-dev`安装开发依赖项。开发依赖是指在开发环境中处理你的项目所需要的包，但在生产中运行代码库时不需要。
 
-- `typescript` – This is the package for the TypeScript language, which includes everything needed to write code in TypeScript and compile it into JavaScript.
-- `@types/node` – TypeScript relies on type definitions to understand the code you write. This package defines the types for the Node.js runtime environment, such as the `process.env` object.
+- `typescript` – 这是TypeScript语言的包，它包括用TypeScript编写代码并将其编译为JavaScript所需的一切。
+- `@types/node` – TypeScript依靠类型定义来理解你写的代码。这个包定义了Node.js运行环境的类型，例如`process.env`对象。
 
-With these packages installed, you should now have a `package.json` similar to this:
+安装了这些软件包后，你现在应该有一个类似于以下的`package.json`:
 
 ```json
 {
@@ -144,13 +144,13 @@ With these packages installed, you should now have a `package.json` similar to t
 }
 ```
 
-### Prepare TypeScript
+### 准备好TypeScript
 
-TypeScript's compiler offers a number of different settings to maximise your control over the resulting JavaScript.
+TypeScript的编译器提供了许多不同的设置，以最大限度地提高你对生成的JavaScript的控制。
 
-You can typically modify the compiler settings through a `tsconfig.json` file at the root of your project. You can generate the default boilerplate for this file with `npx tsc --init`, use an existing one if you set one up in another project, or even write one from scratch.
+你通常可以通过项目根部的`tsconfig.json`文件修改编译器设置。你可以用`npx tsc --init`为这个文件生成默认的模板，如果你在其他项目中设置了一个模板，可以使用现有的模板，甚至可以从头开始写一个。
 
-Because the compiler settings can significantly change the behaviour of TypeScript, it is best to use the same settings when following this tutorial. Here are the settings you should use:
+因为编译器的设置可以显著改变TypeScript的行为，所以在学习本教程时最好使用相同的设置。以下是你应该使用的设置:
 
 ```json
 {
@@ -168,13 +168,13 @@ Because the compiler settings can significantly change the behaviour of TypeScri
 }
 ```
 
-The most important settings here are the `rootDir` and `outDir` settings. These tell the compiler that all of your code will be in the `src` directory, and the resulting JavaScript should go in the `prod` directory.
+这里最重要的设置是`rootDir`和`outDir`的设置。这些设置告诉编译器，你所有的代码都在`src`目录下，而生成的JavaScript应该在`prod`目录下。
 
-If you would like to test your settings, create a `src` directory and place an `index.ts` file inside. Write some code (such as a `console.log` statement) and run `npm run build` in your terminal. You should see a `prod` directory get created, with an `index.js` containing your compiled code.
+如果你想测试你的设置，创建一个`src`目录并在里面放置一个`index.ts`文件。编写一些代码（如`console.log`语句）并在终端运行`npm run build`。你应该看到一个`prod`目录被创建，其中的`index.js`包含了你的编译代码。
 
-### Additional Setup Notes
+### 其他设置说明
 
-If you are using `git` as a version control, you want to avoid pushing secrets and unnecessary code to your repository. Create a `.gitignore` file in your root project directory, and add the following content:
+如果你使用`git`作为版本控制，你要避免将秘密和不必要的代码推送到你的仓库。在你的项目根目录下创建一个`.gitignore`文件，并添加以下内容:
 
 ```txt
 /node_modules/
@@ -182,15 +182,15 @@ If you are using `git` as a version control, you want to avoid pushing secrets a
 .env
 ```
 
-The `.gitignore` file tells `git` not to track files/folders that match the patterns you enter. Ignoring the `node_modules` folder keeps your repository from becoming bloated.
+`.gitignore`文件告诉`git`不要追踪符合你输入的模式的文件/文件夹。忽略 `node_modules`文件夹可以防止你的仓库变得臃肿（node_modules实在太大了，有黑洞之称）。
 
-Pushing the compiled JavaScript is also unnecessary, as your project is typically compiled in production before runtime. `.env` files contain secret values, such as API keys and tokens, so they should not be committed to a repository.
+推送已编译的JavaScript也是不必要的，因为你的项目通常在运行前就已经在生产中编译了。`.env`文件包含秘密值，如API密钥和令牌，所以它们不应该被提交到版本库。
 
 ## Create the Discord Bot
 
-Your next step is to prepare the initial bot connection. If you did not do so earlier, create a `src` directory and an `index.ts` file within.
+你的下一步是准备初始的机器人连接。如果你之前没有这样做，创建一个`src`目录和一个`index.ts`文件。
 
-Start with an anonymous immediately-invoked function expression (IIFE) to allow for top-level `await` use:
+从一个匿名的立即执行的函数表达式（IIFE）开始，以允许顶层的`await`使用:
 
 ```ts
 (async () => {
@@ -198,15 +198,15 @@ Start with an anonymous immediately-invoked function expression (IIFE) to allow 
 })();
 ```
 
-Within this function you are going to instantiate your Discord bot. At the top of the file, import the `Client` class with `import { Client } from "discord.js";`. The `Client` class represents your Discord bot's session.
+在这个函数中，你将实例化你的Discord机器人。在文件的顶部，用`import { Client } from "discord.js";`导入`Client`类。`Client`类代表你的Discord机器人的会话。
 
-Inside your function, construct a new `Client` instance and assign it to a `BOT` variable with `const BOT = new Client();`. Now the `BOT` variable will represent your bot.
+在你的函数中，构建一个新的`Client`实例，并将其分配给`BOT`变量，`const BOT = new Client();`。现在，`BOT'变量将代表你的机器人。
 
-To connect your bot to the Discord gateway and begin receiving events, you will need to use the `.login()` method on your bot instance. The `.login()` method takes a single argument, which is the token for the bot application you created earlier.
+为了将你的机器人连接到Discord网关并开始接收事件，你需要在你的机器人实例上使用`.login()`方法。`.login()`方法需要一个参数，即你之前创建的机器人应用程序的令牌（token）。
 
-Many of the methods in `discord.js` are asynchronous, so you will need to use `await` here. Add the line `await BOT.login(process.env.BOT_TOKEN);` to your IIFE.
+`discord.js`中的许多方法是异步的，所以你需要在这里使用`await`。在你的IIFE中加入`await BOT.login(process.env.BOT_TOKEN);`这一行。
 
-Your `index.ts` file should now look like this:
+你的`index.ts`文件现在应该看起来像这样:
 
 ```ts
 import { Client } from "discord.js";
@@ -218,23 +218,23 @@ import { Client } from "discord.js";
 })();
 ```
 
-If you try to run `npm run build`, you will see an error: `An argument for 'options' was not provided.`
+如果你尝试运行`npm run build`，你会看到一个错误：`An argument for 'options' was not provided.`。
 
-In discord.js 13, you are required to specify Gateway Intents when you instantiate your bot. Gateway Intents tell Discord what events your bot should receive.
+在discord.js 13中，当你实例化你的机器人时，你需要指定Gateway Intents。Gateway Intents告诉Discord你的机器人应该接收哪些事件。
 
-In your `src` folder, create a `config` folder - then in `config`, create an `IntentOptions.ts` file.
+在你的`src`文件夹中，创建一个`config`文件夹 - 然后在`config`中，创建一个`IntentOptions.ts`文件。
 
-Within that new file, add the line `export const IntentOptions = ["GUILDS"]`. This will tell Discord your bot should receive the Guild events.
+在这个新文件中，添加 "export const IntentOptions = ["GUILDS"]"一行。这将告诉Discord你的机器人应该接收公会事件（Guild events）。
 
-Then, back in your `index.ts` file, add an argument to your `new Client()` call: `new Client({intents: IntentOptions})`. You'll need to import it at the top of your file with `import { IntentOptions } from "./config/IntentOptions;`.
+然后，在你的`index.ts`文件中，给你的`new Client()`调用添加一个参数: `new Client({intents: IntentOptions})`. 你需要在文件的顶部用 `import { IntentOptions } from "./config/IntentOptions;`，导入它。
 
-It seems you still have an error: ``Type 'string' is not assignable to type 'number | `${bigint}` | IntentsString | Readonly<BitField<IntentsString, number>> | RecursiveReadonlyArray<number | `${bigint}` | IntentsString | Readonly<...>>'.``
+看来你仍然有一个错误: ``Type 'string' is not assignable to type 'number | `${bigint}` | IntentsString | Readonly<BitField<IntentsString, number>> | RecursiveReadonlyArray<number | `${bigint}` | IntentsString | Readonly<...>>'.``
 
-TypeScript is inferring your `IntentOptions` array as a string, but the `Client` constructor is expecting more specific types.
+TypeScript将你的`IntentOptions`数组推断为一个字符串，但`Client`构造函数期望的是更具体的类型。
 
-Head back to your `config/IntentOptions.ts` file and add another import: `import { IntentsString } from "discord.js"`. Then update your variable with the new type definition: `export const IntentOptions: IntentsString[] = ["GUILDS"];`.
+回到你的`config/IntentOptions.ts`文件，添加另一个导入。`import { IntentsString } from "discord.js"`. 然后用新的类型定义更新你的变量： `export const IntentOptions: IntentsString[] = ["GUILDS"];`。
 
-Now `npm run build` should be successful. If you have added your new bot to a Discord server, running `npm start` will show your bot come online in that server. However, the bot is not going to respond to anything yet, because you have not started listening to events.
+现在`npm run build`应该成功了。如果你已经把你的新机器人（bot）添加到一个Discord服务器，运行`npm start`将显示你的机器人在该服务器中上线。然而，机器人还不会对任何事情做出反应，因为你还没有开始监听事件。
 
 ## Gateway Events in Discord
 

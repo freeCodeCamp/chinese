@@ -1,7 +1,8 @@
 Hello, I'm Yuyu Liu (Miya) from the [freeCodeCamp][1] community.
 freeCodeCamp.org is the world's largest open-source non-profit programming education community. It is also an open-source project that has long been ranked number one on GitHub.
 
-In this article, you will see how an ordinary person came from a rural area, graduated from a normal second-tier university with an uncompetitive liberal arts major, switched from traditional industry, and has no working background in a large factory. 
+In this article, you will see how I explore and discover the meaning of life step by step and find out what I like and excel in the open community, as an ordinary person growing up in a rural area, graduating from an ordinary second-tier university with an uncompetitive liberal arts major, switching from traditional industry, and never working in famous companies like BAT.
+
 You will see how I explore and discovers life meaning step by step and find out what I like and excel in the open community. 
 If you are as ordinary like me, wondering if you can do certain things, then my story should give you some encouragement.
 

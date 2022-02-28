@@ -1,11 +1,7 @@
-> -  原文地址：[Git and GitHub Tutorial – Version Control for Beginners](https://www.freecodecamp.org/news/git-and-github-for-beginners/)
-> -  原文作者：[
-                    
-                        Ihechikara Vincent Abba
-                    
-                ](https://www.freecodecamp.org/news/author/ihechikara/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Git and GitHub Tutorial – Version Control for Beginners](https://www.freecodecamp.org/news/git-and-github-for-beginners/)
+> - 原文作者：[Ihechikara Vincent Abba](https://www.freecodecamp.org/news/author/ihechikara/)
+> - 译者：
+> - 校对者：
 
 ![Git and GitHub Tutorial – Version Control for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2021/11/g1117.png)
 
@@ -23,9 +19,9 @@ For our project, we'll make a to-do list written in a text (txt) file. You will 
 
 In order to complete this tutorial, you'll need the following:
 
--   A command line interface.
--   A text editor of your choice (I will be using VS Code).
--   A GitHub account.
+- A command line interface.
+- A text editor of your choice (I will be using VS Code).
+- A GitHub account.
 
 ## What is Git?
 

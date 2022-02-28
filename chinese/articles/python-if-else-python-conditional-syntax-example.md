@@ -1,9 +1,5 @@
 > -  原文地址：[Python If-Else – Python Conditional Syntax Example](https://www.freecodecamp.org/news/python-if-else-python-conditional-syntax-example/)
-> -  原文作者：[
-                    
-                        Kolade Chris
-                    
-                ](https://www.freecodecamp.org/news/author/kolade/)
+> -  原文作者：[Kolade Chris](https://www.freecodecamp.org/news/author/kolade/)
 > -  译者：
 > -  校对者：
 

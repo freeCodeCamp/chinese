@@ -1,11 +1,8 @@
-> -  原文地址：[Working from Home – Tips to Help You Stay Productive](https://www.freecodecamp.org/news/working-from-home-tips-to-stay-productive/)
-> -  原文作者：[
-                    
-                        Gaël Thomas
-                    
-                ](https://www.freecodecamp.org/news/author/gaelgthomas/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Working from Home – Tips to Help You Stay Productive](https://www.freecodecamp.org/news/working-from-home-tips-to-stay-productive/)
+> - 原文作者：[Gaël Thomas](https://www.freecodecamp.org/news/author/gaelgthomas/)
+>
+> - 译者：
+> - 校对者：
 
 ![Working from Home – Tips to Help You Stay Productive](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/working-from-home-tips-to-stay-productive-3.png)
 
@@ -151,9 +148,9 @@ Using focus/chill music can help you stay productive and enter into a deep focus
 
 Here are some examples of websites where you can listen to that kind of music for free:
 
--   [freeCodeCamp radio](https://coderadio.freecodecamp.org/)
--   [LofiGirl on YouTube](https://www.youtube.com/c/LofiGirl)
--   [Cafe Music BGM channel on YouTube](https://www.youtube.com/channel/UCJhjE7wbdYAae1G25m0tHAA)
+- [freeCodeCamp radio](https://coderadio.freecodecamp.org/)
+- [LofiGirl on YouTube](https://www.youtube.com/c/LofiGirl)
+- [Cafe Music BGM channel on YouTube](https://www.youtube.com/channel/UCJhjE7wbdYAae1G25m0tHAA)
 
 ### 2\. Use the "Do not disturb" option on your phone
 

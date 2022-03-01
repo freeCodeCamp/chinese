@@ -1,171 +1,171 @@
 > - 原文地址：[Working from Home – Tips to Help You Stay Productive](https://www.freecodecamp.org/news/working-from-home-tips-to-stay-productive/)
 > - 原文作者：[Gaël Thomas](https://www.freecodecamp.org/news/author/gaelgthomas/)
 >
-> - 译者：
+> - 译者：[luojiyin])(https://github.com/luojiyin1987)
 > - 校对者：
 
 ![Working from Home – Tips to Help You Stay Productive](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/working-from-home-tips-to-stay-productive-3.png)
 
-Over the past few years, a lot of us have started working remotely. That's what I also did, and I fell in love with this life.
+在过去的几年里，我们很多人都开始远程工作。这也是我所做的，我爱上了这种生活。
 
-Indeed, a bit more than two years ago, I started my first full-time job as a Software Engineer. And at the same time, I began my first remote experience.
+的确，两年多以前，我开始了我的第一份全职工作，成为一名软件工程师。同时，我也开始了我的第一次远程体验。
 
-Nowadays, I'm 23 years old, living in Europe, working for a company based in Singapore, and planning to start a digital nomad life in Asia.
+如今，我已经23岁了，住在欧洲，为一家位于新加坡的公司工作，并计划在亚洲开始数字游民生活。
 
-Based on my experience, I've put together 15 working from home tips to help you stay productive. I categorized these tips into 5 categories that you'll discover just below.
+根据我的经验，我把15个在家工作的技巧放在一起，以帮助你保持生产力。我把这些技巧分为5类，你会在下面发现。
 
-Just keep in mind that these tips are based on my personal experience, readings, and documentation. Everyone is different, and some of them may not work with your needs and goals.
+请记住，这些技巧是基于我的个人经验、阅读和文件。每个人都是不同的，其中一些可能不符合你的需求和目标。
 
-## Tip #1 – Build a strong work-life balance
+## Tip #1 – 建立强大的工作与生活的平衡
 
-One of the most impactful categories you need to take care of is your work-life balance.
+你需要考虑的最有影响的因素之一是你的工作和生活平衡。
 
-Yes, you read about this in all remote-work articles, but what does it mean?
+是的，你在所有远程工作的文章中都读到了这一点，但这意味着什么呢？
 
-When you work remotely, it's easy to cut yourself out from your life. Your work can start overwhelming you because you feel like you're only doing that.
+当你远程工作时，很容易把自己从生活中割裂出来。你的工作可能开始压倒你，因为你觉得你只是在做这个。
 
-Even if you're passionate about what you are doing, it's essential to know how to step away from it to relax and stay productive in the long run.
+即使你对你正在做的事情充满热情，但从长远来看，知道如何从工作中抽身出来放松并保持生产力是至关重要的。
 
-Here are some tips to achieve a work-life balance.
+这里有一些实现工作和生活平衡的技巧。
 
-### 1\. Take breaks and go outside
+### 1\. 休息一下，出去走走
 
-It seems simple, right? Remote work doesn't mean staying at home all day. I highly recommend taking breaks and going outside to refresh your mind and leave your workplace.
+这似乎很简单，但真的是这样的？远程工作并不意味着整天呆在家里。我强烈建议利用休息时间，到外面去养精蓄锐，离开你的工作场所。
 
-What about eating outside during your lunchtime or even going for a walk in the afternoon?
+在午餐时间在外面吃饭，甚至在下午出去走走，怎么样？
 
-### 2\. Take up a sport or activity that takes your mind off things
+### 2\. 参加一项运动或活动，让你忘掉一切
 
-To avoid feeling burnout from your job, take a step back and practice a relaxing and mind-changing activity.
+为了避免对工作产生倦怠感，退一步讲，练习一种放松和改变心态的活动。
 
-Many people like to play a sport, while others prefer simply making time for other activities or hobbies that are different from what they do at work.
+许多人喜欢参加体育运动，而其他人则喜欢简单地抽出时间参加其他活动或爱好，这些活动或爱好与他们的工作内容不同。
 
-### 3\. Split your computer
+### 3\. 工作生活使用不同的电脑
 
-One of the most challenging parts of working from home is differentiating your work time from your non-work time.
+在家工作最具挑战性的部分之一是区分你的工作时间和非工作时间
 
-If you're using the same computer for your work and your side-projects/chill time, this tip is for you.
+如果你在工作和副业/休闲时间使用同一台电脑，那么这个提示就适合你。
 
-#### Split your browser configuration
+#### 工作生活使用不同的浏览器配置
 
-Nowadays, most browsers allow you to create profiles. I recommend that you make two profiles, one for your work and one for non-work time.
+如今，大多数浏览器都允许你创建配置文件。我建议你建立两个配置文件，一个用于工作，一个用于非工作时间。
 
-This allows you to disconnect easier when you're outside of work. At the same time, it helps organize your bookmarks and sessions (for example: if you're using the same tools between your work and your side-projects).
+这可以让你在工作之外的时间里更容易断开连接。同时，它有助于组织你的书签和会话（例如：如果你在工作和副业之间使用相同的工具）。
 
-#### Create another session on your computer
+#### 在你的电脑上创建另一个会话
 
-This isn't something that I do personally. But, I read a lot about people using two different sessions.
+这不是我个人所做的事情。但是，我读到很多关于人们使用两个不同的会话。
 
-It sounds like the "ultimate" solution if you want to keep these two spaces independent.
+如果你想保持这工作生活的独立性，这听起来是一个 "终极 "解决方案。
 
-### 4\. Don't setup work notifications on your phone
+### 4\. 不要在你的手机上设置工作通知
 
-This tip can be controversial depending on what you're doing as a remote worker. But, still, I think it's something essential if you want to keep a work-life balance.
+这个建议可能会有争议，取决于你作为一个远程工作者在做什么。但是，我仍然认为，如果你想保持工作和生活的平衡，这是很重要的事情。
 
-I don't like to have work applications or notifications on my phone for many reasons. Remote work means asynchronous life. Your co-workers can work at different hours than you. If you want to avoid waking up with work notifications or receiving messages while you're outside with friends, this is something you should avoid.
+出于很多原因，我不喜欢在我的手机上有工作应用程序或通知。远程工作意味着不同步的生活。你的同事可以在与你不同的时间工作。如果你想避免被工作通知吵醒，或者在外面和朋友聊天时收到信息，这是你应该避免的。
 
-> **Note:** If your work requires setting up some applications, there are many ways to remove the notifications after a defined hour. That can be an alternative.
+> **注意:** 如果你的工作需要设置一些应用程序，有很多方法可以在规定的小时后删除通知。这可以作为一种选择。
 
-### 5\. Work from a co-working space
+### 5\. 在联合办公空间工作
 
-Another piece of advice that I've heard a lot is to work remotely from outside your home. Well, it's a bit controversial with this article title, but it's a genius way to keep a work-life balance if you can afford it and feel comfortable working in a public space.
+另一个我经常听到的建议是在家门口远程工作。好吧，这篇文章的标题有点争议，但如果你能负担得起，并且觉得在公共空间工作很舒服的话，这是一个保持工作和生活平衡的天才方法。
 
-If you're not feeling productive at home, even after reading and trying many things, working from a co-working space can help you.
+如果你在家里感觉工作效率不高，甚至在阅读和尝试了很多东西之后，在联合办公空间工作可以帮助你。
 
-Nowadays, co-working spaces are everywhere. If you can, try one of them out to see if it works for you.
+如今，联合办公空间无处不在。如果你可以的话，尝试其中一个，看看是否适合你（译者注：这是国外的情况）。
 
-## Tip #2 – Create your own working environment
+## Tip #2 – 创造你自己的工作环境
 
-Now that we've talked about the importance of keeping a work-life balance, let's dig a bit more into your workspace and how you can improve it.
+现在我们已经谈到了保持工作和生活平衡的重要性，让我们更多地挖掘你的工作空间，以及你如何能够改善它。
 
-### 1\. Choose or create a workspace that stimulates you
+### 1\. 选择或创造一个能激发你的工作空间
 
-While working remotely, you have the freedom to create a workspace where you feel good. Be imaginative and bring what stimulates you around your desk. It can be plants, books, or anything that you like.
+在远程工作时，你可以自由地创造一个让你感觉良好的工作空间。要有想象力，把能刺激你的东西带到你的桌子周围。它可以是植物，书籍，或任何你喜欢的东西。
 
-If you're a digital nomad or a frequent traveler, you can select a coffee shop, a co-working space, or a flat that inspires you.
+如果你是一个数字游民或经常旅行的人，你可以选择一个咖啡馆，一个联合办公空间，或一个能激发你灵感的公寓。
 
-A nice place to work is always a good source of motivation.
+一个好的工作场所总是一个好的动力来源。
 
-### 2\. Separate your workspace from your sleeping one
+### 2\. 将你的工作区和你的睡眠区分开
 
-I know that's not possible for everyone, but try as much as possible to separate your workspace from your bedroom.
+我知道这对每个人来说都是不可能的，但要尽可能地把你的工作空间和你的卧室分开。
 
-If you wake up and work in the same place as you sleep, you will certainly have the feeling that you're always doing the same thing. It's not motivating to stay in the same room all day. When you reach your bed, you will still be in your "working" room.
+如果你醒来后在睡觉的地方工作，你肯定会有这样的感觉：你总是在做同一件事。整天呆在同一个房间里是没有动力的。当你走到床上时，你仍然会在你的 "工作 "房间里。
 
-### 3\. Declutter your desk
+### 3\. 整理你的办公桌
 
-Many articles and guides about productivity share this tip, but decluttering your desk and keeping it clean and minimal can help free your mind and help you focus more.
+许多关于生产力的文章和指南都有这个建议，但整理你的办公桌并保持其清洁和简约可以帮助你解放思想，帮助你更加专注。
 
-Again, it's a matter of personal opinion, but I like to keep my remote working space clean and simple to focus only on what matters.
+同样，这是一个个人意见的问题，但我喜欢保持我的远程工作空间干净和简单，以便只关注重要的事情。
 
-## Tip #3 – Socialize at work
+## Tip #3 – 工作中的社交活动
 
-Social aspects are essential as a remote worker. They help you stay motivated and avoid this inner feeling of working alone (even if you're not).
+作为一个远程工作者，社交方面是必不可少的。他们帮助你保持动力，避免这种内心的孤独感（即使你不是）。
 
-### 1\. Schedule virtual time with your colleagues
+### 1\. 与你的同事安排好在虚拟网络里社交时间
 
-Remote work doesn't mean staying away from your colleagues. Even if it can seem socially distancing at times, one essential point is to keep socializing.
+远程工作并不意味着远离你的同事。即使有时在社交方面会显得很疏远，但有一点是必不可少的，那就是要保持社交。
 
-Don't be shy – ask your colleagues for a 15-30 minutes coffee meeting to get to know them better.
+不要害羞--向你的同事约个15-30分钟的咖啡会，以便更好地了解他们。
 
-If you're not working as a freelancer on alone on your project, there are many online events and communities that allow you to talk with like-minded people and share a coffee with them.
+如果你不是作为自由职业者单独从事你的项目，有许多在线活动和社区可以让你与志同道合的人交谈，与他们分享咖啡。
 
-### 2\. Try to schedule a social meeting each week in your company
+### 2\. 尝试每周在你的公司安排一次社交会议
 
-If you're leading a remote company or working at one, this point is for you. Don't hesitate to schedule or ask for a social meeting each week. For example, it can be an hour where everyone meets up online and plays an online game together. The possibilities are endless.
+如果你正在领导一个远程公司或在一个公司工作，这一点是为你准备的。不要犹豫，每周安排或要求进行一次社交会议。例如，它可以是一个小时，大家在网上见面，一起玩一个网络游戏。这种可能性是无穷无尽的。
 
-Let me give you feedback on my experience. I'm working at [Cococart](https://www.cococart.co/?ref=freeCodeCamp). We create a product that allows you to create a simple, beautiful store in minutes. We're a remote worldwide company: all the team is spread worldwide, and some are frequent travelers.
+让我把我的经验反馈给你。我在 [Cococart](https://www.cococart.co/?ref=freeCodeCamp) 工作。我们创造了一种产品，让你在几分钟内创建一个简单、漂亮的商店。我们是一个远程的世界性公司：所有的团队都分布在世界各地，有些人经常出差。
 
-Each week, we do one "Campfire" – an hour and a half meeting where we meet each other, talk about our highlights and lowlights of the week, give kudos to our co-workers, and play a game together. It can seem like a short time but trust me, it really helps build up significant team motivation and spirit.
+每周，我们都会做一次 "营火会"--一个半小时的会议，在那里我们彼此见面，谈论我们这周的亮点和不足，给我们的同事点赞，并一起玩游戏。这看起来时间很短，但相信我，它真的有助于建立起重要的团队动力和精神。
 
-One of the most awkward parts of working remotely is to feel alone. This point is only one example, but feel free to socialize using your preferred way.
+远程工作中最尴尬的部分之一是感到孤独。这点只是一个例子，但请随意使用你喜欢的方式进行社交。
 
-## Tip #4 – Become a time-management expert
+## Tip #4 – 成为时间管理专家
 
-To improve your productivity as a remote worker, time also matters. Make sure you're using yours wisely.
+为了提高你作为一个远程工作者的生产力，时间也很重要。请确保你明智地使用你的时间。
 
-### 1\. Try to have a set work schedule
+### 1\. 尽量有一个固定的工作时间表
 
-I don't want to say that you shouldn't work hard or count your hours. I work a lot and don't always follow this rule.
+我并不想说你不应该努力工作或计算你的时间。我工作很多，并不总是遵循这个规则。
 
-I want to share that it's better to have at least a vague idea of when you start your day and finish it. It can be a good thing for your work-life balance, staying focused, and getting your work in the dedicated timeframe.
+我想分享的是，最好至少对你一天的工作开始和结束时间有一个模糊的概念。这对你平衡工作和生活，保持专注，并在专门的时间范围内完成你的工作是一件好事。
 
-But as with all the tips I'm sharing in this article, it's a matter of personal opinion. I often shift my work schedule depending on a meeting or if I want to work more one day, and so on. Remote work gives you more flexibility and freedom. So it would be sad to not benefit from it! Just do what's best for you.
+但就像我在本文中分享的所有提示一样，这也是一个个人意见问题。我经常根据会议的情况转变我的工作安排，或者某天我是否想多工作，等等。远程工作给了你更多的灵活性和自由。因此，如果不从中受益，那就太可悲了! 就做最适合你的事吧。
 
-### 2\. Schedule your tasks
+### 2\. 安排你的任务
 
-This advice applies to many topics, but you will probably work more efficiently and achieve your goals easier if you schedule your day.
+这个建议适用于许多主题，但如果你安排好你的一天，你可能会更有效地工作，更容易实现你的目标。
 
-As a remote worker, it can be a good motivation factor. An organized day with focused work results in more time for yourself, lets you start working on something new at your job, or anything that you like.
+作为一个远程工作者，这可以是一个很好的激励因素。有组织的一天，有重点的工作，会给自己带来更多的时间，让你开始在工作中做一些新的事情，或者任何你喜欢的事情。
 
-## Tip #5 – Learn to deep focus
+## Tip #5 – 学会深度专注
 
-Practicing some deep focus sessions is your ally if you want to skyrocket your productivity. Let me give you three tips that can help with it.
+如果你想让你的工作效率直线上升，练习一些深度专注的课程是你的盟友。让我给你三个可以帮助你的提示。
 
-### 1\. Listen to focus songs
+### 1\. 聆听让你专注的歌曲
 
-Using focus/chill music can help you stay productive and enter into a deep focus. It's often an excellent way to hack your productivity.
+使用专注/冷静的音乐可以帮助你保持生产力并进入深度专注。这通常是提高你的生产力的一个很好的方法。
 
-Here are some examples of websites where you can listen to that kind of music for free:
+这里有一些网站的例子，你可以免费听这种音乐:
 
 - [freeCodeCamp radio](https://coderadio.freecodecamp.org/)
 - [LofiGirl on YouTube](https://www.youtube.com/c/LofiGirl)
 - [Cafe Music BGM channel on YouTube](https://www.youtube.com/channel/UCJhjE7wbdYAae1G25m0tHAA)
 
-### 2\. Use the "Do not disturb" option on your phone
+### 2\. 使用手机上的 "请勿打扰 "选项
 
-Nowadays, we always receive notifications on our phones. Most modern devices have a "Do not disturb" feature that allows you to disable notifications when entering "Work" mode.
+如今，我们总是在手机上收到通知。大多数现代设备都有一个 "请勿打扰 "功能，允许你在进入 "工作 "模式时禁用通知。
 
-If you don't have this option, tons of applications like [Forest](https://www.forestapp.cc/) in the store allow you to "restrict" your phone and enter focus mode.
+如果你没有这个选项，应用商店里有大量的应用程序，如 [Forest](https://www.forestapp.cc/)，可以让你 "限制 "你的手机并进入专注模式。
 
-### 3\. Limit distractions
+### 3\. 限制分散注意力的行为
 
-A bit related to the last tip, limiting distractions helps you stay focused. Review your environment and try to remove or push away all objects that annoy you while working.
+与上一条提示有点关系，限制分心有助于你保持专注。审视你的环境，并尝试在工作时移除或推开所有让你烦心的物品。
 
-Here are some examples: put away your phone, close YouTube videos while working, switch off the TV, and so on.
+这里有一些例子：收起你的手机，工作时关闭YouTube视频，关掉电视，等等。
 
 ## Wrapping up
 
-Thank you for reading this article. I hope it provided you with insightful tips to improve your remote work life or even start working remotely.
+感谢你阅读这篇文章。我希望它能为你提供有见地的提示，以改善你的远程工作生活，甚至开始远程工作。
 
-I regularly deliver content about web development, personal growth as a developer, and my journey as an aspiring digital nomad and remote software engineer. If you don't want to miss them, I invite you to [follow me on Twitter](https://twitter.com/gaelgthomas).
+我定期提供有关网络开发的内容，作为一个开发人员的个人成长，以及我作为一个有抱负的数字游民和远程软件工程师的旅程。如果你不想错过这些内容，我邀请你 [在推特上关注我](https://twitter.com/gaelgthomas)。

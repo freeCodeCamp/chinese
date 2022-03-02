@@ -1,11 +1,8 @@
-> -  原文地址：[Git Pull Force – How to Overwrite Local Changes With Git](https://www.freecodecamp.org/news/git-pull-force-how-to-overwrite-local-changes-with-git/)
-> -  原文作者：[
-                    
-                        Piotr Gaczkowski
-                    
-                ](https://www.freecodecamp.org/news/author/doomhammer/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Git Pull Force – How to Overwrite Local Changes With Git](https://www.freecodecamp.org/news/git-pull-force-how-to-overwrite-local-changes-with-git/)
+> - 原文作者：[Piotr Gaczkowski](https://www.freecodecamp.org/news/author/doomhammer/)
+>
+> - 译者：
+> - 校对者：
 
 ![Git Pull Force – How to Overwrite Local Changes With Git](https://cdn-media-2.freecodecamp.org/w1280/5f9c99a5740569d1a4ca20f0.jpg)
 
@@ -42,9 +39,9 @@ git merge origin/$CURRENT_BRANCH
 
 The `origin/$CURRENT_BRANCH` part means that:
 
--   Git will merge the changes from the remote repository named `origin` (the one you cloned from)
--   that have been added to the `$CURRENT_BRANCH`
--   that are not already present in your local checked out branch
+- Git will merge the changes from the remote repository named `origin` (the one you cloned from)
+- that have been added to the `$CURRENT_BRANCH`
+- that are not already present in your local checked out branch
 
 Since Git only performs merges when there are no uncommitted changes, every time you run `git pull` with uncommitted changes could get you into trouble. Fortunately, there are ways to get out of trouble in one piece!
 
@@ -56,9 +53,9 @@ Photo by [Sneaky Elbow](https://unsplash.com/@sneakyelbow?utm_source=ghost&utm_m
 
 When you have uncommitted local changes and still want to pull a new version from the remote server, your use case typically falls into one of the following scenarios. Either:
 
--   you don't care about the local changes and want to overwrite them,
--   you care about the changes very much and would like to apply them after the remote changes,
--   you want to download the remote modifications but not apply them yet
+- you don't care about the local changes and want to overwrite them,
+- you care about the changes very much and would like to apply them after the remote changes,
+- you want to download the remote modifications but not apply them yet
 
 Each of the approaches requires a different solution.
 

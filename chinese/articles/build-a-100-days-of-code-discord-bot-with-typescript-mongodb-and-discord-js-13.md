@@ -236,25 +236,25 @@ TypeScript将你的`IntentOptions`数组推断为一个字符串，但`Client`�
 
 现在`npm run build`应该成功了。如果你已经把你的新机器人（bot）添加到一个Discord服务器，运行`npm start`将显示你的机器人在该服务器中上线。然而，机器人还不会对任何事情做出反应，因为你还没有开始监听事件。
 
-## Gateway Events in Discord
+## Discord中的网关事件（Gateway Events）
 
-Gateway "events" are generated when an action happens on Discord, and are typically sent to clients (including your bot) as JSON payloads. You can listen to those events with the `.on()` method, allowing you to write logic for your bot to follow when specific events occur.
+网关事件是在 Discord 上发生动作时产生的，通常以 JSON payloads（有效载荷）的形式发送到客户端（包括你的机器人）。你可以用`.on()`方法监听这些事件，允许你为你的机器人编写逻辑，以便在特定事件发生时执行。
 
-The first event to listen to is the "ready" event. This event fires when your bot has connected to the gateway and is _ready_ to process events. Above your `.login()` call, add `BOT.on("ready", () => console.log("Connected to Discord!"));`.
+第一个要监听的事件是 "ready "事件。当你的机器人连接到网关并准备处理事件时，这个事件就会发生。在你的`.login()`调用上面，添加`BOT.on("ready", () => console.log("Connected to Discord!");`。
 
-For your changes to take effect, use `npm run build` again to compile the new code. Now if you try `npm run start`, you should see "Connected to Discord!" print in your terminal.
+为了使你的修改生效，再次使用`npm run build`来编译新的代码。现在，如果你尝试`npm run start`，你应该看到 "Connected to Discord!" 打印在你的终端。
 
-## Connect to the Database
+## 连接到数据库
 
-You'll be using the `mongoose` package to connect to a MongoDB instance. If you prefer, you can run MongoDB locally, or you can use the MongoDB Atlas free tier for a cloud-based solution.
+你将使用`mongoose`包来连接到MongoDB实例。如果你愿意，你可以在本地运行MongoDB，或者你可以使用MongoDB Atlas免费层来实现基于云的解决方案。
 
-If you do not have a MongoDB Atlas account, freeCodeCamp has a [great tutorial on setting one up](https://www.freecodecamp.org/news/get-started-with-mongodb-atlas/).
+如果你没有MongoDB Atlas账户，freeCodeCamp有一个 [关于设置一个账户的好教程](https://www.freecodecamp.org/news/get-started-with-mongodb-atlas/)。
 
-Grab your connection string for your database and add it to your `.env` file as `MONGO_URI=""`, with the connection string going between the quotes. For the database name, use `oneHundredDays`.
+获得你的数据库的连接字符串，并将其添加到你的`.env`文件中，作为`MONGO_URI=""`，连接字符串要在引号之间。对于数据库的名称，使用`oneHundredDays`。
 
-Create a directory called `database` to hold the files that contain your database logic. Within that directory, create a file called `connectDatabase.ts`. You will be writing your logic to initiate the database connection here.
+创建一个名为 "database "的目录来存放包含数据库逻辑的文件。在这个目录中，创建一个名为`connectDatabase.ts`的文件。你将在这里编写启动数据库连接的逻辑。
 
-Start with an exported function declaration:
+从一个导出的函数声明开始:
 
 ```ts
 export const connectDatabase = async () => {
@@ -262,13 +262,13 @@ export const connectDatabase = async () => {
 }
 ```
 
-Note that you need to use the `async` keyword here, as the database connection method is asynchronous.
+注意，你需要在这里使用 `async` 关键字，因为数据库连接方法是异步的。
 
-`mongoose` offers a `connect` method for connecting to the database. Import it with `import { connect } from "mongoose";` at the top of your file.
+`mongoose` 提供了一个 `connect` 方法用于连接数据库。在你的文件顶部用 `import { connect } from "mongoose";` 导入它。
 
-Then use the method inside your function with `await connect(process.env.MONGO_URI);`. Add a `console.log` statement after that so you can identify that your bot has connected to the database.
+然后用 `await connect(process.env.MONGO_URI);` 在你的函数中使用该方法。在这之后添加一个 `console.log` 语句，这样你就可以确定你的机器人已经连接到了数据库。
 
-Your `connectDatabase.ts` file should now look something like this:
+你的 `connectDatabase.ts` 文件现在看起来应该是这样的:
 
 ```ts
 import { connect } from "mongoose";
@@ -279,25 +279,24 @@ export const connectDatabase = async () => {
 }
 ```
 
-Now, within your `index.ts` file, import this function with `import { connectDatabase } from "./database/connectDatabase"` and add `await connectDatabase()` to your IIFE, just before the `.login()` method. Go ahead and run `npm run build` again.
+现在，在你的 `index.ts` 文件中，用 `import { connectDatabase } from "./database/connectDatabase"` 导入这个函数，并在你的IIFE中添加 `await connectDatabase()`，就在 `.login()` 方法之前。继续并再次运行 `npm run build`。
 
 ![image-157](https://www.freecodecamp.org/news/content/images/2021/06/image-157.png)
 
-A compiler error, indicating that: Argument of type string or undefined is not assignable to parameter of type string.
+一个编译器错误，表明。类型为字符串或未定义的参数不能分配给类型为字符串的参数。
+哦，不--一个错误!
 
-Oh no – an error!
+## 环境变量验证
 
-## Environment Variable Validation
+环境变量的问题是，它们都可能是 `undefined`。如果你在环境变量名称中打错了字，或者把名称和其他名称混在一起，就会经常发生这种情况（我在写这个教程时犯了一个错误，在一些地方用`TOKEN`而不是`BOT_TOKEN`）。
 
-The problem with environment variables is that they can all be `undefined`. This often happens if you make a typo in your environment variable name, or mix the name up with another name (a mistake I made when writing this tutorial, using `TOKEN` instead of `BOT_TOKEN` in some places).
+TypeScript警告你，`connect` 方法需要一个字符串，而 `undefined` 值会破坏事情。你可以解决这个问题，但首先你要写一个函数来处理验证你的环境变量。
 
-TypeScript is warning you that the `connect` method takes a string, and that an `undefined` value will break things. You can fix this, but first you will want to write a function to handle validating your environment variables.
+在你的 `src` 目录下，创建一个 `utils` 目录，包含你的实用函数。在那里添加一个 `validateEnv.ts` 文件。
 
-Within your `src` directory, create a `utils` directory to contain your utility functions. Add a `validateEnv.ts` file there.
+在该文件中创建一个名为 `validateEnv` 的函数。这个函数将是同步的，不需要 `async` 关键字。在这个函数中，添加条件来检查你的两个环境变量。如果缺少任何一个，返回 `false`。否则，返回 `true`。
 
-Create a function in the file called `validateEnv`. This function will be synchronous and does not need the `async` keyword. Within that function, add conditions to check for your two environment variables. If either one is missing, return `false`. Otherwise, return `true`.
-
-Your code might look something like this:
+你的代码可能看起来像这样:
 
 ```ts
 export const validateEnv = () => {
@@ -315,7 +314,7 @@ export const validateEnv = () => {
 
 ```
 
-Head back to your `index.ts` file and import this validation function with `import { validateEnv } from "./utils/validateEnv"`. Then at the beginning of your IIFE, use an if statement to return early if the function returns false. Your `index.ts` should look like:
+回到你的 `index.ts` 文件，用 `import { validateEnv } from "./utils/validateEnv"` 导入这个验证函数。然后在你的IIFE的开头，使用一个if语句，如果函数返回false，就提前返回。你的 `index.ts` 应该看起来像:
 
 ```ts
 import { Client } from "discord.js";
@@ -335,19 +334,19 @@ import { validateEnv } from "./utils/validateEnv";
 })();
 ```
 
-If you try `npm run build` again, you will see the same error message as before. This is because while we know the environment variable exists, TypeScript still cannot infer it. The validation function is set up to exit the process if the environment variable is missing, so we are going to tell TypeScript that it is definitely a string.
+如果你再次尝试 `npm run build`，你会看到和之前一样的错误信息。这是因为虽然我们知道环境变量存在，但TypeScript仍然无法推断出它。验证函数被设置为在环境变量丢失时退出进程，所以我们要告诉TypeScript它肯定是一个字符串。
 
-Back in your `connectDatabase.ts` file, within the `connect` function use `process.env.MONGO_URI as string` to coerce the type into `string`. The error should go away, and you can now run `npm run build` and `npm start`.
+回到你的 `connectDatabase.ts` 文件中，在 `connect` 函数中使用 `process.env.MONGO_URI as string`来强迫类型为 `string`。错误应该消失了，你现在可以运行 `npm run build` 和 `npm start`。
 
-You should see the messages you wrote for both the Discord and MongoDB connections print in your terminal.
+你应该看到你为Discord和MongoDB连接写的信息在终端打印出来。
 
-## The "interaction" Event
+## 交互事件
 
-While you are making great progress on your bot, it still does not _do_ anything. In order to receive commands, you will need to create another event listener.
+虽然你的机器人取得了很大的进展，但它仍然 _没有_ 做任何事情。为了接收命令，你将需要创建另一个事件监听器。
 
-Discord rolled out slash commands, featuring a new UI and a new gateway event. The `interactionCreate` event is triggered when someone uses a slash command with your bot. This is the event you will want to listen to. Because the logic is a bit more complicated than the `ready` event, you will want to create a separate file.
+Discord推出了 `slash` 命令，具有一个新的用户界面和一个新的网关事件。当有人用你的机器人使用 `slash`命令时，`interactionCreate` 事件被触发。这是你想要监听的事件。因为逻辑比 `ready`事件更复杂，你将需要创建一个单独的文件。
 
-Within your `src` directory, create an `events` directory, and an `onInteraction.ts` file in there. Start by defining an exported function `onInteraction`. This should be an asynchronous function, with a single parameter called `interaction`.
+在你的 `src` 目录下，创建一个 `events` 目录，并在其中创建 `onInteraction.ts` 文件。首先定义一个导出的函数 `onInteraction`。这应该是一个异步函数，有一个名为 `interaction` 的单一参数。
 
 ```ts
 export const onInteraction = async (interaction) => {
@@ -355,7 +354,7 @@ export const onInteraction = async (interaction) => {
 };
 ```
 
-To provide a type definition for your parameter, import the `Interaction` type from `discord.js`.
+为了给你的参数提供一个类型定义，从`discord.js`导入`Interaction`类型。
 
 ```ts
 import { Interaction } from "discord.js";
@@ -365,11 +364,11 @@ export const onInteraction = async (interaction: Interaction) => {
 };
 ```
 
-The `interaction` event actually triggers on any command interaction, which includes things like button clicks and select menus, as well as the slash commands we want.
+`interaction`事件实际上是在任何命令交互上触发的，这包括像按钮点击和选择菜单，以及我们想要的 `slash` 命令。
 
-Because you will only be writing slash commands for this bot, you can filter out any other interaction type and help TypeScript understand the data you are working with.
+因为你将只为这个机器人编写 `slash` 命令，你可以过滤掉任何其他的交互类型，帮助TypeScript理解你正在处理的数据。
 
-In your new function, add a condition to check `interaction.isCommand()`. You will be writing logic within this block later.
+在你的新函数中，添加一个条件来检查`interaction.isCommand()`。稍后你将在这个块中编写逻辑。
 
 ```ts
 import { Interaction } from "discord.js";
@@ -380,7 +379,7 @@ export const onInteraction = async (interaction: Interaction) => {
 };
 ```
 
-Now, back in your `index.ts` file, you can mount another listener. Next to your `.on("ready")` listener, add a `BOT.on("interactionCreate")` listener. For this event, the callback takes an `interaction` argument which you can pass to your new `onInteraction` function.
+现在，在你的 `index.ts` 文件中，你可以加载另一个监听器。在你的 `.on("ready")` 监听器旁边，添加一个`BOT.on("interactionCreate")` 监听器。对于这个事件，回调需要一个 `interaction` 参数，你可以把它传递给你新的 `onInteraction` 函数。
 
 ```ts
   BOT.on(
@@ -389,21 +388,21 @@ Now, back in your `index.ts` file, you can mount another listener. Next to your 
   );
 ```
 
-Remember that you will need to import your `onInteraction` function.
+记住，你将需要导入你的 `onInteraction` 函数。
 
-Great! You can run `npm run build` to confirm that TypeScript doesn't throw any errors, but without actual commands to use you can't quite test this code yet.
+很好! 你可以运行 `npm run build` 来确认TypeScript没有抛出任何错误，但如果没有实际的命令来使用，你还不能完全测试这段代码。
 
-## Prepare for Commands
+## 准备命令
 
-I maintain a few Discord bots, and one thing I've discovered that helps keep code maintainable and readable is making the components modular.
+我维护了一些Discord机器人，我发现有一件事有助于保持代码的可维护性和可读性，那就是使组件模块化。
 
-### Define an Interface
+### 定义一个接口
 
-You will first need to define a common structure for your commands. Create an `interfaces` folder in `src`. Then inside `interfaces` create a file called `Command.ts`.
+你将首先需要为你的命令定义一个共同的结构。在`src`中创建一个`interfaces`文件夹。然后在`interfaces`中创建一个名为`Command.ts`的文件。
 
-Now you are going to create an interface. In TypeScript, an interface is often used to define the structure of an object, and is one of many tools available for declaring a variable's type.
+现在你要创建一个接口。在TypeScript中，接口经常被用来定义对象的结构，也是众多用于声明变量类型的工具之一。
 
-In your `Command.ts` file, create an exported interface called `Command`:
+在你的`Command.ts`文件中，创建一个名为`Command`的导出接口。:
 
 ```ts
 export interface Command {
@@ -411,11 +410,11 @@ export interface Command {
 }
 ```
 
-Your interface will have two properties – `data`, which will hold the command data to send to Discord, and `run`, which will hold the callback function and command logic.
+你的接口将有两个属性 - `data`，它将保存要发送给Discord的命令数据，以及 `run`，它将保存回调函数和命令逻辑。
 
-For the `data` property, import `SlashCommandBuilder` and `SlashCommandSubcommandsOnlyBuilder` from `@discordjs/builders`. Define the `data` property as either one of those two types.
+对于 `data` 属性，从 `@discordjs/builders` 导入 `SlashCommandBuilder` 和`SlashCommandSubcommandsOnlyBuilder`。将 `data` 属性定义为这两种类型中的一种。
 
-For the `run` property, import the `CommandInteraction` type from `discord.js`. Define `run` as a function which takes a `CommandInteraction` typed parameter and returns a `void` Promise.
+对于 `run` 属性，从 `discord.js` 导入 `CommandInteraction` 类型。将 `run` 定义为一个函数，接收一个 `CommandInteraction` 类型的参数并返回一个 `void` Promise。
 
 ```ts
 import {
@@ -430,11 +429,11 @@ export interface CommandInt {
 }
 ```
 
-### Create a Command List
+### 创建一个命令列表
 
-Next you need a place to store all of your commands. Create a folder called `commands` in the `src` directory, and add a file called `_CommandList.ts`. The underscore here will keep this file at the top of the list.
+接下来你需要一个地方来存储你所有的命令。在 `src` 目录下创建一个名为 `commands` 的文件夹，并添加一个名为 `_CommandList.ts` 的文件。这里的下划线将使这个文件保持在列表的顶部。
 
-The `_CommandList.ts` file will need two lines. First, import your `Command` interface, then declare a `CommandList` array. The array will be empty for now, but give it a `Command[]` type so TypeScript knows it will eventually hold your command objects. The file should look like:
+`_CommandList.ts` 文件将需要两行。首先，导入你的 `Command` 接口，然后声明一个 `CommandList` 数组。这个数组现在是空的，但是要给它一个 `Command[]` 的类型，这样 TypeScript 就知道它最终会容纳你的命令对象。这个文件应该是这样的:
 
 ```ts
 import { Command } from "../interfaces/Command";
@@ -442,13 +441,13 @@ import { Command } from "../interfaces/Command";
 export const CommandList: Command[] = [];
 ```
 
-The purpose of this file is to create an array of your bot's commands which you will iterate over in the interaction event listener. [There are ways to automate this](https://github.com/BeccaLyria/discord-bot/blob/main/src/utils/readDirectory.ts), but they tend to be unnecessarily complex for smaller bots.
+这个文件的目的是创建一个你的机器人的命令数组，你将在交互事件监听器中进行迭代。[可以使之自动化](https://github.com/BeccaLyria/discord-bot/blob/main/src/utils/readDirectory.ts)，但对于较小的机器人来说，它们往往是不必要的复杂。
 
-### Check for Commands
+### 检查命令的执行情况
 
-Back in your `onInteraction.ts` file, you should start working on the logic for finding and running a command.
+在你的 `onInteraction.ts` 文件中，你应该开始研究寻找和运行命令的逻辑。
 
-In your `interaction.isCommand()` condition block, loop through the `CommandList` array (remember to import it!) with a `for...of` loop.
+在你的 `interaction.isCommand()` 条件块中，通过 `CommandList` 数组（记得要导入它！）进行 `for...of` 循环。
 
 ```ts
 for (const Command of CommandList) {
@@ -456,7 +455,7 @@ for (const Command of CommandList) {
 }
 ```
 
-The interaction payload received from Discord includes a `commandName` property, which you can use to find the command that a user has selected. To check this, compare `interaction.commandName` with the `Command.data.name` property.
+从Discord收到的交互 payload （有效载荷）包括一个 `commandName` 属性，你可以用它来查找用户选择的命令。要检查这一点，将 `interaction.commandName` 与 `Command.data.name` 属性进行比较。
 
 ```ts
 if (interaction.commandName === Command.data.name) {
@@ -464,9 +463,9 @@ if (interaction.commandName === Command.data.name) {
 }
 ```
 
-Now, if you have found the command the user has chosen, you need to run the logic for that command. This is achieved with a `Command.run(interaction)` call – passing the interaction payload into the command.
+现在，如果你已经找到了用户选择的命令，你需要运行该命令的逻辑。这是通过 `Command.run(interaction)` 的调用来实现的--将交互的 payload（有效载荷）传递给命令。
 
-Your final file should look like this:
+你的最终文件应该是这样的:
 
 ```ts
 import { Interaction } from "discord.js";
@@ -484,9 +483,9 @@ export const onInteraction = async (interaction: Interaction) => {
 };
 ```
 
-Note that after we run the command, we `break` the loop to avoid unnecessary searches.
+注意，在我们运行命令后，我们 `break` 循环，以避免不必要的搜索。
 
-## Database Model
+## 数据库模型
 
 There's one more step before you are ready to start writing commands. This bot will track your community members' 100 Days of Code progress. And you need to store that progress in the database.
 

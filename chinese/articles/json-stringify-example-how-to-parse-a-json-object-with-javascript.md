@@ -1,11 +1,8 @@
-> -  原文地址：[JSON Stringify Example – How to Parse a JSON Object with JS](https://www.freecodecamp.org/news/json-stringify-example-how-to-parse-a-json-object-with-javascript/)
-> -  原文作者：[
-                    
-                        Kris Koishigawa
-                    
-                ](https://www.freecodecamp.org/news/author/kris/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[JSON Stringify Example – How to Parse a JSON Object with JS](https://www.freecodecamp.org/news/json-stringify-example-how-to-parse-a-json-object-with-javascript/)
+> - 原文作者：[Kris Koishigawa](https://www.freecodecamp.org/news/author/kris/)
+>
+> - 译者：
+> - 校对者：
 
 ![JSON Stringify Example – How to Parse a JSON Object with JS](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/602358380a2838549dcc2554.jpg)
 
@@ -99,7 +96,7 @@ For example, when you write JSON in a separate file like with `jane-profile.json
 
 And if you make a request to an API, it'll return something like this:
 
-```
+```json
 {"name":"Jane Doe","favorite-game":"Stardew Valley","subscriber":false}
 ```
 
@@ -255,7 +252,7 @@ index.html
 
 You'll see this in the console:
 
-```
+```js
 Fetch API cannot load file://<path>/jokes.json. URL scheme "file" is not supported
 ```
 
@@ -395,7 +392,7 @@ const jokesFile = fs.readFileSync('./jokes.json');
 
 But if you log `jokesFile` to the console now, you'd see something like this:
 
-```
+```plain
 <Buffer 5b 0a 20 20 7b 0a 20 20 20 20 22 63 61 74 65 67 6f 72 69 65 73 22 3a 20 5b 22 64 65 76 22 5d 2c 0a 20 20 20 20 22 63 72 65 61 74 65 64 5f 61 74 22 3a ... 788 more bytes>
 ```
 
@@ -478,7 +475,7 @@ console.log("This will run first!");
 
 Which prints the following to the console:
 
-```
+```js
 This will run first!
 Chuck Norris's keyboard doesn't have a Ctrl key because nothing controls Chuck Norris.
 ```

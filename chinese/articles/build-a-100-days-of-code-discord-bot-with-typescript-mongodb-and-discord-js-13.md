@@ -673,9 +673,9 @@ export const oneHundred: Command = {
 
 ### 处理数据库逻辑
 
-Create a `src/modules` directory, and add a `getCamperData.ts` file within. Create an exported async function named `getCamperData`, and give it a string parameter named `id`. Then, within the function, you can query the database.
+创建一个 `src/modules` 目录，并在其中添加一个 `getCamperData.ts` 文件。创建一个导出的异步函数`getCamperData`，并给它一个名为 `id` 的字符串参数。然后，在该函数中，你可以查询数据库。
 
-Import your `CamperModel` from the `database` directory, and use the `findOne()` method to query by the camper's `id`: `const camperData = await CamperModel.findOne({ discordId: id });`.
+从 `database` 目录中导入你的 `CamperModel`，并使用 `findOne()` 方法来查询营员的 `id`：`const camperData = await CamperModel.findOne({ discordId: id });`。
 
 ```ts
 import CamperModel from "../database/models/CamperModel";
@@ -685,7 +685,8 @@ export const getCamperData = async (id: string) => {
 };
 ```
 
-We still have one more step here. If the camper has not used the bot before, they won't have an existing database record. `findOne()` would return `null` in this case – so you can add a fallback value.
+我们在这里还有一个步骤。如果 `camper` 以前没有使用过机器人，他们就不会有现有的数据库记录。`findOne()`在这种情况下会返回 `null`,所以你可以添加一个回退值。
+
 
 ```ts
 import CamperModel from "../database/models/CamperModel";
@@ -702,9 +703,9 @@ export const getCamperData = async (id: string) => {
 };
 ```
 
-Here we start a new camper on Round 1 Day 0 - this allows us to update their status if they are using the 100 command.
+在这里，我们在第一轮第0天开始一个新的 `camper`,如果他们使用 `100 command`，这允许我们更新他们的状态。
 
-Finally, you need to `return` your data. Add `return camperData` at the end of the function. For extra type safety, define the return type of your function as `Promise<CamperData>`.
+最后，你需要 `返回（return）`你的数据。在函数的末尾添加 `return camperData`。为了额外的类型安全，将你的函数的返回类型定义为 `Promise<CamperData>`。
 
 ```ts
 import CamperModel, { CamperInt } from "../database/models/CamperModel";
@@ -722,9 +723,9 @@ export const getCamperData = async (id: string): Promise<CamperInt> => {
 };
 ```
 
-You now have a way to get camper data from the database, but you need a way to update it as well. Create another file in your `/src/modules` directory called `updateCamperData.ts`. This will handle the logic to increment a camper's progress.
+你现在有了从数据库中获取 `camper` 数据的方法，但你也需要一种方法来更新它。在你的`/src/modules`目录下创建另一个文件，叫做 `updateCamperData.ts`。这将处理增加 `camper` 的进度的逻辑。
 
-Start with an exported async function called `updateCamperData`. It should take a `Camper` parameter, which would be the data you fetch from MongoDB.
+从一个导出的异步函数开始，称为 `updateCamperData`。它应该接受一个 `Camper` 参数，这将是你从 MongoDB 获取的数据。
 
 ```ts
 import { CamperInt } from "../database/models/CamperModel";
@@ -734,13 +735,13 @@ export const updateCamperData = async (Camper: CamperInt) => {
 };
 ```
 
-The only time you will update data is within the `/100` command – where you'll want to increment the camper's day count, check if they have started a new round, and update the timestamp.
+你唯一要更新数据的时候是在 `/100` 命令中--在那里你要增加营员的日计数，检查他们是否开始了新的一轮（round），并更新时间戳。
 
-First, increment the day count with `Camper.day++;`. With the way the 100 Days of Code challenge works, if a camper has passed day 100 then they have started a new "round". You'll need a condition to check if `Camper.day > 100`, and if so, reset the day to 1 and increment the round.
+首先，用 `Camper.day++;` 来增加日计数。根据100天代码挑战的工作方式，如果 `camper` 已经过了第100天，那么他们就开始了新的 "一轮（round）"。你需要一个条件来检查 `Camper.day > 100`，如果是的话，就把日子重置为1，并增加一轮（round）。
 
-After that condition, update the timestamp with `Camper.timestamp = Date.now();` and save the data with `await Camper.save();`. Finally, return the modified data object so you can use it in the command.
+在这个条件之后，用 `Camper.timestamp = Date.now();` 更新时间戳，用 `await Camper.save();` 保存数据。最后，返回修改后的数据对象，这样你就可以在命令中使用它。
 
-Your final file should look like:
+你的最终文件应该是这样的:
 
 ```ts
 import { CamperInt } from "../database/models/CamperModel";
@@ -759,7 +760,7 @@ export const updateCamperData = async (Camper: CamperInt) => {
 
 ### 100 Command Continued
 
-Now that your database logic is ready, return to your `oneHundred.ts` file. As a reminder, that file should look like this:
+现在你的数据库逻辑已经准备好了，返回到你的`oneHundred.ts`文件。作为提醒，该文件应该看起来像这样:
 
 ```ts
 import { SlashCommandBuilder } from "@discordjs/builders";
@@ -783,7 +784,7 @@ export const oneHundred: Command = {
 };
 ```
 
-Import your two new modules at the top of the file. Then, after your logic that extracts the values from the interaction object, fetch the camper's data from the database with `const targetCamper = await getCamperData(user.id);`. Update the data with `const updatedCamper = await updateCamperData(targetCamper);`.
+在文件的顶部导入你的两个新模块（modules）。然后，在你从交互对象中提取数值的逻辑之后，用`const targetCamper = await getCamperData(user.id);`从数据库中获取 `camper` 的数据。用 `const updatedCamper = await updateCamperData(targetCamper);` 来更新数据。
 
 ```ts
 import { SlashCommandBuilder } from "@discordjs/builders";
@@ -812,29 +813,29 @@ export const oneHundred: Command = {
 };
 ```
 
-Now you need to construct the response to send back to the camper when they use the command.
+现在你需要构建响应，以便在 `camper` 使用该命令时将其送回。
 
-For this, you'll be using Discord's message embed feature. Start by importing the `MessageEmbed` constructor from discord.js, and creating a new embed with `const oneHundredEmbed = new MessageEmbed();`. The `MessageEmbed` class has a few methods to use for building the content of the embed.
+为此，你将使用Discord的消息嵌入功能。首先从 discord.js 导入 `MessageEmbed` 构造函数，然后用 `const oneHundredEmbed = new MessageEmbed();` 创建一个新的嵌入。`MessageEmbed` 类有几个方法可以用来建立嵌入的内容。
 
-Use the `.setTitle()` method to set the title of the embed to `"100 Days of Code"`.
+使用 `.setTitle()` 方法来设置嵌入的标题为`"100 Days of Code"`。
 
-Use the `.setDescription()` method to set the description of the embed to the message the camper provided in the command (remember that you extracted this to the `text` variable earlier). The author of the embed can be set, and will display at the top of the embed.
+使用`.setDescription()` 方法将嵌入的描述设置为 `camper` 在命令中提供的信息（记得你之前将其提取到`text`变量）。嵌入的作者可以被设置，并将显示在嵌入的顶部。
 
-Use the `.setAuthor()` method to pass an object with a `name` property set to `user.tag` (which will display the camper's username and discriminator, like `nhcarrigan#0001`), and an `iconURL` property set to `user.displayAvatarUrl()` (which will attach the camper's avatar to the embed).
+使用 `.setAuthor()` 方法传递一个对象，其 `name` 属性设置为 `user.tag`（将显示 `camper` 的用户名和判别符，如`nhcarrigan#0001`），`iconURL`属性设置为`user.displayAvatarUrl()`（将 `camper` 的头像附加到嵌入文件上）。
 
-Embeds also accept fields, which are smaller blocks of text that have their own title and description. The `.addField()` method takes two or three arguments, the first being the field title, the second being the field description, and the third being an optional boolean to set the field as inline.
+嵌入（Embeds）也接受字段，它是较小的文本块，有自己的标题和描述。`.addField()` 方法需要两个或三个参数，第一个是字段的标题，第二个是字段的描述，第三个是可选的布尔值，将字段设置为内联（inline）。
 
-Use the `.addField()` method to add two fields. The first should have the title set to `"Round"` and the description set to `updatedCamper.round.toString()`. The second should have the title set to `"Day"` and the description set to `updatedCamper.day.toString()`. Both fields should be inline.
+使用`.addField()`方法来添加两个字段。第一个字段的标题应该设置为 "Round"，描述设置为 `updatedCamper.round.toString()`。第二个字段的标题应该设置为 `"Day"`，描述设置为 `updatedCamper.day.toString()`。这两个字段都应该是内联的（inline）。
 
-For the last part of your embed, use the `.setFooter()` method to add small footer text. Pass an object with a `text` property set to `"Day completed: " + new Date(updatedCamer.timestamp).toLocaleDateString()` to show the time the camper reported their progress.
+对于你嵌入的最后一部分，使用 `.setFooter()` 方法来添加小的页脚文本。传递一个对象，其 `text` 属性设置为`"Day completed:" + new Date(upedCamer.timestamp).toLocaleDateString()`以显示 `camper` 报告他们进展的时间。
 
-Finally, you need to send this new embed back to the camper. Because you have already sent a response with the `interaction.deferReply()` call, you cannot send another response. Instead, you need to edit the one you sent.
+最后，你需要把这个新嵌入的内容发回给 `camper`。因为你已经用`interaction.deferReply()` 调用发送了一个响应，你不能再发送一个响应。相反，你需要编辑你发送的那个。
 
-Use `await interaction.editReply()` to edit the response. The `.editReply()` method takes an object with various properties – in this case, you are sending an embed. Pass an object with an `embeds` property set to `[oneHundredEmbed]`.
+使用`await interaction.editReply()`来编辑响应。`.editReply()`方法接收一个具有各种属性的对象,在这种情况下，你正在发送一个嵌入（embed）。传递一个对象，其 `embeds` 属性设置为`[oneHundredEmbed]`。
 
-Note that this is an array containing your embed. Discord messages can contain up to 10 embeds, and the API expects an array of embed objects to match.
+注意，这是一个包含你的嵌入的数组。Discord消息最多可以包含10个嵌入物（embeds），API希望有一个嵌入对象（embed objects）的数组来匹配。
 
-Your final command file should look like this:
+你的最终命令文件应该是这样的:
 
 ```ts
 import { SlashCommandBuilder } from "@discordjs/builders";
@@ -881,11 +882,11 @@ export const oneHundred: Command = {
 };
 ```
 
-### Registering Commands
+### Registering Commands（注册命令）
 
-If you run `npm run build` and `npm start`, everything starts up – but you have no way to actually use your new command. This is because Discord requires that commands be registered so they are made available in the application UI. There are a few steps we'll need to take to do this.
+如果你运行`npm run build`和`npm start`，一切都会启动 - 但你没有办法实际使用你的新命令。这是因为Discord要求命令被注册，以便它们在应用程序的用户界面上可用。要做到这一点，我们需要采取几个步骤。
 
-First, head over to your `_CommandList.ts` file and import your `oneHundred` command. Add this to your `CommandList` array so it's available elsewhere.
+首先，前往你的`_CommandList.ts`文件，导入你的`oneHundred`命令。把它添加到你的`CommandList`数组中，这样它就可以在其他地方使用。
 
 ```ts
 import { Command } from "../interfaces/Command";

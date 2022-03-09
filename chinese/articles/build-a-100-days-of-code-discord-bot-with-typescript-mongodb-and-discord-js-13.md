@@ -487,15 +487,15 @@ export const onInteraction = async (interaction: Interaction) => {
 
 ## 数据库模型
 
-There's one more step before you are ready to start writing commands. This bot will track your community members' 100 Days of Code progress. And you need to store that progress in the database.
+在你准备开始编写命令之前，还有一个步骤。这个机器人将跟踪你的社区成员的100天代码的进展。而你需要将该进度存储在数据库中。
 
-`mongoose` helps structure your MongoDB records to prevent you from passing malformed or incomplete data into your database.
+`mongoose` 可以帮助你结构化你的MongoDB记录，以防止你将畸形或不完整的数据传入数据库。
 
-Start by creating a `models` folder in your `database` directory. In that `models` folder, create a `CamperModel.ts` file. This will be your structure for the user objects.
+首先，在你的 `database` 目录下创建一个 `models` 文件夹。在这个 `models` 文件夹中，创建一个 `CamperModel.ts` 文件。这将是你的用户对象的结构。
 
-You first need to import the necessary values from the `mongoose` library. Add `import { Document, model, Schema } from "mongoose";` at the top of the file.
+你首先需要从 `mongoose` 库中导入必要的值。在文件的顶部添加 `import { Document, model, Schema } from "mongoose";`。
 
-Because you are using TypeScript, you need to create a type definition for your database objects. Create another interface, like you did for your commands, named `CamperInt`.
+因为你正在使用TypeScript，你需要为你的数据库对象创建一个类型定义。创建另一个接口，就像你为你的命令所做的那样，名为`CamperInt`。
 
 ```ts
 export interface CamperInt extends Document {
@@ -503,22 +503,22 @@ export interface CamperInt extends Document {
 }
 ```
 
-The `extends` keyword tells TypeScript we are adding properties on top of the `Document` type.
+`extends` 关键字告诉TypeScript我们要在 `Document` 类型的基础上添加属性。
 
-Your database model will have four properties. Add these to your interface:
+你的数据库模型将有四个属性。把这些添加到你的接口中:
 
-- `discordId: string;` – Every user object in Discord has a unique identifier, called a Snowflake, which is used to distinguish them from other users. Unlike a username or discriminator (the four digit number after the username), the `id` value cannot be changed. This makes it the ideal value for linking your stored data to a Discord user.
-- `round: number;` – This will represent the "round" the user is on in the challenge. When someone completes 100 days of the challenge, they may choose to undertake the challenge again. When they do, they often refer to it as "round 2", for example.
-- `day: number;` – This represents the day the user is on in the challenge.
-- `timestamp: number;` – You will use this value to track when the user last submitted a 100 Days of Code post.
+- `discordId: string;` - Discord中的每个用户对象都有一个唯一的标识符，称为Snowflake，用于区分他们与其他用户。与用户名或判别符（用户名后的四位数）不同，`id`值不能被改变。这使得它成为将你的存储数据与 Discord 用户联系起来的理想值。
+- `round: number;` - 这将代表用户在挑战中所处的 "回合"。当某人完成了100天的挑战，他们可以选择再次进行挑战。当他们这样做的时候，他们通常称其为 "第二轮"，例如。
+- `day: number;` - 这代表用户在挑战中的日期。
+- `timestamp: number;` - 你将使用这个值来跟踪用户最后一次提交100天代码帖子的时间。
 
-Great! Now you need to define the Schema for your database entries. `mongoose` uses a Schema object to define the shape of the documents that go in to your database collection. The `Schema` import has a constructor, which you will assign to a variable.
+很好! 现在你需要为你的数据库条目定义模式。`mongoose` 使用一个Schema对象来定义进入数据库集合的文件的形状。`Schema` 导入有一个构造函数，你将把它分配给一个变量。
 
 ```ts
 export const Camper = new Schema();
 ```
 
-This constructor takes an object as its argument, and that object defines the database keys and types. Go ahead and pass in an object similar to what your interface looks like.
+这个构造函数接受一个对象作为其参数，这个对象定义了数据库的键和类型。继续，传入一个与你的界面相似的对象。
 
 ```ts
 export const Camper = new Schema({
@@ -529,23 +529,23 @@ export const Camper = new Schema({
 })
 ```
 
-Note that we are using `String` and not `string`. `String` refers to the JavaScript primitive type, where `string` is the TypeScript type definition.
+注意，我们使用的是`String`而不是`string`。`String`是指JavaScript的原始类型，而`string`是TypeScript的类型定义。
 
-Next you need to create the `model`. In `mongoose`, the `model` object serves to create, read, and update your documents in the MongoDB database. Add `export default model();` at the bottom of your file.
+接下来你需要创建`model`。在 `mongoose` 中，`model` 对象的作用是在MongoDB数据库中创建、读取和更新你的文档。在你文件的底部添加 `export default model();`。
 
-The `model` function takes a few parameters. The first is a string, and is the name to use for the documents in your database. For this collection, use `"camper"`. The second argument is the schema to use for the data – use your `Camper` schema there.
+`model` 函数需要几个参数。第一个是一个字符串，是你数据库中的文档（documents）的名称。对于这个集合（collection），使用 `"camper"`。第二个参数是用于数据的模式（schema）--使用你的 `Camper` 模式（schema）。
 
-By default, `mongoose` will use the plural version of your `model` name for the collection. In our case, that would be "campers". If you want to change that, you can pass in a third argument of `{ collection: "name" }` to set the collection to `name`.
+默认情况下，`mongoose` 将使用你的 `model` 名称的复数版本作为集合。在我们的例子中，这将是 "campers"。如果你想改变它，你可以传入第三个参数 `{集合: "name" }` 来设置集合为 `name`。
 
-If you were using JavaScript, this would be enough to get your database model set up. However, because you are using TypeScript, you should take advantage of the type safety. `model()` by default returns a `Document` type of `any`.
+如果你使用的是 JavaScript，这就足以让你的数据库模型设置好。然而，由于你使用的是TypeScript，你应该利用类型安全的优势。`model()` 默认返回一个 `Document` 类型的 `any`。
 
-To resolve this, you can pass a generic type into the `model` function. Generic types serve as variables for type definitions, in a sense. You need to set the generic type for your `model` to use your interface. Add the generic type by changing `model` to `model<CamperInt>`.
+为了解决这个问题，你可以在 `model` 函数中传递一个泛型。从某种意义上说，泛型可以作为类型定义的变量。你需要为你的 `model` 设置泛型以使用你的接口。通过将 `model` 改为 `model<CamperInt>`，来添加泛型。
 
-Just one more step here. Your `CamperInt` interface only defines the properties you set in the MongoDB document, but doesn't include the standard properties.
+这里只有一个步骤了。你的 `CamperInt` 接口只定义了你在 MongoDB 文档中设置的属性，但并不包括标准属性。
 
-Change your `export interface CamperInt` to `export interface CamperInt extends Document`. This tells TypeScript that your type definition is an extension of the existing `Document` type definition – you are essentially adding properties to that structure.
+将你的 `export interface CamperInt` 改为 `export interface CamperInt extends Document`。这告诉TypeScript，你的类型定义是现有 `Document` 类型定义的扩展--你基本上是在向该结构添加属性。
 
-Your final file should look like this:
+你的最终文件应该看起来像这样:
 
 ```ts
 import { Document, model, Schema } from "mongoose";
@@ -567,17 +567,17 @@ export const Camper = new Schema({
 export default model<CamperInt>("camper", Camper);
 ```
 
-As a safety check, use `npm run build` again. You should not see any errors in the terminal.
+作为一个安全检查，再次使用`npm run build`。你不应该在终端看到任何错误。
 
-## Write Bot Commands
+## 编写机器人命令
 
-You are finally ready to start writing some commands! As this is a 100 Days of Code bot, you should start with the command for creating a 100 Days of Code update.
+你终于准备好开始编写一些命令了 由于这是一个100天代码机器人，你应该从创建100天代码更新的命令开始。
 
 ### 100 Command
 
-Within your `commands` folder, create a `oneHundred.ts` file. This will hold your 100 Days of Code command. Import your command interface with `import { Command } from "../interfaces/Command;`.
+在你的 `commands` 文件夹中，创建一个 `oneHundred.ts` 文件。这将保存你的100天代码命令。用 `import { Command } from ".../interfaces/Command;`导入你的命令接口。
 
-Now declare an exported variable `oneHundred` and give it the `Command` type:
+现在声明一个导出的变量`oneHundred`，并赋予它`Command`类型:
 
 ```ts
 import { Command } from "../interfaces/Command";
@@ -587,17 +587,17 @@ export const oneHundred: Command = {
 };
 ```
 
-First, create the `data` property. You will be using the `@discordjs/builders` package to build a slash command.
+首先，创建 `data` 属性。你将使用 `@discordjs/builders` 包来建立一个 `slash` 命令。
 
-Start by importing the `SlashCommandBuilder()` from the `@discordjs/builders` package. Then, construct a new instance in the `data` property with `new SlashCommandBuilder()`. You're going to chain some methods here to pass the information you want into the builder.
+首先从 `@discordjs/builders` 包中导入 `SlashCommandBuilder()`。然后，用 `new SlashCommandBuilder()` 在`data` 属性中构建一个新实例。你将在这里使用一些方法来传递你想要的信息到构建器中。
 
-The `.setName()` method allows you to set the name of your slash command. Set the name to `"100"`. The `setDescription()` option allows you to display a description of the command in Discord's UI. Set the description to `"Check in for the 100 Days of Code challenge."`.
+`.setName()` 方法允许你设置斜线命令的名称。设置名称为 `"100"`。`setDescription()` 选项允许你在Discord的用户界面中显示命令的描述。将描述设为 `"Check in for the 100 Days of Code challenge"`。
 
-Slash commands can also accept `option` values. These are used to take arguments from the user, and come in various types. For this command, you'll want a string option with the `addStringOption()` method. Option methods take a callback function, with an `option` parameter.
+Slash命令也可以接受 `option` 值。这些是用来接受用户的参数的，有各种类型。对于这个命令，你需要一个字符串选项，使用 `addStringOption()` 方法。选项方法需要一个回调函数，有一个 `option` 参数。
 
-You can then chain methods on the `option` parameter to configure the information for the argument. Use the `.setName()` method to give the option a name of `"message"`, and the `.setDescription()` method to give it a description of `"The message to go in your 100 Days of Code update."`. Finally, use the `.setRequired()` method to set the option to be required.
+然后你可以在 `option` 参数上使用连锁方法来配置参数的信息。使用 `.setName()` 方法给选项取名为`"message"`，使用`.setDescription()`方法给它取名为`"The message to go in your 100 Days of Code update"`。最后，使用`.setRequired()`方法将该选项设置为必填。
 
-Here's what you should have now:
+以下是你现在应该有的东西:
 
 ```ts
 import { SlashCommandBuilder } from "@discordjs/builders";
@@ -616,9 +616,9 @@ export const oneHundred: Command = {
 };
 ```
 
-If you are coding in an IDE with Intellisense enabled, you may have noticed that this will throw a type error on the `data` property. This is because the `SlashCommandBuilder` actually returns an `Omit` type! An `Omit` type is used to tell TypeScript that the type is _almost_ the same as another type, but with specific properties removed.
+如果你在IDE中编码启用了智能提示，你可能已经注意到，这将在 `data` 属性上抛出一个类型错误（type error）。 这是因为 `SlashCommandBuilder` 实际上返回了一个 `Omit` 类型！ `Omit` 类型是用来告诉TypeScript，该属性是由TypeScript中定义的。_almost_ 是另一个类型几乎相同,但删除了特定属性。
 
-Head over to your `interfaces/Command.ts` file to update the type. Replace the `SlashCommandBuilder` type with `Omit<SlashCommandBuilder, "addSubcommandGroup" | "addSubcommand">`. This will tell TypeScript that `data` should be a `SlashCommandBuilder`, but without those two specific properties.
+前往你的 `interfaces/Command.ts` 文件，更新类型。用 `Omit<SlashCommandBuilder, "addSubcommandGroup" | "addSubcommand">` 替换 `SlashCommandBuilder` 类型。这将告诉TypeScript，`data` 应该是一个`SlashCommandBuilder`，但没有那两个特定的属性。
 
 ```ts
 import {
@@ -635,17 +635,17 @@ export interface Command {
 }
 ```
 
-Great! Now that your type error is resolved, head back over to your `oneHundred.ts` command file – it is time to write the command logic.
+很好! 现在你的类型错误已经解决了，回到你的 `oneHundred.ts` 命令文件--是时候编写命令逻辑了。
 
-All of your bot's logic for responding to the command will go in the `run` property. As you did in your interface, start by creating an async function which takes an `interaction` argument. Then, let the first line of your function be `await interaction.deferReply();`.
+你的机器人响应命令的所有逻辑将被放在 `run` 属性中。就像你在界面中做的那样，首先创建一个接受 `interaction` 参数的async函数。然后，让你的函数的第一行是 `await interaction.deferReply();`。
 
-Discord expects a bot to respond to a command within three seconds. Because this command may take longer to process, using the `.deferReply()` method sends an acknowledgement response that gives you a full 15 minutes to send the actual response.
+Discord期望机器人在三秒内对一个命令做出反应。因为这个命令可能需要更长的时间来处理，使用 `.deferReply()` 方法会发送一个确认响应，让你有整整15分钟的时间来发送实际响应。
 
-Next, you need to extract some data from the command. First, destructure the `user` object out of the interaction payload with `const { user } = interaction;`. The `user` object represents the Discord user that called the command.
+接下来，你需要从该命令中提取一些数据。首先，用 `const { user } = interaction;`将 `user` 对象从交互的有效载荷中解构出来。`user` 对象代表调用该命令的Discord用户。
 
-Then get the `message` option you sent with `const text = interaction.options.getString("message", true);`. With this line, you are accessing the `options` property of the interaction. The `.getString()` method specifically grabs a string option (remember that you created the option in `data`), and `"message"` is the **name** of the option. The `true` argument indicates that this is a required option, so TypeScript won't consider it nullable.
+然后用 `const text = interaction.options.getString("message", true);` 获得你发送的 `message` 选项。通过这一行，你正在访问交互的 `options` 属性。`.getString()` 方法专门抓取一个字符串选项（记得你在 `data` 中创建了这个选项），`"message"`是这个选项的**name**。`true`参数表示这是一个必选项，所以TypeScript不会认为它是空的。
 
-Your file should look like this:
+你的文件应该看起来像这样:
 
 ```ts
 import { SlashCommandBuilder } from "@discordjs/builders";
@@ -669,9 +669,9 @@ export const oneHundred: Command = {
 };
 ```
 
-The next step in this command would be to fetch data from your database. Because many of your commands will need to do this, you should create a module for it.
+这个命令的下一步将是从你的数据库中获取数据。因为你的许多命令都需要这样做，你应该为它创建一个模块。
 
-### Handling the Database Logic
+### 处理数据库逻辑
 
 Create a `src/modules` directory, and add a `getCamperData.ts` file within. Create an exported async function named `getCamperData`, and give it a string parameter named `id`. Then, within the function, you can query the database.
 

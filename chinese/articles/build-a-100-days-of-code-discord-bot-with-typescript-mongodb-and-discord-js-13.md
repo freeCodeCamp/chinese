@@ -687,7 +687,6 @@ export const getCamperData = async (id: string) => {
 
 我们在这里还有一个步骤。如果 `camper` 以前没有使用过机器人，他们就不会有现有的数据库记录。`findOne()`在这种情况下会返回 `null`,所以你可以添加一个回退值。
 
-
 ```ts
 import CamperModel from "../database/models/CamperModel";
 
@@ -895,9 +894,9 @@ import { oneHundred } from "./oneHundred";
 export const CommandList: Command[] = [oneHundred];
 ```
 
-Now it is time to add the logic to send the command information to Discord. In your `src/events` directory, add an `onReady.ts` file. We'll be using this with the `"ready"` event.
+现在是时候添加逻辑来发送命令信息给Discord了。在你的`src/events`目录下，添加一个`onReady.ts`文件。我们将在`"ready"`事件中使用它。
 
-Create an exported async function named `onReady`, and give it a single parameter called `BOT`. Import the `Client` type from discord.js and set the `BOT` typedef to `Client`.
+创建一个名为`onReady`的出口异步函数，并给它一个名为`BOT`的参数。从discord.js导入`Client`类型，并将`BOT`类型定义设为`Client`。
 
 ```ts
 import { Client } from "discord.js";
@@ -905,11 +904,11 @@ import { Client } from "discord.js";
 export const onReady = async (BOT: Client) => {};
 ```
 
-Now import the `REST` module from `@discordjs/rest`. This will allow you to instantiate an API client, which you'll use to send the commands. Construct a new instance with `const rest = new REST();`.
+现在从`@discordjs/rest`导入`REST`模块。这将允许你实例化一个API客户端，你将用它来发送命令。用`const rest = new REST();`构建一个新的实例。
 
-There are a couple of things you'll need to configure with your REST client. First, pass an object into the `REST()` constructor with a `version` property set to `"9"`. This tells the client to use version 9 of Discord's API, which is currently the latest version.
+你需要对你的REST客户端进行一些配置。首先，向`REST()`构造函数传递一个对象，并将`version`属性设置为`"9"`。这告诉客户端使用Discord的API版本9，这是目前最新的版本。
 
-Then, chain a `.setToken()` call on the constructor to set the API token to `process.env.BOT_TOKEN` – you'll have to coerce this to a `string`.
+然后，在构造函数上链接一个`.setToken()`调用，将API token（口令）设置为`process.env.BOT_TOKEN`, 你必须将其强制为一个`字符串`。
 
 ```ts
 import { REST } from "@discordjs/rest";
@@ -922,27 +921,27 @@ export const onReady = async (BOT: Client) => {
 };
 ```
 
-The API expects command data to be sent in a specific JSON format, but thankfully the slash command builder we are using has a method just for that. Import your `CommandList`, then create a new array and map your command data.
+API希望命令数据以特定的JSON格式发送，但值得庆幸的是，我们使用的slash命令生成器有一个方法专门用于此。导入你的`CommandList`，然后创建一个新的数组并映射你的命令数据。
 
 ```ts
 const commandData = CommandList.map((command) => command.data.toJSON());
 ```
 
-Before you send the commands to Discord, it's important to note that there are two types of commands. "Global Commands" are available everywhere your bot is used, but take about an hour to update. "Guild Commands" are available only in a single server, but update immediately. Because this bot is designed to run in a single server, we're going to use guild commands.
+在你向 Discord 发送命令之前，有必要注意有两种类型的命令。"全球命令（Global Commands）" 在你的机器人被使用的所有地方都可用，但需要一个小时左右的时间来更新。"公会命令（Guild Commands）"只在单个服务器中可用，但会立即更新。因为这个机器人被设计为在单个服务器中运行，所以我们要使用公会命令。
 
-You'll need to get the ID of the server you are using the bot in. To do this, make sure you have enabled developer mode in your Discord application, then right click on your server icon and select "Copy ID". In your `.env` file, add a `GUILD_ID` variable and assign it the ID you copied. It should look something like `GUILD_ID="778130114772598785"`.
+你需要获得你使用该机器人的服务器的ID。要做到这一点，确保你在你的Discord应用程序中启用了开发者模式，然后右击你的服务器图标并选择 "Copy ID"。在你的 `.env` 文件中，添加一个 `GUILD_ID` 变量，并将你复制的ID分配给它。它应该看起来像 `GUILD_ID="778130114772598785"`。
 
-Back in your `onReady.ts` file, start your API call with `await rest.put()`. Sending a `PUT` request will update any existing commands, where a `POST` will attempt to create new commands and error if commands share a name. Import `Routes` from `discord-api-types/v9`, and within the `rest.put()` call pass a `Routes.applicationGuildCommands()` call. This will be used to construct the API endpoint to send the commands to.
+回到你的 `onReady.ts` 文件中，用 `await rest.put()` 开始你的API调用。发送一个 `PUT` 请求将更新任何现有的命令，而 `POST` 将试图创建新的命令，如果命令共享一个名字就会出错。从`discord-api-types/v9`导入`Routes`，并在`rest.put()` 调用中传递 `Routes.applicationGuildCommands()` 调用。这将被用来构建API端点以发送命令。
 
-The `applicationGuildCommands()` call will take two arguments.
+调用 `applicationGuildCommands()` 时，将接受两个参数。
 
-The first is the application ID to associate the commands with. You can get this from the `BOT.user.id` value – but `user` is potentially undefined, so you'll need to optionally chain it. Use `BOT.user?.id || "missing id"` to add a fallback value that will error out – this will allow us to know if the bot's ID is missing.
+首先是应用程序的ID，以便将这些命令与之联系起来。你可以从 `BOT.user.id` 的值中得到它, 但 `user` 有可能是未定义的，所以你需要选择性地把它连起来。使用 `BOT.user?.id || "missing id"` 来添加一个会出错的后备值--这将允许我们知道机器人的ID是否丢失。
 
-The second argument is the server ID, which you set up as `process.env.GUILD_ID` (remember to coerce the type!).
+第二个参数是服务器ID，你把它设置为`process.env.GUILD_ID`（记得要强制使用这个类型！）。
 
-The `.put()` call needs a second argument as well, which is the data you want to send. Pass this as `{ body: commandData }` to match the expected format.
+`.put()`调用也需要第二个参数，这是你要发送的数据。以`{ body: commandData }`的形式传递，以符合预期格式。
 
-Finally, add a `console.log("Discord ready!")` at the end of the file to indicate your bot is online.
+最后，在文件末尾添加一个`console.log("Discord ready!")`，以表明你的机器人已经上线。
 
 ```ts
 import { REST } from "@discordjs/rest";
@@ -969,7 +968,7 @@ export const onReady = async (BOT: Client) => {
 };
 ```
 
-Switch to your `index.ts` file and locate your `"ready"` event listener. Replace the `console.log` call with your new `onReady` function – remember to import it, and make the callback asynchronous.
+切换到你的 `index.ts` 文件，找到你的 `"ready"` 事件监听器。用新的 `onReady` 函数替换 `console.log`调用--记得导入它，回调中异步调用。
 
 ```ts
 import { Client } from "discord.js";
@@ -996,23 +995,23 @@ import { validateEnv } from "./utils/validateEnv";
 })();
 ```
 
-Now run `npm run build` and `npm start`, and head to your server in Discord. If you type `/` you should see your new `/100` command show up. Try using the command and checking the response.
+现在运行`npm run build`和`npm start`，并在Discord中连接你的服务器。如果你输入`/`，你应该看到你的新`/100`命令显示出来。尝试使用该命令并检查响应。
 
 ![image-122](https://www.freecodecamp.org/news/content/images/2022/01/image-122.png)
 
-If you see this response, then you've successfully created your first command!
+如果你看到这个响应，那么你已经成功创建了你的第一个命令!
 
-Congratulations! You have your first successful command. With all of the infrastructure you've built, adding additional commands will be much smoother. Let's go ahead and do that now.
+祝贺你! 你有了你的第一个成功的命令。有了你所建立的所有基础结构，添加其他的命令就会顺利得多。让我们现在就去做吧。
 
 ### Edit Command
 
-What happens if a camper makes a typo in their `/100` message? Because the bot sends the response, the camper cannot edit it (Discord does not allow you to edit messages you did not send). You should create a command that will allow a camper to do this.
+如果营员在他们的 `/100` 信息中出现了错误，会发生什么？因为机器人会发送回复，camper 无法编辑它（Discord不允许你编辑你没有发送的信息）。你应该创建一个命令，允许 camper 这样做。
 
-Create an `edit.ts` file in your `src/commands` directory. Like you did with the `/100` command, import your `SlashCommandBuilder` and `Command` interface, and export an `edit` object with the `Command` type.
+在你的 `src/commands` 目录下创建一个 `edit.ts` 文件。就像你对 `/100` 命令所做的那样，导入你的`SlashCommandBuilder` 和 `Command` 接口，并导出一个 `edit` 对象，其类型为 `Command`。
 
-Use the `SlashCommandBuilder` to prepare the `data` property. Give the command the name `edit` and the description `Edit a previous 100 days of code post.`, then add two string options. The first string option should have a name `embed-id` and a description of `ID of the message to edit.`, and the second should have a name of `message` and a description of `The message to go in your 100 Days of Code update.`. Both options should be required.
+使用 `SlashCommandBuilder` 来准备 `data` 属性。给这个命令取名为 `edit`，描述为`Edit a previous 100 days of code post`，然后添加两个字符串选项。第一个字符串选项应该有一个名字 `embed-id` 和一个描述`"ID of the message to edit"`，第二个应该有一个名字`message`和一个描述 `"The message to go in your 100 Days of Code update"` 。这两个选项都应该是必需的。
 
-Your code should look like this:
+你的代码应该是这样的:
 
 ```ts
 import { SlashCommandBuilder } from "@discordjs/builders";
@@ -1037,7 +1036,7 @@ export const edit: Command = {
 }
 ```
 
-Create your `run` property with an async function and an `interaction` parameter. Destructure the `channel` and `user` from the interaction, and grab the `embed-id` and `message` options. Don't forget to defer the response!
+用一个异步函数和一个 `interaction（交互）`参数创建你的`run`属性。从交互中获得 `channel` 和 `user`，并抓住 `embed-id`和 `message`选项。不要忘记延迟响应!
 
 ```js
     run: async (interaction) => {
@@ -1048,7 +1047,7 @@ Create your `run` property with an async function and an `interaction` parameter
     }
 ```
 
-The `channel` property is nullable (in cases where an interaction is sent via a DM, for example), so you'll want to check that it exists. If it does not, respond with a message that the command is missing parameters.
+`channle`属性是nullable（例如，在通过DM发送互动的情况下），所以你要检查它是否存在。如果它不存在，则回应一个命令缺少参数的消息。
 
 ```ts
     if (!channel) {
@@ -1059,9 +1058,9 @@ The `channel` property is nullable (in cases where an interaction is sent via a 
     }
 ```
 
-Now that you know the channel exists, you can fetch the message that the camper wants to edit based on the ID they provided. Use `channel.messages.fetch()` to do this, passing in the `targetId` as the argument.
+现在你知道了这个 `channel` 的存在，你可以根据 `camper` 提供的ID来获取他们想要编辑的信息。使用`channel.messages.fetch()` 来做这件事，把 `targetId` 作为参数传入。
 
-Because it is possible that the target message does not exist, you need to account for that in your code. Add a condition that checks for this, and if the message is not found respond with an explanation.
+因为目标 `message` 有可能不存在，你需要在你的代码中考虑到这一点。添加一个条件来检查这一点，如果没有找到消息，则回应一个解释。
 
 ```ts
     const targetMessage = await channel.messages.fetch(targetId);
@@ -1075,9 +1074,9 @@ Because it is possible that the target message does not exist, you need to accou
     }
 ```
 
-The last thing you need to check is that the message the camper is editing actually belongs to them. You can access the embed with the `.embeds` property – much like how you sent it, the property is returned as an array of embed objects.
+你需要检查的最后一件事是，`camper` 正在编辑的信息实际上属于他们。你可以用`.embeds`属性来访问嵌入(embed)，和你发送的方式一样，该属性以嵌入对象（embed objects）数组的形式返回。
 
-Grab the first embed from the array, and then check that the embed author matches the user's tag. If not, let them know they cannot edit this post.
+从数组中抓取第一个嵌入对象（embed objects），然后检查嵌入作者是否与用户的标签相符。如果不是，让他们知道他们不能编辑这个帖子。
 
 ```ts
     const targetEmbed = targetMessage.embeds[0];
@@ -1089,9 +1088,9 @@ Grab the first embed from the array, and then check that the embed author matche
     }
 ```
 
-Now that you have confirmed everything is correct, you can use `.setDescription()` on the embed to update the text. Then, edit the message with the new embed, and respond to the interaction with a confirmation.
+现在你已经确认一切都正确了，你可以在嵌入（embed）上使用 `.setDescription()` 来更新文本。然后，用新的嵌入（embed）来编辑消息，并对互动作出确认。
 
-Your full code should look like this:
+你的完整代码应该是这样的:
 
 ```ts
 import { SlashCommandBuilder } from "@discordjs/builders";
@@ -1152,27 +1151,27 @@ export const edit: Command = {
 };
 ```
 
-Add your new `edit` command to your `CommandList` array, then build and run your bot and you should see the new command. Try editing the embed you sent earlier.
+将新的 `edit` 命令添加到你的 `CommandList` 数组中，然后建立并运行你的机器人，你应该看到新的命令。尝试编辑你之前发送的嵌入文件（embed）。
 
 ![image-123](https://www.freecodecamp.org/news/content/images/2022/01/image-123.png)
 
-You should see your embed update, and a confirmation from the bot!
+你应该看到你的嵌入更新，以及来自机器人的确认!
 
 ### View Command
 
-Campers should have a way to view their current progress, so we'll need to create a command to do so. By now, you should be comfortable with the command structure – we encourage you to follow these instructions but attempt to write the code without looking at the final result.
+`Campers` 应该有办法查看他们当前的进度，因此我们需要创建一个命令来执行此操作。 到目前为止，您应该对命令结构感到满意。我们鼓励您遵循这些说明，但尝试编写代码而不查看最终结果。
 
-Create a `view.ts` file in your commands directory, and set up your command variable. Create the `data` property with a command that has the name `view` and the description `Shows your latest 100 days of code check in.` This command does not need any options.
+在你的命令目录下创建一个`view.ts`文件，并设置好你的命令变量。在`data`属性中创建一个命令，其名称为`view`，描述为 `Shows your latest 100 days of code check in`。这个命令不需要任何选项。
 
-Set up your async function in the `run` property, and defer the interaction response. Extract the `user` object from the interaction. Use your `getCamperData` module to fetch the camper's data from the database. Then, check if the data's `day` property has a non-zero value. If it does not, let the camper know that they have not started the 100 Days of Code challenge, and can do so with the `/100` command.
+在 `run` 属性中设置你的异步函数，并推迟交互响应。从交互中提取 `user` 对象。使用你的 `getCamperData` 模块从数据库中获取 `camper` 的数据。然后，检查数据的 `day` 属性是否有一个非零值。如果没有，让 `camper` 知道他们还没有开始100天的代码挑战，可以用 `/100` 命令来做。
 
-Create an embed with a title set to `My 100DoC Progress`. Set the description to `Here is my 100 Days of Code progress. I last reported an update on:` and add the camper's timestamp. Add a `Round` and `Day` field, and set the author for the embed. Then send the embed in the interaction response.
+创建一个嵌入，标题设置为 `My 100DoC Progress`。将描述设置为`Here is my 100 Days of Code progress. I last reported an update on:`, 并添加 `camper` 的时间戳。添加一个 `Round` 和 `Day` 字段，并设置嵌入的作者。然后在交互响应中发送嵌入的内容。
 
-Remember to add your new command to the `CommandList`, then try building and starting your bot. You should see the command available, and be able to get a response from it.
+记得把你的新命令添加到 `CommandList` 中，然后尝试建立和启动你的机器人。你应该看到这个命令是可用的，并且能够从它那里得到一个响应。
 
 ![image-125](https://www.freecodecamp.org/news/content/images/2022/01/image-125.png)
 
-If you did not get the response, here is what your code should look like.
+如果你没有得到回应，以下是你的代码应该是这样的。
 
 ```ts
 import { SlashCommandBuilder } from "@discordjs/builders";
@@ -1218,17 +1217,17 @@ export const view: Command = {
 
 ### Help Command
 
-The last thing you need to build is a help command, which will explain how campers can interact with the bot.
+你需要建立的最后一件事是一个帮助命令，它将向`camper` 解释如何与机器人互动。
 
-Create your `help.ts` file in the command directory, and create your `data` property. Give the command the name `help` and the description `Provides information on using this bot.`
+在 `command` 目录下创建你的 `help.ts` 文件，并创建你的 `data` 属性。给该命令起名为 `help`，并说明`Provides information on using this bot（提供关于使用该机器人的信息）`。
 
-Set up your `run` property with the async function, and remember to defer the reply. Create an embed, and use the description and fields to provide the information you would like to share with your campers. Send the embed in the interaction response.
+用async函数设置你的`run`属性，并记住推迟回复的时间。创建一个嵌入，并使用描述和字段来提供你想与 `camper` 分享的信息。在交互响应中发送嵌入的信息。
 
-Load your new help command into the `CommandList`, and build + start your bot to test it. You should see a response with the embed you created.
+将你的新帮助命令加载到 `CommandList` 中，并建立启动你的机器人来测试它。你应该看到一个带有你创建的嵌入的响应。
 
 ![image-126](https://www.freecodecamp.org/news/content/images/2022/01/image-126.png)
 
-Your embed might look different, depending on what information you chose to share. Here's the code that we used for the above embed:
+你的嵌入可能看起来不同，这取决于你选择分享什么信息。以下是我们用于上述嵌入的代码:
 
 ```ts
 import { SlashCommandBuilder } from "@discordjs/builders";
@@ -1265,10 +1264,10 @@ export const help: Command = {
 };
 ```
 
-Note how we use `npm_package_version` to display the current version of the bot.
+注意：我们应该使用 `npm_package_version` 来显示机器人的当前版本。
 
-## Conclusion
+## 结语
 
-Congratulations! You have successfully built a Discord bot for the 100 Days of Code challenge.
+恭喜！ 您已成功为 100 天的代码挑战构建了一个 Discord 机器人。
 
-If you are interested in exploring further, you can view [the source code](https://github.com/nhcarrigan/100-days-of-code-bot) for the live bot that inspired this tutorial, which includes custom error logging, external error reporting, and a documentation site.
+如果您有兴趣进一步探索，可以查看启发本教程的实时机器人的 [源代码](https://github.com/nhcarrigan/100-days-of-code-bot)，其中包括自定义错误 日志记录、外部错误报告和文档站点。

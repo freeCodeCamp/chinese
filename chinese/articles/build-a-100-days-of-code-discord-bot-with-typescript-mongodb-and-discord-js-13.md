@@ -25,7 +25,7 @@
 - [数据库模型](#database-model)
 - [编写机器人命令](#write-bot-commands)
 
-## Create a Discord Bot Application
+## 创建一个Discord 机器人应用程序
 
 你的第一步是设置一个 Discord 机器人应用程序。前往[Discord Developer Portal](https://discord.dev)，如果需要，请登录，并从侧边栏选择 "Applications"。
 
@@ -61,7 +61,7 @@
 
 现在你已经准备好写一些代码了!
 
-## Set Up Your Project
+## 设置你的项目
 
 你首先需要为你的项目建立基础设施和工具。
 
@@ -186,7 +186,7 @@ TypeScript的编译器提供了许多不同的设置，以最大限度地提高�
 
 推送已编译的JavaScript也是不必要的，因为你的项目通常在运行前就已经在生产中编译了。`.env`文件包含秘密值，如API密钥和令牌，所以它们不应该被提交到版本库。
 
-## Create the Discord Bot
+## 创建Discord机器人
 
 你的下一步是准备初始的机器人连接。如果你之前没有这样做，创建一个`src`目录和一个`index.ts`文件。
 

@@ -1,11 +1,8 @@
-> -  原文地址：[Learn React Hooks – A Beginner's Guide](https://www.freecodecamp.org/news/the-beginners-guide-to-react-hooks/)
-> -  原文作者：[
-                    
-                        Victor Ikechukwu
-                    
-                ](https://www.freecodecamp.org/news/author/victor-ikechukwu/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Learn React Hooks – A Beginner's Guide](https://www.freecodecamp.org/news/the-beginners-guide-to-react-hooks/)
+> - 原文作者：[Victor Ikechukwu](https://www.freecodecamp.org/news/author/victor-ikechukwu/)
+>
+> - 译者：
+> - 校对者：
 
 ![Learn React Hooks – A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/The-Beginner-s-Guide-to-React-Hooks.png)
 
@@ -17,9 +14,9 @@ React version 16.8 solved these problems by introducing React Hooks, which let d
 
 In this article you will learn:
 
--   What React hooks are
--   Four common React Hooks with examples of how to write them in your applications
--   Lastly we'll take a look at how to write your own custom React Hooks
+- What React hooks are
+- Four common React Hooks with examples of how to write them in your applications
+- Lastly we'll take a look at how to write your own custom React Hooks
 
 ## What are React Hooks?
 
@@ -50,7 +47,7 @@ class Counter extends Component {
     constructor(props) {
         super(props)
         this.state = {
-        	count: 1,
+         count: 1,
         }
     }
     render() {
@@ -96,8 +93,8 @@ Using functional components removes a lot of this, so our code becomes shorter a
 
 When using React Hooks there are a few rules to adhere to:
 
--   **Only call hooks at the top level of a component**: You shouldn’t use Hooks inside loops, conditions, or nested functions. Instead, always use Hooks at the top level of your React function, before any return keyword.
--   **Only call hooks from React Functions**: Never call Hooks from regular JavaScript functions. You can:  
+- **Only call hooks at the top level of a component**: You shouldn’t use Hooks inside loops, conditions, or nested functions. Instead, always use Hooks at the top level of your React function, before any return keyword.
+- **Only call hooks from React Functions**: Never call Hooks from regular JavaScript functions. You can:  
     ✅ Call Hooks from React functional components.  
     ✅ Call Hooks from custom Hooks.
 
@@ -105,10 +102,10 @@ When using React Hooks there are a few rules to adhere to:
 
 To date, React has 10 built-in hooks. Let's look at the four most common ones:
 
--   `useState`
--   `useEffect`
--   `useContext`
--   `useReducer`
+- `useState`
+- `useEffect`
+- `useContext`
+- `useReducer`
 
 ### useState Hook
 
@@ -118,8 +115,8 @@ React has this concept of state, which are variables that hold data that our com
 
 The hook takes a single optional argument: an initial value for the state. Then it returns an array of two values:
 
--   The state variable
--   A function to update the state
+- The state variable
+- A function to update the state
 
 Let's take a look at a counter component as an example:
 
@@ -169,8 +166,8 @@ The `useEffect` Hook lets you perform side effects in function components. Side 
 
 The `useEffect` hook accepts 2 arguments:
 
--   A function with the code to run
--   An array that contains a list of values from the component scope (props, context, and state variables), known as a dependency array, which tells the Hook to run every time its value is updated. If not supplied, the Hook will run after every render.
+- A function with the code to run
+- An array that contains a list of values from the component scope (props, context, and state variables), known as a dependency array, which tells the Hook to run every time its value is updated. If not supplied, the Hook will run after every render.
 
 Here’s an example of using the Hook:
 
@@ -181,7 +178,7 @@ function Counter() {
     const [count, setCount] = useState(0);
     const [product, setProduct] = useState("Eggs");
     useEffect(() => {
-    	console.log(`${product} will rule the world!`);
+     console.log(`${product} will rule the world!`);
     });
     return (
         <div>
@@ -209,7 +206,7 @@ To run the Hook only when certain values have changed, pass the variables as a d
 
 ```javascript
 useEffect(() => {
-	console.log(`${product} will rule the world!`);
+ console.log(`${product} will rule the world!`);
 }, [product]); // Only re-run the effect if the value of product changes
 ```
 
@@ -223,7 +220,7 @@ If you want an effect to run only once on first render, like making API calls wh
 
 ```javascript
 useEffect(() => {
-	console.log("This runs once on first render");
+ console.log("This runs once on first render");
 }, []);
 ```
 
@@ -322,9 +319,9 @@ const [state, dispatch] = useReducer(reducer, initialState);
 
 Let's learn about its arguments and returned values:
 
--   **state**: This is the current value of the initialState passed to the Hook.
--   **reducer**: The reducer is a function that accepts the state and an action. Based on these arguments it determines how the value of state will change.
--   **dispatch**: The dispatch function is how we pass an action to the reducer function. It dispatches the action to be used to update the state.
+- **state**: This is the current value of the initialState passed to the Hook.
+- **reducer**: The reducer is a function that accepts the state and an action. Based on these arguments it determines how the value of state will change.
+- **dispatch**: The dispatch function is how we pass an action to the reducer function. It dispatches the action to be used to update the state.
 
 Typically, we iterate over the type of actions we made in our app through a switch statement to determine how the value of state will change. This is how the Hook updates the values of its state.
 
@@ -333,14 +330,14 @@ function reducer(state, action) {
     switch (action.type) {
         case "CASE_1":
         return {
-        	updatedState,
+         updatedState,
         };
         case "CASE_2":
         return {
-        	updatedState,
+         updatedState,
         };
         default:
-        	return state;
+         return state;
     }
 }
 ```
@@ -364,7 +361,7 @@ Let's look at an example of a custom hook that will return a response from any v
 import { useState, useEffect } from "react";
 
 export function useFetch(url) {
-	//values
+ //values
     const [data, setData] = useState(null);
     const [error, setError] = useState("");
     useEffect(() => {
@@ -376,7 +373,7 @@ export function useFetch(url) {
         setData(res.json());
         })
         .then(() => {
-        	setError("");
+         setError("");
         })
         .catch( error => {
             console.warn(`sorry an error occurred, due to ${error.message} `);

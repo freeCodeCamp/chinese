@@ -375,23 +375,23 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 ### **CSS Flexbox Crash Course**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=tXIhdp5R7sc), you will learn how to create responsive layouts in websites using Flexbox.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=tXIhdp5R7sc) 中，你将学习如何使用Flexbox在网站中创建响应式布局。
 
 ### **Learn Bootstrap 5 and SASS by Building a Portfolio Website**
 
-In [this freeCodeCamp YouTube course,](https://www.youtube.com/watch?v=iJKCj8uAHz8) you will learn how to use Bootstrap and Sass.
+在 [这个freeCodeCamp YouTube课程中，](https://www.youtube.com/watch?v=iJKCj8uAHz8) 你将学习如何使用Bootstrap和Sass。
 
 ### **Tailwind CSS Crash Course**
 
-In [this Brad Traversy YouTube course](https://www.youtube.com/watch?v=UBOj6rqRUME), you will learn how to setup Tailwind CSS and work with utility classes.
+在 [这个Brad Traversy YouTube课程](https://www.youtube.com/watch?v=UBOj6rqRUME) 中，你将学习如何设置Tailwind CSS和使用实用类。
 
 ### **HTML and CSS**
 
-In [this Odin Project course](https://www.theodinproject.com/paths/full-stack-javascript/courses/html-and-css), you will learn about HTML forms, HTML tables, CSS Flexbox, CSS animations, and more.
+在 [这个Odin项目课程](https://www.theodinproject.com/paths/full-stack-javascript/courses/html-and-css) 中，你将学习HTML表格、HTML表格、CSS Flexbox、CSS动画等知识。
 
 ### **Bootstrap CSS Framework - Full Course for Beginners**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=-qfEOE4vtxE), you will learn about the basics of Bootstrap 5 and how to create designs with a mobile first approach.  
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=-qfEOE4vtxE) 中，你将学习Bootstrap 5的基础知识，以及如何以移动优先的方式创建设计。
 
 ## **UI/UX Courses**
 

@@ -213,153 +213,153 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 12. [MongoDB速成班](#mongodb-crash-course) (Traversy Media)
 13. [NoSQL数据库教程--面向初学者的完整课程](#nosql-database-tutorial-full-course-for-beginners) (freeCodeCamp)
 
-## **Computer Science Courses**
+## **计算机科学课程**
 
 ### **Introduction to Programming and Computer Science**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=zOjov-2OZ0E), you will learn about arrays, loops, functions, recursion, conditions, and data structures.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=zOjov-2OZ0E) 中，你将学习到数组、循环、函数、递归、条件和数据结构。
 
 ### **Data Structures-Computer Science Course for Beginners**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=zg9ih6SVACc), you will learn about arrays, Big O notation, linked lists, hash tables, heaps, and tries.
+在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=zg9ih6SVACc)中，你将学习到数组、Big O 复杂度、链接列表、哈希表、堆和tries。
 
 ### **CS50's Introduction to Computer Science**
 
-[This Harvard course](https://www.edx.org/course/cs50s-introduction-to-computer-science) will teach you basic computer science concepts like algorithms and data structures through a series of problem sets and a final project.
+[这门哈佛课程](https://www.edx.org/course/cs50s-introduction-to-computer-science) 将通过一系列的问题集和一个最终项目来教授你基本的计算机科学概念，如算法和数据结构。
 
 ### **Introduction to Computer Science and Programming Using Python**
 
-This [MIT course](https://www.edx.org/course/introduction-to-computer-science-and-programming-7) will teach you basic computer science concepts like algorithms, data structures, testing, and debugging through a series of problem sets.
+这门 [麻省理工学院课程](https://www.edx.org/course/introduction-to-computer-science-and-programming-7) 将通过一系列的问题集教你基本的计算机科学概念，如算法、数据结构、测试和调试。
 
 ### **Introduction to Algorithms**
 
-In [this MIT course](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/), you will learn about dynamic programming, hashing, graphs, trees and sorting algorithms. You will also learn how to measure the performance of algorithms and data structures.
+在 [这门麻省理工学院课程](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/) 中，你将学习到动态编程、散列、图、树和排序算法。你还将学习如何衡量算法和数据结构的性能。
 
 ### **Big O Notation**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=Mo4vesaut8g), you will learn about Big O notation and how to apply it to recursive solutions, iterative solutions, and sorting algorithms.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=Mo4vesaut8g) 中，你将学习Big O 复杂度以及如何将其应用于递归解、迭代解和排序算法。
 
 ### **Graph Algorithms for Technical Interviews**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=tWVWeAqZ0WU), you will learn about breadth first and depth first graph traversals. You will also work on several challenges including connected components count, shortest path, and island count.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=tWVWeAqZ0WU) 中，你将学习广度优先和深度优先的图形遍历。你还将进行一些挑战，包括连接部件计数、最短路径和岛屿计数。
 
 ### **Recursion in Programming**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=IJDJ0kBx2LM), you will learn about recursion, divide & conquer algorithms, graphs trees, linked lists and more.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=IJDJ0kBx2LM) 中，你将学习递归、除法和算法、图树、链接列表等知识。
 
 ### **Data Structures - Full Course Using C and C++**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=B31LgI4Y4DQ), you will learn about graphs, trees, linked lists, stacks and queues.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=B31LgI4Y4DQ) 中，你将学习到图、树、链接列表、堆栈和队列。
 
 ### **Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=oBt53YbR9Kk), you will learn how to solve several challenges using dynamic programming including fib tabulation, canSum memoization, and canConstruct tabulation.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=oBt53YbR9Kk) 中，你将学习如何使用动态编程解决几个挑战，包括fib制表，canSum备忘，和canConstruct制表。
 
 ### **Algorithm and Data Structures**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=8hly31xKli0), you will learn about arrays, linked lists, and sorting and searching algorithms.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=8hly31xKli0) 中，你将学习到数组、链接列表、以及排序和搜索算法。
 
 ### **Data Structures and Algorithms in Python - Full Course for Beginners**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=pkYVOmU3MgA), you will learn common data structures like linked lists, stacks, queues and common algorithms in Python.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=pkYVOmU3MgA) 中，你将学习常见的数据结构，如链接列表、堆栈、队列和Python中的常见算法。
 
 ### **An Introduction to Interactive Programming in Python Part 1 - Rice University**
 
-In this [Coursera Rice University course](https://www.coursera.org/learn/interactive-python-1?ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-tzOLX9mSM3mIBJJSvEDoFQ&siteID=SAyYsTvLiGQ-tzOLX9mSM3mIBJJSvEDoFQ&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ), you will learn about the basic fundamentals behind programming including arrays, loops, functions, recursion, conditions, and data structures.
+在这个 [Coursera莱斯大学课程](https://www.coursera.org/learn/interactive-python-1?ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-tzOLX9mSM3mIBJJSvEDoFQ&siteID=SAyYsTvLiGQ-tzOLX9mSM3mIBJJSvEDoFQ&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ) 中，你将学习到编程背后的基本原理，包括数组、循环、函数、递归、条件和数据结构。
 
 ### Learn to Program: The Fundamentals
 
-In this [Coursera course](https://www.coursera.org/learn/learn-to-program?ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-WwEJRHXxQx_rPghSkuCmGw&siteID=SAyYsTvLiGQ-WwEJRHXxQx_rPghSkuCmGw&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ), you will learn the basics of programming including strings, loops, functions, tuples, and more using the Python language.
+在这个 [Coursera课程](https://www.coursera.org/learn/learn-to-program?ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-WwEJRHXxQx_rPghSkuCmGw&siteID=SAyYsTvLiGQ-WwEJRHXxQx_rPghSkuCmGw&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ) 中，你将学习编程的基础知识，包括使用Python语言的字符串、循环、函数、图元，以及更多。
 
 ### Code Yourself! An Introduction to Programming
 
-In this [Coursera course](https://www.coursera.org/learn/intro-programming?ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-cptPYU3WOOAJnkNBF80oow&siteID=SAyYsTvLiGQ-cptPYU3WOOAJnkNBF80oow&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ), you will learn the fundamentals of programming, algorithms and data structures by using the [Scratch](https://scratch.mit.edu/) platform.
+在这个 [Coursera课程](https://www.coursera.org/learn/intro-programming?ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-cptPYU3WOOAJnkNBF80oow&siteID=SAyYsTvLiGQ-cptPYU3WOOAJnkNBF80oow&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ) 中，你将通过使用 [Scratch](https://scratch.mit.edu/) 平台学习编程、算法和数据结构的基础知识。
 
 ### **Learn to Program: Crafting Quality Code**
 
-In this [Coursera course](https://www.coursera.org/learn/program-code?ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-jPK.E6dmbmjKL4XCHm079w&siteID=SAyYsTvLiGQ-jPK.E6dmbmjKL4XCHm079w&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ), you will learn about popular algorithms like Bubble sort and Binary search and you will also learn about unit testing.
+在这个[Coursera课程](https://www.coursera.org/learn/program-code?ranMID=40328&ranEAID=SAyYsTvLiGQ&ranSiteID=SAyYsTvLiGQ-jPK.E6dmbmjKL4XCHm079w&siteID=SAyYsTvLiGQ-jPK.E6dmbmjKL4XCHm079w&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ)中，你将学习到流行的算法，如冒泡排序和二进制搜索，你还将学习到单元测试。
 
-## **Git and Github Courses**
+## **Git和Github课程**
 
 ### **Git and GitHub for Beginners - Crash Course**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=RGOj5yH7evk), you will learn about GitHub, version control, SSH keys, and common Git commands.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=RGOj5yH7evk) 中，你将了解到GitHub、版本控制、SSH密钥和常见的Git命令。
 
 ### **Git & GitHub Crash Course For Beginners**
 
-In [this Brad Traversy course](https://www.youtube.com/watch?v=SWYqp7iY_Tc), you will learn about version control and popular Git commands.
+在[这个Brad Traversy课程](https://www.youtube.com/watch?v=SWYqp7iY_Tc)中，你将学习版本控制和流行的Git命令。
 
 ### **Git Tutorial for Beginners: Learn Git in 1 Hour**
 
-In [this Programming with Mosh course](https://www.youtube.com/watch?v=8JJ101D3knE), you will learn about Git and basic commands.
+在 [该Mosh编程课程](https://www.youtube.com/watch?v=8JJ101D3knE) 中，你将学习到Git和基本命令。
 
 ### **Git Tutorial for Beginners - Git & GitHub Fundamentals In Depth**
 
-In this [Tech with Tim course](https://www.youtube.com/watch?v=DVRQoVRzMIY), you will learn about staging, branches, pulls and more.
+在这个[Tech with Tim( course](https://www.youtube.com/watch?v=DVRQoVRzMIY)中，你将学习staging、分支（branches）、拉（pulls）等知识。
 
 ## **HTML Courses**
 
 ### **Basic HTML and HTML5**
 
-[This freeCodeCamp course](https://www.freecodecamp.org/learn/responsive-web-design/#basic-html-and-html5) will teach you basic HTML5 elements through 28 coding exercises that you can do in the freeCodeCamp online editor (part of the free Responsive Web Design Certification).
+[这个freeCodeCamp课程](https://www.freecodecamp.org/learn/responsive-web-design/#basic-html-and-html5) 将通过28个编码练习教给你基本的HTML5元素，你可以在freeCodeCamp在线编辑器中进行练习（免费响应式网页设计认证的一部分）。
 
 ### **HTML Full Course - Build a Website Tutorial**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=pQN-pnXPaVg), you will learn about basic HTML tags, how to use a text editor, and how to format your web page.
+在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=pQN-pnXPaVg)中，你将学习基本的HTML标签，如何使用文本编辑器，以及如何格式化你的web页面。
 
 ### **Introduction to HTML5**
 
-[This University of Michigan course](https://www.coursera.org/learn/html?specialization=web-design) will cover the history of HTML, the Document Object Model, HTML5 tags, and accessibility.
+[密歇根大学的这门课程](https://www.coursera.org/learn/html?specialization=web-design) 将涵盖HTML的历史、文档对象模型、HTML5标签和可访问性。
 
 ### **HTML Tutorial for Beginners: HTML Crash Course 2021**
 
-[Programming with Mosh](https://www.youtube.com/watch?v=qz0aGYrrlhU) will teach you the basics of HTML, how the web works, and how to use the browser developer tools.
+[Programming with Mosh](https://www.youtube.com/watch?v=qz0aGYrrlhU)将教你HTML的基础知识，网络如何运作，以及如何使用浏览器的开发工具。
 
 ### **HTML Crash Course For Absolute Beginners**
 
-[This Brad Traversy](https://www.youtube.com/watch?v=UB1O30fR-EE) course will cover the most popular HTML tags and semantic tags.
+[这个Brad Traversy](https://www.youtube.com/watch?v=UB1O30fR-EE)课程将涵盖最流行的HTML标签和语义标签。
 
 ### **Learn HTML**
 
-In [this Codecademy course](https://www.codecademy.com/learn/learn-html), you will learn about basic HTML tags, forms, tables, and semantic tags.
+在[本Codecademy课程](https://www.codecademy.com/learn/learn-html)中，你将学习到基本的HTML标签、表单、表格和语义标签。
 
 ### **HTML For Beginners The Easy Way**
 
-[This HTML tutorial](https://html.com/) will cover the history of HTML, popular HTML tags, attributes, and code editors.
+[这个HTML教程](https://html.com/)将涵盖HTML的历史、流行的HTML标签、属性和代码编辑器。
 
 ### **HTML Crash Course for Beginners - Website Tutorial**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=916GWv2Qs08), you will learn about headings, images, lists, footers, links, and more.
+在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=916GWv2Qs08)中，你将学习到关于标题、图像、列表、页脚、链接等内容。
 
 ## **CSS Courses**
 
 ### **Responsive Web Design**
 
-In [this freeCodeCamp course](https://www.freecodecamp.org/learn/responsive-web-design/), you will learn the basics of CSS, applied visual design, applied accessibility, responsive web design principles, CSS Flexbox, and CSS Grid. (Free Certification)
+在 [这个freeCodeCamp课程](https://www.freecodecamp.org/learn/responsive-web-design/) 中，你将学习CSS的基础知识，应用视觉设计，应用可及性，响应式网页设计原则，CSS Flexbox，和CSS Grid。(免费认证)
 
 ### **Intro to HTML and CSS**
 
-In [this Udacity course](https://www.udacity.com/course/intro-to-html-and-css--ud001), you will learn the basics of HTML and CSS.
+在 [这个Udacity课程](https://www.udacity.com/course/intro-to-html-and-css--ud001) 中，你将学习HTML和CSS的基础知识。
 
 ### **HTML and CSS Tutorial**
 
-In [this MarkSheet tutorial](https://marksheet.io/), you will learn about CSS text, the box model, positioning, pseudo classes, animations, and Sass.
+在[这个MarkSheet教程](https://marksheet.io/)中，你将学习到CSS文本、盒子模型、定位、伪类、动画和Sass。
 
 ### **CSS Tutorial - Zero to Hero**
 
-In [this freeCodeCamp YouTube tutorial](https://www.youtube.com/watch?v=1Rs2ND1ryYc), you will learn about CSS basics, positioning, pseudo classes, and animations.
+在[这个freeCodeCamp YouTube教程](https://www.youtube.com/watch?v=1Rs2ND1ryYc)中，你将学习到CSS基础知识、定位、伪类和动画。
 
 ### **CSS Crash Course For Absolute Beginners**
 
-In [this Brad Traversy YouTube course](https://www.youtube.com/watch?v=yfoY53QXEnI), you will learn the basics of CSS.
+在[这个Brad Traversy YouTube课程](https://www.youtube.com/watch?v=yfoY53QXEnI)中，你将学习CSS的基础知识。
 
 ### **Introduction to CSS3**
 
-In [this University of Michigan course](https://www.coursera.org/learn/introcss), you will learn about CSS basics, the box model, positioning, pseudo classes, and animations.
+在[密歇根大学的这门课程](https://www.coursera.org/learn/introcss)中，你将学习到CSS基础知识、盒子模型、定位、伪类和动画。
 
 ### **CSS Basics**
 
-In [this W3C course](https://www.edx.org/course/css-basics?index=product&queryID=71c4ab1ac3c434e1f8cb09b64a378920&position=3), you will learn about CSS selectors, layout, positioning, and accessibility.
+在[这个W3C课程](https://www.edx.org/course/css-basics?index=product&queryID=71c4ab1ac3c434e1f8cb09b64a378920&position=3)中，你将学习到CSS选择器、布局、定位和可访问性。
 
 ### **Sass Tutorial for Beginners – CSS With Superpowers**
 

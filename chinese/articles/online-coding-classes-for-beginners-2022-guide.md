@@ -343,35 +343,35 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 ### **HTML and CSS Tutorial**
 
-在[这个MarkSheet教程](https://marksheet.io/)中，你将学习到CSS文本、盒子模型、定位、伪类、动画和Sass。
+在 [这个MarkSheet教程](https://marksheet.io/) 中，你将学习到CSS文本、盒子模型、定位、伪类、动画和Sass。
 
 ### **CSS Tutorial - Zero to Hero**
 
-在[这个freeCodeCamp YouTube教程](https://www.youtube.com/watch?v=1Rs2ND1ryYc)中，你将学习到CSS基础知识、定位、伪类和动画。
+在 [这个freeCodeCamp YouTube教程](https://www.youtube.com/watch?v=1Rs2ND1ryYc) 中，你将学习到CSS基础知识、定位、伪类和动画。
 
 ### **CSS Crash Course For Absolute Beginners**
 
-在[这个Brad Traversy YouTube课程](https://www.youtube.com/watch?v=yfoY53QXEnI)中，你将学习CSS的基础知识。
+在 [这个Brad Traversy YouTube课程](https://www.youtube.com/watch?v=yfoY53QXEnI) 中，你将学习CSS的基础知识。
 
 ### **Introduction to CSS3**
 
-在[密歇根大学的这门课程](https://www.coursera.org/learn/introcss)中，你将学习到CSS基础知识、盒子模型、定位、伪类和动画。
+在 [密歇根大学的这门课程](https://www.coursera.org/learn/introcss) 中，你将学习到CSS基础知识、盒子模型、定位、伪类和动画。
 
 ### **CSS Basics**
 
-在[这个W3C课程](https://www.edx.org/course/css-basics?index=product&queryID=71c4ab1ac3c434e1f8cb09b64a378920&position=3)中，你将学习到CSS选择器、布局、定位和可访问性。
+在 [这个W3C课程](https://www.edx.org/course/css-basics?index=product&queryID=71c4ab1ac3c434e1f8cb09b64a378920&position=3) 中，你将学习到CSS选择器、布局、定位和可访问性。
 
 ### **Sass Tutorial for Beginners – CSS With Superpowers**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=_a5j7KoflTs), you will learn about Sass syntax, mixins, variables, nesting, and partials.
+在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=_a5j7KoflTs)中，你将学习到Sass的语法、混合元素、变量、嵌套和参数。
 
 ### **Bootstrap 5 tutorial – crash course for beginners in 1.5H**
 
-In [this Keep coding YouTube course](https://www.youtube.com/watch?v=c9B4TPnak1A), you will learn about Bootstrap 5 tables, buttons, cards, images, and forms.
+在 [这个Keep coding YouTube课程](https://www.youtube.com/watch?v=c9B4TPnak1A) 中，你将学习Bootstrap 5的表格、按钮、卡片、图像和表单。
 
 ### **Learn CSS Media Queries by Building 3 Projects - Full Course**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=aook54SsfhY), you will learn how to create responsive layouts for mobile, tablet and desktop sizes by building 3 projects.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=aook54SsfhY) 中，你将通过建立3个项目来学习如何为移动、平板和桌面尺寸创建响应式布局。
 
 ### **CSS Flexbox Crash Course**
 

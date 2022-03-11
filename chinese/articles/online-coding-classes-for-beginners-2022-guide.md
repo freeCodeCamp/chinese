@@ -1,125 +1,125 @@
 > - 原文地址：[Online Coding Classes – For Beginners [2022 Guide]](https://www.freecodecamp.org/news/online-coding-classes-for-beginners-2022-guide/)
 > - 原文作者：[Jessica Wilkins](https://www.freecodecamp.org/news/author/jessica-wilkins/)
 >
-> - 译者：
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
 > - 校对者：
 
 ![Online Coding Classes – For Beginners [2022 Guide]](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/arnold-francisca-f77Bh3inUpE-unsplash.jpg)
 
-Learning how to code can help you start a great career as a software developer. There are many free courses you can take to cultivate the skills need to become a developer.
+学习如何编程可以帮助你开始一个伟大的职业，成为一名软件开发人员。有很多免费的课程，你可以通过这些课程来培养成为一名开发者所需的技能。
 
-In this article, I'm going to show you 152 beginner friendly courses where you can learn computer science and programming for free.
+在这篇文章中，我将向你展示152个对初学者友好的课程，你可以免费学习计算机科学和编程。
 
-The freeCodeCamp courses are completely free and some of them include a free certification that you can add to your LinkedIn or résumé.
+freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的证书，你可以将其添加到你的LinkedIn或简历中。
 
-Note that some of the non-freeCodeCamp courses I've listed here (such as the university courses) are free to audit, but do require you to pay a fee if you want a certificate.
+请注意，我在这里列出的一些非freeCodeCamp课程（如大学课程）是免费审核的，但如果你想获得证书，则需要支付一定的费用。
 
-Here is the complete list of free courses, arranged by topic. Once you find a course that interests you, click that link and it will jump you down to a more detailed description of that course.
+这里是免费课程的完整列表，按主题排列。一旦你找到一个你感兴趣的课程，点击该链接，它将跳转到该课程的更详细的描述。
 
-## **Computer Science Courses (16)**
+## **计算机科学课程 (16)**
 
-1. [Introduction to Programming and Computer Science](#introduction-to-programming-and-computer-science) (freeCodeCamp)
-2. [Data Structures - Computer Science Course for Beginners](#data-structures-computer-science-course-for-beginners) (freeCodeCamp)
-3. [CS50's Introduction to Computer Science](#cs50-s-introduction-to-computer-science) (Harvard University)
-4. [Introduction to Computer Science and Programming Using Python](#introduction-to-computer-science-and-programming-using-python) (MIT)
-5. [Introduction to Algorithms](#introduction-to-algorithms) (MIT)
-6. [Big O Notation](#big-o-notation) (freeCodeCamp)
-7. [Graph Algorithms for Technical Interviews](#graph-algorithms-for-technical-interviews) (freeCodeCamp)
-8. [Recursion in Programming](#recursion-in-programming) (freeCodeCamp)
-9. [Data Structures - Full Course Using C and C++](#data-structures-full-course-using-c-and-c-) (freeCodeCamp)
-10. [Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges](#dynamic-programming-learn-to-solve-algorithmic-problems-coding-challenges) (freeCodeCamp)
-11. [Algorithms and Data Structures](#algorithm-and-data-structures) (freeCodeCamp)
-12. [Data Structures and Algorithms in Python - Full Course for Beginners](#data-structures-and-algorithms-in-python-full-course-for-beginners) (freeCodeCamp)
-13. [An Introduction to Interactive Programming in Python Part 1](#an-introduction-to-interactive-programming-in-python-part-1-rice-university) (Rice University)
-14. [Learn to Program: The Fundamentals](#learn-to-program-the-fundamentals) (University of Toronto)
-15. [Code Yourself! An Introduction to Programming](#code-yourself-an-introduction-to-programming) (The University of Edinburgh)
-16. [Learn to Program: Crafting Quality Code](#learn-to-program-crafting-quality-code) (University of Toronto)
+1. [编程和计算机科学简介](#introduction-to-programming-and-computer-science) (freeCodeCamp)
+2. [数据结构 - 计算机科学初学者课程](#data-structures-computer-science-course-for-beginners) (freeCodeCamp)
+3. [CS50的计算机科学简介](#cs50-s-introduction-to-computer-science) (Harvard University)
+4. [计算机科学和使用Python编程的介绍](#introduction-to-computer-science-and-programming-using-python) (MIT)
+5. [算法简介](#introduction-to-algorithms) (MIT)
+6. [大 O 复杂度](#big-o-notation) (freeCodeCamp)
+7. [技术面试的图算法](#graph-algorithms-for-technical-interviews) (freeCodeCamp)
+8. [编程中的递归](#recursion-in-programming) (freeCodeCamp)
+9. [数据结构 - 使用C和C++的完整课程](#data-structures-full-course-using-c-and-c-) (freeCodeCamp)
+10. [动态规划--学习解决算法问题和编码挑战](#dynamic-programming-learn-to-solve-algorithmic-problems-coding-challenges) (freeCodeCamp)
+11. [算法和数据结构](#algorithm-and-data-structures) (freeCodeCamp)
+12. [Python中的数据结构和算法--面向初学者的完整课程](#data-structures-and-algorithms-in-python-full-course-for-beginners) (freeCodeCamp)
+13. [用Python进行交互式编程的介绍 第一部分](#an-introduction-to-interactive-programming-in-python-part-1-rice-university) (Rice University)
+14. [学习编程：基础知识](#learn-to-program-the-fundamentals) (University of Toronto)
+15. [自我编码! 编程入门](#code-yourself-an-introduction-to-programming) (The University of Edinburgh)
+16. [学习编程：编写高质量的代码](#learn-to-program-crafting-quality-code) (University of Toronto)
 
-## **************Git and Github Courses (************4************)**************
+## **************Git和Github课程 (************4************)**************
 
-1. [Git and GitHub for Beginners - Crash Course](#git-and-github-for-beginners-crash-course) (freeCodeCamp)
-2. [Git & GitHub Crash Course For Beginners](#git-github-crash-course-for-beginners) (Brad Traversy)
-3. [Git Tutorial for Beginners: Learn Git in 1 Hour](#git-tutorial-for-beginners-learn-git-in-1-hour) (Programming with Mosh)
-4. [Git Tutorial for Beginners - Git & GitHub Fundamentals In Depth](#git-tutorial-for-beginners-git-github-fundamentals-in-depth) (Tech With Tim)
+1. [初学者的Git和GitHub - 速成班](#git-and-github-for-beginners-crash-course) (freeCodeCamp)
+2. [Git和GitHub初学者速成班](#git-github-crash-course-for-beginners) (Brad Traversy)
+3. [初学者的Git教程：1小时内学会Git](#git-tutorial-for-beginners-learn-git-in-1-hour) (Programming with Mosh)
+4. [初学者的Git教程 - 深入了解Git和GitHub的基础知识](#git-tutorial-for-beginners-git-github-fundamentals-in-depth) (Tech With Tim)
 
-## **************HTML Courses (8)**************
+## **************HTML 课程 (8)**************
 
-1. [Basic HTML and HTML5](#basic-html-and-html5) (freeCodeCamp)
-2. [HTML Full Course - Build Your Own Website](#html-full-course-build-a-website-tutorial) (freeCodeCamp)
-3. [Introduction to HTML5](#introduction-to-html5) (University of Michigan)
-4. [HTML Tutorial for Beginners: HTML Crash Course 2021](#html-tutorial-for-beginners-html-crash-course-2021) (Programming with Mosh)
-5. [HTML Crash Course For Absolute Beginners](#html-crash-course-for-absolute-beginners) (Traversy Media)
-6. [Learn HTML](#learn-html) (Codecademy)
-7. [HTML For Beginners The Easy Way](#html-for-beginners-the-easy-way) (html.com)
-8. [HTML Crash Course for Beginners - Website Tutorial](#html-crash-course-for-beginners-website-tutorial) (freeCodeCamp)
+1. [基础HTML和HTML5](#basic-html-and-html5) (freeCodeCamp)
+2. [HTML 全套课程 - 建立你自己的网站](#html-full-course-build-a-website-tutorial) (freeCodeCamp)
+3. [HTML5简介](#introduction-to-html5) (University of Michigan)
+4. [初学者的HTML教程。HTML速成班 2021](#html-tutorial-for-beginners-html-crash-course-2021) (Programming with Mosh)
+5. [真正的初级HTML速成班](#html-crash-course-for-absolute-beginners) (Traversy Media)
+6. [学习 HTML](#learn-html) (Codecademy)
+7. [简单的HTML入门方法](#html-for-beginners-the-easy-way) (html.com)
+8. [初学者的HTML速成班--网站教程](#html-crash-course-for-beginners-website-tutorial) (freeCodeCamp)
 
-## **************CSS Courses (1****5****)**************
+## **************CSS 课程 (1****5****)**************
 
-1. [Responsive Web Design](#responsive-web-design) (freeCodeCamp)
-2. [Intro to HTML and CSS](#intro-to-html-and-css) (Udacity)
-3. [HTML and CSS Tutorial](#html-and-css-tutorial) (MarkSheet)
-4. [CSS Tutorial - Zero to Hero](#css-tutorial-zero-to-hero) (freeCodeCamp)
-5. [CSS Crash Course For Absolute Beginners](#css-crash-course-for-absolute-beginners) (Traversy Media)
-6. [Introduction to CSS3](#introduction-to-css3) (University of Michigan)
-7. [CSS Basics](#css-basics) (W3C)
-8. [Sass Tutorial for Beginners - CSS With Superpowers](#sass-tutorial-for-beginners-css-with-superpowers) (freeCodeCamp)
-9. [Bootstrap 5 tutorial - crash course for beginners in 1.5H](#bootstrap-5-tutorial-crash-course-for-beginners-in-1-5h) (Keep Coding YouTube channel)
-10. [Learn CSS Media Queries by Building 3 Projects](#learn-css-media-queries-by-building-3-projects-full-course) (freeCodeCamp)
-11. [CSS Flexbox Crash Course](#css-flexbox-crash-course) (freeCodeCamp)
-12. [Learn Bootstrap 5 and SASS by Building a Portfolio Website](#learn-bootstrap-5-and-sass-by-building-a-portfolio-website) (freeCodeCamp)
-13. [Tailwind CSS Crash Course](#tailwind-css-crash-course) (Traversy Media)
-14. [HTML and CSS](#html-and-css) ( The Odin Project)
-15. [Bootstrap CSS Framework - Full Course for Beginners](#bootstrap-css-framework-full-course-for-beginners) (freeCodeCamp)
+1. [响应式网页设计](#responsive-web-design) (freeCodeCamp)
+2. [HTML和CSS介绍](#intro-to-html-and-css) (Udacity)
+3. [HTML和CSS教程](#html-and-css-tutorial) (MarkSheet)
+4. [CSS教程--从零到一的英雄](#css-tutorial-zero-to-hero) (freeCodeCamp)
+5. [真正的初级CSS速成班](#css-crash-course-for-absolute-beginners) (Traversy Media)
+6. [CSS3简介](#introduction-to-css3) (University of Michigan)
+7. [CSS基础知识](#css-basics) (W3C)
+8. [Sass初学者教程--具有超强能力的CSS](#sass-tutorial-for-beginners-css-with-superpowers) (freeCodeCamp)
+9. [Bootstrap 5教程--1.5小时的初学者速成课程](#bootstrap-5-tutorial-crash-course-for-beginners-in-1-5h) (Keep Coding YouTube channel)
+10. [通过建立3个项目学习CSS媒体查询](#learn-css-media-queries-by-building-3-projects-full-course) (freeCodeCamp)
+11. [CSS Flexbox速成班](#css-flexbox-crash-course) (freeCodeCamp)
+12. [通过建立一个组合网站学习Bootstrap 5和SASS](#learn-bootstrap-5-and-sass-by-building-a-portfolio-website) (freeCodeCamp)
+13. [Tailwind CSS 速成班](#tailwind-css-crash-course) (Traversy Media)
+14. [HTML 和 CSS](#html-and-css) ( The Odin Project)
+15. [Bootstrap CSS框架--面向初学者的完整课程](#bootstrap-css-framework-full-course-for-beginners) (freeCodeCamp)
 
 ## **************UI/UX (1****2****)**************
 
-1. [Foundations of User Experience (UX) Design](#foundations-of-user-experience-ux-design) (Google)
-2. [Start the UX Design Process: Empathize, Define, and Ideate](#start-the-ux-design-process-empathize-define-and-ideate) (Google)
-3. [Build Wireframes and Low-Fidelity Prototypes](#build-wireframes-and-low-fidelity-prototypes) (Google)
-4. [Conduct UX Research and Test Early Concepts](#conduct-ux-research-and-test-early-concepts) (Google)
-5. [Create High-Fidelity Designs and Prototypes in Figma](#create-high-fidelity-designs-and-prototypes-in-figma) (Google)
-6. [Responsive Web Design in Adobe XD](#responsive-web-design-in-adobe-xd) (Google)
-7. [Free Adobe XD Tutorial: User Experience Design Course with Adobe XD Course](#free-adobe-xd-tutorial-user-experience-design-course-with-adobe-xd-course) (Bring Your Own Laptop Youtube channel)
-8. [The 2019 UI Design Crash Course for Beginners](#the-2019-ui-design-crash-course-for-beginners) (DesignCourse)
-9. [Figma Tutorial - A Free UI Design/Prototyping Tool](#figma-tutorial-a-free-ui-design-prototyping-tool) (DesignCourse)
-10. [UXpin: Free UX Ebooks](#uxpin-free-ux-ebooks) (uxpin.com)
-11. [Figma Course - Web Design Tutorial for Beginners](#figma-course-web-design-tutorial-for-beginners) (freeCodeCamp)
-12. [Figma Tutorial for UI Design - Course for Beginners](#figma-tutorial-for-ui-design-course-for-beginners) (freeCodeCamp)
+1. [用户体验（UX）设计的基础](#foundations-of-user-experience-ux-design) (Google)
+2. [用户体验设计过程: 感同身受、定义和构思](#start-the-ux-design-process-empathize-define-and-ideate) (Google)
+3. [建立线框和低保真原型](#build-wireframes-and-low-fidelity-prototypes) (Google)
+4. [进行用户体验研究和测试早期概念](#conduct-ux-research-and-test-early-concepts) (Google)
+5. [在Figma中创建高保真设计和原型](#create-high-fidelity-designs-and-prototypes-in-figma) (Google)
+6. [Adobe XD中的响应式网页设计](#responsive-web-design-in-adobe-xd) (Google)
+7. [免费的Adobe XD教程。用户体验设计课程与Adobe XD课程](#free-adobe-xd-tutorial-user-experience-design-course-with-adobe-xd-course) (Bring Your Own Laptop Youtube channel)
+8. [2019年UI设计初学者速成班](#the-2019-ui-design-crash-course-for-beginners) (DesignCourse)
+9. [Figma教程 - 一个免费的UI设计/原型设计工具](#figma-tutorial-a-free-ui-design-prototyping-tool) (DesignCourse)
+10. [UXpin: 免费的用户体验方面的电子书](#uxpin-free-ux-ebooks) (uxpin.com)
+11. [Figma课程--网页设计初学者教程](#figma-course-web-design-tutorial-for-beginners) (freeCodeCamp)
+12. [Figma UI设计教程 - 初学者课程](#figma-tutorial-for-ui-design-course-for-beginners) (freeCodeCamp)
 
-## **************JavaScript Courses (****13****)**************
+## **************JavaScript 课程 (****13****)**************
 
-1. [JavaScript Algorithms and Data Structures](#javascript-algorithms-and-data-structures) (freeCodeCamp)
-2. [Learn JavaScript - Full Course for Beginners](#learn-javascript-full-course-for-beginners) (freeCodeCamp)
-3. [Full Stack JavaScript](#full-stack-javascript) (The Odin Project)
-4. [The Modern JavaScript Tutorial](#the-modern-javascript-tutorial) (javascript.info)
-5. [JavaScript Tutorial](#javascript-tutorial) (javascripttutorial.net)
+1. [JavaScript算法和数据结构](#javascript-algorithms-and-data-structures) (freeCodeCamp)
+2. [学习JavaScript - 初学者的全部课程](#learn-javascript-full-course-for-beginners) (freeCodeCamp)
+3. [全栈JavaScript](#full-stack-javascript) (The Odin Project)
+4. [现代JavaScript教程](#the-modern-javascript-tutorial) (javascript.info)
+5. [JavaScript教程](#javascript-tutorial) (javascripttutorial.net)
 6. [LearnJS](#learnjs) (learn-js.org)
 7. [JavaScript](#javascript) (SoloLearn)
-8. [JavaScript Programming](#javascript-programming) (freeCodeCamp)
-9. [JavaScript Tutorial for Beginners: Learn JavaScript in 1 Hour](#javascript-tutorial-for-beginners-learn-javascript-in-1-hour) (Programming with Mosh)
-10. [TypeScript Course for Beginners 2021 - Learn TypeScript from Scratch!](#typescript-course-for-beginners-2021-learn-typescript-from-scratch-) (Academind)
-11. [Backend Development and API's](#backend-development-and-api-s) (freeCodeCamp)
-12. [Node.js and Express.js - Full Course](#node-js-and-express-js-full-course) (freeCodeCamp)
-13. [Node.js Tutorial for Beginners: Learn Node in 1 Hour](#node-js-tutorial-for-beginners-learn-node-in-1-hour) (Programming with Mosh)
+8. [JavaScript 编程](#javascript-programming) (freeCodeCamp)
+9. [初学者的JavaScript教程: 在1小时内学习JavaScript](#javascript-tutorial-for-beginners-learn-javascript-in-1-hour) (Programming with Mosh)
+10. [2021年TypeScript初学者课程--从零开始学习TypeScript!](#typescript-course-for-beginners-2021-learn-typescript-from-scratch-) (Academind)
+11. [后台开发和API](#backend-development-and-api-s) (freeCodeCamp)
+12. [Node.js和Express.js - 完整课程](#node-js-and-express-js-full-course) (freeCodeCamp)
+13. [Node.js初学者教程: 1小时内学会Node](#node-js-tutorial-for-beginners-learn-node-in-1-hour) (Programming with Mosh)
 
-## **************JavaScript Frameworks and Libraries (****14****)**************
+## **************JavaScript 框架和库 (****14****)**************
 
-1. [freeCodeCamp React Course](#freecodecamp-react-course) (freeCodeCamp)
-2. [React Course - Beginner's Tutorial for React JavaScript Library \[2022\]](#react-course-beginner-s-tutorial-for-react-javascript-library-2022-) (freeCodeCamp)
-3. [Scrimba React course](#scrimba-react-course) (Scrimba)
-4. [React JS - React Tutorial for Beginners](#react-js-react-tutorial-for-beginners) (Programming with Mosh)
-5. [React JS Crash Course 2021](#react-js-crash-course-2021) (Brad Traversy)
-6. [freeCodeCamp Redux Course](#freecodecamp-redux-course) (freeCodeCamp)
-7. [Redux For Beginners | React Redux Tutorial](#redux-for-beginners-react-redux-tutorial) (Dev Ed)
-8. [Thinkster Angular Tutorial](#thinkster-angular-tutorial) (Thinkster)
-9. [Angular Crash Course](#angular-crash-course) (Brad Traversy)
-10. [Learn Angular - Full Tutorial Course](#learn-angular-full-tutorial-course) (freeCodeCamp)
-11. [Vue.js Course for Beginners \[2021 Tutorial\]](#vue-js-course-for-beginners-2021-tutorial-) (freeCodeCamp)
-12. [Vue JS Crash Course 2021](#vue-js-crash-course-2021) (Brad Traversy)
-13. [Data Visualization with D3, JavaScript, React - Full Course \[2021\]](#data-visualization-with-d3-javascript-react-full-course-2021-) (freeCodeCamp)
-14. [Next.js for Beginners - Full Course](#next-js-for-beginners-full-course) (freeCodeCamp)
+1. [freeCodeCamp React 课程](#freecodecamp-react-course) (freeCodeCamp)
+2. [React课程--React JavaScript库的初级教程 \[2022\]](#react-course-beginner-s-tutorial-for-react-javascript-library-2022-) (freeCodeCamp)
+3. [Scrimba React课程](#scrimba-react-course) (Scrimba)
+4. [React JS - React 初学者教程](#react-js-react-tutorial-for-beginners) (Programming with Mosh)
+5. [2021年React JS速成班](#react-js-crash-course-2021) (Brad Traversy)
+6. [freeCodeCamp Redux 课程](#freecodecamp-redux-course) (freeCodeCamp)
+7. [Redux初学者｜React Redux教程](#redux-for-beginners-react-redux-tutorial) (Dev Ed)
+8. [Thinkster Angular 教程](#thinkster-angular-tutorial) (Thinkster)
+9. [Angular 速成课](#angular-crash-course) (Brad Traversy)
+10. [学习Angular - 完整教程课程](#learn-angular-full-tutorial-course) (freeCodeCamp)
+11. [Vue.js初学课程 \[2021 Tutorial\]](#vue-js-course-for-beginners-2021-tutorial-) (freeCodeCamp)
+12. [Vue JS速成班 2021](#vue-js-crash-course-2021) (Brad Traversy)
+13. [用D3、JavaScript、React进行数据可视化 - 全套课程 \[2021\]](#data-visualization-with-d3-javascript-react-full-course-2021-) (freeCodeCamp)
+14. [Next.js初学者 - 全套课程](#next-js-for-beginners-full-course) (freeCodeCamp)
 
-## **************Python Courses (****2****2********)**************
+## **************Python 课程 (****2****2)**************
 
 1. [Programming for Everybody (Getting Started with Python)](#programming-for-everybody-getting-started-with-python-) (University of Michigan)
 2. [Python Data Structures](#python-data-structures) (University of Michigan)

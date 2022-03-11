@@ -154,13 +154,13 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 ## **************游戏开发课程 (************5************)**************
 
-1. [CS50's Introduction to Game Development](#cs50-s-introduction-to-game-development) (Harvard)
-2. [Learn Unity - Beginner's Game Development Tutorial](#learn-unity-beginner-s-game-development-tutorial) (freeCodeCamp)
-3. [Create A 2.5D Platformer Game With Unreal Engine](#create-a-2-5d-platformer-game-with-unreal-engine) (freeCodeCamp)
-4. [Pygame Tutorial for Beginners - Python Game Development Course](#pygame-tutorial-for-beginners-python-game-development-course) (freeCodeCamp)
-5. [Godot Game Engine Tutorial - Make a 2D Platformer Game](#godot-game-engine-tutorial-make-a-2d-platformer-game) (freeCodeCamp)
+1. [CS50的游戏开发介绍](#cs50-s-introduction-to-game-development) (Harvard)
+2. [学习Unity - 初学者的游戏开发教程](#learn-unity-beginner-s-game-development-tutorial) (freeCodeCamp)
+3. [用虚幻引擎创建一个2.5D平台游戏](#create-a-2-5d-platformer-game-with-unreal-engine) (freeCodeCamp)
+4. [Python游戏初学者教程--Python游戏开发课程](#pygame-tutorial-for-beginners-python-game-development-course) (freeCodeCamp)
+5. [Godot游戏引擎教程--制作2D平台游戏](#godot-game-engine-tutorial-make-a-2d-platformer-game) (freeCodeCamp)
 
-## **************C, C++, C# Courses (************7************)**************
+## **************C, C++, C# 课程 (************7************)**************
 
 1. [C Programming Tutorial for Beginners](#c-programming-tutorial-for-beginners) (freeCodeCamp)
 2. [C++ Tutorial for Beginners - Full Course](#c-tutorial-for-beginners-full-course) (freeCodeCamp)

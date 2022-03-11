@@ -162,56 +162,56 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 ## **************C, C++, C# 课程 (************7************)**************
 
-1. [C Programming Tutorial for Beginners](#c-programming-tutorial-for-beginners) (freeCodeCamp)
-2. [C++ Tutorial for Beginners - Full Course](#c-tutorial-for-beginners-full-course) (freeCodeCamp)
-3. [C# Tutorial - Full Course for Beginners](#c-tutorial-full-course-for-beginners) (freeCodeCamp)
-4. [C Course](#c-course) (SoloLearn)
-5. [C++ Course](#c-course-1) (SoloLearn)
-6. [C# Course](#c-course-2) (SoloLearn)
-7. [Learn C++ Programming for Beginners – Free 31-Hour Course](#learn-c-programming-for-beginners-free-31-hour-course) (freeCodeCamp)
+1. [C语言编程初学者教程](#c-programming-tutorial-for-beginners) (freeCodeCamp)
+2. [C++初学者教程 - 全套课程](#c-tutorial-for-beginners-full-course) (freeCodeCamp)
+3. [C#教程--初学者的完整课程](#c-tutorial-full-course-for-beginners) (freeCodeCamp)
+4. [C 课程](#c-course) (SoloLearn)
+5. [C++ 课程](#c-course-1) (SoloLearn)
+6. [C# 课程](#c-course-2) (SoloLearn)
+7. [初学者学习C++编程--免费的31小时课程](#learn-c-programming-for-beginners-free-31-hour-course) (freeCodeCamp)
 
-## **************Java Courses (****12****)**************
+## **************Java 课程 (****12****)**************
 
-1. [Java Programming: Solving Problems with Software](#java-programming-solving-problems-with-software) (Coursera)
-2. [Java Programming: Arrays, Lists, and Structured Data](#java-programming-arrays-lists-and-structured-datajava-programming-arrays-lists-and-structured-data) (Coursera)
-3. [Java Programming: Principles of Software Design](#java-programming-principles-of-software-design) (Coursera)
-4. [Java Programming Basics](#java-programming-basics) (Udacity)
-5. [Java Programming](#java-programming) (Test Automation University)
-6. [Intro to Java Programming Course for Absolute Beginners](#intro-to-java-programming-course-for-absolute-beginners) (freeCodeCamp)
-7. [Learn Functional Programming in Java](#learn-functional-programming-in-java) (freeCodeCamp)
-8. [Java Virtual Machine Architecture Explained for Beginners](#java-virtual-machine-architecture-explained-for-beginners) (freeCodeCamp)
-9. [Java Tutorial for Beginners \[2020\]](#java-tutorial-for-beginners-2020-) (Programming with Mosh)
-10. [Spring Boot Tutorial for Beginners](#spring-boot-tutorial-for-beginners-java-framework-)  (freeCodeCamp)
-11. [Java Testing - JUnit 5 Crash Course](#java-testing-junit-5-crash-course) (freeCodeCamp)
-12. [Java Course](#java-course) (SoloLearn)
+1. [Java编程：用软件解决问题](#java-programming-solving-problems-with-software) (Coursera)
+2. [Java编程：数组、列表和结构化数据](#java-programming-arrays-lists-and-structured-datajava-programming-arrays-lists-and-structured-data) (Coursera)
+3. [Java编程：软件设计的原则](#java-programming-principles-of-software-design) (Coursera)
+4. [Java编程基础知识](#java-programming-basics) (Udacity)
+5. [Java编程](#java-programming) (Test Automation University)
+6. [为初学者提供Java编程入门课程](#intro-to-java-programming-course-for-absolute-beginners) (freeCodeCamp)
+7. [学习Java中的函数式编程](#learn-functional-programming-in-java) (freeCodeCamp)
+8. [Java虚拟机架构初解](#java-virtual-machine-architecture-explained-for-beginners) (freeCodeCamp)
+9. [Java初学教程 \[2020\]](#java-tutorial-for-beginners-2020-) (Programming with Mosh)
+10. [Spring Boot 初学教程](#spring-boot-tutorial-for-beginners-java-framework-)  (freeCodeCamp)
+11. [Java测试 - JUnit 5速成班](#java-testing-junit-5-crash-course) (freeCodeCamp)
+12. [Java 课程](#java-course) (SoloLearn)
 
-## **************PHP Courses (************4************)**************
+## **************PHP 课程(************4************)**************
 
-1. [PHP Programming Language Tutorial - Full Course](#php-programming-language-tutorial-full-course) (freeCodeCamp)
-2. [PHP For Absolute Beginners](#php-for-absolute-beginners) (Traversy Media)
-3. [Use PHP to Create an MVC Framework - Full Course](#use-php-to-create-an-mvc-framework-full-course) (freeCodeCamp)
-4. [PHP Tutorial for Beginners - Full Course](#php-tutorial-for-beginners-full-course) (Envato Tuts)
+1. [PHP编程语言教程 - 全套课程](#php-programming-language-tutorial-full-course) (freeCodeCamp)
+2. [PHP的绝对初学者](#php-for-absolute-beginners) (Traversy Media)
+3. [使用PHP创建一个MVC框架 - 全套课程](#use-php-to-create-an-mvc-framework-full-course) (freeCodeCamp)
+4. [PHP初学者教程 - 全套课程](#php-tutorial-for-beginners-full-course) (Envato Tuts)
 
-## ******Ruby on Rails Courses (2)******
+## ******Ruby on Rails 课程 (2)******
 
-1. [Learn Ruby on Rails - Full Course](#learn-ruby-on-rails-full-course) (freeCodeCamp)
-2. [Full Stack Ruby on Rails](#full-stack-ruby-on-rails) (The Odin project)
+1. [Learn Ruby on Rails - 全部课程](#learn-ruby-on-rails-full-course) (freeCodeCamp)
+2. [全栈 Ruby on Rails](#full-stack-ruby-on-rails) (The Odin project)
 
 ## ******Databases (13)******
 
-1. [Relational Database Curriculum](#relational-database-freecodecamp-curriculum) (freeCodeCamp)
-2. [SQL Tutorial - Full Database Course for Beginners](#sql-tutorial-full-database-course-for-beginners) (freeCodeCamp)
-3. [Learn SQL In 60 Minutes](#learn-sql-in-60-minutes) (Web Dev Simplified)
-4. [SQL For Beginners Tutorial](#sql-for-beginners-tutorial) (Amigoscode)
-5. [MySQL Database - Full Course](#mysql-database-full-course) (freeCodeCamp)
-6. [MySQL Tutorial for Beginners - Full Course](#mysql-tutorial-for-beginners-full-course) (Programming with Mosh)
-7. [MySQL Crash Course | Learn SQL](#mysql-crash-course-learn-sql) (Traversy Media)
-8. [SQL for Data Science](#sql-for-data-science) (UC Davis)
-9. [Database Systems - Cornell University Course (SQL, NoSQL, Large-Scale Data Analysis)](#database-systems-cornell-university-course-sql-nosql-large-scale-data-analysis-) (freeCodeCamp)
-10. [SQLite Databases With Python](#sqlite-databases-with-python-full-course) (freeCodeCamp)
-11. [Learn PostgreSQL Tutorial - Full Course for Beginners](#learn-postgresql-tutorial-full-course-for-beginners) (freeCodeCamp)
-12. [MongoDB Crash Course](#mongodb-crash-course) (Traversy Media)
-13. [NoSQL Database Tutorial – Full Course for Beginners](#nosql-database-tutorial-full-course-for-beginners) (freeCodeCamp)
+1. [关系型数据库课程](#relational-database-freecodecamp-curriculum) (freeCodeCamp)
+2. [SQL教程 - 初学者的完整数据库课程](#sql-tutorial-full-database-course-for-beginners) (freeCodeCamp)
+3. [在60分钟内学会SQL](#learn-sql-in-60-minutes) (Web Dev Simplified)
+4. [SQL初学者教程](#sql-for-beginners-tutorial) (Amigoscode)
+5. [MySQL数据库 - 全套课程](#mysql-database-full-course) (freeCodeCamp)
+6. [MySQL初学者教程 - 全套课程](#mysql-tutorial-for-beginners-full-course) (Programming with Mosh)
+7. [MySQL速成班｜学习SQL](#mysql-crash-course-learn-sql) (Traversy Media)
+8. [用于数据科学的SQL](#sql-for-data-science) (UC Davis)
+9. [数据库系统 - 康奈尔大学课程（SQL、NoSQL、大规模数据分析](#database-systems-cornell-university-course-sql-nosql-large-scale-data-analysis-) (freeCodeCamp)
+10. [用Python开发SQLite数据库](#sqlite-databases-with-python-full-course) (freeCodeCamp)
+11. [学习PostgreSQL教程 - 初学者的完整课程](#learn-postgresql-tutorial-full-course-for-beginners) (freeCodeCamp)
+12. [MongoDB速成班](#mongodb-crash-course) (Traversy Media)
+13. [NoSQL数据库教程--面向初学者的完整课程](#nosql-database-tutorial-full-course-for-beginners) (freeCodeCamp)
 
 ## **Computer Science Courses**
 
@@ -219,7 +219,7 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=zOjov-2OZ0E), you will learn about arrays, loops, functions, recursion, conditions, and data structures.
 
-### **Data Structures - Computer Science Course for Beginners**
+### **Data Structures-Computer Science Course for Beginners**
 
 In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=zg9ih6SVACc), you will learn about arrays, Big O notation, linked lists, hash tables, heaps, and tries.
 

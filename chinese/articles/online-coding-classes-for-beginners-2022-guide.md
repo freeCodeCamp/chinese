@@ -397,143 +397,145 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 ### **Foundations of User Experience (UX) Design**
 
-In [this Google course](https://www.coursera.org/learn/foundations-user-experience-design?specialization=google-ux-design), you will learn about the basics behind good UX design and accessibility.
+在 [这个谷歌课程](https://www.coursera.org/learn/foundations-user-experience-design?specialization=google-ux-design) 中，你将学习到良好的用户体验设计和可访问性背后的基本知识。
 
 ### **Start the UX Design Process: Empathize, Define, and Ideate**
 
-In [this Google course](https://www.coursera.org/learn/start-ux-design-process?specialization=google-ux-design), you will learn about UX research and Wireframing.
+在 [这个谷歌课程](https://www.coursera.org/learn/start-ux-design-process?specialization=google-ux-design) 中，你将学习到用户体验研究和线框设计。
 
 ### **Build Wireframes and Low-Fidelity Prototypes**
 
-In [this Google course](https://www.coursera.org/learn/wireframes-low-fidelity-prototypes?specialization=google-ux-design), you will learn about building wireframes, prototypes, and storyboards.
+在 [这个谷歌课程](https://www.coursera.org/learn/wireframes-low-fidelity-prototypes?specialization=google-ux-design) 中，你将学习如何构建线框、原型和故事板。
 
 ### **Conduct UX Research and Test Early Concepts**
 
-In [this Google course](https://www.coursera.org/learn/conduct-ux-research?specialization=google-ux-design), you will learn how to create a usability study.
+在 [这个谷歌课程](https://www.coursera.org/learn/conduct-ux-research?specialization=google-ux-design) 中，你将学习如何创建一个可用性研究。
 
 ### **Create High-Fidelity Designs and Prototypes in Figma**
 
-In [this Google course](https://www.coursera.org/learn/high-fidelity-designs-prototype?specialization=google-ux-design), you will learn how to create good design mockups with Figma.
+在 [这个谷歌课程](https://www.coursera.org/learn/high-fidelity-designs-prototype?specialization=google-ux-design) 中，您将学习如何用Figma创建良好的设计模拟图。
 
 ### **Responsive Web Design in Adobe XD**
 
-In [this Google course](https://www.coursera.org/learn/responsive-web-design-adobe-xd?specialization=google-ux-design), you will learn how to use Adobe XD and create responsive designs.
+在 [这个谷歌课程](https://www.coursera.org/learn/responsive-web-design-adobe-xd?specialization=google-ux-design) 中，你将学习如何使用Adobe XD并创建响应式设计。
 
 ### **Free Adobe XD Tutorial: User Experience Design Course with Adobe XD Course**
 
-In [this YouTube course](https://www.youtube.com/watch?v=68w2VwalD5w), you will learn about the basics of UI/UX design and wireframing.
+在 [这个YouTube课程](https://www.youtube.com/watch?v=68w2VwalD5w) 中，你将了解到UI/UX设计和线框设计的基本知识。
 
 ### **The 2019 UI Design Crash Course for Beginners**
 
-In [this YouTube course](https://www.youtube.com/watch?v=_Hp_dI0DzY4), you will learn about design fundamentals and Adobe XD.
+在 [这个YouTube课程](https://www.youtube.com/watch?v=_Hp_dI0DzY4) 中，你将学习设计基础知识和Adobe XD。
 
 ### **Figma Tutorial – A Free UI Design/Prototyping Tool**
 
-In [this YouTube course](https://www.youtube.com/watch?v=3q3FV65ZrUs), you will how to use the Figma design tool.
+在 [这个YouTube课程](https://www.youtube.com/watch?v=3q3FV65ZrUs) 中，你将如何使用Figma设计工具。
 
 ### **UXpin: Free UX Ebooks**
 
-[UXpin](https://www.uxpin.com/studio/ebooks/) is a resource that offers a variety of ebooks on mobile and web wireframing, usability testing, mockups, and more.
+[UXpin](https://www.uxpin.com/studio/ebooks/)是一个资源站点，提供各种关于移动和网络线框设计、可用性测试、模拟图等的电子书。
 
 ### **Figma Course - Web Design Tutorial for Beginners**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=D56hs0Twfco), you will learn the basics of how to use the Figma design tool for both mobile and desktop design.
+在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=D56hs0Twfco)中，你将学习如何使用Figma设计工具进行移动和桌面设计的基本知识。
 
 ### **Figma Tutorial for UI Design - Course for Beginners**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=jwCmIBJ8Jtc), you will learn about layouts, colors and design principles with Figma.
+在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=jwCmIBJ8Jtc)中，你将学习Figma的布局、颜色和设计原则。
 
-## **JavaScript Courses**
+## **JavaScript 课程**
 
 ### **JavaScript Algorithms and Data Structures**
 
-In [this freeCodeCamp course](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/), you will learn about basic JavaScript, ES6, regular expressions, basic data structures, Object Oriented Programming, and functional programming. (Free Certification)
+在 [这个freeCodeCamp课程](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/) 中，你将学习到基本的JavaScript，ES6，正则表达式，基本数据结构，面向对象的编程和函数式编程。(免费认证)
 
 ### **Learn JavaScript – Full Course for Beginners**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=PkZNo7MFNFg), you will learn about conditions, loops, functions, objects, arrays, and ES6.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=PkZNo7MFNFg) 中，你将学习到条件、循环、函数、对象、数组和ES6。
 
 ### **Full stack JavaScript**
 
-[This Odin Project course](https://www.theodinproject.com/paths/full-stack-javascript?) will teach you HTML, CSS, JavaScript, and NodeJS through a series of lessons and projects.
+[这个Odin项目课程](https://www.theodinproject.com/paths/full-stack-javascript?) 将通过一系列的课程和项目教你HTML、CSS、JavaScript和NodeJS。
 
 ### **The Modern JavaScript Tutorial**
 
-In [this tutorial](https://javascript.info/), you will learn about JavaScript basics, error handling, promises, Async/await, and the DOM.
+在 [本教程](https://javascript.info/) 中，你将学习到JavaScript基础知识、错误处理、 promises、Async/await和DOM。
 
 ### **JavaScript Tutorial**
 
-In [this tutorial](https://www.javascripttutorial.net/), you will learn JavaScript fundamentals, ES6, BOM, the DOM, and web APIs.
+在 [本教程](https://www.javascripttutorial.net/) 中，你将学习JavaScript基础知识、ES6、BOM、DOM和Web APIs。
 
 ### **LearnJS**
 
-In [this tutorial](https://www.learn-js.org/), you will learn about JavaScript basics, Object-Oriented Programming, inheritance, and data structures.
+在 [本教程](https://www.learn-js.org/) 中，你将学习到JavaScript基础知识、面向对象编程、继承和数据结构。
+
 
 ### **JavaScript**
 
-In [this SoloLearn course](https://www.sololearn.com/learning/1024), you will learn about conditions, loops, functions, objects, arrays, the DOM, and events.
+在 [这个 SoloLearn 课程](https://www.sololearn.com/learning/1024) 中，你将学习到条件、循环、函数、对象、数组、DOM和事件。
 
 ### **JavaScript Programming**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=jS4aFq5-91M), you will learn about the basics of JavaScript and build a black jack game and Google Chrome extension.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=jS4aFq5-91M) 中，你将学习JavaScript的基础知识，并建立一个黑杰克游戏和谷歌浏览器扩展。
 
 ### **JavaScript Tutorial for Beginners: Learn JavaScript in 1 Hour**
 
-In [this Programming with Mosh course](https://www.youtube.com/watch?v=W6NZfCO5SIk), you will learn about JavaScript basics like objects, arrays, and functions.
+在 [这个Mosh编程课程](https://www.youtube.com/watch?v=W6NZfCO5SIk) 中，你将学习JavaScript的基础知识，如对象、数组和函数。
 
 ### **TypeScript Course for Beginners 2021 – Learn TypeScript from Scratch!**
 
-In [this Academind course](https://www.youtube.com/watch?v=BwuLxPH8IDs), you will learn about array types, object types, tuples, function types, and callbacks.
+在 [这个Academind课程](https://www.youtube.com/watch?v=BwuLxPH8IDs) 中，你将学习到数组类型、对象类型、图元、函数类型和回调。
 
 ### **Backend Development and API's**
 
-In [this freeCodeCamp course](https://www.freecodecamp.org/learn/apis-and-microservices/), you will learn the basics of Node.js, NPM, Express, and MongoDB. (Free Certification)
+在 [这个freeCodeCamp课程](https://www.freecodecamp.org/learn/apis-and-microservices/) 中，你将学习Node.js、NPM、Express和MongoDB的基础知识。(免费认证)
 
 ### **Node.js and Express.js – Full Course**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=Oe421EPjeBE), you will learn about NPM commands, different modules, async patterns, events, streams, and HTTP basics.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=Oe421EPjeBE) 中，你将学习NPM命令、不同模块、异步模式、事件、流和HTTP基础知识。
 
 ### **Node.js Tutorial for Beginners: Learn Node in 1 Hour**
 
-In [this Programming with Mosh course](https://www.youtube.com/watch?v=TlB_eWDSMt4), you will learn about different modules like the path module, OS module, and the file system module and NPM commands.
+在 [本Mosh编程课程](https://www.youtube.com/watch?v=TlB_eWDSMt4) 中，你将学习不同的模块，如路径模块、操作系统模块和文件系统模块以及NPM命令。
 
-## **JavaScript Frameworks and Libraries**
+## **JavaScript 框架和库**
 
 ### **freeCodeCamp React Course**
 
-In [this freeCodeCamp course](https://www.freecodecamp.org/learn/front-end-libraries/#react), you will learn about JSX, functional components, class components, state, and props. (Part of the free Front End Libraries Certification)
+在 [这个freeCodeCamp课程](https://www.freecodecamp.org/learn/front-end-libraries/#react) 中，你将学习JSX、功能组件、类组件、state和props。(免费前端库认证的一部分)
 
 ### **React Course - Beginner's Tutorial for React JavaScript Library \[2022\]**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=bMknfKXIFA8), you will learn about JSX, hooks, state, props, and more. You will also build several projects including an Airbnb clone and meme generator.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=bMknfKXIFA8) 中，你将学习JSX、Hooks、state、props等知识。你还将建立几个项目，包括一个仿Airbnb网站 和备忘录生成器。
+
 
 ### **Scrimba React course**
 
-In [this Scrimba course](https://scrimba.com/learn/learnreact), you will learn about JSX, reusable components, state, lifecycle methods, and hooks.
+在 [本Scrimba课程](https://scrimba.com/learn/learnreact) 中，你将学习JSX、可重用的组件、状态、生命周期方法和Hooks。
 
 ### **React JS – React Tutorial for Beginners**
 
-In [this Programming with Mosh course](https://www.youtube.com/watch?v=Ke90Tje7VS0), you will learn about props, state, hooks, debugging React apps, and handling events.
+在 [此Mosh编程课程](https://www.youtube.com/watch?v=Ke90Tje7VS0) 中，你将学习props、state、hooks、调试React应用程序和处理事件。
 
 ### **React JS Crash Course 2021**
 
-In [this Brad Traversy course](https://www.youtube.com/watch?v=w7ejDZ8SWv8), you will learn about JSX, props, state, hooks, React icons, and conditional rendering.
+在 [这个Brad Traversy课程](https://www.youtube.com/watch?v=w7ejDZ8SWv8) 中，你将学习JSX、props、state、Hooks、React图标和条件渲染等知识。
 
 ### **freeCodeCamp Redux Course**
 
-In [this freeCodeCamp course](https://www.freecodecamp.org/learn/front-end-libraries/#redux), you will learn about actions, reducers, and stores. (Part of free Front End Libraries Certification)
+在 [这个freeCodeCamp课程](https://www.freecodecamp.org/learn/front-end-libraries/#redux) 中，你将了解到行动、还原器和存储。(免费前端库认证的一部分)
 
 ### **Redux For Beginners | React Redux Tutorial**
 
-In [this Dev Ed tutorial](https://www.youtube.com/watch?v=CVpUuw9XSjY), you will learn about actions, reducers, stores, combineReducers, and Redux DevTools.
+在[这个Dev Ed教程](https://www.youtube.com/watch?v=CVpUuw9XSjY)中，你将学习到actions, reducers, stores, combineReducers和Redux DevTools。
 
 ### **Thinkster Angular Tutorial**
 
-In [this Thinkster tutorial](https://thinkster.io/tutorials/learn-angular-2), you will learn about lifecycle hooks, styled components, NgModel, and Angular directives.
+在[这个Thinkster教程](https://thinkster.io/tutorials/learn-angular-2)中，你将了解到生命周期Hooks、风格化组件、NgModel和Angular指令。
 
 ### **Angular Crash Course**
 
-In [this Brad Traversy course](https://www.youtube.com/watch?v=Fdf5aTYRW0E), you will learn about components, services, and modules.
+在[这个Brad Traversy课程](https://www.youtube.com/watch?v=Fdf5aTYRW0E)中，你将学习到组件、服务和模块。
 
 ### **Learn Angular – Full Tutorial Course**
 

@@ -527,147 +527,147 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 ### **Redux For Beginners | React Redux Tutorial**
 
-在[这个Dev Ed教程](https://www.youtube.com/watch?v=CVpUuw9XSjY)中，你将学习到actions, reducers, stores, combineReducers和Redux DevTools。
+在 [这个Dev Ed教程](https://www.youtube.com/watch?v=CVpUuw9XSjY) 中，你将学习到actions, reducers, stores, combineReducers和Redux DevTools。
 
 ### **Thinkster Angular Tutorial**
 
-在[这个Thinkster教程](https://thinkster.io/tutorials/learn-angular-2)中，你将了解到生命周期Hooks、风格化组件、NgModel和Angular指令。
+在 [这个Thinkster教程](https://thinkster.io/tutorials/learn-angular-2) 中，你将了解到生命周期Hooks、风格化组件、NgModel和Angular指令。
 
 ### **Angular Crash Course**
 
-在[这个Brad Traversy课程](https://www.youtube.com/watch?v=Fdf5aTYRW0E)中，你将学习到组件、服务和模块。
+在 [这个Brad Traversy课程](https://www.youtube.com/watch?v=Fdf5aTYRW0E) 中，你将学习到组件、服务和模块。
 
 ### **Learn Angular – Full Tutorial Course**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=2OHbjep_WjQ), you will learn about interpolation and expressions, lifecycle hooks, components, routing, and directives.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=2OHbjep_WjQ) 中，你将学习插值和表达式、生命周期 Hooks、组件、路由和指令。
 
 ### **Vue.js Course for Beginners \[2021 Tutorial\]**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=FXpIoQ_rT_c), you will learn about directives, data-binding, Vue devtools, props and slots, and more.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=FXpIoQ_rT_c) 中，你将学习到指令、数据绑定、Vue开发工具、props和槽(slots)等内容。
 
 ### **Vue JS Crash Course 2021**
 
-In [this Brad Traversy course](https://www.youtube.com/watch?v=qZXt1Aom3Cs), you will learn the basics of Vue.js by building a Random User Generator and Task Tracker.
+在[这个Brad Traversy课程](https://www.youtube.com/watch?v=qZXt1Aom3Cs)中，你将通过建立一个随机用户生成器和任务跟踪器来学习Vue.js的基础知识。
 
 ### **Data Visualization with D3, JavaScript, React – Full Course \[2021\]**
 
-In [part one](https://www.youtube.com/watch?v=2LhoCfjm8R4) and [part two](https://www.youtube.com/watch?v=H2qPeJx1RDI) of this D3 course, you will learn about line charts, scatter plots, bar charts, and choropleth maps.
+在这个D3课程的 [第一部分](https://www.youtube.com/watch?v=2LhoCfjm8R4) 和 [第二部分](https://www.youtube.com/watch?v=H2qPeJx1RDI) 中，你将学习到线形图、散点图、条形图和霍普勒特地图。
 
 ### **Next.js for Beginners - Full Course**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=1WmNXEVia8I), you will learn how to build a recipe app with Next.js, Sanity.io, and Vercel. This course will cover dynamic routing, static assets, serverless functions, and more.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=1WmNXEVia8I) 中，你将学习如何用Next.js、Sanity.io和Vercel构建一个配方应用。本课程将涵盖动态路由、静态资产（static assets）、无服务器等内容。
 
-## **Python Courses**
+## **Python 课程**
 
 ### **Programming for Everybody (Getting Started with Python)**
 
-In [this University of Michigan course](https://www.coursera.org/learn/python?specialization=python), you will learn about the basics of programming like functions, loops, conditions, and variables.
+在 [密歇根大学的这门课程](https://www.coursera.org/learn/python?specialization=python) 中，你将学习到编程的基础知识，如函数、循环、条件和变量。
 
 ### **Python Data Structures**
 
-In [this University of Michigan course](https://www.coursera.org/learn/python-data?specialization=python), you will learn about tuples, dictionaries, lists, and strings.
+在 [密歇根大学的这门课程](https://www.coursera.org/learn/python-data?specialization=python) 中，你将学习到元组、字典、列表和字符串。
 
 ### **Using Python to Access Web Data**
 
-In [this University of Michigan course](https://www.coursera.org/learn/python-network-data?specialization=python), you will learn about XML, APIs, regular expressions, and JSON.
+在 [密歇根大学的这门课程](https://www.coursera.org/learn/python-network-data?specialization=python) 中，你将学习到XML、API、正则表达式和JSON。
 
 ### **Using Databases with Python**
 
-In [this University of Michigan course](https://www.coursera.org/learn/python-databases?specialization=python), you will learn about relational SQL, CRUD (Create, Read, Update, and Delete) applications, and Object-Oriented patterns.
+在 [密歇根大学的这门课程](https://www.coursera.org/learn/python-databases?specialization=python) 中，你将学习关系型SQL，CRUD（创建、读取、更新和删除）应用程序，以及面向对象的模式。
 
 ### **An Introduction to Interactive Programming in Python (Part 1)**
 
-[This Rice University course](https://www.coursera.org/learn/interactive-python-1?specialization=computer-fundamentals) will teach you the basics of programming like functions, loops, conditions and variables.
+[莱斯大学的这门课程](https://www.coursera.org/learn/interactive-python-1?specialization=computer-fundamentals) 将教你编程的基础知识，如函数、循环、条件和变量。
 
 ### **An Introduction to Interactive Programming in Python (Part 2)**
 
-In [this Rice University course](https://www.coursera.org/learn/interactive-python-2?specialization=computer-fundamentals), you will learn about tuples, dictionaries, lists and strings.
+在 [莱斯大学的这门课程](https://www.coursera.org/learn/interactive-python-2?specialization=computer-fundamentals) 中，你将学习到元组、字典、列表和字符串。
 
 ### **Scientific Computing with Python**
 
-In [this freeCodeCamp course](https://www.freecodecamp.org/learn/scientific-computing-with-python/), you will learn the basics of Python 3 while building five projects. (Free Certification)
+在 [这个freeCodeCamp课程](https://www.freecodecamp.org/learn/scientific-computing-with-python/) 中，你将学习Python 3的基础知识，同时构建五个项目。(免费认证)
 
 ### **Python Django Web Framework – Full Course for Beginners**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=F5mRW0jo-U4), you will learn about Django templates, Django model forms, and class-based views.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=F5mRW0jo-U4) 中，你将学习Django模板、Django模型表单和基于类的视图。
 
 ### **Learn Python - Full Course for Beginners**
 
-In this [freeCodeCamp YouTube Course](https://www.youtube.com/watch?v=rfscVS0vtbw), you will learn programming basics such as lists, conditionals, strings, tuples, functions, classes and more.
+在这个 [freeCodeCamp YouTube Course](https://www.youtube.com/watch?v=rfscVS0vtbw) 中，你将学习编程基础知识，如列表、条件、字符串、元组、函数、类等等。
 
-You will also build several small projects like a basic calculator, mad libs game, a translator app, and a guessing game.
+你还将建立几个小项目，如一个基本的计算器、疯狂的libs游戏、一个翻译器应用和一个猜谜游戏。
 
 ### **The Python Handbook**
 
-In [this Flavio Copes article](https://www.freecodecamp.org/news/the-python-handbook/), you will learn about strings, lists, tuples, recursion, and more.
+在 [这篇Flavio Copes文章](https://www.freecodecamp.org/news/the-python-handbook/) 中，你将学习到字符串、列表、元组、递归等等。
 
-You will also learn how to install 3rd party packages and how to work with virtual environments.
+你还将学习如何在虚拟环境中安装第三方软件包以及如何工作。
 
 ### **Python Tutorials for Absolute Beginners by CS Dojo**
 
-In this series of [Beginner Python YouTube videos by CS Dojo](https://www.youtube.com/playlist?list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg), you will learn about dictionaries, loops, functions, objects and more.
+在这一系列 [CS Dojo的初级Python视频](https://www.youtube.com/playlist?list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg) 中，你将学习字典、循环、函数、对象等等。
 
-You will also learn [how to build a Twitter bot using Python](https://www.youtube.com/watch?v=W0wWwglE1Vc&list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg&index=15).
+你还将学习 [如何使用Python建立一个Twitter机器人](https://www.youtube.com/watch?v=W0wWwglE1Vc&list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg&index=15)。
 
 ### **Studytonight**
 
-In [Studytonight](https://www.studytonight.com/python/), you will learn about Python basics, error handling, OOP, file handling, complex data types, Multithreading and more.
+在 [Studytonight](https://www.studytonight.com/python/) 中，你将学习Python基础知识、错误处理、OOP、文件处理、复杂数据类型、多线程等。
 
-Once you have learned the basics, you can move onto their other modules which include the [NumPy library](https://www.studytonight.com/numpy), [Matplotlib](https://www.studytonight.com/matplotlib), [Tkinter](https://www.studytonight.com/tkinter), [Network Programming in Python](https://www.studytonight.com/network-programming-in-python/), and [Web Scraping using Beautiful Soup](https://www.studytonight.com/python/web-scraping/).
+一旦你学会了基础知识，你就可以进入他们的其他模块，包括 [NumPy库](https://www.studytonight.com/numpy)、 [Matplotlib](https://www.studytonight.com/matplotlib)、[Tkinter](https://www.studytonight.com/tkinter)、[Python中的网络编程](https://www.studytonight.com/network-programming-in-python/)和 [使用Beautiful Soup进行Web搜刮](https://www.studytonight.com/python/web-scraping/)。
 
 ### **Python Core**
 
-In [SoloLearn's Python Course](https://www.sololearn.com/learning/1073), you will learn about strings, variables, OOP, functional programming and more. There are plenty of quizzes, challenges, and projects that you can build along the way.
+在 [SoloLearn的Python课程](https://www.sololearn.com/learning/1073 中，您将学习字符串、变量、OOP、函数式编程等知识。有大量的测验、挑战和项目，你可以在学习过程中建立。
 
-In order to get started, you will need to create a free account.
+为了开始学习，你需要创建一个免费账户。
 
 ### **Python Basics with Sam (freeCodeCamp)**
 
-In [this Sam Focht YouTube Series](https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23), you will learn about loops, functions, strings, recursion and more.
+在 [这个Sam Focht YouTube系列](https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23) 中，你将学习到循环、函数、字符串、递归等内容。
 
-You will also build several projects including a guessing game, shopping list, a board game, and a random password generator.
+你还将建立几个项目，包括猜谜游戏、购物清单、棋盘游戏和随机密码发生器。
 
 ### **Python Beginner Tutorials**
 
-In this [series of Pythonspot beginner tutorials](https://pythonspot.com/beginner/), you will learn about data types, tuples, objects, classes, dictionaries and more. You will also learn about advanced concepts like recursion, lambda, and threading.
+在这个 [Pythonspot初学者教程系列](https://pythonspot.com/beginner/) 中，你将学习数据类型、图元、对象、类、字典等。你还将学习高级概念，如递归、lambda和线程。
 
-Once you cover the basics, you can move onto [machine learning](https://pythonspot.com/machine-learning/), [databases](https://pythonspot.com/python-database/), and [GUI's](https://pythonspot.com/gui/).
+一旦你掌握了基础知识，你就可以进入 [机器学习](https://pythonspot.com/machine-learning/)、 [数据库](https://pythonspot.com/python-database/) 和 [图形用户界面](https://pythonspot.com/gui/)。
 
 ### **Python Tutorial**
 
-In this [PythonForBeginners tutorial](https://www.pythonforbeginners.com/python-tutorial), you will learn about functions, loops, lists, conditionals, error handling and more.
+在这个 [PythonForBeginners 教程](https://www.pythonforbeginners.com/python-tutorial) 中，你将学习到函数、循环、列表、条件式、错误处理等。
 
-Once you learn the basics, you can explore the other modules on the site including [Web Scraping with BeautifulSoup](https://www.pythonforbeginners.com/python-on-the-web/web-scraping-with-beautifulsoup) and [Using the YouTube API in Python](https://www.pythonforbeginners.com/api/using-the-youtube-api).
+一旦你学会了基础知识，你就可以探索网站上的其他模块，包括 [用BeautifulSoup进行网络刮削](https://www.pythonforbeginners.com/python-on-the-web/web-scraping-with-beautifulsoup) 和 [在Python中使用YouTube API](https://www.pythonforbeginners.com/api/using-the-youtube-api)。
 
 ### **Automate the Boring Stuff with Python**
 
-In the [Automate the Boring Stuff with Python online book](https://automatetheboringstuff.com/), you will learn about dictionaries, strings, debugging, regular expressions and more.
+在 [Automate the Boring Stuff with Python online book](https://automatetheboringstuff.com/) 中，你将学习字典、字符串、调试、正则表达式等知识。
 
-If you prefer a video format, then you can go through [the YouTube series](https://www.youtube.com/watch?v=1F_OgqRuSdI&list=PL0-84-yl1fUnRuXGFe_F7qSH1LEnn9LkW) that Al Sweigart put together.
+如果你喜欢看视频，那么你可以通过Al Sweigart整理的 [YouTube系列](https://www.youtube.com/watch?v=1F_OgqRuSdI&list=PL0-84-yl1fUnRuXGFe_F7qSH1LEnn9LkW)。
 
 ### **Python Crash Course for Beginners**
 
-In this [Brad Traversy YouTube course](https://www.youtube.com/watch?v=JJmcL1N2KQs), you will learn about lists, tuples, dictionaries, functions, classes and more. Brad will also show you how to work with files and JSON data.
+在这个[Brad Traversy YouTube课程](https://www.youtube.com/watch?v=JJmcL1N2KQs)中，你将学习到列表、元组、字典、函数、类等等。布拉德还将告诉你如何处理文件和JSON数据。
 
 ### **Python Tutorial - Python for Beginners**
 
-In this [Programming with Mosh YouTube course,](https://www.youtube.com/watch?v=_uQrJ0TkZlc) you will learn programming basics like variables, loops, strings, tuples, functions, classes and more.
+在这个 [与Mosh一起编程的YouTube课程中，](https://www.youtube.com/watch?v=_uQrJ0TkZlc) 你将学习编程基础知识，如变量、循环、字符串、元组、函数、类等等。
 
-You will also build three projects: one on automation, one on machine learning, and one on building a website with Django.
+你还将建立三个项目：一个关于自动化，一个关于机器学习，一个关于用Django建立网站。
 
-For additional practice, you can go through Mosh's [53 Python Exercises for Beginners](https://programmingwithmosh.com/python/python-exercises-and-questions-for-beginners/).
+对于额外的练习，你可以通过Mosh的 [53个Python初学者练习](https://programmingwithmosh.com/python/python-exercises-and-questions-for-beginners/)。
 
 ### **PySpark Tutorial**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=_C8kWso4ne4), you will learn about PySpark dataframes, PySpark GroupBy and aggregate functions, databricks, and more.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=_C8kWso4ne4) 中，你将学习PySpark数据框架、PySpark GroupBy和聚合函数、databricks等知识。
 
 ### **Python Backend Web Development Course (with Django)**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=jBzwzrDvZ18), you will learn about the basics of Python and Django. You will also build a blog, weather app, and a Realtime Chat App.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=jBzwzrDvZ18) 中，你将学习Python和Django的基础知识。你还将建立一个博客、天气应用程序和一个实时聊天应用程序。
 
 ### **Flask Course - Python Web Application Development**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=Qr4QMBUPxWo), you will learn about Flask forms, templates, validations and more by building your own e-commerce website.
+在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=Qr4QMBUPxWo)中，你将通过建立自己的电子商务网站来学习Flask表单、模板、验证等知识。
 
 ## **Mobile App Development Courses**
 

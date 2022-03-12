@@ -469,7 +469,6 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 在 [本教程](https://www.learn-js.org/) 中，你将学习到JavaScript基础知识、面向对象编程、继承和数据结构。
 
-
 ### **JavaScript**
 
 在 [这个 SoloLearn 课程](https://www.sololearn.com/learning/1024) 中，你将学习到条件、循环、函数、对象、数组、DOM和事件。
@@ -507,7 +506,6 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 ### **React Course - Beginner's Tutorial for React JavaScript Library \[2022\]**
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=bMknfKXIFA8) 中，你将学习JSX、Hooks、state、props等知识。你还将建立几个项目，包括一个仿Airbnb网站 和备忘录生成器。
-
 
 ### **Scrimba React course**
 
@@ -617,7 +615,7 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 ### **Python Core**
 
-在 [SoloLearn的Python课程](https://www.sololearn.com/learning/1073 中，您将学习字符串、变量、OOP、函数式编程等知识。有大量的测验、挑战和项目，你可以在学习过程中建立。
+在 [SoloLearn的Python课程](<https://www.sololearn.com/learning/1073> 中，您将学习字符串、变量、OOP、函数式编程等知识。有大量的测验、挑战和项目，你可以在学习过程中建立。
 
 为了开始学习，你需要创建一个免费账户。
 
@@ -669,221 +667,221 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=Qr4QMBUPxWo)中，你将通过建立自己的电子商务网站来学习Flask表单、模板、验证等知识。
 
-## **Mobile App Development Courses**
+## **移动应用程序开发课程**
 
 ### **Android Development for Beginners – Full Course**
 
-In [part 1](https://www.youtube.com/watch?v=fis26HvvDII) and [part 2](https://www.youtube.com/watch?v=RcSHAkpwXAQ) of this freeCodeCamp YouTube course, you will learn how to build an Android application using Java.
+在这个freeCodeCamp YouTube课程的 [第一部分](https://www.youtube.com/watch?v=fis26HvvDII)和 [第二部分](https://www.youtube.com/watch?v=RcSHAkpwXAQ) 中，你将学习如何使用Java构建一个Android应用程序。
 
 ### **React Native Tutorial for Beginners – Build a React Native App \[2020\]**
 
-In [this Programming with Mosh course](https://www.youtube.com/watch?v=0-S5a0eXPoc), you will learn how to build an iOS and Android app using React Native.
+在 [这个Mosh编程课程](https://www.youtube.com/watch?v=0-S5a0eXPoc) 中，你将学习如何使用React Native构建一个iOS和Android应用程序。
 
 ### **Kotlin Course – Tutorial for Beginners**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=F9UC9DY-vIU), you will learn about basic Kotlin functions, class methods, higher-order functions, and the Kotlin standard library.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=F9UC9DY-vIU) 中，你将学习到基本的Kotlin函数、类方法、高阶函数以及Kotlin标准库。
 
 ### **Swift Programming Tutorial for Beginners**
 
-In [this Code with Chris course](https://www.youtube.com/watch?v=Ulp1Kimblg0), you will learn about the basics of Swift like variables, constants, data types, functions, and classes.
+In [this Code with Chris course](https://www.youtube.com/watch?v=Ulp1Kimblg0),你将学习到Swift的基础知识，如变量、常量、数据类型、函数和类。
 
 ### Learn iOS Development by Building a Netflix Clone
 
-In this [freeCodeCamp YouTube course](https://www.youtube.com/watch?v=KCgYDCKqato), you will learn about the basics of using Swift by building a Netflix clone.
+在这个[freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=KCgYDCKqato)中，你将通过建立一个仿Netflix 应用来了解使用Swift的基础知识。
 
-## **Game Development Courses**
+## **游戏开发课程**
 
 ### **CS50's Introduction to Game Development**
 
-In [this Harvard course](https://www.edx.org/course/cs50s-introduction-to-game-development?index=product&queryID=30155c410684830a10da5045d663ad30&position=4), you will learn how to work with popular game engines like LÖVE 2D and Unity. You will also work with the Lua and C# programming languages.
+在 [这个哈佛课程](https://www.edx.org/course/cs50s-introduction-to-game-development?index=product&queryID=30155c410684830a10da5045d663ad30&position=4) 中，你将学习如何使用流行的游戏引擎，如LÖVE 2D和Unity。你还将使用Lua和C#编程语言。
 
 ### **Learn Unity – Beginner's Game Development Tutorial**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=gB1F9G0JXOo), you will learn how to get started building games using the Unity game engine.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=gB1F9G0JXOo) 中，你将学习如何使用Unity游戏引擎开始构建游戏。
 
 ### **Create A 2.5D Platformer Game With Unreal Engine**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=9Fd9hw329fY&list=PLWKjhJtqVAbmqFs83T4W-FZQ9kK983tZC), you will learn how to work with the Unreal game engine and C++ by building a platformer game.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=9Fd9hw329fY&list=PLWKjhJtqVAbmqFs83T4W-FZQ9kK983tZC) 中，你将学习如何通过建立一个平台游戏来使用虚幻游戏引擎和C++。
 
 ### **Godot Game Engine Tutorial - Make a 2D Platformer Game**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=fQXKjmCDkIA&list=PLWKjhJtqVAbmqFs83T4W-FZQ9kK983tZC&index=4), you will learn how to use the Godot game engine while building a platformer gamer.  
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=fQXKjmCDkIA&list=PLWKjhJtqVAbmqFs83T4W-FZQ9kK983tZC&index=4) 中，你将学习如何使用Godot游戏引擎，同时构建一个平台游戏。
 
 ### **Pygame Tutorial for Beginners - Python Game Development Course**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=FfWpgLFMI7w&list=PLWKjhJtqVAbmqFs83T4W-FZQ9kK983tZC&index=3), you will learn how to use PyGame by building a space invaders game.  
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=FfWpgLFMI7w&list=PLWKjhJtqVAbmqFs83T4W-FZQ9kK983tZC&index=3) 中，你将通过构建一个太空入侵者游戏来学习如何使用PyGame。
 
-## ******C, C++, C# Courses******
+## ******C, C++, C# 课程******
 
 ### **C Programming Tutorial for Beginners**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=KJgsSFOSQv0), you will learn about pointers, memory, functions, arrays and more.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=KJgsSFOSQv0) 中，你将学习指针、内存、函数、数组等知识。
 
 ### **C++ Tutorial for Beginners - Full Course**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=vLnPwxZdW4Y), you will learn about pointers, inheritance, arrays, conditionals and more.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=vLnPwxZdW4Y) 中，你将学习指针、继承、数组、条件等知识。
 
 ### **C# Tutorial - Full Course for Beginners**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=GhQdlIFylQ8), you will learn about conditionals, strings, objects, arrays, and more.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=GhQdlIFylQ8) 中，你将学习到条件语句、字符串、对象、数组等等。
 
 ### **C Course**
 
-In [this SoloLearn course](https://www.sololearn.com/learning/1089), you will learn about data types, arrays, pointers, loops, strings, unions, memory management and more.
+在 [这个SoloLearn课程](https://www.sololearn.com/learning/1089) 中，你将学习到数据类型、数组、指针、循环、字符串、联合体、内存管理等等。
 
 ### **C++ Course**
 
-In [this SoloLearn course](https://www.sololearn.com/learning/1051), you will learn about pointers, conditionals, functions, classes, objects, polymorphism and more.
+在 [这个SoloLearn课程](https://www.sololearn.com/learning/1051) 中，你将学习指针、条件式、函数、类、对象、多态性等知识。
 
 ### **C# Course**
 
-In [this SoloLearn course](https://www.sololearn.com/learning/1080), you will learn about arrays, strings, structs, enums and more.
+在 [这个SoloLearn课程](https://www.sololearn.com/learning/1080) 中，你将学习到数组、字符串、结构体、枚举等等。
 
 ### Learn C++ Programming for Beginners – Free 31-Hour Course
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=8jLOx1hD3_o), you will about programming fundamentals like flow control, loops, function, arrays, pointers and more.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=8jLOx1hD3_o) 中，你将了解编程的基本原理，如流程控制、循环、函数、数组、指针等等。
 
-## **Java Courses**
+## **Java 课程**
 
 ### **Java Programming: Solving Problems with Software**
 
-In this [Coursera course](https://www.coursera.org/learn/java-programming?specialization=java-programming), you will learn about classes, conditionals, loops, functions and more. You will also learn how to work with CSV files in Java and build a mini project.
+在这个 [Coursera课程](https://www.coursera.org/learn/java-programming?specialization=java-programming) 中，您将学习到类、条件式、循环、函数等等。您还将学习如何在Java中处理CSV文件并建立一个小型项目。
 
 ### **Java Programming: Arrays, Lists, and Structured Data**
 
-In this [Coursera course](https://www.coursera.org/learn/java-programming-arrays-lists-data?specialization=java-programming), you will learn about arrays, cryptography, HashMaps, and more. You will also build a mini project about the Vigenère cipher.
+在这个 [Coursera课程](https://www.coursera.org/learn/java-programming-arrays-lists-data?specialization=java-programming) 中，你将学习到数组、密码学、HashMaps等等。你还将建立一个关于Vigenère密码的小型项目。
 
 ### **Java Programming: Principles of Software Design**
 
-In this [Coursera course](https://www.coursera.org/learn/java-programming-design-principles?specialization=java-programming), you will learn about different sorting algorithms, and the basics of predictive text.
+在这个 [Coursera课程](https://www.coursera.org/learn/java-programming-design-principles?specialization=java-programming) 中，你将了解不同的排序算法，以及预测性文本的基础知识。
 
 ### **Java Programming Basics**
 
-In this [Udacity course](https://www.udacity.com/course/java-programming-basics--ud282), you will learn about arrays, objects, classes, loops, debugging, and more.
+在这个 [Udacity课程](https://www.udacity.com/course/java-programming-basics--ud282) 中，你将学习到数组、对象、类、循环、调试等等。
 
-Once you finish the beginner course, then you can take this intermediate [Object Oriented Programming course](https://www.udacity.com/course/object-oriented-programming-in-java--ud283).
+一旦你完成了初级课程，那么你就可以参加这个中级 [面向对象的编程课程](https://www.udacity.com/course/object-oriented-programming-in-java--ud283)。
 
 ### **Java Programming**
 
-In this [Test Automation University course](https://testautomationu.applitools.com/java-programming-course/), you will learn about classes, loops, switch statements, conditionals, arrays, strings, abstraction and more.
+在这个 [测试自动化大学课程](https://testautomationu.applitools.com/java-programming-course/) 中，你将学习到类、循环、开关语句、条件式、数组、字符串、抽象等等。
 
 ### **Intro to Java Programming Course for Absolute Beginners**
 
-In this [freeCodeCamp YouTube course](https://www.youtube.com/watch?v=GoXwIVyNvX0), you will learn about arrays, objects, classes, loops, debugging, and more.
+在这个 [freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=GoXwIVyNvX0) 中，你将学习到数组、对象、类、循环、调试等内容。
 
 ### **Learn Functional Programming in Java**
 
-In this [freeCodeCamp YouTube course](https://www.youtube.com/watch?v=rPSL1alFIjI), you will learn about the properties of functional programming, callbacks, functional interfaces, combinator pattern, lambdas, and more.
+在这个 [freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=rPSL1alFIjI) 中，你将了解到函数式编程的特性、回调、函数式接口、组合器模式、lambdas等等。
 
 ### **Java Virtual Machine Architecture Explained for Beginners**
 
-In [this freeCodeCamp article](https://www.freecodecamp.org/news/jvm-tutorial-java-virtual-machine-architecture-explained-for-beginners/), you will learn about the Java Virtual Machine as well as the architecture behind it.
+在 [这篇freeCodeCamp文章](https://www.freecodecamp.org/news/jvm-tutorial-java-virtual-machine-architecture-explained-for-beginners/) 中，你将了解到Java虚拟机以及它背后的架构。
 
 ### **Java Tutorial for Beginners \[2020\]**
 
-In [this Programming with Mosh YouTube course](https://www.youtube.com/watch?v=eIrMbAQSU34), you will learn about strings, arrays, conditionals, loops and more. You will also build a mortgage calculator.
+在 [这个与Mosh一起编程的YouTube课程](https://www.youtube.com/watch?v=eIrMbAQSU34) 中，你将学习字符串、数组、条件反射、循环等知识。你还将建立一个抵押贷款计算器。
 
 ### **Spring Boot Tutorial for Beginners (Java Framework)**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=vtPkZShrvXQ), you will learn the basics of how to use this popular Java framework.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=vtPkZShrvXQ) 中，你将学习如何使用这个流行的Java框架的基本知识。
 
 ### **Java Testing - JUnit 5 Crash Course**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=flpmSXVTqBI), you will learn about JUnit Architecture, conditional executions, assumptions and more.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=flpmSXVTqBI) 中，你将了解到JUnit架构、条件执行、假设等。
 
 ### **Java Course**
 
-In [this SoloLearn course](https://www.sololearn.com/learning/1068), you will learn about arrays, objects, classes, loops, and more.
+在 [这个SoloLearn课程](https://www.sololearn.com/learning/1068) 中，你将学习到数组、对象、类、循环等等。
 
-## **************PHP Courses**************
+## **************PHP 课程**************
 
 ### **PHP Programming Language Tutorial - Full Course**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=OK_JCtrrv-c), you will learn about loops, functions, classes, objects, and more.
+在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=OK_JCtrrv-c)中，你将学习到循环、函数、类、对象等内容。
 
 ### **PHP For Absolute Beginners**
 
-In [this Brad Traversy YouTube tutorial](https://www.youtube.com/watch?v=2eebptXfEvw), you will learn about objects, loops, arrays and more. You will also build a basic CRUD (create, read, update, delete) application.
+在[这个Brad Traversy YouTube教程](https://www.youtube.com/watch?v=2eebptXfEvw)中，你将学习对象、循环、数组等知识。你还将建立一个基本的CRUD（创建、读取、更新、删除）应用程序。
 
 ### **Use PHP to Create an MVC Framework - Full Course**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=6ERdu4k62wI), you will learn how to work with file systems, custom routing, third party packages using composer, and more.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=6ERdu4k62wI) 中，你将学习如何使用文件系统、自定义路由、使用composer的第三方包，以及更多。
 
 ### **PHP Tutorial for Beginners - Full Course**
 
-In [this Envato Tuts course](https://www.youtube.com/watch?v=t0syDUSbdfE), you will learn the basics of PHP like functions, variables arrays and more. You will also learn how to connect a MySQL database to your PHP application.
+在 [这个Envato Tuts课程](https://www.youtube.com/watch?v=t0syDUSbdfE) 中，你将学习PHP的基础知识，如函数、变量阵列等。你还将学习如何将MySQL数据库连接到你的PHP应用程序。
 
-## ******Ruby on Rails Courses******
+## ******Ruby on Rails 课程******
 
 ### **Learn Ruby on Rails - Full Course**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=fmyvWz5TUWg), you will learn how to make a Friends List App using Ruby on Rails.
+在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=fmyvWz5TUWg)中，你将学习如何使用Ruby on Rails制作一个朋友列表应用程序。
 
 ### **Full Stack Ruby on Rails**
 
-In [this Odin project curriculum](https://www.theodinproject.com/paths/full-stack-ruby-on-rails?), you will learn about Ruby, relational databases, Ruby on Rails, and more.
+在[这个Odin项目课程](https://www.theodinproject.com/paths/full-stack-ruby-on-rails?)中，你将学习Ruby、关系型数据库、Ruby on Rails等。
 
 ## ******Databases******
 
 ### **Relational Database freeCodeCamp Curriculum**
 
-In September of 2021, freeCodeCamp released the [beta version](https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-curriculum-using-docker-vscode-and-coderoad/) of their relational database curriculum. This beta version is run entirely in Visual Studio Code using Docker and a CodeRoad extension.
+2021年9月，freeCodeCamp发布了他们的关系数据库课程的 [测试版](https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-curriculum-using-docker-vscode-and-coderoad/)。这个测试版完全在Visual Studio Code中使用Docker和CodeRoad扩展运行。
 
-In this course, you will learn about Git, GitHub, Bash, Nano, SQL, PostgreSQL and more. This is an entirely project-based learning curriculum.
+在这个课程中，你将学习到Git, GitHub, Bash, Nano, SQL, PostgreSQL等等。这是一个完全基于项目的学习课程。
 
-Some of the projects that you will build in the course include a Mario database, World database, Celestial Bodies database, and a Bike rental shop.
+你将在课程中建立的一些项目包括马里奥数据库、世界数据库、天体数据库和自行车租赁店。
 
-To learn more about it, you can read through [this article](https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-curriculum-using-docker-vscode-and-coderoad/) by Tom Mondloch who created the course.
+要了解更多信息，你可以通过创建该课程的Tom Mondloch的 [本文](https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-curriculum-using-docker-vscode-and-coderoad/) 阅读。
 
 ### **SQL Tutorial - Full Database Course for Beginners**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=HXV3zeQKqGY), Mike Dane will teach you the basics of SQL. You will learn about creating tables, inserting data, wildcards, unions, joins and more.
+在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=HXV3zeQKqGY)中，Mike Dane将教你SQL的基础知识。你将学习创建表格、插入数据、通配符、联合、连接等知识。
 
-In this course, you will learn how to install MySQL on your Mac or Windows computer. You will also practice your SQL skills by building a company database and an ER diagram.
+在这个课程中，你将学习如何在你的Mac或Windows电脑上安装MySQL。您还将通过建立一个公司数据库和ER图来练习您的SQL技能。
 
-If you like this course by Mike Dane, then please check out their [YouTube channel](https://www.youtube.com/c/GiraffeAcademy/videos) for more free courses.
+如果你喜欢Mike Dane的这个课程，那么请查看他们的[YouTube频道](https://www.youtube.com/c/GiraffeAcademy/videos)，了解更多免费课程。
 
 ### **Learn SQL In 60 Minutes**
 
-In [this Web Dev Simplified YouTube course](https://www.youtube.com/watch?v=p3qvj9hO_Bo), Kyle will teach you the basics of getting started with SQL. You will learn about creating tables, inserting data into tables, primary keys, foreign keys, aggregate functions, and more.
+在 [这个Web Dev Simplified YouTube课程](https://www.youtube.com/watch?v=p3qvj9hO_Bo) 中，Kyle将教你开始使用SQL的基本知识。你将学习创建表格、向表格中插入数据、主键、外键、聚合函数等内容。
 
-This is a great course to take as a quick introduction to learning about the basics. From here you can move onto building your first few projects using SQL.
+这是一个很好的课程，可以作为学习基础知识的快速入门课程。从这里你可以开始使用SQL建立你的第一个项目。
 
 ### **SQL For Beginners Tutorial**
 
-In [this Amigoscode YouTube course](https://www.youtube.com/watch?v=5hzZtqCNQKk), Nelson will teach you how to get setup using PostgreSQL on Mac and Windows. You will then learn the basics of SQL including creating tables, primary keys, foreign keys, aggregate functions, and more.
+在 [这个Amigoscode YouTube课程](https://www.youtube.com/watch?v=5hzZtqCNQKk) 中，Nelson将教你如何在Mac和Windows上使用PostgreSQL进行设置。然后你将学习SQL的基础知识，包括创建表、主键、外键、聚合函数等等。
 
-If you enjoy this free YouTube course by Nelson, then you can check out his other courses on his [channel](https://www.youtube.com/c/amigoscode/videos) or take a look at his paid courses on his [website](https://amigoscode.com/).
+如果你喜欢Nelson的这个免费YouTube课程，那么你可以在他的 [频道](https://www.youtube.com/c/amigoscode/videos) 上查看他的其他课程，或者在他的 [网站](https://amigoscode.com/) 上看看他的付费课程。
 
 ### **MySQL Database - Full Course**
 
-In this [freeCodeCamp YouTube course](https://www.youtube.com/watch?v=ER8oKX5myE0), Bharath will teach you how to install MySQL on your local machine. You will then learn how to create tables, insert data into tables, do data modeling, locks, use SQL Explain, and more.
+在这个 [freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=ER8oKX5myE0) 中，Bharath将教你如何在你的本地机器上安装MySQL。然后，你将学习如何创建表、向表中插入数据、进行数据建模、锁、使用SQL解释，以及更多。
 
-Bharath also provides helpful resources to go along with the course including a [getting started guide](https://docs.google.com/document/d/1tDPgLoE1SakXJlwBF283nG12iUaBVy-OngmFaC4KHbI/edit) and [GitHub repository](https://github.com/jmbharathram/executeoncommand/tree/master/mysql) of the MySQL scripts.
+Bharath还提供了与课程配套的有用资源，包括MySQL脚本的 [入门指南](https://docs.google.com/document/d/1tDPgLoE1SakXJlwBF283nG12iUaBVy-OngmFaC4KHbI/edit) 和 [GitHub资源库](https://github.com/jmbharathram/executeoncommand/tree/master/mysql)。
 
-If you enjoyed this course, then you can visit other courses on their [YouTube channel](https://www.youtube.com/channel/UCwfA8RML42R-a65NRA4MQ2A).
+如果你喜欢这个课程，那么你可以在他们的 [YouTube频道](https://www.youtube.com/channel/UCwfA8RML42R-a65NRA4MQ2A) 访问其他课程。
 
 ### **MySQL Tutorial for Beginners - Full Course**
 
-In this [Programming with Mosh YouTube course](https://www.youtube.com/watch?v=7S_tz1z_5bA), Mosh will teach you how to install MySQL on Mac or Windows. You will then learn about creating tables, inserting data into databases, joins, operators, SQL clauses, SQL operators, and more.
+在这个 [与Mosh一起编程的YouTube课程](https://www.youtube.com/watch?v=7S_tz1z_5bA) 中，Mosh将教你如何在Mac或Windows上安装MySQL。然后，你将学习创建表格、向数据库插入数据、连接、运算符、SQL条款、SQL运算符等等。
 
-If you enjoy this course by Mosh, then you can visit their [YouTube channel](https://www.youtube.com/channel/UCWv7vMbMWH4-V0ZXdmDpPBA) or his [website](https://codewithmosh.com/) for paid courses.
+如果你喜欢Mosh的这个课程，那么你可以访问他们的 [YouTube频道](https://www.youtube.com/channel/UCWv7vMbMWH4-V0ZXdmDpPBA) 或他的 [网站](https://codewithmosh.com/) 的付费课程。
 
 ### **MySQL Crash Course | Learn SQL**
 
-In this [Traversy Media YouTube course](https://www.youtube.com/watch?v=9ylj9NR0Lcg), Brad will teach you the basics of getting started with MySQL. You will learn about creating tables, inserting data into tables, altering tables, primary keys, foreign keys, aggregate functions and more.
+在这个 [Traversy Media YouTube课程](https://www.youtube.com/watch?v=9ylj9NR0Lcg) 中，Brad将教你如何开始使用MySQL的基础知识。你将学习创建表、向表中插入数据、改变表、主键、外键、聚合函数等。
 
-This is a great course to take as a quick introduction to learning about the basics. From here you can move onto building your first few projects using MySQL.
+这是一个很好的课程，可以作为学习基础知识的快速入门课程。从这里开始，你可以转而使用MySQL建立你的第一个项目。
 
-Brad also includes a [MySQL Cheat Sheet](https://gist.github.com/bradtraversy/c831baaad44343cc945e76c2e30927b3) with this course.
+Brad 在本课程中还包括一份 [MySQL速查手册](https://gist.github.com/bradtraversy/c831baaad44343cc945e76c2e30927b3)。
 
 ### **SQL for Data Science**
 
-In this [UC Davis course](https://www.coursera.org/learn/sql-for-data-science?specialization=learn-sql-basics-data-science), you will learn the basics of how to use SQL in the context of Data Science. You will learn about creating tables, inserting data into tables, primary keys, foreign keys, aggregate functions, joins, subqueries, and more.
+在这个 [加州大学戴维斯分校课程](https://www.coursera.org/learn/sql-for-data-science?specialization=learn-sql-basics-data-science) 中，你将学习如何在数据科学的背景下使用SQL的基础知识。你将学习创建表，将数据插入表，主键，外键，聚合函数，连接，子查询，以及更多。
 
-This course is free to audit on Coursera. It is also part of the [Learn SQL Basics for Data Science Specialization](https://www.coursera.org/specializations/learn-sql-basics-data-science).
+这个课程在Coursera上是免费审核的。它也是 [为数据科学专业学习SQL基础知识](https://www.coursera.org/specializations/learn-sql-basics-data-science) 的一部分。
 
-If you are interested in continuing with the specialization, then I would suggest looking into the other three courses offered after this introductory course.
+如果你有兴趣继续学习这个专业，那么我建议在这门入门课程之后，再看看其他三门课程。
 
 ### **Database Systems - Cornell University Course (SQL, NoSQL, Large-Scale Data Analysis)**
 
@@ -893,16 +891,16 @@ Here is [part 2 of the course](https://www.youtube.com/watch?v=lxEdaElkQhQ&t=0s)
 
 ### **SQLite Databases With Python - Full Course**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=byHcYRpMgI4), you will learn how to create tables, format results, update records, delete records and more.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=byHcYRpMgI4) 中，你将学习如何创建表、格式化结果、更新记录、删除记录等等。
 
 ### **Learn PostgreSQL Tutorial - Full Course for Beginners**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=qw--VYLpxG4), you will learn about NULLIF, primary keys, foreign keys and more.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=qw--VYLpxG4) 中，你将了解到NULLIF、主键、外键等等。
 
 ### **MongoDB Crash Course**
 
-In [this Brad Traversy YouTube course](https://www.youtube.com/watch?v=-56x56UppqQ), you will learn how to work with MongoDB shell, MongoDB atlas and more.
+在 [这个Brad Traversy YouTube课程](https://www.youtube.com/watch?v=-56x56UppqQ) 中，你将学习如何使用MongoDB shell、MongoDB atlas等。
 
 ### **NoSQL Database Tutorial – Full Course for Beginners**
 
-In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=xh4gy1lbL2k), you will learn about the basics of NoSQL and build two small projects.
+在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=xh4gy1lbL2k) 中，你将学习NoSQL的基础知识并建立两个小项目。

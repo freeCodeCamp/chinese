@@ -905,4 +905,4 @@ Here is [part 2 of the course](https://www.youtube.com/watch?v=lxEdaElkQhQ&t=0s)
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=xh4gy1lbL2k) 中，你将学习NoSQL的基础知识并建立两个小项目。
 
-## 译者注：在油管看视频推荐使用 [YouTube™ 双字幕插件](https://chrome.google.com/webstore/detail/youtube-dual-subtitles/hkbdddpiemdeibjoknnofflfgbgnebcm?hl=zh-CN)，提供理解速度。
+## 译者注：在油管看视频推荐使用 [YouTube™ 双字幕插件](https://chrome.google.com/webstore/detail/youtube-dual-subtitles/hkbdddpiemdeibjoknnofflfgbgnebcm?hl=zh-CN)，提高理解速度

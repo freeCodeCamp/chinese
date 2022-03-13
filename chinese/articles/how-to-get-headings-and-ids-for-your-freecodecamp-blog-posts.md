@@ -13,17 +13,7 @@
 
 您可以查看视频和关于所有详细信息的全面指南：
 
-[
-
-如何在您的博客文章或文章中添加目录
-
-提供目录 \[https://en.wikipedia.org/wiki/Table\_of\_contents\] 有助于在撰写较长的文章时预览内容并确定内容的优先级。但是 notevery 平台可以很容易地添加一个。当我们缺乏一流的工具时，我们如何实现一个？想要跳过“什么”和“什么……
-
-![](https://www.freecodecamp.org/news/favicon.png)科尔比法约克 freeCodeCamp.org
-
-![](https://www.freecodecamp.org/news/content/images/2020/02/table-of-contents.jpg)
-
-](/news/how-to-add-a-table-of-contents-to-your-blog-post-or-article/)
+[如何在您的博客文章或文章中添加目录](https://www.freecodecamp.org/news/how-to-add-a-table-of-contents-to-your-blog-post-or-article)
 
 科尔比 的文章详细说明了您需要目录 (ToC) 的原因以及如何使用 Ghost 编辑器（用于在 Ghost CMS 中撰写本文的编辑器）创建目录。
 

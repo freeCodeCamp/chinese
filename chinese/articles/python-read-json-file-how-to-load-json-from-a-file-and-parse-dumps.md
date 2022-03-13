@@ -5,7 +5,7 @@
 
 ![Python Read JSON File – How to Load JSON from a File and Parse Dumps](https://www.freecodecamp.org/news/content/images/size/w2000/2020/08/Read-JSON-image.png)
 
-Welcome! If you want to learn how to work with JSON files in Python, then this article is for you.
+欢迎！如果你想要
 
 **You will learn:**
 

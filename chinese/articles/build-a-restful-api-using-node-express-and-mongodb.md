@@ -356,19 +356,19 @@ const dataSchema = new mongoose.Schema({
 module.exports = mongoose.model('Data', dataSchema)
 ```
 
-Here, we have a schema that defines our database structure. It has a **name** and an **age** property. Both fields have types and both are required.
+在这里，我们有一个定义我们数据库结构的模式。它有一个 **name** 和一个 **age** 属性。这两个字段都有类型，而且都是必填的。
 
-Then, we are simply exporting the schema model.
+然后，我们简单地导出模式模型。
 
-Now, import this model inside the **routes.js** file.
+现在，在**routes.js**文件中导入这个模型。
 
 ```js
 const Model = require('../models/model');
 ```
 
-## How to Post Data to the Database
+## 如何向数据库 post 数据
 
-Let's create the data body to post using the model we just created.
+让我们使用刚刚创建的模型创建要发布（post）的数据体。
 
 ```js
 router.post('/post', (req, res) => {
@@ -379,9 +379,9 @@ router.post('/post', (req, res) => {
 })
 ```
 
-Our name and age is accepting the name and age from **req body**. We get this data from the client app such as **Postman**, or any frontend client like **React** or **Angular.**
+我们的 name 和 agg是接受来自 **req body** 的 name 和 age。我们从客户端应用如**Postman**，或任何前端客户端如 **React** 或 **Angular.** 获得这些数据。
 
-We will also create a **try-catch** block to handle success messages and errors.
+我们还将创建一个**try-catch**块来处理成功信息和错误。
 
 ```js
 //Post Method
@@ -400,11 +400,11 @@ router.post('/post', (req, res) => {
 })
 ```
 
-In the try block, we are saving the **data** using **data.save()**. Then, we are storing the data in a const called **dataToSave**.
+在尝试块中，我们使用 **data.save()** 来保存 **data**。然后，我们将数据存储在一个叫做 **dataToSave** 的常量中。
 
-We are also sending the success message with the data in the response body.
+我们还将成功的消息与数据一起发送到响应体中（response body）。
 
-And in the catch block, we are receiving any errors if we get any.
+在catch块中，我们将接收任何错误，如果我们得到任何错误。
 
 ```js
 //Post Method
@@ -424,7 +424,7 @@ router.post('/post', (req, res) => {
 })
 ```
 
-Now, let's add some data from Postman. But before that, this function needs to be asynchronous to work. So, we will use async-await.
+现在，让我们从Postman添加一些数据。但在这之前，这个函数需要异步工作。所以，我们将使用 async-await。
 
 ```js
 router.post('/post', async (req, res) => {
@@ -443,7 +443,7 @@ router.post('/post', async (req, res) => {
 })
 ```
 
-If we add the data in the body and click Send, we will get the following:
+如果我们在正文中添加数据并点击发送，我们将得到以下结果:
 
 ![Screenshot-2022-02-19-145714](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-145714.jpeg)
 
@@ -451,9 +451,9 @@ It's also generating a unique ID. Open the MongoDB Compass app, and you will see
 
 ![Screenshot-2022-02-19-150007](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-150007.jpeg)
 
-## How to Get All the Data
+## 如何获得所有数据
 
-Getting data is simple too. Just a few lines of code:
+获取数据也很简单。只需几行代码:
 
 ```js
 router.get('/getAll', async (req, res) => {
@@ -467,15 +467,15 @@ router.get('/getAll', async (req, res) => {
 })
 ```
 
-Here, we are using the **Model.find** method to fetch all the data from the database. Then, we are returning it back in JSON format. If we have an error, we will get that too.
+这里，我们使用 **Model.find** 方法从数据库中获取所有数据。然后，我们将其以JSON格式返回。如果我们有一个错误，我们也会得到它。
 
 ![Screenshot-2022-02-19-150423](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-150423.jpeg)
 
-If we call this endpoint in Postman, we will get an array of objects in the Postman body.
+如果我们在Postman中调用这个端点（endpoint），我们将在Postman主体中得到一个对象的数组。
 
-## How to Get Data Based on the ID
+## 如何根据ID获取数据
 
-This one is also simple. We just have to pass the ID of the document, which is **req.params.id**, in a method called **findById**.
+这个方法也很简单。我们只需要在一个叫做 **findById** 的方法中传递文档的ID，也就是 **req.params.id**。
 
 ```js
 //Get by ID Method
@@ -490,13 +490,13 @@ router.get('/getOne/:id', async (req, res) => {
 })
 ```
 
-If we click Send, we will get the data based on the ID.
+如果我们点击发送，我们将根据ID获得数据。
 
 ![Screenshot-2022-02-19-150808](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-150808.jpeg)
 
-## How to Update and Delete Data Based on the ID
+## 如何根据ID来更新和删除数据
 
-First, let's target the update method using the **patch** method.
+首先，让我们使用**补丁（patch）**方法来针对更新方法。
 
 ```js
 //Update by ID Method
@@ -518,17 +518,17 @@ router.patch('/update/:id', async (req, res) => {
 })
 ```
 
-Here we have three parameters that we are passing in the **findByIdAndUpdate** method, which we use to find a document by ID and update it.
+在这里，我们有三个参数传递给 **findByIdAndUpdate** 方法，我们用它来通过ID找到一个文档并更新它。
 
-The **req.params.id** is the const id, **updatedData** which contains the req.body, and the **options**, which specifies whether to return the updated data in the body or not.
+其中**req.params.id**是常量id，**updatedData**包含req.body，还有**options**，它指定了是否在body中返回更新的数据。
 
-Let's test it out now. Just paste the ID of a specific document, and click Send. Change the endpoints as well.
+现在我们来测试一下。只要粘贴一个特定文件的ID，然后点击发送。也要改变端点（endpoints）。
 
 ![Screenshot-2022-02-19-152717](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-152717.jpeg)
 
-We are updating using one ID, and it's getting updated.
+我们正在使用一个ID进行更新，而且它正在被更新。
 
-Deleting is also simple. Let's implement it:
+删除也很简单。让我们来实现它:
 
 ```js
 //Delete by ID Method
@@ -544,26 +544,26 @@ router.delete('/delete/:id', async (req, res) => {
 })
 ```
 
-We are getting the ID here, and then we are using Model.findByIdAndDelete to delete that field, while passing the id.
+我们在这里获取ID，然后使用 Model.findByIdAndDelete 来删除该字段，同时传递ID。
 
-We are storing the updated data in a const **data**.
+我们将更新的数据存储在一个常量 **data** 中。
 
-In the response, we will get the message that that document with the specific name has been deleted.
+在响应中，我们将得到这样的消息：具有特定名称的文档已经被删除。
 
-If we test this, we will get the following:
+如果我们测试一下，我们会得到以下结果:
 
 ![Screenshot-2022-02-19-153557](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-153557.jpeg)
 
-So, all five methods are done. We can Post data and Get all the data (based on ID too). We can also Update them and Delete them.
+所以，所有五个方法都完成了。我们可以发布数据和获取所有的数据（也基于ID）。我们还可以更新它们和删除它们。
 
-### Thank you for reading
+### 谢谢您的阅读
 
-In this article, you learned all about how to design and develop a RESTful API using Node, Express, and MongoDB.
+在这篇文章中，你了解了如何使用Node、Express和MongoDB设计和开发一个RESTful API。
 
-Now you can use these endpoints to build a Full-Stack application, with Vanilla JavaScript, React, Angular, Next, or Vue.js.
+现在你可以使用这些端点来构建一个全栈应用程序，使用 Vanilla JavaScript、React、Angular、Next或Vue.js。
 
-You can also check out my video on the same topic, [RESTful APIs - Build a RESTful API using Node, Express, and MongoDB](https://youtu.be/paxagc55loU)
+你也可以看看我关于同一主题的视频，[RESTful APIs - 使用Node、Express和MongoDB构建RESTful API](https://youtu.be/paxagc55loU)
 
-Feel free to download the code from [Github](https://github.com/nishant-666/Rest-Api-Express-MongoDB) and experiment.
+欢迎从 [Github](https://github.com/nishant-666/Rest-Api-Express-MongoDB) 下载代码并进行实验。
 
-> Happy Learning.
+> 快乐学习。

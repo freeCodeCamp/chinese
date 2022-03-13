@@ -1,10 +1,6 @@
 > -  原文地址：[Python Read JSON File – How to Load JSON from a File and Parse Dumps](https://www.freecodecamp.org/news/python-read-json-file-how-to-load-json-from-a-file-and-parse-dumps/)
-> -  原文作者：[
-                    
-                        Estefania Cassingena Navone
-                    
-                ](https://www.freecodecamp.org/news/author/estefaniacn/)
-> -  译者：
+> -  原文作者：[ Estefania Cassingena Navone](https://www.freecodecamp.org/news/author/estefaniacn/)
+> -  译者：miya
 > -  校对者：
 
 ![Python Read JSON File – How to Load JSON from a File and Parse Dumps](https://www.freecodecamp.org/news/content/images/size/w2000/2020/08/Read-JSON-image.png)

@@ -300,46 +300,46 @@ router.delete('/delete/:id', (req, res) => {
 
 在回调中，我们有一个**res**和一个**req**。**res**表示**响应，**req*表示**请求。**我们使用**res**来向我们的客户端，如Postman，或任何前端客户端发送响应。而我们使用**req**来接收来自客户端应用程序（如Postman）或任何前端客户端的请求。
 
-Then in the callback body, we are printing a message that says the respective API message.
+然后在回调 body 中，我们要打印一条消息，说明是响应 API 消息。
 
-Save this, and open Postman to check the endpoints. Download [Postman](https://www.postman.com/downloads/) if you don't have it. It is an amazing tool to test API endpoints.
+保存这个，然后打开Postman来检查端点（endpoints）。如果你没有，请下载 [Postman](https://www.postman.com/downloads/)。它是测试API端点的一个好工具。
 
 ![Screenshot-2022-02-19-141237](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-141237.jpeg)
 
-Add this address in the address bar, then click Send, or press enter.
+在地址栏中添加这个地址，然后点击发送，或按回车键。
 
 ![Screenshot-2022-02-19-141328](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-141328.jpeg)
 
-We will get this message in the body of Postman, because we are simply sending a Message using **res.send.**
+我们将在Postman的正文中得到这个消息，因为我们只是使用 **res.send.** 发送一个消息。
 
-Now, let's take a response from a client app. Let's simply print an ID.
+现在，让我们从一个客户应用中获取一个响应。让我们简单地打印一个ID。
 
-We have to change the **getOne** function first. We are getting the ID using **req.params.id**, and then sending it to the client app using **res.send.**
+我们必须首先改变**getOne**函数。我们使用**req.params.id**获取ID，然后使用**res.send.**将其发送到客户端应用程序。
 
-```
+```js
 //Get by ID Method
 router.get('/getOne/:id', (req, res) => {
     res.send(req.params.id)
 })
 ```
 
-```
+```js
 localhost:3000/api/getOne/1000
 ```
 
-Add this endpoint in the address bar. Here, we are using **getOne** Endpoint, followed by the ID. Then, click Send.
+在地址栏中添加这个端点（endpoint）。这里，我们使用**getOne**端点，后面是ID。然后，点击发送。
 
 ![Screenshot-2022-02-19-142619](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-142619.jpeg)
 
-We will get the ID in the response body in Postman.
+我们将在Postman的响应 body 中获得ID。
 
-## How to Create the Model
+## 如何创建模型
 
-Now, let's create a Model that will define our database structure.
+现在，让我们创建一个模型，它将定义我们的数据库结构。
 
-Create a folder called model and inside, a file called model.js.
+创建一个名为model的文件夹，里面有一个名为model.js的文件。
 
-```
+```js
 const mongoose = require('mongoose');
 
 const dataSchema = new mongoose.Schema({
@@ -362,7 +362,7 @@ Then, we are simply exporting the schema model.
 
 Now, import this model inside the **routes.js** file.
 
-```
+```js
 const Model = require('../models/model');
 ```
 
@@ -370,7 +370,7 @@ const Model = require('../models/model');
 
 Let's create the data body to post using the model we just created.
 
-```
+```js
 router.post('/post', (req, res) => {
     const data = new Model({
         name: req.body.name,
@@ -383,7 +383,7 @@ Our name and age is accepting the name and age from **req body**. We get this da
 
 We will also create a **try-catch** block to handle success messages and errors.
 
-```
+```js
 //Post Method
 router.post('/post', (req, res) => {
     const data = new Model({
@@ -406,7 +406,7 @@ We are also sending the success message with the data in the response body.
 
 And in the catch block, we are receiving any errors if we get any.
 
-```
+```js
 //Post Method
 router.post('/post', (req, res) => {
     const data = new Model({
@@ -426,7 +426,7 @@ router.post('/post', (req, res) => {
 
 Now, let's add some data from Postman. But before that, this function needs to be asynchronous to work. So, we will use async-await.
 
-```
+```js
 router.post('/post', async (req, res) => {
     const data = new Model({
         name: req.body.name,
@@ -455,7 +455,7 @@ It's also generating a unique ID. Open the MongoDB Compass app, and you will see
 
 Getting data is simple too. Just a few lines of code:
 
-```
+```js
 router.get('/getAll', async (req, res) => {
     try{
         const data = await Model.find();
@@ -477,7 +477,7 @@ If we call this endpoint in Postman, we will get an array of objects in the Post
 
 This one is also simple. We just have to pass the ID of the document, which is **req.params.id**, in a method called **findById**.
 
-```
+```js
 //Get by ID Method
 router.get('/getOne/:id', async (req, res) => {
     try{
@@ -498,7 +498,7 @@ If we click Send, we will get the data based on the ID.
 
 First, let's target the update method using the **patch** method.
 
-```
+```js
 //Update by ID Method
 router.patch('/update/:id', async (req, res) => {
     try {
@@ -530,7 +530,7 @@ We are updating using one ID, and it's getting updated.
 
 Deleting is also simple. Let's implement it:
 
-```
+```js
 //Delete by ID Method
 router.delete('/delete/:id', async (req, res) => {
     try {

@@ -1,6 +1,6 @@
 > -   原文地址：[SQL Injection Tutorial - What is SQL Injection and How to Prevent it](https://www.freecodecamp.org/news/what-is-sql-injection-how-to-prevent-it/)
 > -   原文作者：Megan Kaczanowski
-> -   译者：
+> -   译者：hangyu2333
 > -   校对者：
 
 ![SQL Injection Tutorial - What is SQL Injection and How to Prevent it](https://images.unsplash.com/photo-1614064641938-3bbee52942c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDU4fHxjeWJlcnxlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)

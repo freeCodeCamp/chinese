@@ -1,11 +1,8 @@
-> -  原文地址：[How to Build a RESTful API Using Node, Express, and MongoDB](https://www.freecodecamp.org/news/build-a-restful-api-using-node-express-and-mongodb/)
-> -  原文作者：[
-                    
-                        Nishant Kumar
-                    
-                ](https://www.freecodecamp.org/news/author/nishant-kumar/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Build a RESTful API Using Node, Express, and MongoDB](https://www.freecodecamp.org/news/build-a-restful-api-using-node-express-and-mongodb/)
+> - 原文作者：[Nishant Kumar](https://www.freecodecamp.org/news/author/nishant-kumar/)
+>
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Build a RESTful API Using Node, Express, and MongoDB](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/How-to-Build-a-Weather-Application-using-React--65-.png)
 
@@ -51,10 +48,10 @@ npm i express mongoose nodemon dotenv
 
 Here,
 
-1.  Express will be used for the middleware to create various CRUD endpoints.
-2.  Mongoose for managing data in MongoDB using various queries.
-3.  Nodemon to restart our server every time we save our file.
-4.  Dotenv to manage a **.env** file.
+1. Express will be used for the middleware to create various CRUD endpoints.
+2. Mongoose for managing data in MongoDB using various queries.
+3. Nodemon to restart our server every time we save our file.
+4. Dotenv to manage a **.env** file.
 
 So go ahead and install them.
 
@@ -262,11 +259,11 @@ Here, we are using Router from Express, and we are exporting it too using module
 
 Now, let's write our endpoints here in this routes file. We will have five routes for the following actions:
 
-1.  Posting data to Database.
-2.  Getting all the data from the Database.
-3.  Getting data based on the ID.
-4.  Updating data based on the ID.
-5.  Deleting data based on the ID.
+1. Posting data to Database.
+2. Getting all the data from the Database.
+3. Getting data based on the ID.
+4. Updating data based on the ID.
+5. Deleting data based on the ID.
 
 So, let's create the routes for these actions:
 
@@ -559,7 +556,7 @@ If we test this, we will get the following:
 
 So, all five methods are done. We can Post data and Get all the data (based on ID too). We can also Update them and Delete them.
 
-### Thank you for reading!
+### Thank you for reading
 
 In this article, you learned all about how to design and develop a RESTful API using Node, Express, and MongoDB.
 

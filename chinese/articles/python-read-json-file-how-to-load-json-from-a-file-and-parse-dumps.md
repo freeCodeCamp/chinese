@@ -7,7 +7,7 @@
 
 欢迎！如果你想要
 
-**You will learn:**
+**你会学习到：**
 
 -   Why the JSON format is so important.
 -   Its basic structure and data types.

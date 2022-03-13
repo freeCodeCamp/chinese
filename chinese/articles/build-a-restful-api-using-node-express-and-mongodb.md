@@ -6,23 +6,23 @@
 
 ![How to Build a RESTful API Using Node, Express, and MongoDB](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/How-to-Build-a-Weather-Application-using-React--65-.png)
 
-In this article, we'll build a RESTful API using Node, Express, and MongoDB. We will create endpoints for creating data, reading data, updating data, and deleting data (basic CRUD operations).
+在这篇文章中，我们将使用Node、Express和MongoDB构建一个RESTful API。我们将为创建数据、读取数据、更新数据和删除数据（基本CRUD操作）创建端点（endpoints）。
 
-But before we get started, make sure you have Node installed in your system. If not, go to [https://nodejs.org/en/download/](https://nodejs.org/en/download/) to download and install it.
+但在我们开始之前，请确保你的系统中已经安装了Node。如果没有，请到 [https://nodejs.org/en/download/](https://nodejs.org/en/download/)下载并安装它。
 
-## Let's do the basic setup first
+## 让我们先做一下基本设置
 
-In an empty folder, run the following command:
+在一个空文件夹中，运行以下命令:
 
-```
+``` shell
 npm init
 ```
 
-This command will ask you for various details, such as the name of your project, the author, the repository, and more. Then it will generate a **package.json** file in that folder.
+这个命令会问你各种细节，比如你的项目名称、作者、存储库等等。然后它将在该文件夹中生成一个 **package.json** 文件。
 
 ![Screenshot-2022-02-19-130254](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-130254.jpeg)
 
-```
+```json
 {
   "name": "rest-api-express-mongo",
   "version": "1.0.0",
@@ -38,44 +38,44 @@ This command will ask you for various details, such as the name of your project,
 
 Package.json file
 
-This Package.json file will contain all the scripts, like how to run the app, or how to test the app, as well as all the dependencies.
+这个Package.json文件将包含所有的脚本，如如何运行应用程序，或如何测试应用程序，以及所有的依赖。
 
-We need to install a few dependencies now.
+我们现在需要安装一些依赖项。
 
-```
+```shell
 npm i express mongoose nodemon dotenv
 ```
 
-Here,
+这里,
 
-1. Express will be used for the middleware to create various CRUD endpoints.
-2. Mongoose for managing data in MongoDB using various queries.
-3. Nodemon to restart our server every time we save our file.
-4. Dotenv to manage a **.env** file.
+1. Express将被用于中间件，以创建各种CRUD端点。
+2. Mongoose用于使用各种查询来管理MongoDB中的数据。
+3. Nodemon用于在我们每次保存文件时重新启动我们的服务器。
+4. Dotenv管理**.env**文件。
 
-So go ahead and install them.
+因此，请继续安装它们。
 
-After they have finished installing, create one file named **index.js.** This will be the entry point for our application.
+在它们完成安装后，创建一个名为**index.js.**的文件，这将是我们应用程序的入口。
 
-And in this file, let's add Express and Mongoose, and run the file.
+而在这个文件中，让我们添加Express和Mongoose，并运行该文件。
 
-```
+```js
 const express = require('express');
 const mongoose = require('mongoose');
 ```
 
-Now, transfer the contents of Express into a new constant called **app**.
+现在，将Express的内容转移到一个名为**app**的新常量中。
 
-```
+```js
 const express = require('express');
 const mongoose = require('mongoose');
 
 const app = express();
 ```
 
-Now, let's listen the changes of this file on port 3000.
+现在，让我们修改这个文件，在3000端口监听。
 
-```
+```js
 const express = require('express');
 const mongoose = require('mongoose');
 
@@ -88,100 +88,100 @@ app.listen(3000, () => {
 })
 ```
 
-Now, the server is set on **Port 3000**. Let's write the script to start our server. We have also added the **app.use**. Inside that, we have a code snippet that allows us to accept the data in JSON format.
+现在，服务器被设置在 **端口3000**。让我们写脚本来启动我们的服务器。我们还添加了 **app.use**。在这里面，我们有一个代码片段，允许我们接受 JSON 格式的数据。
 
-In the package.json file, add a script which says the following:
+在package.json文件中，添加一个脚本，内容如下:
 
-```
+```js
 "scripts": {
     "start": "nodemon index.js"
 },
 ```
 
-This means that we can start our server using **npm start,** and it will run using the Nodemon package that we previously installed.
+这意味着我们可以使用**npm start启动我们的服务器，**它将使用我们之前安装的Nodemon包运行。
 
-Type npm start in the terminal, and we will see the following output in the terminal:
+在终端中输入npm start，我们将在终端中看到以下输出:
 
 ![Screenshot-2022-02-19-132326](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-132326.jpeg)
 
-## How to Configure the MongoDB Database
+## 如何配置MongoDB数据库
 
-Now, let's configure the mongoDB Database. Head over to [https://account.mongodb.com/account/login](https://account.mongodb.com/account/login) and create your account, or sign in if you already have one.
+现在，让我们来配置mongoDB数据库。前往 [https://account.mongodb.com/account/login](https://account.mongodb.com/account/login) 并创建你的账户，如果你已经有一个账户，则可以登录。
 
-After signing in, we have to create a database.
+登录后，我们要创建一个数据库。
 
 ![Screenshot-2022-02-19-132848](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-132848.jpeg)
 
-So, create a **Free Shared Cluster.**
+因此，创建一个 **Free Shared Cluster.**
 
 It will ask you the username and the password, so fill those in.
 
 ![Screenshot-2022-02-19-132958](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-132958.jpeg)
 
-Then, add your IP Address.
+然后，添加你的IP地址。
 
 ![Screenshot-2022-02-19-133131](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-133131.jpeg)
 
-Click Finish and Close.
+点击完成并关闭。
 
-It will take some time for our cluster to finish, so let's wait. Meanwhile, create a file called **.env** in the project folder.
+我们的集群将需要一些时间来完成，所以让我们等待吧。同时，在项目文件夹中创建一个名为**.env**的文件。
 
-And in the Cluster Home page, click the connect button.
+并在集群主页中，点击连接按钮。
 
 ![Screenshot-2022-02-19-133319](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-133319.jpeg)
 
-The following window will appear:
+将出现以下窗口:
 
 ![Screenshot-2022-02-19-133404](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-133404.jpeg)
 
-Click MongoDB Compass, and it will return the following string. Also, download and install MongoDB Compass.
+点击MongoDB Compass，它将返回以下字符串。同时，下载并安装MongoDB Compass。
 
 ![Screenshot-2022-02-19-133516](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-133516.jpeg)
 
-Add your username and password to this string that you have used before. The final connecting string will look something like this:
+将你的用户名和密码添加到这个你以前使用过的字符串中。最后的连接字符串将看起来像这样:
 
-```
+```js
 mongodb+srv://nishant:********@cluster0.xduyh.mongodb.net/testDatabase
 ```
 
-Here, nishant is the username, followed by the password, and last is the database name.
+这里，nishant是用户名，其次是密码，最后是数据库名称。
 
-So, paste this string into the **.env** file.
+所以，把这个字符串粘贴到**.env**文件中。
 
-```
+```js
 DATABASE_URL = mongodb+srv://nishant:*******@cluster0.xduyh.mongodb.net/testDatabase
 ```
 
-Now in MongoDB Compass, add this string as well.
+现在在MongoDB Compass中，也添加这个字符串。
 
 ![Screenshot-2022-02-19-134347](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-134347.jpeg)
 
-Then, click Connect.
+然后，点击 `Connect`。
 
-Here, we will get two Databases which are default. A third one will be automatically created later.
+在这里，我们将得到两个数据库，这是默认的。第三个将在以后自动创建。
 
 ![Screenshot-2022-02-19-134435](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-134435.jpeg)
 
-Now, let's import the contents of our .**env** file in the script file, index.js.
+现在，让我们在脚本文件index.js中导入我们的.**env**文件的内容。
 
-```
+```js
 require('dotenv').config();
 
 const mongoString = process.env.DATABASE_URL
 ```
 
-Here, we are storing the string into a variable called **mongoString.**
+在这里，我们将字符串存储到一个名为 **mongoString.** 的变量中。
 
-Now, let's connect the database to our server using Mongoose.
+现在，让我们使用Mongoose将数据库连接到我们的服务器。
 
-```
+```js
 mongoose.connect(mongoString);
 const database = mongoose.connection
 ```
 
-Now, we have to throw a success or an error message depending on whether our database connection is successful or fails.
+现在，我们必须根据我们的数据库连接是成功还是失败，抛出一个成功或错误信息。
 
-```
+```js
 database.on('error', (error) => {
     console.log(error)
 })
@@ -191,13 +191,13 @@ database.once('connected', () => {
 })
 ```
 
-Here, **database.on** means it will connect to the database, and throws any error if the connection fails. And **database.once** means it will run only one time. If it is successful, it will show a message that says Database Connected.
+这里，**database.on** 意味着它将连接到数据库，如果连接失败，将抛出任何错误。而 **database.once** 意味着它将只运行一次。如果它成功了，它将显示一条信息：数据库已连接。
 
 ![Screenshot-2022-02-19-135414-1](https://www.freecodecamp.org/news/content/images/2022/02/Screenshot-2022-02-19-135414-1.jpeg)
 
-Here is the whole code up to this point:
+以下是到此为止的全部代码:
 
-```
+```js
 require('dotenv').config();
 
 const express = require('express');
@@ -223,29 +223,29 @@ app.listen(3000, () => {
 })
 ```
 
-## How to Create our Routes for the Endpoints
+## 如何为端点（Endpoints）创建我们的路由
 
-Create a folder called routes, and inside make a file called routes.js.
+创建一个名为routes的文件夹，并在里面制作一个名为routes.js的文件。
 
-Import this file into our main script file, index.js.
+将此文件导入我们的主脚本文件index.js中。
 
-```
+```js
 const routes = require('./routes/routes');
 ```
 
-Also, let's use this routes file.
+另外，让我们使用这个路由文件（routes.js）。
 
-```
+```js
 const routes = require('./routes/routes');
 
 app.use('/api', routes)
 ```
 
-Here, this app.use takes two things. One is the base endpoint, and the other is the contents of the routes. Now, all our endpoints will start from '/api'.
+这里，这个app.use需要两样东西。一个是基础端点（base endpoint），另一个是路由的内容。现在，我们所有的端点将从'/api'开始。
 
-We will get an error because we don't have anything inside the routes file. So, let's add them.
+我们会得到一个错误，因为我们在路由文件里面没有任何东西。所以，让我们添加它们。
 
-```
+```js
 const express = require('express');
 
 const router = express.Router()
@@ -253,21 +253,21 @@ const router = express.Router()
 module.exports = router;
 ```
 
-Here, we are using Router from Express, and we are exporting it too using module.exports. And now, our app will work fine.
+在这里，我们使用Express中的Router，并且我们也使用module.exports导出了它。现在，我们的应用程序可以正常工作了。
 
-## How to Write our Endpoints
+## 如何编写我们的端点（Endpoints）
 
-Now, let's write our endpoints here in this routes file. We will have five routes for the following actions:
+现在，让我们在这个路由文件中写入我们的端点。我们将有五条路由用于以下 actions:
 
-1. Posting data to Database.
-2. Getting all the data from the Database.
-3. Getting data based on the ID.
-4. Updating data based on the ID.
-5. Deleting data based on the ID.
+1. 将数据发布到数据库。
+2. 从数据库中获取所有数据。
+3. 获取基于ID的数据。
+4. 基于ID更新数据。
+5. 根据ID删除数据。
 
-So, let's create the routes for these actions:
+因此，让我们为这些 actions 创建路由:
 
-```
+```js
 //Post Method
 router.post('/post', (req, res) => {
     res.send('Post API')
@@ -294,11 +294,11 @@ router.delete('/delete/:id', (req, res) => {
 })
 ```
 
-We have five methods that use the REST Methods of Post, Get, Patch, and Delete.
+我们有五个方法，使用REST方法的Post、Get、Patch和Delete。
 
-This router is taking the route as the first parameter. Then in the second parameter it's taking a callback.
+这个路由器把路由作为第一个参数。然后，在第二个参数中，它正在接受一个回调。
 
-In the callback, we have a **res** and a **req**. **res** means **response,** and **req** means **request.** We use **res** for sending responses to our client, like Postman, or any front-end client. And we use **req** for receiving requests from a client app like Postman, or any front-end client.
+在回调中，我们有一个**res**和一个**req**。**res**表示**响应，**req*表示**请求。**我们使用**res**来向我们的客户端，如Postman，或任何前端客户端发送响应。而我们使用**req**来接收来自客户端应用程序（如Postman）或任何前端客户端的请求。
 
 Then in the callback body, we are printing a message that says the respective API message.
 

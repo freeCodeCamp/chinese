@@ -1,11 +1,8 @@
-> -  原文地址：[How to Build Your Own Heroku with Dokku](https://www.freecodecamp.org/news/how-to-build-your-on-heroku-with-dokku/)
-> -  原文作者：[
-                    
-                        Nuno Bispo
-                    
-                ](https://www.freecodecamp.org/news/author/nunobispo/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Build Your Own Heroku with Dokku](https://www.freecodecamp.org/news/how-to-build-your-on-heroku-with-dokku/)
+> - 原文作者：[Nuno Bispo](https://www.freecodecamp.org/news/author/nunobispo/)
+>
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Build Your Own Heroku with Dokku](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/dokku.png)
 
@@ -166,9 +163,9 @@ To create and deploy our first application, there is some preparation work we ne
 
 To deploy an application on Dokku, follow these steps:
 
--   Create the application on Dokku, which means giving it a name.
--   Create the associate database (or other plugins, if needed). This will create and provision a database for use with an automatic DATABASE\_URL added to the application for ease of deployment.
--   Push the necessary code to Dokku's application internal GitHub endpoint. This can include also the necessary release steps (like running Django migrations, for example).
+- Create the application on Dokku, which means giving it a name.
+- Create the associate database (or other plugins, if needed). This will create and provision a database for use with an automatic DATABASE\_URL added to the application for ease of deployment.
+- Push the necessary code to Dokku's application internal GitHub endpoint. This can include also the necessary release steps (like running Django migrations, for example).
 
 After the code is pushed, Dokku will generate any necessary Docker container and will run our application with any associated databases (or other plugins).
 
@@ -300,7 +297,7 @@ Successfully installed asgiref-3.5.0 django-4.0.2 sqlparse-0.4.2 tzdata-2021.5
 Then we create our Django project with:
 
 ```
-$ django-admin startproject DjangoTutorial .
+django-admin startproject DjangoTutorial .
 ```
 
 Notice the '.' at the end of the command. I like to use that so that it creates the project in the current directory instead of creating an extra sub-directory.
@@ -403,7 +400,7 @@ We can now create our first (and only) web page of this tutorial), a simple coun
 Let's create a separate application to contain our logic:
 
 ```bash
-$ python manage.py startapp counter
+python manage.py startapp counter
 ```
 
 We now should have a new folder called 'counter' in our project. Let's add a new model by opening the 'models.py' file:
@@ -554,9 +551,9 @@ We are ready to deploy it to the cloud so we can test it there and make sure our
 
 Before we do the Git push to deploy the code to Dokku, we need to do some preparation:
 
--   Install our web server (gunicorn)
--   Create our requirements file (for our packages)
--   Create our Procfile (for our deployment commands)
+- Install our web server (gunicorn)
+- Create our requirements file (for our packages)
+- Create our Procfile (for our deployment commands)
 
 Let's start with installing our web server to use in the cloud:
 
@@ -585,8 +582,8 @@ Procfile
 
 We have created two commands for Dokku to run:
 
--   release – this command is executed on the deployment of our application in Dokku. We use it to migrate our database.
--   web – this command allows Dokku to know which webserver to run to allow access to the application.
+- release – this command is executed on the deployment of our application in Dokku. We use it to migrate our database.
+- web – this command allows Dokku to know which webserver to run to allow access to the application.
 
 Finally, to make sure that we can collect any static files when our code is deployed to Dokku, we need to create a new directory called 'static' on the root directory. Inside we create an empty file called '.gitkeep' (this will allow us to add the directory to the Git repository later).
 
@@ -622,7 +619,7 @@ python pycharm gitignore. GitHub Gist: instantly share code, notes, and snippets
 
 ![gist-og-image](https://github.githubassets.com/images/modules/gists/gist-og-image.png)
 
-](https://gist.github.com/MOOOWOOO/3cf91616c9f3bbc3d1339adfc707b08a)
+](<https://gist.github.com/MOOOWOOO/3cf91616c9f3bbc3d1339adfc707b08a>)
 
 We can now initialize and commit our code to a Git repository locally:
 
@@ -764,11 +761,11 @@ We have just deployed our application to Dokku.
 
 What just happened? Well, Dokku did a lot of work for us:
 
--   Installed Python
--   Installed the requirements
--   Collected the static files
--   Performed the migrations
--   And finally started a gunicorn server to deploy our application
+- Installed Python
+- Installed the requirements
+- Collected the static files
+- Performed the migrations
+- And finally started a gunicorn server to deploy our application
 
 If you had a permission error, then your private key should be registered within your local development environment. If you get a `permission denied` error when pushing, you can register your private key as follows: `ssh-add -k ~/<your private key>`.
 
@@ -820,8 +817,8 @@ You can use hosted PaaS like Heroku and there are many others, so the choice is 
 
 But there are some main drawbacks:
 
--   Price – hosted solutions might have limits in terms of database storage or file storage, among others
--   You don't control the hosting where the PaaS is deployed. Recent examples of AWS shows that not even the biggest hosting is free of problems.
+- Price – hosted solutions might have limits in terms of database storage or file storage, among others
+- You don't control the hosting where the PaaS is deployed. Recent examples of AWS shows that not even the biggest hosting is free of problems.
 
 You can work around these issues by self-hosting your PaaS.
 
@@ -831,9 +828,9 @@ There are no database limits. The only limits you might have are memory and disk
 
 Dokku is easy to install and like we saw. Creating and deploying an application is a 3 step process:
 
--   Create an application on Dokku
--   Create a datastore on Dokku (if needed, like Postgres) and link to the application
--   Deploy your code to Dokku with Git
+- Create an application on Dokku
+- Create a datastore on Dokku (if needed, like Postgres) and link to the application
+- Deploy your code to Dokku with Git
 
 Additionally, you might need to configure some environment variables and SSL certificates, but that is all.
 
@@ -851,7 +848,7 @@ Example application for freeCodeCamp article. Contribute to nunombispo/DjangoTut
 
 ![DjangoTutorial](https://opengraph.githubassets.com/6a188f8592e03553d82c8e99b5a40faf20142ac1444260085a81aa0087137584/nunombispo/DjangoTutorial)
 
-](https://github.com/nunombispo/DjangoTutorial)
+](<https://github.com/nunombispo/DjangoTutorial>)
 
 Follow me on Twitter: [https://twitter.com/DevAsService](https://twitter.com/DevAsService)
 

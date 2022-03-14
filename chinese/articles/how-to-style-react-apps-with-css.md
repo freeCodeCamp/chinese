@@ -1,7 +1,7 @@
-> -  原文地址：[How to Style Your React App – 5 Ways to Write CSS in 2021](https://www.freecodecamp.org/news/how-to-style-react-apps-with-css/)
-> -  原文作者：[Reed Barger](https://www.freecodecamp.org/news/author/reed/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Style Your React App – 5 Ways to Write CSS in 2021](https://www.freecodecamp.org/news/how-to-style-react-apps-with-css/)
+> - 原文作者：[Reed Barger](https://www.freecodecamp.org/news/author/reed/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Style Your React App – 5 Ways to Write CSS in 2021](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/how-to-style-react-apps.png)
 
@@ -177,16 +177,16 @@ If you're prototyping an application, inline styles are great. However, as you g
 
 👍 Pros:
 
--   Quickest way to write styles
--   Good for prototyping (write inline styles then move to stylesheet)
--   Has great preference (can override styles from a stylesheet)
+- Quickest way to write styles
+- Good for prototyping (write inline styles then move to stylesheet)
+- Has great preference (can override styles from a stylesheet)
 
 👎 Cons:
 
--   Tedious to convert plain CSS to inline styles
--   Lots of inline styles make JSX unreadable
--   You can not use basic CSS features like animations, selectors, etc.
--   Does not scale well
+- Tedious to convert plain CSS to inline styles
+- Lots of inline styles make JSX unreadable
+- You can not use basic CSS features like animations, selectors, etc.
+- Does not scale well
 
 ## Plain CSS
 
@@ -293,15 +293,15 @@ With that being said, there are a number of CSS libraries that give us all the p
 
 👍 Pros:
 
--   Gives us all of the tools of modern CSS (variables, advanced selectors, new pseudo-classes, etc.)
--   Helps us clean up our component files from inline styles
+- Gives us all of the tools of modern CSS (variables, advanced selectors, new pseudo-classes, etc.)
+- Helps us clean up our component files from inline styles
 
 👎 Cons:
 
--   Need to setup vendor prefixing to ensure latest features work for all users
--   Requires more typing and boilerplate than other CSS libraries (i.e. SASS)
--   Any stylesheet cascades to component and all children; not scoped
--   Must use a reliable naming convention to ensure styles don't conflict
+- Need to setup vendor prefixing to ensure latest features work for all users
+- Requires more typing and boilerplate than other CSS libraries (i.e. SASS)
+- Any stylesheet cascades to component and all children; not scoped
+- Must use a reliable naming convention to ensure styles don't conflict
 
 ## SASS / SCSS
 
@@ -420,14 +420,14 @@ You can find a working version of a React application with SCSS [here](https://c
 
 👍 Pros:
 
--   Includes many dynamic CSS features like extending, nesting, and mixins
--   CSS styles can be written with much less boilerplate over plain CSS
+- Includes many dynamic CSS features like extending, nesting, and mixins
+- CSS styles can be written with much less boilerplate over plain CSS
 
 👎 Cons:
 
--   Like plain CSS, styles are global and not scoped to any one component
--   CSS stylesheets is starting to include a number of features that SASS had exclusively, such as CSS variables (not necessarily a con, but worth noting)
--   SASS / SCSS often requires setup, such as installing the Node library `node-sass`
+- Like plain CSS, styles are global and not scoped to any one component
+- CSS stylesheets is starting to include a number of features that SASS had exclusively, such as CSS variables (not necessarily a con, but worth noting)
+- SASS / SCSS often requires setup, such as installing the Node library `node-sass`
 
 ## CSS Modules
 
@@ -505,15 +505,15 @@ Therefore, CSS modules are best to use over CSS and SASS to make sure classes do
 
 👍 Pros:
 
--   Styles are scoped to one or another component (unlike CSS / SASS)
--   Unique, generated classnames ensure no style conflict
--   Can use them immediately without setup in CRA projects
--   Can be used with SASS / CSS
+- Styles are scoped to one or another component (unlike CSS / SASS)
+- Unique, generated classnames ensure no style conflict
+- Can use them immediately without setup in CRA projects
+- Can be used with SASS / CSS
 
 👎 Cons:
 
--   Can be tricky to reference classnames
--   May be a learning curve to use CSS styles like object properties
+- Can be tricky to reference classnames
+- May be a learning curve to use CSS styles like object properties
 
 ## CSS-in-JS
 
@@ -558,9 +558,9 @@ export default function App() {
 
 Note a few things here:
 
-1.  You can write normal CSS styles, but can include nested styles and pseudo-classes (like hover).
-2.  You can associate styles with any valid HTML element, such as the button element above (see `styled.button`).
-3.  You can create new components with these associated styles. See how `Button` is used in our App component.
+1. You can write normal CSS styles, but can include nested styles and pseudo-classes (like hover).
+2. You can associate styles with any valid HTML element, such as the button element above (see `styled.button`).
+3. You can create new components with these associated styles. See how `Button` is used in our App component.
 
 Since this is a component, can it be passed props? Yes! We can export this component and use it anywhere in our app we like, plus give it dynamic features through props.
 
@@ -609,14 +609,14 @@ One downside to using a CSS-in-JS libraries is adding an additional library to y
 
 👍 Pros:
 
--   CSS-in-JS is predictable – styles are scoped to individual components
--   Since our CSS is now JS, we can export, reuse, and even extend our styles through props
--   CSS-in-JS libraries ensure there are no styling conflicts by generating unique classnames for your written styles
--   No need to focus on naming conventions for your classes, just write styles!
+- CSS-in-JS is predictable – styles are scoped to individual components
+- Since our CSS is now JS, we can export, reuse, and even extend our styles through props
+- CSS-in-JS libraries ensure there are no styling conflicts by generating unique classnames for your written styles
+- No need to focus on naming conventions for your classes, just write styles!
 
 👎 Cons:
 
--   Unlike plain CSS, you will need to install one or more third-party JavaScript libraries, which will add weight to your built project
+- Unlike plain CSS, you will need to install one or more third-party JavaScript libraries, which will add weight to your built project
 
 ## Conclusion
 

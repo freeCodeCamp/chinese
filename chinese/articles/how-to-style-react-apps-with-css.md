@@ -5,35 +5,35 @@
 
 ![How to Style Your React App – 5 Ways to Write CSS in 2021](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/how-to-style-react-apps.png)
 
-When it comes to styling your React app, you have a ton of different options. Which do you choose?
+当谈到你的React应用程序的 styling ，你有一大堆不同的选择。你会选择哪一种呢？
 
-I have broken down the 5 primary ways you have to choose between when writing CSS in your React app.
+我分析了在React应用中编写CSS时，你必须选择的5种主要方式。
 
-There is no #1 way to approach to writing styles in React for every project. Every project is different and has different needs.
+对于每个项目来说，在React中编写样式并没有第一种方法。每个项目都是不同的，有不同的需求。
 
-That's why at the end of each section, I will cover the pros and cons of each approach to help you choose which is the best for you in your projects.
+这就是为什么在每个部分的末尾，我将介绍每种方法的优点和缺点，以帮助你在项目中选择最适合你的方法。
 
-Let's get started!
+让我们开始吧!
 
-> Want to become a pro React developer while building amazing projects? Check out [**The React Bootcamp**](https://reactbootcamp.com).
+> 想成为一名专业的React开发人员，同时建立令人惊叹的项目吗？看看 [**The React Bootcamp**](https://reactbootcamp.com)。
 
-## What We Will Be Coding
+## 我们要编程的内容
 
-To see how the code for each of these styling approaches compare with one another, we will create the same example: a simple, but clean testimonial card.
+为了看看这些造型方法的代码是如何相互比较的，我们将创建同一个例子：一个简单但干净的推荐卡。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screen-Shot-2021-07-14-at-12.07.40-PM.png)
 
-> Want to code along with each of these examples? Go to [react.new](https://react.new) to create a new React application instantly ✨
+> 想和这些例子中的每一个一起编程吗？去 [react.new](https://react.new) 即时创建一个新的React应用程序✨
 
-## Inline Styles
+## Inline Styles（内联样式）
 
-Inline styles are the most direct away to style any React application.
+内联样式是对任何React应用程序进行样式化的最直接方式。
 
-Styling elements inline doesn't require you to create a separate stylesheet.
+内联元素的样式不需要你创建一个单独的样式表。
 
-Style applied directly to the elements as compared to styles in a stylesheet also have higher precedence. This means that they "override" other style rules that may be applied to an element.
+与样式表中的样式相比，直接应用于元素的样式具有更高的优先权。这意味着它们 "凌驾于 "可能应用于元素的其他样式规则。
 
-Here is our testimonial card styled with inline styles:
+下面是我们用内联样式制作的推荐卡:
 
 ```js
 export default function App() {
@@ -98,11 +98,11 @@ export default function App() {
 }
 ```
 
-Despite a few quick benefits, inline styles are only an acceptable choice for very small applications. The difficulties with inline styles become apparent as your code base grows even slightly.
+尽管有一些快速的好处，内联样式只对非常小的应用程序是一个可接受的选择。当你的代码库稍有增长，内联样式的困难就会变得很明显。
 
-As the code example above shows, even a small component like this becomes very bulky if all the styles are inline.
+正如上面的代码例子所示，如果所有的样式都是内联的，即使是这样的小组件也会变得非常笨重。
 
-One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file:
+然而，一个快速的技巧是将内联样式放入可重用的变量中，这些变量可以存储在一个单独的文件中:
 
 ```js
 const styles = {
@@ -169,36 +169,36 @@ export default function App() {
 }
 ```
 
-Despite this improvement, inline styles do not have a number of essential features that any simple CSS stylesheet could provide.
+尽管有这样的改进，内联样式并不具备任何简单的CSS样式表可以提供的一些基本功能。
 
-For example, you cannot write animations, styles for nested elements (i.e. all child elements, first-child, last-child), pseudo-classes (i.e. :hover), and pseudo-elements (::first-line) to name a few.
+例如，你不能编写动画、嵌套元素的样式（即所有子元素、首子、末子）、伪类（即:hover）和伪元素（:首行）等等。
 
-If you're prototyping an application, inline styles are great. However, as you get further into making it, you will need to switch to another CSS styling option to give you basic CSS features.
+如果你正在设计一个应用程序的原型，内联样式是很好的。然而，当你进一步制作时，你将需要切换到另一个CSS样式选项，以给你提供基本的CSS功能。
 
-👍 Pros:
+👍 优点:
 
-- Quickest way to write styles
-- Good for prototyping (write inline styles then move to stylesheet)
-- Has great preference (can override styles from a stylesheet)
+- 编写样式的最快捷方式
+- 有利于原型设计（先写内联样式，然后再移到样式表）
+- 有很大的优先权（可以覆盖样式表中的样式）
 
-👎 Cons:
+👎 缺点:
 
-- Tedious to convert plain CSS to inline styles
-- Lots of inline styles make JSX unreadable
-- You can not use basic CSS features like animations, selectors, etc.
-- Does not scale well
+- 将普通的CSS转换为内联样式很繁琐
+- 大量的内联样式使JSX无法阅读
+- 你不能使用基本的CSS功能，如动画、选择器等
+- 不能很好地扩展
 
 ## Plain CSS
 
-Instead of using inline styles, it's common to import a CSS stylesheet to style a component's elements.
+不使用内联样式，而是导入一个CSS样式表来给组件的元素设置样式是很常见的。
 
-Writing CSS in a stylesheet is probably the most common and basic approach to styling a React application, but it shouldn't be dismissed so easily.
+在样式表中编写CSS可能是为React应用程序设置样式的最常见和最基本的方法，但它不应该被轻易否定。
 
-Writing styles in "plain" CSS stylesheets is getting better all the time, due to an increasing set of features available in the CSS standard.
+在 plain CSS样式表中编写样式一直在变得更好，因为CSS标准中的功能越来越多。
 
-This includes features like CSS variables to store dynamic values, all manner of advanced selectors to select child elements with precision, and new pseudo-classes like `:is` and `:where`.
+这包括像用于存储动态值的CSS变量、用于精确选择子元素的各种高级选择器，以及像 `:is` 和 `:where` 这样的新伪类。
 
-Here is our testimonial card written in plain CSS and imported at the top of our React application:
+这是我们用 plain CSS写的推荐卡，并在我们的React应用程序的顶部导入。
 
 ```css
 /* src/styles.css */
@@ -275,47 +275,47 @@ export default function App() {
 }
 ```
 
-For our testimonial card, note that we are creating classes to be applied to each individual element. These classes all start with the same name `testimonial-`.
+对于我们的推荐卡，请注意，我们正在创建应用于每个单独元素的类。这些类都以相同的名称 `testimonial-` 开始。
 
-CSS written in a stylesheet is a great first choice for your application. Unlike inline styles, it can style your application in virtually any way you need.
+写在样式表中的CSS是你的应用程序的一个很好的首选。与内联样式不同，它几乎可以以任何你所需要的方式为你的应用程序设置样式。
 
-One minor problem might be your naming convention. Once you have a very well-developed application, it becomes harder to think of unique classnames for your elements, especially when you have 5 divs wrapped inside each other.
+一个小问题可能是你的命名惯例。一旦你有了一个非常完善的应用程序，你就很难为你的元素想出独特的类名，尤其是当你有5个div互相包裹的时候。
 
-If you don't have a naming convention you are confident with (i.e. BEM), it can be easy to make mistakes, plus create multiple classes with the same name, which leads to conflicts.
+如果你没有一个你有信心的命名规则（如BEM），就很容易犯错，再加上创建多个同名的类，这就导致了冲突。
 
-Additionally, writing normal CSS can be more verbose and repetitive than newer tools like SASS/SCSS. As a result, it can take a bit longer to write your styles in CSS versus a tool like SCSS or a CSS-in-JS library.
+此外，与SASS/SCSS等新工具相比，编写 plain CSS可能更加繁琐和重复。因此，与SCSS等工具或CSS-in-JS库相比，用CSS写样式可能需要更长的时间。
 
-Plus, it's important to note that since CSS cascades to all children elements, if you apply a CSS stylesheet to a component it is not just scoped to that component. All its declared rules will be transferred to any elements that are children of your styled component.
+另外，需要注意的是，由于CSS会级联到所有的子元素，如果你把CSS样式表应用到一个组件上，那么它就不仅仅局限于该组件了。它的所有声明规则将被转移到任何作为你的样式表组件的子元素上。
 
-If you are confident with CSS, it is definitely a viable choice for you to style any React application.
+如果你对CSS很有信心，它绝对是你为任何React应用程序设计样式的一个可行的选择。
 
-With that being said, there are a number of CSS libraries that give us all the power of CSS with less code and include many additional features that CSS will never have on its own (such as scoped styles and automatic vendor prefixing).
+说到这里，有一些CSS库为我们提供了CSS的所有功能，但代码更少，并包括许多CSS本身永远不会有的额外功能（如范围内的样式和自动提供前缀）。
 
-👍 Pros:
+👍 优点:
 
-- Gives us all of the tools of modern CSS (variables, advanced selectors, new pseudo-classes, etc.)
-- Helps us clean up our component files from inline styles
+- 给我们提供了现代CSS的所有工具（变量、高级选择器、新的伪类等等）。
+- 帮助我们从内联样式中清理我们的组件文件
 
-👎 Cons:
+👎 缺点:
 
-- Need to setup vendor prefixing to ensure latest features work for all users
-- Requires more typing and boilerplate than other CSS libraries (i.e. SASS)
-- Any stylesheet cascades to component and all children; not scoped
-- Must use a reliable naming convention to ensure styles don't conflict
+- 需要设置统一的前缀，以确保最新的功能对所有用户有效
+- 与其他CSS库（如SASS）相比，需要更多的代码量和模板。
+- 任何样式表都会级联到组件和所有的子组件；没有范围。
+- 必须使用一个可靠的命名规则，以确保样式不冲突。
 
 ## SASS / SCSS
 
-What is SASS? SASS is an acronym that stands for: Syntactically Awesome Style Sheets.
+什么是SASS？SASS是一个首字母缩写，代表。Syntactically Awesome Style Sheets。
 
-SASS gives us some powerful tools, many of which don't exist in normal CSS stylesheets. It includes features like variables, extending styles, and nesting.
+SASS为我们提供了一些强大的工具，其中许多是 plain CSS样式表所不具备的。它包括变量、扩展样式和嵌套等功能。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screen-Shot-2021-07-14-at-12.36.47-PM.png)
 
-SASS allows us to write styles in two different kinds of stylesheets, with the extensions .scss and .sass.
+SASS允许我们用两种不同的样式表编写样式，扩展名为.scss和.sass。
 
-SCSS styles are written in a similar syntax to normal CSS, however SASS styles do not require us to use open and closing brackets when writing style rules.
+SCSS样式的写法与普通CSS相似，但SASS样式不要求我们在写样式规则时使用开括号和闭括号。
 
-Here is a quick example of an SCSS stylesheet with some nested styles:
+下面是一个带有一些嵌套样式的SCSS样式表的快速例子:
 
 ```css
 /* styles.scss */
@@ -337,7 +337,7 @@ nav {
 }
 ```
 
-Compare this with the same code written in a SASS stylesheet:
+将此与写在SASS样式表中的相同代码进行比较:
 
 ```css
 /* styles.sass */
@@ -358,15 +358,15 @@ nav
 
 ```
 
-Since this is not regular CSS, it needs to be compiled from SASS into plain CSS. To do so in our React projects, you can use a library like node-sass.
+因为这不是普通的CSS，所以需要从SASS编译成 plain CSS。为了在我们的React项目中做到这一点，你可以使用一个像node-sass这样的库。
 
-If you are using a Create React App project, to start using .scss and .sass files, you can install node-sass with npm:
+如果你使用的是Create React App项目，要开始使用.scss和.sass文件，你可以用npm安装node-sass:
 
 ```bash
 npm install node-sass
 ```
 
-Here is our testimonial card styled with SCSS:
+这是我们用SCSS设计的推荐卡的样式:
 
 ```css
 /* src/styles.scss */
@@ -402,40 +402,40 @@ body {
 }
 ```
 
-These styles give us the following features: variables, extending styles and nested styles.
+这些样式为我们提供了以下功能：变量、扩展样式和嵌套样式。
 
-**Variables**: You can use dynamic values by writing variables, just like in JavaScript, by declaring them with a `$` at the beginning.
+**Variables（变量）**: 你可以通过编写变量来使用动态值，就像在JavaScript中一样，在开头用"$"来声明它们。
 
-There are two variables that can be used in multiple rules: `$font-stack`, `$text-color`.
+有两个变量可以在多个规则中使用。`$font-stack`, `$text-color`。
 
-**Extending / Inheritance**: You can add onto style rules by extending them. To extend rules, you create your own selector which can be reused like a variable. The name of rules that you want to extend start with `%`.
+**Extending（扩展） / Inheritance（继承）**: 你可以通过扩展样式规则来增加它们。为了扩展规则，你可以创建你自己的选择器，它可以像一个变量一样被重复使用。你想扩展的规则的名字以`%`开头。
 
-The variable `%font-basic` is inherited by the rules `body` and `.testimonial-name`.
+变量 `%font-basic` 被规则 `body` 和 `.testimonial-name` 所继承。
 
-**Nesting**: Instead of writing multiple rules that begin with the same selector, you can nest them.
+**Nesting（嵌套）**: 你可以不写以相同选择器开头的多个规则，而是嵌套它们。
 
-In `.testimonial-name` , we use a nested selector to target the `span` element within it.
+在`.testimonial-name`中，我们使用一个嵌套的选择器来定位其中的`span`元素。
 
-You can find a working version of a React application with SCSS [here](https://codesandbox.io/s/react-and-scss-forked-2xeu0?file=/src/styles.scss).
+你可以找到一个使用SCSS的React应用程序的工作版本 [这里](https://codesandbox.io/s/react-and-scss-forked-2xeu0?file=/src/styles.scss)。
 
-👍 Pros:
+👍 优点:
 
-- Includes many dynamic CSS features like extending, nesting, and mixins
-- CSS styles can be written with much less boilerplate over plain CSS
+- 包括许多动态的CSS功能，如扩展、嵌套和混合器
+- 编写CSS样式时，可以比 plain CSS少用很多模板
 
-👎 Cons:
+👎 缺点:
 
-- Like plain CSS, styles are global and not scoped to any one component
-- CSS stylesheets is starting to include a number of features that SASS had exclusively, such as CSS variables (not necessarily a con, but worth noting)
-- SASS / SCSS often requires setup, such as installing the Node library `node-sass`
+- 和普通CSS一样，样式是全局性的，不属于任何一个组件的范围。
+- CSS样式表开始包括一些SASS独有的功能，如CSS变量（不一定是缺点，但值得注意）。
+- SASS/SCSS通常需要设置，比如安装Node库`node-sass`。
 
 ## CSS Modules
 
-CSS modules are another slight alternative to something like CSS or SASS.
+CSS Modules 是对CSS或SASS这样的东西的另一种轻量替代。
 
-What is great about CSS modules is that they can be used with either normal CSS or SASS. Plus, if you are using Create React App you can start using CSS modules with no setup at all.
+CSS Modules 的好处是，它们可以与普通CSS或SASS一起使用。另外，如果你使用的是Create React App，你就可以开始使用CSS Modules，根本不需要设置。
 
-Here is our application written with CSS modules:
+下面是我们用CSS模块编写的应用程序:
 
 ```css
 /* src/styles.module.css */
@@ -485,13 +485,13 @@ export default function App() {
 }
 ```
 
-Our CSS file has the name `.module` in it before the extension `.css`. Any CSS module file must have the name "module" in it and end in the appropriate extension (if we are using CSS or SASS/SCSS).
+我们的CSS文件在扩展名 `.css` 之前有 `.module` 这个名字。任何CSS模块文件都必须有 `module` 的名字，并以适当的扩展名结尾（如果我们使用的是CSS或SASS/SCSS）。
 
-What is interesting to note if we look at the code above is that CSS modules are written just like normal CSS, but are imported and used as if it were created as objects (inline styles).
+如果我们看一下上面的代码，有趣的是，CSS modules 的写法与普通的CSS一样，但被导入和使用时就像它被创建为对象一样（内联样式）。
 
-The benefit of CSS modules is that it helps avoid our problem of class conflicts with normal CSS. The properties that we are referencing turn into unique classnames that cannot conflict with one another when our project is built.
+CSS modules 的好处是，它有助于避免我们与普通CSS的类冲突问题。我们所引用的属性变成了独特的类名，在我们的项目建立时不会相互冲突。
 
-Our generated HTML elements will look like this:
+我们生成的HTML元素将看起来像这样:
 
 ```html
 <p class="_styles__testimonial-name_309571057">
@@ -499,35 +499,35 @@ Our generated HTML elements will look like this:
 </p>
 ```
 
-Plus, CSS modules solve the problem of global scope in CSS. As compared to our normal CSS stylesheets, CSS declared using modules to individual components will not cascade to child components.
+另外，CSS modules 解决了CSS中全局范围的问题。与我们普通的CSS样式表相比，使用模块向单个组件声明的CSS不会层叠到子组件。
 
-Therefore, CSS modules are best to use over CSS and SASS to make sure classes don't conflict and to write predictable styles that only apply to one or another component.
+因此，CSS modules 最好在CSS和SASS之上使用，以确保类不冲突，并编写只适用于一个或另一个组件的可预测样式。
 
-👍 Pros:
+👍 优点:
 
-- Styles are scoped to one or another component (unlike CSS / SASS)
-- Unique, generated classnames ensure no style conflict
-- Can use them immediately without setup in CRA projects
-- Can be used with SASS / CSS
+- 样式的范围是一个或另一个组件（与CSS/SASS不同）。
+- 独特的、生成的类名确保没有样式冲突
+- 可以在CRA项目中立即使用，无需设置
+- 可与SASS/CSS一起使用
 
-👎 Cons:
+👎 缺点:
 
-- Can be tricky to reference classnames
-- May be a learning curve to use CSS styles like object properties
+- 引用类名可能比较麻烦
+- 使用CSS样式（如对象属性）可能是一个学习曲线比较高
 
 ## CSS-in-JS
 
-Similar to how React allowed us to write HTML as JavaScript with JSX, CSS-in-JS has done something similar with CSS.
+类似于React允许我们用JSX将HTML写成JavaScript，CSS-in-JS也对CSS做了类似的事情。
 
-CSS-in-JS allows us to write CSS styles directly in our components' javascript (.js) files.
+CSS-in-JS允许我们直接在我们组件的javascript（.js）文件中编写CSS样式。
 
-Not only does it allow you write CSS style rules without having to make a single .css file, but these styles are scoped to individual components.
+它不仅允许你编写CSS样式规则而不需要制作一个.css文件，而且这些样式是针对单个组件的。
 
-In other words, you can add, change or remove CSS without any surprises. Changing one component's styles will not impact the styles of the rest of your application.
+换句话说，你可以在没有任何意外的情况下添加、改变或删除CSS。改变一个组件的样式不会影响你的应用程序的其他部分的样式。
 
-CSS-in-JS often makes use of a special type of JavaScript function called a tagged template literal. What's great about this is that we can still write plain CSS style rules directly in our JS!
+CSS-in-JS经常使用一种特殊类型的JavaScript函数，称为标签模板字面。这样做的好处是，我们仍然可以直接在JS中编写 plain CSS样式规则
 
-Here's a quick example of a popular CSS-in-JS library, Styled Components:
+下面是一个流行的CSS-in-JS库的快速例子，Styled Components:
 
 ```js
 import styled from "styled-components";
@@ -556,17 +556,17 @@ export default function App() {
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screen-Shot-2021-07-14-at-11.18.06-AM.png)
 
-Note a few things here:
+这里要注意几件事:
 
-1. You can write normal CSS styles, but can include nested styles and pseudo-classes (like hover).
-2. You can associate styles with any valid HTML element, such as the button element above (see `styled.button`).
-3. You can create new components with these associated styles. See how `Button` is used in our App component.
+1. 你可以写普通的CSS样式，但可以包括嵌套样式和伪类（如hover）。
+2. 你可以将样式与任何有效的HTML元素相关联，比如上面的按钮元素（见`styled.button`）。
+3. 你可以用这些关联的样式创建新的组件。请看 `Button` 是如何在我们的App组件中使用的。
 
-Since this is a component, can it be passed props? Yes! We can export this component and use it anywhere in our app we like, plus give it dynamic features through props.
+既然这是一个组件，它可以传递 props 吗？是的！我们可以导出这个组件，并在我们喜欢的地方使用它。我们可以导出这个组件，并在我们的应用程序中的任何地方使用它，另外还可以通过props赋予它动态功能。
 
-Let's say that you want an inverted variant of `Button` above with an inverted background and text. No problem.
+比方说，你想要一个倒置的 `Button` 的变体，有一个倒置的背景和文本。没问题。
 
-Pass the `inverted` prop to our second button and in `Button`, you can access all props passed to the component using the `${}` syntax with an inner function.
+将 `inverted` prop传递给我们的第二个按钮，在 `Button` 中，你可以使用 `${}` 语法和内部函数访问传递给该组件的所有 props。
 
 ```js
 import styled from "styled-components";
@@ -595,42 +595,42 @@ export default function App() {
 }
 ```
 
-In the return of the function, you can select the `inverted` prop and use a ternary to conditionally determine the color of the background and text.
+在该函数的返回中，你可以选择`inverted` prop，并使用三元组来有条件地确定背景和文本的颜色。
 
-Here is the result:
+下面是结果:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screen-Shot-2021-07-14-at-11.31.52-AM.png)
 
-There are a great deal more benefits to using a CSS-in-JS library to style your React applications (too many to cover here), some of which I will list below.
+使用CSS-in-JS库来设计你的React应用程序还有很多好处（太多了，这里就不多说了），下面我将列出其中的一些。
 
-Be sure to check out the two most popular CSS-in-JS libraries for React: Emotion and Styled Components.
+请务必查看两个最受欢迎的React的CSS-in-JS库。Emotion和Styled Components。
 
-One downside to using a CSS-in-JS libraries is adding an additional library to your project. However, I would argue this is easily worth the improved developer experience you have when styling your React apps versus plain CSS.
+使用CSS-in-JS库的一个缺点是给你的项目增加一个额外的库。然而，我认为这很容易值得你在为你的React应用程序设计样式时，与普通的CSS相比，你有更好的开发者体验。
 
-👍 Pros:
+👍 优点:
 
-- CSS-in-JS is predictable – styles are scoped to individual components
-- Since our CSS is now JS, we can export, reuse, and even extend our styles through props
-- CSS-in-JS libraries ensure there are no styling conflicts by generating unique classnames for your written styles
-- No need to focus on naming conventions for your classes, just write styles!
+- CSS-in-JS是可预测的--样式的范围是针对单个组件的
+- 由于我们的CSS现在是JS，我们可以通过props导出、重用甚至扩展我们的样式。
+- CSS-in-JS库通过为你编写的样式生成唯一的类名来确保没有样式冲突。
+- 不需要关注你的类的命名规则，只需要编写样式即可
 
-👎 Cons:
+👎 缺点:
 
-- Unlike plain CSS, you will need to install one or more third-party JavaScript libraries, which will add weight to your built project
+- 与普通的CSS不同，你需要安装一个或多个第三方的JavaScript库，这将增加你所建项目的重量
 
-## Conclusion
+## 结语
 
-Note that I did not include component libraries in this comparison. I wanted to focus primarily on different ways to compose styles yourself.
+请注意，我在这个比较中没有包括组件库。我想把重点主要放在自己编排样式的不同方式上。
 
-Be aware that choosing a library with pre-made components and styles like Material UI or Ant Design (to name a couple) is a totally valid choice for your project.
+请注意，选择一个有预制组件 style 的库，如Material UI或Ant Design（仅举几例），对你的项目来说是一个完全有效的选择。
 
-I hope this guide gave you a good understanding of how to style your React apps along with which approach to choose for your next project.
+我希望这个指南能让你很好地理解如何为你的React应用程序设计样式，以及为你的下一个项目选择哪种方法。
 
-## Want The Rest? Join The React Bootcamp
+## 想了解更多？加入React Bootcamp
 
-**[The React Bootcamp](http://bit.ly/join-react-bootcamp)** takes everything you should know about learning React and bundles it into one comprehensive package, including videos, cheatsheets, plus special bonuses.
+**[The React Bootcamp](http://bit.ly/join-react-bootcamp)** 将你应该知道的关于学习React的一切，捆绑在一个综合包中，包括视频、手册，以及特别奖金。
 
-Gain the insider information **100s** of developers have already used to master React, find their dream jobs, and take control of their future:
+获得内幕信息，**100** 名开发者已经用它掌握了React，找到了他们梦想的工作，并掌握了他们的未来:
 
 [![The React Bootcamp](https://reedbarger.nyc3.digitaloceanspaces.com/react-bootcamp-banner.png)](http://bit.ly/join-react-bootcamp)  
-_Click here to be notified when it opens_
+_点击这里获得开课通知_

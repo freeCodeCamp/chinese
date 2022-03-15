@@ -18,22 +18,22 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 ## **计算机科学课程 (16)**
 
-1. [编程和计算机科学简介](#introduction-to-programming-and-computer-science) (freeCodeCamp)
+1. [编程和计算机科学简介](./#introduction-to-programming-and-computer-science) (freeCodeCamp)
 2. [数据结构 - 计算机科学初学者课程](#data-structures-computer-science-course-for-beginners) (freeCodeCamp)
-3. [CS50的计算机科学简介](#cs50-s-introduction-to-computer-science) (Harvard University)
-4. [计算机科学和使用Python编程的介绍](#introduction-to-computer-science-and-programming-using-python) (MIT)
-5. [算法简介](#introduction-to-algorithms) (MIT)
-6. [大 O 复杂度](#big-o-notation) (freeCodeCamp)
-7. [技术面试的图算法](#graph-algorithms-for-technical-interviews) (freeCodeCamp)
-8. [编程中的递归](#recursion-in-programming) (freeCodeCamp)
-9. [数据结构 - 使用C和C++的完整课程](#data-structures-full-course-using-c-and-c-) (freeCodeCamp)
-10. [动态规划--学习解决算法问题和编码挑战](#dynamic-programming-learn-to-solve-algorithmic-problems-coding-challenges) (freeCodeCamp)
-11. [算法和数据结构](#algorithm-and-data-structures) (freeCodeCamp)
-12. [Python中的数据结构和算法--面向初学者的完整课程](#data-structures-and-algorithms-in-python-full-course-for-beginners) (freeCodeCamp)
-13. [用Python进行交互式编程的介绍 第一部分](#an-introduction-to-interactive-programming-in-python-part-1-rice-university) (Rice University)
-14. [学习编程：基础知识](#learn-to-program-the-fundamentals) (University of Toronto)
-15. [自我编码! 编程入门](#code-yourself-an-introduction-to-programming) (The University of Edinburgh)
-16. [学习编程：编写高质量的代码](#learn-to-program-crafting-quality-code) (University of Toronto)
+3. [CS50的计算机科学简介](./#cs50-s-introduction-to-computer-science) (Harvard University)
+4. [计算机科学和使用Python编程的介绍](./#introduction-to-computer-science-and-programming-using-python) (MIT)
+5. [算法简介](./#introduction-to-algorithms) (MIT)
+6. [大 O 复杂度](./#big-o-notation) (freeCodeCamp)
+7. [技术面试的图算法](./#graph-algorithms-for-technical-interviews) (freeCodeCamp)
+8. [编程中的递归](./#recursion-in-programming) (freeCodeCamp)
+9. [数据结构 - 使用C和C++的完整课程](./#data-structures-full-course-using-c-and-c-) (freeCodeCamp)
+10. [动态规划--学习解决算法问题和编码挑战](./#dynamic-programming-learn-to-solve-algorithmic-problems-coding-challenges) (freeCodeCamp)
+11. [算法和数据结构](./#algorithm-and-data-structures) (freeCodeCamp)
+12. [Python中的数据结构和算法--面向初学者的完整课程](./#data-structures-and-algorithms-in-python-full-course-for-beginners) (freeCodeCamp)
+13. [用Python进行交互式编程的介绍 第一部分](./#an-introduction-to-interactive-programming-in-python-part-1-rice-university) (Rice University)
+14. [学习编程：基础知识](./#learn-to-program-the-fundamentals) (University of Toronto)
+15. [自我编码! 编程入门](./#code-yourself-an-introduction-to-programming) (The University of Edinburgh)
+16. [学习编程：编写高质量的代码](./#learn-to-program-crafting-quality-code) (University of Toronto)
 
 ## **************Git和Github课程 (************4************)**************
 
@@ -215,7 +215,7 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 ## **计算机科学课程**
 
-### **Introduction to Programming and Computer Science**
+### <h2 id="Introduction-to-Programming-and-Computer-Science">编程和计算机科学简介</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=zOjov-2OZ0E) 中，你将学习到数组、循环、函数、递归、条件和数据结构。
 

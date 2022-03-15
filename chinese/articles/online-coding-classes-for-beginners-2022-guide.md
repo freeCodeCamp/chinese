@@ -445,119 +445,119 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 ## **JavaScript 课程**
 
-### **JavaScript Algorithms and Data Structures**
+### <h2 id="JavaScript-Algorithms-and-Data-Structures">JavaScript算法和数据结构</h2>
 
 在 [这个freeCodeCamp课程](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/) 中，你将学习到基本的JavaScript，ES6，正则表达式，基本数据结构，面向对象的编程和函数式编程。(免费认证)
 
-### **Learn JavaScript – Full Course for Beginners**
+### <h2 id="Learn-JavaScript – Full-Course-for-Beginners">学习JavaScript - 初学者的全部课程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=PkZNo7MFNFg) 中，你将学习到条件、循环、函数、对象、数组和ES6。
 
-### **Full stack JavaScript**
+### <h2 id="Full-stack-JavaScript">全栈JavaScript</h2>
 
 [这个Odin项目课程](https://www.theodinproject.com/paths/full-stack-javascript?) 将通过一系列的课程和项目教你HTML、CSS、JavaScript和NodeJS。
 
-### **The Modern JavaScript Tutorial**
+### <h2 id="The-Modern-JavaScript-Tutorial">现代JavaScript教程</h2>
 
 在 [本教程](https://javascript.info/) 中，你将学习到JavaScript基础知识、错误处理、 promises、Async/await和DOM。
 
-### **JavaScript Tutorial**
+### <h2 id="JavaScript-Tutorial">JavaScript教程</h2>
 
 在 [本教程](https://www.javascripttutorial.net/) 中，你将学习JavaScript基础知识、ES6、BOM、DOM和Web APIs。
 
-### **LearnJS**
+### <h2 id="LearnJS">LearnJS</h2>
 
 在 [本教程](https://www.learn-js.org/) 中，你将学习到JavaScript基础知识、面向对象编程、继承和数据结构。
 
-### **JavaScript**
+### <h2  id="JavaScript">JavaScript</h2>
 
 在 [这个 SoloLearn 课程](https://www.sololearn.com/learning/1024) 中，你将学习到条件、循环、函数、对象、数组、DOM和事件。
 
-### **JavaScript Programming**
+### <h2 id="JavaScript-Programming">JavaScript 编程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=jS4aFq5-91M) 中，你将学习JavaScript的基础知识，并建立一个黑杰克游戏和谷歌浏览器扩展。
 
-### **JavaScript Tutorial for Beginners: Learn JavaScript in 1 Hour**
+### <h2 id="JavaScript-Tutorial-for-Beginners: Learn-JavaScript-in-1-Hour">初学者的JavaScript教程: 在1小时内学习JavaScript</h2>
 
 在 [这个Mosh编程课程](https://www.youtube.com/watch?v=W6NZfCO5SIk) 中，你将学习JavaScript的基础知识，如对象、数组和函数。
 
-### **TypeScript Course for Beginners 2021 – Learn TypeScript from Scratch!**
+### <h2 id="TypeScript-Course-for-Beginners-2021 – Learn-TypeScript-from-Scratch!">2021年TypeScript初学者课程--从零开始学习TypeScript!</h2>
 
 在 [这个Academind课程](https://www.youtube.com/watch?v=BwuLxPH8IDs) 中，你将学习到数组类型、对象类型、图元、函数类型和回调。
 
-### **Backend Development and API's**
+### <h2 id="Backend-Development-and-API">后台开发和API</h2>
 
 在 [这个freeCodeCamp课程](https://www.freecodecamp.org/learn/apis-and-microservices/) 中，你将学习Node.js、NPM、Express和MongoDB的基础知识。(免费认证)
 
-### **Node.js and Express.js – Full Course**
+### <h2 id="Node.js-and-Express.js – Full-Course">Node.js和Express.js - 完整课程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=Oe421EPjeBE) 中，你将学习NPM命令、不同模块、异步模式、事件、流和HTTP基础知识。
 
-### **Node.js Tutorial for Beginners: Learn Node in 1 Hour**
+### <h2 id="Node.js-Tutorial-for-Beginners: Learn-Node-in-1-Hour">Node.js初学者教程: 1小时内学会Node</h2>
 
 在 [本Mosh编程课程](https://www.youtube.com/watch?v=TlB_eWDSMt4) 中，你将学习不同的模块，如路径模块、操作系统模块和文件系统模块以及NPM命令。
 
 ## **JavaScript 框架和库**
 
-### **freeCodeCamp React Course**
+### <h2 id="freeCodeCamp-React-Course">freeCodeCamp React 课程</h2>
 
 在 [这个freeCodeCamp课程](https://www.freecodecamp.org/learn/front-end-libraries/#react) 中，你将学习JSX、功能组件、类组件、state和props。(免费前端库认证的一部分)
 
-### **React Course - Beginner's Tutorial for React JavaScript Library \[2022\]**
+### <h2 id="React-Course - Beginner\'s-Tutorial-for-React-JavaScript-Library \[2022\]">React课程--React JavaScript库的初级教程 \[2022\]</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=bMknfKXIFA8) 中，你将学习JSX、Hooks、state、props等知识。你还将建立几个项目，包括一个仿Airbnb网站 和备忘录生成器。
 
-### **Scrimba React course**
+### <h2 id="Scrimba-React-course">Scrimba React课程</h2>
 
 在 [本Scrimba课程](https://scrimba.com/learn/learnreact) 中，你将学习JSX、可重用的组件、状态、生命周期方法和Hooks。
 
-### **React JS – React Tutorial for Beginners**
+### <h2 id="React-JS – React-Tutorial-for-Beginners">React JS - React 初学者教程</h2>
 
 在 [此Mosh编程课程](https://www.youtube.com/watch?v=Ke90Tje7VS0) 中，你将学习props、state、hooks、调试React应用程序和处理事件。
 
-### **React JS Crash Course 2021**
+### <h2 id="React-JS-Crash-Course-2021">2021年React JS速成班</h2>
 
 在 [这个Brad Traversy课程](https://www.youtube.com/watch?v=w7ejDZ8SWv8) 中，你将学习JSX、props、state、Hooks、React图标和条件渲染等知识。
 
-### **freeCodeCamp Redux Course**
+### <h2 id="freeCodeCamp-Redux-Course">freeCodeCamp Redux 课程</h2>
 
 在 [这个freeCodeCamp课程](https://www.freecodecamp.org/learn/front-end-libraries/#redux) 中，你将了解到行动、还原器和存储。(免费前端库认证的一部分)
 
-### **Redux For Beginners | React Redux Tutorial**
+### <h2 id="Redux-For-Beginners | React-Redux-Tutorial">Redux初学者｜React Redux教程</h2>
 
 在 [这个Dev Ed教程](https://www.youtube.com/watch?v=CVpUuw9XSjY) 中，你将学习到actions, reducers, stores, combineReducers和Redux DevTools。
 
-### **Thinkster Angular Tutorial**
+### <h2 id="Thinkster-Angular-Tutorial">Thinkster Angular 教程</h2>
 
 在 [这个Thinkster教程](https://thinkster.io/tutorials/learn-angular-2) 中，你将了解到生命周期Hooks、风格化组件、NgModel和Angular指令。
 
-### **Angular Crash Course**
+### <h2 id="Angular-Crash-Course">Angular 速成课]</h2>
 
 在 [这个Brad Traversy课程](https://www.youtube.com/watch?v=Fdf5aTYRW0E) 中，你将学习到组件、服务和模块。
 
-### **Learn Angular – Full Tutorial Course**
+### <h2 id="Learn-Angular – Full-Tutorial-Course">学习Angular - 完整教程课程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=2OHbjep_WjQ) 中，你将学习插值和表达式、生命周期 Hooks、组件、路由和指令。
 
-### **Vue.js Course for Beginners \[2021 Tutorial\]**
+### <h2 id="Vue.js-Course-for-Beginners \[2021 Tutorial\]">Vue.js初学课程 \[2021 Tutorial\]</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=FXpIoQ_rT_c) 中，你将学习到指令、数据绑定、Vue开发工具、props和槽(slots)等内容。
 
-### **Vue JS Crash Course 2021**
+### <h2 id="Vue-JS-Crash-Course-2021">Vue JS速成班 2021</h2>
 
 在[这个Brad Traversy课程](https://www.youtube.com/watch?v=qZXt1Aom3Cs)中，你将通过建立一个随机用户生成器和任务跟踪器来学习Vue.js的基础知识。
 
-### **Data Visualization with D3, JavaScript, React – Full Course \[2021\]**
+### <h2 id="Data-Visualization-with-D3, JavaScript, React – Full-Course \[2021\]">用D3、JavaScript、React进行数据可视化 - 全套课程 \[2021\]</h2>
 
 在这个D3课程的 [第一部分](https://www.youtube.com/watch?v=2LhoCfjm8R4) 和 [第二部分](https://www.youtube.com/watch?v=H2qPeJx1RDI) 中，你将学习到线形图、散点图、条形图和霍普勒特地图。
 
-### **Next.js for Beginners - Full Course**
+### <h2 id="Next.js-for-Beginners - Full-Course">Next.js初学者 - 全套课程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=1WmNXEVia8I) 中，你将学习如何用Next.js、Sanity.io和Vercel构建一个配方应用。本课程将涵盖动态路由、静态资产（static assets）、无服务器等内容。
 
 ## **Python 课程**
 
-### **Programming for Everybody (Getting Started with Python)**
+### <h2 id="Programming-for-Everybody-(Getting Started with Python)">每个人的编程（Python入门）</h2>
 
 在 [密歇根大学的这门课程](https://www.coursera.org/learn/python?specialization=python) 中，你将学习到编程的基础知识，如函数、循环、条件和变量。
 

@@ -393,53 +393,53 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=-qfEOE4vtxE) 中，你将学习Bootstrap 5的基础知识，以及如何以移动优先的方式创建设计。
 
-## **UI/UX Courses**
+## **UI/UX 课程**
 
-### **Foundations of User Experience (UX) Design**
+### <h2 id="Foundations-of-User-Experience-(UX)-Design">用户体验（UX）设计的基础</h2>
 
 在 [这个谷歌课程](https://www.coursera.org/learn/foundations-user-experience-design?specialization=google-ux-design) 中，你将学习到良好的用户体验设计和可访问性背后的基本知识。
 
-### **Start the UX Design Process: Empathize, Define, and Ideate**
+### <h2 id="Start-the-UX-Design-Process: Empathize, Define, and Ideate">用户体验设计过程: 感同身受、定义和构思</h2>
 
 在 [这个谷歌课程](https://www.coursera.org/learn/start-ux-design-process?specialization=google-ux-design) 中，你将学习到用户体验研究和线框设计。
 
-### **Build Wireframes and Low-Fidelity Prototypes**
+### <h2 id="Build-Wireframes-and-Low-Fidelity-Prototypes">建立线框和低保真原型</h2>
 
 在 [这个谷歌课程](https://www.coursera.org/learn/wireframes-low-fidelity-prototypes?specialization=google-ux-design) 中，你将学习如何构建线框、原型和故事板。
 
-### **Conduct UX Research and Test Early Concepts**
+### <h2 id="Conduct-UX-Research-and-Test-Early-Concepts">进行用户体验研究和测试早期概念</h2>
 
 在 [这个谷歌课程](https://www.coursera.org/learn/conduct-ux-research?specialization=google-ux-design) 中，你将学习如何创建一个可用性研究。
 
-### **Create High-Fidelity Designs and Prototypes in Figma**
+### <h2 id="Create-High-Fidelity-Designs-and-Prototypes-in-Figma">在Figma中创建高保真设计和原型</h2>
 
 在 [这个谷歌课程](https://www.coursera.org/learn/high-fidelity-designs-prototype?specialization=google-ux-design) 中，您将学习如何用Figma创建良好的设计模拟图。
 
-### **Responsive Web Design in Adobe XD**
+### <h2 id="Responsive-Web-Design-in-Adobe-XD">Adobe XD中的响应式网页设计</h2>
 
 在 [这个谷歌课程](https://www.coursera.org/learn/responsive-web-design-adobe-xd?specialization=google-ux-design) 中，你将学习如何使用Adobe XD并创建响应式设计。
 
-### **Free Adobe XD Tutorial: User Experience Design Course with Adobe XD Course**
+### <h2 id="Free-Adobe-XD-Tutorial: User-Experience-Design-Course-with-Adobe-XD-Course">免费的Adobe XD教程。用户体验设计课程与Adobe XD课程</h2>
 
 在 [这个YouTube课程](https://www.youtube.com/watch?v=68w2VwalD5w) 中，你将了解到UI/UX设计和线框设计的基本知识。
 
-### **The 2019 UI Design Crash Course for Beginners**
+### <h2 id="The-2019-UI-Design-Crash-Course-for-Beginners">2019年UI设计初学者速成班</h2>
 
 在 [这个YouTube课程](https://www.youtube.com/watch?v=_Hp_dI0DzY4) 中，你将学习设计基础知识和Adobe XD。
 
-### **Figma Tutorial – A Free UI Design/Prototyping Tool**
+### <h2 id="Figma-Tutorial – A-Free-UI-Design/Prototyping-Tool">Figma教程 - 一个免费的UI设计/原型设计工具</h2>
 
 在 [这个YouTube课程](https://www.youtube.com/watch?v=3q3FV65ZrUs) 中，你将如何使用Figma设计工具。
 
-### **UXpin: Free UX Ebooks**
+### <h2 id="UXpin: Free-UX-Ebooks">UXpin: 免费的用户体验方面的电子书</h2>
 
 [UXpin](https://www.uxpin.com/studio/ebooks/)是一个资源站点，提供各种关于移动和网络线框设计、可用性测试、模拟图等的电子书。
 
-### **Figma Course - Web Design Tutorial for Beginners**
+### <h2 id="Figma-Course - Web-Design-Tutorial-for-Beginners">Figma课程--网页设计初学者教程</h2>
 
 在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=D56hs0Twfco)中，你将学习如何使用Figma设计工具进行移动和桌面设计的基本知识。
 
-### **Figma Tutorial for UI Design - Course for Beginners**
+### <h2 id="Figma-Tutorial-for-UI-Design - Course-for-Beginners">Figma UI设计教程 - 初学者课程</h2>
 
 在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=jwCmIBJ8Jtc)中，你将学习Figma的布局、颜色和设计原则。
 

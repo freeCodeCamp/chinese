@@ -703,7 +703,7 @@ In [this Code with Chris course](https://www.youtube.com/watch?v=Ulp1Kimblg0),�
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=9Fd9hw329fY&list=PLWKjhJtqVAbmqFs83T4W-FZQ9kK983tZC) 中，你将学习如何通过建立一个平台游戏来使用虚幻游戏引擎和C++。
 
-### <h2 id="Godot-Game-Engine-Tutorial - Make-a-2D-Platformer-Game">Python游戏初学者教程--Python游戏开发课程</h2>
+### <h2 id="Godot-Game-Engine-Tutorial - Make-a-2D-Platformer-Game">Godot游戏引擎教程--制作2D平台游戏</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=fQXKjmCDkIA&list=PLWKjhJtqVAbmqFs83T4W-FZQ9kK983tZC&index=4) 中，你将学习如何使用Godot游戏引擎，同时构建一个平台游戏。
 

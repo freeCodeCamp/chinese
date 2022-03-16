@@ -561,93 +561,93 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 在 [密歇根大学的这门课程](https://www.coursera.org/learn/python?specialization=python) 中，你将学习到编程的基础知识，如函数、循环、条件和变量。
 
-### **Python Data Structures**
+### <h2 id="Python-Data-Structures">Python数据结构</h2>
 
 在 [密歇根大学的这门课程](https://www.coursera.org/learn/python-data?specialization=python) 中，你将学习到元组、字典、列表和字符串。
 
-### **Using Python to Access Web Data**
+### <h2 id="Using-Python-to-Access-Web-Data">使用Python来访问网络数据</h2>
 
 在 [密歇根大学的这门课程](https://www.coursera.org/learn/python-network-data?specialization=python) 中，你将学习到XML、API、正则表达式和JSON。
 
-### **Using Databases with Python**
+### <h2 id="Using-Databases-with-Python">用Python使用数据库</h2>
 
 在 [密歇根大学的这门课程](https://www.coursera.org/learn/python-databases?specialization=python) 中，你将学习关系型SQL，CRUD（创建、读取、更新和删除）应用程序，以及面向对象的模式。
 
-### **An Introduction to Interactive Programming in Python (Part 1)**
+### <h2 id="An-Introduction-to-Interactive-Programming-in-Python (Part 1)">Python交互式编程简介 (Part 1)</h2>
 
 [莱斯大学的这门课程](https://www.coursera.org/learn/interactive-python-1?specialization=computer-fundamentals) 将教你编程的基础知识，如函数、循环、条件和变量。
 
-### **An Introduction to Interactive Programming in Python (Part 2)**
+### <h2 id="An-Introduction-to-Interactive-Programming-in-Python (Part 2)">Python交互式编程简介 (Part 2)</h2>
 
 在 [莱斯大学的这门课程](https://www.coursera.org/learn/interactive-python-2?specialization=computer-fundamentals) 中，你将学习到元组、字典、列表和字符串。
 
-### **Scientific Computing with Python**
+### <h2 id="Scientific-Computing-with-Python">用Python进行科学计算</h2>
 
 在 [这个freeCodeCamp课程](https://www.freecodecamp.org/learn/scientific-computing-with-python/) 中，你将学习Python 3的基础知识，同时构建五个项目。(免费认证)
 
-### **Python Django Web Framework – Full Course for Beginners**
+### <h2 id="Python-Django-Web-Framework – Full-Course-for-Beginners">Python Django网络框架--初学者的全部课程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=F5mRW0jo-U4) 中，你将学习Django模板、Django模型表单和基于类的视图。
 
-### **Learn Python - Full Course for Beginners**
+### <h2 id="Learn-Python - Full-Course-for-Beginners">学习Python - 初学者的全部课程</h2>
 
 在这个 [freeCodeCamp YouTube Course](https://www.youtube.com/watch?v=rfscVS0vtbw) 中，你将学习编程基础知识，如列表、条件、字符串、元组、函数、类等等。
 
 你还将建立几个小项目，如一个基本的计算器、疯狂的libs游戏、一个翻译器应用和一个猜谜游戏。
 
-### **The Python Handbook**
+### <h2 id="the-Python-Handbook">Python手册</h2>
 
 在 [这篇Flavio Copes文章](https://www.freecodecamp.org/news/the-python-handbook/) 中，你将学习到字符串、列表、元组、递归等等。
 
 你还将学习如何在虚拟环境中安装第三方软件包以及如何工作。
 
-### **Python Tutorials for Absolute Beginners by CS Dojo**
+### <h2 id="Python-Tutorials-for-Absolute-Beginners-by-CS-Dojo">初学者的Python教程</h2>
 
 在这一系列 [CS Dojo的初级Python视频](https://www.youtube.com/playlist?list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg) 中，你将学习字典、循环、函数、对象等等。
 
 你还将学习 [如何使用Python建立一个Twitter机器人](https://www.youtube.com/watch?v=W0wWwglE1Vc&list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg&index=15)。
 
-### **Studytonight**
+### <h2 id="Studytonight">Studytonight</h2>
 
 在 [Studytonight](https://www.studytonight.com/python/) 中，你将学习Python基础知识、错误处理、OOP、文件处理、复杂数据类型、多线程等。
 
 一旦你学会了基础知识，你就可以进入他们的其他模块，包括 [NumPy库](https://www.studytonight.com/numpy)、 [Matplotlib](https://www.studytonight.com/matplotlib)、[Tkinter](https://www.studytonight.com/tkinter)、[Python中的网络编程](https://www.studytonight.com/network-programming-in-python/)和 [使用Beautiful Soup进行Web搜刮](https://www.studytonight.com/python/web-scraping/)。
 
-### **Python Core**
+### <h2 id="Python Core">Python核心</h2>
 
 在 [SoloLearn的Python课程](<https://www.sololearn.com/learning/1073> 中，您将学习字符串、变量、OOP、函数式编程等知识。有大量的测验、挑战和项目，你可以在学习过程中建立。
 
 为了开始学习，你需要创建一个免费账户。
 
-### **Python Basics with Sam (freeCodeCamp)**
+### <h2 id="Python-Basics-with-Sam-(freeCodeCamp)">与Sam一起学习Python基础知识</h2>
 
 在 [这个Sam Focht YouTube系列](https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23) 中，你将学习到循环、函数、字符串、递归等内容。
 
 你还将建立几个项目，包括猜谜游戏、购物清单、棋盘游戏和随机密码发生器。
 
-### **Python Beginner Tutorials**
+### <h2 id="Python-Beginner-Tutorials">Python初学者教程</h2>
 
 在这个 [Pythonspot初学者教程系列](https://pythonspot.com/beginner/) 中，你将学习数据类型、图元、对象、类、字典等。你还将学习高级概念，如递归、lambda和线程。
 
 一旦你掌握了基础知识，你就可以进入 [机器学习](https://pythonspot.com/machine-learning/)、 [数据库](https://pythonspot.com/python-database/) 和 [图形用户界面](https://pythonspot.com/gui/)。
 
-### **Python Tutorial**
+### <h2 id="Python Tutorial">Python  教程</h2>
 
 在这个 [PythonForBeginners 教程](https://www.pythonforbeginners.com/python-tutorial) 中，你将学习到函数、循环、列表、条件式、错误处理等。
 
 一旦你学会了基础知识，你就可以探索网站上的其他模块，包括 [用BeautifulSoup进行网络刮削](https://www.pythonforbeginners.com/python-on-the-web/web-scraping-with-beautifulsoup) 和 [在Python中使用YouTube API](https://www.pythonforbeginners.com/api/using-the-youtube-api)。
 
-### **Automate the Boring Stuff with Python**
+### <h2 id="Automate-the-Boring-Stuff-with-Python">用Python将无聊的事情自动化</h2>
 
 在 [Automate the Boring Stuff with Python online book](https://automatetheboringstuff.com/) 中，你将学习字典、字符串、调试、正则表达式等知识。
 
 如果你喜欢看视频，那么你可以通过Al Sweigart整理的 [YouTube系列](https://www.youtube.com/watch?v=1F_OgqRuSdI&list=PL0-84-yl1fUnRuXGFe_F7qSH1LEnn9LkW)。
 
-### **Python Crash Course for Beginners**
+### <h2 id="Python-Crash-Course-for-Beginners">初学者的Python速成班</h2>
 
 在这个[Brad Traversy YouTube课程](https://www.youtube.com/watch?v=JJmcL1N2KQs)中，你将学习到列表、元组、字典、函数、类等等。布拉德还将告诉你如何处理文件和JSON数据。
 
-### **Python Tutorial - Python for Beginners**
+### <h2 id="Python-Tutorial - Python-for-Beginners">Python教程--初学者的Python</h2>
 
 在这个 [与Mosh一起编程的YouTube课程中，](https://www.youtube.com/watch?v=_uQrJ0TkZlc) 你将学习编程基础知识，如变量、循环、字符串、元组、函数、类等等。
 
@@ -655,175 +655,175 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 对于额外的练习，你可以通过Mosh的 [53个Python初学者练习](https://programmingwithmosh.com/python/python-exercises-and-questions-for-beginners/)。
 
-### **PySpark Tutorial**
+### <h2 id="PySpark-Tutorial">PySpark 教程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=_C8kWso4ne4) 中，你将学习PySpark数据框架、PySpark GroupBy和聚合函数、databricks等知识。
 
-### **Python Backend Web Development Course (with Django)**
+### <h2 id="Python-Backend-Web-Development-Course-(with Django)">Python后端网络开发课程 (使用 Django)</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=jBzwzrDvZ18) 中，你将学习Python和Django的基础知识。你还将建立一个博客、天气应用程序和一个实时聊天应用程序。
 
-### **Flask Course - Python Web Application Development**
+### <h2 id="Flask-Course - Python-Web-Application-Development">Flask课程 - Python网络应用程序开发</h2>
 
 在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=Qr4QMBUPxWo)中，你将通过建立自己的电子商务网站来学习Flask表单、模板、验证等知识。
 
 ## **移动应用程序开发课程**
 
-### **Android Development for Beginners – Full Course**
+### <h2 id="Android-Development-for-Beginners – Full-Course">安卓开发初学者 - 全套课程</h2>
 
 在这个freeCodeCamp YouTube课程的 [第一部分](https://www.youtube.com/watch?v=fis26HvvDII)和 [第二部分](https://www.youtube.com/watch?v=RcSHAkpwXAQ) 中，你将学习如何使用Java构建一个Android应用程序。
 
-### **React Native Tutorial for Beginners – Build a React Native App \[2020\]**
+### <h2 id="React-Native-Tutorial-for-Beginners – Build-a-React-Native-App \[2020\]">React Native 新手教程--构建一个React Native应用程序 \[2020\]</h2>
 
 在 [这个Mosh编程课程](https://www.youtube.com/watch?v=0-S5a0eXPoc) 中，你将学习如何使用React Native构建一个iOS和Android应用程序。
 
-### **Kotlin Course – Tutorial for Beginners**
+### <h2 id="Kotlin-Course – Tutorial-for-Beginners">Kotlin课程 - 初学者教程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=F9UC9DY-vIU) 中，你将学习到基本的Kotlin函数、类方法、高阶函数以及Kotlin标准库。
 
-### **Swift Programming Tutorial for Beginners**
+### <h2 id="Swift-Programming-Tutorial-for-Beginners">Swift 初学者编程教程</h2>
 
 In [this Code with Chris course](https://www.youtube.com/watch?v=Ulp1Kimblg0),你将学习到Swift的基础知识，如变量、常量、数据类型、函数和类。
 
-### Learn iOS Development by Building a Netflix Clone
+### <h2 id="Learn-iOS-Development-by-Building-a-Netflix-Clone">通过仿 Netflix 来学习 iOS 开发</h2>
 
 在这个[freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=KCgYDCKqato)中，你将通过建立一个仿Netflix 应用来了解使用Swift的基础知识。
 
 ## **游戏开发课程**
 
-### **CS50's Introduction to Game Development**
+### <h2 id="CS50-Introduction-to-Game-Development">CS50的游戏开发介绍</h2>
 
 在 [这个哈佛课程](https://www.edx.org/course/cs50s-introduction-to-game-development?index=product&queryID=30155c410684830a10da5045d663ad30&position=4) 中，你将学习如何使用流行的游戏引擎，如LÖVE 2D和Unity。你还将使用Lua和C#编程语言。
 
-### **Learn Unity – Beginner's Game Development Tutorial**
+### <h2 id="Learn-Unity – Beginner-Game-Development-Tutorial">学习Unity - 初学者的游戏开发教程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=gB1F9G0JXOo) 中，你将学习如何使用Unity游戏引擎开始构建游戏。
 
-### **Create A 2.5D Platformer Game With Unreal Engine**
+### <h2 id="Create-A-2.5D-Platformer-Game-With-Unreal-Engine">用虚幻引擎创建一个2.5D平台游戏</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=9Fd9hw329fY&list=PLWKjhJtqVAbmqFs83T4W-FZQ9kK983tZC) 中，你将学习如何通过建立一个平台游戏来使用虚幻游戏引擎和C++。
 
-### **Godot Game Engine Tutorial - Make a 2D Platformer Game**
+### <h2 id="Godot-Game-Engine-Tutorial - Make-a-2D-Platformer-Game">Python游戏初学者教程--Python游戏开发课程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=fQXKjmCDkIA&list=PLWKjhJtqVAbmqFs83T4W-FZQ9kK983tZC&index=4) 中，你将学习如何使用Godot游戏引擎，同时构建一个平台游戏。
 
-### **Pygame Tutorial for Beginners - Python Game Development Course**
+### <h2 id="Pygame-Tutorial-for-Beginners - Python-Game-Development-Course">Python游戏初学者教程--Python游戏开发课程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=FfWpgLFMI7w&list=PLWKjhJtqVAbmqFs83T4W-FZQ9kK983tZC&index=3) 中，你将通过构建一个太空入侵者游戏来学习如何使用PyGame。
 
 ## ******C, C++, C# 课程******
 
-### **C Programming Tutorial for Beginners**
+### <h2 id="C-Programming-Tutorial-for-Beginners">C语言编程初学者教程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=KJgsSFOSQv0) 中，你将学习指针、内存、函数、数组等知识。
 
-### **C++ Tutorial for Beginners - Full Course**
+### <h2 id="C++ Tutorial-for-Beginners - Full-Course">C++初学者教程 - 全套课程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=vLnPwxZdW4Y) 中，你将学习指针、继承、数组、条件等知识。
 
-### **C# Tutorial - Full Course for Beginners**
+### <h2 id="C#-Tutorial - Full-Course-for-Beginners">C#教程--初学者的完整课程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=GhQdlIFylQ8) 中，你将学习到条件语句、字符串、对象、数组等等。
 
-### **C Course**
+### <h2 id="C-Course">C 课程</h2>
 
 在 [这个SoloLearn课程](https://www.sololearn.com/learning/1089) 中，你将学习到数据类型、数组、指针、循环、字符串、联合体、内存管理等等。
 
-### **C++ Course**
+### <h2 id="C++ Course">C++ 课程</h2>
 
 在 [这个SoloLearn课程](https://www.sololearn.com/learning/1051) 中，你将学习指针、条件式、函数、类、对象、多态性等知识。
 
-### **C# Course**
+### <h2 id="C# Course">C# 课程</h2>
 
 在 [这个SoloLearn课程](https://www.sololearn.com/learning/1080) 中，你将学习到数组、字符串、结构体、枚举等等。
 
-### Learn C++ Programming for Beginners – Free 31-Hour Course
+### <h2 id="Learn-C++ Programming-for-Beginners – Free-31-Hour-Course">初学者学习C++编程--免费的31小时课程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=8jLOx1hD3_o) 中，你将了解编程的基本原理，如流程控制、循环、函数、数组、指针等等。
 
 ## **Java 课程**
 
-### **Java Programming: Solving Problems with Software**
+### <h2 id="Java-Programming: Solving-Problems-with-Software">Java编程：用软件解决问题</h2>
 
 在这个 [Coursera课程](https://www.coursera.org/learn/java-programming?specialization=java-programming) 中，您将学习到类、条件式、循环、函数等等。您还将学习如何在Java中处理CSV文件并建立一个小型项目。
 
-### **Java Programming: Arrays, Lists, and Structured Data**
+### <h2 id="Java-Programming: Arrays, Lists, and-Structured-Data">Java编程：数组、列表和结构化数据</h2>
 
 在这个 [Coursera课程](https://www.coursera.org/learn/java-programming-arrays-lists-data?specialization=java-programming) 中，你将学习到数组、密码学、HashMaps等等。你还将建立一个关于Vigenère密码的小型项目。
 
-### **Java Programming: Principles of Software Design**
+### <h2 id="Java-Programming: Principles-of-Software-Design">Java编程：软件设计的原则</h2>
 
 在这个 [Coursera课程](https://www.coursera.org/learn/java-programming-design-principles?specialization=java-programming) 中，你将了解不同的排序算法，以及预测性文本的基础知识。
 
-### **Java Programming Basics**
+### <h2 id="Java-Programming-Basics">Java编程基础知识</h2>
 
 在这个 [Udacity课程](https://www.udacity.com/course/java-programming-basics--ud282) 中，你将学习到数组、对象、类、循环、调试等等。
 
 一旦你完成了初级课程，那么你就可以参加这个中级 [面向对象的编程课程](https://www.udacity.com/course/object-oriented-programming-in-java--ud283)。
 
-### **Java Programming**
+### <h2 id="Java Programming">Java编程</h2>
 
 在这个 [测试自动化大学课程](https://testautomationu.applitools.com/java-programming-course/) 中，你将学习到类、循环、开关语句、条件式、数组、字符串、抽象等等。
 
-### **Intro to Java Programming Course for Absolute Beginners**
+### <h2 id="Intro-to-Java-Programming-Course-for-Absolute-Beginners">为初学者提供Java编程入门课程</h2>
 
 在这个 [freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=GoXwIVyNvX0) 中，你将学习到数组、对象、类、循环、调试等内容。
 
-### **Learn Functional Programming in Java**
+### <h2 id="Learn-Functional-Programming-in-Java">学习Java中的函数式编程</h2>
 
 在这个 [freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=rPSL1alFIjI) 中，你将了解到函数式编程的特性、回调、函数式接口、组合器模式、lambdas等等。
 
-### **Java Virtual Machine Architecture Explained for Beginners**
+### <h2 id="Java-Virtual-Machine-Architecture-Explained-for-Beginners">Java虚拟机架构初解</h2>
 
 在 [这篇freeCodeCamp文章](https://www.freecodecamp.org/news/jvm-tutorial-java-virtual-machine-architecture-explained-for-beginners/) 中，你将了解到Java虚拟机以及它背后的架构。
 
-### **Java Tutorial for Beginners \[2020\]**
+### <h2 id="Java-Tutorial-for-Beginners \[2020\]">Java初学教程 \[2020\]</h2>
 
 在 [这个与Mosh一起编程的YouTube课程](https://www.youtube.com/watch?v=eIrMbAQSU34) 中，你将学习字符串、数组、条件反射、循环等知识。你还将建立一个抵押贷款计算器。
 
-### **Spring Boot Tutorial for Beginners (Java Framework)**
+### <h2 id="Spring-Boot-Tutorial-for-Beginners-(Java Framework)">Spring Boot 初学教程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=vtPkZShrvXQ) 中，你将学习如何使用这个流行的Java框架的基本知识。
 
-### **Java Testing - JUnit 5 Crash Course**
+### <h2 id="Java-Testing - JUnit-5-Crash-Course">Java测试 - JUnit 5速成班</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=flpmSXVTqBI) 中，你将了解到JUnit架构、条件执行、假设等。
 
-### **Java Course**
+### <h2 id="Java-Course">Java 课程</h2>
 
 在 [这个SoloLearn课程](https://www.sololearn.com/learning/1068) 中，你将学习到数组、对象、类、循环等等。
 
 ## **************PHP 课程**************
 
-### **PHP Programming Language Tutorial - Full Course**
+### <h2 id="PHP-Programming-Language-Tutorial - Full-Course">PHP编程语言教程 - 全套课程</h2>
 
 在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=OK_JCtrrv-c)中，你将学习到循环、函数、类、对象等内容。
 
-### **PHP For Absolute Beginners**
+### <h2 id="PHP-For-Absolute-Beginners">PHP的绝对初学者</h2>
 
 在[这个Brad Traversy YouTube教程](https://www.youtube.com/watch?v=2eebptXfEvw)中，你将学习对象、循环、数组等知识。你还将建立一个基本的CRUD（创建、读取、更新、删除）应用程序。
 
-### **Use PHP to Create an MVC Framework - Full Course**
+### <h2 id="Use-PHP-to-Create-an-MVC-Framework - Full-Course">使用PHP创建一个MVC框架 - 全套课程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=6ERdu4k62wI) 中，你将学习如何使用文件系统、自定义路由、使用composer的第三方包，以及更多。
 
-### **PHP Tutorial for Beginners - Full Course**
+### <h2 id="PHP-Tutorial-for-Beginners - Full-Course">PHP初学者教程 - 全套课程</h2>
 
 在 [这个Envato Tuts课程](https://www.youtube.com/watch?v=t0syDUSbdfE) 中，你将学习PHP的基础知识，如函数、变量阵列等。你还将学习如何将MySQL数据库连接到你的PHP应用程序。
 
 ## ******Ruby on Rails 课程******
 
-### **Learn Ruby on Rails - Full Course**
+### <h2 id="Learn-Ruby-on Rails - Full-Course">Learn Ruby on Rails - 全部课程</h2>
 
 在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=fmyvWz5TUWg)中，你将学习如何使用Ruby on Rails制作一个朋友列表应用程序。
 
-### **Full Stack Ruby on Rails**
+### <h2 id="Full-Stack-Ruby-on-Rails">全栈 Ruby on Rails</h2>
 
 在[这个Odin项目课程](https://www.theodinproject.com/paths/full-stack-ruby-on-rails?)中，你将学习Ruby、关系型数据库、Ruby on Rails等。
 
 ## ******Databases******
 
-### **Relational Database freeCodeCamp Curriculum**
+### <h2 id="Relational-Database-freeCodeCamp-Curriculum">关系型数据库课程</h2>
 
 2021年9月，freeCodeCamp发布了他们的关系数据库课程的 [测试版](https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-curriculum-using-docker-vscode-and-coderoad/)。这个测试版完全在Visual Studio Code中使用Docker和CodeRoad扩展运行。
 
@@ -833,7 +833,7 @@ In [this Code with Chris course](https://www.youtube.com/watch?v=Ulp1Kimblg0),�
 
 要了解更多信息，你可以通过创建该课程的Tom Mondloch的 [本文](https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-curriculum-using-docker-vscode-and-coderoad/) 阅读。
 
-### **SQL Tutorial - Full Database Course for Beginners**
+### <h2 id="SQL-Tutorial - Full-Database-Course-for-Beginners">SQL教程 - 初学者的完整数据库课程</h2>
 
 在[这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=HXV3zeQKqGY)中，Mike Dane将教你SQL的基础知识。你将学习创建表格、插入数据、通配符、联合、连接等知识。
 
@@ -841,19 +841,19 @@ In [this Code with Chris course](https://www.youtube.com/watch?v=Ulp1Kimblg0),�
 
 如果你喜欢Mike Dane的这个课程，那么请查看他们的[YouTube频道](https://www.youtube.com/c/GiraffeAcademy/videos)，了解更多免费课程。
 
-### **Learn SQL In 60 Minutes**
+### <h2 id="Learn-SQL-In 60 Minutes">在60分钟内学会SQL</h2>
 
 在 [这个Web Dev Simplified YouTube课程](https://www.youtube.com/watch?v=p3qvj9hO_Bo) 中，Kyle将教你开始使用SQL的基本知识。你将学习创建表格、向表格中插入数据、主键、外键、聚合函数等内容。
 
 这是一个很好的课程，可以作为学习基础知识的快速入门课程。从这里你可以开始使用SQL建立你的第一个项目。
 
-### **SQL For Beginners Tutorial**
+### <h2 id="SQL-For-Beginners-Tutorial">SQL初学者教程</h2>
 
 在 [这个Amigoscode YouTube课程](https://www.youtube.com/watch?v=5hzZtqCNQKk) 中，Nelson将教你如何在Mac和Windows上使用PostgreSQL进行设置。然后你将学习SQL的基础知识，包括创建表、主键、外键、聚合函数等等。
 
 如果你喜欢Nelson的这个免费YouTube课程，那么你可以在他的 [频道](https://www.youtube.com/c/amigoscode/videos) 上查看他的其他课程，或者在他的 [网站](https://amigoscode.com/) 上看看他的付费课程。
 
-### **MySQL Database - Full Course**
+### <h2 id="MySQL-Database - Full-Course">MySQL数据库 - 全套课程</h2>
 
 在这个 [freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=ER8oKX5myE0) 中，Bharath将教你如何在你的本地机器上安装MySQL。然后，你将学习如何创建表、向表中插入数据、进行数据建模、锁、使用SQL解释，以及更多。
 
@@ -861,13 +861,13 @@ Bharath还提供了与课程配套的有用资源，包括MySQL脚本的 [入门
 
 如果你喜欢这个课程，那么你可以在他们的 [YouTube频道](https://www.youtube.com/channel/UCwfA8RML42R-a65NRA4MQ2A) 访问其他课程。
 
-### **MySQL Tutorial for Beginners - Full Course**
+### <h2 id="MySQL-Tutorial-for-Beginners - Full-Course">MySQL初学者教程 - 全套课程</h2>
 
 在这个 [与Mosh一起编程的YouTube课程](https://www.youtube.com/watch?v=7S_tz1z_5bA) 中，Mosh将教你如何在Mac或Windows上安装MySQL。然后，你将学习创建表格、向数据库插入数据、连接、运算符、SQL条款、SQL运算符等等。
 
 如果你喜欢Mosh的这个课程，那么你可以访问他们的 [YouTube频道](https://www.youtube.com/channel/UCWv7vMbMWH4-V0ZXdmDpPBA) 或他的 [网站](https://codewithmosh.com/) 的付费课程。
 
-### **MySQL Crash Course | Learn SQL**
+### <h2 id="MySQL-Crash-Course | Learn-SQL">MySQL速成班｜学习SQL</h2>
 
 在这个 [Traversy Media YouTube课程](https://www.youtube.com/watch?v=9ylj9NR0Lcg) 中，Brad将教你如何开始使用MySQL的基础知识。你将学习创建表、向表中插入数据、改变表、主键、外键、聚合函数等。
 
@@ -875,7 +875,7 @@ Bharath还提供了与课程配套的有用资源，包括MySQL脚本的 [入门
 
 Brad 在本课程中还包括一份 [MySQL速查手册](https://gist.github.com/bradtraversy/c831baaad44343cc945e76c2e30927b3)。
 
-### **SQL for Data Science**
+### <h2 id="SQL-for-Data-Science">用于数据科学的SQL</h2>
 
 在这个 [加州大学戴维斯分校课程](https://www.coursera.org/learn/sql-for-data-science?specialization=learn-sql-basics-data-science) 中，你将学习如何在数据科学的背景下使用SQL的基础知识。你将学习创建表，将数据插入表，主键，外键，聚合函数，连接，子查询，以及更多。
 
@@ -883,25 +883,25 @@ Brad 在本课程中还包括一份 [MySQL速查手册](https://gist.github.com/
 
 如果你有兴趣继续学习这个专业，那么我建议在这门入门课程之后，再看看其他三门课程。
 
-### **Database Systems - Cornell University Course (SQL, NoSQL, Large-Scale Data Analysis)**
+### <h2 id="Database-Systems - Cornell-University-Course (SQL, NoSQL, Large-Scale Data Analysis)">数据库系统 - 康奈尔大学课程（SQL、NoSQL、大规模数据分析</h2>
 
 In [this freeCodeCamp YouTube course](https://www.youtube.com/watch?v=4cWkVbC2bNE), you will learn how to query database systems, index data, process queries, and more.
 
 Here is [part 2 of the course](https://www.youtube.com/watch?v=lxEdaElkQhQ&t=0s) as well.
 
-### **SQLite Databases With Python - Full Course**
+### <h2 id="SQLite-Databases-With-Python - Full-Course">用Python开发SQLite数据库</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=byHcYRpMgI4) 中，你将学习如何创建表、格式化结果、更新记录、删除记录等等。
 
-### **Learn PostgreSQL Tutorial - Full Course for Beginners**
+### <h2 id="Learn-PostgreSQL-Tutorial - Full-Course-for-Beginners">学习PostgreSQL教程 - 初学者的完整课程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=qw--VYLpxG4) 中，你将了解到NULLIF、主键、外键等等。
 
-### **MongoDB Crash Course**
+### <h2 id="MongoDB-Crash Course">MongoDB速成班</h2>
 
 在 [这个Brad Traversy YouTube课程](https://www.youtube.com/watch?v=-56x56UppqQ) 中，你将学习如何使用MongoDB shell、MongoDB atlas等。
 
-### **NoSQL Database Tutorial – Full Course for Beginners**
+### <h2 id="NoSQL-Database-Tutorial – Full-Course-for-Beginners">NoSQL数据库教程--面向初学者的完整课程</h2>
 
 在 [这个freeCodeCamp YouTube课程](https://www.youtube.com/watch?v=xh4gy1lbL2k) 中，你将学习NoSQL的基础知识并建立两个小项目。
 

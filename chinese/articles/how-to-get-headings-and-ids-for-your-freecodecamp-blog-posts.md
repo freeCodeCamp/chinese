@@ -5,7 +5,7 @@
 
 ![如何为您的 freeCodeCamp 博客文章获取标题和 ID](https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/brett-jordan-M9NVqELEtHU-unsplash-1.jpg)
 
-在这篇文章中，我们将从 freeCodeCamp 博客文章中获取所有标题，以在 Ghost CMS 中制作目录 (ToC)。
+在这篇文章中，我们将从 freeCodeCamp 博客文章中获取所有标题，以在 Ghost CMS 中制作目录(ToC)。
 
 我最近在 freeCodeCamp 上发表了一篇 [相当长的文章](/news/build-your-developer-portfolio-from-scratch-with-sveltekit-and-graphcms/) 需要在文章中添加一个目录。
 

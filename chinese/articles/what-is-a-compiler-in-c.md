@@ -4,7 +4,7 @@
                         Tiago Monteiro
                     
                 ](https://www.freecodecamp.org/news/author/tiago/)
-> -  译者：
+> -  译者：gyf11069
 > -  校对者：
 
 ![What is a Compiler? Compilers in C Explained for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/1-YhjIVZXE56R6YZaTF-Lzig.jpeg)

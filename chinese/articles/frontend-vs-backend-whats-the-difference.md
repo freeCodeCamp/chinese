@@ -6,191 +6,191 @@
 
 ![Frontend VS Backend – What's the Difference?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/pexels-christina-morillo-1181677.jpg)
 
-At the start of your web development journey, you will often hear about the frontend and the backend parts of an application.
+在你的Web开发之旅的开始，你会经常听到关于应用程序的前端和后端部分。
 
-But what do these terms mean exactly?
+但这些术语到底是什么意思？
 
-In this article, you will learn about the differences between the two by examining the frontend and backend separately.
+在这篇文章中，你将通过分别学习前端和后端来了解两者之间的区别。
 
-Here is what we will cover:
+以下是我们将涵盖的内容:
 
-1. [Defining frontend](#feintro)
-    1. [What is condidered frontend?](#parts)
-    2. [Why is frontend important?](#fewhy)
-    3. [Common frontend tasks](#tasks)
-    4. [Frontend tools and technologies](#tools)
-    5. [Is frontend development right for you?](#feright)
-2. [Defining backend](#beintro)
-    1. [How the backend works](#beworks)
-    2. [Examples of backend functionality](#beexamples)
-    3. [Common backend tasks](#betasks)
-    4. [Backend tools and technologies](#toolsbe)
-    5. [Is backend development right for you?](#beright)
+1. [前端的定义](#feintro)
+    1. [什么被认为是前端？](#parts)
+    2. [为什么前端很重要？](#fewhy)
+    3. [常见的前端任务](#tasks)
+    4. [前端工具和技术](#tools)
+    5. [前端开发适合你吗？](#feright)
+2. [后端的定义](#beintro)
+    1. [后端做什么](#beworks)
+    2. [后端功能示例](#beexamples)
+    3. [常见的后端任务](#betasks)
+    4. [后端工具和技术](#toolsbe)
+    5. [后端开发适合您吗？](#beright)
 
-## What is Frontend?
+## 什么是前端?
 
-The frontend is everything a user sees and interacts with when they click on a link or type in a web address. The web address is also known as at URL, or Uniform Resource Locator, and it tells what webpage should load and appear in your browser.
+前端是用户在点击一个链接或输入一个网页地址时看到的和与之互动的一切。网页地址也被称为URL，即统一资源定位器，它告诉你什么网页应该加载并出现在你的浏览器中。
 
-It is the **client-side** part of a web application.
+它是网络应用的**客户端**部分。
 
-For example, take this article. There is an associated cover picture, and you are now reading through the text.
+例如，以这篇文章为例。有一个相关的封面图片，而你现在正在阅读这篇文章。
 
-At the top of the page, you can also see freeCodeCamp's logo. There is a navigation bar with a link to freeCodeCamp's forum and a button to donate.
+在页面的顶部，你也可以看到freeCodeCamp的标志。有一个导航栏，上面有一个链接到freeCodeCamp的论坛和一个捐赠的按钮。
 
-There is also a search box. You can enter a keyword to search for an article on a topic that interests you.
+还有一个搜索框。你可以输入一个关键词来搜索你感兴趣的主题的文章。
 
-There is a link to click, which will take you to lessons and certifications that will help you learn to code for free.
+有一个链接可以点击，这将带你到课程和认证，这将帮助你免费学习代码。
 
-All the above represent the frontend of the web page you're viewing.
+上述所有内容代表你正在浏览的网页的前端。
 
-### What Parts of a Web Application are Considered Frontend?
+### 网络应用的哪些部分被认为是前端？
 
-The frontend is anything and everything visual that a user comes in contact with.
+前端是用户接触到的任何东西和所有的视觉。
 
-It's all the parts with which they directly interact.
+它是所有与他们直接互动的部分。
 
-It's all the content and styles.
+它是所有的内容（content）和样式（styles）。
 
-It's the buttons and the different hover effects before a user clicks on a link.
+它是按钮和用户点击链接前的不同悬停效果。
 
-It's the contact forms with various input fields, the search boxes and the dropdown menus.
+它是带有各种输入字段的联系表格、搜索框和下拉菜单。
 
-The layouts, text, and colors.
+布局、文本和颜色。
 
-It's the images and videos.
+是图片和视频。
 
-However, it is not _just_ the styles.
+然而，这不仅仅是样式（styles）问题。
 
-It is also how fast the website loads, how easy it is to navigate through it, and how accessible it is to people with disabilities.
+它还包括网站的加载速度，浏览网站的方便程度，以及对残疾人的无障碍程度。
 
-It's how usable and responsive it is on a variety of different devices and browsers.
+它在各种不同设备和浏览器上的可用性和响应性如何。
 
-Essentially, the frontend is all the parts of a web application that create the _look and feel_ of it.
+从本质上讲，前端是一个网络应用程序的所有部分，创造了它的 _外观和感觉（look and feel）_。
 
-### Why Frontend is Important
+### 为什么前端很重要
 
-The frontend represents someone's (or a team's) idea, vision, and a dream come to life, available for the world to see and witness.
+前端代表着某人（或一个团队）的想法、愿景和梦想的实现，可供世人观看和见证。
 
-The idea needs to be represented in the right way and be visually appealing. It will be the determining factor of how others will perceive it.
+这个想法需要以正确的方式表现出来，在视觉上具有吸引力。这将是其他人如何看待它的决定性因素。
 
-A company or organization with a site that is difficult to use and navigate through, which doesn't look good, and does not present its services nicely, will lose customers and clients.
+一个公司或组织的网站如果难以使用和浏览，看起来不好看，不能很好地展示其服务，就会失去客户和顾客。
 
-Users will become frustrated due to the lack of usability, the unpleasant user experience, and the lack of good design. They will end up searching elsewhere for what they were looking for and will most likely not return to that site again.
+用户会因为缺乏可用性、不愉快的用户体验和缺乏好的设计而感到沮丧。他们最终会在其他地方寻找他们要找的东西，并且很可能不会再回到那个网站。
 
-### What Are Some of a Frontend Developer's Tasks?
+### 前端开发员的一些任务是什么？
 
-The tasks a frontend developer completes and works on day-to-day will vary. They will heavily depend on the company they work for and the role.
+一个前端开发员每天完成的任务和工作内容会有所不同。它们将在很大程度上取决于他们工作的公司和角色。
 
-As a frontend dev, you may do a lot of design work.
+作为一个前端开发，你可能会做很多设计工作。
 
-That could be creating a style guide to create consistent styles and the brand's identity and overall look and image.
+这可能是创建一个风格指南（style guide），以创建一致的风格和品牌的身份和整体外观和形象。
 
-It includes the typography (fonts) used for all text, the color scheme, the company's logo, and layouts, to name a few.
+它包括所有文本的排版（字体），色彩方案，公司的标志和布局，仅举几例。
 
-You may work on building User Interfaces using design tools to make sure the website has all the necessary visual elements it needs, displayed and organized pleasantly.
+你可以使用设计工具建立用户界面，以确保网站有所有必要的视觉元素，并能愉快地显示和组织。
 
-On the other hand, frontend developers may not do any design work.
+另一方面，前端开发人员可能不做任何设计工作。
 
-Instead, you could collaborate with program managers, graphic designers, and UX/UI designers to solve problems.
+相反，你可以与项目经理、平面设计师和UX/UI设计师合作，解决问题。
 
-You could take the created visuals, graphics, and findings from the conducted user research.
+你可以根据的用户研究的结果创建视觉效果、图形。
 
-You would already know the target audience and demographic, common customer problems, and information on how usable the site is for users.
+你已经知道了目标受众和人口统计，常见的客户问题，以及关于网站对用户的可用性的信息。
 
-Then, your job as a frontend developer would be to translate the prototypes and static visual designs to something tangible, to a real-world, pixel-perfect, and functional website that users can easily interact with.
+然后，作为一个前端开发员，你的工作将是把原型和静态视觉设计转化为有形的东西，转化为一个真实世界的、像素完美的、功能齐全的网站，让用户可以轻松地与之互动。
 
-Using frontend technologies, you would implement the layouts already designed and build all the visual elements.
+使用前端技术，你将实现已经设计好的布局，并建立所有的视觉元素。
 
-A big part of a frontend developer's job is to create responsive websites.
+前端开发人员的工作的很大一部分是创建响应式网站。
 
-You need to make sure websites look good, are optimally displayed, and are usable on a variety of devices and screen widths.
+你需要确保网站看起来不错，显示效果最佳，并能在各种设备和屏幕宽度上使用。
 
-Nowadays, users don't use only desktop computers, but they instead view websites mostly from mobile and tablet devices.
+如今，用户并不只使用台式电脑，而是大多从移动和平板设备上查看网站。
 
-In addition, frontend developers design and develop with many of the most popular and most used browsers in mind.
+此外，前端开发人员在设计和开发时要考虑到许多最流行和最常用的浏览器。
 
-Websites need to look good and need to function optimally on all browsers.
+网站需要看起来不错，并且需要在所有的浏览器上实现最佳功能。
 
-Here is where knowing your target audience and demographic comes to play and is vital information.
+这就是了解你的目标受众和人口统计学的作用，是至关重要的信息。
 
-Depending on your service/product and your users/customers, you may need to develop with older or more modern browsers in mind.
+根据你的服务/产品和你的用户/客户，你可能需要在开发时考虑到旧的或更现代的浏览器。
 
-Another big part of a frontend developer's job is to make sure websites are accessible to all users. This entails creating web accessibility functions that would make browsing the web a pleasant experience for everyone.
+前端开发人员的另一个重要工作是确保网站对所有用户都是无障碍的。这需要创建网络无障碍功能，使浏览网络成为每个人的愉快体验。
 
-Important accessibility features a frontend developer can implement are:
+前端开发人员可以实现的重要的无障碍功能是:
 
-- text-to-speech
-- keyboard-only navigation
-- accessible color combinations with sufficient contrast
-- large buttons
+- 文字转语音
+- 只用键盘的导航
+- 有足够对比度的无障碍颜色组合
+- 大型按钮
 
-Frontend developers also work on improving the site's performance and load time.
+前端开发人员还致力于改善网站的性能和加载时间。
 
-The majority of users become impatient and click off if a website takes too long to load its content and images.
+如果一个网站加载其内容和图像的时间太长，大多数用户会变得不耐烦并点击关闭。
 
-Improving the time it takes to load the website, even by a few seconds, makes a big difference and will most likely retain users.
+改善网站的加载时间，哪怕是几秒钟，都会有很大的不同，而且很可能会留住用户。
 
-Another part of a frontend developer's role is to design and create usable web forms.
+改善网站的加载时间，哪怕是几秒钟，都会有很大的不同，而且很可能会留住用户。
 
-Web forms bridge the communication gap between the company/organization and users. They are an easy way for users to make inquiries, contact customer service, submit data, and create accounts.
+网络表格（web forms）是公司/组织与用户之间沟通的桥梁。它们是用户进行咨询、联系客户服务、提交数据和创建账户的一种简单方式。
 
-### An Overview of Frontend Tools and Technologies
+### 前端工具和技术概述
 
-As a frontend developer, you will constantly learn new technologies, depending on what is popular at the time. Technologies change fast.
+作为一名前端开发员，你将不断学习新的技术，这取决于当时的流行趋势。技术变化很快。
 
-However, the most fundamental frontend technologies are HTML, CSS, and JavaScript.
+然而，最基本的前端技术是HTML、CSS和JavaScript。
 
-They run in the user's browser and are the building block of all websites on the World-Wide Web.
+它们在用户的浏览器中运行，是万维网上所有网站的基础。
 
-Let's talk a bit more about these technologies:
+让我们再来谈谈这些技术吧:
 
-- **HTML** stands for HyperText Markup Language. You create all the content and structure of a webpage using semantic HTML.
-- **CSS** stands for Cascading Style Sheets. CSS styles the HTML elements. It adds colors, fonts, it determines the size of text and the layouts of web pages.
-- **Vanilla JavaScript** is how you add functionality and interactivity to elements. It's how you make web pages have dynamic behavior.
+- **HTML** 是指超文本标记语言。你用语义化的HTML创建网页的所有内容和结构。
+- **CSS**  层叠样式表（Cascading Style Sheets）。CSS是对HTML元素的样式。它添加颜色、字体，决定文本的大小和网页的布局。
+- **Vanilla JavaScript** 是你如何为元素添加功能和互动性的。它是你如何使网页具有动态行为的。
 
-Besides those three, there are many frontend libraries and frameworks.
+除了这三个，还有许多前端库和框架。
 
-These help ensure consistency across each webpage in a website and provide out of the box functionalities for repetitive tasks.
+这些有助于确保网站中每个网页的一致性，并为重复性任务提供开箱即用的功能。
 
-Some of the most popular ones are:
+一些最受欢迎的是:
 
 - React
 - Redux
 - Vue
 - Angular
 
-Depending on the role and job description, you may need design skills.
+根据不同的角色和工作描述，你可能需要设计技能。
 
-Some commonly used tools used for design work are:
+一些常用于设计工作的工具有:
 
 - Figma
 - Sketch
 - Adobe XD
 - and Photoshop for image processing
 
-### Is Frontend Development Right for You?
+### 前端开发是否适合你？
 
-Frontend development is a creative and artistic endeavor.
+前端开发是一项创造性和艺术性的工作。
 
-There is a blend of both visual art and programming.
+视觉艺术和编程都有融合。
 
-A way to decide whether frontend development is for you is to consider whether you enjoy seeing the visual results of your hard work.
+决定前端开发是否适合你的一个方法是考虑你是否喜欢看到你努力工作的视觉结果。
 
-It is possible to see the results of your creation instantly on the screen of your computer.
+可以在电脑屏幕上即时看到你的创作成果。
 
-Another thing to consider is whether you care deeply about users having the best possible user experience when browsing the web.
+另一件要考虑的事情是，你是否非常关心用户在浏览网页时拥有最佳的用户体验。
 
-User experience and creating usable websites are a big part of the job.
+用户体验和创建可用的网站是工作的一个重要部分。
 
-The only way to find out if frontend development is right path for you is to give it a go.
+要想知道前端开发是否适合你，唯一的办法就是给它一个机会。
 
-A great place to start your learning is with freeCodeCamp's [Responsive Web Design Certification](https://www.freecodecamp.org/learn/2022/responsive-web-design/), where you will learn by building 20 projects and earn a certification at the end.
+一个开始学习的好地方是freeCodeCamp的 [响应式网页设计认证](https://www.freecodecamp.org/learn/2022/responsive-web-design/)，你将通过建立20个项目来学习，并在最后获得一个认证。
 
-You will learn HTML and modern CSS techniques alongside the best accessibility practices. You will also learn to create responsive web pages that accommodate each screen size.
+你将学习HTML和现代CSS技术，以及最佳的可访问性实践。你还将学习如何创建适应各种屏幕尺寸的响应式网页。
 
-Following the [Responsive Web Design Certification](https://www.freecodecamp.org/learn/2022/responsive-web-design/), learn the JavaScript programming language with the [JavaScript Algorithms and Data Structures Certification](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/), where you will learn how to make web pages interactive.
+在 [响应式网页设计认证](https://www.freecodecamp.org/learn/2022/responsive-web-design/) 之后，通过 [JavaScript算法和数据结构认证](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/) 学习JavaScript编程语言，你将学习如何使网页互动。
 
-You will start from the basics, learning the syntax and necessary fundamental building blocks that will allow you to progress to more advanced topics such as Object-Oriented Programming.
+你将从基础开始，学习语法和必要的基本构件，这将使你能够进展到更高级的主题，如面向对象的编程。
 
 ## What is Backend?
 

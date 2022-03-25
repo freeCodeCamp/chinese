@@ -1,11 +1,8 @@
-> -  原文地址：[Frontend VS Backend – What's the Difference?](https://www.freecodecamp.org/news/frontend-vs-backend-whats-the-difference/)
-> -  原文作者：[
-                    
-                        Dionysia Lemonaki
-                    
-                ](https://www.freecodecamp.org/news/author/dionysia/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Frontend VS Backend – What's the Difference?](https://www.freecodecamp.org/news/frontend-vs-backend-whats-the-difference/)
+> - 原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
+>
+> - 译者：
+> - 校对者：
 
 ![Frontend VS Backend – What's the Difference?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/pexels-christina-morillo-1181677.jpg)
 
@@ -17,18 +14,18 @@ In this article, you will learn about the differences between the two by examini
 
 Here is what we will cover:
 
-1.  [Defining frontend](#feintro)
-    1.  [What is condidered frontend?](#parts)
-    2.  [Why is frontend important?](#fewhy)
-    3.  [Common frontend tasks](#tasks)
-    4.  [Frontend tools and technologies](#tools)
-    5.  [Is frontend development right for you?](#feright)
-2.  [Defining backend](#beintro)
-    1.  [How the backend works](#beworks)
-    2.  [Examples of backend functionality](#beexamples)
-    3.  [Common backend tasks](#betasks)
-    4.  [Backend tools and technologies](#toolsbe)
-    5.  [Is backend development right for you?](#beright)
+1. [Defining frontend](#feintro)
+    1. [What is condidered frontend?](#parts)
+    2. [Why is frontend important?](#fewhy)
+    3. [Common frontend tasks](#tasks)
+    4. [Frontend tools and technologies](#tools)
+    5. [Is frontend development right for you?](#feright)
+2. [Defining backend](#beintro)
+    1. [How the backend works](#beworks)
+    2. [Examples of backend functionality](#beexamples)
+    3. [Common backend tasks](#betasks)
+    4. [Backend tools and technologies](#toolsbe)
+    5. [Is backend development right for you?](#beright)
 
 ## What is Frontend?
 
@@ -122,10 +119,10 @@ Another big part of a frontend developer's job is to make sure websites are acce
 
 Important accessibility features a frontend developer can implement are:
 
--   text-to-speech
--   keyboard-only navigation
--   accessible color combinations with sufficient contrast
--   large buttons
+- text-to-speech
+- keyboard-only navigation
+- accessible color combinations with sufficient contrast
+- large buttons
 
 Frontend developers also work on improving the site's performance and load time.
 
@@ -147,9 +144,9 @@ They run in the user's browser and are the building block of all websites on the
 
 Let's talk a bit more about these technologies:
 
--   **HTML** stands for HyperText Markup Language. You create all the content and structure of a webpage using semantic HTML.
--   **CSS** stands for Cascading Style Sheets. CSS styles the HTML elements. It adds colors, fonts, it determines the size of text and the layouts of web pages.
--   **Vanilla JavaScript** is how you add functionality and interactivity to elements. It's how you make web pages have dynamic behavior.
+- **HTML** stands for HyperText Markup Language. You create all the content and structure of a webpage using semantic HTML.
+- **CSS** stands for Cascading Style Sheets. CSS styles the HTML elements. It adds colors, fonts, it determines the size of text and the layouts of web pages.
+- **Vanilla JavaScript** is how you add functionality and interactivity to elements. It's how you make web pages have dynamic behavior.
 
 Besides those three, there are many frontend libraries and frameworks.
 
@@ -157,19 +154,19 @@ These help ensure consistency across each webpage in a website and provide out o
 
 Some of the most popular ones are:
 
--   React
--   Redux
--   Vue
--   Angular
+- React
+- Redux
+- Vue
+- Angular
 
 Depending on the role and job description, you may need design skills.
 
 Some commonly used tools used for design work are:
 
--   Figma
--   Sketch
--   Adobe XD
--   and Photoshop for image processing
+- Figma
+- Sketch
+- Adobe XD
+- and Photoshop for image processing
 
 ### Is Frontend Development Right for You?
 
@@ -221,13 +218,13 @@ Then, it sends a response back to the client. The necessary user data is present
 
 The backend consists of:
 
--   The **server**, which is a program that waits and listens for incoming requests from the client. It communicates with the database by submitting database queries. When the database responds with information, the server fetches the correct necessary data.
+- The **server**, which is a program that waits and listens for incoming requests from the client. It communicates with the database by submitting database queries. When the database responds with information, the server fetches the correct necessary data.
 
 It achieves this with the help of an application running on the server that contains the necessary logic that gathers the requested information and resources for the right user. Backend server-side scripts, written in a backend scripting programming language, are responsible for processing the requests.
 
 Lastly, the server sends a response back to the client.
 
--   The **database**, which is like the 'brain' of an application. Databases are programs used to organize and store all of an application's assets, content, and information in a way that can be easily accessed and retrieved, managed, and updated.
+- The **database**, which is like the 'brain' of an application. Databases are programs used to organize and store all of an application's assets, content, and information in a way that can be easily accessed and retrieved, managed, and updated.
 
 ### Examples of Backend Functionality
 
@@ -237,25 +234,25 @@ Say that you are a member of a paid workout subscription platform.
 
 To login:
 
--   You would need to enter your email address and password in a user input field.
--   There would be basic validation checks that would need to pass. Validations ensure that the required input fields are not empty and the email address has the correct format.
--   Then, there are checks to see if you exist as a user in the database by sumbmitting database queries, to see if your email address and password are correct.  
+- You would need to enter your email address and password in a user input field.
+- There would be basic validation checks that would need to pass. Validations ensure that the required input fields are not empty and the email address has the correct format.
+- Then, there are checks to see if you exist as a user in the database by sumbmitting database queries, to see if your email address and password are correct.  
     There would also be checks to see whether the email address and password you provided match the email and password combination stored in the database when you created your account.
--   If the email and password are incorrect, you would see an error message saying that the combination doesn't exist.
--   If everything is correct, you would be directed to your Home page, with a visual cue indicating your login. It could be a 'Welcome' message that includes your name or username.
+- If the email and password are incorrect, you would see an error message saying that the combination doesn't exist.
+- If everything is correct, you would be directed to your Home page, with a visual cue indicating your login. It could be a 'Welcome' message that includes your name or username.
 
 To pick a workout:
 
--   The database stores all your raw data.  
+- The database stores all your raw data.  
     Workouts already completed are stored in the database. The same goes with any saved in a playlist you created or marked as favorites that you would like to revisit.
--   You can also view all the available workouts and filter through them to only show a particular category.  
+- You can also view all the available workouts and filter through them to only show a particular category.  
     For example, you could type a keyword in the search box such as abs, arms, lower body, or upper body.  
     Another way could be to pick from one of the available categories on the site, such as yoga, stretch, HIIT, or strength. The database will go through every workout stored there, but you will view only the filtered results of the particular category you specified in your search.
 
 To pay for the subscription:
 
--   The application would be able to accept credit card information or other payment options and store that information securely in the database.
--   It would also update the payment at the right time. Depending on the subscription, there would be a reoccurring monthly or yearly update, making sure each time it withdraws the right amount of money from your card.
+- The application would be able to accept credit card information or other payment options and store that information securely in the database.
+- It would also update the payment at the right time. Depending on the subscription, there would be a reoccurring monthly or yearly update, making sure each time it withdraws the right amount of money from your card.
 
 All this is handled by the back end of an application.
 
@@ -267,15 +264,15 @@ The main focus of a backend developer's work is to create and maintain services 
 
 In general, here are some things a backend developer would work on:
 
--   Creating, managing, and maintaining the type of database the product/service uses.
--   Building, interacting with, and maintaining servers.
--   Building internal or external functionalities and server-side software using server-side technologies and web frameworks to provide solutions to problems.
--   Working with APIs (Application Programming Interface). Designing, developing, implementing, maintaining, and managing APIs that support CRUD (Create Read Update Delete) operations.
--   Performing data validation to ensure data has the correct format before being stored in the database.
--   Users need to interact safely with their accounts. Backend developers create systems that secure every user's data - especially when dealing with payment processing systems.
--   Dealing with third-party services such as authentication and external payment services, to name a few.
--   Organizing system logic.
--   Developing site architecture.
+- Creating, managing, and maintaining the type of database the product/service uses.
+- Building, interacting with, and maintaining servers.
+- Building internal or external functionalities and server-side software using server-side technologies and web frameworks to provide solutions to problems.
+- Working with APIs (Application Programming Interface). Designing, developing, implementing, maintaining, and managing APIs that support CRUD (Create Read Update Delete) operations.
+- Performing data validation to ensure data has the correct format before being stored in the database.
+- Users need to interact safely with their accounts. Backend developers create systems that secure every user's data - especially when dealing with payment processing systems.
+- Dealing with third-party services such as authentication and external payment services, to name a few.
+- Organizing system logic.
+- Developing site architecture.
 
 ### An Overview of Backend Tools and Technologies
 
@@ -285,20 +282,20 @@ A key component of backend programming is using a server-side scripting programm
 
 Some of the most frequently used ones are:
 
--   **PHP**
--   **Ruby**
--   **Python**
--   **Java**
--   **JavaScript**. Yes, JavaScript is used widely in frontend development, but in recent years is used for backend development too. Node.js (a JavaScript runtime) makes that possible by providing backend functionality.
+- **PHP**
+- **Ruby**
+- **Python**
+- **Java**
+- **JavaScript**. Yes, JavaScript is used widely in frontend development, but in recent years is used for backend development too. Node.js (a JavaScript runtime) makes that possible by providing backend functionality.
 
 Besides backend programming languages, backend frameworks and libraries are used to provide extra functionality to create web applications.
 
 Some of the most popular ones are:
 
--   Ruby on Rails
--   Django
--   Flask
--   Express
+- Ruby on Rails
+- Django
+- Flask
+- Express
 
 When developers are part of a team, they use Git - a version control system that tracks changes across different project files.
 
@@ -310,10 +307,10 @@ Databases fall into two categories, relational and non-relational.
 
 Some of the most oftenly used ones are:
 
--   MySQL
--   PostgreSQL
--   MongoDB
--   Oracle
+- MySQL
+- PostgreSQL
+- MongoDB
+- Oracle
 
 When working with relational databases (such as MySQL, PostgreSQL, and Oracle), you will use SQL.
 

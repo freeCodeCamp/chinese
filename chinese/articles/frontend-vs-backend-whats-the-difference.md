@@ -1,7 +1,7 @@
 > - 原文地址：[Frontend VS Backend – What's the Difference?](https://www.freecodecamp.org/news/frontend-vs-backend-whats-the-difference/)
 > - 原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
 >
-> - 译者：(luojiyin)[]
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
 > - 校对者：
 
 ![Frontend VS Backend – What's the Difference?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/pexels-christina-morillo-1181677.jpg)
@@ -43,7 +43,7 @@
 
 上述所有内容代表你正在浏览的网页的前端。
 
-<h2 id="What-is-condidered-frontend?">网络应用的哪些部分被认为是前端？</h2>
+<h2 id="What-is-condidered-frontend?">什么被认为是前端？</h2>
 
 前端是用户接触到的任何东西和所有的视觉。
 

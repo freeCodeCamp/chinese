@@ -1,10 +1,6 @@
 > -  原文地址：[CSS Shapes Explained: How to Draw a Circle, Triangle, and More Using Pure CSS](https://www.freecodecamp.org/news/css-shapes-explained-how-to-draw-a-circle-triangle-and-more-using-pure-css/)
-> -  原文作者：[
-                    
-                        Thomas Weibenfalk
-                    
-                ](https://www.freecodecamp.org/news/author/thomas-weibenfalk/)
-> -  译者：
+> -  原文作者：[Thomas Weibenfalk](https://www.freecodecamp.org/news/author/thomas-weibenfalk/)
+> -  译者：ZhichengChen
 > -  校对者：
 
 ![CSS Shapes Explained: How to Draw a Circle, Triangle, and More Using Pure CSS](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/delila-ziebart-b0GSCFJ-Gzg-unsplash.jpg)

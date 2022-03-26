@@ -1,7 +1,7 @@
 > - 原文地址：[Frontend VS Backend – What's the Difference?](https://www.freecodecamp.org/news/frontend-vs-backend-whats-the-difference/)
 > - 原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
 >
-> - 译者：
+> - 译者：(luojiyin)[]
 > - 校对者：
 
 ![Frontend VS Backend – What's the Difference?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/pexels-christina-morillo-1181677.jpg)

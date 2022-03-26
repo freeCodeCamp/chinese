@@ -15,17 +15,17 @@
 以下是我们将涵盖的内容:
 
 1. [前端的定义](#feintro)
-    1. [什么被认为是前端？](#parts)
-    2. [为什么前端很重要？](#fewhy)
-    3. [常见的前端任务](#tasks)
-    4. [前端工具和技术](#tools)
-    5. [前端开发适合你吗？](#feright)
+    1. [什么被认为是前端？](./#What-is-condidered-frontend?)
+    2. [为什么前端很重要？](./#Why-is-frontend-important?)
+    3. [常见的前端任务](./#Common-frontend-tasks)
+    4. [前端工具和技术](./#Frontend-tools-and-technologies)
+    5. [前端开发适合你吗？](./#Is-frontend-development-right-for-you?)
 2. [后端的定义](#beintro)
-    1. [后端做什么](#beworks)
-    2. [后端功能示例](#beexamples)
-    3. [常见的后端任务](#betasks)
-    4. [后端工具和技术](#toolsbe)
-    5. [后端开发适合您吗？](#beright)
+    1. [后端做什么](./#How-the-backend-works)
+    2. [后端功能示例](./#Examples-of-backend-functionality)
+    3. [常见的后端任务](./#Common-backend-tasks)
+    4. [后端工具和技术](./#Backend-tools-and-technologies)
+    5. [后端开发适合您吗？](./#Is-backend-development-right-for-you?)
 
 ## 什么是前端?
 
@@ -43,7 +43,7 @@
 
 上述所有内容代表你正在浏览的网页的前端。
 
-### 网络应用的哪些部分被认为是前端？
+<h2 id="What-is-condidered-frontend?">网络应用的哪些部分被认为是前端？</h2>
 
 前端是用户接触到的任何东西和所有的视觉。
 
@@ -67,7 +67,7 @@
 
 从本质上讲，前端是一个网络应用程序的所有部分，创造了它的 _外观和感觉（look and feel）_。
 
-### 为什么前端很重要
+<h2 id="Why-is-frontend-important?">为什么前端很重要</h2>
 
 前端代表着某人（或一个团队）的想法、愿景和梦想的实现，可供世人观看和见证。
 
@@ -77,7 +77,7 @@
 
 用户会因为缺乏可用性、不愉快的用户体验和缺乏好的设计而感到沮丧。他们最终会在其他地方寻找他们要找的东西，并且很可能不会再回到那个网站。
 
-### 前端开发员的一些任务是什么？
+<h2 id="Common-frontend-tasks">常见的前端任务</h2>
 
 一个前端开发员每天完成的任务和工作内容会有所不同。它们将在很大程度上取决于他们工作的公司和角色。
 
@@ -134,7 +134,7 @@
 
 网络表格（web forms）是公司/组织与用户之间沟通的桥梁。它们是用户进行咨询、联系客户服务、提交数据和创建账户的一种简单方式。
 
-### 前端工具和技术概述
+<h2 id="Frontend-tools-and-technologies"> 前端工具和技术概述</h2>
 
 作为一名前端开发员，你将不断学习新的技术，这取决于当时的流行趋势。技术变化很快。
 
@@ -168,7 +168,7 @@
 - Adobe XD
 - and Photoshop for image processing
 
-### 前端开发是否适合你？
+<h2 id="Is-frontend-development-right-for-you?">前端开发是否适合你？</h2>
 
 前端开发是一项创造性和艺术性的工作。
 
@@ -192,7 +192,7 @@
 
 你将从基础开始，学习语法和必要的基本构件，这将使你能够进展到更高级的主题，如面向对象的编程。
 
-## 什么是后端？
+<h2 id="How-the-backend-works"> 什么是后端？</h2>
 
 后端开发涉及负责存储和安全操作用户数据的技术。
 
@@ -226,7 +226,7 @@
 
 - **数据库**,它就像一个应用程序的 "大脑"。数据库是用来组织和存储一个应用程序的所有资产、内容和信息的程序，其方式可以方便地访问和检索、管理和更新。
 
-### 后端功能的例子
+<h2 id="Examples-of-backend-functionality">后端功能示例</h2>
 
 让我们举一个真实的例子来说明现代网络应用的不同后端功能。
 
@@ -256,7 +256,7 @@
 
 所有这些都由一个应用程序的后端处理。
 
-### 后端开发人员的一些任务是什么？
+<h2 id="Common-backend-tasks">常见的后端任务</h2>
 
 可以说，后端开发人员的角色因公司不同而不同，因工作不同而不同。
 
@@ -274,7 +274,7 @@
 - 组织系统逻辑。
 - 开发网站架构。
 
-### 后端工具和技术概述
+<h2 id="Backend-tools-and-technologies">后端工具和技术</h2>
 
 后端开发人员在日常工作中使用不同的工具和技术来实现网络应用的逻辑。
 
@@ -318,7 +318,7 @@ SQL是结构化查询语言的缩写。它用于执行数据库查询。SQL与�
 
 你可以从 [这个有用的资源清单](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/) 了解更多关于SQL的信息。
 
-### 后台开发是否适合你？
+<h2 id="Is-backend-development-right-for-you?">后台开发是否适合你？</h2>
 
 后端开发人员负责网络应用程序背后的逻辑，并使前端的功能达到最佳。
 

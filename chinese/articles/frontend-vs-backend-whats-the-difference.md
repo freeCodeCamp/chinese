@@ -192,131 +192,131 @@
 
 你将从基础开始，学习语法和必要的基本构件，这将使你能够进展到更高级的主题，如面向对象的编程。
 
-## What is Backend?
+## 什么是后端？
 
-Backend development deals with the technologies responsible for storing and securely manipulating user data.
+后端开发涉及负责存储和安全操作用户数据的技术。
 
-It is the part associated with all the hidden logic that powers the applications users interact with.
+它是与所有隐藏逻辑相关的部分，为用户互动的应用程序提供支持。
 
-Backend is considered the server-side part of an application.
+后端被认为是一个应用程序的服务器端部分。
 
-Backend is all the hidden inner workings and the behind-the-scenes processes in a web application.
+后端是网络应用中所有隐藏的内部工作和幕后流程。
 
-It refers to everything going on underneath the hood and all the necessary components that make the front-end function properly and smoothly.
+它指的是在看不到的进行的一切，以及使前端正常和顺利运行的所有必要组件。
 
-It makes sure everything is working optimally.
+它确保一切都在最佳状态下工作。
 
-Essentially, the backend is what the users don't have direct access to or don't directly interact with and are most likely unaware of when using an application.
+从本质上讲，后端是用户没有直接访问或没有直接互动的东西，在使用一个应用程序时很可能没有意识到。
 
-### An Overview of How Backend Works for Beginners
+### 面向初学者的后台工作概述
 
-The back-end is responsible for receiving requests from a client.
+后端负责接收来自客户端的请求。
 
-It processes the incoming request and makes sure it fetches the appropriate data associated with the correct user.
+它处理传入的请求，并确保获取与正确用户相关的适当数据。
 
-Then, it sends a response back to the client. The necessary user data is presented nicely visually, with frontend code created by a frontend developer, to the right user that has access to it.
+然后，它向客户端发送一个响应。必要的用户数据通过前端开发人员创建的前端代码，以良好的视觉效果呈现给可以访问的正确用户。
 
-The backend consists of:
+后台由以下部分组成:
 
-- The **server**, which is a program that waits and listens for incoming requests from the client. It communicates with the database by submitting database queries. When the database responds with information, the server fetches the correct necessary data.
+- **服务**, 它是一个等待和监听来自客户端的请求的程序。它通过提交数据库查询与数据库进行通信。当数据库回复信息时，服务器会获取正确的必要数据。
 
-It achieves this with the help of an application running on the server that contains the necessary logic that gathers the requested information and resources for the right user. Backend server-side scripts, written in a backend scripting programming language, are responsible for processing the requests.
+它在服务器上运行的应用程序的帮助下实现这一目标，该应用程序包含必要的逻辑，为正确的用户收集所要求的信息和资源。用后台脚本编程语言编写的后台服务器端脚本，负责处理请求。
 
-Lastly, the server sends a response back to the client.
+最后，服务器向客户端发送响应。
 
-- The **database**, which is like the 'brain' of an application. Databases are programs used to organize and store all of an application's assets, content, and information in a way that can be easily accessed and retrieved, managed, and updated.
+- **数据库**,它就像一个应用程序的 "大脑"。数据库是用来组织和存储一个应用程序的所有资产、内容和信息的程序，其方式可以方便地访问和检索、管理和更新。
 
-### Examples of Backend Functionality
+### 后端功能的例子
 
-Let's take a real-world example to illustrate the different backend functionalities available on modern web applications.
+让我们举一个真实的例子来说明现代网络应用的不同后端功能。
 
-Say that you are a member of a paid workout subscription platform.
+假设你是一个付费锻炼订阅平台的成员。
 
-To login:
+登录:
 
-- You would need to enter your email address and password in a user input field.
-- There would be basic validation checks that would need to pass. Validations ensure that the required input fields are not empty and the email address has the correct format.
-- Then, there are checks to see if you exist as a user in the database by sumbmitting database queries, to see if your email address and password are correct.  
-    There would also be checks to see whether the email address and password you provided match the email and password combination stored in the database when you created your account.
-- If the email and password are incorrect, you would see an error message saying that the combination doesn't exist.
-- If everything is correct, you would be directed to your Home page, with a visual cue indicating your login. It could be a 'Welcome' message that includes your name or username.
+- 你需要在一个用户输入栏中输入你的电子邮件地址和密码。
+- 有一些基本的验证检查需要通过。验证确保所需的输入字段不是空的，电子邮件地址有正确的格式。
+- 然后，通过提交数据库查询，检查你是否作为一个用户存在于数据库中，以了解你的电子邮件地址和密码是否正确。
+     还会有检查，看你提供的电子邮件地址和密码是否与你创建账户时存储在数据库中的电子邮件和密码组合相符。
+- 如果电子邮件和密码不正确，你会看到一个错误信息，说这个组合不存在。
+- 如果一切都正确，你会被引导到你的主页，并有一个视觉提示表明你已经登录。这可能是一个 "欢迎 "信息，包括你的名字或用户名。
 
-To pick a workout:
+挑选一个锻炼项目:
 
-- The database stores all your raw data.  
-    Workouts already completed are stored in the database. The same goes with any saved in a playlist you created or marked as favorites that you would like to revisit.
-- You can also view all the available workouts and filter through them to only show a particular category.  
-    For example, you could type a keyword in the search box such as abs, arms, lower body, or upper body.  
-    Another way could be to pick from one of the available categories on the site, such as yoga, stretch, HIIT, or strength. The database will go through every workout stored there, but you will view only the filtered results of the particular category you specified in your search.
+- 数据库储存了你所有的原始数据。  
+    已经完成的锻炼会储存在数据库中。同样，任何保存在你创建的播放列表中或标记为你想重温的收藏夹中的内容也是如此。
+- 你还可以查看所有可用的锻炼，并对它们进行过滤，只显示某个特定类别。
+    例如，你可以在搜索框中输入一个关键词，如腹肌、手臂、下半身或上半身。  
+      另一种方法是在网站上选择一个可用的类别，如瑜伽、拉伸、HIIT或力量。数据库将翻阅储存在那里的每一个锻炼项目，但你将只查看你在搜索中指定的特定类别的过滤结果。
 
-To pay for the subscription:
+支付订阅费用:
 
-- The application would be able to accept credit card information or other payment options and store that information securely in the database.
-- It would also update the payment at the right time. Depending on the subscription, there would be a reoccurring monthly or yearly update, making sure each time it withdraws the right amount of money from your card.
+- 该应用程序将能够接受信用卡信息或其他付款方式，并将该信息安全地存储在数据库中。
+- 它还会在正确的时间更新付款。根据订阅情况，每月或每年都会有重复的更新，确保每次都能从你的卡中提取足够的金额。
 
-All this is handled by the back end of an application.
+所有这些都由一个应用程序的后端处理。
 
-### What Are Some of a Backend Developer's Tasks?
+### 后端开发人员的一些任务是什么？
 
-It's safe to say that the role of a backend developer varies from company to company and from job to job.
+可以说，后端开发人员的角色因公司不同而不同，因工作不同而不同。
 
-The main focus of a backend developer's work is to create and maintain services and programs that help the front end function.
+后端开发人员的主要工作重点是创建和维护帮助前端运作的服务和程序。
 
-In general, here are some things a backend developer would work on:
+一般来说，这里有一些后端开发人员会从事的工作:
 
-- Creating, managing, and maintaining the type of database the product/service uses.
-- Building, interacting with, and maintaining servers.
-- Building internal or external functionalities and server-side software using server-side technologies and web frameworks to provide solutions to problems.
-- Working with APIs (Application Programming Interface). Designing, developing, implementing, maintaining, and managing APIs that support CRUD (Create Read Update Delete) operations.
-- Performing data validation to ensure data has the correct format before being stored in the database.
-- Users need to interact safely with their accounts. Backend developers create systems that secure every user's data - especially when dealing with payment processing systems.
-- Dealing with third-party services such as authentication and external payment services, to name a few.
-- Organizing system logic.
-- Developing site architecture.
+- 创建、管理和维护产品/服务使用的数据库类型。
+- 建立、互动和维护服务器。
+- 使用服务器端技术和网络框架建立内部或外部功能和服务器端软件，以提供问题的解决方案。
+- 使用API（应用程序设计接口）工作。设计、开发、实施、维护和管理支持CRUD（创建读取更新删除）操作的API。
+- 执行数据验证，确保数据在存储到数据库之前具有正确的格式。
+- 用户需要与他们的账户安全互动。后台开发人员创建系统，确保每个用户的数据安全 - 特别是在处理支付处理系统时。
+- 处理第三方服务，如认证和外部支付服务，仅举几例。
+- 组织系统逻辑。
+- 开发网站架构。
 
-### An Overview of Backend Tools and Technologies
+### 后端工具和技术概述
 
-There are different tools and technologies backend developers use on a day-to-day basis to implement logic into web applications.
+后端开发人员在日常工作中使用不同的工具和技术来实现网络应用的逻辑。
 
-A key component of backend programming is using a server-side scripting programming language.
+后端编程的一个关键组成部分是使用服务器端的脚本编程语言。
 
-Some of the most frequently used ones are:
+一些最经常使用的是:
 
 - **PHP**
 - **Ruby**
 - **Python**
 - **Java**
-- **JavaScript**. Yes, JavaScript is used widely in frontend development, but in recent years is used for backend development too. Node.js (a JavaScript runtime) makes that possible by providing backend functionality.
+- **JavaScript**. 是的，JavaScript被广泛用于前端开发，但近年来也被用于后端开发。Node.js（一个JavaScript运行时间）通过提供后端功能使之成为可能。
 
-Besides backend programming languages, backend frameworks and libraries are used to provide extra functionality to create web applications.
+除了后端编程语言，后端框架和库被用来提供额外的功能来创建网络应用。
 
-Some of the most popular ones are:
+一些最受欢迎的是:
 
 - Ruby on Rails
 - Django
 - Flask
 - Express
 
-When developers are part of a team, they use Git - a version control system that tracks changes across different project files.
+当开发者是一个团队的一部分时，他们使用Git--一个跟踪不同项目文件变化的版本控制系统。
 
-It's an open-source collaboration tool for programmers.
+它是一个针对程序员的开源协作工具。
 
-Interacting with databases is a big part of a backend developer's job, so knowledge of databases is paramount.
+与数据库互动是后端开发人员工作的一个重要部分，所以数据库知识是最重要的。
 
-Databases fall into two categories, relational and non-relational.
+数据库分为两类：关系型和非关系型。
 
-Some of the most oftenly used ones are:
+一些最经常使用的数据库是:
 
 - MySQL
 - PostgreSQL
 - MongoDB
 - Oracle
 
-When working with relational databases (such as MySQL, PostgreSQL, and Oracle), you will use SQL.
+在使用关系型数据库（如MySQL、PostgreSQL和Oracle）时，你将使用SQL。
 
-SQL stands for Structured Query Language. It is used for performing database queries. SQL communicates with relational databases to manipulate data.
+SQL是结构化查询语言的缩写。它用于执行数据库查询。SQL与关系型数据库进行通信以操作数据。
 
-You can learn more about SQL from [this helpful list of resources](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/).
+你可以从 [这个有用的资源清单](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/) 了解更多关于SQL的信息。
 
 ### Is Backend Development Right for You?
 

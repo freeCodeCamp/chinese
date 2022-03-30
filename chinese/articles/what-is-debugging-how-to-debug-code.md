@@ -35,49 +35,49 @@ In this article we'll talk about what debugging is, how to debug your code, and 
 
 # How Debugging Started
 
-The words "_bug_" and "_debugging_" in software are popularly attributed to [Admiral Grace Hopper](https://es.wikipedia.org/wiki/Grace_Murray_Hopper). A true legend, she wrote the first compiler that ever existed.
+软件中的"_bug_"和 "_debugging_" 这两个词被普遍认为是由 [Admiral Grace Hopper](https://es.wikipedia.org/wiki/Grace_Murray_Hopper) 提出的。一个真正的传奇人物，她写了有史以来的第一个编译器。
 
-In the 1940s, while she was working on a computer being developed for the US navy at Harvard University, her associates discovered a moth (an actual insect) stuck in a relay that crashed the computer.
+20世纪40年代，当她在哈佛大学为美国海军开发的一台计算机工作时，她的同事发现一只飞蛾（一种真实的昆虫）卡在一个继电器中，使计算机崩溃。
 
-When fixing this problem, she remarked that they were "debugging" the system.
+在解决这个问题时，她说，他们正在 `debugging` 系统。
 
-If you're a fan of etymology though, you might be interested in the fact that the word "debugging" seems to have been used as a term in aeronautics before entering the world of computers.
+如果你是一个词源学爱好者，你可能会对这样一个事实感兴趣：在进入计算机世界之前，`debugging` 一词似乎已经作为一个术语在航空学中使用。
 
-And apparently there's some kind of proof that even Thomas Edison used it in the sense of "technical error" back in 1878.
+而且显然有某种证据表明，甚至托马斯-爱迪生在1878年也在 `technical error` 的意义上使用过这个词。
 
-But that's not the point of this article. The point is that debugging is a core part of software development. It has always been and it probably always will be.
+但这并不是本文的重点。重点是，调试是软件开发的一个核心部分。它一直都是，而且可能永远都是。
 
-Thankfully, however, the cases were we need to remove actual insects from computers are rather rare, now.
+然而，值得庆幸的是，现在我们需要从计算机中移除真正的昆虫的情况相当罕见。
 
 # Why Should You Learn About Debugging?
 
-Bugs and errors are so prone to happen in software development because it's such a conceptual and abstract activity.
+漏洞和错误在软件开发中很容易发生，因为它是一种概念性和抽象的活动。
 
-As developers, we work with information. We organize it, move it, update it and edit it, send it places and then receive it again.
+作为开发者，我们与信息打交道。我们组织它，移动它，更新它，编辑它，把它发送到各地，然后再次接收它。
 
-We work with information all the time, but not directly with it. Information isn't "actually" there within the computer, at least not in the format users think of it.
+我们一直在与信息打交道，但不是直接与它打交道。信息并不 "实际 "存在于计算机中，至少不是以用户认为的格式存在。
 
-Within the computer there're only electric pulses, that are then abstracted to 1s and 0s, and then again abstracted into whatever information we're working with.
+在计算机中只有电脉冲，然后被抽象为1和0，然后再次被抽象为我们正在处理的任何信息。
 
-To interact with and make use of computers, we use programming languages. These provide levels of abstraction from the actual tasks the computer is performing, and representations of the information we're managing.
+为了与计算机交互和使用计算机，我们使用编程语言。这些提供了计算机正在执行的实际任务的抽象，以及我们正在管理的信息的表示。
 
-Programming can be a very abstract activity, and it's really easy to quickly lose sight of what's the actual task the computer is performing, or what information we're acting upon in a certain line of code. And from there on, it's easy to give the wrong instructions to the computer and miss the target we're looking for.
+编程可以是一种非常抽象的活动，而且很容易很快就忽略了计算机正在执行的实际任务是什么，或者我们在某一行代码中根据什么信息行事。从那时起，我们就很容易给计算机发出错误的指令，从而错失我们所要寻找的目标。
 
-An inside joke in the software development world is that devs normally spend 5 minutes writing code and 5 hours trying to understand why things don't work as they should.
+在软件开发领域的一个内部笑话是，开发人员通常会花5分钟来写代码，花5个小时来理解为什么事情不能像它们应该的那样工作。
 
-As developers, no matter how good we get, we're going to spend countless hours debugging our code, so we should try to get better and quicker at it.
+作为开发人员，无论我们做得多好，我们都要花无数个小时来调试我们的代码，所以我们应该努力在这方面做得更好、更快。
 
 # How to Debug Your Code
 
-Debugging can be defined as the process of finding the root of a problem in a code base and fixing it.
+调试可以被定义为在代码库中找到问题的根源并加以修复的过程。
 
-Usually we'll start by thinking out all possible causes, then testing each of this hypotheses (starting from the most likely ones), until the ultimate root cause is found. Then we correct it and ensure it won't happen again.
+通常我们会从思考所有可能的原因开始，然后测试每个假设（从最有可能的假设开始），直到找到最终的根本原因。然后我们纠正它，确保它不会再发生。
 
-There's no magic solution for bugs. Usually it takes a combination of googling, logging our code, and checking our logic against what is really happening.
+对于bug，没有神奇的解决方案。通常情况下，它需要结合搜索，记录我们的代码，并根据真正发生的情况检查我们的逻辑。
 
-While there are many tools that can help you with debugging, using these tools isn't necessarily the hard part. What is hard is truly understanding the errors you get, and truly understanding what's the best solution for them.
+虽然有许多工具可以帮助你进行调试，但使用这些工具并不一定是困难的部分。难的是真正理解你得到的错误，并真正理解什么是解决这些错误的最佳方案。
 
-So let's start by first talking about the "debugging mindset" and then exploring some useful tools we can use to debug our code.
+因此，让我们先来谈谈 "调试心态"，然后探索一些我们可以用来调试代码的有用工具。
 
 # How to Get in a Debugging Mindset
 
@@ -85,9 +85,9 @@ So let's start by first talking about the "debugging mindset" and then exploring
 
 ![G-Wn7Seyn](https://www.freecodecamp.org/news/content/images/2022/03/G-Wn7Seyn.gif)
 
-In almost every development environment, if your code fails, you will likely be shown an error message that (to some extent) explains why your code is failing.
+在几乎所有的开发环境中，如果你的代码失败了，很可能会显示一个错误信息，（在某种程度上）解释你的代码为什么会失败。
 
-Take this code for example:
+以这段代码为例:
 
 ```js
 mickTheBug('Im a scary bug!')
@@ -95,63 +95,63 @@ mickTheBug('Im a scary bug!')
 const mickTheBug = message => console.log(message)
 ```
 
-This code throws the following error:
+这段代码出现了以下错误:
 
 ```js
 ReferenceError: Cannot access 'mickTheBug' before initialization
     at Object.<anonymous> (/home/German/Desktop/ger/code/projects/test.js:4:1)
 ```
 
-As you can see, the error message points to the problem clearly and even declares at what line it's happening ( `test.js:4:1` ).
+正如你所看到的，错误信息明确指出了问题所在，甚至声明了问题发生在哪一行（`test.js:4:1`）。
 
-This may seem like a silly advise, but you might be surprised to see how many programmers don't read error messages carefully, and just react to the bug with the first idea that comes to their mind.
+这似乎是一个愚蠢的建议，但你可能会惊讶地看到有多少程序员不仔细阅读错误信息，而只是用他们脑海中的第一个想法来应对错误。
 
-Error messages are there for a reason, and this is to give us at least a first idea of where the problem is coming from.
+错误信息的存在是有原因的，这至少可以让我们对问题的来源有一个初步的了解。
 
 ## Google Things
 
 ![ddqvW2927](https://www.freecodecamp.org/news/content/images/2022/03/ddqvW2927.png)
 
-If the error message you get isn't clear to you, or you can't figure out why you're getting it, a good first step would be to Google it.
+如果你得到的错误信息不清楚，或者你无法弄清楚为什么会得到它，那么好的第一步就是用谷歌搜索。
 
-One of the many amazing things about coding is that the online community is huge. Almost surely there are tons of people already that have faced the same bug you're facing, and that have solved it and explained it so other people don't have to struggle with it, too.
+关于编码的许多令人惊奇的事情之一是，在线社区是巨大的。几乎可以肯定的是，已经有大量的人遇到了和你一样的问题，并且已经解决了它，解释了它，这样其他人就不必再纠结于它了。
 
-When googling, a good idea is to be as detailed as possible in the search.  
-Following the previous example, I'd use "_javascript ReferenceError: Cannot access before initialization_". I've found that mentioning the technology you're using in the search gives you more accurate results.
+当搜索时，一个好主意是在搜索中尽可能详细。按照前面的例子，我会使用 `javascript ReferenceError: Cannot access before initialization` 。我发现，在搜索中提到你所使用的技术会给你更准确的结果。
 
-I've also learned that removing things that are only particular to my code and not an error everyone would get, as the name of my function (_'mickTheBug'_), is important.
+我还了解到，删除那些只针对我的代码而不是每个人都会遇到的错误的东西是很重要的。如我的函数的名字（_'mickTheBug'_）。
 
-Another good idea is trying to **use trusted and recent sources**. Trusted means either official documentation or solutions that have been validated by others. Recent means solutions that have been implemented as recently as possible, because something that worked five years ago may not the best way to solve the problem right now.
+另一个好主意是尽量 **使用可信的和最新的来源**。可信的意思是官方文档或已经被其他人验证过的解决方案。最近的意思是指尽可能在最近实现的解决方案，因为五年前有效的东西可能不是现在解决问题的最好方法。
 
-Official documentation always should be the first thing to check either when you're learning something new or dealing with an error.
+当你在学习新东西或处理错误时，官方文档总是应该是首先要检查的东西。
 
-Official docs are typically the most complete and updated source of information for any given tool. It sometimes may feel tedious or overwhelming to go through so much technical information, but in the long run I think it saves time.
+官方文档通常是任何特定工具的最完整和最新的信息来源。有时，翻阅这么多的技术信息可能会感到乏味或不知所措，但从长远来看，我认为这可以节省时间。
 
-The deal with official docs is sometimes they contain so much info and it's explained to such a detailed level that it's more confusing than explanatory.
+官方文档的问题是，有时它们包含如此多的信息，而且解释得如此详细，以至于它更令人困惑而不是解释。
 
-Because of that I think it's a good idea to always use more than one source for any particular topic, and "hear different voices" explain the same thing. Usually only after reading the docs, a few articles, and watching a few youtube videos, I feel I get a good understanding of the tool I'm working with.
+正因为如此，我认为对于任何特定的主题，总是使用一个以上的来源，并 "听取不同的声音 "来解释同一件事是一个好主意。通常只有在阅读了文档、一些文章和观看了一些YouTube视频之后，我才觉得我对我正在使用的工具有了很好的理解。
 
 ## Explain Your Logic to Another Person or a Duck
 
 ![lwjv2jUhM](https://www.freecodecamp.org/news/content/images/2022/03/lwjv2jUhM.png)
 
-I mentioned before how programming can be an abstract activity, which makes it easy to lose sight of things, make wrong assumptions, and misinterpret the information we're working with.
+我之前提到过，编程可以是一种抽象的活动，这使得我们很容易忽视一些事情，做出错误的假设，并误解我们正在处理的信息
 
-A good solution to this is to go through your code line by line, reading it and explaining it out loud as you go. The [rubber duck technique](https://en.wikipedia.org/wiki/Rubber_duck_debugging) is a popular way of doing it, but you can choose your favorite pet or imaginary friend. =P
+解决这个问题的一个好办法是逐行阅读你的代码，一边读一边大声解释。[小黄鸭调试法](https://en.wikipedia.org/wiki/Rubber_duck_debugging)是一种流行的方法，但你可以选择你最喜欢的宠物或想象中的朋友。 =P
 
-The idea is to force yourself to actually read your code instead of just assuming you know what it does. In this way you can check the logic in your mind versus what is actually happening in your code.
+这样做的目的是强迫自己真正读懂你的代码，而不是仅仅假设你知道它是做什么的。通过这种方式，你可以检查你头脑中的逻辑与你的代码中实际发生的情况。
 
-The fact that we tend to assume things and not pay detailed attention to every single line of code is just human nature. It's a mechanism that helps us save energy and do things quicker.
+事实上，我们倾向于假设事情，而不是详细关注每一行代码，这只是人类的天性。这是一种帮助我们节省精力和更快做事的机制。
 
-But when debugging, we need to enforce our brain to work with us and be as present as possible on every line of code.
+但在调试时，我们需要强制我们的大脑与我们一起工作，并尽可能地在每一行代码上出现。
 
 ## Narrow Down Your Problem and Understand Where the Error is Generated
 
 ![aEKNV-Iju](https://www.freecodecamp.org/news/content/images/2022/03/aEKNV-Iju.gif)
 
-As your codebase get's bigger, it will be hard to analyze every line of code in the search for your bug. So it's a good idea to divide and conquer, starting your search in the places that are most likely to generate the issue.
+随着你的代码库越来越大，你将很难分析每一行代码来寻找你的错误。因此，一个好主意是分而治之，从最有可能产生问题的地方开始搜索。
 
-Let's see this example. I have a function that takes a number and returns it multiplied by two, and another that prints a firstName, a lastName, and the result of the multiplying function.
+让我们看看这个例子。我有一个函数，它接收一个数字并返回它乘以2的结果，还有一个函数，它打印一个名字（firstName），一个姓氏（lastName），以及乘法函数的结果。
+
 
 ```js
 const multiply = num => num*2
@@ -163,23 +163,23 @@ const mickTheBug = async (firstName, lastName, age) => {
 mickTheBug('Mick', 10)
 ```
 
-The code makes sense and runs without throwing an error, but the result I get is `My name is Mick 10 and the double of my age is NaN`, which is not what I want.
+这段代码是有意义的，运行时没有出现错误，但我得到的结果是 `My name is Mick 10 and the double of my age is NaN`，这不是我想要的。
 
-Here I can see that `10` is printing where `lastName` should be. And as the parameters are set in the line where the function is being called.
+这里我可以看到，`10` 被打印在 `lastName`的位置。而由于参数是在调用函数的那一行设置的。
 
-It's probably a good guess to start by checking if parameters where passed in the right way. And indeed we can see that when I called the function I passed it two parameters, `Mick` and `10`, and the function expects three parameters `firstName, lastName, age`.
+这可能是一个很好的猜测，首先要检查参数的传递方式是否正确。事实上，我们可以看到，当我调用该函数时，我给它传递了两个参数，`Mick`和 `10`，而该函数希望有三个参数`firstName, lastName, age`。
 
-> Typescript would've easily prevented us from making this mistake. More on that later. ;)
+> Typescript 可以轻松地防止我们犯这个错误。稍后再谈这个问题。 ;)
 
-Again, this is a silly example, but it illustrates how we can deduce were a problem is coming from, even if we don't have an error message to help us.
+同样，这是一个愚蠢的例子，但它说明了我们如何能够推断出问题的来源，即使我们没有错误信息来帮助我们。
 
-In these moments, try to ask yourself the following questions:
+在这些时候，试着问自己以下问题:
 
-- How do I know I'm seeing an error?
-- What input am I providing? Where is it coming from? Is this input the same as the function is expecting?
-- What output am I getting? How did the input change?
-- Are there any other entities interacting with this piece of code?
-- Did I change anything recently that could've made the code break?
+- 我怎么知道我看到了一个错误？
+- 我在提供什么输入？它是从哪里来的？这个输入与函数所期望的相同吗？
+- 我得到了什么输出？输入是如何变化的？
+- 是否有任何其他实体与这段代码互动？
+- 我最近是否改变了什么，从而使代码中断？
 
 ## Take a Break and Think about Something Else
 

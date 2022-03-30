@@ -1,11 +1,8 @@
-> -  原文地址：[What is Debugging? How to Debug Your Code for Beginners](https://www.freecodecamp.org/news/what-is-debugging-how-to-debug-code/)
-> -  原文作者：[
-                    
-                        Germán Cocca
-                    
-                ](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[What is Debugging? How to Debug Your Code for Beginners](https://www.freecodecamp.org/news/what-is-debugging-how-to-debug-code/)
+> - 原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
+>
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![What is Debugging? How to Debug Your Code for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/pexels-mike-198101.jpg)
 
@@ -13,28 +10,28 @@ In this article we'll talk about what debugging is, how to debug your code, and 
 
 ## Table of contents
 
--   [How Debugging Started](#howdebuggingstarted)
--   [Why Should You Learn About Debugging?](#whyshouldyoulearnaboutdebugging)
--   [How to Debug Your Code](#howtodebugyourcode)
--   [How to Get in a Debugging Mindset](#howtogetinadebuggingmindset)
-    -   [Pay Attention to Error Messages](#payattentiontoerrormessages)
-    -   [Google Things](#googlethings)
-    -   [Explain Your Logic to Another Person or a Duck](#explainyourlogictoanotherpersonoraduck)
-    -   [Narrow Down Your Problem and Understand Where the Error is Generated  
+- [How Debugging Started](#howdebuggingstarted)
+- [Why Should You Learn About Debugging?](#whyshouldyoulearnaboutdebugging)
+- [How to Debug Your Code](#howtodebugyourcode)
+- [How to Get in a Debugging Mindset](#howtogetinadebuggingmindset)
+  - [Pay Attention to Error Messages](#payattentiontoerrormessages)
+  - [Google Things](#googlethings)
+  - [Explain Your Logic to Another Person or a Duck](#explainyourlogictoanotherpersonoraduck)
+  - [Narrow Down Your Problem and Understand Where the Error is Generated  
         ](#narrowdownyourproblemandunderstandwheretheerrorisgenerated)
-    -   [Take a Break and Think about Something Else](#takeabreakandthinkaboutsomethingelse)
-    -   [Look for Help](#lookforhelp)
-    -   [Make Sure the Bug is Dead](#makesurethebugisdead)
-    -   [Write Clean Code](#writecleancode)
-        -   [Write DRY code](#writedrycode)
-        -   [Write simple code when possible](#writesimplecodewhenpossible)
-        -   [Use the SOLID principles](#usethesolidprinciples)
--   [Technical Debugging Tools](#technicaldebuggingtools)
-    -   [How TypeScript Helps Write Clean Code](#howtypescripthelpswritecleancode)
-    -   [How to Use Console.log to Debug Code](#howtouseconsolelogtodebugcode)
-    -   [How to Use Visual Studio Debugger](#howtousevisualstudiodebugger)
-    -   [Chrome Debugger](#chromedebugger)
--   [Conclusion](#conclusion)
+  - [Take a Break and Think about Something Else](#takeabreakandthinkaboutsomethingelse)
+  - [Look for Help](#lookforhelp)
+  - [Make Sure the Bug is Dead](#makesurethebugisdead)
+  - [Write Clean Code](#writecleancode)
+    - [Write DRY code](#writedrycode)
+    - [Write simple code when possible](#writesimplecodewhenpossible)
+    - [Use the SOLID principles](#usethesolidprinciples)
+- [Technical Debugging Tools](#technicaldebuggingtools)
+  - [How TypeScript Helps Write Clean Code](#howtypescripthelpswritecleancode)
+  - [How to Use Console.log to Debug Code](#howtouseconsolelogtodebugcode)
+  - [How to Use Visual Studio Debugger](#howtousevisualstudiodebugger)
+  - [Chrome Debugger](#chromedebugger)
+- [Conclusion](#conclusion)
 
 # How Debugging Started
 
@@ -178,11 +175,11 @@ Again, this is a silly example, but it illustrates how we can deduce were a prob
 
 In these moments, try to ask yourself the following questions:
 
--   How do I know I'm seeing an error?
--   What input am I providing? Where is it coming from? Is this input the same as the function is expecting?
--   What output am I getting? How did the input change?
--   Are there any other entities interacting with this piece of code?
--   Did I change anything recently that could've made the code break?
+- How do I know I'm seeing an error?
+- What input am I providing? Where is it coming from? Is this input the same as the function is expecting?
+- What output am I getting? How did the input change?
+- Are there any other entities interacting with this piece of code?
+- Did I change anything recently that could've made the code break?
 
 ## Take a Break and Think about Something Else
 
@@ -220,13 +217,13 @@ It will vary depending in what kind of field you work and what tools you use, bu
 
 When asking questions within these communities, I find it's important to keep in mind the following:
 
--   Try to be as **detailed as possible**. It's not always easy to understand somebody else's code by just reading it, so try to explain what are you working on, what are you trying to achieve and what is the problem you're facing.
--   Show the **exact error** you're getting.
--   Show the **related code** you think is causing the error.
--   Mention **what solutions you've tried** so far and why they didn't work.
--   Investigate and show that you've done **research** about the problem. Even though asking for help is totally ok, I think you have to first evacuate the more obvious and easy paths before asking someone else to do the thinking for you. That means that you've analyzed your code, googled the problem, read other solutions and official documentation, tried many approaches and none of them worked. Only then is it acceptable to ask someone else for help. I think this is a matter of being able to independently learn and solve problems, and also respect other people's time.
--   Mention the **documentation** you've consulted about this topic and what does that documentation say about it.
--   Provide access to your **full code base** in an online repo.
+- Try to be as **detailed as possible**. It's not always easy to understand somebody else's code by just reading it, so try to explain what are you working on, what are you trying to achieve and what is the problem you're facing.
+- Show the **exact error** you're getting.
+- Show the **related code** you think is causing the error.
+- Mention **what solutions you've tried** so far and why they didn't work.
+- Investigate and show that you've done **research** about the problem. Even though asking for help is totally ok, I think you have to first evacuate the more obvious and easy paths before asking someone else to do the thinking for you. That means that you've analyzed your code, googled the problem, read other solutions and official documentation, tried many approaches and none of them worked. Only then is it acceptable to ask someone else for help. I think this is a matter of being able to independently learn and solve problems, and also respect other people's time.
+- Mention the **documentation** you've consulted about this topic and what does that documentation say about it.
+- Provide access to your **full code base** in an online repo.
 
 This will make it easier for another person to understand your problem and hopefully provide you with solution ideas.
 
@@ -296,11 +293,11 @@ Some practical concepts that help with this are using explicit function and vari
 
 **SOLID** are a set of principles that apply mostly to [OOP](https://en.wikipedia.org/wiki/Object-oriented_programming). They were established by [Robert C. Martin](https://en.wikipedia.org/wiki/Robert_C._Martin) (who also happens to be the author of the [agile manifesto](https://en.wikipedia.org/wiki/Agile_software_development#The_Agile_Manifesto) as well) in [this book](https://www.amazon.com/-/es/Robert-Martin/dp/0135974445) about object oriented design.
 
--   **S** stands for "Single Responsibility", which means that a class should have one, and only one job.
--   **O** stands for "Open Closed Principle", which means that you should be able to extend a classes behavior, without modifying it.
--   **L** stands for "Liskov Substitution Principle", which means that derived classes must be substitutable for their base classes.
--   **I** stands for "Interface Segregation", which means a client should never be forced to implement an interface that it doesn’t use, or clients shouldn’t be forced to depend on methods they do not use.
--   **D** stands for "Dependency Inversion Principle" which means that entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions.
+- **S** stands for "Single Responsibility", which means that a class should have one, and only one job.
+- **O** stands for "Open Closed Principle", which means that you should be able to extend a classes behavior, without modifying it.
+- **L** stands for "Liskov Substitution Principle", which means that derived classes must be substitutable for their base classes.
+- **I** stands for "Interface Segregation", which means a client should never be forced to implement an interface that it doesn’t use, or clients shouldn’t be forced to depend on methods they do not use.
+- **D** stands for "Dependency Inversion Principle" which means that entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions.
 
 As mentioned, SOLID is more applicable to OOP than to general programming. We're not going to go in depth into OOP in this article, but is still good to know these principles and keep them in mind.
 
@@ -523,11 +520,11 @@ On the top of the screen we have the **controls**, that will allow us to go thro
 
 ![vsc9](https://www.freecodecamp.org/news/content/images/2022/03/vsc9.jpg)
 
--   The **Continue** button runs the program and stops only on user-defined breakpoints.
--   With **Step Over**, if there is a function call, it executes it and returns the result. You don't step into the lines that are inside the function. You just go directly to the function return value.
--   **Step Into** goes inside the function line by line until it returns, and then you go back to the next line right after the function call.
--   With the **Step Out** button, if you have stepped in a function you can skip the remaining execution of the function and go directly to the return value.
--   **Restart** runs the debugger from the top all over again and **Stop** exits the debugger.
+- The **Continue** button runs the program and stops only on user-defined breakpoints.
+- With **Step Over**, if there is a function call, it executes it and returns the result. You don't step into the lines that are inside the function. You just go directly to the function return value.
+- **Step Into** goes inside the function line by line until it returns, and then you go back to the next line right after the function call.
+- With the **Step Out** button, if you have stepped in a function you can skip the remaining execution of the function and go directly to the return value.
+- **Restart** runs the debugger from the top all over again and **Stop** exits the debugger.
 
 So there you go, that's a very powerful debugger built into your code editor. As you can see, with this tool we can check a lot of information at the same time, just by setting breakpoints wherever we want and without the need of any console.logs.
 

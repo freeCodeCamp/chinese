@@ -10,30 +10,29 @@ In this article we'll talk about what debugging is, how to debug your code, and 
 
 ## Table of contents
 
-- [如何调试](#howdebuggingstarted)
-- [你为什么要学习调试知识？](#whyshouldyoulearnaboutdebugging)
-- [如何调试你的代码](#howtodebugyourcode)
-- [如何进入调试的思维模式](#howtogetinadebuggingmindset)
-  - [注意错误信息](#payattentiontoerrormessages)
-  - [用 google 搜索](#googlethings)
-  - [向另一个人或一只鸭子解释你的逻辑（小黄鸭调试法）](#explainyourlogictoanotherpersonoraduck)
-  - [Narrow Down Your Problem and Understand Where the Error is Generated  
-        ](#narrowdownyourproblemandunderstandwheretheerrorisgenerated)
-  - [休息一下，想想别的事情](#takeabreakandthinkaboutsomethingelse)
-  - [寻找帮助](#lookforhelp)
-  - [确保bug已经解决](#makesurethebugisdead)
-  - [编写简洁的代码](#writecleancode)
-    - [写 DRY 代码](#writedrycode)
-    - [尽可能写出简单的代码](#writesimplecodewhenpossible)
-    - [使用 SOLID 原则](#usethesolidprinciples)
-- [技术调试工具](#technicaldebuggingtools)
-  - [TypeScript如何帮助编写简洁的代码](#howtypescripthelpswritecleancode)
-  - [如何使用Console.log来调试代码](#howtouseconsolelogtodebugcode)
-  - [如何使用Visual Studio调试器](#howtousevisualstudiodebugger)
-  - [Chrome 调试器](#chromedebugger)
-- [结语](#conclusion)
+- [如何调试](./#howdebuggingstarted)
+- [你为什么要学习调试知识？](./#whyshouldyoulearnaboutdebugging)
+- [如何调试你的代码](./#howtodebugyourcode)
+- [如何进入调试的思维模式](./#howtogetinadebuggingmindset)
+  - [注意错误信息](./#payattentiontoerrormessages)
+  - [用 google 搜索](./#googlethings)
+  - [向另一个人或一只鸭子解释你的逻辑（小黄鸭调试法）](./#explainyourlogictoanotherpersonoraduck)
+  - [缩小问题范围，了解错误产生的原因](./#narrowdownyourproblemandunderstandwheretheerrorisgenerated)
+  - [休息一下，想想别的事情](./#takeabreakandthinkaboutsomethingelse)
+  - [寻找帮助](./#lookforhelp)
+  - [确保bug已经解决](./#makesurethebugisdead)
+  - [编写简洁的代码](./#writecleancode)
+    - [写 DRY 代码](./#writedrycode)
+    - [尽可能写出简单的代码](./#writesimplecodewhenpossible)
+    - [使用 SOLID 原则](./#usethesolidprinciples)
+- [技术调试工具](./#technicaldebuggingtools)
+  - [TypeScript如何帮助编写简洁的代码](./#howtypescripthelpswritecleancode)
+  - [如何使用Console.log来调试代码](./#howtouseconsolelogtodebugcode)
+  - [如何使用Visual Studio调试器](./#howtousevisualstudiodebugger)
+  - [Chrome 调试器](./#chromedebugger)
+- [结语](./#conclusion)
 
-# How Debugging Started
+<h2 id="How-Debugging-Started">如何调试</h1>
 
 软件中的"_bug_"和 "_debugging_" 这两个词被普遍认为是由 [Admiral Grace Hopper](https://es.wikipedia.org/wiki/Grace_Murray_Hopper) 提出的。一个真正的传奇人物，她写了有史以来的第一个编译器。
 
@@ -49,7 +48,7 @@ In this article we'll talk about what debugging is, how to debug your code, and 
 
 然而，值得庆幸的是，现在我们需要从计算机中移除真正的昆虫的情况相当罕见。
 
-# Why Should You Learn About Debugging?
+<h2 id="Why-Should-You-Learn-About-Debugging?">你为什么要学习调试知识?</h2>
 
 漏洞和错误在软件开发中很容易发生，因为它是一种概念性和抽象的活动。
 
@@ -67,7 +66,7 @@ In this article we'll talk about what debugging is, how to debug your code, and 
 
 作为开发人员，无论我们做得多好，我们都要花无数个小时来调试我们的代码，所以我们应该努力在这方面做得更好、更快。
 
-# How to Debug Your Code
+<h2 id="How-to-Debug-Your-Code">如何调试你的代码</h2>
 
 调试可以被定义为在代码库中找到问题的根源并加以修复的过程。
 
@@ -79,9 +78,9 @@ In this article we'll talk about what debugging is, how to debug your code, and 
 
 因此，让我们先来谈谈 "调试心态"，然后探索一些我们可以用来调试代码的有用工具。
 
-# How to Get in a Debugging Mindset
+<h2 id="How-to-Get-in-a-Debugging-Mindset">如何进入调试的思维模式</h2>
 
-## Pay Attention to Error Messages
+<h3 id="Pay-Attention-to-Error-Messages">注意错误信息</h3>
 
 ![G-Wn7Seyn](https://www.freecodecamp.org/news/content/images/2022/03/G-Wn7Seyn.gif)
 
@@ -108,7 +107,7 @@ ReferenceError: Cannot access 'mickTheBug' before initialization
 
 错误信息的存在是有原因的，这至少可以让我们对问题的来源有一个初步的了解。
 
-## Google Things
+<h3 id="Google-Things">用 google 搜索</h3>
 
 ![ddqvW2927](https://www.freecodecamp.org/news/content/images/2022/03/ddqvW2927.png)
 
@@ -130,7 +129,7 @@ ReferenceError: Cannot access 'mickTheBug' before initialization
 
 正因为如此，我认为对于任何特定的主题，总是使用一个以上的来源，并 "听取不同的声音 "来解释同一件事是一个好主意。通常只有在阅读了文档、一些文章和观看了一些YouTube视频之后，我才觉得我对我正在使用的工具有了很好的理解。
 
-## Explain Your Logic to Another Person or a Duck
+<h3 id="Explain-Your-Logic-to-Another-Person-or-a-Duck">向另一个人或一只鸭子解释你的逻辑（小黄鸭调试法)</h3>
 
 ![lwjv2jUhM](https://www.freecodecamp.org/news/content/images/2022/03/lwjv2jUhM.png)
 
@@ -144,7 +143,7 @@ ReferenceError: Cannot access 'mickTheBug' before initialization
 
 但在调试时，我们需要强制我们的大脑与我们一起工作，并尽可能地在每一行代码上出现。
 
-## Narrow Down Your Problem and Understand Where the Error is Generated
+<h3 id="Narrow-Down-Your-Problem-and-Understand-Where-the-Error-is-Generated">缩小问题范围，了解错误产生的原因</h3>
 
 ![aEKNV-Iju](https://www.freecodecamp.org/news/content/images/2022/03/aEKNV-Iju.gif)
 
@@ -181,7 +180,7 @@ mickTheBug('Mick', 10)
 - 是否有任何其他实体与这段代码互动？
 - 我最近是否改变了什么，从而使代码中断？
 
-## Take a Break and Think about Something Else
+<h3 id="Take-a-Break-and-Think-about-Something-Else">休息一下，想想别的事情</h3>
 
 ![Ly_kXFJop](https://www.freecodecamp.org/news/content/images/2022/03/Ly_kXFJop.gif)
 
@@ -207,7 +206,7 @@ mickTheBug('Mick', 10)
 
 另外，在你的脑海中保持这样的想法：`bug` 只是软件开发的一部分。这并不意味着你作为一个开发者很糟糕。每个人都会有 bug，即使是最好的程序员。因此，冷静下来，利用这种情况来学习新的东西。
 
-## Look for Help
+<h3 id="Look-for-Help">寻找帮助</h3>
 
 我之前提到过在线社区的重要性，以及我们可以在几秒钟内轻松找到几乎任何主题的帮助是多么酷。
 
@@ -241,7 +240,7 @@ mickTheBug('Mick', 10)
 
 没有人天生就知道所有的事情，如果你已经做了研究并致力于解决问题，你完全有权问任何你想要的东西。如果其他人傲慢或无礼，这说明他们不好，而不是你。
 
-## Make Sure the Bug is Dead
+<h3 id="Make-Sure-the-Bug-is-Dead">确保bug已经解决</h3>
 
 ![xOmnh7_G7](https://www.freecodecamp.org/news/content/images/2022/03/xOmnh7_G7.gif)
 
@@ -253,7 +252,7 @@ mickTheBug('Mick', 10)
 
 如果你没有自动化测试（如果你想创建高质量的软件，你真的应该这样做），至少要手动测试你的代码，重现用户可能与之发生的所有互动，并确保该bug被有效地杀死。
 
-## Write Clean Code
+<h3 id="Write-Clean-Code">编写简洁的代码</h3>
 
 ![Y4PKO37NS](https://www.freecodecamp.org/news/content/images/2022/03/Y4PKO37NS.png)
 
@@ -263,7 +262,7 @@ mickTheBug('Mick', 10)
 
 关于这些主题有整整一本书，但长话短说，这些原则旨在使软件易于开发，易于理解和维护，并尽可能地接近于无缺陷。
 
-### Write DRY code
+<h4 id="Write-DRY-code">写 DRY 代码</h4>
 
 **DRY** 原则代表着 **不要重复自己**。它基本上意味着我们应该尽可能地避免重复相同的代码。
 
@@ -271,7 +270,7 @@ mickTheBug('Mick', 10)
 
 这样一来，如果在该操作中发生了一些错误或意外行为，我们就知道只有一段代码要负责，而不是许多分散在代码库中的代码。
 
-### Write simple code when possible
+<h4 id="Write-simple-code-when-possible">尽可能写出简单的代码</h4>
 
 **KISS** 原则代表着 **保持简单的愚蠢**。随着一个软件项目的发展，它不可避免地开始变得越来越复杂。随着新的、计划外的功能被添加，不同的开发人员开始工作，不同的逻辑和执行任务的方式可能会在同一个项目中实现。
 
@@ -289,7 +288,7 @@ mickTheBug('Mick', 10)
 
 一些有助于此的实用概念是使用明确的函数和变量名称，将关注点分离成不同的函数和代码模块，当你的任务不可避免地复杂时，写简短的注释来解释你的代码。
 
-### Use the SOLID principles
+<h4 id="Use-the-SOLID-principles">使用 SOLID 原则</h4>
 
 **SOLID** 是一套主要适用于 [OOP](https://en.wikipedia.org/wiki/Object-oriented_programming) 的原则。它们是由[Robert C. Martin](https://en.wikipedia.org/wiki/Robert_C._Martin) (他也是 [agile manifesto](https://en.wikipedia.org/wiki/Agile_software_development#The_Agile_Manifesto) 的作者)，[这本书中](https://www.amazon.com/-/es/Robert-Martin/dp/0135974445) 是面向对象设计的。
 
@@ -303,7 +302,7 @@ mickTheBug('Mick', 10)
 
 现在让我们来了解一些你可以用来帮助你调试代码的工具。
 
-# Technical Debugging Tools
+<h2 id="Technical-Debugging-Tools">技术调试工具</h2>
 
 有许多工具我们可以用来减少在我们的代码中插入bug的机会，或者更有效地打击现有的bug。
 
@@ -317,7 +316,7 @@ mickTheBug('Mick', 10)
 
 但我们将来会在另一篇关于如何调试React应用程序的文章中回顾这些。;)
 
-## How TypeScript Helps Write Clean Code
+<h3 id="How-TypeScript-Helps-Write-Clean-Code">TypeScript如何帮助编写简洁的代码</h3>
 
 我提到TypeScript是第一个工具，因为它与前面关于编写干净代码的部分密切相关。
 
@@ -338,7 +337,7 @@ index.ts(6, 64): An argument for 'age' was not provided.
 
 因此，如果你习惯于使用普通的JavaScript，TypeScript一开始可能会觉得是不必要的模板。但从长远来看，它肯定会节省你的时间，防止你在代码中插入愚蠢的错误。
 
-## How to Use Console.log to Debug Code
+<h3 id="How-to-Use-Console.log-to-Debug-Code">如何使用Console.log来调试代码</h3>
 
 在控制台中记录你的代码是最基本的调试方式，也是我们作为开发者最先学会使用的方式。
 
@@ -460,7 +459,7 @@ console.error(new Error('Error detected'))
 //     at node:internal/main/run_main_module:17:47
 ```
 
-## How to Use Visual Studio Debugger
+<h3 id="How-to-Use-Visual-Studio-Debugger">如何使用Visual Studio调试器</h3>
 
 随着我们的应用程序的增长和开始变得更加复杂，控制台.记录的做法变得不是那么有效。
 
@@ -528,7 +527,7 @@ console.error(new Error('Error detected'))
 
 所以，你看，这就是一个内置于你的代码编辑器中的非常强大的调试器。正如你所看到的，有了这个工具，我们可以同时检查很多信息，只需在我们想要的地方设置断点，而且不需要任何console.logs。
 
-## Chrome Debugger
+<h3 id="Chrome-Debugger">Chrome 调试器</h3>
 
 要在Chrome中进行调试，我们首先要在浏览器中打开我们的应用程序。在我的例子中，我创建了一个简单的HTML文件，其中链接了我的JS文件（与前面的例子相同）。
 
@@ -550,7 +549,7 @@ console.error(new Error('Error detected'))
 
 正如我们所看到的，Chrome和VS代码调试器的工作原理非常相似，你决定使用哪一个只是一个偏好的问题。
 
-# 结语
+<h2 id="conclusion">结语</h2>
 
 调试是我们作为开发者所做工作的一个核心部分。正因为如此，我认为以一种有效的方式来考虑它和做它是一个好主意，而不是在错误发生时才做出反应。
 

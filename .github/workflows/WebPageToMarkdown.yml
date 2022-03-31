@@ -25,7 +25,7 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
       - name: Crawl pages and generate Markdown files
-        uses: freeCodeCamp-China/article-webpage-to-markdown-action@v0.1.1
+        uses: freeCodeCamp-China/article-webpage-to-markdown-action@v0.1.2
         with:
           newsLink: '${{ github.event.issue.Body }}'
           markDownFilePath: './chinese/articles/'

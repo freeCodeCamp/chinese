@@ -1,11 +1,8 @@
-> -  原文地址：[How to Add Commit Hooks to Git with Husky to Automate Code Tasks](https://www.freecodecamp.org/news/how-to-add-commit-hooks-to-git-with-husky-to-automate-code-tasks/)
-> -  原文作者：[
-                    
-                        Colby Fayock
-                    
-                ](https://www.freecodecamp.org/news/author/colbyfayock/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Add Commit Hooks to Git with Husky to Automate Code Tasks](https://www.freecodecamp.org/news/how-to-add-commit-hooks-to-git-with-husky-to-automate-code-tasks/)
+> - 原文作者：[Colby Fayock](https://www.freecodecamp.org/news/author/colbyfayock/)
+>
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Add Commit Hooks to Git with Husky to Automate Code Tasks](https://www.freecodecamp.org/news/content/images/size/w2000/2020/10/husky.jpg)
 
@@ -13,13 +10,13 @@ There are a lot of tools to automate our code tasks. We can check for syntax iss
 
 But not everyone on the team will remember to run those commands every time they commit. How can we use Husky to add Git hooks to run them for us?
 
--   [What are Git Hooks?](#what-are-git-hooks)
--   [What is Husky?](#what-is-husky)
--   [What are we going to build?](#what-are-we-going-to-build)
--   [Step 0: Setting up a new project](#step-0-setting-up-a-new-project)
--   [Step 1: Installing Husky to a project](#step-1-installing-husky-to-a-project)
--   [Step 2: Configuring Husky to run Git hooks](#step-2-configuring-husky-to-run-git-hooks)
--   [Step 3: Using Husky to format code with Prettier](#step-3-using-husky-to-format-code-with-prettier)
+- [What are Git Hooks?](#what-are-git-hooks)
+- [What is Husky?](#what-is-husky)
+- [What are we going to build?](#what-are-we-going-to-build)
+- [Step 0: Setting up a new project](#step-0-setting-up-a-new-project)
+- [Step 1: Installing Husky to a project](#step-1-installing-husky-to-a-project)
+- [Step 2: Configuring Husky to run Git hooks](#step-2-configuring-husky-to-run-git-hooks)
+- [Step 3: Using Husky to format code with Prettier](#step-3-using-husky-to-format-code-with-prettier)
 
 ## What are Git Hooks?
 
@@ -275,9 +272,9 @@ You also probably don’t want Prettier running on “all the things” (maybe y
 
 Prettier allows you to set up a `.prettierignore`  file right inside of the root of the project next to `package.json`, similar to `.gitignore`, that allows you to tell Prettier what files it should not run on.
 
- [![Follow me for more Javascript, UX, and other interesting things!](https://res.cloudinary.com/fay/image/upload/w_2000,h_400,c_fill,q_auto,f_auto/w_1020,c_fit,co_rgb:007079,g_north_west,x_635,y_70,l_text:Source%20Sans%20Pro_64_line_spacing_-10_bold:Colby%20Fayock/w_1020,c_fit,co_rgb:383f43,g_west,x_635,y_6,l_text:Source%20Sans%20Pro_44_line_spacing_0_normal:Follow%20me%20for%20more%20JavaScript%252c%20UX%252c%20and%20other%20interesting%20things!/w_1020,c_fit,co_rgb:007079,g_south_west,x_635,y_70,l_text:Source%20Sans%20Pro_40_line_spacing_-10_semibold:colbyfayock.com/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_68,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_145,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_222,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_295,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/v1/social-footer-card)](https://twitter.com/colbyfayock) 
+ [![Follow me for more Javascript, UX, and other interesting things!](https://res.cloudinary.com/fay/image/upload/w_2000,h_400,c_fill,q_auto,f_auto/w_1020,c_fit,co_rgb:007079,g_north_west,x_635,y_70,l_text:Source%20Sans%20Pro_64_line_spacing_-10_bold:Colby%20Fayock/w_1020,c_fit,co_rgb:383f43,g_west,x_635,y_6,l_text:Source%20Sans%20Pro_44_line_spacing_0_normal:Follow%20me%20for%20more%20JavaScript%252c%20UX%252c%20and%20other%20interesting%20things!/w_1020,c_fit,co_rgb:007079,g_south_west,x_635,y_70,l_text:Source%20Sans%20Pro_40_line_spacing_-10_semibold:colbyfayock.com/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_68,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_145,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_222,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_295,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/v1/social-footer-card)](https://twitter.com/colbyfayock)
 
--   [? Follow Me On Twitter](https://twitter.com/colbyfayock)
--   [? Subscribe To My Youtube](https://youtube.com/colbyfayock)
--   [✉️ Sign Up For My Newsletter](https://www.colbyfayock.com/newsletter/)
--   [? Sponsor Me](https://github.com/sponsors/colbyfayock)
+- [? Follow Me On Twitter](https://twitter.com/colbyfayock)
+- [? Subscribe To My Youtube](https://youtube.com/colbyfayock)
+- [✉️ Sign Up For My Newsletter](https://www.colbyfayock.com/newsletter/)
+- [? Sponsor Me](https://github.com/sponsors/colbyfayock)

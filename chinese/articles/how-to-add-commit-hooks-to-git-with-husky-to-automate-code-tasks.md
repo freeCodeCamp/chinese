@@ -10,27 +10,27 @@
 
 但并不是团队中的每个人都会记得每次提交时都要运行这些命令。我们如何使用Husky来添加Git钩子来为我们运行这些命令？
 
-- [什么是 Git Hooks?](#what-are-git-hooks)
-- [什么是 Husky?](#what-is-husky)
-- [我们要构建什么？](#what-are-we-going-to-build)
-- [第0步：建立一个新的项目](#step-0-setting-up-a-new-project)
-- [第1步：将 Husky 安装到一个项目上](#step-1-installing-husky-to-a-project)
-- [第2步：配置Husky以运行Git钩子](#step-2-configuring-husky-to-run-git-hooks)
-- [第3步：使用Husky用Prettier格式化代码](#step-3-using-husky-to-format-code-with-prettier)
+- [什么是 Git Hooks?](./#what-are-git-hooks)
+- [什么是 Husky?](./#what-is-husky)
+- [我们要构建什么？](./#what-are-we-going-to-build)
+- [第0步：建立一个新的项目](./#step-0-setting-up-a-new-project)
+- [第1步：将 Husky 安装到一个项目上](./#step-1-installing-husky-to-a-project)
+- [第2步：配置Husky以运行Git钩子](./#step-2-configuring-husky-to-run-git-hooks)
+- [第3步：使用Husky用Prettier格式化代码](./#step-3-using-husky-to-format-code-with-prettier)
 
-## What are Git Hooks?
+<h2 id="what-are-git-hooks?>什么是 Git Hooks?</h2>
 
 [Git hooks](https://git-scm.com/docs/githooks) 是你可以设置的脚本，以便在Git生命周期中 [在某些事件中运行](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)。这些事件包括提交的不同阶段，如提交前（pre-commit）和提交后（post-commit）。
 
 这些都很有用，因为它们允许开发者运行自定义的代码任务，甚至通过自动化其他脚本来执行这些任务来执行标准。
 
-## What is Husky?
+<h2 id="what-is-husky?">什么是 Husky?</h2>
 
 [Husky](https://github.com/typicode/husky)是一个工具，它允许我们轻松地处理Git Hooks 并在这些阶段运行我们想要的脚本。
 
 > 它的工作原理是在我们的 `package.json` 文件中加入一个对象，配置 Husky 来运行我们指定的脚本。之后，Husky会管理我们的脚本将在Git生命周期的哪个阶段运行。
 
-## What are we going to build?
+<h2 id="what-are-we-going-to-build?">我们要构建什么？</h2>
 
 我们将建立一个简单的项目，用来测试Git Hooks。
 
@@ -44,7 +44,7 @@ Prettier 是一个会自动为我们格式化代码的工具，如果你不期�
 
 最后，在写这篇文章的时候，Husky 发布了一个 [v5 Alpha](https://typicode.github.io/husky/#/) 版本的Git Hooks 解决方案。鉴于它还只是一个Alpha版本，我们将继续使用[v4](https://github.com/typicode/husky/tree/v4.3.0)，它允许我们用npm轻松安装 Husky 。
 
-## Step 0: How to set up a new project
+<h2 id="step-0-setting-up-a-new-project">第0步：建立一个新的项目</h2>
 
 正如我所提到的，你可以按照同样的步骤来处理任何用`package.json`文件管理的项目。
 
@@ -68,7 +68,7 @@ _注意：请随意将`my-husky-project`替换为你想命名的目录。_
 
 [Follow along with the commit](https://github.com/colbyfayock/my-husky-project/commit/9e0b39c8f34c2755e074a32ef9de8d4047b68f67).
 
-## Step 1: How to install Husky to a project
+<h2 id="step-1-installing-husky-to-a-project">第1步：将 Husky 安装到一个项目上</h2>
 
 要安装Husky，我们可以使用 yarn 或 npm。
 
@@ -84,7 +84,7 @@ _注意：如果此时安装 Husky 会安装v5 版，这意味着v5已经正式�
 
 [伴随着提交的过程](https://github.com/colbyfayock/my-husky-project/commit/720728cd595d41c9197640bd4c48e9133bd7d956).
 
-## Step 2: How to configure Husky to run Git hooks
+<h2 id="step-2-configuring-husky-to-run-git-hooks">第2步：配置Husky以运行Git钩子</h2>
 
 接下来，我们要设置Husky，这样我们就可以使用它作为我们的Git hooks。
 
@@ -141,7 +141,7 @@ _注意：不要觉得你需要这样做，除非你很好奇。我们的目标�
 
 _注意：如果你想查看我的分支，其中包括每一个用于测试的Git挂钩，[你可以在Github上找到它](https://github.com/colbyfayock/my-husky-project/tree/main+test)。_
 
-## Step 3: How to use Husky to format code with Prettier
+<h2 id="step-3-using-husky-to-format-code-with-prettier">第3步：使用Husky用Prettier格式化代码</h2>
 
 最后，对于一个真实世界的用例，我们要测试一下使用Prettier来自动格式化我们的代码。
 
@@ -235,9 +235,9 @@ git checkout pages
 
 [跟随提交](https://github.com/colbyfayock/my-husky-project/commit/315112d062a791f20eda11f9c608c5fa794ba73e).
 
-## What can I do next?
+## 我接下来能做什么？
 
-### Use lint-staged to only run formatting on changed files
+### 使用linet-staged，只对更改过的文件运行格式化。
 
 我们在预提交 hook 中使用Prettier，并指定`.`，这意味着它每次都会在所有文件上运行。
 
@@ -260,13 +260,13 @@ git checkout pages
 
 你也会注意到我们没有包括`git add`，lint-staged也会为我们自动添加任何变化到Git上。
 
-### Set up a Prettier config to customize formatting rules
+### 设置一个Prettier配置来定制格式化规则
 
 Prettier 是非常固定风格的 。有一些东西我个人并不喜欢，你可能也有同样的感觉。
 
 幸运的是，Prettier允许你设置一个配置文件，可以覆盖其中的一些文件，使你的代码只是你和你的团队想要的方式。
 
-### Tell Prettier to ignore files with .prettierignore
+### 告诉Prettier用.prettierignore来忽略文件
 
 你也可能不希望Prettier运行在 **所有的东西** 上（也许你想）。
 

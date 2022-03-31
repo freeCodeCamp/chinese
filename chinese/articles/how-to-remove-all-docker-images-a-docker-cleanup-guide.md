@@ -6,17 +6,17 @@
 
 ![How to Remove All Docker Images – A Docker Cleanup Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/docker-cleanup-guide.png)
 
-Containers are everywhere in today’s tech world. The most popular technology for container management is [Docker](https://www.docker.com/). It makes using containers easy and helps you easily get applications up and running.
+容器在当今的技术世界中无处不在。最流行的容器管理技术是 [Docker](https://www.docker.com/)。它使使用容器变得简单，并帮助你轻松地让应用程序启动和运行。
 
-Unfortunately, this can take a lot of disk space, and you will eventually end up with a full disk.
+不幸的是，这可能会占用大量的磁盘空间，最终你将会有一个完整的磁盘。
 
-It doesn't matter if you use Docker on your device or server. This guide shows you how you analyze used disk space and clean up different Docker resources.
+如果你在设备或服务器上使用Docker，这并不重要。本指南告诉你如何分析已使用的磁盘空间和清理不同的Docker资源。
 
-All you need is a running Docker daemon and a terminal.
+你所需要的只是一个正在运行的Docker守护进程和一个终端。
 
-## How to analyze how much space Docker is using
+## 如何分析Docker使用了多少空间
 
-You can look up how much space is used by running the following command:
+你可以通过运行下面的命令来查看有多少空间被使用:
 
 ```sh
 $ docker system df
@@ -28,7 +28,7 @@ Local Volumes   3         2         539.1MB   50.04MB (9%)
 Build Cache     76        0         1.242GB   1.242GB
 ```
 
-You can get more information by using the verbose option `-v`:
+你可以通过使用verbose选项 `-v` 获得更多信息:
 
 ```sh
 $ docker system df -v
@@ -56,73 +56,73 @@ kxz13fmdbodg   regular        13B       2 months ago   2 months ago
 nysus21ej7pf   regular        0B        2 months ago   2 months ago
 ```
 
-As you can see, you get information about:
+正如你所看到的，你可以得到以下信息:
 
-- Images space usage,
-- Containers space usage,
-- Local Volumes space usage, and
-- Build cache usage.
+- 镜像空间的使用,
+- 图像空间的使用,
+- 本地卷的空间使用，以及
+- 构建缓存的使用情况。
 
-## How to Clean Up Everything in Docker
+## 如何在Docker中清理一切
 
-You can clean up everything or clean up specific resources in Docker like images, container volumes, or the build cache.
+你可以清理一切，也可以清理Docker中的特定资源，如镜像、容器卷或构建缓存。
 
-To clean up as much as possible excluding components that are in use, run this command:
+要尽可能地清理，不包括正在使用的组件，请运行这个命令:
 
 ```sh
 docker system prune -a
 ```
 
-`-a` includes unused and dangling containers. Not providing `-a` would only delete dangling images, which are untagged images that have no relationship to any other images.
+`-a` 包括未使用的和悬空的容器。不提供`-a'将只删除悬空的镜像，这些镜像是没有标记的镜像，与任何其他镜像没有关系。
 
-If you want to clean up most Docker resources but still keep tagged images, you can execute this command:
+如果你想清理大部分Docker资源，但仍然保留有标签的镜像，你可以执行这个命令:
 
 ```sh
 docker system prune
 ```
 
-This is all you need to free up disk space quickly. Additionally, you can clean up components separately.
+这就是你快速释放磁盘空间所需要的一切。此外，你还可以单独清理组件。
 
-Here are a few more useful commands:
+这里有几个更有用的命令:
 
-### Clean up unused and dangling images
+### 清理未使用和悬空的镜像
 
 ```sh
 docker image prune
 ```
 
-### Clean up dangling images only
+### 只清理悬空的镜像
 
 ```sh
 docker image prune -a
 ```
 
-### Clean up stopped containers
+### 清理停止运行的容器
 
 ```sh
 docker container prune
 ```
 
-### Clean up unused volumes
+### 清理未使用的卷宗
 
 ```sh
 docker volume prune
 ```
 
-## How to Continuously Manage Your Used Docker Space Efficiently
+## 如何持续有效地管理你已使用的Docker空间
 
-You can run something on a daily basis or at startup. To skip the usual prompt, you need to add `-f` to the command you want to run automatically.
+你可以在日常或启动时运行一些东西。要跳过通常的提示，你需要在你想自动运行的命令中添加`-f`。
 
-Keep in mind that this will cause you to download images much more often because you regularly remove Docker resources.
+请记住，这将导致你更频繁地下载镜像，因为你定期删除Docker资源。
 
-If you don’t have a disk space issue, then don’t worry. Just clean things up as soon as heavy Docker disk usage catches your attention.
+如果你没有磁盘空间问题，那么不用担心。一旦Docker磁盘使用量过大引起你的注意，就立即清理。
 
-## Conclusion
+## 结语
 
-Today, there are many ways of cleaning up Docker disk space using the `docker` command. You can even execute these commands automatically if you want to clean up Docker resources regularly.
+如今，有很多方法可以使用`docker`命令来清理Docker磁盘空间。如果你想定期清理Docker资源，你甚至可以自动执行这些命令。
 
-I hope you enjoyed the article.
+我希望你喜欢这篇文章。
 
-If you liked it and felt the need to give me a round of applause or just want to get in touch, [follow me on Twitter](https://twitter.com/sesigl).
+如果你喜欢它，觉得有必要给我点赞，或者只是想联系我，[在Twitter上关注我](https://twitter.com/sesigl)。
 
-I work at eBay Kleinanzeigen, one of the world’s biggest classified companies. By the way, [we are hiring](https://jobs.ebayclassifiedsgroup.com/ebay-kleinanzeigen)!
+我在eBay Kleinanzeigen工作，这是全球最大的分类公司之一。顺便说一下，[我们正在招聘](https://jobs.ebayclassifiedsgroup.com/ebay-kleinanzeigen)!

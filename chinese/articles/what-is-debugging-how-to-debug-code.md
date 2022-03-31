@@ -185,168 +185,168 @@ mickTheBug('Mick', 10)
 
 ![Ly_kXFJop](https://www.freecodecamp.org/news/content/images/2022/03/Ly_kXFJop.gif)
 
-Bugs like the examples we've seen so far are a piece of cake to solve. But many others are not, and in many occasions you'll have to fight with bugs for several hours (or days) until you arrive to a solution.
+像我们到目前为止看到的例子那样的错误，解决起来小菜一碟。但许多其他的就不是这样了，在许多情况下，你不得不与bug斗争几个小时（或几天），直到你找到一个解决方案。
 
-In these occasions, I find it's really important to pay attention to your state of mind. Programming is a very mental activity. So the way your brain is working at a certain moment or the way you're feeling will affect directly the way your code will look and your ability to solve problems in an effective way.
+在这种情况下，我发现注意你的心理状态真的很重要。编程是一种非常消耗精力的活动。因此，你的大脑在某一时刻的工作方式或你的感觉将直接影响你的代码的外观和你以有效方式解决问题的能力。
 
-If you spend hours reading, repeating out loud the same lines of code, googling, going over Stack Overflow questions, and still your code fails, sooner or later you'll get frustrated and start putting pressure on yourself.
+如果你花了几个小时阅读，大声重复同样的代码行，上网搜索，翻阅Stack Overflow的问题，但你的代码仍然失败，你迟早会感到沮丧，并开始给自己施加压力。
 
-As you try different solutions and fail once and again, your attention to detail will likely dilute and you'll start jumping around to different ideas, and trying many things at once.
+当你尝试不同的解决方案并一次次失败时，你对细节的关注很可能会淡化，你会开始有不同的想法，并同时尝试很多东西。
 
-Once you get to this point, the wise thing to do is to go for a walk or just leave it alone until the next day.
+一旦你到了这个地步，明智的做法是出去走走，或者干脆不去管它，直到第二天。
 
-If you keep going when being in this stressed and tired mental state, you're probably not going to find a solution. And what's more, you might even make the bug worse by touching things that are not really related to it.
+如果你在这种紧张和疲惫的精神状态下继续下去，你可能不会找到一个解决方案。更重要的是，你甚至可能因为触碰了与之无关的东西而使 bug 变得更糟。
 
-When leaving things alone for a while and thinking about something else, our brain will keep working on the problem on the background, and connecting ideas in a "subconscious" and creative way.
+当把事情搁置一段时间并思考其他事情时，我们的大脑会在默默地继续处理问题，并以 `潜意识` 和创造性的方式将想法联系起来。
 
-In many occasions it has happened to me that a fresh solution pops into my mind when I'm in the shower or as soon as I see the problem again the next morning. It's one of those "_Aha!_" moments. It probably was right there in front of your eyes but because you were tired and stressed you weren't able to see it.
+在很多情况下，我在洗澡时或第二天早上一看到这个问题，我的脑海中就会出现一个新的解决方案。这就是那种 `啊哈!` 的时刻。它可能就在你的眼前，但因为你很累，压力很大，所以你没能看到它。
 
-Being focused, well rested, and relaxed is key to writing good code and fixing bugs in an effective way. The line between working hard and burning out your mind is a thin one, but it's important that we pay attention to it and give ourselves a rest whenever we need one.
+集中精力、充分休息和放松是写好代码和有效修复错误的关键。努力工作和烧坏头脑之间的界限并不远，但重要的是我们要注意它，并在我们需要时让自己休息一下。
 
-Usually I find a good moment to take a break is when I run out of ideas, or start to lose focus and try different approaches in an impulsive, non-systematic way.
+通常当我没有想法了，是休息的好时机，或者开始失去焦点，以一种冲动的、非系统性的方式尝试不同的方法。
 
-Also, keep in the back of your mind the thought that bugs are just part of software development. It doesn't mean you suck as a developer. Everybody gets bugs, even the best programmers. So chill and take advantage of the situation to learn something new.
+另外，在你的脑海中保持这样的想法：`bug` 只是软件开发的一部分。这并不意味着你作为一个开发者很糟糕。每个人都会有 bug，即使是最好的程序员。因此，冷静下来，利用这种情况来学习新的东西。
 
 ## Look for Help
 
-I mentioned before the importance of online communities and how cool it is that we can easily find help for almost any subject in a matter of seconds.
+我之前提到过在线社区的重要性，以及我们可以在几秒钟内轻松找到几乎任何主题的帮助是多么酷。
 
-Having access to the right communities, where you can ask and talk to people experienced in the tools you're using is really, really, really helpful.
+能够进入正确的社区，在那里你可以向对你所使用的工具有经验的人询问和交谈，这真的非常、非常、非常有帮助。
 
-It will vary depending in what kind of field you work and what tools you use, but for me, sites like [freecodecamp](https://www.freecodecamp.org/),[stackoverflow](https://stackoverflow.com/), and Sack or Dscord communities like [meetupjs](https://meetupjs.com.ar/) have made a huge difference.
+这取决于你工作的领域和你使用的工具，但对我来说，像 [freecodecamp](https://www.freecodecamp.org/)、[stackoverflow](https://stackoverflow.com/) 和 [meetupjs](https://meetupjs.com.ar/) 这样的Sack或Dscord社区都起到了很大的作用。
 
-When asking questions within these communities, I find it's important to keep in mind the following:
+在这些社区内提问时，我发现记住以下几点很重要:
 
-- Try to be as **detailed as possible**. It's not always easy to understand somebody else's code by just reading it, so try to explain what are you working on, what are you trying to achieve and what is the problem you're facing.
-- Show the **exact error** you're getting.
-- Show the **related code** you think is causing the error.
-- Mention **what solutions you've tried** so far and why they didn't work.
-- Investigate and show that you've done **research** about the problem. Even though asking for help is totally ok, I think you have to first evacuate the more obvious and easy paths before asking someone else to do the thinking for you. That means that you've analyzed your code, googled the problem, read other solutions and official documentation, tried many approaches and none of them worked. Only then is it acceptable to ask someone else for help. I think this is a matter of being able to independently learn and solve problems, and also respect other people's time.
-- Mention the **documentation** you've consulted about this topic and what does that documentation say about it.
-- Provide access to your **full code base** in an online repo.
+- 尽量做到 `详细`。仅仅通过阅读别人的代码并不容易理解，所以尽量解释你在做什么，你想实现什么，你面临的问题是什么。
+- 显示你得到的 `确切的错误`。
+- 显示你认为导致该错误的 `相关代码`。
+- 提到到目前为止你已经尝试了哪些 `解决方案`，以及为什么它们不起作用。
+- 调查并表明你已经对这个问题进行了 `探索`。尽管寻求帮助是完全可以的，但我认为在要求别人为你做思考之前，你必须首先排除比较明显和容易的路径。这意味着你已经分析了你的代码，在谷歌上搜索了这个问题，阅读了其他解决方案和官方文档，尝试了很多方法，但都没有成功。只有这样，才可以接受向别人寻求帮助。我认为这是一个能够独立学习和解决问题的问题，同时也要 `尊重别人的时间`。
+- 提到你所查阅的关于这个主题的 `文档`，以及该文档对它的评价。
+- 在网上提供你的 `完整的代码库`。
 
-This will make it easier for another person to understand your problem and hopefully provide you with solution ideas.
+这将使另一个人更容易理解你的问题，并希望为你提供解决思路。
 
-If you get responses, it's important for you to **respond to them**, either by confirming that the solution worked or that it didn't and explain why.
+如果你得到了回复，重要的是你要 `回复他们`，要么确认解决方案有效，要么确认它没有，并解释原因。
 
-Remember that the question you asked will probably be stored and available the next time someone comes searching for the same bug. The idea here is to **construct knowledge** and make it **available to everybody**, not just to solve this particular bug.
+记住，你提出的问题可能会被储存起来，在下一次有人来搜索同样的错误时可以使用。这里的想法是要 **构筑知识**，并使其为 **所有人所用**，而不仅仅是为了解决这个特定的错误。
 
-Also if you end up finding the solution yourself, it's a great idea to **answer your own question** and share the solution with everybody.
+另外，如果你最终自己找到了解决方案，那么 **回答你自己的问题**，并与大家分享解决方案也是一个好主意。
 
-Following the same train of thought, if you participate in these communities by asking questions, it would be nice for you to participate answering questions as well. Whenever you can and find that you have the knowledge, it's good to give back. ;)
+按照同样的思路，如果你通过提问参与这些社区，你也应该参与回答问题。只要你有能力，并且发现你有知识，回馈一下也是好的。;)
 
-My last thought about this is that most people in these kinds of communities are nice, open, and very willing to help and share knowledge. But just like in any other field of life, every once in a while you encounter people that are rude, arrogant, or even aggressive.
+我对这个问题的最后一个想法是，在这些类型的社区中，大多数人都很好，很开放，而且非常愿意帮助和分享知识。但是，就像在任何其他生活领域一样，偶尔你会遇到一些粗鲁、傲慢、甚至具有攻击性的人。
 
-My advise here is that you don't let others intimidate you, even if they appear to have more knowledge than you.
+我在这里的建议是，你不要让别人吓到你，即使他们看起来比你有更多的知识。
 
-No one was ever born knowing everything, and if you've done your research and worked on the problem, you're totally entitled to ask whatever you want. If other people are arrogant or rude, it speaks bad about them, not you.
+没有人天生就知道所有的事情，如果你已经做了研究并致力于解决问题，你完全有权问任何你想要的东西。如果其他人傲慢或无礼，这说明他们不好，而不是你。
 
 ## Make Sure the Bug is Dead
 
 ![xOmnh7_G7](https://www.freecodecamp.org/news/content/images/2022/03/xOmnh7_G7.gif)
 
-The only thing more frustrating than fighting with a tough bug, is fixing it only to later on discover that the bug is still there. Or even worse, that more bugs have been introduced in your code thanks to the "solution".
+唯一比与一个棘手的bug作斗争更令人沮丧的事情是，在修复它之后，却发现这个bug仍然在那里。甚至更糟糕的是，由于这个 "解决方案"，更多的bug被引入到你的代码中。
 
-To avoid this kind of situation, it's key that you test your code. And if you can do it with automated unit testing, much better.
+为了避免这种情况，关键是你要测试你的代码。如果你能用自动化单元测试来做，那就更好了。
 
-Ideally, each section or component of your codebase should have its own tests. And these tests should be run every time any modification is made to the codebase. This way, and if the test are correctly written, we can notice a new bug as soon as its introduced. Which of course makes it easier to find its cause and solve it.
+理想情况下，你的代码库的每个部分或组件都应该有自己的测试。这些测试应该在每次对代码库做任何修改时运行。这样一来，如果测试写得正确，我们就可以在新的错误出现时注意到它。这当然会使我们更容易找到它的原因并解决它。
 
-If you don't have automated tests (you really should if you want to create quality software), at the very least test your code manually, reproducing all possible interactions the user could have with it, and make sure the bug was effectively killed.
+如果你没有自动化测试（如果你想创建高质量的软件，你真的应该这样做），至少要手动测试你的代码，重现用户可能与之发生的所有互动，并确保该bug被有效地杀死。
 
 ## Write Clean Code
 
 ![Y4PKO37NS](https://www.freecodecamp.org/news/content/images/2022/03/Y4PKO37NS.png)
 
-The best way to fight bugs is to avoid inserting them in the first place. Writting guaranteed bug-free code is impossible for any programmer, but there are a few things you can do to reduce the chances of bugs being inserted.
+对抗bug的最好方法是首先避免插入bug。对任何程序员来说，写出有保证的无缺陷的代码是不可能的，但有几件事你可以做，以减少缺陷被插入的机会。
 
-A good place to start are the classic DRY, KISS and SOLID principles.
+一个好的开始是经典的DRY、KISS和SOLID原则。
 
-There are whole books written about these topics, but long story short, these are principles that aim to make software easy to develop, easy to understand and maintain, and as close to bug free as possible.
+关于这些主题有整整一本书，但长话短说，这些原则旨在使软件易于开发，易于理解和维护，并尽可能地接近于无缺陷。
 
 ### Write DRY code
 
-The **DRY** principle stands for **"Don't repeat yourself"**. It basically means that we should avoid repetition of the same code whenever possible.
+**DRY** 原则代表着 **不要重复自己**。它基本上意味着我们应该尽可能地避免重复相同的代码。
 
-For example, if you see that you're performing the same operation over and over again on different parts of your code, a much better approach would be to abstract that logic into a function and call the function instead of directly performing the operations on different parts of your code.
+例如，如果你发现你在代码的不同部分反复执行相同的操作，那么更好的方法是将该逻辑抽象为一个函数，并调用该函数，而不是直接在代码的不同部分执行操作。
 
-In this way, if some bug or unexpected behavior happens in that operation, we know there's only one piece of code responsible, and not many dispersed around the codebase.
+这样一来，如果在该操作中发生了一些错误或意外行为，我们就知道只有一段代码要负责，而不是许多分散在代码库中的代码。
 
 ### Write simple code when possible
 
-The **KISS** principle stands for **"Keep it simple stupid"**. As a software project grows, it inevitably starts to get more and more complex. As new, unplanned, features are added and different devs start to work on it, different logic and ways to execute tasks may be implemented within the same project.
+**KISS** 原则代表着 **保持简单的愚蠢**。随着一个软件项目的发展，它不可避免地开始变得越来越复杂。随着新的、计划外的功能被添加，不同的开发人员开始工作，不同的逻辑和执行任务的方式可能会在同一个项目中实现。
 
-This makes the code harder to understand, maintain, and work with. And when code is hard to understand, it gets really easy to make wrong assumptions and insert bugs.
+这使得代码更难理解、维护和工作。而当代码难以理解时，就很容易做出错误的假设和插入错误的代码。
 
-We should always aim for software that is easy to read and understand, with a crystal clear logic that is explicit for everyone and not just for us.
+我们的目标应该是使软件易于阅读和理解，有一个清晰的逻辑，对每个人都是明确的，而不仅仅是对我们。
 
-Keep in mind that somebody else in the future may have to work with the code you wrote, so make it easy for that person to understand what you're doing. Even you after a few months might not even remember what you tried to do with that function.
+请记住，将来有人可能要使用你写的代码，所以要让那个人容易理解你在做什么。甚至你在几个月后可能都不记得你想用那个函数做什么。
 
-Also keep in mind that no software stays the same forever. The nature of software is to change and be enhanced by new features, so your code should be easy to modify if needed.
+还要记住，没有软件是永远不变的。软件的本质是通过新的功能来改变和增强，所以你的代码应该在需要时易于修改。
 
-And taking this point further, you **should** modify your code whenever you can find a simpler way to execute the same tasks.
+再进一步说，只要你能找到一个更简单的方法来执行同样的任务，你就应该修改你的代码。
 
-Maybe after including a few new features, the design you had in mind at first isn't still the best option. Another cool thing about coding is that nothing is written in stone, and things can be easily turned around when needed. So take advantage of this and get used to constantly refactoring your code in the look for the simpler approach.
+也许在加入了一些新的功能后，你一开始想到的设计并不是仍然是最好的选择。编码的另一个很酷的事情是，没有什么是一成不变的，当需要的时候，事情可以很容易地转过来。所以要利用这一点，习惯于不断重构你的代码，寻找更简单的方法。
 
-Some practical concepts that help with this are using explicit function and variable names, separating concerns into different functions and code modules, and writing short comments to explain your code when your tasks is inevitably complex.
+一些有助于此的实用概念是使用明确的函数和变量名称，将关注点分离成不同的函数和代码模块，当你的任务不可避免地复杂时，写简短的注释来解释你的代码。
 
 ### Use the SOLID principles
 
-**SOLID** are a set of principles that apply mostly to [OOP](https://en.wikipedia.org/wiki/Object-oriented_programming). They were established by [Robert C. Martin](https://en.wikipedia.org/wiki/Robert_C._Martin) (who also happens to be the author of the [agile manifesto](https://en.wikipedia.org/wiki/Agile_software_development#The_Agile_Manifesto) as well) in [this book](https://www.amazon.com/-/es/Robert-Martin/dp/0135974445) about object oriented design.
+**SOLID** 是一套主要适用于 [OOP](https://en.wikipedia.org/wiki/Object-oriented_programming) 的原则。它们是由[Robert C. Martin](https://en.wikipedia.org/wiki/Robert_C._Martin) (他也是 [agile manifesto](https://en.wikipedia.org/wiki/Agile_software_development#The_Agile_Manifesto) 的作者)，[这本书中](https://www.amazon.com/-/es/Robert-Martin/dp/0135974445) 是面向对象设计的。
 
-- **S** stands for "Single Responsibility", which means that a class should have one, and only one job.
-- **O** stands for "Open Closed Principle", which means that you should be able to extend a classes behavior, without modifying it.
-- **L** stands for "Liskov Substitution Principle", which means that derived classes must be substitutable for their base classes.
-- **I** stands for "Interface Segregation", which means a client should never be forced to implement an interface that it doesn’t use, or clients shouldn’t be forced to depend on methods they do not use.
-- **D** stands for "Dependency Inversion Principle" which means that entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions.
+- **S** 代表 **单一责任**，这意味着一个类应该有一个，而且只有一个工作。
+- **O** 代表 **开放封闭原则**，这意味着你应该能够扩展一个类的行为，而不用修改它。
+- **L** 代表 **Liskov替代原则**，这意味着派生类必须可以替代其基类。
+- **I** 代表 **接口隔离**，这意味着不应该强迫客户实现它不使用的接口，也不应该强迫客户依赖他们不使用的方法。
+- **D** 代表 **依赖反转原则**，这意味着实体必须依赖抽象，而不是依赖具体事物。它指出，高层模块不能依赖低层模块，但它们应该依赖抽象物。
 
-As mentioned, SOLID is more applicable to OOP than to general programming. We're not going to go in depth into OOP in this article, but is still good to know these principles and keep them in mind.
+如前所述，SOLID更适用于OOP而不是一般的编程。我们不打算在本文中深入探讨OOP，但了解这些原则并将其牢记在心仍然是很好的。
 
-Now let's learn about some tools you can use to help you debug your code.
+现在让我们来了解一些你可以用来帮助你调试代码的工具。
 
 # Technical Debugging Tools
 
-There are many tools we can use to either reduce the chances of inserting bugs into our code, or to fight existing bugs more efficiently.
+有许多工具我们可以用来减少在我们的代码中插入bug的机会，或者更有效地打击现有的bug。
 
-In that regard, we're going to take a look at **TypeScript**, the popular (and very useful) **console.log**, and the **debuggers** built into **VS Code** and **Chrome**.
+在这方面，我们将看看**TypeScript**，流行的（非常有用的）**console.log**，以及**VS Code**和**Chrome**中内置的**调试器**。
 
-These tools and examples will be centered around JavaScript, but the principles apply for any programming language.
+这些工具和例子将以JavaScript为中心，但这些原则适用于任何编程语言。
 
-You should also know that most code editors and web browsers nowadays have built-in debuggers, but we're going to review VS code and Chrome since they're the most popular.
+你还应该知道，现在大多数代码编辑器和网络浏览器都有内置的调试器，但我们要审查的是VS代码和Chrome，因为它们是最流行的。
 
-And last, you should also know there're specific debugging tools you can use to debug specific types of apps, like [React](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=es) and [Redux](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=es) dev tools, which are browser extensions you can install to help you debug your code more efficiently.
+最后，你还应该知道有一些特定的调试工具，你可以用来调试特定类型的应用程序，比如 [React](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=es) 和[Redux](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=es) 开发工具，这是你可以安装的浏览器扩展，以帮助你更有效地调试你的代码。
 
-But we're going to review these in the future in a separate article about how to debug a React app. ;)
+但我们将来会在另一篇关于如何调试React应用程序的文章中回顾这些。;)
 
 ## How TypeScript Helps Write Clean Code
 
-I mention TypeScript as the first tool, because it's closely related to the previous section about writing clean code.
+我提到TypeScript是第一个工具，因为它与前面关于编写干净代码的部分密切相关。
 
-TypeScript doesn't just provide you with a robust typing system for JavaScript. It also adds a compiler that helps you identify bugs and misconceptions in your code before you even run it. It provides amazing autocompletion, and can be thought of as an automatic documentation tool.
+TypeScript不只是为你提供了一个强大的JavaScript类型系统。它还增加了一个编译器，可以帮助你在运行代码之前识别代码中的错误和误区。它提供了惊人的自动完成功能，并且可以被认为是一个自动文档工具。
 
-To see just a tip of its benefits, let's revisit the previous example in which we didn't provide the right arguments to our function call.
+为了了解它的好处，让我们重温一下前面的例子，在这个例子中，我们没有为我们的函数调用提供正确的参数。
 
 ![TYPESCRIPT1](https://www.freecodecamp.org/news/content/images/2022/03/TYPESCRIPT1.png)
 
-As you can see here, before even running the program TypeScript immediately detects that we're missing an argument and gives us the following error:
+正如你在这里看到的，在运行程序之前，TypeScript立即检测到我们缺少一个参数，并给了我们以下错误:
 
 ```js
 Expected 3 arguments, but got 2.ts(2554)
 index.ts(6, 64): An argument for 'age' was not provided.
 ```
 
-These kinds of notifications are extremely helpful, specially when working on big projects in which you have to interact with many APIs or different code sections.
+这些类型的通知是非常有用的，特别是当你在大项目中工作时，你必须与许多API或不同的代码部分互动。
 
-So in that way, if your're used to plain JavaScript, TypeScript may feel like unnecessary boilerplate at first. But in the long run it will surely save you time and prevent you from inserting silly bugs in your code.
+因此，如果你习惯于使用普通的JavaScript，TypeScript一开始可能会觉得是不必要的模板。但从长远来看，它肯定会节省你的时间，防止你在代码中插入愚蠢的错误。
 
 ## How to Use Console.log to Debug Code
 
-Logging your code in the console is the most basic way of debugging and the first one we learn to use as devs.
+在控制台中记录你的代码是最基本的调试方式，也是我们作为开发者最先学会使用的方式。
 
-The idea is to print the value of variables, functions, inputs and outputs to check the logic we have in our mind against what is really happening in our code. It also helps us see what wrong assumptions we're making.
+其目的是打印变量、函数、输入和输出的值，以检查我们头脑中的逻辑与我们代码中的真实情况。它还可以帮助我们看到我们正在做哪些错误的假设。
 
-Although it's a basic tool, we can do some cool stuff with it. Let me show you.
+尽管它是一个基本的工具，但我们可以用它做一些很酷的事情。让我给你看看。
 
-If we call `console.log` we will get whatever object we pass as parameter printed in our console.
+如果我们调用 "console.log"，我们将得到任何我们作为参数传递的对象打印在我们的控制台。
 
 ```js
 const arr = []
@@ -397,7 +397,7 @@ console.table( arr2 )
 // └─────────┴─────────┴─────┴──────────────┴───────────┘
 ```
 
-When logging many things at the same time, `console.group` gives us an organized way of seeing things.
+当同时记录许多事情时，`console.group` 给了我们一种有组织的方式来看待事情。
 
 ```js
 const arr1 = [22, 23, 24]
@@ -435,7 +435,7 @@ console.groupEnd()
 //  { name: 'Jason', age: 32, job: 'Designer', faveColor: 'Blue' }
 ```
 
-`console.assert` is useful when testing conditions in our code. It takes two arguments: the first one is a condition and the second one is the message that logs if the condition is false.
+`console.assert` 在测试我们代码中的条件时非常有用。它需要两个参数：第一个参数是条件，第二个参数是条件为假时记录的信息。
 
 ```js
 const arr1 = [22, 23, 24]
@@ -444,7 +444,7 @@ console.assert(arr1.indexOf(20) !== -1, '20 is not in my array')
 // Assertion failed: 20 is not in my array
 ```
 
-`console.warn` and `console.error` are useful when debugging errors in our code. The first one will print the error with a yellow background and the second with a red background.
+`console.warning` 和 `console.error` 在调试我们代码中的错误时很有用。第一个将以黄色背景打印错误，第二个以红色背景打印。
 
 ```js
 console.warn('No biggie') // No biggie
@@ -462,100 +462,100 @@ console.error(new Error('Error detected'))
 
 ## How to Use Visual Studio Debugger
 
-As our apps grow and start to get more complex, console.logging around becomes a not so efficient practice.
+随着我们的应用程序的增长和开始变得更加复杂，控制台.记录的做法变得不是那么有效。
 
-To help us in our fight against bugs, debuggers were developed. They are nothing more than programs that are able to read other programs and go through them line by line, checking whatever information we want along the way (such as the value of variables, for example).
+为了帮助我们与错误作斗争，我们开发了调试器。它们只不过是能够读取其他程序并逐行查看的程序，沿途检查我们想要的任何信息（例如，变量的值）。
 
-The first example we're going to see is **Visual Studio debugger**.
+我们要看到的第一个例子是 **Visual Studio调试器**。
 
-To debug a Node.js app we don't need to install anything extra (assuming we have VS Code and Node installed in our computer), as the node debugger comes built-in in VS code.
+为了调试一个Node.js应用程序，我们不需要安装任何额外的东西（假设我们的电脑中已经安装了VS代码和Node），因为VS代码中内置了node调试器。
 
-If you're debugging in another language like Python or Java, you might need to install a specific VS extension before running the debugger.
+如果你用其他语言调试，如Python或Java，你可能需要在运行调试器之前安装一个特定的VS扩展。
 
-To start, we just select the file we want to debug and press the bug icon.
+开始时，我们只需选择我们要调试的文件，然后按下 `bug` 图标。
 
 ![vsc1](https://www.freecodecamp.org/news/content/images/2022/03/vsc1.png)
 
-After that, we'll be presented with the following screen:
+之后，我们将看到以下画面:
 
 ![vsc2](https://www.freecodecamp.org/news/content/images/2022/03/vsc2.png)
 
-We'll select "Run and debug", which will just run the program in the editor for us.
+我们将选择 `Run and debug`，这将只是为我们在编辑器中运行该程序。
 
-Take into account that you could also create a `launch.json` file, which is a file VS code uses to "know" how to run your program. For this simple example it won't be necessary, but know that this possibility exists.
+考虑到你也可以创建一个`launch.json`文件，这是一个VS代码用来 `知道` 如何运行你的程序的文件。对于这个简单的例子来说，这不是必要的，但要知道这种方法。
 
-After clicking the "Run and debug" button, our program will run and we'll get to the following screen:
+点击 `Run and debug` 按钮后，我们的程序将运行，我们将进入以下屏幕:
 
 ![vsc3](https://www.freecodecamp.org/news/content/images/2022/03/vsc3.png)
 
-On the top left side, we have all the variables available in the program, both at local and global levels.
+在左上方，我们有程序中所有可用的变量，包括本地和全局的变量。
 
 ![vsc4](https://www.freecodecamp.org/news/content/images/2022/03/vsc4.png)
 
-Beneath, we'll have a space were we can declare expressions in particular we'd like to watch. Expressions can be anything, like particular variables or functions you'd like to keep an eye on to evaluate how they change along with your program.
+在下面，我们会有一个空间，可以声明我们想观察的特定表达式。表达式可以是任何东西，比如你想关注的特定变量或函数，以评估它们如何随着你的程序而变化。
 
-For example, I added my variable `arr` and VS code shows me the value of that variable:
+例如，我添加了我的变量 `arr`，VS代码向我显示了该变量的值:
 
 ![vsc5](https://www.freecodecamp.org/news/content/images/2022/03/vsc5.png)
 
-And beneath that we can see the call stack (if you don't know what that is [here's](https://www.youtube.com/watch?v=8aGhZQkoFbQ) an awesome video that explains it), the scripts that are being loaded, and the breakpoints we've set in our code (we'll see what these are in a sec).
+> 在这下面，我们可以看到调用堆栈（如果你不知道那是什么，[这里](https://www.youtube.com/watch?v=8aGhZQkoFbQ)有一个很好的视频来解释），正在加载的脚本，以及我们在代码中设置的断点（我们一会儿就会看到这些是什么）。
 
 ![vsc6](https://www.freecodecamp.org/news/content/images/2022/03/vsc6.png)
 
-**Breakpoints** are a big part of what makes debuggers useful. As their name indicates, they are points you can declare in your code in which the debugger will stop running the program. When the program stops, you'll be able to check all the information we've previously mentioned as it is in that particular moment.
+**断点** 是使调试器有用的一个重要部分。正如它们的名字所示，它们是你可以在你的代码中声明的点，在这些点上调试器将停止运行程序。当程序停止时，你就可以检查我们之前提到的所有信息，因为它是在那个特定时刻。
 
-So breakpoints allow us to see the actual information the program is working with, without the need of logging anything into the console. Pretty cool!
+所以断点允许我们看到程序正在运行的实际信息，而不需要在控制台中记录任何东西。相当酷啊!
 
-You can identify a breakpoint by the little red dots that appear to the left of the line numbers in your code (or by looking into the section mentioned above).
+你可以通过出现在代码中行号左边的小红点来识别断点（或者通过查看上面提到的部分）。
 
-By default, when you run the debugger a breakpoint will be inserted in the last line of your code. To insert new break points, just click to the left of the line number you'd like the debugger to stop at.
+默认情况下，当你运行调试器时，断点会被插入到你代码的最后一行。要插入新的断点，只需在你希望调试器停止的行号左边点击即可。
 
 ![vsc7](https://www.freecodecamp.org/news/content/images/2022/03/vsc7.png)
 
-Now when you run the debugger you'll see there's a tiny left arrow on top of the first breakpoint, indicating that's where the program execution has stoped.
+现在，当你运行调试器时，你会看到在第一个断点的上方有一个小小的左箭头，表示程序的执行已经停止。
 
 ![vsc8](https://www.freecodecamp.org/news/content/images/2022/03/vsc8.png)
 
-On the top of the screen we have the **controls**, that will allow us to go through the program stepping from breakpoint to breakpoint.
+在屏幕的顶部，我们有 **controls**，这将使我们能够通过程序从断点到断点的步骤。
 
 ![vsc9](https://www.freecodecamp.org/news/content/images/2022/03/vsc9.jpg)
 
-- The **Continue** button runs the program and stops only on user-defined breakpoints.
-- With **Step Over**, if there is a function call, it executes it and returns the result. You don't step into the lines that are inside the function. You just go directly to the function return value.
-- **Step Into** goes inside the function line by line until it returns, and then you go back to the next line right after the function call.
-- With the **Step Out** button, if you have stepped in a function you can skip the remaining execution of the function and go directly to the return value.
-- **Restart** runs the debugger from the top all over again and **Stop** exits the debugger.
+- The **Continue** 按钮运行程序，只在用户定义的断点上停止。
+- With **Step Over** 按键。如果有一个函数调用，它将执行该函数并返回结果。你不会踏入函数内部的行。你只是直接进入到函数的返回值。
+- **Step Into** *会逐行进入函数，直到它返回，然后你会回到函数调用后的下一行。
+- **Step Out** 按钮，如果你已经踏入了一个函数，你可以跳过该函数的剩余执行部分，直接进入返回值。
+- **Restart** 从头开始重新运行调试器， **Stop** 退出调试器。、
 
-So there you go, that's a very powerful debugger built into your code editor. As you can see, with this tool we can check a lot of information at the same time, just by setting breakpoints wherever we want and without the need of any console.logs.
+所以，你看，这就是一个内置于你的代码编辑器中的非常强大的调试器。正如你所看到的，有了这个工具，我们可以同时检查很多信息，只需在我们想要的地方设置断点，而且不需要任何console.logs。
 
 ## Chrome Debugger
 
-To debug in Chrome, we start by opening our app in the browser. In my case, I created a simple HTML file where my JS file is linked (same file as the previous example).
+要在Chrome中进行调试，我们首先要在浏览器中打开我们的应用程序。在我的例子中，我创建了一个简单的HTML文件，其中链接了我的JS文件（与前面的例子相同）。
 
-Then we open the **developer tools** (ctrl+shit+i or right click -> inspect) and go to the "**sources**" tab.
+然后我们打开**developer tools**（ctrl+shit+i或右键->inspect），进入 "**sources**"标签。
 
-We should be seeing something like this:
+我们应该看到像这样的东西:
 
 ![chrome1](https://www.freecodecamp.org/news/content/images/2022/03/chrome1.png)
 
-On the left side we can see the files available in our app (in my case there is only an HTML file and the JS file.) In the middle we can see the code of our selected file, and on the right side we have a set of information very similar to what we had in VS Code.
+在左边，我们可以看到我们的应用程序中可用的文件（在我的例子中，只有一个HTML文件和JS文件）。 在中间，我们可以看到我们选定的文件的代码，在右边，我们有一组信息，与我们在VS Code中的信息非常相似。
 
-To set a breakpoint, we have to click on top of the line we want to stop in. In Chrome, breakpoints are identified as blue arrows on top of the line number.
+要设置断点，我们必须点击我们想要停止的那一行的顶部。在Chrome浏览器中，断点被识别为行号上方的蓝色箭头。
 
 ![chrome2](https://www.freecodecamp.org/news/content/images/2022/03/chrome2.png)
 
-Then if we refresh our page, the script will stop in the first breakpoint and we'll be allowed to navigate through it using the controls, which work exactly the same as in VS code.
+然后，如果我们刷新我们的页面，脚本将在第一个断点处停止，我们将被允许使用控件来浏览它，这与VS代码中的工作方式完全相同。
 
 ![chrome3](https://www.freecodecamp.org/news/content/images/2022/03/chrome3.png)
 
-As we've seen, Chrome and VS code debuggers work very similarly, and which one you decide to use is just a matter of preference.
+正如我们所看到的，Chrome和VS代码调试器的工作原理非常相似，你决定使用哪一个只是一个偏好的问题。
 
-# Conclusion
+# 结语
 
-Debugging is a central part of what we do as developers. Because of this, I think it's a good idea to think about it and do it in an efficient way, instead of just reacting to bugs as they happen.
+调试是我们作为开发者所做工作的一个核心部分。正因为如此，我认为以一种有效的方式来考虑它和做它是一个好主意，而不是在错误发生时才做出反应。
 
-As we've seen, there're plenty of things we can do, both from a mental and from a technical point of view, to become better debuggers.
+正如我们所看到的，我们有很多事情可以做，无论是从精神上还是从技术上，都可以成为更好的调试。
 
-Hope this helped and see you in the next one!
+希望这对你有帮助，下一节课见!
 
-You can also follow me on [Twitter](https://twitter.com/CoccaGerman) and [LinkedIn](https://www.linkedin.com/in/germancocca/).
+你也可以在 [Twitter](https://twitter.com/CoccaGerman) 和 [LinkedIn](https://www.linkedin.com/in/germancocca/) 关注我。

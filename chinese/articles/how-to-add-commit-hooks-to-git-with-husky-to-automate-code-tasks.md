@@ -26,7 +26,7 @@
 
 <h2 id="what-is-husky?">什么是 Husky?</h2>
 
-[Husky](https://github.com/typicode/husky)是一个工具，它允许我们轻松地处理Git Hooks 并在这些阶段运行我们想要的脚本。
+[Husky](https://github.com/typicode/husky)是一个工具，它允许我们轻松地处理Git Hooks 并在提交代码时运行我们想要的脚本。
 
 > 它的工作原理是在我们的 `package.json` 文件中加入一个对象，配置 Husky 来运行我们指定的脚本。之后，Husky会管理我们的脚本将在Git生命周期的哪个阶段运行。
 

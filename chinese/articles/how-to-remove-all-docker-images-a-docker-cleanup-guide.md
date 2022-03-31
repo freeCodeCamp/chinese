@@ -1,11 +1,8 @@
-> -  原文地址：[How to Remove All Docker Images – A Docker Cleanup Guide](https://www.freecodecamp.org/news/how-to-remove-all-docker-images-a-docker-cleanup-guide/)
-> -  原文作者：[
-                    
-                        Sebastian Sigl
-                    
-                ](https://www.freecodecamp.org/news/author/sesigl/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Remove All Docker Images – A Docker Cleanup Guide](https://www.freecodecamp.org/news/how-to-remove-all-docker-images-a-docker-cleanup-guide/)
+> - 原文作者：[Sebastian Sigl](https://www.freecodecamp.org/news/author/sesigl/)
+>
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Remove All Docker Images – A Docker Cleanup Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/docker-cleanup-guide.png)
 
@@ -61,10 +58,10 @@ nysus21ej7pf   regular        0B        2 months ago   2 months ago
 
 As you can see, you get information about:
 
--   Images space usage,
--   Containers space usage,
--   Local Volumes space usage, and
--   Build cache usage.
+- Images space usage,
+- Containers space usage,
+- Local Volumes space usage, and
+- Build cache usage.
 
 ## How to Clean Up Everything in Docker
 
@@ -73,7 +70,7 @@ You can clean up everything or clean up specific resources in Docker like images
 To clean up as much as possible excluding components that are in use, run this command:
 
 ```sh
-$ docker system prune -a
+docker system prune -a
 ```
 
 `-a` includes unused and dangling containers. Not providing `-a` would only delete dangling images, which are untagged images that have no relationship to any other images.
@@ -81,7 +78,7 @@ $ docker system prune -a
 If you want to clean up most Docker resources but still keep tagged images, you can execute this command:
 
 ```sh
-$ docker system prune
+docker system prune
 ```
 
 This is all you need to free up disk space quickly. Additionally, you can clean up components separately.
@@ -91,25 +88,25 @@ Here are a few more useful commands:
 ### Clean up unused and dangling images
 
 ```sh
-$ docker image prune
+docker image prune
 ```
 
 ### Clean up dangling images only
 
 ```sh
-$ docker image prune -a
+docker image prune -a
 ```
 
 ### Clean up stopped containers
 
 ```sh
-$ docker container prune
+docker container prune
 ```
 
 ### Clean up unused volumes
 
 ```sh
-$ docker volume prune
+docker volume prune
 ```
 
 ## How to Continuously Manage Your Used Docker Space Efficiently

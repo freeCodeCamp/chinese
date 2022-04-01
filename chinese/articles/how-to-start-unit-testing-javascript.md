@@ -1,11 +1,8 @@
-> -  原文地址：[How to Start Unit Testing Your JavaScript Code](https://www.freecodecamp.org/news/how-to-start-unit-testing-javascript/)
-> -  原文作者：[
-                    
-                        Ondrej Polesny
-                    
-                ](https://www.freecodecamp.org/news/author/ondrej/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Start Unit Testing Your JavaScript Code](https://www.freecodecamp.org/news/how-to-start-unit-testing-javascript/)
+> - 原文作者：[Ondrej Polesny](https://www.freecodecamp.org/news/author/ondrej/)
+>
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Start Unit Testing Your JavaScript Code](https://www.freecodecamp.org/news/content/images/size/w2000/2020/03/ferenc-almasi-EWLHA4T-mso-unsplash-1.jpg)
 
@@ -244,10 +241,10 @@ Now, I don't have to mention that you should strive for 100% code coverage, righ
 
 In this article, I showed you how to start with unit testing in JavaScript. While it's nice to have your code coverage shine at 100% in the report, in reality, it's not always possible to (meaningfully) get there. The goal is to let unit tests help you maintain your code and ensure it always works as intended. They enable you to:
 
--   clearly define implementation requirements,
--   better design your code and separate concerns,
--   discover issues you may introduce with your newer commits,
--   and give you confidence that your code works.
+- clearly define implementation requirements,
+- better design your code and separate concerns,
+- discover issues you may introduce with your newer commits,
+- and give you confidence that your code works.
 
 The best place to start is the [Getting started](https://jestjs.io/docs/en/getting-started) page in the Jest documentation so you can try out these practices for yourself.
 

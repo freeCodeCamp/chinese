@@ -1,11 +1,7 @@
-> -  原文地址：[What is a Compiler? Compilers in C Explained for Beginners](https://www.freecodecamp.org/news/what-is-a-compiler-in-c/)
-> -  原文作者：[
-                    
-                        Tiago Monteiro
-                    
-                ](https://www.freecodecamp.org/news/author/tiago/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[What is a Compiler? Compilers in C Explained for Beginners](https://www.freecodecamp.org/news/what-is-a-compiler-in-c/)
+> - 原文作者：[Tiago Monteiro](https://www.freecodecamp.org/news/author/tiago/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![What is a Compiler? Compilers in C Explained for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/1-YhjIVZXE56R6YZaTF-Lzig.jpeg)
 
@@ -17,8 +13,8 @@ But, what is a compiler? What do they do exactly?
 
 This article will teach you:
 
-1.  What a compiler is with an analogy.
-2.  The basic history of C compilers.
+1. What a compiler is with an analogy.
+2. The basic history of C compilers.
 
 Don’t worry, you don’t need programming experience to understand what a compiler is.
 
@@ -59,7 +55,7 @@ In this example, the file is called main.c_._
 
 int main()
 {
-	printf("Hello World");
+ printf("Hello World");
     
     return 0;
 }
@@ -107,11 +103,11 @@ Just like PlayStation – there is the Playstation 2, Playstation 3, Playstation
 
 The same is true for C compilers. Once it was _standardized,_ many versions were created:
 
--   C89/90, a version of C once _standardized,_
--   C99 replaced C89 and C90 in 1999.
--   C11 replaced C99 in 2011.
--   C17 replaced C11 in 2018.
--   C2X will replace C17 in 2023.
+- C89/90, a version of C once _standardized,_
+- C99 replaced C89 and C90 in 1999.
+- C11 replaced C99 in 2011.
+- C17 replaced C11 in 2018.
+- C2X will replace C17 in 2023.
 
 Just like with a PlayStation, each new version has new features.
 
@@ -175,8 +171,8 @@ As long as the ISO manages future C compiler standards, programmers and companie
 
 Thanks for reading! Now you understand:
 
--   What a compiler is
--   The basic history of C compilers
--   What standardization means
+- What a compiler is
+- The basic history of C compilers
+- What standardization means
 
 [](https://github.com/tiagomonteiro0715/freecodecamp-my-articles-source-code/tree/main/What%20exactly%20is%20a%20compiler%3F)[](https://www.instagram.com/tiago.monteiro0715/)[H](https://github.com/tiagomonteiro0715/freecodecamp-my-articles-source-code)[ere](https://github.com/tiagomonteiro0715/freecodecamp-my-articles-source-code) is the GitHub repository with the code and image files I created.

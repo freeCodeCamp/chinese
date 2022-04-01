@@ -193,11 +193,11 @@ jest.mock('./UserStore', () => ({
 }));
 ```
 
-First, we need to specify what are we mocking - the `./UserStore` module. Next, we need to return the mock that contains all exported objects from that module.
+首先，我们需要指定我们 mock(模拟) 的是什么 - `./UserStore` 模块。接下来，我们需要返回包含该模块所有导出对象的模拟。
 
-In this sample, it's only the `User` object named `UserStore` with the function `getUser`. But with real implementations, the mock may be much longer. Any functions you don't really care about in the scope of unit testing can be easily mocked with `jest.fn()`.
+在这个例子中，只有名为`UserStore` 的 `User` 对象和 `getUser` 函数。但在真正的实现中，模拟对象可能更长。在单元测试的范围内，任何你并不真正关心的函数都可以用 `jest.fn()` 轻松地 Mock(模拟)。
 
-The unit test for the `getUserDisplayName` function is similar to the one we created before:
+函数 `getUserDisplayName`的单元测试与我们之前创建的类似:
 
 ```js
 test("Returns display name", () => {
@@ -205,13 +205,13 @@ test("Returns display name", () => {
 })
 ```
 
-As soon as I save the file, Jest tells me I have 2 passing tests. If you're executing tests manually, do so now and make sure you see the same result.
+当我保存文件时，Jest告诉我有两个通过的测试。如果你正在手动执行测试，现在就这样做，确保你看到同样的结果。
 
 ### Code Coverage Report
 
-Now that we know how to test JavaScript code, it's good to cover as much code as possible with tests. And that is hard to do. In the end, we're just people. We want to get our tasks done and unit tests usually yield an unwanted workload that we tend to overlook. Code coverage is a tool that helps us fight that.
+现在我们知道了如何测试JavaScript代码，用测试覆盖尽可能多的代码是很好的。而这是很难做到的。说到底，我们只是人。我们想完成我们的任务，而单元测试通常会产生一些无意义的工作量，我们往往会本能的忽略。代码覆盖率统计工具是一个帮助我们对抗这种情况。
 
-Code coverage will tell you how big a portion of your code is covered by unit tests. Take for example my first unit test checking the `getAboutUsLink` function:
+代码覆盖率会告诉你，你的代码有多大一部分被单元测试所覆盖。以我的第一个单元测试为例，检查`getAboutUsLink` 函数:
 
 ```js
 test("Returns about-us for english language", () => {
@@ -219,33 +219,33 @@ test("Returns about-us for english language", () => {
 });
 ```
 
-It checks the English link, but the Spanish version stays untested. The code coverage is 50%. The other unit test is checking the `getDisplayName` function thoroughly and its code coverage is 100%. Together, the total code coverage is 67%. We had 3 use cases to test, but our tests only cover 2 of them.
+它检查了英文链接，但西班牙文版本仍未被测试。代码覆盖率为50%。另一个单元测试是彻底检查 `getDisplayName`函数，其代码覆盖率为100%。总之，总的代码覆盖率是67%。我们有3个用例需要测试，但我们的测试只覆盖了其中的两个。
 
-To see the code coverage report, type the following command into the terminal:
+要查看代码覆盖率报告，请在终端输入以下命令:
 
 ```js
 jest --coverage
 ```
 
-Or, if you're using Visual Studio Code with the Jest extension, you can run the command (CTRL+SHIFT+P) _Jest: Toggle Coverage Overlay_. It will show you right in the implementation which lines of code are not covered with tests.
+或者，如果你使用的是带有Jest扩展的Visual Studio Code，你可以运行命令（CTRL+SHIFT+P 组合快捷键调出，然后输入）_Jest。 触发执行 Coverage Overlay_。它将在实现中直接显示哪些代码行没有被测试覆盖。
 
 ![code-coverage-inline](https://www.freecodecamp.org/news/content/images/2020/03/code-coverage-inline.jpg)
 
-By running the coverage check, Jest will also create an HTML report. Find it in your project folder under `coverage/lcov-report/index.html`.
+通过运行覆盖率检查，Jest还将创建一个HTML报告。在你的项目文件夹中的`coverage/lcov-report/index.html`下找到它。
 
 ![code-coverage](https://www.freecodecamp.org/news/content/images/2020/03/code-coverage.jpg)
 
-Now, I don't have to mention that you should strive for 100% code coverage, right? :-)
+现在，我不用再提了，你应该争取100%的代码覆盖率，对吗？ :-)
 
-## Summary
+## 总结
 
-In this article, I showed you how to start with unit testing in JavaScript. While it's nice to have your code coverage shine at 100% in the report, in reality, it's not always possible to (meaningfully) get there. The goal is to let unit tests help you maintain your code and ensure it always works as intended. They enable you to:
+在这篇文章中，我向你展示了如何在JavaScript中开始单元测试。虽然在报告中让你的代码覆盖率达到100%是件好事，但在现实中，并不总是能够（有意义地）达到这个目标。我们的目标是让单元测试帮助你维护你的代码，并确保它总是按照预期工作。它们使你能够:
 
-- clearly define implementation requirements,
-- better design your code and separate concerns,
-- discover issues you may introduce with your newer commits,
-- and give you confidence that your code works.
+- 明确定义实现需求。
+- 更好地设计你的代码和分离关注点。
+- 发现你在较新的提交中尽早发现引入的问题。
+- 并让你相信你的代码是正常工作的。
 
-The best place to start is the [Getting started](https://jestjs.io/docs/en/getting-started) page in the Jest documentation so you can try out these practices for yourself.
+最好的开始是Jest文档中的 [Getting started（入门）](https://jestjs.io/docs/en/getting-started) 页面，这样你就可以自己尝试这些做法了。
 
-Do you have your own experience with testing code? I'd love to hear it, let me know on [Twitter](https://twitter.com/ondrabus) or join one of my [Twitch streams](https://twitch.tv/ondrabus).
+你对测试代码有自己的经验吗？我很想听听，请在 [Twitter](https://twitter.com/ondrabus) 上告诉我，或者加入我的 [Twitch streams 直播频道](https://twitch.tv/ondrabus)。

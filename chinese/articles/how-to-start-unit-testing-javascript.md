@@ -10,11 +10,11 @@
 
 在这篇文章中，我将解释不同类型的测试，以及单元测试给开发团队带来哪些好处。我将展示Jest - 一个JavaScript测试框架。
 
-## Different types of testing
+## 不同类型的测试
 
 在我们深入了解单元测试的具体内容之前，我想对不同类型的测试做一个快速浏览。围绕着它们经常有一些混淆，我并不感到惊讶。有时它们之间的界限很小。
 
-### Unit tests
+### 单元测试
 
 单元测试只测试你实现的单一部分。一个单元。没有依赖关系或集成，没有框架的具体内容。他们就像一个方法，在一个特定的语言中返回一个链接:
 
@@ -30,13 +30,13 @@ export function getAboutUsLink(language){
 }
 ```
 
-### Integration tests
+### 集成测试
 
 在某些时候，你的代码与数据库、文件系统或其他第三方进行通信。它甚至可能是你应用程序中的另一个模块。
 
 这一块的实现应该由集成测试来测试。他们通常有一个更复杂的设置，包括准备测试环境，初始化依赖关系，等等。
 
-### Functional tests
+### 功能测试
 
 单元测试和集成测试让你相信你的应用程序可以正常工作。功能测试从用户的角度来观察应用程序，并测试系统是否按预期工作。
 
@@ -46,7 +46,7 @@ export function getAboutUsLink(language){
 
 所以现在让我们更详细地了解一下单元测试。
 
-## Why Should I Bother Writing Unit Tests?
+## 我为什么要写单元测试？
 
 每当我问开发者是否为他们的应用程序写了测试，他们总是告诉我："我没有时间写" 或者 "我不需要，我知道它能用"。
 
@@ -68,7 +68,7 @@ export function getAboutUsLink(language){
 
 我相信写单元测试还有很多好处。这些只是我从我的经验中回忆起来的。那些是我通过艰苦的方式学到的。
 
-## How to Write Your First JavaScript Unit Test
+## 如何编写你的第一个JavaScript单元测试
 
 但是，让我们回到JavaScript上来。我们将从[Jest](https://jestjs.io/) 开始，它是一个JavaScript测试框架。它是一个能够实现自动单元测试的工具，提供代码覆盖率，并让我们轻松地模拟对象。Jest也有一个Visual Studio Code的扩展 [可在此获得](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)。
 
@@ -140,7 +140,7 @@ expect(getAboutUsLink("cs-CZ")).toBe("/o-nas");
 
 一旦你保存文件，Jest就会通知你测试失败。这有助于你在提交修改之前就发现潜在的问题。
 
-## Testing Advanced Functionality and Mocking Services
+## 测试高级功能和 Mocking（模拟） 服务
 
 在现实生活中，getAboutUsLink方法的语言代码不会在同一个文件中成为常量。它们的值通常会在整个项目中使用，所以它们会被定义在自己的模块中，并被导入到所有使用它们的函数中。
 
@@ -177,7 +177,7 @@ export { UserStore }
 
 如果我们不使用mock，我们就会同时测试这个函数和商店。这将是一个集成测试，我们很可能需要对使用的数据库进行 mock（模拟）。
 
-### Mocking a Service
+### Mocking（模拟） 一个服务
 
 为了 mock(模拟) 对象，你可以提供一个 mock 函数或一个手动 mock。我将专注于后者，因为我有一个简单的用例。但你可以自由地[查看Jest其他的提供者（provides）](https://jestjs.io/docs/en/mock-functions.html)。
 

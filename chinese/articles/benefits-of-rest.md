@@ -1,7 +1,7 @@
-> -  原文地址：[The Benefits of Going RESTful – What is REST and Why You Should Learn About It](https://www.freecodecamp.org/news/benefits-of-rest/)
-> -  原文作者：[YiğitKemalErinç](https://www.freecodecamp.org/news/author/erinc/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[The Benefits of Going RESTful – What is REST and Why You Should Learn About It](https://www.freecodecamp.org/news/benefits-of-rest/)
+> - 原文作者：[YiğitKemalErinç](https://www.freecodecamp.org/news/author/erinc/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![The Benefits of Going RESTful – What is REST and Why You Should Learn About It](https://www.freecodecamp.org/news/content/images/size/w2000/2020/12/1_sPLooWMag11pjZnzYXIQCA.png)
 

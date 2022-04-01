@@ -1,11 +1,8 @@
-> -  原文地址：[What is a Virtual Machine And How to Setup a VM on Windows, Linux, and Mac](https://www.freecodecamp.org/news/what-is-a-virtual-machine-and-how-to-setup-a-vm-on-windows-linux-and-mac/)
-> -  原文作者：[
-                    
-                        Beau Carnes
-                    
-                ](https://www.freecodecamp.org/news/author/beau/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[What is a Virtual Machine And How to Setup a VM on Windows, Linux, and Mac](https://www.freecodecamp.org/news/what-is-a-virtual-machine-and-how-to-setup-a-vm-on-windows-linux-and-mac/)
+> - 原文作者：[Beau Carnes](https://www.freecodecamp.org/news/author/beau/)
+>
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![What is a Virtual Machine And How to Setup a VM on Windows, Linux, and Mac](https://cdn-media-2.freecodecamp.org/w1280/5f9c9e98740569d1a4ca3df6.jpg)
 

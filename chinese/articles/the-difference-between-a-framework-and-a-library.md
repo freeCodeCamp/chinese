@@ -121,10 +121,10 @@ const vm = new Vue({
 
 同样，某件事的程度是主观的。例如，我个人认为Angular是一个高度有约束的框架，而Vue.js是一个不太有约束的框架。
 
-### In summary
+### 总结
 
-- Frameworks and libraries are both code written by someone else that helps you perform some common tasks in a less verbose way.
-- A framework inverts the control of the program. It tells the developer what they need. A library doesn’t. The programmer calls the library where and when _they_ need it.
-- The degree of freedom a library or framework gives the developer will dictate how “opinionated” it is.
+- 框架和库都是由其他人编写的代码，可以帮助您以不那么冗长的方式执行一些常见任务。
+- 一个框架主导了对程序的控制。它告诉开发者他们需要什么。库则不然。程序员在他们需要的地方和时候调用这个库。
+- 一个库或框架给开发者的自由度决定了它的 "约束" 程度。
 
 Thanks for reading!

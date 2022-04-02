@@ -17,21 +17,21 @@
 
 以下是我们要讲的内容:
 
-1. [Why computer literacy is important](#thewhy)
-2. [Software skills guide](#guide)
-    - [Knowledge of operating systems and of basic IT troubleshooting](#osit)
-    - [Knowledge of web Browsers and web searching skills](#browsers)
-    - [Knowledge of Project Management Software](#management)
-    - [Knowledge of communication software](#communication)
-    - [Knowledge of Email and digital calendar management software](#email)
-    - [Knowledge of Word Processing Software](#word)
-    - [Knowledge of spreadsheet software](#spreadsheet)
-    - [Knowledge of presentation software](#presentation)
-    - [Knowledge of graphic design software](#graphicdesign)
-    - [Knowledge of coding tools and databases](#coding)
-3. [How to Include Computer Skills on Résumé](#how)
+1. [为什么计算机知识很重要](./#why-computer-literacy-is-important)
+2. [软件技能指南](./#software-skills-guide)
+    - [掌握操作系统和基本的IT故障排除知识](./#knowledge-of-operating-systems-and-of-basic-IT-troubleshooting)
+    - [熟悉网络浏览器和网络搜索技能](./#knowledge-of-web-browsers-and-web-searching-skills)
+    - [项目管理软件的知识](./#knowledge-of-project-management-software)
+    - [通信软件知识](./#knowledge-of-communication-software)
+    - [熟悉电子邮件和数字日历管理软件](./#knowledge-of-email-and-digital-calendar-management-software)
+    - [对文字处理软件的了解](./#knowledge-of-word-processing-software)
+    - [对电子表格软件的了解](./#knowledge-of-spreadsheet-software)
+    - [掌握演示软件的知识](./#knowledge-of-presentation-software)
+    - [熟悉图形设计软件](./#knowledge-of-graphic-design-software)
+    - [编码工具和数据库知识](./#knowledge-of-coding-tools-and-databases)
+3. [如何在简历展示计算机技能](./#how-to-include-computer-skills-on-résumé)
 
-## Why Computer Literacy is Important
+<h2 id="why-computer-literacy-is-importan">为什么计算机知识很重要</h2>
 
 我们生活在一个数字世界中，而且这似乎不会很快改变。
 
@@ -55,7 +55,7 @@
 
 数字素养将使你在现代工作场所获得职业机会和实现发展的机会更高。
 
-## Software Skills Guide
+<h2 id="software-skills-guide">软件技能指南</h2>
 
 在继续之前，我想做一个免责声明。
 
@@ -77,7 +77,7 @@
 
 说了这么多，让我们看看工作场所中最常用的一些软件。
 
-### Knowledge of Operating Systems and of Basic IT Troubleshooting
+<h3 id="knowledge-of-operating-systems-and-of-basic-IT-troubleshooting">掌握操作系统和基本的IT故障排除知识</h3>
 
 实现数字扫盲的第一步是对操作系统有一个全面的了解。
 
@@ -130,7 +130,7 @@ shell（如Bash或Zsh shell）是你（用户）和计算机操作系统之间�
 - 如何使用命令行文本编辑器，如Vim、Emacs或Nano，来写入文件。
 - 如何管理当前的工作进程。
 
-### Knowledge of Web Browsers and Web Searching Skills
+<h3 id="knowledge-of-web-browsers-and-web-searching-skills">熟悉网络浏览器和网络搜索技能</h3>
 
 知道如何快速有效地找到有意义的信息来帮助你解决问题，或使你能够为一个项目进行研究，是一项有价值的技能。
 
@@ -161,7 +161,7 @@ shell（如Bash或Zsh shell）是你（用户）和计算机操作系统之间�
 - 知道如何清除浏览器的缓存和cookies，以改善加载时间，节省空间，并减少带宽。
 - 知道如何安装具有额外浏览器功能的扩展程序。
 
-### Knowledge of Project Management Software
+<h3 id="knowledge-of-project-management-software">项目管理软件的知识</h3>
 
 当你成为一个团队的一部分时，你可能需要使用项目管理软件。
 
@@ -201,7 +201,7 @@ shell（如Bash或Zsh shell）是你（用户）和计算机操作系统之间�
 - 如何跟踪成就，可以在一对一和审查中作为参考。
 - 如何跟踪预算编制，监测项目的支出，安排发票。
 
-### Knowledge of Communication Software
+<h3 id="knowledge-of-communication-software">通信软件知识</h3>
 
 当你是一个团队的一部分时，你需要与团队的其他成员进行清晰准确的沟通。
 
@@ -238,7 +238,7 @@ shell（如Bash或Zsh shell）是你（用户）和计算机操作系统之间�
 - 如何利用 "举手 "功能。
 - 了解键盘快捷键，以便为自己设置静音/取消静音，并打开/关闭相机。
 
-### Knowledge of Email and Digital Calendar Management Software
+<h3 id="knowledge-of-email-and-digital-calendar-management-software">熟悉电子邮件和数字日历管理软件</h3>
 
 电子邮件是与你的同事沟通和在互联网上发送信息的一种快速方式。
 
@@ -279,7 +279,7 @@ shell（如Bash或Zsh shell）是你（用户）和计算机操作系统之间�
 - 邀请出席者。
 - 取消活动。
 
-### Knowledge of Word Processing Software
+<h3 id="knowledge-of-word-processing-software">对文字处理软件的了解</h3>
 
 无论你的行业如何，知道如何以引人入胜的方式写作和格式化文本文件是一项必要的技能。
 
@@ -321,7 +321,7 @@ shell（如Bash或Zsh shell）是你（用户）和计算机操作系统之间�
 - 知道如何插入图像和书签。
 - 知道如何创建、分类和过滤邮件合并。
 
-### Knowledge of Spreadsheet Software
+<h3 id="对电子表格软件的了解"></h3>
 
 许多工作要求你能自如地处理较小甚至较大的数据集。
 
@@ -349,7 +349,7 @@ shell（如Bash或Zsh shell）是你（用户）和计算机操作系统之间�
 - [知道基本的VBA](https://www.freecodecamp.org/news/excel-vba-tutorial/)（这是Visual Basic Application的缩写）来创建Excel宏。知道如何使用宏命令来创建自定义函数，使重复的、耗时的手工任务自动化。
 - 知道如何创建数据透视表和图表，以便利用可视化的方式对大量的数据进行可视化、比较和展示。知道如何用你的发现生成报告。
 
-### Knowledge of Presentation Software
+<h3 id="knowledge-of-presentation-software">掌握演示软件的知识</h3>
 
 知道如何组织一场演讲是一项有价值的技能。
 
@@ -376,7 +376,7 @@ shell（如Bash或Zsh shell）是你（用户）和计算机操作系统之间�
 - 通过插入超链接使幻灯片具有互动性。
 - 知道如何插入媒体，如图片、音乐片段、音频和音效、GIF、短视频片段，或从电脑上传或从Youtube嵌入的完整视频。
 
-### Knowledge of Graphic Design Software
+<h3 id="knowledge-of-graphic-design-software">熟悉图形设计软件</h3>
 
 设计软件的知识并不是设计师的专利。
 
@@ -408,7 +408,7 @@ shell（如Bash或Zsh shell）是你（用户）和计算机操作系统之间�
 - 知道如何为网页设计项目创建线框，原型和模拟，以及用户界面。
 - 知道如何创建标识、图标和艺术品。
 
-### Knowledge of Coding Tools and Databases
+<h3 id="knowledge-of-coding-tools-and-databases">编码工具和数据库知识</h3>
 
 编码可以帮助你解决问题，并使用计算机理解的语言与计算机交流。而数据库是存储数据的程序，允许程序员使用查询来检索数据。
 
@@ -426,7 +426,7 @@ shell（如Bash或Zsh shell）是你（用户）和计算机操作系统之间�
 - 了解 [Linux命令和在Linux环境中工作](https://www.freecodecamp.org/news/the-linux-commands-handbook/)。知道如何设置虚拟机并在本地计算机上运行Linux。
 - [了解SQL](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/) (结构化查询语言的简称），与关系型数据库（如Oracle数据库、MySQL和PostgreSQL）进行交互。知道如何编写基本的SQL命令来执行CRUD（创建读取更新删除的缩写）操作，以查询数据库和操作存储的数据。
 
-## How to Include Computer Skills on Résumé
+<h2 id="how-to-include-computer-skills-on-résumé">如何在简历展示计算机技能</h2>
 
 以下是将计算机技能列入简历时需要考虑的一些要点。
 
@@ -439,7 +439,7 @@ shell（如Bash或Zsh shell）是你（用户）和计算机操作系统之间�
 - 不要在列出你的技能的同时，用一个指标条来说明你的熟练程度。
     例如，不要写上 "我对JavaScript的熟练程度是78%"。这样的内容很容易导致混淆。
 - 要具体。例如，不要只写 "Microsoft Excel的高级知识"。相反，提供一些例子，说明你能用Excel做什么，比如说出你精通的高级函数和公式的名称。
-- 与其只列举技能，不如重点提及成就、里程碑、指标，以及你的计算机技能如何帮助公司。雇主们有兴趣看到你的计算机技能在以前的工作中是如何帮助提高团队的生产力，增加销售和收入的。 
+- 与其只列举技能，不如重点提及成就、里程碑、指标，以及你的计算机技能如何帮助公司。雇主们有兴趣看到你的计算机技能在以前的工作中是如何帮助提高团队的生产力，增加销售和收入的。
     例如，你可以提到你通过编写Python脚本自动完成的一项任务，为你的团队节省了大量时间。
 - 请确保简短，并以简明的方式表达你的观点。招聘人员和雇主不会花太多时间浏览简历，所以相关的信息需要以一种总结的方式轻松突出。
 - 你可以包括文章的链接，你在会议上的演讲，你主持的研讨会，或你拥有的YouTube频道，你在那里解释你所在领域的技术话题。这样，你就向未来的雇主表明，你参与了你的社区，而且你拥有他们正在寻找的知识和专长。

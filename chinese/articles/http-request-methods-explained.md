@@ -1,10 +1,6 @@
 > -  原文地址：[HTTP Request Methods – Get vs Put vs Post Explained with Code Examples](https://www.freecodecamp.org/news/http-request-methods-explained/)
-> -  原文作者：[
-                    
-                        Camila Ramos Garzon
-                    
-                ](https://www.freecodecamp.org/news/author/camiinthisthang/)
-> -  译者：
+> -  原文作者：[Camila Ramos Garzon](https://www.freecodecamp.org/news/author/camiinthisthang/)
+> -  译者：ZhichengChen
 > -  校对者：
 
 ![HTTP Request Methods – Get vs Put vs Post Explained with Code Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/FCC-Cover.png)

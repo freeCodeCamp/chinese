@@ -1,10 +1,6 @@
 > -  原文地址：[How to Use Google – Search Tips for Better Results](https://www.freecodecamp.org/news/use-google-search-tips/)
-> -  原文作者：[
-                    
-                        Marko Denic
-                    
-                ](https://www.freecodecamp.org/news/author/denicmarko/)
-> -  译者：
+> -  原文作者：[Marko Denic](https://www.freecodecamp.org/news/author/denicmarko/)
+> -  译者：ZhichengChen
 > -  校对者：
 
 ![How to Use Google – Search Tips for Better Results](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/pexels-photomix-company-218717.jpg)

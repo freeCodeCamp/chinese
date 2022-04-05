@@ -1,458 +1,453 @@
-> -  原文地址：[Computer Skills for Résumé – Software Skill Proficiency Guide](https://www.freecodecamp.org/news/computer-skills-for-resume-software-skill-proficiency-guide/)
-> -  原文作者：[
-                    
-                        Dionysia Lemonaki
-                    
-                ](https://www.freecodecamp.org/news/author/dionysia/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Computer Skills for Résumé – Software Skill Proficiency Guide](https://www.freecodecamp.org/news/computer-skills-for-resume-software-skill-proficiency-guide/)
+> - 原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Computer Skills for Résumé – Software Skill Proficiency Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/pexels-janko-ferlic-590493.jpg)
 
-Having strong computer skills is necessary for almost any job. That knowledge can set you apart from others who don't possess it.
+拥有强大的计算机技能对几乎所有的工作都是必要的。这种知识可以使你从其他不具备这种知识的人中脱颖而出。
 
-But what are the most necessary computer skills to have? And when you acquire those skills, how do you showcase them effectively to prospective employers?
+但是，什么是最需要掌握的计算机技能？当你获得这些技能时，你如何向未来的雇主有效地展示它们？
 
-In this article, you will learn about some of the most important  
-computer skills and software programs needed in the workplace.
+在这篇文章中，你将了解到一些最重要的工作所需的计算机技能和软件程序。
 
-You will also learn some of the most basic tasks you need to be able to complete to be competent in those programs.
+你还将学习一些最基本的任务，你需要能够完成这些程序的能力。
 
-Lastly, you will see some of the dos and don'ts for listing computer skills on your résumé.
+最后，你将看到在你的履历表上列出计算机技能的一些做法和不做法。
 
-Here is what we will cover:
+以下是我们要讲的内容:
 
-1.  [Why computer literacy is important](#thewhy)
-2.  [Software skills guide](#guide)
-    -   [Knowledge of operating systems and of basic IT troubleshooting](#osit)
-    -   [Knowledge of web Browsers and web searching skills](#browsers)
-    -   [Knowledge of Project Management Software](#management)
-    -   [Knowledge of communication software](#communication)
-    -   [Knowledge of Email and digital calendar management software](#email)
-    -   [Knowledge of Word Processing Software](#word)
-    -   [Knowledge of spreadsheet software](#spreadsheet)
-    -   [Knowledge of presentation software](#presentation)
-    -   [Knowledge of graphic design software](#graphicdesign)
-    -   [Knowledge of coding tools and databases](#coding)
-3.  [How to Include Computer Skills on Résumé](#how)
+1. [为什么计算机知识很重要](./#why-computer-literacy-is-important)
+2. [软件技能指南](./#software-skills-guide)
+    - [掌握操作系统和基本的IT故障排除知识](./#knowledge-of-operating-systems-and-of-basic-IT-troubleshooting)
+    - [熟悉网络浏览器和网络搜索技能](./#knowledge-of-web-browsers-and-web-searching-skills)
+    - [项目管理软件的知识](./#knowledge-of-project-management-software)
+    - [通信软件知识](./#knowledge-of-communication-software)
+    - [熟悉电子邮件和数字日历管理软件](./#knowledge-of-email-and-digital-calendar-management-software)
+    - [对文字处理软件的了解](./#knowledge-of-word-processing-software)
+    - [对电子表格软件的了解](./#knowledge-of-spreadsheet-software)
+    - [掌握演示软件的知识](./#knowledge-of-presentation-software)
+    - [熟悉图形设计软件](./#knowledge-of-graphic-design-software)
+    - [编码工具和数据库知识](./#knowledge-of-coding-tools-and-databases)
+3. [如何在简历展示计算机技能](./#how-to-include-computer-skills-on-résumé)
 
-## Why Computer Literacy is Important
+<h2 id="why-computer-literacy-is-importan">为什么计算机知识很重要</h2>
 
-We live in a digital world, and that doesn't seem to be changing any time soon.
+我们生活在一个数字世界中，而且这似乎不会很快改变。
 
-On the contrary, each year, technological advancements and breakthroughs occur.
+相反，每年都会出现技术进步和突破。
 
-Despite the rapid growth of the Internet and technologies surrounding it, more than a third of the world's population doesn't have access to the Internet and has never used it.
+尽管互联网和围绕它的技术快速增长，但世界上超过三分之一的人口没有接入互联网，也从来没有使用过互联网。
 
-Having access to it and owning a personal computer is a privilege in and of itself.
+能够接触到它并拥有一台个人电脑本身就是一种特权。
 
-Many people also still lack the digital skills needed to use the Internet.
+许多人也仍然缺乏使用互联网所需的数字技能。
 
-At the same time, there are unfulfilled jobs due to a lack of a skilled workforce.
+同时，由于缺乏熟练的劳动力，还有一些工作没有得到满足。
 
-The work we do – and will do in the future – relies heavily on digital media and tools.
+我们所做的工作--以及将来要做的工作--在很大程度上依赖于数字媒体和工具。
 
-So, basic computer skills are considered the bare minimum requirement by employers, with computer skills often being the top requirement listed in job postings.
+因此，基本的计算机技能被雇主认为是最基本的要求，计算机技能往往是招聘启事中列出的首要要求。
 
-And no matter the industry you are in, you will need computer skills.
+而且，无论你在哪个行业，你都需要计算机技能。
 
-Whether you work in healthcare, retail, finance, as an administrative assistant, or the HR department of a company, digital competency will be helpful.
+无论你是在医疗保健、零售、金融领域工作，还是担任行政助理，或是公司的人力资源部门，数字能力都会有帮助。
 
-Digital literacy will give you a higher chance of getting career opportunities and achieving growth in the modern workplace.
+数字素养将使你在现代工作场所获得职业机会和实现发展的机会更高。
 
-## Software Skills Guide
+<h2 id="software-skills-guide">软件技能指南</h2>
 
-Before continuing, I want to give a disclaimer.
+在继续之前，我想做一个免责声明。
 
-In the sections to come, I will go over some of the most used software programs utilized in office jobs.
+在接下来的章节中，我将介绍一些办公室工作中最常用的软件程序。
 
-Depending on your job, or the career you want to transition into, you may not need knowledge of all of this.
+根据你的工作，或你想过渡到的职业，你可能不需要所有这些知识。
 
-For example, if you are an administrative assistant, you probably won't use the command line for your day-to-day tasks.
+例如，如果你是一名行政助理，你可能不会在日常工作中使用命令行。
 
-If you are a software developer, you won't necessarily be writing Excel formulas.
+如果你是一名软件开发人员，你不一定会写Excel公式。
 
-That said, knowledge of computer software will put you one step forward compared to someone lacking that knowledge.
+也就是说，计算机软件的知识将使你比缺乏这种知识的人更进一步。
 
-So, even if you're not in tech, you can still benefit from using the command line to make repetitive manual tasks quicker. And if you are a software developer, you won't be writing only code all day. You will probably use a word processor for documentation and will need to know how to create presentations.
+因此，即使你不是搞技术的，你仍然可以从使用命令行来使重复的手工任务变得更快受益。而如果你是一个软件开发人员，你不会整天只写代码。你可能会使用文字处理器来编写文件，并需要知道如何创建演示文稿。
 
-Another thing to add is that the list is quite long, with many programs included. It's not intended to be an exhaustive list. Instead, it's for providing a general idea of what could help make you more productive and competitive.
+还有一点要补充的是，这个清单相当长，包括了许多程序。它并不打算成为一个详尽的清单。相反，它是为了提供一个关于什么可以帮助你提高生产力和竞争力的总体概念。
 
-Learning all the software will take time, and you don't need to learn everything all at once. But you never know when this knowledge will come in useful. So, if you want to improve your computer knowledge, you can start slow and add one more tool to your toolbox each time.
+学习所有的软件需要时间，而且你不需要一下子就学会所有的东西。但你永远不知道这些知识何时会派上用场。所以，如果你想提高你的计算机知识，你可以慢慢开始，每次在你的工具箱里多加一个工具。
 
-With that out the way, let's see some of the most used software programs in the workplace.
+说了这么多，让我们看看工作场所中最常用的一些软件。
 
-### Knowledge of Operating Systems and of Basic IT Troubleshooting
+<h3 id="knowledge-of-operating-systems-and-of-basic-IT-troubleshooting">掌握操作系统和基本的IT故障排除知识</h3>
 
-The first step to digital literacy is having a well-rounded understanding of operating systems.
+实现数字扫盲的第一步是对操作系统有一个全面的了解。
 
-There is no need to become an IT expert if that is not your goal, but instead, know their basic functionalities.
+如果这不是你的目标，就没有必要成为一个IT专家，而是要了解它们的基本功能。
 
-The [Operating System (OS for short)](https://www.freecodecamp.org/news/what-is-an-os-operating-system-definition-for-beginners/) manages all of the software and hardware on a computer and allows you to interact with the computer in the first place.
+[操作系统（简称OS）](https://www.freecodecamp.org/news/what-is-an-os-operating-system-definition-for-beginners/)管理计算机上的所有软件和硬件，并允许你首先与计算机互动。
 
-The three most widely used operating systems are:
+三个最广泛使用的操作系统是:
 
--   The Windows Operating System, which is owned by Microsoft.
--   macOS, which is owned by Apple.
--   Linux, which is an open-source operating system. In contrast to Windows and macOS, Linux is not proprietary software. No one company owns it. Anyone with the knowledge can contribute, make changes and improvements, and help maintain it.
+- Windows操作系统，由微软拥有。
+- macOS，由苹果公司拥有。
+- Linux，这是一个开源的操作系统。与Windows和macOS相比，Linux不是专有软件。没有一家公司拥有它。任何有知识的人都可以作出贡献，进行修改和改进，并帮助维护它。
 
-In addition, it helps to have some at least basic IT troubleshooting skills. This knowledge will help you find solutions when you get stuck, and help you solve problems by yourself.
+此外，至少拥有一些基本的IT故障排除技能是有帮助的。这些知识将帮助你在遇到困难时找到解决方案，并帮助你自己解决问题。
 
-For example, some basic computer troubleshooting skills are:
+例如，一些基本的计算机故障排除技能是。:
 
--   Recognizing network icons and knowing if the WiFi is on or off.
--   Knowing what to do when a computer program has frozen.
--   Knowing how to handle crashes.
--   Knowing when and how to reboot the system.
--   Knowing how to restart the computer or interact with Task Manager to handle unresponsive programs.
--   Knowing what to do when the computer doesn't power up.
--   Knowing how to solve issues with USB memory sticks and external hard drives.
--   Knowing how to speed up a slow computer.
--   Knowing how to perform basic network diagnostics.
--   Knowing when to update system and when a routine maintenance is needed.
--   knowing about user account management.
+- 识别网络图标，知道WiFi是开还是关
+- 知道当计算机程序卡顿时该怎么做。
+- 知道如何处理死机。
+- 知道何时以及如何重启系统。
+- 知道如何重启计算机或与使用任务管理器处理无反应的程序。
+- 知道当电脑不开机时该怎么做。
+- 知道如何解决USB记忆棒和外部硬盘驱动器的问题。
+- 知道如何加快缓慢的电脑速度。
+- 知道如何进行基本的网络诊断。
+- 知道何时更新系统，何时需要进行常规维护。
+- 知道用户账户管理。
 
-You'll use a GUI (Graphic User Interface) to make your way around a computer.
+你将使用GUI（图形用户界面）在电脑上进行操作。
 
-The different buttons and dropdown menus, the pointing and mouse clicks, and the different icons you see on your screen make GUIs easy to use.
+不同的按钮和下拉菜单，指向和鼠标点击，以及你在屏幕上看到的不同图标使GUI易于使用。
 
-However, there may be times when you will need to use a Command Line Interface (or CLI for short).
+然而，有时你可能需要使用命令行界面（或简称CLI）。
 
-A CLI is a text-based program. You type commands in a prompt using keyboard navigation only and save significant time when performing repetitive tasks.
+CLI是一个基于文本的程序。你只用键盘导航在提示中输入命令，在执行重复性任务时可以节省大量时间。
 
-On Windows, the software program is called Command Prompt, and on macOS, it is called Terminal.
+在Windows上，该软件程序被称为命令提示符，在macOS上，它被称为终端。
 
-A shell (such as Bash or Zsh shell) is the interface between you, the user, and the computer's operating system.
+shell（如Bash或Zsh shell）是你（用户）和计算机操作系统之间的接口。
 
-You type commands in one of the CLI applications. The shell reads, processes, and interprets the commands and instructs the Operating System to perform the task.
+你在一个CLI应用程序中输入命令。shell读取、处理和解释这些命令，并指示操作系统执行任务。
 
-Knowing your way around the command line will help you save considerable time. Some basic command line skills to have are:
+掌握命令行的方法将帮助你节省大量时间。一些需要掌握的基本命令行技能是:
 
--   General system commands.
--   How to create and delete files and folders.
--   How to view contents of files and folders.
--   How to open programs.
--   How to use a command-line text editor, such as Vim, Emacs or Nano, to write to files.
--   How to manage current working processes.
+- 一般的系统命令。
+- 如何创建和删除文件和文件夹。
+- 如何查看文件和文件夹的内容。
+- 如何打开程序。
+- 如何使用命令行文本编辑器，如Vim、Emacs或Nano，来写入文件。
+- 如何管理当前的工作进程。
 
-### Knowledge of Web Browsers and Web Searching Skills
+<h3 id="knowledge-of-web-browsers-and-web-searching-skills">熟悉网络浏览器和网络搜索技能</h3>
 
-Knowing how to quickly and effectively find meaningful information to help you solve a problem, or to enable you to conduct research for a project, is a valuable skill to have.
+知道如何快速有效地找到有意义的信息来帮助你解决问题，或使你能够为一个项目进行研究，是一项有价值的技能。
 
-For this purpose, you must know how to use a Web browser correctly.
+为此，你必须知道如何正确使用网络浏览器。
 
-Web browsers are application software that locates and presents to users the information requested on the World Wide Web.
+网络浏览器是一种应用软件，它在万维网上定位并向用户展示所要求的信息。
 
-Some of the most popular web browsers are:
+一些最流行的网络浏览器是:
 
--   Google Chrome, developed by Google.
--   Firefox Mozilla, developed by Firefox.
--   Microsoft Edge, developed by Mircosoft.
--   Safari, developed by Apple.
+- 谷歌浏览器Chrome，由谷歌开发。
+- 火狐Mozilla，由火狐开发。
+- 微软Edge，由Mircosoft开发。
+- Safari，由苹果公司开发。
 
-To use web browsers productively, here are some of the skills you need:
+要有效地使用网络浏览器，以下是你需要的一些技能:
 
--   Make sure you use modern and updated web browsers instead of older and unsupported ones.
--   Know the navigational buttons. Go back to the previous page, refresh the current page, create a file and open the page in a new tab or window, and know your way around the browser's menu for extra functionalities, to name a few.
--   Enter URLs (short for Uniform Resource Locator). URLs are a unique web address that you put into the browser's address bar.
--   Know how to read a URL by understanding its different parts and recognizing when a website might be sketchy.
--   Perform searches by using keywords and perform basic Internet research.
--   Know how to apply filters for advanced searching techniques.
--   Make use of tabbed browsing. With modern browsers, you can open, manage and switch between many web pages simultaneously – in the same browser window.
--   Know how to restore tabs.
--   Create and manage bookmarks with the browser's built-in bookmark manager. Bookmarks is another name for 'your favorites' – the websites you would like to save and keep for future reference. You can create folders and subfolders for a more organized bookmarking system.
--   Know how to manage and delete browsing history on your system.
--   Know about browser security and privacy issues. The first step is knowing the [difference between HTTP and HTTPS](https://www.freecodecamp.org/news/what-is-https-http-vs-https-meaning-and-how-it-works/), especially when making financial transactions across the internet. Next is using Incognito mode for protecting sensitive data when sharing a computer with someone else or using a public computer.
--   Know how to clear browser cache and cookies to improve load time, save space, and reduce bandwidth.
--   Know how to install extensions that have additional browser functionalities.
+- 确保你使用现代和更新的网络浏览器，而不是旧的和不支持的浏览器。
+- 了解导航按钮。回到上一页，刷新当前页面，创建一个文件并在新的标签或窗口中打开该页面，了解你在浏览器菜单中的额外功能，仅举几例。
+- 输入URL（Uniform Resource Locator的缩写）。URL是一个独特的网络地址，你把它放在浏览器的地址栏里。
+- 通过了解URL的不同部分，知道如何阅读它，并识别出一个网站可能是草率的。
+- 通过使用关键词进行搜索，并进行基本的互联网探索。
+- 知道如何应用过滤器进行高级搜索技术。
+- 利用标签式浏览。利用现代浏览器，你可以在同一个浏览器窗口中同时打开、管理和切换许多网页。
+- 知道如何恢复标签。
+- 利用浏览器的内置书签管理器创建和管理书签。书签是 "你的最爱 "的另一个名称--你想保存和保留的网站，以供将来参考。你可以创建文件夹和子文件夹，以建立一个更有组织的书签系统。
+- 知道如何管理和删除你系统中的浏览历史。
+- 了解浏览器的安全和隐私问题。第一步是了解 [HTTP和HTTPS的区别](https://www.freecodecamp.org/news/what-is-https-http-vs-https-meaning-and-how-it-works/)，特别是在互联网上进行金融交易时。其次是在与他人共享电脑或使用公共电脑时，使用隐身模式来保护敏感数据。
+- 知道如何清除浏览器的缓存和cookies，以改善加载时间，节省空间，并减少带宽。
+- 知道如何安装具有额外浏览器功能的扩展程序。
 
-### Knowledge of Project Management Software
+<h3 id="knowledge-of-project-management-software">项目管理软件的知识</h3>
 
-When you become part of a team, you will probably need to use project management software.
+当你成为一个团队的一部分时，你可能需要使用项目管理软件。
 
-Project management software is an interactive collaboration tool used for project task management and delegation.
+项目管理软件是一种用于项目任务管理和授权的互动协作工具。
 
-They help keep teams organized, productive, and efficient, no matter their size.
+它们有助于保持团队的组织性、生产力和效率，无论其规模如何。
 
-Some of the most commonly used project management software are:
+一些最常用的项目管理软件是:
 
--   Trello
--   Asana
--   Jira
--   Google Tasks
--   Evernote
--   Notion
+- Trello
+- Asana
+- Jira
+- Google Tasks
+- Evernote
+- Notion
 
-You can also use project management software for your personal projects.
+你也可以为你的个人项目使用项目管理软件。
 
-They can help keep you motivated and visually see the progress you are making, all in one place.
+它们可以帮助你保持动力，并直观地看到你正在取得的进展，所有这些都在一个地方。
 
-The most common features to know when using such applications are:
+使用这类应用程序时，需要了解的最常见的功能是:
 
--   How to create a custom workspace for the team.
--   How to plan, organize, and schedule projects.
--   How to create a visual roadmap and timeline with kanban boards and user stories, to visualize the bigger picture of the project, and what the workflow will look like during the different stages of the project.
--   How to create and view lists with tasks that need to get done.
--   How to color code and label tasks to better organize and prioritize them into groups.
--   How to update and edit the current status of tasks. Track progress of projects throughout the life of the project for all team members to stay up to date.
--   How to mark and check off completed tasks as completed.
--   Collaboration between team members. Individual team members can comment, add notes and their input regarding significant project updates, set reminders, all on the same page.
--   How to allocate and assign tasks to team members. Easily visualize the assignments that each team member is working on.
--   How to track time spent on each task and manage deadlines to ensure on-time delivery.
--   How to create internal reports and project documentation.
--   How to create and share project meeting notes.
--   How to create and share a knowledge hub and wiki, with a curated dashboard of a library with resources related to the project.
--   How to share accomplishments and project milestones.
--   How to keep track of achievements that you can use as a reference in one-to-ones and reviews.
--   How to keep track of budgeting, monitor the project's spending, and schedule invoices.
+- 如何为团队创建一个自定义的工作空间。
+- 如何计划、组织和安排项目。
+- 如何用看板和用户故事创建一个可视化的路线图和时间表，以可视化项目的全貌，以及项目不同阶段的工作流程。
+- 如何创建和查看有需要完成的任务的清单。
+- 如何对任务进行颜色编码和标记，以便更好地组织和优先处理它们。
+- 如何更新和编辑任务的当前状态。在整个项目期间跟踪项目的进展，让所有团队成员保持最新状态。
+- 如何标记和勾选已完成的任务为已完成。
+- 团队成员之间的协作。个别团队成员可以评论，添加注释和他们关于重大项目更新的意见，设置提醒，都在同一页面。
+- 如何分配任务给团队成员。轻松地可视化每个团队成员正在进行的任务。
+- 如何跟踪每项任务所花费的时间并管理最后期限以确保按时交付。
+- 如何创建内部报告和项目文件。
+- 如何创建和分享项目会议记录。
+- 如何创建和分享一个知识中心和维基，有一个与项目相关的资源库的策划仪表板。
+- 如何分享成就和项目的里程碑。
+- 如何跟踪成就，可以在一对一和审查中作为参考。
+- 如何跟踪预算编制，监测项目的支出，安排发票。
 
-### Knowledge of Communication Software
+<h3 id="knowledge-of-communication-software">通信软件知识</h3>
 
-When you are part of a team, you need to communicate clearly and precisely with the rest of the team members.
+当你是一个团队的一部分时，你需要与团队的其他成员进行清晰准确的沟通。
 
-Communication tools enhance a team's productivity, which in turn leads to better products and services.
+沟通工具可以提高团队的生产力，从而带来更好的产品和服务。
 
-These days, more people work remotely and teams are distributed theoughout different corners of the world and across different timezones. Because of this, teams rely on dedicated communication tools to collaborate, talk to each other, and stay in touch, no matter where they are.
+这些天来，越来越多的人远程工作，团队分布在世界的不同角落和不同时区。正因为如此，团队依靠专门的通信工具进行协作，相互交谈，并保持联系，无论他们在哪里。
 
-Each team has its own communication style, but regardless of their preferences you would be expected to know how to use a digital communication medium.
+每个团队都有自己的沟通风格，但无论他们的喜好如何，你都会被要求知道如何使用数字通信媒介。
 
-These fall into different categories:
+这些分为不同的类别。
 
--   Real time instant messaging platforms, which are a substitute for emails and provide faster exchanges with more communication features to choose from.
--   Voice calling platforms.
--   Video conferencing platforms to host meetings.
+- 实时即时通讯平台，它是电子邮件的替代品，提供更快的交流，有更多的沟通功能可供选择。
+- 语音通话平台。
+- 举办会议的视频会议平台。
 
-Some of the most popular ones used are:
+一些最常用的有:
 
--   Microsoft Teams
--   Skype
--   Zoom
--   Google Meet
--   Slack
--   Discord
--   Loom
+- Microsoft Teams
+- Skype
+- Zoom
+- Google Meet
+- Slack
+- Discord
+- Loom
 
-Some of the features you would need to know how to use are:
+你需要知道如何使用的一些功能是:
 
--   How to privately message someone for direct communication.
--   How to create group messaging chats that are either public or private.
--   How to create and utilize custom channels for specific projects or topics.
--   How to record meetings and talks. In this case, all participants need to be aware of the recording.
--   How to host an educational webinar.
--   How to share your screen to work through problems.
--   How to utilise the 'raise your hand' feature.
--   Know keyboard shortcuts for muting/unmuting yourself and turning your camera on/off.
+- 如何私下给某人发信息进行直接交流。
+- 如何创建公开或私下的群组消息聊天。
+- 如何为特定项目或主题创建和利用自定义频道。
+- 如何记录会议和会谈。在这种情况下，所有参与者都需要知道录音的内容。
+- 如何主持一个教育性的网络研讨会。
+- 如何分享你的屏幕来解决问题。
+- 如何利用 "举手 "功能。
+- 了解键盘快捷键，以便为自己设置静音/取消静音，并打开/关闭相机。
 
-### Knowledge of Email and Digital Calendar Management Software
+<h3 id="knowledge-of-email-and-digital-calendar-management-software">熟悉电子邮件和数字日历管理软件</h3>
 
-Emails are a fast way to communicate with your colleagues and send messages across the internet.
+电子邮件是与你的同事沟通和在互联网上发送信息的一种快速方式。
 
-You need to know how to compose concise and well-organized emails using an email provider.
+你需要知道如何使用电子邮件供应商编写简明而有条理的电子邮件。
 
-The most commonly used email software applications are:
+最常用的电子邮件软件应用是:
 
--   Microsoft Outlook
--   Google Gmail
+- Microsoft Outlook
+- Google Gmail
 
-The basic knowledge you would need includes the following:
+你需要的基本知识包括以下内容:
 
--   Setting up an email account.
--   Formatting, sending, and receiving emails.
--   Sending an email to multiple people at once.
--   Attaching document files, images, and voice messages to your emails.
--   Using the address book for your contacts.
--   Starring emails for organizing emails in a separate folder.
--   Creating folders and sorting through emails.
--   Creating labels and filters to search through specific keywords to maximize productivity.
--   Knowing how to file, prioritize, and group emails for easier access and time efficiency.
--   Forwarding emails.
--   Idenitfying phishing emails.
+- 设置一个电子邮件帐户。
+- 格式化、发送和接收电子邮件。
+- 一次性向多人发送电子邮件。
+- 在电子邮件中附加文档文件、图像和语音信息。
+- 为你的联系人使用地址簿。
+- 给电子邮件加星号，以便在一个单独的文件夹中组织电子邮件。
+- 创建文件夹并对邮件进行分类。
+- 创建标签和过滤器，通过特定的关键词进行搜索，以最大限度地提高生产力。
+- 知道如何对电子邮件进行归档、优先排序和分组，以方便访问和提高时间效率。
+- 转发电子邮件。
+- 识别网络钓鱼邮件。
 
-Your email account will be in-sync with a digital calendar program.
+你的电子邮件账户将与一个数字日历程序同步。
 
-For example, Gmail uses Google Calendar and Outlook uses the Outlook Calendar.
+例如，Gmail使用谷歌日历，Outlook使用Outlook日历。
 
-Knowledge of Calendly, a scheduling application, is helpful too.
+对Calendly（一种日程安排应用程序）的了解也很有帮助。
 
-You can connect it to your email account for scheduling appointments, meetings, and appointments.
+你可以把它与你的电子邮件帐户连接起来，用于安排约会、会议、和预约。
 
-The skills you need to have when using digital calendars are:
+在使用数字日历时，你需要具备的技能是:
 
--   Knowing how to block out your time and set up your availability.
--   Sharing your calendar with a link so other team members can arrange events and meetings with you.
--   Scheduling and arranging meetings.
--   Inviting attendees.
--   Canceling events.
+- 知道如何封锁你的时间和设置你的可用性。
+- 用链接分享你的日历，以便其他团队成员可以与你一起安排活动和会议。
+- 计划和安排会议。
+- 邀请出席者。
+- 取消活动。
 
-### Knowledge of Word Processing Software
+<h3 id="knowledge-of-word-processing-software">对文字处理软件的了解</h3>
 
-Knowing how to write in an engaging way and format text documents is a necessary skill, no matter your industry.
+无论你的行业如何，知道如何以引人入胜的方式写作和格式化文本文件是一项必要的技能。
 
-You may need to write blogs and articles for the company's website. You may be in charge of writing and publishing the company's newsletter. You may need to compose and frequently update documentation on internal tools used in the company. You may need to write formal reports to stakeholders.
+你可能需要为公司的网站写博客和文章。你可能会负责撰写和发布公司的通讯。你可能需要编写并经常更新公司内部使用的工具的文档。你可能需要写正式的报告给利益相关者。
 
-Whatever the case, knowing how to use a word processor is a must.
+不管是什么情况，知道如何使用文字处理器是必须的。
 
-Some of the most commonly used word processors are:
+一些最常用的文字处理软件是:
 
--   Microsoft Word
--   Google Docs
--   OpenOffice Writer
--   LibreOffice
--   Dropbox Paper
+- Microsoft Word
+- Google Docs
+- OpenOffice Writer
+- LibreOffice
+- Dropbox Paper
 
-Here are some of the basic skills to have when using a word processor:
+以下是使用文字处理软件时应具备的一些基本技能:
 
--   Know how to create a new document and insert, edit, modify, copy, cut, and delete text. Know how to enable automatic saving to ensure you don't lose any work by accident.
--   Know how to open an already created document.
--   Know how to merge documents.
--   Know how to change page view layout.
--   Know how to utilize spell and grammar checker for correcting spelling errors and typos.
--   Know how to create hyperlinks.
--   Choose the correct font depending on the occasion.
--   Know how to format and emphasize text. Knowledge of keyboard shortcuts (such as copy/cut/pasting, how to undo and redo work) to improve your touch typing speed.
--   Know how to organize and split the text into sections with headings, subheadings, and indented paragraphs.
--   For large documents, know how to create a table of contents so others can easily navigate to different sections.
--   Know how to select, move and center align text.
--   Know how to use pre-existing templates and create new ones.
--   Utilize the find and replace feature.
--   Collaborate with other team members by highlighting text and leaving comments in the document's sidebar with suggestions.
--   Know how to share and protect documents by setting up password protection.
--   Know how to save the document in different file formats (such as saving the document as a PDF).
--   Know how to set up and print documents.
--   Know how to insert columns.
--   Know how to insert and format tables, text boxes, charts, graphs, and visual elements into text documents to visualize data.
--   Know how to create, edit and format complex tables with data.
--   Know how to import graphs and embed other documents (such as Excel worksheets).
--   Know how to insert images and bookmarks.
--   Know how to create, sort, and filter Mail Merges.
+- 知道如何创建一个新的文档并插入、编辑、修改、复制、剪切和删除文本。知道如何启用自动保存，以确保你不会因意外而丢失任何工作。
+- 知道如何打开一个已经创建的文档。
+- 知道如何合并文档。
+- 知道如何改变页面视图布局。
+- 知道如何利用拼写和语法检查器来纠正拼写错误和错字。
+- 知道如何创建超链接。
+- 根据不同的场合选择正确的字体。
+- 知道如何格式化和强调文本。懂得键盘快捷键（如复制/剪切/粘贴，如何撤销和重做工作），以提高你的触摸打字速度。
+- 知道如何用标题、副标题和缩进的段落来组织和分割文本。
+- 对于大型文件，知道如何创建一个目录，以便其他人可以轻松地浏览不同的章节。
+- 知道如何选择、移动和居中对齐文本。
+- 知道如何使用预先存在的模板和创建新模板。
+- 利用查找和替换功能。
+- 通过突出显示文本并在文档的侧边栏中留下评论和建议来与其他团队成员协作。
+- 知道如何通过设置密码保护来分享和保护文件。
+- 知道如何以不同的文件格式保存文档（如将文档保存为PDF格式）。
+- 知道如何设置和打印文档。
+- 知道如何插入列。
+- 知道如何在文本文件中插入和格式化表格、文本框、图表、图形和视觉元素，使数据可视化。
+- 知道如何创建、编辑和格式化带有数据的复杂表格。
+- 知道如何导入图形和嵌入其他文件（如Excel工作表）。
+- 知道如何插入图像和书签。
+- 知道如何创建、分类和过滤邮件合并。
 
-### Knowledge of Spreadsheet Software
+<h3 id="对电子表格软件的了解"></h3>
 
-Many jobs require you to be comfortable working with smaller or even larger datasets.
+许多工作要求你能自如地处理较小甚至较大的数据集。
 
-You need to know how to store and organize data in a tabular format.
+你需要知道如何以表格的形式存储和组织数据。
 
-In this way, you'll be able to analyze and perform calculations on the data.
+这样一来，你就能对数据进行分析和计算。
 
-Some of the most commonly used spreadsheet softwares are:
+一些最常用的电子表格软件是:
 
--   Microsoft Excel
--   Google Sheets
--   Apple Numbers
--   LibreOffice Calc
+- Microsoft Excel
+- Google Sheets
+- Apple Numbers
+- LibreOffice Calc
 
-Here are some of the basic skills to have when using spreadsheet software:
+以下是使用电子表格软件时应具备的一些基本技能:
 
--   Know how to perform data entry by setting up, creating, modifying, formatting, and saving worksheets.
--   Know how to manage multiple worksheets.
--   How how to merge cells.
--   Know how to highlight columns based on conditions you set using conditional formatting.
--   Know how to filter columns.
--   Know how to create graphs and charts
--   Know how to perform arithmetic calculations using functions. For example, know how to add individual values and find the total sum using SUM, Or being familiar with finding the average in a range of numbers using AVERAGE. Or, knowing how to find the highest and lowest number in range using MIN and MAX, respectively.
--   Know how to use advanced functions [such as VLOOKUP](https://www.freecodecamp.org/news/vlookup-in-excel/) (or Vertical Lookup) to search columns.
--   [Know basic VBA](https://www.freecodecamp.org/news/excel-vba-tutorial/) (which is short for Visual Basic Application) to create Excel Macros. Know how to work with macros commands to create custom functions that automate repetitive and time-consuming manual tasks.
--   Know how to create pivot tables and charts to visualize, compare and present large amounts of data using visualizations. Know how to generate reports with your findings.
+- 知道如何通过设置、创建、修改、格式化和保存工作表进行数据输入。
+- 知道如何管理多个工作表。
+- 如何合并单元格。
+- 知道如何根据你设置的条件，用条件格式化来突出显示列。
+- 知道如何过滤列。
+- 知道如何创建图形和图表
+- 知道如何使用函数进行算术计算。例如，知道如何使用SUM将单个数值相加并找出总和，或者熟悉使用AVERAGE找出一系列数字的平均值。或者，知道如何使用MIN和MAX分别找到范围内的最高和最低数字。
+- 知道如何使用高级函数 [如VLOOKUP](https://www.freecodecamp.org/news/vlookup-in-excel/)（或垂直查询）来搜索列。
+- [知道基本的VBA](https://www.freecodecamp.org/news/excel-vba-tutorial/)（这是Visual Basic Application的缩写）来创建Excel宏。知道如何使用宏命令来创建自定义函数，使重复的、耗时的手工任务自动化。
+- 知道如何创建数据透视表和图表，以便利用可视化的方式对大量的数据进行可视化、比较和展示。知道如何用你的发现生成报告。
 
-### Knowledge of Presentation Software
+<h3 id="knowledge-of-presentation-software">掌握演示软件的知识</h3>
 
-Knowing how to put together a presentation is a valuable skill to have.
+知道如何组织一场演讲是一项有价值的技能。
 
-You may need to give a presentation in front of a few team members and update them on the progress of a project. You may need to deliver a more formal presentation to stakeholders, or you may even need to give a talk at a large conference in front of experts in your field.
+你可能需要在几个团队成员面前做一个演讲，向他们介绍项目的最新进展。你可能需要向利益相关者做一个更正式的演讲，或者你甚至可能需要在一个大型会议上面对你所在领域的专家做一个演讲。
 
-Either way, knowing how to create engaging slides will be necessary.
+无论哪种方式，知道如何创建有吸引力的幻灯片都是必要的。
 
-Some of the most popular presentation software programs are:
+一些最流行的演示软件是:
 
--   Microsoft PowerPoint
--   Google Slides
--   Keynote
--   Canva
+- Microsoft PowerPoint
+- Google Slides
+- Keynote
+- Canva
 
-Here are some of the basic skills to have when using presentation software:
+以下是使用演示软件时应具备的一些基本技能:
 
--   Know how to select pre-built templates and color schemes and customize them by adding content into the slide.
--   Know how to design and format custom templates.
--   Know how to add slide transitions.
--   Insert charts, graphs, diagrams, and tables with data into slides.
--   Create icons, animations, transitions, and a mixture of static and motion graphics.
--   Know how to insert Clip Art.
--   Add notes to each slide
--   Make slides interactive by inserting hyperlinks.
--   Know how to insert media such as pictures, pieces of music, audio and sound effects, gifs, short video clips, or full videos uploaded from the computer or embedded from Youtube.
+- 知道如何选择预建的模板和配色方案，并通过在幻灯片中添加内容来定制它们。
+- 知道如何设计和格式化自定义模板。
+- 知道如何添加幻灯片的转场。
+- 在幻灯片中插入带有数据的图表、图形、图示和表格。
+- 创建图标、动画、转场，以及静态和动态图形的混合。
+- 知道如何插入剪贴画。
+- 为每张幻灯片添加注释
+- 通过插入超链接使幻灯片具有互动性。
+- 知道如何插入媒体，如图片、音乐片段、音频和音效、GIF、短视频片段，或从电脑上传或从Youtube嵌入的完整视频。
 
-### Knowledge of Graphic Design Software
+<h3 id="knowledge-of-graphic-design-software">熟悉图形设计软件</h3>
 
-Knowledge of design software is not exclusive to designers.
+设计软件的知识并不是设计师的专利。
 
-You may need to create visual content for an email marketing campaign, create a poster for a company event, or you may want to add detailed and visually appealing infographics to a presentation. You may want to prepare and edit photos or create mockups to improve the User Experience of a company's website.
+你可能需要为电子邮件营销活动创建视觉内容，为公司活动制作海报，或者你可能想在演示文稿中添加详细的、具有视觉吸引力的信息图表。你可能想准备和编辑照片，或创建模拟模型来改善公司网站的用户体验。
 
-Some of the most popular design software are:
+一些最流行的设计软件有:
 
--   Adobe Photoshop
--   Adobe Illustrator
--   Adobe InDesign
--   Adobe After Effects
--   [Figma](https://www.freecodecamp.org/news/how-to-use-figma-to-design-websites/)
--   Sketch
+- Adobe Photoshop
+- Adobe Illustrator
+- Adobe InDesign
+- Adobe After Effects
+- [Figma](https://www.freecodecamp.org/news/how-to-use-figma-to-design-websites/)
+- Sketch
 
-Each of these programs above [have a different use case](https://www.freecodecamp.org/news/adobe-xd-vs-sketch-vs-figma-vs-invision/).
+上述每个方案 [都有不同的使用情况](https://www.freecodecamp.org/news/adobe-xd-vs-sketch-vs-figma-vs-invision/)。
 
-In general, here are some of the basic skills to have when using graphic design software:
+一般来说，以下是使用平面设计软件时需要具备的一些基本技能:
 
--   Know how to import assets and set up a document from scratch correctly, with the appropriate width, height, size, and display setting for the project.
--   Know how to open already existing image files.
--   Know how to create and manipulate 3D objects and how to add visual effects from pre-existing and built-in styles.
--   Know how to manipulate images, both static and moving, and add visual effects with animations
--   Know how to prepare and get documents ready for print production.
--   Know how to save and export files in the correct format and prepare them for other programs.
--   Know how to make documents ready for use on the Web.
--   Know how to create and manipulate interactive media.
--   Know how to do basic photo editing, retouching, and enhancement and manipulate images by cropping and moving them.
--   Know how to create graphs, charts, infographics, and interactive PDFs.
--   Know how to create wireframes, prototypes and mockups, and User Interfaces for web design projects.
--   Know how to create logos, icons, and artwork.
+- 知道如何导入资产并正确地从头开始设置一个文件，为项目设置适当的宽度、高度、尺寸和显示设置。
+- 知道如何打开已有的图像文件。
+- 知道如何创建和操作三维对象，以及如何从预先存在的和内置的样式中添加视觉效果。
+- 知道如何操作图像，包括静态和动态图像，并通过动画添加视觉效果
+- 知道如何准备并使文件准备好用于印刷生产。
+- 知道如何以正确的格式保存和导出文件，并为其他程序做准备。
+- 知道如何使文件准备好在网络上使用。
+- 知道如何创建和处理互动媒体。
+- 知道如何进行基本的照片编辑、修饰和增强，并通过剪裁和移动来处理图像。
+- 知道如何创建图形、图表、信息图表和交互式PDF。
+- 知道如何为网页设计项目创建线框，原型和模拟，以及用户界面。
+- 知道如何创建标识、图标和艺术品。
 
-### Knowledge of Coding Tools and Databases
+<h3 id="knowledge-of-coding-tools-and-databases">编码工具和数据库知识</h3>
 
-Coding can help you solve problems and communicate with computers using a language that computers understand. And databases are programs for storing data and that allow programmers to retrieve the data using queries.
+编码可以帮助你解决问题，并使用计算机理解的语言与计算机交流。而数据库是存储数据的程序，允许程序员使用查询来检索数据。
 
-Even if you are not working as a developer, [knowing the basics of coding](https://www.freecodecamp.org/news/what-is-coding/) can help make repetitive aspects of your job much easier.
+即使你不是作为一个开发人员工作，[了解编码的基本知识](https://www.freecodecamp.org/news/what-is-coding/) 可以帮助你的工作的重复性方面更容易。
 
-Besides that, coding is one of the most fundamental technical skills you can have in the 21st century, not to mention that there is a high demand for applicants that know how to code.
+除此之外，编码是21世纪最基本的技术技能之一，更不用说对懂得编码的申请人有很高的需求。
 
-Here are some of the basic skills to have for coding and interacting with databases:
+下面是一些编码和与数据库互动的基本技能:
 
--   Knowledge of text editors and using the smart features available for writing source code.  
-    \-Knowledge of code editors with IDE-like features – where IDE is short Integrated Development environment – such as Visual Studio Code, for writing and editing source code, compiling and running source code, using the built-in terminal and debugging, all under the same roof.
--   [Knowledge of the Git version control software](https://www.freecodecamp.org/news/git-and-github-for-beginners/) to keep track of project changes and for collaboration. Create, push to, pull from, and clone a repository.
--   Knowledge of more advanced Git commands, such as for merging and branching.
--   Depending on the task at hand, knowledge of a programming language. If you need to work on the visual parts of a website users interact with (otherwise known as the client-side), learn frontend technologies such as HTML, CSS, and JavaScript. If the task involves working on the logic side of things (or the server-side), analyzing data, and automating repetitive and time-consuming tasks, learn a server-side scripting programming language like Python.
--   Knowledge of [Linux commands and working with a Linux environment](https://www.freecodecamp.org/news/the-linux-commands-handbook/). Know how to set up a Virtual Machine and run Linux on your local computer.
--   [Know SQL](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/) (short for Structured Query Language) to interact with Relational Databases (such as Oracle Database, MySQL, and PostgreSQL). Know how to write basic SQL commands to perform CRUD (short for Create Read Update Delete) operations to query the database and manipulate the data stored.
+- 熟悉文本编辑器并使用可用于编写源代码的智能功能。 
+    \-熟悉具有类似IDE功能的代码编辑器--这里的IDE是集成开发环境的简称--如Visual Studio Code，用于编写和编辑源代码，编译和运行源代码，使用内置终端和调试，都在同一个屋檐下。
+- [Git版本控制软件知识](https://www.freecodecamp.org/news/git-and-github-for-beginners/)，用于跟踪项目的变化和进行协作。创建、推送到、拉出和克隆一个仓库。
+- 掌握更高级的Git命令，如合并和分支。
+- 根据手头的任务，掌握一种编程语言的知识。如果你需要在网站的视觉部分与用户互动（也称为客户端），学习前端技术，如HTML、CSS和JavaScript。如果任务涉及到事情的逻辑方面（或服务器端），分析数据，并使重复性和耗时的任务自动化，那么学习服务器端脚本编程语言，如Python。
+- 了解 [Linux命令和在Linux环境中工作](https://www.freecodecamp.org/news/the-linux-commands-handbook/)。知道如何设置虚拟机并在本地计算机上运行Linux。
+- [了解SQL](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/) (结构化查询语言的简称），与关系型数据库（如Oracle数据库、MySQL和PostgreSQL）进行交互。知道如何编写基本的SQL命令来执行CRUD（创建读取更新删除的缩写）操作，以查询数据库和操作存储的数据。
 
-## How to Include Computer Skills on Résumé
+<h2 id="how-to-include-computer-skills-on-résumé">如何在简历展示计算机技能</h2>
 
-Below are some key points to consider when including computer skills on your résumé:
+以下是将计算机技能列入简历时需要考虑的一些要点。
 
--   You could create a separate dedicated section, such as a sidebar on the résumé, reserved for only listing your computer skills by including a list with bulleted points.
--   Include computer skills that set you apart from other applicants and are only relevant to the position.  
-    Just a note: don't list Microsoft Word as a computer skill if you are applying for a software developer role.  
-    Microsoft Word may be a tool you use for your daily work, but employers assume you already have that knowledge, and it's not what they are interested in seeing from your résumé.
--   List skills you have familiarity with and are comfortable using. Employers will probably ask questions based on the skills and technologies you added, so don't mislead and be direct about your exact level of proficiency.
--   List relevant courses and diplomas/certifications you have taken to advance your skills.
--   Do not list your skills accompanied by a metric bar with a percentage of how proficient you are.  
-    For example, don't include 'I am 78% proficient in JavaScript'. Something like that could easily lead to confusion.
--   Be specific. For example, don't just include 'Advanced knowledge in Microsoft Excel'. Instead, provide some examples of what you can do with Excel, such as naming the advanced functions and formulas you are proficient in.
--   Instead of just only listing skills, focus on mentioning achievements, milestones, metrics, and how your computer skills helped a company. Employers are interested in seeing how your computer skills helped improve your team's productivity and increased sales and revenue in your previous jobs.  
-    For example, you could mention a task you automated by writing a Python script which saved significant time for your team.
--   Make sure to keep it brief and get your point across in a concise way. Recruiters and employers don't spend much time going through résumés, so relevant information needs to stand out easily and in a summarized way.
--   You can include links to articles, a conference talk you gave, a workshop you hosted, or a YouTube channel you have, where you explain technical topics in your field. This way, you show to prospective employers that you are engaged in your community, and you have the knowledge and expertise they are looking for.
+- 你可以建立一个单独的专用部分，比如在简历的侧边栏，只为列出你的计算机技能而保留，包括一个带圆点的列表。
+- 列入使你有别于其他申请人的计算机技能，并且只与该职位相关。 
+    请注意：如果你申请的是软件开发人员的职位，不要把Microsoft Word列为计算机技能。 
+    Microsoft Word可能是你在日常工作中使用的工具，但雇主认为你已经有了这方面的知识，而这不是他们想从你的简历中看到的。
+- 列出你所熟悉并能自如使用的技能。雇主可能会根据你添加的技能和技术来提问，所以不要误导，要直接说明你确切的熟练程度。
+- 列出你为提高技能所学的相关课程和文凭/证书。
+- 不要在列出你的技能的同时，用一个指标条来说明你的熟练程度。
+    例如，不要写上 "我对JavaScript的熟练程度是78%"。这样的内容很容易导致混淆。
+- 要具体。例如，不要只写 "Microsoft Excel的高级知识"。相反，提供一些例子，说明你能用Excel做什么，比如说出你精通的高级函数和公式的名称。
+- 与其只列举技能，不如重点提及成就、里程碑、指标，以及你的计算机技能如何帮助公司。雇主们有兴趣看到你的计算机技能在以前的工作中是如何帮助提高团队的生产力，增加销售和收入的。
+    例如，你可以提到你通过编写Python脚本自动完成的一项任务，为你的团队节省了大量时间。
+- 请确保简短，并以简明的方式表达你的观点。招聘人员和雇主不会花太多时间浏览简历，所以相关的信息需要以一种总结的方式轻松突出。
+- 你可以包括文章的链接，你在会议上的演讲，你主持的研讨会，或你拥有的YouTube频道，你在那里解释你所在领域的技术话题。这样，你就向未来的雇主表明，你参与了你的社区，而且你拥有他们正在寻找的知识和专长。
 
-[Here's a guide to writing a résumé](https://www.freecodecamp.org/news/how-to-write-a-developer-resume-recruiters-will-read/) that hiring managers will actually read.
+[这里有一份撰写简历的指南](https://www.freecodecamp.org/news/how-to-write-a-developer-resume-recruiters-will-read/)，提高招聘经理查看你的简历的可能性。
 
-## Conclusion
+## 总结
 
-Hopefully, now you have a better understanding of what computer skills you should have if you're job hunting in today's market. We went over what you need to know to utilize software programs effectively, and how to present those skills clearly to employers.
+希望现在你能更好地了解如果你在今天的市场上找工作，你应该具备哪些计算机技能。我们讨论了你需要知道的有效利用软件程序的方法，以及如何向雇主清楚地介绍这些技能。
 
-Thank you for reading!
+谢谢你的阅读!

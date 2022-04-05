@@ -1,3 +1,4 @@
+
 > - 原文地址：[The Benefits of Going RESTful – What is REST and Why You Should Learn About It](https://www.freecodecamp.org/news/benefits-of-rest/)
 > - 原文作者：[YiğitKemalErinç](https://www.freecodecamp.org/news/author/erinc/)
 > - 译者：[luojiyin](https://github.com/luojiyin1987)
@@ -32,6 +33,7 @@ EST是为了在HTTP上工作（实际上HTTP受到了REST的影响）。因此�
 ![How to Keep Your Developer Team Happy: Lead Dev New York 2019 | Arc Blog](https://ucarecdn.com/f9a4640d-ba7f-4f85-82eb-901a56362a9a/)
 
 Happy Developers
+
 
 ### 2) REST使你的应用程序更具可扩展性
 
@@ -91,6 +93,7 @@ REST的目的是使缓存更容易。由于服务器是无状态的，每个请�
     }
 }
 ```
+
 
 这个服务器利用HATEOAS并返回相应的行动链接。这使得探索API非常容易，同时也通过允许服务器改变端点而使其变得灵活。
 

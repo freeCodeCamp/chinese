@@ -1,79 +1,81 @@
-> -  原文地址：[The Benefits of Going RESTful – What is REST and Why You Should Learn About It](https://www.freecodecamp.org/news/benefits-of-rest/)
-> -  原文作者：[YiğitKemalErinç](https://www.freecodecamp.org/news/author/erinc/)
-> -  译者：
-> -  校对者：
+
+> - 原文地址：[The Benefits of Going RESTful – What is REST and Why You Should Learn About It](https://www.freecodecamp.org/news/benefits-of-rest/)
+> - 原文作者：[YiğitKemalErinç](https://www.freecodecamp.org/news/author/erinc/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![The Benefits of Going RESTful – What is REST and Why You Should Learn About It](https://www.freecodecamp.org/news/content/images/size/w2000/2020/12/1_sPLooWMag11pjZnzYXIQCA.png)
 
-In this article, we will take a look at Representational State Transfer (REST) principles to learn what they are and what benefits you can get from applying them.
+在这篇文章中，我们将看看表现层状态转换（REST）原则，了解它们是什么，以及你能从应用它们中得到什么好处。
 
-I believe it is important to understand why you're learning something – including REST. So let's look at what REST principles bring to the table.
+我相信了解你为什么要学习一些东西是很重要的--包括REST。因此，让我们来看看REST原则带来了什么。
 
-## What is REST?
+## 什么是REST?
 
-Representational State Transfer (REST) is an architectural style that has gained a lot of popularity in recent years due to its simplicity and scalability.
+表现层状态转换（REST）是一种架构风格，由于其简单性和可扩展性，近年来得到了很多人的青睐。
 
-Before REST gained popularity, SOAP was the de-facto way of accessing resources and communicating over the web.
+在REST得到普及之前，SOAP是访问资源和通过网络进行通信的事实方式。
 
-## Why should you care about REST?
+## 你为什么要考虑REST？
 
-In this section, I'll discuss why REST principles are important and why it's worth the effort to learn more about them. You'll also learn how to apply them to your backend projects.
+在本节中，我将讨论为什么REST原则很重要，以及为什么值得努力去了解它们。你还将学习如何将它们应用于你的后端项目。
 
-### 1) REST is Easy to Understand and Implement
+### 1) REST很容易理解和实施
 
-REST is meant to work over HTTP (actually HTTP was influenced by REST). Therefore it makes use of HTTP verbs that most of us know, such as GET, POST, and PUT.
+EST是为了在HTTP上工作（实际上HTTP受到了REST的影响）。因此，它使用了我们大多数人都知道的HTTP动词，如GET、POST和PUT。
 
-Even if you do not know what these verbs are about, their names are pretty self-explanatory. Also, the clear separation of client and server code makes it easy for different teams to work on different parts (front end or back end) of applications.
+即使你不知道这些动词是干什么的，它们的名字也是不言自明的。另外，客户端和服务器代码的明确分离使得不同的团队很容易在应用程序的不同部分（前端或后端）工作。
 
-Since it's easy to understand and also to implement, REST principles can help increase your dev team's productivity. They are also important if you are going to release a public API for people to develop applications with.
+由于它很容易理解，也很容易实现，REST原则可以帮助提高你的开发团队的生产力。如果你要发布一个公共API供人们开发应用，它们也很重要。
 
-Many people know about REST and HTTP so it will be much easier for them to understand and use your API.
+许多人知道REST和HTTP，所以他们会更容易理解和使用你的API。
 
 ![How to Keep Your Developer Team Happy: Lead Dev New York 2019 | Arc Blog](https://ucarecdn.com/f9a4640d-ba7f-4f85-82eb-901a56362a9a/)
 
 Happy Developers
 
-### 2) REST Makes your Application More Scalable
 
-There are 2 main reasons why REST can help make your application more scalable:
+### 2) REST使你的应用程序更具可扩展性
 
-#### No State
+有2个主要的原因，REST可以帮助使你的应用程序更具可扩展性:
 
-As we will see in the next section (Principles of REST), one of the core principles of REST is that it's stateless on the server-side. Therefore each request will be processed independently from the previous ones.
+#### 无状态
 
-In applications with a server-side state or sessions, a session is stored for possibly every logged-in user. This session data can easily get bloated and start to occupy a lot of resources on the server.
+正如我们将在下一节（REST的原则）中看到的，REST的核心原则之一是它在服务器端是无状态的。因此，每个请求的处理都将独立于之前的请求。
 
-On the other hand, stateless servers only keep resources (memory) occupied when they are handling a request and they free it as soon as the request is processed.
+在具有服务器端状态或会话的应用程序中，可能为每个登录的用户存储一个会话。这种会话数据很容易变得臃肿，并开始占用服务器上的大量资源。
 
-Since the current trend in scalability is horizontal scaling (typically on the cloud), storing server-side sessions can also make it hard to scale your application because it creates some difficult problems.
+另一方面，无状态服务器只在处理请求时占用资源（内存），一旦请求被处理完毕，就会释放资源。
 
-For example, say that you have many servers that operate behind a load balancer. What will happen if the client gets to server1 in their first request (server1 now has the client's session) and, at a later time, due to the load on server1, the client gets to server2 which does not know about their previous session data which was stored on server1? Of course, this problem has solutions but it makes scalability more difficult.
+由于目前可扩展性的趋势是水平扩展（通常是在云上），存储服务器端的会话也会使你的应用程序难以扩展，因为它产生了一些困难的问题。
 
-#### Faster Data Interchange Format
+例如，假设你有许多服务器，它们在一个负载平衡器后面运行。如果客户在他们的第一个请求中到达了服务器1（服务器1现在拥有客户的会话），而在后来，由于服务器1的负载，客户到达了服务器2，而服务器2并不知道他们之前存储在服务器1上的会话数据，那么会发生什么？当然，这个问题有解决办法，但它使可扩展性更加困难。
 
-RESTful APIs typically use JSON as the data interchange format. JSON is much more compact and smaller in size compared to XML. It can also be parsed faster than XML. ([source](http://ijcsn.org/IJCSN-2014/3-4/JSON-vs-XML-A-Comparative-Performance-Analysis-of-Data-Exchange-Formats.pdf))
+#### 更快的数据交换格式
 
-While they mostly operate with JSON, also keep in mind that REST APIs are still able to respond with different formats by making use of the [Accept header.](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept)
+RESTful APIs通常使用JSON作为数据交换格式。与XML相比，JSON更紧凑，尺寸更小。它也可以比XML更快地被解析。([对比数据来源](http://ijcsn.org/IJCSN-2014/3-4/JSON-vs-XML-A-Comparative-Performance-Analysis-of-Data-Exchange-Formats.pdf))
 
-### 3) Caching is Easier with REST
+虽然他们大多使用JSON操作，但也要记住，REST APIs仍然能够通过使用 [Accept header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept)来响应不同的格式。
 
-Caching is a critical factor for the scalability and performance of a modern web application. A well-established cache mechanism (with the best hit-rates possible) can drastically decrease the average response time of your server.
+### 3) 使用REST缓存更容易
 
-REST aims to make caching easier. Since the server is stateless and each request can be processed individually, GET requests should usually return the same response regardless of previous ones and the session.
+缓存是现代网络应用程序可扩展性和性能的一个关键因素。一个完善的缓存机制（具有最佳的命中率）可以大大减少服务器的平均响应时间。
 
-This makes the GET requests easily cacheable and browsers usually treat them as such. We can also make our POST requests cacheable using **Cache-Control** and **Expires** headers.
+REST的目的是使缓存更容易。由于服务器是无状态的，每个请求都可以单独处理，GET请求通常应该返回相同的响应，而不考虑之前的请求和会话。
 
-### 4) REST is Flexibile
+这使得GET请求很容易被缓存，浏览器通常也会这样对待它们。我们也可以使用 **Cache-Control** 和 **Expires** 头来使我们的POST请求可以缓存。
 
-By flexibility, I mean that it's easy to modify and it's also able to answer many clients who can ask for different data types (XML, JSON, and so on).
+### 4) REST是灵活的
 
-The client can specify the type using the **Accept** header (as I mentioned earlier) and the REST API can return different responses depending on that.
+我所说的灵活性是指它很容易修改，而且它还能回答许多客户的要求，他们可以要求不同的数据类型（XML、JSON等）。
 
-Another mechanism that's worth mentioning is [HATEOAS](https://www.wikiwand.com/en/HATEOAS#:~:text=Hypermedia%20as%20the%20Engine%20of,provide%20information%20dynamically%20through%20hypermedia.). If you do not know the term, don't worry, it basically means: Return the related URLs in the server response for a particular resource.
+客户端可以使用**Accept**头来指定类型（正如我前面提到的），REST API可以根据这一点返回不同的响应。
 
-Take a look at this example from Wikipedia. The client requests account information with `account_number` from a bank API and gets this response:
+另一个值得一提的机制是 [HATEOAS](https://www.wikiwand.com/en/HATEOAS#:~:text=Hypermedia%20as%20the%20Engine%20of,provid%20information%20dynamically%20through%20hypermedia。)。如果你不知道这个词，不要担心，它的基本意思是。在服务器响应中返回某一特定资源的相关URLs。
 
-```
+看一下维基百科上的这个例子。客户端从银行的API中请求带有 `account_number` 的账户信息，得到这样的响应:
+
+```json
 
 {
     "account": {
@@ -92,22 +94,23 @@ Take a look at this example from Wikipedia. The client requests account informat
 }
 ```
 
-This server makes use of HATEOAS and returns the links for corresponding actions. This makes it very easy to explore the API and also makes it flexible by allowing the server to change the endpoints.
 
-Think of it like this: if the server weren't applying HATEOAS, the client would need to hardcode the endpoints such as "/accounts/:account-id/deposit". But if the server changes the URL to "/accounts/:account-id/depositMoney", the client code also needs to be changed.
+这个服务器利用HATEOAS并返回相应的行动链接。这使得探索API非常容易，同时也通过允许服务器改变端点而使其变得灵活。
 
-With the help of HATEOAS links, the client can check the link by parsing this JSON and easily make the request. If the endpoint changes, they will be provided with the new one, without the need to change the client code.
+可以这样想：如果服务器没有应用HATEOAS，客户就需要对端点进行硬编码，如 "/accounts/:account-id/deposit"。但如果服务器将URL改为 "/accounts/:account-id/depositMoney"，客户端的代码也需要改变。
 
-For more insights on this topic, you can check out [this](https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven) blog post from Roy Fielding himself.
+在HATEOAS链接的帮助下，客户端可以通过解析这个JSON来检查链接，并轻松提出请求。如果端点发生变化，他们将得到新的端点，而不需要改变客户端的代码。
 
-## Conclusion
+关于这个话题的更多见解，你可以查看 Roy Fielding 的[此](https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven)博文。
 
-In this article I have tried to express why I value REST and why I believe you should value it as well. I hope that after reading this, the reasons to apply REST standards are now more clear to you.
+## 总结
 
-This article can serve as a motivation to learn more about the topic. And I have some good news: I am planning to write about REST Best Practices and common mistakes in the near future.
+在这篇文章中，我试图表达我为什么重视REST，以及为什么我相信你也应该重视它。我希望在读完这篇文章后，你会更清楚应用REST标准的原因。
 
-If you are interested you can keep an eye on or subscribe to my [blog](http://erinc.io/). You can also take a look at my previous posts there :)
+这篇文章可以作为学习更多相关知识的动力。而且我有个好消息：我计划在不久的将来写关于REST最佳实践和常见错误的文章。
 
-If you have any questions or want to discuss the topic further, you can feel free to contact me.
+如果你有兴趣，你可以继续关注或订阅我的[博客](http://erinc.io/)。你也可以在那里看一下我以前的文章:)
 
-Have a Happy New Year and thank you for reading. :)
+如果你有任何问题或想进一步讨论这个话题，你可以随时联系我。
+
+祝你新年快乐，感谢你的阅读。 :)

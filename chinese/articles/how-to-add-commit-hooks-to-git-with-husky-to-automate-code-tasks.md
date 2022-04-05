@@ -1,105 +1,102 @@
-> -  原文地址：[How to Add Commit Hooks to Git with Husky to Automate Code Tasks](https://www.freecodecamp.org/news/how-to-add-commit-hooks-to-git-with-husky-to-automate-code-tasks/)
-> -  原文作者：[
-                    
-                        Colby Fayock
-                    
-                ](https://www.freecodecamp.org/news/author/colbyfayock/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Add Commit Hooks to Git with Husky to Automate Code Tasks](https://www.freecodecamp.org/news/how-to-add-commit-hooks-to-git-with-husky-to-automate-code-tasks/)
+> - 原文作者：[Colby Fayock](https://www.freecodecamp.org/news/author/colbyfayock/)
+>
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Add Commit Hooks to Git with Husky to Automate Code Tasks](https://www.freecodecamp.org/news/content/images/size/w2000/2020/10/husky.jpg)
 
-There are a lot of tools to automate our code tasks. We can check for syntax issues with ESLint and format our code with Prettier.
+有很多工具可以使我们的代码任务自动化。我们可以用ESLint检查语法问题，用Prettier格式化我们的代码。
 
-But not everyone on the team will remember to run those commands every time they commit. How can we use Husky to add Git hooks to run them for us?
+但并不是团队中的每个人都会记得每次提交时都要运行这些命令。我们如何使用Husky来添加Git钩子来为我们运行这些命令？
 
--   [What are Git Hooks?](#what-are-git-hooks)
--   [What is Husky?](#what-is-husky)
--   [What are we going to build?](#what-are-we-going-to-build)
--   [Step 0: Setting up a new project](#step-0-setting-up-a-new-project)
--   [Step 1: Installing Husky to a project](#step-1-installing-husky-to-a-project)
--   [Step 2: Configuring Husky to run Git hooks](#step-2-configuring-husky-to-run-git-hooks)
--   [Step 3: Using Husky to format code with Prettier](#step-3-using-husky-to-format-code-with-prettier)
+- [什么是 Git Hooks?](./#what-are-git-hooks)
+- [什么是 Husky?](./#what-is-husky)
+- [我们要构建什么？](./#what-are-we-going-to-build)
+- [第0步：建立一个新的项目](./#step-0-setting-up-a-new-project)
+- [第1步：将 Husky 安装到一个项目上](./#step-1-installing-husky-to-a-project)
+- [第2步：配置Husky以运行Git钩子](./#step-2-configuring-husky-to-run-git-hooks)
+- [第3步：使用Husky用Prettier格式化代码](./#step-3-using-husky-to-format-code-with-prettier)
 
-## What are Git Hooks?
+<h2 id="what-are-git-hooks?>什么是 Git Hooks?</h2>
 
-[Git hooks](https://git-scm.com/docs/githooks) are scripts that you can set up to [run at certain events](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) in the Git lifecycle. These events include different stages of a commit, like before a commit (pre-commit) and after a commit (post-commit).
+[Git hooks](https://git-scm.com/docs/githooks) 是你可以设置的脚本，以便在Git生命周期中 [在某些事件中运行](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)。这些事件包括提交的不同阶段，如提交前（pre-commit）和提交后（post-commit）。
 
-These are useful in that they allow developers to run custom code tasks or even enforce standards by automating other scripts to run those tasks.
+这些都很有用，因为它们允许开发者运行自定义的代码任务，甚至通过自动化其他脚本来执行这些任务来执行标准。
 
-## What is Husky?
+<h2 id="what-is-husky?">什么是 Husky?</h2>
 
-[Husky](https://github.com/typicode/husky) is a tool that allows us to easily wrangle Git hooks and run the scripts we want at those stages.
+[Husky](https://github.com/typicode/husky)是一个工具，它允许我们轻松地处理Git Hooks 并在提交代码时运行我们想要的脚本。
 
-It works by including an object right within our `package.json` file that configures Husky to run the scripts we specify. After that, Husky handles managing at which point in the Git lifecycle our scripts will run.
+> 它的工作原理是在我们的 `package.json` 文件中加入一个对象，配置 Husky 来运行我们指定的脚本。之后，Husky会管理我们的脚本将在Git生命周期的哪个阶段运行。
 
-## What are we going to build?
+<h2 id="what-are-we-going-to-build?">我们要构建什么？</h2>
 
-We’re going to set up a simple project that we can use to test out Git hooks.
+我们将建立一个简单的项目，用来测试Git Hooks。
 
-While you should be able to follow along with any project that you’re working with, I’m going to use [Next.js](https://nextjs.org/) as the starting point for this project, simply for the fact that we can run a single command to get a project started.
+虽然你应该能够跟上你正在使用的任何项目，但我将使用 [Next.js](https://nextjs.org/) 作为这个项目的起点，只是因为我们可以运行一个命令来启动项目。
 
-One consideration about following along with this project, though, is that we’ll use [Prettier](https://prettier.io/) as an example of what you can do with Git hooks.
+关于这个项目，有一点需要注意的是，我们将使用 [Prettier](https://prettier.io/) 作为例子，说明你可以用 Git Hooks 做什么。
 
-Prettier is a tool that will automatically format our code for us, which if you’re not expecting that to happen, can cause a lot of stress. Following along with me using the Next.js project will allow you to test this out without making any unintentional changes.
+Prettier 是一个会自动为我们格式化代码的工具，如果你不期望它发生，就会造成很大的压力。跟随我使用 Next.js 项目，可以让你在不做任何无意改动的情况下测试一下。
 
-As for testing the Git hooks, we’ll start by adding a simple command line statement to see Husky work. But we’ll also test out adding Prettier, which will automatically format our code for us.
+至于测试Git Hooks，我们将从添加一个简单的命令行语句开始，看看 Husky 的工作。但我们还将测试添加Prettier，它将自动为我们格式化我们的代码。
 
-Finally, at the time of writing this, Husky released an [v5 Alpha](https://typicode.github.io/husky/#/) version of their Git hook solution. Given it’s still just an Alpha version, we’re going to move forward with [v4](https://github.com/typicode/husky/tree/v4.3.0), which allows us to easily install Husky with npm.
+最后，在写这篇文章的时候，Husky 发布了一个 [v5 Alpha](https://typicode.github.io/husky/#/) 版本的Git Hooks 解决方案。鉴于它还只是一个Alpha版本，我们将继续使用[v4](https://github.com/typicode/husky/tree/v4.3.0)，它允许我们用npm轻松安装 Husky 。
 
-## Step 0: How to set up a new project
+<h2 id="step-0-setting-up-a-new-project">第0步：建立一个新的项目</h2>
 
-As I mentioned, you can really follow the same steps here with any project that’s managed with a `package.json` file.
+正如我所提到的，你可以按照同样的步骤来处理任何用`package.json`文件管理的项目。
 
-Next.js is absolutely overkill for this walkthrough, but the goal is to minimize the steps for getting set up to actually work with Husky.
+Next.js对于本攻略来说绝对是多余的，但我们的目标是尽量减少实际使用Husky时的设置步骤。
 
-To get started with Next.js, navigate to the directory you want to start your project in and run the following:
+要开始使用Next.js，请进入到你想启动项目的目录，并运行以下程序。:
 
-```
+```shell
 yarn create next-app my-husky-project
 # or
 npx create-next-app my-husky-project
 ```
 
-_Note: feel free to replace `my-husky-project` to whatever you’d like to name your directory._
+_注意：请随意将`my-husky-project`替换为你想命名的目录。_
 
-This will create a new folder, create a new Next.js project, and install all the dependencies.
+这将创建一个新的文件夹，创建一个新的Next.js项目，并安装所有的依赖项。
 
 ![create-next-app](https://www.freecodecamp.org/news/content/images/2020/10/create-next-app.jpg)
 
-Once it’s done, navigate to that new folder, and we should be ready to go!
+一旦完成，进入到那个新的文件夹，我们就应该准备好了。
 
 [Follow along with the commit](https://github.com/colbyfayock/my-husky-project/commit/9e0b39c8f34c2755e074a32ef9de8d4047b68f67).
 
-## Step 1: How to install Husky to a project
+<h2 id="step-1-installing-husky-to-a-project">第1步：将 Husky 安装到一个项目上</h2>
 
-To install Husky, we can use yarn or npm.
+要安装Husky，我们可以使用 yarn 或 npm。
 
-```
+```shell
 yarn add husky
 # or
 npm install husky
 ```
 
-_Note: if installing Husky at this point installs v5, that means v5 has been officially released. Please see the [updated Husky documentation](https://typicode.github.io/husky/#/) or you can install the latest v4 version by specifying husky@4.3.0 (or whatever the latest version is) when installing._
+_注意：如果此时安装 Husky 会安装v5 版，这意味着v5已经正式发布。请参阅 [更新 Husky 文档](https://typicode.github.io/husky/#/)，或者你可以在安装时指定husky@4.3.0（或任何最新的版本）来安装最新的v4版本。_
 
-Once the package is finished installing, we should be ready to go with Husky.
+一旦软件包安装完毕，我们就应该准备好使用 Husky。
 
-[Follow along with the commit](https://github.com/colbyfayock/my-husky-project/commit/720728cd595d41c9197640bd4c48e9133bd7d956).
+[伴随着提交的过程](https://github.com/colbyfayock/my-husky-project/commit/720728cd595d41c9197640bd4c48e9133bd7d956).
 
-## Step 2: How to configure Husky to run Git hooks
+<h2 id="step-2-configuring-husky-to-run-git-hooks">第2步：配置Husky以运行Git钩子</h2>
 
-Next, we’re going to set up Husky so we can use it for our Git hooks.
+接下来，我们要设置Husky，这样我们就可以使用它作为我们的Git hooks。
 
-Inside of our `package.json` file, create a new property called `husky` with an empty object.
+在我们的`package.json`文件中，创建一个名为`husky`的新属性，并设置一个空对象。
 
 ```json
 "husky": {},
 ```
 
-You can add this really wherever you want in the `package.json` file, but I’m going to add it right below the `scripts`  property so I can more easily manage them together.
+你可以在 `package.json` 文件中的任何地方添加这个属性，但我要把它添加到 `scripts` 属性的下面，这样我可以更容易地把它们放在一起管理。
 
-Inside of that, we want to add another property called `hooks` that also specifies an empty object:
+在这里面，我们要添加另一个叫做 `hooks` 的属性，它也指定了一个空对象:
 
 ```json
 "husky": {
@@ -107,108 +104,108 @@ Inside of that, we want to add another property called `hooks` that also specifi
 },
 ```
 
-This is where we’re going to add our Git hooks. Husky supports pretty much [all Git hooks defined by Git](https://git-scm.com/docs/githooks), so we can be as flexible we would like within our Git event flow.
+这就是我们要添加Git hooks 的地方。Husky 几乎支持[Git定义的所有Git钩子](https://git-scm.com/docs/githooks)，所以我们可以在Git事件流程中尽可能灵活地使用。
 
-To test this out, I created [a new branch](https://github.com/colbyfayock/my-husky-project/tree/main+test) where I literally added every Git hook from that page including a script that simply writes to the terminal `[Husky] event name`.
+为了测试这一点，我创建了 [一个新的分支](https://github.com/colbyfayock/my-husky-project/tree/main+test)，在那里我添加了该页面上的所有Git hooks，包括一个简单地写入终端 `[Husky] 事件名称` 的脚本。
 
-_Note: don’t feel like you need to do this unless you’re curious. The goal is to be able to show you with my example how it works._
+_注意：不要觉得你需要这样做，除非你很好奇。我们的目标是通过我的例子向你展示它是如何工作的。_
 
+```json
+"husky": {
+  "hooks": {
+    "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
+    "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
+    "post-applypatch": "echo \"[Husky] post-applypatch\"",
+    "pre-commit": "echo \"[Husky] pre-commit\"",
 ```
-“husky”: {
-  “hooks”: {
-    “applypatch-msg”: “echo \”[Husky] applypatch-msg\””,
-    “pre-applypatch”: “echo \”[Husky] pre-applypatch\””,
-    “post-applypatch”: “echo \”[Husky] post-applypatch\””,
-    “pre-commit”: “echo \”[Husky] pre-commit\””,
-```
 
-What this will do is tell Husky that at every single stage where we’re permitted to hook into Git, tell us!
+这样做的目的是告诉Husky，在每一个Git hooks 的阶段，都要告诉我们!
 
-When I commit that change, we can immediately see that Husky fires off some of our scripts.
+当我提交这个改动时，我们可以立即看到 Husky 启动了我们的一些脚本。
 
 ![husky-commit-hooks](https://www.freecodecamp.org/news/content/images/2020/10/husky-commit-hooks.jpg)
 
-These are all of the events that Git allows us to hook into that happen during the commit process.
+这些都是Git允许我们在提交过程中钩住的所有事件。
 
-And similarly, if I push those changes out to Github, I can see that the push process runs the `pre-push` hook!
+同样，如果我把这些改动推送到Github，我可以看到推送过程中运行了`pre-push` hook!
 
 ![husky-push-hooks](https://www.freecodecamp.org/news/content/images/2020/10/husky-push-hooks.jpg)
 
-You may never use most of the hooks that Husky and Git provide (we only saw a few between those two commands).
+你可能永远不会用到 Husky 和 Git 提供的大部分 hooks（我们在这两个命令之间只看到了几个）。
 
-But it’s awesome to be able to see how powerful this can be, whether it’s running code that formats our code, prevents secret access keys from being committed, or really anything else that can help automate important tasks to your workflow.
+但能够看到这一点是非常棒的，无论是运行格式化我们的代码、防止秘密访问密钥被提交的代码，还是其他真正能够帮助你的工作流程自动化的重要任务。
 
-We can now see that we can configure Husky by specifying the configuration and the hooks right in our `package.json`.
+我们现在可以看到，我们可以通过在`package.json`中指定配置和挂钩来配置Husky。
 
 [Follow along with the commit](https://github.com/colbyfayock/my-husky-project/commit/108583a7e96564baf0fac994eafa6cf98d65d03e).
 
-_Note: If you want to check out my branch that includes every Git hook to test with, [you can find it on Github](https://github.com/colbyfayock/my-husky-project/tree/main+test)._
+_注意：如果你想查看我的分支，其中包括每一个用于测试的Git挂钩，[你可以在Github上找到它](https://github.com/colbyfayock/my-husky-project/tree/main+test)。_
 
-## Step 3: How to use Husky to format code with Prettier
+<h2 id="step-3-using-husky-to-format-code-with-prettier">第3步：使用Husky用Prettier格式化代码</h2>
 
-Finally, for a real-world use case, we’re going to test out using Prettier to automatically format our code.
+最后，对于一个真实世界的用例，我们要测试一下使用Prettier来自动格式化我们的代码。
 
-Prettier is an opinionated code formatting tool that allows you to easily clean up your code to make it look like a single person wrote it.
+Prettier是一个有固定风格的代码格式化工具，它允许你轻松地清理你的代码，使它看起来像一个人写的。
 
-Why are tools like Prettier important? When working through code, especially with a team, it’s important to maintain consistency so everyone knows what to expect. It will help prevent arguing over a semi-colon in a code review, but it will also help catch syntax errors and prevent bugs.
+为什么像Prettier这样的工具很重要？当通过代码工作时，特别是与一个团队一起工作时，保持一致性是很重要的，这样每个人都知道应该期待什么。这将有助于防止在代码审查中为一个分号争论不休，但也有助于发现语法错误和防止错误。
 
-_Warning: running Prettier will automatically format all of your code. While we’re going to test this out before committing the changes, once you apply this as a Git Hook, it will automate this process._
+_警告：运行 Prettier 会自动格式化你所有的代码。虽然我们要在提交修改前进行测试，但一旦你把它作为Git Hook应用，它就会自动完成这个过程。_
 
-To get started with Prettier, let’s install it with our package manager:
+为了开始使用 Prettier，让我们用我们的软件包管理器安装它。:
 
-```
+```shell
 yarn add prettier -D
 # or
 npm install prettier --save-dev
 ```
 
-_Note: we’re installing Prettier as a `devDependency` as our application doesn’t need this to run._
+注意：我们将Prettier作为一个 `devDependency` 来安装，因为我们的应用程序不需要它来运行。
 
-Next, we can add a new script in our `package.json` that will make it easier to run Prettier to test this out.
+接下来，我们可以在我们的 `package.json` 中添加一个新的脚本，这将使我们更容易运行Prettier来进行测试。
 
-Inside the `scripts` property, add:
+在`scripts`属性里面，添加:
 
 ```json
 "lint": "prettier --check ."
 ```
 
-For this first test, we’re going to run it as a “check” which will allow us to see which files would change.
+对于这第一个测试，我们将以 "检查 "的方式运行，这将允许我们看到哪些文件会发生变化。
 
-Run the following:
+运行以下内容:
 
-```
+```shell
 yarn lint
 # or 
 npm run lint
 ```
 
-And once we do, we can see that Prettier is telling us that would change the files listed.
+而一旦我们这样做，我们可以看到，Prettier告诉我们，会改变列出的文件。
 
 ![prettier-check](https://www.freecodecamp.org/news/content/images/2020/10/prettier-check.jpg)
 
-At this point, our code will remain unchanged. But if we want to run Prettier for real to make those changes, we can first add an additional script:
+在这一点上，我们的代码将保持不变。但如果我们想真正运行Prettier来进行这些修改，我们可以先添加一个额外的脚本:
 
 ```json
 "format": "prettier --write ."
 ```
 
-And if we run that script, it will update all of those files to format the code to Prettier’s specification.
+而如果我们运行该脚本，它将更新所有这些文件，使代码的格式符合Prettier的规范。
 
-_Warning: just another note, running Prettier to write the changes will make changes in your files. These are all code-style changes that shouldn’t impact how the code runs, but how the code looks. Before running format, you should save any changes by committing with Git so that you can easily revert the changes if you’re not happy with them._
+_警告：只是另一个注意，运行Prettier来写修改，将在你的文件中进行修改。这些都是代码风格的改变，不应该影响代码的运行，而是影响代码的外观。在运行格式之前，你应该用Git提交来保存任何修改，这样你就可以在不满意的情况下轻松地恢复这些修改。
 
-You can now run the script with:
+现在你可以用以下方式运行脚本:
 
-```
+```shell
 yarn format
 ```
 
-And we can see that Prettier updated our files!
+而我们可以看到，Prettier 更新了我们的文件!
 
 ![prettier-write](https://www.freecodecamp.org/news/content/images/2020/10/prettier-write.jpg)
 
-Now the part that’s relevant to this walkthrough: we can add this as a Git hook. This way, when someone tries to commit code, Prettier is run before the code is saved. This means that we’ll always keep code consistent with Prettier’s formatting style.
+现在是与本攻略相关的部分：我们可以把它作为一个Git hook加入。这样，当有人试图提交代码时，Prettier 会在代码被保存之前运行。这意味着我们将始终保持代码与Prettier的格式化风格一致。
 
-Inside our Husky hooks configuration, let’s add:
+在我们的Husky hook 配置里面，让我们添加:
 
 ```json
 "husky": {
@@ -218,37 +215,37 @@ Inside our Husky hooks configuration, let’s add:
 },
 ```
 
-If you notice in our pre-commit hook, we’re also adding `git add -A .`.
+如果你注意到在我们的预提交 hook，我们也加入了`git add -A .`。
 
-When Husky runs, it simply runs the script provided. When running our Prettier command, we’re only formatting the code, but we never save those changes as part of the process. So we use `git add` to store all of those changes and include them in the commit.
+当Husky运行时，它只是运行提供的脚本。当运行我们的 Prettier 命令时，我们只是对代码进行格式化，但我们从未将这些修改作为过程的一部分来保存。所以我们使用`git add`来存储所有这些修改，并将其纳入提交。
 
 To test this out, I reverted the changes to all of the files that were formatted before. If you’re following along with the same project, you can run:
 
-```
+```shell
 git checkout pages
 ```
 
-Which will reset all of the changes in `pages` to the last commit.
+这将重置 `pages` 中的所有修改，使之成为最后一次提交。
 
-Now, let’s try to add all of our files with Git and commit the changes.
+现在，让我们试着用Git添加所有的文件并提交修改。
 
 ![git-commit-husky-precommit-prettier](https://www.freecodecamp.org/news/content/images/2020/10/git-commit-husky-precommit-prettier.jpg)
 
-And once we run our commit command, we can see that the Husky pre-commit hook kicks in already and formats our code!
+一旦我们运行提交命令，我们可以看到 Husky 的预提交 hook 已经启动，并且格式化了我们的代码。
 
-[Follow along with the commit](https://github.com/colbyfayock/my-husky-project/commit/315112d062a791f20eda11f9c608c5fa794ba73e).
+[跟随提交](https://github.com/colbyfayock/my-husky-project/commit/315112d062a791f20eda11f9c608c5fa794ba73e).
 
-## What can I do next?
+## 我接下来能做什么？
 
-### Use lint-staged to only run formatting on changed files
+### 使用linet-staged，只对更改过的文件运行格式化。
 
-We’re using Prettier right in our pre-commit hook and specifying `.` which means it’s going to run on all files every time.
+我们在预提交 hook 中使用Prettier，并指定`.`，这意味着它每次都会在所有文件上运行。
 
-We can use a tool called [lint-staged](https://github.com/okonet/lint-staged), which allows us to still run our Git hooks with Husky, but it will only run on files that are staged.
+我们可以使用一个叫做[lint-staged](https://github.com/okonet/lint-staged)的工具，它允许我们仍然用Husky来运行我们的Git钩子，但它只会运行在已经提交的文件上。
 
-For instance, if we wanted to do this with Husky and Prettier, our configuration might look like:
+例如，如果我们想用Husky和Prettier来做这件事，我们的配置:
 
-```
+```json
 "husky": {
   "hooks": {
     "pre-commit": "lint-staged"
@@ -259,25 +256,25 @@ For instance, if we wanted to do this with Husky and Prettier, our configuration
 },
 ```
 
-As part of how lint-staged runs, it will attach the changed files to the end of our Prettier statement automatically for us.
+作为 `lint-staged` 运行方式的一部分，它将自动为我们把更改的文件附加到我们的 Prettier 语句的末尾。
 
-You’ll also notice we didn't include `git add`. lint-staged will also add any changes to Git for us automatically.
+你也会注意到我们没有包括`git add`，lint-staged也会为我们自动添加任何变化到Git上。
 
-### Set up a Prettier config to customize formatting rules
+### 设置一个Prettier配置来定制格式化规则
 
-Prettier is very opinionated. There are some things I personally don’t prefer and you might feel the same.
+Prettier 是非常固定风格的 。有一些东西我个人并不喜欢，你可能也有同样的感觉。
 
-Luckily, Prettier allows you to set up a configuration file that can override some of those files to make your code just the way you and your team want it.
+幸运的是，Prettier允许你设置一个配置文件，可以覆盖其中的一些文件，使你的代码只是你和你的团队想要的方式。
 
-### Tell Prettier to ignore files with .prettierignore
+### 告诉Prettier用.prettierignore来忽略文件
 
-You also probably don’t want Prettier running on “all the things” (maybe you do).
+你也可能不希望Prettier运行在 **所有的东西** 上（也许你想）。
 
-Prettier allows you to set up a `.prettierignore`  file right inside of the root of the project next to `package.json`, similar to `.gitignore`, that allows you to tell Prettier what files it should not run on.
+Prettier允许你在项目根目录下的`package.json`旁边设置一个`.prettierignore`文件，类似于`.gitignore`，它允许你告诉Prettier不应该处理哪些文件。
 
- [![Follow me for more Javascript, UX, and other interesting things!](https://res.cloudinary.com/fay/image/upload/w_2000,h_400,c_fill,q_auto,f_auto/w_1020,c_fit,co_rgb:007079,g_north_west,x_635,y_70,l_text:Source%20Sans%20Pro_64_line_spacing_-10_bold:Colby%20Fayock/w_1020,c_fit,co_rgb:383f43,g_west,x_635,y_6,l_text:Source%20Sans%20Pro_44_line_spacing_0_normal:Follow%20me%20for%20more%20JavaScript%252c%20UX%252c%20and%20other%20interesting%20things!/w_1020,c_fit,co_rgb:007079,g_south_west,x_635,y_70,l_text:Source%20Sans%20Pro_40_line_spacing_-10_semibold:colbyfayock.com/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_68,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_145,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_222,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_295,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/v1/social-footer-card)](https://twitter.com/colbyfayock) 
+ [![Follow me for more Javascript, UX, and other interesting things!](https://res.cloudinary.com/fay/image/upload/w_2000,h_400,c_fill,q_auto,f_auto/w_1020,c_fit,co_rgb:007079,g_north_west,x_635,y_70,l_text:Source%20Sans%20Pro_64_line_spacing_-10_bold:Colby%20Fayock/w_1020,c_fit,co_rgb:383f43,g_west,x_635,y_6,l_text:Source%20Sans%20Pro_44_line_spacing_0_normal:Follow%20me%20for%20more%20JavaScript%252c%20UX%252c%20and%20other%20interesting%20things!/w_1020,c_fit,co_rgb:007079,g_south_west,x_635,y_70,l_text:Source%20Sans%20Pro_40_line_spacing_-10_semibold:colbyfayock.com/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_68,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_145,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_222,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/w_300,c_fit,co_rgb:7c848a,g_north_west,x_1725,y_295,l_text:Source%20Sans%20Pro_40_line_spacing_-10_normal:colbyfayock/v1/social-footer-card)](https://twitter.com/colbyfayock)
 
--   [? Follow Me On Twitter](https://twitter.com/colbyfayock)
--   [? Subscribe To My Youtube](https://youtube.com/colbyfayock)
--   [✉️ Sign Up For My Newsletter](https://www.colbyfayock.com/newsletter/)
--   [? Sponsor Me](https://github.com/sponsors/colbyfayock)
+- [在Twitter 关注我](https://twitter.com/colbyfayock)
+- [订阅我的 Youtube 频道](https://youtube.com/colbyfayock)
+- [✉️ 注册订阅我的 Newsletter](https://www.colbyfayock.com/newsletter/)
+- [赞助我](https://github.com/sponsors/colbyfayock)

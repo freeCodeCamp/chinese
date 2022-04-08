@@ -165,17 +165,17 @@ Posix对shell的作用与ECMAScript对JavaScript的作用非常相似。它是�
 
 因此，你不仅有许多shell和终端（terminal）选项可供选择--你还为每个shell和终端有许多配置选项。
 
-如果你刚开始使用，所有这些信息可能会让你感到有点不知所措。但只要知道有许多选项可用，而且每个选项也可以被定制。这就是了。
+如果你刚开始使用，所有这些信息可能会让你感到有点不知所措。但只要知道有许多选项可用，而且每个选项也可以被定制。
 
 # Most common and useful commands to use
 
-Now that we have a foundation of how the CLI works, let's dive into the most useful commands you can start to use for your daily tasks.
+现在我们对CLI的工作方式有了一个基础，让我们深入了解一下最有用的命令，你可以开始在你的日常工作中使用。
 
-Keep in mind that these examples will be based on my current configuration (Bash on a Linux OS). But most commands should apply to most configurations anyway.
+请记住，这些例子将基于我目前的配置（Linux操作系统上的Bash）。但无论如何，大多数命令应该适用于大多数配置。
 
-- **Echo** prints in the terminal whatever parameter we pass it.
+- **Echo**在终端打印出我们传递给它的任何参数。
 
-```
+```shell
 echo Hello freeCodeCamp! // Output: Hello freeCodeCamp!
 ```
 

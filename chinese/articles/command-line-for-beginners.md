@@ -431,16 +431,16 @@ git checkout newBranch // output:
 Switched to branch 'newBranch'
 ```
 
-- **git pull** pulls (downloads) the code from your remote repository and combines it with your local repo. This is particularly useful when working in teams, when many developers are working on the same code base. In this case each developer periodically pulls from the remote repo in order to work in a code base that includes the changes done by all the other devs.
+- **git pull**从你的远程仓库拉取（下载）代码，并将其与你的本地仓库相结合（combines）。这在团队工作中特别有用，当许多开发人员在同一个代码库中工作时。在这种情况下，每个开发者都会定期从远程版本库拉取代码，以便在一个包括所有其他开发者所做修改的代码库中工作。
 
-If there's new code in your remote repo, the command will return the actual files that were modified in the pull. If not, we get `Already up to date`.
+如果你的远程版本中有新的代码，该命令将返回在拉取中被修改的实际文件。如果没有，我们会得到 _`Already up to date（已经更新)`_。
 
 ```shell
 git pull // output:
 Already up to date.
 ```
 
-- **git diff** allows you to view the differences between the branch you're currently in and another.
+- **git diff**允许你查看你当前所在的分支和另一个分支之间的差异。
 
 ```shell
 git diff newBranch // output:
@@ -449,9 +449,9 @@ deleted file mode 100644
 index e69de29..0000000
 ```
 
-As a side comment, when comparing differences between branches or repos, ussually visual tools like [Meld](https://meldmerge.org/) are used. It's not that you can't visualize it directly in the terminal, but this tools are greate for a clearer visualization.
+顺便说一下，当比较不同分支或版本之间的差异时，通常会使用 [Meld](https://meldmerge.org/) 这样的可视化工具。并不是说你不能在终端中直接看到它，但这个工具对于更清晰的可视化是非常有用的。
 
-- **git merge** merges (combines) the branch you're currently in with another. Keep in mind the changes will be incorporated only to the branch you're currently in, not to the other one.
+- **git merge**将你当前所在的分支与另一个分支合并（合并）。请记住，所做的修改将只并入你当前所在的分支，而不是另一个分支。
 
 ```shell
 git merge newBranch // output:
@@ -462,9 +462,9 @@ Fast-forward
  create mode 100644 newFileInNewBranch.js
 ```
 
-- **git log** lists all previous commits you've done in the repo.
+- **git log**列出了你在 repo 中以前做过的所有提交。
 
-```
+```shell
 git log // output:
 commit 3a3d62fe7cea7c09403c048e971a5172459d0948 (HEAD -> main, tag: TestTag, origin/main, newBranch)
 Author: German Cocca <german.cocca@avature.net>
@@ -477,9 +477,9 @@ Author: German Cocca <german.cocca@avature.net>
     ...
 ```
 
-- The **\--help** flag will show you information about a given command, exactly the same way it works with bash.
+- **--help/**标志会显示关于某个命令的信息，与bash的工作方式完全相同。
 
-```
+```shell
 git diff --help // output:
 GIT-DIFF(1)                       Git Manual                       GIT-DIFF(1)
 
@@ -494,46 +494,45 @@ SYNOPSIS
 
 # Our first script
 
-Now we're ready to get to the truly fun and awesome part of the command line, scripting!
+现在我们准备进入命令行中真正有趣和很棒的部分，即脚本!
 
-As I mentioned previously, a script is nothing more than a series of commands or instructions that we can execute at any given time. To explain how we can code one, we'll use a simple example that will allow us to create a github repo by running a single command. ;)
+正如我之前提到的，一个脚本只不过是一系列我们可以在任何时候执行的命令或指令。为了解释我们如何编写一个脚本，我们将使用一个简单的例子，让我们通过运行一个命令来创建一个github repo。 ;)
 
-- First thing to do is create a `.sh` file. You can put it wherever want. I called mine `newGhRepo.sh`.
+- 首先要做的是创建一个`.sh`文件。你可以把它放在任何地方。我把我的文件称为 `newGhRepo.sh`。
 
-- Then open it on your text/code editor of choice.
+- 然后在你选择的文本/代码编辑器中打开它。
 
-- On our first line, we'll write the following: `#! /bin/sh`
+- 在我们的第一行，我们将写下以下内容。`#! /bin/sh`。
 
-This is called a **shebang**, and its function is to declare what shell is going to run this script.
+这被称为**shebang**，它的作用是声明什么shell来运行这个脚本。
 
-Remember previously when we mentioned that we can use a given shell for general interaction and another given shell for executing a script? Well, the shebang is the instruction that dictates what shell runs the script.
+还记得我们以前提到过，我们可以用一个给定的shell来进行一般的交互，而用另一个给定的shell来执行一个脚本吗？那么，shebang就是决定由哪个shell来运行脚本的指令。
 
-As mentioned too, we're using a "stripped down" shell (also known as sh shells) to run the scripts as they're more efficient (though the difference might be unnoticeable to be honest, It's just a personal preference). In my computer I have dash as my sh shell.
+如前所述，我们使用一个 "精简的 "shell（也称为sh shells）来运行脚本，因为它们更有效率（尽管说实话，这种差别可能是难以察觉的，这只是一种个人偏好）。在我的电脑中，我把dash作为我的sh shell。
 
-If we wanted this script to run with bash the shebang would be `#! /bin/bash`
+如果我们想让这个脚本用bash运行，那么shebang应该是`#! /bin/bash`。
 
-- Our next line will be `repoName=$1`
+- 我们的下一行将是`repoName=$1`。
 
-Here we're declaring a **variable** called repoName, and assigning it to the value of the first parameter the script receives.
+这里我们声明了一个名为 **repoName** 的变量，并将其分配给脚本收到的第一个参数的值。
 
-A **parameter** is a set of characters that is entered after the script/comand. Like with the `cd` command, we need to specify a directory parameter in order to change directory (ie: `cd testFolder`).
+一个**参数**是一组在脚本/命令后面输入的字符。就像 `cd` 命令一样，我们需要指定一个目录参数，以便改变目录（即：`cd testFolder`）。
 
-A way we can identify parameters within a script is by using dollar sign and the order in which that parameter is expected.
+我们可以通过使用 `$` 符号和预期参数的顺序来识别脚本中的参数。
 
-If I'm expecting more than one parameter I could write:
+如果我期望有一个以上的参数，我可以这样写:
 
-```
+```shell
 paramOne=$1
 paramTwo=$2
 paramThree=$3
 ...
 ```
 
-- So we're expecting the repository name as parameter of our script. But what happens if the user forgets to enter it? We need to plan for that so next we're going to code a **conditional** that keeps asking the user to enter the repo name until that parameter is received.
+- 所以，我们希望将代码库的名称作为我们脚本的参数。但如果用户忘记输入会怎样？我们需要想一下，所以接下来我们要编写一个**条件**，不断要求用户输入版本库名称，直到收到该参数。
+我们可以这样做:
 
-We can do that like this:
-
-```
+```shell
 while [ -z "$repoName" ]
 do
    echo 'Provide a repository name'
@@ -541,40 +540,40 @@ do
 done
 ```
 
-What we're doing here is:
+我们可以这样做:
 
-1. While the repoName variable is not assigned (`while [ -z "$repoName" ]`)
-2. Write to the console this message (`echo 'Provide a repository name'`)
-3. Then read whatever input the user provides and assign the input to the repoName variable (`read -r -p $'Repository name:' repoName`)
+1. 当repoName变量未被分配时（`while [ -z "$repoName" ]`）
+2. 将此信息打印到控制台（`echo '提供一个版本库名称'`）
+3. 然后读取用户提供的任何输入，并将输入分配给 `repoName` 变量 (`read -r -p $'Repository name:' repoName`)
 
-- Now that we have our repo name in place, we can create our local Git repo like this:
+- 现在我们有了我们的 repo 名称，我们可以像这样创建我们的本地 Git repo:
 
-```
+```shell
 echo "# $repoName" >> README.md
 git init
 git add .
 git commit -m "First commit"
 ```
 
-This is creating a readme file and writting a single line with the repo name (`echo "# $repoName" >> README.md`) and then initializing the git repo and making a first commit.
+这就是创建一个readme文件，并在第一行写上 repo名称（`echo "# $repoName" >> README.md`），然后初始化git repo并做第一次提交。
 
-- Then it's time to upload our repo to github. To do that we're going to take advantage of the [github API](https://docs.github.com/en/rest/reference/repos) in the following command:
+- 然后，是时候把我们的 repo 上传到 github 了。要做到这一点，我们将利用[github API](https://docs.github.com/en/rest/reference/repos)的优势，使用以下命令:
 
 `curl -u coccagerman https://api.github.com/user/repos -d '{"name": "'"$repoName"'", "private":false}'`
 
-**curl** is a command to transfer data from or to a server, using one of the many supported protocols.
+**curl** 是一个从服务器传输数据的命令，使用许多支持的协议之一。
 
-Next we're using the `-u` flag to declare the user we're creating the repo for (`-u coccagerman`).
+接下来我们使用`-u`标志来声明我们为之创建的用户（`-u coccagerman`）。
 
-Next comes the endpoint provided by the GitHub API (`https://api.github.com/user/repos`)
+接下来是GitHub API提供的 endpoint(`https://api.github.com/user/repos`)
 
-And last we're using the `-d` flag to pass parameters to this command. In this case we're indicating the repository name (for which we're using our `repoName` variable) and setting `private` option to `false`, since we want our repo to be puiblic.
+最后，我们使用`-d`标志来传递参数给这个命令。在这种情况下，我们要指出版本库的名称（为此我们使用`repoName`变量），并将`private`选项设置为`false`，因为我们希望我们的版本库是公开的。
 
-Lots of other config options are available in the API, so [check the docs](https://docs.github.com/en/rest/reference/repos#create-a-repository-for-the-authenticated-user) for more info.
+在API中还有很多其他的配置选项，所以[查看文档](https://docs.github.com/en/rest/reference/repos#create-a-repository-for-the-authenticated-user)了解更多信息。
 
-- After running this command, GitHub will prompt us to enter our **private token** for authentication.
+- 运行此命令后，GitHub 会提示我们输入 **(private token)私人令牌** 进行认证。
 
-If you don't have a private token yet, you can generate it in GitHub in **Settings > Developer settings > Personal access tokens**
+如果你还没有私人令牌，你可以在GitHub的  **Settings > Developer settings > Personal access tokens**
 
 ![screenshot](https://www.freecodecamp.org/news/content/images/2022/04/screenshot.png)
 
@@ -582,35 +581,35 @@ If you don't have a private token yet, you can generate it in GitHub in **Settin
 
 ![screenshot_2](https://www.freecodecamp.org/news/content/images/2022/04/screenshot_2.png)
 
-- Cool, we're almost done now! What we need now is the **remote URL** of our newly created GitHub repo.
+- 酷，我们现在几乎已经完成了! 现在我们需要的是我们新创建的GitHub repo的 **remote URL**。
 
-To get that we're going to use curl and the GitHub API again, like this:
+为了得到它，我们将再次使用 curl 和 GitHub API，像这样:
 
-```
+```shell
 GIT_URL=$(curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/coccagerman/"$repoName" | jq -r '.clone_url')
 ```
 
-Here we're declaring a variable called `GIT_URL` and assigning it to whatever the following command returns.
+这里我们声明了一个叫做`GIT_URL`的变量，并将其分配给下面命令返回的任何内容。
 
-The `-H` flag sets the header of our request.
+`-H`标志设置了我们请求的头。
 
-Then we pass the GitHub API endpoint, which should contain our user name and repo name (`https://api.github.com/repos/coccagerman/"$repoName"`).
+然后我们传递GitHub的API endpoint，其中应包含我们的用户名(user name)和 repo名称 (`https://api.github.com/repos/coccagerman/"$repoName"`).
 
-Then we're **piping** the return value of our request. Piping just means passing the return value of a process as the input value of another process. We can do it with the `|` symbol like `<process1> | <process2>`.
+然后，我们就 **piping** 了我们请求的返回值。管道化(piping)只是意味着将一个进程的返回值作为另一个进程的输入值。我们可以用`|`符号来做，比如`<process1> | <process2>`。
 
-And finally we run the `jq` command, which is a tool for processing JSON inputs. Here we tell it to get the value of `.clone_url` which is where our remote git URL will be according to the data format provided by the GitHub API.
+最后我们运行 `jq` 命令，这是一个处理JSON输入的工具。在这里，我们告诉它获得 `.clone_url` 的值，根据GitHub API提供的数据格式，这是我们的远程git URL的位置。
 
-- And as last step, we rename our master branch to main, add the remote origin we just obtained, and push our code to GitHub! =D
+- 最后一步，我们将主分支重命名为main，添加我们刚刚获得的远程源码，然后将我们的代码推送到GitHub上! =D
 
-```
+```shell
 git branch -M main
 git remote add origin $GIT_URL
 git push -u origin main
 ```
 
-Our full script should look something like this:
+我们的完整脚本应该看起来像这样:
 
-```
+```shell
 #! /bin/sh
 repoName=$1
 
@@ -634,56 +633,56 @@ git remote add origin $GIT_URL
 git push -u origin main
 ```
 
-- Now it's time to test our script! To **execute** it there're two things we can do.
+- 现在是测试我们的脚本的时候了! 要 **执行** 它，我们可以做两件事。
 
-One option is to enter the shell name and pass the file as parameter, like: `dash ../ger/code/projects/scripts/newGhRepo.sh`.
+一种方法是输入shell名称，并将文件作为参数传入，比如。`dash ../ger/code/projects/scripts/newGhRepo.sh`。
 
-And the other is to make the file **executable** by running `chmod u+x ../ger/code/projects/scripts/newGhRepo.sh`.
+另一种是通过运行`chmod u+x ../ger/code/projects/scripts/newGhRepo.sh`，使文件有可执行权限。
 
-Then you can just execute the file directly by running `../ger/code/projects/scripts/newGhRepo.sh`.
+然后你可以通过运行`../ger/code/projects/scripts/newGhRepo.sh`直接执行该文件。
 
-And that's it! We have our script up and running. Everytime we need a new repo we can just execute this script from whatever directory we're in.
+这就是了! 我们有了我们的脚本并开始运行。每当我们需要一个新的 repo 时，我们就可以从我们所在的任何目录中执行这个脚本。
 
-But there's something a bit annoying about this. We need to remember the exact route of the script directory. Wouldn't it be cool to execute the script with a single command that it's always the same independently of what directory we're at?
+但这有一点很烦人。我们需要记住脚本目录的确切路径。如果能用一条命令来执行脚本，不管我们在哪个目录下都是一样的，那不是很酷吗？
 
-In come **bash aliases** to solve our problem.
+在这里, **bash aliases（别名）** 来解决我们的问题。
 
-Aliases are a way bash provides for making names for exact commands we want to run.
+别名是bash提供的一种方法，用于为我们想要运行的确切命令命名。
 
-To create a new alias, we need to edit the bash configuration files in our system. This files are normally located in the home directory. Aliases can be defined in different files (mainly `.bashrc` or `.bash_aliases`).
+要创建一个新的别名，我们需要编辑我们系统中的bash配置文件。这些文件通常位于主目录中。别名可以在不同的文件中定义（主要是`.bashrc`或`.bash_aliases`）。
 
-I have a `.bash_aliases` file on my system, so let's edit that.
+我的系统上有一个`.bash_aliases`文件，所以我们来编辑它。
 
-- In our CLI we enter `cd` to go over home directory.
+- 在我们的CLI中，我们输入`cd ~`来查看主目录。
 
-- Then we can enter `ls -a` to list all files (includen hidden ones) and check if we have either a `.bashrc` or `.bash_aliases` file in our system.
+- 然后我们可以输入`ls -a`列出所有文件（包括隐藏的），并检查我们的系统中是否有`.bashrc`或`.bash_aliases`文件。
 
-- We open the file with our text/code editor of choice.
+- 我们用我们选择的文本/代码编辑器打开该文件。
 
-- And we write our new alias like this:  
+- 然后我们这样写我们的新别名:  
     `alias newghrepo="dash /home/German/Desktop/ger/code/projects/scripts/newGhRepo.sh"`
 
-Here I'm declaring the alias name, the actual command I'm going to enter to run the script (`newghrepo`).
+在这里，我声明了别名的名称，以及我将要输入的运行脚本的实际命令（`newghrepo`）。
 
-And between quotes, define what that alias is going to do (`"dash /home/German/Desktop/ger/code/projects/scripts/newGhRepo.sh"`)
+在引号之间，定义这个别名要做什么（`"dash /home/German/Desktop/ger/code/projects/scripts/newGhRepo.sh"`)。
 
-See that I'm passing the [absolute path](https://www.computerhope.com/issues/ch001708.htm) of the script, so that this command works the same no matter what my current directory is.
+请看，我传递的是脚本的 [绝对路径](https://www.computerhope.com/issues/ch001708.htm)，这样，无论我的当前目录是什么，这个命令都是一样的。
 
-If you don't know what the absolute path of your script is, go to the script directory on your terminal and enter `readlink -f newGhRepo.sh`. That should return the full path for you. ;)
+如果你不知道你的脚本的绝对路径是什么，在你的终端上进入脚本目录，然后输入 `readlink -f newGhRepo.sh`。这应该可以为你返回完整的路径;)
 
-- After we're done editing, we save our file, restart our terminal, and voilà! Now we can run our script by just entering `newghrepo`, no matter in what directory we currently are. Much quicker than opening the browser and clicking around to create our repo! =D
+- 编辑完成后，我们保存文件，重新启动终端，然后就可以了！我们可以通过输入 `newghrepo` 来运行我们的脚本。现在我们可以通过输入 `newghrepo` 来运行我们的脚本，无论我们目前在哪个目录下。这比打开浏览器和点击创建我们的 repo 要快得多！ =D
 
-I hope this gives you a little taste of the kind of optimizations that are possible with scripting. It certainly requires a bit more work the first time you write, test, and set up the script. But after that, you'll never have to perform that task manually again. ;)
+我希望这能让你体会到脚本所能带来的优化效果。当然，在你第一次编写、测试和设置脚本的时候，它需要多做一些工作。但在那之后，你就再也不用手动执行这项任务了。;)
 
-# Round up
+# 总结
 
-The terminal can feel like an intimidating and intricate place when you're starting out. But it's certainly worth it to put time and effort into learning the ins and outs of it. The efficiency benefits are too good to pass up!
+当你开始工作时，终端可能感觉是一个令人生畏和复杂的地方。但是，花时间和精力去学习它的内在和延展，肯定是值得的。效率方面的好处好得不能再好了。
 
-> If you're interested in learning more about the terminal and Bash, Zach Gollwitzer has [an awesome crash course series on youtube](https://www.youtube.com/playlist?list=PLYQSCk-qyTW0d88jNocdi_YIFMA5Fnpug).  
-> He has also great tutorials on other topics such as Node and Javascript, so I recommend that you follow him. ;)
+> 如果你有兴趣学习更多关于终端和Bash的知识，Zach Gollwitzer在Youtube上有 [一个很棒的速成系列课程](https://www.youtube.com/playlist?list=PLYQSCk-qyTW0d88jNocdi_YIFMA5Fnpug).  
+> 他在其他主题上也有很好的教程，如Node和Javascript，所以我推荐你关注他;)
 
-As always, I hope you enjoyed the article and learned something new. If you want, you can also follow me on [linkedin](https://www.linkedin.com/in/germancocca/) or [twitter](https://twitter.com/CoccaGerman).
+像往常一样，我希望你喜欢这篇文章，并学到一些新东西。如果你愿意，你也可以在 [linkedin](https://www.linkedin.com/in/germancocca/) 或[twitter](https://twitter.com/CoccaGerman) 上关注我。
 
-Cheers and see you in the next one! =D
+感谢你的阅读，下一篇见! =D
 
 ![8ef61e333efccb5900cd117a4d64e8d3](https://www.freecodecamp.org/news/content/images/2022/04/8ef61e333efccb5900cd117a4d64e8d3.gif)

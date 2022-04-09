@@ -9,35 +9,38 @@
 
 ![The React Cheatsheet for 2022](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/mugshotbot.com_customize_theme-two_up-mode-light-color-pink-pattern-bubbles-image-9129875b-url-https___freecodecamp.org.png)
 
-Do you want to get up to speed with React as quickly as possible?
 
-I’ve put together a super helpful cheatsheet to give you a complete overview of all of the React concepts you need to know in 2022.
+你想尽快了解React的最新消息吗？
 
-Let’s get started!
+我整理出来了一份React完全手册，包含在2022年里，你需要了解的所有React概念。
 
-## Table of Contents
+让我们开始吧！
 
--   [React Elements](#react-elements)
--   [React Element Attributes](#react-element-attributes)
--   [React Element Styles](#react-element-styles)
+## 文章目录
+
+
+-   [React元素](#react元素)
+-   [React元素属性](#react元素属性)
+-   [React元素风格](#react元素风格)
 -   [React Fragments](#react-fragments)
--   [React Components](#react-components)
+-   [React 组件](#react-components)
 -   [React Props](#react-props)
--   [React Children Props](#react-children-props)
+-   [React 子元素Props](#react-children-props)
 -   [React Conditionals](#react-conditionals)
 -   [React Lists](#react-lists)
--   [React Context](#react-context)
--   [React Hooks](#react-hooks)
--   [React useState Hook](#react-usestate-hook)
--   [React useEffect Hook](#react-useeffect-hook)
--   [React useRef Hook](#react-useref)
--   [React useContext Hook](#react-usecontext)
--   [React useCallback Hook](#react-usecallback)
+-   [React 上下文](#react-context)
+-   [React 钩子（Hooks）](#react-hooks)
+-   [React useState 钩子](#react-usestate-hook)
+-   [React useEffect 钩子](#react-useeffect-hook)
+-   [React useRef 钩子](#react-useref)
+-   [React useContext 钩子](#react-usecontext)
+-   [React useCallback 钩子](#react-usecallback)
 -   [React useMemo Hook](#react-usememo)
 
-## React Elements
 
-React elements are written just like regular HTML elements. You can write any valid HTML element in React.
+## React元素
+
+React元素的写法和普通HTML元素一致，你可以在React中使用任意合法的HTML元素。
 
 ```js
 <h1>My Header</h1>
@@ -45,11 +48,11 @@ React elements are written just like regular HTML elements. You can write any va
 <button>My button</button>
 ```
 
-We write React elements using a feature called _JSX_.
+在React中我们使用一种特殊的标签语法 _JSX_.
 
-However, because JSX is really just JavaScript functions (and not HTML), the syntax is a bit different.
+当然，因为JSX实际上是JavaScript的语法拓展（并不是HTML），所以JSX的语法和HTML有些不同。
 
-Unlike HTML, single-tag elements (like the img element), must be self-closing. They must end in a forward slash `/`:
+与HTML中的单标签（如图像元素的标签）不同， 在JSX中元素结束前必须加上斜杠`/`:
 
 ```js
 <img src="my-image.png" />
@@ -57,19 +60,19 @@ Unlike HTML, single-tag elements (like the img element), must be self-closing. T
 <hr />
 ```
 
-## React Element Attributes
+## React元素属性
 
-Additionally, JSX requires a different syntax for its attributes.
+同时，JSX的标签属性语法也有所不同。
 
-Since JSX is really JavaScript and JavaScript uses a camelcase naming convention (that is, “camelCase”), attributes are written differently than HTML.
+因为JSX实际上是JavaScript，而JavaScript使用驼峰命名规则（如，"camelCase"),所以React元素的属性写法与HTML不同。
 
-The most common example is the `class` attribute, which we write as `className`.
+最常见的例子是 `class` 属性, 在JSX中被写作 `className`.
 
 ```js
 <div className="container"></div>
 ```
 
-## React Element Styles
+## React元素风格
 
 To apply inline styles, instead of using double quotes (“”), we use two sets of curly braces.
 

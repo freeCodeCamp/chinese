@@ -179,116 +179,115 @@ Posix对shell的作用与ECMAScript对JavaScript的作用非常相似。它是�
 echo Hello freeCodeCamp! // Output: Hello freeCodeCamp!
 ```
 
-- **pwd** stands for print working directory and it prints the "place" or directory we are currently at in the computer.
+- **pwd**代表打印工作目录，它打印出我们目前在计算机中的 **位置** 或目录。
 
-```
+```shell
 pwd // Output: /home/German
 ```
 
-- **ls** presents you the contents of the directory you're currently in. It will present you with both the files and other directories your current directory contains.
+- **ls** 向你展示你当前所在的目录的内容。它将向你展示你当前目录中的文件和其他目录。
 
-For example, here I'm on a React project directory I've been working on lately:
+例如，这里我在最近工作的一个React项目目录上:
 
-```
+```shell
 ls // Output:
 node_modules  package.json  package-lock.json  public  README.md  src
 ```
 
 If you pass this command the flag or paremter `-a` It will also show you hidden files or directories. Like `.git` or `.gitignore` files
 
-```
+```shell
 ls -a // Output:
 .   .env  .gitignore    package.json       public     src
 ..  .git  node_modules  package-lock.json  README.md
 ```
 
-- **cd** is short for Change directory and it will take you from your current directory to another.
+- **cd** 是Change directory的缩写，它将把你从你的当前目录带到另一个目录。
 
-While on my home directory, I can enter `cd Desktop` and it will take me to the Desktop Directory.
+在我的 `home` 目录下，我可以输入`cd Desktop`，它将把我带到桌面目录。
 
-If I want to go up one directory, meaning go to the directory that contains the current directory, I can enter `cd ..`
+如果我想上升一个目录，也就是说，去包含当前目录的目录，我可以输入`cd ..`。
 
-If you enter `cd` alone, it will take you straight to your home directory.
+如果你只输入`cd`，它将直接带你到你的 `home` 目录。
 
-- **mkdir** stands for make directory and it will create a new directory for you. You have to pass the command the directory name parameter.
+- **mkdir** 代表制作目录，它将为你创建一个新的目录。你必须把目录名称参数传给命令。
 
-If I wanted to create a new directory called "Test" I would enter `mkdir test`.
+如果我想创建一个名为 "Test "的新目录，我将输入`mkdir test`。
 
-- **rmdir** stands for Remove directory and it does just that. It needs the directory name parameter just as `mkdir`: `rmdir test`.
+- **rmdir** 代表删除目录，它就是这样做的。它和 `mkdir` 一样需要目录名参数：`rmdir test`。
 
-- **touch** allows you to create an empty file in your current directory. As parameters it takes the file name, like `touch test.txt`.
+- **touch** 允许你在当前目录下创建一个空文件。作为参数，它需要文件名，如`touch test.txt`。
 
-- **rm** allows you to delete files, in the same way `rmdir` allows you to remove directories.  
-    `rm test.txt`
+- **rm**允许你删除文件，与 `rmdir` 允许你删除目录的方式相同。 `rm test.txt`
 
-- **cp** allows you to copy files or directories. This command takes two parameters: the first one is the file or directory you want to copy, and the second one is the destination of your copy (where do you want to copy your file/directory to).
+- **cp** 允许你复制文件或目录。这个命令需要两个参数：第一个是你想复制的文件或目录，第二个是你复制的目的地（你想把文件/目录复制到哪里）。
 
-If I want to make a copy of my txt file in the same directory, I can enter the following:
+如果我想在同一目录下复制我的txt文件，我可以输入以下内容:
 
-```
+```shell
 cp test.txt testCopy.txt
 ```
 
-See that the directory doesn't change, as for "destination" I enter the new name of the file.
+看，目录没有改变，因为在 **目的地** 中我输入了新的文件名。
 
-If I wanted to copy the file into a diferent directory, but keep the same file name, I can enter this:
+如果我想把文件复制到一个不同的目录，但保持相同的文件名，我可以输入这个:
 
-```
+```shell
 cp test.txt ./testFolder/
 ```
 
-And if I wanted to copy to a different folder changing the field name, of course I can enter this:
+而如果我想复制到一个不同的文件夹，改变字段名，当然可以这样输入:
 
-```
+```shell
 cp test.txt ./testFolder/testCopy.txt
 ```
 
-- **mv** is short for move, and lets us move a file or directory from one place to another. That is, create it in a new directory and delete it in the previous one (same as you could do by cutting and pasting).
+- **mv**是移动的简称，它让我们把一个文件或目录从一个地方移动到另一个地方。也就是说，在一个新的目录中创建它，并在前一个目录中删除它（就像你通过剪切和粘贴所做的一样）。
 
-Again, this command takes two paremers, the file or directory we want to move and the destination.
+同样，这个命令需要两个参数，即我们想要移动的文件或目录和目的地。
 
-```
+```shell
 mv test.txt ./testFolder/
 ```
 
-We can change the name of the file too in the same command if we want to:
+如果我们愿意，也可以在同一命令中改变文件的名称:
 
-```
+```shell
 mv test.txt ./testFolder/testCopy.txt
 ```
 
-- **head** allows you to view the beginning of a file or piped data directly from the terminal.
+- **head**允许你直接从终端查看文件或管道数据的开始部分。
 
-```
+```shell
 head test.txt // Output:
 this is the beginning of my test file
 ```
 
-- **tail** works the same but it will show you the end of the file.
+- **tail** 的工作原理是一样的，但它会向你显示文件的结尾部分内容。
 
-```
+```shell
 tail test.txt // Output:
 
 this is the end of my test file
 ```
 
-- The **\--help** flag can be used on most commands and it will return info on how to use that given command.
+- **--help/**标志可用于大多数命令，它将返回如何使用该命令的信息。
 
-```
+```shell
 cd --help // output:
 cd: cd [-L|[-P [-e]] [-@]] [dir]
 Change the shell working directory.
 ```
 
-Change the current directory to DIR. The default DIR is the value of the HOME shell variable.
+将当前目录改为DIR。默认的DIR是HOME shell 变量的值。
 
-The variable CDPATH defines the search path for the directory containing DIR. Alternative directory names in CDPATH are separated by a colon `:`.
+变量CDPATH定义了包含DIR的目录的搜索路径。CDPATH中的备选目录名由冒号`:`分隔。
 
-A null directory name is the same as the current directory if DIR begins with `...`.
+如果DIR以`...`开头，则空目录名与当前目录相同。
 
-- In a similar way, the **man** command will return info about any particular command.
+- 以类似的方式，**man** 命令将返回任何特定命令的信息。
 
-```
+```shell
     man cp // output:
 
     CP(1)                            User Commands                           CP(1)
@@ -315,75 +314,73 @@ A null directory name is the same as the current directory if DIR begins with `.
     ...
 ```
 
-You can even enter `man bash` and that will return a huge manual about everything there's to know about this shell. ;)
+你甚至可以输入 "man bash"，这将返回一个关于这个shell的所有知识的详细手册。 ;)
 
-- **code** will open your default code editor. If you enter the command alone, it just opens the editor with the latest file/directory you opened.
+- **code**将打开你的默认代码编辑器。如果你单独输入这个命令，它只是打开你最近打开的文件/目录的编辑器。
 
-You can also open a given file by passing it as parameter: `code test.txt`.
+你也可以通过传递参数来打开一个指定的文件：`code test.txt`。
 
-Or open a new file by passing the new file name: `code thisIsAJsFile.js`.
+或者通过传递新的文件名来打开一个新的文件： `code thisIsAJsFile.js`.
 
-- **edit** will open text files on your default command line text editor (which if you're on Mac or Linux will likely be either Nano or Vim).
+- **edit**将在你的默认命令行文本编辑器上打开文本文件（如果你是在Mac或Linux上，可能是Nano或Vim）。
 
-If you open your file and then can't exit your editor, first look at this meme:
+如果你打开了你的文件，然后无法退出你的编辑器，首先看一下这个:
 
-```
 ![vimExit](https://www.freecodecamp.org/news/content/images/2022/03/vimExit.png)
-```
 
-And then type `:q!` and hit enter.
+然后输入 `:q!` 并回车。(译者注： q是quit的缩写)
 
-The meme is funny because everyone struggles with CLI text editors at first, as most actions (like exiting the editor) are done with keyboard shortcuts. Using these editors is a whole other topic, so go look for tutorials if you're interested in learning more. ;)
+这个备忘录很有趣，因为每个人一开始都在为使用CLI文本编辑器而挣扎，因为大多数操作（比如退出编辑器）都是通过键盘快捷键完成的。使用这些编辑器是另外一个话题，如果你有兴趣了解更多，就去找教程吧。 ;)
 
-- **ctrl+c** allows you to exit the current process the terminal is running. For example, if you're creating a react app with `npx create-react-app` and want to cancel the build at some point, just hit **ctrl+c** and it will stop.
+- **ctrl+c** 允许你退出终端正在运行的当前进程。例如，如果你正在用`npx create-react-app`创建一个react应用，并想在某个时候取消构建，只要按下组合键 **ctrl+c**，它就会停止。
 
-- Copying text from the terminal can be done with **ctrl+shift+c** and pasting can be done with **ctrl+shift+v**
+- 从终端复制文本可以用**ctrl+shift+c**来完成，粘贴可以用**ctrl+shift+v**来完成。
 
-- **clear** will clear your terminal from all previous content.
+- **clear**将清除你的终端上的所有内容。
 
-- **exit** will close your terminal and (this is not a command but it's cool too) **ctrl+alt+t** will open a new terminal for you.
+- **exit**将关闭你的终端，（这不是一个命令，但它也很酷）**ctrl+alt+t**将为你打开一个新终端。
 
-- By pressing **up and down keys** you can navigate through the previous commands you entered.
+- 通过按**上 下方向键**你可以浏览你之前输入的命令。
 
-- By hitting **tab** you will get autocompletion based on the text you've written so far. By hitting **tab twice** you'll get suggestions based on the text you've written so far.
+- 按下 **tab**，你将得到基于你到目前为止所写的命令的自动补全。按下 **两次tab**，你会得到基于你到目前为止所写命令的建议。
 
-For example if I write `edit test` and **tab twice**, I get `testFolder/ test.txt`. If I write `edit test.` and hit **tab** my text autocompletes to `edit test.txt`
+例如，如果我输入 **edit test** 并按下两次 tab，我就会得到 `testFolder/ test.txt`。如果我写`edit test.`并按下 **tab**，我的文本会自动补全为`edit test.txt`。
 
 ## Git commands
 
-Besides working around the file system and installing/uninstalling things, interacting with Git and online repos is probably the most common things you're going to use the terminal for as a developer.
+除了在文件系统中工作和安装/卸载东西，作为一个开发者在终端最常使用可能是Git和线上仓库的交互。
 
-It's a whole lot more efficient to do it from the terminal than by clicking around, so let's take a look at the most useful git commands out there.
+从终端做这些事情比到处点击更有效率，所以让我们看看最有用的git命令吧。
 
-- **git init** will create a new local repository for you.
+- **git init**将为你创建一个新的本地版本库。
 
-```
+```shell
 git init // output:
 Initialized empty Git repository in /home/German/Desktop/testFolder/.git/
 ```
 
-- **git add** adds one or more files to staging. You can either detail a specific file to add to staging or add all changed files by typing `git add .`
+- **git add*将一个或多个文件添加到暂存区。你可以详细说明要添加到暂存区的特定文件，或者通过输入 "git add .`"来添加所有更改的文件。
 
-- **git commit** commits your changes to the repository. Commits must always be must be accompanied by the `-m` flag and commit message.
+- **git commit**将你的修改提交给版本库。提交必须总是必须伴随着`-m`标志和提交信息。
 
-```
+```shell
 git commit -m 'This is a test commit' // output:
 [master (root-commit) 6101dfe] This is a test commit
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 test.js
 ```
 
-- **git status** tells you what branch are you currently on and whether you have changes to commit or not.
+- **git status**告诉你，你目前在哪个分支上，以及你是否有修改要提交。
 
-```
+```shell
 git status  // output:
 On branch master
 nothing to commit, working tree clean
 ```
 
-- **git clone** allows you to clone (copy) a repository into the directory you're currently in. Keep in mind you can clone both remote repositories (in GitHub, GitLab, and so on) and local repositories (those that are stored in your computer).
+- **git clone**允许你克隆（复制）一个仓库到你当前所在的目录。请记住，你既可以克隆远程仓库（GitHub、GitLab等），也可以克隆本地仓库（那些存储在你电脑中的仓库）。
 
-```
+```shell
 git clone https://github.com/coccagerman/MazeGenerator.git // output:
 Cloning into 'MazeGenerator'...
 remote: Enumerating objects: 15, done.
@@ -393,25 +390,25 @@ remote: Total 15 (delta 1), reused 11 (delta 0), pack-reused 0
 Unpacking objects: 100% (15/15), done.
 ```
 
-- **git remote add origin** is used to detail the URL of the remote repository you're going to use for your project. In case you'd like to change it at some point, you can do it by using the command `git remote set-url origin`.
+- **git remote add origin**是用来详细说明你的项目要使用的远程仓库的URL。如果你想在某个时候改变它，你可以通过使用`git remote set-url origin`命令来实现。
 
-```
+```shell
 git remote add origin https://github.com/coccagerman/testRepo.git
 ```
 
-> Keep in mind you need to create your remote repo first in order to get its URL. We'll see how you can do this from the command line with a little script later on. ;)
+> 请记住，你需要先创建你的远程版本，以便获得其URL。稍后我们将看到你如何通过一个小脚本从命令行中做到这一点。 ;)
 
-- **git remote -v** lets you list the current remote repository you're using.
+- **git remote -v**可以让你列出当前正在使用的远程仓库。
 
-```
+```shell
 git remote -v // output:
 origin https://github.com/coccagerman/testRepo.git (fetch)
 origin https://github.com/coccagerman/testRepo.git (push)
 ```
 
-- **git push** uploads your commited changes to your remote repo.
+- **git push**将你已提交的修改上传到你的远程 repo。
 
-```
+```shell
 git push // output:
 Counting objects: 2, done.
 Delta compression using up to 8 threads.
@@ -420,16 +417,16 @@ Writing objects: 100% (2/2), 266 bytes | 266.00 KiB/s, done.
 Total 2 (delta 0), reused 0 (delta 0)
 ```
 
-- **git branch** lists all the available branches on your repo and tells you what branch you're currently on. If you want to create a new branch, you just have to add the new branch name as parameter like `git branch <branch name>`.
+- **git branch**列出了你的 repo 上的所有可用分支，并告诉你目前在哪个分支上。如果你想创建一个新的分支，你只需把新的分支名称作为参数加入，比如`git branch <branch name>`。
 
-```
+```shell
 git branch // output:
 * main
 ```
 
-- **git checkout** moves you from one branch to another. It takes your destination branch as paremeter.
+- **git checkout**将你从一个分支移到另一个分支。它把你的目标分支作为 paremeter。
 
-```
+```shell
 git checkout newBranch // output:
 Switched to branch 'newBranch'
 ```
@@ -438,14 +435,14 @@ Switched to branch 'newBranch'
 
 If there's new code in your remote repo, the command will return the actual files that were modified in the pull. If not, we get `Already up to date`.
 
-```
+```shell
 git pull // output:
 Already up to date.
 ```
 
 - **git diff** allows you to view the differences between the branch you're currently in and another.
 
-```
+```shell
 git diff newBranch // output:
 diff --git a/newFileInNewBranch.js b/newFileInNewBranch.js
 deleted file mode 100644
@@ -456,7 +453,7 @@ As a side comment, when comparing differences between branches or repos, ussuall
 
 - **git merge** merges (combines) the branch you're currently in with another. Keep in mind the changes will be incorporated only to the branch you're currently in, not to the other one.
 
-```
+```shell
 git merge newBranch // output:
 Updating f15cf51..3a3d62f
 Fast-forward

@@ -280,37 +280,37 @@ yarn global add package-name
 npm init
 ```
 
-Or, if your package manager is Yarn, run:
+或者，如果你的软件包管理器是Yarn，运行:
 
 ```bash
 yarn init
 ```
 
-Once you've executed the initialization command above, your package manager will walk you through creating the `package.json` file by asking a few questions about your project.
+一旦你执行了上面的初始化命令，你的软件包管理器将通过询问一些关于你的项目的问题来指导你创建`package.json`文件。
 
-If you wish to skip the questionnaire, you can create a default `package.json` file. Let's see how.
+如果你希望跳过问卷调查，你可以创建一个默认的`package.json`文件。让我们来看看如何。
 
 ### How to Create a Default `package.json` File
 
-Suppose you prefer to skip the questionnaire prompted by the `npm init` (or `yarn init`) command. In such a case, go to your project's [root directory](https://www.codesweetly.com/web-tech-glossary/#h-root-directory) and run:
+假设你喜欢跳过`npm init`（或`yarn init`）命令所提示。在这种情况下，进入你的项目的[根目录](https://www.codesweetly.com/web-tech-glossary/#h-root-directory)并运行。:
 
 ```bash
 npm init -y
 ```
 
-Or, if your package manager is Yarn, run:
+或者，如果你的软件包管理器是Yarn，运行:
 
 ```bash
 yarn init -y
 ```
 
-The command above will use [default values extracted from the current directory](https://docs.npmjs.com/creating-a-package-json-file#default-values-extracted-from-the-current-directory) to create your project's `package.json` file.
+上面的命令将使用[从当前目录获得默认值](https://docs.npmjs.com/creating-a-package-json-file#default-values-extracted-from-the-current-directory)来创建你的项目的`package.json`文件。
 
-**Note:** The `-y` flag is a shorthand for `--yes`.
+**注意：** `-y`标志是 `--yes` 的简写。
 
-Once your package manager finishes its initialization process, your project's `package.json` file will contain an object with a set of properties.
+一旦你的软件包管理器完成了它的初始化过程，你的项目的`package.json`文件将包含一个具有一系列属性的对象。
 
-**Here's an example:**
+**下面是一个例子:**
 
 ```json
 {
@@ -320,31 +320,31 @@ Once your package manager finishes its initialization process, your project's `p
 }
 ```
 
-You can see that the `package.json` file above contains the `name`, `version`, and `main` fields. Let's learn more about these properties below.
+你可以看到上面的`package.json`文件包含`name`、`version`和`main`字段。下面我们来了解一下这些属性。
 
 ### The `package.json`'s Fields
 
-The `package.json`'s properties make your project usable to package managers and end-users.
+`package.json`的属性使你的项目可以被包管理器和终端用户使用。
 
-Suppose you wish to publish your package to the NPM registry. In that case, your `package.json` file must have the `"name"` and `"version"` fields.
+假设你想把你的包发布到NPM registry。在这种情况下，你的 `package.json` 文件必须有 `"name"` 和`"version"` 字段。
 
-However, if you do not intend to publish your package, in that case, all fields—including the `"name"` and `"version"` properties—are optional.
+然而，如果你不打算发布你的包，在这种情况下，所有字段--包括 `"name"` 和 `"version"` 属性--都是可选的。
 
-Let's learn more about the commonly used fields in a `package.json` file.
+让我们了解更多关于 `package.json` 文件中常用的字段。
 
 #### name
 
-The `"name"` field is a property used to record a project's name.
+`"name"` 字段是一个用于记录项目名称的属性。
 
-The `"name"` property's value must be:
+`"name"` 属性的值必须是。
 
-- a single word
-- lowercase lettering
-- and less than or equal to 214 characters
+- 一个单字
+- 小写字母
+- 并且小于或等于214个字符
 
-Note that you can join words together with hyphens and underscores.
+请注意，你可以用连字符和下划线将单词连接起来。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -354,11 +354,11 @@ Note that you can join words together with hyphens and underscores.
 
 #### version
 
-The `"version"` field indicates a project's current version number.
+`"version"` 字段表示一个项目的当前版本号。
 
-The `"version"` property must be in the form of a `major.minor.patch` format. It must also follow the [semantic versioning guidelines](https://docs.npmjs.com/about-semantic-versioning).
+`"version"` 属性必须是 "major.minor.patch "的形式。它还必须遵循[语义版本指南](https://docs.npmjs.com/about-semantic-versioning)。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -368,11 +368,11 @@ The `"version"` property must be in the form of a `major.minor.patch` format. It
 
 #### description
 
-The `"description"` field is a property containing a brief description of a project's purpose.
+`"description"` 字段是一个包含项目目的简要描述的属性。
 
-NPM recommends having a `"description"` property to make your package easier to find on the NPM website.
+NPM建议有一个`"description"`属性，使你的包在NPM网站上更容易找到。
 
-Your description will be one of the things that's shown when people run the `npm search` command.
+当人们运行`npm search`命令时，你的描述将被显示出来。
 
 **Here's an example:**
 
@@ -384,11 +384,11 @@ Your description will be one of the things that's shown when people run the `npm
 
 #### main
 
-The `"main"` field indicates a project's [entry point](https://www.codesweetly.com/web-tech-glossary/#entry-point).
+`"main"` 字段表示一个项目的 [入口点](https://www.codesweetly.com/web-tech-glossary/#entry-point).
 
-In other words, when someone runs the `require()` function, Node will resolve the invocation to `require(<package.json:main>)`.
+换句话说，当有人运行 `require()` 函数时，Node将把调用解析为 `require(<package.json:main>)`。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -398,9 +398,9 @@ In other words, when someone runs the `require()` function, Node will resolve th
 
 #### private
 
-The `"private"` field lets package managers know whether they should publish your project to the NPM registry.
+`"private"`字段让软件包管理员知道他们是否应该将你的项目发布到 NPM registry。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -408,9 +408,9 @@ The `"private"` field lets package managers know whether they should publish you
 }
 ```
 
-If you set your package.json's `"private"` property to `true`, package managers will not publish your project.
+如果你把package.json的 `"private"` 属性设置为 `true`，包管理器将不会发布你的项目。
 
-Therefore, setting the property is an excellent way to prevent accidental publication of your package.
+因此，设置该属性是防止意外发布你的包的一个好办法。
 
 #### scripts
 

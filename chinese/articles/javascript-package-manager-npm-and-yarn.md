@@ -414,9 +414,9 @@ NPM建议有一个`"description"`属性，使你的包在NPM网站上更容易�
 
 #### scripts
 
-The `"scripts"` field defines the script commands you want to run at various times in your project's lifecycle.
+"scripts"`字段定义了你想在项目生命周期的不同时期运行的脚本命令。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -430,9 +430,9 @@ The `"scripts"` field defines the script commands you want to run at various tim
 }
 ```
 
-The `"scripts"` field above contains five properties whose values are the commands we want our package manager to run whenever we invoke the property's key.
+上面的 "scripts "字段包含五个属性，其值是我们希望包管理器在调用该属性的键时运行的命令。
 
-So, for instance, running `npm run dev` will execute the `"webpack --mode development"` command.
+因此，例如，运行`npm run dev`将执行`"webpack --mode development"`命令。
 
 #### keywords
 

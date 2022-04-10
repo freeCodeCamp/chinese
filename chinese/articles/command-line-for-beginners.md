@@ -681,7 +681,7 @@ git push -u origin main
 > 如果你有兴趣学习更多关于终端和Bash的知识，Zach Gollwitzer在Youtube上有 [一个很棒的速成系列课程](https://www.youtube.com/playlist?list=PLYQSCk-qyTW0d88jNocdi_YIFMA5Fnpug).  
 > 他在其他主题上也有很好的教程，如Node和Javascript，所以我推荐你关注他;)
 
-像往常一样，我希望你喜欢这篇文章，并学到一些新东西。如果你愿意，你也可以在 [linkedin](https://www.linkedin.com/in/germancocca/) 或[twitter](https://twitter.com/CoccaGerman) 上关注我。
+像往常一样，我希望你喜欢这篇文章，并学到一些新东西。如果你愿意，你也可以在 [linkedin](https://www.linkedin.com/in/germancocca/) 或 [twitter](https://twitter.com/CoccaGerman) 上关注我。
 
 感谢你的阅读，下一篇见! =D
 

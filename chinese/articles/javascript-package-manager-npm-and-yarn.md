@@ -1,7 +1,7 @@
-> -  原文地址：[JavaScript Package Manager – Complete Guide to NPM and Yarn](https://www.freecodecamp.org/news/javascript-package-manager-npm-and-yarn/)
-> -  原文作者：[OluwatobiSofela](https://www.freecodecamp.org/news/author/oluwatobiss/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[JavaScript Package Manager – Complete Guide to NPM and Yarn](https://www.freecodecamp.org/news/javascript-package-manager-npm-and-yarn/)
+> - 原文作者：[Oluwatobi Sofela](https://www.freecodecamp.org/news/author/oluwatobiss/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![JavaScript Package Manager – Complete Guide to NPM and Yarn](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/package-manager-npm-and-yarn-explained-curology-pDsmoI5j3B8-unsplash.jpg)
 
@@ -15,13 +15,13 @@ But why exactly do we need a package manager in our development workflow? Let's 
 
 Suppose there were no package managers. In that case, you would have to do the following manually:
 
--   Find all the correct packages for your project
--   Verify that the packages don't have any known vulnerabilities
--   Download the packages
--   Install them at the appropriate location
--   Keep track of new updates for all your packages
--   Upgrade each package whenever there is a new release
--   Remove the packages you no longer need
+- Find all the correct packages for your project
+- Verify that the packages don't have any known vulnerabilities
+- Download the packages
+- Install them at the appropriate location
+- Keep track of new updates for all your packages
+- Upgrade each package whenever there is a new release
+- Remove the packages you no longer need
 
 Manually managing tens or hundreds of packages is a tiresome and time-consuming endeavor.
 
@@ -141,8 +141,8 @@ A locally installed package is one that you can use only in the project in which
 
 To install a package locally, do the following:
 
-1.  Navigate to the [root directory](https://www.codesweetly.com/web-tech-glossary/#h-root-directory) of your project from the command line.
-2.  Install your package using the NPM or Yarn installation command below (depending on the package manager you've chosen to use for your project).
+1. Navigate to the [root directory](https://www.codesweetly.com/web-tech-glossary/#h-root-directory) of your project from the command line.
+2. Install your package using the NPM or Yarn installation command below (depending on the package manager you've chosen to use for your project).
 
 **Note:** You must have Node and NPM installed on your system for the NPM (and Yarn) installation commands below to work. You can get both by installing the latest LTS or the current version from the Node.js website.
 
@@ -246,9 +246,9 @@ Common examples of local packages are [Webpack](https://webpack.js.org/), [Lodas
 
 **Note:**
 
--   You can [do both local and global installation](https://nodejs.org/en/blog/npm/npm-1-0-global-vs-local-installation/#when-you-can-t-choose) of packages you intend to use both on the command line and in your project. Typical examples of such packages are [ExpressJS](https://expressjs.com/) and [CoffeeScript](https://coffeescript.org/).
--   Your package manager does not execute an installed package. NPM (and Yarn) only install packages to the `node_modules` directory. And if you had specified the `--save` command, your manager would add details about the package to the `package.json` file.
--   To execute (run) any [executable](https://helpdeskgeek.com/how-to/what-is-an-executable-file-how-to-create-one/) package, you must explicitly do so yourself. We will discuss how in a later section of this article.
+- You can [do both local and global installation](https://nodejs.org/en/blog/npm/npm-1-0-global-vs-local-installation/#when-you-can-t-choose) of packages you intend to use both on the command line and in your project. Typical examples of such packages are [ExpressJS](https://expressjs.com/) and [CoffeeScript](https://coffeescript.org/).
+- Your package manager does not execute an installed package. NPM (and Yarn) only install packages to the `node_modules` directory. And if you had specified the `--save` command, your manager would add details about the package to the `package.json` file.
+- To execute (run) any [executable](https://helpdeskgeek.com/how-to/what-is-an-executable-file-how-to-create-one/) package, you must explicitly do so yourself. We will discuss how in a later section of this article.
 
 But what exactly are the `node_modules` folder, `package.json` file, `package-lock.json` file, and `yarn.lock` file? Let's find out.
 
@@ -266,10 +266,10 @@ In other words, a `package.json` file is a project's metadata file.
 
 A `package.json` file:
 
--   makes it possible to publish your project to the NPM registry
--   makes it easy for others to manage and install your package
--   helps NPM manage a [module](https://www.codesweetly.com/javascript-modules-tutorial/)'s dependencies easily
--   makes your package reproducible and shareable with other developers
+- makes it possible to publish your project to the NPM registry
+- makes it easy for others to manage and install your package
+- helps NPM manage a [module](https://www.codesweetly.com/javascript-modules-tutorial/)'s dependencies easily
+- makes your package reproducible and shareable with other developers
 
 ### How to Create a `package.json` File
 
@@ -337,9 +337,9 @@ The `"name"` field is a property used to record a project's name.
 
 The `"name"` property's value must be:
 
--   a single word
--   lowercase lettering
--   and less than or equal to 214 characters
+- a single word
+- lowercase lettering
+- and less than or equal to 214 characters
 
 Note that you can join words together with hyphens and underscores.
 
@@ -498,8 +498,8 @@ So, whenever a user installs your project from the NPM registry, the dependencie
 
 Note that you can add a package to the `"dependencies"` field through either of the following ways:
 
--   Manually add the name and the [semantic version](https://docs.npmjs.com/about-semantic-versioning) of each package your project depends on in production.
--   Run the `npm install package-name --save-prod` command on your terminal. Or `yarn add package-name` if Yarn is your package manager.
+- Manually add the name and the [semantic version](https://docs.npmjs.com/about-semantic-versioning) of each package your project depends on in production.
+- Run the `npm install package-name --save-prod` command on your terminal. Or `yarn add package-name` if Yarn is your package manager.
 
 #### devDependencies
 
@@ -522,8 +522,8 @@ Suppose a user installs the project through the `npm install` (or `yarn add`) co
 
 Keep in mind that you can add a package to the `"devDependencies"` field through either of the following ways:
 
--   Manually add the name and the semantic version of each package on which your project depends for its development and testing purposes.
--   Run the `npm install package-name --save-dev` command on your terminal. Or `yarn add package-name --dev` if Yarn is your package manager.
+- Manually add the name and the semantic version of each package on which your project depends for its development and testing purposes.
+- Run the `npm install package-name --save-dev` command on your terminal. Or `yarn add package-name --dev` if Yarn is your package manager.
 
 #### homepage
 
@@ -829,8 +829,8 @@ npm uninstall package-name
 
 **Note:**
 
--   Add the `-S` (or `--save`) flag to remove references to the package in the `dependencies` field of the project's `package.json` file.
--   Add the `-D` (or `--save-dev`) flag to remove references to the package in the `devDependencies` field of the project's `package.json` file.
+- Add the `-S` (or `--save`) flag to remove references to the package in the `dependencies` field of the project's `package.json` file.
+- Add the `-D` (or `--save-dev`) flag to remove references to the package in the `devDependencies` field of the project's `package.json` file.
 
 For projects managed with Yarn, run:
 
@@ -868,8 +868,8 @@ A module is _not_ a package if it does _not_ have a `package.json` file used to 
 
 Also, note that for a module to be loadable by the `require()` function, the module must be one of the following:
 
--   A package—whose `package.json` file contains a `"main"` field.
--   A JavaScript file.
+- A package—whose `package.json` file contains a `"main"` field.
+- A JavaScript file.
 
 ## How to Publish Your Project to the NPM Registry
 
@@ -895,7 +895,7 @@ npm login
 
 **Note:** You can use the `npm whoami` command to check if you are currently logged in.
 
-### Step 3: Publish your package!
+### Step 3: Publish your package
 
 Go to your project's root directory and publish it like so:
 
@@ -946,10 +946,10 @@ Thanks for reading!
 
 I wrote a book about React!
 
--   It's beginners friendly ✔
--   It has live code snippets ✔
--   It contains scalable projects ✔
--   It has plenty of easy-to-grasp examples ✔
+- It's beginners friendly ✔
+- It has live code snippets ✔
+- It contains scalable projects ✔
+- It has plenty of easy-to-grasp examples ✔
 
 The [React Explained Clearly](https://amzn.to/30iVPIG) book is all you need to understand ReactJS.
 

@@ -211,70 +211,70 @@ yarn global add package-name
 
 ### Local vs. global package installation
 
-Generally, it is better to install a package locally. Below are some of the differences between a local and global installation.
+一般来说，最好是在本地安装一个软件包。下面是本地安装和全局安装之间的一些区别。
 
 #### Difference 1: Installation location
 
-A locally installed package gets installed in the directory where you executed the `npm install package-name` (or `yarn add package-name`) command.
+一个本地安装的包会被安装在你执行`npm install package-name`（或`yarn add package-name`）命令的目录下。
 
-Specifically, you will find a project's locally installed packages in its `node_module` directory.
+具体来说，你可以在一个项目的 `node_module` 目录下找到本地安装的软件包。
 
-In contrast, a globally installed package gets installed in a single location on your system. The exact location depends on your system's configuration.
+相比之下，全局安装的包会被安装在你系统中的一个位置。具体位置取决于你系统的配置。
 
 #### Difference 2: Package versions
 
-Suppose you installed your package locally. Then, you can use different versions of the same package for multiple app development.
+假设你在本地安装了你的包。那么，你可以使用同一个包的不同版本来开发多个应用程序(译者注：你可以在不同的目录安装)。
 
-However, you are forced to use the same package version for all your apps when you install globally.
+然而，当你在全球范围内安装时，你被迫为你的所有应用程序使用相同的软件包版本。
 
 #### Difference 3: Updates
 
-A local installation allows you to choose the project's packages you wish to upgrade to the latest version. This makes it easier to manage upgrades that break compatibility with other packages.
+本地安装允许你选择你想升级到最新版本的项目包。这使你更容易管理那些破坏与其他软件包兼容性的升级。
 
-However, upgrading a globally installed package updates the package for all projects—which can cause maintenance nightmares if the upgrade breaks compatibility with other packages.
+然而，升级一个全局安装的包会更新所有项目的包--如果升级破坏了与其他包的兼容性，这可能会导致维护的噩梦。
 
 #### Difference 4: Usage recommendation
 
-Global installation is best for packages you intend to use only on your command line—especially when they provide executable commands reusable across projects.
+全局安装最适合你打算只在你的命令行上使用的软件包--特别是当它们提供了可在不同项目中重复使用的可执行命令。
 
-However, local installation is best for packages you intend to use in your program—through the `import` statement or `require()` function.
+然而，本地安装最适合于你打算在程序中使用的软件包--通过`import`语句或`require()`函数。
 
 #### Difference 5: Examples
 
-[NPM](https://www.npmjs.com/), [React Native CLI](https://reactnative.dev/docs/environment-setup), [Gatsby CLI](https://www.gatsbyjs.com/docs/reference/gatsby-cli/), [Grunt CLI](https://gruntjs.com/getting-started), and [Vue CLI](https://cli.vuejs.org/) are well-known examples of global packages.
+[NPM](https://www.npmjs.com/), [React Native CLI](https://reactnative.dev/docs/environment-setup), [Gatsby CLI](https://www.gatsbyjs.com/docs/reference/gatsby-cli/), [Grunt CLI](https://gruntjs.com/getting-started), 和 [Vue CLI](https://cli.vuejs.org/) 是著名的需要全局软件包的例子。
 
-Common examples of local packages are [Webpack](https://webpack.js.org/), [Lodash](https://lodash.com/), [Jest](https://jestjs.io/), and [MomentJS](https://momentjs.com/).
+本地包的常见例子有 [Webpack](https://webpack.js.org/), [Lodash](https://lodash.com/), [Jest](https://jestjs.io/), and [MomentJS](https://momentjs.com/).
 
-**Note:**
+**注意:**
 
-- You can [do both local and global installation](https://nodejs.org/en/blog/npm/npm-1-0-global-vs-local-installation/#when-you-can-t-choose) of packages you intend to use both on the command line and in your project. Typical examples of such packages are [ExpressJS](https://expressjs.com/) and [CoffeeScript](https://coffeescript.org/).
-- Your package manager does not execute an installed package. NPM (and Yarn) only install packages to the `node_modules` directory. And if you had specified the `--save` command, your manager would add details about the package to the `package.json` file.
-- To execute (run) any [executable](https://helpdeskgeek.com/how-to/what-is-an-executable-file-how-to-create-one/) package, you must explicitly do so yourself. We will discuss how in a later section of this article.
+- 你可以对你打算在命令行和项目中使用的软件包[进行本地和全局安装](https://nodejs.org/en/blog/npm/npm-1-0-global-vs-local-installation/#when-you-can-t-choose)。这种包的典型例子是[ExpressJS](https://expressjs.com/)和[CoffeeScript](https://coffeescript.org/)。
+- 你的包管理器不会执行已安装的包。NPM（和Yarn）只将包安装到`node_modules`目录。而如果你指定了`--save`命令，你的管理器会把软件包的细节添加到`package.json`文件中。
+- 要执行（运行）任何[可执行](https://helpdeskgeek.com/how-to/what-is-an-executable-file-how-to-create-one/)包，你必须自己明确地这样做。我们将在本文后面的章节中讨论如何做。
 
-But what exactly are the `node_modules` folder, `package.json` file, `package-lock.json` file, and `yarn.lock` file? Let's find out.
+但究竟什么是 `node_modules` 文件夹、`package.json` 文件、`package-lock.json` 文件和 `yarn.lock` 文件？让我们来了解一下。
 
 ## What Is a `node_modules` Folder?
 
-The **node\_modules** directory is the folder where NPM places all the packages it downloads locally for your project.
+**node/modules**目录是NPM放置所有为你的项目下载的本地软件包的文件夹。
 
 ## What Is a `package.json` File?
 
-A **package.json** file is a JSON document that package managers—like NPM and Yarn—use to store information about a specific project.
+**package.json**文件是一个JSON文件，包管理器（如NPM和Yarn）使用它来存储特定项目的信息。
 
-In other words, a `package.json` file is a project's metadata file.
+换句话说，`package.json`文件是一个项目的元数据文件。
 
 ### Advantages of a `package.json` File
 
-A `package.json` file:
+ `package.json` 文件:
 
-- makes it possible to publish your project to the NPM registry
-- makes it easy for others to manage and install your package
-- helps NPM manage a [module](https://www.codesweetly.com/javascript-modules-tutorial/)'s dependencies easily
-- makes your package reproducible and shareable with other developers
+- 使得将你的项目发布到NPM registry 成为可能
+- 使得其他人能够轻松地管理和安装你的软件包
+- 帮助NPM轻松管理 [模块](https://www.codesweetly.com/javascript-modules-tutorial/) 的依赖关系
+- 使得你的软件包可以重现并与其他开发者共享
 
 ### How to Create a `package.json` File
 
-Go to your project's root directory and initialize the creation of a `package.json` file by running:
+进入你的项目根目录，通过运行来初始化创建一个`package.json`文件:
 
 ```bash
 npm init

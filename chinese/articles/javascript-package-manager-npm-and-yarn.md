@@ -5,63 +5,63 @@
 
 ![JavaScript Package Manager – Complete Guide to NPM and Yarn](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/package-manager-npm-and-yarn-explained-curology-pDsmoI5j3B8-unsplash.jpg)
 
-A **package manager** is a tool developers use to automate finding, downloading, installing, configuring, upgrading, and removing a system's packages.
+一个 **包管理器** 是开发人员用来自动寻找、下载、安装、配置、升级和删除系统包的工具。
 
-This article will show you all you need to get started with package managers like NPM and Yarn.
+本文将向你展示所有你需要的东西，以开始使用NPM和Yarn等软件包管理器。
 
-But why exactly do we need a package manager in our development workflow? Let's find out.
+但是，究竟为什么我们在开发工作流程中需要一个软件包管理器呢？让我们来了解一下。
 
 ## Why Do You Need a Package Manager?
 
-Suppose there were no package managers. In that case, you would have to do the following manually:
+假设没有软件包管理器。在这种情况下，你将不得不手动完成以下工作:
 
-- Find all the correct packages for your project
-- Verify that the packages don't have any known vulnerabilities
-- Download the packages
-- Install them at the appropriate location
-- Keep track of new updates for all your packages
-- Upgrade each package whenever there is a new release
-- Remove the packages you no longer need
+- 为你的项目找到所有正确的软件包
+- 验证这些包是否有任何已知的漏洞
+- 下载软件包
+- 在适当的位置安装它们
+- 跟踪所有软件包的最新更新
+- 当有新的版本时，升级每个软件包
+- 删除你不再需要的软件包
 
-Manually managing tens or hundreds of packages is a tiresome and time-consuming endeavor.
+手动管理几十或几百个包是一项令人厌烦和耗时的工作。
 
-Therefore, package managers—such as [NPM](https://www.npmjs.com/), [pNPM](https://pnpm.io/), [Bower](https://bower.io/), and [Yarn](https://yarnpkg.com/)—help automate and eliminate the tedious process of managing all your packages manually.
+因此，软件包管理器--如 [NPM](https://www.npmjs.com/)、[pNPM](https://pnpm.io/)、[Bower](https://bower.io/)和 [Yarn](https://yarnpkg.com/)--有助于自动化并消除手动管理所有软件包的繁琐过程。
 
-Keep in mind that a package manager is not the same as a package registry. So, let's find out the main difference.
+请记住，软件包管理器和软件包 registry 是不一样的。因此，让我们找出主要的区别。
 
 ## Package Manager vs. Package Registry – What's the Difference?
 
-A **package manager** is a tool developers use to automatically find, download, install, configure, upgrade, and uninstall a computer's packages.
+一个 **包管理器** 是开发人员用来自动查找、下载、安装、配置、升级和卸载计算机包的工具。
 
-NPM (Node Package Manager) and Yarn (Yet Another Resource Negotiator) are two popularly used package managers.
+NPM（Node Package Manager）和Yarn（Yet Another Resource Negotiator）是两个常用的软件包管理器。
 
-A **package registry** is a database (storage) for thousands of packages (libraries, plugins, frameworks, or tools).
+一个 **package registry** 是一个数据库（存储），用于存储成千上万的包（库、插件、框架或工具）。
 
-In other words, a package registry is the place packages get published to and installed from.
+换句话说,**package registry** 是包被发布到和安装的地方。
 
-[NPM registry](https://www.npmjs.com/) and [GitHub Packages](https://github.com/features/packages) are two popularly used package registries.
+[NPM registry](https://www.npmjs.com/)和[GitHub Packages](https://github.com/features/packages)是两个普遍使用的 package registries。
 
-So, now that we know what a package manager is and why it is needed, we can discuss how to use the two popular ones—NPM and Yarn.
+所以，现在我们知道了什么是包管理器以及为什么需要它，我们可以讨论如何使用两个流行的包管理器 NPM 和 Yarn。
 
-Note that there are numerous NPM vs. Yarn debates out there – so we will avoid them here because the best package manager is the one that works best for you.
+请注意，外面有许多关于NPM和Yarn的争论--所以我们在这里会避免这些争论，因为最好的软件包管理器是最适合你的。
 
-Therefore, this article will show you how NPM and Yarn work rather than tell you which package manager is best. It is then up to you to decide which you prefer.
+因此，本文将向你展示NPM和Yarn是如何工作的，而不是告诉你哪个软件包管理器是最好的。然后由你来决定你喜欢哪一个。
 
-Alternatively, you can choose to use NPM for a specific project and Yarn for another—depending on which manager you believe is best suited for the job.
+另外，你可以选择在一个特定的项目中使用NPM，在另一个项目中使用Yarn,这取决于你认为哪个管理器最适合这项工作。
 
-So, without any further ado, let's begin by learning how to install the two managers.
+因此，不再多说，让我们开始学习如何安装这两个管理器。
 
 ## How to Install Node Package Manager (NPM)
 
-NPM gets installed automatically while installing Node.
+NPM会在安装Node时自动安装。
 
-Therefore, to get NPM installed on your system, go to the [NodeJS](https://nodejs.org/en/) website and get Node's [latest LTS or the current version](https://tamalweb.com/which-nodejs-version).
+因此，要在你的系统上安装NPM，请到 [NodeJS](https://nodejs.org/en/) 网站上获取Node的 [最新LTS或当前版本](https://tamalweb.com/which-nodejs-version)。
 
 ## How to Install Yarn
 
-It is best to install Yarn through NPM. So, first, install NPM from the [Node.js](https://nodejs.org/en/) website.
+最好是通过NPM来安装Yarn。因此，首先，从 [Node.js](https://nodejs.org/en/)网站上安装NPM。
 
-Once you've installed NPM, proceed to install Yarn like so:
+一旦你安装了NPM，就像这样继续安装Yarn:
 
 ```bash
 npm install -g yarn
@@ -69,17 +69,17 @@ npm install -g yarn
 
 ## How to Check the Installed Node Version
 
-To check the Node.js version installed on your system, run:
+要检查你系统上安装的Node.js版本，请运行:
 
 ```bash
 node -v
 ```
 
-The `-v` flag in the snippet above is a shorthand for `--version`.
+上面片段中的`-v`标志是 `--version` 的缩写.
 
 ## How to Check the Installed NPM Version
 
-To check the NPM version installed on your system, run:
+要检查你系统上安装的NPM版本，请运行:
 
 ```bash
 npm -v
@@ -87,7 +87,7 @@ npm -v
 
 ## How to Check the Installed Yarn Version
 
-To check the Yarn version installed on your system, run:
+要检查你系统上安装的Yarn版本，请运行:
 
 ```bash
 yarn -v
@@ -95,7 +95,7 @@ yarn -v
 
 ## How to Upgrade Node Package Manager
 
-Update to the latest NPM version by running:
+通过运行以下程序更新到最新的NPM版本:
 
 ```bash
 npm install npm@latest -g
@@ -103,48 +103,49 @@ npm install npm@latest -g
 
 ## How to Upgrade NodeJS
 
-Suppose you wish to upgrade your Node.js installation. In that case, you have two options:
+假设你希望升级你的Node.js安装。在这种情况下，你有两个选择:
 
 ### Option 1: Upgrade via the NodeJS website
 
-One way to upgrade your NodeJS installation is to manually download and install the latest version from the [Node.js website](https://nodejs.org/en/).
+升级你的NodeJS安装的一种方法是手动从 [Node.js 官网](https://nodejs.org/en/)下载并安装最新版本。
 
 ### Option 2: Upgrade via a version management tool
 
-Another way to upgrade your NodeJS installation is to use a [version manager](https://nodejs.org/en/download/package-manager/) such as [NVM](https://github.com/nvm-sh/nvm), [n](https://github.com/tj/n), or [nvs](https://github.com/jasongin/nvs).
+另一种升级NodeJS安装的方法是使用 [版本管理器](https://nodejs.org/en/download/package-manager/)，如 [NVM](https://github.com/nvm-sh/nvm)、[n](https://github.com/tj/n)，或 [nvs](https://github.com/jasongin/nvs)。
 
 ## How to Upgrade Yarn
 
-Update to the latest Yarn version by running:
+通过运行以下程序更新到最新的Yarn版本:
 
 ```bash
 yarn set version latest
 ```
 
-So, now that we have NPM (or Yarn) on our computer, we can start using the installed manager to find, install, configure, and remove our project's packages.
+所以，现在我们的电脑上有了NPM（或Yarn），我们可以开始使用安装管理器来寻找、安装、配置和删除我们项目的包。
 
-But what exactly is a package? Let's find out.
+但究竟什么是包？让我们来了解一下。
 
 ## What Exactly Is a Package?
 
-A **package** is a [directory](https://www.codesweetly.com/git-basic-introduction/#h-working-directory) (or project) that has a `package.json` file used to record information about it.
+一个 **包** 是一个[目录](https://www.codesweetly.com/git-basic-introduction/#h-working-directory)（或项目），它有一个 `package.json` 文件用来记录它的信息。
 
-**Note:** You can only publish packages (a project described by a `package.json` file) to the [NPM registry](https://docs.npmjs.com/cli/v6/using-npm/registry).
+**注意：** 你只能将包（由`package.json`文件描述的项目）发布到[NPM registry](https://docs.npmjs.com/cli/v6/using-npm/registry)。
 
 ## How to Install Packages
 
-There are two ways to install a package: locally or globally.
+有两种方法来安装软件包：本地或全局。
 
 ### Local package installation
 
-A locally installed package is one that you can use only in the project in which you've installed it.
+一个本地安装的软件包是你只能在你安装它的项目中使用的。
 
-To install a package locally, do the following:
+要在本地安装一个软件包，请执行以下步骤:
 
-1. Navigate to the [root directory](https://www.codesweetly.com/web-tech-glossary/#h-root-directory) of your project from the command line.
-2. Install your package using the NPM or Yarn installation command below (depending on the package manager you've chosen to use for your project).
+1. 从命令行进入到你项目的 [根目录](https://www.codesweetly.com/web-tech-glossary/#h-root-directory)。
 
-**Note:** You must have Node and NPM installed on your system for the NPM (and Yarn) installation commands below to work. You can get both by installing the latest LTS or the current version from the Node.js website.
+2. 使用下面的 NPM 或 Yarn 安装命令安装你的包（取决于你选择的项目使用的包管理器）。
+
+**注意：** 你的系统必须安装Node和NPM，下面的NPM（和Yarn）安装命令才能工作。你可以通过安装最新的LTS或Node.js网站的当前版本来获得这两者。
 
 #### NPM installation command
 
@@ -152,21 +153,21 @@ To install a package locally, do the following:
 npm install package-name --save
 ```
 
-Note that the `--save` command above instructs NPM to save `package-name` in the `package.json` file as one of the packages on which the project depends.
+注意，上面的`--save` 命令指示NPM将 `package.json` 文件中的 `package-name` 保存为项目所依赖的包之一。
 
-Suppose you wish to install an exact version of a package. In such a case, add a `@[version-number]` after the package's name like so:
+假设你希望安装一个精确版本的软件包。在这种情况下，在软件包的名称后面添加 `@[版本号]`，像这样:
 
 ```bash
 npm install package-name@4.14.1 --save
 ```
 
-Alternatively, if the package you are installing is for development and testing purposes, use:
+或者，如果你要安装的软件包是用于开发和测试目的，则使用:
 
 ```bash
 npm install package-name --save-dev
 ```
 
-The commands above will cause NPM to download three items into your project's root directory: a `node_modules` folder, a `package.json` file, and a `package-lock.json` file. We will discuss these items in detail later on in this article.
+上面的命令将使NPM下载三个项目到你的项目根目录：一个 `node_modules` 文件夹，一个 `package.json` 文件，和一个 `package-lock.json` 文件。我们将在本文后面详细讨论这些项目。
 
 #### Yarn installation command
 
@@ -174,39 +175,39 @@ The commands above will cause NPM to download three items into your project's ro
 yarn add package-name
 ```
 
-Suppose you wish to install an exact version of a package. In such a case, add a `@[version-number]` after the package's name like so:
+假设你希望安装一个软件包的确切版本。在这种情况下，请在软件包的名称后面添加一个`@[版本号]`，像这样:
 
 ```bash
 yarn add package-name@4.14.1
 ```
 
-Alternatively, if the package you are installing is for development and testing purposes, use:
+或者，如果你要安装的软件包是用于开发和测试目的，则使用:
 
 ```bash
 yarn add package-name --dev
 ```
 
-The commands above will cause Yarn to download three items into your project's root directory: a `node_modules` folder, a `package.json` file, and a `yarn.lock` file. We will discuss these items in detail later on in this article.
+上面的命令将使Yarn下载三个项目到你的项目根目录：一个 `node_modules` 文件夹，一个`package.json` 文件，和一个 `yarn.lock` 文件。我们将在本文后面详细讨论这些项目。
 
-So, now that we know how to install a package locally, we can discuss the global package installation.
+所以，现在我们知道了如何在本地安装一个包，我们可以讨论全局包的安装。
 
 ### Global package installation
 
-A globally installed package is a package that you can use anywhere on your system.
+全局安装的软件包是一个你可以在系统的任何地方使用的软件包。
 
-To install a package globally, run the code below on your terminal:
+要在全局范围内安装一个软件包，在你的终端上运行下面的代码:
 
 ```bash
 npm install package-name -g
 ```
 
-Alternatively, you can use Yarn like so:
+或者，你可以像这样使用Yarn:
 
 ```bash
 yarn global add package-name
 ```
 
-Note that you can run the commands above from any location on your system.
+注意，你可以从你系统的任何位置运行上述命令。
 
 ### Local vs. global package installation
 

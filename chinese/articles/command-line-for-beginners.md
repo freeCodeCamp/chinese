@@ -13,7 +13,7 @@
 
 开始吧! =D
 
-## Table of Contents
+## 目录
 
 - [Difference between console, terminal, command line (CLI) and Shell](#differencebetweenconsolecommandlinecliterminalandshell)
   - [Console](#console)
@@ -29,7 +29,7 @@
 - [Most common and useful commands to use](#mostcommonandusefulcommandstouse)
   - [Git commands](#gitcommands)
 - [Our first script](#ourfirstscript)
-- [Round up](#roundup)
+- [总结](#总结)
 
 # Difference between console, command line (CLI), terminal and Shell
 

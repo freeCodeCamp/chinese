@@ -676,7 +676,7 @@ git push -u origin main
 
 # 总结
 
-当你开始工作时，终端可能感觉是一个令人生畏和复杂的地方。但是，花时间和精力去学习它的内在和延展，肯定是值得的。效率方面的好处好得不能再好了。
+当你开始工作时，终端可能感觉是一个令人生畏和复杂的地方。但是，花时间和精力去学习它的内在和延展，肯定是值得的。极大提高效率。
 
 > 如果你有兴趣学习更多关于终端和Bash的知识，Zach Gollwitzer在Youtube上有 [一个很棒的速成系列课程](https://www.youtube.com/playlist?list=PLYQSCk-qyTW0d88jNocdi_YIFMA5Fnpug).  
 > 他在其他主题上也有很好的教程，如Node和Javascript，所以我推荐你关注他;)

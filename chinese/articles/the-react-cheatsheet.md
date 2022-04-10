@@ -21,9 +21,9 @@
 
 -   [React元素](#react元素)
 -   [React元素属性](#react元素属性)
--   [React元素风格](#react元素风格)
--   [React Fragments](#react-fragments)
--   [React 组件](#react-components)
+-   [React元素样式](#react元素样式)
+-   [React片段（fragments）](#react片段)
+-   [React组件](#react组件)
 -   [React Props](#react-props)
 -   [React 子元素Props](#react-children-props)
 -   [React Conditionals](#react-conditionals)
@@ -72,26 +72,25 @@ React元素的写法和普通HTML元素一致，你可以在React中使用任意
 <div className="container"></div>
 ```
 
-## React元素风格
+## React元素样式
 
-To apply inline styles, instead of using double quotes (“”), we use two sets of curly braces.
+设置行内样式不使用双引号 (“”), 而是两组花括号。
 
-Inline styles are not written as plain strings, but as properties on objects:
+在React中行内样式并不写作简单的字符串，而是被写作对象的属性。
 
 ```js
 <h1 style={{ fontSize: 24, margin: '0 auto', textAlign: 'center' }}>My header</h1>
 ```
 
-## React Fragments
+## React片段（fragments）
 
-React also gives us an element called a _fragment_.
+React提供一个特殊的元素叫做 _片段（fragment）_.
 
-React requires that all returned elements be returned within a single “parent” component.
+React要求所以返回的元素在单个父组件内。
 
-For example, we can’t return two sibling elements, like an h1 and a paragraph from a component:
-
+比如说，在React组件中不能返回两个相邻的元素，如一个`h1`和一个段落：
 ```
-// this syntax is invalid
+// 以下语法不合法
 function MyComponent() {
   return (
     <h1>My header</h1>
@@ -100,8 +99,7 @@ function MyComponent() {
 } 
 ```
 
-If we don’t want to wrap our elements in a container element like a div, we can use a fragment:
-
+如果我们不想把元素都放在一个`div`容器中，我们可以使用片段（fragment）：
 ```
 // valid syntax
 function MyComponent() {
@@ -114,18 +112,18 @@ function MyComponent() {
 } 
 ```
 
-We can write fragments in a regular or shorthand syntax: <React.Fragment></React.Fragment> or <></>.
+片段（fragment）有常规和简写两种语法： `<React.Fragment></React.Fragment>` 或`<></>`.
 
-## React Components
+## React组件
 
-We can organized groups of elements into React components.
+我们可以讲元素组合成React组件。
 
-A basic function component is written similarly to a regular JavaScript function with a couple of differences.
+一个基本的函数组件的写法和常规的JavaScript函数类似，但是有两点不同：
 
-1.  Component names must start with a capital letter (that is, MyComponent, instead of myComponent)
-2.  Components, unlike JavaScript functions, must return JSX.
+1.  组件名必须首字母大写 (如, 使用MyComponent，不使用myComponent)；
+2.  和JavaScript函数不同，组件必须返回JSX。
 
-Here is the basic syntax of a React function component:
+以下是React函数组件的基本语法：
 
 ```
 function App() {
@@ -137,11 +135,11 @@ function App() {
 
 ## React Props
 
-React components can accept data passed to them called _props_.
+传入React组件的数据被称作_props_.
 
-Props are passed from the parent component to a child component.
+Props由父组件传递到子组件。
 
-Here we are passing a prop `name` from App to the User component.
+以下代码片段中，我们将App的prop `name` 传递给User组件。
 
 ```
 function App() {
@@ -153,11 +151,11 @@ function User(props) {
 }
 ```
 
-Props is an object, so we can select the `name` prop within `User` to get its value.
+Props是一个对象, 所以我们可以在 `User`组件中获取`name` prop的值。
 
-> To embed any dynamic value (that is, a variable or expression) within JSX, you must wrap it in curly braces.
+> 在JSX中嵌套任何动态值（如：变量或者表达式），必须用花括号框住。
 
-Since we are only using the `name` property on the props object, we can make our code simpler with object destructuring:
+因为我们只需要使用props对象中的`name`属性, 因此我们可以使用对象结构来简化代码:
 
 ```
 function App() {
@@ -169,13 +167,13 @@ function User({ name }) {
 }
 ```
 
-Any JavaScript value can be passed as a prop, including other elements and components.
+任意JavaScript的值都可以通过props来传递，包括其他的元素和组件。
 
 ## React Children Props
 
-Props can also be passed by placing data between the opening and closing tags of a component.
+组件中两个标签之间的数据也可以通过props来传递。
 
-Props that are passed this way are placed on the `children` property.
+以这种方式传递的props在子组件中用`children`属性呈现。
 
 ```
 function App() {

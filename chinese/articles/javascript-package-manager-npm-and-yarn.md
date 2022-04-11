@@ -436,7 +436,7 @@ NPM建议有一个`"description"`属性，使你的包在NPM网站上更容易�
 
 #### keywords
 
-The `"keywords"` field specifies an array of keywords that can help people discover your package.
+`"keywords"`字段指定了几个关键词，可以帮助人们通过搜索发现你的包。
 
 **Here's an example:**
 
@@ -452,13 +452,13 @@ The `"keywords"` field specifies an array of keywords that can help people disco
 }
 ```
 
-The `"keywords"` property is part of the information shown when people run the `npm search` command.
+`"keywords"`属性是人们运行`npm search`命令时显示的部分信息。
 
 #### author
 
-The `"author"` field lists a project's author's details.
+`"author"` 字段列出了一个项目的作者的详细资料。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -466,7 +466,7 @@ The `"author"` field lists a project's author's details.
 }
 ```
 
-You can also write the snippet above as:
+你也可以把上面的片段写成:
 
 ```json
 {
@@ -478,13 +478,13 @@ You can also write the snippet above as:
 }
 ```
 
-Note that the `"email"` and `"url"` properties are optional.
+注意，`"email"` 和 `"url"` 属性是可选的。
 
 #### dependencies
 
-The `"dependencies"` field lists all the packages a project depends on in production.
+ `"dependencies"` 字段列出了一个项目在生产中依赖的所有软件包。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -495,18 +495,18 @@ The `"dependencies"` field lists all the packages a project depends on in produc
 }
 ```
 
-So, whenever a user installs your project from the NPM registry, the dependencies property ensures package managers can automatically find and install the packages listed.
+因此，每当用户从NPM registry 安装你的项目时，依赖项属性就会确保包管理器能够自动找到并安装列出的包。
 
-Note that you can add a package to the `"dependencies"` field through either of the following ways:
+请注意，你可以通过以下两种方式将一个包添加到 `"dependencies"`字段中:
 
-- Manually add the name and the [semantic version](https://docs.npmjs.com/about-semantic-versioning) of each package your project depends on in production.
-- Run the `npm install package-name --save-prod` command on your terminal. Or `yarn add package-name` if Yarn is your package manager.
+- 手动添加你的项目在生产中依赖的每个软件包的名称和 [语义版本](https://docs.npmjs.com/about-semantic-versioning)。
+- 在你的终端上运行 `npm install package-name --save-prod` 命令。如果Yarn是你的软件包管理器，则可以使用 `yarn add package-name`。
 
 #### devDependencies
 
-The `"devDependencies"` field lists all the packages a project does not need in production—but requires for its local development and testing purposes.
+`"devDependencies"` 字段列出了一个项目在生产中不需要的所有软件包，但在本地开发和测试时需要。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -517,20 +517,20 @@ The `"devDependencies"` field lists all the packages a project does not need in 
 }
 ```
 
-Note that the packages listed in the `"devDependencies"` field will be available in the project's development environment but not on its production server.
+请注意，在 `"devDependencies"` 字段中列出的包将在项目的开发环境中可用，但在生产服务器上则没有。
 
-Suppose a user installs the project through the `npm install` (or `yarn add`) command. In such a case, the package manager will find and download all the listed `devDependencies` to the project's `node_modules` directory.
+假设一个用户通过 "npm install"（或 "yarn add"）命令安装项目。在这种情况下，软件包管理器将找到并下载所有列出的`devDependencies`到项目的`node_modules`目录。
 
-Keep in mind that you can add a package to the `"devDependencies"` field through either of the following ways:
+请记住，你可以通过以下两种方式将包添加到 `"devDependencies"` 字段中:
 
-- Manually add the name and the semantic version of each package on which your project depends for its development and testing purposes.
-- Run the `npm install package-name --save-dev` command on your terminal. Or `yarn add package-name --dev` if Yarn is your package manager.
+- 手动添加你的项目在开发和测试中所依赖的每个软件包的名称和语义版本。
+- 在你的终端上运行`npm install package-name --save-dev`命令。如果Yarn是你的软件包管理器，则可以使用`yarn add package-name --dev`。
 
 #### homepage
 
-The `"homepage"` field specifies the URL to your project's homepage.
+`"homepage"` 字段指定了你的项目主页的URL。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -538,43 +538,43 @@ The `"homepage"` field specifies the URL to your project's homepage.
 }
 ```
 
-So, now that we know what a `package.json` file is, we can discuss `package-lock.json`.
+所以，现在我们知道什么是`package.json`文件，我们可以讨论`package-lock.json`。
 
 ## What Is a `package-lock.json` File?
 
-The **package-lock.json** file is a [document](https://www.codesweetly.com/document-vs-data-vs-code/#h-what-is-a-document) NPM uses to record the exact version of all the packages you've installed locally to your project's `node_modules` directory.
+**package-lock.json** 文件是 NPM 用来记录你在本地安装到项目 `node_modules` 目录下的所有软件包的准确版本的 [文件](https://www.codesweetly.com/document-vs-data-vs-code/#h-what-is-a-document)。
 
-A `package-lock.json` file makes an app 100% reproducible in the exact way you published it to the NPM registry.
+`package-lock.json` 文件使应用程序以您发布到 NPM registry 后以确切方式100% 复现。
 
-So, suppose a user clones your app and runs the `npm install` command. In such a case, `package-lock.json` ensures that the user downloads the exact version of the packages you used to develop the application.
+因此，假设一个用户克隆了你的应用程序并运行了`npm install`命令。在这种情况下，`package-lock.json`确保用户下载的是你用来开发应用程序的确切版本的软件包。
 
-For instance, let's say a user cloned your app containing _no_ `package-lock.json` file, and a dependency used in the app has a newer version.
+例如，假设一个用户克隆了你的应用程序，其中没有`package-lock.json`文件，而该应用程序中使用的一个依赖项有一个较新的版本。
 
-Suppose the dependency's version number in the `package.json` file has a caret sign (for example, `^2.6.2`). In that case, NPM will install the latest minor version of the dependency—which might cause the app to produce erroneous results.
+假设`package.json`文件中的依赖关系的版本号有一个圆点符号（例如，`^2.6.2`）。在这种情况下，NPM将安装该依赖的最新次要版本--这可能导致应用程序产生错误的结果。
 
-However, suppose the user cloned your app containing a `package-lock.json` file. In that case, NPM will install the exact version of the dependency as recorded in the `package-lock.json` file—regardless of whether a newer version exists.
+然而，假设用户克隆了你的应用程序，其中包含一个`package-lock.json`文件。在这种情况下，NPM将安装`package-lock.json`文件中记录的依赖关系的确切版本--不管是否存在更新的版本。
 
-Therefore, users will always get your app the precise way you published it to the NPM registry.
+因此，用户将始终以你发布到NPM注册表的精确方式获得你的应用程序。
 
-In other words, NPM uses the `package-lock.json` file to lock your package's dependencies to the specific version numbers you used for the project's development.
+换句话说，NPM使用`package-lock.json`文件将你的软件包的依赖关系锁定在你用于项目开发的特定版本号上。
 
-**Note:** NPM will update the packages recorded in the `package-lock.json` file whenever you run the `npm update` command.
+**注意：** 只要你运行 `npm update` 命令，NPM就会更新 `package-lock.json` 文件中记录的软件包。
 
 ## What Is a `yarn.lock` File?
 
-The `yarn.lock` file is a document Yarn uses to record the exact version of all the packages you've installed locally to your project's `node_modules` directory.
+`yarn.lock`文件是Yarn用来记录你在项目的`node_modules`目录下安装的所有软件包的确切版本。
 
-The `yarn.lock` file is comparable to NPM's [package-lock.json](#what-is-a-package-lock-json-file) lockfile.
+`yarn.lock`文件与NPM的 [package-lock.json](#what-is-a-package-lock-json-file) 锁文件相当。
 
-We earlier mentioned that your package manager does not execute an installed package—you must explicitly do so yourself. Let's discuss how.
+我们之前提到，你的软件包管理器不会执行已安装的软件包--除非你自己明确地这样做。让我们来讨论一下如何做。
 
 ## How to Run an Executable Package
 
-There are several ways to run an executable package. Below are the standard techniques.
+有几种方法来运行一个可执行包。以下是标准的技术。
 
 ### Manually locate and execute the package
 
-One way to run an executable package is to type its local path on your command line like so:
+运行可执行包的一种方法是在你的命令行中输入其本地路径，如图所示:
 
 ```bash
 ./node_modules/.bin/package-name
@@ -582,7 +582,7 @@ One way to run an executable package is to type its local path on your command l
 
 ### Add the package to the package.json's `scripts` field
 
-An alternate way to execute a package is to first add it to the `"scripts"` field of your project's package.json file like this:
+另一种执行软件包的方法是，首先将其添加到你的项目package.json文件的`"scripts"`字段中，像这样:
 
 ```json
 {
@@ -594,15 +594,15 @@ An alternate way to execute a package is to first add it to the `"scripts"` fiel
 }
 ```
 
-Afterward, you can run the package like so:
+之后，你可以像这样运行软件包:
 
 ```bash
 npm run desired-name
 ```
 
-Note that the command above is shorthand for `npm run-script desired-name`.
+注意，上面的命令是 `npm run-script desired-name` 的简写。
 
-Alternatively, you can execute the package with Yarn like so:
+另外，你也可以像这样用Yarn来执行这个包:
 
 ```bash
 yarn run desired-name
@@ -620,13 +620,13 @@ yarn run desired-name
 }
 ```
 
-The snippet above added [webpack](https://www.codesweetly.com/javascript-module-bundler/) to your `package.json`'s `"scripts"` field. So, we can now execute `webpack` on the command line like this:
+上面的片段将[webpack](https://www.codesweetly.com/javascript-module-bundler/)添加到你的 `package.json` 的 `"scripts"` 字段。因此，我们现在可以像这样在命令行中执行 `webpack`:
 
 ```bash
 npm run build
 ```
 
-Or, if your package manager is Yarn, you can run webpack like this:
+或者，如果你的软件包管理器是Yarn，你可以像这样运行webpack:
 
 ```bash
 yarn run build
@@ -634,7 +634,7 @@ yarn run build
 
 ### Use NPX
 
-A faster way to run an executable package is to use NPX like so:
+运行可执行包的一个更快的方法是像这样使用NPX:
 
 ```bash
 npx package-name

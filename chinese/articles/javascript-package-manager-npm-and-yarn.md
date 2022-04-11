@@ -830,8 +830,8 @@ npm uninstall package-name
 
 **注意:**
 
-- `-S` (或 `--save`) 标志，将对软件包的引用保存到项目`package.json`文件中`dependencies`字段中。
-- `-D` (或 `--save-dev`) 标志，将对包的引用保存到项目`package.json`文件中`devDependencies`字段中。
+- `-S` (或 `--save`) 标志，将对项目`package.json`文件中`dependencies`字段中软件包的引用删除。
+- `-D` (或 `--save-dev`) 标志，将对项目`package.json`文件中`devDependencies`字段中对包的引用删除。
 
 对于用Yarn管理的项目，运行:
 
@@ -882,41 +882,41 @@ NPM 对于 [公共包开发者](https://www.npmjs.com/products) 是一个免费�
 
 ### Step 1: Sign in or sign up
 
-Go to the [NPM website](https://www.npmjs.com/) and sign in (or sign up if you do not yet have an account).
+进入 [NPM website](https://www.npmjs.com/) 并登录(如果你还没有账户，也可以注册)。
 
-**Note:** make sure that you verify your email after creating a new account. Otherwise, you will get a `403 Forbidden` error while publishing your package.
+**注意：** 确保你在创建新账户后验证你的电子邮件。否则，在发布你的软件包时，你会得到一个`403 Forbidden`的错误。
 
 ### Step 2: Log in
 
-Login to your NPM account from the command line like so:
+从命令行登录到你的NPM账户，像这样:
 
 ```bash
 npm login
 ```
 
-**Note:** You can use the `npm whoami` command to check if you are currently logged in.
+**注意：** 你可以使用 `npm whoami` 命令来检查你当前是否已经登录。
 
 ### Step 3: Publish your package
 
-Go to your project's root directory and publish it like so:
+进入你的项目的根目录，像这样发布它:
 
 ```bash
 npm publish
 ```
 
-Make sure that your package's name does not currently exist on NPM. Otherwise, you will get an error while publishing.
+确保你的包的名字目前在NPM上不存在。否则，你在发布时将得到一个错误。
 
-You can use the `npm search` command (or the [NPM website](https://www.npmjs.com/)'s search bar) to search if the name you wish to use already exists on NPM.
+你可以使用 `npm search` 命令（或 [NPM website](https://www.npmjs.com/)的搜索栏）来搜索你想使用的名字是否已经存在于NPM上。
 
-Suppose all the suitable names for your package are already taken. In that case, NPM allows you to publish your project as a scope.
+假设所有适合你的包的名字都已经被占用了。在这种情况下，NPM允许你将你的项目作为一个范围发布。
 
-In other words, you can publish your package as a sub-section of your username. Let's see how below.
+换句话说，你可以把你的包作为你的用户名的一个子部分发布。让我们看看下面的方法。
 
 ### How to publish your package as a scope of your username
 
-Open your `package.json` file and prefix your package's name with your username.
+打开你的`package.json`文件，在你的包的名字前加上你的用户名。
 
-**Here's an example:**
+**下面一个例子:**
 
 ```json
 {
@@ -927,31 +927,31 @@ Open your `package.json` file and prefix your package's name with your username.
 }
 ```
 
-NPM's default setting assumes that a scoped name package is a private project. So, you will get an error if you use the `npm publish` command to share a scoped name package.
+NPM的默认设置是假定一个范围内的名称包是一个私人项目。因此，如果你使用 `npm publish` 命令来共享一个范围内的名称包，你会得到一个错误。
 
-Therefore, to publish your package as a scope of your username, add the `--access=public` flag to the `npm publish` command:
+因此，要把你的包发布为你的用户名的范围，请在 `npm publish` 命令中添加 `--access=public` 标志:
 
 ```bash
 npm publish --access=public
 ```
 
-**Note:** You can make your project a scoped package during the initialization process by using the `npm init --scope=username` command instead of `npm init`.
+**注意：** 你可以在初始化过程中通过使用 `npm init --scope=username` 命令而不是`npm init`使你的项目成为一个范围内的软件包。
 
 ## Overview
 
-This article discussed what a package manager is. We also looked at how two popular package managers (NPM and Yarn) work.
+这篇文章讨论了什么是软件包管理器。我们还看了两个流行的包管理器（NPM和Yarn）是如何工作的。
 
-Thanks for reading!
+谢谢你的阅读!
 
 ### **And here's a useful ReactJS resource:**
 
-I wrote a book about React!
+我写了一本关于React!
 
-- It's beginners friendly ✔
-- It has live code snippets ✔
-- It contains scalable projects ✔
-- It has plenty of easy-to-grasp examples ✔
+- 对初学者友好 ✔
+- 它有可用的代码片段 ✔
+- 它包含可扩展的项目 ✔
+- 它有大量易于掌握的例子 ✔
 
-The [React Explained Clearly](https://amzn.to/30iVPIG) book is all you need to understand ReactJS.
+[React Explained Clearly](https://amzn.to/30iVPIG) 这本书包含了你了解ReactJS所需要的一切。
 
 [![React Explained Clearly Book Now Available at Amazon](https://www.freecodecamp.org/news/content/images/2022/01/Twitter-React_Explained_Clearly-CodeSweetly-Oluwatobi_Sofela.jpg)](https://amzn.to/30iVPIG)

@@ -1,315 +1,316 @@
-> -  原文地址：[JavaScript Package Manager – Complete Guide to NPM and Yarn](https://www.freecodecamp.org/news/javascript-package-manager-npm-and-yarn/)
-> -  原文作者：[OluwatobiSofela](https://www.freecodecamp.org/news/author/oluwatobiss/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[JavaScript Package Manager – Complete Guide to NPM and Yarn](https://www.freecodecamp.org/news/javascript-package-manager-npm-and-yarn/)
+> - 原文作者：[Oluwatobi Sofela](https://www.freecodecamp.org/news/author/oluwatobiss/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![JavaScript Package Manager – Complete Guide to NPM and Yarn](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/package-manager-npm-and-yarn-explained-curology-pDsmoI5j3B8-unsplash.jpg)
 
-A **package manager** is a tool developers use to automate finding, downloading, installing, configuring, upgrading, and removing a system's packages.
+一个 **包管理器** 是开发人员用来自动寻找、下载、安装、配置、升级和删除系统包的工具。
 
-This article will show you all you need to get started with package managers like NPM and Yarn.
+本文将向你展示所有你需要的东西，以开始使用NPM和Yarn等软件包管理器。
 
-But why exactly do we need a package manager in our development workflow? Let's find out.
+但是，究竟为什么我们在开发工作流程中需要一个软件包管理器呢？让我们来了解一下。
 
-## Why Do You Need a Package Manager?
+## 为什么你需要一个软件包管理器？
 
-Suppose there were no package managers. In that case, you would have to do the following manually:
+假设没有软件包管理器。在这种情况下，你将不得不手动完成以下工作:
 
--   Find all the correct packages for your project
--   Verify that the packages don't have any known vulnerabilities
--   Download the packages
--   Install them at the appropriate location
--   Keep track of new updates for all your packages
--   Upgrade each package whenever there is a new release
--   Remove the packages you no longer need
+- 为你的项目找到所有正确的软件包
+- 验证这些包是否有任何已知的漏洞
+- 下载软件包
+- 在适当的位置安装它们
+- 跟踪所有软件包的最新更新
+- 当有新的版本时，升级每个软件包
+- 删除你不再需要的软件包
 
-Manually managing tens or hundreds of packages is a tiresome and time-consuming endeavor.
+手动管理几十或几百个包是一项令人厌烦和耗时的工作。
 
-Therefore, package managers—such as [NPM](https://www.npmjs.com/), [pNPM](https://pnpm.io/), [Bower](https://bower.io/), and [Yarn](https://yarnpkg.com/)—help automate and eliminate the tedious process of managing all your packages manually.
+因此，软件包管理器--如 [NPM](https://www.npmjs.com/)、[pNPM](https://pnpm.io/)、[Bower](https://bower.io/)和 [Yarn](https://yarnpkg.com/)--有助于自动化并消除手动管理所有软件包的繁琐过程。
 
-Keep in mind that a package manager is not the same as a package registry. So, let's find out the main difference.
+请记住，软件包管理器和软件包 registry 是不一样的。因此，让我们找出主要的区别。
 
-## Package Manager vs. Package Registry – What's the Difference?
+## 软件包管理器与 Package Registry - 有什么区别？
 
-A **package manager** is a tool developers use to automatically find, download, install, configure, upgrade, and uninstall a computer's packages.
+一个 **包管理器** 是开发人员用来自动查找、下载、安装、配置、升级和卸载计算机包的工具。
 
-NPM (Node Package Manager) and Yarn (Yet Another Resource Negotiator) are two popularly used package managers.
+NPM（Node Package Manager）和Yarn（Yet Another Resource Negotiator）是两个常用的软件包管理器。
 
-A **package registry** is a database (storage) for thousands of packages (libraries, plugins, frameworks, or tools).
+一个 **package registry** 是一个数据库（存储），用于存储成千上万的包（库、插件、框架或工具）。
 
-In other words, a package registry is the place packages get published to and installed from.
+换句话说,**package registry** 是包被发布到和安装的地方。
 
-[NPM registry](https://www.npmjs.com/) and [GitHub Packages](https://github.com/features/packages) are two popularly used package registries.
+[NPM registry](https://www.npmjs.com/) 和 [GitHub Packages](https://github.com/features/packages) 是两个普遍使用的 package registries。
 
-So, now that we know what a package manager is and why it is needed, we can discuss how to use the two popular ones—NPM and Yarn.
+所以，现在我们知道了什么是包管理器以及为什么需要它，我们可以讨论如何使用两个流行的包管理器 NPM 和 Yarn。
 
-Note that there are numerous NPM vs. Yarn debates out there – so we will avoid them here because the best package manager is the one that works best for you.
+请注意，外面有许多关于NPM和Yarn的争论--所以我们在这里会避免这些争论，因为最好的软件包管理器是最适合你的。
 
-Therefore, this article will show you how NPM and Yarn work rather than tell you which package manager is best. It is then up to you to decide which you prefer.
+因此，本文将向你展示NPM和Yarn是如何工作的，而不是告诉你哪个软件包管理器是最好的。然后由你来决定你喜欢哪一个。
 
-Alternatively, you can choose to use NPM for a specific project and Yarn for another—depending on which manager you believe is best suited for the job.
+另外，你可以选择在一个特定的项目中使用NPM，在另一个项目中使用Yarn,这取决于你认为哪个管理器最适合这项工作。
 
-So, without any further ado, let's begin by learning how to install the two managers.
+因此，不再多说，让我们开始学习如何安装这两个管理器。
 
-## How to Install Node Package Manager (NPM)
+## 如何安装Node Package Manager (NPM)
 
-NPM gets installed automatically while installing Node.
+NPM会在安装Node时自动安装。
 
-Therefore, to get NPM installed on your system, go to the [NodeJS](https://nodejs.org/en/) website and get Node's [latest LTS or the current version](https://tamalweb.com/which-nodejs-version).
+因此，要在你的系统上安装NPM，请到 [NodeJS](https://nodejs.org/en/) 网站上获取Node的 [最新LTS或当前版本](https://tamalweb.com/which-nodejs-version)。
 
-## How to Install Yarn
+## 如何安装Yarn
 
-It is best to install Yarn through NPM. So, first, install NPM from the [Node.js](https://nodejs.org/en/) website.
+最好是通过NPM来安装Yarn。因此，首先，从 [Node.js](https://nodejs.org/en/)网站上安装NPM。
 
-Once you've installed NPM, proceed to install Yarn like so:
+一旦你安装了NPM，就像这样继续安装Yarn:
 
 ```bash
 npm install -g yarn
 ```
 
-## How to Check the Installed Node Version
+## 如何检查已安装的 Node 版本
 
-To check the Node.js version installed on your system, run:
+要检查你系统上安装的Node.js版本，请运行:
 
 ```bash
 node -v
 ```
 
-The `-v` flag in the snippet above is a shorthand for `--version`.
+上面片段中的`-v`标志是 `--version` 的缩写.
 
-## How to Check the Installed NPM Version
+## 如何检查已安装的NPM版本
 
-To check the NPM version installed on your system, run:
+要检查你系统上安装的NPM版本，请运行:
 
 ```bash
 npm -v
 ```
 
-## How to Check the Installed Yarn Version
+## 如何检查已安装的Yarn版本
 
-To check the Yarn version installed on your system, run:
+要检查你系统上安装的Yarn版本，请运行:
 
 ```bash
 yarn -v
 ```
 
-## How to Upgrade Node Package Manager
+## 如何升级Node Package Manager
 
-Update to the latest NPM version by running:
+通过运行以下程序更新到最新的NPM版本:
 
 ```bash
 npm install npm@latest -g
 ```
 
-## How to Upgrade NodeJS
+## 如何升级NodeJS
 
-Suppose you wish to upgrade your Node.js installation. In that case, you have two options:
+假设你希望升级你的Node.js安装。在这种情况下，你有两个选择:
 
-### Option 1: Upgrade via the NodeJS website
+### Option 1: 通过NodeJS网站升级
 
-One way to upgrade your NodeJS installation is to manually download and install the latest version from the [Node.js website](https://nodejs.org/en/).
+升级你的NodeJS安装的一种方法是手动从 [Node.js 官网](https://nodejs.org/en/)下载并安装最新版本。
 
-### Option 2: Upgrade via a version management tool
+### Option 2: 通过版本管理工具进行升级
 
-Another way to upgrade your NodeJS installation is to use a [version manager](https://nodejs.org/en/download/package-manager/) such as [NVM](https://github.com/nvm-sh/nvm), [n](https://github.com/tj/n), or [nvs](https://github.com/jasongin/nvs).
+另一种升级NodeJS安装的方法是使用 [版本管理器](https://nodejs.org/en/download/package-manager/)，如 [NVM](https://github.com/nvm-sh/nvm)、[n](https://github.com/tj/n)，或 [nvs](https://github.com/jasongin/nvs)。
 
-## How to Upgrade Yarn
+## 如何升级 Yarn
 
-Update to the latest Yarn version by running:
+通过运行以下程序更新到最新的Yarn版本:
 
 ```bash
 yarn set version latest
 ```
 
-So, now that we have NPM (or Yarn) on our computer, we can start using the installed manager to find, install, configure, and remove our project's packages.
+所以，现在我们的电脑上有了NPM（或Yarn），我们可以开始使用安装管理器来寻找、安装、配置和删除我们项目的包。
 
-But what exactly is a package? Let's find out.
+但究竟什么是包？让我们来了解一下。
 
-## What Exactly Is a Package?
+## 究竟什么是 Package(包)?
 
-A **package** is a [directory](https://www.codesweetly.com/git-basic-introduction/#h-working-directory) (or project) that has a `package.json` file used to record information about it.
+一个 **包** 是一个[目录](https://www.codesweetly.com/git-basic-introduction/#h-working-directory)（或项目），它有一个 `package.json` 文件用来记录它的信息。
 
-**Note:** You can only publish packages (a project described by a `package.json` file) to the [NPM registry](https://docs.npmjs.com/cli/v6/using-npm/registry).
+**注意：** 你只能将包（由`package.json`文件描述的项目）发布到[NPM registry](https://docs.npmjs.com/cli/v6/using-npm/registry)。
 
-## How to Install Packages
+## 如何安装软件包
 
-There are two ways to install a package: locally or globally.
+有两种方法来安装软件包：本地或全局。
 
-### Local package installation
+### 软件包的本地安装
 
-A locally installed package is one that you can use only in the project in which you've installed it.
+一个本地安装的软件包是你只能在你安装它的项目中使用的。
 
-To install a package locally, do the following:
+要在本地安装一个软件包，请执行以下步骤:
 
-1.  Navigate to the [root directory](https://www.codesweetly.com/web-tech-glossary/#h-root-directory) of your project from the command line.
-2.  Install your package using the NPM or Yarn installation command below (depending on the package manager you've chosen to use for your project).
+1. 从命令行进入到你项目的 [根目录](https://www.codesweetly.com/web-tech-glossary/#h-root-directory)。
 
-**Note:** You must have Node and NPM installed on your system for the NPM (and Yarn) installation commands below to work. You can get both by installing the latest LTS or the current version from the Node.js website.
+2. 使用下面的 NPM 或 Yarn 安装命令安装你的包（取决于你选择的项目使用的包管理器）。
 
-#### NPM installation command
+**注意：** 你的系统必须安装Node和NPM，下面的NPM（和Yarn）安装命令才能工作。你可以通过安装最新的LTS或Node.js网站的当前版本来获得这两者。
+
+#### NPM installation  命令
 
 ```bash
 npm install package-name --save
 ```
 
-Note that the `--save` command above instructs NPM to save `package-name` in the `package.json` file as one of the packages on which the project depends.
+注意，上面的`--save` 命令指示NPM将 `package.json` 文件中的 `package-name` 保存为项目所依赖的包之一。
 
-Suppose you wish to install an exact version of a package. In such a case, add a `@[version-number]` after the package's name like so:
+假设你希望安装一个精确版本的软件包。在这种情况下，在软件包的名称后面添加 `@[版本号]`，像这样:
 
 ```bash
 npm install package-name@4.14.1 --save
 ```
 
-Alternatively, if the package you are installing is for development and testing purposes, use:
+或者，如果你要安装的软件包是用于开发和测试目的，则使用:
 
 ```bash
 npm install package-name --save-dev
 ```
 
-The commands above will cause NPM to download three items into your project's root directory: a `node_modules` folder, a `package.json` file, and a `package-lock.json` file. We will discuss these items in detail later on in this article.
+上面的命令将使NPM下载三个项目到你的项目根目录：一个 `node_modules` 文件夹，一个 `package.json` 文件，和一个 `package-lock.json` 文件。我们将在本文后面详细讨论这些项目。
 
-#### Yarn installation command
+#### Yarn installation 命令
 
 ```bash
 yarn add package-name
 ```
 
-Suppose you wish to install an exact version of a package. In such a case, add a `@[version-number]` after the package's name like so:
+假设你希望安装一个软件包的确切版本。在这种情况下，请在软件包的名称后面添加一个`@[版本号]`，像这样:
 
 ```bash
 yarn add package-name@4.14.1
 ```
 
-Alternatively, if the package you are installing is for development and testing purposes, use:
+或者，如果你要安装的软件包是用于开发和测试目的，则使用:
 
 ```bash
 yarn add package-name --dev
 ```
 
-The commands above will cause Yarn to download three items into your project's root directory: a `node_modules` folder, a `package.json` file, and a `yarn.lock` file. We will discuss these items in detail later on in this article.
+上面的命令将使Yarn下载三个项目到你的项目根目录：一个 `node_modules` 文件夹，一个`package.json` 文件，和一个 `yarn.lock` 文件。我们将在本文后面详细讨论这些项目。
 
-So, now that we know how to install a package locally, we can discuss the global package installation.
+所以，现在我们知道了如何在本地安装一个包，我们可以讨论全局包的安装。
 
-### Global package installation
+### 软件包的全局安装
 
-A globally installed package is a package that you can use anywhere on your system.
+全局安装的软件包是一个你可以在系统的任何地方使用的软件包。
 
-To install a package globally, run the code below on your terminal:
+要在全局范围内安装一个软件包，在你的终端上运行下面的代码:
 
 ```bash
 npm install package-name -g
 ```
 
-Alternatively, you can use Yarn like so:
+或者，你可以像这样使用Yarn:
 
 ```bash
 yarn global add package-name
 ```
 
-Note that you can run the commands above from any location on your system.
+注意，你可以从你系统的任何位置运行上述命令。
 
-### Local vs. global package installation
+### 软件包的本地与全局安装
 
-Generally, it is better to install a package locally. Below are some of the differences between a local and global installation.
+一般来说，最好是在本地安装一个软件包。下面是本地安装和全局安装之间的一些区别。
 
-#### Difference 1: Installation location
+#### 差别1：安装位置
 
-A locally installed package gets installed in the directory where you executed the `npm install package-name` (or `yarn add package-name`) command.
+一个本地安装的包会被安装在你执行`npm install package-name`（或`yarn add package-name`）命令的目录下。
 
-Specifically, you will find a project's locally installed packages in its `node_module` directory.
+具体来说，你可以在一个项目的 `node_module` 目录下找到本地安装的软件包。
 
-In contrast, a globally installed package gets installed in a single location on your system. The exact location depends on your system's configuration.
+相比之下，全局安装的包会被安装在你系统中的一个位置。具体位置取决于你系统的配置。
 
-#### Difference 2: Package versions
+#### 差异2：软件包版本
 
-Suppose you installed your package locally. Then, you can use different versions of the same package for multiple app development.
+假设你在本地安装了你的包。那么，你可以使用同一个包的不同版本来开发多个应用程序(译者注：你可以在不同的目录安装)。
 
-However, you are forced to use the same package version for all your apps when you install globally.
+然而，当你在全球范围内安装时，你被迫为你的所有应用程序使用相同的软件包版本。
 
-#### Difference 3: Updates
+#### 差别3：更新
 
-A local installation allows you to choose the project's packages you wish to upgrade to the latest version. This makes it easier to manage upgrades that break compatibility with other packages.
+本地安装允许你选择你想升级到最新版本的项目包。这使你更容易管理那些破坏与其他软件包兼容性的升级。
 
-However, upgrading a globally installed package updates the package for all projects—which can cause maintenance nightmares if the upgrade breaks compatibility with other packages.
+然而，升级一个全局安装的包会更新所有项目的包--如果升级破坏了与其他包的兼容性，这可能会导致维护的噩梦。
 
-#### Difference 4: Usage recommendation
+#### 差异4：使用建议
 
-Global installation is best for packages you intend to use only on your command line—especially when they provide executable commands reusable across projects.
+全局安装最适合你打算只在你的命令行上使用的软件包--特别是当它们提供了可在不同项目中重复使用的可执行命令。
 
-However, local installation is best for packages you intend to use in your program—through the `import` statement or `require()` function.
+然而，本地安装最适合于你打算在程序中使用的软件包--通过`import`语句或`require()`函数。
 
-#### Difference 5: Examples
+#### 差异5：例子
 
-[NPM](https://www.npmjs.com/), [React Native CLI](https://reactnative.dev/docs/environment-setup), [Gatsby CLI](https://www.gatsbyjs.com/docs/reference/gatsby-cli/), [Grunt CLI](https://gruntjs.com/getting-started), and [Vue CLI](https://cli.vuejs.org/) are well-known examples of global packages.
+[NPM](https://www.npmjs.com/), [React Native CLI](https://reactnative.dev/docs/environment-setup), [Gatsby CLI](https://www.gatsbyjs.com/docs/reference/gatsby-cli/), [Grunt CLI](https://gruntjs.com/getting-started), 和 [Vue CLI](https://cli.vuejs.org/) 是著名的需要全局软件包的例子。
 
-Common examples of local packages are [Webpack](https://webpack.js.org/), [Lodash](https://lodash.com/), [Jest](https://jestjs.io/), and [MomentJS](https://momentjs.com/).
+本地包的常见例子有 [Webpack](https://webpack.js.org/), [Lodash](https://lodash.com/), [Jest](https://jestjs.io/), and [MomentJS](https://momentjs.com/).
 
-**Note:**
+**注意:**
 
--   You can [do both local and global installation](https://nodejs.org/en/blog/npm/npm-1-0-global-vs-local-installation/#when-you-can-t-choose) of packages you intend to use both on the command line and in your project. Typical examples of such packages are [ExpressJS](https://expressjs.com/) and [CoffeeScript](https://coffeescript.org/).
--   Your package manager does not execute an installed package. NPM (and Yarn) only install packages to the `node_modules` directory. And if you had specified the `--save` command, your manager would add details about the package to the `package.json` file.
--   To execute (run) any [executable](https://helpdeskgeek.com/how-to/what-is-an-executable-file-how-to-create-one/) package, you must explicitly do so yourself. We will discuss how in a later section of this article.
+- 你可以对你打算在命令行和项目中使用的软件包[进行本地和全局安装](https://nodejs.org/en/blog/npm/npm-1-0-global-vs-local-installation/#when-you-can-t-choose)。这种包的典型例子是[ExpressJS](https://expressjs.com/)和[CoffeeScript](https://coffeescript.org/)。
+- 你的包管理器不会执行已安装的包。NPM（和Yarn）只将包安装到`node_modules`目录。而如果你指定了`--save`命令，你的管理器会把软件包的细节添加到`package.json`文件中。
+- 要执行（运行）任何[可执行](https://helpdeskgeek.com/how-to/what-is-an-executable-file-how-to-create-one/)包，你必须自己明确地这样做。我们将在本文后面的章节中讨论如何做。
 
-But what exactly are the `node_modules` folder, `package.json` file, `package-lock.json` file, and `yarn.lock` file? Let's find out.
+但究竟什么是 `node_modules` 文件夹、`package.json` 文件、`package-lock.json` 文件和 `yarn.lock` 文件？让我们来了解一下。
 
-## What Is a `node_modules` Folder?
+## 什么是 "node_modules "文件夹？
 
-The **node\_modules** directory is the folder where NPM places all the packages it downloads locally for your project.
+**node/modules**目录是NPM放置所有为你的项目下载的本地软件包的文件夹。
 
-## What Is a `package.json` File?
+## 什么是`package.json`文件？
 
-A **package.json** file is a JSON document that package managers—like NPM and Yarn—use to store information about a specific project.
+**package.json**文件是一个JSON文件，包管理器（如NPM和Yarn）使用它来存储特定项目的信息。
 
-In other words, a `package.json` file is a project's metadata file.
+换句话说，`package.json`文件是一个项目的元数据文件。
 
-### Advantages of a `package.json` File
+### `package.json`文件的优点
 
-A `package.json` file:
+ `package.json` 文件:
 
--   makes it possible to publish your project to the NPM registry
--   makes it easy for others to manage and install your package
--   helps NPM manage a [module](https://www.codesweetly.com/javascript-modules-tutorial/)'s dependencies easily
--   makes your package reproducible and shareable with other developers
+- 使得将你的项目发布到NPM registry 成为可能
+- 使得其他人能够轻松地管理和安装你的软件包
+- 帮助NPM轻松管理 [模块](https://www.codesweetly.com/javascript-modules-tutorial/) 的依赖关系
+- 使得你的软件包可以重现并与其他开发者共享
 
-### How to Create a `package.json` File
+### 如何创建一个`package.json`文件
 
-Go to your project's root directory and initialize the creation of a `package.json` file by running:
+进入你的项目根目录，通过运行来初始化创建一个`package.json`文件:
 
 ```bash
 npm init
 ```
 
-Or, if your package manager is Yarn, run:
+或者，如果你的软件包管理器是Yarn，运行:
 
 ```bash
 yarn init
 ```
 
-Once you've executed the initialization command above, your package manager will walk you through creating the `package.json` file by asking a few questions about your project.
+一旦你执行了上面的初始化命令，你的软件包管理器将通过询问一些关于你的项目的问题来指导你创建`package.json`文件。
 
-If you wish to skip the questionnaire, you can create a default `package.json` file. Let's see how.
+如果你希望跳过问卷调查，你可以创建一个默认的`package.json`文件。让我们来看看如何。
 
-### How to Create a Default `package.json` File
+### 如何创建一个默认的`package.json`文件
 
-Suppose you prefer to skip the questionnaire prompted by the `npm init` (or `yarn init`) command. In such a case, go to your project's [root directory](https://www.codesweetly.com/web-tech-glossary/#h-root-directory) and run:
+假设你喜欢跳过`npm init`（或`yarn init`）命令所提示。在这种情况下，进入你的项目的[根目录](https://www.codesweetly.com/web-tech-glossary/#h-root-directory)并运行。:
 
 ```bash
 npm init -y
 ```
 
-Or, if your package manager is Yarn, run:
+或者，如果你的软件包管理器是Yarn，运行:
 
 ```bash
 yarn init -y
 ```
 
-The command above will use [default values extracted from the current directory](https://docs.npmjs.com/creating-a-package-json-file#default-values-extracted-from-the-current-directory) to create your project's `package.json` file.
+上面的命令将使用[从当前目录获得默认值](https://docs.npmjs.com/creating-a-package-json-file#default-values-extracted-from-the-current-directory)来创建你的项目的`package.json`文件。
 
-**Note:** The `-y` flag is a shorthand for `--yes`.
+**注意：** `-y`标志是 `--yes` 的简写。
 
-Once your package manager finishes its initialization process, your project's `package.json` file will contain an object with a set of properties.
+一旦你的软件包管理器完成了它的初始化过程，你的项目的`package.json`文件将包含一个具有一系列属性的对象。
 
-**Here's an example:**
+**下面是一个例子:**
 
 ```json
 {
@@ -319,31 +320,31 @@ Once your package manager finishes its initialization process, your project's `p
 }
 ```
 
-You can see that the `package.json` file above contains the `name`, `version`, and `main` fields. Let's learn more about these properties below.
+你可以看到上面的`package.json`文件包含`name`、`version`和`main`字段。下面我们来了解一下这些属性。
 
 ### The `package.json`'s Fields
 
-The `package.json`'s properties make your project usable to package managers and end-users.
+`package.json`的属性使你的项目可以被包管理器和终端用户使用。
 
-Suppose you wish to publish your package to the NPM registry. In that case, your `package.json` file must have the `"name"` and `"version"` fields.
+假设你想把你的包发布到NPM registry。在这种情况下，你的 `package.json` 文件必须有 `"name"` 和`"version"` 字段。
 
-However, if you do not intend to publish your package, in that case, all fields—including the `"name"` and `"version"` properties—are optional.
+然而，如果你不打算发布你的包，在这种情况下，所有字段--包括 `"name"` 和 `"version"` 属性--都是可选的。
 
-Let's learn more about the commonly used fields in a `package.json` file.
+让我们了解更多关于 `package.json` 文件中常用的字段。
 
 #### name
 
-The `"name"` field is a property used to record a project's name.
+`"name"` 字段是一个用于记录项目名称的属性。
 
-The `"name"` property's value must be:
+`"name"` 属性的值必须是。
 
--   a single word
--   lowercase lettering
--   and less than or equal to 214 characters
+- 一个单字
+- 小写字母
+- 并且小于或等于214个字符
 
-Note that you can join words together with hyphens and underscores.
+请注意，你可以用连字符和下划线将单词连接起来。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -353,11 +354,11 @@ Note that you can join words together with hyphens and underscores.
 
 #### version
 
-The `"version"` field indicates a project's current version number.
+`"version"` 字段表示一个项目的当前版本号。
 
-The `"version"` property must be in the form of a `major.minor.patch` format. It must also follow the [semantic versioning guidelines](https://docs.npmjs.com/about-semantic-versioning).
+`"version"` 属性必须是 "major.minor.patch "的形式。它还必须遵循[语义版本指南](https://docs.npmjs.com/about-semantic-versioning)。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -367,11 +368,11 @@ The `"version"` property must be in the form of a `major.minor.patch` format. It
 
 #### description
 
-The `"description"` field is a property containing a brief description of a project's purpose.
+`"description"` 字段是一个包含项目目的简要描述的属性。
 
-NPM recommends having a `"description"` property to make your package easier to find on the NPM website.
+NPM建议有一个`"description"`属性，使你的包在NPM网站上更容易找到。
 
-Your description will be one of the things that's shown when people run the `npm search` command.
+当人们运行`npm search`命令时，你的描述将被显示出来。
 
 **Here's an example:**
 
@@ -383,11 +384,11 @@ Your description will be one of the things that's shown when people run the `npm
 
 #### main
 
-The `"main"` field indicates a project's [entry point](https://www.codesweetly.com/web-tech-glossary/#entry-point).
+`"main"` 字段表示一个项目的 [入口点](https://www.codesweetly.com/web-tech-glossary/#entry-point).
 
-In other words, when someone runs the `require()` function, Node will resolve the invocation to `require(<package.json:main>)`.
+换句话说，当有人运行 `require()` 函数时，Node将把调用解析为 `require(<package.json:main>)`。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -397,9 +398,9 @@ In other words, when someone runs the `require()` function, Node will resolve th
 
 #### private
 
-The `"private"` field lets package managers know whether they should publish your project to the NPM registry.
+`"private"`字段让软件包管理员知道他们是否应该将你的项目发布到 NPM registry。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -407,15 +408,15 @@ The `"private"` field lets package managers know whether they should publish you
 }
 ```
 
-If you set your package.json's `"private"` property to `true`, package managers will not publish your project.
+如果你把package.json的 `"private"` 属性设置为 `true`，包管理器将不会发布你的项目。
 
-Therefore, setting the property is an excellent way to prevent accidental publication of your package.
+因此，设置该属性是防止意外发布你的包的一个好办法。
 
 #### scripts
 
-The `"scripts"` field defines the script commands you want to run at various times in your project's lifecycle.
+"scripts"`字段定义了你想在项目生命周期的不同时期运行的脚本命令。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -429,13 +430,13 @@ The `"scripts"` field defines the script commands you want to run at various tim
 }
 ```
 
-The `"scripts"` field above contains five properties whose values are the commands we want our package manager to run whenever we invoke the property's key.
+上面的 "scripts "字段包含五个属性，其值是我们希望包管理器在调用该属性的键时运行的命令。
 
-So, for instance, running `npm run dev` will execute the `"webpack --mode development"` command.
+因此，例如，运行`npm run dev`将执行`"webpack --mode development"`命令。
 
 #### keywords
 
-The `"keywords"` field specifies an array of keywords that can help people discover your package.
+`"keywords"`字段指定了几个关键词，可以帮助人们通过搜索发现你的包。
 
 **Here's an example:**
 
@@ -451,13 +452,13 @@ The `"keywords"` field specifies an array of keywords that can help people disco
 }
 ```
 
-The `"keywords"` property is part of the information shown when people run the `npm search` command.
+`"keywords"`属性是人们运行`npm search`命令时显示的部分信息。
 
 #### author
 
-The `"author"` field lists a project's author's details.
+`"author"` 字段列出了一个项目的作者的详细资料。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -465,7 +466,7 @@ The `"author"` field lists a project's author's details.
 }
 ```
 
-You can also write the snippet above as:
+你也可以把上面的片段写成:
 
 ```json
 {
@@ -477,13 +478,13 @@ You can also write the snippet above as:
 }
 ```
 
-Note that the `"email"` and `"url"` properties are optional.
+注意，`"email"` 和 `"url"` 属性是可选的。
 
 #### dependencies
 
-The `"dependencies"` field lists all the packages a project depends on in production.
+ `"dependencies"` 字段列出了一个项目在生产中依赖的所有软件包。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -494,18 +495,18 @@ The `"dependencies"` field lists all the packages a project depends on in produc
 }
 ```
 
-So, whenever a user installs your project from the NPM registry, the dependencies property ensures package managers can automatically find and install the packages listed.
+因此，每当用户从NPM registry 安装你的项目时，依赖项属性就会确保包管理器能够自动找到并安装列出的包。
 
-Note that you can add a package to the `"dependencies"` field through either of the following ways:
+请注意，你可以通过以下两种方式将一个包添加到 `"dependencies"`字段中:
 
--   Manually add the name and the [semantic version](https://docs.npmjs.com/about-semantic-versioning) of each package your project depends on in production.
--   Run the `npm install package-name --save-prod` command on your terminal. Or `yarn add package-name` if Yarn is your package manager.
+- 手动添加你的项目在生产中依赖的每个软件包的名称和 [语义版本](https://docs.npmjs.com/about-semantic-versioning)。
+- 在你的终端上运行 `npm install package-name --save-prod` 命令。如果Yarn是你的软件包管理器，则可以使用 `yarn add package-name`。
 
 #### devDependencies
 
-The `"devDependencies"` field lists all the packages a project does not need in production—but requires for its local development and testing purposes.
+`"devDependencies"` 字段列出了一个项目在生产中不需要的所有软件包，但在本地开发和测试时需要。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -516,20 +517,20 @@ The `"devDependencies"` field lists all the packages a project does not need in 
 }
 ```
 
-Note that the packages listed in the `"devDependencies"` field will be available in the project's development environment but not on its production server.
+请注意，在 `"devDependencies"` 字段中列出的包将在项目的开发环境中可用，但在生产服务器上则没有。
 
-Suppose a user installs the project through the `npm install` (or `yarn add`) command. In such a case, the package manager will find and download all the listed `devDependencies` to the project's `node_modules` directory.
+假设一个用户通过 "npm install"（或 "yarn add"）命令安装项目。在这种情况下，软件包管理器将找到并下载所有列出的`devDependencies`到项目的`node_modules`目录。
 
-Keep in mind that you can add a package to the `"devDependencies"` field through either of the following ways:
+请记住，你可以通过以下两种方式将包添加到 `"devDependencies"` 字段中:
 
--   Manually add the name and the semantic version of each package on which your project depends for its development and testing purposes.
--   Run the `npm install package-name --save-dev` command on your terminal. Or `yarn add package-name --dev` if Yarn is your package manager.
+- 手动添加你的项目在开发和测试中所依赖的每个软件包的名称和语义版本。
+- 在你的终端上运行`npm install package-name --save-dev`命令。如果Yarn是你的软件包管理器，则可以使用`yarn add package-name --dev`。
 
 #### homepage
 
-The `"homepage"` field specifies the URL to your project's homepage.
+`"homepage"` 字段指定了你的项目主页的URL。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -537,51 +538,51 @@ The `"homepage"` field specifies the URL to your project's homepage.
 }
 ```
 
-So, now that we know what a `package.json` file is, we can discuss `package-lock.json`.
+所以，现在我们知道什么是`package.json`文件，我们可以讨论`package-lock.json`。
 
-## What Is a `package-lock.json` File?
+## 什么是 `package-lock.json` 文件？
 
-The **package-lock.json** file is a [document](https://www.codesweetly.com/document-vs-data-vs-code/#h-what-is-a-document) NPM uses to record the exact version of all the packages you've installed locally to your project's `node_modules` directory.
+**package-lock.json** 文件是 NPM 用来记录你在本地安装到项目 `node_modules` 目录下的所有软件包的准确版本的 [文件](https://www.codesweetly.com/document-vs-data-vs-code/#h-what-is-a-document)。
 
-A `package-lock.json` file makes an app 100% reproducible in the exact way you published it to the NPM registry.
+`package-lock.json` 文件使应用程序以您发布到 NPM registry 后以确切方式100% 复现。
 
-So, suppose a user clones your app and runs the `npm install` command. In such a case, `package-lock.json` ensures that the user downloads the exact version of the packages you used to develop the application.
+因此，假设一个用户克隆了你的应用程序并运行了`npm install`命令。在这种情况下，`package-lock.json`确保用户下载的是你用来开发应用程序的确切版本的软件包。
 
-For instance, let's say a user cloned your app containing _no_ `package-lock.json` file, and a dependency used in the app has a newer version.
+例如，假设一个用户克隆了你的应用程序，其中没有`package-lock.json`文件，而该应用程序中使用的一个依赖项有一个较新的版本。
 
-Suppose the dependency's version number in the `package.json` file has a caret sign (for example, `^2.6.2`). In that case, NPM will install the latest minor version of the dependency—which might cause the app to produce erroneous results.
+假设`package.json`文件中的依赖关系的版本号有一个圆点符号（例如，`^2.6.2`）。在这种情况下，NPM将安装该依赖的最新次要版本--这可能导致应用程序产生错误的结果。
 
-However, suppose the user cloned your app containing a `package-lock.json` file. In that case, NPM will install the exact version of the dependency as recorded in the `package-lock.json` file—regardless of whether a newer version exists.
+然而，假设用户克隆了你的应用程序，其中包含一个`package-lock.json`文件。在这种情况下，NPM将安装`package-lock.json`文件中记录的依赖关系的确切版本--不管是否存在更新的版本。
 
-Therefore, users will always get your app the precise way you published it to the NPM registry.
+因此，用户将始终以你发布到NPM注册表的精确方式获得你的应用程序。
 
-In other words, NPM uses the `package-lock.json` file to lock your package's dependencies to the specific version numbers you used for the project's development.
+换句话说，NPM使用`package-lock.json`文件将你的软件包的依赖关系锁定在你用于项目开发的特定版本号上。
 
-**Note:** NPM will update the packages recorded in the `package-lock.json` file whenever you run the `npm update` command.
+**注意：** 只要你运行 `npm update` 命令，NPM就会更新 `package-lock.json` 文件中记录的软件包。
 
-## What Is a `yarn.lock` File?
+## 什么是 `yarn.lock` 文件？
 
-The `yarn.lock` file is a document Yarn uses to record the exact version of all the packages you've installed locally to your project's `node_modules` directory.
+`yarn.lock`文件是Yarn用来记录你在项目的`node_modules`目录下安装的所有软件包的确切版本。
 
-The `yarn.lock` file is comparable to NPM's [package-lock.json](#what-is-a-package-lock-json-file) lockfile.
+`yarn.lock`文件与NPM的 [package-lock.json](#what-is-a-package-lock-json-file) 锁文件相当。
 
-We earlier mentioned that your package manager does not execute an installed package—you must explicitly do so yourself. Let's discuss how.
+我们之前提到，你的软件包管理器不会执行已安装的软件包--除非你自己明确地这样做。让我们来讨论一下如何做。
 
-## How to Run an Executable Package
+## 如何运行一个可执行包
 
-There are several ways to run an executable package. Below are the standard techniques.
+有几种方法来运行一个可执行包。以下是标准的技术。
 
-### Manually locate and execute the package
+### 手动定位并执行软件包
 
-One way to run an executable package is to type its local path on your command line like so:
+运行可执行包的一种方法是在你的命令行中输入其本地路径，如图所示:
 
 ```bash
 ./node_modules/.bin/package-name
 ```
 
-### Add the package to the package.json's `scripts` field
+### 在package.json的 `scripts` 字段中添加该软件包
 
-An alternate way to execute a package is to first add it to the `"scripts"` field of your project's package.json file like this:
+另一种执行软件包的方法是，首先将其添加到你的项目package.json文件的`"scripts"`字段中，像这样:
 
 ```json
 {
@@ -593,15 +594,15 @@ An alternate way to execute a package is to first add it to the `"scripts"` fiel
 }
 ```
 
-Afterward, you can run the package like so:
+之后，你可以像这样运行软件包:
 
 ```bash
 npm run desired-name
 ```
 
-Note that the command above is shorthand for `npm run-script desired-name`.
+注意，上面的命令是 `npm run-script desired-name` 的简写。
 
-Alternatively, you can execute the package with Yarn like so:
+另外，你也可以像这样用Yarn来执行这个包:
 
 ```bash
 yarn run desired-name
@@ -619,109 +620,109 @@ yarn run desired-name
 }
 ```
 
-The snippet above added [webpack](https://www.codesweetly.com/javascript-module-bundler/) to your `package.json`'s `"scripts"` field. So, we can now execute `webpack` on the command line like this:
+上面的片段将[webpack](https://www.codesweetly.com/javascript-module-bundler/)添加到你的 `package.json` 的 `"scripts"` 字段。因此，我们现在可以像这样在命令行中执行 `webpack`:
 
 ```bash
 npm run build
 ```
 
-Or, if your package manager is Yarn, you can run webpack like this:
+或者，如果你的软件包管理器是Yarn，你可以像这样运行webpack:
 
 ```bash
 yarn run build
 ```
 
-### Use NPX
+### 使用 NPX
 
-A faster way to run an executable package is to use NPX like so:
+运行可执行包的一个更快的方法是像这样使用NPX:
 
 ```bash
 npx package-name
 ```
 
-With NPX, you no longer need to add your package to the `"scripts"` field of your project's `package.json` file.
+有了NPX，你不再需要把你的包添加到项目的`package.json`文件的`"scripts"`字段中。
 
-NPX (Node Package Execute) is a [Node package runner](https://nodejs.dev/learn/the-npx-nodejs-package-runner) that automatically finds and executes a specified package.
+NPX(Node Package Execute)是一个 [Node package runner](https://nodejs.dev/learn/the-npx-nodejs-package-runner)，可以自动找到并执行指定的包。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```bash
 npx webpack
 ```
 
-The command above will automatically find and execute [webpack](https://www.codesweetly.com/javascript-module-bundler/). So, we do not need to add the `"build": "webpack"` property to the `"scripts"` field of our `package.json` file.
+上面的命令会自动找到并执行 [webpack](https://www.codesweetly.com/javascript-module-bundler/)。因此，我们不需要在 `package.json` 文件的 `"build": "webpack"` 属性添加到我们的 `package.json` 文件的 `"scripts"` 字段中。
 
-**Note:** NPX automatically gets installed when you install Node 8.2/NPM 5.2.0 or higher.
+**注意：**当你安装Node 8.2/NPM 5.2.0或更高版本时，NPX自动被安装。
 
-You can also run some code using your preferred Node.js version. Let's find out how.
+你也可以使用你喜欢的 Node.js 版本运行一些代码。让我们来看看如何。
 
-## How to Run Code Using Your Preferred Node.js Version
+## 如何使用你喜欢的Node.js版本来运行代码
 
-You can use the `@` character and the [node npm package](https://www.npmjs.com/package/node) to specify the Node.js version you wish to use to execute your code.
+你可以使用 `@` 字符和 [node npm package](https://www.npmjs.com/package/node) 来指定你希望用来执行代码的Node.js版本。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```bash
 npx node@7 index.js
 ```
 
-The snippet above tells NPX to run `index.js` with the latest version of Node from version 7 major.
+上面的片段告诉NPX用最新的Node 7 major版本来运行`index.js`。
 
-Using the `node@` command is a helpful way to avoid using Node.js version management tools like [nvm](https://github.com/nvm-sh/nvm) to switch between Node versions.
+使用`node@`命令是一个有用的方法，可以避免使用Node.js版本管理工具，如[nvm](https://github.com/nvm-sh/nvm)在Node版本之间切换。
 
-Suppose you wish to confirm the Node version NPX will use to run your code. In that case, run:
+假设你想确认NPX将使用哪个Node版本来运行你的代码。在这种情况下，运行:
 
 ```bash
 npx node@7 -v
 ```
 
-The snippet above will display the latest Node version from version 7 major that NPX will use to run your code—for example, `v7.10.1`.
+上面的片段将显示NPX将用于运行你的代码的最新Node版本，即7大版本--例如，`v7.10.1`。
 
-## How to Check for Outdated Local Packages
+## 如何检查是否有过时的本地Packages(软件包)
 
-To determine if any of your project's packages are outdated, run:
+要确定你的项目的任何包是否已经过时，请运行:
 
 ```bash
 npm outdated
 ```
 
-If the command outputs nothing, it means all your project's packages are up to date.
+如果该命令没有任何输出，说明你项目的所有软件包都是最新的。
 
-Otherwise, see this [npm-outdated article](https://docs.npmjs.com/cli/v6/commands/npm-outdated) for a detailed explanation of the command's output.
+否则，请看这篇 [npm-outdated article](https://docs.npmjs.com/cli/v6/commands/npm-outdated)对该命令输出的详细解释。
 
-Alternatively, you can use Yarn like so:
+另外，你也可以像这样使用Yarn:
 
 ```bash
 yarn outdated
 ```
 
-**Note:** To check a specific package's outdated status, add the package's name after the `outdated` keyword—for example, `npm outdated lodash`.
+**注意：** 要检查某个特定软件包的过时状态，请在 `outdated` 关键字后面加上该软件包的名称--例如，`npm outdated lodash`。
 
-## How to Check for Outdated Global Packages
+## 如何检查过期的全局 Packages(软件包)
 
-To confirm which global package is outdated, run:
+要确认哪个全局包是过时的，请运行:
 
 ```bash
 npm outdated -g --depth=0
 ```
 
-## How to Check for Locally Installed Packages
+## 如何检查本地安装的软件包
 
-Here are three ways to check for locally installed packages:
+这里有三种检查本地安装软件包的方法:
 
-### Locally installed packages and their dependencies
+### 本地安装的软件包和它们的依赖关系
 
 ```bash
 npm list
 ```
 
-Or use Yarn like so:
+或者像这样使用Yarn:
 
 ```bash
 yarn list
 ```
 
-### Locally installed packages—without their dependencies
+### 本地安装的软件包--不检查其依赖性
 
 ```bash
 npm list --depth=0
@@ -733,189 +734,189 @@ Or,
 yarn list --depth=0
 ```
 
-### Check if a specific package got installed locally
+### 检查一个特定的软件包是否已安装在本地
 
 ```bash
 npm list package-name
 ```
 
-## How to Check for Globally Installed Packages
+## 如何检查全局安装的软件包
 
-Here are three ways to check for globally installed packages:
+这里有三种检查全局安装软件包的方法:
 
-### Globally installed packages and their dependencies
+### 全局安装的软件包和它们的依赖关系
 
 ```bash
 npm list -g
 ```
 
-Or use Yarn like so:
+或者像这样使用Yarn:
 
 ```bash
 yarn list -g
 ```
 
-### Globally installed packages—without their dependencies
+### 全局性安装的软件包--不检查其依赖性
 
 ```bash
 npm list -g --depth=0
 ```
 
-Or,
+或者,
 
 ```bash
 yarn list -g --depth=0
 ```
 
-### Check if a specific package got installed globally
+### 检查一个特定的软件包是否被全局安装
 
 ```bash
 npm list -g package-name
 ```
 
-## How to Update Packages
+## 如何更新软件包
 
-Here's how to update packages with NPM and Yarn:
+下面是如何用NPM和Yarn更新软件包:
 
-### How to update a specific package to its latest version
+### 如何将一个特定的软件包更新到其最新版本
 
 ```bash
 npm update package-name
 ```
 
-Or, for projects managed with Yarn, run:
+或者，对于用Yarn管理的项目，运行:
 
 ```bash
 yarn upgrade package-name
 ```
 
-### How to update all of a project's locally installed packages
+### 如何更新一个项目的所有本地安装的软件包
 
 ```bash
 npm update
 ```
 
-Or,
+或者,
 
 ```bash
 yarn upgrade
 ```
 
-### How to update a specific globally installed package
+### 如何更新一个特定的全局安装的软件包
 
-You can update a globally installed package like this:
+你可以像这样更新一个全局安装的软件包:
 
 ```bash
 npm update package-name -g
 ```
 
-### How to update all your system's globally installed packages
+### 如何更新你的系统全局安装的所有软件包
 
 ```bash
 npm update -g
 ```
 
-## How to Uninstall Packages
+## 如何卸载软件包
 
-Here's how to uninstall packages with NPM and Yarn:
+下面是如何用NPM和Yarn卸载软件包的方法:
 
-### How to uninstall a package from a specific project
+### 如何从一个特定的项目中卸载一个软件包
 
-First, navigate to the project's [root directory](https://www.codesweetly.com/web-tech-glossary/#h-root-directory) from the command line and run:
+首先，从命令行进入到项目的 [根目录](https://www.codesweetly.com/web-tech-glossary/#h-root-directory) 并运行:
 
 ```bash
 npm uninstall package-name
 ```
 
-**Note:**
+**注意:**
 
--   Add the `-S` (or `--save`) flag to remove references to the package in the `dependencies` field of the project's `package.json` file.
--   Add the `-D` (or `--save-dev`) flag to remove references to the package in the `devDependencies` field of the project's `package.json` file.
+- `-S` (或 `--save`) 标志，将对项目`package.json`文件中`dependencies`字段中软件包的引用删除。
+- `-D` (或 `--save-dev`) 标志，将对项目`package.json`文件中`devDependencies`字段中对包的引用删除。
 
-For projects managed with Yarn, run:
+对于用Yarn管理的项目，运行:
 
 ```bash
 yarn remove package-name
 ```
 
-**Note:** The `yarn remove` command will automatically update the project's `package.json` and `yarn.lock` files.
+**注意：**  `yarn remove` 命令将自动更新项目的`package.json`和`yarn.lock`文件。
 
-### How to uninstall a global package
+### 如何卸载一个全局软件包
 
 ```bash
 npm uninstall package-name -g
 ```
 
-Note that it is best practice not to remove packages manually from the `node_modules` folder as such action can affect other _modules_ depending on it.
+注意，最好的做法是不要从`node_modules`文件夹中手动删除包，因为这种行为会影响到其他依赖它的 _modules_ 。
 
-But what exactly is a module in NodeJS? Let's find out below.
+但NodeJS中的 _modules_ 到底是什么？让我们在下面找出答案。
 
-## What Exactly Is a Module in NodeJS?
+## 到底什么是NodeJS的模块（module）？
 
-A **module** in NodeJS is any file in the `node_modules` folder that the computer can load through Node's `require()` function.
+NodeJS中的 **module** 是`node_modules`文件夹中的任何文件，计算机可以通过Node的 `require()` 函数加载。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 const myModule = require("./codesweetly.js");
 ```
 
-Suppose the computer successfully used the `require()` function to load the `codesweetly.js` file. In such a case, it means `codesweetly.js` is a module—assigned to the `myModule` variable.
+假设计算机成功地使用 `require()` 函数来加载 `codesweetly.js` 文件。在这种情况下，这意味着`codesweetly.js` 是一个模块-分配给 `myModule` 变量。
 
-Keep in mind that a module may also be a package—but not always.
+请记住，一个模块也可能是一个包，但不一定。
 
-A module is _not_ a package if it does _not_ have a `package.json` file used to record information about it.
+如果一个 _module_ 没有 `package.json` 文件来记录它的信息，那么它就不是一个包。
 
-Also, note that for a module to be loadable by the `require()` function, the module must be one of the following:
+另外，请注意，如果一个模块可以被  `require()` 函数加载，该模块必须是下列之一:
 
--   A package—whose `package.json` file contains a `"main"` field.
--   A JavaScript file.
+- 一个包，其`package.json`文件包含一个 `"main"` 字段。
+- 一个JavaScript文件。
 
-## How to Publish Your Project to the NPM Registry
+## 如何将你的项目发布到 NPM Registry
 
-NPM is a free registry for [public package authors](https://www.npmjs.com/products).
+NPM 对于 [公共包开发者](https://www.npmjs.com/products) 是一个免费的 registry。
 
-So, you can use it to publish any project (folder) from your computer that has a `package.json` file.
+因此，你可以用它来发布你电脑中任何有`package.json`文件的项目（文件夹）。
 
-Below are the steps required to share your package with the world.
+以下是与世界分享你的软件包所需的步骤。
 
-### Step 1: Sign in or sign up
+### Step 1: 登录或注册
 
-Go to the [NPM website](https://www.npmjs.com/) and sign in (or sign up if you do not yet have an account).
+进入 [NPM website](https://www.npmjs.com/) 并登录(如果你还没有账户，也可以注册)。
 
-**Note:** make sure that you verify your email after creating a new account. Otherwise, you will get a `403 Forbidden` error while publishing your package.
+**注意：** 确保你在创建新账户后验证你的电子邮件。否则，在发布你的软件包时，你会得到一个`403 Forbidden`的错误。
 
-### Step 2: Log in
+### Step 2: 登录
 
-Login to your NPM account from the command line like so:
+从命令行登录到你的NPM账户，像这样:
 
 ```bash
 npm login
 ```
 
-**Note:** You can use the `npm whoami` command to check if you are currently logged in.
+**注意：** 你可以使用 `npm whoami` 命令来检查你当前是否已经登录。
 
-### Step 3: Publish your package!
+### Step 3: 发布你的包
 
-Go to your project's root directory and publish it like so:
+进入你的项目的根目录，像这样发布它:
 
 ```bash
 npm publish
 ```
 
-Make sure that your package's name does not currently exist on NPM. Otherwise, you will get an error while publishing.
+确保你的包的名字目前在NPM上不存在。否则，你在发布时将得到一个错误。
 
-You can use the `npm search` command (or the [NPM website](https://www.npmjs.com/)'s search bar) to search if the name you wish to use already exists on NPM.
+你可以使用 `npm search` 命令（或 [NPM website](https://www.npmjs.com/)的搜索栏）来搜索你想使用的名字是否已经存在于NPM上。
 
-Suppose all the suitable names for your package are already taken. In that case, NPM allows you to publish your project as a scope.
+假设所有适合你的包的名字都已经被占用了。在这种情况下，NPM允许你将你的项目作为一个范围发布。
 
-In other words, you can publish your package as a sub-section of your username. Let's see how below.
+换句话说，你可以把你的包作为你的用户名的一个子部分发布。让我们看看下面的方法。
 
-### How to publish your package as a scope of your username
+### 如何将你的包作为你的用户名的一个范围来发布
 
-Open your `package.json` file and prefix your package's name with your username.
+打开你的`package.json`文件，在你的包的名字前加上你的用户名。
 
-**Here's an example:**
+**下面一个例子:**
 
 ```json
 {
@@ -926,31 +927,31 @@ Open your `package.json` file and prefix your package's name with your username.
 }
 ```
 
-NPM's default setting assumes that a scoped name package is a private project. So, you will get an error if you use the `npm publish` command to share a scoped name package.
+NPM的默认设置是假定一个范围内的名称包是一个私人项目。因此，如果你使用 `npm publish` 命令来共享一个范围内的名称包，你会得到一个错误。
 
-Therefore, to publish your package as a scope of your username, add the `--access=public` flag to the `npm publish` command:
+因此，要把你的包发布为你的用户名的范围，请在 `npm publish` 命令中添加 `--access=public` 标志:
 
 ```bash
 npm publish --access=public
 ```
 
-**Note:** You can make your project a scoped package during the initialization process by using the `npm init --scope=username` command instead of `npm init`.
+**注意：** 你可以在初始化过程中通过使用 `npm init --scope=username` 命令而不是`npm init`使你的项目成为一个范围内的软件包。
 
-## Overview
+## 概述
 
-This article discussed what a package manager is. We also looked at how two popular package managers (NPM and Yarn) work.
+这篇文章讨论了什么是软件包管理器。我们还看了两个流行的包管理器（NPM和Yarn）是如何工作的。
 
-Thanks for reading!
+谢谢你的阅读!
 
-### **And here's a useful ReactJS resource:**
+### **这里有一个有用的ReactJS资源:**
 
-I wrote a book about React!
+我写了一本关于React!
 
--   It's beginners friendly ✔
--   It has live code snippets ✔
--   It contains scalable projects ✔
--   It has plenty of easy-to-grasp examples ✔
+- 对初学者友好 ✔
+- 它有可用的代码片段 ✔
+- 它包含可扩展的项目 ✔
+- 它有大量易于掌握的例子 ✔
 
-The [React Explained Clearly](https://amzn.to/30iVPIG) book is all you need to understand ReactJS.
+[React Explained Clearly](https://amzn.to/30iVPIG) 这本书包含了你了解ReactJS所需要的一切。
 
 [![React Explained Clearly Book Now Available at Amazon](https://www.freecodecamp.org/news/content/images/2022/01/Twitter-React_Explained_Clearly-CodeSweetly-Oluwatobi_Sofela.jpg)](https://amzn.to/30iVPIG)

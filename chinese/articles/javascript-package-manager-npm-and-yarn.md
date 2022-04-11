@@ -640,9 +640,9 @@ yarn run build
 npx package-name
 ```
 
-With NPX, you no longer need to add your package to the `"scripts"` field of your project's `package.json` file.
+有了NPX，你不再需要把你的包添加到项目的`package.json`文件的`"scripts"`字段中。
 
-NPX (Node Package Execute) is a [Node package runner](https://nodejs.dev/learn/the-npx-nodejs-package-runner) that automatically finds and executes a specified package.
+NPX(Node Package Execute)是一个 [Node package runner](https://nodejs.dev/learn/the-npx-nodejs-package-runner)，可以自动找到并执行指定的包。
 
 **Here's an example:**
 
@@ -650,57 +650,57 @@ NPX (Node Package Execute) is a [Node package runner](https://nodejs.dev/learn/t
 npx webpack
 ```
 
-The command above will automatically find and execute [webpack](https://www.codesweetly.com/javascript-module-bundler/). So, we do not need to add the `"build": "webpack"` property to the `"scripts"` field of our `package.json` file.
+上面的命令会自动找到并执行 [webpack](https://www.codesweetly.com/javascript-module-bundler/)。因此，我们不需要在 `package.json` 文件的 `"build": "webpack"` 属性添加到我们的 `package.json` 文件的 `"scripts"` 字段中。
 
-**Note:** NPX automatically gets installed when you install Node 8.2/NPM 5.2.0 or higher.
+**注意：**当你安装Node 8.2/NPM 5.2.0或更高版本时，NPX自动被安装。
 
-You can also run some code using your preferred Node.js version. Let's find out how.
+你也可以使用你喜欢的 Node.js 版本运行一些代码。让我们来看看如何。
 
 ## How to Run Code Using Your Preferred Node.js Version
 
-You can use the `@` character and the [node npm package](https://www.npmjs.com/package/node) to specify the Node.js version you wish to use to execute your code.
+你可以使用 `@` 字符和 [node npm package](https://www.npmjs.com/package/node) 来指定你希望用来执行代码的Node.js版本。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```bash
 npx node@7 index.js
 ```
 
-The snippet above tells NPX to run `index.js` with the latest version of Node from version 7 major.
+上面的片段告诉NPX用最新的Node 7 major版本来运行`index.js`。
 
-Using the `node@` command is a helpful way to avoid using Node.js version management tools like [nvm](https://github.com/nvm-sh/nvm) to switch between Node versions.
+使用`node@`命令是一个有用的方法，可以避免使用Node.js版本管理工具，如[nvm](https://github.com/nvm-sh/nvm)在Node版本之间切换。
 
-Suppose you wish to confirm the Node version NPX will use to run your code. In that case, run:
+假设你想确认NPX将使用哪个Node版本来运行你的代码。在这种情况下，运行:
 
 ```bash
 npx node@7 -v
 ```
 
-The snippet above will display the latest Node version from version 7 major that NPX will use to run your code—for example, `v7.10.1`.
+上面的片段将显示NPX将用于运行你的代码的最新Node版本，即7大版本--例如，`v7.10.1`。
 
 ## How to Check for Outdated Local Packages
 
-To determine if any of your project's packages are outdated, run:
+要确定你的项目的任何包是否已经过时，请运行:
 
 ```bash
 npm outdated
 ```
 
-If the command outputs nothing, it means all your project's packages are up to date.
+如果该命令没有任何输出，说明你项目的所有软件包都是最新的。
 
-Otherwise, see this [npm-outdated article](https://docs.npmjs.com/cli/v6/commands/npm-outdated) for a detailed explanation of the command's output.
+否则，请看这篇 [npm-outdated article](https://docs.npmjs.com/cli/v6/commands/npm-outdated)对该命令输出的详细解释。
 
-Alternatively, you can use Yarn like so:
+另外，你也可以像这样使用Yarn:
 
 ```bash
 yarn outdated
 ```
 
-**Note:** To check a specific package's outdated status, add the package's name after the `outdated` keyword—for example, `npm outdated lodash`.
+**注意：** 要检查某个特定软件包的过时状态，请在 `outdated` 关键字后面加上该软件包的名称--例如，`npm outdated lodash`。
 
 ## How to Check for Outdated Global Packages
 
-To confirm which global package is outdated, run:
+要确认哪个全局包是过时的，请运行:
 
 ```bash
 npm outdated -g --depth=0
@@ -708,7 +708,7 @@ npm outdated -g --depth=0
 
 ## How to Check for Locally Installed Packages
 
-Here are three ways to check for locally installed packages:
+这里有三种检查本地安装软件包的方法:
 
 ### Locally installed packages and their dependencies
 
@@ -716,7 +716,7 @@ Here are three ways to check for locally installed packages:
 npm list
 ```
 
-Or use Yarn like so:
+或者像这样使用Yarn:
 
 ```bash
 yarn list
@@ -742,7 +742,7 @@ npm list package-name
 
 ## How to Check for Globally Installed Packages
 
-Here are three ways to check for globally installed packages:
+这里有三种检查全局安装软件包的方法:
 
 ### Globally installed packages and their dependencies
 
@@ -750,7 +750,7 @@ Here are three ways to check for globally installed packages:
 npm list -g
 ```
 
-Or use Yarn like so:
+或者像这样使用Yarn:
 
 ```bash
 yarn list -g
@@ -762,7 +762,7 @@ yarn list -g
 npm list -g --depth=0
 ```
 
-Or,
+或者,
 
 ```bash
 yarn list -g --depth=0
@@ -776,7 +776,7 @@ npm list -g package-name
 
 ## How to Update Packages
 
-Here's how to update packages with NPM and Yarn:
+下面是如何用NPM和Yarn更新软件包:
 
 ### How to update a specific package to its latest version
 
@@ -784,7 +784,7 @@ Here's how to update packages with NPM and Yarn:
 npm update package-name
 ```
 
-Or, for projects managed with Yarn, run:
+或者，对于用Yarn管理的项目，运行:
 
 ```bash
 yarn upgrade package-name
@@ -796,7 +796,7 @@ yarn upgrade package-name
 npm update
 ```
 
-Or,
+或者,
 
 ```bash
 yarn upgrade
@@ -804,7 +804,7 @@ yarn upgrade
 
 ### How to update a specific globally installed package
 
-You can update a globally installed package like this:
+你可以像这样更新一个全局安装的软件包:
 
 ```bash
 npm update package-name -g
@@ -818,28 +818,28 @@ npm update -g
 
 ## How to Uninstall Packages
 
-Here's how to uninstall packages with NPM and Yarn:
+下面是如何用NPM和Yarn卸载软件包的方法:
 
 ### How to uninstall a package from a specific project
 
-First, navigate to the project's [root directory](https://www.codesweetly.com/web-tech-glossary/#h-root-directory) from the command line and run:
+首先，从命令行进入到项目的 [根目录](https://www.codesweetly.com/web-tech-glossary/#h-root-directory) 并运行:
 
 ```bash
 npm uninstall package-name
 ```
 
-**Note:**
+**注意:**
 
-- Add the `-S` (or `--save`) flag to remove references to the package in the `dependencies` field of the project's `package.json` file.
-- Add the `-D` (or `--save-dev`) flag to remove references to the package in the `devDependencies` field of the project's `package.json` file.
+- `-S` (或 `--save`) 标志，将对软件包的引用保存到项目`package.json`文件中`dependencies`字段中。
+- `-D` (或 `--save-dev`) 标志，将对包的引用保存到项目`package.json`文件中`devDependencies`字段中。
 
-For projects managed with Yarn, run:
+对于用Yarn管理的项目，运行:
 
 ```bash
 yarn remove package-name
 ```
 
-**Note:** The `yarn remove` command will automatically update the project's `package.json` and `yarn.lock` files.
+**注意：**  `yarn remove` 命令将自动更新项目的`package.json`和`yarn.lock`文件。
 
 ### How to uninstall a global package
 
@@ -847,38 +847,38 @@ yarn remove package-name
 npm uninstall package-name -g
 ```
 
-Note that it is best practice not to remove packages manually from the `node_modules` folder as such action can affect other _modules_ depending on it.
+注意，最好的做法是不要从`node_modules`文件夹中手动删除包，因为这种行为会影响到其他依赖它的 _modules_ 。
 
-But what exactly is a module in NodeJS? Let's find out below.
+但NodeJS中的 _modules_ 到底是什么？让我们在下面找出答案。
 
 ## What Exactly Is a Module in NodeJS?
 
-A **module** in NodeJS is any file in the `node_modules` folder that the computer can load through Node's `require()` function.
+NodeJS中的 **module** 是`node_modules`文件夹中的任何文件，计算机可以通过Node的 `require()` 函数加载。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 const myModule = require("./codesweetly.js");
 ```
 
-Suppose the computer successfully used the `require()` function to load the `codesweetly.js` file. In such a case, it means `codesweetly.js` is a module—assigned to the `myModule` variable.
+假设计算机成功地使用 `require()` 函数来加载 `codesweetly.js` 文件。在这种情况下，这意味着`codesweetly.js` 是一个模块-分配给 `myModule` 变量。
 
-Keep in mind that a module may also be a package—but not always.
+请记住，一个模块也可能是一个包，但不一定。
 
-A module is _not_ a package if it does _not_ have a `package.json` file used to record information about it.
+如果一个 _module_ 没有 `package.json` 文件来记录它的信息，那么它就不是一个包。
 
-Also, note that for a module to be loadable by the `require()` function, the module must be one of the following:
+另外，请注意，如果一个模块可以被  `require()` 函数加载，该模块必须是下列之一:
 
-- A package—whose `package.json` file contains a `"main"` field.
-- A JavaScript file.
+- 一个包，其`package.json`文件包含一个 `"main"` 字段。
+- 一个JavaScript文件。
 
 ## How to Publish Your Project to the NPM Registry
 
-NPM is a free registry for [public package authors](https://www.npmjs.com/products).
+NPM 对于 [公共包开发者](https://www.npmjs.com/products) 是一个免费的 registry。
 
-So, you can use it to publish any project (folder) from your computer that has a `package.json` file.
+因此，你可以用它来发布你电脑中任何有`package.json`文件的项目（文件夹）。
 
-Below are the steps required to share your package with the world.
+以下是与世界分享你的软件包所需的步骤。
 
 ### Step 1: Sign in or sign up
 

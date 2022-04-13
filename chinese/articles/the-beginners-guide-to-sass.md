@@ -1,6 +1,6 @@
 > -  原文地址：[The Beginner's Guide to Sass](https://www.freecodecamp.org/news/the-beginners-guide-to-sass/)
 > -  原文作者：[Israel Mitolu](https://www.freecodecamp.org/news/author/israelmitolu/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![The Beginner's Guide to Sass](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/The-Beginner-s-Guide-to-SASS.png)

@@ -1,7 +1,7 @@
-> -  原文地址：[How to Write Good API Documentation](https://www.freecodecamp.org/news/how-to-write-api-documentation-like-a-pro/)
-> -  原文作者：[Maybell Obadoni](https://www.freecodecamp.org/news/author/maybell/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Write Good API Documentation](https://www.freecodecamp.org/news/how-to-write-api-documentation-like-a-pro/)
+> - 原文作者：[Maybell Obadoni](https://www.freecodecamp.org/news/author/maybell/)
+> - 译者：
+> - 校对者：
 
 ![How to Write Good API Documentation](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/nick-morrison-FHnnjk1Yj7Y-unsplash-1.jpg)
 
@@ -161,9 +161,9 @@ Though it's beginner friendly, it requires payment for anything other than perso
 
 Whether you're selecting the tools listed here or an alternative, you should consider the following:
 
--   What setting will you use the tool in? Is it for personal use or as part of an organization?
--   How technical are you? Are you a beginner or expert?
--   How is the user interface and user experience?
+- What setting will you use the tool in? Is it for personal use or as part of an organization?
+- How technical are you? Are you a beginner or expert?
+- How is the user interface and user experience?
 
 ## Some awesome examples of API Docs
 
@@ -183,7 +183,7 @@ Learn the foundations for using the REST API, starting with authentication and s
 
 ![github-logo](https://github.githubassets.com/images/modules/open_graph/github-logo.png)
 
-](https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api)
+](<https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api>)
 
 REST API is a popular API used by Developers to access data from the web or a database. This documentation by Github includes an overview, guides, and even code on how to use REST API in your program.
 
@@ -201,7 +201,7 @@ Build amazing payment experiences with the Paystack API
 
 ![paystack_docs_seo_image-83f4c473def81307a806441187742be6](https://paystack.com/docs/static/paystack_docs_seo_image-83f4c473def81307a806441187742be6.jpg)
 
-](https://paystack.com/docs/)
+](<https://paystack.com/docs/>)
 
 Are you building an application that requires payment? Paystack is a fintech solution for payments. Their team provides detailed information for developers on how to use the Paystack API in your programs. It is more like providing a handbook on using the API to avoid confusion when consuming the API into your program.
 
@@ -217,7 +217,7 @@ Programmatically analyze, learn from, and engage with the conversation on Twitte
 
 ![devwebsite_card_tn.jpg.twimg.768](https://cdn.cms-twdigitalassets.com/content/dam/developer-twitter/redesign-2021-images/og-social-card/devwebsite_card_tn.jpg.twimg.768.jpg)
 
-](https://developer.twitter.com/en/docs/twitter-api)
+](<https://developer.twitter.com/en/docs/twitter-api>)
 
 The Twitter API documentation explains how developers can interact with the App. The documents clearly detail different sections (user, tweets, direct messages and so on) and their operations.
 

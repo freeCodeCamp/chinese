@@ -3,37 +3,37 @@
 > -  译者：Papaya HUANG
 > -  校对者：
 
-![The Beginner's Guide to Sass](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/The-Beginner-s-Guide-to-SASS.png)
+![Sass初学者指南](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/The-Beginner-s-Guide-to-SASS.png)
 
-Have you ever wondered what SASS stands for? Or perhaps you already know what it is but haven't taken the time to study and use it.
+你是否好奇SASS到底是什么？或者你已经知道SASS，但还没来得及去学习和使用。
 
-Whether you're learning about it for the first time, or want to brush up on your knowledge of the subject, this is the article for you.
+不论你是首次学习Sass，还是更新这个主题的知识，这篇文章都很适合你。
 
-In this post, you'll learn the fundamentals of Sass, what it is, and how to use Sass's awesome features to speed up the process of writing styles.
+在这篇文章中，你将学习到Sass的基础，Sass到底是什么，如果使用Sass超棒的功能来提速书写样式的过程。
 
-## Prerequisites
+## 前提条件
 
-This article assumes that you have:
+这本文章默认你：
 
--   Basic understanding of HTML & CSS
--   A code editor (VS Code recommended). If you don't have it installed, download it [here](http://code.visualstudio.com/).
--   And a browser (Chrome or Firefox recommended)
+-  基本了解HTML和CSS
+-  安装了代码编辑器（推荐使用VS Code。如果你尚未安装，可以在此处[下载](http://code.visualstudio.com/).
+-  安装了浏览器（推荐使用Chrome或者Firefox）
 
-## What exactly is Sass?
+## 究竟什么是Sass
 
-Sass (Syntactically Awesome Style Sheets) is a CSS preprocessor that gives your CSS superpowers.
+Sass（英文全称是Syntactically Awesome Style Sheets）是一种CSS预处理器，使用它可以使你的CSS拥有超能力。
 
-Let's face it: writing CSS can be difficult at times, especially in today's world of increasingly complex user interfaces.
+你不得不承认：常常你会觉得用CSS写样式很困难，特别是现在用户交互界面（UI）变得越来越复杂。
 
-And many times, you'll find that you're repeating yourself often.
+你常常会觉得自己在重复自己。
 
-Sass comes to the rescue in this situation. It helps you stick to the DRY (Do Not Repeat Yourself) philosophy when writing CSS.
+Sass就可以解决这个问题，在你写样式的时候，帮助你坚守DRY（Do Not Repeat Yourself不重复自己）准则。
 
-Sass provides a compiler that allows us to write stylesheets in two different syntaxes, indented and SCSS. Let's look at each now.
+Sass的编译器可以让我们用两种语法来写样式表——缩进语法和SCSS。下文会逐个讲解。
 
-### Indented syntax
+### 缩进语法
 
-This is the older syntax that is indented, and gets rid of the curly braces and semi-colons. It has a file extension of `.sass`.
+缩进语法是Sass的原始语法，采用缩进的格式，但是取消了花括号和分号。 其文件扩展名为 `.sass`.
 
 ```sass
 nav
@@ -50,11 +50,11 @@ nav
     text-decoration: none
 ```
 
-### SCSS syntax
+### SCSS语法
 
-This is the newer and more popular syntax. It is essentially a subset of the CSS3 syntax. This means that you can write regular CSS with some additional functionalities.
+相比缩进语法，这个语法较新也更受欢迎。SCSS语法实质是CSS3语法的子集。这意味这你可以直接用常规的CSS加上一些新增的函数来书写SCSS。
 
-Due to its advanced features it is often termed as _Sassy CSS_. It has a file extension of `.scss`.
+由于是在CSS的基础上提供高级功能，所以SCSS语法又被称作 _Sassy CSS_。其文件扩展名为 `.scss`.
 
 ```scss
 nav {
@@ -74,15 +74,14 @@ nav {
 }
 ```
 
-> Quick Disclaimer: This article uses the SCSS syntax because it's more widely used.
+> 免责声明: 本文使用SCSS语法是因为SCSS语法被更多人使用。
 
-## How Does Sass Work?
+## Sass的工作机制
 
-Sass works in such a way that when you write your styles in a `.scss` file, it gets compiled into a regular CSS file. The CSS code is then loaded into the browser.
+当你写了一个扩展名为 `.scss`的文件，该文件会被编译成正常的CSS文件。然后CSS代码在浏览器加载。
+这就是为什么我们成Sass为预处理器。
 
-That is why it's called a Preprocessor.
-
-## Why should you use Sass?
+## 为什么要使用Sass?
 
 -   **Easy to learn**: If you are familiar with CSS already, then you'll be glad to know that Sass actually has a similar syntax, and so you can start using it, even after this tutorial ;)
 -   **Compatibility**: It is compatible with all versions of CSS. So, you can use any available CSS libraries.

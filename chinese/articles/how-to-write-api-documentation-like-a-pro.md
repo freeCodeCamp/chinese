@@ -1,65 +1,65 @@
 > - 原文地址：[How to Write Good API Documentation](https://www.freecodecamp.org/news/how-to-write-api-documentation-like-a-pro/)
 > - 原文作者：[Maybell Obadoni](https://www.freecodecamp.org/news/author/maybell/)
-> - 译者：
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
 > - 校对者：
 
 ![How to Write Good API Documentation](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/nick-morrison-FHnnjk1Yj7Y-unsplash-1.jpg)
 
-Imagine that you just bought a new home theater system and you go to set it up. What do you do first?
+想象一下，你刚买了一个新的家庭影院系统，你去设置它。你首先要做什么？
 
-Thank goodness you have a handy device manual to help you out. You just need to follow the steps detailed in the manual, and voilà! Your home theater system is ready to blast your favorite songs.
+谢天谢地，你有一本方便的设备手册来帮助你。你只需要按照手册中详细说明的步骤进行操作，然后就可以了。你的家庭影院系统已经准备好播放你喜欢的歌曲了。
 
-Just like how a device manual guides you through setup and installation, API documentation can help guide you through configuring an API.
+就像设备手册如何指导你进行设置和安装一样，API文档可以帮助指导你完成配置API。
 
 ## What is API Documentation?
 
-Before diving into API documentation, let me briefly explain what an API is and its basic functions.
+在深入研究API文档之前，让我简单解释一下什么是API以及它的基本功能。
 
-API is an acronym for Application Programming Interface.
+API是应用编程接口的首字母缩写。
 
 ![7020614](https://www.freecodecamp.org/news/content/images/2022/04/7020614.jpg)
 
-Connection of devices to databases via API
+通过API将设备连接到数据库。
 
-Whether you're a beginner coder or an advanced developer, you'll come across this term often in your software development journey. It is the bridge between your computer, mobile phone, or application and external resources.
+无论你是初级编码员还是高级开发人员，你都会在你的软件开发旅程中经常遇到这个术语。它是你的计算机、手机或应用程序与外部资源之间的桥梁。
 
-In other words, APIs give your software the ability to interact with other software programs, databases, or resources. Instead of writing the program for a particular feature of your application, you can consume a readily available API of a similar feature.
+换句话说，API赋予你的软件与其他软件程序、数据库或资源互动的能力。与其为你的应用程序的某一特定功能编写程序，你可以使用类似功能的现成的API。
 
-Many APIs are public (free) while others are private and require payment for a private key that lets you access the API. There are different types of APIs like REST (Representational State Transfer), SOAP (Simple Object Access Protocol), and others.
+许多API是公共的（免费的），而其他的则是私有的，需要付费购买一个让你访问API的私钥。有不同类型的API，如REST（Representational State Transfer），SOAP（Simple Object Access Protocol），以及其他。
 
-Moving on – so what is API documentation? Well, it's a written guide stating the functions of the API, how to integrate it into your program, and use cases for the API, along with examples.
+那么什么是API文档？嗯，它是一个书面指南，说明API的功能，如何将其整合到你的程序中，以及API的使用案例，同时还有例子。
 
-Keep in mind that API documentation is technical content. This means it will contain some technical terms, but should still be readable and easy to understand.
+请记住，API文档是技术内容。这意味着它将包含一些技术术语，但仍然应该是可读的和容易理解的。
 
 ## Who Should Write API Documentation?
 
-APIs are built by software developers. Since software developers are directly involved in building and using APIs, it is easier for them to create the documentation.
+API是由软件开发人员编写的。由于软件开发人员直接参与了API的建设和使用，所以他们更容易创建文档。
 
-The downside of software developers writing API documentation is that they write from a very technical angle, which can make the document quite difficult to comprehend. Another issue is that it will take more time for the API developer to create the document while also developing the API.
+软件开发人员编写API文档的缺点是，他们从一个非常技术性的角度来写，这可能使文档相当难以理解。另一个问题是，API开发者在开发API的同时，还要花费更多的时间来创建文档。
 
-So a good alternative is to assign the task of API documentation to a technical writer. A technical writer is someone who combines the expertise of content writing and technical knowledge to produce documentation that's not only technical, but also informative and understandable.
+因此，一个好的选择是将API文档的任务分配给技术作家。技术作家是将内容写作和技术知识的专业知识结合起来的人，他制作的文档不仅是技术性的，而且是信息丰富的，可以理解的。
 
-The technical writer learns about the API from the API developers, then creates tutorials, examples, and other content for documentation purposes.
+技术撰稿人从API开发者那里了解API，然后创建教程、例子和其他内容，用于编写文档。
 
-Meanwhile, the API developers oversee the technical writer to ensure that the written documentation is accurate, and they can provide more information to the writer when necessary.
+同时，API开发者给技术撰稿人提供意见，以确保书面文档的准确性，必要时他们可以向撰稿人提供更多信息。
 
-The goal is for everyone to work together to produce documentation that fully explains the API and guides users without confusion.
+我们的目标是让每个人一起工作，制作出能够充分解释API并引导用户的文档，而不至于出现混乱。
 
-If you're interested in writing documentation for an API, but don't know where or how to begin, this article will help you get started.
+如果你对编写API的文档感兴趣，但不知道从哪里开始，也不知道如何开始，这篇文章将帮助你开始。
 
-I can feel your excitement from here, so let's dive in!
+我可以从这里感受到你的兴奋，所以让我们开始行动吧!
 
 ## How to Start Writing API Documentation
 
-When writing API documentation, start by creating several outlines. This will give you an overview of what you intend to write.
+在编写API文档时，首先要创建几个大纲。这将使你对你打算写的东西有一个概述。
 
-The next thing is to gather information for each of the outlines you created. This can be achieved by getting the API description, the language used, other references, and sample cases from the API developers. You can also view a live demo of the API so you have first-hand experience of how it works.
+接下来就是为你创建的每个大纲收集信息。这可以通过从API开发者那里获得API描述、使用的语言、其他参考资料和样本案例来实现。你也可以查看API的现场演示，这样你就有了关于它如何工作的第一手经验。
 
-Lastly, combine the details you gathered and arrange them in a logical sequence.
+最后，把你收集到的细节结合起来，按逻辑顺序排列。
 
-Remember to proofread your document and share it with the API developers for any corrections or additions before going public.
+记得校对你的文件，并在公开前与API开发者分享，以便进行任何修正或补充。
 
-Now that you know where to start, how can you put the bits together so that they become a meaningful whole?
+现在你知道从哪里开始，你如何把这些零碎的东西放在一起，使它们成为一个有意义的整体？
 
 ## What to Include in API Documentation
 
@@ -67,25 +67,25 @@ Now that you know where to start, how can you put the bits together so that they
 
 ### 1\. An Overview
 
-This is similar to the abstract page of a project report.
+这类似于项目报告的摘要页。
 
-The overview should contain a summary of the API and the problem it is solving. It could also include the benefits of using this particular API over other similar APIs.
+概述应该包含API的摘要和它所解决的问题。它还可以包括使用这个特定API比其他类似API的好处。
 
 ### 2\. Tutorials
 
-This is the primary part of the documentation.
+这是文档的主要部分。
 
-It should include the different content formats you are using to explain the concept of the API to the user. It can also include links for reference and a step-by-step guide for integrating the API and consuming it so it functions properly.
+它应该包括你所使用的不同的内容格式，向用户解释API的概念。它还可以包括供参考的链接，以及整合API和使用它的步骤指南，以便它能正常运作。
 
 ### 3\. Examples
 
-Once you've explained how the API works and/or provided itemized steps, it's a good idea to show examples of calls, responses, error handling, and other operations that have to do with how the developer interacts with the API.
+当你解释了API的工作原理和/或提供了分项步骤，展示调用、响应、错误处理和其他与开发者如何与API互动有关的操作的例子是个好主意。
 
 ### 4\. Glossary
 
-Though this is optional, I recommend adding a glossary page for your API documentation.
+虽然这是可选的，但我建议为你的API文档添加一个词汇表页面。
 
-To avoid boring the user with long text blocks, explanations of various terms, schemas, images, and so on that you use throughout documentation can all be pushed to the glossary. Then you can reference these things in the documentation, and link to the glossary.
+为了避免用户被冗长的文本块所烦扰，你在整个文档中使用的各种术语、模式、图像等的解释都可以集中到词汇表中。然后你可以在文档中引用这些东西，并链接到词汇表。
 
 ![A PC and a notepad](https://www.freecodecamp.org/news/content/images/2022/04/Talk2Her-Foundation--15-.png)
 
@@ -93,35 +93,35 @@ To avoid boring the user with long text blocks, explanations of various terms, s
 
 ### Know the API
 
-As we just discussed, you should have first-hand knowledge of the API you are documenting. Remember, your goal is to guide potential users who might not have any knowledge about the API. You wouldn't want to confuse them, right?
+正如我们刚才所讨论的，你应该对你所记录的API有第一手的知识。记住，你的目标是引导那些可能对API没有任何了解的潜在用户。你不会想让他们感到困惑，对吗？
 
-If you have a solid understanding of the product's architecture, functionality, and other vital information, you'll be able to write the product description part of the API effectively without doing any guesswork.
+如果你对产品的架构、功能和其他重要信息有扎实的了解，你就能有效地编写API的产品描述部分，而不需要做任何猜测。
 
-If you are not well informed or fully convinced about the API you're writing about, take some time to do your research and gather as much information as you can. Use the API yourself so you gain important insight into how it works.
+如果你对你要写的API没有充分的了解，那就花点时间做研究，尽可能多地收集信息。自己使用该API，这样你就能对它的工作原理有重要的了解。
 
 ### Use Relatable Content
 
-API documentation is not restricted to written guides alone. You can use short videos or PowerPoint slides to illustrate the integration of the API.
+API文档不只限于书面指南。你可以使用简短的视频或PPT幻灯片来说明API的整合情况。
 
-State different use cases while writing the documentation. This will help readers recognize which one is similar to theirs, or find one they can relate with easily.
+在写文档的时候说明不同的用例。这将有助于读者认识到哪一个与他们的相似，或者找到一个他们可以很容易联系到的。
 
-Also, include some code snippets where and when you think they're necessary. This will make it possible for readers to follow along as they go through the documentation. Just like the popular saying goes, "Tell me and I'll forget. Teach me and I'll remember. Involve me and I'll learn."
+另外，在你认为有必要的地方和时候，包括一些代码片段。这将使读者有可能在阅读文档时跟着走。就像那句流行语说的，"告诉我，我会忘记。教我，我就会记住。让我参与，我就会学习"。
 
 ### Be Clear, Even If You Need to Be Technical
 
-APIs are guides for software or hardware, so you'll need to use some technical terms when writing the documentation. If you're trying to be a technical writer, resist the temptation to be ambiguous.
+API是软件或硬件的指南，所以你在写文档时需要使用一些技术术语。如果你想成为一名技术作家，请抵制含糊其辞。
 
-A good document isn't one with complex grammatical constructions, but rather, one that is relatable, straightforward, and clear. It can only be relatable when it is written in simple and understandable language.
+一份好的文件不是有复杂的语法结构，而是可亲的、直接的、清晰的。只有用简单易懂的语言来写，才会有亲和力。
 
-Your API documentation should be in the simplest form possible, yet it shouldn't leave out any important details. Also, make sure you explain acronyms and tech terms the first time you use them, or put them in a glossary toward the end of the documentation.
+你的API文档应该以最简单的形式出现，但它不应该遗漏任何重要的细节。另外，确保你在第一次使用缩略语和技术术语时对其进行解释，或在文档的最后将其放在词汇表中。
 
 ### Itemize the Guide
 
-Documentation is easier to understand if the content is itemized. This is a major reason to write concisely.
+如果内容被逐项列出，文件就更容易理解。这是写得简洁的一个主要原因。
 
-Numbering or itemizing the guide in steps helps the user figure out what to do at every point in time. It's similar to reading the alphabet from A to Z.
+如果内容被逐项列出，文件就更容易理解。这是写得简洁的一个主要原因。
 
-With clear steps, users can easily go back if they run into an error.
+有了明确的步骤，用户在遇到错误时可以很容易地找到方向。
 
 ### Check For Errors
 

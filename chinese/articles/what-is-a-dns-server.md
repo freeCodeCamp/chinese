@@ -1,80 +1,82 @@
-> -  原文地址：[What is a DNS Server? DNS Servers Explained](https://www.freecodecamp.org/news/what-is-a-dns-server/)
-> -  原文作者：[Quincy Larson](https://www.freecodecamp.org/news/author/quincylarson/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[What is a DNS Server? DNS Servers Explained](https://www.freecodecamp.org/news/what-is-a-dns-server/)
+> - 原文作者：[Quincy Larson](https://www.freecodecamp.org/news/author/quincylarson/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![What is a DNS Server? DNS Servers Explained](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/christina-wocintechchat-com-glRqyWJgUeY-unsplash--1-.jpg)
 
-The web would not work at all without DNS servers. They are responsible for translating domain names into IP addresses. Then computers use those IP addresses to locate and connect to web servers, and send users to the right websites.
+如果没有DNS服务器，网络根本无法工作。它们负责将域名翻译成IP地址。然后计算机使用这些IP地址来定位和连接到网络服务器，并将用户发送到正确的网站。
 
-Many people first learned about the DNS system in October of 2021, when all of Facebook's apps and websites went down at the same time, due to a catastrophic DNS misconfiguration.
+许多人第一次了解DNS系统是在2021年10月，当时由于灾难性的DNS配置错误，Facebook的所有应用程序和网站同时瘫痪。
 
-### What is an IP Address?
+### 什么是IP地址？
 
-An IP address is a unique identifier for a device on a network. They are used to route traffic to the correct device on a network.
+IP地址是网络上一个设备的唯一标识符。它们被用来将流量导向网络上的正确设备。
 
-The primary IP address of google.com, for instance, is 172.217.165.14.
+例如，google.com的主IP地址是172.217.165.14。
 
-IP addresses can be hard to remember. Especially if they are long and complicated. Human-readable names are much easier to remember.
+IP地址可能很难记住。特别是如果它们是长而复杂的。相反，人类对可读的名字更容易记住。
 
-## What are the main types of DNS Servers?
+## DNS服务器的主要类型有哪些？
 
-There are many different types of DNS servers, each with its own unique capabilities.
+有许多不同类型的DNS服务器，每个都有其独特的功能。
 
-The most common type of DNS server is the recursive DNS server. This is responsible for performing DNS lookups on behalf of its clients.
+最常见的DNS服务器类型是递归DNS服务器。它负责代表其客户进行DNS查询。
 
-### How Recursive DNS Servers Work
+### 递归DNS服务器如何工作
 
-A client – typically a web browser – sends a DNS query (what's the IP address of this domain name?) to a recursive DNS server. That server resolves the query, then returns the answer to the client.
+客户端--通常是一个网络浏览器--向一个递归的DNS服务器发送一个DNS查询（这个域名的IP地址是什么）。该服务器对查询进行解析，然后将答案返回给客户。
 
-Recursive DNS servers are typically run by Internet Service Providers (ISPs). These are the companies you pay for your internet access each month.
+递归DNS服务器通常由互联网服务提供商（ISP）运行。这些向你收取每月的互联网接入费用的公司。
 
-### How Authoritative DNS Servers Work
+### 权威性DNS服务器如何工作
 
-Another type of DNS server is the Authoritative DNS server. These are responsible for storing the DNS records for a domain. They contain a database of public IP addresses and corresponding hostnames.
+另一种类型的DNS服务器是权威性DNS服务器。这些服务器负责存储一个域的DNS记录。它们包含一个公共IP地址和相应主机名的数据库。
 
-Authoritative DNS servers are responsible for translating domain names to IP addresses. This allows users to access websites using domain names instead of IP addresses.
+权威DNS服务器负责将域名翻译成IP地址。这使用户能够使用域名而不是IP地址访问网站。
 
-Authoritative DNS servers are typically provided by domain registrars.
+权威的DNS服务器通常由域名注册商提供。
 
-### What are the Ways a DNS Servers Can be Configured?
+### 配置DNS服务器的方式有哪些？
 
-You can configure a DNS servers using one of these approaches:
+你可以使用这些方法之一来配置DNS服务器:
 
--   **Static IP Address servers** – permanent IP addresses that have been assigned to specific computers. Static IP addresses are ideal for computers that need to be accessible at all times – such as servers.
--   **Dynamic IP Address servers** – these are useful when devices aren't permanently connected to the network (such as with public Wi-Fi networks). You can also use these to balance network traffic, or assign temporary IP addresses to devices that only infrequently connect to the network.
--   **Round Robin servers** – these resolves domain names by returning a list of IP addresses – each corresponding to a server able to provide the requested information. Round Robin server can distribute traffic evenly across a group of servers. This ensures that no single server is overloaded with requests, and that other servers receive their fair share of traffic, too.
--   **Load Balancing servers** – these figure out the most efficient way to distribute requests across servers. freeCodeCamp.org uses load balancing servers (also called "Load Balancers") and I imagine most major websites do, too.
+- **静态IP地址服务器** - 已分配给特定计算机的永久性IP地址。静态IP地址是需要随时访问的计算机的理想选择，如服务器。
+- **动态IP地址服务器** - 当设备没有一直连接到网络时（如公共Wi-Fi网络），这些是有用的。你也可以用它们来平衡网络流量，或者给那些不经常连接到网络的设备分配临时IP地址。
+- **Round Robin 服务器** – 这些通过返回一个 IP 地址列表来解析域名——每个地址都对应一个能够提供所请求信息的服务器。 Round Robin 服务器可以在一组服务器之间平均分配流量。 这样可以确保没有单个服务器因请求而过载，并且其他服务器也可以接收到它们公平份额的流量。
+- **负载均衡器** – FreeCodeCamp.org使用负载均衡服务器，我想大多数大型网站也是如此。
 
-You can also configure DNS servers to use different types of caching, which can improve performance.
+你还可以配置DNS服务器使用不同类型的缓存，这可以提高性能。
 
-### What is caching?
+### 什么是缓存?
 
-Caching is a technique where you store data from past requests in a temporary memory location. The thinking is: if someone needs this information, someone else will probably need this information as well.
+缓存是一种技术，你将过去请求的数据存储在一个临时的内存位置。其思路是：如果有人需要这些信息，其他人可能也会需要这些信息。
 
-When someone requests data from your server, you can then first check to see whether the data is stored in your cache. If it is, you can retrieve it from cache rather than the original location.
+当有人从你的服务器上请求数据时，你可以先检查一下该数据是否存储在你的缓冲区内。如果是的话，你可以从缓存中检索，而不是从原始位置检索。
 
-This is how Content Delivery Networks (CDNs) work. Caching can dramatically speed up the performance of your website or service.
+这就是内容交付网络（CDN）的工作方式。缓存可以极大地加快你的网站或服务的性能。
 
-## Does DNS change your IP address?
+## DNS会改变你的IP地址吗？
 
-No. Switching DNS servers will not change your IP address.
+不，切换DNS服务器不会改变你的IP地址。
 
-DNS servers translate domain names to IP addresses. By default, all the web browsers come with the option to automatically detect the DNS settings of their current network.
+DNS服务器将域名翻译成IP地址。默认情况下，所有的网络浏览器都有自动检测其当前网络的DNS设置的选项。
 
-So when you connect to a Virtual Private Network (VPN), the DNS server of your VPN replaces the DNS server of your ISP.
+因此，当你连接到虚拟专用网络（VPN）时，你的VPN的DNS服务器将取代你的ISP的DNS服务器。
 
-## How do I setup a DNS server?
+## 我如何设置一个DNS服务器？
 
-If you want to set up your own DNS server for your company or organization, here are some steps to get started:
+如果你想为你的公司或组织建立自己的DNS服务器，这里有一些开始的步骤:
 
-1.  Choose the right DNS server software. Some popular options include BIND, ISC DHCP, and PowerDNS.
-2.  Install the DNS server software on a dedicated server. This will help you ensure that your server has the resources it needs to run reliably. If you use the cloud, you won't have to worry as much about a power outage or network outage taking down your DNS.
-3.  Configure the DNS server software. This includes setting up the DNS zones and records.
-4.  Test the DNS server. Once it's is up and running, you might stress test it by simulating traffic to make sure it doesn't "fall over."
+1. 选择正确的DNS服务器软件。一些流行的选择包括BIND、ISC DHCP和PowerDNS。
+2. 将DNS服务器软件安装在一个专用服务器上。这将帮助你确保你的服务器拥有可靠运行所需的资源。如果你使用云计算，你就不必担心停电或网络中断会使你的DNS瘫痪。
+3. 配置DNS服务器软件。这包括设置DNS区域和记录。
+4. 测试DNS服务器。一旦启动并运行，你可以通过模拟流量对其进行压力测试，以确保它不会出问题。
 
-There are also plenty of hosted DNS server tools you can use, which should work out of the box and save you some time. These cost a bit of money each month, but require less expertise to supervise.
+也有很多托管的DNS服务器工具，你可以使用，这应该是开箱即用，为你节省一些时间。这些工具每个月要花一点钱，但需要较少的专业知识来维护。
 
-## I hope you learned a lot about DNS Servers.
+## 我希望你能学到很多关于DNS服务器的知识
 
-I hope you've found this helpful. If you want to learn more about programming and technology, try [freeCodeCamp's core coding curriculum](https://www.freecodecamp.org/learn). It's free.
+我希望你觉得这对你有帮助。如果你想学习更多关于编程和技术的知识，请尝试 [freeCodeCamp的核心编码课程]（<https://www.freecodecamp.org/learn>），它是免费的。
+
+> 译者注： 一个好用的的IP地理信息和CDN服务提供商查询工具 [nali](https://github.com/zu1k/nali)

@@ -83,24 +83,24 @@ nav {
 
 ## 为什么要使用Sass?
 
--   **Easy to learn**: If you are familiar with CSS already, then you'll be glad to know that Sass actually has a similar syntax, and so you can start using it, even after this tutorial ;)
--   **Compatibility**: It is compatible with all versions of CSS. So, you can use any available CSS libraries.
--   **Saves time**: It helps reduce the repetition of CSS, because of its powerful features.
--   **Reusable code**: Sass allows for variables and chunks of code (mixins) that can be reused over and over again. This helps you save time and makes you able to code faster.
--   **Organized Code**: Sass helps keep your code organized by using partials.
--   **Cross Browser Compatibility**: Sass gets compiled into CSS and adds all the necessary vendor prefixes so you don't have to worry about manually writing them out.
+-   **易于学习**: 如果你已经熟悉CSS，你会欣喜地发现Sass和CSS的语法很相似，所以看完这篇教程，你就可以开始使用Sass了;)
+-   **兼容性强**: Sass兼容所有版本的CSS，所以你可以使用所有CSS库。
+-   **提高效率**: Sass强大的功能可以避免CSS的重复。
+-   **可复用的代码**: Sass中可以使用变量和代码块（mixins），并且可以重复使用。这样就节约了时间，提高了编写代码的速度。
+-   **有条理的代码**: 在Sass中可以使用片段（partials）来整理代码。
+-   **跨浏览器兼容**: Sass会被编译成CSS，并且自动添加浏览器引擎前缀，这样你就不需要手动编写了。
 
-## Features of Sass
+## Sass的功能
 
-Here are some of the features that make Sass truly CSS with Superpowers:
+以下功能使得Sass成为拥有超能力的CSS：
 
-### Variables in Sass
+### Sass中的变量
 
-You can declare variables in Sass. This is one of Sass's strengths since we can define variables for various properties and use them in any file.
+在Sass中可以声明变量，这是Sass其中一个强大的功能，因为我们可以根据各种属性来定义变量，并且在任何文件中使用这些变量。
 
-The benefit here is that if that value changes, you simply need to update a single line of code.
+使用变量的好处是，一旦值发生了变化，你只要编写一行代码进行修改。
 
-This is done by naming a variable with a dollar symbol `$` and then referencing it elsewhere in your code.
+具体操作办法是使用美元符号 `$`来命名变量， 然后在你代码的其他地方引用这个变量。
 
 ```scss
 $primary-color: #24a0ed;
@@ -114,11 +114,11 @@ button {
 }
 ```
 
-### Nesting in Sass
+### Sass中的嵌套
 
-Most of the time, while writing CSS, classes are often duplicated. We can avoid this duplication by nesting styles inside the parent element.
+在写CSS的时候，大多数情况下需要重复类选择器，在Sass中我们可以在父元素中嵌套来避免这样的重复。
 
-In CSS,
+在CSS中：
 
 ```css
 nav {
@@ -146,7 +146,7 @@ nav li a:hover {
 }
 ```
 
-With Sass, the above code can be written like this:
+在Sass，同样的代码可以写作：
 
 ```scss
 nav {
@@ -174,7 +174,7 @@ nav {
 }
 ```
 
-### Parent Selector
+### 父选择器
 
 In the Sass code above, you might notice the ampersand symbol `&` used with the hover pseudo-class. This is called a Parent Selector.
 

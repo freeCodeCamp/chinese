@@ -55,14 +55,13 @@ JavaScript被创造出来的时候只是用于处理网站的小型脚本语言�
 [CommonJS](https://en.wikipedia.org/wiki/CommonJS)是在JavaScript中使用模块的一组标准，是在2009年由Mozilla的工程师Kevin Dangoor提出的。
 CommonJS主要被用做使用Node的服务端JS，浏览器不支持CommonJS。
 
-As a side comment, Node used to only support CommonJS to implement modules, but nowadays it also supports ESmodules which is a more modern approach.
+顺便提一句，Node之前支持用CommonJS来使用模块，但现在ES模块这个更新的手段也被采用。
 
+让我们现在在实际代码中看看CommonJS。
 
-So let's see how CommonJS looks in actual code.
+使用模块之前我们需要先在电脑上安装node，可以使用命令行 `npm init -y`.
 
-To implement modules, you need a Node app on your computer first. So create one by running `npm init -y`.
-
-First let's create a `main.js` file with a simple function in it.
+首先，我们创建一个 `main.js` 文件，并在里面写入一个简单的函数。
 
 ```
 const testFunction = () => {
@@ -72,16 +71,16 @@ const testFunction = () => {
 testFunction()
 ```
 
-Ok now let's say we want to have another function called from our main file, but we don't want the function in it as it's not part of our core feature. For this, let's create a `mod1.js` file and add this code to it:
+然后，假设我们希望在主文件里调用另一个函数，但是我们不希望这个函数在主文件内，因为它不属于核心功能。我们创建一个`mod1.js` 文件，并写入代码：
 
 ```
 const mod1Function = () => console.log('Mod1 is alive!')
 module.exports = mod1Function
 ```
 
-`module.exports` is the keyword we use to declare all we want to export from that file.
+`module.exports` 这个关键字声明了我们想从该文件中导出的所有内容。
 
-To use this function in our `main.js` file, we can do it like this:
+在`main.js` 文件中使用这个函数，我们可以这样做：
 
 ```
 mod1Function = require('./mod1.js')
@@ -94,9 +93,9 @@ const testFunction = () => {
 testFunction()
 ```
 
-See that we declare whatever we want to use and then assign that to the `require` of the file we want to use. Piece of cake. ;)
+我们先声明任意一个变量，然后使用 `require` 引入想要引用的内容。 十分容易;)
 
-If we wanted to export more than one thing from a single module, we can do it like this:
+如果想要在同一个模块中输出不止一个内容，我们可以这样做：
 
 ```
 const mod1Function = () => console.log('Mod1 is alive!')
@@ -105,7 +104,7 @@ const mod1Function2 = () => console.log('Mod1 is rolling, baby!')
 module.exports = { mod1Function, mod1Function2 }
 ```
 
-And on the main.js file we can use both functions like this:
+然后在`main.js`文件中，可以这样使用两个函数：
 
 ```
 ({ mod1Function, mod1Function2 } = require('./mod1.js'))
@@ -119,17 +118,17 @@ const testFunction = () => {
 testFunction()
 ```
 
-And that's pretty much it. Quite simple, right? It is simple but it's a powerful tool to use. =)
+很容易，不是吗！虽然容易，但确实非常有用的工具。
 
-## ESmodules
+## ES模块
 
-Now let's review ESmodules. ESmodules is a standard that was introduced with ES6 (2015). The idea was to standarize how JS modules work and implement this features in browsers (which didn't previously support modules).
+现在回顾一下ES模块。ES模块是ES6（2015年）年引入的标准。创建的目的是为了标准化JS模块运作，和在浏览器中使用模块的方法（在此之前并不支持模块）。
 
-ESmodules is a more modern approach that is currently supported by browser and server-side apps with Node.
+相较而言，ES模块更新，刚支持浏览器和采用Node的服务端模块。
 
-Let's see this in code. Once again we start by creating a Node app with `npm init -y`.
+我们来看下面的代码片段，同样我们必须先安装Node应用 `npm init -y`.
 
-Now we go to our `package.json` and add `"type": "module"` to it, like this:
+然后点击`package.json` 并且加上 `"type": "module"` ，如下：
 
 ```
 {
@@ -146,8 +145,7 @@ Now we go to our `package.json` and add `"type": "module"` to it, like this:
   "type": "module"
 }
 ```
-
-If we don't do this and try to implement ESmodules on Node, we'll get an error like this:
+如果不按照上述步骤，并且想在Node中使用ES模块，我们会得到报错：
 
 ```
 (node:29568) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.

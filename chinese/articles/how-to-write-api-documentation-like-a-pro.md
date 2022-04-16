@@ -173,16 +173,7 @@ Postman使用其机器可读的文档工具，使API文档过程更容易和更�
 
 GitHub提供了非常有用的文档--这并不奇怪。在这里查看他们的API文档:
 
-[
-开始使用REST API - GitHub 文档
-
-学习使用REST API的基础，从认证（authentication）和一些实例 endpoint 开始。
-
-![favicon](https://docs.github.com/assets/cb-803/images/site/favicon.svg)GitHub Docs
-
-![github-logo](https://github.githubassets.com/images/modules/open_graph/github-logo.png)
-
-](<https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api>)
+[GitHub API Docs](https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api)
 
 REST API是开发人员用来访问网络或数据库数据的常用API。Github的这个文档包括概述、指南，甚至是如何在你的程序中使用REST API的代码。
 
@@ -190,33 +181,13 @@ REST API是开发人员用来访问网络或数据库数据的常用API。Github
 
 ### Paystack API Docs
 
-[
-
-首页
-
-利用Paystack API构建惊奇的支付体验
-
-![icon-512x512](https://paystack.com/docs/icons/icon-512x512.png?v=177cc8c17f9c3ea8034c1a3a3b476148)docs
-
-![paystack_docs_seo_image-83f4c473def81307a806441187742be6](https://paystack.com/docs/static/paystack_docs_seo_image-83f4c473def81307a806441187742be6.jpg)
-
-](<https://paystack.com/docs/>)
+[Paystack API Docs](https://paystack.com/docs/)
 
 你是否正在构建一个需要支付的应用程序？Paystack是一个用于支付的金融技术解决方案。他们的团队为开发者提供详细的信息，说明如何在你的程序中使用Paystack的API。这更像是提供一本关于使用API的手册，以避免在将API消耗到你的程序中时出现混乱。
 
 ### Twitter API Docs
 
-[
-
-推特API文档
-
-从程序上分析、学习和参与Twitter上的对话。现在探索Twitter的API文档。
-
-![favicon](https://abs.twimg.com/favicons/favicon.ico)Twitter API The Twitter API enables programmatic access to Twitter in unique and advanced ways. Tap into core elements of Twitter like: Tweets, Direct Messages, Spaces, Lists, users, and more. Sign up API access levels and versions Try a live request Twitter API v2 Twitter API v2 is ready for prime time! We recommend that the majority of developers start to think about migrating to v2 of the API, and for any new users to get started with v2. Why migrate? New and more detailed data objects New parameters to request objects and fields Advanced metrics Receive and filter data with contextual Tweet annotations Filter on and identify which Tweets belong to a reply thread Advanced access level for Academic Researchers And much more... V2 Access Levels Essential With Essential access, you can now get access to Twitter API v2 quickly and for free! Retrieve 500,000 Tweets per month1 Project per account1 App environment per ProjectNo access to standard v1.1, premium v1.1, or enterprise Elevated With Elevated access, you can get free, additional access to endpoints and data, as well as additional App environments. Retrieve 2 million Tweets per month1 Project per account3 App environments per ProjectAccess to standard v1.1, premium v1.1, and enterprise Academic Research If you qualify for our Academic Research access level, you can get access to even more data and advanced search endpoints. Retrieve 10 million Tweets per monthAccess to full-archive search and full-archive Tweet countsAccess to advanced search operators More on v2 access levels Migrate to Twitter API v2 Interested in migrating your current integration to Twitter API v2? Check out our migration hub for resources that will help you understand what is different between v2 and previous versions, including the data formats. You can also access migration guides for each endpoint listed in the new v2 endpoint sections. Learn more Twitter API endpoint map What to build With the volume of different endpoints and features available on the Twitter API, it’s not always easy to know what to use it for. We’ve made it easy for you. Check out our 'what to build" page to learn more. Moderate conversations for health and safetyEnable creation and personal expressionMeasure and analyze “what’s happening”Improve community experiencesCurate and recommend contentImpact the greater good What to build Tools to get you started Go from zero to "Hello World" with the help of these resources, tools, and libraries. Client libraries Check out our curated selection of Twitter-built and community-supported client libraries. Browse libraries v2 Postman collection We have built out a Postman collection for our v2 endpoints to help you explore the API using their visual client! Get started with Postman Sample code Looking to get started building with the Twitter API. We have sample code, clients, and other example apps available. Check out the @TwitterDev GitHub! Get started with our sample code Need help? Visit our support section, where you can find troubleshooting tips, frequently asked questions, live API status monitor, and other helpful information that can help you understand how to overcome any obstacle. Get support Join the community The Twitter Developer Community is where our global community of developers meet, discuss, build and innovate on the Twitter Developer Platform. Learn more about the community How can we improve upon the Twitter API? Give us your product feedback > Other Twitter API offerings Enterprise: Gnip 2.0 Our enterprise APIs offer the highest level of access and reliability to those who depend on Twitter data. Learn more Premium v1.1 The premium v1.1 endpoints offer scalable access to Twitter data for those looking to grow, experiment, and innovate by using historical search and subscribing to user activities. Learn more Standard v1.1 The standard v1.1 endpoints were launched in 2012 and enables you to post, interact, and retrieve data for resources such as Tweets, Users, Direct Messages, Lists, Trends, Media, and Places. Learn more Developer policy and terms Follow @twitterdev Subscribe to developer news Twitter platform Twitter.com Status Card validator Embed a Tweet Privacy Center Transparency Center Twitter, Inc. About the company Twitter for Good Company news Brand toolkit Jobs and internships Investors Help Help Center Using Twitter Twitter Media Ads Help Center Managing your account Email Preference Center Rules and policies Contact us Developer resources Developer home Documentation Forums Communities Developer blog Engineering blog Developer terms Business resources Advertise Twitter for business Resources and guides Twitter for marketers Marketing insights Brand inspiration Twitter Flight School © 2022 Twitter, Inc. Cookies Privacy Terms and conditions By using Twitter’s services you agree to our Cookies Use. We use cookies for purposes including analytics, personalisation, and ads. OK This page and certain other Twitter sites place and read third party cookies on your browser that are used for non-essential purposes including targeting of ads. Through these cookies, Google, LinkedIn and Demandbase collect personal data about you for their own purposes. Learn more. Accept Decline
-
-![devwebsite_card_tn.jpg.twimg.768](https://cdn.cms-twdigitalassets.com/content/dam/developer-twitter/redesign-2021-images/og-social-card/devwebsite_card_tn.jpg.twimg.768.jpg)
-
-](<https://developer.twitter.com/en/docs/twitter-api>)
+[推特API文档](https://developer.twitter.com/en/docs/twitter-api)
 
 Twitter的API文档解释了开发者如何与App互动。这些文件清楚地详述了不同的部分（用户、推文、直接信息等）和它们的操作。
 

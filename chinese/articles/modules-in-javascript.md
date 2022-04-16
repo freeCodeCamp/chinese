@@ -22,41 +22,41 @@
 -   [打包模块](#bundlingmodules)
 -   [总结](#roundup)
 
-# What are modules and why are they useful
+# 什么是模块，模块为什么重要
 
-A module is just a piece of code in a file that you can call and use from other files. A modular design is the opposite of having all your project's code in one single file.
+模块是一段你可以在其他文件中回调或者使用的代码。模块设计与把整个项目的代码存放在一个文件中的操作截然不同。
 
-When developing a big project, it's very useful to divide our code into modules for the following reasons:
+在开发大型项目的时候，把代码分成不同的模块奏效的原因是：
 
--   It's good for dividing concerns and features into different files, which helps visualization and organization of code.
--   Code tends to be easier to maintain and less prone to errors and bugs when it's clearly organized.
--   Modules can be easily used and reused in different files and parts of our project, without needing to rewrite the same code again.
+-  把顾虑和功能拆分到不同的文件可以帮助视觉化代码，理顺代码的框架。
+-  组织后的代码更容易维护，更不易出现错误和bug。
+-  可以在不同的文件或者项目的不同部分复用模块，这样就避免了重复书写同样的代码。
 
-Instead of having all of our program's components in a single file, we can divide it into parts or modules, and make each of them responsible for a single feature/concern.
+与其把程序的所有组件都放在一个文件中，我们不如把它分成不同的部分和模块，每一个部分和模块代表一个功能或者顾虑。
 
-If this concept isn't clear enough now, don't worry. We'll see some examples in a sec.
+如果你认为上述对概念的讲解不够清晰，不要担心，马上我们就进入例子环节。
 
-# Types of modules
+# 模块的种类
 
-As with almost everything in life, and especially in JavaScript, there are many ways for us to implement modules.
+在JavaScript中有很多方法来实施模块。
 
-As JavaScript was first created to be just a small scripting language for websites, a feature for big projects like modules wasn't supported at the beginning.
+JavaScript被创造出来的时候只是用于处理网站的小型脚本语言，所以最开始JavaScript并不支持模块。
 
-But as the language and the ecosystem grew, developers started to see the need for this feature. And so different options and libraries were developed to add this feature to JavaScript.
+但随着JavaScript这门语言以及相应生态圈的成长，开发者们开始需要模块功能，所以当时涌现出来了不同的方式和库来实现模块功能。
 
-Of the many available, we're only going to take a look at CommonJS and ESmodules, which are the most recent and widely used ones.
+我们将讨论最近并且是运用最广泛的两种模块——CommonJS和ES模块。
 
-Side comment: Did you know that [Javascript was originally created in just 10 days of work](https://thenewstack.io/brendan-eich-on-creating-javascript-in-10-days-and-what-hed-do-differently-today/)?
+顺便提一句：你知道[Javascript是只花十天就创建出来的吗](https://thenewstack.io/brendan-eich-on-creating-javascript-in-10-days-and-what-hed-do-differently-today/)？
 
-When analyzing the complexities of JavaScript and understanding how the language has evolved, I think it's important to have in mind that the language wasn't originally created to do what it does nowadays. It's the growth of the Javascript ecosystem that pushed for many of the changes that have come about.
+我认为在分析JavaScript的复杂性以及这门语言是如何演化的时候，必须记住这门语言诞生之初的设计并不是为了实现现在的功能的。是JavaScript生态圈推动了这门语言的改变。
 
-## CommonJS modules
+## CommonJS模块
 
-[CommonJS](https://en.wikipedia.org/wiki/CommonJS) is a set of standards used to implement modules on JavaScript. The project was started by Mozilla engineer Kevin Dangoor in 2009.
-
-CommonJS is mainly used in server-side JS apps with Node, as browsers don't support the use of CommonJS.
+[CommonJS](https://en.wikipedia.org/wiki/CommonJS)是在JavaScript中使用模块的一组标准，是在2009年由Mozilla的工程师Kevin Dangoor提出的。
+CommonJS主要被用做使用Node的服务端JS，浏览器不支持CommonJS。
 
 As a side comment, Node used to only support CommonJS to implement modules, but nowadays it also supports ESmodules which is a more modern approach.
+
 
 So let's see how CommonJS looks in actual code.
 

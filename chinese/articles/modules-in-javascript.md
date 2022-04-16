@@ -1,27 +1,26 @@
 > -  原文地址：[Modules in JavaScript – CommonJS and ESmodules Explained](https://www.freecodecamp.org/news/modules-in-javascript/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：Papaya
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Modules in JavaScript – CommonJS and ESmodules Explained](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/carson-arias-7Z03R1wOdmI-unsplash.jpg)
+大家好！这篇文章将讲解JavaScript模块。
 
-Hi everyone! In this article we're going to take a look at modules in JavaScript.
+当代软件设计和工程中大量使用模块技术。
 
-Modules are a technique heavily used in today's software design/architecture.
+首先我们将学习什么是模块，有哪些不同的模块；然后我们将探讨为什么模块有用以及常用模块的基本语法和例子；最后我们会讨论打包，打包的重要性以及如何打包。
 
-First we're going to learn what they are and the different types of modules that exist. Then we're going to discuss why modules are useful. Then we're going to see examples and basic syntax for the most used module types, and finally we're going to discuss bundling, why is it necessary, and how to do it.
+话不多说，让我们直入主题！
 
-Enough cháchara, let's go! =D
+## 目录
 
-## Table of Contents
-
--   [What are modules and why are they useful](#whataremodulesandwhyaretheyuseful)
--   [Types of modules](#typesofmodules)
+-   [什么是模块，模块为什么重要](#whataremodulesandwhyaretheyuseful)
+-   [模块的种类](#typesofmodules)
     -   [CommonJS](#commonjsmodules)
     -   [ESmodules](#esmodules)
--   [Using modules](#usingmodules)
--   [Bundling modules](#bundlingmodules)
--   [Roundup](#roundup)
+-   [使用模块](#usingmodules)
+-   [打包模块](#bundlingmodules)
+-   [总结](#roundup)
 
 # What are modules and why are they useful
 

@@ -3197,7 +3197,11 @@ res.end('Hello World\n')
 
 ```js
 const https = require('https')
-const options = { hostname: 'flaviocopes.com', port: 443, path: '/todos', method: 'GET' }
+const options = { 
+  hostname: 'flaviocopes.com', 
+  port: 443, path: '/todos', 
+  method: 'GET' 
+}
 
 const req = https.request(options, (res) => {
     console.log(`statusCode: ${res.statusCode}`)
@@ -3216,11 +3220,12 @@ const https = require('https')
 
 const data = JSON.stringify({  todo: 'Buy the milk'})
 
-const options = {  hostname: 'flaviocopes.com',
-                   port: 443,  path: '/todos',  
-                   method: 'POST',  
-                   headers: {'Content-Type':'application/json', 'Content-Length': data.length  }
-                }
+const options = {  
+  hostname: 'flaviocopes.com',
+  port: 443,  path: '/todos',  
+  method: 'POST',  
+  headers: {'Content-Type':'application/json', 'Content-Length': data.length  }
+}
 
 const req = https.request(options, (res) => { 
   console.log(`statusCode: ${res.statusCode}`)
@@ -3281,9 +3286,10 @@ yarn add axios
 你可以从 `axios` 对象中开始一个 HTTP 请求:
 
 ```js
-axios({  url: 'https://dog.ceo/api/breeds/list/all',  
-         method: 'get',  
-         data: {foo:'bar'}
+axios({  
+  url: 'https://dog.ceo/api/breeds/list/all',  
+  method: 'get',  
+  data: {foo:'bar'}
 })
 ```
 
@@ -4795,9 +4801,10 @@ const mysql = require('mysql')
 并创建一个连接:
 
 ```js
-const options = {  user: 'the_mysql_user_name', 
-                   password: 'the_mysql_user_password',  
-                   database: 'the_mysql_database_name'
+const options = {  
+  user: 'the_mysql_user_name', 
+  password: 'the_mysql_user_password',  
+  database: 'the_mysql_database_name'
 }
 
 const connection = mysql.createConnection(options)
@@ -4819,9 +4826,10 @@ connection.connect(err => {
 在上面的例子中，`options` 对象包含 3 个选项:
 
 ```js
-const options = {  user: 'the_mysql_user_name',  
-                   password: 'the_mysql_user_password',
-                   database: 'the_mysql_database_name'
+const options = {  
+  user: 'the_mysql_user_name',  
+  password: 'the_mysql_user_password',
+  database: 'the_mysql_database_name'
 }
 ```
 

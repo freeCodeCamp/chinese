@@ -545,9 +545,8 @@ node
 
 如果你现在在你的终端尝试一下，会发生这样的情况:
 
-```js
-❯ node;
-```
+>> node
+>> >
 
 该命令保持在空闲模式，等待我们输入什么。
 
@@ -1375,7 +1374,7 @@ package.json 文件是很多基于 Node.js 生态系统的应用代码库中的�
 例子:
 
 ```json
-"version": "1.0.0"
+{"version": "1.0.0"}
 ```
 
 这个属性遵循版本的语义版本（semver）符号，这意味着版本总是用3个数字表示。`x.x.x`。
@@ -1458,8 +1457,8 @@ package.json 文件是很多基于 Node.js 生态系统的应用代码库中的�
 
 例如:
 
-```plain
-"main": "src/main.js"
+```json
+{"main": "src/main.js"}
 ```
 
 #### `private`
@@ -1469,7 +1468,7 @@ package.json 文件是很多基于 Node.js 生态系统的应用代码库中的�
 例如:
 
 ```json
-"private": true
+{"private": true }
 ```
 
 #### `scripts`
@@ -1534,7 +1533,7 @@ npm install --dev <PACKAGENAME>yarn add --dev <PACKAGENAME>
 比如:
 
 ```json
-"devDependencies": {  "autoprefixer": "^7.1.2",  "babel-core": "^6.22.1"}
+{"devDependencies": {  "autoprefixer": "^7.1.2",  "babel-core": "^6.22.1"}}
 ```
 
 #### `engines`
@@ -1544,7 +1543,7 @@ npm install --dev <PACKAGENAME>yarn add --dev <PACKAGENAME>
 例如:
 
 ```json
-"engines": {  "node": ">= 6.0.0",  "npm": ">= 3.0.0",  "yarn": "^0.13.0"}
+{"engines": {  "node": ">= 6.0.0",  "npm": ">= 3.0.0",  "yarn": "^0.13.0"}}
 ```
 
 #### `browserslist`
@@ -2144,7 +2143,7 @@ baz
 
 我们来看看如何推迟一个函数，直到堆栈清空。
 
-`setTimeout(() => {}),0)` 的用例是调用一个函数，但要在代码中的其他函数都执行完后再执行它。
+`setTimeout(() => {},0)` 的用例是调用一个函数，但要在代码中的其他函数都执行完后再执行它。
 
 以此为例:
 
@@ -2155,7 +2154,8 @@ const baz = () => console.log('baz')
 
 const foo = () => {  
   console.log('foo') 
-  setTimeout(bar, 0)  baz()
+  setTimeout(bar, 0) 
+  baz()
 }
 
 foo()
@@ -2315,7 +2315,10 @@ clearTimeout(id)   // 取消定时器
 如果你指定超时延迟为 `0`，回调函数将尽快执行，但在当前函数执行之后:
 
 ```js
-setTimeout(() => {console.log('after ')}, 0)
+setTimeout(() => {
+  console.log('after ')
+}, 0)
+
 console.log(' before ')
 ```
 
@@ -2779,7 +2782,7 @@ console.log('After')
 
 上述代码将向浏览器控制台打印以下内容:
 
-```js
+```plain
 Before
 After
 I did something //after 3s
@@ -3064,7 +3067,7 @@ TCP 连接在完全初始化之前需要进行一些握手，然后就可以开�
 
 例如:
 
-```shell
+```plain
 GET / HTTP/1.1
 ```
 
@@ -3105,15 +3108,19 @@ Host: flaviocopes.comConnection: close
 
 响应以状态代码和状态信息开始。如果请求成功并返回 200:
 
-```shell
+```plain
 200 OK
 ```
 
 该请求可能会返回一个不同的状态代码和信息，比如这些信息之一:
 
-```shell
-404 Not Found403 Forbidden301 Moved Permanently
-500 Internal Server Error304 Not Modified401 Unauthorized
+```plain
+404 Not Found
+403 Forbidden
+301 Moved Permanently
+500 Internal Server Error
+304 Not Modified
+401 Unauthorized
 ```
 
 然后，响应包含一个 HTTP 头的列表和响应体（因为我们是在浏览器中发出请求，所以它将是 HTML）。
@@ -3209,13 +3216,19 @@ const https = require('https')
 
 const data = JSON.stringify({  todo: 'Buy the milk'})
 
-const options = {  hostname: 'flaviocopes.com',  port: 443,  path: '/todos',  method: 'POST',  headers: {    'Content-Type': 'application/json',    'Content-Length': data.length  }}
+const options = {  hostname: 'flaviocopes.com',
+                   port: 443,  path: '/todos',  
+                   method: 'POST',  
+                   headers: {'Content-Type':'application/json', 'Content-Length': data.length  }
+                }
 
-const req = https.request(options, (res) => { console.log(`statusCode: ${res.statusCode}`)
+const req = https.request(options, (res) => { 
+  console.log(`statusCode: ${res.statusCode}`)
+})
 
-res.on('data', (d) => {    process.stdout.write(d)  })})
+res.on('data', (d) => {process.stdout.write(d)})
 
-req.on('error', (error) => { console.error(error)})
+req.on('error', (error) => {console.error(error)})
 
 req.write(data)
 req.end()
@@ -3260,7 +3273,7 @@ yarn add axios
 或简单地使用 unpkg.com，在你的页面引用:
 
 ```html
-<script src="https://unpkg.com/axios/dist/axios.min.js"><;/script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 ```
 
 #### Axios API
@@ -3268,7 +3281,10 @@ yarn add axios
 你可以从 `axios` 对象中开始一个 HTTP 请求:
 
 ```js
-axios({  url: 'https://dog.ceo/api/breeds/list/all',  method: 'get',  data: {    foo: 'bar'  }})
+axios({  url: 'https://dog.ceo/api/breeds/list/all',  
+         method: 'get',  
+         data: {foo:'bar'}
+})
 ```
 
 但为了方便起见，你一般会使用:
@@ -3321,9 +3337,7 @@ countBreeds()
 
 ```js
 const axios = require('axios')
-```
 
-```js
 const getBreeds = () => {  
   try { 
     return axios.get('https://dog.ceo/api/breeds/list/all')
@@ -3332,9 +3346,7 @@ const getBreeds = () => {
     console.error(error) 
    }
 }
-```
 
-```js
 const countBreeds = async () => {  
   const breeds = getBreeds().then(response => { 
     if (response.data.message) {       
@@ -3465,7 +3477,8 @@ connection.onmessage = e => {  console.log(e.data)}
 使用以下方法轻松地安装它:
 
 ```js
-yarn inityarn add ws
+yarn init
+yarn add ws
 ```
 
 你需要写的代码非常少:
@@ -3513,9 +3526,6 @@ fs.open('/Users/flavio/test.txt', 'r', (err, fd) => { })//fd is our file descrip
 
 ```js
 const fs = require('fs')
-```
-
-```js
 try {  
   const fd = fs.openSync('/Users/flavio/test.txt', 'r')
 } catch (err) {  
@@ -3714,7 +3724,10 @@ fs.writeFile('/Users/flavio/test.txt', content, (err) => {
 ```js
 const fs = require('fs')
 const content = 'Some content!'
-try {  const data = fs.writeFileSync('/Users/flavio/test.txt', content)  //file written successfully} 
+try {  
+  const data = fs.writeFileSync('/Users/flavio/test.txt', content) 
+  //file written successfully
+} 
 catch (err) {  
   console.error(err)
 }
@@ -3771,13 +3784,7 @@ Node.js `fs` 核心模块提供了许多方便的方法，你可以用来处理�
 
 ```js
 const fs = require('fs')
-```
-
-```js
 const folderName = '/Users/flavio/test'
-```
-
-```js
 try {  
    if (!fs.existsSync(dir))
      {fs.mkdirSync(dir)}
@@ -3802,9 +3809,10 @@ fs.readdirSync(folderPath)
 你可以得到完整的路径:
 
 ```js
-fs.readdirSync(folderPath).map(fileName => {
-  return path.join(folderPath, fileName)
-}
+fs.readdirSync(folderPath)
+  .map(fileName => {
+     return path.join(folderPath, fileName)
+})
 ```
 
 你还可以过滤结果，只返回文件，并排除文件夹:
@@ -3814,8 +3822,8 @@ const isFile = fileName => {
   return fs.lstatSync(fileName).isFile()
 }
 fs.readdirSync(folderPath).map(fileName => { 
-   return path.join(folderPath, fileName)).filter(isFile)
-}
+   return path.join(folderPath, fileName).filter(isFile)
+})
 ```
 
 #### 重命名文件夹
@@ -4377,7 +4385,9 @@ const ee = new EventEmitter()
 ```
 
 ```js
-ee.once('my-event', () => {  //call callback function once})
+ee.once('my-event', () => {  
+  //call callback function once
+})
 ```
 
 #### `emitter.prependListener()`
@@ -4434,7 +4444,8 @@ const http = require('http')
 此属性列出了所有支持的HTTP方法:
 
 ```js
-> require('http').METHODS[ 'ACL',  'BIND',  'CHECKOUT',  'CONNECT',  'COPY',  'DELETE',  'GET',  'HEAD',  'LINK',  'LOCK',  'M-SEARCH',  'MERGE',  'MKACTIVITY',  'MKCALENDAR',  'MKCOL',  'MOVE',  'NOTIFY',  'OPTIONS',  'PATCH',  'POST',  'PROPFIND',  'PROPPATCH',  'PURGE',  'PUT',  'REBIND',  'REPORT',  'SEARCH',  'SUBSCRIBE',  'TRACE',  'UNBIND',  'UNLINK',  'UNLOCK',  'UNSUBSCRIBE' ]
+> require('http').METHODS
+[ 'ACL',  'BIND',  'CHECKOUT',  'CONNECT',  'COPY',  'DELETE',  'GET',  'HEAD',  'LINK',  'LOCK',  'M-SEARCH',  'MERGE',  'MKACTIVITY',  'MKCALENDAR',  'MKCOL',  'MOVE',  'NOTIFY',  'OPTIONS',  'PATCH',  'POST',  'PROPFIND',  'PROPPATCH',  'PURGE',  'PUT',  'REBIND',  'REPORT',  'SEARCH',  'SUBSCRIBE',  'TRACE',  'UNBIND',  'UNLINK',  'UNLOCK',  'UNSUBSCRIBE' ]
 ```
 
 #### `http.STATUS_CODES`
@@ -4442,7 +4453,8 @@ const http = require('http')
 此属性列出了所有的HTTP状态代码及其描述:
 
 ```js
-> require('http').STATUS_CODES{ '100': 'Continue',  '101': 'Switching Protocols',  '102': 'Processing',  '200': 'OK',  '201': 'Created',  '202': 'Accepted',  '203': 'Non-Authoritative Information',  '204': 'No Content',  '205': 'Reset Content',  '206': 'Partial Content',  '207': 'Multi-Status',  '208': 'Already Reported',  '226': 'IM Used',  '300': 'Multiple Choices',  '301': 'Moved Permanently',  '302': 'Found',  '303': 'See Other',  '304': 'Not Modified',  '305': 'Use Proxy',  '307': 'Temporary Redirect',  '308': 'Permanent Redirect',  '400': 'Bad Request',  '401': 'Unauthorized',  '402': 'Payment Required',  '403': 'Forbidden',  '404': 'Not Found',  '405': 'Method Not Allowed',  '406': 'Not Acceptable',  '407': 'Proxy Authentication Required',  '408': 'Request Timeout',  '409': 'Conflict',  '410': 'Gone',  '411': 'Length Required',  '412': 'Precondition Failed',  '413': 'Payload Too Large',  '414': 'URI Too Long',  '415': 'Unsupported Media Type',  '416': 'Range Not Satisfiable',  '417': 'Expectation Failed',  '418': 'I\'m a teapot',  '421': 'Misdirected Request',  '422': 'Unprocessable Entity',  '423': 'Locked',  '424': 'Failed Dependency',  '425': 'Unordered Collection',  '426': 'Upgrade Required',  '428': 'Precondition Required',  '429': 'Too Many Requests',  '431': 'Request Header Fields Too Large',  '451': 'Unavailable For Legal Reasons',  '500': 'Internal Server Error',  '501': 'Not Implemented',  '502': 'Bad Gateway',  '503': 'Service Unavailable',  '504': 'Gateway Timeout',  '505': 'HTTP Version Not Supported',  '506': 'Variant Also Negotiates',  '507': 'Insufficient Storage',  '508': 'Loop Detected',  '509': 'Bandwidth Limit Exceeded',  '510': 'Not Extended',  '511': 'Network Authentication Required' }
+> require('http').STATUS_CODES
+{ '100': 'Continue',  '101': 'Switching Protocols',  '102': 'Processing',  '200': 'OK',  '201': 'Created',  '202': 'Accepted',  '203': 'Non-Authoritative Information',  '204': 'No Content',  '205': 'Reset Content',  '206': 'Partial Content',  '207': 'Multi-Status',  '208': 'Already Reported',  '226': 'IM Used',  '300': 'Multiple Choices',  '301': 'Moved Permanently',  '302': 'Found',  '303': 'See Other',  '304': 'Not Modified',  '305': 'Use Proxy',  '307': 'Temporary Redirect',  '308': 'Permanent Redirect',  '400': 'Bad Request',  '401': 'Unauthorized',  '402': 'Payment Required',  '403': 'Forbidden',  '404': 'Not Found',  '405': 'Method Not Allowed',  '406': 'Not Acceptable',  '407': 'Proxy Authentication Required',  '408': 'Request Timeout',  '409': 'Conflict',  '410': 'Gone',  '411': 'Length Required',  '412': 'Precondition Failed',  '413': 'Payload Too Large',  '414': 'URI Too Long',  '415': 'Unsupported Media Type',  '416': 'Range Not Satisfiable',  '417': 'Expectation Failed',  '418': 'I\'m a teapot',  '421': 'Misdirected Request',  '422': 'Unprocessable Entity',  '423': 'Locked',  '424': 'Failed Dependency',  '425': 'Unordered Collection',  '426': 'Upgrade Required',  '428': 'Precondition Required',  '429': 'Too Many Requests',  '431': 'Request Header Fields Too Large',  '451': 'Unavailable For Legal Reasons',  '500': 'Internal Server Error',  '501': 'Not Implemented',  '502': 'Bad Gateway',  '503': 'Service Unavailable',  '504': 'Gateway Timeout',  '505': 'HTTP Version Not Supported',  '506': 'Variant Also Negotiates',  '507': 'Insufficient Storage',  '508': 'Loop Detected',  '509': 'Bandwidth Limit Exceeded',  '510': 'Not Extended',  '511': 'Network Authentication Required' }
 ```
 
 #### `http.globalAgent`
@@ -4783,7 +4795,11 @@ const mysql = require('mysql')
 并创建一个连接:
 
 ```js
-const options = {  user: 'the_mysql_user_name',  password: 'the_mysql_user_password',  database: 'the_mysql_database_name'}
+const options = {  user: 'the_mysql_user_name', 
+                   password: 'the_mysql_user_password',  
+                   database: 'the_mysql_database_name'
+}
+
 const connection = mysql.createConnection(options)
 ```
 
@@ -4803,7 +4819,10 @@ connection.connect(err => {
 在上面的例子中，`options` 对象包含 3 个选项:
 
 ```js
-const options = {  user: 'the_mysql_user_name',  password: 'the_mysql_user_password',  database: 'the_mysql_database_name'}
+const options = {  user: 'the_mysql_user_name',  
+                   password: 'the_mysql_user_password',
+                   database: 'the_mysql_database_name'
+}
 ```
 
 你还可以使用很多，包括:

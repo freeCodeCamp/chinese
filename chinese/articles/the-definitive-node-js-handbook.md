@@ -545,8 +545,8 @@ node
 
 如果你现在在你的终端尝试一下，会发生这样的情况:
 
->> node
->> >
+> > node
+> >
 
 该命令保持在空闲模式，等待我们输入什么。
 
@@ -1525,7 +1525,8 @@ yarn add <PACKAGENAME>
 当你使用 `npm` 或 `yarn` 安装一个包时:
 
 ```shell
-npm install --dev <PACKAGENAME>yarn add --dev <PACKAGENAME>
+npm install --dev <PACKAGENAME>
+yarn add --dev <PACKAGENAME>
 ```
 
 该软件包会自动插入该列表中。

@@ -86,29 +86,29 @@ go run main.go
 # Hello World!
 ```
 
-**_Note_**_: To try out the code that is mentioned in this blog you can use [https://play.golang.org](https://play.golang.org/)_
+**_注意_** :  _要尝试本博客中提到的代码，你可以使用 [https://play.golang.org](https://play.golang.org/)_
 
 ### Variables
 
-Variables in Go are declared explicitly. Go is a statically typed language. This means that the variable type is checked at the time of variable declaration. A variable can be declared as:
+Go 中的变量是明确声明的。Go 是一种静态类型的语言。这意味着在声明变量的时候会检查变量的类型。一个变量可以被声明:
 
 ```go
 var a int
 ```
 
-In this case, the value will be set as 0. Use the following syntax to declare and initialize a variable with a different value:
+在这种情况下，值将被设置为0。 使用下面的语法来声明和初始化一个具有不同值的变量:
 
 ```go
 var a = 1
 ```
 
-Here the variable is automatically assigned as an int. We can use a shorthand definition for the variable declaration as:
+这里的变量被自动分配为int。 我们可以对变量的声明使用一个简短定义，即:
 
 ```go
 message := "hello world"
 ```
 
-We can also declare multiple variables in the same line:
+我们也可以在同一行中声明多个变量:
 
 ```go
 var b, c int = 2, 3
@@ -116,18 +116,18 @@ var b, c int = 2, 3
 
 ### Data types
 
-Like any other programming language, Go supports various different data structures. Let’s explore some of them:
+像其他编程语言一样，Go支持各种不同的数据结构。让我们来探索其中:
 
 #### **Number, String, and Boolean**
 
-Some of the supported number store types are int, int8, int16, int32, int64,  
-uint, uint8, uint16, uint32, uint64, uintptr…
+支持的整型包括 int, int8, int16, int32, int64,  
+uint, uint8, uint16, uint32, uint64, uintptr(无符号整型，长度跟平台相关，它的长度可以用来保存一个指针地址) 等
 
-The string type stores a sequence of bytes. It is represented and declared with keyword `string`.
+字符串类型存储一个字节序列。它用关键字 `string` 来表示和声明。
 
-A boolean value is stored using the keyword `bool`.
+布尔值使用关键字 `bool` 来存储。
 
-Go also supports complex number type data types, which can be declared with `complex64` and `complex128`.
+Go 也支持复数类型，可以用 `complex64` 和 `complex128` 来声明。
 
 ```go
 var a bool = true
@@ -139,47 +139,49 @@ var x complex128 = cmplx.Sqrt(-5 + 12i)
 
 #### **Arrays, Slices, and Maps**
 
-An array is a sequence of elements of the same data type. Arrays have a fixed length defined at declaration, so it cannot be expanded more than that. An array is declared as:
+数组是由相同数据类型的元素组成的一个序列。数组在声明时有一个固定的长度，所以它不能被扩大到超过这个长度。一个数组声明:
 
 ```go
 var a [5]int
 ```
 
-Arrays can also be multidimensional. We can simply create them with the following format:
+数组也可以是多维的。我们可以简单地用以下方式创建它们:
 
 ```go
 var multiD [2][3]int
 ```
 
-Arrays are limiting for cases when the values of array changes in runtime. Arrays also do not provide the ability to get a subarray. For this, Go has a data type called slices.
+数组会限制数组的值发生变化，当代码运行时。数组也没有提供获取子数组的能力。 为此，Go有一种数据类型，叫做切片（slices）。
 
-Slices store a sequence of elements and can be expanded at any time. Slice declaration is similar to array declaration — without the capacity defined:
+切片存储了一连串的元素，并且可以在任何时候扩展。切片声明与数组声明类似--但没有定义容量:
 
 ```go
 var b []int
 ```
 
-This creates a slice with zero capacity and zero length. Slices can also be defined with capacity and length. We can use the following syntax for it:
+这将创建一个容量为 0、长度为 0 的切片。
+
+也可以用容量和长度来定义切片。我们可以用下面的语法来定义它:
 
 ```go
 numbers := make([]int,5,10)
 ```
 
-Here, the slice has an initial length of 5 and has a capacity of 10.
+这里，切片的初始长度为5，容量为10。
 
-Slices are an abstraction to an array. Slices use an array as an underlying structure. A slice contains three components: capacity, length, and a pointer to the underlying array as shown in the diagram below:
+分片是对数组的一种抽象。切片使用一个数组作为底层结构。一个片断包含三个部分：容量、长度和一个指向底层数组的指针，如下图所示:
 
 ![1*P0lNCO0sQwIYHLEX_mfSOQ](https://cdn-media-1.freecodecamp.org/images/1*P0lNCO0sQwIYHLEX_mfSOQ.png)
 
-image src: [https://blog.golang.org/go-slices-usage-and-internals](https://blog.golang.org/go-slices-usage-and-internals)
+图片源自: [https://blog.golang.org/go-slices-usage-and-internals](https://blog.golang.org/go-slices-usage-and-internals)
 
-The capacity of a slice can be increased by using the append or a copy function. An append function adds value to the end of the array and also increases the capacity if needed.
+一个切片的容量可以通过使用 append 或 copy 函数来增加。append 函数将值添加到数组的末端，如果需要的话也可以增加容量。
 
 ```go
 numbers = append(numbers, 1, 2, 3, 4)
 ```
 
-Another way to increase the capacity of a slice is to use the copy function. Simply create another slice with a larger capacity and copy the original slice to the newly created slice:
+另一种增加切片容量的方法是使用 copy 函数。简单地创建另一个容量更大的片断，并将原来的切片复制到新创建的切片上:
 
 ```go
 // create a new slice
@@ -188,7 +190,7 @@ number2 := make([]int, 15)
 copy(number2, number)
 ```
 
-We can create a sub-slice of a slice. This can be done simply using the following command:
+我们可以创建一个切片的子切片。这可以通过以下命令简单地完成:
 
 ```go
 // initialize a slice with 4 len and values
@@ -203,13 +205,13 @@ slice3 := number2[1:4]
 fmt.Println(slice3) // -> [2 3 4]
 ```
 
-Maps are a data type in Go, which maps keys to values. We can define a map using the following command:
+Maps 是 Go中的一种数据类型，它将键映射到值。我们可以使用以下命令来定义一个 map:
 
 ```go
 var m map[string]int
 ```
 
-Here `m` is the new map variable, which has its keys as `string` and values are `integers`. We can add keys and values easily to a map:
+`m` 是新的 map 变量, 它的键是 `string` 类型， 值是 `integers` 类型。我们很容易在 map 上添加键值对:
 
 ```go
 // adding key/value
@@ -222,7 +224,7 @@ fmt.Println(m['simplicity']) // -> 3
 
 ### **Typecasting**
 
-One type of data type can be converted into another using type casting. Let’s see a simple type conversion:
+一种类型的数据类型可以通过类型转换转换为另一种类型。让我们看看一个简单的类型转换:
 
 ```go
 a := 1.1
@@ -231,13 +233,13 @@ fmt.Println(b)
 //-> 1
 ```
 
-Not all types of data type can be converted to another type. Make sure that the data type is compatible with the conversion.
+不是所有类型的数据类型都可以转换为另一种类型。请确保数据类型与转换的内容相匹配。
 
 ### Conditional Statements
 
 #### if else
 
-For conditional statements, we can use if-else statements as shown in the example below. Make sure that the curly braces are in the same line as the condition is.
+对于条件性语句，我们可以使用 if-else 语句，如下例所示。请确保大括号与条件语句在同一行。
 
 ```go
 if num := 9; num < 0 {
@@ -251,7 +253,7 @@ if num := 9; num < 0 {
 
 #### switch case
 
-Switch cases helps organize multiple condition statements. The following example shows a simple switch case statement:
+Switch cases 有助于组织多个条件语句。下面的例子显示了一个简单的 siwtch 语句:
 
 ```go
 i := 2
@@ -267,7 +269,7 @@ default:
 
 ### Looping
 
-Go has a single keyword for the loop. A sngle for loop command help achieve different kinds of loops:
+Go 有一个循环的关键词 `for`。for循环命令用于实现不同种类的循环:
 
 ```go
 i := 0
@@ -279,7 +281,9 @@ for i < 10 {
 fmt.Println(sum)
 ```
 
-The above example is similar to a while loop in C. The same for statement can be used for a normal for loop:
+上面的例子类似于C语言中的while循环。
+
+Go 中的 for 语句也可以用于普通的for循环:
 
 ```go
 sum := 0
@@ -289,7 +293,7 @@ for i := 0; i < 10; i++ {
 fmt.Println(sum)
 ```
 
-Infinite loop in Go:
+Go 中的死循环:
 
 ```go
 for {
@@ -298,32 +302,32 @@ for {
 
 ### Pointers
 
-Go provides pointers. Pointers are the place to hold the address of a value. A pointer is defined by \*. A pointer is defined according to the type of data. Example:
+Go提供了指针。指针是用来保存一个值的地址的地方。指针是由 \* 定义的。指针是根据数据的类型来定义的。 例如:
 
 ```go
 var ap *int
 ```
 
-Here `ap` is the pointer to an integer type. The `&` operator can be used to get the address of a variable.
+`ap` 是指向一个整数类型的指针。 `&` 操作符可以用来获取一个变量的地址。
 
 ```go
 a := 12
 ap = &a
 ```
 
-The value pointed by the pointer can be accessed using the `*` operator:
+指针所指向的值可以使用 `*` 操作符来访问:
 
 ```go
 fmt.Println(*ap)
 // => 12
 ```
 
-Pointers are usually preferred while passing a struct as an argument or while declaring a method for a defined type.
+在传递结构体作为参数时，或者在为定义的类型声明方法时，通常倾向于使用指针。
 
-1. While passing value the value is actually copied which means more memory
-2. With the pointer passed, the value changed by the function is reflected back in the method/function caller.
+1. 传递值时，实际上是在复制值，这意味着更多的内存。
+2. 通过指针，函数改变的值会反映在 方法/函数 调用者身上
 
-Example:
+例如:
 
 ```go
 func increment(i *int) {
@@ -337,11 +341,11 @@ func main() {
 //=> 11
 ```
 
-Note: While you are trying out the example code in the blog, do not forget to include it with package main and import fmt or other packages when needed as shown in the first main.go example above.
+注意：当你在尝试博客中的示例代码时，不要忘记用 `package main` 包含它，并在需要时导入 fmt 或其他包，如上面第一个 main.go 例子中所示。
 
 ### Functions
 
-The main function defined in the main package is the entry point for a go program to execute. More functions can be defined and used. Let’s look into a simple example:
+在 main package 中定义的 main 函数是 go 程序执行的入口。更多的函数可以被定义和使用。让我们来看看一个简单的例子。:
 
 ```go
 func add(a int, b int) int {
@@ -354,9 +358,9 @@ func main() {
 //=> 3
 ```
 
-As we can see in the above example, a Go function is defined using the **func** keyword followed by the function name. The **arguments** a function takes needs to be defined according to its data type, and finally the data type of the return.
+在上面的例子中我们可以看到，Go 函数是用 **func** 关键字来定义的，后面是函数名称。一个函数的 **参数** 需要根据其数据类型来定义，最后是返回的数据类型。
 
-The return of a function can be predefined in function as well:
+一个函数的返回值也可以在函数中预先定义:
 
 ```go
 func add(a int, b int) (c int) {
@@ -369,9 +373,9 @@ func main() {
 //=> 3
 ```
 
-Here c is defined as the return variable. So the variable c defined would be automatically returned without needing to be defined at the return statement at the end.
+这里c被定义为返回变量。所以定义的变量c会自动返回，而不需要在最后的返回语句中定义。
 
-You can also return multiple return values from a single function separating return values with a comma.
+你也可以从一个函数中返回多个返回值，用逗号来分隔返回值。
 
 ```go
 func add(a int, b int) (int, string) {
@@ -387,11 +391,11 @@ func main() {
 
 ### Method, Structs, and Interfaces
 
-Go is not a completely object-oriented language, but with structs, interfaces, and methods it has a lot of object-oriented support and feel.
+Go并不是一种完全面向对象的语言，但通过结构体（Struct）、接口（Interface）和方法（Method），它有很多面向对象的支持和感觉。
 
 #### Struct
 
-A struct is a typed, collection of different fields. A struct is used to group data together. For example, if we want to group data of a Person type, we define a person’s attribute which could include name, age, gender. A struct can be defined using the following syntax:
+结构体是一种类型化的、不同字段的集合。结构体用于将数据分组。例如，如果我们想对 Person 类型的数据进行分组，我们可以定义一个人的属性，其中可能包括姓名、年龄、性别。可以使用以下语法来定义一个结构体:
 
 ```go
 type person struct {
@@ -401,7 +405,7 @@ type person struct {
 }
 ```
 
-With a person type struct defined, now let’s create a person:
+在定义了一个人的类型结构后，现在让我们来创建一个 person:
 
 ```go
 //way 1: specifying attribute and value
@@ -410,7 +414,7 @@ p = person{name: "Bob", age: 42, gender: "Male"}
 person{"Bob", 42, "Male"}
 ```
 
-We can easily access these data with a dot(.)
+我们可以很容易地用一个点(.)来访问这些数据。
 
 ```go
 p.name
@@ -421,7 +425,7 @@ p.gender
 //=> Male
 ```
 
-You can also access attributes of a struct directly with its pointer:
+你也可以用结构的指针直接访问其属性:
 
 ```go
 pp = &person{name: "Bob", age: 42, gender: "Male"}
@@ -431,7 +435,7 @@ pp.name
 
 #### Methods
 
-Methods are a special type of function with a _receiver._ A receiver can be both a value or a pointer. Let’s create a method called describe which has a receiver type person we created in the above example:
+方法(Method)是一种特殊的函数类型，它有一个 _receiver_ 。 _receiver_ 可以是一个值或一个指针。让我们创建一个名为 describe 的方法(Method)，它有一个我们在上面的例子中创建的接收器类型的 person:
 
 ```go
 package main
@@ -469,9 +473,9 @@ func main() {
 }
 ```
 
-As we can see in the above example, the method now can be called using a dot operator as `pp.describe`. Note that the receiver is a pointer. With the pointer we are passing a reference to the value, so if we make any changes in the method it will be reflected in the receiver pp. It also does not create a new copy of the object, which saves memory.
+正如我们在上面的例子中看到的，现在可以使用点运算符来调用该方法，如 `pp.describe`。请注意，_receiver_ 是一个指针。使用指针，我们传递的是一个值的引用，所以如果我们在方法中做任何改变，都会反映在  _receiver_ pp中。它也不会创建一个新的对象的副本，这就节省了内存。
 
-Note that in the above example the value of age is changed, whereas the value of name is not changed because the method setName is of the receiver type whereas setAge is of type pointer.
+请注意，在上面的例子中，年龄的值被改变了，而名字的值没有改变，因为setName方法是 _receiver_ 类型的  ，而 setAge 是指针类型的。
 
 #### Interfaces
 

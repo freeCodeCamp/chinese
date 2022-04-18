@@ -5,48 +5,48 @@
 
 ![Learning Go — from zero to hero](https://cdn-media-1.freecodecamp.org/images/1*30aoNxlSnaYrLhBT0O1lzw.png)
 
-Let’s start with a small introduction to Go (or Golang). Go was designed by Google engineers Robert Griesemer, Rob Pike, and Ken Thompson. It is a statically typed, compiled language. The first version was released as open source in March 2012.
+让我们先对 Go（或称 Golang ）做一个小小的介绍。Go 是由谷歌工程师 Robert Griesemer、Rob Pike 和 Ken Thompson 设计的。它是一种静态类型的、编译的语言。第一个版本于2012年3月作为开源版本发布。
 
-> “Go is an open source programming language that makes it easy to build simple, reliable, and efficient software”. — GoLang
+> "Go是一种开源的编程语言，它使人们能够轻松地构建简单、可靠和高效的软件"。- GoLang
 
-In many languages, there are many ways to solve a given problem. Programmers can spend a lot of time thinking about the best way to solve it.
+在许多编程语言中，有许多方法来解决一个特定的问题。程序员要花很多时间去思考解决它的最佳方法。
 
-Go, on the other hand, believes in fewer features — with only one right way to solve the problem.
+Go 却相信用较少的功能--只有一种正确的方式来解决问题。
 
-This saves developers time and makes the large codebase easy to maintain. There are no “expressive” features like maps and filters in Go.
+这为开发人员节省了时间，并使大型代码库易于维护。 Go中没有像 `maps` 和 `filters` 这样的 "表达性 "功能。
 
-> “When you have features that add expressiveness it typically adds expense” — Rob Pike
+> "当你有增加表现力的功能时，通常会增加系统开销。"--Rob Pike
 
 ![1*AUiSG5Gqz8MzaGCvGpckGA](https://cdn-media-1.freecodecamp.org/images/1*AUiSG5Gqz8MzaGCvGpckGA.png)
 
-Recently published new logo of go lang: [https://blog.golang.org/go-brand](https://blog.golang.org/go-brand)
+最近发表的新的 golang 标志: [https://blog.golang.org/go-brand](https://blog.golang.org/go-brand)
 
 ### Getting Started
 
-Go is made of packages. The package main tells the Go compiler that the program is compiled as an executable, rather than a shared library. It is the entry point for an application. The main package is defined as:
+Go是由 packages(包) 组成的。package main 告诉Go编译器，该程序被编译为可执行文件，而不是共享库。它是一个应用程序的入口点。package main 的定义如下:
 
 ```go
 package main
 ```
 
-Let’s move ahead by writing a simple hello world example by creating a file `main.go` in the Go workspace.
+让我们继续前进，在 Go workspace 创建一个 `main.go` 文件，编写一个简单的 hello world 例子。
 
 #### **Workspace**
 
-A workspace in Go is defined by the environment variable `GOPATH`.
+Go中的 workspace 是由环境变量 `GOPATH` 定义的。
 
-Any code you write is to be written inside the workspace. Go will search for any packages inside the `GOPATH` directory, or the `GOROOT` directory, which is set by default when installing Go. `GOROOT` is the path where the go is installed.
+你写的任何代码都要写在 workspace 里面。Go将搜索 `GOPATH` 目录内的任何软件包，或者 `GOROOT` 目录，该目录在安装 Go时 默认设置。`GOROOT` 是安装 Go 的路径。
 
-Set `GOPATH` to your desired directory. For now, let’s add it inside a folder `~/workspace`.
+设置 `GOPATH` 到你想要的目录。现在，让我们把它添加到 `~/workspace` 文件夹内。
 
-```
+```shell
 # export env
 export GOPATH=~/workspace
 # go inside the workspace directory
 cd ~/workspace
 ```
 
-Create the file `main.go` with the following code inside the workspace folder we just created.
+在我们刚刚创建的 workspace 文件夹中创建 `main.go` 文件，其中包含以下代码。
 
 #### Hello World
 
@@ -62,26 +62,26 @@ func main(){
 }
 ```
 
-In the above example, `fmt` is a built-in package in Go which implements functions for formatting I/O.
+在上面的例子中，`fmt`是Go中的一个内置包，它实现了用于格式化 I/O 输出的函数。
 
-We import a package in Go by using the `import` keyword. `func main` is the main entry point where the code gets executed. `Println` is a function inside the package `fmt` which prints “hello world” for us.
+我们通过使用 `import` 关键字在Go中导入一个包。`func main` 是代码被执行的主入口点。`Println` 是包 `fmt` 中的一个函数，它为我们打印出 "hello world"。
 
-Let’s see by running this file. There are two ways we can run a Go command. As we know, Go is a compiled language, so we first need to compile it before executing.
+让我们通过运行这个文件来看看。我们有两种方法可以运行Go命令。正如我们所知，Go是一种编译语言，所以我们首先需要在执行之前编译它。
 
-```
+```shell
 > go build main.go
 ```
 
-This creates a binary executable file `main` which now we can run:
+这将创建一个二进制可执行文件`main`，现在我们可以运行:
 
-```
+```shell
 > ./main 
 # Hello World!
 ```
 
-There is another, simpler, way to run the program. The `go run` command helps abstract the compilation step. You can simply run the following command to execute the program.
+还有一种更简单的方法来运行程序。`go run` 命令会编译源代码，并直接执行源码中的 main() 函数，不会在当前目录留下可执行文件。你可以简单地运行以下命令来执行该程序。
 
-```
+```shell
 go run main.go
 # Hello World!
 ```

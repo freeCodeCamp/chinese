@@ -1,7 +1,7 @@
-> -  原文地址：[Learning Go — from zero to hero](https://www.freecodecamp.org/news/learning-go-from-zero-to-hero-d2a3223b3d86/)
-> -  原文作者：[Milap Neupane](https://www.freecodecamp.org/news/author/milapneupane/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Learning Go — from zero to hero](https://www.freecodecamp.org/news/learning-go-from-zero-to-hero-d2a3223b3d86/)
+> - 原文作者：[Milap Neupane](https://www.freecodecamp.org/news/author/milapneupane/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Learning Go — from zero to hero](https://cdn-media-1.freecodecamp.org/images/1*30aoNxlSnaYrLhBT0O1lzw.png)
 
@@ -48,7 +48,7 @@ cd ~/workspace
 
 Create the file `main.go` with the following code inside the workspace folder we just created.
 
-#### Hello World!
+#### Hello World
 
 ```go
 package main
@@ -320,8 +320,8 @@ fmt.Println(*ap)
 
 Pointers are usually preferred while passing a struct as an argument or while declaring a method for a defined type.
 
-1.  While passing value the value is actually copied which means more memory
-2.  With the pointer passed, the value changed by the function is reflected back in the method/function caller.
+1. While passing value the value is actually copied which means more memory
+2. With the pointer passed, the value changed by the function is reflected back in the method/function caller.
 
 Example:
 
@@ -907,19 +907,19 @@ As we see in above no more than 2 messages are accepted by a channel.
 
 > Simplicity… — Rob-pike
 
-### Great!
+### Great
 
 We learned some of the major components and features of Go.
 
-1.  Variables, Datatypes
-2.  Array slices and maps
-3.  Functions
-4.  Looping and conditional statements
-5.  Pointers
-6.  Packages
-7.  Method, Structs, and Interfaces
-8.  Error Handling
-9.  Concurrency — Go routines and channels
+1. Variables, Datatypes
+2. Array slices and maps
+3. Functions
+4. Looping and conditional statements
+5. Pointers
+6. Packages
+7. Method, Structs, and Interfaces
+8. Error Handling
+9. Concurrency — Go routines and channels
 
 Congratulations, you now have a decent understanding of Go.
 

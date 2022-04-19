@@ -21,7 +21,7 @@ Go 却相信用较少的功能--只有一种正确的方式来解决问题。
 
 最近发表的新的 golang 标志: [https://blog.golang.org/go-brand](https://blog.golang.org/go-brand)
 
-### Getting Started
+### 入门
 
 Go是由 packages(包) 组成的。package main 告诉Go编译器，该程序被编译为可执行文件，而不是共享库。它是一个应用程序的入口点。package main 的定义如下:
 
@@ -88,7 +88,7 @@ go run main.go
 
 **_注意_** :  _要尝试本博客中提到的代码，你可以使用 [https://play.golang.org](https://play.golang.org/)_
 
-### Variables
+### Variables(变量)
 
 Go 中的变量是明确声明的。Go 是一种静态类型的语言。这意味着在声明变量的时候会检查变量的类型。一个变量可以被声明:
 
@@ -114,11 +114,11 @@ message := "hello world"
 var b, c int = 2, 3
 ```
 
-### Data types
+### Data types（数据类型）
 
 像其他编程语言一样，Go支持各种不同的数据结构。让我们来探索其中:
 
-#### **Number, String, and Boolean**
+#### **Number, String, and Boolean (整型 字符串和布尔值)**
 
 支持的整型包括 int, int8, int16, int32, int64,  
 uint, uint8, uint16, uint32, uint64, uintptr(无符号整型，长度跟平台相关，它的长度可以用来保存一个指针地址) 等
@@ -137,7 +137,7 @@ var d float32 = 1.222
 var x complex128 = cmplx.Sqrt(-5 + 12i)
 ```
 
-#### **Arrays, Slices, and Maps**
+#### **Arrays, Slices, and Maps( 数组、切片和Maps)**
 
 数组是由相同数据类型的元素组成的一个序列。数组在声明时有一个固定的长度，所以它不能被扩大到超过这个长度。一个数组声明:
 
@@ -222,7 +222,7 @@ fmt.Println(m['clearity']) // -> 2
 fmt.Println(m['simplicity']) // -> 3
 ```
 
-### **Typecasting**
+### **Typecasting （类型转换）**
 
 一种类型的数据类型可以通过类型转换转换为另一种类型。让我们看看一个简单的类型转换:
 
@@ -235,7 +235,7 @@ fmt.Println(b)
 
 不是所有类型的数据类型都可以转换为另一种类型。请确保数据类型与转换的内容相匹配。
 
-### Conditional Statements
+### Conditional Statements （条件语句）
 
 #### if else
 
@@ -267,7 +267,7 @@ default:
 }
 ```
 
-### Looping
+### Looping （循环）
 
 Go 有一个循环的关键词 `for`。for循环命令用于实现不同种类的循环:
 
@@ -300,7 +300,7 @@ for {
 }
 ```
 
-### Pointers
+### Pointers （指针）
 
 Go提供了指针。指针是用来保存一个值的地址的地方。指针是由 \* 定义的。指针是根据数据的类型来定义的。 例如:
 
@@ -343,7 +343,7 @@ func main() {
 
 注意：当你在尝试博客中的示例代码时，不要忘记用 `package main` 包含它，并在需要时导入 fmt 或其他包，如上面第一个 main.go 例子中所示。
 
-### Functions
+### Functions （函数）
 
 在 main package 中定义的 main 函数是 go 程序执行的入口。更多的函数可以被定义和使用。让我们来看看一个简单的例子。:
 
@@ -389,11 +389,11 @@ func main() {
 }
 ```
 
-### Method, Structs, and Interfaces
+### Method, Structs, and Interfaces （方法，结构体，接口）
 
 Go并不是一种完全面向对象的语言，但通过结构体（Struct）、接口（Interface）和方法（Method），它有很多面向对象的支持和感觉。
 
-#### Struct
+#### Struct （结构体）
 
 结构体是一种类型化的、不同字段的集合。结构体用于将数据分组。例如，如果我们想对 Person 类型的数据进行分组，我们可以定义一个人的属性，其中可能包括姓名、年龄、性别。可以使用以下语法来定义一个结构体:
 
@@ -433,7 +433,7 @@ pp.name
 //=> Bob
 ```
 
-#### Methods
+#### Methods （方法）
 
 方法(Method)是一种特殊的函数类型，它有一个 _receiver_ 。 _receiver_ 可以是一个值或一个指针。让我们创建一个名为 describe 的方法(Method)，它有一个我们在上面的例子中创建的接收器类型的 person:
 
@@ -477,7 +477,7 @@ func main() {
 
 请注意，在上面的例子中，年龄的值被改变了，而名字的值没有改变，因为setName方法是 _receiver_ 类型的  ，而 setAge 是指针类型的。
 
-#### Interfaces
+#### Interfaces (接口)
 
 Go 接口（interfaces）是一个方法（methods）的集合。接口有助于将一个类型的属性组合在一起。让我们以一个接口 animal 为例:
 
@@ -533,14 +533,14 @@ func main() {
 type cat struct {
 在主函数中，我们创建一个动物类型的变量 `a`。我们给动物分配一个 snake 和一个 cat 的类型，并使用 Println 来打印 a.description。由于我们在两种类型（cat 和snake）中都以不同的方式实现了 describe 方法，我们得到了打印的动物描述。
 
-### Packages
+### Packages (包)
 
 我们把Go的所有代码都写在一个包里。**main** package 是程序执行的入口点。Go中有很多内置包。我们一直在使用的最著名的是**fmt**包。
 
 > "Go软件包是Go提供的大型编程的主要机制，它们使得将一个大型项目分割成小块成为可能。"
 > — Robert Griesemer
 
-#### Installing a package
+#### Installing a package (安装一个包)
 
 ```shell
 go get <package-url-github>
@@ -550,7 +550,7 @@ go get github.com/satori/go.uuid
 
 我们安装的软件包被保存在 GOPATH 环境变量设置的工作目录。你可以通过进入我们工作目录下的pkg文件夹 `cd $GOPATH/pkg` 来查看这些软件包。
 
-#### Creating a custom package
+#### Creating a custom package (创建自定义包)
 
 让我们先创建一个文件夹 custom_package:
 
@@ -601,7 +601,7 @@ func main(){
 
 在这里，我们现在可以导入我们创建的包 `person` 并使用函数 Description。注意，我们在包中创建的函数 `secretName` 将不能被访问。在 Go 中，没有大写字母开头的方法名称将是私有的。
 
-#### **Packages Documentation**
+#### **Packages Documentation (包文档）**
 
 Go内置了对包的文档支持。运行以下命令来生成文档:
 
@@ -617,7 +617,7 @@ godoc -http=":8080"
 
 现在去URL [http://localhost:8080/pkg/](http://localhost:6060/pkg/)，看看我们刚刚创建的包的文档。
 
-#### Some built-in packages in Go
+#### Some built-in packages in Go (Go内置包)
 
 **fmt**
 
@@ -670,7 +670,7 @@ func main(){
 
 当使用 unmarshal 解码 json 字节时，第一个参数是 json 字节，第二个参数是我们希望 json 被映射到的响应类型结构的地址。注意，`json: "page"`将页面键映射到结构中的 PageNumber 键。
 
-### Error Handling
+### Error Handling (错误处理)
 
 错误是指程序中不想要的和意外的结果。比方说，我们正在对一个外部服务进行 API 调用。这个 API 调用可能是成功的，也可能是失败的。当错误类型出现时，Go 程序中的错误可以被识别。让我们看看这个例子:
 
@@ -698,7 +698,7 @@ func main(){
 }
 ```
 
-#### Returning custom error from a function
+#### Returning custom error from a function (从函数返回自定义错误)
 
 当我们在编写自己的函数时，有些情况下会出现错误。这些错误可以在错误对象的帮助下返回:
 
@@ -766,11 +766,11 @@ Defer 是指总是在函数的末尾被执行的东西。
 
 在上面的例子中，我们用 panic() 使程序的执行陷入 panic。正如你所注意到的，这里有一个 defer 语句，它将使程序在最后执行这一行。当我们需要在函数结束时执行一些东西时也可以使用 defer，例如关闭一个文件。
 
-### Concurrency
+### Concurrency (并发)
 
 Go 是在考虑到并发性的情况下建立的。Go 中的并发性可以通过 Go 协程实现，它是轻量级的线程。
 
-**Go routine**
+**Go routine (Go 协程)**
 
 Go 协程是可以与另一个函数并行或同时运行的函数。创建一个 Go 协程非常简单。只需在一个函数前面加上关键字 Go，我们就可以让它并行执行。Go 协程是非常轻量级的，所以我们可以创建成千上万的协程。让我们来看看一个简单的例子:
 
@@ -795,7 +795,7 @@ func c() {
 
 正如你在上面的例子中所看到的，函数 c 是一个 Go 例程，与 Go 主线程并行执行。有些时候，我们希望在多个线程之间共享资源。Go 倾向于不将一个线程的变量与另一个线程共享，因为这样会增加死锁和资源等待的可能性。还有一种方法可以在 Go 协程之间共享资源：通过Go channels。
 
-**Channels**
+**Channels (通道)** 
 
 我们可以使用通道在两个 Go 协程之间传递数据。在创建 channel 时，有必要指定该 channel 接收什么样的数据。让我们创建一个简单的字符串类型的 channel，如下所示:
 
@@ -821,7 +821,7 @@ func main(){
 
 接收方 channel 等待，直到发送方发送数据到 channel。
 
-**One way channel**
+**One way channel (单向通道)**
 
 有些情况下，我们希望 Go 程序通过 channel 接收数据，但不发送数据，反之亦然。为此，我们也可以创建一个**单向 channel**。让我们来看看一个简单的例子:
 
@@ -846,9 +846,9 @@ func sc(ch chan<- string) {
 
 In the above example, `sc` is a Go routine which can only send messages to the channel but cannot receive messages.
 
-### Organizing multiple channels for a Go routine using select
+### Organizing multiple channels for a Go routine using select (使用 select 为 Go 例程组织多个通道)
 
-一个函数可能有多个 channel 在等待。为此，我们可以使用一个选择（seleect）语句。让我们看一个例子，以了解更清楚的情况:
+一个函数可能有多个 channel 在等待。为此，我们可以使用一个选择（select）语句。让我们看一个例子，以了解更清楚的情况:
 
 ```go
 package main
@@ -885,7 +885,7 @@ func speed2(ch chan string) {
 
 在上面的例子中，main正在等待两个 channel，c1和c2。通过 select case 语句，main函数打印出，信息从它先收到的 channel 中发送出来。
 
-**Buffered channel**
+**Buffered channel(带缓冲的通道)**
 
 你可以在go中创建一个缓冲 channel。有了缓冲 channel，如果缓冲区满了，发送到该 channel 的消息就会被阻断。让我们看一下这个例子:
 
@@ -907,7 +907,7 @@ func main(){
 
 正如我们在上面看到的，一个 channel 接受的信息不超过2条。
 
-#### Why is Golang Successful?
+#### 为什么Golang会成功？
 
 > 简洁性… — Rob-pike
 
@@ -928,7 +928,6 @@ func main(){
 恭喜你，你现在对 Go 有了相当的了解。
 
 > 我最有成效的一天是减少了1000行代码。
-
 > — Ken Thompson
 
 不要停在这里。继续向前推进。思考一个小的应用并开始创建。

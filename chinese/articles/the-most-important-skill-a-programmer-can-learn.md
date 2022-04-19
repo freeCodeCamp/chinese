@@ -41,7 +41,7 @@
 - 会增加你的软件缺陷的代码
 - 可能会在未来引入新的错误的代码
 
-正如Rich Skrenta所写的，[代码是我们的敌人](http://www.skrenta.com/2007/05/code_is_our_enemy.html):
+正如 Rich Skrenta 所写的，[代码是我们的敌人](http://www.skrenta.com/2007/05/code_is_our_enemy.html):
 
 > 代码是坏的。它会腐烂。它需要定期维护。它有需要被发现的错误。新的功能意味着旧的代码必须被调整。
 >

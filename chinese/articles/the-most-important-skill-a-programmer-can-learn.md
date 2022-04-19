@@ -1,101 +1,100 @@
-> -  原文地址：[The most important skill a programmer can learn](https://www.freecodecamp.org/news/the-most-important-skill-a-programmer-can-learn-9d410c786baf/)
-> -  原文作者：[Huseyin Polat Yuruk](https://www.freecodecamp.org/news/author/huseyin/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[The most important skill a programmer can learn](https://www.freecodecamp.org/news/the-most-important-skill-a-programmer-can-learn-9d410c786baf/)
+> - 原文作者：[Huseyin Polat Yuruk](https://www.freecodecamp.org/news/author/huseyin/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![The most important skill a programmer can learn](https://cdn-media-1.freecodecamp.org/images/0*XG0c4KW0GKI5h3Sq)
 
 **No, no, no, no, and no. And no.**
 
-A big NO. Clear as that.
+一个大大的 NO。就这么清楚。
 
-All you have to do is to bring those two letters together and say the word.
+你所要做的就是把这两个字母放在一起，然后说这个词。
 
-Now, let’s say it together. NOOOOOOO!
+现在，让我们一起说。NOOOOOOO!
 
-Good start.
+好的开始。
 
-But wait a minute. Say NO to what and when?
+但是等一下。对什么说不，什么时候说？
 
-Well, this is the important point where most of the programmers (even seniors) get easily confused.
+好的，这是大多数程序员（甚至是资深的）容易混淆的重要一点。
 
-As a programmer, writing code is the biggest part of your job. In your programming lifetime, you will have to deal with different kinds of code requests. Each request will force you to make difficult decisions. That all is OKAY. Nothing wrong with that. This is what everyone expects from you, as a programmer: Writing code. However, here is a question: Should you write all the code that is requested from you?
+作为一个程序员，编写代码是你工作的最大部分。在你的编程生涯中，你将不得不处理不同种类的代码需求。每个需求都会迫使你做出困难的决定。这都是可以的。这没有什么不对。作为一个程序员，这也是大家对你的期望。写代码。然而，这里有一个问题。你应该写出所有需求的代码吗？
+这个问题把我们带到了一个程序员可以学习的最重要的技能:
 
-This question brings us to the most important skill a programmer can learn:
+> 知道什么时候不写代码可能是一个程序员能学到的最重要的技能。— [The Art Of Readable Code](https://www.amazon.com/Art-Readable-Code-Practical-Techniques/dp/0596802293)
 
-> Knowing when not to code is possibly the most important skill a programmer can learn. — [The Art Of Readable Code](https://www.amazon.com/Art-Readable-Code-Practical-Techniques/dp/0596802293)
+我非常同意。为什么这么说呢？
 
-I couldn’t agree more. Why is that?
+编程是解决一个问题的艺术。因此，程序员自然是问题解决者。作为程序员，当我们用代码解决的新问题或任何其他需求，我们会感到兴奋。
 
-Programming is the art of solving a problem. So naturally, programmers are problem solvers. As programmers, when we have a new problem in front of us ready to be solved or any other reason that needs from us to write code lines, we get excited.
+这也没关系，因为我们是程序员。我们喜欢写代码。
 
-And that is okay because we are programmers. We love writing code.
+然而，对写代码过于兴奋使我们盲目。它使我们忽视了一些重要的事实，而这些事实可能会导致我们在未来不得不处理的更大的问题。
 
-However, getting too excited about writing code makes us blind. It causes us to ignore some important facts that can cause bigger problems we will have to deal with in the future.
+那么，那些我们容易忽视的重要事实是什么呢？
 
-So, what are those important facts that we tend to ignore?
+你写的每一行代码都是:
 
-Every line of code you write is:
+- 必须被其他程序员阅读和理解的代码
+- 需要进行测试和调试的代码
+- 会增加你的软件缺陷的代码
+- 可能会在未来引入新的错误的代码
 
--   code that has to be read and understood by other programmers
--   code that has to be tested and debugged
--   code that will increase defects in your software
--   code that probably will introduce new bugs in the future
+正如Rich Skrenta所写的，[代码是我们的敌人](http://www.skrenta.com/2007/05/code_is_our_enemy.html):
 
-As Rich Skrenta wrote, [code is our enemy](http://www.skrenta.com/2007/05/code_is_our_enemy.html):
+> 代码是坏的。它会腐烂。它需要定期维护。它有需要被发现的错误。新的功能意味着旧的代码必须被调整。
+>
+> 你的代码越多，就有越多的地方可以藏匿错误。检查或编译的时间越长。新员工要花更多的时间来理解你的系统。如果你必须重构，就会有更多的东西需要修改。
+>
+> 此外，更多的代码往往意味着更少的灵活性和功能。这是违反直觉的，但很多时候，一个简单、优雅的解决方案比一个天赋较差的程序员所产生的蹒跚混乱的代码更快、更通用。  
+>
+> 代码是由工程师生产的。要制作更多的代码需要更多的工程师。工程师有n²的通信成本，他们向系统添加的所有代码，在扩大其能力的同时，也增加了一整筐的成本。
 
-> Code is bad. It rots. It requires periodic maintenance. It has bugs that need to be found. New features mean the old code has to be adapted.  
->   
-> The more code you have, the more places there are for bugs to hide. The longer checkouts or compiles take. The longer it takes a new employee to make sense of your system. If you have to refactor there’s more stuff to move around.  
->   
-> Furthermore, more code often means less flexibility and functionality. This is counter-intuitive, but a lot of times a simple, elegant solution is faster and more general than the plodding mess of code produced by a programmer of lesser talent.  
->   
-> Code is produced by engineers. To make more code requires more engineers. Engineers have n² communication costs, and all that code they add to the system, while expanding its capability, also increases a whole basket of costs.
+这是非常正确的，不是吗？ 那些用他们的生产力和编码心态激励你的程序员是那些知道什么时候说不，和不编写代码。易于维护、持续时间长并不断帮助其用户的软件是不包含任何不必要的代码行的。
 
-It’s so true, isn’t it? The programmers who inspire you with their productivity and coding mentality are those who know when to say no and when not to code. The software that is easy to maintain, that lasts long and keeps helping their users is the one that doesn’t contain any unnecessary code lines.
-
-> The best code is no code at all, and the most effective programmer is the one who knows when not to code.
+> 最好的代码是根本没有代码，最有效的程序员是知道什么时候不编码的人。
 
 ### How can you know when not to code?
 
-It’s natural to get excited when you’re working on a project and think about all the cool features you’d love to implement. But programmers tend to overestimate how many features their project needs. Many features go unfinished or unused or simply make the application overcomplicated. You should know what is essential for your project to avoid making this mistake.
+当你在一个项目上工作时，很自然地会感到兴奋，想到你很想实现的所有很酷的功能。但程序员往往高估了他们的项目需要多少功能。许多功能未完成或未使用，或只是使应用程序过于复杂。你应该知道什么是你的项目所必需的，以避免犯这种错误。
 
-> Understanding the purpose of your software and its core definition is the first step to know when not to code.
+> 了解你的软件的目的和它的核心定义是知道何时不编码的第一步。
 
-Let me give you an example. Let’s say you have software that has only one purpose: managing emails. And for that purpose, sending and receiving emails are two essential features to your project. You can’t expect that software to manage your to-do list as well, can you?
+让我给你举个例子。假设你有一个软件，它只有一个目的：管理电子邮件。而为了这个目的，发送和接收电子邮件是你的项目的两个基本功能。你不能指望那个软件也能管理你的待办事项，对吗？
 
-So you should say NO to any possible feature requests that are irrelevant to this definition. This is the moment you can be exactly sure that you know when not to write code.
+因此，你应该对任何可能的与此定义无关的功能要求说不。这时你可以确切地确定，你知道什么时候不应该写代码。
 
-> Never expand your software’s purpose.
+> 永远不要扩大你的软件的用途。
 
-Once you know what is essential for your project, you will be conscious next time when you evaluate possible code requests. You will exactly know your requirements to write code. Which feature should be implemented? Which code is worth to write? You will question everything because you will know exactly how unnecessary code can kill your project.
+一旦你知道什么是你的项目所必需的，你下次在评估可能的代码要求时就会有意识。你会确切地知道你写代码的要求。哪些功能应该被实现？哪些代码是值得写的？你会质疑一切，因为你会清楚地知道不必要的代码会如何扼杀你的项目。
 
-> Knowing when not to code keeps your codebase small.
+> 知道什么时候不写代码可以使你的代码库变小。
 
 ![AaXgIsHTyVquQeabDnz5kMCsyEmPuMnod3E9](https://cdn-media-1.freecodecamp.org/images/AaXgIsHTyVquQeabDnz5kMCsyEmPuMnod3E9)
 
 [The Art Of Readable Code](https://www.amazon.com/Art-Readable-Code-Practical-Techniques/dp/0596802293)
 
-There are only two or three source files when you start your project. All looks so simple. It takes just a few seconds to compile and run the code. You know where to find exactly what you’re looking for.
+当你开始你的项目时，只有两到三个源文件。一切看起来都很简单。编译和运行代码只需要几秒钟。你知道在哪里可以准确地找到你要找的东西。
 
-Then, as the project grows, more and more source files fill your directory. Each code file contains hundreds of code lines. To organize them all, you will need multiple directories soon. Remembering which functions call other functions is more difficult, and tracking bugs requires a bit more work. Managing your project becomes difficult, and you need more programmers to help. [Communication overheads](https://en.wikipedia.org/w/index.php?title=Communication_overhead&action=edit&redlink=1) increase as the number of programmers increases. You get slower and slower.
+然后，随着项目的发展，越来越多的源文件填满了你的目录。每个代码文件包含数百个代码行。为了组织它们，你将很快需要多个目录。记住哪些函数调用其他函数更加困难，跟踪 bug 也需要更多的工作。管理你的项目变得困难，你需要更多的程序员来帮忙。[通信开销](https://en.wikipedia.org/w/index.php?title=Communication_overhead&action=edit&redlink=1) 随着程序员人数的增加而增加。你会变得越来越慢。
 
-In the end, the project becomes huge. Adding new features is painful. Even making small changes takes hours. Fixing present bugs always introduces new bugs. You start missing deadlines.
+最后，这个项目变得巨大。增加新的功能是痛苦的。即使是做小的改动也要花上几个小时。修复现有的 bug 总是会引入新的 bug。你开始错过最后期限。
 
-Now, life is a struggle for you. Why?
+现在，生活对你来说是一种挣扎。为什么？
 
-Because you didn’t know when not to code, you said YES to every possible feature request. You were blind. Coding something new caused you to ignore essential facts.
+因为你不知道什么时候不写代码，你对每一个可能的功能请求都说 "YES"。你很盲目。编写新的东西导致你忽视了基本的事实。
 
-It’s like a horror movie, right?
+这就像一部恐怖电影，对吗？
 
-This is what will happen if you keep saying YES to everything. Know exactly when not to code. Eliminate all unnecessary code from your project. This will make your life easier and make your software last longer.
+这就是如果你一直对所有事情都说 "是" 会发生什么。清楚地知道什么时候不需要编码。从你的项目中消除所有不必要的代码。这将使你的生活更轻松，使你的软件更持久。
 
-> One of my most productive days was throwing away 1000 lines of code. — Ken Thompson
+> 我最有成就感的一天是删除了1000行的代码。 — Ken Thompson
 
-I know that knowing when not to code is so hard. Even for senior programmers. Perhaps what I wrote in this article is hard to understand for junior programmers, and that is okay and understandable.
+我知道，知道什么时候不写代码是如此困难。即使对高级程序员来说也是如此。也许我在这篇文章中写的内容对初级程序员来说很难理解，这也没关系，可以理解。
 
-I know you have just started your programming journey and you want to write code. You are so excited about that. This is good. Never lose this excitement but also never ignore the important facts. We learned them by making our own mistakes. You will make mistakes as well, and you will learn from them as well. But at least you can be more conscious if you can learn from our experience.
+我知道你刚刚开始你的编程之旅，你想写代码。你对此感到非常兴奋。这很好。千万不要失去这种兴奋，但也不要忽视重要的事实。我们通过犯自己的错误来学习它们。你也会犯错，你也会从这些错误中学习。但是如果你能从我们的经验中学习，至少你可以更加自觉。
 
-> Keep coding but know when to say no to coding.
+> 学习编程，但要知道何时不编程。
 
 _Originally published at [http://huseyinpolatyuruk.com](http://huseyinpolatyuruk.com/the-most-important-skill-a-programmer-can-learn)._

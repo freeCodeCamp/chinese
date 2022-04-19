@@ -23,7 +23,7 @@ Go 却相信用较少的功能--只有一种正确的方式来解决问题。
 
 ### 入门
 
-Go是由 packages(包) 组成的。package main 告诉Go编译器，该程序被编译为可执行文件，而不是共享库。它是一个应用程序的入口点。package main 的定义如下:
+Go 是由 packages(包) 组成的。package main 告诉 Go 编译器，该程序被编译为可执行文件，而不是共享库。它是一个应用程序的入口点。package main 的定义如下:
 
 ```go
 package main
@@ -35,7 +35,7 @@ package main
 
 Go中的 workspace 是由环境变量 `GOPATH` 定义的。
 
-你写的任何代码都要写在 workspace 里面。Go将搜索 `GOPATH` 目录内的任何软件包，或者 `GOROOT` 目录，该目录在安装 Go时 默认设置。`GOROOT` 是安装 Go 的路径。
+你写的任何代码都要写在 workspace 里面。Go 将搜索 `GOPATH` 目录内的任何软件包，或者 `GOROOT` 目录，该目录在安装 Go 时默认设置。`GOROOT` 是安装 Go 的路径。
 
 设置 `GOPATH` 到你想要的目录。现在，让我们把它添加到 `~/workspace` 文件夹内。
 
@@ -66,7 +66,7 @@ func main(){
 
 我们通过使用 `import` 关键字在Go中导入一个包。`func main` 是代码被执行的主入口点。`Println` 是包 `fmt` 中的一个函数，它为我们打印出 "hello world"。
 
-让我们通过运行这个文件来看看。我们有两种方法可以运行Go命令。正如我们所知，Go是一种编译语言，所以我们首先需要在执行之前编译它。
+让我们通过运行这个文件来看看。我们有两种方法可以运行Go命令。正如我们所知，Go 是一种编译语言，所以我们首先需要在执行之前编译它。
 
 ```shell
 > go build main.go
@@ -535,9 +535,9 @@ type cat struct {
 
 ### Packages (包)
 
-我们把Go的所有代码都写在一个包里。**main** package 是程序执行的入口点。Go中有很多内置包。我们一直在使用的最著名的是**fmt**包。
+我们把Go的所有代码都写在一个包里。**main** package 是程序执行的入口点。Go 中有很多内置包。我们一直在使用的最著名的是**fmt**包。
 
-> "Go软件包是Go提供的大型编程的主要机制，它们使得将一个大型项目分割成小块成为可能。"
+> "Go 软件包是 Go 提供的大型编程的主要机制，它们使得将一个大型项目分割成小块成为可能。"
 > — Robert Griesemer
 
 #### Installing a package (安装一个包)
@@ -548,7 +548,7 @@ go get <package-url-github>
 go get github.com/satori/go.uuid
 ```
 
-我们安装的软件包被保存在 GOPATH 环境变量设置的工作目录。你可以通过进入我们工作目录下的pkg文件夹 `cd $GOPATH/pkg` 来查看这些软件包。
+我们安装的软件包被保存在 GOPATH 环境变量设置的工作目录。你可以通过进入我们工作目录下的 pkg 文件夹 `cd $GOPATH/pkg` 来查看这些软件包。
 
 #### Creating a custom package (创建自定义包)
 
@@ -566,7 +566,7 @@ go get github.com/satori/go.uuid
 > cd person
 ```
 
-现在让我们在这个文件夹中创建一个文件person.go。
+现在让我们在这个文件夹中创建一个文件 person.go。
 
 ```go
 package person
@@ -584,7 +584,7 @@ func secretName(name string) string {
 > go install
 ```
 
-现在让我们回到custom_package文件夹，创建一个main.go文件
+现在让我们回到custom_package文件夹，创建一个 main.go 文件
 
 ```go
 package main
@@ -625,7 +625,7 @@ godoc -http=":8080"
 
 **json**
 
-Go中另一个有用的包是json包。这有助于对JSON进行编码/解码。让我们举个例子，对一些JSON进行编码/解码:
+Go中另一个有用的包是json包。这有助于对JSON进行编码/解码。让我们举个例子，对一些 JSON 进行编码/解码:
 
 编码
 

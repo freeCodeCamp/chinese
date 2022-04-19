@@ -479,7 +479,7 @@ func main() {
 
 #### Interfaces
 
-Go interfaces are a collection of methods. Interfaces help group together the properties of a type. Let’s take the example of an interface animal:
+Go 接口（interfaces）是一个方法（methods）的集合。接口有助于将一个类型的属性组合在一起。让我们以一个接口 animal 为例:
 
 ```go
 type animal interface {
@@ -487,7 +487,7 @@ type animal interface {
 }
 ```
 
-Here animal is an interface type. Now let’s create 2 different type of animals which implement the animal interface type:
+animal 是一个接口（interface）类型。现在让我们创建两个不同类型的 animal，它们都实现了 animal 接口类型:
 
 ```go
 package main
@@ -530,43 +530,43 @@ func main() {
 //=> Sound: Meow!!!
 ```
 
-In the main function, we create a variable `a` of type animal. We assign a snake and a cat type to the animal and use Println to print a.description. Since we have implemented the method describe in both of the types (cat and snake) in a different way we get the description of the animal printed.
+type cat struct {
+在主函数中，我们创建一个动物类型的变量 `a`。我们给动物分配一个 snake 和一个 cat 的类型，并使用 Println 来打印 a.description。由于我们在两种类型（cat 和snake）中都以不同的方式实现了 describe 方法，我们得到了打印的动物描述。
 
 ### Packages
 
-We write all code in Go in a package. The **main** package is the entry point for the program execution. There are lots of built-in packages in Go. The most famous one we have been using is the **fmt** package.
+我们把Go的所有代码都写在一个包里。**main** package 是程序执行的入口点。Go中有很多内置包。我们一直在使用的最著名的是**fmt**包。
 
-> “Go packages in the main mechanism for programming in the large that go provides and they make possible to divvy up a large project into smaller pieces.”
-
+> "Go软件包是Go提供的大型编程的主要机制，它们使得将一个大型项目分割成小块成为可能。"
 > — Robert Griesemer
 
 #### Installing a package
 
-```
+```shell
 go get <package-url-github>
 // example
 go get github.com/satori/go.uuid
 ```
 
-The packages we installed are saved inside the GOPATH env which is our work directory. You can see the packages by going inside the pkg folder inside our work directory `cd $GOPATH/pkg`.
+我们安装的软件包被保存在 GOPATH 环境变量设置的工作目录。你可以通过进入我们工作目录下的pkg文件夹 `cd $GOPATH/pkg` 来查看这些软件包。
 
 #### Creating a custom package
 
-Let’s start by creating a folder custom\_package:
+让我们先创建一个文件夹 custom_package:
 
-```
+```shell
 > mkdir custom_package
 > cd custom_package
 ```
 
-To create a custom package we need to first create a folder with the package name we need. Let’s say we are building a package `person`. For that let’s create a folder named `person` inside `custom_package` folder:
+要创建一个自定义包，我们需要首先创建一个文件夹，并加上我们需要的包名。比方说，我们要建立一个 `person` 包。为此，让我们在 `custom_package` 文件夹中创建一个名为 `person` 的文件夹。:
 
-```
+```shell
 > mkdir person
 > cd person
 ```
 
-Now let’s create a file person.go inside this folder.
+现在让我们在这个文件夹中创建一个文件person.go。
 
 ```go
 package person
@@ -578,13 +578,13 @@ func secretName(name string) string {
 }
 ```
 
-We now need to install the package so that it can be imported and used. So let’s install it:
+我们现在需要安装这个包，以便它可以被导入和使用。因此，让我们来安装它:
 
-```
+```shell
 > go install
 ```
 
-Now let’s go back to the custom\_package folder and create a main.go file
+现在让我们回到custom_package文件夹，创建一个main.go文件
 
 ```go
 package main
@@ -599,35 +599,35 @@ func main(){
 // => The person name is: Milap
 ```
 
-Here we can now import the package `person` we created and use the function Description. Note that the function `secretName` we created in the package will not be accessible. In Go, the method name starting without a capital letter will be private.
+在这里，我们现在可以导入我们创建的包 `person` 并使用函数 Description。注意，我们在包中创建的函数 `secretName` 将不能被访问。在 Go 中，没有大写字母开头的方法名称将是私有的。
 
 #### **Packages Documentation**
 
-Go has built-in support for documentation for packages. Run the following command to generate documentation:
+Go内置了对包的文档支持。运行以下命令来生成文档:
 
-```
+```shell
 godoc person Description
 ```
 
-This will generate documentation for the Description function inside our package person. To see the documentation run a web server using the following command:
+这将为我们的包 person 里面的描述函数生成文档。要看到这些文档，请使用以下命令运行一个网络服务器:
 
-```
+```shell
 godoc -http=":8080"
 ```
 
-Now go to the URL [http://localhost:8080/pkg/](http://localhost:6060/pkg/) and see the documentation of the package we just created.
+现在去URL [http://localhost:8080/pkg/](http://localhost:6060/pkg/)，看看我们刚刚创建的包的文档。
 
 #### Some built-in packages in Go
 
 **fmt**
 
-The package implements formatted I/O functions. We have already used the package for printing out to stdout.
+该包实现了格式化的 I/O 函数。我们已经用这个包实现了向 stdout 打印的功能。
 
 **json**
 
-Another useful package in Go is the json package. This helps to encode/decode the JSON. Let’s take an example to encode/decode some json:
+Go中另一个有用的包是json包。这有助于对JSON进行编码/解码。让我们举个例子，对一些JSON进行编码/解码:
 
-Encode
+编码
 
 ```go
 package main
@@ -644,7 +644,7 @@ func main(){
 }
 ```
 
-Decode
+解码
 
 ```go
 package main
@@ -668,17 +668,17 @@ func main(){
 //=> 1
 ```
 
-While decoding the json byte using unmarshal, the first argument is the json byte and the second argument is the address of the response type struct where we want the json to be mapped to. Note that the `json:”page”` maps page key to PageNumber key in the struct.
+当使用 unmarshal 解码 json 字节时，第一个参数是 json 字节，第二个参数是我们希望 json 被映射到的响应类型结构的地址。注意，`json: "page"`将页面键映射到结构中的 PageNumber 键。
 
 ### Error Handling
 
-Errors are the undesired and unexpected result of a program. Let’s say we are making an API call to an external service. This API call may be successful or could fail. An error in a Go program can be recognized when an error type is present. Let’s see the example:
+错误是指程序中不想要的和意外的结果。比方说，我们正在对一个外部服务进行 API 调用。这个 API 调用可能是成功的，也可能是失败的。当错误类型出现时，Go 程序中的错误可以被识别。让我们看看这个例子:
 
 ```go
 resp, err := http.Get("http://example.com/")
 ```
 
-Here the API call to the error object may pass or could fail. We can check if the error is nil or present and handle the response accordingly:
+在这里，对错误对象的 API 调用可能通过也可能失败。我们可以检查错误是否为零或存在，并相应地处理响应:
 
 ```go
 package main
@@ -700,7 +700,7 @@ func main(){
 
 #### Returning custom error from a function
 
-When we are writing a function of our own, there are cases when we have errors. These errors can be returned with the help of the error object:
+当我们在编写自己的函数时，有些情况下会出现错误。这些错误可以在错误对象的帮助下返回:
 
 ```go
 func Increment(n int) (int, error) {
@@ -721,11 +721,11 @@ func main() {
 }
 ```
 
-Most of the packages that are built in Go, or external packages we use, have a mechanism for error handling. So any function we call could have possible errors. These errors should never be ignored and always handled gracefully in the place we call these functions, as we have done in the above example.
+大多数 Go 中内置的包，或者我们使用的外部包，都有一个错误处理的机制。所以我们调用的任何函数都有可能出现错误。这些错误绝不应该被忽视，总是在我们调用这些函数的地方优雅地处理，正如我们在上面的例子中所做的那样。
 
 #### Panic
 
-Panic is something that is unhandled and is suddenly encountered during a program execution. In Go, panic is not the ideal way to handle exceptions in a program. It is recommended to use an error object instead. When a panic occurs, the program execution get’s halted. The thing that gets executed after a panic is the defer.
+Panic 是指在程序执行过程中突然遇到的未被处理的东西。在Go中，Panic 不是处理程序中异常的理想方式。建议使用一个错误对象来代替。当 Panic 发生时，程序的执行会被停止。Panic 发生后被执行的东西是 defer。
 
 ```go
 //Go
@@ -762,17 +762,17 @@ func g(i int) {
 
 #### Defer
 
-Defer is something that will always get executed at the end of a function.
+Defer 是指总是在函数的末尾被执行的东西。
 
-In the above example, we panic the execution of the program using panic(). As you notice, there is a defer statement which will make the program execute the line at the end of the execution of the program. Defer can also be used when we need something to be executed at the end of the function, for example closing a file.
+在上面的例子中，我们用 panic() 使程序的执行陷入 panic。正如你所注意到的，这里有一个 defer 语句，它将使程序在最后执行这一行。当我们需要在函数结束时执行一些东西时也可以使用 defer，例如关闭一个文件。
 
 ### Concurrency
 
-Go is built with concurrency in mind. Concurrency in Go can be achieved by Go routines which are lightweight threads.
+Go 是在考虑到并发性的情况下建立的。Go 中的并发性可以通过 Go 协程实现，它是轻量级的线程。
 
 **Go routine**
 
-Go routines are the function which can run in parallel or concurrently with another function. Creating a Go routine is very simple. Simply by adding a keyword Go in front of a function, we can make it execute in parallel. Go routines are very lightweight, so we can create thousands of them. Let’s look into a simple example:
+Go 协程是可以与另一个函数并行或同时运行的函数。创建一个 Go 协程非常简单。只需在一个函数前面加上关键字 Go，我们就可以让它并行执行。Go 协程是非常轻量级的，所以我们可以创建成千上万的协程。让我们来看看一个简单的例子:
 
 ```go
 package main
@@ -793,17 +793,17 @@ func c() {
 //=> I am concurrent
 ```
 
-As you can see in the above example, the function c is a Go routine which executes in parallel with the main Go thread. There are times we want to share resources between multiple threads. Go prefers not sharing the variables of one thread with another because this adds a chance of deadlock and resource waiting. There is another way to share resources between Go routines: via go channels.
+正如你在上面的例子中所看到的，函数 c 是一个 Go 例程，与 Go 主线程并行执行。有些时候，我们希望在多个线程之间共享资源。Go 倾向于不将一个线程的变量与另一个线程共享，因为这样会增加死锁和资源等待的可能性。还有一种方法可以在 Go 协程之间共享资源：通过Go channels。
 
 **Channels**
 
-We can pass data between two Go routines using channels. While creating a channel it is necessary to specify what kind of data the channel receives. Let’s create a simple channel with string type as follows:
+我们可以使用通道在两个 Go 协程之间传递数据。在创建 channel 时，有必要指定该 channel 接收什么样的数据。让我们创建一个简单的字符串类型的 channel，如下所示:
 
 ```go
 c := make(chan string)
 ```
 
-With this channel, we can send string type data. We can both send and receive data in this channel:
+通过这个 channel，我们可以发送字符串类型的数据。我们可以在这个 channel 中发送和接收数据:
 
 ```go
 package main
@@ -819,11 +819,11 @@ func main(){
 //=>"hello"
 ```
 
-The receiver Channels wait until the sender sends data to the channel.
+接收方 channel 等待，直到发送方发送数据到 channel。
 
 **One way channel**
 
-There are cases where we want a Go routine to receive data via the channel but not send data, and also vice versa. For this, we can also create a **one-way channel**. Let’s look into a simple example:
+有些情况下，我们希望 Go 程序通过 channel 接收数据，但不发送数据，反之亦然。为此，我们也可以创建一个**单向 channel**。让我们来看看一个简单的例子:
 
 ```go
 package main
@@ -848,7 +848,7 @@ In the above example, `sc` is a Go routine which can only send messages to the c
 
 ### Organizing multiple channels for a Go routine using select
 
-There may be multiple channels that a function is waiting on. For this, we can use a select statement. Let us take a look at an example for more clarity:
+一个函数可能有多个 channel 在等待。为此，我们可以使用一个选择（seleect）语句。让我们看一个例子，以了解更清楚的情况:
 
 ```go
 package main
@@ -883,11 +883,11 @@ func speed2(ch chan string) {
 }
 ```
 
-In the above example, the main is waiting on two channels, c1 and c2. With select case statement the main function prints, the message sends from the channel whichever it receives first.
+在上面的例子中，main正在等待两个 channel，c1和c2。通过 select case 语句，main函数打印出，信息从它先收到的 channel 中发送出来。
 
 **Buffered channel**
 
-You can create a buffered channel in go. With a buffered channel, the messages send to the channel will be blocked if the buffer is full. Let’s take a look at the example:
+你可以在go中创建一个缓冲 channel。有了缓冲 channel，如果缓冲区满了，发送到该 channel 的消息就会被阻断。让我们看一下这个例子:
 
 ```go
 package main
@@ -902,37 +902,37 @@ func main(){
   fmt.Println(<-ch)
 }
 
-# => fatal error: all goroutines are asleep - deadlock!
+// => fatal error: all goroutines are asleep - deadlock!
 ```
 
-As we see in above no more than 2 messages are accepted by a channel.
+正如我们在上面看到的，一个 channel 接受的信息不超过2条。
 
 #### Why is Golang Successful?
 
-> Simplicity… — Rob-pike
+> 简洁性… — Rob-pike
 
 ### Great
 
-We learned some of the major components and features of Go.
+我们学习了Go的一些主要组成部分和特点。
 
-1. Variables, Datatypes
-2. Array slices and maps
-3. Functions
-4. Looping and conditional statements
-5. Pointers
-6. Packages
-7. Method, Structs, and Interfaces
-8. Error Handling
-9. Concurrency — Go routines and channels
+1. 变量、数据类型
+2. 数组 切片 和 maps
+3. 函数
+4. 循环和条件语句
+5. 指针
+6. 软件包
+7. 方法、结构体和接口
+8. 错误处理
+9. 并发 - Go 协程和通道
 
-Congratulations, you now have a decent understanding of Go.
+恭喜你，你现在对 Go 有了相当的了解。
 
-> One of my most productive days was throwing away 1,000 lines of code.
+> 我最有成效的一天是减少了1000行代码。
 
 > — Ken Thompson
 
-Do not stop here. Keep moving forward. Think about a small application and start building.
+不要停在这里。继续向前推进。思考一个小的应用并开始创建。
 
 [LinkedIn](https://www.linkedin.com/in/milap-neupane-99a4b565/), [Github](http://github.com/milap-neupane), [Twitter](https://twitter.com/_milap)
 
-Also Posted on Milap Neupane Blog: [Learning Go-from zero to hero](https://milapneupane.com.np/2019/07/06/learning-golang-from-zero-to-hero/)
+也发布在Milap Neupane博客: [学习Go，从0到1](https://milapneupane.com.np/2019/07/06/learning-golang-from-zero-to-hero/)

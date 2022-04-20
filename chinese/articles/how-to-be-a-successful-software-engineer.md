@@ -17,8 +17,8 @@
 - 完美是美好的敌人
 - 坚持下去
 - 尽早收集反馈意见
-- 先求后问
-- 简单化
+- 先自己探索再寻求帮助
+- 简化
 
 如果你喜欢以视频形式观看，我在这里做了一个Youtube视频:
 
@@ -111,78 +111,78 @@
 1. **这可以减少功能变更，并迫使你专注于**。关于这一点，很多书都有记载，我不会用具体的细节来烦扰你。无论你在什么位置，保持注意力聚焦是至关重要的。
 2. 我们人类 **喜欢即时的满足感。** 如果你能在两周内发布一些东西，那就去做吧! 提前计划你的项目在2周内应该能够实现的目标，然后把它交到你的用户手中！这是非常令人满意的。这是一种非常令人满意的感觉，即使它真的惨遭失败，至少你坚持了你的目标，你现在已经收集了有价值的反馈来进行迭代。
 
-This brings me to my next point.
+这使我想到了我的下一个观点。
 
-#### Collect feedback early
+#### 尽早收集反馈意见
 
-I personally think that we should always aim to release early, release often, and collect feedback as soon as possible.
+我个人认为，我们应该始终以尽早发布、经常发布为目标，并尽快收集反馈。
 
-Of course, I recognize that this is possible primarily for software projects. But hear me out.
+当然，我承认这主要是对软件项目来说是可能的。但请听我说。
 
-Releasing often and releasing early allows you to collect feedback early. Having a healthy feedback loop is a very important, if not _the_ most important, aspect of your project.
+经常发布和尽早发布可以让你尽早收集反馈。拥有一个健康的反馈循环是一个非常重要的，甚至是最重要的，你的项目的方面。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*D2CuccFu10dqpd3uL8NeFw.png)
 
-The feedback loop for product
+产品的反馈
 
-You should incorporate a feedback loop early on in your product development so that you know you’re developing the right product for the right people with the right constraints.
+你应该在产品开发的早期就纳入一个反馈，这样你就知道你是在为正确的人开发正确的产品，有正确的约束。
 
-It’s equally important to note that **releasing early doesn’t mean releasing a broken product. A broken product is never useful for anyone, and that’s just being disrespectful to your users.**
+同样重要的是要注意，**提前发布并不意味着发布一个坏的产品。一个破损的产品对任何人都没有用，这是对用户的不尊重。**
 
-You should figure out, and deliver, a minimum-viable-product (MVP), which means the bare minimum way your product should perrom in order to satisfy a need.
+你应该想出并提供一个最小可行的产品（MVP），这意味着你的产品应该以最低的方式来满足需求。
 
-One thing to note is that collecting feedback doesn’t mean it needs to be feedback from every single user.
+有一点需要注意的是，收集反馈并不意味着需要从每个用户那里获得反馈。
 
-Consider segmenting your users. Get a small set of users, ideally from various backgrounds (and not just friends and family). Get your product in their hands so that if you mess up, at least your other users won’t have realized it yet and you will have time to fix it.
+考虑对你的用户进行细分。获取一小部分用户，最好是来自不同背景的用户（而不仅仅是朋友和家人）。让你的产品在他们手中，这样，如果你搞砸了，至少你的其他用户还没有意识到，你就有时间来解决这个问题。
 
-#### Seek before you ask
+#### 先自己探索再寻求帮助
 
-A lot of younger engineers tend to ask questions without attempting to find the answers themselves. When they run into something they haven’t encountered before, their first instinct is to ask a senior engineer how it’s done and how to accomplish something.
+很多年轻的工程师倾向于提出问题，而不试图自己去寻找答案。当他们遇到以前没有遇到过的事情时，他们的第一直觉是问高级工程师是怎么做的，如何完成某件事。
 
-It will do you a lot of good to seek the answer yourself before asking anyone. The reason is two-fold:
+在问别人之前，自己先找答案，对你有很大的好处。原因有两个方面:
 
-1. Diving deep allows you to explore areas you might’ve never explored before. It gives you an opportunity to gain exposure and be familiar with a different code base.
-2. As you move to a more senior position, people rely on you for guidance. You will become the _senior_ in the group over-time. People go to you for help and you’ll need to learn this skill later anyway.
+1. 深入探索使你能够探索你以前可能从未探索过的领域。它让你有机会接触并熟悉不同的代码库。
+2. 当你升到一个更高的位置时，人们会依赖你的指导。随着时间的推移，你将成为小组中的高级人员。人们向你寻求帮助，无论如何你以后都需要学习这种技能。
 
-Many developers joke that most of their time is spent on Googling and StackOverflow. I wholeheartedly agree with this, but not for reasons you might think.
+许多开发人员开玩笑说，他们的大部分时间都花在 Google 和 StackOverflow上。我完全同意这一点，但不是因为你可能认为的原因。
 
-The ability to find answers to an ambiguous problem is a highly coveted skill. The Internet has developed over time into an easily-accessible treasure trove of information that you can plug into at any time, anywhere, on any device.
+为模棱两可的问题寻找答案的能力是一种非常令人羡慕的技能。随着时间的推移，互联网已经发展成为一个容易获取的信息宝库，你可以在任何时间、任何地点、任何设备上使用。
 
-Yet, the **ability to ask the right questions** is much more difficult to acquire than the ability to answer them.
+然而，**提出正确问题的能力** 要比回答问题的能力更难获得。
 
-As you move along your professional career, you’ll start to realize that figuring out the right questions will be a skill you need to learn, and if you do master it, it will do you wonders.
+随着你的职业生涯的发展，你会开始意识到，弄清正确的问题将是你需要学习的技能，如果你真的掌握了它，它将为你带来奇迹。
 
-#### Optimize for simplicity
+#### 简化
 
-Strive for simplicity in your work and in your life.
+在你的工作和生活中努力追求简单。
 
-Often times I see junior developers work on a coding project and they’ll use abstraction, inheritance, interfaces, and some very interesting frameworks. Yet, in spite of all this fanciness, they’re writing new code that adds more complication than needed.
+很多时候，我看到初级开发人员在一个编码项目上工作，他们会使用抽象、继承、接口和一些非常有趣的框架。然而，尽管有这些花哨的东西，他们却在写新的代码，增加了不必要的复杂性。
 
-People who maintain this code are not going to be the same people who write it, most of the time. Any extra layer of complexity added on will make it much more difficult to onboard new engineers.
+维护这些代码的人在大多数情况下不会是写代码的人。任何额外增加的复杂性都会使新的工程师更难加入。
 
-As you mature as a software engineer, you realize that writing code isn’t just a matter of optimizing for performance but also optimizing for people. It’s just as important to write code that others can reason about easily.
+当你成为一名成熟的软件工程师时，你会意识到写代码不仅仅是性能优化的问题，也是为人优化的问题。写出别人可以轻松推理的代码也同样重要。
 
-This is where code readability and code organization come into play.
+这就是代码可读性和代码组织发挥作用的地方。
 
-Unless performance is a real concern, always opt for the simpler, cleaner approach.
+除非性能是一个真正的问题，否则总是选择更简单、更干净的方法。
 
-I believe that simplicity extends to life outside of work as well. Keep your life free of distractions. Reduce the number of unnecessary belongings you have in your life. Focus on things that matter to you. Optimize your life for experiences and not for possessions. These are some of the things to keep in mind as you move through life.
+我相信简单性也会延伸到工作以外的生活。保持你的生活不受干扰。减少你生活中不必要的物品的数量。专注于对你重要的事情。优化你的生活，以获得经验而不是财产。这些是你在生活中要牢记的一些事情。
 
-#### Books I’ve read and resources I’ve enjoyed
+#### 我读过的书和我喜欢的资源
 
-- [Principles by Ray Dalio][4] — ? One of the best books I’ve read in a while. The author talks about principles we can apply both in life and at work. I incorporated his framework for solving problems into my daily life
-- [How to win friends and influence people][5] — Classic book on building and managing relationships with people ?. This book helped me understand how to manage my relationships in the workplace.
-- [The Senior Software Engineer][6] — ? Great book with action items on how to mature as a software engineer. This is where I learned how to Seek before You Ask.
-- [Crucial Conversations][7] — Great book on how to deal with people in a high-stakes situation. Very applicable across different aspects of life. Whether it’s negotiating for a higher pay ? or figuring out communication issues with your spouse ?, this book has some good tips on solving those problems.
-- [Lean Startup][8] — Good book on how to use a Minimum-Viable-Product (MVP) to test out an idea before investing further. I’ve used this to test out several startup ideas in the past.
-- [Purple Cow][9] —? Loved this book. Mainly used this to test different startup ideas I have in mind. It talks about how to market your startup and what makes it standout from the rest.
-- [Evernote][10] — Best note-keeping app ? I’ve ever used. Highly recommend it!
-- [Moleskin notebook][11] — I really enjoy this one. The quality of it is extremely high. The price is slightly higher, but since I use it on a daily basis, I consider it a good investment. Holding a beautiful notebook in my hands every day makes me more excited to write more notes.
-- [Pilot G2 (Black)][12] — Easily the best pens I’ve ever used, and only pens I’ll use. I buy them in bulk from Amazon and keep them around everywhere I go. I have one in my backpack, one in office, and one in my home office so that I always have a pen around. It writes great, the ink flows smoothly, and I just love the feel of writing in it. Coupled with the Moleskin, sometimes I just want to pick up the G2 to jot random things on there because these two are so perfect together.
+- [Principles by Ray Dalio][4] — ? 这是我一段时间以来读到的最好的书之一。作者谈到了我们在生活和工作中都可以应用的原则。我把他的解决问题的框架纳入我的日常生活中。
+- [How to win friends and influence people][5] — 关于建立和管理人际关系的经典书籍？这本书帮助我了解了如何在工作场所管理自己的关系。
+- [The Senior Software Engineer][6] — ? 这本书很好，有关于如何成熟为一名软件工程师的行动项目。我就是在这里学会了先自己探索再问别人。
+- [Crucial Conversations][7] — 关于如何在高风险情况下与人打交道的好书。非常适用于生活的不同方面。无论是为获得更高的薪酬进行谈判，还是解决与配偶的沟通问题，这本书都有一些解决这些问题的好建议。
+- [Lean Startup][8] — 这是一本关于如何在进一步投资之前使用最小可得产品（MVP）来测试一个想法的好书。我过去曾用它来测试几个创业的想法。
+- [Purple Cow][9] —? 很喜欢这本书。我主要用它来测试我心中的不同创业想法。它谈到了如何推销你的创业公司，以及如何使它从其他公司中脱颖而出。
+- [Evernote][10] — 这是我用过的最好的记事应用程序。我曾经使用过。强烈推荐它!
+- [Moleskin notebook][11] — 我真的很喜欢这个人。它的质量非常高。价格略高，但由于我每天都在使用它，我认为这是一项很好的投资。每天拿着一本漂亮的笔记本，让我更有动力去写更多的笔记。
+- [Pilot G2 (Black)][12] — 这是我使用过的最好的笔，也是我唯一会使用的笔。我从亚马逊大量购买这些笔，走到哪里都带着它们。我的背包里有一支，办公室里有一支，我的家庭办公室里也有一支，这样我身边总是有一支笔。它写得很好，墨水流动顺畅，我喜欢用它写字的感觉。再加上Moleskin，有时我只想拿起G2在上面随意写写画画，因为这两样东西在一起是如此完美。
 
-_Follow me on [Twitter][13], [Facebook][14], and [LinkedIn][15]. Sign up for [my mailing list][16] where I regularly send tips, tricks, and industry learnings._
+_关注我在 [Twitter][13], [Facebook][14], 和 [LinkedIn][15]。加入 [我的邮件列表][16]， 我定期发送技巧、窍门和行业知识。_
 
-_If you enjoyed this article, comment below: **what is your #1 best tip for a software engineer?**_
+_如果你喜欢这篇文章，请在下面评论。**你对软件工程师的第一大建议是什么？**_
 
 [1]: https://en.wikiquote.org/wiki/Murphy%27s_law
 [2]: https://en.wikipedia.org/wiki/Technical_debt

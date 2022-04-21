@@ -29,9 +29,9 @@
 
 闭包是即便外部函数已经不存在，也可以获取作用域链上变量的函数。
 
-在阐述之前，我们先了解什么是作用域链。作用域链
+在阐述之前，我们先了解什么是作用域链。作用域链指的是父作用域不发访问子作用域中的变量，但是子作用域可以访问父作用域中的变量。
 
-Let's make this clearer by taking a look at an example below:
+请看以下例子来获取更清晰的解释：
 
 ```Javascript
 let buttonProps = (borderRadius) => {
@@ -47,13 +47,13 @@ let buttonProps = (borderRadius) => {
 }
 ```
 
-As you can see, we have a function called `buttonProps`. This function accepts `borderRadius` as an argument. Let's consider the `buttonProps` function as our parent function.
+有一个名为 `buttonProps`的函数，接受`borderRadius`为形参。我们把`buttonProps`函数认定为父函数。
 
-We have another function that has been defined inside the parent function, that is `createVariantButtonProps`. This function will accept `variant` and `color` as an argument and return an object that constitutes a variable `borderRadius` that is present outside its scope.
+在父函数中我们定义了一个子函数，并接受 `createVariantButtonProps`， `variant` 和 `color` 为形参，并且返回一个对象，包含 `borderRadius`变量， 这个变量位于子函数作用域外。
 
-But a question arises as to how the inner function resolves the variables that are present in the parent scope.
+内部函数如何解决位于父作用域的变量呢？
 
-Well, this is possible via lexical scoping. Using lexical scoping, the JS parser knows how to resolve variables present in its current scope or in fact knows how to resolve variables present in the nested functions.
+这是因为词法作用域。
 
 So based on the above explanation, `createVariantButtonProps` will have access to the variables present in its outer function `buttonProps`.
 

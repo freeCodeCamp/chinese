@@ -17,7 +17,7 @@
 -   [什么是模块，模块为什么重要](#whataremodulesandwhyaretheyuseful)
 -   [模块的种类](#typesofmodules)
     -   [CommonJS](#commonjsmodules)
-    -   [ESmodules](#esmodules)
+    -   [ES模块](#esmodules)
 -   [使用模块](#usingmodules)
 -   [打包模块](#bundlingmodules)
 -   [总结](#roundup)
@@ -153,7 +153,7 @@ testFunction()
 SyntaxError: Cannot use import statement outside a module
 ```
 
-Now let's repeat the exact same example. In our `main.js` file we'll have the following code:
+让我们重复上面的例子。在 `main.js` 文件中编写代码:
 
 ```
 // main.js
@@ -167,7 +167,7 @@ const testFunction = () => {
 testFunction()
 ```
 
-And on `mod1.js` we'll have this:
+在`mod1.js`文件中编写:
 
 ```
 // mod1.js
@@ -175,9 +175,9 @@ const mod1Function = () => console.log('Mod1 is alive!')
 export { mod1Function }
 ```
 
-Notice instead of `require` we're using `import` and instead of `module.exports` we're using `export`. The syntaxt is a bit different but the behaviour is very similar.
+需要注意的是，我们在这里没有使用 `require`而是使用`import`；没有使用 `module.exports`而是使用 `export`。虽然在语法上有所不同，但是两者之间行为类似。
 
-Again if we wanted to export more than one thing from the same file we could do it like this:
+同样，如果希望在同一个文件下导出不止一个内容，可以这样做：
 
 ```
 // main.js
@@ -200,7 +200,7 @@ const mod1Function2 = () => console.log('Mod1 is rolling, baby!')
 export { mod1Function, mod1Function2 }
 ```
 
-Another feature available in ESmodules is import renaming, which can be done like this:
+在ES模块中另一个重要的功能是重命名，如下面的例子：
 
 ```
 // main.js
@@ -215,9 +215,9 @@ const testFunction = () => {
 testFunction()
 ```
 
-Notice we use the `as` keyword after each function, and then rename it however we want. Later in our code, we can use that new name instead of the original name the import has. ;)
+注意到在每个函数后面使用了`as`关键字，然后可以命名为任意名字，并在之后的代码中替换掉引入的原始命名，使用自己的命名;)
 
-Another thing you could do is import all exports together and put them together in an object, like this:
+还可以一次性导入所有导出，并把他们放入一个对象内，如下：
 
 ```
 // main.js
@@ -231,10 +231,9 @@ const testFunction = () => {
 
 testFunction()
 ```
+这个功能通常在你需要在代码内明确说明每一个导入是从哪里来的时候采用，如上面的例子，所有的函数被称作如 `mod1.mod1Function()`。
 
-This may be useful in cases when, throughout our code, we want to be explicit about where each import is coming from. See that functions are now being called like `mod1.mod1Function()`.
-
-The last thing worth mentioning is the `default` keyword. With it we can set a default export for a given module. Like this:
+最后值得一提的是 `default`关键字，我们可以通过这个关键字设置模块的默认导出，如下：
 
 ```
 // mod1.js
@@ -245,7 +244,7 @@ export default mod1Function
 export { mod1Function2 }
 ```
 
-And what does it mean to have a default export? Well, it means we don't have to destructure it when we import it. We can use it just like this:
+使用默认导出的用处是什么？可以在我们导入时省去解构，如下：
 
 ```
 // main.js
@@ -260,7 +259,7 @@ const testFunction = () => {
 testFunction()
 ```
 
-We can even rename the import whatever we want without the `as` keyword, since JavaScript "knows" that if we're not destructuring we'll be referring to the default import.
+甚至可以省去 `as` 关键字实现重命名， 因为JavaScript“知道”当我们不解构的时候，我们指的是默认导入。
 
 ```
 // main.js
@@ -275,13 +274,13 @@ const testFunction = () => {
 testFunction()
 ```
 
-And that pretty much sums it up about ESmodules too. Straightforward I hope. =)
+这差不多就是ES模块的所有内容，希望对你来说是简单明了的。 =)
 
-# Using modules
+# 使用模块
 
-Ok now that we're clear about the different types of modules available and how they work, let's see how we can implement modules in a website using HMTL and Vanilla JS.
+现在我们已经清楚了不同种类的模块以及他们是如何运行的，现在我们来看看如何在使用HTML和原生JavaScript的网站运用模块。
 
-Let's create a simple HTML file with a heading, two buttons, and a script tag linking to our `main.js` file.
+我们来创建一个简单的HTML文件，包含一个头部，两个按钮，和一个script标签链接到 `main.js`文件。
 
 ```
 <!-- index.html -->
@@ -302,16 +301,16 @@ Let's create a simple HTML file with a heading, two buttons, and a script tag li
 </html>
 ```
 
-Pay attention to the fact that I'm declaring `type="module"` on the script tag. We need to do this in order to use the JS module feature. If we don't, we'll get an error like this:
+注意到我在script标签中声明了`type="module"`。要使用JS模块功能必须得这么做，不然会报错：
 
 ```
 Uncaught SyntaxError: Cannot use import statement outside a module
 ```
 
-If we open our HTML file we should get something like this:  
+打开HTML文件，我们会看到以下界面 
 ![screenshot-2](https://www.freecodecamp.org/news/content/images/2022/04/screenshot-2.png)
 
-Our `main.js` file will have this code:
+`main.js`文件中的代码包括：
 
 ```
 // main.js
@@ -325,48 +324,48 @@ document.getElementById('isRolling').addEventListener('click', () => mod1Functio
 testFunction()
 ```
 
-We're just adding a click event listener to each button so the functions that come from the `mod1.js` file get executed.
+我们分别在两个按钮上注册了时间监听器，这样来自 `mod1.js`中的函数才能被执行。
 
-Ok so now we can serve our HTML file and see if this works. We need to serve the file, we can't just open the HTML in the browser because we would get a CORS error like this:
+现在可以预览和测试HTML文件了，我们必须得先配置好文件，不然直接在浏览器中打开HTML，会得到CORS（跨域）报错：
 
 ```
 Access to script at ... from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, brave, chrome-untrusted, https.
 ```
 
-To serve it quickly you can use the **Live server** VS code extension, or create a Node app by running `npm init -y` and then running `npx serve`.
+我们可以使用VS的拓展**Live server**，或者通过 `npm init -y`创建一个Node程序，并执行`npx serve`。
 
-Anyway, once the file is served we can click on each button and test that our functions execute correctly. Our console should look like this:  
+设置到服务后，控制台会显示如下： 
 ![screenshot_1-1](https://www.freecodecamp.org/news/content/images/2022/04/screenshot_1-1.png)
 
-But there's one more thing about this. If we go to the network tab of the browser's developer tools, and filter by JS files, we can see that the website is loading two files, `main.js` and `mod1.js`:  
+另一件需要注意的是，如果我们点击浏览器开发者工具的网络栏，并且筛选出JS文件，会看到我们的网站在执行两个文件： `main.js` 和 `mod1.js`:  
 ![screenshot_3](https://www.freecodecamp.org/news/content/images/2022/04/screenshot_3.png)
 
-Of course if we're going to use the code inside each file, both need to be loaded – but this is not the best thing to do. That's because the browser needs to perform two different requests to load all the JS necessary.
+当然如果要使用两个文件中的代码，我们必须加载两个文件，但这并不是最好的办法。因为如果这样做，浏览器需要执行两次请求来加载所有必须的JS。
 
-We should always try to reduce the requests to the minimun to increase the performance of our projects. So let's see how we can do this with the help of a module bundler.
+为了提高项目表现，我们应该尽最大可能减少请求。这个时候，模块打包就派上用场。
 
-Side comment: if you'd like a video explanation, [Kent C Dodds has a great one](https://egghead.io/lessons/javascript-use-javascript-modules-in-the-browser). I really recommend that you follow him, he's one of the best JS teachers out there. And [here's another cool video](https://www.youtube.com/watch?v=qgRUr-YUk1Q) by Fireship. ;)
+稍微提一句，如果你喜欢使用视频来学，[Kent C Dodds的视频很棒](https://egghead.io/lessons/javascript-use-javascript-modules-in-the-browser)。我特别推荐你去关注他，他是最好的JS老师之一，[这里还推荐另一个视频](https://www.youtube.com/watch?v=qgRUr-YUk1Q) by Fireship. ;)
 
-# Bundling modules
+# 模块打包
 
-As previously mentioned, dividing our code into modules is nice because our codebase will be more organized and it will be easier to reuse our code.
+如上文所述，把代码拆分成模块更利于代码库的整洁和复用。
 
-But these are advantages only for the development phase of a project. When in production, modules are not the best thing, as forcing the browser to make a request for each JS file might hurt the site's performance.
+但这些优点仅针对开发阶段，在生产阶段，模块并不是最佳操作，因为这使得浏览器为每一个JS文件添加请求，从而损害了网站表现。
 
-This problem can be easily solved with the use of a module bundler. Simply put, module bundlers are programs that take JS modules as input and combine them into a single file (many module bundlers have many more features but that's their core concept).
+模块打包可以很好地解决这个问题。简言之，模块打包是一个可以将JS模块组合成单个文件的程序（这只是核心功能，许多模块打包器有更多其他的功能）。
 
-Thanks to this, as developers we can code our project dividing it into nicely organized pieces, and then run a module bundler to obtain the final code that will be used in production.
+模块打包器使得开发者们在开发阶段可以讲代码拆分，然后在生产阶段再把代码合并。
 
-This step of converting "development code" to "production code" is normally recognized as "build".
+将“开发代码”转化成“生产代码”的步骤通常被称作“build”。
 
-There're many options to use for this (like [Browserify](https://browserify.org/), [Parcel](https://parceljs.org/), [Rollup.js](https://rollupjs.org/guide/en/), [Snowpack](https://www.snowpack.dev/)...) but the most widely used is [Webpack](https://webpack.js.org/). So let's see an example using Webpack.
+这样的构建工具有很多(如[Browserify](https://browserify.org/), [Parcel](https://parceljs.org/), [Rollup.js](https://rollupjs.org/guide/en/), [Snowpack](https://www.snowpack.dev/)...) 但使用最广泛的是[Webpack](https://webpack.js.org/)，然我们来看看一个Webpack的例子。
 
--   Side comment 1: If you want to dig deeper into module bundlers and how they work, [this awesome video by Fireship](https://www.youtube.com/watch?v=5IG4UmULyoA&t=382s) might be a good place to start.
--   Side comment 2: Webpack is a very robust and sophisticated tool that can do many things besides bundling JS files. Check out [their docs](https://webpack.js.org/) if you want to learn more.
+-   注1: 如果你想更加深入地了解模块打包，[Fireship制作的视频](https://www.youtube.com/watch?v=5IG4UmULyoA&t=382s)或许是个不错的选择。
+-   注 2:Webpack是一个非常健壮且复杂的工具，除了打包JS文件之外，它还可以做其他的工作，想要了解更多，可以查阅[官方文档](https://webpack.js.org/)。
 
-Great, so now we can start off by creating a Node app (if you haven't already) by running `npm init -y`. Then we'll need to install Webpack and the Webpack CLI by running `npm i --save-dev webpack webpack-cli`.
+如果还没安装Node，我们可以先通过 `npm init -y`安装，然后执行 `npm i --save-dev webpack webpack-cli`来安装webpack和webpack-cli。
 
-Next we'll create a `webpack.config.js` file and put this code inside it:
+接着创建`webpack.config.js`文件并写入代码：
 
 ```
 /* webpack.config.js */
@@ -381,11 +380,11 @@ module.exports = {
 };
 ```
 
-This file will be responsible for the configuration of Webpack and how it will work in our app.
+这个文件将负责Webpack的设置，以及我们的应用如何工作。
 
-What we're doing here first is setting the entry file (`entry: './main.js'`). Webpack will start by reading that file and then analyzing all the dependencies (modules imported from that file). In other words, the entry file is our main JS file where all other modules are imported.
+在上面的代码中，我们设定了入门文件 (`entry: './main.js'`)。Webpack会从这个文件开始读取，然后分析所有依赖项(文件中所有模块）， 换句话说，入门文件——main JS引入了所有其他模块。
 
-Then we're declaring the output – first declaring the path where it will be stored and then declaring the name of the bundled file.
+然后我们声明输出 —— 首先声明存储的路径，然后声明打包文件的名字。
 
 ```
 output: {
@@ -394,7 +393,7 @@ output: {
 },
 ```
 
-Super! Now let's go to our `package.json` file and add a `build` script, like this:
+非常棒！然后我们打开 `package.json` 文件，添加 `build`，如下：
 
 ```
 {
@@ -416,17 +415,17 @@ Super! Now let's go to our `package.json` file and add a `build` script, like th
 }
 ```
 
-Then we can go back to our terminal and run `npm run build`. That should create a `dist` directory within our project, and inside it a `bundle.js` file.
+回到终端，执行`npm run build`。我们的项目中会创建一个`dist`目录， 这个目录中有一个`bundle.js`文件。
 
-If you check that file out, you'll see this code within it:
+点开这个文件，你会看到以下代码：
 
 ```
 (()=>{"use strict";document.getElementById("isAlive").addEventListener("click",(()=>console.log("Mod1 is alive!"))),document.getElementById("isRolling").addEventListener("click",(()=>console.log("Mod1 is rolling, baby!"))),console.log("Im the main function")})();
 ```
 
-You'll see that it's practically the same code we had distributed in our files, but all bundled in a single file and minified.
+这行代码正式我们之前分散在各个文件中的代码，但是被打包成单个文件，并且简化了。
 
-The only thing left is to change the script tag in our `index.html` file so it consumes the bundled JS now, like this:
+最后就是在 `index.html` 中更改script标签，这样我们就可以消费bundle JS了，如下：
 
 ```
 <!-- index.html -->
@@ -447,19 +446,19 @@ The only thing left is to change the script tag in our `index.html` file so it c
 </html>
 ```
 
-Now we can serve it again, check that the JS still works perfectly, and if we open the network tab again we should see just a single file being loaded! =D  
+我们可以重新浏览测试代码了，JS完美运行。如果你打开网络栏，会看到只有一个文件被加载！ =D  
 ![screenshot_2-1](https://www.freecodecamp.org/news/content/images/2022/04/screenshot_2-1.png)
 
-I hope this simple example helped you understand the relevance of module bundlers and how they help us combine the great development experience of modular architecture with good site performance.
+希望这个简单的例子能够帮助你理解模块打包是如何将模块结构的良好的开发体验和网站表现结合的。
 
-# Roundup
+# 总结
 
-Well, we're done for today. In this article we've seen what modules are, why are they cool, the different ways you can implement modules in JavaScript, and a practical example of bundling our code with Webpack.
+今天的介绍就到告一段落了。在这篇文章中我们学习了什么是模块，为什么他们好用，在JavaScript中使用模块的不同方法，以及使用Webpack打包代码的一个实际例子。
 
-For a complete guide on JS modules, you can take a look [at this article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules).
+JS模块的完整手册可以查阅[这篇文章](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules).
 
-As always, I hope you enjoyed the article and learned something new. If you want, you can also follow me on [linkedin](https://www.linkedin.com/in/germancocca/) or [twitter](https://twitter.com/CoccaGerman).
+希望你喜欢这篇文章，并且从中收益，你可以在[linkedin](https://www.linkedin.com/in/germancocca/)或[twitter](https://twitter.com/CoccaGerman)上关注我。
 
-Cheers and see you in the next one! =D
+干杯！下篇文章见！
 
 ![giphy](https://www.freecodecamp.org/news/content/images/2022/04/giphy.gif)

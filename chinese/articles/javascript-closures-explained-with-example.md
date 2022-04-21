@@ -5,31 +5,31 @@
 
 ![Closure in JavaScript – Explained with Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/safar-safarov-LKsHwgzyk7c-unsplash-2.jpg)
 
-In this article, we are going to talk about closures in JavaScript. I'll walk you through the definition of a closure, a simple day-to-day fetch utility closure example, and some of the advantages and disadvantages of using closures.
+这篇文章将讲解JavaScript中的闭包。我会说明闭包的定义，展现一个日常抓取使用闭包的例子以及闭包的优缺点。
 
-## Table of Contents
+## 目录
 
--   [Prerequisites](#prerequisites)
--   [What are closures](#what-are-closures)?
--   [Use case of closures](#use-case-of-closure-creating-a-fetch-utility-with-closures)
--   [Advantages of closures](#advantages-of-closures)
--   [Disadvantages of closures](#disadvantages-of-closures)
--   [Summary](#summary)
+-   [先决条件](#prerequisites)
+-   [什么是闭包](#what-are-closures)?
+-   [如何使用闭包](#use-case-of-closure-creating-a-fetch-utility-with-closures)
+-   [闭包的优点](#advantages-of-closures)
+-   [闭包的缺点](#disadvantages-of-closures)
+-   [总结](#summary)
 
-Without further ado, let's get started.
+话不多说，我们开始吧！
 
-## Prerequisites
+## 先决条件
 
-You should have a good understanding of the following topics to understand this article:
+学习着这篇文章，你必须理解以下内容：
 
--   How JavaScript's [execution context](https://www.freecodecamp.org/news/javascript-execution-context-and-hoisting/) works
--   What the [Fetch API](https://www.freecodecamp.org/news/javascript-fetch-api-tutorial-with-js-fetch-post-and-header-examples/) is and how to use it
+-   JavaScript的[执行上下文](https://www.freecodecamp.org/news/javascript-execution-context-and-hoisting/) works
+-   什么是[Fetch API](https://www.freecodecamp.org/news/javascript-fetch-api-tutorial-with-js-fetch-post-and-header-examples/)以及如何使用
 
-## What are closures?
+## 什么是闭包？
 
-Closures are functions that have access to the variables that are present in their scope chain even if the outer function ceases to exist.
+闭包是即便外部函数已经不存在，也可以获取作用域链上变量的函数。
 
-To understand this in more detail, let's understand what a scope chain is. Scope chain refers to the fact that parent scope does not have access to the variables inside its children's scope, but the children's scope does have access to the variables present in its parent scopes.
+在阐述之前，我们先了解什么是作用域链。作用域链
 
 Let's make this clearer by taking a look at an example below:
 

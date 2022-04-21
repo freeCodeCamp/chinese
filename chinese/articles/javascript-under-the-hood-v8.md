@@ -1,49 +1,49 @@
-> -   原文地址：[How JavaScript Works: Under the Hood of the V8 Engine JavaScript 到底是怎么运行的](https://www.freecodecamp.org/news/javascript-under-the-hood-v8/)
-> -   作者：Ilya Lyamkin
-> -   译者：
-> -   校对者：
+> - 原文地址：[How JavaScript Works: Under the Hood of the V8 Engine JavaScript 到底是怎么运行的](https://www.freecodecamp.org/news/javascript-under-the-hood-v8/)
+> - 作者：Ilya Lyamkin
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How JavaScript Works: Under the Hood of the V8 Engine](https://images.unsplash.com/photo-1552656967-7a0991a13906?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Today we’ll look under the hood of JavaScript's V8 engine and figure out how exactly JavaScript is executed.
+今天我们来看看 JavaScript 的 V8 引擎，弄清楚 JavaScript 到底是如何执行的。
 
-[In a previous article][1] we learned how the browser is structured and got a [high-level overview of Chromium][2]. Let's recap a bit so we're ready to dive in here.
+[在之前的文章中][1]，我们了解了浏览器的结构，并对Chromium有了一个 [高度的概述][2]。让我们回顾一下，这样我们就可以准备好在这里深入研究了。
 
 ## Background
 
-[Web Standards][3] are a set of rules that the browser implements. They define and describe aspects of the [World Wide Web][4].
+[Web 标准][3] 是浏览器实施的一套规则。它们定义并描述了[万维网][4].
 
-[W3C][5] is an international community that develops open standards for the Web. They make sure that everyone follows the same guidelines and doesn't have to support dozens of completely different environments.
+[W3C][5] 是一个为网络开发开放标准的国际社区。他们确保每个人都遵循相同的准则，不必支持几十个完全不同的环境。
 
-A modern browser is quite a complicated piece of software with a codebase of [tens of millions of lines of code][6]. So it's split into a lot of modules responsible for different logic.
+现代浏览器是一个相当复杂的软件，它的代码库有 [数千万行的代码][6]。所以它被分割成很多模块，负责不同的逻辑。
 
-And two of the most important parts of a browser are the JavaScript engine and a rendering engine.
+而浏览器中最重要的两个部分是JavaScript引擎和渲染引擎。
 
-[Blink][7] is a rendering engine that is responsible for the whole rendering pipeline including DOM trees, styles, events, and V8 integration. It parses the DOM tree, resolves styles, and determines the visual geometry of all the elements.
+[Blink][7] 是一个渲染引擎，负责整个渲染管道，包括DOM树、样式、事件和V8集成。它解析DOM树，解决样式问题，并确定所有元素的视觉几何。
 
-While continually monitoring dynamic changes via animation frames, Blink paints the content on your screen. The JS engine is a big part of the browser – but we haven't gotten into those details yet.
+在通过动画帧不断监测动态变化的同时，Blink在屏幕上绘制内容。JS引擎是浏览器的一个重要部分--但我们还没有进入这些细节。
 
 ### JavaScript Engine 101
 
-The JavaScript engine executes and compiles JavaScript into native machine code. Every major browser has developed its own JS engine: Google's Chrome uses V8, Safari uses JavaScriptCore, and Firefox  uses  SpiderMonkey.
+JavaScript 引擎将 JavaScript 编译成本地机器代码并执行。每个主要的浏览器都开发了自己的 JS 引擎。谷歌的 Chrome 使用 V8，Safari 使用 JavaScriptCore，Firefox 使用 SpiderMonkey。
 
-We’ll work particularly with V8 because of its use in Node.js and Electron, but other engines are built in the same way.
+我们将特别使用V8，因为它在Node.js和Electron中使用，但其他引擎也是以同样的方式构建的。
 
-Each step will include a link to the code responsible for it, so you can get familiar with the codebase and continue the research beyond this article.
+每个步骤都将包括一个负责该步骤的代码链接，因此你可以熟悉代码库，并在本文之后继续研究。
 
-We will work with [a mirror of V8 on GitHub][8] as it provides a convenient and well-known UI to navigate the codebase.
+我们将使用 [GitHub上的V8镜像][8]，因为它提供了一个方便和知名的 UI 来浏览代码库。
 
 ## Preparing the source code
 
-The first thing V8 needs to do is to download the source code. This can be done via a network, cache, or service workers.
+V8需要做的第一件事是下载源代码。这可以通过网络、缓存或服务工作者来完成。
 
-Once the code is received, we need to change it in a way that the compiler can understand. This process is called parsing and consists of two parts: the scanner and the parser itself.
+一旦收到代码，我们需要以编译器可以理解的方式来改变它。这个过程被称为解析（parsing），由两部分组成：扫描器（scanner）和解析器（parser）本身。
 
-[The scanner][9] takes the JS file and converts it to the list of known tokens. There's a list of all JS tokens in [the keywords.txt file][10].
+[扫描器][9] 接收 JS 文件并将其转换为已知的标记列表。在 [keywords.txt文件][10]中有一个所有 JS 标记的列表。
 
-The [parser][11] picks it up and creates an [Abstract Syntax Tree (AST)][12]: a tree representation of the source code. Each node of the tree denotes a construct occurring in the code.
+[解析器][11] 捡起它并创建一个 [抽象语法树（AST）][12]：源代码的树状表示。树上的每个节点都表示代码中出现的一个结构。
 
-Let’s have a look at a simple example:
+让我们看一下一个简单的例子:
 
 ```javascript
 function foo() {
@@ -52,50 +52,47 @@ function foo() {
 }
 ```
 
-This code will produce the following tree structure:
+这段代码将产生以下树状结构:
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/ast-tree.png)
 
-Example of AST tree
+AST树的例子
 
-You can execute this code by executing a preorder traversal (root, left, right):
+你可以通过执行前序遍历（根、左、右）来执行这段代码:
 
-1.  Define the `foo` function.
-2.  Declare the `bar` variable.
-3.  Assign `1` to `bar`.
-4.  Return `bar` out of the function.
+1. 定义 `foo` 函数。
+2. 声明 `bar` 变量。
+3. 将 `1` 分配给 `bar`。
+4. 从函数中返回 `bar`。
+你还会看到 `VariableProxy`--一个将抽象变量连接到内存中某个地方的元素。解决 `VariableProxy` 的过程被称为 **范围分析(Scope Analysis)**。
 
-You will also see `VariableProxy` — an element that connects the abstract variable to a place in memory. The process of resolving `VariableProxy` is called **Scope Analysis**.
-
-In our example, the result of the process would be all `VariableProxy`s pointing to the same `bar` variable.
+在我们的例子中，这个过程的结果是所有 `VariableProxy` 都指向同一个 `bar` 变量。
 
 ## The Just-in-Time (JIT) paradigm
 
-Generally, for your code to execute, the programming language needs to be transformed into machine code. There are several approaches to how and when this transformation can happen.
+一般来说，为了使你的代码能够执行，编程语言需要被转化为机器代码。对于如何以及何时发生这种转换，有几种方法。
 
-The most common way of transforming the code is by performing ahead-of-time compilation. It works exactly as it sounds: the code is transformed into machine code before the execution of your program during the compilation stage.
+最常见的转换代码的方法是进行超前编译。它的工作原理：在编译阶段，代码在程序执行之前就被转化为机器代码了。许多编程语言都采用这种方法，如C++、Java 和其他语言。
 
-This approach is used by many programming languages such as C++, Java, and others.
+在表格的另一边，是解释型：每一行代码都将在运行时执行。这种方法通常被动态类型语言（如 JavaScript 和 Python）采用，因为在执行之前不能知道确切的类型。
 
-On the other side of the table, we have interpretation: each line of the code will be executed at runtime. This approach is usually taken by dynamically typed languages like JavaScript and Python because it’s impossible to know the exact type before execution.
+因为提前编译可以一起评估所有代码，它可以提供更好的优化并最终生成更高性能的代码。 另一方面，解释型语言更容易实现，但它通常比提前编译慢。
 
-Because ahead-of-time compilation can assess all the code together, it can provide better optimization and eventually produce more performant code. Interpretation, on the other side, is simpler to implement, but it’s usually slower than the compiled option.
+为了更快、更有效地为动态语言转换代码，创建了一种称为即时 (JIT) 编译的新方法。 它最好地结合了解释和编译。
 
-To transform the code faster and more effectively for dynamic languages, a new approach was created called Just-in-Time (JIT) compilation. It combines the best from interpretation and compilation.
+在使用解释(interpretation) 作为基础方法的同时，V8 可以检测到比其他函数更频繁使用的函数，并使用以前执行的类型信息对其进行编译。
 
-While using interpretation as a base method, V8 can detect functions that are used more frequently than others and compile them using type information from previous executions.
+然而，类型有可能会发生变化。我们需要对已编译的代码进行去优化，转而返回到解释法（之后，我们可以在得到新的类型反馈后重新编译函数）。
 
-However, there is a chance that the type might change. We need to de-optimize compiled code and fallback to interpretation instead (after that, we can recompile the function after getting new type feedback).
-
-Let's explore each part of JIT compilation in more detail.
+让我们更详细地探讨一下JIT编译的每个部分。
 
 ### Interpreter
 
-V8 uses an interpreter called [Ignition][13]. Initially, it takes an abstract syntax tree and generates byte code.
+V8 使用一个叫做 [Ignition][13] 的解释器。最初，它接受一个抽象的语法树并生成字节码。
 
-Byte code instructions also have metadata, such as source line positions for future debugging. Generally, byte code instructions match the JS abstractions.
+字节码指令也有元数据，如源行位置，以便将来进行调试。一般来说，字节码指令与JS的抽象内容相匹配。
 
-Now let's take our example and generate byte code for it manually:
+现在让我们以我们的例子为例，为它手动生成字节码:
 
 ```bytecode
 LdaSmi #1 // write 1 to accumulator
@@ -104,29 +101,29 @@ Ldar r0   // write from r0 (bar) to accumulator
 Return    // returns accumulator
 ```
 
-Ignition has something called an accumulator — a place where you can store/read values.
+Ignition 有一个叫做累加器（accumulator）的东西--一个可以存储/读取数值的地方。
 
-The accumulator avoids the need for pushing and popping the top of the stack. It’s also an implicit argument for many byte codes and typically holds the result of the operation. Return implicitly returns the accumulator.
+累加器避免了推送和弹出堆栈顶部的需要。它也是许多字节代码的隐含参数，通常保存操作的结果。隐式地返回累加器。
 
-You can check out all the available byte code [in the corresponding source code][14]. If you’re interested in how other JS concepts (like loops and async/await) are presented in byte code, I find it useful to read through these [test expectations][15].
+你可以查看 [在相应的源代码中][14] 所有可用的字节码。如果你对其他 JS 概念（如循环和async/await）如何在字节码中呈现感兴趣，我觉得通过这些 [测试用例][15]来阅读是很有用的。
 
 ### Execution
 
-After the generation, Ignition will interpret the instructions using a table of handlers keyed by the byte code. For each byte code, Ignition can look up corresponding handler functions and execute them with the provided arguments.
+生成后，Ignition 将使用一个以字节码为关键的处理程序表来解释这些指令。对于每个字节码，Ignition 可以查找相应的处理程序函数，并使用提供的参数执行它们。
 
-As we mentioned before, the execution stage also provides the type feedback about the code. Let’s figure out how it’s collected and managed.
+正如我们之前提到的，执行阶段还提供关于代码的类型反馈。让我们来弄清楚它是如何被收集和管理的。
 
-First, we should discuss how JavaScript objects can be represented in memory. In a naive approach, we can create a dictionary for each object and link it to the memory.
+首先，我们应该讨论如何在内存中表示JavaScript对象。在一个天真的方法中，我们可以为每个对象创建一个字典，并将其链接到内存中。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/naive-object.png)
 
-The first approach for keeping the object
+保存对象的第一种方法
 
-However, we usually have a lot of objects with the same structure, so it would not be efficient to store lots of duplicated dictionaries.
+然而，我们通常有很多具有相同结构的对象，所以存储大量重复的字典是没有效率的。
 
-To solve this issue, V8 separates the object's structure from the values itself with **Object Shapes** (or Maps internally) and a vector of values in memory.
+为了解决这个问题，V8 使用 **Object Shapes**（或内部映射 Maps internally）和内存中的值向量将对象的结构与值本身分开。
 
-For example, we create an object literal:
+例如，我们创建一个对象字面:
 
 ```javascript
 let c = { x: 3 };
@@ -226,21 +223,21 @@ V8 overview
 
 We’ll go over it step by step:
 
-1.  It all starts with getting JavaScript code from the network.
-2.  V8 parses the source code and turns it into an Abstract Syntax Tree (AST).
-3.  Based on that AST, the Ignition interpreter can start to do its thing and produce bytecode.
-4.  At that point, the engine starts running the code and collecting type feedback.
-5.  To make it run faster, the byte code can be sent to the optimizing compiler along with feedback data. The optimizing compiler makes certain assumptions based on it and then produces highly-optimized machine code.
-6.  If, at some point, one of the assumptions turns out to be incorrect, the optimizing compiler de-optimizes and goes back to the interpreter.
+1. It all starts with getting JavaScript code from the network.
+2. V8 parses the source code and turns it into an Abstract Syntax Tree (AST).
+3. Based on that AST, the Ignition interpreter can start to do its thing and produce bytecode.
+4. At that point, the engine starts running the code and collecting type feedback.
+5. To make it run faster, the byte code can be sent to the optimizing compiler along with feedback data. The optimizing compiler makes certain assumptions based on it and then produces highly-optimized machine code.
+6. If, at some point, one of the assumptions turns out to be incorrect, the optimizing compiler de-optimizes and goes back to the interpreter.
 
 That’s it! If you have any questions about a specific stage or want to know more details about it, you can dive into source code or hit me up on [Twitter][19].
 
 ### Further reading
 
--   [“Life of a script][20]” video from Google
--   [A crash course in JIT compilers][21] from Mozilla
--   Nice explanation of [Inline Caches in V8][22]
--   Great dive in [Object Shapes][23]
+- [“Life of a script][20]” video from Google
+- [A crash course in JIT compilers][21] from Mozilla
+- Nice explanation of [Inline Caches in V8][22]
+- Great dive in [Object Shapes][23]
 
 [1]: https://lyamkin.com/blog/what-are-web-standards-and-how-does-web-browser-work/
 [2]: https://www.chromium.org/developers/how-tos/getting-around-the-chrome-source-code

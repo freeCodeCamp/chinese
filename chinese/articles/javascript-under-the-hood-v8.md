@@ -131,27 +131,27 @@ let d = { x: 5 };
 c.y = 4;
 ```
 
-In the first line, it will produce a shape `Map[c]` that has the property `x` with an offset 0.
+在第一行，它将产生一个 shape `Map[c]`，其属性为`x`，偏移量为0。
 
-In the second line, V8 will reuse the same shape for a new variable.
+在第二行中，V8将为一个新的变量重新使用相同的 shape。
 
-After the third line, it will create a new shape `Map[c1]` for property `y` with an offset 1 and create a link to the previous shape `Map[c]` .
+在第三行之后，它将为属性`y`创建一个新的 shape `Map[c1]`，偏移量为1，并创建一个与之前 shape `Map[c]` 的引用。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/object-shapes-1.png)
 
-Example of object shapes
+object shapes 的例子
 
-In the example above, you can see that each object can have a link to the object shape where for each property name, V8 can find an offset for the value in memory.
+在上面的例子中，你可以看到每个对象都可以有一个指向 object shape 的链接，对于每个属性名称，V8可以在内存中找到一个值的偏移。
 
-Object shapes are essentially linked lists. So if you write `c.x`, V8 will go to the head of the list, find `y` there, move to the connected shape, and finally it gets `x` and reads the offset from it. Then it’ll go to the memory vector and return the first element from it.
+Object shapes 本质上是链接列表。因此，如果你写 `c.x`，V8 会去到列表的头部，在那里找到 `y`，移动到连接的 shape，最后它得到 `x` 并从中读取偏移。然后它将进入内存向量并返回其中的第一个元素。
 
-As you can imagine, in a big web app you’ll see a huge number of connected shapes. At the same time, it takes linear time to search through the linked list, making property lookups a really expensive operation.
+你可以想象，在一个大的网络应用中，你会看到大量的  shapes。同时，在链接列表中搜索需要线性时间，使得属性查找成为一个非常昂贵的操作。
 
-To solve this problem in V8, you can use the [**Inline Cache (IC)**][16]. It memorizes information on where to find properties on objects to reduce the number of lookups.
+为了解决V8中的这个问题，你可以使用 [**在线缓存 Inline Cache（IC）**][16]。它记住了在哪里可以找到对象的属性的信息，以减少查找的次数。
 
-You can think about it as a listening site in your code: it tracks all _CALL_, _STORE_, and _LOAD_ events within a function and records all shapes passing by.
+你可以把它看作是你代码中的一个监听点：它跟踪一个函数中所有的_CALL_、_STORE_和_LOAD_事件，并记录所有经过的 shapes。
 
-The data structure for keeping IC is called [**Feedback Vector**][17]**.** It’s just an array to keep all ICs for the function.
+保存IC的数据结构被称为[**反馈向量 Feedback Vector**][17]**.**它只是一个数组，用来保存函数的所有IC。
 
 ```javascript
 function load(a) {
@@ -159,15 +159,15 @@ function load(a) {
 }
 ```
 
-For the function above, the feedback vector will look like this:
+对于上述函数，反馈向量将是这样的:
 
 ```javascript
 [{ slot: 0, icType: LOAD, value: UNINIT }];
 ```
 
-It’s a simple function with only one IC that has a type of LOAD and value of `UNINIT`. This means it’s uninitialized, and we don’t know what will happen next.
+这是一个简单的函数，只有一个 IC，它的类型是 `LOAD`，值是 `UNINIT`。这意味着它是未初始化的，我们不知道接下来会发生什么。
 
-Let’s call this function with different arguments and see how Inline Cache will change.
+让我们用不同的参数调用这个函数，看看Inline Cache会有什么变化。
 
 ```javascript
 let first = { key: 'first' }; // shape A
@@ -175,69 +175,69 @@ let fast = { key: 'fast' }; // the same shape A
 let slow = { foo: 'slow' }; // new shape B
 ```
 
-After the first call of the `load` function, our inline cache will get an updated value:
+在第一次调用`load`函数后，我们的内联缓存(inline cache)将得到一个更新的值:
 
 ```javascript
 [{ slot: 0, icType: LOAD, value: MONO(A) }];
 ```
 
-That value now becomes monomorphic, which means this cache can only resolve to shape A.
+这个值现在变成了单态的，这意味着这个缓存只能解析为 shape A。
 
-After the second call, V8 will check the IC's value and it'll see that it’s monomorphic and has the same shape as the `fast` variable. So it will quickly return offset and resolve it.
+在第二次调用后，V8将检查IC的值，它会看到它是单态的，并且与 `fast` 变量的 shape 相同。所以它将迅速返回偏移量并解析它。
 
-The third time, the shape is different from the stored one. So V8 will manually resolve it and update the value to a polymorphic state with an array of two possible shapes.
+第三次，其形状与存储的 shape 不同。所以V8将手动解决它，并将其值更新为多态状态，有两个可能的 shape 的数组。
 
 ```javascript
 [{ slot: 0, icType: LOAD, value: POLY[(A, B)] }];
 ```
 
-Now every time we call this function, V8 needs to check not only one shape but iterate over several possibilities.
+现在我们每次调用这个函数时，V8需要检查的不仅仅是一个 shape，而是在几种可能性中进行迭代。
 
-For the faster code, you _can_ initialize objects with the same type and not change their structure too much.
+为了使代码更快，你可以用相同的类型初始化对象，并且不对它们的结构做太多的改变。
 
-**Note: You can keep this in mind, but don’t do it if it leads to code duplication or less expressive code.**
+**注意：你可以记住这一点，但如果导致代码重复或代码表现力降低，就不要这样做。**
 
-Inline caches also keep track of how often they're called to decide if it’s a good candidate for optimizing the compiler — Turbofan.
+内联缓存还可以跟踪它们被调用的频率，以决定它是否是优化编译器的好候选者--Turbofan。
 
 ### Compiler
 
-Ignition only gets us so far. If a function gets hot enough, it will be optimized in the compiler, [Turbofan][18], to make it faster.
+Ignition只能让我们走到这里。如果一个函数变得足够热(译者注： 调用频繁)，它将在编译器中被优化，[Turbofan][18]，以使其更快。
 
-Turbofan takes byte code from Ignition and type feedback (the Feedback Vector) for the function, applies a set of reductions based on it, and produces machine code.
+Turbofan从Ignition中获取字节码和函数的类型反馈（Feedback Vector），在此基础上应用一系列的缩减，并产生机器码。
 
-As we saw before, type feedback doesn’t guarantee that it won’t change in the future.
+正如我们之前看到的，类型反馈并不能保证它在未来不发生变化。
 
-For example, Turbofan optimized code based on the assumption that some addition always adds integers.
+例如，Turbofan基于一些加法总是加整数的假设来优化代码。
 
-But what would happen if it received a string? This process is called **deoptimization.** We throw away optimized code, go back to interpreted code, resume execution, and update type feedback.
+但如果它收到的是一个字符串，会发生什么？这个过程被称为 **去优化** 我们扔掉优化的代码，回到解释的代码，恢复执行，并更新类型反馈。
 
 ## Summary
 
-In this article, we discussed JS engine implementation and the exact steps of how JavaScript is executed.
+在这篇文章中，我们讨论了JS引擎的实现以及JavaScript如何执行的具体步骤。
 
-To summarize, let’s have a look at the compilation pipeline from the top.
+总结一下，让我们从头看一下编译管道。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/08/v8-overview-2.png)
 
-V8 overview
+V8概述
 
-We’ll go over it step by step:
+我们将一步一步地看下去:
 
-1. It all starts with getting JavaScript code from the network.
-2. V8 parses the source code and turns it into an Abstract Syntax Tree (AST).
-3. Based on that AST, the Ignition interpreter can start to do its thing and produce bytecode.
-4. At that point, the engine starts running the code and collecting type feedback.
-5. To make it run faster, the byte code can be sent to the optimizing compiler along with feedback data. The optimizing compiler makes certain assumptions based on it and then produces highly-optimized machine code.
-6. If, at some point, one of the assumptions turns out to be incorrect, the optimizing compiler de-optimizes and goes back to the interpreter.
+1. 这一切都始于从网络中获取JavaScript代码。
+2. V8解析源代码并将其转化为抽象语法树（AST）。
+3. 基于该AST，Ignition解释器可以开始做它的事情，并产生字节码。
+4. 在这一点上，引擎开始运行代码并收集类型反馈。
+5. 为了使它运行得更快，字节码可以和反馈数据一起被发送到优化编译器。优化编译器在此基础上做出某些假设，然后产生高度优化的机器代码。
+6. 如果在某些时候，其中一个假设被证明是不正确的，优化编译器就会取消优化，并回到解释器中。
 
-That’s it! If you have any questions about a specific stage or want to know more details about it, you can dive into source code or hit me up on [Twitter][19].
+这就是了! 如果你对上面某个特定的阶段有任何疑问，或者想了解更多的细节，你可以潜心研究源代码，或者在 [Twitter][19] 上联系我。
 
-### Further reading
+### 深入阅读
 
-- [“Life of a script][20]” video from Google
-- [A crash course in JIT compilers][21] from Mozilla
-- Nice explanation of [Inline Caches in V8][22]
-- Great dive in [Object Shapes][23]
+- [life of a script][20] 来自谷歌的视频
+- [A crash course in JIT compilers][21] 来自Mozilla
+- 很好的解释 [Inline Caches in V8][22]
+- 深入了解 [Object Shapes][23]
 
 [1]: https://lyamkin.com/blog/what-are-web-standards-and-how-does-web-browser-work/
 [2]: https://www.chromium.org/developers/how-tos/getting-around-the-chrome-source-code

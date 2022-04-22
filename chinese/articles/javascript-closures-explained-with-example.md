@@ -18,14 +18,14 @@
 
 话不多说，我们开始吧！
 
-## 先决条件
+<h2 id='prerequisites'>先决条件</h2>
 
 学习着这篇文章，你必须理解以下内容：
 
 -   JavaScript的[执行上下文](https://www.freecodecamp.org/news/javascript-execution-context-and-hoisting/) works
 -   什么是[Fetch API](https://www.freecodecamp.org/news/javascript-fetch-api-tutorial-with-js-fetch-post-and-header-examples/)以及如何使用
 
-## 什么是闭包？
+<h2 id='what-are-closures'> 什么是闭包？</h2>
 
 闭包是即便外部函数已经不存在，也可以获取作用域链上变量的函数。
 
@@ -53,36 +53,36 @@ let buttonProps = (borderRadius) => {
 
 内部函数如何解决位于父作用域的变量呢？
 
-这是因为词法作用域。
+这是因为词法作用域。JS编译器可以根据词法作用域来解析当前作用域的变量，实际上是解析嵌套函数中的变量。
 
-So based on the above explanation, `createVariantButtonProps` will have access to the variables present in its outer function `buttonProps`.
+所以根据上述例子，我们可以得出 `createVariantButtonProps` 可以获取外部函数`buttonProps`中的变量。
 
-In the above example, the inner function `createVariantButtonProps` is a closure. To understand closures in detail we will first go through the characteristics of closures which are as follows:
+在这个例子中，内部函数`createVariantButtonProps`就是一个闭包。 想要深入了解闭包，我们必须先了解闭包的特性：
 
--   Even if the outer function ceases to exist, a closure still has access to its parent variables.
--   Closures do not have access to their outer function’s `args` parameter.
+-   即便外部函数不再存在，闭包也可以获取父函数中的变量。
+-   闭包不可以获取外部函数中的`args`形参。
 
-Let's get into more detail on each of these points.
+让我们来深入了解这两个特性。
 
-### Even if the outer function ceases to exist, it still has access to its parent variables.
+### 即便外部函数不再存在，闭包也可以获取父函数中的变量。
 
-This is the basic functionality of any closure. This is their main life motto aka their working principle.
+这是闭包的基础功能，是闭包的生命信念，换句话说是闭包工作的指导原则。
 
-To see this in action we will now execute the above `buttonProps` function.
+我们现在执行`buttonProps` 函数，来看看闭包在实际中的运用：
 
 ```JS
 let primaryButton = buttonProps("1rem"); 
 ```
 
-Calling the `buttonProps` function will return us another function that is our closure.
+调用`buttonProps`函数会返回另一个函数，即我们的闭包。
 
-Now let's execute this closure:
+现在来执行闭包:
 
 ```JS
 const primaryButtonProps = primaryButton("primary", "red");
 ```
 
-Once the closure is executed, it returns the following object:
+闭包一旦执行，便返回下面的对象：
 
 ```JS
 {
@@ -92,30 +92,30 @@ Once the closure is executed, it returns the following object:
 }
 ```
 
-Here again a question arises: How does the `primaryButton` function have access to the variable `borderRadius` that was not present inside it?
+为什么 `primaryButton`函数可以获取并不位于其内部的 `borderRadius` 变量的值？
 
-If we go through the definition of closures, and scope chaining that we discussed earlier, it perfectly fits into that instance.
+回看我们之前讨论的闭包和作用域链的定义，会发现这个例子非常匹配。
 
-Let's dig deeper into why closures still have access to the variables that are defined outside their scope, even if the outer function ceases to exists – for example, `borderRadius`?  
+然我们进一步理解为什么即便外部函数不再存在，闭包也可以获取父函数中的变量？例如，获取`borderRadius`变量的值。  
 
-The answer is simple: closures do not store static values. Instead, they store references to the variables present inside the scope chain. In this way, even if the outer function dies, the inner function, that is a closure, still has access to its parent variables.
+答案很简单：闭包不存储静态值，相反，闭包存储作用域链上变量的引用。这样，即便外部函数被销毁，内部函数———即闭包仍能够获取父函数内的变量。
 
-## Use case of closure: Creating a fetch utility with closures
+<h2 id='use-case-of-closure-creating-a-fetch-utility-with-closures'>如何使用闭包</h2>
 
-Now that we've learned what closures are, we will create a nice general purpose utility function. It will handle different request methods such as GET and POST with REST APIs.
+我们已经学习了什么是闭包，现在让我们创建一个可以被广泛应用的函数。这个函数将使用REST API来处理如GET和POST之类的方法。
 
-For this use case,
+在这个例子中：
 
--   We will be using [JSON placeholder APIs](https://jsonplaceholder.typicode.com/). This provides us with some fake data which we can edit using REST APIs.
--   We will be using JavaScript's [fetch](https://developer.mozilla.org/en-US/docs/Web/API/fetch) API.
+-   我们将使用[JSON placeholder APIs](https://jsonplaceholder.typicode.com/)。我们可以使用REST API来处理一些虚构的数据。
+-   我们将使用JavaScript的[fetch](https://developer.mozilla.org/en-US/docs/Web/API/fetch) API。
 
-Let's first discuss why we even need to design such a utility. There are couple of reasons:
+我们先来讨论一下为什么要设置这样的用例。有以下几个原因：
 
--   For every fetch call, we don’t want to define the base URL (or other common parameters) all the time. So we will create a mechanism that will store the base URL/parameters as a state.
--   To remove redundant code.
--   To provide modularity in the codebase.
+-   我们并不想在每一次fetch调用中都重新定义基础URL (或其他基础参数)。 所以我们可以创建一个机制将基础URL或者参数作为状态存储。
+-   删除多余的代码。
+-   在代码库中提供模块。
 
-Let's dive into the details of this utility. Our fetch utility will look like below:
+让我们来看看这个用例的细节。我们的fetch用例如下：
 
 ```Javascript
 const fetchUtility = (baseURL, headers) => {
@@ -132,32 +132,32 @@ const fetchUtility = (baseURL, headers) => {
 };
 ```
 
--   `fetchUtility` accepts two parameters that are `baseURL` and `headers`. These will be used later in the closure to construct the base URL along with the headers.
--   Then we have `createFetchInstance`, which accepts `route` `requestMethod` and `data` as parameters.
--   Next, this function creates a new request object that will construct our URL using the code: `${baseURL}${route}`. We also pass in an object which consists of the request method type, headers, and data if available.
--   Then we return the instance of a fetch API along with the request object.
--   Lastly, we return the `createFetchInstance` function.
+-   `fetchUtility`接受两个形参 `baseURL`和`headers`。这部分会在后面闭包用到，来创建基础URL和头部。
+-   还有`createFetchInstance`函数，接受`route` `requestMethod` 和 `data`参数。
+-   这个函数接着会创建一个请求实例，通过代码 `${baseURL}${route}`来创建URL。同时我们也传入一个对象，包含请求方式、请求头和数据（如果数据是可以使用的）。
+-   然后返回一个fetch API的实例和一个请求对象。
+-   最后返回 `createFetchInstance`函数。
 
-Now let's see this function in action. Call our `fetchUtility` function to initialize the `baseURL`:
+接下来让我们实际操作看看，调用 `fetchUtility` 函数初始化 `baseURL`:
 
 ```Javascript
 const fetchInstance = fetchUtility("https://jsonplaceholder.typicode.com");
 ```
 
-Initializing the baseURL 
+初始化基础URL 
 
--   If we observe, the `fetchInstance` now has the value of the closure of the function `fetchUtility`.
--   Next, we pass the route and the type of the request to the closure `fetchInstance`:
+-   仔细看，`fetchInstance`获取了`fetchUtility`函数闭包的变量。
+-  然后，我们向闭包`fetchInstance`传入路由和请求的方式:
 
 ```Javascript
 const [getFunc, getReq] = fetchInstance("/todos/1", "GET");
 ```
 
-Executing the closure
+执行闭包
 
-As you can see this returns us an array of fetch API instance and the request body that we configured.
+如你所见，一个包含fetch API实例和我们设置的请求体的数组被返回。
 
-Finally, we can make use of the `getFunc` fetch API to call the request `getReq` like below:
+最后，我们使用`getFunc`这个fetch API 调用 `getReq`请求，如下：
 
 ```Javascript
 getFunc(getReq)
@@ -165,7 +165,7 @@ getFunc(getReq)
   .then((data) => console.log(data));
 ```
 
-We can also create a POST request similar to the above GET request. We just need to call the `fetchInstance` again as below:
+我们可以一样的方法来创建一个POST请求。这样重新调用 `fetchInstance`：
 
 ```Javascript
 const [postFunc, postReq] = fetchInstance(
@@ -179,7 +179,7 @@ const [postFunc, postReq] = fetchInstance(
 );
 ```
 
-And to execute this post request we can do the similar operation that we did for the GET request:
+在执行POST请求的时候也可以用GET请求一样的方法：
 
 ```Javascript
 postFunc(postReq)
@@ -187,38 +187,37 @@ postFunc(postReq)
   .then((data) => console.log(data));
 ```
 
-If we closely look at the above example, we can see that the inner function `createFetchInstance` has access to the variables present in its scope chain. With the help of lexical scoping, during its definition of `createFetchInstance` it resolves the variable names.
+如果自己观察，我们会发现`createFetchInstance` 可以获取作用域链中的变量。 在词法作用域的帮助下，定义 `createFetchInstance` 时。它就可以解析变量名称。
+这样的话，闭包意味着在定义时对 `baseURL` `headers` 的引用，即便外部函数 `fetchUtility` 不复存在，这个引用依旧存在。
 
-In this way the closure references the variables `baseURL` and `headers` during its definition even after the outer function `fetchUtility` has ceased to exist.
+如果从另外一个角度来看闭包的话，闭包帮助我们保持如 `baseURL`和`headers`的状态，我们可以在整个函数调用中使用。
 
-If we think of closures from a different perspective, then closures help us to maintain a state like `baseURL` and `headers` that we can use across function calls.
+<h2 id='advantages-of-closures'>闭包的优点</h2>
 
-## Advantages of closures
+以下是闭包的优点：
 
-Here are some advantages of closures:
+-   可以借助闭包在执行上下文中添加变量。
+-   可以使用闭包中的变量保存状态，之后使用。
+-   闭包提供数据封装。
+-   使用闭包可以删除多余的代码。
+-   使用闭包可以维护模块化代码。
 
--   They allow you to attach variables to an execution context.
--   Variables in closures can help you maintain a state that you can use later.
--   They provide data encapsulation.
--   They help remove redundant code.
--   They help maintain modular code.
+<h2 id='disadvantages-of-closures'>闭包的缺点</h2>
 
-## Disadvantages of closures
+过分使用闭包会引发两大缺点：
 
-There are two main disadvantages of overusing closures:
+-   闭包内声明的变量不能被垃圾回收。
+-   应用中存在过量的闭包会影响应用运行速度，因为闭包会造成存储了重复的代码。
 
--   The variables declared inside a closure are not garbage collected.
--   Too many closures can slow down your application. This is actually caused by duplication of code in the memory.
+<h2 id='summary'>总结</h2>
 
-## Summary
+所以如果你想要使用某种设计模式，使用闭包十分有效。他可以帮助你写出整洁模块化的代码。
 
-So in this way closures can be really useful if you want to deal with or implement certain design patterns. They also help you write neat and modular code.
+如果你对闭包感兴趣，我推荐你阅读以下话题：
 
-If you liked the idea of closures, then I would recommend reading further on the following topics:
+-   [设计模式](https://www.patterns.dev/posts/classic-design-patterns/)
+-   [匿名闭包](https://stackoverflow.com/questions/16032840/javascript-anonymous-closure)
 
--   [Design patterns](https://www.patterns.dev/posts/classic-design-patterns/)
--   [Anonymous closures](https://stackoverflow.com/questions/16032840/javascript-anonymous-closure)
+感谢阅读！
 
-Thank you for reading!
-
-Follow me on [Twitter](https://twitter.com/keurplkar), [GitHub](https://github.com/keyurparalkar), and [LinkedIn](https://www.linkedin.com/in/keyur-paralkar-494415107/).
+可以在 [Twitter](https://twitter.com/keurplkar), [GitHub](https://github.com/keyurparalkar)和[LinkedIn](https://www.linkedin.com/in/keyur-paralkar-494415107/)上关注我。

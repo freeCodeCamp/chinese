@@ -75,11 +75,11 @@ IP地址（IP是互联网协议的简称）是一个机器可读的地址，由�
 
 - 访问命令行。
 - 你的电脑密码。
-- 输入一个文本命令（该命令将取决于你所运行的macOS版本）。
+- 输入一个文本命令（该命令将取决于你所运行的 MacOS 版本）。
 
-<h3 id="how-to-access-the-terminal-application-on-macos">如何在MacOS上访问终端应用程序</h3>
+<h3 id="how-to-access-the-terminal-application-on-macos">如何在 MacOS 上访问终端应用程序</h3>
 
-macOS有一个内置的CLI（命令行界面），名为 `Terminal.app`，它允许你输入基于文本的命令，操作系统将执行这些命令。
+MacOS 有一个内置的 CLI（命令行界面），名为 `Terminal.app`，它允许你输入基于文本的命令，操作系统将执行这些命令。
 
 有几种方法可以打开终端。
 
@@ -100,21 +100,21 @@ macOS有一个内置的CLI（命令行界面），名为 `Terminal.app`，它允
 
 ![Screenshot-2022-04-20-at-10.12.29-AM](https://www.freecodecamp.org/news/content/images/2022/04/Screenshot-2022-04-20-at-10.12.29-AM.png)
 
-<h3 id="how-to-clear-dns-cache-for-your-macos-version">如何根据你的MacOS版本清除DNS缓存</h3>
+<h3 id="how-to-clear-dns-cache-for-your-macos-version">如何根据你的 macOS 版本清除 DNS 缓存</h3>
 
 在终端窗口中，你将需要输入一个命令。
 
-该命令根据你所运行的 macOS 版本而不同。
+该命令根据你所运行的 MacOS 版本而不同。
 
-每个版本的 macOS 都有一个版本号和一个版本名称。
+每个版本的 MacOS 都有一个版本号和一个版本名称。
 
-要想知道你电脑上的 macOS 版本，点击屏幕左上角的苹果图标。在出现的下拉菜单中，选择 `关于此Mac`。
+要想知道你电脑上的 MacOS 版本，点击屏幕左上角的苹果图标。在出现的下拉菜单中，选择 `关于此 Mac`。
 
 在 `概览` 标签中，你将首先看到版本名称。然后，在这下面，你会看到版本号。
 
 ![Screenshot-2022-04-20-at-11.07.26-AM](https://www.freecodecamp.org/news/content/images/2022/04/Screenshot-2022-04-20-at-11.07.26-AM.png)
 
-在下面的表格中，你将看到按时间倒序排列的macOS版本--从最近的版本到最老的版本。
+在下面的表格中，你将看到按时间倒序排列的 MacOS 版本--从最近的版本到最老的版本。
 
 导航到你的Mac版本并复制相应的命令。
 
@@ -147,10 +147,10 @@ macOS有一个内置的CLI（命令行界面），名为 `Terminal.app`，它允
 
 ## 结语
 
-就这样，你的本地DNS缓存现在已经清除。
+就这样，你的本地 DNS 缓存现在已经清除。
 
 希望这有助于解决你可能遇到的任何网络连接问题。
 
-经常清除DNS总是一个好主意，以帮助解决麻烦的互联网连接，并确保你的系统安全，免受潜在威胁。
+经常清除 DNS 缓存总是一个好主意，以帮助解决麻烦的互联网连接，并确保你的系统安全，免受潜在威胁。
 
 谢谢你的阅读!

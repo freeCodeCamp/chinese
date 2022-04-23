@@ -4,7 +4,7 @@
                         Slimane Aguersif
                     
                 ](https://www.freecodecamp.org/news/author/slimane/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![CSS REM – What is REM in CSS?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/rem-in-css-cover-image.jpeg)

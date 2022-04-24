@@ -5,11 +5,11 @@
 
 ![What is Systems Engineering? A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/tt.jpeg)
 
-我最近在读 J. Martin 的书《Systems Engineering Guidebook – A Process for Developing Systems and Products》 （系统工程指南--开发系统和产品的过程）。 从中我了解到，系统工程可以降低40%的制造成本——你知道吗？
+我最近在读 J. Martin 的书《Systems Engineering Guidebook – A Process for Developing Systems and Products》（系统工程指南--开发系统和产品的过程）[1]。 从中我了解到，系统工程可以降低40%的制造成本——你知道吗？
 
 我以前也不知道。即使在上了一堂以系统工程为主题的课后，我也只有在了解其在现实生活中的应用时才明白其相关性。
 
-### But, is systems engineering used in software development?
+### 但是，系统工程是否用于软件开发？
 
 是的!
 
@@ -28,7 +28,7 @@ Facebook也有自己的，叫做 [生产工程](https://engineering.fb.com/categ
 3. 什么是系统工程？
 4. 为什么系统工程很重要？
 
-## What is a system?
+## 什么是系统？
 
 一个系统是许多 "东西 "的组合，它们像一个整体一样一起工作。
 
@@ -42,7 +42,7 @@ Facebook也有自己的，叫做 [生产工程](https://engineering.fb.com/categ
 
 这些组件也可以是子系统。例如，我们的太阳系有我们的星球。我们的地球有自己的系统，如地圈、生物圈，等等。
 
-地质圈是地球上的一个_子系统_。[2]
+地质圈是地球上的一个 _子系统_。[2]
 
 ![1*eYsdUqZxsESlo2Q31JF6oQ](https://miro.medium.com/max/1242/1*eYsdUqZxsESlo2Q31JF6oQ.png)
 
@@ -72,7 +72,7 @@ Facebook也有自己的，叫做 [生产工程](https://engineering.fb.com/categ
 
 通过学习如何创建一个系统，你将学会如何更好地创建和管理项目。
 
-## What is the lifecycle of a project?
+## 什么是项目的生命周期？
 
 项目的生命周期指的是某个项目的各个阶段——从想法到项目的创建，到最终的使用和最后的制造。
 
@@ -90,99 +90,99 @@ Facebook也有自己的，叫做 [生产工程](https://engineering.fb.com/categ
 
 [Photo by Eduardo Dutra from Pexels](https://www.pexels.com/photo/person-in-front-of-laptop-on-brown-wooden-table-2115217/)
 
-### Project lifecycle example
+### 项目生命周期实例
 
 假设你正在经营一家软件公司，一个客户要求你为他们公司开发一个网站。
 
-#### Come up with the Idea
+#### 提出想法
 
-Here, you need to have a conversation with the client to determine how the project will be developed, and to learn what the client actually wants from the project.
+在这里，你需要与客户进行对话，以确定项目将如何发展，并了解客户对项目的实际需求。
 
-It is also a good idea to discuss with the client potential future problems that may arise, whether technical or financial.
+与客户讨论未来可能出现的问题也是一个好主意，无论是技术还是财务问题。
 
-This is by far the most important phase of the entire lifecycle of the project.
+这是迄今为止项目整个生命周期中最重要的阶段。
 
-Without understanding the client's needs, you cannot accomplish the projects they want. This is true regardless of your technical knowledge.
+不了解客户的需求，你就无法完成他们想要的项目。无论你的技术知识如何，这一点都是真实的。
 
-#### Create and develop the Idea
+#### 创造和发展想法
 
-The next step is to plan all the steps needed to turn the plan into a real project after understanding the needs of your client.
+下一步是在了解客户的需求后，计划所有需要的步骤，把计划变成一个真正的项目。
 
-As an example, you will plan out where you will launch the site, where you will deploy it, and so on.
+举例来说，你要计划出你将在哪里启动网站，在哪里部署网站，等等。
 
-#### Come up with the concepts for the actual project concept
+#### 为实际的项目概念提出构想
 
-In this phase, you build the projects the client wants. It is also a critically important step.
+在这个阶段，你建立客户想要的项目。这也是一个极其重要的步骤。
 
-It allows you to design the website according to what the client wants.
+它允许你根据客户的要求来设计网站。
 
-#### Use and support the project
+#### 使用和支持该项目
 
-We are now in the production phase. During this phase, the project will be tested and any technical issues will be fixed.
+我们现在正处于生产阶段。在这个阶段，项目将被测试，任何技术问题将被修复。
 
-If there are technical problems, they should be minor, and should not adversely affect the majority of the website.
+如果有技术问题，应该是小问题，而且不应该对网站的大部分内容产生不利影响。
 
-However, once the project is given to the client, the maintenance should be handled by the client.
+然而，一旦项目交给客户，维护工作就应该由客户来处理。
 
-#### Deactivation
+#### 停用
 
-The website will be deactivated in this final step.
+在这最后一步，网站将被停用。
 
-It is either replaced by another site, the client ends their company and takes the site down, and so on.
+它要么被另一个网站取代，要么客户结束他们的公司并关闭该网站，等等。
 
-## What is systems engineering and why does it matter?
+## 什么是系统工程，它为什么重要？
 
-We have seen that a system is a combination of many “things” that work together as a whole.
+我们已经看到，一个系统是许多 `东西` 的组合，它们作为一个整体一起工作。
 
-We have also seen that systems have lifecycles.
+我们还看到，系统有生命周期。
 
-The act then of planning these lifecycles before starting the project and during its execution is called **systems engineering**.
+那么，在项目开始前和执行过程中对这些生命周期进行规划的行为被称为 **系统工程**。
 
-### Technical example of systems engineering
+### 系统工程的技术实例
 
-Let's imagine that you already know what the client wants.
+让我们想象一下，你已经知道客户想要什么。
 
-Imagine they've asked you to design an e-commerce site that will host thousands of photos from sellers.
+想象一下，他们让你设计一个电子商务网站，该网站将承载来自卖家的成千上万张照片。
 
-The site needs a central server to host and deliver a lot of images from users. Your site, for instance, may feature images of products it sells.
+该网站需要一个中央服务器来托管和传递大量来自用户的图片。例如，你的网站可能以其销售的产品图片为特色。
 
-You need to create an efficient and easy to maintain system that requests images for the website in a short time.
+你需要创建一个高效且易于维护的系统，在短时间内为网站请求图片。
 
-How can you achieve this?
+你如何能实现这一点？
 
-Difficult to answer right? Without a doubt, this is a challenging problem.
+难以回答吧？毫无疑问，这是一个具有挑战性的问题。
 
-One that requires the planning of a system to maximise efficiency and to be as easy as possible to maintain.
+一个需要对系统进行规划以最大限度地提高效率，并尽可能地易于维护的问题。
 
-If you want to know more about this problem, you can check out [this article](https://www.aosabook.org/en/distsys.html).
+如果你想了解更多关于这个问题，你可以查看 [这篇文章](https://www.aosabook.org/en/distsys.html)。
 
-Although this is a big technical problem, there are other problems even more serious.
+虽然这是一个大的技术问题，但还有其他更严重的问题。
 
-What are the best ways to manage the growth of a large open source library, for example?
+例如，管理一个大型开源图书馆的增长的最佳方法是什么？
 
-How exactly will its architecture be structured, so it is efficient and easy to use?
+它的架构究竟如何，才能做到高效和易于使用？
 
-[Here](https://www.aosabook.org/en/matplotlib.html) is an overview of a popular library architecture in Python, [matplotlib](https://matplotlib.org/).
+[这里](https://www.aosabook.org/en/matplotlib.html) 是对 Python 中一个流行的库架构的概述，[matplotlib](https://matplotlib.org/)。
 
-You can create and manage the structure of the program when you plan a system.
+当你计划一个系统时，你可以创建和管理程序的架构。
 
-Thus, the developer won't have to worry about missing functionality goals, serious defects, or spending significantly more than expected on production and maintenance.
+这样，开发者就不必担心功能目标的缺失、严重的缺陷，或在生产和维护上花费大大超过预期。
 
-It is for this reason that Google, Facebook, Amazon, and many others have dedicated teams of systems engineers.
+正是由于这个原因，谷歌、Facebook、亚马逊和其他许多公司都有专门的系统工程师团队。
 
-Through systems engineering, we can develop a kind of "plan" that achieves our goals or the company's goals with near perfection.
+通过系统工程，我们可以制定一种 "计划"，以接近完美的方式实现我们的目标或公司的目标。
 
-## Wrapping up
+## 总结
 
-Well, now you understand:
+好了，现在你明白了。
 
-- What a system is
-- What a project lifecycle is
-- What systems engineering is and its value in all kinds of projects
+- 什么是系统
+- 什么是项目生命周期
+- 什么是系统工程以及它在各种项目中的价值
 
-Thanks for reading!
+谢谢你的阅读!
 
-## **References**
+## **附录**
 
 1. J. Martin, _Systems Engineering Guidebook A Process for Developing Systems and Products_. London: CRC Press, pp. 5–6.
 2. National Geographic Society, “Earth’s Systems,” _National Geographic Society_, Oct. 29, 2019. [https://www.nationalgeographic.org/article/earths-systems/](https://www.nationalgeographic.org/article/earths-systems/)

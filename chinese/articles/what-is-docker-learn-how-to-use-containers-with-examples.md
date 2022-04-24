@@ -1,60 +1,60 @@
-> -  原文地址：[What is Docker? Learn How to Use Containers – Explained with Examples](https://www.freecodecamp.org/news/what-is-docker-learn-how-to-use-containers-with-examples/)
-> -  原文作者：[Sebastian Sigl](https://www.freecodecamp.org/news/author/sesigl/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[What is Docker? Learn How to Use Containers – Explained with Examples](https://www.freecodecamp.org/news/what-is-docker-learn-how-to-use-containers-with-examples/)
+> - 原文作者：[Sebastian Sigl](https://www.freecodecamp.org/news/author/sesigl/)
+> - 译者：
+> - 校对者：
 
 ![What is Docker? Learn How to Use Containers – Explained with Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/how-to-use-docker-containers.png)
 
-Containers are an essential tool for software development today. Running applications in any environment becomes easy when you leverage containers.
+容器是当今软件开发的一个重要工具。当你利用容器时，在任何环境中运行应用程序都变得很容易。
 
-The most popular technology for running containers is [Docker](https://www.docker.com/), which runs on any operating system.
+运行容器的最流行技术是 [Docker](https://www.docker.com/)，它可以在任何操作系统上运行。
 
-In this blog post, you will learn to use Docker for the top 3 most essential use cases. You will learn how to:
+在这篇博文中，你将学习 Docker 最基本的 3 个用例:
 
--   run a database locally using Docker,
--   run automated tests using a dockerized database,
--   run your application locally and in production using Docker.
+- 使用 Docker 在本地运行一个数据库。
+- 使用 Docker 化的数据库运行自动测试。
+- 使用 Docker 在本地和生产中运行你的应用程序。
 
-You will use a Java [Spring Boot](https://spring.io/projects/spring-boot) application, but all learnings apply to every other programming language of your choice.
+你将使用一个 Java [Spring Boot](https://spring.io/projects/spring-boot) 应用程序，但所有学习内容都适用于你选择的其他任何编程语言。
 
-To run all examples, you need to:
+为了运行所有的例子，你需要:
 
--   [Install Docker](https://docs.docker.com/engine/install/)
--   [Install Java](https://www.java.com/de/download/)
+- [安装 Docker](https://docs.docker.com/engine/install/)
+- [安装 Java](https://www.java.com/de/download/)
 
 ## Run Isolated Applications Using Docker
 
-> Docker takes away repetitive, mundane configuration tasks and is used throughout the development lifecycle for fast, easy, and portable application development – desktop and cloud. (Source: [https://www.docker.com/use-cases/](https://www.docker.com/use-cases/))
+> Docker 减少了重复的、无意义的配置任务，并在整个开发生命周期中用于快速、简单和可移植的应用开发——桌面和云。 (源自: [https://www.docker.com/use-cases/](https://www.docker.com/use-cases/))
 
-The core of Docker’s superpower is leveraging so-called [cgroups](https://en.wikipedia.org/wiki/Cgroups) to create lightweight, isolated, portable, and performant environments, which you can start in seconds.
+Docker 的超能力的核心是利用所谓的 [cgroups](https://en.wikipedia.org/wiki/Cgroups) 来创建轻量级的、隔离的、可移植的和高性能的环境，你可以在几秒钟内启动。
 
-Let’s look at how you can use Docker to be more productive.
+让我们来看看你如何使用 Docker 来提高生产力。
 
 ## Database Containers
 
-Using Docker, you can start many types of databases in seconds. It’s easy, and it does not pollute your local system with other requirements you need to run the database. Everything comes packaged with the Docker container.
+使用Docker，你可以在几秒钟内启动许多类型的数据库。这很容易，而且不会因为你运行数据库所需的其他要求而污染你的本地系统。一切都与Docker容器打包在一起。
 
-By searching [hub.docker.com](https://hub.docker.com/), you can find ready-to-use containers for many databases.
+通过在 [hub.docker.com](https://hub.docker.com/) 搜索，你可以为许多数据库找到现成的容器。
 
-Using the `docker run` command, you can start a [MySQL Docker container](https://hub.docker.com/_/mysql/).
+使用`docker run`命令，你可以启动一个 [MySQL 的容器](https://hub.docker.com/_/mysql/).
 
 ```sh
 docker run --rm -v "$PWD/data":/var/lib/mysql --name mysql -e MYSQL_ROOT_PASSWORD=admin-password -e MYSQL_DATABASE=my-database -p 3306:3306 mysql:8.0.28-debian
 ```
 
-This command uses advanced features of running a Docker container:
+该命令使用了运行Docker容器的高级功能:
 
--   `-v "$PWD/data"` maps your local directory `./data` to the docker container, which allows you to start the Docker container without losing your data,
--   `-p 3306:3306` maps the container port `3306` to our machine so that other applications can use it,
--   `-e MYSQL_DATABASE=my-database` sets an environment variable to create a new database called `my-database` automatically,
--   `-e MYSQL_ROOT_PASSWORD=admin-password` sets an environment variable to set the admin password,
--   `--rm` removes the container when stopped.
+- `-v "$PWD/data"` 映射了你的本地目录到容器的 `./data`目录 , 这使你能够启动Docker容器而不丢失你的数据，
+- `-p 3306:3306` 映射容器的 `3306` 端口到我们的机器的 `3306` 端口上，以便其他应用程序可以使用它,
+- `-e MYSQL_DATABASE=my-database` 设置一个环境变量，自动创建一个名为`my-database`的新数据库,
+- `-e MYSQL_ROOT_PASSWORD=admin-password` 设置一个环境变量来设置管理密码,
+- `--rm` 停止时移除容器。
 
-These environment variables and more are documented on the [Docker image’s page](https://hub.docker.com/_/mysql/?tab=description).
+这些环境变量和更多的环境变量都记录在 [Docker镜像的页面](https://hub.docker.com/_/mysql/?tab=description)。
 
 ### How to Use Database Containers For Development
 
-You will use a popular tech stack to build a web application based on [Java](https://www.w3schools.com/java/java_intro.asp) and [Spring Boot](https://spring.io/projects/spring-boot). To focus on the Docker parts, you can clone a simple demo application from the official [Accessing JPA Data With Rest Guide](https://spring.io/guides/gs/accessing-data-rest/).
+你将使用一个流行的技术栈来构建，一个基于[Java](https://www.w3schools.com/java/java_intro.asp) 和[Spring Boot](https://spring.io/projects/spring-boot) 的 Web 应用程序。为了专注于 Docker 部分，你可以从官方的 [用Rest指南访问JPA数据](https://spring.io/guides/gs/accessing-data-rest/) 克隆一个简单的演示应用程序。
 
 ```sh
 # Download the sample application
@@ -64,9 +64,9 @@ git clone https://github.com/spring-guides/gs-accessing-data-rest.git
 cd complete
 ```
 
-The application comes with an in-memory database, which is not valuable for production because it does not allow multiple services to access and mutate a single database. A [MySQL](https://www.mysql.com/) Database is more suitable for scaling your application to many more reads and writes.
+该应用程序自带一个内存数据库，这对生产来说没有价值，因为它不允许多个服务访问和修改（mutate）一个数据库。一个[MySQL](https://www.mysql.com/)数据库更适合于将你的应用程序扩展到更多的读和写。
 
-Therefore, add the MySQL driver to your `pom.xml`:
+因此，将MySQL驱动添加到你的 `pom.xml` 文件:
 
 ```xml
        <!-- Disable in memory database -->
@@ -86,7 +86,7 @@ Therefore, add the MySQL driver to your `pom.xml`:
        </dependency>
 ```
 
-Now, you need to add the configuration to connect to your database by adding a configuration file `src/main/resources/application.properties`.
+现在，你需要通过添加配置文件`src/main/resources/application.properties`来添加连接到数据库的配置。
 
 ```properties
 # Database configuration
@@ -98,7 +98,7 @@ spring.datasource.password=admin-password
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-You can now start the application and call existing endpoints:
+你现在可以启动应用程序并调用现有的端点（endpoints）:
 
 ```sh
 # Get all people
@@ -111,11 +111,11 @@ curl -i -H "Content-Type:application/json" -d '{"firstName": "Frodo", "lastName"
 curl http://localhost:8080/people
 ```
 
-You successfully used your rudimentary application, which writes and reads data in your database. Using the MySQL Docker database gives you a robust database up in seconds, and you can use it from any application.
+你成功地使用了你的初级应用程序，它在你的数据库中写入和读取数据。使用 MySQL Docker 数据库可以让你在几秒钟内建立一个强大的数据库，而且你可以从任何应用程序中使用它。
 
 ### How to Use Database Containers for Integration Tests
 
-The application already has tests that expect a running database. But, because you replaced your in-memory database with an actual MySQL database, tests won’t run successfully if you stop your database.
+该应用程序已经有数据库的相关测试。但是，因为你用一个实际的 MySQL 数据库替换了你的内存数据库，如果你停止你的数据库，测试就不会成功运行。
 
 ```sh
 # Stop database
@@ -129,9 +129,9 @@ docker rm -f mysql
 ... skipped output ...
 ```
 
-To quickly start and stop containers running tests, there is a handy tool called [testcontainers](https://github.com/testcontainers). There you'll find libraries for many programming languages, including Java.
+为了快速启动和停止运行测试的容器，有一个方便的工具叫 [testcontainers](https://github.com/testcontainers)。在那里你可以找到许多编程语言的库，包括 Java。
 
-First, you need to add some dependencies to your `pom.xml`:
+首先，你需要添加一些依赖项到你的 `pom.xml` 文件:
 
 ```xml
        <!-- testcontainer -->
@@ -155,7 +155,7 @@ First, you need to add some dependencies to your `pom.xml`:
        </dependency>
 ```
 
-You need to update the tests to make use of the testcontainers, which starts the database on every test run. Add an annotation and a field to the test to make use of it:
+你需要更新测试以利用 testcontainers，它在每次测试运行时启动数据库。在测试中添加一个注解和一个字段来利用它 :
 
 ```java
 //added imports
@@ -184,7 +184,7 @@ public class AccessingDataRestApplicationTests {
    }
 ```
 
-For each test execution, the database is started for you, which allows you to use an actual database when you execute tests. All the wiring, setting it up, startup and cleanup are all done for you.
+对于每个测试的执行，数据库为你启动，这使你在执行测试时可以使用一个实际的数据库。所有的连接、设置、启动和清理都为你完成。
 
 ## Dockerize Your Application
 
@@ -263,8 +263,8 @@ I work at eBay Kleinanzeigen, one of the world’s biggest classified companies.
 
 ## References
 
--   [Docker Hub: MySQL Image](https://hub.docker.com/_/mysql/)
--   [Docker documentation: run command](https://docs.docker.com/engine/reference/commandline/run/)
--   [Visual Studio Code: Remote containers](https://code.visualstudio.com/docs/remote/containers)
--   [Learn Java – free Java courses](https://www.freecodecamp.org/news/learn-java-free-java-courses-for-beginners/)
--   [Youtube: Build containers faster with Jib](https://www.youtube.com/watch?v=H6gR_Cv4yWI)
+- [Docker Hub: MySQL Image](https://hub.docker.com/_/mysql/)
+- [Docker documentation: run command](https://docs.docker.com/engine/reference/commandline/run/)
+- [Visual Studio Code: Remote containers](https://code.visualstudio.com/docs/remote/containers)
+- [Learn Java – free Java courses](https://www.freecodecamp.org/news/learn-java-free-java-courses-for-beginners/)
+- [Youtube: Build containers faster with Jib](https://www.youtube.com/watch?v=H6gR_Cv4yWI)

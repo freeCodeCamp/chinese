@@ -1,124 +1,124 @@
-> -  原文地址：[How to Flush DNS on Mac – MacOS Clear DNS Cache](https://www.freecodecamp.org/news/how-to-flush-dns-on-mac-macos-clear-dns-cache/)
-> -  原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Flush DNS on Mac – MacOS Clear DNS Cache](https://www.freecodecamp.org/news/how-to-flush-dns-on-mac-macos-clear-dns-cache/)
+> - 原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Flush DNS on Mac – MacOS Clear DNS Cache](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/kaitlyn-baker-vZJdYl5JVXY-unsplash.jpg)
 
-In this tutorial, you will learn why flushing your DNS cache is important, and how you can clear the cache on your local system.
+在本教程中，你将了解为什么刷新你的 DNS 缓存是很重要的，以及你如何在你的本地系统上清除缓存。
 
-Here is what we'll discuss in this guide:
+以下是我们将在本指南中讨论的内容:
 
-1.  [What is DNS cache?](#intro)
-    1.  [Why flushing DNS cache is important](#why)
-2.  [How to flush DNS cache on MacOS](#howto)
-    1.  [How to access the terminal application on MacOS](#terminal)
-    2.  [How to clear DNS Cache for your MacOS version](#version)
+1. [什么是 DNS 缓存？](./#what-is-dns-cache?)
+    1. [为什么刷新DNS缓存很重要](./#why-flushing-dns-cache-is-important)
+2. [如何在 MacOS 上刷新 DNS 缓存](./#how-to-flush-dns-on-macos)
+    1. [如何在MacOS上访问终端应用程序](./#how-to-access-the-terminal-application-on-macos)
+    2. [如何根据你的MacOS版本清除DNS缓存](./#how-to-clear-dns-cache-for-your-macos-version)
 
-## What is DNS Cache?
+<h2 id="what-is-dns-cache?">什么是 DNS 缓存？</h2>
 
-DNS acts much like an internet phonebook. Think of what a phonebook does – it maps a person's name to their respected phone number.
+DNS 的作用很像一个互联网电话簿。想想电话簿的作用——它将一个人的名字映射到他们所尊重的电话号码。
 
-DNS (short for Domain Name System) maps domain names to their associated IP addresses.
+DNS（域名系统的简称）将域名映射到其相关的 IP 地址。
 
-A domain name, such as `freecodecamp.org`, is easily read, understood, and recalled by humans.
+一个域名，如 `freecodecamp.org`，很容易被人类阅读、理解和回忆。
 
-IP addresses (IP is short for Internet Protocol) is an address that is machine-readable and consists of a unique series of numbers. These numbers identify a device connected to the Internet.
+IP地址（IP是互联网协议的简称）是一个机器可读的地址，由一系列独特的数字组成。这些数字可以识别连接到互联网的设备。
 
-Their format is not that human-friendly since it is hard to remember an exact sequence of numbers each time you want to visit a website.
+它们的格式对人不太友好，因为每次你想访问一个网站时，都很难记住一个准确的数字序列。
 
-DNS then maps `freecodecamp.org` to its associated IP address - `104.26.3.33`.
+然后 DNS 将 `freecodecamp.org` 映射到其相关的IP地址 - `104.26.3.33`。
 
-Think of the DNS cache as a local storage area on your Mac.
+把DNS缓存看作是你Mac上的一个本地存储区。
 
-It temporarily stores and keeps track of your computer's activity records like recent website visits.
+它暂时存储并跟踪你的计算机的活动记录，如最近的网站访问。
 
-Each time you visit a website by typing its URL (short for Uniform Resource Locator), the DNS cache will save the IP address associated with that website.
+每次你通过输入一个网站的URL（统一资源定位器的简称）访问该网站时，DNS缓存会保存与该网站相关的IP地址。
 
-When you visit that same website for the second time, the lookup process is more efficient, and the lookup time is much shorter.
+当你第二次访问同一网站时，查询过程更有效，查询时间也更短。
 
-It helps save significant time.
+这有助于节省大量时间。
 
-### Why Flushing DNS Cache Is Important
+<h3 id="why-flushing-dns-cache-is-important">为什么刷新DNS缓存很重要</h3>
 
-You should flush the DNS cache for a few reasons.
+你应该刷新 DNS 缓存，有几个原因。
 
-The two most important ones are:
+最重要的两个原因是:
 
-1.  **Flushing DNS is a helpful step for troubleshooting Internet connectivity issues**.
+1. **刷新 DNS 是排除互联网连接问题的一个有用步骤**.
 
-You may be getting DNS errors in your browser, such as the 'DNS Server Not Responding' message when trying to access a site and establish a connection.
+你可能在浏览器中遇到 DNS 错误，例如在试图访问一个网站并建立连接时，出现 `DNS Server Not Responding` 的信息。
 
-Keep in mind that your local cache information can become outdated over time.
+请记住，你的本地缓存信息可能会随着时间的推移变得过时。
 
-When DNS updates happen on a website, your Mac is still using the old, inaccurate information to load the requested page.
+当网站发生 DNS 更新时，你的 Mac 仍在使用旧的、不准确的信息来加载请求的页面。
 
-Flushing the DNS cache makes sure cache information is up to date.
+刷新 DNS 缓存可以确保缓存信息是最新的。
 
-2.  **Flushing the DNS cache prevents network security threats, malicious attacks, and DNS cache poisoning from happening**.
+2.**刷新 DNS 缓存可以防止网络安全威胁、恶意攻击和 DNS 缓存中毒的发生**.
 
-Hackers can access and corrupt your saved DNS cache records.
+黑客可以访问并篡改你保存的DNS缓存记录。
 
-For example, they could manipulate and change the IP address associated with a Domain Name of a website you have already visited and map it to a malicious one.
+例如，他们可以操纵和改变与你已经访问过的网站的域名相关的 IP 地址，并将其映射到一个恶意的地址。
 
-The next time you request to access that same website, there will be a redirection to a fake and corrupted URL.
+下次你请求访问同一网站时，将被重定向到一个虚假和被破坏的 URL。
 
-Hackers can request personal and sensitive information, such as credit card numbers, and steal it.
+黑客可以要求提供个人和敏感信息，如信用卡号码，并窃取这些信息。
 
-Frequent flushing of the DNS cache will help prevent this from occurring.
+经常刷新 DNS 缓存将有助于防止这种情况的发生。
 
-## How to Flush DNS Cache on MacOS
+<h2 id="how-to-flush-dns-on-macos">如何在 MacOS 上刷新 DNS 缓存</h2>
 
-Clearing the DNS cache on your Mac is a relatively straightforward process, even if you don't have a lot of technical knowledge.
+清除Mac上的DNS缓存是一个相对简单的过程，即使你没有很多技术知识。
 
-Here is what you will need:
+以下是你将需要的东西。
 
--   Access to the command line,
--   Your computer password,
--   To enter a text command (the command will depend on the version of macOS you are running).
+- 访问命令行。
+- 你的电脑密码。
+- 输入一个文本命令（该命令将取决于你所运行的 MacOS 版本）。
 
-### How to Access The Terminal Application on MacOS
+<h3 id="how-to-access-the-terminal-application-on-macos">如何在 MacOS 上访问终端应用程序</h3>
 
-macOS has a built-in CLI (Command Line Interface) named `Terminal.app`, which allows you to enter text-based commands that the Operating System will carry out.
+MacOS 有一个内置的 CLI（命令行界面），名为 `Terminal.app`，它允许你输入基于文本的命令，操作系统将执行这些命令。
 
-There are a few ways to open the terminal.
+有几种方法可以打开终端。
 
-The easiest way is through Spotlight search.
+最简单的方法是通过 Spotlight 搜索。
 
-For this, you can:
+为此，你可以:
 
--   Either navigate to the very top right corner of the screen and click on the icon that looks like a magnifying glass.
--   Or, you can also use the `Command Space` shortcut.
+- 鼠标移动到屏幕的右上角，点击看起来像放大镜的图标。
+- 或者，你也可以使用 `Command Space` 的快捷方式。
 
-Both will open up the following window:
+两者都将打开以下窗口:
 
 ![Screenshot-2022-04-20-at-10.07.52-AM](https://www.freecodecamp.org/news/content/images/2022/04/Screenshot-2022-04-20-at-10.07.52-AM.png)
 
-From there, start typing `terminal` and click on the `Terminal.app` option that appears.
+在那里，开始输入 `terminal`，并点击出现的 `Terminal.app` 选项。
 
-You should see a window open that looks similar to the following:
+你应该看到打开的一个窗口，看起来类似于以下内容:
 
 ![Screenshot-2022-04-20-at-10.12.29-AM](https://www.freecodecamp.org/news/content/images/2022/04/Screenshot-2022-04-20-at-10.12.29-AM.png)
 
-### How to Clear DNS Cache For Your MacOS Version
+<h3 id="how-to-clear-dns-cache-for-your-macos-version">如何根据你的 macOS 版本清除 DNS 缓存</h3>
 
-In the terminal window, you will then need to enter a command.
+在终端窗口中，你将需要输入一个命令。
 
-The command is different depending on the version of macOS you are running.
+该命令根据你所运行的 MacOS 版本而不同。
 
-Each version of macOS has a version number and a version name.
+每个版本的 MacOS 都有一个版本号和一个版本名称。
 
-To find out the macOS version on your computer, click on the Apple icon at the very top left corner of your screen. From the dropdown menu that appears, select `About This Mac`.
+要想知道你电脑上的 MacOS 版本，点击屏幕左上角的苹果图标。在出现的下拉菜单中，选择 `关于此 Mac`。
 
-In the `Overview` tab, you will first see the version name. Then, underneath that, you will see the version number.
+在 `概览` 标签中，你将首先看到版本名称。然后，在这下面，你会看到版本号。
 
 ![Screenshot-2022-04-20-at-11.07.26-AM](https://www.freecodecamp.org/news/content/images/2022/04/Screenshot-2022-04-20-at-11.07.26-AM.png)
 
-In the table below, you will see the versions of macOS in reverse chronological order – from the most recent one to the oldest one.
+在下面的表格中，你将看到按时间倒序排列的 MacOS 版本--从最近的版本到最老的版本。
 
-Navigate to your version of Mac and copy the respective command.
+导航到你的Mac版本并复制相应的命令。
 
-| MacOS Version | Command |
+| MacOS      版本     | 使用的命令 |
 | --- | --- |
 | macOS 12 (Monterey) | `sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder` |
 | macOS 11 (Big Sur) | `sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder` |
@@ -135,22 +135,22 @@ Navigate to your version of Mac and copy the respective command.
 | Mac OS X 10.5 (Leopard) | `sudo lookupd -flushcache` |
 | Mac OS X 10.4 (Tiger) | `lookupd -flushcache` |
 
-After typing the command and hitting enter, there will be a prompt for entering your computer's password.
+在输入命令并按下回车键后，会有一个提示，让你输入计算机的密码。
 
-Keep in mind that when you are typing your password, you will not be able to view what you are typing – not even any asterisks.
+请记住，当你输入密码时，你将无法查看你正在输入的内容--甚至没有任何星号。
 
-It appears as though nothing is happening, but rest assured that something is.
+这看起来好像什么都没有发生，但请放心，有些事情正在发生。
 
-Once you have entered your password and hit enter, you will not see a message indicating that the process is complete.
+一旦你输入了你的密码并点击了回车键，你将不会看到一个表明该过程已经完成的信息。
 
-Instead, you will view a new terminal prompt.
+相反，你将看到一个新的终端提示。
 
-## Conclusion
+## 结语
 
-And there you have it – your local DNS cache is now clear.
+就这样，你的本地 DNS 缓存现在已经清除。
 
-Hopefully, this has helped resolve any connectivity issues you may be experiencing.
+希望这有助于解决你可能遇到的任何网络连接问题。
 
-Clearing DNS frequently is always a good idea to help fix troublesome internet connections and ensure your system is secure from potential threats.
+经常清除 DNS 缓存总是一个好主意，以帮助解决麻烦的互联网连接，并确保你的系统安全，免受潜在威胁。
 
-Thanks for reading!
+谢谢你的阅读!

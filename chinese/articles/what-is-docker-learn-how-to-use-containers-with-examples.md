@@ -1,6 +1,6 @@
 > - 原文地址：[What is Docker? Learn How to Use Containers – Explained with Examples](https://www.freecodecamp.org/news/what-is-docker-learn-how-to-use-containers-with-examples/)
 > - 原文作者：[Sebastian Sigl](https://www.freecodecamp.org/news/author/sesigl/)
-> - 译者：
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
 > - 校对者：
 
 ![What is Docker? Learn How to Use Containers – Explained with Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/how-to-use-docker-containers.png)
@@ -22,7 +22,7 @@
 - [安装 Docker](https://docs.docker.com/engine/install/)
 - [安装 Java](https://www.java.com/de/download/)
 
-## Run Isolated Applications Using Docker
+## 使用 Docker 为运行应用程序提供独立环境
 
 > Docker 减少了重复的、无意义的配置任务，并在整个开发生命周期中用于快速、简单和可移植的应用开发——桌面和云。 (源自: [https://www.docker.com/use-cases/](https://www.docker.com/use-cases/))
 
@@ -30,7 +30,7 @@ Docker 的超能力的核心是利用所谓的 [cgroups](https://en.wikipedia.or
 
 让我们来看看你如何使用 Docker 来提高生产力。
 
-## Database Containers
+## Database 容器
 
 使用Docker，你可以在几秒钟内启动许多类型的数据库。这很容易，而且不会因为你运行数据库所需的其他要求而污染你的本地系统。一切都与Docker容器打包在一起。
 
@@ -52,7 +52,7 @@ docker run --rm -v "$PWD/data":/var/lib/mysql --name mysql -e MYSQL_ROOT_PASSWOR
 
 这些环境变量和更多的环境变量都记录在 [Docker镜像的页面](https://hub.docker.com/_/mysql/?tab=description)。
 
-### How to Use Database Containers For Development
+### 如何使用数据库容器进行开发
 
 你将使用一个流行的技术栈来构建，一个基于[Java](https://www.w3schools.com/java/java_intro.asp) 和[Spring Boot](https://spring.io/projects/spring-boot) 的 Web 应用程序。为了专注于 Docker 部分，你可以从官方的 [用Rest指南访问JPA数据](https://spring.io/guides/gs/accessing-data-rest/) 克隆一个简单的演示应用程序。
 
@@ -86,7 +86,7 @@ cd complete
        </dependency>
 ```
 
-现在，你需要通过添加配置文件`src/main/resources/application.properties`来添加连接到数据库的配置。
+现在，你需要通过添加配置文件 `src/main/resources/application.properties` 来添加连接到数据库的配置。
 
 ```properties
 # Database configuration
@@ -113,7 +113,7 @@ curl http://localhost:8080/people
 
 你成功地使用了你的初级应用程序，它在你的数据库中写入和读取数据。使用 MySQL Docker 数据库可以让你在几秒钟内建立一个强大的数据库，而且你可以从任何应用程序中使用它。
 
-### How to Use Database Containers for Integration Tests
+### 如何使用数据库容器进行集成测试
 
 该应用程序已经有数据库的相关测试。但是，因为你用一个实际的 MySQL 数据库替换了你的内存数据库，如果你停止你的数据库，测试就不会成功运行。
 
@@ -184,17 +184,17 @@ public class AccessingDataRestApplicationTests {
    }
 ```
 
-对于每个测试的执行，数据库为你启动，这使你在执行测试时可以使用一个实际的数据库。所有的连接、设置、启动和清理都为你完成。
+对于每个测试的执行，启动数据库做好准备，这使你在执行测试时可以使用一个实际的数据库。所有的连接、设置、启动和清理都为你完成。
 
-## Dockerize Your Application
+## Docker 化你的应用程序
 
-Dockerizing your application using simple Docker tools is possible but not recommended.
+使用简单的 Docker 工具对你的应用程序进行 Docker 化是可能的，但不推荐。
 
-You can build your application, use a base container that contains Java and copy and run your application. But there are a lot of pitfalls, and this is the case for every language and framework. So always look for tools that make your life easier.
+你可以建立你的应用程序，使用一个包含Java的基础容器，然后复制并运行你的应用程序。但是有很多陷阱，每种语言和框架都是如此。所以一定要寻找能让你的生活更轻松的工具。
 
-In this example, you will use [Jib](https://github.com/GoogleContainerTools/jib) and [distroless containers](https://github.com/GoogleContainerTools/distroless) to build a Docker container easily. Using both in combination gives you a minimal, secure, and reproducible container, which works the same way locally and in production.
+在这个例子中，你将使用 [Jib](https://github.com/GoogleContainerTools/jib) 和 [distroless containers](https://github.com/GoogleContainerTools/distroless) 来轻松构建一个 Docker 容器。将两者结合使用，可以得到一个最小的、安全的、可复制的容器，它在本地和生产中的工作方式是一样的。
 
-To use Jib, you need to add it as a maven plugin by adding it to your `pom.xml`:
+要使用 Jib，你需要把它作为一个maven插件添加到你的 `pom.xml` 文件:
 
 ```xml
 <build>
@@ -222,7 +222,7 @@ To use Jib, you need to add it as a maven plugin by adding it to your `pom.xml`:
    </build>
 ```
 
-You can now build the image and run the application:
+现在你可以建立镜像并运行应用程序:
 
 ```sh
 # build the docker container
@@ -243,28 +243,28 @@ docker run --net=host my-docker-image
 2022-04-15 17:43:51.521  INFO 1 --- [           main] c.e.a.AccessingDataRestApplication       : Started AccessingDataRestApplication in 6.146 seconds (JVM running for 6.568)
 ```
 
-The application is started with network mode host `--net=host`, which makes it easy to just connect to the database you started. Alternatively, you can create a `docker network` and start both in the same network.
+该应用程序以网络模式主机 `--net=host` 启动，这使得它很容易只连接到你启动的数据库。另外，你可以创建一个 `docker network`，在同一个网络中启动两者。
 
-You can push your container to a container registry and reference it from any container orchestration tool to run your application in production.
+你可以将你的容器推送到容器 registry，并从任何容器协调工具中使用它，在生产中运行你的应用程序。
 
-## Summary
+## 总结
 
-In this tutorial, you learned how to leverage Docker to create, test. and run applications without polluting your system.
+在本教程中，你学到了如何利用 Docker 来创建、测试和运行应用程序而不污染你的系统。
 
-Everything is in your isolated Docker environment and works locally, as on continuous integration systems and production systems where you might start hundreds of your applications.
+一切都在你独立的 Docker 环境中，并在本地工作，像持续集成系统和生产系统中，你可能启动数百个你的应用程序。
 
-You find the ready to use example application in [my GitHub Docker For Development Example Application Repository](https://github.com/sesigl/docker-for-development-example-application).
+你可以在 [我的GitHub Docker For Development应用实例库](https://github.com/sesigl/docker-for-development-example-application) 中找到可以使用的例子。
 
-I hope you enjoyed the article.
+我希望你喜欢这篇文章。
 
-If you liked it and felt the need to give me a round of applause or just want to get in touch, [follow me on Twitter](https://twitter.com/sesigl).
+如果你喜欢它，觉得有必要给我点赞，或者只是想联系我，[在Twitter上关注我](https://twitter.com/sesigl)。
 
-I work at eBay Kleinanzeigen, one of the world’s biggest classified companies. By the way, [we are hiring](https://www.ebay-kleinanzeigen.de/careers)!
+我在 eBay Kleinanzeigen 工作，这是全球最大的电子商务公司之一。顺便说一下，[我们正在招聘](https://www.ebay-kleinanzeigen.de/careers)!
 
-## References
+## 参考文献
 
-- [Docker Hub: MySQL Image](https://hub.docker.com/_/mysql/)
-- [Docker documentation: run command](https://docs.docker.com/engine/reference/commandline/run/)
-- [Visual Studio Code: Remote containers](https://code.visualstudio.com/docs/remote/containers)
+- [Docker Hub: MySQL 镜像](https://hub.docker.com/_/mysql/)
+- [Docker 文档: run 命令](https://docs.docker.com/engine/reference/commandline/run/)
+- [Visual Studio Code: Remote 容器](https://code.visualstudio.com/docs/remote/containers)
 - [Learn Java – free Java courses](https://www.freecodecamp.org/news/learn-java-free-java-courses-for-beginners/)
-- [Youtube: Build containers faster with Jib](https://www.youtube.com/watch?v=H6gR_Cv4yWI)
+- [Youtube: 用 Jib 更快地构建容器](https://www.youtube.com/watch?v=H6gR_Cv4yWI)

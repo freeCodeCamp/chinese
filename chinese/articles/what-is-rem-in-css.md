@@ -201,7 +201,7 @@ REM也可以适应无障碍需求，满足更改了默认`font-size`用户的需
 -   [CSS单位指南: 解释CSS中的em、remvh、vw等](https://www.freecodecamp.org/news/css-unit-guide/)来自freeCodeCamp
 -   [CSS单位对抗: EM和REM之间的战斗](https://www.freecodecamp.org/news/em-units-versus-rem-units-fight-382c16af8a67/)  作者——ZAYDEK
 -   [CSS中的REM: 理解并使用REM单位](https://www.sitepoint.com/understanding-and-using-rem-units-in-css/) 作者——Adrian Sandu
--   [CSS的值和单位](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)、[<length>](https://developer.mozilla.org/en-US/docs/Web/CSS/length)、[font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)  来自MDN
+-   [CSS的值和单位](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)、[长度](https://developer.mozilla.org/en-US/docs/Web/CSS/length)、[字体大小](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)  来自MDN
 -   [无障碍响应式设计](https://web.dev/accessible-responsive-design/)  作者—— Dave Gash、 Meggin Kearney、Rachel Andrew 和 Rob Dodson
 -   [响应式布局基础](https://web.dev/responsive-web-design-basics/)  作者—— Pete LePage 和 Rachel Andrew
 

@@ -1,7 +1,7 @@
-> -  原文地址：[Why Learning to Code is Hard – And How to Make it Easier](https://www.freecodecamp.org/news/why-learning-to-code-is-hard-and-how-to-make-it-easier/)
-> -  原文作者：[Ogundiran Ayobami](https://www.freecodecamp.org/news/author/codingnninja/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Why Learning to Code is Hard – And How to Make it Easier](https://www.freecodecamp.org/news/why-learning-to-code-is-hard-and-how-to-make-it-easier/)
+> - 原文作者：[Ogundiran Ayobami](https://www.freecodecamp.org/news/author/codingnninja/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Why Learning to Code is Hard – And How to Make it Easier](https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/danial-igdery-FCHlYvR5gJI-unsplash.jpg)
 
@@ -65,7 +65,7 @@ Code memorization occurs whenever you store some code in your head without under
 
 Since you don't understand the core concepts, you will struggle to actually build projects on your own.‌‌
 
-You might even give up…‌‌
+You might even give up……‌‌
 
 For example, let's look at the following code:
 
@@ -184,7 +184,7 @@ Honestly, there is nothing wrong with reading or learning widely – but there i
 
 Choose a part of your project or a programming language you know is super simple to build or understand. Then ask a lot of reasonable and basic questions about it because there is a **sense** in non**sense**. Hey wait! Let me give you an instance:‌‌
 
-Imagine you want to learn JavaScript and you just decide…hey, I am going to learn just `let` and `const` today, and nothing else. And you ask a lot of simple and reasonable questions about them. ‌‌
+Imagine you want to learn JavaScript and you just decide……hey, I am going to learn just `let` and `const` today, and nothing else. And you ask a lot of simple and reasonable questions about them. ‌‌
 
 By doing that, your learning pace will seem slow but you’re most likely going to outpace your counterparts that rush everything (except if they have special brains which is a rare case).‌‌
 
@@ -258,6 +258,6 @@ Now, go get things done.
 
 ## **One more thing**
 
-****[Ayobami](https://twitter.com/codingnninja)**** loves writing history with software development and is currently helping those who are struggling to understand and build projects with JavaScript through ****[You Too Can Code](https://bit.ly/3o3TMyg)****.
+****[Ayobami](https://twitter.com/codingnninja)****loves writing history with software development and is currently helping those who are struggling to understand and build projects with JavaScript through ****[You Too Can Code](https://bit.ly/3o3TMyg)****.
 
 ‌‌

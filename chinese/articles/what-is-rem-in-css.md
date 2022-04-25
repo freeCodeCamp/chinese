@@ -70,7 +70,7 @@ REM就是一种值类型，R代表的是Root（根）。REM是一种长度类型
 -   在处理`font-size`属性时，与父元素的字体大小有关；
 -   在处理其他一些属性，如`height`时，与元素自身的字体大小有关。
 
-`vw` 代表窗口宽度的1%。 也就是说如果你把`width`设置为10vw，元素就会占窗口10%的宽度。 其他长度参见[这里](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units).
+`vw` 代表窗口宽度的1%。 也就是说如果你把`width`设置为10vw，元素就会占窗口10%的宽度。 其他长度参见[这里](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)。
 
 相对长度值的优势非常明显，可以用它们来构建响应式网站。即网站会根据你的设定，有规律地自适应屏幕大小。
 
@@ -78,7 +78,7 @@ REM就是一种值类型，R代表的是Root（根）。REM是一种长度类型
 
 REM的大小取决根元素的字体大小。根元素通过伪类`:root`或者`html`选择器选定。
 
-因此`1rem`继承了根元素`font-size`的大小。 也就是说在整个CSS代码中1REM的大小保持不变。 如果用户没有修改根元素的大小，字体大小默认为 `16px`.
+因此`1rem`继承了根元素`font-size`的大小。 也就是说在整个CSS代码中1REM的大小保持不变。 如果用户没有修改根元素的大小，字体大小默认为 `16px`。
 
 请看下面的例子:
 
@@ -112,7 +112,7 @@ h1 {
 
 ## 响应式网页设计中的REM
 
-响应式网页设计是一个综合性话题，包含不同的方面的内容。freeCodeCamp有两个相关课程。（如果感兴趣，你可以查看[https://www.freecodecamp.org/learn](https://www.freecodecamp.org/learn)。）
+响应式网页设计是一个综合性话题，包含不同的方面的内容。freeCodeCamp有两个相关课程。（如果感兴趣，你可以查看[https://www.freecodecamp.org/learn](https://www.freecodecamp.org/learn)）
 
 接下来我会讲解REM是如何辅助构建响应式网站的。
 
@@ -195,14 +195,14 @@ REM也可以适应无障碍需求，满足更改了默认`font-size`用户的需
 
 最后我们也探索了如何使用REM构建响应式网页，同时适配用户改变浏览器默认设置后的变化。
 
-在写这篇文章的时候，我借鉴了一下内容：
+在写这篇文章的时候，我借鉴了以下内容：
 
--   [通过实例学习CSS单位– Em, Rem, VH, and VW ](https://www.freecodecamp.org/news/learn-css-units-em-rem-vh-vw-with-code-examples/), 作者 —— Joy Shaheb
+-   [通过例子学习CSS单位– Em, Rem, VH, and VW ](https://www.freecodecamp.org/news/learn-css-units-em-rem-vh-vw-with-code-examples/) 作者 —— Joy Shaheb
 -   [CSS单位指南: 解释CSS中的em、remvh、vw等](https://www.freecodecamp.org/news/css-unit-guide/)来自freeCodeCamp
--   [CSS单位对抗: EM和REM之间的战斗](https://www.freecodecamp.org/news/em-units-versus-rem-units-fight-382c16af8a67/), 作者——ZAYDEK
--   [CSS中的REM: 理解并使用REM单位](https://www.sitepoint.com/understanding-and-using-rem-units-in-css/),作者——Adrian Sandu
--   [CSS的值和单位](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units), [<length>](https://developer.mozilla.org/en-US/docs/Web/CSS/length), [font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size), 来自MDN
--   [无障碍响应式设计](https://web.dev/accessible-responsive-design/), 作者—— Dave Gash、 Meggin Kearney、Rachel Andrew 和 Rob Dodson
--   [响应式布局基础](https://web.dev/responsive-web-design-basics/), 作者—— Pete LePage 和 Rachel Andrew
+-   [CSS单位对抗: EM和REM之间的战斗](https://www.freecodecamp.org/news/em-units-versus-rem-units-fight-382c16af8a67/)  作者——ZAYDEK
+-   [CSS中的REM: 理解并使用REM单位](https://www.sitepoint.com/understanding-and-using-rem-units-in-css/) 作者——Adrian Sandu
+-   [CSS的值和单位](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)、[<length>](https://developer.mozilla.org/en-US/docs/Web/CSS/length)、[font-size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)  来自MDN
+-   [无障碍响应式设计](https://web.dev/accessible-responsive-design/)  作者—— Dave Gash、 Meggin Kearney、Rachel Andrew 和 Rob Dodson
+-   [响应式布局基础](https://web.dev/responsive-web-design-basics/)  作者—— Pete LePage 和 Rachel Andrew
 
 封面图作者 **[Sora Shimazaki](https://www.pexels.com/nl-nl/@sora-shimazaki?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)** 来自 Pexels。

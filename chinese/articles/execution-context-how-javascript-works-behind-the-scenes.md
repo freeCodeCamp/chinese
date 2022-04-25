@@ -1,6 +1,6 @@
 > -  原文地址：[JavaScript Execution Context – How JS Works Behind The Scenes](https://www.freecodecamp.org/news/execution-context-how-javascript-works-behind-the-scenes/)
 > -  原文作者：[Victor Ikechukwu](https://www.freecodecamp.org/news/author/victor-ikechukwu/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![JavaScript Execution Context – How JS Works Behind The Scenes](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/header.png)

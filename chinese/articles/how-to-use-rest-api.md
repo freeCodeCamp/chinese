@@ -1,6 +1,6 @@
 > -  原文地址：[How to Use REST APIs – A Complete Beginner's Guide](https://www.freecodecamp.org/news/how-to-use-rest-api/)
 > -  原文作者：[Alex Husar](https://www.freecodecamp.org/news/author/alex-husar/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Use REST APIs – A Complete Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/The-Complete-Guide-to-Understanding-and-Using-REST-APIs.png)

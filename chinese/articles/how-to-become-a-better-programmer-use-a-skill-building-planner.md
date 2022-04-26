@@ -1,7 +1,7 @@
-> -  原文地址：[How to Become a Better Programmer – Use a Skill-Building Planner](https://www.freecodecamp.org/news/how-to-become-a-better-programmer-use-a-skill-building-planner/)
-> -  原文作者：[Amy Haddad](https://www.freecodecamp.org/news/author/amy/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Become a Better Programmer – Use a Skill-Building Planner](https://www.freecodecamp.org/news/how-to-become-a-better-programmer-use-a-skill-building-planner/)
+> - 原文作者：[Amy Haddad](https://www.freecodecamp.org/news/author/amy/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Become a Better Programmer – Use a Skill-Building Planner](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/image-1.jpg)
 
@@ -13,10 +13,10 @@ But that’s just the start.
 
 A planner can also help you:
 
--   Stay on the direct path—instead of winding down random paths and hitting dead ends
--   Measure progress
--   Stay motivated
--   Conquer imposter syndrome
+- Stay on the direct path—instead of winding down random paths and hitting dead ends
+- Measure progress
+- Stay motivated
+- Conquer imposter syndrome
 
 If a planner offers so many benefits, why don’t more programmers use one?
 
@@ -60,9 +60,9 @@ I re-applied this planner/journal combination (with some tweaks) as I set out to
 
 As a programmer, I keep a detailed account of _what_ I want to do each day and each week. These concrete details make up the planner side of my planner/journal model. The journal side consists of personal assessments of my work and abilities, such as:
 
--   The mistakes I made during the day and the lessons I learned
--   Learning strategies that worked well
--   Tactics that helped or hurt my productivity
+- The mistakes I made during the day and the lessons I learned
+- Learning strategies that worked well
+- Tactics that helped or hurt my productivity
 
 These responses are useful because similar comments creep up over time. So I’m constantly on the lookout for patterns. When I spot one, it’s usually a sign to make a tweak. Or, equally important, I know what to keep doing.  
 
@@ -78,7 +78,7 @@ These are reasons why a planner can be so useful. It can help you stay organized
 
 It’s not to say that you’ll never feel frustrated or stuck while using a planner. But here’s the difference: using a planner will help you identify _what_ you need to do each day and _why_. This can help you get the most from your skill-building time, substantially reduce frustration, and reduce the number of starts, stops, and restarts along the way.
 
-### Are You Making Progress?
+### Are You Making Progress
 
 You may be working really hard toward your skill. But the question is: are you making progress?
 
@@ -118,7 +118,7 @@ Taking time to self-assess matters: you want to make sure you’re running down 
 
 As programmers, we can assess our work by “looking back,” as mathematician George Pólya puts it in his book, _How to Solve It._
 
-Looking-back means to “reconsider and re-examine the result and the path that led to it.” It’s the step to take _after_ you’ve solved the problem and _before_ you move on to the next one.      
+Looking-back means to “reconsider and re-examine the result and the path that led to it.” It’s the step to take _after_ you’ve solved the problem and _before_ you move on to the next one.
 
 The idea is to solve a problem or write a program. Then—and this is the important point—before rushing to the next problem or program, look back at your solution: learn from it, improve it, and consolidate your knowledge.
 
@@ -148,12 +148,11 @@ If incorporating these ideas on your own is too much work, then here’s a tool 
 
 Daily Skill Planner contains a four-part framework that’ll help you build skills efficiently and effectively. It’s also designed to include the benefits addressed in this article:
 
--   Taking the direct route toward the outcome you want
--   Measuring your progress
--   Staying motivated by focusing on small strides
--   Self-assessing your work and abilities
--   Conquering imposter syndrome  
-    
+- Taking the direct route toward the outcome you want
+- Measuring your progress
+- Staying motivated by focusing on small strides
+- Self-assessing your work and abilities
+- Conquering imposter syndrome  
 
 Whether or not you choose to use Daily Skill Planner, I hope this post has motivated you to keep a skill-building planner—even if it’s as informal as using some paper and a pen, as I began doing years ago.
 

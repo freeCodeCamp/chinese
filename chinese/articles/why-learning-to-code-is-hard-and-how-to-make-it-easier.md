@@ -182,82 +182,82 @@ Photo by [Luis Villasmil](https://unsplash.com/@villxsmil?utm_source=ghost&utm_m
 
 ### How to pace your learning
 
-Choose a part of your project or a programming language you know is super simple to build or understand. Then ask a lot of reasonable and basic questions about it because there is a **sense** in non**sense**. Hey wait! Let me give you an instance:‌‌
+选择你的项目的一个部分或你知道的超级简单的编程语言来建立或理解。然后问很多关于它的合理和基本的问题，因为在 **非意义** 上有一个 **意义**。嘿，等等! 让我给你举个例子:‌‌
 
-Imagine you want to learn JavaScript and you just decide……hey, I am going to learn just `let` and `const` today, and nothing else. And you ask a lot of simple and reasonable questions about them. ‌‌
+想象一下，如果你想学习 JavaScript，你就决定...，我今天只学 `let` 和 `const`，其他都不学。然后你问了很多关于它们的简单而合理的问题。
 
-By doing that, your learning pace will seem slow but you’re most likely going to outpace your counterparts that rush everything (except if they have special brains which is a rare case).‌‌
+这样做，你的学习速度会显得很慢，但你很可能会超过那些急于求成的同行（除非他们有特殊的大脑，这是一种罕见的情况）。
 
-Yes, handling several tasks at the same time or doing a thing with insufficient time makes coding difficult for you. It can also force you to quit if you don't achieve a reasonable result along the line.
+是的，同时处理几个任务或在时间不足的情况下做一件事会使你的编码变得困难。如果你没有达到一个合理的结果，它也会迫使你放弃。
 
-So, keep whatever you learn super simple and **tame your curiosity because it is the opposite of focus**.‌‌
+所以，无论你学什么都要保持超级简单，**驯服你的好奇心，因为它是专注的反面**。
 
 ## Keep an Open Mind
 
 ![](https://images.unsplash.com/photo-1598316560463-0083295ca902?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fGNvbmZsaWN0fGVufDB8fHx8MTYyODQ4MjA5OQ&ixlib=rb-1.2.1&q=80&w=2000)
 
-Photo by [Obie Fernandez](https://unsplash.com/@obiefernandez?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
+来自 [Obie Fernandez](https://unsplash.com/@obiefernandez?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) 的图片
 
-There are a lot of conflicting opinions about programming languages, libraries, frameworks, techniques and approaches among software developers. Software developers are the most opinionated people I know.
+关于编程语言、库、框架、技术和方法，软件开发者之间有很多相互冲突的意见。软件开发人员是我认识的最有主见的人。
 
-You might have read or heard things like **“Don’t Repeat Yourself (DRY)**”, “**Test Driven Development ( TDD )”**, “Profit Driven Development ( PDD )”, “You Ain’t Gonna Need It ( YAGNI )”, “Clean Code”, “Always Be Coding (ABC)”, “Favour Composition over Inheritance” and many others. And maybe you wanted to take a side.
+你可能读过或听过诸如 **不要重复自己（DRY）**、**测试驱动开发（TDD）**、**利润驱动开发（PDD**、**你不会需要它（YAGNI**、**干净的代码**、**永远在编码（ABC）**、**喜欢组合而不是继承**，以及其他许多事情。也许你想站在哪一边。
 
-It is tempting to take sides based on the opinions of software developers you respect. But I don't think you should until you truly understand what you’re doing. Your current job is to understand the fundamentals and build projects using them. ‌‌
+根据你所尊重的软件开发人员的意见来站队是很诱人的。但我认为在你真正理解你所做的事情之前，你不应该这样做。你目前的工作是理解基本原理并使用它们来构建项目。
 
-Eventually you will come across some challenges that will force you to use certain approaches, libraries, and frameworks. All approaches or techniques are useful based on context. **No approach is either right or wrong, it is context that makes it so**.‌‌
+最终你会遇到一些挑战，迫使你使用某些方法、库和框架。所有的方法或技术都是基于上下文而有用的。**没有哪种方法是对的或错的，是环境使然**。
 
-All these techniques can be useful in solving real world problems and all of them also have downsides. So, don’t worry too much about picking a side until you understand the fundamentals of your chosen programming language and have built some basic projects with it.‌‌‌‌
+所有这些技术在解决现实世界的问题时都是有用的，而且它们也都有缺点。因此，在你了解你所选择的编程语言的基本原理并用它建立了一些基本项目之前，不要太担心选边站。‌‌‌‌
 
 ## Develop a Research Mindset‌‌
 
 ![Design thinking is a human-centered approach to innovation that draws from the designer's toolkit to integrate the needs of people, the possibilities of technology, and the requirements for business success. Design thinking has a human-centered core. It encourages organizations to focus on the people they're creating for, which leads to better products, services, and internal processes.](https://images.unsplash.com/photo-1587355760421-b9de3226a046?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDM2fHxyZXNlYXJjaHxlbnwwfHx8fDE2Mjg0ODIzMTE&ixlib=rb-1.2.1&q=80&w=2000)
 
-Photo by [UX Indonesia](https://unsplash.com/@uxindo?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
+来自 [UX Indonesia](https://unsplash.com/@uxindo?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) 的图片
 
-Programming, most of the time, is like researching. You start with observation and then test several things until you achieve a satisfactory result. That is what programming looks like. You often don’t really know what you’re doing until it works. ‌‌
+编程，大多数时候，就像研究一样。你从观察开始，然后测试几件事情，直到你取得一个满意的结果。这就是编程的样子。你常常不知道你在做什么，直到它发挥作用。
 
-Once you understand this, it'll help you be content with **necessary** struggles. Because most of the time, you'll have to learn how to fix a bug you have never seen in your career and it might really demand a lot of effort.‌‌
+一旦你理解了这一点，它就会帮助你满足于 **必要的** 斗争。因为大多数时候，你必须学会如何修复一个你在职业生涯中从未见过的错误，而这可能真的需要很大的努力。
 
-Now, you may struggle to fix that bug, and to be honest, it's a necessary struggle. No software developer is free from such a struggle. Well, maybe **10x engineers (smiles)** are free from it but I am not.
+现在，你可能会挣扎着去修复那个错误，说实话，这是一种必要的挣扎。没有哪个软件开发者能摆脱这种挣扎。好吧，也许 **10 倍的工程师（微笑）** 可以不受影响，但我不是。
 
-Being an expert is not about having answers to all questions, it is about knowing how to find the answer.‌‌‌‌
+作为一个专家并不是对所有问题都有答案，而是要知道如何找到答案。
 
 ## Remove Distractions
 
 ![](https://images.unsplash.com/photo-1614454542040-a0125d70ba2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGRpc3RyYWN0fGVufDB8fHx8MTYyODQ4MjM2Mg&ixlib=rb-1.2.1&q=80&w=2000)
 
-Photo by [Nubelson Fernandes](https://unsplash.com/@nublson?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
+来自 [Nubelson Fernandes](https://unsplash.com/@nublson?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) 的图片
 
-We all have distractions that can take away our focus from coding. What's yours? Is it your current job, partner, gadgets, or just struggling to make ends meet?
+我们都有一些分心的事情，这些分心的事情会使我们无法专注于编码。你的是什么？是你目前的工作，合作伙伴，小玩意，还是仅仅为了维持生计而挣扎？
 
-You need to figure out what your distractions are and remove them before you start learning to code. Or you will just be starting and quitting again and again.
+你需要弄清楚你的干扰因素是什么，并在你开始学习编码之前将它们去除。否则你就会一次又一次地开始和放弃。
 
-Sometimes, you can tackle challenges head-on, and sometimes you just have to leave them. In that case, you need to schedule your coding activities and time in such a way that you will not be distracted by things you can't control or change.‌‌
+有时，你可以正面应对挑战，而有时你只需要离开它们。在这种情况下，你需要安排好你的编码活动和时间，使你不会被你无法控制或改变的事情分心。
 
-You can’t really be that effective with coding if you have a lot of distractions in your life, so you need to identify them and fix them one by one. This will help you increase your chances of achieving your programming dreams.‌‌
+如果你的生活中有很多分心的事情，你就不可能真的那么有效地进行编码，所以你需要识别它们并逐一解决它们。这将帮助你增加实现你的编程梦想的机会。
 
 ## Don’t Work Too Hard‌‌
 
 ![Maya’s Drawing](https://images.unsplash.com/photo-1521999693742-4717d76f97cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fGhhcmQlMjB3b3JrfGVufDB8fHx8MTYyODQ4NTU5NQ&ixlib=rb-1.2.1&q=80&w=2000)
 
-Photo by [Daniel Chekalov](https://unsplash.com/@dchuck?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
+来自 [Daniel Chekalov](https://unsplash.com/@dchuck?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) 的图片
 
-Relax! Don’t overwork yourself because you really need to understand the concepts you are dealing with at this stage. And it takes a rested, fresh mind to do it. So, don’t overwork yourself and jeopardize your learning effectiveness. ‌‌
+放松! 不要让自己过度劳累，因为你真的需要理解你在这个阶段所处理的概念。而这需要一个休息好的、新鲜的头脑来完成。所以，不要让自己过度劳累，危及你的学习效率。
 
-Programming is hard for experienced software engineers, let alone a beginner. Working too hard without getting reasonable results may discourage you easily. When you are a bit drained mentally, stop, take a break, and continue later.‌‌
+编程对有经验的软件工程师来说都很难，更何况是初学者。工作太辛苦而没有得到合理的结果，可能会让你容易灰心。当你在精神上有些疲惫时，停下来，休息一下，以后再继续。
 
-Try it out. Quit a task for a few minutes. Work away from your computer. Sleep and free your mind but then don’t forget to try one more time...one more time until you understand it.‌‌‌‌
+试试吧。退出一项任务几分钟。远离电脑工作。睡觉，解放你的思想，但随后不要忘记再试一次，再试一次，直到你理解为止。
 
-## Conclusion‌‌
+## 总结
 
-Struggling is a good thing when it's productive. It makes you a better person or a better software developer. But don’t get me wrong – I am not telling you to struggle unnecessarily. ‌‌
+挣扎是一件好事，如果它是有成效的。它使你成为更好的人或更好的软件开发人员。但不要误会我的意思——我不是要你进行不必要的挣扎。‌‌
 
-**No software developer** is free from struggle when they code. But it is worse to struggle unnecessarily by learning with the wrong resources, or not asking for help from a mentor or someone who can help you whenever you are stuck.
+**没有一个软件开发者**在编写代码时是不需要挣扎的。但更糟糕的是，通过使用错误的资源进行学习，或不向导师或在你遇到困难时能帮助你的人寻求帮助，从而进行不必要的挣扎。
 
-Now, go get things done.
+现在，去把事情做好吧。
 
-## **One more thing**
+## **还有一件事**
 
-****[Ayobami](https://twitter.com/codingnninja)****loves writing history with software development and is currently helping those who are struggling to understand and build projects with JavaScript through ****[You Too Can Code](https://bit.ly/3o3TMyg)****.
+**[Ayobami](https://twitter.com/codingnninja)** 喜欢写软件开发的历史，通过 **[你也会编程](https://bit.ly/3o3TMyg)**，帮助那些在理解和用 JavaScript 构建项目方面有困难的人。
 
 ‌‌

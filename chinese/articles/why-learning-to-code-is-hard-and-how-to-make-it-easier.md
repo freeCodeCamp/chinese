@@ -7,7 +7,7 @@
 
 **你是否在为学习代码而挣扎** 如果你是，我想帮助你。因此，我从我的个人经验中收集了一些技巧，来指导你，这样你就不会再做无谓的挣扎了‌‌。
 
-## Why is Learning to Code Hard?
+## 为什么学习代码很难
 
 学习代码可能是非常困难的，特别是对于初学者。这可能就是你目前正在挣扎的原因。你可能会对遵循哪种方法感到困惑，因为有很多相互冲突的方法和想法。
 
@@ -19,7 +19,7 @@
 
 你看，你很聪明，很有才华，很有能力。你没有任何问题。你只需要培养一种编程心态，并利用那些不会让一切变得更困难的资源来学习。因此，这里有你需要知道的东西，以帮助你更有效地学习代码。
 
-## Teaching Programming Concepts is Hard
+## 编程概念的教学是困难的
 
 ![Senior caucasian man holding blank empty banner covering mouth with hand, shocked and afraid for mistake. surprised expression ](https://images.unsplash.com/photo-1603792907191-89e55f70099a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fHN1cnByaXNlfGVufDB8fHx8MTYyODQ4NDUzNQ&ixlib=rb-1.2.1&q=80&w=2000)
 
@@ -33,7 +33,7 @@
 
 事实上，建立一个应用程序是有可能的，这样它就能工作并满足其预期的目的——但当涉及到教如何建立它时，那就是另一个球赛了。
 
-### Why is it hard to explain coding concepts?
+### 为什么很难解释编码概念
 
 一个复杂的代码库是很难解释的。有人在试图剖析它的时候，可能会从表面抓起，但他们可能不会让你对这个主题有深刻的理解。
 
@@ -45,7 +45,7 @@
 
 这样做很重要，因为对你有用的东西不一定对我有用。所以一定要选择你自己的教程。
 
-## Don't Just Memorize the Code
+## 不要只是背代码
 
 ![Pages](https://images.unsplash.com/photo-1525715843408-5c6ec44503b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fHJlYWRpbmd8ZW58MHx8fHwxNjI4NDgxOTUx&ixlib=rb-1.2.1&q=80&w=2000)
 
@@ -81,11 +81,11 @@ for ( count = 2; count >= 0;  --count )
 
 这将在控制台中记录什么？看，如果你没有真正理解 for 循环、 `++` 和 `--`是如何工作的，你会发现很难理解上面的代码。
 
-**So, what do you have to do instead?**
+**那么，你要做什么来代替它呢？**
 
 每当你意识到你并不真正理解一段代码时，就把代码分解成几块。然后研究每一块的用途。让我们用上面的代码作为一个例子。
 
-### How to break down code into small parts
+### 如何将代码分解成小部分
 
 Step 1: You have to understand how a `forLoop` works:
 
@@ -160,7 +160,7 @@ for ( count = 2; count >= 0;  --count ) {
 
 就这样 这就是你如何将代码分解成小块，从而使你能够解开它。
 
-## Stop Overloading Yourself
+## 不要让自己的负担过重
 
 ![Young man covered in sticky notes, work overload](https://images.unsplash.com/photo-1586473219010-2ffc57b0d282?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fG92ZXJsb2FkfGVufDB8fHx8MTYyODQ4MjAyOA&ixlib=rb-1.2.1&q=80&w=2000)
 
@@ -180,7 +180,7 @@ Photo by [Luis Villasmil](https://unsplash.com/@villxsmil?utm_source=ghost&utm_m
 
 说实话，广泛阅读或学习并没有错--但凡事都有时间。你不可能一下子就知道所有东西。所以，不要让自己超负荷。
 
-### How to pace your learning
+### 如何把握学习的节奏
 
 选择你的项目的一个部分或你知道的超级简单的编程语言来建立或理解。然后问很多关于它的合理和基本的问题，因为在 **非意义** 上有一个 **意义**。嘿，等等! 让我给你举个例子:‌‌
 
@@ -192,7 +192,7 @@ Photo by [Luis Villasmil](https://unsplash.com/@villxsmil?utm_source=ghost&utm_m
 
 所以，无论你学什么都要保持超级简单，**驯服你的好奇心，因为它是专注的反面**。
 
-## Keep an Open Mind
+## 保持开放的心态
 
 ![](https://images.unsplash.com/photo-1598316560463-0083295ca902?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fGNvbmZsaWN0fGVufDB8fHx8MTYyODQ4MjA5OQ&ixlib=rb-1.2.1&q=80&w=2000)
 
@@ -208,7 +208,7 @@ Photo by [Luis Villasmil](https://unsplash.com/@villxsmil?utm_source=ghost&utm_m
 
 所有这些技术在解决现实世界的问题时都是有用的，而且它们也都有缺点。因此，在你了解你所选择的编程语言的基本原理并用它建立了一些基本项目之前，不要太担心选边站。‌‌‌‌
 
-## Develop a Research Mindset‌‌
+## 培养研究思维
 
 ![Design thinking is a human-centered approach to innovation that draws from the designer's toolkit to integrate the needs of people, the possibilities of technology, and the requirements for business success. Design thinking has a human-centered core. It encourages organizations to focus on the people they're creating for, which leads to better products, services, and internal processes.](https://images.unsplash.com/photo-1587355760421-b9de3226a046?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDM2fHxyZXNlYXJjaHxlbnwwfHx8fDE2Mjg0ODIzMTE&ixlib=rb-1.2.1&q=80&w=2000)
 
@@ -236,7 +236,7 @@ Photo by [Luis Villasmil](https://unsplash.com/@villxsmil?utm_source=ghost&utm_m
 
 如果你的生活中有很多分心的事情，你就不可能真的那么有效地进行编码，所以你需要识别它们并逐一解决它们。这将帮助你增加实现你的编程梦想的机会。
 
-## Don’t Work Too Hard‌‌
+## 不要太努力工作
 
 ![Maya’s Drawing](https://images.unsplash.com/photo-1521999693742-4717d76f97cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fGhhcmQlMjB3b3JrfGVufDB8fHx8MTYyODQ4NTU5NQ&ixlib=rb-1.2.1&q=80&w=2000)
 

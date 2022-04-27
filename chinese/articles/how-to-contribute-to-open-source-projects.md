@@ -23,13 +23,13 @@
 
 事实上，开源项目比其他任何东西都更能将开发者聚集在一起进行合作。
 
-# What is Open Source?
+# 什么是开源？
 
 你可能经常听到关于开源项目和公共建设的说法。但这些术语是什么意思？
 
 最简单的是，它意味着你所创造的东西是免费的，开放给任何人使用。它还意味着，随着合作的进行，你的项目会不断变得更好。
 
-## Open Blogging Platforms
+## 开放的博客平台
 
 使用开源，您可以让其他人自由地学习或构建您现有的项目。
 
@@ -37,7 +37,7 @@
 
 我已经在 Dev Library 工作了一年多。我现在已经看到了来自 80 多个国家的近 2000 多份提交材料。相当不错!
 
-## How to Get Started Writing Tech Tutorials
+## 如何开始编写技术教程
 
 但是，作为一个开发者，你怎么知道你的博客创作之旅从哪里开始呢？
 
@@ -80,15 +80,15 @@
 
 一年后，在建立人脉并积累经验后，我申请成为参与者。 Metanorma 组织看到了我的志愿服务经验，并选择了我参加 GSoD'21。正是这样，我成为了不断发展的开源社区的一员
 
-# How to Start Contributing to Open Source
+# 如何开始为开源项目做贡献
 
 当你开始做贡献时，不要只关注结果——要关注过程。
 
 以下是一些帮助你开始贡献的要点:
 
-### Learn Git and GitHub
+### 学习 Git 和 GitHub
 
-在寻找可供贡献的仓库之前，先对 Git 命令和[GitHub 平台](https://lab.github.com/) 进行实践了解。:） 获得对以下内容的基本了解:
+在寻找可供贡献的仓库之前，先对 Git 命令和 [GitHub 平台](https://lab.github.com/) 进行实践了解。:） 获得对以下内容的基本了解:
 
 - 如何分叉（fork） repo
 - 如何进行提交(commit)
@@ -102,7 +102,7 @@
 - [Git 和 GitHub 教程 - 面向初学者的版本控制](https://www.freecodecamp.org/news/git-and-github-for-beginners/)
 - [Git 与 GitHub 速成班](https://www.freecodecamp.org/news/git-and-github-crash-course/)
 
-### Browse through some projects
+### 浏览一些项目
 
 现在你已经很熟悉这些工具和软件了，你如何决定从哪个项目开始？
 
@@ -114,7 +114,7 @@
 
 如果你在 GitHub 上一直很活跃，你的探索页面 (explore page) 会显示一些基于你过去的贡献、星级或分叉的精心推荐。
 
-### Participate in open-source programs
+### 参与开源计划
 
 参加主要组织举办的开源项目。如果不是作为贡献者，那就作为志愿者来学习、构思、贡献，然后参加。
 
@@ -124,13 +124,13 @@
 - [Google Season of Docs](https://developers.google.com/season-of-docs)
 - [Outreachy](https://www.outreachy.org/),
 
-### Explore a lot
+### 大量探索
 
 开源贡献的最大盲点是没有进一步观察或没有探索。
 
 开源项目并不局限于代码贡献。其他各种贡献的方式有:
 
-#### Update the documentation
+#### 更新文献
 
 对于任何项目来说，拥有一个广泛的 README 是很重要的。因此，潜心改进你最喜欢的项目的 README，使之更容易为他人所用。
 
@@ -142,11 +142,11 @@
 - 接下来，我对现有的文档进行了定性和定量的分析。这帮助我找出缺失的 URL，以及难以理解的部分。
 - 找到这些部分后，我建立了一个适当的信息结构。然后，文档的信息结构将帮助你专注于内容。
 
-#### Help with the design
+#### 帮助进行设计
 
 组织确实需要他们的项目设计师。 因此，如果您是设计师，请为开源组织创建海报、视觉效果或轮播。
 
-#### Be a community builder
+#### 成为社区建设者
 
 开源是关于社区的一切。人们走到一起，一起编码，一起贡献，并一起改进项目。
 
@@ -159,13 +159,13 @@
 - 举办研讨会
 - 创建时事通讯
 
-#### Help with Localization
+#### 本地化的帮助
 
 帮助建立你所熟悉的语言的项目。假设你是一个以西班牙语为母语的人。在你的社区寻找一些项目。把主要的项目从英语翻译成西班牙语，这样项目就能被全世界更多的人使用。
 
 要了解一些其他的贡献方式，请参考 freeCodeCamp 的 [这个仓库](https://github.com/freeCodeCamp/how-to-contribute-to-open-source)。
 
-# Open-Source Projects to Contribute To
+# 需要贡献的开源项目
 
 这是一个各种开源项目的列表，这些项目有一个活跃的社区，等待人们的贡献。他们有从初级到专家级的问题。
 

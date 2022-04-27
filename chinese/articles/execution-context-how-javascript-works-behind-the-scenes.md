@@ -5,117 +5,117 @@
 
 ![JavaScript Execution Context – How JS Works Behind The Scenes](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/header.png)
 
-All JavaScript code needs to be hosted and run in some kind of environment. In most cases, that environment would be a web browser.
+所有JavaScript代码都需要在某种环境中托管运行。在大多数情况下，网络浏览器就是这个环境。
 
-For any piece of JavaScript code to be executed in a web browser, a lot of processes take place behind the scenes. In this article, we'll take a look at everything that happens behind the scenes for JavaScript code to run in a web browser.
+当一段JavaScript代码在网络浏览器中执行时，幕后发生很多事情。 在这篇文章中，我们将对运行在浏览器的JavaScript代码的幕后一探究竟。
 
-Before we dive in, here are some prerequisites to familiarize yourself with, because we'll use them often in this article.
+在深入研究前，需要先了解一些概念，因为这些概念会在后文反复提及。
 
--   ****Parser****: A Parser or Syntax Parser is a program that reads your code line-by-line. It understands how the code fits the syntax defined by the Programming Language and what it (the code) is expected to do.
--   ****JavaScript Engine****: A JavaScript engine is simply a computer program that receives JavaScript source code and compiles it to the binary instructions (machine code) that a CPU can understand. JavaScript engines are typically developed by web browser vendors, and each major browser has one. Examples include the [V8 engine](https://v8.dev/) for Google chrome, [SpiderMonkey](https://firefox-source-docs.mozilla.org/js/index.html) for Firefox, and [Chakra](https://en.wikipedia.org/wiki/Chakra_(JScript_engine)) for Internet Explorer.
--   ****Function Declarations****: These are functions that are assigned a name.
+-   ****编译器****： 编译器或语法编译器是一个能够逐行读取代码的程序。它了解代码如何匹配编程语言所定义的语法，以及代码应该做什么。
+-   ****JavaScript引擎****: JavaScript引擎是一个计算机程序，它接收JavaScript源代码并将其编译成CPU可以理解的二进制指令（机器码）。JavaScript引擎通常是由浏览器供应商开发的，每一个主流浏览器都有一个自己开发的引擎。如：谷歌Chrome浏览器的 [V8引擎](https://v8.dev/)，Firefox的[SpiderMonkey](https://firefox-source-docs.mozilla.org/js/index.html)和IE的[Chakra](https://en.wikipedia.org/wiki/Chakra_(JScript_engine))。
+-   ****函数声明****: 指的是被命名的函数。
 
 ```javascript
-function doSomething() { //here "doSomething" is the function's name
+function doSomething() { //"doSomething" 为函数名
 statements; 
 } 
 ```
 
--   ****Function Expressions****: These are anonymous functions, that is functions without a function name like `js function () { statements }`. They are usually used in statements, like assigning a function to a variable. `let someValue = function () { statements }`.
+-   ****函数表达式****: 指的是匿名函数，即没有函数名称的函数，如： `js function () { statements }`。 通常在表达式中使用，如把变量赋值为一个函数。`let someValue = function () { statements }`.
 
-Now, that we've gotten those out of the way, let's dive in.
+概念解释完毕，让我们开始深入研究吧！
 
-## **How JavaScript Code Gets Executed**
+## **JavaScript是如何被执行的**
 
-For does who don't know, the browser doesn't natively understand the high-level JavaScript code that we write in our applications. It needs to be converted into a format that the browser and our computers can understand – machine code.
+你或许不知道，浏览器并不理解我们在应用中编写的高级JavaScript代码。代码需要被转换成浏览器和计算机能够理解的格式——机器码。
 
-While reading through HTML, if the browser encounters JavaScript code to run via a `<script>` tag or an attribute that contains JavaScript code like `onClick`, it sends it to its JavaScript engine.
+浏览器在读取HTML时，如果遇到了`<script>` 标签或包含JavaScript代码的属性如`onClick`，会发送给JavaScript引擎。
 
-The browser's JavaScript engine then creates a special environment to handle the transformation and execution of this JavaScript code. This environment is known as the ****`Execution Context`****.
+浏览器的JavaScript引擎会创造一个特殊的环境来处理这些JavaScript代码的转换和执行。这个特殊的环境被称为****`执行上下文`****。
 
-The Execution Context contains the code that's currently running, and everything that aids in its execution.
+执行上下文包含当前正在运行的代码和有助于其执行的所有内容。
 
-During the Execution Context run-time, the specific code gets parsed by a parser, the variables and functions are stored in memory, executable byte-code gets generated, and the code gets executed.
+在执行上下文运行期间，编译器解析代码，内存存储变量和函数，可执行的字节码生成后，代码执行。
 
-There are two kinds of Execution Context in JavaScript:
+JavaScript中有两种执行上下文：
 
--   Global Execution Context (GEC)
--   Function Execution Context (FEC)
+-  全局执行上下文(GEC)
+-  函数执行上下文(FEC)
 
-Let's take a detailed look at both.
+让我分别一探究竟。
 
-### **Global Execution Context (GEC)**
+### **全局执行上下文(GEC)**
 
-Whenever the JavaScript engine receives a script file, it first creates a default Execution Context known as the ****`Global Execution Context (GEC)`****.
+每当 JavaScript 引擎接收到脚本文件时，它首先会创建一个默认的执行上下文，称为 ****`全局执行上下文 (GEC)`****。
 
-The GEC is the base/default Execution Context where all JavaScript code that is ****not inside of a function**** gets executed.
+GEC是基础/默认的执行上下文，所有 ****不在函数内部的JavaScript代码****都在这里执行。
 
-> For every JavaScript file, there can only be one GEC.
+> 每一个JavaScript文件只能有一个GEC。
 
-### **Function Execution Context (FEC)**
+### **函数执行上下文(FEC)**
 
-Whenever a function is called, the JavaScript engine creates a different type of Execution Context known as a Function Execution Context (FEC) within the GEC to evaluate and execute the code within that function.
+每当函数被调用时，JavaScript引擎就会在GEC内部创建另一种执行上下文，称为函数执行上下文（FEC），并在FEC中评估和执行函数中的代码。
 
-Since every function call gets its own FEC, there can be more than one FEC in the run-time of a script.
+因为每个函数调用都创建自己的FEC，所以在脚本运行期间会有多个FEC。
 
-## **How are Execution Contexts Created?**
+## **执行上下文是如何被创建的？**
 
-Now that we are aware of what Execution Contexts are, and the different types available, let's look at how the are created.
+我们已经了解了什么是执行上下文以及不同种类的执行上下文，现在让我们来看看执行上下文是如何被创建的。
 
-The creation of an Execution Context (GEC or FEC) happens in two phases:
+执行上下文（GEC或FEC）的创建分为两个阶段：
 
-1.  Creation Phase
-2.  Execution Phase
+1.  创建阶段
+2.  执行阶段
 
-### Creation Phase
+### 创建阶段
 
-In the creation phase, the Execution Context is first associated with an Execution Context Object (ECO). The Execution Context Object stores a lot of important data which the code in the Execution Context uses during its run-time.
+在创建阶段，执行上下文首先与执行上下文对象（ECO）相关联。执行上下文对象存储了许多重要的数据，执行上下文中的代码在运行时会使用这些数据。
 
-The creation phase occurs in 3 stages, during which the properties of the Execution Context Object are defined and set. These stages are:
+创建阶段分三个步骤来定义和设置执行上下文对象的属性：
 
-1.  Creation of the Variable Object (VO)
-2.  Creation of the Scope Chain
-3.  Setting the value of the `this` keyword
+1.  创建变量对象(VO)
+2.  创建作用域链
+3.  设置 `this`关键字的值
 
-Let us go over each phase in detail.
+我们来具体聊聊每一个步骤。
 
-### **Creation Phase: Creation Of The Variable Object (VO)**
+### **创建阶段：创建变量对象(VO)**
 
-The Variable Object (VO) is an object-like container created within an Execution Context. It stores the variables and function declarations defined within that Execution Context.
+变量对象（VO）是一个在执行上下文中创建的类似于对象的容器，存储执行上下文中变量和函数声明。
 
-In the GEC, for each variable declared with the `var` keyword, a property is added to VO that points to that variable and is set to 'undefined'.
+在GEC中，每当使用`var`关键字声明变量，VO就会添加一个指向该变量的属性，并将值设置为"undefined"。
 
-Also, for every function declaration, a property is added to the VO, pointing to that function, and that property is stored in memory. This means that all the function declarations will be stored and made accessible inside the VO, even before the code starts running.
+同时，每当函数声明时，VO就会添加一个指向该函数的属性，并将这个属性存储在内存中。这就意味着在开始运行代码之前，所有函数声明就已经存储在VO中，并可以在VO中访问。
 
-The FEC, on the other hand, does not construct a VO. Rather, it generates an array-like object called the 'argument' object, which includes all of the arguments supplied to the function. Learn more about the argument object [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments).
+但在FEC中并不创建VO，而是生成一个类数组对象，称为arguments对象，包含传入函数的所有参数。想要进一步了解arguments对象，可以[参见此处](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)。
 
-This process of storing variables and function declaration in memory prior to the execution of the code is known as ****Hoisting****. Since this is an important concept, we'll talk about it briefly before moving on to the next stage.
+这种将变量和函数声明存储在内存中优先于执行代码的过程被称为 ****提升****。因为这个概念特别重要，所以我先简单介绍一下这个概念。
 
-### **Hoisting in JavaScript**
+### **JavaScript中的提升**
 
-Function and variable declarations are hoisted in JavaScript. This means that they are stored in memory of the current Execution Context's VO and made available within the Execution Context even before the execution of the code begins.
+函数和变量在JavaScript中被提升，指的是它们被存储在当前执行上下文VO的内存中，并且在代码开始执行之前就可以在执行上下文中访问。
 
-#### **Function Hoisting**
+#### **函数提升**
 
-In most scenarios when building an application, developers can choose to define functions at the top of a script, and only later call them down the code, like so:
+在构建应用的大多数情况下，开发者选择在脚本顶部定义函数，之后再调用，如下图：
 
 ![Defining function before calling it](https://draftin.com/images/79494?token=YN6tf3hHdryoQ_-X21KVPtEXGRBz_Dw9OUxqdrAVt_pWiFUsGRMMBx6D_h1K0HfC3qRXzO-26ehoAggF_3iI2zI)
 
-However, due to hoisting, the opposite will still work. Where we can call functions first then define them later down the script.
+归功于提升，反过来操作也奏效。可以先调用函数，再定义这个被调用的函数。
 
 ![calling function before defining it](https://draftin.com/images/79495?token=cnn01YgRW9kx9QJJexa7sI5TfUlszgBJ_lWdA6pVGx5ycLBimXDDTbehVxQJk4yXyIMRljImSJr3Qb7k4JjTrMo)
 
-In the code above, the `getAge` function declaration will be stored in the memory of the VO, making it available for use even before it is defined.
+在上述代码中， `getAge` 函数将被存储在VO的内存中，所以可以在定义前被访问。
 
-#### **Variable Hoisting**
+#### **变量提升**
 
-Variables initialized with the `var` keyword are stored in the memory of the current Execution Context's VO as a property, and initialized with the value `undefined`. This means, unlike functions, trying to access the value of the variable before it is defined will result in `undefined`.
+由`var`关键字声明的变量会作为属性存储在当前执行上下文VO中，值被设置为`undefined`。也就是说和函数不同，想要在变量声明访问变量值会得到`undefined`。
 
 ![ Accessing variables  before defining them](https://draftin.com/images/79496?token=SQT13ymrPtfOLR-kvvjLVwSEyN9Fq7G-4iy88QROSjz-YOYgphDdKCRYZkpvt8mfJ-eHWLU3igHOZnv9sYcffIE)
 
-#### **Ground Rules of Hoisting**
+#### **提升的基本原则**
 
-Hoisting only works for function declarations, not expressions. Here is an example of a function expression where the code execution will break.
+提升只对函数声明有效，函数表达式并不能被提升。下面是一个函数表达式的例子，代码执行会中断：
 
 ```javascript
 getAge(1990); 
@@ -124,76 +124,76 @@ console.log(new Date().getFullYear - yearOfBirth)
 };
 ```
 
-The code execution breaks, because with function expressions, `getAge` will be hoisted as a variable not as a function. And with variable hoisting, its value will be set to `undefined`. That's why we get the error:
+代码执行被中断的原因是，如果使用函数表达式，`getAge`会被当作变量而非函数。由于变量提升，变量的值被设置为`undefined`。所以我们会得到以下报错：
 
 ![getAge error](https://draftin.com/images/79503?token=R_gK6Xb3UAcAOlqSdk2-nn8wH6DhoDlBv-HW5ZujAhResANORl1BvYoauNh_HTOcD3VFaGTM09uEUUVXeW6y9pk)
 
-Also, variable hoisting does not work for variables initialized with the `let` or `const` keyword. Trying to access a variable ahead of declaration and use the `let` and `const` keywords to declare it later will result in a `ReferenceError`.
+ 同样的，变量提升也不适用于由`let`或者`const`关键字声明的变量。尝试在声明前访问`let`和`const`关键字声明的变量，会得到`ReferenceError`报错。
 
-In this case, they will be hoisted but not assigned with the default value of `undefined`. `js console.log(name); let name = "Victor";` will throw the error:
+这种情况下变量会被提升，但是没有被设置为默认值 `undefined`。 `js console.log(name); let name = "Victor";` 会报错:
 
 ![name not defined error](https://draftin.com/images/79502?token=lgEf4T8VWKK6Tw7BS7s0TU86ZcnqfkOr7rIloCV2uxj0K4OsnFphlFWgMqm98LBmt88uE_CpjXn-D4TFnwdZdcY)
 
-### **Creation Phase: Creation of The Scope Chain**
+### **创建阶段：创建作用域链**
 
-After the creation of the Variable Object (VO) comes the creation of the Scope Chain as the next stage in the creation phase of an Execution Context.
+创建完变量对象（VO），紧接着就是执行上下文的创建阶段的下一步——创建作用域链。
 
-Scope in JavaScript is a mechanism that determines how accessible a piece of code is to other parts of the codebase. Scope answers the questions: from where can a piece of code be accessed? From where can't it be accessed? What can access it, and what can't?
+JavaScript中的作用域链是一个机制，决定了一段代码对于代码库中其他一些代码来说的可访问性。作用域回答这样一些问题：一段代码可以在哪里访问？哪里不能访问？代码哪些部分可以被访问，哪些部分不能？
 
-Each Function Execution Context creates its scope: the space/environment where the variables and functions it defined can be accessed via a process called Scoping.
+每一个函数执行上下文都会创建一个作用域：作用域相当于是一个空间/环境，变量和函数定义在这个空间里，并且可以通过一个叫做作用域查找的过程访问。
 
-This means the position of something within a codebase, that is, where a piece of code is located.
+也就是说代码被写入代码库的位置，就是这段代码被读取的位置。
 
-When a function is defined in another function, the inner function has access to the code defined in that of the outer function, and that of its parents. This behavior is called ****lexical scoping****.
+如果函数被定义在另一个函数内部，处在内部的函数可以访问自己内部的代码以及外部函数（父函数）的代码。这种行为被称作****词法作用域查找****。
 
-However, the outer function does not have access to the code within the inner function.
+但外部函数并不能访问内部函数的代码。
 
-This concept of scope brings up an associate phenomenon in JavaScript called closures. These are when inner functions that always get access to the code associated with the outer functions, even after the execution of the outer functions is complete. You can learn more closures [here](https://www.freecodecamp.org/news/scope-and-closures-in-javascript/).
+作用域的概念就引出了JavaScript另一个相关的现象——闭包。闭包指的是内部函数永远可以访问外部函数中的代码，即便外部函数已经执行完毕。想要了解更多闭包相关的信息，你可以点击[这里](https://www.freecodecamp.org/news/scope-and-closures-in-javascript/)。
 
-Let's look at some examples to get a better understanding:
+我们来看几个例子加深理解：
 
 ![first-scope.png](https://www.freecodecamp.org/news/content/images/2022/02/first-scope.png)
 
--   On the right is the Global Scope. It is the default scope created when a `.js` script is loaded and is accessible from all functions throughout the code.
--   The red box is the scope of the `first` function, which defines the variable `b = 'Hello!'` and the `second` function.
+-   右边是全局作用域，一旦`.js`文件加载就会创建这个默认作用域，整个代码中所有函数都可以访问。
+-   红色方框里的是`first`函数的作用域，在这里定义了变量`b='Hello!'`和`second`函数。
 
 ![second-scope](https://www.freecodecamp.org/news/content/images/2022/02/second-scope.png)
 
--   In green is the scope of the `second` function. There is a `console.log` statement which is to print the variables `a`, `b` and `c`.
+-   绿色方框里的是`second`函数的作用域，这里有一个`console.log`语句，用于打印`a`,`b`和`c`。
 
-Now the variables `a` and `b` aren't defined in the `second` function, only `c`. However, due to lexical scoping, it has access to the scope of the function it sits in and that of its parent.
+除了变量`c`，变量`a`和`b`并不是在`second`函数中定义的。但因为词法作用域查找，`second`函数可以访问父作用域中的变量。
 
-In running the code, the JS engine will not find the variable `b` in the scope of the `second` function. So, it looks up into the scope of its parents, starting with the `first` function. There it finds the variable `b = 'Hello'`. It goes back to the `second` function and resolves the `b` variable there with it.
+在执行这段代码的时候，JS引擎在`second`函数作用域中找不到变量`b`，所以它会向上查找其父作用域，从`first`函数开始，在这里它找到变量`b ='Hello!'`，于是就回到`second`函数并解析变量`b`。
 
-Same process for the `a` variable. The JS engine looks up through the scope of all its parents all the way to the scope of the GEC, resolving its value in the `second` function.
+变量`a`的处理也是一样。JS引擎一直向上查找父作用域直至GEC作用域，并在`second`函数中解析`a`的值。
 
-This idea of the JavaScript engine traversing up the scopes of the execution contexts that a function is defined in in order to resolve variables and functions invoked in them is called the ****scope chain****.
+JavaScript引擎一路向上遍历执行上下文直至解析处在函数内部触发的变量和函数的概念就叫做 ****作用域链****。
 
 ![Scope chain](https://www.freecodecamp.org/news/content/images/2022/02/scope-chain.png)
 
-Only when the JS engine can't resolve a variable within the scope chain does it stop executing and throws an error.
+仅当JS引擎无法在作用域链中解析变量，才会停止并报错。
 
-However, this doesn't work backward. That is, the global scope will never have access to the inner function’s variables unless they are `returned` from the function.
+但反向查找并不奏效，也就是说全局作用域永远无法访问函数内部的变量，除非这些变量被函数`返回`。
 
-The scope chain works as a one-way glass. You can see the outside, but people from the outside cannot see you.
+作用域链就好像一个单向玻璃，你可以从内部看到外面，但是外面的人却看不见你。
 
-And that is why the red arrow in the image above is pointing upwards because that is the only direction the scope chains goes.
+这也就是为什么在图片中大红色的箭头是指向上方的，作用域链是单向度的。
 
-### Creation Phase: Setting The Value of The "this" Keyword
+### 创建阶段：设置this关键字的值
 
-The next and final stage after scoping in the creation phase of an Execution Context is setting the value of the `this` keyword.
+作用域查找之后就是创建阶段的最后一步是设置`this`关键字的值。
 
-The JavaScript `this` keyword refers to the scope where an Execution Context belongs.
+JavaScript中`this`关键字指的是执行上下文所属的作用域。
 
-Once the scope chain is created, the value of `'this'` is initialized by the JS engine.
+一旦作用域链被创建，JS引擎就会初始化`this`关键字的值。
 
-##### **`"this"` in The Global Context**
+##### **全局上下文中的`"this"`值**
 
-In the GEC (outside of any function and object), `this` refers to the global object — which is the `window` object.
+在GEC（所有函数和对象之外）中，`this`指向全局对象——`window`对象。
 
-Thus, function declarations and variables initialized with the `var` keyword get assigned as properties and methods to the global object – `window` object.
+同时，由`var`关键字初始化的函数声明和变量会被作为全局对象（`window`对象）的方法或者属性。
 
-This means that declaring variables and functions outside of any function, like this:
+这就意味着，在任何函数外声明的变量和函数，如下：
 
 ```javascript
 var occupation = "Frontend Developer"; 
@@ -203,7 +203,7 @@ function addOne(x) {
 }
 ```
 
-Is exactly the same as:
+都可以写作：
 
 ```javascript
 window.occupation = "Frontend Developer"; 
@@ -212,15 +212,15 @@ console.log(x + 1)
 };
 ```
 
-Functions and variables in the GEC get attached as methods and properties to the window object. That's why the snippet below will return true.
+在GEC中的函数和变量会被当作window对象的方法和属性，所以下面的代码片段的返回值为真：
 
 ![Prove that variables are attached as properties to the global object](https://draftin.com/images/79543?token=ck__e2qKafuzGqTisEhH0ocoJ6NI-CbQZK_gcjDeCBbCSG2ILtYtoL8aalLkryglnMlXo0Ie7HUv0qdymARfpfk)
 
-##### **`"this"` in Functions**
+##### **函数中的`"this"`**
 
-In the case of the FEC, it doesn't create the `this` object. Rather, it get's access to that of the environment it is defined in.
+在FEC中，并没有创建`this`对象，而是能够访问`this`被定义的环境。
 
-Here that'll be the `window` object, as the function is defined in the GEC:
+下面的例子中，定义环境为`window`对象，因为函数被定义在GEC中：
 
 ```Javascript
 var msg = "I will rule the world!"; 
@@ -232,11 +232,11 @@ function printMsg() {
 printMsg(); // logs "I will rule the world!" to the console.
 ```
 
-In objects, the `this` keyword doesn't point to the GEC, but to the object itself. Referencing `this` within an object will be the same as:
+在对象中，`this`关键字并不指向GEC，而是指向对象本身。引用对象中的`this`如同引用：
 
-`theObject.thePropertyOrMethodDefinedInIt;`
+`对象.定义在对象内部的属性或方法;`
 
-Consider the code example below:
+考虑下面的代码：
 
 ```js
 var msg = "I will rule the world!"; 
@@ -248,33 +248,33 @@ const Victor = {
 Victor.printMsg(); // logs "Victor will rule the world!" to the console.
 ```
 
-The code logs `"Victor will rule the world!"` to the console, and not `"I will rule the world!"` because in this case, the value of the `this` keyword the function has access to is that of the object it is defined in, not the global object.
+控制台打印出`"Victor will rule the world!"`而非`"I will rule the world!"`。因为在这个例子中，函数可以访问的`this`关键字的值是定义其的对象，而不是全局对象。
 
-With the value of the `this` keyword set, all the properties of the Execution Context Object have been defined. Leading to the end of the creation phase, now the JS engine moves on to the execution phase.
+`this`关键字的值设置后，执行上下文对象的所有属性就定义完成，创建阶段结束，JS引擎就进入到执行阶段。
 
-### **The Execution Phase**
+### **执行阶段**
 
-Finally, right after the creation phase of an Execution Context comes the execution phase. This is the stage where the actual code execution begins.
+执行上下文创建阶段之后就是执行阶段了，在这一阶段代码执行真正开始。
 
-Up until this point, the VO contained variables with the values of `undefined`. If the code is run at this point it is bound to return errors, as we can't work with undefined values.
+到目前为止，VO包含的变量值为`undefined`，如果这时就运行代码，肯定会报错，我们无法执行未定义的变量。
 
-At this stage, the JavaScript engine reads the code in the current Execution Context once more, then updates the VO with the actual values of these variables. Then the code is parsed by a parser, gets transpired to executable byte code, and finally gets executed.
+在执行阶段，JavaScript引擎会再次读取执行上下文，并用变量的实际值更新VO。编译器再把代码编译为计算机可执行的字节码后执行。
 
-## **JavaScript Execution Stack**
+## **JavaScript执行栈**
 
-The Execution Stack, also known as the ****Call Stack****, keeps track of all the Execution Contexts created during the life cycle of a script.
+执行栈又称 ****调用栈****，记录了脚本整个生命周期中生成的执行上下文。
 
-JavaScript is a single-threaded language, which means that it is capable of only executing a single task at a time. Thus, when other actions, functions, and events occur, an Execution Context is created for each of these events. Due to the single-threaded nature of JavaScript, a stack of piled-up execution contexts to be executed is created, known as the `Execution Stack`.
+JavaScript是单线程语言，也就是说它只能在同一时间执行一项任务。因此，其他的操作、函数和事件发生时，执行上下文也会被创建。由于单线程的特性，一个堆叠了执行上下文的栈就会被创建，称为`执行栈`。
 
-When scripts load in the browser, the Global context is created as the default context where the JS engine starts executing code and is placed at the bottom of the execution stack.
+当浏览器加载脚本，JS引擎从全局上下文也就是默认上下文开始执行代码，所以全局上下文被放在执行栈的最底部。
 
-The JS engine then searches for function calls in the code. For each function call, a new FEC is created for that function and is placed on top of the currently executing Execution Context.
+然后JS引擎再搜索代码中被调用的函数。每一次函数被调用，一个新的FEC就会被创建，并被放置在当前执行上下文的上方。
 
-The Execution Context at the top of the Execution stack becomes the active Execution Context, and will always get executed first by the JS engine.
+执行栈最顶部的执行上下文会成为活跃执行上下文，并且始终是JS引擎优先执行。
 
-As soon as the execution of all the code within the active Execution Context is done, the JS engine pops out that particular function's Execution Context of the execution stack, moves towards the next below it, and so on.
+一旦活跃执行上下文中的代码被执行完毕，JS引擎就会从执行栈中弹出这个执行上下文，紧接着执行下一个执行上下文，以此类推。
 
-To understand the working process of the execution stack, consider the code example below:
+为了了解执行栈的工作流，请考虑下面的代码：
 
 ```javascript
 var name = "Victor";
@@ -299,81 +299,80 @@ function third() {
 first();
 ```
 
-First, the script is loaded into the JS engine.
+首先，JS引擎加载脚本。
 
-After it, the JS engine creates the GEC and places it at the base of the execution stack.
+然后，JS引擎创建GEC，并把其放置在执行栈的最底部。
 
 ![Global Context](https://draftin.com/images/79466?token=aeIwtXG5K8Jo2fFYn2kF-DFfHG42sGgVbk0oXjMoTKGsM5JMUIWRxwmyTT1rPWGfEawiy4AuWFTXGo0z88EeKpI)
 
-The `name` variable is defined outside of any function, so it is in the GEC and stored in it's VO.
+`name`变量在所有函数外部定义，所以位于GEC，并且被VO存储。
 
-The same process occurs for the `first`, `second`, and `third` functions.
+同样的步骤也发生在`first`、`second`和`third`函数。
 
-Don't get confused as to why they functions are still in the GEC. Remember, the GEC is only for JavaScript code (variables and functions) that are ****not inside of any function****. Because they were not defined within any function, the function declarations are in the GEC. Make sense now 😃?
+别被GEC中的函数迷惑了。记住，GEC只适用于 ****不在任何函数内部****的JavaScript代码（变量和函数）。因为它们没有被定义在任何函数内部，而是定义在GEC中。是不是清晰很多😃?
 
-When the JS engine encounters the `first` function call, a new FEC is created for it. This new context is placed on top of the current context, forming the so-called `Execution Stack`.
+当JS引擎遇到`first`函数调用时，一个新的FEC被创建。新的执行上下文被放置在当前上下文上方，形成`执行栈`。
 
 ![Execution Context 1](https://draftin.com/images/79467?token=xQ-BHEbdDUELy8Fdc-1EEtTCotEz9XUa97k2kd30mqkkaUi3FpTcZCldH5LonsEICY2SO0OajgQ_4S97GgPlo-A)
 
-For the duration of the `first` function call, its Execution Context becomes the active context where JavaScript code is first executed.
+在`first`函数调用时，其执行上下文变成活跃执行上下文，JavaScript首先执行。
 
-In the `first` function the variable `a = 'Hi!'` gets stored in its FEC, not in the GEC.
+在`first`函数中的变量`a ='Hi!'`被存储在其FEC中，而非GEC中。
 
-Next, the `second` function is called within the `first` function.
+接着，`second`函数在`first`函数中被调用。
 
-The execution of the `first` function will be paused due to the single-threaded nature of JavaScript. It has to wait until its execution, that is the `second` function, is complete.
+由于JavaScript单线程的特性，`first`函数的执行会被暂停，直到`second`函数执行完闭，才会继续执行。
 
-Again the JS engine sets up a new FEC for the `second` function and places it at the top of the stack, making it the active context.
+同样的，JS引擎会给`second`函数设置一个新的FEC，并把它放置在栈顶端，并激活。
 
 ![Execution Context 2](https://draftin.com/images/79468?token=IcUBwl6WR9ylJlmuVT2DzLt9OgBG1ipHTb7zepJ_kH7Y7HG4mIBCLEtZYvrqphzokDVFGMC5hiVxwcSQhbEeIpk)
 
-The `second` function becomes the active context, the variable `b = 'Hey!';` gets store in its FEC, and the `third` function is invoked within the `second` function. Its FEC is created and put on top of the execution stack.
+`second`函数成为活跃执行上下文，变量`b = 'Hey!'`被存储在其FEC中，之后在`second`函数中的`third`函数被调用，其FEC被创建并放置在执行栈的顶部。
 
 ![Execution Context 3](https://www.freecodecamp.org/news/content/images/2022/02/Execution-Context-3.png)
 
-Inside of the `third` function the variable `c = 'Hello!'` gets stored in its FEC and the message `Hello! Victor` gets logged to the console.
+在`third`函数中的变量`c = 'Hello!'`被存储在其FEC中，`Hello! Victor`在控制台中打印。
 
-Hence the function has performed all its tasks and we say it `returns`. Its FEC gets removed from the top of the stack and the FEC of the `second` function which called the `third` function gets back to being the active context.
+因为函数执行了所有任务，并且`返回`, 其FEC就从栈顶端弹出，而调用`third`函数的`second`函数重新成为活跃执行上下文。
 
 ![Execution Context 2](https://draftin.com/images/79468?token=IcUBwl6WR9ylJlmuVT2DzLt9OgBG1ipHTb7zepJ_kH7Y7HG4mIBCLEtZYvrqphzokDVFGMC5hiVxwcSQhbEeIpk)
 
-Back in the `second` function, the message `Hey! Victor` gets logged to the console. The function completes its task, `returns`, and its Execution Context gets popped off the call stack.
+回到`second`函数，控制台打印`Hey! Victor`。函数完成所有任务，`返回`，这个执行上下文从执行栈上弹出。
 
 ![Execution Context 1](https://draftin.com/images/79467?token=xQ-BHEbdDUELy8Fdc-1EEtTCotEz9XUa97k2kd30mqkkaUi3FpTcZCldH5LonsEICY2SO0OajgQ_4S97GgPlo-A)
 
-When the first function gets executed completely, the execution stack of the first function popped out from the stack. Hence, the control reaches back to the GEC of the code.
+当`first`函数执行完毕，从执行栈上弹出后，控制流回到代码的GEC。
 
 ![Global Context](https://draftin.com/images/79466?token=aeIwtXG5K8Jo2fFYn2kF-DFfHG42sGgVbk0oXjMoTKGsM5JMUIWRxwmyTT1rPWGfEawiy4AuWFTXGo0z88EeKpI)
 
-And lastly, when the execution of the entire code gets completed, the JS engine removes the GEC from the current stack.
+最终，所有代码执行完毕，JS引擎把GEC从执行栈上弹出。
 
-## **Global Execution Context VS. Function Execution Context in JavaScript**
+## **全局执行上下文对比函数执行上下文**
 
-Since you've read all the way until this section, let's summarize the key points between the GEC and the FEC with the table below.
+让我们来用表格总结一下GEC和FEC的关键点。
 
-| GLOBAL EXECUTION CONTEXT | Function Execution Context |
+| 全局执行上下文 | 函数执行上下文 |
 | --- | --- |
-| Creates a Global Variable object that stores function and variables declarations. | Doesn't create a Global Variable object. Rather, it creates an argument object that stores all the arguments passed to the function. |
-| Creates the \`this\` object that stores all the variables and functions in the Global scope as methods and properties. | Doesn't create the \`this\` object, but has access to that of the environment in which it is defined. Usually the \`window\` object. |
-| Can't access the code of the Function contexts defined in it | Due to scoping, has access to the code(variables and functions) in the context it is defined and that of its parents |
-| Sets up memory space for variables and functions defined globally | Sets up memory space only for variables and functions defined within the function. |
+| 创建一个全局变量对象存储函数和变量声明。 | 并不创建全局变量对象。相反，创建arguments对象存储所有传入函数的参数。|
+| 创建 \`this\` 对象将全局作用域中所有变量和函数作为属性和方法存储。 | 不创建\`this\` 对象， 但可以访问被定义的环境，通常情况下为 \`window\` 对象。 |
+| 不可以访问函数上下文中的代码 | 通过作用域查找，可以访问上下文以及父上下文中的代码（变量和函数）。|
+| 设定全局变量和函数的存储空间 | 仅设定函数内部变量和函数的存储空间 |
 
-## **Conclusion**
+## **总结**
 
-JavaScript's Execution Context is the basis for understanding many other fundamental concepts correctly.
+JavaScript执行上下文是正确理解其他基础概念的核心。
 
-The Execution Context (GEC and FEC), and the call stack are the processes carried out under the hood by the JS engine that let our code run.
+代码得以运行归功于Js引擎处理执行上下文（GEC和FEC）以及调用栈。
 
-Hope now you have a better understanding in which order your functions/code run and how JavaScript Engine treats them.
+希望通过这篇文章，你已经更了解你编写的函数和代码是按照什么顺序运行的，以及JS引擎是如何处理这些代码的。
 
-As a developer, having a good understanding of these concepts helps you:
+理解下面这些概念，会帮助你成为一个更好的开发者：
 
--   Get a decent understanding of the ins and outs of the language.
--   Get a good grasp of a language’s underlying/core concepts.
--   Write clean, maintainable, and well-structured code, introducing fewer bugs into production.
+-   熟悉一门语言的输入和输出。
+-   大致理解一门语言的内在/核心概念。
+-   如何编写简洁、易维护和结构清晰的代码，降低bug的风险。
 
-All this will make you a better developer overall.
 
-Hope you found this article helpful. Do share it with your friends and network, and feel free to connect with me on [Twitter](https://twitter.com/Victor_codejs) and my [blog](https://vickyikechukwu.hashnode.dev/) where I share a wide range of free educational articles and resources. This really motivates me to publish more.
+希望这篇文章对你有帮助。欢迎转发这篇文章。欢迎在 [Twitter](https://twitter.com/Victor_codejs)上关注我和我互动。 我的[博客](https://vickyikechukwu.hashnode.dev/) 上也有一些免费的教学文章和资源。你的反馈将激励我贡献更多！
 
-Thanks for reading, and happy coding!
+感谢阅读，编码快乐！

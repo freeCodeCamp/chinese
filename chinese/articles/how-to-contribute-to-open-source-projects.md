@@ -104,89 +104,91 @@
 
 ### Browse through some projects
 
-Now that you are well-acquainted with the tools and software, how do you decide which project to start with?
+现在你已经很熟悉这些工具和软件了，你如何决定从哪个项目开始？
 
-Well, first of all, start with the topics you're interested in. Browse github.com/topics/\[topic of your interest\] to search for something you'd like to work on. Unless it's something very niche, you should find tons of projects concerning your chosen topic to start your contributions.
+嗯，首先，从你感兴趣的主题开始。浏览 [github topics](https://github.com/topics)，搜索你想做的事情。例如，如果你想浏览有关 Python 的项目，那么你可以用 [这个](https://github.com/topics/python)。
 
-Once you've found a project, go to the beginner-friendly issues of that repo. For that, type github.com/\[owner\]/\[repository\]/contribute. Select an issue to start contributing. You can find such issues under the tag **good first issue** for beginners.
+除非是非常小众的东西，否则你应该找到大量有关你所选主题的项目来开始你的贡献。
 
-If you’ve been active on GitHub, your explore page will show some curated recommendations based on your past contributions, stars, or forks.
+一旦你找到了一个项目，就去找那个 repo 的初学者友好问题。为此，输入 github.com/[所有者]/[仓库]/contribute。选择一个问题来开始贡献。你可以在 "适合初学者的第一个问题( good first issue for beginners)"标签下找到这些问题。
+
+如果你在 GitHub 上一直很活跃，你的探索页面 (explore page) 会显示一些基于你过去的贡献、星级或分叉的精心推荐。
 
 ### Participate in open-source programs
 
-Take part in the open-source programs put on by major organizations. If not as a contributor, then as a volunteer to learn, ideate, contribute, and then take part.
+参加主要组织举办的开源项目。如果不是作为贡献者，那就作为志愿者来学习、构思、贡献，然后参加。
 
-For example:
+例如:
 
 - [Google Summer of Code](https://summerofcode.withgoogle.com/),
-- \[Google Season of Docs\]([https://developers.google.com/season-of-docs](https://developers.google.com/season-of-docs)
+- [Google Season of Docs](https://developers.google.com/season-of-docs)
 - [Outreachy](https://www.outreachy.org/),
 
 ### Explore a lot
 
-The biggest blindspot of open-source contributions is not looking further or not exploring.
+开源贡献的最大盲点是没有进一步观察或没有探索。
 
-Open-source projects are not restricted to code contributions. The various other ways to contribute are:
+开源项目并不局限于代码贡献。其他各种贡献的方式有:
 
 #### Update the documentation
 
-For any project, it is important to have an extensive README. So, dive into improving the README of your favorite project to make it easier for others.
+对于任何项目来说，拥有一个广泛的 README 是很重要的。因此，潜心改进你最喜欢的项目的 README，使之更容易为他人所用。
 
-So how do you go about doing that?
+那么，你是如何做到这一点的呢？
 
-Well, for the Metanorma project:
+嗯，对于 Metanorma 项目:
 
-- I performed the actions mentioned in the documentation after downloading the local version. This helped me to figure out missing steps, errors, or any fluctuations.
-- Next, I did qualitative and quantitative analysis of the existing documentation. This helped me figure out the missing URLs, and hard to understand sections.
-- After finding these parts, I built a proper information architecture. Information architecture of the documentation will then help you focus on the content.
+- 在下载本地版本后，我执行了文档中提到的操作。这有助于我找出遗漏的步骤、错误或任何波动。
+- 接下来，我对现有的文档进行了定性和定量的分析。这帮助我找出缺失的 URL，以及难以理解的部分。
+- 找到这些部分后，我建立了一个适当的信息结构。然后，文档的信息结构将帮助你专注于内容。
 
 #### Help with the design
 
-Organizations do need designers for their projects. So, if you are a designer, create posters, visuals, or carousels for the open-source org.
+组织确实需要他们的项目设计师。 因此，如果您是设计师，请为开源组织创建海报、视觉效果或轮播。
 
 #### Be a community builder
 
-Open-source is all about community. People who come together, code together, contribute together, and improve the project together.
+开源是关于社区的一切。人们走到一起，一起编码，一起贡献，并一起改进项目。
 
-Become the community person for those open-source projects. Bring contributors together. Perform various functions with them:
+成为这些开源项目的社区人员。把贡献者聚集在一起。与他们一起履行各种职能:
 
-- Assign tasks
-- troubleshoot issues
-- organize meet-ups
-- build ambassador programs
-- conduct workshops
-- create newsletters
+- 分配任务
+- 解决问题
+- 组织聚会
+- 建立大使计划
+- 举办研讨会
+- 创建时事通讯
 
 #### Help with Localization
 
-Help build the projects in languages you are familiar with. Suppose you are a Spanish native speaker. Find some projects in your communities. Translate the major projects from English to Spanish so the project is available to more people worldwide.
+帮助建立你所熟悉的语言的项目。假设你是一个以西班牙语为母语的人。在你的社区寻找一些项目。把主要的项目从英语翻译成西班牙语，这样项目就能被全世界更多的人使用。
 
-To learn about some other ways to contribute, refer to [this repository](https://github.com/freeCodeCamp/how-to-contribute-to-open-source) from freeCodeCamp.
+要了解一些其他的贡献方式，请参考 freeCodeCamp 的 [这个仓库](https://github.com/freeCodeCamp/how-to-contribute-to-open-source)。
 
 # Open-Source Projects to Contribute To
 
-This is a list of various open-source projects that have an active community of folks waiting for contributions. They have issues ranging from beginner to expert level.
+这是一个各种开源项目的列表，这些项目有一个活跃的社区，等待人们的贡献。他们有从初级到专家级的问题。
 
-- [Supertokens](https://supertokens.com/): Supertokens is an open source auth0 alternative that allows you to set up authentication in less than 30 minutes. The project provides on-premises deployment giving you all rights to your users’ database. To contribute, follow their [GitHub repo](https://github.com/supertokens/supertokens-core), look for the existing issues, go through their documentation, and start contributing.
-- [Nimble Edge](https://www.nimbleedge.ai/): Nimble edge is a decentralized platform that is taking the world from traditional cloud computing to edge computing. The shift from cloud computing to edge computing will allow devices communicate with each other intelligently, share workloads, and use the cloud accordingly. To contribute, follow their [GitHub repo](https://github.com/NimbleEdge), look out for the issues, and start contributing.
-- [Dev library](https://devlibrary.withgoogle.com/?utm_source=freecodecamp-blog&utm_medium=submit&utm_campaign=freecodecamp-blog): Dev Library is Google’s new open-source platform that displays content created by external developers using any of the Google technologies (Android, Angular, Flutter, Firebase, Google Cloud, Machine Learning). The platform is segmented into product areas displaying quality projects to contribute to. To contribute, follow any open-source project and dig in with contributions.
-- [Codetriage](hhttps://www.codetriage.com/): Start contributing by finding any open-source repo from this gold mine.
-- [The Good Docs project](https://thegooddocsproject.dev/): The Good Docs is an open source community creating templates to combat blank-page anxiety. The community wants to create templates for anything and everything. If you feel you have a template idea too, join their slack channel. To contribute, follow their [GitHub repo](https://github.com/thegooddocsproject/templates), join their slack channel, and start contributing.
+- [Supertokens](https://supertokens.com/)。Supertokens 是一个开源的 auth0 替代品，它允许你在 30 分钟内设置认证。该项目提供企业内部部署，给予你对用户数据库的所有权。要做出贡献，请关注他们的 [GitHub repo](https://github.com/supertokens/supertokens-core)。
+- [Nimble Edge](https://www.nimbleedge.ai/)。Nimble edge 是一个去中心化的平台，它正在把世界从传统的云计算带向边缘计算。从云计算到边缘计算的转变将允许设备之间进行智能通信，共享工作负载，并相应地使用云。要做出贡献，请关注他们的 [GitHub repo](https://github.com/NimbleEdge)，留意问题，并开始贡献。
+- [Dev library](https://devlibrary.withgoogle.com/?utm_source=freecodecamp-blog&utm_medium=submit&utm_campaign=freecodecamp-blog)。Dev Library 是谷歌新的开源平台，显示由外部开发者使用任何谷歌技术（Android、Angular、Flutter、Firebase、谷歌云、机器学习）创建的内容。该平台被划分为产品领域，显示可以贡献的优质项目。要做出贡献，请关注任何开源项目并挖掘贡献。
+- [Codetriage](hhttps://www.codetriage.com/)：通过从这个金矿中找到任何开源 repo 开始贡献。
+- [The Good Docs 项目](https://thegooddocsproject.dev/)。The Good Docs 是一个创建模板的开源社区，以消除空白页的焦虑感。该社区希望为任何事物创建模板。如果你觉得你也有一个模板的想法，请加入他们的 slack 频道。要做出贡献，请关注他们的 [GitHub repo](https://github.com/thegooddocsproject/templates)，加入他们的 slack 频道，并开始贡献。
 
-We have seen some incredible work by developers using the Google technologies on Dev Library as well. Some have built a clone application of [Spotify using Angular](https://devlibrary.withgoogle.com/products/angular/repos/trungk18-angular-spotify), others have built [a project](https://devlibrary.withgoogle.com/products/ml/repos/dimitreOliveira-melanoma-classification) detecting melanoma (a type of skin cancer) using skin lesion images, while someone created a [Whatsapp image picker replica](https://devlibrary.withgoogle.com/products/android).
+我们在 Dev Library 上也看到了一些开发者使用谷歌技术的令人难以置信的工作。有些人建立了[使用 Angular 的 Spotify](https://devlibrary.withgoogle.com/products/angular/repos/trungk18-angular-spotify) 的克隆应用，有些人建立了[一个项目](https://devlibrary.withgoogle.com/products/ml/repos/dimitreOliveira-melanoma-classification)，使用皮肤病变图像检测黑色素瘤（一种皮肤癌），而有人创建了一个 [Whatsapp 图像采集器副本](https://devlibrary.withgoogle.com/products/android)。
 
-And of course freeCodeCamp itself is an open-source project. freeCodeCamp can be your go-to platform for learning about and contributing to open source.
+当然 freeCodeCamp 本身也是一个开源项目。freeCodeCamp 可以成为你学习和贡献于开源的首选平台。
 
-## Wrapping Up
+## 结束语
 
-So what do you think – time to start contributing to open source?
+那么你怎么看--是时候开始为开源做贡献了？
 
-Look at what Santhosh Yadav, an open-source expert in Angular and a GitHub star, shares:
+看看 Angular 领域的开源专家、GitHub 明星人物 Santhosh Yadav 是如何分享的:
 
-> “Contributing to Open Source helped me in ways I would have never imagined. I started it as a way of giving back to the community and got recognition from the community. Then I became Angular GDE and also India's First GitHub Star.
+> "对开源的贡献以我从未想象过的方式帮助了我。我开始时是把它作为回馈社区的一种方式，并得到了社区的认可。然后我成为了 Angular GDE，也是印度的第一个 GitHub 明星。
 >
-> OSS helped me learn the technology in depth and helped me get a good job. I even worked as a consultant for 1.5 years, and my Open Source work helped me get clients with ease.
+> OSS 帮助我深入学习技术，并帮助我找到了一份好工作。我甚至做了 1 年半的顾问，我的开源工作帮助我轻松地获得了客户。
 >
-> I was able to give a good life to my family. I was living paycheck to paycheck for 10 years before I started Open Source, and it changed my life”.
+> 我能够给我的家人一个好的生活。在开始开源之前，我有 10 年的时间是靠工资生活的，而它改变了我的生活"。
 
 Such stories tell us how open-source contributions can change your career trajectory. No matter what your job profile is–start contributing to open-source projects.

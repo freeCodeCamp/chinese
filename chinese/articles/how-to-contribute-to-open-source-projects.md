@@ -5,102 +5,102 @@
 
 ![How to Contribute to Open-Source Projects – A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/open-source-contributions.jpeg)
 
-If you've been considering contributing to an open source project, you might be weighing the pros and cons of doing so.
+如果你一直在考虑为一个开源项目做贡献，你可能正在权衡这样做的利弊。
 
-You might hear things like open-source projects won't help you grow. Or they can't change your career trajectory. And that your contributions definitely won’t add to your portfolio.
+你可能会听到这样的话：开源项目不会帮助你成长。或者他们不能改变你的职业轨迹。还有，你的贡献肯定不会为你的简历增添光彩。
 
-If you’ve ever heard anything like this, these people might not know that much about the benefits of contributing to open source projects. And those benefits are many.
+如果你曾经听到过这样的话，这些人可能对为开源项目做贡献的好处了解不多。而实际上这些好处是很多的。
 
-In this article, I'll share contribution opportunities and and how to get started contributing.
+在这篇文章中，我将分享贡献机会和以及如何开始贡献。
 
-Many people assume that developers are always working in silos with zero outside connection.
+许多人认为，开发人员总是在孤岛上工作，与外界没有任何联系。
 
-But that's not necessarily true of developers these days. They:
+但现在的开发者不一定是这样的。他们:
 
-- creating stuff in public,
-- are active on social media, and
-- they actively connect with people all over the world.
+- 在公共场合创造东西。
+- 在社交媒体上很活跃，而且
+- 他们积极与世界各地的人联系。
 
-In fact, open-source projects bring developers together in a more collaborative setting than almost anything else.
+事实上，开源项目比其他任何东西都更能将开发者聚集在一起进行合作。
 
 # What is Open Source?
 
-You might often hear about open-source projects and building-in-public. But what do these terms mean?
+你可能经常听到关于开源项目和公共建设的说法。但这些术语是什么意思？
 
-Most simply, it means that what you create is free to and open to anyone to use. It also means that with collaboration, your projects keep getting better.
+最简单的是，它意味着你所创造的东西是免费的，开放给任何人使用。它还意味着，随着合作的进行，你的项目会不断变得更好。
 
 ## Open Blogging Platforms
 
-With open-source, you are giving other people the liberty to study or build upon your existing project.
+使用开源，您可以让其他人自由地学习或构建您现有的项目。
 
-And there are plenty of platforms out there that give developers a chance to write in public. There's Hashnode, Dev.to, Google’s Dev Library, and many more. We can even call these developers "Developer-as-a-blogger" (DaaB) for their blogging contributions. :)
+现在有很多平台可以让开发者有机会公开写作。有 Hashnode、Dev.to、谷歌的 Dev Library，还有更多。我们甚至可以称这些开发者为 "Developer-as-a-blogger"（DaaB），因为他们的博客贡献。 :)
 
-I have been working with the Dev Library for over a year. I've seen almost 2000+ submissions from 80+ countries now. Pretty good!
+我已经在 Dev Library 工作了一年多。我现在已经看到了来自 80 多个国家的近 2000 多份提交材料。相当不错!
 
 ## How to Get Started Writing Tech Tutorials
 
-But how do you know where to begin with your blogging journey as a developer?
+但是，作为一个开发者，你怎么知道你的博客创作之旅从哪里开始呢？
 
-Let’s focus on the following tips:
+让我们关注以下提示:
 
-- **Don't let imposter syndrom win**: No matter where you are in your tech career, imposter-syndrome will likely rear its ugly head from time to time. Even with 7-8 years of experience, I sweat at times thinking whether I am good enough.
+- **不要犯冒名顶替综合症**。无论你在技术职业中处于什么位置，冒名顶替综合症可能会不时地出现。即使有 7-8 年的经验，我有时也会流汗，认为自己是否足够好。
 
-So, don’t worry. The best way to start writing is to try writing as you build a project. Explain it to yourself as if you were talking to a friend, helping them understand it. This way, anyone reading your tutorial will know how to build the project.
+所以，不要担心。开始写作的最好方法是在你建立一个项目时尝试写作。解释给自己听，就像你在和朋友说话一样，帮助他们理解它。这样一来，任何读到你的教程的人都会知道如何建立这个项目。
 
-- **Many articles exist on the same topic**: This is typically the case. Of the 7 bilion people in the world, it’s very likely that someone else is writing about topics you’ve worked on.
+- **同一主题存在许多文章**。这就是典型的情况。在世界上 70 亿人中，很可能有其他人正在写关于你所从事的主题。
 
-But the way you describe, define, and showcase features is going to be different. Focus on that.
+但你描述、定义和展示功能的方式将是不同的。专注于此。
 
-- **How do I even start?**: Blank-page anxiety exists. To overcome this, start creating sections with the high-level topics. An outline, if you will. Then start adding content to it. Make sure to add more steps, bullet points, and visuals.
+- **我甚至如何开始？**。空白页的焦虑是存在的。为了克服这个问题，开始创建具有高级主题的部分。如果你愿意的话，可以制定一个大纲。然后开始在其中添加内容。确保添加更多的步骤、要点和视觉效果。
 
-To structure and edit your content better, you can refer to Google’s tech writing courses and style guides like [freeCodeCamp's](https://www.freecodecamp.org/news/developer-news-style-guide/) and [MailChimp's](https://styleguide.mailchimp.com/).
+为了更好地组织和编辑你的内容，你可以参考谷歌的技术写作课程和风格指南，如 [freeCodeCamp 的](https://www.freecodecamp.org/news/developer-news-style-guide/) 和 [MailChimp 的](https://styleguide.mailchimp.com/)。
 
-- **How to make your first contributions**: First contributions are special yet overwhelming. To identify the right GitHub repo, look for open-source projects in your area of expertise. Network with the people who have made contributions in your tech stack. Understand the process and start contributing.
+- **如何进行首次贡献**。第一次贡献是特别的，但也是令人难以承受的。为了确定合适的 GitHub repo，寻找你专业领域的开源项目。与那些在你的技术栈中做出贡献的人建立联系。了解流程并开始贡献。
 
-Now that we've been through these pointers, you are ready to kickstart your open-source journey.
+现在我们已经了解了这些要点，你已经准备好启动你的开源之旅了。
 
-## My Open Source Journey
+## 我的开源之旅
 
-To help you start contributing to projects in your areas of expertise, I'll share some tips and guidelines in a minute. But first, a bit more about me.
+为了帮助你开始为你的专业领域的项目做贡献，我将在一分钟内分享一些提示和指南。但首先，再介绍一下我的情况。
 
-Until 2019, I was unaware of the term open-source. Yes. I wasn't active on social media except LinkedIn where no one talked about open-source.
+直到 2019 年，我都不知道开源这个词。是的。我在社交媒体上并不活跃，除了 LinkedIn，那里没有人谈论开源。
 
-In a nutshell, my horizons were quite narrow.
+总而言之，我的视野相当狭窄。
 
-But since I was a tech writer, I was an active member of a global community of tech writers called Write the Docs. I was scrolling through their Slack channel when I found out about Google Season of Docs.
+但由于我是一名科技作家，我是一个名为 Write the Docs 的全球科技作家社区的活跃成员。 当我发现 Google Season of Docs 时，我正在浏览他们的 Slack 频道。
 
-I browsed through the list of participating organizations and found an interesting one. Then, I reached out to them via their Slack channel and offered to act as a volunteer.
+我浏览了参与组织的名单，发现了一个有趣的组织。然后，我通过他们的 Slack 频道联系了他们，并提出担任志愿者。
 
-One year of volunteering with ‘The Good Docs Project’ opened a bunch of opportunities for me. We created open-source templates for various use-cases like:
+在 `The Good Docs Project` 做了一年的志愿者，为我提供了很多机会。我们为各种使用情况创建了开源模板，例如:
 
-- a glossary template for open-spatial organizations globally,
-- an onboarding template,
-- an API template,
-- a documentation template.
+- 用于全球开放空间组织的词汇表模板。
+- 一个入职模板。
+- 一个 API 模板。
+- 文档模板。
 
-One year later, after networking and gaining experience, I applied as a participant. The Metanorma organisation saw my volunteering experience and selected me for GSoD'21. And it's in that way that I became a part of the ever-growing open-source community.
+一年后，在建立人脉并积累经验后，我申请成为参与者。 Metanorma 组织看到了我的志愿服务经验，并选择了我参加 GSoD'21。正是这样，我成为了不断发展的开源社区的一员
 
 # How to Start Contributing to Open Source
 
-When you're starting to contribute, don't just focus on results – focus on the process.
+当你开始做贡献时，不要只关注结果——要关注过程。
 
-Here are some pointers to help you start contributing:
+以下是一些帮助你开始贡献的要点:
 
 ### Learn Git and GitHub
 
-Before finding repos to contribute to, get hands-on knowledge of Git commands and the [GitHub platform](https://lab.github.com/)). Get a basic understanding of:
+在寻找可供贡献的仓库之前，先对 Git 命令和[GitHub 平台](https://lab.github.com/) 进行实践了解。:） 获得对以下内容的基本了解:
 
-- how to fork the repo
-- how to make commits
-- how to merge commits
-- how to raise a pull request
+- 如何分叉（fork） repo
+- 如何进行提交(commit)
+- 如何合并(merge) 提交的内容
+- 如何提出拉动请求(pull request 简称 pr)
 
-Among many other Git/GitHub concepts, these are some of the most important.
+在许多其他的 Git/GitHub 概念中，这些是最重要的一些。
 
-If you want to learn more, here are some helpful resources:
+如果你想了解更多，这里有一些有用的资源:
 
-- [Git and GitHub tutorial - version control for beginners](https://www.freecodecamp.org/news/git-and-github-for-beginners/)
-- [Git and GitHub crash course](https://www.freecodecamp.org/news/git-and-github-crash-course/)
+- [Git 和 GitHub 教程 - 面向初学者的版本控制](https://www.freecodecamp.org/news/git-and-github-for-beginners/)
+- [Git 与 GitHub 速成班](https://www.freecodecamp.org/news/git-and-github-crash-course/)
 
 ### Browse through some projects
 

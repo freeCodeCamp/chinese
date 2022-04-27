@@ -1,190 +1,190 @@
-> -  原文地址：[What is Systems Engineering? A Beginner's Guide](https://www.freecodecamp.org/news/what-is-systems-engineering/)
-> -  原文作者：[Tiago Monteiro](https://www.freecodecamp.org/news/author/tiago/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[What is Systems Engineering? A Beginner's Guide](https://www.freecodecamp.org/news/what-is-systems-engineering/)
+> - 原文作者：[Tiago Monteiro](https://www.freecodecamp.org/news/author/tiago/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![What is Systems Engineering? A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/tt.jpeg)
 
-I was recently reading J. Martin's book _Systems Engineering Guidebook – A Process for Developing Systems and Products_. From it, I learned that systems engineering reduces manufacturing costs by 40% – did you know that?
+我最近在读 J. Martin 的书《Systems Engineering Guidebook – A Process for Developing Systems and Products》（系统工程指南--开发系统和产品的过程）[1]。 从中我了解到，系统工程可以降低40%的制造成本——你知道吗？
 
-Neither did I. Even after taking a class where one of the topics was systems engineering, I only understood its relevance when I understood its applications in real life.
+我以前也不知道。即使在上了一堂以系统工程为主题的课后，我也只有在了解其在现实生活中的应用时才明白其相关性。
 
-### But, is systems engineering used in software development?
+### 但是，系统工程是否用于软件开发？
 
-Yes!
+是的!
 
-Some big-name companies use systems engineering to improve their products.
+一些大名鼎鼎的公司使用系统工程来改进他们的产品。
 
-In fact, Google has its own discipline called [engineering productivity](https://landing.google.com/engprod/).
+事实上，谷歌有自己的学科，叫做 [工程生产力](https://landing.google.com/engprod/).
 
-Facebook also has its own, called [production engineering](https://engineering.fb.com/category/production-engineering/).
+Facebook也有自己的，叫做 [生产工程](https://engineering.fb.com/category/production-engineering/).
 
-Also, Amazon employs a [team](https://www.amazon.jobs/en/teams/aws-system-development-engineer) of engineers to help build up its cloud computing infrastructure.
+另外，亚马逊雇佣了一个 [团队](https://www.amazon.jobs/en/teams/aws-system-development-engineer) 的工程师来帮助建立其云计算基础设施。
 
-To understand what system engineering is and how important it is, let's answer four questions:
+为了了解什么是系统工程以及它的重要性，我们来回答四个问题。
 
-1.  What is a system?
-2.  What is the life cycle of a project?
-3.  What is systems engineering?
-4.  Why does systems engineering matter?
+1. 什么是系统？
+2. 什么是项目的生命周期？
+3. 什么是系统工程？
+4. 为什么系统工程很重要？
 
-## What is a system?
+## 什么是系统？
 
-A system is a combination of many “things” that work together as if they were a whole.
+一个系统是许多 "东西 "的组合，它们像一个整体一样一起工作。
 
-For example,
+比如说：
 
--   The solar system
--   trees
--   Corporations
+- 太阳系统
+- 树木
+- 公司
 
-Each one of these examples has many components (planets, leaves, departments) that together make a whole.
+这些例子中的每一个都有许多组件（行星、树叶、部门），它们共同构成一个整体。
 
-These components can also be sub-systems. For example, our solar system has our planet. Our planet Earth has its own systems, such as the geosphere, biosphere, and so on.
+这些组件也可以是子系统。例如，我们的太阳系有我们的星球。我们的地球有自己的系统，如地圈、生物圈，等等。
 
-The geosphere is a _sub-system_ of the planet Earth. \[2\]
+地质圈是地球上的一个 _子系统_。[2]
 
 ![1*eYsdUqZxsESlo2Q31JF6oQ](https://miro.medium.com/max/1242/1*eYsdUqZxsESlo2Q31JF6oQ.png)
 
-Example of a system
+有关系统的例子
 
-In programming, you can see programs as systems.
+在编程中，你可以把程序看作是系统。
 
-For example, a function in a given program could be seen as an element in the system.
+例如，某个程序中的一个函数可以被看作是系统中的一个元素。
 
-By laying out a system of the different components of your program, not only will you make a more effective program, but also it will become easier to maintain and to add to in the future.
+通过为你的程序的不同组成部分布置一个系统，你不仅会做出一个更有效的程序，而且它也会变得更容易维护和在未来添加功能。
 
-You can then see the system of a program as kind of the architecture in it.
+因此，你可以把程序的系统看作是其中的一种架构。
 
-Here's an example of a system in programming:
+这里有一个编程中的系统的例子:
 
 ![Screenshot--305-](https://www.freecodecamp.org/news/content/images/2022/03/Screenshot--305-.png)
 
-File tree from [htm5up website template](https://html5up.net/paradigm-shift)
+文件树来自 [htm5up 网站模板](https://html5up.net/paradigm-shift)
 
-The image displays the structure of a directory (or folder) for a website template project.
+图片显示了一个网站模板项目的目录（或文件夹）的结构。
 
-Many of these directories contain multiple .html, .css, and .js files.
+许多这些目录包含多个.html、.css和.js文件。
 
-These files all have components and characteristics that interact with other files inside of the projects. In essence, you have a system here.
+这些文件都有组件和特性，与项目内的其他文件相互作用。从本质上讲，你在这里有一个系统。
 
-The whole project is one system. The sub-systems within this project are the directions. Each file within a directory has many components, which make up a project as a whole.
+整个项目是一个系统。这个项目中的子系统是指方向。一个目录内的每个文件都有许多组件，它们构成了一个项目的整体。
 
-By learning how to create a system, you will learn how to create and manage projects better.
+通过学习如何创建一个系统，你将学会如何更好地创建和管理项目。
 
-## What is the lifecycle of a project?
+## 什么是项目的生命周期？
 
-The lifecycle of a project refers to the stages of a certain project – from the idea to the project's creation to eventual use and its fabrication in the end.
+项目的生命周期指的是某个项目的各个阶段——从想法到项目的创建，到最终的使用和最后的制造。
 
-Usually, a project lifecycle consists of:
+通常情况下，项目的生命周期包括:
 
-1.  Idea
-2.  Creation of an idea
-3.  Creation of concepts for the actual project concept
-4.  Utilizing and supporting the project
-5.  Deactivation
+1. 构思
+2. 创造一个想法
+3. 为实际的项目概念创造概念
+4. 使用和支持该项目
+5. 停用
 
-Below is an example that explains how you can apply systems engineering to develop a website for a company.
+下面是一个例子，解释了如何应用系统工程为一个公司开发网站。
 
 ![pexels-eduardo-dutra-2115217](https://www.freecodecamp.org/news/content/images/2022/03/pexels-eduardo-dutra-2115217.jpg)
 
 [Photo by Eduardo Dutra from Pexels](https://www.pexels.com/photo/person-in-front-of-laptop-on-brown-wooden-table-2115217/)
 
-### Project lifecycle example
+### 项目生命周期实例
 
-Let's say you are running a software company and a client has asked you to develop a website for their company.
+假设你正在经营一家软件公司，一个客户要求你为他们公司开发一个网站。
 
-#### Come up with the Idea
+#### 提出想法
 
-Here, you need to have a conversation with the client to determine how the project will be developed, and to learn what the client actually wants from the project.
+在这里，你需要与客户进行对话，以确定项目将如何发展，并了解客户对项目的实际需求。
 
-It is also a good idea to discuss with the client potential future problems that may arise, whether technical or financial.
+与客户讨论未来可能出现的问题也是一个好主意，无论是技术还是财务问题。
 
-This is by far the most important phase of the entire lifecycle of the project.
+这是迄今为止项目整个生命周期中最重要的阶段。
 
-Without understanding the client's needs, you cannot accomplish the projects they want. This is true regardless of your technical knowledge.
+不了解客户的需求，你就无法完成他们想要的项目。无论你的技术知识如何，这一点都是真实的。
 
-#### Create and develop the Idea
+#### 创造和发展想法
 
-The next step is to plan all the steps needed to turn the plan into a real project after understanding the needs of your client.
+下一步是在了解客户的需求后，计划所有需要的步骤，把计划变成一个真正的项目。
 
-As an example, you will plan out where you will launch the site, where you will deploy it, and so on.
+举例来说，你要计划出你将在哪里启动网站，在哪里部署网站，等等。
 
-#### Come up with the concepts for the actual project concept
+#### 为实际的项目概念提出构想
 
-In this phase, you build the projects the client wants. It is also a critically important step.
+在这个阶段，你建立客户想要的项目。这也是一个极其重要的步骤。
 
-It allows you to design the website according to what the client wants.
+它允许你根据客户的要求来设计网站。
 
-#### Use and support the project
+#### 使用和支持该项目
 
-We are now in the production phase. During this phase, the project will be tested and any technical issues will be fixed.
+我们现在正处于生产阶段。在这个阶段，项目将被测试，任何技术问题将被修复。
 
-If there are technical problems, they should be minor, and should not adversely affect the majority of the website.
+如果有技术问题，应该是小问题，而且不应该对网站的大部分内容产生不利影响。
 
-However, once the project is given to the client, the maintenance should be handled by the client.
+然而，一旦项目交给客户，维护工作就应该由客户来处理。
 
-#### Deactivation
+#### 停用
 
-The website will be deactivated in this final step.
+在这最后一步，网站将被停用。
 
-It is either replaced by another site, the client ends their company and takes the site down, and so on.
+它要么被另一个网站取代，要么客户结束他们的公司并关闭该网站，等等。
 
-## What is systems engineering and why does it matter?
+## 什么是系统工程，它为什么重要？
 
-We have seen that a system is a combination of many “things” that work together as a whole.
+我们已经看到，一个系统是许多 `东西` 的组合，它们作为一个整体一起工作。
 
-We have also seen that systems have lifecycles.
+我们还看到，系统有生命周期。
 
-The act then of planning these lifecycles before starting the project and during its execution is called **systems engineering**.
+那么，在项目开始前和执行过程中对这些生命周期进行规划的行为被称为 **系统工程**。
 
-### Technical example of systems engineering
+### 系统工程的技术实例
 
-Let's imagine that you already know what the client wants.
+让我们想象一下，你已经知道客户想要什么。
 
-Imagine they've asked you to design an e-commerce site that will host thousands of photos from sellers.
+想象一下，他们让你设计一个电子商务网站，该网站将承载来自卖家的成千上万张照片。
 
-The site needs a central server to host and deliver a lot of images from users. Your site, for instance, may feature images of products it sells.
+该网站需要一个中央服务器来托管和传递大量来自用户的图片。例如，你的网站可能以其销售的产品图片为特色。
 
-You need to create an efficient and easy to maintain system that requests images for the website in a short time.
+你需要创建一个高效且易于维护的系统，在短时间内为网站请求图片。
 
-How can you achieve this?
+你如何能实现这一点？
 
-Difficult to answer right? Without a doubt, this is a challenging problem.
+难以回答吧？毫无疑问，这是一个具有挑战性的问题。
 
-One that requires the planning of a system to maximise efficiency and to be as easy as possible to maintain.
+一个需要对系统进行规划以最大限度地提高效率，并尽可能地易于维护的问题。
 
-If you want to know more about this problem, you can check out [this article](https://www.aosabook.org/en/distsys.html).
+如果你想了解更多关于这个问题，你可以查看 [这篇文章](https://www.aosabook.org/en/distsys.html)。
 
-Although this is a big technical problem, there are other problems even more serious.
+虽然这是一个大的技术问题，但还有其他更严重的问题。
 
-What are the best ways to manage the growth of a large open source library, for example?
+例如，管理一个大型开源图书馆的增长的最佳方法是什么？
 
-How exactly will its architecture be structured, so it is efficient and easy to use?
+它的架构究竟如何，才能做到高效和易于使用？
 
-[Here](https://www.aosabook.org/en/matplotlib.html) is an overview of a popular library architecture in Python, [matplotlib](https://matplotlib.org/).
+[这里](https://www.aosabook.org/en/matplotlib.html) 是对 Python 中一个流行的库架构的概述，[matplotlib](https://matplotlib.org/)。
 
-You can create and manage the structure of the program when you plan a system.
+当你计划一个系统时，你可以创建和管理程序的架构。
 
-Thus, the developer won't have to worry about missing functionality goals, serious defects, or spending significantly more than expected on production and maintenance.
+这样，开发者就不必担心功能目标的缺失、严重的缺陷，或在生产和维护上花费大大超过预期。
 
-It is for this reason that Google, Facebook, Amazon, and many others have dedicated teams of systems engineers.
+正是由于这个原因，谷歌、Facebook、亚马逊和其他许多公司都有专门的系统工程师团队。
 
-Through systems engineering, we can develop a kind of "plan" that achieves our goals or the company's goals with near perfection.
+通过系统工程，我们可以制定一种 "计划"，以接近完美的方式实现我们的目标或公司的目标。
 
-## Wrapping up
+## 总结
 
-Well, now you understand:
+好了，现在你明白了。
 
--   What a system is
--   What a project lifecycle is
--   What systems engineering is and its value in all kinds of projects
+- 什么是系统
+- 什么是项目生命周期
+- 什么是系统工程以及它在各种项目中的价值
 
-Thanks for reading!
+谢谢你的阅读!
 
-## **References**
+## **附录**
 
-1.  J. Martin, _Systems Engineering Guidebook A Process for Developing Systems and Products_. London: CRC Press, pp. 5–6.
-2.  National Geographic Society, “Earth’s Systems,” _National Geographic Society_, Oct. 29, 2019. [https://www.nationalgeographic.org/article/earths-systems/](https://www.nationalgeographic.org/article/earths-systems/)
-3.  “The Architecture of Open Source Applications (Volume 2): Scalable Web Architecture and Distributed Systems,” _www.aosabook.org_. [https://www.aosabook.org/en/distsys.html](https://www.aosabook.org/en/distsys.html)
-4.  B. Douglass, in _Real-time design patterns: Robust Scalable Architecture for real-time systems_, Boston: Addison-Wesley, 2003, pp. 96–97.
+1. J. Martin, _Systems Engineering Guidebook A Process for Developing Systems and Products_. London: CRC Press, pp. 5–6.
+2. National Geographic Society, “Earth’s Systems,” _National Geographic Society_, Oct. 29, 2019. [https://www.nationalgeographic.org/article/earths-systems/](https://www.nationalgeographic.org/article/earths-systems/)
+3. “The Architecture of Open Source Applications (Volume 2): Scalable Web Architecture and Distributed Systems,” _www.aosabook.org_. [https://www.aosabook.org/en/distsys.html](https://www.aosabook.org/en/distsys.html)
+4. B. Douglass, in _Real-time design patterns: Robust Scalable Architecture for real-time systems_, Boston: Addison-Wesley, 2003, pp. 96–97.

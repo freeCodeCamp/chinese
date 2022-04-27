@@ -191,4 +191,4 @@
 >
 > 我能够给我的家人一个好的生活。在开始开源之前，我有 10 年的时间是靠工资生活的，而它改变了我的生活"。
 
-Such stories tell us how open-source contributions can change your career trajectory. No matter what your job profile is–start contributing to open-source projects.
+这些故事告诉我们，开源贡献可以改变你的职业轨迹。不管你的工作情况如何——开始为开源项目做贡献吧。

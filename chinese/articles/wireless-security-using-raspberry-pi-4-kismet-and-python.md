@@ -5,29 +5,29 @@
 
 ![How to Secure Your Home Wireless Infrastructure with Kismet and Python](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/wireless_security_with_kismet_and_python.png)
 
-Everything is connected to wireless these days. In my case I found that I have LOTS of devices after running a simple [nmap command on my home network](https://www.freecodecamp.org/news/enhance-nmap-with-python/#nmap-101-identify-all-the-public-services-in-our-network):
+如今，所有的东西都连接到了无线。在我的例子中，我发现在我的家庭网络上运行一个简单的 [nmap 命令](https://www.freecodecamp.org/news/enhance-nmap-with-python/#nmap-101-identify-all-the-public-services-in-our-network) 之后，我有很多设备可以被探测到:
 
 ```shell
 [josevnz@dmaf5 ~]$ sudo nmap -v -n -p- -sT -sV -O --osscan-limit --max-os-tries 1 -oX $HOME/home_scan.xml 192.168.1.0/24
 ```
 
-So I started to wonder:
+所以我想知道：
 
-- Is my wireless network secure?
-- How long would it take to an attacker to get in?
+- 我的无线网络安全吗？
+- 攻击者需要多长时间才能进入？
 
-I have a _Raspberry 4_ with Ubuntu (focal) installed and decided to use the well-known [Kismet](https://www.kismetwireless.net/) to find out.
+我有一个安装了 Ubuntu（focal）的 _树莓派 4_，决定用著名的 [Kismet](https://www.kismetwireless.net)来了解一下。
 
-In this article you will learn:
+在这篇文章中，你将学习:
 
-- How to get a whole picture of the networks nearby you with Kismet
-- How to customize Kismet using Python and the REST-API
+- 如何用 Kismet 获得你附近网络的全貌
+- 如何使用 Python 和 REST-API 定制 Kismet
 
 ![raspberrypi-wireless-setup-1](https://www.freecodecamp.org/news/content/images/2022/03/raspberrypi-wireless-setup-1.png)
 
-If you are curious, this is my home Raspberry PI 4, tiny monitor and all
+如果你感到好奇，这是我家里的树莓派 4，小小的显示器和所有的东西。
 
-# Table of contents
+# 目录
 
 - [The saying 'Ask for forgiveness, not permission' doesn't apply here](#the-saying-ask-for-forgiveness-not-permission-doesn-t-apply-here)
 - [Getting to know your hardware](#getting-to-know-your-hardware)
@@ -37,23 +37,23 @@ If you are curious, this is my home Raspberry PI 4, tiny monitor and all
 
 # The saying 'Ask for forgiveness, not permission' doesn't apply here
 
-And by that I mean that _you should not be trying to eavesdrop or infiltrate a wireless network that is not yours_. It is relatively easy to detect if a new unknown client joined your wireless network, and it is also illegal.
+而我的意思是，_你不应该试图窃听或渗透到一个不属于你的无线网络，而且这也是非法的_。检测一个新的未知客户是否加入了你的无线网络是比较容易的。
 
-So do the right thing – use this tutorial to learn and not to break into someone else's network, OK?
+所以要做正确的事——用这个教程来学习，而不是闯入别人的网络。
 
 # Getting to know your hardware
 
-I will jump a little ahead to show you a small issue with the Raspberry 4 integrated Wireless interface.
+我将跳到前面一点，向你展示树莓派 4 集成无线接口的一个小问题。
 
-**The Raspberry PI 4 onboard wireless card will not work out of the box** as the firmware doesn't support monitor mode.
+**树莓派 4 的板载无线网卡，不能开箱即用**， 因为固件不支持监控模式（monitor mode）。
 
-There are works to [support this](https://github.com/seemoo-lab/bcm-rpi3). Instead, I took the easy way out and ordered an external Wi-Fi dongle from [CanaKit](https://www.canakit.com/raspberry-pi-wifi.html).
+有项目可以 [支持这个](https://github.com/seemoo-lab/bcm-rpi3)。相反，我采取了简单的方法，从 [CanaKit](https://www.canakit.com/raspberry-pi-wifi.html) 订购了一个外部 Wi-Fi 加密狗。
 
-The CanaKit wireless card worked out of the box, and we'll see it shortly. But first let's install and play around with Kismet.
+CanaKit 的无线网卡开箱即用，我们很快就会看到它。但首先让我们安装并玩一玩 Kismet。
 
 ## Make sure the interface is running in monitor mode
 
-By default, the network interface will have monitor mode off:
+默认情况下，网络接口的监控模式（monitor mode）为关闭:
 
 ```shell
 root@raspberrypi:~# iwconfig wlan1
@@ -65,28 +65,31 @@ wlan1     IEEE 802.11  ESSID:off/any
 
 ```
 
-I know I will always set up my Ralink Technology, Corp. RT5370 Wireless Adapter in monitor mode, but I need to be careful as Ubuntu can swap wlan0 and wlan1 (The Broadcom adapter I want to skip is a PCI device).
+我知道把我的 Ralink Technology, Corp. RT5370 无线适配器一直设置城监控模式（monitor mode），但我需要小心，因为 Ubuntu 可能改变 wlan0 和 wlan1 映射的无线网卡（我想跳过的 Broadcom 适配器，它是一个 PCI 设备）。
 
-The Ralink adapter is a USB adapter, so we can find out where it is:
+Ralink 适配器是一个 USB 适配器，所以我们可以找出它:
 
 ```shell
 josevnz@raspberrypi:/etc/netplan$ /bin/lsusb|grep Ralink
 Bus 001 Device 004: ID 148f:5370 Ralink Technology, Corp. RT5370 Wireless Adapter
 ```
 
-Now we need to find out what device was mapped to the Ralink adapter. With a little bit of help of the Ubuntu community I found than the Ralink adapter uses the rt2800usb driver [5370 Ralink Technology](https://help.ubuntu.com/community/WifiDocs/Device/Ralink_RT5370)
+现在我们需要找出什么设备被映射到 Ralink 适配器上。在 Ubuntu 社区的帮助下，我发现 Ralink 适配器使用 rt2800 usb 驱动 [5370 Ralink Technology](https://help.ubuntu.com/community/WifiDocs/Device/Ralink_RT5370)
 
-The answer I seek is here:
+我寻求的答案在这里:
 
 ```shell
 josevnz@raspberrypi:~$ ls /sys/bus/usb/drivers/rt2800usb/*:1.0/net/
 wlan1
 ```
 
-So the code that does the wireless card detection looks like this:
+因此，进行无线网卡检测的代码看起来是这样的:
 
 ```shell
 root@raspberrypi:~#/bin/cat<<RC_LOCAL>/etc/rc.local
+```
+
+```shell
 #!/bin/bash
 usb_driver=rt2800usb
 wlan=\$(/bin/ls /sys/bus/usb/drivers/\$usb_driver/*/net/)
@@ -98,10 +101,14 @@ if [ $? -eq 0 ]; then
         set +ex
 fi
 RC_LOCAL
+```
+
+给启动脚本加上可执行权限
+```shell
 root@raspberrypi:~# chmod u+x /etc/rc.local && shutdown -r now "Enabling monitor mode"
 ```
 
-Make sure the card is on monitor mode:
+确保网卡处于监控模式（monitor mode）下:
 
 ```shell
 root@raspberrypi:~# iwconfig wlan1

@@ -104,8 +104,10 @@ RC_LOCAL
 ```
 
 给启动脚本加上可执行权限
+
 ```shell
-root@raspberrypi:~# chmod u+x /etc/rc.local && shutdown -r now "Enabling monitor mode"
+root@raspberrypi:~# chmod u+x /etc/rc.local && shutdown -r now
+"Enabling monitor mode"
 ```
 
 确保网卡处于监控模式（monitor mode）下:
@@ -113,25 +115,28 @@ root@raspberrypi:~# chmod u+x /etc/rc.local && shutdown -r now "Enabling monitor
 ```shell
 root@raspberrypi:~# iwconfig wlan1
 iw        iwconfig  iwevent   iwgetid   iwlist    iwpriv    iwspy     
+```
+
+```shell
 root@raspberrypi:~# iwconfig wlan1
 wlan1     IEEE 802.11  Mode:Monitor  Frequency:2.412 GHz  Tx-Power=20 dBm   
           Retry short  long limit:2   RTS thr:off   Fragment thr:off
           Power Management:off
 ```
 
-Good, let's move on with the tool setup
+很好，让我们继续进行设置。
 
 # What is Kismet?
 
-[Kismet](https://www.kismetwireless.net/) is:
+[Kismet](https://www.kismetwireless.net/):
 
-> a wireless network and device detector, sniffer, wardriving tool, and WIDS (wireless intrusion detection) framework.
+> 一个无线网络和设备检测器、嗅探器、驱赶工具和 WIDS（无线入侵检测）框架。
 
 ## Kismet installation and setup
 
-The version that comes with the Ubuntu RaspberryPI by default is from 2016, _way too old_.
+默认情况下，安装在树莓派 4 的 Ubuntu 上的 Kismet 是 2016 年的版本，_太老了_ 。
 
-Instead, get an updated binary as [explained here](https://www.kismetwireless.net/docs/readme/packages/) (I have Ubuntu focal, check with `lsb_release --all`).
+取而代之的是, 从 [这里](https://www.kismetwireless.net/docs/readme/packages/) 获得一个更高版本的二进制文件。  (我安装了 Ubuntu focal, 通过命令 `lsb_release --all` 进行检查)。
 
 ```shell
 wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo apt-key add -
@@ -142,25 +147,25 @@ sudo apt install kismet
 
 ### Do not run as root, use a [SUID binary](https://en.wikipedia.org/wiki/Setuid) and a unix group access
 
-Kismet needs elevated privileges to run. And deals with possibly hostile data. So running with minimized permissions is the safest approach.
+Kismet 需要较高的权限才能运行。并且要处理可能有入侵性质的数据。所以用最小化的权限运行是最安全的方法。
 
-The right way to set it up is by using a Unix group and set user id (_SUID_) binary. My user is 'josevnz' so I did this:
+正确的设置方法是使用 Unix 组和设置用户 ID（_SUID_）的二进制。我的用户是 `josevnz`，所以我这样做了:
 
-```shell=
+```shell
 sudo apt-get install kismet
 sudo usermod --append --groups kismet josevnz
 ```
 
 ### Encrypt your access to Kismet with a self-signed certificate
 
-I will enable SSL for my Kismet [installation by using a self-signed certificate](https://github.com/josevnz/home_nmap/tree/main/tutorial). I will use for that the Cloudflare CFSSL tools:
+我将为我的 Kismet 启用 SSL [通过使用自签名证书安装](https://github.com/josevnz/home_nmap/tree/main/tutorial)。为此，我将使用 Cloudflare CFSSL 工具:
 
-```shell=
+```shell
 sudo apt-get update -y
 sudo apt-get install -y golang-cfssl
 ```
 
-Next step is to create the self-signed certificates. There is a lot of boilerplate steps here, so I will show you how you can jump through them (but please read the man pages to see what each command does):
+下一步是创建自签名的证书。这里有很多模板步骤，所以我将告诉你如何跳过这些步骤（但请阅读手册以了解每个命令的作用）:
 
 #### Initial certificate
 
@@ -278,7 +283,7 @@ cfssl sign -ca ca.pem -ca-key ca-key.pem -config cfssl.json -profile intermediat
 
 #### Configuration for the SSL certificate on the Raspberry PI 4 machine
 
-Here we put the name and IP address of the machine that will run our Kismet web application:
+在这里，我们把运行 Kismet 网络应用的机器的名称和 IP 地址放在这里:
 
 ```shell
 /bin/cat<<RASPBERRYPI>/etc/pki/raspberrypi/raspberrypi.home.json
@@ -304,14 +309,18 @@ Here we put the name and IP address of the machine that will run our Kismet web 
     "192.168.1.11"
   ]               
 }
-RASPBERRYPI
+```
+
+树莓派
+
+```shell
 cd /etc/pki/raspberrypi
 cfssl gencert -ca intermediate_ca.pem -ca-key intermediate_ca-key.pem -config cfssl.json -profile=peer raspberrypi.home.json| cfssljson -bare raspberry-peer
 cfssl gencert -ca intermediate_ca.pem -ca-key intermediate_ca-key.pem -config cfssl.json -profile=server raspberrypi.home.json| cfssljson -bare raspberry-server
 cfssl gencert -ca intermediate_ca.pem -ca-key intermediate_ca-key.pem -config cfssl.json -profile=client raspberrypi.home.json| cfssljson -bare raspberry-client
 ```
 
-Adding SSL support is then as easy as adding the following overrides:
+添加 SSL 支持就像添加以下重写一样简单:
 
 ```shell
 /bin/cat<<SSL>>/etc/kismet/kismet_site.conf
@@ -321,9 +330,11 @@ httpd_ssl_key=/etc/pki/raspberrypi/raspberry-server-key.pem
 SSL
 ```
 
+(译者注：你可以尝试 [mkcert](https://github.com/FiloSottile/mkcert),这个签发证书更简单。)
+
 ### Putting everything together, with a Kismet 'site' overrides file
 
-Kismet has a really nice feature: it can use a file that overrides some defaults, without the need to edit multiple files. In this case my installation will override the SSL settings, Wifi interface, and log location. So time to update our /etc/rc.local file:
+Kismet 有一个非常好的功能：它可以使用一个文件来覆盖一些默认值，而不需要编辑多个文件。在这种情况下，我的安装将覆盖 SSL 设置、Wifi 接口和日志位置。所以是时候更新我们的 `/etc/rc.local` 文件了:
 
 ```shell
 #!/bin/bash

@@ -1,7 +1,7 @@
-> -  原文地址：[How to Secure Your Home Wireless Infrastructure with Kismet and Python](https://www.freecodecamp.org/news/wireless-security-using-raspberry-pi-4-kismet-and-python/)
-> -  原文作者：[Jose Vicente Nunez](https://www.freecodecamp.org/news/author/jose-vicente-nunez/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Secure Your Home Wireless Infrastructure with Kismet and Python](https://www.freecodecamp.org/news/wireless-security-using-raspberry-pi-4-kismet-and-python/)
+> - 原文作者：[Jose Vicente Nunez](https://www.freecodecamp.org/news/author/jose-vicente-nunez/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Secure Your Home Wireless Infrastructure with Kismet and Python](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/wireless_security_with_kismet_and_python.png)
 
@@ -13,15 +13,15 @@ Everything is connected to wireless these days. In my case I found that I have L
 
 So I started to wonder:
 
--   Is my wireless network secure?
--   How long would it take to an attacker to get in?
+- Is my wireless network secure?
+- How long would it take to an attacker to get in?
 
 I have a _Raspberry 4_ with Ubuntu (focal) installed and decided to use the well-known [Kismet](https://www.kismetwireless.net/) to find out.
 
 In this article you will learn:
 
--   How to get a whole picture of the networks nearby you with Kismet
--   How to customize Kismet using Python and the REST-API
+- How to get a whole picture of the networks nearby you with Kismet
+- How to customize Kismet using Python and the REST-API
 
 ![raspberrypi-wireless-setup-1](https://www.freecodecamp.org/news/content/images/2022/03/raspberrypi-wireless-setup-1.png)
 
@@ -29,11 +29,11 @@ If you are curious, this is my home Raspberry PI 4, tiny monitor and all
 
 # Table of contents
 
--   [The saying 'Ask for forgiveness, not permission' doesn't apply here](#the-saying-ask-for-forgiveness-not-permission-doesn-t-apply-here)
--   [Getting to know your hardware](#getting-to-know-your-hardware)
--   [kismet](#kismet)
--   [REST-API](#restapi)
--   [What did we learn?](#what-did-we-learn)
+- [The saying 'Ask for forgiveness, not permission' doesn't apply here](#the-saying-ask-for-forgiveness-not-permission-doesn-t-apply-here)
+- [Getting to know your hardware](#getting-to-know-your-hardware)
+- [kismet](#kismet)
+- [REST-API](#restapi)
+- [What did we learn?](#what-did-we-learn)
 
 # The saying 'Ask for forgiveness, not permission' doesn't apply here
 
@@ -493,11 +493,11 @@ The way Kismet API works is that you make the API KEY part of the query, or you 
 
 KismetWorker implements the following methods:
 
--   **check\_session**: It checks if your API KEY is valid. If not it will throw an exception.
--   **check\_system\_status**: Validates if the administrator (you most likely) defined an administrator for the Kismet server. If not, then all the API queries will fail.
--   **get\_all\_alerts**: Gets all the available alerts (if any) from your Kismet server.
--   **get\_alert\_by\_hash**: If you know the identifier (hash) of an alert, you can retrieve the details of that event only.
--   **get\_alert\_definitions**: Get all the alert definitions. Kismet supports a wide range of alerts and a user will definitely be interested to find out what type of alerts they are.
+- **check\_session**: It checks if your API KEY is valid. If not it will throw an exception.
+- **check\_system\_status**: Validates if the administrator (you most likely) defined an administrator for the Kismet server. If not, then all the API queries will fail.
+- **get\_all\_alerts**: Gets all the available alerts (if any) from your Kismet server.
+- **get\_alert\_by\_hash**: If you know the identifier (hash) of an alert, you can retrieve the details of that event only.
+- **get\_alert\_definitions**: Get all the alert definitions. Kismet supports a wide range of alerts and a user will definitely be interested to find out what type of alerts they are.
 
 You can see [all the integration code](https://github.com/josevnz/kismet_home/blob/main/test/test_integration_kismet.py) here to see how the methods work in action.
 
@@ -566,9 +566,9 @@ Getting the data is just part of the story. We need to normalize it, so it can b
 
 Kismet contains a lot of details about the alerts, but we do not require to show the user those details (think about the nice view you get with the web application). Instead we do a few transformations using the following class with static methods:
 
--   **parse\_alert\_definitions**: Returns a simplified report of all the alert definitions
--   **process\_alerts**: Changes numeric alerts for more descriptive types and also returns dictionaries for the types and severity meaning of those alerts.
--   **pretty\_timestamp**: Converts the numeric timestamp into something we can use for comparisons and display
+- **parse\_alert\_definitions**: Returns a simplified report of all the alert definitions
+- **process\_alerts**: Changes numeric alerts for more descriptive types and also returns dictionaries for the types and severity meaning of those alerts.
+- **pretty\_timestamp**: Converts the numeric timestamp into something we can use for comparisons and display
 
 The code for the _KismetResultsParser_ helper class:
 
@@ -818,8 +818,8 @@ Please note the use of the virtual environment here. This will allow us to keep 
 
 The _kismet\_home\_alerts.py_ script will support two modes:
 
--   Show the alert definitions
--   Show all the alerts
+- Show the alert definitions
+- Show all the alerts
 
 Also, it will allow filtering alerts based on the level (INFO, MEDIUM, HIGH, ...).
 
@@ -1050,16 +1050,16 @@ if __name__ == '__main__':
 
 A few things to note:
 
--   This is not a long-running application. Instead, is a snapshot of all the alerts. If you wanted, for example, to forward these alerts by email or to a framework like [grafana](https://grafana.com/), you are better off using [Websockets](https://pypi.org/project/websockets/) and one of the methods that retrieves only the last changes.
--   The layout is crude, and there is plenty of room for improvement. But our little tui is displaying relevant information without too many distractions
--   And if was fun to code!
+- This is not a long-running application. Instead, is a snapshot of all the alerts. If you wanted, for example, to forward these alerts by email or to a framework like [grafana](https://grafana.com/), you are better off using [Websockets](https://pypi.org/project/websockets/) and one of the methods that retrieves only the last changes.
+- The layout is crude, and there is plenty of room for improvement. But our little tui is displaying relevant information without too many distractions
+- And if was fun to code!
 
 # What did we learn?
 
--   How to install Kismet and secure it with a self-signed SSL certificate
--   How to write a simple Bash script to set up the correct Wireless interface in monitor mode, after the RaspBerryPI reboots
--   How to add an API KEY with read-only access to use it instead of the legacy user/ password schema for authentication and authorization
--   How to write classes in Python that can communicate with Kismet using its REST-API
--   How to add unit and integration tests to the code to make sure everything works and new code changes do not break existing functionality
+- How to install Kismet and secure it with a self-signed SSL certificate
+- How to write a simple Bash script to set up the correct Wireless interface in monitor mode, after the RaspBerryPI reboots
+- How to add an API KEY with read-only access to use it instead of the legacy user/ password schema for authentication and authorization
+- How to write classes in Python that can communicate with Kismet using its REST-API
+- How to add unit and integration tests to the code to make sure everything works and new code changes do not break existing functionality
 
 Please leave your comments on the [git repository](https://github.com/josevnz/kismet_home) and report any bugs. But more important get Kismet, get the code of this tutorial, and start securing your home wireless infrastructure in no time.

@@ -1,6 +1,6 @@
 > -  原文地址：[What is Memoization? How and When to Memoize in JavaScript and React](https://www.freecodecamp.org/news/memoization-in-javascript-and-react/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![What is Memoization? How and When to Memoize in JavaScript and React](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/pexels-thisisengineering-3913016.jpg)

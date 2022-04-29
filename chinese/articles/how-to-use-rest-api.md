@@ -1,234 +1,233 @@
 > -  原文地址：[How to Use REST APIs – A Complete Beginner's Guide](https://www.freecodecamp.org/news/how-to-use-rest-api/)
 > -  原文作者：[Alex Husar](https://www.freecodecamp.org/news/author/alex-husar/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Use REST APIs – A Complete Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/The-Complete-Guide-to-Understanding-and-Using-REST-APIs.png)
 
-Application programming interfaces – or APIs – are an important programming concept to understand. And if you invest the time to learn more about these interfaces, it can help make your tasks more manageable.
+应用程序编程接口（API）是一个需要掌握的重要编程概念。如果花时间学习这些接口，你就可以更轻松地管理任务。
 
-One of the common types of APIs is a REST API. If you’ve ever considered getting data from another website, such as Twitter or GitHub, you’ve probably used this kind of API.
+最常见的API之一就是REST API。如果你曾经尝试过从另一个网站（如：Twitter或Github）上获取数据，你可能已经使用过这个API。
 
-So why is understanding a REST API useful? How does it ensure modern business connectivity?
+那为什么理解REST API对你有帮助？REST API是如何确保现代业务的连通性的？
 
-Before building or operating an API, or a REST API in particular, you should first learn what an API is. This article will walk you through the REST API principles, and how they grew into powerful applications.
+在创建或者运行一个API（这里特指REST API）之前，你得先学习什么是API。这篇文章会带着你一步一步理解REST API的基本原则，以及这些原则如何使得REST API成为强大的应用。
 
-## **How Do APIs Work and Why Do You Need Them?**
+## **API是如何工作的，我们为什么需要它？**
 
-APIs represent a set of definitions and protocols. You need them for app development and integration as they facilitate data exchange between two pieces of software, like an information supplier (a server) and a user.
+API代表一组定义和协议。你需要使用API来开发和集成应用，因为API可以协调两个软件之间的数据交换，如信息供应商（服务器）和用户之间。
 
-APIs specify the content available to the client making the call from the producer that's returning the response.
+客户向生产商发出调用，生产商返回响应。API规定了返回的可访问内容。
 
-Programs use an API to communicate, retrieve information, or perform a function. APIs allow users to work with the system to return their desired result.
+程序使用API进行通信、检索信息或执行功能。API允许用户通过这一系统返回想要的结果。
 
-To put it simply, an API acts as a mediator between users (clients) and resources (servers).
+简言之，API就是用户（客户）和资源（服务器）之间的中间人。
 
-When users make API requests or visit an online store, they expect a fast response. So you need to [optimize Magento TTFB (Time To First Byte)](https://onilab.com/blog/magento-ttfb-optimization/) or use other performance enhancement strategies that work best for your CMS.
+当用户发出API请求或者浏览一个在线商城，会期望快速得到反馈，所以作为开发者你需要优化加载时间（参考——[优化麦进斗TTFB (Time To First Byte)](https://onilab.com/blog/magento-ttfb-optimization/)）或者使用其他更适合你的内容管理系统（CMS）的性能提升策略。
 
-The reasons to integrate an API include:
+集成API的原因包括：
 
--   streamlining resource and information sharing
--   controlling who has access to what with the help of [authentication and defining the rights](https://www.freecodecamp.org/news/authenticate-and-authorize-apis-in-dotnet5/)
--   safety and control
--   no need to understand the software specifics
--   consistent communication between services, even though they use different technologies
+-   精简资源、信息共享
+-   通过[验证和定义权利](https://www.freecodecamp.org/news/authenticate-and-authorize-apis-in-dotnet5/)的手段来控制特定人群访问特定内容
+-   安全性和控制权
+-   无需了解软件细节
+-   即便使用不同的技术，服务间也可以保持持续通信
 
-## **Overview of REST APIs**
+## **REST API概览**
 
 ![DUwmoHyRnoD1WovETSrQdSaIv8rh5WUVPxVjPN9_cvVokx7E4fZxzGyCY0_XMRA2cikjPkWIUDlXmtDqqGDX-KCzya5EVEEgxi8sEVwpVTeiHBNsqCULC-78QCE4dJ0_ieC1mQzn](https://lh3.googleusercontent.com/DUwmoHyRnoD1WovETSrQdSaIv8rh5WUVPxVjPN9_cvVokx7E4fZxzGyCY0_XMRA2cikjPkWIUDlXmtDqqGDX-KCzya5EVEEgxi8sEVwpVTeiHBNsqCULC-78QCE4dJ0_ieC1mQzn)
 
-RESTful refers to software architecture which stands for “Representational State Transfer”. You may have heard of it in the context of standardizing the use of information exchange systems (web services).
+RESTful指的是一种软件架构，即“表现层状态转移”（Representational State Transfer)。你可能在有关制定信息交换系统（web服务）标准的内容中听到过这个表达。
 
-These web services utilize a stateless protocol to make textual representations of their online resources available for reading and processing. A client performs well-known HTTP protocol-based activities like fetch, update, and delete.
+web服务通过无状态协议使得在线资源由文本的方式呈现，并且可以读取和处理这些在线资源。客户端通过著名的HTTP协议进行数据获取、更新和删除。
 
-REST was first established in 2000 with the goal of improving performance, scalability, and simplicity by enforcing specific limits on an API.
+REST于2000年被首次提出，目的是通过对API采取特定的规范来提升API的性能、可扩展性并简化API。
 
-It has gained popularity because of the opportunity to cover various devices and applications. Below you will find some of the purposes of using REST APIs.
+由于可以广泛兼容各种设备和应用，REST API变得越来越受欢迎。下图列举了使用REST API的一些场景：
 
 ![Jk2xFwUgtgRzOuJuSa9kiWPPe51CN0qLd2hXMJ3F2SyW6MM10Gzq2qIY36dDQQj6fPJPG7Axl3q431QumWwi3WtYyFC1FA5TcI1i7i5PeQOO38tpdSCgIF0dJktnVhoWvVjAwFOK](https://lh4.googleusercontent.com/Jk2xFwUgtgRzOuJuSa9kiWPPe51CN0qLd2hXMJ3F2SyW6MM10Gzq2qIY36dDQQj6fPJPG7Axl3q431QumWwi3WtYyFC1FA5TcI1i7i5PeQOO38tpdSCgIF0dJktnVhoWvVjAwFOK)
 
-### 1\. Web Use
+### 1\. Web使用
 
-There’s no specific client-side technology for REST as it suits diverse projects, such as:
+REST并没有限制客户端技术，因此适用于各种各样的项目，如：
 
--   web development
--   iOS apps
--   IoT devices
--   Windows Phone apps
+-   web开发
+-   iOS应用
+-   IoT设备
+-   Windows手机应用
 
-As you won’t have to stick to a specific client-side stack, you can build any infrastructure for your company.
+因为不必拘泥于某一种客户端技术栈，所以你可以使用REST为公司搭建任意基础设施。
 
-### 2\. Applications in the Cloud
+### 2\. 云应用
 
-REST API calls are ideal for cloud applications due to their statelessness. If something goes wrong, you can re-deploy stateless components, and they can grow to manage traffic shifts.
+由于无状态特性，调用REST API对于云应用来说是理想的解决方案。一旦出现问题，你可以重新部署无状态组件，组件会管理流量转移。
 
-### 3\. Cloud Computing
+### 3\. 云计算
 
-An API connection to a service requires controlling how the URL is decoded. That’s why REST has become more useful in cloud services.
+与服务连接的API需要控制URL的解码方式，所以REST在云服务中作用巨大。
 
-RESTful API architecture will become the norm in the future, thanks to cloud computing and microservices.
+云计算和微服务的发展使得RESTful API架构在将来会成为一种常态。
 
-## How do REST APIs Work?
+## REST API是如何运作的?
 
-Data (such as images, videos, and text) embody resources in REST. A client visits a specific URL and sends a server request to receive a response.
+数据（如：图像、视频和文本）实体化了REST的资源。客户浏览一个特定的URL，并向服务器发送请求以获得响应。
 
 ![HwYHNtAz8M84Tggswzk662nm_dyGUA77st12KGsiqw4rVBGqhJM2gQ5wgL2sL8ZhWmwOGsoEJx6Uqt7TdxU4Bkbg_uccr2UVTXtWsxnR495yZReGoY_reZEd9rq5_9vnjiaUUBs2](https://lh4.googleusercontent.com/HwYHNtAz8M84Tggswzk662nm_dyGUA77st12KGsiqw4rVBGqhJM2gQ5wgL2sL8ZhWmwOGsoEJx6Uqt7TdxU4Bkbg_uccr2UVTXtWsxnR495yZReGoY_reZEd9rq5_9vnjiaUUBs2)
 
-### **The Concept Behind REST APIs**
+### **REST API背后的概念**
 
-A request (the URL you access) contains four components, which are:
+一个请求（你访问的URL）包含以下四个方面：
 
--   the **endpoint**, which is the URL with the structure `root-endpoint/?`
--   the **method** with one of the five possible types (GET, POST, PUT, PATCH, DELETE)
--   the **headers**, serving various functions, including authentication and providing information about the content of the body (you can use the `-H` or `--header` option to send HTTP headers)
--   **data (or body)**, that’s what you send to the server through the `-d` or `--data` option with POST, PUT, PATCH, or DELETE requests.
+-   **终点（路径）**， 即以 `root-endpoint/?`为结构的URL
+-   **请求方式**， 有五种请求方式： GET, POST, PUT, PATCH, DELETE
+-   **请求头**， 包含各种功能，如信息验证以及请求体的内容(可以使用 `-H`或`--header`来发送HTTP请求头)
+-   **数据（请求体）**， 是你通过 `-d`或`--data`向服务器发送的POST, PUT, PATCH或DELETE请求。
 
-The HTTP requests allow you to operate with the database, such as:
+HTTP请求允许你使用以下方式处理数据，如：
 
--   POST request to create records
--   GET request to read or get a resource (a document or image, a collection of other resources) from the server
--   PUT and PATCH requests to update records
--   DELETE request to delete a resource from a server
+-   POST请求创建记录
+-   GET请求从服务器读取或获取资源（如图像文件或者其他资源合集）
+-   PUT和PATCH请求更新记录
+-   DELETE请求服务器删除某个资源
 
-These operations stand for four possible actions, known as CRUD: Create, Read, Update and Delete.
-
+这四种方式可以总结为CRUD（增删查改）：建立（Create）、读取（Read）、改正（Update）和删除（Delete）。
 ![Quydyrq2Zw2Mh3uJj4G9LE40DhjJyWLjRCU9-hqs0uKt-hGCgoyGVP9eiU_6IBnb6GwxsILeu9kqjO5LQ6s7LBmHDtbksnqb13YtPoCKRq062zXi1Pz4wf0GAO27maHMlhamixAz](https://lh5.googleusercontent.com/Quydyrq2Zw2Mh3uJj4G9LE40DhjJyWLjRCU9-hqs0uKt-hGCgoyGVP9eiU_6IBnb6GwxsILeu9kqjO5LQ6s7LBmHDtbksnqb13YtPoCKRq062zXi1Pz4wf0GAO27maHMlhamixAz)
 
-The server sends the data to the client in one of the following formats:
+服务器使用以下格式向客服端发送数据：
 
 -   [HTML](https://www.freecodecamp.org/news/html-best-practices/)
--   JSON (which is the most common one thanks to its independence of computer languages and accessibility by humans and machines)
+-   JSON (由于其独立于计算机语言以及人机都可以访问的特性，这是目前最常用的格式)
 -   XLT
 -   PHP
 -   Python
--   plain text
+-   纯文本
 
-## Why Use a REST API?
+## 为什么使用REST API?
 
-Why should you prefer REST over other APIs, such as SOAP? There are numerous reasons, like scalability, flexibility, portability, and independence.
+选择REST而不是其他的API，如SOA是出于一系列原因，比如：REST易于扩展、操作灵活、可移植性和独立性。
 
 ![yJ2QDrpGbA-RpzwhXOXr1yl9aGTvVHXeiuyBvFxsMtE5KQu2wRmNLwlCX7cNGOlp1TjRK-P9VsBsFaGRNkxZw-QWvggxqXLYFtLg-THClHzB-5GJlMX6hGkY3DQnFh1YpzkHt2iE](https://lh4.googleusercontent.com/yJ2QDrpGbA-RpzwhXOXr1yl9aGTvVHXeiuyBvFxsMtE5KQu2wRmNLwlCX7cNGOlp1TjRK-P9VsBsFaGRNkxZw-QWvggxqXLYFtLg-THClHzB-5GJlMX6hGkY3DQnFh1YpzkHt2iE)
 
-### Not relying on the project structure
+### 不依赖项目架构
 
-A separate client and server operation means that developers aren’t bound to any project parts. Thanks to adaptive REST APIs, they can develop each aspect without influencing another one.
+独立运行的客户端和服务器意味着开发者不受任何项目部分的约束。由于REST API的自适应，开发者可以分别开发各个部分，互不打扰。
 
-### Portability and adaptability
+### 可移植性和适应性
 
-REST APIs work only when the data from one of the requests is successfully delivered. They allow you to migrate from one server to another and update the database at any moment.
+REST API仅当某个请求的数据发送成功时运作。你可以从一个服务器迁移到另一个服务器，并且随时更新数据。
 
-### Opportunity to scale the project in the future
+### 可在未来扩展项目
 
-As the client and server act independently, the coders may swiftly develop the product.
+由于客户端和服务器相互独立，开发者可以迅速开发产品。
 
-## **Features of the RESTful Architecture Style**
+## **RESTful架构的风格特征**
 
-Developers have to consider a rigid structure of some APIs, such as SOAP or XML-RPC. But REST APIs are different. They support a wide range of data types and may be written in practically any programming language.
+若使用SOAP、XML-RPC这类API，开发者必须构思出严谨的架构。但是REST API与众不同，REST广泛支持数据类型，也可以使用几乎任何编程语言编写。
 
-The six REST architectural constraints are principles for designing the solution and are as follows:
+六种REST架构限制是设计解决方案的原则，具体如下：
 
 ![XRsmwgFoTf1sCI3hZf6n5DxHXDqHclunxf6ocqxjUVgWPss5KHiz8wm4fXYzCJ9mkijpfwhGc-YzSO_R1fm9JtOej1T1SQJwngs-wK_Lz0DhUwI2LfCOQWsZvm88nVlkGkmBgV-E](https://lh5.googleusercontent.com/XRsmwgFoTf1sCI3hZf6n5DxHXDqHclunxf6ocqxjUVgWPss5KHiz8wm4fXYzCJ9mkijpfwhGc-YzSO_R1fm9JtOej1T1SQJwngs-wK_Lz0DhUwI2LfCOQWsZvm88nVlkGkmBgV-E)
 
-### **1\. Uniform Interface (A Consistent User Interface)**
+### **1\. 统一接口（一致的用户接口）**
 
-This concept dictates that all API queries for the same resource, regardless of their origin, should be identical, that is, in one specific language. One uniform resource identification (URI) is associated with the same data, such as a user’s name or email address.
+这个概念规定不论源头是哪里，所有请求同一个资源的API必须一致，即使用同一种语言。统一标识符（URI）和关联数据一一对应，如用户名或者电子邮件地址。
 
-Another uniform interface principle states that messages should be self-descriptive. They must be comprehensible for the server to determine how to handle it (for example, the type of request, mime types, and so on).
+统一接口原则的另一个要求是信息必须是自我描述的。即信息必须是服务器可以理解并决定如何处理的（如，请求类型、MIME类型等）。
 
-### **2\. Client-Server Separation**
+### **2\. 客户端和服务器分离**
 
-The REST architectural style takes a peculiar approach to the client and server implementations. The thing is, they can be done independently and don’t have to know about the other.
+REST架构风格采取了特殊的方式实现客户端和服务器。也就是说，客户端和服务器可以在不知道彼此的情况下实现。
 
-For example, the client has only the uniform resource identification (URI) of the requested resource and can’t communicate with the server program any other way. On the other hand, the server shouldn’t affect the client software. So it sends the essential data over HTTP.
+例如，客户端仅使用统一标识符（URI）请求资源，并不能使用其他方式和服务器通信。同时，服务器无法影响客户端，仅通过HTTP协议传输必要的数据。
 
-What does this mean? You can modify the client code at any moment without impacting the server’s operation.
+这意味着你可以随时修改客户端代码，完全不影响服务器的运行。
 
-The server code is in the same boat: changing the server’s side won’t affect the client’s operation.
+这同样适用于服务器：改变服务端的代码不会影响客户端的运行。
 
-You can keep client and server programs both modular and independent as long as each side knows what message format to deliver to the other.
+你可以保持客户端和服务器程序的模块化和独立性，只要两边都知道向对方发送什么格式的信息就行。
 
-What do we achieve by separating the user interface problems from the data storage constraints? We improve the interface flexibility across platforms and boost scalability.
+将用户接口问题和数据存储限制分离的好处是什么呢？我们提高了接口的灵活性，可以跨不同平台使用，并且提高了扩展的可能。
 
-Furthermore, each component benefits from the separation because it can evolve independently. A REST interface assists different clients in:
+另外，每一个组件从分离受益，因为组件可以独立进化。一个REST接口可以帮助不同的客户端：
 
--   accessing the same REST endpoints
--   executing identical activities
--   receiving similar responses
+-   访问相同的REST终点
+-   执行相同的活动
+-   获得相同的响应
 
-### **3\. Stateless Communication Between Clients and Servers**
+### **3\. 客户端和服务器之间的无状态通信**
 
-REST-based systems are stateless, meaning that the client state remains unknown to the server and vice versa. This constraint allows the server and the client to understand any sent message, even if they haven’t seen the preceding ones.
+基于REST的系统是无状态的，意味着客户端状态对于服务器来说未知，反之亦然。这样的限制可以确保服务器和客户端之间理解每条信息，即便是上一条信息不知情的情况下。
 
-To enforce this constraint of statelessness, you need to use resources rather than commands. These are the nouns of the web. Their purpose is to describe any object you may want to keep or communicate to other services.
+为了加强对无状态的限制，你必须使用资源而非命令。资源是网络的名词。使用名词的目的是描述你想要从其他服务获取或者通信的对象。
 
-You can control, change, and reuse components without affecting the system as a whole, so the benefits of this constraint include achieving:
+你可以在不影响这个系统的情况下控制、改变以及复用组件，所以限制的好处包括：
 
--   stability
--   speed
--   scalability of RESTful applications
+-   稳定性
+-   速度
+-   RESTful应用的可扩展性
 
-Note that each request should include all the information required to complete it. Client applications have to save the session state since server apps shouldn’t store any data linked with a client request.
+注意每一个请求必须包括你想要的所有信息，这个请求才得以完成。客户端必须保存会话状态，因为服务端不会存储和请求相关的任何数据。
 
-### **4\. Cacheable Data**
+### **4\. 可缓存数据**
 
-REST requires caching client-side or server-side resources wherever possible. Data and response caching are critical in today’s world because it results in better client-side performance.
+REST要求在可能的情况下缓存服务端和客户端的资源。网络发展到今天，数据和响应的缓存对于客户端性能提升至关重要。
 
-How does it affect a user? Well-managed caching can reduce or eliminate some client-server interactions.
+这对用户有什么影响？一个管理良好的缓存可以减少客户端的通信。
 
-It also gives the server more scalability options due to the smaller burden on the server. Caching increases the page load speed and allows you to access previously viewed content without an Internet connection.
+缓存也增加了服务器扩展的可能性，因为这样减轻了服务器的任务压力。缓存提高了页面加载的速度，同时也使得用户可以在不需要网络连接的情况下浏览之前浏览过的内容。
 
-### **5\. Layered System Architecture**
+### **5\. 分层系统架构**
 
 ![DBk2dcqnTMZdz-dBA0sFDUe5cQu71VxMqG8pW-ux4rqNvkVcsixRNR_ZyuY1z6UeWWZ5NRV11FPIv8XYK86EGr2G-Nnb7O_njC9PER6a5TdmfpZ2qmRTI7f9P--S7QU50cYwD9EC](https://lh3.googleusercontent.com/DBk2dcqnTMZdz-dBA0sFDUe5cQu71VxMqG8pW-ux4rqNvkVcsixRNR_ZyuY1z6UeWWZ5NRV11FPIv8XYK86EGr2G-Nnb7O_njC9PER6a5TdmfpZ2qmRTI7f9P--S7QU50cYwD9EC)
 
-The RESTful layered design structure is the next constraint under discussion. This principle involves grouping different layers with specified functions.
+RESTful分层架构也是我们要讨论的一个限制。这个原则是将特定功能的层分到一组。
 
-The REST API layers have their responsibilities and come in hierarchical order. For example, one layer may be responsible for storing data on the server, the second for deploying the APIs on another server, and the third for authenticating requests in another server.
+REST API的层各司其职，并且按层次顺序排列。例如，第一层是负责从服务器存储数据的，第二层就负责从另一个服务器部署API，第三层就负责从再一个服务器验证请求。
 
-These layers act as mediators and prevent direct interaction between the client and server apps. As a result, a client doesn’t know which server or component they address.
+这些分层像中间人一样防止服务器和客户端直接通信。所以，客户端并不知道他们的请求发送给了哪一个服务器或者组件。
 
-What does it mean when each layer performs its function before transferring the data to the next? It improves the API’s overall security and flexibility because adding, altering, or removing APIs doesn’t affect other interface components.
+在传输信息前每一层各司其职意味着什么？这样可以提高API整体的安全性和灵活性，因为增加、修改或者删除API都不会影响其他接口组件。
 
-### **6\. On-Demand Coding (Non-obligatory)**
+### **6\. 按需编码（非强制性）**
 
-The most common scenario of using REST APIs is to deliver static resource representations in XML or JSON.
+使用REST API最常见的场景是传输如XML或者JSON格式的静态资源。
 
-However, this architectural style allows users to download and run code in the form of Java applets or scripts (such as JavaScript). For example, clients can retrieve the rendering code for UI widgets by calling your API.
+这样的架构风格方便用户以Java小程序或脚本（JavaScript）的形式来下载并运行代码。例如，客户端可以调用API来检索和渲染UI插件的代码。
 
-## **Challenges You Should Expect When Using REST APIs**
+## **使用REST API面临的挑战**
 
-When you’ve understood REST API design and architectural constraints, you should know the issues to expect while employing this architectural style:
+了解REST API的设计和架构限制后，你需要了解使用这种架构风格将迎接的问题：
 
 ![FnzdrS-v1CIkyY6lWVBZymkIbLGDOQb4ZFAPqcJD6_EDL9QL1Xd3KGwd2SP24GfYO2CTwO4-9ra4a8Dc8gOvokndr3uO7Zt0-VOjQjR6bdcLrSH3SWK0vmAeg5mZlEavHkgpsIhh](https://lh3.googleusercontent.com/FnzdrS-v1CIkyY6lWVBZymkIbLGDOQb4ZFAPqcJD6_EDL9QL1Xd3KGwd2SP24GfYO2CTwO4-9ra4a8Dc8gOvokndr3uO7Zt0-VOjQjR6bdcLrSH3SWK0vmAeg5mZlEavHkgpsIhh)
 
-### Agreement on REST endpoints
+### REST终点的一致性
 
-APIs should remain consistent regardless of the URL construction. But with the growth of possible combinations of methods, it’s harder to maintain uniformity in large codebases.
+无论URL如何构造，API都应该保持一致。但随着可用组合方法数量的增加，保持大型代码库的一致性变得越来越难。
 
-### Versioning as a feature of REST APIs
+### REST API的特性版本
 
-APIs require regular [updating or versioning](https://www.freecodecamp.org/news/how-to-version-a-rest-api/) to prevent issues with compatibility. However, old endpoints remain operational, which increases the workload.
+API需要定期[更新或控制版本](https://www.freecodecamp.org/news/how-to-version-a-rest-api/)以防止兼容性问题。旧版本的终点保持运行常常会增加工作量。
 
-### A lot of authentication methods
+### 大量认证方式
 
-You can specify what resources are available to what user types. For example, you can determine which third-party services can access customer email addresses or other sensitive information and what they can do with these variables.
+你可以限制特定用户访问特定资源。比方说，你可以决定哪一个第三方服务器可以访问顾客的电子邮箱地址或者其他的敏感信息，以及服务器可以对这个信息做什么。
 
-But the 20 different authorization methods that exist can make your initial API call difficult. That’s why developers don’t proceed with the project due to the initial difficulties.
+但20个各不相同的认证方式会导致初始化API调用变得十分复杂。这一初始化难题使得开发者不愿意推进项目进展。
 
-### REST API security vulnerabilities
+### REST API的安全弱点
 
-Although RESTful APIs have a layered structure, there still may be some security concerns. For example, if an application isn’t secure enough due to a lack of encryption, it can expose sensitive data.
+尽管RESTful API是分层结构，仍存在安全隐患。例如一个应用因为缺乏加密而不够安全，就会泄露敏感数据。
 
-Or a hacker may send thousands of API requests per second, causing a DDoS attack or other misuses of the API service to crash your server.
+又比如黑客每秒发送成千上万的API请求，导致DDoS攻击，或者采用其他滥用API服务的行为，使服务器崩溃。
 
-### Excessive data collection and requests
+### 过量的数据收集和请求
 
-A server may return a request with all the data, which may be unnecessary. Or you might need to run multiple queries to get the needed information.
+服务器可能会返回一个请求的所有信息，有时是没有必要的。或者你需要运行多个请求来获取有用的信息。
 
-## **Wrapping Up**
+## **总结**
 
-There’s no surprise that APIs are predicted to streamline web-based communications in the future. Their purpose is to allow any web apps to interact and share data.
+毫不意外API会在未来简化web通信。API的目的就是助力web应用的通信和数据的共享。
 
-For example, they assist growing online businesses in developing robust and inventive systems. As the API architecture evolves, it adopts lighter and more flexible variants, which are critical for mobile apps and scattered networks.
+通过开发强大且富有创造性的系统，API帮助在线业务的发展。随着API架构的进化，会出现更加轻量、更灵活的变体，这对于手机应用和分散网络的发展至关重要。
 
-So in this article you learned the basics of what you need to know about using REST APIs.
+在这篇文章中你学习了REST API的基础。

@@ -851,9 +851,9 @@ _kismet_home_alerts.py 脚本将支持两种模式:
 
 ![kismet_home_alerts](https://www.freecodecamp.org/news/content/images/2022/03/kismet_home_alerts.png)
 
-Alerts for my local network, with anonymous MAC addresses and filtered
+来自我的本地网络的警报，有匿名的 MAC 地址和经过过滤的
 
-How you can generate these tables with ease? There is a dedicated class for the text user interface (TUI):
+你如何能轻松地生成这些表格？有一个文本用户界面（TUI）的专用类:
 
 ```python
 from typing import List, Dict, Any
@@ -977,7 +977,7 @@ def create_alert_layout(
     return layout, filtered_definitions
 ```
 
-And now with all the ingredients ready, we can see how the final script looks:
+现在所有的材料都准备好了，我们可以看看最后的脚本是什么样子的:
 
 ```python
 #!/usr/bin/env python
@@ -1066,18 +1066,17 @@ if __name__ == '__main__':
     sys.exit(0)
 ```
 
-A few things to note:
+有几件事需要注意:
 
-- This is not a long-running application. Instead, is a snapshot of all the alerts. If you wanted, for example, to forward these alerts by email or to a framework like [grafana](https://grafana.com/), you are better off using [Websockets](https://pypi.org/project/websockets/) and one of the methods that retrieves only the last changes.
-- The layout is crude, and there is plenty of room for improvement. But our little tui is displaying relevant information without too many distractions
-- And if was fun to code!
+- 这不是一个长期运行的应用程序。相反，是所有警报的一个快照。如果你想通过电子邮件或像 [grafana](https://grafana.com/), 这样的框架来转发这些警报。你最好使用 [Websockets](https://pypi.org/project/websockets/) 和其中一个只检索最后的变化的方法。
+- 这个布局很粗糙，还有很多改进的余地。但我们的小 TUI 正在显示相关的信息，没有太多的干扰。
+- 而且，编写代码也很有趣!
 
 # What did we learn?
 
-- How to install Kismet and secure it with a self-signed SSL certificate
-- How to write a simple Bash script to set up the correct Wireless interface in monitor mode, after the RaspBerryPI reboots
-- How to add an API KEY with read-only access to use it instead of the legacy user/ password schema for authentication and authorization
-- How to write classes in Python that can communicate with Kismet using its REST-API
-- How to add unit and integration tests to the code to make sure everything works and new code changes do not break existing functionality
-
-Please leave your comments on the [git repository](https://github.com/josevnz/kismet_home) and report any bugs. But more important get Kismet, get the code of this tutorial, and start securing your home wireless infrastructure in no time.
+- 如何安装 Kismet 并使用自签名的 SSL 证书来保护它
+- 如何编写一个简单的 Bash 脚本，在树莓派重新启动后，在监控模式下设置正确的无线接口
+- 如何添加一个具有只读权限的 API KEY，用它来代替传统的用户/密码模式进行认证和授权
+- 如何用 Python 写类，可以使用 REST-API 与 Kismet 通信
+- 如何为代码添加单元和集成测试，以确保一切正常，新的代码修改不会破坏现有功能
+请在 [git 仓库](https://github.com/josevnz/kismet_home) 上留下你的评论，并报告任何 bug。但更重要的是获得 Kismet，获得本教程的代码，并立即开始保护你的家庭无线基础设施。

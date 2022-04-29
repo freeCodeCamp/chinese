@@ -698,13 +698,13 @@ class KismetResultsParser:
         return datetime.fromtimestamp(timestamp)
 ```
 
-If you run the integration tests with the admin role enabled, you will see than one or more (depending how many times you ran the test) alerts were added to the Web UI:
+如果你在启用管理员角色的情况下运行集成测试，你会看到比一个或多个（取决于你运行测试的次数）警报被添加到 Web UI:
 
 ![kismet_generated_alerts](https://www.freecodecamp.org/news/content/images/2022/03/kismet_generated_alerts.png)
 
-These alerts where generated using the Python client and the REST API
+这些警报是使用 Python 客户端和 REST API 生成的
 
-As a reminder, you can see how this is used by looking at the code [here](https://github.com/josevnz/kismet_home/blob/main/test/test_integration_kismet.py). Showing a sample run of all the integration tests against my installation (this one without publishing alerts, so some tests are skipped):
+这是一个提醒，你可以通过查看代码 [这里](https://github.com/josevnz/kismet_home/blob/main/test/test_integration_kismet.py) 看到这是如何使用的。显示针对我的安装的所有集成测试的样本运行（这个没有发布警报，所以有些测试被跳过）:
 
 ```shell
 (kismet_home) [josevnz@dmaf5 kismet_home]$ python -m unittest /home/josevnz/kismet_home/test/test_integration_kismet.py 
@@ -725,7 +725,7 @@ OK
 
 ### Where do we store our API key and other configuration details?
 
-Details like this won't be hardcoded inside the scripts, but instead they will reside on an external configuration file:
+像这样的细节不会在脚本中硬编码，而是存在于一个外部配置文件中:
 
 ```shell
 (kismet_home) [josevnz@dmaf5 kismet_home]$ cat ~/.config/kodegeek/kismet_home/config.ini 
@@ -734,7 +734,7 @@ url = http://raspberrypi.home:2501
 api_key = E41CAD466552810392D538FF8D43E2C5
 ```
 
-The following classes handle all the access details (using a Reader and a Writer class for each type of operation):
+下面的类处理所有的访问细节（为每种类型的操作使用一个 Reader 类和一个 Writer 类）:
 
 ```python
 """
@@ -812,7 +812,7 @@ class Writer:
         CONSOLE.log(f"Configuration file {config_file} written")
 ```
 
-The first time you set up your kismet\_home installation, you can create the configuration files like this:
+第一次设置你的 kismet_home 安装时，你可以像这样创建配置文件:
 
 ```shell
 [josevnz@dmaf5 kismet_home]$ python3 -m venv ~/virtualenv/kismet_home
@@ -830,24 +830,24 @@ Please enter your API key: E41CAD466552810392D538FF8D43E2C5
            Configuration file /home/josevnz/.config/kodegeek/kismet_home/config.ini written
 ```
 
-Please note the use of the virtual environment here. This will allow us to keep the application's libraries self-contained.
+请注意这里使用的是虚拟环境。这将使我们能够保持应用程序的库独立，避免污染。
 
-## Putting everything together: How to Write our CLI for kismet\_home
+## Putting everything together: How to Write our CLI for kismet_home
 
-The _kismet\_home\_alerts.py_ script will support two modes:
+_kismet_home_alerts.py 脚本将支持两种模式:
 
-- Show the alert definitions
-- Show all the alerts
+- 显示警报的定义
+- 显示所有警报
 
-Also, it will allow filtering alerts based on the level (INFO, MEDIUM, HIGH, ...).
+此外，它还允许根据级别来过滤警报 (INFO, MEDIUM, HIGH, ...)。
 
-Showing all the definitions, filtered by CRITICAL:
+显示所有的定义，按 CRITICAL 过滤:
 
 ![alert_definitions_filtered_by_level](https://www.freecodecamp.org/news/content/images/2022/03/alert_definitions_filtered_by_level.png)
 
-You can see here the alert definitions filtered by level
+你可以在这里看到按级别过滤的警报定义
 
-Or showing all the alerts received so far, with anonymous MAC address (great for screenshots like this):
+或者显示到目前为止收到的所有警报，以及匿名的 MAC 地址（像这样的截图很有帮助）:
 
 ![kismet_home_alerts](https://www.freecodecamp.org/news/content/images/2022/03/kismet_home_alerts.png)
 

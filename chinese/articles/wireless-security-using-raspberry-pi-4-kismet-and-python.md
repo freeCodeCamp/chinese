@@ -358,44 +358,44 @@ KISMETOVERR
 fi
 ```
 
-Finally, it is time to start Kismet (in my case as the non-root user josevnz):
+最后，是时候启动 Kismet 了（在我的例子中是作为非 root 用户 josevnz）:
 
-```shell=
+```shell
 # If you know which interface is the one in monitoring mode, then 
 josevnz@raspberrypi:~$ kismet
 ```
 
-Now let's log on for the first time to the web interface (In my case [http://raspberripi.home:2501](http://raspberripi.home:2501))
+现在让我们第一次登录到网络管理界面（在我的例子中是 [http://raspberripi.home:2501](http://raspberripi.home:2501))
 
 ![kismet-set-login](https://www.freecodecamp.org/news/content/images/2022/03/kismet-set-login.png)
 
-You will get a prompt the first time you try to log in your Kismet installation
+在你第一次尝试登录你的 Kismet 安装时，你会得到一个提示
 
-In here you set up your admin user and password.
+在这里你要设置你的管理员用户和密码。
 
 ![kismet-main-screen](https://www.freecodecamp.org/news/content/images/2022/03/kismet-main-screen.png)
 
-Example of the wireless networks detected
+检测到的无线网络的例子。
 
-After a little time, Kismet will populate the main Dashboard with the list of wireless networks and devices it can detect. You will be surprised not just how many neighboring devices are out there but how many you have in your own house.
+一段时间后，Kismet 会在主仪表板上弹出它能检测到的无线网络和设备的列表。你不仅会惊讶于外面有多少邻近的设备，而且会惊讶于你自己的房子里有多少设备。
 
-In my example, the wireless devices around me look pretty normal, except one that doesn't have a name:
+在我的例子中，我周围的无线设备看起来很正常，除了一个没有名字的设备:
 
 ![suspect-device-details-kismet](https://www.freecodecamp.org/news/content/images/2022/03/suspect-device-details-kismet.png)
 
-A device with suspicious characteristics
+一个具有可疑特征的设备
 
-The web interface provides all sorts of useful information, but is there an easy way to filter all the mac addresses on my networks?
+网页界面提供了各种有用的信息，但有没有一种简单的方法来过滤我网络上的所有 Mac 地址？
 
-Kismet has a REST API, so it is time to see what we can automate from there.
+Kismet 有一个 REST API，所以现在是时候看看我们能从那里自动化什么了。
 
 # REST-API in Python
 
-The [developer documentation](https://www.kismetwireless.net/docs/devel_group.html) contains examples of how to extend Kismet, specifically the one related to the [official Kismet REST-API in Python](https://github.com/kismetwireless/python-kismet-rest).
+[开发者文档](https://www.kismetwireless.net/docs/devel_group.html) 包含了如何扩展 Kismet 的例子，特别是与 [官方 Kismet REST-API in Python](https://github.com/kismetwireless/python-kismet-rest) 相关的例子。
 
-But it seems to be missing a feature to use API keys, instead of user/password. And the interaction with the end points doesn't seem to be complicated, so I will write my (less rich feature) wrapper.
+但它似乎缺少一个使用 API 密钥的功能，而不是用户/密码。而且与终端的交互似乎并不复杂，所以我将写我的（功能简单）包装器。
 
-You can download and install the code for a small application I wrote ([kismet\_home](https://github.com/josevnz/kismet_home) to illustrate how to work with Kismet (also has a copy of this tutorial) like this:
+你可以下载并安装我写的一个简单程序的代码（[kismet_home](https://github.com/josevnz/kismet_home)，以说明如何与 Kismet 一起工作（也有本教程的副本），像这样。:
 
 ```shell
 python3 -m venv ~/virtualenv/kismet_home
@@ -406,24 +406,24 @@ python setup.py bdist_wheel
 pip install kismet_home-0.0.1-py3-none-any.whl
 ```
 
-And then run the unit tests/ integration tests and even the third party vulnerability scanner:
+然后运行单元测试/集成测试，甚至是第三方的漏洞扫描器:
 
 ```shell
 . ~/virtualenv/kismet_home/bin/activate
-# Unit/ integration tests
+# 单元测试/集成测试
 python -m unittest test/unit_test_config.py
 python -m unittest /home/josevnz/kismet_home/test/test_integration_kismet.py
-# Third party vulnerability scanner
+# 第三方的漏洞扫描器
 pip-audit  --requirement requirements.txt
 ```
 
-You will find more details on the [README.md](https://github.com/josevnz/kismet_home/blob/main/README.md) and [DEVELOPER.md](https://github.com/josevnz/kismet_home/blob/main/DEVELOPER.md) files.
+你可以在 [README.md](https://github.com/josevnz/kismet_home/blob/main/README.md) 和 [DEVELOPER.md](https://github.com/josevnz/kismet_home/blob/main/DEVELOPER.md) 文件中找到更多细节。
 
-Let's move on with the code.
+让我们继续学习代码。
 
 ### How to Interact with Kismet using Python
 
-First I'll write a generic HTTP client I can use to query or send commands to Kismet, that is the _KismetWorker_ class:
+首先我将写一个通用的 HTTP 客户端，我可以用它来查询或发送命令给 Kismet，这就是 _KismetWorker_ 类:
 
 ```python
 import json
@@ -507,19 +507,19 @@ class KismetWorker(KismetBase):
         return json.loads(r.text)
 ```
 
-The way Kismet API works is that you make the API KEY part of the query, or you define it in the KISMET cookie. I choose to populate the cookie.
+Kismet API 的工作方式是，你把 API KEY 作为查询的一部分，或者在 KISMET cookie 中定义它。我选择填入 cookie。
 
-KismetWorker implements the following methods:
+KismetWorker 实现了以下方法:
 
-- **check\_session**: It checks if your API KEY is valid. If not it will throw an exception.
-- **check\_system\_status**: Validates if the administrator (you most likely) defined an administrator for the Kismet server. If not, then all the API queries will fail.
-- **get\_all\_alerts**: Gets all the available alerts (if any) from your Kismet server.
-- **get\_alert\_by\_hash**: If you know the identifier (hash) of an alert, you can retrieve the details of that event only.
-- **get\_alert\_definitions**: Get all the alert definitions. Kismet supports a wide range of alerts and a user will definitely be interested to find out what type of alerts they are.
+- **check_session**: 它检查你的 API KEY 是否有效。如果不是，它将抛出一个异常。
+- **check_system_status**: 验证管理员（很可能是你）是否为 Kismet 服务器定义了一个管理员。如果不是，那么所有的 API 查询都会失败。
+- **get_all_alerts**:从你的 Kismet 服务器获取所有可用的警报（如果有的话）。
+- **get_alert_by_hash**:如果你知道一个警报的标识符（哈希值），你可以只检索该事件的细节。
+- **get_alert_definitions**: 获取所有警报的定义。Kismet 支持广泛的警报，用户肯定会有兴趣知道它们是什么类型的警报。
 
-You can see [all the integration code](https://github.com/josevnz/kismet_home/blob/main/test/test_integration_kismet.py) here to see how the methods work in action.
+你可以在这里看到 [所有的集成代码](https://github.com/josevnz/kismet_home/blob/main/test/test_integration_kismet.py)，看看这些方法是如何实际工作的。
 
-I also wrote a class that requires admin privileges. I use it to define a custom alert type and to send alerts using that type to Kismet, as part of the integration tests. Right now I don't have much use of sending custom alerts to Kismet in real life, but that may change in the future, so here is the code:
+我还写了一个需要管理员权限的类。我用它来定义一个自定义警报类型，并使用该类型向 Kismet 发送警报，作为集成测试的一部分。现在我在现实生活中没有太多使用发送自定义警报给 Kismet 的机会，但这在将来可能会改变，所以这里是代码:
 
 ```python
 class KismetAdmin(KismetBase):
@@ -578,17 +578,17 @@ class KismetAdmin(KismetBase):
         r.raise_for_status()
 ```
 
-Getting the data is just part of the story. We need to normalize it, so it can be used by the final scripts.
+获取数据只是故事的一部分。我们需要将其规范化，以便最终的脚本可以使用。
 
 ### How to Normalize the Kismet raw data
 
-Kismet contains a lot of details about the alerts, but we do not require to show the user those details (think about the nice view you get with the web application). Instead we do a few transformations using the following class with static methods:
+Kismet 包含了很多关于警报的细节，但我们不要求向用户展示这些细节（想想你在网络应用中得到的漂亮视图）。相反，我们使用下面这个带有静态方法的类做一些转换:
 
-- **parse\_alert\_definitions**: Returns a simplified report of all the alert definitions
-- **process\_alerts**: Changes numeric alerts for more descriptive types and also returns dictionaries for the types and severity meaning of those alerts.
-- **pretty\_timestamp**: Converts the numeric timestamp into something we can use for comparisons and display
+- **parse_alert_definitions**: 返回所有警报定义的简化报告。
+- **process_alerts**: 将数字警报改为更多的描述性类型，同时返回这些警报的类型和严重程度含义的字典。
+- **pretty_timestamp**: : 将数字时间戳转换为我们可以用于比较和显示的东西。
 
-The code for the _KismetResultsParser_ helper class:
+ _KismetResultsParser_ 助手类的代码:
 
 ```python
 class KismetResultsParser:

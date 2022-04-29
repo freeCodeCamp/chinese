@@ -29,19 +29,19 @@
 
 # 目录
 
-- [The saying 'Ask for forgiveness, not permission' doesn't apply here](#the-saying-ask-for-forgiveness-not-permission-doesn-t-apply-here)
-- [Getting to know your hardware](#getting-to-know-your-hardware)
-- [kismet](#kismet)
-- [REST-API](#restapi)
-- [What did we learn?](#what-did-we-learn)
+- [请求宽恕，而不是请求允许,这句话在这里并不适用](./#the-saying-ask-for-forgiveness-not-permission-doesn-t-apply-here)
+- [了解你的硬件](./#getting-to-know-your-hardware)
+- [什么是 kismet](./#kismet)
+- [REST-API 在 Python 中的应用](./#restapi)
+- [我们学到了什么?](./#what-did-we-learn)
 
-# The saying 'Ask for forgiveness, not permission' doesn't apply here
+<h2 id="the-saying-ask-for-forgiveness-not-permission-doesn-t-apply-here">请求宽恕，而不是请求允许,这句话在这里并不适用</h2>
 
 而我的意思是，_你不应该试图窃听或渗透到一个不属于你的无线网络，而且这也是非法的_。检测一个新的未知客户是否加入了你的无线网络是比较容易的。
 
 所以要做正确的事——用这个教程来学习，而不是闯入别人的网络。
 
-# Getting to know your hardware
+<h2 id="getting-to-know-your-hardware">了解你的硬件</h2>
 
 我将跳到前面一点，向你展示树莓派 4 集成无线接口的一个小问题。
 
@@ -51,7 +51,7 @@
 
 CanaKit 的无线网卡开箱即用，我们很快就会看到它。但首先让我们安装并玩一玩 Kismet。
 
-## Make sure the interface is running in monitor mode
+## 确保接口在监控模式下运行
 
 默认情况下，网络接口的监控模式（monitor mode）为关闭:
 
@@ -126,13 +126,13 @@ wlan1     IEEE 802.11  Mode:Monitor  Frequency:2.412 GHz  Tx-Power=20 dBm
 
 很好，让我们继续进行设置。
 
-# What is Kismet?
+<h2 id="kismet">什么是 kismet</h2>
 
 [Kismet](https://www.kismetwireless.net/):
 
 > 一个无线网络和设备检测器、嗅探器、驱赶工具和 WIDS（无线入侵检测）框架。
 
-## Kismet installation and setup
+## Kismet 的安装和设置
 
 默认情况下，安装在树莓派 4 的 Ubuntu 上的 Kismet 是 2016 年的版本，_太老了_ 。
 
@@ -145,7 +145,7 @@ sudo apt update
 sudo apt install kismet
 ```
 
-### Do not run as root, use a [SUID binary](https://en.wikipedia.org/wiki/Setuid) and a unix group access
+### 不要以 root 身份运行，使用[SUID 二进制](https://en.wikipedia.org/wiki/Setuid)和 unix 组访问
 
 Kismet 需要较高的权限才能运行。并且要处理可能有入侵性质的数据。所以用最小化的权限运行是最安全的方法。
 
@@ -156,7 +156,7 @@ sudo apt-get install kismet
 sudo usermod --append --groups kismet josevnz
 ```
 
-### Encrypt your access to Kismet with a self-signed certificate
+### 用自签名的证书加密你对 Kismet 的访问
 
 我将为我的 Kismet 启用 SSL [通过使用自签名证书安装](https://github.com/josevnz/home_nmap/tree/main/tutorial)。为此，我将使用 Cloudflare CFSSL 工具:
 
@@ -167,7 +167,7 @@ sudo apt-get install -y golang-cfssl
 
 下一步是创建自签名的证书。这里有很多模板步骤，所以我将告诉你如何跳过这些步骤（但请阅读手册以了解每个命令的作用）:
 
-#### Initial certificate
+#### 初始证书
 
 ```shell
 sudo /bin/mkdir --parents /etc/pki/raspberrypi
@@ -192,7 +192,7 @@ CA
 cfssl gencert -initca ca.json | cfssljson -bare ca
 ```
 
-#### SSL profile config
+#### SSL 配置文件配置
 
 ```shell
 root@raspberrypi:/etc/pki/raspberrypi# /bin/cat<<PROFILE>/etc/pki/raspberrypi/cfssl.json
@@ -253,7 +253,7 @@ root@raspberrypi:/etc/pki/raspberrypi# /bin/cat<<PROFILE>/etc/pki/raspberrypi/cf
 PROFILE
 ```
 
-#### Intermediate certificate
+#### 中级（Intermediate）证书
 
 ```shell
 root@raspberrypi:/etc/pki/raspberrypi# /bin/cat<<INTERMEDIATE>/etc/pki/raspberrypi/intermediate-ca.json
@@ -281,7 +281,7 @@ cfssl gencert -initca intermediate-ca.json | cfssljson -bare intermediate_ca
 cfssl sign -ca ca.pem -ca-key ca-key.pem -config cfssl.json -profile intermediate_ca intermediate_ca.csr | cfssljson -bare intermediate_ca
 ```
 
-#### Configuration for the SSL certificate on the Raspberry PI 4 machine
+#### 在 树莓派 4 机器上配置 SSL 证书
 
 在这里，我们把运行 Kismet 网络应用的机器的名称和 IP 地址放在这里:
 
@@ -332,7 +332,7 @@ SSL
 
 (译者注：你可以尝试 [mkcert](https://github.com/FiloSottile/mkcert),这个签发证书更简单。)
 
-### Putting everything together, with a Kismet 'site' overrides file
+### 把所有东西放在一起，用 Kismet `site` 重写文件
 
 Kismet 有一个非常好的功能：它可以使用一个文件来覆盖一些默认值，而不需要编辑多个文件。在这种情况下，我的安装将覆盖 SSL 设置、Wifi 接口和日志位置。所以是时候更新我们的 `/etc/rc.local` 文件了:
 
@@ -389,7 +389,7 @@ josevnz@raspberrypi:~$ kismet
 
 Kismet 有一个 REST API，所以现在是时候看看我们能从那里自动化什么了。
 
-# REST-API in Python
+<h2 id="restapi">REST-API 在 Python 中的应用</h2>
 
 [开发者文档](https://www.kismetwireless.net/docs/devel_group.html) 包含了如何扩展 Kismet 的例子，特别是与 [官方 Kismet REST-API in Python](https://github.com/kismetwireless/python-kismet-rest) 相关的例子。
 
@@ -421,7 +421,7 @@ pip-audit  --requirement requirements.txt
 
 让我们继续学习代码。
 
-### How to Interact with Kismet using Python
+### 如何使用 Python 与 Kismet 交互
 
 首先我将写一个通用的 HTTP 客户端，我可以用它来查询或发送命令给 Kismet，这就是 _KismetWorker_ 类:
 
@@ -580,7 +580,7 @@ class KismetAdmin(KismetBase):
 
 获取数据只是故事的一部分。我们需要将其规范化，以便最终的脚本可以使用。
 
-### How to Normalize the Kismet raw data
+### 如何规范化 Kismet 的原始数据
 
 Kismet 包含了很多关于警报的细节，但我们不要求向用户展示这些细节（想想你在网络应用中得到的漂亮视图）。相反，我们使用下面这个带有静态方法的类做一些转换:
 
@@ -723,7 +723,7 @@ OK
 
 ```
 
-### Where do we store our API key and other configuration details?
+### 我们在哪里存储我们的 API 密钥和其他配置细节？
 
 像这样的细节不会在脚本中硬编码，而是存在于一个外部配置文件中:
 
@@ -832,7 +832,7 @@ Please enter your API key: E41CAD466552810392D538FF8D43E2C5
 
 请注意这里使用的是虚拟环境。这将使我们能够保持应用程序的库独立，避免污染。
 
-## Putting everything together: How to Write our CLI for kismet_home
+## 把一切放在一起。如何为 kismet_home 编写我们的 CLI
 
 _kismet_home_alerts.py 脚本将支持两种模式:
 
@@ -1072,7 +1072,7 @@ if __name__ == '__main__':
 - 这个布局很粗糙，还有很多改进的余地。但我们的小 TUI 正在显示相关的信息，没有太多的干扰。
 - 而且，编写代码也很有趣!
 
-# What did we learn?
+<h2 id="what-did-we-learn">我们学到了什么?</h2>
 
 - 如何安装 Kismet 并使用自签名的 SSL 证书来保护它
 - 如何编写一个简单的 Bash 脚本，在树莓派重新启动后，在监控模式下设置正确的无线接口

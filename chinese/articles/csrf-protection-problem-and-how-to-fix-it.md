@@ -1,7 +1,7 @@
-> -  原文地址：[CSRF Protection Problem and How to Fix it](https://www.freecodecamp.org/news/csrf-protection-problem-and-how-to-fix-it/)
-> -  原文作者：[Jakub T. Jankiewicz](https://www.freecodecamp.org/news/author/jcubic/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[CSRF Protection Problem and How to Fix it](https://www.freecodecamp.org/news/csrf-protection-problem-and-how-to-fix-it/)
+> - 原文作者：[Jakub T. Jankiewicz](https://www.freecodecamp.org/news/author/jcubic/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![CSRF Protection Problem and How to Fix it](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/laptop-security-virus-protection-internet-malware-1588329-pxhere.com.jpg)
 
@@ -13,15 +13,15 @@ But after I'd created the first PR in BitBucket and tried to go on to the next p
 
 So in this article you'll learn what CSRF is and how to fix this error.
 
-## Table of contents:
+## Table of contents
 
--   [What is CSRF?](#what-is-csrf)
--   [Standard CSRF protection](#standard-csrf-protection)
--   [The Problem with Tokens](#the-problem-with-tokens)
--   [Cross-tab Communication Solution](#cross-tab-communication-solution)
-    -   [Sysend library](#sysend-library)
-    -   [Broadcast Channel](#broadcast-channel)
--   [Conclusion](#conclusion)
+- [What is CSRF?](#what-is-csrf)
+- [Standard CSRF protection](#standard-csrf-protection)
+- [The Problem with Tokens](#the-problem-with-tokens)
+- [Cross-tab Communication Solution](#cross-tab-communication-solution)
+  - [Sysend library](#sysend-library)
+  - [Broadcast Channel](#broadcast-channel)
+- [Conclusion](#conclusion)
 
 ## What is CSRF?
 
@@ -145,7 +145,7 @@ const secure_fetch = (token => {
     const channel = new BroadcastChannel('csrf-protection');
     channel.addEventListener('message', (e) => {
         // get new toke from different tab
-    	token = e.data;
+     token = e.data;
     });
     return (url) => {
         const response = await fetch(url, {

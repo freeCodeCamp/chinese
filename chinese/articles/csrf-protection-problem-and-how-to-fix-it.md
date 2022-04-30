@@ -15,21 +15,21 @@
 
 ## Table of contents
 
-- [What is CSRF?](#what-is-csrf)
-- [Standard CSRF protection](#standard-csrf-protection)
-- [The Problem with Tokens](#the-problem-with-tokens)
-- [Cross-tab Communication Solution](#cross-tab-communication-solution)
-  - [Sysend library](#sysend-library)
-  - [Broadcast Channel](#broadcast-channel)
-- [Conclusion](#conclusion)
+- [什么是 CSRF?](./#what-is-csrf)
+- [CSRF 防护的标准](#standard-csrf-protection)
+- [使用口令的问题](./#the-problem-with-tokens)
+- [交叉标签通信解决方案](./#cross-tab-communication-solution)
+  - [Sysend 库](./#sysend-library)
+  - [广播频道](./#broadcast-channel)
+- [总结](./#conclusion)
 
-## What is CSRF?
+<h2 id="what-is-csrf">什么是CSRF?</h2>
 
 CSRF 是 **跨站请求伪造（Cross-Site Request Forgery）** 的首字母缩写。它通常是攻击者用来进入你的系统的一种攻击媒介。
 
 你通常防止 CSRF 的方法是发送一个由每个 HTTP 请求产生的唯一的令牌（token）。如果服务器上的令牌与请求中的令牌不匹配，你会向用户显示一个错误。
 
-## Standard CSRF protection
+<h2 id="standard-csrf-protection">CSRF防护的标准</h2>
 
 这是你用令牌对抗 CSRF 的一种方法:
 
@@ -55,15 +55,15 @@ const secure_fetch = (token => {
 
 这段代码使用 [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) 来发送和接收 [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) 报头中的安全令牌。在后端，你应该在页面加载时生成第一个初始令牌。在服务器上，在每个 [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming))请求中，你应该检查该令牌是否有效。
 
-## The Problem with Tokens
+<h2 id="the-problem-with-tokens">使用口令的问题</h2>
 
 这样做很好，如果你打开一个以上的标签。每个标签都可以向服务器发送请求，这将破坏这个解决方案。而高级用户可能无法以他们想要的方式使用你的应用程序。
 
 但这个问题有一个简单的解决方案，即跨标签通信。
 
-## Cross-tab Communication Solution
+<h2 id="cross-tab-communication-solution">交叉标签通信解决方案</h2>
 
-### Sysend library
+<h3 id="sysend-library">Sysend 库</h3>
 
 你可以使用 [Sysend 库](https://github.com/jcubic/sysend.js)，这是一个开源的解决方案，我专门为此目的而创建。它简化了跨标签的通信。
 
@@ -121,7 +121,7 @@ const secure_fetch = (token => {
 
 就这样了。这将让高级用户在想打开许多标签页时使用你的有 CSRF 保护的应用程序。
 
-### Broadcast Channel
+<h3 id="broadcast-channel">广播频道</h3>
 
 下面是使用广播频道的最简单例子:
 
@@ -198,7 +198,7 @@ channel.postMessage({type: 'login', payload: { user } });
 
 使用具有不同类型信息的广播频道
 
-## Conclusion
+<h2 id="conclusion">总结</h2>
 
 如果您保护您的应用免受攻击，那就太好了。 但是请想清楚人们将如何使用您的应用程序，避免不必要的东西，导致难以使用。这不仅适用于这个特定问题。
 

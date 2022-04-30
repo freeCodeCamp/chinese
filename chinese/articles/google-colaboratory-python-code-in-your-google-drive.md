@@ -1,7 +1,7 @@
-> -  原文地址：[Google Colaboratory – How to Run Python Code in Your Google Drive](https://www.freecodecamp.org/news/google-colaboratory-python-code-in-your-google-drive/)
-> -  原文作者：[Ed Pratowski](https://www.freecodecamp.org/news/author/ed/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Google Colaboratory – How to Run Python Code in Your Google Drive](https://www.freecodecamp.org/news/google-colaboratory-python-code-in-your-google-drive/)
+> - 原文作者：[Ed Pratowski](https://www.freecodecamp.org/news/author/ed/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Google Colaboratory – How to Run Python Code in Your Google Drive](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/image--2-.png)
 
@@ -19,17 +19,14 @@ Because Python runs on a server (and not in your local browser or on your local 
 
 ## How to Add Colab to Your Google Drive
 
-1.  On your computer, in your Google Drive, click the “+ new” button.
+1. On your computer, in your Google Drive, click the “+ new” button.
 
 ![us0e4vwVAXFLV1Zv_07RINIVP3uMish_sPWjumo8Y8LYBjbBqa5fq7Ioxw7KUmbIGGN18mbUcu16EhLpmWreOsqpHqnwyVt6bFvTKTg0B-FdclBXIumNAGSHm8MRQmuYKCMz7Q9_](https://lh4.googleusercontent.com/us0e4vwVAXFLV1Zv_07RINIVP3uMish_sPWjumo8Y8LYBjbBqa5fq7Ioxw7KUmbIGGN18mbUcu16EhLpmWreOsqpHqnwyVt6bFvTKTg0B-FdclBXIumNAGSHm8MRQmuYKCMz7Q9_)
-
-  
 
 2\.  Click “more”, then click “connect more apps” at the bottom of that new menu.
 
 ![kWfy4KkQcuTYxHO0CGiUVsf2PTFRrKEYQzQM1BffRAaarwnIlg3a_zgtD71_NqSzqGnvqRqfTPUi793vgPr6dzNJ6WmhHn9oPePJSaK9h1RNqR5KvwHg2UVj9sYIMBTvizjWtJ_V](https://lh6.googleusercontent.com/kWfy4KkQcuTYxHO0CGiUVsf2PTFRrKEYQzQM1BffRAaarwnIlg3a_zgtD71_NqSzqGnvqRqfTPUi793vgPr6dzNJ6WmhHn9oPePJSaK9h1RNqR5KvwHg2UVj9sYIMBTvizjWtJ_V)
 
-  
 3\.  In the Google Workspace Marketplace, type “colab” into the search box.
 
 ![dLHP0JPcfH2VIFFc_cuJeZZ7Kz5UVKGpVxAY_pQNJoGfuBw8Jg6KoLJ_UCETRmgbxmIE8A31VA3BN9KTwXD4hD6CAfHtTIKgNT-vUSVYLK8J_-I-G0YUgVklUB5zQjBKiozuloih](https://lh5.googleusercontent.com/dLHP0JPcfH2VIFFc_cuJeZZ7Kz5UVKGpVxAY_pQNJoGfuBw8Jg6KoLJ_UCETRmgbxmIE8A31VA3BN9KTwXD4hD6CAfHtTIKgNT-vUSVYLK8J_-I-G0YUgVklUB5zQjBKiozuloih)
@@ -38,12 +35,12 @@ Because Python runs on a server (and not in your local browser or on your local 
 
 ![BShlQ_Hnj829h2ZNUxCJTolVFTYb7EeBoV7TJyqH13pwiS6YZDX95bxVI0RC3Dqp5wl2Mo-B4r8ezHkWFOeRJxFGGuoY9eQYb2ANtEx0nPCxU9aaZQrqEJj_hbePrYTGheWjr0tM](https://lh6.googleusercontent.com/BShlQ_Hnj829h2ZNUxCJTolVFTYb7EeBoV7TJyqH13pwiS6YZDX95bxVI0RC3Dqp5wl2Mo-B4r8ezHkWFOeRJxFGGuoY9eQYb2ANtEx0nPCxU9aaZQrqEJj_hbePrYTGheWjr0tM)
 
-  
 5\.  Now you have Colab in your list of available apps.  
 
 ![Xxwg1qNNyJQDcxrLlmOILOIGhfVQS1jQpTqjbOym7MqhCoVSdRVu_5EdVfrzgiRp70F01k0AUKZo0AQlmGrO3IgGJD-Dpx77jFhWfLXTW0m3ZfYXz5AMoK9m9BhSG-VhK9D-uX_I](https://lh3.googleusercontent.com/Xxwg1qNNyJQDcxrLlmOILOIGhfVQS1jQpTqjbOym7MqhCoVSdRVu_5EdVfrzgiRp70F01k0AUKZo0AQlmGrO3IgGJD-Dpx77jFhWfLXTW0m3ZfYXz5AMoK9m9BhSG-VhK9D-uX_I)
 
-##   
+##
+
 How to Use Google Colab
 
 Now when you click the “+new” button and click “more” (at the bottom of that first list) you will see “Google Colaboratory” on the next list.

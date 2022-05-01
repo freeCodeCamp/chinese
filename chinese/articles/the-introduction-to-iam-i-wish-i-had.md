@@ -1,7 +1,7 @@
-> -  原文地址：[AWS IAM – Policy, Access Roles, Resources Explained, and Why They're Useful](https://www.freecodecamp.org/news/the-introduction-to-iam-i-wish-i-had/)
-> -  原文作者：[Periklis Gkolias](https://www.freecodecamp.org/news/author/periklis-gkolias/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[AWS IAM – Policy, Access Roles, Resources Explained, and Why They're Useful](https://www.freecodecamp.org/news/the-introduction-to-iam-i-wish-i-had/)
+> - 原文作者：[Periklis Gkolias](https://www.freecodecamp.org/news/author/periklis-gkolias/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![AWS IAM – Policy, Access Roles, Resources Explained, and Why They're Useful](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/g7In5Xr-2.jpg)
 
@@ -19,13 +19,13 @@ IAM is a complex system of entities (humans, applications, and so on) that reque
 
 Before we go any further, here are the main terms you'll encounter:
 
--   **Resource**: Anything worth protecting. A storage service, virtual machine, etc.
--   **Policy**: A set of rules that dictate who can and can't do something on a single resource or group of resources.
--   **Action**: Anything someone can do inside the cloud environment. For example, creating a virtual machine.
--   **User**: Well... A user :)
--   **Group**: A group of users with the same permissions applied.
--   **Principal**: A user or an application requesting access.
--   **Role**: A set of powers assigned to a principal, usually for a limited amount of time.
+- **Resource**: Anything worth protecting. A storage service, virtual machine, etc.
+- **Policy**: A set of rules that dictate who can and can't do something on a single resource or group of resources.
+- **Action**: Anything someone can do inside the cloud environment. For example, creating a virtual machine.
+- **User**: Well... A user :)
+- **Group**: A group of users with the same permissions applied.
+- **Principal**: A user or an application requesting access.
+- **Role**: A set of powers assigned to a principal, usually for a limited amount of time.
 
 ## Why IAM Is Useful
 
@@ -33,10 +33,10 @@ IAM is mainly used for authentication, authorization, granular access, and gover
 
 Let's see what those all mean:
 
--   **Authentication**: The act over verifying who you are.
--   **Authorization**: The act of identifiying if someone can perform the action they are requesting. This is usually combined with authentication, but not always.
--   **Granular access**: Permissions that control each action that can happen on a resource. For example, a user might have permission to see firewall rules, but doesn't have permission to change them. This is implemented with [Role-Based Access Control](https://en.wikipedia.org/wiki/Role-based_access_control).
--   **Governance**: The actions you take to know what is happening in your environment, mostly for reasons of budget, compliance, and proper access scope.
+- **Authentication**: The act over verifying who you are.
+- **Authorization**: The act of identifiying if someone can perform the action they are requesting. This is usually combined with authentication, but not always.
+- **Granular access**: Permissions that control each action that can happen on a resource. For example, a user might have permission to see firewall rules, but doesn't have permission to change them. This is implemented with [Role-Based Access Control](https://en.wikipedia.org/wiki/Role-based_access_control).
+- **Governance**: The actions you take to know what is happening in your environment, mostly for reasons of budget, compliance, and proper access scope.
 
 If you're a company of 1-3 people, then setting up a full-blown IAM solution is probably overkill. Buf if your team is larger than that, or you're planning to scale up, then you should start considering it.
 

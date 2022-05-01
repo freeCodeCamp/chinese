@@ -126,4 +126,4 @@ IAM 主要用于认证、授权、细化访问和治理。
 
 谢谢你读到这里。我希望你喜欢这个关于 IAM 的介绍。
 
-如果你有任何问题，请在 Twitter 上与我联系。
+如果你有任何问题，请在 [Twitter](https://twitter.com/PeriGk_Tech) 上与我联系。

@@ -5,67 +5,67 @@
 
 ![JavaScript Tutorial – How to Set Up a Front End Development Project](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/Set-up-a-frontend-project.001.jpeg)
 
-Let’s say you plan to build a website. Before you start, you want to set up a few tools to make your life easier. But which tools should you have?
+比方说，你计划建立一个网站。在你开始之前，你想设置一些工具，使你的生活更容易。但你应该使用哪些工具呢？
 
-The JavaScript ecosystem is changing so fast that it can be overwhelming to pick the best tools to use. To solve this problem, in this article I’m going to walk you through how to set up a front end project from scratch.
+JavaScript 生态系统的变化如此之快，以至于要挑选最好的工具来使用，可能会让人不知所措。为了解决这个问题，在这篇文章中我将指导你如何从头开始设置一个前端项目。
 
-We'll cover things like must-have editor extensions, how to add JavaScript libraries to your project, why you'll use Node.js even if you want to do front end development, and how to set up an application bundler that will generate a live preview as you code in your browser.
+我们将涵盖一些内容，如必备的编辑器扩展，如何将 JavaScript 库添加到你的项目中，为什么即使你想做前端开发也要使用 Node.js，以及如何设置一个应用程序捆绑器，在你在浏览器中编码时生成一个实时预览。
 
-So let's dive in.
+因此，让我们深入了解一下。
 
 ## How to Choose a Code Editor
 
-Let’s start with the foundations. As a web developer, you mostly edit text, so you need a good editor. So which one should you use?
+让我们从基础开始。作为一个 Web 开发者，你主要是编辑文本，所以你需要一个好的编辑器。那么，你应该使用哪一个呢？
 
-Picking an editor is highly based on personal preference as most editors have very similar features.
+挑选一个编辑器在很大程度上是基于个人的偏好，因为大多数编辑器的功能都非常相似。
 
-If you don’t have a personal preference, I’d highly recommend [VS Code](https://code.visualstudio.com/). Lately, VS Code has become the de facto standard editor for web development.
+如果你没有个人偏好，我强烈推荐 [VS Code](https://code.visualstudio.com/)。最近，VS Code 已经成为网络开发的事实上的标准编辑器。
 
-Here’s a chart from the latest edition of the [State of JS survey](https://stateofjs.com/). In this survey, more than 23,000 developers were asked about their preferences regarding web development. The vast majority picked VS Code.
+下面是最新一期的 [JS 现状调查](https://stateofjs.com/) 的图表。在这项调查中，超过 23000 名开发者被问及他们对网络开发的偏好。绝大多数人选择了 VS Code。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-26-at-11.23.50.png)
 
-If you haven’t checked out the [State of JS](https://stateofjs.com/) surveys before, I highly recommend that you do. It can give you a great overview of the latest trends with JavaScript. You can learn which tools and libraries people love to use and which ones will they abandon soon.
+如果你以前没有查看过 [JS 现状](https://stateofjs.com/) 的调查，我强烈建议你查看。它可以让你对 JavaScript 的最新趋势有一个很好的概述。你可以了解到哪些工具和库是人们喜欢使用的，哪些是他们即将放弃的。
 
-One of the greatest features of all the mainstream editors is that you can add extensions to them. Let’s walk through two extensions that are must-haves.
+所有主流编辑器的最大特点之一是你可以为它们添加扩展。让我们走过两个扩展，它们是必须的。
 
 ## How to Auto-format Your Code in VS Code
 
-Prettier is an extension that makes your code more readable and more consistent.
+Prettier 是一个扩展，它使你的代码更可读，更一致。
 
-Let’s say you copy-pasted something from Stack Overflow and it’s hard to read. The tabulation is off, a line is too long, and so on. Then you just save the file, and magically, everything looks as it should be.
+比方说，你从 Stack Overflow 上复制了一些东西，它很难读。表格不对，某一行太长，等等。然后，你只要保存文件，神奇的是，一切都看起来像它应该的那样。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Set-up-a-frontend-project.001.jpeg)
 
-This is what Prettier does. It formats the code based on best practices. It doesn't just fix tabulation and wrap the lines. It also adds parentheses to improve code readability, makes sure you are consistent with quotation marks, and many more.
+这就是 Prettier 所做的。它根据最佳实践来格式化代码。它不只是固定制表和包行。它还添加小括号以提高代码的可读性，确保你与引号保持一致，以及更多。
 
-To make it work, first, you have to install the Prettier extension. In VS Code go to the Extensions panel, search for Prettier, and then install it.
+要使它发挥作用，首先，你必须安装 Prettier 扩展。在 VS Code 中进入扩展面板，搜索 Prettier，然后安装它。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Set-up-a-frontend-project.001-5.jpeg)
 
-Installing the extension doesn’t format your files automatically on save by default. The default behavior is that once you've installed the extension you can right-click within a file then select **Format Document**. Or select part of a file then select **Format Selection**.
+安装扩展后，默认情况下不会在保存时自动格式化你的文件。默认的行为是，一旦你安装了扩展，你可以在文件中右键单击，然后选择 **Format Document**。或者选择一个文件的一部分，然后选择 **Format Selection**。
 
-The first time you do this you need to select the default formatter. VS Code already has a formatter, it just isn’t as powerful as Prettier. So now that we have two formatters, we have to let VS Code know that in the future, when it comes to formatting, we want to use Prettier.
+第一次这样做的时候，你需要选择默认的格式化。VS Code 已经有一个格式化器，只是它没有 Prettier 那么强大。所以现在我们有了两个格式化器，我们必须让 VS Code 知道，下次格式化时，我们想使用 Prettier。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-29-at-13.37.54-2.png)
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-29-at-13.38.03-2.png)
 
-Set Prettier as the default formatter
+设置 Prettier 为默认格式化器
 
-If you want to auto-format your files on Save, you need to change a setting.
+如果你想在保存时自动格式化你的文件，你需要改变一个设置。
 
-Go to Settings in your VS Code Preferences and search for the **Format On Save** option. By default, this is false so make sure that you tick the checkbox. After that every time you save a file, formatting should happen automatically.
+在你的 VS 代码首选项中进入设置，搜索 **Format On Save** 选项。默认情况下，这个选项是 `false`（失效）的，所以请确保你勾选这个复选框。此后，每次你保存文件时，自动格式化。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Set-up-a-frontend-project.001-2.jpeg)
 
-Formatting can be controversial, though. In most cases, especially for beginners, I highly recommend the default settings. But if you prefer a different style you can customize things.
+不过，格式化可能是有争议的，不满意结果。在大多数情况下，特别是对于初学者，我强烈建议使用默认设置。但如果你喜欢不同的风格，你可以定制一些东西。
 
-You can indicate with comments to [ignore specific lines](https://prettier.io/docs/en/ignore.html) and you can create an rc file where you can list your preferences.
+你可以用注释表明 [忽略特定行](https://prettier.io/docs/en/ignore.html)，你可以创建一个 rc 文件，在那里你可以列出你的偏好。
 
-In the root folder of your project, you can create a file called **.prettierrc** and add a few options. A typical option could be if you prefer single quotes instead of double quotes in your files. Or if you don't want to have semi-colons at the end of your lines.
+在你项目的根目录下，你可以创建一个名为 **.prettierrc** 的文件并添加一些选项。一个典型的选项是，如果你喜欢在你的文件中使用单引号而不是双引号。或者如果你不想在你的行的末尾有分号。
 
-With this configuration, once you save your files you should see a different result.
+有了这个配置，一旦你保存你的文件，你应该看到一个不同的结果。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-30-at-11.58.50.png)
 
@@ -73,36 +73,36 @@ There are many more options of course. If you want to dig deeper check out [Pret
 
 ## Why Do You Need Node for a Front End Project?
 
-Before we get to the second must-have extension we need to set up a few other things. First, we need to talk about Node.js. What is Node and why do you need it even if you work as a front end developer?
+在我们讨论第二个必须的扩展之前，我们需要设置一些其他的东西。首先，我们需要谈一谈 Node.js。什么是 Node，为什么你需要它，即使你作为一个前端开发者工作？
 
-Node is often associated with back end development, but that is not entirely true.  
-If you see a job description where they are looking for a Node developer, then probably they indeed look for a back end developer.
+Node 通常与后端开发有关，但这并不完全正确。 
+如果你看到一份工作描述，他们正在寻找一个 Node 开发者，那么可能他们确实在寻找一个后端开发者。
 
-Yet you are going to use node even if you do front end development.
+然而，即使你做前端开发，你也要使用 Node。
 
-So what is Node, why do people think it’s for back end development and why do you need it even as a front end developer?
+那么，什么是 Node，为什么人们认为它是用于后端开发的，以及为什么你作为一个前端开发者也需要它？
 
-Node is a JavaScript runtime. It runs JavaScript files outside of a browser. There are two ways of running JavaScript code. You either have it as part of a website and run the entire website in a browser, or you run only the JavaScript file with Node.
+Node 是一个 JavaScript 运行时。它在浏览器之外运行 JavaScript 文件。有两种运行 JavaScript 代码的方式。你要么把它作为网站的一部分，在浏览器中运行整个网站，要么你只用 Node 运行 JavaScript 文件。
 
-In this example, we have a very simple JavaScript file that prints Hello World to the console.
+在这个例子中，我们有一个非常简单的 JavaScript 文件，将 Hello World 打印到控制台。
 
-If we have Node installed we can go to the terminal, navigate to the folder where this file is then run it with Node like this. You can see that the file was executed and the result is in the console.
+如果我们安装了 Node，我们可以使用终端，进入这个文件所在的文件夹，然后像这样用 Node 运行它。你可以看到该文件被执行了，结果在控制台中。
 
-That’s what Node really is, a tool that runs JavaScript files on their own.
+这就是 Node 的真正含义，它是一个独立运行 JavaScript 文件的工具。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-30-at-12.01.08.png)
 
-JavaScript mostly behaves the same way in both cases. But there are also differences in what JavaScript can do in a browser and when it runs with Node.
+在这两种情况下，JavaScript 的行为大多是一样的。但是，JavaScript 在浏览器中能做的事情和它在 Node 中运行时也有区别。
 
-For instance, when running in the browser JavaScript can access the HTML elements and it can modify them. That’s the main point of having JavaScript in the first place.
+例如，当在浏览器中运行时，JavaScript 可以访问 HTML 元素，它可以修改它们。这就是拥有 JavaScript 的主要意义所在。
 
-In Node, there’s no surrounding HTML file that JavaScript can access. JavaScript runs on its own.
+在 Node 中，没有任何周围的 HTML 文件可以让 JavaScript 访问。JavaScript 是独立运行的。
 
-On the other hand in Node, JavaScript can access your file system and read and write your files.
+另一方面，在 Node 中，JavaScript 可以访问你的文件系统，读取和写入你的文件。
 
-For instance, you can run scripts on your machine that generates a project skeleton for you. You can run checks on your files and automatically correct the mistakes. Or you can run your test files.
+例如，你可以在你的机器上运行脚本，为你生成一个项目的骨架。你可以在你的文件上运行检查，自动纠正错误。或者你可以运行你的测试文件。
 
-In short, Node lets you run some scripts that make your life easier.
+总之，Node 可以让你运行一些脚本，使你的生活更轻松。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Set-up-a-frontend-project.001-1.jpeg)
 

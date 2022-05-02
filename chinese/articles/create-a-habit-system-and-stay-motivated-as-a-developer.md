@@ -1,6 +1,6 @@
 > -  原文地址：[How to Create a Habit System and Stay Motivated as a Developer](https://www.freecodecamp.org/news/create-a-habit-system-and-stay-motivated-as-a-developer/)
 > -  原文作者：[Shruti Kapoor](https://www.freecodecamp.org/news/author/shrutikapoor08/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Create a Habit System and Stay Motivated as a Developer](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/pexels-philip-ackermann-878151.jpg)

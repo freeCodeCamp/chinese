@@ -1,58 +1,58 @@
 > -  原文地址：[What is Memoization? How and When to Memoize in JavaScript and React](https://www.freecodecamp.org/news/memoization-in-javascript-and-react/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![What is Memoization? How and When to Memoize in JavaScript and React](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/pexels-thisisengineering-3913016.jpg)
 
-Hi everyone! In this article we will talk about memoization, an optimization technique that can help make heavy computation processes more efficient.
+大家好！本文将讨论记忆化（memoization），这是一种优化手段，旨在减轻繁重的计算过程。
 
-We will start by talking about what memoization is and when it's best to implement it. Later on we will give practical examples for JavaScript and React.
+首先我会介绍什么是记忆化以及在什么情况下要使用记忆化，然后我会通过JavaScript和React的实际例子来进一步讲解。
 
-## Table of Contents
+## 文章目录
 
--   [What is memoization](#what-is-memoization)
--   [How does memoization work](#how-does-memoization-work)
--   [JavaScript memoization example](#javascript-memoization-example)
--   [React memoization example](#react-memoization-example)
-    -   [Pure components](#pure-components)
-    -   [PureComponent class](#purecomponent-class)
-    -   [Memo higher order component](#memo-higher-order-component)
-    -   [When to use the useCallback hook](#when-to-use-the-usecallback-hook)
-    -   [When to use the useMemo hook](#when-to-use-the-usememo-hook)
-    -   [When to memoize](#when-to-memoize)
--   [Roundup](#round-up)
+-   [什么是记忆化](#what-is-memoization)
+-   [记忆化如何运行](#how-does-memoization-work)
+-   [JavaScript记忆化例子](#javascript-memoization-example)
+-   [React记忆化例子](#react-memoization-example)
+    -   [纯组件](#pure-components)
+    -   [纯类组件](#purecomponent-class)
+    -   [Memo高阶组件](#memo-higher-order-component)
+    -   [什么时候使用useCallback钩子](#when-to-use-the-usecallback-hook)
+    -   [什么时候使用useMemo钩子](#when-to-use-the-usememo-hook)
+    -   [什么时候使用记忆化](#when-to-memoize)
+-   [总结](#round-up)
 
-# What is Memoization?
+<h2 id="what-is-memoization">什么是记忆化</h2>
 
-In programming, **memoization is an optimization technique** that makes applications more efficient and hence faster. It does this by storing computation results in cache, and retrieving that same information from the cache the next time it's needed instead of computing it again.
+在编程中，**记忆化是一种优化手段**，以帮助应用运行得更加快速和高效。记忆化通过将计算结果存储在缓存，并当再次需这个结果的时候在缓存中提取来实现优化。
 
-In simpler words, it consists of storing in **cache** the output of a function, and making the function check if each required computation is in the cache before computing it.
+简言之，记忆化包含：1.将函数的输出存储到**缓存**；2.再下次计算前，先检查需要计算是否存在于缓存。
 
-A **cache** is simply a temporary data store that holds data so that future requests for that data can be served faster.
+**缓存**是一个暂时的数据存储空间，存储了未来可能会被请求的数据，以提高运行速度。
 
-Memoization is a simple but powerful trick that can help speed up our code, especially when dealing with repetitive and heavy computing functions.
+记忆化是虽然简单但是强大，可以提高代码运行的速度，特别是当你需要运行重复或者需要大量计算的函数的时候。
 
-# How Does Memoization Work?
+<h2 id="how-does-memoization-work">记忆化如何运行</h2>
 
-The concept of memoization in JavaScript relies on two concepts:
+JavaScript中的记忆化以两个概念为基础：
 
--   **Closures**: The combination of a function and the lexical environment within which that function was declared. You can read more about them [here](https://www.freecodecamp.org/news/closures-in-javascript/) and [here](https://www.freecodecamp.org/news/scope-and-closures-in-javascript/).
--   **Higher Order Functions**: Functions that operate on other functions, either by taking them as arguments or by returning them. You can read more about them [here](https://www.freecodecamp.org/news/higher-order-functions-in-javascript-examples/).
+-   **闭包**: 结合了函数及其声明的词法作用域。 想要进一步了解可以阅读[这篇文章](https://www.freecodecamp.org/news/closures-in-javascript/)和[这篇文章](https://www.freecodecamp.org/news/scope-and-closures-in-javascript/)。
+-   **高阶函数**: 指在其他函数中运行的函数，要么是作为函数的参数，要么是被返回。想要进一步了解可以阅读[这篇文章](https://www.freecodecamp.org/news/higher-order-functions-in-javascript-examples/)。
 
-# JavaScript Memoization Example
+<h2 id="javascript-memoization-example">JavaScript记忆化例子</h2>
 
-To clarify this mumbo jumbo, we'll use the classic example of the Fibonacci sequence.
+我将使用经典的斐波那契数列来解释这个晦涩难懂的概念。
 
-The **Fibonacci sequence** is a set of numbers that starts with a one or a zero, followed by a one, and proceeds based on the rule that each number (called a Fibonacci number) is equal to the sum of the preceding two numbers.
+**斐波那契数列** 是一组数列，以1或者0打头，紧接着是1，之后的数字都是前两个数字之后，这些数字也被称作斐波那契数。
 
-It looks like this:
+数列如下：
 
 ```javascript
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, …
 ```
 
-Let's say we need to write a function that returns the nth element in the Fibonacci sequence. Knowing that each element is the sum of the previous two, a recursive solution could be the following:
+假设我们需要编写一个函数返回斐波那契数列的第n个数。由于任意斐波那契数是前两个数之和，所以可以使用递归：
 
 ```javascript
 const fib = n => {
@@ -61,17 +61,17 @@ const fib = n => {
 }
 ```
 
-If you're not familiar with recursion, it's simply the concept of a function that calls itself, with some sort of base case to avoid an infinite loop (in our case `if (n <= 1)`).
+如果你不熟悉的递归的概念的话，你可以把递归简单理解成函数自己调用自己，并且设定基础条件避免无限循环。(例子中的基础条件是`if (n <= 1)`)。
 
-If we call our function like `fib(5)`, behind the scenes our function would execute like this:
+如果我们调用函数 `fib(5)`，函数的执行如下：
 
 ![Untitled-Diagram.drawio](https://www.freecodecamp.org/news/content/images/2022/04/Untitled-Diagram.drawio.png)
 
-See that we're executing `fib(0), fib(1), fib(2) and fib(3)` multiple times. Well, that's exactly the kind of problem memoization helps to solve.
+所以我们多次执行了 `fib(0), fib(1), fib(2) and fib(3)`，这正是记忆化想要解决的问题。
 
-With memoization, there's no need to recalculate the same values once and again – we just store each computation and return the same value when required again.
+使用记忆化，就不需要重复计算同样的值，仅需要存储计算，并在需要的时候返回相同的值就行。
 
-Implementing memoization, our function would look like this:
+应用记忆化，函数可以改写成：
 
 ```javascript
 const fib = (n, memo) => {
@@ -84,46 +84,46 @@ const fib = (n, memo) => {
 }
 ```
 
-What we're doing first is checking if we've received the **memo** object as parameter. If we didn't, we set it to be an empty object:
+在这里，我们先检查函数是否传入**memo**对象作为参数，如果没有，我们将其设置为空对象：
 
 ```javascript
 memo = memo || {}
 ```
 
-Then, we check if memo contains the value we're receiving as a param within its keys. If it does, we return that. Here's where the magic happens. No need for more recursion once we have our value stored in memo. =)
+接着检查memo对象的键是否包含了函数接收的参数，如果包含，直接返回对应的值。这就是魔法诞生的地方，当值被存储到memo中，我们就不需要多余的递归了。
 
 ```javascript
 if (memo[n]) return memo[n]
 ```
 
-If we don't have the value in memo yet, we call **fib** again, but now passing **memo** as parameter, so the functions we're calling will share the same memoized values we have in the "original" function. Notice that we add the final result to the cache before returning it.
+如果当前值并不在memo中，我们再次调用**fib**，但将**memo**也作为参数传入，我们调用的函数就共享之前函数调用中记忆的值。需要注意的是，在返回结果之前需要先在缓存中添加结果。 
 
 ```javascript
 return memo[n] = fib(n-1, memo) + fib(n-2, memo)
 ```
 
-And that's it! With two lines of code we've implemented memoization and significantly improved the performance of our function!
+就是这么容易！添加两行代码我们就应用了记忆化，并且大幅度提高了函数的性能。
 
-# React Memoization Example
+<h2 id="react-memoization-example">React记忆化例子</h2>
 
-In React, we can optimize our application by avoiding unnecessary component re-render using memoization.
+在React中，使用记忆化可以避免没必要的重复渲染，从而优化应用。
 
-As I mentioned too in [this other article about managing state in React](https://www.freecodecamp.org/news/how-to-manage-state-in-a-react-app/), components re-render because of two things: a **change in state** or a **change in props**. This is precisely the information we can "cache" to avoid unnecessary re-renders.
+如我在 [这篇关于管理React state的文章中](https://www.freecodecamp.org/news/how-to-manage-state-in-a-react-app/)介绍的这样，组件的再次渲染取决于两样东西：**state的改变**或者 **props的改变**。 这正是我们可以“缓存”的内容，从而避免不必要的重新渲染。
 
-But before we can jump to the code, let's introduce some important concepts.
+在展示代码示例之前，我们先了解一些重要的概念。
 
-## Pure Components
+<h3 id="pure-components">纯组件</h3>
 
-React supports either class or functional components. A functional component is a plain JavaScript function that returns JSX, and a class component is a JavaScript class that extends React.Component and returns JSX inside a render method.
+React支持类组件和函数组件。函数组件是一个返回JSX的JavaScript简单函数，类组件是一个继承React.Component的JavaScript类，并使用render方法返回JSX。
 
-And what is a pure component then? Well, based on the concept of purity in functional programming paradigms, a function is said to be pure if:
+那什么是纯组件呢？根据函数式编程范式的纯函数概念，纯函数指的是：
 
--   Its return value is only determined by its input values
--   Its return value is always the same for the same input values
+-   返回值仅由输入值决定
+-   相同输入值的返回值相同
 
-In the same way, a React component is considered pure if it renders the same output for the same state and props.
+同样，一个React纯组件即传入同样的state和props，渲染结果相同。
 
-A functional pure component could look like this:
+一个纯组件的例子如下：
 
 ```javascript
 // Pure component
@@ -134,9 +134,9 @@ export default function PureComponent({name, lastName}) {
 }
 ```
 
-See that we pass two props, and the component renders those two props. If the props are the same the render will always be the same.
+我们传入了两个props，组件渲染了两个props。如果props不变，渲染结果也不变。
 
-On the other side, say for example we add a random number to each prop before rendering. Then the output might be different even if the props remain the same, so this would be an impure component.
+但假设我们在渲染前给每个prop添加一个随机数字，这是即便props保持不变，输出也会发生变化，这就是一个非纯组件。
 
 ```javascript
 // Impure component
@@ -147,9 +147,9 @@ export default function ImpurePureComponent({name, lastName}) {
 }
 ```
 
-Same examples with class components would be:
+用类组件改写同样的例子：
 
-```
+```javascript
 // Pure component
 class PureComponent extends React.Component {
     render() {
@@ -175,13 +175,13 @@ class ImpurePureComponent extends React.Component {
 export default ImpurePureComponent
 ```
 
-## PureComponent Class
+<h3 id="purecomponent-class">纯类组件</h3>
 
-For **class pure components**, to implement memoization React provides the `PureComponent` base class.
+针对**类形式的纯组件**，React提供了`PureComponent`来应用记忆化。
 
-Class components that extend the `React.PureComponent` class have some performance improvements and render optimizations. This is because React implements the `shouldComponentUpdate()` method for them with a **shallow comparison for props and state**.
+继承`React.PureComponent`的组件进行性能和渲染优化。因为React使用`shouldComponentUpdate()` 方法来**浅比较props和state**。
 
-Let's see it in an example. Here we have a class component that is a counter, with buttons to change that counter adding or subtracting numbers. We also have a child component to which we're passing a prop name which is a string.
+让我们来看一个例子。有一个类组件是一个计数器，在这个组件中有一个按钮控制计数器增加或者减少数字大小，还有一个子组件，传入了一个name prop，值为字符串。
 
 ```javascript
 import React from "react"
@@ -223,7 +223,7 @@ class Counter extends React.Component {
   export default Counter
 ```
 
-The child component is a **pure component** that just renders the received prop.
+子组件是一个 **纯组件** ，仅渲染接受到的prop。
 
 ```javascript
 import React from "react"
@@ -240,14 +240,13 @@ class Child extends React.Component {
 export default Child
 ```
 
-Notice that we've added console.logs to both components so that we've get console messages each time they render. And speaking of that, guess what happens when we press the increment or decrement buttons? Our console will look like this:
+注意我们在两个组件都添加了console.log，以便每次渲染的时候我们可以在控制台看到信息。那么猜猜看每次我们点击增加和减少按钮的时候，控制台会出现什么消息呢？
 
 ![2022-04-24_21-59](https://www.freecodecamp.org/news/content/images/2022/04/2022-04-24_21-59.png)
 
-The child component is re-rendering even if it's always receiving the same prop.
+即便接收到的是同样的prop，子组件也会重复渲染。
 
-To implement memoization and optimize this situation, we need to extend the `React.PureComponent` class in our child component, like this:
-
+应用记忆化优化项目，我们需要子组件继承`React.PureComponent`，如下：
 ```javascript
 import React from "react"
 
@@ -263,17 +262,17 @@ class Child extends React.PureComponent {
 export default Child
 ```
 
-After that, if we press the increment or decrement button, our console will look like this:
+更改之后，再点击增加或者减少按钮，控制台会输出以下信息。
 
 ![2022-04-24_22-00](https://www.freecodecamp.org/news/content/images/2022/04/2022-04-24_22-00.png)
 
-Just the initial rendering of the child component and no unnecessary re-renders when the prop hasn't changed. Piece of cake. ;)
+只有初次渲染，没有不必要的重复渲染。小菜一碟！
 
-With this we've covered class components, but in functional components we can't extend the `React.PureComponent` class. Instead, React offers one HOC and two hooks to deal with memoization.
+这样我们就讲解完毕类组件的记忆化，但是函数组件无法继承`React.PureComponent`类，所以React提供HOC和两个钩子来处理记忆化。
 
-## **Memo Higher Order Component**
+<h3 id="memo-higher-order-component">Memo高阶组件</h3>
 
-If we transform our previous example to functional components we would get the following:
+将上面的例子改写成函数组件：
 
 ```javascript
 import { useState } from 'react'
@@ -311,7 +310,7 @@ console.log("Skinny Jack")
 }
 ```
 
-This would provoke the same problem as before, were the Child component re-rendered unnecessarily. To solve it, we can wrap our child component in the `memo` higher order component, like following:
+这样会导致同样的错误：子组件重复不必要的渲染。为了解决这个问题，我们将子组件打包到`memo`高阶组件，如下：
 
 ```javascript
 import React from 'react'
@@ -324,13 +323,13 @@ console.log("Skinny Jack")
 })
 ```
 
-A **higher order component or HOC** is similar to a higher order function in javascript. Higher order functions are functions that take other functions as arguments OR return other functions. React HOCs take a component as a prop, and manipulate it to some end without actually changing the component itself. You can think of this like wrapper components.
+**高阶组件（HOC）** 类似于JavaScript中的高阶函数。高阶函数指将函数作为参数或者返回其他的函数的函数。React高阶组件将组件作为prop，并且在不改变组件的前提下对这个组件进行操作。你可以把HOC想象成一个打包组件。
 
-In this case, `memo` does a similar job to `PureComponent`, avoiding unnecessary re-renders of the components it wraps.
+那么在这个例子中，`memo`执行了`PureComponent`同样的任务，避免了被打包的组件不必要的重复渲染。
 
-## When to Use the useCallback Hook
+<h3 id="when-to-use-the-usecallback-hook">什么时候使用useCallback钩子</h3>
 
-An important thing to mention is that memo doesn't work if the prop being passed to the component is a function. Let's refactor our example to see this:
+值得注意的是当传入的prop是一个函数的时候，不可以使用`memo`，让我们对上面的例子稍做修改：
 
 ```javascript
 import { useState } from 'react'
@@ -371,13 +370,13 @@ console.log("Skinny Jack")
 })
 ```
 
-Now our prop is a function that always logs the same string, and our console will look again like this:
+这样我们的prop就是一个始终打印同样字符串的函数，我们的控制台会再次变成这个样子：
 
 ![2022-04-24_22-04](https://www.freecodecamp.org/news/content/images/2022/04/2022-04-24_22-04.png)
 
-This is because in reality a new function is being created on every parent component re-render. So if a new function is being created, that means we have a new prop and that means our child component should re-render as well.
+出现这种情况是因为实际上每次父组件重新渲染就会创建一个新的函数。创建一个新的函数就意味着传入了新的prop，子组件需要重新渲染。
 
-To deal with this problem, react provides the **useCallback** hook. We can implement it in the following way:
+为了解决这个问题，React提供了**useCallback**钩子，应用如下：
 
 ```javascript
 import { useState, useCallback } from 'react'
@@ -404,11 +403,11 @@ export default function Counter() {
 }
 ```
 
-And that solves the problem of unnecessary child re-rendering.
+这样就解决了子组件没有必要的重复渲染。
 
-What useCallback does is to hold on to the value of the function despite the parent component re-rendering, so the child prop will remain the same as long as the function value remains the same as well.
+useCallback在这里起到的作用是即便父组件重新渲染，函数的值不变。只要函数值不变，子组件的prop就保持不变。
 
-To use it, we just need to wrap the useCallback hook around the function we're declaring. In the array present in the hook, we can declare variables that would trigger the change of the function value when the variable changes too (exactly the same way useEffect works).
+只需用useCallback钩子打包声明的函数。useCallback钩子包含一个依赖数组，可以在这个数组中声明触发函数值变化的变量（和useEffect的工作原理一样）。
 
 ```javascript
 const testingTheTest = useCallback(() => { 
@@ -416,40 +415,39 @@ const testingTheTest = useCallback(() => {
   }, [a, b, c]);
 ```
 
-## When to Use the useMemo Hook
+<h3 id="when-to-use-the-usememo-hook">什么时候使用useMemo钩子</h3>
 
-**useMemo** is a hook very similar to useCallback, but instead caching a function, useMemo will cache the **return value of a function**.
+**useMemo**是类似于useCallback的一个钩子，useMemo不缓存函数，而是缓存**函数的返回值**。
 
-In this example, `useMemo` will cache the number `2`.
+在这个例子中`useMemo`缓存数字`2`。
 
-```
+```javascript
 const num = 1
 const answer = useMemo(() => num + 1, [num])
 ```
 
-While `useCallback` will cache `() => num + 1`.
-
-```
+如果使用`useCallback`会缓存`() => num + 1`。
+```javascript
 const num = 1
 const answer = useMemo(() => num + 1, [num])
 ```
 
-You can use useMemo in a very similar way to the memo HOC. The difference is that useMemo is a hook with an array of dependences, and memo is a HOC that accepts as parameter an optional function that uses props to conditionally update the component.
+你可以像使用memo高阶组件一样使用useMemo。两者的区别在于，useMemo是一个带有依赖数组的钩子，而memo是一个接收函数作为参数的高阶组件，并且根据prop有条件地更新组件。
 
-Moreover, useMemo caches a value returned between renders, while memo caches a whole react component between renders.
+除此之外，useMemo在两次渲染之间缓存返回值，而memo在两次渲染间缓存整个react组件。
 
-## When to Memoize
+<h3 id="when-to-memoize">什么时候使用记忆化</h3>
 
-Memoization in React is a good tool to have in our belts, but it's not something you should use everywhere. These tools are useful for dealing with functions or tasks that require heavy computation.
+记忆化是React工具包里面非常好用的工具，但你并不需要时刻都使用它。这个工具仅在遇到需要进行大量运算的功能和任务时使用。
 
-We have to be aware that in the background all three of these solutions add overhead to our code, too. So if the re-render is caused by tasks that are not computationally heavy, it may be better to solve it in other way or leave it alone.
+必须注意在上面的三个例子为了方便展示我们都监听了代码。但当任务的计算量并不繁重的时候，或许采用别的解决方面，或者放任不管是更好的选择。
 
-I recommend [this article by Kent C. Dodds](https://kentcdodds.com/blog/usememo-and-usecallback) for more info about this topic.
+如果你对什么时候应该使用记忆化有兴趣，我推荐你阅读[Kent C. Dodds](https://kentcdodds.com/blog/usememo-and-usecallback)有关这个话题的文章。
 
-# **Round up**
+<h2 id="round-up">总结</h2>
 
-That's it, everyone! As always, I hope you enjoyed the article and learned something new. If you want, you can also follow me on [LinkedIn](https://www.linkedin.com/in/germancocca/) or [Twitter](https://twitter.com/CoccaGerman).
+以上就是这篇文章的全部内容了。希望你喜欢这篇文章，并且能从中受益。你可以在[LinkedIn](https://www.linkedin.com/in/germancocca/)或[Twitter](https://twitter.com/CoccaGerman)上关注我。
 
-Cheers and see you in the next one! =D
+干杯！咱们下篇文章见！
 
 ![goodbye-1](https://www.freecodecamp.org/news/content/images/2022/04/goodbye-1.gif)

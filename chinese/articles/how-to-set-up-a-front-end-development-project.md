@@ -1,7 +1,7 @@
-> -  原文地址：[JavaScript Tutorial – How to Set Up a Front End Development Project](https://www.freecodecamp.org/news/how-to-set-up-a-front-end-development-project/)
-> -  原文作者：[Hunor Márton BorbélyHunor Márton Borbély](https://www.freecodecamp.org/news/author/hunor/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[JavaScript Tutorial – How to Set Up a Front End Development Project](https://www.freecodecamp.org/news/how-to-set-up-a-front-end-development-project/)
+> - 原文作者：[Hunor Márton BorbélyHunor Márton Borbély](https://www.freecodecamp.org/news/author/hunor/)
+> - 译者：[luojiyin](how-to-set-up-a-front-end-development-project)
+> - 校对者：
 
 ![JavaScript Tutorial – How to Set Up a Front End Development Project](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/Set-up-a-frontend-project.001.jpeg)
 
@@ -274,7 +274,7 @@ Initializing ESLint config from the terminal, adding an .eslintignore file
 
 This script will ask you a few questions. Most of these are obvious except the first one.
 
--   **How would you like to use ESLint?**
+- **How would you like to use ESLint?**
 
 Do you want ESLint to only check for syntax issues, or you want it to find possible problems as well, or you even want it to check for stylistic issues?
 
@@ -282,23 +282,23 @@ If you use Prettier as well, you need to select the second option. Because if bo
 
 So if you use Prettier you don’t want ESLint to check for style, only for syntax and possible problems.  
 
--   **What type of modules does your project use?**
+- **What type of modules does your project use?**
 
 In a frontend project you probably use imports and exports so you select the first option.  
 
--   **Which framework does your project use?**
+- **Which framework does your project use?**
 
 If you use React or Vue.js the select the appropriate option, otherwise select none.  
 
--   **Does your project use Typescript?**
+- **Does your project use Typescript?**
 
 If you use Typescript select yes, otherwise just press enter to continue.  
 
--   **Where does your project run?**
+- **Where does your project run?**
 
 Is your project supposed to run in a browser or with Node? Here we set up a front end project so we select Browser.  
 
--   **What format do you want your config file to be in?**
+- **What format do you want your config file to be in?**
 
 This doesn’t really matter, but if you later want to customize the config you probably want to pick either JavaScript or JSON.
 
@@ -358,10 +358,10 @@ And that's it! Thank you for reading :)
 
 Hunor Márton Borbély
 
-Game development with JavaScript, creative coding tutorials, HTML canvas, SVG, Three.js, and some React and Vue https://twitter.com/HunorBorbelyhttps://codepen.io/HunorMarton……
+Game development with JavaScript, creative coding tutorials, HTML canvas, SVG, Three.js, and some React and Vue <https://twitter.com/HunorBorbelyhttps://codepen.io/HunorMarton>……
 
 ![](https://www.youtube.com/s/desktop/a2ac178f/img/favicon_144x144.png)YouTube
 
 ![](https://yt3.ggpht.com/ytc/AAUvwngQ7khZMu7fnitunQnU-P6UB7VXPRwz_9jZm-WwxA=s900-c-k-c0x00ffffff-no-rj)
 
-](https://www.youtube.com/channel/UCxhgW0Q5XLvIoXHAfQXg9oQ)
+](<https://www.youtube.com/channel/UCxhgW0Q5XLvIoXHAfQXg9oQ>)

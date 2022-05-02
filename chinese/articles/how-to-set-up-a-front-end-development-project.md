@@ -106,105 +106,105 @@ Node 是一个 JavaScript 运行时。它在浏览器之外运行 JavaScript 文
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Set-up-a-frontend-project.001-1.jpeg)
 
-To install node go to [nodejs.org](/news/p/61840bb6-377c-4565-aed6-c0efc682e112/nodejs.org) and install the latest stable version labeled as LTS. If you are unsure if you already have Node or not, you can also go to your terminal and run **node -v** to check it. If you get a version number, you have Node.
+要安装 Node，请到 [nodejs.org](/news/p/61840bb6-377c-4565-aed6-c0efc682e112/nodejs.org) 并安装标有 LTS 的最新稳定版本。如果你不确定你是否已经有 Node，你也可以到你的终端运行 **node -v** 来检查。如果你得到一个版本号，你就有了 Node。
 
-So to answer the question, why do people associate Node with backend development? Because if the back end code is written in JavaScript, the servers need a way to run them without a browser. So yes, if you are a back end developer using JavaScript, you are going to use Node. But Node is so much more than that.
+因此，为了回答这个问题，为什么人们将 Node 与后端开发联系起来？因为如果后端代码是用 JavaScript 写的，服务器需要一种方法来运行它们而不需要浏览器。所以，是的，如果你是一个使用 JavaScript 的后端开发人员，你就要使用 Node。但 Node 的意义远不止于此。
 
 ## How to Run Your Project
 
-Now that we have Node installed we can install a bundler. What is a bundler? A bundler is a tool that takes all your files and turns them into a neat package that you will be able to run in the browser.
+现在我们已经安装了 Node，我们可以安装一个 bundler。什么是 bundler？bundler 是一种工具，它将你所有的文件变成一个整洁的包，你将能够在浏览器中运行。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Set-up-a-frontend-project.005.jpeg)
 
-Why wouldn’t you be able to run your files in the browser? If you use plain HTML, CSS, and JavaScript files then you are right. You might not even need a bundler.
+为什么你不能在浏览器中运行你的文件？如果你使用普通的 HTML、CSS 和 JavaScript 文件，那么你是对的。你甚至可能不需要 bundler。
 
-But the web development tools have evolved, and the moment you are using anything more advanced your browser won’t understand your files.
+但网络开发工具已经发展起来了，一旦你使用更高级的东西，你的浏览器就无法读懂你的文件。
 
-Are you using React? React's JSX syntax that looks like HTML is not part of the JavaScript syntax. You need a tool to turn that into plain JavaScript. Otherwise, it won’t run in the browser.
+你在使用 React 吗？React 的 JSX 语法看起来像 HTML，但它不是 JavaScript 语法的一部分。你需要一个工具来把它变成普通的 JavaScript。否则，它不会在浏览器中运行。
 
-Are you using SCSS or some other CSS dialect? Then again, you have to turn it into plain CSS so the browser can understand it.
+你是否使用 SCSS 或其他 CSS 方言？那么，你也必须把它变成普通的 CSS，这样浏览器才能理解它。
 
-Another reason you want to use a bundler is that it can generate a live preview of your website as you are coding. Anytime you save a file you see the result right away in your browser.
+你想使用 bundler 的另一个原因是，它可以在你编码时生成一个网站的实时预览。任何时候你保存一个文件，你就可以在浏览器中看到结果。
 
-So how to pick a bundler? There are several options. Currently, the most used bundler is [**webpack**](https://webpack.js.org/). Webpack is a very powerful tool with plenty of configuration options. But these many options are also its weakness. Setting it up is not an easy thing if you are new to it.
+那么，如何挑选一个 bundler？有几种选择。目前，最常用的 bundler 是[**webpack**](https://webpack.js.org/) Webpack 是一个非常强大的工具，有很多的配置选项。但这些众多的选项也是它的弱点。如果你是新手，设置它并不是一件容易的事情。
 
-Another great option that recently gained popularity is **[Parcel](https://parceljs.org/)**. Parcel has similar features as webpack. In some ways, it's even better.
+另一个最近得到普及的好选择是 **[Parcel](https://parceljs.org/)**。Parcel 具有与 Webpack 类似的功能。在某些方面，它甚至更好。
 
-The great thing about it is once you installed it, it needs zero configuration. Parcel automatically figures out what are you using and interprets your files.
+它的伟大之处在于，一旦你安装了它，它需要零配置。Parcel 会自动计算出你使用的是什么，并解释你的文件。
 
-Are you using React? No problem, Parcel recognizes that and interprets JSX. Are you using SCSS? No problem. Parcel knows what to do.
+你在使用 React 吗？没问题，Parcel 能识别并解释 JSX。你在使用 SCSS 吗？没问题。Parcel 知道该怎么做。
 
-To install Parcel you need to run a command in your terminal. We are going to use npm, node package manager, to install it. npm is a tool that comes with Node. If you installed Node you have npm as well.
+要安装 Parcel，你需要在终端运行一个命令。我们将使用 npm，即 Node 包管理器来安装它。npm 是 Node 的一个工具。如果你安装了 Node，你也有 npm。
 
-With npm you can install JavaScript libraries on your computer globally or specifically for a project.
+通过 npm，你可以在你的电脑上全局性安装的或专门在某个项目里安装 JavaScript 库。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-30-at-14.32.40.png)
 
-Go to your terminal and run the following command. The -g tag here means global. Once you installed Parcel on your computer you will be able to use it to run any project with it. You don’t have to install Parcel for each project you create, you just do it once.
+进入你的终端，运行以下命令。这里的 `-g` 标签意味着全局安装。当你在你的电脑上安装了 Parcel，你就可以用它来运行任何项目了。你不必为你创建的每个项目都安装一次 Parcel，你只需做一次。
 
 ```shell
 npm install -g parcel-bundler
 ```
 
-> Note: The command above will install Parcel 1. At the time of writing Parcel 2 is in beta and you can also install it with **npm install -g parcel**.
+> 注意：上面的命令将安装 Parcel 1。在撰写本文时，Parcel 2 正在测试中，你也可以用 **npm install -g parcel** 来安装它。
 
-After installing Parcel globally, let's see how can we use it to run a project.
+在全局安装了 Parcel 之后，让我们看看如何使用它来运行一个项目。
 
-Let's say we have a website with HTML, CSS, and JavaScript files. We can use Parcel to create a live preview for us.
+假设我们有一个带有 HTML、CSS 和 JavaScript 文件的网站。我们可以用 Parcel 来为我们创建一个实时预览。
 
-Open the terminal and make sure you are in the folder where your project is. If you are using VS Code you can use the built-in terminal that will automatically start in the right folder.
+打开终端，确保你在你的项目所在的文件夹中。如果你使用的是 VS Code，你可以使用内置终端，它将自动在正确的文件夹中启动。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-30-at-18.35.20.png)
 
-Running Parcel with VS Code's built in terminal
+用 VS Code 的内置终端运行  Parcel
 
-Once we make sure we are in the correct folder we can run parcel with the following command. This will give you a URL where you can see the results. And anytime we change a file we can see the result on save live in the browser.
+当我们确定我们在正确的文件夹中，我们就可以用下面的命令运行 `Parcel`。这将给你一个可以看到结果的 URL。而且，无论何时我们改变一个文件，我们都可以在浏览器中看到保存后的结果。
 
 ```shell
 parcel index.html
 ```
 
-Once you start this script it will run and generate a live preview of your site until you stop it or close the terminal window. In general, you can keep it running while you are developing your site. Then once you finished you can press **Ctrl+C** to stop it.
+当你启动这个脚本，它就会运行并生成你网站的实时预览，直到你停止它或关闭终端窗口。一般来说，你可以在开发你的网站时保持它的运行。一旦你完成了，你可以按 **Ctrl+C** 来停止它。
 
-If it gets desynchronized or you break it with an error, then you can also restart it by pressing Ctrl+C to stop it, then run the same script again.
+如果它出现了不同步，或者你出错了，那么你也可以按 Ctrl+C 停止它，然后再运行同样的脚本，重新启动它。
 
-Of course, Parcel is much more than this. Now instead of plain CSS, you can also use SCSS for instance. This allows you to use many cool features like nesting declarations, using mixins or calling functions, and more. It's like a CSS with superpowers. Or you can even replace HTML and use Pug instead.
+当然，Parcel 的功能远不止于此。现在，你也可以使用 SCSS 来代替普通的 CSS，例如。这让你可以使用许多很酷的功能，如嵌套声明、使用混合元素或调用函数等等。这就像一个具有超能力的 CSS。或者你甚至可以取代 HTML，用 Pug 来代替。
 
 ## How to Add Libraries to Your JavaScript Project
 
-Now that we have Node installed, and we had a sneak preview of npm, let's see how can we add libraries to our project.
+现在我们已经安装了 Node，并且已经初步了解了 npm，让我们看看如何在我们的项目添加库。
 
-In the past developers were using a CDN to add libraries. You might import a library by having a script tag in your HTML pointing to a URL.
+在过去，开发人员使用 CDN 来添加库。你可以通过在你的 HTML 中设置一个指向 URL 的脚本标签来导入一个库。
 
-That is fine and it still works well, but many developers nowadays use npm, or node package manager to add libraries to their projects. So how does it work?
+这很好，而且仍然很好用，但现在许多开发者使用 npm，或 Node 包管理器来添加库到他们的项目。那么，它是如何工作的呢？
 
-First, you have to initialize the project with the following command in your terminal. Again, you need to run this command in the root directory of your project (hint: use VS Code’s built-in terminal to start in the right folder).
+首先，你必须在终端用以下命令初始化项目。同样，你需要在你项目的根目录下运行这个命令（提示：使用 VS Code 的内置终端在正确的文件夹中启动）。
 
 ```shell
 npm init —yes
 ```
 
-This command initialized a package.json file in your root with some metadata. It has things like project name, description, version number, and so on. When you add the yes flag, all these values will have a default value.
+这个命令在你的项目根目录下初始化了一个带有一些元数据的 package.json 文件。它有诸如项目名称、描述、版本号等内容。当你添加 yes 标志时，所有这些值都会有一个默认值。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-31-at-18.36.56.png)
 
-Initializing a project and installing Three.js
+初始化项目并安装 Three.js
 
-Now we can add libraries to our package with the npm install command. In my [previous article](/news/render-3d-objects-in-browser-drawing-a-box-with-threejs/), we used Three.js to render 3D boxes in the browser.
+现在我们可以用 `npm install` 命令将库添加到我们的包中。在我的 [上一篇文章](https://www.freecodecamp.org/news/render-3d-objects-in-browser-drawing-a-box-with-threejs/)中，我们使用 Three.js 在浏览器中渲染 3D 盒子。
 
-So as an example let's install Three.js. Go to your terminal again, make sure you are in the correct folder, and run the following command:
+因此，作为一个例子，让我们来安装 Three.js。再次进入你的终端，确保你在正确的文件夹中，并运行以下命令:
 
 ```shell
 npm install three
 ```
 
-This will install Three.js. How do you know the keyword is three here and not threejs?
+这将安装 Three.js。你怎么知道这里的关键词是 three 而不是 threejs？
 
-When you don’t know the package name you can just google npm and the name of the library you need. Or in case you don't even know the library name you can also just search for npm 3D library and see what Google comes up with.
+当你不知道包的名字时，你可以直接用谷歌搜索 npm 和你需要的库的名字。或者在你甚至不知道库名的情况下，你也可以直接搜索 `npm 3D library`，看看谷歌会出现什么。
 
-We can go through these packages one by one and pick one based on their capabilities and other info. These packages mostly come with descriptions and quick examples to give you an idea of what the library can do for you.
+我们可以逐一查看这些包，并根据它们的功能和其他信息来挑选。这些包大多带有描述和快速的例子，让你了解这个库能为你做什么。
 
-Another indicator you might want to look out for is the weekly downloads and the time of the last update to make sure you select an actively maintained library that people still use.
+你可能想注意的另一个指标是每周的下载量和最后一次更新的时间，以确保你选择一个人们仍在使用的积极维护的库。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Set-up-a-frontend-project.001-2.jpeg)
 

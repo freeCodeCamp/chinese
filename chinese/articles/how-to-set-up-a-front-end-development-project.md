@@ -357,6 +357,4 @@ Hunor Márton Borbély
 
 [codepen](https://codepen.io/HunorMarton)
 
-[YouTube](https://www.youtube.com/s/desktop/a2ac178f/img/favicon_144x144.png)
-
-[2](https://www.youtube.com/channel/UCxhgW0Q5XLvIoXHAfQXg9oQ)
+[YouTube](https://www.youtube.com/channel/UCxhgW0Q5XLvIoXHAfQXg9oQ)

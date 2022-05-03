@@ -75,7 +75,7 @@ There are many more options of course. If you want to dig deeper check out [Pret
 
 在我们讨论第二个必须的扩展之前，我们需要设置一些其他的东西。首先，我们需要谈一谈 Node.js。什么是 Node，为什么你需要它，即使你作为一个前端开发者工作？
 
-Node 通常与后端开发有关，但这并不完全正确。 
+Node 通常与后端开发有关，但这并不完全正确。
 如果你看到一份工作描述，他们正在寻找一个 Node 开发者，那么可能他们确实在寻找一个后端开发者。
 
 然而，即使你做前端开发，你也要使用 Node。
@@ -208,160 +208,155 @@ npm install three
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Set-up-a-frontend-project.001-2.jpeg)
 
-Once you found the package you are looking for you, you can see the command to install it at the top right corner: **npm i three**. The i here is just a shorthand for install.
+一旦你找到了你要找的软件包，你可以在右上角看到安装它的命令。**npm i three**。这里的 `i` 只是安装的简写。
 
-When we run this command, three things happen.
+当我们运行这个命令时，会发生三件事。
 
-First, it will add the latest version of Three.js to your package.json file as a project dependency.
+首先，它将把 Three.js 的最新版本添加到你的 package.json 文件中，作为项目依赖。
 
-Then it also creates a package-lock file. Both of these things, the dependency section of your package.json file and the package-lock file, are things that you should never ever edit manually. For adding, removing, or updating packages you always use commands like npm install, npm uninstall, and so on.
+然后，它还会创建一个 `package-lock` 文件。这两件事，`package.json` 文件的依赖部分和 `package-lock` 文件，都是你永远不应该手动编辑的东西。对于添加、删除或更新软件包，你总是使用诸如 `npm install`、`npm uninstall` 等命令。
 
-The third thing that’s going to happen once you run the npm install command is that a node\_modules folder gets created. This is the folder where the actual source code of Three.js will be.
+当你运行 `npm install` 命令，第三件事就是创建一个 `node_modules` 文件夹。这是 Three.js 的实际源代码所在的文件夹。
 
-So when you import Three.js in your project, it will look it up in this folder. This folder is again something that you never ever want to change manually.
+因此，当你在项目中导入 `Three.js` 时，它会在这个文件夹中查找它。这个文件夹也是你永远都不想手动更改的东西。
 
-So now that we installed Three.js we can create a very simple website that displays a 3D box. It’s a simple HTML file and a JavaScript file with the code for the 3D box.
+所以，现在我们安装了 Three.js，我们可以创建一个非常简单的网站，显示一个 3D 盒子。这是一个简单的 HTML 文件和一个包含 3D 盒子代码的 JavaScript 文件。
 
-The key here is that in your JavaScript file you import Three.js with the import statement. And that will use the package that you just installed.
+这里的关键是，在你的 JavaScript 文件中，你要用 import 语句导入 Three.js。而这将使用你刚刚安装的软件包。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-31-at-18.47.00.png)
 
-Then we can run the project with Parcel. Using imports means that we use the module system now. Running a project with the module syntax can be a bit tricky, but as we are using Parcel to run our project, it works seamlessly without any questions. That’s one of the reasons we use Parcel.
+然后我们就可以用 Parcel 运行这个项目了。使用 `imports` 意味着我们现在使用 `module` 系统。用 `module` 语法运行项目可能有点麻烦，但由于我们是用 Parcel 来运行我们的项目，所以它可以无缝运行，没有任何问题。这就是我们使用 Parcel 的原因之一。
 
-If you want to learn more about building 3D games with Three.js check out my [earlier article](/news/three-js-tutorial/) on how to build a minimalistic car in the browser.
+如果你想了解更多关于用 Three.js 构建 3D 游戏的信息，请查看我的 [早期文章](https://www.freecodecamp.org/news/three-js-tutorial/)，关于如何在浏览器中构建一个简单的汽车。
 
 ## How to Get Coding Tips While You Code
 
-The second must-have extension for VS Code is ESLint. While Prettier was formatting the code, ESLint can give you coding tips.
+VS Code 的第二个必备扩展是 ESLint。当 Prettier 在对代码进行格式化时，ESLint 可以给你提供编码提示。
 
-There are several patterns in JavaScript that can cause a bug or can be misleading when you try to understand the code.
+在 JavaScript 中，有几种模式会导致一个 bug，或者在你试图理解代码时可能会产生误解。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-06-01-at-01.49.24.png)
 
-A typo can lead to annoying bugs
+错别字会导致恼人的 bug。
 
-In this example, we declare a variable, but then we have a typo and we try to use another variable that does not exist.
+在这个例子中，我们声明了一个变量，但是我们有一个错字，我们试图使用另一个不存在的变量。
 
-ESLint will highlight this for you. It will give you a warning both at the variable declaration saying that you created a variable that you don’t use, and at the usage where it will say that you try to use a variable that is not declared.
+ESLint 将为你强调这一点。它将在变量声明处给你一个警告，说你创建了一个你不使用的变量。在使用它时会说你试图使用一个没有声明的变量。
 
-After these warnings, it’s easy to spot that you made a typo. ESLint is of course much more complex than just catching this simple error. There are also less obvious ones where you might not understand first why does it complain.
+这些警告，让你很容易发现你犯了一个错误。当然，ESLint 要比仅仅捕捉这种简单的错误复杂得多。还有一些不太明显的，你可能首先不明白它为什么要抱怨。
 
-At that point, you can also click the link to see a more detailed explanation of why this pattern is considered harmful and what can you do to avoid it.
+这时，你也可以点击链接，看看更详细的解释，为什么这种模式被认为是有害的，你能做什么来避免它。
 
-So how can you use ESLint in your project? Setting it up requires a few more steps than installing an extension. Luckily most of these steps you only have to do once.
+那么你如何在你的项目中使用 ESLint 呢？设置它需要比安装一个扩展多几个步骤。幸运的是这些步骤中的大多数你只需要做一次。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Set-up-a-frontend-project.002-1.jpeg)
 
-First, as you did with Prettier, you have to install the ESLint extension. Go to Extensions, search for ESLint and install it.
+首先，正如你对 Prettier 所做的，你必须安装 ESLint 扩展。进入扩展，搜索 ESLint 并安装它。
 
-Then you also need to generate an ESLint configuration. Before you do that though, first you need to make sure that your project is initialized with npm init.
+然后你还需要生成一个 ESLint 配置。不过在这之前，你首先需要确保你的项目是用 npm init 初始化的。
 
-If you don’t already have a package.json file then first you have to run npm init —yes to initialize your project.
-
-Then you can generate an ESLint config with the following command.
+如果你还没有 package.json 文件，那么首先你必须运行 `npm init -yes` 来初始化你的项目。
+然后你可以用下面的命令生成一个 ESLint 配置。
 
 ```shell
 npx eslint —init
 ```
 
-npx is another tool that comes with Node. It can run scripts that are not even on your computer.
+npx 是 Node 自带的另一个工具。它可以运行甚至不在你电脑上的脚本。
 
-In this case, we run the ESlint script but we never actually installed ESlint. We installed the ESLint extension, but that’s not the script we are executing here.
+在这个例子中，我们运行了 ESlint 脚本，但我们实际上从未安装过 ESlint。我们安装了 ESLint 扩展，但这并不是我们在这里执行的脚本。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-31-at-23.07.47.png)
 
-Initializing ESLint config from the terminal, adding an .eslintignore file
+从终端初始化 ESLint 配置，添加一个 .eslintignore 文件
 
-This script will ask you a few questions. Most of these are obvious except the first one.
+这个脚本会问你几个问题。除了第一个问题外，大部分都是显而易见的。
 
 - **How would you like to use ESLint?**
 
-Do you want ESLint to only check for syntax issues, or you want it to find possible problems as well, or you even want it to check for stylistic issues?
+你希望 ESLint 只检查语法问题，还是希望它也能发现可能的问题，或者你甚至希望它检查文体问题？
 
-If you use Prettier as well, you need to select the second option. Because if both Prettier and ESLint try to recommend a styling for you, they likely end up in a conflict.
+如果你也使用 Prettier，你需要选择第二个选项。因为如果 Prettier 和 ESLint 都试图为你推荐一个文体，它们很可能最终会产生冲突。
 
-So if you use Prettier you don’t want ESLint to check for style, only for syntax and possible problems.  
+所以，如果你使用 Prettier，你不希望 ESLint 检查风格，只检查语法和可能的问题。
 
 - **What type of modules does your project use?**
 
-In a frontend project you probably use imports and exports so you select the first option.  
+在一个前端项目中，你可能使用导入和导出，所以你选择第一个选项。
 
 - **Which framework does your project use?**
 
-If you use React or Vue.js the select the appropriate option, otherwise select none.  
+如果你使用 React 或 Vue.js，根据实际选择，否则选择无。  
 
 - **Does your project use Typescript?**
 
-If you use Typescript select yes, otherwise just press enter to continue.  
+如果你使用 Typescript，请选择是，否则就按回车键继续。
 
 - **Where does your project run?**
 
-Is your project supposed to run in a browser or with Node? Here we set up a front end project so we select Browser.  
+你的项目是要在浏览器中运行还是用 Node？这里我们设置了一个前端项目，所以我们选择浏览器。
 
 - **What format do you want your config file to be in?**
 
-This doesn’t really matter, but if you later want to customize the config you probably want to pick either JavaScript or JSON.
+这其实并不重要，但如果你以后想自定义配置，你可能想选择 JavaScript 或 JSON。
 
-The script finally asks if it should install ESlint as a development dependency. Here you should select yes. This will install ESlint so it will be available in your node\_modules folder.
+脚本最后询问是否应该将 ESlint 作为开发依赖来安装。这里你应该选择是。这将安装 ESlint，所以它将在你的 node_modules 文件夹中可用。
+ 
+这一步之后，你将得到你的配置，你可以在 package.json 文件中找到 ESlint，作为开发依赖。
 
-After this step, you will have your config and you can find ESlint in your package.json file as a development dependency.
+开发依赖意味着 ESlint 不是你网站源代码的一部分，但工具需要它。在这种情况下，ESLint 扩展需要将 ESlint 包安装到你的项目中。
 
-Development dependency means ESlint is not part of your website’s source code, but the tooling requires it. In this case, the ESLint extension requires that the ESlint package is installed to your project.
+现在我们已经安装了 ESLint 扩展，有了 ESLint 配置，并且安装了 ESlint 包，我们还需要授予扩展对这个包的访问权。
 
-Now that we have the ESLint extension installed, have an ESLint configuration, and we have the ESlint package installed, we also need to grant the extension access to this package.
-
-This is a security requirement you only have to do once. At the bottom of the editor, once you've installed the extension you’ll find the ESLint button with a crossed circle in front of it. Click that and select **Allow Everywhere**. This allows the ESLint extension to work properly for any future projects as well.
+这是一个安全要求，你只需要做一次。在编辑器的底部，一旦你安装了扩展，你会发现 ESLint 按钮，它前面有一个交叉的圆圈。点击它并选择 **Allow Everywhere**。这使得 ESLint 扩展在未来的任何项目中也能正常工作。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-31-at-23.17.14.png)
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-31-at-23.16.59.png)
 
-After all these steps, ESLint finally should work. If we go to a JavaScript file and try to use an undeclared variable, then on save it will highlight the issue.
+在所有这些步骤之后，ESLint 终于应该工作了。如果我们进入一个 JavaScript 文件，并试图使用一个未声明的变量，那么在保存时它会突出显示这个问题。
 
-ESLint might also give you errors at places where things are actually all right. Ironically if you selected that the ESlint config should be in a JavaScript file, then it will give you an error in the config itself.
+ESLint 也可能在实际情况良好的地方给你错误。具有讽刺意味的是，如果你选择了 ESLint 的配置应该在一个 JavaScript 文件中，那么它将在配置本身给你一个错误。
 
-This is because we set that the environment for our project is the browser and this config relies on a global variable that does not exist in browsers.
+这是因为我们设定我们项目的环境是浏览器，而这个配置依赖于一个在浏览器中不存在的全局变量。
 
-This file is not exactly part of our website, though. It’s a configuration file that won’t be part of the final source code and its natural environment is not the browser but rather Node.js. And in Node this global variable does exist. So this file is actually correct and there shouldn’t be an error here.
+不过，这个文件并不完全是我们网站的一部分。它是一个配置文件，不会成为最终源代码的一部分，其自然环境不是浏览器，而是 Node.js。而在 Node 中，这个全局变量确实存在。所以这个文件实际上是正确的，这里不应该有错误。
 
-One way to fix this is to set a list of files that ESLint should ignore. In the root folder of the application, you can create a file called **.eslintignore** and add **.eslintrc.js** to it. Once we save this ESLint won’t run any checks on the config file anymore.
-
-ESLint is also highly customizable. For more details check out the [documentation of ESLint](https://eslint.org/docs/user-guide/configuring/).
+ESLint 也是高度可定制的。更多细节请查看 [ESLint 的文档](https://eslint.org/docs/user-guide/configuring/)。
 
 ## How to Set Up a React or Vue Project
 
-Do you plan to build a website with React or Vue.js? You essentially need to do the same steps.
+你打算用 React 或 Vue.js 建立一个网站吗？你基本上需要做同样的步骤。
 
-Initialize a project with npm init, install the dependencies, set up ESLint then run your project with Parcel.
+用 npm init 初始化一个项目，安装依赖项，设置 ESLint，然后用 Parcel 运行你的项目。
 
-Check out my video on YouTube where we go through the steps we did before and a quick example project with React and Vue.js.
+请看我在 YouTube 上的视频，我们通过之前的步骤和一个快速的 React 和 Vue.js 的例子项目。
 
 ## Next steps
 
-Those are the basic tools you can use when working on a front end JS project. Add libraries with npm, keep your code tidy with Prettier, avoid unnecessary headaches with ESLint, and run your project with Parcel.
+这些是你在做前端 JS 项目时可以使用的基本工具。用 npm 添加库，用 Prettier 保持你的代码整洁，用 ESLint 避免不必要的麻烦，用 Parcel 运行你的项目。
 
-Now that we've set up a front end project you are ready to start building your website.
+现在我们已经建立了一个前端项目，你已经准备好开始建立你的网站。
 
-What happens once you finish it? You need to bundle it to a final production build that you can upload to the web. If you use parcel you can create a final bundle with the following command:
+一旦你完成它，会发生什么？你需要把它 bundle 成一个最终的生产构建，你可以上传到网络上。如果你使用 parcel，你可以用以下命令创建一个最终的 bundle:
 
 ```shell
 parcel build index.html —public-url '.'
 ```
 
-This will create a bundle in the dist folder that you can run in the browser. You can simple run the new index.html file from the dist folder in the browser to see your final result.
+这将在 dist 文件夹中创建一个 bundle 文件，你可以在浏览器中运行。你可以在浏览器中简单地运行 dist 文件夹中的新 index.html 文件，以看到你的最终结果。
 
-And that's it! Thank you for reading :)
+就这样吧! 谢谢您的阅读  :)
 
 ### **Subscribe for more tutorials on Web Development:**
 
-[
-
 Hunor Márton Borbély
 
-Game development with JavaScript, creative coding tutorials, HTML canvas, SVG, Three.js, and some React and Vue <https://twitter.com/HunorBorbelyhttps://codepen.io/HunorMarton>……
+[推特](https://twitter.com/HunorBorbely)
 
-![](https://www.youtube.com/s/desktop/a2ac178f/img/favicon_144x144.png)YouTube
+[codepen](https://codepen.io/HunorMarton)
 
-![](https://yt3.ggpht.com/ytc/AAUvwngQ7khZMu7fnitunQnU-P6UB7VXPRwz_9jZm-WwxA=s900-c-k-c0x00ffffff-no-rj)
+[YouTube](https://www.youtube.com/s/desktop/a2ac178f/img/favicon_144x144.png)
 
-](<https://www.youtube.com/channel/UCxhgW0Q5XLvIoXHAfQXg9oQ>)
+[2](https://www.youtube.com/channel/UCxhgW0Q5XLvIoXHAfQXg9oQ)

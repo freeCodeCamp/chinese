@@ -13,7 +13,7 @@ JavaScript 生态系统的变化如此之快，以至于要挑选最好的工具
 
 因此，让我们深入了解一下。
 
-## How to Choose a Code Editor
+## 如何选择一个代码编辑器
 
 让我们从基础开始。作为一个 Web 开发者，你主要是编辑文本，所以你需要一个好的编辑器。那么，你应该使用哪一个呢？
 
@@ -29,7 +29,7 @@ JavaScript 生态系统的变化如此之快，以至于要挑选最好的工具
 
 所有主流编辑器的最大特点之一是你可以为它们添加扩展。让我们走过两个扩展，它们是必须的。
 
-## How to Auto-format Your Code in VS Code
+## 如何在 VS 代码中自动格式化你的代码
 
 Prettier 是一个扩展，它使你的代码更可读，更一致。
 
@@ -71,7 +71,7 @@ Prettier 是一个扩展，它使你的代码更可读，更一致。
 
 There are many more options of course. If you want to dig deeper check out [Prettier's documentation](https://prettier.io/docs/en/configuration.html).
 
-## Why Do You Need Node for a Front End Project?
+## 为什么你的前端项目需要 Node？
 
 在我们讨论第二个必须的扩展之前，我们需要设置一些其他的东西。首先，我们需要谈一谈 Node.js。什么是 Node，为什么你需要它，即使你作为一个前端开发者工作？
 
@@ -110,7 +110,7 @@ Node 是一个 JavaScript 运行时。它在浏览器之外运行 JavaScript 文
 
 因此，为了回答这个问题，为什么人们将 Node 与后端开发联系起来？因为如果后端代码是用 JavaScript 写的，服务器需要一种方法来运行它们而不需要浏览器。所以，是的，如果你是一个使用 JavaScript 的后端开发人员，你就要使用 Node。但 Node 的意义远不止于此。
 
-## How to Run Your Project
+## 如何运行你的项目
 
 现在我们已经安装了 Node，我们可以安装一个 bundler。什么是 bundler？bundler 是一种工具，它将你所有的文件变成一个整洁的包，你将能够在浏览器中运行。
 
@@ -170,7 +170,7 @@ parcel index.html
 
 当然，Parcel 的功能远不止于此。现在，你也可以使用 SCSS 来代替普通的 CSS，例如。这让你可以使用许多很酷的功能，如嵌套声明、使用混合元素或调用函数等等。这就像一个具有超能力的 CSS。或者你甚至可以取代 HTML，用 Pug 来代替。
 
-## How to Add Libraries to Your JavaScript Project
+## 如何在你的 JavaScript 项目中添加库
 
 现在我们已经安装了 Node，并且已经初步了解了 npm，让我们看看如何在我们的项目添加库。
 
@@ -230,7 +230,7 @@ npm install three
 
 如果你想了解更多关于用 Three.js 构建 3D 游戏的信息，请查看我的 [早期文章](https://www.freecodecamp.org/news/three-js-tutorial/)，关于如何在浏览器中构建一个简单的汽车。
 
-## How to Get Coding Tips While You Code
+## 如何在编码时获得编码的提示
 
 VS Code 的第二个必备扩展是 ESLint。当 Prettier 在对代码进行格式化时，ESLint 可以给你提供编码提示。
 
@@ -325,7 +325,7 @@ ESLint 也可能在实际情况良好的地方给你错误。具有讽刺意味�
 
 ESLint 也是高度可定制的。更多细节请查看 [ESLint 的文档](https://eslint.org/docs/user-guide/configuring/)。
 
-## How to Set Up a React or Vue Project
+## 如何建立一个 React 或 Vue 项目
 
 你打算用 React 或 Vue.js 建立一个网站吗？你基本上需要做同样的步骤。
 
@@ -333,7 +333,7 @@ ESLint 也是高度可定制的。更多细节请查看 [ESLint 的文档](https
 
 请看我在 YouTube 上的视频，我们通过之前的步骤和一个快速的 React 和 Vue.js 的例子项目。
 
-## Next steps
+## 接下来
 
 这些是你在做前端 JS 项目时可以使用的基本工具。用 npm 添加库，用 Prettier 保持你的代码整洁，用 ESLint 避免不必要的麻烦，用 Parcel 运行你的项目。
 
@@ -349,7 +349,7 @@ parcel build index.html —public-url '.'
 
 就这样吧! 谢谢您的阅读  :)
 
-### **Subscribe for more tutorials on Web Development:**
+### **订阅更多关于网站开发的教程:**
 
 Hunor Márton Borbély
 

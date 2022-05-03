@@ -1,6 +1,6 @@
 > -  原文地址：[Programming Paradigms – Paradigm Examples for Beginners](https://www.freecodecamp.org/news/an-introduction-to-programming-paradigms/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Programming Paradigms – Paradigm Examples for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/anne-nygard-OJzEnupZWGM-unsplash.jpg)

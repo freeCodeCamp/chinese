@@ -6,45 +6,45 @@
 
 ![Python Discord Bot Tutorial – Code a Discord Bot And Host it for Free](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/discordbot.png)
 
-This tutorial will show you how to build your own Discord bot completely in the cloud.
+本教程将告诉你如何完全在云端建立你自己的 Discord 机器人。
 
-You do not need to install anything on your computer, and you do not need to pay anything to host your bot.
+你不需要在你的电脑上安装任何东西，也不需要支付任何费用来托管你的机器人。
 
-We are going to use a number of tools, including the Discord API, Python libraries, and a cloud computing platform called [Repl.it](https://www.repl.it).
+我们将使用一些工具，包括 Discord API、Python 库和一个名为 [Repl.it](https://www.repl.it) 的云计算平台。
 
-There is also a video version of this written tutorial. The video is embedded below and the written version is after the video.
+这个书面教程也有一个视频版本。视频嵌入在下面，书面版本在视频之后。
 
 ## How to Create a Discord Bot Account
 
-In order to work with the Python library and the Discord API, we must first create a Discord Bot account.
+为了使用 Python 库和 Discord API，我们必须首先创建一个 Discord Bot 账户。
 
-Here are the step to creating a Discord Bot account.
+以下是创建 Discord Bot 账户的步骤。
 
-1\. Make sure you’re logged on to the [Discord website](https://discord.com).
+1. 确保你已经登录到[Discord 网站](https://discord.com)。
 
-2\. Navigate to the [application page](https://discord.com/developers/applications).
+2. 进入 [应用程序页面](https://discord.com/developers/applications)。
 
-3\. Click on the “New Application” button.
+3. 点击 `New Application` 按钮.
 
 ![image-117](https://www.freecodecamp.org/news/content/images/2021/06/image-117.png)
 
-4\. Give the application a name and click “Create”.
+4. 给应用程序一个名称，然后点击 `Create` 按钮。
 
 ![image-118](https://www.freecodecamp.org/news/content/images/2021/06/image-118.png)
 
-5\. Go to the “Bot” tab and then click “Add Bot”. You will have to confirm by clicking "Yes, do it!"
+5. 进入  `Bot` 标签，然后点击 `Add Bot`。你必须点击 `Yes, do it!`.
 
 ![image-119](https://www.freecodecamp.org/news/content/images/2021/06/image-119.png)
 
-Keep the default settings for **Public Bot** (checked) and **Require OAuth2 Code Grant** (unchecked).
+保持默认设置 **Public Bot** (选中) 和 **Require OAuth2 Code Grant** (未选中).
 
-Your bot has been created. The next step is to copy the token.
+你的机器人已经创建完毕。下一步是复制令牌（token）。
 
 ![image-122](https://www.freecodecamp.org/news/content/images/2021/06/image-122.png)
 
-This token is your bot's password so don't share it with anybody. It could allow someone to log in to your bot and do all sorts of bad things.
+这个令牌是你的机器人的密码，所以不要与任何人分享它。它可以让别人登录到你的机器人并做各种坏事。
 
-You can regenerate the token if it accidentally gets shared.
+如果不小心被分享，你可以重新生成令牌。
 
 ## How to Invite Your Bot to Join a Server
 

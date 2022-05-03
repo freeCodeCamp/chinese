@@ -1,11 +1,8 @@
-> -  原文地址：[Python Discord Bot Tutorial – Code a Discord Bot And Host it for Free](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)
-> -  原文作者：[
-                    
-                        Beau Carnes
-                    
-                ](https://www.freecodecamp.org/news/author/beau/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Python Discord Bot Tutorial – Code a Discord Bot And Host it for Free](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)
+> - 原文作者：[Beau Carnes](https://www.freecodecamp.org/news/author/beau/)
+>
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Python Discord Bot Tutorial – Code a Discord Bot And Host it for Free](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/discordbot.png)
 
@@ -138,13 +135,13 @@ TOKEN=[paste token here]
 
 Now let's go over what each line of code is doing in your Discord bot code.
 
-1.  The first line imports the discord.py library.
-2.  The second line imports the os library, but this is only used for getting the `TOKEN` variable from the `.env` file. If you are not using a `.env` file, you do not need this line.
-3.  Next, we create an instance of a [`Client`](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client). This is the connection to Discord.
-4.  The `[@client.event()](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client.event)` decorator is used to register an event. This is an asynchronous library, so things are done with callbacks. A callback is a function that is called when something else happens. In this code, the `[on_ready()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_ready)` event is called when the bot is ready to start being used. Then, when the bot receives a message, the `[on_message()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_message)` event is called.
-5.  The `[on_message()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_message)` event triggers each time a message is received but we don't want it to do anything if the message is from ourselves. So if the `[Message.author](https://discordpy.readthedocs.io/en/latest/api.html#discord.Message.author)` is the same as the `[Client.user](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client.user)` the code just returns.
-6.  Next, we check if the [`Message.content`](https://discordpy.readthedocs.io/en/latest/api.html#discord.Message.content) starts with `'$hello'`. If so, then the bot replies with `'Hello!'` to the channel it was used in.
-7.  Now that the bot is set up, the final line runs the bot with the login token. It gets the token from out `.env` file.
+1. The first line imports the discord.py library.
+2. The second line imports the os library, but this is only used for getting the `TOKEN` variable from the `.env` file. If you are not using a `.env` file, you do not need this line.
+3. Next, we create an instance of a [`Client`](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client). This is the connection to Discord.
+4. The `[@client.event()](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client.event)` decorator is used to register an event. This is an asynchronous library, so things are done with callbacks. A callback is a function that is called when something else happens. In this code, the `[on_ready()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_ready)` event is called when the bot is ready to start being used. Then, when the bot receives a message, the `[on_message()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_message)` event is called.
+5. The `[on_message()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_message)` event triggers each time a message is received but we don't want it to do anything if the message is from ourselves. So if the `[Message.author](https://discordpy.readthedocs.io/en/latest/api.html#discord.Message.author)` is the same as the `[Client.user](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client.user)` the code just returns.
+6. Next, we check if the [`Message.content`](https://discordpy.readthedocs.io/en/latest/api.html#discord.Message.content) starts with `'$hello'`. If so, then the bot replies with `'Hello!'` to the channel it was used in.
+7. Now that the bot is set up, the final line runs the bot with the login token. It gets the token from out `.env` file.
 
 We have the code for the bot so now we just have to run it.
 
@@ -506,7 +503,7 @@ But there are two ways you can keep your bot running continuously, even after yo
 
 The first way and simplest way is to sign up for paid plan in Repl.it. Their cheapest paid plan is called the Hacker Plan and it includes five always-on repls.
 
-You can get three months free using this link (limited to first 1000 people):  https://repl.it/claim?code=tryalwayson2103
+You can get three months free using this link (limited to first 1000 people):  <https://repl.it/claim?code=tryalwayson2103>
 
 Once you have signed up for that plan, open your Repl and click the name at the top. Then select the "Always On" option.
 
@@ -524,8 +521,8 @@ Uptime Robot can be set up to ping the bot's web server on repl.it every 5 minut
 
 So we have to do two more things to get our bot to run continuously:
 
-1.  create a web server in repl.it and
-2.  set up Uptime Robot to continuously ping the web server.
+1. create a web server in repl.it and
+2. set up Uptime Robot to continuously ping the web server.
 
 ### How to Create a Web Server in repl.it
 

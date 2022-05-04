@@ -1,70 +1,70 @@
 > -  原文地址：[JavaScript Prototypes and Inheritance – and Why They Say Everything in JS is an Object](https://www.freecodecamp.org/news/prototypes-and-inheritance-in-javascript/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![JavaScript Prototypes and Inheritance – and Why They Say Everything in JS is an Object](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/pexels-maor-attias-5192478.jpg)
 
-Hi everyone! In this short article we're going to talk about **prototypal inheritance** in JavaScript, and what are the implications of it.
+大家好！在这篇短文中，我将聊一聊JavaScript中的**原型继承**及它的意义。
 
-## Table of Contents
+## 目录
 
--   [Intro](#intro)
--   [How to access a prototype’s properties and methods in JavaScript](#how-to-access-a-prototype-s-properties-and-methods-in-javascript)
--   [The prototype chain](#the-prototype-chain)
--   [A prototype-based language](#a-prototype-based-language)
--   [Javascript classes](#javascript-classes)
--   [Roundup](#roundup)
+-   [前言](#intro)
+-   [如何访问JavaScript中的属性和方法](#how-to-access-a-prototype-s-properties-and-methods-in-javascript)
+-   [原型链](#the-prototype-chain)
+-   [基于原型的语言](#a-prototype-based-language)
+-   [JavaScript类](#javascript-classes)
+-   [总结](#roundup)
 
-# Intro
+<h1 id="intro">前言</h1>
 
-Have you ever wondered how strings, arrays or objects “know” the methods each of them have? How does a string know it can `.toUpperCase()` or an array know that it can `.sort()`? We never defined these methods manually, right?
+你是否好奇过，字符串或者对象是如何“知道”它们有哪些方法的？字符串是怎么知道 `.toUpperCase()`，数组是怎么知道`.sort()`？我们从来没有手动定义这些方法，对不对？
 
-The answer is that these methods come built-in within each type of data structure thanks to something called **prototype inheritance**.
+其实这些方法属于特定数据结构的内置方法，这些方法之所以存在的原因是**原型继承**。
 
-In JavaScript, an object can inherit properties of another object. The object from where the properties are inherited is called the prototype. In short, objects can inherit properties from other objects — the prototypes.
+在JavaScript中，一个对象可以继承另一个对象的属性。被继承的这个对象被称作原型。简言之，对象可以从其他对象（原型）继承属性。
 
-You’re probably wondering: why the need for inheritance in the first place? Well, inheritance solves the problem of data and logic duplication. By inheriting, objects can share properties and methods without the need of manually setting those properties and methods on each object.
+你可能在好奇：为什么要设计继承机制呢？继承解决了数据和逻辑的复制。通过继承，对象之间可以共享属性和方法，而不需要手动在每一个对象上添加属性和方法。
 
-## ****How to** A**ccess** a P**rototype’s** P**roperties and** M**ethods** in JavaScript**
+<h2 id="how-to-access-a-prototype-s-properties-and-methods-in-javascript">如何访问JavaScript中的属性和方法</h2>
 
-When we try to access a property of an object, the property is not only searched in the object itself. It's also searched in the prototype of the object, in the prototype of the prototype, and so on – until a property is found that matches the name or the end of the **prototype chain** is reached.
+当我们试图访问对象的属性时，不仅在该对象内部搜索属性，还在对象的原型以及原型的原型中搜索，直到找到匹配名字的属性，或者达到**原型链**终点。
 
-If the property or method isn’t found anywhere in the prototype chain, only then will JavaScript return `undefined`.
+只有当在原型链中未找到属性和方法时，JavaScript返回`undefined`。
 
-Every object in JavaScript has an internal property called `[[Prototype]]`.
+JavaScript中的每一个对象都有一个内置属性`[[Prototype]]`。
 
-If we create an array and log it to the console like this:
+如果我们创建一个数组，并且在控制台打印出来：
 
 ```javascript
 const arr = [1,2,3]
 console.log(arr)
 ```
 
-We will see this:
+我们会看到：
 
 ![image](https://www.freecodecamp.org/news/content/images/2022/05/image.png)
 
-The double square brackets that enclose `[[Prototype]]` signify that it is an internal property, and cannot be accessed directly in code.
+双方括号括起来的`[[Prototype]]`表示内置属性，不可以通过代码直接访问。
 
-To find the `[[Prototype]]` of an object, we will use the `Object.getPrototypeOf()` method.
+想要访问对象的 `[[Prototype]]`，可以使用`Object.getPrototypeOf()`方法。
 
 ```javascript
 const arr = [1,2,3]
 console.log(Object.getPrototypeOf(arr))
 ```
 
-The output will consist of several built-in properties and methods:
+输出是一系列内置属性和方法：
 
 ![image-1](https://www.freecodecamp.org/news/content/images/2022/05/image-1.png)
 
-Keep in mind that prototypes can also be changed and modified through different methods.
+请记住可以通过不同的方法来改变或修改属性。
 
-## ****The** P**rototype** C**hain****
+<h2 id="the-prototype-chain">原型链</h2>
 
-At the end of the prototype chain is `Object.prototype`. All objects inherit the properties and methods of `Object`. Any attempt to search beyond the end of the chain results in `null`.
+原型链的终点是`Object.prototype`。所有对象都继承`Object`的属性和方法。任何超出原型链终点的搜索都会返回`null`。
 
-If you look for the prototype of the prototype of an array, a function, or a string, you’ll see it’s an object. And that’s because in JavaScript all objects are descendants or instances of `Object.prototype`, which is an object that sets properties and methods to all other JavaScript data types.
+如果查看数组、函数或者字符串原型的原型，你会发现是对象。这是因为在JavaScript中，所有对象都是`Object.prototype`的子孙后代（实例），`Object.prototype`是设置其他JavaScript数据类型属性和方法的对象。
 
 ```javascript
 const arr = [1,2,3]
@@ -74,11 +74,11 @@ console.log(Object.getPrototypeOf(arrProto))
 
 ![image-2](https://www.freecodecamp.org/news/content/images/2022/05/image-2.png)
 
-Each type of prototype (for example array prototype) defines its own methods and properties, and in some cases overrides the `Object.prototype` methods and properties (that’s why arrays have methods that objects don’t).
+每一种原型类型（比如说数组原型）定义了它自己的方法和属性，并且在有些时候会覆盖掉`Object.prototype`的方法和属性(这就是为什么数组的一些方法对象没有)。
 
-But under the hood and going up the ladder of the prototype chain, **everything in JavaScript is built upon the `Object.prototype`.**
+但是顺藤摸瓜，沿着原型链探索，会发现**JavaScript中的所有内容都是基于`Object.prototype`创建的**。
 
-If we try to look into the prototype of **`Object.prototype`** we get `null`.
+如果我们试图获取 **`Object.prototype`**的原型，我们会得到`null`。
 
 ```javascript
 const arr = [1,2,3]
@@ -89,25 +89,25 @@ console.log(Object.getPrototypeOf(objectProto))
 
 ![image-3](https://www.freecodecamp.org/news/content/images/2022/05/image-3.png)
 
-## **A Prototype-Based Language**
+<h2 id="a-prototype-based-language">基于原型的语言</h2>
 
-JavaScript is a **prototype-based language**, meaning object properties and methods can be shared through generalized objects that have the ability to be cloned and extended.
+JavaScript是**基于原型的语言**，意味着对象的属性和方法可以通过广义对象复制和继承的能力在对象之间共享。
 
-When it comes to inheritance, JavaScript has only one structure: objects.
+说到继承，JavaScript只有一种结构：对象。
 
-Each object has a private property (referred to as its `[[Prototype]]`) that maintains a link to another object called its prototype. That prototype object has its own prototype, and so on until an object whose prototype is `null` is reached.
+每一个对象有一个私有属性(`[[Prototype]]`)连接到另一个对象也就是它的原型。 这个原型对象也有自己的原型， 以此类推，直到一个对象的原型是 `null`为止。
 
-By definition, `null` has no prototype, and acts as the final link in this chain of prototypes.
+根据定义，`null`没有原型，是原型链的最后一环。
 
-This is known as prototypical inheritance and differs from class inheritance. Among popular object-oriented programming languages, JavaScript is relatively unique, as other prominent languages such as PHP, Python, and Java are class-based languages, which instead define classes as blueprints for objects.
+原型继承与类继承并不相同。在常用的面向对象的编程语言中，JavaScript相对特殊，其他一些知名的语言，如：PHP、Python和Java都是基于类的语言，它们将类作为对象的蓝图。
 
-At this point you may be thinking "But we CAN implement classes on JavaScript!". And yes, we can, but as syntactic sugar. 🤫🤔
+这时你可能会想：“但是可以在JavaScript中使用类！”是的，确实可以，但是这只是一个语法糖。 🤫🤔
 
-## Javascript Classes
+<h2 id="javascript-classes">JavaScript类</h2>
 
-Classes are a way to set a blueprint to create objects with predefined properties and methods. By creating a class with specific properties and methods, you can later on instantiate objects from that class, that will inherit all the properties and methods that that class has.
+类是通过预设蓝图的属性和方法，来创建对象的一种方法。创建了特定属性和方法的类后，可以实例化这个类，继承这个类的所有属性和方法。
 
-In JavaScript, we can create classes in the following way:
+在JavaScript中可以使用如下方法创建类：
 
 ```javascript
 class Alien {
@@ -121,18 +121,18 @@ class Alien {
 }
 ```
 
-And then we can instantiate an object from that class like this:
+并且可以创建实例对象：
 
 ```javascript
 const alien1 = new Alien("Ali", "I'm Ali the alien!")
 console.log(alien1.name) // output: "Ali"
 ```
 
-Classes are used as a way to make code more modular, organized, and understandable and are heavily used in OOP programming.
+类使得代码更加模块化、组织化并更易于理解，创建类使用了是OOP编程范式。
 
-But keep in mind that JavaScript doesn’t really support classes like other languages. The `class` keyword was introduced with ES6 as syntactic sugar that facilitates this way of organizing code.
+但需要注意的是JavaScript并不像其他语言一样支持类， `class`关键字只是ES6引入的一个语法糖，帮助你更好地组织代码。
 
-To visualize this, see that the same thing we did by previously defining a `class`, we can do it by defining a function and editing the prototype in the following way:
+为了让你的感受更直观，我们改写刚才用`class`编写的代码，我们可以定义一个函数，并且修改它的原型：
 
 ```javascript
 function Alien(name, phrase) {
@@ -151,14 +151,14 @@ console.log(alien1.phrase) // output "I'm Ali the alien!"
 alien1.fly() // output "Zzzzzziiiiiinnnnnggggg"
 ```
 
-Any function can be invoked as a constructor with the keyword `new` and the prototype property of that function is used for the object to inherit methods from. In JavaScript, “class” is only used conceptually to describe the above practice – technically they’re just functions.😑
+通过`new`关键字可以将任何函数调用成构造函数，函数的原型属性会被用作对象的继承方法。在JavaScript中“class”仅在概念上描述上述行为——但实际上它们还是函数。😑
 
-Although this doesn't necessarily make a lot of difference (we can still perfectly implement OOP and use classes like in most other programming languages), it's important to remember that JavaScript is built with prototype inheritance at its core.
+当然了解这些对你的的代码编写没有太大影响（我们还是可以像使用其他语言一样使用类来执行OOP）， 但需要记住JavaScript的核心是原型继承。
 
-# Roundup
+<h1 id="roundup">总结</h1>
 
-That's it, everyone! As always, I hope you enjoyed the article and learned something new. If you want, you can also follow me on [LinkedIn](https://www.linkedin.com/in/germancocca/) or [Twitter](https://twitter.com/CoccaGerman).
+就讲这么多，希望你喜欢这篇文章并且有所收获。你可以在[LinkedIn](https://www.linkedin.com/in/germancocca/)或[Twitter](https://twitter.com/CoccaGerman)上关注我。
 
-Cheers and see you in the next one! =D
+干杯！下篇文章见！ =D
 
 ![AntiqueAthleticGuineapig-size_restricted](https://www.freecodecamp.org/news/content/images/2022/04/AntiqueAthleticGuineapig-size_restricted.gif)

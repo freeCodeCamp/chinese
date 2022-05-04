@@ -1,6 +1,6 @@
 > -  原文地址：[Next.js Image Tutorial – How to Upload, Crop, and Resize Images in the Browser in Next](https://www.freecodecamp.org/news/how-to-upload-crop-resize-images-in-the-browser-in-nextjs/)
 > -  原文作者：[Idris Olubisi](https://www.freecodecamp.org/news/author/idris/)
-> -  译者：
+> -  译者：bauhauce
 > -  校对者：
 
 ![Next.js Image Tutorial – How to Upload, Crop, and Resize Images in the Browser in Next](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/pexels-cottonbro-5083407.jpg)

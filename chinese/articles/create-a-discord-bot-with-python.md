@@ -48,53 +48,52 @@
 
 ## How to Invite Your Bot to Join a Server
 
-Now you have to get your Bot User into a server. To do this, you should create an invite URL for it.
+现在你必须让你的机器人用户接入一个服务器。要做到这一点，你应该为它创建一个邀请 URL。
 
-Go to the "OAuth2" tab. Then select "bot" under the "scopes" section.
+转到 `OAuth2` 标签。然后在 `scopes` 部分选择 `bot`。
 
 ![image-123](https://www.freecodecamp.org/news/content/images/2021/06/image-123.png)
 
-Now choose the permissions you want for the bot. Our bot is going to mainly use text messages so we don't need a lot of the permissions. You may need more depending on what you want your bot to do. Be careful with the "Administrator" permission.
-
+现在为机器人选择你想要的权限。我们的机器人将主要使用文本信息，所以我们不需要很多的权限。你可能需要更多的权限，这取决于你希望你的机器人做什么。对 `Administrator` 的权限要小心。
 ![image-124](https://www.freecodecamp.org/news/content/images/2021/06/image-124.png)
 
-After selecting the appropriate permissions, click the 'copy' button above the permissions. That will copy a URL which can be used to add the bot to a server.
+选择适当的权限后，点击权限上方的 `copy` 按钮。这将复制一个 URL，可用于将机器人添加到一个服务器。
 
-Paste the URL into your browser, choose a server to invite the bot to, and click “Authorize”.
+把这个 URL 粘贴到你的浏览器，选择一个服务器来接入机器人，然后点击 `Authorize`。
 
-To add the bot, your account needs "Manage Server" permissions.
+要添加机器人，你的账户需要 `Manage Server` 的权限。
 
-Now that you've created the bot user, we'll start writing the Python code for the bot.
+现在你已经创建了机器人用户，我们将开始为机器人编写 Python 代码。
 
 ## How to Code a Basic Discord Bot with the discord.py Library
 
-We'll be using the discord.py Python library to write the code for the bot. discord.py is an API wrapper for Discord that makes it easier to create a Discord bot in Python.
+我们将使用 discord.py， 这个 Python 库来编写机器人的代码。discord.py 是 Discord 的一个 API 封装器，使在 Python 中更容易创建一个 Discord 机器人。
 
 ### How to Create a Repl and Install discord.py
 
-You can develop the bot on your local computer with any code editor. However, in this tutorial, we'll be using Repl.it because it will make it simpler for anyone to follow along. Repl.it is an online IDE that you can use in your web browser.
+你可以在你的本地电脑上用任何代码编辑器开发机器人。然而，在本教程中，我们将使用 Repl.it，因为它将使任何人都能更简单地跟随。Repl.it 是一个在线 IDE，你可以在你的网络浏览器中使用。
 
-Start by going to [Repl.it](https://repl.it). Create a new Repl and choose "Python" as the language.
+首先进入 [Repl.it](https://repl.it)。创建一个新的 Repl，选择 `Python` 作为语言。
 
-To use the discord.py library, just write `import discord` at the top of `main.py`. Repl.it will automatically install this dependency when you press the "run" button.
+要使用 discord.py 库，只要在 `main.py` 的顶部写上 `import discord`。当你按下 `run` 按钮时，Repl.it 会自动安装这个依赖。
 
-If you prefer to code the bot locally, you can use this command on MacOS to install discord.py:
+如果你喜欢在本地编码机器人，你可以在 MacOS 上使用这个命令来安装 discord.py。:
 
 `python3 -m pip install -U discord.py`
 
-You may have to use `pip3` instead of `pip`.
+你可能需要使用 `pip3` 而不是 `pip`。
 
-If you are using Windows, then you should use the following line instead:
+如果你使用的是 Windows，那么你应该使用以下一行来:
 
 `py -3 -m pip install -U discord.py`
 
 ### How to Set Up Discord Events for Your Bot
 
-discord.py revolves around the concept of events. An event is something you listen to and then respond to. For example, when a message happens, you will receive an event about it that you can respond to.
+discord.py 基于事件的概念。一个事件是你监听的东西，然后对其作出回应。例如，当一条消息发生时，你会收到一个关于它的事件，你可以对其作出回应。
 
-Let’s make a bot that replies to a specific message. This simple bot code, along with the code explanation, is taken from [the discord.py documentation](https://discordpy.readthedocs.io/en/latest/quickstart.html#a-minimal-bot). We will be adding more features to the bot later.
+让我们做一个机器人，回复一个特定的消息。这个简单的机器人代码，以及代码解释，来自于[the discord.py documentation](https://discordpy.readthedocs.io/en/latest/quickstart.html#a-minimal-bot)。我们将在以后为机器人添加更多的功能。
 
-Add this code to main.py. (You can name the file something else if you like, just not discord.py.) I'll explain what all this code does shortly.
+将这段代码添加到 main.py 中。(如果你愿意，你可以给这个文件起个别的名字，但不要叫 discord.py。)我很快会解释这些代码的作用。
 
 ```python
 import discord
@@ -117,33 +116,34 @@ async def on_message(message):
 client.run(os.getenv('TOKEN'))
 ```
 
-When you created your bot user on Discord, you copied a token. Now we are going to create a `.env` file to store the token. If you are running your code locally, you don't need the `.env` file. Just replace `os.getenv('TOKEN')` with the token.
+当你在 Discord 上创建你的机器人用户时，你复制了一个令牌。现在我们要创建一个 `.env` 文件来存储该令牌。如果你在本地运行你的代码，你不需要 `.env` 文件。只要用令牌替换 `os.getenv('TOKEN')` 就可以了。
 
-`.env` files are used for declaring environment variables. On Repl.it, most files you create are visible to anyone but `.env` files are only visible to you.  Other people viewing a public repl will not be able to see the contents of the `.env` file.
+`.env` 文件是用来声明环境变量的。在 Repl.it 上，你创建的大多数文件对任何人都是可见的，但 `.env` 文件只对你可见。 其他人将无法看到公共 repl 里的`.env`文件的内容。
 
-So if you are developing on Repl.it, only include private information like tokens or keys in a `.env` file.
+因此，如果你在 Repl.it 上开发，应该只在 `.env` 文件中存储私人信息，如令牌或密钥。
 
-Click the "Add file" button and create a file named `.env`.
+点击 `Add file`按钮，创建一个名为 `.env` 的文件。
 
 ![image-19-1](https://www.freecodecamp.org/news/content/images/2021/06/image-19-1.png)
 
-Inside the file add the following line, including your actual token you copied previously:
+在文件中添加以下一行，你的实际令牌（token）:
 
-```
+```python
 TOKEN=[paste token here]
 ```
 
-Now let's go over what each line of code is doing in your Discord bot code.
+现在让我们来看看每一行代码在你的 Discord 机器人中的作用是什么。
 
-1. The first line imports the discord.py library.
-2. The second line imports the os library, but this is only used for getting the `TOKEN` variable from the `.env` file. If you are not using a `.env` file, you do not need this line.
-3. Next, we create an instance of a [`Client`](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client). This is the connection to Discord.
-4. The `[@client.event()](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client.event)` decorator is used to register an event. This is an asynchronous library, so things are done with callbacks. A callback is a function that is called when something else happens. In this code, the `[on_ready()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_ready)` event is called when the bot is ready to start being used. Then, when the bot receives a message, the `[on_message()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_message)` event is called.
-5. The `[on_message()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_message)` event triggers each time a message is received but we don't want it to do anything if the message is from ourselves. So if the `[Message.author](https://discordpy.readthedocs.io/en/latest/api.html#discord.Message.author)` is the same as the `[Client.user](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client.user)` the code just returns.
-6. Next, we check if the [`Message.content`](https://discordpy.readthedocs.io/en/latest/api.html#discord.Message.content) starts with `'$hello'`. If so, then the bot replies with `'Hello!'` to the channel it was used in.
-7. Now that the bot is set up, the final line runs the bot with the login token. It gets the token from out `.env` file.
+1. 第一行是导入 discord.py 库。
+2. 第二行导入 os 库，但这只是用于从 `.env` 文件中获取 `TOKEN` 变量。如果你不使用 `.env` 文件，你不需要这一行。
+3. 接下来，我们创建一个 [`Client`](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client) 的实例。这是与 Discord 的连接。
+4. [@client.event()](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client.event) 装饰器被用来注册一个事件。这是一个异步库，所以事情是通过回调完成的。回调是一个当其他事情发生时被调用的函数。在这段代码中，当机器人准备开始使用时，[on_ready()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_ready) 事件被调用。然后，当机器人收到一个消息时，[on_message()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_message) 事件被调用。
+5. [on_message()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_message) 事件在每次收到消息时都会触发，但如果消息是来自我们自己，我们不希望它做任何事情。因此，如果[Message.author](https://discordpy.readthedocs.io/en/latest/api.html#discord.Message.author) 与 [Client.user](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client.user) 相同，代码只是返回。
 
-We have the code for the bot so now we just have to run it.
+6. 接下来，我们检查 [`Message.content`](https://discordpy.readthedocs.io/en/latest/api.html#discord.Message.content) 是否以 `$hello` 开头。如果是，那么机器人就会向它所使用的频道回复 `Hello!`。
+7. 现在机器人已经设置好了，最后一行是用登录令牌运行机器人。它从 `.env` 文件中获取令牌。
+
+我们有了机器人的代码，现在我们只需要运行它。
 
 ### How to Run the Bot
 

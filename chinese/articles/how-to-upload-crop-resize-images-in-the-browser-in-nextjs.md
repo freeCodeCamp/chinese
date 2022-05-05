@@ -5,27 +5,27 @@
 
 ![Next.js Image Tutorial – How to Upload, Crop, and Resize Images in the Browser in Next](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/pexels-cottonbro-5083407.jpg)
 
-最基本的两个图像编辑功能是调整大小和裁剪。但是你应该谨慎执行这些操作，因为它们可能会降低图像质量。
+两个最基本的图像编辑功能是调整大小和裁剪。但是你应该谨慎执行这些操作，因为它们可能会降低图像质量。
 
 裁剪总是会删除原始图像的一部分，从而导致一些像素的丢失。
 
 这篇文章将教你如何在浏览器中上传、裁剪和调整图像大小。
 
-我在[Codesandbox](https://codesandbox.io/s/serverless-leaf-vc9rls?file=/pages/index.js)中构建了这个项目。要快速开始的话，请克隆[Codesandbox](https://codesandbox.io/s/serverless-leaf-vc9rls?file=/pages/index.js)或运行项目。
+我在[Codesandbox](https://codesandbox.io/s/serverless-leaf-vc9rls?file=/pages/index.js)中构建了这个项目。要快速开始的话，请下载[Codesandbox](https://codesandbox.io/s/serverless-leaf-vc9rls?file=/pages/index.js)并运行项目。
 
 ## 先决条件
 
-要学习本教程，你应该有一些 JavaScript 和 React.js 经验。但是Next.js 的经验不是必需的，有的话会更好。
+要学习本教程，你需要有一些 JavaScript 和 React.js 经验。但是Next.js 的经验不是必需的，有的话会更好。
 
 你还需要一个 [Cloudinary account](https://cloudinary.com/users/register/free) 帐户来存储媒体文件。
 
 [Cloudinary](https://cloudinary.com/documentation/image_video_and_file_upload#upload_options_overview) 提供了一个安全且完整的 API，用于从服务器、浏览器或移动应用程序快速有效地上传媒体文件。
 
-最后你需要 [Next.js](https://nextjs.org/) 。它是一个基于 React 的开源前端开发 Web 框架，允许服务器端渲染和生成静态网站和应用程序。
+最后你需要 [Next.js](https://nextjs.org/) 。它是一个基于 React 的开源前端开发 Web 框架，允许服务端渲染和生成静态网站应用。
 
 ## 项目设置和安装
 
-使用 `npx create-next-app` 命令在你选择的目录中搭建新项目来创建一个新项目。
+使用 `npx create-next-app` 命令在你选择的目录中创建一个新项目。
 
 你可以使用以下命令执行此操作：
 
@@ -33,29 +33,25 @@
 npx create-next-app <project name>
 ```
 
-要安装依赖项，请使用以下命令：
+要安装依赖项的话，请使用以下命令：
 
 ```
 cd <project name> 
 npm install cloudinary-react
 ```
 
-Once the app is created, and the dependencies are installed, you'll see a message with instructions for navigating to your site and running it locally.
-创建应用程序并安装依赖项后，你将看到一条消息，其中包含导航到你的站点并在本地运行它的说明。
-You can do this with the command:
+在该应用程序创建并安装完依赖项后，你将看到一条带有导航到你的站点和本地运行说明的消息。
 你可以使用以下命令执行此操作：
 
 ```
 npm run dev
 ```
 
-Next.js will start a hot-reloading development environment accessible by default at `http://localhost:3000`.
-Next.js 将启动一个默认可访问的热重载开发环境http://localhost:3000 。
+Next.js 将启动一个默认可访问的热重载开发环境 http://localhost:3000 。
 
 ## 如何构建用户界面
 
-For our project, we'll want the user interface to upload, crop, and resize images on the home page. We will do this by updating the `pages/index.js` file to a component:
-对于我们的项目，我们希望用户界面能够在主页上上传、裁剪和调整图像大小。我们将通过将pages/index.js文件更新为组件来做到这一点：
+对于我们的项目，我们希望能够在主页上的用户界面上传、裁剪和调整图像大小。我们将通过更新 `pages/index.js` 文件为组件来做到这一点：
 
 ```
 import React, { useState } from "react";
@@ -91,8 +87,7 @@ export default IndexPage;
 
 ```
 
-The current user interface doesn't look that great, though. We'll add some styling with CSS in the `style.css` file like this:
-不过，当前的用户界面看起来并不那么好。我们将在style.css文件中添加一些带有 CSS 的样式，如下所示：
+不过，当前的用户界面看起来并不那么好。我们将在style.css文件中添加一些 CSS 样式，如下所示：
 
 ```
 @import url("https://fonts.googleapis.com/css?family=Acme|Lobster");
@@ -240,25 +235,21 @@ input:focus {
 }
 ```
 
-Our application should now look like this on [http://localhost:3000/:](http://localhost:3000/:)
-我们的应用程序现在应该在http://localhost:3000/上看起来像这样：
+我们的应用程序现在应该看起来如 http://localhost:3000/ 上所呈现出来那样：
 
 ![How to Upload, Crop, & Resize Image in the Browser in Next.js](https://cdn.hashnode.com/res/hashnode/image/upload/v1650105687298/eeGTDWFHA.png)
 
 ## 如何创建图像上传小部件
 
-Cloudinary's upload widget lets us upload media assets from multiple sources, including Dropbox, Facebook, Instagram, and images that were taken right from our device's camera. We'll use the upload widget in this project.
-Cloudinary 的上传小部件让我们可以从多个来源上传媒体资产，包括 Dropbox、Facebook、Instagram 和直接从我们设备的相机拍摄的图像。我们将在这个项目中使用上传小部件。
+Cloudinary 的上传小部件让我们可以从多个来源上传媒体资源，包括 Dropbox、Facebook、Instagram 和直接从我们设备相机拍摄的图像。我们将在这个项目中使用这个上传小部件。
 
-Create a free cloudinary account to obtain your cloud name and upload\_preset.
-创建一个免费的 cloudinary 帐户以获取您的云名称和 upload_preset。
+创建一个免费的 cloudinary 帐户, 获取你的云账户名称和上传预设(upload_presets)。
 
-`upload_presets` allows us to define a set of asset upload choices centrally rather than providing them in each upload call. A Cloudinary `cloud name` is a unique identifier associated with your Cloudinary account.
-upload_presets允许我们集中定义一组资产上传选项，而不是在每次上传调用中提供它们。Cloudinarycloud name是与您的 Cloudinary 帐户关联的唯一标识符。
+`upload_presets` 允许我们集中定义一组资源上传选项，而不是在每次上传调用中去设置它们。Cloudinary 中的 `cloud name`是与你的 Cloudinary 帐户关联的唯一标识符。
 
-First, from a content delivery network (CDN), we will add the Cloudinary widget's JavaScript file in our `index.js` located in `pages/index.js.` We will include this file using `next/head` to include all meta tags, which lets us add data to the Head portion of our HTML document in React.
+首先，通过内容交付网络 (CDN)，我们将 Cloudinary 小部件的 JavaScript 文件添加到位于 `pages/index.js` 中的 `index.js`中。使用 `next/head` 中的文件去包裹所有 meta 标签，这使我们可以将数据添加到 React 中 HTML 文档的 Head 部分。(即, 使用 CDN 引入Cloudinary 小部件, 使用 `next/head` 导出的的文件包裹所有 meta 标签, 来将数据添加到 React 中 HTML 文档的 Head 部分 )
 
-Next, in the `pages/index.js` file, we'll import Head from next/head and add the script file.
+接下来，在 `pages/index.js` 文件中，我们从 next/head 导入 Head 组件并添加脚本文件。
 
 ```
 import React, { useState } from "react";
@@ -286,7 +277,7 @@ const IndexPage = () => {
 export default IndexPage;
 ```
 
-In the `pages/index.js` file, we will create an instance of the widget in a method triggered when clicking a button and a state variable `imagePublicId.`.
+在 `pages/index.js` 文件中，我们在单击按钮触发的方法中创建小部件的实例和状态变量 `imagePublicId` 。
 
 ```
 import React, { useState } from "react";
@@ -324,23 +315,23 @@ const IndexPage = () => {
 export default IndexPage;
 ```
 
-The widget requires our Cloudinary `cloud_name` and `uploadPreset.` The `createWidget()` function creates a new upload widget. On successfully uploading an image, we assign the `public_id` of the asset to the relevant state variable.
+该小部件需要我们的 Cloudinary 的 `cloud_name` 和 `uploadPreset`。该 `createWidget()` 函数会创建一个新的上传小部件。成功上传图像后，我们将 `public_id` 资产分配给相关的状态变量。
 
-To get our `cloudname` and `uploadPreset,` we follow the steps below:
+要获得我们的 `cloudname` 和 `uploadPreset`, 我们需要按照以下步骤操作：
 
-You can get the cloud name from your Cloudinary dashboard, as shown below.
+你可以从 Cloudinary 的仪表板获取 `cloud_name`，如下所示。
 
 ![How to Upload, Crop, & Resize Image in the Browser in Next.js](https://cdn.hashnode.com/res/hashnode/image/upload/v1650106671153/wjBrA3_m0.png)
 
-You can find an upload preset in the `Upload` tab of your Cloudinary settings page. You access this by clicking on the gear icon in the top right corner of the dashboard page.
+你可以在 Cloudinary 设置页面的 `Upload` 选项卡中找到 `upload_preset`。通过单击仪表板页面右上角的齿轮图标来获取它。
 
 ![How to Upload, Crop, & Resize Image in the Browser in Next.js](https://cdn.hashnode.com/res/hashnode/image/upload/v1650106901391/73lFzuxLQ.png)
 
 ![How to Upload, Crop, & Resize Image in the Browser in Next.js](https://cdn.hashnode.com/res/hashnode/image/upload/v1650106814185/GqnIFsNYS.png)
 
-Scroll down to the bottom of the page to the upload presets section, where you'll see your upload preset or the option to create one if you don't have any.
+向下滚动到页面底部的上传预设部分，你将在其中看到你的 `upload_presets` 或创建一个的选项（如果你没有）。
 
-We'll proceed to call the `openWidget` function in the `onClick` handler of our image upload button, as shown below:
+我们将继续在我们的图片上传按钮的 `onClick` 处理程序中调用 `openWidget` 函数，如下所示：
 
 ```
 //...
@@ -374,13 +365,13 @@ export default IndexPage;
 
 ```
 
-When we open our app in the browser and click the `Upload Image` button, we should see something like this:
+当我们在浏览器中打开我们的应用程序并单击 `Upload Image` 按钮时，我们应该会看到如下内容：
 
 ![How to Upload, Crop, & Resize Image in the Browser in Next.js](https://cdn.hashnode.com/res/hashnode/image/upload/v1650111448538/pglrS-Exs.png)
 
-## How to Implement Custom Transformation Functions
+## 如何实现自定义转换函数
 
-We need to create a component that handles the transformation depending on the props passed to it. We will create a `components/` directory in the root folder. Inside it, we will create a file called `image.js` with the following content:
+我们需要创建一个组件, 通过传递给它的 props 属性来处理转换。我们将在根文件夹中创建一个 components/ 目录。在该目录下，创建一个名为 image.js 的文件，其内容如下：
 
 ```
 import { CloudinaryContext, Transformation, Image } from "cloudinary-react";
@@ -398,9 +389,9 @@ const TransformImage = ({ crop, image, width, height }) => {
 export default TransformImage;
 ```
 
-In the code snippet above, we imported `CloudinaryContext`, a wrapper Cloudinary component used to manage shared information across all its children Cloudinary components. The rendered `TransformImage` component takes data of the image transformation as props.
+在上面的代码片段中，我们导入了 `CloudinaryContext`，这是一个包装 Cloudinary 组件，用于管理其所有子 Cloudinary 组件之间的共享信息。渲染的 `TransformImage` 组件将图像转换的数据作为 props 属性。
 
-The above code block will render the uploaded image when we import it into `pages/index.js`:
+当我们将上传的图片导入 pages/index.js 时，上面的代码块会渲染上传的图片：
 
 ```
 //...
@@ -442,7 +433,7 @@ const IndexPage = () => {
 export default IndexPage;
 ```
 
-Next, we will add the `Resize Options` radio button so that we can select different resize and crop options with the following code snippet:
+接下来，我们将添加调整大小选项单选按钮，以便我们可以使用以下代码片段选择不同的调整大小和裁剪选项：
 
 ```
 //...
@@ -505,26 +496,27 @@ const IndexPage = () => {
 export default IndexPage;
 ```
 
-In the code snippet above, we:
 
--   Added crop type and also width and height options
--   Added an `onChange` property to keep track of the changes in the height and width input field, respectively
+在上面的代码片段中：
 
-Our application's final output should look similar to what we have below:
+-   添加了裁剪类型以及宽度和高度选项
+-   添加了一个 onChange 属性来分别跟踪输入字段的高度和宽度的变化
+
+我们的应用程序的最终输出应该类似于下面的内容：
 
 ![How to Upload, Crop, & Resize Image in the Browser in Next.js](https://cdn.hashnode.com/res/hashnode/image/upload/v1650112568692/2htjubfOv.png)
 
 ![How to Upload, Crop, & Resize Image in the Browser in Next.js](https://cdn.hashnode.com/res/hashnode/image/upload/v1650112581661/JnEP--CHC.png)
 
-Here's the GitHub Repository for the project if you want to have a look at the full code: [https://github.com/Olanetsoft/how-to-upload-crop-and-resize-images-in-the-browser-in-next.js](https://github.com/Olanetsoft/how-to-upload-crop-and-resize-images-in-the-browser-in-next.js)
+如果你想查看完整代码，这里是项目的 GitHub 存储库：[https://github.com/Olanetsoft/how-to-upload-crop-and-resize-images-in-the-browser-in-next.js](https://github.com/Olanetsoft/how-to-upload-crop-and-resize-images-in-the-browser-in-next.js)
 
-## Conclusion
+## 结论
 
-This post shows how to upload, crop, and resize images in the browser in Next.js.
+这篇文章展示了如何在 Next.js 的浏览器中上传、裁剪和调整图像大小。
 
-## Resources
+## 资源
 
-You may find these resources helpful.
+你可能会发现这些资源很有帮助。
 
 -   [Cloudinary transformation URL reference](https://cloudinary.com/documentation/transformation_reference)
 -   [Cloudinary Image Transformation](https://cloudinary.com/documentation/image_transformations)

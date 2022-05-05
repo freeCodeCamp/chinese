@@ -1,6 +1,6 @@
 > -  原文地址：[REST API Design Best Practices – How to Build a REST API with JavaScript, Node.js, and Express.js](https://www.freecodecamp.org/news/rest-api-design-best-practices-build-a-rest-api/)
 > -  原文作者：[Jean-Marc Möckel](https://www.freecodecamp.org/news/author/jeanmarcmoeckel/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![REST API Design Best Practices – How to Build a REST API with JavaScript, Node.js, and Express.js](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/rest-api-design-course-header.png)

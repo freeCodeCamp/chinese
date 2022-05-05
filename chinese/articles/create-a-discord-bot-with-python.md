@@ -147,39 +147,39 @@ TOKEN=[paste token here]
 
 ### How to Run the Bot
 
-Now click run button on the top to run your bot in repl.it.
+现在点击上面的 `run` 按钮，在 repl.it 中运行你的机器人。
 
-If you are writing the bot locally, you can use these commands in the terminal to run the bot:
+如果你是在本地编写机器人，你可以在终端使用这些命令来运行该机器人:
 
-On Windows:
+在 Windows 系统:
 
 `py -3 main.py`
 
-On other systems:
+在别的系统:
 
 `python3 main.py`
 
-Now go to your Discord room and type "$hello". Your bot should return "Hello!".
+现在去你的 Discord 房间，输入`$hello`。你的机器人应该返回 `Hello`。
 
 ![image-141](https://www.freecodecamp.org/news/content/images/2021/06/image-141.png)
 
 ## How to Improve the Bot
 
-Now that we have a basic bot working, we'll improve it. It is called "Encourage Bot" for a reason.
+现在我们有了一个基本的机器人工作，我们将改进它。它被称为 `鼓励机器人` 是有原因的。
 
-This bot will respond with a message of encouragement whenever someone sends a message containing a sad or depressing word.
+每当有人发来含有悲伤或压抑字眼的信息时，这个机器人就会以鼓励的信息来回应。
 
-Anyone will be able to add encouraging messages for the bot to use and the user-submitted messages will be stored in the Repl.it database.
+任何人都可以为机器人添加鼓励信息，用户提交的信息将被储存在 Repl.it 数据库中。
 
-The bot will also return a random inspirational quote from an API when someone types the message "$inspire" into the chat.
+当有人在聊天中输入 `$inspire` 信息时，机器人也会从 API 中随机返回一句鼓舞人心的话。
 
-We'll start with adding the "$inspire" feature.
+我们将从添加 `$inspire` 功能开始。
 
 ### How to Add Inspirational Quotes to the Bot
 
-We will get inspirational quotes from an API called zenquotes.io. We need to import a couple more Python modules, add a `get_quote()` function, and update our bot code to call the function.
+我们将从一个名为 zenquotes.io 的 API 中获得鼓舞人心的语录。我们需要再导入几个 Python 模块，添加一个`get_quote()`函数，并更新我们的机器人代码以调用该函数。
 
-Here is the updated code. After the code, I'll explain the new parts.
+下面是更新后的代码。在代码之后，我将解释新的部分。
 
 ```python
 import discord
@@ -211,25 +211,25 @@ async def on_message(message):
 client.run(os.getenv('TOKEN'))
 ```
 
-We now have to import the `requests` module. This module allows our code to make an HTTP request to get data from the API. The API returns JSON, so the `json` module makes it easier to work with the data returned.
+我们现在必须导入 `requests` 模块。这个模块允许我们的代码进行 HTTP 请求，从 API 获得数据。API 返回 JSON，所以 `json` 模块使我们更容易处理返回的数据。
 
-The `get_quote()` function is pretty straightforward. First, it uses the requests module to request data from the API URL. The API returns a random inspirational quote. This function could easily be rewritten to get quotes from a different API, if the current one stops working.
+`get_quote()` 函数是非常简单的。首先，它使用 requests 模块从 API URL 请求数据。API 会返回一个随机的鼓舞人心的报价。如果当前的 API 停止工作，这个函数可以很容易地被重写，以从不同的 API 获得报价。
 
-Next inside the function, we use `json.loads()` to convert the response from the API to JSON. Through trial and error I figured out how to get the quote from the JSON into the string format I wanted. The quote is returned from the function as a string.
+接下来在这个函数中，我们使用 `json.load()` 将 API 的响应转换为 JSON。通过试验和错误，我找到了如何将 JSON 中的报价转换成我想要的字符串格式。报价被作为一个字符串从函数中返回。
 
-The final part updated in the code is toward the end. Previously it looked for a message that started with "$hello". Now it looks for "$inspire". Instead of returning "Hello!", it gets the quote with `quote = get_quote()` and returns the quote.
+代码中最后更新的部分是在最后。以前，它寻找以 `$hello` 开头的信息。现在它寻找的是 `$inspire`。它不再返回 `Hello!`，而是用 `quote = get_quote()` 来获取报价，并返回报价。
 
-At this point you can run your code and try it out.
+在这一点上，你可以运行你的代码并尝试一下。
 
 ## How to Add Encouraging Messages to the Bot
 
-Now we will implement the feature where the bot responds with encouraging messages when a user posts a message with a sad word.
+现在我们要实现的功能是，当用户发布带有悲伤字眼的信息时，机器人会以鼓励性的信息进行回应。
 
 ### How to Add Sad Words to the Bot
 
-First we need to create a Python list that contains the sad words that the bot will respond to.
+首先，我们需要创建一个 Python 列表，其中包含机器人将回应的悲伤的词语。
 
-Add the following line after the `client` variable is created:
+在创建`client`变量后添加以下一行:
 
 `sad_words = ["sad", "depressed", "unhappy", "angry", "miserable"]`
 
@@ -237,9 +237,9 @@ Feel free to add more words to the list.
 
 ### How to Add Encouraging Messages to the Bot
 
-Now we'll add a list of encouraging messages that the bot will respond with.
+现在我们将添加一个鼓励性的信息列表，机器人将用这些信息来回应。
 
-Add the following list after the `sad_words` list you created:
+在你创建的`sad_words`列表后面添加以下列表:
 
 ```python
 starter_encouragements = [
@@ -249,15 +249,15 @@ starter_encouragements = [
 ]
 ```
 
-Like before, feel free to add more phrases of your choice to the list. I'm just using three items for now because later we'll add the ability for users to add more encouraging phrases for the bot to use.
+像以前一样，请随时在列表中添加更多你选择的短语。我现在只使用三个项目，因为以后我们会增加用户添加更多鼓励性短语的能力，供机器人使用。
 
 ### How to Respond to Messages
 
-Now we need to update our bot to use the two lists we created. First, import the random module because the bot will choose encouraging messages randomly. Add the following line to the import statements at the top of the code: `import random`.
+现在我们需要更新我们的机器人来使用我们创建的两个列表。首先，导入随机模块，因为机器人将随机选择鼓励信息。在代码顶部的导入语句中添加以下一行。`import random`。
 
-Now we will update the `on_message()` function to check all messages to see if they contain a word from the `sad_words` list. If a sad word is found, the bot will send a random message of encouragement.
+现在我们将更新`on_message()`函数，以检查所有信息，看它们是否包含`sad_words`列表中的一个词。如果发现一个悲伤的词，机器人将发送一条随机的鼓励信息。
 
-Here is the updated code:
+以下是更新后的代码:
 
 ```python
 async def on_message(message):
@@ -274,19 +274,19 @@ async def on_message(message):
     await message.channel.send(random.choice(starter_encouragements))
 ```
 
-This is a good time to test the bot. You know enough now to create your own bot. But next you'll learn how to implement more advanced features and store data using the Repl.it database.
+这是一个测试机器人的好时机。你现在知道的足够多，可以创建你自己的机器人。但接下来你将学习如何实现更高级的功能，并使用 Repl.it 数据库存储数据。
 
 ### How to Enable User-submitted Messages
 
-The bot is completely functional, but now let's make it possible to update the bot right from Discord. A user should be able to add more encouraging messages for the bot to use when it detects a sad word.
+这个机器人是完全正常的，但现在让我们有可能从 Discord 中直接更新机器人。用户应该能够添加更多的鼓励性信息，以便机器人在检测到一个悲伤的词时使用。
 
-We are going to use Repl.it's built-in database to store user-submitted messages. This database is a key-value store that’s built into every repl.
+我们将使用 Repl.it 的内置数据库来存储用户提交的信息。这个数据库是一个键值存储，内置于每个 Repl.it 中。
 
-At the top of the code, under the other import statements, add `from replit import db`. This will allow us to use the Repl.it database.
+在代码的顶部，在其他导入语句下，添加 `from replit import db`。这将使我们能够使用 Repl.it 数据库。
 
-Users will be able to add custom encouraging messages for the bot to use directly from the Discord chat. Before we add new commands for the bot, let's create two helper functions that will add custom messages to the database and delete them.
+用户将能够直接从 Discord 聊天中为机器人添加自定义鼓励信息。在我们为机器人添加新的命令之前，让我们创建两个辅助函数，将自定义消息添加到数据库并删除它们。
 
-Add the following code after the `get_quote()` function:
+在 `get_quote()` 函数后添加以下代码:
 
 ```python
 def update_encouragements(encouraging_message):

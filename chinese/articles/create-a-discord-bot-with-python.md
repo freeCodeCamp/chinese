@@ -304,19 +304,19 @@ def delete_encouragment(index):
   db["encouragements"] = encouragements
 ```
 
-The `update_encouragements()` function accepts an encouraging message as an argument.
+`update_encouragements()`函数接受一个鼓励信息作为参数。
 
-First it checks if "encouragements" is a key in the database. If so, it gets the list of encouragements already in the database, adds the new one to the list, and stores the updated list back in the database under the "encouragements" key.
+首先，它检查 `encouragements` 是否是数据库中的一个键（key）。如果是，它将获得已经在数据库中的鼓励信息列表，将新的鼓励信息添加到列表中，并将更新的列表存储在数据库中的 `encouragements` 键下。
 
-If the database does not already contain "encouragements", a new key by that name is created and the new encouraging message is added as the first element in the list.
+如果数据库中还没有 `encouragements`，就用这个名字创建一个新的键，并将新的鼓励信息作为列表中的第一个元素加入。
 
-The `delete_encouragement()` function accepts an index as an argument.
+`delete_encouragement()` 函数接受一个索引作为参数。
 
-It gets the list of encouragements from the database stored under the "encouragements" key. If the number of items in the encouragements list is greater than the index, then the list item at that index is deleted.
+它从数据库中获取存储在 `encouragements` 键下的鼓励信息列表。如果鼓励列表中的项目数量大于索引，则删除该索引处的列表项。
 
-Finally, the updated list is stored back in the database under the "encouragements" key.
+最后，更新后的列表被存储在数据库的 `encouragements` 键下。
 
-Here is the updated code for the `on_message()` function. After the code, I'll explain the new sections.
+下面是 `on_message()` 函数的更新代码。在代码之后，我将解释新的部分。
 
 ```python
 async def on_message(message):
@@ -350,31 +350,31 @@ async def on_message(message):
     await message.channel.send(encouragements)
 ```
 
-The first new line of code from above is `options = starter_encouragements`. We are making a copy of `starter_encouragements` because we are going to add the user-submitted messages to that list before choosing a random message for the bot to send.
+上面的第一行新代码是 `options = starter_encouragements`。我们复制了变量 `starter_encouragements`的值，因为我们要把用户提交的信息添加到该列表中，然后再为机器人选择一条随机信息来发送。
 
-We check if "encouragements" is already in the database keys (meaning that a user has submitted at least one custom message). If so, we add the user messages to the starter encouragements.
+我们检查 `encouragements` 是否已经在数据库键中（意味着用户已经提交了至少一条自定义消息）。如果是的话，我们就把用户信息添加到启动器的鼓励信息中。
 
-Then, instead of sending a random message from `starter_encouragements`, the bot now sends a random message from `options`.
+然后，机器人现在不是从 `starter_encouragements` 中随机发送消息，而是从 `options` 中随机发送消息。
 
-The next new section of code is used to add a new user-submitted message to the database. If a Discord message starts with "$new", then the text after "$new" will be used as a new encouraging message.
+下一段新的代码是将用户提交的新消息添加到数据库中。如果一条 Discord 信息以 `$new`开头，那么 `$new` 之后的文字将被用作新的鼓励信息。
 
-The code `msg.split("$new ",1)[1]` splits off the message from the "$new" command and stores the message in a variable. In that line of code, take note of the space in `"$new "`. We want everything _after_ the space.
+代码`msg.split("$new",1)[1]`从 `$new` 命令中分离出信息，并将该信息存储在一个变量中。在这行代码中，注意"$new "中的空格。我们要的是空格之后的所有内容。
 
-We call the `update_encouragements` helper function with the new message, and then the bot sends a message to the discord chat confirming that the message was added.
+我们调用 `update_encouragements` 辅助函数处理新消息，然后机器人向 discord 聊天室发送一条消息，确认消息被添加。
 
-The third new section (at the end of the code above) checks if a new Discord message starts with "$del". This is the command to delete an item from the "encouragements" list in the database.
+第三个新部分（在上面代码的末尾）检查新的 discord 消息是否以`$del` 开头。这是删除数据库中 `encouragements` 列表中的一个项目的命令。
 
-First a new variable called `encouragements` is initialized as an empty array. The reason for this is that this section of code will send a message with an empty array if the database does not include an "encouragement" key.
+首先，一个名为 `encouragements` 的新变量被初始化为一个空数组。这样做的原因是，如果数据库中不包括 `encouragement` 键，这部分代码将发送一个空数组的信息。
 
-If the "encouragement" key is in the database, the index will be split off from the Discord message starting with "$del". Then, the `delete_encouragement()` function is called passing in the index to delete. The updated list of encouragements is loaded into the `encouragements` variable, and then the bot sends a message to Discord with the current list.
+如果 `encouragement` 键在数据库中，索引将从以 `$del` 开始的 Discord 消息中分离出来。然后，调用`delete_encouragement()`函数，传入要删除的索引。更新的鼓励列表被加载到 `encouragements` 变量中，然后机器人向 Discord 发送一条带有当前列表的消息。
 
 ## Final Bot Features
 
-The bot should work so this is a good time to test it. We will now add a few final features.
+该机器人应该可以工作，所以现在是测试它的好时机。我们现在将添加一些最后的功能。
 
-We will add the ability to get a list of user-submitted messages right from Discord and we will add the ability to turn off and on whether the bot responds to sad words.
+我们将增加从 Discord 中直接获得用户提交的信息列表的功能，并且我们将增加关闭和开启机器人是否对伤心话做出反应的功能。
 
-I will give you the full final code of the program, and then I'll discuss the updates below the code.
+我将给你们提供程序的全部最终代码，然后我将在下面讨论更新的代码。
 
 ```python
 import discord
@@ -472,65 +472,65 @@ async def on_message(message):
 client.run(os.getenv("TOKEN"))
 ```
 
-The first section added to the code is right under the `starter_encouragements` list:
+添加到代码中的第一个部分就在 `starter_encouragements` 列表下面:
 
 ```python
 if "responding" not in db.keys():
   db["responding"] = True
 ```
 
-We create a new key in the database called "responding" and set it to "True". We'll use this to determine if the bot should respond to sad words or not. Since the database is saved even after the program stops running, we only create the new key if it doesn't already exist.
+我们在数据库中创建一个名为 `responding` 的新键，并将其设置为 `true`。我们将用它来决定机器人是否应该对悲伤的话语做出反应。由于数据库即使在程序停止运行后也会被保存，所以我们只在新键不存在的情况下创建它。
 
-The next new part of the code is that the section that responds to sad words is now inside this if statement: `if db["responding"]:`. The bot will only respond to sad words if `db["responding"] = True`. The ability to update this value comes after this next section.
+代码的下一个新部分是，对伤心话做出反应的部分现在在这个 if 语句里面：`if db["responding"]:`。只有当`db["responing"] = True`时，机器人才会对悲伤的词语做出反应。更新这个值的动作是在下一节之后。
 
-Next, after the code to make the bot respond to the "$del" command, there is new code to respond to the "$list" command when sent as a Discord message.
+接下来，在使机器人响应 `$del` 命令的代码之后，有新的代码来响应作为 Discord 消息发送的 `$list` 命令。
 
-This section starts with creating an empty list called `encouragements`. Then, if there are already encouragements in the database, those encouragements replace the empty list that was just created.
+这一部分首先是创建一个名为 `encouragements` 的空列表。然后，如果数据库中已经有鼓励语(encouragements)，这些鼓励语将取代刚刚创建的空列表。
 
-Finally, the bot sends the list of encouragements as a Discord message.
+最后，机器人将  鼓励（encouragements）列表作为 Discord 消息发送出去。
 
-The final new section comes next. This code makes the bot respond to the "$responding" command. This command takes an argument of either "true" or "false". Here is a usage example: "$responding true".
+接下来是最后的新部分。这段代码使机器人对 `$responding` 命令作出反应。这个命令的参数是 `true` 或 `false`。下面是一个使用例子。`$responding true`。
 
-The code first pulls off the argument with `value = msg.split("$responding ",1)[1]` (like before, note the space in `"$responding "`). Then there is an if/else statement that appropriately sets the "responding" key in the database and sends a notification message back to Discord. If the argument is anything but "true", the code assumes "false".
+代码首先用`value = msg.split("$responding",1)[1]` 获得一个值（和前面一样，注意`"$responding"`的空格）。然后有一个 if/else 语句，适当地设置数据库中的 `responding` 键，并向 Discord 发送一个通知信息。如果参数不是 `true`，代码就假定为 `false`。
 
-The code for the bot is complete! You can now run the bot and try it out. But there is one more important step that we will discuss next.
+该机器人的代码已经完成！你现在可以运行机器人并试用它了。但还有一个重要的步骤，我们接下来会讨论。
 
 ## How to Set Up the Bot to Run Continuously
 
-If you run your bot in repl.it and then close the tab it is running in, your bot will stop running.
+如果你在 repl.it 中运行你的机器人，然后关闭它所运行的标签，你的机器人将停止运行。
 
-But there are two ways you can keep your bot running continuously, even after you close your web bowser.
+但有两种方法可以让你的机器人持续运行，即使在你关闭你的网络浏览器之后。
 
-The first way and simplest way is to sign up for paid plan in Repl.it. Their cheapest paid plan is called the Hacker Plan and it includes five always-on repls.
+第一个方法和最简单的方法是在 Repl.it 注册付费计划。他们最便宜的付费计划被称为黑客计划，它包括五个永远在线的 repls 项目。
 
 You can get three months free using this link (limited to first 1000 people):  <https://repl.it/claim?code=tryalwayson2103>
 
-Once you have signed up for that plan, open your Repl and click the name at the top. Then select the "Always On" option.
+当你注册了该计划，打开你的 Repl，点击顶部的项目名字。然后选择 `Always On` (永久在线) 选项。
 
 ![image-35-1](https://www.freecodecamp.org/news/content/images/2021/06/image-35-1.png)
 
-There is another way to keep your code running even on the free tier but it is a little more complicated. Repl.it will continue running a web server even after the tab is closed. But even a web server will only run for up to an hour without any use.
+还有一种方法可以使你的代码保持运行，即使是在免费计划，但它有点复杂。Repl.it 在标签关闭之后。但即使是网络服务器，也只能在没有任何使用的情况下运行一个小时。
 
-Here is what the repl.it docs say:
+下面是 repl.it 文档中的内容:
 
-> Once deployed, the server will continue to run in the background, even after you close the browser tab. The server will stay awake and active until an hour after its last request, after which it will enter a sleeping stage. Sleeping repls will be woken up as soon as it receives another request; there is no need to re-run the repl. However, if you make changes to your server, you will need to restart the repl in order to see those changes reflected in the live version.
+> 当部署完，服务器将继续在后台运行，甚至在你关闭浏览器标签之后。服务器将保持运行和活跃，直到最后一次请求后一个小时，之后它将进入睡眠阶段。睡眠中的 Repls 一旦收到一个请求就会被唤醒；不需要重新运行。然而，如果你对你的服务器做了修改，你将需要重新启动 repl，以便看到这些修改反映在新版本中。
 
-To keep the bot running continuously, we'll use another free service called Uptime Robot at [https://uptimerobot.com/](https://uptimerobot.com/).
+为了保持机器人的持续运行，我们将使用另一项免费的服务，叫做 [Uptime Robot](https://uptimerobot.com/)。
 
-Uptime Robot can be set up to ping the bot's web server on repl.it every 5 minutes. With constant pings, the bot will never enter the sleeping stage and will just keep running.
+Uptime Robot 可以被设置为每 5 分钟 ping 一次在 repl.it 上机器人的网络服务器。有了持续的 ping，机器人将永远不会进入睡眠阶段，而会一直运行。
 
-So we have to do two more things to get our bot to run continuously:
+因此，我们必须再做两件事来使我们的机器人持续运行:
 
-1. create a web server in repl.it and
-2. set up Uptime Robot to continuously ping the web server.
+1. 在 repl.it 中创建一个网络服务器，然后
+2. 设置 Uptime Robot，以持续地 ping 该 Web 服务器。
 
 ### How to Create a Web Server in repl.it
 
-Creating a web server is simpler than you may think.
+创建一个网络服务器比你想象的要简单。
 
-To do it, create a new file in your project called `keep_alive.py`.
+要做到这一点，在你的项目中创建一个新的文件，叫做 `keep_alive.py`。
 
-Then add the following code:
+然后添加以下代码:
 
 ```python
 from flask import Flask
@@ -550,42 +550,42 @@ def keep_alive():
     t.start()
 ```
 
-In this code, we use Flask to start a web server. The server returns "Hello. I am alive." to anyone who visits it. The server will run on a separate thread from our bot. We won't discuss everything here since the rest is not really relevant to our bot.
+在这段代码中，我们使用 Flask 来启动一个网络服务器。该服务器向访问它的人返回 "Hello. I am alive." 给任何访问它的人。该服务器将在与我们的机器人分开的线程上运行。我们不会在这里讨论所有的东西，因为其他的东西与我们的机器人并不相关。
 
-Now we just need the bot to run this web server.
+现在我们只需要机器人来运行这个网络服务器。
 
-Add the following line toward the top of `main.py`  to import the server.
+在 `main.py` 的顶部添加以下一行来导入服务器。
 
 ```python
 from keep_alive import keep_alive
 ```
 
-To start the web server when `main.py` is run, add the following line as the second-to-last line, right before the bot runs.
+要在运行 `main.py` 时启动网络服务器，请在机器人运行前的倒数第二行添加以下一行。
 
 `keep_alive()`
 
-When you run the bot on repl.it after adding this code, a new web server window will open up. There is a URL shown for the web server. Copy the URL so you can use it in the next section.
+当你加入这段代码后在 repl.it 上运行机器人时，一个新的网络服务器窗口将被打开。这里有一个网络服务器的 URL。复制这个 URL，这样你就可以在下一节中使用它。
 
 ![image-20-1](https://www.freecodecamp.org/news/content/images/2021/06/image-20-1.png)
 
 ### How to Set Up Uptime Robot
 
-Now we need to set up Uptime Robot to ping the web server every five minutes. This will cause the bot to run continuously.
+现在，我们需要设置 Uptime Robot，使其每隔 5 分钟就对网络服务器进行一次 ping。这将使机器人持续运行。
 
-Create a free account on [https://uptimerobot.com/](https://uptimerobot.com/).
+在 [https://uptimerobot.com/](https://uptimerobot.com/) 上创建一个免费账户。
 
-Once you are logged in to your account, click "Add New Monitor".
+一旦你登录到你的账户，点击 "Add New Monitor"。
 
 ![image-21-1](https://www.freecodecamp.org/news/content/images/2021/06/image-21-1.png)
 
-For the new monitor, select "HTTP(s)" as the Monitor Type and name it whatever you like. Then, paste in the URL of your web server from repl.it. Finally, click "Create Monitor".
+对于新的监控器（monitor），选择 "HTTP(s) "作为监控器类型，并命名为你喜欢的任何名字。然后，从 repl.it 中粘贴你的网络服务器的 URL。最后，点击 "Create Monitor"。
 
 ![image-22-1](https://www.freecodecamp.org/news/content/images/2021/06/image-22-1.png)
 
-We're done! Now the bot will run continuously so people can always interact with it on Repl.it.
+我们完成了! 现在，这个机器人将持续运行，所以人们可以一直在 Repl.it 上 与它互动。
 
-## Conclusion
+## 结语
 
-You now know how to create a Discord bot with Python, and run it continuously in the cloud.
+你现在知道如何用 Python 创建一个 Discord 机器人，并在云上持续运行。
 
-There are a lot of other things that the discord.py library can do. So if you want to give a Discord bot even more features, your next step is to check out [the docs for discord.py.](https://discordpy.readthedocs.io/en/latest/index.html)
+discord.py 库还可以做很多其他的事情。因此，如果你想让 Discord 机器人拥有更多的功能，你的下一步是查看 [discord.py 文档](https://discordpy.readthedocs.io/en/latest/index.html)

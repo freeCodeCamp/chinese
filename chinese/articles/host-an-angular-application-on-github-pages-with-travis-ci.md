@@ -1,6 +1,6 @@
 > -  原文地址：[How to Host an Angular Application on GitHub Pages with Travis CI](https://www.freecodecamp.org/news/host-an-angular-application-on-github-pages-with-travis-ci/)
 > -  原文作者：[Rodrigo Kamada](https://www.freecodecamp.org/news/author/rodrigokamada/)
-> -  译者：
+> -  译者：bauhauce
 > -  校对者：
 
 ![How to Host an Angular Application on GitHub Pages with Travis CI](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/angular-travisci-cover.png)

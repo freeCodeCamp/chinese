@@ -15,11 +15,13 @@
 
 我在本文中提到的 `行业` 一词，是指 "软件行业"，因为我的经验与此直接相关。阅读愉快。
 
-## There are Three Types of People in the Industry
+## 行业内有三种人
 
 我们可以把在软件行业工作的人分为三个主要群体。
 
 ![2](https://www.freecodecamp.org/news/content/images/2022/04/2.png)
+
+(译者注： Follwing 对应 跟随者 ，Doing 对应 实践者， Doing + What's Next 对应 实践者 +探索者)
 
 - **跟随者**: 需要职业指导和确定路径以完成其职业目标的人。他们从已经在做所需事情的人那里寻求反馈和验证，以便在行业中成长。
 - **实践者**: 这类人已经在做行业发展所需的事情。他们与最新和最伟大的事物保持 "相关"。他们定期磨练自己的 "技能"，并通过分享知识和信息帮助他们的追随者成长。这个类别的人比 "追随者" 类别的人少。
@@ -35,11 +37,11 @@
  
 那么，我们如何确保在这些类别中不断建立我们的存在，并推动成为 "实践者"和 "实践者 + 探索者" 的阶段？
 
-## 8 Tips to Help You Advance Your Coding Career
+## 8 个技巧帮助的编程职业
 
 是的，我想把我的提示总结成八个关键点来关注。你可能已经在做其中的一些或全部，或者还没有开始做这些事情。无论哪种方式都可以，我希望它能鼓励你从这里进一步加强。
 
-## 1\. Build Habits
+## 1\. 培养习惯
 
 ![4](https://www.freecodecamp.org/news/content/images/2022/04/4.png)
 
@@ -66,143 +68,143 @@
 - 在知道自己的局限性和所有失败的机会的情况下，为它制定计划。
 - 如果你没能维持这个习惯，想想什么地方出了问题。你需要它吗？重新调整，重新规划，再次开始。
 
-## 2\. Find Your Passion
+## 2\. 寻找你的激情
 
 ![5](https://www.freecodecamp.org/news/content/images/2022/04/5.png)
 
-Your `passion` keeps you going and helps you live a motivated professional and personal life. Passion is an "individual" thing that may impact many people in your circles. You can be passionate about technology, health, writing – anything that you love to do constantly.
+你的 "激情" 使你继续前进，让你的职业和个人生活有动力。激情是一个 "个体" 的东西，可能会影响到你圈子里的许多人。你可以对技术、健康、写作充满热情——任何你喜欢不断做的事情。
 
-However, one piece of advice I got early in my career was, "don't follow your passion blindly". The passion should be linked with your goals, career, and work. It is essential to find the difference between a hobby and a passion. You may have a hobby unrelated to your career, but your passion should relate to it.
+然而，我在职业生涯早期得到的一个建议是，"不要盲目地追随你的激情"。激情应该与你的目标、职业和工作相关联。找到爱好和激情之间的区别是至关重要的。你可能有一个与你的职业无关的爱好，但你的激情应该与之有关。
 
-It is essential to identify your passion, fuel it with a lot of practice, and renew it from time to time.
+必须确定你的激情，用大量的实践来激发它，并不时地维持它。
 
-## 3\. Connect with People
+## 3\. 与人交流
 
 ![6](https://www.freecodecamp.org/news/content/images/2022/04/6.png)
 
-`Social networking` for developers and the `developer communities` are influential in building your career. You get to meet like-minded people, find role models, get opportunities to collaborate, learn, and find jobs.
+开发人员的 "社交网络 "和 "开发人员社区 "对你的职业发展很有影响。你可以认识志同道合的人，找到榜样，获得合作、学习和找工作的机会。
 
-Whether you are a student, a fresher, or a veteran professional, social networking for developers is undoubtedly a great option to consider. The platforms like [Twitter](https://twitter.com/), [LinkedIn](https://linkedin.com/), [Showwcase](http://showwcase.com), and [Polywork](https://polywork.com/) are great ones to check out. You can connect with people of interest, learn from them, and contribute.
+无论你是学生、应届生还是资深的专业人士，开发者的社交网络无疑是一个值得考虑的好选择。像[Twitter](https://twitter.com/)、[LinkedIn](https://linkedin.com/)、[Showwcase](http://showwcase.com)和[Polywork](https://polywork.com/)这些平台都是值得一看的。你可以与感兴趣的人联系，向他们学习，并作出贡献。
 
-Learning and sharing is a wonderful cycle that builds knowledge. It grows when we come out of silos and learn in public. Also, learning from the experience of others will accelerate our growth. So, connect.
+学习和分享是一个建立知识的美妙循环。当我们走出孤岛，在公共场合学习时，它就会增长。同时，从别人的经验中学习会加速我们的成长。所以需要相互交流。
 
-## 4\. Stay Curious
+## 4\. 保持好奇心
 
 ![7](https://www.freecodecamp.org/news/content/images/2022/04/7.png)
 
-`Curiosity` is the desire to learn something new. Stay curious and be open to learning. Curiosity brings questions and doubts to mind. The fun is in finding the answers.
+`好奇心` 是对学习新事物的渴望。保持好奇心，对学习持开放态度。好奇心带来问题和疑惑。乐趣在于找到答案。
 
-So, please ask questions when you have doubts, don't be shy thinking about whether it is a silly question, what people will think, and so on.
+因此，当你有疑问时，请提出问题，不要羞于思考这是否是一个愚蠢的问题，人们会怎么想，等等。
 
-Staying curious will help you find how things work under the hood. There are many benefits of knowing the internals of things when it comes to programming. So, stay curious, and keep exploring.
+保持好奇心会帮助你发现事情在表面下是如何运作的。当涉及到编程时，了解事物的内部结构有很多好处。因此，保持好奇心，继续探索。
 
-## 5\. Develop Side Hustles
+## 5\. 发展副业
 
 ![8](https://www.freecodecamp.org/news/content/images/2022/04/8.png)
 
-Here comes my favourite point, `Side Hustles`. When you build a habit of doing things, fuel your passion directed towards the career goal, look to learn new things, and connect with people, you have an ocean of opportunities for side hustles.
+下面是我最喜欢的一点，`副业`。当你养成做事的习惯，激发你对职业目标的热情，寻求学习新事物，并与人联系，你就会有大量的副业机会。
 
-But wait, what are side hustles, and why are they needed? Don't we have enough things to do already? Yes, very practical questions. Let's get to them one by one.
+但是，等等，什么是副业，为什么需要它们？我们不是已经有足够的事情要做了吗？是的，非常实际的问题。让我们来逐一讨论这些问题。
 
-Side hustles are anything you do outside of your regular job to earn knowledge, reputation, money, and growth. There are various form of side hustles like,
+副业是你在正常工作之外做的任何事情，以赚取知识、声誉、金钱和成长。有各种形式的副业，如,
 
-- Contributing to the open-source projects
-- Writing articles on a blog
-- Mentoring
-- Teaching
-- Freelancing
-- Community Building
-- Releasing books, e-books
-- Speaking at conferences
-- Creating video content...and many more
+- 为开源项目做贡献
+- 在博客上写文章
+- 指导他人
+- 教学
+- 自由职业者
+- 社区建设
+- 发布书籍、电子书
+- 在会议上发言
+- 创建视频内容...以及更多
 
-Now all these need time, and of course, you might have something called a "primary" job to take care of. However, most of the above don't need a massive amount of time or dedication. Also, all of these can be the by-product of your "primary" job.
+现在，所有这些都需要时间，当然，你可能有一个叫做 "主要" 工作的东西需要投入精力。然而，上述大多数工作不需要大量的时间或奉献。而且，所有这些都可以成为你 "主要" 工作的相关副产品。
 
-Let's take a few examples:
+让我们举几个例子:
 
-- Have you solved a technical problem at work? Write about it as an article. Create a video explaining the steps and upload it on YouTube. Share about it on StackOverflow, the Showwcase community, Twitter, and LinkedIn.
-- Do you have expertise in specific areas and have taken many notes on problem-solving? Move them to a doc and release them as an e-book. Don't worry about who will make use of them. There is always a great demand for quality content.
-- Do you love to teach? Spend 1 hour over weekends interacting with people interested in your areas of expertise. Speak about the topic at a conference.
+- 你在工作中解决了一个技术问题吗？把它写成一篇文章。创建一个解释步骤的视频并上传至 YouTube。在 StackOverflow、Showwcase 社区、Twitter 和 LinkedIn 上分享此事。
+- 你有特定领域的专业知识，并且做了很多解决问题的笔记？把它们移到文档中，并以电子书的形式发布。不要担心谁会利用它们。对高质量的内容总是有很大的需求。
+- 你喜欢教学吗？在周末花 1 小时与对你的专业领域感兴趣的人互动。在一个会议上讲讲这个话题。
 
-It is the right thing to do if you can manage side hustles without burnout. I have captured some of my personal experience doing [side projects as a developer here](https://blog.greenroots.info/why-do-you-need-to-do-side-projects-as-a-developer).
+如果你能管理好副业而不至于精疲力竭，这就是正确的做法。我记录了我做 [作为开发者的副业项目](https://blog.greenroots.info/why-do-you-need-to-do-side-projects-as-a-developer) 的一些个人经验。
 
-## 6\. Don't Neglect Soft Skills
+## 6\. 不要忽视软技能
 
 ![9](https://www.freecodecamp.org/news/content/images/2022/04/9.png)
 
-`Soft skills` are all about how humans interact with other human beings at work, in personal life, anywhere in the world, and in any possible modes (physically, remotely, virtually). Unlike technical skills, soft skills are less about learning and more about realizing.
+软技能是指人类如何在工作、个人生活、世界任何地方，以任何可能的模式（实际、远程、虚拟）与其他人类互动。与技术技能不同，软技能不在于学习，而在于实现。
 
-Here are a few soft skills that need special attention,
+以下是一些需要特别注意的软技能。
 
-- Patience
-- Empathy
-- Problem solving
-- Communication (not just the spoken or written language – it includes body language, confidence, resolving conflicts, and more)
-- Teamwork
-- Owning up to your mistakes or accountability
-- Time management - we will talk about it in a while.
+- 耐心
+- 同理心
+- 解决问题
+- 沟通（不仅仅是口头或书面语言--它包括身体语言、自信、解决冲突等等）
+- 团队合作
+- 承担自己的错误或责任
+- 时间管理——我们过一会儿再谈这个问题。
 
-Some classes and courses teach you many of these soft skills. But you need to work on closing the gap yoursef and improve upon these skills gradually.
+一些班级和课程教给你许多这些软技能。但你需要自己努力缩小差距，逐步提高这些技能。
 
-## 7\. Manage Your Time
+## 7\. 管理好你的时间
 
 ![10](https://www.freecodecamp.org/news/content/images/2022/04/10.png)
 
-Let me start with a confession. I'm still learning how to manage time, but the good news is that I'm getting better at it.
+让我先坦白一下。我仍然在学习如何管理时间，但好消息是，我在这方面越来越好。
 
-Each of us has 24 hours in a day. So we need to manage all our activities in that duration. However, the problem comes with too many things to fit in that duration.
+我们每个人一天都有 24 小时。所以我们需要在这段时间内管理我们的所有活动。然而，问题是有太多的事情需要在这段时间内完成。
 
-Here are some practices (principles too) I've been following and seeing good results.
+以下是我一直遵循的一些做法（也是原则），并看到了良好的效果。
 
-- Everything is not crucial to us every day. The tricky part is that we assume that something is essential until we give enough thought to it.
-- So, we need to think and prioritize. It also includes regular activities like sleeping, exercise, eating food on time, health, family care, and so on.
-- Do not focus on things that are of lower priority priority or can wait for the next day or week.
-- Do not multi-task. It only increases stress and reduces productivity in the long run. Take up a task, focus on it in a time-boxed manner, complete it, and then get to the next one.
-- Take breaks between task switches. Rejuvenate and energize yourself.
-- If something is taking more time than anticipated, accept that it happens. You may not meet your time management plan every day.
+- 每件事情对我们来说并不是每天都很关键。棘手的是，在我们充分考虑之前，我们会认为某些东西是至关重要的。
+- 因此，我们需要思考并确定优先次序。它还包括常规活动，如睡眠、锻炼、按时吃食物、健康、家庭护理等等。
+- 不要关注那些优先级较低或可以等到第二天或一周的事情。
+- 不要身兼数职。从长远来看，这只会增加压力，降低生产力。拿起一个任务，以一种有时间限制的方式专注于它，完成它，然后再去做下一个任务。
+- 在任务转换之间进行休息。让自己恢复活力和精力。
+- 如果某件事情花费的时间比预期的多，就接受它的发生。你可能不会每天都按照你的时间管理计划。
 
-I hope these pointers help you with enough thought processes to start managing time better.
+我希望这些要点能帮助你有足够的思考过程，开始更好地管理时间。
 
-## 8\. Find a Mentor
+## 8\. 寻找一个导师
 
 ![11](https://www.freecodecamp.org/news/content/images/2022/04/11.png)
 
-Do yourself a favour. Find a good mentor. Learning from someone's knowledge and experience is immensely beneficial. So let's understand who a mentor can be, what their role is, and how we can benefit as mentees.
+帮你自己一个忙。找一个好的导师。从别人的知识和经验中学习是非常有益的。因此，让我们了解谁是导师，他们的作用是什么，以及我们作为被指导者如何受益。
 
-A `mentor` is a person who provides guidance and advice to you to make your aspirations a reality. It could be for career-building, learning a new area, understanding the business processes, and many more.
+导师是为你提供指导和建议，使你的愿望成为现实的人。这可能是为了职业建设、学习新领域、了解业务流程，以及更多。
 
-A mentor may help share experiences and resources, provide motivation, and set and track individual and project goals. A mentor can also be a teacher, but in most cases, teaching focuses on "how," and mentoring focuses on "why".
+导师可以帮助分享经验和资源，提供动力，并设定和跟踪个人和项目目标。导师也可以是一名教师，但在大多数情况下，教学侧重于 "如何"，而指导侧重于 "为什么"。
 
-A `mentee` is a person who is being mentored, guided, and advised by a mentor. A mentee approaches a mentor with aspirations, ambition, and desire. The mentor guides the mentee to help them achieve their goals.
+被指导者是指接受指导者的指导、引导和建议的人。被指导者带着愿望、雄心和欲望接近指导者。指导者指导被指导者，帮助他们实现自己的目标。
 
-The mentee drives it to success with the mentor's help in a mentoring program. The mentee decides how much help and guidance they need to achieve the mentorship goal.
+在指导计划中，被指导者在指导者的帮助下推动其取得成功。被指导者决定他们需要多少帮助和指导，来实现指导目标。
 
-A mentor and mentee relationship should be beyond just the technology and project knowledge sharing. It is also about understanding each other's emotional space to achieve the mentoring goals.
+指导者和被指导者的关系应超越技术和项目知识的分享。它还涉及了解对方的情感空间，以实现指导目标。
 
-Now the most crucial part is `finding a good mentor`. Several platforms offer mentorship. There are some great mentors creating values for many aspiring people. You can always try your luck and find the best connection. I feel it is more authentic if you find someone from your network or community circle whom you know personally. That may even work out much better.
+现在最关键的部分是 "找到一个好导师"。有几个平台提供导师制。有一些伟大的导师为许多有抱负的人创造价值。你总是可以试试你的运气，找到最好的联系。我觉得如果你从你的网络或社区圈子中找到你个人认识的人，会更真实。这甚至可能效果更好。
 
-## In Summary
+## 总结
 
-To summarize, focus on these points with all the pointers we have discussed in this article:
+总结一下，用我们在本文中讨论的所有要点来关注这些要点:
 
-- Build good habits.
-- Find your passion carefully.
-- Connect with like-minded people and build your network.
-- Stay curious, and keep learning.
-- Use side hustles to grow.
-- Soft skills are essential.
-- Learn to manage your time.
-- Find a mentor.
+- 建立良好的习惯。
+- 仔细寻找你的激情。
+- 与志同道合的人联系，建立你的网络。
+- 保持好奇心，不断学习。
+- 利用副业来成长。
+- 软技能是必不可少的。
+- 学会管理你的时间。
+- 找一个导师。
 
-## Before We End
+## 在我们结束之前
 
-I hope you found this article insightful and that it helps you to prepare better in your career. If you want to discuss further or just want to have a career chat, you can ping me with a DM on [Twitter](https://twitter.com/tapasadhikary) or [LinkedIn](https://www.linkedin.com/in/tapasadhikary/).
+我希望你觉得这篇文章很有见地，并希望它能帮助你在职业生涯中做更好的准备。如果你想进一步讨论，或者只是想聊一聊职业，你可以在[Twitter](https://twitter.com/tapasadhikary)或 [LinkedIn](https://www.linkedin.com/in/tapasadhikary/)上给我发一个私信。
 
-Let's connect. I share my learnings on JavaScript, Web Development, Career, and Blogging on these platforms as well:
+让我们联系起来。我也会在这些平台上分享我在 JavaScript、Web 开发、职业和博客方面的学习经验:
 
-- [Subscribe to my YouTube Channel](https://www.youtube.com/tapasadhikary?sub_confirmation=1)
-- [Follow me on Twitter](https://twitter.com/tapasadhikary)
-- [Side projects on GitHub](https://github.com/atapas)
-- [Connect on LinkedIn](https://www.linkedin.com/in/tapasadhikary/)
+- [订阅我的 YouTube 频道](https://www.youtube.com/tapasadhikary?sub_confirmation=1)
+- [在 Twitter 上关注我](https://twitter.com/tapasadhikary)
+- [GitHub 上的副业项目](https://github.com/atapas)
+- [我的 LinkedIn](https://www.linkedin.com/in/tapasadhikary/)
 
-See you soon with my next article. Until then, please take care of yourself, and stay happy.
+我的下一篇文章很快就会见到你。在那之前，请照顾好自己，并保持快乐。

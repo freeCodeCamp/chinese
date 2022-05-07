@@ -30,7 +30,7 @@
 
 ![github-step2](https://www.freecodecamp.org/news/content/images/2022/04/github-step2.png)
 
-接下来，我们将生成将在 Travis CI 中使用的令牌。单击带有头像的菜单，然后单击菜单 Settings。
+接下来，我们会生成在 Travis CI 中使用到的令牌。单击带有头像的菜单，然后单击菜单 Settings。
 
 ![github-step3](https://www.freecodecamp.org/news/content/images/2022/04/github-step3.png)
 
@@ -50,7 +50,6 @@
 
 ![github-step7](https://www.freecodecamp.org/news/content/images/2022/04/github-step7.png)
 
-Copy the generated token. In my case, the token `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` was generated because this token will be configured in Travis CI.
 复制生成的令牌。因为接下来该令牌将在 Travis CI 中配置。在我的例子中, “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” 就是我生成的令牌。
 
 ![github-step8](https://www.freecodecamp.org/news/content/images/2022/04/github-step8.png)
@@ -67,8 +66,7 @@ Copy the generated token. In my case, the token `ghp_XD0DcVzbYmxKLYpXaj5GQWUp8Yi
 
 ![github-step11](https://www.freecodecamp.org/news/content/images/2022/04/github-step11.png)
 
-Ready! Account created, token generated, and repository [`https://github.com/rodrigokamada/angular-travisci`](https://github.com/rodrigokamada/angular-travisci) created.
-准备好！帐户已创建好、令牌已生成, 并且仓库 [`https://github.com/rodrigokamada/angular-travisci`](https://github.com/rodrigokamada/angular-travisci) 也创建好了。
+准备好了！帐户已创建好、令牌已生成, 并且仓库 [`https://github.com/rodrigokamada/angular-travisci`](https://github.com/rodrigokamada/angular-travisci) 也创建好了。
 
 ![github-step12](https://www.freecodecamp.org/news/content/images/2022/04/github-step12.png)
 
@@ -261,10 +259,8 @@ Build at: 2021-09-05T22:42:19.525Z - Hash: 83bfffc079b083727ca4 - Time: 26030ms
 
 准备好了！在 GitHub 仓库上同步应用程序后，Travis CI 会构建应用程序并在分支 `gh-pages` 上同步。
 
-Access the URL [`https://rodrigokamada.github.io/angular-travisci/`](https://rodrigokamada.github.io/angular-travisci/) and check if the application is working. Replace the `rodrigokamada` value with your GitHub username.
 访问地址 [`https://rodrigokamada.github.io/angular-travisci/`](https://rodrigokamada.github.io/angular-travisci/) 并检查应用程序是否正常工作。将 `rodrigokamada` 值替换为你的 GitHub 用户名。
 
-And that's it! The application repository is available at [https://github.com/rodrigokamada/angular-travisci](https://github.com/rodrigokamada/angular-travisci).
 就是这样！[https://github.com/rodrigokamada/angular-travisci](https://github.com/rodrigokamada/angular-travisci) 上的应用程序仓库现在可以用了。
 
 ## 结论

@@ -14,7 +14,7 @@
 
 这个书面教程也有一个视频版本。视频嵌入在下面，书面版本在视频之后。
 
-## How to Create a Discord Bot Account
+## 如何创建一个 Discord Bot 账户
 
 为了使用 Python 库和 Discord API，我们必须首先创建一个 Discord Bot 账户。
 
@@ -46,7 +46,7 @@
 
 如果不小心被分享，你可以重新生成令牌。
 
-## How to Invite Your Bot to Join a Server
+## 如何邀请你的机器人接入一个服务器
 
 现在你必须让你的机器人用户接入一个服务器。要做到这一点，你应该为它创建一个邀请 URL。
 
@@ -65,11 +65,11 @@
 
 现在你已经创建了机器人用户，我们将开始为机器人编写 Python 代码。
 
-## How to Code a Basic Discord Bot with the discord.py Library
+## 如何用 discord.py 库编写一个基本的 Discord 机器人代码
 
 我们将使用 discord.py， 这个 Python 库来编写机器人的代码。discord.py 是 Discord 的一个 API 封装器，使在 Python 中更容易创建一个 Discord 机器人。
 
-### How to Create a Repl and Install discord.py
+### 如何创建一个 Repl 项目并安装 discord.py
 
 你可以在你的本地电脑上用任何代码编辑器开发机器人。然而，在本教程中，我们将使用 Repl.it，因为它将使任何人都能更简单地跟随。Repl.it 是一个在线 IDE，你可以在你的网络浏览器中使用。
 
@@ -87,7 +87,7 @@
 
 `py -3 -m pip install -U discord.py`
 
-### How to Set Up Discord Events for Your Bot
+### 如何为你的机器人设置 Discord 事件
 
 discord.py 基于事件的概念。一个事件是你监听的东西，然后对其作出回应。例如，当一条消息发生时，你会收到一个关于它的事件，你可以对其作出回应。
 
@@ -145,7 +145,7 @@ TOKEN=[paste token here]
 
 我们有了机器人的代码，现在我们只需要运行它。
 
-### How to Run the Bot
+### 如何运行机器人
 
 现在点击上面的 `run` 按钮，在 repl.it 中运行你的机器人。
 
@@ -163,7 +163,7 @@ TOKEN=[paste token here]
 
 ![image-141](https://www.freecodecamp.org/news/content/images/2021/06/image-141.png)
 
-## How to Improve the Bot
+## 如何改进机器人
 
 现在我们有了一个基本的机器人工作，我们将改进它。它被称为 `鼓励机器人` 是有原因的。
 
@@ -175,7 +175,7 @@ TOKEN=[paste token here]
 
 我们将从添加 `$inspire` 功能开始。
 
-### How to Add Inspirational Quotes to the Bot
+### 如何在机器人上添加鼓舞人心的名言
 
 我们将从一个名为 zenquotes.io 的 API 中获得鼓舞人心的语录。我们需要再导入几个 Python 模块，添加一个`get_quote()`函数，并更新我们的机器人代码以调用该函数。
 
@@ -221,11 +221,11 @@ client.run(os.getenv('TOKEN'))
 
 在这一点上，你可以运行你的代码并尝试一下。
 
-## How to Add Encouraging Messages to the Bot
+## 如何向机器人添加鼓励性的信息
 
 现在我们要实现的功能是，当用户发布带有悲伤字眼的信息时，机器人会以鼓励性的信息进行回应。
 
-### How to Add Sad Words to the Bot
+### 如何在机器人中添加悲伤的词语
 
 首先，我们需要创建一个 Python 列表，其中包含机器人将回应的悲伤的词语。
 
@@ -233,9 +233,9 @@ client.run(os.getenv('TOKEN'))
 
 `sad_words = ["sad", "depressed", "unhappy", "angry", "miserable"]`
 
-Feel free to add more words to the list.
+请随意在列表中添加更多的单词。
 
-### How to Add Encouraging Messages to the Bot
+### 如何向机器人添加鼓励性的信息
 
 现在我们将添加一个鼓励性的信息列表，机器人将用这些信息来回应。
 
@@ -251,7 +251,7 @@ starter_encouragements = [
 
 像以前一样，请随时在列表中添加更多你选择的短语。我现在只使用三个项目，因为以后我们会增加用户添加更多鼓励性短语的能力，供机器人使用。
 
-### How to Respond to Messages
+### 如何回复留言
 
 现在我们需要更新我们的机器人来使用我们创建的两个列表。首先，导入随机模块，因为机器人将随机选择鼓励信息。在代码顶部的导入语句中添加以下一行。`import random`。
 
@@ -276,7 +276,7 @@ async def on_message(message):
 
 这是一个测试机器人的好时机。你现在知道的足够多，可以创建你自己的机器人。但接下来你将学习如何实现更高级的功能，并使用 Repl.it 数据库存储数据。
 
-### How to Enable User-submitted Messages
+### 如何启用用户提交信息
 
 这个机器人是完全正常的，但现在让我们有可能从 Discord 中直接更新机器人。用户应该能够添加更多的鼓励性信息，以便机器人在检测到一个悲伤的词时使用。
 
@@ -368,7 +368,7 @@ async def on_message(message):
 
 如果 `encouragement` 键在数据库中，索引将从以 `$del` 开始的 Discord 消息中分离出来。然后，调用`delete_encouragement()`函数，传入要删除的索引。更新的鼓励列表被加载到 `encouragements` 变量中，然后机器人向 Discord 发送一条带有当前列表的消息。
 
-## Final Bot Features
+## 最后要添加机器人的功能
 
 该机器人应该可以工作，所以现在是测试它的好时机。我们现在将添加一些最后的功能。
 
@@ -524,7 +524,7 @@ Uptime Robot 可以被设置为每 5 分钟 ping 一次在 repl.it 上机器人�
 1. 在 repl.it 中创建一个网络服务器，然后
 2. 设置 Uptime Robot，以持续地 ping 该 Web 服务器。
 
-### How to Create a Web Server in repl.it
+### 如何在 repl.it 中创建一个 Web 服务器
 
 创建一个网络服务器比你想象的要简单。
 
@@ -564,11 +564,11 @@ from keep_alive import keep_alive
 
 `keep_alive()`
 
-当你加入这段代码后在 repl.it 上运行机器人时，一个新的网络服务器窗口将被打开。这里有一个网络服务器的 URL。复制这个 URL，这样你就可以在下一节中使用它。
+当你加入这段代码后在 repl.it 上运行机器人时，一个新的 Web 服务器窗口将被打开。这里有一个网络服务器的 URL。复制这个 URL，这样你就可以在下一节中使用它。
 
 ![image-20-1](https://www.freecodecamp.org/news/content/images/2021/06/image-20-1.png)
 
-### How to Set Up Uptime Robot
+### 如何设置机器人运行
 
 现在，我们需要设置 Uptime Robot，使其每隔 5 分钟就对网络服务器进行一次 ping。这将使机器人持续运行。
 

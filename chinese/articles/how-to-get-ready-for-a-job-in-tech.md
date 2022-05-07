@@ -5,66 +5,66 @@
 
 ![How to Get Ready for a Job in Tech – Tips for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/1.png)
 
-A few months back, I was invited to talk to a group of engineering students of a renowned college in India. I was supposed to interact with them, motivate them, and finally tell them, "What does the industry (the "job" world) look like?", "How can you get ready for it?"
+几个月前，我被邀请与印度一所著名学院的一群工科学生谈话。我与他们互动，激励他们，最后告诉他们，"这个行业（职场）是什么样子的？"，"你怎样才能为它做好准备？"
 
-After spending 15+ years developing software, releasing products, managing teams, clients, and expectations, I had a bagful of thoughts to share with the younger generation.
+在经历了 15 年以上的时间开发软件、发布产品、管理团队、客户和等待之后，我有一大堆的想法要与年轻一代分享。
 
-Fortunately, I was able to summarize everything in eight high-level points without making my audience bored with it.
+幸运的是，我能够把所有的东西总结成八个高度浓缩的要点，而不会让听众感到厌烦。
 
-I will share those points in this article to help you better prepare for the upcoming opportunities and challenges. All the points mentioned in the article apply to everyone, irrespective of their current experience in the industry.
+我将在本文中分享这些要点，以帮助你更好地准备迎接即将到来的机遇和挑战。文章中提到的所有要点都适用于每个人，无论他们目前在该行业的经验如何。
 
-Wherever I mention the term "industry" in this article, I mean the "Software Industry" as my experience relates directly to it. Happy reading!
+我在本文中提到的 `行业` 一词，是指 "软件行业"，因为我的经验与此直接相关。阅读愉快。
 
 ## There are Three Types of People in the Industry
 
-We can categorize people working in the software industry into three major groups.
+我们可以把在软件行业工作的人分为三个主要群体。
 
 ![2](https://www.freecodecamp.org/news/content/images/2022/04/2.png)
 
-- **Following**: People who need career guidance and a path defined to accomplish their career goals. They are seeking feedback and validation from people already doing the required things to grow in the industry.
-- **Doing**: This set of people is already doing things needed to grow in the industry. They stay `relevant` to the latest and greatest things out there. They sharpen their `skills` periodically and help their followers grow by sharing knowledge and information. There are fewer people in this category than in the `Following` category.
-- **Doing + What's Next?:** This set of folks are not only doing things but also creating specialities for the future. They cultivate visions of  `what's next?` and work towards it with a lot of `passion`. Their efforts don't necessarily have to result in some extraordinary output, but they keep trying. Again, fewer people are in this category than we discussed previously in the `Doing` category.
+- **跟随者**: 需要职业指导和确定路径以完成其职业目标的人。他们从已经在做所需事情的人那里寻求反馈和验证，以便在行业中成长。
+- **实践者**: 这类人已经在做行业发展所需的事情。他们与最新和最伟大的事物保持 "相关"。他们定期磨练自己的 "技能"，并通过分享知识和信息帮助他们的追随者成长。这个类别的人比 "追随者" 类别的人少。
+- **实践者 + 探索者?:** 这类人不仅在做事情，还在为未来创造特色。他们培养 "下一步是什么" 的愿景，并以极大的 "热情 "为之努力。他们的努力不一定要产生一些非凡的产出，但他们不断尝试。同样，这个类别的人比我们之前讨论的 "实践者" 的类别要少。
 
-Please note that these categories don't determine who is senior or junior in the industry or the organization. Instead, these categories exist in all job grades, levels, and work functions.
+请注意，这些类别并不决定谁是行业或组织中的高级或初级。相反，这些类别存在于所有工作级别、水平和工作职能中。
 
-Also, the exciting thing is that a single person can play their part in all three categories based on situation, skill, and context.
+另外，令人兴奋的是，根据情况、技能和背景，一个人可以在所有三个类别中发挥自己的作用。
 
-For example, Ms X is `doing` an excellent in web development technologies, solving problems, and creating tools to help things in the future. She is now starting her blogging journey to share her knowledge widely. She is learning from the technology blogging community by `following` established bloggers.
+例如，X 女士在网络开发技术方面做得很好，是一个好的实践者，解决了问题，并创造了工具来帮助未来的事情。她现在开始了她的博客之旅，广泛分享她的知识。她正在通过 `跟随` 技术博客社区中的成熟的博主学习。
 
 ![ladder](https://www.freecodecamp.org/news/content/images/2022/04/ladder.png)
-
-So how do we make sure that we constantly build our presence in these categories and move the needle to get into the `Doing` and `Doing+ What's Next` phases?
+ 
+那么，我们如何确保在这些类别中不断建立我们的存在，并推动成为 "实践者"和 "实践者 + 探索者" 的阶段？
 
 ## 8 Tips to Help You Advance Your Coding Career
 
-Yes, I want to summarize my tips into eight crucial points to focus on. You may be doing some or all of these already or haven't started on them. Either way is fine, and I hope it encourages you to step up further from here.
+是的，我想把我的提示总结成八个关键点来关注。你可能已经在做其中的一些或全部，或者还没有开始做这些事情。无论哪种方式都可以，我希望它能鼓励你从这里进一步加强。
 
 ## 1\. Build Habits
 
 ![4](https://www.freecodecamp.org/news/content/images/2022/04/4.png)
 
-Our `habits` drive us in our life. We build many of them unknowingly, and we have to build some consciously.
+我们的 `习惯` 在我们的生活中驱动着我们。我们在不知不觉中养成了许多习惯，而我们必须有意识地养成一些。
 
-A good habit helps you develop the right attitude towards solving problems, handling challenging situations, and making better decisions. It helps you set rational targets and get close to them. People with good habits are organized, thoughtful, approachable, and have a positive mindset.
+一个好的习惯可以帮助你培养正确的态度来解决问题，处理具有挑战性的情况，并做出更好的决定。它帮助你设定合理的目标并接近它们。有好习惯的人是有组织的，有思想的，平易近人的，并且有积极的心态。
 
-So what are some of the good habits? There are plenty, and here are some basic ones.
+那么，有哪些好习惯呢？有很多，这里有一些基本的。
 
-- Reading
-- Writing, taking notes
-- Physical exercise
-- Setting a schedule
-- Getting organized
-- Saving money
-- Learning
+- 阅读
+- 写作，做笔记
+- 锻炼身体
+- 设定时间表
+- 有条不紊
+- 省钱
+- 学习
 
-Build habits, good ones. It will set the stage for you to decide between good and bad, short term and long term, dos vs don'ts, and right vs wrong.
+建立习惯，好的习惯。它将为你决定好与坏，短期与长期，该做与不该做，以及对与错奠定基础。
 
-But, how do we build good habits? Well, I can write a few articles on this topic alone, but I'll emphasize these points for now:
+但是，我们如何建立良好的习惯？好吧，光是这个话题我就可以写几篇文章了，但我现在要强调的是这几点:
 
-- Find a habit and a reason why you want to build it. What's the end goal?
-- Find a trigger for it. A trigger motivates you to start and pushes you to stay on it. For example, listening to music could trigger starting physical exercise.
-- Plan for it knowing your limitations and all the chances you have of failing.
-- If you failed to sustain the habit, think about what went wrong. Do you need it? Readjust, replan and start again.
+- 找到一个习惯和一个你想培养它的理由。最终目标是什么？
+- 为它找到一个触发点。触发器能激励你开始，并推动你坚持下去。例如，听音乐可以触发开始体育锻炼。
+- 在知道自己的局限性和所有失败的机会的情况下，为它制定计划。
+- 如果你没能维持这个习惯，想想什么地方出了问题。你需要它吗？重新调整，重新规划，再次开始。
 
 ## 2\. Find Your Passion
 

@@ -5,104 +5,106 @@
 
 ![How to Host an Angular Application on GitHub Pages with Travis CI](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/angular-travisci-cover.png)
 
-In this article, we'll create an application using the latest version of Angular. Then we'll host it on the GitHub Pages static website service using the continuous integration tool Travis CI to deploy the application.
+在本文中，我们将使用最新版本的 Angular 创建一个应用程序。然后我们将它托管在 GitHub 页面的静态网站服务上，使用持续集成工具 Travis CI 来部署该应用程序。
 
-## Prerequisites
+## 前提
 
-Before you start, you need to install and configure the tools below to create the Angular application.
+在开始之前，你需要安装和配置以下工具来创建 Angular 应用程序。
 
--   [Git](https://git-scm.com/): Git is a distributed version control system that we'll use to sync the repository.
--   [Node.js and npm](https://nodejs.org/): Node.js is a JavaScript code runtime software based on Google's V8 engine. npm is a package manager for Node.js (Node Package Manager). We'll use these to build and run the Angular application and install the libraries.
--   [Angular CLI](https://angular.io/cli): Angular CLI is a command line utility tool for Angular which we'll use to create the base structure of the Angular application.
--   An IDE (like [Visual Studio Code](https://code.visualstudio.com/) or [WebStorm](https://www.jetbrains.com/webstorm/)): an IDE (Integrated Development Environment) is a tool with a graphical interface that helps us develop applications. Here, we'll use one to develop the Angular application.
+-   [Git](https://git-scm.com/):  Git 是一个分布式版本控制系统，我们将使用它来同步仓库。
+-   [Node.js and npm](https://nodejs.org/): Node.js 是一个基于谷歌 V8 引擎的 JavaScript 代码运行时软件。 npm 是 Node.js 的包管理器（Node Package Manager）。我们将使用这些来构建和运行 Angular 应用程序并安装库(依赖库)。
+-   [Angular CLI](https://angular.io/cli): Angular CLI 是 Angular 的一个命令行实用工具，我们将使用它来创建 Angular 应用程序的基本结构。
+-   An IDE (例如 [Visual Studio Code](https://code.visualstudio.com/) 或 [WebStorm](https://www.jetbrains.com/webstorm/)): IDE（集成开发环境）是具有图形界面的工具，可帮助我们开发应用程序。在这里，我们将使用其中一个来开发 Angular 应用程序。
 
-## Getting started
+## 开始
 
-### Create and configure your account on GitHub
+### 在 GitHub 上创建和配置你的帐户
 
-[GitHub](https://github.com/) is a source code and file storage service with version control using the Git tool. And [GitHub Pages](https://pages.github.com/) is a static file hosting service using a public repository.
+[GitHub](https://github.com/) 是一个使用 Git 工具进行版本控制的源代码和文件存储服务。 [GitHub Pages](https://pages.github.com/) 是使用公共仓库的静态文件托管服务。
 
-First, you'll need to create an account on GitHub if you don't have one already. Visit [https://github.com/](https://github.com/) and click on the button _Sign up_.
+首先，如果你还没有帐户，则需要在 GitHub 上创建一个帐户。访问 [https://github.com/](https://github.com/) 并点击按钮_Sign up_.
 
 ![github-step1](https://www.freecodecamp.org/news/content/images/2022/04/github-step1.png)
 
-Fill in the fields for Username, Email address, and Password, click on the button Verify to solve the challenge, and then click on the button Create account.
+填写用户名、电子邮件地址和密码字段，单击按钮验证以解决挑战，然后单击按钮创建帐户。
 
 ![github-step2](https://www.freecodecamp.org/news/content/images/2022/04/github-step2.png)
 
-Next, we'll generate the token that will be used in Travis CI. Click on the menu with the avatar and click on the menu Settings.
+接下来，我们将生成将在 Travis CI 中使用的令牌。单击带有头像的菜单，然后单击菜单 Settings。
 
 ![github-step3](https://www.freecodecamp.org/news/content/images/2022/04/github-step3.png)
 
-Click on the menu Developer settings.
+单击菜单 Developer settings。
 
 ![github-step4](https://www.freecodecamp.org/news/content/images/2022/04/github-step4.png)
 
-Click on the menu Personal access tokens.
+单击菜单 Personal access tokens。
 
 ![github-step5](https://www.freecodecamp.org/news/content/images/2022/04/github-step5.png)
 
-Click on the button Generate new token.
+点击按钮 Generate new token。
 
 ![github-step6](https://www.freecodecamp.org/news/content/images/2022/04/github-step6.png)
 
-Fill in the field Note, select the option repo and click on the button Create token.
+填写字段 Note，选择选项 repo 并点击按钮 Create token。
 
 ![github-step7](https://www.freecodecamp.org/news/content/images/2022/04/github-step7.png)
 
 Copy the generated token. In my case, the token `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` was generated because this token will be configured in Travis CI.
+复制生成的令牌。因为接下来该令牌将在 Travis CI 中配置。在我的例子中, “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” 就是我生成的令牌。
 
 ![github-step8](https://www.freecodecamp.org/news/content/images/2022/04/github-step8.png)
 
-Let's create the repository. Click on the menu with the avatar and click on the menu Your repositories.
+让我们创建仓库。单击带有头像的菜单，然后单击菜单 Your repositories。
 
 ![github-step9](https://www.freecodecamp.org/news/content/images/2022/04/github-step9.png)
 
-Click on the button New.
+点击按钮 New。
 
 ![github-step10](https://www.freecodecamp.org/news/content/images/2022/04/github-step10.png)
 
-Fill in the field Repository name and click on the button Create repository.
+填写仓库名称字段并单击按钮 Create repository。
 
 ![github-step11](https://www.freecodecamp.org/news/content/images/2022/04/github-step11.png)
 
 Ready! Account created, token generated, and repository [`https://github.com/rodrigokamada/angular-travisci`](https://github.com/rodrigokamada/angular-travisci) created.
+准备好！帐户已创建好、令牌已生成, 并且仓库 [`https://github.com/rodrigokamada/angular-travisci`](https://github.com/rodrigokamada/angular-travisci) 也创建好了。
 
 ![github-step12](https://www.freecodecamp.org/news/content/images/2022/04/github-step12.png)
 
-### Create and configure your account on Travis CI
+### 在 Travis CI 上创建和配置你的帐户
 
-[Travis CI](https://www.travis-ci.com/) is a deployment service integrated with GitHub.
+[Travis CI](https://www.travis-ci.com/) 是与 GitHub 集成的部署服务。
 
-First, you'll need to create a Travis CI account if you don't already have one. Visit [https://travis-ci.com/](https://travis-ci.com/) and click on the button Sign up.
+首先，如果你还没有 Travis CI 帐户，则需要创建一个。访问 [https://travis-ci.com/](https://travis-ci.com/) 并点击按钮 Sign up。
 
 ![travisci-step1](https://www.freecodecamp.org/news/content/images/2022/04/travisci-step1.png)
 
-Click on the button SIGN IN WITH GITHUB to sign in with your GitHub account.
+单击 SIGN IN WITH GITHUB 按钮以使用你的 GitHub 帐户登录。
 
 ![travisci-step2](https://www.freecodecamp.org/news/content/images/2022/04/travisci-step2.png)
 
-If Travis CI requests permission to list the GitHub repositories, accept the request. Click on the repository link angular-travisci.
+如果 Travis CI 请求列出 GitHub 仓库的权限，则接受该请求。单击仓库链接 angular-travisci。
 
 ![travisci-step3](https://www.freecodecamp.org/news/content/images/2022/04/travisci-step3.png)
 
-Let's set up the GitHub access token. Click on the menu More options and click on the menu Settings.
+让我们设置 GitHub 访问令牌。单击菜单 More options，然后单击菜单 Settings。
 
 ![travisci-step4](https://www.freecodecamp.org/news/content/images/2022/04/travisci-step4.png)
 
-Fill in the field NAME with the value GITHUB\_TOKEN, VALUE with the value of your token generated on GitHub, and click on the button Add.
+字段 NAME的值填写为 GITHUB\_TOKEN ，VALUE 的值填写为你在 GitHub 上生成的令牌的值，然后单击按钮 Add。
 
 ![travisci-step5](https://www.freecodecamp.org/news/content/images/2022/04/travisci-step5.png)
 
-Ready! Account created and repository configured.
+准备好了！账户已创建, 仓库也已配置好了。
 
 ![travisci-step6](https://www.freecodecamp.org/news/content/images/2022/04/travisci-step6.png)
 
-### Create your Angular application
+### 创建你的 Angular 应用程序
 
-[Angular](https://angular.io/) is a development platform for building Web, mobile, and desktop applications using HTML, CSS and TypeScript (JavaScript). Currently, Angular is at version 13 and Google is the main maintainer of the project.
+[Angular](https://angular.io/) 是一个使用 HTML、CSS 和 TypeScript (JavaScript) 构建 Web、移动和桌面应用程序的开发平台。目前，Angular 的版本为 13，Google 是该项目的主要维护者。
 
-Let's create the application with the Angular base structure using the `@angular/cli` with the route file and the SCSS style format.
+让我们使用带有路由文件和 SCSS 样式格式的 `@angular/cli` 创建具有 Angular 基础结构的应用程序。
 
 ```powershell
 ? Would you like to add Angular routing? Yes
@@ -136,13 +138,13 @@ CREATE angular-travisci/src/app/app.component.ts (221 bytes)
     Successfully initialized git.
 ```
 
-Create the `.travis.yml` file.
+创建 `.travis.yml` 文件。
 
 ```powershell
 touch .travis.yml
 ```
 
-Configure the `.travis.yml` file with the content below:
+使用以下内容配置  `.travis.yml` 文件。
 
 ```yaml
 notifications:
@@ -173,16 +175,16 @@ deploy:
     branch: main
 ```
 
-Change the `package.json` file and add the scripts below. Replace the `rodrigokamada` value with your GitHub username.
+更改 `package.json` 文件, 并添加以下脚本。 将 `rodrigokamada` 替换为你的 GitHub 用户名。
 
 ```json
   "build:prod": "ng build --prod --base-href https://rodrigokamada.github.io/angular-travisci/",
   "test:headless": "ng test --watch=false --browsers=ChromeHeadless"
 ```
 
-Change the `src/app/app.component.spec.ts` file and remove the tests `should have as title 'angular-travisci'` and `should render title`.
+更改 `src/app/app.component.spec.ts` 文件并删除测试 `should have as title 'angular-travisci'` 和 `should render title`。
 
-Run the test with the command below:
+使用以下命令运行测试:
 
 ```powershell
 npm run test:headless
@@ -205,7 +207,7 @@ Chrome Headless 92.0.4515.159 (Linux x86_64): Executed 1 of 1 SUCCESS (0.068 sec
 TOTAL: 1 SUCCESS
 ```
 
-Run the application with the command below. Access the URL `http://localhost:4200/` and check if the application is working.
+使用以下命令运行应用程序, 访问地址  `http://localhost:4200/` , 并检查该应用程序是否正常工作。
 
 ```powershell
 npm start
@@ -232,7 +234,7 @@ Build at: 2021-09-05T22:35:38.010Z - Hash: a4cfc9149589386eca5b - Time: 39997ms
 ✔ Compiled successfully.
 ```
 
-Build the application with the command below:
+使用以下命令构建应用程序:
 
 ```powershell
 npm run build:prod
@@ -255,29 +257,31 @@ styles.ef46db3751d8e999.css   | styles        |   0 bytes
 Build at: 2021-09-05T22:42:19.525Z - Hash: 83bfffc079b083727ca4 - Time: 26030ms
 ```
 
-Syncronize the application on the GitHub repository that you created.
+在你创建的 GitHub 仓库上同步应用程序。
 
-Ready! After synchronizing the application on the GitHub repository, Travis CI builds the application and synchronizes on the branch `gh-pages`.
+准备好了！在 GitHub 仓库上同步应用程序后，Travis CI 会构建应用程序并在分支 `gh-pages` 上同步。
 
 Access the URL [`https://rodrigokamada.github.io/angular-travisci/`](https://rodrigokamada.github.io/angular-travisci/) and check if the application is working. Replace the `rodrigokamada` value with your GitHub username.
+访问地址 [`https://rodrigokamada.github.io/angular-travisci/`](https://rodrigokamada.github.io/angular-travisci/) 并检查应用程序是否正常工作。将 `rodrigokamada` 值替换为你的 GitHub 用户名。
 
 And that's it! The application repository is available at [https://github.com/rodrigokamada/angular-travisci](https://github.com/rodrigokamada/angular-travisci).
+就是这样！[https://github.com/rodrigokamada/angular-travisci](https://github.com/rodrigokamada/angular-travisci) 上的应用程序仓库现在可以用了。
 
-## Conclusion
+## 结论
 
-Summarizing what was covered in this article:
+总结本文所涵盖的内容：
 
--   We created an account on GitHub.
--   We created an access token on GitHub.
--   We created a repository on GitHub.
--   We created an account on Travis CI.
--   We configured the GitHub access token on Travis CI.
--   We create an Angular application.
+-   我们在 GitHub 上创建了一个帐户。
+-   我们在 GitHub 上创建了一个访问令牌。
+-   我们在 GitHub 上创建了一个仓库。
+-   我们在 Travis CI 上创建了一个帐户。
+-   我们在 Travis CI 上配置了 GitHub 访问令牌。
+-   我们创建一个 Angular 应用程序。
 
-You can use this article to create your personal website and have an online portfolio.
+你可以使用本文创建你的个人网站并拥有在线作品集。
 
-Thank you for reading and I hope you enjoyed the article!
+感谢你的阅读，希望你喜欢这篇文章！
 
-To stay updated whenever I post new articles, follow me on [Twitter](https://twitter.com/rodrigokamada).
+需要在我发布新文章时获得最新内容的话，请在 [Twitter](https://twitter.com/rodrigokamada) 上关注我。
 
-This tutorial was posted on my [blog](https://rodrigo.kamada.com.br/share/blog/hospedando-uma-aplicacao-angular-no-github-pages-usando-o-travis-ci) in Portuguese.
+本教程以葡萄牙语发布在我的 [博客](https://rodrigo.kamada.com.br/share/blog/hospedando-uma-aplicacao-angular-no-github-pages-usando-o-travis-ci)。 

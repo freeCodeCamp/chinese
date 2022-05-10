@@ -1,6 +1,6 @@
 > -  原文地址：[Object-Oriented Programming in JavaScript for Beginners](https://www.freecodecamp.org/news/object-oriented-javascript-for-beginners/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Object-Oriented Programming in JavaScript for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/pexels-lukas-317377.jpg)

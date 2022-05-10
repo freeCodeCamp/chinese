@@ -126,11 +126,11 @@ form.addEventListener('submit', event => {
 
 ## Step 2: How to Set Up Lambda
 
-Now this is the most fun part. We are going to create a function that is going to receive the form data and call SES.
+现在这是最有趣的部分。我们将创建一个函数，用来接收表单数据并调用 SES。
 
-The beauty of Lambda functions is that you don't have to worry about running your backend code on a server 24/7 and maintaining that server. It's *serverless*.
+Lambda 函数的好处是，你不必担心在服务器上 24/7 运行你的后端代码，也不必担心维护服务器。它是 *无服务器的(serverless)*。
 
-But that doesn't mean there are no servers involved. AWS is going to take care of that under the hood so you can only focus on writing code, not maintaining servers. Additionally, you only get billed for the number of times your function gets called and the amount of time it takes to execute, and it's [incredibly cheap](https://aws.amazon.com/lambda/pricing/)!
+但这并不意味着不涉及服务器。AWS 将幕后处理这些问题，因此你可以只专注于编写代码，而不是维护服务器。此外，你只需按你的函数被调用的次数和执行的时间来收费，而且是 [难以置信的便宜](https://aws.amazon.com/lambda/pricing/)!
 
 ### Create an IAM Role and Configure it
 

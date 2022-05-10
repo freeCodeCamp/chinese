@@ -1,7 +1,7 @@
-> -   原文地址：[How to Receive Emails from Your Site's "Contact Us" form Using AWS SES, Lambda, & API Gateway](https://www.freecodecamp.org/news/how-to-receive-emails-via-your-sites-contact-us-form-with-aws-ses-lambda-api-gateway/)
-> -   原文作者：Adham El Banhawy
-> -   译者：
-> -   校对者：
+> - 原文地址：[How to Receive Emails from Your Site's "Contact Us" form Using AWS SES, Lambda, & API Gateway](https://www.freecodecamp.org/news/how-to-receive-emails-via-your-sites-contact-us-form-with-aws-ses-lambda-api-gateway/)
+> - 原文作者：Adham El Banhawy
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Receive Emails from Your Site's "Contact Us" form Using AWS SES, Lambda, & API Gateway](https://images.unsplash.com/photo-1596524430615-b46475ddff6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGNvbnRhY3QlMjB1c3xlbnwwfHx8fDE2MTY1ODExNjc&ixlib=rb-1.2.1&q=80&w=2000)
 
@@ -11,15 +11,15 @@ Honestly, I had never tried to implement that functionality myself before. I was
 
 ```html
 <button>
-	<a href="mailto:myemail@example.com">Contact Me</a>
+ <a href="mailto:myemail@example.com">Contact Me</a>
 </button>
 
 ```
 
 But this approach has two inconveniences:
 
-1.  It forces both parties, the user who wants to send the message and the site owner who receives it, to share their emails with one another. While this is OK for some, it is not ideal for privacy\-minded individuals.
-2.  For the site visitor, clicking the link forces them to open their default mail program on their device, and that can be frustrating. What if they're using a public computer? What if they're not logged in? What if they simply don't want to use their mail program?
+1. It forces both parties, the user who wants to send the message and the site owner who receives it, to share their emails with one another. While this is OK for some, it is not ideal for privacy\-minded individuals.
+2. For the site visitor, clicking the link forces them to open their default mail program on their device, and that can be frustrating. What if they're using a public computer? What if they're not logged in? What if they simply don't want to use their mail program?
     Yes, technically they can just grab the recipient's email address and send the message via their browser or wherever they're logged in. But those are all extra steps and hurdles that can discourage users from sending their messages and the business might lose potential feedback or opportunities.
 
 For this reason, we chose to go with an email form from which the user can simply write in their message and click submit, sending an email to the site's owner without ever leaving the website.
@@ -90,10 +90,10 @@ We will also use **API Gateway** which enables us to invoke Lambda functions via
 
 In this case, when our form is submitted, the following workflow will happen:
 
-1.  Our browser (JavaScript) will make a post request, with the form data in the request body, to an endpoint URL specified by AWS API Gateway
-2.  The API Gateway will validate this request. Then it will trigger the Lambda function which accepts an event parameter. API Gateway will put the form data in the body property of the event parameter.
-3.  Our Lambda function will extract the data from the event body and we will then use this data to build the body of the email we want to send as well as its recipients. Our function will then use the AWS SDK to invoke SES with the email data.
-4.  Once SES gets the *sendMail* request, it turns the email data into an actual text email and sends it to the recipient via AWS's own mail servers.
+1. Our browser (JavaScript) will make a post request, with the form data in the request body, to an endpoint URL specified by AWS API Gateway
+2. The API Gateway will validate this request. Then it will trigger the Lambda function which accepts an event parameter. API Gateway will put the form data in the body property of the event parameter.
+3. Our Lambda function will extract the data from the event body and we will then use this data to build the body of the email we want to send as well as its recipients. Our function will then use the AWS SDK to invoke SES with the email data.
+4. Once SES gets the *sendMail* request, it turns the email data into an actual text email and sends it to the recipient via AWS's own mail servers.
 
 Once the email is sent, our browser will receive a response with status code 200 and a success message. If any step in the AWS cloud fails, the response will have a 500 status code.
 
@@ -262,13 +262,13 @@ const aws = require("aws-sdk");
 const ses = new aws.SES({ region: "us-east-1" });
 exports.handler = async function (event) {
   console.log('EVENT: ', event)
-	// Extract the properties from the event body
+ // Extract the properties from the event body
   const { senderEmail, senderName, message } = JSON.parse(event.body)
   const params = {
     Destination: {
       ToAddresses: ["the.benhawy@gmail.com"],
     },
-		// Interpolate the data in the strings to send
+  // Interpolate the data in the strings to send
     Message: {
       Body: {
         Text: {
@@ -322,11 +322,11 @@ form.addEventListener("submit", (event) => {
 
   const { name, email, message } = event.target;
 
-	// Use your API endpoint URL you copied from the previous step
+ // Use your API endpoint URL you copied from the previous step
   const endpoint =
     "<https://5ntvcwwmec.execute-api.us-east-1.amazonaws.com/default/sendContactEmail>";
   // We use JSON.stringify here so the data can be sent as a string via HTTP
-	const body = JSON.stringify({
+ const body = JSON.stringify({
     senderName: name.value,
     senderEmail: email.value,
     message: message.value
@@ -367,12 +367,12 @@ I don't know about you, but I think this is pretty awesome and almost magical! A
 
 Of course you can customize this flow in terms of using a framework on the frontend like React or Vue or a different programming language for the Lambda like Python or Go.
 
-## Before you go...
+## Before you go
 
 Thank you for reading this far! I write posts about JavaScript, cloud development, and my personal educational & professional experiences as a self\-taught developer. So feel free to follow me on twitter [@adham\_benhawy](https://twitter.com/adham_benhawy) where I tweet about them too!
 
 ### Resources
 
-*   [https://aws.amazon.com/premiumsupport/knowledge\-center/lambda\-send\-email\-ses/](https://aws.amazon.com/premiumsupport/knowledge-center/lambda-send-email-ses/)
-*   [https://docs.aws.amazon.com/lambda/latest/dg/lambda\-invocation.html](https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html)
-*   [https://docs.aws.amazon.com/lambda/latest/dg/services\-apigateway.html?icmpid=docs\_lambda\_console](https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html?icmpid=docs_lambda_console)
+- [https://aws.amazon.com/premiumsupport/knowledge\-center/lambda\-send\-email\-ses/](https://aws.amazon.com/premiumsupport/knowledge-center/lambda-send-email-ses/)
+- [https://docs.aws.amazon.com/lambda/latest/dg/lambda\-invocation.html](https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html)
+- [https://docs.aws.amazon.com/lambda/latest/dg/services\-apigateway.html?icmpid=docs\_lambda\_console](https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html?icmpid=docs_lambda_console)

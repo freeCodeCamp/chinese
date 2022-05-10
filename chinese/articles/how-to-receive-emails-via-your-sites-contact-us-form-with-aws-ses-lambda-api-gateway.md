@@ -5,9 +5,9 @@
 
 ![How to Receive Emails from Your Site's "Contact Us" form Using AWS SES, Lambda, & API Gateway](https://images.unsplash.com/photo-1596524430615-b46475ddff6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGNvbnRhY3QlMjB1c3xlbnwwfHx8fDE2MTY1ODExNjc&ixlib=rb-1.2.1&q=80&w=2000)
 
-I was recently building a simple landing page website for a client who wanted to receive emails through their website without sharing their email.
+我最近在为一个客户建立一个简单的登陆页面网站，该客户希望通过他们的网站接收电子邮件，而不需要分享他们的电子邮件。
 
-Honestly, I had never tried to implement that functionality myself before. I was always used to having a simple "Contact Us" button with an anchor tag and a `mailto` in the *href* attribute like this:
+说实话，我以前从未尝试过自己实现这一功能。我总是习惯于有一个简单的 "Contact Us""按钮，有一个锚标签(anchor)，在 *href* 属性里有一个 `mailto`，像这样。
 
 ```html
 <button>
@@ -16,25 +16,25 @@ Honestly, I had never tried to implement that functionality myself before. I was
 
 ```
 
-But this approach has two inconveniences:
+但这种方法有两个不便之处:
 
-1. It forces both parties, the user who wants to send the message and the site owner who receives it, to share their emails with one another. While this is OK for some, it is not ideal for privacy\-minded individuals.
-2. For the site visitor, clicking the link forces them to open their default mail program on their device, and that can be frustrating. What if they're using a public computer? What if they're not logged in? What if they simply don't want to use their mail program?
-    Yes, technically they can just grab the recipient's email address and send the message via their browser or wherever they're logged in. But those are all extra steps and hurdles that can discourage users from sending their messages and the business might lose potential feedback or opportunities.
+1. 它迫使双方，即想发送消息的用户和接收消息的网站所有者，彼此分享他们的电子邮件。虽然这对某些人来说是可以的，但对注重隐私的人来说，这并不理想。
+2. 对于网站访问者来说，点击链接迫使他们打开他们设备上的默认邮件程序，这可能是令人沮丧的。如果他们使用的是一台公共电脑呢？如果他们没有登录呢？如果他们根本不想使用他们的邮件程序呢？
+是的，从技术上讲，他们可以直接抓取收件人的电子邮件地址，并通过他们的浏览器或他们登录的地方发送消息。但这些都是额外的步骤和障碍，会使用户不愿意发送他们的信息，企业可能会失去潜在的反馈或机会。
 
-For this reason, we chose to go with an email form from which the user can simply write in their message and click submit, sending an email to the site's owner without ever leaving the website.
+出于这个原因，我们选择了一个电子邮件表格，用户可以简单地写下他们的信息并点击提交，在不离开网站的情况下向网站的主人发送电子邮件。
 
-A quick Google search shows that there are third party tools/widgets that you could embed in a website, but most of them are branded and require paid subscription for full customization.
+谷歌快速搜索显示，有一些第三方工具/小工具可以嵌入到网站中，但它们大多是品牌，需要付费订阅才能完全定制(译者注：免费版的，有功能上或者数量上的限制，或者有广告插入)。
 
-And unless you are using a CMS like WordPress that has a built\-in plugin that can do that, that's an inconvenient recurring cost.
+除非你使用的是像 WordPress 这样的 CMS，有一个内置的/插件可以做到这一点，否则这就是一个不方便的日常性费用。
 
-I instead chose to code that feature myself so I would have full control.
+我选择了自己编写该功能的代码，这样我就可以完全控制了。
 
-For the purposes of this guide I will recreate the steps I took to implement that functionality using HTML and AWS services.
+为了本指南的目的，我将重现我使用 HTML 和 AWS 服务实现该功能的步骤。
 
 ## The HTML Form
 
-I'll keep it super simple here and go with a basic HTML form with no CSS, just to test our desired functionality.
+我将在这里保持超级简单，使用一个没有 CSS 的基本 HTML 表单，只是为了测试我们想要的功能。
 
 ```html
 <h2>Contact Us</h2>
@@ -55,9 +55,9 @@ I'll keep it super simple here and go with a basic HTML form with no CSS, just t
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-61.png)
 
-Nothing fancy to see here...
+这里没有什么花哨的东西可看...
 
-Now we want to handle the submit functionality with JavaScript.
+现在我们要用 JavaScript 来处理提交功能。
 
 ```js
 const form = document.querySelector('form')
@@ -74,54 +74,53 @@ form.addEventListener('submit', event => {
 
 ```
 
-At this point, we have a form that gets input from the user and JavaScript code that just displays the results to the console.
+在这一点上，我们有一个从用户那里获得输入的表单，以及只是将结果显示在控制台(console) 的 JavaScript 代码。
 
-We can leave it at that for now and start working on the backend services that will receive the form data and send an email with that data.
+我们现在可以先不考虑这个问题，而是开始处理后端服务，这些后端服务将接收表单数据，并将这些数据发送电子邮件。
 
 ## The Backend Overview
 
-Let's dive into AWS and what services we are going to use and how.
+让我们深入了解 AWS，以及我们将使用哪些服务和如何使用。
 
-As mentioned in the title, we will use **AWS Lambda** and **Simple Email Service** (SES). SES is a serverless messaging service that allows you to send email messages when invoked. AWS Lambda allows you to write server\-side code to execute in response to events.
+正如标题中提到的，我们将使用 **AWS Lambda** 和 **Simple Email Service**（SES）。SES 是一个无服务器 (serverless) 的消息传递服务，允许你在调用时发送电子邮件。AWS Lambda 允许你编写服务器/端代码，以响应事件的发生而执行。
 
-We will also use **API Gateway** which enables us to invoke Lambda functions via HTTP.
+我们还将使用 **API 网关**，使我们能够通过 HTTP 调用 Lambda 函数。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-62.png)
 
-In this case, when our form is submitted, the following workflow will happen:
+在这种情况下，当我们的表单被提交时，将发生以下工作流程:
 
-1. Our browser (JavaScript) will make a post request, with the form data in the request body, to an endpoint URL specified by AWS API Gateway
-2. The API Gateway will validate this request. Then it will trigger the Lambda function which accepts an event parameter. API Gateway will put the form data in the body property of the event parameter.
-3. Our Lambda function will extract the data from the event body and we will then use this data to build the body of the email we want to send as well as its recipients. Our function will then use the AWS SDK to invoke SES with the email data.
-4. Once SES gets the *sendMail* request, it turns the email data into an actual text email and sends it to the recipient via AWS's own mail servers.
-
-Once the email is sent, our browser will receive a response with status code 200 and a success message. If any step in the AWS cloud fails, the response will have a 500 status code.
+1. 我们的浏览器（JavaScript）将向 AWS API Gateway 指定的端点(endpoint) URL 发出一个 post 请求，请求体中包含表单数据
+2. API 网关将验证这个请求。然后它将触发 Lambda 函数，该函数接受一个事件参数。API Gateway 将把表单数据放在事件参数的 body 属性中。
+3. 我们的 Lambda 函数将从事件主体中提取数据，然后我们将使用这些数据来建立我们想要发送的电子邮件的主体以及它的收件人。然后，我们的函数将使用 AWS SDK 来调用 SES 的电子邮件数据。
+4. 当 SES 收到 *sendMail* 请求，它就会将电子邮件数据变成实际的文本电子邮件，并通过 AWS 自己的邮件服务器将其发送给收件人。
+一旦电子邮件被发送，我们的浏览器将收到一个状态代码为 200 的响应和一个成功信息。如果 AWS 云中的任何步骤失败，响应将有一个 500 状态代码。
 
 ## Step 1: How to Set Up SES
 
-We're actually going to set up each one of these steps in the reverse order, beginning with SES, which is going to be easier.
+实际上，我们将按照相反的顺序来设置每一个步骤，从 SES 开始，这将会更容易。
 
-First in your AWS console, go to the SES service —> then click on Email Addresses in the side menu —> then click on the "Verify a New Email Address" button.
+首先在你的 AWS 控制台，进入 `SES service` —> 然后点击侧面菜单中的 `Email Addresses` —> 然后点击 "Verify a New Email Address" 按钮。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-63.png)
 
-In the dialogue that opens up, enter the email address that you want the SES service to put as the *sender* when it sends the email.
+在打开的对话框中，输入你希望 SES 服务在发送电子邮件时的发件人地址。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-64.png)
 
-This will send an email to the email address you put with a link to click to verify. This is how AWS knows that the owner of the email consents to having their email address used as the sender address.
+这将向你输入的电子邮件地址发送一封电子邮件，其中有一个链接，可以点击验证。AWS 将知道电子邮件的所有者同意将他们的电子邮件地址作为发件人地址。
 
-Until you verify the email, the SES email dashboard will keep the verification status as pending.
+在你验证电子邮件之前，SES 电子邮件仪表板将保持验证状态为待定（pendin verification）。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-65.png)
 
-Once the email owner opens the email they received from AWS and clicks the verification link in it, the verification status should change to verified (refresh the page to see the change).
+当电子邮件所有者打开他们从 AWS 收到的电子邮件，并点击其中的验证链接，验证状态应该变为已验证（verified ，刷新页面以看到变化）。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-66.png)
 
-And that's all you have to do for SES. You can optionally test the service by selecting your verified email in the list and clicking the "Send a Test Email" button. This will let you put in a recipient's email address, a subject, and a message and send it.
+而这就是你为 SES 所要做的一切。你可以选择测试服务，在列表中选择你经过验证的电子邮件，然后点击 "Send a Test Email" 按钮。这将让你输入收件人的电子邮件地址、主题（subject）和信息(message)并发送。
 
-The email sent is going to be signed by AWS servers and your verified address should be the sender. It should look like this:
+发送的电子邮件将由 AWS 服务器签署，发件人应该是你输入的发件人地址。它应该看起来像这样。:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-67.png)
 

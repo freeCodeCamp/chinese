@@ -5,34 +5,34 @@
 
 ![REST API Design Best Practices – How to Build a REST API with JavaScript, Node.js, and Express.js](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/rest-api-design-course-header.png)
 
-I've created and consumed many API's over the past few years. During that time, I've come across good and bad practices and have experienced nasty situations when consuming and building API's. But there also have been great moments.
+在过去几年我创建和使用过不少API，期间我遇到过优秀的实践方式，也遭遇过极其不好的实践方式，但曙光总是存在。
 
-There are helpful articles online which present many best practices, but many of them lack some practicality in my opinion. Knowing the theory with few examples is good, but I've always wondered how the implementation would look in a more real world example.
+网上有许多优秀实践相关的文章，但是他们大多数都缺乏现实经验。通过一些例子来了解理论是一个好办法，但是我一直都在思考如何用现实世界的例子来展现API的应用。
 
-Providing simple examples helps to understand the concept itself without a lot of complexity, but in practice things aren't always so simple. I'm pretty sure you know what I'm talking about 😁
+简单的例子确实可以帮助概念的理解，也省去了复杂度。但实际情况往往并不简单，我确信你对此也深有体会。 😁
 
-That's why I've decided to write this tutorial. I've merged all those learnings (good and bad) together into one digestible article while providing a practical example that can be followed along. In the end, we'll build a full API while we're implementing one best practice after another.
+这就是我决定写这个教程的原因。我讲过去好的坏的学习经验都融入了这个易读的文章中，并提供伴随例子。读完整片文章，我们就会通过一个又一个最佳实践来创建一个完整的API。
 
-A few things to remember before we start off:
+开始之前的注意事项：
 
-Best practices are, as you might have guessed, not specific laws or rules to follow. They are conventions or tips that have evolved over time and turned out to be effective. Some have became standard nowadays. But this doesn't mean you have to adapt them 1:1.
+最佳实践如你所想并不是具体的必须遵从的规则。它们是随着时间的推移人们总结出来的有效的惯例，有一些确实成为现在的标准，但这并不意味着你需要百分之一百的采用这些实践。
 
-They should give you a direction to make your API's better in terms of user experience (for the consumer and the builder), security, and performance.
+最佳实践应该告诉你如何使得API更加符合用户的使用习惯（消费者和其他工程师）、更加安全和提高性能。
 
-Just keep in mind that projects are different and require different approaches. There might be situations where you can't or shouldn't follow a certain convention. So every engineer has to decide this for themselves or with their.
+请记住项目各不相同，使用的方法也各不相同。肯定会有一些情况下你无法遵守这些规范，每一个工程师都应该自己决定使用什么方法。
 
-Now that we've got those things out of our way, without further ado let's get to work!
+话不多说，让我们开始吧！
 
-## Table of Contents
+## 目录
 
--   [Our Example Project](#our-example-project)
-    -   [Prerequisites](#prerequisites)
-    -   [Architecture](#architecture)
-    -   [Basic Setup](#basic-setup)
--   [REST API Best Practices](#rest-api-best-practices)
-    -   [Versioning](#versioning)
-    -   [Name resources in plural](#name-resources-in-plural)
-    -   [Accept and respond with data in JSON format](#accept-and-respond-with-data-in-json-format)
+-   [示例项目](#our-example-project)
+    -   [前提条件](#prerequisites)
+    -   [架构](#architecture)
+    -   [基础设置](#basic-setup)
+-   [REST API最佳实践](#rest-api-best-practices)
+    -   [版本](#versioning)
+    -   [用复数形式命名资源](#name-resources-in-plural)
+    -   [通过JSON格式接受和响应数据](#accept-and-respond-with-data-in-json-format)
     -   [Respond with standard HTTP Error Codes](#respond-with-standard-http-error-codes)
     -   [Avoid verbs in endpoint names](#avoid-verbs-in-endpoint-names)
     -   [Group associated resources together](#group-associated-resources-together-logical-nesting-)
@@ -42,98 +42,98 @@ Now that we've got those things out of our way, without further ado let's get to
     -   [Document your API properly](#document-your-api-properly)
 -   [Conclusion](#conclusion)
 
-## Our Example Project
+<h2 id="our-example-project">示例项目</h2>
 
 ![alvaro-reyes-qWwpHwip31M-unsplash--1-](https://www.freecodecamp.org/news/content/images/2022/04/alvaro-reyes-qWwpHwip31M-unsplash--1-.jpg)
 
-Photo by [Alvaro Reyes](https://unsplash.com/@alvarordesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/project?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+图片作者[Alvaro Reyes](https://unsplash.com/@alvarordesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)来自[Unsplash](https://unsplash.com/s/photos/project?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-Before we start implementing the best practices into our example project, I'd like to give you a brief introduction to what we'll be building.
+在正式开始在示例中应用最佳实践前，我先简单介绍一下我们要创建什么。
 
-We'll build a REST API for a CrossFit Training Application. If you're not familiar with CrossFit, it's a fitness method and competitive sport that combines high-intensity workouts with elements from several sports (olympic weightlifting, gymnastics, and others).
+我们将为CrossFit训练应用创建REST API。如果你不熟悉CrossFit，它是一种健身方式，融合了竞争类运动和高强度训练，包含了各种各样的运动（奥林匹克举重、体操等）。
 
-In our application we'd like to create, read, update and delete **WOD**'s (**W**orkouts **o**f the **D**ay). This will help our users (that will be gym owners) come up with workout plans and maintain their own workouts inside a single application. On top of that, they also can add some important training tips for each workout.
+在这个应用中，我们将创建、读取、更新和删除**WOD**'s(**W**orkout **o**f the **D**ay应用名称)。该应用将帮助用户（健身馆主）指定和维护已有的健身计划。除此之外，还可以在一些重要的训练旁批注一些小建议。
 
-Our job will require us to design and implement an API for that application.
+我们的国内工作就是设计和部署这个应用的API。
 
-### Prerequisites
+<h3 id="prerequisites">前提条件</h3>
 
-In order to follow along you need to have some experience in JavaScript, Node.js, Express.js and in Backend Architecture. Terms like REST and API shouldn't be new to you and you should have an understanding of the [Client-Server-Model](https://en.wikipedia.org/wiki/Client%E2%80%93server_model).
+在学习这门教程之前，你必须有JavaScript， Node.js， Express.js以及后端架构的经验，REST和API这类属于对于你来说是熟悉的，并且你了解[主从式架构](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)。
 
-Of course you don't have to be an expert in those topics, but familiarity and ideally some experience should be enough.
+当然你不需要时这些话题的专家，熟悉并且有这些内容的实际工作经验就足够了。
 
-If not all prerequisites apply to you, it's of course not a reason to skip this tutorial. There's still a lot to learn here for you as well. But having those skills will make it easier for you to follow along.
+如果这些都不符合你的话，当然也不是不看这篇教程的理由。你还是可以从这篇文章中学到很多东西，但是如果有这些技能的话可以帮助你更轻松地阅读这篇文行。
 
-Even though this API is written in JavaScript and Express, the best practices are not limited to these tools. They can be applied to other programming languages or frameworks as well.
+虽然虽然这里的API是用JavaScript和Express写的，但不表示这些最佳实践仅适用于这些工具。可以在其他的编程语言和框架中应用这些最佳实践。
 
-### Architecture
+<h3 id="architecture">架构</h3>
 
-As discussed above, we'll be using Express.js for our API. I don't want to come up with a complex architecture so I'd like to stick to the **3 Layer Architecture:**
+就向前面说的那样，我会是用Express.js来搭建API。我不想使用太复杂的架构，所以我会使用 **3层结构:**
 
 ![Bildschirmfoto-2022-04-25-um-14.33.24-1](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-25-um-14.33.24-1.png)
 
-Inside the **Controller** we'll be handling all stuff that is related to HTTP. That means we're dealing with requests and responses for our endpoints. Above that layer is also a little **Router** from Express that passes requests to the corresponding controller.
+在 **控制层** 我们将处理所有HTTP相关的内容，也就是说我们在这里处理终点的请求和回应。在这层之上时 Express的**路由**把请求传递给相应的控制器。
 
-The whole business logic will be in the **Service Layer** that exports certain services (methods) which are used by the controller.
+所有业务逻辑都在**服务层**，服务层会暴露特定服务（方法）供控制层使用。
 
-The third layer is the **Data Access Layer** where we'll be working with our Database. We'll be exporting some methods for certain database operations like creating a WOD that can be used by our Service Layer.
+第三层是 **数据通过层**， 在这里处理数据库。我们将导出一些处理数据的方法，如创建WOD，供服务层使用。
 
-In our example we're not using a _real_ database such as MongoDB or PostgreSQL because I'd like to focus more on the best practices itself. Therefore we're using a local JSON file that mimics our Database. But this logic can be transferred to other databases of course.
+在这个例子中，我们不会使用 _真实的_ 数据哭如MongoDB或者PostgreSQL，因为我想专注于最佳实践本身。因此我们会使用到本地的JSON文件来模拟数据库。但是的使用逻辑可以应用到其他的数据库。
 
-### Basic Setup
+<h3 id="basic-setup">基础设置</h3>
 
-Now we should be ready to create a basic setup for our API. We won't overcomplicate things, and we'll build a simple but organized project structure.
+现在我们开始创建API的基础设置。我们不用把事情复杂化，我们只创建一个简单有组织的架构。
 
-First, let's create the overall folder structure with all necessary files and dependencies. After that, we'll make a quick test to check if everything is running properly:
+首先，我们创建一个总文件目录结构，包含所有必须的文件和依赖项。创建完了之后，我们将快速地检查一下一切是否正常运行。
 
 ```bash
-# Create project folder & navigate into it
+# 创建项目文件夹并且打开这个文件夹
 mkdir crossfit-wod-api && cd crossfit-wod-api
 ```
 
 ```bash
-# Create a src folder & navigate into it
+# 创建src文件夹并打开这个文件夹
 mkdir src && cd src
 ```
 
 ```bash
-# Create sub folders
+# 创建子文件夹
 mkdir controllers && mkdir services && mkdir database && mkdir routes
 ```
 
 ```bash
-# Create an index file (entry point of our API)
+# 创建index文件（API接入点）
 touch index.js
 ```
 
 ```bash
-# We're currently in the src folder, so we need to move one level up first 
+# 我们现在在src文件夹，所以要返回一级
 cd .. 
 
-# Create package.json file 
+# 创建package.json文件
 npm init -y
 ```
 
-Install dependencies for the basic setup:
+安装基础设置的所有依赖项：
 
 ```bash
-# Dev Dependencies 
+# 开发依赖项
 npm i -D nodemon 
 
-# Dependencies 
+# 依赖项 
 npm i express
 ```
 
-Open the project up in your favorite Text Editor and configure Express:
+在你最喜欢使用的文字处理器中打开我们的项目，然后配置Express：
 
 ```javascript
-// In src/index.js 
+// 在src/index.js中
 const express = require("express"); 
 
 const app = express(); 
 const PORT = process.env.PORT || 3000; 
 
-// For testing purposes 
+// 供测试用代码
 app.get("/", (req, res) => { 
     res.send("<h2>It's Working!</h2>"); 
 }); 
@@ -143,7 +143,7 @@ app.listen(PORT, () => {
 });
 ```
 
-Integrate a new script called **"dev"** inside package.json:
+在package.json中添加 **"dev"** 脚本：
 
 ```json
 {
@@ -166,43 +166,43 @@ Integrate a new script called **"dev"** inside package.json:
 }
 ```
 
-The script makes sure that the development server restarts automatically when we make changes (thanks to nodemon).
+nodemon可以确保每次你保存更改的时候，重新启动开发服务器。
 
-Spin up the development server:
+启动开发服务器：
 
 ```bash
 npm run dev
 ```
 
-Look at your terminal, and there should be a message that the **"API is listening on port 3000"**.
+查看控制台，会收到消息 **"API is listening on port 3000"**。
 
-Visit **localhost:3000** inside your browser. When everything is setup correctly, you should see the following:
+在浏览器中打开 **localhost:3000**。如果一切设置正确，你会看到下面内容：
 
 ![Bildschirmfoto-2022-04-30-um-11.09.44](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-11.09.44.png)
 
-Great! We're all set up now to implement the best practices.
+太好了！我们已经设置好应用最佳实践的环境。
 
-## REST API Best Practices
+<h2 id="rest-api-best-practices">REST API最佳实践</h2>
 
 ![constantin-wenning-idDvA4jPBO8-unsplash--1-](https://www.freecodecamp.org/news/content/images/2022/04/constantin-wenning-idDvA4jPBO8-unsplash--1-.jpg)
 
 Photo by [Constantin Wenning](https://unsplash.com/@conniwenningsimages?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/handshake?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-Yeah! Now that we have a really basic Express setup, we can extend our API with the following best practices.
+很好！我们已经做好了基础的Express设置，现在我们可以根据最佳实践来扩展API了。
 
-Let's start simple with our fundamental CRUD endpoints. After that we'll be extending the API with each best practice.
+我们从最简单的基础CRUD终点开始，之后我们将使用最佳实践来扩展API。
 
-### Versioning
+<h3 id="versioning">版本</h3>
 
-Wait a second. Before we write any API-specific code we should be aware of versioning. Like in other applications there will be improvements, new features, and stuff like that. So it's important to version our API as well.
+稍等一下。在我们编写具体的API代码之前，我们要关注一下版本。和其他所有应用一样，我们的API也需要迭代、更新功能……，所以给我们的API制定版本十分重要。
 
-The big advantage is that we can work on new features or improvements on a new version while the clients are still using the current version and are not affected by breaking changes.
+这样做最大的优势是当我们在创建新功能的时候并不影响客户在旧版本上继续使用。
 
-We also don't force the clients to use the new version straight away. They can use the current version and migrate on their own when the new version is stable.
+我们并不强迫用户直接使用我们的新版本，用户可以继续使用老的版本，直到新版本稳定后再迁移到新版本。
 
-The current and new versions are basically running in parallel and don't affect each other.
+当下版本和新版本同时运行互不干扰。
 
-But how can we differentiate between the versions? One good practice is to add a path segment like **v1** or **v2** into the URL.
+那我们如何区分不同的版本呢？一种不错的做法是在URL添加**v1****v2**这样的路径段。
 
 ```javascript
 // Version 1 
@@ -214,35 +214,35 @@ But how can we differentiate between the versions? One good practice is to add a
 // ...
 ```
 
-That's what we expose to the outside world and what can be consumed by other developers. But we also need to structure our project in order to differentiate between each version.
+这就是我们暴露给外部世界，以及其他开发者也可以使用的。同时，我们也需要一个项目架构来区分不同的版本。
 
-There are many different approaches to handling versioning inside an Express API. In our case I'd like to create a sub folder for each version inside our **src** directory called **v1**.
+管理Express API版本的方法各式各样。本教程中我将在**src**目录下创建一个版本文件夹，如**v1**：
 
 ```bash
 mkdir src/v1
 ```
 
-Now we move our routes folder into that new v1 directory.
+现在我们讲路由文件夹移动到新的v1目录下：
 
 ```bash
-# Get the path to your current directory (copy it) 
+# 获取当前路径（复制）
 pwd 
 
-# Move "routes" into "v1" (insert the path from above into {pwd}) 
+# 讲“routes”添加到“v1” （使用{pwd}插入新的路径）
 mv {pwd}/src/routes {pwd}/src/v1
 ```
 
-The new directory **/src/v1/routes** will store all our routes for version 1. We will add "real" content later on. But for now let's add a simple **index.js** file to test things out.
+新目录 **/src/v1/routes** 将存储版本1.0的所有路由。之后我们会在里面添加“真实”的内容，但现在我们简单添加一个**index.js**文件来简单测试一下。
 
 ```bash
-# In /src/v1/routes 
+# 在/src/v1/routes 
 touch index.js
 ```
 
-Inside there we spin up a simple router.
+我们开启一个简单的路由：
 
 ```javascript
-// In src/v1/routes/index.js
+// 在 src/v1/routes/index.js
 const express = require("express");
 const router = express.Router();
 
@@ -253,23 +253,23 @@ router.route("/").get((req, res) => {
 module.exports = router;
 ```
 
-Now we have to hook up our router for v1 inside our root entry point inside src/index.js.
+现在我们将在v1内部的根入口点src/index.js接上路由：
 
 ```javascript
-// In src/index.js
+// 在src/index.js
 const express = require("express");
-// *** ADD ***
+// *** 添加 ***
 const v1Router = require("./v1/routes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// *** REMOVE ***
+// *** 删除 ***
 app.get("/", (req, res) => {
   res.send("<h2>It's Working!</h2>");
 });
 
-// *** ADD ***
+// *** 添加 ***
 app.use("/api/v1", v1Router);
 
 app.listen(PORT, () => {
@@ -277,29 +277,29 @@ app.listen(PORT, () => {
 });
 ```
 
-Now visit **localhost:3000/api/v1** inside your browser and you should see the following:
+再登陆浏览器浏览**localhost:3000/api/v1**，你会看到以下画面：
 
 ![Bildschirmfoto-2022-04-30-um-11.22.28](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-11.22.28.png)
 
-Congratulations! You've just structured the project for handling different versions. We are now passing incoming requests with "/api/v1" to our version 1 router, that will route each request to the corresponding controller method later.
+祝贺你！你已经架构好了项目的不同版本。现在我们通过版本1.0的路由来传入请求，之后每一个请求会连接相应的控制方式。
 
-Before we move on, I'd like to point something out.
+再继续下一步之前，我想强调一些内容。
 
-We just moved our routes folder into our v1 directory. The other folders like controllers or services still remain inside our src directory. That is okay for now because we are building a rather small API. We can use the same controllers and services in each version globally.
+我们把路由文件夹迁移到了v1目录下，其他文件夹如控制器和服务器仍在src目录下。因为我们搭建的API比较小，所以这么做没有问题，每一个版本我们使用相同的控制器和服务器。
 
-When the API is growing and requires different controller methods specific for v2, for example, it would be a better idea to move the controllers folder into the v2 directory as well to have all specific logic for that particular version encapsulated.
+当API逐渐壮大，比方说2.0版本需要使用不同的控制方法的话，最好还是把控制器文件夹放在v2目录下，这样就打包了这个版本所有的特定逻辑。
 
-Another reason for that could be that we might change a service that is used by all other versions. We don't want to break things in the other versions. So it would be a wise decision to move the services folder also into a specific version folder.
+另一个这样做的原因是，我们可能在其他版本中想要改变某个服务器，但我们并不想要中断除此之外的版本。所以把服务器文件夹也迁移到特定版本文件夹是一个推荐的操作。
 
-But as I said, in our example it's okay for me to only differentiate between the routes and let the router handle the rest. Nonetheless it's important to keep that in mind to have a clear structure when the API scales up and needs changes.
+如果所讲，在我们的例子当中仅区分路由是可行的。尽管如此。切记当API壮大需要改变的时候，拥有一个清晰的架构十分重要。
 
-### Name Resources in Plural
+<h3 id="name-resources-in-plural">用复数形式命名资源</h3>
 
-After setting it all up we can now dive into the real implementation of our API. Like I said, I'd like to start with our fundamental CRUD endpoints.
+设置完毕后我们就进入了真正的API搭建了。我希望从基础的CRUD终点开始。
 
-In other words, let's start implementing endpoints for creating, reading, updating and deleting workouts.
+也就是说，我们从应用创建、读取、更新和删除训练终点开始。
 
-First, let's hook up a specific controller, service, and router for our workouts.
+首先，让我们为训练连接一个特定的控制器、服务器和路由
 
 ```bash
 touch src/controllers/workoutController.js 
@@ -309,20 +309,20 @@ touch src/services/workoutService.js
 touch src/v1/routes/workoutRoutes.js
 ```
 
-I always like to start with the routes first. Let's think about how we can name our endpoints. This goes hand in hand with this particular best practice.
+我通常喜欢从编写路由开始。让我们思考一下如何给终点命名。这里就会使用到最佳实践。
 
-We could name the creation endpoint **/api/v1/workout** because we'd like to add one workout, right? Basically there's nothing wrong with that approach – but this can lead to misunderstandings.
+我们可以将终点命名为 **/api/v1/workout**，因为我们只添加一个训练计划，对不对？虽说这样做没什么问题，但是这样会造成误解。
 
-Always remember: Your API is used by other humans and should be precise. This goes also for naming your resources.
+谨记：你的API会被其他的人类使用，所以必须精准。这同样适用于给你的资源命这一方面。
 
-I always imagine a resource like a box. In our example the box is a collection that stores different **workouts**.
+我通常会把资源看作一个盒子。在我们的例子中，这个盒子存储了各种各样的 **训练计划**。
 
-Naming your resources in plural has the big advantage that it's crystal clear to other humans, that this is a collection that consists of different workouts.
+将资源以复数形式命名最大的好处是这对于其他用户来说也清晰易懂，复数意味着这是一个包含了各种各样训练的合集。
 
-So, let's define our endpoints inside our workout router.
+所以，让我们之后再再训练路由中定义终点：
 
 ```javascript
-// In src/v1/routes/workoutRoutes.js
+// 在 src/v1/routes/workoutRoutes.js
 const express = require("express");
 const router = express.Router();
 
@@ -349,25 +349,25 @@ router.delete("/:workoutId", (req, res) => {
 module.exports = router;
 ```
 
-You can delete our test file **index.js** inside **src/v1/routes**.
+我们可以删除 **src/v1/routes**中的**index.js**文件。
 
-Now let's jump into our entry point and hook up our v1 workout router.
+现在让我们回到入口点连接版本1.0的路由。
 
 ```javascript
-// In src/index.js
+// 在 src/index.js
 const express = require("express");
-// *** REMOVE ***
+// *** 删除 ***
 const v1Router = require("./v1/routes");
-// *** ADD ***
+// *** 添加 ***
 const v1WorkoutRouter = require("./v1/routes/workoutRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// *** REMOVE ***
+// *** 删除 ***
 app.use("/api/v1", v1Router);
 
-// *** ADD ***
+// *** 添加 ***
 app.use("/api/v1/workouts", v1WorkoutRouter);
 
 app.listen(PORT, () => {
@@ -375,14 +375,14 @@ app.listen(PORT, () => {
 });
 ```
 
-That went smoothly, right? Now we're catching all requests that are going to **/api/v1/workouts** with our v1WorkoutRouter.
+进展的很顺利！现在我们就可以通过版本1.0的训练路由捕获到来自 **/api/v1/workouts**的所有请求。
 
-Inside our router we will call a different method handled by our controller for each different endpoint.
+在路由当中，我们讲调用另一个方法来使用控制器处理各种各样的终点。
 
-Let's create a method for each endpoint. Just sending a message back should be fine for now.
+让我们为每一个终点创建一个方法。现阶段只需要可以发送返回一个信息。
 
 ```javascript
-// In src/controllers/workoutController.js
+// 在 src/controllers/workoutController.js
 const getAllWorkouts = (req, res) => {
   res.send("Get all workouts");
 };
@@ -412,7 +412,7 @@ module.exports = {
 };
 ```
 
-Now it's time to refactor our workout router a bit and use the controller methods.
+现在可以重构一下训练路由，使用控制器方法：
 
 ```javascript
 // In src/v1/routes/workoutRoutes.js
@@ -434,15 +434,15 @@ router.delete("/:workoutId", workoutController.deleteOneWorkout);
 module.exports = router;
 ```
 
-Now we can test our **GET /api/v1/workouts/:workoutId** endpoint by typing **localhost:3000/api/v1/workouts/2342** inside the browser. You should see something like this:
+现在可以测试 **GET /api/v1/workouts/:workoutId** 终点，在浏览器输入 **localhost:3000/api/v1/workouts/2342** ，你会看到以下信息：
 
 ![Bildschirmfoto-2022-04-30-um-11.29.19](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-11.29.19.png)
 
-We've made it! The first layer of our architecture is done. Let's create our service layer by implementing the next best practice.
+我们成功了！架构的第一层就搭建完毕。让我们用另个最佳实践来创建服务层。
 
-### Accept and respond with data in JSON format
+<h3 id="accept-and-respond-with-data-in-json-format">通过JSON格式接受和响应数据</h3>
 
-When interacting with an API, you always send specific data with your request or you receive data with the response. There are many different data formats but JSON (Javascript Object Notation) is a standardized format.
+和API交互的时候，我们始终会通过请求发送特定数据，或者通过响应接受数据。市面上有各种各样的数据格式，但是JSON（JavaScript Object Notation）是一个标准格式。
 
 Although there's the term **JavaScript** in JSON, it's not tied to it specifically. You can also write your API with Java or Python that can handle JSON as well.
 

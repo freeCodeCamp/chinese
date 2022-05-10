@@ -1,103 +1,99 @@
-> -  原文地址：[Python Discord Bot Tutorial – Code a Discord Bot And Host it for Free](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)
-> -  原文作者：[
-                    
-                        Beau Carnes
-                    
-                ](https://www.freecodecamp.org/news/author/beau/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Python Discord Bot Tutorial – Code a Discord Bot And Host it for Free](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)
+> - 原文作者：[Beau Carnes](https://www.freecodecamp.org/news/author/beau/)
+>
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Python Discord Bot Tutorial – Code a Discord Bot And Host it for Free](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/discordbot.png)
 
-This tutorial will show you how to build your own Discord bot completely in the cloud.
+本教程将告诉你如何完全在云端建立你自己的 Discord 机器人。
 
-You do not need to install anything on your computer, and you do not need to pay anything to host your bot.
+你不需要在你的电脑上安装任何东西，也不需要支付任何费用来托管你的机器人。
 
-We are going to use a number of tools, including the Discord API, Python libraries, and a cloud computing platform called [Repl.it](https://www.repl.it).
+我们将使用一些工具，包括 Discord API、Python 库和一个名为 [Repl.it](https://www.repl.it) 的云计算平台。
 
-There is also a video version of this written tutorial. The video is embedded below and the written version is after the video.
+这个书面教程也有一个视频版本。视频嵌入在下面，书面版本在视频之后。
 
-## How to Create a Discord Bot Account
+## 如何创建一个 Discord Bot 账户
 
-In order to work with the Python library and the Discord API, we must first create a Discord Bot account.
+为了使用 Python 库和 Discord API，我们必须首先创建一个 Discord Bot 账户。
 
-Here are the step to creating a Discord Bot account.
+以下是创建 Discord Bot 账户的步骤。
 
-1\. Make sure you’re logged on to the [Discord website](https://discord.com).
+1. 确保你已经登录到[Discord 网站](https://discord.com)。
 
-2\. Navigate to the [application page](https://discord.com/developers/applications).
+2. 进入 [应用程序页面](https://discord.com/developers/applications)。
 
-3\. Click on the “New Application” button.
+3. 点击 `New Application` 按钮.
 
 ![image-117](https://www.freecodecamp.org/news/content/images/2021/06/image-117.png)
 
-4\. Give the application a name and click “Create”.
+4. 给应用程序一个名称，然后点击 `Create` 按钮。
 
 ![image-118](https://www.freecodecamp.org/news/content/images/2021/06/image-118.png)
 
-5\. Go to the “Bot” tab and then click “Add Bot”. You will have to confirm by clicking "Yes, do it!"
+5. 进入  `Bot` 标签，然后点击 `Add Bot`。你必须点击 `Yes, do it!`.
 
 ![image-119](https://www.freecodecamp.org/news/content/images/2021/06/image-119.png)
 
-Keep the default settings for **Public Bot** (checked) and **Require OAuth2 Code Grant** (unchecked).
+保持默认设置 **Public Bot** (选中) 和 **Require OAuth2 Code Grant** (未选中).
 
-Your bot has been created. The next step is to copy the token.
+你的机器人已经创建完毕。下一步是复制令牌（token）。
 
 ![image-122](https://www.freecodecamp.org/news/content/images/2021/06/image-122.png)
 
-This token is your bot's password so don't share it with anybody. It could allow someone to log in to your bot and do all sorts of bad things.
+这个令牌是你的机器人的密码，所以不要与任何人分享它。它可以让别人登录到你的机器人并做各种坏事。
 
-You can regenerate the token if it accidentally gets shared.
+如果不小心被分享，你可以重新生成令牌。
 
-## How to Invite Your Bot to Join a Server
+## 如何邀请你的机器人接入一个服务器
 
-Now you have to get your Bot User into a server. To do this, you should create an invite URL for it.
+现在你必须让你的机器人用户接入一个服务器。要做到这一点，你应该为它创建一个邀请 URL。
 
-Go to the "OAuth2" tab. Then select "bot" under the "scopes" section.
+转到 `OAuth2` 标签。然后在 `scopes` 部分选择 `bot`。
 
 ![image-123](https://www.freecodecamp.org/news/content/images/2021/06/image-123.png)
 
-Now choose the permissions you want for the bot. Our bot is going to mainly use text messages so we don't need a lot of the permissions. You may need more depending on what you want your bot to do. Be careful with the "Administrator" permission.
-
+现在为机器人选择你想要的权限。我们的机器人将主要使用文本信息，所以我们不需要很多的权限。你可能需要更多的权限，这取决于你希望你的机器人做什么。对 `Administrator` 的权限要小心。
 ![image-124](https://www.freecodecamp.org/news/content/images/2021/06/image-124.png)
 
-After selecting the appropriate permissions, click the 'copy' button above the permissions. That will copy a URL which can be used to add the bot to a server.
+选择适当的权限后，点击权限上方的 `copy` 按钮。这将复制一个 URL，可用于将机器人添加到一个服务器。
 
-Paste the URL into your browser, choose a server to invite the bot to, and click “Authorize”.
+把这个 URL 粘贴到你的浏览器，选择一个服务器来接入机器人，然后点击 `Authorize`。
 
-To add the bot, your account needs "Manage Server" permissions.
+要添加机器人，你的账户需要 `Manage Server` 的权限。
 
-Now that you've created the bot user, we'll start writing the Python code for the bot.
+现在你已经创建了机器人用户，我们将开始为机器人编写 Python 代码。
 
-## How to Code a Basic Discord Bot with the discord.py Library
+## 如何用 discord.py 库编写一个基本的 Discord 机器人代码
 
-We'll be using the discord.py Python library to write the code for the bot. discord.py is an API wrapper for Discord that makes it easier to create a Discord bot in Python.
+我们将使用 discord.py， 这个 Python 库来编写机器人的代码。discord.py 是 Discord 的一个 API 封装器，使在 Python 中更容易创建一个 Discord 机器人。
 
-### How to Create a Repl and Install discord.py
+### 如何创建一个 Repl 项目并安装 discord.py
 
-You can develop the bot on your local computer with any code editor. However, in this tutorial, we'll be using Repl.it because it will make it simpler for anyone to follow along. Repl.it is an online IDE that you can use in your web browser.
+你可以在你的本地电脑上用任何代码编辑器开发机器人。然而，在本教程中，我们将使用 Repl.it，因为它将使任何人都能更简单地跟随。Repl.it 是一个在线 IDE，你可以在你的网络浏览器中使用。
 
-Start by going to [Repl.it](https://repl.it). Create a new Repl and choose "Python" as the language.
+首先进入 [Repl.it](https://repl.it)。创建一个新的 Repl，选择 `Python` 作为语言。
 
-To use the discord.py library, just write `import discord` at the top of `main.py`. Repl.it will automatically install this dependency when you press the "run" button.
+要使用 discord.py 库，只要在 `main.py` 的顶部写上 `import discord`。当你按下 `run` 按钮时，Repl.it 会自动安装这个依赖。
 
-If you prefer to code the bot locally, you can use this command on MacOS to install discord.py:
+如果你喜欢在本地编码机器人，你可以在 MacOS 上使用这个命令来安装 discord.py。:
 
 `python3 -m pip install -U discord.py`
 
-You may have to use `pip3` instead of `pip`.
+你可能需要使用 `pip3` 而不是 `pip`。
 
-If you are using Windows, then you should use the following line instead:
+如果你使用的是 Windows，那么你应该使用以下一行来:
 
 `py -3 -m pip install -U discord.py`
 
-### How to Set Up Discord Events for Your Bot
+### 如何为你的机器人设置 Discord 事件
 
-discord.py revolves around the concept of events. An event is something you listen to and then respond to. For example, when a message happens, you will receive an event about it that you can respond to.
+discord.py 基于事件的概念。一个事件是你监听的东西，然后对其作出回应。例如，当一条消息发生时，你会收到一个关于它的事件，你可以对其作出回应。
 
-Let’s make a bot that replies to a specific message. This simple bot code, along with the code explanation, is taken from [the discord.py documentation](https://discordpy.readthedocs.io/en/latest/quickstart.html#a-minimal-bot). We will be adding more features to the bot later.
+让我们做一个机器人，回复一个特定的消息。这个简单的机器人代码，以及代码解释，来自于[the discord.py documentation](https://discordpy.readthedocs.io/en/latest/quickstart.html#a-minimal-bot)。我们将在以后为机器人添加更多的功能。
 
-Add this code to main.py. (You can name the file something else if you like, just not discord.py.) I'll explain what all this code does shortly.
+将这段代码添加到 main.py 中。(如果你愿意，你可以给这个文件起个别的名字，但不要叫 discord.py。)我很快会解释这些代码的作用。
 
 ```python
 import discord
@@ -120,69 +116,70 @@ async def on_message(message):
 client.run(os.getenv('TOKEN'))
 ```
 
-When you created your bot user on Discord, you copied a token. Now we are going to create a `.env` file to store the token. If you are running your code locally, you don't need the `.env` file. Just replace `os.getenv('TOKEN')` with the token.
+当你在 Discord 上创建你的机器人用户时，你复制了一个令牌。现在我们要创建一个 `.env` 文件来存储该令牌。如果你在本地运行你的代码，你不需要 `.env` 文件。只要用令牌替换 `os.getenv('TOKEN')` 就可以了。
 
-`.env` files are used for declaring environment variables. On Repl.it, most files you create are visible to anyone but `.env` files are only visible to you.  Other people viewing a public repl will not be able to see the contents of the `.env` file.
+`.env` 文件是用来声明环境变量的。在 Repl.it 上，你创建的大多数文件对任何人都是可见的，但 `.env` 文件只对你可见。 其他人将无法看到公共 repl 里的`.env`文件的内容。
 
-So if you are developing on Repl.it, only include private information like tokens or keys in a `.env` file.
+因此，如果你在 Repl.it 上开发，应该只在 `.env` 文件中存储私人信息，如令牌或密钥。
 
-Click the "Add file" button and create a file named `.env`.
+点击 `Add file`按钮，创建一个名为 `.env` 的文件。
 
 ![image-19-1](https://www.freecodecamp.org/news/content/images/2021/06/image-19-1.png)
 
-Inside the file add the following line, including your actual token you copied previously:
+在文件中添加以下一行，你的实际令牌（token）:
 
-```
+```python
 TOKEN=[paste token here]
 ```
 
-Now let's go over what each line of code is doing in your Discord bot code.
+现在让我们来看看每一行代码在你的 Discord 机器人中的作用是什么。
 
-1.  The first line imports the discord.py library.
-2.  The second line imports the os library, but this is only used for getting the `TOKEN` variable from the `.env` file. If you are not using a `.env` file, you do not need this line.
-3.  Next, we create an instance of a [`Client`](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client). This is the connection to Discord.
-4.  The `[@client.event()](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client.event)` decorator is used to register an event. This is an asynchronous library, so things are done with callbacks. A callback is a function that is called when something else happens. In this code, the `[on_ready()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_ready)` event is called when the bot is ready to start being used. Then, when the bot receives a message, the `[on_message()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_message)` event is called.
-5.  The `[on_message()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_message)` event triggers each time a message is received but we don't want it to do anything if the message is from ourselves. So if the `[Message.author](https://discordpy.readthedocs.io/en/latest/api.html#discord.Message.author)` is the same as the `[Client.user](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client.user)` the code just returns.
-6.  Next, we check if the [`Message.content`](https://discordpy.readthedocs.io/en/latest/api.html#discord.Message.content) starts with `'$hello'`. If so, then the bot replies with `'Hello!'` to the channel it was used in.
-7.  Now that the bot is set up, the final line runs the bot with the login token. It gets the token from out `.env` file.
+1. 第一行是导入 discord.py 库。
+2. 第二行导入 os 库，但这只是用于从 `.env` 文件中获取 `TOKEN` 变量。如果你不使用 `.env` 文件，你不需要这一行。
+3. 接下来，我们创建一个 [`Client`](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client) 的实例。这是与 Discord 的连接。
+4. [@client.event()](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client.event) 装饰器被用来注册一个事件。这是一个异步库，所以事情是通过回调完成的。回调是一个当其他事情发生时被调用的函数。在这段代码中，当机器人准备开始使用时，[on_ready()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_ready) 事件被调用。然后，当机器人收到一个消息时，[on_message()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_message) 事件被调用。
+5. [on_message()](https://discordpy.readthedocs.io/en/latest/api.html#discord.on_message) 事件在每次收到消息时都会触发，但如果消息是来自我们自己，我们不希望它做任何事情。因此，如果[Message.author](https://discordpy.readthedocs.io/en/latest/api.html#discord.Message.author) 与 [Client.user](https://discordpy.readthedocs.io/en/latest/api.html#discord.Client.user) 相同，代码只是返回。
 
-We have the code for the bot so now we just have to run it.
+6. 接下来，我们检查 [`Message.content`](https://discordpy.readthedocs.io/en/latest/api.html#discord.Message.content) 是否以 `$hello` 开头。如果是，那么机器人就会向它所使用的频道回复 `Hello!`。
+7. 现在机器人已经设置好了，最后一行是用登录令牌运行机器人。它从 `.env` 文件中获取令牌。
 
-### How to Run the Bot
+我们有了机器人的代码，现在我们只需要运行它。
 
-Now click run button on the top to run your bot in repl.it.
+### 如何运行机器人
 
-If you are writing the bot locally, you can use these commands in the terminal to run the bot:
+现在点击上面的 `run` 按钮，在 repl.it 中运行你的机器人。
 
-On Windows:
+如果你是在本地编写机器人，你可以在终端使用这些命令来运行该机器人:
+
+在 Windows 系统:
 
 `py -3 main.py`
 
-On other systems:
+在别的系统:
 
 `python3 main.py`
 
-Now go to your Discord room and type "$hello". Your bot should return "Hello!".
+现在去你的 Discord 房间，输入`$hello`。你的机器人应该返回 `Hello`。
 
 ![image-141](https://www.freecodecamp.org/news/content/images/2021/06/image-141.png)
 
-## How to Improve the Bot
+## 如何改进机器人
 
-Now that we have a basic bot working, we'll improve it. It is called "Encourage Bot" for a reason.
+现在我们有了一个基本的机器人工作，我们将改进它。它被称为 `鼓励机器人` 是有原因的。
 
-This bot will respond with a message of encouragement whenever someone sends a message containing a sad or depressing word.
+每当有人发来含有悲伤或压抑字眼的信息时，这个机器人就会以鼓励的信息来回应。
 
-Anyone will be able to add encouraging messages for the bot to use and the user-submitted messages will be stored in the Repl.it database.
+任何人都可以为机器人添加鼓励信息，用户提交的信息将被储存在 Repl.it 数据库中。
 
-The bot will also return a random inspirational quote from an API when someone types the message "$inspire" into the chat.
+当有人在聊天中输入 `$inspire` 信息时，机器人也会从 API 中随机返回一句鼓舞人心的话。
 
-We'll start with adding the "$inspire" feature.
+我们将从添加 `$inspire` 功能开始。
 
-### How to Add Inspirational Quotes to the Bot
+### 如何在机器人上添加鼓舞人心的名言
 
-We will get inspirational quotes from an API called zenquotes.io. We need to import a couple more Python modules, add a `get_quote()` function, and update our bot code to call the function.
+我们将从一个名为 zenquotes.io 的 API 中获得鼓舞人心的语录。我们需要再导入几个 Python 模块，添加一个`get_quote()`函数，并更新我们的机器人代码以调用该函数。
 
-Here is the updated code. After the code, I'll explain the new parts.
+下面是更新后的代码。在代码之后，我将解释新的部分。
 
 ```python
 import discord
@@ -214,35 +211,35 @@ async def on_message(message):
 client.run(os.getenv('TOKEN'))
 ```
 
-We now have to import the `requests` module. This module allows our code to make an HTTP request to get data from the API. The API returns JSON, so the `json` module makes it easier to work with the data returned.
+我们现在必须导入 `requests` 模块。这个模块允许我们的代码进行 HTTP 请求，从 API 获得数据。API 返回 JSON，所以 `json` 模块使我们更容易处理返回的数据。
 
-The `get_quote()` function is pretty straightforward. First, it uses the requests module to request data from the API URL. The API returns a random inspirational quote. This function could easily be rewritten to get quotes from a different API, if the current one stops working.
+`get_quote()` 函数是非常简单的。首先，它使用 requests 模块从 API URL 请求数据。API 会返回一个随机的鼓舞人心的报价。如果当前的 API 停止工作，这个函数可以很容易地被重写，以从不同的 API 获得报价。
 
-Next inside the function, we use `json.loads()` to convert the response from the API to JSON. Through trial and error I figured out how to get the quote from the JSON into the string format I wanted. The quote is returned from the function as a string.
+接下来在这个函数中，我们使用 `json.load()` 将 API 的响应转换为 JSON。通过试验和错误，我找到了如何将 JSON 中的报价转换成我想要的字符串格式。报价被作为一个字符串从函数中返回。
 
-The final part updated in the code is toward the end. Previously it looked for a message that started with "$hello". Now it looks for "$inspire". Instead of returning "Hello!", it gets the quote with `quote = get_quote()` and returns the quote.
+代码中最后更新的部分是在最后。以前，它寻找以 `$hello` 开头的信息。现在它寻找的是 `$inspire`。它不再返回 `Hello!`，而是用 `quote = get_quote()` 来获取报价，并返回报价。
 
-At this point you can run your code and try it out.
+在这一点上，你可以运行你的代码并尝试一下。
 
-## How to Add Encouraging Messages to the Bot
+## 如何向机器人添加鼓励性的信息
 
-Now we will implement the feature where the bot responds with encouraging messages when a user posts a message with a sad word.
+现在我们要实现的功能是，当用户发布带有悲伤字眼的信息时，机器人会以鼓励性的信息进行回应。
 
-### How to Add Sad Words to the Bot
+### 如何在机器人中添加悲伤的词语
 
-First we need to create a Python list that contains the sad words that the bot will respond to.
+首先，我们需要创建一个 Python 列表，其中包含机器人将回应的悲伤的词语。
 
-Add the following line after the `client` variable is created:
+在创建`client`变量后添加以下一行:
 
 `sad_words = ["sad", "depressed", "unhappy", "angry", "miserable"]`
 
-Feel free to add more words to the list.
+请随意在列表中添加更多的单词。
 
-### How to Add Encouraging Messages to the Bot
+### 如何向机器人添加鼓励性的信息
 
-Now we'll add a list of encouraging messages that the bot will respond with.
+现在我们将添加一个鼓励性的信息列表，机器人将用这些信息来回应。
 
-Add the following list after the `sad_words` list you created:
+在你创建的`sad_words`列表后面添加以下列表:
 
 ```python
 starter_encouragements = [
@@ -252,15 +249,15 @@ starter_encouragements = [
 ]
 ```
 
-Like before, feel free to add more phrases of your choice to the list. I'm just using three items for now because later we'll add the ability for users to add more encouraging phrases for the bot to use.
+像以前一样，请随时在列表中添加更多你选择的短语。我现在只使用三个项目，因为以后我们会增加用户添加更多鼓励性短语的能力，供机器人使用。
 
-### How to Respond to Messages
+### 如何回复留言
 
-Now we need to update our bot to use the two lists we created. First, import the random module because the bot will choose encouraging messages randomly. Add the following line to the import statements at the top of the code: `import random`.
+现在我们需要更新我们的机器人来使用我们创建的两个列表。首先，导入随机模块，因为机器人将随机选择鼓励信息。在代码顶部的导入语句中添加以下一行。`import random`。
 
-Now we will update the `on_message()` function to check all messages to see if they contain a word from the `sad_words` list. If a sad word is found, the bot will send a random message of encouragement.
+现在我们将更新`on_message()`函数，以检查所有信息，看它们是否包含`sad_words`列表中的一个词。如果发现一个悲伤的词，机器人将发送一条随机的鼓励信息。
 
-Here is the updated code:
+以下是更新后的代码:
 
 ```python
 async def on_message(message):
@@ -277,19 +274,19 @@ async def on_message(message):
     await message.channel.send(random.choice(starter_encouragements))
 ```
 
-This is a good time to test the bot. You know enough now to create your own bot. But next you'll learn how to implement more advanced features and store data using the Repl.it database.
+这是一个测试机器人的好时机。你现在知道的足够多，可以创建你自己的机器人。但接下来你将学习如何实现更高级的功能，并使用 Repl.it 数据库存储数据。
 
-### How to Enable User-submitted Messages
+### 如何启用用户提交信息
 
-The bot is completely functional, but now let's make it possible to update the bot right from Discord. A user should be able to add more encouraging messages for the bot to use when it detects a sad word.
+这个机器人是完全正常的，但现在让我们有可能从 Discord 中直接更新机器人。用户应该能够添加更多的鼓励性信息，以便机器人在检测到一个悲伤的词时使用。
 
-We are going to use Repl.it's built-in database to store user-submitted messages. This database is a key-value store that’s built into every repl.
+我们将使用 Repl.it 的内置数据库来存储用户提交的信息。这个数据库是一个键值存储，内置于每个 Repl.it 中。
 
-At the top of the code, under the other import statements, add `from replit import db`. This will allow us to use the Repl.it database.
+在代码的顶部，在其他导入语句下，添加 `from replit import db`。这将使我们能够使用 Repl.it 数据库。
 
-Users will be able to add custom encouraging messages for the bot to use directly from the Discord chat. Before we add new commands for the bot, let's create two helper functions that will add custom messages to the database and delete them.
+用户将能够直接从 Discord 聊天中为机器人添加自定义鼓励信息。在我们为机器人添加新的命令之前，让我们创建两个辅助函数，将自定义消息添加到数据库并删除它们。
 
-Add the following code after the `get_quote()` function:
+在 `get_quote()` 函数后添加以下代码:
 
 ```python
 def update_encouragements(encouraging_message):
@@ -307,19 +304,19 @@ def delete_encouragment(index):
   db["encouragements"] = encouragements
 ```
 
-The `update_encouragements()` function accepts an encouraging message as an argument.
+`update_encouragements()`函数接受一个鼓励信息作为参数。
 
-First it checks if "encouragements" is a key in the database. If so, it gets the list of encouragements already in the database, adds the new one to the list, and stores the updated list back in the database under the "encouragements" key.
+首先，它检查 `encouragements` 是否是数据库中的一个键（key）。如果是，它将获得已经在数据库中的鼓励信息列表，将新的鼓励信息添加到列表中，并将更新的列表存储在数据库中的 `encouragements` 键下。
 
-If the database does not already contain "encouragements", a new key by that name is created and the new encouraging message is added as the first element in the list.
+如果数据库中还没有 `encouragements`，就用这个名字创建一个新的键，并将新的鼓励信息作为列表中的第一个元素加入。
 
-The `delete_encouragement()` function accepts an index as an argument.
+`delete_encouragement()` 函数接受一个索引作为参数。
 
-It gets the list of encouragements from the database stored under the "encouragements" key. If the number of items in the encouragements list is greater than the index, then the list item at that index is deleted.
+它从数据库中获取存储在 `encouragements` 键下的鼓励信息列表。如果鼓励列表中的项目数量大于索引，则删除该索引处的列表项。
 
-Finally, the updated list is stored back in the database under the "encouragements" key.
+最后，更新后的列表被存储在数据库的 `encouragements` 键下。
 
-Here is the updated code for the `on_message()` function. After the code, I'll explain the new sections.
+下面是 `on_message()` 函数的更新代码。在代码之后，我将解释新的部分。
 
 ```python
 async def on_message(message):
@@ -353,31 +350,31 @@ async def on_message(message):
     await message.channel.send(encouragements)
 ```
 
-The first new line of code from above is `options = starter_encouragements`. We are making a copy of `starter_encouragements` because we are going to add the user-submitted messages to that list before choosing a random message for the bot to send.
+上面的第一行新代码是 `options = starter_encouragements`。我们复制了变量 `starter_encouragements`的值，因为我们要把用户提交的信息添加到该列表中，然后再为机器人选择一条随机信息来发送。
 
-We check if "encouragements" is already in the database keys (meaning that a user has submitted at least one custom message). If so, we add the user messages to the starter encouragements.
+我们检查 `encouragements` 是否已经在数据库键中（意味着用户已经提交了至少一条自定义消息）。如果是的话，我们就把用户信息添加到启动器的鼓励信息中。
 
-Then, instead of sending a random message from `starter_encouragements`, the bot now sends a random message from `options`.
+然后，机器人现在不是从 `starter_encouragements` 中随机发送消息，而是从 `options` 中随机发送消息。
 
-The next new section of code is used to add a new user-submitted message to the database. If a Discord message starts with "$new", then the text after "$new" will be used as a new encouraging message.
+下一段新的代码是将用户提交的新消息添加到数据库中。如果一条 Discord 信息以 `$new`开头，那么 `$new` 之后的文字将被用作新的鼓励信息。
 
-The code `msg.split("$new ",1)[1]` splits off the message from the "$new" command and stores the message in a variable. In that line of code, take note of the space in `"$new "`. We want everything _after_ the space.
+代码`msg.split("$new",1)[1]`从 `$new` 命令中分离出信息，并将该信息存储在一个变量中。在这行代码中，注意"$new "中的空格。我们要的是空格之后的所有内容。
 
-We call the `update_encouragements` helper function with the new message, and then the bot sends a message to the discord chat confirming that the message was added.
+我们调用 `update_encouragements` 辅助函数处理新消息，然后机器人向 discord 聊天室发送一条消息，确认消息被添加。
 
-The third new section (at the end of the code above) checks if a new Discord message starts with "$del". This is the command to delete an item from the "encouragements" list in the database.
+第三个新部分（在上面代码的末尾）检查新的 discord 消息是否以`$del` 开头。这是删除数据库中 `encouragements` 列表中的一个项目的命令。
 
-First a new variable called `encouragements` is initialized as an empty array. The reason for this is that this section of code will send a message with an empty array if the database does not include an "encouragement" key.
+首先，一个名为 `encouragements` 的新变量被初始化为一个空数组。这样做的原因是，如果数据库中不包括 `encouragement` 键，这部分代码将发送一个空数组的信息。
 
-If the "encouragement" key is in the database, the index will be split off from the Discord message starting with "$del". Then, the `delete_encouragement()` function is called passing in the index to delete. The updated list of encouragements is loaded into the `encouragements` variable, and then the bot sends a message to Discord with the current list.
+如果 `encouragement` 键在数据库中，索引将从以 `$del` 开始的 Discord 消息中分离出来。然后，调用`delete_encouragement()`函数，传入要删除的索引。更新的鼓励列表被加载到 `encouragements` 变量中，然后机器人向 Discord 发送一条带有当前列表的消息。
 
-## Final Bot Features
+## 最后要添加机器人的功能
 
-The bot should work so this is a good time to test it. We will now add a few final features.
+该机器人应该可以工作，所以现在是测试它的好时机。我们现在将添加一些最后的功能。
 
-We will add the ability to get a list of user-submitted messages right from Discord and we will add the ability to turn off and on whether the bot responds to sad words.
+我们将增加从 Discord 中直接获得用户提交的信息列表的功能，并且我们将增加关闭和开启机器人是否对伤心话做出反应的功能。
 
-I will give you the full final code of the program, and then I'll discuss the updates below the code.
+我将给你们提供程序的全部最终代码，然后我将在下面讨论更新的代码。
 
 ```python
 import discord
@@ -475,65 +472,65 @@ async def on_message(message):
 client.run(os.getenv("TOKEN"))
 ```
 
-The first section added to the code is right under the `starter_encouragements` list:
+添加到代码中的第一个部分就在 `starter_encouragements` 列表下面:
 
 ```python
 if "responding" not in db.keys():
   db["responding"] = True
 ```
 
-We create a new key in the database called "responding" and set it to "True". We'll use this to determine if the bot should respond to sad words or not. Since the database is saved even after the program stops running, we only create the new key if it doesn't already exist.
+我们在数据库中创建一个名为 `responding` 的新键，并将其设置为 `true`。我们将用它来决定机器人是否应该对悲伤的话语做出反应。由于数据库即使在程序停止运行后也会被保存，所以我们只在新键不存在的情况下创建它。
 
-The next new part of the code is that the section that responds to sad words is now inside this if statement: `if db["responding"]:`. The bot will only respond to sad words if `db["responding"] = True`. The ability to update this value comes after this next section.
+代码的下一个新部分是，对伤心话做出反应的部分现在在这个 if 语句里面：`if db["responding"]:`。只有当`db["responing"] = True`时，机器人才会对悲伤的词语做出反应。更新这个值的动作是在下一节之后。
 
-Next, after the code to make the bot respond to the "$del" command, there is new code to respond to the "$list" command when sent as a Discord message.
+接下来，在使机器人响应 `$del` 命令的代码之后，有新的代码来响应作为 Discord 消息发送的 `$list` 命令。
 
-This section starts with creating an empty list called `encouragements`. Then, if there are already encouragements in the database, those encouragements replace the empty list that was just created.
+这一部分首先是创建一个名为 `encouragements` 的空列表。然后，如果数据库中已经有鼓励语(encouragements)，这些鼓励语将取代刚刚创建的空列表。
 
-Finally, the bot sends the list of encouragements as a Discord message.
+最后，机器人将  鼓励（encouragements）列表作为 Discord 消息发送出去。
 
-The final new section comes next. This code makes the bot respond to the "$responding" command. This command takes an argument of either "true" or "false". Here is a usage example: "$responding true".
+接下来是最后的新部分。这段代码使机器人对 `$responding` 命令作出反应。这个命令的参数是 `true` 或 `false`。下面是一个使用例子。`$responding true`。
 
-The code first pulls off the argument with `value = msg.split("$responding ",1)[1]` (like before, note the space in `"$responding "`). Then there is an if/else statement that appropriately sets the "responding" key in the database and sends a notification message back to Discord. If the argument is anything but "true", the code assumes "false".
+代码首先用`value = msg.split("$responding",1)[1]` 获得一个值（和前面一样，注意`"$responding"`的空格）。然后有一个 if/else 语句，适当地设置数据库中的 `responding` 键，并向 Discord 发送一个通知信息。如果参数不是 `true`，代码就假定为 `false`。
 
-The code for the bot is complete! You can now run the bot and try it out. But there is one more important step that we will discuss next.
+该机器人的代码已经完成！你现在可以运行机器人并试用它了。但还有一个重要的步骤，我们接下来会讨论。
 
 ## How to Set Up the Bot to Run Continuously
 
-If you run your bot in repl.it and then close the tab it is running in, your bot will stop running.
+如果你在 repl.it 中运行你的机器人，然后关闭它所运行的标签，你的机器人将停止运行。
 
-But there are two ways you can keep your bot running continuously, even after you close your web bowser.
+但有两种方法可以让你的机器人持续运行，即使在你关闭你的网络浏览器之后。
 
-The first way and simplest way is to sign up for paid plan in Repl.it. Their cheapest paid plan is called the Hacker Plan and it includes five always-on repls.
+第一个方法和最简单的方法是在 Repl.it 注册付费计划。他们最便宜的付费计划被称为黑客计划，它包括五个永远在线的 repls 项目。
 
-You can get three months free using this link (limited to first 1000 people):  https://repl.it/claim?code=tryalwayson2103
+You can get three months free using this link (limited to first 1000 people):  <https://repl.it/claim?code=tryalwayson2103>
 
-Once you have signed up for that plan, open your Repl and click the name at the top. Then select the "Always On" option.
+当你注册了该计划，打开你的 Repl，点击顶部的项目名字。然后选择 `Always On` (永久在线) 选项。
 
 ![image-35-1](https://www.freecodecamp.org/news/content/images/2021/06/image-35-1.png)
 
-There is another way to keep your code running even on the free tier but it is a little more complicated. Repl.it will continue running a web server even after the tab is closed. But even a web server will only run for up to an hour without any use.
+还有一种方法可以使你的代码保持运行，即使是在免费计划，但它有点复杂。Repl.it 在标签关闭之后。但即使是网络服务器，也只能在没有任何使用的情况下运行一个小时。
 
-Here is what the repl.it docs say:
+下面是 repl.it 文档中的内容:
 
-> Once deployed, the server will continue to run in the background, even after you close the browser tab. The server will stay awake and active until an hour after its last request, after which it will enter a sleeping stage. Sleeping repls will be woken up as soon as it receives another request; there is no need to re-run the repl. However, if you make changes to your server, you will need to restart the repl in order to see those changes reflected in the live version.
+> 当部署完，服务器将继续在后台运行，甚至在你关闭浏览器标签之后。服务器将保持运行和活跃，直到最后一次请求后一个小时，之后它将进入睡眠阶段。睡眠中的 Repls 一旦收到一个请求就会被唤醒；不需要重新运行。然而，如果你对你的服务器做了修改，你将需要重新启动 repl，以便看到这些修改反映在新版本中。
 
-To keep the bot running continuously, we'll use another free service called Uptime Robot at [https://uptimerobot.com/](https://uptimerobot.com/).
+为了保持机器人的持续运行，我们将使用另一项免费的服务，叫做 [Uptime Robot](https://uptimerobot.com/)。
 
-Uptime Robot can be set up to ping the bot's web server on repl.it every 5 minutes. With constant pings, the bot will never enter the sleeping stage and will just keep running.
+Uptime Robot 可以被设置为每 5 分钟 ping 一次在 repl.it 上机器人的网络服务器。有了持续的 ping，机器人将永远不会进入睡眠阶段，而会一直运行。
 
-So we have to do two more things to get our bot to run continuously:
+因此，我们必须再做两件事来使我们的机器人持续运行:
 
-1.  create a web server in repl.it and
-2.  set up Uptime Robot to continuously ping the web server.
+1. 在 repl.it 中创建一个网络服务器，然后
+2. 设置 Uptime Robot，以持续地 ping 该 Web 服务器。
 
-### How to Create a Web Server in repl.it
+### 如何在 repl.it 中创建一个 Web 服务器
 
-Creating a web server is simpler than you may think.
+创建一个网络服务器比你想象的要简单。
 
-To do it, create a new file in your project called `keep_alive.py`.
+要做到这一点，在你的项目中创建一个新的文件，叫做 `keep_alive.py`。
 
-Then add the following code:
+然后添加以下代码:
 
 ```python
 from flask import Flask
@@ -553,42 +550,42 @@ def keep_alive():
     t.start()
 ```
 
-In this code, we use Flask to start a web server. The server returns "Hello. I am alive." to anyone who visits it. The server will run on a separate thread from our bot. We won't discuss everything here since the rest is not really relevant to our bot.
+在这段代码中，我们使用 Flask 来启动一个网络服务器。该服务器向访问它的人返回 "Hello. I am alive." 给任何访问它的人。该服务器将在与我们的机器人分开的线程上运行。我们不会在这里讨论所有的东西，因为其他的东西与我们的机器人并不相关。
 
-Now we just need the bot to run this web server.
+现在我们只需要机器人来运行这个网络服务器。
 
-Add the following line toward the top of `main.py`  to import the server.
+在 `main.py` 的顶部添加以下一行来导入服务器。
 
 ```python
 from keep_alive import keep_alive
 ```
 
-To start the web server when `main.py` is run, add the following line as the second-to-last line, right before the bot runs.
+要在运行 `main.py` 时启动网络服务器，请在机器人运行前的倒数第二行添加以下一行。
 
 `keep_alive()`
 
-When you run the bot on repl.it after adding this code, a new web server window will open up. There is a URL shown for the web server. Copy the URL so you can use it in the next section.
+当你加入这段代码后在 repl.it 上运行机器人时，一个新的 Web 服务器窗口将被打开。这里有一个网络服务器的 URL。复制这个 URL，这样你就可以在下一节中使用它。
 
 ![image-20-1](https://www.freecodecamp.org/news/content/images/2021/06/image-20-1.png)
 
-### How to Set Up Uptime Robot
+### 如何设置机器人运行
 
-Now we need to set up Uptime Robot to ping the web server every five minutes. This will cause the bot to run continuously.
+现在，我们需要设置 Uptime Robot，使其每隔 5 分钟就对网络服务器进行一次 ping。这将使机器人持续运行。
 
-Create a free account on [https://uptimerobot.com/](https://uptimerobot.com/).
+在 [https://uptimerobot.com/](https://uptimerobot.com/) 上创建一个免费账户。
 
-Once you are logged in to your account, click "Add New Monitor".
+一旦你登录到你的账户，点击 "Add New Monitor"。
 
 ![image-21-1](https://www.freecodecamp.org/news/content/images/2021/06/image-21-1.png)
 
-For the new monitor, select "HTTP(s)" as the Monitor Type and name it whatever you like. Then, paste in the URL of your web server from repl.it. Finally, click "Create Monitor".
+对于新的监控器（monitor），选择 "HTTP(s) "作为监控器类型，并命名为你喜欢的任何名字。然后，从 repl.it 中粘贴你的网络服务器的 URL。最后，点击 "Create Monitor"。
 
 ![image-22-1](https://www.freecodecamp.org/news/content/images/2021/06/image-22-1.png)
 
-We're done! Now the bot will run continuously so people can always interact with it on Repl.it.
+我们完成了! 现在，这个机器人将持续运行，所以人们可以一直在 Repl.it 上 与它互动。
 
-## Conclusion
+## 结语
 
-You now know how to create a Discord bot with Python, and run it continuously in the cloud.
+你现在知道如何用 Python 创建一个 Discord 机器人，并在云上持续运行。
 
-There are a lot of other things that the discord.py library can do. So if you want to give a Discord bot even more features, your next step is to check out [the docs for discord.py.](https://discordpy.readthedocs.io/en/latest/index.html)
+discord.py 库还可以做很多其他的事情。因此，如果你想让 Discord 机器人拥有更多的功能，你的下一步是查看 [discord.py 文档](https://discordpy.readthedocs.io/en/latest/index.html)

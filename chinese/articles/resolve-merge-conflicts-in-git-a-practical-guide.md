@@ -21,7 +21,7 @@
 
 如果你是 Git 的新手，想学习所有的基本概念, [这里有一个有用的快速入门课程](https://www.youtube.com/watch?v=vWtu4mzUgQo).
 
-## What are Devs Saying about "Merge Conflicts"?
+## 开发人员对合并冲突有何看法？
 
 最近我在 Twitter、LinkedIn 和 YouTube 上进行了一次投票，询问开发者对解决 Git 中的合并冲突是否感到满意。你猜我发现了什么？
 
@@ -31,7 +31,7 @@
 
 投票结果 - 你对解决 Git 中的合并冲突感到满意吗？
 
-## What is Git Merge and What are Merge Conflicts?
+## 什么是 Git 合并，什么是合并冲突？
 
 `Git` 是一个版本控制系统，它保留了你所有文件版本的历史。你可以在任何时候回到任何一个版本，并检索到更早的版本。
 
@@ -50,7 +50,7 @@ Git `merge` 可以帮助你在合并来自其他开发者的修改，向同一�
 
 幸运的是，Git 使用 "自动合并（auto-merge）" 策略自动处理了大多数这种情况。但是当这些变化发生在文件的 "同一区域" 时，Git 不会执行自动合并。相反，它让你去解决合并的冲突。
 
-## Git Merge Conflicts: A Horror Story
+## Git 合并冲突。一个恐怖的故事
 
 让我们通过两个开发商 Alex 和 Tina 的故事来理解上述情况。
 
@@ -67,11 +67,11 @@ Git `merge` 可以帮助你在合并来自其他开发者的修改，向同一�
 
 这个故事有什么印象吗？上述故事与你有关吗？有可能你过去曾站在 Tina 的位置上。如果没有，你最终会遇到这种情况! 那么，让我们来了解 Tina 如何有效地处理这种情况。
 
-## How to Resolve Merge Conflicts in Git
+## 如何解决 Git 中的合并冲突
 
 解决合并冲突并不像它听起来那么棘手。在 90%的情况下，一旦你对变化有了清晰的认识，并有一个平和的心态，就会比较容易。
 
-### Thought Process
+### 思考过程
 
 当 Tina 拉取了这些修改，Tina 的本地文件就有 Tina 的修改和 Alex 的修改。现在 Tina 可以做这四件事中选择一件:
 
@@ -84,13 +84,13 @@ Git `merge` 可以帮助你在合并来自其他开发者的修改，向同一�
 
 那么，什么是要做的变化？Tina 如何识别？Tina 如何做出改变？我知道你有很多这样的问题。让我们通过下面一节中的几个现实生活中的例子来获得所有的答案。
 
-## Steps to Resolve Merge Conflicts in Git
+## 解决 Git 中合并冲突的步骤
 
 让我们举几个现实生活中的合并冲突的例子，并学习如何解决它们。
 
 在任何时候，如果你想以互动的方式学习这些概念，请查看我在本文开头提到的 [本节视频](https://www.youtube.com/watch?v=OulZeVtZhZQ&t=397s)。
 
-### Example 1: Changes are in the Same Region of the File
+### 例子 1：改变是在文件的同一地区
 
 当 Git 无法执行自动合并时，因为更改在同一区域，它会用特殊字符来表示冲突的区域。这些字符序列是这样的:
 
@@ -162,7 +162,7 @@ git push
 
 这就是解决这种情况下的合并冲突的全部内容。
 
-### Example 2: The File is Removed at the Remote/Other Branch
+### 例 2：文件在 Remote/Other 分支被删除
 
 在删除文件的合并冲突中，一个开发者在一个分支中删除了一个文件，而另一个开发者在另一个分支中编辑了同一个文件。在这种情况下，你需要决定是否要保留这个文件，或者删除它是否正确。
 
@@ -190,7 +190,7 @@ Finally, push it:
 git push
 ```
 
-## What's Next?
+## 下一步是什么？
 
 如果你从以上两个例子中学习并实践它们，你将能够解决大多数情况下的合并冲突。所以，我建议多练习几次。
 

@@ -5,81 +5,81 @@
 
 ![Relational VS Nonrelational Databases – the Difference Between a SQL DB and a NoSQL DB](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/valeriia-svitlini-5w0ZbF8P5-4-unsplash.jpg)
 
-This article is an overview of relational and non-relational databases.
+本文概述了关系和非关系数据库。
 
-Besides learning the fundamental differences between the two types of databases, you will also learn how to decide which one to use for your next project by going over their strengths and weaknesses.
+除了涉及这两种数据库的区别外，还将了解如何根据它们的优缺点来决定哪一个更适合相应的项目。
 
-Here is what we'll cover:
+以下是目录：
 
-1.  [Defining a database](#definition)
-    1.  [What is SQL?](#sql)
-2.  [Relational databases](#relational)
-    1.  [Characteristics](#characteristics)
-    2.  [ACID properties](#acid)
-3.  [Non-relational databases](#non-relational)
-    1.  [Types](#types)
-    2.  [BASE properties](#base)
-4.  [Relational VS Non-relational databases](#pick)
-5.  [Further Learning](#extra)
+1.  [数据库的定义](#definition)
+    1.  [SQL 是什么?](#sql)
+2.  [关系型数据库](#relational)
+    1.  [特点](#characteristics)
+    2.  [ACID 属性](#acid)
+3.  [非关系型数据库](#non-relational)
+    1.  [类型](#types)
+    2.  [BASE 属性](#base)
+4.  [关系型数据库 VS 非关系型数据库](#pick)
+5.  [拓展阅读](#extra)
 
-## What Is A Database? A Definition for Beginners
+## 什么是数据库？针对初学者的定义
 
-When it comes to computing, data are pieces of information that come in different forms. Data can be text, numbers, images, audio snippets, or videos.
+在计算机里，数据是以不同形式出现的信息片段。它可以是文本、数字、图像、音频片段或视频。
 
-Collections of information need to be stored somewhere, processed, and interpreted.
+信息集合需要被存储、处理和解释。
 
-You need a way to effortlessly search, access, extract and retrieve the saved resources whenever you need them.
+这时就需要一种可按需轻松搜索、访问、提取和检索已保存资源的方法。
 
-This allows both computers and humans can analyze the accessed data, perform calculations and comparisons, make logical decisions, and reach a conclusion.
+该方法可以使计算机或人类分析可访问的数据、执行计算和比较、做出逻辑决策得出结论。
 
-You can store the data in a file of some kind, using a software program like an Excel spreadsheet – and this can get the job done.
+当然可以使用 Excel 电子表格等软件将数据存储在文件中，这样也可以完成有限的工作。
 
-But what if there are large amounts of data, and you need to be sure they are accurate?
+但是，如果数据量很大，使用 Excel 处理就捉襟见肘了。
 
-Or what if if you need to retrieve large data sets quickly?
+在数据量增大时，Excel 无法快速检索。
 
-Or what if if the data needs to have a predefined structure that it should adhere to?
+并且 Excel 很难固定其数据结构。
 
-Databases are a much more accessible, efficient, and organized way of storing and working with information over a long period of time.
+数据库是一种更易于访问、更高效且更有条理的长期存储和处理信息的方式。
 
-The ability to store data logically and systematically and retrieve it for use at a later date makes databases a critical part of all web applications.
+数据库存储数据的规范性和系统性以及其检索数据的便捷性使其成为基于 Web 的应用程序中重要的部分。
 
-Databases power all applications. They save and store user information such as usernames, email addresses, encrypted passwords, and physical addresses.
+数据库几乎可以用于所有应用程序。它们可以用来存储用户信息，例如用户名、电子邮件地址、加密密码和物理地址。
 
-They also store user behavior. For example, in an e-commerce store, the database saves and keeps track of the items you have marked as 'favorites'.
+它们还存储用户行为。例如，在电商网站中，数据库会保存并跟踪“收藏”的商品。
 
-You'll need a **Database Management System** (or DBMS for short) to manage your databases.
+一般使用**数据库管理系统**（或简称 DBMS）来管理数据库。
 
-A Database Management System is a software program that serves as an intermediary between end-users and the database itself.
+数据库管理系统是一个软件程序，充当最终用户和数据库中间的媒介。
 
-It allows its users to create and manage databases. It also allows them to access, modify, and manipulate the data stored in the database by performing operations known as queries.
+可以通过数据库管理系统创建和管理数据库。也可以执行查询来访问、修改和操作存储在数据库中的数据。
 
-Users can easily store, retrieve, update, and delete data with the help of a few commands.
+只需通过一些命令就可以方便轻松地存储、检索、更新和删除数据。
 
-When it comes to Database Management Systems, there are generally **two** types to choose from:
+谈到数据库管理系统，通常有**两种**类型可供选择：
 
--   **Relational Databases** (also known as **SQL Databases**)
--   **Non-relational Databases** (also known as **NoSQL Databases**)
+-   **关系型数据库** (也就是 **SQL 数据库**)
+-   **非关系型数据库** (也就是 **NoSQL 数据库**)
 
-### What is SQL?
+### SQL 是什么?
 
-SQL is short for **S**tructured **Q**uery **L**anguage.
+SQL 是 **S**tructured **Q**uery **L**anguage 的缩写。
 
-You will likely hear it pronounced one of two ways – "_S. Q. L._" (ess-kew-ell), or "_se-quel_" (like a sequel to a movie).
+你可能会听过它以两种发音方式 - “_S. Q. L._”（ess-kew-ell）或“_se-quel_”（/ˈsēkwəl/）。
 
 ![Screenshot-2022-04-13-at-6.25.32-PM](https://www.freecodecamp.org/news/content/images/2022/04/Screenshot-2022-04-13-at-6.25.32-PM.png)
 
 https://i.imgur.com/NtGaNA8.png
 
-Either way, SQL is a language used for dealing with databases.
+无论哪种方式，SQL 都代表数据库处理的语言。
 
-Specifically, with SQL, you can write database queries to communicate with the database. These can be commands for performing any of the CRUD (Create Read Update Delete) operations.
+具体来说，使用 SQL，可以编写数据库查询以和数据库进行通信。查询可以是用于执行任何 CRUD（创建读取更新删除）操作的命令。
 
-SQL is the language of choice for Relational Database Management Systems, which you will learn all about in the following section.
+SQL 是关系数据库管理系统的首选语言，将在下一节中详细介绍。
 
-## What Is A Relational Database?
+## 什么是关系数据库？
 
-Relational databases (or SQL databases) have been around for a while. The first relational database appeared in 1970, and they are still popular to this day. Some of the most commonly used ones are:
+关系数据库（或 SQL 数据库）已经存在了一段时间。第一个关系数据库出现在 1970 年，关系数据库至今仍然很流行。一些最常见的如：
 
 -   [PostgreSQL](https://www.postgresql.org/)
 -   [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
@@ -87,13 +87,13 @@ Relational databases (or SQL databases) have been around for a while. The first 
 -   [Oracle](https://www.oracle.com/index.html)
 -   [SQLite](https://sqlite.org/index.html)
 
-A Relational database stores data in a structured and tabular way. That is, it stores information in **tables**, which you can think of as storage containers for the data. For example, a company could have an `employees` table to store data on its employees.
+关系数据库以结构化和表的方式存储数据。也就是说，它将信息存储在**表**中，可以将其视为数据的存储容器。例如，一家公司可以有一个 `employees` 表来存储其员工的数据。
 
-Relational databases have a strict, static, and pre-defined logical **schema**. You can think of a database schema as an organizational blueprint – a set of rules for what can and cannot enter the table and the conditions for how to configure data.
+关系数据库具有严格的、静态的预定义逻辑**架构（schema）**。可以将数据库架构视为一个组织蓝图——一组规则，哪些可以插入表，哪些不能插入表，以及如何设置数据。
 
-In each table, there is at least one **column**. These columns have a specific data type, such as `INTEGER` or `VARCHAR`. In the `employees` table, some columns could be `employee_id`, `name`, `department`, `email`, and `salary`.
+在每个表中，至少有一个**列（column）**。这些列具有特定的数据类型，例如 `INTEGER` 或 `VARCHAR`。在 `employees` 表中，一些列可能是 `employee_id`、`name`、`department`、`email` 和 `salary`。
 
-The columns and the data types allowed in each column make up the schema.
+所有列和其数据类型构成架构。
 
 ```sql
              EMPLOYEES
@@ -103,7 +103,7 @@ The columns and the data types allowed in each column make up the schema.
 +-------------+------+------------+-------+--------+
 ```
 
-A table will also have **rows**, or _records_. A record is a single data value entry that needs to adhere to the pre-defined schema. Essentially, it is a single item.
+一个表也会包含**行（rows）** 或 _记录（records）_。记录是遵守预定义架构的单个数据条目。本质上，它是一个数据项。
 
 ```sql
              EMPLOYEES
@@ -116,14 +116,14 @@ A table will also have **rows**, or _records_. A record is a single data value e
 +-------------+------------------+------------+-----------------------+--------+
 ```
 
-And since Relational Databases support SQL, you can perform queries. For example, if you wanted to `view` the `names` of the `employees` , whose monthly salary is `greater than 2000 dollars`, then you would write the following SQL query:
+由于关系数据库支持 SQL，所以可以直接执行查询。例如，如果想 `view` 月薪 `greater than 2000 dollars` 的 `employees` 的 `names`，那么可以编写如下 SQL 查询：
 
 ```SQL
 SELECT name FROM employees
 WHERE salary > 2000;
 ```
 
-From the above query, you would get the following output:
+执行上面的查询，会获得以下输出：
 
 ```SQL
 +-------------+
@@ -134,64 +134,64 @@ From the above query, you would get the following output:
 +-------------+
 ```
 
-### Characteristics of Relational Databases
+### 关系数据库的特点
 
-So far, you know that Relational Databases:
+到目前为止，已经了解了关系数据库：
 
--   are tabular in format,
--   are very organized, and the data stored is well-structured,
--   have a strict, rigid, and pre-defined schema,
--   use SQL for performing database queries and manipulating data.
+-   是表格格式，
+-   非常有条理，并且数据以某种结构存储，
+-   具有严格、预定义的架构，
+-   使用 SQL 执行数据库查询和操作数据。
 
-Additionally, a relational database can have more than one table, and as the name of this type of Database Management System suggests, the tables are _related_ to one another.
+此外，一个关系数据库可以有多个表，正如数据库管理系统的名称所暗示的那样，这些表可以是相互关联的。
 
-For example, an e-commerce company may have a `products` table, a `users` table, an `emails` table, and an `orders` table.
+例如，一家电商公司可能有一个 `products` 表、一个 `users` 表、一个 `emails` 表和一个 `orders` 表。
 
-Since there is a link and connection between the tables and the information stored in them, you can even join tables using a few commands.
+由于表和存储在其中的信息之间存在连接和关联，可以使用命令来连接表。
 
-There is a _primary key_, which acts as an identifier and ensures that each item in the table is unique, therefore making sure there is no duplicate and redundant data in tables.
+关系数据库有一个主键，它作为标识符，确保表中的每一项都是唯一的，从而确保表中没有重复和冗余的数据。
 
-And there is a _foreign key_ that creates those pre-established relationships between tables.
+_外键_ 用于表示在表之间的关系。
 
-Data points in different tables can have distinct relationships:
+不同表中的数据可以有不同的关系：
 
--   **One-to-one relationships**. In such cases, a record in one table is related only to one record in another table. An example of a one-to-one relationship in an e-commerce store, is that one user can have only one email address, and one email address can belong only to one user.
--   **One-to-many relationships**. In such cases, one record in one table is related to many other records in another table. For example, in an e-commerce store, a single user can make many orders, but each of those orders is made by a single user.
--   **Many-to-many relationships**. In such cases, one or more records in one table can be related to one or more records in another table. For example, in an e-commerce store, one order can have many products and a product can be ordered many times.
+-   **一对一的关系**。在这种情况下，一个表中的记录仅与另一个表中的一条记录相关。电商网站中一对一关系的示例是，一个用户只能拥有一个电子邮件地址，且一个电子邮件地址只能属于一个用户。
+-   **一对多关系**。在这种情况下，一张表中的一条记录与另一张表中的多条其他记录相关。例如，在电商网站中，一个用户可以下许多订单，但每个订单都是由一个用户下的。
+-   **多对多关系**。在这种情况下，一个表中的一个或多个记录可以与另一个表中的一个或多个记录相关。例如，在电商网站中，一个订单可以有很多产品，而一个产品可以被购买多次。
 
-### ACID Properties in Relational Databases
+### 关系数据库中的 ACID 属性
 
-Relational Databases offer the ACID database consistency model.
+关系数据库提供 ACID 数据一致性模型。
 
-ACID is an acronym for **A**tomicity, **C**onsistency, **I**solation, **D**urability.
+ACID 是原子性（**A**tomicity）、一致性（**C**onsistency）、事务隔离（**I**solation）、持久性（**D**urability） 的首字母缩写词。
 
-**Atomicity** means that transactions are atomic and take an "all or nothing" approach.
+**原子性**意味着事务是原子的并且采取 “all or nothing” 的方法。
 
-For example, either the entire operation is successful and is completed from start to finish, or it is unsuccessful, and there is an entire operation "rollback".
+也就是，要么整个操作成功，从头到尾完成，要么不成功，整个操作“回滚”。
 
-All operations are guaranteed to end with either a success or a failure, and none are just partially successful.
+所有操作都保证以成功或失败结束，不存在部分成功。
 
-**Consistency** is the property that ensures that the database structure remains intact from the start of a transaction to the end. It makes sure that any data entering the database follows the rules and constraints that are set in place. It is what secures and maintains the integrity of data in relational databases.
+**一致性**是确保数据库结构从事务开始到结束保持不变。一致性确保进入数据库的任何数据都遵循已设置的规则和约束。它可以保护和维护关系数据库中数据的完整性。
 
-**Isolation** means that despite the number of transactions taking place at any moment in time, each transaction is treated as an atomic, separate unit, and transactions seem to occur in sequential order.
+**事务隔离**意味着尽管在任何时候都发生了许多事务，但每个事务都被视为一个原子的、独立的单元，并且事务似乎是按顺序发生的。
 
-For example, if two transactions are happening at the same time, this property ensures that one transaction, and the changes occurring there, will not affect in any way the other transaction.
+例如，如果两个事务同时发生，此属性可确保一个事务以及那里发生的更改不会以任何方式影响另一个事务。
 
-And finally, **Durability** means that any results and changes from the transactions are committed and thus permanent and will persist, even if there is a system failure.
+最后，**持久性**意味着事务的任何结果和更改都已提交，因此是永久性的，并且将持续存在，即使出现系统故障也是如此。
 
-Tge ACID model ensures that databases are reliable and secure.
+ACID 模型可确保数据库可靠且安全。
 
-## What Is A Non-Relational Database?
+## 什么是非关系数据库？
 
-A non-relational Databases is also referred to as a NoSQL database. You will often see that NoSQL stands for both "**N**ot **o**nly **SQL**" and also "Non-SQL".
+非关系型数据库也称为 NoSQL 数据库。经常会看到 NoSQL 代表“**N**ot **o**nly **SQL**”和“Non-SQL”。
 
-Either way, a non-relational database refers to a database that doesn't use the relational data model.
+无论哪种方式，非关系数据库都是指不使用关系数据模型的数据库。
 
-Although this term and this type of database have been around for decades, NoSQL databases started gaining momentum in the late 1990s, when the Internet increased in popularity.
+尽管这个术语和这种类型的数据库已经存在了几十年，但 NoSQL 数据库在 1990 年代后期才开始受欢迎，当时 Internet 也变得越来越流行。
 
-Relational databases alone could not handle the speed – along with the large amounts and size of diverse and complex data – that this rise in internet use and the newly developed web applications required and demanded.
+关系数据库已无法满足互联网海量且复杂的数据。
 
-Some of the most popular Non-relational databases are:
+一些最流行的非关系数据库：
 
 -   [MongoDB](https://www.mongodb.com/),
 -   [Redis](https://redis.io/),
@@ -199,119 +199,119 @@ Some of the most popular Non-relational databases are:
 -   [Google Cloud Bigtable](https://cloud.google.com/bigtable),
 -   [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
 
-A non-relational database does not store and organize data in a tabular format. There are no tables, rows, columns, or relationships between different data points.
+非关系数据库不以表格式存储和组织数据。不同数据点之间没有表、行、列或关系。
 
-Instead, data is stored in **collections**. The database is typically unstructured and uses a dynamic schema.
+相反，数据存储在**集合**中。数据库通常是非结构化的并使用动态架构。
 
-### Types of Non-Relationional Databases
+### 非关系数据库的类型
 
-There are four major types of non-relational databases:
+有四种主要类型的非关系数据库：
 
--   **Column oriented databases**,
--   **Key - value data stores**,
--   **Document - oriented stores**,
--   **Graph oriented databases**.
+-   **列式数据库**,
+-   **键-值数据库**，
+-   **面向文档的数据库**,-
+-   **图数据库**。
 
-**Column-oriented databases** are similar in concept to relational databases. But they use groups, or sets of columns (also known as column families) instead of rows to logically organize related data.
+**列式数据库**在概念上类似于关系数据库。但他们使用组或列集（也称为列族）而不是行来逻辑组织相关数据。
 
-You can access a column family independently by using a unique row key associated with an individual column. Searching for specific data is much faster and saves significant time since there is no need to go through rows of unrelated information to find what you are searching for.
+可以通过使用与单个列关联的唯一行键来独立访问列族。列式数据库搜索特定数据的速度很快，因为无需通过不相关的信息行来查找要搜索的内容。
 
-**Key-value stores** are one of the simplest types of non-relational databases.
+**键-值数据库**是最简单的非关系数据库类型之一。
 
-Data is stored in dictionaries or hash tables in the form of key-value pair collections.
+数据以键值对集合的形式存储在字典或哈希表中。
 
-This type of database has keys that need to be unique.
+这种类型的数据库具有唯一的键。
 
-Keys act as a pointer to a specific value and are associated with that value.
+键充当指向特定值的指针并与该值相关联。
 
-The value assigned to a key can be any piece of information and data type.
+分配给键的值可以是任何信息和数据类型。
 
-To retrieve and access the value, you use the unique key as a reference.
+要检索和访问该值，请使用唯一键作为引用。
 
-**Document-oriented stores** also store data in key-value pair fashion. But in this case, the value is a document that has a unique key as its identifier.
+**面向文档的数据库**也以键值对的方式存储数据。但是其值是一个文档，它有一个唯一的键作为它的标识符。
 
-The document has any format, such as XML, YAML, or binary, but typically it has a JSON format.
+文档可以是任何格式，例如 XML、YAML 或二进制，通常采用 JSON 格式。
 
-This type of database stores data in a semi-structured way.
+这种类型的数据库以半结构化的方式存储数据。
 
-There is no schema or predefined structure. Because of this, it offers flexibility and the ability to re-arrange and re-work the structure of the database if the project's requirements change.
+没有架构或预定义的结构。正因为如此，它更灵活，可以在项目需求发生变化时重新安排和重新设计数据库结构。
 
-It also provides a SQL-like type of query language or an API to perform queries and CRUD operations on the data.
+它还提供了类似 SQL 的查询语言或者通过 API 来对数据执行查询以及 CRUD 操作。
 
-**Graph databases** are the most complex type of non-relational database, and they can handle large sets of data.
+**图数据库**是最复杂的非关系数据库类型，它们可以处理大量数据。
 
-They focus on the connections and relationships between data elements and use graph theory to store, search, and manage those relations.
+图数据库专注于数据元素之间的连接和关系，并使用图论来存储、搜索和管理这些关系。
 
-They use _nodes_ to store data and represent an individual entity or piece of data. One node is connected and linked to another node.
+图数据库使用 _nodes_ 来存储数据，用 _nodes_ 表示单个实体或数据。一个节点连接到另一个节点。
 
-To represent the connections or relationships between entities, graph databases use _edges_.
+为了表示实体之间的连接或关系，图数据库还用到了 _edges_。
 
-### BASE Properties in Non-relational Databases
+### 非关系数据库中的 BASE 属性
 
-Non-relational databases offer the BASE database consistency model. This model is not as rigid as the ACID model of relational databases.
+非关系数据库提供 BASE 数据库一致性模型。该模型不像关系数据库的 ACID 模型那样严格。
 
-BASE is an acronym for:
+BASE 是以下的首字母缩写词：
 
--   **B**asic **A**vailability. This model does not focus on the immediate consistency of data. However, the system appears to be continuously working and guarantees the availability of data at all times.
--   **S**oft state. Because of the lack of immediate consistency, the state of the system may change over time. A soft state means the system doesn't need to be write-consistent.
--   **E**ventual consistency. The main priority is the constant availability of data and not that of data consistency. However, eventually and at some point, you can expect data to be consistent. This may occur when the system stops receiving input.
+-   **B**asic **A**vailability 基本可用。该模型不关注数据的即时一致性。但是，该系统似乎在持续工作，并始终保证数据的可用性。
+-   **S**oft 软状态。由于缺乏即时一致性，系统的状态可能会随着时间而改变。软状态意味着系统不需要写一致性。
+-   **E**ventual 最终一致性。主要优先事项是数据的持续可用，而不是数据一致性。但是，最终在某个时候，可以期望数据是一致的。当系统停止接收输入时，可能会发生这种情况。
 
-## How to Choose Between SQL and NoSQL Databases
+## 如何在 SQL 和 NoSQL 数据库之间进行选择
 
-After learning the basics of SQL and NoSQL databases, you might be wondering which one of the two to choose for your project.
+在学习了 SQL 和 NoSQL 数据库的基础知识之后，可能想知道如何为项目选择适合类型的数据库。
 
-Well, there isn't a clear answer to that question.
+嗯，这个问题没有明确的答案。
 
-Both databases have advantages and disadvantages, and it largely depends on the type of application you are building, the kind of data you will be working with, and your future goals.
+两种数据库都有优点和缺点，这在很大程度上取决于正在构建的应用程序的类型、将使用的数据的类型以及的未来目标。
 
-It is common for companies to use both types of databases for their products.
+通常在产品中都会涉及到这两种类型的数据库。
 
-Below is a quick summary of their characteristics to help you decide which one might be the right fit for you.
+以下是它们特征的快速摘要，可帮助决定哪一个可能更适合。
 
-### When to use an SQL database:
+### 何时使用 SQL 数据库：
 
--   You need highly structured data distributed across multiple tables. You need your data to adhere to a strict, predictable, predefined, and already planned schema.
--   Your data will remain relatively the same. SQL databases are convenient if you don't plan on frequently changing the structure of the database and don't need to regularly update items. Keep in mind that they offer little flexibility.
--   You need consistent data.
--   Data integrity and security are a priority.
--   You want accurate results for complex queries.
+-   需要分布在多个表中的高度结构化的数据。需要数据遵守严格的、可预测的、预定义的和已经计划好的模式。
+-   数据将保持相对不变。如果不打算频繁更改数据库的结构并且不需要定期更新项目，SQL 数据库会很方便。请记住，它们提供的灵活性很小。
+-   需要一致的数据。
+-   数据完整性和安全性是重中之重。
+-   需要复杂查询的准确结果。
 
-A disadvantage of SQL databases is that they scale vertically.
+SQL 数据库的一个缺点是它们是垂直扩展的。
 
-You will need to increase the hardware and computing power effort on your current machine as you gather and store more data.
+当存储变多时，需要增加当前机器上的硬件和提高计算能力。
 
-This can be costly.
+这可能代价高昂。
 
-An increase in processing power and memory storage is needed to handle an increase in load to improve performance.
+需要增加处理能力和内存存储来处理增加的负载以提高性能。
 
-### When to use a NoSQL database:
+### 何时使用 NoSQL 数据库：
 
--   You are working in a fast development environment that requires frequent adaptations of requirements and constant changes to the database structure.
--   You are working with large amounts of data that are diverse in nature but do not require a lot of structure or accuracy.
--   You are working with data that needs frequent updates. NoSQL databases offer a loose, flexible, and dynamic schema that allows for regular changes to the data.
--   You want speedy query results and continuous availability of the system.
--   You don't want to perform any upfront planning, preparing, or designing of the database, but want to immediately start building instead.
+-   在一个快速的开发环境中工作，需要经常调整需求并不断更改数据库结构。
+-   正在处理大量性质不同但不需要大量结构或准确性的数据。
+-   正在处理需要频繁更新的数据。NoSQL 数据库提供了一个松散、灵活和动态的模式，允许对数据进行定期更改。
+-   需要快速的查询结果和系统的持续可用性。
+-   不想对数据库进行任何前期规划、准备或设计，而是想立即开始构建。
 
-A big advantage of NoSQL databases is that they scale horizontally.
+NoSQL 数据库的一大优势是它们可以水平扩展。
 
-They are designed in a way that more machines can be added to the existing machine (such as cloud servers). This behavior is more desirable compared to vertical scaling that requires additional CPU (Central Processing Unit) or RAM (Random Access Memory) resources.
+它们的设计方式可以将更多机器添加到现有机器（例如云服务器）中。与需要额外 CPU（中央处理单元）或 RAM（随机存取存储器）资源的垂直缩放相比，这种行为更可取。
 
-But of course, a disadvantage of NoSQL databases is that they do not ensure data integrity and consistency.
+但当然，NoSQL 数据库的一个缺点是它们不能确保数据的完整性和一致性。
 
-## Further Learning
+## 拓展阅读
 
-This article has just scratched the surface, and the best way to learn is by doing.
+这篇文章只是触及了皮毛，最好的学习方法就是边做边学。
 
-Here are some learning resources to learn more about databases and SQL:
+以下是一些学习资源，可用于了解有关数据库和 SQL 的更多信息：
 
--   [Learn SQL – Free Relational Database Courses for Beginners](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/). Bookmark this article for a list of free SQL courses.
--   [freeCodeCamp's Relational Database Certification](https://www.freecodecamp.org/learn/relational-database/). In this course, you will learn the necessary developer tools. Then you will learn how to use a code editor, the command line, and Git. You will also learn to work with PostgreSQL (a relational database management system) and SQL – its query language.
--   [Learn About NoSQL Databases in This 3-hour Course](https://www.freecodecamp.org/news/learn-nosql-in-3-hours/). In this course, you will learn about the four different NoSQL database types. Besides just learning the theory, you will also practice building all four of them.
+-   [Learn SQL – Free Relational Database Courses for Beginners](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/). 为这篇文章添加书签以获取免费 SQL 课程列表。
+-   [freeCodeCamp 关系数据库（Beta） 认证](https://chinese.freecodecamp.org/learn/relational-database/). 在本课程中，将学习到必要的开发人员工具。然后将学习如何使用代码编辑器、命令行和 Git。还将学习使用 PostgreSQL（一种关系数据库管理系统）和 SQL——它的查询语言。
+-   [Learn About NoSQL Databases in This 3-hour Course](https://www.freecodecamp.org/news/learn-nosql-in-3-hours/). 在本课程中，将了解四种不同的 NoSQL 数据库类型。除了理论之外，还有实战。
 
-## Conclusion
+### 结语
 
-You have made it to the end of the article!
+你已经到了文章的结尾！
 
-Hopefully, it has helped you understand the primary differences between Relational and Non-Relational databases. You also have some extra resources to start learning and to put your new skills to practice.
+希望你了解了关系数据库和非关系数据库之间的主要区别。文末的额外的资源可以继续学习，将新技能付诸实践。
 
-Thanks for reading, and happy coding!
+感谢阅读，祝编码愉快！          

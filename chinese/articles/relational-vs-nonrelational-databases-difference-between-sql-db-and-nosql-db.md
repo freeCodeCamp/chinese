@@ -1,6 +1,6 @@
 > -  原文地址：[Relational VS Nonrelational Databases – the Difference Between a SQL DB and a NoSQL DB](https://www.freecodecamp.org/news/relational-vs-nonrelational-databases-difference-between-sql-db-and-nosql-db/)
 > -  原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
-> -  译者：
+> -  译者：ZhichengChen
 > -  校对者：
 
 ![Relational VS Nonrelational Databases – the Difference Between a SQL DB and a NoSQL DB](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/valeriia-svitlini-5w0ZbF8P5-4-unsplash.jpg)

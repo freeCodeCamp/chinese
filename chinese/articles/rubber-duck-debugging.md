@@ -1,6 +1,6 @@
 > -  原文地址：[Rubber Duck Debugging](https://www.freecodecamp.org/news/rubber-duck-debugging/)
 > -  原文作者：[Kolade Chris](https://www.freecodecamp.org/news/author/kolade/)
-> -  译者：
+> -  译者：ZhichengChen
 > -  校对者：
 
 ![Rubber Duck Debugging](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/duck-meet-gd27f1e256_1280.jpg)

@@ -134,15 +134,15 @@ Lambda 函数的好处是，你不必担心在服务器上 24/7 运行你的后�
 
 ### Create an IAM Role and Configure it
 
-Before we start writing our lambda function, we need to create an IAM *role* to attach it to the function and grant it permissions (referred to as policies in AWS) to invoke the SES service.
+在我们开始编写 lambda 函数之前，我们需要创建一个 IAM *role（角色）*，将其附加到函数上，并授予它调用 SES 服务的权限（在 AWS 中被称为策略）。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-68.png)
 
-From your AWS console, go to the IAM service —> click on Policies in the side menu —> then click on the "Create Policy" button.
+从你的 AWS 控制台，进入 IAM service->点击侧面菜单中的 `service` ->然后点击 `Create Policy` 按钮。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-69.png)
 
-In the policy creation page, go to the JSON tab and paste the following permissions, then click Next.
+在策略创建页面，进入 JSON 标签，粘贴以下权限，然后点击 `Next`。
 
 ```json
 {
@@ -162,43 +162,44 @@ In the policy creation page, go to the JSON tab and paste the following permissi
 
 ```
 
-In the third screen, name the policy and click the "Create Policy" button.
+在第三个屏幕中，为政策命名，并点击 `Create Policy` 按钮。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-70.png)
 
-Now we create an IAM *role* which will be attached to the lambda and link it to the permissions policy which we just created.
+现在我们创建一个 IAM *role(角色)*，它将被附加到 lambda 上，并将其与我们刚刚创建的权限策略联系起来。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-71.png)
 
-From the IAM side menu, click Roles then click the "Create role" button.
+从 IAM 侧面的菜单，点击角色，然后点击 `Create role` 按钮。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-72.png)
 
-In the role creation screen, make sure the type selected is "AWS service" and select the Lambda case then click on the "Next:Permissions" button.
+在角色创建界面，确保选择的类型是 "AWS service"，并选择 `Lambda case`，然后点击 "Next:Permissions"按钮。
+
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-73.png)
 
-On the next screen, search for the policy we created earlier by its name and select it, then click next.
+在下一个屏幕上，按名称搜索我们先前创建的 `policy` 并选择它，然后点击 `Next`。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-74.png)
 
-On the review screen, give the role a name you can remember then click on "Create role".
+查看屏幕，给这个角色起一个你能记住的名字，然后点击 "Create role"。
 
-Now we can create a new lambda function. Go to the Lambda service dashboard and click the "Create Function" button.
+现在我们可以创建一个新的 lambda 函数。转到 Lambda 服务仪表板，点击 "Create Function" 按钮。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-75.png)
 
-In the function creation screen, name your function, select the "Author from scratch" option, and choose Node.js as the runtime.
+在函数创建界面，命名你的函数，选择 "Author from scratch" 选项，并选择 Node.js 作为运行时间。
 
-Under "Change default execution role" choose the "Use an existing role" option then choose the name of the role you created in the previous step from the "Existing role" drop down.
+在 "Change default execution role（改变默认执行角色）"下，选择 "Use an existing role（使用现有角色）"选项，然后从 "Existing role（现有角色）"下拉菜单中选择你在前一步创建的角色名称。
 
-Finally, click the "Create function" button to create the function.
+最后，点击 "Create function"按钮来创建函数。
 
 ### Write the Code and Test it
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-76.png)
 
-In the editor, open the index.js file (this is the file that will be executed when your lambda is called), and replace its content with the following code:
+在编辑器中，打开 index.js 文件（这是在你的 lambda 被调用时将被执行的文件），用以下代码替换它:
 
 ```js
 const aws = require("aws-sdk");
@@ -225,11 +226,11 @@ exports.handler = async function (event) {
 
 ```
 
-Notice that on line 2 we are using the AWS SDK and creating an SES instance. The reason I chose **us\-east\-1** as the region is because that's *where I registered & verified my email*. Be sure to replace the email and use the AWS region where you registered your email.
+请注意，在第 2 行，我们正在使用 AWS SDK 并创建一个 SES 实例。我之所以选择 **us-east\-1** 作为区域，是因为那是我注册和验证电子邮件的地方。请确保你的电子邮件使用你注册电子邮件的 AWS 地区。
 
-Now to test this function, click on the "Deploy" button. Then click on the Test button —> Configure test event which should open up a test configuration dialogue where you can create a new test event.
+现在要测试这个功能，点击 "Deploy" 按钮。然后点击 "Test" 按钮->配置测试事件，这将打开一个测试配置对话框，你可以创建一个新的测试事件。
 
-In the test event body editor, enter the following JSON which mimics what will eventually come from our browser request. Then click create.
+在测试事件主体编辑器中，输入以下 JSON，模仿最终将来自我们的浏览器请求的内容。然后点击创建。
 
 ```json
 {
@@ -242,19 +243,19 @@ In the test event body editor, enter the following JSON which mimics what will e
 
 ```
 
-Now clicking the test button will run the test we just created. It should open a new tab in the editor to show us the logs created from running the function, which should look like this:
+现在点击 `test` 按钮将运行我们刚刚创建的测试。它应该在编辑器中打开一个新的标签，向我们展示运行该函数所产生的日志，它应该是这样的:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-77.png)
 
-Notice the event object we logged out shows here under Function logs with the body data we used in the test event.
+注意，我们登录的事件对象在这里显示在功能日志下，其中有我们在测试事件中使用的主体数据。
 
 This test should have sent an email to my inbox as well – let's see if that happened.
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-78.png)
 
-Yep, just as expected. And that happened almost immediately after running the test.
+是的，就像预期的那样。而这几乎是在运行测试后立即发生的。
 
-Now let's modify our function code to get a more meaningful message from the test data.
+现在让我们修改我们的函数代码，从测试数据中得到一个更有意义的信息。
 
 ```js
 const aws = require("aws-sdk");
@@ -285,11 +286,11 @@ exports.handler = async function (event) {
 
 ```
 
-It's important to note that when API Gateway calls our function it will pass a string to the event body. This is why I use `JSON.parse` on event.body, to turn it into JSON and extract our sender's email, name, and message. Then I use those variables in the email body text and subject using string interpolation.
+需要注意的是，当 API Gateway 调用我们的函数时，它将传递一个字符串给事件主体（event body）。这就是为什么我在 event.body 上使用`JSON.parse`，把它变成 JSON 并提取我们发件人的电子邮件、姓名和信息。然后我在邮件正文文本和主题中使用这些变量，使用字符串插值。
 
-If you try the test it, the code will return an error. This is because the test is passing a JSON object to event.body and we are using JSON.parse on JSON, which causes an error in JavaScript.
+如果你尝试测试它，代码将返回一个错误。这是因为测试将一个 JSON 对象传递给 event.body，而我们在 JSON 上使用 JSON.parse，这在 JavaScript 中会导致错误。
 
-Sadly, the test editor doesn't allow us to pass strings to the event, so we'll have to test that later from somewhere else.
+遗憾的是，测试编辑器不允许我们向事件传递字符串，所以我们必须在以后从别的地方测试。
 
 ## Step 3: How to Set Up API Gateway
 

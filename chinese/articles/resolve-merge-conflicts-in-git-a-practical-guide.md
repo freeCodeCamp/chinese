@@ -1,7 +1,7 @@
-> -  原文地址：[How to Resolve Merge Conflicts in Git – A Practical Guide with Examples](https://www.freecodecamp.org/news/resolve-merge-conflicts-in-git-a-practical-guide/)
-> -  原文作者：[TAPAS ADHIKARY](https://www.freecodecamp.org/news/author/tapas/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Resolve Merge Conflicts in Git – A Practical Guide with Examples](https://www.freecodecamp.org/news/resolve-merge-conflicts-in-git-a-practical-guide/)
+> - 原文作者：[TAPAS ADHIKARY](https://www.freecodecamp.org/news/author/tapas/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Resolve Merge Conflicts in Git – A Practical Guide with Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/freeCodeCamp-Cover-1.png)
 
@@ -9,11 +9,11 @@
 
 Many developers use Git today. And they're usually familiar with basic Git concepts like:
 
--   How to initiate a repository.
--   How to create branches.
--   How to stage/unstage changes.
--   How to commit changes.
--   How to push commits to remote.
+- How to initiate a repository.
+- How to create branches.
+- How to stage/unstage changes.
+- How to commit changes.
+- How to push commits to remote.
 
 However, many developers are confused about concepts like `merging` and `resolving merge conflicts`. In this article, we will learn how to resolve merge conflicts in a practical way. This means you will read, understand, and try it out while going through this article.
 
@@ -45,8 +45,8 @@ Git `merge` helps you merge changes from other developers before pushing a new c
 
 In the case of Git merge, we need to be aware of two things:
 
-1.  **Changes**: What type of operations occurred between two versions of a file? New content is added or removed, or existing content is updated.
-2.  **Possibilities**: There are two possibilities. The changes happened in the `different regions` of the file or the changes happened in the `same region` of the file. Same region means that developers have made changes around the same place (for example, paragraphs, lines, and so on) of a file.
+1. **Changes**: What type of operations occurred between two versions of a file? New content is added or removed, or existing content is updated.
+2. **Possibilities**: There are two possibilities. The changes happened in the `different regions` of the file or the changes happened in the `same region` of the file. Same region means that developers have made changes around the same place (for example, paragraphs, lines, and so on) of a file.
 
 Fortunately, Git automatically takes care of most of these cases using the `auto-merge` strategy. But when the changes have occurred in the `same region` of the file, Git won't perform an auto-merge. Instead, it leaves it to you to `Resolve the Merge Conflicts`.
 
@@ -56,12 +56,12 @@ Let's understand the above situations with a story of two developers, Alex and T
 
 One fine day,
 
--   Alex pulled changes from the remote repository to his local repository.
--   He changed the file called `abc.txt`, staged it, committed it, and finally pushed it back to the remote repository.
--   In the meantime, Tina, unaware of Alex's changes in the `abc.txt` file, made some changes in the `same region` of the file and tried pushing it to the remote repository.
--   `Git` is a version control system, so it warned Tina that she had changed the version older than what it was in the remote (as Alex's changes were already in the remote).
--   Now, Tina needs to first pull the changes from the remote, update the file, and then try pushing again.
--   Tina did this. However, in her wildest nightmare, she got the warning that `auto-merge` failed, and so she needs to now `Resolve the merge conflicts`.
+- Alex pulled changes from the remote repository to his local repository.
+- He changed the file called `abc.txt`, staged it, committed it, and finally pushed it back to the remote repository.
+- In the meantime, Tina, unaware of Alex's changes in the `abc.txt` file, made some changes in the `same region` of the file and tried pushing it to the remote repository.
+- `Git` is a version control system, so it warned Tina that she had changed the version older than what it was in the remote (as Alex's changes were already in the remote).
+- Now, Tina needs to first pull the changes from the remote, update the file, and then try pushing again.
+- Tina did this. However, in her wildest nightmare, she got the warning that `auto-merge` failed, and so she needs to now `Resolve the merge conflicts`.
 
 ![image-45](https://www.freecodecamp.org/news/content/images/2022/05/image-45.png)
 
@@ -75,10 +75,10 @@ Resolving merge conflicts is not as tricky as it may sound. In 90% of cases, it 
 
 Once Tina pulls the changes, Tina's local file has her changes plus Alex's changes. Now Tina can do one of these four things:
 
--   She can keep Alex's changes and remove hers.
--   She can remove Alex's changes and keep hers.
--   She can keep both Alex's and her changes.
--   She can remove both Alex's and her changes.
+- She can keep Alex's changes and remove hers.
+- She can remove Alex's changes and keep hers.
+- She can keep both Alex's and her changes.
+- She can remove both Alex's and her changes.
 
 Alright, but which one she should be doing? That is entirely dependent on the project's needs and the use-cases. Tina will understand the `incoming` changes and do whatever is relevant to the situation.
 
@@ -94,9 +94,9 @@ At any point in time, if you want to learn these concepts interactively, please 
 
 When Git cannot perform an auto-merge because changes are in the same region, it indicates the conflicting regions with special characters. The character sequences are like this:
 
--   `<<<<<<<`
--   `=======`
--   `>>>>>>>`
+- `<<<<<<<`
+- `=======`
+- `>>>>>>>`
 
 Everything between `<<<<<<<` and `=======` are your local changes. These changes are not in the remote repository yet. All the lines between `=======` and `>>>>>>>` are the changes from the remote repository or another branch. Now you need to look into these two sections and make a decision.
 
@@ -198,17 +198,17 @@ If you face any new scenarios or get stuck in resolving a merge conflict, feel f
 
 Before we wrap up, a few tips for you:
 
--   All the examples shown in this article assumes that you're using GitBash or any other Git CLI to resolve merge conflicts. You can use any other GUI tool to do the same.
--   Always pull from remote/other related branches before you start any new logical work on your code. It will keep your branch up-to-date as much as possible and reduce the chances of conflicts.
--   Always pull before a push to make sure you will not face any rejections from Git.
--   Talk to your peers/co-developers when you are unable to make a call on what to keep vs. what to remove. Pair up to resolve any difficult merge conflicts.
+- All the examples shown in this article assumes that you're using GitBash or any other Git CLI to resolve merge conflicts. You can use any other GUI tool to do the same.
+- Always pull from remote/other related branches before you start any new logical work on your code. It will keep your branch up-to-date as much as possible and reduce the chances of conflicts.
+- Always pull before a push to make sure you will not face any rejections from Git.
+- Talk to your peers/co-developers when you are unable to make a call on what to keep vs. what to remove. Pair up to resolve any difficult merge conflicts.
 
 That's all for now. I hope you found this article informative and insightful to help you with merge conflicts in Git.
 
 Let's connect.
 
--   Give a [Follow on Twitter](https://twitter.com/tapasadhikary) if you don't want to miss the daily dose of Web Development and Programming Tips.
--   Check out my Opensource projects on [GitHub](https://github.com/atapas).
--   You can [SUBSCRIBE](https://www.youtube.com/tapasadhikary?sub_confirmation=1) to my YouTube channel if you want to learn JavaScript, ReactJS, Node.js, Git, and all about Web Development in a practical way.
+- Give a [Follow on Twitter](https://twitter.com/tapasadhikary) if you don't want to miss the daily dose of Web Development and Programming Tips.
+- Check out my Opensource projects on [GitHub](https://github.com/atapas).
+- You can [SUBSCRIBE](https://www.youtube.com/tapasadhikary?sub_confirmation=1) to my YouTube channel if you want to learn JavaScript, ReactJS, Node.js, Git, and all about Web Development in a practical way.
 
 See you soon with my next article. Until then, please take care of yourself, and stay happy.

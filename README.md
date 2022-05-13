@@ -35,14 +35,9 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 
 **除了在 [Translation-needed](https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3ATranslation-needed) 列表认领文章来翻译，你也可以从[英文专栏](https://www.freecodecamp.org/news)选择自己喜欢的文章，自己[发起 New issue](https://github.com/freeCodeCamp/news-translation/issues/new/choose) 进行翻译。**
 
-点击 Get started，根据提示填写 issue 的内容。
+点击 Get started，根据提示填写 issue 的内容，即可添加你想翻译的文章。
 
 ![image](https://user-images.githubusercontent.com/19358186/114123554-1e87fb80-9925-11eb-9dab-18f8a4964782.png)
-
-在翻译过程中，你可能会需要参考以下资料（强烈建议你花十分钟浏览这些资料后，再开始翻译，当然你也可以在翻译过程中随时回来查看）：
-
--   [翻译技巧][9]
--   [疑难词汇表][10]
 
 ### 如何参与校对
 
@@ -64,7 +59,7 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 
 ### 开放周会
 
-- 时间：每周六下午 13:00 - 15:00（北京时间）
+- 时间：每两周一次，周六下午 13:00 - 15:00（北京时间）
 - 地点：会议室链接（请在 [freeCodeCamp Chat 聊天室](https://chat.freecodecamp.org/channel/zhongwen)留言，获得会议室链接）
 
 参与者无需提前报名，在以上时间内直接进入会议室。请所有参与者务必遵守 [freeCodeCamp 社区行为规范](https://chinese.freecodecamp.org/news/code-of-conduct/)。

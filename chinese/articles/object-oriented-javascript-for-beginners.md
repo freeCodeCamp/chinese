@@ -9,7 +9,7 @@
 
 我将讲解OOP的主要概念，OOP为什么有用以及在什么时候有用，全文展示大量JS示例。
 
-如果你尚不熟悉编程范式，在深入这篇文章之前，推荐你阅读[我之前写过的范式简介](https://chinese.freecodecamp.org/news/an-introduction-to-programming-paradigms/)。（PPY：链接我换成了已经翻译好的中文版）
+如果你尚不熟悉编程范式，在深入这篇文章之前，推荐你阅读[我之前写过的范式简介](https://chinese.freecodecamp.org/news/an-introduction-to-programming-paradigms/)。
 
 让我们开始吧！
 
@@ -31,7 +31,7 @@
 
 <h1 id="intro-to-object-oriented-programming">面向对象的编程简介</h1>
 
-正如我之前关于编程范式的[文章](https://www.freecodecamp.org/news/an-introduction-to-programming-paradigms/)所述，OOP的核心是 **将关注点和责任**分离到不同**实体**。
+正如我之前关于编程范式的[文章](https://chinese.freecodecamp.org/news/an-introduction-to-programming-paradigms/)所述，OOP的核心是 **将关注点和责任**分离到不同**实体**。
 
 实体被编码成 **对象**，每一个实体由一组信息 (**属性**) 和行为 (**方法**)组成，并且为实体所用。
 

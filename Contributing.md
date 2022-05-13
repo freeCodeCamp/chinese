@@ -12,7 +12,7 @@
 
 ![image](https://user-images.githubusercontent.com/19969570/62830781-f2474380-bc46-11e9-9c8f-0750ad7f2c84.png)
 
-4. 在该编辑器页面最下方的 Propose file change 第一行填写**译文标题**，并提交
+4. 在该编辑器页面最下方的 Propose file change 第一行填写**你为译文取的中文标题**，并提交
 
 ![image](https://user-images.githubusercontent.com/19969570/62818127-2baf7e80-bb75-11e9-8fd1-79afe4b5e353.png)
 
@@ -34,6 +34,14 @@
 
 9. 每翻译几段文字想**暂时保存**时，就在编辑器最下方 Commit changes 处提交一次。注意，最终译文只需要中文，请把英文原文删掉。
 
-10. 翻译团队核心成员会定期查看翻译进度，在你翻译完后便开始校对，请注意查收 **GitHub 账号下的邮箱**
+10. 请在翻译完成后留言 @miyaliu666，注明“已完成翻译”。校对者会及时查看翻译进度，在你翻译完后便开始校对，请注意查收 **GitHub 账号下的邮箱**。
+
+11. 有的文章里有目录部分，在翻译的时候可以像下面这样设置标题和 id，以便读者在阅读文章时点击目录即跳转到相应的部分：
+
+![image](https://user-images.githubusercontent.com/19358186/168284758-4a6ca000-c6e5-4d3a-b9b9-139e5337f024.png)
+
+12. 在 markdown 里给图片添加图注，可以这样处理：
+
+![image](https://user-images.githubusercontent.com/19358186/168287247-4dba5249-6199-4d94-a0bc-c005ad6d25cb.png)
 
 [1]: https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3ATranslation-needed

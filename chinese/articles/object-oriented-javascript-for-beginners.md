@@ -1,53 +1,53 @@
 > -  原文地址：[Object-Oriented Programming in JavaScript for Beginners](https://www.freecodecamp.org/news/object-oriented-javascript-for-beginners/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Object-Oriented Programming in JavaScript for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/pexels-lukas-317377.jpg)
 
-Hi everyone! In this article we're going to review the main characteristics of object oriented programming (OOP) with practical JavaScript examples.
+大家好，这篇文章将使用JavaScript示例来讲解面向对象的编程（OOP）的主要特征。
 
-We will talk about OOP main concepts, why and when it can be useful, and I'll give you plenty of examples using JS code.
+我将讲解OOP的主要概念，OOP为什么有用以及在什么时候有用，全文展示大量JS示例。
 
-If you're not familiar with programming paradigms, I recommend you check out [the brief intro I recently wrote](https://www.freecodecamp.org/news/an-introduction-to-programming-paradigms/) before diving into this one.
+如果你尚不熟悉编程范式，在深入这篇文章之前，推荐你阅读[我之前写过的范式简介](https://chinese.freecodecamp.org/news/an-introduction-to-programming-paradigms/)。
 
-Bring it on!
+让我们开始吧！
 
 ![160cf1a4201c53b015bfcccb9398e9ab](https://www.freecodecamp.org/news/content/images/2022/04/160cf1a4201c53b015bfcccb9398e9ab.gif)
 
-## Table of Contents
+## 目录
 
--   [Intro to Object-Oriented Programming](#intro-to-object-oriented-programming)
--   [How to Create Objects – Classes](#how-to-create-objects-classes)
-    -   [Some things to keep in mind about classes](#some-things-to-keep-in-mind-about-classes-)
--   [The four principles of OOP](#the-four-principles-of-oop)
-    -   [Inheritance](#inheritance)
-        -   [Some things to keep in mind about inheritance](#some-things-to-keep-in-mind-about-inheritance-)
-    -   [Incapsulation](#encapsulation)
-    -   [Abstraction](#abstraction)
-    -   [Polymorphism](#polymorphism)
--   [Object Composition](#object-composition)
--   [Roundup](#roundup)
+-   [面向对象的编程简介](#intro-to-object-oriented-programming)
+-   [如何创建对象——类](#how-to-create-objects-classes)
+    -   [类相关注意事项](#some-things-to-keep-in-mind-about-classes-)
+-   [OOP的四大原则](#the-four-principles-of-oop)
+    -   [继承](#inheritance)
+        -   [继承相关注意事项](#some-things-to-keep-in-mind-about-inheritance-)
+    -   [封装](#encapsulation)
+    -   [抽象](#abstraction)
+    -   [多态](#polymorphism)
+-   [对象组合](#object-composition)
+-   [总结](#roundup)
 
-# Intro to Object-Oriented Programming
+<h1 id="intro-to-object-oriented-programming">面向对象的编程简介</h1>
 
-As mentioned in [my previous article about programming paradigms](https://www.freecodecamp.org/news/an-introduction-to-programming-paradigms/), the core concept of OOP is to **separate concerns and responsibilities** into **entities.**
+正如我之前关于编程范式的[文章](https://chinese.freecodecamp.org/news/an-introduction-to-programming-paradigms/)所述，OOP的核心是 **将关注点和责任**分离到不同**实体**。
 
-Entities are coded as **objects**, and each entity will group a given set of information (**properties**) and actions (**methods**) that can be performed by the entity.
+实体被编码成 **对象**，每一个实体由一组信息 (**属性**) 和行为 (**方法**)组成，并且为实体所用。
 
-OOP is very useful on large scale projects, as it facilitates code modularity and organization.
+OOP在大规模项目中非常有用，因为它方便代码的模块化和组织。
 
-By implementing the abstraction of entities, we're able to think about the program in a similar way as our world works, with different actors that perform certain actions and interact with each other.
+把实体的抽象化后，我们就可以把程序看作现实世界，不同的演员出演不同的演出并且相互互动。
 
-To better understand how we can implement OOP, we're going to use a practical example in which we're going to code a little video game. We're going to focus on the creation of characters and see how OOP can help us with that.👽 👾 🤖
+为了更好的理解OOP的应用，我们来编写一个小游戏作为示例。我们将专注于游戏中角色的创建，以此来观察OOP在这个过程中是怎么起作用的。👽 👾 🤖
 
-# How to Create Objects – Classes
+<h1 id="how-to-create-objects-classes">如何创建对象——类</h1>
 
-So any video game needs characters, right? And all characters have certain **characteristics** (properties) like color, height, name, and so on and **abilities** (methods) like jumping, running, punching, and so on. Objects are the perfect data structure to use to store this kind of information.👌
+所有电子游戏都有游戏角色，对不对？而所有的角色都具备特定的**特征** (属性) 如：肤色、身高、名字等，所有的角色还具备**能力** (方法)如：跳跃、跑步、出拳等。 对象便是一个绝佳的数据结构，来储存这些信息。👌
 
-Say we have 3 different character "species" available, and we want to create 6 different characters, 2 of each species.
+假设我们有3种不同的角色“种类”，我们想要创造6个不同的角色，每一个种类两个角色。
 
-A way of creating our characters could be to just manually create the objects using [object literals,](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) in this way:
+一种创建角色的方式是手动创建对象，像这样[对象初始化](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer):
 
 ```javascript
 const alien1 = {
@@ -88,36 +88,36 @@ const Robot2 = {
 }
 ```
 
-See that all characters have the `name` and `species` properties and also the `sayPhrase` method. Moreover, each species has a method that belongs only to that species (for example, aliens have the `fly` method).
+所有的角色都拥有 `name`和`species`属性以及 `sayPhrase`方法。此外，每一个种类（species）都有一个专属的方法(如alien的`fly`方法)。
 
-As you can see, some data is shared by all characters, some data is shared by each species, and some data is unique to each individual character.
+可以观察到，一些数据被所有角色共享，另一些数据被同一种类共享，还有一些数据是每个角色专属的。
 
-This approach works. See that we can perfectly access properties and methods like this:
+这样创建角色的方法是奏效的，我们可以访问到这些属性和方法：
 
 ```javascript
-console.log(alien1.name) // output: "Ali"
-console.log(bug2.species) // output: "bug"
-Robot1.sayPhrase() // output: "I can cook, swim and dance!"
-Robot2.transform() // output: "Optimus prime!"
+console.log(alien1.name) // 输出: "Ali"
+console.log(bug2.species) // 输出: "bug"
+Robot1.sayPhrase() // 输出: "I can cook, swim and dance!"
+Robot2.transform() // 输出: "Optimus prime!"
 ```
 
-The problem with this is that it doesn't scale well at all and it's error prone. Imagine that our game could have hundreds of characters. We would need to manually set the properties and methods for each of them!
+问题是这样操作很难扩展，也特别容易出错。假设我们的游戏有成百上千个角色，我们必须手动地设定每一个角色的属性和方法！
 
-To solve this problem we need a programmatic way of creating objects and setting different properties and methods given a set of conditions. And that's what **classes** are good for. 😉
+为了解决这个问题，我们需要一种编程方法来创建对象，并在给定一组条件的情况下设置不同属性和方法。**类**正好擅长这些。 😉
 
-Classes set a blueprint to create objects with predefined properties and methods. By creating a class, you can later on **instantiate** (create) objects from that class, that will inherit all the properties and methods that class has.
+类使用预设的属性和方法来创建对象的蓝图。创建完毕类之后，可以通过**实例化** (创建)对象。 对象会继承类的所有属性和方法。
 
-Refactoring our previous code, we can create a class for each of our character species, like this:
+改写上面的代码，我们可以给每一个角色种类创建一个类：
 
 ```javascript
-class Alien { // Name of the class
-    // The constructor method will take a number of parameters and assign those parameters as properties to the created object.
+class Alien { // 类的名称
+    // constructor方法会传入一些参数，并将这些参数分配给对象的属性
     constructor (name, phrase) {
         this.name = name
         this.phrase = phrase
         this.species = "alien"
     }
-    // These will be the object's methods.
+    // 这部分将作为对象的方法
     fly = () => console.log("Zzzzzziiiiiinnnnnggggg!!")
     sayPhrase = () => console.log(this.phrase)
 }
@@ -143,12 +143,12 @@ class Robot {
 }
 ```
 
-And then we can instantiate our characters from those classes like this:
+然后我们通过类实例化我们的角色：
 
 ```javascript
 const alien1 = new Alien("Ali", "I'm Ali the alien!")
-// We use the "new" keyword followed by the corresponding class name
-// and pass it the corresponding parameters according to what was declared in the class constructor function
+//我们使用“new”关键字和对应的类名称
+//然后根据类中构造函数（constructor function）声明的形参传入对应的实参
 
 const alien2 = new Alien("Lien", "Run for your lives!")
 const bug1 = new Bug("Buggy", "Your debugger doesn't work with me!")
@@ -157,44 +157,44 @@ const Robot1 = new Robot("Tito", "I can cook, swim and dance!")
 const Robot2 = new Robot("Terminator", "Hasta la vista, baby!")
 ```
 
-Then again, we can access each object properties and methods like this:
+我们还是可以访问对象的属性和方法：
 
 ```javascript
-console.log(alien1.name) // output: "Ali"
-console.log(bug2.species) // output: "bug"
-Robot1.sayPhrase() // output: "I can cook, swim and dance!"
-Robot2.transform() // output: "Optimus prime!"
+console.log(alien1.name) // 输出: "Ali"
+console.log(bug2.species) // 输出: "bug"
+Robot1.sayPhrase() // 输出: "I can cook, swim and dance!"
+Robot2.transform() // 输出: "Optimus prime!"
 ```
 
-What is nice about this approach and the use of classes in general is that we can use those "blueprints" to create new objects quicker and more securely than if we did it "manually".
+使用类的好处是，这种使用“蓝图”来创建新的对象的方式比手动创建更加快速，也更不容易出错。
 
-Also, our code is better organized as we can clearly identify where each object properties and methods are defined (in the class). And this makes future changes or adaptations much easier to implement.
+同时，这样编写代码的结构性更好，我们可以识别出每一个对象的属性和方法是在那里定义的（类）。这样就更容易修改和调整。
 
-### Some things to keep in mind about classes:
+<h3 id="some-things-to-keep-in-mind-about-classes-">类相关注意事项：</h3>
 
-Following [this definition,](https://www.bookstack.cn/read/You-Dont-Know-JS-Get-Started-2nd/spilt.6.833b11649d196dea.md?wd=JS) put in more formal terms,
+根据[这段定义](https://www.bookstack.cn/read/You-Dont-Know-JS-Get-Started-2nd/spilt.6.833b11649d196dea.md?wd=JS)并用更专业的术语改写：
 
-> _"a class in a program is a definition of a “type” of custom data structure that includes both data and behaviors that operate on that data. Classes define how such a data structure works, but classes are not themselves concrete values. To get a concrete value that you can use in the program, a class must be instantiated (with the "new" keyword) one or more times."_
+> _“程序中类被定义为一种自定义数据结构“类型”，包含了数据运行所需的数据和行为。类定义了数据结构如何运行，但是类本身不是具体的值。若要在程序中使用具体的值，必须一次或者多次实例化（使用"new"关键字）类。“_
 
--   Remember that classes aren't actual entities or objects. Classes are the blueprints or molds that we're going to use to create the actual objects.
--   Class names are declared with a capital first letter and camelCase by convention. The class keyword creates a constant, so it cannot be redefined afterwards.
--   Classes must always have a constructor method that will later on be used to instantiate that class. A constructor in JavaScript is just a plain old function that returns an object. The only thing special about it is that, when invoked with the "new" keyword, it assigns its prototype as the prototype of the returned object.
--   The “this” keyword points to the class itself and is used to define the class properties within the constructor method.
--   Methods can be added by simply defining the function name and its execution code.
--   JavaScript is a prototype-based language, and within JavaScript classes are used only as syntactic sugar. This doesn't make a huge difference here, but it's good to know and keep in mind. You can read [this article if you'd like to know more about this topic](https://www.freecodecamp.org/news/prototypes-and-inheritance-in-javascript/).  
+-   请记住类并不是具体的实体或者对象。类是我们用来创建具体对象的蓝图或者模具。
+-   通常类的命名首字母大写并使用驼峰式，class关键字创建常量，所以之后不能更改命名。
+-   类必须拥有一个constructor方法，之后被用来实例化类。JavaScript中的constructor只是一个普通的返回对象的函数。唯一特殊的地方在于，使用“new”关键字调用这个函数，会讲其原型分配为被返回的原型。
+-   “this”关键字指向类本身，并在constructor方法内定义类的属性。
+-   添加方法只需要定义函数名和函数内部需要执行的代码。
+-   JavaScript是一门基于原型的语言，JavaScript中的类只是一种语法糖。虽然了解这个概念不会对你的使用造成巨大的影响，但是还是有必要知道这一点，相关话题你可以阅读[这篇文章](https://chinese.freecodecamp.org/news/prototypes-and-inheritance-in-javascript/).  （ppy：换成了咱自己的链接）
     
 
-# The Four Principles of OOP
+<h1 id="the-four-principles-of-oop">OOP的四大原则</h1>
 
-OOP is normally explained with 4 key principles that dictate how OOP programs work. These are **inheritance, encapsulation, abstraction  and polymorphism**. Let's review each of them.
+通常OOP有四个关键原则，这四个关键原则决定了OOP程序如何运作。他们是 **继承、封装、抽象和多态**。让我们分别看看这四个特征。
 
-## Inheritance
+<h2 id="inheritance">继承</h2>
 
-Inheritance is the ability to **create classes based on other classes**. With inheritance, we can define a **parent class** (with certain properties and methods), and then **children classes** that will inherit from the parent class all the properties and methods that it has.
+继承是 **基于类创建其他类**的能力。通过继承，我们可以先定义**父类** (包含一些属性和方法)， 然后再定义**子类**，子类继承父类的所有属性和方法。
 
-Let's see this with an example. Imagine all the characters we defined before will be the enemies of our main character. And as enemies, they will all have the "power" property and the "attack" method.
+让我们来看具体的例子。假设所有我们之前定义的角色都是主角的敌人。这些敌人都拥有“power”（力量）属性和“attack（攻击）方法。
 
-One way to implement that would be just to add the same properties and methods to all the classes we had, like this:
+一种方法是给所有现有类都添加同样的属性和方法，如下：
 
 ```javascript
 ...
@@ -226,11 +226,11 @@ class Robot {
 const bug1 = new Bug("Buggy", "Your debugger doesn't work with me!", 10)
 const Robot1 = new Robot("Tito", "I can cook, swim and dance!", 15)
 
-console.log(bug1.power) //output: 10
-Robot1.attack() // output: "I'm attacking with a power of 15!"
+console.log(bug1.power) //输出: 10
+Robot1.attack() // 输出: "I'm attacking with a power of 15!"
 ```
 
-But you can see we're repeating code, and that's not optimal. A better way would be to declare a parent "Enemy" class which is then extended by all enemy species, like this:
+但是你也发现了我们在重复代码，所以这并不是最优的写法。更好的办法是声明一个父类“Enemy”，然后其他所有敌人种类都继承这个父类，如下：
 
 ```javascript
 class Enemy {
@@ -256,21 +256,21 @@ class Alien extends Enemy {
 ...
 ```
 
-See that the enemy class looks just like any other. We use the constructor method to receive parameters and assign them as properties, and methods are declared like simple functions.
+在上面的例子中，enemy类和其他所有类一样，我们使用constructor方法来接受参数，并且将它们分配给属性，方法用普通函数声明。
 
-On the children class, we use the `extends` keyword to declare the parent class we want to inherit from. Then on the constructor method, we have to declare the "power" parameter and use the `super` function to indicate that property is declared on the parent class.
+在子类中，我们使用 `extends` 关键字来声明我们需要继承父类。在constructor方法中，我们必须声明“power”参数并且使用`super`函数，来表示属性是在父元素中声明的。
 
-When we instantiate new objects, we just pass the parameters as they were declared in the corresponding constructor function and _voilà!_ We can now access the properties and methods declared in the parent class.😎
+当我们实例化新的对象的时候，其实我们传入了声明在constructor函数里的参数。 _哒哒！_ 我们就可以在实例中访问在父类中声明的属性和方法了。😎
 
 ```javascript
 const alien1 = new Alien("Ali", "I'm Ali the alien!", 10)
 const alien2 = new Alien("Lien", "Run for your lives!", 15)
 
-alien1.attack() // output: I'm attacking with a power of 10!
-console.log(alien2.power) // output: 15
+alien1.attack() // 输出: I'm attacking with a power of 10!
+console.log(alien2.power) // 输出: 15
 ```
 
-Now let's say we want to add a new parent class that groups all our characters (no matter if they're enemies or not), and we want to set a property of "speed" and a "move" method. We can do that like this:
+现在假设我们想要添加一个新的父类，包含所有的角色（不论是不是敌人），我们给这个类设定“speed”（速度）属性和“move”（移动）方法，我们可以这样编写代码：
 
 ```javascript
 class Character {
@@ -303,19 +303,19 @@ class Alien extends Enemy {
 }
 ```
 
-First we declare the new "Character" parent class. Then we extend it on the Enemy class. And finally we add the new "speed" parameter to the `constructor` and `super` functions in our Alien class.
+我们首先声明新的“Character”父类，然后让Enemy类继承它。最后我们在Alien类中使用 `constructor` 和 `super` 函数来传入新的"speed"参数。
 
-We instantiate passing the parameters as always, and _voilà_ again, we can access properties and methods from the "grandparent" class.👴
+我们同样在实例化的同时传入参数， _哒哒！_ 我们又可以在实例中访问"祖父“类的属性和方法了。👴
 
 ```javascript
 const alien1 = new Alien("Ali", "I'm Ali the alien!", 10, 50)
 const alien2 = new Alien("Lien", "Run for your lives!", 15, 60)
 
-alien1.move() // output: "I'm moving at the speed of 50!"
-console.log(alien2.speed) // output: 60
+alien1.move() // 输出: "I'm moving at the speed of 50!"
+console.log(alien2.speed) // 输出: 60
 ```
 
-Now that we know more about inheritance, let's refactor our code so we avoid code repetition as much as possible:
+在了解继承之后，我们重新编写代码来避免重复：
 
 ```javascript
 class Character {
@@ -370,18 +370,18 @@ const Robot1 = new Robot("Tito", "I can cook, swim and dance!", 125, 30)
 const Robot2 = new Robot("Terminator", "Hasta la vista, baby!", 155, 40)
 ```
 
-See that our species classes look much smaller now, thanks to the fact that we moved all shared properties and methods to a common parent class. That's the kind of efficiency inheritance can help us with.😉
+现在我们的种类（species）类的代码就少多了，这主要归功于我们把共享的属性和方法都放在了同样的父类里。这就是继承的便捷性。😉
 
-### Some things to keep in mind about inheritance:
+<h3 id="some-things-to-keep-in-mind-about-inheritance-"> 继承相关注意事项 </h3>
 
--   A class can only have one parent class to inherit from. You can't extend multiple classes, though there're are hacks and ways around this.
--   You can extend the inheritance chain as much as you want, setting parent, grandparent, great grandparent classes and so on.
--   If a child class inherits any properties from a parent class, it must first assign the parent properties calling the `super()` function before assigning its own properties.
+-   一个子类只能继承一个父类，不可以继承多个父类。虽然确实有相应的技巧来解决这个问题。
+-   你可以根据需求扩展继承链，设置父类、祖父类、太祖父类等。
+-   如果子类从父类继承一些属性，必须首先使用`super()`函数并将父类属性传参，然后再设定子类自己的属性。
 
-An example:
+例子：
 
 ```javascript
-// This works:
+// 正确写法:
 class Alien extends Enemy {
     constructor (name, phrase, power, speed) {
         super(name, phrase, power, speed)
@@ -390,7 +390,7 @@ class Alien extends Enemy {
     fly = () => console.log("Zzzzzziiiiiinnnnnggggg!!")
 }
 
-// This throws an error:
+// 错误写法:
 class Alien extends Enemy {
     constructor (name, phrase, power, speed) {
         this.species = "alien" // ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
@@ -400,37 +400,10 @@ class Alien extends Enemy {
 }
 ```
 
--   When inheriting, all parent methods and properties will be inherited by the children. We can't decide what to inherit from a parent class (same as we can't choose what virtues and defects we inherit from our parents. 😅 We'll get back to this when we talk about composition).
--   Children classes can override the parent's properties and methods.
+-   在继承的时候，所有父类的方法和属性都会被子类继承，我们并不能决定继承哪些，不继承哪些。（就像我们不能决定从我们的父母那里继承哪些美德和缺点一样。😅 在讲组合的时候我们会重新提到这个点)。
+-   子类可以覆盖掉父类的属性和方法。
 
-To give an example, in our previous code, the Alien class extends the Enemy class and it inherits the `attack` method which logs `I'm attacking with a power of ${this.power}!`:
-
-```javascript
-class Enemy extends Character {
-    constructor(name, phrase, power, speed) {
-        super(speed)
-        this.name = name
-        this.phrase = phrase
-        this.power = power
-    }
-    sayPhrase = () => console.log(this.phrase)
-    attack = () => console.log(`I'm attacking with a power of ${this.power}!`)
-}
-
-
-class Alien extends Enemy {
-    constructor (name, phrase, power, speed) {
-        super(name, phrase, power, speed)
-        this.species = "alien"
-    }
-    fly = () => console.log("Zzzzzziiiiiinnnnnggggg!!")
-}
-
-const alien1 = new Alien("Ali", "I'm Ali the alien!", 10, 50)
-alien1.attack() // output: I'm attacking with a power of 10!
-```
-
-Let's say we want the `attack` method to do a different thing in our Alien class. We can override it by declaring it again, like this:
+举一个例子，在之前的代码中，Alien类继承了Enemy类的`attack` 方法，并打印 `I'm attacking with a power of ${this.power}!`:
 
 ```javascript
 class Enemy extends Character {
@@ -451,21 +424,48 @@ class Alien extends Enemy {
         this.species = "alien"
     }
     fly = () => console.log("Zzzzzziiiiiinnnnnggggg!!")
-    attack = () => console.log("Now I'm doing a different thing, HA!") // Override the parent method.
 }
 
 const alien1 = new Alien("Ali", "I'm Ali the alien!", 10, 50)
-alien1.attack() // output: "Now I'm doing a different thing, HA!"
+alien1.attack() // 输出: I'm attacking with a power of 10!
 ```
 
-## Encapsulation
-
-Encapsulation is another key concept in OOP, and it stands for an object's capacity to "decide" which information it exposes to "the outside" and which it doesn't. Encapsulation is implemented through **public and private properties and methods**.
-
-In JavaScript, all objects' properties and methods are public by default. "Public" just means we can access an object's property/method from outside its own body:
+假设我们希望Alien的 `attack` 方法表现不同，我们可以覆盖这个方法：
 
 ```javascript
-// Here's our class
+class Enemy extends Character {
+    constructor(name, phrase, power, speed) {
+        super(speed)
+        this.name = name
+        this.phrase = phrase
+        this.power = power
+    }
+    sayPhrase = () => console.log(this.phrase)
+    attack = () => console.log(`I'm attacking with a power of ${this.power}!`)
+}
+
+
+class Alien extends Enemy {
+    constructor (name, phrase, power, speed) {
+        super(name, phrase, power, speed)
+        this.species = "alien"
+    }
+    fly = () => console.log("Zzzzzziiiiiinnnnnggggg!!")
+    attack = () => console.log("Now I'm doing a different thing, HA!") // 覆盖父类的方法
+}
+
+const alien1 = new Alien("Ali", "I'm Ali the alien!", 10, 50)
+alien1.attack() // 输出: "Now I'm doing a different thing, HA!"
+```
+
+<h2 id="encapsulation">封装</h2>
+
+封装是OOP另一个关键概念。封装代表对象有“决定”将什么信息暴露在“外部”的能力。封装通过**公共和私有属性/方法**来实现。
+
+在JavaScript中，所有对象的属性和方法默认为公共的。“公共”意味着我们可以在函数体外部获取对象的属性和方法。
+
+```javascript
+// 类
 class Alien extends Enemy {
     constructor (name, phrase, power, speed) {
         super(name, phrase, power, speed)
@@ -474,47 +474,47 @@ class Alien extends Enemy {
     fly = () => console.log("Zzzzzziiiiiinnnnnggggg!!")
 }
 
-// Here's our object
+// 对象
 const alien1 = new Alien("Ali", "I'm Ali the alien!", 10, 50)
 
-// Here we're accessing our public properties and methods
+// 获取公共属性和方法
 console.log(alien1.name) // output: Ali
 alien1.sayPhrase() // output: "I'm Ali the alien!"
 ```
 
-To make this clearer, let's see how private properties and methods look like.
+为了让你更清晰地理解，让我们来看看私有属性和方法是什么样的：
 
-Let's say we want our Alien class to have a `birthYear` property, and use that property to execute a `howOld` method, but we don't want that property to be accessible from anywhere else other than the object itself. We could implement that like this:
+假设我们希望我们的Alien类有一个`birthYear`属性， 这个属性可以执行`howOld`方法，但我们不希望这个属性被除了对象以外的任何地方访问到， 我们可以这样做：
 
 ```javascript
 class Alien extends Enemy {
-    #birthYear // We first need to declare the private property, always using the '#' symbol as the start of its name.
+    #birthYear // 首先我们要声明一个私有属性，通常是用"#"打头
 
     constructor (name, phrase, power, speed, birthYear) {
         super(name, phrase, power, speed)
         this.species = "alien"
-        this.#birthYear = birthYear // Then we assign its value within the constructor function
+        this.#birthYear = birthYear // 然后将它赋值到constructor函数
     }
     fly = () => console.log("Zzzzzziiiiiinnnnnggggg!!")
-    howOld = () => console.log(`I was born in ${this.#birthYear}`) // and use it in the corresponding method.
+    howOld = () => console.log(`I was born in ${this.#birthYear}`) // 在对应的方法中使用
 }
     
-// We instantiate the same way we always do
+// 实例化的方法不变
 const alien1 = new Alien("Ali", "I'm Ali the alien!", 10, 50, 10000)
 ```
 
-Then we can access the `howOld` method, like this:
+我们可以访问 `howOld` 方法，如下：
 
 ```javascript
-alien1.howOld() // output: "I was born in 10000"
+alien1.howOld() // 输出: "I was born in 10000"
 ```
 
-But if we try to access the property directly, we'll get an error. And the private property won't show up if we log the object.
+但如果我们想要直接访问这个属性，会得到报错。当我们打印这个对象的时候，会看不到私有属性。
 
 ```javascript
-console.log(alien1.#birthYear) // This throws an error
+console.log(alien1.#birthYear) // 报错
 console.log(alien1) 
-// output:
+// 输出：
 // Alien {
 //     move: [Function: move],
 //     speed: 50,
@@ -529,33 +529,33 @@ console.log(alien1)
 //   }
 ```
 
-Encapsulation is useful in cases where we need certain properties or methods for the inner working of the object, but we don't want to expose that to the exterior. Having private properties/methods ensures we don't "accidentally" expose information we don't want.
+当我们需要某个特定的属性或者方法只在对象的内部运作，并且不暴露在外部时，封装就能够发挥作用。使用封装可以避免“暴露”我们不想暴露的信息。
 
-## Abstraction
+<h2 id="abstraction">抽象</h2>
 
-Abstraction is a principle that says that a class should only represent information that is relevant to the problem's context. In plain English, only expose to the outside the properties and methods that you're going to use. If it's not needed, don't expose it.
+抽象是一个原则，规定了一个类只能代表和问题上下文相关的信息。简言之，只暴露需要在外部使用的属性和方法，如果不需要使用，就不要暴露。
 
-This principle is closely related to encapsulation, as we can use public and private properties/methods to decide what gets exposed and what doesn't.
+这个原则和封装紧密相关，因为在封装中，我们使用公共和私有属性/方法来决定应该暴露哪些信息。
 
-## Polymorphism
+<h2 id="polymorphism">多态</h2>
 
-Then there is polymorphism (sounds really sophisticated, doesn't it? OOP names are the coolest... 🙃).  Polymorphism means "many forms" and is actually a simple concept. It's the ability of one method to return different values according to certain conditions.
+最后就是多态这个概念(听上去挺复杂的，不是吗？OOP的命名赛高！ 🙃)。 多态意味着“多种形态”，实际上这是一个简单的概念，表示的在不同的特定条件下使用一种方法返回不同的值。
 
-For example, we saw that the Enemy class has the `sayPhrase` method. And all our species classes inherit from the Enemy class, which means they all have the `sayPhrase` method as well.
+举个例子，我们发现Enemy类拥有 `sayPhrase`方法。 那么所有继承Enemy类的子种类都拥有 `sayPhrase`方法。
 
-But we can see that when we call the method on different species, we get different results:
+但是我们在不同种类（species）调用这个方法的时候，得到不同的结果：
 
 ```javascript
 const alien2 = new Alien("Lien", "Run for your lives!", 15, 60)
 const bug1 = new Bug("Buggy", "Your debugger doesn't work with me!", 25, 100)
 
-alien2.sayPhrase() // output: "Run for your lives!"
-bug1.sayPhrase() // output: "Your debugger doesn't work with me!"
+alien2.sayPhrase() // 输出: "Run for your lives!"
+bug1.sayPhrase() // 输出: "Your debugger doesn't work with me!"
 ```
 
-And that's because we passed each class a different parameter at instantiation. That's one kind of polymorphism, **parameter-based**. 👌
+这是因为我们在每一个子类实例化的时候，传入了不一样的参数。这是一种形式的多态—— **基于参数的**多态。 👌
 
-Another kind of polymorphism is **inheritance-based**, and that refers to when we have a parent class that sets a method and the child overrides that method to modify it in some way. The example we saw previously applies perfectly here as well:
+另一种多态是 **基于继承的**多态， 指的是子类覆盖了父类的属性和方法。上文的例子在这里也可以使用：
 
 ```javascript
 class Enemy extends Character {
@@ -576,30 +576,29 @@ class Alien extends Enemy {
         this.species = "alien"
     }
     fly = () => console.log("Zzzzzziiiiiinnnnnggggg!!")
-    attack = () => console.log("Now I'm doing a different thing, HA!") // Override the parent method.
+    attack = () => console.log("Now I'm doing a different thing, HA!") // 覆盖父类的方法
 }
 
 const alien1 = new Alien("Ali", "I'm Ali the alien!", 10, 50)
-alien1.attack() // output: "Now I'm doing a different thing, HA!"
+alien1.attack() // 输出: "Now I'm doing a different thing, HA!"
 ```
 
-This implementation is polymorphic because if we commented out the `attack` method in the Alien class, we would still be able to call it on the object:
-
+这里也是多态，是因为如果我们取消ALien类中的 `attack` 方法，我们仍可以在实例中调用这个方法：
 ```javascript
-alien1.attack() // output: "I'm attacking with a power of 10!"
+alien1.attack() // 输出: "I'm attacking with a power of 10!"
 ```
 
-We got the same method that can do one thing or another depending if it was overridden or not. Polymorphic.👌👌
+同一个方法打印不同的结果，这取决于我们是否覆盖了父类的方法。这就是多态！👌👌
 
-# Object Composition
+<h2 id="object-composition">对象组合</h2>
 
-[Object composition](https://en.wikipedia.org/wiki/Composition_over_inheritance) is a technique that works as an alternative to inheritance.
+[对象组合](https://en.wikipedia.org/wiki/Composition_over_inheritance)是替换继承的一种方法。
 
-When we talked about inheritance we mentioned that child classes always inherit all parent methods and properties. Well, by using composition we can assign properties and methods to objects in a more flexible way than inheritance allows, so objects only get what they need and nothing else.
+子类在继承的时候，会继承父类的所有方法和属性。如果使用组合，我们可以更加灵活地将方法和属性分配给对象，这样对象就只获得了需要的信息，不会有额外的信息。
 
-We can implement this quite simply, by using functions that receive the object as a parameter and assign it the desired property/method. Let's see it in an example.
+应用的方法很简单，只需使用接受对象作为参数的函数，并且分配其需要的属性/方法。请看下面的例子：
 
-Say now we want to add the flying ability to our bug characters. As we've seen in our code, only aliens have the `fly` method. So one option could be to duplicate the exact same method in the `Bug` class:
+假设我们想要给bug角色添加飞行的能力，在我们的代码中，只有外星人有 `fly` 方法。一种方式是让`Bug`类继承：
 
 ```javascript
 class Alien extends Enemy {
@@ -616,11 +615,11 @@ class Bug extends Enemy {
         this.species = "bug"
     }
     hide = () => console.log("You can't catch me now!")
-    fly = () => console.log("Zzzzzziiiiiinnnnnggggg!!") // We're duplicating code =(
+    fly = () => console.log("Zzzzzziiiiiinnnnnggggg!!") //我们重复了代码 =(
 }
 ```
 
-Another option would be to move the `fly` method up to the `Enemy` class, so it can be inherited by both the `Alien` and `Bug` classes. But that also makes the method available to classes that don't need it, like `Robot`.
+另一种方法是我们可以将 `fly`方法迁移到 `Enemy`里，这样 `Alien` 和 `Bug` 类都继承了这个方法。 但这样同样使得不需要这个方法的类也继承了，如 `Robot`。
 
 ```javascript
 class Enemy extends Character {
@@ -657,13 +656,13 @@ class Robot extends Enemy {
         this.species = "robot"
     }
     transform = () => console.log("Optimus prime!")
-	// I don't need the fly method =(
+	// 我并不需要飞行的方法 =(
 }
 ```
 
-As you can see, inheritance causes problems when the starting plan we had for our classes changes (which in the real world is pretty much always). Object composition proposes an approach in which objects get properties and methods assigned only as they need them.
+可见如果改变了一开始计划，继承会带来问题（在实际编码中经常会遇到）。对象组合就提供了一个方法使对象只获得他们需要的属性和方法。
 
-In our example, we could create a function and its only responsibility would be to add the flying method to any object that receives as parameter:
+在我们的例子中，我们可以创建一个函数，这个函数唯一的使命就是给需要的对象添加飞行方法，对象被作为参数传入函数。
 
 ```javascript
 const bug1 = new Bug("Buggy", "Your debugger doesn't work with me!", 25, 100)
@@ -673,23 +672,23 @@ const addFlyingAbility = obj => {
 }
 
 addFlyingAbility(bug1)
-bug1.fly() // output: "Now Buggy can fly!"
+bug1.fly() // 输出: "Now Buggy can fly!"
 ```
 
-And we could have very similar functions for each power or ability we may want our monsters to have.
+我们可以使用类似的方法，给我们的怪物添加不同的能力。
 
-As you can surely see, this approach is a lot more flexible than having parent classes with fixed properties and methods to inherit. Whenever an object needs a method, we just call the corresponding function and that's it.👌
+你肯定发现了这种方式比继承父类固定的属性和方法要灵活得多。当任意一个对象需要方法的时候，我们可以调用相应的函数来实现。👌
 
-Here's [a nice video that compares inheritance with composition](https://www.youtube.com/watch?v=wfMtDGfHWpA&t=3s).
+这里有一个[对比继承和组合的视频](https://www.youtube.com/watch?v=wfMtDGfHWpA&t=3s)，推荐观看！
 
-# Roundup
+<h1 id="roundup">总结</h1>
 
-OOP is a very powerful programming paradigm that can help us tackle huge projects by creating the abstraction of entities. Each entity will be responsible for certain information and actions, and entities will be able to interact with each other too, much like how the real world works.
+OOP是一个强大的编程范式，可以帮助我们通过创建实体抽象来执行庞大的项目。每一个实体负责特定的信息和行为，实体之间也可以相互作用，就像现实生活这样。
 
-In this article we learned about classes, inheritance, encapsulation, abstraction, polymorphism and composition. These are all key concepts in the OOP world. And we've also seen various examples of how OOP can be implemented in JavaScript.
+在这篇文章中我们学习了类、继承、封装、抽象、多态和组合。这些都是OOP世界中的关键概念。我们同样浏览了各种通过JavaScript实现OOP的例子。
 
-As always, I hope you enjoyed the article and learned something new. If you want, you can also follow me on [LinkedIn](https://www.linkedin.com/in/germancocca/) or [Twitter](https://twitter.com/CoccaGerman).
+希望你喜欢这篇文章，并从中受益。你可以在[LinkedIn](https://www.linkedin.com/in/germancocca/)或[Twitter](https://twitter.com/CoccaGerman)上关注我。
 
-Cheers and see you in the next one! ✌️
+干杯！下篇文章见！ ✌️
 
 ![98OvjJ](https://www.freecodecamp.org/news/content/images/2022/04/98OvjJ.gif)

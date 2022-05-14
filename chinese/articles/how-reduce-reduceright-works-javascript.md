@@ -1,6 +1,6 @@
 > -  原文地址：[How the JavaScript reduce and reduceRight Methods Work](https://www.freecodecamp.org/news/how-reduce-reduceright-works-javascript/)
 > -  原文作者：[Ashutosh Biswas](https://www.freecodecamp.org/news/author/ashutosh-biswas/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How the JavaScript reduce and reduceRight Methods Work](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/reduce-cover-with-title-3.jpg)

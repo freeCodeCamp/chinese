@@ -444,16 +444,16 @@ module.exports = router;
 
 和API交互的时候，我们始终会通过请求发送特定数据，或者通过响应接受数据。市面上有各种各样的数据格式，但是JSON（JavaScript Object Notation）是一个标准格式。
 
-Although there's the term **JavaScript** in JSON, it's not tied to it specifically. You can also write your API with Java or Python that can handle JSON as well.
+虽然在JSON的全称中有 **JavaScript** ，但两者并没有绑定。你也可以使用Java或者Python来编写你的API，来处理JSON。
 
-Because of its standardization, API's should accept and respond with data in JSON format.
+由于这样的标准化，API应该接受和响应JSON格式的数据。
 
-Let's take a look at our current implementation and see how we can integrate this best practice.
+让我们回到我们的代码，看看如何把这一点融入到我们的最佳实践。
 
-First, we create our service layer.
+首先，我们常见服务层。
 
 ```javascript
-// In src/services/workoutService.js
+// 在src/services/workoutService.js
 const getAllWorkouts = () => {
   return;
 };
@@ -483,41 +483,41 @@ module.exports = {
 };
 ```
 
-It's also a good practice to name the service methods the same as the controller methods so that you have a connection between those. Let's start off with just returning nothing.
+将服务方法和控制器方法命名为一样的名字也是一种最佳实践，这样可以让两者保持一定关联。让我们先不返回任何东西。
 
-Inside our workout controller we can use these methods.
+在训练软件的控制器中，我们使用了这些方法：
 
 ```javascript
-// In src/controllers/workoutController.js
-// *** ADD ***
+// 在src/controllers/workoutController.js
+// *** 添加 ***
 const workoutService = require("../services/workoutService");
 
 const getAllWorkouts = (req, res) => {
-  // *** ADD ***
+  // *** 添加 ***
   const allWorkouts = workoutService.getAllWorkouts();
   res.send("Get all workouts");
 };
 
 const getOneWorkout = (req, res) => {
-  // *** ADD ***
+  // *** 添加 ***
   const workout = workoutService.getOneWorkout();
   res.send("Get an existing workout");
 };
 
 const createNewWorkout = (req, res) => {
-  // *** ADD ***
+  // *** 添加 ***
   const createdWorkout = workoutService.createNewWorkout();
   res.send("Create a new workout");
 };
 
 const updateOneWorkout = (req, res) => {
-  // *** ADD ***
+  // *** 添加 ***
   const updatedWorkout = workoutService.updateOneWorkout();
   res.send("Update an existing workout");
 };
 
 const deleteOneWorkout = (req, res) => {
-  // *** ADD ***
+  // *** 添加 ***
   workoutService.deleteOneWorkout();
   res.send("Delete an existing workout");
 };
@@ -531,9 +531,9 @@ module.exports = {
 };
 ```
 
-At the moment nothing should have changed inside our responses. But under the hood our controller layer talks now with our service layer.
+现在我们不需要改变响应中的任何内容，但是控制器已经可以和服务层联通了。
 
-Inside our service methods we'll be handling our business logic like transforming data structures and communicating with our Database Layer.
+在服务的方法中，我们处理了商务逻辑，如改变数据结构。
 
 To do that, we need a database and a collection of methods that actually handle the database interaction. Our database will be a simple JSON file that is pre-filled with some workouts already.
 

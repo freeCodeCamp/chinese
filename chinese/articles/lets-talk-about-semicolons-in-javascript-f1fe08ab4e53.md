@@ -1,11 +1,11 @@
-> -  原文地址：[Let’s talk about semicolons in JavaScript](https://www.freecodecamp.org/news/lets-talk-about-semicolons-in-javascript-f1fe08ab4e53/)
-> -  原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Let’s talk about semicolons in JavaScript](https://www.freecodecamp.org/news/lets-talk-about-semicolons-in-javascript-f1fe08ab4e53/)
+> - 原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Let’s talk about semicolons in JavaScript](https://cdn-media-1.freecodecamp.org/images/1*xAFAiAxqZVrOVLBTo9tf6w.jpeg)
 
-#### To use them, or not to use them…
+#### To use them, or not to use them……
 
 Semicolons in JavaScript divide the community. Some prefer to use them always, no matter what. Others like to avoid them.
 
@@ -25,13 +25,13 @@ It’s important to know the rules that power semicolons. This will allow you to
 
 The JavaScript parser will automatically add a semicolon when, during the parsing of the source code, it finds these particular situations:
 
-1.  when the next line starts with code that breaks the current one (code can spawn on multiple lines)
-2.  when the next line starts with a `}`, closing the current block
-3.  when the end of the source code file is reached
-4.  when there is a `return` statement on its own line
-5.  when there is a `break` statement on its own line
-6.  when there is a `throw` statement on its own line
-7.  when there is a `continue` statement on its own line
+1. when the next line starts with code that breaks the current one (code can spawn on multiple lines)
+2. when the next line starts with a `}`, closing the current block
+3. when the end of the source code file is reached
+4. when there is a `return` statement on its own line
+5. when there is a `break` statement on its own line
+6. when there is a `throw` statement on its own line
+7. when there is a `continue` statement on its own line
 
 ### Examples of code that does not do what you think
 
@@ -103,8 +103,8 @@ Regardless, we just need to pay a bit of attention, even if most of the time tho
 
 Pick some rules:
 
--   Be careful with `return` statements. If you return something, add it on the same line as the return (same for `break`, `throw`, `continue`)
--   Never start a line with parentheses, as those might be concatenated with the previous line to form a function call, or an array element reference
+- Be careful with `return` statements. If you return something, add it on the same line as the return (same for `break`, `throw`, `continue`)
+- Never start a line with parentheses, as those might be concatenated with the previous line to form a function call, or an array element reference
 
 And ultimately, always test your code to make sure it does what you want.
 

@@ -5,13 +5,13 @@
 
 ![The Next.js Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2019/11/Group-1.png)
 
-I wrote this tutorial to help you quickly learn Next.js and get familiar with how it works.
+我写这个教程是为了帮助你快速学习 Next.js 并熟悉它的工作原理。
 
-It's ideal for you if you have zero to little knowledge of Next.js, you have used React in the past, and you are looking forward diving more into the React ecosystem, in particular server-side rendering.
+如果你对 Next.js 没有什么了解，过去使用过 React，并且希望更深入地了解 React 生态系统，特别是服务器端的渲染，那么这篇教程就非常适合你。
 
-I find Next.js an awesome tool to create Web Applications, and at the end of this post I hope you'll be as excited about it as I am. And I hope it will help you learn Next.js!
+我发现 Next.js 是创建 Web 应用的一个很棒的工具，在这篇文章的最后，我希望你会像我一样对它感到兴奋。我也希望它能帮助你学习 Next.js!
 
-[Note: you can download a PDF / ePub / Mobi version of this tutorial so you can read it offline](https://flaviocopes.com/page/nextjs-handbook/)!
+[注意：你可以下载本教程的 PDF/ePub/Mobi 版本，以便你可以离线阅读。](https://flaviocopes.com/page/nextjs-handbook/)!
 
 ## Index
 

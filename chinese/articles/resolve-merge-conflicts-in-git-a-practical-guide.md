@@ -1,114 +1,114 @@
-> -  原文地址：[How to Resolve Merge Conflicts in Git – A Practical Guide with Examples](https://www.freecodecamp.org/news/resolve-merge-conflicts-in-git-a-practical-guide/)
-> -  原文作者：[TAPAS ADHIKARY](https://www.freecodecamp.org/news/author/tapas/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Resolve Merge Conflicts in Git – A Practical Guide with Examples](https://www.freecodecamp.org/news/resolve-merge-conflicts-in-git-a-practical-guide/)
+> - 原文作者：[TAPAS ADHIKARY](https://www.freecodecamp.org/news/author/tapas/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Resolve Merge Conflicts in Git – A Practical Guide with Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/freeCodeCamp-Cover-1.png)
 
-`Git` is an open-source distributed version control system. It helps you manage your project files easily using local branching, staging, and workflows.
+`Git` 是一个开源的分布式版本控制系统。它帮助你使用本地分支、暂存和工作流程轻松管理你的项目文件。
 
-Many developers use Git today. And they're usually familiar with basic Git concepts like:
+现在很多开发者都在使用 Git。而且他们通常都熟悉 Git 的基本概念，比如:
 
--   How to initiate a repository.
--   How to create branches.
--   How to stage/unstage changes.
--   How to commit changes.
--   How to push commits to remote.
+- 如何初始化一个仓库。
+- 如何创建分支。
+- 如何进行暂存/撤销暂存性修改。
+- 如何提交更改。
+- 如何将提交内容推送到远程。
 
-However, many developers are confused about concepts like `merging` and `resolving merge conflicts`. In this article, we will learn how to resolve merge conflicts in a practical way. This means you will read, understand, and try it out while going through this article.
+然而，许多开发人员对 `合并（merging)`和 `解决合并冲突（resolving merge conflicts)` 等概念感到困惑。在这篇文章中，我们将学习如何以一种实用的方式解决合并冲突。这意味着你将在阅读、理解和尝试的同时，通过这篇文章。
 
-If you like to learn from video content as well, this article is also available as a video tutorial here: 🙂
+如果你也喜欢从视频内容中学习，这篇文章也可以作为视频教程在这里提供： 🙂
 
-If you are new to Git and want to learn all the basic concepts, [here is a helpful crash course](https://www.youtube.com/watch?v=vWtu4mzUgQo).
+如果你是 Git 的新手，想学习所有的基本概念, [这里有一个有用的快速入门课程](https://www.youtube.com/watch?v=vWtu4mzUgQo).
 
-## What are Devs Saying about "Merge Conflicts"?
+## 开发人员对合并冲突有何看法？
 
-Recently I conducted a poll on Twitter, LinkedIn, and YouTube, asking if developers are comfortable with resolving merge conflicts in Git. Guess what I found?
+最近我在 Twitter、LinkedIn 和 YouTube 上进行了一次投票，询问开发者对解决 Git 中的合并冲突是否感到满意。你猜我发现了什么？
 
-70%-80% of developers shared that they find it challenging to resolve a merge conflict in Git. So this means that "Resolving Merge Conflicts" is an important topic of discussion.
+70%-80% 的开发者分享说，他们认为在 Git 中解决合并冲突很有挑战性。所以这意味着 "解决合并冲突" 是一个重要的讨论话题。
 
 ![poll](https://www.freecodecamp.org/news/content/images/2022/05/poll.png)
 
-Poll Results - Are you comfortable resolving merge conflicts in Git?
+投票结果 - 你对解决 Git 中的合并冲突感到满意吗？
 
-## What is Git Merge and What are Merge Conflicts?
+## 什么是 Git 合并，什么是合并冲突？
 
-`Git` is a version control system that keeps a history of all your file versions. You can go back to any of the versions at any time and retrieve an older version.
+`Git` 是一个版本控制系统，它保留了你所有文件版本的历史。你可以在任何时候回到任何一个版本，并检索到更早的版本。
 
-Suppose you have created a file called `abc.txt` and pushed it to a Git repository. At this point, the file has its current version associated with it. Now, if your co-worker changed the same file and pushed it back to the repository, the file has a new version associated.
+假设你创建了一个叫 `abc.txt` 的文件，并将其推送到 Git 仓库。此时，该文件有其当前的版本与之相关。现在，如果你的同事修改了同一个文件，并把它推回仓库，该文件就有了新的版本。
 
-`Git Merge` is a feature that allows you to keep the file's current content in sync with other previous versions. This is essential because anyone at any point in time should be working on the most recent content of the file without overriding any changes from the previous versions.
+`Git Merge` 是一个允许你将文件的当前内容与其他以前的版本保持同步的功能。这一点非常重要，因为任何人在任何时间点都应该在文件的最新内容上工作，而不会覆盖以前版本的任何变化。
 
-Git `merge` helps you merge changes from other developers before pushing a new change to the same file.
+Git `merge` 可以帮助你在合并来自其他开发者的修改，向同一文件推送新的修改之前。
 
 ![image-46](https://www.freecodecamp.org/news/content/images/2022/05/image-46.png)
 
-In the case of Git merge, we need to be aware of two things:
+在 Git 合并的情况下，我们需要注意两件事:
 
-1.  **Changes**: What type of operations occurred between two versions of a file? New content is added or removed, or existing content is updated.
-2.  **Possibilities**: There are two possibilities. The changes happened in the `different regions` of the file or the changes happened in the `same region` of the file. Same region means that developers have made changes around the same place (for example, paragraphs, lines, and so on) of a file.
+1. **changes（变化）**：一个文件的两个版本之间发生了什么类型的操作？新的内容被添加或删除，或者现有内容被更新。
+2. **Possibilities（可能性）**: 有两种可能性。变化发生在文件的 "不同区域（different regions）"，或者变化发生在文件的 "相同区域（Same region）"。同一区域意味着开发者在文件的同一位置（例如，段落、行等）进行了修改。
 
-Fortunately, Git automatically takes care of most of these cases using the `auto-merge` strategy. But when the changes have occurred in the `same region` of the file, Git won't perform an auto-merge. Instead, it leaves it to you to `Resolve the Merge Conflicts`.
+幸运的是，Git 使用 "自动合并（auto-merge）" 策略自动处理了大多数这种情况。但是当这些变化发生在文件的 "同一区域" 时，Git 不会执行自动合并。相反，它让你去解决合并的冲突。
 
-## Git Merge Conflicts: A Horror Story
+## Git 合并冲突。一个恐怖的故事
 
-Let's understand the above situations with a story of two developers, Alex and Tina.
+让我们通过两个开发商 Alex 和 Tina 的故事来理解上述情况。
 
-One fine day,
+一个晴朗的日子，
 
--   Alex pulled changes from the remote repository to his local repository.
--   He changed the file called `abc.txt`, staged it, committed it, and finally pushed it back to the remote repository.
--   In the meantime, Tina, unaware of Alex's changes in the `abc.txt` file, made some changes in the `same region` of the file and tried pushing it to the remote repository.
--   `Git` is a version control system, so it warned Tina that she had changed the version older than what it was in the remote (as Alex's changes were already in the remote).
--   Now, Tina needs to first pull the changes from the remote, update the file, and then try pushing again.
--   Tina did this. However, in her wildest nightmare, she got the warning that `auto-merge` failed, and so she needs to now `Resolve the merge conflicts`.
+- Alex 把远程版本库的修改拉到他的本地版本库。
+- 他修改了名为 `abc.txt` 的文件，将其暂存（staged），提交（committed），最后推送（pushed）回远程版本库。
+- 同时，Tina 不知道 Alex 对`abc.txt`文件的修改，在该文件的 `相同区域` 做了一些修改，并尝试将其推送到远程仓库。
+- `Git`是一个版本控制系统，所以它警告 Tina，她修改的版本比远程中的版本要早（因为 Alex 的修改已经在远程中）。
+- 现在，Tina 需要先从远程拉出修改，更新文件，然后再尝试推送。
+- Tina 这样做了。然而，在她最疯狂的噩梦中，她得到了 "自动合并（auto-merge）" 失败的警告，所以她现在需要解决合并冲突。
 
 ![image-45](https://www.freecodecamp.org/news/content/images/2022/05/image-45.png)
 
-Does this story ring any bells? Is the above story related to you? There's a chance that you've been in Tina's shoes in the past. If not, you will get there eventually! So, let's understand how Tina has to deal with this situation efficiently.
+这个故事有什么印象吗？上述故事与你有关吗？有可能你过去曾站在 Tina 的位置上。如果没有，你最终会遇到这种情况! 那么，让我们来了解 Tina 如何有效地处理这种情况。
 
-## How to Resolve Merge Conflicts in Git
+## 如何解决 Git 中的合并冲突
 
-Resolving merge conflicts is not as tricky as it may sound. In 90% of cases, it is easier once you have a clear understanding of the changes and a peaceful mind.
+解决合并冲突并不像它听起来那么棘手。在 90%的情况下，一旦你对变化有了清晰的认识，并有一个平和的心态，就会比较容易。
 
-### Thought Process
+### 思考过程
 
-Once Tina pulls the changes, Tina's local file has her changes plus Alex's changes. Now Tina can do one of these four things:
+当 Tina 拉取了这些修改，Tina 的本地文件就有 Tina 的修改和 Alex 的修改。现在 Tina 可以做这四件事中选择一件:
 
--   She can keep Alex's changes and remove hers.
--   She can remove Alex's changes and keep hers.
--   She can keep both Alex's and her changes.
--   She can remove both Alex's and her changes.
+- 她可以保留 Alex 的修改并删除她的修改。
+- 她可以删除 Alex 的修改并保留她的修改。
+- 她可以同时保留 Alex 的和她的修改。
+- 她可以同时删除 Alex 的和她的改动。
 
-Alright, but which one she should be doing? That is entirely dependent on the project's needs and the use-cases. Tina will understand the `incoming` changes and do whatever is relevant to the situation.
+好吧，但她应该做哪一个？这完全取决于项目的需求和用例。Tina 会理解要做的变化，并做任何与情况相关的事情。
 
-So, what are `incoming` changes? How's Tina going to identify that? How does Tina make the changes? I know you have got many such questions. Let's get the answers to all of them by taking a couple of real-life examples in the section below.
+那么，什么是要做的变化？Tina 如何识别？Tina 如何做出改变？我知道你有很多这样的问题。让我们通过下面一节中的几个现实生活中的例子来获得所有的答案。
 
-## Steps to Resolve Merge Conflicts in Git
+## 解决 Git 中合并冲突的步骤
 
-Let's take a couple of real-life examples of merge conflicts, and learn how to resolve them.
+让我们举几个现实生活中的合并冲突的例子，并学习如何解决它们。
 
-At any point in time, if you want to learn these concepts interactively, please check out [this section of the video](https://www.youtube.com/watch?v=OulZeVtZhZQ&t=397s) I have mentioned at the beginning of this article.
+在任何时候，如果你想以互动的方式学习这些概念，请查看我在本文开头提到的 [本节视频](https://www.youtube.com/watch?v=OulZeVtZhZQ&t=397s)。
 
-### Example 1: Changes are in the Same Region of the File
+### 例子 1：改变是在文件的同一地区
 
-When Git cannot perform an auto-merge because changes are in the same region, it indicates the conflicting regions with special characters. The character sequences are like this:
+当 Git 无法执行自动合并时，因为更改在同一区域，它会用特殊字符来表示冲突的区域。这些字符序列是这样的:
 
--   `<<<<<<<`
--   `=======`
--   `>>>>>>>`
+- `<<<<<<<`
+- `=======`
+- `>>>>>>>`
 
-Everything between `<<<<<<<` and `=======` are your local changes. These changes are not in the remote repository yet. All the lines between `=======` and `>>>>>>>` are the changes from the remote repository or another branch. Now you need to look into these two sections and make a decision.
+`<<<<<<<`和`=======`之间的所有内容都是你的本地修改。 这些修改还没有在远程版本库中。`=======`和`>>>>>>>`之间的所有行都是来自远程版本库或另一个分支的修改。现在你需要研究这两个部分并做出决定。
 
-The image below shows the content of a file indicating that auto-merge didn't occur and there is a conflict. The conflict is in the line where we have modified the file locally by adding a line `- Sleep`. But in the meantime, someone else pushed a change by adding the line `- Gym` in the same region.
+下面的图片显示了一个文件的内容，表明自动合并没有发生，有一个冲突。冲突发生在我们在本地修改了文件，增加了一行`- Sleep`。但与此同时，其他人在同一区域添加了 `- Gym` 行，从而推送了一个修改。
 
-So, the line `- Sleep` is marked as the local change and `- Gym` as the incoming changes from the remote repository or another branch.
+因此，`- Sleep`行被标记为本地修改，`- Gym`行被标记为从远程仓库或其他分支传入的修改。
 
 ![merge-conflict](https://www.freecodecamp.org/news/content/images/2022/05/merge-conflict.jpg)
 
-Merge Conflict due to Changes in the Same Region
+由于同一区域的变化而产生的合并冲突
 
-Based on your use case and project needs, you will make the call to resolve the conflict. If you need to keep only the line with `- Sleep`, you will keep that and remove the rest of the conflicting texts. In that case, the file content becomes:
+根据你的用例和项目的需要，你将做出解决冲突的决定。如果你只需要保留带有 `- Sleep` 的那一行，你将保留这一行，并删除其余冲突的文本。在这种情况下，文件内容变成:
 
 ```bash
 - Eat
@@ -116,7 +116,7 @@ Based on your use case and project needs, you will make the call to resolve the 
 - Sleep
 ```
 
-On the contrary, you can keep the line `- Gym` and remove the `- Sleep` changes:
+相反，你可以保留 `- Gym` 这一行，并删除 `- Sleep`的修改:
 
 ```bash
 - Eat
@@ -124,7 +124,7 @@ On the contrary, you can keep the line `- Gym` and remove the `- Sleep` changes:
 - Gym
 ```
 
-If you need to keep both lines, remove the lines related to the conflict indicators:
+如果你需要保留这两行，请删除与冲突指标有关的线:
 
 ```bash
 - Eat
@@ -133,52 +133,52 @@ If you need to keep both lines, remove the lines related to the conflict indicat
 - Gym
 ```
 
-If you think none of the changes are required, remove them all.
+如果你认为不需要任何修改，就把它们全部删除吧。
 
 ```bash
 - Eat
 - Read
 ```
 
-It is entirely up to you to decide what changes are relevant to the situation. After your changes, you need to make sure that none of the conflict-indicating characters exist (<<<<<<<,  =======, >>>>>>>) in the file. Once you settle with the changes, do the following:
+完全由你来决定哪些修改与情况有关。在你的修改之后，你需要确保文件中不存在任何提示冲突的字符（<<<<<<<, =======, >>>>>>>）。当你解决了这些修改，请做以下工作:
 
-Stage the changes:
+暂存变化:
 
 ```bash
 git add <files>
 ```
 
-Commit the changes with a message:
+提交修改，并添加信息:
 
 ```bash
 git commit -m "Message"
 ```
 
-Finally, push the changes to the remote:
+最后，将变化推送到远程:
 
 ```bash
 git push
 ```
 
-That's all there is to it to resolve the merge conflict in this scenario.
+这就是解决这种情况下的合并冲突的全部内容。
 
-### Example 2: The File is Removed at the Remote/Other Branch
+### 例 2：文件在 Remote/Other 分支被删除
 
-In removed file merge conflicts, a dev deletes a file in one branch while another dev edits the same file in another branch. In this case, you need to decide if you want to keep the file or if it was right to delete it.
+在删除文件的合并冲突中，一个开发者在一个分支中删除了一个文件，而另一个开发者在另一个分支中编辑了同一个文件。在这种情况下，你需要决定是否要保留这个文件，或者删除它是否正确。
 
-To add the deleted file back to your branch, do this:
+要把被删除的文件加回你的分支，请这样做:
 
 ```bash
 git add <file-name>
 ```
 
-To go ahead with the deletion of the file, do this:
+要继续删除文件，请这样做:
 
 ```bash
 git rm <file-name>
 ```
 
-Then commit your changes with a message:
+然后提交你的修改，并添加消息:
 
 ```bash
 git commit -m "Message"
@@ -190,25 +190,25 @@ Finally, push it:
 git push
 ```
 
-## What's Next?
+## 下一步是什么？
 
-If you learn from the above two examples and practice them, you will be able to take care of most scenarios and resolve your merge conflicts. So, I recommend practicing them a couple of times.
+如果你从以上两个例子中学习并实践它们，你将能够解决大多数情况下的合并冲突。所以，我建议多练习几次。
 
-If you face any new scenarios or get stuck in resolving a merge conflict, feel free to post a comment about it in the [comment section of this video](https://www.youtube.com/watch?v=OulZeVtZhZQ). I'll try my best to respond back!
+如果你面临任何新的情况，或在解决合并冲突时被卡住，请随时在 [本视频的评论区](https://www.youtube.com/watch?v=OulZeVtZhZQ) 发表有关评论。我将尽力回复!
 
-Before we wrap up, a few tips for you:
+在我们总结之前，有几个提示给你:
 
--   All the examples shown in this article assumes that you're using GitBash or any other Git CLI to resolve merge conflicts. You can use any other GUI tool to do the same.
--   Always pull from remote/other related branches before you start any new logical work on your code. It will keep your branch up-to-date as much as possible and reduce the chances of conflicts.
--   Always pull before a push to make sure you will not face any rejections from Git.
--   Talk to your peers/co-developers when you are unable to make a call on what to keep vs. what to remove. Pair up to resolve any difficult merge conflicts.
+- 本文所展示的所有例子都假设你使用 GitBash 或其他 Git CLI 来解决合并冲突。你也可以使用任何其他 GUI 工具来做同样的事情。
+- 在开始对代码进行任何新的逻辑工作之前，总是从远程/其他相关分支拉取。这将使你的分支尽可能地保持最新状态，并减少冲突的机会。
+- 总是在推送之前拉取，以确保你不会面临任何来自 Git 的拒绝。
+- 当你无法决定什么该保留，什么该删除时，请与你的同伴/合作开发者讨论。结伴解决任何困难的合并冲突。
 
-That's all for now. I hope you found this article informative and insightful to help you with merge conflicts in Git.
+这就是目前的全部内容。我希望你能发现这篇文章的信息量和洞察力，帮助你解决 Git 中的合并冲突。
 
-Let's connect.
+联系方式
 
--   Give a [Follow on Twitter](https://twitter.com/tapasadhikary) if you don't want to miss the daily dose of Web Development and Programming Tips.
--   Check out my Opensource projects on [GitHub](https://github.com/atapas).
--   You can [SUBSCRIBE](https://www.youtube.com/tapasadhikary?sub_confirmation=1) to my YouTube channel if you want to learn JavaScript, ReactJS, Node.js, Git, and all about Web Development in a practical way.
+- 如果你不想错过每天的网络开发和编程技巧，请给 [在 Twitter 上关注我](https://twitter.com/tapasadhikary)。
+- 在 [GitHub](https://github.com/atapas) 上查看我的开放源代码项目。
+- 如果你想学习 JavaScript、ReactJS、Node.js、Git 和所有关于 Web 开发的实用方法，你可以 [订阅我的 YouTube 频道](https://www.youtube.com/tapasadhikary?sub_confirmation=1)。
 
-See you soon with my next article. Until then, please take care of yourself, and stay happy.
+我的下一篇文章很快就会与你见面。在那之前，请照顾好自己，并保持快乐。

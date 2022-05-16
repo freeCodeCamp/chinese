@@ -1,7 +1,7 @@
-> -  原文地址：[The Next.js Handbook](https://www.freecodecamp.org/news/the-next-js-handbook/)
-> -  原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[The Next.js Handbook](https://www.freecodecamp.org/news/the-next-js-handbook/)
+> - 原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![The Next.js Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2019/11/Group-1.png)
 
@@ -15,32 +15,32 @@ I find Next.js an awesome tool to create Web Applications, and at the end of thi
 
 ## Index
 
-1.  [Introduction](#introduction)
-2.  [The main features provided by Next.js](#the-main-features-provided-by-next-js)
-3.  [Next.js vs Gatsby vs `create-react-app`](#next-js-vs-gatsby-vs-create-react-app)
-4.  How to install Next.js
-5.  [View source to confirm SSR is working](#view-source-to-confirm-ssr-is-working)
-6.  [The app bundles](#the-app-bundles)
-7.  [What's that icon in the bottom right?](#what-s-that-icon-on-the-bottom-right)
-8.  [Install the React DevTools](#install-the-react-developer-tools)
-9.  [Other debugging techniques you can use](#other-debugging-techniques-you-can-use)
-10.  [Adding a second page to the site](#adding-a-second-page-to-the-site)
-11.  [Linking the two pages](#linking-the-two-pages)
-12.  [Dynamic content with the router](#dynamic-content-with-the-router)
-13.  [Prefetching](#prefetching-1)
-14.  [Using the router to detect the active link](#using-the-router-to-detect-the-active-link)
-15.  [Using `next/router`](#using-next-router)
-16.  [Feed data to the components using `getInitialProps()`](#feed-data-to-the-components-using-getinitialprops)
-17.  [CSS](#css)
-18.  [Populating the head tag with custom tags](#populating-the-head-tag-with-custom-tags)
-19.  [Adding a wrapper component](#adding-a-wrapper-component)
-20.  [API routes](#api-routes)
-21.  [Run code on the server side, or on the client side](#run-code-only-on-the-server-side-or-client-side)
-22.  [Deploying the production version](#deploying-the-production-version)
-23.  [Deploying on Now](#deploying-on-now)
-24.  [Analyzing the app bundles](#analyzing-the-app-bundles)
-25.  [Lazy loading modules](#lazy-loading-modules)
-26.  [Where to go from here](#where-to-go-from-here)
+1. [Introduction](#introduction)
+2. [The main features provided by Next.js](#the-main-features-provided-by-next-js)
+3. [Next.js vs Gatsby vs `create-react-app`](#next-js-vs-gatsby-vs-create-react-app)
+4. How to install Next.js
+5. [View source to confirm SSR is working](#view-source-to-confirm-ssr-is-working)
+6. [The app bundles](#the-app-bundles)
+7. [What's that icon in the bottom right?](#what-s-that-icon-on-the-bottom-right)
+8. [Install the React DevTools](#install-the-react-developer-tools)
+9. [Other debugging techniques you can use](#other-debugging-techniques-you-can-use)
+10. [Adding a second page to the site](#adding-a-second-page-to-the-site)
+11. [Linking the two pages](#linking-the-two-pages)
+12. [Dynamic content with the router](#dynamic-content-with-the-router)
+13. [Prefetching](#prefetching-1)
+14. [Using the router to detect the active link](#using-the-router-to-detect-the-active-link)
+15. [Using `next/router`](#using-next-router)
+16. [Feed data to the components using `getInitialProps()`](#feed-data-to-the-components-using-getinitialprops)
+17. [CSS](#css)
+18. [Populating the head tag with custom tags](#populating-the-head-tag-with-custom-tags)
+19. [Adding a wrapper component](#adding-a-wrapper-component)
+20. [API routes](#api-routes)
+21. [Run code on the server side, or on the client side](#run-code-only-on-the-server-side-or-client-side)
+22. [Deploying the production version](#deploying-the-production-version)
+23. [Deploying on Now](#deploying-on-now)
+24. [Analyzing the app bundles](#analyzing-the-app-bundles)
+25. [Lazy loading modules](#lazy-loading-modules)
+26. [Where to go from here](#where-to-go-from-here)
 
 ## Introduction
 
@@ -142,12 +142,12 @@ After you install Node.js, you will have the `npm` command available into your c
 
 If you have any trouble at this stage, I recommend the following tutorials I wrote for you:
 
--   [How to install Node.js](https://flaviocopes.com/node-installation/)
--   [How to update Node.js](https://flaviocopes.com/how-to-update-node/)
--   [An introduction to the npm package manager](https://flaviocopes.com/npm/)
--   [Unix Shells Tutorial](https://flaviocopes.com/shells/)
--   [How to use the macOS terminal](https://flaviocopes.com/macos-terminal/)
--   [The Bash Shell](https://flaviocopes.com/bash/)
+- [How to install Node.js](https://flaviocopes.com/node-installation/)
+- [How to update Node.js](https://flaviocopes.com/how-to-update-node/)
+- [An introduction to the npm package manager](https://flaviocopes.com/npm/)
+- [Unix Shells Tutorial](https://flaviocopes.com/shells/)
+- [How to use the macOS terminal](https://flaviocopes.com/macos-terminal/)
+- [The Bash Shell](https://flaviocopes.com/bash/)
 
 Now that you have Node, updated to the latest version, and `npm`, we're set!
 
@@ -219,8 +219,8 @@ npm install next react react-dom
 
 Your project folder should now have 2 files:
 
--   `package.json` ([see my tutorial on it](https://flaviocopes.com/package-json/))
--   `package-lock.json` ([see my tutorial on package-lock](https://flaviocopes.com/package-lock-json/))
+- `package.json` ([see my tutorial on it](https://flaviocopes.com/package-json/))
+- `package-lock.json` ([see my tutorial on package-lock](https://flaviocopes.com/package-lock-json/))
 
 and the `node_modules` folder.
 
@@ -298,9 +298,9 @@ It's one of the main selling points of Next.js: if we create a site using Next.j
 
 This has 3 major benefits:
 
--   The client does not need to instantiate React to render, which makes the site faster to your users.
--   Search engines will index the pages without needing to run the client-side JavaScript. Something Google started doing, but openly admitted to be a slower process (and you should help Google as much as possible, if you want to rank well).
--   You can have social media meta tags, useful to add preview images, customize title and description for any of your pages shared on Facebook, Twitter and so on.
+- The client does not need to instantiate React to render, which makes the site faster to your users.
+- Search engines will index the pages without needing to run the client-side JavaScript. Something Google started doing, but openly admitted to be a slower process (and you should help Google as much as possible, if you want to rank well).
+- You can have social media meta tags, useful to add preview images, customize title and description for any of your pages shared on Facebook, Twitter and so on.
 
 Let's view the source of the app.  
 Using Chrome you can right-click anywhere in the page, and press **View Page Source**.
@@ -353,10 +353,10 @@ Let's start by putting the code in an [HTML formatter](https://htmlformatter.com
 
 We have 4 JavaScript files being declared to be preloaded in the `head`, using `rel="preload" as="script"`:
 
--   `/_next/static/development/pages/index.js` (96 LOC)
--   `/_next/static/development/pages/_app.js` (5900 LOC)
--   `/_next/static/runtime/webpack.js` (939 LOC)
--   `/_next/static/runtime/main.js` (12k LOC)
+- `/_next/static/development/pages/index.js` (96 LOC)
+- `/_next/static/development/pages/_app.js` (5900 LOC)
+- `/_next/static/runtime/webpack.js` (939 LOC)
+- `/_next/static/runtime/main.js` (12k LOC)
 
 This tells the browser to start loading those files as soon as possible, before the normal rendering flow starts. Without those, scripts would be loaded with an additional delay, and this improves the page loading performance.
 
@@ -993,19 +993,19 @@ The `getInitialProps` function will be executed on the server side, but also on 
 
 It's important to note that `getInitialProps` gets, in the context object it receives, in addition to the `query` object these other properties:
 
--   `pathname`: the `path` section of URL
--   `asPath` - String of the actual path (including the query) shows in the browser
+- `pathname`: the `path` section of URL
+- `asPath` - String of the actual path (including the query) shows in the browser
 
 which in the case of calling `http://localhost:3000/blog/test` will respectively result to:
 
--   `/blog/[id]`
--   `/blog/test`
+- `/blog/[id]`
+- `/blog/test`
 
 And in the case of server side rendering, it will also receive:
 
--   `req`: the HTTP request object
--   `res`: the HTTP response object
--   `err`: an error object
+- `req`: the HTTP request object
+- `res`: the HTTP response object
+- `err`: an error object
 
 `req` and `res` will be familiar to you if you've done any Node.js coding.
 
@@ -1048,13 +1048,13 @@ You write it inside the JSX, like this:
 ```js
 const Index = () => (
   <div>
-		<h1>Home page</h1>
+  <h1>Home page</h1>
 
-		<style jsx>{`
-		  h1 {
-		    font-size: 3rem;
-		  }
-		`}</style>
+  <style jsx>{`
+    h1 {
+      font-size: 3rem;
+    }
+  `}</style>
   </div>
 )
 
@@ -1066,13 +1066,13 @@ Inside the block we can use interpolation to dynamically change the values. For 
 ```js
 const Index = props => (
   <div>
-		<h1>Home page</h1>
+  <h1>Home page</h1>
 
-		<style jsx>{`
-		  h1 {
-		    font-size: ${props.size}rem;
-		  }
-		`}</style>
+  <style jsx>{`
+    h1 {
+      font-size: ${props.size}rem;
+    }
+  `}</style>
   </div>
 )
 ```
@@ -1114,8 +1114,8 @@ From any Next.js page component, you can add information to the page header.
 
 This is handy when:
 
--   you want to customize the page title
--   you want to change a meta tag
+- you want to customize the page title
+- you want to change a meta tag
 
 How can you do so?
 
@@ -1425,9 +1425,9 @@ Once you run the `now` program, the app is deployed to a random URL under the `n
 
 We can see 3 different URLs in the output given in the image:
 
--   [https://firstproject-2pv7khwwr.now.sh](https://firstproject-2pv7khwwr.now.sh)
--   [https://firstproject-sepia-ten.now.sh](https://firstproject-sepia-ten.now.sh)
--   [https://firstproject.flaviocopes.now.sh](https://firstproject.flaviocopes.now.sh)
+- [https://firstproject-2pv7khwwr.now.sh](https://firstproject-2pv7khwwr.now.sh)
+- [https://firstproject-sepia-ten.now.sh](https://firstproject-sepia-ten.now.sh)
+- [https://firstproject.flaviocopes.now.sh](https://firstproject.flaviocopes.now.sh)
 
 Why so many?
 

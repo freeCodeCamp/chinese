@@ -1,79 +1,88 @@
-> * 原文地址：[Inside Afghanistan’s friendliest coding club](https://www.freecodecamp.org/news/inside-afghanistans-friendliest-coding-club-d553719579e/)
-> * 原文作者：Quincy Larson
-> * 译者：
-> * 校对者：
+> -   原文地址：[Inside Afghanistan’s friendliest coding club](https://www.freecodecamp.org/news/inside-afghanistans-friendliest-coding-club-d553719579e/)
+> -   原文作者：Quincy Larson
+> -   译者：
+> -   校对者：
 
-When you think of Afghanistan, you may think of the ongoing 17-year war that has claimed the lives of thousands of people.
+（此处有图）
 
-But amid all the turmoil, a generation of software developers is working to redefine Kabul — Afghanistan’s capital city and home to 5 million people — as a global technology hub.
+当你想到阿富汗时，你可能会想到持续 17 年、夺取数千人生命的那场战争。
 
-Every weekend, dozens of ambitious developers meet in offices around Kabul to code together and share their knowledge with one another.
+但在混乱中，有着 500 万人生活的阿富汗首都喀布尔，一代软件工程师正在重新将它定义为全球技术中心。
 
-Enter CodeWeekend — a grass-roots organization that’s expanding Kabul’s tech scene
-More than 3,000 Afghan developers and developers-in-training are part of CodeWeekend.
+每周末，几十个进取的开发者都会在喀布尔附近的办公室一起写代码，并向他人分享他们的知识。
 
-CodeWeekend hosts coding events around Kabul each weekend.
+## 走进“编程周末” —— 一个改变喀布尔技术面貌的草根组织
 
-To date, they’ve hosted more than 100 events.
+超过 3000 位阿富汗的开发者、准开发者都是参与到了编程周末。
 
+编程周末每周都会在喀布尔举办编程活动。
 
-One participant helps another with their code.
-CodeWeekend absorbed the freeCodeCamp Kabul study group, and has now become its own nonprofit organization. It focuses on helping Kabul locals improve their programming skills and build their professional networks.
+截至目前，他们已举办超过 100 场活动。
 
-They achieve this by running free programming workshops, providing networking opportunities, and helping make technology more accessible.
+（此处有图）
 
-“We have 2 types of sessions. Our weekly sessions teach people who are new to programming. And our monthly events bring software developers and other tech professionals together under one roof so they can share knowledge and provide an opportunity for networking.” — Jawed Mansoor, CodeWeekend organizer
-The CodeWeekend community goes to great lengths to be as inclusive as possible.
+一个参会者帮助另一个编码
 
-It has a strictly-enforced code of conduct that would be right at home at a Silicon Valley tech conference.
+编程周末吸纳了 freeCodeCamp 喀布尔学习小组，它现已成为非营利组织。它专注于帮助喀布尔人改善他们的编程技能，并建立他们的专业网络。
 
-The code of conduct encourages behaviors like:
+他们通过举办免费编程工作坊、提供交流机会、让技术更容易获得来实现这一点。
 
-Using welcoming and inclusive language
-Being respectful of differing viewpoints and experiences
-Gracefully accepting constructive criticism
-Focusing on what is best for the community
-Showing empathy towards other community members
+> 我们有两种类型的活动。我们每周的活动教新人编程，而月度活动邀请在同一水平的软件工程师和其它专业技术人员，以便他们能分享知识，并提供一个交流机会。
+>
+> —— “编程周末”组织者 Jawed Mansoor
 
-Milad Mehraban gives a tech talk at Kardan university in Kabul
-CodeWeekend is broken down into neighborhood-level chapters — each with chapter leaders. These chapter leaders reach out to local companies and organizations to secure sponsors and venues for events.
+“编程周末”社区竭尽全力尽可能具有包容性，它秉持硅谷技术大会的行为准则，鼓励如下行为：
 
-“We don’t spend a lot on our events. We need a venue and some refreshments, maybe a projector. Whenever we want to have an event, we contact a private sector organization so they can provide us with space and internet. We’re looking forward to always having at least small room where we can have a dedicated venue.” — Mustafa Ehsan, CodeWeekend mentor
-Each event is around 3 hours long. First the teachers start by giving a high-level introduction to a topic. Then everybody starts working through freeCodeCamp.org’s curriculum. 3 or 4 mentors will float around helping people when they get stuck or have a question.
+-   使用热情和包容的语言
+-   尊重不同的观点和经验
+-   优雅地接受建设性批评
+-   专注于对社区最好的事
+-   对其他社区成员有同情心
 
-“We have people consistently coming each week, with a high level of passion. Whenever we don’t have an event, people call and ask us why not. They really want this.” — Mustafa Ehsan, CodeWeekend mentor
-And their volunteer efforts are working. People from the CodeWeekend community are getting jobs as developers.
+（此处有图）
 
-Many of the jobs that their community members are getting involve building services for the Afghanistan government and local and international startups and companies.
+Milad Mehraban 在喀布尔的 Kardan 大学做技术讲座
 
-For example, their teams build and maintains web apps for Human Resources departments and other back office functions.
+“编程周末”分为街坊级的分会，每个分会都有负责人。分会负责人们与当地的公司和组织联络，以保障赞助和活动场地。
 
-And in the process, they get to work with exciting new tools like Vue.js and Laravel.
+> 我们不在我们的活动上花费太多。我们需要一个场地和一些茶点，可能还要一个投影仪。每当我们想举办活动时，我们都会联系一个私营机构，以便他们为我们提供空间和互联网。我们期望至少有个小房间作为专用场地。
+>
+> —— “编程周末”导师 Mustafa Ehsan
 
-The people behind CodeWeekend and freeCodeCamp Kabul
+每期活动大概 3 小时。首先，老师以一个对主题的概括性介绍开场。然后，每个人开始做 freeCodeCamp.org 的课程。三四个导师会穿梭其间，帮助遇到困难或有问题的人。
 
-freeCodeCamp Kabul teacher Mustafa Ehsan leads many of the CodeWeekend events.
-Jamshid Hashimi is the founder of CodeWeekend. At age 13, he started a football club in the rural village where he grew up.
+> 有些人每周都来，热情高涨。每当我们没办活动时，总有人来问我们为啥不办。他们真的很期待。
+>
+> —— “编程周末”导师 Mustafa Ehsan
 
-He went on to study at Dokuz Eylul University in Turkey before working at companies like Rumie and Alidrivers.
+他们的志愿工作在产生作用，来自“编程周末”社区的人逐渐找到开发者工作。他们社区成员获得的很多工作涉及为阿富汗政府、本地/国际创业公司构建服务。
 
-CodeWeekend was the perfect intersection of his two passions — technology and community building — so he created the organization in 2014.
+比如，他们的团队为人力资源部门和其它后台办公功能开发并维护 Web 应用，并且在此过程中，他们开始使用像 Vue.js 和 Laravel 这样令人兴奋的新工具。
 
-Shaheen Naikpay isn’t a developer by profession. He has a background in educational psychology. He works as a project manager on the military side of the industry.
+## “编程周末”和 FCC 喀布尔社区背后的人们
 
-But Shaheen says he likes to contribute to society, and CodeWeekend is a big part of that. He volunteers as CodeWeekend’s event management coordinator.
+freeCodeCamp 喀布尔社区的老师 Mustafa Ehsan 主持了很多“编程周末”活动。
 
-Some of the events are sponsored by Netlinks, Mustafa’s employer. The CEO of Netlinks actively encourages CodeWeekend to host the event there in the company’s large hall.
+Jamshid Hashimi 是“编程周末”创始人，他 13 岁时，在他长大的乡村创立了一个足球俱乐部。
 
-Jawed Mansoor completed his computer science degree in India. He works as a database engineer. He helps organize CodeWeekend events in Kabul.
+在 Rumie 和 Alidrivers 等公司工作之前，他继续在土耳其的 Dokuz Eylul 大学学习。
 
-Fazila Nazary is an experienced database developer and instructor. She is the CodeWeekend director for Mazar-i Sharif, another city in Afghanistan.
+他对技术和社区营造充满激情，在 2014 年创立了 CodeWeekend，这正是两者的完美融合。
 
-The organization also has a broad roster of regular event mentors, including Mustafa Ehsan, Jalal Saidi, Sediq Khan, Mohammad Ali Abbasi, and Akmal Arzhang.
+Shaheen Naikpay 不是一个职业开发者，他有教育心理学背景，并作为一个军事工业的项目经理。
 
+但 Shaheen 说他喜欢贡献社会，“编程周末”是其中很大的一块，他志愿作为“编程周末”的活动管理协调员。
 
-If you’re traveling to Kabul, be sure to join the CodeWeekend Facebook group so you can attend one of their events.
+有些活动是 Mustafa 的雇主 Netlinks 赞助的，Netlinks 的 CEO 积极鼓励 CodeWeekend 在公司大堂办活动。
 
-And you can also support millions of people around the world who are learning to code. Make a tax-deductible donation to freeCodeCamp.org.
+Jawed Mansoor 在印度完成了他的计算机科学学位，并成为一名数据库工程师，在喀布尔帮助组织 CodeWeekend 活动。
 
-Together, we can create more free education resources. We can support communities like CodeWeekend, and the impact they’re making on the lives of people in their community.
+Fazila Nazary 是一名经验丰富的数据库开发者和讲师，她是阿富汗另一座城市 Mazar-i Sharif 的 CodeWeekend 理事。
+
+该组织还拥有广泛的常规活动导师名册，包括 Mustafa Ehsan、Jalal Saidi、Sediq Khan、Mohammad Ali Abbasi 和 Akmal Arzhang。
+
+若你正在阿富汗旅行，加入 CodeWeekend 的 Facebook 群组确保你能参加他们的活动。
+
+并且，你也可以向 freeCodeCamp.org 做免税捐款，来支持全球数以百万计正在学编程的人们。
+
+我们可以一起创造更多免费的教育资源，支持 CodeWeekend 这样的社区，和他们正在建立的对他们社区人民生活的影响。

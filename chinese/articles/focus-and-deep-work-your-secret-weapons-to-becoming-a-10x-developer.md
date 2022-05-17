@@ -1,8 +1,3 @@
-> * 原文地址：[Focus and Deep Work — Your Secret Weapons to Becoming a 10X Developer](https://www.freecodecamp.org/news/focus-and-deep-work-your-secret-weapons-to-becoming-a-10x-developer-8e203a6ad291/)
-> * 原文作者：Bar Franek
-> * 译者：[lingziyb](https://github.com/lingziyb)
-> * 校对者：
-
 **换句话说，就是怎样才能成为互联网大厂程序员中的一员。**
 
 不管你是一个正在忙着工作的职员，还是一个想要得到他人关注和技能提升的初级程序员；不管你是一个正打算变换路线，从公司离职去创业或者从事其他事情的领导者，还是一个刚毕业的没工作的大学生。这都没关系！
@@ -185,4 +180,3 @@
 **这是你编程技能成倍增长的时候。**
 
 高质量程序员的市场需求比以往都大。通往成功最靠谱的途径就是深度专注的工作。
-

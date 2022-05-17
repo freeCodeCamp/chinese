@@ -1,7 +1,7 @@
-> * 原文地址：[Demystifying server-side rendering in React](https://www.freecodecamp.org/news/demystifying-reacts-server-side-render-de335d408fe4/)
-> * 原文作者：Alex Moldovan
-> * 译者：Zhuotao Lian
-> * 校对者：
+> -   原文地址：[Demystifying server-side rendering in React](https://www.freecodecamp.org/news/demystifying-reacts-server-side-render-de335d408fe4/)
+> -   原文作者：Alex Moldovan
+> -   译者：Zhuotao Lian
+> -   校对者：
 
 ![React 服务端渲染解析与实践](https://cdn-media-1.freecodecamp.org/images/1*Ecd_MVlJQoZ3bNn-xclFiA.jpeg)
 
@@ -11,9 +11,9 @@
 
 如果一个应用程序在服务端和客户端都可以渲染，那么它被称作**通用应用程序**。
 
-### 为何需要 SSR 呢? 
+### 为何需要 SSR 呢?
 
-我们应该先了解 Web 应用程序在过去10年的发展历程，这有助于我们理解这个问题。
+我们应该先了解 Web 应用程序在过去 10 年的发展历程，这有助于我们理解这个问题。
 
 这与 [单页应用][1]（此后称 SPA）的兴起密切相关。与传统的服务端渲染应用相比，SPA 在速度和用户体验方面具有巨大优势。
 
@@ -25,11 +25,11 @@
 
 **SSR + SPA = 通用应用**
 
-你可能会在其他文章中看到  _同构应用 ( isomorphic app )_  这个词，这跟 _通用应用 ( universal app )_ 是一回事。
+你可能会在其他文章中看到 _同构应用 ( isomorphic app )_ 这个词，这跟 _通用应用 ( universal app )_ 是一回事。
 
 现在，用户不必等待 JS 加载，并能在初始请求返回响应后，立即获得**完全渲染的** **HTML**。
 
-试想一下，这能给使用 3G 网络的用户带来多么大的提升。你几乎可以立即在屏幕上获取内容，而不必浪费20多秒等它加载完成。
+试想一下，这能给使用 3G 网络的用户带来多么大的提升。你几乎可以立即在屏幕上获取内容，而不必浪费 20 多秒等它加载完成。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*v0wyppYBPaeqoeKRplinvQ.png)
 
@@ -87,21 +87,20 @@ function htmlTemplate( reactDom ) {
 
 我们创建了一个处理所有非静态请求的路由。 该路由将返回渲染完毕的 HTML。
 
-我们使用  `renderToString`  （第13到14行）来将起始 JSX 转化成要插入到 HTML 模板中的  `string`  。
+我们使用 `renderToString` （第 13 到 14 行）来将起始 JSX 转化成要插入到 HTML 模板中的 `string` 。
 
-请注意，我们在客户端和服务端代码中使用了相同的 Babel 插件。因此  _JSX_  和  _ES Modules_  可以在  `server.js` 中运行。
+请注意，我们在客户端和服务端代码中使用了相同的 Babel 插件。因此 _JSX_ 和 _ES Modules_ 可以在 `server.js` 中运行。
 
-客户端上相应的函数目前是  `ReactDOM.hydrate`  。该函数将使用服务端渲染的 React 应用程序，并将附加事件处理程序。
+客户端上相应的函数目前是 `ReactDOM.hydrate` 。该函数将使用服务端渲染的 React 应用程序，并将附加事件处理程序。
 
 ```javascript
-import ReactDOM from "react-dom";
-import Layout from "./components/Layout";
-
+import ReactDOM from 'react-dom';
+import Layout from './components/Layout';
 ```
 
 你可以查看 [仓库][4] 中的 `basic` 标签来浏览完整示例。
 
-搞定了！你刚刚创建了第一个 **服务端渲染的**  React 应用!
+搞定了！你刚刚创建了第一个 **服务端渲染的** React 应用!
 
 #### React 路由
 
@@ -133,7 +132,7 @@ export default class Layout extends React.Component {
 <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span>
 ```
 
-现在 `Layout` 组件会在服务端渲染多个路由。 
+现在 `Layout` 组件会在服务端渲染多个路由。
 
 我们需要模拟服务器端的路由。主要的更改如下所示。
 
@@ -202,7 +201,7 @@ res<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padd
 app.listen( 2048 );
 
 function htmlTemplate( reactDom, reduxState ) {
-    return 
+    return
         /* ... */
 
 
@@ -218,26 +217,26 @@ function htmlTemplate( reactDom, reduxState ) {
 
 }
 ```
+
 它看上去一点也不美观，但我们需要将完整的 JSON 状态和 HTML 一起发送。
 
 接下来看看客户端：
 
 ```javascript
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
-import { Provider as ReduxProvider } from "react-redux";
-import Layout from "./components/Layout";
-import createStore from "./store";
-const store = createStore( window.REDUX_DATA );
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider as ReduxProvider } from 'react-redux';
+import Layout from './components/Layout';
+import createStore from './store';
+const store = createStore(window.REDUX_DATA);
 const jsx = (
-    <ReduxProvider store={ store }>
+    <ReduxProvider store={store}>
         <Router>
             <Layout />
         </Router>
     </ReduxProvider>
 );
-
 ```
 
 请注意，我们调用了两次 `createStore` ，首先在服务端，然后在客户端。但是，我们使用保存在服务端的任一状态来初始化客户端。这个过程就像 DOM hydration。
@@ -246,9 +245,9 @@ const jsx = (
 
 #### 获取数据
 
-最后一个难题就是数据的加载。这有点棘手。假设我们有一个提供 JSON 数据的API。T
+最后一个难题就是数据的加载。这有点棘手。假设我们有一个提供 JSON 数据的 API。T
 
-在我们的代码库中，我 [利用一个公共的 API][9] 获取了2018年 Formula 1赛季的所有事件。假设我们要在 **主页** 显示所有事件。
+在我们的代码库中，我 [利用一个公共的 API][9] 获取了 2018 年 Formula 1 赛季的所有事件。假设我们要在 **主页** 显示所有事件。
 
 在 React 应用挂载完成并渲染完所有内容后，我们能从客户端调用 API。但这会导致糟糕的用户体验，可能需要在用户看到相关内容之前展示一个 spinner 或者 loader。
 
@@ -263,29 +262,29 @@ const jsx = (
 ```javascript
 export default [
     {
-        path: "/",
+        path: '/',
         component: Home,
         exact: true,
     },
     {
-        path: "/about",
+        path: '/about',
         component: About,
         exact: true,
     },
     {
-        path: "/contact",
+        path: '/contact',
         component: Contact,
         exact: true,
     },
     {
-        path: "/secret",
+        path: '/secret',
         component: Secret,
         exact: true,
     },
 ];
 ```
 
-然后我们静态声明每个组件的 data requirements。 
+然后我们静态声明每个组件的 data requirements。
 
 ```javascript
 /* ... */
@@ -350,7 +349,7 @@ Promise<span class="token punctuation" style="box-sizing: inherit; margin: 0px; 
 
 这样，我们就获得了当 React 在当前 URL 下被渲染成字符串时所需装载的组件列表。
 
-我们收集了  _data requirements_  并等待所有调用的 API 的返回值。最终，我们恢复服务端渲染，这时 Redux 中已经得到了数据。
+我们收集了 _data requirements_ 并等待所有调用的 API 的返回值。最终，我们恢复服务端渲染，这时 Redux 中已经得到了数据。
 
 可以查看 [相同仓库][11] 的 `fetch-data` 标签来浏览完整示例。
 
@@ -360,25 +359,27 @@ Promise<span class="token punctuation" style="box-sizing: inherit; margin: 0px; 
 
 #### Helmet
 
-作为 SSR 的奖励，让我们来看看 SEO。在使用 React 时，你可能想在  `<head>` 标签中设置不同的值，例如 _title_ , _meta tags_ , _key words_ 等等。  
+作为 SSR 的奖励，让我们来看看 SEO。在使用 React 时，你可能想在 `<head>` 标签中设置不同的值，例如 _title_ , _meta tags_ , _key words_ 等等。
 
-请注意， `<head>` 标签通常不属于 React 应用。 
+请注意， `<head>` 标签通常不属于 React 应用。
 
 这种情况下，[react-helmet][12] 提供了相应的解决方案，并对 SSR 有着很好的支持。
 
 ```javascript
-import React from "react";
-import Helmet from "react-helmet";
+import React from 'react';
+import Helmet from 'react-helmet';
 const Contact = () => (
     <div>
         <h2>This is the contact page</h2>
         <Helmet>
             <title>Contact Page</title>
-            <meta name="description" content="This is a proof of concept for React SSR" />
+            <meta
+                name="description"
+                content="This is a proof of concept for React SSR"
+            />
         </Helmet>
     </div>
 );
-
 ```
 
 你只需要将 `head` 数据添加到组件树的任意位置。这使得你可以在客户端更改已挂载的 React 应用以外的值。
@@ -421,9 +422,9 @@ function htmlTemplate( reactDom, reduxState, helmetData ) {
 
 现在，我们得到了一个功能完备的 React SSR 示例！
 
-我们从使用 _Express_ 应用进行简单的 HTML 渲染开始。逐步增加路由、状态管理和数据获取。最终，我们处理了 React 应用以外的更改。 
+我们从使用 _Express_ 应用进行简单的 HTML 渲染开始。逐步增加路由、状态管理和数据获取。最终，我们处理了 React 应用以外的更改。
 
-最终的代码库位于前面提到的 [相同仓库][13] 的 `master` 分支上。 
+最终的代码库位于前面提到的 [相同仓库][13] 的 `master` 分支上。
 
 #### 总结
 
@@ -436,8 +437,6 @@ function htmlTemplate( reactDom, reduxState, helmetData ) {
 你用过类似 SSR 的方法吗？或者你是否认为这篇文章存在纰漏？在 [Twitter][14] 上给我留言吧！
 
 如果你认为这篇文章对你有帮助，请在社区中分享它！
-
-  
 
 [1]: https://medium.com/@NeotericEU/single-page-application-vs-multiple-page-application-2591588efe58
 [2]: https://en.wikipedia.org/wiki/Web_crawler

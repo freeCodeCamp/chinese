@@ -1,7 +1,7 @@
-> * 原文地址：[These are the features in ES6 that you should know](https://www.freecodecamp.org/news/these-are-the-features-in-es6-that-you-should-know-1411194c71cb/)
-> * 原文作者：[Cristian Salcescu](https://www.freecodecamp.org/news/author/cristiansalcescu/)
-> * 译者：[Hanx](https://github.com/Samhanx)
-> * 校对者：
+> -   原文地址：[These are the features in ES6 that you should know](https://www.freecodecamp.org/news/these-are-the-features-in-es6-that-you-should-know-1411194c71cb/)
+> -   原文作者：[Cristian Salcescu](https://www.freecodecamp.org/news/author/cristiansalcescu/)
+> -   译者：[Hanx](https://github.com/Samhanx)
+> -   校对者：
 
 # 那些你应该知道的 ES6 特性
 
@@ -21,8 +21,8 @@ ES6 为 JavaScript 这门语言带来了很多特性。一些新的语法可以�
 
 ```js
 let x = 1;
-{ 
-  let x = 2;
+{
+    let x = 2;
 }
 console.log(x); //1
 ```
@@ -31,8 +31,8 @@ console.log(x); //1
 
 ```js
 var x = 1;
-{ 
-  var x = 2;
+{
+    var x = 2;
 }
 console.log(x); //2
 ```
@@ -40,12 +40,12 @@ console.log(x); //2
 在 `for` 循环语句中，使用 `let` 声明变量将会为每一次迭代创建一个当前块级作用域的本地新变量。以下这个循环在五个不同的 `i` 变量上创建了五个闭包。
 
 ```js
-(function run(){
-  for(let i=0; i<5; i++){
-    setTimeout(function log(){
-      console.log(i); //0 1 2 3 4
-    }, 100);
-  }
+(function run() {
+    for (let i = 0; i < 5; i++) {
+        setTimeout(function log() {
+            console.log(i); //0 1 2 3 4
+        }, 100);
+    }
 })();
 ```
 
@@ -75,17 +75,17 @@ console.log(x); //2
 
 ```js
 //module "./TodoStore.js"
-export default function TodoStore(){}
+export default function TodoStore() {}
 
 //module "./UserStore.js"
-export default function UserStore(){}
+export default function UserStore() {}
 ```
 
 导入操作让当前模块可以访问其他模块内的函数或者对象。
 
 ```js
-import TodoStore from "./TodoStore";
-import UserStore from "./UserStore";
+import TodoStore from './TodoStore';
+import UserStore from './UserStore';
 
 const todoStore = TodoStore();
 const userStore = UserStore();
@@ -100,22 +100,22 @@ const numbers = [1, 2, 3];
 const arr = ['a', 'b', 'c', ...numbers];
 
 console.log(arr);
-["a", "b", "c", 1, 2, 3]
+['a', 'b', 'c', 1, 2, 3];
 ```
 
 这是展开操作符。现在看另一个例子：
 
 ```js
-function process(x,y, ...arr){
-  console.log(arr)
+function process(x, y, ...arr) {
+    console.log(arr);
 }
-process(1,2,3,4,5);
+process(1, 2, 3, 4, 5);
 //[3, 4, 5]
 
-function processArray(...arr){
-  console.log(arr)
+function processArray(...arr) {
+    console.log(arr);
 }
-processArray(1,2,3,4,5);
+processArray(1, 2, 3, 4, 5);
 //[1, 2, 3, 4, 5]
 ```
 
@@ -126,15 +126,15 @@ processArray(1,2,3,4,5);
 使用剩余参数，我们可以替换掉 `arguments` 这个虚拟参数。剩余参数是一个数组，而 `arguments` 不是。
 
 ```js
-function addNumber(total, value){
-  return total + value;
+function addNumber(total, value) {
+    return total + value;
 }
 
-function sum(...args){
-  return args.reduce(addNumber, 0);
+function sum(...args) {
+    return args.reduce(addNumber, 0);
 }
 
-sum(1,2,3); //6
+sum(1, 2, 3); //6
 ```
 
 ### 克隆
@@ -144,7 +144,7 @@ sum(1,2,3); //6
 对象属性的展开操作符是 ES2018 的一部分。
 
 ```js
-const book = { title: "JavaScript: The Good Parts" };
+const book = { title: 'JavaScript: The Good Parts' };
 
 //clone with Object.assign()
 const clone = Object.assign({}, book);
@@ -152,13 +152,13 @@ const clone = Object.assign({}, book);
 //clone with spread operator
 const clone = { ...book };
 
-const arr = [1, 2 ,3];
+const arr = [1, 2, 3];
 
 //clone with slice
 const cloneArr = arr.slice();
 
 //clone with spread operator
-const cloneArr = [ ...arr ];
+const cloneArr = [...arr];
 ```
 
 **译注：** spread 进行引用类型的拷贝只是浅拷贝。
@@ -181,25 +181,23 @@ const arr = [...part1, ...part2];
 展开操作符，以及像 `Object.assign()` 方法，可以用来从至少一个对象复制属性到一个空对象上，然后合并它们的属性。
 
 ```js
-const authorGateway = { 
-  getAuthors : function() {},
-  editAuthor: function() {}
+const authorGateway = {
+    getAuthors: function () {},
+    editAuthor: function () {},
 };
 
-const bookGateway = { 
-  getBooks : function() {},
-  editBook: function() {}
+const bookGateway = {
+    getBooks: function () {},
+    editBook: function () {},
 };
 
 //copy with Object.assign()
-const gateway = Object.assign({},
-      authorGateway, 
-      bookGateway);
-      
+const gateway = Object.assign({}, authorGateway, bookGateway);
+
 //copy with spread operator
 const gateway = {
-   ...authorGateway,
-   ...bookGateway
+    ...authorGateway,
+    ...bookGateway,
 };
 ```
 
@@ -208,28 +206,28 @@ const gateway = {
 考虑下面的代码：
 
 ```js
-function BookGateway(){
-  function getBooks() {}
-  function editBook() {}
-  
-  return {
-    getBooks: getBooks,
-    editBook: editBook
-  }
+function BookGateway() {
+    function getBooks() {}
+    function editBook() {}
+
+    return {
+        getBooks: getBooks,
+        editBook: editBook,
+    };
 }
 ```
 
 有了属性简写，当属性名称和将作为属性值的变量的名称一样时，我们就可以只写一次属性键值。
 
 ```js
-function BookGateway(){
-  function getBooks() {}
-  function editBook() {}
-  
-  return {
-    getBooks,
-    editBook
-  }
+function BookGateway() {
+    function getBooks() {}
+    function editBook() {}
+
+    return {
+        getBooks,
+        editBook,
+    };
 }
 ```
 
@@ -238,10 +236,10 @@ function BookGateway(){
 ```js
 const todoStore = TodoStore();
 const userStore = UserStore();
-    
+
 const stores = {
-  todoStore,
-  userStore
+    todoStore,
+    userStore,
 };
 ```
 
@@ -250,37 +248,34 @@ const stores = {
 看下面的代码：
 
 ```js
-function TodoStore(args){
-  const helper = args.helper;
-  const dataAccess = args.dataAccess;
-  const userStore = args.userStore;
+function TodoStore(args) {
+    const helper = args.helper;
+    const dataAccess = args.dataAccess;
+    const userStore = args.userStore;
 }
 ```
 
 可以使用解构赋值写成像这样：
 
 ```js
-function TodoStore(args){
-   const { 
-      helper, 
-      dataAccess, 
-      userStore } = args;
+function TodoStore(args) {
+    const { helper, dataAccess, userStore } = args;
 }
 ```
 
 甚至可以直接在参数列表中使用解构语法：
 
 ```js
-function TodoStore({ helper, dataAccess, userStore }){}
+function TodoStore({ helper, dataAccess, userStore }) {}
 ```
 
 函数将这样调用：
 
 ```js
-TodoStore({ 
-  helper: {}, 
-  dataAccess: {}, 
-  userStore: {} 
+TodoStore({
+    helper: {},
+    dataAccess: {},
+    userStore: {},
 });
 ```
 
@@ -289,14 +284,14 @@ TodoStore({
 函数现在可以设置参数默认值。看下面的例子：
 
 ```js
-function log(message, mode = "Info"){
-  console.log(mode + ": " + message);
+function log(message, mode = 'Info') {
+    console.log(mode + ': ' + message);
 }
 
-log("An info");
+log('An info');
 //Info: An info
 
-log("An error", "Error");
+log('An error', 'Error');
 //Error: An error
 ```
 
@@ -305,8 +300,8 @@ log("An error", "Error");
 模板字符串使用 `\`` 字符定义。使用模板字符串，前面的输出内容可以写成这样：
 
 ```js
-function log(message, mode= "Info"){
-  console.log(`${mode}: ${message}`);
+function log(message, mode = 'Info') {
+    console.log(`${mode}: ${message}`);
 }
 ```
 
@@ -315,8 +310,8 @@ function log(message, mode= "Info"){
 下面是一个生成跨越多行的 HTML 代码的函数：
 
 ```js
-function createTodoItemHtml(todo){
-  return `<li>
+function createTodoItemHtml(todo) {
+    return `<li>
     <div>${todo.title}</div>
     <div>${todo.userName}</div>
   </li>`;
@@ -325,7 +320,7 @@ function createTodoItemHtml(todo){
 
 ## 更好的尾调用
 
->>> 当递归调用是函数执行的最后一项操作时，递归函数是尾递归的。
+> > > 当递归调用是函数执行的最后一项操作时，递归函数是尾递归的。
 
 尾递归函数比非尾递归函数表现更好。尾递归调用优化不会为每次函数调用创建新的堆栈帧，而是使用一个单一的堆栈帧。（**译注：** 即尾递归只会使用最初函数创建的堆栈帧）
 
@@ -334,14 +329,13 @@ ES6 在严格模式下开启了尾调用优化。
 [下面的函数](https://jsfiddle.net/cristi_salcescu/4t2j3uho/)会从尾调用优化中受益。
 
 ```js
-function print(from, to) 
-{ 
-  const n = from;
-  if (n > to)  return;
-  
-  console.log(n);
-  //the last statement is the recursive call 
-  print(n + 1, to); 
+function print(from, to) {
+    const n = from;
+    if (n > to) return;
+
+    console.log(n);
+    //the last statement is the recursive call
+    print(n + 1, to);
 }
 
 print(1, 10);
@@ -357,26 +351,28 @@ print(1, 10);
 
 **译注：** Promise 的 resolve 状态这里译为解决， reject 状态译为拒绝。
 
->>> Promise 是对一次异步调用的引用。它将来可能会在某处解决或者失败。
+> > > Promise 是对一次异步调用的引用。它将来可能会在某处解决或者失败。
 
 多个 Promise 能够更好地被组合在一起执行。正如[下面代码](https://jsfiddle.net/cristi_salcescu/eqyhq2e3/)所示，可以很容易地在所有 Promise 都解决后调用一个函数，或者只要有一个 Promise 被解决就调用一个函数。
 
 ```js
-function getTodos() { return fetch("/todos"); }
-function getUsers() { return fetch("/users"); }
-function getAlbums(){ return fetch("/albums"); }
+function getTodos() {
+    return fetch('/todos');
+}
+function getUsers() {
+    return fetch('/users');
+}
+function getAlbums() {
+    return fetch('/albums');
+}
 
-const getPromises = [
-  getTodos(), 
-  getUsers(), 
-  getAlbums()
-];
+const getPromises = [getTodos(), getUsers(), getAlbums()];
 
 Promise.all(getPromises).then(doSomethingWhenAll);
 Promise.race(getPromises).then(doSomethingWhenOne);
 
-function doSomethingWhenAll(){}
-function doSomethingWhenOne(){}
+function doSomethingWhenAll() {}
+function doSomethingWhenOne() {}
 ```
 
 `fetch()` 函数是 Fetch API 的一部分，它会返回一个 Promise。
@@ -387,15 +383,15 @@ Promise 支持链式调用，允许你通过一组函数传递数据。在[下�
 
 ```js
 getTodos()
-  .then(toJson)
-  .then(getTopPriority)
-  .then(renderTodos)
-  .catch(handleError);
+    .then(toJson)
+    .then(getTopPriority)
+    .then(renderTodos)
+    .catch(handleError);
 
-function toJson(response){}
-function getTopPriority(todos){}
-function renderTodos(todos){}
-function handleError(error){}
+function toJson(response) {}
+function getTopPriority(todos) {}
+function renderTodos(todos) {}
+function handleError(error) {}
 ```
 
 在前面的示例中，`.then()` 处理了成功的场景，`.catch()` 处理了发生错误的场景。任意一步有错误抛出，调用链将跳转到链中最近的拒绝状态处理方法。
@@ -408,7 +404,9 @@ ES6 中的类是使用自定义原型创建对象的语法糖。它有着比之�
 
 ```js
 class Service {
-  doSomething(){ console.log("doSomething"); }
+    doSomething() {
+        console.log('doSomething');
+    }
 }
 
 let service = new Service();
@@ -423,11 +421,15 @@ console.log(service.__proto__ === Service.prototype);
 
 ```js
 class Service {
-  doSomething(){ console.log("doSomething"); }
+    doSomething() {
+        console.log('doSomething');
+    }
 }
 
 class SpecialService extends Service {
-  doSomethingElse(){ console.log("doSomethingElse"); }  
+    doSomethingElse() {
+        console.log('doSomethingElse');
+    }
 }
 
 let specialService = new SpecialService();
@@ -447,11 +449,13 @@ specialService.doSomethingElse();
 
 ```js
 function Service() {
-  function doSomething(){ console.log("doSomething"); }
-  
-  return Object.freeze({
-     doSomething
-  });
+    function doSomething() {
+        console.log('doSomething');
+    }
+
+    return Object.freeze({
+        doSomething,
+    });
 }
 ```
 
@@ -468,13 +472,13 @@ function Service() {
 让我们来看一个 todo 应用的例子。一个 todo 对象有一个 `id`，一个 `title`，以及一个 `complete` 的布尔属性。现在来看下面这段只从对象中选择 `title` 属性的代码：
 
 ```js
-const titles = todos.map(todo => todo.title);
+const titles = todos.map((todo) => todo.title);
 ```
 
 或者下面这段只选择还未完成的待办事项的代码：
 
 ```js
-const filteredTodos = todos.filter(todo => !todo.completed);
+const filteredTodos = todos.filter((todo) => !todo.completed);
 ```
 
 ### this
@@ -486,36 +490,36 @@ const filteredTodos = todos.filter(todo => !todo.completed);
 在需要用到具名函数的场景时，箭头函数可能是一个不好的特性。使用箭头函数会影响代码的可读性和可维护性。看下面这段全部使用匿名箭头函数的代码：
 
 ```js
-const newTodos = todos.filter(todo => 
-       !todo.completed && todo.type === "RE")
-    .map(todo => ({
-       title : todo.title,
-       userName : users[todo.userId].name
+const newTodos = todos
+    .filter((todo) => !todo.completed && todo.type === 'RE')
+    .map((todo) => ({
+        title: todo.title,
+        userName: users[todo.userId].name,
     }))
-    .sort((todo1, todo2) =>  
-      todo1.userName.localeCompare(todo2.userName));
+    .sort((todo1, todo2) => todo1.userName.localeCompare(todo2.userName));
 ```
 
 现在来看[另一段同样逻辑的代码](https://jsfiddle.net/cristi_salcescu/pm7n2ab5/)，这段代码使用命名的纯函数进行了重构，函数的命名能帮助我们更好地理解它们：
 
 ```js
-const newTodos = todos.filter(isTopPriority)
-  .map(partial(toTodoView, users))
-  .sort(ascByUserName);
+const newTodos = todos
+    .filter(isTopPriority)
+    .map(partial(toTodoView, users))
+    .sort(ascByUserName);
 
-function isTopPriority(todo){
-  return !todo.completed && todo.type === "RE";
-}
-  
-function toTodoView(users, todo){
-  return {
-    title : todo.title,
-    userName : users[todo.userId].name
-  }
+function isTopPriority(todo) {
+    return !todo.completed && todo.type === 'RE';
 }
 
-function ascByUserName(todo1, todo2){
-  return todo1.userName.localeCompare(todo2.userName);
+function toTodoView(users, todo) {
+    return {
+        title: todo.title,
+        userName: users[todo.userId].name,
+    };
+}
+
+function ascByUserName(todo1, todo2) {
+    return todo1.userName.localeCompare(todo2.userName);
 }
 ```
 
@@ -527,20 +531,22 @@ function ascByUserName(todo1, todo2){
 
 ```js
 //with arrow function
-const prop = key => obj => obj[key];
+const prop = (key) => (obj) => obj[key];
 
 //with function keyword
-function prop(key){
-   return function(obj){
-      return obj[key];
-   }
+function prop(key) {
+    return function (obj) {
+        return obj[key];
+    };
 }
 ```
 
 注意返回对象的情况。下面的代码中，`getSampleTodo()` 函数返回了 `undefined`。
 
 ```js
-const getSampleTodo = () => { title : "A sample todo" };
+const getSampleTodo = () => {
+    title: 'A sample todo';
+};
 
 getSampleTodo();
 //undefined
@@ -553,35 +559,35 @@ getSampleTodo();
 ES6 的生成器创建了一个包含 `next()` 方法的对象。`next()` 方法又创建了一个包含 `value` 属性的对象。ES6 的生成器改善了循环的使用。看[下面的代码](https://jsfiddle.net/cristi_salcescu/edq7vfwm/)：
 
 ```js
-function* sequence(){
-  let count = 0;
-  while(true) {
-    count += 1;
-    yield count;
-  }
+function* sequence() {
+    let count = 0;
+    while (true) {
+        count += 1;
+        yield count;
+    }
 }
 
 const generator = sequence();
-generator.next().value;//1
-generator.next().value;//2
-generator.next().value;//3
+generator.next().value; //1
+generator.next().value; //2
+generator.next().value; //3
 ```
 
 同样的生成器可以用一个闭包来简单实现。
 
 ```js
-function sequence(){
-  let count = 0;
-  return function(){
-    count += 1;
-    return count;
-  }
+function sequence() {
+    let count = 0;
+    return function () {
+        count += 1;
+        return count;
+    };
 }
 
 const generator = sequence();
-generator();//1
-generator();//2
-generator();//3
+generator(); //1
+generator(); //2
+generator(); //3
 ```
 
 更多关于函数生成器的例子可以参看 [Let’s experiment with functional generators and the pipeline operator in JavaScript](https://www.freecodecamp.org/news/lets-experiment-with-functional-generators-and-the-pipeline-operator-in-javascript-520364f97448/)

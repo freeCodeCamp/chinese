@@ -1,95 +1,95 @@
-> * 原文地址：[How to Use MySQL With Deno and Oak](https://www.freecodecamp.org/news/how-to-use-mysql-in-deno-oak/)
-> * 原文作者：Adeel Imran
-> * 译者：hylerrix
-> * 校对者：hylerrix
+> -   原文地址：[How to Use MySQL With Deno and Oak](https://www.freecodecamp.org/news/how-to-use-mysql-in-deno-oak/)
+> -   原文作者：Adeel Imran
+> -   译者：hylerrix
+> -   校对者：hylerrix
 
 ![How to Use MySQL With Deno and Oak](https://images.unsplash.com/photo-1591509867461-d9f58becc082?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-I recently wrote about how to make a  **[Todo API in Deno + Oak (without using a database)][1]**. You can find the repo under  **[chapter\_1:oak][2]** on GitHub.
+我最近写了一篇关于 [Deno + Oak 构建酷炫 Todo API](https://www.freecodecamp.org/news/create-a-todo-api-in-deno-written-by-a-guy-coming-from-node/) 的文章 ，其中并没有使用数据库相关的知识点。您可以在我的 Github 仓库  [adeelibr/deno-playground](https://github.com/adeelibr/deno-playground/tree/master/chapter_1:oak)  的 chapter_1:oak 中查看当时的整套代码。
 
-This tutorial picks up where the other left off, and I'll go over how to integrate MySQL into a Deno and Oak project.
+> 译者注：翻译版的[《Deno + Oak 构建酷炫的 Todo API》](https://deno-tutorial.js.org/translations/004-deno-oak-todo-api.html)在这里，相关 Demo 也可以在电子书仓库中找到。
 
-If at any time you want to see the entire source code used in this tutorial, it's available at  [**chapter\_2:mysql**][3]. Feel free to give it a star on GitHub if you like it.
+本文将进一步讲起，一起来学习如何将 MySQL 集成到我们的 Deno + Oak 项目中。
 
-I'm assuming that you already completed the last tutorial mentioned above. If not, check it out  [here][4]  and come back when you're finished.
+如果你想随时了解本文的完整代码，可以在  [chapter_2:mysql](https://github.com/adeelibr/deno-playground/tree/master/chapter_2:mysql) 中找到，欢迎给仓库点个 Star。
 
-Before we start, make sure that you have a MySQL client installed and running:
+我将假设你已经阅读了上一篇文章，如果没有，可以先在[此处](https://www.freecodecamp.org/news/create-a-todo-api-in-deno-written-by-a-guy-coming-from-node/)阅读完后再回到本文来。
 
--   MySQL community server \[[Download here][5]\]
--   MySQL Workbench \[[Download here][6]\]
+在我们开始前，请确保你已经安装了一个 MySQL 客户端并你能成功运行：
 
-I wrote a small guide for Mac OS users on setting up MySQL because I struggled with it as well. Check it out  [here][7].
+-   MySQL community server [[在这里下载](https://dev.mysql.com/downloads/mysql/)]
+-   MySQL Workbench [[在这里下载](https://dev.mysql.com/downloads/workbench/)]
 
-If you are on a Windows machine you can use the same tools or you can also use  [XAMPP][8]  to have a MySQL instance running in your dashboard.
+同时我也为 MacOS 用户写了一个简短的，关于[如何安装 MySQL 的教程](https://github.com/adeelibr/deno-playground/blob/master/guidelines/setting-up-mysql-mac-os-catalina.md)。
 
-Once you have a MySQL instance running we can begin our tutorial.
+如果你是在 Windows 环境下，你可以使用和上面相同的工具，或者直接使用 [XAMPP](https://www.apachefriends.org/index.html)  来快速运行 MySQL 实例到你的机器上。
 
-## Let's Begin
+当你将 MySQL 成功跑起来后，我们就可以开始本文的探索了。
 
-Assuming that you're coming from this article,  [**Todo API in Deno + Oak (without using a database)**][9], we will do the following:
+## 让我们开始吧
 
--   Create a MySQL database connection
--   Write a small script that resets the database every time we start our Deno server
--   Perform CRUD operations on a table
--   Add the CRUD functionality to our API controllers
+假设你已经阅读了[上一篇文章](https://www.freecodecamp.org/news/create-a-todo-api-in-deno-written-by-a-guy-coming-from-node/)，我们将编写如下功能：
 
-One last thing – here is the entire commit difference that was made in Chapter 1 to add MySQL to the project ([source code that shows the new additions made from chapter 1][10]).
+-   创建一个 MySQL 数据库的连接；
+-   编写一个小脚本，每当我们重启 Deno 服务器时数据库会自动重置；
+-   在一个数据表上执行 CRUD 操作；
+-   将 CURD 操作连接到我们的 API 控制器中。
 
-In your project root folder – mine is called  _`chapter_2:mysql`,_ though  yours can be called whatever you want – create a folder called  **db**. Inside that folder, create a file called  **config.ts and**  add the following content to it:
+开始前的最后一件事：我将上一篇的代码添加 MySQL 版本后的具体 Git 变动可以[在这里](https://github.com/adeelibr/deno-playground/pull/1/commits/5b63b51ebcadededcfec452fe6877a0bd0f1f83f)查阅。
 
-```db
-export const DATABASE: string = "deno";
+在你的项目根目录中（我的叫做 _`chapter_2:mysql`_，你的可以随便起），创建一个 **db** 文件夹，并在其中创建一个 **config.ts** 并添加如下内容：
+
+```typescript
+export const DATABASE: string = 'deno';
 export const TABLE = {
-  TODO: "todo",
+    TODO: 'todo',
 };
-
 ```
 
-Nothing fancy here, just defining our database name along with an object for tables and then exporting it. Our project will have one database called "deno" and inside that db we will only have one table called "todo".
+这里没什么新知识点，仅仅导出了我们定义的数据库的名称以及一个 TABLE 对象。通过这个导出，我们的项目中将会有一个名为 “deno” 的数据库，其中又会有一个名为 “todo” 的数据表。
 
-Next, inside the  **db** folder, create another file called  **client.ts** and add the following content:
+接下来，在 **db** 文件夹中再创建一个名为 **client.ts** 的文件并填充如下内容：
 
-```db
-import { Client } from "https://deno.land/x/mysql/mod.ts";
+```typescript
+import { Client } from 'https://deno.land/x/mysql/mod.ts';
 // config
-import { DATABASE, TABLE } from "./config.ts";
+import { DATABASE, TABLE } from './config.ts';
 
 const client = await new Client();
 client.connect({
-  hostname: "127.0.0.1",
-  username: "root",
-  password: "",
-  db: "",
+    hostname: '127.0.0.1',
+    username: 'root',
+    password: '',
+    db: '',
 });
-
 ```
 
-A couple of things are happening here.
+这段代码包含了若干条功能。
 
-We are importing  `Client`  from the  `mysql`  library.  `Client`  will help us connect to our database and perform operations in the database.
+我们从 Deno 的一个第三方  `mysql`  模块中解构出了 `Client`  变量，这个变量可以用来连接数据库并执行指定的增删改查工作。
 
-```db
+```typescript
 client.connect({
-  hostname: "127.0.0.1",
-  username: "root",
-  password: "",
-  db: "",
+    hostname: '127.0.0.1',
+    username: 'root',
+    password: '',
+    db: '',
 });
 ```
 
-`Client`  provides a method called  `connect`  which takes in object where we can provide the  `hostname`,  `username`,  `password`, and  `db`. With this information it can establish a connection to our MySQL instance.
+`Client`  内置一个 `connect` 方法，用来供我们设置  `hostname`、`username`、`password`  和  `db`  等字段的值，以设置与 MySQL 的连接配置。
 
-Make sure that your  `username`  has no  `password`, as it will conflict with connecting to Deno's MySQL library. If you don't know on how to do that,  [read this tutorial][11]  I wrote.
+请确保你的 `username`  用户没有设置  `password`，因为目前的 Deno MySQL 模块无法连接有密码的用户。如果你不知道如何清空用户密码，可以阅读[这里](https://github.com/adeelibr/deno-playground/blob/master/guidelines/setting-up-mysql-mac-os-catalina.md#set-your-mysql-password-to-empty)。
 
-I have left the  `database`  field blank here because I want to select it manually later in my script.
+我在此处将 `database`  字段留空，因为我想稍后在脚本中手动选择它。
 
-Let's add a script that will initialize a database called "deno", select it, and inside that db create a table called "todo".
+让我们添加一个用来初始化名为“deno”的数据库并为其创建一个名为“todo”表的脚本。
 
-Inside  `db/client.ts`  file let's make some new additions:
+在  `db/client.ts`  文件中我们添加以下内容：
 
-```db
+```typescript
 import { Client } from "https://deno.land/x/mysql/mod.ts";
-// config
+// 加载配置文件里的配置
 import { DATABASE, TABLE } from "./config.ts";
 const client = await new Client();
 client.connect({
@@ -99,13 +99,13 @@ client.connect({
   db: "",
 });
 const run = async () => {
-  // create database (if not created before)
+  // 创建一个数据库 (前提是之前没有创建过)
   await client.execute(CREATE DATABASE IF NOT EXISTS ${DATABASE});
-  // select db
+  // 选择我们的数据库
   await client.execute(USE ${DATABASE});
-  // delete table if it exists before
+  // 如果已经创建过名为 Todo 的数据表，将其删除
   await client.execute(DROP TABLE IF EXISTS ${TABLE.TODO});
-  // create table
+  // 创建 Todo 数据表
   await client.execute(CREATE TABLE ${TABLE.TODO} (
         id int(11) NOT NULL AUTO_INCREMENT,
         todo varchar(100) NOT NULL,
@@ -113,23 +113,25 @@ const run = async () => {
         PRIMARY KEY (id)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;);
 };
+
 run();
 
+export default client;
 ```
 
-Here we are importing  `DATABASE`  and  `TABLE`  from our config file, then using those values in a new function called  `run()`.
+这里我们从我们的最早的配置文件中导入了 `DATABASE`  和  `TABLE`，并通过 `run()` 方法创建相关的数据库和表。
 
-Let's break down this  `run()`  function. I have added comments in the file to help you understand the workflow:
+让我们截取  `run()` 方法相关的代码片段。我在代码中已经编写了帮助你理解的注释。
 
-```db
+```typescript
 const run = async () => {
-  // create database (if not created before)
+  // 创建一个数据库 (前提是之前没有创建过)
   await client.execute(CREATE DATABASE IF NOT EXISTS ${DATABASE});
-  // select db
+  // 选择我们的数据库
   await client.execute(USE ${DATABASE});
-  // delete table if it exists before
+  // 如果已经创建过名为 Todo 的数据表，将其删除
   await client.execute(DROP TABLE IF EXISTS ${TABLE.TODO});
-  // create table
+  // 创建 Todo 数据表
   await client.execute(CREATE TABLE ${TABLE.TODO} (
         id int(11) NOT NULL AUTO_INCREMENT,
         todo varchar(100) NOT NULL,
@@ -138,622 +140,807 @@ const run = async () => {
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;);
 };
 
+run();
 ```
 
--   Create a database called  `deno`  . If it already exists then do nothing.
--   Then select the database to use, which is called  `deno`
--   Delete the table inside  `deno`  called  `todo`  if it already exists.
--   Next, create a new table inside the  `deno`  db, call it  `todo`, and define its structure: It will have a unique auto increment  `id`  which will be an integer, another field called  `todo`  which will be a string, and finally a field called  `isCompleted`  which is a boolean. I also define  `id`  as my primary key.
+-   创建一个名为 `deno`  的数据库，如果之前已经有这个数据库则跳过此步骤。
+-   选择我们当前名为 `deno`  的这个数据库。
+-   在 `deno`  数据库中，如果名为  `todo`  的表存在，则将其删除。
+-   接下来，在 `deno` 数据库中创建一个新的  `todo`  表，并且定义其表结构：表结构将包含一个唯一的、自增长的、数值型的 `id` 字段；也将包含一个名为  `todo`  的字符串型字段；同时还包含一个名为 `isCompleted`  的布尔型字段；最后将 `id` 字段定义为主键。
 
-The reason I wrote this script was because I don't want to have extra information in MySQL instance. Every time the script runs it just reinitializes everything.
+我写这段代码的原因是因为我不想在 MySQL 实例中有代码上无法直观看出来的信息。有了这段代码后，每次重启服务器时，它都会重新初始化所有内容。
 
-You don't have to add this script. But if you don't, then you will have to manually create a db and the table.
+你可以不编写这段代码。但如果不编写的话，则必须手动创建数据库和表。
 
-Also, check out the Deno MySQL library's docs on  [db creation][13]  and on  [table creation][14].
+同时，你也可以查阅 Deno MySQL 模块的 [db creation](https://deno.land/x/mysql/#create-database)  和  [table creation](https://deno.land/x/mysql/#create-table)  文档。
 
-Going back to our agenda, we just achieved two things out of the four mentioned at the top of the article:
+回到文章的主旨，我们已经完成了上面提到的四个目标的两个目标：
 
--   Create a MySQL database connection
--   Write a small script that resets the database every time we start our Deno server
+-   创建一个 MySQL 数据库的连接；
+-   编写一个小脚本，每当我们重启 Deno 服务器时数据库会自动重置。
 
-That is already 50% of the tutorial. Unfortunately, we can't see much happening right now. Let's quickly add some functionality to see it working.
+这意味着本文 50% 的知识点已经介绍完毕。但不幸运的是，现在还测试不了任何数据操作功能。一起来快速添加几个 CRUD 功能来看看具体是怎样执行的。
 
-## Performing CRUD operations on a table and adding the functionality to our API controllers
+## 在数据表上执行 CRUD 操作并将功能添加到 API 控制器中
 
-We need to update our Todo interface first. Go to the  `interfaces/Todo.ts`  file and add the following:
+我们需要先编写 Todo 接口。创建  `interfaces/Todo.ts` 文件并添加如下内容：
 
-```interfaces
+```typescript
 export default interface Todo {
-  id?: number,
-  todo?: string,
-  isCompleted?: boolean,
+    id?: number;
+    todo?: string;
+    isCompleted?: boolean;
 }
-
 ```
 
-What this  `?`  does is it makes the key in the object optional. I did this because later I will use different functions to pass objects with only an  `id`,  `todo`,  `isCompleted`, or all of them at once.
+代码中的  `?`  符号代表这个键是可选的。之所以这样做是因为接下来我们有的地方仅需要其中的若干个键。
 
-If you want to learn more about optional properties in TypeScript, head over to their docs  [here][15].
+如果你想了解更多 TypeScript 中可选的属性，可以查阅[这里](https://www.typescriptlang.org/docs/handbook/interfaces.html#optional-properties)。
 
-Next, create a new folder called  **models** and inside that folder, create a file called  **todo.ts**.  Add the following content to the file:
+接下来，在根目录创建一个名为 **models** 的文件夹并在其中创建一个名为 **todo.ts** 的文件，添加如下内容：
 
-```models
-import client from "../db/client.ts";
+```typescript
+import client from '../db/client.ts';
+// 加载配置文件
+import { TABLE } from '../db/config.ts';
+// 加载接口文件
+import Todo from '../interfaces/Todo.ts';
+
+export default {
+    /**
+     * 通过解构的 id 参数值，来检查相应的 todo 元素是否存在于数据表中
+     * @param id
+     * @returns 返回布尔值来代表是否存在
+     */
+    doesExistById: async ({ id }: Todo) => {},
+    /**
+     * 将会返回 todo 表中的所有内容
+     * @returns 返回全部都是 todo 元素的数组
+     */
+    getAll: async () => {},
+    /**
+     * 过解构的 id 参数值，来返回相应的 todo 元素
+     * @param id
+     * @returns 返回一个 todo 元素
+     */
+    getById: async ({ id }: Todo) => {},
+    /**
+     * 在 todo 表中增加一个新的 todo 元素
+     * @param todo
+     * @param isCompleted
+     */
+    add: async ({ todo, isCompleted }: Todo) => {},
+    /**
+     * 修改某个 todo 元素的内容
+     * @param id
+     * @param todo
+     * @param isCompleted
+     * @returns 返回一个数字 (代表影响的行数)
+     */
+    updateById: async ({ id, todo, isCompleted }: Todo) => {},
+    /**
+     * 通过 ID 来删除指定的元素
+     * @param id
+     * @returns integer (count of effect rows)
+     */
+    deleteById: async ({ id }: Todo) => {},
+};
+```
+
+此时每个函数都是空的，不用担心，我们接下来会一一填充。
+
+接下来创建 `controllers/todo.ts` 文件并保证填充如下内容：
+
+```typescript
+// 加载接口文件
+import Todo from '../interfaces/Todo.ts';
+// 加载模型操作文件
+import TodoModel from '../models/todo.ts';
+
+export default {
+    /**
+     * @description 获取所有 todo 元素
+     * @route GET /todos
+     */
+    getAllTodos: async ({ response }: { response: any }) => {},
+    /**
+     * @description 新增一个 todo 元素
+     * @route POST /todos
+     */
+    createTodo: async ({
+        request,
+        response,
+    }: {
+        request: any;
+        response: any;
+    }) => {},
+    /**
+     * @description 通过 id 获取指定的 todo 元素
+     * @route GET todos/:id
+     */
+    getTodoById: async ({
+        params,
+        response,
+    }: {
+        params: { id: string };
+        response: any;
+    }) => {},
+    /**
+     * @description 通过 id 更新指定的 todo 元素
+     * @route PUT todos/:id
+     */
+    updateTodoById: async ({
+        params,
+        request,
+        response,
+    }: {
+        params: { id: string };
+        request: any;
+        response: any;
+    }) => {},
+    /**
+     * @description 通过 id 删除指定的 todo 元素
+     * @route DELETE todos/:id
+     */
+    deleteTodoById: async ({
+        params,
+        response,
+    }: {
+        params: { id: string };
+        response: any;
+    }) => {},
+};
+```
+
+这个文件目前同样是空的内容，现在开始一一将其填充吧。
+
+### [Get] 获取全部 Todos 的 API
+
+在  `models/todo.ts`  文件中为  `getAll`  方法添加具体逻辑：
+
+```typescript
+import client from '../db/client.ts';
 // config
-import { TABLE } from "../db/config.ts";
+import { TABLE } from '../db/config.ts';
 // Interface
-import Todo from "../interfaces/Todo.ts";
-export default {
-  /**
-
-```
-
-Right now the functions are empty, but that is okay. We will fill them up one by one.
-
-Next go to  `controllers/todo.ts`  file and make sure you add the following:
-
-```
-// interfaces
-import Todo from "../interfaces/Todo.ts";
-// models
-import TodoModel from "../models/todo.ts";
+import Todo from '../interfaces/Todo.ts';
 
 export default {
-  /**
-
+    /**
+     * 将会返回所有 todo 表中的数据
+     * @returns array of todos
+     */
+    getAll: async () => {
+        return await client.query(`SELECT * FROM ${TABLE.TODO}`);
+    },
+};
 ```
 
-Here we have empty functions as well. Let's start filling them up.
+我们这里直接用 SQL 原生语法来获取表中的所有内容。
 
-### \[Get\] all todos API
+除了 `connect`（使用于 db/client.ts 文件中）方法外， `Client` 还公开了另一种方法，即 `query`。通过 `client.query` 方法，我们可以直接从 Deno 代码上运行 MySQL 查询。
 
-Inside  `models/todo.ts`, add a definition for a function called  `getAll`:
-
-```models
-import client from "../db/client.ts";
-// config
-import { TABLE } from "../db/config.ts";
-// Interface
-import Todo from "../interfaces/Todo.ts";
-
-export default {
-   /**
-
-```
-
-We simply run a MySQL query to get all entries from table.
-
-The  `Client`  also exposes another method besides  `connect`  (we used a "connect" method in  `db/client.ts`  file) and that is  `query`. The  `client.query`  method lets us run MySQL queries directly from our Deno code as is.
-
-Next go to  `controllers/todo.ts`  add definition for  `getAllTodos`:
+接下来打开  `controllers/todo.ts` 文件并为  `getAllTodos` 填充内容：
 
 ```typescript
 // interfaces
-import Todo from "../interfaces/Todo.ts";
+import Todo from '../interfaces/Todo.ts';
 // models
-import TodoModel from "../models/todo.ts";
+import TodoModel from '../models/todo.ts';
 
 export default {
-  /**
-
+    /**
+     * @description 获取所有 todo
+     * @route GET /todos
+     */
+    getAllTodos: async ({ response }: { response: any }) => {
+        try {
+            const data = await TodoModel.getAll();
+            response.status = 200;
+            response.body = {
+                success: true,
+                data,
+            };
+        } catch (error) {
+            response.status = 400;
+            response.body = {
+                success: false,
+                message: `Error: ${error}`,
+            };
+        }
+    },
+};
 ```
 
-All we are doing is importing  `TodoModel`  and using its method called  `getAll`, which we just defined now. Since it returns as a promise we have wrapped it in async/await.
+我们这里所做的就是导入 `TodoModel` 对象并使用其中我们刚定义不久的 `getAll` 方法。因为需要该函数需要处理 Promise 类型的异步过程，所以我们将整个函数定义为 async/await 类型。
 
-The method  `TodoModel.getAll()`  will return us an array which we simply return to  `response.body`  with  `status`  set to  `200`.
+`TodoModel.getAll()` 方法返回一个数组后，我们将这个数组包装起来并将 `response.body` 的响应状态 `status` 设置为 `200`。
 
-If the promise fails or there is another error, we simply go to our catch block and return a status of 400 with  `success`  set to false. We also set the  `message`  to what we get from the catch block.
+如果执行过程中有任何异常比如 Promise 报错，程序将通过进入 catch 块，向用户返回状态码为 400 的响应体（此时 `success` 为 false，`message` 为错误原因。
 
-That's it, we're done. Now let's fire up our terminal.
+就这么简单地搞定了，现在来在终端上运行。
 
-Make sure your MySQL instance is running. In your terminal type:
+请保证你的 MySQL 实例运行中，然后在终端输入：
 
+```bash
+$ deno run --allow-net server.ts
 ```
-$ deno run --allow-net server.ts 
-```
 
-Your terminal should look something like this:
+不出意外的话，此时你的终端会有这样类似的结果：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-04-at-23.29.19.png)
 
-This is how my console looks when I start the server
+这也是当我通过命令行运行服务器时终端的样子。
 
-My console is telling me two things here.
+终端告诉了我们两件事：
 
-1.  That my Deno API server is running on port 8080
-2.  That my MySQL instance is running on  `127.0.0.1`, which is  `localhost`
+1. Deno API 服务器成功运行在了 8080 端口上；
+1. Deno API 服务器程序成功连接到了 MySQL 客户端 `127.0.0.1:3306` （`http://localhost:3306`）上。
 
-Let's test our API out. I am using  [Postman][16]  here, but you can use your favorite API client.
+让我们测试下我们的 API，我使用的是 [Postman](https://www.postman.com/)，但是你可以用任何你喜欢的 API 测试工具。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-04-at-23.31.07.png)
 
-running \[GET\] localhost:8080/todos => Will return all todos
+执行 [GET] localhost:8080/todos 后，我们得到了所有 todos 列表。
 
-Right now it only returns empty data. But once we add data to our  `todo`  table, it will return those todos here.
+虽然现在的 todos 列表返回的是空数组，但当我们能成功给 `todo` 数据表增加数据后就会获得更多数据。
 
-Awesome. One API down and four more to go.
+棒极了，一个 API 搞定只剩下四个要搞。
 
-### \[Post\] add a todo API
+### [Post] 新增一个 Todo 的 API
 
-In the  `models/todo.ts`  file, add the following definition for  `add()`  function:
+在 `models/todo.ts` 文件中，为 `add()` 函数添加如下内容：
 
-```
+```typescript
 export default {
-/**
-
-Adds a new todo item to todo table
-
-@param todo
-
-@param isCompleted
-
-
+    /**
+     * 为 todo 数据表新增一行数据
+     * @param todo
+     * @param isCompleted
+     */
+    add: async ({ todo, isCompleted }: Todo) => {
+        return await client.query(
+            `INSERT INTO ${TABLE.TODO}(todo, isCompleted) values(?, ?)`,
+            [todo, isCompleted]
+        );
+    },
+};
 ```
 
-The add function takes in object as an argument, which has two items:  `todo`  and  `isCompleted`.
+add 函数在参数列表中将解构 `todo` 和  `isCompleted` 两个变量。
 
-So  `_add_:  _async_  ({ todo, isCompleted }: Todo) => {}`  can also be written as  `({todo, isCompleted}: {todo:string, isCompleted:boolean})`. But since we already have an interface defined in our  `interfaces/Todo.ts`  file which is
+同时，上面代码的 `add: async ({ todo, isCompleted }: Todo) => {}` 片段和 `({todo, isCompleted}: {todo:string, isCompleted:boolean})` 语句是等价的。但我们已经在 `interfaces/Todo.ts` 中定义过 Todo 接口：
 
-```
+```typescript
 export default interface Todo {
-id?: number,
-todo?: string,
-isCompleted?: boolean,
+    id?: number;
+    todo?: string;
+    isCompleted?: boolean;
 }
-
 ```
 
-we can simply write this as  `_add_:  _async_  ({ todo, isCompleted }: Todo) => {}`. This tells TypeScript that this function has two arguments,  `todo`, which is a string, and  `isCompleted`, which is a boolean.
+此时我们将可以简单地写成 `add: async ({ todo, isCompleted }: Todo) => {}`。这条语句告诉 TypeScript 当前函数有两个参数：字符串类型的 `todo`，以及布尔类型的 `isCompleted`。
 
-If you want to read more on interfaces, TypeScript has an excellent document on it which you can find  [here][17].
+如果你想了解更多关于接口的知识，TypeScript 官方文档上有一个绝佳的介绍，可以查看[这里](https://www.typescriptlang.org/docs/handbook/interfaces.html)。
 
-Inside our function we have the following:
+在 add 函数中还有如下代码：
 
-```
+```typescript
 return await client.query(
-INSERT INTO ${TABLE.TODO}(todo, isCompleted) values(?, ?),
-[
-todo,
-isCompleted,
-],
+    `INSERT INTO ${TABLE.TODO}(todo, isCompleted) values(?, ?)`,
+    [todo, isCompleted]
 );
 ```
 
-This query can be broken down into two parts:
+这是一条 MySQL 查询语句，可以被拆分为如下两个部分：
 
--   `INSERT INTO ${TABLE_._TODO}(todo, isCompleted) values(?, ?)`. The two question marks here denote a use of variables inside this query.
--   The other part,  `[todo, isCompleted]`, is the variables that will go in the  _first part_ of the query and be replaced with  `(?, ?)`
--   `Table.Todo`  is just a string coming from file  `db/config.ts`  where the  `Table.Todo`  value is "`todo`"
+-   `INSERT INTO ${TABLE.TODO}(todo, isCompleted) values(?, ?)`。其中的两个问号意味着这里需要使用到变量的值。
+-   另一部分 `[todo, isCompleted]` 是上一部分需要使用的变量，其值将会替代 `(?, ?)`。
+-   `Table.Todo` 是一个从 `db/config.ts` 读取来的字符串，其值为"`todo`"。
 
-Next inside our  `controllers/todo.ts`  file, go to the definition of the  `createTodo()`  function:
+接下来在我们的控制器 `controllers/todo.ts` 文件中，编写 `createTodo()` 函数：
 
-```
+```typescript
 export default {
-/**
+    /**
+     * @description 新增一个 todo
+     * @route POST /todos
+     */
+    createTodo: async ({
+        request,
+        response,
+    }: {
+        request: any;
+        response: any;
+    }) => {
+        const body = await request.body();
+        if (!request.hasBody) {
+            response.status = 400;
+            response.body = {
+                success: false,
+                message: 'No data provided',
+            };
+            return;
+        }
 
-@description Add a new todo
-
-@route POST /todos
-
-
+        try {
+            await TodoModel.add({ todo: body.value.todo, isCompleted: false });
+            response.body = {
+                success: true,
+                message: 'The record was added successfully',
+            };
+        } catch (error) {
+            response.status = 400;
+            response.body = {
+                success: false,
+                message: `Error: ${error}`,
+            };
+        }
+    },
+};
 ```
 
-Let's break this down into two parts:
+我们继续将其拆分为两个部分来介绍：
 
-**Part 1**
+**第一部分**
 
-```
+```typescript
 const body = await request.body();
 if (!request.hasBody) {
-response.status = 400;
-response.body = {
-success: false,
-message: "No data provided",
-};
-return;
+    response.status = 400;
+    response.body = {
+        success: false,
+        message: 'No data provided',
+    };
+    return;
 }
 ```
 
-All we are doing here is checking if the user is sending data in body. If not, then we return a status  `400`  and in the body return  `success: false`  and  `message: <erromessage-string>`.
+我们在这里所做的是检查用户请求当前接口时是否在 body 中传递了请求数据。如果没有的话将返回一个有 `400` 状态码且包括 `success: false` 和  `message: <erromessage-string>` 的响应体。
 
-**Part 2**
+**第二部分**
 
-```
+```typescript
 try {
-await TodoModel.add(
-{ todo: body.value.todo, isCompleted: false },
-);
-response.body = {
-success: true,
-message: "The record was added successfully",
-};
+    await TodoModel.add({ todo: body.value.todo, isCompleted: false });
+    response.body = {
+        success: true,
+        message: 'The record was added successfully',
+    };
 } catch (error) {
-response.status = 400;
-response.body = {
-success: false,
-message: Error: ${error},
-};
+    response.status = 400;
+    response.body = {
+        success: false,
+        message: `Error: ${error}`,
+    };
 }
 ```
 
-If there is no error, the  `TodoModel.add()`  function is called and simply returns a status of  `200`  and a confirmation message to the user.
+接下来如果没有任何意外错误，则调用 `TodoModel.add()` 函数并返回一个状态为 `200` 且给用户提示执行函数成功的响应体。
 
-Otherwise it just throws a similar error that we did in the previous API.
+否则将进入 catch 代码段，来返回函数执行错误及其原因，正如前文介绍过的 API 一样。
 
-Now we're done. Fire up your terminal and make sure your MySQL instance is running. In your terminal type:
+现在我们搞定了。打开你的终端并且确保你的 MySQL 正在运行。在终端输入：
 
+```bash
+$ deno run --allow-net server.ts
 ```
-$ deno run --allow-net server.ts 
-```
 
-Go to  [Postman][18]  and run the API route for this controller:
+打开 [Postman](https://www.postman.com/) 并且测试当前 API 能否正常运行：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-04-at-23.55.02.png)
 
-running \[POST\] localhost:8080/todos => Will add a new new todo item
+执行 [POST] localhost:8080/todos => 将会为 todo 列表新增一个新的数据。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-04-at-23.57.06.png)
 
-running \[POST\] localhost:8080/todos => Will return all todos, notice how the new added item is being returned as well
+再次执行 [GET] localhost:8080/todos => 将会返回所有 todos，可以看到刚刚新增 todo 已经被加入到数据库中。
 
-This is great, now we have two working APIs. Only three more to go.
+很棒，已经搞定了两个 API，只剩三个要做。
 
-### \[GET\] todo by id API
+### [GET] 通过 ID 查询某 Todo 的 API
 
-In your  `models/todo.ts`  file, add definition for these two functions,  `doesExistById()`  and  `getById()`:
+在你的 `models/todo.ts` 文件中，为 `doesExistById()` 和  `getById()` 两个函数填充其内容：
 
-```
+```typescript
 export default {
-/**
-
-Takes in the id params & checks if the todo item exists
-
-in the database
-
-@param id
-
-@returns boolean to tell if an entry of todo exits in table
-
-/
-doesExistById: async ({ id }: Todo) => {
-const [result] = await client.query(
-  SELECT COUNT(*) count FROM ${TABLE.TODO} WHERE id = ? LIMIT 1,
-  [id],
-);
-return result.count > 0;
-},
-/**
-
-Takes in the id params & returns the todo item found
-
-against it.
-
-@param id
-
-@returns object of todo item
-
-
+    /**
+     * Takes in the id params & checks if the todo item exists
+     * in the database
+     * @param id
+     * @returns boolean to tell if an entry of todo exits in table
+     */
+    doesExistById: async ({ id }: Todo) => {
+        const [
+            result,
+        ] = await client.query(
+            `SELECT COUNT(*) count FROM ${TABLE.TODO} WHERE id = ? LIMIT 1`,
+            [id]
+        );
+        return result.count > 0;
+    },
+    /**
+     * 解构 id 变量 & 返回找到的相关 todo
+     * against it.
+     * @param id
+     * @returns object of todo item
+     */
+    getById: async ({ id }: Todo) => {
+        return await client.query(`SELECT * FROM ${TABLE.TODO} WHERE id = ?`, [
+            id,
+        ]);
+    },
+};
 ```
 
-Let's talk about each function one by one:
+让我们逐个介绍这两个函数：
 
--   `doesExistById`  takes in an  `id`  and returns a  `boolean`  indicating whether a particular todo exists in the database or not.
+-   `doesExistById` 函数从参数列表中解构出  `id` 变量，并返回一个  `boolean` 布尔值，来表明想要检测的这个独特 todo 是否存在于数据库中。
 
-Let's break this function down:
-
-```
-const [result] = await client.query(
-SELECT COUNT(*) count FROM ${TABLE.TODO} WHERE id = ? LIMIT 1,
-[id],
+```typescript
+const [
+    result,
+] = await client.query(
+    `SELECT COUNT(*) count FROM ${TABLE.TODO} WHERE id = ? LIMIT 1`,
+    [id]
 );
 return result.count > 0;
 ```
 
-We simply check the count here in the table against a particular todo id. If the count is greater than zero, we return  `true`. Otherwise, we return  `false`.
+我们通过 count 值来检查指定 todo 是否存在。如果其值大于 0 返回 `true`，否则返回 `false`。
 
--   `getById`  returns the todo item against a particular id:
+-   `getById` 函数通过指定的 id 返回相应的数据：
 
-```
-return await client.query(
-SELECT * FROM ${TABLE.TODO} WHERE id = ?,
-[id],
-);
+```typescript
+return await client.query(`SELECT * FROM ${TABLE.TODO} WHERE id = ?`, [id]);
 ```
 
-We are simply running a MySQL query here to get a todo by id and returning the result as-is.
+上面一行代码直接执行了 MySQL 语句，来通过 id 查询数据并返回结果。
 
-Next, go to your  `controllers/todo.ts`  file and add a definition for a  `getTodoById`  controller method:
+接下来，打开 `controllers/todo.ts` 文件并为 `getTodoById` 控制器填充内容：
 
-```
+```typescript
 export default {
-/**
+    /**
+     * @description 通过 id 获取相关 tod
+     * @route GET todos/:id
+     */
+    getTodoById: async ({
+        params,
+        response,
+    }: {
+        params: { id: string };
+        response: any;
+    }) => {
+        try {
+            const isAvailable = await TodoModel.doesExistById({
+                id: Number(params.id),
+            });
 
-@description Get todo by id
+            if (!isAvailable) {
+                response.status = 404;
+                response.body = {
+                    success: false,
+                    message: 'No todo found',
+                };
+                return;
+            }
 
-@route GET todos/:id
-
-
+            const todo = await TodoModel.getById({ id: Number(params.id) });
+            response.status = 200;
+            response.body = {
+                success: true,
+                data: todo,
+            };
+        } catch (error) {
+            response.status = 400;
+            response.body = {
+                success: false,
+                message: `Error: ${error}`,
+            };
+        }
+    },
+};
 ```
 
-Let's break this down into two smaller parts:
+这段代码也可以拆分为两段更小的部分来看：
 
-```
-const isAvailable = await TodoModel.doesExistById(
-{ id: Number(params.id) },
-);
+```typescript
+const isAvailable = await TodoModel.doesExistById({ id: Number(params.id) });
 
-
-
-```
-
-First we check if the todo exists in the database against an id by using this method:
-
-```
-const isAvailable = await TodoModel.doesExistById(
-  { id: Number(params.id) },
-);
-```
-
-Here we need to convert  `params.id`  into a  `Number`  because our todo interface only accepts  `id`  as a number. Next, we just pass  `params.id`  to the  `doesExistById`  method. This method will return as a boolean.
-
-Then we simply check if the todo is not available and return a  `404`  method with our standard response like with the previous endpoints:
-
-```
 if (!isAvailable) {
-  response.status = 404;
-  response.body = {
-    success: false,
-    message: "No todo found",
-  };
-  return;
+    response.status = 404;
+    response.body = {
+        success: false,
+        message: 'No todo found',
+    };
+    return;
 }
 ```
 
-Then we have:
+首先我们通过以下代码来检查想要查找的 todo 是否存在于数据库中：
 
+```typescript
+const isAvailable = await TodoModel.doesExistById({ id: Number(params.id) });
 ```
+
+我们在其中需要转换 `params.id` 为 `Number` 数值类，因为接口中声明了我们的 `id` 键值必须是一个数字。接下来我们将转换为数值后的 `params.id` 传递给 `doesExistById` 方法，这个方法会返回布尔值。
+
+接着检查这个布尔值，如果是 false 则返回像前文一样的包含 `404` 状态码的响应体：
+
+```typescript
+if (!isAvailable) {
+    response.status = 404;
+    response.body = {
+        success: false,
+        message: 'No todo found',
+    };
+    return;
+}
+```
+
+第二部分是：
+
+```typescript
 try {
-const todo: Todo = await TodoModel.getById({ id: Number(params.id) });
-response.status = 200;
-response.body = {
-  success: true,
-  data: todo,
-};
+    const todo: Todo = await TodoModel.getById({ id: Number(params.id) });
+    response.status = 200;
+    response.body = {
+        success: true,
+        data: todo,
+    };
 } catch (error) {
-response.status = 400;
-response.body = {
-  success: false,
-  message: Error: ${error},
-};
+    response.status = 400;
+    response.body = {
+        success: false,
+        message: `Error: ${error}`,
+    };
+}
 ```
 
-This is similar to what we were doing in our previous APIs. Here we are simply getting data from the db, setting the variable  `todo`, and then returning the response. If there is an error we simply return a standard error message in the catch block back to the user.
+这段代码和前文的很像。我们从数据库中获取到指定数据给 `todo` 变量，然后返回响应体。如果执行过程中有任何错误则响应体将包含错误信息返回给用户。
 
-Now fire up your terminal and make sure your MySQL instance is running. In your terminal type:
+现在打开你的终端并且确保你的 MySQL 正在运行。在终端输入：
 
+```bash
+$ deno run --allow-net server.ts
 ```
-$ deno run --allow-net server.ts 
-```
 
-Go to  [Postman][19]  and run the API route for this controller.
+打开 [Postman](https://www.postman.com/) 来测试当前接口能否正常运行。
 
-Remember that every time we restart our server we reset the db. If you don't want this behavior, you can simply comment out the  `run`  function in the file  `db/client.ts`.
+请记住我们每次重启服务器时都会重置数据库。如果你不想要这个功能，你可以注释掉 `db/client.ts` 文件中的整个 `run` 方法。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-07-at-17.09.32.png)
 
-running \[POST\] localhost:8080/todos => Will add a new new todo item
+执行 [POST] localhost:8080/todos => 将会新增一个新的 todo。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-07-at-17.10.13.png)
 
-running \[POST\] localhost:8080/todos => Will return all todos
+执行 [POST] localhost:8080/todos => 将会返回所有的 todo。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-07-at-17.11.03.png)
 
-running \[GET\] localhost:8080/todos/:id => will return the todo for that id if found
+执行 [GET] localhost:8080/todos/:id => 将会当查找指定 todo，并返回其内容。
 
-![running [GET] localhost:8080/todos/:id => will return the todo for that id if found](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-07-at-17.16.06.png)
+![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-07-at-17.16.06.png)
 
-running \[GET\] localhost:8080/todos/<unknown-id> => returns status 404 with not found error message
+执行 [GET] localhost:8080/todos/ => 将会返回包含 404 状态码及其错误信息的响应体。
 
-So far we have done APIs for:
+目前我们搞定了如下 API：
 
--   Get all todos
--   Create a new todo
--   Get a todo by ID
+-   获取所有 todos
+-   创建一个新的 todo
+-   通过 ID 获取指定的 Todo
 
-And here are the remaining APIs:
+仅剩下的 API：
 
--   Update a todo by ID
--   Delete a todo by ID
+-   通过 ID 更新指定的 Todo
+-   通过 ID 删除指定的 Todo
 
-### \[PUT\] update todo by id API
+### [PUT] 通过 ID 更新某 Todo 的 API
 
-Let's create a model for this API first. Go in our  `models/todo.ts`  file and add a definition for an  `updateById`  function:
+让我们先为这个 API 创建模型（models）代码。进入 `models/todo.ts` 文件并为 `updateById` 方法填充其内容：
 
-```
+```typescript
 **
-
+ * 更新某个指定 todo
+ * @param id
+ * @param todo
+ * @param isCompleted
+ * @returns integer (count of effect rows)
+ */
+updateById: async ({ id, todo, isCompleted }: Todo) => {
+  const result = await client.query(
+    `UPDATE ${TABLE.TODO} SET todo=?, isCompleted=? WHERE id=?`,
+    [
+      todo,
+      isCompleted,
+      id,
+    ],
+  );
+  // return count of rows updated
+  return result.affectedRows;
+},
 ```
 
-The  `updateById`  takes in 3 params:  `id`,  `todo`, and  `isCompleted`.
+`updateById` 方法将会从参数列表解构三个变量：`id`、`todo` 以及  `isCompleted`。
 
-We simply run a MySQL query inside this function:
+我们直接编写了 MySQL 语句来执行查询：
 
-```
-onst result = await client.query(
-UPDATE ${TABLE.TODO} SET todo=?, isCompleted=? WHERE id=?,
-[
-  todo,
-  isCompleted,
-  id,
-],
+```typescript
+const result = await client.query(
+    `UPDATE ${TABLE.TODO} SET todo=?, isCompleted=? WHERE id=?`,
+    [todo, isCompleted, id]
 );
 ```
 
-This updates a single todo item's  `todo`  and  `isCompleted`  by a specific  `id`.
+这段代码将通过 `id` 来更新指定的 `todo` 其  `isCompleted` 的值。
 
-Next we return a count of rows updated by this query by doing:
+接下来我们返回此条 MySQL 语句执行后影响到的数据表行数：
 
-```
-  // return count of rows updated
+```typescript
+// return count of rows updated
 return result.affectedRows;
 ```
 
-The count will either be 0 or 1, but never more than 1. This is because we have unique IDs in our database – multiple todos with the same ID cannot exist.
+这个行数值只会是 0 或者 1，且绝不会超过 1。因为我们数据表中的 ID 是唯一的——不同 todo 共用同一 ID 的情况是不存在的。
 
-Next go to our  `controllers/todo.ts`  file and add a definition for a  `updateTodoById`  function:
+接下来打开 `controllers/todo.ts` 文件并为 `updateTodoById` 方法填充其内容：
 
-```
+```typescript
 updateTodoById: async (
-{ params, request, response }: {
-  params: { id: string };
-  request: any;
-  response: any;
-},
+  { params, request, response }: {
+    params: { id: string };
+    request: any;
+    response: any;
+  },
 ) => {
-try {
-  const isAvailable = await TodoModel.doesExistById(
-{ id: Number(params.id) },  );
-  if (!isAvailable) {
-response.status = 404;
-response.body = {
-  success: false,
-  message: "No todo found",
-};
-return;  }
-  // if todo found then update todo
-  const body = await request.body();
-  const updatedRows = await TodoModel.updateById({
-id: Number(params.id),
-...body.value,  });
-  response.status = 200;
-  response.body = {
-success: true,
-message: `Successfully updated ${updatedRows} row(s)`,  };
-} catch (error) {
-  response.status = 400;
-  response.body = {
-success: false,
-message: `Error: ${error}`,
+  try {
+    const isAvailable = await TodoModel.doesExistById(
+      { id: Number(params.id) },
+    );
+    if (!isAvailable) {
+      response.status = 404;
+      response.body = {
+        success: false,
+        message: "No todo found",
+      };
+      return;
+    }
+
+    // 如果 todo 被找到了则更新它
+    const body = await request.body();
+    const updatedRows = await TodoModel.updateById({
+      id: Number(params.id),
+      ...body.value,
+    });
+    response.status = 200;
+    response.body = {
+      success: true,
+      message: `Successfully updated ${updatedRows} row(s)`,
+    };
+  } catch (error) {
+    response.status = 400;
+    response.body = {
+      success: false,
+      message: `Error: ${error}`,
+    };
+  }
+},
 ```
 
-This is almost the same as of our previous APIs we wrote. The part that's new here is this:
+这段代码和前文的几个 API 中的代码几乎一样。与众不同的地方在这里：
 
-```
+```typescript
 // if todo found then update todo
 const body = await request.body();
 const updatedRows = await TodoModel.updateById({
-id: Number(params.id),
-...body.value,
+    id: Number(params.id),
+    ...body.value,
 });
 ```
 
-We simple get the body that the user sends us in JSON and pass the body to our  `TodoModel.updateById`  function.
+我们将用户传递来的 JSON 格式的 body 数据直接传给 `TodoModel.updateById` 函数。
 
-We have to convert the  `id`  to a number to comply with our Todo interface.
+记得需要转换 `id` 的变量类型为数值型以遵循接口的类型约束。
 
-The query is executed and returns the count of updated rows. From there we simply return it in our response. If there is an error it goes to the catch block where we return our standard response message.
+这行代码执行后将返回受到影响的行数。我们直接将其包装在响应体里返回。执行过程中如果有任何错误，将会被 catch 到并返回通用的报错信息。
 
-Let's run this and see if it works. Make sure your MySQL instance is running and run the following from your terminal:
+让我们来重启服务器来检查是否能成功运行。请确保你的 MySQL 正在运行并在终端输入：
 
+```typescript
+$ deno run --allow-net server.ts
 ```
-$ deno run --allow-net server.ts 
-```
 
-Go to  [Postman][20]  and run the API route for this controller:
+打开 [Postman](https://www.postman.com/) 来测试当前接口能否正常运行：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-07-at-17.42.02.png)
 
-running \[PUT\] localhost:8080/todos/:id => will update content of that todo by given id
+执行 [PUT] localhost:8080/todos/:id => 将会通过指定的 id 来更新相应的 todo 内容
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-07-at-17.43.13.png)
 
-running \[GET\] localhost:8080/todos/ => will return all todos, see how the todo you updated is also showing there.
+执行 [GET] localhost:8080/todos/ => 将会返回所有 todo 列表，来验证是否更新成功。
 
-### \[DELETE\] todo by id API
+### [DELETE] 通过 ID 删除某 Todo 的 API
 
-In your  `models/todo.ts`  file create a function called  `deleteById`:
+在你的  `models/todo.ts` 文件中创建一个  `deleteById` 函数并填充如下内容：
 
-```
+```typescript
 /**
-
-Deletes a todo by ID
-
-@param id
-
-@returns integer (count of effect rows)
-
-
+ * 通过指定 ID 来删除相应 todo
+ * @param id
+ * @returns integer (count of effect rows)
+ */
+deleteById: async ({ id }: Todo) => {
+  const result = await client.query(
+    `DELETE FROM ${TABLE.TODO} WHERE id = ?`,
+    [id],
+  );
+  // return count of rows updated
+  return result.affectedRows;
+},
 ```
 
-Here we simply pass an  `id`  as a param and then use the delete MySQL query. We then return the updated count of rows. The updated count will either be 0 or 1 because the ID of each todo is unique.
+这里我们根据解构出的 `id` 值来通过 MySQL 删除指定的元素，并返回受到影响的行数。影响的行数的值依然只能是 0 或者 1，因为这个 ID 最多只会对应一个元素。
 
-Next, go in your  `controllers/todo.ts`  file and define a  `deleteByTodoId`  method:
+接下来，打开 `controllers/todo.ts` 文件并填充 `deleteByTodoId` 方法：
 
-```
+```typescript
 /**
-
-@description Delete todo by id
-
-@route DELETE todos/:id
-
-
+ * @description 通过指定 ID 来删除相应 todo
+ * @route DELETE todos/:id
+ */
+deleteTodoById: async (
+  { params, response }: { params: { id: string }; response: any },
+) => {
+  try {
+    const updatedRows = await TodoModel.deleteById({
+      id: Number(params.id),
+    });
+    response.status = 200;
+    response.body = {
+      success: true,
+      message: `Successfully updated ${updatedRows} row(s)`,
+    };
+  } catch (error) {
+    response.status = 400;
+    response.body = {
+      success: false,
+      message: `Error: ${error}`,
+    };
+  }
+},
 ```
 
-This is pretty straightforward. We pass the  `params.id`  to our  `TodoModel.deleteById`  method and return the count of rows updated with this query.
+这里很“爽快”地将解构出的 `params.id` 交给 `TodoModel.deleteById` 发方法，并返回此次执行过程中在数据库中的影响行数。
 
-If anything goes wrong an error is thrown in the catch block which returns our standard error response.
+如果执行过程中有任何错误都会返回标准错误响应体。
 
-Let's check this out.
+让我们来检查这个 API 能否成功运行。
 
-Make sure your MySQL instance is running. In your terminal type:
+请确保你的 MySQL 正在运行，并在终端输入：
 
+```bash
+$ deno run --allow-net server.ts
 ```
-$ deno run --allow-net server.ts 
-```
 
-Go to  [Postman][21]  and run the API route for this controller:
+打开  [Postman](https://www.postman.com/)  来测试：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-07-at-18.23.04.png)
 
-running \[GET\] localhost:8080/todos/ => will return all todos
+执行 [GET] localhost:8080/todos/ => 将会得到所有 todo。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-07-at-18.23.11.png)
 
-running \[DELETE\] localhost:8080/todos/:id => will delete a todo by ID
+执行 [DELETE] localhost:8080/todos/:id => 将会通过指定的 id 删除相应元素。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screenshot-2020-06-07-at-18.23.44.png)
 
-running \[GET\] localhost:8080/todos/ => will return all todos, see how todo with "id" is no longer here
+执行 [GET] localhost:8080/todos/ => 将会返回所有 todo 列表，来看看之前想要删除的 todo 是否还在。
 
-With this we are done with our Deno + Oak + MySQL tutorial.
+到了这里我们就结束了 Deno + Oak + MySQL 的实战教程。
 
-The entire source code is available here:  [https://github.com/adeelibr/deno-playground][22]. If you find an issue, just let me know. Or feel free to make a pull request and I'll give you credit in the repository.
+整篇文章的代码可以在这里看到：[https://github.com/adeelibr/deno-playground](https://github.com/adeelibr/deno-playground)。如果你有任何问题都可以在上面交流。或者提交你的 PR 到仓库中。
 
-If you found this tutorial helpful, please share it. And as always, I am available on  [Twitter under @adeelibr][23]. I would love to hear your thoughts on it.
-
-  
-
-[1]: https://www.freecodecamp.org/news/create-a-todo-api-in-deno-written-by-a-guy-coming-from-node/
-[2]: https://github.com/adeelibr/deno-playground/tree/master/chapter_1:oak
-[3]: https://github.com/adeelibr/deno-playground/tree/master/chapter_2:mysql
-[4]: https://www.freecodecamp.org/news/create-a-todo-api-in-deno-written-by-a-guy-coming-from-node/
-[5]: https://dev.mysql.com/downloads/mysql/
-[6]: https://dev.mysql.com/downloads/workbench/
-[7]: https://github.com/adeelibr/deno-playground/blob/master/guidelines/setting-up-mysql-mac-os-catalina.md
-[8]: https://www.apachefriends.org/index.html
-[9]: https://www.freecodecamp.org/news/create-a-todo-api-in-deno-written-by-a-guy-coming-from-node/
-[10]: https://github.com/adeelibr/deno-playground/pull/1/commits/5b63b51ebcadededcfec452fe6877a0bd0f1f83f
-[11]: https://github.com/adeelibr/deno-playground/blob/master/guidelines/setting-up-mysql-mac-os-catalina.md#set-your-mysql-password-to-empty
-[12]: https://deno.land/x/mysql/mod.ts%22
-[13]: https://deno.land/x/mysql/#create-database
-[14]: https://deno.land/x/mysql/#create-table
-[15]: https://www.typescriptlang.org/docs/handbook/interfaces.html#optional-properties
-[16]: https://www.postman.com/
-[17]: https://www.typescriptlang.org/docs/handbook/interfaces.html
-[18]: https://www.postman.com/
-[19]: https://www.postman.com/
-[20]: https://www.postman.com/
-[21]: https://www.postman.com/
-[22]: https://github.com/adeelibr/deno-playground
-[23]: https://twitter.com/adeelibr
+如果你感觉本系列很有帮助，可以分享它到社交网络中。同时我的 [Twitter 账号是 @adeelibr](https://twitter.com/adeelibr)。我会很期待听到你的任何想法。

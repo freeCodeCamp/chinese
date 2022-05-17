@@ -1,55 +1,55 @@
-> - 原文地址：[A crash course in TypeScript](https://www.freecodecamp.org/news/a-crash-course-in-typescript-e6bf9c10946/)
-> - 原文作者：Gabriel Tanner
-> - 译者：[C 君](https://github.com/lihroff)
-> - 校对者：[ZhichengChen](https://github.com/ZhichengChen)
+> -   原文地址：[A crash course in TypeScript](https://www.freecodecamp.org/news/a-crash-course-in-typescript-e6bf9c10946/)
+> -   原文作者：Gabriel Tanner
+> -   译者：[C 君](https://github.com/lihroff)
+> -   校对者：[ZhichengChen](https://github.com/ZhichengChen)
 
 # TypeScript 速成课
 
 Typescript 是 javascript 的类型超集，旨在简化大型 JavaScript 应用程序的开发。Typescript 加入了常见的概念例如 类（classes），泛型（generics），接口（interfaces）和静态类型（static types）并允许开发人员使用静态检查和代码重构等工具。
 
-## 为什么在意 Typescript：
+## 为什么在意 Typescript
 
 现在问题仍然是为什么你应该优选使用 Typescript。这有一些关于为什么 javascript 开发者应该考虑学习 Typescript 的原因。
 
-### 静态类型：
+### 静态类型
 
 Javascript 是动态类型的，这意味着直到在运行时实例化时，它不知道变量的类型，这可能导致项目中的问题和错误。Typescript 加入了对 Javascript 静态类型支持如果你正确的使用它处理由变量类型的错误设定引起的错误。您仍然可以完全控制输入代码的严格程度，或者甚至根本不使用类型。
 
-### 更好的 IDE 支持：
+### 更好的 IDE 支持
 
-Typescript 相比 Javascript 一个更大的优势是更好的 IED 支持包括了来自 Typescript 编译器智能，实时的提示，调试以及更多功能。这里还有一大堆扩展进一步  提升你的 Typescript 开发体验。
+Typescript 相比 Javascript 一个更大的优势是更好的 IED 支持包括了来自 Typescript 编译器智能，实时的提示，调试以及更多功能。这里还有一大堆扩展进一步  提升你的 Typescript 开发体验。
 
-### 应用新的 ECMAScript 特性：
+### 应用新的 ECMAScript 特性
 
 Typescript 使您可以使用最新的 ECMAScript 功能，并将它们转换到您选择的 ECMAScript 目标。这意味着您可以使用最新的工具开发应用程序，而无需担心浏览器支持。
 
-## 什么时候你该使用它：
+## 什么时候你该使用它
 
 到目前为止，我们应该知道为什么 Typescript 是有用的以及如何改善我们的开发体验。但它并不是解决所有问题的方法，当然也不能阻止你自己编写可怕的代码。那么让我们来看看你应该在哪里使用 Typescript。
 
-### 当你拥有一个很大的代码库时：
+### 当你拥有一个很大的代码库时
 
 Typescript 是大型代码库的一个很好的补充，因为它可以帮助您防止许多常见错误。这尤其适用于多个开发人员工作在同一项目之中。
 
-### 当你项目成员早已知道静态类型语言时：
+### 当你项目成员早已知道静态类型语言时
 
 另一个明显使用 Typescript 的场景是当你和你的团队已经知道静态类型的语言像 Java 和 C# 不想改为编写 Javascript。
 
-## 设置/建立：
+## 设置/建立
 
 要设置 typescript，我们只需要使用 npm 包管理器安装它并创建一个新的 Typescript 文件。
 
-```
+```plain
 npm install -g typescript
 ```
 
 安装完成之后我们可以继续探寻 Typescript 提供给我们的语法和功能特性。
 
-## 类型：
+## 类型
 
 现在让我们来看看 Typescript 所提供的类型：
 
-### 数值（Number）：
+### 数值（Number）
 
 Typescript 所有的值类型都是浮点数。所有的数字包括二进制和十六进制都是数值类型。
 
@@ -59,7 +59,7 @@ let hex: number = 0xbeef;
 let bin: number = 0b0010;
 ```
 
-### 字符串（String）：
+### 字符串（String）
 
 与其他语言一样，Typescript 使用 String 数据类型来保存文本数据。
 
@@ -67,7 +67,7 @@ let bin: number = 0b0010;
 let str: string = 'Hello World!';
 ```
 
-你还可以用反引号``来应用多行字符串并嵌入表达式。
+你还可以用反引号来应用多行字符串并嵌入表达式。
 
 ```typescript
 let multiStr: string = `A simplemultiline string!`
@@ -88,7 +88,7 @@ let boolTrue: boolean = true;
 
 现在我们已经有了基本的数据类型，我们可以看看你如何在 Typescript 中指定类型。基本上，您只需要在名称和冒号后面写出变量的类型。
 
-### 单一类型：
+### 单一类型
 
 这里例子为我们如何为变量指定字符串数据类型
 
@@ -98,7 +98,7 @@ let str: string = 'Hello World';
 
 所有其他数据类型也是这样使用。
 
-### 多类型：
+### 多类型
 
 你仍然可以通过`|`操作符为你的变量指定多个数据类型：
 
@@ -109,11 +109,11 @@ multitypeVar = 20;
 
 这里我们使用|为变量分配两种类型。现在我们可以在其中存储字符串和数值。
 
-## 类型检测：
+## 类型检测
 
 现在让我们看看我们如何检查我们的变量是否具有正确的类型。我们有多种选择，但在这里我只展示了两个最常用的选项。
 
-### Typeof：
+### Typeof
 
 `typeof`仅仅知道基本类型。这意味着它只能检查变量是否是我们上面定义的数据类型之一。
 
@@ -123,37 +123,37 @@ let str: string = 'Hello World!';
 
 ```typescript
 if (typeof str === number) {
-  console.log('Str is a number');
+    console.log('Str is a number');
 } else {
-  console.log('Str is not a number');
+    console.log('Str is not a number');
 }
 ```
 
 在此示例中，我们创建一个字符串类型变量并使用 typeof 命令检查 str 是否为 Number 类型（始终为 false）。然后我们打印是否是数值。
 
-### Instanceof：
+### Instanceof
 
 instanceof 运算符与 typeof 几乎相同，只是它还可以检查 javascript 尚未定义的自定义类型。
 
 ```typescript
 class Human {
-  name: string;
+    name: string;
 
-  constructor(data: string) {
-    this.name = data;
-  }
+    constructor(data: string) {
+        this.name = data;
+    }
 }
 
 let human = new Human('Gabriel');
 
 if (human instanceof Human) {
-  console.log(`${human.name} is a human`);
+    console.log(`${human.name} is a human`);
 }
 ```
 
 在这里，我们创建一个自定义类型，我们稍后将在本文中讨论，然后创建它的实例。之后，我们检查它是否真的是 Human 类型的变量，如果是，则在控制台中打印。
 
-## 类型断言：
+## 类型断言
 
 有时我们还需要将变量转换为特定的数据类型。这经常发生在你已经指定了一个泛型类型像 any 并且你想使用它具体的类型的方法。
 
@@ -170,7 +170,7 @@ let strLength = (str as string).length;
 
 这里我们将 str 变量转换为字符串，以便我们可以使用 length 属性（如果您的 TSLINT 设置允许，甚至可以在没有转换的情况下工作）。
 
-### <> 操作符：
+### <> 操作符
 
 我们也可以使用`<>`运算符，它与 `as` 关键字具有完全相同的效果，只有语法差异。
 
@@ -181,13 +181,13 @@ let strLength = (<string>str).length;
 
 此代码块与上面的代码块具有完全相同的功能。它只是语法不同。
 
-## 数组：
+## 数组
 
 Typescript 中的数组是相同对象的集合，可以用两种不同的方式创建。
 
 ### 创建数组
 
-#### 使用 []：
+#### 使用 []
 
 我们可以通过指定类型后跟`[]`来定义数组对象，以表示它是一个数组。
 
@@ -197,7 +197,7 @@ let strings: string[] = ['Hello', 'World', '!'];
 
 在这个例子中，我们创建一个字符串数组，它包含三个不同的字符串值。
 
-#### 使用泛型数组:
+#### 使用泛型数组
 
 我们还可用指定 Array<Type> 定义泛型数组
 
@@ -217,12 +217,15 @@ let stringsAndNumbers: (string | number)[] = ['Age', 20];
 
 此例中我们创建了一个数值可以包含字符串和数值。
 
-### 多维数组：
+### 多维数组
 
 Typescript 还允许我们定义多维数组，这意味着我们可以将数组保存在另一个数组中。我们可以通过使用多个[]运算符来创建一个多维数组。
 
 ```typescript
-let numbersArray: number[][] = [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]];
+let numbersArray: number[][] = [
+    [1, 2, 3, 4, 5],
+    [6, 7, 8, 9, 10],
+];
 ```
 
 这里我们创建一个包含另一个数字数组的数组。
@@ -243,19 +246,19 @@ let exampleTuple: [number, string] = [20, 'https://google.com'];
 const exampleTuple: [string, number] = [20, 'https://google.com'];
 ```
 
-## 枚举（Enums）：
+## 枚举（Enums）
 
 与大多数其他面向对象编程语言一样，Typescript 中的枚举允许我们定义一组命名常量。 Typescript 还提供基于数值和基于字符串的枚举。使用 enum 关键字定义 Typescript 中的枚举。
 
-### 数值枚举：
+### 数值枚举
 
 首先，我们将查看数值枚举，其中我们将键值与索引匹配。
 
 ```typescript
 enum State {
-  Playing = 0,
-  Paused = 1,
-  Stopped = 2,
+    Playing = 0,
+    Paused = 1,
+    Stopped = 2,
 }
 ```
 
@@ -263,9 +266,9 @@ enum State {
 
 ```typescript
 enum State {
-  Playing,
-  Paused,
-  Stopped,
+    Playing,
+    Paused,
+    Stopped,
 }
 ```
 
@@ -277,15 +280,15 @@ enum State {
 
 ```typescript
 enum State {
-  Playing = 'PLAYING',
-  Paused = 'PAUSED',
-  Stopped = 'STOPPED',
+    Playing = 'PLAYING',
+    Paused = 'PAUSED',
+    Stopped = 'STOPPED',
 }
 ```
 
 这里我们通过使用字符串初始化我们的状态来定义字符串枚举。
 
-## 对象（Objects）：
+## 对象（Objects）
 
 Typescript 中的对象是包含一组键值对的实例。这些值可以是变量，数组甚至函数。它也被视为表示非基本类型的数据类型。
 
@@ -301,12 +304,12 @@ const human = { firstName: 'Frank', age: 32, height: 185 };
 
 ```typescript
 const human = {
-  firstName: 'Frank',
-  age: 32,
-  height: 185,
-  greet: function() {
-    console.log('Greetings stranger!');
-  },
+    firstName: 'Frank',
+    age: 32,
+    height: 185,
+    greet: function () {
+        console.log('Greetings stranger!');
+    },
 };
 ```
 
@@ -316,9 +319,9 @@ Typescript 还允许我们自定义类型，以便于我们后续重用。要创
 
 ```typescript
 type Human = {
-  firstName: string;
-  age: number;
-  height: number;
+    firstName: string;
+    age: number;
+    height: number;
 };
 ```
 
@@ -334,17 +337,17 @@ const human: Human = {
 
 在这里，我们创建自定义类型的实例并设置所需的属性。
 
-## 方法参数和返回类型：
+## 方法参数和返回类型
 
 Typescript 允许我们为方法参数和返回值指定数据类型。现在让我们看一下使用 Typescript 定义函数的语法。
 
 ```typescript
 function printState(state: State): void {
-  console.log(`The song state is ${state}`);
+    console.log(`The song state is ${state}`);
 }
 
 function add(num1: number, num2: number): number {
-  return num1 + num2;
+    return num1 + num2;
 }
 ```
 
@@ -352,19 +355,19 @@ function add(num1: number, num2: number): number {
 
 现在我们可以像普通的 javascript 一样调用我们的函数，但编译器会检查我们是否为函数提供了正确的参数。
 
-```
+```plain
 add(2, '5')
 // 错误第二个参数类型为数值
 ```
 
-## 可选属性：
+## 可选属性
 
 Typescript 允许我们为方法(注：接口等同样可以定义可选属性)定义可选属性。我们通过 `?` 操作符定义。
 
 ```typescript
 function printName(firstName: string, lastName?: string) {
-  if (lastName) console.log(`Firstname: ${firstName}, Lastname: ${lastName}`);
-  else console.log(`Firstname: ${firstName}`);
+    if (lastName) console.log(`Firstname: ${firstName}, Lastname: ${lastName}`);
+    else console.log(`Firstname: ${firstName}`);
 }
 ```
 
@@ -377,19 +380,19 @@ printName('Gabriel');
 
 这表示 2 个示例都被视为正确的。
 
-## 默认值：
+## 默认值
 
 我们使用可选属性的第二种方法是为它指定一个默认值。我们可以通过直接在函数头部赋值来实现。
 
 ```typescript
 function printName(firstName: string, lastName: string = 'Tanner') {
-  console.log(`Firstname: ${firstName}, Lastname: ${lastName}`);
+    console.log(`Firstname: ${firstName}, Lastname: ${lastName}`);
 }
 ```
 
 在此例我中我们 lastName 赋予了默认值这意味着我们不必每次调用方法时提供它。
 
-## 接口（Interfaces）：
+## 接口（Interfaces）
 
 Typescript 中的接口用于定义与我们的代码以及项目之外的代码的契约。接口只包含我们的方法和属性的声明，但不实现它们。实现方法和属性是实现接口的类的责任。
 
@@ -397,16 +400,16 @@ Typescript 中的接口用于定义与我们的代码以及项目之外的代码
 
 ```typescript
 interface Person {
-  name: string;
+    name: string;
 }
 
 const person: Person = {
-  name: 'Gabriel',
+    name: 'Gabriel',
 };
 
 // 不能指定为Person接口
 const person2: Person = {
-  names: 'Gabriel',
+    names: 'Gabriel',
 };
 ```
 
@@ -418,17 +421,17 @@ const person2: Person = {
 
 ```typescript
 interface Person {
-  name: string;
-  age?: number;
+    name: string;
+    age?: number;
 }
 
 const person: Person = {
-  name: 'Frank',
-  age: 28,
+    name: 'Frank',
+    age: 28,
 };
 
 const person2: Person = {
-  name: 'Gabriel',
+    name: 'Gabriel',
 };
 ```
 
@@ -440,14 +443,14 @@ const person2: Person = {
 
 ```typescript
 interface Person {
-  name: string;
-  readonly id: number;
-  age?: number;
+    name: string;
+    readonly id: number;
+    age?: number;
 }
 
 const person: Person = {
-  name: 'Gabriel',
-  id: 3127831827,
+    name: 'Gabriel',
+    id: 3127831827,
 };
 
 person.id = 200; // 不可为id赋值因为它是只读的
@@ -455,7 +458,7 @@ person.id = 200; // 不可为id赋值因为它是只读的
 
 在此示例中，id 属性是只读的，在创建对象后无法更改。
 
-## 模块（~~Barrels~~ Modules）：
+## 模块（~~Barrels~~ Modules）
 
 Barrels 允许我们在一个更方便的模块中汇总多个导出模块。
 
@@ -474,9 +477,9 @@ export * from './human';
 import { Person, Animal, Human } from 'index';
 ```
 
-## 泛型（Generics）：
+## 泛型（Generics）
 
-泛型允许我们创建兼容广泛类型而不是单一类型的组件。这使得我们的组件“ 开放”和复用。
+泛型允许我们创建兼容广泛类型而不是单一类型的组件。这使得我们的组件“ 开放”和复用。
 
 现在您可能想知道为什么我们不只是使用任何（`any`）类型来使组件接受多种类型而不是单一类型。让我们看一个例子更好地了解。
 
@@ -484,7 +487,7 @@ import { Person, Animal, Human } from 'index';
 
 ```typescript
 function dummyFun(arg: any): any {
-  return arg;
+    return arg;
 }
 ```
 
@@ -494,35 +497,35 @@ function dummyFun(arg: any): any {
 
 ```typescript
 function dummyFun<T>(arg: T): T {
-  return arg;
+    return arg;
 }
 ```
 
 这里我们使用泛型参数 T，因此我们可以捕获变量类型并在以后使用它。我们还使用它作为返回参数类型，它允许我们在检查代码时看到相应的类型。
 
-更多详细介绍你可以查看[Charly Poly]()关于[Generics and overloads](https://medium.com/@wittydeveloper/typescript-generics-and-overloads-999679d121cf)的文章
+更多详细介绍你可以查看[Charly Poly](.)关于[Generics and overloads](https://medium.com/@wittydeveloper/typescript-generics-and-overloads-999679d121cf)的文章
 
-## 访问修饰符（Access Modifiers）：
+## 访问修饰符（Access Modifiers）
 
 访问修饰符控制我们类成员的可访问性。 Typescript 支持三种访问修饰符 - 公共的（public），私有的（private）和受保护的（protected）。
 
-### 公共的：
+### 公共的
 
 公共成员可以在任何地方访问，没有任何限制 这也是标准修饰符，这意味着您不需要使用 public 关键字为变量添加前缀。
 
-### 私有的：
+### 私有的
 
 私有成员只能在其定义的类中能访问。
 
-### 受保护的：
+### 受保护的
 
 保护成员只能在其定义的类及其子类中访问。
 
-## TSLINT：
+## TSLINT
 
 TSLINT 是 Typescript 的标准 linter，可以帮助我们编写干净，可维护和可读的代码。它可以使用我们自己的 lint 规则，配置和格式化程序进行自定义。
 
-### 设置：
+### 设置
 
 首先我们需要安装 Typescript 和 tslint，我们可以全局安装和局部安装：
 
@@ -539,17 +542,17 @@ tslint --init
 
 现在我们有了 tslint.json 文件，我们可以开始配置我们的规则了。
 
-### 配置：
+### 配置
 
 TSLINT 允许使用配置我们自己的规则并自定义代码的外观。默认情况下，tslint.json 文件看起来像这样，只使用默认规则。
 
 ```json
 {
-  "defaultSeverity": "error",
-  "extends": ["tslint:recommended"],
-  "jsRules": {},
-  "rules": {},
-  "rulesDirectory": []
+    "defaultSeverity": "error",
+    "extends": ["tslint:recommended"],
+    "jsRules": {},
+    "rules": {},
+    "rulesDirectory": []
 }
 ```
 
@@ -567,10 +570,10 @@ TSLINT 允许使用配置我们自己的规则并自定义代码的外观。默�
 
 有关所有可用规则的 ​​ 概述，您可以查看[官方文档](https://palantir.github.io/tslint/rules/)。
 
-## 推荐阅读：
+## 推荐阅读
 
 [An introduction to the JavaScript DOM](https://medium.freecodecamp.org/an-introduction-to-the-javascript-dom-512463dd62ec)
-[The Javascript DOM (Document Object Model) is an interface that allows developers to manipulate the content, structure…medium.freecodecamp.org]((https://medium.freecodecamp.org/an-introduction-to-the-javascript-dom-512463dd62ec)
+[The Javascript DOM (Document Object Model) is an interface that allows developers to manipulate the content, structure……medium.freecodecamp.org]((https://medium.freecodecamp.org/an-introduction-to-the-javascript-dom-512463dd62ec)
 
 ## 结论
 

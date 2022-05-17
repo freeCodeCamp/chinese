@@ -1,145 +1,114 @@
-> * 原文地址：[Landing My First Development Job - What a Crazy Journey!](https://www.freecodecamp.org/news/landing-my-first-development-job-what-a-crazy-journey/)
-> * 原文作者：Jonathan Sexton
-> * 译者：
-> * 校对者：
-![How I Landed My First Developer Job - What a Crazy Journey](https://www.freecodecamp.org/news/content/images/size/w2000/2019/07/japheth-mast-Ls3yexjyRpk-unsplash-2.jpg)
+# 我找到了第一份开发工作——一段疯狂的经历
 
-After I was offered a development position with a company and after some negotiating I accepted their generous offer.
+对，你没看错标题！一家公司聘用了我，他们给我的职位是开发者，并且给我的待遇相当不错。
 
-I am beyond blown away, excited, happy, and (if I'm being 100% honest) terrified - in a good way though. I'm still in disbelief that this is really happening but ecstatic to start working on production code.
+我感到既兴奋又震惊，坦白说还有点担心，不过还好啦。这事真的令人难以置信，不过我还是欣喜若狂地开始写代码了。
 
-I've had a lot of people ask me to distill my journey into an article to share and help others. So, buckle up because here we go.
+很多人建议我将自己的经历写成一篇文章分享出来，也许可以帮助别人。现在，就开始吧！
 
----
+## 开始
 
-## Getting Started
+我一直都对计算机、技术等很感兴趣。和其他同龄人一样，刚开始学习的时候，我创建一个 GeoCities 网站，然后用一些基本的 CSS 样式来个性化修饰我的 MySpace 页面。
 
-I've always been interested in computers, tech, etc. Like many people my age, I got to 'cut my teeth' with development by creating a  [GeoCities][1]  site and later by personalizing my MySpace page with some basic CSS.
+我当时并不知道，那就是开发，虽然很粗糙，但的确是在做开发。那时，我不知道这种工作还可以挣到钱，否则我可能会一直坚持下去。所以，我上了大学，并获得了一个与技术无关的学位 —— 心理学。这并不是一个完全无用的学位，只是在我之后的工作中我从来都没有用到过。
 
-I didn't know it at the time but this was development, a crude version of it but still development nonetheless. At that time, I didn't know that people would pay for this kind of work or I might have stuck with it. So, I went to college and got a degree in nothing tech related - psychology. Not a useless degree, but one I ultimately never put into professional use.
+## 发现并追求内心最想做的
 
-## Finding My Calling
+这样就到了 2016 年的夏天，那时候在工作之余我有很多空闲时间。其实我之前一直想自学编程，所以这对我来说是很好的时间点——别再拖了。于是我就利用网络上的很多免费资源，全身心地开始了我的编程之旅。
 
-Fast forward to the summer time in 2016 where I found myself with an abundance of free time on my hands outside of work. I had always wanted to teach myself to code/program and decided now was the time - no more delay. With the amount of free and accessible resources online to teach myself how to code it was the perfect time to jump in.
+刚开始我在网上搜索学习资源，并发现了 [CodeCademy](https://www.codecademy.com/) 这个网站，我将上面的问题、解题思路还有结果全部手抄到笔记本上。我会将我认为重要的东西全部都用笔记下来，后面时不时地去复习。现在我再回过头来看这些东西，把我当时和现在觉得困难的内容对比一下，也挺有趣的。
 
-I started by searching for resources and came across Codecademy. I took handwritten notes by copying the entire question, answer, and result into a notebook. I wrote down everything thinking that I would need it. I came back to these notes from time to time to review them. It's also interesting to look back on them and compare what I considered difficult then to what I consider difficult now. ?
+一个朋友知道我在自学，就告诉了我 [freeCodeCamp](https://freecodecamp.org/)，他说这个平台就是为像我这样的人设计的。我本来打算随便看看，上一两节课就够了，结果那天晚上我完成了 HTML 的整个学习章节，我完全被迷住了。
 
-A friend introduced me to  [freeCodeCamp][2]  because he knew I was self teaching and told me this platform was built for people like me. I had planned to check it out, maybe do one or two lessons and then go to bed. I finished the entire section on HTML that night! I was hooked.
+在学习的过程中我发现学得越多，问题就越多。总感觉有一种寻找这些问题答案的动力在推动着我。所以我继续学习接下来的课程和项目。在 freeCodeCamp 的课程更新之前（译者注：指的是 2016 年版课程更新至 2018 版课程），我在上面完成了两个项目。
 
-The more I learned the more questions I had. I felt this urge, this pull to find answers to those questions. So I continued on working through the lessons and projects. I finished 2 projects before the curriculum was overhauled and revamped on freeCodeCamp.
+平常我会抓住各种机会去学习或者做项目，比如排队时，我不会打开手机去浏览我的各种社交网络，而是看一些和 Web 开发相关的文章或者视频。
 
-I was finding any excuse to learn and work on projects. While I was standing in any line waiting for something I would pull out my phone and instead of looking at social media, I began to read web development articles or watch a development related video.
+现在我对怎么合理安排休息时间有了很大的改变，不像以前一样把时间花费在一些“无脑消费”上（如果你喜欢社交媒体或看一些有趣的动物视频，我并不是说你是“无脑”，我只是说，这类行为通常不需要你的投入，你只需要打开手机，看着屏幕就可以了。其实，我也时不时这样）。
 
-I feel like this was a major shift in the way I viewed downtime as compared to previously where "mindless consumption" ruled my time.  _(_If you enjoy social media or funny animal videos I'm not calling you mindless, I'm simply saying that type of consumption typically doesn't require you to be engaged. It's the type of consumption that you can do on auto pilot and frankly I still do it from time to time.)
+在这段时间里，我浏览了各种学习资源，一直在纠结哪种适合我，就像一个在糖果店里的孩子到处盯一盯。我曾经有一个文件夹，里面保存了大约300个链接，全是我计划要学习的东西。现在我知道了，找到适合自己的并坚持下去，远比选来选去，这看看、那看看要好得多。
 
-During that time I had bounced around the various different sources and was like a kid in a candy store. At one point I had a folder that had roughly 300 links to material I had planned to work through. I now know that finding a resource and sticking with it is far better than hoping from one resource to another.
+我之前总是学习到很晚，妻子和女儿都睡着了。我经常熬夜到凌晨12点半，有时甚至是2点，然后不得不在早上6点起床去做我的日常工作。起初，当学习的东西很简单的时候，对我来说还可以适应。但是，当我开始学习 JavaScript，学习网络、服务器、无障碍等基础知识时，我发现越是熬夜我的大脑就越难以集中精力。
 
-I was doing all of this at night when my wife and daughter were asleep. I was staying up until 12:30 AM sometimes as late as 2:00 AM and then having to get up at 6:00AM to do my normal day job. At first, when the topics weren't as mentally taxing this was not an issue. But as I started moving into JavaScript, learning the basics of networking, servers, accessibility, etc I noticed that the later it got, the more difficult it became to keep my brain engaged.
+在坚持了几个月之后，我不得不开始改变我的学习计划。
 
-Needless to say, this routine only lasted a few months before having to change it.
+当然，我并没有想停止我的学习和项目，只是将我的日程安排做了下调整。
 
-I didn't want to stop working on projects/learning but I needed to alter my schedule in order to benefit my well being. That's when I decided to go to the other end of the work day spectrum.
+每天早上，我4点起床，不再像以前一样熬夜。然后学习和做项目，再去健身房，一天就这样开始了。不得不说，在我的学习过程中，这是非常关键的，因为我记住了更多东西，做了更多项目，最终一步步在往前发展。
 
-I started getting up at 4:00 AM, instead of staying up late, to learn and work on projects before going to the gym then starting my day. I must say, this was a pivotal moment in my journey because I started to retain more of the information I was learning and that ultimately helped me move forward with more projects/material.
+同时，在这期间我开始购买各种和 web 开发相关的学习资源(主要是 Udemy 的课程和书籍)。但这并不是一个明智的选择。如果你找到了一个你喜欢并适合你学习的资源，那么坚持下去，直到将它学完。不要像我这样从一个跳到另一个。
 
-Also, this is the time when I started to buy up every resource I could find (Udemy courses and books mostly) dealing with any aspect of web development. I can tell you that this isn't a wise (or financially sound) choice to make. If you find a resource you like and that you're learning from then stick with that resource until it's exhausted. The last thing you want to be doing is jumping to the new resource each time you find one like I did.
+## 成长 —— Google & Udacity 奖学金
 
-## Grow With Google & Udacity Scholarship
+![](https://user-gold-cdn.xitu.io/2019/7/15/16bf13ab61d38328?w=704&h=704&f=png&s=159442)
 
-![](https://jonathansexton.me/blog/wp-content/uploads/2019/07/GrowWithGoogleDeveloperChallengeScholarship.png)
+2018 年 1 月，我申请并获得了优达学城前端纳米学位项目的奖学金。这不仅是一个很棒的机会，驱使我朝着目标前进，同时也让我发现自己的不足之处。
 
-The image that came with my acceptance e-mail
+刚参加这个项目，我只会 HTML、CSS 的基本知识，以及一小部分 JavaScript。在课程中，我知道了 [jQuery](https://jquery.com/)，[functional programming](https://en.wikipedia.org/wiki/Functional_programming)，[object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) (OOP)，[test driven development](https://en.wikipedia.org/wiki/Test-driven_development) (TDD)，[accessibility](https://en.wikipedia.org/wiki/Accessibility)，servers，API's，basic networking，[React](https://reactjs.org/)，[AJAX](https://en.wikipedia.org/wiki/Ajax_%28programming%29) 和其他我以前从未接触过的 web 开发技术。
 
-In January 2018 I applied for and was awarded a scholarship to Udacity's Front-End Nanodegree program. This was not only an awesome opportunity to help propel me towards my goal but a humbling experience as well.
+老实说，学习的过程并不是总是轻松愉快，有时候我会很认真地想是不是该放弃。我觉得自己可能永远学不懂这些概念，我的脑子里一片迷茫。
 
-I came into this program with a basic knowledge of HTML, CSS, and a small portion of JavaScript in the vanilla flavor. In this course I was introduced to  [jQuery][3],  [functional programming][4],  [object-oriented programming][5]  (OOP),  [test driven development][6]  (TDD),  [accessibility][7], servers,  [API's][8], basic networking,  [React][9],  [AJAX][10], and so many more facets of web development that I hadn't previously been exposed to.
+我很庆幸自己没有半途而废，因为半途而废的人永远不会成功——这种老生常谈的话是第一次出现在这篇文章里，我保证后面不会有了。
 
-I'll be honest, it wasn't always easy or fun and there were times I seriously considered dropping out. I felt like I would never learn these concepts and that I was in over my head.
+在学习这些课程的时候，我开发了很多很棒的项目，比如[卡片匹配游戏](https://github.com/JS-goose/card-matching-game)，[街机游戏](https://github.com/JS-goose/frontend-nanodegree-arcade-game)，[餐厅点评 App](https://github.com/JS-goose/mws-restaurant-stage-1)，[邻里定位 App](https://github.com/JS-goose/neighborhood-map-react)。但除了这些项目，还认识了很多朋友，与其他开发者合作也是一份宝贵的经验。
 
-I'm happy that I didn't quit because no one ever accomplished their goals by quitting - first and only cliche statement I promise :D
+可以这么说，没有这门课程，就不会有今天的我。在这9个月的课程中，我收获了很多宝贵的东西。
 
-I had the chance to build many awesome projects like the  [Card Matching Game][11],  [Arcade Game Replica][12],  [Restaurant Review App][13], and the  [Neighborhood Map App][14]. More than the projects though, I got to meet many great people and valuable experience collaborating with other developers in the course.
+## 求职
 
-Without this course, I can truly and honestly say that I would not be where I am today. I gained many valuable experiences and lessons in this 9 month course.
+![](https://user-gold-cdn.xitu.io/2019/7/15/16bf1597a18df8d4?w=1024&h=683&f=jpeg&s=62263)
 
-## Job Hunting...dun dun duuuuunnn!
+在正式开始找工作之前，我已经努力学习了大约两年(有时也偷懒)。但还是觉得自己没有做好准备，一位后来成为我导师的朋友告诉我，你永远不会感觉到自己已经准备好。他说我应该去试一下，如果得到面试机会，就让面试官来告诉我，到底我有没有准备好，不要把任何一个机会挡在门外。
 
-![a pencil on drafting plans](https://jonathansexton.me/blog/wp-content/uploads/2019/07/sven-mieke-fteR0e2BzKo-unsplash-1024x683.jpg)
+所以，带着极度的恐惧、焦虑和怀疑，我决定开始找工作。
 
-Photo by  [Sven Mieke][15]  on  [Unsplash][16]
+起初，我只是投一些自己符合大多数条件的职位，但这并不是正确的做法。然而我又很害怕收到别人的面试电话。（后来我开始申请任何我感兴趣的工作。高级开发、前端 React 开发 、具有 SQL 经验的 API 开发，我全都申请过。这么做是因为你永远不知道你的申请会有什么结果。也许你没有得到某个高级职位的 offer，但他们可能喜欢你的个性，所以让你去面试他们的低级职位。）
 
-At this point I had been working diligently (sometimes slacking off as well) for about two years. I did not feel as though I was job ready but a friend who became my mentor told me that I'll never feel ready. He said that I should apply and if I get interviews then let them tell me I'm not ready if that's the case but to not exclude myself from an opportunity.
+在找工作投了三个月的简历之后。终于我接到了第一次面试的电话！我既高兴又害怕。压力非常大。
 
-So, with a metric ton of fear, anxiety, and doubt I decided to start applying for jobs.
+我阅读文章，学习面试技巧，阅读书籍，让我的妻子就问题对我进行测验，并尝想象各种我认为会在面试中出现的场景。我还为面试官准备了一些问题，因为我想知道在这家公司工作是什么样的。
 
-At first, I was only applying for jobs where I met the majority of the qualifications. I can tell you now that this is not the way to do it, however, at the time I was terrified that someone would actually call me about an interview. (_Later down the road I was applying for anything that interested me. Senior developer - sure, I applied for that. Front-end ninja with React skills - yep, threw in an application for that as well. API developer with SQL experience - oh yeah! I applied for that one as well. I did this because you never know what will come of your application. Maybe you don't get hired for that senior role but maybe they like you and your personality so much that they ask you to interview for their junior role._)
+结果最后我产生了这样的想法：这是一份完美的工作，是我从记事以来最想得到的东西，我必须得到它！
 
-That's exactly what happened after I'd been applying for about 3 months. I got a call for my first interview! I was so happy and scared at the same time. Now the pressure was really on.
+其实我不应该这么想的。
 
-I read articles, brushed up on my interviewing skills, read books, asked my wife to quiz me on topics, and tried to run through different scenarios that I thought would come up in the interview. I also prepared questions for interviewer because I wanted to know what it was like to work at this company.
+面试那天，已经不能用紧张来形容我自己了，我汗流浃背。在回答了所有的问题之后，我提问了我准备的问题。面试结束后，我感觉发挥得还可以。
 
-Ultimately, I did what I wasn't supposed to do; I convinced myself that this was the perfect job and I wanted it. I wanted it more than anything I could ever remember wanting. I built it up as something that I had to have.
+最后，我没有得到这个职位，我很沮丧。我觉得一切都进行得很顺利，但不知什么原因，结果没有如我所愿。后来我又面试了很多工作，才知道面试失败是很正常的。
 
-The day of the interview came and to say I was nervous is an understatement. I was sweating bullets. I answered all of the questions and when it was my turn I asked the questions I had prepared. After it was over I left feeling like the interview went well.
+我决定不再让这些负面情绪来打击我的信心。所以我开始更加努力地工作、学习，化悲愤为动力。我会尽一切努力来保证某次面试能让我拿到 offer。
 
-Ultimately, I didn't get the position and I was crushed. I felt like everything went like it should have but for some reason the stars just didn't align. Little did I know that this would be a common pattern among my interviews.
+以下是我找工作的一些数据统计：
 
-I decided not to let these disappointments define or destroy my confidence. I started working harder, learning more, using that disappointment I felt to fuel my passion. I would do whatever it took to ensure that one of these interviews would end with a full time offer.
+- 通过申请平台提交求职申请：271次
+- 提交之后，有公司以某种形式回应我：28次
+- 电话面试：7次
+- 面谈：8次
+- 拿到 offer：3家公司（一家是可以签订全职合同，但可能性很小；一家是兼职形式；最终我得到了一份全职工作）
+- 没有消息：**多得数不过来**
 
-Here are some metrics about my job search:
+如果你正在找工作，不要让这些数字打击你！的确，这是很令人沮丧，让人想退缩。填了一份申请表，投了简历却从来没有得到任何回复，确实很糟糕，但请不要放弃！你一定会成功！就像我一样。
 
--   Applications submitted across all platforms:  **271**
--   Any form of contact from company after application:  **28**
--   Phone Interviews:  **7**
--   In person interviews:  **8**
--   Job offers:  **3**  (one was contract with the (small) possibility for full time, one a part time freelance gig, and the eventual offer that I took for a full time position
--   Companies that ignored me after expressing interest:  **Too many to count**
+## 关于找工作 —— 我的建议
 
-If you are applying for jobs, in any field, don't let the numbers discourage you! Yes it is disheartening, yes it can be daunting, yes it stinks to fill out an application and never hear anything back, but don't quit! You can do this! I'm proof!
+关于找开发工作的建议或者技巧不胜枚举，我总结了自己找工作的一点经验，分享给大家：
 
-## My Advice on Your Job Search
+- 脸皮要厚，这是必须的，因为很多公司可能不会要你
+- 申请任何你感兴趣的职位
+- 即使某些职位你没有达到要求，一样申请（我的第一份开发者工作就是这么找到的）
+- 花时间将简历做好一点
+- 不要因为某些公司拒绝你而觉得自己是个失败者
+- 向公司展示你可以不需要教程构建一个项目
+- 当需要帮助时，就寻求帮助（对我来说很难）
+- 去各种平台上申请工作，别忘了 [ GitHub jobs](https://jobs.github.com/) 也可以
+- 保证充足的睡眠、锻炼，以及注意饮食健康（健康是根本）
+- 时不时休息一下
+- 不要和别人比较，你的工作。技术等等
+- 不要在意花了多长时间，3个月或3年（像我一样），这不是一场比赛
+- 努力学习，永不言弃
 
-This is by no means an exhaustive list of tips/tricks but below are some pieces of advice I've picked up along my journey to getting a job in development:
+最后，希望你一切顺利！如果你需要建议或帮助，可以在 [Twitter](https://twitter.com/jj_goose) 或 [LinkedIn](https://www.linkedin.com/in/jj-goose/) 上和我联系。我喜欢帮助别人，结识新朋友。
 
--   Develop thick skin - it's a must! Companies will disappoint you
--   Apply for anything you're interested in
--   Apply even if you don't meet all of the requirements (this is what I did and also how I landed my first developer job)
--   Spend time perfecting your resume
--   Just because companies turn you down doesn't mean you're a failure
--   Show companies you can do the work by building projects outside of tutorials
--   Ask for help if you need it (this was a hard one for me to learn)
--   Apply for jobs on all of the major platforms but don't forget that platforms like  [GitHub jobs][17]  also exist
--   Ensure you take care of yourself - get enough sleep, exercise, eat healthy (it's important for overall health!)
--   Don't be afraid to take breaks
--   Don't compare yourself, your job search, your situation, or your skills to others
--   If it takes you 3 months or 3 years (like me) remember, this is not a race
--   Work hard, learn well, and never give up!
+在我的个人[博客](https://jonathansexton.me/blog)上，我也会写一些与 web 开发相关的文章。每个月我会更新一次，里面有我觉得不错的东西，你可以考虑订阅一下。
 
----
-
-As always, I wish you nothing but the best in all you do. If you need advice or help I'd be glad to do what I can. Connect with me on  [Twitter][18]  or  [LinkedIn][19]. I'm always willing to help and I love meeting new people!
-
-I also run a personal  [blog][20]  where I write articles related to web development. While you're there consider signing up for my newsletter that I send out once a month with articles and great finds from around the web.
-
-Have an amazing day and happy coding!
-
-[1]: https://en.wikipedia.org/wiki/Yahoo!_GeoCities
-[2]: https://freecodecamp.org/
-[3]: https://jquery.com/
-[4]: https://en.wikipedia.org/wiki/Functional_programming
-[5]: https://en.wikipedia.org/wiki/Object-oriented_programming
-[6]: https://en.wikipedia.org/wiki/Test-driven_development
-[7]: https://en.wikipedia.org/wiki/Accessibility
-[8]: https://en.wikipedia.org/wiki/Application_programming_interface
-[9]: https://reactjs.org/
-[10]: https://en.wikipedia.org/wiki/Ajax_%28programming%29
-[11]: https://github.com/JS-goose/card-matching-game
-[12]: https://github.com/JS-goose/frontend-nanodegree-arcade-game
-[13]: https://github.com/JS-goose/mws-restaurant-stage-1
-[14]: https://github.com/JS-goose/neighborhood-map-react
-[15]: https://unsplash.com/@sxoxm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-[16]: https://unsplash.com/search/photos/job-search?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-[17]: https://jobs.github.com/
-[18]: https://twitter.com/jj_goose
-[19]: https://www.linkedin.com/in/jj-goose/
-[20]: https://jonathansexton.me/blog
+希望你有精彩的一天， happy coding!

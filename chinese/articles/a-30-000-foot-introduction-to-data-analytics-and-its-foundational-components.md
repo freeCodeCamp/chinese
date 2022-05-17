@@ -1,239 +1,236 @@
 > -   原文地址：[What is Data Analytics? A 30,000-Foot Intro to Key Data Analysis Concepts 关于数据分析核心概念的详细介绍](https://www.freecodecamp.org/news/a-30-000-foot-introduction-to-data-analytics-and-its-foundational-components/)
 > -   作者：Adam Naor
-> -   译者：
+> -   译者：wjr0102
 > -   校对者：
 
 ![What is Data Analytics? A 30,000-Foot Intro to Key Data Analysis Concepts](https://images.unsplash.com/photo-1423189871551-9b8513198c81?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Data analytics is the process of inspecting, cleansing, transforming, and modeling data with the goal of discovering useful information.
+数据分析包含了数据检查、清洗、变换和建模等流程，借助数据分析，我们可以从数据中获取有用的信息。
 
-Data analytics is everywhere in the modern world: it helps inform the technology we use, how software is built, and the ways in which products are developed.
+在现代生活中，数据分析无处不在：它有助于技术的改进，软件的构建以及产品的发展。
 
-In this post I will cover core data analytics principles and how to apply them, providing examples that you can deploy to capture and obtain meaningful insights from your data.
+本文首先会介绍数据分析的核心原则及其应用，接着会提供一些示例，借助这些示例所展示的方法，你也可以在自己的数据集上获得有价值的信息。
 
-I will also share examples of how data analytics is being used in a variety of products you are likely familiar with - website optimization, health and diet apps, agriculture, and insurance to name a few.
+同时，我也会分享几个大家所熟悉的，诸如网页优化、健康和饮食软件，农业和保险等产品中的数据分析应用。
 
-If you share my belief that data is a guide that can inform your decisions, it is worthy of further study.
+如果你也认同“数据是影响你决定的向导“，那么就往下继续学习吧。
 
-## Sample Questions
+## 例题
 
-First, see if you can answer these questions.
+首先，看看你是否可以回答以下这些问题。
 
-If these don’t come easily, don’t worry.
+即使现在不能轻易地回答出这些问题，也没有关系。
 
-I will walk you through how to learn the basics of data analytics so that you can approach each of these questions with confidence.
+相信通过本文的学习，你一定可以轻松地给出答案。
 
-The manager of an internet retailing operation selling a single product has found that people who visit the web site buy the product 26% of the time. He's also discovered and that the behavior of customers seems to be independent.
+一家只售卖一件商品的互联网零售业务经理发现，大约有 26% 的网页访问者会购买商品。他同时也发现这些消费者的行为是独立的。
 
-Assume that exactly 8 potential customers visit the site every day. Imagine that the manager is on an incentive plan that pays him $300 for any day in which the site generates three or more sales. Otherwise his pay is $100 per day.
+现在假设有 8 位潜在的消费者每天都会访问网站。这位经理参加了一个激励计划：如果一天之内有超过三位（包含三位）消费者在该网站上进行了消费，那么经理将得到 $300 的日薪，否则他只能得到 $100 的日薪。
 
-a. What is the probability of him earning the \$300 on any random day?
+a. 这位经理得到 $300 日薪的概率是多少呢？
 
-Answer: ~35%
+答案：~35%
 
-b. What is the expected value of his pay on any random day?
+b. 这位经理的期望日薪是多少呢？
 
-Answer: \$170
+答案：\$170
 
-c. The manager is offered his choice of two alternative incentive schemes, by which he will receive either (a) no base salary, but a commission of $75 per sale, or (b) a fixed salary of $160 per day, or (c) the original plan outlined above.
+c. 现在，这位经理一共有三个可选择的激励计划：(a) 没有基础工资，但是每卖出一件商品，就可以获得 $75 的奖励；(b) 每天固定工资 $165；(c) 保持原激励计划不变
 
-Which plan should he select if he wants to maximize the expected value of his earnings?
+如果这位经理想要最大化自己的期望收益，他该选择哪一个激励计划呢？
 
-Answer: the original plan
+答案：原来的激励计划
 
-## The Basics of Data Analytics
+## 数据分析的基本概念
 
-Let’s walk through how to think about data and build on these learnings so that you can answer the above questions.
+我们需要先对数据本身有一定的了解，才能在此基础继续学习，从而解决上述问题。
 
-The first aspect of data analytics we must learn is that there are different types of data. Simple, right?
+关于数据分析首先要知道的是，数据有不同的类型。这个概念就和听上去的一样简单易懂。
 
-It sure is.
+按照不同的数据分类规则，数据可以被分为不同类型。
 
-Data can be categorical (gender, location, and so on) or numerical (number of customers, active users, and so on).
+数据可以是分类数据（性别、地点等）；也可以是数值型数据（客户数量、活跃用户数等）。
 
-Some data is discrete (that is, the number of job applicants applying to a job) and other data is continuous (infinite number of possible outcomes).
+数据可以是离散的，比如说一份工作的应聘人数就是离散的；也可以是连续的，比如说一些无限可能的结果。
 
-Before analyzing data, take a moment to understand the types of data you have.
+在开始数据分析前，了解你的数据类型是非常有必要的。
 
-Do you have continuous or discrete data? Is your data categorical or numerical?
+你所拥有的数据是离散的还是连续？你的数据是分类数据还是数值型数据？
 
-After answering those questions, you are ready to dive deeper.
+在回答了这些问题之后，你才可以对数据进行进一步的挖掘。
 
-Data has three primary types of characteristics:
+除了上述两种分法外，数据还可以根据其和时间的关系，分为下面三大类：
 
-1.  Data can be cross-sectional. This means that the data is a snapshot of a pattern or trend. An example is the results of a survey, like the national census.
-2.  Data can be a time series. An example is my test scores, [wages earned][1] in a period of time, or how companies measure and [apply discounts][2] throughout the year.
-3.  There's also panel data. An example is data that a firm might store in a CRM. Panel data enables multiple subjects and multiple points in time. As storage is becoming increasingly cheap, this form of data is becoming more common.
+1. 截面数据类型：这种数据描述了某个时间点上，事物的模式或者趋势。像人口普查这种民意调查的结果就是截面数据的一种。
+2. 时间序列数据类型：这种数据与一段时间相关，比如我的测试成绩、一段时间内的[工资][1]、 公司一年的[折扣][2]情况等都属于时间序列数据。
+3. 面板数据：像公司存在客户关系管理(CRM)系统中的数据就是面板数据的一种。面板数据包含了多个事物在多个时间点上的信息。随着存储设备日趋便宜，这种数据类型也变得更加普遍。
 
-Now that you know the data types and the primary characteristics of data, I want to provide an overview of how data is distributed.
+## 离散程度：数据是如何组织的
 
-## Dispersion: How Data is Organized
+通过观察数据的形状，你可以大致地了解到它们的离散程度。
 
-Unique insights can be gleaned by looking at the shape of your data.
+我们也可以使用集中趋势这一方法对数据进行组织。
 
-Data can be organized via a central tendency.
+首先我们让数据从小到大排序。
 
-To do so, order your data set from smallest to largest.
+当数据有序地排列时，你就可以直观地看到他们的离散程度。
 
-When data is neatly lined up, you can start to see dispersion for the first time.
+你可以通过最大数据值减去最小数据值的方式得到数据的取值范围，这是衡量数据离散程度一种方式。
 
-By seeing how spread out data is you can compute the data’s range by subtracting the largest value from the smallest value.
+如果数据的取值范围很大，我们就可以称这样的数据具有较高的离散程度。
 
-If data has a large range (the distance between the minimum and maximum values) then it is said to have high dispersion.
+最后，你可以在现有可获得的数据或是数据集中，尝试计算出他们的平均值，中位数和众数。
 
-Lastly, you can look at all available data or a snapshot of a dataset. You can easily compute the mean, median, and mode.
+现在试想一下这个实验：假设你在装满 M&M 巧克力豆的不透明罐子里取出了一颗红色的巧克力豆，你对这罐巧克力豆会有什么样的想法呢？
 
-Think about the following thought experiment. If you place your hand into a jar of M&Ms and pull out one red one, what can you deduce?
+显然，仅仅一次的实验结果并不能让我们得出什么有用的推断。下面我们就用置信区间这一概念进行解释。
 
-Likely not much. Let us explain why by defining confidence intervals.
+## 置信区间
 
-## Confidence Intervals
+置信区间就是当前样本数据可能的取值范围，这个可能性的大小我们用置信度来描述。
 
-A confidence interval is a range of values that’s likely to include a population value with a certain degree of confidence.
+置信区间以置信上限和置信下限作为区间的上下限，整个数据的均值往往也是这个区间的均值，置信度则用百分数来表示。
 
-Usually it is expressed as a percentage whereby the population mean lies between a lower and upper interval.
+回到 M&M 巧克力豆的问题。
 
-Back to our M&M example.
+假设你做了无数次的实验，每次都从这个罐子里取出了红色的巧克力豆。也就是说，你只能取出红色的巧克力豆。那么此时你对这罐巧克力豆有什么样的猜测呢？
 
-Imagine you did this activity (pulling an M&M out of an imagery jar) an infinite amount of times and got the same result. In other words you only saw red M&Ms. What could you possibly say then?
+你会觉得_很有可能_这个罐子里只有红色的巧克力豆。这是一个有效的结论。
 
-You would ascertain that it is _likely_ that only red M&Ms exist in the jar. This is a valid conclusion.
+需要注意的是，我们并不是说“这个罐子里没有其他颜色的巧克力豆”。而是说有很大的可能性，这个罐子里只有一种红色的巧克力豆。
 
-Notice that we are not saying “no other types of M&Ms exist”. Rather you are saying that there is a high probability that only red M&Ms exist in the jar.
+你每取出一颗红色巧克力豆，这个推论的置信度就会相应增加。
 
-Each time you remove an M&M your degree of confidence goes up.
+## 抽样 vs 整体测量
 
-## Sampling vs Measuring the Whole Population
+在收集数据的时候，你既可以关注总体所有的数据，也可以关注总体数据的抽样样本。
 
-When gathering data you can look at a population or you can sample the population.
+为了说明世界上的 M&M 巧克力豆只有一种颜色，你是否需要看遍每一颗巧克力豆？还是只需要关注抽样后的巧克力豆？
 
-Do you need to look at every M&M in the world to say that all are a certain color? Or could you look at a random sampling and make the same conclusion?
+当总体数据过于庞大时，抽样就有了意义。
 
-At its core, that is what sampling is about.
+抽样总体是总体数据中的一个子集。通过对这个子集的分析我们可以推测出总体数据的某些特性。
 
-A sampling population is the selection of a subset (a statistical sample) of individuals from within a statistical population to estimate characteristics of the whole population.
+抽样可以帮助我们了解在某一个分布中，某一件事发生了多少次或者某一种类型的结果出现了多少次。
 
-Your ultimate goal may be to see how often events occur or how many types of outcomes show up in a distribution.
+## 整合：抽样和期望
 
-## Bringing It All Together: Sampling and Expected Value
+观察是数据分析的关键，因为观察可以帮助你回答一些特定的问题：
+1. 事情发生的可能性有多大？
+2. 如果某件事的概率已知，那么当这件事发生的时候，你可以获得多少收益？
 
-Observations are key to data analytics because they can help you answer very specific questions:
+某件事发生的期望就是这件事情发生的概率乘上总的事件发生次数。
 
-1.  How likely are things to occur?
-2.  If you have certain odds, what are the payoffs of that event occurring (that is, you will get paid off if a certain event happens)?
+当大多数的收益数据都低于该数据集的中点值，那么你的期望收益就会增加。想象一下创立一家成功的公司的概率。大多数公司不会发起首次公开募股(IPO)，因此它们不能从中得到收益。
 
-To capture expected value you need to know the probability of an event multiplied by the amount of times the event happens.
+那么相应地，那些发起 IPO 的公司就会获得巨大的收益。当我成立一个[帮助人们远程办公]的网站时，我认为成功的概率最多只有 10%。
 
-Expected payoffs can increase as they fall further from the data’s midpoint. Think about the likelihood of starting a company that is highly successful. Most firms don’t IPO.
+Jeff Bezos 曾说他认为 Amazon 成功的概率有30%。
 
-But for those that do, the payoffs are very large. When I started a website to [help people work from home][3], I thought the odds of success were 10% at best.
+我们经常用标准差来描述数据的离散度，标准差就是方差的算术平方根。
 
-Jeff Bezos famously said that the odds of Amazon being successful were 30%.
+方差是每个数据与该数据集的平均值的差的平方的总和。
 
-A commonly used measure of dispersion (and therefore the likelihood of an outcome) is the standard deviation, which is simply the square root of the variance.
+## 例题和答案
 
-The variance of a data set is calculated by taking the arithmetic mean of the squared differences between each value and the mean value.
+本文已经概括性地介绍了统计和数据分析中的核心概念。
 
-## Example Questions & Answers
+现在利用这些新学到的知识，尝试回答下面两个问题。
 
-This article serves as a high level overview to introduce you to key foundational components of statistics and data analytics.
+如果你能成功解决它们，说明你学习得不错！
 
-Now try these two questions.
+网站的设计者和程序员 John Bell 想要知道，创立一家网页设计公司是否可以盈利。
 
-If you can solve them, great! In order to solve these, think about expected value and payoffs.
+根据客户需求的不同，John 认为他的公司可以提供四种不同的服务：
 
-Website designer and coder John Bell would like to determine whether it would be profitable to establish a website design company.
+- 极低需求 - 只有 1% 的公司会使用这种服务，John 因此会损失 \$100,000
+- 低需求 - 只有 5% 的公司会使用这种服务，John 因此可以盈利 \$10,000
+- 中等需求 - 有 10% 的公司会使用这种服务，John 因此可以盈利 \$25,000
+- 高需求 - 有 29% 的公司会使用这种服务，John 因此可以盈利 \$75,000
 
-John believes there are four possible levels of demand for his services:
-
--   Very low demand — 1% of companies would use the service; John would lose \$100,000.
--   Low demand — 5% of companies would use the service; John would earn \$10,000.
--   Moderate demand — 10% of companies would use the service; John would earn \$25,000.
--   High demand — 29% of companies would use the service; John would earn \$75,000.
-
-Based on past experiences in coding and building websites, John assigns the following probabilities to the various demand levels:
+根据过往的设计网站的经验，John 认为每种需求的占比如下：
 
 ```plain
-P(very low demand) = 0.20
-P(low demand) = 0.50
-P(moderate demand) = 0.20
-P(high demand) = 0.10
+P(极低需求) = 0.20
+P(低需求) = 0.50
+P(中等需求) = 0.20
+P(高需求) = 0.10
 ```
 
-(a) Set up the decision tree and compute the expected value of offering the service.
+(a) 建立决策树并计算提供服务的期望收益
 
 ```plain
 .2 * (-100,000) + .5 * (10,000) + .2 * (25,000) + .1 * (75,000)
 = $ -2,500
 ```
 
-(b) Compute the expected value with perfect information for John’s payoff.
+(b) 当 John 知道每种需求的类型时，计算他的期望收益（也就是他可以拒绝极低需求的开发工作）
 
 ```plain
 .5*100,000 + .2*25,000 + .1*75,000 = $17,500
 ```
 
-In other words, John believes he will earn \$17,500 if he opens his web design company.
+换言之，John 相信如果开设公司，他将会赚 $17,500。
 
-With that forward looking guidance, John can decide if he wants to take the next steps or look for alternative paths for his skills and time.
+有了数据分析作为前瞻性指导，John 可以决定是继续开公司还是寻找另一种展现才华的方式。
 
-## Final Thoughts on Data Analytics
+## 关于数据分析的个人想法
 
-This article is a primer and should help whet your appetite to dive deeper.
+本文只是一篇启发式读物，希望它可以激发你学习和研究数据分析的兴趣。
 
-Learning data analytics will help you better understand software and how to build products. Like the scenario with John above, you can leverage data analytics to make better informed and forward looking decisions.
+学习数据分析将帮助你更好地理解软件和开发自己的产品。就像 John 的例子一样，你也可以使用数据分析的方法为你的决策提供更具前瞻性的指导。
 
-You can take risks and understand the odds of success and failure. You can use the principle of counting to determine your current actions.
+在了解成功与失败的赔率时，你可以选择冒险一试。你也可以运用计数原理来做出不同决策。
 
-Data analytics will also help you better understand how technology is transforming offline environments and therefore make you a more thoughtful consumer.
+数据分析也会帮助你理解科技是如何改变线下环境，因此促使你成为一名更有想法的消费者。
 
-The range of uses for data analytics is incredibly large. Pause for a moment and ask yourself what areas of science, technology, business, software, or product design you find most interesting.
+数据分析的应用范围十分广阔。不知道看到这里的你是否也对它在科学、技术、商业、软件或者产品设计等方面的应用感兴趣呢？
 
-Now conceptualize how data analytics is profoundly influencing all of these fields.
+现在我将正式说明数据分析在这些领域中的深远影响。
 
-Think about the human body.
+首先考虑我们的身体。
 
-[Health products][4], [wellness marketing][5] programs, and exercise apps all use data analytics to optimize exercises for the human body based on data that we emit (think: heart rates, blood oxygen levels, sleep patterns).
+[健康产品][4]，[健康营销][5]，健身 app 都使用了来自用户的数据，并通过分析这些数据来优化自身产品（比如说心率数据、血氧数据、睡眠模式等）。
 
-These tools are using data analytics to assess real-time customizations (sampling), biometric authentication, and sentiment analysis.
+这些产品通过数据分析评估用户实时状态、生理特征识别和情绪分析。
 
-Think about software.
+再来看看软件。
 
-[Low code workflow automation][6] tools use data analytics for predictive experiences and enable developers of varied experience levels to create applications model-driven logic. Data modules are predefined.
+[低代码量开发][6] 工具也使用了数据分析的方法为开发者们提供了各式各样可能的用户体验。在这个项目中，数据模块是提前定义好的。
 
-Much like with software, education is being transformed by data analytics. Online learning for schools and [coding apps for kids][7] rely on data analytics for risk management (when students fall behind) and content retention.
+和软件很像，教育行业也正在通过数据分析进行转型。学校的在线学习模式和[儿童编程 app][7]依赖于数据分析进行风险管理（当学生的进度落后时）和复习。
 
-Think about how risk is priced.
+接着再考虑保险险别是如何定价的。
 
-Sampling is being used to change how insurance companies like [True Blue][8] are pricing insurance policies. More financial institutions and insurance firms are using data analytics to assess credit quality, to price and market insurance contracts, and to automate client interaction.
+当保险公司需要对不同保险政策定价时，抽样就发挥了作用。越来越多的金融机构和保险公司运用数据分析来评估用户的声誉，以此来定价和销售保险合同，以及自动化与客户的互动。
 
-Think about website design.
+网页设计也值得一提。
 
-Whether or not you want to apply data analytics to build the next [call tracking software][9] or [fact aggregation site][10], data analytics will help you measure what matters and turn data into actionable insights.
+无论你是否主动想要将数据分析运用到搭建下个[电话追踪软件][9]还是[真相收集网页][10]，数据分析都会帮助你衡量事物重要性并且将数据转化为有价值的信息。
 
-Think about agriculture.
+数据分析在农业领域也很重要。
 
-High-tech plant growers such as [JoyOrganics][11] and [TakeSpruce][12] are using seed-to-sale cycle tracking to follow plants through stages from cultivation to harvest to extraction.
+高科技种植业比如 [JoyOrganics][11]和[TakeSpruce][12]都在使用数据分析对农产品进行了完整的追踪，从种子萌芽成长开始一直到收获销售。
 
-Farmers are using data analytics to find signals for higher and uncorrelated returns and optimize growing.
+农民们使用数据分析嗅到高回报的信号，并且优化他们的种植过程。
 
-Think about [indoor air quality][13] and [natural language processing][14].
+再想想[室内环境检测][13]和[自然语言处理][14]。
 
-Or the way in which [CRM software][15] is built, or how people [communicate in real time][16].
+还有[CRM 软件][15]的搭建和人们在日常生活中的[实时交流][16]。
 
-In short, think about the modern world.
+简而言之，多想想我们身处的现代社会。
 
-All of these products leverage data analytics to calculate sampling errors, standard deviations, and regressions to ensure product quality and customer satisfaction.
+所有这些产品都使用了数据分析，包括但不限于计算抽样误差、标准差、回归等手段，保证了产品质量和用户满意度。
 
-But before calculating these more complicated statistics, each business or domain starts with foundational components. Each domain measures frequency, dispersion, averages, and standard deviations.
+当然，在开始使用这些复杂的统计学工具前，大家都是从最基础的要素入手的，包括频率、离散度、平均值和标准差。
 
-Upon these building blocks, data analytics can turn data into actionable insights.
+有了这些手段，数据分析就可以把数据转换为我们所需要的有用信息。
 
-Most importantly, all of these industries leverage data analytics to make go/no trade-offs and to more deeply understand how users are leveraging the tools and products they are building.
+更重要的是，所有这些工业产品都使用了数据分析来做取舍，也用数据分析更深层次地理解他们的用户是如何使用自己的产品。
 
-By exploring these topics in more depth you can undoubtedly embrace a more holistic and relentless builder’s mindset.
+在这些领域的深度探索，无疑会使你成为一位更加全面和坚持不懈的开发者。
 
-If for nothing else, the study of data analytics makes that outcome worthwhile.
+姑且不论上述提到的种种好处，学习数据分析本身也是一件十分有价值的事情。
 
 [1]: http://www.humaverse.com/
 [2]: https://www.couponupto.com/information/couponupto-data-analytics-department-report-for-the-last-6-months-of-2019?fbclid=IwAR3Uq1kfTh4vQ3cjzmR0Rj0LPv9eT4DOuxJ84rE_1nA2XVfeCN5vQBXEJm0

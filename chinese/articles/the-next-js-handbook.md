@@ -44,55 +44,55 @@
 
 ## Introduction
 
-Working on a modern JavaScript application powered by React is awesome until you realize that there are a couple problems related to rendering all the content on the client-side.
+在一个由 React 驱动的现代 JavaScript 应用程序上工作是非常棒的，直到你意识到有几个与在客户端渲染所有内容有关的问题。
 
-First, the page takes longer to become visible to the user, because before the content loads, all the JavaScript must load, and your application needs to run to determine what to show on the page.
+首先，页面加载需要更长的时间才能对用户可见，因为在内容加载之前，所有的 JavaScript 必须加载，你的应用程序需要运行以确定在页面上显示什么。
 
-Second, if you are building a publicly available website, you have a content SEO issue. Search engines are getting better at running and indexing JavaScript apps, but it's much better if we can send them content instead of letting them figure it out.
+第二，如果你正在建立一个公开的网站，你有一个内容搜索引擎优化(SEO)的问题。搜索引擎在运行和索引 JavaScript 应用程序方面越来越好，但如果我们能把内容发给他们，而不是让他们自己想办法解决，那就好得多。
 
-The solution to both of those problems is **server rendering**, also called **static pre-rendering**.
+解决这两个问题的方法是**服务器渲染（server rendering）**，也叫**静态预渲染（static pre-rendering）**。
 
-[Next.js](https://nextjs.org) is one React framework to do all of this in a very simple way, but it's not limited to this. It's advertised by its creators as a **zero-configuration, single-command toolchain for React apps**.
+[Next.js](https://nextjs.org) 是一个 React 框架，以一种非常简单的方式完成所有这些工作，但它并不限于此。它的创造者把它宣传为一个**零配置（zero-configuration）、单指令（single-command）的 React 应用工具链**。
 
-It provides a common structure that allows you to easily build a frontend React application, and transparently handles server-side rendering for you.
+它提供了一个通用的结构，使你能够轻松地建立一个前端的 React 应用程序，并透明地为你处理服务器端的渲染。
 
 ## The main features provided by Next.js
 
-Here is a non-exhaustive list of the main Next.js features:
+下面是一份 Next.js 不完全的主要功能的清单:
 
 ### Hot Code Reloading
 
-Next.js reloads the page when it detects any change saved to disk.
+Next.js 在检测到保存到磁盘的任何变化时，会重新加载页面。
 
 ### Automatic Routing
 
-Any URL is mapped to the filesystem, to files put in the `pages` folder, and you don't need any configuration (you have customization options of course).
+任何 URL 都被映射到文件系统中，映射到放在 `pages` 文件夹中的文件，你不需要任何配置（当然你有自定义选项）。
 
 ### Single File Components
 
-Using `styled-jsx`, completely integrated as built by the same team, it's trivial to add styles scoped to the component.
+使用`styled-jsx`，完全集成在同一个团队中，为组件添加样式的范围是很简单的。
 
 ### Server Rendering
 
-You can render React components on the server side, before sending the HTML to the client.
+你可以在服务器端渲染 React 组件，然后再将 HTML 发送到客户端。
 
 ### Ecosystem Compatibility
 
-Next.js plays well with the rest of the JavaScript, Node, and React ecosystem.
+Next.js 与 JavaScript、Node 和 React 生态系统的其他部分配合良好。
 
 ### Automatic Code Splitting
 
-Pages are rendered with just the libraries and JavaScript that they need, no more. Instead of generating one single JavaScript file containing all the app code, the app is broken up automatically by Next.js in several different resources.
+渲染页面时，只需使用它们需要的库和 JavaScript，而无需其他。Next.js 不会生成一个包含所有应用程序代码的单一 JavaScript 文件，而是将应用程序自动分解为几个不同的资源。
 
-Loading a page only loads the JavaScript necessary for that particular page.
+加载一个页面只加载该特定页面所需的 JavaScript。
 
-Next.js does that by analyzing the resources imported.
+Next.js 通过分析导入的资源来做到这一点。
 
-If only one of your pages imports the Axios library, for example, that specific page will include the library in its bundle.
+例如，如果你只有一个页面导入了 Axios 库，那么这个特定的页面将在打包（bundle）的时候包含该库。
 
-This ensures your first page load is as fast as it can be, and only future page loads (if they will ever be triggered) will send the JavaScript needed to the client.
+这可以确保你的第一个页面加载速度尽可能快，而且只有未来的页面加载（如果它们将被触发）才会向客户端发送所需的 JavaScript。
 
-There is one notable exception. Frequently used imports are moved into the main JavaScript bundle if they are used in at least half of the site pages.
+有一个值得注意的例外。如果经常使用的导入程序在网站页面中至少有一半被使用，它们就会被打包到主 JavaScript 中。
 
 ### Prefetching
 

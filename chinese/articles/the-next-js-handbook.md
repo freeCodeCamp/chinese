@@ -96,27 +96,27 @@ Next.js 通过分析导入的资源来做到这一点。
 
 ### Prefetching
 
-The `Link` component, used to link together different pages, supports a `prefetch` prop which automatically prefetches page resources (including code missing due to code splitting) in the background.
+用于连接不同页面的 `Link` 组件支持 `prefetch` prop ，在后台自动预取页面资源（包括因代码分割而丢失的代码）。
 
 ### Dynamic Components
 
-You can import JavaScript modules and React Components dynamically.
+你可以动态地导入 JavaScript 模块和 React 组件。
 
 ### Static Exports
 
-Using the `next export` command, Next.js allows you to export a fully static site from your app.
+使用`next export`命令，Next.js 允许你从你的应用程序导出一个完全静态的网站。
 
 ### TypeScript Support
 
-Next.js is written in TypeScript and as such comes with an excellent TypeScript support.
+Next.js 是用 TypeScript 编写的，因此，它具有出色的 TypeScript 支持。
 
 ## Next.js vs Gatsby vs `create-react-app`
 
-Next.js, [Gatsby](https://flaviocopes.com/gatsby/), and [`create-react-app`](https://flaviocopes.com/react-create-react-app/) are amazing tools we can use to power our applications.
+Next.js、[Gatsby](https://flaviocopes.com/gatsby/) 和 [`create-react-app`](https://flaviocopes.com/react-create-react-app/) 是了不起的工具，我们可以用它们来驱动我们的应用程序。
 
-Let's first say what they have in common. They all have React under the hood, powering the entire development experience. They also abstract [webpack](https://flaviocopes.com/webpack/) and all those low level things that we used to configure manually in the good old days.
+让我们先说说它们的共同点。它们都有 React，为整个开发体验提供支持。它们还抽象了 [webpack](https://flaviocopes.com/webpack/) 和所有那些我们在过去的好日子里需要手动配置底层东西。
 
-`create-react-app` does not help you generate a server-side-rendered app easily. Anything that comes with it (SEO, speed...) is only provided by tools like Next.js and Gatsby.
+`create-react-app` 并不能帮助你轻松生成一个服务器端渲染的应用程序。任何与之相关的东西（SEO、速度...）都只能由 Next.js 和 Gatsby 等工具提供。
 
 **When is Next.js better than Gatsby?**
 

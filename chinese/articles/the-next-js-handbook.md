@@ -120,113 +120,113 @@ Next.js、[Gatsby](https://flaviocopes.com/gatsby/) 和 [`create-react-app`](htt
 
 **When is Next.js better than Gatsby?**
 
-They can both help with **server-side rendering**, but in 2 different ways.
+它们都可以帮助 **服务器端渲染(server-side rendering)**，但有两种不同的方式。
 
-The end result using Gatsby is a static site generator, without a server. You build the site, and then you deploy the result of the build process statically on Netlify or another static hosting site.
+使用 Gatsby 的最终结果是一个静态网站生成器，没有服务器。你建立网站，然后将建立过程的结果静态地部署在 Netlify 或其他静态托管网站上。
 
-Next.js provides a backend that can server side render a response to request, allowing you to create a dynamic website, which means you will deploy it on a platform that can run Node.js.
+Next.js 提供了一个可以在服务器端渲染响应请求的后端，允许你创建一个动态网站，这意味着你将把它部署在一个可以运行 Node.js 的平台上。
 
-Next.js _can_ generate a static site too, but I would not say it's its main use case.
+Next.js 也可以生成静态网站，但我不会说这是它的主要使用场景。
 
-If my goal was to build a static site, I'd have a hard time choosing and perhaps Gatsby has a better ecosystem of plugins, including many for blogging in particular.
+如果我的目标是建立一个静态网站，我将很难选择，Gatsby 可能有一个更好的插件生态系统，包括许多特别用于博客的插件。
 
-Gatsby is also heavily based on [GraphQL](https://flaviocopes.com/graphql/), something you might really like or dislike depending on your opinions and needs.
+Gatsby 在很大程度上也是基于 [GraphQL](https://flaviocopes.com/graphql/)，根据你的想法和需要，你可能真的喜欢或不喜欢。
 
 ## How to install Next.js?
 
-To install Next.js, you need to have Node.js installed.
+要安装 Next.js，你需要安装 Node.js。
 
-Make sure that you have the latest version of Node. Check with running `node -v` in your terminal, and compare it to the latest LTS version listed on [https://nodejs.org/](https://nodejs.org/).
+确保你有最新版本的 Node。在终端运行 `node -v` 进行检查，并与 [https://nodejs.org/](https://nodejs.org/) 上列出的最新 LTS 版本进行比较。
 
-After you install Node.js, you will have the `npm` command available into your command line.
+在你安装 Node.js 之后，你的命令行中就会有`npm`命令。
 
-If you have any trouble at this stage, I recommend the following tutorials I wrote for you:
+如果你在这个阶段有任何困难，我推荐你看我为你写的以下教程:
 
-- [How to install Node.js](https://flaviocopes.com/node-installation/)
-- [How to update Node.js](https://flaviocopes.com/how-to-update-node/)
-- [An introduction to the npm package manager](https://flaviocopes.com/npm/)
-- [Unix Shells Tutorial](https://flaviocopes.com/shells/)
-- [How to use the macOS terminal](https://flaviocopes.com/macos-terminal/)
+- [怎样安装 Node.js](https://flaviocopes.com/node-installation/)
+- [怎样升级 Node.js](https://flaviocopes.com/how-to-update-node/)
+- [npm 软件包管理器的介绍](https://flaviocopes.com/npm/)
+- [Unix Shells 入门](https://flaviocopes.com/shells/)
+- [如何使用 macOS 终端](https://flaviocopes.com/macos-terminal/)
 - [The Bash Shell](https://flaviocopes.com/bash/)
 
-Now that you have Node, updated to the latest version, and `npm`, we're set!
+现在你有了 Node，更新到了最新版本，还有`npm`，我们已经准备好了!
 
-We can choose 2 routes now: using `create-next-app` or the classic approach which involves installing and setting up a Next app manually.
+我们现在可以选择两条路线：使用 `create-next-app` 或传统的方法，即手动安装和设置 Next 应用程序。
 
 ### Using create-next-app
 
-If you're familiar with [`create-react-app`](https://flaviocopes.com/react-create-react-app/), `create-next-app` is the same thing - except it creates a Next app instead of a React app, as the name implies.
+如果你熟悉 [`create-react-app`](https://flaviocopes.com/react-create-react-app/)，`create-next-app` 也是一样的，只不过它创建的是一个 Next 应用，而不是 React 应用，正如其名字所暗示的。
 
-I assume you have already installed Node.js, which, from version 5.2 (2+ years ago at the time of writing), comes with the [`npx` command](https://flaviocopes.com/npx/) bundled. This handy tool lets us download and execute a JavaScript command, and we'll use it like this:
+我假设你已经安装了 Node.js，从 5.2 版本开始（写这篇文章的时候已经是 2 年多以前了），Node.js 捆绑了 [`npx`命令](https://flaviocopes.com/npx/)。这个方便的工具可以让我们下载并执行一个 JavaScript 命令，我们将这样使用它:
 
 ```bash
 npx create-next-app
 ```
 
-The command asks the application name (and creates a new folder for you with that name), then downloads all the packages it needs (`react`, `react-dom`, `next`), sets the `package.json` to:
+该命令询问应用程序的名称（并以该名称为你创建一个新的文件夹），然后下载所有它需要的包（`react`，`react-dom`，`next`），将 `package.json` 设置为:
 
 ![Screen-Shot-2019-11-14-at-16.46.47](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-14-at-16.46.47.png)
 
-and you can immediately run the sample app by running `npm run dev`:
+你可以通过运行 `npm run dev` 立即运行示例应用程序:
 
 ![Screen-Shot-2019-11-14-at-16.46.32](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-14-at-16.46.32.png)
 
-And here's the result on [http://localhost:3000](http://localhost:3000):
+在下面看到 [http://localhost:3000](http://localhost:3000):
 
 ![Screen-Shot-2019-11-14-at-16.47.17](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-14-at-16.47.17.png)
 
-This is the recommended way to start a Next.js application, as it gives you structure and sample code to play with. There's more than just that default sample application; you can use any of the examples stored at [https://github.com/zeit/next.js/tree/canary/examples](https://github.com/zeit/next.js/tree/canary/examples) using the `--example` option. For example try:
+这是启动 Next.js 应用程序的推荐方法，因为它为你提供了结构和示例代码。 不仅仅是默认的示例应用程序。 您可以使用存储在 [https://github.com/zeit/next.js/tree/canary/examples](https://github.com/zeit/next.js/tree/canary/examples) 中的任何示例 ) 使用 `--example` 选项。 例如尝试:
 
 ```bash
 npx create-next-app --example blog-starter
 ```
 
-Which gives you an immediately usable blog instance with syntax highlighting too:
+这给你提供了一个开箱即用的博客实例，而且还带有语法高亮:
 
 ![Screen-Shot-2019-11-14-at-17.13.29](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-14-at-17.13.29.png)
 
 ### Manually create a Next.js app
 
-You can avoid `create-next-app` if you feel like creating a Next app from scratch. Here's how: create an empty folder anywhere you like, for example in your home folder, and go into it:
+如果你想从头开始创建一个 Next 应用程序，你可以避免 `create-next-app`。方法是：在你喜欢的任何地方创建一个空文件夹，例如在你的主文件夹中，然后进入该文件夹:
 
 ```sh
 mkdir nextjs
 cd nextjs
 ```
 
-and create your first Next project directory:
+并创建你的第一个 Next 项目目录:
 
 ```sh
 mkdir firstproject
 cd firstproject
 ```
 
-Now use the `npm` command to initialize it as a Node project:
+现在使用`npm`命令将其初始化为一个 Node 项目:
 
 ```sh
 npm init -y
 ```
 
-The `-y` option tells `npm` to use the default settings for a project, populating a sample `package.json` file.
+`-y`选项告诉`npm`使用项目的默认设置，生成一个模板文件——`package.json`。
 
 ![Screen-Shot-2019-11-04-at-16.59.21](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-16.59.21.png)
 
-Now install Next and React:
+现在安装 Next 和 React:
 
 ```sh
 npm install next react react-dom
 ```
 
-Your project folder should now have 2 files:
+你的项目文件夹现在应该有两个文件:
 
 - `package.json` ([see my tutorial on it](https://flaviocopes.com/package-json/))
 - `package-lock.json` ([see my tutorial on package-lock](https://flaviocopes.com/package-lock-json/))
 
-and the `node_modules` folder.
+和 `node_modules` 文件夹。
 
-Open the project folder using your favorite editor. My favorite editor is [VS Code](https://flaviocopes.com/vscode/). If you have that installed, you can run `code .` in your terminal to open the current folder in the editor (if the command does not work for you, see [this](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line))
+用你喜欢的编辑器打开项目文件夹。我最喜欢的编辑器是 [VS Code](https://flaviocopes.com/vscode/)。如果你安装了该软件，你可以在终端运行 `code`，在编辑器中打开当前文件夹（如果该命令对你不起作用，请参见 [this](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line))
 
-Open `package.json`, which now has this content:
+打开`package.json` 文件，它现在有这样的内容:
 
 ```json
 {
@@ -248,7 +248,7 @@ Open `package.json`, which now has this content:
 }
 ```
 
-and replace the `scripts` section with:
+并将 `scripts` 部分改为:
 
 ```json
 "scripts": {
@@ -258,17 +258,17 @@ and replace the `scripts` section with:
 }
 ```
 
-to add the Next.js build commands, which we're going to use soon.
+来添加 Next.js 的构建命令，我们很快就会用到它。
 
-Tip: use `"dev": "next -p 3001",` to change the port and run, in this example, on port 3001.
+提示：使用 `"dev": "next -p 3001",` 来改变端口，在本例中，运行在 3001 端口。
 
 ![Screen-Shot-2019-11-04-at-17.01.03](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-17.01.03.png)
 
-Now create a `pages` folder, and add an `index.js` file.
+现在创建一个`pages`文件夹，并添加一个`index.js`文件。
 
-In this file, let's create our first React component.
+在这个文件中，让我们创建我们的第一个 React 组件。
 
-We're going to use it as the default export:
+我们将使用它作为默认输出:
 
 ```js
 const Index = () => (
@@ -280,9 +280,9 @@ const Index = () => (
 export default Index
 ```
 
-Now using the terminal, run `npm run dev` to start the Next development server.
+现在使用终端，运行 `npm run dev` 来启动 Next 开发服务器。
 
-This will make the app available on port 3000, on localhost.
+这将使应用程序在本地主机上的 3000 端口可用。
 
 ![Screen-Shot-2019-11-04-at-11.24.02](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-11.24.02.png)
 
@@ -292,18 +292,18 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see it.
 
 ## View source to confirm SSR is working
 
-Let's now check the application is working as we expect it to work. It's a Next.js app, so it should be **server side rendered**.
+现在让我们检查一下这个应用程序是否按照我们期望的那样工作。这是一个 Next.js 应用程序，所以它应该是 **服务器端渲染的(server side rendered)**。
 
-It's one of the main selling points of Next.js: if we create a site using Next.js, the site pages are rendered on the server, which delivers HTML to the browser.
+这是 Next.js 的主要卖点之一：如果我们使用 Next.js 创建一个网站，网站页面会在服务器上渲染，而服务器会将 HTML 传递给浏览器。
 
-This has 3 major benefits:
+这有 3 个主要好处:
 
-- The client does not need to instantiate React to render, which makes the site faster to your users.
-- Search engines will index the pages without needing to run the client-side JavaScript. Something Google started doing, but openly admitted to be a slower process (and you should help Google as much as possible, if you want to rank well).
-- You can have social media meta tags, useful to add preview images, customize title and description for any of your pages shared on Facebook, Twitter and so on.
+- 客户端不需要实例化 React 来渲染，这使得网站对你的用户来说更快。
+- 搜索引擎会对页面进行索引，而不需要运行客户端的 JavaScript。谷歌开始解决这个问题（客户端渲染），但公开承认是一个较慢的过程（如果你想获得好的排名，你应该尽可能地帮助谷歌）。
+- 你可以有社交媒体元标签，对添加预览图片，为你在 Facebook、Twitter 上分享的任何页面定制标题和描述都很有用。
 
-Let's view the source of the app.  
-Using Chrome you can right-click anywhere in the page, and press **View Page Source**.
+让我们查看一下应用程序的源代码。 
+使用 Chrome 浏览器，你可以在页面的任何地方点击右键，然后按**查看网页源代源（View Page Source）**。
 
 ![Screen-Shot-2019-11-04-at-11.33.10](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-11.33.10.png)
 

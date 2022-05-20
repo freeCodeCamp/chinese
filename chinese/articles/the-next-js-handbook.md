@@ -302,24 +302,24 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see it.
 - 搜索引擎会对页面进行索引，而不需要运行客户端的 JavaScript。谷歌开始解决这个问题（客户端渲染），但公开承认是一个较慢的过程（如果你想获得好的排名，你应该尽可能地帮助谷歌）。
 - 你可以有社交媒体元标签，对添加预览图片，为你在 Facebook、Twitter 上分享的任何页面定制标题和描述都很有用。
 
-让我们查看一下应用程序的源代码。 
-使用 Chrome 浏览器，你可以在页面的任何地方点击右键，然后按**查看网页源代源（View Page Source）**。
+让我们查看一下应用程序的源代码。
+使用 Chrome 浏览器，你可以在页面的任何地方点击右键，然后按 **查看网页源代源（View Page Source）**。
 
 ![Screen-Shot-2019-11-04-at-11.33.10](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-11.33.10.png)
 
-If you view the source of the page, you'll see the `<div><h1>Home page</h1></div>` snippet in the HTML `body`, along with a bunch of JavaScript files - the app bundles.
+如果你查看页面的源代码，你会看到 HTML`body`中的`<div><h1>Home page</h1></div>`片段，以及一堆 JavaScript 文件——程序打包出的。
 
-We don't need to set up anything, SSR (server-side rendering) is already working for us.
+我们不需要设置什么，SSR（服务器端渲染）已经在为我们工作了。
 
-The React app will be launched on the client, and will be the one powering interactions like clicking a link, using client-side rendering. But reloading a page will re-load it from the server. And using Next.js there should be no difference in the result inside the browser - a server-rendered page should look exactly like a client-rendered page.
+React 应用程序将在客户端启动，并将是一个使用客户端渲染来支持点击链接等交互的应用程序。但重新加载一个页面将从服务器上重新加载。而使用 Next.js，在浏览器中的结果应该是没有区别的——服务器渲染的页面看起来应该和客户端渲染的页面一模一样。
 
 ## The app bundles
 
-When we viewed the page source, we saw a bunch of JavaScript files being loaded:
+当我们查看页面源代码时，我们看到一堆 JavaScript 文件正在被加载:
 
 ![Screen-Shot-2019-11-04-at-11.34.41](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-11.34.41.png)
 
-Let's start by putting the code in an [HTML formatter](https://htmlformatter.com/) to get it formatted better, so we humans can get a better chance at understanding it:
+让我们先把代码放在 [HTML formatter](https://htmlformatter.com/) 中，使代码格式化得更好，这样我们更好地理解它:
 
 ```html
 <!DOCTYPE html>
@@ -351,7 +351,8 @@ Let's start by putting the code in an [HTML formatter](https://htmlformatter.com
 </html>
 ```
 
-We have 4 JavaScript files being declared to be preloaded in the `head`, using `rel="preload" as="script"`:
+我们有 4 个 JavaScript 文件被声明要在 `head` 中预装，使用 
+`rel="preload" as="script"`:
 
 - `/_next/static/development/pages/index.js` (96 LOC)
 - `/_next/static/development/pages/_app.js` (5900 LOC)

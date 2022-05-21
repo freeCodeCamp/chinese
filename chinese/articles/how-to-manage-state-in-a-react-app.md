@@ -1,6 +1,6 @@
 > -  原文地址：[How to Manage State in a React App – With Hooks, Redux, and More](https://www.freecodecamp.org/news/how-to-manage-state-in-a-react-app/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：bauhauce
 > -  校对者：
 
 ![How to Manage State in a React App – With Hooks, Redux, and More](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/lautaro-andreani-UYsBCu9RP3Y-unsplash.jpg)

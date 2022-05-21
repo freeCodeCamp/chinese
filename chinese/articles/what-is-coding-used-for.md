@@ -1,6 +1,6 @@
 > -  原文地址：[What is Coding Used For?](https://www.freecodecamp.org/news/what-is-coding-used-for/)
 > -  原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![What is Coding Used For?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/ilya-pavlov-OqtafYT5kTw-unsplash.jpg)

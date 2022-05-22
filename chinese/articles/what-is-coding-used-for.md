@@ -5,250 +5,251 @@
 
 ![What is Coding Used For?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/ilya-pavlov-OqtafYT5kTw-unsplash.jpg)
 
-Are you aware of the millions of lines of code behind the applications and devices you use every day?
+你是否意识到你每天使用的应用和设备背后数以亿计的代码。
 
-Coding is used for many different purposes - more than you may realize.
+代码可以用来做很多事情——超乎你的想象。
 
-In this article, I will first go over what the term 'coding' actually means. Then, I will briefly explain how it all works underneath the hood.
+在这篇文章中，我会先讲解“编写代码”这个术语到底是什么意思，然后我会简单地解释代码是如何运作的。
 
-I will also explain why you should consider learning to code and show you some areas where you can see the effects of coding in your day-to-day activities.
+我还会解释为什么你需要考虑是否应该学习代码，日常生活的哪些方面受到了代码的影响。
 
-Here is an overview of what we will cover:
+下面是全文概览：
 
-1.  [Computer coding definition](#definition)
-    -   [How coding works](#work)
-    -   [Defintion of a programming language](#language)
-2.  [Why learn coding?](#skill)
-    -   [Coding is a thinking tool](#tool)
-    -   [Coding helps you build out an idea](#build)
-    -   [Coding is free to learn](#free)
-    -   [Coding will improve your digital literacy](#digital-literacy)
-3.  [How coding is used in the read world](#use)
-    -   [Electronic devices](#devices)
-    -   [Digital services and applications](#applications)
-    -   [Transportation](#transportation)
-    -   [Household items](#house)
+1.  [计算机编码定义](#definition)
+    -   [代码是如何运行的？](#work)
+    -   [编程语言的定义](#language)
+2.  [为什么学习代码？](#skill)
+    -   [代码是一种思考工具](#tool)
+    -   [代码帮助你实现想法](#build)
+    -   [学习代码免费](#free)
+    -   [代码将提高你的数字素养](#digital-literacy)
+3.  [现实生活中的代码](#use)
+    -   [电子设备](#devices)
+    -   [数字服务和应用](#applications)
+    -   [交通](#transportation)
+    -   [家居用品](#house)
 
-## What Is Coding? A Brief Computer Coding Definition for Beginners
+<h2 id="definition">什么是编写代码？写给初学者的计算机编码简明定义</h2>
 
-Coding is how humans are able to communicate with computers and other machines.
+编码是人类和计算机或者其他机器交流的方式。
 
-Coding refers to the process of humans giving highly detailed, logical, and descriptive step-by-step sets of instructions / commands to computers and machines.
+编码指的人类给计算机或者其他机器下指令或者命令的过程，指令或者命名通常非常具体、有逻辑并且分步骤。
 
-Essentially, it is the art of telling a computer what to do, what particular actions you want it to perform, or even what actions you _don’t_ want it to perform.
+从本质上来说，告诉计算机要做什么是一门艺术。你需要告诉计算机你希望它执行具体什么，甚至*不执行*什么行为。
 
-The instructions are written and organized in a text file, known as a **computer program**.
+编写和组织到文本文件中的指令被称为**计算机程序**。
 
-Computers and machines read, process, interpret and then carry out the instructions they receive, and in that way, they can solve a specific problem.
+计算机或者机器在收到指令后，可以读取、处理、解析并执行指令，解决特定的问题。
 
-Computers and machines can process data and read and execution instructions at an extremely high speed - much faster than any human would ever be able to.
+计算机和机器能够以相当快的速度来处理数据、读取和执行命令，比人类极限还要快得多。
 
-### How Does Coding Work?
+<h3 id="work">代码是如何运行的？</h3>
 
-Electricity is what powers computers and machines. Electricity has only two possible states – either **on** or **off**.
+电是计算机和机器的动力来源。电只有两种状态：**开**或者**关**。
 
-Inside computers and machines, there are tens of thousands of microscopic switches called **transistors** that control the ebb and flow of electricity. They either switch electricity on or switch it off.
+在计算机和机器内部，有成千上万个被称为**晶体管**的微型开关，用于控制电流的涨落。它们要么打开电源，要么关闭电源。
 
-Transistors receive instructions on whether they should switch electricity on or off. Those instructions are in the form of **binary code**, which is the native language of all machines.
+晶体管接受指令来控制电流开关。这些指令的形式是**二进制代码**，二进制代码是所有机器的原生语言。
 
-Binary is a base two numerical system made up of **only two** numbers – `0` and `1`. This ties in nicely with the fact that electricity has only two states.
+二进制是一种基数为二的数学系统，仅由**两个数字**组成：`0`和`1`。这和电只有两个状态的事实吻合。
 
-So, binary code is a machine language that consists of different combinations of multiple `0`s (which represent `off` switches) and `1`s. (which represent `on` switches)
+所以二进制代码是一种机器语言，它包含不同组合的 `0` (代表 `关`) 和 `1` (代表`开`)。
 
-In the early days of computing, computer scientists wrote binary code, but it was a confusing, tiring, time-consuming, and error-prone process.
+在计算早期，计算机科学家们编写二进制代码，但编写过程让人困惑、复杂且费时，并且特别容易出错。
 
-Although binary is still used today in electronic devices, computer hardware, and operating system design, programmers now write code using high-level programming languages.
+虽然如今二进制仍应用于电子设备、电脑硬件以及操作系统设计，但是程序员使用高级编程语言来写代码。
 
-### What is a Programming Language?
+<h3 id="language">什么是编程语言？</h3>
 
-A programming language falls into one of two categories. It is either:
+编程语言分为两种类型：
 
--   a **low level** programming language,
--   or a **high-level** programming language.
+-   **低级**编程语言
+-   **高级**编程语言
 
-Writing code in a low-level programming language involves creating instructions specific to the individual processor inside a machine. The instructions are machine-specific, machine-oriented, and machine-dependent and address each individual transistor.
+使用低级编程语言来编写代码需要给机器内部每一个单独的处理器编写对应的指令，指令是特定于某个机器，面向机器，并且依赖于机器的，指令控制每一个单独的晶体管。
 
-Machine language (another name for binary) and assembly language are low-level programming languages.
+机器语言（二进制的另一个名称）和汇编语言是低级编程语言。
 
-High-level programming languages offer higher levels of abstraction from the machine-level details, specifics, and instructions.
+高级编程语言从机器层面的细节和指令中抽离出来，提供更高层次的抽象。
 
-They are machine-independent, meaning they are far removed and not concerned with the inner workings of machines or what is going on underneath the hood.
+高级编程语言独立于机器，意味着他们不需要考虑机器内部是如何运作的，高级编程语言是抽离的。
 
-High-level languages are more human-friendly since they are closer to natural languages.
+高级编程语言更人性化，因为他们更接近于人类的自然语言。
 
-Their syntax is very similar to the English language, making them easier to read, write, understand, debug, and learn.
+他们的语法类似于英语，所以更方便读取、编写、理解、调试和学习。
 
-All of the above makes them a good intermediary between humans and computers since they make communication between the two more accessible and approachable.
+这些特质使得高级编程语言成为人和计算机之间的桥梁，两者间的交流更加容易达成。
 
-There are many high-level languages.
+市面上有许许多多高级编程语言。
 
-Although each language serves a different purpose and has a unique use case, they all have commonly shared logic and a shared way of doing things, also known as programming paradigms.
+虽然每一种语言都服务于不同的目的，并且由其独特的用例，但是他们具备相同的编写逻辑和运行方式，这些共同之处可以被称作为编程范式。
 
-Some popular high-level languages and their use cases are:
+一些流行的高级编程语言和他们的用例包括：
 
--   **Python** is a language for handling, manipulating, and analyzing large and complex data. It is also the language of choice for performing web scraping. Web scraping is a technique used for collecting raw user data from the web.
--   **Ruby** is a language for creating automation tools and scripts. With the help of the Rails framework, a web framework built on top of Ruby, you can create dynamic web applications.
--   **JavaScript** is one of the three languages of the World Wide Web (the other two are the HTML and CSS markup languages). JavaScript is the language of choice for creating interactive web applications.
--   **Java** is not to be confused with JavaScript - they are entirely different. Java is often used for creating Android mobile applications, desktop software, and embedded systems.
--   **Swift** is for creating iOS mobile web applications.
--   **C#** is for desktop applications, enterprise software, and game development.
+-   **Python** 是一种用于处理、操作和分析大型复杂数据的语言。它也是执行网页抓取的首选语言。网页抓取是用来收集原始用户数据的一种技术。
+-   **Ruby** 是用来创建自动化工具和脚本的语言。借助Rails框架（一种构建在Ruby之上的web框架），你可以创建各种动态web应用。
+-   **JavaScript** 是万维网的三种语言之一（其他两种是HTML和CSS标记语言），JavaScript是创建交互式web应用的首选语言。
+-   **Java** 不能和JavaScript混淆——它们完全不同。Java经常被用于编写手机应用、桌面软件和嵌入式系统。
+-   **Swift** 是用于创建iOS手机应用的语言。
+-   **C#** 用于创建桌面应用、企业软件和游戏开发。
 
-At this point, it is also important to mention that high-level languages fall into two categories:
+同时也有必要提一下高级编程语言通常分为两类：
 
--   **Front end** (or client-side) languages. These are responsible for creating all of the parts a user interacts with.
--   **Back end** (or server-side) languages. These are in charge of the logic and all of the behind-the-scenes processes. They are responsible for creating the parts a user doesn’t directly interact with and is probably unaware of. They are responsible for storing user data in a database and ensuring a user can log in / log out successfully. All in all, they power the front end, making sure that all processes are running smoothly.
+-   **前端** (或者客户端)语言。用来负责和创造所有和用户交互相关的部分。
+-   **后端** (或者服务器端)语言。 负责执行背后的逻辑，后端负责创建用户直接交互以外的部分，或许用户没有感知到这些部分，包括存储用户数据到数据库，确保用户能够登陆和登出等。总之，后端给前端赋能，确保程序能够流畅运行。
 
-To learn more, [read this article that covers the differences between frontend and backend languages](https://www.freecodecamp.org/news/frontend-vs-backend-whats-the-difference/).
+感兴趣的话，你可以[阅读这篇关于前后端语言区别的文章](https://www.freecodecamp.org/news/frontend-vs-backend-whats-the-difference/).
 
-## Why Coding Is An Empowering and Useful Skill To Learn for The Future
+<h2 id="skill">为什么编码是对未来有益的技能？</h2>
 
-Even if you don’t intend to write code professionally, you can still learn to code. This can help you optimize, improve, and automate the repetitive and time-consuming aspects of your current job and the industry you are working in.
+即便你不希望成为专业的程序员，你也可以学习代码。这可以帮助你优化、提高并且自动化你当前工作或者行业中那些重复并且费时的部分。
 
-And if you want to write code professionally, having this technical skill will put you in a position to be able to help solve some of the problems that humanity faces.
+如果你想要成为专业程序员，拥有这方面的技能，能够帮助解决人类正在面临的一些问题。
 
-Below, I’ve listed some of the reasons why learning to code now is a good idea and something you might want to consider doing.
+接下来我会列举一些理由，告诉你为什么现在应该学习代码，以及你可以考虑学习代码：
 
-### Coding Teaches You How To Think
+<h3 id="tool">代码教你如何思考</h3>
 
-Steve Jobs, who was the co-founder, chairman, and CEO of Apple said:
+苹果曾经的联合创始人、主席以及CEO乔布斯曾经说过：
 
-> "I think everybody in this country (United States of America) should learn how to program a computer, should learn a computer language because it teaches you how to think. It's like going to law school - I don't think anyone should be a lawyer, but I think going to law school would actually be useful because it teaches you how to think in a certain way. So, I view computer science as a liberal art. It should be something that everybody learns."
+> “我认为这个国家（美国）的每一个人都应高学习如何编写计算机程序，学习一种计算机语言，因为它指导你如何思考。这就像去读法学院一样。我不认为每一个人都应该成为一名律师，但是去读法学院十分有帮助，因为它能够帮助你建立思考方法。所以我认为计算机科学实际上隶属于文科，每一个人都应该学习。
 
-Coding teaches you to break down big, complex problems into smaller pieces.
+代码教你将复杂、大型的问题拆分成一个个小问题。
 
-It teaches you how to recognize reoccurring patterns and identify what is not working in a system or a process so you can improve it.
+代码教你识别重复的模式，并且辨别系统或者过程中什么失效了，你可以如何改进。
 
-You can tap into and take full advantage of the capabilities and potential of the computer to amplify your already existing skills to solve problems.
+你可以充分利用计算机的能力优势和潜力来补充你已有的技能，解决问题。
 
-So, you can think of coding as a mental tool for troubleshooting issues and finding solutions to problems.
+你可以将代码视为解决问题或者寻求解决方法的思维工具。
 
-Coding also fosters and enhances imagination, creativity, and innovation – there is an art to it.
+编写代码也培养并且提高想象力、创造力和创新精神——代码也是一种艺术。
 
-The fact that you need to solve a problem forces you to think outside the box and come up with new ideas and ways of doing things. It makes you see and visualize a problem from a different perspective and angle.
+在解决问题的过程中，你不得不跳出既定框架思考，构思出新的想法和方式来处理事情。代码迫使你从另外的角度来看待问题。
 
-### Coding Helps You Build Out An Idea
+<h3 id="build">代码帮助你实现想法</h3>
 
-Do you have a specific idea or a plan in mind that you would like to bring to life?
+你是否有想要实现的想法？
 
-You may want to set up a startup business, a non-profit organization, or a charity.
+你可能想要创业，成立一个非盈利组织，或者是慈善机构。
 
-You can use coding to provide help, tools, and resources to people in your community.
+你可以使用代码给你的社区提供帮助、工具和资源。
 
-In that case, having a website is necessary. You will then be able to promote and let others know about your services or products.
+那么有一个网站就非常有必要，你可以在网站推广你所提供的服务和产品。
 
-Instead of hiring someone else to build that idea for you, you could do it yourself and save costs.
+与其雇人来搭建你的想法，不如你自己来，还省钱。
 
-However, if you decide to hire someone else, understanding the building process of the software will allow you to make better choices when hiring and help you communicate more effectively with technical folks.
+即便你依旧决定雇人，了解软件编程可以帮助你做更好的用人决定，以及更好地和技术人员交流。
 
-### Coding Is Free to Learn
+<h3 id="free">学习代码免费</h3>
 
-There has never been a better time to learn to code.
+没有比现在更适合学习代码了。
 
-Learning, and searching for information, have become more accessible and available with the rise in popularity and continuous advancements of the Internet. It is now only one click away.
+由于互联网的流行和技术的进步，学习和检索信息变得越来越便捷，只需要点击鼠标就行。
 
-The barriers to accessing high-quality education materials have lowered compared to previous generations.
+和我们上一辈相比，现在获取高质量的教学资源的门槛降低了。
 
-More people can learn the skills necessary to get better, higher-paying tech jobs, which will improve their quality of life, no matter where they are in the world.
+不论身处在哪里，越来越多的人可以通过学习必要的技能，来获得薪酬更好的技术工作，提升生活质量。
 
-freeCodeCamp’s mission is to help people learn to code completely for free.
+freeCodeCamp的使命就是帮助人们完全免费学习代码。
 
-freeCodeCamp has a well-thought-out and well-structured [interactive curriculum](https://www.freecodecamp.org/), with topics ranging from responsive web design to relational databases, SQL, and Python, to name a few.
+freeCodeCamp搭建了经过深思熟虑、结构完善的[互动教程](https://www.freecodecamp.org/)，包含响应式网页设计、关系数据库、SQL、Python等课程。
 
-There is also [freeCodeCamp's YouTube channel](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ), with thousands of hours of content. You can browse and find multiple full-length courses on different technology topics.
+[freeCodeCamp YouTube频道](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ)也包含数千小时的内容，你可以浏览并且找到各种技术话题的完整教学视频。
 
-When you want to dive deeper into a topic, you can turn to [freeCodeCamp's publication](https://www.freecodecamp.org/news/). There are over 8000 articles and full-length books on coding and technology topics.
+如果你想更深入了解某个话题，可以浏览[freeCodeCamp专栏](https://www.freecodecamp.org/news/)。这里有超过8000篇文章，包括代码技术话题的完全手册。
 
-### Coding Will Improve Your Digital Literacy
+<h3 id="digital-literacy">代码将提高你的数字素养</h3>
 
-We search for information, and we communicate and collaborate with others digitally.
+我们搜索信息，和他人通过数字设备交流合作。
 
-Knowing how to code will give you a better understanding, and even maybe a greater appreciation, of how technology works and of how the digital gadgets and applications you use daily operate.
+学习如何编写代码可以让你更加了解甚至欣赏技术是如何工作的，了解你日常使用的电子设备和应用是如何工作的。
 
-With the critical thinking and problem-solving skills you will develop through coding, you will be able to research, locate, navigate, evaluate, assess, filter, and store information more effectively and confidently in digital environments.
+在学习的过程中你将收获解决问题的技巧和批判性思维，帮助你在数字环境中更有效和自信地搜索、定位、导航、评估、过滤、存储信息。
 
-## What Is Coding Used For? Everyday life Coding Examples
+<h2 id="use">代码可以用来做什么？现实生活中代码的应用</h2>
 
-We live in a digital world, which means that coding is present in most, if not every aspect of our life and our everyday activities.
+即便代码并不出现在我们生活的方方面面，但由于我们处在数字世界，代码也存在我们生活的大部分地方。
 
-For most of the things you use and interact with, someone has written code to make it function properly.
+你使用得最频繁的物品，其实是由人通过编写合适的函数实现的。
 
-The presence of coding and technology in our lives doesn’t seem to be going anywhere anytime soon. If anything, it will increase.
+代码和技术即便没有没有时时刻刻出现出现在我们的生活之中，但是它们出现的频率在增加。
 
-Coding has replaced outdated technologies.
+代码取代了过时的技术。
 
-On the one hand, it has made some jobs safer, reduced intense manual labor, and lowered accidents and injury rates.
+一方面，代码使得一些工作更加安全，减少了密集人力劳动，降低了发生事故和受伤的风险。
 
-However, on the other hand, whole industries have been replaced or automated.
+另一方面，所有的产业都在逐步自动化。
 
-Below, I’ve listed some of the areas where coding is present in our day-to-day activities.
+我将列举一些代码出现在我们每日活动的情况：
 
-### Electronic Devices
+<h3 id="devices">电子设备</h3>
 
-Code powers all the electronic devices you use for work and entertainment.
+代码给工作和娱乐的电子设备赋能。
 
-Some examples of electronic devices that have code behind them are:
+这些由代码驱动的电子设备包括：
 
--   Mobile phones
--   Tablets
--   Laptops
--   Desktop computers
--   Smart TVs
--   MP3 players and iPods,
--   Smart wristwatches and pacemakers for tracking and monitoring your heart rate and running time. You can even connect your mobile phone to them to receive notifications. You can also connect your MP3 player to listen to music.
--   Calculators
--   Digital cameras
--   Digital signature pads are increasingly replacing paper documents when a signature is required.
+-   手机
+-   平板
+-   笔记本电脑
+-   台式电脑
+-   智能电视
+-   MP3播放器或者iPods
+-   用来记录和检测心率和跑步时间的智能手环和计步器。你也可以通过它们连接手机来获取通知，甚至可以连MP3播放器来听音乐。
+-   计算机
+-   数码相机
+-   逐渐取代纸质签名方式的数字签字板
 
-### Digital Services and Applications
+<h3 id="applications">数字服务和应用</h3>
 
-All of your favorite websites and web and mobile applications use code.
+所有你喜欢的网站和手机应用都是由代码编写的。
 
-Some examples are of those are:
+包括：
 
--   Social media sites
--   Personal blogs
--   Instant messaging platforms
--   Video conferencing platforms
--   Communication tools you use daily to keep in touch with family members, friends, or colleagues over a long distance.
--   Music streaming platforms you use to listen to music or podcasts.
--   E-banking and digital services for paying bills online, checking credit card balance, or moving money.
--   Word processors for writing documents.
--   Spreadsheet programs
--   Applications for note-taking, productivity, making to-do lists, tracking the progress of a project, or the progress of your goal-setting.
+-   社交媒体网站
+-   个人博客
+-   即时消息平台
+-   视频会议平台
+-   你每天和家人、朋友、远距离的同事保持联系的通讯工具
+-   你用来听音乐和博客的音乐流媒体平台
+-   实现线上付款、检查信用卡账单或者转账的数字银行和电子服务
+-   用来文档的文字处理器
+-   电子表格程序
+-   用来记笔记、提升效率、做计划清单、记录项目进展和目标进展的应用
 
-### Transportation
+<h3 id="transportation">交通</h3>
 
-There is code behind the different means of transportation, such as:
+交通工具背后也有代码，如：
 
--   For driving, cars have systems for controlling fuel efficiency, regulating power, and air-conditioning.
--   Traffic lights contain built-in microprocessors which are in charge of changing signals according to the amount of traffic on the road.
--   Electronic parking meters and parking lot ticket machines.
--   Ticket machines and barcode scanners in subways and train stations. They read the barcode on your ticket, and from that, they can tell where you traveled from and how long you've been on the train. They also calculate how much time you have left on the ticket and if it is expired.
--   GPS systems ensure you don't get lost in an area you are not familiar with since they provide navigational directions.
--   There are CCTV (Closed-Circuit Television) cameras in public places, major roads, and shopping centers for surveillance and security.
--   Elevators contain microprocessors that enable them to go to the correct floor that you specify when you press one of the buttons. And they have sensors that detect when something is blocking the door.
+-   驾车的时候，小轿车内的控制系统来控制更高效地使用汽油、调节功率以及空调。
+-   交通信号灯内置了微处理器，能够根据道路交通流量来变化信号灯。
+-   电子停车咪表和停车场售票机。
+-   地铁或者火车的售票机以及条形码扫码机器。它们读取车票上的条形码，就能够得知你从哪里来，你在车上待了多久，还可以计算你的票还剩多少时间，车票什么时候过期。
+-   GPS定位系统确保你在不熟悉的地方也不会迷路。
+-   公共场所、主干道和购物中心的CCTV（闭路电视）摄像头确保监管和安全。
+-   垂直电梯里微处理器，确保停靠在你通过按钮选择的楼层，传感器来检查是否有物品挡住了电梯门。
 
-### Household Items
 
-There are many household items and kitchen appliances that rely on code to work, some of which are:
+<h3 id="house">家居用品</h3>
 
--   Digital alarm clocks
--   The shower heater whose water temperature can be regulated, controlled, and programmed from afar with the help of microprocessors.
--   Vacuum cleaners
--   Smart tea and coffee machines that control how many cups of coffee you want to have.
--   Microwaves
--   Washing machines and dishwashers that regulate how many spins they will perform and at what speed.
--   Air conditioning systems
--   Refrigerators and freezers
--   You may also have virtual digital assistants or voice-activated software and voice recognition devices. They wait for voice commands such as you asking a question or telling them to send an email to someone on your contacts list. They carry out a task you set them.
--   And WiFi routers that connect all of your devices to the Internet.
+许多家居和厨房用品也需要代码来驱动，如：
 
-## Conclusion
+-   电子报警器
+-   使用微处理器远程调节、控制水温的淋浴加热器
+-   吸尘器
+-   智能泡茶器和咖啡机，它们可以控制出多少杯茶或者咖啡
+-   微波炉
+-   可以控制转圈和转速的洗碗机和洗盘机
+-   空调
+-   冰箱和冰柜
+-   你可能还拥有虚拟数字助理或通过语音激活软件和语音识别设备。例如你提出问题或告诉他们向联系人列表中的某人发送电子邮件。他们执行您通过语音设置的任务
+-   将你所有设备连接到网络的WiFi路由
 
-Hopefully, now you have a high-level understanding of what coding is and for what reasons you use code in everyday life.
+## 总结
 
-To take your first steps in learning to code, use [freeCodeCamp's curriculum](https://www.freecodecamp.org/learn/).
+希望现在你已经了解什么是编码，以及为什么你的日常生活中代码无处不在。
 
-Start with the first certification, [Responsive Web Design](https://www.freecodecamp.org/learn/2022/responsive-web-design/), and then work your way down the page.
+迈出学习代码的第一步，可以使用[freeCodeCamp教程](https://www.freecodecamp.org/learn/)。
 
-Thanks for reading!
+从第一个证书——[响应式网页设计](https://www.freecodecamp.org/learn/2022/responsive-web-design/)开始，然后按照你自己的节奏来。
+
+感谢阅读！

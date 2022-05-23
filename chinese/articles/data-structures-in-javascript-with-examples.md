@@ -1,6 +1,6 @@
 > -  原文地址：[Data Structures in JavaScript – With Code Examples](https://www.freecodecamp.org/news/data-structures-in-javascript-with-examples/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Data Structures in JavaScript – With Code Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/pexels-clem-onojeghuo-175771.jpg)

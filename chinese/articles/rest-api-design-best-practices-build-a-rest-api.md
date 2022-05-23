@@ -7,19 +7,19 @@
 
 在过去几年我创建和使用过不少API，期间我遇到过优秀的实践方式，也遭遇过极其不好的实践方式，但曙光总是存在。
 
-网上有许多优秀实践相关的文章，但是他们大多数都缺乏现实经验。通过一些例子来了解理论是一个好办法，但是我一直都在思考如何用现实世界的例子来展现API的应用。
+网上有许多最佳实践相关的文章，但是他们大多数都缺乏实用性。通过少量示例来了解理论是一个好办法，但是我一直都在思考如何通过更实际的例子来展现API的应用。
 
 简单的例子确实可以帮助概念的理解，也省去了复杂度。但实际情况往往并不简单，我确信你对此也深有体会。 😁
 
-这就是我决定写这个教程的原因。我讲过去好的坏的学习经验都融入了这个易读的文章中，并提供伴随例子。读完整片文章，我们就会通过一个又一个最佳实践来创建一个完整的API。
+这就是我决定写这个教程的原因。我将过去好的坏的学习经验都融入了到这边文章之中，并提供例子，使文章易读易懂。我们就会通过一个又一个最佳实践来创建一个完整的API。
 
 开始之前的注意事项：
 
-最佳实践如你所想并不是具体的必须遵从的规则。它们是随着时间的推移人们总结出来的有效的惯例，有一些确实成为现在的标准，但这并不意味着你需要百分之一百的采用这些实践。
+如你所想，最佳实践并不是必须遵从的具体规则。它们是人们逐渐总结出来的有效的惯例，确实有一些成为现在的标准，但这并不意味着你需要百分之一百的采用这些实践。
 
-最佳实践应该告诉你如何使得API更加符合用户的使用习惯（消费者和其他工程师）、更加安全和提高性能。
+最佳实践指导如何使API更加符合用户（使用API的人和其他工程师）的使用习惯、更加安全和提高性能。
 
-请记住项目各不相同，使用的方法也各不相同。肯定会有一些情况下你无法遵守这些规范，每一个工程师都应该自己决定使用什么方法。
+请记住不同的项目有不同的实践方法，肯定存在一些情况下你无法遵守这些规范，每一个工程师都应该自己决定使用什么方法。
 
 话不多说，让我们开始吧！
 
@@ -27,19 +27,19 @@
 
 -   [示例项目](#our-example-project)
     -   [前提条件](#prerequisites)
-    -   [架构](#architecture)
+    -   [结构](#architecture)
     -   [基础设置](#basic-setup)
 -   [REST API最佳实践](#rest-api-best-practices)
     -   [版本](#versioning)
     -   [用复数形式命名资源](#name-resources-in-plural)
-    -   [通过JSON格式接受和响应数据](#accept-and-respond-with-data-in-json-format)
-    -   [处理HTTP标准代码错误](#respond-with-standard-http-error-codes)
-    -   [在终点避免使用动词](#avoid-verbs-in-endpoint-names)
+    -   [以JSON格式接受和响应数据](#accept-and-respond-with-data-in-json-format)
+    -   [响应标准HTTP错误代码](#respond-with-standard-http-error-codes)
+    -   [避免在端点使用动词](#avoid-verbs-in-endpoint-names)
     -   [帮相关资源放在一起](#group-associated-resources-together-logical-nesting-)
     -   [集成过滤排序和分页功能](#integrate-filtering-sorting-pagination)
     -   [使用数据缓存提升性能](#use-data-caching-for-performance-improvements)
     -   [好的安全实践](#good-security-practices)
-    -   [API编写合适的文档](#document-your-api-properly)
+    -   [编写API合适的文档](#document-your-api-properly)
 -   [总结](#conclusion)
 
 <h2 id="our-example-project">示例项目</h2>
@@ -50,54 +50,54 @@
 
 在正式开始在示例中应用最佳实践前，我先简单介绍一下我们要创建什么。
 
-我们将为CrossFit训练应用创建REST API。如果你不熟悉CrossFit，它是一种健身方式，融合了竞争类运动和高强度训练，包含了各种各样的运动（奥林匹克举重、体操等）。
+我们将为交叉训练应用创建REST API。交叉训练是一种健身方式，融合了竞技类运动和高强度训练，以及各种各样的运动元素（奥林匹克举重、体操等）。
 
-在这个应用中，我们将创建、读取、更新和删除**WOD**'s(**W**orkout **o**f the **D**ay应用名称)。该应用将帮助用户（健身馆主）指定和维护已有的健身计划。除此之外，还可以在一些重要的训练旁批注一些小建议。
+这个应用可以创建、读取、更新和删除**WOD**(**W**orkout **o**f the **D**ay即每日训练)，帮助用户（健身馆主）指定和维护已有的健身计划。除此之外，还可以在一些重要的训练旁批注一些训练建议。
 
-我们的国内工作就是设计和部署这个应用的API。
+我们的工作就是设计和实现这个应用的API。
 
 <h3 id="prerequisites">前提条件</h3>
 
-在学习这门教程之前，你必须有JavaScript， Node.js， Express.js以及后端架构的经验，REST和API这类属于对于你来说是熟悉的，并且你了解[主从式架构](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)。
+在学习这门教程之前，你必须使用过JavaScript， Node.js， Express.js以及后端架构，熟悉REST和API这类术语，并且了解[主从式架构（客户端/服务器架构）](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)。
 
-当然你不需要时这些话题的专家，熟悉并且有这些内容的实际工作经验就足够了。
+当然你不需要成为这些话题的专家，熟悉并且有这些实际操作经验就足够了。
 
-如果这些都不符合你的话，当然也不是不看这篇教程的理由。你还是可以从这篇文章中学到很多东西，但是如果有这些技能的话可以帮助你更轻松地阅读这篇文行。
+即便你不符合上述条件，也不是跳过这篇教程的理由。你还是可以从这篇文章中学到很多东西，具备上述条件可以帮助你更轻松地阅读这篇文章。
 
-虽然虽然这里的API是用JavaScript和Express写的，但不表示这些最佳实践仅适用于这些工具。可以在其他的编程语言和框架中应用这些最佳实践。
+虽然这里的API是用JavaScript和Express写的，但不表示这些最佳实践仅适用于此。你也可以在其他的编程语言和框架中应用这些最佳实践。
 
-<h3 id="architecture">架构</h3>
+<h3 id="architecture">结构</h3>
 
-就向前面说的那样，我会是用Express.js来搭建API。我不想使用太复杂的架构，所以我会使用 **3层结构:**
+如前所述，我会是用Express.js来搭建API。我不想弄得太复杂，所以我会使用 **3层结构:**
 
 ![Bildschirmfoto-2022-04-25-um-14.33.24-1](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-25-um-14.33.24-1.png)
 
-在 **控制层** 我们将处理所有HTTP相关的内容，也就是说我们在这里处理终点的请求和回应。在这层之上时 Express的**路由**把请求传递给相应的控制器。
+在 **控制器** 我们将处理所有HTTP相关的内容，也就是说我们在这里处理端点的请求和响应。在这层之上是Express的**路由**把请求传递给相应的控制器。
 
-所有业务逻辑都在**服务层**，服务层会暴露特定服务（方法）供控制层使用。
+所有业务逻辑都在**服务层**，服务层导出特定服务（方法）供控制层器用。
 
-第三层是 **数据通过层**， 在这里处理数据库。我们将导出一些处理数据的方法，如创建WOD，供服务层使用。
+第三层是 **数据访问层**， 在这里处理数据库。我们将导出一些处理数据的方法，如创建WOD，供服务层使用。
 
-在这个例子中，我们不会使用 _真实的_ 数据哭如MongoDB或者PostgreSQL，因为我想专注于最佳实践本身。因此我们会使用到本地的JSON文件来模拟数据库。但是的使用逻辑可以应用到其他的数据库。
+在我们的教学示例中，我们不会使用 _真实的_ 数据库，如MongoDB或者PostgreSQL，因为我想专注于最佳实践本身。因此我们会使用本地JSON文件来模拟数据库，但是使用逻辑可以迁移到其他的数据库。
 
 <h3 id="basic-setup">基础设置</h3>
 
-现在我们开始创建API的基础设置。我们不用把事情复杂化，我们只创建一个简单有组织的架构。
+现在我们开始配置API的基础设置。不会太复杂，我们只创建一个简单、有组织的结构。
 
-首先，我们创建一个总文件目录结构，包含所有必须的文件和依赖项。创建完了之后，我们将快速地检查一下一切是否正常运行。
+首先，我们创建一个总文件目录结构，包含所有必须的文件和依赖项。创建完了之后，我们将快速地检查一下一切是否运行正常。
 
 ```bash
-# 创建项目文件夹并且打开这个文件夹
+# 创建项目目录并且打开这个目录
 mkdir crossfit-wod-api && cd crossfit-wod-api
 ```
 
 ```bash
-# 创建src文件夹并打开这个文件夹
+# 创建src目录并打开这个目录
 mkdir src && cd src
 ```
 
 ```bash
-# 创建子文件夹
+# 创建子目录
 mkdir controllers && mkdir services && mkdir database && mkdir routes
 ```
 
@@ -107,7 +107,7 @@ touch index.js
 ```
 
 ```bash
-# 我们现在在src文件夹，所以要返回一级
+# 我们现在位于src目录，所以要返回一级
 cd .. 
 
 # 创建package.json文件
@@ -186,53 +186,53 @@ npm run dev
 
 ![constantin-wenning-idDvA4jPBO8-unsplash--1-](https://www.freecodecamp.org/news/content/images/2022/04/constantin-wenning-idDvA4jPBO8-unsplash--1-.jpg)
 
-Photo by [Constantin Wenning](https://unsplash.com/@conniwenningsimages?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/handshake?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+图片作者[Constantin Wenning](https://unsplash.com/@conniwenningsimages?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 来源[Unsplash](https://unsplash.com/s/photos/handshake?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-很好！我们已经做好了基础的Express设置，现在我们可以根据最佳实践来扩展API了。
+很好！我们已经完成了Express的基础设置，现在我们可以根据最佳实践来扩展API了。
 
-我们从最简单的基础CRUD终点开始，之后我们将使用最佳实践来扩展API。
+我们从最简单的基础CRUD端点开始，之后我们将使用最佳实践来扩展API。
 
 <h3 id="versioning">版本</h3>
 
-稍等一下。在我们编写具体的API代码之前，我们要关注一下版本。和其他所有应用一样，我们的API也需要迭代、更新功能……，所以给我们的API制定版本十分重要。
+稍等一下，在我们编写具体的API代码之前，我们要关注一下版本。和其他所有应用一样，我们的API也需要迭代、更新功能，所以给我们的API制定版本十分重要。
 
-这样做最大的优势是当我们在创建新功能的时候并不影响客户在旧版本上继续使用。
+这样做最大的优势是当我们在创建新功能的时候并不影响客户端继续运行旧版本。
 
-我们并不强迫用户直接使用我们的新版本，用户可以继续使用老的版本，直到新版本稳定后再迁移到新版本。
+我们并不强迫用户直接使用我们的新版本，用户可以继续使用旧的版本，直到新版本稳定后再迁移到新版本。
 
-当下版本和新版本同时运行互不干扰。
+当下版本和新版本并行运行，互不干扰。
 
 那我们如何区分不同的版本呢？一种不错的做法是在URL添加**v1****v2**这样的路径段。
 
 ```javascript
-// Version 1 
+// 版本1 
 "/api/v1/workouts" 
 
-// Version 2 
+// 版本2 
 "/api/v2/workouts" 
 
 // ...
 ```
 
-这就是我们暴露给外部世界，以及其他开发者也可以使用的。同时，我们也需要一个项目架构来区分不同的版本。
+这就是我们暴露给外部，其他开发者也可以使用的部分。同时，我们也需要调整项目结构来区分不同的版本。
 
-管理Express API版本的方法各式各样。本教程中我将在**src**目录下创建一个版本文件夹，如**v1**：
+管理Express API版本的方法各式各样。本教程中我将在**src**目录下创建一个版本目录，如**v1**：
 
 ```bash
 mkdir src/v1
 ```
 
-现在我们讲路由文件夹移动到新的v1目录下：
+现在我们将路由目录移动到新的v1目录下：
 
 ```bash
 # 获取当前路径（复制）
 pwd 
 
-# 讲“routes”添加到“v1” （使用{pwd}插入新的路径）
+# 将“routes”添加到“v1” （使用{pwd}插入新的路径）
 mv {pwd}/src/routes {pwd}/src/v1
 ```
 
-新目录 **/src/v1/routes** 将存储版本1.0的所有路由。之后我们会在里面添加“真实”的内容，但现在我们简单添加一个**index.js**文件来简单测试一下。
+新目录 **/src/v1/routes** 将存储版本1的所有路由。之后我们会在里面添加“真实”的内容，但现在我们简单添加一个**index.js**文件来简单测试一下。
 
 ```bash
 # 在/src/v1/routes 
@@ -281,25 +281,25 @@ app.listen(PORT, () => {
 
 ![Bildschirmfoto-2022-04-30-um-11.22.28](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-11.22.28.png)
 
-祝贺你！你已经架构好了项目的不同版本。现在我们通过版本1.0的路由来传入请求，之后每一个请求会连接相应的控制方式。
+祝贺你！你已经调整好了项目结构以适应不同版本。现在我们通过版本1的路由来传入请求，之后每一个请求会连接相应的控制器方式。
 
 再继续下一步之前，我想强调一些内容。
 
-我们把路由文件夹迁移到了v1目录下，其他文件夹如控制器和服务器仍在src目录下。因为我们搭建的API比较小，所以这么做没有问题，每一个版本我们使用相同的控制器和服务器。
+我们把路由目录迁移到了v1目录下，其他目录如控制器和服务器仍在src目录下。因为我们搭建的API比较小，所以这么做没有问题，每一个版本我们使用相同的控制器和服务器。
 
-当API逐渐壮大，比方说2.0版本需要使用不同的控制方法的话，最好还是把控制器文件夹放在v2目录下，这样就打包了这个版本所有的特定逻辑。
+当API逐渐壮大，比方说2版本需要使用不同的控制方法的话，最好还是把控制器目录放在v2目录下，这样就打包了这个版本所有的特定逻辑。
 
-另一个这样做的原因是，我们可能在其他版本中想要改变某个服务器，但我们并不想要中断除此之外的版本。所以把服务器文件夹也迁移到特定版本文件夹是一个推荐的操作。
+另一个这样做的原因是，我们可能在其他版本中想要改变某个服务器，但我们并不想要中断除此之外的版本。所以推荐把服务器目录也迁移到特定版本目录。
 
-如果所讲，在我们的例子当中仅区分路由是可行的。尽管如此。切记当API壮大需要改变的时候，拥有一个清晰的架构十分重要。
+在我们的例子当中仅区分路由的版本是可行的。尽管如此。切记当API壮大需要改变的时候，拥有一个清晰的目录结构十分重要。
 
 <h3 id="name-resources-in-plural">用复数形式命名资源</h3>
 
-设置完毕后我们就进入了真正的API搭建了。我希望从基础的CRUD终点开始。
+设置完结构后我们就进入了真正的API搭建了。我希望从基础的CRUD端点开始。
 
-也就是说，我们从应用创建、读取、更新和删除训练终点开始。
+也就是说，我们从实现创建、读取、更新和删除交叉训练端点开始。
 
-首先，让我们为训练连接一个特定的控制器、服务器和路由
+首先，让我们为训练连接控制器、服务器和路由
 
 ```bash
 touch src/controllers/workoutController.js 
@@ -309,17 +309,17 @@ touch src/services/workoutService.js
 touch src/v1/routes/workoutRoutes.js
 ```
 
-我通常喜欢从编写路由开始。让我们思考一下如何给终点命名。这里就会使用到最佳实践。
+我通常喜欢从编写路由开始。让我们思考一下如何给端点命名。这里就会运用到最佳实践。
 
-我们可以将终点命名为 **/api/v1/workout**，因为我们只添加一个训练计划，对不对？虽说这样做没什么问题，但是这样会造成误解。
+我们可以将端点命名为 **/api/v1/workout**，因为我们只添加一个交叉训练，对不对？虽说这样做基本上没什么问题，但是这样可能会造成误解。
 
-谨记：你的API会被其他的人类使用，所以必须精准。这同样适用于给你的资源命这一方面。
+谨记：你的API会被其他的**人类**使用，所以必须精准。这一规则也适用于给资源命名。
 
-我通常会把资源看作一个盒子。在我们的例子中，这个盒子存储了各种各样的 **训练计划**。
+我通常会把资源看作一个盒子。在我们的例子中，这个盒子存储了**训练**集合。
 
-将资源以复数形式命名最大的好处是这对于其他用户来说也清晰易懂，复数意味着这是一个包含了各种各样训练的合集。
+将资源以复数形式命名最大的好处是这对于其他**人类**来说也清晰易懂，复数意味着这是一个包含了各种各样训练的合集。
 
-所以，让我们之后再再训练路由中定义终点：
+所以，让我们定义一下路由中端点：
 
 ```javascript
 // 在 src/v1/routes/workoutRoutes.js
@@ -349,9 +349,9 @@ router.delete("/:workoutId", (req, res) => {
 module.exports = router;
 ```
 
-我们可以删除 **src/v1/routes**中的**index.js**文件。
+我们可以删除 **src/v1/routes**中的测试文件**index.js**文件。
 
-现在让我们回到入口点连接版本1.0的路由。
+现在让我们回到入口接点连接版本1.0的路由。
 
 ```javascript
 // 在 src/index.js
@@ -375,11 +375,11 @@ app.listen(PORT, () => {
 });
 ```
 
-进展的很顺利！现在我们就可以通过版本1.0的训练路由捕获到来自 **/api/v1/workouts**的所有请求。
+进展的很顺利！现在我们就可以通过版本1的训练路由捕捉到来自 **/api/v1/workouts**的所有请求。
 
-在路由当中，我们讲调用另一个方法来使用控制器处理各种各样的终点。
+在路由当中，我们将调用控制器的方法来处理不同的端点。
 
-让我们为每一个终点创建一个方法。现阶段只需要可以发送返回一个信息。
+让我们为每一个端点创建一个方法。现阶段只需要返回一个信息。
 
 ```javascript
 // 在 src/controllers/workoutController.js
@@ -412,7 +412,7 @@ module.exports = {
 };
 ```
 
-现在可以重构一下训练路由，使用控制器方法：
+现在可以修改一下训练的路由，调用控制器方法：
 
 ```javascript
 // In src/v1/routes/workoutRoutes.js
@@ -434,23 +434,23 @@ router.delete("/:workoutId", workoutController.deleteOneWorkout);
 module.exports = router;
 ```
 
-现在可以测试 **GET /api/v1/workouts/:workoutId** 终点，在浏览器输入 **localhost:3000/api/v1/workouts/2342** ，你会看到以下信息：
+现在可以测试 **GET /api/v1/workouts/:workoutId** 端点，在浏览器输入 **localhost:3000/api/v1/workouts/2342** ，你会看到以下信息：
 
 ![Bildschirmfoto-2022-04-30-um-11.29.19](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-11.29.19.png)
 
-我们成功了！架构的第一层就搭建完毕。让我们用另个最佳实践来创建服务层。
+我们成功了！API结构的第一层就搭建完毕。让我们用另个最佳实践来创建服务层。
 
-<h3 id="accept-and-respond-with-data-in-json-format">通过JSON格式接受和响应数据</h3>
+<h3 id="accept-and-respond-with-data-in-json-format">以JSON格式接受和响应数据</h3>
 
-和API交互的时候，我们始终会通过请求发送特定数据，或者通过响应接受数据。市面上有各种各样的数据格式，但是JSON（JavaScript Object Notation）是一个标准格式。
+和API交互的时候，我们会通过请求发送特定数据，或者通过响应接受数据。市面上有各种各样的数据格式，但是JSON（JavaScript Object Notation）是一个标准格式。
 
-虽然在JSON的全称中有 **JavaScript** ，但两者并没有绑定。你也可以使用Java或者Python来编写你的API，来处理JSON。
+虽然在JSON的全称中有 **JavaScript** ，但两者并没有绑定。你也可以使用Java或者Python来编写你的API，它们也可以处理JSON。
 
 由于这样的标准化，API应该接受和响应JSON格式的数据。
 
 让我们回到我们的代码，看看如何把这一点融入到我们的最佳实践。
 
-首先，我们常见服务层。
+首先，我们创建服务层。
 
 ```javascript
 // 在src/services/workoutService.js
@@ -483,9 +483,9 @@ module.exports = {
 };
 ```
 
-将服务方法和控制器方法命名为一样的名字也是一种最佳实践，这样可以让两者保持一定关联。让我们先不返回任何东西。
+将服务方法和控制器方法命名为一样的名字也是一种最佳实践，这样可以让两者保持关联。让我们先不返回任何东西。
 
-在训练软件的控制器中，我们使用了这些方法：
+在训练的控制器中，调用服务层的这些方法：
 
 ```javascript
 // 在src/controllers/workoutController.js
@@ -531,17 +531,17 @@ module.exports = {
 };
 ```
 
-现在我们不需要改变响应中的任何内容，但是控制器已经可以和服务层联通了。
+我们暂且不需要改变控制器响应中的任何内容，但是控制器已经可以和服务层联通了。
 
-在服务的方法中，我们处理了商务逻辑，如改变数据结构。
+在服务的方法中，我们处理了业务逻辑，如改变数据结构以及和数据层交互。
 
-为此我们需要一个数据库和一组处理与数据库交互的方法。我们的数据库将为简单的提前编写好一些健身计划的JSON文件。
+为此我们需要创建一个数据层和一组处理与数据库交互的方法。我们的数据库将为简单的训练JSON文件。
 
 ```bash
 # 在src/database中创建一个新的名为 db.json的文件
 touch src/database/db.json 
 
-# 在/src/database中创建一个存储所有训练细节的训练文件
+# 在/src/database中创建一个存储所有训练相关方法的文件
 touch src/database/Workout.js
 ```
 
@@ -618,11 +618,11 @@ touch src/database/Workout.js
 }
 ```
 
-可以看到上面添加了三组训练计划。每组训练计划包含id, name, mode, equipment, exercises, createdAt, updatedAt和trainerTips。
+可以看到上面添加了三组训练数据。每组训练包含id, name, mode, equipment, exercises, createdAt, updatedAt和trainerTips。
 
-我们从最简单的开始，返回所有存储的训练计划，在访问数据层建立对应的方法(src/database/Workout.js)。
+我们从最简单的开始，返回所有存储的训练，在访问数据层建立对应的方法(src/database/Workout.js)。
 
-在这里我也使服务层和控制层的命名相同，这完全是任选的。
+在这里我也使用和服务层、控制器的相同的命名，不过是否这样命名完全取决于你的选择。
 
 ```javascript
 // 在src/database/Workout.js
@@ -635,7 +635,7 @@ const getAllWorkouts = () => {
 module.exports = { getAllWorkouts };
 ```
 
-跳回到训练计划服务层，并且应用**getAllWorkouts**的逻辑。
+回到训练计划服务层，实现**getAllWorkouts**的逻辑。
 
 ```javascript
 // 在src/database/workoutService.js
@@ -673,9 +673,9 @@ module.exports = {
 };
 ```
 
-返回所有的训练计划十分简单，我们不现在不需要改变数据格式，因为数据已经是一个JSON文件了。同时，我们也不需要传入参数，现在做的事情非常简单直白，待会儿我们会重新回到这里。
+返回所有的训练十分简单，我们不需要改变数据格式，因为数据已经是一个JSON文件了。我们暂时也不需要传入参数，现在做的事情非常简单直白，待会儿我们会重新回到这里。
 
-在我们的训练计划控制层，已经接受到了 `workoutService.getAllWorkouts()`的返回值并且发送给客户端一个返回值。我们在服务器和控制层之间循环数据。
+在我们的训练控制器中，已经接受到了 `workoutService.getAllWorkouts()`的返回值，并作为响应发送给客户端。我们完成了数据库从服务层到控制器的响应循环。
 
 ```javascript
 // 在src/controllers/workoutControllers.js
@@ -720,11 +720,11 @@ module.exports = {
 
 ![Bildschirmfoto-2022-04-30-um-11.38.14](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-11.38.14.png)
 
-一切都进展得很顺利，我们将数据以JSON的形式返回。但如何接受这些数据呢？假设我们需要一个终点来接受来自客户端的JSON，需要从客户端创建和更新训练数据。
+一切都进展得很顺利，我们将数据以JSON的形式返回。但如何接受来自客户端的数据呢？假设我们需要一个端点来接受来自客户端的JSON，在这个端点客户端创建和更新训练数据。
 
-在控制器中，我们提取了请求体来创建一个新的训练，并传入训练服务器。在训练服务器中，我们插入了DB.json并且将新创建的训练返回到客户端。
+在控制器中，我们提取了请求体来创建一个新的训练，并传入训练服务层。在训练服务层，我们插入了DB.json并且将新创建的训练返回到客户端。
 
-要在请求体中解析JSON，我们需要首先安装**body-parser**并配置。
+要想在请求体中解析JSON，我们需要首先安装**body-parser**并配置。
 
 ```bash
 npm i body-parser
@@ -749,7 +749,7 @@ app.listen(PORT, () => {
 });
 ```
 
-现在我们就可以控制器的在 **req.body.**中接受JSON格式的数据。
+现在我们就可以在控制器的**req.body**中接受JSON格式的数据。
 
 可以打开你最喜欢的HTTP服务器（我使用的是Postman）来进行测试，创建一个路由为localhost:3000/api/v1/workouts的POST请求，并且将请求体设置为JSON格式：
 
@@ -775,12 +775,12 @@ app.listen(PORT, () => {
 }
 ```
 
-你可以注意到了，如"id"、"createdAt"、"updatedAt"这些属性不存在。这些属性会通过API在插入前添加。我们会在训练服务器中处理相关内容。
+你可能注意到了"id"、"createdAt"、"updatedAt"这些属性不存在。添加这些属性是我们API的工作，我们会在训练服务层中处理相关内容。
 
-在训练控制器的 **createNewWorkout** 方法中，我们可以在请求体中提取body，并做一些验证，并作为参数传入训练服务器。
+在训练控制器的 **createNewWorkout** 方法中，我们可以在请求体中提取body，并做一些验证，并作为参数传入训练服务层。
 
 ```javascript
-// In src/controllers/workoutController.js
+// 在src/controllers/workoutController.js
 ...
 
 const createNewWorkout = (req, res) => {
@@ -812,13 +812,13 @@ const createNewWorkout = (req, res) => {
 ...
 ```
 
-通常提高请求验证质量的方式是使用第三方包，如：[express-validator](https://express-validator.github.io/docs/).
+通常会使用第三方包来来提升请求验证性能，如：[express-validator](https://express-validator.github.io/docs/).
 
-让我们打开训练服务器，接受来自createdNewWorkout方法传入的数据。
+训练服务层接受来自createdNewWorkout方法传入的数据。
 
-之后我们将缺失的属性传入对象，传入数据访问层的新方法并且存入DB中。
+之后我们将缺失的属性传入对象，并将这个对象作为新的方法传入数据访问层，再存入DB中。
 
-首先我们要创建一个简单的Util函数，来覆盖JSON文件以保存数据。
+首先我们要创建一个简单的Util函数，来覆盖JSON文件以实时更新数据。
 
 ```bash
 # 在data目录下创建util文件
@@ -870,7 +870,7 @@ module.exports = {
 };
 ```
 
-一切进展得很顺利。下一步是使用训练服务器中的数据方法。
+一切进展得很顺利。下一步是调用训练服务层中的数据库方法。
 
 ```bash
 # 安装uuid包
@@ -885,7 +885,8 @@ const { v4: uuid } = require("uuid");
 const Workout = require("../database/Workout");
 
 const getAllWorkouts = () => {
-  return DB.workouts;
+  const allWorkouts = Workout.getAllWorkouts()
+  return allWorkouts;
 };
 
 const getOneWorkout = () => {
@@ -926,12 +927,12 @@ module.exports = {
 
 如果你尝试再次添加同样的训练，你仍会得到201状态码，但是不会插入新的内容。
 
-也就是说我们的数据库方法取消了插入，什么都不返回。这是因为if声明检查了是否已经存在同样名称的内容，现在这样做就很好了，如果优化这种操作，我们会在下一个最佳实践中讲解。
+也就是说我们的数据库方法取消了插入，什么都不返回。这是因为if声明检查了是否已经存在同样名称的内容，暂时这么处理，我们会在下一个最佳实践中讲解如何优化。
 
 现在向 **localhost:3000/api/v1/workouts**发出GET请求，读取所有的训练。 我选择使用浏览器来操作，你会看到我们的训练成功地插入了：
 ![Bildschirmfoto-2022-04-30-um-11.57.23](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-11.57.23.png)
 
-你可以选择自己编写其他的方法，或者直接复制我的：
+你可以选择自行编写其他的方法，或者直接复制我的：
 
 首先是训练控制器（你可以直接复制所有内容）
 
@@ -1124,27 +1125,27 @@ module.exports = {
 
 太棒了！让我们进入下一个最佳实践，来看看怎么处理报错。
 
-<h3 id="respond-with-standard-http-error-codes">处理HTTP标准代码错误</h3>
+<h3 id="respond-with-standard-http-error-codes">响应标准HTTP错误代码</h3>
 
-我们已经完成了不少，但还没结束呢。现在我们的API已经可以处理CRUD并且存储数据，这样很棒！但还不够。
+我们已经完成了不少内容的搭建，但还没结束呢。现在我们的API已经可以处理CRUD并且存储数据，这样很棒！但还不够。
 
 为什么？让我来解释。
 
-在一个完美的世界里，所有事情都会运行顺利，没有错误。但是你可能知道，在现实中，会出现很多错误——无论这个错误是来自人类还是技术角度。
+在一个完美的世界里，所有事情都会运行顺利，没有错误。但是你可能知道，在现实中会出现很多错误——无论这个错误是人为的还是是技术角度。
 
-你可以体会过这样奇怪的感觉，一开始所有都运行得很好，没有任何错误。这样确实很棒也让人享受，但作为一个开发者，我们应该更习惯于出现错误。 😁
+你或许也认为从一开始就没有任何错误是一种奇怪的感觉，这样确实很棒也让人享受，但作为一个开发者，我们应该更习惯与错误共处。 😁
 
-API也是这样，我们需要处理当出现问题或者报错的时候的情况。这也可以健壮我门的API。
+API也是这样，我们需要处理出现问题或者报错的情况。这也可以使我门的API更强大。
 
-但出现问题时（不论是请求还是在我们API内部），我们返回HTTP错误代码。我见过并使用过一些API始终返回400错误代码，并且不附带任何具体的信息说明为什么错误会出现，错误是什么。这样调试就变得很痛苦。
+出现问题时（不论是在请求中还是在我们API内部），我们返回HTTP错误代码。我见过并使用过一些API始终返回400错误代码，并且不附带任何具体的信息说明为什么错误会出现，错误是什么。这样调试起来就很痛苦。
 
-这就是为什么针对不同的情况返回合适的HTTP代码是一种最佳实践。这能够帮助使用或者构建API的工程师更轻松地识别问题。
+这就是为什么针对不同的情况返回合适的HTTP代码是一种最佳实践。这能够使正在使用或者构建API的工程师更轻松地识别问题。
 
-为了提升体验，我们还可以在返回错误的同时发送一个快速的错误信息。但正如在简介中说的那样，这并不是万精油，还需要工程师自己来权衡。
+为了提升体验，我们还可以在返回错误的同时快速发送一个错误信息。但正如在文章开头说的那样，这一做法并不是万精油，还需要工程师自己来权衡。
 
-例如，是否返回 **"该用户名已经注册"** 应该经过深思熟虑，因为这样就给用户提供了本该隐藏的数据。
+例如，是否应该向用户返回 **"该用户名已经注册"**这类信息是需要深思熟虑的，因为或许这样就给用户提供了本该隐藏的数据。
 
-在我们的交叉训练API中，我们可以浏览一遍创建的终点，看看会出现什么问题，我们能怎么解决。在这一部分最后部分，你可以看到其他终点的完整运行方式。
+可以浏览一遍交叉训练API中的创建（CRUD中的C）端点，看看会出现什么问题，我们能怎么解决。在这一部分最后部分有其他端点的完整实现。
 
 我们先从训练控制器的createNewWorkout方法开始：
 
@@ -1177,7 +1178,7 @@ const createNewWorkout = (req, res) => {
 ...
 ```
 
-我们已经解决了请求体不完全的情况，并且获得了丢失的关键属性。
+我们的代码已经可以捕获请求体属性不完整的情况。
 
 在返回400时，附带一条返回错误信息是一个不错的选择。
 
@@ -1223,7 +1224,7 @@ const createNewWorkout = (req, res) => {
 
 ![Bildschirmfoto-2022-04-30-um-15.17.21](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-15.17.21.png)
 
-使用这个API的开发者知道自己需要什么。他们马上就知道应该在请求体中找答案，并且看看他们缺失了哪一个必须的属性。
+这样的话，使用这个API的开发者就更知道自己需要什么。他们马上就知道应该在请求体中找答案，并且看看他们缺失了哪一个必须的属性。
 
 在我们的例子中使用通用的错误信息没有问题。一般情况下可以使用一个模式验证器来处理这个问题。
 
@@ -1247,7 +1248,7 @@ const createNewWorkout = (newWorkout) => {
 ...
 ```
 
-在 **Workout.createNewWorkout().** 中的插入代码可能出现问题，我想将他们打包在try/catch代码块中，来捕获错误。
+在 **Workout.createNewWorkout()** 中的插入数据可能出现问题，我想将他们打包在try/catch代码块中，来捕获错误。
 
 ```javascript
 // 在src/services/workoutService.js
@@ -1300,9 +1301,9 @@ const createNewWorkout = (newWorkout) => {
 ...
 ```
 
-如你所见，一个错误包含了状态和信息两个内容。 此处我使用了 **throw**关键字来发出一个数据结构而不是一条字符串，在 **throw new Error()**中必须。
+如你所见，一个错误包含了状态和信息两个内容。 此处我使用了 **throw**关键字来抛出一个数据结构而不是一条字符串， **throw new Error()**必须这么写。
 
-使用throw的缺点是无法得到栈追踪。但基本上抛出错误由第三方库来处理（如果你使用MongoDB数据库的话就是Mongoose），但在本教程中，我们现在做的就够了。
+使用throw的缺点是无法得到栈追踪。但基本上抛出错误由第三方库来处理（如果你使用MongoDB数据库的话就是Mongoose），在本教程中，我们现在做的就足够了。
 
 现在我们就可以在服务和数据访问层来抛出和捕获错误了。我们现在进入训练控制层，来编写抛出错误和对应的消息。
 
@@ -1353,7 +1354,7 @@ const createNewWorkout = (req, res) => {
 
 你可以通过添加同样名字的训练，或者不在请求体中提供必需的属性来测试。你会接受对应的HTTP错误代码以及错误信息。
 
-在结束这一篇并且进入下一个最佳实践之前，让我们复制其他的实践代码，或者你可以尝试自己编写：
+在结束这一篇并且进入下一个最佳实践之前，让我们复制其他的实现代码，或者你可以尝试自己编写：
 
 ```javascript
 // 在src/controllers/workoutController.js
@@ -1549,7 +1550,7 @@ module.exports = {
 ```
 
 ```javascript
-// In src/database/Workout.js
+// 在src/database/Workout.js
 const DB = require("./db.json");
 const { saveToDatabase } = require("./utils");
 
@@ -1653,13 +1654,13 @@ module.exports = {
 };
 ```
 
-<h3 id="avoid-verbs-in-endpoint-names">在终点避免使用动词</h3>
+<h3 id="avoid-verbs-in-endpoint-names">避免在端点使用动词</h3>
 
-在终点中使用动词实际上没有任何作用。大体上所有URL都指向一个资源（如我们敬爱更难过的盒子）。
+在端点中使用动词实际上没有任何作用。大体上URL和资源（想想我们前文提到的“盒子”）是一一对应的。
 
 在URL中使用动词，相当于展示了资源本身并没有的行为。
 
-我们已经在不使用动词的情况下正确地编写好了URL，但让我们看看，如果使用动词URL会是什么样。
+我们已经在不使用动词的情况下正确地编写好了URL，但让我们看看，如果使用动词，URL会是什么样。
 
 ```javascript
 // 现在的样子（没有动词）
@@ -1677,33 +1678,33 @@ PATCH "/api/v1/updateWorkout/:workoutId"
 DELETE "/api/v1/deleteWorkout/:workoutId"
 ```
 
-你看到区别了吗？给每一个行为分配不同过得URL，会很快地变得让人困惑并且复杂。
+你看到区别了吗？给每一个行为分配不同的URL，会让人困惑并且十分复杂。
 
-假设我们有300个不同的终点。为每个终点分配单独的URL可能造成开销（和文档）地狱。
+假设我们有300个不同的端点。为每个端点分配单独的URL可能造成开销（和文档）地狱。
 
 另一个我不推荐在URL中使用动词的原因是，HTTP动词已经表明了响应的动作。
 
 如 **"GET /api/v1/getAllWorkouts"** 和 **"DELETE api/v1/deleteWorkout/workoutId"**就很没有必要。
 
-你会发现我们的实现非常清晰，因为我们只使用两个不同的URL，而实际的行为是通过HTTP动词以及对应的请求负载来实现。
+你会发现我们的实现非常清晰，因为我们只使用两个不同的URL，而实际的行为是通过HTTP动词以及对应的请求有效载荷来实现。
 
-我认为HTTP动词是来定义行为的（我们也希望这样），而URL（指向资源）是目标。 **"GET /api/v1/workouts"** 这样在人类的语言中也更通顺。
+我认为HTTP动词是来定义行为的（我们也希望这样），而URL（指向资源）是目标。 **"GET /api/v1/workouts"** 这句话即便是人类的语言中也更通顺。
 
 <h3 id="group-associated-resources-together-logical-nesting-">把相关的资源放在一起（逻辑嵌套）</h3>
 
-当你在设计API的时候，会出现资源之间相互关联的情况。一个好的实践方式是将资源整合和嵌套到一个资源。
+当你在设计API的时候，会出现资源之间相互关联的情况。一个好的实践方式是将资源整合和嵌套到一个端点。
 
-在我们的API中，有一系列的会员注册了交叉训练盒子（“盒子”是交叉训练健身房的名字），为了鼓励会员，我们记录了每一次训练的所有记录。
+在我们的API中，有一系列的会员注册了交叉训练盒子（此处的“盒子”是交叉训练健身房的名字），为了鼓励会员，我们记录了每一次训练的所有记录。
 
-假设有一组训练包含一定顺序的练习，你想要尽快做完。我们记录了所有会员完成训练的时间。
+假设有一组训练包含一定顺序的练习，你想要尽快做完。我们记录了所有会员完成这项训练的时间。
 
-这是，前端就需要一个终点来响应一个特定训练的所有时间记录，并且在UI上呈现。
+这时，前端就需要一个端点来响应一个特定训练的所有时间记录，并且在UI上呈现。
 
 训练、会员还有训练记录存储在不同的数据库里。所以在这里我们需要使用盒中盒（训练中的记录），对不对？
 
-这个终点的URI会是 **/api/v1/workouts/:workoutId/records**. 这便是一个在URL中实现逻辑嵌套的好实践。URL本身不需要反应数据结构。
+这个端点的URI会是 **/api/v1/workouts/:workoutId/records**. 这便是一个在URL中实现逻辑嵌套的好实践。URL本身不需要反应数据结构。
 
-让我们来实现这个终点。
+让我们来实现这个端点。
 
 首先我们要在db.json中添加一组叫"memebers"的数据，放在"workouts"下面。
 
@@ -1748,7 +1749,7 @@ DELETE "/api/v1/deleteWorkout/:workoutId"
 }
 ```
 
-在你问之前，我先回答——是的，密码是哈希的。😉
+在你问之前，我先回答——是的，密码是哈希加密的。😉
 
 然后我们在"records"下面添加"members"：
 
@@ -1783,7 +1784,7 @@ DELETE "/api/v1/deleteWorkout/:workoutId"
 }
 ```
 
-为了确保同一ID下的训练相同，我也复制了一些训练到workouts中：
+为了确保同一id下的训练相同，我也复制了一些训练到workouts中：
 
 ```json
 {
@@ -1882,18 +1883,18 @@ DELETE "/api/v1/deleteWorkout/:workoutId"
 }
 ```
 
-让我花点时间来想想如何实现。
+让我们花点时间来想想如何实现。
 
 我们有一组叫做"workouts"的资源，还有另一组叫做"records"的资源。
 
-在创建架构之前，建议先创建另一个控制层、服务层和数据结合方法来负责records。
+在创建交叉内容的结构之前，建议先创建另一个控制器、服务层和数据组合方法来负责训练记录。
 
-为记录实现GRUD终点的几率很高，因为在未来我们也会添加、更新和删除记录。但这不是现在的首要任务。
+我们很有可能需要为训练记录实现CRUD端点，因为在未来我们也会添加、更新和删除记录。但这不是现在的首要任务。
 
-我们也需要一个记录路由来捕捉针对训练的请求。这是你练习自己实现CRUD的绝好机会。
+我们也需要一个记录的路由来捕获对应的请求。这是你练习自己实现CRUD的绝好机会。
 
 ```bash
-# 创建记录控制层
+# 创建记录控制器
 touch src/controllers/recordController.js 
 
 # 创建记录服务层
@@ -1926,7 +1927,7 @@ const getRecordForWorkout = (workoutId) => {
 module.exports = { getRecordForWorkout };
 ```
 
-很直接对不对，我们通过查询参数过滤到和训练id相关的记录数据
+很直接对不对，我们通过查询参数过滤出和训练id相关的记录数据
 
 接下来是记录的服务层：
 
@@ -1976,7 +1977,7 @@ module.exports = router;
 
 真棒！让我们在浏览器中测试一下。
 
-首先我们抓取素有训练记录，来获得一个训练id。
+首先我们抓取所有训练记录，来获得一个训练id。
 
 ![Bildschirmfoto-2022-04-30-um-15.36.48](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-15.36.48.png)
 
@@ -1984,11 +1985,11 @@ module.exports = router;
 
 ![Bildschirmfoto-2022-04-30-um-15.36.32](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-15.36.32.png)
 
-如你所见，逻辑嵌套可以使资源捆绑在一起。理论上你可以想嵌套多少层就嵌套多少层，但是这里的敬仰是至多使用三层嵌套。
+如你所见，逻辑嵌套可以使资源捆绑在一起。理论上你可以想嵌套多少层就嵌套多少层，但建议至多使用三层嵌套。
 
-如果你想嵌套得更深，可以稍微调整一个数据库的记录。我给你看一个小例子。
+如果你想嵌套得更深，可以稍微调整一下数据库的记录。我给你看一个小例子。
 
-想象一下，前端还需要一个端点来获取到底是哪个成员持有当前记录的信息，并希望接收关于他们的元数据。
+想象一下，前端还需要一个端点来获取到底是哪个会员持有当前记录的信息，并希望接受这个会员的所有原始信息。
 
 你当然可以使用下面的URI：
 
@@ -1996,7 +1997,7 @@ module.exports = router;
 GET /api/v1/workouts/:workoutId/records/members/:memberId
 ```
 
-现在，我们对它的嵌套越多，端点就越不容易管理。因此，将接收成员信息的URI直接存储在记录中是一个好的做法
+嵌套越多，端点就越不容易管理。因此，将接受会员信息的URI直接存储在记录中是一个好的做法。
 
 可以这样修改数据库：
 
@@ -2017,33 +2018,33 @@ GET /api/v1/workouts/:workoutId/records/members/:memberId
 }
 ```
 
-我们在数据库中添加了"memberId"和“menmber"这两个属性，这样我们就不需要在端点嵌套得更深。
+我们在数据库中添加了"memberId"和“member"这两个属性，这样我们就不需要在端点嵌套得更深。
 
 前端只需要调用 **GET /api/v1/workouts/:workoutId/records**便可以获得所有和训练相关的数据。
 
 除此之外，我们可以由会员id来获取会员的信息，就可以避免更深入的嵌套。
 
-当然，要想要实现的前提是处理"/members/:memberId"请求。 😁 这听上去是以恶锻炼你自己实现能力的好机会！
+当然，这一切实现的前提是处理"/members/:memberId"请求。😁 这听上去是锻炼你自己实现能力的好机会！
 
-<h3 id="integrate-filtering-sorting-pagination">继承过滤、排序和分页功能</h3>
+<h3 id="integrate-filtering-sorting-pagination">集成过滤、排序和分页功能</h3>
 
 现在我们的API已经可以完成很多工作，取得了相当大的进展，但是这还不够。
 
-在上一部分我们聚焦在如何提高开发者的体验，以及我们的API如何交互。但是API的整体性能也是一个我们需要努力的关键因素。
+在上一部分我们聚焦在如何提高开发者的体验，以及我们的API如何交互。但是API的整体性能也是一个关键部分，需要我们努力提高。
 
-这就是为什么在我的清单中继承过滤、排序和分页功能也是非常关键的。
+这就是为什么在我的待办清单中集成过滤、排序和分页功能也是非常关键的。
 
-假设我们的DB中有2000个训练，450条记录和500个会员。当我们调用端点来获取训练的时候，我们不希望一次性获得所有2000个训练。这样的响应速度会比较慢，导致系统崩溃(可能需要200000条记录 😁)。
+假设我们的DB中有2000个训练，450条记录和500个会员。当我们调用端点来获取训练的时候，我们不希望一次性获得所有2000个训练。这样的响应速度会比较慢，导致系统崩溃(崩溃可能需要200000条记录 😁)。
 
-这就是为什么过滤和分页十分重要。过滤正如这个名称一样，十分有效。可以帮助我们在整个数据集中获取我们需要的数据。例如所有具备“时间”模式的训练。
+这就是为什么过滤和分页十分重要。过滤正如这个名称一样，可以帮助我们在整个数据集中获取我们需要的数据。例如所有具备“时间”模式的训练。
 
-分页是另一种可以分割数据集的机制，比方说我们可以把数据分成每页二十个训练的“页面”。这个技术确保我们一次返回不超过20个训练。
+分页是另一种可以拆分数据集的机制，比方说我们可以把数据分成每页二十个训练的“页面”。这个技术确保我们一次返回不超过20个训练。
 
-排序是一个复杂的任务，在我们的API中给用户发送排序后的数据更有效。
+排序可以变得非常复杂，所以直接在我们的API排序后，再向用户发送数据更高效。
 
-我们首先在API中整合一些过滤机制。我们将发送所有训练的端点升级，让这个端点接受过滤参数。通常在GET请求中，我们使用查询参数来添加过滤条件。
+我们首先在API中整合一些过滤机制。我们将发送所有训练的这个端点升级，让这个端点接受过滤参数。通常在GET请求中，我们使用查询参数来添加过滤条件。
 
-我们新的URI会是这样，当我们只获取处于"AMRAP"（尽可能多地训练）状态的训练 (**A**s **M**any **R**ounds **A**s **P**ossible): **/api/v1/workouts?mode=amrap.**
+当我们只获取训练状态（mode）为"AMRAP"（尽可能多地训练 **A**s **M**any **R**ounds **A**s **P**ossible)时，我们新的URI会是这样： **/api/v1/workouts?mode=amrap**。
 
 为了让实现更有趣，我们可以添加更多的训练。请在db.json中的"workouts"数据集中添加以下代码：
 
@@ -2132,7 +2133,7 @@ const getAllWorkouts = (req, res) => {
 
 我们在req.query对象中提取“mode”，并用作workoutService.getAllWorkouts的参数。这个对象包含了所有过滤参数。
 
-这里我使用了简写语法，来创建一个名为"mode"的新键，这个键位于对象内部，其值可以是任意"req.query.mode"的值。可以为一个真值或者如果没有一个参数为“mode”的参数则为定义值。我们可以在对象内扩充更多过滤参数。
+这里我使用了简写语法，来创建一个名为"mode"的新键，这个键位于对象内部，其值可以是任意"req.query.mode"的值。可以为一个真值或者如果没有一个参数为“mode”的参数则为undefined。我们可以在对象内扩充更多过滤参数。
 
 在workoutService中传入数据处理方法：
 
@@ -2167,7 +2168,7 @@ const getAllWorkouts = (filterParams) => {
         workout.mode.toLowerCase().includes(filterParams.mode)
       );
     }
-    // Other if-statements will go here for different parameters
+    // 如果有其他的参数，可以在这里编写其他的if表达式
     return workouts;
   } catch (error) {
     throw { status: 500, message: error };
@@ -2181,11 +2182,11 @@ const getAllWorkouts = (filterParams) => {
 
 此处我们使用"let"来定义"workouts"变量是因为如果我们使用if表达式来添加更多过滤器的话，会覆盖掉"workouts"并且串联过滤器。
 
-在浏览器中可以登陆3000/api/v1/workouts?mode=amrap 就会接收到所有包含 "AMRAP"的训练：
+在浏览器中可以登陆3000/api/v1/workouts?mode=amrap，会接受到所有包含 "AMRAP"的训练：
 
 ![Bildschirmfoto-2022-04-30-um-15.48.57](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-15.48.57.png)
 
-如果不填写查询参数的话，就会重新获得所有训练。你可以尝试添加"for%20time"作为"mode"的参数(记住--> "%20" 代表 "空格")， 你就会获得所有包含"For Time"的训练，
+如果不填写查询参数的话，就会重新获得所有训练。你可以尝试添加"for%20time"作为"mode"的参数(记住："%20" 代表 "空格")， 你就会获得所有包含"For Time"的训练，
 
 如果输入一个不存在的值，则会接受到空数组。
 
@@ -2207,9 +2208,9 @@ const getAllWorkouts = (filterParams) => {
 
 但必须记住的是，使用缓存来提供数据的话，这段数据很有可能过期。所以必须确保缓存中的数据保持更新。
 
-有各种实现的方式，一种是使用[redis](https://www.npmjs.com/package/redis)或者express的中间件[apicache](https://www.npmjs.com/package/apicache).
+有各种实现来实现缓存的方式，一种是使用[redis](https://www.npmjs.com/package/redis)或者express的中间件[apicache](https://www.npmjs.com/package/apicache).
 
-我准备使用apicache，但如果你想使用Redis， 我强烈推荐你阅读他们的[文档](https://docs.redis.com/latest/rs/references/client_references/client_nodejs/)。
+我准备使用apicache，但如果你想使用Redis，我强烈推荐你阅读他们的[文档](https://docs.redis.com/latest/rs/references/client_references/client_nodejs/)。
 
 我们思考一下在API中使用缓存的场景。我认为使用缓存来返回所有训练会更加有效。
 
@@ -2219,7 +2220,7 @@ const getAllWorkouts = (filterParams) => {
 npm i apicache
 ```
 
-Now, we have to import it into our workout router and configure it.
+我们在训练的路由中引用这个插件并配置好：
 
 ```javascript
 // 在src/v1/routes/workoutRoutes.js
@@ -2249,9 +2250,9 @@ router.delete("/:workoutId", workoutController.deleteOneWorkout);
 module.exports = router;
 ```
 
-开始十分简单。我们可以将新的缓存定义为**apicache.middleware**，并在路由中当作中间件来使用。仅需在实际的路径和训练控制层之间放置这个参数。
+很简单！我们可以将新的缓存命名为**apicache.middleware**，并在路由中当作中间件来使用。仅需在实际的路径和训练控制器之间放置这个参数。
 
-你可以在中间件内部定义你需要保存缓存多久。在这篇教程中我选择2分钟。保存时间一般取决于你存储的数据多久更改一次。
+你可以在中间件内部定义你需要保存缓存多久。在这篇教程中我选择2分钟。保存时间一般取决于你存储的数据多久更新一次。
 
 让我们测试一下！
 
@@ -2261,9 +2262,9 @@ module.exports = router;
 
 ![Bildschirmfoto-2022-04-26-um-15.36.46-1](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-26-um-15.36.46-1.png)
 
-你可以看到我们的API花了22.93毫秒来响应。一旦缓存被清空（2分钟后），又回重新抓去数据保存到缓存。这是我们第一次获取数据。
+你可以看到我们的API花了22.93毫秒来响应。一旦缓存被清空（2分钟后），又回重新抓取数据保存到缓存，我们第一次获取数据的时候就将数据存储到了缓存。
 
-在上述例子中，数据并不是有又缓存提供。而是通过“普通”方式来抓去数据保存到缓存。
+在上述例子中，数据并不是有由缓存提供。而是通过“普通”方式来抓去数据库保存到缓存。
 
 现在我们第二次请求数据，响应时间变短，因为我们直接从缓存中返回数据。
 
@@ -2271,7 +2272,7 @@ module.exports = router;
 
 比起第一次请求，我们快了三倍，这完全归功于缓存。
 
-在我们的例子中，我们值缓存了一个路由，你可以再所有路由中应用：
+在我们的例子中，我们只缓存了一个路由，你可以在所有路由中应用：
 
 ```javascript
 // 在src/index.js
@@ -2296,39 +2297,39 @@ app.listen(PORT, () => {
 });
 ```
 
-还有一件关于缓存的**重要** 的事情，虽然在这个例子中，缓存给你节省了不少事情，但是缓存也可以给应用造成不小的麻烦：
+还有一件关于缓存的**重要** 的事情，虽然在这个例子中，缓存给你节省了不少时间，但是缓存也可以给应用造成不小的麻烦：
 
 当使用缓存时，你需要注意的事：
 
 -   必须保证缓存中的数据是更新的，你可不想提供过期的数据
 -   当第一个请求在执行的过程中，数据被保存到缓存，也有更多地请求进来，你必须决定是延迟其他的请求，从缓存中提供数据，还是其他的请求也如第一次请求一样从数据库来获取数据
--   如果使用分布式缓存如Redis，缓存是你的架构中的一个组件，所以你必须考虑一下是否有必要使用缓存
+-   如果使用分布式缓存如Redis，缓存会是你的结构中的一个组件，所以你必须考虑一下是否有必要使用缓存
 
-我尝尝这么做：
+我常常这么做：
 
-当我在构建的时候我希望一切从简，API同理。
+当我在搭建的时候我希望一切从简，API同理。
 
-首次搭建API的时候没有特别的原因马上使用缓存，我会等使用了一段时间之后，有理由使用缓存后再使用缓存。
+首次搭建API的时候没有特别的原因使用缓存，我会等使用了一段时间之后，有理由使用缓存后再使用缓存。
 
-<h3 id="good-security-practices">好的安全时间</h3>
+<h3 id="good-security-practices">好的安全实践</h3>
 
-这是一段不错的旅行，我们讲了需要API相关的重要观点，并且扩充了我们的API。
+这是一段不错的旅行，我们讲了许多API相关的重要观点，并且扩充了我们的API。
 
-我们已经讲了提升API使用和性能的最佳时间。安全也是API重要的一环。如果你创建出一个绝佳的API，但是在服务器上运行的时候却十分脆弱，那这个API就变得无用且危险。
+我们已经讲了提升API使用和性能的最佳实践。安全也是API重要的一环。如果你创建出一个绝佳的API，但是在服务器上运行的时候却十分脆弱，那这个API就变得无用且危险。
 
 首先必须使用的是SSL/TLS，因为这是当今互联网通讯的一个标准。特别是当API需要在客户端和服务器之间传输私人数据的时候。
 
-如果你需要给验证客户提供数据，你不要使用验证手段来保护数据。
+如果你需要给验证客户提供数据，必须使用验证手段来保护数据。
 
 在Express中，我们可以像在缓存中那样在路由中插入特定的中间件来检查请求的真实性再获取资源。
 
-API中的一些资源和交互你可能不希望所有用户都可以请求。这是就需要一个角色系统。在路由中添加一个检查逻辑来验证用户是否有权利来获取这些数据。
+API中的一些资源和交互是你可能不希望所有用户都可以请求的。这是就需要一个角色系统。在路由中添加一个检查逻辑来验证用户是否有权利来获取这些数据。
 
-用户角色在我们的用例中页同样适用。如果我们需要特定用户（教练）来使用创建、更新和删除训练和记录的功能。所有用户可以读取（同样可成为“普通”用户）。
+用户角色在我们的用例中也同样适用。比方说我们需要特定用户（教练）来使用创建、更新和删除训练和记录的功能。所有用户可以读取（同样可成为“普通”用户）。
 
 这可以通过在路由中插入中间件来实现。如在我们的/api/v1/workouts的POST请求中插入。
 
-在第一个中间件中我们检查用户是不是真实的，如果为真，就进入下一个中间件来检查用户角色，如果用户符合获取资源的角色，就移交到对应的控制层。
+在第一个中间件中我们检查用户是不是真实的，如果为真，就进入下一个中间件来检查用户角色，如果用户符合获取资源的角色，就移交到对应的控制器。
 
 路由处理器如下：
 
@@ -2345,9 +2346,9 @@ router.post("/", authenticate, authorize, workoutController.createNewWorkout);
 ...
 ```
 
-这个话题相关的最佳时间，我推荐阅读[这篇文章](https://restfulapi.net/security-essentials/)。
+这个话题相关的最佳实践，我推荐阅读[这篇文章](https://restfulapi.net/security-essentials/)。
 
-<h3 id="document-your-api-properly">API编写合适的文档</h3>
+<h3 id="document-your-api-properly">给API编写合适的文档</h3>
 
 对于开发者来说编写文档确实不是一件让他们乐意干的活儿，但是是必须要做的事。特别是API的文档。
 
@@ -2355,7 +2356,7 @@ router.post("/", authenticate, authorize, workoutController.createNewWorkout);
 
 > “API得和文档一样优秀“
 
-我认为这句话挺有道理，因为如果不好好写API的文档，这个API就不好使用。文档帮助开发者更方便地使用API。
+我认为这句话挺有道理，因为如果API的文档不好，这个API就不好使用。文档帮助开发者更方便地使用API。
 
 永远记住文档是API使用者和API交互的第一环节。用户能够更快读懂文档，就能够更快使用API。
 
@@ -2365,13 +2366,13 @@ router.post("/", authenticate, authorize, workoutController.createNewWorkout);
 
 让我们来看看如何遵循这份规则来创建文档。 我们将使用[swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express) 和[swagger-jsdoc](https://www.npmjs.com/package/swagger-jsdoc) 工具包。你马上就会为这两个工具包能够做到的事感到惊奇。
 
-首先我们设置好文档的基础结构。因为我们会有不同版本的API，所以文档会有些许不同，这件事为什么我会创建swagger文件，来处理不同版本的文档。
+首先我们设置好文档的基础结构。因为我们会有不同版本的API，所以文档会有些许不同，这就是为什么我会创建swagger文件，来处理不同版本的文档。
 
 ```bash
 # 安装必须的NPM包
 npm i swagger-jsdoc swagger-ui-express 
 
-# 创建新的文件来这只swagger文件
+# 创建新的文件来设置swagger文档
 touch src/v1/swagger.js
 ```
 
@@ -2389,14 +2390,14 @@ const options = {
   apis: ["./src/v1/routes/workoutRoutes.js", "./src/database/Workout.js"],
 };
 
-// 使用JSON格式的文件
+// 使用JSON格式的文档
 const swaggerSpec = swaggerJSDoc(options);
 
-// 设置文件的函数
+// 设置文档的函数
 const swaggerDocs = (app, port) => {
-  // Route-Handler to visit our docs
+  // 处理文档路由
   app.use("/api/v1/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-  // 使得允许使用JSON格式文件
+  // 使得允许使用JSON格式文档
   app.get("/api/v1/docs.json", (req, res) => {
     res.setHeader("Content-Type", "application/json");
     res.send(swaggerSpec);
@@ -2444,11 +2445,11 @@ app.listen(PORT, () => {
 
 ![Bildschirmfoto-2022-04-28-um-20.25.00-1](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-28-um-20.25.00-1.png)
 
-每次我都会惊叹运作的如此顺畅。现在基本机构已经设置好，我们可以来实现文档的端点了，让我们开始吧！
+每次我都会感叹运作得如此顺畅。现在基本结构已经设置好，我们可以来实现文档的端点了，让我们开始吧！
 
 当你查看swagger.js文件中的 **options.apis** ，你会发现我们已经预留了处理训练路由和数据库中训练文件的路径。 这就是让魔法实现最重要的环节。
 
-在swagger中有这些选项，使得我们可以使用评论来引用OpenAPi，并且使用类似yaml的语法来编写文档，这些就是设置文档的所有必须条件了。
+在swagger中有这些选项使得我们可以使用评论来引用OpenAPI，并且使用类似yaml的语法来编写文档，这就是设置文档的所有必须条件了。
 
 现在我们就可以开始来创建我们文档的第一个端点了，让我们开始吧！
 
@@ -2483,7 +2484,7 @@ router.get("/", cache("2 minutes"), workoutController.getAllWorkouts);
 ...
 ```
 
-这就基本上是使用swagger文档来添加端点的所有魔法了，你可以在他们的[文档](https://swagger.io/docs/specification/about/)中查看所有细则。
+这基本上就是使用swagger文档来添加端点的所有魔法了，你可以在他们的[文档](https://swagger.io/docs/specification/about/)中查看所有细则。
 
 当你重新加载文档页面，你会看到如下：
 
@@ -2495,7 +2496,7 @@ router.get("/", cache("2 minutes"), workoutController.getAllWorkouts);
 
 但你仔细看会发现我们还没有定义正确的返回值，因为我们的"data"属性仅设定为一个空对象。
 
-这时模式就发挥了作用。
+这时模式（schema）就发挥了作用。
 
 ```javascript
 // 在src/databse/Workout.js
@@ -2543,7 +2544,7 @@ router.get("/", cache("2 minutes"), workoutController.getAllWorkouts);
 ...
 ```
 
-在上面的示例中，我们创建了第一个模式，通常在你的模式或者模式文件中的定义的是数据模型。
+在上面的示例中，我们创建了第一个模式，通常在你的模式或者模型文件（model file）中的定义的是数据模型。
 
 这也很简单明了。我们定义了所有训练的属性，包括种类和例子。
 
@@ -2551,7 +2552,7 @@ router.get("/", cache("2 minutes"), workoutController.getAllWorkouts);
 
 ![Bildschirmfoto-2022-04-29-um-07.29.49-1](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-29-um-07.29.49-1.png)
 
-我们可以引用这个模式来定义端点的响应。
+我们可以在端点的响应中引用这个模式。
 
 ```javascript
 // 在src/v1/routes/workoutRoutes.js
@@ -2584,7 +2585,7 @@ router.get("/", cache("2 minutes"), workoutController.getAllWorkouts);
 ...
 ```
 
-仔细看最底部的评论，在"item"内部，我们使用了"$ref"来创建引用，来引用我们在训练文件中定义的模式。
+仔细看最底部的评论，在"item"内部，我们使用了"$ref"来创建引用，引用我们在训练文件中定义的模式。
 
 现在我们就可以完整地展示训练的响应了。
 
@@ -2592,11 +2593,11 @@ router.get("/", cache("2 minutes"), workoutController.getAllWorkouts);
 
 很不错！你可能会认为“编写这些评论很繁琐”。
 
-这或许是真的，但是可以这样想。这些在你的代码中的评论也可以帮助你作为一个API开发者更好地了解你的API。当你想要了解某一个端点的时候，你不要阅读所有文档，你可以直接在代码中找到。
+这或许是真的，但是可以这样想，写在代码中的评论里可以帮助你作为一个API开发者更好地了解你的API。当你想要了解某一个端点的时候，你不要阅读所有文档，你可以直接在代码中找到。
 
 为端点写文档也可以帮助你更好的了解这些端点，“逼迫”自己去思考在实现的过程当中缺失了什么。
 
-你看我确实忘记了一些东西，就是可能出现的错误响应，查询参数也缺少了。
+你看我确实忘记了一些东西，我忘记写可能出现的错误响应，查询参数也缺少了。
 
 让我们调整一下：
 
@@ -2667,22 +2668,22 @@ router.get("/", cache("2 minutes"),  workoutController.getAllWorkouts);
 
 很棒！我们已经给一个端点创建了完整的文档，我强烈建议你为剩下的端点创建对应的文档，在这个过程中你会学到很多东西。
 
-你或许也体会到了为API写文档并不总是一件头疼的事，使用我介绍给你的工具可以减轻你不少负担，并且搭建起来也十分简单明了。
+你或许也体会到了为API写文档并不总是一件头疼的事，使用我介绍给你的工具可以减轻你不少负担，搭建过程也十分简单明了。
 
 这样你就可以把注意力集中在重要的事情上，编写文档内容。swagger和OpenAPI的文档非常不错，在网络上你也可以找到其他的优秀例子。
 
-因为太多“额外”工作也不写文档这个理由现在就不成立了。
+那么因为太多“额外”工作而不写文档这个理由现在就不成立了。
 
 <h2 id="conclusion">总结</h2>
 
 呼！这是一趟有趣的旅程！我非常享受写这篇文章也从中学习了很多。
 
-这些最佳实践中又一些可能很重要。另一些可能不适用于你现在的情况。没关系，正如我一开始说的那样，对于开发者来说最重要的是能够根据情况挑选出最适合他们的方法。
+这些最佳实践中有一些可能很重要。另一些可能不适用于你现在的情况。没关系，正如我一开始说的那样，对于开发者来说最重要的是能够根据情况挑选出最适合自己的方法。
 
 我尽力把所有最佳实践融汇到这个API项目中，我从中获得非常多的乐趣。
 
-我十分乐意接受各种反馈，任何你想要告诉我的事情（好的或坏的），别迟疑告诉我：
+我十分乐意接受各种反馈，任何你想要告诉我的事情（好的或坏的），别迟疑，请告诉我：
 
-这是我的[Instagram](https://www.instagram.com/jean_marc.dev/) (你也可以关注我作为软件工程师的成长路径)
+这是我的[Instagram](https://www.instagram.com/jean_marc.dev/) (你也可以关注我在软件工程师的成长道路上的见闻)
 
 下篇文章见！

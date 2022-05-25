@@ -1,139 +1,139 @@
 > -  原文地址：[REST API Design Best Practices – How to Build a REST API with JavaScript, Node.js, and Express.js](https://www.freecodecamp.org/news/rest-api-design-best-practices-build-a-rest-api/)
 > -  原文作者：[Jean-Marc Möckel](https://www.freecodecamp.org/news/author/jeanmarcmoeckel/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![REST API Design Best Practices – How to Build a REST API with JavaScript, Node.js, and Express.js](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/rest-api-design-course-header.png)
 
-I've created and consumed many API's over the past few years. During that time, I've come across good and bad practices and have experienced nasty situations when consuming and building API's. But there also have been great moments.
+在过去几年我创建和使用过不少API，期间我遇到过优秀的实践方式，也遭遇过极其不好的实践方式，但曙光总是存在。
 
-There are helpful articles online which present many best practices, but many of them lack some practicality in my opinion. Knowing the theory with few examples is good, but I've always wondered how the implementation would look in a more real world example.
+网上有许多最佳实践相关的文章，但是他们大多数都缺乏实用性。通过少量示例来了解理论是一个好办法，但是我一直都在思考如何通过更实际的例子来展现API的应用。
 
-Providing simple examples helps to understand the concept itself without a lot of complexity, but in practice things aren't always so simple. I'm pretty sure you know what I'm talking about 😁
+简单的例子确实可以帮助概念的理解，也省去了复杂度。但实际情况往往并不简单，我确信你对此也深有体会。 😁
 
-That's why I've decided to write this tutorial. I've merged all those learnings (good and bad) together into one digestible article while providing a practical example that can be followed along. In the end, we'll build a full API while we're implementing one best practice after another.
+这就是我决定写这个教程的原因。我将过去好的坏的学习经验都融入了到这边文章之中，并提供例子，使文章易读易懂。我们就会通过一个又一个最佳实践来创建一个完整的API。
 
-A few things to remember before we start off:
+开始之前的注意事项：
 
-Best practices are, as you might have guessed, not specific laws or rules to follow. They are conventions or tips that have evolved over time and turned out to be effective. Some have became standard nowadays. But this doesn't mean you have to adapt them 1:1.
+如你所想，最佳实践并不是必须遵从的具体规则。它们是人们逐渐总结出来的有效的惯例，确实有一些成为现在的标准，但这并不意味着你需要百分之一百的采用这些实践。
 
-They should give you a direction to make your API's better in terms of user experience (for the consumer and the builder), security, and performance.
+最佳实践指导如何使API更加符合用户（使用API的人和其他工程师）的使用习惯、更加安全和提高性能。
 
-Just keep in mind that projects are different and require different approaches. There might be situations where you can't or shouldn't follow a certain convention. So every engineer has to decide this for themselves or with their.
+请记住不同的项目有不同的实践方法，肯定存在一些情况下你无法遵守这些规范，每一个工程师都应该自己决定使用什么方法。
 
-Now that we've got those things out of our way, without further ado let's get to work!
+话不多说，让我们开始吧！
 
-## Table of Contents
+## 目录
 
--   [Our Example Project](#our-example-project)
-    -   [Prerequisites](#prerequisites)
-    -   [Architecture](#architecture)
-    -   [Basic Setup](#basic-setup)
--   [REST API Best Practices](#rest-api-best-practices)
-    -   [Versioning](#versioning)
-    -   [Name resources in plural](#name-resources-in-plural)
-    -   [Accept and respond with data in JSON format](#accept-and-respond-with-data-in-json-format)
-    -   [Respond with standard HTTP Error Codes](#respond-with-standard-http-error-codes)
-    -   [Avoid verbs in endpoint names](#avoid-verbs-in-endpoint-names)
-    -   [Group associated resources together](#group-associated-resources-together-logical-nesting-)
-    -   [Integrate filtering, sorting & pagination](#integrate-filtering-sorting-pagination)
-    -   [Use data caching for performance improvements](#use-data-caching-for-performance-improvements)
-    -   [Good security practices](#good-security-practices)
-    -   [Document your API properly](#document-your-api-properly)
--   [Conclusion](#conclusion)
+-   [示例项目](#our-example-project)
+    -   [前提条件](#prerequisites)
+    -   [结构](#architecture)
+    -   [基础设置](#basic-setup)
+-   [REST API最佳实践](#rest-api-best-practices)
+    -   [版本](#versioning)
+    -   [用复数形式命名资源](#name-resources-in-plural)
+    -   [以JSON格式接受和响应数据](#accept-and-respond-with-data-in-json-format)
+    -   [响应标准HTTP错误代码](#respond-with-standard-http-error-codes)
+    -   [避免在端点使用动词](#avoid-verbs-in-endpoint-names)
+    -   [帮相关资源放在一起](#group-associated-resources-together-logical-nesting-)
+    -   [集成过滤排序和分页功能](#integrate-filtering-sorting-pagination)
+    -   [使用数据缓存提升性能](#use-data-caching-for-performance-improvements)
+    -   [好的安全实践](#good-security-practices)
+    -   [编写API合适的文档](#document-your-api-properly)
+-   [总结](#conclusion)
 
-## Our Example Project
+<h2 id="our-example-project">示例项目</h2>
 
 ![alvaro-reyes-qWwpHwip31M-unsplash--1-](https://www.freecodecamp.org/news/content/images/2022/04/alvaro-reyes-qWwpHwip31M-unsplash--1-.jpg)
 
-Photo by [Alvaro Reyes](https://unsplash.com/@alvarordesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/project?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+图片作者[Alvaro Reyes](https://unsplash.com/@alvarordesign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)来自[Unsplash](https://unsplash.com/s/photos/project?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-Before we start implementing the best practices into our example project, I'd like to give you a brief introduction to what we'll be building.
+在正式开始在示例中应用最佳实践前，我先简单介绍一下我们要创建什么。
 
-We'll build a REST API for a CrossFit Training Application. If you're not familiar with CrossFit, it's a fitness method and competitive sport that combines high-intensity workouts with elements from several sports (olympic weightlifting, gymnastics, and others).
+我们将为交叉训练应用创建REST API。交叉训练是一种健身方式，融合了竞技类运动和高强度训练，以及各种各样的运动元素（奥林匹克举重、体操等）。
 
-In our application we'd like to create, read, update and delete **WOD**'s (**W**orkouts **o**f the **D**ay). This will help our users (that will be gym owners) come up with workout plans and maintain their own workouts inside a single application. On top of that, they also can add some important training tips for each workout.
+这个应用可以创建、读取、更新和删除**WOD**(**W**orkout **o**f the **D**ay即每日训练)，帮助用户（健身馆主）指定和维护已有的健身计划。除此之外，还可以在一些重要的训练旁批注一些训练建议。
 
-Our job will require us to design and implement an API for that application.
+我们的工作就是设计和实现这个应用的API。
 
-### Prerequisites
+<h3 id="prerequisites">前提条件</h3>
 
-In order to follow along you need to have some experience in JavaScript, Node.js, Express.js and in Backend Architecture. Terms like REST and API shouldn't be new to you and you should have an understanding of the [Client-Server-Model](https://en.wikipedia.org/wiki/Client%E2%80%93server_model).
+在学习这门教程之前，你必须使用过JavaScript， Node.js， Express.js以及后端架构，熟悉REST和API这类术语，并且了解[主从式架构（客户端/服务器架构）](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)。
 
-Of course you don't have to be an expert in those topics, but familiarity and ideally some experience should be enough.
+当然你不需要成为这些话题的专家，熟悉并且有这些实际操作经验就足够了。
 
-If not all prerequisites apply to you, it's of course not a reason to skip this tutorial. There's still a lot to learn here for you as well. But having those skills will make it easier for you to follow along.
+即便你不符合上述条件，也不是跳过这篇教程的理由。你还是可以从这篇文章中学到很多东西，具备上述条件可以帮助你更轻松地阅读这篇文章。
 
-Even though this API is written in JavaScript and Express, the best practices are not limited to these tools. They can be applied to other programming languages or frameworks as well.
+虽然这里的API是用JavaScript和Express写的，但不表示这些最佳实践仅适用于此。你也可以在其他的编程语言和框架中应用这些最佳实践。
 
-### Architecture
+<h3 id="architecture">结构</h3>
 
-As discussed above, we'll be using Express.js for our API. I don't want to come up with a complex architecture so I'd like to stick to the **3 Layer Architecture:**
+如前所述，我会是用Express.js来搭建API。我不想弄得太复杂，所以我会使用 **3层结构:**
 
 ![Bildschirmfoto-2022-04-25-um-14.33.24-1](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-25-um-14.33.24-1.png)
 
-Inside the **Controller** we'll be handling all stuff that is related to HTTP. That means we're dealing with requests and responses for our endpoints. Above that layer is also a little **Router** from Express that passes requests to the corresponding controller.
+在 **控制器** 我们将处理所有HTTP相关的内容，也就是说我们在这里处理端点的请求和响应。在这层之上是Express的**路由**把请求传递给相应的控制器。
 
-The whole business logic will be in the **Service Layer** that exports certain services (methods) which are used by the controller.
+所有业务逻辑都在**服务层**，服务层导出特定服务（方法）供控制层器用。
 
-The third layer is the **Data Access Layer** where we'll be working with our Database. We'll be exporting some methods for certain database operations like creating a WOD that can be used by our Service Layer.
+第三层是 **数据访问层**， 在这里处理数据库。我们将导出一些处理数据的方法，如创建WOD，供服务层使用。
 
-In our example we're not using a _real_ database such as MongoDB or PostgreSQL because I'd like to focus more on the best practices itself. Therefore we're using a local JSON file that mimics our Database. But this logic can be transferred to other databases of course.
+在我们的教学示例中，我们不会使用 _真实的_ 数据库，如MongoDB或者PostgreSQL，因为我想专注于最佳实践本身。因此我们会使用本地JSON文件来模拟数据库，但是使用逻辑可以迁移到其他的数据库。
 
-### Basic Setup
+<h3 id="basic-setup">基础设置</h3>
 
-Now we should be ready to create a basic setup for our API. We won't overcomplicate things, and we'll build a simple but organized project structure.
+现在我们开始配置API的基础设置。不会太复杂，我们只创建一个简单、有组织的结构。
 
-First, let's create the overall folder structure with all necessary files and dependencies. After that, we'll make a quick test to check if everything is running properly:
+首先，我们创建一个总文件目录结构，包含所有必须的文件和依赖项。创建完了之后，我们将快速地检查一下一切是否运行正常。
 
 ```bash
-# Create project folder & navigate into it
+# 创建项目目录并且打开这个目录
 mkdir crossfit-wod-api && cd crossfit-wod-api
 ```
 
 ```bash
-# Create a src folder & navigate into it
+# 创建src目录并打开这个目录
 mkdir src && cd src
 ```
 
 ```bash
-# Create sub folders
+# 创建子目录
 mkdir controllers && mkdir services && mkdir database && mkdir routes
 ```
 
 ```bash
-# Create an index file (entry point of our API)
+# 创建index文件（API接入点）
 touch index.js
 ```
 
 ```bash
-# We're currently in the src folder, so we need to move one level up first 
+# 我们现在位于src目录，所以要返回一级
 cd .. 
 
-# Create package.json file 
+# 创建package.json文件
 npm init -y
 ```
 
-Install dependencies for the basic setup:
+安装基础设置的所有依赖项：
 
 ```bash
-# Dev Dependencies 
+# 开发依赖项
 npm i -D nodemon 
 
-# Dependencies 
+# 依赖项 
 npm i express
 ```
 
-Open the project up in your favorite Text Editor and configure Express:
+在你最喜欢使用的文字处理器中打开我们的项目，然后配置Express：
 
 ```javascript
-// In src/index.js 
+// 在src/index.js中
 const express = require("express"); 
 
 const app = express(); 
 const PORT = process.env.PORT || 3000; 
 
-// For testing purposes 
+// 供测试用代码
 app.get("/", (req, res) => { 
     res.send("<h2>It's Working!</h2>"); 
 }); 
@@ -143,7 +143,7 @@ app.listen(PORT, () => {
 });
 ```
 
-Integrate a new script called **"dev"** inside package.json:
+在package.json中添加 **"dev"** 脚本：
 
 ```json
 {
@@ -166,83 +166,83 @@ Integrate a new script called **"dev"** inside package.json:
 }
 ```
 
-The script makes sure that the development server restarts automatically when we make changes (thanks to nodemon).
+nodemon可以确保每次你保存更改的时候，重新启动开发服务器。
 
-Spin up the development server:
+启动开发服务器：
 
 ```bash
 npm run dev
 ```
 
-Look at your terminal, and there should be a message that the **"API is listening on port 3000"**.
+查看控制台，会收到消息 **"API is listening on port 3000"**。
 
-Visit **localhost:3000** inside your browser. When everything is setup correctly, you should see the following:
+在浏览器中打开 **localhost:3000**。如果一切设置正确，你会看到下面内容：
 
 ![Bildschirmfoto-2022-04-30-um-11.09.44](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-11.09.44.png)
 
-Great! We're all set up now to implement the best practices.
+太好了！我们已经设置好应用最佳实践的环境。
 
-## REST API Best Practices
+<h2 id="rest-api-best-practices">REST API最佳实践</h2>
 
 ![constantin-wenning-idDvA4jPBO8-unsplash--1-](https://www.freecodecamp.org/news/content/images/2022/04/constantin-wenning-idDvA4jPBO8-unsplash--1-.jpg)
 
-Photo by [Constantin Wenning](https://unsplash.com/@conniwenningsimages?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/handshake?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+图片作者[Constantin Wenning](https://unsplash.com/@conniwenningsimages?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 来源[Unsplash](https://unsplash.com/s/photos/handshake?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-Yeah! Now that we have a really basic Express setup, we can extend our API with the following best practices.
+很好！我们已经完成了Express的基础设置，现在我们可以根据最佳实践来扩展API了。
 
-Let's start simple with our fundamental CRUD endpoints. After that we'll be extending the API with each best practice.
+我们从最简单的基础CRUD端点开始，之后我们将使用最佳实践来扩展API。
 
-### Versioning
+<h3 id="versioning">版本</h3>
 
-Wait a second. Before we write any API-specific code we should be aware of versioning. Like in other applications there will be improvements, new features, and stuff like that. So it's important to version our API as well.
+稍等一下，在我们编写具体的API代码之前，我们要关注一下版本。和其他所有应用一样，我们的API也需要迭代、更新功能，所以给我们的API制定版本十分重要。
 
-The big advantage is that we can work on new features or improvements on a new version while the clients are still using the current version and are not affected by breaking changes.
+这样做最大的优势是当我们在创建新功能的时候并不影响客户端继续运行旧版本。
 
-We also don't force the clients to use the new version straight away. They can use the current version and migrate on their own when the new version is stable.
+我们并不强迫用户直接使用我们的新版本，用户可以继续使用旧的版本，直到新版本稳定后再迁移到新版本。
 
-The current and new versions are basically running in parallel and don't affect each other.
+当下版本和新版本并行运行，互不干扰。
 
-But how can we differentiate between the versions? One good practice is to add a path segment like **v1** or **v2** into the URL.
+那我们如何区分不同的版本呢？一种不错的做法是在URL添加**v1****v2**这样的路径段。
 
 ```javascript
-// Version 1 
+// 版本1 
 "/api/v1/workouts" 
 
-// Version 2 
+// 版本2 
 "/api/v2/workouts" 
 
 // ...
 ```
 
-That's what we expose to the outside world and what can be consumed by other developers. But we also need to structure our project in order to differentiate between each version.
+这就是我们暴露给外部，其他开发者也可以使用的部分。同时，我们也需要调整项目结构来区分不同的版本。
 
-There are many different approaches to handling versioning inside an Express API. In our case I'd like to create a sub folder for each version inside our **src** directory called **v1**.
+管理Express API版本的方法各式各样。本教程中我将在**src**目录下创建一个版本目录，如**v1**：
 
 ```bash
 mkdir src/v1
 ```
 
-Now we move our routes folder into that new v1 directory.
+现在我们将路由目录移动到新的v1目录下：
 
 ```bash
-# Get the path to your current directory (copy it) 
+# 获取当前路径（复制）
 pwd 
 
-# Move "routes" into "v1" (insert the path from above into {pwd}) 
+# 将“routes”添加到“v1” （使用{pwd}插入新的路径）
 mv {pwd}/src/routes {pwd}/src/v1
 ```
 
-The new directory **/src/v1/routes** will store all our routes for version 1. We will add "real" content later on. But for now let's add a simple **index.js** file to test things out.
+新目录 **/src/v1/routes** 将存储版本1的所有路由。之后我们会在里面添加“真实”的内容，但现在我们简单添加一个**index.js**文件来简单测试一下。
 
 ```bash
-# In /src/v1/routes 
+# 在/src/v1/routes 
 touch index.js
 ```
 
-Inside there we spin up a simple router.
+我们开启一个简单的路由：
 
 ```javascript
-// In src/v1/routes/index.js
+// 在 src/v1/routes/index.js
 const express = require("express");
 const router = express.Router();
 
@@ -253,23 +253,23 @@ router.route("/").get((req, res) => {
 module.exports = router;
 ```
 
-Now we have to hook up our router for v1 inside our root entry point inside src/index.js.
+现在我们将在v1内部的根入口点src/index.js接上路由：
 
 ```javascript
-// In src/index.js
+// 在src/index.js
 const express = require("express");
-// *** ADD ***
+// *** 添加 ***
 const v1Router = require("./v1/routes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// *** REMOVE ***
+// *** 删除 ***
 app.get("/", (req, res) => {
   res.send("<h2>It's Working!</h2>");
 });
 
-// *** ADD ***
+// *** 添加 ***
 app.use("/api/v1", v1Router);
 
 app.listen(PORT, () => {
@@ -277,29 +277,29 @@ app.listen(PORT, () => {
 });
 ```
 
-Now visit **localhost:3000/api/v1** inside your browser and you should see the following:
+再登陆浏览器浏览**localhost:3000/api/v1**，你会看到以下画面：
 
 ![Bildschirmfoto-2022-04-30-um-11.22.28](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-11.22.28.png)
 
-Congratulations! You've just structured the project for handling different versions. We are now passing incoming requests with "/api/v1" to our version 1 router, that will route each request to the corresponding controller method later.
+祝贺你！你已经调整好了项目结构以适应不同版本。现在我们通过版本1的路由来传入请求，之后每一个请求会连接相应的控制器方式。
 
-Before we move on, I'd like to point something out.
+再继续下一步之前，我想强调一些内容。
 
-We just moved our routes folder into our v1 directory. The other folders like controllers or services still remain inside our src directory. That is okay for now because we are building a rather small API. We can use the same controllers and services in each version globally.
+我们把路由目录迁移到了v1目录下，其他目录如控制器和服务器仍在src目录下。因为我们搭建的API比较小，所以这么做没有问题，每一个版本我们使用相同的控制器和服务器。
 
-When the API is growing and requires different controller methods specific for v2, for example, it would be a better idea to move the controllers folder into the v2 directory as well to have all specific logic for that particular version encapsulated.
+当API逐渐壮大，比方说2版本需要使用不同的控制方法的话，最好还是把控制器目录放在v2目录下，这样就打包了这个版本所有的特定逻辑。
 
-Another reason for that could be that we might change a service that is used by all other versions. We don't want to break things in the other versions. So it would be a wise decision to move the services folder also into a specific version folder.
+另一个这样做的原因是，我们可能在其他版本中想要改变某个服务器，但我们并不想要中断除此之外的版本。所以推荐把服务器目录也迁移到特定版本目录。
 
-But as I said, in our example it's okay for me to only differentiate between the routes and let the router handle the rest. Nonetheless it's important to keep that in mind to have a clear structure when the API scales up and needs changes.
+在我们的例子当中仅区分路由的版本是可行的。尽管如此。切记当API壮大需要改变的时候，拥有一个清晰的目录结构十分重要。
 
-### Name Resources in Plural
+<h3 id="name-resources-in-plural">用复数形式命名资源</h3>
 
-After setting it all up we can now dive into the real implementation of our API. Like I said, I'd like to start with our fundamental CRUD endpoints.
+设置完结构后我们就进入了真正的API搭建了。我希望从基础的CRUD端点开始。
 
-In other words, let's start implementing endpoints for creating, reading, updating and deleting workouts.
+也就是说，我们从实现创建、读取、更新和删除交叉训练端点开始。
 
-First, let's hook up a specific controller, service, and router for our workouts.
+首先，让我们为训练连接控制器、服务器和路由
 
 ```bash
 touch src/controllers/workoutController.js 
@@ -309,20 +309,20 @@ touch src/services/workoutService.js
 touch src/v1/routes/workoutRoutes.js
 ```
 
-I always like to start with the routes first. Let's think about how we can name our endpoints. This goes hand in hand with this particular best practice.
+我通常喜欢从编写路由开始。让我们思考一下如何给端点命名。这里就会运用到最佳实践。
 
-We could name the creation endpoint **/api/v1/workout** because we'd like to add one workout, right? Basically there's nothing wrong with that approach – but this can lead to misunderstandings.
+我们可以将端点命名为 **/api/v1/workout**，因为我们只添加一个交叉训练，对不对？虽说这样做基本上没什么问题，但是这样可能会造成误解。
 
-Always remember: Your API is used by other humans and should be precise. This goes also for naming your resources.
+谨记：你的API会被其他的**人类**使用，所以必须精准。这一规则也适用于给资源命名。
 
-I always imagine a resource like a box. In our example the box is a collection that stores different **workouts**.
+我通常会把资源看作一个盒子。在我们的例子中，这个盒子存储了**训练**集合。
 
-Naming your resources in plural has the big advantage that it's crystal clear to other humans, that this is a collection that consists of different workouts.
+将资源以复数形式命名最大的好处是这对于其他**人类**来说也清晰易懂，复数意味着这是一个包含了各种各样训练的合集。
 
-So, let's define our endpoints inside our workout router.
+所以，让我们定义一下路由中端点：
 
 ```javascript
-// In src/v1/routes/workoutRoutes.js
+// 在 src/v1/routes/workoutRoutes.js
 const express = require("express");
 const router = express.Router();
 
@@ -349,25 +349,25 @@ router.delete("/:workoutId", (req, res) => {
 module.exports = router;
 ```
 
-You can delete our test file **index.js** inside **src/v1/routes**.
+我们可以删除 **src/v1/routes**中的测试文件**index.js**文件。
 
-Now let's jump into our entry point and hook up our v1 workout router.
+现在让我们回到入口接点连接版本1.0的路由。
 
 ```javascript
-// In src/index.js
+// 在 src/index.js
 const express = require("express");
-// *** REMOVE ***
+// *** 删除 ***
 const v1Router = require("./v1/routes");
-// *** ADD ***
+// *** 添加 ***
 const v1WorkoutRouter = require("./v1/routes/workoutRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// *** REMOVE ***
+// *** 删除 ***
 app.use("/api/v1", v1Router);
 
-// *** ADD ***
+// *** 添加 ***
 app.use("/api/v1/workouts", v1WorkoutRouter);
 
 app.listen(PORT, () => {
@@ -375,14 +375,14 @@ app.listen(PORT, () => {
 });
 ```
 
-That went smoothly, right? Now we're catching all requests that are going to **/api/v1/workouts** with our v1WorkoutRouter.
+进展的很顺利！现在我们就可以通过版本1的训练路由捕捉到来自 **/api/v1/workouts**的所有请求。
 
-Inside our router we will call a different method handled by our controller for each different endpoint.
+在路由当中，我们将调用控制器的方法来处理不同的端点。
 
-Let's create a method for each endpoint. Just sending a message back should be fine for now.
+让我们为每一个端点创建一个方法。现阶段只需要返回一个信息。
 
 ```javascript
-// In src/controllers/workoutController.js
+// 在 src/controllers/workoutController.js
 const getAllWorkouts = (req, res) => {
   res.send("Get all workouts");
 };
@@ -412,7 +412,7 @@ module.exports = {
 };
 ```
 
-Now it's time to refactor our workout router a bit and use the controller methods.
+现在可以修改一下训练的路由，调用控制器方法：
 
 ```javascript
 // In src/v1/routes/workoutRoutes.js
@@ -434,26 +434,26 @@ router.delete("/:workoutId", workoutController.deleteOneWorkout);
 module.exports = router;
 ```
 
-Now we can test our **GET /api/v1/workouts/:workoutId** endpoint by typing **localhost:3000/api/v1/workouts/2342** inside the browser. You should see something like this:
+现在可以测试 **GET /api/v1/workouts/:workoutId** 端点，在浏览器输入 **localhost:3000/api/v1/workouts/2342** ，你会看到以下信息：
 
 ![Bildschirmfoto-2022-04-30-um-11.29.19](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-11.29.19.png)
 
-We've made it! The first layer of our architecture is done. Let's create our service layer by implementing the next best practice.
+我们成功了！API结构的第一层就搭建完毕。让我们用另个最佳实践来创建服务层。
 
-### Accept and respond with data in JSON format
+<h3 id="accept-and-respond-with-data-in-json-format">以JSON格式接受和响应数据</h3>
 
-When interacting with an API, you always send specific data with your request or you receive data with the response. There are many different data formats but JSON (Javascript Object Notation) is a standardized format.
+和API交互的时候，我们会通过请求发送特定数据，或者通过响应接受数据。市面上有各种各样的数据格式，但是JSON（JavaScript Object Notation）是一个标准格式。
 
-Although there's the term **JavaScript** in JSON, it's not tied to it specifically. You can also write your API with Java or Python that can handle JSON as well.
+虽然在JSON的全称中有 **JavaScript** ，但两者并没有绑定。你也可以使用Java或者Python来编写你的API，它们也可以处理JSON。
 
-Because of its standardization, API's should accept and respond with data in JSON format.
+由于这样的标准化，API应该接受和响应JSON格式的数据。
 
-Let's take a look at our current implementation and see how we can integrate this best practice.
+让我们回到我们的代码，看看如何把这一点融入到我们的最佳实践。
 
-First, we create our service layer.
+首先，我们创建服务层。
 
 ```javascript
-// In src/services/workoutService.js
+// 在src/services/workoutService.js
 const getAllWorkouts = () => {
   return;
 };
@@ -483,41 +483,41 @@ module.exports = {
 };
 ```
 
-It's also a good practice to name the service methods the same as the controller methods so that you have a connection between those. Let's start off with just returning nothing.
+将服务方法和控制器方法命名为一样的名字也是一种最佳实践，这样可以让两者保持关联。让我们先不返回任何东西。
 
-Inside our workout controller we can use these methods.
+在训练的控制器中，调用服务层的这些方法：
 
 ```javascript
-// In src/controllers/workoutController.js
-// *** ADD ***
+// 在src/controllers/workoutController.js
+// *** 添加 ***
 const workoutService = require("../services/workoutService");
 
 const getAllWorkouts = (req, res) => {
-  // *** ADD ***
+  // *** 添加 ***
   const allWorkouts = workoutService.getAllWorkouts();
   res.send("Get all workouts");
 };
 
 const getOneWorkout = (req, res) => {
-  // *** ADD ***
+  // *** 添加 ***
   const workout = workoutService.getOneWorkout();
   res.send("Get an existing workout");
 };
 
 const createNewWorkout = (req, res) => {
-  // *** ADD ***
+  // *** 添加 ***
   const createdWorkout = workoutService.createNewWorkout();
   res.send("Create a new workout");
 };
 
 const updateOneWorkout = (req, res) => {
-  // *** ADD ***
+  // *** 添加 ***
   const updatedWorkout = workoutService.updateOneWorkout();
   res.send("Update an existing workout");
 };
 
 const deleteOneWorkout = (req, res) => {
-  // *** ADD ***
+  // *** 添加 ***
   workoutService.deleteOneWorkout();
   res.send("Delete an existing workout");
 };
@@ -531,21 +531,21 @@ module.exports = {
 };
 ```
 
-At the moment nothing should have changed inside our responses. But under the hood our controller layer talks now with our service layer.
+我们暂且不需要改变控制器响应中的任何内容，但是控制器已经可以和服务层联通了。
 
-Inside our service methods we'll be handling our business logic like transforming data structures and communicating with our Database Layer.
+在服务的方法中，我们处理了业务逻辑，如改变数据结构以及和数据层交互。
 
-To do that, we need a database and a collection of methods that actually handle the database interaction. Our database will be a simple JSON file that is pre-filled with some workouts already.
+为此我们需要创建一个数据层和一组处理与数据库交互的方法。我们的数据库将为简单的训练JSON文件。
 
 ```bash
-# Create a new file called db.json inside src/database 
+# 在src/database中创建一个新的名为 db.json的文件
 touch src/database/db.json 
 
-# Create a Workout File that stores all workout specific methods in /src/database 
+# 在/src/database中创建一个存储所有训练相关方法的文件
 touch src/database/Workout.js
 ```
 
-Copy the following into db.json:
+将这些内容复制粘贴到db.json:
 
 ```json
 {
@@ -618,14 +618,14 @@ Copy the following into db.json:
 }
 ```
 
-As you can see there are three workouts inserted. One workout consists of an id, name, mode, equipment, exercises, createdAt, updatedAt, and trainerTips.
+可以看到上面添加了三组训练数据。每组训练包含id, name, mode, equipment, exercises, createdAt, updatedAt和trainerTips。
 
-Let's start with the simplest one and return all workouts that are stored and start with implementing the corresponding method inside our Data Access Layer (src/database/Workout.js).
+我们从最简单的开始，返回所有存储的训练，在访问数据层建立对应的方法(src/database/Workout.js)。
 
-Again, I've chosen to name the method inside here the same as the one in the service and the controller. But this it totally optional.
+在这里我也使用和服务层、控制器的相同的命名，不过是否这样命名完全取决于你的选择。
 
 ```javascript
-// In src/database/Workout.js
+// 在src/database/Workout.js
 const DB = require("./db.json");
 
 const getAllWorkouts = () => {
@@ -635,16 +635,16 @@ const getAllWorkouts = () => {
 module.exports = { getAllWorkouts };
 ```
 
-Jump right back into our workout service and implement the logic for **getAllWorkouts.**
+回到训练计划服务层，实现**getAllWorkouts**的逻辑。
 
 ```javascript
-// In src/database/workoutService.js
-// *** ADD ***
+// 在src/database/workoutService.js
+// *** 添加 ***
 const Workout = require("../database/Workout");
 const getAllWorkouts = () => {
-  // *** ADD ***
+  // *** 添加 ***
   const allWorkouts = Workout.getAllWorkouts();
-  // *** ADD ***
+  // *** 添加 ***
   return allWorkouts;
 };
 
@@ -673,17 +673,17 @@ module.exports = {
 };
 ```
 
-Returning all workouts is pretty simple and we don't have to do transformations because it's already a JSON file. We also don't need to take in any arguments for now. So this implementation is pretty straightforward. But we'll come back to this later.
+返回所有的训练十分简单，我们不需要改变数据格式，因为数据已经是一个JSON文件了。我们暂时也不需要传入参数，现在做的事情非常简单直白，待会儿我们会重新回到这里。
 
-Back in our workout controller we receive the return value from `workoutService.getAllWorkouts()` and simply send it as a response to the client. We've looped the database response through our service to the controller.
+在我们的训练控制器中，已经接受到了 `workoutService.getAllWorkouts()`的返回值，并作为响应发送给客户端。我们完成了数据库从服务层到控制器的响应循环。
 
 ```javascript
-// In src/controllers/workoutControllers.js
+// 在src/controllers/workoutControllers.js
 const workoutService = require("../services/workoutService");
 
 const getAllWorkouts = (req, res) => {
   const allWorkouts = workoutService.getAllWorkouts();
-  // *** ADD ***
+  // *** 添加 ***
   res.send({ status: "OK", data: allWorkouts });
 };
 
@@ -716,31 +716,31 @@ module.exports = {
 };
 ```
 
-Go to **localhost:3000/api/v1/workouts** inside your browser and you should see the response JSON.
+在浏览器访问 **localhost:3000/api/v1/workouts**，你将看到响应的JSON。
 
 ![Bildschirmfoto-2022-04-30-um-11.38.14](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-11.38.14.png)
 
-That went great! We're sending back data in JSON format. But what about accepting it? Let's think about an endpoint where we need to receive JSON data from the client. The endpoint for creating or updating a workout needs data from the client.
+一切都进展得很顺利，我们将数据以JSON的形式返回。但如何接受来自客户端的数据呢？假设我们需要一个端点来接受来自客户端的JSON，在这个端点客户端创建和更新训练数据。
 
-Inside our workout controller we extract the request body for creating a new workout and we pass it on to the workout service. Inside the workout service we'll insert it into our DB.json and send the newly created workout back to the client.
+在控制器中，我们提取了请求体来创建一个新的训练，并传入训练服务层。在训练服务层，我们插入了DB.json并且将新创建的训练返回到客户端。
 
-To be able to parse the sent JSON inside the request body, we need to install **body-parser** first and configure it.
+要想在请求体中解析JSON，我们需要首先安装**body-parser**并配置。
 
 ```bash
 npm i body-parser
 ```
 
 ```javascript
-// In src/index.js 
+// 在src/index.js中
 const express = require("express");
-// *** ADD ***
+// *** 添加 ***
 const bodyParser = require("body-parser");
 const v1WorkoutRouter = require("./v1/routes/workoutRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// *** ADD ***
+// *** 添加 ***
 app.use(bodyParser.json());
 app.use("/api/v1/workouts", v1WorkoutRouter);
 
@@ -749,9 +749,9 @@ app.listen(PORT, () => {
 });
 ```
 
-Now we're able to receive the JSON data inside our controllers under **req.body.**
+现在我们就可以在控制器的**req.body**中接受JSON格式的数据。
 
-In order to test it properly, just open your favorite HTTP client (I'm using Postman), create a POST request to localhost:3000/api/v1/workouts and a request body in JSON format like this:
+可以打开你最喜欢的HTTP服务器（我使用的是Postman）来进行测试，创建一个路由为localhost:3000/api/v1/workouts的POST请求，并且将请求体设置为JSON格式：
 
 ```javascript
 {
@@ -775,17 +775,17 @@ In order to test it properly, just open your favorite HTTP client (I'm using Pos
 }
 ```
 
-As you've might noticed, there are some properties missing like "id", "createdAt" and "updatedAt". That's the job of our API to add those properties before inserting it. We'll take care of it inside our workout service later.
+你可能注意到了"id"、"createdAt"、"updatedAt"这些属性不存在。添加这些属性是我们API的工作，我们会在训练服务层中处理相关内容。
 
-Inside the method **createNewWorkout** in our workout controller, we can extract the body from the request object, do some validation, and pass it as an argument to our workout service.
+在训练控制器的 **createNewWorkout** 方法中，我们可以在请求体中提取body，并做一些验证，并作为参数传入训练服务层。
 
 ```javascript
-// In src/controllers/workoutController.js
+// 在src/controllers/workoutController.js
 ...
 
 const createNewWorkout = (req, res) => {
   const { body } = req;
-  // *** ADD ***
+  // *** 添加 ***
   if (
     !body.name ||
     !body.mode ||
@@ -795,7 +795,7 @@ const createNewWorkout = (req, res) => {
   ) {
     return;
   }
-  // *** ADD ***
+  // *** 添加 ***
   const newWorkout = {
     name: body.name,
     mode: body.mode,
@@ -803,30 +803,30 @@ const createNewWorkout = (req, res) => {
     exercises: body.exercises,
     trainerTips: body.trainerTips,
   };
-  // *** ADD ***
+  // *** 添加 ***
   const createdWorkout = workoutService.createNewWorkout(newWorkout);
-  // *** ADD ***
+  // *** 添加 ***
   res.status(201).send({ status: "OK", data: createdWorkout });
 };
 
 ...
 ```
 
-To improve the request validation you normally would use a third party package like [express-validator](https://express-validator.github.io/docs/).
+通常会使用第三方包来来提升请求验证性能，如：[express-validator](https://express-validator.github.io/docs/).
 
-Let's go into our workout service and receive the data inside our createNewWorkout method.
+训练服务层接受来自createdNewWorkout方法传入的数据。
 
-After that we add the missing properties to the object and pass it to a new method in our Data Access Layer to store it inside our DB.
+之后我们将缺失的属性传入对象，并将这个对象作为新的方法传入数据访问层，再存入DB中。
 
-First, we create a simple Util Function to overwrite our JSON file to persist the data.
+首先我们要创建一个简单的Util函数，来覆盖JSON文件以实时更新数据。
 
 ```bash
-# Create a utils file inside our database directory 
+# 在data目录下创建util文件
 touch src/database/utils.js
 ```
 
 ```javascript
-// In src/database/utils.js
+// 在 src/database/utils.js
 const fs = require("fs");
 
 const saveToDatabase = (DB) => {
@@ -838,12 +838,12 @@ const saveToDatabase = (DB) => {
 module.exports = { saveToDatabase };
 ```
 
-Then we can use this function in our Workout.js file.
+我们可以在Workout.js文件中使用这个函数
 
 ```javascript
-// In src/database/Workout.js
+// 在src/database/Workout.js
 const DB = require("./db.json");
-// *** ADD ***
+// *** 添加 ***
 const { saveToDatabase } = require("./utils");
 
 
@@ -851,7 +851,7 @@ const getAllWorkouts = () => {
   return DB.workouts;
 };
 
-// *** ADD ***
+// *** 添加 ***
 const createNewWorkout = (newWorkout) => {
   const isAlreadyAdded =
     DB.workouts.findIndex((workout) => workout.name === newWorkout.name) > -1;
@@ -865,27 +865,28 @@ const createNewWorkout = (newWorkout) => {
 
 module.exports = {
   getAllWorkouts,
-  // *** ADD ***
+  // *** 添加 ***
   createNewWorkout,
 };
 ```
 
-That was smooth! The next step is to use the database methods inside our workout service.
+一切进展得很顺利。下一步是调用训练服务层中的数据库方法。
 
 ```bash
-# Install the uuid package 
+# 安装uuid包
 npm i uuid
 ```
 
 ```javascript
-// In src/services/workoutService.js
-// *** ADD ***
+// 在src/services/workoutService.js
+// *** 添加 ***
 const { v4: uuid } = require("uuid");
-// *** ADD ***
+// *** 添加 ***
 const Workout = require("../database/Workout");
 
 const getAllWorkouts = () => {
-  return DB.workouts;
+  const allWorkouts = Workout.getAllWorkouts()
+  return allWorkouts;
 };
 
 const getOneWorkout = () => {
@@ -893,14 +894,14 @@ const getOneWorkout = () => {
 };
 
 const createNewWorkout = (newWorkout) => {
-  // *** ADD ***
+  // *** 添加 ***
   const workoutToInsert = {
     ...newWorkout,
     id: uuid(),
     createdAt: new Date().toLocaleString("en-US", { timeZone: "UTC" }),
     updatedAt: new Date().toLocaleString("en-US", { timeZone: "UTC" }),
   };
-  // *** ADD ***
+  // *** 添加 ***
   const createdWorkout = Workout.createNewWorkout(workoutToInsert);
   return createdWorkout;
 };
@@ -922,22 +923,21 @@ module.exports = {
 };
 ```
 
-Wow! This was fun, right? Now you can go to your HTTP client, send the POST request again, and you should receive the newly created workout as JSON.
+一切还不错，对不对？现在你可以去HTTP客户端，重新发送POST请求，就会接受到新的JSON格式的训练。
 
-If you try to add the same workout for a second time, you still receive a 201 status code, but without the newly inserted workout.
+如果你尝试再次添加同样的训练，你仍会得到201状态码，但是不会插入新的内容。
 
-This means that our database method cancels the insertion for now and is just returning nothing. That's because our if-statement to check if there is already a workout inserted with the same name kicks in. That's good for now, we'll handle that case in the next best practice!
+也就是说我们的数据库方法取消了插入，什么都不返回。这是因为if声明检查了是否已经存在同样名称的内容，暂时这么处理，我们会在下一个最佳实践中讲解如何优化。
 
-Now, send a GET request to **localhost:3000/api/v1/workouts** to read all workouts. I'm choosing the browser for that. You should see that our workout got successfully inserted and persisted:
-
+现在向 **localhost:3000/api/v1/workouts**发出GET请求，读取所有的训练。 我选择使用浏览器来操作，你会看到我们的训练成功地插入了：
 ![Bildschirmfoto-2022-04-30-um-11.57.23](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-11.57.23.png)
 
-You can implement the other methods by yourself or just copy my implementations.
+你可以选择自行编写其他的方法，或者直接复制我的：
 
-First, the workout controller (you can just copy the whole content):
+首先是训练控制器（你可以直接复制所有内容）
 
 ```javascript
-// In src/controllers/workoutController.js
+// 在src/controllers/workoutController.js
 const workoutService = require("../services/workoutService");
 
 const getAllWorkouts = (req, res) => {
@@ -1010,10 +1010,10 @@ module.exports = {
 };
 ```
 
-Then, the workout service (you can just copy the whole content):
+然后是训练服务层（你可以直接复制所有内容）
 
 ```javascript
-// In src/services/workoutServices.js
+// 在 src/services/workoutServices.js
 const { v4: uuid } = require("uuid");
 const Workout = require("../database/Workout");
 
@@ -1056,10 +1056,10 @@ module.exports = {
 };
 ```
 
-And finally our database methods inside the Data Access Layer (you can just copy the whole content):
+最后是数据访问层的数据库方法（你可以直接复制所有内容）
 
 ```javascript
-// In src/database/Workout.js
+// 在src/database/Workout.js
 const DB = require("./db.json");
 const { saveToDatabase } = require("./utils");
 
@@ -1123,34 +1123,34 @@ module.exports = {
 };
 ```
 
-Great! Let's move on to the next best practice and see how we can handle errors properly.
+太棒了！让我们进入下一个最佳实践，来看看怎么处理报错。
 
-### Respond with standard HTTP Error Codes
+<h3 id="respond-with-standard-http-error-codes">响应标准HTTP错误代码</h3>
 
-We've already came pretty far, but we're not finished yet. Our API has the ability now to handle basic CRUD operations with data storage. That's great, but not really ideal.
+我们已经完成了不少内容的搭建，但还没结束呢。现在我们的API已经可以处理CRUD并且存储数据，这样很棒！但还不够。
 
-Why? Let me explain.
+为什么？让我来解释。
 
-In a perfect world everything works smoothly without any errors. But as you might know, in the real world a lot of errors can happen – either from a human or a technical perspective.
+在一个完美的世界里，所有事情都会运行顺利，没有错误。但是你可能知道，在现实中会出现很多错误——无论这个错误是人为的还是是技术角度。
 
-You might probably know that weird feeling when things are working right from the beginning without any errors. This is great and enjoyable, but as developers we're more used to things that are not working properly. 😁
+你或许也认为从一开始就没有任何错误是一种奇怪的感觉，这样确实很棒也让人享受，但作为一个开发者，我们应该更习惯与错误共处。 😁
 
-The same goes for our API. We should handle certain cases that might go wrong or throw an error. This will also harden our API.
+API也是这样，我们需要处理出现问题或者报错的情况。这也可以使我门的API更强大。
 
-When something goes wrong (either from the request or inside our API) we send HTTP Error codes back. I've seen and used API's that were returning all the time a 400 error code when a request was buggy without any specific message about WHY this error occurred or what the mistake was. So debugging became a pain.
+出现问题时（不论是在请求中还是在我们API内部），我们返回HTTP错误代码。我见过并使用过一些API始终返回400错误代码，并且不附带任何具体的信息说明为什么错误会出现，错误是什么。这样调试起来就很痛苦。
 
-That's the reason why it's always a good practice to return proper HTTP error codes for different cases. This helps the consumer or the engineer who built the API to identify the problem more easily.
+这就是为什么针对不同的情况返回合适的HTTP代码是一种最佳实践。这能够使正在使用或者构建API的工程师更轻松地识别问题。
 
-To improve the experience we also can send a quick error message along with the error response. But as I've written in the introduction this isn't always very wise and should be considered by the engineer themself.
+为了提升体验，我们还可以在返回错误的同时快速发送一个错误信息。但正如在文章开头说的那样，这一做法并不是万精油，还需要工程师自己来权衡。
 
-For example, returning something like **"The username is already signed up"** should be well thought out because you're providing information about your users that you should really hide.
+例如，是否应该向用户返回 **"该用户名已经注册"**这类信息是需要深思熟虑的，因为或许这样就给用户提供了本该隐藏的数据。
 
-In our Crossfit API we will take a look at the creation endpoint and see what errors might arise and how we can handle them. At the end of this tip you'll find again the complete implementation for the other endpoints.
+可以浏览一遍交叉训练API中的创建（CRUD中的C）端点，看看会出现什么问题，我们能怎么解决。在这一部分最后部分有其他端点的完整实现。
 
-Let's start looking at our createNewWorkout method inside our workout controller:
+我们先从训练控制器的createNewWorkout方法开始：
 
 ```javascript
-// In src/controllers/workoutController.js
+// 在src/controllers/workoutController.js
 ...
 
 const createNewWorkout = (req, res) => {
@@ -1178,12 +1178,12 @@ const createNewWorkout = (req, res) => {
 ...
 ```
 
-We already caught the case that the request body is not built up properly and got missing keys that we expect.
+我们的代码已经可以捕获请求体属性不完整的情况。
 
-This would be a good example to send back a 400 HTTP error with a corresponding error message.
+在返回400时，附带一条返回错误信息是一个不错的选择。
 
 ```javascript
-// In src/controllers/workoutController.js
+// 在src/controllers/workoutController.js
 ...
 
 const createNewWorkout = (req, res) => {
@@ -1220,18 +1220,18 @@ const createNewWorkout = (req, res) => {
 ...
 ```
 
-If we try to add a new workout but forget to provide the "mode" property in our request body, we should see the error message along with the 400 HTTP error code.
+如果我们想要添加一个新的训练，但是忘记在请求体提供"mode"属性，我们会在400报错的同时看到错误信息。
 
 ![Bildschirmfoto-2022-04-30-um-15.17.21](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-15.17.21.png)
 
-A developer who is consuming the API is now better informed about what to look for. They immediately know to go inside the request body and see if they've missed providing one of the required properties.
+这样的话，使用这个API的开发者就更知道自己需要什么。他们马上就知道应该在请求体中找答案，并且看看他们缺失了哪一个必须的属性。
 
-Leaving this error message more generic for all properties will be okay for now. Typically you'd use a schema validator for handling that.
+在我们的例子中使用通用的错误信息没有问题。一般情况下可以使用一个模式验证器来处理这个问题。
 
-Let's go one layer deeper into our workout service and see what potential errors might occur.
+让我们再深入一层看看服务层有什么潜在的错误：
 
 ```javascript
-// In src/services/workoutService.js
+// 在src/services/workoutService.js
 ...
 
 const createNewWorkout = (newWorkout) => {
@@ -1248,10 +1248,10 @@ const createNewWorkout = (newWorkout) => {
 ...
 ```
 
-One thing that might go wrong is the database insertion **Workout.createNewWorkout().** I like to wrap this thing in a try/catch block to catch the error when it occurs.
+在 **Workout.createNewWorkout()** 中的插入数据可能出现问题，我想将他们打包在try/catch代码块中，来捕获错误。
 
 ```javascript
-// In src/services/workoutService.js
+// 在src/services/workoutService.js
 ...
 
 const createNewWorkout = (newWorkout) => {
@@ -1272,12 +1272,12 @@ const createNewWorkout = (newWorkout) => {
 ...
 ```
 
-Every error that gets thrown inside our Workout.createNewWorkout() method will be caught inside our catch block. We're just throwing it back, so we can adjust our responses later inside our controller.
+Workout.createNewWorkout()方法中的所有错误都会被catch代码块捕获。我们抛出这个错误之后就可以在控制器中调整响应。
 
-Let's define our errors in Workout.js:
+让我们在Workout.js中定义错误：
 
 ```javascript
-// In src/database/Workout.js
+// 在src/database/Workout.js
 ...
 
 const createNewWorkout = (newWorkout) => {
@@ -1301,14 +1301,14 @@ const createNewWorkout = (newWorkout) => {
 ...
 ```
 
-As you can see, an error consists of two things, a status and a message. I'm using just the **throw** keyword here to send out a different data structure than a string, which is required in **throw new Error()**.
+如你所见，一个错误包含了状态和信息两个内容。 此处我使用了 **throw**关键字来抛出一个数据结构而不是一条字符串， **throw new Error()**必须这么写。
 
-A little downside of just throwing is that we don't get a stack trace. But normally this error throwing would be handled by a third party library of our choice (for example Mongoose if you use a MongoDB database). But for the purposes of this tutorial this should be fine.
+使用throw的缺点是无法得到栈追踪。但基本上抛出错误由第三方库来处理（如果你使用MongoDB数据库的话就是Mongoose），在本教程中，我们现在做的就足够了。
 
-Now we're able to throw and catch errors in the service and data access layer. We can move into our workout controller now, catch the errors there as well, and respond accordingly.
+现在我们就可以在服务和数据访问层来抛出和捕获错误了。我们现在进入训练控制层，来编写抛出错误和对应的消息。
 
 ```javascript
-// In src/controllers/workoutController.js
+// 在src/controllers/workoutController.js
 ...
 
 const createNewWorkout = (req, res) => {
@@ -1338,7 +1338,7 @@ const createNewWorkout = (req, res) => {
     exercises: body.exercises,
     trainerTips: body.trainerTips,
   };
-  // *** ADD ***
+  // *** 添加 ***
   try {
     const createdWorkout = workoutService.createNewWorkout(newWorkout);
     res.status(201).send({ status: "OK", data: createdWorkout });
@@ -1352,12 +1352,12 @@ const createNewWorkout = (req, res) => {
 ...
 ```
 
-You can test things out by adding a workout with the same name twice or not providing a required property inside your request body. You should receive the corresponding HTTP error codes along with the error message.
+你可以通过添加同样名字的训练，或者不在请求体中提供必需的属性来测试。你会接受对应的HTTP错误代码以及错误信息。
 
-To wrap this up and move to the next tip, you can copy the other implemented methods into the following files or you can try it on your own:
+在结束这一篇并且进入下一个最佳实践之前，让我们复制其他的实现代码，或者你可以尝试自己编写：
 
 ```javascript
-// In src/controllers/workoutController.js
+// 在src/controllers/workoutController.js
 const workoutService = require("../services/workoutService");
 
 const getAllWorkouts = (req, res) => {
@@ -1550,7 +1550,7 @@ module.exports = {
 ```
 
 ```javascript
-// In src/database/Workout.js
+// 在src/database/Workout.js
 const DB = require("./db.json");
 const { saveToDatabase } = require("./utils");
 
@@ -1654,23 +1654,23 @@ module.exports = {
 };
 ```
 
-### Avoid verbs in endpoint names
+<h3 id="avoid-verbs-in-endpoint-names">避免在端点使用动词</h3>
 
-It doesn't make much sense to use verbs inside your endpoints and is, in fact, pretty useless. Generally each URL should point towards a resource (remember the box example from above). Nothing more and nothing less.
+在端点中使用动词实际上没有任何作用。大体上URL和资源（想想我们前文提到的“盒子”）是一一对应的。
 
-Using a verb inside a URL shows a certain behavior which a resource itself can not have.
+在URL中使用动词，相当于展示了资源本身并没有的行为。
 
-We've already implemented the endpoints correctly without using verbs inside the URL, but let's take a look how our URL's would look like if we had used verbs.
+我们已经在不使用动词的情况下正确地编写好了URL，但让我们看看，如果使用动词，URL会是什么样。
 
 ```javascript
-// Current implementations (without verbs)
+// 现在的样子（没有动词）
 GET "/api/v1/workouts" 
 GET "/api/v1/workouts/:workoutId" 
 POST "/api/v1/workouts" 
 PATCH "/api/v1/workouts/:workoutId" 
 DELETE "/api/v1/workouts/:workoutId"  
 
-// Implementation using verbs 
+// 使用动词
 GET "/api/v1/getAllWorkouts" 
 GET "/api/v1/getWorkoutById/:workoutId" 
 CREATE "/api/v1/createWorkout" 
@@ -1678,35 +1678,35 @@ PATCH "/api/v1/updateWorkout/:workoutId"
 DELETE "/api/v1/deleteWorkout/:workoutId"
 ```
 
-Do you see the difference? Having a completely different URL for every behavior can become confusing and unnecessarily complex pretty fast.
+你看到区别了吗？给每一个行为分配不同的URL，会让人困惑并且十分复杂。
 
-Imagine we've got 300 different endpoints. Using a separate URL for each one might be an overhead (and documentation) hell.
+假设我们有300个不同的端点。为每个端点分配单独的URL可能造成开销（和文档）地狱。
 
-Another reason I'd like to point out for not using verbs inside your URL is that the HTTP verb itself already indicates the action.
+另一个我不推荐在URL中使用动词的原因是，HTTP动词已经表明了响应的动作。
 
-Things like **"GET /api/v1/getAllWorkouts"** or **"DELETE api/v1/deleteWorkout/workoutId"** are unnecessary.
+如 **"GET /api/v1/getAllWorkouts"** 和 **"DELETE api/v1/deleteWorkout/workoutId"**就很没有必要。
 
-When you take a look at our current implementation it becomes way cleaner because we're only using two different URL's and the actual behavior is handled via the HTTP verb and the corresponding request payload.
+你会发现我们的实现非常清晰，因为我们只使用两个不同的URL，而实际的行为是通过HTTP动词以及对应的请求有效载荷来实现。
 
-I always imagine that the HTTP verb describes the action (what we'd like to do) and the URL itself (that points towards a resource) the target. **"GET /api/v1/workouts"** is also more fluent in human language.
+我认为HTTP动词是来定义行为的（我们也希望这样），而URL（指向资源）是目标。 **"GET /api/v1/workouts"** 这句话即便是人类的语言中也更通顺。
 
-### Group associated resources together (logical nesting)
+<h3 id="group-associated-resources-together-logical-nesting-">把相关的资源放在一起（逻辑嵌套）</h3>
 
-When you're designing your API, there might be cases where you have resources that are associated with others. It's a good practice to group them together into one endpoint and nest them properly.
+当你在设计API的时候，会出现资源之间相互关联的情况。一个好的实践方式是将资源整合和嵌套到一个端点。
 
-Let's consider that, in our API, we also have a list of members that are signed up in our CrossFit box ("box" is the name for a CrossFit gym). In order to motivate our members we track the overall box records for each workout.
+在我们的API中，有一系列的会员注册了交叉训练盒子（此处的“盒子”是交叉训练健身房的名字），为了鼓励会员，我们记录了每一次训练的所有记录。
 
-For example, there is a workout where you have to do a certain order of exercises as quickly as possible. We record the times for all members to have a list of the time for each member who completed this workout.
+假设有一组训练包含一定顺序的练习，你想要尽快做完。我们记录了所有会员完成这项训练的时间。
 
-Now, the frontend needs an endpoint that responds with all records for a specific workout in order to display it in the UI.
+这时，前端就需要一个端点来响应一个特定训练的所有时间记录，并且在UI上呈现。
 
-The workouts, the members, and the records are stored in different places in the database. So what we need here is a box (records) inside another box (workouts), right?
+训练、会员还有训练记录存储在不同的数据库里。所以在这里我们需要使用盒中盒（训练中的记录），对不对？
 
-The URI for that endpoint will be **/api/v1/workouts/:workoutId/records**. This is a good practice to allow logical nesting of URL's. The URL itself doesn't necessarily have to mirror the database structure.
+这个端点的URI会是 **/api/v1/workouts/:workoutId/records**. 这便是一个在URL中实现逻辑嵌套的好实践。URL本身不需要反应数据结构。
 
-Let's start implementing that endpoint.
+让我们来实现这个端点。
 
-First, add a new table into your db.json called "members". Place it under "workouts".
+首先我们要在db.json中添加一组叫"memebers"的数据，放在"workouts"下面。
 
 ```json
 {
@@ -1749,9 +1749,9 @@ First, add a new table into your db.json called "members". Place it under "worko
 }
 ```
 
-Before you start asking – yes, the passwords are hashed. 😉
+在你问之前，我先回答——是的，密码是哈希加密的。😉
 
-After that, add some "records" under "members".
+然后我们在"records"下面添加"members"：
 
 ```json
 {
@@ -1784,7 +1784,7 @@ After that, add some "records" under "members".
 }
 ```
 
-To make sure you've got the same workouts like I do with the same id's, copy the workouts as well:
+为了确保同一id下的训练相同，我也复制了一些训练到workouts中：
 
 ```json
 {
@@ -1883,31 +1883,31 @@ To make sure you've got the same workouts like I do with the same id's, copy the
 }
 ```
 
-Okay, let's take a few minutes to think about our implementation.
+让我们花点时间来想想如何实现。
 
-We've got a resource called "workouts" on the one side and another called "records" on the other side.
+我们有一组叫做"workouts"的资源，还有另一组叫做"records"的资源。
 
-To move on in our architecture it would be advisable to create another controller, another service, and another collection of database methods that are responsible for records.
+在创建交叉内容的结构之前，建议先创建另一个控制器、服务层和数据组合方法来负责训练记录。
 
-Chances are high that have we to implement CRUD endpoints for the records as well, because records should be added, updated or deleted in the future as well. But this won't be the primary task for now.
+我们很有可能需要为训练记录实现CRUD端点，因为在未来我们也会添加、更新和删除记录。但这不是现在的首要任务。
 
-We'll also need a record router to catch the specific requests for the records, but we don't need it right now. This could be a great chance for you to implement the CRUD operations for the records with their own routes and train a bit.
+我们也需要一个记录的路由来捕获对应的请求。这是你练习自己实现CRUD的绝好机会。
 
 ```bash
-# Create records controller 
+# 创建记录控制器
 touch src/controllers/recordController.js 
 
-# Create records service 
+# 创建记录服务层
 touch src/services/recordService.js 
 
-# Create records database methods 
+# 创建记录数据处理方法 
 touch src/database/Record.js
 ```
 
-That was easy. Let's move on and start backwards with implementing our database methods.
+很简单！让我们从后往前，从实现数据方法开始编写。
 
 ```javascript
-// In src/database/Record.js
+// 在src/database/Record.js
 const DB = require("./db.json");
 
 const getRecordForWorkout = (workoutId) => {
@@ -1927,12 +1927,12 @@ const getRecordForWorkout = (workoutId) => {
 module.exports = { getRecordForWorkout };
 ```
 
-Pretty straightforward, right? We filter all the records that are related to the workout id out of the query parameter.
+很直接对不对，我们通过查询参数过滤出和训练id相关的记录数据
 
-The next one is our record service:
+接下来是记录的服务层：
 
 ```javascript
-// In src/services/recordService.js
+// 在src/services/recordService.js
 const Record = require("../database/Record");
 
 const getRecordForWorkout = (workoutId) => {
@@ -1946,15 +1946,15 @@ const getRecordForWorkout = (workoutId) => {
 module.exports = { getRecordForWorkout };
 ```
 
-Again, nothing new here.
+这里也没有新的知识点。
 
-Now we're able to create a new route in our workout router and direct the request to our record service.
+现在就可以在训练路由创建新的路由，并且导向记录服务请求。
 
 ```javascript
-// In src/v1/routes/workoutRoutes.js
+// 在src/v1/routes/workoutRoutes.js
 const express = require("express");
 const workoutController = require("../../controllers/workoutController");
-// *** ADD ***
+// *** 添加 ***
 const recordController = require("../../controllers/recordController");
 
 const router = express.Router();
@@ -1963,7 +1963,7 @@ router.get("/", workoutController.getAllWorkouts);
 
 router.get("/:workoutId", workoutController.getOneWorkout);
 
-// *** ADD ***
+// *** 添加 ***
 router.get("/:workoutId/records", recordController.getRecordForWorkout);
 
 router.post("/", workoutController.createNewWorkout);
@@ -1975,31 +1975,31 @@ router.delete("/:workoutId", workoutController.deleteOneWorkout);
 module.exports = router;
 ```
 
-Great! Let's test things out in our browser.
+真棒！让我们在浏览器中测试一下。
 
-First, we fetch all workouts to get a workout id.
+首先我们抓取所有训练记录，来获得一个训练id。
 
 ![Bildschirmfoto-2022-04-30-um-15.36.48](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-15.36.48.png)
 
-Let's see if we can fetch all records for that:
+让我们来看看能不能获得这个id下的所有记录。
 
 ![Bildschirmfoto-2022-04-30-um-15.36.32](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-15.36.32.png)
 
-As you can see, logical nesting makes sense when you have resources that can be tied together. Theoretically you can nest it how deep you want, but the rule of thumb here is to go three levels deep at a maximum.
+如你所见，逻辑嵌套可以使资源捆绑在一起。理论上你可以想嵌套多少层就嵌套多少层，但建议至多使用三层嵌套。
 
-If you want to nest deeper than that, you could do a little tweak inside your database records. I'll show you a little example.
+如果你想嵌套得更深，可以稍微调整一下数据库的记录。我给你看一个小例子。
 
-Imagine the frontend also needs an endpoint to get information about which member exactly holds the current record and wants to receive metadata about them.
+想象一下，前端还需要一个端点来获取到底是哪个会员持有当前记录的信息，并希望接受这个会员的所有原始信息。
 
-Of course we could implement the following URI:
+你当然可以使用下面的URI：
 
 ```javascript
 GET /api/v1/workouts/:workoutId/records/members/:memberId
 ```
 
-The endpoint now becomes less manageable the more nesting we add to it. Therefore it's a good practice to store the URI to receive information about a member directly into the record.
+嵌套越多，端点就越不容易管理。因此，将接受会员信息的URI直接存储在记录中是一个好的做法。
 
-Consider the following inside the database:
+可以这样修改数据库：
 
 ```json
 {
@@ -2018,35 +2018,35 @@ Consider the following inside the database:
 }
 ```
 
-As you can see, we've added the two properties "memberId" and "member" to our records inside the database. This has the huge advantage that we don't have to nest deeper our existing endpoint.
+我们在数据库中添加了"memberId"和“member"这两个属性，这样我们就不需要在端点嵌套得更深。
 
-The frontend just needs to call **GET /api/v1/workouts/:workoutId/records** and receives automatically all records that are connected with this workout.
+前端只需要调用 **GET /api/v1/workouts/:workoutId/records**便可以获得所有和训练相关的数据。
 
-On top of that it gets the member id and the endpoint to fetch information about that member. So, we avoided the deeper nesting of our endpoint.
+除此之外，我们可以由会员id来获取会员的信息，就可以避免更深入的嵌套。
 
-Of course, this only works if we can handle requests to "/members/:memberId" 😁 This sounds like a great training opportunity for you to implement this situation!
+当然，这一切实现的前提是处理"/members/:memberId"请求。😁 这听上去是锻炼你自己实现能力的好机会！
 
-### Integrate filtering, sorting & pagination
+<h3 id="integrate-filtering-sorting-pagination">集成过滤、排序和分页功能</h3>
 
-Right now we're able to do quite a few operations with our API. That's great progress, but there's more.
+现在我们的API已经可以完成很多工作，取得了相当大的进展，但是这还不够。
 
-During the last sections we focused on improving our developer experience and how our API can be interacted with. But the overall performance of our API is another key factor we should work on.
+在上一部分我们聚焦在如何提高开发者的体验，以及我们的API如何交互。但是API的整体性能也是一个关键部分，需要我们努力提高。
 
-That's why integrating filtering, sorting, and pagination is also an essential factor on my list.
+这就是为什么在我的待办清单中集成过滤、排序和分页功能也是非常关键的。
 
-Imagine we've got 2,000 workouts, 450 records, and 500 members stored in our DB. When calling our endpoint to get all workouts we don't want to send all 2,000 workouts at once. This will be a very slow response of course, or it'll bring our systems down (maybe with 200,000 😁).
+假设我们的DB中有2000个训练，450条记录和500个会员。当我们调用端点来获取训练的时候，我们不希望一次性获得所有2000个训练。这样的响应速度会比较慢，导致系统崩溃(崩溃可能需要200000条记录 😁)。
 
-That's the reason why filtering and pagination are important. Filtering, as the name already says, is useful because it allows us to get specific data out of our whole collection. For example all workouts that have the mode "For Time".
+这就是为什么过滤和分页十分重要。过滤正如这个名称一样，可以帮助我们在整个数据集中获取我们需要的数据。例如所有具备“时间”模式的训练。
 
-Pagination is another mechanism to split our whole collection of workouts into multiple "pages" where each page only consists of twenty workouts, for example. This technique helps us to make sure that we don't send more than twenty workouts at the same time with our response to the client.
+分页是另一种可以拆分数据集的机制，比方说我们可以把数据分成每页二十个训练的“页面”。这个技术确保我们一次返回不超过20个训练。
 
-Sorting can be a complex task. So it's more effective to do it in our API and to send the sorted data to the client.
+排序可以变得非常复杂，所以直接在我们的API排序后，再向用户发送数据更高效。
 
-Let's start with integrating some filtering mechanism into our API. We will upgrade our endpoint that sends all workouts by accepting filter parameters. Normally in a GET request we add the filter criteria as a query parameter.
+我们首先在API中整合一些过滤机制。我们将发送所有训练的这个端点升级，让这个端点接受过滤参数。通常在GET请求中，我们使用查询参数来添加过滤条件。
 
-Our new URI will look like this, when we'd like to get only the workouts that are in the mode of "AMRAP" (**A**s **M**any **R**ounds **A**s **P**ossible): **/api/v1/workouts?mode=amrap.**
+当我们只获取训练状态（mode）为"AMRAP"（尽可能多地训练 **A**s **M**any **R**ounds **A**s **P**ossible)时，我们新的URI会是这样： **/api/v1/workouts?mode=amrap**。
 
-To make this more fun we need to add some more workouts. Paste these workouts into your "workouts" collection inside db.json:
+为了让实现更有趣，我们可以添加更多的训练。请在db.json中的"workouts"数据集中添加以下代码：
 
 ```json
 {
@@ -2108,17 +2108,17 @@ To make this more fun we need to add some more workouts. Paste these workouts in
 }
 ```
 
-After that we have to accept and handle query parameters. Our workout controller will be the right place to start:
+当我们处理好接受和处理查询参数后，就可以编写训练的控制层：
 
 ```javascript
-// In src/controllers/workoutController.js
+// 在src/controllers/workoutController.js
 ...
 
 const getAllWorkouts = (req, res) => {
-  // *** ADD ***
+  // *** 添加 ***
   const { mode } = req.query;
   try {
-    // *** ADD ***
+    // *** 添加 ***
     const allWorkouts = workoutService.getAllWorkouts({ mode });
     res.send({ status: "OK", data: allWorkouts });
   } catch (error) {
@@ -2131,19 +2131,19 @@ const getAllWorkouts = (req, res) => {
 ...
 ```
 
-We're extracting "mode" from the req.query object and defining a parameter of workoutService.getAllWorkouts. This will be an object that consists of our filter parameters.
+我们在req.query对象中提取“mode”，并用作workoutService.getAllWorkouts的参数。这个对象包含了所有过滤参数。
 
-I'm using the shorthand syntax here, to create a new key called "mode" inside the object with the value of whatever is in "req.query.mode". This could be either a truthy value or undefined if there isn't a query parameter called "mode". We can extend this object the more filter parameters we'd like to accept.
+这里我使用了简写语法，来创建一个名为"mode"的新键，这个键位于对象内部，其值可以是任意"req.query.mode"的值。可以为一个真值或者如果没有一个参数为“mode”的参数则为undefined。我们可以在对象内扩充更多过滤参数。
 
-In our workout service, pass it to your database method:
+在workoutService中传入数据处理方法：
 
 ```javascript
-// In src/services/workoutService.js
+// 在src/services/workoutService.js
 ...
 
 const getAllWorkouts = (filterParams) => {
   try {
-    // *** ADD ***
+    // *** 添加 ***
     const allWorkouts = Workout.getAllWorkouts(filterParams);
     return allWorkouts;
   } catch (error) {
@@ -2154,10 +2154,10 @@ const getAllWorkouts = (filterParams) => {
 ...
 ```
 
-Now we can use it in our database method and apply the filtering:
+现在我们可以使用数据库方法，并且应用过滤：
 
 ```javascript
-// In src/database/Workout.js
+// 在src/database/Workout.js
 ...
 
 const getAllWorkouts = (filterParams) => {
@@ -2168,7 +2168,7 @@ const getAllWorkouts = (filterParams) => {
         workout.mode.toLowerCase().includes(filterParams.mode)
       );
     }
-    // Other if-statements will go here for different parameters
+    // 如果有其他的参数，可以在这里编写其他的if表达式
     return workouts;
   } catch (error) {
     throw { status: 500, message: error };
@@ -2178,63 +2178,63 @@ const getAllWorkouts = (filterParams) => {
 ...
 ```
 
-Pretty straightforward, right? All we do here is check if we actually have a truthy value for the key "mode" inside our "filterParams". If this is true, we filter all those workouts that have got the same "mode". If this is not true, then there is no query parameter called "mode" and we return all workouts because we don't need to filter.
+简单明了！我们在这里做的工作就是检查"filterParams"中是否存在键"mode"的真值，如果存在，则过滤出所有包含同样"mode"的训练，如果不存在，则返回所有训练，
 
-We defined "workouts" here as a "let" variable because when adding more if-statements for different filters we can overwrite "workouts" and chain the filters.
+此处我们使用"let"来定义"workouts"变量是因为如果我们使用if表达式来添加更多过滤器的话，会覆盖掉"workouts"并且串联过滤器。
 
-Inside your browser you can visit localhost:3000/api/v1/workouts?mode=amrap and you'll receive all "AMRAP" workouts that are stored:
+在浏览器中可以登陆3000/api/v1/workouts?mode=amrap，会接受到所有包含 "AMRAP"的训练：
 
 ![Bildschirmfoto-2022-04-30-um-15.48.57](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-30-um-15.48.57.png)
 
-If you leave the query parameter out, you should get all workouts like before. You can try it further with adding "for%20time" as the value for the "mode" parameter (remember --> "%20" means "whitespace") and you should receive all workouts that have the mode "For Time" if there are any stored.
+如果不填写查询参数的话，就会重新获得所有训练。你可以尝试添加"for%20time"作为"mode"的参数(记住："%20" 代表 "空格")， 你就会获得所有包含"For Time"的训练，
 
-When typing in a value that is not stored, that you should receive an empty array.
+如果输入一个不存在的值，则会接受到空数组。
 
-The parameters for sorting and pagination follow the same philosophy. Let's look at a few features we could possibly implement:
+排序和分页的参数页遵行同样的原理，我们来看看我们需要实现的一些功能：
 
--   Receive all workouts that require a barbell: **/api/v1/workouts?equipment=barbell**
--   Get only 5 workouts: **/api/v1/workouts?length=5**
--   When using pagination, receive the second page: **/api/v1/workouts?page=2**
--   Sort the workouts in the response in descending order by their creation date: **/api/v1/workouts?sort=-createdAt**
--   You can also combine the parameters, to get the last 10 updated workouts for example: **/api/v1/workouts?sort=-updatedAt&length=10**
+-   接受所有需要杠铃的训练： **/api/v1/workouts?equipment=barbell**
+-   接受5组训练： **/api/v1/workouts?length=5**
+-   使用分页时，返回第二页：**/api/v1/workouts?page=2**
+-   给训练排序，并且以创建时间为标准降序来响应训练： **/api/v1/workouts?sort=-createdAt**
+-   你也可以合并参数，获取最近更新的10个训练：**/api/v1/workouts?sort=-updatedAt&length=10**
 
-### Use data caching for performance improvements
+<h3 id="use-data-caching-for-performance-improvements">使用数据缓存提升性能</h3>
 
-Using a data cache is also a great practice to improve the overall experience and performance of our API.
+使用数据缓存也是一个提升API整体使用体验和性能的优秀实践。
 
-It makes a lot of sense to use a cache to serve data from, when the data is an often requested resource or/and querying that data from the database is a heavy lift and may take multiple seconds.
+当一段数据经常被请求，或者这个数据太大了需要比较长的时间加载的时候，可以使用缓存来提供数据。
 
-You can store this type of data inside your cache and serve it from there instead of going to the database every time to query the data.
+你可以将这些数据存储到缓存，这样就可以避免每一次都重新提交数据请求。
 
-One important thing you have to keep in mind when serving data from a cache is that this data can become outdated. So you have to make sure that the data inside the cache is always up to date.
+但必须记住的是，使用缓存来提供数据的话，这段数据很有可能过期。所以必须确保缓存中的数据保持更新。
 
-There are many different solutions out there. One appropriate example is to use [redis](https://www.npmjs.com/package/redis) or the express middleware [apicache](https://www.npmjs.com/package/apicache).
+有各种实现来实现缓存的方式，一种是使用[redis](https://www.npmjs.com/package/redis)或者express的中间件[apicache](https://www.npmjs.com/package/apicache).
 
-I'd like to go with apicache, but if you want to use Redis, I can highly recommend that you check out their great [docs](https://docs.redis.com/latest/rs/references/client_references/client_nodejs/).
+我准备使用apicache，但如果你想使用Redis，我强烈推荐你阅读他们的[文档](https://docs.redis.com/latest/rs/references/client_references/client_nodejs/)。
 
-Let's think a second about a scenario in our API where a cache would make sense. I think requesting to receive all workouts would effectively be served from our cache.
+我们思考一下在API中使用缓存的场景。我认为使用缓存来返回所有训练会更加有效。
 
-First, let's install our middleware:
+首先，让我们安装中间件：
 
 ```bash
 npm i apicache
 ```
 
-Now, we have to import it into our workout router and configure it.
+我们在训练的路由中引用这个插件并配置好：
 
 ```javascript
-// In src/v1/routes/workoutRoutes.js
+// 在src/v1/routes/workoutRoutes.js
 const express = require("express");
-// *** ADD ***
+// *** 添加 ***
 const apicache = require("apicache");
 const workoutController = require("../../controllers/workoutController");
 const recordController = require("../../controllers/recordController");
 
 const router = express.Router();
-// *** ADD ***
+// *** 添加 ***
 const cache = apicache.middleware;
 
-// *** ADD ***
+// *** 添加 ***
 router.get("/", cache("2 minutes"), workoutController.getAllWorkouts);
 
 router.get("/:workoutId", workoutController.getOneWorkout);
@@ -2250,45 +2250,45 @@ router.delete("/:workoutId", workoutController.deleteOneWorkout);
 module.exports = router;
 ```
 
-Getting started is pretty straightforward, right? We can define a new cache by calling **apicache.middleware** and use it as a middleware inside our get route. You just have to put it as a parameter between the actual path and our workout controller.
+很简单！我们可以将新的缓存命名为**apicache.middleware**，并在路由中当作中间件来使用。仅需在实际的路径和训练控制器之间放置这个参数。
 
-Inside there you can define how long your data should be cached. For the sake of this tutorial I've chosen two minutes. The time depends on how fast or how often your data inside your cache changes.
+你可以在中间件内部定义你需要保存缓存多久。在这篇教程中我选择2分钟。保存时间一般取决于你存储的数据多久更新一次。
 
-Let's test things out!
+让我们测试一下！
 
-Inside Postman or another HTTP client of your choice, define a new request that gets all workouts. I've done it inside the browser until now, but I'd like to visualize the response times better for you. That's the reason why I'm requesting the resource via Postman right now.
+在Postman或者另外的HTTP客户端中，定义一个新的请求，获取所有的训练。之前我都是在浏览器中操作，但是这次我想给你更直观的感受，所以使用Postman。
 
-Let's call our request for the first time:
+让我们第一次请求数据：
 
 ![Bildschirmfoto-2022-04-26-um-15.36.46-1](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-26-um-15.36.46-1.png)
 
-As you can see it took our API 22.93 ms to respond. Once our cache is empty again (after two minutes) it has to be filled again. This happens with our first request.
+你可以看到我们的API花了22.93毫秒来响应。一旦缓存被清空（2分钟后），又回重新抓取数据保存到缓存，我们第一次获取数据的时候就将数据存储到了缓存。
 
-So in the case above, the data was NOT served from our cache. It took the "regular" way from the database and filled our cache.
+在上述例子中，数据并不是有由缓存提供。而是通过“普通”方式来抓去数据库保存到缓存。
 
-Now, with our second request we receive a shorter response time, because it was directly served from the cache:
+现在我们第二次请求数据，响应时间变短，因为我们直接从缓存中返回数据。
 
 ![Bildschirmfoto-2022-04-26-um-15.36.59-1](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-26-um-15.36.59-1.png)
 
-We were able to serve three times faster than in our previous request! All thanks to our cache.
+比起第一次请求，我们快了三倍，这完全归功于缓存。
 
-In our example we've cached just one route, but you can also cache all routes by implementing it like this:
+在我们的例子中，我们只缓存了一个路由，你可以在所有路由中应用：
 
 ```javascript
-// In src/index.js
+// 在src/index.js
 const express = require("express");
 const bodyParser = require("body-parser");
-// *** ADD ***
+// *** 添加 ***
 const apicache = require("apicache");
 const v1WorkoutRouter = require("./v1/routes/workoutRoutes");
 
 const app = express();
-// *** ADD ***
+// *** 添加 ***
 const cache = apicache.middleware;
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-// *** ADD ***
+// *** 添加 ***
 app.use(cache("2 minutes"));
 app.use("/api/v1/workouts", v1WorkoutRouter);
 
@@ -2297,47 +2297,47 @@ app.listen(PORT, () => {
 });
 ```
 
-There's one **important** thing I'd like to note here when it comes to caching. While it seems to solve a lot of problems for you, it also can bring some problems into your application.
+还有一件关于缓存的**重要** 的事情，虽然在这个例子中，缓存给你节省了不少时间，但是缓存也可以给应用造成不小的麻烦：
 
-A few things you have to be aware of when using a cache:
+当使用缓存时，你需要注意的事：
 
--   you always have to make sure that the data inside the cache is up to date because you don't want to serve outdated data
--   while the first request is being processed and the cache is about to be filled and more requests are coming in, you have to decide if you delay those other requests and serve the data from the cache or if they also receive data straight from the database like the first request
--   it's another component inside your infrastructure if you're choosing a distributed cache like Redis (so you have to ask yourself if it really makes sense to use it)
+-   必须保证缓存中的数据是更新的，你可不想提供过期的数据
+-   当第一个请求在执行的过程中，数据被保存到缓存，也有更多地请求进来，你必须决定是延迟其他的请求，从缓存中提供数据，还是其他的请求也如第一次请求一样从数据库来获取数据
+-   如果使用分布式缓存如Redis，缓存会是你的结构中的一个组件，所以你必须考虑一下是否有必要使用缓存
 
-Here's how to do it usually:
+我常常这么做：
 
-I like to start as simple and as clean as possible with everything I build. The same goes for API's.
+当我在搭建的时候我希望一切从简，API同理。
 
-When I start building an API and there are no particular reasons to use a cache straight away, I leave it out and see what happens over time. When reasons arise to use a cache, I can implement it then.
+首次搭建API的时候没有特别的原因使用缓存，我会等使用了一段时间之后，有理由使用缓存后再使用缓存。
 
-### Good security practices
+<h3 id="good-security-practices">好的安全实践</h3>
 
-Wow! This has been quite a great journey so far. We've touched on many important points and extended our API accordingly.
+这是一段不错的旅行，我们讲了许多API相关的重要观点，并且扩充了我们的API。
 
-We've spoken about best practices to increase the usability and performance of our API. Security is also a key factor for API's. You can build the best API, but when it is a vulnerable piece of software running on a server it becomes useless and dangerous.
+我们已经讲了提升API使用和性能的最佳实践。安全也是API重要的一环。如果你创建出一个绝佳的API，但是在服务器上运行的时候却十分脆弱，那这个API就变得无用且危险。
 
-The first and absolute must have is to use SSL/TLS because it's a standard nowadays for communications on the internet. It's even more important for API's where private data is send between the client and our API.
+首先必须使用的是SSL/TLS，因为这是当今互联网通讯的一个标准。特别是当API需要在客户端和服务器之间传输私人数据的时候。
 
-If you've got resources that should only be available to authenticated users, you should protect them with an authentication check.
+如果你需要给验证客户提供数据，必须使用验证手段来保护数据。
 
-In Express, for example, you can implement it as a middleware like we did with our cache for specific routes and check first if the request is authenticated before it accesses a resource.
+在Express中，我们可以像在缓存中那样在路由中插入特定的中间件来检查请求的真实性再获取资源。
 
-There may be also resources or interactions with our API we don't want to allow every user to request. Then you should come up with a role system for your users. So you have to add another checking logic to that route and validate if the user has the privilege to access this resource.
+API中的一些资源和交互是你可能不希望所有用户都可以请求的。这是就需要一个角色系统。在路由中添加一个检查逻辑来验证用户是否有权利来获取这些数据。
 
-User roles would also make sense in our use case when we only want specific users (like coaches) to create, update, and delete our workouts and records. Reading can be for everyone (also "regular" members).
+用户角色在我们的用例中也同样适用。比方说我们需要特定用户（教练）来使用创建、更新和删除训练和记录的功能。所有用户可以读取（同样可成为“普通”用户）。
 
-This can be handled inside another middleware we use for the routes we'd like to protect. For example our POST request to /api/v1/workouts for creating a new workout.
+这可以通过在路由中插入中间件来实现。如在我们的/api/v1/workouts的POST请求中插入。
 
-Inside the first middleware we'll check if the user is authenticated. If this is true, we'll go to the next middleware, that would be the one for checking the user's role. If the user has the appropriate role for accessing this resource the request is be passed to the corresponding controller.
+在第一个中间件中我们检查用户是不是真实的，如果为真，就进入下一个中间件来检查用户角色，如果用户符合获取资源的角色，就移交到对应的控制器。
 
-Inside the route handler it would look like this:
+路由处理器如下：
 
 ```javascript
-// In src/v1/routes/workoutRoutes.js
+// 在src/v1/routes/workoutRoutes.js
 ...
 
-// Custom made middlewares
+// 定制中间件
 const authenticate = require("../../middlewares/authenticate");
 const authorize = require("../../middlewares/authorize");
 
@@ -2346,42 +2346,42 @@ router.post("/", authenticate, authorize, workoutController.createNewWorkout);
 ...
 ```
 
-To read further and get some more best practices on that topic, I can suggest reading [this article](https://restfulapi.net/security-essentials/).
+这个话题相关的最佳实践，我推荐阅读[这篇文章](https://restfulapi.net/security-essentials/)。
 
-### Document your API properly
+<h3 id="document-your-api-properly">给API编写合适的文档</h3>
 
-I know that documentation is definitely not a favorite task of developers, but it's a necessary thing to do. Especially when it comes to an API.
+对于开发者来说编写文档确实不是一件让他们乐意干的活儿，但是是必须要做的事。特别是API的文档。
 
-Some people say:
+有人说过：
 
-> "An API is just as good as it's documentation"
+> “API得和文档一样优秀“
 
-I think there's a lot truth in this statement because if an API is not well documented it can't be used properly and therefore becomes useless. The documentation helps make developers' lives a lot easier, too.
+我认为这句话挺有道理，因为如果API的文档不好，这个API就不好使用。文档帮助开发者更方便地使用API。
 
-Always remember that the documentation is usually the first interaction consumers have with your API. The faster users can understand the documentation, the faster they can use the API.
+永远记住文档是API使用者和API交互的第一环节。用户能够更快读懂文档，就能够更快使用API。
 
-So, it's our job to implement a good and precise documentation. There are some great tools out there that make our lives easier.
+所以我们必须编写良好精确的文档。有一些比较好用的工具可以帮助我们实现。
 
-Like in other fields of computer science there's also some sort of standard for documenting API's called [OpenAPI Specification](https://swagger.io/specification/).
+和其他计算机科学领域一样，API文档也有标准，查看[OpenAPI细则](https://swagger.io/specification/).
 
-Let's see how we can create some documentation that justifies that specification. We'll use the [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express) and [swagger-jsdoc](https://www.npmjs.com/package/swagger-jsdoc) packages to accomplish this. You'll be amazed how awesome this is in a second!
+让我们来看看如何遵循这份规则来创建文档。 我们将使用[swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express) 和[swagger-jsdoc](https://www.npmjs.com/package/swagger-jsdoc) 工具包。你马上就会为这两个工具包能够做到的事感到惊奇。
 
-First, we setup our bare structure for our documentation. Because we've planned to have different versions of our API, the docs will be a bit different, too. That's the reason why I'd like to define our swagger file to spin up our documentation inside the corresponding version folder.
+首先我们设置好文档的基础结构。因为我们会有不同版本的API，所以文档会有些许不同，这就是为什么我会创建swagger文件，来处理不同版本的文档。
 
 ```bash
-# Install required npm packages 
+# 安装必须的NPM包
 npm i swagger-jsdoc swagger-ui-express 
 
-# Create a new file to setup the swagger docs 
+# 创建新的文件来设置swagger文档
 touch src/v1/swagger.js
 ```
 
 ```javascript
-// In src/v1/swagger.js
+// 在src/v1/swagger.js
 const swaggerJSDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
-// Basic Meta Informations about our API
+// API的基础信息
 const options = {
   definition: {
     openapi: "3.0.0",
@@ -2390,14 +2390,14 @@ const options = {
   apis: ["./src/v1/routes/workoutRoutes.js", "./src/database/Workout.js"],
 };
 
-// Docs in JSON format
+// 使用JSON格式的文档
 const swaggerSpec = swaggerJSDoc(options);
 
-// Function to setup our docs
+// 设置文档的函数
 const swaggerDocs = (app, port) => {
-  // Route-Handler to visit our docs
+  // 处理文档路由
   app.use("/api/v1/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-  // Make our docs in JSON format available
+  // 使得允许使用JSON格式文档
   app.get("/api/v1/docs.json", (req, res) => {
     res.setHeader("Content-Type", "application/json");
     res.send(swaggerSpec);
@@ -2410,18 +2410,18 @@ const swaggerDocs = (app, port) => {
 module.exports = { swaggerDocs };
 ```
 
-So, the setup is pretty straightforward. We've defined some basic metadata of our API, created the docs in JSON format, and created a function that makes our docs available.
+设置很简单，我们定义了API的基本数据，创建了JSON格式的文档，并创建了函数使文档可用。
 
-To control if everything is up and running, we log a simple message to the console where we can find our docs.
+为了检查一切可以运行，我们在控制台打印一个简单的信息。
 
-This will be the function we'll use in our root file, where we created the Express server to make sure that the docs are booted up as well.
+这是我们在根文件中会使用到的函数，在根文件中我们也创建了Express服务器，确保文档也被启动。
 
 ```javascript
-// In src/index.js
+// 在src/index.js
 const express = require("express");
 const bodyParser = require("body-parser");
 const v1WorkoutRouter = require("./v1/routes/workoutRoutes");
-// *** ADD ***
+// *** 添加 ***
 const { swaggerDocs: V1SwaggerDocs } = require("./v1/swagger");
 
 const app = express();
@@ -2432,29 +2432,29 @@ app.use("/api/v1/workouts", v1WorkoutRouter);
 
 app.listen(PORT, () => {
   console.log(`API is listening on port ${PORT}`);
-  /// *** ADD ***
+  /// *** 添加 ***
   V1SwaggerDocs(app, PORT);
 });
 ```
 
-Now you should see inside your terminal where your development server is running:
+现在你可以在你的控制台查看服务器是否在运行。
 
 ![Bildschirmfoto-2022-04-28-um-20.23.51-1](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-28-um-20.23.51-1.png)
 
-And when you visit localhost:3000/api/v1/docs, you should see our docs page already:
+当你登陆localhost:3000/api/v1/docs，你会看到我们的文档已经准备好了：
 
 ![Bildschirmfoto-2022-04-28-um-20.25.00-1](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-28-um-20.25.00-1.png)
 
-I'm amazed every time again how nicely this works. Now, the basic structure is setup and we can start to implement the docs for our endpoints. Let's go!
+每次我都会感叹运作得如此顺畅。现在基本结构已经设置好，我们可以来实现文档的端点了，让我们开始吧！
 
-When you take a look at **options.apis** in our swagger.js file, you will see that we've included the path to our workout routes and to the workout file inside our database folder. This is the most important thing in the setup that will make the whole magic happen.
+当你查看swagger.js文件中的 **options.apis** ，你会发现我们已经预留了处理训练路由和数据库中训练文件的路径。 这就是让魔法实现最重要的环节。
 
-Having those files defined inside our swagger options will allow us to use comments that are referencing OpenAPI and having syntax like in yaml files, that are necessary to setup our docs.
+在swagger中有这些选项使得我们可以使用评论来引用OpenAPI，并且使用类似yaml的语法来编写文档，这就是设置文档的所有必须条件了。
 
-Now we're ready to create docs for our first endpoint! Let's jump right into it.
+现在我们就可以开始来创建我们文档的第一个端点了，让我们开始吧！
 
 ```javascript
-// In src/v1/routes/workoutRoutes.js
+// 在src/v1/routes/workoutRoutes.js
 ...
 
 /**
@@ -2484,22 +2484,22 @@ router.get("/", cache("2 minutes"), workoutController.getAllWorkouts);
 ...
 ```
 
-This is basically the whole magic to add an endpoint to our swagger docs. You can look up all the specifications to describe an endpoint in their [great docs](https://swagger.io/docs/specification/about/).
+这基本上就是使用swagger文档来添加端点的所有魔法了，你可以在他们的[文档](https://swagger.io/docs/specification/about/)中查看所有细则。
 
-When you reload your docs page, you should see the following:
+当你重新加载文档页面，你会看到如下：
 
 ![Bildschirmfoto-2022-04-29-um-07.21.51-1](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-29-um-07.21.51-1.png)
 
-This should look very familiar if you've already worked with API's that have OpenAPI documentation. This is the view where all our endpoints will be listed and you can extend each one to get more information about it.
+如果你熟悉OpenAPI文档的话，这个画面对于你来说就不陌生。在这个页面中我们会看到所有端点，并且包含每一个端点的信息。
 
 ![Bildschirmfoto-2022-04-29-um-07.41.46-1](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-29-um-07.41.46-1.png)
 
-When you take a close look at our response, you'll see that we haven't defined the correct return value because we're just saying that our "data" property will be an array of empty objects.
+但你仔细看会发现我们还没有定义正确的返回值，因为我们的"data"属性仅设定为一个空对象。
 
-That's where schemas come into play.
+这时模式（schema）就发挥了作用。
 
 ```javascript
-// In src/databse/Workout.js
+// 在src/databse/Workout.js
 ...
 
 /**
@@ -2544,18 +2544,18 @@ That's where schemas come into play.
 ...
 ```
 
-In the example above we've created our first schema. Typically this definition will be inside your schema or model file where you've defined your database models.
+在上面的示例中，我们创建了第一个模式，通常在你的模式或者模型文件（model file）中的定义的是数据模型。
 
-As you can see it's also pretty straightforward. We've defined all the properties that make up a workout including the type and an example.
+这也很简单明了。我们定义了所有训练的属性，包括种类和例子。
 
-You can visit our docs page again and we'll receive another section holding our schemas.
+再次浏览文档页面，你会看到另一个由模式主导的板块。
 
 ![Bildschirmfoto-2022-04-29-um-07.29.49-1](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-29-um-07.29.49-1.png)
 
-This schema can be referenced now in our response of our endpoint.
+我们可以在端点的响应中引用这个模式。
 
 ```javascript
-// In src/v1/routes/workoutRoutes.js
+// 在src/v1/routes/workoutRoutes.js
 ...
 
 /**
@@ -2585,24 +2585,24 @@ router.get("/", cache("2 minutes"), workoutController.getAllWorkouts);
 ...
 ```
 
-Take close look at the bottom of our comment under "items". We're using "$ref" to create a reference and are referencing the path to our schema we've defined inside our workout file.
+仔细看最底部的评论，在"item"内部，我们使用了"$ref"来创建引用，引用我们在训练文件中定义的模式。
 
-Now we're able to show a full Workout in our response.
+现在我们就可以完整地展示训练的响应了。
 
 ![Bildschirmfoto-2022-04-29-um-07.44.12-1](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-29-um-07.44.12-1.png)
 
-Pretty cool, right? You might think "typing these comments out by hand can be a tedious task".
+很不错！你可能会认为“编写这些评论很繁琐”。
 
-This might be true, but think of this way. Those comments that are inside your codebase are also a great documentation for yourself as the API developer, too. You don't have to visit the docs all the time when you want to know the documentation of a specific endpoint. You can just look it up at one place inside your source code.
+这或许是真的，但是可以这样想，写在代码中的评论里可以帮助你作为一个API开发者更好地了解你的API。当你想要了解某一个端点的时候，你不要阅读所有文档，你可以直接在代码中找到。
 
-Documenting endpoints also helps you to understand them better and "forces" you to think of anything you might have forgotten to implement.
+为端点写文档也可以帮助你更好的了解这些端点，“逼迫”自己去思考在实现的过程当中缺失了什么。
 
-As you can see I've forgotten something indeed. The possible error responses and query parameters are still missing!
+你看我确实忘记了一些东西，我忘记写可能出现的错误响应，查询参数也缺少了。
 
-Let's fix that:
+让我们调整一下：
 
 ```javascript
-// In src/v1/routes/workoutRoutes.js
+// 在src/v1/routes/workoutRoutes.js
 ...
 
 /**
@@ -2654,36 +2654,36 @@ router.get("/", cache("2 minutes"),  workoutController.getAllWorkouts);
 ...
 ```
 
-When you look at the top of our comment under "tags", you can see that I've added another key called "parameters", where I've defined our query parameter for filtering.
+当你查看评论最上方"tag"内部，会发现我添加了另一个键叫做"parameters"，这里可以定义我们过滤所需的查询参数。
 
-Our docs are now displaying it properly:
+我们的文档也会展示出来：
 
 ![Bildschirmfoto-2022-04-29-um-08.03.00-1](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-29-um-08.03.00-1.png)
 
-And to document a possible error case we're only throwing a 5XX error at this point. So under "responses" you can see that I've also defined another documentation for that.
+现阶段展示可能出现的错误，我们只用抛出5XX报错就行。所以在"responses"内部，我们可以定义另一个文档。
 
-On our docs page it looks like this:
+现在我们的文档页面如下：
 
 ![Bildschirmfoto-2022-04-29-um-08.04.44-2](https://www.freecodecamp.org/news/content/images/2022/04/Bildschirmfoto-2022-04-29-um-08.04.44-2.png)
 
-Amazing! We've just created the full documentation for one endpoint. I'd highly recommend that you implement the rest of the endpoints on your own to get your own hands dirty with it. You'll learn a lot in the process!
+很棒！我们已经给一个端点创建了完整的文档，我强烈建议你为剩下的端点创建对应的文档，在这个过程中你会学到很多东西。
 
-As you might have seen, documenting your API must not always be a headache. I think the tools I introduced you to reduce your overall effort, and setting it all up is pretty straightforward.
+你或许也体会到了为API写文档并不总是一件头疼的事，使用我介绍给你的工具可以减轻你不少负担，搭建过程也十分简单明了。
 
-So we can concentrate on the important thing, the documentation itself. In my opinion, the documentation of swagger/OpenAPI is very good and there are a lot of great examples out there on the internet.
+这样你就可以把注意力集中在重要的事情上，编写文档内容。swagger和OpenAPI的文档非常不错，在网络上你也可以找到其他的优秀例子。
 
-Not having a documentation because of too much "extra" work shouldn't be reason anymore.
+那么因为太多“额外”工作而不写文档这个理由现在就不成立了。
 
-## Conclusion
+<h2 id="conclusion">总结</h2>
 
-Puuh, that was quite a fun ride. I really enjoyed writing this article for you and learned a lot as well.
+呼！这是一趟有趣的旅程！我非常享受写这篇文章也从中学习了很多。
 
-There might be best practices that are important while others might not seem to apply to your current situation. That's fine, because as I've said earlier, it's the responsibility of every engineer to pick out the best practices that can be applied to their current situation.
+这些最佳实践中有一些可能很重要。另一些可能不适用于你现在的情况。没关系，正如我一开始说的那样，对于开发者来说最重要的是能够根据情况挑选出最适合自己的方法。
 
-I tried my best to merge all those best practices I've made so far together while building our own API along the way. It made this a lot of fun for me!
+我尽力把所有最佳实践融汇到这个API项目中，我从中获得非常多的乐趣。
 
-I'd love to receive feedback of any kind. If there's anything you'd like to tell me (good or bad), don't hesitate to reach out:
+我十分乐意接受各种反馈，任何你想要告诉我的事情（好的或坏的），别迟疑，请告诉我：
 
-Here's [my Instagram](https://www.instagram.com/jean_marc.dev/) (you can also follow my journey of being a software developer)
+这是我的[Instagram](https://www.instagram.com/jean_marc.dev/) (你也可以关注我在软件工程师的成长道路上的见闻)
 
-See you next time!
+下篇文章见！

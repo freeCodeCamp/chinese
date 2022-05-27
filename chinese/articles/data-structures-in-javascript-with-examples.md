@@ -1,96 +1,96 @@
 > -  原文地址：[Data Structures in JavaScript – With Code Examples](https://www.freecodecamp.org/news/data-structures-in-javascript-with-examples/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Data Structures in JavaScript – With Code Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/pexels-clem-onojeghuo-175771.jpg)
 
-Hi everyone! In this article we're going to take a look at a key topic when it comes to computer science and software development: data structures.
+大家好，在这篇文章中，我们将看一看计算机科学和软件开发中的一个重要话题：数据结构。
 
-It's definitely a must know topic for anyone working in the software development world, but it can be hard to understand and even a bit intimidating when you're starting out.
+数据结构是任何一个软件开发从业人员必须知道的内容，但当你刚开始学习的时候，可能觉得这个话题难以理解，甚至有些吓人，
 
-In this article I'll try to give a simple explanation of data structures, what they are, when are they useful, and how we can implement them using JavaScript.
+在这篇文章中，我会简单介绍什么是数据结构，它们在什么时候有用，以及如何用JavaScript来实现这鞋数据结构。
 
-Let's go!
+让我们开始吧！
 
-## Table of contents
+## 目录
 
--   [What is a data structure?](#what-is-a-data-structure)
--   [Arrays](#arrays)
--   [Objects (hash tables)](#objects-hash-tables-)
--   [Stacks](#stacks)
--   [Queues](#queues)
--   [Linked lists](#linked-lists)
-    -   [Singly linked lists](#singly-linked-list)
-    -   [Doubly linked lists](#doubly-linked-lists)
--   [Trees](#trees)
-    -   [Binary trees](#binary-trees)
-    -   [Heaps](#heaps)
--   [Graphs](#graphs)
-    -   [Undirected and directed graphs](#undirected-and-directed-graphs)
-    -   [Weighted and unweighted graphs](#weighted-and-unweighted-graphs)
-    -   [How to represent graphs](#how-to-represent-graphs)
--   [Roundup](#roundup)
+-   [什么是数据结构？](#what-is-a-data-structure)
+-   [数组](#arrays)
+-   [对象（哈希表）](#objects-hash-tables-)
+-   [栈](#stacks)
+-   [队列](#queues)
+-   [链表](#linked-lists)
+    -   [单链表](#singly-linked-list)
+    -   [双链表](#doubly-linked-lists)
+-   [树](#trees)
+    -   [二叉树](#binary-trees)
+    -   [堆](#heaps)
+-   [图](#graphs)
+    -   [无向图和有向图](#undirected-and-directed-graphs)
+    -   [加权图和非加权图](#weighted-and-unweighted-graphs)
+    -   [如何表达图](#how-to-represent-graphs)
+-   [总结](#roundup)
 
-# What is a data structure?
+<h1 id="what-is-a-data-structure">什么是数据结构</h1>
 
-In computer science, a data structure is **a format to organize, manage and store data** in a way that allows **efficient access and modification**.
+在计算机科学中，数据结构是 **是一种组织、管理和存储数据的形式**，这种形式**方便数据访问和修改**。
 
-More precisely, a data structure is a **collection of** **data** **values**, the **relationships** among them, and the functions or **operations** that can be applied to that data.
+准确来讲，数据结构是**是数据值的合集**，数据间的**关系**，以及可以应用到数据的函数和**操作**。
 
-These definitions might sound a bit abstract at first, but think about it. If you've been coding for a little while, you must have used data structures before.
+这些概念咋一听有些抽象费解，但值得你去思考。如果你已经编写过一段时间代码，你肯定使用过数据结构。
 
-Have you used arrays and objects? Those are all data structures. All of them are a collection of values that relate to each other, and can be operated on by you.😉
+你使用过数组或者对象吗？它们就是数据结构。它们都是相互关联值的合集，并且可供你操作。😉
 
 ```javascript
-// A collection of the values 1, 2 and 3
+// 值1、2、3的合集
 const arr = [1, 2, 3]
 
-// Each value is related to one another, in the sense that each is indexed in a position of the array
+// 每一个值都是彼此相关联的，因为每一个值都在数组中具备自己的索引序号
 const indexOfTwo = arr.indexOf(2)
 console.log(arr[indexOfTwo-1]) // 1
 console.log(arr[indexOfTwo+1]) // 3
 
-// We can perform many operations on the array, like pushing new values into it
+// 我们可以对数组进行很多操作，例如给数组添加一个新的值
 arr.push(4)
 console.log(arr) // [1,2,3,4]
 ```
 
-JavaScript has **primitive (built in)** and **non-primitive (not built in)** data structures.
+JavaScript包含**原始（内置）**和**非原始（非内置）** 两种数据结构。
 
-Primitive data structures come by default with the programming language and you can implement them out of the box (like arrays and objects). Non-primitive data structures don't come by default and you have to code them up if you want to use them.
+原始数据结构是编程语言默认的、可以拿来就用（如数组和对象）的；而非原始数据结构不是默认的、如果需要使用的话，你必须先编写出来。
 
-Different data structures exist because some of them are better suited for certain kind of operations. You will probably be able to tackle most programming tasks with built-in data structures, but for some very specific tasks a non-primitive data structure may come in handy.
+不同的数据结构对应不同的操作场景。你或许可以使用内置数据结构处理大部分编程任务，但当遇到特殊任务的时候，非原始数据机构可以派上用场。
 
-Now let's go through the most popular data structures out there, and see how each of them works, in what occasions they're useful, and how we can code them up in JavaScript.
+让我们一起来看一看最流行的数据结构，它们是怎么运作的，在哪些场合适用，以及如何使用JavaScript编写这些数据结构。
 
-# Arrays
+<h1 id="arrays">数组</h1>
 
-An **array** is a collection of items stored at contiguous memory locations.
+**数组**是存储在连续内存位置的项目合集。
 
-Each item can be accessed through its **index** (position) number. Arrays always start at index 0, so in an array of 4 elements we could access the 3rd element using the index number 2.
+数组内的每一个元素都可以通过其**索引**（位置）访问。数组的索引通常从0开始，所以在一个包含4个元素的数组中，第三个元素的索引为2.
 
 ```javascript
 const arr = ['a', 'b', 'c', 'd']
 console.log(arr[2]) // c
 ```
 
-The **length** property of an array is defined as the number of elements it contains. If the array contains 4 elements, we can say the array has a length of 4.
+数组的**长度**属性定义了数组包含的元素数量。如果一个数组包含4个元素，我们就可以说这个数组的长度为4.
 
 ```javascript
 const arr = ['a', 'b', 'c', 'd']
 console.log(arr.length) // 4
 ```
 
-In some programming languages, the user can only store values of the same type in one array and the length of the array has to be defined at the moment of its creation and can't be modified afterwards.
+在一些编程语言中，一个数组中只能存储同一种数据类型的元素，在数组被创建的时候就必须定义数组的长度，并且不可以修改。
 
-In JavaScript that's not the case, as we can store **values of any type** in the same array and the **length** of it can be **dynamic** (it can grow or shrink as much as necessary).
+但JavaScript的数组并不是这样，在JavaScript中，同一数组可以存储**任何数据类型**的元素，数组**长度**是**动态**的（也就是说可以按需更改数组长度）。
 
 ```javascript
 const arr = ['store', 1, 'whatever', 2, 'you want', 3]
 ```
 
-Any data type can be stored in an array, and that includes arrays too. An array that has other arrays within itself is called a **multidimensional array**.
+JavaScript数组可以存储任何数据类型的值，也就意味着可以存储数组。一个包含其他数组的数组被称为**多维数组**。
 
 ```javascript
 const arr = [
@@ -100,19 +100,19 @@ const arr = [
 ]
 ```
 
-In JavaScript, arrays come with many built-in properties and methods we can use with different purposes, such as adding or deleting items from the array, sorting it, filtering its values, know its, length and so on. You can find a full list of array methods [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array). 😉
+JavaScript数组有许多内置的属性和方法，可以针对不同目的来使用，如从数组添加或者删除元素、给数组排序、过滤数组，以及我们知道的数组长度等，数组的完全属性和方法列表可以在[这里](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)找到。 😉
 
-As I mentioned, in arrays, each element has an index defined by its position in the array. When we add a new item at the end of the array, it just takes the index number that follows the previous last item in the array.
+在数组中每一个元素都对应一个索引，索引跟元素位于数组位置相关。如果我们在数组末尾添加一个新的元素，则这个元素的索引为之前数组最后一位索引加一。
 
-But when we add/delete a new item **at the beginning or the middle** of the array, the **indexes** of all the elements that come after the element added/deleted **have to be changed**. This of course has a computational cost, and is one of the weaknesses of this data structure.
+但当我们想要在数组的**开头或者中间**添加或者删除元素的话，添加或删除的这个元素之后的所有元素的**索引**都会**变化**。这样会增加计算成本，也是这种数据结构的缺点之一。
 
-Arrays are useful when we have to store individual values and add/delete values from the end of the data structure. But when we need to add/delete from any part of it, there are other data structures that perform more efficiently (we'll talk about them later on).
+当需要存储独立值以及在数据结构末尾添加和删除值的时候，数组十分有效。但当需要在结构中添加删除元素，其他数据结构会更有效。（我们会在后文提到）
 
-# Objects (hash tables)
+<h1 id="objects-hash-tables-">对象（哈希表）</h1>
 
-In JavaScript, an **object** is a collection of **key-value pairs**. This data structure is also called **map**, **dictionary** or **hash-table** in other programming languages.
+在JavaScript中，**对象**是**键值对**的集合。在其他编程语言中，这种数据结构也被称作**映射**、**字典**和**哈希表**。
 
-A typical JS object looks like this:
+一个典型的JS对象如下：
 
 ```javascript
 const obj = {
@@ -122,11 +122,11 @@ const obj = {
 }
 ```
 
-We use curly braces to declare the object. Then declare each key followed by a colon, and the corresponding value.
+我们使用花括号声明对象，在每一个键之后紧跟一个冒号，和对应的值。
 
-An important thing to mention is that each key has to be unique within the object. You can't have two keys with the same name.
+需要注意的是，在同一个对象中所有的键都是独一无二的，不可以出现两个命名相同的键。
 
-Objects can store both values and functions. When talking about objects, values are called properties, and functions are called methods.
+对象可以存储值和函数。在对象的语境中，我们将值被叫做属性，将函数被叫做方法。
 
 ```javascript
 const obj = {
@@ -135,7 +135,7 @@ const obj = {
 }}
 ```
 
-To access properties you can use two different syntaxes, either `object.property` or `object["property"]`. To access methods we call `object.method()`.
+访问属性有两种语法， `object.property`和`object["property"]`。访问方法可以调用`object.method()`。
 
 ```javascript
 console.log(obj.prop1) // "Hello!"
@@ -143,7 +143,7 @@ console.log(obj["prop1"]) // "Hello!"
 obj.prop3() // "I'm a property dude!"
 ```
 
-The syntax to assign new values is quite similar:
+赋值的语法也类似：
 
 ```javascript
 obj.prop4 = 125
@@ -155,11 +155,11 @@ console.log(obj["prop5"]) // "The new prop on the block"
 obj.prop6() // "yet another example"
 ```
 
-Like arrays, in JavaScript objects come with many built-in methods that allow us to perform different operations and get information from a given object. A full list can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object).
+和数组一样，JavaScript对象也有内置的方法供我们进行不同的操作，或者获取特定对象的信息，完整内容可以查看[这里](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)。
 
-Objects are a good way to group together data that have something in common or are somehow related. Also, thanks to the fact that property names are unique, objects come in handy when we have to separate data based on a unique condition.
+对象是将有相同之处或者相互关联的数据放在一起的好办法，同时，因为对象的属性是独一无二的，当想要根据特定条件来区分数据的时候，对象可以派上用场。
 
-An example could be counting how many people like different foods:
+可以使用对象来记录有多少人喜欢不同的食物：
 
 ```javascript
 const obj = {
@@ -169,45 +169,45 @@ const obj = {
 }
 ```
 
-# Stacks
+<h1 id="stacks">栈</h1>
 
-Stacks are a data structure that store information in the form of a list. They allow only adding and removing elements under a **LIFO pattern (last in, first out)**. In stacks, elements can't be added or removed out of order, they always have to follow the LIFO pattern.
+栈是一种以列表的方式来存储信息的数据结构，添加和删除栈的元素遵循**LIFO模式（后进先出）**。在栈中，不允许按照元素顺序来添加或删除元素，只能遵循LIFO模式。
 
-To understand how this works, imagine a stack of papers on top of your desk. You can only add more papers to the stack by placing them on top of all the others. And you can remove a paper from the stack only by taking the one that is on top of all the others. Last in, first out. LIFO. 😉
+你可以想象桌面有一叠纸，来思考栈是如何运作的。你只能在这叠纸上方添加更多纸张，也只能在最上方取出纸张。这就是LIFO，后进先出。 😉
 
 ![istockphoto-178580846-170667a](https://www.freecodecamp.org/news/content/images/2022/05/istockphoto-178580846-170667a.jpg)
 
-A stack of papers
+一叠纸
 
-Stacks are useful when we need to make sure elements follow the **LIFO pattern**. Some examples of stack usage are:
+只要确认元素遵循**LIFO模式**，那么栈结构就可以派上用场。下面是栈的使用场景：
 
--   JavaScript's call stack.
--   Managing function invocations in various programming languages.
--   The undo/redo functionality many programs offer.
+-   JavaScript的调用栈
+-   在各种编程语言中管理函数调用
+-   许多程序提供的撤销/重做功能
 
-There's more than one way to implement a stack, but probably the simplest is using **an array with its push and pop methods**. If we only use pop and push for adding and deleting elements, we'll always follow the LIFO pattern and so operate over it like a stack.
+有不止一种实现栈的方法，但是最简单的或许是**在数组中使用push和pop方法**。如果你仅通过pop和push的方法来添加和删除元素，你就遵循了LIFO模式，用栈的方法操作了数组。
 
-Another way is to implement it like a list, which may look like this:
+另一个方法是列表，实现如下：
 
 ```javascript
-// We create a class for each node within the stack
+// 为栈的每一个节点创建一个类
 class Node {
-    // Each node has two properties, its value and a pointer that indicates the node that follows
+    // 每一个节点包含两个属性，其值以及一个指向下一个节点的指针
     constructor(value){
         this.value = value
         this.next = null
     }
 }
 
-// We create a class for the stack
+// 为栈创建一个类
 class Stack {
-    // The stack has three properties, the first node, the last node and the stack size
+    // 栈有三个属性，第一个节点，最后一个节点，以及栈的大小
     constructor(){
         this.first = null
         this.last = null
         this.size = 0
     }
-    // The push method receives a value and adds it to the "top" of the stack
+    // push方法接受一个值，并将其添加到栈的“顶端”
     push(val){
         var newNode = new Node(val)
         if(!this.first){
@@ -220,7 +220,7 @@ class Stack {
         }
         return ++this.size
     }
-    // The pop method eliminates the element at the "top" of the stack and returns its value
+    // pop方法删除栈“顶端”的值，并返回这个值
     pop(){
         if(!this.first) return null
         var temp = this.first
@@ -252,53 +252,53 @@ stck.push("value4")
 console.log(stck.pop()) // value4
 ```
 
-The big O of stack methods is the following:
+栈方法的大O为：
 
--   Insertion - O(1)
--   Removal - O(1)
--   Searching - O(n)
--   Access - O(n)
+-   插入 - O(1)
+-   删除 - O(1)
+-   查找 - O(n)
+-   访问 - O(n)
 
-# Queues
+<h1 id="queues">队列</h1>
 
-Queues work in a very similar way to stacks, but elements follow a different pattern for add and removal. Queues allow only a **FIFO pattern (first in, first out)**. In queues, elements can't be added or removed out of order, they always have to follow the FIFO pattern.
+队列和栈的运作方式类似，但是元素遵循另一个添加和删除的模式。队列值遵循**FIFO先进先出模式**。在队列中，元素不按照顺序添加或删除，仅遵循FIFO模式。
 
-To understand this, picture people making a queue to buy food. The logic here is that if you get the the queue first, you'll be the first to be served. If you get there first, you'll be the first out. FIFO.😉
+下面这张排队购买食物的图可以帮助你思考这个概念。这里的逻辑是如果你先加入到队伍中，你就会先被服务。如果你是队伍的第一个，你就第一个离开队伍。FIFO。😉
 
 ![pexels-picography-4481](https://www.freecodecamp.org/news/content/images/2022/05/pexels-picography-4481.jpg)
 
-A queue of clients
+一队列的顾客
 
-Some examples of queue usage are:
+队列的使用场景：
 
--   Background tasks.
--   Printing/task processing.
+-   后台任务
+-   打印/任务处理
 
-Same as with queues, there's more than one way to implement a stack. But probably the simplest is using an array with its push and shift methods.
+和栈一样，有不止一种实现队列的方式。但是最简单的是在数组中使用push和shift方法。
 
-If we only use push and shift for adding and deleting elements, we'll always follow the FIFO pattern and so operate over it like a queue.
+如果我们仅使用push和shift方法来添加和删除元素，我们就在数组中遵循了FIFO模式，将数组按照队列来操作。
 
-Another way is to implement it like a list, which may look like this:
+另一个实现办法是列表，如下：
 
 ```javascript
-// We create a class for each node within the queue
+// 为队列每一个节点的类
 class Node {
-    // Each node has two properties, its value and a pointer that indicates the node that follows
+    //每一个节点包含两个属性，其值以及一个指向下一个节点的指针
     constructor(value){
         this.value = value
         this.next = null
     }
 }
 
-// We create a class for the queue
+// 为队列创建类
 class Queue {
-    // The queue has three properties, the first node, the last node and the stack size
+    // 队列包含三个属性，第一个节点，最后一个节点，队列的大小
     constructor(){
         this.first = null
         this.last = null
         this.size = 0
     }
-    // The enqueue method receives a value and adds it to the "end" of the queue
+    // enqueue方法接受一个值并将其添加到队列的末端
     enqueue(val){
         var newNode = new Node(val)
         if(!this.first){
@@ -310,7 +310,7 @@ class Queue {
         }
         return ++this.size
     }
-    // The dequeue method eliminates the element at the "beginning" of the queue and returns its value
+    // dequeue方法删除队列“最前端”的元素，并返回
     dequeue(){
         if(!this.first) return null
 
@@ -343,62 +343,61 @@ quickQueue.enqueue("value4")
 console.log(quickQueue.dequeue()) // value1
 ```
 
-The big O of queue methods is the following:
+队列方法的大O：
 
--   Insertion - O(1)
--   Removal - O(1)
--   Searching - O(n)
--   Access - O(n)
+-   插入 - O(1)
+-   删除 - O(1)
+-   查询 - O(n)
+-   访问 - O(n)
 
-# Linked lists
+<h1 id="linked-lists">链表</h1>
 
-**Linked lists** are a type of data structure that store values in the form of a **list**. Within the list, each value is considered a **node**, and each node is connected with the following value in the list (or null in case the element is the last in the list) through a **pointer**.
+**链表**是一种以**列表**存储值的数据结构，在列表中每一个值都被当作为一个**节点**，每一个节点都通过**指针**与列表的下一个值关联（若该节点是列表最后一个元素则下一个值为null）。
 
-There are two kinds of linked lists, **singly linked lists** and **doubly linked lists.** Both work very similarly, but the difference is in singly linked lists each node has a **single pointer** that indicates the **next node** on the list. While in doubly linked lists, each node has **two pointers**, one pointing to the **next node** and another pointing to the **previous node**.
-
+有两种链表：**单链表**和**双链表**。两种链表的运作方式类似，但是在单链表中每一个节点有**单指针**指向**下一个节点**，在双链表中，每一个节点有**双指针**，一个指向**下一个节点**，一个指向**上一个节点**。
 ![linked-list](https://www.freecodecamp.org/news/content/images/2022/05/linked-list.png)
 
-In singly linked list each node has a single pointer
+在单链表中每一个节点有单指针
 
 ![doubly-linked-list](https://www.freecodecamp.org/news/content/images/2022/05/doubly-linked-list.png)
 
-In doubly linked list each node has a two pointers
+在双链表中每一个节点有双指针
 
-The first element of the list is considered the **head**, and the last element is considered the **tail**. Like with arrays, the **length** property is defined as the number of elements the list contains.
+列表的第一个元素被当作**头**，列表的最后一个元素被当作**尾**。和数组一样，列表的**长度**由列表中的元素个数决定。
 
-The main differences compared with arrays are the following:
+列表和数组主要不同包括：
 
--   **Lists don't have indexes**. Each value only "knows" the values to which it's connected through pointers.
--   Since lists don't have indexes, we **can't access values randomly**. When we want to access a value, we always have to look for it by iterating through the list starting from its head or tail.
--   The good thing of not having indexes, is that **insertion/deletion** in any part of the list **is more efficient** than with arrays. We just have to redirect the pointers of the "neighbor" values, while in arrays, values need to be re-indexed.
+-   **列表没有索引**。列表中的每一个值仅“知道”其通过指针连接到的值
+-   因为列表没有索引，所以我们**不能随机访问列表中的元素**。当我们想要访问一个值，必须通过从头到尾遍历整个列表的方法
+-   没有索引的好处是**添加或删除**列表中任意部分比在数组中更高效。我们只需要重新分配指针指向的“相邻”值，但是在数组中，我们需要重新分配余下所有值的索引
 
-Like any data structure, different **methods** are implemented in order to operate over the data. The most common ones include: push, pop, unshift, shift, get, set, insert, remove, and reverse.
+和其他所有数据结构一样，可以采用不同的**方法**来操作以链表存储的数据。通常会使用：push（在尾部添加）、pop（在尾部删除）、unshift（在头部添加）、shift（在头部删除）、get（获取）、set（设置）、remove（删除）和reverse（反转）。
 
-First let's see how to implement a singly linked list and then a doubly linked list.
+我们先来看看如何实现单链表，再来看看如何实现双链表。
 
-## Singly linked list
+<h2 id="singly-linked-list">单链表</h2>
 
-A full implementation of a singly linked list could look like this:
+完全实现单链表的代码如下：
 
 ```javascript
-// We create a class for each node within the list
+// 为列表中的每一个节点创建一个类
 class Node{
-    // Each node has two properties, its value and a pointer that indicates the node that follows
+    // 每一个节点有两个属性，其值和指向下一个值的指针
     constructor(val){
         this.val = val
         this.next = null
     }
 }
 
-// We create a class for the list
+//为列表创建一个类
 class SinglyLinkedList{
-    // The list has three properties, the head, the tail and the list size
+    // 列表有三个属性，头、尾和列表大小
     constructor(){
         this.head = null
         this.tail = null
         this.length = 0
     }
-    // The push method takes a value as parameter and assigns it as the tail of the list
+    // 向push方法传入一个值作为参数，并将其赋值给队列的尾
     push(val) {
         const newNode = new Node(val)
         if (!this.head){
@@ -411,7 +410,7 @@ class SinglyLinkedList{
         this.length++
         return this
     }
-    // The pop method removes the tail of the list
+    // pop方法删除队列尾
     pop() {
         if (!this.head) return undefined
         const current = this.head
@@ -429,7 +428,7 @@ class SinglyLinkedList{
         }
         return current
     }
-    // The shift method removes the head of the list
+    // shift方法删除队列头
     shift() {
         if (!this.head) return undefined
         var currentHead = this.head
@@ -440,7 +439,7 @@ class SinglyLinkedList{
         }
         return currentHead
     }
-    // The unshift method takes a value as parameter and assigns it as the head of the list
+    // unshift方法将一个值作为参数并赋值给队列的头
     unshift(val) {
         const newNode = new Node(val)
         if (!this.head) {
@@ -452,7 +451,7 @@ class SinglyLinkedList{
         this.length++
         return this
     }
-    // The get method takes an index number as parameter and returns the value of the node at that index
+    // get方法将一个索引作为参数，并返回此索引所在节点的值
     get(index) {
         if(index < 0 || index >= this.length) return null
         const counter = 0
@@ -463,7 +462,7 @@ class SinglyLinkedList{
         }
         return current
     }
-    // The set method takes an index number and a value as parameters, and modifies the node value at the given index in the list
+    // set方法将索引和值作为参数，修改队列中索引所在的节点值为传入的参数值
     set(index, val) {
         const foundNode = this.get(index)
         if (foundNode) {
@@ -472,7 +471,7 @@ class SinglyLinkedList{
         }
         return false
     }
-    // The insert method takes an index number and a value as parameters, and inserts the value at the given index in the list
+    // insert方法将索引和值作为参数，在队列索引位置插入传入的值
     insert(index, val) {
         if (index < 0 || index > this.length) return false
         if (index === this.length) return !!this.push(val)
@@ -486,7 +485,7 @@ class SinglyLinkedList{
         this.length++
         return true
     }
-    // The remove method takes an index number as parameter and removes the node at the given index in the list
+    // remove方法将索引作为参数，在队列中删除索引所在的值
     remove(index) {
         if(index < 0 || index >= this.length) return undefined
         if(index === 0) return this.shift()
@@ -497,7 +496,7 @@ class SinglyLinkedList{
         this.length--
         return removed
     }
-    // The reverse method reverses the list and all pointers so that the head becomes the tail and the tail becomes the head
+    // reverse方法反转队列和所有指针，让队列的头尾对调
     reverse(){
       const node = this.head
       this.head = this.tail
@@ -515,25 +514,25 @@ class SinglyLinkedList{
 }
 ```
 
-Singly linked lists methods have the following complexities:
+单链表的复杂度为：
 
--   Insertion - O(1)
--   Removal - O(n)
--   Search - O(n)
--   Access - O(n)
+-   插入 - O(1)
+-   删除 - O(n)
+-   查找 - O(n)
+-   访问 - O(n)
 
-## Doubly linked lists
+<h2 id="doubly-linked-lists">双链表</h2>
 
-As mentioned, the difference between doubly and singly linked lists is that doubly linked lists have their nodes connected through pointers with both the previous and the next value. On the other hand, singly linked lists only connect their nodes with the next value.
+如上文所述，双链表和单链表的区别在于双链表的前后两个节点之间由双指针相互连接，而单链表只有一个指向下一个值的指针。
 
-This double pointer approach allows doubly linked lists to perform better with certain methods compared to singly linked lists, but at a cost of consuming more memory (with doubly linked lists we need to store two pointers instead of one).
+双指针使得在特定场景下双链表比单链表的表现更好，但是也增加了存储空间的成本（存储双指针比单指针更占位置）。
 
-A full implementation of a doubly linked list might look a bit like this:
+完全实现双链表的代码类似于：
 
 ```javascript
-// We create a class for each node within the list
+// 创建列表节点的类
 class Node{
-    // Each node has three properties, its value, a pointer that indicates the node that follows and a pointer that indicates the previous node
+    // 每一个节点包含三个属性，其值，一个指向上一个节点的指针，一个指向下一个节点的指针
     constructor(val){
         this.val = val;
         this.next = null;
@@ -541,15 +540,15 @@ class Node{
     }
 }
 
-// We create a class for the list
+// 创建一个列表的类
 class DoublyLinkedList {
-    // The list has three properties, the head, the tail and the list size
+    // 列表有三个属性，头，尾和列表的大小
     constructor(){
         this.head = null
         this.tail = null
         this.length = 0
     }
-    // The push method takes a value as parameter and assigns it as the tail of the list
+    // push方法将值作为参数并赋值给队列尾
     push(val){
         const newNode = new Node(val)
         if(this.length === 0){
@@ -563,7 +562,7 @@ class DoublyLinkedList {
         this.length++
         return this
     }
-    // The pop method removes the tail of the list
+    // pop方法删除队列尾
     pop(){
         if(!this.head) return undefined
         const poppedNode = this.tail
@@ -578,7 +577,7 @@ class DoublyLinkedList {
         this.length--
         return poppedNode
     }
-    // The shift method removes the head of the list
+    // shift方法删除队列头
     shift(){
         if(this.length === 0) return undefined
         const oldHead = this.head
@@ -593,7 +592,7 @@ class DoublyLinkedList {
         this.length--
         return oldHead
     }
-    // The unshift method takes a value as parameter and assigns it as the head of the list
+    // unshift方法将值作为参数并赋值给队列头
     unshift(val){
         const newNode = new Node(val)
         if(this.length === 0) {
@@ -607,7 +606,7 @@ class DoublyLinkedList {
         this.length++
         return this
     }
-    // The get method takes an index number as parameter and returns the value of the node at that index
+    // get方法将索引作为参数并返回队列对应索引的值
     get(index){
         if(index < 0 || index >= this.length) return null
         let count, current
@@ -628,7 +627,7 @@ class DoublyLinkedList {
         }
         return current
     }
-    // The set method takes an index number and a value as parameters, and modifies the node value at the given index in the list
+    // set方法将索引和值作为参数，修改队列中索引所在的节点值为传入的参数值
     set(index, val){
         var foundNode = this.get(index)
         if(foundNode != null){
@@ -637,7 +636,7 @@ class DoublyLinkedList {
         }
         return false
     }
-    // The insert method takes an index number and a value as parameters, and inserts the value at the given index in the list
+    // insert方法将索引和值作为参数，将值插入队列响应索引位置
     insert(index, val){
         if(index < 0 || index > this.length) return false
         if(index === 0) return !!this.unshift(val)
@@ -655,87 +654,87 @@ class DoublyLinkedList {
 }
 ```
 
-The big O of doubly linked lists methods is the following:
+双链表的大O为：
 
--   Insertion - O(1)
--   Removal - O(1)
--   Search - O(n)
--   Access - O(n)
+-   插入 - O(1)
+-   删除 - O(1)
+-   搜索 - O(n)
+-   访问 - O(n)
 
-# Trees
+<h1 id="trees">树</h1>
 
-Trees are a data structures that link nodes in a **parent/child relationship**, in the sense that there're nodes that depend on or come off other nodes.
+树是一种以**父子关系**相连的节点之间的数据结构，也就是说节点之间相互依赖。
 
 ![images](https://www.freecodecamp.org/news/content/images/2022/05/images.png)
 
-A tree
+树结构
 
-Trees are formed by a **root** node (the first node on the tree), and all the nodes that come off that root are called **children**. The nodes at the bottom of the tree, which have no "descendants", are called **leaf nodes**. And the **height** of the tree is determined by the number of parent/child connections it has.
+树由**根**节点（树的第一个节点）开始，其他所有由根发展出来的节点被称作**子节点**。书结构最底部的节点没有“后代”，被称为**叶节点**。树的**高度**由父子节点相连的层数决定。
 
-Unlike linked lists or arrays, trees are **non linear**, in the sense that when iterating the tree, the program flow can follow different directions within the data structure and hence arrive at different values.
+和链表及数组不同的地方是，树是**非线性**的，程序可以在数据结构内选择不同的方向遍历数据，从而得出不同的值。
 
-While on linked lists or arrays, the program can only iterate the data structure from one extreme of it to the other, always following the same path.
+而在链表或者数组中，程序由一个端点开始遍历到另一端点，每一次都重复同样的路径。
 
-An important requirement for tree formation is that the **only valid connection between nodes is from parent to child** . Connection between siblings or from child to parent are not allowed in trees (these types of connections form graphs, a different type of data structure). Another important requirement is that trees must have **only one root**.
+构成树结构一个重要的要素是**仅从父到子连接的节点是合法的**。“亲属”之间或者由子向父节点是我连接都不被允许（这样的连接会形成图表，是另一种数据结构），另一个重要的要素是树只能有**一个根节点**。
 
-Some examples of tree usage in programming are:
+程序中使用树的场景有：
 
--   The DOM model.
--   Situation analysis in artificial intelligence.
--   File folders in operating systems.
+-   DOM模型
+-   人工智能中的情景分析
+-   操作系统中的文件夹
 
-There're many different **types** of trees. In each type of tree, values may be organized following different patterns that make this data structure more suitable to use when facing different kinds of problems. The most commonly used types of trees are binary trees and heaps.
+有不同**类型**的树，每一种类型的树的值都遵从不同的模式而组织起来，这样也就适用于不同的解决问题的场景。最常见的两种树是二叉树和堆。
 
-## Binary trees
+<h2 id="binary-trees">二叉树</h2>
 
-Binary trees are a type of tree in which each node has a maximum of two children.
+二叉树是每个节点最多只有两个节点的树结构。
 
 ![binary-tree](https://www.freecodecamp.org/news/content/images/2022/05/binary-tree.png)
 
-A binary tree
+二叉树
 
-One key situation in which binary trees are really useful is in searching. And for searching, a certain type of binary tree is used, called **binary search trees (BSTs)**.
+二叉树的一个重要使用场景是搜索。用于搜索的二叉树被称为**二叉查找树（BST）**。
 
-BSTs are just like binary trees but information within them is ordered in a way that makes them a suitable data structure for searching.
+BST和普通二叉树类似，只是内部的数据结构被排列成易于搜索的结构。
 
-In BST, values are ordered so that each node that descends to the left side of its parent must have a value less than its parent, and each node that descends to the right side of its parent must have a value bigger than its parent.
+在BST中的值是排过序的，所有节点的左子节点的值要小于父节点，所有节点的右子节点的值要大于父节点。
 
 ![download--1-](https://www.freecodecamp.org/news/content/images/2022/05/download--1-.png)
 
-A binary search tree
+二叉查找树
 
-This order in its values make this data structure great for searching, since on every level of the tree we can identify if the value being looked for is greater or less than the parent node, and from that comparison progressively discard roughly half of the data until we reach our value.
+这样给值排过序的数据结构非常适合做搜索，因为树的每一层都可以对比是比父节点大还是小，在对比的过程中，我们可以逐步舍弃掉一半的数据得到最终我们需要的值。
 
-When **inserting or deleting values**, the algorithm will follow the following steps:
+当**插入或者删除值**的时候，我们的算法会进行如下步骤：
 
--   Check if there's a root node.
--   If there is, check if the value to add/delete is greater or smaller than the node.
--   If it is smaller, check if there is a node to the left and repeat the previous operation. If there's not, add/remove the node in that position.
--   If it is greater, check if there is a node to the right and repeat the previous operation. If there's not, add/remove the node in that position.
+-   检查是否存在根节点
+-   如果存在根节点，检查这个需要添加或删除的值是比根节点大还是小
+-   如果比根节点小，则检查左边是否有节点，并重复上面的步骤；如果左边没有节点，则将这个节点在当下位置添加或者删除
+-   如果比根节点大，则检查右边有没有节点，并重复上述步骤；如果有变没有节点，则将这个节点在当下位置添加或者删除
 
-Searching in BSTs is very similar, only instead of adding/deleting values we check the nodes for equality with the value we're looking for.
+在BST中查找与上述方法类似，但是没有添加或者删除值，取而代之的是与节点比较我们搜寻的值的大小。
 
-The **big O** complexity of these operations is **logarithmic (log(n))**. But it's important to recognize that for this complexity to be achieved, the tree must have a balanced structure so that in each search step, approximately half of the data can be "discarded". If more values are stored to one side or another of three, the efficiency of the data structure is affected.
+树的**大O**复杂度呈**对数（log（n））**。但是需要注意的是，想要实现这样的时间复杂度，必须保证树结构的每一步都是左右对称的，这样我们才可以在搜索的过程中“丢弃”一半的数据。如果在任意一边存储的值更多，树结构的搜索效率就会打折扣。
 
-An implementation of a BST might look like this:
+实现BST的方法如下：
 
 ```javascript
-// We create a class for each node within the tree
+// 我们创建树的节点
 class Node{
-    // Each node has three properties, its value, a pointer that indicates the node to its left and a pointer that indicates the node to its right
+    // 每一个节点有三个属性，其值，以及指向左节点的指针和指向右节点的指针
     constructor(value){
         this.value = value
         this.left = null
         this.right = null
     }
 }
-// We create a class for the BST
+// 创建BST的类
 class BinarySearchTree {
-    // The tree has only one property which is its root node
+    // 这个树只有一个属性即根节点
     constructor(){
         this.root = null
     }
-    // The insert method takes a value as parameter and inserts the value in its corresponding place within the tree
+    // insert方法将一个值做为参数，并将值插入树对应的位置
     insert(value){
         const newNode = new Node(value)
         if(this.root === null){
@@ -760,8 +759,8 @@ class BinarySearchTree {
             }
         }
     }
-    // The find method takes a value as parameter and iterates through the tree looking for that value
-    // If the value is found, it returns the corresponding node and if it's not, it returns undefined
+    // find方法将值作为参数，遍历树寻找对应的值
+    // 如果找到了，返回找到的值，如果没有找到，返回undefined
     find(value){
         if(this.root === null) return false
         let current = this.root,
@@ -778,7 +777,7 @@ class BinarySearchTree {
         if(!found) return undefined
         return current
     }
-    // The contains method takes a value as parameter and returns true if the value is found within the tree
+    // contain方法将值作为参数如果找到树中对应的值返回true，如果没有返回false
     contains(value){
         if(this.root === null) return false
         let current = this.root,
@@ -797,97 +796,98 @@ class BinarySearchTree {
 }
 ```
 
-## Heaps
+<h2 id="heaps">堆</h2>
 
-Heaps are another type of tree that have some particular rules. There are two main types of heaps, **MaxHeaps** and **MinHeaps**. In MaxHeaps, parent nodes are always greater than its children, and in MinHeaps, parent nodes are always smaller than its children.
+堆是有特殊规则的树结构。主要有两种形式的堆：**最大堆和最小堆**。在最大堆中，父节点的值必须比子节点大；在最小堆中，父节点的值必须比子节点小。
 
 ![max_heap_example](https://www.freecodecamp.org/news/content/images/2022/05/max_heap_example.jpg)
 
-A max heap
+最大堆
 
 ![min_heap_example](https://www.freecodecamp.org/news/content/images/2022/05/min_heap_example.jpg)
 
-A min heap
+最小堆
 
-In this data structure there're **no guarantees between siblings**, meaning that nodes at the same "level" don't follow any rule besides being higher/lower than their parent.
+堆结构的规则不适用于**相邻的两个节点**，也就是说在同一层的节点除了必须比自己的父节点大或者小，不需要遵循其他规则。
 
-Also, heaps are as compact as possible, meaning each level contains all the nodes it can contain with no empty spaces, and new children are put into the left spaces of the tree first.
+另外，堆越紧凑越好，也就是每一层都尽可能填满空位，新的节点首先添加到左边。
 
-Heaps, and in particular **binary heaps**, are frequently used to implement **priority queues**, which at the same time are frequently used in well-known algorithms such as Dijkstra's path-finding algorithm.
+堆，特别是**二进制堆**，通常被用来解决**优先队列**问题，也被运用到知名的算法问题——[戴克斯特拉算法](https://zh.wikipedia.org/wiki/%E6%88%B4%E5%85%8B%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95)。
 
-Priority queues are a type of data structure in which each element has an associated priority and elements with a higher priority are presented first.
+优先队列是一种数据结构，在这种结构中，每一个元素都被关联了优先级，优先级高的元素优先展示出来。
 
-# Graphs
+<h1 id="graphs">图</h1>
 
-Graphs are a data structure formed by a group of nodes and certain connections between those nodes. Unlike trees, graphs don't have root and leaf nodes, nor a "head" or a "tail". Different nodes are connected to each other and there's no implicit parent-child connection between them.
+图是一种有一组节点相互连接的数据结构。和树不一样的是，图并没有根或者叶节点，也没有“头”或者“尾”。不同的节点随机关联在一起，之间并没有父子关系。
 
 ![images-1](https://www.freecodecamp.org/news/content/images/2022/05/images-1.png)
 
-A graph
+图
 
-Graphs are data structures often useful for:
+图经常被应用于：
 
--   Social networks
--   Geolocalizaton
--   Recommendation systems
+-   社交网络
+-   地理定位
+-   推荐系统
 
-Graphs can be classified into different types according to the characteristics of the connections between nodes:
+根据节点之间关联的特征，可以把图分成不同的类别：
 
-## Undirected and directed graphs
+<h2 id="undirected-and-directed-graphs">有向图和无向图</h2>
 
-We say a graph is undirected if there's no implicit direction in the connections between nodes.
+如果节点之间没有的关联没有定义方向，我们就称这个图为无向图。
 
-If we take the following example image, you can see that there's no direction in the connection between node 2 and node 3. The connection goes both ways, meaning you can traverse the data structure from node 2 to node 3, and from node 3 to node 2. Undirected means the connections between nodes can be used both ways.
+在下图中我们可以看到节点2和节点3之间的关联没有方向性，我们可以从节点2到节点3，也可以从节点3到节点2。无定向意味着节点间的连接是双向的。
 
 ![Undirected_graph.svg](https://www.freecodecamp.org/news/content/images/2022/05/Undirected_graph.svg.png)
 
-An undirected graph
+无向图
 
-And as you may have guessed, directed graphs are the exact opposite. Let's reuse the previous example image, and see that here there's an implicit direction in the connections between nodes.
+你可能已经猜出来了，有向图就是完全相反的。让我们再次使用上面的图，这时节点之间的连接是有固定方向的。
 
-In this particular graph, you could traverse from node A to node B, but you can't go from node B to A.
+在这幅图中，你可以由节点A到节点B，但是不能从节点B到节点A。
 
 ![images-1](https://www.freecodecamp.org/news/content/images/2022/05/images-1.png)
 
-A directed graph
+有向图
 
-## Weighted and unweighted graphs
+<h2 id="weighted-and-unweighted-graphs">加权图和非加权图</h2>
 
-We say a graph is weighted if the connections between nodes have an assigned weight. In this case, weight just means a value that is assigned to a specific connection. It's information about the connection itself, not about the nodes.
+如果节点之间的连接被分配了权重，我们就称其为加权图。权重仅分配给了节点之间的连接，仅和连接相关，不和节点相关。
 
-Following this example, we can see the connection between nodes 0 and 4, has a weight of 7. And the connection between nodes 3 and 1 has a weight of 4.
+在下面的例子中我们可以看到，节点0和节点4之间连接的权重时7；而节点3和节点1之间的权重是4.
 
 ![1_P68VQPcnFXBo9XlA4pDNrg](https://www.freecodecamp.org/news/content/images/2022/05/1_P68VQPcnFXBo9XlA4pDNrg.png)
 
-A weighted graph
+加权图
 
-To understand the use of weighted graphs, imagine if you wanted to represent a map with many different locations, and give the user information about how long it might take them to go from one place to another.
+想要了解加权图，可以想象你需要向用户展现一个标注了不同地点的地图，你需要告诉用户从一个地方到另一个地方需要花多长时间。
 
-A weighted graph would be perfect for this, as you could use each node to save information about the location, the connections could represent the available roads between each place, and the weights would represent the physical distance from one place to another.
+加权图就可以用来表现这个场景，你可以使用节点来存储地点的信息，节点之间的连接就是两个地点之间的道路，连接的权重代表从一个地点到另一个地点的物理距离。
 
 ![houbo](https://www.freecodecamp.org/news/content/images/2022/05/houbo.jpg)
 
-Weighted graphs are heavily used in geolocation systems
+加权图被大量应用在定位系统
 
-And as you may have guessed once again, unweighted graphs are the ones where connections between nodes have no assigned weights. So there's no particular information about the connections between nodes, only about the nodes themselves.
+你应该已经猜到了，无加权图即节点之间的连接没有被分配权重，所以节点间的连接没有额外的信息，只表达节点间的关系。
 
-## How to represent graphs
+<h2 id="how-to-represent-graphs">如何表达图</h2>
 
-When coding graphs, there're two main methods we can use: an **adjacency matrix** and an **adjacency list**. Let's explain how both work and see their pros and cons.
+在编码图的时候，主要可以使用两种方法：**邻接矩阵**和**邻接列表**。让我们分别看看这两种方法的优缺点。
 
-An **adjacency matrix is a two dimensional structure** that represents the nodes in our graph and the connections between them.
+**邻接矩阵是一个二维结构**代表图的节点和节点之间的连接。
 
-If we use this example...
+如果我们使用这个的例子：
 
 ![Untitled-Diagram.drawio](https://www.freecodecamp.org/news/content/images/2022/05/Untitled-Diagram.drawio.png)
 
-Our adjacency matrix would look like this:
+
+我们的邻接矩阵会是这个样子：
 
 <table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" cellpadding="0" dir="ltr" border="1" style="table-layout:fixed;font-size:10pt;font-family:Arial;width:0px;border-collapse:collapse;border:none"><colgroup><col width="52"><col width="52"><col width="52"><col width="52"><col width="52"></colgroup><tbody><tr style="height:21px;"><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}">-</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;A&quot;}">A</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;B&quot;}">B</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;C&quot;}">C</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;D&quot;}">D</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;A&quot;}">A</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;B&quot;}">B</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;C&quot;}">C</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;D&quot;}">D</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr></tbody></table>
 
-You can see that the matrix is like table, where columns and rows represent the nodes in our graph, and the value of the cells represent the connections between nodes. If the cell is 1, there's a connection between the row and the column, and if it's 0, there's not.
+矩阵可以用表格来表示，列和行来代表图里的节点，单元格内的值表示节点之间连接，如果单元格的值为1，则表示该位置的行和列是相关联的，如果是0，则表示没有联系。
 
-The table could be easily replicated using a two dimensional array:
+这个表格可以用简单的二维数组来表示：
 
 ```javascript
 [
@@ -898,9 +898,9 @@ The table could be easily replicated using a two dimensional array:
 ]
 ```
 
-On the other hand, an **adjacency list** can be thought as **a key-value pair structure** where **keys represent each node** on our graph and t**he values are the connections** that that particular node has.
+**邻接列表**可以使用**键值对结构**来表示，**键代表节点**而**值代表对应节点的连接**。
 
-Using the same example graph, our adjacency list could be represented with this object:
+上面的例子，用邻接列表可以表达为：
 
 ```javascript
 {
@@ -911,19 +911,19 @@ Using the same example graph, our adjacency list could be represented with this 
 }
 ```
 
-You can see that for each node we have a key, and we store all the node's connections within an array.
+每一个节点为一个键，对应的值是与节点相连接的节点组成的数组。
 
-So what's the difference between adjacency matrices and lists? Well, lists tend to be more efficient when it comes to adding or removing nodes, while matrices are more efficient when querying for specific connections between nodes.
+这就是邻接矩阵和列表的所有区别吗？除此之外，当我们需要添加或者删除节点的时候，列表会更加方便；而当我们需要查询某个节点之间的关联的话，矩阵更方便。
 
-To see this, imagine we wanted to add a new node to our graph:
+假设要在我们的图里添加一个新的节点：
 
 ![Untitled-Diagram.drawio-1](https://www.freecodecamp.org/news/content/images/2022/05/Untitled-Diagram.drawio-1.png)
 
-To represent this in a matrix, we would need to add a whole new column and a whole new row:
+如果要用矩阵来表达的话，我们需要添加一个全新的列和行：
 
 <table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" cellpadding="0" dir="ltr" border="1" style="table-layout:fixed;font-size:10pt;font-family:Arial;width:0px;border-collapse:collapse;border:none"><colgroup><col width="52"><col width="52"><col width="52"><col width="52"><col width="52"><col width="52"></colgroup><tbody><tr style="height:21px;"><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}">-</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;A&quot;}">A</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;B&quot;}">B</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;C&quot;}">C</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;D&quot;}">D</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;E&quot;}">E</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;A&quot;}">A</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;B&quot;}">B</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;C&quot;}">C</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;D&quot;}">D</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;E&quot;}">E</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr></tbody></table>
 
-While to do the same in a list, adding a value to B connections and a key-value pair to represent E is enough:
+但是在列表中，我们只需要在B的连接数组中添加一个值，以及再添加一个代表E的键值对就够了：
 
 ```javascript
 {
@@ -935,36 +935,36 @@ While to do the same in a list, adding a value to B connections and a key-value 
 }
 ```
 
-Now imagine we want to verify if there's an existing connection between node B and E. Checking that in a matrix is dead easy, as we know exactly the position in the matrix that represents that connection.
+现在假设我们需要验证B和E之间是否存在连接，在矩阵中检查就非常简单，因为我们知道节点间关联的位置位于哪个单元格。
 
 <table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" cellpadding="0" dir="ltr" border="1" style="table-layout:fixed;font-size:10pt;font-family:Arial;width:0px;border-collapse:collapse;border:none"><colgroup><col width="52"><col width="52"><col width="52"><col width="52"><col width="52"><col width="52"></colgroup><tbody><tr style="height:21px;"><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}">-</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;A&quot;}">A</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;B&quot;}">B</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;C&quot;}">C</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;D&quot;}">D</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;E&quot;}">E</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;A&quot;}">A</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;B&quot;}">B</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#ffff00;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;C&quot;}">C</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;D&quot;}">D</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;E&quot;}">E</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr></tbody></table>
 
-But in a list, we don't have that information we would need to iterate all over the array that represents B connections and see what's in there. So you can see there are pros and cons for each approach.
+但如果是在列表中，我们不能马上得出结论，必须先遍历所有和B的连接相关的数组，来查看是否有E。通过这个例子你就了解了两种形式的优劣了。
 
-A full implementation of a graph using an adjacency list might look like this. To keep things simple, we'll represent an undirected unweighted graph.
+邻接列表的完全实现如下，我们把图限定在无向和无权重，来简化代码：
 
 ```javascript
-// We create a class for the graph
+// 为图创建一个类
 class Graph{
-    // The graph has only one property which is the adjacency list
+    // 图仅有一个属性，即邻接列表
     constructor() {
         this.adjacencyList = {}
     }
-    // The addNode method takes a node value as parameter and adds it as a key to the adjacencyList if it wasn't previously present
+    // addNode将节点值作为参数，如果邻接列表没有键的话，就把节点值传入邻接链表作为键
     addNode(node) {
         if (!this.adjacencyList[node]) this.adjacencyList[node] = []
     }
-    // The addConnection takes two nodes as parameters, and it adds each node to the other's array of connections.
+    // addConnection将两个节点作为参数，并添加到每一个节点键对应的值的数组中
     addConnection(node1,node2) {
         this.adjacencyList[node1].push(node2)
         this.adjacencyList[node2].push(node1)
     }
-    // The removeConnection takes two nodes as parameters, and it removes each node from the other's array of connections.
+    // removeConnection方法将两个节点作为参数，并删除掉非自己节点对应数组里的值
     removeConnection(node1,node2) {
         this.adjacencyList[node1] = this.adjacencyList[node1].filter(v => v !== node2)
         this.adjacencyList[node2] = this.adjacencyList[node2].filter(v => v !== node1)
     }
-    // The removeNode method takes a node value as parameter. It removes all connections to that node present in the graph and then deletes the node key from the adj list.
+    // removeNode方法将节点作为参数，删除该节点所有的连接，并且删除列表中该节点相关的键
     removeNode(node){
         while(this.adjacencyList[node].length) {
             const adjacentNode = this.adjacencyList[node].pop()
@@ -994,14 +994,14 @@ console.log(Argentina)
 // }
 ```
 
-# **Roundup**
+<h1 id="roundup">总结</h1>
 
-That's it, everyone. In this article we've introduced the main data structures used in computer science and software development. These structures are the base of most of the programs we use in every day life, so it's really good knowledge to have.
+以上就是全部内容。在这篇文章中我们介绍了计算机科学和软件开发中的主要数据结构。这些数据结构是许多程序的基础，所以学习这些知识非常有用。
 
-Even though this topic may feel a bit abstract and intimidating at first, I believe we can understand it better by just thinking data structures as ways in which we organize data to better achieve certain tasks.
+虽然刚开始接触这个话题的时候，你会觉得非常抽象甚至有些害怕，但是我相信当你把这些数据结构当作解决日常任务的一种方式的时候，你会更理解它们。
 
-As always, I hope you enjoyed the article and learned something new. If you want, you can also follow me on [LinkedIn](https://www.linkedin.com/in/germancocca/) or [Twitter](https://twitter.com/CoccaGerman).
+希望你享受阅读这篇文章，并且从中受益。你可以在[LinkedIn](https://www.linkedin.com/in/germancocca/)或者[Twitter](https://twitter.com/CoccaGerman)上关注我。
 
-See you later!
+我们下篇文章见！
 
 ![3cd](https://www.freecodecamp.org/news/content/images/2022/05/3cd.gif)

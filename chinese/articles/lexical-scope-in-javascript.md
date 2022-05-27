@@ -1,6 +1,6 @@
 > -  原文地址：[Lexical Scope in JavaScript – Beginner's Guide](https://www.freecodecamp.org/news/lexical-scope-in-javascript/)
 > -  原文作者：[Keyur Paralkar](https://www.freecodecamp.org/news/author/keyurparalkar/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Lexical Scope in JavaScript – Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/spacex--p-KCm6xB9I-unsplash-1.jpg)

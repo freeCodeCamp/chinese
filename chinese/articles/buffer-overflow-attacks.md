@@ -1,6 +1,6 @@
 > -  原文地址：[What is a Buffer Overflow Attack – and How to Stop it](https://www.freecodecamp.org/news/buffer-overflow-attacks/)
 > -  原文作者：[Megan KaczanowskiMegan Kaczanowski](https://www.freecodecamp.org/news/author/megansdoingfine/)
-> -  译者：
+> -  译者：IZUMI-Zu
 > -  校对者：
 
 ![What is a Buffer Overflow Attack – and How to Stop it](https://images.unsplash.com/photo-1506563613713-f88697472a45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxvdmVyZmxvd3xlbnwwfHx8fDE2MTcxMjQ5MzM&ixlib=rb-1.2.1&q=80&w=2000)

@@ -351,7 +351,7 @@ React 应用程序将在客户端启动，并将是一个使用客户端渲染�
 </html>
 ```
 
-我们有 4 个 JavaScript 文件被声明要在 `head` 中预装，使用
+我们有 4 个 JavaScript 文件被声明要在 `head` 中预加载，使用
 `rel="preload" as="script"`:
 
 - `/_next/static/development/pages/index.js` (96 LOC)
@@ -359,9 +359,9 @@ React 应用程序将在客户端启动，并将是一个使用客户端渲染�
 - `/_next/static/runtime/webpack.js` (939 LOC)
 - `/_next/static/runtime/main.js` (12k LOC)
 
-This tells the browser to start loading those files as soon as possible, before the normal rendering flow starts. Without those, scripts would be loaded with an additional delay, and this improves the page loading performance.
+这告诉浏览器在正常的渲染流程开始之前，尽快开始加载这些文件。如果没有这些，脚本的加载会有额外的延迟，这就提高了页面的加载性能。
 
-Then those 4 files are loaded at the end of the `body`, along with `/_next/static/development/dll/dll_01ec57fc9b90d43b98a8.js` (31k LOC), and a JSON snippet that sets some defaults for the page data:
+然后这 4 个文件被加载到 `body` 的末尾，还有`/_next/static/development/dll/dll_01ec57fc9b90d43b98a8.js`（31k LOC），以及一个为页面数据设置一些默认值的 JSON 片段:
 
 ```html
 <script id="__NEXT_DATA__" type="application/json">
@@ -379,95 +379,95 @@ Then those 4 files are loaded at the end of the `body`, along with `/_next/stati
 </script>
 ```
 
-The 4 bundle files loaded are already implementing one feature called code splitting. The `index.js` file provides the code needed for the `index` component, which serves the `/` route, and if we had more pages we'd have more bundles for each page, which will then only be loaded if needed - to provide a more performant load time for the page.
+所加载的 4 个 bundle 文件已经实现了一个叫做代码分割(code splitting)的功能。`index.js` 文件提供了 `index` 组件所需的代码，它为`/`路由提供服务，如果我们有更多的页面，我们将为每个页面提供更多的 bundle，然后只有在需要时才会被加载——为页面提供一个更高性能的加载时间。
 
 ## What's that icon on the bottom right?
 
-Did you see that little icon at the bottom right of the page, which looks like a lightning?
+你看到页面右下方那个像闪电的小图标了吗？
 
 ![Screen-Shot-2019-11-04-at-13.21.42](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-13.21.42.png)
 
-If you hover it, it's going to say "Prerendered Page":
+如果你把它悬停，它就会显示 "Prerendered Page"（预渲染的页面）:
 
 ![Screen-Shot-2019-11-04-at-13.21.46](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-13.21.46.png)
 
-This icon, which is _only visible in development mode_ of course, tells you the page qualifies for automatic static optimization, which basically means that it does not depend on data that needs to be fetched at invokation time, and it can be prerendered and built as a static HTML file at build time (when we run `npm run build`).
+这个图标当然只在 _开发模式下可见_，它告诉你这个页面符合自动静态优化的条件，这基本上意味着它不依赖于需要在调用时获取的数据，它可以在构建时（当我们运行`npm run build`时）预先渲染并构建为静态 HTML 文件。
 
-Next can determine this by the absence of the `getInitialProps()` method attached to the page component.
+下一步可以通过页面组件上没有 `getInitialProps()`方法来确定。
 
-When this is the case, our page can be even faster because it will be served statically as an HTML file rather than going through the Node.js server that generates the HTML output.
+在这种情况下，我们的页面可以更快，因为它将被静态化的一个 HTML 文件提供，而不是通过 Node.js 服务器生成 HTML 输出。
 
-Another useful icon that might appear next to it, or instead of it on non-prerendered pages, is a little animated triangle:
+另一个有用的图标可能会出现在它旁边，或者在非预渲染页面上代替它，是一个小的动画三角形:
 
 ![Screen-Shot-2019-11-14-at-14.56.21](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-14-at-14.56.21.png)
 
-This is a compilation indicator, and appears when you save a page and Next.js is compiling the application before hot code reloading kicks in to reload the code in the application automatically.
+这是一个编译指示器，当你保存一个页面，Next.js 正在编译应用程序，然后热代码重载启动，自动重新加载应用程序中的代码时，它就会出现。
 
-It's a really nice way to immediately determine if the app has already been compiled and you can test a part of it you're working on.
+这是一个非常好的方法，可以立即确定应用程序是否已经被编译，你可以测试你正在做的一部分。
 
 ## Install the React Developer Tools
 
-Next.js is based on React, so one very useful tool we absolutely need to install (if you haven't already) is the React Developer Tools.
+Next.js 是基于 React 的，所以我们绝对需要安装一个非常有用的工具（如果你还没有），那就是 React 开发者工具（React Developer Tools）。
 
-Available for both [Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/), the React Developer Tools are an essential instrument you can use to inspect a React application.
+React 开发者工具同时适用于 [Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) 和 [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)，它是你用来检查 React 应用程序的一个重要工具。
 
-Now, the React Developer Tools are not specific to Next.js but I want to introduce them because you might not be 100% familiar with all the tools React provides. It's best to go a little into debugging tooling than assuming you already know them.
+现在，React 开发者工具并不是专门针对 Next.js 的，但我想介绍一下，因为你可能对 React 提供的所有工具还不是 100%熟悉。与其假设你已经知道它们，不如去了解一下调试工具的情况。
 
-They provide an inspector that reveals the React components tree that builds your page, and for each component you can go and check the props, the state, hooks, and lots more.
+他们提供了一个检查器，揭示了构建你的页面的 React 组件树，对于每个组件，你可以去检查 props、state、hooks，还有很多。
 
-Once you have installed the React Developer Tools, you can open the regular browser devtools (in Chrome, it's right-click in the page, then click `Inspect`) and you'll find 2 new panels: **Components** and **Profiler**.
+一旦你安装了 React 开发者工具，你可以打开常规的浏览器 devtools（在 Chrome 中，在页面上点击右键，然后点击`Inspect`），你会发现两个新的面板。**Components** 和 **Profiler**。
 
 ![Screen-Shot-2019-11-04-at-14.26.12](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-14.26.12.png)
 
-If you move the mouse over the components, you'll see that in the page, the browser will select the parts that are rendered by that component.
+如果你把鼠标移到组件(components)上，你会看到，在页面中，浏览器会选择由该组件渲染的部分。
 
-If you select any component in the tree, the right panel will show you a reference to **the parent component**, and the props passed to it:
+如果你选择树中的任何一个组件(components)，右边的面板就会显示对的**父组件(parent component)**的引用，以及传递给它的 props:
 
 ![Screen-Shot-2019-11-04-at-14.27.05](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-14.27.05.png)
 
-You can easily navigate by clicking around the component names.
+你可以通过点击组件(components)名称来轻松查找。
 
-You can click the eye icon in the Developer Tools toolbar   to inspect the DOM element, and also if you use the first icon, the one with the mouse icon (which conveniently sits under the similar regular DevTools icon), you can hover an element in the browser UI to directly select the React component that renders it.
+你可以点击开发工具工具栏中的 **眼睛图标** 来检查 DOM 元素，另外，如果你使用第一个图标，即带有鼠标图标的图标（它方便地位于类似的常规 DevTools 图标下），你可以在浏览器 UI 中悬停一个元素，直接选择渲染它的 React 组件。
 
-You can use the `bug` icon to log a component data to the console.
+你可以使用 `bug` 图标来记录一个组件的数据到控制台。
 
 ![Screen-Shot-2019-11-04-at-14.31.25](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-14.31.25.png)
 
-This is pretty awesome because once you have the data printed there, you can right-click any element and press "Store as a global variable". For example here I did it with the `url` prop, and I was able to inspect it in the console using the temporary variable assigned to it, `temp1`:
+这非常棒，因为一旦你把数据打印出来，你可以右击任何元素，然后按 "Store as a global variable"(存储为全局变量)。例如，在这里我对`url` prop 做了这个操作，我能够使用分配给它的临时变量 `temp1` 在控制台中检查它。:
 
 ![Screen-Shot-2019-11-04-at-14.40.22](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-14.40.22.png)
 
-Using **Source Maps**, which are loaded by Next.js automatically in development mode, from the Components panel we can click the `<>` code and the DevTools will switch to the Source panel, showing us the component source code:
+使用 Next.js 在开发模式下自动加载的 **Source Maps**，，我们可以在组件面板上点击`<>`代码，DevTools 将切换到 `Source panel`，向我们展示组件的源代码:
 
 ![Screen-Shot-2019-11-04-at-14.41.33](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-14.41.33.png)
 
-The **Profiler** tab is even more awesome, if possible. It allows us to **record an interaction** in the app, and see what happens. I cannot show an example yet, because it needs at least 2 components to create an interaction, and we have just one now. I'll talk about this later.
+如果可能的话，**Profiler** 标签甚至更棒。它允许我们在应用程序中**record an interaction(记录一个交互)**，并看看会发生什么。我还不能展示一个例子，因为它需要至少 2 个组件来创建一个交互，而我们现在只有一个。我以后再谈这个问题。
 
 ![Screen-Shot-2019-11-04-at-14.42.24](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-14.42.24.png)
 
-I showed all screenshots using Chrome, but the React Developer Tools works in the same way in Firefox:
+我使用 Chrome 浏览器展示了所有的截图，但 React 开发工具在 Firefox 中的工作方式是一样的:
 
 ![Screen-Shot-2019-11-04-at-14.45.20](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-14.45.20.png)
 
 ## Other debugging techniques you can use
 
-In addition to the React Developer Tools, which are essential to building a Next.js application, I want to emphasize 2 ways to debug Next.js apps.
+除了 React 开发者工具（这是构建 Next.js 应用程序所必需的）之外，我想强调调试 Next.js 应用程序的 2 种方法。
 
-The first is obviously `console.log()` and all the [other Console API](https://flaviocopes.com/console-api/) tools. The way Next apps work will make a log statement work in the browser console OR in the terminal where you started Next using `npm run dev`.
+第一个显然是`console.log()`和所有[其他 Console API](https://flaviocopes.com/console-api/)工具。Next 应用程序的工作方式会使日志语句在浏览器控制台或在你使用`npm run dev`启动 Next 的终端中发挥作用。
 
-In particular, if the page loads from the server, when you point the URL to it, or you hit the refresh button / cmd/ctrl-R, any console logging happens in the terminal.
+特别是，如果页面从服务器上加载，当你把 URL 指向它，或者你点击刷新按钮/cmd/ctrl-R，任何控制台日志都会在终端发打印。
 
-Subsequent page transitions that happen by clicking the mouse will make all console logging happen inside the browser.
+随后通过点击鼠标发生的页面转换将使所有的控制台记录发生在浏览器内。
 
-Just remember if you are surprised by missing logging.
+如果你对缺失的日志记录感到惊讶，请记住。
 
-Another tool that is essential is the `debugger` statement. Adding this statement to a component will pause the browser rendering the page:
+另一个必不可少的工具是 `debugger` 语句。将此语句添加到一个组件中，将暂停浏览器渲染页面。:
 
 ![Screen-Shot-2019-11-04-at-15.10.32](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-15.10.32.png)
 
-Really awesome because now you can use the browser debugger to inspect values and run your app one line at a time.
+真的很厉害，因为现在你可以使用浏览器调试器来检查数值，并逐行运行你的应用程序。
 
-You can also use the VS Code debugger to debug server-side code. I mention this technique and [this tutorial](https://github.com/Microsoft/vscode-recipes/tree/master/Next-js) to set this up.
+你也可以使用 VS 代码调试器来调试服务器端的代码。我提到这个技术和[这个教程](https://github.com/Microsoft/vscode-recipes/tree/master/Next-js)来设置这个。
 
 ## Adding a second page to the site
 

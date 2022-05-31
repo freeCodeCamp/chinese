@@ -724,15 +724,15 @@ export default () => {
 }
 ```
 
-Now things should work. Initially the component is rendered without the dynamic `router.query.id` information. After rendering, Next.js triggers an update with the query value and the page displays the correct information.
+现在，事情应该工作了。最初，该组件的渲染没有动态的`router.query.id`信息。渲染后，Next.js 触发了查询值的更新，页面显示了正确的信息。
 
-And if you view source, there is that empty `<p>` tag in the HTML:
+如果你查看源代码，在 HTML 中会有一个空的`<p>`标签:
 
 ![Screen-Shot-2019-11-05-at-18.20.58](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-05-at-18.20.58.png)
 
-We'll soon fix this issue that fails to implement SSR and this harms both loading times for our users, SEO and social sharing as we already discussed.
+我们很快就会解决这个问题，它不能实现 SSR，这既损害了用户的加载时间，也损害了 SEO 和社交分享，我们已经讨论过了。
 
-We can complete the blog example by listing those posts in `pages/blog.js`:
+我们可以通过在`pages/blog.js`中列出这些帖子来完成博客的例子:
 
 ```js
 import posts from '../posts.json'
@@ -752,7 +752,7 @@ const Blog = () => (
 export default Blog
 ```
 
-And we can link them to the individual post pages, by importing `Link` from `next/link` and using it inside the posts loop:
+我们可以通过从`next/link`中导入`Link`并在帖子循环中使用它，将它们链接到各个帖子页面:
 
 ```js
 import Link from 'next/link'
@@ -781,21 +781,21 @@ export default Blog
 
 ## Prefetching
 
-I mentioned previously how the `Link` Next.js component can be used to create links between 2 pages, and when you use it, Next.js **transparently handles frontend routing** for us, so when a user clicks a link, frontend takes care of showing the new page without triggering a new client/server request and response cycle, as it normally happens with web pages.
+我之前提到过 Next.js `Link` 组件可以用来创建 2 个页面之间的链接，当你使用它时，Next.js 会**透明地为我们处理前端路由**，所以当用户点击一个链接时，前端会负责显示新的页面，而不会像通常网页那样触发新的客户/服务器请求和响应周期。
 
-There's another thing that Next.js does for you when you use `Link`.
+当你使用 `Link` 时，Next.js 还为你做了一件事。
 
-As soon as an element wrapped within `<Link>` appears in the viewport (which means it's visible to the website user), Next.js prefetches the URL it points to, as long as it's a local link (on your website), making the application super fast to the viewer.
+只要被`<Link>`包裹的元素出现在视口（viewport）中（这意味着网站用户可以看到它），Next.js 就会预取(prefetch)它所指向的 URL，只要它是一个本地链接（在你的网站上），就会使应用程序对浏览者来说超级快速。
 
-This behavior is only being triggered in **production mode** (we'll talk about this in-depth later), which means you have to stop the application if you are running it with `npm run dev`, compile your production bundle with `npm run build` and run it with  `npm run start` instead.
+这种行为只在**生产模式（production mode）** 下被触发（我们稍后会深入讨论这个问题），这意味着如果你用`npm run dev`运行应用程序，你必须停止它，用`npm run build`编译你的生产包，用`npm run start`运行它。
 
-Using the Network inspector in the DevTools you'll notice that any links above the fold, at page load, start the prefetching as soon as the `load` event has been fired on your page (triggered when the page is fully loaded, and happens after the `DOMContentLoaded` event).
+使用 DevTools 中的 Network inspector，你会注意到在页面加载时，任何在折叠上方的链接都会在你的页面上触发`load`事件（当页面完全加载时触发，发生在`DOMContentLoaded`事件之后）时开始预取（prefetch）。
 
-Any other `Link` tag not in the viewport will be prefetched when the user scrolls and it
+任何不在视口（viewport）中的其他`链接`标签将被预取（prefetch），当用户滚动时，它将被预取（prefetch）。
 
-Prefetching is automatic on high speed connections (Wifi and 3g+ connections, unless the browser sends the [`Save-Data` HTTP Header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Save-Data).
+预取在高速连接（Wifi 和 3g 以上连接）上是自动的，除非浏览器发送 [`Save-Data` HTTP Header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Save-Data)。
 
-You can opt out from prefetching individual `Link` instances by setting the `prefetch` prop to `false`:
+你可以通过设置 `prefetch` prop 为 `false`来选择不预取单个 `Link` 实例:
 
 ```jsx
 <Link href="/a-link" prefetch={false}>

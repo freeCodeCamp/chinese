@@ -471,35 +471,35 @@ React 开发者工具同时适用于 [Chrome](https://chrome.google.com/webstore
 
 ## Adding a second page to the site
 
-Now that we have a good grasp of the tools we can use to help us develop Next.js apps, let's continue from where we left our first app:
+现在我们已经很好地掌握了可以用来帮助我们开发 Next.js 应用程序的工具，让我们从我们的第一个应用程序的基础上继续前进吧:
 
 ![Screen-Shot-2019-11-04-at-13.21.42-1](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-13.21.42-1.png)
 
-I want to add a second page to this website, a blog. It's going to be served into `/blog`, and for the time being it will just contain a simple static page, just like our first `index.js` component:
+我想给这个网站添加第二个页面，一个博客。它将被送入`/blog`，目前它只包含一个简单的静态页面，就像我们的第一个`index.js`组件（组件）一样:
 
 ![Screen-Shot-2019-11-04-at-15.39.40](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-15.39.40.png)
 
-After saving the new file, the `npm run dev` process already running is already capable of rendering the page, without the need to restart it.
+保存新文件后，已经运行的`npm run dev`进程已经能够渲染页面，不需要再重新启动。
 
-When we hit the URL [http://localhost:3000/blog](http://localhost:3000/blog) we have the new page:
+当我们点击 URL [http://localhost:3000/blog](http://localhost:3000/blog)，我们就有了新的页面:
 
 ![Screen-Shot-2019-11-04-at-15.41.39](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-15.41.39.png)
 
-and here's what the terminal told us:
+以下是终端告诉我们的情况:
 
 ![Screen-Shot-2019-11-04-at-15.41.03](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-15.41.03.png)
 
-Now the fact that the URL is `/blog` depends on just the filename, and its position under the `pages` folder.
+现在，URL 是`/blog`这一事实只取决于文件名，以及它在`pages`文件夹下的位置。
 
-You can create a `pages/hey/ho` page, and that page will show up on the URL [http://localhost:3000/hey/ho](http://localhost:3000/hey/ho).
+你可以创建一个`pages/hey/ho`页面，该页面将显示在 URL [http://localhost:3000/hey/ho](http://localhost:3000/hey/ho)上。
 
-What does not matter, for the URL purposes, is the component name inside the file.
+对于 URL 的目的来说，文件中的组件名称并不重要。
 
-Try going and viewing the source of the page, when loaded from the server it will list `/_next/static/development/pages/blog.js` as one of the bundles loaded, and not `/_next/static/development/pages/index.js` like in the home page. This is because thanks to automatic code splitting we don't need the bundle that serves the home page. Just the bundle that serves the blog page.
+试着去查看页面的源代码，当从服务器加载时，它会列出`/_next/static/development/pages/blog.js`作为加载的包（bundle）之一，而不是像主页那样列出`/_next/static/development/pages/index.js`。这是因为由于自动代码拆分，我们不需要为主页服务的 bundle。只需要服务于博客页面的 bundle。
 
 ![Screen-Shot-2019-11-04-at-16.24.53](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-16.24.53.png)
 
-We can also just export an anonymous function from `blog.js`:
+我们也可以直接从`blog.js`导出一个匿名函数:
 
 ```js
 export default () => (
@@ -509,7 +509,7 @@ export default () => (
 )
 ```
 
-or if you prefer the non-arrow function syntax:
+或者如果你喜欢非箭头的函数语法:
 
 ```js
 export default function() {
@@ -523,19 +523,19 @@ export default function() {
 
 ## Linking the two pages
 
-Now that we have 2 pages, defined by `index.js` and `blog.js`, we can introduce links.
+现在我们有两个页面，分别由`index.js`和`blog.js`定义，我们可以引入链接。
 
-Normal HTML links within pages are done using the `a` tag:
+页面内的普通 HTML 链接使用 `a` 标签完成:
 
 ```html
 <a href="/blog">Blog</a>
 ```
 
-We can't do do that in Next.js.
+我们不能在 Next.js 中这样做。
 
-Why? We technically _can_, of course, because this is the Web and _on the Web things never break_ (that's why we can still use the `<marquee>` tag. But one of the main benefits of using Next is that once a page is loaded, transitions to other page are very fast thanks to client-side rendering.
+为什么？当然，我们在技术上是 _可以的_，因为这是网络，而且在网络上，事情永远不会中断（这就是为什么我们仍然可以使用`<marquee>`标签。但是，使用 Next 的主要好处之一是，一旦一个页面被加载，由于客户端的渲染，过渡到其他页面的速度非常快。
 
-If you use a plain `a` link:
+如果你使用一个普通的`a`链接:
 
 ```js
 const Index = () => (
@@ -548,25 +548,25 @@ const Index = () => (
 export default Index
 ```
 
-Now open the **DevTools**, and the **Network panel** in particular. The first time we load `http://localhost:3000/` we get all the page bundles loaded:
+现在打开 **DevTools**，特别是 **Network panel**。第一次加载`http://localhost:3000/`时，我们得到了所有加载的页面 bundles:
 
 ![Screen-Shot-2019-11-04-at-16.26.00](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-16.26.00.png)
 
-Now if you click the "Preserve log" button (to avoid clearing the Network panel), and click the "Blog" link, this is what happens:
+现在，如果你点击 "Preserve log" 按钮（以避免清除网络面板），并点击 "Blog" 链接，就会发生这种情况:
 
 ![Screen-Shot-2019-11-04-at-16.27.16](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-16.27.16.png)
 
-We got all that JavaScript from the server, again! But.. we don't need all that JavaScript if we already got it. We'd just need the `blog.js` page bundle, the only one that's new to the page.
+我们又从服务器上得到了所有的 JavaScript! 但是...如果我们已经得到了所有的 JavaScript，我们就不需要这些了。我们只需要`blog.js`页面 bundle，这是唯一一个新的页面。
 
-To fix this problem, we use a component provided by Next, called Link.
+为了解决这个问题，我们使用 Next 提供的一个组件，叫做 `Link`。
 
-We import it:
+我们导入它:
 
 ```js
 import Link from 'next/link'
 ```
 
-and then we use it to wrap our link, like this:
+然后我们用它来包住（warp）我们的链接，像这样:
 
 ```js
 import Link from 'next/link'
@@ -583,15 +583,15 @@ const Index = () => (
 export default Index
 ```
 
-Now if you retry the thing we did previously, you'll be able to see that only the `blog.js` bundle is loaded when we move to the blog page:
+现在，如果你重试我们之前做的事情，你将能够看到，当我们移动到博客页面时，只有`blog.js` bundle 被加载。:
 
 ![Screen-Shot-2019-11-04-at-16.35.18](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-16.35.18.png)
 
-and the page loaded so faster than before, the browser usual spinner on the tab didn't even appear. Yet the URL changed, as you can see. This is working seamlessly with the browser [History API](https://flaviocopes.com/history-api/).
+而且页面的加载速度比以前快了很多，浏览器通常在标签上的旋转器甚至都没有出现。然而网址却变了，你可以看到。这是与浏览器[历史 API](https://flaviocopes.com/history-api/)的无缝工作。
 
-This is client-side rendering in action.
+这就是客户端渲染的作用。
 
-What if you now press the back button? Nothing is being loaded, because the browser still has the old `index.js` bundle in place, ready to load the `/index` route. It's all automatic!
+如果你现在按下后退按钮呢？没有什么被加载，因为浏览器仍然有旧的`index.js` bundle，准备加载`/index`路由。这都是自动的!
 
 ## Dynamic content with the router
 

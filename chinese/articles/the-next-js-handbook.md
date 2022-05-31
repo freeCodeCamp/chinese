@@ -595,49 +595,49 @@ export default Index
 
 ## Dynamic content with the router
 
-In the previous chapter we saw how to link the home to the blog page.
+在上一章中，我们看到了如何将主页(index)链接到博客(blog)页面。
 
-A blog is a great use case for Next.js, one we'll continue to explore in this chapter by adding **blog posts**.
+博客是 Next.js 的一个很好的用例，在本章中我们将通过添加 **博客文章** 来继续探索。
 
-Blog posts have a dynamic URL. For example a post titled "Hello World" might have the URL `/blog/hello-world`. A post titled "My second post" might have the URL `/blog/my-second-post`.
+博客文章有一个动态的 URL。例如，一篇题为 "Hello World "的文章的 URL 是`/blog/hello-world`。一篇题为 "我的第二篇文章 "的文章的 URL 是`/blog/my-second-post`。
 
-This content is dynamic, and might be taken from a database, markdown files or more.
+这些内容是动态的，可能取自数据库、markdown 文件或更多。
 
-Next.js can serve dynamic content based on a **dynamic URL**.
+Next.js 可以根据一个**dynamic URL(动态 URL)**来提供动态内容。
 
-We create a dynamic URL by creating a dynamic page with the `[]` syntax.
+我们通过使用`[]`语法创建一个动态页面来创建一个动态 URL。
 
-How? We add a `pages/blog/[id].js` file. This file will handle all the dynamic URLs under the `/blog/` route, like the ones we mentioned above: `/blog/hello-world`, `/blog/my-second-post` and more.
+如何创建？我们添加一个`pages/blog/[id].js`文件。这个文件将处理`/blog/`路径下的所有动态 URL，比如我们上面提到的那些。`/blog/hello-world`, `/blog/my-second-post`等等。
 
-In the file name, `[id]` inside the square brackets means that anything that's dynamic will be put inside the `id` parameter of the **query property** of the **router**.
+在文件名中，方括号内的`[id]`意味着任何动态的东西都将被放在 **路由的查询属性（query property）**的`id`参数中。
 
-Ok, that's a bit too many things at once.
+好吧，这一次的事情有点多了。
 
-What's the **router**?
+什么是**路由（router）**？
 
-The router is a library provided by Next.js.
+路由(router)是 Next.js 提供的一个库。
 
-We import it from `next/router`:
+我们从 `next/router` 导入它:
 
 ```js
 import { useRouter } from 'next/router'
 ```
 
-and once we have `useRouter`, we instantiate the router object using:
+而一旦我们有了`useRouter`，我们就用`useRouter`来实例化路由对象:
 
 ```js
 const router = useRouter()
 ```
 
-Once we have this router object, we can extract information from it.
+一旦我们有了这个路由对象，我们就可以从中提取信息。
 
-In particular we can get the dynamic part of the URL in the `[id].js` file by accessing `router.query.id`.
+特别是我们可以通过访问`router.query.id`来获得`[id].js`文件中 URL 的动态部分。
 
-The dynamic part can also just be a portion of the URL, like `post-[id].js`.
+动态部分也可以只是 URL 的一部分，如`post-[id].js`。
 
-So let's go on and apply all those things in practice.
+所以让我们继续在实践中应用所有这些东西。
 
-Create the file `pages/blog/[id].js`:
+创建文件`pages/blog/[id].js`:
 
 ```js
 import { useRouter } from 'next/router'
@@ -654,11 +654,11 @@ export default () => {
 }
 ```
 
-Now if you go to the `http://localhost:3000/blog/test` router, you should see this:
+现在，如果你去`http://localhost:3000/blog/test`路由，你应该看到这个:
 
 ![Screen-Shot-2019-11-05-at-16.41.32](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-05-at-16.41.32.png)
 
-We can use this `id` parameter to gather the post from a list of posts. From a database, for example. To keep things simple we'll add a `posts.json` file in the project root folder:
+我们可以使用这个 `id` 参数，从一个帖子列表中收集帖子。比如说，从一个数据库中。为了简单起见，我们将在项目根目录下添加一个`posts.json`文件:
 
 ```js
 {
@@ -673,7 +673,7 @@ We can use this `id` parameter to gather the post from a list of posts. From a d
 }
 ```
 
-Now we can import it and lookup the post from the `id` key:
+现在我们可以导入它，并从`id`键中查找帖子:
 
 ```js
 import { useRouter } from 'next/router'
@@ -693,17 +693,17 @@ export default () => {
 }
 ```
 
-Reloading the page should show us this result:
+重新加载页面应该会显示这个结果:
 
 ![Screen-Shot-2019-11-05-at-16.44.07](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-05-at-16.44.07.png)
 
-But it's not! Instead, we get an error in the console, and an error in the browser, too:
+但事实并非如此! 相反，我们在控制台得到一个错误，在浏览器中也得到一个错误:
 
 ![Screen-Shot-2019-11-05-at-18.18.17](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-05-at-18.18.17.png)
 
-Why? Because.. during rendering, when the component is initialized, the data is not there yet. We'll see how to provide the data to the component with getInitialProps in the next lesson.
+为什么？因为在渲染过程中，当组件被初始化时，数据还不在那里。我们将在下一课看到如何用 getInitialProps 向组件提供数据。
 
-For now, add a little `if (!post) return <p></p>` check before returning the JSX:
+现在，在返回 JSX 之前添加一个小的`if (!post) return <p></p>`进行检查:
 
 ```js
 import { useRouter } from 'next/router'

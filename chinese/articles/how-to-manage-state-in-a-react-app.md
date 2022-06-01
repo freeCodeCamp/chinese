@@ -1,59 +1,60 @@
 > -  原文地址：[How to Manage State in a React App – With Hooks, Redux, and More](https://www.freecodecamp.org/news/how-to-manage-state-in-a-react-app/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：bauhauce
 > -  校对者：
 
-![How to Manage State in a React App – With Hooks, Redux, and More](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/lautaro-andreani-UYsBCu9RP3Y-unsplash.jpg)
+![如何在 react 应用中使用 Hooks, Redux 等管理状态](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/lautaro-andreani-UYsBCu9RP3Y-unsplash.jpg)
+如何在 react 应用中使用 Hooks, Redux 等管理状态
 
-Hi! In this article we'll take a look at the many ways you can manage state in a React app.
+你好！在本文中，我们将了解在 React 应用程序中管理状态的多种方式。
 
-We'll start by talking about what state is, and then go through the many tools you can use to manage it.
+我们将从讨论什么是状态开始，然后介绍许多用于管理状态的工具
 
-We'll look at the simple useState hook and also learn about more complex libraries like Redux. Then we'll check out the most recent options available like Recoil and Zustand.
+我们将了解简单的 useState 钩子，并学习更复杂的库，如 Redux。然后我们将查看最新可用的库，例如 Recoil 和 Zusand
 
-## Table of Contents
+## 目录
 
--   [What is State in React?](#whatisstateinreact)
--   [How to Use the UseState Hook](#howtousetheusestatehook)
-    -   [How to Use useEffect to Read State Updates](#howtouseuseeffecttoreadstateupdates)
-    -   [How to Pass a Callback to State Update Function](#howtopassacallbacktostateupdatefunction)
--   [Managing scale and complexity](#managingscaleandcomplexity)
+-   [react 中的状态是什么?](#whatisstateinreact)
+-   [如何使用 UseState 钩子](#howtousetheusestatehook)
+    -   [如何使用 useEffect 读取状态更新](#howtouseuseeffecttoreadstateupdates)
+    -   [如何将回调传递给状态更新函数](#howtopassacallbacktostateupdatefunction)
+-   [管理规模和复杂性](#managingscaleandcomplexity)
     -   [React context](#reactcontext)
-    -   [How to Use the UseReducer Hook](#howtousetheusereducerhook)
-    -   [What About Redux?](#whataboutredux)
--   [Alternatives to Redux](#alternativestoredux)
+    -   [如何使用 UseReducer 钩子](#howtousetheusereducerhook)
+    -   [关于 Redux](#whataboutredux)
+-   [Redux 的替代品](#alternativestoredux)
     -   [Redux toolkit](#reduxtoolkit)
-        -   [A mention for Redux Thunk and Redux Saga](#amentionforreduxthunkandreduxsaga)
+        -   [关于 Redux Thunk 和 Redux Saga](#amentionforreduxthunkandreduxsaga)
     -   [Recoil](#recoil)
     -   [Jotai](#jotai)
     -   [Zustand](#zustand)
--   [Conclusion](#conclusion)
+-   [结论](#conclusion)
 
-# What is state in React?
+# react 中的状态是什么?
 
-In modern React, we build our applications with **functional components**. Components are themselves JavaScript functions, independent and **reusable** bits of code.
+在现代 React 中，我们使用**函数组件**构建我们的应用程序。组件本身就是 JavaScript 函数，是独立且**可复用**的代码。
 
-The purpose of building the application with components is to have a modular architecture, with a clear separation of concerns. This makes code easier to understand, easier to maintain, and easier to reuse when possible.
+使用组件构建应用程序的目的是使其具有模块化架构，具有明确的关注点分离。这使代码更易于理解、更易于维护并且在可能的情况下更易于复用。
 
-The **state is an object that holds information** about a certain component. Plain JavaScript functions don't have the ability to store information. The code within them executes and "dissapears" once the execution is finished.
+**而状态( state )是一个保存有组件信息的对象**。普通的 JavaScript 函数没有存储信息的能力。一旦执行完成，它们中的代码就会执行并“消失”。
 
-But thanks to state, React functional components can store information even after execution. When we need a component to store or "remember" something, or to act in a different way depending on the environment, state is what we need to make it work this way.
+但是有了状态之后，React 函数组件即使在执行后也可以存储信息。当我们需要一个组件来存储或“记住”某些东西，或者根据环境以不同的方式执行时，状态就是我们所需要的可以让这些生效的东西;
 
-It's important to mention that not all components in a React app must have state. There are stateless components as well which just render its content without the need to store any information, and that's just fine.
+值得一提的是，在 React 应用程序中的并非所有组件都必须具有状态，也有无状态组件，它们只呈现其内容而无需存储任何信息，这也很好。
 
-Another important thing to mention is that state change is one of the two things that make a React component re-render (the other is a change in props). In this way, the state stores information about the component and also controls its behavior.
+另一件重要的事情是状态变化是使 React 组件重新渲染的两个原因之一（另一个是 props 的变化）。因此，状态存储了组件的信息并且控制其行为。
 
-# How to Use the UseState Hook
+# 如何使用 UseState Hook
 
-In order to implement state in our components, React provides us with a hook called **useState**. Let's see how it works with the following example.
+为了在我们的组件中实现状态，React 为我们提供了一个名为 **useState** 的钩子( hook )。让我们看看它是如何与以下示例一起工作的。
 
-We'll use the classic counter example, in which we're displaying a number and we have several buttons to increase, decrease, or reset that number.
+我们将使用经典的计数器示例，其中我们将显示一个数字，并且我们有几个按钮用于增加、减少或重置该数字。
 
-This is a good example of an app where we need to store a piece of information and render something different every time that information changes.
+这是一个很好的应用程序示例，我们需要存储一条信息并在每次信息更改时呈现不同的内容。
 
 ![5bueYQblr--2-](https://www.freecodecamp.org/news/content/images/2022/03/5bueYQblr--2-.gif)
 
-The code for this app looks like this:
+此应用程序的代码如下所示
 
 ```js
 // App.js
@@ -83,20 +84,19 @@ function App() {
 export default App
 ```
 
--   First we import the hook from React: `import { useState } from 'react'`
+-   首先我们从 React 导入钩子( hook )：`import { useState } from 'react'`
     
--   Then we initialize the state: `const [count, setCount] = useState(0)`
+-   然后我们初始化状态：`const [count, setCount] = useState(0)`
     
+在这里，我们为状态提供了一个变量名（`count`）和一个我们将在每次需要更新该状态时使用的函数名（`setCount`）。最后，我们设置状态的初始值（`0`），这将是应用程序每次启动时默认加载的值。
 
-Here we provide a variable name for the state (`count`) and a function name we'll use every time we need to update that state (`setCount`). Last, we set the initial value of the state (`0`), which will be the value loaded by default every time the app starts.
+-   最后，如上所述，每次我们想要更新状态时，都必须使用我们声明的函数：`setCount`，只需要调用它并将我们想要的新状态作为参数传递给它。也就是说，如果我们想在前一个状态加 1，我们需要调用 `setCount(count+1)`。
 
--   Lastly, as mentioned above, every time we want to update the state we have to use the function we declared: `setCount` To use it, we just need to call it passing it the new state we want as a parameter. That is, if we want to add 1 to the previous estate, we call `setCount(count+1)`.
+如前所述，这将导致状态更新，从而导致组件的重新渲染。这在我们的应用程序中意味着我们将在屏幕上看到计数器上升。
 
-As mentioned too, this will cause an update of the state and hence the re-render of the component. Which in our app means we'll see on the screen that the counter going up.
+## 如何使用 useEffect 读取状态更新  
 
-## How to Use useEffect to Read State Updates
-
-It's important to mention that the setState function is **asynchronous**. So if we try to read the state immediately after updating it, like this:
+一个需要提到的重要信息是 setState 函数是**异步的**。因此，如果我们尝试在更新后立即读取状态，例如：
 
 ```js
 <button onClick={() => {
@@ -105,66 +105,67 @@ It's important to mention that the setState function is **asynchronous**. So if 
 }}>Add 1</button>
 ```
 
-we would get the previous value of the state, without the update.
+我们会得到之前的状态值，并没有更新。
 
-The correct way of reading state after the update would be using the **useEffect** hook. It lets us execute a function after every component re-render (by default) or after any particular variable we declare changes.
+更新后读取状态的正确方法是使用 **useEffect** 钩子。它允许我们在每个组件重新渲染后（默认情况下）或在我们声明更改的任何特定变量之后执行一个函数。 
 
-Something like this:
+就像这样:
 
 ```js
 useEffect(() => console.log(value), [value])
 ```
 
-## How to Pass a Callback to State Update Function
+## 如何将回调传递给状态更新函数
 
-Also, the fact that useState is asynchronous has implications when considering very frequent and quick state changes.
+此外，在考虑非常频繁和快速的状态更改时，异步的 useState 会产生一些影响。
 
-Take, for example, the case of a user that presses the ADD button many times in a row, or a loop that emits a click event a certain number of times.
+举个例子, 用户连续多次按下 ADD 按钮，或者一个循环中发出一定次数的点击事件。
 
-By updating state like `setCount(count+1)` we take the risk that `count` won't yet be updated when the next event is fired.
+通过`setCount(count+1)`更新状态，在下一个事件被触发时 `count` 会有不被更新的风险。
 
-For example, let's say at the start `count = 0`. Then `setCount(count+1)` is called and the state is asynchronously updated.  
-But then again `setCount(count+1)` is called, before the state update was completed. This means that still `count = 0`, which means that the second `setCount` won't update the state correctly.
+例如，假设在开始时 `count = 0`。然后调用 `setCount(count+1)` 异步更新状态。
 
-A more defensive approach would be to pass `setCount` a callback, like so: `setCount(prevCount => prevCount+1)`
+但是在状态更新完成之前再次调用了`setCount(count+1)`。这意味着仍然是`count = 0`，这意味着第二个`setCount`不会正确更新状态。
 
-This makes sure that the value to update is the most recent one and keeps us away from the problem mentioned above. Every time we perform updates on a previous state we should use this approach.
+一种比较安全的方法是向 `setCount` 传递一个回调，如下所示：`setCount(prevCount => prevCount+1)`。
 
-# Managing Scale and Complexity
+这确保要更新的值是最新的，并使我们远离上述问题。每次我们对先前的状态执行更新时，我们都应该使用这种方法。
 
-So far, state management seems a piece of cake. We just need a hook, a value, and a function to update it, and we're ready to go.
+# 管理规模和复杂性
 
-But once apps start to get bigger and more complex, using only this may start to cause some problems.
+到目前为止，状态管理似乎是小菜一碟。我们只需要一个钩子、一个值和一个函数来更新它，我们就可以开始了。
+
+但是，一旦应用程序开始变得更大更复杂，仅使用这一种方式可能会开始导致一些问题。 
 
 ## React context
 
-The first problem that may occur is when we have a lot of nested components, and we need many "sibling" components to share the same state.
+第一个可能出现的问题是当我们有很多嵌套组件时，我们需要许多“兄弟”组件来共享相同的状态。
 
-The obvious answer here is to "lift" the state up, meaning that a parent component will be the one to hold the state and it will pass it as props to the children components.
+显而易见的答案是“提升”状态，这意味着父组件将成为持有状态的组件，并将状态作为 prop 传递给子组件。
 
-This works just fine, but when we have a lot of nested components, we may need to pass props through many component levels. This is known as **"prop drilling"** and not only looks ugly but also creates code that's hard to maintain.
+这很好用，但是当我们有很多嵌套组件时，我们可能需要通过许多层级组件传递 props。这被称为**prop drilling**，不仅很难看，而且会创建难以维护的代码。
 
-Prop drilling can also cause **unnecessary re-renders** which can affect the performance of our app. If between our parent component (which stores the state) and our children components (which consume the state) there are other components ("middle components"), we will need to pass props through these middle components too, even if they don't need the prop.
+Prop drilling 还可能导致**不必要的重新渲染**，这可能会影响我们应用程序的性能。如果在我们的父组件（存储状态）和我们的子组件（使用状态）之间还有其他组件（“中间组件”），我们也需要通过这些中间组件传递 prop，即使它们并不需要 prop。
 
-This means that these "middle components" will re-render when the prop changes, even if they have nothing different to render.
+这意味着这些“中间组件”将在 prop 变更时重新渲染，即使它们没有不同的内容需要渲染。
 
-A solution to this is to use **React context**, which in short is a way to create a wrapper component that wraps around any group of components we want and can pass props directly to those components, without the need to "drill" through components that wont necessarily use that state.
+解决这个问题的方法是使用 **React context**，简而言之，这是一种创建包装组件的方法，该组件包装我们想要的任何组件组，并且可以直接将 props 传递给这些组件，而无需“drill”通过那些不一定使用该状态的组件。
 
-The thing to watch when using context is that when the context state changes, all the wrapped components that receive that state will re-render. And this might not be necessary depending on the case and might cause performance issues, too.
+使用 context 时要注意的是，当 context 状态发生变化时，所有接收该状态的包装组件都将重新渲染。在这种情况下，这可能不是必需的, 会导致性能问题。
 
-So it's always important to balance whether we really need to make a state available to many components or whether we can just keep it local in a single component. And if we need to make it available to many components, is it really a good idea to put it in context or can we just lift it up a level.
+因此，我们是否真的需要让一个状态对许多组件可用，或者我们是否可以将其保持在单个组件中, 在这两者之前取一个平衡是非常重要的。如果我们需要让许多组件都可以使用它，把它放在 context 中真的是一个好主意吗？或者我们是否可以把它提升一个层次。 
 
-Kent C Dodds has a [cool article](https://kentcdodds.com/blog/application-state-management-with-react) on this topic.
+Kent C Dodds 有一篇关于这个主题的[很酷的文章](https://kentcdodds.com/blog/application-state-management-with-react)。 
 
-## How to Use the UseReducer Hook
+## 如何使用 UseReducer 钩子
 
-Another problem may come up when you're using useState where the new state to be set depends on the previous state (like our count example) or when state changes occur very frequently in our application.
+当你使用 useState 时，要设置的新状态取决于先前的状态（如我们的计数示例），或者当我们的应用程序中状态更改非常频繁，这种情况下可能会出现另一个问题。
 
-In these occasions, useState may provoke some unexpected and unpredictable behavior. In come **reducers** to solve this problem.
+在这些情况下，useState 可能会引发一些意想不到的和不可预知的行为。接下来的 **reducers** 可以解决这个问题。
 
-A **reducer** is a pure function that takes the previous state and an action as an argument, and returns the next state. It's called a reducer because it's the same function type you could pass to an array: `Array.prototype.reduce(reducer, initialValue)`.
+**reducer** 是一个纯函数，它将前一个状态和一个动作作为参数，并返回下一个状态。它被称为 reducer，是因为它与你传递给数组的函数类型相同：`Array.prototype.reduce(reducer, initialValue)`.
 
-**useReducer** is the hook Reacts provides that lets us implement reducers to manage our state. Using this hook, our previous example app would look like this:
+**useReducer** 是 React 提供的钩子，它允许我们实现 reducer 来管理我们的状态。使用这个钩子，我们之前的示例应用程序看起来像这样：
 
 ```js
 // App.js
@@ -207,12 +208,11 @@ function App() {
 export default App
 ```
 
--   Again we start by importing the hook from React: `import { useReducer } from 'react'`
+-   我们再次从 React 导入钩子开始：`import { useReducer } from 'react'`
     
--   Then we'll declare a reducer function, which as parameters will take the current state and an action to perform on it. Within it, it will have a switch statement that will read the action type, execute the corresponding action on the state, and return the updated state.
+-   然后我们将声明一个 reducer 函数，它作为参数将接收当前的状态和对其执行的操作。并且在函数里有一个 switch 语句，该语句将读取动作类型，对状态执行相应的动作，并返回更新后的状态。
     
-
-> It's common practice to use switch statements on reducers and capital letters to declare the actions. ;)
+> 通常做法是在 reducer 上使用 switch 语句, 并且使用大写字母来声明动作;
 
 ```js
 function reducer(state, action) {
@@ -227,42 +227,42 @@ function reducer(state, action) {
   }
 ```
 
--   Afterwards, it's time to declare our **useReducer** hook, which looks fairly similar to the useState hook. We declare a **value for our state** ('state' in our case), a **function we'll use to modify it** ('dispatch'), and then useReducer will take the **reducer function** as first parameter and the **default state** as second parameter.
+-   之后，是时候声明我们的 **useReducer** 钩子了，它看起来与 useState 钩子非常相似。我们为我们的状态声明一个**值**（在我们的例子中是'state'），和一个**我们将用来修改这个值的函数**（'dispatch'），然后 useReducer 将接收 **reducer 函数** 作为第一个参数，**默认状态**作为第二个参数。
 
 ```js
 const [state, dispatch] = useReducer(reducer, { count: 0 })  
 ```
 
--   Lastly, to update our state we won't call the reducer directly, but instead we'll call the function we just created ('dispatch'), passing it the corresponding action type we want to execute. Behind the scenes, the dispatch function will connect with the reducer and actually modify the state.
+-   最后，我们不会直接调用 reducer 去更新状态，而是调用我们刚刚创建的函数（'dispatch'），将我们想要执行的相应动作类型传递给它。其中，dispatch 函数将与 reducer 连接并实际修改 state。
 
 ```js
 <button onClick={() => dispatch({type: 'ADD'})}>Add 1</button>
 ```
 
-It's quite a bit more boilerplate than using useState, but useReducer isn't that complex after all.
+它比使用 useState 的要刻板一些，但 useReducer 毕竟也没那么复杂。
 
-To sum it up, we just need:
+总结一下，我们只需要：
 
--   A reducer, that is the function that will consolidate all possible state changes
--   A dispatch function, that will send the modifying actions to the reducer.
+-   一个 reducer，合并所有可能的状态变化的函数
+-   一个 dispatch 函数，将修改动作传递给 reducer。
 
-The thing here is that the UI elements won't be able to update the state directly like they did before when calling setState with a value. Now they will have to call an action type and go through the reducer, which makes state management more modular and predictable. ;)
+这里的问题是 UI 元素不会像以前那样使用值调用 setState 直接更新状态。现在他们需要派发一个 action 传递给 reducer，这使得状态管理更加模块化和可预测。
 
-## What About Redux?
+## 关于 Redux
 
-[Redux](https://redux.js.org/) is a library that has been around for a long time and is widely used in the React environment.
+[Redux](https://redux.js.org/) 是一个已经存在很长时间并且在 React 中被广泛使用的库。
 
-Redux is a tool that comes to solve both of the problems mentioned before (prop drilling and unpredictable state behavior on frequent and complex state changes).
+Redux 是一个工具，它可以解决前面提到的两个问题（prop drilling 和频繁和复杂状态变更时不可预测的状态行为）。
 
-It's important to mention that Redux is an agnostic library, meaning it can be implemented on any front end app, not just React.
+值得一提的是，Redux 是一个不受约束的库，这意味着它可以在任何前端应用程序上实现，不仅仅是 React。
 
-The Redux set of tools is very similar to what we've just seen with useReducer, but with a few more things. There are three main building blocks in Redux:
+Redux 工具集与我们刚刚看到的 useReducer 非常相似，但多了一些东西。 Redux 中有三个主要的构建块：
 
--   **A store** — an object that holds the app state data
--   **A reducer** — a function that returns some state data, triggered by an action type
--   **An action** — an object that tells the reducer how to change the state. It must contain a type property, and it can contain an optional payload property
+-   **store** — 一个保存应用状态数据的对象
+-   **reducer** — 一个由 action type 触发, 并返回一些状态数据的函数
+-   **action** — 一个告诉 reducer 如何改变状态的对象。它必须包含一个 type 属性，并且它可以包含一个可选的 payload 属性
 
-Implementing Redux, our example app would look like this:
+实现 Redux，我们的示例应用程序如下所示：
 
 ```js
 // App.js
@@ -301,7 +301,7 @@ function App() {
 export default App
 ```
 
-Besides, we now would need a new **store** directory, with its corresponding store, reducer, and actions files.
+此外，我们需要一个新的 **store** 文件夹，包含相应的 store、reducer 和 actions 文件。
 
 ![Cbdp2DJY9](https://www.freecodecamp.org/news/content/images/2022/03/Cbdp2DJY9.png)
 
@@ -355,16 +355,16 @@ export const RESET = 'RESET'
 export const reset = () => ({ type: RESET })
 ```
 
-This is a lot more boilerplate that what we've seen before (that's what Redux is mainly criticized for), so let's break it down into pieces:
+这比我们之前看到的刻板得多（这就是 Redux 主要被批评的地方），所以让我们把它分解成几部分：
 
--   As I mentioned, Redux is an external library, so before anything we need to install it by running `npm i redux react-redux`. `redux` will bring the core functions we need to manage our state and `react-redux` will install some cool hooks to easily read and modify state from our components.
+-   正如我提到的，Redux 是一个外部库，所以在进行任何操作之前，我们需要通过运行 `npm i redux react-redux` 来安装它。 `redux` 将带来管理状态所需的核心函数，而`react-redux` 将安装一些很酷的钩子，可以轻松地从我们的组件中读取和修改状态。
     
--   Now, first thing is the **store**. In Redux the store is the entity that has all the app state information. Thanks to Redux, we'll be able to access the store from any component we want (just like with context).
+-   现在，首先是 **store**。在 Redux 中，store 是拥有所有应用程序状态信息的实体。通过 Redux，我们能够想要的任何组件中访问 store（就像使用 context 一样）。
     
 
-To create a store, we import the `createStore` function and pass it a reducer as input.
+为了创建一个 store，我们导入 `createStore` 函数，并将一个 reducer 函数作为输入传递给它。
 
-Know that you can also combine different reducers and pass it to the same store in case you'd like to separate concerns into different reducers.
+你还可以合并不同的 reducers 并传递给同一个 store, 这样你就可以将关注点分离到不同的 reducers 中。
 
 ```js
 import { createStore } from 'redux'
@@ -373,7 +373,7 @@ import CountReducer from './reducers/count.reducer'
 export default createStore(CountReducer)
 ```
 
--   Then there's the **reducer**, which works exactly the same as the one we've seen with useReducer. It takes the default state and an action as parameters, then within it it has a switch statement to read the action type, execute the corresponding state modification, and return the updated state.
+-   然后是 **reducer**，它的工作方式与我们在 useReducer 中看到的完全相同。它接收默认状态和一个动作( action )作为参数，然后里面有一个 switch 语句读取动作类型，执行相应的动作修改状态，并返回更新的状态。
 
 ```js
 import { ADD, SUB, ADDSOME, SUBSOME, RESET } from '../actions/count.actions'
@@ -392,11 +392,11 @@ const CountReducer = (state = { count: 0 }, action) => {
 export default CountReducer
 ```
 
--   Then come the **actions**. Actions are what we're going to use to tell the reducer how to update the state. In the code you can see that for each action we're declaring constants to use them instead of plain strings (this is a good practice to improve maintainability), and functions that return either just a type or a type and a payload. These functions are what we're going to dispatch from our component in order to change the state. ;)
+-   接着是 **actions**。 Actions 用于告诉 reducer 如何更新状态。在代码中，你可以看到，对于每个操作，我们都声明常量去使用，而不是使用纯字符串（这是提高可维护性的好做法），以及一些仅返回一个类型或返回 payload 和类型的函数。这些函数就是我们要从组件中 dispatch 去更改状态的函数。
 
-Note that I changed the example a bit in order to show what payload means when talking about actions. In case we want to **pass a parameter from the component** when we dispatch an action, **payload is where that information will be**.
+请注意，我稍微更改了示例以显示在谈论 actions 时 payload 的含义。如果我们想在 dispatch action 时**从组件传递参数**，**payload 就是存放该信息的地方**。
 
-In the example, you can see that we can now pass directly from the component the number we want to add/substract when we call ADDSOME/SUBSOME.
+在示例中，你可以看到我们可以在调用 ADDSOME/SUBSOME 时直接从组件中传递我们想要加/减的数字
 
 ```js
 export const ADD = 'ADD'
@@ -421,13 +421,13 @@ export const RESET = 'RESET'
 export const reset = () => ({ type: RESET })
 ```
 
--   And last comes our component. Here we have 3 things to notice:
+-  最后是我们的组件。这里有 3 件事需要注意：
 
-1.  First we have a **provider** component that receives **store** as props. This is what grants access to our store from all the components wrapped in it.
+1.  首先，我们有一个 **provider** 组件，它接收 **store** 作为 props。这就是允许从其中包含的所有组件访问 store 的原因。
     
-2.  Then we have a hook called **useDispatch()** (that we'll use to dispatch actions) and another called **useSelector()** (that we'll use to read the state from the store).
+2.  然后我们有一个名为 **useDispatch()** 的钩子（我们将用于 dispatch actions）和另一个名为 **useSelector()** 的钩子（我们将用于从 store 中读取状态）。
     
-3.  Last, notice we're **dispatching the functions** we declared on the actions file, and passing a value as an input when it corresponds. This value is what the actions takes as payload and what the reducer is going to use to modify the state. ;)
+3.  最后，请注意我们将要**派发我们在 action 文件中声明的函数**，并传递一个匹配的值作为输入。这个值是 actions 接收作为 payload 的值，以及 reducer 将用来修改状态的值。
     
 
 ```js
@@ -462,30 +462,30 @@ function App() {
 export default App
 ```
 
-Redux is a nice tool that solves two problems at the same time (prop drilling and complex state changes). Still, it does generate a lot of boilerplate and makes state management a topic that's harder to get your head around, specially when dealing with different files and entities like actions, reducers, a store...
+Redux 是一个很好的工具，同时解决了两个问题（prop drilling和复杂的状态变化）。尽管如此，它也确实产生了很多样板文件，并使状态管理成为一个更难理解的话题，特别是在处理不同的文件和实体时，如 actions、reducers、store ......
 
-An important thing to mention here is that these tools or ways to manage state aren't mutually exclusive, they can and probably should be used at the same time, each to solve the specific problem they're good at.
+这里要提到的重要一点是，这些管理状态的工具或方法并不是相互排斥的，它们可以而且可能应该同时使用，每一种都可以解决它们擅长的特定问题。
 
-In the case of Redux, that problem is handling **global state** (meaning state that affects your whole application or a very big part of it). It wouldn't make sense to use Redux to handle a counter like our example or the opening and closing of a modal.
+对于 Redux ，问题在于处理**全局状态**（意味着影响整个应用程序或其中很大一部分的状态）。使用 Redux 来处理像我们的示例这样的计数器或模式的打开和关闭是没有意义的。
 
-A good golden rule is **useState for component state, Redux for application state**.
+一个好的黄金法则是 **useState 用于组件状态，Redux 用于应用程序状态**。
 
-# Alternatives to Redux
+# Redux 的替代品
 
-If this topic isn't yet complicated enough for you, in the last few years a lot of new libraries have come up as alternatives to Redux, each with its own approach to state management.
+如果这个主题对你来说还不够复杂，那么在过去的几年里，许多新的库作为 Redux 的替代品出现了，而且每个库都有自己的状态管理方法。
 
-Just for the sake of getting a good overview, let's quickly get to know them.
+为了获得很好的概述，让我们快速了解它们。
 
 ## Redux toolkit
 
-[Redux toolkit](https://redux-toolkit.js.org/) is a library built on top of Redux, which aims to take away some of the complexity and boilerplate that Redux generates.
+[Redux toolkit](https://redux-toolkit.js.org/) 是一个建立在 Redux 之上的库，旨在消除 Redux 生成的一些复杂性和样板。
 
-Redux toolkit is built upon two things:
+Redux toolkit 基于两件事：564
 
--   A **store**, which works exactly the same as a plain Redux store
--   And **slices** which condense plain Redux actions and reducers into a single thing
+- **store**，它的工作方式与普通 Redux store 完全相同
+- **slices** 将普通的 Redux 操作和 reducer 压缩成一个单一的东西
 
-Implementing Redux Toolkit, our example app would look like this:
+实现 Redux Toolkit，我们的示例应用程序如下所示：
 
 ```js
 // App.js
@@ -575,9 +575,9 @@ export const { addOne, subOne, addSome, subSome, reset } = counterSlice.actions
 export default counterSlice.reducer
 ```
 
--   First we need to **install it** by running `npm install @reduxjs/toolkit react-redux`
+-   首先我们需要通过运行`npm install @reduxjs/toolkit react-redux` **去安装**
     
--   On our **store** we import the `configureStore` function from Redux toolkit, and create the store by calling this function and passing it an object with a reducer, which itself is an object that contains a slice.
+-   在我们的 **store** 上，我们从 Redux toolkit 中导入 `configureStore` 函数，并通过调用此函数并将一个带有 reducer 的对象传递给它来创建 store，该对象本身就是一个包含 slice 的对象。
     
 
 ```js
@@ -588,11 +588,11 @@ export const store = configureStore({
 })
 ```
 
--   A **slice**, as I mentioned, is a way to condense actions and reducers into the same thing. We import the `createSlice` function from Redux toolkit, then declare the initial state and initialize the slice.
+-   正如我所提到的，**slice** 是一种将 action 和 reducer 压缩为同一事物的方法。我们从 Redux toolkit 中导入`createSlice` 函数，然后声明初始状态并初始化 slice。
 
-This one will receive as parameters the name of the slice, the initial state, and the functions we'll dispatch from our components in order to modify the state.
+这个将接收 slice 的名称、初始状态以及我们将从组件派发以修改状态的函数作为参数。
 
-Notice there are no actions here. The UI will call the reducer functions directly. That's the complexity Redux toolkit "takes away".
+注意这里没有任何 actions。 UI 将直接调用 reducer 函数。这就是 Redux toolkit “带走”的复杂性。
 
 ```js
 export const counterSlice = createSlice({
@@ -608,7 +608,7 @@ export const counterSlice = createSlice({
 })
 ```
 
--   On index.js we wrap our app around a provider component so that we can access state from anywhere.
+-  在 index.js 上，我们用 provider 组件将应用程序包裹，以便我们可以从任何地方访问状态。
 
 ```js
     <Provider store={store}>
@@ -616,7 +616,7 @@ export const counterSlice = createSlice({
     </Provider>
 ```
 
--   And lastly, from our component we read the state and dispatch modification functions using hooks just like with plain Redux.
+-  最后，我们在组件中可以使用使用钩子函数读取状态和派发修改函数，就像使用普通的 Redux 一样。
 
 ```js
 function App() {
@@ -643,25 +643,25 @@ function App() {
 }
 ```
 
-Redux toolkit aims to be a simpler way to deal with Redux, but in my opinion it's still almost the same boilerplate and not much of a difference with plain Redux.
+Redux toolkit 旨在成为处理 Redux 的一种更简单的方法，但在我看来，它仍然几乎是相同的刻板，与普通的 Redux 没有太大区别。
 
-### A mention for Redux Thunk and Redux Saga
+### 关于 Redux Thunk 和 Redux Saga
 
-[Redux thunk](https://github.com/reduxjs/redux-thunk) and [Redux Saga](https://redux-saga.js.org/) are other two popular middleware libraries that are used **together** with Redux.
+[Redux thunk](https://github.com/reduxjs/redux-thunk) 和 [Redux Saga](https://redux-saga.js.org/) 是两个与 Redux **一起**使用的很流行的中间件的库;
 
-Specifically, both Thunk and Saga are meant to be used when dealing with side effects or assynchronous tasks.
+具体来说，Thunk 和 Saga 都是在处理副作用或异步任务时使用的。 
 
 ## Recoil
 
 ![2CYCmD92D](https://www.freecodecamp.org/news/content/images/2022/03/2CYCmD92D.png)
 
-[Recoil](https://recoiljs.org/) is an open source state management library specifically for React built by Facebook (or Meta, whatever...). According to their website, Recoil is built to be "minimal and reactish", in the sense that it looks and feels like plain React code.
+[Recoil](https://recoiljs.org/) 是一个开源状态管理库，专门用于由 Facebook（或 Meta，等等）构建的 React。根据他们的网站，Recoil 被构建为“最小且反应灵敏”，从某种意义上说，它看起来并且感觉就像简单的 React 代码。 
 
-Recoil is based upon the idea of **atoms**. Quoting their docs,
+Recoil 基于**原子(atom)**的概念。引用他们的文档，
 
-> "An atom represents a piece of state. Atoms can be read from and written to from any component. Components that read the value of an atom are implicitly subscribed to that atom, so any atom updates will result in a re-render of all components subscribed to that atom".
+> “一个原子代表一个状态。原子可以从任何组件读取和写入。读取原子值的组件隐式订阅该原子，因此任何原子更新都会导致所有订阅该原子的组件重新渲染”。 
 
-Using Recoil, our example app would look like this:
+使用 Recoil，我们的示例应用程序将如下所示：
 
 ```js
 // App.js
@@ -724,11 +724,11 @@ const countState = atom({
 export default countState
 ```
 
-As you can probably immediately see, this is a lot less boilerplate than Redux. =D
+正如您所看到的那样，这比 Redux 的样板要少得多。
 
--   First we install it by running `npm install recoil`
+-   首先我们通过运行 `npm install recoil` 来安装它
     
--   Components that use recoil state need `RecoilRoot` to appear somewhere in the parent tree. So we wrap our app with it.
+-   那些使用 recoil 状态的组件需要在其父组件的某处使用 `RecoilRoot`。所以我们用它来包裹我们的应用程序。
     
 
 ```js
@@ -739,7 +739,7 @@ As you can probably immediately see, this is a lot less boilerplate than Redux. 
   </React.StrictMode>
 ```
 
--   Then we declare our **atom**, which is just an object containing a key and a default value:
+-   然后我们声明我们的 **atom**，它只是一个包含键和默认值的对象：
 
 ```
 const countState = atom({
@@ -748,29 +748,29 @@ const countState = atom({
 })
 ```
 
--   Lastly, in our component we import the hook `useRecoilState` and declare our state with it, passing it the unique key we just declared in our atom.
+-   最后，在我们的组件中，我们导入钩子 `useRecoilState` 并用它声明我们的状态，将我们刚刚在 atom 中声明的唯一键传递给它。
 
 ```
 const [count, setCount] = useRecoilState(countState)
 ```
 
-As you can see, this looks really similar to a regular useState hook. _Reactish_... =P
+如你所见，这看起来与常规的 useState 钩子非常相似。
 
-And from our UI, we just call the `setCount` function to update our state.
+在我们的 UI 中，我们只需调用 `setCount` 函数来更新我们的状态。
 
 ```js
 <button onClick={() => setCount(count+1)}>Add 1</button>
 ```
 
-Minimal, and very easy to use. Recoil is still kind of experimental and not that widely used, but you can see how devs around the world would turn to this tool.
+最小，并且非常易于使用。Recoil 仍然是一种实验性的，并没有被广泛使用，但你可以看到世界各地的开发人员将如何转向这个工具。
 
 ## Jotai
 
-[Jotai](https://jotai.org/) is an open source state management library built for React that is inspired by Recoil. It differs from Recoil in looking for an even more minimalistic API – it doesn't use string keys and it's TypeScript-oriented.
+[Jotai](https://jotai.org/) 是一个受 Recoil 启发为 React 构建的开源状态管理库。它与 Recoil 的不同之处在于寻找更简约的 API——它不使用字符串键并且它是面向 TypeScript 的。
 
-Same as with Recoil, Jotai uses atoms. An **atom** represents a piece of state. All you need is to specify an initial value, which can be primitive values like strings and numbers, objects and arrays. Then in your components you consume that atom, and on every atom change that component will re-render.
+与 Recoil 一样，Jotai 使用原子( atom )。 **atom** 代表一个状态。你只需要指定一个初始值，它可以是原始值，如字符串和数字、对象和数组。然后在你的组件中使用该原子，并且在每次原子更改时该组件将重新渲染。
 
-Using Jotai, our example app looks like this:
+使用 Jotai，我们的示例应用程序如下所示：
 
 ```js
 // App.js
@@ -812,34 +812,34 @@ const countAtom = atom(0)
 export default countAtom
 ```
 
-As you can see, it's even more minimal than Recoil.
+如你所见，它比 Recoil 还要小。
 
--   We install it by running `npm install jotai`
+-   我们通过运行 `npm install jotai` 来安装它
     
--   Then we declare an atom with a default value:
+-   然后我们声明一个具有默认值的 atom：
     
 
 ```js
 const countAtom = atom(0)
 ```
 
--   And consume it with our component using `useAtom`:
+-   并通过我们的组件使用 `useAtom`:
 
 ```js
 const [count, setCount] = useAtom(countAtom)
 ```
 
-Really nice and simple!
+真的很好很简单!
 
 ## Zustand
 
-[Zustand](https://github.com/pmndrs/zustand) is another open source state management library built for React. It's inspired by Flux, a library widely used before Redux came around, and it aims to be
+[Zusand](https://github.com/pmndrs/zustand) 是另一个为 React 构建的开源状态管理库。它的灵感来自于在 Redux 出现之前广泛使用的库 Flux，它的目标是
 
-> "a small, fast non-opinionated and scalable barebones state-management solution with a comfy API based on hooks and almost no boilerplate".
+> “一种小型、快速、无意见且可扩展的准系统状态管理解决方案，具有基于钩子的舒适 API，几乎没有样板文件”
 
-Zustand uses a store in a similar way that Redux does, but with the difference that in Zustand the store is now a hook, and it takes far less boilerplate.
+Zusand 使用 store 的方式与 Redux 类似，但不同之处在于，在 Zusand 中，store 是一个 hook，它需要的样板文件要少得多。
 
-Using Zustand, our example app would look like this:
+使用 Zusand，我们的示例应用程序将如下所示：
 
 ```js
 // App.js
@@ -888,9 +888,9 @@ const useStore = create(set => ({
 export default useStore
 ```
 
--   We install it by running `npm install zustand`
+-   我们通过运行 `npm install zustand` 安装它
     
--   We create a store with the `create` function we imported from Zustand. Inside we set the default state and functions we will use to modify the state.
+-   我们使用从 Zusand 导入的 `create` 函数创建了一个 store。在函数里我们设置了默认状态和我们将用来修改状态的函数。
     
 
 ```js
@@ -904,43 +904,45 @@ const useStore = create(set => ({
 }))
 ```
 
--   Then in our component we import the store we just created, and read the state and modifying functions from it in the following way:
+-   然后在我们的组件中我们导入我们刚刚创建的 store，并通过以下方式从中读取状态和修改函数：
 
 ```js
   const count = useStore(state => state.count)
   const { addOne, subOne, add10, sub10, reset } = useStore(state => state)
 ```
 
-Our UI can call the modifying functions just like this:
+我们的 UI 可以像这样调用修改函数：
 
 ```js
 <button onClick={() => addOne()}>Add 1</button>
 ```
 
-You can see how Zustand comes from the same concepts of Redux, with a much cleaner and simpler approach.
+你可以看到来自 Redux 的相同概念的 Zusand，采用了更简洁的方法。
 
-# Conclusion
+# 结论
 
-State management is one of the most complicated topics when it comes to front end development. And you can see how many people have tried to make it work in a predictable and scalable way, but also in ways that are clean and easy to use.
+状态管理是前端开发中最复杂的主题之一。你可以看到有多少人试图让它以可预测和可扩展的方式工作，而且是以​​干净和易于使用的方式工作。
 
-Specially in the last years, a lot of good tools have come up offering nice ways to deal with state management.
+特别是在过去的几年里，出现了很多很好的工具，提供了处理状态管理的好方法。
 
-As developers, though, we have to keep in mind that Redux and other libraries where created to solve specific state management problems, specially in really big, complex, and heavily-used apps.
+但是，作为开发人员，我们必须牢记 Redux 和其他库是为了解决特定的状态管理问题而创建的，特别是在非常大、复杂和频繁使用的应用程序中。
 
-I think that If you don't run into these problems, there's really no need to add extra boilerplate and complicate your code. Even with modern libraries that add almost no boilerplate.
+我认为如果你没有遇到这些问题，真的没有必要添加额外的样板并使你的代码复杂化。即使使用那些几乎不添加样板的现代库。
 
-React itself is a very strong and solid library, and tools like useState, useReducer, and useContext are quite enough to solve most problems. So I would stick to the basics unless for some reason the basics are no longer enough.
+React 本身是一个非常强大和可靠的库，useState、useReducer 和 useContext 等工具足以解决大多数问题。所以我会坚持基础知识，除非由于某种原因基础知识不再足够。
 
-When in need of a more specific and robust state management library, I think the choice is a matter of deciding between reliability and simplicity.
+当需要更具体、更健壮的状态管理库时，我认为需要在可靠性和简单性之间做出选择。
 
-Redux is the most mature and used library, and that comes with lots of documentation, online communities, and previous bugs found and solved with each new release.
+Redux 是最成熟和使用最广泛的库，它附带大量文档、在线社区以及在每个新版本中发现和解决的以前错误。
 
-The bad thing about it is, as developers, it presents us with some new concepts we have to learn and think about. We also need to add quite a bit of code just to make it work, and it can add more complexity than the problems that it helps to solve.
+它的坏处是，作为开发人员，它向我们展示了一些我们必须学习和思考的新概念。我们还需要添加相当多的代码才能使其正常工作，而且它可能会增加比它有助于解决的问题更多的复杂性。 
 
-On the contrary, modern libraries like we've seen are much simpler and straight to the point, but aren't as widely used and tested, and are still kind of experimental.
+相反，我们之前所看到的现代库要简单得多，而且直截了当，但是它们没有得到广泛使用和测试，仍然处于实验阶段。 
 
-But for what we can see at the moment, it seems just a matter of time until one or some of them take the lead and become the more widely used tool.
+但就我们目前所看到的而言，其中一个或一些带头成为更广泛使用的工具似乎只是时间问题。 
 
-That's it! I hoped you enjoyed the article and learned something new.  
-If you want, you can also follow me on [linkedin](https://www.linkedin.com/in/germancocca/) or [twitter](https://twitter.com/CoccaGerman).  
-Cheers and see you in the next one!
+就是这样！我希望你喜欢这篇文章并学到了一些新东西。
+
+如果你愿意，你也可以在 [linkedin](https://www.linkedin.com/in/germancocca/) 或 [twitter](https://twitter.com/CoccaGerman) 上关注我。 
+
+干杯，下次见！

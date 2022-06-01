@@ -60,27 +60,27 @@
 
 下面是一份 Next.js 不完全的主要功能的清单:
 
-### Hot Code Reloading
+### Hot Code Reloading(代码热加载)
 
 Next.js 在检测到保存到磁盘的任何变化时，会重新加载页面。
 
-### Automatic Routing
+### Automatic Routing（自动路由）
 
 任何 URL 都被映射到文件系统中，映射到放在 `pages` 文件夹中的文件，你不需要任何配置（当然你有自定义选项）。
 
-### Single File Components
+### Single File Components（单文件组件）
 
 使用`styled-jsx`，完全集成在同一个团队中，为组件添加样式的范围是很简单的。
 
-### Server Rendering
+### Server Rendering（服务器端渲染）
 
 你可以在服务器端渲染 React 组件，然后再将 HTML 发送到客户端。
 
-### Ecosystem Compatibility
+### Ecosystem Compatibility（生态系统的兼容性）
 
 Next.js 与 JavaScript、Node 和 React 生态系统的其他部分配合良好。
 
-### Automatic Code Splitting
+### Automatic Code Splitting（自动代码拆分）
 
 渲染页面时，只需使用它们需要的库和 JavaScript，而无需其他。Next.js 不会生成一个包含所有应用程序代码的单一 JavaScript 文件，而是将应用程序自动分解为几个不同的资源。
 
@@ -94,19 +94,19 @@ Next.js 通过分析导入的资源来做到这一点。
 
 有一个值得注意的例外。如果经常使用的导入程序在网站页面中至少有一半被使用，它们就会被打包到主 JavaScript 中。
 
-### Prefetching
+### Prefetching（预取）
 
 用于连接不同页面的 `Link` 组件支持 `prefetch` prop ，在后台自动预取页面资源（包括因代码分割而丢失的代码）。
 
-### Dynamic Components
+### Dynamic Components（动态组件）
 
 你可以动态地导入 JavaScript 模块和 React 组件。
 
-### Static Exports
+### Static Exports（静态导出）
 
 使用`next export`命令，Next.js 允许你从你的应用程序导出一个完全静态的网站。
 
-### TypeScript Support
+### TypeScript Support（支持 TypeScript）
 
 Next.js 是用 TypeScript 编写的，因此，它具有出色的 TypeScript 支持。
 
@@ -118,7 +118,7 @@ Next.js、[Gatsby](https://flaviocopes.com/gatsby/) 和 [`create-react-app`](htt
 
 `create-react-app` 并不能帮助你轻松生成一个服务器端渲染的应用程序。任何与之相关的东西（SEO、速度...）都只能由 Next.js 和 Gatsby 等工具提供。
 
-**When is Next.js better than Gatsby?**
+**Next.js 什么时候比 Gatsby 好？**
 
 它们都可以帮助 **服务器端渲染(server-side rendering)**，但有两种不同的方式。
 
@@ -153,7 +153,7 @@ Gatsby 在很大程度上也是基于 [GraphQL](https://flaviocopes.com/graphql/
 
 我们现在可以选择两条路线：使用 `create-next-app` 或传统的方法，即手动安装和设置 Next 应用程序。
 
-### Using create-next-app
+### 使用 create-next-app
 
 如果你熟悉 [`create-react-app`](https://flaviocopes.com/react-create-react-app/)，`create-next-app` 也是一样的，只不过它创建的是一个 Next 应用，而不是 React 应用，正如其名字所暗示的。
 
@@ -185,7 +185,7 @@ npx create-next-app --example blog-starter
 
 ![Screen-Shot-2019-11-14-at-17.13.29](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-14-at-17.13.29.png)
 
-### Manually create a Next.js app
+### 手动创建一个 Next.js 应用程序
 
 如果你想从头开始创建一个 Next 应用程序，你可以避免 `create-next-app`。方法是：在你喜欢的任何地方创建一个空文件夹，例如在你的主文件夹中，然后进入该文件夹:
 

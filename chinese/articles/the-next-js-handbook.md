@@ -805,19 +805,19 @@ export default Blog
 
 ## Using the router to detect the active link
 
-One very important feature when working with links is determining what is the current URL, and in particular assigning a class to the active link, so we can style it differently from the other ones.
+在处理链接时，一个非常重要的功能是确定什么是当前的 URL，特别是给活动链接分配一个类别，这样我们就可以使它的样式与其他的不同。
 
-This is especially useful in your site header, for example.
+例如，这在你的网站标题中特别有用。
 
-The Next.js default `Link` component offered in `next/link` does not do this automatically for us.
+Next.js 在`next/link`中提供的`Link`组件默认并不自动为我们做这些。
 
-We can create a Link component ourselves, and we store it in a file `Link.js` in the Components folder, and import that instead of the default `next/link`.
+我们可以自己创建一个 Link 组件，并将其存储在 Components 文件夹下的`Link.js`文件中，然后导入该组件，而不是默认的`next/link`。
 
-In this component, we'll first import React from `react`, Link from `next/link` and the `useRouter` hook from `next/router`.
+在这个组件中，我们首先从`react`导入 React，从`next/link`导入 Link，从`next/router`导入`useRouter` hook。
 
-Inside the component we determine if the current path name matches the `href` prop of the component, and if so we append the `selected` class to the children.
+在组件内部，我们确定当前的路径名称是否与组件的`href` prop 相匹配，如果是，我们将 `selected` 类追加到子节点(children)上。
 
-We finally return this children with the updated class, using `React.cloneElement()`:
+最后，我们使用`React.cloneElement()` 返回带有更新后的类的子节点(children):
 
 ```js
 import React from 'react'
@@ -838,13 +838,13 @@ export default ({ href, children }) => {
 
 ## Using `next/router`
 
-We already saw how to use the Link component to declaratively handle routing in Next.js apps.
+我们已经看到了如何使用 Link 组件来声明式地处理 Next.js 应用程序中的路由。
 
-It's really handy to manage routing in JSX, but sometimes you need to trigger a routing change programmatically.
+在 JSX 中管理路由真的很方便，但有时你需要以编程方式触发路由变化。
 
-In this case, you can access the Next.js Router directly, provided in the `next/router` package, and call its `push()` method.
+在这种情况下，你可以直接访问 Next.js Router，在`next/router`包中提供，并调用其`push()`方法。
 
-Here's an example of accessing the router:
+下面是一个访问路由的例子:
 
 ```js
 import { useRouter } from 'next/router'
@@ -855,19 +855,19 @@ export default () => {
 }
 ```
 
-Once we get the router object by invoking `useRouter()`, we can use its methods.
+一旦我们通过调用`useRouter()`得到路由对象，我们就可以使用它的方法。
 
-This is the client side router, so methods should only be used in frontend facing code. The easiest way to ensure this is to wrap calls in the `useEffect()` React hook, or inside `componentDidMount()` in React stateful components.
+这是客户端的路由，所以方法应该只在面向前端的代码中使用。确保这一点的最简单方法是在`useEffect()`React hook 中调用，或在`componentDidMount()`中调用 React 有状态组件。
 
-The ones you'll likely use the most are `push()` and `prefetch()`.
+你可能最常使用的是`push()`和`prefetch()`。
 
-`push()` allows us to programmatically trigger a URL change, in the frontend:
+`push()`允许我们在前端以编程方式触发 URL 变化。:
 
 ```js
 router.push('/login')
 ```
 
-`prefetch()` allows us to programmatically prefetch a URL, useful when we don't have a `Link` tag which automatically handles prefetching for us:
+`prefetch()`允许我们以编程方式预取（prefetch）一个 URL，当我们没有自动处理预取的`Link`标签时很有用:
 
 ```js
 router.prefetch('/login')
@@ -887,11 +887,11 @@ export default () => {
 }
 ```
 
-You can also use the router to listen for [route change events](https://nextjs.org/docs#router-events).
+你也可以使用路由来监听 [路由变更事件](https://nextjs.org/docs#router-events)。
 
 ## Feed data to the components using getInitialProps
 
-In the previous chapter we had an issue with dynamically generating the post page, because the component required some data up front, and when we tried to get the data from the JSON file:
+在上一章中，我们在动态生成帖子页面时遇到了一个问题，因为该组件需要一些前期的数据，我们试图从 JSON 文件中获取数据时:
 
 ```js
 import { useRouter } from 'next/router'
@@ -911,15 +911,15 @@ export default () => {
 }
 ```
 
-we got this error:
+我们得到了这个错误:
 
 ![Screen-Shot-2019-11-05-at-18.18.17-1](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-05-at-18.18.17-1.png)
 
-How do we solve this? And how do we make SSR work for dynamic routes?
+我们如何解决这个问题？我们又如何使 SSR 工作于动态路由？
 
-We must provide the component with props, using a special function called `getInitialProps()` which is attached to the component.
+我们必须为组件提供 props，使用一个名为 `getInitialProps()` 的特殊函数，它被附加到组件上
 
-To do so, first we name the component:
+要做到这一点，首先我们要为该组件命名:
 
 ```js
 const Post = () => {
@@ -943,9 +943,9 @@ Post.getInitialProps = () => {
 export default Post
 ```
 
-This function gets an object as its argument, which contains several properties. In particular, the thing we are interested into now is that we get the `query` object, the one we used previously to get the post id.
+这个函数得到一个对象作为其参数，其中包含几个属性。特别是，我们现在感兴趣的是，我们得到`query`对象，也就是我们之前用来得到帖子 id 的对象。
 
-So we can get it using the _object destructuring_ syntax:
+所以我们可以用 _对象析构(object destructuring)_ 的语法来获得它。:
 
 ```js
 Post.getInitialProps = ({ query }) => {
@@ -953,7 +953,7 @@ Post.getInitialProps = ({ query }) => {
 }
 ```
 
-Now we can return the post from this function:
+现在我们可以从这个函数中返回帖子(post):
 
 ```js
 Post.getInitialProps = ({ query }) => {
@@ -963,7 +963,7 @@ Post.getInitialProps = ({ query }) => {
 }
 ```
 
-And we can also remove the import of `useRouter`, and we get the post from the `props` property passed to the `Post` component:
+我们也可以删除 `useRouter` 的导入，我们从传递给`Post` 组件的`props`属性中获得帖子(post):
 
 ```js
 import posts from '../../posts.json'
@@ -986,29 +986,29 @@ Post.getInitialProps = ({ query }) => {
 export default Post
 ```
 
-Now there will be no error, and SSR will be working as expected, as you can see checking view source:
+现在不会有错误了，而且 SSR 会像预期的那样工作，你可以看到查看源代码:
 
 ![Screen-Shot-2019-11-05-at-18.53.02](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-05-at-18.53.02.png)
 
-The `getInitialProps` function will be executed on the server side, but also on the client side, when we navigate to a new page using the `Link` component as we did.
+`getInitialProps`函数将在服务器端执行，但也会在客户端执行，当我们使用`Link`组件导航到一个新页面时，就像我们所做的那样。
 
-It's important to note that `getInitialProps` gets, in the context object it receives, in addition to the `query` object these other properties:
+值得注意的是，`getInitialProps` 在它收到的上下文对象(context object )中，除了`query`对象外，还得到了其他的属性:
 
-- `pathname`: the `path` section of URL
-- `asPath` - String of the actual path (including the query) shows in the browser
+- `pathname`: URL 的 `path` 部分
+- `asPath` - 浏览器中显示的实际路径（包括查询 query）的字符串
 
-which in the case of calling `http://localhost:3000/blog/test` will respectively result to:
+在调用`http://localhost:3000/blog/test`的情况下，将分别导致:
 
 - `/blog/[id]`
 - `/blog/test`
 
-And in the case of server side rendering, it will also receive:
+而在服务器端渲染的情况下，它也将收到:
 
-- `req`: the HTTP request object
-- `res`: the HTTP response object
-- `err`: an error object
+- `req`: HTTP request 对象
+- `res`: HTTP response 对象
+- `err`: error 对象
 
-`req` and `res` will be familiar to you if you've done any Node.js coding.
+如果你做过任何 Node.js 编码，`req`和`res`将是你熟悉的。
 
 ## CSS
 

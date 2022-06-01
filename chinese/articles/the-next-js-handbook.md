@@ -1434,25 +1434,25 @@ now
 
 首先是识别部署的 URL。每次我们部署应用程序时，这个 URL 都会改变。
 
-你可以通过改变项目代码中的某些内容，并再次运行`now'来立即测试:
+你可以通过改变项目代码中的某些内容，并再次运行 `now` 来立即测试:
 
 ![Screen-Shot-2019-11-06-at-15.08.11](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-06-at-15.08.11.png)
 
-The other 2 URLs will not change. The first is a random one, the second is your project name (which defaults to the current project folder, your account name and then `now.sh`.
+其他 2 个 URL 将不会改变。第一个是随机的，第二个是你的项目名称（默认为当前项目文件夹，你的账户名，然后是`now.sh`。
 
-If you visit the URL, you will see the app deployed to production.
+如果你访问这个 URL，你会看到应用被部署到生产中。
 
 ![Screen-Shot-2019-11-06-at-14.21.43](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-06-at-14.21.43.png)
 
-You can configure Now to serve the site to your own custom domain or subdomain, but I will not dive into that right now.
+你可以将 Now 配置为将网站提供给你自己的自定义域或子域，但我现在不会深入研究这个。
 
-The `now.sh` subdomain is enough for our testing purposes.
+`now.sh`子域对于我们的测试目的已经足够了。
 
 ## Analyzing the app bundles
 
-Next provides us a way to analyze the code bundles that are generated.
+下一步为我们提供了一种分析生成的 bundles 的方法。
 
-Open the package.json file of the app and in the scripts section add those 3 new commands:
+打开应用程序的 package.json 文件，在 scripts 部分添加这 3 个新命令:
 
 ```json
 "analyze": "cross-env ANALYZE=true next build",
@@ -1487,13 +1487,13 @@ Like this:
 }
 ```
 
-then install those 2 packages:
+然后安装这两个软件包:
 
 ```bash
 npm install --dev cross-env @next/bundle-analyzer
 ```
 
-Create a `next.config.js` file in the project root, with this content:
+在项目根部创建一个`next.config.js`文件，其内容如下:
 
 ```js
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
@@ -1503,7 +1503,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 module.exports = withBundleAnalyzer({})
 ```
 
-Now run the command
+现在运行命令
 
 ```bash
 npm run analyze
@@ -1523,19 +1523,19 @@ This is incredibly useful. You can inspect what's taking the most space in the b
 
 ## Lazy loading modules
 
-Being able to visually analyze a bundle is great because we can optimize our application very easily.
+能够直观地分析一个 bundle 是非常好的，因为我们可以非常容易地优化我们的应用程序。
 
-Say we need to load the Moment library in our blog posts. Run:
+假设我们需要在我们的博客文章中加载 Moment 库。运行:
 
 ```bash
 npm install moment
 ```
 
-to include it in the project.
+将其导入项目中。
 
-Now let's simulate the fact we need it on two different routes: `/blog` and `/blog/[id]`.
+现在让我们模拟一下，我们在两个不同的路由上需要它。`/blog`和`/blog/[id]`。
 
-We import it in `pages/blog/[id].js`:
+我们在`pages/blog/[id].js`中导入它。:
 
 ```jsx
 import moment from 'moment'
@@ -1553,28 +1553,29 @@ const Post = props => {
 }
 ```
 
-I'm just adding today's date, as an example.
+我只是加入今天的日期，作为一个例子。
 
-This will include Moment.js in the blog post page bundle, as you can see by running `npm run analyze`:
+这将包括 Moment.js 在博文页面的 bundle，你可以通过运行`npm run analyze`看到:
 
 ![Screen-Shot-2019-11-06-at-17.56.14](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-06-at-17.56.14.png)
 
-See that we now have a red entry in `/blog/[id]`, the route that we added Moment.js to!
+看，我们现在在`/blog/[id]`里有一个红色的条目，就是我们添加 Moment.js 的那个路由!
 
-It went from ~1kB to 350kB, quite a big deal. And this is because the Moment.js library itself is 349kB.
+它从 1kB 变成了 350kB，相当大的变化。而这是因为 Moment.js 库本身就是 349kB。
 
-The client bundles visualization now shows us that the bigger bundle is the page one, which before was very little. And 99% of its code is Moment.js.
+客户端 bundles 的可视化显示，更大的是页面 bundles，而之前是很少的。而它 99%的代码都是 Moment.js。
 
 ![Screen-Shot-2019-11-06-at-17.55.50](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-06-at-17.55.50.png)
 
-Every time we load a blog post we are going to have all this code transferred to the client. Which is not ideal.
+每当我们加载一篇博客文章时，我们就会把所有这些代码转移到客户端。这并不理想。
 
-One fix would be to look for a library with a smaller size, as Moment.js is not known for being lightweight (especially out of the box with all the locales included), but let's assume for the sake of the example that we must use it.
+一个解决方法是寻找一个体积更小的库，因为 Moment.js 并不以轻量级著称（尤其是开箱后包含了所有的地域性），但为了这个例子，我们假设我们必须使用它。
 
-What we can do instead is separating all the Moment code in a **separate bundle**.
+我们可以做的是将所有的 Moment 代码分离在一个**独立的 bundle 里**。
 
-How? Instead of importing Moment at the component level, we perform an async import inside `getInitialProps`, and we calculate the value to send to the component.  
-Remember that we can't return complex objects inside the `getInitialProps()` returned object, so we calculate the date inside it:
+怎么做？我们在`getInitialProps`里面进行异步导入，而不是在组件层面上导入 Moment，我们计算出要发送给组件的值。
+
+记住，我们不能在`getInitialProps()`返回的对象中返回复杂的对象，所以我们在里面计算出日期:
 
 ```js
 import posts from '../../posts.json'
@@ -1600,24 +1601,24 @@ Post.getInitialProps = async ({ query }) => {
 export default Post
 ```
 
-See that special call to `.default()` after `await import`? It's needed to reference the default export in a dynamic import (see [https://v8.dev/features/dynamic-import](https://v8.dev/features/dynamic-import))
+看到在 "await import "之后对".default() "的特殊调用吗？它需要在动态导入中引用默认导出（见[https://v8.dev/features/dynamic-import](https://v8.dev/features/dynamic-import)）。
 
-Now if we run `npm run analyze` again, we can see this:
+现在，如果我们再次运行`npm run analyze`，我们可以看到这个:
 
 ![Screen-Shot-2019-11-06-at-18.00.22](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-06-at-18.00.22.png)
 
-Our `/blog/[id]` bundle is again very small, as Moment has been moved to its own bundle file, loaded separately by the browser.
+我们的`/blog/[id]`捆绑文件又非常小了，因为 Moment 已经被移到它自己的捆绑文件中，由浏览器单独加载。
 
 ## Where to go from here
 
-There is a lot more to know about Next.js. I didn't talk about managing user sessions with login, serverless, managing databases, and so on.
+关于 Next.js，还有很多东西需要了解。我没有谈及用登录管理用户会话、无服务器、管理数据库等等。
 
-The goal of this Handbook is not to teach you everything, but instead it aims to introduce you, gradually, to all the power of Next.js.
+本手册的目的不是要教你所有的东西，而是要逐步向你介绍 Next.js 的所有功能。
 
-The next step I recommend is to take a good read at the [Next.js official documentation](https://nextjs.org/docs) to find out more about all the features and functionality I didn't talk about, and take a look at all the additional functionalities introduced by [Next.js plugins](https://github.com/zeit/next-plugins), some of which are pretty amazing.
+我建议的下一步是仔细阅读[Next.js 官方文档](https://nextjs.org/docs)，以了解我没有谈到的所有特性和功能，并看看[Next.js 插件](https://github.com/zeit/next-plugins)引入的所有额外功能，其中有些功能相当惊人。
 
-You can reach me on Twitter [@flaviocopes](https://twitter.com/flaviocopes).
+你可以在 Twitter [@flaviocopes](https://twitter.com/flaviocopes)上找到我。
 
-Also check out my website, [flaviocopes.com](https://flaviocopes.com/).
+还可以查看我的网站，[flaviocopes.com](https://flaviocopes.com/)。
 
-[Note: you can download a PDF / ePub / Mobi version of this tutorial so you can read it offline](https://flaviocopes.com/page/nextjs-handbook/)!
+[注意：你可以下载本教程的 PDF/ePub/Mobi 版本，以便你可以脱机阅读](https://flaviocopes.com/page/nextjs-handbook/)!

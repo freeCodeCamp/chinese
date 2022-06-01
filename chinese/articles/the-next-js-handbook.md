@@ -1012,29 +1012,29 @@ export default Post
 
 ## CSS
 
-How do we style React components in Next.js?
+我们如何在 Next.js 中设计 React 组件的样式？
 
-We have a lot of freedom, because we can use whatever library we prefer.
+我们有很大的自由度，因为我们可以使用任何我们喜欢的库。
 
-But Next.js comes with [`styled-jsx`](https://github.com/zeit/styled-jsx) built-in, because that's a library built by the same people working on Next.js.
+但 Next.js 内置了[`styled-jsx`](https://github.com/zeit/styled-jsx)，因为那是由维护 Next.js 的人建立的一个库。
 
-And it's a pretty cool library that provides us scoped CSS, which is great for maintainability because the CSS is only affecting the component it's applied to.
+这是一个很酷的库，它为我们提供了范围广泛的 CSS，这对可维护性非常好，因为 CSS 只影响它所应用的组件。
 
-I think this is a great approach at writing CSS, without the need to apply additional libraries or preprocessors that add complexity.
+我认为这是一个写 CSS 的好方法，不需要应用额外的库或预处理器来增加复杂性。
 
-To add CSS to a React component in Next.js we insert it inside a snippet in the JSX, which start with
+要在 Next.js 中为 React 组件添加 CSS，我们要在 JSX 的一个片段中插入它，该片段以
 
 ```js
 <style jsx>{`
 ```
 
-and ends with
+并以以下内容结束
 
 ```js
 `}</style>
 ```
 
-Inside this weird blocks we write plain CSS, as we'd do in a `.css` file:
+在这个奇怪的块中，我们写了普通的 CSS，就像我们在`.css`文件中做的那样:
 
 ```js
 <style jsx>{`
@@ -1044,7 +1044,7 @@ Inside this weird blocks we write plain CSS, as we'd do in a `.css` file:
 `}</style>
 ```
 
-You write it inside the JSX, like this:
+你把它写在 JSX 里面，像这样:
 
 ```js
 const Index = () => (
@@ -1062,7 +1062,7 @@ const Index = () => (
 export default Index
 ```
 
-Inside the block we can use interpolation to dynamically change the values. For example here we assume a `size` prop is being passed by the parent component, and we use it in the `styled-jsx` block:
+在块内，我们可以使用插值来动态地改变数值。例如，这里我们假设一个 `size` prop 由父组件传递，我们在 `styled-jsx` 块中使用它:
 
 ```js
 const Index = props => (
@@ -1078,7 +1078,7 @@ const Index = props => (
 )
 ```
 
-If you want to apply some CSS globally, not scoped to a component, you add the `global` keyword to the `style` tag:
+如果你想在全局范围内应用一些 CSS，而不是局限于某个组件，你可以在`style`标签上添加`global`关键字:
 
 ```jsx
 <style jsx global>{`
@@ -1088,39 +1088,39 @@ body {
 `}</style>
 ```
 
-If you want to import an external CSS file in a Next.js component, you have to first install `@zeit/next-css`:
+如果你想在 Next.js 组件中导入一个外部 CSS 文件，你必须先安装`@zeit/next-css`:
 
 ```bash
 npm install @zeit/next-css
 ```
 
-and then create a configuration file in the root of the project, called `next.config.js`, with this content:
+然后在项目的根部创建一个配置文件，名为`next.config.js`，内容如下:
 
 ```js
 const withCSS = require('@zeit/next-css')
 module.exports = withCSS()
 ```
 
-After restarting the Next app, you can now import CSS like you normally do with JavaScript libraries or components:
+重新启动 Next 应用程序后，你现在可以像通常使用 JavaScript 库或组件那样导入 CSS:
 
 ```js
 import '../style.css'
 ```
 
-You can also import a SASS file directly, using the [`@zeit/next-sass`](https://github.com/zeit/next-plugins/tree/master/packages/next-sass) library instead.
+你也可以直接导入一个 SASS 文件，用[`@zeit/next-sass`](https://github.com/zeit/next-plugins/tree/master/packages/next-sass)库。
 
 ## Populating the head tag with custom tags
 
-From any Next.js page component, you can add information to the page header.
+从任何 Next.js 页面组件中，你都可以向页面标题添加信息。
 
-This is handy when:
+这在以下情况下是很方便的:
 
-- you want to customize the page title
-- you want to change a meta tag
+- 你想定制页面的标题
+- 你想改变一个元(meta)标签
 
-How can you do so?
+你怎么能这样做呢？
 
-Inside every component you can import the `Head` component from `next/head` and include it in your component JSX output:
+在每个组件内，你可以从 `next/head` 导入 `Head` 组件，并将其包含在你的组件 JSX 输出中:
 
 ```js
 import Head from 'next/head'
@@ -1137,9 +1137,9 @@ const House = props => (
 export default House
 ```
 
-You can add any HTML tag you'd like to appear in the `<head>` section of the page.
+你可以在页面的`<head>`部分添加任何你想出现的 HTML 标签。
 
-When mounting the component, Next.js will make sure the tags inside `Head` are added to the heading of the page. Same when unmounting the component, Next.js will take care of removing those tags.
+当安装该组件时，Next.js 将确保`Head`内的标签被添加到页面的标题中。当卸载组件时，Next.js 将负责删除这些标签。
 
 ## Adding a wrapper component
 

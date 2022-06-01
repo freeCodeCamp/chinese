@@ -1310,15 +1310,15 @@ export default (req, res) => {
 
 除了我们已经看到的`req.query`和`req.method`之外，我们还可以通过引用`req.cookies`，即`req.body`中的请求体来访问 cookies。
 
-在底层下，这一切都由[Micro](https://github.com/zeit/micro)提供动力，这是一个支持异步 HTTP 微服务的库，由 Next.js 团队开发维护。
+ 从更底层角度来讲，这一切都由[Micro](https://github.com/zeit/micro)提供动力，这是一个支持异步 HTTP 微服务的库，由 Next.js 团队开发维护。
 
 你可以在我们的 API 路由中使用任何 Micro 中间件来增加更多的功能。
 
 ## Run code only on the server side or client side
 
-In your page components, you can execute code only in the server-side or on the client-side, by checking the `window` property.
+在你的页面组件中，你可以通过检查`window`属性，判断在服务器端或在客户端执行代码。
 
-This property is only existing inside the browser, so you can check
+这个属性只存在于浏览器内部，所以你可以检查
 
 ```js
 if (typeof window === 'undefined') {
@@ -1326,9 +1326,9 @@ if (typeof window === 'undefined') {
 }
 ```
 
-and add the server-side code in that block.
+并在该块中添加服务器端的代码。
 
-Similarly, you can execute client-side code only by checking
+同样地，你可以通过检查来是否可以执行客户端代码
 
 ```js
 if (typeof window !== 'undefined') {
@@ -1336,17 +1336,17 @@ if (typeof window !== 'undefined') {
 }
 ```
 
-JS Tip: We use the `typeof` operator here because we can't detect a value to be undefined in other ways. We can't do `if (window === undefined)` because we'd get a "window is not defined" runtime error
+JS 提示。我们在这里使用`typeof`操作符，因为我们无法通过其他方式检测一个未定义的值。我们不能做`if (window == undefined)`，因为我们会得到一个 "window is not defined" 的运行时错误。
 
-Next.js, as a build-time optimization, also removes the code that uses those checks from bundles. A client-side bundle will not include the content wrapped into a `if (typeof window === 'undefined') {}` block.
+Next.js，作为构建时的优化，也从 bundles 中删除了使用这些检查的代码。客户端 bundle  将不包括包裹在`if (typeof window === 'undefined') {}`块中的内容。
 
 ## Deploying the production version
 
-Deploying an app is always left last in tutorials.
+在教程中，部署应用程序总是被放在最后。
 
-Here I want to introduce it early, just because it's so easy to deploy a Next.js app that we can dive into it now, and then move on to other more complex topics later on.
+在这里，我想提前介绍一下，因为部署 Next.js 应用非常容易，我们现在就可以深入研究，然后再继续研究其他更复杂的话题。
 
-Remember in the "How to install Next.js" chapter I told you to add those 3 lines to the `package.json` `script` section:
+记得在 "如何安装 Next.js "一章中，我告诉你要在`package.json`的`script`部分添加这 3 行:
 
 ```json
 "scripts": {
@@ -1356,13 +1356,13 @@ Remember in the "How to install Next.js" chapter I told you to add those 3 lines
 }
 ```
 
-We used `npm run dev` up to now, to call the `next` command installed locally in `node_modules/next/dist/bin/next`. This started the development server, which provided us **source maps** and **hot code reloading**, two very useful features while debugging.
+到目前为止，我们使用`npm run dev`来调用安装在本地的`node_modules/next/dist/bin/next`中的`next`命令。这启动了开发服务器，它为我们提供了**source maps**和**hot code reloading**这两个在调试时非常有用的功能。
 
-The same command can be invoked to build the website passing the `build` flag, by running `npm run build`. Then, the same command can be used to start the production app passing the `start` flag, by running `npm run start`.
+同样的命令可以通过运行 `npm run build`来建立网站，并加上 `build` 标志。然后，同样的命令可以用来启动生产应用程序，通过运行 `npm run start` 来传递 `start` 标志。
 
-Those 2 commands are the ones we must invoke to successfully deploy the production version of our site locally. The production version is highly optimized and does not come with source maps and other things like hot code reloading that would not be beneficial to our end users.
+这两个命令是我们必须调用的，以成功地在本地部署我们网站的生产版本。生产版本是高度优化的，没有 `source maps`和其他诸如 `hot code reloading` 的东西，这对我们的终端用户没有好处。
 
-So, let's create a production deploy of our app. Build it using:
+所以，让我们创建一个生产版的应用程序。用以下方法建立它:
 
 ```bash
 npm run build
@@ -1370,9 +1370,9 @@ npm run build
 
 ![Screen-Shot-2019-11-06-at-13.46.31](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-06-at-13.46.31.png)
 
-The output of the command tells us that some routes (`/` and `/blog` are now prerendered as static HTML, while `/blog/[id]` will be served by the Node.js backend.
+命令的输出告诉我们，一些路由（`/`和`/blog`现在被预设为静态 HTML，而`/blog/[id]`将由 Node.js 后端提供。
 
-Then you can run `npm run start` to start the production server locally:
+然后你可以运行`npm run start`来启动本地的生产服务器。
 
 ```bash
 npm run start
@@ -1380,61 +1380,61 @@ npm run start
 
 ![Screen-Shot-2019-11-06-at-13.47.01](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-06-at-13.47.01.png)
 
-Visiting [http://localhost:3000](http://localhost:3000) will show us the production version of the app, locally.
+访问[http://localhost:3000](http://localhost:3000)将向我们展示应用程序的生产版本，在本地。
 
 ## Deploying on Now
 
-In the previous chapter we deployed the Next.js application locally.
+在上一章中，我们在本地部署了 Next.js 应用程序。
 
-How do we deploy it to a real web server, so other people can access it?
+我们如何将其部署到真正的网络服务器上，以便其他人能够访问它呢？
 
-One of the most simple ways to deploy a Next application is through the **Now** platform created by [Zeit](https://zeit.co),  the same company that created the Open Source project Next.js. You can use Now to deploy Node.js apps, Static Websites, and much more.
+部署 Next 应用程序最简单的方法之一是通过[Zeit](https://zeit.co)创建的**Now**平台，该公司正是创建开源项目 Next.js 的公司。你可以使用 Now 来部署 Node.js 应用程序、静态网站等。
 
-Now makes the deployment and distribution step of an app very, very simple and fast, and in addition to Node.js apps, they also support deploying Go, PHP, Python and other languages.
+现在使应用程序的部署和分发步骤变得非常、非常简单和快速，除了 Node.js 应用程序外，他们还支持部署 Go、PHP、Python 和其他语言。
 
-You can think of it as the "cloud", as you don't really know where your app will be deployed, but you know that you will have a URL where you can reach it.
+你可以把它看作是 "云"，因为你并不真正知道你的应用程序将被部署在哪里，但你知道你将有一个可以到达的 URL。
 
-Now is free to start using, with generous free plan that currently includes 100GB of hosting, 1000 [serverless](https://www.freecodecamp.org/news/serverless/) functions invocations per day, 1000 builds per month, 100GB of bandwidth per month, and one [CDN](https://www.freecodecamp.org/news/cdn/) location. The [pricing page](https://zeit.co/pricing) helps get an idea of the costs if you need more.
+现在开始使用是免费的，有慷慨的免费计划，目前包括 100GB 的主机，每天 1000 次[无服务器](https://www.freecodecamp.org/news/serverless/)函数调用，每月 1000 次构建，每月 100GB 的带宽，以及一个[CDN](https://www.freecodecamp.org/news/cdn/)位置。如果你需要更多，[定价页](https://zeit.co/pricing)有助于了解成本。
 
-The best way to start using Now is by using the official Now CLI:
+开始使用 Now 的最好方法是使用官方 Now CLI:
 
 ```bash
 npm install -g now
 ```
 
-Once the command is available, run
+一旦有了这个命令，运行
 
 ```bash
 now login
 ```
 
-and the app will ask you for your email.
+而应用程序将要求你提供你的电子邮件。
 
-If you haven't registered already, create an account on [https://zeit.co/signup](https://zeit.co/signup) before continuing, then add your email to the CLI client.
+如果你还没有注册，请在继续之前在[https://zeit.co/signup](https://zeit.co/signup)上创建一个账户，然后将你的电子邮件添加到 CLI 客户端。
 
-Once this is done, from the Next.js project root folder run
+一旦完成这些，从 Next.js 项目根目录下运行
 
 ```bash
 now
 ```
 
-and the app will be instantly deployed to the Now cloud, and you'll be given the unique app URL:
+而该应用程序将被立即部署到 Now 云中，你将得到独特的应用程序 URL:
 
 ![Screen-Shot-2019-11-06-at-14.21.09](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-06-at-14.21.09.png)
 
-Once you run the `now` program, the app is deployed to a random URL under the `now.sh` domain.
+一旦你运行`now`程序，应用程序就会被部署到`now.sh`域下的一个随机 URL。
 
-We can see 3 different URLs in the output given in the image:
+我们可以在图片中给出的输出中看到 3 个不同的 URL
 
 - [https://firstproject-2pv7khwwr.now.sh](https://firstproject-2pv7khwwr.now.sh)
 - [https://firstproject-sepia-ten.now.sh](https://firstproject-sepia-ten.now.sh)
 - [https://firstproject.flaviocopes.now.sh](https://firstproject.flaviocopes.now.sh)
 
-Why so many?
+为什么有这么多？
 
-The first is the URL identifying the deploy. Every time we deploy the app, this URL will change.
+首先是识别部署的 URL。每次我们部署应用程序时，这个 URL 都会改变。
 
-You can test immediately by changing something in the project code, and running `now` again:
+你可以通过改变项目代码中的某些内容，并再次运行`now'来立即测试:
 
 ![Screen-Shot-2019-11-06-at-15.08.11](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-06-at-15.08.11.png)
 

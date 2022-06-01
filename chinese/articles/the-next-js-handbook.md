@@ -15,34 +15,34 @@
 
 ## Index
 
-1. [Introduction](#introduction)
-2. [The main features provided by Next.js](#the-main-features-provided-by-next-js)
+1. [介绍](./#introduction)
+2. [Next.js 提供的主要功能](./#the-main-features-provided-by-next-js)
 3. [Next.js vs Gatsby vs `create-react-app`](#next-js-vs-gatsby-vs-create-react-app)
-4. How to install Next.js
-5. [View source to confirm SSR is working](#view-source-to-confirm-ssr-is-working)
+4. [如何安装 Next.js](./#how-to-install-nextjs)
+5. [查看来源以确认 SSR 的工作](./#view-source-to-confirm-ssr-is-working)
 6. [The app bundles](#the-app-bundles)
-7. [What's that icon in the bottom right?](#what-s-that-icon-on-the-bottom-right)
-8. [Install the React DevTools](#install-the-react-developer-tools)
-9. [Other debugging techniques you can use](#other-debugging-techniques-you-can-use)
-10. [Adding a second page to the site](#adding-a-second-page-to-the-site)
-11. [Linking the two pages](#linking-the-two-pages)
-12. [Dynamic content with the router](#dynamic-content-with-the-router)
-13. [Prefetching](#prefetching-1)
-14. [Using the router to detect the active link](#using-the-router-to-detect-the-active-link)
-15. [Using `next/router`](#using-next-router)
-16. [Feed data to the components using `getInitialProps()`](#feed-data-to-the-components-using-getinitialprops)
+7. [右下角的那个图标是什么？](./#what-s-that-icon-on-the-bottom-right)
+8. [安装 React DevTools](./#install-the-react-developer-tools)
+9. [你可以使用的其他调试技术](./#other-debugging-techniques-you-can-use)
+10. [在网站上添加第二页](./#adding-a-second-page-to-the-site)
+11. [链接这两个页面](./#linking-the-two-pages)
+12. [路由与动态内容](./#dynamic-content-with-the-router)
+13. [Prefetching(预取)](#prefetching-1)
+14. [使用路由器来检测活动链接](./#using-the-router-to-detect-the-active-link)
+15. [使用 next/router](./#using-next-router)
+16. [使用 getInitialProps() 向组件提供数据](./#feed-data-to-the-components-using-getinitialprops)
 17. [CSS](#css)
-18. [Populating the head tag with custom tags](#populating-the-head-tag-with-custom-tags)
-19. [Adding a wrapper component](#adding-a-wrapper-component)
+18. [用自定义标签填充 head 标签](./#populating-the-head-tag-with-custom-tags)
+19. [添加一个封装组件](./#adding-a-wrapper-component)
 20. [API routes](#api-routes)
-21. [Run code on the server side, or on the client side](#run-code-only-on-the-server-side-or-client-side)
-22. [Deploying the production version](#deploying-the-production-version)
-23. [Deploying on Now](#deploying-on-now)
-24. [Analyzing the app bundles](#analyzing-the-app-bundles)
-25. [Lazy loading modules](#lazy-loading-modules)
-26. [Where to go from here](#where-to-go-from-here)
+21. [在服务器端，或在客户端运行代码](./#run-code-only-on-the-server-side-or-client-side)
+22. [部署生产版本](./#deploying-the-production-version)
+23. [部署在 Now](./#deploying-on-now)
+24. [分析应用程序 bundles 的情况](./#analyzing-the-app-bundles)
+25. [模块懒加载](./#lazy-loading-modules)
+26. [今后的发展方向](./#where-to-go-from-here)
 
-## Introduction
+<h2 id="introduction">介绍</h2>
 
 在一个由 React 驱动的现代 JavaScript 应用程序上工作是非常棒的，直到你意识到有几个与在客户端渲染所有内容有关的问题。
 
@@ -56,7 +56,7 @@
 
 它提供了一个通用的结构，使你能够轻松地建立一个前端的 React 应用程序，并透明地为你处理服务器端的渲染。
 
-## The main features provided by Next.js
+<h2 id="the-main-features-provided-by-next-js">Next.js提供的主要功能</h2>
 
 下面是一份 Next.js 不完全的主要功能的清单:
 
@@ -132,7 +132,7 @@ Next.js 也可以生成静态网站，但我不会说这是它的主要使用场
 
 Gatsby 在很大程度上也是基于 [GraphQL](https://flaviocopes.com/graphql/)，根据你的想法和需要，你可能真的喜欢或不喜欢。
 
-## How to install Next.js?
+<h2 id="how-to-install-nextjs">如何安装Next.js</h2>
 
 要安装 Next.js，你需要安装 Node.js。
 
@@ -290,7 +290,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see it.
 
 ![Screen-Shot-2019-11-04-at-11.24.23](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-11.24.23.png)
 
-## View source to confirm SSR is working
+<h2 id="view-source-to-confirm-ssr-is-working">查看来源以确认SSR的工作</h2>
 
 现在让我们检查一下这个应用程序是否按照我们期望的那样工作。这是一个 Next.js 应用程序，所以它应该是 **服务器端渲染的(server side rendered)**。
 
@@ -381,7 +381,7 @@ React 应用程序将在客户端启动，并将是一个使用客户端渲染�
 
 所加载的 4 个 bundle 文件已经实现了一个叫做代码分割(code splitting)的功能。`index.js` 文件提供了 `index` 组件所需的代码，它为`/`路由提供服务，如果我们有更多的页面，我们将为每个页面提供更多的 bundle，然后只有在需要时才会被加载——为页面提供一个更高性能的加载时间。
 
-## What's that icon on the bottom right?
+<h2 id="what-s-that-icon-on-the-bottom-right">右下角的那个图标是什么？</h2>
 
 你看到页面右下方那个像闪电的小图标了吗？
 
@@ -405,7 +405,7 @@ React 应用程序将在客户端启动，并将是一个使用客户端渲染�
 
 这是一个非常好的方法，可以立即确定应用程序是否已经被编译，你可以测试你正在做的一部分。
 
-## Install the React Developer Tools
+<h2 id="install-the-react-developer-tools">安装React DevTools</h2>
 
 Next.js 是基于 React 的，所以我们绝对需要安装一个非常有用的工具（如果你还没有），那就是 React 开发者工具（React Developer Tools）。
 
@@ -449,7 +449,7 @@ React 开发者工具同时适用于 [Chrome](https://chrome.google.com/webstore
 
 ![Screen-Shot-2019-11-04-at-14.45.20](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-04-at-14.45.20.png)
 
-## Other debugging techniques you can use
+<h2 id="other-debugging-techniques-you-can-use">你可以使用的其他调试技术</h2>
 
 除了 React 开发者工具（这是构建 Next.js 应用程序所必需的）之外，我想强调调试 Next.js 应用程序的 2 种方法。
 
@@ -469,7 +469,7 @@ React 开发者工具同时适用于 [Chrome](https://chrome.google.com/webstore
 
 你也可以使用 VS 代码调试器来调试服务器端的代码。我提到这个技术和[这个教程](https://github.com/Microsoft/vscode-recipes/tree/master/Next-js)来设置这个。
 
-## Adding a second page to the site
+<h2 id="adding-a-second-page-to-the-site">在网站上添加第二页</h2>
 
 现在我们已经很好地掌握了可以用来帮助我们开发 Next.js 应用程序的工具，让我们从我们的第一个应用程序的基础上继续前进吧:
 
@@ -521,7 +521,7 @@ export default function() {
 }
 ```
 
-## Linking the two pages
+<h2 id="linking-the-two-pages">链接这两个页面</h2>
 
 现在我们有两个页面，分别由`index.js`和`blog.js`定义，我们可以引入链接。
 
@@ -593,7 +593,7 @@ export default Index
 
 如果你现在按下后退按钮呢？没有什么被加载，因为浏览器仍然有旧的`index.js` bundle，准备加载`/index`路由。这都是自动的!
 
-## Dynamic content with the router
+<h2 id="dynamic-content-with-the-router">路由与动态内容</h2>
 
 在上一章中，我们看到了如何将主页(index)链接到博客(blog)页面。
 
@@ -803,7 +803,7 @@ export default Blog
 </Link>
 ```
 
-## Using the router to detect the active link
+<h2 id="using-the-router-to-detect-the-active-link">使用路由器来检测活动链接</h2>
 
 在处理链接时，一个非常重要的功能是确定什么是当前的 URL，特别是给活动链接分配一个类别，这样我们就可以使它的样式与其他的不同。
 
@@ -836,8 +836,7 @@ export default ({ href, children }) => {
 }
 ```
 
-## Using `next/router`
-
+<h2 id="using-next-router">使用 next/router</h2>
 我们已经看到了如何使用 Link 组件来声明式地处理 Next.js 应用程序中的路由。
 
 在 JSX 中管理路由真的很方便，但有时你需要以编程方式触发路由变化。
@@ -889,7 +888,7 @@ export default () => {
 
 你也可以使用路由来监听 [路由变更事件](https://nextjs.org/docs#router-events)。
 
-## Feed data to the components using getInitialProps
+<h2 id="feed-data-to-the-components-using-getinitialprops">使用 getInitialProps() 向组件提供数据</h2>
 
 在上一章中，我们在动态生成帖子页面时遇到了一个问题，因为该组件需要一些前期的数据，我们试图从 JSON 文件中获取数据时:
 
@@ -1109,7 +1108,7 @@ import '../style.css'
 
 你也可以直接导入一个 SASS 文件，用[`@zeit/next-sass`](https://github.com/zeit/next-plugins/tree/master/packages/next-sass)库。
 
-## Populating the head tag with custom tags
+<h2 id="populating-the-head-tag-with-custom-tags">用自定义标签填充head标签</h2>
 
 从任何 Next.js 页面组件中，你都可以向页面标题添加信息。
 
@@ -1141,7 +1140,7 @@ export default House
 
 当安装该组件时，Next.js 将确保`Head`内的标签被添加到页面的标题中。当卸载组件时，Next.js 将负责删除这些标签。
 
-## Adding a wrapper component
+<h2 id="adding-a-wrapper-component">添加一个封装组件</h2>
 
 你网站上的所有页面看起来都差不多。有一个 chrome 窗口，一个共同的基础层，你只是想改变里面的内容。
 
@@ -1314,7 +1313,7 @@ export default (req, res) => {
 
 你可以在我们的 API 路由中使用任何 Micro 中间件来增加更多的功能。
 
-## Run code only on the server side or client side
+<h2 id="run-code-only-on-the-server-side-or-client-side">在服务器端，或在客户端运行代码</h2>
 
 在你的页面组件中，你可以通过检查`window`属性，判断在服务器端或在客户端执行代码。
 
@@ -1340,7 +1339,7 @@ JS 提示。我们在这里使用`typeof`操作符，因为我们无法通过其
 
 Next.js，作为构建时的优化，也从 bundles 中删除了使用这些检查的代码。客户端 bundle  将不包括包裹在`if (typeof window === 'undefined') {}`块中的内容。
 
-## Deploying the production version
+<h2 id="deploying-the-production-version">部署生产版本</h2>
 
 在教程中，部署应用程序总是被放在最后。
 
@@ -1382,7 +1381,7 @@ npm run start
 
 访问[http://localhost:3000](http://localhost:3000)将向我们展示应用程序的生产版本，在本地。
 
-## Deploying on Now
+<h2 id="deploying-on-now">部署在 Now</h2>
 
 在上一章中，我们在本地部署了 Next.js 应用程序。
 
@@ -1448,7 +1447,7 @@ now
 
 `now.sh`子域对于我们的测试目的已经足够了。
 
-## Analyzing the app bundles
+<h2 id="analyzing-the-app-bundles">分析应用程序bundles的情况</h2>
 
 下一步为我们提供了一种分析生成的 bundles 的方法。
 
@@ -1521,7 +1520,7 @@ This is incredibly useful. You can inspect what's taking the most space in the b
 
 ![Screen-Shot-2019-11-06-at-16.14.12](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-06-at-16.14.12.png)
 
-## Lazy loading modules
+<h2 id="lazy-loading-modules">模块懒加载</h2>
 
 能够直观地分析一个 bundle 是非常好的，因为我们可以非常容易地优化我们的应用程序。
 
@@ -1609,7 +1608,7 @@ export default Post
 
 我们的`/blog/[id]`捆绑文件又非常小了，因为 Moment 已经被移到它自己的捆绑文件中，由浏览器单独加载。
 
-## Where to go from here
+<h2 id="where-to-go-from-here">今后的发展方向</h2>
 
 关于 Next.js，还有很多东西需要了解。我没有谈及用登录管理用户会话、无服务器、管理数据库等等。
 

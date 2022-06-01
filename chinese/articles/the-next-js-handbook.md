@@ -1143,13 +1143,13 @@ export default House
 
 ## Adding a wrapper component
 
-All the pages on your site look more or less the same. There's a chrome window, a common base layer, and you just want to change what's inside.
+你网站上的所有页面看起来都差不多。有一个 chrome 窗口，一个共同的基础层，你只是想改变里面的内容。
 
-There's a nav bar, a sidebar, and then the actual content.
+有一个导航栏，一个侧边栏，然后是实际内容。
 
-How do you build such system in Next.js?
+你如何在 Next.js 中建立这样的系统？
 
-There are 2 ways. One is using a [Higher Order Component](https://flaviocopes.com/react-higher-order-components/), by creating a `components/Layout.js` component:
+有 2 种方法。一种是使用 [高阶组件](https://flaviocopes.com/react-higher-order-components/)，通过创建一个`components/Layout.js`组件:
 
 ```js
 export default Page => {
@@ -1166,9 +1166,9 @@ export default Page => {
 }
 ```
 
-In there we can import separate components for heading and/or sidebar, and we can also add all the CSS we need.
+在那里，我们可以为标题和/或侧边栏导入单独的组件，我们还可以添加我们需要的所有 CSS。
 
-And you use it in every page like this:
+你可以在每一个页面中像这样使用它:
 
 ```js
 import withLayout from '../components/Layout.js'
@@ -1178,13 +1178,13 @@ const Page = () => <p>Here's a page!</p>
 export default withLayout(Page)
 ```
 
-But I found this works only for simple cases, where you don't need to call `getInitialProps()` on a page.
+但我发现这只适用于简单的情况，你不需要在一个页面上调用`getInitialProps()`。
 
-Why?
+为什么？
 
-Because `getInitialProps()` gets only called on the page component. But if we export the Higher Order Component withLayout() from a page, `Page.getInitialProps()` is not called. `withLayout.getInitialProps()` would.
+因为`getInitialProps()`只在页面组件上被调用。但是如果我们从一个页面导出高阶组件 withLayout()，`Page.getInitialProps()`就不会被调用。但 `withLayout.getInitialProps()`会。
 
-To avoid unnecessarily complicating our codebase, the alternative approach is to use props:
+为了避免不必要地使我们的代码库复杂化，另一种方法是使用 props:
 
 ```js
 export default props => (
@@ -1199,7 +1199,7 @@ export default props => (
 )
 ```
 
-and in our pages now we use it like this:
+而在我们的页面中，我们现在这样使用它:
 
 ```js
 import Layout from '../components/Layout.js'
@@ -1211,7 +1211,7 @@ const Page = () => (
 )
 ```
 
-This approach lets us use `getInitialProps()` from within our page component, with the only downside of having to write the component JSX inside the `content` prop:
+这种方法让我们在页面组件中使用`getInitialProps()`，唯一的缺点是必须在`content`prop 中写入组件的 JSX:
 
 ```js
 import Layout from '../components/Layout.js'
@@ -1229,19 +1229,19 @@ Page.getInitialProps = ({ query }) => {
 
 ## API Routes
 
-In addition to creating **page routes**, which means pages are served to the browser as Web pages, Next.js can create **API routes**.
+除了创建 **页面路由（page routes）**，也就是将页面作为网页提供给浏览器之外，Next.js 还可以创建 **API 路由（API routes）**。
 
-This is a very interesting feature because it means that Next.js can be used to create a frontend for data that is stored and retrieved by Next.js itself, transferring JSON via fetch requests.
+这是一个非常有趣的功能，因为它意味着 Next.js 可以用来创建一个由 Next.js 本身存储和检索的数据的前端，通过 fetch 请求传输 JSON。
 
-API routes live under the `/pages/api/` folder and are mapped to the `/api` endpoint.
+API 路由位于`/pages/api/`文件夹下，并被映射到`/api`端点（endpoint）。
 
-This feature is _very_ useful when creating applications.
+这个功能在创建应用程序时非常有用。
 
-In those routes, we write Node.js code (rather than React code). It's a paradigm shift, you move from the frontend to the backend, but very seamlessly.
+在这些路由中，我们编写 Node.js 代码（而不是 React 代码）。这是一个范式的转变，你从前端移到后端，但非常无缝。
 
-Say you have a `/pages/api/comments.js` file, whose goal is to return the comments of a blog post as JSON.
+假设你有一个`/pages/api/comments.js`文件，其目标是以 JSON 格式返回一篇博客文章的评论。
 
-Say you have a list of comments stored in a `comments.json` file:
+假设你有一个存储在`comments.json`文件中的评论列表:
 
 ```json
 [
@@ -1254,7 +1254,7 @@ Say you have a list of comments stored in a `comments.json` file:
 ]
 ```
 
-Here's a sample code, which returns to the client the list of comments:
+下面是一个示例代码，它向客户返回评论的列表:
 
 ```js
 import comments from './comments.json'
@@ -1264,13 +1264,13 @@ export default (req, res) => {
 }
 ```
 
-It will listen on the `/api/comments` URL for GET requests, and you can try calling it using your browser:
+它将监听`/api/comments` URL 的 GET 请求，你可以尝试用浏览器调用它:
 
 ![Screen-Shot-2019-11-07-at-11.14.42](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-07-at-11.14.42.png)
 
-API routes can also use **dynamic routing** like pages, use the `[]` syntax to create a dynamic API route, like `/pages/api/comments/[id].js` which will retrieve the comments specific to a post id.
+API 路由也可以像页面一样使用 **动态路由**，使用`[]`语法来创建动态 API 路由，如`/pages/api/comments/[id].js`，它将检索特定于帖子 id 的评论。
 
-Inside the `[id].js` you can retrieve the `id` value by looking it up inside the `req.query` object:
+在`[id].js`中，你可以通过在`req.query`对象中查找来检索`id`值:
 
 ```js
 import comments from '../comments.json'
@@ -1280,17 +1280,17 @@ export default (req, res) => {
 }
 ```
 
-Heres you can see the above code in action:
+在这里你可以看到上述代码的运行情况:
 
 ![Screen-Shot-2019-11-07-at-11.59.53](https://www.freecodecamp.org/news/content/images/2019/11/Screen-Shot-2019-11-07-at-11.59.53.png)
 
-In dynamic pages, you'd need to import `useRouter` from `next/router`, then get the router object using `const router = useRouter()`, and then we'd be able to get the `id` value using `router.query.id`.
+在动态页面中，你需要从`next/router`中导入`useRouter`，然后使用`const router = useRouter()`获得路由对象，然后我们就可以使用`router.query.id`获得`id`值。
 
-In the server-side it's all easier, as the query is attached to the request object.
+在服务器端，这一切都很容易，因为查询是附在请求对象上的。
 
-If you do a POST request, all works in the same way - it all goes through that default export.
+如果你做一个 POST 请求，所有的工作方式都是一样的——都是通过那个默认的出口。
 
-To separate POST from GET and other HTTP methods (PUT, DELETE), lookup the `req.method` value:
+要把 POST 从 GET 和其他 HTTP 方法（PUT、DELETE）中分离出来，可以查询`req.method`值:
 
 ```js
 export default (req, res) => {
@@ -1308,11 +1308,11 @@ export default (req, res) => {
 }
 ```
 
-In addition to `req.query` and `req.method` we already saw, we have access to cookies by referencing `req.cookies`, the request body in `req.body`.
+除了我们已经看到的`req.query`和`req.method`之外，我们还可以通过引用`req.cookies`，即`req.body`中的请求体来访问 cookies。
 
-Under the hoods, this is all powered by [Micro](https://github.com/zeit/micro), a library that powers asynchronous HTTP microservices, made by the same team that built Next.js.
+在底层下，这一切都由[Micro](https://github.com/zeit/micro)提供动力，这是一个支持异步 HTTP 微服务的库，由 Next.js 团队开发维护。
 
-You can make use of any Micro middleware in our API routes to add more functionality.
+你可以在我们的 API 路由中使用任何 Micro 中间件来增加更多的功能。
 
 ## Run code only on the server side or client side
 

@@ -1,107 +1,107 @@
-> -  原文地址：[The JavaScript Modules Handbook – Complete Guide to ES Modules and Module Bundlers](https://www.freecodecamp.org/news/javascript-es-modules-and-module-bundlers/)
-> -  原文作者：[Oluwatobi Sofela](https://www.freecodecamp.org/news/author/oluwatobiss/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[The JavaScript Modules Handbook – Complete Guide to ES Modules and Module Bundlers](https://www.freecodecamp.org/news/javascript-es-modules-and-module-bundlers/)
+> - 原文作者：[Oluwatobi Sofela](https://www.freecodecamp.org/news/author/oluwatobiss/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![The JavaScript Modules Handbook – Complete Guide to ES Modules and Module Bundlers](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/javascript-es-modules-and-module-bundlers-container-4203677_1920.jpg)
 
-**Modules** and **Module Bundlers** are essential components of modern web development. But understanding how they work can quickly become overwhelming.
+**Modules** 和 **Module Bundlers** 是现代 Web 开发的重要组成部分。但了解它们的工作方式很快就会让人不知所措。
 
-This article will show you all you need to know about ES Modules and Module Bundlers in plain English.
+本文将以通俗的方式向你展示所有你需要了解的 ES Modules 和 Module Bundlers。
 
 ## Table of Contents
 
-1.  [What Exactly Is a JavaScript Module?](#what-exactly-is-a-javascript-module)
-2.  [Why Use Modules?](#why-use-modules)
-3.  [Common Types of Module Systems in JavaScript](#common-types-of-module-systems-in-javascript)
-4.  [How to Convert a JavaScript File into a Module](#how-to-convert-a-javascript-file-into-a-module)
-5.  [How to Use an ES Module](#how-to-use-an-es-module)
-6.  [How to Export a Module's Code](#how-to-export-a-module-s-code)
-7.  [How to Import Exported Code](#how-to-import-exported-code)
-8.  [How to Use a Module's Imported Code](#how-to-use-a-module-s-imported-code)
-9.  [How to Rename Exports and Imports in ES Modules](#how-to-rename-exports-and-imports-in-es-modules)
-10.  [Why Rename a Module's Code?](#why-rename-a-module-s-code)
-11.  [How to Rename Multiple Exports in an ES Module](#how-to-rename-multiple-exports-in-an-es-module)
-12.  [How to Rename Multiple Imports in an ES Module](#how-to-rename-multiple-imports-in-an-es-module)
-13.  [How to Import All Exportable Items from an ES Module in One Go](#how-to-import-all-exportable-items-from-an-es-module-in-one-go)
-14.  [How to Export Anonymously to an ES Module](#how-to-export-anonymously-to-an-es-module)
-15.  [What Exactly Is an Aggregator File?](#what-exactly-is-an-aggregator-file)
-16.  [Project: How to Use an Aggregator File](#project-how-to-use-an-aggregator-file)
-17.  [How to Use the `import()` Syntax to Load a Module Dynamically](#how-to-use-the-import-syntax-to-load-a-module-dynamically)
-18.  [What Exactly Is `import.meta` in ES Modules?](#what-exactly-is-import-meta-in-es-modules)
-19.  [Quick Review of Modules So Far](#quick-review-of-modules-so-far)
-20.  [What Is a Module Bundler?](#what-is-a-module-bundler)
-21.  [Why Do You Need a Module Bundler?](#why-do-you-need-a-module-bundler)
-22.  [How Does a Module Bundler Work?](#how-does-a-module-bundler-work)
-23.  [How to Use Webpack](#how-to-use-webpack)
-24.  [How to Make Webpack Auto-Generate Your App's HTML File](#how-to-make-webpack-auto-generate-your-app-s-html-file)
-25.  [How to Make `HtmlWebpackPlugin` Use Your Source File as a Template to Auto-Generate a New HTML Page](#how-to-make-htmlwebpackplugin-use-your-source-file-as-a-template-to-auto-generate-a-new-html-page)
-26.  [Important Stuff to Know about Updating Your App](#important-stuff-to-know-about-updating-your-app)
-27.  [How to Rerun Webpack Automatically](#how-to-rerun-webpack-automatically)
-28.  [How to Reload the Browser Automatically](#how-to-reload-the-browser-automatically)
-29.  [What Exactly Is Webpack's Configuration File?](#what-exactly-is-webpack-s-configuration-file)
-30.  [Common Webpack Configuration Options](#common-webpack-configuration-options)
-31.  [Overview](#overview)
+1. [What Exactly Is a JavaScript Module?](#what-exactly-is-a-javascript-module)
+2. [Why Use Modules?](#why-use-modules)
+3. [Common Types of Module Systems in JavaScript](#common-types-of-module-systems-in-javascript)
+4. [How to Convert a JavaScript File into a Module](#how-to-convert-a-javascript-file-into-a-module)
+5. [How to Use an ES Module](#how-to-use-an-es-module)
+6. [How to Export a Module's Code](#how-to-export-a-module-s-code)
+7. [How to Import Exported Code](#how-to-import-exported-code)
+8. [How to Use a Module's Imported Code](#how-to-use-a-module-s-imported-code)
+9. [How to Rename Exports and Imports in ES Modules](#how-to-rename-exports-and-imports-in-es-modules)
+10. [Why Rename a Module's Code?](#why-rename-a-module-s-code)
+11. [How to Rename Multiple Exports in an ES Module](#how-to-rename-multiple-exports-in-an-es-module)
+12. [How to Rename Multiple Imports in an ES Module](#how-to-rename-multiple-imports-in-an-es-module)
+13. [How to Import All Exportable Items from an ES Module in One Go](#how-to-import-all-exportable-items-from-an-es-module-in-one-go)
+14. [How to Export Anonymously to an ES Module](#how-to-export-anonymously-to-an-es-module)
+15. [What Exactly Is an Aggregator File?](#what-exactly-is-an-aggregator-file)
+16. [Project: How to Use an Aggregator File](#project-how-to-use-an-aggregator-file)
+17. [How to Use the `import()` Syntax to Load a Module Dynamically](#how-to-use-the-import-syntax-to-load-a-module-dynamically)
+18. [What Exactly Is `import.meta` in ES Modules?](#what-exactly-is-import-meta-in-es-modules)
+19. [Quick Review of Modules So Far](#quick-review-of-modules-so-far)
+20. [What Is a Module Bundler?](#what-is-a-module-bundler)
+21. [Why Do You Need a Module Bundler?](#why-do-you-need-a-module-bundler)
+22. [How Does a Module Bundler Work?](#how-does-a-module-bundler-work)
+23. [How to Use Webpack](#how-to-use-webpack)
+24. [How to Make Webpack Auto-Generate Your App's HTML File](#how-to-make-webpack-auto-generate-your-app-s-html-file)
+25. [How to Make `HtmlWebpackPlugin` Use Your Source File as a Template to Auto-Generate a New HTML Page](#how-to-make-htmlwebpackplugin-use-your-source-file-as-a-template-to-auto-generate-a-new-html-page)
+26. [Important Stuff to Know about Updating Your App](#important-stuff-to-know-about-updating-your-app)
+27. [How to Rerun Webpack Automatically](#how-to-rerun-webpack-automatically)
+28. [How to Reload the Browser Automatically](#how-to-reload-the-browser-automatically)
+29. [What Exactly Is Webpack's Configuration File?](#what-exactly-is-webpack-s-configuration-file)
+30. [Common Webpack Configuration Options](#common-webpack-configuration-options)
+31. [Overview](#overview)
 
 So, without any further ado, let's get started with modules.
 
 ## What Exactly Is a JavaScript Module?
 
-A JavaScript **module** is a file that allows you to export its code. This allows other JavaScript files to import and use the exported code as their dependencies.
+一个 JavaScript **Module** 是一个允许你导出其代码的文件。这允许其他 JavaScript 文件导入并使用导出的代码作为它们的依赖项。
 
-Specifically, a module is simply a JavaScript file that allows you to share its code with other files within your project (or with the world through [package managers](https://www.codesweetly.com/package-manager-explained) like Yarn and NPM).
+具体来说，模块是一个简单的 JavaScript 文件，它允许你与你项目中的其他文件（或通过 Yarn 和 NPM 等[包管理器](https://www.codesweetly.com/package-manager-explained)与世界分享其代码）。
 
 ## Why Use Modules?
 
-In its early days, people used JavaScript mainly for trivial scripting tasks like providing bits and pieces of interactivity to web pages where needed. In other words, developers predominately used JavaScript to write small scripts—not large ones.
+在早期，人们主要将 JavaScript 用于琐碎的脚本任务，如在需要时为网页提供零碎的互动性。换句话说，开发人员主要使用 JavaScript 来编写小型脚本，而不是大型脚本。
 
-Today, however, JavaScript has grown into a vast scripting tool capable of doing a lot more than just making web pages interactive.
+然而，今天，JavaScript 已经成长为一个庞大的脚本工具，能够做的事情远不止使网页具有交互性。
 
-It is now the norm to have large JavaScript code used for diverse functions like server-side website development, game development, and mobile app development.
+现在，大型的 JavaScript 代码被用于不同的功能，如服务器端网站开发、游戏开发和移动应用开发，这已成为常态。
 
-Since JavaScript can be used for virtually any programming task, a need arose to share scripts between a project's files and the world.
+由于 JavaScript 几乎可以用于任何编程任务，因此出现了在项目的文件和世界之间共享脚本的需求。
 
-So the JavaScript community developed the module system to allow developers to share their scripts on demand.
+因此，JavaScript 社区开发了 module 系统，允许开发者按需分享他们的脚本。
 
 ## Common Types of Module Systems in JavaScript
 
-Below are some of the popular module systems in JavaScript:
+下面是 JavaScript 中一些流行的模块系统:
 
--   [Asynchronous Module Definition (AMD)](https://github.com/amdjs/amdjs-api/blob/master/AMD.md)
--   [CommonJS Modules](https://en.wikipedia.org/wiki/CommonJS)
--   [Universal Module Definition (UMD)](https://github.com/umdjs/umd)
--   [ES Modules](https://tc39.es/ecma262/#sec-modules)
+- [Asynchronous Module Definition (AMD)](https://github.com/amdjs/amdjs-api/blob/master/AMD.md)
+- [CommonJS Modules](https://en.wikipedia.org/wiki/CommonJS)
+- [Universal Module Definition (UMD)](https://github.com/umdjs/umd)
+- [ES Modules](https://tc39.es/ecma262/#sec-modules)
 
-**Note:** ES modules are sometimes called "JS modules" or "ECMAScript modules".
+**Note:** ES 模块 有时被称为 "JS 模块 "或 "ECMAScript 模块"。
 
-Amongst the module systems listed above, the ES module system is the official standard for JavaScript.
+在上面列出的模块系统中，ES 模块系统是 JavaScript 的官方标准。
 
-The remaining three (AMD, CommonJS, and UMD) were created by various developers when JavaScript did not have a standardized module system.
+其余三个（AMD、CommonJS 和 UMD）是在 JavaScript 没有一个标准化的模块系统时，由不同的开发者创建。
 
-However, since ES module's appearance in the 2015 ECMAScript standard, the previous module systems have gradually become part of JavaScript's history.
+然而，自从 ES 模块在 2015 年 ECMAScript 标准中出现后，之前的模块系统已经逐渐成为 JavaScript 历史的一部分。
 
-Therefore, this article will focus on showing you how ES modules work.
+因此，本文将重点向你展示 ES 模块的工作原理。
 
-First, though, it is essential to know how to convert a JavaScript file into a module. So, let's discuss that below.
+不过，首先必须知道如何将一个 JavaScript 文件转换为一个模块。所以，下面我们就来讨论这个问题。
 
 ## How to Convert a JavaScript File into a Module
 
-To convert a JavaScript file to an ES module, do the following:
+要将一个 JavaScript 文件转换为 ES 模块，请执行以下操作:
 
 ### Step 1: Create a project directory
 
-Create a project folder—where this project's HTML and JavaScript files will reside.
+创建一个项目文件夹——本项目的 HTML 和 JavaScript 文件将存放在这里。
 
 ### Step 2: Create your code files
 
-Create the following files inside your project folder:
+在你的项目文件夹中创建以下文件:
 
-1.  `index.html`
-2.  `index.js`
+1. `index.html`
+2. `index.js`
 
 ### Step 3: Add your JavaScript file to your HTML document
 
-Open your `index.html` file and replicate the code below:
+打开你的`index.html`文件并复制以下代码:
 
 ```html
 <!DOCTYPE html>
@@ -120,29 +120,29 @@ Open your `index.html` file and replicate the code below:
 </html>
 ```
 
-In the HTML snippet above, we used the `<script>`'s `type="module"` attribute to convert the `index.js` JavaScript file to an ES module.
+在上面的 HTML 片段中，我们使用了`<script>`的`type="module"`属性，将`index.js`的 JavaScript 文件转换为 ES 模块。
 
-So, now that we know how to convert a JavaScript file into a module, let's see how to use one.
+所以，现在我们知道了如何将一个 JavaScript 文件转换成一个模块，让我们看看如何使用一个模块。
 
 ## How to Use an ES Module
 
-Follow the steps below to learn how to use an ES module.
+按照以下步骤学习如何使用 ES 模块。
 
 ### Step 1: Create a project directory
 
-Create a project folder—where this project's HTML and module files will reside.
+创建一个项目文件夹——本项目的 HTML 和模块文件将存放在这里。
 
 ### Step 2: Create your code files
 
-Create the following files inside your project folder:
+在你的项目文件夹中创建以下文件:
 
-1.  `index.html`
-2.  `module-1.js`
-3.  `module-2.js`
+1. `index.html`
+2. `module-1.js`
+3. `module-2.js`
 
 ### Step 3: Add the modules to your HTML document
 
-Open your `index.html` file and replicate the code below:
+打开你的`index.html`文件并复制以下代码:
 
 ```html
 <!DOCTYPE html>
@@ -162,98 +162,98 @@ Open your `index.html` file and replicate the code below:
 </html>
 ```
 
-Here are the main things we did in the HTML snippet above:
+以下是我们在上面的 HTML 片段中所做的主要事情:
 
-1.  We added the two JavaScript files to our HTML document.
-2.  We used the `type="module"` attribute to convert the regular JavaScript files to ES module files.
+1. 我们将两个 JavaScript 文件添加到我们的 HTML 文档中。
+2. 我们使用`type="module"`属性将普通的 JavaScript 文件转换成 ES 模块文件。
 
-**Note** that JavaScript defers ES modules automatically. So, you do not need to use a `defer` attribute in your module's `<script>` element.
+**注意**，JavaScript 会自动延迟 ES 模块。所以，你不需要在你的模块的`<script>`元素中使用`defer`属性。
 
-Also, the computer will execute a module only once—regardless of the number of `<script>` tags you use to reference it.
+另外，计算机将只执行一个模块一次——不管你用多少个`<script>`标签来引用它。
 
 ### Step 4: View your app
 
-Open your `index.html` file in any browser to see the current state of your app.
+在任何浏览器中打开你的`index.html`文件，可以看到你的应用程序的当前状态。
 
 ![Open your HTML file in your browser - Modules Tutorial](https://www.freecodecamp.org/news/content/images/2022/05/module-tutorial-open-html-file-in-chrome-browser-codesweetly.png)
 
-Opening an index.html file in a Chrome browser
+在 Chrome 浏览器中打开一个 index.html 文件
 
-Once opened, if you inspect your browser's console, you will see some error messages.
+一旦打开，如果你检查浏览器的控制台，你会看到一些错误信息。
 
 ![CORS policy error in the browser's console - Modules Tutorial](https://www.freecodecamp.org/news/content/images/2022/05/module-tutorial-cors-policy-error-codesweetly.png)
 
-Inspecting a Chrome browser's console
+检查 Chrome 浏览器的控制台
 
-The browser threw a CORS policy error because ES modules only work through `http://` and `https://` URLs—not locally via a `file://` URL.
+浏览器抛出了一个 CORS 策略错误，因为 ES 模块只能通过 `http://` 和 `https://` URL 工作，而不是通过 `file://` URL 在本地工作。
 
-In other words, since our HTML file contains two ES modules, we need to load the document via an `http://` scheme.
+换句话说，由于我们的 HTML 文件包含两个 ES 模块，我们需要通过`http://`方案加载文档。
 
-The two typical ways to load an HTML document via an `http://` scheme are:
+通过`http://`方案加载 HTML 文件的两种典型方法是:
 
--   By using a Local Server, or
--   Through the use of a Module Bundler
+- 通过使用一个本地服务器，或
+- 通过使用模块 Bundler
 
-We will discuss Module Bundlers in detail later on in this article. For now, though, let's see how to use a local server to load the `index.html` file via an `http://` scheme.
+我们将在本文的后面详细讨论模块 Bundler。不过现在，让我们看看如何使用本地服务器，通过`http://` 方案加载`index.html`文件。
 
 #### How to run an HTML file through a local server
 
-The steps below will show you how to use a [VS Code](https://code.visualstudio.com/) local server extension to run your HTML file.
+下面的步骤将告诉你如何使用 [VS Code](https://code.visualstudio.com/) 本地服务器扩展来运行你的 HTML 文件。
 
-**Note:** Suppose your code editor is Atom or Sublime Text. In that case, follow the links below to learn how to install a local server plugin.
+**注意：** 假设你的代码编辑器是 Atom 或 Sublime Text。在这种情况下，请按照下面的链接来学习如何安装本地服务器插件。
 
--   [Atom Live Server](https://atom.io/packages/atom-live-server)
--   [Sublime Text Live Server](https://youtu.be/5CinAgQylao)
+- [Atom Live Server](https://atom.io/packages/atom-live-server)
+- [Sublime Text Live Server](https://youtu.be/5CinAgQylao)
 
 ##### 1\. Add your project folder to VSCode's workspace
 
 ![Add your project's folder to VSCode's workspace](https://www.freecodecamp.org/news/content/images/2022/05/module-tutorial-add-proj-folder-to-vscode-workspace-codesweetly.gif)
 
-Adding a project folder to VSCode's workspace
+将项目文件夹添加到 VSCode 的 workspace
 
 ##### 2\. Install a local server (Live Server by Ritwick Dey)
 
 ![Install the Live Server by Ritwick Dey](https://www.freecodecamp.org/news/content/images/2022/05/module-tutorial-install-live-server-codesweetly.png)
 
-Installing the VSCode Live Server by Ritwick Dey
+安装 VSCode Live Server（它的作者是：Ritwick Dey）
 
 ##### 3\. Open your HTML file in the code editor
 
 ![Open your HTML file in your code editor](https://www.freecodecamp.org/news/content/images/2022/05/module-tutorial-open-html-file-in-code-editor-codesweetly.png)
 
-Opening HTML file in VSCode editor
+在 VSCode 编辑器中打开 HTML 文件
 
 ##### 4\. Use Live Server to run the HTML file in your default browser
 
 ![Run your HTML File with Live Server - Modules Tutorial](https://www.freecodecamp.org/news/content/images/2022/05/module-tutorial-run-html-file-with-live-server-codesweetly.png)
 
-Opening the project's HTML file with Live Server
+用 Live Server 打开项目的 HTML 文件
 
-Your app should now load with the `http://` scheme—without any CORS error in your browser's console.
+你的应用程序现在应该以 `http://` 方案加载--在浏览器的控制台中没有任何 CORS 错误。
 
-**Some things to note:**
+**一些要注意的事情:**
 
--   Suppose you did not add your project folder to VSCode's workspace (step 1). In that case, the Live Server might not load your file correctly.
--   Live Server will auto-reload your browser whenever you save any changes to your HTML file.
--   Suppose you wish to stop the Live Server. In that case, right-click on the HTML editor page and click on "Stop Live Server".
--   JavaScript modules operate in strict mode by default. As such, you must abide by JavaScript's strict syntax rules. Otherwise, your program might malfunction.
+- 假设你没有将你的项目文件夹添加到 VSCode 的工作区（步骤 1）。在这种情况下，Live Server 可能无法正确加载你的文件。
+- 每当你对你的 HTML 文件进行任何修改，Live Server 都会自动重新加载你的浏览器。
+- 假设你希望停止 Live Server。在这种情况下，在 HTML 编辑页面上点击右键，然后点击 "停止 Live Server"。
+- JavaScript 模块默认在严格模式下运行。因此，你必须遵守 JavaScript 的严格语法规则。否则，你的程序可能会出现故障。
 
-So, now that you've converted your JavaScript file to an ES module, you can begin to use the `export` and `import` keywords to share your modules' code. Let's discuss how below.
+所以，现在你已经把你的 JavaScript 文件转换为 ES 模块，你可以开始使用`export`和`import`关键字来分享你的模块的代码。下面我们来讨论一下如何使用。
 
 ## How to Export a Module's Code
 
-There are two equivalent ways to export a module's item.
+有两种等效的方法来导出一个模块的项目。
 
-1.  Place an `export` keyword before your code
-2.  Create an export statement
+1. 在你的代码前放置一个`export`关键字
+2. 创建一个导出语句
 
-Let's discuss both ways below.
+让我们在下面讨论这两种方式。
 
 ### How to share a module's code by placing an `export` keyword before the code
 
-One way to export an item is to place an `export` keyword before the code you wish to share with other modules.
+导出一个项目的方法是在你希望与其他模块共享的代码前放置一个`export`关键字。
 
-For instance, open your `module-1.js` file and replicate the code below:
+例如，打开你的`module-1.js`文件，复制下面的代码:
 
 ```js
 // module-1.js
@@ -262,13 +262,13 @@ For instance, open your `module-1.js` file and replicate the code below:
 export const bestClub = "Your Club";
 ```
 
-You can see how we place the `export` keyword before the `const` variable statement in the snippet above.
+你可以看到在上面的片段中，我们是如何将`export`关键字放在`const`变量语句之前的。
 
-We prepended the `const` variable with the `export` keyword to tell the computer to share the `bestClub` variable with other modules that request it.
+我们在`const`变量前加上`export`关键字，以告诉计算机与其他请求它的模块共享`bestClub`变量。
 
-**Note:** The `export` keyword highlights the code you wish to share with other modules.
+**注意：** `export`关键字强调了你希望与其他模块共享的代码。
 
-**Here's another example:**
+**另一个例子:**
 
 ```js
 // Export the "multiply" function:
@@ -277,15 +277,15 @@ export function multiply(x, y) {
 }
 ```
 
-The statement above instructs the computer to export `multiply()` to the modules that request it.
+上面的语句指示计算机将`multiply()`导出到需要它的模块中。
 
-Let's now see the second way to export a module's code.
+现在我们来看看导出模块代码的第二种方式。
 
 ### How to share a module's code by creating an export statement
 
-An alternate way to share a module's code is to use the `export` keyword as a standalone statement. You can do so by prepending a single `export` keyword to a block (`{...}`) of comma-separated names of code you wish to share.
+另一种分享模块代码的方法是使用`export`关键字作为独立的语句。你可以这样做，在你希望共享的代码块(`{...}`)前加上一个单一的`export`关键字，以逗号分隔的名称。
 
-**Here's an example:**
+**一个例子:**
 
 ```js
 // Create a variable named "bestClub":
@@ -303,11 +303,11 @@ const fruits = ["Mango", "Apple", "Orange", "Lemon"];
 export { bestClub, multiply, fruits };
 ```
 
-The snippet above used an `export` statement to indicate that the computer can share `bestClub`, `multiply`, and `fruits` with other modules that request any of them.
+上面的片段使用了一个`export`语句来表示计算机可以与其他请求任何模块的模块共享`bestClub`、`multiply`和`fruits`。
 
-Keep in mind that `export` works only as a top-level item. So, it would not work in a function, for example.
+请记住，`export`只作为一个顶层项目工作。因此，它不会在一个函数中工作，例如。
 
-Therefore, the snippet below will throw an error because we used the `export` keyword inside the function.
+因此，下面的片段会出现错误，因为我们在函数中使用了`export`关键字。
 
 ```js
 function wrong() {
@@ -316,19 +316,19 @@ function wrong() {
 }
 ```
 
-**Note:**
+**注意:**
 
--   The `export` keyword works only inside modules—not inside regular JavaScript programs.
--   JavaScript [hoists](https://www.codesweetly.com/javascript-hoisting) `export` statements. So, you can define them anywhere in your module.
--   Exported modules operate in strict mode by default—regardless of whether you specified the `strict` statement.
+- `export`关键字只在模块中起作用，而不是在普通的 JavaScript 程序中。
+- JavaScript [hoists](https://www.codesweetly.com/javascript-hoisting) `export`语句。因此，你可以在你的模块中的任何地方定义它们。
+- 导出的模块默认以严格模式运行——不管你是否指定了`strict`语句。
 
-Let's now see how to import the exported code.
+现在我们来看看如何导入导出的代码。
 
 ## How to Import Exported Code
 
-To import exported code, use ES module's `import` statement.
+要导入代码，使用 ES 模块的`import`语句。
 
-For instance, open your `module-2.js` file and replicate the code below:
+例如，打开你的`module-2.js`文件，复制下面的代码:
 
 ```js
 // module-2.js
@@ -336,35 +336,35 @@ For instance, open your `module-2.js` file and replicate the code below:
 import { bestClub } from "./module-1.js";
 ```
 
-In the snippet above, we used an `import` statement to bring in the `bestClub` variable from the `module-1.js` file.
+在上面的片段中，我们用`import`语句从`module-1.js`文件中带入`bestClub`变量。
 
-So, `module-2.js` is a top-level module because it contains another script.
+所以，`module-2.js`是一个顶层模块，因为它包含了另一个脚本。
 
-On the other hand, `module-1.js` is a submodule because it is a script used inside another file.
+另一方面，`module-1.js`是一个子模块，因为它是一个用于另一个文件的脚本。
 
-**Note:**
+**注意:**
 
--   We use the `import` statement to import items from other modules.
--   It is mandatory to wrap your named exports in curly braces while importing them.
+- 我们使用`import`语句从其他模块导入项目。
+- 在导入时，必须用大括号包住你命名的导出。
 
-Keep in mind that an `import` statement can only get another module's code if exported with the `export` keyword.
+请记住，`import` 语句只有在使用 `export` 关键字导出时才能获得另一个模块的代码。
 
-For instance, the `import` statement below will import the `bestClub`, `multiply`, and `fruits` items if they got marked for exportation in the `module-1.js` file.
+例如，下面的`import`语句将导入`bestClub`、`multiply`和`fruits`，如果它们在`module-1.js`文件中被标记为导出。
 
 ```js
 // Import three items from the module-1.js file:
 import { bestClub, multiply, fruits } from "./module-1.js";
 ```
 
-Suppose you did not use the `export` keyword to mark the three items as exportable features. In that case, the `import` statement will throw an `Uncaught SyntaxError`.
+假设你没有使用`export`关键字来标记这三个项目为可导出特征。在这种情况下，`import` 语句将抛出一个 `Uncaught SyntaxError`。
 
-**Note:**
+**注意:**
 
--   "Module specifier" and the "import specifier" are other names people call the `"./module-1.js"` file path string in the snippet above.
--   The dot (`.`) mark in the `"./module-1.js"` module specifier means _"same directory"_. In other words, the dot mark tells the computer to find the `module-1.js` file in the same folder where the current module is.
--   The current module referred to in the snippet above is the file where the `import` statement got defined.
+- "Module specifier"和 "import specifier"是人们对上述片段中 `"./module-1.js"` 文件路径字符串的其他称呼。
+- `"./module-1.js"`模块指定符中的点（`.`）标志意味着 _"同一目录"_ 。换句话说，点标记告诉计算机在当前模块所在的同一文件夹中找到`module-1.js`文件。
+- 上面的片段中提到的当前模块就是定义了`import`语句的文件。
 
-An alternative to the import specifier's dot (`.`) syntax is to write out the entire [relative path](https://docs.oracle.com/javase/tutorial/essential/io/path.html) to a module's location.
+导出指定符的点（`.`）语法的一个替代方法是写出整个[相对路径](https://docs.oracle.com/javase/tutorial/essential/io/path.html)到模块的位置。
 
 **Here's an example:**
 
@@ -373,30 +373,30 @@ An alternative to the import specifier's dot (`.`) syntax is to write out the en
 import { bestClub, multiply, fruits } from "/codesweetly/blog/notes/modular-javascript/es-modules/module-1.js";
 ```
 
-You can see how long the `import` statement above is. We often use the dot syntax because of its short and portable length.
+你可以看到上面的`import`语句有多长。我们经常使用点语法，因为它的长度短且简便。
 
-Suppose you choose to use the dot syntax. In that case, keep in mind that some module systems (such as Node.js and module bundlers) permit you to omit the dot mark and the file extension like so:
+假设你选择使用点状语法。在这种情况下，请记住，一些模块系统（如 Node.js 和模块 bundlers）允许你省略点号和文件扩展名，像这样:
 
 ```js
 // Import three items from the module-1.js file:
 import { bestClub, multiply, fruits } from "module-1";
 ```
 
-However, other module systems, such as ES modules, do not permit such omissions.
+然而，其他模块系统，如 ES 模块，不允许省略点号和文件扩展名。
 
-**Note:**
+**注意:**
 
--   A module specifier with _no_ dot mark and file extension is called a "bare" module specifier.
--   A module's imported item is a read-only view of the exported feature. So, you can modify the code only inside the module that exported it—not in the module that imported it.
--   JavaScript imports a module's code as live binding. So, suppose you update the imported code's value in the exportation module. In that case, your changes will also reflect in the importation module.
+- 一个没有点标记和文件扩展名的模块指定器被称为 "裸（bare）" 模块指定器。
+- 一个模块的导入项是导出功能的只读视图。因此，你只能在导出它的模块内修改代码，而不是在导入它的模块内。
+- JavaScript 导入一个模块的代码是实时绑定的。所以，假设你在导出模块中更新了导入代码的值。在这种情况下，你的变化也会反映在导入模块中。
 
-Let's now discuss how to use the imported code.
+现在我们来讨论如何使用导入的代码。
 
 ## How to Use a Module's Imported Code
 
-Once you've imported your code, you can use it as if it was defined in the module into which you've imported it.
+一旦你导入了你的代码，你就可以像在你所导入的模块中定义的那样使用它。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // module-2.js
@@ -410,20 +410,20 @@ console.log(myBestClub);
 
 [**Try it on StackBlitz**](https://stackblitz.com/edit/web-platform-ka4gdj?devtoolsheight=33&file=module-2.js)
 
-**Note:**
+**注意:**
 
--   The `import` keyword works only inside modules—not inside regular JavaScript programs.
--   An imported module's features are not available in the global [scope](https://www.codesweetly.com/javascript-scope). Therefore, you can access imported items only in the script you have imported them into—not in other places like the JavaScript console.
--   JavaScript [hoists](https://www.codesweetly.com/javascript-hoisting) `import` statements. So, you can define them anywhere in your module.
--   Imported modules operate in strict mode by default—regardless of whether you specified the `strict` statement.
+- `import`关键字只在模块中起作用，而不是在普通的 JavaScript 程序中。
+- 一个导入的模块的功能在全局[范围](https://www.codesweetly.com/javascript-scope)中是不可用的。因此，你只能在你导入的脚本中访问导入的项目——而不是在其他地方，如 JavaScript 控制台。
+- JavaScript [hoists](https://www.codesweetly.com/javascript-hoisting) `import`语句。所以，你可以在你的模块中的任何地方定义它们。
+- 导入的模块默认以严格模式运行--不管你是否指定了`strict`语句。
 
-So, now that we know how to use an ES module, let's discuss how to rename the code you wish to export (or import).
+所以，现在我们知道了如何使用 ES 模块，让我们来讨论如何重命名你想导出（或导入）的代码。
 
 ## How to Rename Exports and Imports in ES Modules
 
-Suppose you wish to rename the code you are exporting (or importing). In such a case, use the `as` keyword.
+假设你希望重命名你正在导出（或导入）的代码。在这种情况下，使用`as`关键字。
 
-**Here's an example:**
+**一个例子:**
 
 ```js
 // module-1.js
@@ -435,11 +435,11 @@ const bestClub = "Your Club";
 export { bestClub as favoriteTeam };
 ```
 
-In the snippet above, we told the computer to export the `bestClub` variable _as_ `favoriteTeam`.
+在上面的片段中，我们告诉计算机将 `bestClub` 变量导出为 `favoriteTeam`。
 
-Therefore, when importing the variable, you will use the name `favoriteTeam`—not `bestClub`.
+因此，当导入该变量时，你将使用`favoriteTeam`的名称，而不是`bestClub`。
 
-**Here's an example:**
+**下面的例子:**
 
 ```js
 // module-2.js
@@ -451,11 +451,11 @@ const myBestClub = favoriteTeam + " " + "is my best club.";
 console.log(myBestClub);
 ```
 
-[**Try it on StackBlitz**](https://stackblitz.com/edit/web-platform-dltrvv?devtoolsheight=33&file=module-2.js)
+[**在 StackBlitz 上尝试**](https://stackblitz.com/edit/web-platform-dltrvv?devtoolsheight=33&file=module-2.js)
 
-We renamed the `bestClub` variable in the example above while exporting it. However, you can also rename it during its importation.
+在上面的例子中，我们在导出时重命名了`bestClub`这个变量。然而，你也可以在导入时重命名它。
 
-**Here's an example:**
+**一个例子:**
 
 ```js
 // module-1.js
@@ -477,15 +477,15 @@ const myBestClub = favoriteTeam + " " + "is my best club.";
 console.log(myBestClub);
 ```
 
-[**Try it on StackBlitz**](https://stackblitz.com/edit/web-platform-qrnt6y?devtoolsheight=33&file=module-2.js)
+[**在 StackBlitz 上尝试**](https://stackblitz.com/edit/web-platform-qrnt6y?devtoolsheight=33&file=module-2.js)
 
-The choice of whether to rename your code during exportation or importation is totally up to you.
+是在导出还是导入时重命名你的代码，这完全取决于你的选择。
 
-However, many developers prefer to rename during importation because you don't always have control over a code's source file, especially when importing from a third party's module.
+然而，许多开发者倾向于在导入时重命名，因为你并不总是能控制代码的源文件，尤其是从第三方模块导入时。
 
 ## Why Rename a Module's Code?
 
-Renaming can help prevent browsers from throwing errors due to name conflicts. For instance, consider these snippets:
+重命名可以帮助防止浏览器因名称冲突而出现错误。例如，考虑这些片段:
 
 ```js
 // module-1.js
@@ -507,17 +507,17 @@ const bestClub = bestClub + " " + "is my best club.";
 console.log(bestClub);
 ```
 
-[**Try it on StackBlitz**](https://stackblitz.com/edit/web-platform-vvcy2d?devtoolsheight=33&file=module-2.js)
+[**在 StackBlitz 上尝试**](https://stackblitz.com/edit/web-platform-vvcy2d?devtoolsheight=33&file=module-2.js)
 
-When you run the snippets above, the browser will throw an error similar to:
+当你运行上面的片段时，浏览器会抛出一个类似以下的错误:
 
 ```js
 "SyntaxError: Identifier 'bestClub' has already been declared"
 ```
 
-The browser threw the error because the imported code's name conflicts with `module-2.js`' `bestClub` variable.
+浏览器出现了错误，因为导入的代码名称与`module-2.js`的`bestClub`变量冲突。
 
-However, you can rectify the error by simply renaming the imported code like so:
+然而，你可以通过简单地重命名导入的代码来纠正这个错误，就像这样:
 
 ```js
 // module-2.js
@@ -529,11 +529,11 @@ const bestClub = favoriteTeam + " " + "is my best club.";
 console.log(bestClub);
 ```
 
-Keep in mind that you can also rename multiple exports. Let's see how below.
+请记住，你也可以重命名多个导出。让我们看看下面的方法。
 
 ## How to Rename Multiple Exports in an ES Module
 
-You can rename multiple exports by separating each `as` statement with a comma.
+你可以通过用逗号分隔每个`as`语句来重命名多个出口。
 
 **Here's an example:**
 
@@ -565,15 +565,15 @@ const bestClub = `I bought ${product(2, 11)} ${crops[2]}s at ${favoriteTeam}.`;
 console.log(bestClub);
 ```
 
-**[Try it on StackBlitz](https://stackblitz.com/edit/web-platform-ir5f1h?devtoolsheight=33&file=module-1.js)**
+**[在 StackBlitz 上尝试](https://stackblitz.com/edit/web-platform-ir5f1h?devtoolsheight=33&file=module-1.js)**
 
-You can also rename multiple imports. Let's see how.
+你也可以重命名多个导出。让我们来看看如何。
 
 ## How to Rename Multiple Imports in an ES Module
 
-You can rename multiple imports by separating each `as` statement with a comma.
+你可以通过用逗号分隔每个`as`语句来重命名多个导入。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // module-1.js
@@ -602,26 +602,26 @@ const bestClub = `I bought ${product(2, 11)} ${crops[2]}s at ${favoriteTeam}.`;
 console.log(bestClub);
 ```
 
-[**Try it on StackBlitz**](https://stackblitz.com/edit/web-platform-yinyru?devtoolsheight=33&file=module-2.js)
+[**在 StackBlitz 上尝试**](https://stackblitz.com/edit/web-platform-yinyru?devtoolsheight=33&file=module-2.js)
 
-Suppose you wish to import all exportable content from `module-1.js` without specifying each import's name. How can you do this? Let's find out.
+假设你希望从`module-1.js`中导入所有可导出的内容，而不指定每个导入的名称。你怎样才能做到这一点呢？让我们来了解一下。
 
 ## How to Import All Exportable Items from an ES Module in One Go
 
-Suppose you wish to import all exportable items from a specific module without specifying each import's name. In such a case, use the `import * as` syntax to bring in the items through a module object.
+假设你希望从一个特定的模块导入所有可导出的项目，而不需要指定每个导入的名称。在这种情况下，使用 `import * as` 语法，通过一个模块对象导入这些项目。
 
-**Here's an example:**
+**一个例子:**
 
 ```js
 // Import all exportable features from the "countries.js" module:
 import * as allCountries from "./countries.js";
 ```
 
-The statement above instructs the computer to import all exportable content of the `./countries.js` module and encase the imports in a module object named `allCountries`.
+上面的语句指示计算机导入`./countries.js`模块的所有可导出内容，并将导入的内容封装在一个名为`allCountries`的模块对象中。
 
-After the importation, you can use the imported items just as before. However, you now need to access them through the module object's name.
+导入后，你可以像以前一样使用导入的项目。然而，你现在需要通过模块对象的名称来访问它们。
 
-**Here's an example:**
+**一个例子:**
 
 ```js
 // module-1.js
@@ -646,29 +646,29 @@ const bestClub = `I bought ${firstModule.multiply(2, 11)} ${firstModule.fruits[2
 console.log(bestClub);
 ```
 
-[**Try it on StackBlitz**](https://stackblitz.com/edit/web-platform-s5bug2?devtoolsheight=33&file=module-2.js)
+[**在 StackBlitz 上尝试**](https://stackblitz.com/edit/web-platform-s5bug2?devtoolsheight=33&file=module-2.js)
 
-So, what if you prefer to export a module's content anonymously? Let's discuss the technique you can use.
+那么，如果你喜欢匿名导出一个模块的内容怎么办？让我们来讨论一下你可以使用的技术。
 
 ## How to Export Anonymously to an ES Module
 
-So far, we have exported items by explicitly stating the name of the specific code we wish to share—for instance, `export { bestClub }`.
+到目前为止，我们通过明确指出我们希望分享的特定代码的名称来导出项目——例如，`export  { bestClub }`。
 
-Such exportation technique is called the **named export**.
+这种导出技术被称为 **named export（命名的导出）**。
 
-You can also export anonymously by using the **default export** technique. But what exactly is a default export? Let's find out.
+你也可以通过使用 **default export（默认导出）** 技术进行匿名导出。但究竟什么是默认导出？让我们来了解一下。
 
 ### What Exactly Is a Default Export in ES Modules?
 
-**Default export** is a technique developers use to export code anonymously (namelessly).
+**默认导出** 是开发人员用来匿名（无名）导出代码的一种技术。
 
-You can implement a default export by prepending the keyword `default` to the code you wish to export. By so doing, the computer will share the code as a default export.
+你可以通过在你希望导出的代码前加上关键字`default`来实现默认导出。通过这样做，计算机将共享该代码作为默认导出。
 
-In other words, the code will get exported with the special name, `default`—instead of its original name (if it had one).
+换句话说，代码将以特殊的名字`default`导出，而不是它原来的名字（如果它有一个名字）。
 
-So, during the code's importation, you will have the options to import it with the name `default`, a custom name of choice, or without any name.
+因此，在代码的导入过程中，你可以选择以`default`的名字、一个自定义的名字或没有任何名字来导入它。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // module-1.js
@@ -679,9 +679,9 @@ const bestClub = "Your Club";
 export default bestClub;
 ```
 
-We did not use curly braces in the default export statement above because you can have only one default export in a module.
+我们在上面的默认导出语句中没有使用大括号，因为一个模块中只能有一个默认导出。
 
-Alternatively, you can also rewrite the code above like so:
+另外，你也可以这样改写上面的代码:
 
 ```js
 // module-1.js
@@ -690,36 +690,36 @@ Alternatively, you can also rewrite the code above like so:
 export default "Your Club";
 ```
 
-Keep in mind that you can use the default export technique to share a function, variable, string, class, or object literal.
+请记住，你可以使用默认导出技术来共享一个函数、变量、字符串、类或对象字面。
 
-However, you cannot prepend the `export default` keyword to a `var`, `let`, or `const` keyword.
+但是，你不能在 `var`、`let` 或 `const` 关键字前加上 `export default` 关键字。
 
-In other words, the snippet below will throw a `SyntaxError`.
+换句话说，下面的片段将抛出一个 `SyntaxError`。
 
 ```js
 export default const bestClub = "Your Club";
 ```
 
-Let's now discuss how to import a default export.
+现在我们来讨论如何导入一个默认导出（export default）。
 
 ### How to Import a Default Export into an ES Module
 
-There are two equivalent ways to import a default export:
+有两种等效的方法来导入一个默认导出（export default）:
 
--   Use the `default as` syntax
--   Specify the imported code's name only
+- 使用`default as`语法
+- 只指定导入代码的名称
 
-Let's discuss the two importation techniques.
+让我们来讨论这两种导入技术。
 
 #### How to use the `default as` syntax to import a default export
 
-One way to import a default export is to use the `default as` syntax like so:
+导入默认出口的一种方法是使用`default as`语法，像这样:
 
 ```js
 import { default as newName } from "./module-relative-path.js";
 ```
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // module-1.js
@@ -738,25 +738,25 @@ const bestClub = favoriteTeam + " " + "is my best club.";
 console.log(bestClub);
 ```
 
-[**Try it on StackBlitz**](https://stackblitz.com/edit/web-platform-zcyvst?devtoolsheight=33&file=module-2.js)
+[**在 StackBlitz 上尝试**](https://stackblitz.com/edit/web-platform-zcyvst?devtoolsheight=33&file=module-2.js)
 
-Notice that we didn't need to specify the name of the code we imported from the `module-1.js` file. Instead, we used the `default` keyword to import the code anonymously.
+注意，我们不需要指定我们从`module-1.js`文件中导入的代码的名称。相反，我们使用`default`关键字来匿名导入代码。
 
-Afterward, we renamed the imported code _as_ `favoriteTeam`.
+之后，我们将导入的代码重命名为`favoriteTeam`。
 
-Let's now see the second way to import a default export.
+现在让我们看看导入默认导出的第二种方式。
 
 #### How to import a default export by specifying the imported code's name only
 
-An alternate way to import a default export is to ignore the curly braces (`{...}`), the `default` keyword, and the `as` keyword.
+另一种导入默认导出的方法是忽略大括号（`{...}`）、`default`关键字和`as`关键字。
 
-Instead, simply specify the name you wish to use to reference the imported code like so:
+取而代之的是，简单地指定你希望用来引用导入的代码的名称，像这样:
 
 ```js
 import newName from "./module-relative-path.js";
 ```
 
-**Here's an example:**
+**一个例子:**
 
 ```js
 // module-1.js
@@ -775,54 +775,54 @@ const bestClub = favoriteTeam + " " + "is my best club.";
 console.log(bestClub);
 ```
 
-[**Try it on StackBlitz**](https://stackblitz.com/edit/web-platform-rgrlh7?devtoolsheight=33&file=module-2.js)
+[**在 StackBlitz 上尝试**](https://stackblitz.com/edit/web-platform-rgrlh7?devtoolsheight=33&file=module-2.js)
 
-You can see that the shortened importation technique above is neater than the previous option.
+你可以看到，上述缩短的导入技术比之前的方案更整洁。
 
-**Note:**
+**注意:**
 
--   The `export default` statement makes it possible for a JavaScript module to interpolate (work reliable) with existing CommonJS and AMD module systems.
--   See the "[Default exports](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)" section of _ES6 In Depth: Modules_ to learn more about interpolation.
+- `export default`语句使一个 JavaScript 模块有可能与现有的 CommonJS 和 AMD 模块系统进行插接（可靠的工作）。
+- 请参阅 [默认导出](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)  _ES6 In Depth Modules_  部分。来了解更多关于插接的信息。
 
-Before we wrap up our discussion on ES modules, you should be aware that you can use an aggregator file to collate your project's `import` statements.
+在我们结束对 ES 模块的讨论之前，你应该知道你可以使用一个聚合器文件来整理你的项目的`import`语句。
 
-But what exactly is an aggregator file, I hear you ask? Let's find out below.
+但究竟什么是聚合器文件，我听到你问？让我们在下面找出答案。
 
 ## What Exactly Is an Aggregator File?
 
-An **aggregator file** is a script used solely to import and re-export the items you've exported from other modules.
+**聚合器文件(aggregator file)**是一个专门用来导入和重新导出你从其他模块导出的项目的脚本。
 
-In other words, instead of congesting your [top-level module](https://www.codesweetly.com/web-tech-glossary#top-level-module-javascript) with multiple import statements from various files, you can create a single parent script (the aggregator file).
+换句话说，与其让你的[顶级模块](https://www.codesweetly.com/web-tech-glossary#top-level-module-javascript)充斥着来自不同文件的多个导入语句，你可以创建一个单一的父脚本（聚合器文件 aggregator file）。
 
-The parent script's sole purpose will be to import and re-export items from other modules.
+这个父脚本的唯一目的是导入和重新导出其他模块的项目。
 
-Then, in your top-level module, you can simply import any required code from the aggregator file alone—not from numerous other scripts.
+然后，在你的顶层模块中，你可以简单地从聚合器文件中导入任何需要的代码，而不是从许多其他脚本中导入。
 
-By so doing, you will make your top-level module neater.
+通过这样做，你将使你的顶层模块更加整洁。
 
-So, what exactly does all this mean? Let's see with a mini-project.
+那么，这些到底是什么意思呢？让我们通过一个小项目来看看。
 
 ## Project: How to Use an Aggregator File
 
-Follow the steps below to learn how to use an aggregator file.
+按照下面的步骤来学习如何使用聚合器文件(aggregator file)。
 
 ### Step 1: Create a project directory
 
-Create a project folder—where this project's HTML and module files will reside.
+创建一个项目文件夹——本项目的 HTML 和模块文件将存放在这里。
 
 ### Step 2: Create your code files
 
-Create the following files inside your project folder:
+在你的项目文件夹中创建以下文件:
 
-1.  `index.html`
-2.  `index.js`
-3.  `preferences.js`
-4.  `calculation.js`
-5.  `bio.js`
+1. `index.html`
+2. `index.js`
+3. `preferences.js`
+4. `calculation.js`
+5. `bio.js`
 
 ### Step 3: Add the modules to your HTML document
 
-Open your `index.html` file and replicate the code below:
+打开你的`index.html`文件并复制以下代码:
 
 ```html
 <!DOCTYPE html>
@@ -844,14 +844,14 @@ Open your `index.html` file and replicate the code below:
 </html>
 ```
 
-Here are the main things we did in the HTML snippet above:
+以下是我们在上面的 HTML 片段中做的主要事情:
 
-1.  We added the four JavaScript files to our HTML document.
-2.  We used the `type="module"` attribute to convert the regular JavaScript files to ES module files.
+1. 我们把这四个 JavaScript 文件添加到我们的 HTML 文档中。
+2. 我们使用`type="module"`属性将普通的 JavaScript 文件转换为 ES 模块文件。
 
 ### Step 4: Export items from your `preference` module
 
-Open your `preferences.js` module and export some items from it like so:
+打开你的`preferences.js`模块，从里面导出一些项目，像这样:
 
 ```js
 const bestFruits = ["Grape", "Apple", "Pineapple", "Lemon"];
@@ -865,7 +865,7 @@ export { bestClub, bestFruits };
 
 ### Step 5: Export items from your `calculation` module
 
-Open your `calculation.js` module and export some items from it like so:
+打开你的`calculation.js`模块，从里面导出一些项目，像这样:
 
 ```js
 function add(x, y) {
@@ -887,7 +887,7 @@ function divide(x, y) {
 
 ### Step 6: Export items from your `bio` module
 
-Open your `bio.js` module and export some items from it like so:
+打开你的`bio.js`模块，从里面导出一些项目，像这样:
 
 ```js
 const aboutMe = {
@@ -903,18 +903,18 @@ export default aboutMe;
 
 ### Step 7: Import the exported features
 
-To import the exported items into your top-level module, you have two options:
+要把导出的项目导入你的顶层模块，你有两个选择:
 
-1.  Import directly from the exporting modules to your top-level script.
-2.  Import from an aggregator file to your top-level module.
+1. 直接从导出的模块导入到你的顶层脚本。
+2. 从聚合器文件中导入到你的顶层模块。
 
-Let's see the difference between the two options.
+让我们来看看这两个选项的区别。
 
 #### Import directly from the exporting modules to your top-level script
 
-One way to import your code is to import it directly from the exporting scripts to your top-level module.
+导入代码的一种方法是直接从导出的脚本中导入你的顶层模块。
 
-For instance, open your `index.js` file and import the exported content of the `preferences.js`, `calculation.js`, and `bio.js` modules like so:
+例如，打开你的`index.js`文件，导入`preferences.js`、`calculation.js`和`bio.js`模块的导出内容，像这样:
 
 ```js
 // index.js
@@ -928,25 +928,25 @@ const news = `All ${aboutMe.companyName}'s staff gave Tom ${multiply(7, 129)} ${
 console.log(news);
 ```
 
-[**Try it on StackBlitz**](https://stackblitz.com/edit/web-platform-dqmd1u?devtoolsheight=33&file=index.js)
+[**在 StackBlitz 上尝试**](https://stackblitz.com/edit/web-platform-dqmd1u?devtoolsheight=33&file=index.js)
 
-You can see that we imported items directly from three exporting scripts into the `index.js` module.
+你可以看到，我们直接从三个导出的脚本中导入项目到`index.js`模块。
 
-The above importation technique works OK. However, a cleaner alternative is to use an aggregator file. Let's see how.
+上面的导入技术效果不错。然而，一个更干净的选择是使用一个聚合器文件。让我们来看看如何。
 
 #### Import from an aggregator file to your top-level module
 
-An alternate way to bring in your code is to import it from an aggregator file to your top-level module.
+另一种引入代码的方法是将其从聚合器文件导入你的顶级模块。
 
-Follow the steps below to see how you can create and use an aggregator file.
+按照下面的步骤，看看你如何创建和使用一个聚合器文件。
 
 ##### 1\. Create the aggregator file
 
-You can name the file `aggregator.js` or any other name you prefer.
+你可以将该文件命名为`aggregator.js`或任何你喜欢的其他名称。
 
 ![Create an aggregator file - Modules Tutorial](https://www.freecodecamp.org/news/content/images/2022/05/module-tutorial-aggregator-file-highlight-codesweetly.png)
 
-A highlight of the project's aggregator file
+该项目汇总文件的一个亮点
 
 ##### 2\. Add the aggregator script to your HTML file
 
@@ -971,13 +971,13 @@ A highlight of the project's aggregator file
 </html>
 ```
 
-Note the following:
+注意以下几点:
 
-1.  `index.js` is the [top-level module](https://www.codesweetly.com/web-tech-glossary#top-level-module-javascript) because it is the file where we imported and used `preferences.js`, `calculation.js`, and `bio.js`.
-2.  `preferences.js`, `calculation.js`, and `bio.js` are the [submodules](https://www.codesweetly.com/web-tech-glossary#submodule-javascript) because they are the files we imported into the top-level module.
-3.  `aggregator.js` is the [parent module](https://www.codesweetly.com/web-tech-glossary#parent-module-es-module) because it is the script for aggregating and re-exporting the three submodules.
+1. `index.js`是[顶级模块](https://www.codesweetly.com/web-tech-glossary#top-level-module-javascript)，因为它是我们导入和使用`preferences.js`、`calculation.js`和`bio.js`的文件。
+2. `preferences.js`, `calculation.js`, 和`bio.js`是[子模块](https://www.codesweetly.com/web-tech-glossary#submodule-javascript)，因为它们是我们导入顶级模块的文件。
+3. `aggregator.js`是[父模块](https://www.codesweetly.com/web-tech-glossary#parent-module-es-module)，因为它是聚合和重新输出三个子模块的脚本。
 
-Technically, you can indicate just the top-level module in your project's HTML file like so:
+从技术上讲，你可以在你的项目的 HTML 文件中只表示顶级模块，像这样:
 
 ```html
 <!DOCTYPE html>
@@ -996,13 +996,13 @@ Technically, you can indicate just the top-level module in your project's HTML f
 </html>
 ```
 
-By so doing, you avoid cluttering your HTML page with the submodules and parent module.
+这样做，你可以避免用子模块和父模块使你的 HTML 页面杂乱无章。
 
-Let's now see how to use the aggregator module.
+现在让我们看看如何使用聚合器模块。
 
 ##### 3\. Use the aggregator module to aggregate the submodules
 
-Here's how to use the aggregator module to import and re-export all your project's exported items:
+下面是如何使用聚合器模块来导入和重新导出你的项目里面的导出项目:
 
 ```js
 // aggregator.js
@@ -1014,9 +1014,9 @@ import aboutMe from "./bio.js";
 export { bestFruits, multiply, aboutMe };
 ```
 
-You can see that we used the aggregator file only to import and re-export our project's exported features.
+你可以看到，我们只用聚合器文件来导入和重新导出我们项目的导出功能。
 
-The shorthand way to write the `import`/`export` statements above is like so:
+上面的`import`/`export`语句的简短方法是这样的:
 
 ```js
 // aggregator.js
@@ -1026,25 +1026,25 @@ export { multiply } from "./calculation.js";
 export { default as aboutMe } from "./bio.js";
 ```
 
-Keep in mind that the following syntax is invalid:
+请记住，以下语法是无效的:
 
 ```js
 export aboutMe from "./bio.js";
 ```
 
-In other words, whenever you use the `export...from` syntax to re-export a default export, make sure that you rename the re-exportation like so:
+换句话说，每当你使用 "export...from "语法来重新导出一个默认的导出，确保你重新命名重新导出，像这样:
 
 ```js
 export { default as aboutMe } from "./bio.js";
 ```
 
-Let's now see how to import the re-exported features from an aggregator file.
+现在让我们看看如何从一个聚合器文件中导入重新输出的功能。
 
 ##### 4\. Import your exports from the aggregator file
 
-Once you've aggregated all your submodules into the aggregator module, go to your top-level script (`index.js` in this case) and import the exported items.
+一旦你把所有的子模块聚合到聚合器模块中，去你的顶层脚本（本例中为`index.js`），导入导出的项目。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // index.js
@@ -1056,52 +1056,52 @@ const news = `All ${aboutMe.companyName}'s staff gave Tom ${multiply(7, 129)} ${
 console.log(news);
 ```
 
-[**Try it on StackBlitz**](https://stackblitz.com/edit/web-platform-fttqqb?devtoolsheight=33&file=index.js)
+[**在 StackBlitz 上尝试**](https://stackblitz.com/edit/web-platform-fttqqb?devtoolsheight=33&file=index.js)
 
-You see, like magic, we've cleaned up our code by replacing three `import` statements with a single line!
+你看，就像变魔术一样，我们用一句话代替了三个 `import` 语句,我们的代码简洁了!
 
-Using an aggregator file to collate your project's exports helps separate concerns and makes your top-level module neater.
+使用一个聚合器文件来整理你的项目的导出，有助于分离关注点，使你的顶层模块更加整洁。
 
-Up till now, we've used the static `import` syntax to instruct the computer to evaluate our imported modules' code at load time.
+到目前为止，我们一直使用静态的`import`语法来指示计算机在加载时评估我们导入的模块的代码。
 
-But suppose you prefer to load your modules conditionally or on-demand. In that case, you can use the dynamic `import()` syntax. Let's see exactly how it works below.
+但假设你喜欢有条件地或按需地加载你的模块。在这种情况下，你可以使用动态`import()`语法。让我们看看它到底是如何工作的，如下。
 
 ## How to Use the `import()` Syntax to Load a Module Dynamically
 
-To load your module conditionally or on-demand, use the `import()` syntax like so:
+要想有条件地或按需地加载你的模块，可以使用`import()`语法，比如说:
 
 ```js
 import("./module/relative-path.js").then(function (module) { });
 ```
 
-The `import()` syntax does two main things:
+`import()`语法主要做两件事:
 
-1.  It loads its module specifier argument (`"./module/relative-path.js"` in this case).
-2.  It returns a promise object that resolves to a module object containing the import specifier's exports.
+1. 它加载它的模块指定参数（本例中为"./module/relative-path.js"）。
+2. 它返回一个 promise 对象，该 promise 对象解析一个包含 import 指定的导出的模块对象。
 
-So, since the `import()` syntax returns a promise, you can also use the `await` keyword with it.
+因此，由于`import()`语法返回一个 promise，你也可以用 `await`关键字。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 const module = await import("./module/relative-path.js");
 ```
 
-**Note:** Although `import()` resembles a function call, it is not. Instead, the `import()` code is a special ES modules syntax that uses parentheses (similar to the [`super()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super) syntax).
+**注意：** 尽管`import()`类似于一个函数调用，但它不是。相反，`import()`代码是一种特殊的 ES 模块语法，使用括号（类似于[`super()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super)语法）。
 
-Therefore, you cannot [call](https://www.codesweetly.com/call-apply-bind-javascript/#what-is-the-call-method), [apply](https://www.codesweetly.com/call-apply-bind-javascript/#what-is-the-apply-method), or [bind](https://www.codesweetly.com/call-apply-bind-javascript/#what-is-the-bind-method) the `import()` syntax because it does not inherit `Function.prototype`'s properties.
+因此，你不能[call](https://www.codesweetly.com/call-apply-bind-javascript/#what-is-the-call-method)、[apply](https://www.codesweetly.com/call-apply-bind-javascript/#what-is-the-apply-method)或[bind](https://www.codesweetly.com/call-apply-bind-javascript/#what-is-the-bind-method)`import()`语法，因为它没有继承`Function.prototype`的属性。
 
-To see precisely how `import()` works in practice, let's update our previous project by following the steps below.
+为了准确了解`import()`在实践中的作用，让我们按照下面的步骤来更新我们之前的项目。
 
 ### 1\. Update your HTML file
 
-Open your `index.html` file and do the following:
+打开你的`index.html`文件，做如下操作:
 
-1.  Update your `<h1>`'s content to "The Latest News".
-2.  Substitute the `<h2>` element with an empty `<p>` element.
-3.  Create a `<button>` element.
+1. 将你的 `<h1>`内容更新为 "The Latest News".
+2. 用一个空的`<p>`元素代替`<h2>`元素。
+3. 创建一个`<button>`元素。
 
-In other words, your `index.html` file should look like this:
+换句话说，你的`index.html`文件应该看起来像这样:
 
 ```html
 <!DOCTYPE html>
@@ -1123,7 +1123,7 @@ In other words, your `index.html` file should look like this:
 
 ### 2\. Update your `index.js` module
 
-Open your `index.js` file and replicate the code below:
+打开你的`index.js`文件并复制以下代码:
 
 ```js
 // index.js
@@ -1144,15 +1144,15 @@ async function displayNews() {
 buttonElement.addEventListener("click", displayNews);
 ```
 
-[**Try it on StackBlitz**](https://stackblitz.com/edit/web-platform-pw3xpq?file=index.js)
+[**在 StackBlitz 上尝试**](https://stackblitz.com/edit/web-platform-pw3xpq?file=index.js)
 
-You can see how we used the `import()` method to load the aggregator module on demand (when a user clicks the button)—rather than upfront.
+你可以看到我们是如何使用`import()`方法来按需加载聚合器模块的（当用户点击按钮时）——而不是在前期。
 
-Although dynamic importation can improve your program's initial load-time performance, it's best to use it only when needed.
+尽管动态导入可以提高你的程序的初始加载性能，但最好只在需要时使用。
 
-**Note:** The `import()` method does not require its [argument](https://www.codesweetly.com/javascript-arguments) to have a `<script>` of `type="module"`. Therefore, you can use it in a regular JavaScript file.
+**注意:** `import()`方法不要求它的[参数](https://www.codesweetly.com/javascript-arguments)有`type="module"` 的`<script>`。因此，你可以在一个普通的 JavaScript 文件中使用它。
 
-Now, suppose you wish to get [metadata](https://en.wikipedia.org/wiki/Metadata) about your current module. In that case, you can use the `import.meta` syntax.
+现在，假设你想获得当前模块的[metadata](https://en.wikipedia.org/wiki/Metadata)。在这种情况下，你可以使用`import.meta`语法。
 
 ## What Exactly Is `import.meta` in ES Modules?
 
@@ -1220,10 +1220,10 @@ The module bundler will first create an "output script file" in your project's `
 
 **Note:**
 
--   The bundler uses the _output script file_ to save the bundled code.
--   An **output file** is the compiled version of an entry file. In other words, an output script file refers to the JavaScript file a bundler generates automatically for your project.
--   An **entry point** is a file that a bundler uses to start building a [dependency graph](https://webpack.js.org/concepts/dependency-graph/) of all the project's modules it needs to combine into a single browser-compatible module.
--   An entry point is the most critical file of a build step that links (directly or indirectly) to every other module in a project.
+- The bundler uses the _output script file_ to save the bundled code.
+- An **output file** is the compiled version of an entry file. In other words, an output script file refers to the JavaScript file a bundler generates automatically for your project.
+- An **entry point** is a file that a bundler uses to start building a [dependency graph](https://webpack.js.org/concepts/dependency-graph/) of all the project's modules it needs to combine into a single browser-compatible module.
+- An entry point is the most critical file of a build step that links (directly or indirectly) to every other module in a project.
 
 ### Next, the module bundler compiles your code
 
@@ -1233,9 +1233,9 @@ Suppose the module bundler finds a `require()` or `import` statement. In such a 
 
 **Note:**
 
--   A **build step** is a process through which a module bundler builds a new browser compatible JavaScript file.
--   A build step's output file is sometimes called a **distribution code**. In other words, distribution code is the minified and optimized source code version.
--   A **dependency** is a file your script requires to work as intended. So, in `import { variable } from "./path/to/module.js"`, `module.js` is the dependency file because it is a script our app depends on to function as designed.
+- A **build step** is a process through which a module bundler builds a new browser compatible JavaScript file.
+- A build step's output file is sometimes called a **distribution code**. In other words, distribution code is the minified and optimized source code version.
+- A **dependency** is a file your script requires to work as intended. So, in `import { variable } from "./path/to/module.js"`, `module.js` is the dependency file because it is a script our app depends on to function as designed.
 
 Let's now discuss the last thing a module bundler does.
 
@@ -1285,8 +1285,8 @@ yarn init -y
 
 **Note:**
 
--   The `-y` flag instructs NPM (or Yarn) to [create a default `package.json` file](https://www.codesweetly.com/package-json-file-explained/#how-to-create-a-default-packagejson-file).
--   You must have Node and NPM installed on your system for the initialization code above to work. You can get both by installing the latest LTS version from the [Node.js](https://nodejs.org/en/) website.
+- The `-y` flag instructs NPM (or Yarn) to [create a default `package.json` file](https://www.codesweetly.com/package-json-file-explained/#how-to-create-a-default-packagejson-file).
+- You must have Node and NPM installed on your system for the initialization code above to work. You can get both by installing the latest LTS version from the [Node.js](https://nodejs.org/en/) website.
 
 ### Step 4: Install the Webpack module bundler
 
@@ -1318,13 +1318,13 @@ mkdir src dist
 
 Create the following files inside the newly created source code directory:
 
-1.  `index.html`
-2.  `index.js`
+1. `index.html`
+2. `index.js`
 
 **Note:**
 
--   Webpack recommends saving [source code](https://www.codesweetly.com/web-tech-glossary#source-code) in a `./src` directory and [distribution code](https://www.codesweetly.com/web-tech-glossary#distribution-code) in a `./dist` directory.
--   Webpack does not alter any other code apart from the `require()`, `import`, and `export` statements.
+- Webpack recommends saving [source code](https://www.codesweetly.com/web-tech-glossary#source-code) in a `./src` directory and [distribution code](https://www.codesweetly.com/web-tech-glossary#distribution-code) in a `./dist` directory.
+- Webpack does not alter any other code apart from the `require()`, `import`, and `export` statements.
 
 ### Step 7: Add the JavaScript file to your HTML document
 
@@ -1349,8 +1349,8 @@ Open your `index.html` file and replicate the code below:
 
 Here are the main things we did in the HTML snippet above:
 
-1.  We created a `<h1>` and `<button>` element.
-2.  We added step 6's JavaScript file to our HTML document.
+1. We created a `<h1>` and `<button>` element.
+2. We added step 6's JavaScript file to our HTML document.
 
 **Note:** When using a bundler, you do not need to add the `type="module"` attribute to your project's `<script>` element. Instead, the bundler will automatically treat all scripts containing `import` and `export` statements as modules.
 
@@ -1366,8 +1366,8 @@ npm install randomcolor --save
 
 **Note:**
 
--   Use the `npm install package-name --save` command for dependencies your app needs in production.
--   Use the `npm install package-name --save-dev` command for dependencies your app only needs for its local development and testing purposes.
+- Use the `npm install package-name --save` command for dependencies your app needs in production.
+- Use the `npm install package-name --save-dev` command for dependencies your app only needs for its local development and testing purposes.
 
 Alternatively, you can use Yarn like so:
 
@@ -1399,9 +1399,9 @@ const randomColor = require("randomcolor");
 
 **Note:**
 
--   The `import` statement is JavaScript's native way of importing modules.
--   The `require()` function is the CommonJS syntax for importing modules into a script.
--   An alternative way to import your project's dependencies is to implicitly load them with your HTML document's `<script>` tag. However, such a technique pollutes the global scope. So, using the `import` or `require()` syntax is better.
+- The `import` statement is JavaScript's native way of importing modules.
+- The `require()` function is the CommonJS syntax for importing modules into a script.
+- An alternative way to import your project's dependencies is to implicitly load them with your HTML document's `<script>` tag. However, such a technique pollutes the global scope. So, using the `import` or `require()` syntax is better.
 
 ### Step 10: Use the dependencies
 
@@ -1427,9 +1427,9 @@ buttonElement.addEventListener("click", changeBodyColor);
 
 In the snippet above, we told the computer that whenever a user clicks the `buttonElement`, it should:
 
-1.  Invoke the `changeBodyColor` function.
-2.  Initialize the function's `color` variable with `randomColor`'s [invocation](https://www.codesweetly.com/declaration-initialization-invocation-in-programming/#what-does-invocation-mean-in-programming) output.
-3.  Use the `color` variable's value to style the `bodyElement`'s background color.
+1. Invoke the `changeBodyColor` function.
+2. Initialize the function's `color` variable with `randomColor`'s [invocation](https://www.codesweetly.com/declaration-initialization-invocation-in-programming/#what-does-invocation-mean-in-programming) output.
+3. Use the `color` variable's value to style the `bodyElement`'s background color.
 
 Let's now bundle up our entry point (the `index.js` file) and the `randomColor` dependency into a single JavaScript file.
 
@@ -1443,13 +1443,13 @@ npx webpack
 
 After running the command above, webpack will do the following:
 
-1.  It will use your `index.js` as its entry point.
-2.  It will create a bundle (the output file) in your project's `dist` folder containing the content of the entry point and its dependencies.
+1. It will use your `index.js` as its entry point.
+2. It will create a bundle (the output file) in your project's `dist` folder containing the content of the entry point and its dependencies.
 
 **Note:**
 
--   By default, Webpack generates its bundle as a `main.js` file—which it will save in the distribution folder you created in step 5. However, you can change the default setting by creating a configuration file—which Webpack will use automatically. We will discuss creating and using a configuration file [later](#what-exactly-is-webpack-s-configuration-file) in this guide.
--   [NPX](https://nodejs.dev/learn/the-npx-nodejs-package-runner) is Node's package runner that will automatically find and execute Webpack.
+- By default, Webpack generates its bundle as a `main.js` file—which it will save in the distribution folder you created in step 5. However, you can change the default setting by creating a configuration file—which Webpack will use automatically. We will discuss creating and using a configuration file [later](#what-exactly-is-webpack-s-configuration-file) in this guide.
+- [NPX](https://nodejs.dev/learn/the-npx-nodejs-package-runner) is Node's package runner that will automatically find and execute Webpack.
 
 Our next step is to tell browsers to use the newly created bundle. Let's do that below.
 
@@ -1542,9 +1542,9 @@ npx webpack
 
 After running the build step, `HtmlWebpackPlugin` will do the following:
 
-1.  It will auto-generate a new `index.html` file.
-2.  The plugin will automatically insert the bundles that Webpack generated into the newly created HTML document.
-3.  It will auto-save the new HTML file inside your project's distribution folder.
+1. It will auto-generate a new `index.html` file.
+2. The plugin will automatically insert the bundles that Webpack generated into the newly created HTML document.
+3. It will auto-save the new HTML file inside your project's distribution folder.
 
 In other words, after running a build, the `new HtmlWebpackPlugin()`'s invocation (in the configuration file) will auto-generate a `dist/index.html` file with the following content:
 
@@ -1619,8 +1619,8 @@ module.exports = {
 
 In the configuration snippet above, we did the following:
 
-1.  We passed an object argument containing a `template` property to the `HtmlWebpackPlugin` function.
-2.  We initialized the `template` property with the path to our HTML source code.
+1. We passed an object argument containing a `template` property to the `HtmlWebpackPlugin` function.
+2. We initialized the `template` property with the path to our HTML source code.
 
 So, if you now run the `npx webpack` command, `HtmlWebpackPlugin` will use `./src/index.html` as a template to generate the new `dist/index.html` file.
 
@@ -1650,15 +1650,15 @@ Open the newly generated `dist/index.html` file in the browser to confirm that t
 
 **Note:**
 
--   `HtmlWebpackPlugin` allows you to specify how and where you want it to generate your HTML file by providing specific [configuration options](https://github.com/jantimon/html-webpack-plugin#options). For instance, `new HtmlWebpackPlugin({ title: "A CodeSweetly Project" })` tells the plugin to use `"A CodeSweetly Project"` as the title of the generated HTML file.
--   Suppose you get an error message (for instance, `ReferenceError: __webpack_base_uri__ is not defined`). In that case, you likely need to update your Webpack dependency. You can do so by running `npm update webpack webpack-cli` on your terminal.
+- `HtmlWebpackPlugin` allows you to specify how and where you want it to generate your HTML file by providing specific [configuration options](https://github.com/jantimon/html-webpack-plugin#options). For instance, `new HtmlWebpackPlugin({ title: "A CodeSweetly Project" })` tells the plugin to use `"A CodeSweetly Project"` as the title of the generated HTML file.
+- Suppose you get an error message (for instance, `ReferenceError: __webpack_base_uri__ is not defined`). In that case, you likely need to update your Webpack dependency. You can do so by running `npm update webpack webpack-cli` on your terminal.
 
 ## Important Stuff to Know about Updating Your App
 
 Whenever you make changes to your source code, make sure you do the following for your updates to reflect in the browser:
 
-1.  Rerun the build step.
-2.  Refresh your browser.
+1. Rerun the build step.
+2. Refresh your browser.
 
 Repeating the manual process of running the build step and refreshing your browser can be burdensome. Luckily, Webpack provides a way to automate the two tasks. Let's find out how.
 
@@ -1705,8 +1705,8 @@ Once you've invoked the `watch` script, NPM will execute `"webpack --progress --
 
 The `"webpack --progress --watch"` command instructs NPM to:
 
-1.  Run Webpack.
-2.  Pass the `--progress` and `--watch` options to Webpack's configuration.
+1. Run Webpack.
+2. Pass the `--progress` and `--watch` options to Webpack's configuration.
 
 The `--progress` option will make NPM show the percentage progress of Webpack's compilation.
 
@@ -1737,8 +1737,8 @@ Afterward, save your changes. Then refresh your browser.
 
 After the refresh, do the following:
 
-1.  Open your browser's console.
-2.  Click your app's `"Click Me to Change Color!"` button.
+1. Open your browser's console.
+2. Click your app's `"Click Me to Change Color!"` button.
 
 You can see that the `--watch` flag automatically recompiled your modules when you saved your source code's changes.
 
@@ -1746,10 +1746,10 @@ Therefore, you no longer need to run the `npx webpack` command manually again. I
 
 **Note:**
 
--   After running `npm run watch`, your currently opened terminal will continue to process the `watch` command's activities. So, you won't be able to input any command on that terminal until you stop `watch`'s execution. However, you can open a new terminal window to use simultaneously with the one processing `watch`. In other words, use one terminal to run `watch` and another to input commands.
--   To stop `watch`'s execution, use `ctrl + c` on windows or `cmd + c` on mac.
--   You can rename the `"watch"` key (or any other [scripts' key](https://www.codesweetly.com/package-json-file-explained/#scripts)) to any other name you prefer.
--   You can ignore watching huge folders like `node_modules` by adding them to the [watchOptions.ignored](https://webpack.js.org/configuration/watch/#watchoptionsignored) field of your project's [configuration file](https://www.codesweetly.com/javascript-module-bundler#what-exactly-is-webpacks-configuration-file).
+- After running `npm run watch`, your currently opened terminal will continue to process the `watch` command's activities. So, you won't be able to input any command on that terminal until you stop `watch`'s execution. However, you can open a new terminal window to use simultaneously with the one processing `watch`. In other words, use one terminal to run `watch` and another to input commands.
+- To stop `watch`'s execution, use `ctrl + c` on windows or `cmd + c` on mac.
+- You can rename the `"watch"` key (or any other [scripts' key](https://www.codesweetly.com/package-json-file-explained/#scripts)) to any other name you prefer.
+- You can ignore watching huge folders like `node_modules` by adding them to the [watchOptions.ignored](https://webpack.js.org/configuration/watch/#watchoptionsignored) field of your project's [configuration file](https://www.codesweetly.com/javascript-module-bundler#what-exactly-is-webpacks-configuration-file).
 
 So, now that we know how to automate Webpack's execution, let's discuss how to reload the browser automatically.
 
@@ -1777,8 +1777,8 @@ yarn add webpack-dev-server --dev
 
 In other words, once you've decided to use Webpack's dev server, do the following:
 
-1.  Use `ctrl + c` on windows or `cmd + c` on mac to stop `watch`'s execution (if the script is still running).
-2.  Delete the `watch` property you [previously added](#how-to-rerun-webpack-automatically) to your `package.json` file.
+1. Use `ctrl + c` on windows or `cmd + c` on mac to stop `watch`'s execution (if the script is still running).
+2. Delete the `watch` property you [previously added](#how-to-rerun-webpack-automatically) to your `package.json` file.
 
 ### Step 2: Specify your files' location
 
@@ -1821,9 +1821,9 @@ module.exports = {
 
 **Note:**
 
--   `webpack-dev-server` uses [output.path](https://www.codesweetly.com/javascript-module-bundler#outputpath)'s directory to serve bundled files.  
+- `webpack-dev-server` uses [output.path](https://www.codesweetly.com/javascript-module-bundler#outputpath)'s directory to serve bundled files.  
     In other words, the dev server will use `http://[devServer.host]:[devServer.port]/[output.publicPath]/[output.filename]` to generate the bundled file's URL.
--   We will discuss how to use a configuration file [later](#what-exactly-is-webpack-s-configuration-file) in this guide.
+- We will discuss how to use a configuration file [later](#what-exactly-is-webpack-s-configuration-file) in this guide.
 
 Let's now see how to run the dev server.
 
@@ -1831,8 +1831,8 @@ Let's now see how to run the dev server.
 
 There are two ways to run the dev server.
 
--   Use NPX on your CLI
--   Use `package.json`'s scripts field
+- Use NPX on your CLI
+- Use `package.json`'s scripts field
 
 Let's discuss both ways below.
 
@@ -1846,19 +1846,19 @@ npx webpack serve --mode development --open
 
 The snippet above uses NPX to do the following:
 
-1.  Run the build step by executing Webpack.
-2.  Serve the build step's output file from memory, not your hard disk.
+1. Run the build step by executing Webpack.
+2. Serve the build step's output file from memory, not your hard disk.
 
 **Note:**
 
--   The dev server requires an HTML document (usually an `index.html` file) to serve the build step's output.
--   The `--mode development` flag tells Webpack to run the build step in development mode.
--   The `--open` flag tells the dev server to open your default browser.
+- The dev server requires an HTML document (usually an `index.html` file) to serve the build step's output.
+- The `--mode development` flag tells Webpack to run the build step in development mode.
+- The `--open` flag tells the dev server to open your default browser.
 
 Keep in mind that the dev server does not save the build step's output file to any of your project's directories. Instead, it does the following:
 
-1.  It keeps the build step's output files [in memory](https://en.wikipedia.org/wiki/In-memory_processing) (your system's RAM).
-2.  It serves the output files from memory, not your system's [hard drive](https://www.computerhope.com/jargon/m/memory.htm#storage).
+1. It keeps the build step's output files [in memory](https://en.wikipedia.org/wiki/In-memory_processing) (your system's RAM).
+2. It serves the output files from memory, not your system's [hard drive](https://www.computerhope.com/jargon/m/memory.htm#storage).
 
 Using your system's memory to build and serve the output file makes the dev server fast at serving your bundle.
 
@@ -1889,10 +1889,10 @@ Then, anytime you save changes to your source code, the dev server will automati
 
 **Note:**
 
--   After running `npm run start`, your currently opened terminal will continue to process the dev server's activities. So, you won't be able to input any command on that terminal until you stop the server. However, you can open a new terminal window while using the current one to process the server. In other words, use one terminal to run the dev server and another to input commands.
--   To stop the dev server's execution, use `ctrl + c` on windows or `cmd + c` on mac.
--   You can rename the `"start"` key (or any other [scripts' key](https://www.codesweetly.com/package-json-file-explained/#scripts)) to any other name you prefer.
--   Check out [Webpack's documentation](https://webpack.js.org/configuration/dev-server) for more ways to configure the dev server.
+- After running `npm run start`, your currently opened terminal will continue to process the dev server's activities. So, you won't be able to input any command on that terminal until you stop the server. However, you can open a new terminal window while using the current one to process the server. In other words, use one terminal to run the dev server and another to input commands.
+- To stop the dev server's execution, use `ctrl + c` on windows or `cmd + c` on mac.
+- You can rename the `"start"` key (or any other [scripts' key](https://www.codesweetly.com/package-json-file-explained/#scripts)) to any other name you prefer.
+- Check out [Webpack's documentation](https://webpack.js.org/configuration/dev-server) for more ways to configure the dev server.
 
 Remember that we used a configuration file in [step 2](#step-2-specify-your-files-location). Let's talk more about what the file does.
 
@@ -1944,8 +1944,8 @@ module.exports = {
 
 Here's what we did in the configuration file above:
 
-1.  We initialized the `HtmlWebpackPlugin` variable with the `"html-webpack-plugin"` package.
-2.  We exported an object containing the `plugins` configuration we want Webpack to use.
+1. We initialized the `HtmlWebpackPlugin` variable with the `"html-webpack-plugin"` package.
+2. We exported an object containing the `plugins` configuration we want Webpack to use.
 
 So, whenever you run the build step, Webpack will automatically use the settings you've specified in the configuration file—rather than its default settings.
 
@@ -2023,9 +2023,9 @@ The code above instructs Webpack to start its bundling process from the three fi
 
 **Note:**
 
--   If `entry`'s value is a string or an array, Webpack will create a chunk (bundle)—which it will name `main` by default.
--   If `entry`'s value is an object, Webpack will create one or more chunks. The specific number of chucks created will depend on the total properties of the object.
--   Supposing `entry`'s value is an object. In that case, Webpack will use each key to name each chunk. For instance, in `entry: { home: './home-module.js' }`, Webpack will create a chunk (bundle) named `home`.
+- If `entry`'s value is a string or an array, Webpack will create a chunk (bundle)—which it will name `main` by default.
+- If `entry`'s value is an object, Webpack will create one or more chunks. The specific number of chucks created will depend on the total properties of the object.
+- Supposing `entry`'s value is an object. In that case, Webpack will use each key to name each chunk. For instance, in `entry: { home: './home-module.js' }`, Webpack will create a chunk (bundle) named `home`.
 
 ### context
 
@@ -2296,8 +2296,8 @@ yarn add style-loader css-loader --dev
 
 **Note:**
 
--   `"css-loader"` helps to interpret and resolve `@import` and `url()` items such as `import`, `require()`, and `url('./my-image.png')`.
--   `"style-loader"` helps to inject a `<style>` tag and the styles derived from `"css-loader"` to your project's HTML file.
+- `"css-loader"` helps to interpret and resolve `@import` and `url()` items such as `import`, `require()`, and `url('./my-image.png')`.
+- `"style-loader"` helps to inject a `<style>` tag and the styles derived from `"css-loader"` to your project's HTML file.
 
 Let's now see how to use the `module` option to load images.
 
@@ -2337,9 +2337,9 @@ import anyImage from "./your-image.png";
 
 In such a case, here's how Webpack will load the image:
 
-1.  Webpack will process `your-image.png`.
-2.  It will add the processed image to your _output_ directory.
-3.  Webpack will initialize the `anyImage` variable with the processed image's URL.
+1. Webpack will process `your-image.png`.
+2. It will add the processed image to your _output_ directory.
+3. Webpack will initialize the `anyImage` variable with the processed image's URL.
 
 **Note:** While processing and adding `your-image.png` to the output folder, Webpack will change the image's filename to something like `150b55a1bf7461efb720.png`.
 
@@ -2398,8 +2398,8 @@ Whenever `css-loader` loads the stylesheet above, it will process the specified 
 
 **Note:**
 
--   Webpack will change the processed fonts' filename to something similar to `93911ab167c943140756.ttf`.
--   See [Webpack's documentation](https://webpack.js.org/guides/asset-management/#loading-data) to learn how to load JSON, CSV, TSV, and XML files.
+- Webpack will change the processed fonts' filename to something similar to `93911ab167c943140756.ttf`.
+- See [Webpack's documentation](https://webpack.js.org/guides/asset-management/#loading-data) to learn how to load JSON, CSV, TSV, and XML files.
 
 Let's now discuss another popular configuration option that you can use to alter (or extend) Webpack's default settings.
 
@@ -2460,12 +2460,12 @@ module.exports = {
 
 Setting a `mode: "development"` configuration will make Webpack create a bundle that:
 
--   is fast to build
--   is less optimized
--   includes comments
--   is not minified
--   produces helpful error messages
--   is easy to debug
+- is fast to build
+- is less optimized
+- includes comments
+- is not minified
+- produces helpful error messages
+- is easy to debug
 
 Here's an example of a `mode: "development"` bundle:
 
@@ -2505,12 +2505,12 @@ module.exports = {
 
 Setting a `mode: "production"` configuration will make Webpack create a bundle that:
 
--   is slow to build
--   is more optimized
--   excludes comments
--   is minified
--   does not produce detailed error messages
--   is difficult to debug
+- is slow to build
+- is more optimized
+- excludes comments
+- is minified
+- does not produce detailed error messages
+- is difficult to debug
 
 Here's an example of a `mode: "production"` bundle:
 
@@ -2585,10 +2585,10 @@ Thanks for reading!
 
 I wrote a book about React!
 
--   It's beginners friendly ✔
--   It has live code snippets ✔
--   It contains scalable projects ✔
--   It has plenty of easy-to-grasp examples ✔
+- It's beginners friendly ✔
+- It has live code snippets ✔
+- It contains scalable projects ✔
+- It has plenty of easy-to-grasp examples ✔
 
 The [React Explained Clearly](https://www.amazon.com/dp/B09KYGDQYW) book is all you need to understand ReactJS.
 

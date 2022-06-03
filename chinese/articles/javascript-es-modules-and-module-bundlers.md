@@ -11,47 +11,47 @@
 
 ## Table of Contents
 
-1. [What Exactly Is a JavaScript Module?](#what-exactly-is-a-javascript-module)
-2. [Why Use Modules?](#why-use-modules)
-3. [Common Types of Module Systems in JavaScript](#common-types-of-module-systems-in-javascript)
-4. [How to Convert a JavaScript File into a Module](#how-to-convert-a-javascript-file-into-a-module)
-5. [How to Use an ES Module](#how-to-use-an-es-module)
-6. [How to Export a Module's Code](#how-to-export-a-module-s-code)
-7. [How to Import Exported Code](#how-to-import-exported-code)
-8. [How to Use a Module's Imported Code](#how-to-use-a-module-s-imported-code)
-9. [How to Rename Exports and Imports in ES Modules](#how-to-rename-exports-and-imports-in-es-modules)
-10. [Why Rename a Module's Code?](#why-rename-a-module-s-code)
-11. [How to Rename Multiple Exports in an ES Module](#how-to-rename-multiple-exports-in-an-es-module)
-12. [How to Rename Multiple Imports in an ES Module](#how-to-rename-multiple-imports-in-an-es-module)
-13. [How to Import All Exportable Items from an ES Module in One Go](#how-to-import-all-exportable-items-from-an-es-module-in-one-go)
-14. [How to Export Anonymously to an ES Module](#how-to-export-anonymously-to-an-es-module)
-15. [What Exactly Is an Aggregator File?](#what-exactly-is-an-aggregator-file)
-16. [Project: How to Use an Aggregator File](#project-how-to-use-an-aggregator-file)
-17. [How to Use the `import()` Syntax to Load a Module Dynamically](#how-to-use-the-import-syntax-to-load-a-module-dynamically)
-18. [What Exactly Is `import.meta` in ES Modules?](#what-exactly-is-import-meta-in-es-modules)
-19. [Quick Review of Modules So Far](#quick-review-of-modules-so-far)
-20. [What Is a Module Bundler?](#what-is-a-module-bundler)
-21. [Why Do You Need a Module Bundler?](#why-do-you-need-a-module-bundler)
-22. [How Does a Module Bundler Work?](#how-does-a-module-bundler-work)
-23. [How to Use Webpack](#how-to-use-webpack)
-24. [How to Make Webpack Auto-Generate Your App's HTML File](#how-to-make-webpack-auto-generate-your-app-s-html-file)
-25. [How to Make `HtmlWebpackPlugin` Use Your Source File as a Template to Auto-Generate a New HTML Page](#how-to-make-htmlwebpackplugin-use-your-source-file-as-a-template-to-auto-generate-a-new-html-page)
-26. [Important Stuff to Know about Updating Your App](#important-stuff-to-know-about-updating-your-app)
-27. [How to Rerun Webpack Automatically](#how-to-rerun-webpack-automatically)
-28. [How to Reload the Browser Automatically](#how-to-reload-the-browser-automatically)
-29. [What Exactly Is Webpack's Configuration File?](#what-exactly-is-webpack-s-configuration-file)
-30. [Common Webpack Configuration Options](#common-webpack-configuration-options)
-31. [Overview](#overview)
+1. [确切地说，什么是 JavaScript 模块？](#what-exactly-is-a-javascript-module)
+2. [为什么使用模块？](#why-use-modules)
+3. [JavaScript 中常见的模块系统类型](#common-types-of-module-systems-in-javascript)
+4. [如何将 JavaScript 文件转换为一个模块](#how-to-convert-a-javascript-file-into-a-module)
+5. [如何使用 ES 模块](#how-to-use-an-es-module)
+6. [如何导出一个模块的代码](#how-to-export-a-module-s-code)
+7. [如何导入已经导出的代码](#how-to-import-exported-code)
+8. [如何从一个模块导入代码](#how-to-use-a-module-s-imported-code)
+9. [如何重命名 ES 模块的导入和导出](#how-to-rename-exports-and-imports-in-es-modules)
+10. [为什么要重命名一个模块的代码？](#why-rename-a-module-s-code)
+11. [如何在一个 ES 模块中重命名多个导出](#how-to-rename-multiple-exports-in-an-es-module)
+12. [如何重命名 ES 模块中的多个导入](#how-to-rename-multiple-imports-in-an-es-module)
+13. [如何一次性从 ES 模块导入所有可导出的 items](#how-to-import-all-exportable-items-from-an-es-module-in-one-go)
+14. [如何匿名导出到 ES 模块](#how-to-export-anonymously-to-an-es-module)
+15. [究竟什么是聚合器文件？](#what-exactly-is-an-aggregator-file)
+16. [项目：如何使用聚合器文件](#project-how-to-use-an-aggregator-file)
+17. [如何使用`import()`语法来动态加载一个模块](#how-to-use-the-import-syntax-to-load-a-module-dynamically)
+18. [ES 模块中的`import.meta`到底是什么？](#what-exactly-is-import-meta-in-es-modules)
+19. [迄今为止的模块知识回顾](#quick-review-of-modules-so-far)
+20. [什么是模块 Bundler？](#what-is-a-module-bundler)
+21. [为什么你需要一个模块 Bundler？](#why-do-you-need-a-module-bundler)
+22. [模块 Bundler 是如何工作的？](#how-does-a-module-bundler-work)
+23. [如何使用 Webpack](#how-to-use-webpack)
+24. [如何让 Webpack 自动生成你的应用程序的 HTML 文件](#how-to-make-webpack-auto-generate-your-app-s-html-file)
+25. [如何让`HtmlWebpackPlugin`使用你的源文件作为模板来自动生成一个新的 HTML 页面](#how-to-make-htmlwebpackplugin-use-your-source-file-as-a-template-to-auto-generate-a-new-html-page)
+26. [关于更新你的应用程序需要知道的重要事情](#important-stuff-to-know-about-updating-your-app)
+27. [如何自动运行 Webpack](#how-to-rerun-webpack-automatically)
+28. [如何自动刷新浏览器](#how-to-reload-the-browser-automatically)
+29. [究竟什么是 Webpack 的配置文件？](#what-exactly-is-webpack-s-configuration-file)
+30. [常见的 Webpack 配置选项](#common-webpack-configuration-options)
+31. [概述](#overview)
 
-So, without any further ado, let's get started with modules.
+因此，让我们开始讨论模块。
 
-## What Exactly Is a JavaScript Module?
+## What Exactly Is a JavaScript Module
 
 一个 JavaScript **Module** 是一个允许你导出其代码的文件。这允许其他 JavaScript 文件导入并使用导出的代码作为它们的依赖项。
 
 具体来说，模块是一个简单的 JavaScript 文件，它允许你与你项目中的其他文件（或通过 Yarn 和 NPM 等[包管理器](https://www.codesweetly.com/package-manager-explained)与世界分享其代码）。
 
-## Why Use Modules?
+## Why Use Modules
 
 在早期，人们主要将 JavaScript 用于琐碎的脚本任务，如在需要时为网页提供零碎的互动性。换句话说，开发人员主要使用 JavaScript 来编写小型脚本，而不是大型脚本。
 
@@ -88,18 +88,18 @@ So, without any further ado, let's get started with modules.
 
 要将一个 JavaScript 文件转换为 ES 模块，请执行以下操作:
 
-### Step 1: Create a project directory
+### 步骤 1: 创建一个项目目录
 
 创建一个项目文件夹——本项目的 HTML 和 JavaScript 文件将存放在这里。
 
-### Step 2: Create your code files
+### 步骤 2: 创建你的代码文件
 
 在你的项目文件夹中创建以下文件:
 
 1. `index.html`
 2. `index.js`
 
-### Step 3: Add your JavaScript file to your HTML document
+### 步骤 3: 将你的 JavaScript 文件添加到你的 HTML 文档中
 
 打开你的`index.html`文件并复制以下代码:
 
@@ -120,7 +120,7 @@ So, without any further ado, let's get started with modules.
 </html>
 ```
 
-在上面的 HTML 片段中，我们使用了`<script>`的`type="module"`属性，将`index.js`的 JavaScript 文件转换为 ES 模块。
+在上面的 HTML 片段中，我们使用了 `<script>` 的 `type="module"` 属性，将 `index.js` 的 JavaScript 文件转换为 ES 模块。
 
 所以，现在我们知道了如何将一个 JavaScript 文件转换成一个模块，让我们看看如何使用一个模块。
 
@@ -128,11 +128,11 @@ So, without any further ado, let's get started with modules.
 
 按照以下步骤学习如何使用 ES 模块。
 
-### Step 1: Create a project directory
+### 步骤 1:  创建一个项目目录
 
 创建一个项目文件夹——本项目的 HTML 和模块文件将存放在这里。
 
-### Step 2: Create your code files
+### 步骤 2:  创建你的代码文件
 
 在你的项目文件夹中创建以下文件:
 
@@ -140,7 +140,7 @@ So, without any further ado, let's get started with modules.
 2. `module-1.js`
 3. `module-2.js`
 
-### Step 3: Add the modules to your HTML document
+### 步骤 3: 将模块添加到你的 HTML 文档中
 
 打开你的`index.html`文件并复制以下代码:
 
@@ -171,7 +171,7 @@ So, without any further ado, let's get started with modules.
 
 另外，计算机将只执行一个模块一次——不管你用多少个`<script>`标签来引用它。
 
-### Step 4: View your app
+### 步骤 4: 查看你的应用程序
 
 在任何浏览器中打开你的`index.html`文件，可以看到你的应用程序的当前状态。
 
@@ -196,7 +196,7 @@ So, without any further ado, let's get started with modules.
 
 我们将在本文的后面详细讨论模块 Bundler。不过现在，让我们看看如何使用本地服务器，通过`http://` 方案加载`index.html`文件。
 
-#### How to run an HTML file through a local server
+#### 如何通过本地服务器运行一个 HTML 文件
 
 下面的步骤将告诉你如何使用 [VS Code](https://code.visualstudio.com/) 本地服务器扩展来运行你的 HTML 文件。
 
@@ -205,25 +205,25 @@ So, without any further ado, let's get started with modules.
 - [Atom Live Server](https://atom.io/packages/atom-live-server)
 - [Sublime Text Live Server](https://youtu.be/5CinAgQylao)
 
-##### 1\. Add your project folder to VSCode's workspace
+##### 1\. 将你的项目文件夹添加到 VSCode 的工作区（workspace）
 
 ![Add your project's folder to VSCode's workspace](https://www.freecodecamp.org/news/content/images/2022/05/module-tutorial-add-proj-folder-to-vscode-workspace-codesweetly.gif)
 
 将项目文件夹添加到 VSCode 的 workspace
 
-##### 2\. Install a local server (Live Server by Ritwick Dey)
+##### 2\. 安装一个本地服务器（Ritwick Dey 的 Live Server）
 
 ![Install the Live Server by Ritwick Dey](https://www.freecodecamp.org/news/content/images/2022/05/module-tutorial-install-live-server-codesweetly.png)
 
 安装 VSCode Live Server（它的作者是：Ritwick Dey）
 
-##### 3\. Open your HTML file in the code editor
+##### 3\. 在代码编辑器中打开你的 HTML 文件
 
 ![Open your HTML file in your code editor](https://www.freecodecamp.org/news/content/images/2022/05/module-tutorial-open-html-file-in-code-editor-codesweetly.png)
 
 在 VSCode 编辑器中打开 HTML 文件
 
-##### 4\. Use Live Server to run the HTML file in your default browser
+##### 4\. 使用 Live Server 在你的默认浏览器中运行 HTML 文件
 
 ![Run your HTML File with Live Server - Modules Tutorial](https://www.freecodecamp.org/news/content/images/2022/05/module-tutorial-run-html-file-with-live-server-codesweetly.png)
 
@@ -249,7 +249,7 @@ So, without any further ado, let's get started with modules.
 
 让我们在下面讨论这两种方式。
 
-### How to share a module's code by placing an `export` keyword before the code
+### 如何通过在代码前放置 "export "关键字来共享一个模块的代码
 
 导出一个项目的方法是在你希望与其他模块共享的代码前放置一个`export`关键字。
 
@@ -281,7 +281,7 @@ export function multiply(x, y) {
 
 现在我们来看看导出模块代码的第二种方式。
 
-### How to share a module's code by creating an export statement
+### 如何通过创建导出语句来共享一个模块的代码
 
 另一种分享模块代码的方法是使用`export`关键字作为独立的语句。你可以这样做，在你希望共享的代码块(`{...}`)前加上一个单一的`export`关键字，以逗号分隔的名称。
 
@@ -483,7 +483,7 @@ console.log(myBestClub);
 
 然而，许多开发者倾向于在导入时重命名，因为你并不总是能控制代码的源文件，尤其是从第三方模块导入时。
 
-## Why Rename a Module's Code?
+## Why Rename a Module's Code
 
 重命名可以帮助防止浏览器因名称冲突而出现错误。例如，考虑这些片段:
 
@@ -658,7 +658,7 @@ console.log(bestClub);
 
 你也可以通过使用 **default export（默认导出）** 技术进行匿名导出。但究竟什么是默认导出？让我们来了解一下。
 
-### What Exactly Is a Default Export in ES Modules?
+### What Exactly Is a Default Export in ES Modules
 
 **默认导出** 是开发人员用来匿名（无名）导出代码的一种技术。
 
@@ -788,7 +788,7 @@ console.log(bestClub);
 
 但究竟什么是聚合器文件，我听到你问？让我们在下面找出答案。
 
-## What Exactly Is an Aggregator File?
+## What Exactly Is an Aggregator File
 
 **聚合器文件(aggregator file)**是一个专门用来导入和重新导出你从其他模块导出的项目的脚本。
 
@@ -1154,11 +1154,11 @@ buttonElement.addEventListener("click", displayNews);
 
 现在，假设你想获得当前模块的[metadata](https://en.wikipedia.org/wiki/Metadata)。在这种情况下，你可以使用`import.meta`语法。
 
-## What Exactly Is `import.meta` in ES Modules?
+## What Exactly Is `import.meta` in ES Modules
 
-The `import.meta` code is an object containing information about your current module.
+`import.meta`代码是一个包含你当前模块信息的对象。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```html
 <!DOCTYPE html>
@@ -1180,155 +1180,155 @@ The `import.meta` code is an object containing information about your current mo
 </html>
 ```
 
-[**Try it on StackBlitz**](https://stackblitz.com/edit/web-platform-8ky5vd?devtoolsheight=33&file=index.html)
+[**在 StackBlitz 上尝试**](https://stackblitz.com/edit/web-platform-8ky5vd?devtoolsheight=33&file=index.html)
 
-The `import.meta` code in the snippet above will return some information about the module in which it got used.
+上面片段中的`import.meta`代码将返回一些关于它被使用的模块的信息。
 
 ## Quick Review of Modules So Far
 
-We've learned that a JavaScript module is simply a file with an add-on capability to share its code with other modules within a project—or [with the world](https://www.codesweetly.com/package-manager-explained/#how-to-publish-your-project-to-the-npm-registry) through package managers like Yarn and NPM.
+我们已经了解到，JavaScript 模块只是一个具有附加功能的文件，可以通过 Yarn 和 NPM 等包管理器与项目中的其他模块——或者[与世界](https://www.codesweetly.com/package-manager-explained/#how-to-publish-your-project-to-the-npm-registry)分享其代码。
 
-We also used a local server to load our HTML documents via an `http://` scheme—which made browsers load our apps without throwing any CORS error.
+我们还使用了一个本地服务器，通过`http://`方案加载我们的 HTML 文档——这使得浏览器加载我们的应用程序时不会抛出任何 CORS 错误。
 
-However, live servers are limited to local developments and testing purposes.
+然而，live servers 只限于本地开发和测试目的
 
-In other words, you cannot use a live server in production to serve your HTML document via an `http://` scheme. Instead, it would be best if you used a _module bundler_.
+换句话说，你不能在生产中使用 live servers 通过 `http://` 方案提供你的 HTML 文档。相反，你最好使用一个 _module bundler_。
 
-But what exactly is a module bundler, I hear you ask? Let's find out below.
+但是，我听到你问，_module bundler_ 到底是什么？ 下面就一起来了解一下吧。
 
-## What Is a Module Bundler?
+## What Is a Module Bundler
 
-A **module bundler** is a tool developers use to bundle an app's [modules](#what-exactly-is-a-javascript-module) and dependencies into a single browser-compatible JavaScript file.
+**module bundler** 是开发人员用来将应用的 [modules](#what-exactly-is-a-javascript-module) 和依赖项打包到一个与浏览器兼容的 JavaScript 文件中的工具。
 
-## Why Do You Need a Module Bundler?
+## Why Do You Need a Module Bundler
 
-Module bundlers allow browsers to access the file you specified in a `require()` or `import` statement.
+Module bundlers 允许浏览器访问您在 `require()` 或 `import` 语句中指定的文件。
 
-In other words, suppose a browser runs a JavaScript file with a `require("./node_module/test/sample/app.js")` statement. In such a case, the browser will throw an error that says `Uncaught ReferenceError: require is not defined`.
+换句话说，假设一个浏览器运行一个 JavaScript 文件，里面有`require("./node_module/test/sample/app.js")`语句。在这种情况下，浏览器会抛出一个错误，说`Uncaught ReferenceError: require is not defined`.
 
-The computer will throw such an error because browsers cannot access files specified in a JavaScript program.
+计算机会抛出这样的错误，因为浏览器不能访问 JavaScript 程序中指定的文件。
 
-However, you can use a module bundler to create a new JavaScript file containing code browsers can read.
+然而，你可以使用 module bundler 来创建一个新的 JavaScript 文件，其中包含浏览器可以阅读的代码。
 
-## How Does a Module Bundler Work?
+## How Does a Module Bundler Work
 
-A module bundler does its bundling work as follows:
+一个 module bundler 的打包工作是这样的:
 
 ### First, it creates an output script file
 
-The module bundler will first create an "output script file" in your project's `dist` folder.
+module bundler 将首先在你的项目的`dist`文件夹中创建一个 "output script file"。
 
-**Note:**
+**注意:**
 
-- The bundler uses the _output script file_ to save the bundled code.
-- An **output file** is the compiled version of an entry file. In other words, an output script file refers to the JavaScript file a bundler generates automatically for your project.
-- An **entry point** is a file that a bundler uses to start building a [dependency graph](https://webpack.js.org/concepts/dependency-graph/) of all the project's modules it needs to combine into a single browser-compatible module.
-- An entry point is the most critical file of a build step that links (directly or indirectly) to every other module in a project.
+- bundler 使用  _output script file_ 来保存打包好的文件。
+- **output file** 是一个条目文件的编译版本。换句话说，一个输出脚本文件（output file）是指 bundler 为你的项目自动生成的 JavaScript 文件。
+- **entry point** 是一个文件，bundler 用它来开始建立一个[依赖图](https://webpack.js.org/concepts/dependency-graph/)，它需要将项目的所有模块合并成一个与浏览器兼容的模块。
+- 入口点（entry point）是构建步骤中最关键的文件，它（直接或间接）链接到项目中的其他所有模块。
 
 ### Next, the module bundler compiles your code
 
-Secondly, the bundler will check the build step's entry point for any occurrence of some `require()` or `import` statements.
+其次，bundler 将检查构建步骤的入口点是否出现了一些`require()`或`import`语句。
 
-Suppose the module bundler finds a `require()` or `import` statement. In such a case, the bundler will compile (combine) the content of each dependency specified in the statements with the entry point's content.
+假设 module bundler 发现一个`require()`或`import`语句。在这种情况下，捆绑器将把语句中指定的每个依赖关系的内容与入口点的内容进行编译（合并）。
 
-**Note:**
+**注意:**
 
-- A **build step** is a process through which a module bundler builds a new browser compatible JavaScript file.
-- A build step's output file is sometimes called a **distribution code**. In other words, distribution code is the minified and optimized source code version.
-- A **dependency** is a file your script requires to work as intended. So, in `import { variable } from "./path/to/module.js"`, `module.js` is the dependency file because it is a script our app depends on to function as designed.
+- **构建步骤** 是一个过程，通过这个过程，module bundler 构建了一个新的浏览器兼容的 JavaScript 文件。
+- 构建步骤的输出文件有时被称为**发布代码**。换句话说，发布代码是经过压缩和优化的源代码版本。
+- **dependency**是你的脚本需要的一个文件，以便按计划工作。因此，在`import { variable } from "./path/to/module.js"`中，`module.js`是依赖文件，因为它是我们的应用程序所依赖的一个脚本，可以按照设计的方式运行。
 
-Let's now discuss the last thing a module bundler does.
+现在让我们来讨论 module bundler 做的最后一件事。
 
 ### Finally, it saves the compiled code
 
-A module bundler's last step is to save the compiled code into [step 1](#first-it-creates-an-output-script-file)'s output script file.
+模块捆绑器的最后一步是将编译后的代码保存到 [step 1](#first-it-creates-an-output-script-file) 的输出脚本文件（output）中。
 
-As a result, step 1's script file (the build step's output) will contain the content of the entry point and its dependencies—but no `require()` or `import` statements.
+因此，步骤 1 的脚本文件（构建步骤的输出）将包含入口点（entry point）及其依赖的内容，但没有`require()`或`import`语句。
 
-**Note:** Typical examples of module bundlers are [webpack](https://webpack.js.org), [browserify](http://browserify.org/), [rollup](https://rollupjs.org/guide/en/), and [parcel](https://parceljs.org/).
+**注意：**模块捆绑器的典型例子是[webpack](https://webpack.js.org)、[browserify](http://browserify.org/)、[rollup](https://rollupjs.org/guide/en/) 和[parcel](https://parceljs.org/)。
 
-So, now that we know how a module bundler works, let's discuss how to use a popular one—_Webpack_.
+所以，现在我们知道了模块捆绑器的工作原理，让我们来讨论如何使用一个流行的模块 _Webpack_。
 
 ## How to Use Webpack
 
-Follow the steps below to learn how to use Webpack to bundle your project's JavaScript file and its dependencies into a single output script file.
+按照下面的步骤来学习如何使用 Webpack 将你的项目的 JavaScript 文件和它的依赖关系打包到一个的输出脚本文件（output script file）。
 
 ### Step 1: Create a project directory
 
-Create a project folder—where this project's files will reside.
+创建一个项目文件夹——这个项目的文件将存放在这里。
 
 ### Step 2: Go to the project's root folder
 
-Using the command line, navigate to the root directory of your project like so:
+使用命令行，进入到你项目的根目录，像这样:
 
 ```bash
 cd path/to/project/root-directory
 ```
 
-**Note:** A **root directory** is a folder containing all other files and sub-folders of a specific project.
+**注意：** **根目录** 是一个包含项目的所有其他文件和子文件夹的文件夹。
 
-In other words, the folder you created in step 1 is your root folder because it will house everything concerning this particular project.
+换句话说，你在第 1 步中创建的文件夹是你的根目录，因为它将容纳有关这个项目的一切。
 
 ### Step 3: Create a `package.json` file
 
-Create a [package.json](https://www.codesweetly.com/package-json-file-explained) file in your project's root directory like so:
+在你项目的根目录下创建一个[package.json](https://www.codesweetly.com/package-json-file-explained)文件，像这样:
 
 ```bash
 npm init -y
 ```
 
-Alternatively, you can use Yarn like this:
+或者，你可以像这样使用 Yarn:
 
 ```bash
 yarn init -y
 ```
 
-**Note:**
+**注意:**
 
-- The `-y` flag instructs NPM (or Yarn) to [create a default `package.json` file](https://www.codesweetly.com/package-json-file-explained/#how-to-create-a-default-packagejson-file).
-- You must have Node and NPM installed on your system for the initialization code above to work. You can get both by installing the latest LTS version from the [Node.js](https://nodejs.org/en/) website.
+- `-y`标志指示 NPM（或 Yarn）[创建一个默认的`package.json`文件](https://www.codesweetly.com/package-json-file-explained/#how-to-create-a-default-packagejson-file)。
+- 你必须在你的系统上安装 Node 和 NPM，这样上面的初始化代码才能发挥作用。你可以从[Node.js](https://nodejs.org/en/)网站上安装最新的 LTS 版本来获得这两者。
 
 ### Step 4: Install the Webpack module bundler
 
-Install `webpack` and `webpack-cli` locally into your project as [development dependency](https://www.codesweetly.com/package-manager-explained/#npm-installation-command) libraries:
+将`webpack`和`webpack-cli`作为[开发依赖](https://www.codesweetly.com/package-manager-explained/#npm-installation-command)库安装在你的项目中:
 
 ```bash
 npm install webpack webpack-cli --save-dev
 ```
 
-Or, if your package manager is Yarn, run:
+或者，如果你的软件包管理器是 Yarn，运行:
 
 ```bash
 yarn add webpack webpack-cli --dev
 ```
 
-**Note:** The `webpack-cli` package makes running webpack on the command line possible.
+**注意:** 安装 `webpack-cli`包后，可以在命令行上运行 webpack。
 
 ### Step 5: Create your project's directories
 
-Create a "source" code folder (`./src`) and a "distribution" code folder (`./dist`).
+创建一个 "source"文件夹（`./src`）和一个 "distribution" 代码文件夹（`./dist`）。
 
 ```bash
 mkdir src dist
 ```
 
-**Note:** Although `src` and `dist` are the names typically given to the source and distribution code's folders, you are free to choose any other name you prefer.
+**注意:** 虽然 `src`和 `dist` 是源码和发行码文件夹的典型名称，但你可以自由选择任何你喜欢的其他名称。
 
 ### Step 6: Create your source code files
 
-Create the following files inside the newly created source code directory:
+在新创建的源代码目录(即 src)中创建以下文件:
 
 1. `index.html`
 2. `index.js`
 
-**Note:**
+**注意:**
 
-- Webpack recommends saving [source code](https://www.codesweetly.com/web-tech-glossary#source-code) in a `./src` directory and [distribution code](https://www.codesweetly.com/web-tech-glossary#distribution-code) in a `./dist` directory.
-- Webpack does not alter any other code apart from the `require()`, `import`, and `export` statements.
+- Webpack 推荐将[源代码](https://www.codesweetly.com/web-tech-glossary#source-code)保存在`./src`目录下，将[发布代码](https://www.codesweetly.com/web-tech-glossary#distribution-code)保存在`./dist`目录下。
+- 除了 `require()`、`import` 和 `export` 语句外，Webpack 不会改变任何其他代码。
 
 ### Step 7: Add the JavaScript file to your HTML document
 
-Open your `index.html` file and replicate the code below:
+打开你的`index.html`文件，复制下面的代码:
 
 ```html
 <!DOCTYPE html>
@@ -1347,41 +1347,41 @@ Open your `index.html` file and replicate the code below:
 </html>
 ```
 
-Here are the main things we did in the HTML snippet above:
+以下是我们在上面的 HTML 片段中做的主要事情:
 
-1. We created a `<h1>` and `<button>` element.
-2. We added step 6's JavaScript file to our HTML document.
+1. 我们创建 一个`<h1>` 和一个 `<button>` 元素。
+2. 我们将第 6 步的 JavaScript 文件添加到我们的 HTML 文档中。
 
-**Note:** When using a bundler, you do not need to add the `type="module"` attribute to your project's `<script>` element. Instead, the bundler will automatically treat all scripts containing `import` and `export` statements as modules.
+**注意：** 当使用 bundler 时，你不需要在你的项目的`<script>`元素中添加`type="module"`属性。相反，捆绑器将自动把所有包含`import`和`export`语句的脚本视为模块（modules）。
 
 ### Step 8: Install some dependencies
 
-Using your text editor, [install your project's dependencies locally](https://www.codesweetly.com/package-manager-explained/#local-package-installation).
+使用你的文本编辑器，[在本地安装你项目的依赖项](https://www.codesweetly.com/package-manager-explained/#local-package-installation)。
 
-For instance, here's how you can install the [randomColor](https://www.npmjs.com/package/randomcolor) package as a local dependency:
+例如，你可以这样安装 [randomColor](https://www.npmjs.com/package/randomcolor)包作为本地依赖。:
 
 ```bash
 npm install randomcolor --save
 ```
 
-**Note:**
+**注意:**
 
-- Use the `npm install package-name --save` command for dependencies your app needs in production.
-- Use the `npm install package-name --save-dev` command for dependencies your app only needs for its local development and testing purposes.
+- 使用 `npm install package-name --save` 命令来处理你的应用程序在生产环境中需要的依赖。
+- 使用`npm install package-name --save-dev`命令来获取你的应用程序只在本地开发需要的依赖项。
 
-Alternatively, you can use Yarn like so:
+另外，你也可以像这样使用 Yarn:
 
 ```bash
 yarn add randomcolor
 ```
 
-**Note:** Use the `yarn add package-name --dev` command for dependencies your app only needs for its local development and testing purposes.
+**注意:**  使用`yarn add package-name --dev`命令来获取你的应用程序只在本地开发和测试中需要的依赖。
 
 ### Step 9: Import your dependencies
 
-Import your dependencies into your JavaScript source code with the `require()` method or the `import` statement.
+用`require()`方法或`import`语句将你的依赖关系导入你的 JavaScript 源代码。
 
-For instance, here's how to use the `import` statement to bring in step 8's `randomColor` dependency into your `index.js` script file:
+例如，这里是如何使用`import`语句将第 8 步的`randomColor`依赖关系导入你的`index.js`脚本文件:
 
 ```js
 // index.js
@@ -1389,7 +1389,7 @@ For instance, here's how to use the `import` statement to bring in step 8's `ran
 import randomColor from "randomcolor";
 ```
 
-The `require()` method equivalence of the snippet above is like so:
+与上面的片段的`require()`方法等价性是这样的:
 
 ```js
 // index.js
@@ -1397,17 +1397,17 @@ The `require()` method equivalence of the snippet above is like so:
 const randomColor = require("randomcolor");
 ```
 
-**Note:**
+**注意:**
 
-- The `import` statement is JavaScript's native way of importing modules.
-- The `require()` function is the CommonJS syntax for importing modules into a script.
-- An alternative way to import your project's dependencies is to implicitly load them with your HTML document's `<script>` tag. However, such a technique pollutes the global scope. So, using the `import` or `require()` syntax is better.
+- `import`语句是 JavaScript 导入模块的原生方式。
+- `require()`函数是在脚本中导入模块的 CommonJS 语法。
+- 另一种导入项目依赖项的方法是用 HTML 文档的`<script>`标签隐含地加载它们。然而，这种技术会污染全局范围。因此，使用`import`或`require()`语法会更好。
 
 ### Step 10: Use the dependencies
 
-Use the dependencies you imported in step 9 to do as you desire.
+使用你在第 9 步中导入的依赖项来做你想做的事。
 
-For instance, here's how you may use the `randomColor` dependency:
+例如，你可以这样使用`randomColor`依赖关系:
 
 ```js
 // index.js
@@ -1425,41 +1425,41 @@ function changeBodyColor() {
 buttonElement.addEventListener("click", changeBodyColor);
 ```
 
-In the snippet above, we told the computer that whenever a user clicks the `buttonElement`, it should:
+在上面的片段中，我们告诉计算机，每当用户点击 `buttonElement` 时，它应该:
 
-1. Invoke the `changeBodyColor` function.
-2. Initialize the function's `color` variable with `randomColor`'s [invocation](https://www.codesweetly.com/declaration-initialization-invocation-in-programming/#what-does-invocation-mean-in-programming) output.
-3. Use the `color` variable's value to style the `bodyElement`'s background color.
+1. 调用 `changeBodyColor` 函数。
+2. 用`randomColor`的[invocation](https://www.codesweetly.com/declaration-initialization-invocation-in-programming/#what-does-invocation-mean-in-programming)输出来初始化该函数的`color`变量。
+3. 使用`color`变量的值来改变 `bodyElement`的背景颜色。
 
-Let's now bundle up our entry point (the `index.js` file) and the `randomColor` dependency into a single JavaScript file.
+现在让我们把我们的入口点（`index.js`文件）和`randomColor`依赖关系打包在一个 JavaScript 文件中。
 
 ### Step 11: Start the build step
 
-Using your terminal, create your bundle by running webpack like so:
+使用你的终端，通过运行 webpack 来创建你的 bundle，像这样:
 
 ```bash
 npx webpack
 ```
 
-After running the command above, webpack will do the following:
+运行上述命令后，webpack 将做以下工作:
 
-1. It will use your `index.js` as its entry point.
-2. It will create a bundle (the output file) in your project's `dist` folder containing the content of the entry point and its dependencies.
+1. 它将使用你的`index.js`作为其入口点。
+2. 它将在你的项目的`dist`文件夹中创建一个 bundle（输出文件），包含入口点的内容和它的依赖关系。
 
 **Note:**
 
-- By default, Webpack generates its bundle as a `main.js` file—which it will save in the distribution folder you created in step 5. However, you can change the default setting by creating a configuration file—which Webpack will use automatically. We will discuss creating and using a configuration file [later](#what-exactly-is-webpack-s-configuration-file) in this guide.
-- [NPX](https://nodejs.dev/learn/the-npx-nodejs-package-runner) is Node's package runner that will automatically find and execute Webpack.
+- 默认情况下，Webpack 将生成一个`main.js`文件——它将保存在你在步骤 5 中创建的分发文件夹（dist）中。然而，你可以通过创建一个配置文件来改变默认设置，Webpack 将自动使用该文件。我们将[稍后](#what-exactly-is-webpack-s-configuration-file)在本指南中讨论创建和使用一个配置文件。
+- [NPX](https://nodejs.dev/learn/the-npx-nodejs-package-runner)是 Node 的包运行器，它将自动找到并执行 Webpack。
 
-Our next step is to tell browsers to use the newly created bundle. Let's do that below.
+我们的下一步是告诉浏览器使用新创建的 bundle。让我们在下面做这件事。
 
 ### Step 12: Refer browsers to the newly created bundle
 
-So, now that you have created a browser-compatible bundle file, you need to tell browsers to use it instead of the `index.js` source code file.
+所以，现在你已经创建了一个与浏览器兼容的 bundle 文件，你需要告诉浏览器使用它而不是`index.js`源代码文件。
 
-Therefore, go to your HTML file and substitute the reference to your JavaScript source code with Webpack's distribution bundle.
+因此，到你的 HTML 文件中，用 Webpack 的分发 bundle 文件替代对你的 JavaScript 源代码的引用。
 
-For instance, instead of using `"./index.js"` in the `<script>` tag of your HTML file, you would use `"../dist/main.js"` like so:
+例如，不要在你的 HTML 文件的`<script>`标签中使用`"./index.js"`，而应该使用`"./dist/main.js"`，像这样:
 
 ```html
 <!DOCTYPE html>
@@ -1478,31 +1478,31 @@ For instance, instead of using `"./index.js"` in the `<script>` tag of your HTML
 </html>
 ```
 
-Let's now see our app!
+现在让我们看看我们的应用程序！
 
 ### Step 13: Check your app in the browser
 
-Open your HTML file in the browser to confirm that the browser can successfully read your app and its dependencies.
+在浏览器中打开你的 HTML 文件，确认浏览器可以成功读取你的应用程序和它的依赖关系。
 
-Remember that you created your HTML file manually in [step 6](#step-6-create-your-source-code-files). However, Webpack can also auto-generate one for you. Let's find out how.
+记住，你在[步骤 6](#step-6-create-your-source-code-files)中手动创建了你的 HTML 文件。不过，Webpack 也可以为你自动生成一个。让我们来看看怎么做。
 
 ## How to Make Webpack Auto-Generate Your App's HTML File
 
-Suppose your app is now outputting multiple bundles, or you've started [using hashes](https://www.codesweetly.com/javascript-module-bundler#substitutions-technique-3-content-hash) to create unique filenames. In that case, you may find it increasingly difficult to manage your HTML file manually.
+假设你的应用程序现在输出多个 bundles，或者你已经开始[使用哈希值](https://www.codesweetly.com/javascript-module-bundler#substitutions-technique-3-content-hash)创建唯一的文件名。在这种情况下，你可能会发现手动管理你的 HTML 文件越来越困难。
 
-Therefore, Webpack allows you to use the [HtmlWebpackPlugin](https://webpack.js.org/plugins/html-webpack-plugin/) to auto-generate and manage your project's `index.html` file.
+因此，Webpack 允许你使用[HtmlWebpackPlugin](https://webpack.js.org/plugins/html-webpack-plugin/) 插件来自动生成和管理你项目的`index.html`文件。
 
-Follow the steps below to learn how to use `HtmlWebpackPlugin` to auto-generate and manage your project's HTML file.
+按照下面的步骤来学习如何使用`HtmlWebpackPlugin`来自动生成和管理你项目的 HTML 文件。
 
 ### Step 1: Install `HtmlWebpackPlugin`
 
-Install the `HtmlWebpackPlugin` like so:
+像这样安装 `HtmlWebpackPlugin`:
 
 ```bash
 npm install html-webpack-plugin --save-dev
 ```
 
-Or, if your package manager is Yarn, use:
+或者，如果你的软件包管理器是 Yarn，使用:
 
 ```bash
 yarn add html-webpack-plugin --dev
@@ -1510,7 +1510,7 @@ yarn add html-webpack-plugin --dev
 
 ### Step 2: Create a configuration file
 
-Create a Webpack configuration file in your project's [root folder](https://www.codesweetly.com/web-tech-glossary#root-directory) like so:
+在你项目的[根文件夹](https://www.codesweetly.com/web-tech-glossary#root-directory)中创建一个 Webpack 配置文件，像这样:
 
 ```bash
 touch webpack.config.js
@@ -1518,7 +1518,7 @@ touch webpack.config.js
 
 ### Step 3: Add the plugin to webpack's configuration
 
-Open your `webpack.config.js` file and add the `HtmlWebpackPlugin` plugin to it like so:
+打开你的`webpack.config.js`文件，添加`HtmlWebpackPlugin`插件，像这样:
 
 ```js
 // webpack.config.js
@@ -1530,23 +1530,23 @@ module.exports = {
 }
 ```
 
-**Note:** We will discuss how to use a configuration file [later](#what-exactly-is-webpack-s-configuration-file) in this guide.
+**注意：** 我们将在本指南中讨论如何使用配置文件[稍后](#what-exactly-is-webpack-s-configuration-file)。
 
 ### Step 4: Run the build step
 
-Once you've installed and added `HtmlWebpackPlug` into your project, recompile your modules like so:
+当你安装并添加`HtmlWebpackPlug`到你的项目中，重新编译你的模块，像这样:
 
 ```bash
 npx webpack
 ```
 
-After running the build step, `HtmlWebpackPlugin` will do the following:
+运行构建步骤后，`HtmlWebpackPlugin`将做以下工作:
 
-1. It will auto-generate a new `index.html` file.
-2. The plugin will automatically insert the bundles that Webpack generated into the newly created HTML document.
-3. It will auto-save the new HTML file inside your project's distribution folder.
+1. 它将自动生成一个新的`index.html`文件。
+2. 该插件将自动插入 Webpack 生成的 bundles 文件到新创建的 HTML 文件中。
+3. 它将自动将新的 HTML 文件保存在你的项目的分发文件夹中。
 
-In other words, after running a build, the `new HtmlWebpackPlugin()`'s invocation (in the configuration file) will auto-generate a `dist/index.html` file with the following content:
+换句话说，在运行构建后，`new HtmlWebpackPlugin()`的调用（在配置文件中）将自动生成一个`dist/index.html`文件，内容如下:
 
 ```html
 <!doctype html>
@@ -1562,23 +1562,23 @@ In other words, after running a build, the `new HtmlWebpackPlugin()`'s invocatio
 </html>
 ```
 
-Notice that the HTML document generated by `HtmlWebpackPlugin` does not contain [your source file](#step-7-add-the-javascript-file-to-your-html-document)'s `<h1>` and `<button>` elements.
+注意 由`HtmlWebpackPlugin`生成的 HTML 文档不包含[你的源文件](#step-7-add-thejavascript-file-your-html-document)的`<h1>`和`<button>`元素。
 
-In other words, suppose you open the `dist/index.html` file in the browser. In that case, the browser will open an empty HTML page.
+换句话说，假设你在浏览器中打开`dist/index.html`文件。在这种情况下，浏览器会打开一个空的 HTML 页面。
 
-The `HtmlWebpackPlugin` omitted the content of the source code's `<body>` element because it did not create the new file from the original document. Instead, it automatically created a brand-new HTML page that includes only the bundles Webpack generated.
+`HtmlWebpackPlugin`省略了源代码的`<body>`元素的内容，因为它没有从原文件中创建新文件。相反，它自动创建了一个全新的 HTML 页面，只包括 Webpack 生成的 bundles 文件。
 
-However, you can also tell `HtmlWebpackPlugin` to use your source file as a template. Let's see how below.
+然而，你也可以让 `HtmlWebpackPlugin`使用你的源文件作为模板。让我们看看下面的方法
 
 ## How to Make `HtmlWebpackPlugin` Use Your Source File as a Template to Auto-Generate a New HTML Page
 
-To make `HtmlWebpackPlugin` use your HTML source file as a template, do the following:
+要使`HtmlWebpackPlugin`使用你的 HTML 源文件作为模板，请执行以下操作:
 
 ### 1\. Update your HTML file
 
-Open your `index.html` _source code_ file and delete the `<script>` tag you [previously used](#step-12-refer-browsers-to-the-newly-created-bundle) to reference Webpack's distribution bundle.
+打开你的`index.html` _源代码_ 文件，删除你[之前使用的](#step-12-refer-browsers-to-the newly-created-bundle)的`<script>`标签，以引用 Webpack 的分发 bundle 。
 
-So, your HTML source code should look like this:
+因此，你的 HTML 源代码应该看起来像这样:
 
 ```html
 <!DOCTYPE html>
@@ -1595,15 +1595,15 @@ So, your HTML source code should look like this:
 </html>
 ```
 
-We deleted the distribution bundle's script because `HtmlWebpackPlugin` will automatically insert one while it auto-generates the new HTML file.
+我们删除了分发 bundle 的脚本，因为`HtmlWebpackPlugin`会在自动生成新的 HTML 文件时自动插入一个。
 
-**Remember:** The plugin will use your source code as a template to create the new file. Therefore, deleting the hand-coded bundle's reference helps avoid conflicting scripts.
+**记住：**该插件将使用你的源代码作为模板来创建新文件。因此，删除手工编码的 bundle 的引用有助于避免脚本的冲突。
 
-Now, let's configure the plugin to use your source code as a template.
+现在，让我们来配置该插件，以使用你的源代码作为模板。
 
 ### 2\.  Update your configuration file
 
-Open your project's `webpack.config.js` file and update `HtmlWebpackPlugin`'s settings like so:
+打开你的项目的`webpack.config.js`文件，更新`HtmlWebpackPlugin`的设置，像这样:
 
 ```js
 // webpack.config.js
@@ -1617,14 +1617,14 @@ module.exports = {
 }
 ```
 
-In the configuration snippet above, we did the following:
+在上面的配置片段中，我们做了以下工作:
 
-1. We passed an object argument containing a `template` property to the `HtmlWebpackPlugin` function.
-2. We initialized the `template` property with the path to our HTML source code.
+1. 我们向`HtmlWebpackPlugin`函数传递了一个包含`template`属性的对象参数。
+2. 我们用 HTML 源代码的路径初始化了`template`属性。
 
-So, if you now run the `npx webpack` command, `HtmlWebpackPlugin` will use `./src/index.html` as a template to generate the new `dist/index.html` file.
+因此，如果你现在运行`npx webpack`命令，`HtmlWebpackPlugin`将使用`./src/index.html`作为模板来生成新的`dist/index.html`文件。
 
-Therefore, the newly created HTML distribution file will look like so:
+因此，新创建的 HTML 分发文件将看起来像这样:
 
 ```html
 <!doctype html>
@@ -1642,35 +1642,35 @@ Therefore, the newly created HTML distribution file will look like so:
 </html>
 ```
 
-Suppose an `index.html` file already exists in your output (`dist`) directory. In that case, the new one generated by `HtmlWebpackPlugin` will replace the existing HTML file.
+假设在你的输出(`dist`)目录中已经有一个`index.html`文件。在这种情况下，由`HtmlWebpackPlugin`生成的新文件将取代现有的 HTML 文件。
 
 ### 3\. Check your app in the browser
 
-Open the newly generated `dist/index.html` file in the browser to confirm that the browser can successfully read your app and its dependencies.
+在浏览器中打开新生成的`dist/index.html`文件，确认浏览器可以成功读取你的应用程序及其依赖关系。
 
-**Note:**
+**注意:**
 
-- `HtmlWebpackPlugin` allows you to specify how and where you want it to generate your HTML file by providing specific [configuration options](https://github.com/jantimon/html-webpack-plugin#options). For instance, `new HtmlWebpackPlugin({ title: "A CodeSweetly Project" })` tells the plugin to use `"A CodeSweetly Project"` as the title of the generated HTML file.
-- Suppose you get an error message (for instance, `ReferenceError: __webpack_base_uri__ is not defined`). In that case, you likely need to update your Webpack dependency. You can do so by running `npm update webpack webpack-cli` on your terminal.
+- `HtmlWebpackPlugin`允许你通过提供特定的[配置选项](https://github.com/jantimon/html-webpack-plugin#options)来指定你希望它如何和在哪里生成你的 HTML 文件。例如，`new HtmlWebpackPlugin({ title: "A CodeSweetly Project" })`告诉插件使用`"A CodeSweetly Project"`作为生成 HTML 文件的标题。
+- 假设你得到一个错误信息（例如，`ReferenceError: __webpack_base_uri__ is not defined`）。在这种情况下，你可能需要更新你的 Webpack 依赖性。你可以通过在终端上运行`npm update webpack webpack-cli`来实现。
 
 ## Important Stuff to Know about Updating Your App
 
-Whenever you make changes to your source code, make sure you do the following for your updates to reflect in the browser:
+每当你对你的源代码进行修改时，请确保你做以下工作，以使你的更新反映在浏览器中:
 
-1. Rerun the build step.
-2. Refresh your browser.
+1. 重新运行构建步骤。
+2. 刷新你的浏览器。
 
-Repeating the manual process of running the build step and refreshing your browser can be burdensome. Luckily, Webpack provides a way to automate the two tasks. Let's find out how.
+重复运行构建步骤和刷新浏览器的手动过程可能是很麻烦的。幸运的是，Webpack 提供了一种方法来自动完成这两项任务。让我们来看看怎么做。
 
 ## How to Rerun Webpack Automatically
 
-Suppose you wish to automate the process of rerunning the build step. In that case, you can add a `watch` property to your [package.json](https://www.codesweetly.com/package-json-file-explained/)'s `scripts` field.
+假设你希望自动执行重新运行构建步骤的过程。在这种情况下，你可以在你的[package.json](https://www.codesweetly.com/package-json-file-explained/)的`scripts`字段中添加一个`watch`属性。
 
-For instance, do the following:
+例如，做如下工作:
 
 ### 1\. Add `watch` to the `scripts` fields
 
-Open your project's `package.json` file and add a `watch` property to its `scripts` field like so:
+打开你的项目的`package.json`文件，在其`scripts`字段中添加一个`watch`属性，像这样:
 
 ```json
 {
@@ -1683,38 +1683,38 @@ Open your project's `package.json` file and add a `watch` property to its `scrip
 }
 ```
 
-The snippet above added a `"watch"` property—with the value `"webpack --progress --watch"`—to the `"scripts"` field of our `package.json` file.
+上面的片段在我们的 `package.json` 文件的 `"scripts"` 字段中添加了一个 `"watch"` 属性，其值为 `"webpack --progress -- watch"`。
 
 ### 2\. Run the `watch` script
 
-Using your terminal, invoke your `package.json`'s `watch` script like so:
+使用你的终端，像这样调用你的`package.json`的`watch`脚本:
 
 ```bash
 npm run watch
 ```
 
-Alternatively, you can use Yarn like this:
+或者，你可以像这样使用 Yarn:
 
 ```bash
 yarn run watch
 ```
 
-Once you've invoked the `watch` script, NPM will execute `"webpack --progress --watch"`.
+一旦你调用了`watch`脚本，NPM 将执行`"webpack --progress -- watch"`。
 
-### What is `"webpack --progress --watch"`?
+### What is `"webpack --progress --watch"`
 
-The `"webpack --progress --watch"` command instructs NPM to:
+`"webpack --progress --watch"`命令让 NPM 执行以下:
 
-1. Run Webpack.
-2. Pass the `--progress` and `--watch` options to Webpack's configuration.
+1. 运行 Webpack.
+2. 向 Webpack 的配置传递`--progress`和`--watch`选项。
 
-The `--progress` option will make NPM show the percentage progress of Webpack's compilation.
+`--progress`选项将使 NPM 显示 Webpack 编译的百分比进度。
 
-The `--watch` option activates Webpack's watch mode.
+`--watch`选项激活了 Webpack 的观察模式。
 
-In other words, `--watch` instructs Webpack to watch and automatically recompile your modules each time you save changes to files within your dependency graph.
+换句话说，`--watch` 让 Webpack 观察你每次保存依赖关系图中的文件变化时，并自动重新编译你的模块。
 
-As an example, go to your `index.js` file and add a `console.log` statement to the `changeBodyColor()` function like so:
+举个例子，在你的`index.js`文件中，给`changeBodyColor()`函数添加一个`console.log`语句，像这样:
 
 ```js
 // index.js
@@ -1733,56 +1733,56 @@ function changeBodyColor() {
 buttonElement.addEventListener("click", changeBodyColor);
 ```
 
-Afterward, save your changes. Then refresh your browser.
+之后，保存你的更改。然后刷新你的浏览器。
 
-After the refresh, do the following:
+刷新后，执行以下操作:
 
-1. Open your browser's console.
-2. Click your app's `"Click Me to Change Color!"` button.
+1. 打开你的浏览器的控制台（console）。
+2. 点击你的应用程序的`"Click Me to Change Color!"`按钮
 
-You can see that the `--watch` flag automatically recompiled your modules when you saved your source code's changes.
+你可以看到，当你保存源代码的修改时，`--watch`标志自动重新编译了你的模块。
 
-Therefore, you no longer need to run the `npx webpack` command manually again. Instead, the `--watch` flag will watch and automatically recompile your modules whenever you save changes.
+因此，你不再需要再次手动运行`npx webpack`命令。取而代之的是，`--watch`标志将观察你保存修改，并自动重新编译你的模块。
 
-**Note:**
+**注意:**
 
-- After running `npm run watch`, your currently opened terminal will continue to process the `watch` command's activities. So, you won't be able to input any command on that terminal until you stop `watch`'s execution. However, you can open a new terminal window to use simultaneously with the one processing `watch`. In other words, use one terminal to run `watch` and another to input commands.
-- To stop `watch`'s execution, use `ctrl + c` on windows or `cmd + c` on mac.
-- You can rename the `"watch"` key (or any other [scripts' key](https://www.codesweetly.com/package-json-file-explained/#scripts)) to any other name you prefer.
-- You can ignore watching huge folders like `node_modules` by adding them to the [watchOptions.ignored](https://webpack.js.org/configuration/watch/#watchoptionsignored) field of your project's [configuration file](https://www.codesweetly.com/javascript-module-bundler#what-exactly-is-webpacks-configuration-file).
+- 运行`npm run watch`后，你当前打开的终端将继续处理`watch`命令的活动。因此，在你停止`watch`的执行之前，你将不能在该终端上输入任何命令。然而，你可以打开一个新的终端窗口，与处理`watch`的窗口同时使用。换句话说，用一个终端来运行`watch`，另一个终端来输入命令。
+- 要停止`watch`的执行，在 windows 下使用`ctrl + c`，在 mac 下使用`cmd + c`。
+- 你可以把`"watch"`键（或任何其他[scripts'键](https://www.codesweetly.com/package-json-file-explained/#scripts)）重命名为你喜欢的任何其他名称。
+- 你可以通过在项目的[配置文件](https://www.codesweetly.com/javascript-module-bundler#what-exactly-is-webpacks-configuration-file)中的[watchOptions.ignored](https://webpack.js.org/configuration/watch/#watchoptionsignored)字段中加入像`node_modules`,来忽略观察它们这样的巨大文件夹。
 
-So, now that we know how to automate Webpack's execution, let's discuss how to reload the browser automatically.
+所以，现在我们知道了如何自动执行 Webpack，让我们来讨论如何自动刷新（reload）浏览器。
 
 ## How to Reload the Browser Automatically
 
-Suppose you wish to automate the process of reloading your browser. In that case, you can use Webpack's [dev server](https://github.com/webpack/webpack-dev-server) package.
+假设你希望将重新加载浏览器的过程自动化。在这种情况下，你可以使用 Webpack 的 [dev server](https://github.com/webpack/webpack-dev-server) 包。
 
-The following steps will show you how to configure and use the package.
+下面的步骤将告诉你如何配置和使用该包。
 
 ### Step 1: Install webpack's web server
 
-Using your terminal, install the `webpack-dev-server` package like so:
+使用你的终端，像这样安装`webpack-dev-server`包:
 
 ```bash
 npm install webpack-dev-server --save-dev
 ```
 
-Or, if your package manager is Yarn, run:
+或者，如果你的软件包管理器是 Yarn，运行:
 
 ```bash
 yarn add webpack-dev-server --dev
 ```
 
-**Note:** The `webpack-dev-server` package enables watch mode by default. Therefore, you do not need to enable a `watch` script manually whenever you use the dev server.
+**注意：** `webpack-dev-server`包默认启用了监视模式。因此，每当你使用开发服务器时，你不需要手动启用一个`watch`脚本。
 
-In other words, once you've decided to use Webpack's dev server, do the following:
+换句话说，一旦你决定使用 Webpack 的开发服务器，请做以下工作:
 
-1. Use `ctrl + c` on windows or `cmd + c` on mac to stop `watch`'s execution (if the script is still running).
-2. Delete the `watch` property you [previously added](#how-to-rerun-webpack-automatically) to your `package.json` file.
+1. 在 windows 下使用`ctrl + c`或在 mac 下使用`cmd + c`来停止`watch`的执行（如果该脚本仍在运行）。
+2. 删除你[先前添加的](#how-to-rerun-webpack-automatically)在`package.json`文件中的`watch`属性。
 
 ### Step 2: Specify your files' location
 
-Tell the web server where it should get the files that Webpack did not generate by adding a `devServer` option to the configuration file you [created previously](#step-2-create-a-configuration-file):
+通过在你[先前创建的]配置文件中添加`devServer`选项，告诉 Web 服务器应该从哪里获得 Webpack[生成的文件](#step-2-create-a-configuration-file):
 
 ```js
 // webpack.config.js
@@ -1799,9 +1799,9 @@ module.exports = {
 }
 ```
 
-The configuration snippet above tells the dev server to serve contents Webpack did not build from the project's `dist` folder.
+上面的配置片段告诉开发服务器提供 Webpack 不是从项目的 `dist` 文件夹构建的内容。
 
-Note that the dev server serves files on `localhost:8080` by default. However, you can specify the port you wish to use by adding a `port` property to the `devServer` option like so:
+请注意，默认情况下，开发服务器在 `localhost:8080` 上提供文件。 但是，您可以通过向 `devServer` 选项添加 `port` 属性来指定要使用的端口，如下所示：:
 
 ```js
 // webpack.config.js
@@ -1819,56 +1819,55 @@ module.exports = {
 }
 ```
 
-**Note:**
+**注意:**
 
-- `webpack-dev-server` uses [output.path](https://www.codesweetly.com/javascript-module-bundler#outputpath)'s directory to serve bundled files.  
-    In other words, the dev server will use `http://[devServer.host]:[devServer.port]/[output.publicPath]/[output.filename]` to generate the bundled file's URL.
-- We will discuss how to use a configuration file [later](#what-exactly-is-webpack-s-configuration-file) in this guide.
+- `webpack-dev-server` 使用 [output.path](https://www.codesweetly.com/javascript-module-bundler#outputpath) 的目录来提供 bundled 文件。 换句话说，开发服务器将使用 `http://[devServer.host]:[devServer.port]/[output.publicPath]/[output.filename]` 来生成 bundled 文件的 URL。
+- 我们将在本指南[稍后](#what-exactly-is-webpack-s-configuration-file)讨论如何使用配置文件 。
 
-Let's now see how to run the dev server.
+现在让我们看看如何运行开发服务器。
 
 ### Step 3: Run the dev server
 
-There are two ways to run the dev server.
+有两种方法来运行开发服务器。
 
-- Use NPX on your CLI
-- Use `package.json`'s scripts field
+- 在你的 CLI 上使用 `NPX`命令
+- 使用`package.json`的 scripts 字段
 
-Let's discuss both ways below.
+下面我们来讨论这两种方式。
 
 #### How to run Webpack's dev server by using NPX on your CLI
 
-Using the terminal, navigate to your project's root directory—where the `webpack.config.js` file is—then use NPX to run the dev server like this:
+使用终端，进入到你项目的根目录——`webpack.config.js`文件所在的位置，然后使用 NPX 来运行开发服务器，像这样:
 
 ```bash
 npx webpack serve --mode development --open
 ```
 
-The snippet above uses NPX to do the following:
+上面的终端名使用 NPX 来做以下事情:
 
-1. Run the build step by executing Webpack.
-2. Serve the build step's output file from memory, not your hard disk.
+1. 通过执行 Webpack 来运行构建步骤。
+2. 从内存而不是硬盘中提供构建步骤的输出文件。
 
-**Note:**
+**注意:**
 
-- The dev server requires an HTML document (usually an `index.html` file) to serve the build step's output.
-- The `--mode development` flag tells Webpack to run the build step in development mode.
-- The `--open` flag tells the dev server to open your default browser.
+- 开发服务器需要一个 HTML 文件（通常是 `index.html` 文件）来作为构建步骤的输出文件。
+- `--mode development` 标志告诉 Webpack 在开发模式下运行构建步骤。
+- `--open` 标志告诉开发服务器打开你的默认浏览器。
 
-Keep in mind that the dev server does not save the build step's output file to any of your project's directories. Instead, it does the following:
+请记住，开发服务器不会把构建步骤的输出文件保存到你项目的任何目录中。相反，它做了以下工作:
 
-1. It keeps the build step's output files [in memory](https://en.wikipedia.org/wiki/In-memory_processing) (your system's RAM).
-2. It serves the output files from memory, not your system's [hard drive](https://www.computerhope.com/jargon/m/memory.htm#storage).
+1. 它把构建步骤的输出文件[保存在内存中](https://en.wikipedia.org/wiki/In-memory_processing)（即你系统的 RAM）。
+2. 它从内存中提供输出文件，而不是你的系统的 [硬盘](https://www.computerhope.com/jargon/m/memory.htm#storage)。
 
-Using your system's memory to build and serve the output file makes the dev server fast at serving your bundle.
+使用你的系统内存来构建和提供输出文件，使得开发服务器能够快速提供你的 bundle。
 
-However, when your app is ready for production, remember to run the `npx webpack` compilation command to save your bundle in your project's distribution folder—rather than in memory.
+然而，当你的应用程序准备投入生产时，记得运行`npx webpack`编译命令，将你的捆绑包保存在项目的分发（dist）文件夹中,而不是内存中。
 
-Let's now discuss the second way to run the dev server.
+现在让我们来讨论运行开发服务器的第二种方式。
 
 #### How to run Webpack's dev server by using `package.json`'s scripts field
 
-An alternate way to run the dev server is to add the `"webpack serve --mode development --open"` command to your `package.json`'s `scripts` field like so:
+另一种运行开发服务器的方法是在你的`package.json`的`scripts`字段中添加`"webpack serve --mode development --open"`命令，像这:
 
 ```json
 {
@@ -1881,38 +1880,38 @@ An alternate way to run the dev server is to add the `"webpack serve --mode deve
 }
 ```
 
-Afterward, you can use `npm run start` on your terminal to execute the `webpack serve --mode development --open` command.
+之后，你可以在终端使用`npm run start`来执行`webpack serve --mode development --open`命令。
 
-Once you've started the dev server—via either option 1 or 2, your default browser will automatically open with your project's HTML page.
+当你通过方法 1 或 2，启动了开发服务器，你的默认浏览器将自动打开你的项目的 HTML 页面。
 
-Then, anytime you save changes to your source code, the dev server will automatically reload your browser to reflect the recent updates.
+然后，在你保存对源代码的修改时，开发服务器会自动刷新你的浏览器来获得最近的更新。
 
-**Note:**
+**注意:**
 
-- After running `npm run start`, your currently opened terminal will continue to process the dev server's activities. So, you won't be able to input any command on that terminal until you stop the server. However, you can open a new terminal window while using the current one to process the server. In other words, use one terminal to run the dev server and another to input commands.
-- To stop the dev server's execution, use `ctrl + c` on windows or `cmd + c` on mac.
-- You can rename the `"start"` key (or any other [scripts' key](https://www.codesweetly.com/package-json-file-explained/#scripts)) to any other name you prefer.
-- Check out [Webpack's documentation](https://webpack.js.org/configuration/dev-server) for more ways to configure the dev server.
+- 运行`npm run start`后，你当前打开的终端将继续处理开发服务器的活动。所以，你将无法在该终端上输入任何命令，直到你停止服务器。然而，你可以打开一个新的终端窗口，同时使用当前的终端来处理服务器。换句话说，用一个终端来运行开发服务器，用另一个终端来输入命令。
+- 要停止开发服务器的执行，在 windows 下使用`ctrl + c`，在 mac 下使用`cmd + c`。
+- 你可以把`"start"`键（或任何其他[scripts'键](https://www.codesweetly.com/package-json-file-explained/#scripts)）重命名为任何你喜欢的其他名字。
+- 查看[Webpack 的文档](https://webpack.js.org/configuration/dev-server)了解更多配置开发服务器的方法。
 
-Remember that we used a configuration file in [step 2](#step-2-specify-your-files-location). Let's talk more about what the file does.
+记住，我们在[步骤 2](#step-2-specify-your-files-location)中使用了一个配置文件。让我们进一步谈谈这个文件的作用。
 
-## What Exactly Is Webpack's Configuration File?
+## What Exactly Is Webpack's Configuration File
 
-Webpack's **configuration file** is a JavaScript file that allows you to modify or extend Webpack's default settings.
+Webpack 的 **配置文件** 是一个 JavaScript 文件，允许你修改或扩展 Webpack 的默认设置。
 
-For instance, Webpack's default setting assumes your project's entry point is `src/index.js`.
+例如，Webpack 的默认设置假定你的项目的入口点是`src/index.js`。
 
-Also, by default, Webpack will minimize, optimize, and output the result of its build step into a `dist/main.js` file.
+另外，默认情况下，Webpack 将其构建步骤的结果压缩到最小化、优化并输出到`dist/main.js`文件中。
 
-However, suppose you wish to change those default settings (or add more configurations). In such a case, you would need to create a configuration file—which Webpack will use automatically.
+然而，假设你希望改变这些默认设置（或添加更多配置）。在这种情况下，你需要创建一个配置文件，Webpack 会自动使用该文件。
 
-The following steps will show you how to create and use a Webpack configuration file.
+下面的步骤将告诉你如何创建和使用 Webpack 的配置文件。
 
-**Note:** You can skip steps 1 and 2 if your project already has a configuration file.
+**注意:** 如果你的项目已经有一个配置文件，你可以跳过下面的步骤 1 和 2。
 
 ### Step 1: Go to the project's root folder
 
-Navigate to your project's root directory like so:
+像这样进入到你项目的根目录:
 
 ```bash
 cd path/to/project/root-directory
@@ -1920,7 +1919,7 @@ cd path/to/project/root-directory
 
 ### Step 2: Create your project's configuration file
 
-Create a configuration file in your project's root folder like so:
+在你项目的根目录下创建一个配置文件，像这样:
 
 ```bash
 touch webpack.config.js
@@ -1928,7 +1927,7 @@ touch webpack.config.js
 
 ### Step 3: Specify your configurations
 
-Open your project's `webpack.config.js` file and specify the [configuration options](https://webpack.js.org/configuration/#options) you wish to change (or add).
+打开你的项目的`webpack.config.js`文件，指定你想改变（或添加）的 [配置选项](https://webpack.js.org/configuration/#options)。
 
 **Here's an example:**
 
@@ -1942,40 +1941,40 @@ module.exports = {
 };
 ```
 
-Here's what we did in the configuration file above:
+下面是我们在上面的配置文件中所做的配置:
 
-1. We initialized the `HtmlWebpackPlugin` variable with the `"html-webpack-plugin"` package.
-2. We exported an object containing the `plugins` configuration we want Webpack to use.
+1. 我们用`"html-webpack-plugin "` 包初始化了 `HtmlWebpackPlugin` 变量。
+2. 我们导出了一个包含我们希望 Webpack 使用的`plugins`配置的对象。
 
-So, whenever you run the build step, Webpack will automatically use the settings you've specified in the configuration file—rather than its default settings.
+因此，每当你运行构建步骤时，Webpack 就会自动使用你在配置文件中指定的设置，而不是其默认设置。
 
-Let's now run the build step.
+现在让我们来运行构建步骤。
 
 ### Step 4: Run the module bundler
 
-Using your terminal, create your bundle by running Webpack like so:
+使用你的终端，像这样通过运行 Webpack 来创建你的 bundle:
 
 ```bash
 npx webpack --config webpack.config.js
 ```
 
-The `--config webpack.config.js` code used in the snippet above is optional. We used it above to illustrate that it is possible to pass a configuration of [any name](https://webpack.js.org/configuration/#use-a-different-configuration-file)—which you may need for complex configurations that requires a split into multiple files.
+上面的片段中使用的`--config webpack.config.js`代码是可选的。我们在上面使用它是为了说明可以传递一个[配置](https://webpack.js.org/configuration/#use-a-different-configuration-file), 对于需要分割成多个文件的复杂配置，你可能需要这样做。
 
-However, Webpack will use the `webpack.config.js` file by default if it is present in your project's root directory.
+然而，如果`webpack.config.js`文件存在于你项目的根目录中，Webpack 将默认使用该文件。
 
-Keep in mind that [plugins](https://webpack.js.org/concepts/plugins/) is only one of the numerous options you can use in a configuration file.
+请记住，[plugins](https://webpack.js.org/concepts/plugins/)只是你可以在配置文件中使用的众多选项之一。
 
-Let's discuss other configuration options developers use.
+让我们来讨论一下开发人员使用的其他配置选项。
 
 ## Common Webpack Configuration Options
 
-Below are popular configuration options you can use to alter (or extend) Webpack's default settings.
+以下是常用的配置选项，你可以用来改变（或扩展）Webpack 的默认设置。
 
 ### entry
 
-The `entry` field specifies the file or files you want Webpack to use to begin the application's bundling process.
+ `entry` 字段指定你希望 Webpack 使用的配置文件，以开始开始程序的 bundle（打包）过程。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // webpack.config.js
@@ -1985,11 +1984,11 @@ module.exports = {
 };
 ```
 
-The snippet above instructs Webpack to start its bundling process from `"./src/index.js"`.
+上面的片段让 Webpack 从`"./src/index.js"`开始它的捆绑过程。
 
-Suppose you used an array (or an object) as the `entry` field's value. In that case, Webpack will process all the array's (or object's) items as the application's entry points.
+假设你用一个数组（或一个对象）作为`entry`字段的值。在这种情况下，Webpack 将处理所有数组（或对象）的项目作为应用程序的入口点。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // webpack.config.js
@@ -2003,9 +2002,9 @@ module.exports = {
 }
 ```
 
-The code above instructs Webpack to start its bundling process from the three files specified in the `entry` array (that is, `"./src/index.js"`, `"./src/index-two.js"`, and `"./src/index-three.js"`).
+上面的代码指示 Webpack 从`entry`数组中指定的三个文件（即`"./src/index.js"`、`"./src/index-two.js"` 和 `"./src/index-three.js"`）开始其 bundle(打包)过程。
 
-**Here's another example:**
+**另一个例子:**
 
 ```js
 // webpack.config.js
@@ -2019,17 +2018,17 @@ module.exports = {
 }
 ```
 
-The code above instructs Webpack to start its bundling process from the three files specified in the `entry` object (that is, `"./src/index.js"`, `"./src/index-two.js"`, and `"./src/index-three.js"`).
+上面的代码指示 Webpack 从`entry`对象中指定的三个文件（即`"./src/index.js"`、`"./src/index-two.js"` 和 `"./src/index-three.js"`）开始其 bundle(打包) 过程。
 
-**Note:**
+**注意:**
 
-- If `entry`'s value is a string or an array, Webpack will create a chunk (bundle)—which it will name `main` by default.
-- If `entry`'s value is an object, Webpack will create one or more chunks. The specific number of chucks created will depend on the total properties of the object.
-- Supposing `entry`'s value is an object. In that case, Webpack will use each key to name each chunk. For instance, in `entry: { home: './home-module.js' }`, Webpack will create a chunk (bundle) named `home`.
+- 如果`entry`的值是一个字符串或一个数组，Webpack 将创建一个块（bundle），它默认命名为`main`。
+- 如果`entry`的值是一个对象，Webpack 将创建一个或多个 chunks(块)。创建的具体数量将取决于该对象的总属性。
+- 假设`entry`的值是一个对象。在这种情况下，Webpack 将使用每个键来命名每个 chunk（块）。例如，在 `entry: { home: './home-module.js' }`，Webpack 将创建一个名为`home`的块（bundle）。
 
 ### context
 
-The `context` field points Webpack to the directory containing your entry files.
+`context`字段将 Webpack 指向包含你的条目文件的目录。
 
 **Here's an example:**
 
@@ -2044,19 +2043,19 @@ module.exports = {
 }
 ```
 
-The snippet above tells Webpack to locate the `index.js` entry file in the project's `src` directory.
+上面的代码片段告诉 Webpack 在项目的`src`目录下找到`index.js`条目文件。
 
 ### output
 
-The `output` field specifies how and where Webpack should output the bundles and assets it processed.
+`output`字段指定了 Webpack 应该如何以及在哪里输出它所处理的 bundles 和 assets。
 
-The three options commonly used with the `output` field are `path`, `filename`, and `clean`.
+`output`字段常用的三个选项是`path`、`filename`和`clean`。
 
 #### output.path
 
-The `output.path` option specifies the output directory you want Webpack to place the bundled file.
+`output.path`选项指定了你希望 Webpack 存放 bundled 的输出目录。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // webpack.config.js
@@ -2071,15 +2070,15 @@ module.exports = {
 }
 ```
 
-The snippet above used the `output.path` option to tell Webpack to use the project's `"./dist"` folder as the output directory.
+上面的代码片段使用 `output.path` 选项来告诉 Webpack 使用项目的 `./dist'` 文件夹作为输出目录（output）。
 
 #### output.filename
 
-The `output.filename` option specifies how Webpack should name each bundle it creates.
+`output.filename`选项指定了 Webpack 应该如何命名它所创建的每个 bundle。
 
-Suppose you are creating only a single bundle via one entry point. In that case, you can specify a static name as the bundle's filename.
+假设你只通过一个入口点创建一个 bundle。在这种情况下，你可以指定 bundle 的固定文件名。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // webpack.config.js
@@ -2095,19 +2094,19 @@ module.exports = {
 }
 ```
 
-The `output.filename` option tells Webpack to use `"codesweetly.js"` as the filename of the bundle created after processing `"./src/index.js"`.
+`output.filename`选项告诉 Webpack 使用`"codesweetly.js"` 作为处理 `"./src/index.js"`后创建的包的文件名。
 
-Suppose you wish to create multiple bundles through two or more entry points, code splitting, or various plugins. In such a case, it is better to dynamically generate each bundle's filename via any of Webpack's substitutions techniques.
+假设你希望通过两个或多个入口点、代码拆分或各种插件来创建多个 bundles。在这种情况下，最好是通过 Webpack 一类任何技术来动态地生成每个 bundle 的文件名。
 
-**Note:** Substitutions—in Webpack—refer to using bracketed strings to create [templates](https://webpack.js.org/configuration/output/#template-strings) for filenames.
+**注意:** Webpack 中的替换是指使用括号括起来的字符串来为文件名创建 [模板](https://webpack.js.org/configuration/output/#template-strings)。
 
-Let's now discuss the three commonly used substitution techniques.
+现在让我们讨论三种常用的替换技术。
 
 ##### Substitutions technique 1: Entry name
 
-The **"entry name"** substitutions naming technique makes Webpack create each bundle's name by [concatenating](https://www.codesweetly.com/web-tech-glossary#concatenation) a bundle's entry point's name with a given string.
+The **"entry name"** 替换命名技术使 Webpack 通过[连接 concatenating](https://www.codesweetly.com/web-tech-glossary#concatenation)一个 bundle 的入口点（entry point）的名称与一个给定的字符串来创建每个 bundle 的名称。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // webpack.config.js
@@ -2127,17 +2126,17 @@ module.exports = {
 }
 ```
 
-The `output.filename` option tells Webpack to create each bundle's filename by concatenating each entry point's name with the `".bundle.js"` string value.
+`output.filename`选项告诉 Webpack 通过拼接每个入口点的名称（[name]）和`".bundle.js"`字符串值来创建每个 bundle 的文件名。
 
-So, for instance, suppose Webpack has finished processing the `promo` entry point (that is, `"./src/promo-module.js"`). In that case, the final bundle's name will be `"promo.bundle.js"`.
+因此，例如，假设 Webpack 已经完成了对`promo`入口点的处理（即`"./src/promo-module.js"`）。在这种情况下，最终 bundle 的名字将是`"promo.bundle.js"`。
 
-Let's now discuss the second substitutions technique.
+现在我们来讨论第二个替换技术。
 
 ##### Substitutions technique 2: Internal chunk id
 
-The **"internal chunk id"** substitutions naming technique makes Webpack create each bundle's name by concatenating a bundle's entry point's id with a given string.
+**"internal chunk id"** 替换命名技术使 Webpack 通过将一个 bundle 的入口点的 ID 与一个给定的字符串相连接来创建每个捆绑包的名称。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // webpack.config.js
@@ -2157,15 +2156,15 @@ module.exports = {
 }
 ```
 
-The `output.filename` option tells Webpack to create each bundle's filename by concatenating each entry point's internal chuck id with the `".bundle.js"` string value.
+`output.filename`选项告诉 Webpack 通过连接每个入口点的 `internal chuck id` 和 `".bundle.js"` 字符串值来创建每个 bundle 的文件名。
 
-Let's now discuss the third substitutions technique.
+现在我们来讨论第三个替换技术。
 
 ##### Substitutions technique 3: Content hash
 
-The **"content hash"** substitutions naming technique makes Webpack create each bundle's name by concatenating the generated content's hashes with a given string.
+**"content hash"** 替换命名技术使 Webpack 通过将生成的内容的哈希值与一个给定的字符串相连接来创建每个 bundle 的名称。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // webpack.config.js
@@ -2185,11 +2184,11 @@ module.exports = {
 }
 ```
 
-The `output.filename` option tells Webpack to create each bundle's filename by concatenating each chunk's content hash with the `".bundle.js"` string value.
+`output.filename`选项告诉 Webpack 通过连接每个块的内容哈希和`".bundle.js"`字符串值来创建每个包的文件名。
 
-Keep in mind that Webpack allows you to combine different substitutions—for instance, `filename: "[name].[contenthash].bundle.js"`.
+请记住，Webpack 允许你结合不同的替换。例如，`filename: "[name]. [contenthash].bundle.js"`。
 
-You can also use a function to return a filename like so:
+你也可以使用一个函数来返回一个文件名，像这样:
 
 ```js
 filename: (pathData) => {
@@ -2197,21 +2196,21 @@ filename: (pathData) => {
 }
 ```
 
-Webpack also permits you to initialize the filename property with a folder structure like so:
+Webpack 还允许你用文件夹结构来初始化文件名属性，比如说:
 
 ```js
 filename: "codesweetly/[name]/bundle.js"
 ```
 
-Now, let's discuss the third property developers commonly use within the `output` field.
+现在，让我们来讨论开发人员在 `output` 字段内常用的第三个属性。
 
 #### output.clean
 
-As Webpack increasingly generates and saves files into your output directory, it is common to clutter a project's `/dist` folder with unused files.
+随着 Webpack 越来越多地生成和保存文件到你的输出目录中，项目的`/dist`文件夹中经常会有一些未使用的文件。
 
-So, a good practice is to clean your output directory before each build step. By so doing, your `/dist` folder will contain used files only.
+因此，一个好的做法是在每个构建步骤之前清理你的输出目录。通过这样做，你的`/dist`文件夹将只包含要使用的文件。
 
-Let's see how to do the cleanup below:
+让我们看看如何做下面的清理工作:
 
 ```js
 // webpack.config.js
@@ -2228,25 +2227,25 @@ module.exports = {
 }
 ```
 
-The `clean` option in the snippet above tells Webpack to clean the project's output directory before each build step.
+上面片段中的`clean`选项告诉 Webpack 在每个构建步骤之前清理项目的输出目录。
 
-In other words, Webpack will empty the output directory before it begins each build step.
+换句话说，Webpack 会在开始每个构建步骤之前清空输出目录。
 
-Therefore, the output directory will contain only the files generated from the compilation process—not any of the old files that Webpack previously saved there.
+因此，输出目录将只包含编译过程中产生的文件，而不是 Webpack 之前保存在那里的任何旧文件。
 
-Let's now discuss another popular configuration option that you can use to alter (or extend) Webpack's default settings.
+现在我们来讨论另一个流行的配置选项，你可以用它来改变（或扩展）Webpack 的默认设置。
 
 ### module
 
-The `module` field makes Webpack process assets—like CSS files and fonts—as [modules](#what-exactly-is-a-javascript-module) in the dependency graph.
+`module`字段使 Webpack 在依赖关系图中的 CSS 文件和字体等 assets， 作为[modules](#what-exactly-is-javascript-module)处理。
 
-So, suppose you want Webpack to bundle non-JavaScript assets such as images, CSS files, fonts, and so on. In such a case, you can use the `module` option to specify how Webpack should manage those assets before adding them to the dependency graph.
+所以，假设你想让 Webpack bundle（打包）非 JavaScript  assets，如图片、CSS 文件、字体等等。在这种情况下，你可以使用`module`选项来指定 Webpack 在将这些 assets 添加到依赖图(dependency graph)中,管理它们。
 
-Below are some common ways to use the `module` option.
+下面是一些使用`module`选项的常见方法。
 
 #### How to use Webpack's `module` option to load CSS stylesheets
 
-Here's how you can use Webpack's module option to load CSS stylesheets:
+下面是如何使用 Webpack 的模块选项来加载 CSS 样式表:
 
 ```js
 // webpack.config.js
@@ -2270,40 +2269,40 @@ module.exports = {
 }
 ```
 
-The configuration snippet above used the `module` property to tell Webpack to use `"style-loader"` and `"css-loader"` to load CSS files.
+上面的配置片段使用`module`属性来告诉 Webpack 使用`"style-loader"` 和 `"css-loader"` 来加载 CSS 文件。
 
-Keep in mind that the loaders' order matters.
+请记住，加载器的顺序很重要。
 
-In other words, Webpack reads the loaders from right to left. Therefore, it will first execute the `"css-loader"` before the `"style-loader"`.
+换句话说，Webpack 是从右到左读取加载器的。因此，它将首先执行`"css-loader"`，然后才是`"style-loader"`。
 
-So, ["css-loader"](https://github.com/webpack-contrib/css-loader) will pass its result (that is, the processed resource) to the `"style-loader"`. Then, ["style-loader"](https://github.com/webpack-contrib/style-loader) will insert the final CSS resource into the `<head>` element of your HTML page.
+所以，["css-loader"](https://github.com/webpack-contrib/css-loader)将把它的结果（也就是处理过的资源）传递给`"style-loader"`。然后，["style-loader"](https://github.com/webpack-contrib/style-loader)将把最终的 CSS 资源插入你的 HTML 页面的`<head>`元素中。
 
-It is necessary to install the loaders you want Webpack to use in loading your CSS assets.
+安装 Webpack 在加载你的 CSS assets 时使用的加载器,是有必要的。
 
-So, for instance, before Webpack can use the previous configuration file to load ".css" assets, you need to install `"style-loader"` and the `"css-loader"`.
+因此，例如，在 Webpack 使用之前的配置文件加载".css " assets 之前，你需要安装`"style-loader"`和`"css-loader"`。
 
-Here's how to install the two loaders:
+下面是如何安装这两个加载器:
 
 ```bash
 npm install style-loader css-loader --save-dev
 ```
 
-Alternatively, if your package manager is Yarn, run:
+或者，如果你的软件包管理器是 Yarn，运行:
 
 ```bash
 yarn add style-loader css-loader --dev
 ```
 
-**Note:**
+**注意:**
 
-- `"css-loader"` helps to interpret and resolve `@import` and `url()` items such as `import`, `require()`, and `url('./my-image.png')`.
-- `"style-loader"` helps to inject a `<style>` tag and the styles derived from `"css-loader"` to your project's HTML file.
+- `"css-loader"`帮助解释和解决`@import`和`url()` 语句，如`import`、`require()`和`url('./my-image.png')`。
+- `"style-loader"` 有助于向你的项目的 HTML 文件插入`<style>`标签和从`"css-loader"`导出的样式。
 
-Let's now see how to use the `module` option to load images.
+现在让我们看看如何使用`module`选项来加载图片。
 
 #### How to use Webpack's `module` option to load images
 
-Here's how you can use Webpack's `module` option to load images:
+下面是你如何使用 Webpack 的`module`选项来加载图片:
 
 ```js
 // webpack.config.js
@@ -2327,27 +2326,27 @@ module.exports = {
 }
 ```
 
-The configuration snippet above used the module property to tell webpack to load `".png"`, `".svg"`, `".jpg"`, `".jpeg"`, and `".gif"` files as [resource asset modules](https://webpack.js.org/guides/asset-modules/#resource-assets).
+上面的配置片段使用模块属性告诉 webpack 将`".png"`、`".svg"`、`".jpg"`、`".jpeg"`和`".gif"`文件作为[resource asset modules](https://webpack.js.org/guides/asset-modules/#resource-assets)加载。
 
-So, suppose the following `import` statement is in your script file:
+所以，假设在你的脚本文件中，有以下的`import`语句:
 
 ```js
 import anyImage from "./your-image.png";
 ```
 
-In such a case, here's how Webpack will load the image:
+在这种情况下，以下是 Webpack 将如何加载图片:
 
-1. Webpack will process `your-image.png`.
-2. It will add the processed image to your _output_ directory.
-3. Webpack will initialize the `anyImage` variable with the processed image's URL.
+1. Webpack 将处理`your-image.png`。
+2. 它将把处理后的图片添加到你的 _output_ 目录。
+3. Webpack 将用处理后的图片的 URL 初始化`anyImage`变量。
 
-**Note:** While processing and adding `your-image.png` to the output folder, Webpack will change the image's filename to something like `150b55a1bf7461efb720.png`.
+**注意:** *在处理和添加`your-image.png`到输出文件夹时，Webpack 将改变图像的文件名，如`150b55a1bf7461efb720.png`。
 
-Let's now see how to use the `module` option to load fonts.
+现在我们来看看如何使用`module`选项来加载字体。
 
 #### How to use Webpack's `module` option to load fonts
 
-Here's how you can use Webpack's `module` option to load fonts:
+下面是你如何使用 Webpack 的`module`选项来加载字体的方法:
 
 ```js
 // webpack.config.js
@@ -2371,11 +2370,11 @@ module.exports = {
 }
 ```
 
-The configuration snippet above used the `module` property to tell Webpack to load `".woff"`, `".woff2"`, `".eot"`, `".ttf"`, and `".otf"` files as [resource asset modules](https://webpack.js.org/guides/asset-modules/#resource-assets).
+上面的配置片段使用`module`属性来告诉 Webpack 将`".woff"`、`.woff2"、`".eot"、`".ttf "和`".otf "文件作为[resource asset modules](https://webpack.js.org/guides/asset-modules/#resource-assets)加载。
 
-Once you've configured the loader, you can incorporate your fonts via the [@font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) CSS declaration.
+当你配置了加载器，你就可以通过[@font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face)CSS 声明加入你的字体。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```css
 /* styles.css */
@@ -2394,20 +2393,20 @@ div {
 }
 ```
 
-Whenever `css-loader` loads the stylesheet above, it will process the specified fonts and add the processed copies to your project's output directory.
+每当`css-loader`加载上述样式表时，它将处理指定的字体，并将处理后的副本添加到你项目的输出目录。
 
-**Note:**
+**注意:**
 
-- Webpack will change the processed fonts' filename to something similar to `93911ab167c943140756.ttf`.
-- See [Webpack's documentation](https://webpack.js.org/guides/asset-management/#loading-data) to learn how to load JSON, CSV, TSV, and XML files.
+- Webpack 会将处理后的字体文件名改为类似于`93911ab167c943140756.ttf`的内容。
+- 查看[Webpack 的文档](https://webpack.js.org/guides/asset-management/#loading-data)以了解如何加载 JSON、CSV、TSV 和 XML 文件。
 
-Let's now discuss another popular configuration option that you can use to alter (or extend) Webpack's default settings.
+现在我们来讨论另一个流行的配置选项，你可以用它来改变（或扩展）Webpack 的默认设置。
 
 ### devtool
 
-The `devtool` field tells Webpack to convert a compiled file to the source code format. Therefore, making it easier for you to debug the exact file (and line) where an error occurred in your source code.
+`devtool`字段告诉 Webpack 将编译后的文件转换为源代码格式。因此，使你更容易调试，找到源代码中发生错误的具体文件（和行）。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // webpack.config.js
@@ -2424,23 +2423,23 @@ module.exports = {
 }
 ```
 
-At compilation time, if Webpack sees a `devtool` property in your configuration script, it will generate a `.js.map` file that the browser will use instead of the `.js` file.
+在编译时，如果 Webpack 在你的配置脚本中看到`devtool`属性，它将生成一个`.js.map`文件，浏览器将使用该文件而不是别的 `.js`文件。
 
-**Note:** There are different [devtool options](https://webpack.js.org/configuration/devtool/) for specifying if and how Webpack should generate the source maps.
+**注意:** 有不同的[devtool 选项](https://webpack.js.org/configuration/devtool/)来指定 Webpack 是否应该生成源码地图（source maps）以及如何生成。
 
-Let's now discuss another popular configuration option that you can use to alter (or extend) Webpack's default settings.
+现在我们来讨论另一个流行的配置选项，你可以用它来改变（或扩展）Webpack 的默认设置。
 
 ### mode
 
-The `mode` field tells Webpack the specific built-in optimization configuration you want it to use to build your output file.
+`mode`字段告诉 Webpack 你希望它使用特定的内置优化配置来构建你的输出文件。
 
-You can specify whether Webpack should use `production`, `development`, or no (`none`) configuration to optimize your bundle. Let's discuss each of the three optimization settings below.
+你可以指定 Webpack 是否应该使用`production`、`development`或无（`none`）配置来优化你的包。让我们在下面分别讨论这三种优化设置。
 
 #### Development mode
 
-A `mode: "development"` setting tells Webpack to build an output file for use in the development environment.
+`mode: "development"`设置告诉 Webpack 建立一个输出文件，以便在开发环境中使用。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // webpack.config.js
@@ -2458,34 +2457,34 @@ module.exports = {
 }
 ```
 
-Setting a `mode: "development"` configuration will make Webpack create a bundle that:
+设置一个`mode: "development"`的配置将使 Webpack 创建一个 bundle:
 
-- is fast to build
-- is less optimized
-- includes comments
-- is not minified
-- produces helpful error messages
-- is easy to debug
+- 构建速度快
+- 优化程度较低
+- 包括注释
+- 文件没有被压缩到最小化
+- 产生有用的错误信息
+- 易于调试
 
-Here's an example of a `mode: "development"` bundle:
+下面是 `mode: "development"` 的例子:
 
 ![A development mode bundle](https://www.freecodecamp.org/news/content/images/2022/05/bundle-development-mode-webpack-codesweetly.png)
 
-Image of a development mode bundle compiled with webpack
+用 webpack 编译的开发模式 bundle 的截图
 
-To make a non-minified output file readable, ensure Webpack's [devtool](#devtool) field is not `eval`.
+为了使非最小化的输出文件可读，确保 Webpack 的[devtool](#devtool)字段不是`eval`。
 
-Whenever you set the `mode` to `development`, Webpack may default `devtool`'s value to `eval`. So, ensure to select a different `devtool`—like [source-map](https://webpack.js.org/configuration/devtool/#devtool) or disable it by setting its value to `"false"`—whenever you wish to make your output file readable.
+每当你把`mode`设置为`development`时，Webpack 可能会默认`devtool`的值为`eval`。因此，确保选择一个不同的`devtool`,可以选 [source-map](https://webpack.js.org/configuration/devtool/#devtool) 和 `"false"` 两个值。 如果你希望使你的输出文件可读，将 `devtool` 的值设置为 `false`。
 
-Suppose you choose to run Webpack in development mode. In that case, remember to change your configuration to production mode when you are ready to deploy your app.
+假设你选择在开发模式（development mode）下运行 Webpack。在这种情况下，当你准备部署你的应用程序时，请记得将你的配置改为生产模式（production mode）。
 
-Now, let's discuss configuring Webpack to build your output file in production mode.
+现在，让我们来讨论如何配置 Webpack 以在生产模式下构建你的输出文件（production mode）。
 
 #### Production mode
 
-A `mode: "production"` setting tells Webpack to build an output file for use in the production environment.
+`mode: "production"`设置告诉 Webpack 建立一个输出文件，以便在生产环境中使用。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // webpack.config.js
@@ -2503,30 +2502,30 @@ module.exports = {
 }
 ```
 
-Setting a `mode: "production"` configuration will make Webpack create a bundle that:
+设置一个`mode: "production"`配置将使 Webpack 创建 bundle:
 
-- is slow to build
-- is more optimized
-- excludes comments
-- is minified
-- does not produce detailed error messages
-- is difficult to debug
+- 构建速度慢
+- 更加优化
+- 不包括注释
+- 压缩文件最小化
+- 不产生详细的错误信息
+- 难以调试
 
-Here's an example of a `mode: "production"` bundle:
+ `mode: "production"`例子:
 
 ![A production mode bundle](https://www.freecodecamp.org/news/content/images/2022/05/bundle-production-mode-webpack-codesweetly.png)
 
-Image of a production mode bundle compiled with webpack
+用 webpack 编译的生产模式 bundle 的截图
 
-**Note:** Webpack [recommends](https://webpack.js.org/guides/production/#source-mapping) having source maps—like `source-map`—enabled in production.
+**注意:**  Webpack[推荐](https://webpack.js.org/guides/production/#source-mapping) 在生产中启用了类似于源码地图的`source-map`。
 
-Now, let's discuss configuring Webpack to build your output file without any optimization settings.
+现在，让我们讨论一下配置 Webpack 来构建你的输出文件，而不进行任何优化设置。
 
 #### None mode
 
-A `mode: "none"` setting tells Webpack to build an output file without optimizing it for development or production.
+`mode: "none"`设置告诉 Webpack 构建一个输出文件，而不对其进行优化。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // webpack.config.js
@@ -2543,17 +2542,17 @@ module.exports = {
 }
 ```
 
-Here's an example of a `mode: "none"` bundle:
+这是一个 `mode: "none"` bundle 的例子:
 
 ![A none mode bundle](https://www.freecodecamp.org/news/content/images/2022/05/bundle-none-mode-webpack-codesweetly.png)
 
-Image of a none mode bundle compiled with webpack
+用 webpack 编译的 `mode: "none"` 模式的截图。
 
 #### Important stuff to know about the `mode` option
 
-To make switching between development and production mode easy, you can store the `mode` configurations in the `"scripts"` field of your `package.json` file.
+为了方便在开发和生产模式之间的切换，你可以将 `mode` 配置存储在你的`package.json`文件的`"scripts"`字段中。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```json
 {
@@ -2567,29 +2566,29 @@ To make switching between development and production mode easy, you can store th
 }
 ```
 
-The snippet above initialized the scripts' `"dev"` property with Webpack's `development` mode command.
+上面的片段用 Webpack 的`development`模式命令初始化了脚本的`"dev"`属性。
 
-Likewise, we initialized the scripts' `"build"` property with Webpack's `production` mode command.
+同样地，我们用 Webpack 的 `build`属性运行 Webpack 的生产模式（`production`）。
 
-Therefore, suppose you execute `npm run dev` on your terminal. In that case, Webpack will execute the build step in development mode.
+因此，假设你在终端执行`npm run dev`。在这种情况下，Webpack 将在开发模式(development mode)下执行构建步骤。
 
 ## Overview
 
-This article discussed what a JavaScript module is and how it works. We also discussed how to use a popular module bundler (Webpack) to bundle a project's JavaScript file and its dependencies into a single output file.
+这篇文章讨论了什么是 JavaScript 模块以及它是如何工作的。我们还讨论了如何使用一个流行的模块 bundle（Webpack）将一个项目的 JavaScript 文件及其依赖关系打包到一个单一的输出文件。
 
-And there we have it. I hope you have found this article helpful.
+我们就讲到这里。我希望你觉得这篇文章对你有帮助。
 
-Thanks for reading!
+谢谢你的阅读!
 
-### **And here's a useful ReactJS resource:**
+### **一个有用的 ReactJS 资源**
 
-I wrote a book about React!
+我写了一本关于 React!
 
-- It's beginners friendly ✔
-- It has live code snippets ✔
-- It contains scalable projects ✔
-- It has plenty of easy-to-grasp examples ✔
+- 它对初学者友好 ✔
+- 它可以实际运行的代码片断 ✔
+- 它包含可扩展的项目 ✔
+- 它有大量容易掌握的例子 ✔
 
-The [React Explained Clearly](https://www.amazon.com/dp/B09KYGDQYW) book is all you need to understand ReactJS.
+[React Explained Clearly](https://www.amazon.com/dp/B09KYGDQYW)，有你想了解 ReactJS 所需要的全部内容。
 
 [![React Explained Clearly Book Now Available at Amazon](https://www.freecodecamp.org/news/content/images/2022/01/Twitter-React_Explained_Clearly-CodeSweetly-Oluwatobi_Sofela.jpg)](https://www.amazon.com/dp/B09KYGDQYW)

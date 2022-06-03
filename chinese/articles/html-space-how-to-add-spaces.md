@@ -1,74 +1,71 @@
 > -  原文地址：[HTML Space – How to Add Spaces in HTML](https://www.freecodecamp.org/news/html-space-how-to-add-spaces/)
 > -  原文作者：[Quincy Larson](https://www.freecodecamp.org/news/author/quincylarson/)
-> -  译者：
+> -  译者：Humilitas
 > -  校对者：
 
 ![HTML Space – How to Add Spaces in HTML](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/jeremy-thomas-E0AHdsENmDg-unsplash.jpg)
 
-Adding a space to your HTML can be deceptively difficult. And there are at least 5 of ways to go about doing this.
+在 HTML 中添加空格也许看起来挺困难的，不过我们至少有 5 种方法可用。
 
-This tutorial will show you several examples. It will also show you how to use fancy versions of space, too.
+这个教程展示了许多示例，还会介绍空格的一些花式用法。
 
-You can do all this in raw HTML, without the need for CSS. But be advised that CSS is the preferred way to add space to your HTML. And freeCodeCamp has a ton of tutorials on how to accomplish this using [the CSS box model](https://www.freecodecamp.org/news/css-box-model-explained-with-examples/).
+你可以不使用 CSS，仅用 HTML 就能实现这些效果，但是在实践中更推荐使用 CSS 来做。freeCodeCamp 有大量关于如何使用 [CSS 盒模型](https://www.freecodecamp.org/news/css-box-model-explained-with-examples/)实现这个效果的教程。
 
-## What is the ASCII character for a space?
+## 空格的 ASCII 码是什么？
 
-The ASCII character code for a space is 20. But this is just the standard way. There are several
+空格对应的 ASCII 码值为 20。使用 ASCII 码只是标准方式，还有许多其它方法。
 
-There are 5 types of spaces in HTML that you can use. To the naked eye, they look the same but they serve slightly different purposes.
+有 5 种方法可以向 HTML 中添加空格，它们看起来都一样，但是表示的意义略有不同。
 
-And there is also the Tab Character, which represents pressing the tab key on your keyboard. And the Carriage Return Character, which represents pressing the enter key on your keyboard.
+另外还有制表符（Tab），按下键盘上的 tab 键可以得到它；以及回车字符，按下键盘上的 enter 键可以得到。
 
-```
-+---------------------+-----------+
-|      Character      | HTML Code |
-+---------------------+-----------+
-| Non-breaking space  | &nbsp;    |
-| En space            | &ensp;    |
-| Em space            | &emsp;    |
-| Thin space          | &thinsp;  |
-| Standard space      | &#20;     |
-| New Line (Return)   | &#13;     |
-| Tab Character       | &#09;     |
-+---------------------+-----------+
-```
+|      字符            |  HTML 代码  |
+| --------------------|:-----------:|
+| 不换行空格            | `&nbsp; `   |
+| En 空格              | `&ensp;`    |
+| Em 空格              | `&emsp;`    |
+| 窄空格               | `&thinsp;`  |
+| 标准空格              | `&#20;`     |
+| 换行（Return)        | `&#13;`     |
+| 制表符（Tab）         | `&#09;`     |
 
-## How wide is a space character?
 
-There are four common widths for space characters:
+## 空格字符的宽度是多少？
 
-1.  Standard-width space. This is also called "non-line breaking space" because it will not cause a line break (AKA carriage return).
-2.  Em space. This is called "Em" because it's as wide as the letter M is in whichever typeface you're using. (If you've heard the term em-dash, this is a dash as wide as the letter M.)
-3.  En space. This is called "En" because it's as wide as the letter n is in your typeface.
-4.  And finally, there's "Thin space", which is the thinnest of all spaces.
+空格字符的宽度通常有 4 种情况：
 
-## What is the symbol for space in HTML?
+1. 标准宽度空格，又称"不换行空格"，因为它会禁用自动换行（或称回车）。（译注：这里的禁用自动换行指的是不在这个空格处换行，其它地方的换行行为不受影响。）
+2. Em 空格，之所以被称为"Em"，是因为它的宽度等于当前所用字体中字母 M 的宽度。（如果你听说过 em-dash 的话，你应该知道它是宽度与字母 M 相同的破折号。）
+3. En 空格，是宽度与字母 n 相同的空格。（译注：这里指的是小写字母 n；宽度为 em 的一半。）
+4. 最后，还有一种"窄空格"，它是宽度最小的一种空格。（译注：宽度通常为 em 的六分之一。实际上还有宽度比它更小的发宽空格（Hair Space），甚至还有宽度为 0 的零宽空格（Zero Width Space）。）
 
-The most commonly-used HTML entity is `&#20;`
+## HTML 中的空格用什么符号表示？
 
-You can try throwing this text to force it to render a space.
+表示空格的最常用的 HTML 实体是 `&#20;`。
 
-For example, let's say you want to put two spaces after a sentence, but something else in the website rendering engine is automatically removing one of the spaces. You may be able to type `&#20;&#20;` to add two spaces.
+可以用这个符号来强制渲染一个空格。
 
-## Is space a non-ASCII character?
+例如，你想要在一个句子后面留两个空格，但是有时候网页渲染引擎会自动合并连续的空格。可以通过输入 `&#20;&#20;` 来添加两个空格。
 
-No. Space is an ASCII character. It's ASCII value is 20, and you can type it like this: `&#20;`
+## 空格属于非 ASCII 字符吗？
 
-## How do I make white space in HTML?
+不，空格是 ASCII 字符，它对应的 ASCII 码值为 20，可以这样来输入：`&#20;`。
 
-You may want to use CSS to center your HTML elements instead of hard coding spaces.
+## 如何在 HTML 中添加空格？
 
-But if you just want a quick and dirty way to create whitespace, and push text around, you can use the same space character over and over like this:
+也许你会想用 CSS 来将元素居中，而不是使用硬编码的空格。
+
+不过如果你只是想用一种简单粗暴的方式在文本之间添加空格，可以重复使用空格字符：
 
 ```html
-[The text you want to add trailing whitespace to]&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[the text you want to add trailing whitespace to]
+[一些文本]&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[一些文本]
 ```
 
-## What character looks like a space but isn't?
+## 哪些字符看起来像空格但实际并不是？
 
-There are two characters that look like spaces but aren't:
+有两个字符看起来像空格，但实际上它们并不是：
 
-1.  The New Line character – also known as the "carriage return". The HTML code for newline character is: `&#13;`
-2.  The Tab Character, which is what you get when you press the tab button in a text field. The HTML code for Tab Character is: `&#09;`
+1. 换行符——也叫"回车"，对应的 HTML 代码为 `&#13;`。
+2. 制表符（Tab），在文本区域按下 tab 键可以得到一个制表符，对应的 HTML 代码为 `&#09;`。
 
-I hope this tutorial has been helpful. Go forth and make space. 🚀
+希望这篇教程对你有所帮助。赶快试试吧。🚀

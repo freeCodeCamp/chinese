@@ -11,17 +11,17 @@
 
 这篇文章将教你如何在浏览器中上传、裁剪和调整图像大小。
 
-我在[Codesandbox](https://codesandbox.io/s/serverless-leaf-vc9rls?file=/pages/index.js)中构建了这个项目。要快速开始的话，请下载[Codesandbox](https://codesandbox.io/s/serverless-leaf-vc9rls?file=/pages/index.js)并运行项目。
+我在 [Codesandbox](https://codesandbox.io/s/serverless-leaf-vc9rls?file=/pages/index.js) 中构建了这个项目。要快速开始的话，请下载 [Codesandbox](https://codesandbox.io/s/serverless-leaf-vc9rls?file=/pages/index.js) 并运行项目。
 
 ## 先决条件
 
-要学习本教程，你需要有一些 JavaScript 和 React.js 经验。但是Next.js 的经验不是必需的，有的话会更好。
+要跟上本教程，你应该有一些 JavaScript 和 React.js 经验。对 Next.js 的经验不是必须的，但有这个经验也不错。
 
 你还需要一个 [Cloudinary account](https://cloudinary.com/users/register/free) 帐户来存储媒体文件。
 
-[Cloudinary](https://cloudinary.com/documentation/image_video_and_file_upload#upload_options_overview) 提供了一个安全且完整的 API，用于从服务器、浏览器或移动应用程序快速有效地上传媒体文件。
+[Cloudinary](https://cloudinary.com/documentation/image_video_and_file_upload#upload_options_overview) 提供了一个安全且完整的 API，用于快速和有效地从服务器、浏览器或移动应用程序上传媒体文件。
 
-最后你需要 [Next.js](https://nextjs.org/) 。它是一个基于 React 的开源前端开发 Web 框架，允许服务端渲染和生成静态网站应用。
+最后你需要 [Next.js](https://nextjs.org/) 。它是一个基于 React 的开源前端开发 Web 框架，允许服务端渲染和生成静态网站和应用。
 
 ## 项目设置和安装
 
@@ -33,14 +33,14 @@
 npx create-next-app <project name>
 ```
 
-要安装依赖项的话，请使用以下命令：
+要安装这些依赖项，请使用这些命令：
 
 ```
 cd <project name> 
 npm install cloudinary-react
 ```
 
-在该应用程序创建并安装完依赖项后，你将看到一条带有导航到你的站点和本地运行说明的消息。
+在该应用程序创建并安装完依赖项后，你会看到一条信息，其中有关于导航到你的网站并在本地运行的说明。
 你可以使用以下命令执行此操作：
 
 ```
@@ -51,7 +51,7 @@ Next.js 将启动一个默认可访问的热重载开发环境 http://localhost:
 
 ## 如何构建用户界面
 
-对于我们的项目，我们希望能够在主页上的用户界面上传、裁剪和调整图像大小。我们将通过更新 `pages/index.js` 文件为组件来做到这一点：
+在我们的项目中，我们希望能够在主页的用户界面上上传、裁剪和调整图像大小。我们将通过更新 `pages/index.js` 文件为组件来做到这一点：
 
 ```
 import React, { useState } from "react";
@@ -87,12 +87,12 @@ export default IndexPage;
 
 ```
 
-不过，当前的用户界面看起来并不那么好。我们将在style.css文件中添加一些 CSS 样式，如下所示：
+不过，当前的用户界面看起来并不那么好。我们将在 style.css 文件中添加一些 CSS 样式，如下所示：
 
 ```
 @import url("https://fonts.googleapis.com/css?family=Acme|Lobster");
 
-/* This allow me to have the full width of the page without the initial padding/margin*/
+/* 这使我能够拥有整个页面的宽度，而没有最初的 padding/margin。 */
 body,
 html {
   margin: 0;
@@ -108,7 +108,7 @@ html {
   width: 50%;
 }
 
-/* This part contains all of the left side of the screen */
+/* 这一部分包含了屏幕左侧的所有内容 */
 /* ----------------------------------------- */
 #leftdiv {
   float: left;
@@ -135,7 +135,7 @@ html {
 
 /* ----------------------------------------- */
 
-/* This part contains all of the right side of the screen */
+/* 这一部分包含了屏幕右侧的所有内容 */
 /* ----------------------------------------- */
 #rightdiv {
   float: right;
@@ -155,7 +155,7 @@ html {
 
 /* ----------------------------------------- */
 
-/* Basic styling */
+/* 基础样式 */
 /* ----------------------------------------- */
 
 button {
@@ -243,13 +243,13 @@ input:focus {
 
 Cloudinary 的上传小部件让我们可以从多个来源上传媒体资源，包括 Dropbox、Facebook、Instagram 和直接从我们设备相机拍摄的图像。我们将在这个项目中使用这个上传小部件。
 
-创建一个免费的 cloudinary 帐户, 获取你的云账户名称和上传预设(upload_presets)。
+创建一个免费的 cloudinary 帐户, 获取你的云账户名称（cloud name）和上传预设(upload_presets)。
 
-`upload_presets` 允许我们集中定义一组资源上传选项，而不是在每次上传调用中去设置它们。Cloudinary 中的 `cloud name`是与你的 Cloudinary 帐户关联的唯一标识符。
+`upload_presets` 允许我们集中定义一组资源上传选项，而不是在每次上传调用中去提供它们。Cloudinary 中的 `cloud name`是与你的 Cloudinary 帐户关联的唯一标识符。
 
-首先，通过内容交付网络 (CDN)，我们将 Cloudinary 小部件的 JavaScript 文件添加到位于 `pages/index.js` 中的 `index.js`中。使用 `next/head` 中的文件去包裹所有 meta 标签，这使我们可以将数据添加到 React 中 HTML 文档的 Head 部分。(即, 使用 CDN 引入Cloudinary 小部件, 使用 `next/head` 导出的的文件包裹所有 meta 标签, 来将数据添加到 React 中 HTML 文档的 Head 部分 )
+首先， 我们通过内容交互网络（CDN）将 Cloudinary 小部件的 JavaScript 文件添加到位于 `pages/index.js` 中的 `index.js`中。并且使用 `next/head` 中的文件去包裹所有 meta 标签，这使我们可以将数据添加到 React 中 HTML 文档的 Head 部分。
 
-接下来，在 `pages/index.js` 文件中，我们从 next/head 导入 Head 组件并添加脚本文件。
+接下来，在 `pages/index.js` 文件中，我们从 `next/head` 导入 `Head` 组件并添加脚本文件。
 
 ```
 import React, { useState } from "react";
@@ -277,7 +277,7 @@ const IndexPage = () => {
 export default IndexPage;
 ```
 
-在 `pages/index.js` 文件中，我们在单击按钮触发的方法中创建小部件的实例和状态变量 `imagePublicId` 。
+在 `pages/index.js` 文件中，我们将在点击按钮时触发的方法中创建一个小部件的实例，以及一个状态变量 `imagePublicId` 。
 
 ```
 import React, { useState } from "react";
@@ -315,21 +315,21 @@ const IndexPage = () => {
 export default IndexPage;
 ```
 
-该小部件需要我们的 Cloudinary 的 `cloud_name` 和 `uploadPreset`。该 `createWidget()` 函数会创建一个新的上传小部件。成功上传图像后，我们将 `public_id` 资产分配给相关的状态变量。
+该小部件需要我们的 Cloudinary 的 `cloud_name` 和 `uploadPreset`。该 `createWidget()` 函数会创建一个新的上传小部件。成功上传图像后，我们将资产的 `public_id` 分配给相关的状态变量。
 
 要获得我们的 `cloudname` 和 `uploadPreset`, 我们需要按照以下步骤操作：
 
-你可以从 Cloudinary 的仪表板获取 `cloud_name`，如下所示。
+你可以从 Cloudinary 的仪表板获取 `cloudName`，如下所示。
 
 ![How to Upload, Crop, & Resize Image in the Browser in Next.js](https://cdn.hashnode.com/res/hashnode/image/upload/v1650106671153/wjBrA3_m0.png)
 
-你可以在 Cloudinary 设置页面的 `Upload` 选项卡中找到 `upload_preset`。通过单击仪表板页面右上角的齿轮图标来获取它。
+你可以在 Cloudinary 设置页面的 `Upload` 选项卡中找到 `upload_preset`。你可以通过点击仪表板页面右上角的齿轮图标来访问它。
 
 ![How to Upload, Crop, & Resize Image in the Browser in Next.js](https://cdn.hashnode.com/res/hashnode/image/upload/v1650106901391/73lFzuxLQ.png)
 
 ![How to Upload, Crop, & Resize Image in the Browser in Next.js](https://cdn.hashnode.com/res/hashnode/image/upload/v1650106814185/GqnIFsNYS.png)
 
-向下滚动到页面底部的上传预设部分，你将在其中看到你的 `upload_presets` 或创建一个的选项（如果你没有）。
+向下滚动到页面底部的上传预设部分，你将在其中看到你的 `upload_presets` ，或者如果你没有任何预设，可以选择创建一个。
 
 我们将继续在我们的图片上传按钮的 `onClick` 处理程序中调用 `openWidget` 函数，如下所示：
 
@@ -369,9 +369,9 @@ export default IndexPage;
 
 ![How to Upload, Crop, & Resize Image in the Browser in Next.js](https://cdn.hashnode.com/res/hashnode/image/upload/v1650111448538/pglrS-Exs.png)
 
-## 如何实现自定义转换函数
+## 如何实现自定义转换功能
 
-我们需要创建一个组件, 通过传递给它的 props 属性来处理转换。我们将在根文件夹中创建一个 components/ 目录。在该目录下，创建一个名为 image.js 的文件，其内容如下：
+我们需要创建一个组件, 根据传递给它的 props 属性来处理转换。我们将在根文件夹中创建一个 `components/` 目录。在该目录下，我们将创建一个名为 `image.js` 的文件，内容如下：
 
 ```
 import { CloudinaryContext, Transformation, Image } from "cloudinary-react";
@@ -391,7 +391,7 @@ export default TransformImage;
 
 在上面的代码片段中，我们导入了 `CloudinaryContext`，这是一个包装 Cloudinary 组件，用于管理其所有子 Cloudinary 组件之间的共享信息。渲染的 `TransformImage` 组件将图像转换的数据作为 props 属性。
 
-当我们将上传的图片导入 pages/index.js 时，上面的代码块会渲染上传的图片：
+当我们将其导入到 pages/index.js 时，上面的代码块会渲染上传的图片：
 
 ```
 //...
@@ -433,7 +433,7 @@ const IndexPage = () => {
 export default IndexPage;
 ```
 
-接下来，我们将添加调整大小选项单选按钮，以便我们可以使用以下代码片段选择不同的调整大小和裁剪选项：
+接下来，我们将添加 `Resize Options` 单选按钮，这样我们就可以通过以下代码片段选择不同的调整大小和裁剪选项：
 
 ```
 //...
@@ -500,7 +500,7 @@ export default IndexPage;
 在上面的代码片段中：
 
 -   添加了裁剪类型以及宽度和高度选项
--   添加了一个 onChange 属性来分别跟踪输入字段的高度和宽度的变化
+-   添加了一个 onChange 属性来分别跟踪高度和宽度输入框的变化
 
 我们的应用程序的最终输出应该类似于下面的内容：
 

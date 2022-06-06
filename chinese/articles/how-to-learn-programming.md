@@ -1,6 +1,6 @@
 > -  原文地址：[How to Learn Programming – The Guide I Wish I Had When I Started Learning to Code](https://www.freecodecamp.org/news/how-to-learn-programming/)
 > -  原文作者：[Jacob Stopak](https://www.freecodecamp.org/news/author/initialcommit/)
-> -  译者：
+> -  译者：Papaya Huang
 > -  校对者：
 
 ![How to Learn Programming – The Guide I Wish I Had When I Started Learning to Code](https://www.freecodecamp.org/news/content/images/size/w2000/2021/09/The-Programming-Guide-I-Wish-I-Had-When-I-Started-1.png)

@@ -1,6 +1,6 @@
 > -  原文地址：[React Interview Questions – Interview Prep with Answers and Examples](https://www.freecodecamp.org/news/react-interview-questions-and-answers/)
 > -  原文作者：[Joel Olawanle](https://www.freecodecamp.org/news/author/joel-olawanle/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![React Interview Questions – Interview Prep with Answers and Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/cover-template.jpg)

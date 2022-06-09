@@ -5,28 +5,28 @@
 
 ![How to Learn Programming – The Guide I Wish I Had When I Started Learning to Code](https://www.freecodecamp.org/news/content/images/size/w2000/2021/09/The-Programming-Guide-I-Wish-I-Had-When-I-Started-1.png)
 
-Just the thought of learning to code can be very intimidating. The word **code** is mysterious by definition. It implies a technical form of communication that computers, and not humans, are meant to understand.
+仅仅只是想到学习编程这个概念就让人畏惧，**代码**的定义非常神秘，暗示着一种与机器交流的技术形式，并不是让人去理解。
 
-One way many people start learning to code is by picking a popular programming language and jumping in head first with no direction. This could take the form of an online coding course, a tutorial project, or a random book purchase on a specific topic.
+一种大多数人采用的学习编程的方式事挑一个流行的编程语言，然后一头扎进去。具体的表现形式可以是参加一种线上的编程课程，教学项目，或者随机购买一个编程话题相关的书籍。
 
-Rarely do prospective developers start with a roadmap – a bird's eye view of the coding world that outlines a set of relevant programming concepts, languages, and tools that almost 100% of developers use every day.
+极少有潜在开发者会从一个路线图开始，路线图相当于编码世界的一张鸟瞰图，梳理了一些相关的编程概念、语言以及几乎100%的开发者每天都会使用的工具。
 
-In this article, I propose one such roadmap. I do this by outlining 14 steps – each one discussing an essential concept, language, or tool – that professional developers use to write code, collaborate, and create professional projects.
+在这篇文章中，我将提出一种路线图。我梳理出来了专业开发者用来编写代码、合作和创建专业项目的14个步骤（每一个步骤探讨了一个关键的概念、语言或者工具）。
 
-I meticulously chose these 14 steps based on my own personal journey learning to code, which spans almost 20 years.
+我精心挑选出来的这14个步骤是基于我长达20年的个人学习代码的经历。
 
-Part of the reason it took me so long to feel comfortable as a developer is that I would learn about specific topics without a broader context of the coding world.
+我花了这么长时间才使自己成为一个舒适的开发者，一部分原因是我曾经只专注于具体的话题，而忽略了整个编码世界这个视角。
 
-Each of the steps in this article discusses a "coding essential" – something that I believe **is critical to at least know that it exists** at the start of your coding journey.
+本文的每一个步骤所讨论的“编码关键”是你开始编程之旅中**起码知道它的存在**的概念。
 
-One final note before listing the steps in the roadmap: of course reading this article will not make you an expert programmer. It isn't meant to. The purpose of this article is to make you aware that each one of these topics exists, and hopefully give you a basic idea of how each one works so you can build on it intelligently going forward.
+我想在正式开始之前最后强调一点，你肯定不会因为这篇文章成为编程专家，这篇文章的本意也并非如此。这篇文章的目的是为了让你了解这些话题存在，以及希望你了解这些概念是如何运作的，给你继续前行打下基础。
 
-## 14 Step Roadmap for Beginner Developers
+## 给初级开发者的14步路线图
 
-1.  [Familiarize Yourself with Computer Architecture and Data Basics](#1-familiarize-yourself-with-computer-architecture-and-data-basics)
-2.  [Learn How Programming Languages Work](#2-learn-how-programming-languages-work)
-3.  [Understand How the Internet Works](#3-understand-how-the-internet-works)
-4.  [Practice Some Command-Line Basics](#4-practice-some-command-line-basics)
+1.  [让自己了解计算机结构和数据基础](#1-familiarize-yourself-with-computer-architecture-and-data-basics)
+2.  [学习编程语言如何运作](#2-learn-how-programming-languages-work)
+3.  [理解互联网是如何运作](#3-understand-how-the-internet-works)
+4.  [练习一些命令行基础](#4-practice-some-command-line-basics)
 5.  [Build Up Your Text Editor Skills with Vim](#5-build-up-your-text-editor-skills-with-vim)
 6.  [Take-up Some HTML](#6-take-up-some-html)
 7.  [Tackle Some CSS](#7-tackle-some-css)
@@ -38,113 +38,113 @@ One final note before listing the steps in the roadmap: of course reading this a
 13.  [Read About Web Frameworks and MVC](#13-read-about-web-frameworks-and-mvc)
 14.  [Play with Package Managers](#14-play-with-package-managers)
 
-Without further ado, let's start at the top!
+话不多说，让我们开始吧！
 
-## 1) Familiarize Yourself with Computer Architecture and Data Basics
+<h2 id="1-familiarize-yourself-with-computer-architecture-and-data-basics"> 1)让自己了解计算机结构和数据基础</h2>
 
-One of the wonderful things about modern programming languages is that they enable us to create fancy applications without worrying about the nitty-gritty details of the hardware behind the scenes (for the most part).
+现代编程语言之所有美妙的原因之一是它们帮助我们免去幕后繁琐的硬件细节，来创建精美的应用。（大部分情况是这样）
 
-This is called **abstraction** – the ability to work with higher-level tools (in this case programming languages) that simplify and narrow down the required scope of our understanding and skills.
+这被称为**抽象**——使用高级工具（这里指编程语言）的能力，可以简化和缩小我们所需理解和技能的范围。
 
-However, that doesn't mean it's useless to know the basics of the metal that your code is executing on. At the very least, being aware of a few tidbits will help you navigate workplace conversations about high CPU and memory usage.
+但这并不意味着了解这个你代码运行的机器一无是处。至少了解一些内容可以帮助你在工作场所和同事畅谈CPU的高使用率和内存使用。
 
-So, here is a bare minimum of computer architecture basics to get you started:
+以下是计算机基础的基本知识：
 
-Your computer's most important parts live on **microchips** (also known as **integrated circuits**).
+你的计算机最重要的部分位于**微芯片**（也称为**集成电路**）。
 
-Microchips rely on an electrical component called a **transistor** to function. Transistors are tiny electrical switches that are either off (0) or on (1) at any given time. A single microchip can contain millions or billions of tiny transistors embedded on it.
+微芯片依靠一个叫做**晶体管**的电子元件来发挥作用。晶体管是微小的电子开关，在给定时间内要么处于关（0）或者开（1）的状态。单个微芯片包含了上百万甚至术十亿的晶体管嵌入其中。
 
-Most modern computers have a microchip called the **Central Processing Unit (CPU)**. You can think of it as the computer’s brain. It handles most of the number crunching and logical tasks that the computer performs.
+大部分现代计算机有一个叫做**中央处理器（CPU）**的微芯片。你可以把这个当作计算机的大脑。它处理计算机执行的大部分数字运算和逻辑任务。
 
-Each CPU has something called an **instruction set**, which is a collection of binary (zeros and ones) commands that the CPU understands. Luckily, we don't really need to worry about these as software devs! That is the power of abstraction.
+每一个CPU有一个**指令集**，是CPU可以理解的二进制（0和1）指令的合集。幸运的是，作为软件开发人员，我们并不需要担心这些，这就是抽象的力量。
 
-If the CPU is the logical center of the brain, it is useful to have memory as well to store information temporarily or for the long term.
+如果说CPU是大脑的逻辑中心的话，这样就有必要拥有短期或者长期的存储信息的存储器。
 
-Computers have **Random Access Memory (RAM)** as "working memory" (or short-term memory) to store information that is actively being used by running programs.
+计算机拥有**随机存取存储器（RAM）**作为“工作存储器“(或者叫做短期存储器)来存储程序运行时使用的信息。
 
-RAM is made up of a collection of **memory addresses**, which can be used to store bits of data. In older languages like C, programmers do have access to working directly with memory addresses using a feature called **pointers**, but this is rare in more modern languages.
+RAM是由一组**内存地址**组成，可用于存储数据位。在像C语言这样的旧计算机语言中，程序员确实可以使用**指针**来直接处理内存地址，但是这在现代语言中很少见了。
 
-Finally, we'll touch on a component you're surely familiar with – the hard drive. In our analogy of the brain, this represents long-term memory. A hard drive is an internal or external device that stores data that should persist even after the computer is turned off.
+最后，我们将介绍一个你肯定熟悉的组件——硬盘驱动。在我们对大脑的类比中，硬盘相当于长期记忆。硬盘是一个存储数据的内部和外部设备，即便关机了，这些数据仍然存在。
 
-Before moving on to more details about programming languages, let's spend a second talking about data. But what exactly do we mean by the word **data**?
+在我们正式介绍程序语言细节之前，让我们花点时间了解一下数据，**数据**这个词到底代表了什么？
 
-At a high level, we think of things like text documents, images, videos, emails, files, and folders. These are all high-level data structures that we create and save on our computers every day.
+从更高的层次来看，我们会想到文本文件、图像、视频、电子邮件、文件和文件夹。这些都是我们每天在计算机上创建和存储的高级数据结构。
 
-But underneath the hood, a computer chip (like a CPU or RAM chip) has no idea what an "image" or a "video" is.
+但是在底层，计算机芯片（CPU或者RAM芯片）并不知道什么是“图片”或者“视频”。
 
-From a chip’s perspective, all of these structures are stored as long sequences of ones and zeros. These ones and zeros are called **bits**.
+从芯片的角度来看，这些数据结构被作为一长串0和1存储了起来，这些0和1被称为**位**。
 
-Bits are commonly stored in a set of eight at a time, known as a **byte**. A byte is simply a sequence of eight bits, such as `00000001`, `01100110`, or `00001111`. Representing information in this way is called a **binary representation**.
+位通常以一组八位的形式存储，称为一个 **字节**。 一个字节就是一个简单的八位序列，例如 `00000001`、 `01100110` 或 `00001111`。这样表示信息的方法被称为 **二进制表示法**。
 
-## 2) Learn How Programming Languages Work
+<h2 id="2-learn-how-programming-languages-work"> 2)学习编程语言如何运作</h2>
 
-In the previous section, we mentioned that most computers rely on a CPU, and a CPU can understand a specific set of instructions in the form of ones and zeros.
+在上一章节，我们提到了大部分计算机以来于CPU，CPU可以理解一串特定的0和1。
 
-Therefore, we could theoretically write code that tells the CPU what to do by stringing together long sequences of ones and zeros in a form the CPU understands. Instructions written in binary form like this are called **machine code**.
+因此，理论上我们可以编写一串由0和1组成的代码告诉CPU要做什么。以二进制形式编写的指令被称为**机器码**。
 
-Sounds horrible to work with, doesn't it? Well it probably is, but I wouldn't know since I mostly use higher-level programming languages like JavaScript, Python, and Java.
+这听上去相当可怕，但是我没有体验过，因为使用高级编程语言如：JavaScript、Python和Java。
 
-A **higher-level programming language** provides a set of human-readable keywords, statements, and syntax rules that are much simpler for people to learn, debug, and work with.
+**高级编程语言**提供一组人类可以读取的关键字、声明和语法规则，使得人们可以更加容易地学习、改bug和使用。
 
-Programming languages provide a means of bridging the gap between the way our human brains understand the world and the way computer brains (CPUs) understand the world.
+编程语言提供一座桥梁连接人类大脑和计算机大脑（CPU）。
 
-Ultimately, the code that we write needs to be translated into the binary instructions (machine code) that the CPU understands.
+最终，我们编写的代码会转换为CPU理解的二进制指令（机器码）。
 
-Depending on the language you choose, we say that your code is either **compiled** or **interpreted** into machine code capable of being executed by your CPU. Most programming languages include a program called a **compiler** or an **interpreter** which performs this translation step.
+根据你选择的语言，我们可以认为你的代码要么被**编译**了，要么被**解释**为可以被CPU执行的机器码。大多数编程语言都包含一个**编译器**或者**解释器**来执行这个翻译步骤。
 
-Just to give a few examples – JavaScript and Python are interpreted languages while Java is a compiled language. Whether a language is compiled or interpreted (or some combination of the two) has implications for developer convenience, error handling, performance, and other areas, but we won't get into those details here.
+举几个例子——JavaScript和Python是解释型语言，然而Java是编译型语言。一个语言是否为编译型或者解释型语言（或者两者结合）会对开发者的编写便利性、处理错误的方法和程序的性能造成影响。这里我们不会细讲。
 
-## 3) Understand How the Internet Works
+<h2 id="3-understand-how-the-internet-works"> 3)理解互联网是如何运作</h2>
 
-Whatever type of programming you aspire to do, you'll run into situations where it helps to know how computers interact with each other. This typically occurs over the Internet.
+不论你渴望开发什么类型的程序，你都会遇到计算机之间相互交流的场景，这正好发生在互联网。
 
-The Internet is nothing more than a global collection of connected computers. In other words, it is a global network. Each computer in the network agrees on a set of rules that enable them to talk to each other. To a computer, "talking" means transferring data.
+互联网仅仅是一个连接了全球计算机的集合。也就是说，一个全球性的网络。互联网内部的每一台计算机都遵循特定的规则，使得可以彼此间交流，对于计算机来说，“交流”就是交换数据。
 
-As we discussed in the previous section, all types of data – web pages, images, videos, emails, and so on – can all be represented as ones and zeros.
+如我们在之前章节介绍的那样，所有数据类型（网页、图像、视频、电子邮件等）都可以被0和1来表示。
 
-Therefore, you can think of the Internet as a very large set of computers that can transfer ones and zeros amongst themselves, in a way that preserves the meaning of that data. The Internet is nothing more than a digital conversation medium.
+因此，你可以把互联网当作一大组计算机集合，这些计算机之间相互传输0和1，并且保留这些数据信息。互联网就是一个数字对话媒介。
 
-If the Internet is just a big conversation arena, let’s define the conversation participants.
+如果互联网是一个巨大的对话场所，那么让我们来定义一下对话的参与者。
 
-First, an analogy: most human conversations require at least two participants. In most cases, one person initiates the conversation and the other person responds, assuming they are both present and available.
+首先，让我们引入一个类比：大部分人类的对话需要至少两个参与者。一个发起对话，一个回应对话，假设这两个人都在场并且有空。
 
-In Internet speak, the computer initiating the conversation is called the **client**. The computer responding or answering is called the **server**.
+而从互联网的角度来看，发起对话的计算机被称为**客户端**，回应或者应答对话的计算机被称为**服务器**。
 
-For example, let’s say you open a web browser and go to "www.google.com". In this scenario, your web browser is the client. By extension, you can also think of the computer you are working on as the client.
+假设你打开了浏览器，并且搜索了 "www.google.com"。 在这个场景内，你的浏览器就是客户端，广义上说，你可以把你正在使用的计算机当作客户端。
 
-In a more abstract sense, YOU are the client because you are the one initiating the conversation. By typing "www.google.com" into the search bar and clicking <ENTER>, your browser is requesting to start a conversation with one of Google’s computers.
+更抽象来说，**你**就是客户端，因为你开启了对话。是你在搜索框输入了 "www.google.com"，并点击了回车键，你的电脑才向某台谷歌的计算器发出对话请求。
 
-Google’s computer is called the server. It responds by sending the data required to display Google’s web page in your browser. And voilà! Google’s web page appears in front of your eyes. All Internet data transfers utilize this sort of client/server relationship.
+谷歌的计算机就被称为服务器。它通过发送请求数据，并且在你的浏览器显示谷歌的网页来回应。然后嗒哒！你眼前出现谷歌的网页。所有互联网数据传输都使用这种客户端/服务器关系。
 
-## 4) Practice Some Command-Line Basics
+<h2 id="4-practice-some-command-line-basic">练习命令行基础</h2>
 
-The **Command Line** can be intimidating at first glance. It is often featured in movies as a cryptic black screen with incomprehensible text, numbers, and symbols scrolling by. It is usually associated with an evil hacker or genius techie sidekick.
+乍一看，**命令行**可能让人生畏。命令行往往出现在电影的画面里，在黑色的屏幕上滚动着让人无法理解的文字、数字和符号，人们往往把它和邪恶的黑客或者天才技术伙伴联系到一起。
 
-The truth is that it doesn’t take a genius to use or understand the command line. In fact, it allows us to perform many of the same tasks that we are comfortable doing via a point-and-click mouse.
+但真相是不需要多么天才的头脑就能够理解并且使用命令行。实际上，命令行可以执行我们习惯用鼠标勾选点击的一些日常任务。
 
-The main difference is that it primarily accepts input via the keyboard, which can speed up inputs significantly once you get the hang of it.
+主要的区别在于，命令行主要通过键盘来输入，一旦你掌握了它，可以大大加快输入的速度。
 
-You can use the Command Line to browse through folders, list a folder’s contents, create new folders, copy and move files, delete files, execute programs, and much more. The window in which you can type commands on the Command Line is called a **terminal**.
+你可以使用命令行来浏览文件夹、列出文件夹内容、创建新的文件夹、复制和移动文件、删除文件、执行程序等等。输入命令行的窗口被称为**终端**。
 
-Let's walk through a short tutorial of basic navigation commands that will give you a feel for working on the command line.
+让我们来通过一个基本的导航命令行教程来了解如何使用命令行。
 
-Once you open your terminal, a typical first question is "_Where am I"?_ We can use the `pwd` command (which stands for "Print Working Directory") to figure that out. It outputs our current location in the file system which tells us which folder we are currently in.
+当你打开终端的时候，你首先会冒出一个问题 "_我在哪儿"?_ 我们可以使用 `pwd`命令行 (相当于 “打印正在工作的目录”)来解决这个问题。 这个命令行会打印出你当前所在文件夹位于整个文件系统的位置。
 
-Try it yourself:
+动起手来：
 
-### How to Use the Command Line
+### 如何使用命令行
 
-If you’re on a Mac, open the Terminal app, which is essentially a Unix Command Line terminal.
+如果你是Mac用户，打开终端应用，它本质上是一个Unix命令行终端。
 
-If you’re running an operating system without a GUI (Graphical User Interface), like Linux or Unix, you should be at the Command Line by default when you start the computer. If your flavor of Linux or Unix does have a GUI, you’ll need to open the terminal manually.
+如果你使用非GUI（图形用户界面）的操作系统，例如Linux或Unix，则在默认情况下，你启动计算机就是命令行。如果你的Linux或者Unix系统有GUI，你需要手动打开终端。
 
-At the prompt, type `pwd` and press <ENTER>. The Command Line will print out the path to the folder that you’re currently in.
+在提示符下，输入`pwd`并按下回车，命令行会打印出你当前所处的文件夹的路径。
 
-By default, the active folder when opening the Command Line is the logged-in user’s home directory. This is customizable in case you want the convenience of starting in a different location.
+默认情况下，打开命令行时激活的文件夹是登陆用户的主目录。如果你想从起来的位置开始，可以自定义。
 
-For convenience, the home directory can be referenced using the tilde `~` character. We will use this in a few examples going forward.
+方便起见，可以使用波浪号`~`字符来引用主目录。我们将在接下来的几个示例中使用它。
 
-Now that we know what folder we’re in, we can use the `ls` command to list the contents of the current directory. The `ls` command stands for "List".
+现在我们知道我们在哪儿了，就可以使用 `ls`命令来列出当前目录的内容。 `ls` 命令代表了“清单”。
 
 Type `ls` and press <ENTER>. The contents (files and subfolders) that reside in the current directory are printed to the screen.
 

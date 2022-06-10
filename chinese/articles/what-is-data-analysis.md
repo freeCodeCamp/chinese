@@ -1,6 +1,6 @@
 > -  原文地址：[What is Data Analysis?](https://www.freecodecamp.org/news/what-is-data-analysis/)
 > -  原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
-> -  译者：
+> -  译者：Celqaz
 > -  校对者：
 
 ![What is Data Analysis?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/luke-chesser-JKUTrJ4vK00-unsplash.jpg)

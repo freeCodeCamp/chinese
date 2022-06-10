@@ -5,21 +5,21 @@
 
 ![What is Data Analysis?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/luke-chesser-JKUTrJ4vK00-unsplash.jpg)
 
-Data are everywhere nowadays. And with each passing year, the amount of data we are producing will only continue to increase.
+如今，数据无处不在。随着时间流逝，我们产生的数据总量也与日俱增。
 
-There is a large amount of data available, but what do we do with all that data? How is it all used? And what does all that data mean?
+目前虽有大量的可用数据，但是我们应该怎么怎么处理这些数据？如何使用他们？这些数据又意味着什么？
 
-It’s not much use if we just collect and store data in a spreadsheet or database and don't look at it, explor it, or research it.
+如果我们只是在电子表格或数据库中收集和存储数据，而不去观察它、探索它、研究它，那么数据就没有意义。
 
-Data analysts use tools and processes to derive meaning from data. They are responsible for collecting, manipulating, investigating, analyzing, gathering insights, and gaining knowledge from it.
+数据分析师使用工具和流程去挖掘数据的意义。他们负责数据的收集、处理、调查、分析，得到洞察并获取新知。
 
-This is one of the reasons data analysts are very high in demand: they play an integral role in business and science.
+这也是对数据分析师存在大量需求的原因之一：他们在商业和科学中发挥着不可或缺的作用。
 
-In this article, I will first go over what data analysis means as a term and explain why it is so important.
+在这篇文章中，我会首先介绍数据分析作为一个术语的含义，并解释它为什么如此重要。
 
-I will also break down the data analysis process and list some of the necessary skills required for conducting data analysis.
+我也会拆解数据分析的过程，并列出进行数据分析所需的一些必要技能。
 
-Here is an overview of what we will cover:
+以下是我们将涉及内容的概览：
 
 1.  [What is data?](#data-intro)
 2.  [What is data analysis?](#data-analysis-intro)
@@ -40,40 +40,40 @@ Here is an overview of what we will cover:
     4.  [Knowledge of data visualization tools](#data-viz)
     5.  [Knowledge of Excel](#excel)
 
-## What Is Data? Meaning and Definition of Data
+## 什么是数据？数据的含义和定义
 
-Data refers to collections of facts and individual pieces of information.
+数据是指事实和碎片信息的集合。
 
-Data is vital for decision-making, planning, and even telling a story.
+数据对决策、计划甚至讲故事都至关重要。
 
-There are two broad and general types of data:
+有两种广泛而普遍的数据类型：
 
--   Qualitative data
--   Quantitative data
+-   定性数据
+-   定量数据
 
-**Qualitative data** is data expressed in non-numerical characters.
+**定性数据** 是指用非数字字符表示的数据。
 
-It is expressed as images, videos, text documents, or audio.
+它表现为图片、视频、文稿或音频。
 
-This type of data can’t be measured or counted.
+这一类型的数据不能被测量或计数。
 
-It is used to determine how people feel about something – it’s about people's feelings, motivations, opinions, perceptions and involves bias.
+它用于确定人们对于某事的感受——它关于人民的感受、动机、观点、看法，并包含偏见。
 
-It is descriptive and aims to answer questions such as ‘Why’, ‘How’, and ‘What’.
+它是描述性的，旨在回答诸如”为什么“、”如何“和”是什么“等问题。
 
-Qualitative data is gathered from observations, surveys, or user interviews.
+定性数据通过观察、调查和对受访者的访问收集。
 
-**Quantitative data** is expressed in numerical characters.
+**定性数据** 用数字字符表示。
 
-This type of data is countable, measurable, and comparable.
+这一类型的数据可计数、可测量、可比较。
 
-It is about amounts of numbers and involves things such as quantity and the average of numbers.
+它关于数字的数量，涉及诸如总量和平均数。
 
-It aims to answer questions such as ‘How much, ‘How many’, ‘How often’, ‘and 'How long’.
+它旨在回答诸如“多少”、“多频繁”、“多久”的问题。
 
-The act of collecting, analyzing, and interpreting quantitative data is known as performing statistical analysis.
+收集、分析、解释定量数据的行为，被称为统计分析。
 
-Statistical analysis helps uncover underlying patterns and trends in data.
+统计分析有助于发掘数据中的潜在模式和趋势。
 
 ## What Is Data Analysis? A Definition For Beginners
 

@@ -1,6 +1,6 @@
 > -  原文地址：[Higher Order Functions in JavaScript – Beginner's Guide](https://www.freecodecamp.org/news/higher-order-functions-in-javascript/)
 > -  原文作者：[Soham De Roy](https://www.freecodecamp.org/news/author/sohamderoy/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Higher Order Functions in JavaScript – Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/Blog-8---Freecodecamp-Banner.png)

@@ -658,7 +658,7 @@ console.log(bestClub);
 
 你也可以通过使用 **default export（默认导出）** 技术进行匿名导出。但究竟什么是默认导出？让我们来了解一下。
 
-### What Exactly Is a Default Export in ES Modules
+### 究竟什么是 ES 模块中的默认导出？
 
 **默认导出** 是开发人员用来匿名（无名）导出代码的一种技术。
 
@@ -702,7 +702,7 @@ export default const bestClub = "Your Club";
 
 现在我们来讨论如何导入一个默认导出（export default）。
 
-### How to Import a Default Export into an ES Module
+### 如何将默认输出 ES 模块导入
 
 有两种等效的方法来导入一个默认导出（export default）:
 
@@ -711,7 +711,7 @@ export default const bestClub = "Your Club";
 
 让我们来讨论这两种导入技术。
 
-#### How to use the `default as` syntax to import a default export
+#### 如何使用`default as`语法来导入一个默认导出
 
 导入默认出口的一种方法是使用`default as`语法，像这样:
 
@@ -746,7 +746,7 @@ console.log(bestClub);
 
 现在让我们看看导入默认导出的第二种方式。
 
-#### How to import a default export by specifying the imported code's name only
+#### 如何仅通过指定导入代码的名称来导入一个默认的导出
 
 另一种导入默认导出的方法是忽略大括号（`{...}`）、`default`关键字和`as`关键字。
 
@@ -806,11 +806,11 @@ console.log(bestClub);
 
 按照下面的步骤来学习如何使用聚合器文件(aggregator file)。
 
-### Step 1: Create a project directory
+### 步骤 1:   创建一个项目目录
 
 创建一个项目文件夹——本项目的 HTML 和模块文件将存放在这里。
 
-### Step 2: Create your code files
+### 步骤 2:   创建你的代码文件
 
 在你的项目文件夹中创建以下文件:
 
@@ -820,7 +820,7 @@ console.log(bestClub);
 4. `calculation.js`
 5. `bio.js`
 
-### Step 3: Add the modules to your HTML document
+### 步骤 3: 将模块添加到你的 HTML 文档中
 
 打开你的`index.html`文件并复制以下代码:
 
@@ -849,7 +849,7 @@ console.log(bestClub);
 1. 我们把这四个 JavaScript 文件添加到我们的 HTML 文档中。
 2. 我们使用`type="module"`属性将普通的 JavaScript 文件转换为 ES 模块文件。
 
-### Step 4: Export items from your `preference` module
+### 步骤 4:  从你的 `preference` 模块导出 item
 
 打开你的`preferences.js`模块，从里面导出一些项目，像这样:
 
@@ -863,7 +863,7 @@ const bestTime = "Now";
 export { bestClub, bestFruits };
 ```
 
-### Step 5: Export items from your `calculation` module
+### 步骤 5:  从你的 `calculation` 模块导出项目
 
 打开你的`calculation.js`模块，从里面导出一些项目，像这样:
 
@@ -885,7 +885,7 @@ function divide(x, y) {
 }
 ```
 
-### Step 6: Export items from your `bio` module
+### 步骤 6:  从你的 `bio` 模块导出 items
 
 打开你的`bio.js`模块，从里面导出一些项目，像这样:
 
@@ -901,7 +901,7 @@ const aboutMe = {
 export default aboutMe;
 ```
 
-### Step 7: Import the exported features
+### 步骤 7: 导入已导出的功能
 
 要把导出的项目导入你的顶层模块，你有两个选择:
 
@@ -910,7 +910,7 @@ export default aboutMe;
 
 让我们来看看这两个选项的区别。
 
-#### Import directly from the exporting modules to your top-level script
+#### 直接将已导出模块导入到你的顶层脚本中
 
 导入代码的一种方法是直接从导出的脚本中导入你的顶层模块。
 
@@ -934,13 +934,13 @@ console.log(news);
 
 上面的导入技术效果不错。然而，一个更干净的选择是使用一个聚合器文件。让我们来看看如何。
 
-#### Import from an aggregator file to your top-level module
+#### 从一个聚合器文件导入到你的顶层模块
 
 另一种引入代码的方法是将其从聚合器文件导入你的顶级模块。
 
 按照下面的步骤，看看你如何创建和使用一个聚合器文件。
 
-##### 1\. Create the aggregator file
+##### 1\. 创建聚合器文件
 
 你可以将该文件命名为`aggregator.js`或任何你喜欢的其他名称。
 
@@ -948,7 +948,7 @@ console.log(news);
 
 该项目汇总文件的一个亮点
 
-##### 2\. Add the aggregator script to your HTML file
+##### 2\. 将聚合器脚本添加到你的 HTML 文件中
 
 ```html
 <!DOCTYPE html>
@@ -1000,7 +1000,7 @@ console.log(news);
 
 现在让我们看看如何使用聚合器模块。
 
-##### 3\. Use the aggregator module to aggregate the submodules
+##### 3\. 使用聚合器模块来聚合子模块
 
 下面是如何使用聚合器模块来导入和重新导出你的项目里面的导出项目:
 
@@ -1040,7 +1040,7 @@ export { default as aboutMe } from "./bio.js";
 
 现在让我们看看如何从一个聚合器文件中导入重新输出的功能。
 
-##### 4\. Import your exports from the aggregator file
+##### 4\.  导入聚合器文件的导出
 
 一旦你把所有的子模块聚合到聚合器模块中，去你的顶层脚本（本例中为`index.js`），导入导出的项目。
 
@@ -1093,7 +1093,7 @@ const module = await import("./module/relative-path.js");
 
 为了准确了解`import()`在实践中的作用，让我们按照下面的步骤来更新我们之前的项目。
 
-### 1\. Update your HTML file
+### 1\. 更新你的 HTML 文件
 
 打开你的`index.html`文件，做如下操作:
 
@@ -1121,7 +1121,7 @@ const module = await import("./module/relative-path.js");
 </html>
 ```
 
-### 2\. Update your `index.js` module
+### 2\. 更新你的`index.js`模块
 
 打开你的`index.js`文件并复制以下代码:
 
@@ -1214,7 +1214,7 @@ Module bundlers 允许浏览器访问您在 `require()` 或 `import` 语句中�
 
 一个 module bundler 的打包工作是这样的:
 
-### First, it creates an output script file
+### 首先，它创建一个输出脚本文件
 
 module bundler 将首先在你的项目的`dist`文件夹中创建一个 "output script file"。
 
@@ -1225,7 +1225,7 @@ module bundler 将首先在你的项目的`dist`文件夹中创建一个 "output
 - **entry point** 是一个文件，bundler 用它来开始建立一个[依赖图](https://webpack.js.org/concepts/dependency-graph/)，它需要将项目的所有模块合并成一个与浏览器兼容的模块。
 - 入口点（entry point）是构建步骤中最关键的文件，它（直接或间接）链接到项目中的其他所有模块。
 
-### Next, the module bundler compiles your code
+### 接下来，模块 bundler 会编译你的代码
 
 其次，bundler 将检查构建步骤的入口点是否出现了一些`require()`或`import`语句。
 
@@ -1239,7 +1239,7 @@ module bundler 将首先在你的项目的`dist`文件夹中创建一个 "output
 
 现在让我们来讨论 module bundler 做的最后一件事。
 
-### Finally, it saves the compiled code
+### 最后，它保存了编译后的代码
 
 模块捆绑器的最后一步是将编译后的代码保存到 [step 1](#first-it-creates-an-output-script-file) 的输出脚本文件（output）中。
 
@@ -1253,11 +1253,11 @@ module bundler 将首先在你的项目的`dist`文件夹中创建一个 "output
 
 按照下面的步骤来学习如何使用 Webpack 将你的项目的 JavaScript 文件和它的依赖关系打包到一个的输出脚本文件（output script file）。
 
-### Step 1: Create a project directory
+### 步骤 1: 创建一个项目目录
 
 创建一个项目文件夹——这个项目的文件将存放在这里。
 
-### Step 2: Go to the project's root folder
+### 步骤 2: 进入项目的根文件夹
 
 使用命令行，进入到你项目的根目录，像这样:
 
@@ -1269,7 +1269,7 @@ cd path/to/project/root-directory
 
 换句话说，你在第 1 步中创建的文件夹是你的根目录，因为它将容纳有关这个项目的一切。
 
-### Step 3: Create a `package.json` file
+### 步骤 3: 创建一个`package.json`文件
 
 在你项目的根目录下创建一个[package.json](https://www.codesweetly.com/package-json-file-explained)文件，像这样:
 
@@ -1288,7 +1288,7 @@ yarn init -y
 - `-y`标志指示 NPM（或 Yarn）[创建一个默认的`package.json`文件](https://www.codesweetly.com/package-json-file-explained/#how-to-create-a-default-packagejson-file)。
 - 你必须在你的系统上安装 Node 和 NPM，这样上面的初始化代码才能发挥作用。你可以从[Node.js](https://nodejs.org/en/)网站上安装最新的 LTS 版本来获得这两者。
 
-### Step 4: Install the Webpack module bundler
+### 步骤 4: 安装 Webpack 模块 bundler
 
 将`webpack`和`webpack-cli`作为[开发依赖](https://www.codesweetly.com/package-manager-explained/#npm-installation-command)库安装在你的项目中:
 
@@ -1304,7 +1304,7 @@ yarn add webpack webpack-cli --dev
 
 **注意:** 安装 `webpack-cli`包后，可以在命令行上运行 webpack。
 
-### Step 5: Create your project's directories
+### 步骤 5: 创建你的项目的目录
 
 创建一个 "source"文件夹（`./src`）和一个 "distribution" 代码文件夹（`./dist`）。
 
@@ -1314,7 +1314,7 @@ mkdir src dist
 
 **注意:** 虽然 `src`和 `dist` 是源码和发行码文件夹的典型名称，但你可以自由选择任何你喜欢的其他名称。
 
-### Step 6: Create your source code files
+### 步骤 6: 创建你的源代码文件
 
 在新创建的源代码目录(即 src)中创建以下文件:
 
@@ -1326,7 +1326,7 @@ mkdir src dist
 - Webpack 推荐将[源代码](https://www.codesweetly.com/web-tech-glossary#source-code)保存在`./src`目录下，将[发布代码](https://www.codesweetly.com/web-tech-glossary#distribution-code)保存在`./dist`目录下。
 - 除了 `require()`、`import` 和 `export` 语句外，Webpack 不会改变任何其他代码。
 
-### Step 7: Add the JavaScript file to your HTML document
+### 步骤 7:  将 JavaScript 文件添加到你的 HTML 文档中
 
 打开你的`index.html`文件，复制下面的代码:
 
@@ -1354,7 +1354,7 @@ mkdir src dist
 
 **注意：** 当使用 bundler 时，你不需要在你的项目的`<script>`元素中添加`type="module"`属性。相反，捆绑器将自动把所有包含`import`和`export`语句的脚本视为模块（modules）。
 
-### Step 8: Install some dependencies
+### 步骤 8: 安装一些依赖项
 
 使用你的文本编辑器，[在本地安装你项目的依赖项](https://www.codesweetly.com/package-manager-explained/#local-package-installation)。
 
@@ -1377,7 +1377,7 @@ yarn add randomcolor
 
 **注意:**  使用`yarn add package-name --dev`命令来获取你的应用程序只在本地开发和测试中需要的依赖。
 
-### Step 9: Import your dependencies
+### 步骤 9: 导入你的依赖性
 
 用`require()`方法或`import`语句将你的依赖关系导入你的 JavaScript 源代码。
 
@@ -1403,7 +1403,7 @@ const randomColor = require("randomcolor");
 - `require()`函数是在脚本中导入模块的 CommonJS 语法。
 - 另一种导入项目依赖项的方法是用 HTML 文档的`<script>`标签隐含地加载它们。然而，这种技术会污染全局范围。因此，使用`import`或`require()`语法会更好。
 
-### Step 10: Use the dependencies
+### 步骤 10: 使用依赖性
 
 使用你在第 9 步中导入的依赖项来做你想做的事。
 
@@ -1433,7 +1433,7 @@ buttonElement.addEventListener("click", changeBodyColor);
 
 现在让我们把我们的入口点（`index.js`文件）和`randomColor`依赖关系打包在一个 JavaScript 文件中。
 
-### Step 11: Start the build step
+### 步骤 11: 开始构建步骤
 
 使用你的终端，通过运行 webpack 来创建你的 bundle，像这样:
 
@@ -1453,7 +1453,7 @@ npx webpack
 
 我们的下一步是告诉浏览器使用新创建的 bundle。让我们在下面做这件事。
 
-### Step 12: Refer browsers to the newly created bundle
+### 步骤 12: 浏览器引用新创建的 bundle 中
 
 所以，现在你已经创建了一个与浏览器兼容的 bundle 文件，你需要告诉浏览器使用它而不是`index.js`源代码文件。
 
@@ -1480,7 +1480,7 @@ npx webpack
 
 现在让我们看看我们的应用程序！
 
-### Step 13: Check your app in the browser
+### 步骤 13: 在浏览器中检查你的应用程序
 
 在浏览器中打开你的 HTML 文件，确认浏览器可以成功读取你的应用程序和它的依赖关系。
 
@@ -1494,7 +1494,7 @@ npx webpack
 
 按照下面的步骤来学习如何使用`HtmlWebpackPlugin`来自动生成和管理你项目的 HTML 文件。
 
-### Step 1: Install `HtmlWebpackPlugin`
+### 步骤 1: 安装 `HtmlWebpackPlugin`
 
 像这样安装 `HtmlWebpackPlugin`:
 
@@ -1508,7 +1508,7 @@ npm install html-webpack-plugin --save-dev
 yarn add html-webpack-plugin --dev
 ```
 
-### Step 2: Create a configuration file
+### 步骤 2: 创建一个配置文件
 
 在你项目的[根文件夹](https://www.codesweetly.com/web-tech-glossary#root-directory)中创建一个 Webpack 配置文件，像这样:
 
@@ -1516,7 +1516,7 @@ yarn add html-webpack-plugin --dev
 touch webpack.config.js
 ```
 
-### Step 3: Add the plugin to webpack's configuration
+### 步骤 3: 将该插件添加到 webpack 的配置中
 
 打开你的`webpack.config.js`文件，添加`HtmlWebpackPlugin`插件，像这样:
 
@@ -1532,7 +1532,7 @@ module.exports = {
 
 **注意：** 我们将在本指南中讨论如何使用配置文件[稍后](#what-exactly-is-webpack-s-configuration-file)。
 
-### Step 4: Run the build step
+### 步骤 4: 运行构建步骤
 
 当你安装并添加`HtmlWebpackPlug`到你的项目中，重新编译你的模块，像这样:
 
@@ -1574,7 +1574,7 @@ npx webpack
 
 要使`HtmlWebpackPlugin`使用你的 HTML 源文件作为模板，请执行以下操作:
 
-### 1\. Update your HTML file
+### 1\. 更新你的 HTML 文件
 
 打开你的`index.html` _源代码_ 文件，删除你[之前使用的](#step-12-refer-browsers-to-the newly-created-bundle)的`<script>`标签，以引用 Webpack 的分发 bundle 。
 
@@ -1601,7 +1601,7 @@ npx webpack
 
 现在，让我们来配置该插件，以使用你的源代码作为模板。
 
-### 2\.  Update your configuration file
+### 2\.  更新你的配置文件
 
 打开你的项目的`webpack.config.js`文件，更新`HtmlWebpackPlugin`的设置，像这样:
 
@@ -1644,7 +1644,7 @@ module.exports = {
 
 假设在你的输出(`dist`)目录中已经有一个`index.html`文件。在这种情况下，由`HtmlWebpackPlugin`生成的新文件将取代现有的 HTML 文件。
 
-### 3\. Check your app in the browser
+### 3\. 在浏览器中检查你的应用程序
 
 在浏览器中打开新生成的`dist/index.html`文件，确认浏览器可以成功读取你的应用程序及其依赖关系。
 
@@ -1668,7 +1668,7 @@ module.exports = {
 
 例如，做如下工作:
 
-### 1\. Add `watch` to the `scripts` fields
+### 1\. 添加 `watch` 到 `scripts` 字段
 
 打开你的项目的`package.json`文件，在其`scripts`字段中添加一个`watch`属性，像这样:
 
@@ -1685,7 +1685,7 @@ module.exports = {
 
 上面的片段在我们的 `package.json` 文件的 `"scripts"` 字段中添加了一个 `"watch"` 属性，其值为 `"webpack --progress -- watch"`。
 
-### 2\. Run the `watch` script
+### 2\. 运行 `watch` 脚本
 
 使用你的终端，像这样调用你的`package.json`的`watch`脚本:
 
@@ -1701,7 +1701,7 @@ yarn run watch
 
 一旦你调用了`watch`脚本，NPM 将执行`"webpack --progress -- watch"`。
 
-### What is `"webpack --progress --watch"`
+### 什么是 `"webpack --progress --watch"`
 
 `"webpack --progress --watch"`命令让 NPM 执行以下:
 
@@ -1759,7 +1759,7 @@ buttonElement.addEventListener("click", changeBodyColor);
 
 下面的步骤将告诉你如何配置和使用该包。
 
-### Step 1: Install webpack's web server
+### 步骤 1: 安装 webpack's web server
 
 使用你的终端，像这样安装`webpack-dev-server`包:
 
@@ -1780,7 +1780,7 @@ yarn add webpack-dev-server --dev
 1. 在 windows 下使用`ctrl + c`或在 mac 下使用`cmd + c`来停止`watch`的执行（如果该脚本仍在运行）。
 2. 删除你[先前添加的](#how-to-rerun-webpack-automatically)在`package.json`文件中的`watch`属性。
 
-### Step 2: Specify your files' location
+### 步骤 2: 指定你的文件的位置
 
 通过在你[先前创建的]配置文件中添加`devServer`选项，告诉 Web 服务器应该从哪里获得 Webpack[生成的文件](#step-2-create-a-configuration-file):
 
@@ -1826,7 +1826,7 @@ module.exports = {
 
 现在让我们看看如何运行开发服务器。
 
-### Step 3: Run the dev server
+### 步骤 3: 运行 dev server
 
 有两种方法来运行开发服务器。
 
@@ -1835,7 +1835,7 @@ module.exports = {
 
 下面我们来讨论这两种方式。
 
-#### How to run Webpack's dev server by using NPX on your CLI
+#### 如何通过在 CLI 上使用 NPX 来运行 Webpack 的开发服务器
 
 使用终端，进入到你项目的根目录——`webpack.config.js`文件所在的位置，然后使用 NPX 来运行开发服务器，像这样:
 
@@ -1865,7 +1865,7 @@ npx webpack serve --mode development --open
 
 现在让我们来讨论运行开发服务器的第二种方式。
 
-#### How to run Webpack's dev server by using `package.json`'s scripts field
+#### 如何通过使用`package.json`的 scripts 字段来运行 Webpack 的开发服务器
 
 另一种运行开发服务器的方法是在你的`package.json`的`scripts`字段中添加`"webpack serve --mode development --open"`命令，像这:
 
@@ -1909,7 +1909,7 @@ Webpack 的 **配置文件** 是一个 JavaScript 文件，允许你修改或扩
 
 **注意:** 如果你的项目已经有一个配置文件，你可以跳过下面的步骤 1 和 2。
 
-### Step 1: Go to the project's root folder
+### 步骤 1: 进入项目的根文件夹
 
 像这样进入到你项目的根目录:
 
@@ -1917,7 +1917,7 @@ Webpack 的 **配置文件** 是一个 JavaScript 文件，允许你修改或扩
 cd path/to/project/root-directory
 ```
 
-### Step 2: Create your project's configuration file
+### 步骤 2: 创建你的项目的配置文件
 
 在你项目的根目录下创建一个配置文件，像这样:
 
@@ -1925,11 +1925,11 @@ cd path/to/project/root-directory
 touch webpack.config.js
 ```
 
-### Step 3: Specify your configurations
+### 步骤 3: 指定你的配置
 
 打开你的项目的`webpack.config.js`文件，指定你想改变（或添加）的 [配置选项](https://webpack.js.org/configuration/#options)。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // webpack.config.js
@@ -1950,7 +1950,7 @@ module.exports = {
 
 现在让我们来运行构建步骤。
 
-### Step 4: Run the module bundler
+### 步骤 4: 运行模块 bundler
 
 使用你的终端，像这样通过运行 Webpack 来创建你的 bundle:
 
@@ -2030,7 +2030,7 @@ module.exports = {
 
 `context`字段将 Webpack 指向包含你的条目文件的目录。
 
-**Here's an example:**
+**这是一个例子:**
 
 ```js
 // webpack.config.js
@@ -2102,7 +2102,7 @@ module.exports = {
 
 现在让我们讨论三种常用的替换技术。
 
-##### Substitutions technique 1: Entry name
+##### 替代技术 1: Entry name
 
 The **"entry name"** 替换命名技术使 Webpack 通过[连接 concatenating](https://www.codesweetly.com/web-tech-glossary#concatenation)一个 bundle 的入口点（entry point）的名称与一个给定的字符串来创建每个 bundle 的名称。
 
@@ -2132,7 +2132,7 @@ module.exports = {
 
 现在我们来讨论第二个替换技术。
 
-##### Substitutions technique 2: Internal chunk id
+##### 替换技术 2: Internal chunk id
 
 **"internal chunk id"** 替换命名技术使 Webpack 通过将一个 bundle 的入口点的 ID 与一个给定的字符串相连接来创建每个捆绑包的名称。
 
@@ -2160,7 +2160,7 @@ module.exports = {
 
 现在我们来讨论第三个替换技术。
 
-##### Substitutions technique 3: Content hash
+##### 替换技术 3: Content hash
 
 **"content hash"** 替换命名技术使 Webpack 通过将生成的内容的哈希值与一个给定的字符串相连接来创建每个 bundle 的名称。
 
@@ -2243,7 +2243,7 @@ module.exports = {
 
 下面是一些使用`module`选项的常见方法。
 
-#### How to use Webpack's `module` option to load CSS stylesheets
+#### 如何使用 Webpack 的`module`选项来加载 CSS 样式表
 
 下面是如何使用 Webpack 的模块选项来加载 CSS 样式表:
 
@@ -2300,7 +2300,7 @@ yarn add style-loader css-loader --dev
 
 现在让我们看看如何使用`module`选项来加载图片。
 
-#### How to use Webpack's `module` option to load images
+#### 如何使用 Webpack 的`module`选项来加载图片
 
 下面是你如何使用 Webpack 的`module`选项来加载图片:
 
@@ -2344,7 +2344,7 @@ import anyImage from "./your-image.png";
 
 现在我们来看看如何使用`module`选项来加载字体。
 
-#### How to use Webpack's `module` option to load fonts
+#### 如何使用 Webpack 的`module`选项来加载字体
 
 下面是你如何使用 Webpack 的`module`选项来加载字体的方法:
 
@@ -2548,7 +2548,7 @@ module.exports = {
 
 用 webpack 编译的 `mode: "none"` 模式的截图。
 
-#### Important stuff to know about the `mode` option
+#### 关于`mode`选项，需要知道的重要内容
 
 为了方便在开发和生产模式之间的切换，你可以将 `mode` 配置存储在你的`package.json`文件的`"scripts"`字段中。
 

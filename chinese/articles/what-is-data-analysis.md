@@ -3,7 +3,7 @@
 > -  译者：Celqaz
 > -  校对者：
 
-![What is Data Analysis?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/luke-chesser-JKUTrJ4vK00-unsplash.jpg)
+![什么是数据分析?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/luke-chesser-JKUTrJ4vK00-unsplash.jpg)
 
 如今，数据无处不在。随着时间流逝，我们产生的数据总量也与日俱增。
 
@@ -21,8 +21,8 @@
 
 以下是我们将涉及内容的概览：
 
-1.  [What is data?](#data-intro)
-2.  [What is data analysis?](#data-analysis-intro)
+1.  [什么是数据?](#data-intro)
+2.  [什么是数据分析?](#data-analysis-intro)
 3.  [Why is data analysis important?](#importance)
     1.  [Effective customer targeting](#targeting)
     2.  [Measure success and performance](#performance)
@@ -75,17 +75,17 @@
 
 统计分析有助于发掘数据中的潜在模式和趋势。
 
-## What Is Data Analysis? A Definition For Beginners
+## 什么是数据分析？给初学者的定义
 
-Data analysis is the act of turning raw, messy data into useful insights by cleaning the data up, transforming it, manipulating it, and inspecting it.
+数据分析是通过对数据的清理、转换、操纵和检查，以将原始、混乱的数据转化为有用认知的行为。
 
-The insights gathered from the data are then presented visually in the form of charts, graphs, or dashboards.
+从数据中获得的认知，会以图表、图形或仪表盘的形式，直观地展现出来。
 
-The insights discovered can help aid the company’s or organization’s growth. Decision-makers will be able to come to an actionable conclusion and make the right business decisions.
+被提取出的认知可以帮助企业或组织成长。决策者将能够得出可行的结论，并做出正确的商业决策。
 
-Extracting knowledge from raw data will help the company/organization take steps towards achieving greater customer reach, improving performance, and increasing profit.
+从原始数据中获取知识，将帮助企业或组织推行触达更广泛客户群体的举措，在提升业绩的同时，增加利润。
 
-At its core, data analysis is about identifying and predicting trends and figuring out patterns, correlations, and relationships in the available data, and finding solutions to complex problems.
+数据分析的核心是识别和预测趋势，从现有数据中找出模式、相关性和联系，并为复杂问题找到解决方案。
 
 ## Why Is Data Analysis Important?
 

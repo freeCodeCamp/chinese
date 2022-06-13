@@ -1,77 +1,77 @@
 > -  原文地址：[React Interview Questions – Interview Prep with Answers and Examples](https://www.freecodecamp.org/news/react-interview-questions-and-answers/)
 > -  原文作者：[Joel Olawanle](https://www.freecodecamp.org/news/author/joel-olawanle/)
-> -  译者：Papaya HUANG
+> -  译者：
 > -  校对者：
 
 ![React Interview Questions – Interview Prep with Answers and Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/cover-template.jpg)
 
-React是一个用于创建用户界面的JavaScript库。它被用于超过3万个实时网站，并拥有超过7万个GitHub星。
+React is a JavaScript library for creating user interfaces. It's used in over 30,000 live websites and has over 70,000 GitHub stars.
 
-根据[2021年Stack Overflow开发者调查报告](https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-web-frameworks)的数据显示：React已经超越jQuery成为最流行的 Web框架，占据了大约40.14%的市场份额。除此之外，React也是最受欢迎的库，每四个开发人员中就有一个在使用它。
+According to the [2021 Stack Overflow developer survey](https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-web-frameworks), React has surpassed jQuery as the most popular web framework, and holds approximately 40.14% of the market share. React was also the most sought-after, with one out of every four developers using it.
 
-包括 LinkedIn、Twitter和AirBnB在内的8千多个行业领导者使用React。
+Over 8,000 industry leaders, including LinkedIn, Twitter, and AirBnB, use React.
 
-React开发者在美国的平均年薪是12万美元，许多企业和公司都使用React，所有它们在不断寻找新的React人才。
+A React developer's average annual salary in the United States is $120,000. Many businesses and companies use React, which forces them to constantly look for new talent.
 
-在这篇文章中，我们将介绍一些React基础知识，看一看相关面试问题及其正确答案，以帮助你在React面试中取得成功。
+In this article, we will go over some React basics and then look at some interview questions and their proper answers to help you succeed in any React interview you may have.
 
-## React是什么？
+## What is React?
 
-React是一个用于创建用户界面的开源前端JavaScript库。其声明性的、高效的、灵活的特点，以及坚持基于组件的方法，使得我们可以使用它创建可复用的UI组件。
+React is an open-source front-end JavaScript library for creating user interfaces. It is declarative, efficient, and flexible, and it adheres to the component-based approach, which allows us to create reusable UI components.
 
-开发人员主要使用React来创建单页应用程序，该库只专注于[MVC](https://zh.m.wikipedia.org/zh-hans/MVC)的视图层。它的速度也非常快。
+Developer primarily use React to create Single Page Applications and the library focuses solely on the view layer of MVC. It is also extremely fast.
 
-## React的特点
+## Features of React
 
-React的许多特性使其与众不同，这里有几个亮点：
+React has many features that set it apart, but here are a few highlights:
 
--   React采用了虚拟DOM，而不是真实/浏览器DOM。
--   React采用单向数据绑定。
--   React即可用于开发web应用程序，也可以使用[React Native](https://reactnative.dev/)来开发移动端应用，所以可以使用React创建跨平台应用。
+-   React employs the Virtual DOM as opposed to a real/browser DOM.
+-   React uses unidirectional one-way data binding.
+-   It is used to develop web applications as well as mobile applications using [React Native](https://reactnative.dev/), which allows us to build cross-platform applications.
 
-## 如何使用React开发一个新项目
+## How to Start a New Project in React
 
-我们可以通过初始化一个项目并安装所有依赖项来从头创建一个React应用。 但最简单的办法是通过以下命令——[create-react-app](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app)来创建：
+We can create a React app from scratch by initalizing a project and installing all dependencies. But the easiest way is by using [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) via the command below:
 
 ```bash
 npx create-react-app my-app
 ```
 
-**注意：** my-app是我们创建的应用的名称，你可以根据自己的喜好修改。
+**Note:** my-app is the name of the application we are creating, but you can change it to any name of your choice.
 
-更多相关信息可以查阅[这篇文章](https://www.freecodecamp.org/news/get-started-with-react-for-beginners/)。
+You can read more on how to [get started with React in this article](https://www.freecodecamp.org/news/get-started-with-react-for-beginners/).
 
-## DOM代表什么？
+## What Does DOM Stand For?
 
-术语“DOM”代表了文档对象模型（**D**ocument **O**bject **M**odel），指的是将web应用的整个用户界面表示为一个树状数据结构。
+The term "DOM" stands for **D**ocument **O**bject **M**odel and refers to the representation of the entire user interface of a web application as a tree data structure.
 
-### DOM的种类
+### Types of DOM
 
-DOM的种类有两种：虚拟DOM和真实DOM。
+We have two types of DOM which are the Virual DOM and the Real DOM.
 
-## React的优缺点
+## Advantages and Disadvantages of React
 
-以下是React的优缺点:
+Here are some of the advantages and disadvantages of React:
 
-### React的优点
+### Advantages of React
 
-1.  对于JavaScript 开发人员来说，React的学习曲线更短，并且由于社区活跃，有大量的手册、教程和培训材料。
-2.  React易使用搜索引擎搜索。
-3.  React降低了创建丰富的 UI 和自定义组件的难度。
-4.  React渲染速度快。
-5.  使用 JSX 可以让我们编写更简单、更吸引人且更易于理解的代码。
+1.  It has a shorter learning curve for JavaScript developers and a large number of manuals, tutorials, and training materials are available because of its active community.
+2.  React is search engine friendly
+3.  It makes it easier to create rich UI and custom components.
+4.  React has quick rendering
+5.  The use of JSX allows us to write code that is simpler, more appealing, and easier to understand.
 
-### React的缺点
+### Disadvantages of React
 
-1.  React只是一个前端库，所以需要搭配其他语言和库来构建一个完整的应用程序。
-2.  JSX对于没有经验的程序员来说可能很难上手。
-3.  由于开发周期短，现有文档很快就会过时。
+1.  Because React is a frontend library, other languages and libraries are required to build a complete application.
+2.  It can be difficult for inexperienced programmers to understand because it employs JSX.
+3.  Existing documentation is quickly out of date due to the short development cycles.
 
-## 什么是JSX？
+## What is JSX?
 
-JavaScript XML被缩写为JSX。JSX使得在React创建HTML更加容易，标记可读性更强，更容易被理解。
+JavaScript XML is abbreviated as JSX. JSX enables and simplifies the creation of HTML in React, resulting in more readable and understandable markup.
 
-例如：
+For example:
 
 ```javascript
 const App = () => {
@@ -83,27 +83,27 @@ const App = () => {
 }
 ```
 
-想了解更多关于React中的JSX的信息，[可以阅读这篇文章](https://www.freecodecamp.org/news/jsx-in-react-introduction/)。
+You can read more about [JSX in React in this article](https://www.freecodecamp.org/news/jsx-in-react-introduction/).
 
-## 为什么浏览器不能读取JSX？
+## Why can't Browsers Read JSX?
 
-JSX并不是有效的JavaScript代码，浏览器没有内置读取和理解JSX的功能。我们需要将JSX编译成浏览器可以理解的JavaScript代码。所以我们使用[Babel](https://babeljs.io/)，一个JavaScript的编译器/转译器来实现这个功能。
+JSX is not a valid JavaScript code, and there is no built-in implementation that allows the browser to read and understand it. We need to transpile the code from JSX into valid JavaScript code that the browser can understand, and we use [Babel](https://babeljs.io/), a JavaScript compiler/transpiler, to accomplish this.
 
-注意： [create-react-app](https://github.com/facebook/create-react-app)的内部使用Babel进行JSX到JavaScript的转换，但你也可以使用Webpack设置自己的babel配置。
+Note:  [create-react-app](https://github.com/facebook/create-react-app) uses Babel internally for the JSX to JavaScript conversion, but you can also set up your own babel configuration using Webpack.
 
-想了解更多React中的JSX的信息，[可以阅读这篇文章](https://www.freecodecamp.org/news/jsx-in-react-introduction/)。
+You can read more about [JSX in React in this article](https://www.freecodecamp.org/news/jsx-in-react-introduction/).
 
-## 组件是什么？
+## What are Components?
 
-组件是一个独立的、可复用的代码块，它将用户界面分成更小的部分，而不是在单个文件中构建整个UI。
+A component is a self-contained, reusable code block that divides the user interface into smaller pieces rather than building the entire UI in a single file.
 
-React 中有两种组件：函数式组件和class组件。
+There are two kinds of components in React: functional and class components.
 
-### 什么是class组件？
+### What is a Class Component?
 
-class组件是返回JSX的ES6类，必须从React继承。因为在React的早期版本（16.8）中不能在函数组件内使用状态，所以函数组件只用于渲染UI。
+Class components are ES6 classes that return JSX and necessitate the use of React extensions. Because it was not possible to use state inside functional components in earlier versions of React (16.8), functional components were only used for rendering UI.
 
-例如：
+Example:
 
 ```javascript
 import React, { Component } from 'react'
@@ -118,15 +118,15 @@ export default class App extends Component {
 }
 ```
 
-你可以阅读[这篇文章](https://www.freecodecamp.org/news/react-components-jsx-props-for-beginners/)了解更多React组件和组件类型。
+Read more about React [components and the types of components](https://www.freecodecamp.org/news/react-components-jsx-props-for-beginners/) in this article.
 
-### 什么是函数组件？
+### What is a Functional Component?
 
-一个返回React元素的JavaScript/ES6函数被称为函数组件（JSX）。
+A JavaScript/ES6 function that returns a React element is referred to as a functional component (JSX).
 
-自从引入React Hooks以来，我们已经能够在函数式组件中使用状态，因为语法更简洁，很多人都采用这个方法。
+Since the introduction of React Hooks, we have been able to use states in functional components, which has led to many people adopting them due to their cleaner syntax.
 
-例如：
+Example:
 
 ```javascript
 import React from 'react'
@@ -140,33 +140,33 @@ const App = () => {
 export default App;
 ```
 
-你可以阅读[这篇文章](https://www.freecodecamp.org/news/react-components-jsx-props-for-beginners/)了解更多React组件和组件类型。
+Read more about React [components and the types of components](https://www.freecodecamp.org/news/react-components-jsx-props-for-beginners/) in this article.
 
-### 函数组件和class组件之间的区别
+### Difference between Functional and Class components
 
-<table style="width: 100%;border-spacing: 0;border: 1px solid #c1c7cd;word-break: break-word;"><tbody><tr><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 0;border-bottom-width: 0;border-right-width: 0;border-left-width: 0;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4"><strong> &nbsp;函数组件 &nbsp; &nbsp; </strong></span><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></div></td><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 0;border-bottom-width: 0;border-right-width: 0;border-left-width: 1px;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4"><strong>&nbsp;class组件 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong></span></div></td></tr><tr><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 0;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">函数式组件是一个JavaScript/ES6函数，它接受一个参数、props并返回JSX。</span></div></td><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 1px;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">要创建一个一个class组件，必须从React中继承。创建一个组件和一个返回React元素的渲染函数。</span></div></td></tr><tr><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 0;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">函数组件中没有渲染方法</span></div></td><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 1px;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">必须使用render()方法返回JSX</span></div></td></tr><tr><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 0;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">函数组件从上至下运行，一旦返回就无法保持活动状态。</span></div></td><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 1px;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">class组件被实例化，各种生命周期方法根据类组件的阶段保持活跃运行并且被调用。</span></div></td></tr><tr><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 0;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">它们也被称为无状态组件，因为它们只接受数据并以某种形式显示，它们主要负责UI渲染。</span></div></td><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 1px;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">它们也被称为有状态组件，因为它们实现了逻辑和状态。</span></div></td></tr><tr><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 0;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">不能在函数组件中使用React生命周期方法。</span></div></td><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 1px;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">可以在class组件中使用React生命周期方法。</span></div></td></tr><tr><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 0;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">Hooks如</span><span class="inline-code author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4"><span style="font-family: monospace; background-color: #f7f9fa; color: #1b2733; border: 1px solid rgba(208,212,217,0.5); margin: 0 0 0 -1px;">useState()</span></span><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">被采用以使得函数组件有状态。</span></div></td><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 1px;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">在class组件中要使用另外的语法来实现hook。</span></div></td></tr><tr><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 0;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">不使用构造函数（constructor）。</span></div></td><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 1px;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">用构造函数（constructor）来存储状态&nbsp;</span></div></td></tr></tbody></table>
+<table style="width: 100%;border-spacing: 0;border: 1px solid #c1c7cd;word-break: break-word;"><tbody><tr><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 0;border-bottom-width: 0;border-right-width: 0;border-left-width: 0;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4"><strong> &nbsp;Functional Components &nbsp; &nbsp; </strong></span><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></div></td><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 0;border-bottom-width: 0;border-right-width: 0;border-left-width: 1px;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4"><strong>&nbsp;Class Components &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong></span></div></td></tr><tr><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 0;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">A functional component is a JavaScript/ES6 function that takes an argument, props, and returns JSX.</span></div></td><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 1px;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">You must extend from React in order to use a class component. Create a component and a render function that returns a React element.</span></div></td></tr><tr><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 0;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">There is no render method used in functional components.</span></div></td><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 1px;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">It must have the render() method returning JSX</span></div></td></tr><tr><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 0;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">Functional components run from top to bottom and cannot be kept alive once the function is returned.</span></div></td><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 1px;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">The class component is instantiated, and various life cycle methods are kept alive and are run and invoked depending on the phase of the class component.</span></div></td></tr><tr><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 0;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">They are also known as stateless components because they only accept data and display it in some form, and they are primarily responsible for UI rendering.</span></div></td><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 1px;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">They are also referred to as Stateful components because they implement logic and state.</span></div></td></tr><tr><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 0;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">React lifecycle methods cannot be used in functional components.</span></div></td><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 1px;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">React lifecycle methods can be used inside class components.</span></div></td></tr><tr><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 0;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">Hooks like </span><span class="inline-code author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4"><span style="font-family: monospace; background-color: #f7f9fa; color: #1b2733; border: 1px solid rgba(208,212,217,0.5); margin: 0 0 0 -1px;">useState()</span></span><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4"> were created to be used in functional components to make them Stateful.</span></div></td><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 1px;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">It requires different syntax inside a class component to implement hooks.</span></div></td></tr><tr><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 0;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">Constructors are not used.</span></div></td><td style="border-color: #c1c7cd;border-style: solid;border-top-width: 1px;border-bottom-width: 0;border-right-width: 0;border-left-width: 1px;min-width: 50px;min-height: 20px;padding: 5px 8px;word-break: normal;vertical-align: top;"><div dir="auto" style="" class="ace-line gutter-author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4 ace-ltr"><span class=" author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz82zpihz77zcerkden8iz78zz86zz75zz66zz71z0z85zz87zz69zqrz72zz85z0z77zz81z4">Constructor are used as it needs to store state.&nbsp;</span></div></td></tr></tbody></table>
 
-## 如何在React中使用CSS
+## How to Use CSS in React
 
-使用CSS设置React应用程序样式的方法有3种：
+There are 3 ways to style a react application with CSS:
 
--   内联样式
--   外部样式
--   JS中的CSS
+-   Inline Styles
+-   External Styling
+-   CSS in JS
 
-更多信息，可以阅读[这篇关于设置React样式的文章](https://www.freecodecamp.org/news/how-to-style-react-apps-with-css/)。
+Read more on [how to style a React application in this article](https://www.freecodecamp.org/news/how-to-style-react-apps-with-css/).
 
-## React中的render()的用途是什么？
+## What is the Use of render() in React?
 
-在class组件中使用`Render()`，来返回在组件中显示的HTML。 它被用作读取props和state并将JSX代码返回到应用的根组件。
+`Render()` is used in the class component to return the HTML that will be displayed in the component. It is used to read props and state and return our JSX code to our app's root component.
 
-## 什么是Props？
+## What are Props?
 
-Props也被称作属性。它们将数据从一个组件传递到另一个组件（从父组件到子组件）。它们通常被用来呈现动态数据。
+Props are also referred to as properties. They are used to transfer data from one component to the next (parent component to child component). They are typically used to render dynamically generated data.
 
-注意：子组件永远不能将props发送到父组件，因为此流程是单向的（父到子）。
+Note: A child component can never send props to a parent component since this flow is unidirectional (parent to child).
 
-例如：
+Example:
 
 ```javascript
 function App({name, hobby}) {
@@ -181,15 +181,15 @@ function App({name, hobby}) {
 export default App;
 ```
 
-向更多信息，可以阅读[这篇讲解React Props是如何运作的文章](https://www.freecodecamp.org/news/how-to-use-props-in-react/)。
+Read more about [how props works in React here](https://www.freecodecamp.org/news/how-to-use-props-in-react/).
 
-## React中的State是什么？
+## What is State in React?
 
-State是一个React的内置对象，用于在组件中创建和管理数据。它与props的不同之处在于它用于存储数据而不是传递数据。
+State is a built-in React Object that is used to create and manage data within our components. It differs from props in that it is used to store data rather than pass data.
 
-State是可变的（数据可以更改）并且可以通过`this.state()`访问。
+State is mutable (data can change) and accessible through `this.state()`.
 
-例如：
+Example:
 
 ```javascript
 class App extends React.Component {
@@ -210,13 +210,13 @@ class App extends React.Component {
 }
 ```
 
-## 如何更新一个React组件的State
+## How to Update the State of a Component in React
 
-需要知道一个重要的信息是，当我们直接更新state时，它不会重新渲染组件——这意味着我们看不到更新。
+It is important to know that when we update a state directly it won’t re-render the component – meaning we don’t get to see the update.
 
-如果需要重新渲染，我们要使用 `setState()`方法，它会更新组件的state对象并重新渲染组件。
+If we want it to re-render, then we have to use the `setState()` method which updates the component’s state object and re-reders the component.
 
-例如：
+Example:
 
 ```javascript
 class App extends React.Component {
@@ -243,35 +243,35 @@ class App extends React.Component {
 }
 ```
 
-更多信息可以参考[这里](https://www.freecodecamp.org/news/react-js-for-beginners-props-state-explained/)。
+You can learn more [here](https://www.freecodecamp.org/news/react-js-for-beginners-props-state-explained/).
 
-## 如何区分State和Props
+## How to Differentiate Between State and Props
 
-State和props是具有不同功能的JavaScript对象。
+State and props are JavaScript objects with distinct functions.
 
-props用于将数据从父组件传输到子组件，而state是对本地数据的存储，仅对当前组件可用，不能与其他组件共享。
+Props are used to transfer data from the parent component to the child component, whereas state is a local data storage that is only available to the component and cannot be shared with other components.
 
-## React中的事件是什么？
+## What is an Event in React?
 
-在React中，事件是一个可以由用户行为或系统生成的事件触发的动作。鼠标点击、网页加载、按键、窗口大小调整、滚动和其他交互都是事件。
+In React, an event is an action that can be triggered by a user action or a system generated event. Mouse clicks, web page loading, key press, window resizes, scrolls, and other interactions are examples of events.
 
-例子：
+Example:
 
 ```javascript
-// class组件
+// For class component
 <button type="button" onClick={this.changeName} >Change Name</button>
 
-// 函数组件
+// For function component
 <button type="button" onClick={changeName} >Change Name</button>
 ```
 
-## 如何在React中处理事件
+## How to Handle Events in React
 
-React中的事件处理方式与DOM元素类似。但值得注意的是对事件的命名，在React中事件是用小驼峰式（camelCase）而不是纯小写。
+Events in React are handled similarly to DOM elements. One difference we must consider is the naming of our events, which are named in camelCase rather than lowercase.
 
-例子：
+Example:
 
-### class组件
+### Class Component
 
 ```javascript
 class App extends Component {
@@ -292,7 +292,7 @@ class App extends Component {
 }
 ```
 
-### 函数组件
+### Function Component
 
 ```javascript
 const App = () => {
@@ -308,9 +308,9 @@ const App = () => {
 export default App;
 ```
 
-## 如何给事件处理程序传递参数
+## How to Pass Parameters to an Event Handler
 
-在函数组件中， 我们可以这样做：
+In functional components, we can do this:
 
 ```javascript
 const App = () => {
@@ -326,7 +326,7 @@ const App = () => {
 export default App;
 ```
 
-在class组件中，我们可以这样做：
+And in class components we can do this:
 
 ```javascript
 class App extends React.Component {
@@ -344,27 +344,27 @@ class App extends React.Component {
 export default App;
 ```
 
-## 什么是Redux？
+## What is Redux?
 
-Redux是一个流行的开源JavaScript库，用于集中管理应用程序的状态。它通常与React或其他视图库一起使用。
+Redux is a popular open-source JavaScript library for managing and centralizing application state. It is commonly used with React or any other view-library.
 
-想了解更多[redux信息可以阅读这篇文章](https://www.freecodecamp.org/news/redux-tutorial-for-beginners/#:~:text=Redux%20is%20a%20popular%20open,you%20how%20to%20use%20Redux.)。
+Learn more about [redux here](https://www.freecodecamp.org/news/redux-tutorial-for-beginners/#:~:text=Redux%20is%20a%20popular%20open,you%20how%20to%20use%20Redux.).
 
-## 什么是React Hooks（钩子）？
+## What are React Hooks?
 
-React Hooks在16.8版中被加入，使我们能够在不编写class组件的情况下，使用state和其他React功能。
+React hooks were added in v16.8 to allow us to use state and other React features without having to write a class.
 
-它们不在class组件中运行，而是辅助函数组件和React状态和生命周期特性相勾连。
+They do not operate within classes, but rather assist us in hooking into React state and lifecycle features from function components.
 
-### 我们从什么时候开始在React中使用hooks？
+### When Did We Begin to Use Hooks in React?
 
-React团队在2018年10月下旬的React Conf(React年度大会）期间首次向全世界介绍了React Hooks，然后在 2019 年 2 月上旬 React v16.8.0中开始使用hooks。
+The React team first introduced React Hooks to the world in late October 2018, during React Conf, and then in early February 2019, with React v16. 8.0.
 
-## 解释useState() 
+## Explain the useState() Hook
 
-useState Hook是一个可以在函数组件中使用状态变量的存储。你可以把初始状态传给这个函数，它将返回一个包含当前状态值（不一定是初始状态）的变量和另一个更新这个值的函数。
+The useState Hook is a store that enables the use of state variables in functional components. You can pass the initial state to this function, and it will return a variable containing the current state value (not necessarily the initial state) and another function to update this value.
 
-例子：
+Example:
 
 ```javascript
 import React, { useState } from 'react';
@@ -380,15 +380,15 @@ const App = () => {
 }
 ```
 
-## 解释useEffect()
+## Explain the useEffect() Hook
 
-useEffect Hook允许你在组件中执行副作用，例如数据获取、直接更新DOM、使用setTimeout()之类的计时器等等。
+The useEffect Hook allows you to perform side effects in your components like data fetching, direct DOM updates, timers like setTimeout(), and much more.
 
-这个hook接受两个参数：回调函数和依赖项，它们允许您控制何时执行副作用。
+This hook accepts two arguments: the callback and the dependencies, which allow you to control when the side effect is executed.
 
-注意：第二个参数是可选的。
+Note: The second argument is optional.
 
-例子：
+Example:
 
 ```Javascript
 import React, {useState, useEffect} from 'react';
@@ -413,29 +413,29 @@ const App = () => {
 export default App;
 ```
 
-## useMemo() hook的用途是什么？
+## What's the Use of the useMemo() Hook?
 
- `useMemo()` hook在函数组件中使用来记忆昂贵的函数，以便它们仅在设定的输入更改时调用，而不是每次渲染都调用。
+The `useMemo()` hook is used in functional components to memoize expensive functions so that they are only called when a set input changes rather than every render.
 
-例子：
+Example:
 
 ```javascript
 const result = useMemo(() => expensivesunction(input), [input]);
 ```
 
-它类似于useCallback hook，用于优化React函数组件的渲染行为。 useMemo用于记忆昂贵的函数，以便不必在每次渲染时调用它们。
+This is similar to the useCallback hook, which is used to optimize the rendering behavior of your React function components. useMemo is used to memoize expensive functions so that they do not have to be called on every render.
 
-## useRef hook是什么？
+## What Is the useRefs Hook?
 
-`useRef()`hook，也被称为References hook，用于存储在更新时不需要重新渲染的可变值。也被用来存储特定React元素或组件的引用，当我们需要测量DOM或直接向组件添加方法时能派上用场。
+The `useRefs()` hook, also known as the References hook, is used to store mutable values that do not require re-rendering when they are updated. It is also used to store a reference to a specific React element or component, which is useful when we need DOM measurements or to directly add methods to the components.
 
-useRefs的使用场景：
+When we need to do the following, we use useRefs:
 
--   调整焦点，在文本和媒体播放之间进行选择。
--   使用第三方DOM库。
--   启动命令式动画。
+-   Adjust the focus, and choose between text and media playback.
+-   Work with third-party DOM libraries.
+-   Initiate imperative animations
 
-例子：
+Example:
 
 ```javascript
 import React, {useEffect, useRef} from 'react';
@@ -457,30 +457,30 @@ const App = () => {
 export default App;
 ```
 
-## 什么是自定义hook？
+## What are Custom Hooks?
 
-自定义hook式你自己编写的JavaScript函数，来在不同的组件之间共享某种逻辑，以前的React组件并不支持这个功能。
+Custom Hooks are a JavaScript function that you write to allow you to share logic across multiple components, which was previously impossible with React components.
 
-如果你对它是如何运作的感兴趣，可以参考这篇文章——[分步骤指导你构建自己的自定义hook](https://www.freecodecamp.org/news/how-to-create-react-hooks/)。
+If you're interested in learning how this works, here is a [step by step guide to help you build your own Custom React Hook](https://www.freecodecamp.org/news/how-to-create-react-hooks/).
 
-## React的context（上下文）是什么？
+## What is Context in React?
 
-上下文的目的是为React组件树共享 "全局 "数据，允许数据向下传递，并在不使用props的情况下，让React应用中任何需要该数据的组件中使用（消费）。它使得组件之间分享数据（状态）更容易。
+Context is intended to share "global" data for a tree of React components by allowing data to be passed down and used (consumed) in whatever component we require in our React app without the use of props. It allows us to share data (state) more easily across our components.
 
-你可以在这篇[React上下文指南](https://www.freecodecamp.org/news/react-context-for-beginners/)中获取更多信息。
+Read more about [React Context in this guide](https://www.freecodecamp.org/news/react-context-for-beginners/).
 
-## 什么是React Router？
+## What is React Router?
 
-React Router是React应用程序中使用的标准库，用于处理路由并在各种组件的视图之间导航。
+React router is a standard library used in React applications to handle routing and allow navigation between views of various components.
 
-将此库安装到你的React项目中就像在终端中输入以下命令一样简单：
+Installing this library into your React project is as simple as typing the following command into your terminal:
 
 ```bash
 npm install – -save react-router-dom
 ```
 
-## 总结
+## Conclusion
 
-在这个教程中，我们回顾了一些React面试问题，以帮助你准备面试。FreeCodeCamp的所有工作人员都祝愿你在面试中取得好成绩。
+In this tutorial, we went over some React interview questions to help you prepare for your interviews. All of us at FreeCodeCamp wish you the best of luck and success in your interview.
 
-与其同时对各种各样的课程浅尝则止，不如找一个教程并且完成它，这样你将收获得更多，并且掌握React，在面试环节披荆斩棘。如果有兴趣的话，可以尝试freeCodeCamp的[2022年免费React课程](https://www.freecodecamp.org/news/free-react-course-2022/)或者[学习React - 初学者完全课程](https://www.freecodecamp.org/news/learn-react-course/)。 
+Instead of attempting to take several courses at once, find a helpful tutorial and complete it if you want to learn more and master React so you can perform well in practical interview sessions. Check out freeCodeCamp's [Free React Course for 2022](https://www.freecodecamp.org/news/free-react-course-2022/) or [Learn React - Full Course for Beginners](https://www.freecodecamp.org/news/learn-react-course/).

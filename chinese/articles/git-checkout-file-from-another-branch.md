@@ -1,7 +1,7 @@
-> -  原文地址：[Git Checkout – How to Checkout a File from Another Branch](https://www.freecodecamp.org/news/git-checkout-file-from-another-branch/)
-> -  原文作者：[Tim Mouskhelichvili](https://www.freecodecamp.org/news/author/tim-mouskhelichvili/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Git Checkout – How to Checkout a File from Another Branch](https://www.freecodecamp.org/news/git-checkout-file-from-another-branch/)
+> - 原文作者：[Tim Mouskhelichvili](https://www.freecodecamp.org/news/author/tim-mouskhelichvili/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Git Checkout – How to Checkout a File from Another Branch](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/cover.png)
 
@@ -53,8 +53,8 @@ git checkout feature/B -- utils.js
 
 When using the checkout command, you can also get:
 
--   A folder from another branch.
--   Multiple files by specifying each one of them.
+- A folder from another branch.
+- Multiple files by specifying each one of them.
 
 Also, note that you can get a file/folder from the stash.
 

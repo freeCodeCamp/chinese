@@ -13,7 +13,7 @@
 
 让我们开始吧 😎.
 
-## Git Checkout Use Case Example
+## Git Checkout 用例
 
 你正在处理一个名为`feature/A`的分支，其中包含一个名为`utils.js`的文件。
 
@@ -23,7 +23,7 @@
 
 下面是这个任务的三种可行的解决方案。
 
-### Solution 1: Use the `git checkout` command
+### 解决方案 1: 使用 `git checkout` 命令
 
 `git checkout`命令提供了一个简单的方法来从另一个分支获取文件或文件夹。
 
@@ -58,7 +58,7 @@ git checkout feature/B -- utils.js
 
 另外，请注意，你可以从 `stash` 获得一个文件/文件夹。
 
-### Solution 2: Use the `git restore` command
+### 解决方案 2: 使用 `git restore` 命令
 
 另一个选择是使用`git switch`命令和`git restore`命令。
 
@@ -86,7 +86,7 @@ git restore --source feature/B -- utils.js
 
 3\. 提交并推送更改。
 
-### Solution 3: Use the `git show` command
+### 解决方案 3: 使用 `git show` 命令
 
 最后，我们可以使用`git show`命令。
 

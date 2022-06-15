@@ -27,10 +27,10 @@
     1.  [精准定位客户](#targeting)
     2.  [衡量成功和表现](#performance)
     3.  [解决问题](#problem-solving)
-4.  [An overview of the data analysis process](#overview)
-    1.  [Step 1: recognising and identifying the questions that need answering](#step-1)
-    2.  [Step 2: collecting raw data](#step-2)
-    3.  [Step 3: cleaning the data](#step-3)
+4.  [数据分析流程概览](#overview)
+    1.  [步骤一：识别并明确需要解答的问题](#step-1)
+    2.  [步骤二：收集原始数据](#step-2)
+    3.  [步骤三：清洗数据](#step-3)
     4.  [Step 4: analyzing the data](#step-4)
     5.  [Step 5: sharing the results](#step-5)
 5.  [What skills are required for data analysis?](#skills)
@@ -143,86 +143,86 @@
 
 数据分析将助力业务潜力发挥，满足不同的目标：如提升客户留存率、开发新客户或提供更顺畅、愉悦的客户体验。
 
-## An Overview Of The Data Analysis Process
+## 数据分析流程概览
 
-### Step 1: Recognising and Identifying The Questions That Need Answering
+### 步骤一：识别并明确需要解答的问题
 
-The first step in the data analysis process is setting a clear objective.
+确立一个明确目标是数据分析过程的第一步。
 
-Before setting out to gather a large amount of data, it is important to think of why you are actually performing the data analysis in the first place.
+在着手收集大量的数据之前，首先要想清楚为什么要进行数据分析。
 
-What problem are you trying to solve?
+你希望解决什么问题？
 
-What is the purpose of this data analysis?
+此次数据分析的目的是什么？
 
-What are you trying to do?
+你想做什么尝试？
 
-What do you want to achieve?
+你想要达成什么？
 
-What is the end goal?
+最终目标是什么？
 
-What do you want to gain from the analysis?
+你想从数据分析中获得什么？
 
-Why do you even need data analysis?
+你真的需要数据分析吗？
 
-At this stage, it is paramount to have an insight and understanding of your business goals.
+在这个阶段，对自身商业目标的洞察和理解是至关重要的。
 
-Start by defining the right questions you want to answer and the immediate and long-term business goals.
+首先，明确你需要答案的正确问题，以及近期和长期的业务目标。
 
-Identify what is needed for the analysis, what kind of data you would need, what data you want to track and measure, and think of a specific problem you want to solve.
+接着，确定数据分析需要什么、需要什么样的数据、需要跟踪和测量什么数据，并思考你想解决的具体问题。
 
-### Step 2: Collecting Raw Data
+### 步骤二：收集原始数据
 
-The next step is to identify what type of data you want to collect – whether it will be qualitative (non-numerical, descriptive ) or quantitative (numerical).
+下一步要确定收集数据的类型--它是定性的（非数字、描述性的）还是定量的（数字的）。
 
-The way you go about collecting the data and the sources you gather from will depend on whether it is qualitative or quantitative.
+收集数据的方式和来源，取决于数据是定性的还是定量的。
 
-Some of the ways you could collect relevant and suitable data are:
+下面是一些收集相关且适当数据的方法：
 
--   By viewing the results of user groups, surveys, forms, questionnaires, internal documents, and interviews that have already been conducted in the business.
--   By viewing customer reviews and feedback on customer satisfaction.
--   By viewing transactions and purchase history records, as well as sales and financial figure reports created by the finance or marketing department of the business.
--   By using a customer relationship management system (CRM) in the company.
--   By monitoring website and social media activity and monthly visitors.
--   By monitoring social media engagement.
--   By tracking commonly searched keywords and search queries.
--   By checking which ads are regularly clicked on.
--   By checking customer conversion rates.
--   By checking email open rates.
--   By comparing the company’s data to competitors using third-party services.
--   By querying a database.
--   By gathering data through open data sets using web scraping. [Web scraping](https://www.freecodecamp.org/news/how-to-scrape-websites-with-python-2/) is the act of extracting and collecting data and content from websites.
+-   查阅此前在用户分类、调查、表单、问卷、内部文档和业内访谈中的已有结果。
+-   查看客户评论和满意度反馈。
+-   查看交易和历史购买记录，以及由企业财务部或营销部编制的相关报告。
+-   使用公司的客户关系管理系统（CRM）。
+-   监测网站、社交媒体上的活动以及每月访客。
+-   监测社交媒体的用户参与度。
+-   追踪常见的搜索关键词和搜索语句。
+-   检查常被点击的广告。
+-   检查客户转换率。
+-   检查电子邮件打开率。
+-   使用第三方的服务，比较公司与竞争对手的数据。
+-   查阅数据库。
+-   利用网络爬虫，通过爬取开放数据集来获取收据。[网络爬虫](https://www.freecodecamp.org/news/how-to-scrape-websites-with-python-2/) 是指从网站上提取和收集数据和内容的行为。
 
-### Step 3: Cleaning The Data
+### 步骤三：清洗数据
 
-Once you have gathered the data from multiple sources, it is important to understand the structure of that data.
+一旦你从多个渠道完成了数据收集的工作，了解其中数据的结构是很重要的。
 
-It is also important to check if you have gathered all the data you needed and if any crucial data is missing.
+同样重要的是，检查你是否已经已经收集了全部所需数据，以及其中是否有任何关键数据被遗漏。
 
-If you used multiple sources for the data collection, your data will likely be unstructured.
+如果你通过多个来源收集数据，你的数据很可能是非结构化的。
 
-Raw, unstructured data is not usable. Not all data is necessarily good data.
+原始的、非结构化的数据无法使用。不是所有的数据都必然是好数据。
 
-Cleaning data is the most important part of the data analysis process and one on which data analysts spend most of their time.
+清洗数据是数据分析过程中最重要的部分，也是数据分析师投入大部分时间的部分。
 
-Data needs to be cleaned, which means correcting errors, polishing, and sorting through the data.
+数据需要被清理，这意味着对数据进行纠错、打磨和分类。
 
-This could include:
+这可能包括：
 
--   Looking for [outliers](https://www.freecodecamp.org/news/what-is-an-outlier-definition-and-how-to-find-outliers-in-statistics/) (values that are unusually big or small).
--   Fixing typos.
--   Removing errors.
--   Removing duplicate data.
--   Managing inconsistencies in the format.
--   Checking for missing values or correcting incorrect data.
--   Checking for inconsistencies
--   Getting rid of irrelevant data and data that is not useful or needed for the analysis.
+-   寻找[离群值](https://www.freecodecamp.org/news/what-is-an-outlier-definition-and-how-to-find-outliers-in-statistics/)（异常大或异常小的数值）。
+-   修正错别字。
+-   删除错误。
+-   删除重复数据。
+-   处理格式的不一致。
+-   检查空值或纠正失真的数据。
+-   检查矛盾之处。
+-   舍弃无关数据和在分析中不需要的数据。
 
-This step will ensure that you are focusing on and analyzing the correct and appropriate data and that your data is high-quality.
+这一步将确保你聚焦于分析正确、适当和高质量的数据。
 
-If you analyze irrelevant or incorrect data, it will affect the results of your analysis and have a negative impact overall.
+如果你对无关或错误的数据进行分析，它不仅会影响你的单次分析结果，甚至对整体分析都会产生负面影响。
 
-So, the accuracy of your end analysis will depend on this step.
+所以，你最终分析的准确性将取决于这一步。
 
 ### Step 4: Analyzing The Data
 

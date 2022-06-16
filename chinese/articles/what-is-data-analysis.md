@@ -31,8 +31,8 @@
     1.  [步骤一：识别并明确需要解答的问题](#step-1)
     2.  [步骤二：收集原始数据](#step-2)
     3.  [步骤三：清洗数据](#step-3)
-    4.  [Step 4: analyzing the data](#step-4)
-    5.  [Step 5: sharing the results](#step-5)
+    4.  [步骤四：分析数据](#step-4)
+    5.  [步骤五：分享结果](#step-5)
 5.  [What skills are required for data analysis?](#skills)
     1.  [A good grasp of maths and statistics](#maths)
     2.  [Knowledge of SQL and Relational Databases](#sql)
@@ -224,30 +224,30 @@
 
 所以，你最终分析的准确性将取决于这一步。
 
-### Step 4: Analyzing The Data
+### 步骤四：分析数据
 
-The next step is to analyze the data based on the questions and objectives from step 1.
+下一步，是基于在步骤一中确定的问题和目标，对数据展开分析。
 
-There are four different data analysis techniques used, and they depend on the goals and aims of the business:
+根据企业的目标及目的，共有四种不同的数据分析技术：
 
--   **Descriptive Analysis**: This step is the initial and fundamental step in the analysis process. It provides a summary of the collected data and aims to answer the question: “**What** happened?”. It goes over the key points in the data and emphasizes what has already taken place.
--   **Diagnostic Analysis**: This step is about using the collected data and trying to understand the cause behind the issue at hand and identify patterns. It aims to answer the question: “**Why** has this happened?”.
--   **Predictive Analysis**: This step is about detecting and predicting future trends and is important for the future growth of the business. It aims to answer the question: “**What is likely to happen** in the future?
--   **Prescriptive Analysis:** This step is about gathering all the insights from the three previous steps, making recommendations for the future, and creating an actionable plan. It aims to answer the question: “**What needs to be done?**”
+-   **描述性分析**：这一步是分析过程中的起始和基础步骤。它通过总结收集到的数据，以回答"发生了**什么**？"。它回顾数据中的关键点，并强调已经发生的事情。
+-   **诊断性分析**：这一步利用收集到的数据，试图了解当前问题背后的原因，并识别模式。它的目的是回答"这为什么会发生？"。
+-   **预测性分析**：这一步着眼于察觉和预测未来的趋势，对企业未来的发展尤其重要。它旨在回答"未来**可能会发生什么**？
+-   **规范性分析**：这一步需要收集前三个步骤中的所有见解，为未来提出建议，并创建一个可行的计划。它的目的是回答"**需要做什么？**"
 
-### Step 5: Sharing The Results
+### 步骤五：分享结果
 
-The last step is to interpret your findings.
+最后一步是阐释你的发现。
 
-This is usually done by creating reports, charts, graphs, or interactive dashboards using data visualization tools.
+通常会使用数据可视化工具来创建报告、图表、图形或交互式仪表盘。
 
-All the above will help support the presentation of your findings and the results of your analysis to stakeholders, business executives, and decision-makers.
+当你向利益相关者、业务主管和决策者介绍发现和分析结果时，上述这些都会起到帮助作用。
 
-Data analysts are storytellers, which means having strong communication skills is important.
+数据分析师是讲故事的人，这意味着拥有强大的沟通技巧很重要。
 
-They need to showcase the findings and present the results in a clear, concise, and straightforward way by taking the data and creating a narrative.
+他们需要数据和叙事，从而以清晰、简洁、直截了当的方式来展示结果。
 
-This step will influence decision-making and the future steps of the business.
+这一步将影响企业的决策和未来选择。
 
 ## What Skills Are Required For Data Analysis?
 

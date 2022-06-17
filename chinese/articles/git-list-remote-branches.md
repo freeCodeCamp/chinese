@@ -5,15 +5,15 @@
 
 ![Git List Remote Branches](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/niko-photos-tGTVxeOr_Rs-unsplash.jpg)
 
-There are 4 different Git commands you can enter into your command line to list all of the remote branches of a repo. I will show you command line code examples of each of these.
+你可以在命令行中输入 4 个不同的 Git 命令来列出一个 repo(代码仓库) 的所有远程分支。我将向你展示每个命令的代码示例。
 
-For all of these examples, I will use [freeCodeCamp's open source repository](https://github.com/freeCodeCamp/freeCodeCamp/).
+在所有这些例子中，我将使用 [freeCodeCamp 的开放源代码仓库](https://github.com/freeCodeCamp/freeCodeCamp/)。
 
-### Command #1: git branch -r
+### 命令 #1: git branch -r
 
-This Git command will show you remote branches. The `-r` flag here is short for `--remotes`.
+这条 Git 命令将显示远程分支。这里的 `-r` 标志是 `--remotes` 的缩写。
 
-```
+```shell
 freecodecamp➜~/web/freeCodeCamp(main)» git branch -r
 
 Output: 
@@ -26,15 +26,15 @@ Output:
   origin/renovate/typescript-eslint-monorepo
 ```
 
-This is the command I use personally. So if you want, you can just stop reading here and use `git branch -r` whenever you want to list remote git branches.
+这是我个人使用的命令。所以，如果你愿意，你可以不看这里，只要你想列出远程 git 分支，就可以使用 `git branch -r`。
 
-But for completeness, I've included 3 other commands you can use, that return different lists.
+但为了完整起见，我还附上了另外三个命令，你可以使用，它们返回不同的列表。
 
-### Command #2: git ls-remote --heads
+### 命令 #2: git ls-remote --heads
 
-This Git command returns the same information, but also includes the hash for these remotes.
+这个 Git 命令返回相同的信息，但也包括这些远程的哈希值。
 
-```
+```shell
 freecodecamp➜~/web/freeCodeCamp(main)» git ls-remote --heads
 
 Output: 
@@ -47,11 +47,11 @@ f05262b823f5a578787e5387357383f09df9c5c1 refs/heads/main
 08e06f10363ab1d33156b83b2b01cad005c3a2cf refs/heads/renovate/typescript-eslint-monorepo
 ```
 
-### Command #3: git ls-remote
+### 命令 #3: git ls-remote
 
-This Git command displays not only the names of remote repositories, but their reference information, including Git commit hash.
+这条 Git 命令不仅显示远程仓库的名称，还显示它们的参考信息，包括 Git 提交哈希值。
 
-```
+```shell
 freecodecamp➜~/web/freeCodeCamp(main)» git ls-remote
 
 Output:
@@ -66,19 +66,19 @@ Output:
 -------
 ```
 
-There is a lot of specially formatted output, so I'll just include a screenshot to give you an idea:
+有很多特殊格式的输出，所以我只包括一个截图来给你一个想法:
 
 ![freeCodeCamp_-_freecodecamp_MacBook-Pro_-____freeCodeCamp_-_-zsh_-_136-36-2](https://www.freecodecamp.org/news/content/images/2022/06/freeCodeCamp_-_freecodecamp_MacBook-Pro_-____freeCodeCamp_-_-zsh_-_136-36-2.png)
 
-If you want color coding and timestamps in your terminal here, I recommend using OhMyZSH.
+如果你想在你的终端中使用颜色编码和时间戳，我建议使用 `OhMyZSH`。
 
-### Command #4: git show-branch -r
+### 命令 #4: git show-branch -r
 
-The main reason you would use this Git command is because it displays almost everything, so you can control+f through to find a particular hash.
+你会使用这个 Git 命令的主要原因是它几乎显示了所有的东西，所以你可以通过 `control+f` 来找到一个特定的哈希值。
 
-I don't remember ever using this before myself.
+我不记得我自己以前使用过这个。
 
-```
+```shell
 freecodecamp➜~/web/freeCodeCamp(main)» git show-branch -r
 
 Output:
@@ -111,6 +111,6 @@ d3aaa5a11e09f5996cfd5eb2f8b55f63785b4947 refs/remotes/upstream/master
 b73c7eac62d30fdc5e533f617dcd1b5e95306984 refs/remotes/upstream/staging
 ```
 
-For the freeCodeCamp repo, this command returned more than 30,000 lines of branches. So I would not recommend using this command unless you absolutely need to see everything. 😅
+对于 freeCodeCamp repo，这个命令返回了超过 30,000 行的分支。所以我不建议使用这个命令，除非你需要看到所有东西。😅
 
-That's all. I hope you have a fantastic day, and happy coding.
+这就是全部。我希望你有一个美妙的一天，并祝你编码愉快。

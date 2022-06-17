@@ -1,7 +1,7 @@
-> -  原文地址：[JavaScript Promises for Beginners](https://www.freecodecamp.org/news/javascript-promises-for-beginners/)
-> -  原文作者：[Spruce Emmanuel](https://www.freecodecamp.org/news/author/spruce/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[JavaScript Promises for Beginners](https://www.freecodecamp.org/news/javascript-promises-for-beginners/)
+> - 原文作者：[Spruce Emmanuel](https://www.freecodecamp.org/news/author/spruce/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![JavaScript Promises for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/Web-capture_11-5-2022_134720_127.0.0.1-1.jpeg)
 
@@ -295,8 +295,8 @@ In this tutorial, we learnt about promises, what they are, and how to use them b
 
 While creating our movie app, I left out some parts which I think would be great for you to practice your new Promise skills:
 
-1.  Our movie app looks frozen when we are waiting for the API response. You can try adding a loader to tell the user that the promise is pending.
-2.  We currently just use `console.log(error)` to log out errors. But we don't want that, so you can figure out how to display all errors to users in a friendly way.
+1. Our movie app looks frozen when we are waiting for the API response. You can try adding a loader to tell the user that the promise is pending.
+2. We currently just use `console.log(error)` to log out errors. But we don't want that, so you can figure out how to display all errors to users in a friendly way.
 
 If you created something wonderful with this, please feel free to tweet about it and tag me [@sprucekhalifa](https://twitter.com/sprucekhalifa). And don't forget to hit the follow button.
 

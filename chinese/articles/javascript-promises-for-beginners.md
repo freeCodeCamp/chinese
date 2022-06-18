@@ -21,7 +21,7 @@ promise 对象上的回调只有在操作完成时才会被调用。在之前，
 
 ```js
 fetch(`some_api_url`).then((response) => {
-  // Everything here will wait the fetch operation to complete
+  // 这里的将等待获取操作的完成
 });
 ```
 
@@ -40,15 +40,15 @@ fetch(`some_api_url`).then((response) => {
 
 ```js
 fetch(`some_api_url`).then((response) => {
-  // This will get called when the promise fulfills
+  // 当 promise fulfilled时，这将被调用
 }).catch((error) => {
-  // This will get called when the promise is rejected
+  // 当 promise rejected时，这将被调用
 }).finally(() => {
-  // This will get called all the time
+  // 这将在最后面调用
 })
 ```
 
-## 如何在 JavaScript 中使用 Promises 
+## 如何在 JavaScript 中使用 Promises
 
 现在你已经了解了什么是 promise，让我们通过建立我们之前看到的电影搜索应用来演示如何在 JavaScript 中使用 promise。
 
@@ -249,14 +249,14 @@ const get_movie = (value = "Game of thrones") => {
     })
     .catch((error) => {
       console.log(error.message);
-      // Challange: display your error here
+      // 挑战：在此显示你的错误
     });
 };
 ```
 
 现在，如果由于任何原因产生的一个错误，`.catch()`回调被调用，我们向用户显示当前的错误。
 
-## 如何在 JavaScript 中创建 Promises 
+## 如何在 JavaScript 中创建 Promises
 
 现在我们已经了解了什么是 `promise` 以及如何使用它们，让我们看看如何在 JavaScript 中创建一个 `promise`。
 
@@ -266,10 +266,10 @@ const get_movie = (value = "Game of thrones") => {
 const is_true = true
 const new_promise = new Promise((resolve,reject) => {
   if(is_true) {
-    // everything went fine
+    // 一切都很顺利
     resolve()
   } else {
-    // Oops there was an error
+    // Oops 有一个错误
     reject()
   }
 })
@@ -280,10 +280,10 @@ const new_promise = new Promise((resolve,reject) => {
 ```js
 new_promise
   .then((response) => {
-    // everything went fine
+    // 一切都很顺利
   })
   .catch((error) => {
-    // handle errors
+    // 处理错误
   });
 ```
 

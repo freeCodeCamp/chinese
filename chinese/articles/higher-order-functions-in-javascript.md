@@ -5,30 +5,30 @@
 
 ![Higher Order Functions in JavaScript – Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/Blog-8---Freecodecamp-Banner.png)
 
-In JavaScript, functions are treated as first-class citizens. We can treat functions as values and assign them to another variable, pass them as arguments to another function, or even return them from another function.
+在JavaScript中函数是一等公民。函数可以作为值赋值给另一个变量，或者作为参数传入另一个函数，甚至从另一个函数返回。
 
-This ability of functions to act as first-class functions is what powers higher order functions in JavaScript.
+这就赋予了JavaScript高阶函数的能力。
 
-Basically, a function which takes another function as an argument or returns a function is known as a higher order function.
+基本上如果一个函数可以将另外一个函数作为参数，或者返回另一个函数，则被称为高阶函数。
 
 ![Group-35](https://www.freecodecamp.org/news/content/images/2022/06/Group-35.png)
 
-Let's deep dive a bit to see both types of implementation, that is:
+让我们深入了解两种高阶函数的实现：
 
--   Passing a function as an argument to another function
--   Returning a function from another function
+-   将函数作为参数传入另一个函数
+-   从函数中返回另一个函数
 
 ![63eec0636ec9b999bf8c5ee5340dd54a_w200](https://www.freecodecamp.org/news/content/images/2022/06/63eec0636ec9b999bf8c5ee5340dd54a_w200.gif)
 
-## How to Pass a Function as an Argument to Another Function
+## 如何将函数作为参数传入函数
 
-In this section, we will see how we can send a function as an argument and ultimately how it helps us write cleaner code.
+在这个部分，我们将了解如何将函数作为参数，以及如何写出更加整洁的代码。
 
-Consider the following code in which we want to create a function which accepts an array as an argument. It filters out all the odd numbers from it and returns all the filtered numbers.
+考虑下面的代码，我们想要创建一个函数，将数组作为参数。该函数过滤出所有的奇数并返回。
 
-The function will look something like this:
+函数如下：
 
-```
+```javascript
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
 function filterOdd(arr) {
@@ -42,15 +42,15 @@ function filterOdd(arr) {
 }
 console.log(filterOdd(arr));
 
-// Output:
+// 输出:
 // [ 1, 3, 5, 7, 9, 11 ]
 ```
 
-The above function returns the filtered array `[ 1, 3, 5, 7, 9, 11 ]` where we have all the odd numbers, as expected.
+正如我们所期待的那样，上面的函数返回了由所有奇数组成的数组： `[ 1, 3, 5, 7, 9, 11 ]`。
 
-Now let's say we also want to make a function that filters out and returns all the even numbers. We can very well go ahead and create the following function to achieve this:
+现在假设我们想要创建一个过滤出所有偶数的函数，我们也可以创建一个函数来实现：
 
-```
+```javascript
 function filterEven(arr) {
   const filteredArr = [];
   for (let i = 0; i < arr.length; i++) {
@@ -62,23 +62,23 @@ function filterEven(arr) {
 }
 console.log(filterEven(arr));
 
-// Output:
+// 输出:
 // [ 2, 4, 6, 8, 10 ]
 ```
 
-Again, as expected, we will get the desired output of an array with all even numbers in it – `[ 2, 4, 6, 8, 10 ]`.
+同样的，我们也得到了我们期望的数组： `[ 2, 4, 6, 8, 10 ]`。
 
-But notice that we are writing a lot of duplicate code in this approach. Both the above functions do a lot of common things, like accepting the original array, creating a new array to store the filtered array, looping through the whole main array, and finally returning the filtered array.
+但需要注意的是，我们做了很多重复的工作。两个函数都接受一个普通数组作为参数、创建一个新数组来存储过滤后的数组、遍历了整个主数组以及最终返回过滤后的数组。
 
-The only difference between both functions is the logic they use to filter out the original array.
+两个函数唯一的区别是判断如何过滤的逻辑。
 
-For the function `filterOdd` we use the logic of `arr[i] % 2 !== 0` whereas in the `filterEven` function we use the logic `arr[i] % 2 == 0` to filter out the original array.
+在函数 `filterOdd`中使用的逻辑是 `arr[i] % 2 !== 0`，而在函数 `filterEven` 中使用的逻辑是 `arr[i] % 2 == 0`。
 
-This is where we can benefit from using higher order functions. The main intention is to create a function to do all the common stuff we did in the above two functions and pass the logic part separately as an argument to this function. Let's see how we can implement this.
+这时候高阶函数就可以派上用场了。使用高阶函数的主要目的是创建一个函数来处理所有相同的部分，然后将逻辑部分作为参数传入函数。我们一起来看看如何实现。
 
-Let's make the function which does all the common stuff we performed in the `filterOdd` and `filterEven` functions. This will go something like this:
+让我们来创建一个函数处理 `filterOdd`和`filterEven`相同的部分，如下：
 
-```
+```javascript
 function filterFunction(arr, callback) {
   const filteredArr = [];
   for (let i = 0; i < arr.length; i++) {
@@ -88,77 +88,77 @@ function filterFunction(arr, callback) {
 }
 ```
 
-Ignore the `callback` parameter for now. Notice how in the new `filterFuntion` we kept all the common steps, that is accepting the original array, creating a new array to store the filtered array, looping through the whole main array, and finally returning the filtered array that we were performing in the `filterOdd` and `filterEven` functions.
+现在可以忽略掉 `callback`参数。 注意我们是如何在`filterFunction`中保持相同的部分：接受原数组作为参数、创建一个新的数组来保存过滤后的数组、遍历整个主数组以及最终返回和`filterOdd`和`filterEven`一样的结果。
 
-Now the `callback` parameter basically accepts the logic which will be nothing but another function containing the filtering logic. For filtering the odd and even numbers, respectively, here are the logic functions we need to write:
+`callback`参数将接受一个函数，这个函数包含过滤的逻辑。过滤奇数和偶数的逻辑分别如下：
 
-```
-// Function containing logic for filtering out odd numbers
+```javascript
+// 包含过滤奇数逻辑的函数
 
 function isOdd(x) {
   return x % 2 != 0;
 }
 
-// Function containing logic for filtering out even numbers
+// 包含过滤偶数逻辑的函数
 
 function isEven(x) {
   return x % 2 === 0;
 }
 ```
 
-That's it! We now just need to pass the main array, along with the logic function to our `filterFunction` like this:
+这样就可以了，我们只需要向 `filterFunction`传入主数组和逻辑函数：
 
-```
-// For filtering out odd numbers
+```javascript
+// 过滤奇数
 
 filterFunction(arr, isOdd)
-// Output of console.log(filterFunction(arr, isOdd)):
+// console.log(filterFunction(arr, isOdd))的输出:
 // [ 1, 3, 5, 7, 9, 11 ]
 
-// For filtering out even numbers
+// 过滤偶数
 
 filterFunction(arr, isEven)
-// Output of console.log(filterFunction(arr, isEven)):
+// console.log(filterFunction(arr, isEven))的输出:
 // [ 2, 4, 6, 8, 10 ]
 ```
 
-This way we are passing logic functions like `isOdd` or `isEven` as arguments to another function `filterFunction`.
+这时我们将逻辑函数 `isOdd` 或 `isEven` 作为参数传入另一个函数 `filterFunction`。
 
-We are basically abstracting out the main filtering logic from the main function. We can now pass any other filtering logic as we like to `filterFunction` without needing to change it.
+我们相当于将逻辑函数从主函数抽离出来，现在我们可以传入任意的过滤逻辑，并且不需要对 `filterFunction`做任何修改。
 
-For example, if we want to filter out a number greater than 5 then we just need to write the following filtering logic:
+例如，如果我们想要过滤出所有大于5的数字，我们可以这样编写逻辑函数：
 
-```
+```javascript
 function isGreaterThanFive(x) {
   return x > 5;
 }
 ```
 
-and pass it as an argument to `filterFunction`:
+并作为参数传入 `filterFunction`:
 
-```
+```javascript
 filterFunction(arr, isGreaterThanFive)
 
-// Output of console.log(filterFunction(arr, isGreaterThanFive)):
+// console.log(filterFunction(arr, isGreaterThanFive))的输出:
 // [ 6, 7, 8, 9, 10, 11 ]
 ```
 
-We can also pass the logic function as an arrow function and get the same result – that is, passing `(x) => x > 5)` in place of `isGreaterThanFive` will give us the same result.
+我们也可以将逻辑函数修改为箭头函数，得到同样的结果 – 即用 `(x) => x > 5)`替代`isGreaterThanFive`。
 
-```
+```javascript
 filterFunction(arr, (x) => x > 5)
 
-// Output of console.log(filterFunction(arr, (x) => x > 5)):
+// console.log(filterFunction(arr, (x) => x > 5))的输出:
 // [ 6, 7, 8, 9, 10, 11 ]
 ```
 
-### How to Create Polyfills
+### 如何创建[Polyfill](https://developer.mozilla.org/zh-CN/docs/Glossary/Polyfill)
 
-We know that JavaScript provides us with some inbuilt higher order functions like `map()`, `filter()`, `reduce()` and so on. Can we recreate our own implementation of these functions? Let's deep dive a little bit more.
+我们知道JavaScript内置了一些高阶函数，如： `map()`、`filter()`、`reduce()`等， 我们可以自定义这些函数吗？让我们深入研究一下。
 
-We already created our filtering function in the above section. Let's create an array prototype of our `filterFunction` function so that we can use it with any array. This will look something like this:
+在上一个部分，我们创建了过滤函数。让我们为 `filterFunction`函数创建一个数组原型，这样我们就可以在任意数组使用这个函数，这个原型如下：
 
-```
+```javascript
 Array.prototype.filterFunction = function (callback) {
   const filteredArr = [];
   for (let i = 0; i < this.length; i++) {
@@ -168,71 +168,71 @@ Array.prototype.filterFunction = function (callback) {
 };
 ```
 
-In the above code, `this` refers to the array the prototype is called upon. So if we write something like:
+在上面的代码中， `this` 值的是调用原型的数组，所以如果我们编写这样的代码：
 
-```
+```javascript
 const arr = [1, 2, 3, 4, 5]
 arr.filterFunction(callbackFn)
 ```
 
-then `this` would refer to the array `arr`.
+那么 `this`就指代数组 `arr`。
 
-Now we can use the `filterFunction` just like we use the inbuilt `filter()` function in JS. We can write something like this:
+现在我们就可以像使用JS内置的`filter()`函数一样使用`filterFunction`。 我们可以编写这样的代码：
 
-```
+```javascript
 arr.filterFunction(isEven)
 ```
 
-which is similar to calling the inbuilt `filter()` function:
+和直接调用 `filter()`函数类似：
 
-```
+```javascript
 arr.filter(isEven)
 ```
 
-Both the above function calls (that is `arr.filterFunction(isEven)` and `arr.filter(isEven)`) will give us same output, like `[ 2, 4, 6, 8, 10 ]`.
+上面两个函数调用 (即 `arr.filterFunction(isEven)`和`arr.filter(isEven)`) 会得到相同的输出， 如 `[ 2, 4, 6, 8, 10 ]`。
 
-Similarly, we can also pass an arrow function in our prototype implementation as we can pass in the inbuilt `filter()` function.
+类似的，我们也可以向传入内置函数 `filter()`一样传入箭头函数。
 
-```
+```javascript
 // I
 arr.filterFunction((x) => x % 2 != 0)
 arr.filter((x) => x % 2 != 0)
-// both give the same output on console.log: [ 1, 3, 5, 7, 9, 11 ]
+//两者都会打印出: [ 1, 3, 5, 7, 9, 11 ]
 
 // II
 arr.filterFunction((x) => x > 5)
 arr.filter((x) => x > 5)
-// both give the same output on console.log: [ 6, 7, 8, 9, 10, 11 ]
+// 两者都会打印出: [ 6, 7, 8, 9, 10, 11 ]
 
 ```
 
-In a way, we have written a polyfill for the inbuilt `filter()` function.
+这样，我们就给内置`filter()`函数写了一个polyfill。
 
-### Function Chaining
+### 函数链
 
-We can also implement function chaining with our prototype implementation like we can with the inbuilt `filter()` function. Let's first filter out all the numbers greater than 5. Then from the result, we'll filter out all the even numbers. It will look something like this:
+我们也可以在`filter()`和我们自定义的原型方法中采取链式调用。让我们先筛选出所有大于5的数字，然后从结果中筛选出所有的偶数。代码如下：
 
-```
-// Using our own filterFunction() prototype implementation
+```javascript
+//使用我们自定义的filterFunction()
 arr.filterFunction((x) => x > 5).filterFunction((x) => x % 2 === 0)
 
-//Using the inbuilt filter() implementation
+//使用内置的filter()
 arr.filter((x) => x > 5).filter((x) => x % 2 === 0)
 
-// both give the same output on console.log: [ 6, 8, 10 ]
+// 两者都会打印出: [ 6, 8, 10 ]
 ```
 
-This is how we can use higher order functions in JS to write mode modular, cleaner and, more maintainable code.
+这就是我们如何在JS 中使用高阶函数来编写模式模块、以及编写更简洁、更易于维护的代码。
 
-Next, let's look at how we can return a function from another function.
+接下来，让我们看看如何从函数返回另一个函数
 
 ![lets-move-on-proceed](https://www.freecodecamp.org/news/content/images/2022/06/lets-move-on-proceed.gif)
 
-## How to Return a Function from Another Function in JavaScript
+## 如何在JavaScript中从函数返回另一个函数
 
-We can return a function from another function because we treat functions in JavaScript as values. Let's see this through an example:
+我们可以从函数中返回函数，是因为函数被当作了值，请看以下例子
 
-```
+```javascript
 function calculate(operation) {
   switch (operation) {
     case "ADD":
@@ -247,85 +247,85 @@ function calculate(operation) {
 }
 ```
 
-In the above code, when we invoke the function `calculate` with an argument, it switches on that argument and then finally returns an anonymous function. So if we call the function `calculate()` and store its result in a variable and console log it, we will get the following output:
+在上述代码中，当我们传入参数触发`calculate` 时， 函数通过switch条件评估参数，最终返回一个匿名函数。 所以如果我们调用 `calculate()`并将结果存储到一个变量，并在控制台打印变量，会得到以下结果：
 
-```
+```javascript
 const calculateAdd = calculate("ADD");
 console.log(calculateAdd);
 
-// Output: 
+// 输出: 
 // [Function (anonymous)]
 ```
 
-You can see that `calculateAdd` contains an anonymous function that the `calculate()` function returned.
+你会发现 `calculateAdd`包含一个由 `calculate()`返回的匿名函数。
 
-There are two ways to call this inner function which we'll explore now.
+有两种方式来调用这个内部函数。
 
-### Call the returned function using a variable
+### 用变量调用返回函数
 
-In this method, we stored the return function in a variable as shown above and then invoked the variable to in turn invoke the inner function.
+在这种方法中，如上面的示例这样，我们将返回的函数存储到变量中，然后通过调用这个变量来调用内部的函数。
 
-Let's see it in code:
+请看代码：
 
-```
+```javascript
 const calculateAdd = calculate("ADD");
 calculateAdd(2, 3);
-// Output: 2 + 3 = 5
+// 输出: 2 + 3 = 5
 
 
 const calculateSubtract = calculate("SUBTRACT");
 calculateSubtract(2, 3);
-// Output: 2 - 3 = -1
+// 输出: 2 - 3 = -1
 ```
 
-So what'd we do here?
+我们做了什么？
 
--   We called the `calculate()` function and passed `ADD` as the argument
--   We stored the returned anonymous function in the `calculateAdd` variable, and
--   We invoked the inner returned function by calling `calculateAdd()` with the required arguments.
+-   我们调用了 `calculate()` 函数，并传入`ADD`作为参数
+-   我们将匿名函数存储在变量 `calculateAdd` 中
+-   我们通过传入规定的参数调用 `calculateAdd()`从而调用了变量内部的函数
 
-### Call the returned function using double parentheses
+### 通过双括号来调用返回函数
 
-This is a very sophisticated way of calling the inner returned function. We use double parentheses `()()` in this method.
+这是一个较为复杂的调用内部函数的方法。在这个方法中我们使用双括号：`()()`。
 
-Let's see it in code:
+请看代码：
 
-```
+```javascript
 calculate("ADD")(2, 3);
-// Output: 2 + 3 = 5
+// 输出: 2 + 3 = 5
 
 calculate("SUBTRACT")(2, 3);
-// Output: 2 - 3 = -1
+// 输出: 2 - 3 = -1
 ```
 
-You can thinks about this in a similar way to our chaining example above. It's just that instead of chaining functions, we chain the arguments.
+你可以用上面的函数链例子来类比这里的双括号。区别在于上面链接的是函数，而这里我们链接的参数。
 
-The arguments in the first parentheses belong to the outer function, while the arguments in the second parentheses belong to the inner returned function.
+第一个括号内部的参数隶属于外部函数，而第二个括号内部的参数隶属于内部函数。
 
-The `calculate()` method returns a function as explained earlier, and it is that returned function which is immediately called using the second parentheses.
+`calculate()`如前文所述会返回一个函数， 第二个括号立马调用了这个被返回的函数。
 
-As I mentioned above, it's a very sophisticated way of calling a function. But once you get the hang of it, it becomes...well quite natural.
+我说过这是一个较为复杂的调用函数的方式，不过一旦适应了，你会觉得这一切都非常自然。
 
-One place where we can see this kind of double parentheses notation is in the `connect` method in the `redux` state management library. You can read more about `connect` [here](https://react-redux.js.org/api/connect).
+你可以在`redux`状态管理库的`connect`方法中遇到这样的双括号标记。 想要了解更多 `connect`相关的信息，可以[阅读这篇文章](https://react-redux.js.org/api/connect)。
 
-## Summary
+## 总结
 
-In this article, we learned:
+在这篇文章中，我们学习了：
 
--   Why functions are called first class citizens in JS
--   What are higher order functions
--   How to pass a function as an argument to another function
--   How to create an array prototype, function chaining, writing our own polyfill for the inbuilt filter() method
--   How to return a function from another function and different ways to call the returned function
+-   在JS中为什么函数是一等公民
+-   什么是高阶函数
+-   如何将函数作为参数传入另一个函数
+-   如何创建一个数组原型、函数链、以及为内置方法`filter()`编写自定义polyfill
+-   如何在函数中返回函数，以及两种调用返回函数的方法
 
-## Wrapup
+## 收尾
 
-Thanks for reading! I really hope you found this article on higher order functions useful. Stay tuned for more amazing content. Peace out! 🖖
+感谢阅读！希望这篇关于高阶函数的文章对你有帮助。想要阅读到更多精彩的文章，请保持关注。再见！🖖
 
-## Social Links
+## 社交账号
 
 -   [LinkedIn](https://www.linkedin.com/feed/)
--   [Website](https://www.sohamderoy.dev/)
--   [Blog site](https://blog.sohamderoy.dev/)
+-   [个人网站](https://www.sohamderoy.dev/)
+-   [个人博客](https://blog.sohamderoy.dev/)
 
 ![e2bd7ce3fc5f2783f1e210b015cc5fb1](https://www.freecodecamp.org/news/content/images/2022/06/e2bd7ce3fc5f2783f1e210b015cc5fb1.gif)

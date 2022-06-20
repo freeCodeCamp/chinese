@@ -1,55 +1,55 @@
-> -  原文地址：[The Most Popular Coding Challenge Websites](https://www.freecodecamp.org/news/the-most-popular-coding-challenge-websites/)
-> -  原文作者：[Md. Fahim Bin Amin](https://www.freecodecamp.org/news/author/fahimbinamin/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[The Most Popular Coding Challenge Websites](https://www.freecodecamp.org/news/the-most-popular-coding-challenge-websites/)
+> - 原文作者：[Md. Fahim Bin Amin](https://www.freecodecamp.org/news/author/fahimbinamin/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![The Most Popular Coding Challenge Websites](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/fCC-Banner.png)
 
-If you want to improve your analytical skills, there's no better way to do that than solving problems.
+如果你想提高你的分析能力，没有比解决问题更好的方法了。
 
-If you are a programmer, then this is something you should do for yourself. Programmers need to deal with all sorts of problems almost every day.
+如果你是一个程序员，那么这是你应该为自己做的事情。程序员几乎每天都需要处理各种各样的问题。
 
-Most importantly, solving problems in an efficient manner can make you much more productive. And solving challenging problems helps us do that.
+最重要的是，以高效的方式解决问题可以使你的工作效率大大提高。而解决具有挑战性的问题有助于我们做到这一点。
 
 ## You can watch this complete video on YouTube as well if you like 🎥
 
 ## Why Should You Develop Your Problem-Solving Skills?
 
-These days, technology is developing rapidly, and we are seeing some amazing changes and improvements almost every day.
+这些天来，技术正在迅速发展，我们几乎每天都能看到一些惊人的变化和改进。
 
-Whenever we talk about technology, a buzzword appears in our mind – and that is coding or programming. Now, coding/programming isn't just about solving different kinds of problems using different programming languages, but it's a large part of what you'll do as a developer.
+每当我们谈论技术时，一个热门词汇就会出现在我们的脑海中--那就是编码或编程。现在，编码/编程不仅仅是使用不同的编程语言来解决不同种类的问题，而是你作为一个开发人员所要做的很大一部分。
 
-The fields of Web development, Machine Learning, Artificial Intelligence, Augmented Reality, App Development, and many others require strong problem-solving skills.
+网络开发、机器学习、人工智能、增强现实、应用开发和许多其他领域都需要强大的解决问题的能力。
 
-There are many popular websites that help you do that by providing various types of problems where you need to apply your analytical and mathematical skills to solve each problem using programming languages.
+有许多流行的网站通过提供各种类型的问题来帮助你做到这一点，你需要运用你的分析和数学技能，用编程语言解决每个问题。
 
-I am going to provide you with a list of coding challenge websites that will help you become more advanced day by day.
+我将为你提供一个编码挑战网站的清单，这些网站将帮助你一天天变得更先进。
 
-Keep in mind that these websites are useful for everybody, whether you are new to coding challenges or you are a professional programmer and so on.
+请记住，这些网站对每个人都有用，无论你是编码挑战的新手还是专业的程序员等等。
 
 # Contents
 
-1.  [beecrowd](#1beecrowdformerlyuri)
-2.  [HackerRank](#2hackerrank)
-3.  [Codeforces](#3codeforces)
-4.  [LeetCode](#4leetcode)
-5.  [Kaggle](#5kaggle)
-6.  [CodeChef](#6codechef)
-7.  [AtCoder](#7atcoder)
-8.  [Topcoder](#8topcoder)
-9.  [Coderbyte](#9coderbyte)
-10.  [Project Euler](#10projecteuler)
-11.  [Codewars](#11codewars)
-12.  [SPOJ](#12spoj)
-13.  [CodinGame](#13codingame)
-14.  [GeeksforGeeks](#14geeksforgeekspopularlyknownasgfg)
-15.  [Toph](#15toph)
-16.  [LightOJ](#16lightoj)
-17.  [Exercism](#17exercism)
-18.  [Online Judge](#18onlinejudgecommonlyknownasuva)
-19.  [HackerEarth](#19hackerearth)
-20.  [Code Jam - Google's Coding Competitions](#20codejamgooglescodingcompetitions)
-21.  [ICPC](#21icpcinternationalcollegiateprogrammingcontest)
+1. [beecrowd](#1beecrowdformerlyuri)
+2. [HackerRank](#2hackerrank)
+3. [Codeforces](#3codeforces)
+4. [LeetCode](#4leetcode)
+5. [Kaggle](#5kaggle)
+6. [CodeChef](#6codechef)
+7. [AtCoder](#7atcoder)
+8. [Topcoder](#8topcoder)
+9. [Coderbyte](#9coderbyte)
+10. [Project Euler](#10projecteuler)
+11. [Codewars](#11codewars)
+12. [SPOJ](#12spoj)
+13. [CodinGame](#13codingame)
+14. [GeeksforGeeks](#14geeksforgeekspopularlyknownasgfg)
+15. [Toph](#15toph)
+16. [LightOJ](#16lightoj)
+17. [Exercism](#17exercism)
+18. [Online Judge](#18onlinejudgecommonlyknownasuva)
+19. [HackerEarth](#19hackerearth)
+20. [Code Jam - Google's Coding Competitions](#20codejamgooglescodingcompetitions)
+21. [ICPC](#21icpcinternationalcollegiateprogrammingcontest)
 
 # Best Coding Challenge Websites
 
@@ -317,24 +317,24 @@ If you are a complete beginner in problem solving, then this website can help yo
 
 In LightOJ, you can solve a lot of categorized problems. It is highly based on solving algorithmic problems. Their problems are categorized as below:
 
--   LightOJ Volumes
--   Warm-Up
--   Advanced Search Techniques
--   Database
--   Data Structures
--   Divide And Conquer
--   Dynamic Programming
--   Fast Fourier Transform
--   Flow/Matching
--   Game Theory
--   Geometry
--   Graph Theory
--   Greedy
--   Math
--   Matrix
--   Parsing/Grammar
--   Recursion/Branch and Bound
--   String
+- LightOJ Volumes
+- Warm-Up
+- Advanced Search Techniques
+- Database
+- Data Structures
+- Divide And Conquer
+- Dynamic Programming
+- Fast Fourier Transform
+- Flow/Matching
+- Game Theory
+- Geometry
+- Graph Theory
+- Greedy
+- Math
+- Matrix
+- Parsing/Grammar
+- Recursion/Branch and Bound
+- String
 
 They also provide you with a nice profile page where you can see your activities. It might seem odd, but sometimes I find this website better than LeetCode in some cases. Moreover, everything you do on this website is completely free of cost!
 

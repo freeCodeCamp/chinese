@@ -155,25 +155,25 @@ LeetCode 的一个悲哀之处在于，你不会免费获得每一个功能！�
 
 ![Kaggle banner](https://www.freecodecamp.org/news/content/images/2022/06/28oqgu17gaiczlsv0k2t.png)
 
-I was pretty confused before writing this section, as Kaggle is not a typical website for coding practice. This website is basically for Data Science, and it's one of the most popular websites out there for this.
+在写这一节之前，我很困惑，因为 Kaggle 不是一个典型的编码练习网站。这个网站基本上是为数据科学服务的，它是目前最受欢迎的网站之一。
 
-> Kaggle is an online community platform for data scientists and machine learning enthusiasts.
+> Kaggle 是一个面向数据科学家和机器学习爱好者的在线社区平台。
 
-> It is a popular crowd-sourced platform to attract, nurture, train, and challenge Data Science and Machine Learning enthusiasts from all around the world to come together and solve numerous Data Science, Predictive Analytics, and Machine Learning problems.
+> 它是一个流行的众包平台，吸引、培养、训练和挑战来自世界各地的数据科学和机器学习爱好者，一起解决众多的数据科学、预测分析和机器学习问题。
 
-So if you are interested in Data Science, then you should check this website. Here you can check others' notebooks, submit your notebook, join in the contests, improve datasets, and so on.
+因此，如果你对数据科学感兴趣，那么你应该查看这个网站。在这里，你可以查看别人的笔记本，提交你的笔记本，参加比赛，改进数据集，等等。
 
-> Kaggle allows users to collaborate with other users, find and publish datasets, use GPU integrated notebooks, and compete with other data scientists to solve data science challenges.
+> Kaggle 允许用户与其他用户协作、查找和发布数据集、使用集成 GPU 的笔记本以及与其他数据科学家竞争以解决数据科学挑战。
 
-Also, if you are interested in data science, but don't know where to start, then don't worry! Kaggle has got you covered. You can check their [learning section](https://www.kaggle.com/learn) where they have many free courses which will teach you a lot of stuff from the beginning.
+另外，如果您对数据科学感兴趣，但不知道从哪里开始，请不要担心！ Kaggle 已经为你提供了支持。 你可以查看他们的[学习部分](https://www.kaggle.com/learn)，那里有许多免费课程，可以从一开始就教你很多东西。
 
 ![kaggle free courses](https://www.freecodecamp.org/news/content/images/2022/06/b2jgodslps0qrx6txu59.png)
 
-✨ BONUS: If you want to learn more then I'd suggest that you complete the [data science playlist](https://www.youtube.com/playlist?list=PLWKjhJtqVAblQe2CCWqV4Zy3LY01Z8aF1) from freeCodeCamp's YouTube channel.
+✨ 提示: 如果你想学习更多，那么我建议你完成 freeCodeCamp 的 YouTube 频道的[数据科学播放列表](https://www.youtube.com/playlist?list=PLWKjhJtqVAblQe2CCWqV4Zy3LY01Z8aF1)。
 
 ![fcc courses](https://www.freecodecamp.org/news/content/images/2022/06/voyp7nxuepo7azxw6syk.png)
 
-Kaggle also provides rankings and a nice user profile. You can check out my profile [here](https://www.kaggle.com/mdfahimbinamin).
+Kaggle 还提供排名和一个漂亮的用户资料。你可以查看[我的资料](https://www.kaggle.com/mdfahimbinamin).
 
 ![FBA kaggle](https://www.freecodecamp.org/news/content/images/2022/06/lqcwsixdumi4bxc670s9.png)
 

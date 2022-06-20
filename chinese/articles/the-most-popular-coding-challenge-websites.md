@@ -57,43 +57,43 @@
 
 ![beecrowd banner](https://www.freecodecamp.org/news/content/images/2022/06/zwnoz97xawck4unafkbz.png)
 
-beecrowd is perfect for those who have just started solving coding challenges and are looking for a beginner-friendly website. It used to be named **URI**, so there is a chance that you are already familiar with this site as URI.
+beecrowd 非常适合那些刚刚开始的适合初学者，来解决编码难题的网站。它曾经被命名为**URI**，所以有可能你已经熟悉这个网站的 URI 了。
 
-If you want to solve problems in a specific category, then you're in luck as this website also offers that.
+如果你想解决特定类别的问题，那么你很幸运，因为这个网站也提供这个服务。
 
 ![chodi765ql8li7b9yia6](https://www.freecodecamp.org/news/content/images/2022/06/chodi765ql8li7b9yia6.png)
 
-Here is an image of a **Strings** problem set. You can also filter the problems by the ID (#), name (NAME), Subject (SUBJECT), solved (SOLVED), and so on. Beginners like these features very much.
+下面是一个**字符串**问题集的图片。你还可以通过 ID（#）、名称（NAME）、主题（SUBJECT）、已解决（SOLVED）等过滤问题。初学者非常喜欢这些功能。
 
 ![2afljp6rrtm1c4co62vr](https://www.freecodecamp.org/news/content/images/2022/06/2afljp6rrtm1c4co62vr.png)
 
-On this website, you can also take part in different programming contests, and check your global ranking, country-wide ranking, and university-wide ranking.
+在这个网站上，你还可以参加不同的编程比赛，并查看你的全球排名、全国排名和全校排名。
 
-Also, you can check your progress, how many days have passed after signing up, how many problems you have solved, how many points you have got, and more.
+另外，你还可以查看你的进度，注册后过了多少天，你解决了多少问题，你得到了多少分数，等等。
 
-You will also get a nice profile page that looks beautiful as well. 😊 I used to practice solving problems on this website when I was just starting out my CP (Competitive Programming) journey. Not to mention, I got the 3rd position among 1250 students back then at my university. 🎉
+你还会得到一个漂亮的个人资料页面，看起来也很美。😊我在刚刚开始 CP（竞争性编程）之旅的时候，曾经在这个网站上练习解题。更不用说，在我的大学里，我在 1250 名学生中获得了第三名的成绩。🎉
 
-You can also check out my [beecrowd profile here](https://www.beecrowd.com.br/judge/en/profile/436965).
+你也可以看看我的 [beecrowd profile here](https://www.beecrowd.com.br/judge/en/profile/436965).
 
 ## 2\. [HackerRank](https://www.hackerrank.com/)
 
 ![wla1ho0uoz9xuvp5iuwi](https://www.freecodecamp.org/news/content/images/2022/06/wla1ho0uoz9xuvp5iuwi.png)
 
-HackerRank is one of the most popular coding practice websites out there. This is a nice platform for everyone, especially beginners.
+HackerRank 是目前最受欢迎的编码练习网站之一。这对每个人来说都是一个不错的平台，尤其是初学者。
 
-The website looks nice and polished, and the users who come here the first time don't struggle when navigating throughout the website, so that is definitely a positive thing here.
+该网站看起来很漂亮而且很精致，第一次来这里的用户在浏览整个网站时不会感到费力，所以这绝对是一件好事。
 
 ![Login page](https://www.freecodecamp.org/news/content/images/2022/06/wr0o61pq2ngfwil3ys9d.png)
 
-HackerRank offers different portals for companies and developers. If you are learning to solve problems, then you will choose the **For Developers** section.
+HackerRank 为公司和开发人员提供不同的入口。如果你是为了解决问题而学习，那么你会选择 **For Developers** 部分。
 
-If you want to learn any specific topics or programming languages, then this website is the perfect place to get started in that. You can prepare yourself by topics. You can also take their certification exam and stand out from the crowd. I have already passed their Python (Basic) certification exam.
+如果你想学习任何特定的主题或编程语言，那么这个网站是你开始学习的最佳场所。你可以按主题进行准备。你还可以参加他们的认证考试，在人群中脱颖而出。我已经通过了他们的 Python（基础）认证考试
 
 ![Prep](https://www.freecodecamp.org/news/content/images/2022/06/k3j4sfp9tovx9ifphf0a.png)
 
-You can also choose preparation kits from there, and prepare yourself before your interview if you want. Moreover, you can take part in programming contests.
+你也可以从那里选择准备工具包，如果你愿意，可以在面试前做好准备。 此外，您还可以参加编程竞赛。
 
-Here, you will also get a nice personal profile page. You can check out my profile from HackerRank [here](https://www.hackerrank.com/FahimFBA).
+在这里，你还会得到一个漂亮的个人简介页面。你可以从 HackerRank [这里](https://www.hackerrank.com/FahimFBA)查看我的简介。
 
 ![My HackerRank profile](https://www.freecodecamp.org/news/content/images/2022/06/sfp2rcqtx9b4fs8wv3m8.png)
 
@@ -101,53 +101,53 @@ Here, you will also get a nice personal profile page. You can check out my profi
 
 ![Codeforces Banner](https://www.freecodecamp.org/news/content/images/2022/06/8wtc4xnpohe9yr6j2eij.png)
 
-Codeforces is one of the most used and well-known coding challenge and practice websites in the world, and it is sponsored by Telegram. Especially if you know about CP (Competitive Programming), then there is a high chance you have heard a lot about this website.
+Codeforces 是世界上最常用和最知名的编码挑战和练习网站之一，它由 Telegram 赞助。特别是如果你知道 CP（竞争性编程），那么你很有可能听说过很多关于这个网站的事情。
 
-Although the website might look a little bit different to newcomers, you won't need much time to get used to it. You can train yourself by solving problems of different categories, difficulty levels, and so on.
+虽然对于新人来说，这个网站可能看起来有点不同，但你不需要太多的时间来适应它。你可以通过解决不同类别、不同难度的问题来训练自己。
 
-Competitive programmers have ranks based on their successful results in programming contests. If you have heard about the **RED** coder / **PURPLE** coder, etc, then it is definitely from Codeforces.
+有竞争力的程序员根据他们在编程比赛中的成功结果有等级。如果你听说过**红色**程序员/**紫色**程序员等，那么肯定是来自 Codeforces。
 
 ![Codeforces Ranking System](https://www.freecodecamp.org/news/content/images/2022/06/17fansawmwowcvhyc639.png)
 
-You can get the idea of the ranking system on Codeforces from the image above. For more details, you can check out [this blog entry](https://codeforces.com/blog/entry/68288).
+你可以从上面的图片中了解到 Codeforces 的排名系统。更多细节，您可以查看[本博客文章](https://codeforces.com/blog/entry/68288)。
 
-Codeforces arranges contests regularly each week, and they are categorized into div 1, div 2, div 3 and div 4. They also arrange global round and educational round contests. You can get the timeline of the contests directly from [here](https://codeforces.com/contests).
+Codeforces 每周定期安排比赛，它们被分为第一组、第二组、第三组和第四组。他们还安排全球回合和教育回合竞赛。你可以直接从[这里](https://codeforces.com/contests)获得竞赛的时间轴。
 
-Codeforces also provides a nice user profile on their website. You can check mine [here](https://codeforces.com/profile/FahimFBA) as well.
+Codeforces 还在其网站上提供了一个很好的用户资料。你也可以查看[我的](https://codeforces.com/profile/FahimFBA)。
 
 ## 4\. [LeetCode](https://leetcode.com/)
 
 ![Leetcode banner](https://www.freecodecamp.org/news/content/images/2022/06/jk9l09bi3ku5d0op2x7j.png)
 
-If you are familiar with the **FAANG** (Facebook, Apple, Amazon, Netflix, Google) buzzword, then you should definitely know about this website! If you want to practice for your coding interview for the big giant tech companies like FAANG, then they all do **leetcoding**.
+如果你熟悉**FAANG**（Facebook、Apple、Amazon、Netflix、Google）的流行语，那么你肯定应该知道这个网站 如果你想为 FAANG 等大型巨型科技公司的编码面试做练习，那么他们都会做**leetcoding**。
 
-You might think that I have made a typo in the above paragraph. No, I didn't. LeetCode has become this popular among people who target FAANG and those who are working on their problem solving skills. Taking part in contests on LeetCode has become common, and people call it leetcoding!
+你可能认为我在上面这段话中打错了字。不，我没有。LeetCode 在那些以 FAANG 为目标的人和那些正在努力提高解决问题的能力的人中已经变得如此受欢迎。参加 LeetCode 上的竞赛已经很普遍，人们称之为 leetcoding!
 
-Here, you can solve a lot of problems, and filter the problems by the lists, difficulty levels, status, and tags.
+在这里，你可以解决很多问题，并通过列表、难度等级、状态和标签来筛选问题。
 
 ![LeetCode ProblemSet1](https://www.freecodecamp.org/news/content/images/2022/06/tphf8k817fbz0vsge9d3.png)
 
-You can also choose problems regarding Arrays, Strings, Hash Tables, Dynamic Programming, and many other categories.
+你还可以选择有关数组、字符串、哈希表、动态规划编程和其他许多类别的问题。
 
 ![LeetCode ProblemSet2](https://www.freecodecamp.org/news/content/images/2022/06/0y0ov1fxzvxwiv5bglri.png)
 
-As I mentioned above, you can also take part in programming contests. The only thing that makes LeetCode different is that it is based on Algorithm practice. Yeah, LeetCode is not like any other coding website, because it focuses on algorithm practice alone.
+正如我上面提到的，你也可以参加编程比赛。唯一使 LeetCode 不同的是，它是基于算法练习的。是的，LeetCode 和其他编码网站不一样，因为它只关注算法练习。
 
-You do not need to provide the full code for solving a problem here, you just need to crack the solution by providing a valid algorithm using any popular language that can solve the problem.
+在这里，你不需要提供解决问题的完整代码，你只需要用任何流行的语言提供一个有效的算法来解决这个问题就可以了。
 
-You also get to see how your code performs among others, how much space and time it takes, and so on.
+你还可以看到你的代码在其他人中的表现，其实现的算法需要多少空间和时间，等等。
 
-Most importantly, LeetCode has an amazing discussion group where people talk about their problems, solutions, how to improve their algorithms, how to improve the efficiency of their code, and so on. This is one of the most powerful features of LeetCode.
+最重要的是，LeetCode 有一个惊人的讨论组，人们在那里谈论他们的问题、解决方案、如何改进他们的算法、如何提高他们代码的效率等等。这是 LeetCode 最强大的功能之一。
 
-One sad part about LeetCode is that you will not get every feature for free! Yeah, it's true. You have to pay for it monthly or yearly to unlock all its features. There are a lot of problems you will find locked on the website. You can not unlock them if you do not purchase the premium plan.
+LeetCode 的一个悲哀之处在于，你不会免费获得每一个功能！这一点是真的。是的，这是真的。你必须按月或按年付费才能解锁它的所有功能。有很多问题你会发现在网站上被锁定。如果你不购买高级计划，你就不能解锁它们。
 
 ![LeetCode pricing](https://www.freecodecamp.org/news/content/images/2022/06/tvww5ogj3eq5qw23ss8m.png)
 
-If you are just starting your algorithm journey on LeetCode, then actually you don't need to worry about their premium plans as the free version will be more than enough for you.
+如果你刚刚开始你在 LeetCode 上的算法之旅，那么实际上你不需要担心他们的高级计划，因为免费版本对你来说已经足够了。
 
-Later, if you want to become more serious, then paying for their premium subscription will be a big deal actually as you'll get a ton more features. This is very much helpful, and includes things like top interview questions, top FAANG questions, video explanations, and more.
+后来，如果你想变得更加认真，那么支付他们的高级订阅费用将是一个大问题，因为你将获得大量的更多的功能。这非常有帮助，包括像顶级面试问题、顶级 FAANG 问题、视频解释等等。
 
-You also get a nice profile page on LeetCode. You can check out mine [here](https://leetcode.com/FBA/).
+你还可以在 LeetCode 上得到一个漂亮的个人资料页。你可以看看[我的](https://leetcode.com/FBA/).
 
 ![My LeetCode profile](https://www.freecodecamp.org/news/content/images/2022/06/7rv0yyw75le21sndymru.png)
 

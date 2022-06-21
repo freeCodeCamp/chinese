@@ -269,37 +269,37 @@ SPOJ 是一个包含大量问题供人解决的网站。它声称有 315,000 名
 
 根据 GFG 的说法。
 
-> You can start solving problems with maximum submission and follow or check the submission of good coders here. Once you solved around 50-70 problems and build some confidence, you can participate in different contests.
+> 你可以尽最大努力提交的问题的解决方法，并关注或检查这里的优秀编码员的提交。一旦你解决了大约 50-70 个问题并建立了一些信心，你可以参加不同的比赛。
 
-Their problem set is also quite amusing.
+他们的问题集也是相当有趣的。
 
 ![SPOJ problem set](https://www.freecodecamp.org/news/content/images/2022/06/tm5g46f3qie8kr9aizwk.png)
 
-You will also get a nice user profile page here which you can use to showcase your problem solve skills.
+你还会在这里得到一个漂亮的用户资料页面，你可以用它来展示你解决问题的能力。
 
 ## 13\. [CodinGame](https://www.codingame.com/)
 
 ![CodinGame banner image](https://www.freecodecamp.org/news/content/images/2022/06/ybatrql4wgi7l45v0j57.png)
 
-In CodinGame, you can improve your coding skills with fun exercises in more than 25 programming languages.
+在 CodinGame，你可以通过超过 25 种编程语言的有趣练习来提高你的编码技能。
 
-It is a good website for intermediate and advanced software engineers to have fun while continuing to keep their skills sharp. Also, the challenges are gamified and the multiplayer access means that users can challenge friends and coworkers.
+对于中级和高级软件工程师来说，这是一个很好的网站，可以在继续保持其技能的同时获得乐趣。此外，挑战是游戏化的，多人访问意味着用户可以挑战朋友和同事。
 
 ## 14\. [GeeksforGeeks](https://www.geeksforgeeks.org/) (Popularly known as GFG)
 
 ![GeeksforGeeks banner Image](https://www.freecodecamp.org/news/content/images/2022/06/wo3e2tzi15abavql5c9w.png)
 
-You might wonder why I am including GFG in this article as it only provides algorithms, tutorials, and so on.
+你可能想知道为什么我把 GFG 包括在这篇文章中，因为它只提供算法、教程等。
 
-Well, that's not all they offer. Yes, GFG is pretty popular for its tutorials, algorithms, and so on, but they also provide a nice problem-solving platform [here](https://practice.geeksforgeeks.org/).
+嗯，这并不是他们提供的全部。是的，GFG 因其教程、算法等而相当受欢迎，但他们也提供了一个不错的问题[解决平台](https://practice.geeksforgeeks.org/)。
 
 ![practice GFG](https://www.freecodecamp.org/news/content/images/2022/06/m8g6z50xvemt64t4pwvw.png)
 
-You can also filter the problems as you see fit for yourself.
+你也可以按照你自己的想法来过滤问题。
 
 ![GFG filter](https://www.freecodecamp.org/news/content/images/2022/06/iyajkn39wvqiqzpk52ba.png)
 
-You will also get your profile page where you can show your progress in problem solving on the GFG website.
+您还将获得您的个人资料页面，您可以在 GFG 网站上展示您解决问题的进展。
 
 ## 15\. [Toph](https://toph.co/)
 

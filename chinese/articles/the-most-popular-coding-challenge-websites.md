@@ -251,23 +251,23 @@ Codewars 是一个针对所有编程水平的人的编码挑战网站。它声�
 
 在 Codewars，你会经常看到**Kata**和**Kyu**。
 
-> Kyu (or Kyū) indicates the number of degrees away from master level (Dan). This is why they count downward. Once you reach master level, we count upward. Black belts in martial arts are Dan level.
+> Kyu（或 Kyū）表示距离大师级（Dan）的距离。这就是为什么他们往下数。一旦你达到了大师级（dan），我们就会往上数。武术中的黑带是丹级（大师级）。
 
-> On Codewars, kata are code challenges focused on improving skill and technique. Some train programming fundamentals, while others focus on complex problem solving. Others are puzzles meant to test your creative problem solving, while others are based on real world coding scenarios.
+> 在 Codewars 中, kata 是以提高技能和技术为重点的代码挑战。有些是训练编程基础知识，而有些则侧重于复杂问题的解决。另一些是旨在测试你创造性解决问题的能力，而另一些则是基于现实世界的编码场景。
 
-If you want to know more about how the ranking system works on Codewars, then simply check their docs [here](https://docs.codewars.com/gamification/ranks/).
+如果你想知道更多关于 Codewars 的排名系统是如何工作的，那么只需查看他们的[文档](https://docs.codewars.com/gamification/ranks/).
 
-On Codewars you will also get a nice profile page like [mine](https://www.codewars.com/users/FBA). Keep in mind that I haven't solved that much on this website; therefore my profile page would seem empty. 😅
+在 Codewars 上，你也会得到一个像[我的](https://www.codewars.com/users/FBA)那样漂亮的个人资料页。请记住，我在这个网站上没有解决过那么多问题，因此我的个人资料页看起来很空。😅
 
-Additionally, I find their [leaderboard page](https://www.codewars.com/users/leaderboard) quite amusing.
+此外，我发现他们的[排行榜页面](https://www.codewars.com/users/leaderboard)相当有趣。
 
 ## 12\. [SPOJ](https://www.spoj.com/)
 
 ![SPOJ banner image](https://www.freecodecamp.org/news/content/images/2022/06/4awf6fpql913onx0111u.png)
 
-SPOJ is a website that contains huge problems for solving. It claims to have 315,000 registered users and over 20,000 problems.
+SPOJ 是一个包含大量问题供人解决的网站。它声称有 315,000 名注册用户和超过 20,000 个问题。
 
-According to GFG,
+根据 GFG 的说法。
 
 > You can start solving problems with maximum submission and follow or check the submission of good coders here. Once you solved around 50-70 problems and build some confidence, you can participate in different contests.
 

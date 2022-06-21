@@ -181,17 +181,17 @@ Kaggle 还提供排名和一个漂亮的用户资料。你可以查看[我的资
 
 ![CodeChef banner image](https://www.freecodecamp.org/news/content/images/2022/06/8ma2hdum4nd1eo8zmjek.png)
 
-CodeChef is another popular Indian website like [HackerRank](#2hackerrank) where you can solve a lot of problems, take part in contests, and so on.
+CodeChef 是另一个像[HackerRank](#2hackerrank)一样受欢迎的印度网站，在那里你可以解决很多问题，参加比赛，等等。
 
-You can filter the problems based on different categories and solve them using any of the most popular programming languages.
+你可以根据不同的类别过滤问题，并使用任何最流行的编程语言来解决它们。
 
-They also have a learning section on their website where you can learn how to solve problems in a systematic way. This is super helpful, especially for beginners.
+他们的网站上还有一个学习环节，你可以学习如何以系统的方式解决问题。这是很有帮助的，特别是对于初学者。
 
-In their learning section, you can choose self-learning, mentored learning, and doubt support. Some of them are free of charge, but in some courses, you have to pay before you can start them.
+在他们的学习部分，你可以选择自学、指导学习和疑问支持。其中一些是免费的，但在一些课程中，你必须在开始学习之前付费。
 
 ![mentor price](https://www.freecodecamp.org/news/content/images/2022/06/qyfzttpt7eq78zdqkdt9.png)
 
-This website also provides user ranking including the global ranking and country-wide ranking. They also provide a user profile on their website. You can check out mine [here](https://www.codechef.com/users/fahimfba) although I am not active on most of the websites right now. 😅
+这个网站还提供用户排名，包括全球排名和全国排名。他们还在网站上提供了一个用户档案。你可以查看[我的](https://www.codechef.com/users/fahimfba)，虽然我现在在大多数网站上都不活跃。😅
 
 ![codechef fba](https://www.freecodecamp.org/news/content/images/2022/06/vhq0agb1ijtdbsj3s7gu.png)
 
@@ -199,45 +199,45 @@ This website also provides user ranking including the global ranking and country
 
 ![AtCoder banner image](https://www.freecodecamp.org/news/content/images/2022/06/rqsw6hjecf5fqpqoxowp.png)
 
-> AtCoder is a programming contest website based in Japan. Makoto Soejima (rng\_58) who is one of the former admins and problem writers from Topcoder is a founding member of AtCoder.
+> AtCoder 是一个设在日本的编程竞赛网站。Makoto Soejima（rng_58）是 Topcoder 的前管理员和问题作者之一，他是 AtCoder 的创始成员。
 
-On this website, you can take part in different programming contests. They held regular programming contests on Saturdays and Sundays. Also, you can solve problems from previously held programming contests.
+在这个网站上，你可以参加不同的编程比赛。他们在周六和周日定期举行编程比赛。此外，你还可以解决以前举行的编程比赛的问题。
 
-I have seen a lot of people regularly participate in the programming contests and solve problems previously used in the contests regularly by solving problems on AtCoder. I also tried that for a while to check the efficiency, and truth to be told, it was really effective.
+我看到很多人经常参加编程比赛，并通过解决 AtCoder 上的问题定期解决以前比赛中使用的问题。我也试过一段时间来检查代码的效率，说实话，这确实很有效。
 
-Here you can also check the global ranking. Here you will also get your own profile page where you and others can see your global ranking and so on.
+在这里，你还可以查看全球排名。在这里，你也会得到你自己的个人资料页，你和其他人可以看到你的全球排名等等。
 
 ## 8\. [Topcoder](https://www.topcoder.com/)
 
 ![Topcoder banner image](https://www.freecodecamp.org/news/content/images/2022/06/89rcnewgpzfxbsb37inz.png)
 
-> Topcoder (formerly TopCoder) is a crowdsourcing company with an open global community of designers, developers, data scientists, and competitive programmers. Topcoder pays community members for their work on the projects and sells community services to corporate, mid-size, and small-business clients.
+> Topcoder（原名 TopCoder）是一家众包公司，拥有一个由设计师、开发人员、数据科学家和竞争性程序员组成的开放式全球社区。Topcoder 为社区成员的项目工作支付报酬，并向企业、中型和小型企业客户出售社区服务。
 
-Here you can earn, learn, and do a lot more in their MVP program. For earning, you can participate in five different tracks, become a copilot, become a reviewer, and also get a freelance contract gig through [Topcoder Gig Work](https://www.topcoder.com/community/member-programs/gigs).
+在这里，你可以赚钱，学习，并在他们的 MVP 计划中做更多的事情。为了赚钱，你可以参加五个不同的方向，成为副手（copilot），成为评论员（reviewer），还可以通过[Topcoder Gig Work](https://www.topcoder.com/community/member-programs/gigs)获得自由工作的合同。
 
-Personally, I feel this website is a little bit overwhelming for beginners. You can get more details in the YouTube videos I have made for you.
+我个人觉得，这个网站对初学者来说，有些难度。你可以在我为你制作的 YouTube 视频中获得更多细节。
 
 ## 9\. [Coderbyte](https://coderbyte.com/)
 
 ![Coderbyte banner image](https://www.freecodecamp.org/news/content/images/2022/06/5vm2yrbrsuhfi6lvsc1c.png)
 
-Coderbyte has a huge collection of problems that you can solve. They also offer a challenging library, starter courses, interview kits, career resources and so on.
+Coderbyte 有一个庞大的 你可以解决的题集，。他们还提供一个具有挑战性的库，包括入门课程，面试包，职业资源等。
 
-To get all the features, you need to buy a subscription plan from them. I personally liked their interview kit a lot.
+要获得所有的功能，你需要向他们购买一个订阅计划。我个人非常喜欢他们的面试包。
 
 ![Interview kits](https://www.freecodecamp.org/news/content/images/2022/06/qnrvl8ja8rqwb6zun4e0.png)
 
-Here you will also get a personal profile page.
+在这里，你还会得到一个个人简介页。
 
 ## 10\. [Project Euler](https://projecteuler.net/)
 
 ![Project Euler banner image](https://www.freecodecamp.org/news/content/images/2022/06/howuvtc16ehu8lqbw520.png)
 
-> Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve.
+> Project Euler 是一系列具有挑战性的数学/计算机编程问题，解决这些问题需要的不仅仅是数学上的见解。
 
-Project Euler is a great website for solving mathematical challenging problems. But solving a problem on this website requires more than just simple mathematical knowledge.
+Project Euler 是一个解决数学挑战问题的伟大网站。但解决这个网站上的问题需要的不仅仅是简单的数学知识。
 
-If you want to solve mathematical problems in a more analytical way, then this website will come in handy.
+如果你想用更多的方法来解决数学问题，那么这个网站就会派上用场。
 
 ![Problem set](https://www.freecodecamp.org/news/content/images/2022/06/94mguaui3nj6s7pcw942.png)
 
@@ -245,11 +245,11 @@ If you want to solve mathematical problems in a more analytical way, then this w
 
 ![Codewars banner image](https://www.freecodecamp.org/news/content/images/2022/06/ygf3uzjmuiycbu34fv5l.png)
 
-Codewars is a coding challenge website for people of all programming levels. It claims to have a community of over 3 million developers.
+Codewars 是一个针对所有编程水平的人的编码挑战网站。它声称有一个超过 300 万的开发者社区。
 
-One of the biggest benefits of this website is that it is highly focused on algorithms like LeetCode. Moreover, if your goal is to get very good at writing clean and efficient programs, then this website can be a great asset to you.
+这个网站最大的好处之一是，它跟 LeetCode 一样高度关注算法。此外，如果你的目标是非常擅长编写简洁高效的程序，那么这个网站可以成为你的一大财富。
 
-In Codewars, you will see **Kata** and **Kyu** a lot.
+在 Codewars，你会经常看到**Kata**和**Kyu**。
 
 > Kyu (or Kyū) indicates the number of degrees away from master level (Dan). This is why they count downward. Once you reach master level, we count upward. Black belts in martial arts are Dan level.
 

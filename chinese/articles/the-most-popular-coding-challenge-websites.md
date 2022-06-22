@@ -27,7 +27,7 @@
 
 请记住，这些网站对每个人都有用，无论你是编码挑战的新手还是专业的程序员等等。
 
-# Contents
+# 目录
 
 1. [beecrowd](#1beecrowdformerlyuri)
 2. [HackerRank](#2hackerrank)

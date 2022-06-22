@@ -11,9 +11,9 @@
 
 最重要的是，以高效的方式解决问题可以使你的工作效率大大提高。而解决具有挑战性的问题有助于我们做到这一点。
 
-## You can watch this complete video on YouTube as well if you like 🎥
+## 如果你喜欢，你也可以在 YouTube 上观看这个完整的 [视频](https://youtu.be/45wrQ-RAefI) 🎥
 
-## Why Should You Develop Your Problem-Solving Skills?
+## 为什么要发展你的问题解决能力?
 
 这些天来，技术正在迅速发展，我们几乎每天都能看到一些惊人的变化和改进。
 
@@ -51,9 +51,9 @@
 20. [Code Jam - Google's Coding Competitions](#20codejamgooglescodingcompetitions)
 21. [ICPC](#21icpcinternationalcollegiateprogrammingcontest)
 
-# Best Coding Challenge Websites
+# 最佳编码挑战网站
 
-## 1\. [beecrowd](https://www.beecrowd.com.br/judge/en/login) (Formerly URI)
+## 1. [beecrowd](https://www.beecrowd.com.br/judge/en/login) (Formerly URI)
 
 ![beecrowd banner](https://www.freecodecamp.org/news/content/images/2022/06/zwnoz97xawck4unafkbz.png)
 
@@ -75,7 +75,7 @@ beecrowd 非常适合那些刚刚开始的适合初学者，来解决编码难�
 
 你也可以看看我的 [beecrowd profile here](https://www.beecrowd.com.br/judge/en/profile/436965).
 
-## 2\. [HackerRank](https://www.hackerrank.com/)
+## 2. [HackerRank](https://www.hackerrank.com/)
 
 ![wla1ho0uoz9xuvp5iuwi](https://www.freecodecamp.org/news/content/images/2022/06/wla1ho0uoz9xuvp5iuwi.png)
 
@@ -97,7 +97,7 @@ HackerRank 为公司和开发人员提供不同的入口。如果你是为了解
 
 ![My HackerRank profile](https://www.freecodecamp.org/news/content/images/2022/06/sfp2rcqtx9b4fs8wv3m8.png)
 
-## 3\. [Codeforces](https://codeforces.com/)
+## 3. [Codeforces](https://codeforces.com/)
 
 ![Codeforces Banner](https://www.freecodecamp.org/news/content/images/2022/06/8wtc4xnpohe9yr6j2eij.png)
 
@@ -115,7 +115,7 @@ Codeforces 每周定期安排比赛，它们被分为第一组、第二组、第
 
 Codeforces 还在其网站上提供了一个很好的用户资料。你也可以查看[我的](https://codeforces.com/profile/FahimFBA)。
 
-## 4\. [LeetCode](https://leetcode.com/)
+## 4. [LeetCode](https://leetcode.com/)
 
 ![Leetcode banner](https://www.freecodecamp.org/news/content/images/2022/06/jk9l09bi3ku5d0op2x7j.png)
 
@@ -151,7 +151,7 @@ LeetCode 的一个悲哀之处在于，你不会免费获得每一个功能！�
 
 ![My LeetCode profile](https://www.freecodecamp.org/news/content/images/2022/06/7rv0yyw75le21sndymru.png)
 
-## 5\. [Kaggle](https://www.kaggle.com/)
+## 5. [Kaggle](https://www.kaggle.com/)
 
 ![Kaggle banner](https://www.freecodecamp.org/news/content/images/2022/06/28oqgu17gaiczlsv0k2t.png)
 
@@ -177,7 +177,7 @@ Kaggle 还提供排名和一个漂亮的用户资料。你可以查看[我的资
 
 ![FBA kaggle](https://www.freecodecamp.org/news/content/images/2022/06/lqcwsixdumi4bxc670s9.png)
 
-## 6\. [CodeChef](https://www.codechef.com/)
+## 6. [CodeChef](https://www.codechef.com/)
 
 ![CodeChef banner image](https://www.freecodecamp.org/news/content/images/2022/06/8ma2hdum4nd1eo8zmjek.png)
 
@@ -195,7 +195,7 @@ CodeChef 是另一个像[HackerRank](#2hackerrank)一样受欢迎的印度网站
 
 ![codechef fba](https://www.freecodecamp.org/news/content/images/2022/06/vhq0agb1ijtdbsj3s7gu.png)
 
-## 7\. [AtCoder](https://atcoder.jp/)
+## 7. [AtCoder](https://atcoder.jp/)
 
 ![AtCoder banner image](https://www.freecodecamp.org/news/content/images/2022/06/rqsw6hjecf5fqpqoxowp.png)
 
@@ -207,7 +207,7 @@ CodeChef 是另一个像[HackerRank](#2hackerrank)一样受欢迎的印度网站
 
 在这里，你还可以查看全球排名。在这里，你也会得到你自己的个人资料页，你和其他人可以看到你的全球排名等等。
 
-## 8\. [Topcoder](https://www.topcoder.com/)
+## 8. [Topcoder](https://www.topcoder.com/)
 
 ![Topcoder banner image](https://www.freecodecamp.org/news/content/images/2022/06/89rcnewgpzfxbsb37inz.png)
 
@@ -217,7 +217,7 @@ CodeChef 是另一个像[HackerRank](#2hackerrank)一样受欢迎的印度网站
 
 我个人觉得，这个网站对初学者来说，有些难度。你可以在我为你制作的 YouTube 视频中获得更多细节。
 
-## 9\. [Coderbyte](https://coderbyte.com/)
+## 9. [Coderbyte](https://coderbyte.com/)
 
 ![Coderbyte banner image](https://www.freecodecamp.org/news/content/images/2022/06/5vm2yrbrsuhfi6lvsc1c.png)
 
@@ -229,7 +229,7 @@ Coderbyte 有一个庞大的 你可以解决的题集，。他们还提供一个
 
 在这里，你还会得到一个个人简介页。
 
-## 10\. [Project Euler](https://projecteuler.net/)
+## 10. [Project Euler](https://projecteuler.net/)
 
 ![Project Euler banner image](https://www.freecodecamp.org/news/content/images/2022/06/howuvtc16ehu8lqbw520.png)
 
@@ -241,7 +241,7 @@ Project Euler 是一个解决数学挑战问题的伟大网站。但解决这个
 
 ![Problem set](https://www.freecodecamp.org/news/content/images/2022/06/94mguaui3nj6s7pcw942.png)
 
-## 11\. [Codewars](https://www.codewars.com/)
+## 11. [Codewars](https://www.codewars.com/)
 
 ![Codewars banner image](https://www.freecodecamp.org/news/content/images/2022/06/ygf3uzjmuiycbu34fv5l.png)
 
@@ -261,7 +261,7 @@ Codewars 是一个针对所有编程水平的人的编码挑战网站。它声�
 
 此外，我发现他们的[排行榜页面](https://www.codewars.com/users/leaderboard)相当有趣。
 
-## 12\. [SPOJ](https://www.spoj.com/)
+## 12. [SPOJ](https://www.spoj.com/)
 
 ![SPOJ banner image](https://www.freecodecamp.org/news/content/images/2022/06/4awf6fpql913onx0111u.png)
 
@@ -277,7 +277,7 @@ SPOJ 是一个包含大量问题供人解决的网站。它声称有 315,000 名
 
 你还会在这里得到一个漂亮的用户资料页面，你可以用它来展示你解决问题的能力。
 
-## 13\. [CodinGame](https://www.codingame.com/)
+## 13. [CodinGame](https://www.codingame.com/)
 
 ![CodinGame banner image](https://www.freecodecamp.org/news/content/images/2022/06/ybatrql4wgi7l45v0j57.png)
 
@@ -285,7 +285,7 @@ SPOJ 是一个包含大量问题供人解决的网站。它声称有 315,000 名
 
 对于中级和高级软件工程师来说，这是一个很好的网站，可以在继续保持其技能的同时获得乐趣。此外，挑战是游戏化的，多人访问意味着用户可以挑战朋友和同事。
 
-## 14\. [GeeksforGeeks](https://www.geeksforgeeks.org/) (Popularly known as GFG)
+## 14. [GeeksforGeeks](https://www.geeksforgeeks.org/) (Popularly known as GFG)
 
 ![GeeksforGeeks banner Image](https://www.freecodecamp.org/news/content/images/2022/06/wo3e2tzi15abavql5c9w.png)
 
@@ -301,7 +301,7 @@ SPOJ 是一个包含大量问题供人解决的网站。它声称有 315,000 名
 
 您还将获得您的个人资料页面，您可以在 GFG 网站上展示您解决问题的进展。
 
-## 15\. [Toph](https://toph.co/)
+## 15. [Toph](https://toph.co/)
 
 ![Toph banner image](https://www.freecodecamp.org/news/content/images/2022/06/5x4jgisa0oeaso2h2lu4.png)
 
@@ -311,7 +311,7 @@ SPOJ 是一个包含大量问题供人解决的网站。它声称有 315,000 名
 
 如果你是一个有解决问题能力的初学者，那么这个网站可以帮助你在开始你的问题解决之旅。
 
-## 16\. [LightOJ](https://lightoj.com/)
+## 16. [LightOJ](https://lightoj.com/)
 
 ![LightOJ banner image](https://www.freecodecamp.org/news/content/images/2022/06/anla94vgv2zsjw4a4woy.png)
 
@@ -338,7 +338,7 @@ SPOJ 是一个包含大量问题供人解决的网站。它声称有 315,000 名
 
 他们还为你提供了一个漂亮的个人资料页面，你可以看到你的活动。这可能看起来很奇怪，但有时我发现这个网站在某些情况下比 LeetCode 更好。此外，你在这个网站上所做的一切是完全免费的!
 
-## 17\. [Exercism](https://exercism.org/)
+## 17. [Exercism](https://exercism.org/)
 
 ![Exercism banner image](https://www.freecodecamp.org/news/content/images/2022/06/mik6ovwsb4vsej25gtfg.png)
 
@@ -352,7 +352,7 @@ Exercism 是完全免费的，它是由像我们这样的人建立的。你也�
 
 在他们的网站上解决问题对我来说似乎超级有趣。我真的很喜欢他们管理网站的方式。
 
-## 18\. [Online Judge](https://onlinejudge.org/) (Commonly known as UVa)
+## 18. [Online Judge](https://onlinejudge.org/) (Commonly known as UVa)
 
 ![Online Judge banner image](https://www.freecodecamp.org/news/content/images/2022/06/fat4pnmszr5xo5yqus73.png)
 
@@ -362,7 +362,7 @@ Exercism 是完全免费的，它是由像我们这样的人建立的。你也�
 
 他们的[网站](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8) 上有很多题集。我发现现在仍然有很多用户在使用这个网站。因此，我在这里提到了它。
 
-## 19\. [HackerEarth](https://www.hackerearth.com/)
+## 19. [HackerEarth](https://www.hackerearth.com/)
 
 ![HackerEarth banner image](https://www.freecodecamp.org/news/content/images/2022/06/xm0bhrc4ephex78tddj5.png)
 
@@ -376,7 +376,7 @@ Exercism 是完全免费的，它是由像我们这样的人建立的。你也�
 
 他们还为每个人提供了一个漂亮的用户资料。
 
-## 20\. [Code Jam - Google's Coding Competitions](https://codingcompetitions.withgoogle.com/codejam)
+## 20. [Code Jam - Google's Coding Competitions](https://codingcompetitions.withgoogle.com/codejam)
 
 ![Code Jam banner image](https://www.freecodecamp.org/news/content/images/2022/06/m8l89xfpsqt1yak0d94c.png)
 
@@ -388,7 +388,7 @@ Exercism 是完全免费的，它是由像我们这样的人建立的。你也�
 
 > 在数千名参赛者中，只有前 25 名将前往世界总决赛，争夺世界冠军头衔和高达 15000 美元的现金奖励。而且还会有很多其他的奖品--排名前 1000 名的参赛者将赢得一件独家的 Code Jam 2022 的 T 恤衫。
 
-## 21\. [ICPC](https://icpc.global/) - International Collegiate Programming Contest
+## 21. [ICPC](https://icpc.global/) - International Collegiate Programming Contest
 
 ![ICPC banner image](https://www.freecodecamp.org/news/content/images/2022/06/m8w6ezori7cpgiytzxmi.png)
 

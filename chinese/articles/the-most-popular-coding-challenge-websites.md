@@ -305,145 +305,144 @@ SPOJ 是一个包含大量问题供人解决的网站。它声称有 315,000 名
 
 ![Toph banner image](https://www.freecodecamp.org/news/content/images/2022/06/5x4jgisa0oeaso2h2lu4.png)
 
-Competitive programmers participate in programming contests and solve many problems on this website. This website is kind of special to the Bangladeshi people as the Bangladeshi universities arrange many programming contests through it.
+有竞争力的程序员参加编程比赛，并在这个网站上解决许多问题。这个网站对孟加拉国人来说有点特别，因为孟加拉国的大学通过它安排了许多编程比赛。
 
-You can solve problems in different categories on this website, and they also offer you a nice profile page. They also provide rankings based on your performance in the programming contests.
+你可以在这个网站上解决不同类别的问题，他们还为你提供一个漂亮的个人资料页面。他们还根据你在编程比赛中的表现提供排名。
 
-If you are a complete beginner in problem solving, then this website can help you a lot in starting your problem solving journey.
+如果你是一个有解决问题能力的初学者，那么这个网站可以帮助你在开始你的问题解决之旅。
 
 ## 16\. [LightOJ](https://lightoj.com/)
 
 ![LightOJ banner image](https://www.freecodecamp.org/news/content/images/2022/06/anla94vgv2zsjw4a4woy.png)
 
-In LightOJ, you can solve a lot of categorized problems. It is highly based on solving algorithmic problems. Their problems are categorized as below:
+在 LightOJ 中，你可以解决很多分类的问题。它是高度基于解决算法问题的。他们的问题分类如下:
 
-- LightOJ Volumes
-- Warm-Up
-- Advanced Search Techniques
-- Database
-- Data Structures
-- Divide And Conquer
-- Dynamic Programming
-- Fast Fourier Transform
-- Flow/Matching
-- Game Theory
-- Geometry
-- Graph Theory
+- LightOJ Volumes （卷轴）
+- Warm-Up （热身）
+- Advanced Search Techniques （高级搜索技术）
+- Database （数据库）
+- Data Structures （数据结构）
+- Divide And Conquer （分而治之）
+- Dynamic Programming （动态规划）
+- Fast Fourier Transform （快速傅里叶变换）
+- Flow/Matching （流程/匹配）
+- Game Theory （游戏理论）
+- Geometry （纹理）
+- Graph Theory （图论）
 - Greedy
-- Math
-- Matrix
-- Parsing/Grammar
-- Recursion/Branch and Bound
-- String
+- Math （数学）
+- Matrix （矩阵）
+- Parsing/Grammar （解析/语法）
+- Recursion/Branch and Bound  （递归/分支和绑定）
+- String （字符串）
 
-They also provide you with a nice profile page where you can see your activities. It might seem odd, but sometimes I find this website better than LeetCode in some cases. Moreover, everything you do on this website is completely free of cost!
+他们还为你提供了一个漂亮的个人资料页面，你可以看到你的活动。这可能看起来很奇怪，但有时我发现这个网站在某些情况下比 LeetCode 更好。此外，你在这个网站上所做的一切是完全免费的!
 
 ## 17\. [Exercism](https://exercism.org/)
 
 ![Exercism banner image](https://www.freecodecamp.org/news/content/images/2022/06/mik6ovwsb4vsej25gtfg.png)
 
-You can develop your programming fluency in 57 different programming languages with their unique blend of learning, practice and mentoring.
+你可以通过他们独特的学习、实践和指导的下来发展你在 57 种不同的编程语言中的编程流畅度。
 
-Exercism is completely free of cost, and it's built by people like us. You can also contribute or donate to them to support their amazing service for free.
+Exercism 是完全免费的，它是由像我们这样的人建立的。你也可以向他们捐款或捐物，以支持他们免费的良好服务。
 
-They also provide a very nice user profile page which also shows everything you have done on their website, starting from publishing to maintaining.
+他们还提供了一个非常漂亮的用户资料页面，也显示了你在他们网站上所做的一切，从发布到维护。
 
-On their [tracks](https://exercism.org/tracks) page, you will get a list of 57 different programming languages where you can start your practice.
+在他们的 [曲目（tracks）](https://exercism.org/tracks)页面上，你会得到一个 57 种不同编程语言的列表，你可以在这里开始练习。
 
-Solving problems on their website seems super fun to me. I really liked the way they manage their website.
+在他们的网站上解决问题对我来说似乎超级有趣。我真的很喜欢他们管理网站的方式。
 
 ## 18\. [Online Judge](https://onlinejudge.org/) (Commonly known as UVa)
 
 ![Online Judge banner image](https://www.freecodecamp.org/news/content/images/2022/06/fat4pnmszr5xo5yqus73.png)
 
-This is one of the oldest websites out there for solving programming-related problems. I still find it to be a very hard website for beginners. The UI and navigation of the website are also very old.
+这是一个最古老的解决编程相关问题的网站之一。我仍然觉得它是一个对初学者来说非常难的网站。该网站的用户界面和导航也非常老旧。
 
-All of the questions come with a PDF here. You need to download the PDF file of the problem if you want to solve problems as they do not offer a direct preview of the questions.
+这里所有的问题都有一个 PDF 文件。如果你想解决问题，你需要下载问题的 PDF 文件，因为他们不提供问题描述的直接预览。
 
-They have a lot of problemsets on their [website](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8). I still find a lot of users using this website nowadays. Therefore, I mentioned it here.
+他们的[网站](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8) 上有很多题集。我发现现在仍然有很多用户在使用这个网站。因此，我在这里提到了它。
 
 ## 19\. [HackerEarth](https://www.hackerearth.com/)
 
 ![HackerEarth banner image](https://www.freecodecamp.org/news/content/images/2022/06/xm0bhrc4ephex78tddj5.png)
 
-> HackerEarth is an Indian software company headquartered in San Francisco, US, that provides enterprise software that helps organisations with their technical hiring needs. HackerEarth is used by organizations for technical skill assessment and remote video interviewing.
+> HackerEarth 是一家印度软件公司，但总部设在美国旧金山，提供企业软件，帮助组织满足技术招聘需求。HackerEarth 被用来进行技术技能评估和远程视频面试。
 
-You can practice your problem solving skills from their [practice](https://www.hackerearth.com/practice/) page. Also, you can participate in programming challenges and hackathons from their [challenges](https://www.hackerearth.com/challenges/) page.
+你可以从他们的 [实践](https://www.hackerearth.com/practice/)页面练习你的问题解决技能。此外，你还可以从他们的 [挑战](https://www.hackerearth.com/challenges/) 页面参与编程挑战和黑客马拉松。
 
 ![HackerEarth challenges page](https://www.freecodecamp.org/news/content/images/2022/06/fj62qgttmbqgatvcbdzt.png)
 
-Their [interview prep](https://www.hackerearth.com/practice/interviews/) section is quite amazing. You can take part in the mock assessments for the Adobe Coding Test, Facebook Coding Test, and Amazon Coding Test.
+他们的[面试准备](https://www.hackerearth.com/practice/interviews/)部分相当惊人。你可以参加 Adobe Coding Test、Facebook Coding Test 和 Amazon Coding Test 的模拟评估。
 
-They also provide a nice user profile for everyone.
+他们还为每个人提供了一个漂亮的用户资料。
 
 ## 20\. [Code Jam - Google's Coding Competitions](https://codingcompetitions.withgoogle.com/codejam)
 
 ![Code Jam banner image](https://www.freecodecamp.org/news/content/images/2022/06/m8l89xfpsqt1yak0d94c.png)
 
-> Google Code Jam is an international programming competition hosted and administered by Google. The competition began in 2003. The competition consists of a set of algorithmic problems which must be solved in a fixed amount of time.
+> Google  Code Jam 是一个由谷歌主办和管理的国际编程比赛。该比赛开始于 2003 年。比赛由一组算法问题组成，必须在固定的时间内解决。
 
-If you are interested in taking part in the Code Jam contests, then their [archive section](https://codingcompetitions.withgoogle.com/codejam/archive) is full of amazing resources for you where you can get the earlier questions and practice them.
+如果你有兴趣参加 Code Jam 竞赛，那么他们的[档案部分](https://codingcompetitions.withgoogle.com/codejam/archive)，为你提供了大量的资源，你可以在那里获得早期的问题并进行练习。
 
-They also offer a lot of prize money in their contests. An example can be:
+他们的比赛也提供了很多奖金。一个例子可以是:
 
-> Out of thousands of participants, only the top 25 will head to the World Finals to compete for the title of World Champion and cash prizes of up to $15,000. And there will be plenty of other prizes to go around — the top 1,000 competitors will win an exclusive Code Jam 2022 t-shirt.
+> 在数千名参赛者中，只有前 25 名将前往世界总决赛，争夺世界冠军头衔和高达 15000 美元的现金奖励。而且还会有很多其他的奖品--排名前 1000 名的参赛者将赢得一件独家的 Code Jam 2022 的 T 恤衫。
 
 ## 21\. [ICPC](https://icpc.global/) - International Collegiate Programming Contest
 
 ![ICPC banner image](https://www.freecodecamp.org/news/content/images/2022/06/m8w6ezori7cpgiytzxmi.png)
 
-ICPC is one of the most prestigious programming contests in the world.
+ICPC 是世界上最著名的编程竞赛之一。
 
-> The International Collegiate Programming Contest, known as the ICPC, is an annual multi-tiered competitive programming competition among the universities of the world.
+> 国际大学生程序设计竞赛，被称为 ICPC，是世界各大学之间一年一度的多层次竞争性编程竞赛。
+谁有资格参加 ICPC？
 
-Who is eligible for ICPC?
+> ACM/ICPC 是一个以团队为基础的比赛，对参赛者有一定的要求：只有大专生和不超过 24 岁的研究生一年级学生才有资格；每个团队由三名成员组成。一个人最多可以参加两次决赛，最多可以参加五次区域赛。
 
-> ACM/ICPC is a team-based competition with certain requirements to the participants: only post-secondary students and first-year post-graduate students no older than 24 are eligible; each team consists of three members. One can participate in the finals no more than twice and in the regionals no more than five times.
+# 个人观点
 
-# Personal Opinion
+如果你是一个完全的初学者，那么从[beecrowd](#1beecrowdformerlyuri) 开始。如果你想在学习特定编程语言的同时开始解决问题，那么就从[HackerRank](#2hackerrank) 开始。
 
-If you are a complete beginner, then start with [beecrowd](#1beecrowdformerlyuri). If you want to start problem solving along with learning a specific programming language, then start with [HackerRank](#2hackerrank).
+在 beecrowd 或 HackerRank 上解决了差不多 50 多个问题后，开始在[Codeforces](#3codeforces)上解决问题。第一次，你无法在 Codeforces 上的编程竞赛中做得那么好，这完全没关系,这是很自然。您只需要定期尝试。这些问题对你来说可能相当难，但在不断解决问题后会一天天变得容易。
 
-After solving almost 50+ problems on beecrowd or HackerRank, start solving problems on [Codeforces](#3codeforces). The first time, you won't be able to do that well in the programming contests on Codeforces, and that is completely okay – it is natural. You just need to try regularly. The questions might seem pretty hard to you, but it'll become easier day by day after solving problems continuously.
+你可以在开始在 Codeforces 上解题的那天参加[AtCoder](#7atcoder)。你也可以试试[CodeChef](#6codechef)，但我觉得在这种情况下 Codeforces 已经足够了。
 
-You can participate in [AtCoder](#7atcoder) the day you start solving problems on Codeforces. You can also try [CodeChef](#6codechef), but I find Codeforces is enough in this case.
+这将为[ICPC](#21icpcinternationalcollegiateprogrammingcontest) 和[Code Jam](#20codejamgooglescodingcompetitions)做准备。不要忘记解决 Code Jam 上的早期问题。
 
-This will prepare you for the [ICPC](#21icpcinternationalcollegiateprogrammingcontest) and [Code Jam](#20codejamgooglescodingcompetitions). Don't forget to solve the earlier questions on Code Jam.
+如果你想获得数据科学方面的专业知识，那么只要去参加[Kaggle](#5kaggle)。
 
-If you want to gain expertise in Data Science, then simply go for [Kaggle](#5kaggle).
+如果你想获得算法方面的专业知识，那么[LeetCode](#4leetcode)和[LightOJ](#16lightoj)是你唯一的地方。[GeeksforGeeoks](#14geeksforgeekspopularlyknownasgfg)在这方面也会帮助你。
 
-If you want to gain expertise in Algorithms, then [LeetCode](#4leetcode), and [LightOJ](#16lightoj) are your only places. [GeeksforGeeoks](#14geeksforgeekspopularlyknownasgfg) will also help you in this aspect.
+对于 LeetCode，从[Nick White](https://twitter.com/nicholaswwhite)获得一些帮助。他的[LeetCode 解决方案](https://www.youtube.com/playlist?list=PLU_sdQYzUj2keVENTP0a5rdykRSgg9Wp-)播放列表到今天为止有 189 个视频，你会从他那里学到很多东西，相信我!
 
-For LeetCode, get some help from [Nick White](https://twitter.com/nicholaswwhite). His [LeetCode Solution](https://www.youtube.com/playlist?list=PLU_sdQYzUj2keVENTP0a5rdykRSgg9Wp-) playlist has 189 videos as of today, and you will learn a lot from him, trust me!
+另一个很好的资源是[Neetcode](https://neetcode.io/)，在这里你可以从 LeetCode 获得策划的问题和它们的解决方案。官方的[Neetcode 的 YouTube 频道](https://www.youtube.com/c/NeetCode/featured)也是一个很好的频道。
 
-Another good resource is [Neetcode](https://neetcode.io/) where you can get curated problems and their solutions from LeetCode. The official [YouTube channel of Neetcode](https://www.youtube.com/c/NeetCode/featured) is also a great channel.
+# 其他网站
 
-# Additional Websites
-
-You might find the websites below useful too!
+你可能会发现下面的网站也很有用!
 
 ## ⭐ [StopStalk](https://www.stopstalk.com/)
 
 ![StopStalk banner image](https://www.freecodecamp.org/news/content/images/2022/06/6ixwem6zdmrn6bw29d32.png)
 
-This website retrieves your friends' recent submissions from various competitive websites (Such as Codeforces, SPOJ, HackerRank, Timus, and so on) and shows all of them in one place. You can check my StopStalk profile from [here](https://www.stopstalk.com/user/profile/FBA).
+这个网站从各种竞争性网站（如 Codeforces、SPOJ、HackerRank、Timus 等）检索你的朋友最近提交的作品，并在一个地方显示所有的作品。你可以从[这里](https://www.stopstalk.com/user/profile/FBA) 查看我的 StopStalk 简介。
 
 ## ⭐ [CodersRank](https://codersrank.io/)
 
 ![CodersRank banner image](https://www.freecodecamp.org/news/content/images/2022/06/83l29mbplkwx2pf535bi.png)
 
-This is a platform made to help developers in job-seeking and professional growth. Here, your CodersRank profile serves as a proven track record of your coding knowledge.
+这是一个为帮助开发人员寻找工作和职业发展而建立的平台。在这里，你的 CodersRank 档案可以作为你的编码知识的证明记录。
 
-You have to connect your private and public repositories here from GitHub to generate your true CodersRank profile. You can also check my CodersRank profile from [here](https://profile.codersrank.io/user/fahimfba/).
+你必须在这里从 GitHub 连接你的私人和公共存储库，以生成你真正的 CodersRank 简介。你也可以从 [这里](https://profile.codersrank.io/user/fahimfba/) 查看我的 CodersRank 简介。
 
-# Conclusion
+# 总结
 
-Thank you for reading this entire article. I hope that it helps you a lot in your problem solving journey, whether you are an experienced developer or just starting your learning journey.
+感谢你阅读这整篇文章。我希望它对你的问题解决之旅有很大的帮助，无论你是一个有经验的开发者还是刚刚开始你的学习之旅。
 
-Also, if you want to share your valuable feedback or want to chat with me, then my [Twitter](https://twitter.com/Fahim_FBA) and [LinkedIn](https://www.linkedin.com/in/fahimfba/) accounts are available for you.
+另外，如果你想分享你的宝贵反馈，或者想和我聊天，那么我的[Twitter](https://twitter.com/Fahim_FBA)和[LinkedIn](https://www.linkedin.com/in/fahimfba/)账户都可以为你提供。
 
-If you are interested in open-source, then you can follow me on [GitHub](https://github.com/FahimFBA) as I am very active there.
+如果你对开源感兴趣，那么你可以在[GitHub](https://github.com/FahimFBA)上关注我，因为我在那里非常活跃。
 
-If you like programming-related content, then I would also recommend that you subscribe to my [YouTube channel](https://www.youtube.com/channel/UCG97GCUifMS2Vm28tgXQi0Q) as I try my best to publish quality content there. :)
+如果你喜欢编程相关的内容，那么我也建议你订阅我的[YouTube 频道](https://www.youtube.com/channel/UCG97GCUifMS2Vm28tgXQi0Q)，因为我尽力在那里发布高质量的内容。:)
 
-BONUS: You can check my [website](https://fahimbinamin.com/), [Instagram](https://www.instagram.com/fahimbinamin) or my [development highlights](https://www.polywork.com/fahimbinamin) also!
+提示: 你也可以查看我的[网站](https://fahimbinamin.com/)、[Instagram](https://www.instagram.com/fahimbinamin)或我的[发展亮点](https://www.polywork.com/fahimbinamin)!

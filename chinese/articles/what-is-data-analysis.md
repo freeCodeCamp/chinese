@@ -33,12 +33,12 @@
     3.  [步骤三：清洗数据](#step-3)
     4.  [步骤四：分析数据](#step-4)
     5.  [步骤五：分享结果](#step-5)
-5.  [What skills are required for data analysis?](#skills)
-    1.  [A good grasp of maths and statistics](#maths)
-    2.  [Knowledge of SQL and Relational Databases](#sql)
-    3.  [Knowledge of a programming language](#programming-language)
-    4.  [Knowledge of data visualization tools](#data-viz)
-    5.  [Knowledge of Excel](#excel)
+5.  [数据分析需要什么技能?](#skills)
+    1.  [熟练掌握数学和统计学知识](#maths)
+    2.  [了解SQL和关系型数据库](#sql)
+    3.  [掌握一门编程语言](#programming-language)
+    4.  [熟悉数据可视化的工具](#data-viz)
+    5.  [了解Excel](#excel)
 
 ## 什么是数据？数据的含义和定义
 
@@ -249,44 +249,44 @@
 
 这一步将影响企业的决策和未来选择。
 
-## What Skills Are Required For Data Analysis?
+## 数据分析需要什么技能?
 
-### A Good Grasp Of Maths And Statistics
+### 熟练掌握数学和统计学知识
 
-The amount of maths you will use as a data analyst will vary depending on the job. Some jobs may require working with maths more than others.
+作为一名数据分析师，你使用的数学知识量将根据工作的不同而不同。有些工作可能比其他工作更需要使用数学。
 
-You don’t necessarily need to be a math wizard, but with that said, having at least a fundamental understanding of math basics can be of great help.
+你不一定非要成为一个数学奇才，但对数学基础知识的基本了解，将对你有很大帮助。
 
-Here are some math courses to get you started:
+这里有一些数学课程可以让你起步：
 
--   [College Algebra – Learn College Math Prerequisites with this Free 7-Hour Course](https://www.freecodecamp.org/news/learn-algebra-to-improve-your-programming-skills/)
--   [Precalculus – Learn College Math Prerequisites with this Free 5-Hour Course](https://www.freecodecamp.org/news/precalculus-learn-college-math-prerequisites-with-this-free-5-hour-course/)
--   [Math for Programmers Course](https://www.freecodecamp.org/news/maths-for-programmers/)
+-   [大学代数 – 免费大学数学前置课程（7小时）](https://www.freecodecamp.org/news/learn-algebra-to-improve-your-programming-skills/)
+-   [微积分先修课 – 免费大学数学前置课程（7小时）](https://www.freecodecamp.org/news/precalculus-learn-college-math-prerequisites-with-this-free-5-hour-course/)
+-   [程序员的数学课](https://www.freecodecamp.org/news/maths-for-programmers/)
 
-Data analysts need to have good knowledge of statistics and probability for gathering and analyzing data, figuring out patterns, and drawing conclusions from the data.
+数据分析师需要掌握统计学和概率知识，以收集和分析数据，找出其中的模式，并从数据中得出结论。
 
-To get started, take an intro to statistics course, and then you can move on to more advanced topics:
+要想开始学习，可以先从统计学入门课程入手，然后继续学习进阶课题。
 
--   [Learn College-level Statistics in this free 8-hour course](https://www.freecodecamp.org/news/free-statistics-course/)
--   [If you want to learn Data Science, take a few of these statistics classes](https://www.freecodecamp.org/news/if-you-want-to-learn-data-science-take-a-few-of-these-statistics-classes-9bbabab098b9#.esdiw8wnk)
+-   [学习大学统计学（8小时免费课程）](https://www.freecodecamp.org/news/free-statistics-course/)
+-   [如果想学习数据科学，请上这几堂统计课](https://www.freecodecamp.org/news/if-you-want-to-learn-data-science-take-a-few-of-these-statistics-classes-9bbabab098b9#.esdiw8wnk)
 
-### Knowledge of SQL and Relational Databases
+### 了解SQL和关系型数据库
 
-Data analysts need to know how to interact with relational databases to extract data.
+数据分析师需要了解如何运用数据库以提取数据。
 
-A database is an electronic storage localization for data. Data can be easily retrieved and searched through.
+数据库是储存数据的电子空间，其中的数据可以很容易地被检索和查询。
 
-A relational database is structured in format and all data items stored have pre-defined relationships with each other.
+关系型数据库是结构化的，所有存储的数据项目都有预先定义的相互关系。
 
-SQL stands for **S**tructured **Q**uery **L**anguage and is the language used for querying and interacting with relational databases.
+SQL是**S**tructured **Q**uery **L**anguage（结构化查询语言）的缩写，是用于查询和与关系型数据库互动的语言。
 
-By writing SQL queries you can perform CRUD (Create, Read, Update, and Delete) operations on data.
+通过编写SQL查询语句，你可以对数据进行CRUD（Create（创建）、Read（读取）、Update（更新）和Delete（删除））操作。
 
-To learn SQL, check out the following resources:
+要想学习SQL，可以参考以下资源。
 
--   [SQL Commands Cheat Sheet – How to Learn SQL in 10 Minutes](https://www.freecodecamp.org/news/learn-sql-in-10-minutes/)
--   [Learn SQL – Free Relational Database Courses for Beginners](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/)
--   [Relational Database Certification](https://www.freecodecamp.org/learn/relational-database/)
+-   [SQL命令小抄--如何在10分钟内学会SQL](https://www.freecodecamp.org/news/learn-sql-in-10-minutes/)
+-   [学习SQL - 初学者的免费关系数据库课程](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/)
+-   [关系型数据库认证](https://www.freecodecamp.org/learn/relational-database/)
 
 ### Knowledge Of A Programming Language
 

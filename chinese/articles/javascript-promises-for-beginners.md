@@ -1,66 +1,66 @@
-> -  原文地址：[JavaScript Promises for Beginners](https://www.freecodecamp.org/news/javascript-promises-for-beginners/)
-> -  原文作者：[Spruce Emmanuel](https://www.freecodecamp.org/news/author/spruce/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[JavaScript Promises for Beginners](https://www.freecodecamp.org/news/javascript-promises-for-beginners/)
+> - 原文作者：[Spruce Emmanuel](https://www.freecodecamp.org/news/author/spruce/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![JavaScript Promises for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/Web-capture_11-5-2022_134720_127.0.0.1-1.jpeg)
 
-In JavaScript, a promise is a placeholder (proxy) for the value of an ongoing operation.
+在 JavaScript 中，promise 是一个正在进行的操作的值的占位符（代理）。
 
-You typically use a promise to manage situations where you must wait for the outcome of an operation. For example, uploading files to the server and awaiting the response of an API call, or just asking the user to choose a file from their computer.
+你通常使用一个 promise 来管理你必须等待操作结果的情况。例如，将文件上传到服务器并等待 API 调用的响应，或者只是要求用户从他们的计算机中选择一个文件。
 
-You will learn about JavaScript promises in this article by building a real-world example app like the one below:
+在这篇文章中，你将通过建立一个像下面这样的真实世界的例子应用来学习 JavaScript 的 promise:
 
 ![Web-capture_11-5-2022_134720_127.0.0.1](https://www.freecodecamp.org/news/content/images/2022/05/Web-capture_11-5-2022_134720_127.0.0.1.jpeg)
 
 ## What is a Promise?
 
-A promise is simply a function that returns an `Object` which you can attach callbacks to.
+promise 是一个简单的函数，它返回一个你可以回调的 `Object(对象)`。
 
-The callbacks attached to a promise object will only get called when the operation completes. The callbacks will have to wait until the operation is ****fulfilled**** or **rejected**:
+promise 对象上的回调只有在操作完成时才会被调用。在之前，回调将不得不等待，直到操作被****fulfilled**** 或**rejected**:
 
 ```js
 fetch(`some_api_url`).then((response) => {
-  // Everything here will wait the fetch operation to complete
+  // 这里的将等待获取操作的完成
 });
 ```
 
-Before a promise finally settles (the promise either fulfills or gets rejected) it has to go through different states:
+在一个 promise 最终确定之前（ promise 要么实现（fulfills），要么被拒绝（rejected）），它必须经历不同的状态:
 
 | State | Description | Callbcak |
 | --- | --- | --- |
-| pending | Means the operation is still running and the promise is pending | \- |
-| fulfilled | The operation was completed and it was successful | `.then()` |
-| rejected | The operation was completed but there was an error | `.catch()` |
-| settled | The promise has either resolved or rejected, either way this callback gets called | `.finally()` |
+| pending | 意味着操作仍在运行，promise 正在等待中 | \- |
+| fulfilled | 操作已经完成，并且很成功 | `.then()` |
+| rejected | 操作已完成，但出现了一个错误  | `.catch()` |
+| settled | promise 要么已经 fulfilled ，要么被 rejected，无论如何，这个回调都会被调用 | `.finally()` |
 
-When a promise is created the initial state is pending. Then depending on the output of the operation the promise either gets fulfilled or rejected.
+当一个 promise 被创建时，初始状态是待定（pending）。然后根据操作的输出，promise 要么被 fulfilled ，要么被 rejected。
 
-From the table above you can easily see the callback that will get called depending on each state of the Promise:
+从上面的表格中，你可以很容易地看到根据 Promise 的每个状态而被调用的回调:
 
 ```js
 fetch(`some_api_url`).then((response) => {
-  // This will get called when the promise fulfills
+  // 当 promise fulfilled时，这将被调用
 }).catch((error) => {
-  // This will get called when the promise is rejected
+  // 当 promise rejected时，这将被调用
 }).finally(() => {
-  // This will get called all the time
+  // 这将在最后面调用
 })
 ```
 
-## How to Use Promises in JavaScript
+## 如何在 JavaScript 中使用 Promises
 
-Now that you have learned what a promise it, let's demonstrate how you can use promises in JavaScript by building the movie search app we saw earlier.
+现在你已经了解了什么是 promise，让我们通过建立我们之前看到的电影搜索应用来演示如何在 JavaScript 中使用 promise。
 
-A basic movie search app should have an input field where users can search for their favorite movies. It should also have a UI to display some basic info about the movie they searched for.
+一个基本的电影搜索应用程序应该有一个输入字段，用户可以在那里搜索他们喜欢的电影。它还应该有一个用户界面来显示他们所搜索的电影的一些基本信息。
 
-Let's get started by creating the **HTML**.
+让我们从创建**HTML**开始。
 
-### How to write the HTML
+### 如何编写 HTML
 
-For the sake of this tutorial and to display live examples, I am going to be using **Codepen,** but you can use your favorite code editor.
+为了本教程的目的和提供实际的例子，我将使用 **Codepen**，但你可以使用你喜欢的代码编辑器。
 
-Create an `index.html` file and add the following code:
+创建一个`index.html`文件并添加以下代码:
 
 ```html
   <div class="wrapper">
@@ -108,11 +108,11 @@ Create an `index.html` file and add the following code:
     </div>
 ```
 
-Above we just created the skeleton of our movie app. So now let's breath some life into it with some CSS:
+上面我们只是创建了我们的电影应用程序的基础。所以现在让我们用一些 CSS 给它注入一些活力:
 
-### How to fetch a movie
+### 如何获取电影
 
-To fetch our movie, we are going to use the TVMAZE API. Create the `main.js` file and add the following code:
+为了获取我们的电影，我们将使用 TVMAZE 的 API。创建`main.js`文件并添加以下代码:
 
 ```js
 const get_movie = (value = "Game of thrones") => {
@@ -122,9 +122,9 @@ const get_movie = (value = "Game of thrones") => {
 };
 ```
 
-We created a function `get_movie(value = "Game of thrones")` that uses the JavaScript fetch API. We use it to make a `GET` request to our movie API endpoint.
+我们创建了一个函数`get_movie(value = "Game of thrones")`，使用了 JavaScript fetch API。我们用它来向我们的电影 API 端点（endpoint）发出`GET`请求。
 
-The fetch API returns a promise. To use the response from the API we attach the `.then()` callback in which we pass the `response.json()` into a new function `create_UI()`. Let's go ahead and create the `create_UI` function:
+fetch API 会返回一个 promise 。为了使用 API 的响应，我们使用了`.then()`回调，其中我们将`response.json()`传入一个新的函数`create_UI()`。让我们继续创建`create_UI`函数:
 
 ```js
 const create_UI = (data) => {
@@ -151,9 +151,9 @@ const create_UI = (data) => {
 };
 ```
 
-The above function, as the name implies, helps us create the UI for our movie app. But of course we still need a way to collect the movie name from the users, so let's fix that.
+上述函数，顾名思义，帮助我们为我们的电影应用程序创建用户界面。但当然，我们仍然需要一种方法来收集用户的电影名称。
 
-The first thing we need to do is to add an `onsubmit` event handler to our HTML form:
+我们需要做的第一件事是给我们的 HTML 表单（form）添加一个`onsubmit`事件处理程序:
 
 ```html
 <form onsubmit="search(event)" id="header_form">
@@ -162,7 +162,7 @@ The first thing we need to do is to add an `onsubmit` event handler to our HTML 
 </form>
 ```
 
-Now in our `main.js` file we can handle what happens when we submit the form:
+现在在我们的`main.js`文件中，我们通过提交表单时发生的事件触发处理:
 
 ```js
 // handle form submit
@@ -174,15 +174,15 @@ const search = (event) => {
 };
 ```
 
-Anytime the user submits the form we get the value they entered in the search box and we pass it to the `get_movie(value = "Game of thrones")` function we created earlier.
+当用户提交表单时，我们就会得到他们在搜索框中输入的值，并将其传递给我们先前创建的 `get_movie(value = "Game of thrones")`函数。
 
-## Promise Chaining
+## Promise 链
 
-Unlike what we have been seeing in our previous examples, the `.then()` callback is not really the end. That's because when you return value of a promise you get another promise. This becomes very useful when you want to run a series of asynchronous operations in order.
+与我们在之前的例子中看到的不同，`.then()`回调并不是真正的结束。这是因为当你返回一个 `promise` 的值时，你会得到另一个 `promise`。当你想按顺序运行一系列的异步操作时，这就变得非常有用。
 
-For example, our movie API doesn't just return info about a movie, it also returns information about all the episodes. Let's say that we really don't want to display all the episodes in Game of Thrones, we only want the first four (4) episodes.
+例如，我们的电影 API 不只是返回一部电影的信息，它还返回所有剧集的信息。比方说，我们真的不想显示《权力的游戏》中的所有剧集，我们只想要前四（4）集。
 
-With promise chaining we can easily achieve this:
+通过 promise chaining(链)，我们可以很容易地实现这一点:
 
 ```js
 const get_movie = (value = "Game of thrones") => {
@@ -201,37 +201,37 @@ const get_movie = (value = "Game of thrones") => {
 };
 ```
 
-This is still our `get_movie()` function, but this time instead of passing the data to the `create_UI` function we return the response `.then((response) => response.json())`. This creates a new promise, which we can attach more callbacks to.
+这仍然是我们的`get_movie()`函数，但这次我们不是将数据传递给`create_UI`函数，而是返回响应`.then((response) => response.json())`。这将创建一个新的 `promise`，我们可以将更多的回调添加到这个 `promise` 上。
 
-Ideally this chain can keep going on and on for as long as you want. Remember all you have to do is to return the value of the promise.
+理想情况下，这个链可以一直持续下去，只要你想。记住，你所要做的就是返回 `promise` 的值。
 
-## How to Handle Errors in Promises
+## 如何处理 Promises 中的错误
 
-Errors that happen within a promise go immediately to the `.catch()` callback:
+在一个 `promise` 中发生的错误会立即进入 .catch()` 回调。:
 
 ```js
 fetch(`https://api.tvmaze.com/singlesearch/shows?q=${value}&embed=episodes`)
     .then((response) => response.json())
     .then((data) => {
-      // any error here will trigger the .catch() callback
+      // 这里的任何错误都会触发.catch()的回调。
     }).catch((error) => {
-    // all errors are caught and handled here
+    // 所有的错误都在这里被捕捉和处理
     })
 ```
 
-The `.catch()` callback is short for `.then(null, (error) => {})`. You could also write the above as:
+`.catch()`回调是`.then(null, (error) => {})`的简写。你也可以把上面的内容写成:
 
 ```js
 fetch(`https://api.tvmaze.com/singlesearch/shows?q=${value}&embed=episodes`)
     .then((response) => response.json())
     .then((data) => {
-      // any error here will trigger the .catch() callback
+      // 这里的任何错误都会触发.catch()的回调。
     }, (error) => {
-    // all errors are caught and handled here
+    // 所有的错误都在这里被捕捉和处理
     })
 ```
 
-With our movie search app, for example, when we encounter any errors we can handle and display a nice error message to users in the `.catch()` callback:
+以我们的电影搜索应用为例，当我们遇到任何错误时，我们可以在`.catch()`回调中处理并向用户显示一个漂亮的错误信息:
 
 ```js
 const get_movie = (value = "Game of thrones") => {
@@ -249,55 +249,55 @@ const get_movie = (value = "Game of thrones") => {
     })
     .catch((error) => {
       console.log(error.message);
-      // Challange: display your error here
+      // 挑战：在此显示你的错误
     });
 };
 ```
 
-Now if for any reason we get an error, the `.catch()` callback is called and we display the correct error to the user.
+现在，如果由于任何原因产生的一个错误，`.catch()`回调被调用，我们向用户显示当前的错误。
 
-## How to Create Promises in JavaScript
+## 如何在 JavaScript 中创建 Promises
 
-Now that we have learned what promises are and how to use them, let's see how we can create a promise in JavaScript.
+现在我们已经了解了什么是 `promise` 以及如何使用它们，让我们看看如何在 JavaScript 中创建一个 `promise`。
 
-To create a promise in JavaScript, you use the promise constructor. The constructor takes one argument: a function with two parameters, `resolve` and `reject`:
+要在 JavaScript 中创建一个 `promise`，你需要使用 `promise` 构造函数。构造函数需要一个参数：一个有两个参数的函数，`resolve`和`reject`:
 
 ```js
 const is_true = true
 const new_promise = new Promise((resolve,reject) => {
   if(is_true) {
-    // everything went fine
+    // 一切都很顺利
     resolve()
   } else {
-    // Oops there was an error
+    // Oops 有一个错误
     reject()
   }
 })
 ```
 
-Then we can go ahead and use our `new_promise` by attaching the callbacks:
+然后我们可以通过回调来使用我们的 `new_promise`:
 
 ```js
 new_promise
   .then((response) => {
-    // everything went fine
+    // 一切都很顺利
   })
   .catch((error) => {
-    // handle errors
+    // 处理错误
   });
 ```
 
-## Conclusion
+## 总结
 
-In this tutorial, we learnt about promises, what they are, and how to use them by building a movie search app. The entire code and live preview of our movie app can be found on Codepen: [Movie Search App](https://codepen.io/Spruce_khalifa/pen/wvygzLq?editors=0100).
+在本教程中，我们学习了 `promise`，它们是什么，以及如何通过建立一个电影搜索应用程序来使用它们。我们的电影应用程序的全部代码和实时预览可以在 `Codepen` 上找到。[电影搜索应用程序](https://codepen.io/Spruce_khalifa/pen/wvygzLq?editors=0100)。
 
-### Challenge
+### 挑战
 
-While creating our movie app, I left out some parts which I think would be great for you to practice your new Promise skills:
+在创建我们的电影应用程序时，我遗漏了一些部分，我认为这些部分对你练习新的 Promise 技能很有帮助:
 
-1.  Our movie app looks frozen when we are waiting for the API response. You can try adding a loader to tell the user that the promise is pending.
-2.  We currently just use `console.log(error)` to log out errors. But we don't want that, so you can figure out how to display all errors to users in a friendly way.
+1. 当我们在等待 API 响应时，我们的电影应用看起来被冻结了。你可以尝试添加一个加载器，告诉用户 `promise` 正在等待。
+2. 我们目前只是使用`console.log(error)`来记录错误。但是我们不希望这样，所以你可以想办法以一种友好的方式向用户显示所有的错误。
 
-If you created something wonderful with this, please feel free to tweet about it and tag me [@sprucekhalifa](https://twitter.com/sprucekhalifa). And don't forget to hit the follow button.
+如果你用这个创造了一些精彩的东西，请随时在推特上发表，并给我留言[@sprucekhalifa](https://twitter.com/sprucekhalifa)。还有，别忘了点击 `follow` 按钮。
 
-Happy coding!
+编程愉快!

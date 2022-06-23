@@ -1,7 +1,7 @@
-> -  原文地址：[How to Recover a Deleted File in Git – Revert Changes After a Hard Reset](https://www.freecodecamp.org/news/how-to-recover-a-deleted-file-in-git/)
-> -  原文作者：[Zaira Hira](https://www.freecodecamp.org/news/author/zaira/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Recover a Deleted File in Git – Revert Changes After a Hard Reset](https://www.freecodecamp.org/news/how-to-recover-a-deleted-file-in-git/)
+> - 原文作者：[Zaira Hira](https://www.freecodecamp.org/news/author/zaira/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Recover a Deleted File in Git – Revert Changes After a Hard Reset](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/Copy-of-read-write-files-python--1-.png)
 

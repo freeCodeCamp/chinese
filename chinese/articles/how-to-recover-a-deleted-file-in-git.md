@@ -5,15 +5,15 @@
 
 ![How to Recover a Deleted File in Git – Revert Changes After a Hard Reset](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/Copy-of-read-write-files-python--1-.png)
 
-Git is a version control system that helps you keep track of the changes in a project's life cycle. It preserves the history of the project and allows you and your team members to coordinate effectively throughout.
+Git 是一个版本控制系统，帮助你跟踪项目生命周期中的变化。它保留了项目的历史，让你和你的团队成员在整个过程中有效地协作。
 
-There could be situations where you deleted a file and you want to recover it. The good news is that you can – most of the time – recover the files when using a version control system (VCS).
+可能有这样的情况：你删除了一个文件，你想恢复它。好消息是，在使用版本控制系统（VCS）时，你可以大多数时候，可以恢复文件。
 
-In this tutorial, we will learn the different methods that Git offers to restore deleted files.
+在本教程中，我们将学习 Git 提供的恢复被删除文件的不同方法。
 
-## How to Recover Files after Committing Changes
+## 如何在提交(commit)修改后恢复文件
 
-Let's say you committed a change but did a hard reset ( `git reset --hard HEAD`) to a different commit which removed the latest commit from your current branch.
+假设你提交了一个修改，但做了一个硬重置（`git reset --hard HEAD`）到一个不同的提交，这个提交删除了你当前分支中的最新提交。
 
 ![Untitled-2022-06-21-2120](https://www.freecodecamp.org/news/content/images/2022/06/Untitled-2022-06-21-2120.png)
 
@@ -45,13 +45,13 @@ git checkout <hash-id>
 git reflog <hash-id>
 ```
 
-## How to Recover Files When Changes Are Staged but Not Committed
+## 如何在更改已进入缓存（Staged）但未提交（Committed）的情况下恢复文件
 
 假设你用`git add <file-name>`暂存了一个文件，然后在提交前用`git reset --hard HEAD`做了一次硬重置。之后，您发现缓存的文件不见了。在这种情况下，你也可以恢复这些文件。
 
 我们可以使用`git fsck`命令来恢复硬重置后的文件。
 
-### What is `git fsk`?
+### 什么是 `git fsk`?
 
 `git fsck`将进行文件系统检查。它检查`.git`目录中所有不属于任何修改的 `悬空(dangling )的blobs`。例如，可能有一些被分阶段的修改(some changes that were staged)，但没有被添加到任何地方。
 
@@ -75,7 +75,7 @@ git show f24facc98b387a375a50ba6d19193626cbfe7d45 > restored_file.txt
 
 现在，`restored_file.txt`将包括提交的内容。
 
-## How to Restore Changes that Are Neither Committed nor Staged
+## 如何恢复既未提交（Committed ）也未缓存（Staged）的更改
 
 在既没有暂存也没有提交的情况下，Git 无法帮助你恢复这些文件。
 

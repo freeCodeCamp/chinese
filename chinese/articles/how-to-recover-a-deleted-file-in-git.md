@@ -17,80 +17,80 @@ Let's say you committed a change but did a hard reset ( `git reset --hard HEAD`)
 
 ![Untitled-2022-06-21-2120](https://www.freecodecamp.org/news/content/images/2022/06/Untitled-2022-06-21-2120.png)
 
-Hard reset explained.
+硬重置(Hard reset )的解释。
 
-In this case, you can restore the file using either `git checkout` or `git reflog`.
+在这种情况下，你可以用`git checkout`或`git reflog`来恢复文件。
 
-You can find the hash-ID of the previous commit from the command: `git log`.
+你可以从命令中找到上次提交的哈希值。`git log`。
 
-After that, simply revert to the previous commit using:
+之后，只需用以下方法恢复到之前的提交:
 
-```git
+```bash
 git checkout <hash-id>
 ```
 
-In case you don't have the hash ID, you can use the command `git reflog`.
+如果你没有哈希 ID，你可以使用`git reflog`命令。
 
-`reflog` is a logging mechanism and keeps a track of all the changes against their unique `hash-id`.
+`reflog`是一种记录机制，它记录了所有的变化，并与它们唯一的`hash-id`相对应。
 
-Below is an example of the output of `git reflog`:
+下面是一个`git reflog`输出的例子:
 
 ![image-155](https://www.freecodecamp.org/news/content/images/2022/06/image-155.png)
 
-Output of `git reflog`
+`git reflog`的输出
 
-Pick the commit ID and use it to revert to that commit.
+挑选提交 ID 并使用它来恢复该提交。
 
-```
+```bash
 git reflog <hash-id>
 ```
 
 ## How to Recover Files When Changes Are Staged but Not Committed
 
-Suppose you staged a file with `git add <file-name>` and then did a hard reset with `git reset --hard HEAD` before committing. Afterward, you found out that the staged file is missing. In this case, also, you can recover the files.
+假设你用`git add <file-name>`暂存了一个文件，然后在提交前用`git reset --hard HEAD`做了一次硬重置。之后，您发现缓存的文件不见了。在这种情况下，你也可以恢复这些文件。
 
-We can use the command `git fsck` to recover the files after a hard reset.
+我们可以使用`git fsck`命令来恢复硬重置后的文件。
 
 ### What is `git fsk`?
 
-`git fsck` stands for file system check. It checks for all the "dangling blobs" in the `.git` directory that are not part of any changes. For example, there could be some changes that were staged but not added anywhere.
+`git fsck`将进行文件系统检查。它检查`.git`目录中所有不属于任何修改的 `悬空(dangling )的blobs`。例如，可能有一些被分阶段的修改(some changes that were staged)，但没有被添加到任何地方。
 
 ![image-154](https://www.freecodecamp.org/news/content/images/2022/06/image-154.png)
 
-Output of `git fsck`.
+`git fsck`的输出。
 
-Once we are able to identify the "dangling blobs", we can view the details using `git show`.
+一旦我们能够识别 `dangling blobs`，我们就可以用`git show`来查看细节。
 
-```
+```bash
 git show f24facc98b387a375a50ba6d19193626cbfe7d45
 ```
 
-Depending on the change, you'll be able to view your respective changes.
+根据不同的变化，你将能够查看对应的变化。
 
-You might also want to save the changes in a file. You can simply redirect the output to a file using the `>` operator.
+你可能还想把变化保存在一个文件中。你可以简单地使用`>`操作符将输出重定向到一个文件。
 
-```
+```bash
 git show f24facc98b387a375a50ba6d19193626cbfe7d45 > restored_file.txt
 ```
 
-Now, `restored_file.txt` will include the contents of the commit.
+现在，`restored_file.txt`将包括提交的内容。
 
 ## How to Restore Changes that Are Neither Committed nor Staged
 
-In the case where the changes are neither staged nor committed, Git can't help you recover the files.
+在既没有暂存也没有提交的情况下，Git 无法帮助你恢复这些文件。
 
-The reason is that the files weren't added to staging and Git can not tell the status of those files.
+这是因为这些文件没有被添加到暂存区，Git 无法得知这些文件的状态。
 
-In this case, it would be helpful to search in temp files or the cached history of your text editor.
+在这种情况下，在临时文件或文本编辑器的缓存历史中搜索会有帮助（译者注： 如 jetbrains 开发的 IDE 的 Local History 功能）。
 
-## Wrapping up
+## 收尾
 
-When working on risky files, it is always better to use a VCS. In this way, the files will be preserved and the chances of accidental data loss are reduced.
+在处理有风险的文件时，最好是使用 VCS（版本控制系统）。通过这种方式，文件将被保存下来，并减少意外数据丢失的机会。
 
-In this tutorial, we learned how to restore deleted files whether they are staged or committed.
+在本教程中，我们学习了如何恢复被删除的文件，无论它们是被缓存（staged ）的还是提交（committed）的。
 
-I hope you found this tutorial helpful. Thank you for reading till the end.
+我希望你认为本教程对你有帮助。谢谢你读到最后。
 
-What’s your favorite thing you learned from this tutorial? Let me know on [Twitter](https://twitter.com/hira_zaira)!
+你从本教程中学到的最喜欢的东西是什么？请在[推特](https://twitter.com/hira_zaira)上告诉我!
 
-You can also read my other posts [here](https://www.freecodecamp.org/news/author/zaira/).
+你也可以阅读我的其他文章 [这里](https://www.freecodecamp.org/news/author/zaira/)。

@@ -288,36 +288,36 @@ SQL是**S**tructured **Q**uery **L**anguage（结构化查询语言）的缩写�
 -   [学习SQL - 初学者的免费关系数据库课程](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/)
 -   [关系型数据库认证](https://www.freecodecamp.org/learn/relational-database/)
 
-### Knowledge Of A Programming Language
+### 掌握一门编程语言
 
-To further organize and manipulate databases, data analysts benefit from knowing a programming language.
+掌握一门编程语言，会让数据分析师在进一步组织和操作数据库中受益良多。
 
-Two of the most popular ones used in the data analysis field are Python and R.
+在数据分析领域，最受欢迎的两种语言是Python和R。
 
-Python is a general-purpose programming language, and it is very beginner-friendly thanks to its syntax that resembles the English language. It is also one of the most used technical tools for data analysis.
+Python是一种通用的编程语言，因其语法类似英语，所以对初学者非常友好。它也是数据分析中最常用的技术工具之一。
 
-Python offers a wealth of packages and libraries for data manipulation, such as Pandas and NumPy, as well as for data visualization, such as Matplotlib.
+Python提供了丰富的用于数据处理的包和库，如Pandas和NumPy，以及用于数据可视化的Matplotlib。
 
-To get started, [first see how to go about learning Python as a complete beginner](https://www.freecodecamp.org/news/how-to-learn-python/).
+要想开始学习，先看看[零基础如何学习Python](https://www.freecodecamp.org/news/how-to-learn-python/)。
 
-Once you understand the fundamentals, you can move on to learning about Pandas, NumPy, and Matplotlib.
+一旦你理解了基础知识，你就可以继续学习Pandas、NumPy和Matplotlib。
 
-Here are some resources to get you started:
+这里是一些可供学习的资源。
 
--   [How to Get Started with Pandas in Python – a Beginner's Guide](https://www.freecodecamp.org/news/python-pandas-functions/)
--   [The Ultimate Guide to the Pandas Library for Data Science in Python](https://www.freecodecamp.org/news/the-ultimate-guide-to-the-pandas-library-for-data-science-in-python/)
--   [The Ultimate Guide to the NumPy Package for Scientific Computing in Python](https://www.freecodecamp.org/news/the-ultimate-guide-to-the-numpy-scientific-computing-library-for-python/)
--   [Learn NumPy and start doing scientific computing in Python](https://www.freecodecamp.org/news/numpy-python-tutorial/)
--   [How to Analyze Data with Python, Pandas & Numpy - 10 Hour Course](https://www.freecodecamp.org/news/how-to-analyze-data-with-python-pandas/)
--   [Matplotlib Course – Learn Python Data Visualization](https://www.freecodecamp.org/news/matplotlib-course-learn-python-data-visualization/)
--   [Python Data Science – A Free 12-Hour Course for Beginners. Learn Pandas, NumPy, Matplotlib, and More.](https://www.freecodecamp.org/news/python-data-science-course-matplotlib-pandas-numpy/)
+-   [如何在Python中使用Pandas——初学者指南](https://www.freecodecamp.org/news/python-pandas-functions/)
+-   [Python中用于数据科学的Pandas终极指南(https://www.freecodecamp.org/news/the-ultimate-guide-to-the-pandas-library-for-data-science-in-python/)
+-   [Python中用于科学计算的NumPy终极指南](https://www.freecodecamp.org/news/the-ultimate-guide-to-the-numpy-scientific-computing-library-for-python/)
+-   [学习NumPy并开始用Python进行科学计算](https://www.freecodecamp.org/news/numpy-python-tutorial/)
+-   [如何用Python、Pandas和Numpy分析数据——10小时课程](https://www.freecodecamp.org/news/how-to-analyze-data-with-python-pandas/)
+-   [Matplotlib课程——学习Python数据可视化](https://www.freecodecamp.org/news/matplotlib-course-learn-python-data-visualization/)
+-   [Python数据科学--面向初学者的12小时免费课程，学习Pandas、NumPy、Matplotlib及更多](https://www.freecodecamp.org/news/python-data-science-course-matplotlib-pandas-numpy/)
 
-R is a language used for statistical analysis and data analysis. That said, it is not as beginner-friendly as Python.
+R是一种用于统计分析和数据分析的语言。换言之，它不像Python那样适合初学者。
 
-To get started learning it, check out the following courses:
+要开始学习R语言，可以从以下课程入手。
 
--   [R Programming Language Explained](https://www.freecodecamp.org/news/r-programming-language-explained/)
--   [Learn R programming language basics in just 2 hours with this free course on statistical programming](https://www.freecodecamp.org/news/r-programming-course/)
+-   [R语言解读](https://www.freecodecamp.org/news/r-programming-language-explained/)
+-   [2小时掌握R语言基础（免费统计编程课程）](https://www.freecodecamp.org/news/r-programming-course/)
 
 ### Knowledge of data visualization tools
 

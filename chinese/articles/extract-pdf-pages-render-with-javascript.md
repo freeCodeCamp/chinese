@@ -1,7 +1,7 @@
-> -  原文地址：[How to Extract Pages from a PDF and Render Them with JavaScript](https://www.freecodecamp.org/news/extract-pdf-pages-render-with-javascript/)
-> -  原文作者：[Hrishikesh Pathak](https://www.freecodecamp.org/news/author/hrishikesh/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Extract Pages from a PDF and Render Them with JavaScript](https://www.freecodecamp.org/news/extract-pdf-pages-render-with-javascript/)
+> - 原文作者：[Hrishikesh Pathak](https://www.freecodecamp.org/news/author/hrishikesh/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Extract Pages from a PDF and Render Them with JavaScript](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/pdf-extract.png)
 
@@ -21,10 +21,10 @@ A screenshot of the PDF viewer you'll build
 
 Here is a [live demo of what you will build](https://hrishiksh.github.io/modify-pdf-fcc/) during this tutorial.
 
-1.  First, we'll explore some popular PDF packages out there for PDF-related work in JavaScript. Then we'll compare them and find the best package that suits our requirements.
-2.  Next we'll load an existing PDF and extract some pages from it. The extracted pages will make a new PDF document.
-3.  Then we'll render the new PDF (that we made in the 2nd step) inside the browser.
-4.  Finally, we'll download the new PDF for later use.
+1. First, we'll explore some popular PDF packages out there for PDF-related work in JavaScript. Then we'll compare them and find the best package that suits our requirements.
+2. Next we'll load an existing PDF and extract some pages from it. The extracted pages will make a new PDF document.
+3. Then we'll render the new PDF (that we made in the 2nd step) inside the browser.
+4. Finally, we'll download the new PDF for later use.
 
 So these are all the steps we'll go through here. I hope you're excited to see the results. Let's dive in.
 
@@ -100,22 +100,27 @@ Before doing any operations on our PDF document, we have to get the document fro
 First, we'll make and file input button and then process the uploaded file using the `FileReader` web API.
 
 ```html
-<input type="file" id="file-selector" accept=".pdf" onChange={onFileSelected} />
+<input
+  type="file"
+  id="file-selector"
+  accept=".pdf"
+  onChange="{onFileSelected}"
+/>
 ```
 
 As the Filereader API works with callbacks, I find async/await a lot cleaner and easier to work with. So let's make a helper function to modify Filereader callbacks into async/await.
 
 ```js
 function readFileAsync(file) {
-    return new Promise((resolve, reject) => {
-      let reader = new FileReader();
-      reader.onload = () => {
-        resolve(reader.result);
-      };
-      reader.onerror = reject;
-      reader.readAsArrayBuffer(file);
-    });
-  }
+  return new Promise((resolve, reject) => {
+    let reader = new FileReader();
+    reader.onload = () => {
+      resolve(reader.result);
+    };
+    reader.onerror = reject;
+    reader.readAsArrayBuffer(file);
+  });
+}
 ```
 
 Now when a user uploads a file using the previous file input, we listen to the file input event and then read the file using this `readFileAsync` function.
@@ -124,11 +129,11 @@ The implementation of this logic looks like this in code:
 
 ```js
 const onFileSelected = async (e) => {
-    const fileList = e.target.files;
-    if (fileList?.length > 0) {
-      const pdfArrayBuffer = await readFileAsync(fileList[0]);
-    }
-  };
+  const fileList = e.target.files;
+  if (fileList?.length > 0) {
+    const pdfArrayBuffer = await readFileAsync(fileList[0]);
+  }
+};
 ```
 
 ## How to Extract PDF Pages
@@ -141,8 +146,8 @@ We have to provide the start page number and end page number and then this `rang
 
 ```js
 function range(start, end) {
-	let length = end - start + 1;
-	return Array.from({ length }, (_, i) => start + i - 1);
+  let length = end - start + 1;
+  return Array.from({ length }, (_, i) => start + i - 1);
 }
 ```
 
@@ -151,7 +156,7 @@ Here we add -1 at the end. Do you know the reason? Yes – in programming, index
 Now let's start the main part of this article: the extraction. Before doing any of the work, import the pdf-lib library.
 
 ```js
-import { PDFDocument } from "pdf-lib";
+import { PDFDocument } from 'pdf-lib';
 ```
 
 At first, we load the PDF `ArrayBuffer` we got from the previous `onFileSelected` function. Then we load the `ArrayBuffer` into the `PDFDocument.load(arraybuffer)` function. This is our user-provided PDF. For convenience, we'll call it `pdfSrcDoc`.
@@ -164,13 +169,13 @@ To save the changes, run `pdfNewDoc.save()`. Let's create a function called `ext
 
 ```js
 async function extractPdfPage(arrayBuff) {
-    const pdfSrcDoc = await PDFDocument.load(arrayBuff);
-    const pdfNewDoc = await PDFDocument.create();
-    const pages = await pdfNewDoc.copyPages(pdfSrcDoc,range(2,3));
-    pages.forEach(page=>pdfNewDoc.addPage(page));
-    const newpdf= await pdfNewDoc.save();
-    return newpdf;
-  }
+  const pdfSrcDoc = await PDFDocument.load(arrayBuff);
+  const pdfNewDoc = await PDFDocument.create();
+  const pages = await pdfNewDoc.copyPages(pdfSrcDoc, range(2, 3));
+  pages.forEach((page) => pdfNewDoc.addPage(page));
+  const newpdf = await pdfNewDoc.save();
+  return newpdf;
+}
 ```
 
 We are returning a `Uint8Array` from the `extractPdfPage()` function.
@@ -185,12 +190,12 @@ You can also make your custom PDF viewer using the pdfjs library as I mentioned 
 
 ```js
 function renderPdf(uint8array) {
-    const tempblob = new Blob([uint8array], {
-      type: "application/pdf",
-    });
-    const docUrl = URL.createObjectURL(tempblob);
-    setPdfFileData(docUrl);
-  }
+  const tempblob = new Blob([uint8array], {
+    type: 'application/pdf'
+  });
+  const docUrl = URL.createObjectURL(tempblob);
+  setPdfFileData(docUrl);
+}
 ```
 
 Now you can easily render this docUrl returned from the `renderPdf()` function inside an `iframe`.
@@ -200,8 +205,8 @@ Now you can easily render this docUrl returned from the `renderPdf()` function i
 I am using Next.js for this tutorial. If you are using some other framework or vanilla JavaScript, the results will be similar. Here's all the code for this project:
 
 ```js
-import { useState } from "react";
-import { PDFDocument } from "pdf-lib";
+import { useState } from 'react';
+import { PDFDocument } from 'pdf-lib';
 
 export default function Home() {
   const [pdfFileData, setPdfFileData] = useState();
@@ -219,7 +224,7 @@ export default function Home() {
 
   function renderPdf(uint8array) {
     const tempblob = new Blob([uint8array], {
-      type: "application/pdf",
+      type: 'application/pdf'
     });
     const docUrl = URL.createObjectURL(tempblob);
     setPdfFileData(docUrl);
@@ -259,7 +264,7 @@ export default function Home() {
         onChange={onFileSelected}
       />
       <iframe
-        style={{ display: "block", width: "100vw", height: "90vh" }}
+        style={{ display: 'block', width: '100vw', height: '90vh' }}
         title="PdfFrame"
         src={pdfFileData}
         frameborder="0"

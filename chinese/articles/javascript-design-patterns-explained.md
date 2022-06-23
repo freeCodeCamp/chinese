@@ -1,6 +1,6 @@
 > -  原文地址：[JavaScript Design Patterns –Explained with Examples](https://www.freecodecamp.org/news/javascript-design-patterns-explained/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![JavaScript Design Patterns –Explained with Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/pexels-pixabay-161043.jpg)

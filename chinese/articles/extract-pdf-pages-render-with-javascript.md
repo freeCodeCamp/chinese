@@ -13,7 +13,7 @@ PDF 是便携式文档格式( portable document format)的缩写。PDF 是由 Ad
 
 在这篇文章中，我们将探讨所有流行的 PDF 相关的 JavaScript 库。为什么是 JavaScript？因为它有一些相当不错的 PDF 包可用，而且人们喜欢它。特别是我自己。
 
-## The PDF Viewer Project You Will Build in this Tutorial
+## 你将在本教程中建立的 PDF 浏览器项目
 
 ![Pdf_Modification_--](https://www.freecodecamp.org/news/content/images/2022/06/Pdf_Modification_--.png)
 
@@ -28,7 +28,7 @@ PDF 是便携式文档格式( portable document format)的缩写。PDF 是由 Ad
 
 因此，这些就是我们在这里要经历的所有步骤。我希望你能兴奋地看到结果。让我们深入了解一下。
 
-## PDF Libraries for JavaScript
+## 用于 JavaScript 的 PDF 库
 
 我发现 JavaScript 中的 PDF 库主要有两种类型。一种是用于 PDF 渲染生成，另一种是用于 PDF 操作（或修改）。我在搜索了一个多小时后发现了一堆 PDF 库，这些是我最好的选择。
 
@@ -85,7 +85,7 @@ PDF 生成是这个库的主要优势。你可以用你的任何设计来生成�
 
 如果你的目标是向用户展示一个 PDF，那么你可以使用这个包。作为一个 React 爱好者，你会喜欢这个库。看看他们的游乐场，花些时间来使用这个包。这样你就会知道你是否需要这个库。
 
-## Why We'll Use pdf-lib in This Tutorial
+## 为什么我们要在本教程中使用 pdf-lib？
 
 在上面提到的所有这些 PDF 库中，我将在本文中使用 pdf-lib。因为我们要分割和合并 PDF 页面，并在浏览器中渲染它们，pdf-lib 似乎是这种情况下的最佳选择。
 
@@ -93,8 +93,7 @@ PDF 生成是这个库的主要优势。你可以用你的任何设计来生成�
 
 最后但同样重要的是，他们的例子非常好。你可以在几分钟内启动并运行。所以我喜欢这个库，因为它适合我的使用情况。
 
-## How to Read a Local PDF File in JavaScript
-
+## 如何在 JavaScript 中读取本地 PDF 文件
 在对我们的 PDF 文档进行任何操作之前，我们必须从用户那里读取到该文档。在浏览器中读取任何文件都可以通过`FileReader` web API 来处理。
 
 首先，我们要做一个文件输入按钮，然后用`FileReader`网络 API 处理上传的文件。
@@ -136,7 +135,7 @@ const onFileSelected = async (e) => {
 };
 ```
 
-## How to Extract PDF Pages
+##  如何提取 PDF 页面
 
 到此为止，我们的 PDF 被上传并转换为 JavaScript `ArrayBuffer`。由于我们正在从 PDF 中提取一系列的页面，我们想要一个包含 PDF 中这些页码的数组。
 
@@ -180,7 +179,7 @@ async function extractPdfPage(arrayBuff) {
 
 我们从`extractPdfPage()`函数返回一个`Uint8Array`。
 
-## How to Render the PDF in the Browser
+## 如何在浏览器中渲染 PDF
 
 到目前为止，我们有一个修改过的 PDF 的`Uint8Array`。为了在你的浏览器中呈现它，我们必须把它转换成一个 Blob。
 
@@ -200,7 +199,7 @@ function renderPdf(uint8array) {
 
 现在你可以很容易地在一个 `iframe` 中渲染这个从 `renderPdf()` 函数返回的 docUrl。
 
-## Complete Code Example
+## 完整的代码示例
 
 我在本教程中使用 Next.js。如果你使用的是其他框架或 vanilla JavaScript，结果也会类似。下面是这个项目的所有代码:
 
@@ -277,7 +276,7 @@ export default function Home() {
 
 现在你可以使用 PDF 查看器上的下载按钮保存生成的 PDF。
 
-## Where to Go from Here
+## 今后的发展方向
 
 在这篇文章中，我只是触及了冰山一角。如果你想处理 PDF，并想从中获得一些东西，那么 pdf-lib 是一个非常强大的库，可以达到这个目的。
 
@@ -291,6 +290,6 @@ export default function Home() {
 
 如果你一直读到现在，我非常感激。感觉我做的内容，世界上另一个地方的人都会读到。请分享给你的会写代码的朋友。
 
-你想在你的 PDF 文档中添加一个大纲吗？我知道这是一个非常难实现的任务。我已经经历了很多痛苦，用 JavaScript 在 PDF 文档中添加这个功能。你有兴趣吗？那是未来的一个故事。
+你想在你的 PDF 文档中添加一个大纲吗？我知道这是一个非常难实现的任务。我已经经历了很多痛苦，用 JavaScript 在 PDF 文档中添加这个功能。你有兴趣吗？再未来实现它。
 
 祝你有个愉快的一天。

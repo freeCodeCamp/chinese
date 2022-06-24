@@ -79,25 +79,25 @@ PDF 生成是这个库的主要优势。你可以用你的任何设计来生成�
 
 ### [react-pdf](https://react-pdf.org/)
 
-As the name suggests, this library is specialized in React ecosystems. The usage is very React-ish. You can easily create a document with its JSX-like syntax.
+顾名思义，这个库是专门针对 React 生态系统的。其用法非常具有 React 风格。你可以用它类似 JSX 的语法轻松创建一个文档。
 
-You can create and display a PDF document with simple React components. But the features are very limited. This library is mainly for PDF generation.
+你可以用简单的 React 组件创建和显示一个 PDF 文档。但功能非常有限。这个库主要用于生成 PDF。
 
-If your goal is to display a PDF to the user, then you can use this package. As a React lover, you will love this library. Check out their playground and spend some time with this package. This way you will know if you need this library or not.
+如果你的目标是向用户展示一个 PDF，那么你可以使用这个包。作为一个 React 爱好者，你会喜欢这个库。看看他们的游乐场，花些时间来使用这个包。这样你就会知道你是否需要这个库。
 
 ## Why We'll Use pdf-lib in This Tutorial
 
-Out of all these PDF libraries mentioned above, I'll use pdf-lib for this article. As we are going to split and merge PDF pages and also render them in the browser, pdf-lib seems to be the best choice for this context.
+在上面提到的所有这些 PDF 库中，我将在本文中使用 pdf-lib。因为我们要分割和合并 PDF 页面，并在浏览器中渲染它们，pdf-lib 似乎是这种情况下的最佳选择。
 
-Also, pdf-lib has a pretty simple API to work with and all these APIs are well documented. If you are using TypeScript, you can also get type inference, which is very helpful.
+而且，pdf-lib 有相当简单的 API 可以使用，所有这些 API 都有很好的文档。如果你使用 TypeScript，你还可以获得类型推导，这非常有帮助。
 
-Last but not least, their examples are very good. You can get up and running in a few minutes. So I like this library for my use cases.
+最后但同样重要的是，他们的例子非常好。你可以在几分钟内启动并运行。所以我喜欢这个库，因为它适合我的使用情况。
 
 ## How to Read a Local PDF File in JavaScript
 
-Before doing any operations on our PDF document, we have to get the document from the user. Reading any file in the browser can be handled by `FileReader` web API.
+在对我们的 PDF 文档进行任何操作之前，我们必须从用户那里读取到该文档。在浏览器中读取任何文件都可以通过`FileReader` web API 来处理。
 
-First, we'll make and file input button and then process the uploaded file using the `FileReader` web API.
+首先，我们要做一个文件输入按钮，然后用`FileReader`网络 API 处理上传的文件。
 
 ```html
 <input
@@ -108,7 +108,7 @@ First, we'll make and file input button and then process the uploaded file using
 />
 ```
 
-As the Filereader API works with callbacks, I find async/await a lot cleaner and easier to work with. So let's make a helper function to modify Filereader callbacks into async/await.
+由于 Filereader API 是用回调工作的，我发现 async/await 要简明得多，也更容易操作。所以让我们做一个辅助函数，把 Filereader 的回调修改成 async/await。
 
 ```js
 function readFileAsync(file) {
@@ -123,9 +123,9 @@ function readFileAsync(file) {
 }
 ```
 
-Now when a user uploads a file using the previous file input, we listen to the file input event and then read the file using this `readFileAsync` function.
+现在，当用户使上传文件完成时，我们监听文件输入事件，然后使用这个`readFileAsync`函数读取文件。
 
-The implementation of this logic looks like this in code:
+这个逻辑的实现在代码中看起来像这样:
 
 ```js
 const onFileSelected = async (e) => {
@@ -138,11 +138,11 @@ const onFileSelected = async (e) => {
 
 ## How to Extract PDF Pages
 
-Up to this point, our PDF is uploaded and converted into JavaScript `ArrayBuffer`. As we are extracting a range of pages from the PDF, we want an array with those page numbers of the PDF.
+到此为止，我们的 PDF 被上传并转换为 JavaScript `ArrayBuffer`。由于我们正在从 PDF 中提取一系列的页面，我们想要一个包含 PDF 中这些页码的数组。
 
-Generating an array of natural numbers is not hard in JavaScript. So we make a function named `range()` to generate all the indexes we want.
+在 JavaScript 中生成一个自然数的数组并不难。所以我们做了一个名为`range()`的函数来生成我们想要的所有索引。
 
-We have to provide the start page number and end page number and then this `range()` function can generate an array with appropriate page numbers.
+我们必须提供起始页数和结束页数，然后这个`range()`函数就可以生成一个带有适当页数的数组。
 
 ```js
 function range(start, end) {
@@ -151,21 +151,21 @@ function range(start, end) {
 }
 ```
 
-Here we add -1 at the end. Do you know the reason? Yes – in programming, indexes start from 0, not 1. So we have to deduct -1 from every page number to get the behaviour we want.
+在这里，我们在最后加上 `-1`。你知道原因是什么吗？在编程中，索引是从 0 开始的，而不是 1。所以我们必须从每一个页码中扣除-1，以获得我们想要的行为。
 
-Now let's start the main part of this article: the extraction. Before doing any of the work, import the pdf-lib library.
+现在让我们开始本文的主要部分：提取。在做任何工作之前，请导入 pdf-lib 库。
 
 ```js
 import { PDFDocument } from 'pdf-lib';
 ```
 
-At first, we load the PDF `ArrayBuffer` we got from the previous `onFileSelected` function. Then we load the `ArrayBuffer` into the `PDFDocument.load(arraybuffer)` function. This is our user-provided PDF. For convenience, we'll call it `pdfSrcDoc`.
+首先，我们加载我们从之前的`onFileSelected'函数得到的PDF`ArrayBuffer'。然后我们把`ArrayBuffer`加载到`PDFDocument.load(arraybuffer)`函数中。这就是我们的用户提供的 PDF。为了方便起见，我们称它为`pdfSrcDoc`。
 
-Now we'll create a new PDF. All the extracted PDF pages from the user-provided document are merged in the new document. We use the `PDFDocument.create()` function to do that. For ease of use, we call it `pdfNewDoc`.
+现在我们将创建一个新的 PDF。所有从用户提供的文档中提取的 PDF 页面都被合并到新文档中。我们使用`PDFDocument.create()`函数来做这件事。为了便于使用，我们称它为`pdfNewDoc`。
 
-After that we copy our desired pages from the `pdfSrcDoc` into `pdfNewDoc` by using the `copyPages()` function. Then we'll add the copied page to `pdfNewDoc`.
+之后，我们使用`copyPages()`函数将我们想要的页面从`pdfSrcDoc`复制到`pdfNewDoc`。然后我们将复制的页面添加到`pdfNewDoc'中。
 
-To save the changes, run `pdfNewDoc.save()`. Let's create a function called `extractPdfPage()` to reuse the logic. The code inside the function will look like this:
+要保存这些变化，运行`pdfNewDoc.save()`。让我们创建一个名为`extractPdfPage()`的函数来重用这个逻辑。函数中的代码将看起来像这样:
 
 ```js
 async function extractPdfPage(arrayBuff) {
@@ -178,15 +178,15 @@ async function extractPdfPage(arrayBuff) {
 }
 ```
 
-We are returning a `Uint8Array` from the `extractPdfPage()` function.
+我们从`extractPdfPage()`函数返回一个`Uint8Array`。
 
 ## How to Render the PDF in the Browser
 
-As of now, we have a `Uint8Array` of a modified PDF. To render it inside your browser, we have to convert it into a Blob.
+到目前为止，我们有一个修改过的 PDF 的`Uint8Array`。为了在你的浏览器中呈现它，我们必须把它转换成一个 Blob。
 
-Then we'll make a URL out of it and render it inside an iframe.
+然后我们将它做成一个 URL，并在一个 iframe 中呈现。
 
-You can also make your custom PDF viewer using the pdfjs library as I mentioned above. But if you don't need such branding and customization, the browser's default PDF viewer is fine for this purpose.
+你也可以使用我上面提到的 pdfjs 库制作你的自定义 PDF 浏览器。但如果你不需要显示品牌和定制，浏览器的默认 PDF 查看器就可以达到这个目的。
 
 ```js
 function renderPdf(uint8array) {
@@ -198,11 +198,11 @@ function renderPdf(uint8array) {
 }
 ```
 
-Now you can easily render this docUrl returned from the `renderPdf()` function inside an `iframe`.
+现在你可以很容易地在一个 `iframe` 中渲染这个从 `renderPdf()` 函数返回的 docUrl。
 
 ## Complete Code Example
 
-I am using Next.js for this tutorial. If you are using some other framework or vanilla JavaScript, the results will be similar. Here's all the code for this project:
+我在本教程中使用 Next.js。如果你使用的是其他框架或 vanilla JavaScript，结果也会类似。下面是这个项目的所有代码:
 
 ```js
 import { useState } from 'react';
@@ -275,22 +275,22 @@ export default function Home() {
 }
 ```
 
-You can now save the resulting PDF using the download button on the PDF viewer.
+现在你可以使用 PDF 查看器上的下载按钮保存生成的 PDF。
 
 ## Where to Go from Here
 
-In this article, I've touched just the tip of the iceberg. If you want to work with PDFs and want to make something out of it, then pdf-lib is a very powerful library for this purpose.
+在这篇文章中，我只是触及了冰山一角。如果你想处理 PDF，并想从中获得一些东西，那么 pdf-lib 是一个非常强大的库，可以达到这个目的。
 
-You can merge two PDFs into one, you can rotate pages, or delete some pages from a PDF. These are just some examples – the possibilities are endless.
+你可以将两个 PDF 合并成一个，你可以旋转页面，或者从一个 PDF 中删除一些页面。这些只是一些例子，无限的可能性。
 
-If you want to deploy your Next.js application to Cloudflare pages, [this is the article](https://hrishikeshpathak.com/blog/deploy-nextjs-cloudflare-pages) you should check out.
+如果你想将你的 Next.js 应用程序部署到 Cloudflare 页面，[这篇文章](https://hrishikeshpathak.com/blog/deploy-nextjs-cloudflare-pages) 你应该看看。
 
-Make something out of it. Do some creative stuff and show me on [Twitter](https://twitter.com/hrishikshpathak).
+用它来做一些事情。做一些创造性的东西，并在 [Twitter](https://twitter.com/hrishikshpathak) 上向我展示。
 
-## Conclusion
+## 总结
 
-If you've read until now, I am very grateful. It feels like I am making content that someone from another part of the world will read. Do share with your coding friends.
+如果你一直读到现在，我非常感激。感觉我做的内容，世界上另一个地方的人都会读到。请分享给你的会写代码的朋友。
 
-Do you want to add an outline to your PDF doc? I know this is a very hard task to achieve. I have gone through a lot of pain to add this feature in a PDF document using JavaScript. Are you interested?  That's a story for the future.
+你想在你的 PDF 文档中添加一个大纲吗？我知道这是一个非常难实现的任务。我已经经历了很多痛苦，用 JavaScript 在 PDF 文档中添加这个功能。你有兴趣吗？那是未来的一个故事。
 
-Have a good day.
+祝你有个愉快的一天。

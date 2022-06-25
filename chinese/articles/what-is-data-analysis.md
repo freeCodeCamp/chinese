@@ -95,7 +95,7 @@
 
 即使对行业内的每个部门来说，数据也是大有裨益的，不论是行政部、财务部、后勤部、营销部、设计部或工程部，不一而足。
 
-下面，我将解释为何探寻数据，并为数据赋予背景和意义至关重要。
+下面，我将解释为何探寻数据、并为数据赋予背景和意义至关重要。
 
 ### 数据分析提升目标客户定位
 
@@ -191,7 +191,7 @@
 -   检查电子邮件打开率。
 -   使用第三方的服务，比较公司与竞争对手的数据。
 -   查阅数据库。
--   利用网络爬虫，通过爬取开放数据集来获取收据。[网络爬虫](https://www.freecodecamp.org/news/how-to-scrape-websites-with-python-2/) 是指从网站上提取和收集数据和内容的行为。
+-   利用网络爬虫，通过爬取开放数据集来获取收据。[网络爬虫](https://www.freecodecamp.org/news/how-to-scrape-websites-with-python-2/) 是指从网站上提取数据和收集内容的行为。
 
 ### 步骤三：清洗数据
 
@@ -259,18 +259,18 @@
 
 这里有一些数学课程可以让你起步：
 
--   [大学代数 – 免费大学数学前置课程（7小时）](https://www.freecodecamp.org/news/learn-algebra-to-improve-your-programming-skills/)
--   [微积分先修课 – 免费大学数学前置课程（7小时）](https://www.freecodecamp.org/news/precalculus-learn-college-math-prerequisites-with-this-free-5-hour-course/)
+-   [大学代数——免费大学数学前置课程（7小时）](https://www.freecodecamp.org/news/learn-algebra-to-improve-your-programming-skills/)
+-   [微积分先修课——免费大学数学前置课程（7小时）](https://www.freecodecamp.org/news/precalculus-learn-college-math-prerequisites-with-this-free-5-hour-course/)
 -   [程序员的数学课](https://www.freecodecamp.org/news/maths-for-programmers/)
 
 数据分析师需要掌握统计学和概率知识，以收集和分析数据，找出其中的模式，并从数据中得出结论。
 
-要想开始学习，可以先从统计学入门课程入手，然后继续学习进阶课题。
+要想开始学习，可以先从统计学入门课程入手，然后继续学习进阶课题：
 
 -   [学习大学统计学（8小时免费课程）](https://www.freecodecamp.org/news/free-statistics-course/)
 -   [如果想学习数据科学，请上这几堂统计课](https://www.freecodecamp.org/news/if-you-want-to-learn-data-science-take-a-few-of-these-statistics-classes-9bbabab098b9#.esdiw8wnk)
 
-### 了解SQL和关系型数据库
+### 了解 SQL 和关系型数据库
 
 数据分析师需要了解如何运用数据库以提取数据。
 
@@ -278,46 +278,46 @@
 
 关系型数据库是结构化的，所有存储的数据项目都有预先定义的相互关系。
 
-SQL是**S**tructured **Q**uery **L**anguage（结构化查询语言）的缩写，是用于查询和与关系型数据库互动的语言。
+SQL 是 **S**tructured **Q**uery **L**anguage （结构化查询语言）的缩写，是用于查询和与关系型数据库互动的语言。
 
-通过编写SQL查询语句，你可以对数据进行CRUD（Create（创建）、Read（读取）、Update（更新）和Delete（删除））操作。
+通过编写 SQL 查询语句，你可以对数据进行 CRUD （Create（创建）、Read（读取）、Update（更新）和 Delete（删除））操作。
 
-要想学习SQL，可以参考以下资源。
+要想学习 SQL ，可以参考以下资源：
 
--   [SQL命令小抄--如何在10分钟内学会SQL](https://www.freecodecamp.org/news/learn-sql-in-10-minutes/)
--   [学习SQL - 初学者的免费关系数据库课程](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/)
+-   [SQL 命令小抄——如何在10分钟内学会 SQL](https://www.freecodecamp.org/news/learn-sql-in-10-minutes/)
+-   [学习 SQL ——初学者的免费关系数据库课程](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/)
 -   [关系型数据库认证](https://www.freecodecamp.org/learn/relational-database/)
 
 ### 掌握一门编程语言
 
 掌握一门编程语言，会让数据分析师在进一步组织和操作数据库中受益良多。
 
-在数据分析领域，最受欢迎的两种语言是Python和R。
+在数据分析领域，最受欢迎的两种语言是 Python 和 R 。
 
-Python是一种通用的编程语言，因其语法类似英语，所以对初学者非常友好。它也是数据分析中最常用的技术工具之一。
+Python 是一种通用的编程语言，因其语法类似英语，所以对初学者非常友好。它也是数据分析中最常用的技术工具之一。
 
-Python提供了丰富的用于数据处理的包和库，如Pandas和NumPy，以及用于数据可视化的Matplotlib。
+Python 提供了丰富的用于数据处理的包和库，如 Pandas 和 NumPy ，以及用于数据可视化的 Matplotlib 。
 
-要想开始学习，先看看[零基础如何学习Python](https://www.freecodecamp.org/news/how-to-learn-python/)。
+要想开始学习，可以先看下[零基础如何学习 Python ](https://www.freecodecamp.org/news/how-to-learn-python/)。
 
-一旦你理解了基础知识，你就可以继续学习Pandas、NumPy和Matplotlib。
+一旦你理解了基础知识，你就可以继续学习 Pandas 、 NumPy 和 Matplotlib 。
 
-这里是一些可供学习的资源。
+这里是一些可供学习的资源：
 
--   [如何在Python中使用Pandas——初学者指南](https://www.freecodecamp.org/news/python-pandas-functions/)
--   [Python中用于数据科学的Pandas终极指南(https://www.freecodecamp.org/news/the-ultimate-guide-to-the-pandas-library-for-data-science-in-python/)
--   [Python中用于科学计算的NumPy终极指南](https://www.freecodecamp.org/news/the-ultimate-guide-to-the-numpy-scientific-computing-library-for-python/)
--   [学习NumPy并开始用Python进行科学计算](https://www.freecodecamp.org/news/numpy-python-tutorial/)
--   [如何用Python、Pandas和Numpy分析数据——10小时课程](https://www.freecodecamp.org/news/how-to-analyze-data-with-python-pandas/)
--   [Matplotlib课程——学习Python数据可视化](https://www.freecodecamp.org/news/matplotlib-course-learn-python-data-visualization/)
--   [Python数据科学--面向初学者的12小时免费课程，学习Pandas、NumPy、Matplotlib及更多](https://www.freecodecamp.org/news/python-data-science-course-matplotlib-pandas-numpy/)
+-   [如何在 Python 中使用 Pandas ——初学者指南](https://www.freecodecamp.org/news/python-pandas-functions/)
+-   [Python 中用于数据科学的 Pandas 终极指南](https://www.freecodecamp.org/news/the-ultimate-guide-to-the-pandas-library-for-data-science-in-python/)
+-   [Python 中用于科学计算的 NumPy 终极指南](https://www.freecodecamp.org/news/the-ultimate-guide-to-the-numpy-scientific-computing-library-for-python/)
+-   [学习 NumPy 并开始用 Python 进行科学计算](https://www.freecodecamp.org/news/numpy-python-tutorial/)
+-   [如何用 Python 、 Pandas 和 Numpy 分析数据——10小时课程](https://www.freecodecamp.org/news/how-to-analyze-data-with-python-pandas/)
+-   [Matplotlib 课程——学习 Python 数据可视化](https://www.freecodecamp.org/news/matplotlib-course-learn-python-data-visualization/)
+-   [Python 数据科学--面向初学者的12小时免费课程，学习 Pandas 、 NumPy 、 Matplotlib 及更多](https://www.freecodecamp.org/news/python-data-science-course-matplotlib-pandas-numpy/)
 
-R是一种用于统计分析和数据分析的语言。换言之，它不像Python那样适合初学者。
+R 是一种用于统计分析和数据分析的语言。换言之，它不像 Python 那样适合初学者。
 
-要开始学习R语言，可以从以下课程入手。
+要开始学习 R 语言，可以从以下课程入手：
 
--   [R语言解读](https://www.freecodecamp.org/news/r-programming-language-explained/)
--   [2小时掌握R语言基础（免费统计编程课程）](https://www.freecodecamp.org/news/r-programming-course/)
+-   [R 语言解读](https://www.freecodecamp.org/news/r-programming-language-explained/)
+-   [2小时掌握 R 语言基础（免费统计编程课程）](https://www.freecodecamp.org/news/r-programming-course/)
 
 ### 熟悉数据可视化工具
 
@@ -327,11 +327,11 @@ R是一种用于统计分析和数据分析的语言。换言之，它不像Pyth
 
 数据可视化工具本质上是用于依托数据讲故事并推动决策。
 
-Tableau是最受欢迎的数据可视化工具之一。
+Tableau 是最受欢迎的数据可视化工具之一。
 
-要学习Tableau，请查看以下课程：
+要学习 Tableau ，请查看以下课程：
 
--  [用于数据科学和数据可视化的Tableau——速成班](https://www.freecodecamp.org/news/tableau-for-data-science-and-data-visualization-crash-course/)
+-  [用于数据科学和数据可视化的 Tableau ——速成班](https://www.freecodecamp.org/news/tableau-for-data-science-and-data-visualization-crash-course/)
 
 ### 了解 Excel
 
@@ -343,9 +343,9 @@ Excel 是数据分析中最必不可少的工具之一。
 
 要学习如何使用 Excel ，请查看以下课程：
 
--   [学习Excel - 完整视频课程](https://www.freecodecamp.org/news/learn-microsoft-excel/)
--   [Excel在线课程——11门免费Excel培训课程](https://www.freecodecamp.org/news/excel-classes-online-free-excel-training-courses/)
--   [针对Excel用户的Python数据分析课程](https://www.freecodecamp.org/news/data-analysis-with-python-for-excel-users-course/)
+-   [学习 Excel ——完整视频课程](https://www.freecodecamp.org/news/learn-microsoft-excel/)
+-   [Excel 在线课程——11门免费 Excel 培训课程](https://www.freecodecamp.org/news/excel-classes-online-free-excel-training-courses/)
+-   [针对 Excel 用户的 Python 数据分析课程](https://www.freecodecamp.org/news/data-analysis-with-python-for-excel-users-course/)
 
 ## 结论
 

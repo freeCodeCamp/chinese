@@ -1,6 +1,6 @@
 > -  原文地址：[How to Solve the Parking Lot Challenge in JavaScript](https://www.freecodecamp.org/news/parking-lot-challenge-solved-in-javascript/)
 > -  原文作者：[Mihail Gaberov](https://www.freecodecamp.org/news/author/mihail/)
-> -  译者：
+> -  译者：Irenia111
 > -  校对者：
 
 ![How to Solve the Parking Lot Challenge in JavaScript](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/parking-loot.jpeg)

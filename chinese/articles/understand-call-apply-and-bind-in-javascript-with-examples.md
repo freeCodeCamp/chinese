@@ -1,6 +1,6 @@
 > -  原文地址：[How to Use the Call, Apply, and Bind Functions in JavaScript – with Code Examples](https://www.freecodecamp.org/news/understand-call-apply-and-bind-in-javascript-with-examples/)
 > -  原文作者：[Keyur Paralkar](https://www.freecodecamp.org/news/author/keyurparalkar/)
-> -  译者：
+> -  译者：Irenia111
 > -  校对者：
 
 ![How to Use the Call, Apply, and Bind Functions in JavaScript – with Code Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/Screenshot-2022-06-14-at-8.53.33-PM-1.png)

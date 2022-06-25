@@ -37,7 +37,7 @@
     1.  [熟练掌握数学和统计学知识](#maths)
     2.  [了解SQL和关系型数据库](#sql)
     3.  [掌握一门编程语言](#programming-language)
-    4.  [熟悉数据可视化的工具](#data-viz)
+    4.  [熟悉数据可视化工具](#data-viz)
     5.  [了解Excel](#excel)
 
 ## 什么是数据？数据的含义和定义
@@ -319,38 +319,38 @@ R是一种用于统计分析和数据分析的语言。换言之，它不像Pyth
 -   [R语言解读](https://www.freecodecamp.org/news/r-programming-language-explained/)
 -   [2小时掌握R语言基础（免费统计编程课程）](https://www.freecodecamp.org/news/r-programming-course/)
 
-### Knowledge of data visualization tools
+### 熟悉数据可视化工具
 
-Data visualization is the graphical interpretation and presentation of data.
+数据可视化是对数据的图形化解释和展示。
 
-This includes creating graphs, charts, interactive dashboards, or maps that can be easily shared with other team members and important stakeholders.
+这包括创建图形、图表、交互式仪表板或地图，以便于与其他团队成员及重要的利益相关者分享。
 
-Data visualization tools are essentially used to tell a story with data and drive decision-making.
+数据可视化工具本质上是用于依托数据讲故事并推动决策。
 
-One of the most popular data visualization tools used is Tableau.
+Tableau是最受欢迎的数据可视化工具之一。
 
-To learn Tableau, check out the following course:
+要学习Tableau，请查看以下课程：
 
--   [Tableau for Data Science and Data Visualization - Crash Course](https://www.freecodecamp.org/news/tableau-for-data-science-and-data-visualization-crash-course/)
+-  [用于数据科学和数据可视化的Tableau——速成班](https://www.freecodecamp.org/news/tableau-for-data-science-and-data-visualization-crash-course/)
 
-### Knowledge of Excel
+### 了解 Excel
 
-Excel is one of the most essential tools used in Data analysis.
+Excel 是数据分析中最必不可少的工具之一。
 
-It is used for storing, structuring, and formatting data, performing calculations, summarizing data and identifying trends, sorting data into categories, and creating reports.
+它用于存储、结构化和格式化数据，运行计算、总结数据和识别趋势，将数据进行分类，并创建报告。
 
-You can also use Excel to create charts and graphs.
+你也可以使用 Excel 来创建图表和图形。
 
-To learn how to use Excel, check out the following courses:
+要学习如何使用 Excel ，请查看以下课程：
 
--   [Learn Microsoft Excel - Full Video Course](https://www.freecodecamp.org/news/learn-microsoft-excel/)
--   [Excel Classes Online – 11 Free Excel Training Courses](https://www.freecodecamp.org/news/excel-classes-online-free-excel-training-courses/)
--   [Data Analysis with Python for Excel Users Course](https://www.freecodecamp.org/news/data-analysis-with-python-for-excel-users-course/)
+-   [学习Excel - 完整视频课程](https://www.freecodecamp.org/news/learn-microsoft-excel/)
+-   [Excel在线课程——11门免费Excel培训课程](https://www.freecodecamp.org/news/excel-classes-online-free-excel-training-courses/)
+-   [针对Excel用户的Python数据分析课程](https://www.freecodecamp.org/news/data-analysis-with-python-for-excel-users-course/)
 
-## Conclusion
+## 结论
 
-This marks the end of the article – thank you so much for making it to the end!
+这是文章的最后一部分了——非常感谢你能阅读到最后。
 
-Hopefully this guide was helpful, and it gave you some insight into what data analysis is, why it is important, and what skills you need to enter the field.
+希望这篇指南对你有所帮助，能让你了解什么是数据分析、数据分析为何重要，以及进入这个领域需要何种技能。
 
-Thank you for reading!
+感谢阅读！

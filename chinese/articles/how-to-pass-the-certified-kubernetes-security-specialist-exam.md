@@ -4,7 +4,7 @@
                         Faizan Bashir
                     
                 ](https://www.freecodecamp.org/news/author/faizanbashir/)
-> -  译者：
+> -  译者：Irenia111
 > -  校对者：
 
 ![How to Pass the Certified Kubernetes Security Specialist Exam – Cheat sheet and Study Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/cks.jpeg)

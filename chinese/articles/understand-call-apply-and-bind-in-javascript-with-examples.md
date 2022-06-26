@@ -95,7 +95,7 @@ const newCarPrice = new definePrice(100000);
 
 在这两个函数中， 我们都在`this`对象内调用`Car`函数，`this`对象分别代表了这两个函数。 例如在`setBrand`函数中，我们在代表函数上下文的`this`对象调用了`Car`函数，`definePrice`一样。
 
-### 在S中如何在不传入参数的情况下调用call函数
+### 在JS中如何在不传入参数的情况下调用call函数
 
 考虑下面的例子：
 

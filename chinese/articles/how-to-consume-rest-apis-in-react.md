@@ -1,6 +1,6 @@
 > -  原文地址：[How to Consume REST APIs in React – a Beginner's Guide](https://www.freecodecamp.org/news/how-to-consume-rest-apis-in-react/)
 > -  原文作者：[Joel Olawanle](https://www.freecodecamp.org/news/author/joel-olawanle/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Consume REST APIs in React – a Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/cover-template-2.jpg)

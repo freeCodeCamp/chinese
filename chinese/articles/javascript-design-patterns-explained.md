@@ -1,63 +1,63 @@
 > -  原文地址：[JavaScript Design Patterns –Explained with Examples](https://www.freecodecamp.org/news/javascript-design-patterns-explained/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![JavaScript Design Patterns –Explained with Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/pexels-pixabay-161043.jpg)
 
-Hi everyone! In this article I'll explain what design patterns are and why they're useful.
+大家好，在这篇文章中我将介绍设计模式是什么以及为什么很重要。
 
-We'll also go through some of the most popular design patterns out there and give examples for each of them. Let's go!
+我还将介绍一些最流行的设计模式，并为每一种模式举例说明。让我们开始吧!
 
-## Table of Contents
+## 目录
 
--   [What Are Design Patterns?](#what-are-design-patterns)
--   [Creational Design Patterns](#creational-design-patterns)
-    -   [Singleton Pattern](#singleton-pattern)
-    -   [Factory Method Pattern](#factory-method-pattern)
-    -   [Abstract Factory Pattern](#abstract-factory-pattern)
-    -   [Builder Pattern](#builder-pattern)
-    -   [Prototype Pattern](#prototype-pattern)
--   [Structural Design Patterns](#structural-design-patterns)
-    -   [Adapter Pattern](#adapter-pattern)
-    -   [Decorator Pattern](#decorator-pattern)
-    -   [Facade Pattern](#facade-pattern)
-    -   [Proxy Pattern](#proxy-pattern)
--   [Behavioral Design Patterns](#behavioral-design-patterns)
-    -   [Chain of Responsability Pattern](#chain-of-responsibility-pattern)
-    -   [Iterator Pattern](#iterator-pattern)
-    -   [Observer Pattern](#observer-pattern)
--   [Roundup](#roundup)
+-   [什么是设计模式？](#what-are-design-patterns)
+-   [创建范例](#creational-design-patterns)
+    -   [单例模式](#singleton-pattern)
+    -   [工厂方法](#factory-method-pattern)
+    -   [抽象工厂](#abstract-factory-pattern)
+    -   [构造器](#builder-pattern)
+    -   [原型](#prototype-pattern)
+-   [结构范例](#structural-design-patterns)
+    -   [适配器](#adapter-pattern)
+    -   [装饰](#decorator-pattern)
+    -   [外观](#facade-pattern)
+    -   [代理](#proxy-pattern)
+-   [行为范式](#behavioral-design-patterns)
+    -   [责任链](#chain-of-responsibility-pattern)
+    -   [迭代器](#iterator-pattern)
+    -   [观察者](#observer-pattern)
+-   [总结](#roundup)
 
-# What Are Design Patterns?
+<h1 id="what-are-design-patterns">什么是设计模式？</h1>
 
-Design patterns were popularized by [the book "Design Patterns: Elements of Reusable Object-Oriented Software"](https://en.wikipedia.org/wiki/Design_Patterns), published in 1994 by a group of four C++ engineers.
+设计模式这个概念是由[一本名为《设计模式：可复用面向对象软件的基础》](https://en.wikipedia.org/wiki/Design_Patterns)推广而来， 这本书在1994年由四个C++工程师编写。
 
-The book explores the capabilities and pitfalls of object-oriented programming, and describes 23 useful patterns that you can implement to solve common programming problems.
+这本书探讨了面向对象的编程的能力和陷阱，并介绍了23种可以用来解决编程问题的模式。
 
-These patterns are **not algorithms or specific implementations**. They are more like **ideas, opinions, and abstractions** that can be useful in certain situations to solve a particular kind of problem.
+这些模式**并不是算法或者具体的实现**。它们更像是**想法、观点和抽象**，辅助你去解决一些特定问题。
 
-The specific implementation of the patterns may vary depending on many different factors. But what's important is the concepts behind them, and how they might help us achieve a better solution for our problem.
+根据要素的不同模式的实现也各不相同，重要的是模式背后的概念，它可以帮助我们更好地解决问题。
 
-This being said, keep in mind these patterns were thought up with OOP C++ programming in mind. When it comes to more modern languages like JavaScript or other programming paradigms, these patterns might not be equally useful and might even add unnecessary boilerplate to our code.
+话虽如此，但是请记住，这些模式建立在C++的OOP的基础之上，当使用更现代的编程语言如JavaScript时，模式可能不等效，甚至给代码添加了不必要的样本。
 
-Nevertheless, I think it's good to know about them as general programming knowledge.
+不过把这些模式当作一般的编程知识来了解没有坏处。
 
-Side comment: If you're not familiar with [programming paradigms](https://www.freecodecamp.org/news/an-introduction-to-programming-paradigms/) or [OOP](https://www.freecodecamp.org/news/object-oriented-javascript-for-beginners/), I recently wrote two articles about those topics. 😉
+旁注：如果你不熟悉[编程范式](https://www.freecodecamp.org/news/an-introduction-to-programming-paradigms/)或者[OOP](https://www.freecodecamp.org/news/object-oriented-javascript-for-beginners/)，推荐你阅读我最近写的这两篇文章。 😉
 
-Anyway... Now that we've gotten the introduction out of the way, design patterns are classified into three main categories: **creational, structural, and behavioral patterns**. Let's briefly explore each of them. 🧐
+设计模式的简介就到这里。设计模式可以被分为三大类: **创建、结构、行为范例**。让我们逐个了解。 🧐
 
-# Creational Design Patterns
+<h1 id="creational-design-patterns">创建范例</h1>
 
-Creational patterns consist of different mechanisms used to create objects.
+创建范例包括不同的创建对象的机制。
 
-## Singleton Pattern
+<h2 id="singleton-pattern">单例模式</h2>
 
-**Singleton** is a design pattern that ensures that a class has only one immutable instance. Said simply, the singleton pattern consists of an object that can't be copied or modified. It's often useful when we want to have some immutable single _point of truth_ for our application.
+**单例模式**确保对象的类只有一个不可更改实例。简言之，单例模式包含一个不能被复制和修改的对象。当你希望应用遵循 _"真理的单点性“_ 的观点时，这个模式就能发挥作用。
 
-Let's say for example we want to have all of our app's configuration in a single object. And we want to disallow any duplication or modification of that object.
+比方说，我们想在一个单一对象中包含应用程序的所有配置，而且禁止对该对象进行任何复制或修改。
 
-Two ways of implementing this pattern are using object literals and classes:
+可以通过对象字面量和类者两种方法来实现：
 
 ```javascript
 const Config = {
@@ -65,17 +65,17 @@ const Config = {
   update: () => console.log('App has updated'),
 }
 
-// We freeze the object to prevent new properties being added and existing properties being modified or removed
+// 通过冻结对象来限制增加新的属性或者修改已有属性
 Object.freeze(Config)
 
 Config.start() // "App has started"
 Config.update() // "App has updated"
 
-Config.name = "Robert" // We try to add a new key
-console.log(Config) // And verify it doesn't work: { start: [Function: start], update: [Function: update] }
+Config.name = "Robert" // 尝试添加一个新的键
+console.log(Config) // 添加失败： { start: [Function: start], update: [Function: update] }
 ```
 
-Using an object literal
+使用对象的字面量
 
 ```javascript
 class Config {
@@ -88,13 +88,13 @@ const instance = new Config()
 Object.freeze(instance)
 ```
 
-Using classes
+使用类
 
-## Factory Method Pattern
+<h2 id="factory-method-pattern">工厂方法</h2>
 
-The **Factory method** pattern provides an interface for creating objects that can be modified after creation. The cool thing about this is that the logic for creating our objects is centralized in a single place, simplifying and better organizing our code.
+**工厂方法**提供创建对象的接口，对象被创建后可以修改。这样做的好处是，创建对象的逻辑集中在一个地方，这样简化了代码，使得代码更易组织。
 
-This pattern is used a lot and can also be implemented in two different ways, via classes or factory functions (functions that return an object).
+这种模式被大量应用。可以通过类和工厂函数（返回对象的函数）来实现：
 
 ```javascript
 class Alien {
@@ -108,10 +108,10 @@ class Alien {
 }
 
 const alien1 = new Alien("Ali", "I'm Ali the alien!")
-console.log(alien1.name) // output: "Ali"
+console.log(alien1.name) // 输出: "Ali"
 ```
 
-Using classes
+使用类
 
 ```javascript
 function Alien(name, phrase) {
@@ -125,25 +125,25 @@ Alien.prototype.sayPhrase = () => console.log(this.phrase)
 
 const alien1 = new Alien("Ali", "I'm Ali the alien!")
 
-console.log(alien1.name) // output "Ali"
-console.log(alien1.phrase) // output "I'm Ali the alien!"
-alien1.fly() // output "Zzzzzziiiiiinnnnnggggg"
+console.log(alien1.name) // 输出 "Ali"
+console.log(alien1.phrase) // 输出 "I'm Ali the alien!"
+alien1.fly() // 输出 "Zzzzzziiiiiinnnnnggggg"
 ```
 
-Using a factory function
+使用工厂函数
 
-## Abstract Factory Pattern
+<h2 id="abstract-factory-pattern"> 抽象工厂</h2>
 
-The **Abstract Factory** pattern allows us to produce families of related objects without specifying concrete classes. It's useful in situations where we need to create objects that share only some properties and methods.
+**抽象工厂** 允许在不指定具体类的情况下生成一系列相关的对象。当你想要创建仅共享某些属性和方法的对象时，抽象工厂模式就可以派上用场。
 
-The way it works is by presenting an abstract factory the client interacts with. That **abstract factory** calls the corresponding **concrete factory** given the corresponding logic. And that concrete factory is the one that returns the end object.
+它的工作方式是给客户端提供一个可以交互的抽象工厂。**抽象工厂**通过特定逻辑调用**具体工厂**，具体工厂返回最终的对象。
 
-Basically it just adds an abstraction layer over the factory method pattern, so that we can create many different types of objects, but still interact with a single factory function or class.
+这样做给工厂模式添加了一个抽象层，我们通过仅和单个工厂函数或者类交互来创建各种不同类型的对象。
 
-So let's see this with an example. Let's say we're modeling a system for a car company, which builds cars of course, but also motorcycles and trucks.
+让我们来看几个例子。 假设我们是汽车公司，我们除了生产小汽车以外，还生产摩托车和卡车。
 
 ```javascript
-// We have a class or "concrete factory" for each vehicle type
+// 每个汽车种类有一个类或者“具体工厂”
 class Car {
     constructor () {
         this.name = "Car"
@@ -168,8 +168,8 @@ class Motorcycle {
     turnOn = () => console.log("sssssssssssssssssssssssssssssshhhhhhhhhhham!!")
 }
 
-// And and abstract factory that works as a single point of interaction for our clients
-// Given the type parameter it receives, it will call the corresponding concrete factory
+// 抽象工厂作为单一交互点和客户端交互
+// 接受特定汽车类型作为参数，调用对应类型的具体工厂
 const vehicleFactory = {
     createVehicle: function (type) {
         switch (type) {
@@ -190,18 +190,18 @@ const truck = vehicleFactory.createVehicle("truck") // Truck { turnOn: [Function
 const motorcycle = vehicleFactory.createVehicle("motorcycle") // Motorcycle { turnOn: [Function: turnOn], name: 'Motorcycle', wheels: 2 }
 ```
 
-## Builder Pattern
+<h2 id="builder-pattern">构造器</h2>
 
-The **Builder** pattern is used to create objects in "steps". Normally we will have functions or methods that add certain properties or methods to our object.
+**构造器**模式分“步骤”创建对象。通常我们通过不同的函数和方法向对象添加属性和方法。
 
-The cool thing about this pattern is that we separate the creation of properties and methods into different entities.
+构造器的好处在于通过不同实体分开创建属性和方法。
 
-If we had a class or a factory function, the object we instantiate will always have all the properties and methods declared in that class/factory. But using the builder pattern, we can create an object and apply to it only the "steps" we need, which is a more flexible approach.
+通过类或者构造函数创建的实例通常继承了所有的属性和方法，但是如果使用构造器，我们可以只应用我们需要的“步骤”来创建对象，这样就更灵活。
 
-This is related to [object composition](https://www.youtube.com/watch?v=wfMtDGfHWpA&t=3s), a topic I've talked about [here](https://www.freecodecamp.org/news/object-oriented-javascript-for-beginners/#object-composition).
+这个概念和[对象组合](https://www.youtube.com/watch?v=wfMtDGfHWpA&t=3s)相关， 我在[这篇文章](https://www.freecodecamp.org/news/object-oriented-javascript-for-beginners/#object-composition)讨论过这个话题。
 
 ```javascript
-// We declare our objects
+// 声明一个对象
 const bug1 = {
     name: "Buggy McFly",
     phrase: "Your debugger doesn't work with me!"
@@ -212,7 +212,7 @@ const bug2 = {
     phrase: "Can't touch this! Na na na na..."
 }
 
-// These functions take an object as parameter and add a method to them
+// 这些函数将对象作为参数，并为对象添加方法
 const addFlyingAbility = obj => {
     obj.fly = () => console.log(`Now ${obj.name} can fly!`)
 }
@@ -221,39 +221,39 @@ const addSpeechAbility = obj => {
     obj.saySmthg = () => console.log(`${obj.name} walks the walk and talks the talk!`)
 }
 
-// Finally we call the builder functions passing the objects as parameters
+// 最后传入对象作为参数，调用构造器函数
 addFlyingAbility(bug1)
-bug1.fly() // output: "Now Buggy McFly can fly!"
+bug1.fly() // 输出: "Now Buggy McFly can fly!"
 
 addSpeechAbility(bug2)
-bug2.saySmthg() // output: "Martiniano Buggland walks the walk and talks the talk!"
+bug2.saySmthg() // 输出: "Martiniano Buggland walks the walk and talks the talk!"
 ```
 
-## Prototype Pattern
+<h2 id="prototype-pattern">原型</h2>
 
-The **Prototype** pattern allows you to create an object using another object as a blueprint, inheriting its properties and methods.
+**原型**允许把一个对象作为蓝图创建另一个对象，新对象继承原对象的属性和方法。
 
-If you've been around JavaScript for a while, you're probably familiar with [prototypal inheritance](https://www.freecodecamp.org/news/prototypes-and-inheritance-in-javascript/) and how JavaScript works around it.
+如果你已经使用过一段时间的JavaScript，你应该对[原型继承](https://www.freecodecamp.org/news/prototypes-and-inheritance-in-javascript/)有一定了解。
 
-The end result is very similar to what we get by using classes, but with a little more flexibility since properties and methods can be shared between objects without depending on the same class.
+原型链继承的结果和使用类相似，只是更为灵活，因为属性和方法可以不通过同一个类在对象之间共享。
 
 ```javascript
-// We declare our prototype object with two methods
+// 声明一个有两个方法的原型对象
 const enemy = {
     attack: () => console.log("Pim Pam Pum!"),
     flyAway: () => console.log("Flyyyy like an eagle!")
 }
 
-// We declare another object that will inherit from our prototype
+// 声明另外一个对象，这个对象将继承原型
 const bug1 = {
     name: "Buggy McFly",
     phrase: "Your debugger doesn't work with me!"
 }
 
-// With setPrototypeOf we set the prototype of our object
+// 使用setPrototypeOf设置对象的原型
 Object.setPrototypeOf(bug1, enemy)
 
-// With getPrototypeOf we read the prototype and confirm the previous has worked
+// 使用getPrototypeOf来确认我们是否设置成功
 console.log(Object.getPrototypeOf(bug1)) // { attack: [Function: attack], flyAway: [Function: flyAway] }
 
 console.log(bug1.phrase) // Your debugger doesn't work with me!
@@ -261,20 +261,20 @@ console.log(bug1.attack()) // Pim Pam Pum!
 console.log(bug1.flyAway()) // Flyyyy like an eagle!
 ```
 
-# Structural Design Patterns
+<h1 id="structural-design-patterns">结构范例</h1>
 
-Structural patterns refer to how to assemble objects and classes into larger structures.
+结构范例将对象和类组合成更大的结构。
 
-## Adapter Pattern
+<h2 id="adapter-pattern">适配器</h2>
 
-The **Adapter** allows two objects with incompatible interfaces to interact with each other.
+**适配器**允许两个接口不兼容的对象相互交互。
 
-Let's say, for example, that your application consults an API that returns [XML](https://www.freecodecamp.org/news/what-is-an-xml-file-how-to-open-xml-files-and-the-best-xml-viewers/) and sends that information to another API to process that information. But the processing API expects [JSON](https://www.freecodecamp.org/news/what-is-json-a-json-file-example/). You can't send the information as it's received since both interfaces are incompatible. You need to _adapt it_ first. 😉
+假设你的应用程序调用一个API并会返回一个[XML](https://www.freecodecamp.org/news/what-is-an-xml-file-how-to-open-xml-files-and-the-best-xml-viewers/)，然后将结果发送给另一个API来处理信息，但是处理信息的API期待的是[JSON](https://www.freecodecamp.org/news/what-is-json-a-json-file-example/)格式。因为格式不兼容，所以你不能直接发送信息，需要先 _适配_ 结果。 😉
 
-We can visualize the same concept with an even simpler example. Say we have an array of cities and a function that returns the greatest number of habitants any of those cities have. The number of habitants in our array is in millions, but we have a new city to add that has its habitants without the million conversion:
+我们可以举一个更简单的例子来具象化这个概念。假设我们有一个以城市为元素的数组，以及一个可以返回拥有最多人口城市的函数。数组中的城市人口以百万为单位计数，但是有一个新城市的人口单位不是百万：
 
 ```javascript
-// Our array of cities
+// 城市数组
 const citiesHabitantsInMillions = [
     { city: "London", habitants: 8.9 },
     { city: "Rome", habitants: 2.8 },
@@ -282,21 +282,21 @@ const citiesHabitantsInMillions = [
     { city: "Paris", habitants: 2.1 },
 ] 
 
-// The new city we want to add
+// 待添加的新城市
 const BuenosAires = {
     city: "Buenos Aires",
     habitants: 3100000
 }
 
-// Our adapter function takes our city and converts the habitants property to the same format all the other cities have
+// 适配器函数将城市的人口属性转换成统一的计数单位
 const toMillionsAdapter = city => { city.habitants = parseFloat((city.habitants/1000000).toFixed(1)) }
 
 toMillionsAdapter(BuenosAires)
 
-// We add the new city to the array
+// 将新城市添加到数组
 citiesHabitantsInMillions.push(BuenosAires)
 
-// And this function returns the largest habitants number
+// 函数返回人口最多的城市
 const MostHabitantsInMillions = () => {
     return Math.max(...citiesHabitantsInMillions.map(city => city.habitants))
 }
@@ -304,13 +304,13 @@ const MostHabitantsInMillions = () => {
 console.log(MostHabitantsInMillions()) // 8.9
 ```
 
-## Decorator Pattern
+<h2 id="decorator-pattern">装饰</h2>
 
-The **Decorator** pattern lets you attach new behaviors to objects by placing them inside wrapper objects that contain the behaviors. If you're somewhat familiar with React and higher order components (HOC) this kind of approach probably rings a bell for you.
+**装饰**通过增加一个修饰对象来包裹原来的对象，从而给原来的对象添加新的行为。 如果你熟悉React或者高阶组件（HOC），你内心的小铃铛可能会叮当一下。
 
-Technically, components in React functions, not objects. But if we think about how React Context or [Memo](https://www.freecodecamp.org/news/memoization-in-javascript-and-react/) we can see that we're passing a component as a child to this HOC, and thanks to that this child component is able to access certain features.
+从技术上讲，React中的组件是函数而不是对象。但如果你仔细思索React上下文（React Context）或者[Memo](https://www.freecodecamp.org/news/memoization-in-javascript-and-react/)是怎么运作的，你会发现我们将组件作为子组件传入HOC后，子组件而可以访问某些功能。
 
-In this example we can see that the ContextProvider component is receiving children as props:
+在下面的例子里中ContextProvider组件接受子组件作为prop：
 
 ```javascript
 
@@ -337,7 +337,7 @@ const ContextProvider: React.FC = ({children}) => {
 export default ContextProvider
 ```
 
-Then we wrap the whole application around it:
+然后我们包裹整个应用：
 
 ```javascript
 export default function App() {
@@ -377,7 +377,7 @@ export default function App() {
 }
 ```
 
-And later on, using the `useContext` hook I can access the state defined in the Context from any of the components in my app.
+接着，我们使用`useContext`钩子，使得应用内所有组件都可以获得定义在Context的状态（state）：
 
 ```javascript
 
@@ -391,23 +391,23 @@ const AboutPage: React.FC = () => {
 export default AboutPage
 ```
 
-Again, this might not be the exact implementation the book authors had in mind when they wrote about this pattern, but I believe the idea is the same. Place an object within another so it can access certain features. ;)
+这个例子可能不是书的作者在写这个模式时想到的确切实现，但我相信想法是一样的：把一个对象放在另一个对象中，这样它就可以访问某些功能。 ;)
 
-## Facade Pattern
+<h2 id="facade-pattern">外观</h2>
 
-The **Facade** pattern provides a simplified interface to a library, a framework, or any other complex set of classes.
+**外观**模式给库、框架以及其他复杂的类集提供简化的接口。
 
-Well...we can probably come out with lots of examples for this, right? I mean, React itself or any of the gazillion libraries out there used for pretty much anything related to software development. Specially when we think about [declarative programming](https://www.freecodecamp.org/news/an-introduction-to-programming-paradigms/#declarative-programming), it's all about providing abstractions that hide away complexity from the eyes of the developer.
+嗯……我们可以举的例子非常多，不是吗？React本身以及各种各样的软件开发相关的库就是基于这个模式。特别是当你思考[声明式编程](https://www.freecodecamp.org/news/an-introduction-to-programming-paradigms/#declarative-programming)，会发现这个范式就是使用抽象的方法对开发者隐藏复杂性。
 
-A simple example could be JavaScript's `map`, `sort`, `reduce` and `filter` functions, which all work like good 'ol `for` loops beneath the hood.
+JavaScript中的 `map`、 `sort`、 `reduce` 和 `filter`函数都是很好的例子，这些函数的背后其实是我们的老朋友`for`循环。
 
-Another example could be any of the libraries used for UI development nowadays, like [MUI](https://mui.com/). As we can see in the following example, these libraries offer us components that bring built-in features and functionalities that help us build code faster and easier.
+另一个例子是一些UI库，如：[MUI](https://mui.com/)。正如以下示例所展现的这样，库提供了组件，组件带来了内置特性和功能，帮助我们更快、更轻松地构建代码。
 
-But all this when compiled turns into simple HTML elements, which are the only thing browsers understand. These components are only abstractions that are here to make our lives easier.
+这些代码最后都会编译成简单的HTML元素，这是浏览器唯一能理解的东西。组件只是采用了抽象的办法，使得我们的编码过程更容易。
 
 ![thewolfofwallstreet-fairydust](https://www.freecodecamp.org/news/content/images/2022/06/thewolfofwallstreet-fairydust.gif)
 
-A facade...
+一个外观模式...
 
 ```javascript
 import * as React from 'react';
@@ -472,13 +472,13 @@ export default function BasicTable() {
 }
 ```
 
-## Proxy Pattern
+<h2 id="proxy-patter">代理</h2>
 
-The **Proxy** pattern provides a substitute or placeholder for another object. The idea is to control access to the original object, performing some kind of action before or after the request gets to the actual original object.
+**代理**模式为另一个对象提供替代或者占位符。这个想法是控制对原始对象的访问，当请求到达实际的原始对象之前或者之后再执行某种操作。
 
-Again, if you're familiar with [ExpressJS](https://expressjs.com/) this probably rings a bell for you. Express is a framework used to develop NodeJS APIs, and one of the features it has is the use of Middlewares. Middlewares are nothing more than pieces of code we can make execute before, in the middle, or after any request reaches our endpoints.
+如果你熟悉[ExpressJS](https://expressjs.com/)的话，这个概念就不陌生。Express是用于开发NodeJS API的框架，其中一个功能就是中间件的使用。中间件是我们可以在请求到达终点之前、之中和之后执行的一段代码。
 
-Let's see this in an example. Here I have a function that validates an authentication token. Don't pay much attention to how it does that. Just know that it receives the token as parameter, and once it's done it calls the `next()` function.
+让我们看一个例子。是一个验证身份令牌的函数，不用太关注验证是如何实现的，但是要注意函数接受令牌作为参数，一旦验证完毕就会调用`next()`函数。
 
 ```javascript
 const jwt = require('jsonwebtoken')
@@ -497,7 +497,7 @@ module.exports = function authenticateToken(req, res, next) {
 }
 ```
 
-This function is a middleware, and we can use it in any endpoint of our API in the following way. We just place the middleware after the endpoint address and before declaration of the endpoint function:
+这个函数就是一个中间件，我们可以API中的任意终点使用这个中间件。只需要将其添加在终点地址之后，终点的函数声明之前：
 
 ```javascript
 router.get('/:jobRecordId', authenticateToken, async (req, res) => {
@@ -511,67 +511,67 @@ router.get('/:jobRecordId', authenticateToken, async (req, res) => {
 })
 ```
 
-In this way, if no token or a wrong token is provided, the middleware will return the corresponding error response. If a valid token is provided, the middleware will call the `next()` function and the endpoint function will get executed next.
+如果没有提供令牌或者提供了错误的令牌，中间件就会返回相应的错误响应。如果提供了有效令牌，中间件将调用`next()`函数，然后将执行终点函数。
 
-We could've just written the same code within the endpoint itself and validated the token in there, without worrying about middlewares or anything. But the thing is now we have an abstraction we can reuse in many different endpoints. 😉
+我们可以在终点内部编写相同的代码来验证令牌，这样就用不着中间件了，但使用了抽象的方法，我们可以在不同的终点复用中间件。 😉
 
-Again, this might not have been the precise idea the authors had in mind, but I believe it's a valid example. We're controlling an object's access so we can perform actions at a particular moment.
+同样这个例子可能不是作者的确切想法，但我相信这是一个有效的例子。我们控制对象的访问，以便我们可以在特定时刻执行操作。
 
-# Behavioral Design Patterns
+<h1 id="behavioral-design-pattern">行为范式</h1>
 
-Behavioral patterns control communication and the assignment of responsibilities between different objects.
+行为范式控制不同对象之间的通讯。
 
-## Chain of Responsibility Pattern
+<h2 id="chain-of-responsibility-pattern">责任链</h2>
 
-The **Chain of Responsibility** passes requests along a chain of handlers. Each handler decides either to process the request or to pass it to the next handler in the chain.
+**责任链**将请求通过处理链传递，链条上的每一个处理程序决定要么处理请求，要么将请求传递给链条上的下一个处理程序。
 
-For this pattern we could use the same exact example as before, as middlewares in Express are somehow handlers that either process a request or pass it to the next handler.
+我们可以使用之前示例来演示这个模式，因为Express的中间件就是一种处理程序，要么处理请求，要么将其传递给下一个处理程序。
 
-If you'd like another example, think about any system in which you have certain information to process along many steps. At each step a different entity is in charge of performing an action, and the information only gets passed to another entity if a certain condition is met.
+如果你想要另一个示例，可以考虑任何需要通过步骤来一步一步实现信息处理的系统。在每个步骤中，不同的实体负责执行操作，并且只有在满足特定条件时，信息才会传递给另一个实体。
 
-A typical front-end app that consumes an API could work as an example:
+需要使用API的前端应用程序就是很好的例子：
 
--   We have a function responsible for rendering a UI component.
--   Once rendered, a another function makes a request to an API endpoint.
--   If the endpoint response is as expected, the information is passed to another function that sorts the data in a given way and stores it in a variable.
--   Once that variable stores the needed information, another function is responsible of rendering it in the UI.
+-   有一个负责渲染UI的函数
+-   一旦渲染，另一个函数向API终点发出请求
+-   如果终点响应符合预期，则将信息传递给另一个函数，该函数以给定方式对数据进行排序并存储在变量中
+-   一旦变量存储了所需的信息，另一个函数负责在UI中呈现它。
 
-We can see how here we have many different entities that collaborate to execute a certain task. Each of them is responsible for a single "step" of that task, which helps with code modularity and separation of concerns.👌👌
+可以看到这里有许多不同的实体协作执行任务。每个都负责该任务的一个“步骤”，这有助于代码模块化和关注点分离。👌👌
 
-## Iterator Pattern
+<h2 id="iterator-pattern">迭代器</h2>
 
-The **iterator** is used to traverse elements of a collection. This might sound trivial in programming languages used nowadays, but this wasn't always the case.
+**迭代器**用于遍历集合的元素。这在现代编程语言中显得微不足道，但并非如此。
 
-Anyway, any of the JavaScript built in functions we have at our disposal to iterate over data structures (`for`, `forEach`, `for...of`, `for...in`, `map`, `reduce`, `filter`, and so on) are examples of the iterator pattern.
+JavaScript内置函数(`for`、 `forEach`、`for...of`、 `for...in`、 `map`、`reduce`、 `filter`等)就是手边可以拿来遍历数据结构的方法。
 
-Same as any [traversing algorithm](https://www.freecodecamp.org/news/introduction-to-algorithms-with-javascript-examples/#traversing-algorithms) we code to iterate through more complex [data structures like trees or graphs](https://www.freecodecamp.org/news/data-structures-in-javascript-with-examples/).
+[遍历算法](https://www.freecodecamp.org/news/introduction-to-algorithms-with-javascript-examples/#traversing-algorithms) 以及更为复杂的[树和图这样的数据结构](https://www.freecodecamp.org/news/data-structures-in-javascript-with-examples/)使用的代码也是迭代器的例子。
 
-## Observer Pattern
+<h2 id="observer-pattern">观察者</h2>
 
-The **observer** pattern lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing. Basically, it's like having an event listener on a given object, and when that object performs the action we're listening for, we do something.
+**观察者**模式允许你定义一个订阅机制来通知多个对象他们正在观察的对象发生的任何事件。基本上，这就像在给定对象上有一个事件侦听器，当该对象执行我们正在侦听的操作时，我们会采取一些行动。
 
-React's useEffect hook might be a good example here. What useEffect does is execute a given function at the moment we declare.
+React的useEffect钩子就是一个很好的例子。 useEffect在我们声明的那一刻执行给定的函数。
 
-The hook is divided in two main parts, the executable function and an array of dependencies. If the array is empty, like in the following example, the function gets executed each time the component is rendered.
+钩子分为两个主要部分：可执行函数和依赖数组。如果数组为空，如下例所示，每次渲染组件时都会执行该函数。
 
 ```javascript
   useEffect(() => { console.log('The component has rendered') }, [])
 ```
 
-If we declare any variables within the dependency array, the function will execute only when those variables change.
+如果在依赖数组中声明任何变量，则该函数将仅在这些变量发生变化时执行。
 
 ```javascript
   useEffect(() => { console.log('var1 has changed') }, [var1])
 ```
 
-Even plain old JavaScript event listeners can be thought of as observers. Also, reactive programming and libraries like [RxJS](https://rxjs.dev/), which are used to handle asynchronous information and events along systems, are good examples of this pattern.
+也可以将JavaScript的事件监听器视为观察者模式。另外，响应式编程和库如[RxJS](https://rxjs.dev/)，用来处理异步信息和事件的方法也是这个模式。
 
-# **Roundup**
+<h1 id="roundup">总结</h1>
 
-If you'd like to know more about this topic, I recommend this g[reat Fireship video](https://www.youtube.com/watch?v=tv-_1er1mWI) and [this awesome website](https://refactoring.guru/) where you can find very detailed explanations with illustrations to help you understand each pattern.
+如果你想了解更多相关信息，推荐观看[这个视频](https://www.youtube.com/watch?v=tv-_1er1mWI) 或访问[这个网站](https://refactoring.guru/)，你可以找到每个模式的配图详细介绍。
 
-As always, I hope you enjoyed the article and learned something new. If you want, you can also follow me on [LinkedIn](https://www.linkedin.com/in/germancocca/) or [Twitter](https://twitter.com/CoccaGerman).
+希望你享受阅读这篇文章，并有所收获。你可以在[LinkedIn](https://www.linkedin.com/in/germancocca/)和[Twitter](https://twitter.com/CoccaGerman)上关注我。
 
-Cheers and see you in the next one! ✌️
+半杯！我们下篇文章见！ ✌️
 
 ![See-ya-GIF](https://www.freecodecamp.org/news/content/images/2022/06/See-ya-GIF.gif)

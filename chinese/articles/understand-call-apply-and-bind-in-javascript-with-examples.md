@@ -1,51 +1,51 @@
 > -  原文地址：[How to Use the Call, Apply, and Bind Functions in JavaScript – with Code Examples](https://www.freecodecamp.org/news/understand-call-apply-and-bind-in-javascript-with-examples/)
 > -  原文作者：[Keyur Paralkar](https://www.freecodecamp.org/news/author/keyurparalkar/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Use the Call, Apply, and Bind Functions in JavaScript – with Code Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/Screenshot-2022-06-14-at-8.53.33-PM-1.png)
 
-In this article, I am going to explain how to use call, apply, and bind in JavaScript with simple examples.
+在本文中，我将通过简单的示例来解释如何在JavaScript中使用call、apply和bind。
 
-We will also implement an example that showcases how you can create your own map function with the apply function.
+我们还将使用apply函数创建自己的map函数。
 
-Without further ado, let's get started.
+话不多说，让我们开始吧！
 
-## Table of Contents
+## 目录
 
--   [Prerequisites](#prerequisites)
--   [Definitions](#definitions)
--   [How to use the call function in JavaScript](#how-to-use-the-call-function-in-javascript)
--   [How to use the apply function in JavaScript](#how-to-use-the-apply-function-in-javascript)
--   [How to use the bind function in JavaScript](#how-to-use-the-bind-function-in-javascript)
--   [How to create your own map function](#how-to-create-your-own-map-function)
--   [Summary](#summary)
+-   [前提](#prerequisites)
+-   [定义](#definitions)
+-   [如何在JavaScript中使用call函数](#how-to-use-the-call-function-in-javascript)
+-   [如何在JavaScript中使用apply函数](#how-to-use-the-apply-function-in-javascript)
+-   [如何在JavaScript中使用bind函数](#how-to-use-the-bind-function-in-javascript)
+-   [如何自定义map函数](#how-to-create-your-own-map-function)
+-   [总结](#summary)
 
-## Prerequisites
+<h2 id="prerequisites">前提</h2>
 
-Here are some of the things you should understand to get the most out of this article:
+想要充分理解本文，你需要先了解以下概念：
 
--   [Functions](https://www.freecodecamp.org/news/what-is-a-function-javascript-function-examples/)
--   [Function Prototypes](https://www.freecodecamp.org/news/all-you-need-to-know-to-understand-javascripts-prototype-a2bff2d28f03/)
--   [This keyword](https://www.freecodecamp.org/news/what-is-this-in-javascript/)
+-   [函数](https://www.freecodecamp.org/news/what-is-a-function-javascript-function-examples/)
+-   [函数原型](https://www.freecodecamp.org/news/all-you-need-to-know-to-understand-javascripts-prototype-a2bff2d28f03/)
+-   [this关键字](https://chinese.freecodecamp.org/news/what-is-this-in-javascript/)
 
-## Definitions
+<h2 id="definitions">定义</h2>
 
-Let's look at the functions we'll be studying here a bit more closely to understand what they do.
+让我们仔细地研究一下这几个函数的作用：
 
-**Call** is a function that helps you change the context of the invoking function. In layperson's terms, it helps you replace the value of `this` inside a function with whatever value you want.
+**Call** 函数可以改变函数调用的上下文。直白讲，就是将函数内部`this`值改变成任意你想要的值。
 
-**Apply** is very similar to the `call` function. The only difference is that in `apply` you can pass an array as an argument list.
+**Apply** 函数和`call`函数类似，唯一的区别在于`apply`允许将数组作为函数参数列表。
 
-**Bind** is a function that helps you create another function that you can execute later with the new context of `this` that is provided.
+**Bind** 函数创建一个稍后执行的函数，这个新函数的执行上下文由 `this` 提供。
 
-Now we will look at some basic examples of the call, apply, and bind functions. Then we will look at an example were we will be constructing our own function similar to the map function.
+让我们先来看看call、apply和bind函数的例子，然后我们将来创建一个类似map的函数。
 
-## How to Use the Call Function in JavaScript
+<h2 id="how-to-use-the-call-function-in-javascript">如何在JavaScript中使用call函数</h2>
 
-`call` is a function that you use to change the value of `this` inside a function and execute it with the arguments provided.
+`call`函数更改一个函数内部`this`的值，并且将传入的参数作为这个函数的执行参数。
 
-Here is the syntax of the `call` function:
+`call`函数的语法如下：
 
 ```Javascript
 
@@ -53,19 +53,19 @@ func.call(thisObj, args1, args2, ...)
 
 ```
 
-Where,
+其中：
 
--   **func** is a function that needs to be invoked with a different `this` object
--   **thisObj** is an object or a value that needs to be replaced with the `this` keyword present inside the function `func`
--   **args1, args2** are arguments that are passed to the invoking function with the changed `this` object.
+-   **func** 是通过不同`this`对象调用的函数
+-   **thisObj** 是用来替换函数`func`内部 `this`关键字的对象或者值 
+-   **args1, args2** args1, args2是参数，与改变后的`this`对象一起传递给调用的函数。
 
-Note that if you invoke a function without any `thisObj` argument, then JavaScript considers this property to be a global object.
+注意如果在不传入`thisObj`参数的情况下调用函数，JavaScript默认this值为全局对象。
 
-Now that we have some context around what the `call` function is, let's start off by understanding it in more detail with some examples.
+现在我们已经了解了`call`函数的背景，让我们通过一些示例来进一步了解它。
 
-### How to call a function with different contexts in JS
+### JS中如何在不同的上下文调用函数
 
-Consider the below example. It consists of 3 classes – `Car`, `Brand1`, and `Brand2`.
+考虑下面的例子。这个例子中有三个类 – `Car`、`Brand1`和`Brand2`：
 
 ```Javascript
 function Car(type, fuelType){
@@ -91,13 +91,13 @@ const newCarPrice = new definePrice(100000);
 
 [](https://www.canva.com/design/DAFD4b369JM/watch?utm_content=DAFD4b369JM&utm_campaign=designshare&utm_medium=embeds&utm_source=link)
 
-If you look carefully, you can see that we use the `call` function to invoke the `Car` function on two occasions. Firstly, in the `setBrand` and then in the `definePrice` functions.
+仔细看，你会发现我们在两个场景下通过`call`函数调用`Car`函数：一次是在`setBrand`函数调用；一次是在在 `definePrice`函数调用。
 
-In both of these functions, we invoke the `Car` function with `this` object representing to the respective functions themselves. For example, inside `setBrand`, we call the `Car` function with the `this` object belonging to its context. The case is similar for `definePrice`.
+在这两个函数中， 我们都在`this`对象内调用`Car`函数，`this`对象分别代表了这两个函数。 例如在`setBrand`函数中，我们在代表函数上下文的`this`对象调用了`Car`函数，`definePrice`一样。
 
-### How to call a function with no arguments in JS
+### 在JS中如何在不传入参数的情况下调用call函数
 
-Consider the below example:
+考虑下面的例子：
 
 ```Javascript
 const newEntity = (obj) => console.log(obj);
@@ -107,54 +107,54 @@ function mountEntity(){
 	console.log(`Entity ${this.entity} is mounted on ${this}`);
 }
 
-mountEntity.call();
+mountEntity.call(); //输出： Entity (obj) => console.log(obj) is mounted on [object Window]
 ```
 
-In this example, we invoked the function `mountEntity` with no `thisObj` argument. In such cases, JavaScript refers to the global object.
+在这个例子中，调用`mountEntity`时，`thisObj`参数为空。 这时，JavaScript会指向全局对象。
 
-## How to Use the Apply Function in JavaScript
+<h2 id="how-to-use-the-apply-function-in-javascript">如何在JavaScript中使用apply函数</h2>
 
-The `Apply` function is very similar to the `Call` function. The only difference between `call` and `apply` is the difference in how arguments are passed.
+`Apply`和`Call`函数类似。`call`和`apply`函数唯一的不同是传入的参数。
 
-In `apply`, arguments you can pass an argument as an array literal or a new array object.
+在`apply`中，参数可以是一个数组的字面量或者一个新的数组对象。
 
-Here is the syntax for the `apply` function:
+`apply`函数的语法如下：
 
 ```Javascript
 func.apply(thisObj, argumentsArray);
 ```
 
-Where,
+其中：
 
--   **func** is a function that needs to be invoked with a different `this` object
--   **thisObj** is an object or a value that needs to be replaced with the `this` keyword present inside the function `func`
--   **argumentsArray** can be an array of arguments, array object, or the [arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments) keyword itself.
+-   **func** 是通过不同`this`对象调用的函数
+-   **thisObj** 是用来替换函数`func`内部 `this`关键字的对象或者值 
+-   **argumentsArray** 可以是参数数组、数组对象或者[arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)关键字本身
 
-As you can see above, the `apply` function has different types of syntaxes.
+如你所见，`apply`函数有不同的语法。
 
-The first syntax is a simple one. You can pass in an array of arguments like below:
+第一种语法很简单，你可以传入一个参数数组：
 
 ```Javascript
 func.apply(thisObj, [args1, args2, ...]);
 ```
 
-The second syntax is where we can pass in the new array object to it:
+第二种语法可以传入一个新的数组对象：
 
 ```Javascript
 func.apply(thisObj, new Array(args1, args2));
 ```
 
-The third syntax is where we can pass in the arguments keyword:
+第三种语法可以传入arguments关键字：
 
 ```Javascript
 func.apply(thisObj, arguments); 
 ```
 
-[arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments) is a special object available inside a function. It contains values of the arguments that are passed to a function. You can use this keyword with the `apply` function to take any number of arbitrary arguments.
+[arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)是函数中的一个特殊对象，包含传入函数的参数的值。你可以将这个关键字与`apply`函数一起使用，以接受任何数量的任意参数。
 
-The best part about `apply` is we don’t need to take care of the number of arguments that are passed to the invoking function. Because of its dynamic and versatile nature, you can use it in complicated situations.
+`apply`最棒的地方在于我们不需要关心传递给调用函数的参数的数量。由于动态性和多功能的特点，`apply`可以被应用到复杂情况。
 
-Let’s look at the same example as above, but this time we'll use the `apply` function.
+我们用`apply`函数改写上文的例子：
 
 ```Javascript
 function Car(type, fuelType){
@@ -163,13 +163,13 @@ function Car(type, fuelType){
 }
 
 function setBrand(brand){
-	Car.apply(this, ["convertible", "petrol"]); //Syntax with array literal
+	Car.apply(this, ["convertible", "petrol"]); //使用数组字面量的语法
 	this.brand = brand;
 	console.log(`Car details = `, this);
 }
 
 function definePrice(price){
-	Car.apply(this, new Array("convertible", "diesel")); //Syntax with array object construction
+	Car.apply(this, new Array("convertible", "diesel")); //使用数组构建函数的语法
 	this.price = price;
 	console.log(`Car details = `, this);
 }
@@ -178,11 +178,11 @@ const newBrand = new setBrand('Brand1');
 const newCarPrice = new definePrice(100000);
 ```
 
-And here is an example that showcases how you'd use the `arguments` keyword:
+下面是使用`arguments`关键字的例子：
 
 ```Javascript
 function addUp(){
-		//Using arguments to capture the arbitrary number of inputs
+		//使用参数捕获任意数量的输入
     const args = Array.from(arguments); 
     this.x = args.reduce((prev, curr) => prev + curr, 0);
     console.log("this.x = ", this.x);
@@ -195,34 +195,34 @@ function driverFunc(){
     addUp.apply(obj, obj.inps);
 }
 
-driverFunc();
+driverFunc(); //输出： this.x =  21
 ```
 
-## How to Use the Bind Function in JavaScript
+<h2 id="how-to-use-the-bind-function-in-javascript">如何在JavaScript中使用bind函数</h2>
 
-The `bind` function creates a copy of a function with a new value to the `this` present inside the calling function.
+`bind`函数创建一个函数副本，并改变调用函数内部`this`的值。
 
-Here is the syntax for the `bind` function:
+`bind`函数的语法如下:
 
 ```Javascript
 func.bind(thisObj, arg1, arg2, ..., argN);
 ```
 
-Where,
+其中：
 
--   **func** is a function that needs to be invoked with a different `this` object
--   **thisObj** is an object or a value that needs to be replaced with the `this` keyword present inside the function `func`
--   **arg1, arg2…argN** – you can pass 1 argument to the calling function or more than that, similar to the `call` function.
+-   **func** 是通过不同`this`对象调用的函数
+-   **thisObj** 是用来替换函数`func`内部`this`关键字的对象或者值 
+-   **arg1, arg2…argN** – 和`call`函数类似，你可以传入一个或多个参数
 
-The `bind` function then returns a new function that consists of a new context to the `this` variable present inside the calling function:
+`bind`函数返回一个一个新的函数，在这个函数中包含新的被调用函数内部`this`的值：
 
 ```Javascript
 func(arg1, arg2);
 ```
 
-Now this function `func` can be executed later with the arguments.
+然后函数`func`根据参数被执行
 
-Let's look at a classic example of how to use a `bind` function with the help of a class-based React component:
+让我们一起来看一看如何在React类组件中使用`bind`函数：
 
 ```JSX
 class App extends React.Component {
@@ -241,25 +241,25 @@ class App extends React.Component {
 }
 ```
 
-Consider the above App component. It constitutes the following things:
+考虑上述App组件，有以下几个组成部分：
 
--   `constructor` is a function that gets called a class and is instantiated with a `new` keyword.
--   `render` is a function that executes/renders the JSX code.
--   `handleCode` is a class method that logs the state of the component.
+-   `constructor` 调用类的函数，通过`new`关键字实例化
+-   `render` 是执行或渲染JSX的函数
+-   `handleCode` 是打印组件的类方法
 
-If we click on the `Click Me` button then we will receive an error stating: `Cannot read properties of undefined (reading 'state')`.
+如果我们点击`Click Me`按钮，会得到报错`Cannot read properties of undefined (reading 'state')`。
 
-Have you ever wondered why this issue occurs? 🤔🤔
+这为什么会发生？ 🤔🤔
 
-You might be expecting that we should be able to access the state of the class since `handleCode` is a class method. But here is the catch:
+因为`handleCode`是类的方法，所以你可能认为我们可以访问类的状态（state），但是这里存在的问题是：
 
--   `this` inside the `handleCode` is not same as that of the class’s `this`.
--   Inside a class, `this` is a regular object that has non-static class methods as its properties. But `this` inside the `handleCode` will refer to a different context.
--   To be honest, the value of `this` in this scenario depends on from where the functions is being called. If you see, the `handleCode` is being called on `onClick` event.
--   But at this stage, we will get `undefined` for the context of `this` present inside the `handleCode` function.
--   We're trying to call the `state` property of an undefined value. Therefore, this leads to the above error.
+-   `handleCode`中的`this`并不等同于类中的`this`
+-   在类中`this`是一个普通的对象，并且有非静态类方法作为属性， 但是`handleCode`中的`this`指代另一个上下文
+-   在这里`this`的值取决于函数被调用的位置，`handleCode`是在`onClick`事件中被调用
+-   调用时`handleCode`函数内部的`this`被设置为`undefined` 
+-   我们尝试调用undefined的`state`属性，就导致了上文的报错
 
-We can fix this by providing the right context of `this` inside the `handleCode` method. You can do this with the `bind` method.
+我们可以通过给`handleCode`方法的`this`指定上下文来解决这个问题，`bind`方法就派上用场了：
 
 ```JSX
 class App extends React.Component {
@@ -268,7 +268,7 @@ class App extends React.Component {
     this.state = {
       counter: 1
     };
-   this.handleCode = this.handleCode.bind(this); //bind this function
+   this.handleCode = this.handleCode.bind(this); //绑定this函数
   }
   handleCode() {
     console.log("HANDLE CODE THIS = ", this.state);
@@ -279,28 +279,28 @@ class App extends React.Component {
 }
 ```
 
-The `bind` will create a new function and store it inside the `this` object with a new property as `handleCode`. `Bind` will make sure that the class’s `this` context gets applied to the `this` present inside the `handleCode` function.
+`bind`会创建一个新函数，并且存储`this`在对象中，这个函数包含`handleCode`这个新属性。`Bind`确保类的`this`上下文被应用到 `handleCode`函数的`this`。
 
-## How to Create Your Own `map` Function
+<h2 id="how-to-create-your-own-map-function">如何自定义map函数</h2>
 
-Now that we have all the necessary things, let's start off by creating our `own` map function. Let's first understand the things that we will need to build our `own` map function.
+在了解所有必要知识之后，让我们来自己创建一个map函数，我们先来看看自定义map函数需要了解什么：
 
-Here is the syntax of the `map` function:
+`map`函数的语法如下：
 
 ```Javascript
 arr.map(func)
 ```
 
-Where,
+其中：
 
--   **arr** is an array on which the map is called.
--   **func** is the function that needs to run on each element of an array.
+-   **arr**是map调用的数组
+-   **func** 是数组上每一个元素需要执行的函数
 
-The basic functionality of a `map` function is simple:
+`map`函数的基本功能很简单：
 
-It is a function that walks through each element of an array and applies the function that is passed as an argument. The return type of a map is again an array with `func` being applied on each element.
+`map`函数遍历数组的每一个元素，并在每一个元素上调用传入的参数。返回值的类型是一个数组，数组的每一个元素都是应用`func`后的结果。
 
-Now we understand the requirements, so we can move on to create our own `map` function. Here is the code of our new `map` function:
+我们已经知道这个函数的要求了，就可以着手创建自己的`map`函数了，以下是新的`map`函数：
 
 ```Javascript
 function newMap(func){
@@ -314,17 +314,17 @@ function newMap(func){
 } 
 ```
 
-Let's understand the above function bit-by-bit:
+让我们来一点一点解释上面的例子：
 
--   This function accepts an argument called `func`. It's nothing but a function that needs to be called on each element of an array.
--   The other parts of the code are pretty self explanatory. We will focus on the following line: `destArr.push(func.call(this, this[i]));`
--   This line does two things:  
-    1\. Pushes the changes into the `destArr`  
-    2\. Executes the `func` with the help of `call` method. Here the `call` method (as explained in the previous sections) will execute the `func` method with a new value to the `this` object present inside the `func` method.
+-   函数接受名为`func`的参数。 这个参数就是需要在数组的每一个元素上调用的函数。
+-   代码的其他部分不言自明。我们主要聚焦在 `destArr.push(func.call(this, this[i]));`
+-   这行代码做了两件事：
+    1\. 将变化推入`destArr`  
+    2\. 通过`call`方法执行`func`，`call`方法(如上文解释的那样)会执行`func`方法，并使用`func`方法内部`this`对象的新值。
 
-Now let's take a look at how we are going to execute our `newMap` function. The below approach of adding a new method to the existing primitive data type is not recommended but still we will do it for the sake of this article.
+让我们来看看`newMap`函数是如何执行的。不推荐下面这种给原始数据类型添加新方法的做法，我们这么做仅处于教学目的。
 
-**NOTE:** do not follow the below approach in your production code. This can cause damage to the existing code.
+**注:** 不要在你的代码中使用下面的方法，不然会对你的工作造成影响。
 
 ```Javascript
 Object.defineProperty(Array.prototype, 'newMap', {
@@ -332,26 +332,26 @@ Object.defineProperty(Array.prototype, 'newMap', {
 }); 
 ```
 
-`defineProperty` we create a new property inside the `Array.prototype`.
+`defineProperty`在`Array.prototype`创建了新的方法。
 
-Once this is done, we are good to go with executing our new map function on an array.
+设定完毕后，我们就可以使用自己的函数了：
 
 ```Javascript
 const arr = [1,2,3];
 const newArr = arr.newMap(item => item + 1);
-console.log(newArr);
+console.log(newArr); //输出：[2, 3, 4]
 ```
 
-## Summary
+<h2 id="summary">总结</h2>
 
-This article showed you what the call, apply, and bind functions can do via examples.
+本文通过示例展示了call、apply和bind的用法。
 
-So to talk about these functions in brief:
+简单概括一下：
 
--   Call, apply, and bind are the functions that help you change the context of the `this` keyword present inside the invoking function.
--   We saw how each function can be called in different ways – for example, with `apply` you can execute a function with an array of arguments, and with the `call` function you can execute the same but the arguments are spread via commas.
--   These functions are really useful in class-based components of React.
+-   Call、 apply和bind可以改变调用函数内部`this`关键字的上下文
+-   每个例子的调用方式不同 –  `apply`通过一组数组执行，`call`执行结果类似但是参数由逗号隔开
+-   在react的类组件中，这些方法十分管用
 
-Thank you for reading!
+感谢阅读！
 
-Follow me on [Twitter](https://twitter.com/keurplkar), [GitHub](https://github.com/keyurparalkar), and [LinkedIn](https://www.linkedin.com/in/keyur-paralkar-494415107/).
+你可以在[Twitter](https://twitter.com/keurplkar)、 [GitHub](https://github.com/keyurparalkar)和[LinkedIn](https://www.linkedin.com/in/keyur-paralkar-494415107/)上关注我。

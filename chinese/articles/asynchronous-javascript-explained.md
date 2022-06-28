@@ -1,6 +1,6 @@
 > -  原文地址：[Asynchronous JavaScript – Callbacks, Promises, and Async/Await Explained](https://www.freecodecamp.org/news/asynchronous-javascript-explained/)
 > -  原文作者：[Njong Emy](https://www.freecodecamp.org/news/author/afumbom_bingeh/)
-> -  译者：
+> -  译者：Utopia-xxl
 > -  校对者：
 
 ![Asynchronous JavaScript – Callbacks, Promises, and Async/Await Explained](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/Purple-Minimal-We-Are-Hiring-Twitter-Post--1--1.gif)

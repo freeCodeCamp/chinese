@@ -5,15 +5,15 @@
 
 ![Asynchronous JavaScript – Callbacks, Promises, and Async/Await Explained](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/Purple-Minimal-We-Are-Hiring-Twitter-Post--1--1.gif)
 
-If you've been learning JavaScript for a while now, then you've probably heard the term "asynchronous" before.
+如果你已经学习一段时间的 JavaScript ，那么你可能听到过“异步”这个术语。
 
-This is because JavaScript is an asynchronous language...but what does that really mean? In this article, I hope to show you that the concept is not as difficult as it sounds.
+这是因为 JavaScript 是一种异步语言……但这到底意味着什么呢？在本文中，我希望向你展示这个概念并不像听起来那么难。
 
-# Synchronous vs Asynchronous
+# 同步 vs 异步
 
-Before we hop into the real deal, let's look at these two words – synchronous and asynchronous.
+在我们真正开始之前，让我们先看看这两个词——同步和异步。
 
-By default, JavaScript is a synchronous, single threaded programming language. This means that instructions can only run one after another, and not in parallel. Consider the little code snippet below:
+默认情况下， JavaScript 是一种同步的单线程编程语言。这意味着指令只能一个接一个地运行，而不能并行运行。思考下面的代码片段：
 
 ```javascript
 let a = 1;
@@ -22,25 +22,25 @@ let sum = a + b;
 console.log(sum);
 ```
 
-The above code is pretty simple – it sums two numbers and then logs the sum to the browser console. The interpreter executes these instructions one after another in that order until it is done.
+上面的代码非常简单—它将两个数字相加，然后将总和输出到浏览器控制台。解释器按照这个顺序一个接一个地执行这些指令，直到完成为止。
 
-But this method comes along with disadvantages. Say we wanted to fetch some large amount of data from a database and then display it on our interface. When the interpreter reaches the instruction that fetches this data, the rest of the code is blocked from executing until the data has been fetched and returned.
+但是这种方法也有缺点。假设我们想从数据库中获取大量数据，然后将其显示在我们的界面上。当解释器到达获取此数据的指令时，其余代码将被阻止执行，直到数据被获取并返回。
 
-Now you might say that the data to be fetched isn't that large and it won't take any noticeable time. Imagine that you have to fetch data at multiple different points. This delay compounded doesn't sound like something users would want to come across.
+现在，您可能会说，要获取的数据不是那么大，它不会占用任何明显的时间。假设您必须在多个不同的点获取数据。这种复合延迟听起来并不是用户想要遇到的。
 
-Luckily for us, the problems with synchronous JavaScript were addressed by introducing asynchronous JavaScript.
+幸运的是，通过引入异步的概念解决了同步 JavaScript 的问题。
 
-Think of asynchronous code as code that can start now, and finish its execution later. When JavaScript is running asynchronously, the instructions are not necessarily executed one after the other as we saw before.
+可以把异步代码想象成现在就可以开始执行，以后再完成执行的代码。当 JavaScript 异步运行时，指令不一定像我们前面看到的那样一个接一个地执行。
 
-In order to properly implement this asynchronous behavior, there are a few different solutions developers has used over the years. Each solution improves upon the previous one, which makes the code more optimized and easier to understand in case it gets complex.
+ 为了正确地实现这种异步行为，多年来开发人员使用了几种不同的解决方案。每个解决方案都在前一个解决方案的基础上进行改进，这使得代码更加优化，并且在代码变得复杂时更容易理解。
 
-To further understand the asynchronous nature of JavaScript, we will go through callback functions, promises, and async and await.
+为了进一步理解 JavaScript 的异步特性，我们将介绍回调函数、promise、async和await。
 
-# What are Callbacks in JavaScript?
+# JavaScript中的回调函数是什么?
 
-A callback is a function that is passed inside another function, and then called in that function to perform a task.
+回调是在另一个函数内部传递的函数，然后在该函数中调用以执行任务。
 
-Confusing? Let's break it down by practically implementing it.
+感到困惑吗?让我们通过实际执行来分解它。
 
 ```Javascript
 console.log('fired first');
@@ -53,13 +53,13 @@ setTimeout(()=>{
 console.log('fired last');
 ```
 
-The snippet above is a small program that logs stuff to the console. But there is something new here. The interpreter will execute the first instruction, then the second, but it will skip over the third and execute the last.
+上面的代码片段是一个小程序，它将所有内容输出到控制台。但这里有一些新的东西。解释器会执行第一条指令，然后是第二条，但它会跳过第三条指令，然后执行最后一条指令。
 
-The `setTimeout` is a JavaScript function that takes two parameters. The first parameter is another function, and the second is the time after which that function should be executed in milliseconds. Now you see the definition of callbacks coming into play.
+ `setTimeout` 是一个接受两个参数的 JavaScript 函数。第一个参数是另一个函数，第二个参数是该函数执行的时间，以毫秒为单位。现在您看到了回调函数的定义开始起作用了。
 
-The function inside `setTimeout` in this case is required to run after two seconds (2000 milliseconds). Imagine it being carried off to be executed in some separate part of the browser, while the other instructions continue executing. After two seconds, the results of the function are then returned.
+在本例中，`setTimeout` 内部的函数需要在两秒( 2000 毫秒)后运行。想象一下，它被带到浏览器的某个单独部分执行，而其他指令继续执行。两秒钟后，返回函数的结果。
 
-That is why if we run the above snippet in our program, we will get this:
+这就是为什么如果我们在程序中运行上面的代码片段，会得到这样的结果:
 
 ```javascript
 fired first
@@ -68,24 +68,24 @@ fired last
 fired third
 ```
 
-You see that the last instruction is logged before the function in the `setTimeout` returns its result. Say we used this method to fetch data from a database. While the user is waiting for the database call to return results, the flow in execution will not be interrupted.
+你会看到在函数 `setTimeout` 返回结果之前输出了最后一条指令。假设我们使用此方法从数据库中获取数据。当用户在等待数据库调用返回结果时，执行中的流程不会被中断。
 
-This method was very efficient, but only to a certain point. Sometimes, developers have to make multiple calls to different sources in their code. In order to make these calls, callbacks are being nested until they become very hard to read or maintain. This is referred to as **Callback Hell**
+这种方法非常有效，但仅限于一点。有时候，开发人员必须对代码中的不同源代码进行多次调用。为了进行这些调用，回调将被嵌套，直到它们变得非常难以读取或维护。这被称为 **回调地狱**
 
-To fix this problem, promises were introduced.
+为了解决这个问题，引入了Promise。
 
-# What are Promises in JavaScript?
+# JavaScript 中的 Promise 是什么?
 
-We hear people make promises all the time. That cousin of yours who promised to send you free money, a kid promising to not touch the cookie jar again without permission...but promises in JavaScript are slightly different.
+我们经常听到人们做出承诺。你的表弟承诺给你免费的钱，一个孩子承诺不经允许不会再碰饼干罐……但 JavaScript 中的承诺略有不同。
 
-A promise, in our context, is something which will take some time to do. There are two possible outcomes of a promise:
+ 在我们的语境中，承诺是需要一些时间去做的事情。一个承诺有两种可能的结果:
 
--   We either run and resolve the promise, or
--   Some error occurs along the line and the promise is rejected
+-   我们要么运行并解决承诺，要么
+-   执行过程中出现了一些错误，承诺被拒绝
 
-Promises came along to solve the problems of callback functions. A promise takes in two functions as parameters. That is, `resolve` and `reject`. Remember that resolve is success, and reject is for when an error occurs.
+Promise 的出现是为了解决回调函数的问题。Promise 接受两个函数作为参数。即`resolve`和`reject`。请记住，resolve 表示成功时，reject 表示错误发生时。
 
-Let's take a look at promises at work:
+让我们看一下Promise的作用:
 
 ```JavaScript
 const getData = (dataEndpoint) => {
@@ -104,19 +104,19 @@ const getData = (dataEndpoint) => {
 };
 ```
 
-The code above is a promise, enclosed by a request to some endpoint. The promise takes in `resolve` and `reject` like I mentioned before.
+上面的代码是一个Promise，包含在对某个端点的请求中。就像我前面提到的，这个Promise包含了`resolve`和`reject`。
 
-After making a call to the endpoint for example, if the request is successful, we would resolve the promise and go on to do whatever we want with the response. But if there is an error, the promise will get rejected.
+ 例如，在调用端点之后，如果请求成功，我们将解决承诺并继续对响应执行任何我们想要的操作。但是如果出现错误，承诺就会被拒绝。
 
-Promises are a neat way to fix problems brought about by callback hell, in a method known as **promise chaining**. You can use this method to sequentially get data from multiple endpoints, but with less code and easier methods.
+Promise 是一种巧妙的方法用来解决回调地狱带来的问题, 被称为 **Promise 链式调用**。你可以使用这个方法从多个端点顺序地获取数据，但代码更少，方法更简单。
 
-But there is an even better way! You might be familiar with the following method, as it's a preferred way of handling data and API calls in JavaScript.
+但还有一种更好的方法！你可能更熟悉下面的方法，因为它是在 JavaScript 中处理数据和 API 调用的首选方法。
 
-# What is Async and Await in JavaScript?
+# JavaScript 中的 Async 和 Await 是什么?
 
-The thing is, chaining promises together just like callbacks can get pretty bulky and confusing. That's why Async and Await was brought about.
+问题是，像回调一样将 Promise 链接在一起会变得非常庞大和混乱。这就是产生 Async 和 Await 的原因。
 
-To define an async function, you do this:
+执行以下操作定义一个异步函数:
 
 ```JavaScript
 const asyncFunc = async() => {
@@ -124,16 +124,16 @@ const asyncFunc = async() => {
 }
 ```
 
-Note that calling an async function will always return a Promise. Take a look at this:
+请注意，调用异步函数将始终返回一个 Promise 。看看这个：
 
 ```JavaScript
 const test = asyncFunc();
 console.log(test);
 ```
 
-Running the above in the browser console, we see that the `asyncFunc` returns a promise.
+在浏览器控制台中运行上面的代码，我们看到 `asyncFunc` 返回了一个 Promise.
 
-Let's really break down some code now. Consider the little snippet below:
+现在让我们真正分解一些代码。思考下面的代码片段:
 
 ```JavaScript
 const asyncFunc = async () => {
@@ -142,24 +142,24 @@ const asyncFunc = async () => {
 }
 ```
 
-The `async` keyword is what we use to define async functions as I mentioned above. But how about `await` ? Well, it stalls JavaScript from assigning `fetch` to the response variable until the promise has been resolved. Once the promise has been resolved, the results from the fetch method can now be assigned to the response variable.
+ `async` 关键字是我上面提到的用来定义 async 函数的。但是 `await`呢？好吧，它阻止 JavaScript 在解决promise之前将 `fetch` 赋值给response变量。一旦 promise 被解决，现在可以将 fetch 方法的结果分配给 response 变量。
 
-The same thing happens on line 3. The `.json` method returns a promise, and we can use `await` still to delay the assigning until the promise is resolved.
+第 3 行代码也是相同的行为。 `.json` 方法返回一个 Promise 对象，我们可以使用 `await` 延迟分配直到 promise 被解决。
 
-# To Block Code or Not to Block Code
+# 阻塞还是非阻塞
 
-When I say 'stalling', you must think that implementing Async and Await somehow blocks code execution. Because what if our request takes too long, right?
+当我说“暂停”，你一定认为实现Async和Await以某种方式阻塞代码执行。因为我们的请求花费的时间太长了，对吧？
 
-Fact is, it doesn't. Code that is inside the async function is blocking, but that doesn't affect program execution in any way. The execution of our code is just as asynchronous as ever. To show this,
+事实上并不是。async函数内部的代码会阻塞，但不会以任何方式影响程序的执行。代码的执行仍然是异步的。正如下面的代码：
 
-```
+```javascript
 const asyncFunc = async () => {
 	const response = await fetch(resource);
    	const data = await response.json();
 }
 
 console.log(1);
-cosole.log(2);
+console.log(2);
 
 asyncFunc().then(data => console.log(data));
 
@@ -167,7 +167,7 @@ console.log(3);
 console.log(4);
 ```
 
-In our browser console, the output of the above would look something like this:
+在我们的浏览器控制台中，上面的输出看起来像这样：
 
 ```
 1
@@ -177,10 +177,10 @@ In our browser console, the output of the above would look something like this:
 data returned by asyncFunc
 ```
 
-You see that as we called `asyncFunc`, our code continued running until it was time for the function to return results.
+你会看到，当我们调用 `asyncFunc` 时，我们的代码会继续运行，直到该函数返回结果。
 
 # Conclusion
 
-This article does not treat these concepts in great depth, but I hope it shows you what asynchronous JavaScript entails and a few things to look out for.
+本文并没有深入探讨这些概念，但我希望它能展示异步 JavaScript 的含义以及需要注意的一些事项。
 
-It is a very essential part of JavaScript, and this article only scratches the surface. Nonetheless, I hope this article helped to break down these concepts.
+它是 JavaScript 的一个非常重要的部分，本文只触及了表面。尽管如此，我希望这篇文章有助于理解这些概念。

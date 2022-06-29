@@ -1,6 +1,6 @@
 > -  原文地址：[How to get started with D3 and React](https://www.freecodecamp.org/news/how-to-get-started-with-d3-and-react-c7da74a5bd9f/)
 > -  原文作者：[Magdalena Stenius](https://www.freecodecamp.org/news/author/magdalena/)
-> -  译者：
+> -  译者：Utopia-xxl
 > -  校对者：
 
 ![How to get started with D3 and React](https://cdn-media-1.freecodecamp.org/images/1*AEjU4WgW-clHPyokVbdcVg.jpeg)

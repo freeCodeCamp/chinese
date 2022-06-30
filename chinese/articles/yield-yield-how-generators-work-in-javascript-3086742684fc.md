@@ -1,6 +1,6 @@
 > -  原文地址：[Yield! Yield! How Generators work in JavaScript.](https://www.freecodecamp.org/news/yield-yield-how-generators-work-in-javascript-3086742684fc/)
 > -  原文作者：[Anonymous](https://www.freecodecamp.orgAnonymous)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Yield! Yield! How Generators work in JavaScript.](https://cdn-media-1.freecodecamp.org/images/0*Ts8-usYa-T4lL8yc)

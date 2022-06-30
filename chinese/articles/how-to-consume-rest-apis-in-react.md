@@ -5,25 +5,25 @@
 
 ![How to Consume REST APIs in React – a Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/cover-template-2.jpg)
 
-React is a popular frontend library that developers use to create applications. And you will need to integrate APIs into your React application at some point if you want to build production-ready apps.
+React是一个流行的前端库，开发者常常使用React来创建应用。如果想要创建的应用投入使用，你需要将API集成到应用中。
 
-Every developer who wants to build modern, robust web applications with React must understand how to consume APIs to fetch data into their React applications.
+如果想要使用React构建现代、强大的web应用，就必须知道如何在React中使用API来获取数据。
 
-In this beginners guide, you will learn how to consume RESTful API in React, including fetching, deleting, and adding data. We'll also go over the two main ways to consume RESTful APIs and how to use them with React hooks.
+在这份初学者指南中，你将学习如何在React中使用RESTful API，其中包括获取、删除以及添加数据。同时，我们将讲解两种主要使用RESTful API的方法，以及如何搭配React钩子来使用。
 
-## What is a REST API?
+## 什么是REST API?
 
-If you've ever spent any time programming or researching programming, you've likely come across the term "API."
+如果你接触过编程，就应该碰到过API这个术语。
 
-API stands for Application Programming Interface. It is a medium that allows different applications to communicate programmatically with one another and return a response in real time.
+API代表应用程序接口（Application Programming Interface）。是不同应用之间相互通讯以及实时返回响应的媒介。
 
-Roy Fielding defined REST in 2000 as an architectural style and methodology commonly used in the development of internet services, such as distributed hypermedia systems. It is an acronym that stands for "REpresentational State Transfer."
+[Roy Fielding](https://en.wikipedia.org/wiki/Roy_Fielding)在2000年将REST定义为一种互联网服务(如分布式超媒体系统）开发的架构—风格和方法，REST是"REpresentational State Transfer"（表现层状态转化）的缩写。
 
-When a request is made via a REST API, it sends a representation of the resource's current state to the requester or endpoint. This state representation can take the form of JSON (JavaScript Object Notation), XML, or HTML.
+当通过REST API发出请求时，它会将资源的当前状态的表现发送给请求者或者终点。状态表现通常采用JSON格式（(JavaScript Object Notation），或者XML和HTML格式。
 
-JSON is the most widely used file format because it is language-independent and can be read by both humans and machines.
+JSON格式之所以最受欢迎，是因为它和编程语言无关，人类和机器都可以理解。
 
-**For example:**
+**以下是一个JSON示例:**
 
 ```json
 [
@@ -42,39 +42,39 @@ JSON is the most widely used file format because it is language-independent and 
 ]
 ```
 
-## How to Consume REST API’s in React
+## 如何在React中使用REST API
 
-You can consume REST APIs in a React application in a variety of ways, but in this guide, we will look at two of the most popular approaches: Axios (a promise-based HTTP client) and Fetch API (a browser in-built web API).
+你可以通过各种不同的方法在React中使用REST API，但在这篇教程中我们只讲解两种主要的方法：Axios (基于promise的HTTP客户端) 和 Fetch API (浏览器内置的web API)。
 
-**Note:** To fully comprehend this guide, you should be familiar with JavaScript, React, and React hooks, as they are central to it.
+**注意:** 你必须熟悉JavaScript、React和React钩子才能完全理解本教程。
 
-Before we get into how to consume APIs, it's important to understand that consuming APIs in React is very different from how it's done in JavaScript. This is because these requests are now done in a React Component.
+在我们正式开始在React中使用REST API之前，我必须强调在React中使用API与在JavaScript中完全不同，因为请求是在React组件中完成。
 
-In our case, we'll be using functional components, which means that we need to use two major React Hooks:
+这篇教程使用React函数组件，所以会使用两大钩子：
 
--   **useEffect Hook:** In React, we perform API requests within the `useEffect()` hook. It either renders immediately when the app mounts or after a specific state is reached. This is the general syntax we'll use:
+-   **useEffect Hook:** 在React中，我们通常使用`useEffect()`来发送API请求。一般是页面渲染后马上执行钩子内的代码，或者当达到特定状态时执行。基本语法如下：
 
-```
+```javascript
 useEffect(() => {
-    // data fetching here
+    // 在这里获取数据
 }, []);
 ```
 
--   **useState Hook:** When we request data, we must prepare a state in which the data will be stored when it is returned. We can save it in a state management tool such as Redux or in a context object. To keep things simple, we'll store the returned data in the React local state.
+-   **useState Hook:** 在请求数据的时候，我们必须准备一个状态(state)来存储返回的数据。你可以使用状态管理工具如Redux或者存储到一个上下文对象中。为了简化难度，这里我们将返回数据存储到React本地状态：
 
-```
+```javaScript
 const [posts, setPosts] = useState([]);
 ```
 
-Let's now get into the meat of this guide, where we'll learn how to get, add, and delete data using the [JSONPlaceholder posts API](https://jsonplaceholder.typicode.com/posts). This knowledge is applicable to any type of API, as this guide is intended for beginners.
+让我们进入本文的正题，我们借助[JSONPlaceholder posts API](https://jsonplaceholder.typicode.com/posts)来学习如何获取、添加和删除数据。因为文章内容是针对初学者的，所以这里讲解的方法的应用面很广。
 
-## How to Consume APIs Using The Fetch API
+## 如何使用Fetch API来获取API数据
 
-The Fetch API is a JavaScript built-in method for retrieving resources from a server or an API endpoint. It's built-in, so you don't need to install any dependencies or packages.
+Fetch API是JavaScript内置从服务器或者API终点获取资源的方法。因为是内置的，所以使用Fetch API不需要安装任何依赖项或者包。
 
-The `fetch()` method requires a mandatory argument, which is the path or URL to the resource you want to fetch. Then it returns a Promise so you can handle success or failure using the `then()` and `catch()` methods.
+`fetch()`方法有一个强制参数，即你想要获取资源的路径或者URL， 该方法返回一个promise，可以使用`then()`和`catch()`方法来处理成功或者失败的情况。
 
-A basic fetch request is very simple to write and looks like the below code. We are simply fetching data from a URL that returns data as JSON and then logging it to the console:
+一个基本的fetch请求简单易写，在下面示例中我们从URL获取数据后，返回JSON格式的数据然后打印在控制台。
 
 ```js
 fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
@@ -82,23 +82,23 @@ fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
    .then(data => console.log(data));
 ```
 
-The default response is usually a regular HTTP response rather than the actual JSON, but we can get our output as a JSON object by using the response's json() method.
+默认响应是HTTP格式的，但是我们可以使用`json()`方法来把结果改成JSON对象。
 
-### How to Perform a GET Request in React With Fetch API
+### 如何在React中使用Fetch API来实现GET请求
 
-You can use the HTTP GET method to request data from an endpoint.
+可以使用HTTP GET方法从终点请求数据。
 
-As previously stated, the Fetch API accepts one mandatory argument, which is true. It also accepts an option argument, which is optional, especially when using the GET method, which is the default. But for other methods such as POST and DELETE, you'll need to attach the method to the options array:
+如前文所述，Fetch API有一个强制参数，但与此同时也接受一个选择参数，当使用GET方法的时候，可以选择写或者不写，但是如果使用POST和DELETE方法的话，就必须附上方法的名称及详情：
 
 ```js
 fetch(url, {
-    method: "GET" // default, so we can ignore
+    method: "GET" //默认参数，可以忽略
 })
 ```
 
-So far, we've learned how things work, so let's put everything we've learned together and perform a get request to fetch data from our API.
+在学习完原理之后，让我们学以致用，从API中获取数据。
 
-Again, we'll be using the [free online API JSONPlaceholder](https://jsonplaceholder.typicode.com/posts) to fetch a list of posts into our application:
+我们将使用[free online API JSONPlaceholder](https://jsonplaceholder.typicode.com/posts)上的数据，获取一组帖子的数据到应用：
 
 ```js
 import React, { useState, useEffect } from 'react';
@@ -118,18 +118,18 @@ const App = () => {
    }, []);
 
 return (
-   // ... consume here
+   // ... 在这里消费数据
 );
 };
 ```
 
-We created a state in the preceding code to store the data we will retrieve from the API so that we can consume it later in our application. We also set the default value to an empty array.
+我们在代码的一开始创建了一个状态来存储从API获取的数据，以便之后可以在应用中消费（使用）。同时，我们将状态的默认值设置为空数组。
 
 ```js
 const [posts, setPosts] = useState([]);
 ```
 
-The major operation then occurred in the useEffect state, so that the data/posts are fetched as soon as the application loads. The fetch request yields a promise, which we can either accept or reject:
+主要的操作发生在useEffect中，一旦应用加载成功，就获取数据（帖子）。fetch请求得到一个promise，我们可以接受或者拒绝：
 
 ```js
 useEffect(() => {
@@ -139,9 +139,9 @@ useEffect(() => {
 }, []);
 ```
 
-This response contains a large amount of data, such as the status code, text, and other information that we'll need to have to handle errors later.
+`response`包含了大量的数据，如：状态码、文本以及其他我们之后要去处理的错误信息。
 
-So far, we've handled a resolve using `.then()`, but it returned a response object, which isn't what we want. So we need to resolve the Response object to JSON format using the `json()` method. This also returns a promise for us to get the actual data using the second `.then()`.
+目前我们使用 `.then()`来处理promise决议， 但此刻只返回一个响应对象，并不是我们想要的。 所以我们要使用 `json()` 方法来修改决议格式为JSON格式。 此时也会返回一个promise需要我们使用第二个`.then()`来获取真正的数据。
 
 ```js
 useEffect(() => {
@@ -154,9 +154,9 @@ useEffect(() => {
 }, []);
 ```
 
-If we look at the console, we'll see that we've retrieved 10 posts from our API, which we've also set to the state we specified earlier.
+查看控制台，会发现我们已经用API获取了10条帖子，并且将状态设置为我们之前计划的样子。
 
-This is not complete because we have only handled the promise's resolve and not the promise's rejection, which we'll handle using the `.catch()` method:
+还没完，因为我们只处理了决议没有处理拒绝，此时需要 `.catch()`方法：
 
 ```js
 useEffect(() => {
@@ -172,7 +172,7 @@ useEffect(() => {
 }, []);
 ```
 
-So far we have seen how to perform a `GET` request. This can be consumed easily into our application by looping through our array:
+我们已经知道如何使用`GET`请求，数据可以轻松通过数组循环在应用内消费（使用）：
 
 ```js
 const App = () => {
@@ -198,9 +198,9 @@ const App = () => {
 export default App;
 ```
 
-### How to Perform a POST Request in React With Fetch API
+### 在React中如何使用Fetch API发送POST请求
 
-You can use the HTTP `POST` method to send data from an endpoint. It works similarly to the `GET` request, the main difference being that you need to add the method and two additional parameters to the optional object:
+可以使用HTTP`POST`方法从终点发送数据。该方法和`GET`请求类似，主要的区别在于需要添加方法名称，以及两个额外的参数到选填对象中：
 
 ```js
 const addPosts = async (title, body) => {
@@ -227,11 +227,11 @@ headers: {
 };
 ```
 
-The major parameters that might appear strange are the body and header.
+代码中的`body`（请求体）和`header`（请求头）对于你来说可能有点陌生。
 
-The body holds the data we want to pass into the API, which we must first stringify because we are sending data to a web server. The header tells us the type of data, which is always the same when consuming REST API's. We also set the state to hold the new data and distribute the remaining data into the array.
+`body`部分的数据是我们想要传给API的数据，在传输给服务器之前必须先字符串化。`header`告知数据类型，通常和我们使用的REST API一致的类型。同时我们也使用状态保存新的数据，并将剩下的数据分配到上文所述的循环数组中。
 
-Looking at the `addPost()` method we created, it expects these data from a form or whatever. In our case, I created a form, obtained the form data via states, and then added it to the method when the form was submitted:
+在我们创建的`addPost()`方法中期望从表单或者其他地方获取数据。在我们的例子中，我创建了一个表单`<form>`，从状态的变化获得表单数据，然后在提交表单的时候将数据添加到方法。
 
 ```js
 import React, { useState, useEffect } from 'react';
@@ -288,9 +288,9 @@ return (
 export default App;
 ```
 
-### How to Perform a DELETE Request in React With Fetch API
+### 在React中如何使用Fetch API执行DELETE请求
 
-You can use the HTTP `DELETE` method to remove data from an endpoint. It works similarly to the `GET` request, the main difference being the addition of the method:
+可以使用HTTP`DELETE`方法从终点删除数据。这和`GET`请求类似，主要的区别在与这个方法附加的一些条件：
 
 ```js
 const deletePost = async (id) => {
@@ -310,9 +310,9 @@ await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
 };
 ```
 
-This gets triggered when the button is clicked, and we get the `id` of the specific post in which the button was clicked. Then we remove that data from the entire retuned data.
+一旦点击按钮就触发这个行为，我们获得按钮所在的具体帖子的`id`，然后从整个返回数据中删除这个数据。
 
-This will be removed from the API but not immediately from the UI, which is why we have added a filter to remove the data as well. For each item in the loop, your delete button will look like this:
+这样操作会将数据从API删除，但是不从UI删除，所以我们添加了一个`filter`方法来在UI上删除响应的数据。每一个在循环中的删除键代码如下：
 
 ```js
 const App = () => {
@@ -339,13 +339,13 @@ const App = () => {
 export default App;
 ```
 
-### How to Use Async/Await in Fetch API
+### 如何在Fetch API中使用Async/Await
 
-So far, we've seen how to make fetch requests normally using the promise syntax, which can be confusing at times. Then comes the chaining. We can avoid the `.then()` chaining by using Async/await and write more readable code.
+目前我们使用promise语法来发送fetch请求，这个语法有时会造成理解上的困惑，特别是后续紧跟着链式调用。我们可以使用async/await取代`.then()`从而编写更易读的代码。
 
-To use async/await, first call `async` in the function. Then when making a request and expecting a response, add the `await` syntax in front of the function to wait until the promise settles with the result.
+使用async/await的第一步是在函数中添加`async`标识，然后在需要等待响应的部分添加`await`语法，等待promise决议。
 
-When we use async/await, all of our Fetch requests will look like this:
+使用async/await后我们的fetch请求会变成这个样子：
 
 ```js
 import React, { useState, useEffect } from 'react';
@@ -355,7 +355,7 @@ const App = () => {
    const [body, setBody] = useState('');
    const [posts, setPosts] = useState([]);
 
-   // GET with fetch API
+   // fetch API中的GET方法
    useEffect(() => {
       const fetchPost = async () => {
          const response = await fetch(
@@ -368,7 +368,7 @@ const App = () => {
       fetchPost();
    }, []);
 
-   // Delete with fetchAPI
+   //fetch API中的DELETE方法
    const deletePost = async (id) => {
       let response = await fetch(
          `https://jsonplaceholder.typicode.com/posts/${id}`,
@@ -387,7 +387,7 @@ const App = () => {
       }
    };
 
-   // Post with fetchAPI
+   // fetch API中的POST方法
    const addPosts = async (title, body) => {
       let response = await fetch('https://jsonplaceholder.typicode.com/posts', {
          method: 'POST',
@@ -419,13 +419,13 @@ const App = () => {
 export default App;
 ```
 
-### How to Handle Errors with Fetch API
+### 如何使用Fetch API处理错误
 
-In this section, we'll look at how to handle errors both traditionally and with async/await.
+在这个部分我们讲讨论如何使用传统和Async/Await的方式来处理错误。
 
-We can use the response data to handle errors in the Fetch API, or we can use the try/catch statement when using async/await.
+我们可以使用响应数据来处理Fetch API中的错误，或者在async/await中使用try/catch声明来处理错误。
 
-Let's look at how we can do this typically in Fetch API:
+让我们先看看如果使用传统方式：
 
 ```js
 const fetchPost = () => {
@@ -446,9 +446,9 @@ fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
 };
 ```
 
-You can read more about Fetch API errors [here](https://www.tjvantoll.com/2015/09/13/fetch-and-errors/).
+更多相关内容可以阅读[这篇文章](https://www.tjvantoll.com/2015/09/13/fetch-and-errors/)。
 
-And for async/await we can use the `try` and `catch` like this:
+在async/await中可以这样使用`try`和`catch`：
 
 ```js
 const fetchPost = async () => {
@@ -464,23 +464,23 @@ const fetchPost = async () => {
 };
 ```
 
-## How to Consume APIs Using Axios
+## 如何使用Axios来使用API
 
-Axios is an HTTP client library based on promises that makes it simple to send asynchronous HTTP requests to REST endpoints. This endpoint in our case is the JSONPlaceholder Posts API, to which we will make `GET`, `POST`, and `DELETE` requests.
+Axios是基于promise的HTTP客户端库，使得向REST终点发送异步HTTP请求变得更容易。本文使用的终点是JSONPlaceholder Posts API，我们会对它发出`GET`、`POST`和`DELETE`请求。
 
-### How to Install and Configure an Axios Instance
+### 如何安装和配置Axios实例
 
-Axios, unlike the Fetch API, is not built-in, so we will need to incorporate it into our project in order to use it.
+Axios不像Fetch API一样是内置的，所以需要我们在使用之前将其安装在项目里。
 
-You can add Axios to your project by running the following command:
+你可以使用以下命令来安装Axios：
 
-```js
+```
 npm install axios
 ```
 
-Once you've successfully installed Axios, we can proceed to create an instance, which is optional but recommended as it saves us from unnecessary repetition.
+成功安装Axios之后，可以马上创建实例，这一步是选择性的，但是为了避免不必要的重复建议你这样操作。
 
-To create an instance, we use the `.create()` method, which we can use to specify information such as the URL and possibly headers:
+我们使用`.create()`方法来创建实例，我们可以通过这个方法确定如URL和header等具体信息：
 
 ```js
 import axios from "axios";
@@ -490,11 +490,11 @@ const client = axios.create({
 });
 ```
 
-### How to Perform a GET Request in React With Axios
+### 在React中如何使用Axios执行GET请求
 
-We will use the instance we declared earlier for to perform the GET request. All we will do is set the parameters, if any, and get the response as JSON by default.
+我们将使用创建好的实例来执行GET请求。只需要设置好参数，就可以获取默认JSON格式的响应。
 
-Unlike the Fetch API method, no option is required to declare the method. We simply attach the method to the instance and query it.
+和Fetch API方法不同的是，在Axios中没有额外的选择性参数。我们只需将方法添加到实例上，然后发出请求：
 
 ```js
 useEffect(() => {
@@ -504,9 +504,9 @@ useEffect(() => {
 }, []);
 ```
 
-### How to Perform a POST Request in React With Axios
+### 在React中如何使用Axios执行POST请求
 
-As previously stated, you can use the `POST` method to send data to an endpoint. It functions similarly to the `GET` request, with the main difference being the requirement to include the method and an option to hold the data we are sending in:
+如上文所述，可以通过`POST`方法将数据发送到终点，运行方式和`GET`请求类似，唯一的不同是在`POST`请求中需要指明请求方式以及添加我们需要发送的数据：
 
 ```js
 const addPosts = (title, body) => {
@@ -521,9 +521,9 @@ const addPosts = (title, body) => {
 };
 ```
 
-### How to Perform a DELETE Request in React With Axios
+### 在React中如何使用Axios执行DELETE请求
 
-We can perform delete requests using the delete method, which gets the `id` and deletes it from the API. We'll also use the filter method to remove it from the UI, as we did with the Fetch API method:
+我们可以通过`delete`方法来发送删除请求，获取`id`后，删除API上对应的内容。和在Fetch API中的操作一样，我们同样需要使用`filter`方法来更新UI：
 
 ```js
 const deletePost = (id) => {
@@ -538,9 +538,9 @@ const deletePost = (id) => {
 
 ### How to Use Async/Await in Axios
 
-So far, we've seen how to make Axios requests using the promise syntax. But now let's see how we can use async/await to write less code and avoid the `.then()` chaining.
+目前为止我们都是使用promise的语法来发送Axios请求，现在让我们看看如何使用async/await语法来避免使用`.then()`链式调用。
 
-When we use async/await, all of our Axios requests will look like this:
+使用async/await后，Axios请求可以改写如下：
 
 ```js
 import React, { useState, useEffect } from 'react';
@@ -550,7 +550,7 @@ const App = () => {
    const [body, setBody] = useState('');
    const [posts, setPosts] = useState([]);
 
-   // GET with Axios
+   // Axios中的GET
    useEffect(() => {
       const fetchPost = async () => {
          let response = await client.get('?_limit=10');
@@ -559,7 +559,7 @@ const App = () => {
       fetchPost();
    }, []);
 
-   // Delete with Axios
+   // Axios中的DELETE
    const deletePost = async (id) => {
       await client.delete(`${id}`);
       setPosts(
@@ -569,7 +569,7 @@ const App = () => {
       );
    };
 
-   // Post with Axios
+   // Axios中的POST
    const addPosts = async (title, body) => {
       let response = await client.post('', {
          title: title,
@@ -591,9 +591,9 @@ const App = () => {
 export default App;
 ```
 
-### How to Handle Errors with Axios
+### 如何使用Axios处理错误
 
-For promise-based Axios requests, we can use the`.then()` and.`catch (`) methods, but for async/await, we can use the `try...catch` block. This is very similar to how we implemented the Fetch API, and the `try...catch` block will look like this:
+如果是基于promise语法的Axios请求，我们使用`.then()`和`.catch ()` 方法，如果是async/await，我们使用`try...catch`代码块。这和使用Fetch API非常类似，`try...catch`代码块的示例如下：
 
 ```js
 const fetchPost = async () => {
@@ -606,27 +606,27 @@ const fetchPost = async () => {
 };
 ```
 
-You can read more about handling errors with Axios [here](https://stackabuse.com/handling-errors-with-axios/).
+更多相关内容可以阅读[这篇文章](https://stackabuse.com/handling-errors-with-axios/).
 
 ## Fetch API vs Axios
 
-You may have noticed some differences, but let's put them in a handy table so we can compare Fetch and Axios properly.
+你可以已经发现了一些不同，这里我制作了一张表格列举了两个方法之间的不同。
 
-These distinctions will help you decide which method to use for a specific project. Among these distinctions are:
+两者之间的区别可以帮助你决定在你的项目中采取哪种方法，两者之间的区别是：
 
 | Axios | Fetch |
 | --- | --- |
-| Axios is a standalone third-party package that is simple to install. | Fetch is built into most modern browsers. **No installation** is required as such. |
-| Axios uses the **data** property. | Fetch uses the **body** property. |
-| Axios data contains the **object**. | Fetch’s body has to be **stringified**. |
-| When the status is 200 and the statusText is 'OK,' the Axios request is accepted. | Fetch request is ok when **response object contains the ok property**. |
-| Axios performs **automatic transforms of JSON data**. | Fetch is a **two-step process** when handling JSON data- first, to make the actual request; second, to call the .json() method on the response. |
-| Axios allows **cancelling request and request timeout**. | Fetch does not. |
-| Axios has **built-in support for download progress**. | Fetch does not support upload progress. |
-| Axios has **wide browser support**. | When the status is 200 and the statusText is 'OK,' the Axios request is accepted. Fetch is only compatible with Chrome 42+, Firefox 39+, Edge 14+, and Safari 10.1+. (This is known as Backward Compatibility). |
+| Axios是一个便于安装的第三方独立包 | Fetch是许多浏览器内置的，所以**不需要安装** |
+| Axios使用**data**（数据）属性 | Fetch使用**body**（请求体）属性 |
+| Axios数据包含**对象** | Fetch的请求体需要 **字符串化** |
+| 状态码为200以及状态文本为'OK'时，Axios请求成功| Fetch请求成功的标准是 **响应对象包含ok属性** |
+| Axios**自动转换数据为JSON格式** | Fetch处理JSON格式请求需要**两步操作**：先发送请求，再对响应调用`.json()`方法 |
+| Axios允许**取消请求和请求超时** | Fetch不允许 |
+| Axios**内置下载进度支持** | Fetch不支持上传进度获取 |
+| Axios**被大部分浏览器支持** | Fetch仅兼容Chrome 42+、Firefox 39+、Edge 14+、 and Safari 10.1+ (向后兼容) |
 
-## Conclusion
+## 总结
 
-In this guide, we learned how to consume REST APIs in React using either the Fetch API or Axios.
+在这篇文章中我们学习了如何使用Fetch API和Axios在React中使用REST API。
 
-This will help you get started with API consumption in React, and from there you will be able to consume data in more complex ways and manipulate your APIs however you choose.
+本文将开启你的React使用API之旅，之后你将自己选择API并进行更为复杂的数据处理。

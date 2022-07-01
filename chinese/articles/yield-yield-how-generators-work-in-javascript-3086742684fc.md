@@ -5,7 +5,7 @@
 
 ![Yield! Yield! How Generators work in JavaScript.](https://cdn-media-1.freecodecamp.org/images/0*Ts8-usYa-T4lL8yc)
 
-by Ashay Mandwarya ?️??
+by Ashay Mandwarya
 
 # Yield! Yield! How Generators work in JavaScript.
 
@@ -13,207 +13,248 @@ by Ashay Mandwarya ?️??
 
 Photo by [Frederik Trovatten.com](https://unsplash.com/@trovatten?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)
 
-If the title doesn’t already give a hint, we will be discussing generators in this piece.
+如果标题的提示还不够清晰的话，我就明说了，在这篇文章中我们将讨论生成器。
 
-Before going into generators let’s revise some basics about functions.
+在进入正题之前，我们先复习一下函数基础：
 
--   In JavaScript, functions are a set of statements that perform a task and return some value ending the function.
--   If you call a function, again and again, it will execute all the statements again and again.
--   Arrows once left from the bow cannot be stopped — they only either hit or miss. The same way a function once called cannot be stopped, it will run, return a value, throw an error and then will stop after executing all the statements.
+-   在JavaScript中，函数是执行某项任务的一组语句，并且在结尾会返回某个值。
+-   如果你重复调用一个函数，函数会重复执行所有语句。
+-   箭一旦脱弓就再也收不回来了，要么击中要么错过目标。被调用的函数也一样，要么运行并返回一个值，要么抛出一个错误然后停止所有语句的执行。
 
-We only need to keep in mind these 3 points to understand generators.
+想要理解生成器，你必须要牢记这三点。
 
-### Generators
+### 生成器
 
-A generator is a special type of function which can stop its execution midway and then start from the same point after some time. Generators are a combination of functions and iterators. This is a bit of a confusing statement but I will make sure by the end of the article this line will be clear.
+生成器是一种特殊的函数，可以在函数执行途中停下来，之后再在同一个地方继续执行。生成器是迭代器和函数的结合。现在看这句话可能让你觉得困惑，但我保证读完这篇文章你就会豁然开朗。
 
-For clarity, consider playing a game and suddenly mom calls for some work. You pause the game, help her, then resume playing again. It is the same with generators.
+打一个比方，你和妈妈正在玩游戏，突然妈妈有一些事要忙，你们停下游戏，帮妈妈完成工作，然后继续游戏，这个感觉就和生成器一样。
 
-> An **iterator** is an object which defines a sequence and potentially a return value upon its termination. — MDN.
+> **迭代器**是一个对象，它定义了一个序列，并在其终止时可能有一个返回值。 — MDN。
 
-_Iterators in themselves are a huge topic and are not the aim of this article._
+_迭代器本身也是一个内容丰富的话题，本文不做展开_
 
-#### Basic Syntax
+#### 基本语法
 
-Generators are defined as a function with an asterisk(\*) beside the function.
+生成器的语法类似函数，但是多了一个星号(\*)。
 
-```
-function* name(arguments) {   statements}
-```
-
-**name —** The function name.
-
-**arguments —** Arguments for the function.
-
-**statements —** The body of the function.
-
-#### Return
-
-A function can return almost anything ranging from a value, object or another function itself. A generator function returns a special object called the generator object (_not entirely true_). The object looks like the snippet below
-
-```
-{   value: value,  done: true|false}
+```js
+function* name(arguments) { statements }
 ```
 
-The object has two properties `value` and `done` . The value contains the value to be **yielded.** Done consists of a **Boolean (true|false)** which tells the generator if **.next()** will yield a value or **undefined.**
+**name —** 函数（生成器）名
 
-The above statement will be difficult to digest. Let's change that with an example.
+**arguments —** 函数（生成器）的参数
+
+**statements —** 函数（生成器）体
+
+#### 返回
+
+函数返回任意值：一个值、一个对象或者函数本身。生成器函数返回一个特殊的对象叫做生成器对象(_不完全对_)。这个对象如下面的代码片段：
+
+*译者注：之所以说返回一个生成器对象不完全对，是因为准确来讲，首次调用生成器函数的时候返回Generator迭代器，然后通过调用生成器下一个方法消耗值时，Generator函数执行，知道遇到yield关键字。详情可以查看[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)。*
+
+```js
+{value: value,  done: true|false}
+```
+
+这个对象有两个属性 `value`和`done`。 `value`包含了被**yield**关键字控制的值。`done`包含了一个**布尔值(true|false)**告诉生成器 **.next()**是否生成下一值或者是**undefined**。
+
+上述内容比较难以理解，让我们通过例子来解释：
 
 ![2GKCXYgOAdydbo5qaKeXPayVwUXMpDPPzY1p](https://cdn-media-1.freecodecamp.org/images/2GKCXYgOAdydbo5qaKeXPayVwUXMpDPPzY1p)
 
+```js
+function* generator(e) {  
+    yield e + 10;  
+    yield e + 25;  
+    yield e + 33;
+    }
+    var generate = generator(27);
 ```
-function* generator(e) {  yield e + 10;  yield e + 25;  yield e + 33;}var generate = generator(27);
+
+```js
+console.log(generate.next().value); // 37
+console.log(generate.next().value); // 52
+console.log(generate.next().value); // 60
+console.log(generate.next().value); // undefined
 ```
 
-```
-console.log(generate.next().value); // 37console.log(generate.next().value); // 52console.log(generate.next().value); // 60console.log(generate.next().value); // undefined
-```
+让我们逐行理解上面的代码运行机制：
 
-Let’s understand the mechanics of the above code line by line.
+**_第1–5行:_** 在第1-5行我们定义了一个名为`generator`的生成器并有一个形参`e`，在这个函数体中包含了被关键字`yield`控制的语句以及运算。
 
-**_lines 1–5:_** Lines 1–5 define the generator having the same name with an argument e. Inside the body of the function, it contains a bunch of statements with the keyword yield and some operation is done after that.
+**_第6行:_** 在第六行中，我们将生成器赋值给一个变量，变量名为`generate`。
 
-**_line 6:_** Line 6 assigns the generator to a variable called generate.
-
-**_lines 8–11:_** These lines call a bunch of `console.log` each calling the generator chained to a `next` method which calls for the `value` property of the generator object.
+**_第8–11行:_** 这里调用了一堆`console.log`分别调用生成器对应的`next`方法，这个方法会调用生成器对象的`value`属性。
 
 ![cafqdPSIaj55dp6A5GaErDFtrS0LueYhf87K](https://cdn-media-1.freecodecamp.org/images/cafqdPSIaj55dp6A5GaErDFtrS0LueYhf87K)
 
-Whenever a generator function is called upon, unlike normal functions it does not start execution right away. Instead, an iterator is returned (_the actual reason \* is used by a generator. It tells JS that an iterator object is to be returned_). When the `next()`method of the iterator is called, the execution of the generator starts and executes until it finds the first `yield` statement. At this yield point the generator object is returned, the specifications of which are already explained. Calling the `next()` function again will resume the generator function until it finds another `yield` statement and the cycle returns till all `yields` are exhausted.
+当生成器被调用的时候，它并不像普通函数一样立刻被执行，取而代之的是返回一个迭代器(_这就是为什么生成器会使用\*，告诉JS要返回一个迭代器对象_). 当迭代器的`next()`方法被调用， 生成器开始执行直到遇到带有`yield`关键字的语句。碰到`yield`之后，返回生成器对象，这个部分上文已经详细介绍过了。 再次调用`next()`方法会重新开始执行生成器直到遇到下一个`yield`语句，不断反复直到没有任何`yield`关键字。
 
 ![b8YEAKz8FN0BiZTL-9nWtahqnChK1A0dcnIa](https://cdn-media-1.freecodecamp.org/images/b8YEAKz8FN0BiZTL-9nWtahqnChK1A0dcnIa)
 
-After this point if `next` is called it returns the generator object with value undefined.
+到这一步之后如果再次调用`next`方法会返回值为`undefined`的生成器对象。
 
-Now let’s try yielding another generator function from the original generator and also a return statement.
+现在让我们对这个生成器例子稍作修改，在内部添加一个`return`语句：
 
 ![cwoYBqzWffwSM5RCEJAUzpsPs-U39zfe6EV1](https://cdn-media-1.freecodecamp.org/images/cwoYBqzWffwSM5RCEJAUzpsPs-U39zfe6EV1)
 
-A `return` statement in a generator will make the generator finish its execution like every other function. The `done property` of the generator object will be set to `true` and the `value` returned will be set to the `value` property of the generator object. All other `yields` will return `undefined`.
+在生成器中的中的`return`语句和其他所有函数中的一样，会停止函数执行。一旦遇到`return`关键字，生成器对象的`done属性`会被设置为`true`，`return`的值会被设为生成器对象的`value`属性。之后其他所有`yield`关键字会返回`undefined`。
 
-If an error is thrown then also the execution of the generator will stop, yielding a generator itself.
+如果抛出了一个错误，生成器的执行也会停止。
 
 ![VtjqhfNkczhAnzaY7BmLV1Y7fLs0Du3cVzQP](https://cdn-media-1.freecodecamp.org/images/VtjqhfNkczhAnzaY7BmLV1Y7fLs0Du3cVzQP)
 
-For `yielding` a generator we need to specify an \* against the `yield` so as to tell JS that a generator is yielded. The `[yield*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*)` delegates to another generator function — that is the reason we can `yield` all the values of the `generator2` function using the `generate.next()` of the original generator function. The first value `yielded` is from the first generator function and the last two `yielded` values are generated by the generator function but `yielded` by the original generator.
+如果要`yield`一个生成器，我们需要在`yield`关键字后添加一个 \* 来告诉JS我们要在内部执行一个生成器。 `[yield*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*)`被分配给另一个生成器函数之后所有`generator2`中的值都可以通过原函数中的`generate.next()`来生成。在控制台中第一个 `yield`来自第一个生成器，后面两个来自第二个生成器，只不过是被第一个生成器生成的。
 
-#### Advantages
+#### 优点
 
-**Lazy loading**
+**懒加载**
 
-Lazy loading is essentially value evaluation only when there is a need for it. As we will see in a coming example, we can actually do it with generators. We might only yield the values when needed and not all at the same time.
+懒加载指的是仅在需要的时候做价值评估。正如我们会在接下来的例子中看到的，我们可以使用生成器来实现懒加载。我们可以在需要的时候生成值，而不是同时执行所有语句。
 
-The below example is from another example in this article and it generates infinite random numbers. Here we can see we can call as many `next()` as we want and not get all the values it is producing. Only the needed ones.
+下面的例子会生成无限多个随机数字。我们可以尽情调用 `next()`在我们需要的时候生成我们想要的随机数。 
 
 ![0uRO5-e1uAChjJR9-m21IhjV46cZ7tzH10Xl](https://cdn-media-1.freecodecamp.org/images/0uRO5-e1uAChjJR9-m21IhjV46cZ7tzH10Xl)
 
-```
-function * randomize() {  while (true) {let random = Math.floor(Math.random()*1000);    yield random;  }}
+```js
+function * randomize() {  
+    while (true) {
+        let random = Math.floor(Math.random()*1000);
+            yield random;  
+            }
+        }
 ```
 
-```
+```js
 var random= randomize();
 ```
 
-```
+```js
 console.log(random.next().value)
 ```
 
-**Memory Efficient**
+**内存效率**
 
-As we can deduce from the above example, generators are extremely memory efficient. As we want the values only according to need, we need very less storage for storing those values.
+从上面这个例子中我们可以看出生成器非常省内存，因为我们只按需生成值，所以就不需要太多内存。
 
-#### Pitfalls
+#### 陷阱
 
-Generators are extremely useful but also have their own pitfalls too.
+生成器虽然有用但是也有一些陷阱：
 
--   **Generators don’t provide random access** like arrays and other data structures. As the values are yielded one by one on call we cannot access random elements.
--   **Generators provide one-time access.** Generators don’t allow you to iterate the values again and again. Once all the values are exhausted we have to make a new Generator instance to iterate all the values again.
+-   **生成器不可以被随机访问** 和数组以及其他一些数据结构一样，生成器中的值必须一个接一个的生成，不能随机访问其中某一个元素。
+-   **生成器只提供一次性访问** 生成器不允许反复遍历值，一旦访问完所有的值就必须创造新的生成器实例来重新遍历值。
 
-#### Why do we need Generators?
+#### 为什么需要生成器?
 
-Generators provide a wide variety of uses in JavaScript. Let’s try to recreate some ourselves.
+在JS中生成器被广泛采用，让我们来创造自己的生成器。
 
-**Implementing Iterators**
+**实现生成器**
 
-> **An iterator** is an object that enables a programmer to traverse a container -Wikipedia
+> **一个迭代器**使得程序员可以遍历容器对象 ——维基百科
 
-We will print all the words present in a string using iterators. Strings are iterators too.
+让我们使用迭代器打印字符串中所有字母。字符串本身也是迭代器。
 
-**Iterators**
+**迭代器**
 
 ![jxlJeu0eRnrbnVoQQiUnQWuW6WRqy6lewlui](https://cdn-media-1.freecodecamp.org/images/jxlJeu0eRnrbnVoQQiUnQWuW6WRqy6lewlui)
 
-```
-const string = 'abcde';const iterator = string[Symbol.iterator]();console.log(iterator.next().value)console.log(iterator.next().value)console.log(iterator.next().value)console.log(iterator.next().value)console.log(iterator.next().value)
+```js
+const string = 'abcde';
+const iterator = string[Symbol.iterator]();
+console.log(iterator.next().value) //a
+console.log(iterator.next().value) //b
+console.log(iterator.next().value) //c
+console.log(iterator.next().value) //d
+console.log(iterator.next().value) //e
 ```
 
-Here’s the same thing using generators
+我们也可以使用生成器完成上述操作：
 
 ![BLoMgkxRn2Um8XnncvONthkIzSnwnDtLZxtd](https://cdn-media-1.freecodecamp.org/images/BLoMgkxRn2Um8XnncvONthkIzSnwnDtLZxtd)
 
+```js
+function * iterator() {
+    yield 'a';
+    yield 'b';
+    yield 'c';
+    yield 'd';
+    yield 'e';
+    }
+    for (let x of iterator()) {
+       console.log(x);
+       }
+//a
+//b
+//c
+//d
+//e
 ```
-function * iterator() {yield 'a';yield 'b';yield 'c';yield 'd';yield 'e';}for (let x of iterator()) {console.log(x);}
-```
 
-Comparing both the methods, it is easy to see that with the help of generators we can do it with less clutter. I know it is not a very good example but enough to prove the following points:
+对比上述两种方法，我们能够发现生成器避免了混乱。我知道上述例子不够完美，但起码证明了：
 
--   No implementation of `next()`
--   No `[Symbol.iterator]()` invocation
--   In some cases, we even need to set the `object.done` property return value to true/false using iterators.
+-   在生成器中不需要执行 `next()`
+-   在生成器中不需要`[Symbol.iterator]()`调用
+-   在一些情况下，如果使用迭代器我们甚至需要设置`object.done`属性来返回true/false。
 
-#### Async-Await ~ Promises+Generators
+#### Async-Await ~ Promises+生成器
 
-You can read my [previous](https://medium.com/@ashaymurceilago/async-await-javascript-5038668ec6eb) article about Async/Await if you want to learn about them, and check out [this](https://medium.com/javascript-in-plain-english/truly-understanding-promises-in-javascript-cb31ee487860) for Promises.
+你可以阅读[我之前写的文章](https://medium.com/@ashaymurceilago/async-await-javascript-5038668ec6eb)了解async/await， 也可以阅读[这篇文章](https://medium.com/javascript-in-plain-english/truly-understanding-promises-in-javascript-cb31ee487860)了解Promise。
 
-Crudely, Async/Await is just an implementation of Generators used with Promises.
+简言之，Async/Await是promise和生成器的结合。
 
 Async-Await
 
-```
-async function async-await(){let a=await(task1);console.log(a);
-```
-
-```
-let b=await(task2);console.log(b);
-```
-
-```
-let c=await(task3);console.log(c);
-```
-
-```
+```js
+async function asyncAwait(){
+    let a = await(task1);
+    console.log(a);
+    let b = await(task2);
+    console.log(b);
+    let c = await(task3);
+    console.log(c);
 }
 ```
 
 Promises+Generators
 
-```
-function * generator-promise(){let a=yield Promise1();console.log(a);let b=yield Promise1();console.log(b);let c=yield Promise1();console.log(c);
-```
-
-```
+```js
+function * generatorPromise(){
+    let a = yield Promise1();
+    console.log(a);
+    let b = yield Promise2();
+    console.log(b);
+    let c = yield Promise3();
+    console.log(c);
 }
 ```
 
-As we can see, both produce the same result and almost in a similar fashion too. It’s because the Async/Await mechanism is loosely based on a combination of generators and promise. There is a lot more to Async/Await than shown above, but just for showing the use of a generator, we can consider this.
+正如我们估计的那样，两者的输出结果一致。这正是因为async/await的机制就是基于生成器和promise的结合。async/await本身包含更多的内容，但是上面的例子我们只展现其中一小部分。
 
-#### Infinite Data Structure
+#### 无限数据结构
 
-The heading might be a little misleading, but it is true. We can create generators, with the use of a while loop that will never end and will always yield a value.
+标题可能有点让人困惑，但是我们确实可以通过while循环来创建一个无限生成值的生成器：
 
 ![ximCs8aJ4EUtQfo8AAPza6eRK9IAUd70QLCN](https://cdn-media-1.freecodecamp.org/images/ximCs8aJ4EUtQfo8AAPza6eRK9IAUd70QLCN)
 
+```js
+function * randomize() { 
+     while (true) {
+        let random = Math.floor(Math.random()*1000);
+            yield random;  
+            }
+        }
+    var random= randomize();
+    while(true)
+    console.log(random.next().value)
 ```
-function * randomize() {  while (true) {let random = Math.floor(Math.random()*1000);    yield random;  }}var random= randomize();while(true)console.log(random.next().value)
-```
 
-In the above snippet, we create an infinite generator, which will yield a random number on every `next()` invocation. It can be called as an infinite stream of random numbers. This is a very basic example.
+在上述代码中，我们创建了一个无限生成器。每次调用`next()`方法都会生成一个随机数。这个生成器可以生成无限的随机数，这就是一个非常基础的例子。
 
-### Conclusion
+### 总结
 
-There is yet a lot to be covered about generators, and this was just an introduction to the topic. Hope you learned something new and the article was easy to understand.
+关于生成器的内容非常多，我们在这篇文章中只介绍了基础。希望你喜欢这篇文章并从中学习到新的知识。
 
-Follow me and applaud!
+关注我，鼓掌！
 
 ![dagqbne49wWylj3wlhZWGKij2pXISMlkKyn6](https://cdn-media-1.freecodecamp.org/images/dagqbne49wWylj3wlhZWGKij2pXISMlkKyn6)

@@ -1,6 +1,6 @@
 > -  原文地址：[UI/UX Design Guide: What Are UI Designers, and How Are They Different Than UX Designers?](https://www.freecodecamp.org/news/ui-ux-design-guide/)
 > -  原文作者：[Alexandru Paduraru](https://www.freecodecamp.org/news/author/alexandru/)
-> -  译者：
+> -  译者：suntarliarzn
 > -  校对者：
 
 ![UI/UX Design Guide: What Are UI Designers, and How Are They Different Than UX Designers?](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/cover.jpg)

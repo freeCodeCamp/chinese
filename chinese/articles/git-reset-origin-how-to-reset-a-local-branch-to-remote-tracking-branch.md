@@ -1,7 +1,7 @@
-> -  原文地址：[Git Reset Origin – How to Reset a Local Branch to Remote Tracking Branch](https://www.freecodecamp.org/news/git-reset-origin-how-to-reset-a-local-branch-to-remote-tracking-branch/)
-> -  原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Git Reset Origin – How to Reset a Local Branch to Remote Tracking Branch](https://www.freecodecamp.org/news/git-reset-origin-how-to-reset-a-local-branch-to-remote-tracking-branch/)
+> - 原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Git Reset Origin – How to Reset a Local Branch to Remote Tracking Branch](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/tanner-van-dera-oaQ2mTeaP7o-unsplash.jpg)
 
@@ -19,15 +19,15 @@ In this article, you will learn how to reset and exactly match a local Git branc
 
 Here is what we will cover:
 
-1.  [What is a branch in Git?](#intro)
-    1.  [What's the difference between local, remote, and remote-tracking branches?](#difference)
-2.  [How to reset a local Git branch to remote?](#reset)
-    1.  [Save the current state of your local branch](#save)
-    2.  [Do a `git checkout`](#checkout)
-    3.  [Fetch origin](#fetch)
-    4.  [Reset local repository](#reset-local)
-    5.  [Clean up any untracked changes](#clean)
-3.  [Conclusion](#conclusion)
+1. [What is a branch in Git?](#intro)
+    1. [What's the difference between local, remote, and remote-tracking branches?](#difference)
+2. [How to reset a local Git branch to remote?](#reset)
+    1. [Save the current state of your local branch](#save)
+    2. [Do a `git checkout`](#checkout)
+    3. [Fetch origin](#fetch)
+    4. [Reset local repository](#reset-local)
+    5. [Clean up any untracked changes](#clean)
+3. [Conclusion](#conclusion)
 
 ## What is A Branch in Git? Git Branches in a Nutshell for Beginners
 
@@ -91,10 +91,10 @@ On top of that, another developer may have made changes and pushed them to the r
 
 The steps you need to take to achieve this are the following:
 
--   Save the current state of your local branch (optional).
--   Fetch the latest version of the code from the remote.
--   Reset the local branch.
--   Clean up files (optional).
+- Save the current state of your local branch (optional).
+- Fetch the latest version of the code from the remote.
+- Reset the local branch.
+- Clean up files (optional).
 
 ### Save the Current State of your Local Branch
 
@@ -159,9 +159,9 @@ git clean -xdf
 
 Let's break the `-xdf` flag down and explain what each part does:
 
--   The `-x` flag removes ignored files.
--   The `-d` flag removes untracked folders.
--   The `-f` flag removes untracked files.
+- The `-x` flag removes ignored files.
+- The `-d` flag removes untracked folders.
+- The `-f` flag removes untracked files.
 
 ## Conclusion
 
@@ -171,8 +171,8 @@ Hopefully, you found this article helpful.
 
 To learn more about Git, check out the following free resources:
 
--   [Git and GitHub for Beginners - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk)
--   [Git for Professionals Tutorial - Tools & Concepts for Mastering Version Control with Git](https://www.youtube.com/watch?v=Uszj_k0DGsg)
--   [Advanced Git Tutorial - Interactive Rebase, Cherry-Picking, Reflog, Submodules and more](https://www.youtube.com/watch?v=qsTthZi23VE)
+- [Git and GitHub for Beginners - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk)
+- [Git for Professionals Tutorial - Tools & Concepts for Mastering Version Control with Git](https://www.youtube.com/watch?v=Uszj_k0DGsg)
+- [Advanced Git Tutorial - Interactive Rebase, Cherry-Picking, Reflog, Submodules and more](https://www.youtube.com/watch?v=qsTthZi23VE)
 
 Thank you for reading and happy coding :)

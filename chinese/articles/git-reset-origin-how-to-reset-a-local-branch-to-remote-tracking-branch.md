@@ -19,17 +19,17 @@ Git 可以跟踪一个项目在一段时间内的变化。这使得多个开发�
 
 以下是我们涵盖的内容:
 
-1. [What is a branch in Git?](#intro)
-    1. [What's the difference between local, remote, and remote-tracking branches?](#difference)
-2. [How to reset a local Git branch to remote?](#reset)
-    1. [Save the current state of your local branch](#save)
-    2. [Do a `git checkout`](#checkout)
-    3. [Fetch origin](#fetch)
-    4. [Reset local repository](#reset-local)
-    5. [Clean up any untracked changes](#clean)
-3. [Conclusion](#conclusion)
+1. [什么是 Git 中的分支?](#intro)
+    1. [本地、远程和远程跟踪分支之间有什么区别？](#difference)
+2. [如何将本地 Git 分支重置为远程分支？](#reset)
+    1. [保存你的本地分支机构的当前状态](#save)
+    2. [执行 `git checkout`](#checkout)
+    3. [获取 origin](#fetch)
+    4. [重置本地存储库](#reset-local)
+    5. [清理任何未被追踪的变化](#clean)
+3. [总结](#conclusion)
 
-## What is A Branch in Git? Git Branches in a Nutshell for Beginners
+## 什么是 Git 中的分支？将 Git 分支简明扼要地介绍给初学者
 
 分支（Branching ）是版本控制的一个核心方面，也是一个需要学习的重要概念。
 
@@ -57,7 +57,7 @@ Git 可以跟踪一个项目在一段时间内的变化。这使得多个开发�
 
 要了解更多关于 Git 分支的信息，请看 [这段视频](https://www.youtube.com/watch?v=e2IbNHi4uCI) 解释它们是如何工作的，并收藏 [这篇文章](https://www.freecodecamp.org/news/how-to-use-branches-in-git/) 提供的关于如何使用它们的简明手册。
 
-### Local VS Remote VS Remote Tracking Branches in Git - What's the Difference?
+### 本地 VS 远程 VS 远程跟踪 Git 中的分支 - 有什么区别？
 
 **本地分支**是只能在您的本地机器上访问的分支，并且是独立存在的。从这里，您可以添加文件并提交您所做的任何更改。 这些更改将保存在本地，并且仅对您可见并且在您的本地物理机上可用。
 
@@ -96,7 +96,7 @@ git branch my_branch
 - 重置本地分支。
 - 清理文件（可选）。
 
-### Save the Current State of your Local Branch
+### 保存你的本地分支的当前状态
 
 在开始之前，你可能想在另一个分支中保存当前分支的状态。
 
@@ -113,7 +113,7 @@ git branch backup_work
 
 你的工作现在被保存到名为 `backup_work` 的分支。
 
-### Do A `git checkout`
+### 执行 `git checkout`
 
 通常情况下，会有一个本地远程跟踪分支，其名称与你想重置的远程分支相同，如`main`。
 
@@ -125,7 +125,7 @@ git checkout main
 
 如果你为这个分支使用不同的名字，请用你使用别的名字替换`main`。
 
-### Fetch origin
+### 获取 origin
 
 要获取远程版本库，以及远程版本库中代码的最新状态和版本，请输入以下命令:
 
@@ -137,7 +137,7 @@ git fetch origin
 
 如果你有一个不同的远程名称，请将`origin`替换为你正在使用的名称。
 
-### Reset Local Repository
+### 重置本地代码库
 
 现在，用下面的命令将本地的`main`分支重置到远程版本库:
 
@@ -145,7 +145,7 @@ git fetch origin
 git reset --hard origin/main
 ```
 
-### Clean Up Any Untracked Changes
+### 清理任何未跟踪的更改
 
 这个步骤是可选的。
 
@@ -175,4 +175,4 @@ git clean -xdf
 - [专业人士的 Git 教程 - 掌握 Git 版本控制的工具和概念](https://www.youtube.com/watch?v=Uszj_k0DGsg)
 - [高级 Git 教程 - 交互式 Rebase、Cherry-Picking、Reflog、子模块等](https://www.youtube.com/watch?v=qsTthZi23VE)
 
-Thank you for reading and happy coding :)
+谢谢你的阅读，祝你编码愉快 :)

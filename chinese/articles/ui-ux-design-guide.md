@@ -1,9 +1,9 @@
 > -  原文地址：[UI/UX Design Guide: What Are UI Designers, and How Are They Different Than UX Designers?](https://www.freecodecamp.org/news/ui-ux-design-guide/)
 > -  原文作者：[Alexandru Paduraru](https://www.freecodecamp.org/news/author/alexandru/)
-> -  译者：
+> -  译者：suntarliarzn
 > -  校对者：
 
-![UI/UX Design Guide: What Are UI Designers, and How Are They Different Than UX Designers?](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/cover.jpg)
+![UI/UX 设计指南：什么是 UI 设计师，他们与 UX 设计师有何不同？](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/cover.jpg)
 
 Have you noticed how User Interface and User Experience design are considered different topics nowadays?
 

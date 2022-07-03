@@ -1,6 +1,6 @@
 > -  原文地址：[How to Stay Motivated While Learning to Code](https://www.freecodecamp.org/news/how-to-stay-motivated-while-learning-to-code/)
 > -  原文作者：[D.M. Oladele](https://www.freecodecamp.org/news/author/d/)
-> -  译者：
+> -  译者：Gradonlee
 > -  校对者：
 
 ![How to Stay Motivated While Learning to Code](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/cover-i-age-1.jpg)

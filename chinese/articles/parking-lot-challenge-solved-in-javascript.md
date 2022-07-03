@@ -6,12 +6,16 @@
 ![How to Solve the Parking Lot Challenge in JavaScript](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/parking-loot.jpeg)
 
 Have you heard about the Parking Lot challenge? If not, let me explain briefly.
+你听说过停车场挑战吗？ 如果没有，让我简单解释一下。
 
 The Parking Lot is challenge where you are asked to write a class that manages an imaginary parking lot.
+停车场是一项挑战，要求您编写一个管理假想停车场的课程。
 
 In this tutorial we will do that in JavaScript. And to make it a bit more interesting, we will create a small React app that will visualize the workings of our class.
+在本教程中，我们将在 JavaScript 中执行此操作。 为了让它更有趣一点，我们将创建一个小的 React 应用程序，它将可视化我们类的工作。
 
 Let's begin. 🎉
+让我们开始吧。🎉
 
 # Challenge Requirements
 
@@ -30,9 +34,10 @@ First, let’s take a look at the class logic itself.
 It’s pretty straightforward, so there probably won’t be any surprises for most of you – especially if you already have some programming experience in OOP and class-based languages.
 
 ## **class ParkingLot**
+## **使用class实现停车场挑战**
 
 I will give you the code first and then I'll follow up with a short explanation on the implementation.
-
+我会先给你代码，然后我会跟进一个关于实现的简短解释。
 ```javascript
 class ParkingLot {
   slots = [];
@@ -98,18 +103,23 @@ export default ParkingLot;
 ```
 
 Starting from the beginning – our class has one property, `slots`, which is going to be an array that stores info about the parking slots (whether they're free or occupied).
+从一开始——我们的类有一个属性，`slots`，它将是一个数组，用于存储有关停车位的信息（无论它们是空闲的还是被占用的）。
 
 Then we have a `constructor` method that gets executed every time you create an instance of this class. Here is where we use an input number parameter, called `parkingSize`, to create an empty array with length equal to that number.
+然后我们有一个`constructor`方法，每次创建此类的实例时都会执行该方法。 在这里，我们使用一个名为“parkingSize”的输入数字参数来创建一个长度等于该数字的空数组。
 
 Technically speaking, this array is not empty, as we initialize it with _null_ values. This means that after the code executes in the constructor, we will end up with an array filled with null values, depending on the number we passed in.
+从技术上讲，这个数组不是空的，因为我们用 _null_ 值初始化它。 这意味着代码在构造函数中执行后，我们最终会得到一个填充了空值的数组，具体取决于我们传入的数字。
 
 For example, if we execute this:
+例如，如果我们执行这个：
 
 ```javascript
 const parking = new ParkingLot(5);
 ```
 
 It will result in this:
+这将导致：
 
 ```javascript
 [null, null, null, null, null] // lenght = 5
@@ -118,50 +128,71 @@ instead of [] // empty array, length 0
 ```
 
 After going through the constructor, let’s take a look at the rest of the methods in the class.
+看完了构造函数，我们再来看看类中剩下的方法。
 
 `park()` – This is where we do the actual parking of a car. This method iterates over the `slots` array, checks if there are free spots (that is, slots that are still equal to null), and adds in the car in those empty spots.
+`park()`——这是我们实际停车的地方。 此方法遍历 `slots` 数组，检查是否有空闲位置（即仍然等于 null 的位置），并在这些空闲位置添加汽车。
 
 Cars are given by `carId`. This is just an identifier we use to signify that we have a car in a certain spot. Note that this method returns false if there are no free slots or true if parking was successful.
+汽车由`carId`给出。 这只是我们用来表示我们在某个地点有一辆车的标识符。 请注意，如果没有空闲插槽，则此方法返回 false，如果停车成功，则返回 true。
 
 `getSlots()` – Helper method that just returns the array we use to store the parking slots.
+`getSlots()` - 仅返回用于存储停车位的数组的辅助方法。
 
 `remove()` – This is how we remove cars from the parking lot. This method also iterates over the slots array.
+`remove()`——这就是我们从停车场移除汽车的方式。 此方法还迭代插槽数组。
 
 💡As you may have noticed up until now, in almost every case when we need to manipulate data stored in a data structure like array, we have to iterate over this structure so that we can access its elements.
+💡到目前为止，您可能已经注意到，几乎在每种情况下，当我们需要操作存储在像数组这样的数据结构中的数据时，我们都必须遍历这个结构，以便我们可以访问它的元素。
 
 Different programming languages provide different data structures and methods to work with them, but the main idea is always the same: when you need to do something with this data, you need to iterate over it in some way.
+不同的编程语言提供了不同的数据结构和方法来处理它们，但主要思想总是相同的：当你需要对这些数据做某事时，你需要以某种方式对其进行迭代。
 
 To remove a car from the parking lot, we use the aforementioned identifier. We look for such items in the slots array, and if we get a match, we have a car to ‘un-park’. We perform the actual removal by just setting that specific slot to _null_ again.
+要将汽车从停车场移走，我们使用上述标识符。 我们在 slot 数组中寻找这样的项目，如果我们找到匹配项，我们就有了一辆车可以“取消停放”。 我们只需将该特定插槽再次设置为 _null_ 即可执行实际删除。
 
 Now you can guess why we decided to initialize our slots array with nulls in the first place.
+现在你可以猜到为什么我们决定首先用空值来初始化我们的槽数组。
 
 This method also returns a boolean result depending on whether there was a successful removal or not.
+此方法还根据是否成功删除返回布尔结果。
 
 We should be able to use this feedback when building some kind of UI that is able to react to such changes. The same is valid when adding cars to the parking lot (look at the `park` method).
+在构建某种能够对此类更改做出反应的 UI 时，我们应该能够使用此反馈。 将汽车添加到停车场时也是如此（查看 `park` 方法）。
 
 `getSize()` – Another helper method that we use to check the parking lot size.
+`getSize()` - 我们用来检查停车场大小的另一个辅助方法。
 
 `getAvailable()` – This one shows us how many available slots we currently have.
+`getAvailable()` - 这个显示我们目前有多少可用的插槽。
 
 `isFull()` – Tells us if the parking lot is full, that is that there are no more available slots.
+`isFull()` - 告诉我们停车场是否已满，即没有更多可用的车位。
 
 # How to Build the React App
+# 如何构建 React App
 
 ![image-92](https://www.freecodecamp.org/news/content/images/2022/06/image-92.png)
 
 Parking Lot app - main screen
+停车场应用程序 - 主屏幕
 
 Here is where the fun starts. 🕺
+这是乐趣开始的地方🕺。
 
 We are going to create an interactive app, visualizing the tasks which we can perform with the help of our implementation above.
+我们将创建一个交互式应用程序，可视化我们可以在上述实现的帮助下执行的任务。
 
 Our app will provide basic UI controls allowing an (imaginary) operator to work with the parking lot software_._ And in order to make their work a bit more pleasing to the eye, we will try to animate the basic functions our software provides.
+我们的应用程序将提供基本的 UI 控件，允许（假想的）操作员使用停车场软件_._ 为了使他们的工作更令人赏心悦目，我们将尝试为我们的软件提供的基本功能设置动画。
 
 Let’s see how! 📺
+一起来看看，是如何实现的吧！📺
 
 ## Demo
 
 Here is the live demo for those of you who doesn’t care about the details and just want to ‘taste’ it: 🥪
+这是为那些不关心细节而只想“品尝”它的人提供的现场演示：🥪
 
 [
 
@@ -176,79 +207,115 @@ Parking Lot Software Inc.
 Parking Lot Inc. app
 
 ## Source Code
+## 源码
 
 Here is the [repo](https://github.com/mihailgaberov/parking-lot) with the app's source code.
+这是带有应用程序源代码的 [repo](https://github.com/mihailgaberov/parking-lot)。
 
 Let me give you a brief summary on the _what_ and the _why_.
+让我简要介绍一下_what_ 和_why_。
 
 The app is built with [vite](https://vitejs.dev/). The reason for this is that I've been playing around recently with it and I am really happy with the speed and the performance it provides.
+该应用程序是使用 [vite](https://vitejs.dev/) 构建的。 原因是我最近一直在玩它，我对它提供的速度和性能感到非常满意。
 
 No matter that it’s still in the relatively early stages of development – if I am about to start a new project and am in a position to choose, I will go with **vite**.
+不管它还处于相对早期的开发阶段——如果我要开始一个新项目并且有选择的余地，我会选择**vite**。
 
 This is not to say I have anything against its big brother [CRA](https://create-react-app.dev/). On the contrary, I have built multiple apps with it and I am still using it in some of my projects. It’s just that **vite** is much faster and often gives me everything I currently need.
+这并不是说我反对它的老大哥 [CRA](https://create-react-app.dev/)。 相反，我已经用它构建了多个应用程序，并且我仍在我的一些项目中使用它。 只是 **vite** 更快，并且经常给我目前需要的一切。
 
 💡Just keep in mind that selecting a given technology always depends on your specific needs for a specific project. That is to say that there is no silver bullet. It’s always a matter of requirements and priorities.
+💡请记住，选择给定的技术始终取决于您对特定项目的特定需求。 也就是说，没有银弹。 这始终是需求和优先级的问题。
 
 ## Structure of the React App
+## React App 项目结构
 
 ![image-93](https://www.freecodecamp.org/news/content/images/2022/06/image-93.png)
 
 App structure
+App 项目结构
 
 The app's structure is straightforward. At the root level we have two folders – _assets_ and _src_. The first contains the assets used in the app (in this case it’s just a car image). The later contains all the files with the source code.
+该应用程序的结构很简单。 在根级别，我们有两个文件夹 - _assets_ 和 _src_。 第一个包含应用程序中使用的资产（在本例中，它只是一张汽车图像）。 后者包含所有带有源代码的文件。
 
 Let’s take a closer look inside the source folder.
+让我们仔细看看源文件夹内部。
 
 Here we have the following folders:
+在这里，我们有以下文件夹：
 
 -   [components](https://github.com/mihailgaberov/parking-lot/tree/main/src/components) – contains all React components used in the app
+-   [组件](https://github.com/mihailgaberov/parking-lot/tree/main/src/components) - 包含应用程序中使用的所有 React 组件
 -   [lib](https://github.com/mihailgaberov/parking-lot/tree/main/src/lib) – contains the parking lot class, responsible for the main logic of the app
+-   [lib](https://github.com/mihailgaberov/parking-lot/tree/main/src/lib) - 包含停车场类，负责app的主要逻辑
 -   [pages](https://github.com/mihailgaberov/parking-lot/tree/main/src/pages) – contains two sub-directories, for the two main screens in the app – Landing and Main, respectively
+-   [pages](https://github.com/mihailgaberov/parking-lot/tree/main/src/pages) – 包含两个子目录，分别用于应用程序中的两个主屏幕 – Landing 和 Main
 -   [utils](https://github.com/mihailgaberov/parking-lot/tree/main/src/utils) – contains a helper method for generating fictitious car license plates that we use later when representing a parking slot as _busy_
+-   [utils](https://github.com/mihailgaberov/parking-lot/tree/main/src/utils) - 包含一个辅助方法，用于生成我们稍后将停车位表示为_busy_时使用的虚构汽车牌照
 -   And several files, most of them are related to the entry point of the app, except the favicon ones – their role should be clear to you. If not, take a look at the tab of your browser 😉
+-   - 还有几个文件，其中大部分都与应用程序的入口点有关，除了 favicon 文件——它们的作用你应该很清楚。 如果没有，请查看浏览器的选项卡😉
 
 ![image-94](https://www.freecodecamp.org/news/content/images/2022/06/image-94.png)
 
 Browser tab with favicon
+带有图标的浏览器选项卡
 
 ## App Pages
+## App 页面
 
 As mentioned earlier, the main pages (also called screens) in the app are called [Landing](https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Landing) and [Main](https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Main). These are React components themselves. They serve as skeletons for everything you see in the welcome page – where you land initially and where you can select how many parking slots you want to have in your parking lot.
+如前所述，应用程序中的主页面（也称为屏幕）称为[Landing]（https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Landing）和[Main]（ https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Main）。 这些是 React 组件本身。 它们充当您在欢迎页面中看到的所有内容的骨架——您最初降落的位置以及您可以在哪里选择您希望在停车场拥有多少停车位。
 
 ![image-95](https://www.freecodecamp.org/news/content/images/2022/06/image-95.png)
 
 Welcome page
+欢迎页
 
 And the page you go to after clicking the big, ping submit button - the main screen where your operator is able to manage the parking lot.
+以及点击大的 ping 提交按钮后您转到的页面 - 您的操作员能够管理停车场的主屏幕。
 
 ![image-96](https://www.freecodecamp.org/news/content/images/2022/06/image-96.png)
 
 Main page
+主页
 
 ## **App Functionality**
+## **App 功能性**
 
 The app provides very basic functionality for managing an imaginary parking lot. When the user select how many slots they want (max 20), they'll be transitioned to the main screen. There, the user will be able to see all free parking slots.
+该应用程序提供了用于管理虚拟停车场的非常基本的功能。 当用户选择他们想要的插槽数量（最多 20 个）时，它们将被转换到主屏幕。 在那里，用户将能够看到所有免费停车位。
 
 When a car is parked, via the PARK! button, the relevant spot will be visualised as busy and will show the registration number of the car being parked there. The operator can un-park cars by clicking on a busy slot, that is on the car they want to “remove” from the parking lot.
+当汽车停放时，通过公园！ 按钮，相关地点将显示为繁忙，并显示停在那里的汽车的登记号码。 操作员可以通过点击一个繁忙的插槽来取消停放汽车，即他们想要从停车场“移除”的汽车。
 
 ## 💡The simple animation of the moving red car is just for visual effect and doesn’t have any real influence on the way the parking lot works.
+## 💡移动的红色汽车的简单动画只是为了视觉效果，对停车场的运作方式没有任何实际影响。
 
 I used [CSS modules](https://github.com/css-modules/css-modules) for styling the app. I also tried to make the app a bit mobile friendly, in case you decide to try it on your mobile device.
+我使用 [CSS 模块](https://github.com/css-modules/css-modules) 为应用设置样式。 我还尝试使该应用程序对移动设备友好一点，以防您决定在移动设备上试用它。
 
 Be my guest and [give a try](https://parking-lot-chi.vercel.app/) 🧪
+做我的客人，[试一试](https://parking-lot-chi.vercel.app/) 🧪
 
 # Conclusion
+# 总结
 
 My initial idea behind this post was to describe the parking lot class itself. You know, just for educational purposes. To show you how can you write such a class in JavaScript.
+我在这篇文章背后的最初想法是描述停车场类本身。 你知道，只是为了教育目的。 向您展示如何在 JavaScript 中编写这样的类。
 
 But then I thought it’s kind of boring 🥱.  I wanted to create something funnier 💃🏻, something more gamified 🕹️  so to speak.
+但后来我觉得这有点无聊🥱。 我想创造一些更有趣的东西💃🏻，更游戏化的东西🕹️可以这么说。
 
 And this is how I ended up with this mini game-like app 🎮.
+这就是我最终得到这个类似迷你游戏的应用程序🎮的原因。
 
 While building it, my 5 year old daughter 🧒🏻 saw it and wanted to play with it. And she had a lot of fun actually!
+在建造它时，我 5 岁的女儿 🧒🏻 看到它并想和它一起玩。 她实际上玩得很开心！
 
 Yes, yes, of course! I am not saying that if it was something funny for a 5 year old, it will be for you too 😀.
+是的，是的，当然！ 我并不是说如果这对一个 5 岁的孩子来说很有趣，那么它也适合你😀。
 
 My only goal was to catch your attention through the game, so that the knowledge 📖 behind it stays longer with you.
+我唯一的目标是通过游戏吸引您的注意力，以便它背后的知识📖与您保持更长时间。
 
-Thanks for reading! 🙏
+感谢阅读！🙏

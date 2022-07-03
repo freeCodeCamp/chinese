@@ -1,6 +1,6 @@
 > -  原文地址：[What are Functions in JavaScript? A Beginner's Guide](https://www.freecodecamp.org/news/what-are-functions-in-javascript-a-beginners-guide/)
 > -  原文作者：[Chinwendu Enyinna](https://www.freecodecamp.org/news/author/chinwendu/)
-> -  译者：
+> -  译者：Gradonlee
 > -  校对者：
 
 ![What are Functions in JavaScript? A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/banner-image-for-functions-1.png)

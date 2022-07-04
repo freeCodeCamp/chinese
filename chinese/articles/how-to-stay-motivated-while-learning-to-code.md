@@ -5,98 +5,103 @@
 
 ![How to Stay Motivated While Learning to Code](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/cover-i-age-1.jpg)
 
-Learning to code can be like preparing for a long battle. Ultimately, winning is not always determined by your initial strength, but by how well prepared you are and how long you can hold out.
+学习编程可能就像准备一场持久的战役，最终地胜利并不总是取决于你最初的能力，而是你准备的有多好以及你能坚持多长时间。
 
-With programming, the greatest challenge is often not the complexity of the language, but rather staying consistent and motivated through the learning process.
+当学习编程的时候，最大的挑战往往不是语言的复杂度，而是保持步调并且以学习的过程作为动机。
 
-In order to stay consistent with your learning, you will need a lot of motivation and energy. The consistency with which you learn would help you to understand the complex concepts of any programming language and make the most of your time.
+为了在你的学习过程中保持步调，你将需要许多动力与精力，通过持续不断地学习将帮助你理解编程语言中复杂的概念，学编程可不能一口吃成个胖子。
 
-Having come from an absolutely non-technical background, I had to learn this late. After I took the first step into the transition, I struggled with everything relating to learning, particularly motivation.
+因为我没有接触过任何技术性的东西，所以我开始学习编程较晚。在我尝试迈出转码第一步后，每一步地学习都十分地挣扎，我越来越怀疑自己的动机。
 
-This article will share the steps I have gathered over time to overcome my struggles with staying consistent and motivated.
+这篇文章我将分享我如何随着时间的累积逐渐克服困难，从而坚持下来并且自我激励。
 
 ![Testudo_formation-1](https://www.freecodecamp.org/news/content/images/2022/06/Testudo_formation-1.jpg)
 
-## Start Slowly but Maintain a Habit
+## 放平心态，养成习惯
 
-In the early stage of learning, you might only have a few free hours that you can dedicate to learning.
+在早期学习阶段，你可能没有太多的时间用来学习，这是因为你刚开始尝试做一些你从没有做过的事情，并且你可能有全职工作会占据你每日生活中大部分的时间，因此仅仅是挤出时间来学习就实属不易了。
 
-This is because most people are just opening themselves up to doing something they have never done before. Also, they might have tasks such as a full-time job which take a better part of their daily life. Therefore, adjusting and making time for learning might not be easy.
+在这个阶段，你并不需要担心你一口气能学多少，最重要的事情是抽出时间每天学，无论学了多少、无论发生什么情况，都要坚持下去！
 
-At this stage, you don't need to be concerned about the amount of time you have available to learn in one sitting. The most important thing is making time for a daily study session, regardless of its length, and persisting with it in spite whatever crops up in the way.
+## 始终为你的学习做好规划
 
-## Always Schedule Your Tasks
+如果你不管理好你的每日任务，你就十分容易拖延并且遗忘它们。你很容易专注于一两件任务上并且全然忘记你还有其他的任务要做，这种情况在你没有设置任务清单时会经常发生。
 
-If you don't schedule your daily tasks, it's much easier to procrastinate and forget about them. It's easy to become engrossed in just one or few tasks and lose sight of the fact that there are other things you need to do. Often, this happens when you don't follow a set task list.
+为了防止拖延及健忘，确保你通过制定任务来管理你的时间，你可以通过以下建议来制定你的任务：
 
-To prevent procrastination and forgetfulness, make sure you plan out your days by scheduling tasks. You can use the following tips as a guide in scheduling your tasks:
+1. 想想你总共有多少任务需要完成
+2. 预估完成每项任务需要多少时间
+3. 确定你一天什么时候最有生产力
+4. 按优先级来安排好你所有的任务
+5. 确保将相似的任务安排在一起从而提高效率
+6. 在你的手机或电脑上排好任务以便管理
+7. 将复杂及困难的任务安排在你脑子最好使的时候
+8. 为意想不到的状况预留时间以防遭遇到它
 
-1.  Think of all the tasks you would like to accomplish.
-2.  Estimate how long it will take to accomplish each task.
-3.  Identify your peak hours of productivity.
-4.  Arrange the tasks in order of priority.
-5.  Make sure to bundle similar tasks together to improve your productivity.
-6.  To stay organized, schedule these tasks on your phone or computer and use reminder and task applications.
-7.  Schedule complex or difficult tasks during your peak productivity hours.
-8.  Make time for unexpected events in your schedule and plan for them ahead of time.
+值得一提的是最好是在每周开始的时候安排好一周的计划。
 
-Note that it is a good idea to schedule your tasks at the beginning of every week.
+想了解更多关于如何安排你的时间以提高生产力，你可以考虑阅读[这篇由 Calendar 的联合创始人及 CEO——John Rampton 所撰写的文章](https://www.calendar.com/blog/how-to-schedule-your-day-for-optimal-productivity/)
 
-To learn more about how you can schedule your day for better productivity, consider reading [this article by John Rampton, the co-founder and CEO of Calendar.](https://www.calendar.com/blog/how-to-schedule-your-day-for-optimal-productivity/)
+## 参加一个学习者社区
 
-## Join a Community of Learners
+对于绝大多数人而言，独自学习可能是孤独且乏味的，而且很快就会伤害你的学习积极性，拥有志同道合的朋友一块儿准没错。
 
-For most people, learning alone can be boring and tedious, and in no time, it can hurt your motivation. This is why having a community of like-minded people is always better.
+这种类型的社区将带给你无数的好处，包括但不限于：
 
-This type of community will provide you numerous benefits, including, but not limited to:
+-   获得组团学习的机会
+-   得到不同的资源来帮助你学习成长
+-   获取当下的技术趋势讯息
+-   给你的个人项目带来反馈
+-   扩展一个能分享你的进展、衡量你的成长的渠道
 
--   access to group study
--   access to different resources to help with your study
--   information on current technological trends
--   getting feedback on personal projects
--   an avenue to share your progress and measure your growth
+寻找你所在的地区是否存在这类型的社区。如果你找不到，你也可以加入一个远程学习社区来代替。
 
-Find out if this type of community exists in your area. Alternatively, if you are unable to find one, you can join a remote learning community instead.
+下面是一些我发现的远程社区，我觉得他们非常有价值：
 
-The following are some of the remote communities I have personally found useful and consider to be of great value:
+-   **100Devs:** 这个社区是一个非营利性组织并且维护于 Leon Noel——一名老师、以及 ResilientCoders 的技术主管。100Devs 社区向个人提供免费的全栈网络开发课程，你可以[加入](https://t.co/N1svwNfVRd)他们。
+-   **100DaysofCode:** 100DaysofCode 是一个 100 天学习编程语言的挑战。为了参加 100DaysofCode，你必须每天投入至少一小时的时间来学习，并且还需要在 Twitter 上发布你所完成的任务并且带上标签 #100DaysofCode。
+-   **Kevin Powell Community:** Kevin Powell 主动学习者社区是一个 Discord 频道由 Kevin Powell 创建并维护。Kevin 是一个拥有多年经验的教师以及软件开发人员，你可以从这儿[加入](https://discord.gg/9NmT5HxN)。
+-   **Commit Your Code:** Commit Your Code 社区由 Danny Thompson 创建，这个社区有很多主动学习者以及经验丰富的开发者，他们十分愿意帮助及指导你的项目。你可以从这儿[加入](https://discord.gg/3JvHFCCp)该社区。
 
--   **100Devs:** The 100devs community is a nonprofit organization founded and maintained by Leon Noel, a teacher and Managing Director of Engineering at ResilientCoders. The 100Devs community provides free lessons in full-stack web development to individuals. You can join the 100Devs community [here](https://t.co/N1svwNfVRd).
--   **100DaysofCode:** 100DaysofCode is an online challenge where people dedicate 100 days to learning a programming language of their choice. In order to participate in 100DaysofCode, you must devote at least an hour a day to learning. And after that, you post a completed task on Twitter with the hashtag #100DaysofCode.
--   **Kevin Powell Community:** The Kevin Powell Community of active learners is a community on discord created and maintained by Kevin Powell. Kevin is a teacher and software developer with years of experience. You can join the Kevin Powell Community on [discord](https://discord.gg/9NmT5HxN).
--   **Commit Your Code:** The Commit Your Code community is created and maintained by Danny Thompson. The community has a lot of active learners as well as experienced developers who are more than willing to help you with your projects and mentorship. You can join the Commit Your Code community on [discord](https://discord.gg/3JvHFCCp).
+当然了 freeCodeCamp 社区也拥有一个充满支持与善意的[论坛](https://forum.freecodecamp.org/)，你可以在这儿问问题并且邂逅其他的开发者。
 
-And of course the freeCodeCamp community has a [supportive and friendly forum](https://forum.freecodecamp.org/) where you can ask questions and meet other developers.
+在加入其中的一个或多个社区后，重要的是拿出你最好的态度，也别忘记保持自我，提供价值、遵守规则。
 
-After joining one or more of these communities, it is important to be on your best behaviour. Keep in mind to also be kind, provide value, and follow their rules.
+## 寻找一个学习伙伴
 
-## Find a Study Partner
+如果你即便是管理好你的任务并且加入一个学习社区后，还是很难坚持下来并保持动力，在这种情况下，你可能需要一名学习伙伴。
 
-Being consistent and motivated may be hard even after scheduling your tasks and joining a study community. If this is the case, you might need a study partner.
+拥有学习伙伴可以从以下几个方面受益：
 
-You can benefit from having a study partner in the following ways:
+-   能让你建立起责任感
+-   可以设置共同学习的时段
+-   可以在合作项目上协作
+-   可能会互相得到指导
+-   一起通过编程挑战
 
--   Makes sure you have accountability.
--   You can set up joint study sessions.
--   You can collaborate on joint projects.
--   You might find mentorship.
--   You can go through coding challenges together.
+## 使用更高效的学习技巧
 
-## Use an Efficient Study Technique
+编程语言通常来说都比较复杂。除非你有一个高效的学习技能，否则你会很难理解其中的概念并且很难运用在实际的情况中，这会使你沮丧并且打击你学习的动力。
 
-Programming languages are generally complex. Unless you have an effective study technique, it will be difficult to understand the concepts and apply them in practical contexts. This can make you frustrated and lessen your motivation to learn.
-
-If you're learning new concepts or a new programming language, here are some study techniques you might have tried:
+如果你在学习一些新的概念或者新的编程语言，这里有一些学习技巧可能你已经尝试过：
 
 -   repetitive reading, otherwise known as re-reading
 -   highlighting
 -   summarizing or making notes
 -   cramming
+-   反复阅读
+-   突出重点
+-   总结或做笔记
+-   填鸭式学习
 
 But there's lots of evidence from prominent scientists and psychologists that has proven that these techniques are less effective when compared to other study techniques you can use.
+但是很多著名的科学家及心理学家通过大量的证据证明——对比以下的学习技巧，以上的学习技巧效果较差。
 
 To make the best use of your time and ensure you remember what you have studied for a longer time, try the following study techniques:
+为了最好的利用你的时间并确保你能更长时间地记住你所学的内容，请尝试以下的学习技巧：
 
 ### Active Recall
+### 主动回忆
 
 Active recall is a study technique that involves retrieving already stored information from your brain.
 

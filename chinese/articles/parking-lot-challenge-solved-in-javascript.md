@@ -5,33 +5,42 @@
 
 ![How to Solve the Parking Lot Challenge in JavaScript](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/parking-loot.jpeg)
 
-Have you heard about the Parking Lot challenge? If not, let me explain briefly.
-你听说过停车场挑战吗？ 如果没有，让我简单解释一下。
+~~Have you heard about the Parking Lot challenge? If not, let me explain briefly.~~
+你听说过停车场挑战吗？ 如果没有，那让我来简单解释一下吧。
 
-The Parking Lot is challenge where you are asked to write a class that manages an imaginary parking lot.
-停车场是一项挑战，要求您编写一个管理假想停车场的课程。
+~~The Parking Lot is challenge where you are asked to write a class that manages an imaginary parking lot.~~
+停车场挑战要求编写一个管理停车场的class。
 
-In this tutorial we will do that in JavaScript. And to make it a bit more interesting, we will create a small React app that will visualize the workings of our class.
-在本教程中，我们将在 JavaScript 中执行此操作。 为了让它更有趣一点，我们将创建一个小的 React 应用程序，它将可视化我们类的工作。
+~~In this tutorial we will do that in JavaScript. And to make it a bit more interesting, we will create a small React app that will visualize the workings of our class.~~
+在本教程中，我们选用 JavaScript 进行代码实现。为了让停车场更有趣一点，我们将创建一个小小的 React App，用以可视化我们的代码。
 
-Let's begin. 🎉
 让我们开始吧。🎉
 
-# Challenge Requirements
+~~# Challenge Requirements~~
+# 挑战要求
 
-For this challenge, you have to implement a class in JavaScript. That class should consist of variables and methods that simulate how a parking lot works. Here are the details:
+~~For this challenge, you have to implement a class in JavaScript. That class should consist of variables and methods that simulate how a parking lot works. Here are the details:~~
+为实现挑战，你需要使用 JavaScript 实现一个类。 该类应包含以模拟停车场工作的变量和方法。 下面是详细要求：
 
--   We should be able to create the parking lot with a given size (number of parking spots)
--   We don’t differentiate between different vehicles – we consider them all the same
--   Our class provides a method for parking new cars in the parking lot
--   Our class provides a method for removing already parked cars, and
--   Our class provides a method for getting the size of the parking lot (total count of slots)
+-   ~~We should be able to create the parking lot with a given size (number of parking spots)~~
+-   我们需要创建具有指定大小（停车位数量）的停车场
+-   ~~We don’t differentiate between different vehicles – we consider them all the same~~
+-   我们认为所有车辆都是相同的，所以我们不需要对车辆进行区分
+-   ~~Our class provides a method for parking new cars in the parking lot
+-   我们的类提供了一种在停车场停放新车的方法
+-   ~~Our class provides a method for removing already parked cars, and
+-   我们的类提供了一种移除已停放车辆的方法
+-   ~~·Our class provides a method for getting the size of the parking lot (total count of slots)
+-   我们的类提供了一种获取停车场大小（车位总数）的方法
 
-# Parking Lot Challenge Solution
+~~# Parking Lot Challenge Solution~~
+# 停车场挑战解决方案
 
-First, let’s take a look at the class logic itself.
+~~First, let’s take a look at the class logic itself.~~
+首先，让我们看一下停车场类的逻辑。
 
-It’s pretty straightforward, so there probably won’t be any surprises for most of you – especially if you already have some programming experience in OOP and class-based languages.
+~~It’s pretty straightforward, so there probably won’t be any surprises for most of you – especially if you already have some programming experience in OOP and class-based languages.~~
+停车场自身的逻辑很简单，所以可能对于你们大多数人来说没有任何难度————特别当你已具备一些 OOP 和基于类的编程经验时。
 
 ## **class ParkingLot**
 ## **使用class实现停车场挑战**

@@ -1,6 +1,6 @@
 > -  原文地址：[The Python Handbook](https://www.freecodecamp.org/news/the-python-handbook/)
 > -  原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> -  译者：
+> -  译者：ZhijieXiong
 > -  校对者：
 
 ![The Python Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/book.png)

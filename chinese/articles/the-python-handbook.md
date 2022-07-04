@@ -5,21 +5,21 @@
 
 ![The Python Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/book.png)
 
-The Python Handbook follows the 80/20 rule: learn 80% of the topic in 20% of the time.
+这本Python编程手册遵循“80/20定律”：使用20%的时间学习80%的内容。
 
-I find this approach gives a well-rounded overview.
+我认为这种方法可以为学习者提供一个对Python全面的了解。
 
-This book does not try to cover everything under the sun related to Python. It focuses on the core of the language, trying to simplify the more complex topics.
+本手册并没有涵盖与Python相关的全部内容。它专注于这门编程语言的核心主题，并且试图简化那些复杂的内容。
 
-I hope the contents of this book will help you achieve what you want: **learn the basics of Python**.
+我希望这本手册可以帮助你实现：**学习Python的基础**
 
-> Note: You can [get a PDF, ePub and Mobi version of this Python Handbook](https://flaviocopes.com/page/python-handbook/)
+> Note: 你可以获取这本手册的[PDF、ePub或者Mobi版本](https://flaviocopes.com/page/python-handbook/)
 
 Enjoy!
 
 ## Summary
 
--   [Introduction to Python](#introductiontopython)
+-   [Python介绍](#introductiontopython)
 -   [How to Install Python](#howtoinstallpython)
 -   [How to Run Python Programs](#howtorunpythonprograms)
 -   [Python 2 vs Python 3](#python2vspython3)
@@ -65,11 +65,15 @@ Enjoy!
 -   [Virtual Environments in Python](#virtualenvironmentsinpython)
 -   [Conclusion](#conclusion)
 
-## Introduction to Python
+## Python介绍
 
 Python is literally eating the programming world. It is growing in popularity and usage in ways that are pretty much unprecedented in the history of computers.
 
+Python正在逐步“占领”编程世界。它的受欢迎度和使用度正在以计算机历史中前所未有的方式实现增长。
+
 Python excels in a wide variety of scenarios – **Shell scripting**, **task automation**, and **Web development** are just some basic examples.
+
+Python在各种应用场景下都表现出色——**Shell 脚本**、**自动化的任务**和**Web 开发**只是基本的应用。
 
 Python is the language of choice for **data analysis** and **machine learning**, but it can also adapt to create games and work with embedded devices.
 

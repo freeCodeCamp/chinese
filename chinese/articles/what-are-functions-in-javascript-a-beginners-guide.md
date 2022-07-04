@@ -1,29 +1,31 @@
 > -  原文地址：[What are Functions in JavaScript? A Beginner's Guide](https://www.freecodecamp.org/news/what-are-functions-in-javascript-a-beginners-guide/)
 > -  原文作者：[Chinwendu Enyinna](https://www.freecodecamp.org/news/author/chinwendu/)
-> -  译者：
+> -  译者：Gradonlee
 > -  校对者：
 
-![What are Functions in JavaScript? A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/banner-image-for-functions-1.png)
+![什么是 JavaScript 中的函数（function）初学者的指南](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/banner-image-for-functions-1.png)
 
-Functions are one of the fundamental concepts in programming. They let us write concise, modular, reusable, and maintainable code. They also help us obey the DRY principle when writing code.
 
-In this article, you will learn what functions are in JavaScript, how to write your own custom functions, and how to implement them.
+函数（function）是编程的基本概念之一。函数能让我们编写简洁的、模块化的、可多次使用的和可维护的代码，它还能帮助我们在编写代码时遵守DRY原则。
 
-As a prerequisite, you should be familiar with some fundamental JavaScript concepts such as variables, expressions, and conditional statements to follow along with this article.
+在本文中，你将了解 JavaScript 中有哪些函数，如何编写自己的自定义函数以及如何执行它。
 
-## What is a Function in JavaScript?
+作为先决条件，你应该熟悉一些基本的 JavaScript 概念，如变量（variable）、表达式（expression）和条件语句（conditional statement），以便理解本文。
 
-A function is a block of reusable code written to perform a specific task.
+## **什么是 JavaScript 中的函数？**
 
-You can think of a function as a sub-program within the main program. A function consists of a set of statements but executes as a single unit.
+函数是为了执行特定任务而编写的——可重复使用的代码块。
 
-In JavaScript, we have some browser built-in functions like alert(), prompt(), and confirm(). You have probably used these in your project before, right? But you can still create your own custom functions.
+你可以将函数视为主程序（program）中的子程序。函数由一组语句组成，但作为单个单元执行。
 
-There are several ways to define a function. Most commonly, we have function declaration and function expression.
+在 JavaScript 中，我们有一些浏览器内置功能，如 alert()、 promp() 和 confirm()。你以前可能在你的项目中使用过这些吧？但你仍然可以创建你自己的自定义函数。
 
-## How to Define a Function using Function Declaration
+有几种方法可以定义函数。最常见的是函数声明（declaration）和函数表达式。
 
-You write a function declaration like this:
+
+## **如何使用函数声明来定义函数？**
+
+你可以编写像这样的函数声明：
 
 ```javascript
 function nameOfFunction() {
@@ -31,14 +33,14 @@ function nameOfFunction() {
 }
 ```
 
-Basically, it consists of the following:
+基本上，函数声明由以下内容组成：
 
--   Function keyword
--   The name of the function
--   Parentheses (which can take in parameters, or also be empty)
--   The body of the function (wrapped in curly braces).
+-   函数关键字（keyword）
+-   函数的名称
+-   小括号（Parentheses）（可以包含参数，也可以为空）
+-   函数主体（用大括号（curly braces）括起来）
 
-Here's an example:
+这里有一个例子：
 
 ```JavaScript
 function sayHello() {
@@ -46,9 +48,9 @@ function sayHello() {
 }
 ```
 
-This function won't do a thing – in this case, output _Hello world_ – unless you call it. The term for this is _invoking the function._
+该函数不会做任何事情——也就是输出（output） _Hello world_ ，除非你调用（invoking）了这个函数。
 
-Here’s how to call the function:
+调用该函数的方法如下：
 
 ```javascript
 sayHello();
@@ -56,7 +58,7 @@ sayHello();
 //output: Hello world
 ```
 
-Here’s another example:
+以下是另一个例子：
 
 ```javascript
 function sum(num1, num2){
@@ -64,7 +66,7 @@ function sum(num1, num2){
 }
 ```
 
-To invoke this function, we call it like this:
+要调用此函数，我们需要这样：
 
 ```javascript
 sum(1, 2);
@@ -72,19 +74,21 @@ sum(1, 2);
 //output: 3
 ```
 
-You can see a slight difference between our first function example and the second.
+你可以看到我们的第一个函数示例和第二个函数示例之间略有区别。
 
-If you guessed that it's the content within the parenthesis of the second function, then you’re right!
+如果你猜到这是因为第二个函数小括号中的内容，恭喜你答对了！
 
-The function `sum()` took in two parameters when we defined it – `num1`, and `num2`. And when we call it, we passed in two values – the arguments, `1` and `2`. Let me explain what these two terms (parameters and arguments) mean.
+当我们定义函数 `sum()` 时，它包含了两个形式参数（parameter） —— `num1` 和 `num2`。当我们调用这个函数时，我们传递了两个值（value）——实际参数（argument）`1` 和 `2`。
 
-A **parameter** is a variable you pass to a function when you declare it.
+**形式参数**是你在声明函数时传递给函数的变量。
 
-Suppose you want your function to be dynamic, so that it applies the function’s logic to different sets of data at different times. That’s where parameters come in handy. This way, your function doesn’t just output the same result repeatedly. Instead, its result is dependent on the data you pass in.
+假设你希望你的函数是动态（dynamic）的，形式参数它就可以在不同的时间将函数的逻辑应用于不同的数据集。
 
-An **argument**, on the other hand, is the value equivalent to the parameter that you pass to the function when you call it.
+这就是形式参数派上用场的地方，这样一来，你的函数就不会重复输出相同的结果。反过来说，它的结果是取决于你传入的数据。
 
-So the syntax for declaring a function with parameters will look like this:
+另一方面，**实际参数**是相当于你调用函数时，传递给形式参数的值。
+
+因此，声明一个带有形式参数的函数的语法将看起来像这样：
 
 ```javascipt
 function nameOfFunction(parameters){
@@ -92,17 +96,18 @@ function nameOfFunction(parameters){
 }
 ```
 
-And to invoke it:
+然后再调用该函数：
 
 ```javascript
 nameOfFunction(arguments)
 ```
 
-## How to Define a Function using a Function Expression
+## **如何使用函数表达式来定义一个函数？**
 
-A function expression is another notation for defining a function. In terms of syntax, it is similar to the function declaration. But function expressions allow you to define a named function or omit the function name to create an anonymous function.
+函数表达式是定义一个函数的另一种记法。就语法而言，它与函数声明类似。但是函数表达式允许你定义一个命名的函数，或者省略函数名来创建一个匿名（anonymous）函数。
 
-Let’s see what a function expression looks like:
+
+让我们看看一个函数表达式是什么样子的：
 
 ```javascript
 let namedFunction = function myFunction(){
@@ -110,7 +115,7 @@ let namedFunction = function myFunction(){
 }
 ```
 
-Notice that in this example, the function has a name, `myFunction`. This is not the case with the anonymous function. When defining an anonymous function, you omit the function name just like in this example below:
+注意，在这个例子中，函数有一个名字，`myFunction`。而匿名函数则不是这样的。当定义一个匿名函数时，你要省略函数名，就像下面这个例子：
 
 ```javascript
 let anonymousFunction = function(){
@@ -118,15 +123,15 @@ let anonymousFunction = function(){
 }
 ```
 
-You can see that both function examples are assigned to a variable, right?
+你可以看到，这两个函数的例子都是分配给了一个变量的，没错吧？
 
-**A function keyword creates a function value that can be assigned to a variable when it is used as an expression**.
+**一个函数关键字创建了一个函数值，当它被用作表达式时，可以分配给一个变量**。
 
-So, to invoke this function, we call it using the variable name which serves as the new function name.
+因此，为了调用这个函数，我们使用作为新函数名的变量名来调用它。
 
-One major difference between the function declaration and function expression is that, with function declaration, you can invoke the function even before defining it. This is not possible with function expressions.  
+函数声明和函数表达式之间的一个主要区别是，对于函数声明，你甚至可以在定义函数之前就调用它。这在函数表达式中是不可能的。 
 
-For example:
+比如说：
 
 ```javascript
 console.log(greeting());
@@ -138,13 +143,13 @@ function greeting(){
 //output: Hope you're good?
 ```
 
-This won’t work if the function is defined as a function expression because the function expression follows a top-to-bottom control flow sequence.
+如果函数被定义为一个函数表达式，这就不灵了，因为函数表达式遵循的是从上到下的控制流序列。
 
-## How to Use Arrow Functions in JavaScript
+## **如何在JavaScript中使用箭头（arrow）函数？**
 
-Arrow functions are yet another notation of a function expression but they have a shorter syntax. They were introduced in ES6 and help us write cleaner code.
+箭头函数是函数表达式的另一种记法，但它们的语法更短。它是在ES6中引入的，可以帮助我们编写更简洁的代码。
 
-Here, the function keyword is excluded and we use an arrow symbol (=>) instead. The syntax looks like this:
+在这里，函数关键字被排除在外，我们使用一个箭头符号（=>）来代替。语法看起来像这样：
 
 ```javascript
 let nameOfFunction = (parameters) => {
@@ -152,13 +157,14 @@ let nameOfFunction = (parameters) => {
 }
 ```
 
-If the function body within the curly braces contains only a single statement, then the braces can be omitted. An arrow function with curly braces must include the return keyword.
+如果大括号内的函数主体只包含一条语句，那么大括号可以省略。带有大括号的箭头函数必须包括 `return` 这一个关键字。
 
-## **What are Immediately Invoked Function Expressions (IIFEs)?**
+## **什么是立即调用的函数表达式 (IIFEs)?**
 
-IIFE is another function expression notation (explicitly an anonymous function) that works in isolation and is independent of any other code. It gets invoked immediately where it is defined.
+IIFE是另一个函数表达式记法（显式的匿名函数），它在隔离状态下工作，独立于任何其他代码。它在被定义的地方被立即调用。
 
-The syntax is as follows:
+
+其语法如下：
 
 ```javascript
 (function (){
@@ -166,15 +172,17 @@ The syntax is as follows:
 })();
 ```
 
-A use case of IIFE would be to enclose a variable that you may likely not use again inside your code. So, as soon as the function is executed, the variable ceases to exist.
+IIFE的一个用例是包围一个你可能不会在代码中再次使用的变量。因此，一旦函数被执行，这个变量就不存在了。
 
-## **How to Use the Return Keyword in a Function**
+## **如何在一个函数中使用关键字 `return`？**
 
-To create a function that will resolve to a value after the function is invoked, you use the return keyword. You write this within the body of the function.
+要创建一个在函数被调用后会解析为一个值的函数，你要在函数的正文中使用关键字 `return`。
 
-**`return`** is a directive that returns a value to the function after the code within it has been executed.
+`return`是一个指令，在函数中的代码被执行后，向函数返回一个值。
 
-Here’s an example of a function that returns a value, in this case, the sum of two numbers:
+
+下面是一个函数的例子，该函数返回一个值，这个值在这个例子中是两个数字的总和：
+
 
 ```javascript
 function sum(a, b){
@@ -186,21 +194,22 @@ sum(10, 20);
 //output will be 30
 ```
 
-Using `return` inside a function makes it easy to manipulate the data the function returns, by either passing it as a value to, say, another function, or performing additional operations on it.
+在一个函数中使用 `return` 可以很容易地处理函数返回的数据，可以把它作为一个值传递给另一个函数，或者对它进行额外的操作。
 
-## **How Do **Function** S**cope and Closures** Work in JavaScript?**
+## **JavaScript中的函数作用域（Scope）和闭包（Closures）是如何工作的？**
 
-A scope is a nested namespace that localizes the names created within it such that these names don’t interfere with similar names created outside of that scope. There are certain scope rules that apply within a function.
+一个作用域是一个嵌套的名字空间，它将在其中创建的名字本地化，这样这些名字就不会与在该作用域之外创建的类似名字发生冲突。在一个函数中，有一些作用域规则是适用的。
 
-Each new function you define creates a new scope known as the **function scope**. Variables created within the function scope are not visible or accessible outside of that scope.
+你定义的每个新函数都会创建一个新的作用域，称为**函数作用域**。在函数作用域内创建的变量在该作用域外是不可见的或不可访问的。
 
-Nevertheless, variables created outside the function scope but within the scope in which the function is defined can be accessed inside the function. Therefore, if you define a function in global scope, it can access all variables declared in that global scope.
+然而，在函数作用域之外但在定义函数的作用域内创建的变量可以在函数内被访问。因此，如果你在全局作用域内定义一个函数，它可以访问在该全局作用域内声明的所有变量。
 
-Also, suppose you have a child function (that is, an inner function) nested inside a parent function (which is the outer function). The child function can access all variables and functions declared in its parent function as well as all variables and functions the parent function has access to – even when its parent function has finished executing and its variables are no longer accessible outside that function. This concept is known as closures in JavaScript.
+此外，假设你有一个子函数（也就是内部函数）嵌套在父函数（也就是外部函数）里面。子函数可以访问其父函数中声明的所有变量和函数，以及父函数可以访问的所有变量和函数——即使其父函数已经执行完毕，并且其变量在该函数之外不再可以访问的情况下也可以。这个概念在 JavaScript 中被称为**闭包**。
 
-However, the parent function cannot access the variables created inside the child function. In this way, the variables and functions inside the child function are confined to their own scope.
+然而，父函数不能访问在子函数内部创建的变量。这样一来，子函数内部的变量和函数就被限制在自己的作用域内。
 
-Let’s see a code example of this:
+
+让我们看一个这方面的代码例子：
 
 ```javascript
 //variables defined in the global scope
@@ -219,7 +228,7 @@ function parentFunc(){
 //output: 60
 ```
 
-Suppose I nest an inner function inside the parent function, like this:
+假设我在父函数中嵌套了一个内部函数，像这样：
 
 ```javascript
 //variables defined in the global scope
@@ -243,7 +252,7 @@ function parentFunc(){
 parentFunc(); //ouput: Doe is 20 years old
 ```
 
-Now, if I create a variable inside a function and try to access it from the global scope, we will get a reference error. This is because that variable is local to the function scope and is not visible to the global scope.
+现在，如果我在一个函数内创建一个变量，并试图从全局作用域访问它，我们会得到一个引用错误。这是因为该变量是函数作用域的局部变量，在全局作用域中是不可见的。
 
 ```javascript
 console.log(c);
@@ -255,7 +264,8 @@ function parentFunc(){
 //output: reference error - c is not defined
 ```
 
-Let’s try to access a variable created inside a nested function in the parent function:
+让我们试着访问一个在父函数中的嵌套函数内创建的变量：
+
 
 ```javascript
 function parentFunc(){
@@ -269,9 +279,9 @@ function parentFunc(){
 parentFunc(); //output: reference error - age is not defined.
 ```
 
-## How Do Default Parameters Work in JavaScript?
+## **默认形式参数如何在 JavaScript 中工作？**
 
-Originally, function parameters are assigned _undefined_ when no value is explicitly passed to them. Default parameters let you assign a default value to a parameter when you define a function. For example:
+最初，当没有明确的值传给函数形式参数时，函数形式参数被分配为 _undefined_ 。默认状态下形式参数让你在定义函数时为形式参数指定一个默认值，例如：
 
 ```javascript
 function greeting(name, message = ”Hello”){
@@ -286,11 +296,12 @@ greeting(‘John’); //output: Hello John
 greeting(‘Doe’, ‘Hi’); //output: Hi Doe
 ```
 
-It is important to note that in declaring a default parameter, it must come after the regular parameter.
+需要注意的是，在声明默认形式参数时，它必须在常规的形式参数之后。
 
-## **How Do Rest Parameters Work in JavaScript?**
 
-With rest parameters, you can define a function to store multiple arguments in a single array. This is particularly useful when you're invoking your function with multiple arguments. Here's an example:
+## **剩余参数（rest parameter）如何在 JavaScript 中工作？**
+
+通过剩余参数，你可以定义一个函数，将多个实际参数存储在一个数组中。当你用多个实际参数来调用你的函数时这么做会特别有用，下面是一个例子：
 
 ```javascript
 function sayHello(message, ...names){
@@ -313,19 +324,21 @@ Hello Doe
 
 ```
 
-The `...` is what makes `names` a rest parameter.
+`...`是使 `names` 成为剩余参数的原因。
 
-Just like default parameters, rest parameters should appear after any regular parameter in your function.
+就像默认形式参数一样, 剩余参数应该出现在你的函数中任何常规形式参数之后.
 
-## Conclusion
 
-In this article, you learned what functions in JavaScript are all about and how you can write your own functions.
+## **总结**
 
-With functions, you can organize your code by grouping everything into separate blocks that perform different tasks.
+在这篇文章中，你了解了 JavaScript 中的函数是怎么回事，以及如何编写你自己的函数。
 
-I hope you enjoyed reading this article. To learn more about functions, here are some resources you can check out:
+有了函数，你就可以通过将所有的东西归入独立块，来执行不同的任务，从而组织你的代码。
+
+我希望你喜欢这篇文章。要想了解更多关于函数的知识，你可以查看以下这些资源。
+
 
 -   [JavaScript Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 -   [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 
-That's all for this piece. Happy coding :)
+文章就到这里， Happy coding :)

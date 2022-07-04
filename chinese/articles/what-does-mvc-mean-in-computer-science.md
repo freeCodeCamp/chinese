@@ -1,6 +1,6 @@
 > -  原文地址：[MVC in Computer Science – The MVC Model](https://www.freecodecamp.org/news/what-does-mvc-mean-in-computer-science/)
 > -  原文作者：[Kolade Chris](https://www.freecodecamp.org/news/author/kolade/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![MVC in Computer Science – The MVC Model](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/mvc-cover.png)

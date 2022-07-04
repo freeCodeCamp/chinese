@@ -5,68 +5,68 @@
 
 ![MVC in Computer Science – The MVC Model](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/mvc-cover.png)
 
-MVC is an abbreviation that stands for Model, View, and Controller. This architectural pattern was created in the late 1970s for making desktop apps, but it is now widely used in web application development.
+MVC是模型（Model）、视图（View）和控制器（Controller）的缩写。这一软件架构模式诞生于20世纪70年代后期，被用于创建桌面应用。当然现在这一模式也在web应用中被广泛使用。
 
-In this article, I will dive deep into what MVC means alongside its 3 components, so you can understand it.
+我将在这篇文章中深入讲解什么是MVC以及它代表的三个组件。
 
-I have also prepared an infographic that can help you understand MVC better, but you have to read the article first. :)
+我也准备了图片辅助你理解MVC，不过咱还是先读文章，：）
 
-## What We'll Cover
+## 目录
 
--   [What is MVC and why is it Used](#whatismvcandwhyisitused)
--   [Which Languages and Frameworks Use MVC?](#whichlanguagesandframeworksusemvc)
--   [What is the Model in MVC?](#whatisthemodelinmvc)
--   [What is the View in MVC?](#whatistheviewinmvc)
--   [What is the Controller in MVC?](#whatisthecontrollerinmvc)
--   [Conclusion](#conclusion)
+-   [什么是MVC，为什么使用它？](#whatismvcandwhyisitused)
+-   [哪些语言和框架使用MVC？](#whichlanguagesandframeworksusemvc)
+-   [MVC中的模型是什么？](#whatisthemodelinmvc)
+-   [MVC中的视图是什么？](#whatistheviewinmvc)
+-   [MVC中的控制器是什么？](#whatisthecontrollerinmvc)
+-   [总结](#conclusion)
 
-## What is MVC and why is it Used?
+<h2 id="whatismvcandwhyisitused"> 什么是MVC，为什么使用它?</h2>
 
-In Computer science, MVC is a software design pattern for organizing application code into three interwoven parts – a model, view, and controller.
+在计算机科学中，MVC是一种软件设计模式，这种模式将应用代码组织成三个相互交织的部分——模型、视图和控制器。
 
-The model is the logic for interacting with the database, the view is the user interface the user interacts, and the controller is the intermediary between the view and model.
+模型是与数据库交互的逻辑；视图是用户接口和交互，控制器是是视图和数据库之间的中介。
 
-In many cases, the view never interacts directly with the model – the controller performs that function.
+大多数情况下，视图不直接和模型交互——这个功能由控制器执行。
 
 ![mvc1](https://www.freecodecamp.org/news/content/images/2022/06/mvc1.png)
 
-In some other frameworks, the model can interact with the view directly  
+在其他一些框架中，模型与视图直接交互。
 ![Copy-of-mvc2](https://www.freecodecamp.org/news/content/images/2022/06/Copy-of-mvc2.png)
 
-The MVC design pattern aims to divide the application code into units of their own, so maintenance and optimization won’t be a hassle. This is popularly called “separation of concerns”.
+MVC设计模式旨在将应用代码分成各自的单位，来简化维护和优化。这种方式被称为“关注点分离”。
 
-## Which Languages and Frameworks Use MVC?
+<h2 id="whichlanguagesandframeworksusemvc"> 哪些语言和框架使用MVC？</h2>
 
-In the past, MVC was used solely for making desktop GUIs. Today, many programming languages and frameworks implement MVC for web app development.
+过去，MVC仅被用于桌面(GUI)[https://zh.wikipedia.org/wiki/%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2]，现在许多语言和框架也使用MVC来设计web应用。
 
-Some frameworks even force you to use MVC, so you might have been using MVC without realizing you’re using it.
+一些框架甚至强制使用MVC，所以你可能没意识到你已经使用过MVC。
 
-In a full stack Express app, for example, developers would often divide the code into a model, controller, and client (view) folder.  
+例如在一个全栈Express应用中，开发者往往把代码打包到模型、控制器和客户（视图）三个文件夹。
 ![Annotation-2022-06-20-103520](https://www.freecodecamp.org/news/content/images/2022/06/Annotation-2022-06-20-103520.png)
 
-That is the folder structure of a [joke generator](https://blooming-reef-46396.herokuapp.com/) I built for my favorite footballer.
+截图是我为我最喜欢的足球运动员编写的[玩笑生成器](https://blooming-reef-46396.herokuapp.com/)的文件结构。
 
-Examples of programming languages that use MVC are C, C++, C#, Java, Ruby, Smalltalk, and many more.
+使用MVC的编程语言包括：C、 C++、C#、 Java、 Ruby、 Smalltalk等。
 
-The frameworks that use MVC are Angular, Express, Django, Flask, Laravel, Ruby on rails, and others.
+使用MVC的框架包括：Angular、 Express、 Django、 Flask、 Laravel、 Ruby on rails等。
 
-## What is the Model in MVC?
+<h2 id="whatisthemodelinmvc">MVC中的模型是什么？</h2>
 
-The model component contains the logic responsible for retrieving data from the database. For this, you can also use a JSON file in place of a database.
+模型组件负责从数据库获取数据的逻辑。同样，你也可以使用JSON文件来提供数据。
 
-For instance, in the SQL database of an eCommerce application, this could be something like `product-data = db.get(SELECT * FROM products;`).
+例如，如果有一个电子商务应用的SQL数据库，模型的代码可能是`product-data = db.get(SELECT * FROM products;`。
 
-In many cases, the model communicates with the controller to send data to the view (user interface). In other cases, the model can send data directly to the view.
+在大多数情况下，模型和控制器沟通，然后给视图（UI）发送数据；另一些情况下，模型直接给视图发送数据。
 
-## What is the View in MVC?
+<h2 id="whatistheviewinmvc"> MVC中的视图是什么？</h2>
 
-The view component is the part the user directly interacts with. It communicates with the controller to show what the user has requested with mouse and keyboard actions.
+视图组件是直接和用户交互的组件，视图与控制器沟通用户通过鼠标或者键盘发出的请求。
 
-Languages like HTML, CSS, and JavaScript are often used to implement this part. You can use frameworks like React, Vue, and Svelte, too.
+如HTML、CSS和JavaScript这类语言经常用于编写视图组件。你也可以使用React、Vue和Svelte这类框架。
 
-Some developers also use template engines like Handlebars, ejs, and liquidjs to implement the view.
+一些开发者也会使用如：Handlebars、ejs和liquidjs这类模板引擎来执行视图。
 
-In an eCormerce application, the code could contain something like this:
+在电商应用中，视图组件的代码如下：
 
 ```js
 <h1>{{product.name}}</h2>
@@ -75,15 +75,15 @@ In an eCormerce application, the code could contain something like this:
 <p>{{product.delivery-modes}}</p>
 ```
 
-## What is the Controller in MVC?
+<h2 id="whatisthecontrollerinmvc"> MVC中的控制器是什么？</h2>
 
-The controller component is the intermediary between the model and the view. It is neither model nor view – it is the part that links them.
+控制器组件是连接模型和视图的中介。它既不是模型也不是视图，而是链接这两者的部分。
 
-What the controller does with the view is receive and process the user requests and actions performed with the view (user interface). So, it processes requests like `GET`, `POST`, `PUT` or `PATCH`, and `DELETE`.
+控制器的工作是接受和处理视图（UI）的请求和行为。 所以会处理`GET`、`POST`、`PUT` 或`PATCH`和`DELETE`请求。
 
-When the controller receives the user requests, it then communicates with the model to get what the user wants, then sends it back to the view (user interface) for the user to see.
+当控制器收到用户请求时，会和模型沟通用户需要什么，然后返回响应给视图（UI）供用户使用。
 
-Some pseudocode for what the controller does is in the snippet below:
+以下是控制器会执行的伪代码：
 
 ```
 if (success) {
@@ -93,18 +93,18 @@ if (success) {
 }
 ```
 
-## Conclusion
+<h2 id="conclusion">总结</h2>
 
-The model-view-controller pattern has become a widely used architecture pattern for making web applications and other software products.
+在web应用和其他软件产品中MVC模式被广发使用。
 
-It might be confusing at first, but persistent learning and practice should help you clear up your confusion.
+可能刚接触MVC时你会觉得困惑，但是持续学习一段时间，之后你一定会豁然开朗。
 
-If you are still confused about what MVC is, look at it this way:
+如果你仍对MVC感到困惑，你可以这样类比：
 
--   **you** call a restaurant to order pizza – you are the `view`
--   you give your order to a **waiter** – the waiter is the `controller`
--   the waiter gets your pizza from the **store** and gives it to you – the store is the `model`
+-   **你**打电话给餐厅点了一份披萨 – 你是`view`
+-   你向**服务员**点单 – 服务员是`controller`
+-   服务员从**披萨店**拿到披萨并送给你 – 披萨店是`model`
 
-You can see that you, the `view`, never have to go to the store for your pizza, just like the view never retrieves data directly from the model on many occasions.
+你会发现你作为`view`不直接去披萨店拿披萨，就像在大多数情况下视图从不直接从模型获取数据。
 
-Thanks for reading.
+感谢阅读。

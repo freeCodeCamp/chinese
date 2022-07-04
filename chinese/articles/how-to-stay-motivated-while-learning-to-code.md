@@ -19,7 +19,9 @@
 
 ## 放平心态，养成习惯
 
-在早期学习阶段，你可能没有太多的时间用来学习，这是因为你刚开始尝试做一些你从没有做过的事情，并且你可能有全职工作会占据你每日生活中大部分的时间，因此仅仅是挤出时间来学习就实属不易了。
+在早期学习阶段，你可能没有太多的时间用来学习。
+
+这是因为你刚开始尝试做一些你从没有做过的事情，并且你可能有全职工作会占据你每日生活中大部分的时间，因此仅仅是挤出时间来学习就实属不易了。
 
 在这个阶段，你并不需要担心你一口气能学多少，最重要的事情是抽出时间每天学，无论学了多少、无论发生什么情况，都要坚持下去！
 
@@ -85,124 +87,117 @@
 
 如果你在学习一些新的概念或者新的编程语言，这里有一些学习技巧可能你已经尝试过：
 
--   repetitive reading, otherwise known as re-reading
--   highlighting
--   summarizing or making notes
--   cramming
 -   反复阅读
 -   突出重点
 -   总结或做笔记
 -   填鸭式学习
 
-But there's lots of evidence from prominent scientists and psychologists that has proven that these techniques are less effective when compared to other study techniques you can use.
 但是很多著名的科学家及心理学家通过大量的证据证明——对比以下的学习技巧，以上的学习技巧效果较差。
 
-To make the best use of your time and ensure you remember what you have studied for a longer time, try the following study techniques:
 为了最好的利用你的时间并确保你能更长时间地记住你所学的内容，请尝试以下的学习技巧：
 
-### Active Recall
 ### 主动回忆
 
-Active recall is a study technique that involves retrieving already stored information from your brain.
+主动回忆是一种学习技巧，指的是从你的大脑中检索已经储存的信息。
 
-> The mind is a vast storehouse or space; memories are objects stored in that space; and retrieving a memory is akin to searching for and finding an object in a physical space (Roediger, 1980).
+> 大脑是一个巨大的仓库或空间，记忆是储存在这个空间中的物体，检索记忆就像是在物理空间中搜寻和发现一个物体一样（Roediger, 1980）。
 
-Using this technique involves reading a topic once and then converting concepts and ideas in the topic you have read into questions and then testing yourself on them.
+使用这种技巧意味着曾经阅读过一个主题，然后将该主题中的概念和想法转换为问题，然后用问题来向自己提问。
 
-### Spaced Repetition
+### 间隔重复
 
-This study technique, as its name suggests, involves spacing revisions of what you have learned by way of active recalling. This is in contrast to cramming, which involves memorizing all the concepts in a particular topic in a single sitting.
+这个学习技巧，顾名思义，需要通过主动回忆的方式，对你所学的知识进行间断性的复习。这与填鸭式的学习不同，填鸭式学习是指一次性记住这个主题的所有概念。
 
-Essentially, spaced repetition helps you minimize the effect of The Forgetting Curve. It is a mode of learning by which you allow yourself to forget what you have learned. Then you try to retrieve those concepts from your brain by making active recalls at specific intervals over a period of time.
+从本质上讲，间隔重复可以帮助你将遗忘曲线的影响最小化。这是一种允许自我忘记所学的学习方式，然后通过明确的时间、主动的回忆、从而从你的大脑中找回这些概念。
 
-> The forgetting curve hypothesizes the decline of memory retention in time. This curve shows how information is lost over time when there is no attempt to retain it. ([Source](https://en.wikipedia.org/wiki/Forgetting_curve))
+> 遗忘曲线假定了记忆的保持将会随着时间逐渐下降。这个曲线展现了当没有试图记忆信息时，信息是如何随着时间不断流逝而丢失。（[Source](https://en.wikipedia.org/wiki/Forgetting_curve)）
 
 ![The-Forgetting-Curve-and-Spaced-Repetition](https://www.freecodecamp.org/news/content/images/2022/06/The-Forgetting-Curve-and-Spaced-Repetition.jpg)
 
-Using the above study techniques will help you make sure that you are not spending too much time understanding and remembering any topic or concepts.
+使用上述学习技巧将帮助你确保你不会花费太多时间理解并记忆任何的主题或者概念。
 
-In addition, you will have more time to complete other tasks on your list, as well as the opportunity to learn new skills that will be helpful in your professional development.
+并且，你将有更多的时间用于完成你清单上的其他任务，有机会学习对你的专业发展更有帮助的新技能。
 
-One popular tool you can use to help with active recall and spaced repetition is Anki. Learn how to use Anki [here](https://leananki.com/how-to-use-anki-tutorial/#:~:text=You%20just%20open%20the%20app,spacebar%20to%20show%20the%20answer.&text=Using%20Anki%20default%20settings%2C%20Anki,you%20to%20recall%20the%20card.).
+你可以使用一个流行的工具——— Anki，来帮助你主动会议及间隔重复。学习如何[使用](https://leananki.com/how-to-use-anki-tutorial/#:~:text=You%20just%20open%20the%20app,spacebar%20to%20show%20the%20answer.&text=Using%20Anki%20default%20settings%2C%20Anki,you%20to%20recall%20the%20card.) Anki。
 
-To learn more about the use of these efficient study techniques, watch the video below:
+要了解更多关于这些高效学习技巧的使用，可以观看这个[视频](https://youtu.be/ukLnPbIffxE)。
 
-### Pomodoro timer
+### 番茄钟（Pomodoro Timer）
 
-The Pomodoro study technique is ideal for people who struggle to concentrate on studying for a lengthy period of time.
+Pomodoro 学习技巧是那些挣扎于无法长时间集中注意力来学习的人的理想技巧。
 
-One way to use this technique is to break your workday into 30 or 20 minute chunks separated by five minute breaks. These intervals are called Pomodoros.
+使用这种技巧的一种方法是将你的工作时间分为 30 或者 20 分钟的小块，中间有 5 分钟的休息时间，这些间隔被称为 Pomodoros。
 
 ![pomodoro](https://www.freecodecamp.org/news/content/images/2022/06/pomodoro.jpg)
 
-## Set Short Term Goals and Stay Focused on Achieving One Goal at a Time
+设置短期目标并保持专注于一次实现一个目标。
 
-> Success doesn't happen overnight.
+>成功不会在一夜之间发生。
 
-Trying to achieve too many objectives at the same time can be overwhelming. So it's always better to break your objective into shorter chunks of goals and focus on accomplishing one of the chunks or goals at a time.
+尝试在同一时间实现太多的目标会让人不知所措。所以最好是分解你的目标成为几个小目标，然后集中精力一次实现一个小目标。
 
-For instance, let's say your goal is to be able to build a webpage with any of the popular JavaScript framework as a beginner. To do that, you'll need to learn various scripting and programming languages, tools, and skills. Here's what you should know to build a webpage:
+例如，作为一个初学者，假定你的目标是能用任何流行的 JavaScript 框架建立一个网页。要做到这一点，你需要学习各种脚本、编程语言、工具和技能。下面是你实现目标所需要知道的：
 
-1.  Understand the [basics of HTML](https://www.freecodecamp.org/news/learn-html-beginners-course/).
-2.  Understand the [basics of CSS](https://www.freecodecamp.org/news/learn-css-in-this-free-6-hour-video-course/).
-3.  Understand the use of [semantic elements in HTML](https://www.freecodecamp.org/news/semantic-html-alternatives-to-using-divs/).
-4.  Understand the use of [CSS Flexbox and Grid for layouts](https://www.freecodecamp.org/news/css-flexbox-and-grid-tutorial/).
-5.  Try building a simple static website with what you have learned so far.
-6.  Start learning the [basics of JavaScript](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/).
-7.  [Focus on building projects](https://www.freecodecamp.org/news/javascript-projects-for-beginners/) with your knowledge of HTML, CSS and the basics of JavaScript you have learned so far.
-8.  Start learning advanced JavaScript concepts such as [Objective Oriented Programming](https://www.freecodecamp.org/news/how-javascript-implements-oop/), and [Asynchronous Programming](https://www.freecodecamp.org/news/synchronous-vs-asynchronous-in-javascript/).
-9.  Solidify you knowledge on the advanced concepts by building projects with them.
-10.  Learn the JavaScript framework of your choice. [React](https://www.freecodecamp.org/news/learn-react-basics/), [Vue](https://www.freecodecamp.org/news/vue-js-full-course/), and [Angular](https://www.freecodecamp.org/news/learn-angular-full-course/) are all popular choices.
-11.  Finally you can build your favourite project using the framework you have learned.
+1.  理解 [HTML 的基础知识](https://www.freecodecamp.org/news/learn-html-beginners-course/)。
+2.  理解 [CSS 的基础知识](https://www.freecodecamp.org/news/learn-css-in-this-free-6-hour-video-course/)。
+3.  理解 [HTML 中语义元素](https://www.freecodecamp.org/news/semantic-html-alternatives-to-using-divs/) 的使用。
+4.  理解 [CSS Flexbox 和网格布局](https://www.freecodecamp.org/news/css-flexbox-and-grid-tutorial/) 的使用情况。
+5.  尝试用你目前所学来建立一个简单的静态网站。
+6.  开始学习 [JavaScript 的基础知识](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)。
+7.  用你到目前为止学到的 HTML、CSS 和 JavaScript 的基础知识[专注于建立项目](https://www.freecodecamp.org/news/javascript-projects-for-beginners/)。
+8.  开始学习高级的 JavaScript 概念，如[面向对象的编程](https://www.freecodecamp.org/news/how-javascript-implements-oop/)， 和[异步编程](https://www.freecodecamp.org/news/synchronous-vs-asynchronous-in-javascript/)。
+9.  通过建立项目来巩固你对高级概念的知识。
+10.  学习你选择的JavaScript框架。 [React](https://www.freecodecamp.org/news/learn-react-basics/)、 [Vue](https://www.freecodecamp.org/news/vue-js-full-course/)、 和 [Angular](https://www.freecodecamp.org/news/learn-angular-full-course/) 都是流行的选择。
+11.  最后，你可以使用你所学的框架建立你喜欢的项目。
 
-You might think that going through the steps above in the order they are stated would take you a few months. But it may take you much longer than that – and that's ok.
+您可能会认为，按照所述顺序完成上述步骤需要几个月的时间。也可能会花费更长时间，没事儿。
 
-Also, don't try to skip any of these steps. Simply taking a crash web dev course likely won't be enough, and can set you up for disappointment and cause you to struggle much more than you would if you'd taken your time learning the concepts thoroughly.
+另外，不要试图跳过任何步骤，仅仅参加一个速成的网页设计课程可能是不够的，而且会让你感到失望，并导致你如果想要花时间彻底学习这些概念的时候，会更加挣扎。
 
-On the other hand, making sure that you carefully go through each of the steps, one at a time, will help you to build the skills necessary to achieve your main goal. It will also prevent you from losing motivation, which is the likely result of having unrealistic expectations.
+另一方面，确保你仔细地通过每一个步骤，一次一个，将帮助你建立必要的技能来实现你的主要目标。这也会防止你失去动力，失去动力是不切实际的期望的结果。
 
 ![a-step-at-a-time](https://www.freecodecamp.org/news/content/images/2022/06/a-step-at-a-time.png)
 
-## Don't be Afraid to Ask for Help
+## 不要害怕寻求帮助
 
-One of the reasons why people give up early when learning programming is because they encounter some sort of bug in their program that seems difficult to solve.
+人们在学习编程时过早放弃的原因之一是他们在程序中碰到了某种似乎难以解决的 Bug。
 
-But you should know that no one knows it all when it comes to programming. Even software developers with decades of experience still encounter bugs they find very hard to solve on their own.
+但是你应该知道在编程上，没有人知道所有的事情，即便是拥有几十年经验的软件开发人员仍然会遇到他们认为很难解决的 Bug。
 
-This is a major reason why collaboration is so important – even more so than developing your personal skills.
+这就是为什么合作是如此的重要的主要原因之一——甚至比发展你的个人技能更重要。
 
-Whenever you find yourself in this situation, do not linger on the problem for too long. Use the internet to your advantage when searching for answers. In this regard, your best friend is Google. You can get the answer to almost everything related to programming on Google if you take your time and search deeply.
+每当你发现自己处于这种状况时，不要在问题上徘徊太长时间。在寻找答案时要利用互联网的优势。在这一方面，你最好的朋友是 Google。如果你花时间并且深究，你可以在 Google 上得到几乎所有与编程相关的答案。
 
-If you are unable to get the answer you need from searching on Google, then the next step to take is to go to the study community you belong to get help from others. They will typically be more than willing to help you, whatever the problem may be.
+如果你无法从 Google 上搜索到你所需要的答案，下一步要做的就是去你所属的学习社区，从他人那里寻求帮助，他们通常都会十分愿意帮助你，无论问题是什么。
 
-Take note of the following when seeking help from your community:
+在向社区寻求帮助时需要注意以下几点：
 
--   Make sure to ask direct questions.
--   Make sure your questions are clear enough to understand.
--   Provide a copy of your code by putting them in a public remote repository such as [GitHub](https://github.com/) or C[odepen](https://codepen.io/) and provide the link to the repository.
+-   直接提出问题
+-   确保问题清晰易懂
+-   提供一份你的代码副本，把它们放在一个公共的远程储存库里，如 [GitHub](https://github.com/) 或 [Codepen](https://codepen.io/)，并提供该储存库的链接。
 
-## Maintain a Healthy Lifestyle
+## 保持健康的生活方式
 
-I can't overemphasize the benefits of maintaining a healthy lifestyle. It will help your maintain energy and keep you fit for the next challenge.
+我怎么强调保持健康生活方式的好处都不为过。它将帮助你维持精力充沛并保持健康，以迎接下一次挑战。
 
-There are several ways to maintain a healthy lifestyle, some of which are:
+有各种方法来保持健康的生活方式，其中有些是：
 
--   Get regular exercise to help your cognitive abilities and general fitness.
--   Don't sit for lengthy periods of time.
--   Exercise your fingers regularly while you're studying.
--   Keep your eyes off your screen at regular intervals while you study.
--   Make time for your hobbies as a reward for your efforts.
--   Ensure you always sleep well and get a proper amount of rest.
+-   经常锻炼有助于提高你的认知能力和身体素质。
+-   不要长时间坐着。
+-   在学习时定期锻炼手指。
+-   学习时，眼睛要定期离开屏幕。
+-   为你的兴趣爱好腾出时间，作为对你努力的奖励。
+-   确保你总是睡得好，得到适当的休息。
 
-## Conclusion
+## 总结
 
-Programming is a marathon, not a sprint. If you want to achieve any level of success, you have to take your time and study consistently.
+编程是一场马拉松，而不是一场短跑。如果你想取得任何程度的成功，你必须花时间并坚持不懈地学习。
 
-Taking the steps discussed in this article will significantly improve your chances of reaching your goals.
+采取本文所讨论的步骤将极大地提高你实现目标的机会。
 
-If you enjoy this article, then you should give me a [shout-out](https://twitter.com/activus_d).
+如果你喜欢这篇文章，你可以给我一个 [shout-out](https://twitter.com/activus_d)。
 
-## Further Reading and References
+## 拓展阅读和参考资料
 
 1.  [Retrieval creates learning](https://www.youtube.com/watch?v=ukLnPbIffxE).
 2.  [The forgetting curve.](https://en.wikipedia.org/wiki/Forgetting_curve)

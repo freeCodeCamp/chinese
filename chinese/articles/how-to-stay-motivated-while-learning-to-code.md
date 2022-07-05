@@ -1,203 +1,203 @@
 > -  原文地址：[How to Stay Motivated While Learning to Code](https://www.freecodecamp.org/news/how-to-stay-motivated-while-learning-to-code/)
 > -  原文作者：[D.M. Oladele](https://www.freecodecamp.org/news/author/d/)
-> -  译者：
+> -  译者：Gradonlee
 > -  校对者：
 
 ![How to Stay Motivated While Learning to Code](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/cover-i-age-1.jpg)
 
-Learning to code can be like preparing for a long battle. Ultimately, winning is not always determined by your initial strength, but by how well prepared you are and how long you can hold out.
+学习编程可能就像准备一场持久的战役，最终地胜利并不总是取决于你最初的能力，而是你准备的有多好以及你能坚持多长时间。
 
-With programming, the greatest challenge is often not the complexity of the language, but rather staying consistent and motivated through the learning process.
+当学习编程的时候，最大的挑战往往不是语言的复杂度，而是保持步调并且以学习的过程作为动机。
 
-In order to stay consistent with your learning, you will need a lot of motivation and energy. The consistency with which you learn would help you to understand the complex concepts of any programming language and make the most of your time.
+为了在你的学习过程中保持步调，你将需要许多动力与精力，通过持续不断地学习将帮助你理解编程语言中复杂的概念，学编程可不能一口吃成个胖子。
 
-Having come from an absolutely non-technical background, I had to learn this late. After I took the first step into the transition, I struggled with everything relating to learning, particularly motivation.
+因为我没有接触过任何技术性的东西，所以我开始学习编程较晚。在我尝试迈出转码第一步后，每一步地学习都十分地挣扎，我越来越怀疑自己的动机。
 
-This article will share the steps I have gathered over time to overcome my struggles with staying consistent and motivated.
+这篇文章我将分享我如何随着时间的累积逐渐克服困难，从而坚持下来并且自我激励。
 
 ![Testudo_formation-1](https://www.freecodecamp.org/news/content/images/2022/06/Testudo_formation-1.jpg)
 
-## Start Slowly but Maintain a Habit
+## 放平心态，养成习惯
 
-In the early stage of learning, you might only have a few free hours that you can dedicate to learning.
+在早期学习阶段，你可能没有太多的时间用来学习。
 
-This is because most people are just opening themselves up to doing something they have never done before. Also, they might have tasks such as a full-time job which take a better part of their daily life. Therefore, adjusting and making time for learning might not be easy.
+这是因为你刚开始尝试做一些你从没有做过的事情，并且你可能有全职工作会占据你每日生活中大部分的时间，因此仅仅是挤出时间来学习就实属不易了。
 
-At this stage, you don't need to be concerned about the amount of time you have available to learn in one sitting. The most important thing is making time for a daily study session, regardless of its length, and persisting with it in spite whatever crops up in the way.
+在这个阶段，你并不需要担心你一口气能学多少，最重要的事情是抽出时间每天学，无论学了多少、无论发生什么情况，都要坚持下去！
 
-## Always Schedule Your Tasks
+## 始终为你的学习做好规划
 
-If you don't schedule your daily tasks, it's much easier to procrastinate and forget about them. It's easy to become engrossed in just one or few tasks and lose sight of the fact that there are other things you need to do. Often, this happens when you don't follow a set task list.
+如果你不管理好你的每日任务，你就十分容易拖延并且遗忘它们。你很容易专注于一两件任务上并且全然忘记你还有其他的任务要做，这种情况在你没有设置任务清单时会经常发生。
 
-To prevent procrastination and forgetfulness, make sure you plan out your days by scheduling tasks. You can use the following tips as a guide in scheduling your tasks:
+为了防止拖延及健忘，确保你通过制定任务来管理你的时间，你可以通过以下建议来制定你的任务：
 
-1.  Think of all the tasks you would like to accomplish.
-2.  Estimate how long it will take to accomplish each task.
-3.  Identify your peak hours of productivity.
-4.  Arrange the tasks in order of priority.
-5.  Make sure to bundle similar tasks together to improve your productivity.
-6.  To stay organized, schedule these tasks on your phone or computer and use reminder and task applications.
-7.  Schedule complex or difficult tasks during your peak productivity hours.
-8.  Make time for unexpected events in your schedule and plan for them ahead of time.
+1. 想想你总共有多少任务需要完成
+2. 预估完成每项任务需要多少时间
+3. 确定你一天什么时候最有生产力
+4. 按优先级来安排好你所有的任务
+5. 确保将相似的任务安排在一起从而提高效率
+6. 在你的手机或电脑上排好任务以便管理
+7. 将复杂及困难的任务安排在你脑子最好使的时候
+8. 为意想不到的状况预留时间以防遭遇到它
 
-Note that it is a good idea to schedule your tasks at the beginning of every week.
+值得一提的是最好是在每周开始的时候安排好一周的计划。
 
-To learn more about how you can schedule your day for better productivity, consider reading [this article by John Rampton, the co-founder and CEO of Calendar.](https://www.calendar.com/blog/how-to-schedule-your-day-for-optimal-productivity/)
+想了解更多关于如何安排你的时间以提高生产力，你可以考虑阅读[这篇由 Calendar 的联合创始人及 CEO——John Rampton 所撰写的文章](https://www.calendar.com/blog/how-to-schedule-your-day-for-optimal-productivity/)
 
-## Join a Community of Learners
+## 参加一个学习者社区
 
-For most people, learning alone can be boring and tedious, and in no time, it can hurt your motivation. This is why having a community of like-minded people is always better.
+对于绝大多数人而言，独自学习可能是孤独且乏味的，而且很快就会伤害你的学习积极性，拥有志同道合的朋友一块儿准没错。
 
-This type of community will provide you numerous benefits, including, but not limited to:
+这种类型的社区将带给你无数的好处，包括但不限于：
 
--   access to group study
--   access to different resources to help with your study
--   information on current technological trends
--   getting feedback on personal projects
--   an avenue to share your progress and measure your growth
+-   获得组团学习的机会
+-   得到不同的资源来帮助你学习成长
+-   获取当下的技术趋势讯息
+-   给你的个人项目带来反馈
+-   扩展一个能分享你的进展、衡量你的成长的渠道
 
-Find out if this type of community exists in your area. Alternatively, if you are unable to find one, you can join a remote learning community instead.
+寻找你所在的地区是否存在这类型的社区。如果你找不到，你也可以加入一个远程学习社区来代替。
 
-The following are some of the remote communities I have personally found useful and consider to be of great value:
+下面是一些我发现的远程社区，我觉得他们非常有价值：
 
--   **100Devs:** The 100devs community is a nonprofit organization founded and maintained by Leon Noel, a teacher and Managing Director of Engineering at ResilientCoders. The 100Devs community provides free lessons in full-stack web development to individuals. You can join the 100Devs community [here](https://t.co/N1svwNfVRd).
--   **100DaysofCode:** 100DaysofCode is an online challenge where people dedicate 100 days to learning a programming language of their choice. In order to participate in 100DaysofCode, you must devote at least an hour a day to learning. And after that, you post a completed task on Twitter with the hashtag #100DaysofCode.
--   **Kevin Powell Community:** The Kevin Powell Community of active learners is a community on discord created and maintained by Kevin Powell. Kevin is a teacher and software developer with years of experience. You can join the Kevin Powell Community on [discord](https://discord.gg/9NmT5HxN).
--   **Commit Your Code:** The Commit Your Code community is created and maintained by Danny Thompson. The community has a lot of active learners as well as experienced developers who are more than willing to help you with your projects and mentorship. You can join the Commit Your Code community on [discord](https://discord.gg/3JvHFCCp).
+-   **100Devs:** 这个社区是一个非营利性组织并且维护于 Leon Noel——一名老师、以及 ResilientCoders 的技术主管。100Devs 社区向个人提供免费的全栈网络开发课程，你可以[加入](https://t.co/N1svwNfVRd)他们。
+-   **100DaysofCode:** 100DaysofCode 是一个 100 天学习编程语言的挑战。为了参加 100DaysofCode，你必须每天投入至少一小时的时间来学习，并且还需要在 Twitter 上发布你所完成的任务并且带上标签 #100DaysofCode。
+-   **Kevin Powell Community:** Kevin Powell 主动学习者社区是一个 Discord 频道由 Kevin Powell 创建并维护。Kevin 是一个拥有多年经验的教师以及软件开发人员，你可以从这儿[加入](https://discord.gg/9NmT5HxN)。
+-   **Commit Your Code:** Commit Your Code 社区由 Danny Thompson 创建，这个社区有很多主动学习者以及经验丰富的开发者，他们十分愿意帮助及指导你的项目。你可以从这儿[加入](https://discord.gg/3JvHFCCp)该社区。
 
-And of course the freeCodeCamp community has a [supportive and friendly forum](https://forum.freecodecamp.org/) where you can ask questions and meet other developers.
+当然了 freeCodeCamp 社区也拥有一个充满支持与善意的[论坛](https://forum.freecodecamp.org/)，你可以在这儿问问题并且邂逅其他的开发者。
 
-After joining one or more of these communities, it is important to be on your best behaviour. Keep in mind to also be kind, provide value, and follow their rules.
+在加入其中的一个或多个社区后，重要的是拿出你最好的态度，也别忘记保持自我，提供价值、遵守规则。
 
-## Find a Study Partner
+## 寻找一个学习伙伴
 
-Being consistent and motivated may be hard even after scheduling your tasks and joining a study community. If this is the case, you might need a study partner.
+如果你即便是管理好你的任务并且加入一个学习社区后，还是很难坚持下来并保持动力，在这种情况下，你可能需要一名学习伙伴。
 
-You can benefit from having a study partner in the following ways:
+拥有学习伙伴可以从以下几个方面受益：
 
--   Makes sure you have accountability.
--   You can set up joint study sessions.
--   You can collaborate on joint projects.
--   You might find mentorship.
--   You can go through coding challenges together.
+-   能让你建立起责任感
+-   可以设置共同学习的时段
+-   可以在合作项目上协作
+-   可能会互相得到指导
+-   一起通过编程挑战
 
-## Use an Efficient Study Technique
+## 使用更高效的学习技巧
 
-Programming languages are generally complex. Unless you have an effective study technique, it will be difficult to understand the concepts and apply them in practical contexts. This can make you frustrated and lessen your motivation to learn.
+编程语言通常来说都比较复杂。除非你有一个高效的学习技能，否则你会很难理解其中的概念并且很难运用在实际的情况中，这会使你沮丧并且打击你学习的动力。
 
-If you're learning new concepts or a new programming language, here are some study techniques you might have tried:
+如果你在学习一些新的概念或者新的编程语言，这里有一些学习技巧可能你已经尝试过：
 
--   repetitive reading, otherwise known as re-reading
--   highlighting
--   summarizing or making notes
--   cramming
+-   反复阅读
+-   突出重点
+-   总结或做笔记
+-   填鸭式学习
 
-But there's lots of evidence from prominent scientists and psychologists that has proven that these techniques are less effective when compared to other study techniques you can use.
+但是很多著名的科学家及心理学家通过大量的证据证明——对比以下的学习技巧，以上的学习技巧效果较差。
 
-To make the best use of your time and ensure you remember what you have studied for a longer time, try the following study techniques:
+为了最好的利用你的时间并确保你能更长时间地记住你所学的内容，请尝试以下的学习技巧：
 
-### Active Recall
+### 主动回忆
 
-Active recall is a study technique that involves retrieving already stored information from your brain.
+主动回忆是一种学习技巧，指的是从你的大脑中检索已经储存的信息。
 
-> The mind is a vast storehouse or space; memories are objects stored in that space; and retrieving a memory is akin to searching for and finding an object in a physical space (Roediger, 1980).
+> 大脑是一个巨大的仓库或空间，记忆是储存在这个空间中的物体，检索记忆就像是在物理空间中搜寻和发现一个物体一样（Roediger, 1980）。
 
-Using this technique involves reading a topic once and then converting concepts and ideas in the topic you have read into questions and then testing yourself on them.
+使用这种技巧意味着曾经阅读过一个主题，然后将该主题中的概念和想法转换为问题，然后用问题来向自己提问。
 
-### Spaced Repetition
+### 间隔重复
 
-This study technique, as its name suggests, involves spacing revisions of what you have learned by way of active recalling. This is in contrast to cramming, which involves memorizing all the concepts in a particular topic in a single sitting.
+这个学习技巧，顾名思义，需要通过主动回忆的方式，对你所学的知识进行间断性的复习。这与填鸭式的学习不同，填鸭式学习是指一次性记住这个主题的所有概念。
 
-Essentially, spaced repetition helps you minimize the effect of The Forgetting Curve. It is a mode of learning by which you allow yourself to forget what you have learned. Then you try to retrieve those concepts from your brain by making active recalls at specific intervals over a period of time.
+从本质上讲，间隔重复可以帮助你将遗忘曲线的影响最小化。这是一种允许自我忘记所学的学习方式，然后通过明确的时间、主动的回忆、从而从你的大脑中找回这些概念。
 
-> The forgetting curve hypothesizes the decline of memory retention in time. This curve shows how information is lost over time when there is no attempt to retain it. ([Source](https://en.wikipedia.org/wiki/Forgetting_curve))
+> 遗忘曲线假定了记忆的保持将会随着时间逐渐下降。这个曲线展现了当没有试图记忆信息时，信息是如何随着时间不断流逝而丢失。（[Source](https://en.wikipedia.org/wiki/Forgetting_curve)）
 
 ![The-Forgetting-Curve-and-Spaced-Repetition](https://www.freecodecamp.org/news/content/images/2022/06/The-Forgetting-Curve-and-Spaced-Repetition.jpg)
 
-Using the above study techniques will help you make sure that you are not spending too much time understanding and remembering any topic or concepts.
+使用上述学习技巧将帮助你确保你不会花费太多时间理解并记忆任何的主题或者概念。
 
-In addition, you will have more time to complete other tasks on your list, as well as the opportunity to learn new skills that will be helpful in your professional development.
+并且，你将有更多的时间用于完成你清单上的其他任务，有机会学习对你的专业发展更有帮助的新技能。
 
-One popular tool you can use to help with active recall and spaced repetition is Anki. Learn how to use Anki [here](https://leananki.com/how-to-use-anki-tutorial/#:~:text=You%20just%20open%20the%20app,spacebar%20to%20show%20the%20answer.&text=Using%20Anki%20default%20settings%2C%20Anki,you%20to%20recall%20the%20card.).
+你可以使用一个流行的工具——— Anki，来帮助你主动会议及间隔重复。学习如何[使用](https://leananki.com/how-to-use-anki-tutorial/#:~:text=You%20just%20open%20the%20app,spacebar%20to%20show%20the%20answer.&text=Using%20Anki%20default%20settings%2C%20Anki,you%20to%20recall%20the%20card.) Anki。
 
-To learn more about the use of these efficient study techniques, watch the video below:
+要了解更多关于这些高效学习技巧的使用，可以观看这个[视频](https://youtu.be/ukLnPbIffxE)。
 
-### Pomodoro timer
+### 番茄钟（Pomodoro Timer）
 
-The Pomodoro study technique is ideal for people who struggle to concentrate on studying for a lengthy period of time.
+Pomodoro 学习技巧是那些挣扎于无法长时间集中注意力来学习的人的理想技巧。
 
-One way to use this technique is to break your workday into 30 or 20 minute chunks separated by five minute breaks. These intervals are called Pomodoros.
+使用这种技巧的一种方法是将你的工作时间分为 30 或者 20 分钟的小块，中间有 5 分钟的休息时间，这些间隔被称为 Pomodoros。
 
 ![pomodoro](https://www.freecodecamp.org/news/content/images/2022/06/pomodoro.jpg)
 
-## Set Short Term Goals and Stay Focused on Achieving One Goal at a Time
+设置短期目标并保持专注于一次实现一个目标。
 
-> Success doesn't happen overnight.
+>成功不会在一夜之间发生。
 
-Trying to achieve too many objectives at the same time can be overwhelming. So it's always better to break your objective into shorter chunks of goals and focus on accomplishing one of the chunks or goals at a time.
+尝试在同一时间实现太多的目标会让人不知所措。所以最好是分解你的目标成为几个小目标，然后集中精力一次实现一个小目标。
 
-For instance, let's say your goal is to be able to build a webpage with any of the popular JavaScript framework as a beginner. To do that, you'll need to learn various scripting and programming languages, tools, and skills. Here's what you should know to build a webpage:
+例如，作为一个初学者，假定你的目标是能用任何流行的 JavaScript 框架建立一个网页。要做到这一点，你需要学习各种脚本、编程语言、工具和技能。下面是你实现目标所需要知道的：
 
-1.  Understand the [basics of HTML](https://www.freecodecamp.org/news/learn-html-beginners-course/).
-2.  Understand the [basics of CSS](https://www.freecodecamp.org/news/learn-css-in-this-free-6-hour-video-course/).
-3.  Understand the use of [semantic elements in HTML](https://www.freecodecamp.org/news/semantic-html-alternatives-to-using-divs/).
-4.  Understand the use of [CSS Flexbox and Grid for layouts](https://www.freecodecamp.org/news/css-flexbox-and-grid-tutorial/).
-5.  Try building a simple static website with what you have learned so far.
-6.  Start learning the [basics of JavaScript](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/).
-7.  [Focus on building projects](https://www.freecodecamp.org/news/javascript-projects-for-beginners/) with your knowledge of HTML, CSS and the basics of JavaScript you have learned so far.
-8.  Start learning advanced JavaScript concepts such as [Objective Oriented Programming](https://www.freecodecamp.org/news/how-javascript-implements-oop/), and [Asynchronous Programming](https://www.freecodecamp.org/news/synchronous-vs-asynchronous-in-javascript/).
-9.  Solidify you knowledge on the advanced concepts by building projects with them.
-10.  Learn the JavaScript framework of your choice. [React](https://www.freecodecamp.org/news/learn-react-basics/), [Vue](https://www.freecodecamp.org/news/vue-js-full-course/), and [Angular](https://www.freecodecamp.org/news/learn-angular-full-course/) are all popular choices.
-11.  Finally you can build your favourite project using the framework you have learned.
+1.  理解 [HTML 的基础知识](https://www.freecodecamp.org/news/learn-html-beginners-course/)。
+2.  理解 [CSS 的基础知识](https://www.freecodecamp.org/news/learn-css-in-this-free-6-hour-video-course/)。
+3.  理解 [HTML 中语义元素](https://www.freecodecamp.org/news/semantic-html-alternatives-to-using-divs/) 的使用。
+4.  理解 [CSS Flexbox 和网格布局](https://www.freecodecamp.org/news/css-flexbox-and-grid-tutorial/) 的使用情况。
+5.  尝试用你目前所学来建立一个简单的静态网站。
+6.  开始学习 [JavaScript 的基础知识](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)。
+7.  用你到目前为止学到的 HTML、CSS 和 JavaScript 的基础知识[专注于建立项目](https://www.freecodecamp.org/news/javascript-projects-for-beginners/)。
+8.  开始学习高级的 JavaScript 概念，如[面向对象的编程](https://www.freecodecamp.org/news/how-javascript-implements-oop/)， 和[异步编程](https://www.freecodecamp.org/news/synchronous-vs-asynchronous-in-javascript/)。
+9.  通过建立项目来巩固你对高级概念的知识。
+10.  学习你选择的JavaScript框架。 [React](https://www.freecodecamp.org/news/learn-react-basics/)、 [Vue](https://www.freecodecamp.org/news/vue-js-full-course/)、 和 [Angular](https://www.freecodecamp.org/news/learn-angular-full-course/) 都是流行的选择。
+11.  最后，你可以使用你所学的框架建立你喜欢的项目。
 
-You might think that going through the steps above in the order they are stated would take you a few months. But it may take you much longer than that – and that's ok.
+您可能会认为，按照所述顺序完成上述步骤需要几个月的时间。也可能会花费更长时间，没事儿。
 
-Also, don't try to skip any of these steps. Simply taking a crash web dev course likely won't be enough, and can set you up for disappointment and cause you to struggle much more than you would if you'd taken your time learning the concepts thoroughly.
+另外，不要试图跳过任何步骤，仅仅参加一个速成的网页设计课程可能是不够的，而且会让你感到失望，并导致你如果想要花时间彻底学习这些概念的时候，会更加挣扎。
 
-On the other hand, making sure that you carefully go through each of the steps, one at a time, will help you to build the skills necessary to achieve your main goal. It will also prevent you from losing motivation, which is the likely result of having unrealistic expectations.
+另一方面，确保你仔细地通过每一个步骤，一次一个，将帮助你建立必要的技能来实现你的主要目标。这也会防止你失去动力，失去动力是不切实际的期望的结果。
 
 ![a-step-at-a-time](https://www.freecodecamp.org/news/content/images/2022/06/a-step-at-a-time.png)
 
-## Don't be Afraid to Ask for Help
+## 不要害怕寻求帮助
 
-One of the reasons why people give up early when learning programming is because they encounter some sort of bug in their program that seems difficult to solve.
+人们在学习编程时过早放弃的原因之一是他们在程序中碰到了某种似乎难以解决的 Bug。
 
-But you should know that no one knows it all when it comes to programming. Even software developers with decades of experience still encounter bugs they find very hard to solve on their own.
+但是你应该知道在编程上，没有人知道所有的事情，即便是拥有几十年经验的软件开发人员仍然会遇到他们认为很难解决的 Bug。
 
-This is a major reason why collaboration is so important – even more so than developing your personal skills.
+这就是为什么合作是如此的重要的主要原因之一——甚至比发展你的个人技能更重要。
 
-Whenever you find yourself in this situation, do not linger on the problem for too long. Use the internet to your advantage when searching for answers. In this regard, your best friend is Google. You can get the answer to almost everything related to programming on Google if you take your time and search deeply.
+每当你发现自己处于这种状况时，不要在问题上徘徊太长时间。在寻找答案时要利用互联网的优势。在这一方面，你最好的朋友是 Google。如果你花时间并且深究，你可以在 Google 上得到几乎所有与编程相关的答案。
 
-If you are unable to get the answer you need from searching on Google, then the next step to take is to go to the study community you belong to get help from others. They will typically be more than willing to help you, whatever the problem may be.
+如果你无法从 Google 上搜索到你所需要的答案，下一步要做的就是去你所属的学习社区，从他人那里寻求帮助，他们通常都会十分愿意帮助你，无论问题是什么。
 
-Take note of the following when seeking help from your community:
+在向社区寻求帮助时需要注意以下几点：
 
--   Make sure to ask direct questions.
--   Make sure your questions are clear enough to understand.
--   Provide a copy of your code by putting them in a public remote repository such as [GitHub](https://github.com/) or C[odepen](https://codepen.io/) and provide the link to the repository.
+-   直接提出问题
+-   确保问题清晰易懂
+-   提供一份你的代码副本，把它们放在一个公共的远程储存库里，如 [GitHub](https://github.com/) 或 [Codepen](https://codepen.io/)，并提供该储存库的链接。
 
-## Maintain a Healthy Lifestyle
+## 保持健康的生活方式
 
-I can't overemphasize the benefits of maintaining a healthy lifestyle. It will help your maintain energy and keep you fit for the next challenge.
+我怎么强调保持健康生活方式的好处都不为过。它将帮助你维持精力充沛并保持健康，以迎接下一次挑战。
 
-There are several ways to maintain a healthy lifestyle, some of which are:
+有各种方法来保持健康的生活方式，其中有些是：
 
--   Get regular exercise to help your cognitive abilities and general fitness.
--   Don't sit for lengthy periods of time.
--   Exercise your fingers regularly while you're studying.
--   Keep your eyes off your screen at regular intervals while you study.
--   Make time for your hobbies as a reward for your efforts.
--   Ensure you always sleep well and get a proper amount of rest.
+-   经常锻炼有助于提高你的认知能力和身体素质。
+-   不要长时间坐着。
+-   在学习时定期锻炼手指。
+-   学习时，眼睛要定期离开屏幕。
+-   为你的兴趣爱好腾出时间，作为对你努力的奖励。
+-   确保你总是睡得好，得到适当的休息。
 
-## Conclusion
+## 总结
 
-Programming is a marathon, not a sprint. If you want to achieve any level of success, you have to take your time and study consistently.
+编程是一场马拉松，而不是一场短跑。如果你想取得任何程度的成功，你必须花时间并坚持不懈地学习。
 
-Taking the steps discussed in this article will significantly improve your chances of reaching your goals.
+采取本文所讨论的步骤将极大地提高你实现目标的机会。
 
-If you enjoy this article, then you should give me a [shout-out](https://twitter.com/activus_d).
+如果你喜欢这篇文章，你可以给我一个 [shout-out](https://twitter.com/activus_d)。
 
-## Further Reading and References
+## 拓展阅读和参考资料
 
 1.  [Retrieval creates learning](https://www.youtube.com/watch?v=ukLnPbIffxE).
 2.  [The forgetting curve.](https://en.wikipedia.org/wiki/Forgetting_curve)

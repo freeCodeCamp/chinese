@@ -11,9 +11,9 @@
 
 本手册并没有涵盖与Python相关的全部内容。它专注于这门编程语言的核心主题，并且试图简化那些复杂的内容。
 
-我希望这本手册可以帮助你实现：**学习Python的基础**
+我希望这本手册可以帮助您实现：**学习Python的基础**
 
-> Note: 你可以获取这本手册的[PDF、ePub或者Mobi版本](https://flaviocopes.com/page/python-handbook/)
+> Note: 您可以获取这本手册的[PDF、ePub或者Mobi版本](https://flaviocopes.com/page/python-handbook/)
 
 Enjoy!
 
@@ -67,55 +67,51 @@ Enjoy!
 
 ## Python介绍
 
-Python is literally eating the programming world. It is growing in popularity and usage in ways that are pretty much unprecedented in the history of computers.
-
 Python正在逐步“占领”编程世界。它的受欢迎度和使用度正在以计算机历史中前所未有的方式实现增长。
 
-Python excels in a wide variety of scenarios – **Shell scripting**, **task automation**, and **Web development** are just some basic examples.
+Python在各种应用场景下都表现出色——**Shell 脚本**、**自动化的任务**和**Web 开发**只是其基本的应用。
 
-Python在各种应用场景下都表现出色——**Shell 脚本**、**自动化的任务**和**Web 开发**只是基本的应用。
+Python是做**数据分析**和**机器学习**的首选语言，但是它也可以用来做游戏或者在嵌入式设备上工作。
 
-Python is the language of choice for **data analysis** and **machine learning**, but it can also adapt to create games and work with embedded devices.
+最重要的是，Python是世界上多所大学介绍**计算机科学课程**时选择的编程语言。
 
-Most importantly, it's the language of choice for introductory **computer science courses** in universities all around the world.
+许多学生选择Python作为自己的第一门编程语言来学习。很多人正在学习Python，将来还会有更多人学习它。并且对于学习者中的大部分人来说，Python将是他们唯一需要的编程语言。
 
-Many students learn Python as their first programming language. Many are learning it right now, and many more will learn it in the future. And for many of them, Python will be the only programming language they need.
+基于其独特的情况，Python在未来很有可能会更快地增长。
 
-Thanks to this unique position, Python is likely going to grow even more in the future.
+Python这门编程语言的特点是简单易上手，表示丰富，非常直接，易于理解。
 
-The language is simple, expressive, and it's quite straightforward.
+Python的生态系统非常庞大，可能需要一个图书馆才能容纳你所想象到的一切。
 
-The ecosystem is huge. There seems to be a library for everything you can imagine.
+因为其直观的语法、庞大的社区和充满活力的生态系统，Python是一门适合编程初学者的高级编程语言。
 
-Python is a high-level programming language suitable for beginners thanks to its intuitive syntax, its huge community, and its vibrant ecosystem.
+Python也受到不同领域的专家赞赏。
 
-It is also appreciated by professionals across many different fields.
+从技术上讲，Python是一种解释型语言，它不像编译型语言（例如C或Java）那样具有中间编译阶段。
 
-Technically speaking Python is an interpreted language that does not have an intermediate compilation phase like a compiled language, for example C or Java.
+和许多解释型语言一样，Python是动态类型的，这意味着您不必声明所使用的变量的类型，并且变量不必为特定类型。
 
-And like many interpreted languages, it is dynamically typed. This means that you do not have to indicate the types of the variables you use, and variables are not tied to a specific type.
+这有利有弊。特别是，您编写程序的速度会更快，但另一方面，您从工具中获得防止出现可能错误的帮助会较少。这意味着您只有在执行程序时才能发现某些问题。
 
-This has pros and cons. In particular, you write programs faster, but on the other hand you have less help from the tools to prevent possible bugs. This means that you will find out about certain issues only by executing the program at runtime.
+Python支持多种编程范式，包括面向过程编程、面向对象编程和函数式编程。它足够灵活，可以适应不同的需求。
 
-Python supports a wide variety of different programming paradigms, including procedural programming, object oriented programming, and functional programming. It's flexible enough to adapt to a lot of different needs.
-
-Created in 1991 by Guido van Rossum, it's been rising in popularity - especially in the past 5 years, as this Google Trends infographic shows:
+自从Python由Guido van Rossum于1991年创建后，它便越来越受欢迎——尤其是在过去5年中，正如这张Google趋势信息图所示：
 
 ![Screen-Shot-2020-11-09-at-19.22.38](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-09-at-19.22.38.png)
 
-Starting with Python is very easy. All you need is to install the official package from python.org, for Windows, macOS or Linux, and you're ready to go.
+开始Python编程非常容易。您只需从[python.org](https://www.python.org/)选择适用于Windows、macOS或Linux的官方软件包安装，然后就可以开始使用Python了。
 
-If you are new to programming, in the following posts I will guide you to go from zero to becoming a Python programmer.
+如果您是编程新手，我将会在接下来的内容中引导您从零开始成为一名Python程序员。
 
-And even if you are currently a programmer who specializes in another language, Python is a language worth knowing because I think it's only going to keep growing from here.
+即使您目前是一名专门研究另一种编程语言的程序员，Python也值得您了解，因为我认为它只会继续发展壮大。
 
-Lower level languages like C++ and Rust might be great for expert programmers, but they're daunting to begin with, and they take a long time to master.
+像C++和Rust这样相对于Python来说更“低级”的语言，对于专业程序员来说可能很棒，但它们从一开始就令人生畏，而且需要很长时间才能掌握。
 
-Python, on the other hand, is a programming language for everyone – students, people doing their day jobs with Excel, scientists, and more.
+另一方面，Python是一种适用于任何人——学生、使用Excel完成日常工作的人、科学家等等——的编程语言。
 
-**It's the language everyone interested in coding should learn first**.
+**这是每个对编程感兴趣的人都应该首先学习的语言**。
 
-## How to Install Python
+## 如何安装Python
 
 Go to [https://www.python.org](https://www.python.org), choose the Downloads menu, choose your operating system, and a panel with a link to download the official package will appear:
 

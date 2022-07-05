@@ -1,6 +1,6 @@
 > -  原文地址：[How to Use Debounce and Throttle in React and Abstract them into Hooks](https://www.freecodecamp.org/news/debounce-and-throttle-in-react-with-hooks/)
 > -  原文作者：[Divyanshu Maithani](https://www.freecodecamp.org/news/author/divyanshu/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Use Debounce and Throttle in React and Abstract them into Hooks](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/og-image.png)

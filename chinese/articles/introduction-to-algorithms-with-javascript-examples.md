@@ -1,81 +1,81 @@
 > -  原文地址：[Introduction to Algorithms – with JavaScript Examples](https://www.freecodecamp.org/news/introduction-to-algorithms-with-javascript-examples/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Introduction to Algorithms – with JavaScript Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/pexels-guduru-ajay-bhargav-1044302.jpg)
 
-Hi everyone! In this article we're going to take a look at algorithms, a key topic when it comes to computer science and software development.
+大家好！在这篇文章中，我们将研究算法，这是计算机科学和软件开发的一个关键话题。
 
-Algorithm is a fancy, sometimes intimidating, and often misunderstood word. It sounds like something really hard and complex, but actually it's nothing more than a set of steps that have to be taken in order to achieve a certain goal.
+算法是一个花哨的词，有时令人生畏，而且经常被误解。算法听起来像是一件非常困难和复杂的事情，但实际上它只不过是为了实现某个目标而必须采取的一系列步骤。
 
-I'd say basic knowledge about algorithms consists of two things mainly:
+我认为关于算法的基本知识主要包括两点： 
 
--   Asymptotic notation (which we use to compare the performance of one algorithm against another).
--   A general knowledge of classic algorithms used for very frequent tasks such as searching, sorting, and traversing.
+-   [渐进符号](https://zh.wikipedia.org/wiki/%E5%A4%A7O%E7%AC%A6%E5%8F%B7)（用来比较两种算法之间的性能）
+-   常见任务涉及的经典算法的基本知识，如：搜索、排序和遍历
 
-So that's exactly what we're going to see here.😉  
-Let's go!
+这篇文章的内容差不多就是这些。😉  
+让我们开始吧！
 
-## Table of Contents
+## 目录
 
--   [What is an algorithm?](#what-is-an-algorithm)
--   [Algorithmic complexity](#algorithmic-complexity)
--   [Searching algorithms](#searching-algorithms)
-    -   [Linear search](#linear-search)
-    -   [Binary search](#binary-search)
--   [Sorting algorithms](#sorting-algorithms)
-    -   [Bubble sort](#bubble-sort)
-    -   [Selection sort](#selection-sort)
-    -   [Insertion sort](#insertion-sort)
-    -   [Merge sort](#merge-sort)
-    -   [Quick sort](#quick-sort)
-    -   [Radix sort](#radix-sort)
--   [Traversing algorithms](#traversing-algorithms)
-    -   [Breadth first search (BFS)](#breadth-first-search-bfs-)
-    -   [Depth first search (DFS)](#depth-first-search-dfs-)
-        -   [Pre order DFS](#pre-order-dfs)
-        -   [Post order DFS](#post-order-dfs)
-        -   [In order DFS](#in-order-dfs)
--   [Wrap up](#wrap-up)
+-   [什么是算法？](#what-is-an-algorithm)
+-   [算法复杂度](#algorithmic-complexity)
+-   [查找算法](#searching-algorithms)
+    -   [线性查找](#linear-search)
+    -   [二分查找](#binary-search)
+-   [排序算法](#sorting-algorithms)
+    -   [冒泡排序](#bubble-sort)
+    -   [选择排序](#selection-sort)
+    -   [插入排序](#insertion-sort)
+    -   [归并排序](#merge-sort)
+    -   [快速排序](#quick-sort)
+    -   [基数排序](#radix-sort)
+-   [遍历算法](#traversing-algorithms)
+    -   [广度优先(BFS)](#breadth-first-search-bfs-)
+    -   [深度优先(DFS)](#depth-first-search-dfs-)
+        -   [先序DFS](#pre-order-dfs)
+        -   [后序DFS](#post-order-dfs)
+        -   [中序DFS](#in-order-dfs)
+-   [总结](#wrap-up)
 
-# What is an algorithm?
+<h1 id="what-is-an-algorithm">什么是算法</h1>
 
-As mentioned before, an algorithm is just a set of steps that need to be taken in order to achieve a certain goal.
+如前所述，算法只是为了实现某个目标而需要采取的一系列步骤。
 
-I find that when people hear the word algorithm for the first time they picture something like this...
+我发现当人们第一次听到算法这个词时，他们会想象出这样的情景:
 
 ![markus-spiske-FXFz-sW0uwo-unsplash](https://www.freecodecamp.org/news/content/images/2022/05/markus-spiske-FXFz-sW0uwo-unsplash.jpg)
 
-A scene from Matrix or Mr. Robot
+《黑客帝国》中的场景
 
-But actually this kind of picture would be more accurate...
+但实际上以下图片更加准确：
 
 ![frank-holleman-rN_RMqSXRKw-unsplash](https://www.freecodecamp.org/news/content/images/2022/05/frank-holleman-rN_RMqSXRKw-unsplash.jpg)
 
-A book of recipes
+一本菜谱
 
-An algorithm is just like a recipe, in the sense that it will indicate the necessary steps that need to be followed in order to achieve your goal.
+算法就像一本菜谱，它会指出实现目标所需遵循的必要步骤。
 
-A recipe for making bread could be:
+制作面包的菜谱如下：
 
 ```
-1- Mix flower, salt, water and yeast
-2- Let the dough rise
-3- Put in the oven for 30'
-4- Let chill and enjoy
+1- Mix flower, salt, water and yeast //混合面粉、盐和酵母
+2- Let the dough rise //发面
+3- Put in the oven for 30' //在烤箱里烤30分钟
+4- Let chill and enjoy //放松享受面包
 ```
 
-Side comment: I hope you appreciate the fact that I'm teaching you how to code and cook at the same time, all for free. 😜
+题外话：希望你既能从这篇免费教程中学会如何编写代码，也能学会如何烤面包。 😜
 
-An algorithm to identify if a word is a [palindrome](https://en.wikipedia.org/wiki/Palindrome) or not could be:
+识别单词是否为[“回文”（palindrome）](https://zh.wikipedia.org/wiki/%E5%9B%9E%E6%96%87)的算法可以写成：
 
 ```javascript
 function isPalindrome(word) {
-	// Step 1- Put a pointer at each extreme of the word
-    // Step 2 - Iterate the string "inwards"
-	// Step 3 - At each iteration, check if the pointers represent equal values
-	// If this condition isn't accomplished, the word isn't a palindrome
+	// 第一步：在单词的两端分别放置两个指针
+    // 第二步：指针向字符串中心方向遍历
+	// 第三步：每一次遍历都检查两个指针所在位置的值是否一致
+	// 一旦不满足这个条件，该单词就不是回文
     let left = 0
     let right = word.length-1
 
@@ -92,29 +92,29 @@ isPalindrome("neuquen") // true
 isPalindrome("Buenos Aires") // false
 ```
 
-Same as with a recipe, in this algorithm we have steps with a certain purpose that are executed in a given order in order to achieve the result we want.
+这个算法就和菜谱类似，设定一个目标，并将目标拆分成不同步骤，这些步骤以给定的顺序执行，以达到我们想要的结果。
 
-Following [Wikipedia](https://en.wikipedia.org/wiki/Algorithm):
+[维基百科](https://en.wikipedia.org/wiki/Algorithm)对算法的定义如下:
 
-> An algorithm is a finite sequence of well-defined instructions, typically used to solve a class of specific problems or to perform a computation.
+> 算法是明确定义的一连串有序的指令，通常用于解决一类特定问题或者执行计算。
 
-# Algorithmic complexity
+<h1 id="algorithmic-complexity">算法复杂度</h1>
 
-Now that we know what an algorithm is, let's learn how to compare different algorithms against each other.
+现在我们知道了什么是算法，让我们来学习如何比较不同的算法。
 
-Let's say we're presented this problem:
+假设我们遇到下面的问题：
 
-> Write a function that takes two parameters: A non-empty array of distinct integers and an integer representing a target sum. If any two numbers in the array sum up to the target sum, the function should return them in an array. If no two numbers sum up to the target sum, the function should return an empty array.
+> 写一个函数，这个函数包含两个参数：一个是非空数组，这个数组中的元素是不重复的整数；另一个是一个整数，值为目标总和。如果数组中任意两个整数加起来等于目标整数，函数返回包含这两个整数的数组，如果没有任何两个数的总和是目标整数，函数返回空数组。
 
-This could be a valid solution to the problem:
+以下是一种解法：
 
 ```javascript
 function twoNumberSum(array, targetSum) {
     let result = []
-    // We use a nested loop to test every possible combination of numbers within the array
+    // 我们使用嵌套循环来测试数组中每一个可能的数字组合
         for (let i = 0; i < array.length; i++) {
           for (let j = i+1; j < array.length; j++) {
-              // If we find the right combination, we push both values into the result array and return it
+              // 如果我们找到合适的组合，就把值推入结果数组，并返回
               if (array[i] + array[j] === targetSum) {
                   result.push(array[i])
                   result.push(array[j])
@@ -122,7 +122,7 @@ function twoNumberSum(array, targetSum) {
               }
           }
       }
-      // Return the result array
+      // 返回结果数组
       return result
 }
 
@@ -130,14 +130,14 @@ console.log(twoNumberSum([9,1,3,4,5], 6)) // [1,5]
 console.log(twoNumberSum([1,2,3,4,5], 10)) // []
 ```
 
-This could be another valid solution:
+以下是另一个种解法：
 
 ```javascript
 function twoNumberSum(array, targetSum) {
-	// Sort the array and iterate it with one pointer at each extreme
-	// At each iteration, check if the sum of the two pointers is bigger or smaller than the target
-	// If it's bigger, move the right pointer to the left
-	// If it's smaller, move the left pointer to the right
+	// 从小到大排列数组，并在两个边界分别放一个指针，向数组中间方向遍历
+	// 每一次遍历都查看两个指针所在位置的值之和是否等于目标值
+	// 如果大于目标值，将右指针向左移
+	// 如果小于目标值，将左指针向右移
 	let sortedArray = array.sort((a,b) => a-b)
 	let leftLimit = 0
 	let rightLimit = sortedArray.length-1
@@ -156,13 +156,13 @@ console.log(twoNumberSum([9,1,3,4,5], 6)) // [1,5]
 console.log(twoNumberSum([1,2,3,4,5], 10)) // []
 ```
 
-And this could be yet another valid solution:
+还有一种解法：
 
 ```javascript
 function twoNumberSum(array, targetSum) {
-    // Iterate over array once, and at each iteration
-    // check if the number you need to get to ther target exists in the array
-    // If it exists, return its index and the present number index
+    // 仅遍历一次数组
+    // 在每次遍历中检查指针所在当前值与目标值的差值是否存在于数组
+    // 如果存在，则返回指针所在位置的值和差值
 	let result = []
 
 	for (let i = 0; i < array.length; i++) {
@@ -173,52 +173,51 @@ function twoNumberSum(array, targetSum) {
             break
         }
 	}
-
+ 
     return result
 }
 
 console.log(twoNumberSum([9,1,3,4,5], 6)) // [1,5]
 console.log(twoNumberSum([1,2,3,4,5], 10)) // []
 ```
+这三种都完成了目标，但我们可以对比哪一个解法更好吗？
 
-So how can we compare which solution is better? They all accomplish their goal, right?
+除了**有效性** （是否达成目标）以外， 我们还会根据 **效率**来衡量算法， 即是否在 **时间上** （处理时间）和 **空间上** （内存的使用）占用最少的资源。
 
-But besides **effectiveness** (whether the goal is achieved or not), we should also evaluate algorithms in terms of **efficiency**, meaning which solves the problem using the smallest amount of resources **in terms of time** (processing time) **and space** (memory usage).
+这很容易马上想到对策——“就去测量算法运行了多长时间不就好了吗？”，这样做确实有效。
 
-An automatic thought that comes up when first thinking about this is, "Just measure how long it takes the algorithm to run". And that's valid.
+但问题是由于计算机硬件和配置的不同，同一个算法在不同的计算机上运行时长也会不同；即便是在同一个台计算机上，后台的运行任务不同也会影响算法的时长。
 
-But the problem is the same algorithm might take longer or shorter on a different computer given its hardware and configuration. And even in the same computer it might take longer or shorter to run given the background tasks you got running at that given moment.
+需要一个客观且不会发生变化的方式来计算算法的性能，**渐进符号**就派上用场了。
 
-What we need is an objective and invariable way of measuring an algorithm's performance, and that's exactly what **asymptotic notation** is for.
+渐进符号（又称**大O**符号）是用来 **分析和比较当输入增加时算法的性能变化**的一种系统。
 
-Asymptotic notation (also called **Big O** notation) is a system that allows us to **analyze and compare the performance of an algorithm as its input grows**.
+大O是分析和比较不同算法复杂度（时间和空间上）的一种标准方法，因为复杂度的计算的是**输入发生变化时，算法运行的次数的变化**，无论环境发生什么改变，两者之间的关系不变。
 
-Big O is a standardized method to analyze and compare the complexity (in terms of runtime and space) of different algorithms. The big O complexity of an algorithm will always be the same no matter what computer you “calculate it” in, because the complexity is calculated on **how the number of operations of the algorithm varies when the input varies**, and that relationship always stays the same no matter the environment.
+有各种各样复杂度的算法，但是最常用的几个如下：
 
-There're are a lot of different possible complexities an algorithm can have, but the most common ones are the following:
-
--   **Constant — O(1):** When the number of operations/space required is always the same independently from the input. Take for example a function that takes a number as input and returns that number minus 10. No matter if you give it 100 or 1000000 as input, that function will always perform a single operation (rest 10), so the complexity is constant O(1).
--   **Logarithmic — O(log n):** When the number of operations/space required grows at an increasingly slower rate compared to the growth of the input. This type of complexity is often found in algorithms that take a divide and conquer approach or in search algorithms. The classic example is binary search, in which the dataset you have to go through continually halves until you reach the final result.
--   **Linear —O(n):** When the number of operations/space required grow at the same rate as the input. Take for example a loop that prints every single value found in an array. The number of operations will grow together with the length of the array, so the complexity is linear O(n).
--   **Quadratic — O(n²):** When the number of operations/space required grow at the power of two regarding to the input. Nested loops are the classic example for this one. Imagine we have a loop that iterates through an array of numbers, and within that loop we have another one that iterates the whole array again. For every value in the array we’re iterating over the array twice, so the complexity is quadratic O(n²).
+-   **常数 — O(1):** 指对运行次数和空间的需求永远独立于输入，保持不变的时候。比如向一个函数输入一个数字，返回这个数字减去10的结果。不论你输入的是100还是1000000，函数始终都运行单个运算（减去10），所以复杂度是常数O(1)。
+-   **对数 — O(log n):** 指随着输入的增加，所需的运行次数和空间需求的增长逐渐放缓。这种类型的复杂性通常出现在[分治算法](https://zh.m.wikipedia.org/zh/%E5%88%86%E6%B2%BB%E6%B3%95)或查找算法中。经典的例子是二分查找，通过不断将数据集拆分成两部分，得到最终结果。
+-   **线性 — O(n):** 指所需的运行次数和空间需求与输入同速率增长时。以打印数组每一个值的循环为例，运行的次数会随着数组的长度而增长，所以复杂度是线性的 O(n)。
+-   **平方 — O(n²):** 指所需运行次数和空间需求以输入的平方增长时。嵌套循环是这个的经典例子。假设我们有一个遍历整个数字数组的循环，并且在该循环中有另一个循环再次遍历整个数组。这样数组中的每个值都被遍历了两次，因此复杂度是平方 O(n²)。
 
 ![2022-05-16_1232131236](https://www.freecodecamp.org/news/content/images/2022/05/2022-05-16_1232131236.png)
 
-A graphic representation of classic algorithm complexities
+展现经典算法复杂度的图表
 
-Note that the same notation is used when talking about both time and space complexity. Say for example we have a function that always creates an array with a single value no matter the input it receives, then the space complexity will be constant O(1), and so on with the other complexity types.
+请注意在讨论时间和空间复杂度时使用相同的符号。例如，一个函数无论它接收到什么输入，它总是创建一个具有单个值的数组，那么空间复杂度将是常数 O(1)，以此类推其他复杂度类型。
 
-To better understand all this, let's go back to our problem and analyze our solution examples.
+为了更好地理解，让我们回到之前的问题，并分析解决方案的复杂度。
 
-### Example 1:
+### 示例1:
 
 ```javascript
 function twoNumberSum(array, targetSum) {
     let result = []
-    // We use a nested loop to test every possible combination of numbers within the array
+    //  我们使用嵌套循环来测试数组中每一个可能的数字组合
         for (let i = 0; i < array.length; i++) {
           for (let j = i+1; j < array.length; j++) {
-              // If we find the right combination, we push both values into the result array and return it
+              //  如果我们找到合适的组合，就把值推入结果数组，并返回
               if (array[i] + array[j] === targetSum) {
                   result.push(array[i])
                   result.push(array[j])
@@ -226,7 +225,7 @@ function twoNumberSum(array, targetSum) {
               }
           }
       }
-      // Return the result array
+      // 返回结果数组
       return result
 }
 
@@ -234,26 +233,26 @@ console.log(twoNumberSum([9,1,3,4,5], 6)) // [1,5]
 console.log(twoNumberSum([1,2,3,4,5], 10)) // []
 ```
 
-In this example we're iterating over the parameter array, and for each value within the array, we're iterating the whole array again looking for a number that sums up to the target sum.
+在这个例子中，我们遍历参数数组，对于数组中的每个值，我们再次遍历整个数组，寻找一个和这个值加起来为目标总和的数字。
 
-Each iteration counts as a task.
+每一次遍历为一个任务：
 
--   If we had **3** numbers in the array, we would iterate 3 times for each number and 9 more times (3 times the three numbers in the array.) **12** tasks total.
--   If we had 4 numbers in the array, we would iterate 4 times for each number and 16 more times (4 times the four numbers in the array.) **20** tasks total.
--   If we had 5 numbers in the array, we would iterate 5 times for each number and 25 more times (5 times the five numbers in the array.) **25** tasks total.
+-   如果数组中有**3**个数字，那么每一个数字都需要遍历三遍一共9遍（三乘以数组里的三个数字），这个任务总共要执行**12**次。
+-   如果数组中有4个数字，那么每一个数字都需要遍历4遍一共16遍（四乘以数组里的三个数字），这个任务总共要执行**20**次。
+-   如果数组中有5个数字，那么每一个数字都需要遍历5遍一共25遍（五乘以数组里的三个数字），这个任务总共要执行**30**次。
 
-You can see how the number of tasks in this algorithm grows exponentially and disproportionally compared to the input. The complexity for this algorithm is quadratic – **O(n²)**.
+可以看到，与输入相比该算法中的任务数量如何呈指数增长且不成比例。该算法的复杂度是平方 – **O(n²)**。
 
-Whenever we see nested loops, we should think quadratic complexity => BAD => There's probably a better way to solve this.
+每当我们遇到嵌套遍历，我们的反应链应该是平方复杂度 => 不妙 => 可能有更好的解决办法。
 
-### Example 2:
+### 示例2:
 
 ```javascript
 function twoNumberSum(array, targetSum) {
-	// Sort the array and iterate it with one pointer at each extreme
-	// At each iteration, check if the sum of the two pointers is bigger or smaller than the target
-	// If it's bigger, move the right pointer to the left
-	// If it's smaller, move the left pointer to the right
+    // 从小到大排列数组，并在两个边界分别放一个指针，向数组中间方向遍历
+	// 每一次遍历都查看两个指针所在位置的值之和是否等于目标值
+	// 如果大于目标值，将右指针向左移
+	// 如果小于目标值，将左指针向右移
 	let sortedArray = array.sort((a,b) => a-b)
 	let leftLimit = 0
 	let rightLimit = sortedArray.length-1
@@ -272,17 +271,17 @@ console.log(twoNumberSum([9,1,3,4,5], 6)) // [1,5]
 console.log(twoNumberSum([1,2,3,4,5], 10)) // []
 ```
 
-Here we're sorting the algorithm before we iterate it. And then we only iterate it once, using a pointer at each extreme of the array and iterating "inwards".
+在这个例子中，我们在遍历前对数组进行了排序，通过边界的两个指针向内遍历使得我们仅遍历了一次数组。
 
-This is better than the solution before, since we're only iterating once. But we're still sorting the array (which usually has a logarithmic complexity) and then iterating once (which is linear complexity). The algorithmic complexity of this solution is **O(n log(n)).**
+因为我们仅遍历了一次数组，所以这个解法比上个好。但是我们对数组进行了排序（通常是对数复杂度）然后再遍历（线性复杂度）。这个解法的复杂度为 **O(n log(n))。**
 
-### Example 3:
+### 示例3:
 
 ```javascript
 function twoNumberSum(array, targetSum) {
-    // Iterate over array once, and at each iteration
-    // check if the number you need to get to ther target exists in the array
-    // If it exists, return its index and the present number index
+    // 仅遍历一次数组
+    // 在每次遍历中检查指针所在当前值与目标值的差值是否存在于数组
+    // 如果存在，则返回指针所在位置的值和差值
 	let result = []
 
 	for (let i = 0; i < array.length; i++) {
@@ -301,21 +300,21 @@ console.log(twoNumberSum([9,1,3,4,5], 6)) // [1,5]
 console.log(twoNumberSum([1,2,3,4,5], 10)) // []
 ```
 
-In this last example, we're only iterating the array once, without doing anything else before. This is the best solution, since we're performing the smallest number of operations. The complexity in this case is linear – **O(n)**.
+在这个例子中，我们仅遍历了一次，并且在遍历之前没有做任何操作。因为了任务数量为三个里面最少的，所以这是最优解。这种情况的复杂度为 – **O(n)**.
 
-This is truly **the most important concept behind algorithms**. Being able to compare different implementations and understand which is more efficient and why is really an important knowledge to have. So if the concept isn't clear for you yet, I encourage you to read the examples again, look for other resources, or check [this awesome freeCodeCamp video-course](https://www.youtube.com/watch?v=8hly31xKli0).
+复杂度就是 **算法背后最重要的概念**。了解如何比较不同的实现，哪一种方式更为有效十分有必要，因此如果你对这个概念尚不清晰，我鼓励你再看一遍上面的例子，或者查阅其他的资料。你还可以 [观看这个超级棒的freeCodeCamp 视频教学](https://www.youtube.com/watch?v=8hly31xKli0)。
 
-# Searching algorithms
+<h1 id="searching-algorithms">查找算法</h1>
 
-Once you have a good understanding about algorithmic complexity, the next good thing to know are popular algorithms used to solve very common programming tasks. So let's start with searching.
+在了解了算法复杂度之后，我们来看看用于解决常见程序任务的常用算法。让我们从查找算法开始。
 
-When searching for a value in a data structure, there are different approaches we can take. We'll take a look at two of the most used options and compare them.
+若想要在一个数据结构中查找一个值，可以采用不同种类的方法。我们将展开讲讲并对比两个最常见的方法。
 
-## **Linear search**
+<h2 id="linear-search">线性查找</h2>
 
-Linear search consists of iterating over the data structure one value at a time and checking if that value is the one we’re looking for. It’s probably the most intuitive kind of search and the best we can do if the data structure we’re using isn’t ordered.
+线性查找是通过遍历整个数据结构，每次查找一个值，看是否与目标值匹配。 这或许是最符合直觉的查找方式，如果查找是未被排序的数据结构，这是最好的方式。
 
-Let’s say we have an array of numbers and for this array we want to write a function that takes a number as the input and returns that number’s index in the array. In case it doesn’t exist in the array, it will return -1. A possible approach could be the following:
+假设有一个数字数组，我们需要为这个数组编写一个函数，这个函数以单个数字为输入，如果这个数字在数组内则返回这个数字的索引，如果不在，则返回-1.一个可能的解法如下：
 
 ```javascript
 const arr = [1,2,3,4,5,6,7,8,9,10]
@@ -331,47 +330,47 @@ console.log(search(6)) // 5
 console.log(search(11)) // -1
 ```
 
-As the array isn’t ordered, we don’t have a way of knowing the approximate position of each value, so the best we can do is check one value at a time. The complexity of this algorithm is **linear - O(n)** since in the worst case scenario we will have to iterate over the whole array once to get the value we’re looking for.
+因为数组未被排序，所以我们并不知道每个值的大概位置，最好的办法就是一次检查一个值。这种算法的复杂度是 **线性- O(n)**，因为最坏的情况是我们遍历了整个数组才找到我们需要的值。
 
-Linear search is the approach used by many built-in JavaScript methods like `indexOf`, `includes`, and `findIndex`.
+线性查找被很多JavaScript内置方法采用，如 `indexOf`、 `includes`和`findIndex`。
 
-## **Binary search**
+<h2 id="binary-search">二分查找</h2>
 
-When we have an ordered data structure, there’s a much more efficient approach we can take, binary search. What we do in binary search is the following:
+当数据是被排序过的时候，我们可以使用更有效率的办法：二分查找。二分查找的步骤如下：
 
--   Select the middle value of our data structure and “ask”, is this the value we’re looking for?
--   If not, we “ask” whether the value we’re looking for is greater or less than the middle value?
--   If it’s greater, we “discard” all the values smaller than the mid value. If it’s smaller, we “discard” all the values greater than the mid value.
--   And then we repeat the same operation until we find the given value or the remaining "piece" of the data structure can't be divided anymore.
+-   选择数据结构的中间值后“提问”：这是我们需要的值吗？
+-   如果不是，“提问”：这个值是比我们需要的值大还是小？
+-   如果更大，则“丢弃”掉比中间值小的那一半数据，如果更小，则“丢弃”比中间值大的那一半数据。
+-   不断重复上述操作，直找到我们需要的值，或者剩下的“部分”已经不能被平分了。
 
 ![binary_search_1](https://www.freecodecamp.org/news/content/images/2022/05/binary_search_1.png)
 
-A graphic representation of binary search
+二分查找的图表
 
-What's so cool about binary search is that in each iteration we're discarding roughly half of the data structure. This makes search really quick and efficient. 👌
+二分查找最棒的地方在于每一次遍历我们几乎都丢弃掉了一半数据。这使得查找更加快速高效。 👌
 
-Let’s say we have the same array (ordered) and we want to write the same function as before, which takes a number as the input and returns that number’s index in the array. In case it doesn’t exist in the array, it will return -1. A binary search approach could be the following:
+假设针对同一组数组（排过序）我们需要编写一样的函数，输入一个数字，返回这个数字在数组中的索引，或者如果数字不存在数组中，返回-1。使用二分查找的写法如下：
 
 ```javascript
 const arr = [1,2,3,4,5,6,7,8,9,10]
 
 const search = num => {
-    // We'll use three pointers.
-    // One at the start of the array, one at the end and another at the middle.
+    //我们将使用三个指针
+    //一个位于左边界，一个位于右边界，一个位于数组的中间
     let start = 0
     let end = arr.length-1
     let middle = Math.floor((start+end)/2)
 
-    // While we haven't found the number and the start pointer is equal or smaller to the end pointer
+    // 当我们并没有找到目标值，并且开始值小于等于结束值的时候
     while (arr[middle] !== num && start <= end) {
-        // If the desired number is smaller than the middle, discard the bigger half of the array
+        // 如果目标值比中间值要小，丢弃掉数值更大的一半数组
         if (num < arr[middle]) end = middle - 1
-        // If the desired number is bigger than the middle, discard the smaller half of the array
+        // 如果目标值比中间值大，丢弃掉数值更小的一半数组
         else start = middle + 1
-        // Recalculate the middle value
+        // 重新计算中间值
         middle = Math.floor((start+end)/2)
     }
-    // If we've exited the loop it means we've either found the value or the array can't be devided further
+    // 如果找到目标值或者数组不能再被对半分的情况下，跳出循环
     return arr[middle] === num ? middle : -1
 }
 
@@ -379,36 +378,36 @@ console.log(search(6)) // 5
 console.log(search(11)) // -1
 ```
 
-This approach may seem like “more code” at first, but potential iterations are actually a lot less than in linear search, and that’s because in each iteration we’re discarding roughly half of the data structure. The complexity of this algorithm is **logarithmic** – **O(log n)**.
+这种方法看上去写了“更多代码”，但可能发生的遍历去比线性查找要少了很多，因为我们每一次遍历都丢弃了一半的数组。这种算法的复杂度为 **对数的** – **O(log n)**。
 
-# Sorting algorithms
+<h1 id="sorting-algorithms">排序算法</h1>
 
-When sorting data structures, there are many possible approaches we can take. Let’s take a look at some of the most used options and compare them.
+我们可以采取不同的方法对数据结构排序，让我们来看看一些最常用的排序方法以及它们之间的区别。
 
-## ****Bubble sort****
+<h2 id="bubble-sort">冒泡排序</h2>
 
-Bubble sort iterates through the data structure and compares one pair of values at a time. If the order of those values is incorrect, it swaps its positions to correct it. The iteration is repeated until the data is ordered. This algorithm makes bigger values “bubble” up to the end of the array.
+冒泡排序遍历整个数据结构，一次对比一对值。如果这对值的顺序不对，则交换位置来调整顺序，遍历一直持续到所有数据的顺序正确。这个算法将更大的值“冒泡”至数组的末尾。
 
-This algorithm has a **quadratic – O(n²)** complexity since it will compare each value with the rest of the values one time.
+因为每一个值都要和剩下的所有值做一次对比，这种算法的复杂度是 **平方 – O(n²)**。
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1641395941732/Apvay5Jc9.png?auto=compress,format&format=webp)
 
-A possible implementation could be the following:
+以下是一种实现方式：
 
 ```javascript
 const arr = [3,2,1,4,6,5,7,9,8,10]
 
 const bubbleSort = arr => {
-    // set a flag variable
+    // 设置一个标记变量
     let noSwaps
 	
-    // We will have a nested loop
-    // with a pointer iterating from right to left
+    //我们需要一个嵌套循环
+    // 一个从右至左遍历的指针
     for (let i = arr.length; i > 0; i--) {
         noSwaps = true
-		// and another iterating from right to left
+		// 和一个从右至左遍历的指针
         for (let j = 0; j < i-1; j++) {
-            // We compare the two pointers
+            //比较两个指针
             if (arr[j] > arr[j+1]) {
                 let temp = arr[j]
                 arr[j] = arr[j+1]
@@ -424,20 +423,20 @@ bubbleSort(arr)
 console.log(arr) // [1,2,3,4,5,6,7,8,9,10]
 ```
 
-## ****Selection sort****
+<h2 id="selection-sort">选择排序</h2>
 
-Selection sort is similar to bubble sort but instead of placing the bigger values at the end of the data structure, it focuses on placing the smaller values at the beginning. The steps it takes are the following:
+选择排序和冒泡排序类似，差别在于选择排序不是将更大的值放在数据结构的末尾，而是将更小的值放在数据结构的开始。具体步骤如下：
 
--   Store the first item of the data structure as the minimum value.
--   Iterate through the data structure comparing each value with the minimum value. If a smaller value is found, it identifies this value as the new minimum value.
--   If the minimum value isn’t the first value of the data structure, it swaps the positions of the minimum value and the first value.
--   It repeats this iteration until the data structure is ordered.
+-   将数据的第一个元素存储为最小值
+-   遍历整个数据结构，将每一个值与最小值做对比，如果找到比最小值更小的值，就将其设置为新的最小值
+-   如果最小值不是数据结构的第一个值，则将最小值的位置与第一个值的位置交换。
+-   重复上述操作直至数组排序正确
 
-This algorithm has a **quadratic – O(n²)** complexity.
+这种算法的复杂度为**平方 – O(n²)**。
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1641396007307/xL8U4iwf8.png?auto=compress,format&format=webp)
 
-A possible implementation could be the following:
+一个可能的实现办法如下：
 
 ```javascript
 const arr = [3,2,1,4,6,5,7,9,8,10]
@@ -465,22 +464,22 @@ selectionSort(arr)
 console.log(arr) // [1,2,3,4,5,6,7,8,9,10]
 ```
 
-## ****Insertion sort****
+<h2 id="insertion-sort">插入排序</h2>
 
-Insertion sort orders the data structure by creating an “ordered half” that is always correctly sorted, and iterates through the data structure picking each value and inserting it in the ordered half exactly in the place it should be.
+插入排序是创建一个“有序的一半”来对数据结构进行排序，遍历整个数据结构，将每一个元素插入到“有序一半”的正确位置。
 
-The steps it takes are the following:
+具体步骤如下：
 
--   It starts by picking the second element in the data structure.
--   It compares this element with the one before it and swap its positions if necessary.
--   It continues to the next element and if it’s not in the right position, it iterates through the “ordered half” to find its correct position and inserts it there.
--   It repeats the same process until the data structure is sorted.
+-   首先挑选数据结构中的第二个元素
+-   将其与前一个元素进行比较，必要时进行位置交换
+-   继续进入到下一个元素，如果这个元素不在正确的位置，就遍历“有序的一半”找到正确的位置，并且将这个元素插入进去
+-   重复上述步骤直至数据结构顺序正确
 
-This algorithm has a **quadratic (O(n²))** complexity.
+这个算法的复杂度为**平方(O(n²))**。
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1641396070224/7T4A0Sfqr.png?auto=compress,format&format=webp)
 
-A possible implementation could be the following:
+一个可能的实现方案如下：
 
 ```javascript
 const arr = [3,2,1,4,6,5,7,9,8,10]
@@ -488,14 +487,14 @@ const arr = [3,2,1,4,6,5,7,9,8,10]
 const insertionSort = arr => {
     let currentVal
     
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 1; i < arr.length; i++) {
         currentVal = arr[i]
 
         for (var j = i-1; j >= 0 && arr[j] > currentVal; j--) {
             arr[j+1] = arr[j]
         }
-        
         arr[j+1] = currentVal
+        
     }
     
     return arr
@@ -505,29 +504,29 @@ insertionSort(arr)
 console.log(arr) // [1,2,3,4,5,6,7,8,9,10]
 ```
 
-The problem with bubble sort, selection sort, and insertion sort is that these algorithms don’t scale well.
+冒泡排序、选择排序和插入排序的问题在于并不好扩展。
 
-There’re much better options we can choose when we’re working with big datasets. Some of them are merge sort, quick sort, and radix sort. So let's take a look at those now!
+当我们处理大数据集时，有更好的选择：其中包括归并排序、快速排序和基数排序。那么让我们现在来看看这些吧！
 
-## ****Merge sort****
+<h2 id="merge-sort">归并排序</h2>
 
-Merge sort is an algorithm that recursively decomposes the data structure into individual values, and then composes it again in a sorted way.
+归并排序是一种算法，它重复将数据结构分解为单个值，然后按照顺序地组合它。
 
-The steps it takes are the following:
+具体步骤如下：
 
--   Recursively break up the data structure into halves until each “piece” has only one value.
--   Then, recursively merge the pieces in a sorted way until it gets back to the length of the original data structure.
+-   递归地将数据平分两半直至每一个“一半”仅有一个值
+-   再递归地将各个“一半”排序直至合并成原数组长度的数组
 
-This algorithm has a **O(n log n)** complexity, since the decomposition part of it has a complexity of log n and the comparison part of it has a complexity of n.
+这个算法的复杂度为 **O(n log n)**， 因为拆解数组的复杂度为log n，而对比大小的复杂度为n。
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1641396131234/Oiryt3mR92.png?auto=compress,format&format=webp)
 
-A possible implementation could be the following:
+一个可能的实现方法如下：
 
 ```javascript
 const arr = [3,2,1,4,6,5,7,9,8,10]
 
-// Merge function
+// 归并函数
 const merge = (arr1, arr2) => {
     const results = []
     let i = 0
@@ -567,22 +566,21 @@ const mergeSort = arr => {
 console.log(mergeSort(arr)) // [1,2,3,4,5,6,7,8,9,10]
 ```
 
-## ****Quick sort****
+<h2 id="quick-sort">快速排序</h2>
 
-Quick sort works by selecting one element (called “the pivot”) and finding the index where the pivot should end up in the sorted array.
+快速排序通过选择一个元素（称为“基准”），并最终确定基准应在在一个排好序的数组里的索引位置。
+快速排序的运行时间部分取决于选择基准的方式。理想情况下，它应该是被排序后的数据集的中间值。
 
-The runtime of quicksort depends in part on how the pivot is selected. Ideally, it should be roughly the median value of the dataset being sorted.
+具体步骤如下：
 
-The steps the algorithm takes are the following:
+-   识别基准值，并放置在应该放置的索引位置
+-   递归地沿用上述方式对数据结构每一个“一半”进行操作。
 
--   Identify the pivot value and place it in the index it should be.
--   Recursively execute the same process on each “half” of the data structure.
-
-This algorithm has a **O(n log n)** complexity.
+这个算法的复杂度是**O(n log n)**。
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1641396182239/_MdqPPTf7.png?auto=compress,format&format=webp)
 
-A possible implementation could be the following:
+一种可能的实现方式如下：
 
 ```javascript
 const arr = [3,2,1,4,6,5,7,9,8,10]
@@ -617,28 +615,28 @@ const quickSort = (arr, left = 0, right = arr.length - 1) => {
 console.log(quickSort(arr)) // [1,2,3,4,5,6,7,8,9,10]
 ```
 
-## ****Radix sort****
+<h2 id="radix-sort">基数排序</h2>
 
-Radix is an algorithm that works in a different way than the ones seen before, in the sense that it doesn’t compare values. Radix is used to sort lists of numbers, and to do so it exploits the fact that the size of a number is defined by the number of digits it has (the more digits, the bigger the number).
+基数算法和前面我们看到的这些算法的运行方式不太一样，因为基数算法并不对比值。基数算法根据数字位数来判断数字大小（位数越多数字越大），从而给数组进行排序。
 
-What radix does is to sort values by their digits in order. It first sorts all values by the first digit, then again by the second, then by the third… This process is repeated as many times as the number of digits the biggest number in the list has. And by the end of this process, the algorithm returns the fully sorted list.
+基数算法是按照位数来给数字排序。它首先按第一个位数对所有值进行排序，然后再按第二个位数，然后按第三个位数……这个过程重复的次数与列表中最大数字的位数一样多。在这个过程结束时，算法返回完全排序后的列表。
 
-The steps it takes are the following:
+具体步骤如下：
 
--   Figure how many digits the largest number has.
--   Loop through the list up to the largest number of digits. In every iteration:
--   Create “buckets” for each digit (from 0 to 9) and place each value in its corresponding bucket according to the digit being evaluated.
--   Replace the existing list with the values sorted in the buckets, starting from 0 and going up to 9.
+-   计算出最大的数字有多少位数
+-   循环遍历列表直到最大位数。在每次迭代中：
+-   为每个位数（从 0 到 9）创建“桶”，并根据评估将每个值放入其对应的桶中。
+-   将现有列表替换为在桶中排序的值，从 0 开始到 9。
 
-This algorithm has a **O(n\*k)** complexity, k being the number of digits the largest number has. Given that it doesn’t compare values with each other, this algorithm has a better runtime than the ones seen before, but will only work on lists of numbers.
+这个算法的复杂度为 **O(n\*k)**，k是最大数的位数。因为没有相互比较大小，所以这个算法的运行速度比其他的要快，但是这个方法只对数字列表奏效。
 
-If we want a data agnostic sorting algorithm, we would probably go with any of the previous ones.
+如果想要使用一个与数据无关的排序算法，可以使用我们之前讨论的方法。
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1641396244650/EwnCsTr4y.png?auto=compress,format&format=webp)
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1641396253081/wJlnCC_kg.png?auto=compress,format&format=webp)
 
-A possible implementation could be the following:
+一种可能的实现方式如下：
 
 ```javascript
 const arr = [3,2,1,4,6,5,7,9,8,10]
@@ -678,42 +676,42 @@ const radixSort = nums => {
 console.log(radixSort(arr)) // [1,2,3,4,5,6,7,8,9,10]
 ```
 
-# Traversing algorithms
+<h1 id='traversing-algorithms'>遍历算法</h1>
 
-The last kind of algorithm we're going to take a look at are traversing algorithms, which are used to iterate through data structures that can be iterated in different ways (mostly trees and graphs).
+我们要讨论的最后一种算法是遍历算法，这种算法使用不同方法遍历整个数据结构（主要是树结构和图）。
 
-When iterating a data structure like a tree, we can prioritize iterations in two main ways, either breadth or depth.
+当我们遍历树结构的时候，我们可以从广度和深度两个方向给数据结构进行优先级排序。
 
-If we prioritize depth, we will "descend" through each branch of the tree, going from the head to the leaf of each branch.
+如果我们以深度优先，我们会顺着分支往下遍历整个树，从树首到每一个分支的叶子。
 
 ![image-42](https://www.freecodecamp.org/news/content/images/2022/06/image-42.png)
 
-Depth first
+深度优先
 
-If we prioritize breadth, we will go through each tree "level" horizontally, iterating through all nodes that are on the same level before "descending" to the next level.
+如果我们优先对广度进行搜索，我们就横向地遍历树的每一个节点，然后再遍历到下一个层次。
 
 ![image-39](https://www.freecodecamp.org/news/content/images/2022/06/image-39.png)
 
-Breadth first
+广度优先
 
-Which one we choose will depend largely on what value we're looking for in our iteration and how our data structure is built.
+选取哪一种方式主要取决于我们要遍历的是什么以及数据结构是怎么构建的。
 
-## Breadth first search (BFS)
+<h2 id='breadth-first-search-bfs-">广度优先（BFS）</h2
 
-So let's analyze BFS first. As mentioned, this kind of traversal will iterate through our data structure in a "horizontal way". Following this new example image, the values would be traversed in the following order: `[10, 6, 15, 3, 8, 20]`.
+让我们首先来分析BFS。正如我们介绍过的，BFS会首先横向遍历数组。在下面的图示中，数值将以这个顺序被遍历： `[10, 6, 15, 3, 8, 20]`.
 
 ![image-40](https://www.freecodecamp.org/news/content/images/2022/06/image-40.png)
 
-Typically, the steps followed by BFS algorithms are the following:
+一般来说，BFS分为以下几个步骤：
 
--   Create a queue and a variable to store the nodes that have been "visited"
--   Place the root node inside the queue
--   Keep looping as long as there's anything in the queue
--   Dequeue a node from the queue and push the value of the node into the variable that stores the visited nodes
--   If there's a left property on the dequeued node, add it to the queue
--   If there's a right property on the dequeued node, add it to the queue
+-   创建一个队列和变量来存储”被访问过“的节点
+-   将根节点放置在队列
+-   只要队列中有元素，就循环下去
+-   将节点移出队列，并保存在存储被访问过节点的变量中
+-   如果被移除的节点对象有左侧属性，则添加到队列
+-   如果被移除的节点对象有右侧属性，则添加到队列
 
-A possible implementation could be the following:
+一个可行的实现方法如下：
 
 ```javascript
 class Node {
@@ -780,30 +778,30 @@ tree.insert(20)
 console.log(tree.BFS()) // [ 10, 6, 15, 3, 8, 20 ]
 ```
 
-## Depth first search (DFS)
+<h2 id="depth-first-search-dfs-">深度优先（DFS)</h2>
 
-DFS will iterate through our data structure in a "vertical way". Following the same example we used for BFS, the values would be traversed in the following order: `[10, 6, 3, 8, 15, 20]`.
+DFS会首先横向遍历数组。在上面的图示中，数值将以这个顺序被遍历:`[10, 6, 3, 8, 15, 20]`.
 
-This way of doing DFS is called "pre order". And there're actually three main ways in which DFS can be done, each being different by just changing the order in which nodes are visited.
+这种DFS又称作“先序遍历”，DFS主要分为三种，这三种的区别在于节点被遍历的顺序。
 
--   **Pre order:** Visit current node, then left node, then right node.
--   **Post order:** Explore all children to the left, and all children to the right before visiting the node.
--   **In order:** Explore all children to the left, visit the current node, and explore all children to the right.
+-   **先序:** 先访问当前节点，然后左边的节点，然后右边的节点
+-   **后序:** 先访问所有左手边的子节点，再访问所有右手边的子节点，最后访问当前节点
+-   **中序:** 想访问所有左手边的节点，再访问当前节点，最后访问所有右手边节点
 
-If this sounds confusing, don't worry. It's not that complex and it will become clearer in short with a few examples.
+现在听上去可能有些让人困惑，不过没关系，看了后面的例子你就会明白了。
 
-### Pre order DFS
+<h3 id="pre-order-dfs">先序DFS</h3>
 
-In a pre order DFS algorithm we do the following:
+在先序DFS中，我们将进行以下步骤：
 
--   Create a variable to store the values of the visited nodes
--   Store the root of the tree in a variable
--   Write a helper function that accepts a node as a parameter
--   Push the value of the node to the variable that stores values
--   If the node has a left property, call helper function with left node as parameter
--   If the node has a right property, call helper function with left node as parameter
+-   创建一个存储所有被访问过的节点
+-   在变量中存储树的根节点
+-   编写一个辅助函数接受节点作为参数
+-   将节点的值推入存储值的变量中
+-   如果节点对象有左属性，则将左节点作为参数调用辅助函数
+-   如果节点对象有左属性，则将右节点作为参数调用辅助函数
 
-A possible implementation could be the following:
+一个可行的实现如下：
 
 ```javascript
 class Node {
@@ -868,18 +866,18 @@ tree.insert(20)
 console.log(tree.DFSPreOrder()) // [ 10, 6, 3, 8, 15, 20 ]
 ```
 
-### Post order DFS
+<h3 id="post-order-dfs">后续DFS</h3>
 
-In post order DFS algorithm we do the following:
+后续DFS算法的执行步骤如下：
 
--   Create a variable to store the values of the visited nodes
--   Store the root of the tree in a variable
--   Write a helper function that accepts a node as parameter
--   If the node has a left property, call helper function with left node as parameter
--   If the node has a right property, call helper function with left node as parameter
--   Call the helper function with the current node as parameter
+-   创建一个变量存储访问过的节点
+-   在变量中存储树的根节点
+-   编写一个辅助函数接受节点作为参数
+-   如果节点对象有左属性，则参入左节点作为参数调用辅助函数
+-   如果节点对象有右属性，则参入右节点作为参数调用辅助函数
+-   用当前节点作为参数调用辅助函数
 
-A possible implementation could be the following:
+一个可行的执行如下：
 
 ```javascript
 class Node {
@@ -944,19 +942,19 @@ tree.insert(20)
 console.log(tree.DFSPostOrder()) // [ 3, 8, 6, 20, 15, 10 ]
 ```
 
-### In order DFS
+<h3 id="in-order-dfs">中序DFS</h3>
 
-In in order DFS algorithm we do the following:
+中序DFS算法的执行步骤如下：
 
--   Create a variable to store the values of the visited nodes
--   Store the root of the tree in a variable
--   Write a helper function that accepts a node as parameter
--   If the node has a left property, call helper function with left node as parameter
--   Push the value of the node to the variable that stores values
--   If the node has a right property, call helper function with left node as parameter
--   Call the helper function with the current node as parameter
+-   创建一个变量存储被访问过的节点
+-   在变量中存储树结构的根节点
+-   编写一个以节点作为参数的辅助函数
+-   如果这个节点对象有左属性，将所有左节点作为参数调用辅助函数
+-   将节点的值推入存储的值的变量中
+-   如果这个节点对象有左属性，将所有右节点作为参数调用辅助函数
+-   将当前节点作为参数调用辅助函数
 
-A possible implementation could be the following:
+一个可行的实现如:
 
 ```javascript
 class Node {
@@ -1020,18 +1018,18 @@ tree.insert(20)
 console.log(tree.DFSInOrder()) // [ 3, 6, 8, 10, 15, 20 ]
 ```
 
-As you probably noticed, pre order, post order, and in order implementations are all very similar and we just change the order of how nodes are visited. The traversal result we get to is quite different with each implementation and sometimes one might come in handy more than others.
+你可能已经注意到，先序、后序和中序的实现非常类似，仅改变了遍历节点的顺序。但其实这三种实现得到的结果大相径庭，有时其中一种方法可能比其他的要有用得多。
 
-Regarding when to use BFS or DFS, as I said it depends on how our data structure is organized.
+何时使用BFS或者DFS取决于数据结构是如何组织的
 
-Generally speaking, if we have a very wide tree or graph (meaning there are lots of sibling nodes that stand on the same level), we should prioritize DFS. And if we're dealing with a very large tree or graph that has very long branches, we should prioritize BFS.
+一般来说如果你有一个结构非常宽的树或者图（意味着在同一水平线上有很多后代节点），就应该采用深度优先。如果是处理分支很长的大型树或者图，就应该使用广度优先。
 
-The time complexity of both algorithms is the same, as we're always visiting each node just once. But space complexity can be different depending on how many nodes have to be stored in memory for each implementation. So the fewer nodes we have to keep track of, the better.
+两种算法的时间复杂度是一样的，因为我们始终遍历了所有节点一次。但是空间复杂度取决于有多少节点被存储在内存中，所以不相同。因此记录越少的节点越好。
 
-# Wrap up
+<h1 id="wrap-up">总结</h1>
 
-As always, I hope you enjoyed the article and learned something new. If you want, you can also follow me on [LinkedIn](https://www.linkedin.com/in/germancocca/) or [Twitter](https://twitter.com/CoccaGerman).
+希望享受阅读这篇文章，并且从中有所收获。你可以在[LinkedIn](https://www.linkedin.com/in/germancocca/)或者[Twitter](https://twitter.com/CoccaGerman)上关注我。
 
-See you later!
+下篇文章见！
 
 ![6cd09fef66df69d9a3c4c8ab4b8576db](https://www.freecodecamp.org/news/content/images/2022/05/6cd09fef66df69d9a3c4c8ab4b8576db.gif)

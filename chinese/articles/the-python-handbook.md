@@ -19,8 +19,8 @@ Enjoy!
 
 ## Summary
 
--   [Python介绍](#introductiontopython)
--   [How to Install Python](#howtoinstallpython)
+-   [Python介绍](#introduction-to-python)
+-   [如何安装Python](#how-to-install-python)
 -   [How to Run Python Programs](#howtorunpythonprograms)
 -   [Python 2 vs Python 3](#python2vspython3)
 -   [Python Basics](#pythonbasics)
@@ -65,7 +65,7 @@ Enjoy!
 -   [Virtual Environments in Python](#virtualenvironmentsinpython)
 -   [Conclusion](#conclusion)
 
-## Python介绍
+<h2 id="introduction-to-python">Python介绍</h2>
 
 Python正在逐步“占领”编程世界。它的受欢迎度和使用度正在以计算机历史中前所未有的方式实现增长。
 
@@ -111,7 +111,7 @@ Python支持多种编程范式，包括面向过程编程、面向对象编程�
 
 **这是每个对编程感兴趣的人都应该首先学习的语言**。
 
-## 如何安装Python
+<h2 id="how-to-install-python"> 如何安装Python </h2>
 
 Go to [https://www.python.org](https://www.python.org), choose the Downloads menu, choose your operating system, and a panel with a link to download the official package will appear:
 

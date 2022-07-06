@@ -1,6 +1,6 @@
 > -  原文地址：[JavaScript String Comparison – How to Compare Strings in JS](https://www.freecodecamp.org/news/javascript-string-comparison-how-to-compare-strings-in-js/)
 > -  原文作者：[Dillion Megida](https://www.freecodecamp.org/news/author/dillionmegida/)
-> -  译者：
+> -  译者：Gradonlee
 > -  校对者：
 
 ![JavaScript String Comparison – How to Compare Strings in JS](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/string-comparison.png)

@@ -1,6 +1,6 @@
 > -  原文地址：[How to Detect Outliers in Machine Learning – 4 Methods for Outlier Detection](https://www.freecodecamp.org/news/how-to-detect-outliers-in-machine-learning/)
 > -  原文作者：[Bala Priya C](https://www.freecodecamp.org/news/author/bala-priya/)
-> -  译者：
+> -  译者：TouDa
 > -  校对者：
 
 ![How to Detect Outliers in Machine Learning – 4 Methods for Outlier Detection](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/Outlier-Detection.png)

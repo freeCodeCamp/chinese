@@ -27,17 +27,17 @@
 
 ## 如何通过标准差发现异常值
 
-When the data, or certain features in the dataset, follow a [normal distribution](https://mathworld.wolfram.com/NormalDistribution.html), you can use the standard deviation of the data, or the equivalent z-score to detect outliers.
+如果一组数据，或数据集中某些特征符合[正态分布]时(https://mathworld.wolfram.com/NormalDistribution.html)，可以考虑使用正态分布及等效的Z-分数（z-score）来发现异常值。
 
-In statistics, standard deviation measures the _spread of data around the mean_, and in essence, it captures how far away from the mean the data points are.
+在统计学中，标准差（standard deviation）反映了_数据点和均值（mean）之间的关系+，一言以蔽之，标准差衡量的是数据点离数据的算数平均有多远。
 
-For data that is normally distributed, around 68.2% of the data will lie within one standard deviation from the mean. Close to 95.4% and 99.7% of the data lie within two and three standard deviations from the mean, respectively.
+对于正态分布的数据来说，约68.2%的数据在均值的一倍标准差之内。约有95.4%和99.7%的数据点在均值的两倍和三倍标准差以内。
 
-Let’s denote the standard deviation of the distribution by σ, and the mean by μ.
+我们约定标准差为σ，算术平均为μ。
 
-One approach to outlier detection is to set the _lower_ limit to three standard deviations below the mean (μ - 3\*σ), and the _upper_ limit to three standard deviations above the mean (μ + 3\*σ). Any data point that falls outside this range is detected as an outlier.
+一个发现异常值的方法是将_阈值下限_设为均值减去三倍标准差(μ - 3\*σ)，_阈值上限_设为均值加上三倍标准差(μ + 3\*σ)。所有在阈值之外的数据点都被视为异常值。
 
-As 99.7% of the data typically lies within three standard deviations, the number of outliers will be close to 0.3% of the size of the dataset.
+因为99.7%的数据点会在均值的±三倍标准差以内，此方法将会发现并标记0.3%的数据点为异常值。
 
 ### Code for Outlier Detection Using Standard Deviation
 

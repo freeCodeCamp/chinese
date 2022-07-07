@@ -3,29 +3,29 @@
 > -  译者：TouDa
 > -  校对者：
 
-![How to Detect Outliers in Machine Learning – 4 Methods for Outlier Detection](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/Outlier-Detection.png)
+![如何在机器学习中发现异常点 - 4种发现异常点的方法](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/Outlier-Detection.png)
 
-Have you ever trained a machine learning model on a real-world dataset? If yes, you’ll have likely come across _outliers_.
+你是否使用过现实数据来对机器学习模型进行过训练？如果答案是肯定的，你很可能遇到过_异常点_。
 
-Outliers are those data points that are _significantly_ different from the rest of the dataset. They are often abnormal observations that skew the data distribution, and arise due to inconsistent data entry, or erroneous observations.
+异常点通常_明显_的不同区数据集中其他数据。异常点的存在会扭曲数据集的数据分布，提高数据的不连贯性或使观测产生错误。
 
-To ensure that the trained model generalizes well to the valid range of test inputs, it’s important to detect and remove outliers.
+为了使训练模型在进行测试时有更好的泛用性，发现并删除异常点非常重要。
 
-In this guide, we’ll explore some statistical techniques that are widely used for outlier detection and removal.
+在本文中，我们将介绍几个常用来发现并去除异常点的统计学工具。
 
-## Why Should You Detect Outliers?
+## 为什么需要发现异常点？
 
-In the machine learning pipeline, _data cleaning_ _and preprocessing_ is an important step as it helps you better understand the data. During this step, you deal with missing values, detect outliers, and more.
+在机器学习流程中_数据清洗_和_数据预处理_是两个关键步骤，它们能帮助你更好地理解你所面对的数据。这些步骤中包括处理丢失值，发现异常值等操作。
 
-As outliers are very different values—abnormally low or abnormally high—their presence can often skew the results of statistical analyses on the dataset. This could lead to less effective and less useful models.
+过高或过低的异常值常常会扭曲数据集的统计分析结果。这会使得训练出来的模型低效甚至完全无效。
 
-But dealing with outliers often requires domain expertise, and none of the outlier detection techniques should be applied _without_ understanding the data distribution and the use case.
+处理异常值需要一定的专业性，在_不清楚_所面对的数据和消除异常值工具适用环境的情况下不应冒然使用。
 
-For example, in a dataset of house prices, if you find a _few_ houses priced at around $1.5 million—much higher than the median house price, they’re likely outliers. However, if the dataset contains a significantly large number of houses priced at $1 million and above—they may be indicative of an increasing trend in house prices. So it would be _incorrect_ to label them all as outliers. In this case, you need some knowledge of the real estate domain.
+举例来说，如果你在房价数据集中发现_少量_房价处于150万美金并显著高于所有房价中位数时，这些150万美金的房价很可能是异常值。但是，当数据集包含有大量100万美金以上的房价时，房价呈现上涨趋势。此时将150万美金的房价将视为异常值是_不合适_的。在此情境下，数据分析者需要一定的房地产知识以便正确处理异常值。
 
-The goal of outlier detection is to remove the points—which are truly outliers—so you can build a model that performs well on unseen test data. We’ll go over a few techniques that’ll help us detect outliers in data.
+发现异常值的目的是为了去除_真正的异常值_以便构建一个泛用的，即使面对未知数据依旧能表现良好的模型。我们将几个有助于发现异常值的统计工具。
 
-## How to Detect Outliers Using Standard Deviation
+## 如何通过标准差发现异常值
 
 When the data, or certain features in the dataset, follow a [normal distribution](https://mathworld.wolfram.com/NormalDistribution.html), you can use the standard deviation of the data, or the equivalent z-score to detect outliers.
 

@@ -59,18 +59,16 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 
 ### 开放周会
 
-- 时间：每两周一次，周六下午 13:00 - 15:00（北京时间）
-- 地点：会议室链接（请在 [freeCodeCamp Chat 聊天室](https://chat.freecodecamp.org/channel/zhongwen)留言，获得会议室链接）
+- 时间：每两周一次，周日上午 10:00 - 11:00（北京时间）
+- 地点：会议室链接（请添加小助手微信 fcczhongguo，获得会议室链接）
 
 参与者无需提前报名，在以上时间内直接进入会议室。请所有参与者务必遵守 [freeCodeCamp 社区行为规范](https://chinese.freecodecamp.org/news/code-of-conduct/)。
 
-点击[此处](https://chinese.freecodecamp.org/forum/t/topic/1981)了解周会详情。
+点击[此处](https://forum.freecodecamp.org/t/freecodecamp/516584)了解周会详情。
 
-### 日常讨论
 
-欢迎大家加入 [freeCodeCamp Chat 聊天室](https://chat.freecodecamp.org/channel/zhongwen)，可随时讨论翻译、编程等话题。
-
-关于聊天室的详细介绍，请阅读[《freeCodeCamp Chat 上线了！欢迎加入中文开发者社区聊天室！》](https://chinese.freecodecamp.org/news/freecodecamp-chat/)。
+### 日常交流
+小助手将邀请译者加入中文社区贡献者群，在群里即时交流。
 
 ## Lint & Format rules
 

@@ -21,7 +21,7 @@ Enjoy!
 
 -   [Python介绍](#introduction-to-python)
 -   [如何安装Python](#how-to-install-python)
--   [How to Run Python Programs](#howtorunpythonprograms)
+-   [如何运行Python程序](#how-to-run-python-programs)
 -   [Python 2 vs Python 3](#python2vspython3)
 -   [Python Basics](#pythonbasics)
 -   [Data Types in Python](#datatypesinpython)
@@ -113,35 +113,35 @@ Python支持多种编程范式，包括面向过程编程、面向对象编程�
 
 <h2 id="how-to-install-python"> 如何安装Python </h2>
 
-Go to [https://www.python.org](https://www.python.org), choose the Downloads menu, choose your operating system, and a panel with a link to download the official package will appear:
+进入[https://www.python.org](https://www.python.org) ，选择下载菜单（Downloads），然后选择您的操作系统，将出现一个带有官方软件包下载链接的面板：
 
 ![Screen-Shot-2020-11-09-at-13.57.36-1](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-09-at-13.57.36-1.png)
 
-Make sure you follow the specific instructions for your operating system. On macOS you can find a detailed guide on [https://flaviocopes.com/python-installation-macos/](https://flaviocopes.com/python-installation-macos/).
+请确保遵循关于您电脑所用的操作系统的特定说明。在macOS上，您可以在[https://flaviocopes.com/python-installation-macos/](https://flaviocopes.com/python-installation-macos/) 上找到详细指南。
 
-## How to Run Python Programs
+<h2 id="how-to-run-python-programs">如何运行Python程序</h2>
 
-There are a few different ways to run Python programs.
+您可以使用几种不同的方式来运行Python程序。
 
-In particular, there's a distinction between using interactive prompts, where you type Python code and it's immediately executed, and saving a Python program into a file and executing that.
+特别地，使用交互式环境（输入Python代码后，便立即执行它），和将Python程序保存到文件中，然后再执行它，这二者之间存在区别。
 
-Let's start with interactive prompts.
+让我们从交互式环境开始。
 
-If you open your terminal and type `python`, you will see a screen like this:
+如果您打开终端并输入`python`，将在终端窗口上看到如下内容：
 
 ![Screen-Shot-2020-11-10-at-13.44.07](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-13.44.07.png)
 
-This is the Python REPL (Read-Evaluate-Print-Loop).
+这是Python REPL（交互式解释器，即读取-评估-打印-循环）。
 
-Notice the `>>>` symbol, and the cursor after that. You can type any Python code here, and press the `enter` key to run it.
+注意`>>>`符号和之后的光标。，您可以在此处输入任何Python代码，然后按 `enter` 键运行它。
 
-For example try defining a new variable using
+例如尝试定义一个新变量
 
 ```python
 name = "Flavio"
 ```
 
-and then print its value, using `print()`:
+然后使用`print()`打印`name`的值：
 
 ```python
 print(name)
@@ -149,37 +149,37 @@ print(name)
 
 ![Screen-Shot-2020-11-10-at-14.11.57](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.11.57.png)
 
-> Note: in the REPL, you can also just type `name`, press the `enter` key and you'll get the value back. But in a program, you are not going to see any output if you do so - you need to use `print()` instead.
+> 请注意：在REPL中，您也可以只输入`name`，然后按 `enter` 键，您会看到`name`的值。但是在写到文件中的程序里，如果这样做，您将看不到任何输出——您需要使用 `print()` 代替这种写法。
 
-Any line of Python you write here is going to be executed immediately.
+您在此处编写的任何Python代码行都将立即执行。
 
-Type `quit()` to exit this Python REPL.
+输入`quit()`可以退出这个Python REPL。
 
-You can access the same interactive prompt using the IDLE application that's installed by Python automatically:
+您可以使用Python自动安装的IDLE应用程序使用相同的交互式环境：
 
 ![Screen-Shot-2020-11-10-at-14.13.25](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.13.25.png)
 
-This might be more convenient for you because with the mouse you can move around and copy/paste more easily than with the terminal.
+这对您来说可能更方便，因为与使用终端相比，使用鼠标可以更轻松地四处移动和复制/粘贴。
 
-Those are the basics that come with Python by default. However I recommend that you install [IPython](https://ipython.org/), probably the best command line REPL application you can find.
+以上是Python默认附带的基础内容。不过我建议您安装[IPython](https://ipython.org/)，它可能是您能找到的最好的Python命令行REPL应用程序。
 
-Install it with
+使用下面的命令安装它
 
 ```sh
 pip install ipython
 ```
 
-Make sure the pip binaries are in your path, then run `ipython`:
+上面的命令需要确保pip可执行文件的路径在您的环境变量中，安装好之后运行`ipython`：
 
 ![Screen-Shot-2020-11-11-at-09.36.29](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-11-at-09.36.29.png)
 
-`ipython` is another interface that lets you work with a Python REPL, and provides some nice features like syntax highlighting, code completion, and much more.
+`ipython`是另一个让您使用Python REPL的接口，并提供了一些不错的功能，如语法突出显示、代码完成以及等等。
 
-The second way to run a Python program is to write your Python program code into a file, for example `program.py`:
+运行Python程序的第二种方法是将Python程序代码写入文件，例如`program.py`：
 
 ![Screen-Shot-2020-11-10-at-14.01.24](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.01.24.png)
 
-and then run it with `python program.py`:
+然后用`python program.py`运行它：
 
 ![Screen-Shot-2020-11-10-at-14.01.32](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.01.32.png)
 

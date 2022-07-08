@@ -145,46 +145,44 @@ instead of [] // empty array, length 0
 ~~Cars are given by `carId`. This is just an identifier we use to signify that we have a car in a certain spot. Note that this method returns false if there are no free slots or true if parking was successful.~~
 `carId`代表汽车，我们以它为标识符，表示在某个地点有一辆车。请注意，如果 `slots` 中没有空闲位置，则停车失败，此方法返回 false ，如果停车成功，则返回 true。
 
-`getSlots()` – Helper method that just returns the array we use to store the parking slots.
-`getSlots()` - 仅返回用于存储停车位的数组的辅助方法。
+~~`getSlots()` – Helper method that just returns the array we use to store the parking slots.~~
+`getSlots()` - 是一个辅助方法，用于返回存储停车位的数组。
 
-`remove()` – This is how we remove cars from the parking lot. This method also iterates over the slots array.
-`remove()`——这就是我们从停车场移除汽车的方式。 此方法还迭代插槽数组。
+~~`remove()` – This is how we remove cars from the parking lot. This method also iterates over the slots array.~~
+`remove()` – 这个方法实现了从停车场移除汽车的功能，它也可以重置 `slots` 数组。
 
-💡As you may have noticed up until now, in almost every case when we need to manipulate data stored in a data structure like array, we have to iterate over this structure so that we can access its elements.
-💡到目前为止，您可能已经注意到，几乎在每种情况下，当我们需要操作存储在像数组这样的数据结构中的数据时，我们都必须遍历这个结构，以便我们可以访问它的元素。
+~~💡As you may have noticed up until now, in almost every case when we need to manipulate data stored in a data structure like array, we have to iterate over this structure so that we can access its elements.~~
+💡到目前为止，可能你已经注意到了，几乎在每种情况下，当我们需要操作 `slots` 数组时，我们都需要遍历整个数组，以便访问数组内的元素。
 
-Different programming languages provide different data structures and methods to work with them, but the main idea is always the same: when you need to do something with this data, you need to iterate over it in some way.
-不同的编程语言提供了不同的数据结构和方法来处理它们，但主要思想总是相同的：当你需要对这些数据做某事时，你需要以某种方式对其进行迭代。
+~~Different programming languages provide different data structures and methods to work with them, but the main idea is always the same: when you need to do something with this data, you need to iterate over it in some way.~~
+不同的编程语言提供了不同的数据结构和方式，但它们的主要思想也总是相同的：当你需要对数据做一些操作时，你需要已某种方式遍历它们。
 
-To remove a car from the parking lot, we use the aforementioned identifier. We look for such items in the slots array, and if we get a match, we have a car to ‘un-park’. We perform the actual removal by just setting that specific slot to _null_ again.
-要将汽车从停车场移走，我们使用上述标识符。 我们在 slot 数组中寻找这样的项目，如果我们找到匹配项，我们就有了一辆车可以“取消停放”。 我们只需将该特定插槽再次设置为 _null_ 即可执行实际删除。
+~~To remove a car from the parking lot, we use the aforementioned identifier. We look for such items in the slots array, and if we get a match, we have a car to ‘un-park’. We perform the actual removal by just setting that specific slot to _null_ again.~~
+为了将汽车从停车场中移走，我们使用前文中的标识符。我们会在 `slots` 数组中寻找带有标识符的车辆，在找到对应车辆后。将它“移出”停车场。我们采用将 `slots` 数组内对应值置为 _null_ 的方式代表移除车辆。
 
-Now you can guess why we decided to initialize our slots array with nulls in the first place.
-现在你可以猜到为什么我们决定首先用空值来初始化我们的槽数组。
+~~Now you can guess why we decided to initialize our slots array with nulls in the first place.~~
+现在你大概就会明白，为何我们使用 _null_ 来初始化停车场数组。
 
-This method also returns a boolean result depending on whether there was a successful removal or not.
-此方法还根据是否成功删除返回布尔结果。
+~~This method also returns a boolean result depending on whether there was a successful removal or not.~~
+该方法也会根据是否成功移除车辆返回布尔值。
 
-We should be able to use this feedback when building some kind of UI that is able to react to such changes. The same is valid when adding cars to the parking lot (look at the `park` method).
-在构建某种能够对此类更改做出反应的 UI 时，我们应该能够使用此反馈。 将汽车添加到停车场时也是如此（查看 `park` 方法）。
+~~We should be able to use this feedback when building some kind of UI that is able to react to such changes. The same is valid when adding cars to the parking lot (look at the `park` method).~~
+当建构一些 UI 界面以展示变化，我们需要使用这些方法的返回值。比如，将汽车添加到停车场时（`park` 方法），也会有相同的返回值机制。
 
-`getSize()` – Another helper method that we use to check the parking lot size.
-`getSize()` - 我们用来检查停车场大小的另一个辅助方法。
+~~`getSize()` – Another helper method that we use to check the parking lot size.~~
+`getSize()` – 我们用来检查停车场大小的另一个辅助方法。
 
-`getAvailable()` – This one shows us how many available slots we currently have.
-`getAvailable()` - 这个显示我们目前有多少可用的插槽。
+~~`getAvailable()` – This one shows us how many available slots we currently have.~~
+`getAvailable()` - 这个方法可以显示我们目前有多少空闲的停车位。
 
-`isFull()` – Tells us if the parking lot is full, that is that there are no more available slots.
-`isFull()` - 告诉我们停车场是否已满，即没有更多可用的车位。
+~~`isFull()` – Tells us if the parking lot is full, that is that there are no more available slots.~~
+`isFull()` – 这个方法告诉我们停车场是否已满，即没有更多可用的车位。
 
-# How to Build the React App
 # 如何构建 React App
 
 ![image-92](https://www.freecodecamp.org/news/content/images/2022/06/image-92.png)
 
-Parking Lot app - main screen
-停车场应用程序 - 主屏幕
+停车场应用程序 - 主页面
 
 Here is where the fun starts. 🕺
 这是乐趣开始的地方🕺。

@@ -184,21 +184,21 @@ instead of [] // empty array, length 0
 
 停车场应用程序 - 主页面
 
-Here is where the fun starts. 🕺
-这是乐趣开始的地方🕺。
+~~Here is where the fun starts. 🕺~~
+有趣的部分快开始啦🕺。
 
-We are going to create an interactive app, visualizing the tasks which we can perform with the help of our implementation above.
-我们将创建一个交互式应用程序，可视化我们可以在上述实现的帮助下执行的任务。
+~~We are going to create an interactive app, visualizing the tasks which we can perform with the help of our implementation above.~~
+我们将创建一个可交互的 app，将我们已实现的代码停车场可视化。
 
-Our app will provide basic UI controls allowing an (imaginary) operator to work with the parking lot software_._ And in order to make their work a bit more pleasing to the eye, we will try to animate the basic functions our software provides.
-我们的应用程序将提供基本的 UI 控件，允许（假想的）操作员使用停车场软件_._ 为了使他们的工作更令人赏心悦目，我们将尝试为我们的软件提供的基本功能设置动画。
+~~Our app will provide basic UI controls allowing an (imaginary) operator to work with the parking lot software_._ And in order to make their work a bit more pleasing to the eye, we will try to animate the basic functions our software provides.~~
+我们的 app 将提供基本的 UI 控件，允许（假想的）操作员使用停车场软件。为了使视觉效果更令人赏心悦目，我们将尝试为 app 的基本功能设置动画。
 
 一起来看看，是如何实现的吧！📺
 
 ## Demo
 
-Here is the live demo for those of you who doesn’t care about the details and just want to ‘taste’ it: 🥪
-这是为那些不关心细节而只想“品尝”它的人提供的现场演示：🥪
+~~Here is the live demo for those of you who doesn’t care about the details and just want to ‘taste’ it: 🥪~~
+点击下方的在线 demo 链接，提前尝鲜体验吧：🥪
 
 [
 
@@ -214,14 +214,14 @@ Parking Lot Inc. app
 
 ## 项目源码
 
-Here is the [repo](https://github.com/mihailgaberov/parking-lot) with the app's source code.
-这是带有应用程序源代码的 [repo](https://github.com/mihailgaberov/parking-lot)。
+~~Here is the [repo](https://github.com/mihailgaberov/parking-lot) with the app's source code.~~
+这里是停车场 app 的[代码仓库](https://github.com/mihailgaberov/parking-lot)。
 
-Let me give you a brief summary on the _what_ and the _why_.
-让我简要介绍一下_what_ 和_why_。
+~~Let me give you a brief summary on the _what_ and the _why_.~~
+让我来简要介绍一下技术选项的 _what_ 和 _why_。
 
-The app is built with [vite](https://vitejs.dev/). The reason for this is that I've been playing around recently with it and I am really happy with the speed and the performance it provides.
-该应用程序是使用 [vite](https://vitejs.dev/) 构建的。 原因是我最近一直在玩它，我对它提供的速度和性能感到非常满意。
+~~The app is built with [vite](https://vitejs.dev/). The reason for this is that I've been playing around recently with it and I am really happy with the speed and the performance it provides.~~
+这个 app 是使用 [vite](https://vitejs.dev/) 构建的，因为我最近一直在体验它，并且对于它的速度和性能都十分满意。 
 
 No matter that it’s still in the relatively early stages of development – if I am about to start a new project and am in a position to choose, I will go with **vite**.
 不管它还处于相对早期的开发阶段——如果我要开始一个新项目并且有选择的余地，我会选择**vite**。
@@ -266,7 +266,7 @@ Browser tab with favicon
 ## App 页面
 
 As mentioned earlier, the main pages (also called screens) in the app are called [Landing](https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Landing) and [Main](https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Main). These are React components themselves. They serve as skeletons for everything you see in the welcome page – where you land initially and where you can select how many parking slots you want to have in your parking lot.
-如前所述，应用程序中的主页面（也称为屏幕）称为[Landing]（https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Landing）和[Main]（ https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Main）。 这些是 React 组件本身。 它们充当您在欢迎页面中看到的所有内容的骨架——您最初降落的位置以及您可以在哪里选择您希望在停车场拥有多少停车位。
+如前所述，app 的主页面（main pages，也称为 mian screens）称为[Landing页]（https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Landing）和[Main]（ https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Main）。 这些是 React 组件本身。 它们充当您在欢迎页面中看到的所有内容的骨架——您最初降落的位置以及您可以在哪里选择您希望在停车场拥有多少停车位。
 
 ![image-95](https://www.freecodecamp.org/news/content/images/2022/06/image-95.png)
 
@@ -290,8 +290,8 @@ When a car is parked, via the PARK! button, the relevant spot will be visualised
 ~~## 💡The simple animation of the moving red car is just for visual effect and doesn’t have any real influence on the way the parking lot works.~~
 ## 💡红色汽车移动的简单动画只是为了视觉效果，对停车场的运作方式没有任何实际影响。
 
-I used [CSS modules](https://github.com/css-modules/css-modules) for styling the app. I also tried to make the app a bit mobile friendly, in case you decide to try it on your mobile device.
-我使用 [CSS 模块](https://github.com/css-modules/css-modules) 为应用设置样式。 我还尝试使该应用程序对移动设备友好一点，以防您决定在移动设备上试用它。
+~~I used [CSS modules](https://github.com/css-modules/css-modules) for styling the app. I also tried to make the app a bit mobile friendly, in case you decide to try it on your mobile device.~~
+我使用 [CSS modules](https://github.com/css-modules/css-modules) 为 app 设置样式。 为了让移动设备的体验更好，我还优化了移动端的样式。
 
 ~~Be my guest and [give a try](https://parking-lot-chi.vercel.app/) 🧪~~
 行动起来，快 [试一试](https://parking-lot-chi.vercel.app/) 吧🧪

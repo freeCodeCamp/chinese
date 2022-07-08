@@ -35,15 +35,15 @@
 
 我们约定标准差为σ，算术平均为μ。
 
-一个发现异常值的方法是将_阈值下限_设为均值减去三倍标准差(μ - 3\*σ)，_阈值上限_设为均值加上三倍标准差(μ + 3\*σ)。所有在阈值之外的数据点都被视为异常值。
+一个发现异常值的方法是将_阈值下限_设为均值减去三倍标准差 (μ - 3\*σ) ，_阈值上限_设为均值加上三倍标准差 (μ + 3\*σ) 。所有在阈值之外的数据点都被视为异常值。
 
 因为99.7%的数据点会在均值的±三倍标准差以内，此方法将会发现并标记0.3%的数据点为异常值。
 
-### Code for Outlier Detection Using Standard Deviation
+### 使用标准差检测异常点的代码
 
-Now, let's create a normally-distributed dataset of student scores, and perform outlier detection on it.
+我们通过构造一个正态分布的学生分数数据集，用以解释发现异常点的过程。
 
-As a first step, we’ll import the necessary modules.
+第一步，载入必须的python库。
 
 ```Python
 import numpy as np
@@ -51,7 +51,8 @@ import pandas as pd
 import seaborn as sns
 ```
 
-Next, let’s define the function `generate_scores()` that returns a normally-distributed dataset of student scores containing 200 records. We’ll make a call to the function, and store the returned array in the variable `scores_data`.
+第二步，定义名为`generate_scores()`的方程，这个方程会生成一个有包含有200个数据的正态分布的分数数据集。我们会使用这个方程生成数据集并存储到变量`scores_data`中。
+
 
 ```Python
 def generate_scores(mean=60,std_dev=12,num_samples=200):
@@ -62,7 +63,7 @@ def generate_scores(mean=60,std_dev=12,num_samples=200):
 scores_data = generate_scores()
 ```
 
-You can use Seaborn’s `displot()` function to visualize the data distribution. In this case, the dataset follows a normal distribution, as seen in the figure below.
+你可以使用Seaborn的`displot()`方程来生成数据集分布图像。通过下图可以看出，这个数据集服从正态分布。
 
 ```Python
 sns.set_theme()
@@ -71,15 +72,15 @@ sns.displot(data=scores_data).set(title="Distribution of Scores", xlabel="Scores
 
 ![EqfsNr10SYnFcCpdC_5Bdt9Z3jWIsaTI1yCcATGbf10BXTwwqKuJHUMuZT9n6M3bGuU8k4QOA8Vb87BStDzxQRRdQ-MzMwLT2EZZJL4ieB0_u0LnvsUXCkYBTllcll15mF1oGziS1QqZrfYR5A](https://lh6.googleusercontent.com/EqfsNr10SYnFcCpdC_5Bdt9Z3jWIsaTI1yCcATGbf10BXTwwqKuJHUMuZT9n6M3bGuU8k4QOA8Vb87BStDzxQRRdQ-MzMwLT2EZZJL4ieB0_u0LnvsUXCkYBTllcll15mF1oGziS1QqZrfYR5A)
 
-Figure 1: Normal Distribution of Scores
+图表1：正态分布
 
-Next, let's load the data into a [Pandas dataframe](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html) for further analysis.
+接下来，我们可以把该数据集导入[Pandas dataframe](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html) for further analysis.
 
 ```python
 df_scores = pd.DataFrame(scores_data,columns=['score'])
 ```
 
-To obtain the mean and standard deviation of the data in the dataframe `df_scores`, you can use the `.mean()` and the `.std()` methods, respectively.
+你可以使用`.mean()`和`.std()`函数来获取数据集`df_scores`的均值和标准差。
 
 ```Python
 df_scores.mean()
@@ -92,7 +93,7 @@ score    11.854434
 dtype: float64
 ```
 
-As discussed earlier, set the lower limit (`lower_limit`) to be three standard deviations below the mean, and the upper limit (`upper_limit`) to be three standard deviations above the mean.
+像之前说的一样，阈值下限(`lower_limit`)设为算数平均减去三倍标准差，阈值上限(`upper_limit`)设为算术平均加上三倍标准差。
 
 ```Python
 lower_limit = df_scores.mean() - 3*df_scores.std()
@@ -104,7 +105,7 @@ print(upper_limit)
 96.47928329085734
 ```
 
-Now that you’ve defined the lower and upper limits, you may filter the dataframe `df_scores` to only retain the data points in the interval `[lower_limit, upper_limit]`, as shown below.
+通过上一步我们定义了阈值的上下限，我们可以使用这个阈值`[lower_limit, upper_limit]`来筛选数据集`df_score`中处于这个阈值的数据点，代码如下。
 
 ```Python
 df_scores_filtered=df_scores[(df_scores['score']>lower_limit)&(df_scores['score']<upper_limit)]
@@ -125,28 +126,28 @@ score
 [198 rows x 1 columns]
 ```
 
-From the output above, you can see that two records have been removed, and `df_scores_filtered` contains 198 records.
+通过上面的输出，我们发现这个方法移除了两个数据点，数据集`df_scores_filtered`包含有198个数据点。
 
-## How to Detect Outliers Using the Z-Score
+## 如何用过z-score检测异常值
 
-Now let's explore the concept of the z-score. For a normal distribution with mean μ and standard deviation σ, the z-score for a value x in the dataset is given by:
+接下来我们尝试使用z-score检测异常值的方法。对于均值为μ标准差为σ的正态分数来说，数据点x的z-score可以这么计算：
 
 **z = (x - μ)/σ**
 
-From the above equation, we have the following:
+通过上述公式，我们可以推导出以下条件：
 
--   When x = μ, the value of z-score is 0.
--   When x = μ ± 1, μ ± 2, or μ ± 3, the z-score is ± 1, ± 2, or ± 3, respectively.
+-   当 x = μ 时, z-score 为 0.
+-   当 x = μ ± 1, μ ± 2, 或 μ ± 3 时, z-score 为 ± 1, ± 2, 或 ± 3.
 
-Notice how this technique is equivalent to the scores based on standard deviation we had earlier. Under this transformation, all data points that lie below the lower limit, μ - 3\*σ, now map to points that are less than -3 on the z-score scale.
+我们可以发现，通过z-score检测异常值的方法其实等价于我们之前尝试过的通过标准差检测异常值的方法。通过对数据点进行标准化(z = (x - μ)/σ)，所有低于标准差方法中低阈值(μ - 3\*σ)的数据点将等价于z-score小于-3的数据点。
 
-Similarly, all points that lie above the upper limit, μ + 3\*σ map to a value above 3 on the z-score scale. So `[lower_limit, upper_limit]` becomes \[-3, 3\].
+类似的，通过标准化，大于上阈值(μ + 3\*σ)的数据点等价于z-score大于3的数据点。所以上下阈值`[lower_limit, upper_limit]`可以理解为\[-3, 3\]。
 
-Let’s use this technique on our dataset of scores.
+接下来我们将使用z-score方法来检测数据集`df_scores`中的异常点。
 
-### Code for Outlier Detection Using Z-Score
+### 使用z-score检测异常点方法的代码
 
-Let's compute z-scores for all points in the dataset, and add z\_score as a column to the dataframe `df_scores`.
+第一步，我们计算所有数据点的z-score，并把z\_score作为新的一列添加进数据集`df_scores`中。
 
 ```Python
 df_scores['z_score']=(df_scores['score'] - df_scores['score'].mean())/df_scores['score'].std()

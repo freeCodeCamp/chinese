@@ -42,11 +42,11 @@
 ~~It’s pretty straightforward, so there probably won’t be any surprises for most of you – especially if you already have some programming experience in OOP and class-based languages.~~
 停车场自身的逻辑很简单，所以可能对于你们大多数人来说没有任何难度————特别当你已具备一些 OOP 和基于类的编程经验时。
 
-## **class ParkingLot**
+~~## **class ParkingLot**~~
 ## **使用class实现停车场挑战**
 
-I will give you the code first and then I'll follow up with a short explanation on the implementation.
-我会先给你代码，然后我会跟进一个关于实现的简短解释。
+~~I will give you the code first and then I'll follow up with a short explanation on the implementation.~~
+我将会先展示实现代码，再对于代码实现进行简短的解释。
 ```javascript
 class ParkingLot {
   slots = [];
@@ -111,24 +111,24 @@ class ParkingLot {
 export default ParkingLot;
 ```
 
-Starting from the beginning – our class has one property, `slots`, which is going to be an array that stores info about the parking slots (whether they're free or occupied).
-从一开始——我们的类有一个属性，`slots`，它将是一个数组，用于存储有关停车位的信息（无论它们是空闲的还是被占用的）。
+~~Starting from the beginning – our class has one property, `slots`, which is going to be an array that stores info about the parking slots (whether they're free or occupied).~~
+让我们从头开始：首先，我们的停车场class有一个`slots`属性，这个属性是一个数组，用于存储有关停车位的信息（不考虑停车位被空闲状态还是已被占用）。
 
-Then we have a `constructor` method that gets executed every time you create an instance of this class. Here is where we use an input number parameter, called `parkingSize`, to create an empty array with length equal to that number.
-然后我们有一个`constructor`方法，每次创建此类的实例时都会执行该方法。 在这里，我们使用一个名为“parkingSize”的输入数字参数来创建一个长度等于该数字的空数组。
+~~Then we have a `constructor` method that gets executed every time you create an instance of this class. Here is where we use an input number parameter, called `parkingSize`, to create an empty array with length equal to that number.~~
+在`slots`属性之后，我们创建了`constructor`方法，`constructor`将在每次创建停车场类的实例时都会执行。在`constructor`中，我们使用`parkingSize`的输入数值参数来创建一个长度等于该数字的空数组。
 
-Technically speaking, this array is not empty, as we initialize it with _null_ values. This means that after the code executes in the constructor, we will end up with an array filled with null values, depending on the number we passed in.
-从技术上讲，这个数组不是空的，因为我们用 _null_ 值初始化它。 这意味着代码在构造函数中执行后，我们最终会得到一个填充了空值的数组，具体取决于我们传入的数字。
+~~Technically speaking, this array is not empty, as we initialize it with _null_ values. This means that after the code executes in the constructor, we will end up with an array filled with null values, depending on the number we passed in.~~
+从技术上讲，这个数组并不是空数组，因为我们用为 _null_ 的值对它进行了初始化。这意味着在构造函数执行结束后，我们将会得到一个填充了 _null_ 值的数组，而数组的具体大小则取决于我们传入构造方法的值。
 
-For example, if we execute this:
-例如，如果我们执行这个：
+~~For example, if we execute this:~~
+举个例子🌰，如果我们执行下面的代码：
 
 ```javascript
 const parking = new ParkingLot(5);
 ```
 
-It will result in this:
-这将导致：
+~~It will result in this:~~
+我们将会得到以下结果：
 
 ```javascript
 [null, null, null, null, null] // lenght = 5
@@ -136,14 +136,14 @@ It will result in this:
 instead of [] // empty array, length 0
 ```
 
-After going through the constructor, let’s take a look at the rest of the methods in the class.
-看完了构造函数，我们再来看看类中剩下的方法。
+~~After going through the constructor, let’s take a look at the rest of the methods in the class.~~
+看完了停车场类的构造函数，我们接下来再来看看剩下的方法。
 
-`park()` – This is where we do the actual parking of a car. This method iterates over the `slots` array, checks if there are free spots (that is, slots that are still equal to null), and adds in the car in those empty spots.
-`park()`——这是我们实际停车的地方。 此方法遍历 `slots` 数组，检查是否有空闲位置（即仍然等于 null 的位置），并在这些空闲位置添加汽车。
+~~`park()` – This is where we do the actual parking of a car. This method iterates over the `slots` array, checks if there are free spots (that is, slots that are still equal to null), and adds in the car in those empty spots.~~
+`park()`—— 是实现停车功能的方法。该方法遍历了 `slots` 数组，检查是否有空闲位置（即数组内仍然等于 null 的位置），并在这些空闲位置中添加汽车。
 
-Cars are given by `carId`. This is just an identifier we use to signify that we have a car in a certain spot. Note that this method returns false if there are no free slots or true if parking was successful.
-汽车由`carId`给出。 这只是我们用来表示我们在某个地点有一辆车的标识符。 请注意，如果没有空闲插槽，则此方法返回 false，如果停车成功，则返回 true。
+~~Cars are given by `carId`. This is just an identifier we use to signify that we have a car in a certain spot. Note that this method returns false if there are no free slots or true if parking was successful.~~
+`carId`代表汽车，我们以它为标识符，表示在某个地点有一辆车。请注意，如果 `slots` 中没有空闲位置，则停车失败，此方法返回 false ，如果停车成功，则返回 true。
 
 `getSlots()` – Helper method that just returns the array we use to store the parking slots.
 `getSlots()` - 仅返回用于存储停车位的数组的辅助方法。

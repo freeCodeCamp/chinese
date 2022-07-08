@@ -27,7 +27,7 @@
 
 ## 如何通过标准差发现异常值
 
-如果一组数据，或数据集中某些特征符合[正态分布]时(https://mathworld.wolfram.com/NormalDistribution.html)，可以考虑使用正态分布及等效的Z-分数（z-score）来发现异常值。
+如果一组数据，或数据集中某些特征符合[正态分布](https://mathworld.wolfram.com/NormalDistribution.html)时，可以考虑使用正态分布及等效的Z-分数（z-score）来发现异常值。
 
 在统计学中，标准差（standard deviation）反映了_数据点和均值（mean）之间的关系+，一言以蔽之，标准差衡量的是数据点离数据的算数平均有多远。
 
@@ -301,15 +301,15 @@ score
 
 通过以上代码的结果我们可以看出有两个数据点被标记为异常值，过滤后的数据集包含有198个数据点。
 
-## Conclusion
+## 结语
 
-In this guide, we covered what outliers are, and why we need to detect them. We then went over the most common techniques for outlier detection.
+本文介绍了什么是异常值，我们为什么需要检测异常值，及我们如何检测异常值。本文介绍了四种最常见的检测异常值的方法。
 
-Here’s a summary:
+总结如下:
 
--   If the data, or feature of interest is normally distributed, you may use standard deviation and z-score to label points that are farther than three standard deviations away from the mean as outliers.
--   If the data is not normally distributed, you can use the interquartile range or percentage methods to detect outliers.
+-   如果要研究的数据或特征符合正态分布，我们可以使用标准差或z-score来标记异常值。通常我们标记超出均值正负三倍标准差的数据点为异常值。
+-   如果要研究的数据不服从正态分布是，我们可以使用四分位距或者百分位数来检测异常值。
 
-In addition, we discussed the best practices in outlier detection. When a large fraction of data is being labeled as outliers, they are not really outliers but can be attributed to a wider data distribution.
+此外我们还介绍了检测异常值的一些特殊情况。当数据集中有大量数据被标记为异常值时要慎重，因为造成这种情况的原因可能是因为我们手头的数据集属于一个更大更完备的数据集，被标记的异常值可能描述了更大的数据集的分布情况。
 
-In applying all of the above techniques, it's also important to be aware of the current trend to identify how certain values are evolving, and check for permissible lower and upper limits using domain knowledge.
+除此之外，在检测异常值的过程中要根据数据集的特征适时调整用来筛选检测异常值的阈值。

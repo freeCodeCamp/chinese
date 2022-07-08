@@ -74,7 +74,7 @@ sns.displot(data=scores_data).set(title="Distribution of Scores", xlabel="Scores
 
 图表1：正态分布
 
-接下来，我们可以把该数据集导入[Pandas dataframe](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html) for further analysis.
+接下来，我们可以把该数据集导入[Pandas dataframe](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html) 以便进一步分析。
 
 ```python
 df_scores = pd.DataFrame(scores_data,columns=['score'])
@@ -167,7 +167,7 @@ score	z_score
 
 接下来，我们将研究两种对数据分布_没有要求_的检测异常值的方法。
 
-## 通过四分位距(译者注：Interquartile Range，IQR)检测异常值的方法
+## 通过四分位距(IQR)检测异常值的方法
 
 统计学上，四分位距（IQR）反映了给定数据集中第一和第三分位数之间的距离。
 

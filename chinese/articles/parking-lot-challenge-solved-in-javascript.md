@@ -195,7 +195,6 @@ We are going to create an interactive app, visualizing the tasks which we can pe
 Our app will provide basic UI controls allowing an (imaginary) operator to work with the parking lot software_._ And in order to make their work a bit more pleasing to the eye, we will try to animate the basic functions our software provides.
 我们的应用程序将提供基本的 UI 控件，允许（假想的）操作员使用停车场软件_._ 为了使他们的工作更令人赏心悦目，我们将尝试为我们的软件提供的基本功能设置动画。
 
-Let’s see how! 📺
 一起来看看，是如何实现的吧！📺
 
 ## Demo
@@ -215,8 +214,7 @@ Parking Lot Software Inc.
 
 Parking Lot Inc. app
 
-## Source Code
-## 源码
+## 项目源码
 
 Here is the [repo](https://github.com/mihailgaberov/parking-lot) with the app's source code.
 这是带有应用程序源代码的 [repo](https://github.com/mihailgaberov/parking-lot)。
@@ -236,12 +234,10 @@ This is not to say I have anything against its big brother [CRA](https://create-
 💡Just keep in mind that selecting a given technology always depends on your specific needs for a specific project. That is to say that there is no silver bullet. It’s always a matter of requirements and priorities.
 💡请记住，选择给定的技术始终取决于您对特定项目的特定需求。 也就是说，没有银弹。 这始终是需求和优先级的问题。
 
-## Structure of the React App
 ## React App 项目结构
 
 ![image-93](https://www.freecodecamp.org/news/content/images/2022/06/image-93.png)
 
-App structure
 App 项目结构
 
 The app's structure is straightforward. At the root level we have two folders – _assets_ and _src_. The first contains the assets used in the app (in this case it’s just a car image). The later contains all the files with the source code.
@@ -269,7 +265,6 @@ Here we have the following folders:
 Browser tab with favicon
 带有图标的浏览器选项卡
 
-## App Pages
 ## App 页面
 
 As mentioned earlier, the main pages (also called screens) in the app are called [Landing](https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Landing) and [Main](https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Main). These are React components themselves. They serve as skeletons for everything you see in the welcome page – where you land initially and where you can select how many parking slots you want to have in your parking lot.
@@ -277,7 +272,6 @@ As mentioned earlier, the main pages (also called screens) in the app are called
 
 ![image-95](https://www.freecodecamp.org/news/content/images/2022/06/image-95.png)
 
-Welcome page
 欢迎页
 
 And the page you go to after clicking the big, ping submit button - the main screen where your operator is able to manage the parking lot.
@@ -285,11 +279,9 @@ And the page you go to after clicking the big, ping submit button - the main scr
 
 ![image-96](https://www.freecodecamp.org/news/content/images/2022/06/image-96.png)
 
-Main page
 主页
 
-## **App Functionality**
-## **App 功能性**
+## **App 的功能性**
 
 The app provides very basic functionality for managing an imaginary parking lot. When the user select how many slots they want (max 20), they'll be transitioned to the main screen. There, the user will be able to see all free parking slots.
 该应用程序提供了用于管理虚拟停车场的非常基本的功能。 当用户选择他们想要的插槽数量（最多 20 个）时，它们将被转换到主屏幕。 在那里，用户将能够看到所有免费停车位。
@@ -303,28 +295,27 @@ When a car is parked, via the PARK! button, the relevant spot will be visualised
 I used [CSS modules](https://github.com/css-modules/css-modules) for styling the app. I also tried to make the app a bit mobile friendly, in case you decide to try it on your mobile device.
 我使用 [CSS 模块](https://github.com/css-modules/css-modules) 为应用设置样式。 我还尝试使该应用程序对移动设备友好一点，以防您决定在移动设备上试用它。
 
-Be my guest and [give a try](https://parking-lot-chi.vercel.app/) 🧪
-做我的客人，[试一试](https://parking-lot-chi.vercel.app/) 🧪
+~~Be my guest and [give a try](https://parking-lot-chi.vercel.app/) 🧪~~
+行动起来，快 [试一试](https://parking-lot-chi.vercel.app/) 吧🧪
 
-# Conclusion
 # 总结
 
-My initial idea behind this post was to describe the parking lot class itself. You know, just for educational purposes. To show you how can you write such a class in JavaScript.
-我在这篇文章背后的最初想法是描述停车场类本身。 你知道，只是为了教育目的。 向您展示如何在 JavaScript 中编写这样的类。
+~~My initial idea behind this post was to describe the parking lot class itself. You know, just for educational purposes. To show you how can you write such a class in JavaScript.~~
+在写作这篇文章时，我一开始只打算描述停车场类本身————仅仅出于科普目的，展示如何通过 JavaScript 实现一个类。
 
-But then I thought it’s kind of boring 🥱.  I wanted to create something funnier 💃🏻, something more gamified 🕹️  so to speak.
-但后来我觉得这有点无聊🥱。 我想创造一些更有趣的东西💃🏻，更游戏化的东西🕹️可以这么说。
+~~But then I thought it’s kind of boring 🥱.  I wanted to create something funnier 💃🏻, something more gamified 🕹️  so to speak.~~
+但后来我觉得，仅仅实现一个类有点无聊🥱。 因为我想创造一些更有趣💃🏻，更游戏化的东西🕹️。
 
-And this is how I ended up with this mini game-like app 🎮.
-这就是我最终得到这个类似迷你游戏的应用程序🎮的原因。
+~~And this is how I ended up with this mini game-like app 🎮.~~
+这就是本文实现的停车场挑战类似迷你游戏🎮的原因。
 
-While building it, my 5 year old daughter 🧒🏻 saw it and wanted to play with it. And she had a lot of fun actually!
-在建造它时，我 5 岁的女儿 🧒🏻 看到它并想和它一起玩。 她实际上玩得很开心！
+~~While building it, my 5 year old daughter 🧒🏻 saw it and wanted to play with it. And she had a lot of fun actually!~~
+在建造它时，我 5 岁的女儿 🧒🏻 一看到它就想玩玩看，并且玩得特别开心！
 
-Yes, yes, of course! I am not saying that if it was something funny for a 5 year old, it will be for you too 😀.
-是的，是的，当然！ 我并不是说如果这对一个 5 岁的孩子来说很有趣，那么它也适合你😀。
+~~Yes, yes, of course! I am not saying that if it was something funny for a 5 year old, it will be for you too 😀.~~
+或许这对于成年人来说过于幼稚，但是对于小朋友却刚刚好😀。
 
-My only goal was to catch your attention through the game, so that the knowledge 📖 behind it stays longer with you.
-我唯一的目标是通过游戏吸引您的注意力，以便它背后的知识📖与您保持更长时间。
+~~My only goal was to catch your attention through the game, so that the knowledge 📖 behind it stays longer with you.~~
+我希望这个游戏一般的实现方案可以吸引你的注意力，以便你可以更好得记忆它背后的知识📖。
 
 感谢阅读！🙏

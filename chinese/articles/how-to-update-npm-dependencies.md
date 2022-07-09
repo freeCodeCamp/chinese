@@ -13,7 +13,7 @@ Node 软件包管理器（npm）提供了各种功能来帮助你安装和维护
 
 ## 如何保持依赖关系的最新
 
-现在，你可以逐一查看 package.json 中的每一个单独的包，改变版本，然后运行`npm install <package>@latest`来获得最新版本。但这并不是最有效的方法。
+现在，你可以逐一查看 `package.json` 中的每一个单独的包，改变版本，然后运行 `npm install <package>@latest` 来获得最新版本。但这并不是最有效的方法。
 
 想象一下，如果你有 20 个或更多的包，可以使用版本升级。相反，你应该制定一个工作流程，在过期的依赖关系数量增加和升级变得越来越难之前，定期检查新版本。
 
@@ -31,7 +31,7 @@ npm outdated
 
 该命令将检查每个已安装的依赖关系，并将当前版本与 [npm registry](https://www.npmjs.com/) 中的最新版本进行比较。它在终端打印出一个表格，概述了可用的版本。
 
-它是内置在 npm 中的，所以不需要下载额外的软件包。`npm outdated`是一个很好的开始，可以了解所需的依赖性更新的数量。
+它是内置在 npm 中的，所以不需要下载额外的软件包。`npm outdated` 是一个很好的开始，可以了解所需的依赖性更新的数量。
 
 ![Screen-Shot-2022-07-03-at-1.14.41-PM](https://www.freecodecamp.org/news/content/images/2022/07/Screen-Shot-2022-07-03-at-1.14.41-PM.png)
 
@@ -44,21 +44,21 @@ npm outdated
 npm update
 ```
 
-请记住，使用`npm update`它永远不会更新到一个主要的,具有破坏性变化的版本。它更新 package.json 和 package-lock.json 中的依赖关系。它将使用 `想要的`版本。
+请记住，使用 `npm update` 它永远不会更新到一个主要的(major),具有破坏性变化的版本。它更新 `package.json` 和 `package-lock.json` 中的依赖关系。它将使用 `想要的` 版本。
 
-为了获得 "最新 "的版本，在单个安装中附加`@latest`，例如`npm install react@latest`。
+为了获得 "最新 "的版本，在单个安装中附加 `@latest`，例如 `npm install react@latest`。
 
 ## 怎样使用 `npm-check-updates`
 
-对于高级和可定制的升级体验，我推荐[`npm-check-updates`](https://www.npmjs.com/package/npm-check-updates)。这个包可以做所有 `npm oudated` 和 `npm upgrade` 能做的事情，并增加了一些自定义选项。不过，它确实需要安装一个包。
+对于高级和可定制的升级体验，我推荐 [`npm-check-updates`](https://www.npmjs.com/package/npm-check-updates)。这个包可以做所有 `npm oudated` 和 `npm upgrade` 能做的事情，并增加了一些自定义选项。不过，它确实需要安装一个包。
 
-要开始使用，请在全局安装[`npm-check-updates`](https://www.npmjs.com/package/npm-check-updates)软件包:
+要开始使用，请在全局安装 [`npm-check-updates`](https://www.npmjs.com/package/npm-check-updates) 软件包:
 
 ```shell
 npm install -g npm-check-updates
 ```
 
-然后，运行`ncu`来显示要升级的软件包。与`npm outdated`类似，它不会产生任何变化。
+然后，运行 `ncu` 来显示要升级的软件包。与 `npm outdated` 类似，它不会产生任何变化。
 
 ```shell
 ncu
@@ -89,7 +89,7 @@ ncu -u
 - Cyan （显示青色） = minor（次要版本）
 - Green（显示绿色）  = patch （补丁版本）
 
-这个方法只更新 package.json 文件中的依赖关系，并且会选择最新的版本，即使它包括一个破坏性的变化。使用这种方法，`npm install`不会自动运行，所以一定要在之后运行它来更新 package-lock.json。
+这个方法只更新 `package.json` 文件中的依赖关系，并且会选择最新的版本，即使它包括一个破坏性的变化。使用这种方法，`npm install` 不会自动运行，所以一定要在之后运行它来更新 `package-lock.json`。
 
 要选择你喜欢的版本类型，运行 `ncu --target [patch, minor, latest, newest, greatest]`.
 
@@ -122,7 +122,7 @@ ncu --interactive --format group
 
 资料: [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
 
-`npm-check-updates`提供了其他有用的工具，如 [doctor mode](https://github.com/raineorshine/npm-check-updates#doctor-mode)，它可以安装升级并运行测试以检查破坏性变化。
+`npm-check-updates` 提供了其他有用的工具，如 [doctor mode](https://github.com/raineorshine/npm-check-updates#doctor-mode)，它可以安装升级并运行测试以检查破坏性变化。
 
 我强烈建议看一下[文档](https://github.com/raineorshine/npm-check-updates)，以了解更多关于这个包所提供的一切。在写这篇文章的时候，这个项目得到了很好的维护，每周的下载高达 [294,467](https://www.npmjs.com/package/npm-check-updates) 次。
 

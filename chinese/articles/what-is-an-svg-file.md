@@ -1,6 +1,6 @@
 > -  原文地址：[What is an SVG File?](https://www.freecodecamp.org/news/what-is-an-svg-file/)
 > -  原文作者：[Kolade Chris](https://www.freecodecamp.org/news/author/kolade/)
-> -  译者：
+> -  译者：Utopia-xxl
 > -  校对者：
 
 ![What is an SVG File?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/svg.png)

@@ -1,7 +1,7 @@
-> -  原文地址：[How to Update NPM Dependencies](https://www.freecodecamp.org/news/how-to-update-npm-dependencies/)
-> -  原文作者：[Natalie Pina](https://www.freecodecamp.org/news/author/natalie/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Update NPM Dependencies](https://www.freecodecamp.org/news/how-to-update-npm-dependencies/)
+> - 原文作者：[Natalie Pina](https://www.freecodecamp.org/news/author/natalie/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Update NPM Dependencies](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/deps.png)
 
@@ -25,7 +25,7 @@ In this article, I will go over methods to inspect and upgrade dependencies in d
 
 ## How to Use the `npm outdated` Command
 
-```
+```shell
 npm outdated
 ```
 
@@ -35,9 +35,9 @@ It is built into npm so there are no additional packages required to download. `
 
 ![Screen-Shot-2022-07-03-at-1.14.41-PM](https://www.freecodecamp.org/news/content/images/2022/07/Screen-Shot-2022-07-03-at-1.14.41-PM.png)
 
--   Current is the current version installed.
--   Wanted is the max version of the package according the [semver](https://docs.npmjs.com/misc/semver) range.
--   Latest is the version of the package tagged as latest in the npm registry.
+- Current is the current version installed.
+- Wanted is the max version of the package according the [semver](https://docs.npmjs.com/misc/semver) range.
+- Latest is the version of the package tagged as latest in the npm registry.
 
 With this method, to install updates for every package, you just need to run:
 
@@ -86,9 +86,9 @@ ncu -u
 
 Resource: [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
 
--   Red = major
--   Cyan = minor
--   Green = patch
+- Red = major
+- Cyan = minor
+- Green = patch
 
 This updates dependencies in only the package.json file and will select the latest version even if it includes a breaking change. With this method, `npm install` is not run automatically so be sure to run that afterward to update package-lock.json.
 

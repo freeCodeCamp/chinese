@@ -3,48 +3,48 @@
 > -  译者：Utopia-xxl
 > -  校对者：
 
-![What is an SVG File?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/svg.png)
+![什么是 SVG 文件？](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/svg.png)
 
-SVG stands for scalable vector graphics. It's a web-friendly vector-based file format used to render two-dimensional images on the internet.
+SVG 意思是可缩放矢量图形。它是一种web友好的基于矢量的文件格式，用于在 Internet 上呈现二维图像。
 
-You can identify SVG files by their extension – `.svg`.
+你可以通过扩展名识别 SVG 文件 – `.svg`.
 
-Unlike other popular image formats like PNG, JPEG, and JPG – which store image information in form of pixels because they are raster-based formats – SVGs store graphics information as a set of points and lines.
+与其他流行的图像格式（如 PNG、JPEG 和 JPG）不同——它们以像素的形式存储图像信息，因为它们是基于光栅的格式——SVG 将图形信息存储为一组点和线。
 
-This means no matter how SVG files are reworked, zoomed, or resized, they don’t become blurred and pixelated like PNG, JPG, and other raster images.
+这意味着无论 SVG 文件如何重新加工、缩放或调整大小，它们都不会像 PNG、JPG 和其他光栅图像那样变得模糊和像素化。
 
-This article will show you the possibilities of SVG image files and how you can make one for yourself by coding it.
+本文将向你展示 SVG 图像文件的可能性，以及如何通过编码为自己制作一个SVG。
 
-## Table of Contents
+## 文章目录
 
--   [How to Make an SVG File](#howtomakeansvgfile)
-    -   [How to Make an SVG with Image Editing Programs](#howtomakeansvgwithimageeditingprograms)
-    -   [How to Make an SVG with XML](#howtomakeansvgwithxml)
--   [What is an SVG File Used for?](#whatisansvgfileusedfor)
--   [How to Open an SVG File](#howtoopenansvgfile)
--   [How do I Convert an SVG File to an Image?](#howdoiconvertansvgfiletoanimage)
--   [Conclusion](#conclusion)
+-   [如何制作SVG文件](#howtomakeansvgfile)
+    -   [如何使用图像编辑程序制作 SVG](#howtomakeansvgwithimageeditingprograms)
+    -   [如何使用 XML 制作 SVG](#howtomakeansvgwithxml)
+-   [SVG 文件有什么用途？](#whatisansvgfileusedfor)
+-   [如何打开SVG文件](#howtoopenansvgfile)
+-   [如何将 SVG 文件转换为图像？](#howdoiconvertansvgfiletoanimage)
+-   [结论](#conclusion)
 
-## How to Make an SVG File
+<h2 id="howtomakeansvgfile">如何制作SVG文件</h2>
 
-### How to Make an SVG with Image Editing Programs
+<h3 id="howtomakeansvgwithimageeditingprograms">如何使用图像编辑程序制作 SVG</h3>
 
-You can make an SVG file with image editing software like Adobe Illustrator, CorelDraw, Adobe Photoshop, Microsoft Visio, and GIMP.
+你可以使用 Adobe Illustrator、CorelDraw、Adobe Photoshop、Microsoft Visio 和 GIMP 等图像编辑软件制作 SVG 文件。
 
-With these programs, your creativity is your limit when it comes to the SVGs you can draw.
+有了这些程序，当涉及到绘制的 SVG 时，你的创造力就是你的极限。
 
-It depends on how knowledgeable and experienced you are with the programs.
+这取决于你对这些程序的了解和经验。
 
-In addition, if you create an illustration and drawings with Google Docs, you can export them to SVG.
+此外，如果使用 Google Docs 创建插图和绘图，可以将它们导出为 SVG。
 
-### How to Make an SVG with XML
+<h3 id="howtomakeansvgwithxml">如何使用 XML 制作 SVG</h3>
 
-If you don’t know how to use the image editing programs listed above but you can code, you can code up an SVG with XML.
+如果您不知道如何使用上面列出的图像编辑程序但您可以编写代码，则可以使用 XML 编写 SVG。
 
-To code an SVG, create a file with the `.svg` extension:  
+要编写 SVG 代码，请创建一个`.svg`扩展名为的文件： 
 ![ss1](https://www.freecodecamp.org/news/content/images/2022/06/ss1.png)
 
-**Step 1**: Define your SVG opening and closing tags
+**第 1 步**: 定义 SVG 的开始和结束标签
 
 ```xml
 <svg>
@@ -52,7 +52,7 @@ To code an SVG, create a file with the `.svg` extension:
 </svg>
 ```
 
-**Step 2**: Define the version and `xmlns` attributes inside the opening tag and set both to `1.1` and `"http://www.w3.org/2000/svg"` respectively.
+**第 2 步**: 在标签内定义版本和 `xmlns` 属性，分别设置为 `1.1` 和 `"http://www.w3.org/2000/svg"` 。
 
 ```xml
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +60,7 @@ To code an SVG, create a file with the `.svg` extension:
 </svg>
 ```
 
-**Step 3**: Specify the shape you want to draw in a self-closing tag. For example, `<rect>` for rectangle.
+**第 3 步**: 在自闭合标签中指定要绘制的形状。例如，`<rect>` 绘制矩形。
 
 ```xml
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -68,13 +68,13 @@ To code an SVG, create a file with the `.svg` extension:
 </svg>
 ```
 
-**Step 4**: Specify the width and height you want:
+**第 4 步**: 指定你想要设置的宽度和高度:
 
 ```xml
  width="200" height="100"
 ```
 
-**Step 5**: Define the color with which you want to fill the shape with the `fill` attribute:
+**第 5 步**: 设置 `fill` 属性来设置要填充形状的颜色：
 
 ```xml
 fill="#2ecc71"
@@ -88,10 +88,10 @@ The code now looks as shown in the snippet below:
 </svg>
 ```
 
-And at the end, this is what shows in the browser:  
+最后，这就是显示器中显示的内容： 
 ![ss2](https://www.freecodecamp.org/news/content/images/2022/06/ss2.png)
 
-You can also define border-radius on the `x` and `y` axis with the `rx` and `ry` attributes:
+你还可以使用 `rx` 和 `ry` 属性在 `x` 和 `y` 轴上定义边界半径：
 
 ```xml
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -101,13 +101,13 @@ You can also define border-radius on the `x` and `y` axis with the `rx` and `ry`
 
 ![ss3](https://www.freecodecamp.org/news/content/images/2022/06/ss3.png)
 
-After drawing the SVG, you can then use it as the value for the source (`src`) of an image:
+绘制 SVG 后，你就可以将其用作引入图片时 `src` 的值：
 
 ```html
 <img src="svgdraw.svg" alt="A rectangle made with SVG" />
 ```
 
-If you want, you can embed the SVG straight into your HTML code:
+如果需要，可以将 SVG 直接嵌入到 HTML 代码中：
 
 ```html
 <body>
@@ -117,35 +117,35 @@ If you want, you can embed the SVG straight into your HTML code:
 </body>
 ```
 
-## What is an SVG File Used for?
+<h2 id="howtomakeansvgfile">SVG 文件有什么用途？</h2>
 
-Because SVG files remain the same for life, website icons and logos are usually made with them.
+因为 SVG 文件终生不变，所以网站图标和徽标通常是用它们制作的。
 
-An excellent advantage of SVG is that the text in them can be read by search engines like Google, so SVG files are used for making infographics and illustrations.
+SVG 的一个显着优势是其中的文本可以被 Google 等搜索引擎读取，因此 SVG 文件用于制作信息图表和插图。
 
-## How to Open an SVG File
+<h2 id="howtoopenansvgfile">如何打开 SVG 文件</h2>
 
-Modern browsers like Google Chrome, Edge, Safari, and Firefox have built-in functionalities that make them open SVG files for you.
+Google Chrome、Edge、Safari 和 Firefox 等现代浏览器具有内置功能，可以使用它们打开 SVG 文件。
 
-You can also open SVG files in specialized editing software you can use to make them. Again, examples are Adobe Illustrator, CorelDraw, Adobe Photoshop, Microsoft Visio, and GIMP.
+你还可以在可用于制作它们的专用编辑软件中打开 SVG 文件。例如 Adobe Illustrator、CorelDraw、Adobe Photoshop、Microsoft Visio 和 GIMP。
 
-If you want to edit SVG files, you can open them with a Code Editor like VS Code, Atom, and Sublime Text then make your edits.
+如果要编辑 SVG 文件，可以使用 VS Code、Atom 和 Sublime Text 等代码编辑器打开它们，然后进行编辑。
 
-## How do I Convert an SVG File to an Image?
+<h2 id="howdoiconvertansvgfiletoanimage">如何将 SVG 文件转换为图像？</h2>
 
-If you want to convert an SVG to other image formats like PNG, and JPG, you can use image editing programs like Adobe Photoshop.
+如果要将 SVG 转换为其他图像格式，例如 PNG 和 JPG，可以使用 Adobe Photoshop 等图像编辑程序。
 
-You can also use an online tool called [Convertio](https://convertio.co/svg-png/).
+您还可以使用名为[Convertio](https://convertio.co/svg-png/)的在线工具。
 
-All you need to do is to upload your SVG, then select the format you want to convert it to.  
+您需要做的就是上传您的 SVG，然后选择您想要转换的格式。
 ![ss4](https://www.freecodecamp.org/news/content/images/2022/06/ss4.png)
 
-## Conclusion
+<h2 id="conclusion">结论</h2>
 
-There are a lot of reasons why you should be using SVG.
+你应该使用 SVG 的原因有很多。
 
-My favorite of all those reasons is that search engines can read the text on SVG files. This is because SVG files are written in pure XML – the markup language for transmitting digital data.
+所有这些原因中我最喜欢的是搜索引擎可以读取 SVG 文件上的文本。这是因为 SVG 文件是用纯 XML（用于传输数字数据的标记语言）编写的。
 
-If Google and other search engines find relevant keywords in the SVG files, it can lead to a massive boost in SEO.
+如果 Google 和其他搜索引擎在 SVG 文件中找到相关关键字，则可以极大地促进 SEO （搜索引擎优化）。
 
-Thank you for reading.
+感谢你的阅读。

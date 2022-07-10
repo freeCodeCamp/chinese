@@ -224,6 +224,7 @@ Parking Lot Inc. app
 这个 app 是使用 [vite](https://vitejs.dev/) 构建的，因为我最近一直在体验它，并且对于它的速度和性能都十分满意。 
 
 No matter that it’s still in the relatively early stages of development – if I am about to start a new project and am in a position to choose, I will go with **vite**.
+尽管 **vite** 还
 不管它还处于相对早期的开发阶段——如果我要开始一个新项目并且有选择的余地，我会选择**vite**。
 
 This is not to say I have anything against its big brother [CRA](https://create-react-app.dev/). On the contrary, I have built multiple apps with it and I am still using it in some of my projects. It’s just that **vite** is much faster and often gives me everything I currently need.

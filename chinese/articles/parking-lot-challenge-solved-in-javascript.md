@@ -223,15 +223,14 @@ Parking Lot Inc. app
 ~~The app is built with [vite](https://vitejs.dev/). The reason for this is that I've been playing around recently with it and I am really happy with the speed and the performance it provides.~~
 这个 app 是使用 [vite](https://vitejs.dev/) 构建的，因为我最近一直在体验它，并且对于它的速度和性能都十分满意。 
 
-No matter that it’s still in the relatively early stages of development – if I am about to start a new project and am in a position to choose, I will go with **vite**.
-尽管 **vite** 还
-不管它还处于相对早期的开发阶段——如果我要开始一个新项目并且有选择的余地，我会选择**vite**。
+~~No matter that it’s still in the relatively early stages of development – if I am about to start a new project and am in a position to choose, I will go with **vite**.~~
+尽管 **vite** 还处于开发阶段，但如果我要开始开发一个新项目，并且可以选择构建工具的话，我会选择**vite**。
 
-This is not to say I have anything against its big brother [CRA](https://create-react-app.dev/). On the contrary, I have built multiple apps with it and I am still using it in some of my projects. It’s just that **vite** is much faster and often gives me everything I currently need.
-这并不是说我反对它的老大哥 [CRA](https://create-react-app.dev/)。 相反，我已经用它构建了多个应用程序，并且我仍在我的一些项目中使用它。 只是 **vite** 更快，并且经常给我目前需要的一切。
+~~This is not to say I have anything against its big brother [CRA](https://create-react-app.dev/). On the contrary, I have built multiple apps with it and I am still using it in some of my projects. It’s just that **vite** is much faster and often gives me everything I currently need.~~
+这并不是说我反对它的老大哥 [CRA](https://create-react-app.dev/)。 相反，我已经用 creact react app 搭建了很多 app，并且我仍在我的一些项目中使用它。 这是因为 **vite** 更快，更符合我当前的诉求。
 
-💡Just keep in mind that selecting a given technology always depends on your specific needs for a specific project. That is to say that there is no silver bullet. It’s always a matter of requirements and priorities.
-💡请记住，选择给定的技术始终取决于您对特定项目的特定需求。 也就是说，没有银弹。 这始终是需求和优先级的问题。
+~~💡Just keep in mind that selecting a given technology always depends on your specific needs for a specific project. That is to say that there is no silver bullet. It’s always a matter of requirements and priorities.~~
+💡请记住，对于项目的技术选型应该取决于特定项目的特定需求。毕竟，软件开发不存在银弹，优先级和需求对于技术选型更为重要。
 
 ## React App 项目结构
 
@@ -239,42 +238,41 @@ This is not to say I have anything against its big brother [CRA](https://create-
 
 App 项目结构
 
-The app's structure is straightforward. At the root level we have two folders – _assets_ and _src_. The first contains the assets used in the app (in this case it’s just a car image). The later contains all the files with the source code.
-该应用程序的结构很简单。 在根级别，我们有两个文件夹 - _assets_ 和 _src_。 第一个包含应用程序中使用的资产（在本例中，它只是一张汽车图像）。 后者包含所有带有源代码的文件。
+~~The app's structure is straightforward. At the root level we have two folders – _assets_ and _src_. The first contains the assets used in the app (in this case it’s just a car image). The later contains all the files with the source code.~~
+停车场 app 的代码结构十分简洁。可以看到，在根目录，我们有两个文件夹 - _assets_ 和 _src_。  _assets_ 文件夹包含了 app 使用的静态资源（在本例中，它是一张汽车图像）。 _src_ 则包含了 app 的源码文件。
 
-Let’s take a closer look inside the source folder.
-让我们仔细看看源文件夹内部。
+~~Let’s take a closer look inside the source folder.~~
+让我们更深入地看看 _src_ 文件夹吧。
 
-Here we have the following folders:
-在这里，我们有以下文件夹：
+~~Here we have the following folders:~~
+在 _src_ 内部，有下列文件夹：
 
--   [components](https://github.com/mihailgaberov/parking-lot/tree/main/src/components) – contains all React components used in the app
--   [组件](https://github.com/mihailgaberov/parking-lot/tree/main/src/components) - 包含应用程序中使用的所有 React 组件
--   [lib](https://github.com/mihailgaberov/parking-lot/tree/main/src/lib) – contains the parking lot class, responsible for the main logic of the app
--   [lib](https://github.com/mihailgaberov/parking-lot/tree/main/src/lib) - 包含停车场类，负责app的主要逻辑
--   [pages](https://github.com/mihailgaberov/parking-lot/tree/main/src/pages) – contains two sub-directories, for the two main screens in the app – Landing and Main, respectively
--   [pages](https://github.com/mihailgaberov/parking-lot/tree/main/src/pages) – 包含两个子目录，分别用于应用程序中的两个主屏幕 – Landing 和 Main
--   [utils](https://github.com/mihailgaberov/parking-lot/tree/main/src/utils) – contains a helper method for generating fictitious car license plates that we use later when representing a parking slot as _busy_
--   [utils](https://github.com/mihailgaberov/parking-lot/tree/main/src/utils) - 包含一个辅助方法，用于生成我们稍后将停车位表示为_busy_时使用的虚构汽车牌照
--   And several files, most of them are related to the entry point of the app, except the favicon ones – their role should be clear to you. If not, take a look at the tab of your browser 😉
--   - 还有几个文件，其中大部分都与应用程序的入口点有关，除了 favicon 文件——它们的作用你应该很清楚。 如果没有，请查看浏览器的选项卡😉
+-   ~~[components](https://github.com/mihailgaberov/parking-lot/tree/main/src/components) – contains all React components used in the app~~
+-   [components](https://github.com/mihailgaberov/parking-lot/tree/main/src/components) - 包含 app 中使用的所有 React 组件源码
+-   ~~[lib](https://github.com/mihailgaberov/parking-lot/tree/main/src/lib) – contains the parking lot class, responsible for the main logic of the app~·
+-   [lib](https://github.com/mihailgaberov/parking-lot/tree/main/src/lib) - 包含停车场类，负责 app 的主要逻辑
+-   ~~[pages](https://github.com/mihailgaberov/parking-lot/tree/main/src/pages) – contains two sub-directories, for the two main screens in the app – Landing and Main, respectively~~
+-   [pages](https://github.com/mihailgaberov/parking-lot/tree/main/src/pages) – 包含两个子目录，分别用于 app 的两个页面 – Landing 页面和 Main 页面
+-   ~~[utils](https://github.com/mihailgaberov/parking-lot/tree/main/src/utils) – contains a helper method for generating fictitious car license plates that we use later when representing a parking slot as _busy_~~
+-   [utils](https://github.com/mihailgaberov/parking-lot/tree/main/src/utils) - 包含一个辅助方法，用于生成将停车位表示为 _busy_ 时使用的虚构汽车牌照
+-   ~~And several files, most of them are related to the entry point of the app, except the favicon ones – their role should be clear to you. If not, take a look at the tab of your browser 😉~~
+-   还有几个文件，其中大部分都与应用程序的入口程序有关。favicon 文件除外，它的作用你应该有所接触，如果之前没有接触过，那么你可以在浏览器的选项卡上看到它😉
 
 ![image-94](https://www.freecodecamp.org/news/content/images/2022/06/image-94.png)
 
-Browser tab with favicon
-带有图标的浏览器选项卡
+带有 favicon 的浏览器选项卡
 
 ## App 页面
 
 As mentioned earlier, the main pages (also called screens) in the app are called [Landing](https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Landing) and [Main](https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Main). These are React components themselves. They serve as skeletons for everything you see in the welcome page – where you land initially and where you can select how many parking slots you want to have in your parking lot.
-如前所述，app 的主页面（main pages，也称为 mian screens）称为[Landing页]（https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Landing）和[Main]（ https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Main）。 这些是 React 组件本身。 它们充当您在欢迎页面中看到的所有内容的骨架——您最初降落的位置以及您可以在哪里选择您希望在停车场拥有多少停车位。
+如前所述，app 的主页面（main pages，也称为 mian screens）称为[Landing页面]（https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Landing）和[Main页面]（ https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Main）。 这些页面由 React 组件构成，它们是欢迎页面所有内容的骨架。在欢迎页中，你可以选择选择最初的登录位置，并且选择停车场的车位数量。
 
 ![image-95](https://www.freecodecamp.org/news/content/images/2022/06/image-95.png)
 
 欢迎页
 
-And the page you go to after clicking the big, ping submit button - the main screen where your operator is able to manage the parking lot.
-以及点击大的 ping 提交按钮后您转到的页面 - 您的操作员能够管理停车场的主屏幕。
+~~And the page you go to after clicking the big, ping submit button - the main screen where your operator is able to manage the parking lot.~~
+再点击欢迎页的 submit 按钮后，你会跳转到主页面。在主页面，你可以作为操作者对停车场进行管理。
 
 ![image-96](https://www.freecodecamp.org/news/content/images/2022/06/image-96.png)
 
@@ -282,11 +280,11 @@ And the page you go to after clicking the big, ping submit button - the main scr
 
 ## **App 的功能性**
 
-The app provides very basic functionality for managing an imaginary parking lot. When the user select how many slots they want (max 20), they'll be transitioned to the main screen. There, the user will be able to see all free parking slots.
-该应用程序提供了用于管理虚拟停车场的非常基本的功能。 当用户选择他们想要的插槽数量（最多 20 个）时，它们将被转换到主屏幕。 在那里，用户将能够看到所有免费停车位。
+~~The app provides very basic functionality for managing an imaginary parking lot. When the user select how many slots they want (max 20), they'll be transitioned to the main screen. There, the user will be able to see all free parking slots.~~
+停车场 app 提供了最基础的停车场管理功能。当用户选择了他们想要的车位数量（最多可选择 20 个车位）后，用户将回到主页面，并可以看到所有的空闲停车位。
 
-When a car is parked, via the PARK! button, the relevant spot will be visualised as busy and will show the registration number of the car being parked there. The operator can un-park cars by clicking on a busy slot, that is on the car they want to “remove” from the parking lot.
-当汽车停放时，通过公园！ 按钮，相关地点将显示为繁忙，并显示停在那里的汽车的登记号码。 操作员可以通过点击一个繁忙的插槽来取消停放汽车，即他们想要从停车场“移除”的汽车。
+~~When a car is parked, via the PARK! button, the relevant spot will be visualised as busy and will show the registration number of the car being parked there. The operator can un-park cars by clicking on a busy slot, that is on the car they want to “remove” from the parking lot.~~
+用户可以通过 PARK! 按钮停放车辆，对应车位将在车辆停泊后显示为繁忙状态并且展示对应车辆的登记号码。操作者可以通过点击繁忙状态的车位来取消车位的停放车辆，即移除停放车辆。
 
 ~~## 💡The simple animation of the moving red car is just for visual effect and doesn’t have any real influence on the way the parking lot works.~~
 ## 💡红色汽车移动的简单动画只是为了视觉效果，对停车场的运作方式没有任何实际影响。

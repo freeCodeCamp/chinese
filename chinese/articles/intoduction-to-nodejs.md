@@ -1,6 +1,6 @@
 > -  原文地址：[How to Get Started with Node.js – Beginner's Guide to Node](https://www.freecodecamp.org/news/intoduction-to-nodejs/)
 > -  原文作者：[Arash Arora](https://www.freecodecamp.org/news/author/arash/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Get Started with Node.js – Beginner's Guide to Node](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/1200px-Node.js_logo.svg.png)

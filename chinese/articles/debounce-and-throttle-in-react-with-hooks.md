@@ -5,28 +5,28 @@
 
 ![How to Use Debounce and Throttle in React and Abstract them into Hooks](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/og-image.png)
 
-[Hooks](https://reactjs.org/docs/hooks-intro.html) are a brilliant addition to React. They simplify a lot of logic that previously had to be split up into different lifecycles with `class` components.
+[钩子](https://reactjs.org/docs/hooks-intro.html)是对React绝妙的补充。在使用`class`组件时需要被分配到不同生命周期的逻辑，因为钩子而简化了不少。
 
-They do, however, require a _different_ mental model, [especially for first-timers](https://overreacted.io/making-setinterval-declarative-with-react-hooks/).
+当然使用钩子需要具备 _不一样的_ 思考方式， [特别是对于初次使用者来说](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)。
 
-> I also recorded a short [video series](https://www.youtube.com/playlist?list=PLMV09mSPNaQlN92-1Dkz5NDlNgGQJEo75) on this article which you may find helpful.
+> 同时，我也推荐一个[视频合集](https://www.youtube.com/playlist?list=PLMV09mSPNaQlN92-1Dkz5NDlNgGQJEo75)，希望对你学习这个知识点有帮助。
 
-## Debounce and throttle
+## 防抖和节流
 
-There are a ton of blog posts written about debounce and throttle so I won't be diving into how to write your own debounce and throttle. For brevity, consider [`debounce`](https://lodash.com/docs/4.17.15#debounce) and [`throttle`](https://lodash.com/docs/4.17.15#throttle) from Lodash.
+已经有许多介绍如何编写防抖和节流的博文，这里我就不赘述了。简单起见，你可以参考Lodash的[`debounce`](https://lodash.com/docs/4.17.15#debounce)和[`throttle`](https://lodash.com/docs/4.17.15#throttle)。
 
-If you need a quick refresher, both accept a (callback) function and a _delay_ in milliseconds (say `x`) and then both return another function with some special behavior:
+我们快速回顾一下，两种函数都接受一个（回调）函数， 一个以毫秒为单位的 _延迟_ (如 `x`)并且返回另一个具有特殊行为的函数：
 
--   `debounce`: returns a function that can be called any number of times (possibly in quick successions) but will only invoke the callback **after waiting** for `x` ms from the last call.
--   `throttle`: returns a function that can be called any number of times (possibly in quick succession) but will only invoke the callback at most **once** every `x` ms.
+-   `防抖`: 返回一个可以被多次调用的函数（可能是快速连续调用），但仅在最后一次调用之后再**等待** `x`毫秒后才触发回调。
+-   `节流`: 返回一个可以被多次调用的函数（可能是快速连续调用），但仅在每 `x` 毫秒，触发**一次**回调。
 
-## Usecase
+## 用例
 
-We have a minimal blog editor (here's the [GitHub repo](https://github.com/wtjs/react-debounce-throttle-hooks/)) and we would like to save the blog post to the database 1 second after the user stops typing.
+有一个迷你博客编辑器项目(这里是该项目的[GitHub仓库](https://github.com/wtjs/react-debounce-throttle-hooks/)) ，在这个编辑器中，我们希望用户停止输出后1秒钟将博文添加到数据库中。
 
-> You may also refer to [this Codesandbox](https://codesandbox.io/s/github/wtjs/react-debounce-throttle-hooks) if you wish to see the final version of the code.
+> 你可以通过查看[Codesandbox](https://codesandbox.io/s/github/wtjs/react-debounce-throttle-hooks)获取最终代码效果。
 
-A minimal version of our editor looks like this:
+编辑器简化代码如下：
 
 ```js
 import React, { useState } from 'react';
@@ -34,7 +34,7 @@ import debounce from 'lodash.debounce';
 
 function App() {
 	const [value, setValue] = useState('');
-	const [dbValue, saveToDb] = useState(''); // would be an API call normally
+	const [dbValue, saveToDb] = useState(''); // 真实情况下这里应该调用API
 
 	const handleChange = event => {
 		setValue(event.target.value);
@@ -59,15 +59,15 @@ function App() {
 }
 ```
 
-Here, `saveToDb` would actually be an API call to the backend. To keep things simple, I'm saving it in state and then rendering as `dbValue`.
+在这段代码中`saveToDb`在真实场景应该用于向后端发起API调用。在这里我们做简化处理，将数据存入状态（state）然后作为 `dbValue`渲染。
 
-Since we only want to perform this save operation once user has stopped typing (after 1 second), this should be _debounced_.
+因为我们仅想在用户停止输入后（1秒后），执行存储行为，所以我们使用的是 _防抖_。
 
-[Here's](https://github.com/wtjs/react-debounce-throttle-hooks/tree/starter) the starter code repo and branch.
+[这里](https://github.com/wtjs/react-debounce-throttle-hooks/tree/starter)是起始代码库和分支。
 
-## Creating a debounced function
+## 创建一个防抖函数
 
-First of all, we need a debounced function that wraps the call to `saveToDb`:
+首先，我们需要一个防抖函数封装对`saveToDb`的调用:
 
 ```js
 import React, { useState } from 'react';
@@ -75,30 +75,30 @@ import debounce from 'lodash.debounce';
 
 function App() {
 	const [value, setValue] = useState('');
-	const [dbValue, saveToDb] = useState(''); // would be an API call normally
+	const [dbValue, saveToDb] = useState(''); // 真实情况下这里应该调用API
 
 	const handleChange = event => {
 		const { value: nextValue } = event.target;
 		setValue(nextValue);
-		// highlight-starts
+		// 防抖函数开始
 		const debouncedSave = debounce(() => saveToDb(nextValue), 1000);
 		debouncedSave();
-		// highlight-ends
+		// 防抖函数结束
 	};
 
-	return <main>{/* Same as before */}</main>;
+	return <main>{/* 和之前代码一致 */}</main>;
 }
 ```
 
-But, this doesn't actually work because the function `debouncedSave` is created fresh on each `handleChange` call. This will end up debouncing each keystroke rather than debouncing the entire input value.
+但这段代码并不生效，因为 `debouncedSave`在每次 `handleChange` 调用都会被重新创建。这样会对每一次按键的输入的值起作用，而不是整个输入值。
 
 ## useCallback
 
-[`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback) is commonly used for performance optimizations when passing callbacks to child components. But we can use its constraint of memoizing a callback function to ensure the `debouncedSave` references the same debounced function across renders.
+当给子组件传入调用时，[`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback)可优化性能。我们可以借助他对回调函数的记忆化，来确保每次渲染`debouncedSave`都指向同一个防抖函数。
 
-> I also wrote [this article](https://www.freecodecamp.org/news/understanding-memoize-in-javascript-51d07d19430e/) here on freeCodeCamp if you wish to understand the basics of memoization.
+> 我在freeCodeCamp也写过这篇[文章](https://www.freecodecamp.org/news/understanding-memoize-in-javascript-51d07d19430e/)，帮助你理解记忆化的基本知识。
 
-This works as expected:
+这样代码就奏效了：
 
 ```js
 import React, { useState, useCallback } from 'react';
@@ -106,34 +106,34 @@ import debounce from 'lodash.debounce';
 
 function App() {
 	const [value, setValue] = useState('');
-	const [dbValue, saveToDb] = useState(''); // would be an API call normally
+	const [dbValue, saveToDb] = useState(''); // 真实情况下这里应该调用API
 
-	// highlight-starts
+	// 防抖函数开始
 	const debouncedSave = useCallback(
 		debounce(nextValue => saveToDb(nextValue), 1000),
-		[], // will be created only once initially
+		[], // 仅在初次渲染调用
 	);
-	// highlight-ends
+	// 防抖函数结束
 
 	const handleChange = event => {
 		const { value: nextValue } = event.target;
 		setValue(nextValue);
-		// Even though handleChange is created on each render and executed
-		// it references the same debouncedSave that was created initially
+		// 即便每次渲染handleChange都会被创建和执行
+		// 每次都指向初次创建的debouncedSave
 		debouncedSave(nextValue);
 	};
 
-	return <main>{/* Same as before */}</main>;
+	return <main>{/* 和之前代码一致 */}</main>;
 }
 ```
 
 ## useRef
 
-[`useRef`](https://reactjs.org/docs/hooks-reference.html#useref) gives us a mutable object whose `current` property refers to the passed initial value. If we don't change it manually, the value will persist for the entire lifetime of the component.
+[`useRef`](https://reactjs.org/docs/hooks-reference.html#useref) 提供一个可以修改的对象，对象的`current`属性指向传入的最初值。如果不手动修改，该值会在组件的整个生命周期保持不变。
 
-This is similar to class instance properties (i.e. defining methods and properties on `this`).
+这和类组件的实例属性类似 (即使用`this`定义的属性和方法)。
 
-This also works as expected:
+这样做也奏效：
 
 ```js
 import React, { useState, useRef } from 'react';
@@ -141,26 +141,26 @@ import debounce from 'lodash.debounce';
 
 function App() {
 	const [value, setValue] = useState('');
-	const [dbValue, saveToDb] = useState(''); // would be an API call normally
+	const [dbValue, saveToDb] = useState(''); // 真实情况下这里应该调用API
 
-	// This remains same across renders
-	// highlight-starts
+	// 在渲染中保持不变
+	// 防抖函数开始
 	const debouncedSave = useRef(debounce(nextValue => saveToDb(nextValue), 1000))
 		.current;
-	// highlight-ends
+	// 防抖函数结束
 
 	const handleChange = event => {
 		const { value: nextValue } = event.target;
 		setValue(nextValue);
-		// Even though handleChange is created on each render and executed
-		// it references the same debouncedSave that was created initially
+		// 即便每次渲染handleChange都会被创建和执行
+		// 每次都指向初次创建的debouncedSave
 		debouncedSave(nextValue);
 	};
 
-	return <main>{/* Same as before */}</main>;
+	return <main>{/*和之前一样*/}</main>;
 }
 ```
 
-Continue reading on [my blog](https://divyanshu013.dev/blog/react-debounce-throttle-hooks/) for how to abstract these concepts into custom hooks or check out the [video series](https://www.youtube.com/playlist?list=PLMV09mSPNaQlN92-1Dkz5NDlNgGQJEo75).
+你可以浏览[我的博客](https://divyanshu013.dev/blog/react-debounce-throttle-hooks/) 了解如何自定义钩子来抽象化这些概念，或者点击[这个视频系列](https://www.youtube.com/playlist?list=PLMV09mSPNaQlN92-1Dkz5NDlNgGQJEo75)，了解更多内容。
 
-You may also follow me on [Twitter](https://twitter.com/divyanshu013) to stay updated on my latest posts. I hope you found this post helpful. :)
+你可以关注我的 [Twitter](https://twitter.com/divyanshu013) 来获取最新信息，希望这篇文章对你有帮助。 :)

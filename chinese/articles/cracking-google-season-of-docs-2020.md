@@ -5,134 +5,134 @@
 
 ![How to Crack the Google Season of Docs Application Process for 2020](https://www.freecodecamp.org/news/content/images/size/w2000/2020/05/article-banner--14-.png)
 
-Over the years, [surveys](https://cdn2.hubspot.net/hubfs/4008838/Resources/The-2019-Tidelift-managed-open-source-survey-results.pdf) have shown the importance of good documentation in how developers choose and use open source.
+近年，有[调查](https://cdn2.hubspot.net/hubfs/4008838/Resources/The-2019-Tidelift-managed-open-source-survey-results.pdf)表明良好的文档对开发者如何选择和使用开源非常重要。
 
-In the inaugural Google Season of Docs (GSoD) program in 2019, the program received nearly 450 technical writer applications and over 50 technical writers were accepted.
+2019年首届Google Season of Docs（GSoD，即谷歌文档之季）项目，共收到了近450份技术写作者的申请，最终有50多名技术写作者被录取。
 
-As one of the technical writers who were accepted to participate in the Google Season of Docs program, I thought to share some insights on how to prepare and create a strong application for the GSoD program.
+作为入选参加GSoD项目的技术写作者之一，我想分享一些关于如何为GSoD项目做准备并制作有竞争力申请书的想法。
 
-# Table of Contents
+# 目录
 
--   What is Google Season of Docs?
--   Who is eligible to participate in the program?
--   Benefits of Participating
--   5 Tips to ace your GSoD application
--   My GSoD experience
--   Useful resources
+-   [Google Season of Docs是什么？](#what-is-google-season-of-docs)
+-   [哪些人有资格参与该项目？](#who-is-eligible-to-participate-in-the-program)
+-   [参与该项目的好处](#benefits-of-participating)
+-   [让你的GSoD申请脱颖而出的5个建议](#5-tips-to-ace-your-gSoD-application)
+-   [我的GSoD项目经验](#my-gSoD-experience)
+-   [有用的参考资源](#useful-resources)
 
-# What is Google Season of Docs?
+<h1 id="what-is-google-season-of-docs">Google Season of Docs是什么？</h1>
 
-Season of Docs is an annual program organised by Google. Its goal is to bring technical writers and open source organisations together to foster collaboration and improvement of documentation in the Open Source space.
+文档之季是一个由谷歌组织的年度项目。其目标是连接开源组织与技术文档写作者，促进开源领域中的协作和文档提升。
 
-This initiative is extremely important because the documentation of an Open Source project provides an avenue for users to not only understand the project but also make contributions to it.
+这项活动非常重要，因为通过开源项目的文档，用户不仅可以理解该项目，还可以为项目做出贡献。
 
-During the program, accepted technical writers spend between 3-5 months either building a new doc set, improving the structure of the existing docs, developing a much-needed tutorial, or improving the contribution processes and guides of an Open Source organisation.
+在项目期间，入选的技术写作者将花费3-5个月的时间来构建一套新的文档、改进现有文档的结构、开发一个急需的教程或改进一个开源组织的贡献流程和指南。
 
-# Who is eligible to participate in the program?
+<h1 id="who-is-eligible-to-participate-in-the-program">哪些人有资格参与该项目？</h1>
 
-According to [Google's rules](https://developers.google.com/season-of-docs/docs), you must be at least 18 years old at the time of registration. You must also have prior experience as a technical writer and be eligible to work in your country of residence.
+根据[谷歌的规则](https://developers.google.com/season-of-docs/docs)，在注册时你必须已年满18岁。你还必须有技术写作者的实践经验，并且有资格在你的居住国工作。
 
-If you meet these qualifications, then you can apply to participate in the Google Season of Docs program.
+如果你符合这些资格，就可以申请参加GSoD项目。
 
-# Benefits of Participating
+<h1 id="benefits-of-participating">参与该项目的好处</h1>
 
-There are so many benefits that come with participating in the Season of Docs program. Some are:
+参加文档之季项目，有很多好处，比如：
 
-### You can get a stipend
+### 你可以获得一笔津贴
 
-After you've completed the Google Season of Docs program, you get paid a stipend by Google. It is important to note that this stipend is optional so you have to indicate that you want to be paid during the application phase.
+在完成GSoD项目后，你会获得由谷歌支付的一笔津贴。值得注意的是，这项津贴是可选的，因此你必须在申请阶段表明你希望获得津贴。
 
-The stipend amount is calculated based on your location. See [here](https://developers.google.com/season-of-docs/docs/tech-writer-stipends) for full details about the stipends.
+津贴金额是按照申请人所在国家的购买力平价计算的。有关津贴的完整详细信息，请参考[此处](https://developers.google.com/season-of-docs/docs/tech-writer-stipends)。
 
-### You improve your skills
+### 你可以提高自己的技能
 
-Another obvious benefit of participating in the Google Season of Docs program is that it allows you to improve your skills as a technical writer.
+参与GSoD项目的另一个明显好处是，可以提高你的技术写作技能。
 
-### You expand your network
+### 你可以扩大自己的人际圈子
 
-Other than improving as a technical writer, you also get an opportunity to work with people doing amazing things in the Open source space.
+除了提高自己在技术写作方面的技能，你还有机会与在开源领域做着了不起事情的人一起工作。
 
-In my case, I got an opportunity to work with the [VideoLAN organization](https://www.videolan.org/index.html) and that meant I had to work closely with the president of the organisation and major contributors to the projects.
+就我而言，我有机会与[VideoLAN组织](https://www.videolan.org/index.html)合作，这意味着我必须与该组织的社长和项目的主要贡献者密切合作。
 
-### You can get recommendations and referrals
+### 你可以获得推荐和介绍
 
-When applying for any job, having a good recommendation letter often helps to strengthen your application.
+在申请任何工作时，一封好的推荐信往往有助于提高你申请的成功率。
 
-Working closely with a mentor on the Season of Docs project presents an opportunity to securing a rich source of recommendations and referrals.
+与文档之季项目的导师紧密合作，将有机会获得丰富的推荐和介绍资源。
 
-### You gain access to future opportunities
+### 你可以获得未来进入谷歌的机会
 
-If you are ready to apply for a technical writing role at Google, including your Season of Docs experience in your résumé gives you more advantages compared to other applicants.
+如果你准备申请谷歌的技术写作职位，那么与其他申请人相比，你简历中的文档之季项目经验会让你有更多优势。
 
-### You become an Open Source contributor
+### 你可以成为一个开源贡献者
 
-Aside from all the aforementioned benefits, participating in the season of Docs program means you get to contribute to Open Source projects. This helps the world debunk the stereotype that Open Source Contributions are only meant for Software developers.
+除了上述所有好处之外，参加文档之季项目意味着您可以为开源项目做出贡献。这有助于人们打破开源贡献仅适用于软件开发人员的刻板印象。
 
-# 5 Tips to ace your GSoD application
+<h1 id="5-tips-to-ace-your-gSoD-application">让你的GSoD申请脱颖而出的5个建议</h1>
 
-Here are 5 tips to help you prepare and create a strong application for the Season of Docs program.
+以下5个建议，帮助你为GSoD项目做准备和制作有竞争力申请书。
 
-### Create and publish articles on your blog
+### 在你的博客上创建和发表文章
 
-One of the most important criteria of getting accepted as a technical writer in the Google Season of Docs program is the ability to show that you have prior writing experience.
+在GSoD项目中被录取为技术写作者的最重要标准之一是能够证明你以前有写作经验。
 
-Google and the proposed mentors of the project you want to work on need to be convinced that you are the right person to work on the project. This means they want to see a good number of well-written documentation and articles you've created.
+谷歌和你想从事项目的拟派导师需要确信你是从事该项目工作的合适人选。这意味着他们希望能看到你创作的大量优质文档和文章。
 
-Thankfully, it is not too late to create a blog or publish more content on your already existing blog.
+值得一提的是，现在去创建一个博客或在现有博客上发布更多内容还不算太晚。
 
-If you already have a blog, it's a good idea to publish more well-written articles before, during, and after you've submitted your proposal. If you don't have any blog, it is still not too late to create one using [Hashnode's Devblog](https://hashnode.com/devblog) or your preferred platform and publish well written articles as well.
+如果您已经有一个博客，那么在你提交申请之前、期间及之后发表更多优质文章是个不错的方法。如果你没有任何博客，那么使用[Hashnode's Devblog](https://hashnode.com/devblog)或你喜欢的平台创建一个博客并发布优质文章仍为时不晚。
 
-### Choose the right Open Source project
+### 选择合适的开源项目
 
-Honestly, I can't overemphasise the importance of choosing the right Open Source project. This is because it has a strong role to play in getting you into the program.
+事实上，我再怎么强调选择合适的开源项目的重要性也不为过。这是因为它对你是否能进入该项目有重大影响。
 
-Here are my thoughts on choosing the right project:
+以下是我对选择合适项目的想法：
 
--   Go through all the [approved projects](https://developers.google.com/season-of-docs/docs/participants) and try to select at least 5 projects you are interested in.
--   After selecting at least 5 projects, scan through again and reduce the projects to a maximum of 3 projects and a minimum of 2 projects.
--   While it may be reasonable to focus on one project during the application phase, I encourage you to apply for at least two projects to improve your chances of getting accepted for at least one project.
--   For each project you choose, join the organizations' communication channel, and let the maintainers of the project know about your interest in that project. That way, you will be able to establish a relationship between yourself and the mentor. Also, note that mentors don't choose people just because they have the necessary skills. They also select applicants because they believe they can work with them as well. So when you send a message to a mentor, be explicit about exactly what you need and most importantly don't get upset that they did not respond immediately because most of the mentors are volunteers who have other full time jobs.
--   Do not wait to be spoon-fed. Carry out a lot of research about the project. Discover and understand everything you need to know and if you have any concerns, reach out to the proposed mentor of that project for help or ask other members of that community.
--   Most importantly, write down anything you discover during your research that will be helpful if you get accepted to work on the project or information that will help to improve your proposal.
+-   认真查看所有[已录取的项目](https://developers.google.com/season-of-docs/docs/participants)，并尝试选出至少5个你感兴趣的项目。
+-   选出至少5个项目后，再次浏览，将项目数量缩减至2到3个。
+-   虽然可能在申请阶段只专注于一个项目是合理的，但我鼓励你至少申请两个项目，这样你至少被一个项目录取的机会就会更大。
+-   对于你选择的每个项目，加入其所在组织的沟通渠道，并让项目的维护者知道你对该项目的兴趣。这样，你将能够与导师建立关系。另外，请注意，导师选择人时并不仅仅因为申请人拥有必要的技能，还因为他们认为申请人能够与他们合作。因此，当你向导师发送信息时，要明确说明你的需求。最重要的是不要因为他们没有立即回复而感到沮丧，因为大多数导师都是有其他全职工作的志愿者。
+-   不要被动等待。对项目进行大量研究，去发现并理解你需要了解的所有内容，如果你有任何疑问，请向该项目的拟派导师寻求帮助，或询问该社区的其他成员。
+-   最重要的是，在研究过程中，写下任何有用的信息。一些信息在将来若你被某项目录取后，可能会用上。而一些信息可以用于优化你的提案。
 
-### Write a proposal
+### 撰写一份提案
 
-A lot of people don't know this, but writing a proposal is vital. It gives you a clear understanding of the project goal, the timeline it will take for you to complete the project, what you need to know, and so on.
+很多人不知道这一点，但写一份提案是至关重要的。它让你清楚地了解项目的目标、你完成项目所需的时间线、你需要了解的内容等等。
 
-Aside from that, writing a proposal also shows your mentor your goals for the project, why you believe you are the right person for the role, your experience, project timelines, and more.
+除此之外，写提案还可以向你的导师展示你对该项目的目标、为什么你认为你是这个角色的合适人选、你的经验、项目时间线等等。
 
-After writing your proposal, send it to the mentor of the project for review. Their review will help you know the project requirements from the mentor's point of view. I have added a link to my Google Season of Docs proposal in the Resources section.
+写完提案后，将其发送给项目的导师进行审核。他们的审核将帮助你从导师的角度了解项目的要求。我在Resources部分添加了我的GSoD提案的链接。
 
-### Make at least one contribution to the Open Source Organization
+### 至少为开源组织做出一项贡献
 
-The Season of Docs program is not like Google Summer of Code where you are required to make at least one contribution to the Open Source project of interest. But making a contribution can definitely improve your chance of getting accepted, so try to do so.
+文档之季项目并不像Google Summer of Code（GSoC，即谷歌编程之夏）项目那样要求你对感兴趣的开源项目至少做出一项贡献。但是做出贡献绝对可以提高你被录取的机会，所以试试吧。
 
-### Stay active in the community after the application deadline
+### 在申请截止日期后仍在社区中保持活跃
 
-After submitting your application, try to stay active in that Open Source organization. This shows the mentors that you are passionate about that project and that Open Source community at large.
+提交申请后，尽量在该开源组织中保持活跃。这可以最大程度地向导师们表明，你对这个项目和开源社区充满热情。
 
-# My GSoD experience
+<h1 id="my-gSoD-experience">我的GSoD项目经验</h1>
 
-During the GSoD program last year, I was opportune to work with the [VideoLAN organization](https://www.videolan.org/index.html) on the project Modernize (rewrite) the VLC user documentation.
+在去年的GSoD项目中，我有机会与[VideoLAN组织](https://www.videolan.org/index.html)合作开展VLC用户文档现代化（重写）项目。
 
-After my proposal was accepted by the VideoLAN organization, my mentors and I agreed on the goals that I was expected to achieve during the Google Season of Docs program.
+在我的提案被VideoLAN组织接受后，我的导师和我就商定了我在GSoD项目中要实现的目标。
 
-These were my goals:
+这些就是我的目标：
 
-1.  Restructure the documentation.
-2.  Update the documentation to fit the modern versions of VLC.
-3.  Migrate the user documentation to Gitlab using Sphinx and ReadtheDocs.
-4.  Remove obsolete images and information.
-5.  Rewrite the user documentation to make it easy to understand.
-6.  Set it up for translation using Sphinx Internationalization.
+1.  重构文档。
+2.  更新文档以适应VLC的现代版本。
+3.  使用Sphinx和ReadtheDocs将用户文档迁移到Gitlab。
+4.  删除过时的图像和信息。
+5.  重写用户文档，使其易于理解。
+6.  使用国际化版Sphinx进行翻译。
 
-I learned a lot more about the VideoLAN organization and [VLC](https://www.videolan.org/vlc), I found out that VLC has more features I never knew about, and I learned how to use the Sphinx documentation platform and restructure text.
+我对VideoLAN组织和[VLC](https://www.videolan.org/vlc)有了更多的了解，我发现了很多我从未了解的VLC功能，并且我学会了如何使用Sphinx文档平台并重构文本。
 
-My technical writing skills also improved tremendously as well. Overall, participating in the Google Season of Docs program was one of the best things that happened to me in 2019.
+我的技术写作技巧也得到了极大的提高。总的来说，参加GSoD项目是2019年我经历的最好的事情之一。 
 
-# Useful resources
+<h1 id="useful-resources">有用的参考资源</h1>
 
-Find below a list of useful resources to help you learn more about the Season of Docs program and Technical Writing.
+以下是一份有用的资源列表，帮助你了解更多关于文档之季项目和技术写作的信息。
 
 -   [My Accepted Season of Docs proposal](https://docs.google.com/document/d/1sjHn5OGVZB0EbWHFL9_9Ty63oCF2itlYww2bf9Qhwtc/edit?usp=sharing)
 -   [Google Season of Docs Project Report](https://medium.com/@EdidiongAsikpo/gsod-project-report-modernize-rewrite-the-vlc-user-documentation-aede033e1124)
@@ -141,4 +141,4 @@ Find below a list of useful resources to help you learn more about the Season of
 -   [Season of Docs Slack channel](https://seasonofdocs.slack.com/)
 -   [Awesome Technical Writing](https://github.com/BolajiAyodeji/awesome-technical-writing)
 
-Like this article? Follow [@Didicodes](https://twitter.com/Didicodes) on Twitter.
+喜欢这篇文章？Twitter上关注我[@Didicodes](https://twitter.com/Didicodes)。

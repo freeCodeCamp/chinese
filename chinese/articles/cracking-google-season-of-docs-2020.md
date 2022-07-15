@@ -1,6 +1,6 @@
 > -  原文地址：[How to Crack the Google Season of Docs Application Process for 2020](https://www.freecodecamp.org/news/cracking-google-season-of-docs-2020/)
 > -  原文作者：[Edidiong Asikpo](https://www.freecodecamp.org/news/author/edidiong/)
-> -  译者：
+> -  译者：Narcissus91
 > -  校对者：
 
 ![How to Crack the Google Season of Docs Application Process for 2020](https://www.freecodecamp.org/news/content/images/size/w2000/2020/05/article-banner--14-.png)

@@ -517,9 +517,9 @@ const goToInput = () => ref.current!.scrollIntoView();
 
 ### Solution 1: Find an Alternative Fix
 
-The first line of action you should employ is to find an alternative fix.
+你应该对第一行找到一个替代的修复方法。
 
-For example, often you can explicitly check for `null` and `undefined` values like this:
+例如，通常你可以像这样明确地检查 `null` 和 `undefined` 值。:
 
 ```ts
 // before 
@@ -528,60 +528,60 @@ const goToInput = () => ref.current!.scrollIntoView();
 // now 
 const goToInput = () => {
   if (ref.current) {
-   //Typescript will understand that ref.current is certianly 
-   //avaialble in this branch
+   //Typescript会认为 ref.current肯定是 
+   //可以在这个条件下中使用
      ref.current.scrollIntoView()
   }
 };
 
-// alternatively (use the logical AND operator)
+//  或者（使用逻辑与运算符）
 const goToInput = () => ref.current && ref.current.scrollIntoView();
 ```
 
-Numerous engineers will argue over the fact that this is more verbose.
+众多工程师会争论这个事实，即使代码更啰嗦。
 
-That’s correct.
+这是对的。
 
-But you should choose verbose over possibly breaking code being pushed to production.
+但是你应该选择详细而不是可能破坏代码，并将代码推送到生产环境。
 
-This is a personal preference. Your mileage may differ.
+这是个人喜好。 您选择的道路可能会有所不同。
 
 ### Solution 2: Explicitly Throw an Error
 
-In cases where an alternative fix doesn’t cut it and the non-null assertion operator seems like the only solution, I typically advise you throw an error before doing this.
+在其他修复方法不能解决问题的情况下，非空断言运算符似乎是唯一的解决方案，我通常建议你在这样做之前抛出一个错误。
 
-Here’s an example (in pseudocode):
+下面是一个例子（用伪代码）:
 
 ```ts
 function doSomething (value) {
-   // for some reason TS thinks the value could be  
-   // null or undefined but you disagree
+   // 出于某种原因，TS认为该值可能是  
+   // null 或者 undefined ， 但你不同意
    
   if(!value) {
-    // explicilty assert this is the case 
-    // throw an error or log this somewhere you can trace
+    // 明确地断言这就是情况 
+    // 抛出一个错误或在某个地方记录这个错误，你可以追踪
     throw new Error('uexpected error: value not present')
   } 
 
-  // go ahead and use the non-null assertion operator
+  // 继续使用非空的断言运算符
   console.log(value)
 }
 ```
 
-A practical case where I’ve found myself sometimes doing this is while using `Formik`.
+我发现自己有时会这样做的一个实际案例是在使用`Formik`时。
 
-Except things have changed, and I do think `Formik` is poorly typed in numerous instances.
+除了事情发生了变化，我确实认为`Formik`在许多情况下是不好的类型。
 
-The example may go similarly if you've done your Formik validation and are sure that your values exist.
+如果你已经完成了 Formik 的验证，并确定你的值存在，那么这个例子可能会有类似的效果。
 
-Here’s some pseudocode:
+这里有一些伪代码:
 
 ```ts
 <Formik 
   validationSchema={...} 
   onSubmit={(values) => {
-   // you are sure values.name should exist because you had 
-   // validated in validationSchema but TypeScript doesn't know this
+   // 你确定 values.name 应该存在，因为你有验证了
+   // 但TypeScript不知道这一点
 
    if(!values.name) {
     throw new Error('Invalid form, name is required')  
@@ -593,7 +593,7 @@ Here’s some pseudocode:
 </Formik>
 ```
 
-In the pseudocode above, `values` could be typed as:
+在上面的伪代码中，`values` 可以这样定义:
 
 ```ts
 type Values = {
@@ -601,31 +601,32 @@ type Values = {
 }
 ```
 
-But before you hit `onSubmit`, you’ve added some validation to show a UI form error for the user to input a `name` before moving on to the form submission.
+但是在你点击`onSubmit`之前，你已经添加了一些验证，显示一个 UI 表单错误，让用户在继续提交表单之前输入一个`name`。
 
-There are other ways to get around this. But if you’re sure a value exists but can’t quite communicate that to the TypeScript compiler, use the non-null assertion operator. But also add an assertion of your own by throwing an error you can trace.
+还有其他方法可以解决这个问题。但如果你确定一个值存在，但又不能完全传达给 TypeScript 编译器，可以使用非空断言操作符。
+但也通过可以添加你自己的断言来抛出一个你可以追踪的错误。
 
 ## How About an Implicit Assertion?
 
-Even though the name of the operator reads non-null assertion operator, no “assertion” is actually being made.
+尽管运算符的名字是非空断言运算符，但实际上没有断言(assertion)。
 
-You’re mostly asserting (as the developer) that the value exists.
+你主要是在断言（作为开发者）这个值存在。
 
-The TypeScript compiler does NOT assert that this value exists.
+TypeScript 编译器并没有断言这个值存在。
 
-So, if you must, you may go ahead and add your assertion (for example as discussed in the earlier section).
+所以，如果你必须这样做，你可以继续添加你的断言（例如，在前面的章节中讨论的）。
 
-Also, note that no more JavaScript code is emitted by using the non-null assertion operator.
+另外，请注意，使用非空断言运算符不需要更多的 JavaScript 代码来发出（emitted）事件。
 
-As stated earlier, there’s no assertion done here by TypeScript.
+如前所述，TypeScript 在这里没有做断言。
 
-Consequently, TypeScript will not emit some code that checks if this value exists or not.
+因此，TypeScript 不会通过一些代码来检查这个值是否存在。
 
-The JavaScript code emitted will act as if this value always existed.
+如果这个值存在，JavaScript 代码会发出（emitted）一个事件。
 
 ![image-62](https://www.freecodecamp.org/news/content/images/2022/07/image-62.png)
 
-Emitted javascript code same as Javascript
+Emitted javascript code same as Javascript（我看不懂）
 
 ## Conclusion
 

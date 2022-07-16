@@ -417,7 +417,7 @@ TypeScript 将报错 : `Object is possibly 'null'.(2531)`.
 
 Typescript error: Object is possibly null（对象可能为空）
 
-反过来说，一个相当懒的方法是使用非空的断言操作符来消除编译器的错误:
+反过来说，一个相当懒的方法是，使用非空的断言操作符来消除编译器的错误:
 
 ```ts
 function duplicate(text: string | null) {
@@ -425,19 +425,20 @@ function duplicate(text: string | null) {
 }
 ```
 
-Note the exclamation mark after the `text` variable – `text!`.
+注意`text`变量后面的感叹号——`text!`。
 
-The `text` type represents `string | null`.
+`text`类型代表`string | null`。
 
-`text!` represents just `string`, that is with `null` or `undefined` removed from the variable type.
+`text!` 只代表`string`，也就是把``null``或 `undefined` 从变量类型中删除。
 
-The result? You’ve silenced the TypeScript error.
+结果是什么？你已经消除了 TypeScript 的错误。
 
-However, this is a silly fix.
+然而，这是一个愚蠢的修复。
 
-`duplicate` can indeed be called with `null`, which may lead to unexpected results.
+`duplicate`确实可以在 `null` 的情况下被调用，这可能会导致意外的结果。
 
-Note that the following example also holds true if `text` is an optional property:
+请注意，如果`text`是一个可选的属性，下面的例子也是成立的：
+
 
 ```ts
 // text could be "undefined"
@@ -448,21 +449,21 @@ function duplicate(text?: string) {
 
 ## Pitfalls of the `!` Operator (and What to Do Instead)
 
-When working with TypeScript as a new user, you may feel like you’re fighting a losing battle.
+当作为一个新用户使用 TypeScript 时，你可能觉得自己在打一场会失败的仗。
 
-The errors don’t make sense to you.
+这些错误对你来说毫无意义。
 
-Your goal is to remove the error and move on with your life as swiftly as you can.
+你的目标是消除错误，尽可能迅速地继续你的生活。
 
-However, you should be careful with using the non-null assertion operator.
+然而，你应该小心使用非空断言操作符（！）。
 
-Silencing a TypeScript error doesn’t mean there may not still be an underlying issue—if unaddressed.
+消除一个 TypeScript 错误并不意味着消除一个潜在的问题。
 
-As you saw in the earlier example, you lose every relevant TypeScript safety against wrong usages where `null` and `undefined` could be unwanted.
+正如您在前面的示例中看到的那样，您会失去所有相关的 TypeScript 安全性，以防止 `null` 和 `undefined` 的错误用法。
 
-So, what should you do?
+那么，你应该怎么做？
 
-If you write React, consider an example you’re likely familiar with:
+如果你写 React，考虑一个你可能熟悉的例子:
 
 ```ts
 const MyComponent = () => {
@@ -480,23 +481,23 @@ const MyComponent = () => {
 };
 ```
 
-In the example above (for those who do not write React), in the `React` mental model, `ref.current` will certainly be available at the time the button is clicked by the user.
+在上面的示例中（对于那些不编写 React 的人），在 `React` 心智模型（mental mode）中，`ref.current` 在用户单击按钮时肯定会可用。
 
-The `ref` object is set soon after the UI elements are rendered.
+`ref` 对象在 UI 元素被渲染后不久就会被设置。
 
-TypeScript does not know this, and you may be forced to use the non-null assertion operator here.
+TypeScript 不知道这一点，所以你可能被迫在这里使用非空断言操作符。
 
-Essentially, say to the TypeScript compiler, I know what I’m doing, you don’t.
+实际上，开发者对 TypeScript 编译器说，我知道我在做什么，你（TypeScript 编译器）不知道。
 
 ```ts
 const goToInput = () => ref.current!.scrollIntoView();
 ```
 
-Note the exclamation mark `!`.
+注意惊叹号`！`。
 
-This “fixes” the error.
+这 "修复" 了这个错误。
 
-However, if in the future, someone removes the `ref` from the input, and there were no automated tests to catch this, you now have a bug.
+但是，如果将来有人从输入中删除了 `ref`，而又没有自动测试来捕捉这一点，你现在就有一个错误。
 
 ```ts
 // before
@@ -506,13 +507,13 @@ However, if in the future, someone removes the `ref` from the input, and there w
 <input />
 ```
 
-TypeScript will be unable to spot the error in the following line:
+TypeScript 将无法发现以下一行的错误:
 
 ```ts
 const goToInput = () => ref.current!.scrollIntoView();
 ```
 
-By using the non-null assertion operator, the TypeScript compiler will act as if `null` and `undefined` are never possible for the value in question. In this case, `ref.current`.
+通过使用 非空（non-null）断言操作符，TypeScript 编译器将认为 `null`和`undefined`对于相关的值来说是不可能的。在这种情况下，`ref.current`。
 
 ### Solution 1: Find an Alternative Fix
 

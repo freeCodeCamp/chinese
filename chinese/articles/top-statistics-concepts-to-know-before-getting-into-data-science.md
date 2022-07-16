@@ -6,51 +6,75 @@
 ![Statistics for Beginners – Top Stats Concepts to Know Before Getting into Data Science](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/who-s-denilo-3ECPkzvwlBs-unsplash.jpg)
 
 You've probably heard that statistics is the gateway to data science and that the data science map starts with stats.
+你可能已经听说过统计学是数据科学的入口，数据科学之旅从统计学开始。
 
 Perhaps you've also heard from others that you have to learn statistics before learning data science.  But then you ponder, "Since I'm not from a technical background like science, technology, engineering, or math (STEM), do I need to learn everything in statistics before getting into data science?" And those same people will tell you "Yes! You have to learn statistics."
+也许你也从别人那儿听说过，在学习数据科学之前，你必须先学统计。但是你又会寻思，“既然我没有从科学、技术、工程或数学（STEM）而来的技术背景，我还需要在学习数据科学之前学会关于统计学的一切吗？”同样也是这群人会告诉你“是的！你必须学习统计学。”
 
 Well, here's my answer: you don't need to learn all of statistics before beginning data science (though you do need to learn some fundamentals).
+好吧，我的答案是：在开始数据科学之前，你并不需要学习所有的统计学知识（虽然你确实需要了解一些基础）。
 
 You can also learn as you go instead of wasting time learning statistics first before data science (that is, as you advance in your knowledge of data science, you can always learn more statistics concepts).
+你可以边学边做而不是浪费时间在学数据科学之前先学统计学（也就是说，随着你对数据科学知识的增加，你总能学到更多的统计学概念）。
 
 That being said, it is helpful to know statistics basics before jumping into data science. You can indeed say that stats is the gateway to data science because it will help you to have some intuition about your data and how to work with it.
+话虽如此，在跳入数据科学领域之前，了解统计学基础对你而言是有帮助的。你确实可以说统计学是通往数据科学的大门，因为它会帮助你建立一些关于数据及如何使用数据的直觉。
 
 In this article, we'll look at the top statistical concepts you need to know before diving into data science. I'll make it as simple as possible even if you don't come from a technical background. I can tell you're excited and ready to dive into the realm of data science. Let's get started.
+在这篇文章中，我们将会看看在你深入研究数据科学之前，你所需要的顶级统计学概念。我会让这些概念尽可能的简单，即便你并不来自于技术背景。我确保你已经很兴奋并且准备好深入数据科学的领域了。让我们开始吧！
 
 # What is Statistics?
+# 什么是统计学？
 
 According to economist and sampling technique pioneer Arthur Lyon Bowley, Statistics is:
+根据经济学家和抽样技术（sampling technique）先驱 Arthur Lyon Bowley 的说法，统计学是：
 
 > "numerical statements of facts in any department of inquiry placed in relation to each other."
+> “在任何研究的领域中，事实的数字化陈述都是相互关联的”
 
 That basically means that statistics helps us comprehend our data and also helps us convey the results in that data to others.
+这基本上意味着，统计学帮助我们理解我们的数据，并帮助我们将数据中的结果传达给其他人。
 
 Statistical methods (that is, the techniques employed in dealing with data in statistics) are classified into two types:
+统计方法（即统计学中处理数据时采用的手段）分为两类：
 
 1.  Descriptive Statistics
+1. 描述性统计
 2.  Inferential Statistics
+2. 推断性统计
 
 **Descriptive Statistics** is a discipline of statistics that assists us in summarizing data through numerical values or graphical visualization.
+**描述性统计**是统计学中的一门学科，协助我们通过数值（numerical values）或图形可视化（graphical visualization）来总结数据。
 
 Descriptive statistics helps us identify and understand some key properties in our data. It includes concepts such as central tendency, dispersion, boxplots, histograms, and so on, which we'll discuss later in the article.
+描述性统计帮助我们识别并理解一些我们数据中关键的特性。它包含了例如中心趋势、离散、图表、直方图等等概念，我们将会在稍后的文章中提及。
 
 **Inferential Statistics,** on the other hand, is a branch of statistics that helps us make decisions or predictions based on the data that we have gathered.
+在另一方面，**推断性统计**是统计学的另一分支，帮助我们基于我们收集到的数据，做决定与预测。
 
 Inferential statistics is a significantly more advanced topic because it requires a deep understanding of descriptive statistics. It includes concepts such as hypothesis, probability, and so forth.
+推断性统计是一个明显更进阶的主题，因为它需要对描述性统计有更深层的理解。它包含了诸如假设、概率等概念。
 
 # Top Statistical Concepts to Know Before Learning Data Science
+# 在学习数据科学之前需要了解的顶级统计学概念
 
 Since you're now familiar with the definition of statistics, let's have a look at some of the concepts you'll need to know in statistics that'll help guide you when you dive into the realm of statistics.
+既然你已经对统计学的定义熟悉了，让我们看看一些在统计学中你需要知道的概念，他们将指引你深入统计学的领域。
 
 Among the most fundamental concepts are:
+其中最基本的概念是：
 
 ## What is a Subject?
+## 什么是实验对象（Subject）？
 
 This is the specific thing we wish to observe. It could be a person, an animal, or something else. It is also known as observation.
+这是一个我们希望研究的具体事物。它可以是一个人、一个动物或其他东西。它也能被称为观测值(observation)。
 
 ## What is a Population?
+## 什么是总体（Population）？
 
 Population refers to the entire set of topics in which we are interested (that is, that we want to observe). Assume you wish to count the number of females in a specific country.
+总体指的是我们感兴趣的整个主题（也就是我们想要观察的）。假设你希望计算特定国家的女性人数。
 
 ## What is a Sample?
 

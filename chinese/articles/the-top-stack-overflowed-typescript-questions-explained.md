@@ -119,7 +119,7 @@ type Children = [Female, Male, Female]
 
 ### Key difference: an interface can be extended by declaring it multiple times
 
-Consider the following example:
+请思考以下例子:
 
 ```ts
 interface Human {
@@ -131,7 +131,7 @@ interface Human {
 }
 ```
 
-The two declarations above will become:
+上面的两个声明将变成:
 
 ```ts
 interface Human {
@@ -140,17 +140,17 @@ interface Human {
 }
 ```
 
-`Human` will be treated as a single interface: a combination of the members of both declarations.
+`Human`将被视为一个单一的 interface：两个声明的成员的组合。
 
 ![image-53](https://www.freecodecamp.org/news/content/images/2022/07/image-53.png)
 
-_Property 'legs' is required in type 'Humans'_
+_type 'Humans' 中需要 `legs`这个属性（Property）_
 
-See [TypeScript playground](https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgBIFcC2cTIN4BQyxyIcmEAXMgM5hSgDmBAvgaJLIihtroSWQAbCIxrUQWAEbRWBAgHoFyMAAtgNZNCgB7KJp3owyGQjjoaKAOQixV5JgvGIADw3GCCHSDrJV1XhxkAF58IhIyCmorAHlVHE0AUUw+dAghK1YgA).
+看 [这个 TypeScript 演示代码](https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgBIFcC2cTIN4BQyxyIcmEAXMgM5hSgDmBAvgaJLIihtroSWQAbCIxrUQWAEbRWBAgHoFyMAAtgNZNCgB7KJp3owyGQjjoaKAOQixV5JgvGIADw3GCCHSDrJV1XhxkAF58IhIyCmorAHlVHE0AUUw+dAghK1YgA).
 
-This is not the case with type aliases.
+这种情况不适合使用 type aliases.
 
-With a type alias, the following will lead to an error:
+使用 type aliases，以下将导致错误：
 
 ```ts
 type Human = {
@@ -169,11 +169,11 @@ const h: Human = {
 
 ![image-54](https://www.freecodecamp.org/news/content/images/2022/07/image-54.png)
 
-Duplicate identifier 'Human' error
+重复标识符(Duplicate identifier) `Human` 错误
 
-See the [TypeScript playground](https://www.typescriptlang.org/play?#code/C4TwDgpgBAEgrgWwIYDsoF4oG8BQV9QpIIQBcUAzsAE4CWKA5lDgL57OiSyKob64EoAGwgMK5FIgBGEaszY4AxgHsUVKAAty8ZGkwD8REuQDkDBiYA07YaPFQArPPw5XroA).
+看这个 [TypeScript 演示代码](https://www.typescriptlang.org/play?#code/C4TwDgpgBAEgrgWwIYDsoF4oG8BQV9QpIIQBcUAzsAE4CWKA5lDgL57OiSyKob64EoAGwgMK5FIgBGEaszY4AxgHsUVKAAty8ZGkwD8REuQDkDBiYA07YaPFQArPPw5XroA).
 
-With type aliases, you’ll have to resort to an intersection type:
+使用 type aliases 的话, 你就不得不使用一个交叉类型（intersection type）:
 
 ```ts
 type HumanWithName = {
@@ -192,13 +192,13 @@ const h: Human = {
 }  
 ```
 
-See the [TypeScript playground](https://www.typescriptlang.org/play?#code/C4TwDgpgBAEgrgWwIYDsDqBLYALAckhaAXigG8AoKKqFAiALigGdgAnDFAcynIF9KeoSLESpMOADIROTKCTICqAG2lNGKRACMIrHv3JDo8ZCioljYrHjpQAZCJPjsUmeXIBjAPYoWUbIwtTEgpqWkJGAHJOTgiAGkUVGUYAVj0qNwygA).
+看这个 [TypeScript 演示代码](https://www.typescriptlang.org/play?#code/C4TwDgpgBAEgrgWwIYDsDqBLYALAckhaAXigG8AoKKqFAiALigGdgAnDFAcynIF9KeoSLESpMOADIROTKCTICqAG2lNGKRACMIrHv3JDo8ZCioljYrHjpQAZCJPjsUmeXIBjAPYoWUbIwtTEgpqWkJGAHJOTgiAGkUVGUYAVj0qNwygA).
 
 ### Minor difference: Both type aliases and interfaces can be extended, but with different syntaxes
 
-With interfaces, you use the `extends` keyword. For types, you must use an intersection.
+对于 interfaces，你使用`extends`关键字。对于 types, 你必须使用一个交叉（intersection）.
 
-Consider the following examples:
+思考一下下面的例子:
 
 #### Type alias extends a type alias
 
@@ -253,13 +253,13 @@ interface Human extends HumanWithName {
 }
 ```
 
-As you can see, this is not particularly a reason to choose one over the other. However, the syntaxes differ.
+正如你所看到的，这并不是选择一个而不是另一个的特别理由。然而，语法是不同的。
 
 ### Minor difference: classes can only implement statically known members
 
-A class can implement both interfaces or type aliases. However, a class cannot implement or extend a union type.
+ class 可以同时实现 interfaces 或者 type aliases。然而，不能实现（implement）或扩展（extend）一个联合类型（union type）。
 
-Consider the following example:
+请看下面的例子:
 
 #### Class implements an interface
 
@@ -293,7 +293,7 @@ class FourLeggedHuman implements Human {
 }
 ```
 
-Both these work without any errors. However, the following fails:
+这两段代码作都没有任何错误。然而，下面的情况却失败了:
 
 #### Class implements a union type
 
@@ -314,78 +314,78 @@ class FourLeggedHuman implements Human {
 
 ![image-55](https://www.freecodecamp.org/news/content/images/2022/07/image-55.png)
 
-A class can only implement an object type or intersection of object types with statically known members.
+class 只能实现（implement）一个对象类型（object type）或具有静态已知成员的对象类型（intersection of object types with statically known members）的交叉（intersection）。
 
 See the [TypeScript playground](https://www.typescriptlang.org/play?#code/C4TwDgpgBAEgrgWwIYDsoF4oG8BQV9QpIIQBcUAzsAE4CWKA5jgL5QA+2eBANhAxeRSIARhGpd8EEBAGERYljhwBjbkgoUoAMQD2cagBk+DCABN4yNLQRheJFME0XUnAoWLRMAcgDSdAF5wDEheElC8-BhQACxhUjJRAEwsQA).
 
 ## Summary of Type Aliases vs Interfaces
 
-Your mileage may differ, but wherever possible, I stick to type aliases for their flexibility and simpler syntax. That is, I pick type aliases except I specifically need features from an interface.
+你的想法可能不同，但只要有可能，我都坚持使用 type aliases，因为它们的灵活性和语法更简单。也就是说，除非我特别需要一个接口（interface）的功能，否则我选择 type aliases。
 
-For the most part, you can also decide based on your personal preference, but stay consistent with your choice — at least in a single given project.
+在大多数情况下，你也可以根据你的个人偏好来决定，但要与你的选择保持一致，至少在一个特定的项目中。
 
-For completeness, I must add that in performance critical types, interface comparison checks can be faster than type aliases. I’m yet to find this to be an issue.
+我必须补充一点，在需要考虑性能的情况下，interface 比较检查可能比 type aliases 更快。但我还没有发现使用 type aliases ，导致性能问题。
 
 # In TypeScript, What is the ! (Exclamation Mark / Bang) Operator?
 
 ![image-56](https://www.freecodecamp.org/news/content/images/2022/07/image-56.png)
 
-What is the bang operator in TypeScript?
+TypeScript 中的 bang 运算符是什么？
 
 ## TL;DR
 
-This `!` is technically called the **__non-null assertion operator__**. If the TypeScript compiler complains about a value being `null` or `undefined`, you can use the `!` operator to assert that the said value is not `null` or `undefined`.
+这个`！` 在技术上被称为 **__非空的断言操作符(non-null assertion operator)__**。如果 TypeScript 编译器警告一个值是 `null`或 `undefined`，你可以使用`！`操作符来断言该值不是 `null` 或 `undefined`。
 
-Personal take: avoid doing this wherever possible.
+个人观点：尽可能避免这样做。
 
 ## What is the Non-Null Assertion Operator?
 
-`null` and `undefined` are valid JavaScript values.
+`null` 和 `undefined` 是有效的 JavaScript 值。
 
-The statement above holds true for all TypeScript applications as well.
+上面的声明对所有 TypeScript 应用程序也是如此。
 
-However, TypeScript goes one step further.
+然而，TypeScript 更进一步。
 
-`null` and `undefined` are equally valid types. For example, consider the following:
+`null` 和 `undefined` 是同样有效的类型。例如，考虑下面的情况:
 
 ```ts
-// explicit null
+// 明确为 null
 let a: null 
 
 a = null
-// the following assignments will yield errors
+// 以下代码将产生错误
 a= undefined 
 a = {}
 
 
-// explicit undefined
+// 明确为 undefined
 let b: undefined 
-// the following assignments will yield errors
+// 以下代码将产生错误
 b = null 
 b = {}
 ```
 
 ![image-57](https://www.freecodecamp.org/news/content/images/2022/07/image-57.png)
 
-Error: values other than null and undefined not assignable
+Error: 除了 null 和 undefined 之外，其他的值不能被分配
 
 See the [TypeScript playground](https://www.typescriptlang.org/play?#code/DYUwLgBAhgXBB2BXYwICg1QgXgc4aA9IRGABYgQBmA9ijQO4CW8A5tAM4dOvwC2IeGA4RmKCAE8mIYABMIIAE6KaijplyJ4skFRYh5mHBADeAXwxpQkAEZwtOvfAPpipCtTrBGLdlC48-ILCokziUjLySipqaDbGSOJxxuZoQA).
 
-In certain cases, the TypeScript compiler cannot tell whether a certain value is defined or not, that is not `null` or `undefined`.
+在某些情况下，TypeScript 编译器无法判断某个值是否被定义，即不是 `null`或 `undefined`。
 
-For example, assume you had a value `Foo`.
+例如，假设你有一个值`Foo`。
 
-`Foo!` produces a value of the type of `Foo` with `null` and `undefined` excluded.
+`Foo!`产生一个类型为`Foo`的值， 不能为 `null` 和 `undefined`。
 
 ![image-58](https://www.freecodecamp.org/news/content/images/2022/07/image-58.png)
 
-Foo! excludes null and undefined from the type of Foo
+Foo! 从 Foo 的类型中排除了 `null`和 `undefined`。
 
-You essentially say to the TypeScript compiler, __I am sure `Foo` will NOT be `null` or `undefined`_._
+你基本上是在对 TypeScript 编译器说：_我确信 `Foo`不会是 `null` 或 `undefined`_。
 
-Let’s explore a naïve example.
+让我们来探讨一个简单的例子。
 
-In standard JavaScript, you may concatenate two strings with the `.concat` method:
+在标准的 JavaScript 中，你可以用 `.concat` 方法将两个字符串连接起来:
 
 ```ts
 const str1 = "Hello" 
@@ -395,7 +395,7 @@ const greeting = str1.concat(' ', str2)
 // Hello World
 ```
 
-Write a simple duplicate string function that calls `.concat` with itself as an argument:
+编写一个简单的产生重复字符串函数，以自己为参数调用 `.concat`:
 
 ```ts
 function duplicate(text: string | null) {
@@ -403,21 +403,21 @@ function duplicate(text: string | null) {
 }
 ```
 
-Note that the argument `text` is typed as `string | null`.
+注意，参数 `text` 被打成了 `string | null`.
 
-In strict mode, TypeScript will complain here, as calling `concat` with `null` can lead to unexpected results.
+在严格模式下，TypeScript 会在这里警告，因为用 `null` 调用 `concat` 会导致意外的结果。
 
 ![image-59](https://www.freecodecamp.org/news/content/images/2022/07/image-59.png)
 
-The result of calling concat with null
+用 `null` 调用 `concat` 的结果是
 
-The TypeScript error will read: `Object is possibly 'null'.(2531)`.
+TypeScript 将报错 : `Object is possibly 'null'.(2531)`.
 
 ![image-60](https://www.freecodecamp.org/news/content/images/2022/07/image-60.png)
 
-Typescript error: Object is possibly null
+Typescript error: Object is possibly null（对象可能为空）
 
-On the flip side, a rather lazy way to silence the compiler error is to use the non-null assertion operator:
+反过来说，一个相当懒的方法是使用非空的断言操作符来消除编译器的错误:
 
 ```ts
 function duplicate(text: string | null) {

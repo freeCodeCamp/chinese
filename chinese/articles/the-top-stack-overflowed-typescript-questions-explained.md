@@ -1,7 +1,7 @@
-> -  原文地址：[The Most Asked TypeScript Questions on StackOverflow – Answered for Beginners](https://www.freecodecamp.org/news/the-top-stack-overflowed-typescript-questions-explained/)
-> -  原文作者：[Emmanuel Ohans](https://www.freecodecamp.org/news/author/emmanuel/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[The Most Asked TypeScript Questions on StackOverflow – Answered for Beginners](https://www.freecodecamp.org/news/the-top-stack-overflowed-typescript-questions-explained/)
+> - 原文作者：[Emmanuel Ohans](https://www.freecodecamp.org/news/author/emmanuel/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![The Most Asked TypeScript Questions on StackOverflow – Answered for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/combined-blog-cover-6.png)
 
@@ -21,15 +21,15 @@ Let’s get right into it.
 
 ## Table of Contents
 
-1.  [What is the difference between Interfaces vs Types in TypeScript?](#1-what-is-the-difference-between-interfaces-vs-types-in-typescript)
-2.  [In TypeScript, what is the ! (exclamation mark / bang) operator?](#2-in-typescript-what-is-the-exclamation-mark-bang-operator)
-3.  [What is a “.d.ts” file in TypeScript?](#3-what-is-a-d-ts-file-in-typescript)
-4.  [How Do You Explicitly Set a New Property on ‘window’ in TypeScript?](#4-how-do-you-explicitly-set-a-new-property-on-window-in-typescript)
-5.  [Are Strongly Typed Functions as Parameters Possible in TypeScript?](#5-are-strongly-typed-functions-as-parameters-possible-in-typescript)
-6.  [How to Fix Could Not Find Declaration File for Module …?](#6-how-to-fix-could-not-find-declaration-file-for-module-)
-7.  [How Do I Dynamically Assign Properties to an Object in TypeScript?](#7-how-do-i-dynamically-assign-properties-to-an-object-in-typescript)
+1. [What is the difference between Interfaces vs Types in TypeScript?](#1-what-is-the-difference-between-interfaces-vs-types-in-typescript)
+2. [In TypeScript, what is the ! (exclamation mark / bang) operator?](#2-in-typescript-what-is-the-exclamation-mark-bang-operator)
+3. [What is a “.d.ts” file in TypeScript?](#3-what-is-a-d-ts-file-in-typescript)
+4. [How Do You Explicitly Set a New Property on ‘window’ in TypeScript?](#4-how-do-you-explicitly-set-a-new-property-on-window-in-typescript)
+5. [Are Strongly Typed Functions as Parameters Possible in TypeScript?](#5-are-strongly-typed-functions-as-parameters-possible-in-typescript)
+6. [How to Fix Could Not Find Declaration File for Module ……?](#6-how-to-fix-could-not-find-declaration-file-for-module-)
+7. [How Do I Dynamically Assign Properties to an Object in TypeScript?](#7-how-do-i-dynamically-assign-properties-to-an-object-in-typescript)
 
-****Note:**** You can get a [PDF or ePub](https://www.ohansemmanuel.com/cheatsheet/top-7-stack-overflowed-typescript-questions) version of this cheatsheet for easier reference or for reading on your Kindle or tablet.
+**__Note:__** You can get a [PDF or ePub](https://www.ohansemmanuel.com/cheatsheet/top-7-stack-overflowed-typescript-questions) version of this cheatsheet for easier reference or for reading on your Kindle or tablet.
 
 ![image-51](https://www.freecodecamp.org/news/content/images/2022/07/image-51.png)
 
@@ -59,7 +59,7 @@ In this case, there are just two options.
 
 What’s so confusing about this?
 
-Well, the main confusion here stems from the fact that these two options are so ****evenly matched**** in most regards.
+Well, the main confusion here stems from the fact that these two options are so **__evenly matched__** in most regards.
 
 This makes it difficult to make an obvious choice — especially if you’re just starting out with Typescript.
 
@@ -91,7 +91,7 @@ These are both correct ways to denote the `Human` type – that is via a type al
 
 Below are the main differences between a type alias and an interface:
 
-### Key difference: interfaces can only describe object shapes. Type aliases can be used for other types such as primitives, unions and tuples.
+### Key difference: interfaces can only describe object shapes. Type aliases can be used for other types such as primitives, unions and tuples
 
 A type alias is quite flexible in the data types you can represent. From basic primitives to complex unions and tuples, as shown below:
 
@@ -334,7 +334,7 @@ What is the bang operator in TypeScript?
 
 ## TL;DR
 
-This `!` is technically called the ****non-null assertion operator****. If the TypeScript compiler complains about a value being `null` or `undefined`, you can use the `!` operator to assert that the said value is not `null` or `undefined`.
+This `!` is technically called the **__non-null assertion operator__**. If the TypeScript compiler complains about a value being `null` or `undefined`, you can use the `!` operator to assert that the said value is not `null` or `undefined`.
 
 Personal take: avoid doing this wherever possible.
 
@@ -467,7 +467,7 @@ If you write React, consider an example you’re likely familiar with:
 ```ts
 const MyComponent = () => {
    const ref = React.createRef<HTMLInputElement>();
-	
+ 
    //compilation error: ref.current is possibly null
    const goToInput = () => ref.current.scrollIntoView(); 
 
@@ -583,7 +583,7 @@ Here’s some pseudocode:
    // validated in validationSchema but TypeScript doesn't know this
 
    if(!values.name) {
-    throw new Error('Invalid form, name is required')		
+    throw new Error('Invalid form, name is required')  
    } 
    console.log(values.name!)
 }}>
@@ -628,7 +628,7 @@ Emitted javascript code same as Javascript
 
 ## Conclusion
 
-TypeScript 2.0 saw the release of the ****non-null assertion operator****. Yes, it’s been around for some time ([released in 2016](https://github.com/microsoft/TypeScript/releases/tag/v2.0.3)). At the time of writing, the latest version of TypeScript is `v4.7`.
+TypeScript 2.0 saw the release of the **__non-null assertion operator__**. Yes, it’s been around for some time ([released in 2016](https://github.com/microsoft/TypeScript/releases/tag/v2.0.3)). At the time of writing, the latest version of TypeScript is `v4.7`.
 
 If the TypeScript compiler complains about a value being `null` or `undefined`, you can use the `!` operator to assert that the said value is not null or undefined.
 
@@ -644,7 +644,7 @@ I agree with this school of thought.
 
 ![image-63](https://www.freecodecamp.org/news/content/images/2022/07/image-63.png)
 
-What is a d.ts file? 
+What is a d.ts file?
 
 ## TL;DR
 
@@ -702,7 +702,7 @@ The `Math` object isn’t a part of our implementation. It’s a standard built-
 
 So, how did TypeScript figure that out?
 
-The answer is there are ****declaration files**** that describe these built-in objects.
+The answer is there are **__declaration files__** that describe these built-in objects.
 
 Think of a declaration file as containing all type information relating to a certain module. It contains no actual implementation, just type information.
 
@@ -822,7 +822,7 @@ This repository already exists.
 
 The [DefinitelyTyped repository](https://github.com/DefinitelyTyped/DefinitelyTyped/) is a centralised repository that stores the declaration files for thousands of libraries.
 
-In all honestly, the vast majority of commonly used libraries have declaration files available on ****DefinitelyTyped****.
+In all honestly, the vast majority of commonly used libraries have declaration files available on **__DefinitelyTyped__**.
 
 These type definition files are automatically published to `npm` under the `@types` scope.
 
@@ -894,8 +894,8 @@ Whoever said that was right.
 
 In this section, we will build upon the knowledge from the last two sections:
 
--   [Interfaces vs Types in TypeScript](https://blog.ohansemmanuel.com/interfaces-vs-types-in-typescript/)
--   [What is a d.t.s file in TypeScript](https://blog.ohansemmanuel.com/what-is-a-dts-file-in-typescript/)?
+- [Interfaces vs Types in TypeScript](https://blog.ohansemmanuel.com/interfaces-vs-types-in-typescript/)
+- [What is a d.t.s file in TypeScript](https://blog.ohansemmanuel.com/what-is-a-dts-file-in-typescript/)?
 
 Ready?
 
@@ -989,7 +989,7 @@ So, what should you do instead?
 
 Give it a guess, perhaps?
 
-Yes, you were close … or perhaps right:
+Yes, you were close …… or perhaps right:
 
 Create a type definition file!
 
@@ -1013,7 +1013,7 @@ A wrong assignment to the newly defined property caught
 
 See the [TypeScript playground](https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgOqgCYHsDuyDeAUMsgPqkCyAmqQIIAK9AMgJIDCtAKiwPIBypPrQoBRcgC5kAZzBRQAc0IBfQoRyZcAOnLU6jVh279BwsaWQBeAsWQg4AWwiSARDCgQICLBk8OADs7Kql4gUlgANhCa4VjyABTqINg42pQ0DMzsXLwCQqLkAJSqxUA).
 
-_And _Voilà.__
+_And_Voilà.__
 
 ## Conclusion
 
@@ -1123,7 +1123,7 @@ TypeScript not only allows you to specify the input and output of functions, but
 
 Go ahead and use them with confidence.
 
-# How to Fix Could Not Find Declaration File for Module …?
+# How to Fix Could Not Find Declaration File for Module ……?
 
 This is a common source of frustration for TypeScript beginners.
 

@@ -5,19 +5,19 @@
 
 ![The Most Asked TypeScript Questions on StackOverflow – Answered for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/combined-blog-cover-6.png)
 
-_"_I hate stack overflow_"_ — said no developer ever.
+_"_我讨厌 stack overflow 网站_"_  ——从未有开发者说过。
 
-While it’s helpful to have your answers a Google search away, what’s even more powerful is truly understanding the solutions you stumble upon.
+虽然在谷歌上搜索答案很有帮助，但更需要的是真正理解你遇到的偶发问题的解决方案。
 
-In this article, I’ll explore the seven most __stackoverflowed__ TypeScript questions.
+在这篇文章中，我将探讨七个 _stackoverflowed_  最常见的 TypeScript 问题。
 
-I spent hours researching these.
+我花了几个小时来研究这些问题。
 
-I hope you gain a deeper understanding of the common problems you may face with TypeScript.
+我希望你对 TypeScript 可能面临的常见问题有更深入的了解。
 
-This is also relevant if you’re just learning TypeScript — what better way than to get familiar with your future challenges!
+如果你刚刚学习 TypeScript，这也是有意义的——有什么比熟悉你未来遇到的问题更好的方法呢？
 
-Let’s get right into it.
+让我们马上进入正题。
 
 ## Table of Contents
 
@@ -29,45 +29,45 @@ Let’s get right into it.
 6. [How to Fix Could Not Find Declaration File for Module ……?](#6-how-to-fix-could-not-find-declaration-file-for-module-)
 7. [How Do I Dynamically Assign Properties to an Object in TypeScript?](#7-how-do-i-dynamically-assign-properties-to-an-object-in-typescript)
 
-**__Note:__** You can get a [PDF or ePub](https://www.ohansemmanuel.com/cheatsheet/top-7-stack-overflowed-typescript-questions) version of this cheatsheet for easier reference or for reading on your Kindle or tablet.
+**__注意:__** 你可以得到这份手册的 [PDF 或 ePub](https://www.ohansemmanuel.com/cheatsheet/top-7-stack-overflowed-typescript-questions) 版本，以方便参考或在你的 Kindle 或平板电脑上阅读。
 
 ![image-51](https://www.freecodecamp.org/news/content/images/2022/07/image-51.png)
 
-[PDF or Epub version of this cheatsheet available](https://www.ohansemmanuel.com/cheatsheet/top-7-stack-overflowed-typescript-questions)
+[PDF 或 Epub 版本的手册下载地址](https://www.ohansemmanuel.com/cheatsheet/top-7-stack-overflowed-typescript-questions)
 
 # 1\. What is the difference between Interfaces vs Types in TypeScript?
 
 ![image-52](https://www.freecodecamp.org/news/content/images/2022/07/image-52.png)
 
-Interfaces vs Types in Typescript
+Typescript 中的 Interfaces（接口） 与 Types（类型） 的对比  
 
-The interfaces vs types (technically, type alias) conversation is a well-contested one.
+interfaces vs types (技术上来说，是 type alias) 是一个充满争议的问题。
 
-When beginning TypeScript, you may find it confusing to settle on a choice. This article clears up the confusion and helps you choose which is right for you.
+在开始使用 TypeScript 时，你可能会发现有选择上很困惑。这篇文章消除这种困惑，并帮助你选择适合你的方式。
 
 ## TL;DR
 
-In numerous instances, you can use either an interface or type alias interchangeably.
+在许多情况下，你可以交替使用 interface 或者 type alias。
 
-Almost all features of an interface are available via type aliases, except you cannot add new properties to a type by re-declaring it. You must use an intersection type.
+interface 的大部分功能可以通过 type aliases 来实现, 只是你不能通过重新声明类型（re-declaring）来给它增加新的属性（properties）。你必须使用一个交叉类型（intersection type）。
 
 ## Why the Confusion About Types vs Interfaces in the First Place?
 
-Whenever we’re faced with multiple options, most people begin to suffer from the [paradox of choice](https://en.wikipedia.org/wiki/The_Paradox_of_Choice).
+每当我们面临多种选择时，大多数人都会开始面对 [选择悖论（paradox of choice）](https://en.wikipedia.org/wiki/The_Paradox_of_Choice)。
 
-In this case, there are just two options.
+在这种情况下，只有两个选项。
 
-What’s so confusing about this?
+这有什么好困惑的？
 
-Well, the main confusion here stems from the fact that these two options are so **__evenly matched__** in most regards.
+好吧，这里的主要混淆源于这两个选项在大多数方面是如此 **__势均力敌__**。
 
-This makes it difficult to make an obvious choice — especially if you’re just starting out with Typescript.
+这使得你很难做出一个明确的选择，尤其是当你刚刚开始使用 Typescript 的时候。
 
 ## A Basic Example of Type Alias vs Interface
 
-Let’s get on the same page with quick examples of an interface and a type alias.
+让我们通过 interface 和 type alias 的例子快速了解一下。
 
-Consider the representations of a `Human` type below:
+考虑下面的 `Human` type 的写法:
 
 ```ts
 // type 
@@ -85,15 +85,15 @@ interface Human {
 }
 ```
 
-These are both correct ways to denote the `Human` type – that is via a type alias or an interface.
+这些都是表示 `Human` type，通过 type alias 或者 interface.
 
 ## The Differences Between Type Alias and Interfaces
 
-Below are the main differences between a type alias and an interface:
+以下是 type alias 和 interface 的主要区别:
 
 ### Key difference: interfaces can only describe object shapes. Type aliases can be used for other types such as primitives, unions and tuples
 
-A type alias is quite flexible in the data types you can represent. From basic primitives to complex unions and tuples, as shown below:
+type alias 可以表示的数据类型中是相当灵活的。从 basic primitives（基本的基元）到 复杂的 unions（联合）和 tuples（元组）, 如下所示:
 
 ```ts
 // primitives 
@@ -115,7 +115,7 @@ type HumanSex = Male | Female
 type Children = [Female, Male, Female]
 ```
 
-Unlike type aliases, you may only represent object types with an interface.
+不像 type aliases，你只能用一个 interface 来表示 object types（对象类型）。
 
 ### Key difference: an interface can be extended by declaring it multiple times
 

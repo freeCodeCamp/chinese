@@ -1,29 +1,29 @@
 > -  原文地址：[JavaScript String Comparison – How to Compare Strings in JS](https://www.freecodecamp.org/news/javascript-string-comparison-how-to-compare-strings-in-js/)
 > -  原文作者：[Dillion Megida](https://www.freecodecamp.org/news/author/dillionmegida/)
-> -  译者：
+> -  译者：Gradonlee
 > -  校对者：
 
 ![JavaScript String Comparison – How to Compare Strings in JS](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/string-comparison.png)
 
-You may want to compare two strings to know which is higher or lower alphabetically or to see if they are equal.
+你可能想通过比较两个字符串从而知道在字母排列顺序上谁高谁低，或者仅仅想知道他们是否相等。
 
-You can do this in many ways. I'll show you two of them in this article.
+你可以用很多方式来解决这个问题，我将在本文中向你展示两种方法。
 
-## 1\. How to Compare Strings Using localeCompare
+## 1. 如何使用 localeCompare 来比较字符串
 
-You can use the `localeCompare` method to compare two strings in the current locale. Here's the syntax:
+你可以使用 `localeCompare` 的方法来比较当前环境（locale）下的两个字符串，以下是他们的语法：
 
 ```js
 string1.localeCompare(string2)
 ```
 
-`locaelCompare` returns:
+`localeCompare` 返回：
 
--   1 if `string1` is greater (higher in the alphabetical order) than `string2`
--   \-1 if `string1` is smaller (lower in the alphabetical order) than `string2`
--   0 if `string1` and `string2` are equal in the alphabetical order
+-   1 如果 `string1` 比 `string2` 大
+-   -1 如果 `string1` 比 `string2` 小
+-   0 如果 `string1` 和 `string2` 在字母顺序上相等
 
-Here are some examples comparing two strings:
+下面是一些比较两个字符串的例子：
 
 ```js
 const string1 = "hello"
@@ -33,9 +33,9 @@ const compareValue = string1.localeCompare(string2)
 // -1
 ```
 
-It gives `-1` because, in the English locale, **h** in hello comes before **w** in the world (w is further down in the alphabetical order than h)
+它返回了 `-1` 是因为在英语环境中， hello 中的 **h** 排在 world 中的 **w** 之前（ w 在字母顺序中比 h 更靠后）
 
-Another example:
+另一个例子：
 
 ```js
 const string1 = "banana"
@@ -45,9 +45,9 @@ const compareValue = string1.localeCompare(string2)
 // 1
 ```
 
-The comparison above gives `1` because, in the English locale, ba**n** in banana comes after ba**c** in back.
+上面的比较给出了 `1`，因为在英语环境中，banana的 ba**n** 在 back 的 ba**c** 之后。
 
-One more example:
+再来一个例子：
 
 ```js
 const string1 = "fcc"
@@ -61,17 +61,17 @@ const compareValue2 = string1.localeCompare(string3)
 // -1
 ```
 
-Comparing "fcc" and "fcc" gives `0` because they are equal in order. "fcc" and "Fcc" gives `-1` because capital "F" is greater than small "f".
+比较 "fcc" 和 "fcc" 可以得到 `0`，因为它们在顺序上是相等的。 "fcc" 和 "Fcc" 的结果是 `-1`，因为大写 "F" 大于小写 "f"。
 
-In some browsers, instead of **\-1**, it may return **\-2** or some other negative value. So, do not depend on **\-1** or **1**, instead on negative (less than 0) or positive (more than 0) values
+在某些浏览器中，它可能会返回 **-2/** 或其他一些负值，而不是 **-1/**。因此，不要依赖 **-1** 或 **1**，而是依赖负值（小于 0）或正值（大于 0）。
 
-## 2\. How to Compare Strings Using Mathematical Operators
+## 2. 如何使用数学运算符来比较字符串
 
-You can also use mathematical operators like greater than (**\>**), less than (**<**), and equal to when comparing strings.
+在比较字符串时，你也可以使用数学运算符如大于（**>**），小于（**<**）以及等于。
 
-Mathematical operators work similarly to `localeCompare` – by returning results based on the order of the characters in the string.
+数学运算符的工作原理与 `localeCompare` 类似——根据字符串中字符的顺序返回结果。
 
-Using the previous examples:
+使用之前的例子：
 
 ```js
 const string1 = "hello"
@@ -81,9 +81,9 @@ console.log(string1 > string2)
 // false
 ```
 
-`string1` is not greater than `string2`, because **h** comes before **w**, so it is less than.
+`string1` 不大于 `string2`，因为 **h** 在 **w** 之前，所以是小于。
 
-For the other example:
+对于另一个例子而言：
 
 ```js
 const string1 = "banana"
@@ -93,9 +93,9 @@ console.log(string1 > string2)
 // true
 ```
 
-`string1` is greater than `string2` because ba**n** comes after ba**c**k.
+`string1` 比 `string2` 大，因为 ba**n** 在 ba**c**k 之后。
 
-And for the last example:
+而对于最后一个例子：
 
 ```js
 const string1 = "fcc"
@@ -109,14 +109,14 @@ console.log(string1 < string3)
 // false
 ```
 
-`string1` is equal to (`===`) `string2`, but `string1` is not less than `string3`, which is in contrast to `localeCompare`.
+`string1` 等于（`===`）`string2`，但是 `string1` 不小于 `string3` ，这与`localeCompare`相反。
 
-With mathematical operators, "fcc" is greater than "Fcc", but with `localeCompare`, `"fcc".localeCompare("Fcc")"` returns `-1` to show that "fcc" is less than "Fcc".
+用数学运算符，"fcc "大于 "Fcc"，但是用 `localeCompare`，`"fcc".localeCompare("Fcc")"` 返回 `-1`，表明 "fcc" 小于 "Fcc"。
 
-This behavior is one reason why I don't recommend using mathematical operators for comparing strings, even though it has the potential to do so.
+这种处理是我不建议使用数学运算符来比较字符串的原因之一，尽管它有做到这一点的潜力。
 
-Another reason why I don't recommend using mathematical operators is because `"fcc" > "fcc"` and `"fcc" < "fcc"` is `false`. "fcc" is equal to "fcc". So if you're depending on mathematical operators, getting `false` may be for different reasons than you believe.
+我不推荐使用数学运算符的另一个原因是，`"fcc" > "fcc"` 和 `"fcc" < "fcc"` 是 `false`,但 "fcc" 等于 "fcc"。所以如果你依赖于数学运算符，得到 `false` 的原因可能与你相信的不同。
 
-So, for comparing strings, amongst the many ways there may be, using `localCompare` is an effective approach because it can be used for different languages.
+所以，对于比较字符串，在可能存在的许多方法中，使用 `localCompare` 是一个有效的方法，因为它可以用于不同的语言。
 
-Now you know an easy way to compare strings. Happy coding!
+现在你知道了一个简单的比较字符串的方法。编码愉快：）

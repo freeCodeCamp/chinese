@@ -1,49 +1,49 @@
-> -  原文地址：[How to Detect Outliers in Machine Learning – 4 Methods for Outlier Detection](https://www.freecodecamp.org/news/how-to-detect-outliers-in-machine-learning/)
+> -  原文地址：[如何在机器学习中检测异常值 – 4种检测异常值的方法](https://www.freecodecamp.org/news/how-to-detect-outliers-in-machine-learning/)
 > -  原文作者：[Bala Priya C](https://www.freecodecamp.org/news/author/bala-priya/)
-> -  译者：
+> -  译者：TouDa
 > -  校对者：
 
-![How to Detect Outliers in Machine Learning – 4 Methods for Outlier Detection](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/Outlier-Detection.png)
+![如何在机器学习中发现异常点 - 4种发现异常点的方法](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/Outlier-Detection.png)
 
-Have you ever trained a machine learning model on a real-world dataset? If yes, you’ll have likely come across _outliers_.
+你是否使用过现实数据来对机器学习模型进行过训练？如果答案是肯定的，你很可能遇到过_异常点_。
 
-Outliers are those data points that are _significantly_ different from the rest of the dataset. They are often abnormal observations that skew the data distribution, and arise due to inconsistent data entry, or erroneous observations.
+异常点通常_明显_的不同区数据集中其他数据。异常点的存在会扭曲数据集的数据分布，提高数据的不连贯性或使观测产生错误。
 
-To ensure that the trained model generalizes well to the valid range of test inputs, it’s important to detect and remove outliers.
+为了使训练模型在进行测试时有更好的泛用性，发现并删除异常点非常重要。
 
-In this guide, we’ll explore some statistical techniques that are widely used for outlier detection and removal.
+在本文中，我们将介绍几个常用来发现并去除异常点的统计学工具。
 
-## Why Should You Detect Outliers?
+## 为什么需要发现异常点？
 
-In the machine learning pipeline, _data cleaning_ _and preprocessing_ is an important step as it helps you better understand the data. During this step, you deal with missing values, detect outliers, and more.
+在机器学习流程中_数据清洗_和_数据预处理_是两个关键步骤，它们能帮助你更好地理解你所面对的数据。这些步骤中包括处理丢失值，发现异常值等操作。
 
-As outliers are very different values—abnormally low or abnormally high—their presence can often skew the results of statistical analyses on the dataset. This could lead to less effective and less useful models.
+过高或过低的异常值常常会扭曲数据集的统计分析结果。这会使得训练出来的模型低效甚至完全无效。
 
-But dealing with outliers often requires domain expertise, and none of the outlier detection techniques should be applied _without_ understanding the data distribution and the use case.
+处理异常值需要一定的专业性，在_不清楚_所面对的数据和消除异常值工具适用环境的情况下不应冒然使用。
 
-For example, in a dataset of house prices, if you find a _few_ houses priced at around $1.5 million—much higher than the median house price, they’re likely outliers. However, if the dataset contains a significantly large number of houses priced at $1 million and above—they may be indicative of an increasing trend in house prices. So it would be _incorrect_ to label them all as outliers. In this case, you need some knowledge of the real estate domain.
+举例来说，如果你在房价数据集中发现_少量_房价处于150万美金并显著高于所有房价中位数时，这些150万美金的房价很可能是异常值。但是，当数据集包含有大量100万美金以上的房价时，房价呈现上涨趋势。此时将150万美金的房价将视为异常值是_不合适_的。在此情境下，数据分析者需要一定的房地产知识以便正确处理异常值。
 
-The goal of outlier detection is to remove the points—which are truly outliers—so you can build a model that performs well on unseen test data. We’ll go over a few techniques that’ll help us detect outliers in data.
+发现异常值的目的是为了去除_真正的异常值_以便构建一个泛用的，即使面对未知数据依旧能表现良好的模型。我们将几个有助于发现异常值的统计工具。
 
-## How to Detect Outliers Using Standard Deviation
+## 如何通过标准差发现异常值
 
-When the data, or certain features in the dataset, follow a [normal distribution](https://mathworld.wolfram.com/NormalDistribution.html), you can use the standard deviation of the data, or the equivalent z-score to detect outliers.
+如果一组数据，或数据集中某些特征符合[正态分布](https://mathworld.wolfram.com/NormalDistribution.html)时，可以考虑使用正态分布及等效的Z-分数（z-score）来发现异常值。
 
-In statistics, standard deviation measures the _spread of data around the mean_, and in essence, it captures how far away from the mean the data points are.
+在统计学中，标准差（standard deviation）反映了_数据点和均值（mean）之间的关系+，一言以蔽之，标准差衡量的是数据点离数据的算数平均有多远。
 
-For data that is normally distributed, around 68.2% of the data will lie within one standard deviation from the mean. Close to 95.4% and 99.7% of the data lie within two and three standard deviations from the mean, respectively.
+对于正态分布的数据来说，约68.2%的数据在均值的一倍标准差之内。约有95.4%和99.7%的数据点在均值的两倍和三倍标准差以内。
 
-Let’s denote the standard deviation of the distribution by σ, and the mean by μ.
+我们约定标准差为σ，算术平均为μ。
 
-One approach to outlier detection is to set the _lower_ limit to three standard deviations below the mean (μ - 3\*σ), and the _upper_ limit to three standard deviations above the mean (μ + 3\*σ). Any data point that falls outside this range is detected as an outlier.
+一个发现异常值的方法是将_阈值下限_设为均值减去三倍标准差 (μ - 3\*σ) ，_阈值上限_设为均值加上三倍标准差 (μ + 3\*σ) 。所有在阈值之外的数据点都被视为异常值。
 
-As 99.7% of the data typically lies within three standard deviations, the number of outliers will be close to 0.3% of the size of the dataset.
+因为99.7%的数据点会在均值的±三倍标准差以内，此方法将会发现并标记0.3%的数据点为异常值。
 
-### Code for Outlier Detection Using Standard Deviation
+### 使用标准差检测异常点的代码
 
-Now, let's create a normally-distributed dataset of student scores, and perform outlier detection on it.
+我们通过构造一个正态分布的学生分数数据集，用以解释发现异常点的过程。
 
-As a first step, we’ll import the necessary modules.
+第一步，载入必须的python库。
 
 ```Python
 import numpy as np
@@ -51,7 +51,8 @@ import pandas as pd
 import seaborn as sns
 ```
 
-Next, let’s define the function `generate_scores()` that returns a normally-distributed dataset of student scores containing 200 records. We’ll make a call to the function, and store the returned array in the variable `scores_data`.
+第二步，定义名为`generate_scores()`的方程，这个方程会生成一个有包含有200个数据的正态分布的分数数据集。我们会使用这个方程生成数据集并存储到变量`scores_data`中。
+
 
 ```Python
 def generate_scores(mean=60,std_dev=12,num_samples=200):
@@ -62,7 +63,7 @@ def generate_scores(mean=60,std_dev=12,num_samples=200):
 scores_data = generate_scores()
 ```
 
-You can use Seaborn’s `displot()` function to visualize the data distribution. In this case, the dataset follows a normal distribution, as seen in the figure below.
+你可以使用Seaborn的`displot()`方程来生成数据集分布图像。通过下图可以看出，这个数据集服从正态分布。
 
 ```Python
 sns.set_theme()
@@ -71,15 +72,15 @@ sns.displot(data=scores_data).set(title="Distribution of Scores", xlabel="Scores
 
 ![EqfsNr10SYnFcCpdC_5Bdt9Z3jWIsaTI1yCcATGbf10BXTwwqKuJHUMuZT9n6M3bGuU8k4QOA8Vb87BStDzxQRRdQ-MzMwLT2EZZJL4ieB0_u0LnvsUXCkYBTllcll15mF1oGziS1QqZrfYR5A](https://lh6.googleusercontent.com/EqfsNr10SYnFcCpdC_5Bdt9Z3jWIsaTI1yCcATGbf10BXTwwqKuJHUMuZT9n6M3bGuU8k4QOA8Vb87BStDzxQRRdQ-MzMwLT2EZZJL4ieB0_u0LnvsUXCkYBTllcll15mF1oGziS1QqZrfYR5A)
 
-Figure 1: Normal Distribution of Scores
+图表1：正态分布
 
-Next, let's load the data into a [Pandas dataframe](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html) for further analysis.
+接下来，我们可以把该数据集导入[Pandas dataframe](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html) 以便进一步分析。
 
 ```python
 df_scores = pd.DataFrame(scores_data,columns=['score'])
 ```
 
-To obtain the mean and standard deviation of the data in the dataframe `df_scores`, you can use the `.mean()` and the `.std()` methods, respectively.
+你可以使用`.mean()`和`.std()`函数来获取数据集`df_scores`的均值和标准差。
 
 ```Python
 df_scores.mean()
@@ -92,7 +93,7 @@ score    11.854434
 dtype: float64
 ```
 
-As discussed earlier, set the lower limit (`lower_limit`) to be three standard deviations below the mean, and the upper limit (`upper_limit`) to be three standard deviations above the mean.
+像之前说的一样，阈值下限(`lower_limit`)设为算数平均减去三倍标准差，阈值上限(`upper_limit`)设为算术平均加上三倍标准差。
 
 ```Python
 lower_limit = df_scores.mean() - 3*df_scores.std()
@@ -104,7 +105,7 @@ print(upper_limit)
 96.47928329085734
 ```
 
-Now that you’ve defined the lower and upper limits, you may filter the dataframe `df_scores` to only retain the data points in the interval `[lower_limit, upper_limit]`, as shown below.
+通过上一步我们定义了阈值的上下限，我们可以使用这个阈值`[lower_limit, upper_limit]`来筛选数据集`df_score`中处于这个阈值的数据点，代码如下。
 
 ```Python
 df_scores_filtered=df_scores[(df_scores['score']>lower_limit)&(df_scores['score']<upper_limit)]
@@ -125,28 +126,28 @@ score
 [198 rows x 1 columns]
 ```
 
-From the output above, you can see that two records have been removed, and `df_scores_filtered` contains 198 records.
+通过上面的输出，我们发现这个方法移除了两个数据点，数据集`df_scores_filtered`包含有198个数据点。
 
-## How to Detect Outliers Using the Z-Score
+## 如何用过z-score检测异常值
 
-Now let's explore the concept of the z-score. For a normal distribution with mean μ and standard deviation σ, the z-score for a value x in the dataset is given by:
+接下来我们尝试使用z-score检测异常值的方法。对于均值为μ标准差为σ的正态分数来说，数据点x的z-score可以这么计算：
 
 **z = (x - μ)/σ**
 
-From the above equation, we have the following:
+通过上述公式，我们可以推导出以下条件：
 
--   When x = μ, the value of z-score is 0.
--   When x = μ ± 1, μ ± 2, or μ ± 3, the z-score is ± 1, ± 2, or ± 3, respectively.
+-   当 x = μ 时, z-score 为 0.
+-   当 x = μ ± 1, μ ± 2, 或 μ ± 3 时, z-score 为 ± 1, ± 2, 或 ± 3.
 
-Notice how this technique is equivalent to the scores based on standard deviation we had earlier. Under this transformation, all data points that lie below the lower limit, μ - 3\*σ, now map to points that are less than -3 on the z-score scale.
+我们可以发现，通过z-score检测异常值的方法其实等价于我们之前尝试过的通过标准差检测异常值的方法。通过对数据点进行标准化(z = (x - μ)/σ)，所有低于标准差方法中低阈值(μ - 3\*σ)的数据点将等价于z-score小于-3的数据点。
 
-Similarly, all points that lie above the upper limit, μ + 3\*σ map to a value above 3 on the z-score scale. So `[lower_limit, upper_limit]` becomes \[-3, 3\].
+类似的，通过标准化，大于上阈值(μ + 3\*σ)的数据点等价于z-score大于3的数据点。所以上下阈值`[lower_limit, upper_limit]`可以理解为\[-3, 3\]。
 
-Let’s use this technique on our dataset of scores.
+接下来我们将使用z-score方法来检测数据集`df_scores`中的异常点。
 
-### Code for Outlier Detection Using Z-Score
+### 使用z-score检测异常点方法的代码
 
-Let's compute z-scores for all points in the dataset, and add z\_score as a column to the dataframe `df_scores`.
+第一步，我们计算所有数据点的z-score，并把z\_score作为新的一列添加进数据集`df_scores`中。
 
 ```Python
 df_scores['z_score']=(df_scores['score'] - df_scores['score'].mean())/df_scores['score'].std()
@@ -160,27 +161,27 @@ score	z_score
 4	63.0	0.168291
 ```
 
-You can filter the dataframe `df_scores` to retain points whose z-scores are in the range \[-3, 3\], as shown below. The filtered dataframe contains 198 records, as expected.
+第二步，我们用阈值\[-3, 3\]来过滤掉数据集`df_scores`中z-score不在范围内的数据点。由于此方法等价与之前解释过的标准差方法，过滤后的数据集包含有198个数据点。
 
-The methods involving standard deviation and z-scores can be used only when the data set, or the feature that you are examining, follows a normal distribution.
+以上两种方法（通过标准差检测异常值和通过z-score来检测异常值）只适用于服从正态分布的数据。
 
-Next, we’ll discuss two outlier detection techniques that can be used _independently_ of the data distribution.
+接下来，我们将研究两种对数据分布_没有要求_的检测异常值的方法。
 
-## How to Detect Outliers Using the Interquartile Range (IQR)
+## 通过四分位距(IQR)检测异常值的方法
 
-In statistics, interquartile range or IQR is a quantity that measures the difference between the first and the third quartiles in a given dataset.
+统计学上，四分位距（IQR）反映了给定数据集中第一和第三分位数之间的距离。
 
--   The first quartile is also called the one-fourth quartile, or the 25% quartile.
--   If `q25` is the first quartile, it means 25% of the points in the dataset have values less than `q25`.
--   The third quartile is also called the three-fourth, or the 75% quartile.
--   If `q75` is the three-fourth quartile, 75% of the points have values less than `q75`.
--   Using the above notations, `IQR = q75 - q25`.
+-   第一份位数又称为四分之一分位数或25%分位数。
+-   我们约定`q25`为第一分位数，这意味这数据集中有25%的数据点小于`q25`。
+-   第三份位数又称为四分之三分位数或75%分位数。
+-   我们约定`q75`为第三分位数，这意味这数据集中有75%的数据点大于`q75`。
+-   使用上述表述方法, `IQR = q75 - q25`.
 
-### Code for Outlier Detection Using Interquartile Range (IQR)
+### 通过四分位距（IQR）检测异常值方法的代码
 
-You can use the box plot, or the box and whisker plot, to explore the dataset and visualize the presence of outliers. The points that lie beyond the whiskers are detected as outliers.
+我们可以使用箱型图或者箱线图来图形化数据集中的异常值。明显位于箱线图之外的数据点可以被视为异常值。
 
-You can generate box plots in Seaborn using the `boxplot` function.
+我们可以使用Seaborn中的`boxplot`函数生成箱型图。
 
 ```Python
 sns.boxplot(data=scores_data).set(title="Box Plot of Scores")
@@ -188,9 +189,9 @@ sns.boxplot(data=scores_data).set(title="Box Plot of Scores")
 
 ![PwEktzeOWRSXfPHTG1WBtFkLA536gNo56REH-5_MYnIpO2r01EeI-QGrTuznsticijoik534i-4ylgP0PDUMUmSm3EaOfl7gXQjOUCVw5XQqPWt9AkY_vpbqODMGSpW7CJ8ST2duYamvREoICA](https://lh6.googleusercontent.com/PwEktzeOWRSXfPHTG1WBtFkLA536gNo56REH-5_MYnIpO2r01EeI-QGrTuznsticijoik534i-4ylgP0PDUMUmSm3EaOfl7gXQjOUCVw5XQqPWt9AkY_vpbqODMGSpW7CJ8ST2duYamvREoICA)
 
-Figure 2: Box Plot of Scores
+图表 2: 箱型图
 
-Now, call the describe method on the dataframe `df_scores`.
+现在，我们调用`.describe()`函数检测数据集`df_scores`。
 
 ```Python
 df_scores.describe()
@@ -206,7 +207,7 @@ min	    20.000000
 max	    98.000000
 ```
 
-We use the 25% and 75% quartile values from the above result to compute IQR, and subsequently set the lower and upper limits to filter `df_scores`.
+我们使用25%和75%分位数来计算四分位距（IQR），并使用它们（25%分位数到75%分位数）作为阈值。
 
 ```Python
 IQR = 67-54
@@ -219,7 +220,7 @@ print(lower_limit)
 34.5
 ```
 
-As a next step, filter the dataframe `df_scores` to retain records that lie in the permissible range.
+下一步，利用四分位距（IQR）对数据集`df_scores`进行筛选。
 
 ```Python
 df_scores_filtered = df_scores[(df_scores['score']>lower_limit) & (df_scores['score']<upper_limit)]
@@ -240,11 +241,11 @@ score
 [192 rows x 1 columns]
 ```
 
-As seen in the output, this method labels eight points as outliers, and the filtered dataframe is 192 records long.
+从以上结果可以看出，四分位距方法把八个数据点标记为异常值，筛选后的数据集包含有192个数据点。
 
-You don't always have to call the describe method to identify the quartiles. You may instead use the `percentile()` function in [NumPy](https://numpy.org/doc/stable/user/index.html#user). It takes in two arguments, `a`: an array or a dataframe and `q`: a list of quartiles.
+我们除了可以使用`.describe()`来计算分位数，还可以使用[NumPy](https://numpy.org/doc/stable/user/index.html#user)库中的`.percentile()`函数来计算分位数。
 
-The code cell below shows how you can calculate the first and the third quartiles using the percentile function.
+以下代码展示了如何使用`.percentile()`函数计算第一和第三分位数。
 
 ```Python
 q25,q75 = np.percentile(a = df_scores,q=[25,75])
@@ -254,17 +255,17 @@ print(IQR)
 13.0
 ```
 
-## How to Detect Outliers Using Percentile
+## 利用百分位数方法检测异常值
 
-In the previous section, we explored the concept of interquartile range, and its application to outlier detection. You can think of percentile as an extension to the interquartile range.
+上一小节中我们探讨了四分位距和利用它进行异常值检测的方法。四分位距可以认为是百分位数的一个特例，所以我们也可以用百分位数来检测异常值。
 
-As discussed earlier, the interquartile range works by dropping all points that are outside the range `[q25 - 1.5*IQR, q75 + 1.5*IQR]` as outliers. But removing outliers this way may not be the most optimal choice when your observations have a _wide_ distribution. And you may be discarding more points—than you _actually_ should—as outliers.
+上一节中的四分位距方法使用`[q25 - 1.5*IQR, q75 + 1.5*IQR]`作为阈值，不在此范围内的数据点被标记为异常值。四分位距方法适用于数据点分布较分散的数据集，这种方法倾向于过多的标记异常值。
 
-Depending on the domain, you may want to widen the range of permissible values to estimate the outliers better. Next, let’s revisit the scores dataset, and use percentile to detect outliers.
+为了更好地标记异常值，我们可能需要使用除第一和第三分位数之外的其他分位数。接下来我们将通过百分位数方法再次检测scores数据集中的异常值。
 
-### Code for Outlier Detection Using Percentile
+### 使用百分位数检测异常值方法的代码
 
-Let’s define a custom range that accommodates all data points that lie anywhere between 0.5 and 99.5 percentile of the dataset. To do this, set `q = [0.5, 99.5]` in the percentile function, as shown below.
+第一步，我们首先找到0.5百分位数和99.5百分位数的范围。我们可以利用`.percentile()`函数带入`q = [0.5, 99.5]`来计算这个范围，代码如下
 
 ```Python
 lower_limit, upper_limit = np.percentile(a=df_scores,q=[0.5,99.5])
@@ -276,7 +277,7 @@ print(lower_limit)
 28.955
 ```
 
-Next, you may filter the dataframe using the lower and upper limits obtained from the previous step.
+下一步，我们可以使用之前计算的阈值对数据集进行检测。
 
 ```Python
 df_scores_filtered = df_scores[(df_scores['score']>lower_limit) & (df_scores['score']<upper_limit)]
@@ -298,17 +299,17 @@ score
 [198 rows x 1 columns]
 ```
 
-From the code cell above, you can see that there are two outliers, and the filtered dataframe has 198 data records.
+通过以上代码的结果我们可以看出有两个数据点被标记为异常值，过滤后的数据集包含有198个数据点。
 
-## Conclusion
+## 结语
 
-In this guide, we covered what outliers are, and why we need to detect them. We then went over the most common techniques for outlier detection.
+本文介绍了什么是异常值，我们为什么需要检测异常值，及我们如何检测异常值。本文介绍了四种最常见的检测异常值的方法。
 
-Here’s a summary:
+总结如下:
 
--   If the data, or feature of interest is normally distributed, you may use standard deviation and z-score to label points that are farther than three standard deviations away from the mean as outliers.
--   If the data is not normally distributed, you can use the interquartile range or percentage methods to detect outliers.
+-   如果要研究的数据或特征符合正态分布，我们可以使用标准差或z-score来标记异常值。通常我们标记超出均值正负三倍标准差的数据点为异常值。
+-   如果要研究的数据不服从正态分布是，我们可以使用四分位距或者百分位数来检测异常值。
 
-In addition, we discussed the best practices in outlier detection. When a large fraction of data is being labeled as outliers, they are not really outliers but can be attributed to a wider data distribution.
+此外我们还介绍了检测异常值的一些特殊情况。当数据集中有大量数据被标记为异常值时要慎重，因为造成这种情况的原因可能是因为我们手头的数据集属于一个更大更完备的数据集，被标记的异常值可能描述了更大的数据集的分布情况。
 
-In applying all of the above techniques, it's also important to be aware of the current trend to identify how certain values are evolving, and check for permissible lower and upper limits using domain knowledge.
+除此之外，在检测异常值的过程中要根据数据集的特征适时调整用来筛选检测异常值的阈值。

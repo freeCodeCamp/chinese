@@ -630,17 +630,17 @@ Emitted javascript code same as Javascript（我看不懂）
 
 ## Conclusion
 
-TypeScript 2.0 saw the release of the **__non-null assertion operator__**. Yes, it’s been around for some time ([released in 2016](https://github.com/microsoft/TypeScript/releases/tag/v2.0.3)). At the time of writing, the latest version of TypeScript is `v4.7`.
+TypeScript 2.0 发布了 **_non-null assertion operator (非空断言操作符)_**。 是的，它已经存在了一段时间（[发布于 2016 年](https://github.com/microsoft/TypeScript/releases/tag/v2.0.3)）。在撰写本文时，TypeScript 的最新版本是 `v4.7`。
 
-If the TypeScript compiler complains about a value being `null` or `undefined`, you can use the `!` operator to assert that the said value is not null or undefined.
+如果 TypeScript 编译器警告一个值是 `null` 或 `undefined` ，你可以使用 `！` 操作符来断言上述值不是 `null` 或 `undefined`。
 
-Only do this if you’re certain that is the case.
+只有在你确定是这样的情况下才这样做。
 
-Even better, go ahead and add an assertion of your own, or try to find an alternative solution.
+甚至更好的是，继续添加你自己的断言，或尝试找到一个替代的解决方案。
 
-Some may argue that if you need to use the non-null assertion operator every time, it’s a sign you’re poorly representing the state of your application state via TypeScript.
+有些人可能会说，如果你每次都需要使用 **_non-null assertion operator (非空断言操作符)_**，那就说明你通过 TypeScript 控制你的应用程序状态的能力很差。
 
-I agree with this school of thought.
+我同意这个观点。
 
 # What is a “.d.ts” File in TypeScript?
 
@@ -650,31 +650,31 @@ What is a d.ts file?
 
 ## TL;DR
 
-`.d.ts` files are called type declaration files. They exist for one purpose only: to describe the shape of an existing module and they only contain type information used for type checking.
+`.d.ts`文件被称为类型声明文件。它们的存在只有一个目的：描述一个现有模块（module）的类型特征(shape)，它们只包含用于类型检查的类型信息。
 
 ## Introduction to `.d.ts` Files in TypeScript
 
-Upon learning the basics of TypeScript, you unlock superpowers.
+学习了 TypeScript 的基础知识后，你就可以获得超能力。
 
-At least that’s how I felt.
+至少我是这么认为的。
 
-You automagically get warnings on potential errors and you get auto-completion out of the box in your code editor.
+你会自动得到潜在错误的警告，并在你的代码编辑器中得到自动完成的功能。
 
-While seemingly magical, nothing with computers really is.
+虽然看起来很神奇，但计算机没有使用魔法。
 
-So, what’s the trick here, TypeScript?
+那么，TypeScript 的诀窍是什么呢？
 
-In clearer language, how does TypeScript know so much? How does it decide what API is correct or not? What methods are available on a certain object or class, and which aren’t?
+用更清晰的语言，TypeScript 怎么知道这么多？ 它如何判断哪个 API 正确与否？ 在某个对象或类上哪些方法可用，哪些不可用？
 
-The answer is less magical.
+答案不是魔法。
 
-TypeScript relies on types.
+TypeScript 靠的是类型（type）。
 
-Occasionally, you do not write these types, but they exist.
+有时，您不编写这些类型（types），但它们存在。
 
-They exist in files called declaration files.
+它们存在于称为声明文件的文件中。
 
-These are files with a `.d.ts` ending.
+这些是以 `.d.ts` 结尾的文件。
 
 ## A Simple Example of `.d.ts` Files
 

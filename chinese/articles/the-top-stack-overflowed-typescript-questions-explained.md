@@ -678,65 +678,63 @@ TypeScript 靠的是类型（type）。
 
 ## A Simple Example of `.d.ts` Files
 
-Consider the following TypeScript code:
+想一下下面的 TypeScript 代码:
 
 ```ts
 // valid 
 const amount = Math.ceil(14.99)
 
-// error: Property 'ciil' does not exist on type 'Math'.(2339)
+// error: Property 'ceil' does not exist on type 'Math'.(2339)
 const otherAmount = Math.ciil(14.99)
 ```
 
-See the [TypeScript playground](https://www.TypeScriptlang.org/play?#code/MYewdgzgLgBAhgWxAVzLAvDAsnKALAOmAFMBLAGwAoBGAFgIE4GBKAKFdElhH2ICcAgklQZsuQsFIUa9Jm1ZA).
+参考 [TypeScript playground（训练场）](https://www.TypeScriptlang.org/play?#code/MYewdgzgLgBAhgWxAVzLAvDAsnKALAOmAFMBLAGwAoBGAFgIE4GBKAKFdElhH2ICcAgklQZsuQsFIUa9Jm1ZA).
 
-The first line of code is perfectly valid, but the second, not quite.
+第一行代码是完全有效的，但第二行则不尽然。
 
-And TypeScript is quick to spot the error: `Property 'ciil' does not exist on type 'Math'.(2339)`.
+TypeScript 很快就发现了这个错误: `Property 'ciil' does not exist on type 'Math'.(2339)`.
 
 ![image-64](https://www.freecodecamp.org/news/content/images/2022/07/image-64.png)
 
-The Typescript error spotting the wrong property access "ciil"
+Typescript 发现访问属性 `ciil` 的错误。
 
-How did TypeScript know `ciil` does not exist on the `Math` object?
+TypeScript 是如何知道 `Math` 对象上不存在 `ciil` 的？
 
-The `Math` object isn’t a part of our implementation. It’s a standard built-in object.
+`Math` 对象不是我们实现的一部分。 这是一个标准的内置对象。
 
-So, how did TypeScript figure that out?
+那么，TypeScript 是如何解决这个问题的呢？
 
-The answer is there are **__declaration files__** that describe these built-in objects.
+答案是有 **_declaration files_** 来描述这些内置对象。
 
-Think of a declaration file as containing all type information relating to a certain module. It contains no actual implementation, just type information.
+将声明文件视为包含与某个模块相关的所有类型信息。 它不包含具体实现，仅包含类型信息。
 
-These files have a `.d.ts` ending.
+这些文件有一个 `.d.ts` 结尾。
 
-Your implementation files will either have `.ts` or `.js` endings to represent TypeScript or JavaScript files.
+你的实现文件将有`.ts`或`.js`结尾，代表 TypeScript 或 JavaScript 文件。
 
-These declaration files have no implementations. They only contain type information and have a `.d.ts` file ending.
+这些声明文件没有实现。他们只包含类型信息，并且有一个`.d.ts`文件结尾。
 
 ## Built-in Type Definitions
 
-A great way to understand this in practice is to set up a brand new TypeScript project and explore the type definition files for top-level objects like `Math`.
+在实践中理解这一点的一个好方法是建立一个全新的 TypeScript 项目，并探索顶级对象的类型定义文件，如 `Math`。
 
-Let’s do this.
+让我们这样做。
 
-Create a new directory, and name it whatever’s appropriate.
+创建一个新的目录，并将其命名为任何合适的名字。
 
-I’ll call mine `dts`.
-
-Change directories to this newly created folder:
+我创建一个新文件夹 `dts`:
 
 ```ts
 cd dts
 ```
 
-Now initialise a new project:
+现在初始化一个新的项目:
 
 ```ts
 npm init --yes
 ```
 
-Install TypeScript:
+初始化 TypeScript:
 
 ```ts
 npm install TypeScript --save-dev
@@ -744,75 +742,71 @@ npm install TypeScript --save-dev
 
 ![image-65](https://www.freecodecamp.org/news/content/images/2022/07/image-65.png)
 
-Installing TypeScript
+安装 TypeScript
 
-This directory should contain 2 files and one subdirectory:
+这个目录应该包含 2 个文件和一个子目录:
 
 ![image-66](https://www.freecodecamp.org/news/content/images/2022/07/image-66.png)
 
-The files after installation
+安装后的文件
 
-Open the folder in your favourite code editor.
+在你喜欢的代码编辑器中打开该文件夹。
 
-If you investigate the `TypeScript` directory within `node_modules`, you’ll find a bunch of type declaration files out of the box.
+如果你去查看 `node_modules`中的`TypeScript`目录，你会发现一堆开箱即用的类型声明文件。
 
 ![image-67](https://www.freecodecamp.org/news/content/images/2022/07/image-67.png)
 
-Type declaration files in the TypeScript directory
+TypeScript 目录中的类型声明文件，是在安装 TypeScript 后出现的。
 
-These are present courtesy of installing TypeScript.
+默认情况下，TypeScript 将包括所有 DOM API 的类型定义，例如认为`window`和`document`。
 
-By default, TypeScript will include type definition for all DOM APIs, for example think `window` and `document`.
+当你检查这些类型声明文件时，你会注意到命名惯例是很简单的。
 
-As you inspect these type declaration files, you’ll notice that the naming convention is straightforward.
+它是这样的：`lib.[something].d.ts`。
 
-It follows the pattern: `lib.[something].d.ts`.
-
-Open up the `lib.dom.d.ts` declaration file to view all declarations related to the browser DOM API.
+打开`lib.dom.d.ts`声明文件，查看所有与浏览器 DOM API 相关的声明。
 
 ![image-68](https://www.freecodecamp.org/news/content/images/2022/07/image-68.png)
 
-The dom declaration file
+DOM 声明文件，正如你所看到的，这是个相当巨大的文件。
 
-As you can see, this is quite a gigantic file.
+DOM 中的所有 API 也是如此。
 
-But so are all the APIs available in the DOM.
+真棒啊!
 
-Awesome!
-
-Now, if you take a look at the `lib.es5.d.ts` file, you’ll see the declaration for the `Math` object, containing the `ceil` property.
+现在，如果你看一下`lib.es5.d.ts`文件，你会看到`Math`对象的声明，包含`ceil`属性。
 
 ![image-69](https://www.freecodecamp.org/news/content/images/2022/07/image-69.png)
 
-The Math object in the declaration file
+声明文件中的 Math 对象
 
-Next time you think, wow, TypeScript is wonderful. Remember, a big part of that awesomeness is due to the lesser-known heroes: type declaration files.
+下次你想，哇，TypeScript 真了不起。请记住，这种美妙的很大一部分是由于鲜为人知的英雄：类型声明文件。
 
-It’s not magic. Just type declaration files.
+这不是魔术,是类型声明文件。
 
 ## External Type Definitions in TypeScript
 
-What about APIs that aren’t built-in?
+那些没有内置的 API 怎么办？
 
-There’s a host of `npm` packages out there to do just about anything you want.
+有许多`npm`包可以做任何你想做的事情。
 
-Is there a way for TypeScript to also understand the relevant type relationships for the said module?
+有没有办法让 TypeScript 也能理解上述模块的相关类型关系？
 
-Well, the answer is a resounding yes.
+嗯，答案是肯定的。
 
-There are typically two ways a library author may do this.
+通常有两种方式，一个库的作者可以做到这一点。
 
 ### Bundled Types
 
-In this case, the author of the library has already bundled the type declaration files as part of the package distribution.
+在这种情况下，库的作者已经将类型声明文件作为包的一部分捆绑在一起。
 
-You typically don’t need to do anything.
+你通常不需要做任何事情。
 
-You just go ahead and install the library in your project, you import the required module from the library and see if TypeScript should automatically resolve the types for you.
+你只需继续在你的项目中安装库，从库中导入所需的模块，看看 TypeScript 是否会自动为你解析类型
 
-Remember, this is not magic.
+记住，这不是魔术。
 
-The library author has bundled the type declaration file in the package distribution.
+库的作者已经将类型声明文件包含在包的分发中。
 
 ### DefinitelyTyped (@types)
 

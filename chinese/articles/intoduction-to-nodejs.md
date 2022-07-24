@@ -5,39 +5,39 @@
 
 ![How to Get Started with Node.js – Beginner's Guide to Node](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/1200px-Node.js_logo.svg.png)
 
-Node.js is a JavaScript runtime that extends its capability to the server-side. It is built on Chrome’s V8 JavaScript Engine.
+Node.js是一个JavaScript运行时环境，将其能力扩展到服务器端。它是建立在Chrome的V8 JavaScript引擎上。
 
-Node is an event-driven, non-blocking IO model. This means it's asynchronous, and doesn't block itself for one request (but rather immediately moves to the next request). This makes Node extraordinarily fast and efficient.
+Node是一个事件驱动的非阻塞I/O模型。这意味着它是异步的，并且因为一个请求而阻塞（而是立即移动到下一个请求），这使得Node异常快速和高效。
 
-By event-driven, it means that as soon as Node starts it initiates all the variables and functions and waits for an event to occur.
+所谓事件驱动，是指一旦Node启动，它就会启动所有的变量和函数，并等待事件的发生。
 
 ![image-195](https://www.freecodecamp.org/news/content/images/2022/06/image-195.png)
 
-NPM stands for Node Package Manager which help you manage your packages for Node. NPX stands for Node Package Execute, and it can execute any npm package without even installing it.
+NPM即Node包管理工具（Node Package Manager），辅助你管理Node包。 NPX即Node包执行（Node Package Execute），它可以执行任何npm包，甚至无需安装。
 
-To download npm head to [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
+可以前往[https://nodejs.org/en/download/](https://nodejs.org/en/download/)下载NPM。
 
-## How to Write Your First Node.js Program (Hello World)
+## 编写你的第一个Node.js项目(Hello World)
 
-Create a file called hello\_world.js in your project folder
+在你的项目文件中创建一个名为hello\_world.js的文件。
 
-Then open the file in your code editor like VS Code. Type the code `console.log(“Hello World”);` in your editor.
+然后在如VS Code这样的代码编辑器中打开文件。在编辑器中输入`console.log(“Hello World”);`。
 
-Open the terminal, and navigate to the file location.
+打开终端，并且导航到文件所在的位置。
 
-Now type `node hello_world.js`.
+输入`node hello_world.js`。
 
 ![image-196](https://www.freecodecamp.org/news/content/images/2022/06/image-196.png)
 
-## How to Import Node Core Modules
+## 如何导入Node核心模块
 
-So let’s start with the very basic package, that is **fs (file system)**. You use it to create, read, and modify files.
+让我们从基础包开始，即**fs (文件系统)**。我们使用它来创建、读取和修改文件。
 
-To import the fs module, type this command: `const fs = require(“fs”);`.
+导入fs模块，输入命令：`const fs = require(“fs”);`。
 
-Now to use any function of this module, you can refer to the [docs](https://nodejs.org/docs/latest-v17.x/api/fs.html#file-system).
+使用这个模块中的函数，可以参考[文档](https://nodejs.org/docs/latest-v17.x/api/fs.html#file-system)。
 
-To create a file, we can use `fs.writeFileSync(filename, content);`.
+创建文件，可以使用`fs.writeFileSync(filename, content);`。
 
 ```js
 const fs = require(“fs”);
@@ -46,7 +46,7 @@ fs.writeFileSync(“file.txt”, “Hi there..”);
 
 ![1*KzqmGo9SE7R3XPYOS-3LXg](https://miro.medium.com/max/446/1*KzqmGo9SE7R3XPYOS-3LXg.png)
 
-To append anything in the same file we can use this:
+在同一个文件中添加内容可以：
 
 ```js
 fs.appendFileSync(filename, content);.
@@ -54,19 +54,19 @@ fs.appendFileSync(filename, content);.
 
 ![1*dOqUqcuJ5a5vl_BQ_E0dSg](https://miro.medium.com/max/842/1*dOqUqcuJ5a5vl_BQ_E0dSg.png)
 
-## How to Install NPM Packages
+## 如何安装NPM包
 
-Now we will use a very basic npm package called **superheroes** (which is a list of random superheroes) to help you understand how npm works.
+我们将使用一个名为**superheroes（超级英雄）**的基础NPM包 (包含了一个随机的超级英雄清单)来帮助你理解NPM是如何运作的。
 
-To install any npm package, we can use this command in the cmd:
+我们可以在cmd中使用这条命令来安装任意npm包：
 
 ```cmd
 npm install superheroes
 ```
 
-Now to import the installed package type `const sh = require(“superheroes”);`.
+现在输入`const sh = require(“superheroes”);`导入这个安装好的包。
 
-To display the name of a random superhero, use this command:
+使用这条命令来随机展示超级英雄的名字：
 
 ```js
 console.log(sh.random());.
@@ -74,15 +74,15 @@ console.log(sh.random());.
 
 ![1*WfHNl2GDgyXBEwfV6oV0GQ](https://miro.medium.com/max/1400/1*WfHNl2GDgyXBEwfV6oV0GQ.png)
 
-Let’s try another package. Now we’ll install one of the most used npm packages called **“chalk” —** it styles text strings in the terminal.
+再来试一试另外一个包。让我们安装时下最流行的一个npm包——“chalk"，这个包可以改变终端字符串的样式。
 
-To install the chalk package (we will install version 2.4.2 as it allows us to import the package using the **require** method), type the following command:
+使用以下命令安装chalk(我们将安装版本2.4.2，在这个版本中可以使用**require**方法)
 
 ```js
 npm install chalk@2.4.2
 ```
 
-Now to style the text string, use this command to pick the color of the string:
+现在我们可以通过命令改变文本字符串演示，使用这条命命来选择文本颜色：
 
 ```js
 chalk.color(text)
@@ -90,63 +90,63 @@ chalk.color(text)
 
 ![1*AQ5TX0vxzPn5N0lzrSBbJw](https://miro.medium.com/max/1400/1*AQ5TX0vxzPn5N0lzrSBbJw.png)
 
-You can read more about the [chalk package here](https://www.npmjs.com/package/chalk).
+更多信息参考[chalk包的文档](https://www.npmjs.com/package/chalk)。
 
-## How to Initiate NPM in Our Program
+## 如何在程序中初始化NPM
 
-To initiate NPM in our program, we can use the following command:
+我们可以使用以下命令来初始化NPM：
 
 ```js
 npm init
 ```
 
-Then press enter or answer the questions accordingly.
+然后输入回车并且回答响应的问题：
 
 ![1*G_SVRqNdjuuWssQANvZgbw](https://miro.medium.com/max/1400/1*G_SVRqNdjuuWssQANvZgbw.png)
 
-Or you can directly use the command `npm init -y` (same as pressing enter to all the questions).
+或者你可以直接通过`npm init -y`来完成初始化 (相当于所有问题的答案都是回车)。
 
 ![1*CafNbhzEhvGAayNHnpb29A](https://miro.medium.com/max/1400/1*CafNbhzEhvGAayNHnpb29A.png)
 
-This will result in the creation of the **package.json** file:
+初始化完毕后会生成一个 **package.json** 文件：
 
 ![1*hYaMdTgcLdABQ1qqjQdpRQ](https://miro.medium.com/max/1400/1*hYaMdTgcLdABQ1qqjQdpRQ.png)
 
-### So, what is package.json?
+### 所以，package.json是什么?
 
-package.json is the heart of any Nodejs project. It maintains a record of all the dependencies (NPM packages) and contains the metadata of every project.
+package.json是Nodejs项目的一部分。它包含了所有依赖项（NPM包）的记录和每一个项目的原数据。
 
-If someone else downloads the project, this file will help them install all the dependencies required to run the program.
+如果其他人下载了这个项目，他们可以通过这个文件来安装所有运行程序需要的依赖项。
 
-## How to Use Moment.js — an NPM Package
+## 如何使用Moment.js — 一个NPM包
 
-This is one of the most used npm packages out there. You can use it to parse and validate dates.
+这是使用最多的NPM包之一，可以使用这个包来解析和验证日期。
 
-To install the package, run this command:
+使用以下命令安装包：
 
 ```js
 npm i moment
 ```
 
-Import the package like this:
+导入包：
 
 ```js
 const moment = require(“moment”);
 ```
 
-To create a Date object to fetch the current date and time (JavaScript method), run this code:
+通过创建一个Date对象来获取当前日期和时间（JavaScript方法），运行以下代码：
 
 ```js
 const time = new Date();
 ```
 
-Now, to parse or format the date we will use the **moment** package:
+使用包里的**moment**方法来解析或者格式化日期：
 
 ```js
 const parsedTime = moment(time).format("h:mm:ss");
 ```
 
-Print the parsed time like this:
+打印解析后的日期：
 
 ```js
 console.log(parsedTime);
@@ -154,47 +154,47 @@ console.log(parsedTime);
 
 ![1*V3hJ24cmTASx9k6Rv83gXg](https://miro.medium.com/max/1400/1*V3hJ24cmTASx9k6Rv83gXg.png)
 
-This is the package.json for this project which includes all the dependency packages — **moment** in this case.
+该项目的package.json中包含的所有依赖项 — 这个例子中的依赖项就是**moment**。
 
 ![1*kKFpiaEOtsRbxN67do4HDw](https://miro.medium.com/max/1400/1*kKFpiaEOtsRbxN67do4HDw.png)
 
-We also have **node\_modules** in the project folder. This folder contains all the dependencies our project depends on including moment and other packages that moment depends on.
+在项目文件夹中也有**node\_modules**文件夹。该文件夹包含了所有项目依赖的的依赖项，包含moment，以及moment依赖的依赖包。
 
 ![1*-mxxdXnGzLxG98LE2ebMDQ](https://miro.medium.com/max/454/1*-mxxdXnGzLxG98LE2ebMDQ.png)
 
-**package-lock.json** is another file in our project folder that contains all the information regarding the name, dependencies, version of dependencies, and locked version of the project.
+**package-lock.json**是项目文件夹中另一个文件，包含了项目名称、依赖项、依赖项版本和锁定版本等信息。
 
-It describes the exact tree that was generated to allow subsequent installs to have the identical tree.
+该文件描述了项目生成的树，使后续安装可以生成相同的树。
 
 ![1*b1VMBTQ3HtQtnaHUWGY8iQ](https://miro.medium.com/max/1400/1*b1VMBTQ3HtQtnaHUWGY8iQ.png)
 
-# How to Use Express JS — a NodeJS Framework
+# 如何使用Express JS — 一个NodeJS框架
 
-Express is a Node.js web application framework that offers a comprehensive range of functionality for both web and mobile apps.
+Express是Node.js的一个web应用框架，该框架提供了全面的功能来支持web和移动应用的开发。
 
-### How to install Express
+### 如何安装Express
 
-To install Express, run this command:
+使用以下命令来创建Express：
 
 ```js
 npm install express
 ```
 
-Then you'll need to import Express like this:
+然后这样导入Express：
 
 ```js
 const express = require("express");
 ```
 
-### How to create an Express application
+### 如何创建一个Express应用
 
-To create an Express app, just run this command:
+使用以下命令来创建Express应用：
 
 ```js
 const app = express()
 ```
 
-### How to start a server on port 3000
+### 如何在端口3000启动服务器
 
 ```js
 app.listen(3000, () => { 
@@ -204,29 +204,29 @@ app.listen(3000, () => {
 
 ![1*jD3FvRLcd_j2MuZ0U6_bXw](https://miro.medium.com/max/1400/1*jD3FvRLcd_j2MuZ0U6_bXw.png)
 
-Now you can open [**http://localhost:3000**](http://localhost:3000/) to reach your created server
+你可以打开[**http://localhost:3000**](http://localhost:3000/)登陆你创建的服务器。
 
 ![1*IMLmUArtV_ctmiAG18TnJg](https://miro.medium.com/max/844/1*IMLmUArtV_ctmiAG18TnJg.png)
 
-Okay, so “cannot get /” means that there is no defined route “/” yet.
+这里的 “cannot get /” 意味着还没有定义路由 “/” 。
 
-So to define the “/” route we use `app.get()` the function.
+可以使用 `app.get()`函数定义 “/”路由。
 
-The **app.get (route, callback function)** function is used to handle all GET requests.
+**app.get (route, callback function)**函数被用于处理所有GET请求。
 
-The callback function has two arguments, **req** and **res**, which refer to HTTP requests and the desired response, respectively. The argument names (req, res) are not fixed and can be named anything you want.
+这个回调函数有两个参数，**req**和**res**，分别指代的是HTTP请求和期望的响应。参数名（req，res）并不是固定的，所有你可以重命名为其他值。
 
 ```js
 app.get("/", (req,res) => { 
-    // app.get to handle GET requests
-    // req - http request, res - desired response
-    res.send("Hello World"); // send Hello World to this route
+    // app.get处理GET请求
+    // req - http请求, res - 期望响应
+    res.send("Hello World"); // 给这个路由发送Hello World
 }
 ```
 
-## How to Create a Hello World Program in Express
+## 如何使用Express来创建Hello World程序
 
-In this section we will create the very basic program of Hello World in Express.
+在这个部分中我们将使用Express创建基本的Hello World程序：
 
 ```js
 const express = require("express");
@@ -239,19 +239,19 @@ app.listen(3000, () => {
 });
 ```
 
-And here's the output
+输出如下：
 
 ![1*uRqmENgESv8cdq-0oSaX8A](https://miro.medium.com/max/1060/1*uRqmENgESv8cdq-0oSaX8A.png)
 
-## How to Render Static Files in Express
+## 如何在Express中渲染静态文件
 
-This section introduces us to the concept of static file rendering using Express.
+这部分介绍如何使用Express来渲染静态文件的概念。
 
-First, you'll need to create a new project folder. Then you'll initialize npm using `npm init -y`.
+首先，创建一个新的项目文件夹，并且使用 `npm init -y`来初始化npm。
 
-Install the Express package `npm i express` and create a file called app.js.
+使用 `npm i express`来安装Express，并创建一个名为app.js的文件。
 
-Then you'll create an app, and listen or start the server on port 3000.
+创建一个app，并在端口3000监听：
 
 ```js
 const express = require("express);
@@ -261,25 +261,25 @@ app.listen(3000, () => {
 }
 ```
 
-To render static web pages such as HTML, CSS, and JS, create a folder named public in the root directory.
+在根目录创建一个名为public的文件夹，来渲染静态web页面，如：HTML、CSS和JS。
 
-As we’re focusing on only the backend, we will not spend much time on the frontend and will create only an HTML file in the public folder.
+由于本教程重点在后端，所有我们不会花时间在前端部分，在public文件夹中，我们仅创建HTML文件。
 
 ![1*-OiGmKZaz7GKc3NdNVjZdg](https://miro.medium.com/max/1142/1*-OiGmKZaz7GKc3NdNVjZdg.png)
 
-We will now import the **path** module and join the specified paths into one:
+我们将导入 **path** 模块，并将特定路径合并到一起：
 
 ```js
 const path = require(“path”);
 ```
 
-Now to render these files, we have to use the following command:
+并使用以下命令来渲染这些文件：
 
 ```js
 app.use(express.static(path.join(__dirname, “/public”)));
 ```
 
-**\_\_dirname →** returns the current directory
+**\_\_dirname →** 返回当前目录
 
 ```js
 const express = require("express");
@@ -291,25 +291,25 @@ app.listen(3000, () => {
 });
 ```
 
-And here's the output:
+输出如下：
 
 ![1*2U5Qi3XKOaNF0MjXSTo0tg](https://miro.medium.com/max/1034/1*2U5Qi3XKOaNF0MjXSTo0tg.png)
 
-## How to Render Dynamic Files in Express
+## 如何在Express中渲染动态文件
 
-In this section we will learn to render dynamic files in which we can use values from an input object.
+在这个部分我们将学习如何使用一个输入对象的值来渲染动态文件。
 
-To render dynamic web pages, there are many templates such as pug, handlebars, ejs, and so on. These templates allow us to inject dynamic data, if conditions, and loops at runtime.
+有一些，如：pug、handlebars、ejs等模板用于动态页面的渲染。这些模板使得我们可以在运行时注入动态数据、if条件和循环。
 
-But here we will focus on handlebars.
+在这里我们将讨论handlebars。
 
-Install the packages (express and hbs):
+安装包 (express和hbs):
 
 ```js
 npm i hbs express
 ```
 
-Create a file named app.js and import the packages like this:
+创建文件名为app.js的文件，并且导入包：
 
 ```js
 const express = require(“express”);
@@ -317,7 +317,7 @@ const hbs = require(“hbs”);
 const path = require(“path”);
 ```
 
-Create an Express app and listen on port 3000:
+创建Express，并在端口3000监听：
 
 ```js
 const app = express();
@@ -326,21 +326,21 @@ app.listen(3000, (req,res) => {
 }
 ```
 
-For handlebars to work, we need to set the view engine as hbs.
+将视图引擎（view engine）设置为hbs，使得handlebars生效：
 
 ```js
 app.set(“view engine”, “hbs”);
 ```
 
-The view engine enables us to render dynamic webpages using the specified template.
+视图引擎使得我们可以使用特定模板来渲染动态页面。
 
-View engine generally looks for the “views” folder in the root folder. But to avoid errors we’ll mention the path of “views” using the following command:
+基本上，视图引擎会在根目录里寻找“视图（views）”文件夹。但为了避免报错，我们将“views”的路径包含在参数中：
 
 ```js
 app.set(“views”, path.join(__dirname,“/views”);
 ```
 
-Now create a **views** folder in the root directory. Under that create a file called index.hbs (.hbs is the extension of handlebars) and insert the following HTML code:
+然后在根目录中创建 **views** 文件夹。 并在文件夹中创建index.hbs文件(.hbs是handlebars的扩展名)并插入以下HTML代码：
 
 ### index.hbs
 
@@ -351,14 +351,14 @@ Now create a **views** folder in the root directory. Under that create a file ca
     </head>
     <body>  
       <h1>Dynamic Rendering</h1>   
-      <p>{{author}}</p> <!--dynamic data recieved from server-->
+      <p>{{author}}</p> <!--由服务器接受到的动态数据-->
     </body>
 </html>
 ```
 
-**`{{author}}`** — it is the syntax to insert dynamic data
+**`{{author}}`** — 是插入动态数据的语法
 
-Now to render the index.hbs file we’ll create an app.get function to handle the GET request on the route “/” and send the dynamic data **author**.
+我们再创建一个app.get函数来处理路由"/"上的GET请求，并且发送动态数据**author**。
 
 ```js
 app.get("/", (req, res) => { 
@@ -368,9 +368,9 @@ app.get("/", (req, res) => {
 });
 ```
 
-**`res.render`** is the function to render the view. Here we have to pass two arguments. The first is the name of the file without the extension and the second is the object of local variables, for example **author**.
+**`res.render`**是一个渲染视图的函数，在这里我们传入了两个参数。第一个是去掉扩展名的文件名，第二个是本地变量对象，比方说 **author**。
 
-### app.js file
+### app.js文件
 
 ```js
 const express = require("express");
@@ -389,39 +389,39 @@ app.listen(3000, (req, res) => {
 });
 ```
 
-### Folder structure
+### 文件夹结构
 
 ![1*7xz9Fj17mTS5pZhxzf2dvw](https://miro.medium.com/max/502/1*7xz9Fj17mTS5pZhxzf2dvw.png)
 
-And here's the output:
+输出如下：
 
 ![1*JQt1mgjLTU-LJJ0XS7UH3A](https://miro.medium.com/max/824/1*JQt1mgjLTU-LJJ0XS7UH3A.png)
 
-# How to Create Advanced Templates with Handlebars
+# 如何使用Handlebars创建高级模板
 
-So, this is where we’ll learn about reusable components. Previously, we had to construct identical components for each and every page when it came to headers and footers.
+在这一部分我们将学习可复用组件。在前面的章节我们给每一个页面的header和footer创建了相同的组件。
 
-But because there are so many repetitive tasks, advanced templating is the savior. This concept states that we will just make one component that will be used everywhere we need it.
+这里的重复性工作就可以通过高级模板来简化。也就是说我们创建一个组件，并在需要的地方反复使用。
 
-### Handlebars introduced the concept of Partials
+### Handlebars引入部分（Partials）的概念
 
-Partials are the regular handlebar files that other templates can call. Partials are a widely used templating concept that is not specific to Handlebars.
+Partials是可被其他模板调用的handlebar文件。 Partials是一个被广泛应用的模板类概念，所以不仅限于Handlebars。
 
-To construct templates that are likely to be reused, you can isolate them into their files (a Partial), and then use them in various templates. You can consider partials to be a simple technique for modularizing your templates.
+想要构建可以复用的模板，可以将它们单独放在同一个文件夹内（Partial），然后在不同的模板中使用。可以将Partial理解为模块化模板的一种简单技术。
 
-Follow these steps to create partials:
+可以通过以下步骤创建partial：
 
--   Initiate npm → `npm init -y`
--   Install the required packages, Express, and hbs → `npm i express hbs`
--   Create your folder templates
--   Create two additional folders within the folder templates: **partials and views**
--   Now create a file **app.js**
+-   初始化npm → `npm init -y`
+-   安装必要的包、Express以及hbs → `npm i express hbs`
+-   创建文件夹模板
+-   在文件夹模板内部创建另外两个文件夹： **partials和views**
+-   创建文件 **app.js**
 
 ![1*98jLDll1IWq-vd8H0ieNCg](https://miro.medium.com/max/472/1*98jLDll1IWq-vd8H0ieNCg.png)
 
-The folder Structure should be similar
+文件结构类似
 
-Let’s create two partial files: header.hbs and footer.hbs. And we'll also add two views, index.hbs and about.hbs.
+让我们创建两个partial文件: header.hbs和footer.hbs。同时也创建两个视图：index.hbs和about.hbs。
 
 ![1*E32yq-EHCLFfUFzbgIbJJg](https://miro.medium.com/max/422/1*E32yq-EHCLFfUFzbgIbJJg.png)
 
@@ -433,9 +433,9 @@ Let’s create two partial files: header.hbs and footer.hbs. And we'll also add 
         <title>Advanced Templating</title>  
     </head>  
     <body>    
-        {{>header}} <!--include the header component-->
+        {{>header}} <!--包含header组件-->
         <p>I'm a savior</p>    
-        {{>footer}} <!-- include the footer component -->
+        {{>footer}} <!-- 包含footer组件-->
     </body>
 </html>
 ```
@@ -460,7 +460,7 @@ Let’s create two partial files: header.hbs and footer.hbs. And we'll also add 
 ```html
 <header>  
     <h1>Advanced Templating</h1> 
-    <h3>{{title}}</h3><!--dynamic data received from server-->
+    <h3>{{title}}</h3><!--服务器传来的动态数据-->
     <a href="/">Home</a> 
     <a href="/about">About</a>
 </header>
@@ -470,7 +470,7 @@ Let’s create two partial files: header.hbs and footer.hbs. And we'll also add 
 
 ```html
 <footer>  
-    <p>Created by {{name}}</p> <!--name -> dynamic data -->
+    <p>Created by {{name}}</p> <!--name -> 动态数据 -->
 </footer>
 ```
 
@@ -501,26 +501,26 @@ app.listen(3000, () => {
 });
 ```
 
-Everything is the same as I explained in the section on rendering dynamic files in Express – except here we have to **register the partials** to use partials.
+这里基本和在Express中渲染动态数据章节类似，除了使用partial的时候我们需要 **注册partials**。
 
-### How to register partials
+### 如何注册partials
 
 ```js
 hbs.registerPartials(path_to_partials)
 ```
 
-As we’ve created the partials directory in the templates folder, here is the path of partials:
+由于我们在模板文件夹中创建了partials目录，这里是 partials 的路径：
 
 ```js
 hbs.registerPartials(path.join(__dirname, "/templates/partials"));
 ```
 
-# Wrapping Up
+# 总结
 
-In this article, we've covered Node.js from theory to practice. Although Node.js is a vast topic that you can't learn entirely from a single shorter article, I've done my best to cover some of the essential features to help you get started with the journey.
+在这本文章中，我们从理论到实践讲解了Node.js。虽然我们不能从一篇简短的文章中习得Node.js所有内容，但是我已经尽我所能地在这篇文章中涵盖了重要的知识点，来辅助你开启Node.js之旅。
 
-In a nutshell, we've discussed what Node.js is, which is a non-blocking, event-driven JavaScript runtime that is asynchronous and uses a single thread to perform operations. We've also discussed the most used minimal and flexible Node.js web application framework, Express.
+简言之，我们讨论了什么是Node.js，即一个非阻塞、事件驱动的JavaScript运行时环境，它是异步的、可以使用单线程来执行操作。我们还讨论了使用最广泛的短小、灵活的Node.js的web应用框架——Express。
 
-Then we talked about Node.js's NPM, NPX, and Static and Dynamic data rendering.
+我们还讲解了Node.js的NPM、 NPX以及静态和动态渲染。
 
-All in all, Node.js is a fantastic technology to know, and the possibilities are endless because of its vast community.
+总而言之，Node.js是一项令人惊叹的技术，而且由于其庞大的社区，其可能性是无穷无尽的。

@@ -810,19 +810,19 @@ DOM 中的所有 API 也是如此。
 
 ### DefinitelyTyped (@types)
 
-Imagine a central public repository that hosts declaration files for thousands of libraries?
+想象一下，一个公共资源库(central public repository)为成千上万的库托管声明文件？
 
-Well, bring that image home.
+好吧，把这个画面。
 
-This repository already exists.
+这个资源库已经存在了。
 
-The [DefinitelyTyped repository](https://github.com/DefinitelyTyped/DefinitelyTyped/) is a centralised repository that stores the declaration files for thousands of libraries.
+[DefinitelyTyped repository](https://github.com/DefinitelyTyped/DefinitelyTyped/)是一个集中式的仓库，存储了成千上万个库的声明文件。
 
-In all honestly, the vast majority of commonly used libraries have declaration files available on **__DefinitelyTyped__**.
+说实话，绝大多数常用的库都在 **_DefinitelyTyped_** 上有声明文件。
 
-These type definition files are automatically published to `npm` under the `@types` scope.
+这些类型定义文件会自动发布到`npm`下的`@types`范围。
 
-For example, if you wanted to install the types for the `react` npm package, you’d do this:
+例如，如果你想安装`react`npm 包的类型文件，你可以这样做。:
 
 ```ts
 npm install --save-dev @types/react

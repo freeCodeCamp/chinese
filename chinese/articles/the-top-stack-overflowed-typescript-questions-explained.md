@@ -822,23 +822,23 @@ DOM 中的所有 API 也是如此。
 
 这些类型定义文件会自动发布到`npm`下的`@types`范围。
 
-例如，如果你想安装`react`npm 包的类型文件，你可以这样做。:
+例如，如果你想安装`react`npm 包的类型文件，你可以这样做:
 
 ```ts
 npm install --save-dev @types/react
 ```
 
-If you find yourself using a module whose types TypeScript does not automatically resolve, attempt installing the types directly from DefinitelyTyped.
+如果你发现自己使用的模块的类型不是 TypeScript 自动解析的，可以尝试直接从 DefinitelyTyped 安装类型。
 
-See if the types exist there. For example:
+看看那里是否存在这些类型。比如说:
 
 ```ts
 npm install --save-dev @types/your-library
 ```
 
-Definition files that you add in this manner will be saved to `node_modules/@types`.
+你以这种方式添加的定义文件将被保存到 `node_modules/@types` 目录下。
 
-TypeScript will automatically find these. So, there’s no additional step for you to take.
+TypeScript 会自动找到这些。所以，你不需要采取额外的步骤。
 
 ## How to Write Your Own Declaration Files
 

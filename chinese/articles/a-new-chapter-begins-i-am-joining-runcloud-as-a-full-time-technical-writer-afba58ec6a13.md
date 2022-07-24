@@ -1,6 +1,6 @@
 > -  原文地址：[A new chapter begins — I am joining RunCloud as a full-time technical writer](https://www.freecodecamp.org/news/a-new-chapter-begins-i-am-joining-runcloud-as-a-full-time-technical-writer-afba58ec6a13/)
 > -  原文作者：[Charles Freeborn](https://www.freecodecamp.org/news/author/charles/)
-> -  译者：
+> -  译者：abbie-321
 > -  校对者：
 
 ![A new chapter begins — I am joining RunCloud as a full-time technical writer](https://cdn-media-1.freecodecamp.org/images/1*df8jz18-yVOlvawC-qpW2w.jpeg)

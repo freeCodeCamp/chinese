@@ -1,6 +1,6 @@
 > -  原文地址：[How to Center a Div with CSS – 10 Different Ways](https://www.freecodecamp.org/news/how-to-center-a-div-with-css-10-different-ways/)
 > -  原文作者：[Soham De Roy](https://www.freecodecamp.org/news/author/sohamderoy/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Center a Div with CSS – 10 Different Ways](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/Group-49.png)

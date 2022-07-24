@@ -5,40 +5,39 @@
 
 ![A new chapter begins — I am joining RunCloud as a full-time technical writer](https://cdn-media-1.freecodecamp.org/images/1*df8jz18-yVOlvawC-qpW2w.jpeg)
 
-If you used to submit (or read) articles on the freeCodeCamp Medium publication, there is a chance that your article may have been edited by me (or by another member of the team of volunteer editors).
+如果你曾经在 freeCodeCamp出版物上提交（或阅读）过文章，你的文章可能被我（或由志愿者编辑团队的另一位成员）编辑过。
 
-It was in the summer of 2017 that I responded to a call by Quincy Larson, freeCodeCamp’s founder, for volunteer editors, to help edit technical articles submitted by developers from across the globe.
+那是2017年的夏天我接到了freeCodeCamp的创始人 Quincy Larson的电话。于是我成为了一名志愿者编辑，帮助编辑来自世界各地的开发人员提交的技术文章。
 
-And the past one and half years have been an amazing journey for me. I have learned a ton from the articles which I have had the opportunity of editing, improved as a front-end developer, and have improved on my writing. I was also named a [freeCodeCamp top contributor for the year 2018](https://www.freecodecamp.org/forum/t/announcing-our-freecodecamp-2018-top-contributor-award-winners/201353), and started a [developer community in my city, Warri Nigeria in 2018](https://medium.freecodecamp.org/how-i-started-a-google-developers-group-gdg-chapter-in-warri-nigeria-and-reached-100-members-22cbd622d070), which has grown to over 550+ active members in less than 10 months.
+过去的一年半对我来说是一段奇妙的旅程。从我有幸编辑的文章中，我收获颇丰，作为一名前端开发者，我的写作能力也得到了提升。我也被评为[2018 freeCodeCamp突出贡献者](https://www.freecodecamp.org/forum/t/announcing-our-freecodecamp-2018-top-contributor-award-winners/201353)，并且[2018 年我在我的家乡瓦尼日利亚地区](https://medium.freecodecamp.org/how-i-started-a-google-developers-group-gdg-chapter-in-warri-nigeria-and-reached-100-members-22cbd622d070)创建了开发者社群，它在不到十个月的时间发展到超过550+的活跃成员。
 
-If you are wondering how much freeCodeCamp has impacted my life as a volunteer, I wrote about it [here](https://link.medium.com/aW8bvhZ4GT).
+如果你想知道freeCodeCamp对作为一名志愿者的我的生活影响有多大，[我将它记录在此](https://link.medium.com/aW8bvhZ4GT)。
 
-## A new chapter begins with RunCloud
+## RunCloud开启了我的新篇章
 
-I have always believed in the sharing and supporting the spread of knowledge within the tech ecosystem, and the team at [RunCloud](https://runcloud.io) shares the same conviction — that’s why I joined them.
+我一直坚信在科技生态系统中分享和支持知识的传播，[RunCloud](https://runcloud.io)这个团队也有着同样的理念—这正是我为何加入他们的原因  
 
-And so, starting this January, 2019, I am joining [RunCloud](https://runcloud.io) as a full-time Technical Writer, Editor and Africa ambassador. RunCloud is a SaaS startup that helps you setup, configure, manage, and monitor your VPS on cloud hosting providers like Digital Ocean, AWS, Google Cloud Platform, specifically for PHP and WordPress applications.
+因此，2019年的一月开始我加入[RunCloud](https://runcloud.io) 作为一名全职技术文档工程师，编辑也是非洲大使。RunCloud是一家SaaS初创公司，可帮助你在Digital Ocean、AWS、Google Cloud Platform等云托管服务器上设置、配置、管理和监控你的VPS，尤其适用于PHP和WordPress应用程序。
 
-As a technical writer, I will help with RunCloud’s product documentation, the crafting of high quality blog posts, production of training resources for developer communities, and the editing of articles.
+作为一名技术文档工程师，我将为Runcloub的产品文档提供支持，制作高质量的博客文章，为开发者社群提供培训资源以及编辑文章。
 
-I will also be speaking (and supporting developer events happening across Africa) more at meetups and tech conferences, as part of our company’s efforts in supporting developer communities within Africa. You should reach out to me on charles\[at\]runcloud\[dot\]io, if you lead a developer community and I will be happy to discuss and support your events.
+我也将更多在meetups 和技术会议上发言（并支持非洲各地的开发者活动），作为我们公司支持非洲开发者社区的一部分。你可以通过charles@runcloud.io联系我，如果你是一个开发者社区的负责人我将很乐意讨论并支持你的活动。
 
-## How I joined RunCloud — It started with a tweet
+## 我是如何加入RunCloud——从一条推特开始
 
-In December of 2018, I decided against writing a “Year in Review”, even though I was pleased with how much I had accomplished: I had grown as a developer and writer, and I had built a developer community to over 550 plus active members in less than a year while hosting 8 meetups.
+2018年12月，我决定不写“年度回顾”，即使我对我取得的成就感到开心：我成长为一名开发者和作家，在不到一年的时间里，我建立了一个超过550活跃会员的开发者社群同时举办了8次聚会。
 
-I wanted a bigger challenge for 2019, so I tweeted something about my new year’s resolution for 2019 . I’ve deleted the tweet since, but here is what I wrote:
+2019年我想要更大的挑战，所以我在推特上发布了我2019年新的决定。后来我删除了这条推特，但我是这样写的：
 
-> New Year Resolution, get a job as a front-end developer, technical writer, and/or developer advocate. #100DaysOfCode
+> 新年决心，找一份前端开发的工作，技术文档工程师，又或是开发者倡导者。 #100DaysOfCode
 
-I had overwhelming support from the tech community — Raj, a member of the RunCloud team, reached out to me about the possibility of joining the team at RunCloud, as a technical writer, and like they say, the rest is history.
+我从技术社区获得了大力的支持—Raj，RunCloud团队的一员，联系到我说了以一名技术文档工程师加入RunCloud的可能性，正如他们所说，余下的都是历史。
 
-## And to the freeCodeCamp — thank you
+## 对于freeCodeCamp——谢谢你
+我想表达对[Quincy Larson](https://www.freecodecamp.org/news/a-new-chapter-begins-i-am-joining-runcloud-as-a-full-time-technical-writer-afba58ec6a13/undefined)、 [Abbey](https://twitter.com/abbeyrenn)、[Jesse](https://twitter.com/JesseRWeigel)、[Beau Carnes](https://www.freecodecamp.org/news/a-new-chapter-begins-i-am-joining-runcloud-as-a-full-time-technical-writer-afba58ec6a13/undefined)、[Toni Shortsleeve](https://www.freecodecamp.org/news/a-new-chapter-begins-i-am-joining-runcloud-as-a-full-time-technical-writer-afba58ec6a13/undefined) 和编辑团队深深的感谢。我们是一小群技术的弄潮儿，和你们所有人一起工作是我人生中最骄傲的时刻之一，我将永远珍惜！
 
-I wish to express my profound gratitude to [Quincy Larson](https://www.freecodecamp.org/news/a-new-chapter-begins-i-am-joining-runcloud-as-a-full-time-technical-writer-afba58ec6a13/undefined), [Abbey](https://twitter.com/abbeyrenn), [Jesse](https://twitter.com/JesseRWeigel), [Beau Carnes](https://www.freecodecamp.org/news/a-new-chapter-begins-i-am-joining-runcloud-as-a-full-time-technical-writer-afba58ec6a13/undefined), [Toni Shortsleeve](https://www.freecodecamp.org/news/a-new-chapter-begins-i-am-joining-runcloud-as-a-full-time-technical-writer-afba58ec6a13/undefined) and the editorial team — we are a small bunch of tastemakers of technology. Working with you all has been one of the proudest moments of my life, which I will always cherish!
+作为回馈freeCodeCamp的一种方式，我正计划一个[月度捐款](https://donate.freecodecamp.org/)，也将鼓励你加入我一起回馈这个帮助了数百万人免费学习编程的组织 [点击这里](https://donate.freecodecamp.org/other-ways-to-donate/)。
 
-As a way of giving back to freeCodeCamp, I am setting up a [monthly donation](https://donate.freecodecamp.org/) and will encourage you to join me in giving back to the organization that is helping millions of people learn to code for free, [here](https://donate.freecodecamp.org/other-ways-to-donate/).
+此刻，新的篇章开始了。
 
-And now, a new chapter begins.
-
-You can find out more about RunCloud [here](https://runcloud.io) and on our [blog](https://blog.runcloud.io).
+你可以点击[这儿](https://runcloud.io)，也可以在我们的[博客](https://blog.runcloud.io)发现更多关于RunCloud。

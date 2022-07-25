@@ -22,7 +22,7 @@ Enjoy!
 -   [Python介绍](#introduction-to-python)
 -   [如何安装Python](#how-to-install-python)
 -   [如何运行Python程序](#how-to-run-python-programs)
--   [Python 2 vs Python 3](#python2vspython3)
+-   [Python 2 vs Python 3](#python2-vs-python3)
 -   [Python Basics](#pythonbasics)
 -   [Data Types in Python](#datatypesinpython)
 -   [Operators in Python](#operators)
@@ -201,7 +201,7 @@ pip install ipython
 chmod u+x program.py
 ```
 
-and I can run the program with
+然后我可以使用下面的命令运行程序
 
 ```sh
 ./program.py
@@ -209,21 +209,21 @@ and I can run the program with
 
 ![Screen-Shot-2020-11-10-at-14.18.42](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.18.42.png)
 
-This is especially useful when you write scripts that interact with the terminal.
+这在您编写与终端交互的脚本时特别有用。
 
-We have many other ways to run Python programs.
+我们还有许多其它方式可以运行Python程序。
 
-One of them is using VS Code, and in particular the official Python extension from Microsoft:
+一种方法是使用VS Code，尤其是Microsoft官方的Python扩展插件：
 
 ![Screen-Shot-2020-11-10-at-14.23.32](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.23.32.png)
 
-After installing this extension you will have Python code autocompletion and error checking, automatic formatting and code linting with `pylint`, and some special commands, including:
+安装好此扩展插件后，您将可以使用Python代码自动补全、语法错误检查、自动格式化和使用`pylint`进行代码检查，以及一些特殊命令，包括：
 
-**Python: Start REPL** to run the REPL in the integrated terminal:
+**Python: Start REPL**  用于在VS Code的集成终端中运行REPL：
 
 ![Screen-Shot-2020-11-10-at-14.31.36](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.31.36.png)
 
-**Python: Run Python File in Terminal** to run the current file in the terminal:
+**Python: Run Python File in Terminal**  用于在终端中运行当前文件：
 
 ![Screen-Shot-2020-11-10-at-14.31.06](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.31.06.png)
 
@@ -231,47 +231,52 @@ After installing this extension you will have Python code autocompletion and err
 
 ![Screen-Shot-2020-11-10-at-14.30.02-1](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.30.02-1.png)
 
-and many more. Just open the command palette (View -> Command Palette, or Cmd-Shift-P) and type `python` to see all the Python-related commands:
+以及很多其它命令。只需打开命令面板（查看 -> 命令面板，或按下Cmd+Shift+P）并输入`python`，即可查看所有与Python相关的命令：
 
 ![Screen-Shot-2020-11-10-at-14.30.02](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.30.02.png)
 
-Another way to easily run Python code is to use repl.it, a very nice website that provides a coding environment you can create and run your apps on, in any language, Python included:
+另一种轻松运行Python代码的方法是repl.it，这是一个非常不错的网站，它提供了一个编程环境，您可以使用任何语言创建并运行程序，包括Python：
 
 ![Screen-Shot-2020-11-10-at-14.33.58](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.33.58.png)
 
-Signup (it's free), then under "create a repl" click Python:
+使用这个网站要先注册（免费注册），然后在“create a repl”下单击Python：
 
 ![Screen-Shot-2020-11-10-at-14.46.34](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.46.34.png)
 
-and you will be immediately shown an editor with a `main.py` file, ready to be filled with a lot of Python code:
+然后您将看到一个带有`main.py`文件的编辑器，这样就已经准备好了编写Python代码：
 
 ![Screen-Shot-2020-11-10-at-14.47.15](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.47.15.png)
 
-Once you have some code, click "Run" to run it on the right side of the window:
+一旦您写好一些代码后，单击“Run”就可以在窗口右侧运行它：
 
 ![Screen-Shot-2020-11-10-at-14.48.09](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.48.09.png)
 
-I think repl.it is handy because:
+我认为repl.it很方便，因为：
 
--   you can easily share code just by sharing the link
--   multiple people can work on the same code
--   it can host long-running programs
--   you can install packages
--   it provides you a key-value database for more complex applications
+- 您只需分享链接即可轻松分享代码
+- 它允许多人处理相同的代码
+- 它可以托管长时间运行的程序
+- 您可以在上面安装第三方包
+- 它为您提供用于复杂应用程序的键值数据库
 
-## Python 2 vs Python 3
+## <h2 id="python2-vs-python3">Python 2 vs Python 3</h2>
 
 One key topic we should address, right from the start, is the Python 2 vs Python 3 discussion.
+我们一开始就应该讨论的一个关键主题是Python 2与Python 3。
 
 Python 3 was introduced in 2008, and it's been in development as the main Python version, while Python 2 continued being maintained with bug fixes and security patches until early 2020.
+Python 3于2008年被推出，其后作为主要的Python版本一直在持续开发，而Python 2则通过错误修复和安全补丁进行维护，直到2020年初。
 
 On that date, Python 2 support was discontinued.
+在那一天，对Python 2的支持停止。
 
 Many programs are still written using Python 2, and organizations still actively work on those, because the migration to Python 3 is not trivial and it would require a lot of work to upgrade those programs. And large and important migrations always introduce new bugs.
+许多程序仍然使用Python 2编写，并且组织仍在积极致力于这些程序，因为迁移到Python 3并非易事，升级这些程序需要大量工作。并且重要文件的大型迁移总是会引入新的bug。
 
 But new code, unless you have to adhere to rules set by your organization that forces Python 2, should always be written in Python 3.
+但是对应新的代码程序，除非您必须遵守组织设置的强制使用Python 2的规则，否则应使用Python 3进行编写。
 
-> This book focuses on Python 3.
+> 本书重点介绍 Python 3。
 
 ## Python Basics
 

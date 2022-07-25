@@ -23,7 +23,7 @@ Enjoy!
 -   [如何安装Python](#how-to-install-python)
 -   [如何运行Python程序](#how-to-run-python-programs)
 -   [Python 2 vs Python 3](#python2-vs-python3)
--   [Python Basics](#pythonbasics)
+-   [Python基础](#python-basics)
 -   [Data Types in Python](#datatypesinpython)
 -   [Operators in Python](#operators)
 -   [The Ternary Operator in Python](#theternaryoperatorinpython)
@@ -261,42 +261,37 @@ chmod u+x program.py
 
 ## <h2 id="python2-vs-python3">Python 2 vs Python 3</h2>
 
-One key topic we should address, right from the start, is the Python 2 vs Python 3 discussion.
 我们一开始就应该讨论的一个关键主题是Python 2与Python 3。
 
-Python 3 was introduced in 2008, and it's been in development as the main Python version, while Python 2 continued being maintained with bug fixes and security patches until early 2020.
-Python 3于2008年被推出，其后作为主要的Python版本一直在持续开发，而Python 2则通过错误修复和安全补丁进行维护，直到2020年初。
+Python 3于2008年被推出，其后作为主要的Python版本一直在被持续开发，而Python 2则通过错误修复和安全补丁进行维护，直到2020年初。
 
-On that date, Python 2 support was discontinued.
 在那一天，对Python 2的支持停止。
 
-Many programs are still written using Python 2, and organizations still actively work on those, because the migration to Python 3 is not trivial and it would require a lot of work to upgrade those programs. And large and important migrations always introduce new bugs.
 许多程序仍然使用Python 2编写，并且组织仍在积极致力于这些程序，因为迁移到Python 3并非易事，升级这些程序需要大量工作。并且重要文件的大型迁移总是会引入新的bug。
 
-But new code, unless you have to adhere to rules set by your organization that forces Python 2, should always be written in Python 3.
 但是对应新的代码程序，除非您必须遵守组织设置的强制使用Python 2的规则，否则应使用Python 3进行编写。
 
 > 本书重点介绍 Python 3。
 
-## Python Basics
+## <h2 id="python-basics">Python 基础</h2>
 
-### Variables in Python
+### Python中的变量
 
-We can create a new Python variable by assigning a value to a label, using the `=` assignment operator.
+我们可以通过使用赋值运算符`=`为“标签”赋值，从而创建一个新的Python变量。
 
-In this example we assign a string with the value "Roger" to the `name` label:
+在下面这个示例中，我们将字符串`"Roger"`分配给变量`name`：
 
 ```python
 name = "Roger"
 ```
 
-Here's an example with a number:
+下面是一个给变量`age`赋值为数字的示例：
 
 ```python
 age = 8
 ```
 
-A variable name can be composed of characters, numbers, and the `_` underscore character. It can't start with a number. These are all **valid** variable names:
+一个变量的名字可以由字符、数字和`_`下划线字符组成。变量名不能以数字开头。以下都是**有效的**变量名：
 
 ```python
 name1
@@ -307,7 +302,7 @@ my_name
 _name
 ```
 
-These are **invalid** variable names:
+以下都是**无效的**变量名：
 
 ```python
 123
@@ -317,7 +312,11 @@ name%
 
 Other than that, anything is valid unless it's a Python **keyword**. There are some keywords like `for`, `if`, `while`, `import` and more.
 
+除此之外，任何东西都是有效的变量名，除非它是Python的**关键字**。如`for`、`if`、`while`、`import`等就是关键字。
+
 There's no need to memorize them, as Python will alert you if you use one of those as a variable, and you will gradually recognize them as part of the Python programming language syntax.
+
+无需记住它们，因为如果您使用其中一个作为变量，Python会提醒您，并且您会逐渐将它们作为Python语法的一部分。
 
 ### Expressions and statements in Python
 

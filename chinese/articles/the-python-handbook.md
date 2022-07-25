@@ -183,19 +183,19 @@ pip install ipython
 
 ![Screen-Shot-2020-11-10-at-14.01.32](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.01.32.png)
 
-> Note that we save Python programs with the `.py` extension - that's a convention.
+> 请注意，我们约定使用`.py`扩展名保存Python程序文件。
 
-In this case the program is executed as a whole, not one line at a time. And that's typically how we run programs.
+在这种情况下，程序作为一个整体被执行，而不是一次运行一行。而这就是我们运行程序的典型方式。
 
-We use the REPL for quick prototyping and for learning.
+我们使用REPL进行快速的代码原型设计和学习。
 
-On Linux and macOS, a Python program can also be transformed into a shell script, by prepending all its content with a special line that indicates which executable to use to run it.
+在Linux和macOS上，也可以将Python程序文件转换为shell脚本，方法是在文件最前面加上一个特殊行，用来指示使用哪个可执行文件来运行它。
 
-On my system the Python executable is located in `/usr/bin/python3`, so I type `#!/usr/bin/python3` in the first line:
+在我的系统上，Python解释器的路径是`/usr/bin/python3`，所以我在第一行输入`#!/usr/bin/python3`：
 
 ![Screen-Shot-2020-11-10-at-14.17.26](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.17.26.png)
 
-Then I can set execution permission on the file:
+然后我可以对文件设置执行权限：
 
 ```sh
 chmod u+x program.py

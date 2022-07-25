@@ -1,6 +1,6 @@
 > -  原文地址：[Coding Interview Prep for Big Tech (FAANG) – And How I Became A Google Engineer](https://www.freecodecamp.org/news/coding-interview-prep-for-big-tech/)
 > -  原文作者：[Zubin Pratap](https://www.freecodecamp.org/news/author/zubin/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Coding Interview Prep for Big Tech (FAANG) – And How I Became A Google Engineer](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/Google-Mel.jpeg)

@@ -5,19 +5,19 @@
 
 ![How to Center a Div with CSS – 10 Different Ways](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/Group-49.png)
 
-As a web developer, sometimes **centering a div** feels like one of the toughest jobs on planet Earth.
+对一个开发者来说，将**一个div居中**可能是世界上最困难的工作。
 
-Well, not anymore. In this article, you'll learn 10 different ways to center a `div`. We will explore how to center divs using the CSS **position** property, CSS **Flexbox**, and CSS **Grid**.
+读完这篇文章，你就会觉得没有那么难了。这篇文章将讲解10种居中`div`的方式。我们将从CSS的 **position** 属性、**Flexbox**和**Grid**三个方面来探索如何实现居中。
 
-After reading this whole article, I am confident that you will start centering `divs` like a pro.
+我相信通读完整篇文章之后，你将成为居中`divs`的专家。
 
-## How to Center a `Div`
+## 如何居中一个`Div`
 
-For this tutorial, I will be using the same HTML for all 10 methods that we'll discuss below. The HTML just contains a parent `div` and a child `div` inside it.
+我将使用同样的HTML来讲解10种方法。这个HTML包含一个父`div`和一个子`div`元素。
 
-The main aim of this article is to center the inner `div` with respect to its parent. I will only be changing the CSS files, but you'll be able to see all 10 different methods take effect.
+本文的目的是让内部`div`实现相对于父元素的居中。仅通过对CSS修改，来呈现10种不同的方法。
 
-The main HTML file goes like this:
+HTML文件如下：
 
 ```HTML
 <!DOCTYPE html>
@@ -25,10 +25,10 @@ The main HTML file goes like this:
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width、 initial-scale=1.0" />
     <title>Centering divs</title>
     <link rel="stylesheet" href="./basicStyle.css" />
-    <!-- Change the link of CSS file here -->
+    <!-- 这里改变CSS文件的链接 -->
     <link rel="stylesheet" href="" />
     <style>
       * {
@@ -46,7 +46,7 @@ The main HTML file goes like this:
 </html>
 ```
 
-With just the basic styling as given in the following lines:
+以下是基础样式：
 
 ```CSS
 #parentContainer {
@@ -61,23 +61,23 @@ With just the basic styling as given in the following lines:
 }
 ```
 
-We will get something like this:
+结果：
 
 ![Screenshot-2022-05-27-at-15.02.59](https://www.freecodecamp.org/news/content/images/2022/06/Screenshot-2022-05-27-at-15.02.59.png)
 
-What the basic HTML and CSS styling gives us.
+基本的HTML和CSS样式结果
 
-We just make a parent `div` and give it a `width` and `height` of `400px`, and a `color` of `#f55353`.
+我们创建了一个父元素`div`，并且将其`width`和`height`设置为`400px`，`color`设置为`#f55353`。
 
-Similarly we create a child `div` inside it and give it a `width` and `height` of `100px` and give it a `color` of `#feb139`.
+同时，我们在内部创建了一个子元素 `div`，并且将其`width`和`height`设置为`100px`， 将`color`设置为`#feb139`。
 
-The final goal of this article will be to make this transformation:
+最终目标是完成如下图的转变：
 
 ![Group-23](https://www.freecodecamp.org/news/content/images/2022/06/Group-23.png)
 
-## How to Center a Div using the CSS `position` Property
+## 如何使用CSS的`position`属性实现div的居中
 
-### 1\. How to use position: relative, absolute and top, left offset values
+### 1\. 如何运用position: relative、 absolute以及top、left偏移值
 
 ```CSS
 #parentContainer {
@@ -87,23 +87,23 @@ The final goal of this article will be to make this transformation:
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%、 -50%);
 }
 ```
 
-The **position** property in CSS sets how the element is positioned on the page. The default value of the position property is `static`. The other values that the position property takes are `relative`, `absolute`, `fixed` and `sticky`.
+CSS中的**position**属性是设置元素在页面的定位方式。position属性的默认值为`static`，其他值包括：`relative`、 `absolute`、 `fixed`和`sticky`。
 
-Now when we give a `position: absolute` to a DOM element, it **becomes absolute with respect to the whole page**. This would be useful if we wanted to center the `div` with respect to the whole page.
+如果将一个DOM元素设置为`position: absolute`，该元素 **相对于整个页面的位置就是绝对的**。如果我们想要一个`div`相对于整个页面居中的话，可以采用这个方法。
 
-On the other hand, setting the parent element to `position: relative`, makes the children element (with `position: absolute`) **absolute, relative to the parent element and not the whole page**.
+此外，将父元素设置为 `position: relative`，同时将子元素的位置设置为(通过 `position: absolute`)**绝对，这时的绝对是相对于父元素的，而不是整个页面**。
 
-In the above example we do just that. We give the parent element a `position: relative` and child a `position: absolute`.
+上述代码例子就是采用这样的方法。我们给父元素添加 `position: relative`，子元素添加`position: absolute`。
 
-Along with the position property, we can specify four other properties viz. `top`, `right`, `bottom` and `left` which then determines the final location/ position of the element.
+除了使用position属性，我们还可以使用`top`、`right`、`bottom`和`left`四个属性来定义元素的位置，这样决定元素最终的位置（定位）。
 
-The `top` and `bottom` specify the **vertical positioning** of the element where as `left` and `right` specify the **horizontal positioning**.
+`top`和`bottom`指定元素**垂直方向的定位**，`left`和`right`指定元素 **水平方向的定位**。
 
-### 2\. How to use position: relative and absolute, top, left, right and bottom offset values and margin: auto
+### 2\. 如何使用position: relative和absolute， top、left、right和bottom偏移值以及margin: auto
 
 ```CSS
 #parentContainer {
@@ -119,52 +119,52 @@ The `top` and `bottom` specify the **vertical positioning** of the element where
 }
 ```
 
-Continuing with our knowledge of positions from point 1 above, we use the `margin` property in CSS here. `margin: auto` lets the browser select a **suitable margin** for the child element.
+除了我们从第一点学习到的知识点外，在这里我们使用了CSS中的`margin`属性， `margin: auto`允许浏览器给子元素选择**合适的外边距** 。
 
-In most of the cases it allows the child element to take its specified width and the browser **distributes the remaining space equally** between the left and right margin pair or top and bottom margin pair or amongst both pairs.
+通常子元素占据了指定的宽度后，浏览器会 **均匀地分配剩下的空间**，剩下的空间包括左右外边距、上下外边距和上下左右外边距三种情况。
 
-If we mention only `top: 0`, `bottom: 0` and `margin: auto`, it centers the child element **vertically**.
+如果我们只设置了`top: 0`、`bottom: 0`以及`margin: auto`，子元素就会**垂直居中**。
 
-Similarly if we mention only `left: 0`, `right: 0` and `margin: auto`, then it will center the child **horizontally**.
+同样，如果我们只设置了`left: 0`、`right: 0`以及`margin: auto`，子元素就会**水平居中**。
 
-And if we mention all the properties as shown in the code block above, then we get a perfectly **centered div both horizontally and vertically**.
+如果我们像代码示例这样，声明了所有属性，就会得到一个完美的**垂直且水平居中的div**。
 
-## How to Center a Div Using CSS Flexbox
+## 如何使用CSS中Flexbox来居中Div
 
-### 3\. How to use Flexbox, justify-content, and align-item
+### 3\. 如何使用Flexbox、 justify-content和align-item
 
-The above two methods are based on more of a classical method of aligning elements in the page. The modern approaches makes use of **Flexbox** (for one directional layout modeling) and **Grid** layout (for more complex two dimensional layout modeling) properties.
+上述的两种方式是使用经典的办法实现页面元素居中。现代方法更多使用**Flexbox** (一维布局模型) 和**Grid**布局(更为复杂的二维布局模型) 属性。
 
-Let's see the Flexbox approach:
+让我们来看看Flexbox方法：
 
-Flexbox is not just a single property, but it is a module which comprises of a set of properties. Some of these properties are meant to be for the **container** (that is, the parent container) and some for the **child elements** inside it.
+Flexbox不仅仅是个单一的属性，而是一个由一组属性组成的模块。其中一些属性用于**容器**（即父容器），一些用于其中的**子元素**。
 
-The below diagram shows a list of properties that are meant for parent and child elements with respect to Flexbox.  
+下图显示Flexbox相关的父元素和子元素的属性列表：
 ![Group-42](https://www.freecodecamp.org/news/content/images/2022/07/Group-42.png)
 
-Now it is not possible to cover all the properties in this article. Rather let's look into some of the properties we are using in this article.
+通过本文来讲解所有的属性不太现实，所以我们仅讲解我们会用到的一些属性。
 
-As mentioned above, there are two different entities in the Flexbox model, the parent container and the children element.
+如上所述，Flexbox模型中有两个不同的实体：父容器和子元素。
 
-The `display: flex` property defines a container as a flex container. `flex-direction` is another parent container property which can take in either of the four values `row` (default value), `row-reverse`, `column` and `column-reverse`.
+`display: flex`属性将容器定义为一个flex容器。`flex-direction`是另一个容器属性，包含四个值：`row` (默认值)、`row-reverse`、 `column`和`column-reverse`。
 
-When working with Flexbox, we need to take two different axes into consideration, that is the **main axis** and **cross axis**.
+使用flexbox的时候，我们要思考两个轴， **主轴**和**交叉轴**。
 
-For the cases where `flex-direction` is `row` or `row-reverse`, the **horizontal axis is the main axis and vertical axis is the cross axis**.
+当`flex-direction`的值为`row`或`row-reverse`时，**水平轴是主轴，垂直轴是交叉轴**。
 
-Similarly, when the `flex-direction` is `column` or `column-reverse`, then the **vertical axis is the main axis and horizontal axis is the cross axis.** Refer to the below diagrams for visual clarity:
+同样的，当`flex-direction`的值为`column`或`column-reverse`时，**垂直轴是主轴，水平轴是交叉轴。**详细解释可以参考下图：
 
 ![Group-43](https://www.freecodecamp.org/news/content/images/2022/07/Group-43.png)
 
 ![Group-44](https://www.freecodecamp.org/news/content/images/2022/07/Group-44.png)
 
-The `justify-content` property of the parent container defines the alignment of its children along the main axis. Thus `justify-content: center` sets the alignment of all its child elements at the center with respect to the main axis.
+父容器的`justify-content`属性定义子元素沿着主轴的对齐。因此`justify-content: center`将所有子元素相对于主轴居中。
 
-Similarly, the `align-items` property of the parent container defines the alignment of its children along the cross axis. Thus `align-items: center` sets the alignment of all its child elements at the center with respect to the cross axis.
+同样的，父容器的`align-items`属性定义了子元素沿着交叉轴的对齐。因此`align-items: center`将所有子元素相对于交叉轴居中。
 
-So the below code block will perfectly align our child element at the center of the parent element both vertically and horizontally.
+所以上述代码实例将子元素相对于父元素水平及垂直居中。
 
-In this method, we do not need to specify anything explicitly for the child element. `display: flex`, `justify-content` and `align-items` handle everything from the parent component.
+在这个方法中，我们不需要特别定义子元素。仅`display: flex`、`justify-content`和`align-items`就可以在父容器中完美解决居中问题。
 
 ```CSS
 #parentContainer {
@@ -174,11 +174,11 @@ In this method, we do not need to specify anything explicitly for the child elem
 }
 ```
 
-### 4\. How to Use Flexbox, justify-content, and align-self
+### 4\. 如何使用Flexbox、justify-content和align-self
 
-This method is just an alternative to the above method and is quite similar to it.
+这个方法和上述方法类似，是上述方面的替换方案。
 
-But in place of using the `align-items` property (in the parent container property), which sets the alignment for **all the childern** elements with respect to cross axis, we use `align-self` (in the child elements) which sets the alignment of **individual flex items** on the cross axis.
+取代`align-items`属性(父容器的属性)，该属性是沿着交叉轴对齐**所以子元素**，我们使用`align-self` (子元素属性)设置沿着交叉轴的**单个flex元素**的对齐方式。
 
 ```CSS
 #parentContainer {
@@ -190,13 +190,13 @@ But in place of using the `align-items` property (in the parent container proper
 }
 ```
 
-### 5\. How to Use Flexbox and margin: auto
+### 5\. 如何使用Flexbox和margin: auto
 
-Flexbox gives us very powerful alignment and space distribution capabilities. Also as mentioned above, `margin: auto` lets the browser select a suitable margin for the child element.
+Flexbox给予我们充分的能力来对齐元素和分配空间。如上文所述，`margin: auto`也可以使浏览器给子元素分配合适的外边距。
 
-In most cases it allows the child element to take its specified width and the browser distributes the remaining space equally between the left and right margin pair or top and bottom margin pair or amongst both the pairs.
+在大多数情况下，它允许子元素采用其指定的宽度，并且浏览器在左右边距对或上下边距对或上下左右边距平均分配剩余空间。
 
-This means that setting the parent container as `flex` and giving the child a `margin: auto` alows the browser to evenly distribute the leftover space along both the vertical and horizontal directions.
+这意味着将父容器设置为`flex`同时将子元素设置为`margin: auto`，浏览器就会在水平和垂直方向平均分配剩下的空间。
 
 ```CSS
 #parentContainer {
@@ -207,29 +207,29 @@ This means that setting the parent container as `flex` and giving the child a `m
 }
 ```
 
-## How to Center a Div Using CSS Grid
+## 如何使用CSS Grid居中Div
 
-### 6\. How to Use Grid, justify-content, and align-items
+### 6\. 如何使用Grid、justify-content和align-items
 
-CSS Grid or just Grid is used for **two dimensional** layout modeling compared to Flexbox which you use for **one dimensional** modeling.
+CSS Grid或者Grid使用的是**二维**布局模型，而Flexbox使用的是**一维**模型。
 
-Similar to Flexbox, we have the concept of a grid container or parent container and grid items or children items.
+与Flexbox类似，也有grid容器（父容器）和grid元素（子元素）这对概念。
 
-The below diagram lists down all the properties you can use for the parent and children. As CSS Grid is a huge topic in itself, it's not in the scope of this article to discuss about each and every property. So let's discuss the properties that we're using in this article.
+下图列出了可用于父容器和子元素的所有属性。由于CSS Grid本身就是一个巨大的话题，因此本文不讨论每个属性。让我们讨论一下在本文中使用的属性。
 
 ![Group-45](https://www.freecodecamp.org/news/content/images/2022/07/Group-45.png)
 
-`display: grid` initiates an element to become a grid container.
+`display: grid`将元素设置为一个grid容器。
 
-`justify-items` and `align-items` align the items inside the grid along the inline (row) axis and block (column) axis respectively.
+`justify-items`和`align-items`在grid内对齐元素，分配沿着内联(横)轴和块(纵)轴。
 
-On the other hand, if the total size of the grid is less than the grid container (which can happen if all the grid items are sized with non-flexible units like px), then in that case we can control the alignment of the grid within the grid container using `justify-content` and `align-content`.
+另外，如果gird的总大小小于grid容器的话（当将所有grid元素都设置为固定元素单位如px时有可能发生），我们就可以在grid容器中使用 `justify-content`和`align-content`来控制内部元素的对齐方式。
 
-`justify-content` and `align-content` aligns the grid along the inline (row) axis and block (column) axis respectively.
+`justify-content`和`align-content`对齐grid，分配沿着内联(横)轴和块(纵)轴。
 
-You can find a comprehensive explanation of all these properties here: [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+这里有一份完整的grid属性介绍: [Grid完整手册](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
-As for our case there is only one **grid cell** and only one child element inside it, so we can use `justify-content` or `justify-items` as well as `align-content` or `align-items` interchangeably and get the same result.
+由于在我们的示例中只有一个**grid单元格**，并且内部只有一个元素。所以使用`justify-content`和`justify-items`，或者 `align-content`和`align-items`得到相同的结果。
 
 ```CSS
 #parentContainer {
@@ -239,11 +239,11 @@ As for our case there is only one **grid cell** and only one child element insid
 }
 ```
 
-### 7\. How to Use Grid and place-items
+### 7\. 如何使用Grid和place-items
 
-You can use `place-items` to set both `align-items` and `justify-items` properties in the same declaration. Similarly `place-content` sets both `justify-content` and `align-content` is the same declaration.
+可以使用`place-items`来在一次声明中设置`align-items`和`justify-items`。同样的，可以使用`place-content`在一次声明中设置`justify-content`和`align-content`。
 
-As mentioned above, in this use case we can use `justify-content` or `justify-items` as well as `align-content` or `align-items` interchangeably. In the same way we can also use `place-items` as well as `place-content` interchangeably and get the same result (specifically for this use case. For any other use case we need to analyse which property should be used).
+如上文所述，我们可以即可以使用`justify-content`和`justify-items`，又可以使用`align-content`和`align-items`。同样我们可以交替使用`place-items`和`place-content`，得到相同的结果。(仅针对我们这个用例，其他情况要具体情况具体分析)。
 
 ```CSS
 #parentContainer {
@@ -252,11 +252,11 @@ As mentioned above, in this use case we can use `justify-content` or `justify-it
 }
 ```
 
-### 8\. How to Use Grid, align-self, and justify-self
+### 8\. 如何使用Grid、align-self和justify-self
 
-Similar to Flexbox, Grid also supports individual grid item alignment using the `align-self` and `justify-self` properties (properties to be specified in the children element).
+和Flexbox一样，Grid也支持使用`align-self`和`justify-self`属性(子元素属性)来对齐单个grid元素。
 
-`justify-self` aligns grid items inside a grid cell along the inline (row) axis whereas `align-self` aligns the grid items inside the grid cell along the block (column) axis.
+`justify-self`将元素在grid单元格内的沿着内联(横)轴对齐，`align-self`将元素在grid单元格内的沿着块(纵)轴对齐。
 
 ```CSS
 #parentContainer {
@@ -268,9 +268,9 @@ Similar to Flexbox, Grid also supports individual grid item alignment using the 
 }
 ```
 
-### 9\. How to Use Grid and place-self
+### 9\. 如何使用Grid和place-self
 
-The `place-self` property sets both `justify-self` and `align-self` properties in a single declaration. So assigning a child element to `place-self: center` centers the child both vertically and horizontally.
+`place-self`属性通过一个声明设置`justify-self`和`align-self` 属性。所以，将子元素设置为`place-self: center`，就可以垂直水平居中该子元素。
 
 ```CSS
 #parentContainer {
@@ -281,11 +281,11 @@ The `place-self` property sets both `justify-self` and `align-self` properties i
 }
 ```
 
-### 10\. How to Use Grid and margin: auto
+### 10\. 如何使用Grid和margin: auto
 
-Similar to Flexbox, Grid also gives us powerful alignment and space distribution capabilities.
+和Flexbox类似 Grid也给予我们充分的能力来对齐元素和分配空间。
 
-As seen in point 5, we can do a similar process with Grid instead of using Flexbox and we'll get the same result if we asign `margin: auto` to the child element.
+如第五种方法所示，我们可以像使用flexbox方法一样使用grid，å将子元素设置为`margin: auto`，可以得到相同的结果。
 
 ```CSS
 #parentContainer {
@@ -296,47 +296,47 @@ As seen in point 5, we can do a similar process with Grid instead of using Flexb
 }
 ```
 
-## Here's The Result
+## 结果
 
-Well as expected, following any of the above methods will result in this:
+如我们期望的那样，所有方法都会得到相同的结果：
 
 ![Screenshot-2022-05-27-at-15.02.39](https://www.freecodecamp.org/news/content/images/2022/06/Screenshot-2022-05-27-at-15.02.39.png)
 
-## Summary
+## 总结
 
-In this article, we saw how to center a div using 10 different methods. Those methods were:
+本文讨论了10种将div居中的方法，包括：
 
-1.  Using **position: relative**, **absolute** and **top**, **left** offset values
-2.  Using **position**: **relative** and **absolute**, **top**, **left**, **right** and **bottom** offset values and **margin: auto**
-3.  Using **flexbox**, **justify-content** and **align-item**
-4.  Using **flexbox**, **justify-content** and **align-self**
-5.  Using **flexbox** and **margin: auto**
-6.  Using **grid**, **justify-content** and **align-items**
-7.  Using **grid** and **place-items**
-8.  Using **grid**, **align-self** and **justify-self**
-9.  Using **grid** and **place-self**
-10.  Using **grid** and **margin: auto**
+1. 使用**position: relative**、**absolute**和**top**、**left**偏移值
+2. 使用**position**: **relative**和**absolute**、**top**、**left** **right**和**bottom**偏移值和**margin: auto**
+3. 使用**flexbox**、**justify-content**、 **align-item**
+4. 使用**flexbox**、**justify-content**和**align-self**
+5. 使用**flexbox**和**margin: auto**
+6. 使用**grid** **justify-content**和**align-items**
+7. 使用**grid**和**place-items**
+8. 使用**grid**、**align-self**和**justify-self**
+9. 使用**grid**和**place-self**
+10. 使用**grid**和**margin: auto**
 
-We also looked at what all these properties like `justify-content`, `align-items`, `position` and so on meant and how we can use some of them together to center our divs.
+我们也讲解了`justify-content`、`align-items`、`position`等属性，它们是什么意思，如何搭配使用来使得div居中。
 
-## Some good resources
+## 资源推荐
 
-1.  [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-2.  [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-3.  [Learn Flexbox and Grid by Building a Responsive Landing Page](https://www.freecodecamp.org/news/css-flexbox-and-grid-tutorial/)
+1.  [Flexbox完全手册](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+2.  [Grid完全手册](https://css-tricks.com/snippets/css/complete-guide-grid/)
+3.  [通过创建登陆页面来学习使用flexbox和grid](https://www.freecodecamp.org/news/css-flexbox-和-grid-tutorial/)
 
-## GitHub link
+## GitHub链接
 
-You can find the GitHub link for all the files for all the methods mentioned above here: [Github Link](https://github.com/sohamderoy/blog-setup-centring-divs)
+你可以在github上找到所有示例的代码: [Github Link](https://github.com/sohamderoy/blog-setup-centring-divs)
 
-## Wrap Up
+## 结束语
 
-Thanks for reading! I hope you liked this article on 10 different methods to center a `div` and I hope that they come handy to you in the future.
+谢谢阅读！希望你喜欢这篇关于`div`居中的10种不同方法的文章，希望这篇文章将来对你有用。
 
-Do consider sharing this article with your friends – I'd really appreciate that. Stay tuned for more amazing content. Peace out! 🖖
+可以把这篇文章分享给你的朋友——我将非常感谢。更多惊喜内容，请持续关注。再见！🖖
 
-## Social Links
+## 社交账号
 
 -   [LinkedIn](https://www.linkedin.com/feed/)
--   [Website](https://www.sohamderoy.dev/)
+-   [个人网站](https://www.sohamderoy.dev/)
 -   [Twitter](https://twitter.com/_sohamderoy)

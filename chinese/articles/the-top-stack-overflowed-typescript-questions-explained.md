@@ -842,19 +842,19 @@ TypeScript 会自动找到这些。所以，你不需要采取额外的步骤。
 
 ## How to Write Your Own Declaration Files
 
-In the uncommon event that a library didn’t bundle its types and does not have a type definition file on DefinitelyTyped, you can write your own declaration files.
+在不常见的情况下，如果一个库没有捆绑它的类型，并且在 DefinitelyTyped 上没有类型定义文件，你可以编写你自己的声明文件。
 
-Writing declaration files in-depth is beyond the scope of this article, but a use case you’ll likely come across is silencing errors about a particular module without a declaration file.
+深入了解编写声明文件超出了本文的范围，但你可能会遇到的一个情况是在没有声明文件（declaration file）的情况下，如何消除关于某个特定模块（particular module）的错误。
 
-Declaration files all have a `.d.ts` ending.
+声明文件（Declaration files）都有一个`.d.ts`结尾。
 
-So to create yours, create a file with a `.d.ts` ending.
+所以要创建你的声明文件，就要创建一个以`.d.ts`结尾的文件。
 
-For example, assume I have installed the library `untyped-module` in my project.
+例如，假设我在项目中安装了库`untyped-module`。
 
-`untyped-module` has no referenced type definition files, so TypeScript complains about this in my project.
+`untyped-module`没有引用的类型定义文件，所以 TypeScript 在我的项目中对此进行警告。
 
-To silence this warning, I may create a new `untyped-module.d.ts` file in my project with the following content:
+为了消除这个警告，我可以在我的项目中创建一个新的`untyped-module.d.ts`文件，内容如下:
 
 ```ts
 declare module "some-untyped-module";
@@ -868,46 +868,46 @@ Ideal next steps would include opening an issue in the module’s public reposit
 
 ## Conclusion
 
-Next time you think, wow, TypeScript is remarkable. Remember, a big part of that awesomeness is due to the lesser-known heroes: type declaration files.
+下次你想，哇，TypeScript 真了不起。请记住，这种了不起的成就有很大一部分是由于幕后的英雄：类型声明文件（type declaration files）。
 
-Now you understand how they work!
+现在你明白它们是如何工作的了吧！
 
 # How Do You Explicitly Set a New Property on `window` in Typescript?
 
 ![image-70](https://www.freecodecamp.org/news/content/images/2022/07/image-70.png)
 
-Set a new property on the window object?
+在 window 对象上设置一个新属性（new property）？
 
 ## TL;DR
 
-Extend the existing interface declaration for the `Window` object.
+为`Window`对象扩展（extend）现有的接口声明。
 
 ## Introduction to `window` in TypeScript
 
-Knowledge builds upon knowledge.
+知识建立在知识之上。
 
-Whoever said that was right.
+这是对的。
 
-In this section, we will build upon the knowledge from the last two sections:
+在本节中，我们将建立在前两节的知识基础上:
 
 - [Interfaces vs Types in TypeScript](https://blog.ohansemmanuel.com/interfaces-vs-types-in-typescript/)
 - [What is a d.t.s file in TypeScript](https://blog.ohansemmanuel.com/what-is-a-dts-file-in-typescript/)?
 
-Ready?
+准备好了吗？
 
-First, I must say, in my early days with TypeScript, this was a question I googled over and over again.
+首先，我必须说，在我使用 TypeScript 的早期，这是一个我在谷歌上一遍又一遍搜索的问题。
 
-I never got it. And I didn’t bother, I just googled.
+我从来没有理解它。我也懒得理会，我只是在网上搜索。
 
-That’s never the right mentality to gaining mastery over a subject.
+这绝不是掌握一门学问的正确心态。
 
-Let’s discuss the solutions to this.
+让我们来讨论一下这个问题的解决方案。
 
 ## Understanding the Problem
 
-The problem here is actually straightforward to reason about.
+这里的问题实际上很容易推理。
 
-Consider the following TypeScript code:
+思考以下 TypeScript 代码:
 
 ```ts
 window.__MY_APPLICATION_NAME__ = "freecodecamp"
@@ -915,37 +915,37 @@ window.__MY_APPLICATION_NAME__ = "freecodecamp"
 console.log(window.__MY_APPLICATION_NAME__)
 ```
 
-TypeScript is quick to let you know `__MY_APPLICATION_NAME__` does not exist on type ‘Window & typeof globalThis’.
+TypeScript 会很快让你知道`__MY_APPLICATION_NAME__`不存在于 `Window & typeof globalThis` 类型。
 
 ![image-71](https://www.freecodecamp.org/news/content/images/2022/07/image-71.png)
 
-The property does not exist on Window error
+该属性不存在于 Window 上的报错
 
-See the [TypeScript playground](https://www.freecodecamp.org/news/p/a31cc449-928c-4453-a83d-ce30ef79f986/%20https://www.typescriptlang.org/play?#code/O4SwdgJg9sB0D68CyBNeBBACpgMgSQGF0AVPAeQDl4L0kBRRAAgF5GAiAMwCcBTHgYygQBAQwC2ABzYAoaYLABnKABsesZVADmAClCQYCZGiy5CJclRr1EASln2gA).
+查看 [TypeScript playground](https://www.freecodecamp.org/news/p/a31cc449-928c-4453-a83d-ce30ef79f986/%20https://www.typescriptlang.org/play?#code/O4SwdgJg9sB0D68CyBNeBBACpgMgSQGF0AVPAeQDl4L0kBRRAAgF5GAiAMwCcBTHgYygQBAQwC2ABzYAoaYLABnKABsesZVADmAClCQYCZGiy5CJclRr1EASln2gA).
 
-Okay, TypeScript.
+好吧，TypeScript。
 
-We get it.
+我们明白了。
 
-On closer inspection, remember from the last section on [declaration files](https://blog.ohansemmanuel.com/what-is-a-dts-file-in-typescript/) that there’s a declaration file for all existing browser APIs. This includes built-in objects such as `window`.
+仔细观察，记得上一节关于[声明文件（declaration files）](https://blog.ohansemmanuel.com/what-is-a-dts-file-in-typescript/)，所有现有的浏览器 API 都有一个声明文件。这包括内置对象，如`window`。
 
 ![image-72](https://www.freecodecamp.org/news/content/images/2022/07/image-72.png)
 
-The default Window interface declaration
+默认的 Window 接口声明。
 
-If you look in the `lib.dom.d.ts` declaration file, you’ll find the `Window` interface described.
+如果你看看`lib.dom.d.ts`声明文件，你会发现`Window`接口的描述。
 
-In layperson’s terms, the error here says the `Window` interface describes how I understand the `window` object and its usage. That interface does not specify a certain `__MY_APPLICATION_NAME__` property.
+用通俗的话说，这里的错误是：`Window`接口描述了我对`window`对象及其用法的理解。该接口没有指定某个`__MY_APPLICATION_NAME__`属性。
 
 ## How to Fix the Error
 
-In the types vs interface section, I explained how to extend an interface.
+在类型（types）与接口（interface）部分，我解释了如何扩展一个接口。
 
-Let’s apply that knowledge here.
+让我们在这里应用这些知识。
 
-We can extend the `Window` interface declaration to become aware of the `__MY_APPLICATION_NAME__` property.
+我们可以扩展（extend）`Window` 接口声明 (interface declaration)，使其知道`__MY_APPLICATION_NAME__`属性。
 
-Here’s how:
+下面是方法:
 
 ```ts
 // before

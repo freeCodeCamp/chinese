@@ -310,39 +310,35 @@ test!
 name%
 ```
 
-Other than that, anything is valid unless it's a Python **keyword**. There are some keywords like `for`, `if`, `while`, `import` and more.
+除此之外，任何输入都是有效的变量名，除非它是Python的**关键字**，如`for`、`if`、`while`、`import`等就是关键字。
 
-除此之外，任何东西都是有效的变量名，除非它是Python的**关键字**。如`for`、`if`、`while`、`import`等就是关键字。
+无需记住它们，因为如果您使用其中任何一个关键字作为变量名，Python都会提醒您，并且您会逐渐视它们为Python语法的一部分。
 
-There's no need to memorize them, as Python will alert you if you use one of those as a variable, and you will gradually recognize them as part of the Python programming language syntax.
+### Python表达式和语句
 
-无需记住它们，因为如果您使用其中一个作为变量，Python会提醒您，并且您会逐渐将它们作为Python语法的一部分。
-
-### Expressions and statements in Python
-
-We can _expression_ any sort of code that returns a value. For example
+我们可以_构造_任意一个有返回值的表达式代码，例如
 
 ```python
 1 + 1
 "Roger"
 ```
 
-A statement, on the other hand, is an operation on a value. For example these are 2 statements:
+另一方面，语句是对值的操作。例如，下面是2个语句：
 
 ```python
 name = "Roger"
 print(name)
 ```
 
-A program is formed by a series of statements. Each statement is put on its own line, but you can use a semicolon to have more than one statement on a single line:
+程序由一系列语句组成。每个语句占一行，但您可以使用分号在一行中包含多个语句：
 
 ```python
 name = "Roger"; print(name)
 ```
 
-### Comments
+### 注释
 
-In a Python program, everything after a hash mark is ignored, and considered a comment:
+在Python程序中，井号之后的所有内容都被忽略，并被视为注释：
 
 ```python
 #this is a commented line
@@ -350,52 +346,52 @@ In a Python program, everything after a hash mark is ignored, and considered a c
 name = "Roger" # this is an inline comment
 ```
 
-### Indentation in Python
+### Python中的缩进
 
-Indentation in Python is meaningful.
+Python中的缩进是有意义的。
 
-You cannot indent randomly like this:
+您不能像这样随意缩进：
 
 ```python
 name = "Flavio"
     print(name)
 ```
 
-Some other languages do not have meaningful whitespace, but in Python, indentation matters.
+对于其它一些语言，空格是没有意义的，但是在Python中，缩进很重要。
 
-In this case, if you try to run this program you would get a `IndentationError: unexpected indent` error, because indenting has a special meaning.
+在上面这种情况下，如果您尝试运行这个程序，您会得到一个`IndentationError: unexpected indent`错误，因为缩进有特殊的含义。
 
-Everything indented belongs to a block, like a control statement or conditional block, or a function or class body. We'll see more about those later on.
+一个缩进中的所有内容属于一个块，如控制语句块或条件块，函数或类主体。 我们稍后会看到更多关于这些内容的解释。
 
-## Data Types in Python
+## Python数据类型
 
-Python has several built-in types.
+Python有几种内置类型。
 
-If you create the `name` variable assigning it the value "Roger", automatically this variable now represents a **String** data type.
+如果您创建`name`变量并为其分配值"Roger"，则此变量现在自动表示**String**数据类型。
 
 ```python
 name = "Roger"
 ```
 
-You can check the type of a variable by using the `type()` function, passing the variable as an argument, and then comparing the result to `str`:
+您可以使用`type()`函数检查变量的类型，即将变量作为参数，然后将函数返回结果与`str`进行比较：
 
 ```python
 name = "Roger"
 type(name) == str #True
 ```
 
-Or using `isinstance()`:
+或者使用`isinstance()`：
 
 ```python
 name = "Roger"
 isinstance(name, str) #True
 ```
 
-> Notice that to see the `True` value in Python, outside of a REPL, you need to wrap this code inside `print()`, but for clarity I avoid using it.
+> 请注意，要在REPL之外查看`True`值，您需要将此代码包装在`print()`中，但为了清楚起见，我避免使用它。
 
-We used the `str` class here, but the same works for other data types.
+我们在这里使用了`str`，但这种方法同样适用于其它数据类型。
 
-First, we have numbers. Integer numbers are represented using the `int` class. Floating point numbers (fractions) are of type `float`:
+首先，我们有数字。整数使用`int`表示，浮点数（分数）的类型为`float`：
 
 ```python
 age = 1
@@ -407,23 +403,23 @@ fraction = 0.1
 type(fraction) == float #True
 ```
 
-You saw how to create a type from a value literal, like this:
+您已经了解了如何从字面值创建某一类型的变量，如下所示：
 
 ```python
 name = "Flavio"
 age = 20
 ```
 
-Python automatically detects the type from the value type.
+Python自动从变量值检测数据类型。
 
-You can also create a variable of a specific type by using the class constructor, passing a value literal or a variable name:
+您还可以通过向类构造器传递字面值或变量名，来创建特定类型的变量：
 
 ```python
 name = str("Flavio")
 anotherName = str(name)
 ```
 
-You can also convert from one type to another by using the class constructor. Python will try to determine the correct value, for example extracting a number from a string:
+您还可以使用类构造器，将一种类型转换为另一种类型。Python将尝试转换为正确的值，例如从字符串中提取数字：
 
 ```python
 age = int("20")
@@ -434,21 +430,21 @@ intFraction = int(fraction)
 print(intFraction) #0
 ```
 
-This is called **casting**. Of course this conversion might not always work depending on the value passed. If you write `test` instead of `20` in the above string, you'll get a `ValueError: invalid literal for int() with base 10: 'test'` error.
+这称为**casting**。当然，这种转换并不总是有效，具体取决于传递的值。如果您在上面的字符串中写了`test`而不是`20`，您会得到一个`ValueError: invalid literal for int() with base 10: 'test'`错误。
 
-Those are just the basics of types. We have a lot more types in Python:
+这些只是基础的数据类型。Python中有更多其它数据类型：
 
--   `complex` for complex numbers
--   `bool` for booleans
--   `list` for lists
--   `tuple` for tuples
--   `range` for ranges
--   `dict` for dictionaries
--   `set` for sets
+-   `complex` 复数
+-   `bool` 布尔值
+-   `list` 列表
+-   `tuple` 元组
+-   `range` 范围
+-   `dict` 字典
+-   `set` 集合
 
-and more!
+以及更多！
 
-We'll explore them all soon.
+我们很快就会探索它们。
 
 ## Operators in Python
 

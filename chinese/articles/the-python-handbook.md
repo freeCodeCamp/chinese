@@ -446,40 +446,40 @@ print(intFraction) #0
 
 我们很快就会探索它们。
 
-## Operators in Python
+## Python运算符
 
-Python operators are symbols that we use to run operations upon values and variables.
+我们使用Python运算符来对值和变量进行运算操作。
 
-We can divide operators based on the kind of operation they perform:
+我们可以根据它们执行操作的类型来划分运算符：
 
--   assignment operator
--   arithmetic operators
--   comparison operators
--   logical operators
--   bitwise operators
+-   赋值运算符
+-   算术运算符
+-   比较运算符
+-   逻辑运算符
+-   位运算符
 
-plus some interesting ones like `is` and `in`.
+再加上一些其它有趣的运算符，比如`is`和`in`。
 
-### Assignment operator in Python
+### Python赋值运算符
 
-The assignment operator is used to assign a value to a variable:
+赋值运算符用于为变量赋值：
 
 ```python
 age = 8
 ```
 
-Or to assign a variable value to another variable:
+或者将变量的值分配给另一个变量：
 
 ```python
 age = 8
 anotherVariable = age
 ```
 
-Since Python 3.8, the `:=` _walrus operator_ is used to assign a value to a variable as part of another operation. For example inside an `if` or in the conditional part of a loop. More on that later.
+从Python 3.8开始，可以使用_海象运算符_`:=`为变量赋值，同时该运算可作为另一个操作的一部分。例如在`if`或循环的条件部分。这个稍后再谈。
 
-### Arithmetic operators in Python
+### Python算术运算符
 
-Python has a number of arithmetic operators: `+`, `-`, `*`, `/` (division), `%` (remainder), `**` (exponentiation) and `//` (floor division):
+Python有许多算术运算符：`+`、`-`、`*`、`/`（除法）、`%`（取余）、`**`（求幂）和 `//`（向下取整除法） ：
 
 ```python
 1 + 1 #2
@@ -491,31 +491,31 @@ Python has a number of arithmetic operators: `+`, `-`, `*`, `/` (division), `%` 
 4 // 2 #2
 ```
 
-> Note that you don't need a space between the operands, but it's good for readability.
+> 请注意，操作数之间不需要空格，但加上空格有利于可读性。
 
-`-` also works as a unary minus operator:
+`-`也可用作一元运算符表示负号：
 
 ```python
 print(-4) #-4
 ```
 
-`+` is also used to concatenate String values:
+`+`也可用于连接字符串：
 
 ```python
 "Roger" + " is a good dog"
 #Roger is a good dog
 ```
 
-We can combine the assignment operator with arithmetic operators:
+我们可以将赋值运算符与算术运算符结合起来：
 
 -   `+=`
 -   `-=`
 -   `*=`
 -   `/=`
 -   `%=`
--   ..and so on
+-   以及等等
 
-Example:
+例子：
 
 ```python
 age = 8
@@ -523,9 +523,9 @@ age += 1
 # age is now 9
 ```
 
-### Comparison operators in Python
+### Python比较运算符
 
-Python defines a few comparison operators:
+Python定义了一些比较运算符：
 
 -   `==`
 -   `!=`
@@ -534,7 +534,7 @@ Python defines a few comparison operators:
 -   `>=`
 -   `<=`
 
-You can use those operators to get a boolean value (`True` or `False`) depending on the result:
+您可以使用这些运算符获取根据比较结果得到的布尔值（`True`或`False`）：
 
 ```python
 a = 1
@@ -546,15 +546,15 @@ a > b #False
 a <= b #True
 ```
 
-### Boolean operators in Python
+### Python布尔运算符
 
-Python gives us the following boolean operators:
+Python为我们提供了以下布尔运算符：
 
 -   `not`
 -   `and`
 -   `or`
 
-When working with `True` or `False` attributes, those work like logical AND, OR and NOT, and are often used in the `if` conditional expression evaluation:
+当使用`True`或`False`属性时，它们的作用类似于逻辑与、逻辑或和逻辑非，并且经常用于 `if` 条件表达式判断：
 
 ```python
 condition1 = True
@@ -565,9 +565,9 @@ condition1 and condition2 #False
 condition1 or condition2 #True
 ```
 
-Otherwise, pay attention to a possible source of confusion:
+但是，请注意可能的混淆：
 
-`or` used in an expression returns the value of the first operand that is not a falsy value (`False`, `0`, `''`, `[]`..). Otherwise it returns the last operand.
+表达式中使用`or`，则表达式的结果是第一个为非假值（假值：`False`、`0`、`''`、`[]`..）的操作数，否则返回最后一个操作数作为表达式的值。
 
 ```python
 print(0 or 1) ## 1
@@ -577,9 +577,9 @@ print([] or False) ## 'False'
 print(False or []) ## '[]'
 ```
 
-The Python docs describe it as `if x is false, then y, else x`.
+Python文档将其（x or y）描述为`如果x为假，则为y，否则为x`。（翻译者理解：`or`碰到真值就停，没有真值就走到最后）
 
-`and` only evaluates the second argument if the first one is true. So if the first argument is falsy (`False`, `0`, `''`, `[]`..), it returns that argument. Otherwise it evaluates the second argument:
+`and`运算操作仅在第一个操作数为真时，才计算第二个操作数。因此，如果第一个操作数是假值（假值：`False`、`0`、`''`、`[]`..），它会返回那个操作数。否则，它就会计算第二个操作数：
 
 ```python
 print(0 and 1) ## 0
@@ -590,34 +590,34 @@ print([] and False ) ## []
 print(False and [] ) ## False
 ```
 
-The Python docs describe it as `if x is false, then x, else y`.
+Python文档将其（x and y）描述为`如果x为假，则为x，否则为y`。（翻译者理解：`or`碰到假值就停，没有假值就走到最后）
 
-### Bitwise operators in Python
+### Python位运算符
 
-Some operators are used to work on bits and binary numbers:
+一些运算符用于处理位和二进制数：
 
--   `&` performs binary AND
--   `|` performs binary OR
--   `^` performs a binary XOR operation
--   `~` performs a binary NOT operation
--   `<<` shift left operation
--   `>>` shift right operation
+-   `&` 执行二进制与操作
+-   `|` 执行二进制或操作
+-   `^` 执行二进制异或操作
+-   `~` 执行二进制非操作
+-   `<<` 二进制左移操作
+-   `>>` 二进制右移操作
 
-Bitwise operators are rarely used, only in very specific situations, but they are worth mentioning.
+一般很少使用位运算符，仅在非常特定的情况下使用，但是值得一提。
 
-### `is` and `in` in Python
+### Python中的`is`和`in`
 
-`is` is called the **identity operator**. It is used to compare two objects and returns true if both are the same object. More on objects later.
+`is`被称为**identity operator**（验证运算符），用于比较两个对象，如果两者是同一个对象，则返回true。稍后将详细介绍对象。
 
-`in` is called the **membership operator**. Is used to tell if a value is contained in a list, or another sequence. More on lists and other sequences later.
+`in`被称为**membership operator**（成员运算符），用于判断一个值是否包含在一个列表或序列中。稍后将详细介绍列表和其他序列数据类型。
 
-## The Ternary Operator in Python
+## Python三元运算符
 
-The ternary operator in Python allows you to quickly define a conditional.
+使用Python三元运算符，您可以快速定义条件语句。
 
-Let's say you have a function that compares an `age` variable to the `18` value, and returns True or False depending on the result.
+假设您有一个函数，它将`age`变量与`18`进行比较，并根据结果返回True或False。
 
-Instead of writing:
+可以不这样写：
 
 ```python
 def is_adult(age):
@@ -627,17 +627,18 @@ def is_adult(age):
         return False
 ```
 
-You can implement it with the ternary operator in this way:
+您可以通过使用三元运算符这种方式来实现它：
+（翻译者：感觉这个例子不太好，因为这里写成`return age > 18`会更好，换成这个例子`return "age大于18" if age > 18 else "age小于等于18"`会更好理解一些）
 
 ```python
 def is_adult(age):
     return True if age > 18 else False
 ```
 
-First you define the result if the condition is True, then you evaluate the condition, then you define the result if the condition is false:
+首先定义条件为真的结果，然后判断条件，最后定义条件为假的结果：
 
 ```python
-<result_if_true> if <condition> else <result_if_false>
+<条件为真得到的结果> if <条件表达式> else <条件为假得到的结果>
 ```
 
 ## Strings in Python

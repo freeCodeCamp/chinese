@@ -24,9 +24,9 @@ Enjoy!
 -   [如何运行Python程序](#how-to-run-python-programs)
 -   [Python 2 vs Python 3](#python2-vs-python3)
 -   [Python基础](#python-basics)
--   [Data Types in Python](#datatypesinpython)
--   [Operators in Python](#operators)
--   [The Ternary Operator in Python](#theternaryoperatorinpython)
+-   [Python数据类型](#data-types-in-python)
+-   [Python运算符](#operators)
+-   [Python三元运算符](#the-ternary-operator-in-python)
 -   [Strings in Python](#stringsinpython)
 -   [Booleans in Python](#booleansinpython)
 -   [Numbers in Python](#numbersinpython)
@@ -363,7 +363,7 @@ name = "Flavio"
 
 一个缩进中的所有内容属于一个块，如控制语句块或条件块，函数或类主体。 我们稍后会看到更多关于这些内容的解释。
 
-## Python数据类型
+## <h2 id="data-types-in-python">Python数据类型</h2>
 
 Python有几种内置类型。
 
@@ -446,7 +446,7 @@ print(intFraction) #0
 
 我们很快就会探索它们。
 
-## Python运算符
+## <h2 id="operators">Python运算符</h2>
 
 我们使用Python运算符来对值和变量进行运算操作。
 
@@ -611,7 +611,7 @@ Python文档将其（x and y）描述为`如果x为假，则为x，否则为y`�
 
 `in`被称为**membership operator**（成员运算符），用于判断一个值是否包含在一个列表或序列中。稍后将详细介绍列表和其他序列数据类型。
 
-## Python三元运算符
+## <h2 id="the-ternary-operator-in-python">Python三元运算符</h2>
 
 使用Python三元运算符，您可以快速定义条件语句。
 

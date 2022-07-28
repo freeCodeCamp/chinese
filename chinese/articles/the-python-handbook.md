@@ -17,7 +17,7 @@
 
 Enjoy!
 
-## Summary
+<h2 id="summary">目录</h2>
 
 -   [Python介绍](#introduction-to-python)
 -   [如何安装Python](#how-to-install-python)
@@ -259,7 +259,7 @@ chmod u+x program.py
 - 您可以在上面安装第三方包
 - 它为您提供用于复杂应用程序的键值数据库
 
-## <h2 id="python2-vs-python3">Python 2 vs Python 3</h2>
+<h2 id="python2-vs-python3">Python 2 vs Python 3</h2>
 
 我们一开始就应该讨论的一个关键主题是Python 2与Python 3。
 
@@ -273,7 +273,7 @@ Python 3于2008年被推出，其后作为主要的Python版本一直在被持�
 
 > 本书重点介绍 Python 3。
 
-## <h2 id="python-basics">Python 基础</h2>
+<h2 id="python-basics">Python 基础</h2>
 
 ### Python中的变量
 
@@ -363,7 +363,7 @@ name = "Flavio"
 
 一个缩进中的所有内容属于一个块，如控制语句块或条件块，函数或类主体。 我们稍后会看到更多关于这些内容的解释。
 
-## <h2 id="data-types-in-python">Python数据类型</h2>
+<h2 id="data-types-in-python">Python数据类型</h2>
 
 Python有几种内置类型。
 
@@ -446,7 +446,7 @@ print(intFraction) #0
 
 我们很快就会探索它们。
 
-## <h2 id="operators">Python运算符</h2>
+<h2 id="operators">Python运算符</h2>
 
 我们使用Python运算符来对值和变量进行运算操作。
 
@@ -611,7 +611,7 @@ Python文档将其（x and y）描述为`如果x为假，则为x，否则为y`�
 
 `in`被称为**membership operator**（成员运算符），用于判断一个值是否包含在一个列表或序列中。稍后将详细介绍列表和其他序列数据类型。
 
-## <h2 id="the-ternary-operator-in-python">Python三元运算符</h2>
+<h2 id="the-ternary-operator-in-python">Python三元运算符</h2>
 
 使用Python三元运算符，您可以快速定义条件语句。
 

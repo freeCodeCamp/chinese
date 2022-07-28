@@ -1,6 +1,6 @@
 > -  原文地址：[The Software Architecture Handbook](https://www.freecodecamp.org/news/an-introduction-to-software-architecture-patterns/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![The Software Architecture Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/pexels----3172740.jpg)

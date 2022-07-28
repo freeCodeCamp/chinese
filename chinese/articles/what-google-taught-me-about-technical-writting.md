@@ -1,6 +1,6 @@
 > -  原文地址：[How Google's Technical Writing Course Helped Me Become a Better Writer](https://www.freecodecamp.org/news/what-google-taught-me-about-technical-writting/)
 > -  原文作者：[Kealan Parr](https://www.freecodecamp.org/news/author/kealan/)
-> -  译者：
+> -  译者：Narcissus91
 > -  校对者：
 
 ![How Google's Technical Writing Course Helped Me Become a Better Writer](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/Technical-Writting-One.png)

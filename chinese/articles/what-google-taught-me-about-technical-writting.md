@@ -5,13 +5,13 @@
 
 ![How Google's Technical Writing Course Helped Me Become a Better Writer](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/Technical-Writting-One.png)
 
-Google has a technical writing course that I recently completed and highly enjoyed. It takes roughly 4 hours, and has some exercises along the way so you can test yourself.
+谷歌有一门技术写作课程，我最近刚学完这个课程并且非常喜欢。课程大约需要4个小时，并且配套有一些实操练习，可以检测自己的学习效果。
 
-I'm going to briefly explain what I learned from completing the course, and I'll summarise the best bits so you can get a good overview of what's covered.
+我将简要说明我学完这门课程后学到了什么，同时也会总结出其中最好的部分，这样你就可以了解这门课所涉及的大概内容。
 
-We'll go over some grammar rules and linguistics for the English language, but I'll explain everything upfront so we're all on the same page. The only thing you need to complete the course is a "little writing proficiency in English", but "you don't have to be a strong writer".
+我会说到一些英语的语法规则和语言学内容，但我都会提前做解释，这样，可以保证我们的理解是一致的。要完成这门课程，你只需要有“一点点英语写作能力”就好，而“不必特别擅长写作”。
 
-Let's dive in.
+开始进入主题吧。
 
 # Introduction
 

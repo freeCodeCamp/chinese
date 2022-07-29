@@ -13,248 +13,248 @@
 
 开始进入主题吧。
 
-# Introduction
+# 前言
 
-Let's define some terms we are going to use throughout this document:
+首先定义本文将会使用到的一些术语：
 
--   **Nouns** are used to name something such as **Mrs Kay**, **Eiffel Tower** or **manager**.
--   **Pronouns** are used instead of a noun such as **I**, **you**, **we**, **them**, **he**, or **it**.
--   **Adjectives** are used to describe nouns such as **friendly** Mrs Kay, the **rusty** Eiffel Tower or the **good** manager.
--   **Verbs** are doing words such as **fight**, **run**, **type** and **eat**.
--   **Adverbs** describe verbs such as **strongly** fight, **cowardly** run, **aggressively** type and **timidly** eat.
+-   **名词** 用于称呼某物。例如**凯夫人**、**埃菲尔铁塔**或者**经理**。
+-   **代词** 用于代替名词。例如**我**、**你/你们**、**我们**、**他们/她们/它们**、**他**或**它**。
+-   **形容词** 用于修饰名词。例如**友好的** 凯夫人、**锈迹斑斑的** 埃菲尔铁塔或者 **不错的** 经理。
+-   **动词** 表示动作或状态的词，例如**打架**、**奔跑**、**打字**和**吃**。
+-   **副词** 用于修饰动词。例如打斗**猛烈** 、**怯懦地**奔跑、**一个劲儿地**打字和**胆怯地**吃东西。
 
-# Be Clear
+# 清晰
 
-Clarity describes how clear your point is in your writing. Your number one priority in technical writing is clarity.
+清晰是说你写作中的观点是否清晰。技术写作的首要关键就是清晰。
 
-### Pronoun use
+### 代词用法
 
-Whenever you use pronouns, make sure they are clear. It's easy to get confused. Something like:
+使用代词时，一定要确保代指事物是清晰明确的，不然很容易让读者混淆。比如像这样：
 
-> C++ is a pretty old language, but JavaScript is old too. I really like it though.
+> C++是一门相当古老的语言，但JavaScript也有些年代了。不过，我还是喜欢它。
 
-Huh? You like what? C++ or JavaScript? The **pronouns** used here don't help the clarity.
+啊？你到底喜欢什么？C++还是JavaScript？这里的**代词**并不明晰。
 
-Clarify pronouns usage like:
+要明晰代词的用法，像这样：
 
-> C++ is a pretty old language, but JavaScript is old too. I really like C++.
+> C++是一门相当古老的语言，但JavaScript也有些年代了。我真的喜欢C++。
 
-Generally, when proof reading, if it's unclear to what you're referring, use the noun instead of the pronoun. **This** or **that** are especially prone to this issue. Make sure whenever you use these words it's clear what is being discussed.
+一般来说，在校对时，如果不清楚代词指的是什么，那就用名词而不要用代词。**这个**或者**那个**特别容易引起这个问题。无论什么时候用这类代词，确保指代明确。
 
-### Idioms
+### 习语
 
-**Idioms** are common phrases used to describe something. But some idioms mean nothing to an international audience. Because **idioms** are so specific to your region/language, try to avoid them in your technical writing.
+**习语**是描述事物时常用的短语。但有些习语并不适用于世界各地的读者，因为**习语**是你的地区/语言所特有的，尽量避免在技术写作中使用习语。
 
-No one understands what **walking around the porridge, chewing the fat**, or **inflating a cow** means intuitively. Just say exactly what you mean, and try to keep your analogies simple and idiom free.  
+没有人能一来就理解**围着粥边转、咀嚼肥肉**或者**给牛充气**这些习语隐含的喻义。直白说你的意思就好了，尽量使用简单的类比，不用习语。  
 
-# Be Succinct
+# 表达简洁
 
-**Succinctness** is how brief and clearly expressed your writing is.
+**简洁度**是指你写作表达的简短清晰程度。
 
-Good software engineers spend as much time deleting code as writing it when polishing their work. It's the same in writing. Shorter code generally:
+优秀的软件工程师在优化工作时，会在编写代码上花尽可能多的时间去删除代码。写作同样如此。通常，
 
--   Makes it easier for others to read
--   Makes code easier to maintain
--   Extra lines of code add extra points of failure
+-   代码越短越易于他人阅读
+-   代码越短越易于维护
+-   额外的代码行会引入额外的问题
 
-All of these points also apply to your technical writing.
+所有这些要点也都适用于你的技术写作。
 
-Sometimes polishing and saying what you want to say **succinctly** takes time, and you have to really craft the document. You might even end up proof reading multiple times – but it is worthwhile.
+有时，打磨文章和**精炼**表达需要花时间，你必须真正地对文档精雕细琢。甚至你可能需要校对多次——但，这都是值得的。
 
-Shorter sentences also encourage readers to continue reading. How intimidating is one huge paragraph? It can sometimes intimidate readers, and some readers will just bounce straight off your page when they see huge 1,000 word paragraphs.
+较短的句子也能鼓励读者继续阅读。一大长段是多么吓人？长段有时会劝退读者。有的读者看到一个段落足有上千字，就会直接退出页面。
 
-### Remove "there is" and "there are"
+### 删除“在（某地）存在一个”和“在（某地）存在多个”
 
-As you go through your writing, "**there is**" and "**there are**" can almost always be removed to more briefly express your point.
+在写作过程中，“**在（某地）存在一个**”和“**在（某地）存在多个**”几乎都可以删掉，让你的观点更简洁。
 
-Both terms are generally very generic and bore readers. Rework the sentence. Here are some examples:
+这2个说法通常很泛在并且让读者感到厌烦。改写一下句子吧。以下是一些示例：
 
--   There is a lot of overlap between software and hardware.
--   There are not multiple threads in JavaScript.
+-   在软件和硬件之间有很多重叠的地方。
+-   在JavaScript中不存在多线程。
 
-I hope you agree how much better these now read:
+我希望你也认同改后的句子读起来更好：
 
--   Software and hardware have a lot of overlap.
--   JavaScript does not have multiple threads.
+-   软件和硬件有很多重叠的地方。
+-   JavaScript没有多线程。
 
-### Minimise use of adjectives and adverbs
+### 尽量少用形容词和副词
 
-Adjectives and adverbs are used a lot in descriptive, creative writing like fiction and poetry.
+形容词和副词常用于小说和诗歌等描述类和创造类写作中。
 
-Google's example is turning "**grass**" into "**verdant, prodigal grass**" or turning the lifeless-sounding "**hair**" into "**silky, flowing hair**"
+谷歌技术写作课程中，举的例子是把“**草**”改写为“**青翠茂密的草**”或者把听起来毫无生机的“**头发**”改写为“**丝滑飘逸的头发**”。
 
-The trouble is that **adverbs** and **adjectives** are generally too loosely defined, and they can also make your technical writing sound like marketing.
+问题在于**形容词**和**副词**的定义常常很粗略，它们可能会让技术写作看起来像是营销写作。
 
-> Running the code in production mode makes the code run screamingly fast.
+> 在生产模式中，代码运行速度极其快。
 
-As opposed to:
+对比：
 
-> Running the code in production mode will result in a 225% performance gain.
+> 在生产模式中，代码运行效率将提升225%。
 
-I hope you agree the second is more precise and quantifiable.
+希望你也认同改写后的句子更精准且可量化。
 
-### Make use of lists
+### 使用列表
 
-When you have a long sentence with lots of elements in it, you should split it up into a list. For example, if you're listing the benefits of a particular technology, you could say, X is a great choice because:
+一个长句里包含很多元素时，你可以把长句拆成列表形式。例如，如果你要列举某项技术的好处，你可以说，X是一个不错的选择，因为：
 
--   It's lightweight
--   It's fast
--   It's easy to use
+-   它是轻量级的
+-   它速度很快
+-   它容易使用
 
-While this is a simple example, you get the idea. This is now far more readable than an overly long sentence and you won't lose readers or your flow.
+虽然这是一个简单的例子，但你理解我的意思了吧。现在这样比一个冗长的句子更易读，你也不会失去你的读者或者流量。
 
-### Use the right list
+### 正确使用列表
 
-If you do find a good place to use a list, it's important to use the right list. You could use either a numbered list, like this:
+如果你觉得某个地方确实可以使用列表，那正确使用很重要。可以像这样使用有序列表：
 
-1.  Here's my numbered list
-2.  Isn't it pretty?
+1.  这是我的有序列表
+2.  它是不是很美观？
 
-Or you can use a bulleted list, like this:
+或者也可以像这样使用无序列表：
 
--   Here's my bulleted list
--   Different, but still cool
+-   这是我的无序列表
+-   看起来不一样，但仍然很酷
 
-**So which one should you use?**
+**所以你应该使用哪一种列表呢？**
 
-Use a **numbered list**, where the order matters, like say a recipe. Try to start each number with a commanding verb to reinforce the step by step instructions of the list, too:
+像食谱这种顺序很重要的话，那就使用**有序列表**。也可以试着在每个序号后面使用一个命令式动词打头，强调列表中的步骤说明：
 
-1.  Turn on the oven.
-2.  Bake the cake.
+1.  打开烤箱。
+2.  烘烤蛋糕。
 
-**Bulleted lists** work well for everything else.
+**无序列表**适用于其它所有内容。
 
-### Keep your lists parallel
+### 列表结构保持平行
 
-Now you're hopefully using the right lists! The next step to help you use lists to their maximum potential is to keep them **parallel**. What does that mean?
+现在你应该能够正确使用列表了。下一步，要充分利用列表功能，你需要让每个列表的结构**平行**。什么意思呢？
 
-Your list items should all have the same:
+所有列表项目应保持相同的：
 
--   Grammar and punctuation
--   Logical categorisation (the list items reasonably all belong together)
--   Capitalisation
+-   语法和标点符号
+-   逻辑分类（所有列表项目逻辑上属于同类别）
+-   大小写规则
 
-Let's provide a bad example:
+举一个错误的例子：
 
 -   c++
 -   JAVASCRIPT?
 -   Rust!
--   chocolate chip cookies
+-   巧克力片饼干（chocolate chip cookies）
 
-All of the above rules have been broken. The item "chocolate chip cookies" doesn't logically belong in the list, the capitalisation/casing of each element is different, and the punctuation isn't consistently applied (It's not clear why "JAVASCRIPT" ends in a "?", and "Rust" with an "!")
+这个例子违反了上述所有规则。“巧克力饼干”在逻辑上不属于这个列表、每个元素的大小写不一致、标点符号的使用未统一（不清楚为什么“JAVASCRIPT”以“？”结束，而“Rust”以“！”结束）。
 
-# Use Active Voice
+# 使用主动句
 
-Sentences are generally made up of **subject**, **object** and **verb**. Let's do a few as a test:
+句子通常由**主语**、**宾语**和**谓语**组成。用几个句子来测试一下吧：
 
-> I wrote a story.
+> 我写了一个故事。
 
-**I** am the subject, **story** is the object, and **wrote** is the verb.
+**我**是主语，**故事**是宾语，**写**是谓语。
 
-> I really admire Jake's work
+> 我真的羡慕杰克的工作。
 
-**I** am the subject, **Jake** is the object and **admire** is the verb.
+**我** 主语，**杰克**是宾语，**羡慕**是谓语。
 
--   The subject is the one doing the thing.
--   The object is the thing being done to.
--   The verb is what is being done to the object by the subject.
+-   主语是指做事情的人或物。
+-   宾语是指被做的事情。
+-   谓语是指主语对宾语发出的动作。
 
-All of the above examples use **active voice** because the subject does the verb to the object. So let's flip those above examples to **passive voice**:
+上述所有例子使用的是**主动句**，因为是主语对宾语做了动作。所以我们把这些例子改为**被动句**的话，那就是：
 
-> The story was written by me
+> 故事是由我写的。
 
-> Jake's work has my admiration _(or Jake's work is admired by me)_
+> 杰克的工作引起了我的羡慕。_（或者杰克的工作被我羡慕。）_
 
-You should use **active voice** because, in addition to being more powerful and direct:
+你应该使用**主动句**，因为除了表达会更加有力和直接以外，
 
--   It's much easier to understand. Whenever people read the **passive voice** they have to make the mental effort to transfer **passive voice** to **active voice.** So for ease of reading, skip that step and write in the **active voice**.
--   **Active voice** is far more familiar to the reader, as we read active voice writing most of the time
--   **Passive voice** sometimes forces the reader to guess who did what in the sentence and obscures the meaning
--   **Active voice** is generally shorter than passive voice.
+-   也更易于阅读。人们读到**被动句**时，还必须付出一些心力，将**被动句**转为**主动句**。所以，为了便于阅读，写作时使用**主动句**而不要用被动句。
+-   读者更熟悉**主动句**，因为我们大多阅读的都是主动句。
+-   **被动句**有时会迫使读者去猜测，这个句子里谁做了什么，让人费解。
+-   **主动句**一般比被动句短。
 
-# General Writing Tips
+# 通用写作技巧
 
-Let's look at how to maximise each component of a well crafted written piece.
+让我们看看如何最大程度地优化每个部分来写出一篇精美的文章吧。
 
-### Sentences
+### 句子
 
-Developers are familiar with keeping their code single responsibility. Keep the same formula in mind for sentences.
+开发人员熟悉代码编写的单一性原则，这个原则在写句子时也同样适用。
 
-Express one idea clearly and briefly, before moving onto the next sentence. Don't have lots of **and also this** and **that too** and **even further splitting on our final sentence**. If you end up doing that, split each text after the **and** into its own sentence.
+一个观点表达简明清晰后，再写下一个句子。不要有大量的**和这个**与**和那个**，**甚至可以把最后一句进行拆分**。如果你后面写句子，记得把每个**和**后面的文字拆开，单独成句。
 
-### Paragraphs
+### 段落
 
-Paragraphs should have a clear opening sentence to explain the paragraph's central point.
+段落应该有一个明确的开场白句子，解释本段落的中心思想。
 
-You also should clearly answer:
+你也应该清楚地回答以下问题：
 
--   What are you trying to convey?
--   Why is it important?
--   How should the reader use this knowledge?
+-   你想表达的是什么？
+-   为什么这很重要？
+-   读者应该如何利用这些知识？
 
-Let's have an example that does all the above:
+我们可以举个例子，应用上述所有技巧。
 
-> The `garp()` function returns the delta between a dataset's mean and median. Many people believe unquestioningly that a mean always holds the truth. However, a mean is easily influenced by a few very large or very small data points.  
+> `garp()`函数返回一个数据集的平均数和中位数之间的差值。很多人坚信不疑的是平均数总是不会错的。然而，平均数很容易受到几个非常大或非常小的数据点的影响。 
 >   
-> Call `garp()` to help determine whether a few very large or very small data points are influencing the mean too much. A relatively small `garp()` value suggests that the mean is more meaningful than when the `garp()` value is relatively high.
+> 调用`garp()`来辅助确定几个非常大或非常小的数据点是否对平均数影响过大。`garp()`值相对较小时，平均数更可取。
 
-### Jargon and context
+### 行话和认知语境
 
-**Jargon** is the specialised terminology that a particular field uses.
+**行话**是特定领域使用的专门术语。
 
-Investors might talk about a **W8-BEN** form or **SPAC**s. But if you're outside that field, you have no clue what's being discussed.
+投资者可能会谈论**W8-BEN**表格或者**SPAC**。但如果你是圈外人，就不知道他们在谈论什么。
 
-Where possible, remove all jargon and acronyms and briefly explain what something is.
+尽可能删除所有的行话和缩略语，只给出简要解释就好。
 
-Try to make your writing as plain and simple as possible, still giving due credit to the complexity of what you're discussing (don't oversimplify!). If your writing is difficult or complex to understand, it won't help anyone.
+尽量让你的文章平实简单，但对于你讨论的内容仍然需要解释到位（不能过于简化！）。如果你写得有难度或者复杂让人难以理解，那它就帮不到任何人。
 
-Don't assume knowledge either. If you want to talk about something, either explain it, or try to link to a good resource on it. Some refer to this as the **Curse of Knowledge**.
+不要对认知语境做假定。如果你想谈论某件事，要么解释它，要么尝试给一个相关的优质链接。有些人把预先假定对方的认知语境称为**知识的诅咒**。
 
-Assume your reader knows less than you, so experienced readers can just skim the parts they already know, and newbies don't get lost.
+要假装读者比你知道的少，这样有经验的读者可以直接略过他们已经知道的部分，而萌新也不会感到困惑。
 
-### Word choice
+### 遣词用字
 
-English is the dominant language for technical writing, but English is not always the first language of the reader. Try to stick to commonly used, simple English words.
+英语是技术写作的主要语言，却不一定是读者的母语。尽量坚持使用常用的、简单的英语词汇。
 
-You don't have to discuss the **exuberance** you find from **polysyllabic** words, flaunting your **magniloquence**.
+不必使用那些**多音节**的**大词**，那样会显得**华而不实**。
 
-# Meta info
+# 元信息
 
-### Write an Introduction
+### 写一个简介
 
-When you write something, briefly explain at the beginning what you're going to cover. This can help people understand exactly what you're discussing before reading more.
+写作之前，在开头简要说明你要写的内容。这有助于读者往下阅读之前清楚知道你即将讨论的内容。
 
-### Tailor your Contents to your Audience
+### 根据读者不同而调整所写内容
 
-Try and fit your document to your audience. When you write on [dev.to](https://dev.to/) you may write one way, and when you write on freeCodeCamp News you might write another way.
+试着让你的文档适合对应的读者。在 [dev.to](https://dev.to/) 上，你可能用一种写作方式；在freeCodeCamp文章专栏上，你可能会用另一种写作方式。
 
-Compose your document to best suit the audience. For example, if you're explaining your company's architecture to a wider audience, you will have to explain things more thoroughly as there's less shared knowledge there than with your colleagues.
+根据读者不同而调整所写内容。例如，如果你要向更多读者解释你公司的架构，因为你的读者不像你同事知道那么多，你必须把事情解释得更透彻。
 
-Sometime you may not even be writing for technical people, and you'll need to explain things in a less-complex way to aid their understanding.
+有时，你甚至可能不是为技术人员写作，那就需要用一种不那么复杂的方式来解释事情，帮助读者理解。
 
-# Summary
+# 总结
 
-Let's do a brief overview of what we covered:
+简要概述一下本文涵盖的内容：
 
--   Try to be consistent through your writing
--   Avoid ambiguous pronouns
--   Prefer active voice
--   Be succinct.
--   Focus each sentence on one idea
--   Make use of lists
--   Focus on deleting unnecessary words
--   Don't use complex English or jargon
--   Keep lists parallel
--   Open paragraphs with an overview of what you're covering
--   Scope your document to your audience.
--   Establish your key points at the start of your writing.
+-   通篇结构试着保持一致
+-   避免使用模棱两可的代词
+-   多用主动句
+-   表达简洁
+-   每个句子写一个观点
+-   使用列表
+-   注意删除不必要的词语
+-   不要使用复杂的英语或者行话
+-   保持列表结构平行
+-   段落首句为概述句
+-   根据读者对象确定写作内容
+-   文章开篇点明主旨
 
-# Conclusion
+# 结语
 
-I hope this article has explained some helpful concepts Google taught me when I completed their technical writing course.
+我希望这篇文章解释清楚了那些我从谷歌技术写作课程中学到的有用概念。
 
-I am going to try and pick and choose the relevant parts of their advice as and when it applies to the writing I do, and I hope it helps you too. I found quite a few helpful rules here for me to apply to documentation or any technical writing I produce.
+我打算尝试挑选一些他们建议到的相关内容，将其应用于我的写作中，我希望这也能帮到你。在这里我发现了一些对我有用的规则，这些规则可以用于我制作的文档或任何技术写作内容。
 
-The course I referred to throughout this article can be found [here](https://developers.google.com/tech-writing/one).
+文章中提到的谷歌技术写作课程可以在[这里](https://developers.google.com/tech-writing/one)找到。
 
-I share my writing on [Twitter](https://twitter.com/kealanparr) if you enjoyed this article and want to see more.
+如果你喜欢这篇文章，并且还想看更多，可以在[推特](https://twitter.com/kealanparr)看看我的写作分享。

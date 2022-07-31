@@ -29,7 +29,7 @@ _"_我讨厌 stack overflow 网站_"_  ——从未有开发者说过。
 6. [How to Fix Could Not Find Declaration File for Module ……?](#6-how-to-fix-could-not-find-declaration-file-for-module-)
 7. [How Do I Dynamically Assign Properties to an Object in TypeScript?](#7-how-do-i-dynamically-assign-properties-to-an-object-in-typescript)
 
-**__注意:__** 你可以得到这份手册的 [PDF 或 ePub](https://www.ohansemmanuel.com/cheatsheet/top-7-stack-overflowed-typescript-questions) 版本，以方便参考或在你的 Kindle 或平板电脑上阅读。
+****注意:**** 你可以得到这份手册的 [PDF 或 ePub](https://www.ohansemmanuel.com/cheatsheet/top-7-stack-overflowed-typescript-questions) 版本，以方便参考或在你的 Kindle 或平板电脑上阅读。
 
 ![image-51](https://www.freecodecamp.org/news/content/images/2022/07/image-51.png)
 
@@ -59,7 +59,7 @@ interface 的大部分功能可以通过 type aliases 来实现, 只是你不能
 
 这有什么好困惑的？
 
-好吧，这里的主要混淆源于这两个选项在大多数方面是如此 **__势均力敌__**。
+好吧，这里的主要混淆源于这两个选项在大多数方面是如此 ****势均力敌****。
 
 这使得你很难做出一个明确的选择，尤其是当你刚刚开始使用 Typescript 的时候。
 
@@ -334,7 +334,7 @@ TypeScript 中的 bang 运算符是什么？
 
 ## TL;DR
 
-这个`！` 在技术上被称为 **__非空的断言操作符(non-null assertion operator)__**。如果 TypeScript 编译器警告一个值是 `null`或 `undefined`，你可以使用`！`操作符来断言该值不是 `null` 或 `undefined`。
+这个`！` 在技术上被称为 ****非空的断言操作符(non-null assertion operator)****。如果 TypeScript 编译器警告一个值是 `null`或 `undefined`，你可以使用`！`操作符来断言该值不是 `null` 或 `undefined`。
 
 个人观点：尽可能避免这样做。
 
@@ -438,7 +438,6 @@ function duplicate(text: string | null) {
 `duplicate`确实可以在 `null` 的情况下被调用，这可能会导致意外的结果。
 
 请注意，如果`text`是一个可选的属性，下面的例子也是成立的：
-
 
 ```ts
 // text could be "undefined"
@@ -963,33 +962,33 @@ window.__MY_APPLICATION_NAME__ = "freecodecamp"
 console.log(window.__MY_APPLICATION_NAME__)
 ```
 
-Errors banished!
+没有错误了!
 
 ![image-74](https://www.freecodecamp.org/news/content/images/2022/07/image-74.png)
 
-The resolved solution
+解决问题的方案
 
-See the [TypeScript playground](https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgOqgCYHsDuyDeAUMsgPqkCyAmqQIIAK9AMgJIDCtAKiwPIBypPrQoBRcgC5kAZzBRQAc0IBfQoRyZcAOnLU6jVh279BwsaWQBeZACIYUCBARYMjuAFsADtdVOQUrAA2EJoBWPIAFOog2DjalDQMzOxcvAJCouQAlEA).
+查看 [TypeScript playground](https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgOqgCYHsDuyDeAUMsgPqkCyAmqQIIAK9AMgJIDCtAKiwPIBypPrQoBRcgC5kAZzBRQAc0IBfQoRyZcAOnLU6jVh279BwsaWQBeZACIYUCBARYMjuAFsADtdVOQUrAA2EJoBWPIAFOog2DjalDQMzOxcvAJCouQAlEA).
 
-Remember that a key difference between types and interfaces is that interfaces can be extended by declaring it multiple times.
+记住，类型（types）和接口（interfaces）的一个关键区别是，接口可以通过多次声明来扩展(extended)。
 
-What we’ve done here is declared the `Window` interface one more time, hence extending the interface declaration.
+我们在这里所做的是再一次声明了 `Window`接口，因此扩展了(extending)接口声明。
 
 ### A Real-World Solution
 
-I’ve solved this problem within the TypeScript playground to show you the solution in its simplest form, that is the crux.
+我在 TypeScript playground 解决了这个问题，向你展示了最简单的解决方案，这就是关键所在。
 
-In the real world, though, you wouldn’t extend the interface within your code.
+不过，在现实世界中，你不会在你的代码中扩展接口。
 
-So, what should you do instead?
+那么，你应该怎么做呢？
 
-Give it a guess, perhaps?
+也许，给它一个猜测？
 
-Yes, you were close …… or perhaps right:
+是的，你很接近……，也可能是正确的。
 
-Create a type definition file!
+创建一个类型定义文件!
 
-For example, create a `window.d.ts` file with the following content:
+例如，创建一个`window.d.ts`文件，内容如下:
 
 ```ts
 interface Window {
@@ -997,49 +996,47 @@ interface Window {
 }
 ```
 
-And there you go.
+然后就可以了。
 
-You’ve successfully extended the `Window` interface and solved the problem.
+你已经成功地扩展了`Window`接口并解决了问题。
 
-If you went ahead to assign the wrong value type to the `__MY_APPLICATION_NAME__` property, you now have strong type checking enabled.
+如果你继续给`__MY_APPLICATION_NAME__属性分配了错误的值类型，你现在已经启用了强类型检查。
 
 ![image-75](https://www.freecodecamp.org/news/content/images/2022/07/image-75.png)
 
-A wrong assignment to the newly defined property caught
+对新定义的属性进行错误的赋值，将会有警告。
 
-See the [TypeScript playground](https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgOqgCYHsDuyDeAUMsgPqkCyAmqQIIAK9AMgJIDCtAKiwPIBypPrQoBRcgC5kAZzBRQAc0IBfQoRyZcAOnLU6jVh279BwsaWQBeAsWQg4AWwiSARDCgQICLBk8OADs7Kql4gUlgANhCa4VjyABTqINg42pQ0DMzsXLwCQqLkAJSqxUA).
-
-_And_Voilà.__
+查看 [TypeScript playground](https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgOqgCYHsDuyDeAUMsgPqkCyAmqQIIAK9AMgJIDCtAKiwPIBypPrQoBRcgC5kAZzBRQAc0IBfQoRyZcAOnLU6jVh279BwsaWQBeAsWQg4AWwiSARDCgQICLBk8OADs7Kql4gUlgANhCa4VjyABTqINg42pQ0DMzsXLwCQqLkAJSqxUA).
 
 ## Conclusion
 
-In [older stack overflow posts](https://stackoverflow.com/questions/12709074/how-do-you-explicitly-set-a-new-property-on-window-in-typescript), you’ll find more complicated answers based on older TypeScript versions.
+在 [旧的 stack overflow 帖子](https://stackoverflow.com/questions/12709074/how-do-you-explicitly-set-a-new-property-on-window-in-typescript),你会发现基于旧的 TypeScript 版本会方案更复杂。
 
-The solution is easier to reason about in modern TypeScript.
+在新版 TypeScript 中，该解决方案更容易。
 
-Now you know. 😉
+现在你知道了。 😉
 
 # Are Strongly Typed Functions as Parameters Possible in TypeScript?
 
 ## TL;DR
 
-This question does not need to be overly explained. The short answer is yes.
+这个问题不需要过多的解释。简短的回答是肯定的。
 
-Functions can be strongly typed — even as parameters to other functions.
+函数可以被强类型化--甚至作为其他函数的参数。
 
 ## Introduction
 
-I must say, unlike other sections of this article, I never really found myself searching for this in my early TypeScript days.
+我必须说，与本文的其他部分不同，在我早期的 TypeScript 时代，我从未真正发现自己在寻找这个。
 
-However, that’s not what’s most important.
+然而，这并不是最重要的。
 
-It is a well-searched question, so let’s answer it!
+这是一个经过精心研究的问题，所以让我们来回答它吧!
 
 ## How to Use Strongly Typed Function Parameters in TypeScript
 
-The accepted answer on this [stack overflow post](https://stackoverflow.com/questions/14638990/are-strongly-typed-functions-as-parameters-possible-in-typescript) is correct — to a degree.
+这个[stack overflow post](https://stackoverflow.com/questions/14638990/are-strongly-typed-functions-as-parameters-possible-in-typescript)上的公认答案是正确的，在一定程度上。
 
-Assuming you had a function: `speak`:
+假设你有一个函数: `speak`:
 
 ```ts
 function speak(callback) {
@@ -1048,15 +1045,15 @@ function speak(callback) {
 }
 ```
 
-It receives a `callback` that’s internally invoked with a `string`.
+它接收一个 `callback`，在内部用一个 `string` 来调用。
 
-To type this, go ahead and represent the `callback` with a function type alias:
+为了打这个字，继续用一个函数类型的别名来表示 `callback`。:
 
 ```ts
 type Callback = (value: string) => void
 ```
 
-And type the `speak` function as follows:
+并敲下 `speak` 函数，如下所示:
 
 ```ts
 function speak(callback: Callback) {
@@ -1065,7 +1062,7 @@ function speak(callback: Callback) {
 }
 ```
 
-Alternatively, you could also keep the type inline:
+另外，你也可以将该保持类型内联（type inline）:
 
 ```ts
 function speak(callback: (value: string) => void) {
@@ -1075,11 +1072,11 @@ function speak(callback: (value: string) => void) {
 }
 ```
 
-See the [TypeScript playground](https://www.typescriptlang.org/play?#code/GYVwdgxgLglg9mABAZwA4FMCGBrAFBTAG0ICNMJsAuRXANyJHWuSgCcYwBzASkQF4AfIlpwYAE14BvAFCJEEBCxTowUFRHT9EAIgAS6YnEQB3OK0Jjt02YiLpWUfEVLk8yFWsjpu3aQF9rQOkgA).
+查看 [TypeScript playground](https://www.typescriptlang.org/play?#code/GYVwdgxgLglg9mABAZwA4FMCGBrAFBTAG0ICNMJsAuRXANyJHWuSgCcYwBzASkQF4AfIlpwYAE14BvAFCJEEBCxTowUFRHT9EAIgAS6YnEQB3OK0Jjt02YiLpWUfEVLk8yFWsjpu3aQF9rQOkgA).
 
-And there it is!
+这就是了!
 
-You’ve used a strongly typed function as a parameter.
+你使用了一个强类型的函数作为参数。
 
 ## How to Handle Functions with No Return Value
 

@@ -577,7 +577,7 @@ print([] or False) ## 'False'
 print(False or []) ## '[]'
 ```
 
-Python文档将其（x or y）描述为`如果x为假，则为y，否则为x`。（翻译者理解：`or`碰到真值就停，没有真值就走到最后）
+Python文档将其（x or y）描述为`如果x为假，则为y，否则为x`。（译者：`or`碰到真值就停，没有真值就走到最后）
 
 `and`运算操作仅在第一个操作数为真时，才计算第二个操作数。因此，如果第一个操作数是假值（假值：`False`、`0`、`''`、`[]`..），它会返回那个操作数。否则，它就会计算第二个操作数：
 
@@ -590,7 +590,7 @@ print([] and False ) ## []
 print(False and [] ) ## False
 ```
 
-Python文档将其（x and y）描述为`如果x为假，则为x，否则为y`。（翻译者理解：`or`碰到假值就停，没有假值就走到最后）
+Python文档将其（x and y）描述为`如果x为假，则为x，否则为y`。（译者：`or`碰到假值就停，没有假值就走到最后）
 
 ### Python位运算符
 
@@ -628,7 +628,7 @@ def is_adult(age):
 ```
 
 您可以通过使用三元运算符这种方式来实现它：
-（翻译者：感觉这个例子不太好，因为这里写成`return age > 18`会更好，换成这个例子`return "age大于18" if age > 18 else "age小于等于18"`会更好理解一些）
+（译者：感觉这个例子不太好，因为这里写成`return age > 18`会更好，换成这个例子`return "age大于18" if age > 18 else "age小于等于18"`会更好理解一些）
 
 ```python
 def is_adult(age):
@@ -643,8 +643,6 @@ def is_adult(age):
 
 <h2 id="strings-in-python">Python字符串</h2>
 
-A string in Python is a series of characters enclosed in quotes or double quotes:
-
 Python中的字符串是用单引号或双引号括起来的一串字符：
 
 ```python
@@ -652,23 +650,19 @@ Python中的字符串是用单引号或双引号括起来的一串字符：
 'Roger'
 ```
 
-You can assign a string value to a variable:
-
 您可以将字符串赋值给变量：
 
 ```python
 name = "Roger"
 ```
 
-You can concatenate two strings using the `+` operator:
+您可以使用`+`运算符连接两个字符串：
 
 ```python
 phrase = "Roger" + " is a good dog"
 ```
 
-You can append to a string using `+=`:
-
-您可以使用`+`运算符连接两个字符串：
+您也可以使用`+=`将一个字符串添加到另一个字符串后面：
 
 ```python
 name = "Roger"
@@ -677,23 +671,17 @@ name += " is a good dog"
 print(name) #Roger is a good dog
 ```
 
-You can convert a number to a string using the `str` class constructor:
-
 您可以使用`str`类构造函数将数字转换为字符串：
 
 ```python
 str(8) #"8"
 ```
 
-This is essential to concatenate a number to a string:
-
 这对于连接数字和字符串来说很重要：
 
 ```python
 print("Roger is " + str(8) + " years old") #Roger is 8 years old
 ```
-
-A string can be multi-line when defined with a special syntax, enclosing the string in a set of 3 quotes:
 
 当使用特殊语法定义时，字符串可以是多行的，将字符串括在一组3个引号中：
 
@@ -716,46 +704,25 @@ years old
 ''')
 ```
 
-A string has a set of built-in methods, like:
-
 字符串具有一组内置方法，例如：
 
--   `isalpha()` to check if a string contains only characters and is not empty
 -   `isalpha()` 检查字符串是否只包含字母字符，并且不为空字符串
--   `isalnum()` to check if a string contains characters or digits and is not empty
--   `isalnum()` 检查字符串是否包含字母字符或数字字符，并且不为空
--   `isdecimal()` to check if a string contains digits and is not empty
+-   `isalnum()` 检查字符串是否只包含字母字符或数字字符，并且不为空
 -   `isdecimal()` 检查字符串是否只包含十进制字符，并且不为空
--   `lower()` to get a lowercase version of a string
 -   `lower()` 获取字符串的小写版本
--   `islower()` to check if a string is lowercase
 -   `islower()` 检查字符串是否全为小写
--   `upper()` to get an uppercase version of a string
 -   `upper()` 获取字符串的大写版本
--   `isupper()` to check if a string is uppercase
 -   `isupper()` 检查字符串是否全为大写
--   `title()` to get a capitalized version of a string
--   `title()` 获取字符串的“标题化”版本（所有单词首字母大写）
--   `startswith()` to check if the string starts with a specific substring
+-   `title()` 获取字符串的“标题化”版本（译者：所有单词首字母大写）
 -   `startsswith()` 检查字符串是否以特定子字符串开头
--   `endswith()` to check if the string ends with a specific substring
 -   `endswith()` 检查字符串是否以特定子字符串结尾
--   `replace()` to replace a part of a string
 -   `replace()` 替换字符串的一部分
--   `split()` to split a string on a specific character separator
 -   `split()` 按特定分隔符拆分字符串
--   `strip()` to trim the whitespace from a string
 -   `strip()` 修剪字符串中的空格
--   `join()` to append new letters to a string
--   `join()` 将字符添加到另一个字符串
--   `find()` to find the position of a substring
+-   `join()` 将字符串添加到另一个字符串（译者：实际上是将字符串添加到另一个可迭代对象生成的字符串中）
 -   `find()` 查找特定子字符串在字符串中的位置
 
-and many more.
-
 以及其它等等。
-
-None of those methods alter the original string. They return a new, modified string instead. For example:
 
 这些方法都不会改变原始字符串，它们将会返回一个新的、修改后的字符串。例如：
 
@@ -765,20 +732,14 @@ print(name.lower()) #"roger"
 print(name) #"Roger"
 ```
 
-You can use some global functions to work with strings, too.
-
 您也可以使用一些全局函数来处理字符串。
 
-In particular I think of `len()`, which gives you the length of a string:
-
-这里我特别想到了`len()`，它返回给你指定字符串的长度：
+这里我特别想到了`len()`，它返回给您指定字符串的长度：
 
 ```python
 name = "Roger"
 print(len(name)) #5
 ```
-
-The `in` operator lets you check if a string contains a substring:
 
 `in`运算符可以让您检查字符串是否包含某个子字符串：
 
@@ -787,11 +748,7 @@ name = "Roger"
 print("ger" in name) #True
 ```
 
-Escaping is a way to add special characters into a string.
-
 转义是一种将特殊字符添加到字符串中的方法。
-
-For example, how do you add a double quote into a string that's wrapped into double quotes?
 
 例如，如何将双引号添加到被双引号包裹的字符串中？
 
@@ -799,22 +756,15 @@ For example, how do you add a double quote into a string that's wrapped into dou
 name = "Roger"
 ```
 
-`"Ro"Ger"` will not work, as Python will think the string ends at `"Ro"`.
-
 `"Ro"Ger"`将不起作用，因为Python会认为字符串以`"Ro"`结尾。
 
-The way to go is to escape the double quote inside the string, with the `\` backslash character:
-
-方法是使用 `\` 反斜杠字符转义字符串内的双引号：
+方法是使用`\`反斜杠字符转义字符串内的双引号：
 
 ```python
 name = "Ro\"ger"
 ```
 
-This applies to single quotes too `\'`, and for special formatting characters like `\t` for tab, `\n` for new line and `\\` for the backslash.
-这也适用于单引号`\'`，以及特殊格式字符，如制表符`\t`、换行符`\n`和反斜杠`\\`。
-
-Given a string, you can get its characters using square brackets to get a specific item, given its index, starting from 0:
+这也适用于单引号`\'`，以及其它特殊格式字符，如制表符`\t`、换行符`\n`和反斜杠`\\`。
 
 给定一个字符串，并给定一个索引（从0开始），您就可以使用方括号获取指定位置上的字符，从而获取特定内容：
 
@@ -825,16 +775,12 @@ name[1] #'o'
 name[2] #'g'
 ```
 
-Using a negative number will start counting from the end:
-
 使用负数将从末尾开始计数：
 
 ```python
 name = "Roger"
 name[-1] #"r"
 ```
-
-You can also use a range, using what we call **slicing**:
 
 您还可以使用范围，即使用我们所说的**切片**：
 
@@ -847,14 +793,14 @@ name[2:] #"ger"
 
 <h2 id="booleans-in-python">Python布尔值</h2>
 
-Python provides the `bool` type, which can have two values: `True` and `False` (capitalized).
+Python提供了`bool`类型，它可以有两个值：`True` 和 `False`（首字母大写）。
 
 ```python
 done = False
 done = True
 ```
 
-Booleans are especially useful with conditional control structures like `if` statements:
+布尔值对于条件控制结构特别有用，例如`if`语句：
 
 ```python
 done = True
@@ -865,42 +811,42 @@ else:
     # run some other code
 ```
 
-When evaluating a value for `True` or `False`, if the value is not a `bool` we have some rules depending on the type we're checking:
+在判断值为`True`或`False`时，如果该值不是`bool`布尔类型，我们有一些取决于我们所检查值类型的规则：
 
--   numbers are always `True` except for the number `0`
--   strings are `False` only when empty
--   lists, tuples, sets, and dictionaries are `False` only when empty
+-   数字除`0`以外，始终为`True`
+-   字符串仅在是空字符串时为`False`
+-   列表、元组、集合和字典仅在其为空时为`False`
 
-You can check if a value is a boolean in this way:
+您可以通过以下方式检查值是否为布尔值：
 
 ```python
 done = True
 type(done) == bool #True
 ```
 
-Or using `isinstance()`, passing 2 arguments: the variable, and the `bool` class:
+或者使用`isinstance()`，需要传递2个参数：变量和`bool`类：
 
 ```python
 done = True
 isinstance(done, bool) #True
 ```
 
-The global `any()` function is also very useful when working with booleans, as it returns `True` if any of the values of the iterable (list, for example) passed as argument are `True`:
+全局函数`any()`在处理布尔值时也非常有用，当作为参数传递的可迭代对象（如列表）中的任意一个值是 `True`时，它就会返回 `True`（译者：类似`or`）：
 
 ```python
 book_1_read = True
 book_2_read = False
 
-read_any_book = any([book_1_read, book_2_read])
+read_any_book = any([book_1_read, book_2_read])  # True
 ```
 
-The global `all()` function is same, but returns `True` if all of the values passed to it are `True`:
+全局函数`all()`相类似，但是是当传递给它的所有值都是`True`时，才返回 `True`（译者：类似`and`）：
 
 ```python
 ingredients_purchased = True
 meal_cooked = False
 
-ready_to_serve = all([ingredients_purchased, meal_cooked])
+ready_to_serve = all([ingredients_purchased, meal_cooked])  # False
 ```
 
 ## Numbers in Python

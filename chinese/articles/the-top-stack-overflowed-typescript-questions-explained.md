@@ -1080,124 +1080,124 @@ function speak(callback: (value: string) => void) {
 
 ## How to Handle Functions with No Return Value
 
-The accepted answer in the referenced stack overflow post for example says __the callback parameter's type must be_ a _"function that accepts a number and returns type any_._"__
+例如，参考的堆栈溢出帖子中接受的答案说  _回调参数的类型必须是_ "function that accepts a number and returns type any. (接收数字并返回任何类型的函数)"
 
-That’s partly true, but the return type does NOT have to be `any`.
+这部分是正确的，但是返回类型不一定是`any`。
 
-In fact, do NOT use `any`.
+事实上，不要使用 `any`。
 
-If your function returns a value, go ahead and type it appropriately:
+如果你的函数返回一个值，请继续并适当地输入它:
 
 ```ts
-// Callback returns an object
+// 回调返回一个对象
 type Callback = (value: string) => { result: string }
 ```
 
 If your callback returns nothing, use `void` not `any`:
 
 ```ts
-// Callback returns nothing
+// 回调不返回一个对象
 type Callback = (value: string) => void
 ```
 
-Note that the signature of your function type should be:
+注意，你的函数类型的签名（signature of your function type）应该是:
 
 ```ts
 (arg1: Arg1type, arg2: Arg2type) => ReturnType
 ```
 
-Where `Arg1type` represents the type of the argument `arg1`, `Arg2type` the type of the `arg2` argument, and `ReturnType` the return type of your function.
+其中`Arg1type`是参数`arg1`的类型，`Arg2type`是参数`arg2`的类型，而`ReturnType`是你的函数的返回类型。
 
 ## Conclusion
 
-Functions are the primary means of passing data around in JavaScript.
+JavaScript 中传递数据的主要手段是函数。
 
-TypeScript not only allows you to specify the input and output of functions, but you can also type functions as arguments to other functions.
+TypeScript 不仅允许你指定函数的输入和输出，而且你还可以将函数作为其他函数的参数。
 
-Go ahead and use them with confidence.
+去吧，放心地使用它们。
 
 # How to Fix Could Not Find Declaration File for Module ……?
 
-This is a common source of frustration for TypeScript beginners.
+对于 TypeScript 初学者来说，这是一个常见的挫折来源。
 
-However, do you know how to fix this?
+然而，你知道如何解决这个问题吗？
 
-Yes, you do!
+是的，你知道!
 
-We saw the solution to this in the __what is `d.ts`__ section__.__
+我们在 `what is  d.ts` 一节中看到了这个问题的解决方案。
 
 ## TL;DR
 
-Create a declaration file, for example `untyped-module.d.ts`, with the following content: `declare module "some-untyped-module";`. Note that this will explicitly type the module as `any`.
+创建一个声明文件，例如 `untyped-module.d.ts`，其内容如下：`declare module "ste-untyped-module";` 注意，这将明确地将模块类型为`any`。
 
 ## The Solution Explained
 
-You can give the writing your declaration files section a fresh read if you don’t remember how to fix this.
+如果你不记得如何解决这个问题，你可以重新阅读写声明文件一节。
 
-Essentially, you have this error because the library in question didn’t bundle its types and does not have a type definition file on [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/).
+根本原因，你有这个错误是因为相关的库没有它的类型，并且在 [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/) 上没有一个类型定义文件。
 
-This leaves you with one solution: write your own declaration file.
+这就给你留下了一个解决方案：编写你自己的声明文件。
 
-For example, if you have installed the library `untyped-module` in your project, `untyped-module` has no referenced type definition files, so TypeScript complains.
+例如，如果你在项目中安装了库`untyped-module`，`untyped-module`没有引用的类型定义文件，所以 TypeScript 会警告。
 
-To silence this warning, create a new `untyped-module.d.ts` file in your project with the following content:
+为了消除这个警告，在你的项目中创建一个新的`untyped-module.d.ts`文件，内容如下:
 
 ```ts
 declare module "some-untyped-module";
 ```
 
-This will declare the module as type `any`.
+这将声明该模块为 `any` 类型。
 
-You won’t get any TypeScript support for that module, but you’ll have silenced the TypeScript warning.
+你不会得到任何 TypeScript 对该模块的支持，但你已经消除了 TypeScript 的警告。
 
-The ideal next steps would include opening an issue in the module’s public repository to include a TypeScript declaration file or writing out a decent one yourself (beyond the scope of this article).
+下一步包括在模块的公共仓库中开一个 issue，以包括一个 TypeScript 声明文件，或者自己写一个像样的文件（超出本文的范围）。
 
 # How Do I Dynamically Assign Properties to an Object in Typescript?
 
 ![image-76](https://www.freecodecamp.org/news/content/images/2022/07/image-76.png)
 
-Dynamically assigning properties to objects in Typescript
+在 Typescript 中动态地给对象分配属性
 
 ## TL;DR
 
-If you cannot define the variable type at declaration time, use the `Record` utility type or an object index signature.
+如果你不能在声明时定义变量类型，请使用 `Record` utility 类型或对象索引签名。
 
 ## Introduction
 
-Consider the following example:
+请思考以下例子:
 
 ```ts
 const organization = {}
 
 organization.name = "Freecodecamp"
-                                                                                                                 
+                                                                                                            
 ```
 
-This seemingly harmless piece of code throws a TypeScript error on dynamically assigning `name` to the `organization` object.
+这段看似无害的代码在动态分配`name`给`organization`对象时抛出一个 TypeScript 错误。
 
 ![image-80](https://www.freecodecamp.org/news/content/images/2022/07/image-80.png)
 
-Typescript error when adding a new property dynamically
+动态添加新属性时出现的 Typescript 错误
 
-See the [Typescript playground](https://www.typescriptlang.org/play?#code/MYewdgzgLgBCBOBzAhmAlgL2VN4YF4YBvAXwCgyEV0sdwA6MZAWwFMCYAiAMXlddAATASwAOnCjCnSZsufIWKlylarXqZFIA)
+查看 [Typescript playground](https://www.typescriptlang.org/play?#code/MYewdgzgLgBCBOBzAhmAlgL2VN4YF4YBvAXwCgyEV0sdwA6MZAWwFMCYAiAMXlddAATASwAOnCjCnSZsufIWKlylarXqZFIA)
 
-The source of confusion, and perhaps rightly justified if you’re a TypeScript beginner, is how is something seemingly so simple a problem in TypeScript?
+如果你是 TypeScript 的初学者，会感到困惑，也许是有道理的，那就是看似简单的东西在 TypeScript 中怎么会成为问题？
 
 ## Understanding the Problem
 
-Generally speaking, TypeScript determines the type of a variable when it is declared, and this determined type doesn’t change – that is it stays the same all through your application.
+一般来说，TypeScript 在声明变量时确定其类型，并且这个确定的类型不会改变，也就是在你的应用程序中应该保持不变。
 
-There are exceptions to this rule when considering type narrowing or working with the any type, but this is a general rule to remember otherwise.
+在考虑类型缩小或使用 any 类型时，此规则有例外，但这是要记住的一般规则。
 
-In the earlier example, the `organization` object is declared as follows:
+在前面的示例中，`organization` 对象声明如下:
 
 ```ts
 const organization = {}
 ```
 
-There is no explicit type assigned to the `organization` variable, so TypeScript infers the type of `organization` based on the declaration to be `{}`, that is the literal empty object.
+没有为 `organization` 变量指定明确的类型，所以 TypeScript 根据声明推断 `organization` 的类型为 `{}`，即字面的空对象（iteral empty object）。
 
-For example, if you add a type alias, you can explore the type of `organization`:
+例如，如果你添加一个类型别名（type alias），你可以在 `organization` 的类型上进行尝试:
 
 ```ts
 type Org = typeof organization
@@ -1205,33 +1205,33 @@ type Org = typeof organization
 
 ![image-81](https://www.freecodecamp.org/news/content/images/2022/07/image-81.png)
 
-Exploring the literal object type
+探索字面对象类型
 
-See the [TypeScript playground](https://www.typescriptlang.org/play?#code/MYewdgzgLgBCBOBzAhmAlgL2VN4YF4YBvAXwCgyoBPABwFMYB5JAma+kAMziVU21xgKCFOiw5wAOjDIAtg0IAiAGLw6dUABMNcmoooxDR4ydNnzFy1es3bd4xSA).
+查看 [TypeScript playground](https://www.typescriptlang.org/play?#code/MYewdgzgLgBCBOBzAhmAlgL2VN4YF4YBvAXwCgyoBPABwFMYB5JAma+kAMziVU21xgKCFOiw5wAOjDIAtg0IAiAGLw6dUABMNcmoooxDR4ydNnzFy1es3bd4xSA).
 
-When you then try to reference the `name` prop on this empty object literal:
+当你试图在这个空对象的字面意义上引用`name` prop 时:
 
 ```ts
 organization.name = ...
 ```
 
-TypeScript yells.
+TypeScript 大喊。
 
-> Property 'name' does not exist on type ‘ `{}`‘.
+> `{}`类型上不存在 `name` 属性。
 
-When you understand the issue, the error does seem appropriate.
+当你理解了这个问题后，这个错误确实该发生。
 
-Let’s fix this.
+让我们来解决这个问题。
 
 ## How to Resolve the Error
 
-There are numerous ways you can resolve the TypeScript error here. Let’s consider these:
+有许多方法可以解决这里的 TypeScript 错误。让我们考虑一下这些:
 
 ### 1\. Explicitly type the object at declaration time
 
-This is the easiest solution to reason about.
+这是最容易推理的解决方案。
 
-At the time you declare the object, go ahead and type it. Furthermore, assign it all the relevant values.
+在你声明对象的时候，去输入它。此外，给它分配所有相关的值。
 
 ```ts
 type Org = {
@@ -1243,19 +1243,19 @@ const organization: Org = {
 }
 ```
 
-See the [TypeScript playground](https://www.typescriptlang.org/play?#code/C4TwDgpgBA8gTgcygXigbwFBW1AdgQwFsIAuKAZ2DgEtcEMBfDDAYwHtdKo3F9dqAXvmDUOZeElSYceIqSgAiAGJwIEdgBN1RMAsbMDQA).
+查看 [TypeScript playground](https://www.typescriptlang.org/play?#code/C4TwDgpgBA8gTgcygXigbwFBW1AdgQwFsIAuKAZ2DgEtcEMBfDDAYwHtdKo3F9dqAXvmDUOZeElSYceIqSgAiAGJwIEdgBN1RMAsbMDQA).
 
-This removes every surprise.
+这就消除了所有的警告。
 
-You’re clearly stating what this object type is and rightly declaring all relevant properties when you create the object.
+有时，对象的属性确实需要在声明时之后添加。
 
-However, this is not always feasible if the object properties must be added dynamically.
+然而，如果必须动态地添加对象的属性，这并不总是可行的。
 
 ### 2\. Use an object index signature
 
-Occasionally, the properties of the object truly need to be added at a later time than when declared.
+偶尔，对象的属性确实需要在比声明时更晚的时间被添加。
 
-In this case, you can leverage the object index signature as follows:
+在这种情况下，你可以利用对象索引签名，如下所示:
 
 ```ts
 type Org = {[key: string] : string}
@@ -1265,11 +1265,11 @@ const organization: Org = {}
 organization.name = "Freecodecamp"
 ```
 
-See the [TypeScript playground](https://www.typescriptlang.org/play?#code/C4TwDgpgBA8gTgcygXigbwNoGsIgFxQDOwcAlgHYIC6UBxZlAvgFDMDGA9ucVB4gIblSAL37BSXAvCSo0LZnwSCRYieQB05fgFtoqAEQAxOBAicAJmZ1h9rO0A).
+查看 [TypeScript playground](https://www.typescriptlang.org/play?#code/C4TwDgpgBA8gTgcygXigbwNoGsIgFxQDOwcAlgHYIC6UBxZlAvgFDMDGA9ucVB4gIblSAL37BSXAvCSo0LZnwSCRYieQB05fgFtoqAEQAxOBAicAJmZ1h9rO0A).
 
-At the time the `organization` variable is declared, you go ahead and explicitly type it to the following `{[key: string] : string}`.
+在声明 `organization` 变量时，您继续并将其显式键入到以下 `{[key: string] : string}`。
 
-To explain the syntax further, you might be used to object types having fixed property types:
+为了进一步解释语法，您可能习惯于具有固定属性类型的对象类型:
 
 ```ts
 type obj = {
@@ -1277,9 +1277,9 @@ type obj = {
 }
 ```
 
-But you can also substitute `name` for a “variable type”.
+但你也可以用 `name` 代替 `variable type(变量类型)`。
 
-For example, if you want to define any string property on `obj`:
+例如，如果你想在 `obj` 上定义任何字符串属性：:
 
 ```ts
 type obj = {
@@ -1287,7 +1287,7 @@ type obj = {
 }
 ```
 
-Note that the syntax is similar to how you’d use a variable object property in standard JavaScript:
+请注意，语法类似于您在标准 JavaScript 中使用变量对象属性的方式:
 
 ```ts
 const variable = "name" 
@@ -1297,9 +1297,9 @@ const obj = {
 }
 ```
 
-The TypeScript equivalent is called an object index signature.
+TypeScript 等效项 (equivalent)称为对象索引签名。
 
-Also, note that you could type `key` with other primitives:
+另外，请注意，您可以使用其他原语(other primitives)键入 `key`：:
 
 ```ts
 // number 
@@ -1314,7 +1314,7 @@ type Org = {[key: boolean] : string}
 
 ### 3\. Use the Record utility type
 
-The solution here is quite concise:
+这里的解决方案非常简洁:
 
 ```ts
 type Org = Record<string, string>
@@ -1325,7 +1325,7 @@ const organization: Org = {}
 organization.name = "Freecodecamp"
 ```
 
-Instead of using a type alias, you can also inline the type:
+除了使用类型别名(type alias)，您还可以内联类型(inline the type)
 
 ```ts
 const organization: Record<string, string> = {}
@@ -1333,30 +1333,30 @@ const organization: Record<string, string> = {}
 
 ![image-82](https://www.freecodecamp.org/news/content/images/2022/07/image-82.png)
 
-Using the Record utility type
+使用 Record utility type
 
-See the [TypeScript playground](https://www.typescriptlang.org/play?#code/C4TwDgpgBA8gTgcygXigJQgYwPZwCYA8AzsHAJYB2CANFCeVQHwBQzOFJUuCAhhWQC8ewMtgoAuWIhRQA3gF9Wzbn0HDRFAHQUeAW2ioARADE4ELNjxY9YQ0tZA).
+查看 [TypeScript playground](https://www.typescriptlang.org/play?#code/C4TwDgpgBA8gTgcygXigJQgYwPZwCYA8AzsHAJYB2CANFCeVQHwBQzOFJUuCAhhWQC8ewMtgoAuWIhRQA3gF9Wzbn0HDRFAHQUeAW2ioARADE4ELNjxY9YQ0tZA).
 
-The `Record` utility type has the following signature: `Record<Keys, Type>`.
+ `Record` utility type 有以下签名: `Record<Keys, Type>`.
 
-It allows you to constrict an object type whose properties are `Keys` and property values are `Type`.
+它允许你约束一个对象类型，其属性是`Keys`，属性值是`Type`。
 
-In our example, `Keys` represents `string` and `Type`, `string` as well.
+在我们的例子中，`Keys` 代表 `string`，`Type` 也代表`string`。
 
 ## Conclusion
 
-Apart from primitives, the most common types you’ll have to deal with are likely object types.
+除了原语(primitives)之外，您必须处理的最常见的类型可能是对象类型。
 
-In cases where you need to build an object dynamically, take advantage of the Record utility type or use the object index signature to define the allowed properties on the object.
+如果您需要动态构建对象，请利用 Record utility type 或使用对象索引签名来定义对象上允许的属性。
 
-Note that you can get a [PDF or ePub](https://www.ohansemmanuel.com/cheatsheet/top-7-stack-overflowed-typescript-questions), version of this cheatsheet for easier reference, or for reading on your Kindle or tablet.
+请注意，您可以获得 [PDF 或 ePub](https://www.ohansemmanuel.com/cheatsheet/top-7-stack-overflowed-typescript-questions)，该手册的版本以便于参考，或在您的 Kindle 或平板电脑上阅读。
 
-Thank you for reading!
+谢谢你的阅读!
 
 ## Fancy a Free TypeScript Book?
 
 ![image-78](https://www.freecodecamp.org/news/content/images/2022/07/image-78.png)
 
-Build strongly typed Polymorphic React components book
+构建强类型多态的 React 组件书。
 
-[Get this book for free](https://www.ohansemmanuel.com/books/how-to-build-strongly-typed-polymorphic-react-components).
+[免费获取这本书](https://www.ohansemmanuel.com/books/how-to-build-strongly-typed-polymorphic-react-components).

@@ -343,7 +343,7 @@ name = "Roger"; print(name)
 ```python
 #this is a commented line
 
-name = "Roger" # this is an inline comment
+name = "Roger"  # this is an inline comment
 ```
 
 ### Python中的缩进
@@ -377,14 +377,14 @@ name = "Roger"
 
 ```python
 name = "Roger"
-type(name) == str #True
+type(name) == str  # True
 ```
 
 或者使用`isinstance()`：
 
 ```python
 name = "Roger"
-isinstance(name, str) #True
+isinstance(name, str)  # True
 ```
 
 > 请注意，要在REPL之外查看`True`值，您需要将此代码包装在`print()`中，但为了清楚起见，我避免使用它。
@@ -395,12 +395,12 @@ isinstance(name, str) #True
 
 ```python
 age = 1
-type(age) == int #True
+type(age) == int  # True
 ```
 
 ```python
 fraction = 0.1
-type(fraction) == float #True
+type(fraction) == float  # True
 ```
 
 您已经了解了如何从字面值创建某一类型的变量，如下所示：
@@ -427,7 +427,7 @@ print(age) #20
 
 fraction = 0.1
 intFraction = int(fraction)
-print(intFraction) #0
+print(intFraction)  # 0
 ```
 
 这称为**casting**。当然，这种转换并不总是有效，具体取决于传递的值。如果您在上面的字符串中写了`test`而不是`20`，您会得到一个`ValueError: invalid literal for int() with base 10: 'test'`错误。
@@ -482,13 +482,13 @@ anotherVariable = age
 Python有许多算术运算符：`+`、`-`、`*`、`/`（除法）、`%`（取余）、`**`（求幂）和 `//`（向下取整除法） ：
 
 ```python
-1 + 1 #2
-2 - 1 #1
-2 * 2 #4
-4 / 2 #2
-4 % 3 #1
-4 ** 2 #16
-4 // 2 #2
+1 + 1  # 2
+2 - 1  # 1
+2 * 2  # 4
+4 / 2  # 2
+4 % 3  # 1
+4 ** 2  # 16
+4 // 2  # 2
 ```
 
 > 请注意，操作数之间不需要空格，但加上空格有利于可读性。
@@ -496,14 +496,14 @@ Python有许多算术运算符：`+`、`-`、`*`、`/`（除法）、`%`（取�
 `-`也可用作一元运算符表示负号：
 
 ```python
-print(-4) #-4
+print(-4)  # -4
 ```
 
 `+`也可用于连接字符串：
 
 ```python
 "Roger" + " is a good dog"
-#Roger is a good dog
+# Roger is a good dog
 ```
 
 我们可以将赋值运算符与算术运算符结合起来：
@@ -540,10 +540,10 @@ Python定义了一些比较运算符：
 a = 1
 b = 2
 
-a == b #False
-a != b #True
-a > b #False
-a <= b #True
+a == b  # False
+a != b  # True
+a > b  # False
+a <= b  # True
 ```
 
 ### Python布尔运算符
@@ -560,9 +560,9 @@ Python为我们提供了以下布尔运算符：
 condition1 = True
 condition2 = False
 
-not condition1 #False
-condition1 and condition2 #False
-condition1 or condition2 #True
+not condition1  # False
+condition1 and condition2  # False
+condition1 or condition2  # True
 ```
 
 但是，请注意可能的混淆：
@@ -570,11 +570,11 @@ condition1 or condition2 #True
 表达式中使用`or`，则表达式的结果是第一个为非假值（假值：`False`、`0`、`''`、`[]`..）的操作数，否则返回最后一个操作数作为表达式的值。
 
 ```python
-print(0 or 1) ## 1
-print(False or 'hey') ## 'hey'
-print('hi' or 'hey') ## 'hi'
-print([] or False) ## 'False'
-print(False or []) ## '[]'
+print(0 or 1)  # 1
+print(False or 'hey')  # 'hey'
+print('hi' or 'hey')  # 'hi'
+print([] or False)  # 'False'
+print(False or [])  # '[]'
 ```
 
 Python文档将其（x or y）描述为`如果x为假，则为y，否则为x`。（译者：`or`碰到真值就停，没有真值就走到最后）
@@ -582,12 +582,12 @@ Python文档将其（x or y）描述为`如果x为假，则为y，否则为x`。
 `and`运算操作仅在第一个操作数为真时，才计算第二个操作数。因此，如果第一个操作数是假值（假值：`False`、`0`、`''`、`[]`..），它会返回那个操作数。否则，它就会计算第二个操作数：
 
 ```python
-print(0 and 1) ## 0
-print(1 and 0) ## 0
-print(False and 'hey') ## False
-print('hi' and 'hey') ## 'hey'
-print([] and False ) ## []
-print(False and [] ) ## False
+print(0 and 1)  # 0
+print(1 and 0)  # 0
+print(False and 'hey')  # False
+print('hi' and 'hey')  # 'hey'
+print([] and False )  # []
+print(False and [] )  # False
 ```
 
 Python文档将其（x and y）描述为`如果x为假，则为x，否则为y`。（译者：`or`碰到假值就停，没有假值就走到最后）
@@ -668,19 +668,19 @@ phrase = "Roger" + " is a good dog"
 name = "Roger"
 name += " is a good dog"
 
-print(name) #Roger is a good dog
+print(name)  # Roger is a good dog
 ```
 
 您可以使用`str`类构造函数将数字转换为字符串：
 
 ```python
-str(8) #"8"
+str(8)  # "8"
 ```
 
 这对于连接数字和字符串来说很重要：
 
 ```python
-print("Roger is " + str(8) + " years old") #Roger is 8 years old
+print("Roger is " + str(8) + " years old")  # Roger is 8 years old
 ```
 
 当使用特殊语法定义时，字符串可以是多行的，将字符串括在一组3个引号中：
@@ -693,7 +693,7 @@ print("""Roger is
 years old
 """)
 
-#double quotes, or single quotes
+# double quotes, or single quotes
 
 print('''
 Roger is
@@ -728,8 +728,8 @@ years old
 
 ```python
 name = "Roger"
-print(name.lower()) #"roger"
-print(name) #"Roger"
+print(name.lower())  # "roger"
+print(name)  # "Roger"
 ```
 
 您也可以使用一些全局函数来处理字符串。
@@ -738,14 +738,14 @@ print(name) #"Roger"
 
 ```python
 name = "Roger"
-print(len(name)) #5
+print(len(name))  # 5
 ```
 
 `in`运算符可以让您检查字符串是否包含某个子字符串：
 
 ```python
 name = "Roger"
-print("ger" in name) #True
+print("ger" in name)  # True
 ```
 
 转义是一种将特殊字符添加到字符串中的方法。
@@ -770,25 +770,25 @@ name = "Ro\"ger"
 
 ```python
 name = "Roger"
-name[0] #'R'
-name[1] #'o'
-name[2] #'g'
+name[0]  # 'R'
+name[1]  # 'o'
+name[2]  # 'g'
 ```
 
 使用负数将从末尾开始计数：
 
 ```python
 name = "Roger"
-name[-1] #"r"
+name[-1]  # "r"
 ```
 
 您还可以使用范围，即使用我们所说的**切片**：
 
 ```python
 name = "Roger"
-name[0:2] #"Ro"
-name[:2] #"Ro"
-name[2:] #"ger"
+name[0:2]  # "Ro"
+name[:2]  # "Ro"
+name[2:]  # "ger"
 ```
 
 <h2 id="booleans-in-python">Python布尔值</h2>
@@ -821,14 +821,14 @@ else:
 
 ```python
 done = True
-type(done) == bool #True
+type(done) == bool  # True
 ```
 
 或者使用`isinstance()`，需要传递2个参数：变量和`bool`类：
 
 ```python
 done = True
-isinstance(done, bool) #True
+isinstance(done, bool)  # True
 ```
 
 全局函数`any()`在处理布尔值时也非常有用，当作为参数传递的可迭代对象（如列表）中的任意一个值是 `True`时，它就会返回 `True`（译者：类似`or`）：

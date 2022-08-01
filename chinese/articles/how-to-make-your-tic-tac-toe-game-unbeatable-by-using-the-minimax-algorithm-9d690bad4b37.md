@@ -1,6 +1,6 @@
 > -  原文地址：[How to make your Tic Tac Toe game unbeatable by using the minimax algorithm](https://www.freecodecamp.org/news/how-to-make-your-tic-tac-toe-game-unbeatable-by-using-the-minimax-algorithm-9d690bad4b37/)
 > -  原文作者：[Ahmad Abdolsaheb](https://www.freecodecamp.org/news/author/ahmad/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to make your Tic Tac Toe game unbeatable by using the minimax algorithm](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/1_y2B2auvIpUI0vSLtT2KWyg-1.jpeg)

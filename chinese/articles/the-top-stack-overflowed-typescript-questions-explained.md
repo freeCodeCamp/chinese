@@ -19,15 +19,15 @@ _"_我讨厌 stack overflow 网站_"_  ——从未有开发者说过。
 
 让我们马上进入正题。
 
-## Table of Contents
+## 目录
 
-1. [What is the difference between Interfaces vs Types in TypeScript?](#1-what-is-the-difference-between-interfaces-vs-types-in-typescript)
-2. [In TypeScript, what is the ! (exclamation mark / bang) operator?](#2-in-typescript-what-is-the-exclamation-mark-bang-operator)
-3. [What is a “.d.ts” file in TypeScript?](#3-what-is-a-d-ts-file-in-typescript)
-4. [How Do You Explicitly Set a New Property on ‘window’ in TypeScript?](#4-how-do-you-explicitly-set-a-new-property-on-window-in-typescript)
-5. [Are Strongly Typed Functions as Parameters Possible in TypeScript?](#5-are-strongly-typed-functions-as-parameters-possible-in-typescript)
-6. [How to Fix Could Not Find Declaration File for Module ……?](#6-how-to-fix-could-not-find-declaration-file-for-module-)
-7. [How Do I Dynamically Assign Properties to an Object in TypeScript?](#7-how-do-i-dynamically-assign-properties-to-an-object-in-typescript)
+1. [TypeScript 中的接口(interfaces)与类型(Types)之间有什么区别？](./#1-what-is-the-difference-between-interfaces-vs-types-in-typescript)
+2. [在 TypeScript 中，什么是 ! 操作符？](./#2-in-typescript-what-is-the-exclamation-mark-bang-operator)
+3. [TypeScript 中的".d.ts "文件是什么？](./#3-what-is-a-d-ts-file-in-typescript)
+4. [如何在 TypeScript 中明确设置 window 的新属性？](./#4-how-do-you-explicitly-set-a-new-property-on-window-in-typescript)
+5. [强类型函数作为参数在 TypeScript 中是否可行？](./#5-are-strongly-typed-functions-as-parameters-possible-in-typescript)
+6. [如何修复无法找到模块的声明文件...？](./#6-how-to-fix-could-not-find-declaration-file-for-module-)
+7. [如何在 TypeScript 中为对象动态分配属性？](./#7-how-do-i-dynamically-assign-properties-to-an-object-in-typescript)
 
 ****注意:**** 你可以得到这份手册的 [PDF 或 ePub](https://www.ohansemmanuel.com/cheatsheet/top-7-stack-overflowed-typescript-questions) 版本，以方便参考或在你的 Kindle 或平板电脑上阅读。
 
@@ -35,7 +35,7 @@ _"_我讨厌 stack overflow 网站_"_  ——从未有开发者说过。
 
 [PDF 或 Epub 版本的手册下载地址](https://www.ohansemmanuel.com/cheatsheet/top-7-stack-overflowed-typescript-questions)
 
-# 1\. What is the difference between Interfaces vs Types in TypeScript?
+<h2 id="1-what-is-the-difference-between-interfaces-vs-types-in-typescript">TypeScript中的接口(interfaces)与类型(Types)之间有什么区别？</h2>
 
 ![image-52](https://www.freecodecamp.org/news/content/images/2022/07/image-52.png)
 
@@ -51,7 +51,7 @@ interfaces vs types (技术上来说，是 type alias) 是一个充满争议的�
 
 interface 的大部分功能可以通过 type aliases 来实现, 只是你不能通过重新声明类型（re-declaring）来给它增加新的属性（properties）。你必须使用一个交叉类型（intersection type）。
 
-## Why the Confusion About Types vs Interfaces in the First Place?
+## 为什么一开始就对类型(Types)与接口(Interfaces)产生了混淆？
 
 每当我们面临多种选择时，大多数人都会开始面对 [选择悖论（paradox of choice）](https://en.wikipedia.org/wiki/The_Paradox_of_Choice)。
 
@@ -63,7 +63,7 @@ interface 的大部分功能可以通过 type aliases 来实现, 只是你不能
 
 这使得你很难做出一个明确的选择，尤其是当你刚刚开始使用 Typescript 的时候。
 
-## A Basic Example of Type Alias vs Interface
+## 类型别名(Type Alias)与接口(Interface)的一个基本例子
 
 让我们通过 interface 和 type alias 的例子快速了解一下。
 
@@ -87,11 +87,11 @@ interface Human {
 
 这些都是表示 `Human` type，通过 type alias 或者 interface.
 
-## The Differences Between Type Alias and Interfaces
+## 类型别名(Type Alias)和接口(Interfaces)之间的区别
 
 以下是 type alias 和 interface 的主要区别:
 
-### Key difference: interfaces can only describe object shapes. Type aliases can be used for other types such as primitives, unions and tuples
+### 关键区别：接口(Interfaces)只能描述 object shapes。类型别名(Type aliases)可用于其他类型(other types)，如 primitives, unions 和 tuples。
 
 type alias 可以表示的数据类型中是相当灵活的。从 basic primitives（基本的基元）到 复杂的 unions（联合）和 tuples（元组）, 如下所示:
 
@@ -117,7 +117,7 @@ type Children = [Female, Male, Female]
 
 不像 type aliases，你只能用一个 interface 来表示 object types（对象类型）。
 
-### Key difference: an interface can be extended by declaring it multiple times
+### 关键区别：一个接口可以通过多次声明来进行扩展
 
 请思考以下例子:
 
@@ -194,13 +194,13 @@ const h: Human = {
 
 看这个 [TypeScript 演示代码](https://www.typescriptlang.org/play?#code/C4TwDgpgBAEgrgWwIYDsDqBLYALAckhaAXigG8AoKKqFAiALigGdgAnDFAcynIF9KeoSLESpMOADIROTKCTICqAG2lNGKRACMIrHv3JDo8ZCioljYrHjpQAZCJPjsUmeXIBjAPYoWUbIwtTEgpqWkJGAHJOTgiAGkUVGUYAVj0qNwygA).
 
-### Minor difference: Both type aliases and interfaces can be extended, but with different syntaxes
 
+### 小小的区别：类型别名和接口都可以被扩展，但语法不同
 对于 interfaces，你使用`extends`关键字。对于 types, 你必须使用一个交叉（intersection）.
 
 思考一下下面的例子:
 
-#### Type alias extends a type alias
+#### 类型别名扩展了一个类型别名
 
 ```ts
 
@@ -214,8 +214,7 @@ type Human = HumanWithName & {
 }
 ```
 
-#### Type alias extends an interface
-
+#### 类型别名扩展了一个接口
 ```ts
 interface HumanWithName {
   name: string 
@@ -227,7 +226,7 @@ type Human = HumanWithName & {
 } 
 ```
 
-#### Interface extends an interface
+#### 接口扩展了一个接口
 
 ```ts
 interface HumanWithName {
@@ -240,7 +239,7 @@ interface Human extends HumanWithName {
 }
 ```
 
-#### Interface extends a type alias
+#### 接口扩展了一个类型别名
 
 ```ts
 type HumanWithName = {
@@ -255,13 +254,13 @@ interface Human extends HumanWithName {
 
 正如你所看到的，这并不是选择一个而不是另一个的特别理由。然而，语法是不同的。
 
-### Minor difference: classes can only implement statically known members
+### 小区别：类只能实现静态已知的成员
 
  class 可以同时实现 interfaces 或者 type aliases。然而，不能实现（implement）或扩展（extend）一个联合类型（union type）。
 
 请看下面的例子:
 
-#### Class implements an interface
+#### 类实现了一个接口
 
 ```ts
 interface Human {
@@ -277,7 +276,7 @@ class FourLeggedHuman implements Human {
 }
 ```
 
-#### Class implements a type alias
+#### 类实现了一个类型别名
 
 ```ts
 type Human = {
@@ -295,7 +294,7 @@ class FourLeggedHuman implements Human {
 
 这两段代码作都没有任何错误。然而，下面的情况却失败了:
 
-#### Class implements a union type
+#### 类实现了一个联合类型
 
 ```ts
 type Human = {
@@ -318,7 +317,7 @@ class 只能实现（implement）一个对象类型（object type）或具有静
 
 See the [TypeScript playground](https://www.typescriptlang.org/play?#code/C4TwDgpgBAEgrgWwIYDsoF4oG8BQV9QpIIQBcUAzsAE4CWKA5jgL5QA+2eBANhAxeRSIARhGpd8EEBAGERYljhwBjbkgoUoAMQD2cagBk+DCABN4yNLQRheJFME0XUnAoWLRMAcgDSdAF5wDEheElC8-BhQACxhUjJRAEwsQA).
 
-## Summary of Type Aliases vs Interfaces
+## 类型别名与接口的总结
 
 你的想法可能不同，但只要有可能，我都坚持使用 type aliases，因为它们的灵活性和语法更简单。也就是说，除非我特别需要一个接口（interface）的功能，否则我选择 type aliases。
 
@@ -326,7 +325,7 @@ See the [TypeScript playground](https://www.typescriptlang.org/play?#code/C4TwDg
 
 我必须补充一点，在需要考虑性能的情况下，interface 比较检查可能比 type aliases 更快。但我还没有发现使用 type aliases ，导致性能问题。
 
-# In TypeScript, What is the ! (Exclamation Mark / Bang) Operator?
+<h2 id="2-in-typescript-what-is-the-exclamation-mark-bang-operator">在 TypeScript 中，什么是 ! 操作符？</h2>
 
 ![image-56](https://www.freecodecamp.org/news/content/images/2022/07/image-56.png)
 
@@ -338,7 +337,7 @@ TypeScript 中的 bang 运算符是什么？
 
 个人观点：尽可能避免这样做。
 
-## What is the Non-Null Assertion Operator?
+## 什么是非空断言操作符（Non-Null Assertion Operator）？
 
 `null` 和 `undefined` 是有效的 JavaScript 值。
 
@@ -446,7 +445,7 @@ function duplicate(text?: string) {
 }
 ```
 
-## Pitfalls of the `!` Operator (and What to Do Instead)
+## `！`运算符的陷阱（以及如何不使用它）
 
 当作为一个新用户使用 TypeScript 时，你可能觉得自己在打一场会失败的仗。
 
@@ -514,7 +513,7 @@ const goToInput = () => ref.current!.scrollIntoView();
 
 通过使用 非空（non-null）断言操作符，TypeScript 编译器将认为 `null`和`undefined`对于相关的值来说是不可能的。在这种情况下，`ref.current`。
 
-### Solution 1: Find an Alternative Fix
+### 解决方案 1：寻找替代修复方法
 
 你应该对第一行找到一个替代的修复方法。
 
@@ -545,7 +544,7 @@ const goToInput = () => ref.current && ref.current.scrollIntoView();
 
 这是个人喜好。 您选择的道路可能会有所不同。
 
-### Solution 2: Explicitly Throw an Error
+### 解决方案 2：明确地抛出一个错误
 
 在其他修复方法不能解决问题的情况下，非空断言运算符似乎是唯一的解决方案，我通常建议你在这样做之前抛出一个错误。
 
@@ -605,7 +604,7 @@ type Values = {
 还有其他方法可以解决这个问题。但如果你确定一个值存在，但又不能完全传达给 TypeScript 编译器，可以使用非空断言操作符。
 但也通过可以添加你自己的断言来抛出一个你可以追踪的错误。
 
-## How About an Implicit Assertion?
+## 隐性断言（Implicit Assertion）是什么
 
 尽管运算符的名字是非空断言运算符，但实际上没有断言(assertion)。
 
@@ -627,7 +626,7 @@ TypeScript 编译器并没有断言这个值存在。
 
 Emitted javascript code same as Javascript（我看不懂）
 
-## Conclusion
+## 总结
 
 TypeScript 2.0 发布了 **_non-null assertion operator (非空断言操作符)_**。 是的，它已经存在了一段时间（[发布于 2016 年](https://github.com/microsoft/TypeScript/releases/tag/v2.0.3)）。在撰写本文时，TypeScript 的最新版本是 `v4.7`。
 
@@ -641,7 +640,7 @@ TypeScript 2.0 发布了 **_non-null assertion operator (非空断言操作符)_
 
 我同意这个观点。
 
-# What is a “.d.ts” File in TypeScript?
+<h2 id="3-what-is-a-d-ts-file-in-typescript">TypeScript中的".d.ts "文件是什么？</h2> 
 
 ![image-63](https://www.freecodecamp.org/news/content/images/2022/07/image-63.png)
 
@@ -651,7 +650,7 @@ What is a d.ts file?
 
 `.d.ts`文件被称为类型声明文件。它们的存在只有一个目的：描述一个现有模块（module）的类型特征(shape)，它们只包含用于类型检查的类型信息。
 
-## Introduction to `.d.ts` Files in TypeScript
+## TypeScript 中的`.d.ts`文件介绍
 
 学习了 TypeScript 的基础知识后，你就可以获得超能力。
 
@@ -675,7 +674,7 @@ TypeScript 靠的是类型（type）。
 
 这些是以 `.d.ts` 结尾的文件。
 
-## A Simple Example of `.d.ts` Files
+## 一个关于".d.ts "文件的简单例子
 
 想一下下面的 TypeScript 代码:
 
@@ -713,7 +712,7 @@ TypeScript 是如何知道 `Math` 对象上不存在 `ciil` 的？
 
 这些声明文件没有实现。他们只包含类型信息，并且有一个`.d.ts`文件结尾。
 
-## Built-in Type Definitions
+## 内置类型定义
 
 在实践中理解这一点的一个好方法是建立一个全新的 TypeScript 项目，并探索顶级对象的类型定义文件，如 `Math`。
 
@@ -783,7 +782,7 @@ DOM 中的所有 API 也是如此。
 
 这不是魔术,是类型声明文件。
 
-## External Type Definitions in TypeScript
+## TypeScript 的外部类型定义
 
 那些没有内置的 API 怎么办？
 
@@ -795,9 +794,9 @@ DOM 中的所有 API 也是如此。
 
 通常有两种方式，一个库的作者可以做到这一点。
 
-### Bundled Types
+### 类型打包
 
-在这种情况下，库的作者已经将类型声明文件作为包的一部分捆绑在一起。
+在这种情况下，库的作者已经将类型声明文件作为包的一部分打包（Bundled）在一起。
 
 你通常不需要做任何事情。
 
@@ -839,7 +838,7 @@ npm install --save-dev @types/your-library
 
 TypeScript 会自动找到这些。所以，你不需要采取额外的步骤。
 
-## How to Write Your Own Declaration Files
+## 如何编写你自己的声明文件
 
 在不常见的情况下，如果一个库没有捆绑它的类型，并且在 DefinitelyTyped 上没有类型定义文件，你可以编写你自己的声明文件。
 
@@ -859,19 +858,19 @@ TypeScript 会自动找到这些。所以，你不需要采取额外的步骤。
 declare module "some-untyped-module";
 ```
 
-This will declare the module as type `any`.
+这将声明该模块为`any`类型。
 
-We won’t get any TypeScript support for that module, but you’d have silenced the TypeScript warning.
+我们不会得到任何 TypeScript 对该模块的支持，但你已经消除了 TypeScript 的警告。
 
-Ideal next steps would include opening an issue in the module’s public repository to include a TypeScript declaration file, or writing out a decent one yourself.
+理想的下一步包括在模块的公共资源库中打开一个问题，包括一个 TypeScript 声明文件，或者自己写一个合适的文件。
 
-## Conclusion
+## 总结
 
 下次你想，哇，TypeScript 真了不起。请记住，这种了不起的成就有很大一部分是由于幕后的英雄：类型声明文件（type declaration files）。
 
 现在你明白它们是如何工作的了吧！
 
-# How Do You Explicitly Set a New Property on `window` in Typescript?
+<h2 id="4-how-do-you-explicitly-set-a-new-property-on-window-in-typescript">如何在TypeScript中明确设置 window 的新属性？</h2>
 
 ![image-70](https://www.freecodecamp.org/news/content/images/2022/07/image-70.png)
 
@@ -881,7 +880,7 @@ Ideal next steps would include opening an issue in the module’s public reposit
 
 为`Window`对象扩展（extend）现有的接口声明。
 
-## Introduction to `window` in TypeScript
+## TypeScript 中的 "window "简介
 
 知识建立在知识之上。
 
@@ -889,8 +888,8 @@ Ideal next steps would include opening an issue in the module’s public reposit
 
 在本节中，我们将建立在前两节的知识基础上:
 
-- [Interfaces vs Types in TypeScript](https://blog.ohansemmanuel.com/interfaces-vs-types-in-typescript/)
-- [What is a d.t.s file in TypeScript](https://blog.ohansemmanuel.com/what-is-a-dts-file-in-typescript/)?
+- [TypeScript 中的接口与类型对比](https://blog.ohansemmanuel.com/interfaces-vs-types-in-typescript/)
+- [什么是 TypeScript 中的 d.t.s 文件？](https://blog.ohansemmanuel.com/what-is-a-dts-file-in-typescript/)?
 
 准备好了吗？
 
@@ -936,7 +935,7 @@ TypeScript 会很快让你知道`__MY_APPLICATION_NAME__`不存在于 `Window & 
 
 用通俗的话说，这里的错误是：`Window`接口描述了我对`window`对象及其用法的理解。该接口没有指定某个`__MY_APPLICATION_NAME__`属性。
 
-## How to Fix the Error
+## 如何修复该错误
 
 在类型（types）与接口（interface）部分，我解释了如何扩展一个接口。
 
@@ -974,7 +973,7 @@ console.log(window.__MY_APPLICATION_NAME__)
 
 我们在这里所做的是再一次声明了 `Window`接口，因此扩展了(extending)接口声明。
 
-### A Real-World Solution
+### 一个现实世界的解决方案
 
 我在 TypeScript playground 解决了这个问题，向你展示了最简单的解决方案，这就是关键所在。
 
@@ -1008,7 +1007,7 @@ interface Window {
 
 查看 [TypeScript playground](https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgOqgCYHsDuyDeAUMsgPqkCyAmqQIIAK9AMgJIDCtAKiwPIBypPrQoBRcgC5kAZzBRQAc0IBfQoRyZcAOnLU6jVh279BwsaWQBeAsWQg4AWwiSARDCgQICLBk8OADs7Kql4gUlgANhCa4VjyABTqINg42pQ0DMzsXLwCQqLkAJSqxUA).
 
-## Conclusion
+## 总结
 
 在 [旧的 stack overflow 帖子](https://stackoverflow.com/questions/12709074/how-do-you-explicitly-set-a-new-property-on-window-in-typescript),你会发现基于旧的 TypeScript 版本会方案更复杂。
 
@@ -1016,7 +1015,7 @@ interface Window {
 
 现在你知道了。 😉
 
-# Are Strongly Typed Functions as Parameters Possible in TypeScript?
+<h2 id="5-are-strongly-typed-functions-as-parameters-possible-in-typescript">强类型函数作为参数在TypeScript中是否可行？</h2>
 
 ## TL;DR
 
@@ -1024,7 +1023,7 @@ interface Window {
 
 函数可以被强类型化--甚至作为其他函数的参数。
 
-## Introduction
+## 简介
 
 我必须说，与本文的其他部分不同，在我早期的 TypeScript 时代，我从未真正发现自己在寻找这个。
 
@@ -1032,7 +1031,7 @@ interface Window {
 
 这是一个经过精心研究的问题，所以让我们来回答它吧!
 
-## How to Use Strongly Typed Function Parameters in TypeScript
+## 如何在 TypeScript 中使用强类型的函数参数
 
 这个[stack overflow post](https://stackoverflow.com/questions/14638990/are-strongly-typed-functions-as-parameters-possible-in-typescript)上的公认答案是正确的，在一定程度上。
 
@@ -1078,7 +1077,7 @@ function speak(callback: (value: string) => void) {
 
 你使用了一个强类型的函数作为参数。
 
-## How to Handle Functions with No Return Value
+## 如何处理没有返回值的函数
 
 例如，参考的堆栈溢出帖子中接受的答案说  _回调参数的类型必须是_ "function that accepts a number and returns type any. (接收数字并返回任何类型的函数)"
 
@@ -1108,7 +1107,7 @@ type Callback = (value: string) => void
 
 其中`Arg1type`是参数`arg1`的类型，`Arg2type`是参数`arg2`的类型，而`ReturnType`是你的函数的返回类型。
 
-## Conclusion
+## 总结
 
 JavaScript 中传递数据的主要手段是函数。
 
@@ -1116,7 +1115,7 @@ TypeScript 不仅允许你指定函数的输入和输出，而且你还可以将
 
 去吧，放心地使用它们。
 
-# How to Fix Could Not Find Declaration File for Module ……?
+<h2 id="6-how-to-fix-could-not-find-declaration-file-for-module-">如何修复无法找到模块的声明文件...？</h2>
 
 对于 TypeScript 初学者来说，这是一个常见的挫折来源。
 
@@ -1130,7 +1129,7 @@ TypeScript 不仅允许你指定函数的输入和输出，而且你还可以将
 
 创建一个声明文件，例如 `untyped-module.d.ts`，其内容如下：`declare module "ste-untyped-module";` 注意，这将明确地将模块类型为`any`。
 
-## The Solution Explained
+## 解释解决方案
 
 如果你不记得如何解决这个问题，你可以重新阅读写声明文件一节。
 
@@ -1152,7 +1151,7 @@ declare module "some-untyped-module";
 
 下一步包括在模块的公共仓库中开一个 issue，以包括一个 TypeScript 声明文件，或者自己写一个像样的文件（超出本文的范围）。
 
-# How Do I Dynamically Assign Properties to an Object in Typescript?
+<h2 id="7-how-do-i-dynamically-assign-properties-to-an-object-in-typescript">如何在TypeScript中为对象动态分配属性？</h2>
 
 ![image-76](https://www.freecodecamp.org/news/content/images/2022/07/image-76.png)
 
@@ -1162,7 +1161,7 @@ declare module "some-untyped-module";
 
 如果你不能在声明时定义变量类型，请使用 `Record` utility 类型或对象索引签名。
 
-## Introduction
+## 简介
 
 请思考以下例子:
 
@@ -1183,7 +1182,7 @@ organization.name = "Freecodecamp"
 
 如果你是 TypeScript 的初学者，会感到困惑，也许是有道理的，那就是看似简单的东西在 TypeScript 中怎么会成为问题？
 
-## Understanding the Problem
+## 理解问题
 
 一般来说，TypeScript 在声明变量时确定其类型，并且这个确定的类型不会改变，也就是在你的应用程序中应该保持不变。
 
@@ -1223,11 +1222,11 @@ TypeScript 大喊。
 
 让我们来解决这个问题。
 
-## How to Resolve the Error
+## 如何解决该错误
 
 有许多方法可以解决这里的 TypeScript 错误。让我们考虑一下这些:
 
-### 1\. Explicitly type the object at declaration time
+### 1\. 在声明时明确地输入对象
 
 这是最容易推理的解决方案。
 
@@ -1251,7 +1250,7 @@ const organization: Org = {
 
 然而，如果必须动态地添加对象的属性，这并不总是可行的。
 
-### 2\. Use an object index signature
+### 2\. 使用一个对象索引签名
 
 偶尔，对象的属性确实需要在比声明时更晚的时间被添加。
 
@@ -1343,7 +1342,7 @@ const organization: Record<string, string> = {}
 
 在我们的例子中，`Keys` 代表 `string`，`Type` 也代表`string`。
 
-## Conclusion
+## 总结
 
 除了原语(primitives)之外，您必须处理的最常见的类型可能是对象类型。
 
@@ -1353,7 +1352,7 @@ const organization: Record<string, string> = {}
 
 谢谢你的阅读!
 
-## Fancy a Free TypeScript Book?
+## 想要一本免费的 TypeScript 书籍吗？
 
 ![image-78](https://www.freecodecamp.org/news/content/images/2022/07/image-78.png)
 

@@ -29,9 +29,9 @@ Enjoy!
 -   [Python三元运算符](#the-ternary-operator-in-python)
 -   [Python字符串](#strings-in-python)
 -   [Python布尔值](#booleans-in-python)
--   [Numbers in Python](#numbersinpython)
--   [Constants in Python](#constantsinpython)
--   [Enums in Python](#enumsinpython)
+-   [Python数字](#numbers-in-python)
+-   [Python常量](#constants-in-python)
+-   [Python枚举](#enums-in-python)
 -   [User Input in Python](#userinputinpython)
 -   [Control Statements in Python](#controlstatementsinpython)
 -   [Lists in Python](#listsinpython)
@@ -423,7 +423,7 @@ anotherName = str(name)
 
 ```python
 age = int("20")
-print(age) #20
+print(age)  # 20
 
 fraction = 0.1
 intFraction = int(fraction)
@@ -849,141 +849,141 @@ meal_cooked = False
 ready_to_serve = all([ingredients_purchased, meal_cooked])  # False
 ```
 
-## Numbers in Python
+<h2 id="numbers-in-python">Python数字</h2>
 
-Numbers in Python can be of 3 types: `int`, `float` and `complex`.
+Python中的数字有3种类型：`int`、`float`和`complex`。
 
-### Integer numbers in Python
+### Python整数
 
-Integer numbers are represented using the `int` class. You can define an integer using a value literal:
+整数使用`int`表示，您可以使用字面值定义整数：
 
 ```python
 age = 8
 ```
 
-You can also define an integer number using the `int()` constructor:
+您还可以使用`int()`构造函数定义一个整数：
 
 ```python
 age = int(8)
 ```
 
-To check if a variable is of type `int`, you can use the `type()` global function:
+您可以使用全局函数`type()`检查变量是否为`int`类型：
 
 ```python
-type(age) == int #True
+type(age) == int  # True
 ```
 
-### Floating point numbers in Python
+### Python浮点数
 
-Floating point numbers (fractions) are of type `float`. You can define an integer using a value literal:
+浮点数（分数）的类型为`float`，您可以使用字面值定义浮点数：
 
 ```python
 fraction = 0.1
 ```
 
-Or using the `float()` constructor:
+或者使用`float()`构造函数：
 
 ```python
 fraction = float(0.1)
 ```
 
-To check if a variable is of type `float`, you can use the `type()` global function:
+您可以使用全局函数`type()`检查变量是否为`float`类型：
 
 ```python
-type(fraction) == float #True
+type(fraction) == float  # True
 ```
 
-### Complex numbers in Python
+### Python复数
 
-Complex numbers are of type `complex`.
+复数属于`complex`类型。
 
-You can define them using a value literal:
+您可以使用字面值定义它们：
 
 ```python
 complexNumber = 2+3j
 ```
 
-or using the `complex()` constructor:
+或者使用`complex()`构造函数：
 
 ```python
 complexNumber = complex(2, 3)
 ```
 
-Once you have a complex number, you can get its real and imaginary part:
+一旦您定义了一个复数，您就可以得到它的实部和虚部：
 
 ```python
-complexNumber.real #2.0
-complexNumber.imag #3.0
+complexNumber.real  # 2.0
+complexNumber.imag  # 3.0
 ```
 
-Again, to check if a variable is of type `complex`, you can use the `type()` global function:
+同样，您可以使用全局函数`type()`检查变量是否为`complex`类型：
 
 ```python
 type(complexNumber) == complex #True
 ```
 
-### Arithmetic operations on numbers in Python
+### Python中数字的算术运算
 
-You can perform arithmetic operations on numbers, using the arithmetic operators: `+`, `-`, `*`, `/` (division), `%` (remainder), `**` (exponentiation) and `//` (floor division):
+您可以使用算术运算符对数字执行算术运算：`+`、`-`、`*`、`/`（除法）、`%`（取余）、`**`（求幂）和`//`（向下取整除法）：
 
 ```python
-1 + 1 #2
-2 - 1 #1
-2 * 2 #4
-4 / 2 #2
-4 % 3 #1
-4 ** 2 #16
-4 // 2 #2
+1 + 1  # 2
+2 - 1  # 1
+2 * 2  # 4
+4 / 2  # 2
+4 % 3  # 1
+4 ** 2  # 16
+4 // 2  # 2
 ```
 
-and you can use the compound assignment operators
+您还可以使用复合赋值运算符
 
 -   `+=`
 -   `-=`
 -   `*=`
 -   `/=`
 -   `%=`
--   ..and so on
+-   其它等等
 
-to quickly perform operations on variables, too:
+这样可以快速对变量执行运算操作：
 
 ```python
 age = 8
-age += 1
+age += 1  # age: 9
 ```
 
-### Built-in Functions in Python
+### Python内置函数
 
-There are 2 built-in functions that help with numbers:
+有2个内置函数可以帮助处理数字：
 
-`abs()` returns the absolute value of a number.
+`abs()`返回一个数字的绝对值。
 
-`round()` given a number, returns its value rounded to the nearest integer:
+给定一个数字，`round()`返回四舍五入到最接近整数的值：
 
 ```python
-round(0.12) #0
+round(0.12)  # 0
 ```
 
-You can specify a second parameter to set the decimal point's precision:
+您可以指定第二个参数来设置舍入到小数点的精度：
 
 ```python
-round(0.12, 1) #0.1
+round(0.12, 1)  # 0.1
 ```
 
-Several other math utility functions and constants are provided by the Python standard library:
+Python标准库提供了其它几个数学实用函数和常量：
 
--   the `math` package provides general math functions and constants
--   the `cmath` package provides utilities to work with complex numbers.
--   the `decimal` package provides utilities to work with decimals and floating point numbers.
--   the `fractions` package provides utilities to work with rational numbers.
+-   `math`包提供通用的数学函数和常量
+-   `cmath`包提供了处理复数的方法
+-   `decimal`包提供了处理小数和浮点数的方法
+-   `fractions`包提供了处理有理数的方法
 
-We'll explore some of those separately later on.
+稍后我们将分别探讨其中的一些。
 
-## Constants in Python
+<h2 id="constants-in-python">Python常量</h2>
 
-Python has no way to enforce that a variable should be a constant.
+Python中无法强制改变的值是常量。
 
-The nearest you can get is to use an enum:
+比较常用的是枚举：
 
 ```Python
 class Constants(Enum):
@@ -991,31 +991,31 @@ class Constants(Enum):
     HEIGHT = 256
 ```
 
-And get to each value using, for example, `Constants.WIDTH.value`.
+并使用`Constants.WIDTH.value`这样的表达获取每个值。
 
-No one can reassign that value.
+没有人可以重新分配该值。
 
-Otherwise if you want to rely on naming conventions, you can adhere to this one: declare variables that should never change uppercase:
+否则，如果您想依赖命名约定（来定义常量），您可以遵守这个规则——声明大写的永远不应该改变的变量：
 
 ```python
 WIDTH = 1024
 ```
 
-No one will prevent you from overwriting this value, and Python will not stop it.
+没有人会阻止您覆盖这个值，Python也不会阻止。（译者：全大写的变量表示不应改变的常量，这只是一种约定）
 
-That's what most Python code does that you will see.
+正如您将来会看到的，大多数Python代码都采用这种命名约定的写法。
 
-## Enums in Python
+<h2 id="enums-in-python">Python枚举</h2>
 
-Enums are readable names that are bound to a constant value.
+枚举是绑定到常量值的可读名称。
 
-To use enums, import `Enum` from the `enum` standard library module:
+要使用枚举，请从`enum`标准库模块中导入`Enum`：
 
 ```python
 from enum import Enum
 ```
 
-Then you can initialize a new enum in this way:
+然后您可以用这种方式初始化一个新的枚举：
 
 ```python
 class State(Enum):
@@ -1023,30 +1023,30 @@ class State(Enum):
     ACTIVE = 1
 ```
 
-Once you do so, you can reference `State.INACTIVE` and `State.ACTIVE`, and they serve as constants.
+这样做后，您可以引用作为常量的`State.INACTIVE`和`State.ACTIVE`。
 
-Now if you try to print `State.ACTIVE` for example:
+现在，如果您尝试打印`State.ACTIVE`，例如：
 
 ```python
 print(State.ACTIVE)
 ```
 
-it will not return `1`, but `State.ACTIVE`.
+它不会返回`1`，而是返回`State.ACTIVE`。
 
-The same value can be reached by the number assigned in the enum: `print(State(1))` will return `State.ACTIVE`. Same for using the square brackets notation `State['ACTIVE']`.
+枚举中分配的数字可以达到相同的效果：`print(State(1))`将打印`State.ACTIVE`。使用方括号符号`State['ACTIVE']`也是如此。
 
-You can, however, get the value using `State.ACTIVE.value`.
+但是，您可以使用`State.ACTIVE.value`获取具体值。
 
-You can list all the possible values of an enum:
+您可以列出枚举的所有可能值：
 
 ```python
-list(State) # [<State.INACTIVE: 0>, <State.ACTIVE: 1>]
+list(State)  # [<State.INACTIVE: 0>, <State.ACTIVE: 1>]
 ```
 
-You can count them:
+您可以获取总数：
 
 ```python
-len(State) # 2
+len(State)  # 2
 ```
 
 ## User Input in Python

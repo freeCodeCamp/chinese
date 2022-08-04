@@ -32,8 +32,8 @@ Enjoy!
 -   [Python数字](#numbers-in-python)
 -   [Python常量](#constants-in-python)
 -   [Python枚举](#enums-in-python)
--   [User Input in Python](#userinputinpython)
--   [Control Statements in Python](#controlstatementsinpython)
+-   [Python用户输入](#user-input-in-python)
+-   [Python控制语句](#control-statements-in-python)
 -   [Lists in Python](#listsinpython)
 -   [Tuples in Python](#tuplesinpython)
 -   [Dictionaries in Python](#dictionariesinpython)
@@ -1049,16 +1049,16 @@ list(State)  # [<State.INACTIVE: 0>, <State.ACTIVE: 1>]
 len(State)  # 2
 ```
 
-## User Input in Python
+<h2 id="user-input-in-python">Python用户输入</h2>
 
-In a Python command line application you can display information to the user using the `print()` function:
+在Python命令行程序中，您可以使用`print()`函数向用户显示信息：
 
 ```python
 name = "Roger"
 print(name)
 ```
 
-We can also accept input from the user, using `input()`:
+我们也可以使用`input()`接受来自用户的输入：
 
 ```python
 print('What is your age?')
@@ -1066,17 +1066,17 @@ age = input()
 print('Your age is ' + age)
 ```
 
-This approach gets input at runtime, meaning the program will stop execution and will wait until the user types something and presses the `enter` key.
+这种方法在运行时获取输入，这意味着程序（执行到`input()`时）将停止执行，等待用户输入内容并按下`enter`键。
 
-You can also do more complex input processing and accept input at program invocation time, and we'll see how to do that later on.
+您还可以在程序调用时接受输入并进行更复杂的输入处理，稍后我们将看到如何做到这一点。
 
-This works for command line applications. Other kinds of applications will need a different way of accepting input.
+这适用于命令行程序。其它类型的应用程序需要使用不同的方式来接受输入。
 
-## Control Statements in Python
+<h2 id="control-statements-in-python">Python控制语句</h2>
 
-When you're dealing with booleans, and expressions that return a boolean in particular, we can make decisions and take different roads depending on their `True` or `False` values.
+当您处理布尔值和返回布尔值的表达式时，您可以根据它们的值为`True`或`False`来采取不同的方式。
 
-In Python we do so using the `if` statement:
+在Python中，我们使用`if`语句来做到这一点：
 
 ```python
 condition = True
@@ -1085,9 +1085,9 @@ if condition == True:
     # do something
 ```
 
-When the condition test resolves to `True`, like in the above case, its block gets executed.
+当条件解析为`True`时，就像上面的情况一样，if下面的代码块被执行。
 
-What is a block? A block is that part that is indented one level (4 spaces usually) on the right:
+什么是代码块？代码块是向右侧缩进一级（通常为4个空格）的部分：
 
 ```python
 condition = True
@@ -1097,7 +1097,7 @@ if condition == True:
     print("was true")
 ```
 
-The block can be formed by a single line, or multiple lines as well, and it ends when you move back to the previous indentation level:
+代码块可以由单行或多行组成，并在您移回到上一个缩进级别时结束：
 
 ```python
 condition = True
@@ -1109,7 +1109,7 @@ if condition == True:
 print("Outside of the if")
 ```
 
-In combination with `if` you can have an `else` block that's executed if the condition test of `if` results to `False`:
+如果`if`的条件测试结果为`False`，结合`if`则可以执行`else`块：
 
 ```python
 condition = True
@@ -1122,7 +1122,7 @@ else:
     print("was False")
 ```
 
-And you can have different linked `if` checks with `elif` that's executed if the previous check was `False`:
+如果前面的`if`检查是`False`，您可以使用`elif`执行另一个条件检查：
 
 ```python
 condition = True
@@ -1138,9 +1138,9 @@ else:
     print("was False")
 ```
 
-The second block in this case is executed if `condition` is `False`, and the `name` variable value is "Roger".
+如果`condition`为`False`并且`name`变量的值为"Roger"，则执行本例中的第二个代码块。
 
-In a `if` statement you can have just one `if` and `else` check, but multiple series of `elif` checks:
+在一个`if`语句中，您只可以进行一次`if`和 `else`检查，但可以进行多个`elif`检查：
 
 ```python
 condition = True
@@ -1160,14 +1160,14 @@ else:
     print("was False")
 ```
 
-`if` and `else` can also be used in an inline format, which lets us return one value or another based on a condition.
+`if`和 `else`也可以内联使用，这让我们可以根据条件返回一个值或另一个值。
 
-Example:
+例子：
 
 ```python
 a = 2
 result = 2 if a == 0 else 3
-print(result) # 3
+print(result)  # 3
 ```
 
 ## Lists in Python

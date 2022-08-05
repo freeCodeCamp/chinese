@@ -1,54 +1,54 @@
 > -  原文地址：[How to make your Tic Tac Toe game unbeatable by using the minimax algorithm](https://www.freecodecamp.org/news/how-to-make-your-tic-tac-toe-game-unbeatable-by-using-the-minimax-algorithm-9d690bad4b37/)
 > -  原文作者：[Ahmad Abdolsaheb](https://www.freecodecamp.org/news/author/ahmad/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to make your Tic Tac Toe game unbeatable by using the minimax algorithm](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/1_y2B2auvIpUI0vSLtT2KWyg-1.jpeg)
 
-I struggled for hours scrolling through tutorials, watching videos, and banging my head on the desk trying to build an unbeatable Tic Tac Toe game with a reliable Artificial Intelligence. So if you are going through a similar journey, I would like to introduce you to the Minimax algorithm.
+我挣扎了数小时，看了各种各样的教学资料、视频，敲自己脑袋，试图使用人工智能（Artificial Intelligence）创建一个无法被击败的井字棋游戏。如果你也又同样的经历，我想给你介绍极小化极大算法（[Minimax algorithm](https://zh.wikipedia.org/zh-tw/%E6%9E%81%E5%B0%8F%E5%8C%96%E6%9E%81%E5%A4%A7%E7%AE%97%E6%B3%95))。
 
-Like a professional chess player, this algorithm sees a few steps ahead and puts itself in the shoes of its opponent. It keeps playing ahead until it reaches a terminal arrangement of the board (**terminal state**) resulting in a tie, a win, or a loss. Once in a terminal state, the AI will assign an arbitrary positive score (+10) for a win, a negative score (-10) for a loss, or a neutral score (0) for a tie.
+这种算法就像一个专业的象棋选手，总能多想几步，并且站在对手的立场来思考棋局。算法不断向前预测，直到触达棋局的最终棋子排列局面（**最终状态**），这一状态要么就是平局、胜利或者失败。一旦进入到最终状态，AI就会分配正分（+10）给胜利，负分（-10）给失败或者中性分（0）给平局。
 
-At the same time, the algorithm evaluates the moves that lead to a terminal state based on the players’ turn. It will choose the move with maximum score when it is the AI’s turn and choose the move with the minimum score when it is the human player’s turn. Using this strategy, Minimax avoids losing to the human player.
+同时，这个算法当轮到玩家下棋的时候，算法会评估玩家触达最终状态的步骤。当轮到AI的时候，算法会选择最大分数值的步骤，而当轮到玩家的时候，算法会选择最小分数值的步骤。极小化极大算法通过这个策略来避免AI输给玩家。
 
-Try it for yourself in the following game preferably using a Chrome browser.
+你可以使用chrome浏览器自行测试这个游戏。
 
 See the Pen <a href='https://codepen.io/abdolsa/pen/vgjoMb'>minimax 4 medium</a> by Ahmad Abdolsaheb (<a href='https://codepen.io/abdolsa'>@abdolsa</a>) on <a href='https://codepen.io'>CodePen</a>.
 
-A Minimax algorithm can be best defined as a recursive function that does the following things:
+极小化极大算法可以被定义为一个递归函数，这个递归函数完成以下事情：
 
-1.  return a value if a terminal state is found (+10, 0, -10)
-2.  go through available spots on the board
-3.  call the minimax function on each available spot (recursion)
-4.  evaluate returning values from function calls
-5.  and return the best value
+1.  如果到达最终状态 (+10, 0, -10)返回一个值
+2.  遍历棋盘所有可以落子的空位
+3.  在每一个空位调用极小化极大函数（递归调用）
+4.  评估调用函数的返回值
+5.  返回最佳值
 
-If you are new to the concept of recursion, I recommend watching this [video](https://www.youtube.com/watch?v=VrrnjYgDBEk) from Harvard’s CS50.
+如果你不太熟悉递归的概念， 推荐你观看来自哈佛的CS50这个课程的[视频](https://www.youtube.com/watch?v=VrrnjYgDBEk)。
 
-To completely grasp the Minimax’s thought process, let’s implement it in code and see it in action in the following two sections.
+让我们通过代码示例来理解极小化极大算法，在接下来的两节你会看到具体的代码以及代码的实现步骤。
 
-### Minimax in Code
+### 极小化极大算法的代码
 
-For this tutorial you will be working on a near end state of the game which is shown in figure 2 below. Since minimax evaluates every state of the game (hundreds of thousands), a near end state allows you to follow up with minimax’s recursive calls easier (9).
+在这篇教程中，我们将从如图2所示的接近棋局尾声开始讲解。因为极小化极大算法评估了棋局的每一个状态（非常多），所以从尾声开始能够帮助你更容易地理解极小化极大的递归调用是如何运作的。
 
-For the following figure, assume the AI is X and the human player is O.
+在下图中，X代表AI，O代表的是玩家。
 
 ![iYDAcMcMvbr0lBISCQqM-mBbfhqDx2sPqcYl](https://cdn-media-1.freecodecamp.org/images/iYDAcMcMvbr0lBISCQqM-mBbfhqDx2sPqcYl)
 
-figure 2 sample of game state
+图2
 
-To work with the Ti Tac Toe board more easily, you should define it as an array with 9 items. Each item will have its index as a value. This will come in handy later on. Because the above board is already populated with some X and Y moves, let us define the board with the X and Y moves already in it (_origBoard_).
+为了更好地处理井字棋棋盘，我们可以把它定义为一个包含9个元素的数组。每一个元素的索引（index）为它的值，这个之后会派上用场。因为图上的棋盘已经下好了X和O，所以棋盘对应的数组(_origBoard_)如下：
 
 ```javascript
 var origBoard = ["O",1,"X","X",4,"X",6,"O","O"];
 ```
 
-Then declare _aiPlayer_ and _huPlayer_ variables and set them to “X” and “O” respectively_._
+然后声明 _aiPlayer_ 和 _huPlayer_ 两个变量并分别赋值为“X”和“O”。
 
-Additionally, you need a function that looks for winning combinations and returns true if it finds one, and a function that lists the indexes of available spots in the board.
+接下来，你需要创建寻找获胜的元素组合的函数，并在找到后返回true；还需要一个函数列举所有棋盘空位对应的索引。
 
 ```javascript
-/* the original board
+/* 原始棋盘
  O |   | X
  ---------
  X |   | X
@@ -57,18 +57,18 @@ Additionally, you need a function that looks for winning combinations and return
  */
 var origBoard = [“O”,1 ,”X”,”X”,4 ,”X”, 6 ,”O”,”O”];
 
-// human
+// 玩家
 var huPlayer = “O”;
 
 // ai
 var aiPlayer = “X”;
 
-// returns list of the indexes of empty spots on the board
+// 返回由棋盘所有空位的索引组成的数组
 function emptyIndexies(board){
   return  board.filter(s => s != "O" && s != "X");
 }
 
-// winning combinations using the board indexies
+// 获胜元素组合
 function winning(board, player){
  if (
  (board[0] == player && board[1] == player && board[2] == player) ||
@@ -87,22 +87,22 @@ function winning(board, player){
 }
 ```
 
-Now let’s dive into the good parts by defining the Minimax function with two arguments _newBoard_ and _player_. Then, you need to find the indexes of the available spots in the board and set them to a variable called _availSpots_.
+让我们现在进入精华部分，定义极小化极大函数（Minimax）。该函数包含 _newBoard_ 和 _player_ 两个参数。然后，你需要找到棋盘空位的索引，并赋值给一个变量 _availSpots_。
 
 ```javascript
-// the main minimax function
+// minimax函数
 function minimax(newBoard, player){
   
-    //available spots
+    //棋盘空位
     var availSpots = emptyIndexies(newBoard);
 ```
 
-Also, you need to check for terminal states and return a value accordingly. If O wins you should return -10, if X wins you should return +10. In addition, if the length of the _availableSpots_ array is zero, that means there is no more room to play, the game has resulted in a tie, and you should return zero.
+同时，你需要检查最终状态，并且返回对应的值。如果O获胜，则返回-10；如果X获胜，则返回+10。另外，如果 _availSpots_ 数组的长度为0，则没有可以落子的空位，就是平局，返回0.
 
 ```javascript
 
-  // checks for the terminal states such as win, lose, and tie 
-  //and returning a value accordingly
+  // 检查最终状态是获胜、失败还是平局
+  //并返回对应的值
   if (winning(newBoard, huPlayer)){
      return {score:-10};
   }
@@ -114,29 +114,28 @@ Also, you need to check for terminal states and return a value accordingly. If O
   }
 ```
 
-Next, you need to collect the scores from each of the empty spots to evaluate later. Therefore, make an array called _moves_ and loop through empty spots while collecting each move’s index and score in an object called _move_.
+然后，从每一个空位中收集到分数，之后再评估。因此，我们需要创建一个数组名为 _moves_ ，并且遍历所有的空位同时收集每一步的索引和分数并存储在对象 _move_ 中。
 
-Then, set the index number of the empty spot that was stored as a number in the _origBoard_ to the index property of the _move_ object. Later, set the empty spot on the _newboard_ to the current player and call the _minimax_ function with other player and the newly changed _newboard_. Next, you should store the object resulted from the _minimax_ function call that includes a _score_ property to the _score_ property of the _move_ object.
+然后，将作为数字存储在 _origBoard_ 的空位的索引号设置为 _move_ 对象的索引属性。 然后，将空位设置为当前玩家的 _newboard_ 并用对手作为参数调用 _minimax_ 函数和修改后的 _newboard_。然后，存储通过调用 _minimax_ 函数得到对象，包含 _move_ 对象的 _score_ 属性。
 
-> _If the minimax function does not find a terminal state, it keeps recursively going level by level deeper into the game. This recursion happens until it reaches a terminal state and returns a score one level up._
+> _如果极小化极大函数没有到最终状态，就会递归地一层一层深入棋局游戏。直到到达最终状态，并且向上一层返回一个分数，递归才会停止。_
 
-Finally, Minimax resets _newBoard_ to what it was before and pushes the _move_ object to the _moves_ array.
+最后，极小化极大函数重置 _newBoard_ 为最开始的样子， 将 _move_ 对象推入 _moves_ 数组。
 
 ```javascript
-// an array to collect all the objects
+// 收集所有空位对象的数组
   var moves = [];
 
-  // loop through available spots
+  // 遍历所有空位
   for (var i = 0; i < availSpots.length; i++){
-    //create an object for each and store the index of that spot 
+    //为每一空位创建一个对象，并且存储空位索引
     var move = {};
   	move.index = newBoard[availSpots[i]];
 
-    // set the empty spot to the current player
+    // 将空位设置为当前玩家
     newBoard[availSpots[i]] = player;
 
-    /*collect the score resulted from calling minimax 
-      on the opponent of the current player*/
+    //收集以对手为参数调用minimax函数的分数结果
     if (player == aiPlayer){
       var result = minimax(newBoard, huPlayer);
       move.score = result.score;
@@ -146,22 +145,22 @@ Finally, Minimax resets _newBoard_ to what it was before and pushes the _move_ o
       move.score = result.score;
     }
 
-    // reset the spot to empty
+    // 将空位重置为空
     newBoard[availSpots[i]] = move.index;
 
-    // push the object to the array
+    // 将对象推入数组
     moves.push(move);
   }
 ```
 
-Then, the minimax algorithm needs to evaluate the best _move_ in the _moves_ array. It should choose the _move_ with the highest score when AI is playing and the _move_ with the lowest score when the human is playing. Therefore, If the _player_ is _aiPlayer_, it sets a variable called _bestScore_ to a very low number and loops through the _moves_ array, if a _move_ has a higher _score_ than _bestScore_, the algorithm stores that _move_. In case there are moves with similar score, only the first one will be stored.
+然后。极小化极大算法需要在 _moves_ 数组中搜寻最佳 _move_ 。 当是AI下棋时，应该选择分数最高的 _move_，而当是玩家的时候，应该选择分数最低的 _move_。因此，如果 _player_ 是 _aiPlayer_，将变量 _bestScore_ 设置为一个非常低的数值，然后遍历整个 _moves_ 数组， 如果 _move_ 的 _score_ 比 _bestScore_ 高，算法就存储这个 _move_。如果发生了出现分数相同的情况，只存储第一个值。
 
-The same evaluation process happens when _player_ is _huPlayer_, but this time _bestScore_ would be set to a high number and Minimax looks for a move with the lowest score to store.
+当 _player_ 是 _huPlayer_ 时，也进行同样的步骤，只是 _bestScore_ 会先被定义为一个非常大的数值，极小化极大算法再寻找最低的值存储。
 
-At the end, Minimax returns the object stored in _bestMove_.
+最终，Minimax会返回一个存储 _bestMove_ 的对象。
 
 ```javascript
-// if it is the computer's turn loop over the moves and choose the move with the highest score
+// 如果轮到AI，就遍历所有步骤，并找到分数最高的步
   var bestMove;
   if(player === aiPlayer){
     var bestScore = -10000;
@@ -173,7 +172,7 @@ At the end, Minimax returns the object stored in _bestMove_.
     }
   }else{
 
-// else loop over the moves and choose the move with the lowest score
+// 如果是轮到玩家，就寻找最低的分数
     var bestScore = 10000;
     for(var i = 0; i < moves.length; i++){
       if(moves[i].score < bestScore){
@@ -183,65 +182,65 @@ At the end, Minimax returns the object stored in _bestMove_.
     }
   }
 
-// return the chosen move (object) from the moves array
+// 从moves数组返回挑选出来的move（对象）
   return moves[bestMove];
 }
 ```
 
-> _That is it for the minimax function. :) you can find the above algorithm on [github](https://github.com/ahmadabdolsaheb/minimaxarticle) and [codepen](https://codepen.io/abdolsa/pen/mABGoz?editors=1011). Play around with different boards and check the results in the console._
+> _这就是minimax函数的全部内容 :) 你可以在[github](https://github.com/ahmadabdolsaheb/minimaxarticle)和[codepen](https://codepen.io/abdolsa/pen/mABGoz?editors=1011)找到算法的代码。尝试不同的棋盘，并且在控制台查看结果。_
 
-In the next section, let’s go over the code line by line to better understand how the minimax function behaves given the board shown in figure 2.
+在接下来的章节，我们将通过图2所示的棋盘，来逐条查看代码，了解minimax函数到底是如何运作的。
 
-### Minimax in action
+### Minimax的运作
 
-Using the following figure, let’s follow the algorithm’s function calls (**FC**) one by one.
+让我们使用下面的数据，来一步一步查看的算法函数(以下简称**FC**)是怎么运作的。
 
-Note: In figure 3, large numbers represent each function call and levels refer to how many steps ahead of the game the algorithm is playing.
+注意：在图三中的大数字代表了每一个函数的调用，level（层级）代表游戏开始后算法向前预测了第几步。
 
 ![1_VG79nxl-mJQrsp6p3q79qA--1-](https://www.freecodecamp.org/news/content/images/2020/09/1_VG79nxl-mJQrsp6p3q79qA--1-.png)
 
-Figure 3 Minimax function call by function call
+图3 minimax函数被函数调用
 
-**_1._**_origBoard_ and _aiPlayer_ is fed to the algorithm. The algorithm makes a list of the three empty spots it finds, checks for terminal states, and loops through every empty spot starting from the first one. Then, it changes the _newBoard_ by placing the _aiPlayer_ in the first empty spot. After that, it calls itself with _newBoard_ and the _huPlayer_ and waits for the FC to return a value.
+**_1._**_origBoard_ 和 _aiPlayer_ 带入算法。算法创建由找到的三个空位组成列表，从第一个空位开始遍历所有空位，检查最终状态。然后，将 _aiPlayer_ 放入第一个空位改变 _newBoard_ 。然后用 _newBoard_ 和 _huPlayer_ 调用自身，等待FC返回值。
 
-**2\.** While the first FC is still running, the second one starts by making a list of the two empty spots it finds, checks for terminal states, and loops through the empty spot starting from the first one. Then, it changes the _newBoard_ by placing the _huPlayer_ in the first empty spot. After that it calls itself with _newBoard_ and the _aiPlayer_ and waits for the FC to return a value.
+**2\.** 当第一个FC还在运行的时候，第二个FC创建由找到的两个空位组成的列表，从第一个空格开始遍历所有空格，检查最终状态。然后，将 _huPlayer_ 放入第一个空位改变 _newBoard_ 。然后用 _newBoard_ 和 _aiPlayer_ 调用自身，等待FC返回值。
 
-**3\.** Finally the algorithm makes a list of the empty spots, and finds a win for the human player after checking for terminal states. Therefore, it returns an object with a score property and value of -10.
+**3\.** 最后，算法会创建一个空位的列表，并且在检查最终状态后，判定玩家获胜。这样，返回一个分数（score）属性值为-10的对象。
 
-> _Since the second FC listed two empty spots, Minimax changes the_ newBoard _by placing_ huPlayer _in the second empty spot. Then, it calls itself with the new board and the_ aiPlayer_._
+> _在第二个FC中列表有两个空位， 算法将_ huPlayer _带入以改变_ newBoard _。然后用_ newBoard _和_ aiPlayer _重新调用自己。_
 
-**4.** The algorithm makes a list of the empty spots, and finds a win for the human player after checking for terminal states. Therefore, it returns an object with a score property and value of -10.
+**4.** 算法创建一个空位列表，然后在检查最终状态时，发现玩家获胜，因此，返回一个分数属性值为-10的对象。
 
-> _On the second FC, the algorithm collects the values coming from lower levels (3rd and 4th FC). Since_ huPlayer_’s turn resulted in the two values, the algorithm chooses the lowest of the two values. Because both of the values are similar, it chooses the first one and returns it up to the first FC._
+> _在第二个FC中，算法收集了下一层的值 (第三个和第四个FC的返回值)。因为轮到_ huPlayer _所以要选择两个值中较小的一个。两个结果相同，所以算法选择第一个返回到上一层FC。_
 
-> _At this point the first FC has evaluated the score of moving_ aiPlayer _in the first empty spot. Next, it changes the_ newBoard _by placing_ aiPlayer _in the second empty spot. Then, it calls itself with the_ newBoard _and the_ huPlayer_._
+> _此时，第一个FC已经评估了将_ aiPlayer _放在第一个空位的分数情况。 然后调整_ newBoard _，把_ aiPlayer _放在第二个空位。 然后用_ newBoard _和_ huPlayer _调用自己。_
 
-**5.** On the fifth FC, The algorithm makes a list of the empty spots, and finds a win for the human player after checking for terminal states. Therefore, it returns an object with a score property and value of +10.
+**5.** 到第五个FC，算法生成一个空位列表，并且在检查最终状态后发现AI获胜，因此返回一个对象，分数属性值为+10。
 
-> _After that, the first FC moves on by changing the_ newBoard _and placing_ aiPlayer _in the third empty spot. Then, it calls itself with the new board and the_ huPlayer_._
+> _然后，第一个FC继续改变_ newBoard _，将_ aiPlayer _放入第三个空格。 然后用_ newBoard _和_ huPlayer _调用自己。_
 
-**6.** The 6th FC starts by making a list of two empty spots it finds, checks for terminal states, and loops through the two empty spots starting from the first one. Then, it changes the _newBoard_ by placing the _huPlayer_ in the first empty spot. After that, it calls itself with _newBoard_ and the _aiPlayer_ and waits for the FC to return a score.
+**6.** 第六个FC首先创建一个有两个空位的列表， 然后修改 _newBoard_ ，把 _huPlayer_ 放在第一个空位。 然后使用 _newBoard_ 和 _aiPlayer_ 调用自己，并等到返回一个分数。
 
-**7.** Now the algorithm is two level deep into the recursion. It makes a list of the one empty spot it finds, checks for terminal states, and changes the _newBoard_ by placing the _aiPlayer_ in the empty spot. After that, it calls itself with _newBoard_ and the _huPlayer_ and waits for the FC to return a score so it can evaluate it.
+**7.** 现在算法已经有两层递归。创建一个只有一个空位的列表，然后检查最终状态。修改 _newBoard_ ，将 _aiPlayer_ 放入空位。 之后使用 _newBoard_ 和 _huPlayer_ 调用自己，然后等待FC返回一个可以被评估的分数。
 
-**8\.** On the 8th FC, the algorithm makes an empty list of empty spots, and finds a win for the _aiPlayer_ after checking for terminal states. Therefore, it returns an object with score property and value of +10 one level up (7th FC).
+**8\.** 到第八个FC，算法创建空位列表，检查最终状态后发现 _aiPlayer_ 获胜，因此，返回包含分数属性的对象，值为+10，并向上传递（第7个FC）。
 
-> _The 7th FC only received one positive value from lower levels (8th FC). Because_ aiPlayer’s turn _resulted in that value, the algorithm needs to return the highest value it has received from lower levels. Therefore, it returns its only positive value (+10) one level up (6th FC)._
+> _第7个FC仅接受下面一层（第8个FC）的一个正值。因为当轮到_ aiPlayer _时，仅得到的这个值，算法需要返回在最底层里得到的最大值。所以，仅返回一个正值 (+10)到上一层(第六个FC)._
 
-> _Since the 6th FC listed two empty spots, Minimax changes_ newBoard _by placing_ huPlayer _in the second empty spot. Then, calls itself with the new board and the_ aiPlayer_._
+> _因为第6个FC有两个空位, 算法修改_ newBoard _把_ huPlayer _放入第二个空位。 然后用_ newBoard _和_ aiPlayer _调用自己。_
 
-**9\.** Next, the algorithm makes a list of the empty spots, and finds a win for the _aiPlayer_ after checking for terminal states. Therefore, it returns an object with score properties and value of +10.
+**9\.** 然后算法创建一个空格列表，检查最终状态后，发现 _aiPlayer_ 获胜。 因此返回一个对象，分数属性为+10。
 
-> _At this point, the 6 FC has to choose between the score (+10)that was sent up from the 7th FC (returned originally from from the 8 FC) and the score (-10) returned from the 9th FC. Since_ huPlayer_’s turn resulted in those two returned values, the algorithm finds the minimum score (-10) and returns it upwards as an object containing score and index properties._
+> _此时， 第六个FC需要从第7个FC的分数(+10)(一开始从第8个FC传上来的) 和第9个FC的分数(-10)间选择。 因为是轮到_ huPlayer _，算法使用(-10)并向上继续传递。_
 
-> _Finally, all three branches of the first FC have been evaluated ( -10, +10, -10). But because aiPlayer’s turn resulted in those values, the algorithm returns an object containing the highest score (+10) and its index (4)._
+> _最终，三个分支的分数都被评估了( -10, +10, -10)。 因为是aiPlayer的轮数，算法返回最大的值(+10)和这个值的索引号(4)。_
 
-**In the above scenario, Minimax concludes that moving the X to the middle of the board results in the best outcome. :)**
+**在上述场景中，Minimax总结出来将X放置在棋盘中间会是最优解。:)**
 
-### The End!
+### 总结!
 
-By now you should be able to understand the logic behind the Minimax algorithm. Using this logic try to implement a Minimax algorithm yourself or find the above sample on [github](https://github.com/ahmadabdolsaheb/minimaxarticle) or [codepen](https://codepen.io/abdolsa/pen/mABGoz?editors=1011) and optimize it.
+现在你应该了解了极小化极大值算法背后的逻辑。 你可以尝试使用这个算法来自己执行一遍，或者在[github](https://github.com/ahmadabdolsaheb/minimaxarticle)和[codepen](https://codepen.io/abdolsa/pen/mABGoz?editors=1011)找到代码示例，并且优化。
 
-_Thanks for reading! If you liked this story, don't forget to share it on social media._
+_感谢阅读！如果你喜欢这篇文章，希望你转发到社交媒体上。_
 
-_Special thanks to Tuba Yilmaz, Rick McGavin, and Javid Askerov_ _for reviewing this article._
+_特别鸣谢Tuba Yilmaz、Rick McGavin和Javid Askerov_ _对本文的审稿。_

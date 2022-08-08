@@ -93,8 +93,6 @@ Alpha Particle 公司的首席技术官 Keanan Koppenhaver 告诉我，过度在
 > 
 > — Alex Lakatos 👨‍💻🥑 (@lakatos88) [2020 年 10 月 28 日](https://twitter.com/lakatos88/status/1321423080095469568?ref_src=twsrc%5Etfw)
 
-The point is that every person is different and there's no one-size-fits-all approach to setting aside writing time. "The biggest thing is finding a time where your brain can focus and has the creativity to actually get your thoughts down in a coherent way," Keanan Koppenhaver told me.
-
 关键在于，每个人都是不同的，没有一个足够普适的方法来规划预留给写作的时间。Keanan Koppenhaver 跟我说：“最主要的事情是要找到一个时间，让你的大脑能够集中精力、有创造力，真正把你的想法以连贯的方式记录下来。”
 
 ## 5\. 管理你的期望值

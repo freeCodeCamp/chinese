@@ -5,13 +5,13 @@
 
 ![Test-Driven Development Tutorial – How to Test Your JavaScript and ReactJS Applications](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/test-driven-development-tutorial-how-to-test-javascript-and-reactjs-app-codesweetly-battlecreek-coffee-roasters-i22gbC3gFm4-unsplash.jpg)
 
-Understanding test-driven development is an essential part of being a prolific software developer. Testing provides a solid platform for building reliable programs.
+了解测试是成为高产的软件开发者的重要一环，测试是创建可靠程序的基石。
 
-This tutorial will show you all you need to implement test-driven development in your JavaScript and React applications.
+这篇教程会帮助你在你的JavaScript和React应用中安装测试驱动的开发。 
 
-## Table of Contents
+## 目录
 
-1.  [What Is Test-Driven Development?](#what-is-test-driven-development)
+1.  [什么是测试驱动开发](#what-is-test-driven-development)
 2.  [JavaScript Example of a Test-Driven Development Workflow](#javascript-example-of-a-test-driven-development-workflow)
 3.  [How to Use Jest as a Test Implementation Tool](#how-to-use-jest-as-a-test-implementation-tool)
 4.  [Important Stuff to Know about Using ES6 Modules with Jest](#important-stuff-to-know-about-using-es6-modules-with-jest)
@@ -28,9 +28,9 @@ This tutorial will show you all you need to implement test-driven development in
 
 So, without any further ado, let's get started by discussing what test-driven development means.
 
-## What Is Test-Driven Development?
+<h2 id="what-is-test-driven-development">什么是测试驱动开发</h2>
 
-**Test-driven development (TDD)** is a coding practice where you write the result you want your program to produce before creating the program.
+**测试驱动开发(TDD)** is a coding practice where you write the result you want your program to produce before creating the program.
 
 In other words, TDD requires you to pre-specify the output your intended program must produce to pass the test of functioning the way you envisioned.
 

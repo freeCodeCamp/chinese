@@ -34,10 +34,10 @@ Enjoy!
 -   [Python枚举](#enums-in-python)
 -   [Python用户输入](#user-input-in-python)
 -   [Python控制语句](#control-statements-in-python)
--   [Lists in Python](#listsinpython)
--   [Tuples in Python](#tuplesinpython)
--   [Dictionaries in Python](#dictionariesinpython)
--   [Sets in Python](#setsinpython)
+-   [Python列表](#lists-in-python)
+-   [Python元组](#tuples-in-python)
+-   [Python字典](#dictionaries-in-python)
+-   [Python集合](#sets-in-python)
 -   [Functions in Python](#functionsinpython)
 -   [Objects in Python](#objectsinpython)
 -   [Loops in Python](#loopsinpython)
@@ -1170,89 +1170,89 @@ result = 2 if a == 0 else 3
 print(result)  # 3
 ```
 
-## Lists in Python
+<h2 id="lists-in-python">Python列表</h2>
 
-Lists are an essential Python data structure.
+列表是Python中一种基本的数据结构。
 
-The allow you to group together multiple values and reference them all with a common name.
+使用列表，您可以将多个值组合在一起，并使用一个名称引用它们。
 
-For example:
+例如：
 
 ```python
 dogs = ["Roger", "Syd"]
 ```
 
-A list can hold values of different types:
+一个列表中可以保存不同数据类型的值：
 
 ```python
 items = ["Roger", 1, "Syd", True]
 ```
 
-You can check if an item is contained in a list with the `in` operator:
+您可以使用`in`运算符检查某个元素是否在列表中：
 
 ```python
-print("Roger" in items) # True
+print("Roger" in items)  # True
 ```
 
-A list can also be defined as empty:
+当然也可以定义空的列表：
 
 ```python
 items = []
 ```
 
-You can reference the items in a list by their index, starting from zero:
+您可以通过从零开始的索引引用列表中的元素：
 
 ```python
-items[0] # "Roger"
-items[1] # 1
-items[3] # True
+items[0]  # "Roger"
+items[1]  # 1
+items[3]  # True
 ```
 
-Using the same notation you can change the value stored at a specific index:
+使用相同的表示法，您可以更改存储在特定索引处的值：
 
 ```python
 items[0] = "Roger"
 ```
 
-You can also use the `index()` method:
+您还可以使用`index()`：
 
 ```python
-items.index(0) # "Roger"
-items.index(1) # 1
+items.index(0)  # "Roger"
+items.index(1)  # 1
 ```
 
-As with strings, using a negative index will start searching from the end:
+就像字符串（索引）一样，使用负索引将从末尾开始数：
 
 ```python
-items[-1] # True
+items[-1]  # True
 ```
 
-You can also extract a part of a list, using slices:
+您还可以使用切片提取列表的一部分：
 
 ```python
-items[0:2] # ["Roger", 1]
-items[2:] # ["Syd", True]
+items[0:2]  # ["Roger", 1]
+items[2:]  # ["Syd", True]
 ```
 
-Get the number of items contained in a list using the `len()` global function, the same we used to get the length of a string:
+使用全局函数`len()`获取列表中包含的元素数目，这与我们用来获取字符串长度的方法相同：
 
 ```python
-len(items) #4
+len(items)  # 4
 ```
 
-You can add items to the list by using a list `append()` method:
+您可以使用list的`append()`方法将新元素添加到列表中：
 
 ```python
 items.append("Test")
 ```
 
-or the extend() method:
+或者使用`extend()`方法：
 
 ```python
 items.extend(["Test"])
 ```
 
-You can also use the `+=` operator:
+您还可以使用`+=`运算符：
 
 ```python
 items += ["Test"]
@@ -1260,138 +1260,133 @@ items += ["Test"]
 # items is ['Roger', 1, 'Syd', True, 'Test']
 ```
 
-> Tip: with `extend()` or `+=` don't forget the square brackets. Don't do `items += "Test"` or `items.extend("Test")` or Python will add 4 individual characters to the list, resulting in `['Roger', 1, 'Syd', True, 'T', 'e', 's', 't']`
+> 注意：使用`extend()`或`+=`不要忘记方括号。不要执行`items += "Test"`或`items.extend("Test")`，否则Python会在列表中添加4个单独的字符，即`['Roger', 1, 'Syd', True, 'T'、'e'、's'、't']`
 
-Remove an item using the `remove()` method:
+使用`remove()`方法删除元素：
 
 ```python
 items.remove("Test")
 ```
 
-You can add multiple elements using
+您可以添加多个元素：
 
 ```python
 items += ["Test1", "Test2"]
 
-#or
+# or
 
 items.extend(["Test1", "Test2"])
 ```
 
-These append the item to the end of the list.
+这些方法会将元素加到列表的末尾。
 
-To add an item in the middle of a list, at a specific index, use the `insert()` method:
+要在列表中间的特定索引处添加元素，请使用`insert()`方法：
 
 ```python
-items.insert("Test", 1) # add "Test" at index 1
+items.insert("Test", 1)  # add "Test" at index 1
 ```
 
-To add multiple items at a specific index, you need to use slices:
+要在特定索引处添加多个项目，您需要使用切片：
 
 ```python
 items[1:1] = ["Test1", "Test2"]
+# 译者：这里实际上是先删除再添加，就该例子来说，先删除[1:1]的元素（切片是左闭右开，所有[1:1]没有选中任何元素），再在删除的位置上添加
+#。    比如s = [1,2,3];  s[0:2] = ['a', 'b', 'c'];  --> 执行完前面两个语句，s就变为['a', 'b', 'c', 3]
 ```
 
-Sort a list using the `sort()` method:
+使用`sort()`方法对列表进行排序：
 
 ```python
 items.sort()
 ```
 
-> Tip: sort() will only work if the list holds values that can be compared. Strings and integers for example can't be compared, and you'll get an error like `TypeError: '<' not supported between instances of 'int' and 'str'` if you try.
+> 注意：sort()仅在列表包含可比较的值时才有效。例如，无法比较字符串和整数，如果您尝试（对元素之间不可比较的列表进行排序），您将看到到类似`TypeError: '<' not supported between 'int' and 'str'`的错误。
 
-The `sort()` methods orders uppercase letters first, then lowercase letters. To fix this, use:
+（针对字符串排序）`sort()`方法首先排序大写字母，然后是小写字母。要解决此问题，请使用：
 
 ```python
 items.sort(key=str.lower)
 ```
 
-instead.
-
-Sorting modifies the original list content. To avoid that, you can copy the list content using
+（使用sort方法）排序会修改原始列表内容。为避免这种情况，您可以先复制列表
 
 ```python
 itemscopy = items[:]
 ```
 
-or use the `sorted()` global function:
+或者使用全局函数`sorted()`：
 
 ```python
 print(sorted(items, key=str.lower))
 ```
 
-that will return a new list, sorted, instead of modifying the original list.
+这将返回一个排好序的新列表，而不是修改原始列表。
 
-## Tuples in Python
+<h2 id="tuples-in-python">Python元组</h2>
 
-Tuples are another fundamental Python data structure.
+元组是Python中另一种基本的数据结构。
 
-They allow you to create immutable groups of objects. This means that once a tuple is created, it can't be modified. You can't add or remove items.
+它允许您创建不可变的对象组。这意味着一旦创建了元组，就无法修改它。您不能添加或删除元组中的元素。
 
-They are created in a way similar to lists, but using parentheses instead of square brackets:
+元组的创建方式类似于列表，但是是使用括号而不是方括号：
 
 ```python
 names = ("Roger", "Syd")
 ```
 
-A tuple is ordered, like a list, so you can get its values by referencing an index value:
+元组是有序的，就像列表一样，所以您可以通过一个索引来获取具体位置的值：
 
 ```python
-names[0] # "Roger"
-names[1] # "Syd"
+names[0]  # "Roger"
+names[1]  # "Syd"
 ```
 
-You can also use the `index()` method:
+您也可以使用`index()`方法：
 
 ```python
-names.index('Roger') # 0
-names.index('Syd')   # 1
+names.index('Roger')  # 0
+names.index('Syd')  # 1
 ```
 
-As with strings and lists, using a negative index will start searching from the end:
+与字符串和列表一样，使用负索引将从末尾开始：
 
 ```python
-names[-1] # True
+names[-1]  # True
 ```
 
-You can count the items in a tuple with the `len()` function:
+您可以使用函数`len()`计算元组中的元素个数：
 
 ```python
-len(names) # 2
+len(names)  # 2
 ```
 
-You can check if an item is contained in a tuple with the `in` operator:
+您可以使用`in`运算符检查元素是否在元组中：
 
 ```python
-print("Roger" in names) # True
+print("Roger" in names)  # True
 ```
 
-You can also extract a part of a tuple, using slices:
+您还可以使用切片提取元组的一部分：
 
 ```python
-names[0:2] # ('Roger', 'Syd')
-names[1:] # ('Syd',)
+names[0:2]  # ('Roger', 'Syd')
+names[1:]  # ('Syd',)
 ```
 
-Get the number of items in a tuple using the `len()` global function, the same we used to get the length of a string:
-
-```python
-len(names) #2
-```
-
-You can create a sorted version of a tuple using the `sorted()` global function:
+您可以使用全局函数`sorted()`创建元组排好序的版本：
+（译者：请注意，元组没有sort方法，因为元组是不可改变的）
 
 ```python
 sorted(names)
 ```
 
-You can create a new tuple from existing tuples using the `+` operator:
+您可以使用`+`运算符从现有元组创建一个新元组：
 
 ```python
 newTuple = names + ("Vanille", "Tina")
 ```
 
-## Dictionaries in Python
+<h2 id="dictionaries-in-python">Python字典</h2>
 
 Dictionaries are a very important Python data structure.
 
@@ -1489,7 +1484,7 @@ To copy a dictionary, use the copy() method:
 dogCopy = dog.copy()
 ```
 
-## Sets in Python
+<h2 id="sets-in-python">Python集合</h2>
 
 Sets are another important Python data structure.
 

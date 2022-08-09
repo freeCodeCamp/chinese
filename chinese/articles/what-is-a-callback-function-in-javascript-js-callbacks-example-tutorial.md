@@ -1,6 +1,6 @@
 > -  原文地址：[What is a Callback Function in JavaScript? JS Callbacks Example Tutorial](https://www.freecodecamp.org/news/what-is-a-callback-function-in-javascript-js-callbacks-example-tutorial/)
 > -  原文作者：[Ilenia Magoni](https://www.freecodecamp.org/news/author/ilenia/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![What is a Callback Function in JavaScript? JS Callbacks Example Tutorial](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/pexels-pixabay-39656.jpg)

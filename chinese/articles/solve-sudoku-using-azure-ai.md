@@ -1,17 +1,17 @@
 > -  原文地址：[How to Solve a Sudoku Puzzle Using Azure AI](https://www.freecodecamp.org/news/solve-sudoku-using-azure-ai/)
 > -  原文作者：[Ankit SharmaAnkit Sharma](https://www.freecodecamp.org/news/author/ankitsharmablog/)
-> -  译者：
+> -  译者：HeZean
 > -  校对者：
 
 ![How to Solve a Sudoku Puzzle Using Azure AI](https://images.unsplash.com/photo-1536518138303-2c25eb218e28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDczfHxudW1iZXJzfGVufDB8fHx8MTYxNzY1ODEzNw&ixlib=rb-1.2.1&q=80&w=2000)
 
-In this article, we are going to create a sudoku solver with the help of Azure Form Recognizer, an AI-powered document extraction service.
+这篇文章将带你使用 Azure Form Recognizer 创建一个数独解题器，Azure Form Recognizer 是一个由 AI 驱动的文档提取服务。
 
-The application will allow users to upload an image of the sudoku table. We will extract the data from the image, and then implement the sudoku solving algorithm on it.
+我们的程序将允许用户上传一张数独表的图片。我们将从图像中提取数据，然后在其上实现数独解题算法。
 
-We will use .NET for the backend, Angular for the front end, and Angular material for styling the application.
+我们将在后端使用 .NET，在前端使用 Angular，并使用 Angular material 来设计应用程序的风格。
 
-You can see a working demo of the application below.
+下面是关于该软件的一个演示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/SudokuSolver.gif)
 

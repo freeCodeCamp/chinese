@@ -1388,69 +1388,69 @@ newTuple = names + ("Vanille", "Tina")
 
 <h2 id="dictionaries-in-python">Python字典</h2>
 
-Dictionaries are a very important Python data structure.
+字典是Python中非常重要的一种数据结构。
 
-While lists allow you to create collections of values, dictionaries allow you to create collections of **key / value pairs**.
+列表允许您创建值的集合，而字典允许您创建**键/值对**的集合。
 
-Here is a dictionary example with one key/value pair:
+这是有一个键/值对的字典示例：
 
 ```python
 dog = { 'name': 'Roger' }
 ```
 
-The key can be any immutable value like a string, a number or a tuple. The value can be anything you want.
+键可以是任何不可变的值，例如字符串、数字或元组，该值可以是您想要的任何值。
 
-A dictionary can contain multiple key/value pairs:
+一个字典可以包含多个键/值对：
 
 ```python
 dog = { 'name': 'Roger', 'age': 8 }
 ```
 
-You can access individual key values using this notation:
+您可以使用此表示法访问单个键对应的值：
 
 ```python
-dog['name'] # 'Roger'
+dog['name']  # 'Roger'
 dog['age']  # 8
 ```
 
-Using the same notation you can change the value stored at a specific index:
+使用相同的表示法，您可以更改在特定索引（键）对应的值：
 
 ```python
 dog['name'] = 'Syd'
 ```
 
-And another way is using the `get()` method, which has an option to add a default value:
+另一种方法是使用`get()`方法，该方法可以添加默认值（译者：即字典中没有该键时返回的值）：
 
 ```python
-dog.get('name') # 'Roger'
-dog.get('test', 'default') # 'default'
+dog.get('name')  # 'Roger'
+dog.get('test', 'default')  # 'default'
 ```
 
-The `pop()` method retrieves the value of a key, and subsequently deletes the item from the dictionary:
+`pop()`方法检索键的值，然后从字典中删除该键/值对：
 
 ```python
-dog.pop('name') # 'Roger'
+dog.pop('name')  # 'Roger'
 ```
 
-The `popitem()` method retrieves and removes the last key/value pair inserted into the dictionary:
+`popitem()`方法检索并删除最后一个插入字典的键/值对：
 
 ```python
 dog.popitem()
 ```
 
-You can check if a key is contained into a dictionary with the `in` operator:
+您可以使用`in`运算符检查键是否包含在字典中：
 
 ```python
-'name' in dog # True
+'name' in dog  # True
 ```
 
-Get a list with the keys in a dictionary using the `keys()` method, passing its result to the `list()` constructor:
+使用`keys()`方法获取字典中的键，并将结果传递给`list()`构造函数：
 
 ```python
-list(dog.keys()) # ['name', 'age']
+list(dog.keys())  # ['name', 'age']
 ```
 
-Get the values using the `values()` method, and the key/value pairs tuples using the `items()` method:
+使用`values()`方法获取字典中的值，使用`items()`方法获取键/值对组成的元组：
 
 ```python
 print(list(dog.values()))
@@ -1460,25 +1460,26 @@ print(list(dog.items()))
 # [('name', 'Roger'), ('age', 8)]
 ```
 
-Get a dictionary length using the `len()` global function, the same we used to get the length of a string or the items in a list:
+使用全局函数`len()`获取字典长度，这与获取字符串或列表的长度相同：
 
 ```python
-len(dog) #2
+len(dog)  # 2
 ```
 
-You can add a new key/value pair to the dictionary in this way:
+您可以通过这种方式将新的键/值对添加到字典中：
 
 ```python
 dog['favorite food'] = 'Meat'
 ```
 
-You can remove a key/value pair from a dictionary using the `del` statement:
+您可以使用`del`语句从字典中删除键/值对：
 
 ```python
 del dog['favorite food']
 ```
 
-To copy a dictionary, use the copy() method:
+要复制字典，请使用copy()方法：
+（译者：这种方式是浅拷贝）
 
 ```python
 dogCopy = dog.copy()
@@ -1486,77 +1487,77 @@ dogCopy = dog.copy()
 
 <h2 id="sets-in-python">Python集合</h2>
 
-Sets are another important Python data structure.
+集合是Python另一个重要的数据结构。
 
-We can say they work like tuples, but they are not ordered, and they are **mutable**.
+可以说它像元组一样工作，但集合不是有序的，而且是**可变的**。
 
-Or we can say they work like dictionaries, but they don't have keys.
+或者我们可以说它像字典一样工作，但它们没有键。
 
-They also have an immutable version, called `frozenset`.
+集合还有一个不可变的版本，称为`frozenset`。
 
-You can create a set using this syntax:
+您可以使用以下语法创建集合：
 
 ```python
 names = {"Roger", "Syd"}
 ```
 
-Sets work well when you think about them as mathematical sets.
+您将它们视为数学上的集合，会更好理解。
 
-You can intersect two sets:
+您可以求两个集合的交集：
 
 ```python
 set1 = {"Roger", "Syd"}
 set2 = {"Roger"}
 
-intersect = set1 & set2 #{'Roger'}
+intersect = set1 & set2  # {'Roger'}
 ```
 
-You can create a union of two sets:
+您可以创建两个集合的并集：
 
 ```python
 set1 = {"Roger", "Syd"}
 set2 = {"Luna"}
 
 union = set1 | set2
-#{'Syd', 'Luna', 'Roger'}
+# {'Syd', 'Luna', 'Roger'}
 ```
 
-You can get the difference between two sets:
+您可以得到两个集合的差集：
 
 ```python
 set1 = {"Roger", "Syd"}
 set2 = {"Roger"}
 
-difference = set1 - set2 #{'Syd'}
+difference = set1 - set2  # {'Syd'}
 ```
 
-You can check if a set is a superset of another (and of course if a set is a subset of another):
+您可以检查一个集合是否是另一个集合的超集（也即一个集合是另一个集合的子集）：
 
 ```python
 set1 = {"Roger", "Syd"}
 set2 = {"Roger"}
 
-isSuperset = set1 > set2 # True
+isSuperset = set1 > set2  # True
 ```
 
-You can count the items in a set with the `len()` global function:
+您可以使用全局函数`len()`计算集合中的元素个数：
 
 ```python
 names = {"Roger", "Syd"}
-len(names) # 2
+len(names)  # 2
 ```
 
-You can get a list from the items in a set by passing the set to the `list()` constructor:
+您可以通过将集合传递给`list()`构造函数来获取集合元素的列表：
 
 ```python
 names = {"Roger", "Syd"}
-list(names) #['Syd', 'Roger']
+list(names)  # ['Syd', 'Roger']
 ```
 
-You can check if an item is contained in a set with the `in` operator:
+您可以使用`in`运算符检查元素是否在集合中：
 
 ```python
-print("Roger" in names) # True
+print("Roger" in names)  # True
 ```
 
 ## Functions in Python
